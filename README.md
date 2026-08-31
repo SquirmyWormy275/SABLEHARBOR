@@ -17,7 +17,7 @@ Decisions use three states:
 - `docs/canon/SABLE_HARBOR_CANONICAL_ARCHITECTURE_HANDOVER.md` — inherited canonical context and operating instructions.
 - `docs/canon/SABLE_HARBOR_CORPORATE_FUNDAMENTALS_AND_2026_OPERATING_MODEL_v0.1.md` — first substantive 2026 operating model.
 - `docs/canon/DECISION_REGISTER.md` — current decision-state index.
-- `research/authority/NAILEX-SOC-IS-Audit-Authority-Research-v0.1.0.md` — authority architecture that constrains later audit-methodology encoding.
+- `research/authority/IMPORT_STATUS.md` — registered source and hash for the supplied audit-authority research package; full-source import remains pending.
 
 ## Separation from NAILEX
 
