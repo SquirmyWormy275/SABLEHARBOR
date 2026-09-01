@@ -1,11 +1,11 @@
-# THE ORIGINAL EIGHT — FORMATION & STATUS
+# PROJECT CRADLE — ORGANIZATION
 
-**Chart ID:** `SH-ORG-009`  
+**Chart ID:** `SH-ORG-007`  
 **Canonical date:** August 31, 2026  
 **Status:** Canon-derived visual organization chart  
-**Purpose:** Three founders plus five early employees, Blackridge continuity and 2026 status.
+**Purpose:** Founding team and the boundary among Cradle, its recovery intervention and the host operator.
 
-![THE ORIGINAL EIGHT — FORMATION & STATUS](assets/original-eight-formation-and-status.svg)
+![PROJECT CRADLE — ORGANIZATION](assets/project-cradle-organization-2026.svg)
 
 ## Interpretation
 

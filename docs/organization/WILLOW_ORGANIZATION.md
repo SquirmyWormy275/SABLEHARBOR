@@ -1,11 +1,11 @@
-# THE ORIGINAL EIGHT — FORMATION & STATUS
+# PROJECT WILLOW — ORGANIZATION
 
-**Chart ID:** `SH-ORG-009`  
+**Chart ID:** `SH-ORG-004`  
 **Canonical date:** August 31, 2026  
 **Status:** Canon-derived visual organization chart  
-**Purpose:** Three founders plus five early employees, Blackridge continuity and 2026 status.
+**Purpose:** Pittsburgh laboratory, Sacramento institutional seam and operating qualification gate.
 
-![THE ORIGINAL EIGHT — FORMATION & STATUS](assets/original-eight-formation-and-status.svg)
+![PROJECT WILLOW — ORGANIZATION](assets/willow-organization-2026.svg)
 
 ## Interpretation
 

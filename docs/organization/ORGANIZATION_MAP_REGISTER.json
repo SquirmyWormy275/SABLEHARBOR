@@ -2,419 +2,100 @@
   "schemaVersion": "0.2.0",
   "registerVersion": "0.2.0",
   "canonicalDate": "2026-08-31",
-  "status": "canon-derived-presentation-layer",
+  "status": "canon-derived-rendered-chart-package",
   "controllingSources": [
-    "docs/canon/SABLE_HARBOR_CANONICAL_ARCHITECTURE_HANDOVER.md",
     "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.2.md",
-    "docs/canon/DECISION_REGISTER.md",
-    "docs/canon/SABLE_HARBOR_CONTINUITY_AUDIT_v0.2.md"
+    "docs/canon/DECISION_REGISTER.md"
   ],
-  "interpretationRule": "Organization maps summarize controlling canon. They may not independently create legal entities, titles, reporting lines, ownership percentages, headcount, P&Ls, or other unresolved canon.",
-  "statusVocabulary": [
-    "LOCKED",
-    "PROVISIONAL",
-    "OPEN",
-    "SUPERSEDED",
-    "HISTORICAL",
-    "EMERGING"
-  ],
-  "approvedRelationshipTypes": [
-    "underlying-substrate",
-    "commercial-product-built-on-substrate",
-    "product-expression",
-    "represents-the-terrain",
-    "experimental-lineage",
-    "bounded-experimental-capability",
-    "documented-membership",
-    "documented-contribution",
-    "program-or-operating-leadership",
-    "domain-authority",
-    "independent-challenge",
-    "institutional-seam",
-    "field-qualification-gate",
-    "operating-ownership",
-    "owns-and-operates-in-narrative-canon",
-    "acquired-operator",
-    "operating-component",
-    "external-evidence-source",
-    "historical-absorption",
-    "method-transfer"
-  ],
-  "globalProhibitedInterpretations": [
-    "unlabeled-reporting-line",
-    "final-legal-entity-tree",
-    "final-executive-titles",
-    "final-board-structure",
-    "final-headcount-allocation",
-    "final-product-or-venture-P-and-L",
-    "foundry-equals-foundry-field",
-    "pale-sun-equals-red-wash",
-    "aru-equals-bst",
-    "rachel-sloane-manages-gid-voss",
-    "evalon-is-current-2026-division",
-    "emberline-is-current-2026-core-division"
+  "prohibitedInferences": [
+    "unstated direct-report relationship",
+    "final executive title",
+    "final legal-entity structure",
+    "unstated headcount",
+    "unstated ownership percentage",
+    "OPEN detail presented as settled"
   ],
   "charts": [
     {
       "id": "SH-ORG-001",
-      "path": "docs/organization/2026_OPERATING_TOPOLOGY.md",
-      "title": "August 31, 2026 Operating Topology",
-      "mapType": "operating-topology",
-      "canonicalState": "LOCKED conceptual relationships with explicitly OPEN legal and reporting structure",
-      "sourceDecisionIds": [
-        "ADV-001",
-        "ADV-002",
-        "ARU-001",
-        "ARU-002",
-        "ARU-003",
-        "ARU-006",
-        "ATL-014",
-        "ATL-015",
-        "CRD-001",
-        "CRD-002",
-        "FF-001",
-        "FF-002",
-        "FF-003",
-        "ID-001",
-        "ID-002",
-        "ID-003",
-        "PS-001",
-        "PS-006",
-        "PS-015",
-        "WIL-011",
-        "WIL-012",
-        "WIL-014"
-      ],
-      "prohibitedInterpretations": [
-        "legal-entity-tree",
-        "reporting-line-tree",
-        "product-P-and-L-structure"
-      ]
+      "title": "SABLE HARBOR \u2014 ENTERPRISE ORGANIZATION",
+      "page": "docs/organization/2026_OPERATING_TOPOLOGY.md",
+      "asset": "docs/organization/assets/enterprise-organization-2026.svg",
+      "purpose": "Functional enterprise organization: company-wide authorities, operating lines and known ownership/component relationships.",
+      "canonicalDate": "2026-08-31",
+      "relationshipSemantics": "functional authority and canon-locked operating relationships; not implicit HR reporting"
     },
     {
       "id": "SH-ORG-002",
-      "path": "docs/organization/2026_LEADERSHIP_AND_AUTHORITY_MAP.md",
-      "title": "August 31, 2026 Leadership and Authority Map",
-      "mapType": "role-authority-and-interface-network",
-      "canonicalState": "LOCKED role domains; exact titles, reporting lines, and portions of governance OPEN",
-      "sourceDecisionIds": [
-        "PPL-003",
-        "PPL-004",
-        "PPL-006",
-        "PPL-007",
-        "PPL-008",
-        "PPL-009",
-        "PPL-010",
-        "PPL-012",
-        "PPL-013",
-        "PPL-016",
-        "WIL-014",
-        "ATL-013",
-        "PS-003",
-        "PS-005",
-        "CRD-003",
-        "ARU-006",
-        "ARU-009",
-        "ADV-002",
-        "ID-004"
-      ],
-      "prohibitedInterpretations": [
-        "direct-report-structure",
-        "final-executive-titles",
-        "final-board-composition"
-      ]
+      "title": "SABLE HARBOR \u2014 LEADERSHIP & AUTHORITY",
+      "page": "docs/organization/2026_LEADERSHIP_AND_AUTHORITY_MAP.md",
+      "asset": "docs/organization/assets/leadership-authority-2026.svg",
+      "purpose": "Named leadership and domain-authority map. Edges and placement do not create direct-report relationships.",
+      "canonicalDate": "2026-08-31",
+      "relationshipSemantics": "functional authority and canon-locked operating relationships; not implicit HR reporting"
     },
     {
       "id": "SH-ORG-003",
-      "path": "docs/organization/ORIGINAL_EIGHT.md",
-      "title": "The Original Eight",
-      "mapType": "founding-cohort-and-current-status",
-      "canonicalState": "LOCKED identities, through-lines, and broad August 31, 2026 status",
-      "sourceDecisionIds": [
-        "BR-002",
-        "BR-003",
-        "BR-004",
-        "PPL-001",
-        "PPL-002",
-        "PPL-003",
-        "PPL-004",
-        "PPL-005",
-        "PPL-006",
-        "PPL-007",
-        "PPL-008",
-        "PPL-009",
-        "PPL-010",
-        "PPL-011",
-        "PPL-012",
-        "PPL-013"
-      ],
-      "prohibitedInterpretations": [
-        "blackridge-team",
-        "equal-ownership",
-        "current-executive-committee"
-      ]
+      "title": "FOUNDRY / FOUNDRY FIELD \u2014 ORGANIZATION",
+      "page": "docs/organization/FOUNDRY_FIELD_ORGANIZATION.md",
+      "asset": "docs/organization/assets/foundry-field-organization-2026.svg",
+      "purpose": "Product, technical authority, deployment counterweights and application families.",
+      "canonicalDate": "2026-08-31",
+      "relationshipSemantics": "functional authority and canon-locked operating relationships; not implicit HR reporting"
     },
     {
       "id": "SH-ORG-004",
-      "path": "docs/organization/ORGANIZATIONAL_LINEAGE_2015_2026.md",
-      "title": "Organizational Lineage, 2015–2026",
-      "mapType": "historical-and-institutional-lineage",
-      "canonicalState": "LOCKED historical spine with noted OPEN details",
-      "sourceDecisionIds": [
-        "ADV-001",
-        "ARU-001",
-        "ATL-001",
-        "ATL-002",
-        "ATL-014",
-        "AUS-004",
-        "BR-001",
-        "CRD-001",
-        "CRX-001",
-        "EMB-001",
-        "FF-001",
-        "FF-003",
-        "FND-001",
-        "FND-003",
-        "FND-004",
-        "FND-005",
-        "PS-001",
-        "PS-002",
-        "PS-006",
-        "WIL-003",
-        "WIL-011"
-      ],
-      "prohibitedInterpretations": [
-        "present-day-reporting-tree",
-        "evalon-current-division",
-        "emberline-current-core-division"
-      ]
+      "title": "PROJECT WILLOW \u2014 ORGANIZATION",
+      "page": "docs/organization/WILLOW_ORGANIZATION.md",
+      "asset": "docs/organization/assets/willow-organization-2026.svg",
+      "purpose": "Pittsburgh laboratory, Sacramento institutional seam and operating qualification gate.",
+      "canonicalDate": "2026-08-31",
+      "relationshipSemantics": "functional authority and canon-locked operating relationships; not implicit HR reporting"
     },
     {
       "id": "SH-ORG-005",
-      "path": "docs/organization/LEGAL_AND_REPORTING_STRUCTURE_STATUS.md",
-      "title": "Legal and Reporting Structure Status",
-      "mapType": "open-workstream-guardrail",
-      "canonicalState": "OPEN legal, quantitative, governance, title, and reporting details",
-      "sourceDecisionIds": [
-        "ID-006",
-        "ID-007",
-        "ID-008",
-        "PS-011",
-        "PS-016",
-        "PS-017",
-        "ARU-006",
-        "ARU-007",
-        "ADV-002"
-      ],
-      "prohibitedInterpretations": [
-        "final-legal-structure",
-        "final-reporting-structure",
-        "final-headcount-allocation"
-      ]
+      "title": "ATLAS MERIDIAN \u2014 BRIDGE ORGANIZATION",
+      "page": "docs/organization/ATLAS_MERIDIAN_BRIDGE_ORGANIZATION.md",
+      "asset": "docs/organization/assets/atlas-meridian-bridge-2026.svg",
+      "purpose": "Cross-functional transition organization for repeatability and controlled commercialization.",
+      "canonicalDate": "2026-08-31",
+      "relationshipSemantics": "functional authority and canon-locked operating relationships; not implicit HR reporting"
     },
     {
       "id": "SH-ORG-006",
-      "path": "docs/organization/FOUNDRY_AND_FOUNDRY_FIELD.md",
-      "title": "Foundry and Foundry Field Organization Map",
-      "mapType": "product-authority-and-operating-interface",
-      "canonicalState": "LOCKED product distinction and role domains; application names and hierarchy OPEN",
-      "sourceDecisionIds": [
-        "PPL-004",
-        "PPL-007",
-        "PPL-008",
-        "PPL-010",
-        "PPL-017",
-        "FF-001",
-        "FF-002",
-        "FF-003",
-        "FF-004",
-        "FF-005",
-        "FF-006",
-        "FF-007",
-        "FF-008",
-        "ATL-014",
-        "PS-014"
-      ],
-      "prohibitedInterpretations": [
-        "foundry-equals-foundry-field",
-        "application-names-locked",
-        "direct-report-structure"
-      ]
+      "title": "PALE SUN / RED WASH \u2014 ORGANIZATION",
+      "page": "docs/organization/PALE_SUN_RED_WASH_ORGANIZATION.md",
+      "asset": "docs/organization/assets/pale-sun-red-wash-organization-2026.svg",
+      "purpose": "Operating-business and mine-authority organization, including qualified interfaces.",
+      "canonicalDate": "2026-08-31",
+      "relationshipSemantics": "functional authority and canon-locked operating relationships; not implicit HR reporting"
     },
     {
       "id": "SH-ORG-007",
-      "path": "docs/organization/WILLOW_AND_ATLAS_MERIDIAN.md",
-      "title": "Willow and Atlas Meridian Organization Map",
-      "mapType": "laboratory-composition-and-product-lineage",
-      "canonicalState": "LOCKED documented team, institutional seam, and product lineage; exact headcount and titles OPEN",
-      "sourceDecisionIds": [
-        "PPL-016",
-        "WIL-004",
-        "WIL-011",
-        "WIL-012",
-        "WIL-013",
-        "WIL-014",
-        "WIL-015",
-        "WIL-016",
-        "WIL-017",
-        "WIL-018",
-        "ATL-001",
-        "ATL-002",
-        "ATL-003",
-        "ATL-004",
-        "ATL-005",
-        "ATL-006",
-        "ATL-010",
-        "ATL-011",
-        "ATL-012",
-        "ATL-013",
-        "ATL-014",
-        "ATL-015"
-      ],
-      "prohibitedInterpretations": [
-        "rachel-sloane-manages-gid-voss",
-        "team-membership-is-reporting-line",
-        "atlas-autonomous-decision-authority"
-      ]
+      "title": "PROJECT CRADLE \u2014 ORGANIZATION",
+      "page": "docs/organization/PROJECT_CRADLE_ORGANIZATION.md",
+      "asset": "docs/organization/assets/project-cradle-organization-2026.svg",
+      "purpose": "Founding team and the boundary among Cradle, its recovery intervention and the host operator.",
+      "canonicalDate": "2026-08-31",
+      "relationshipSemantics": "functional authority and canon-locked operating relationships; not implicit HR reporting"
     },
     {
       "id": "SH-ORG-008",
-      "path": "docs/organization/PALE_SUN_AND_RED_WASH.md",
-      "title": "Pale Sun and Red Wash Organization Map",
-      "mapType": "operating-line-site-authority-and-qualification-gate",
-      "canonicalState": "LOCKED operating ownership and role domains; legal structure and quantitative mine model OPEN",
-      "sourceDecisionIds": [
-        "PPL-010",
-        "PS-001",
-        "PS-003",
-        "PS-005",
-        "PS-006",
-        "PS-007",
-        "PS-010",
-        "PS-011",
-        "PS-012",
-        "PS-013",
-        "PS-014",
-        "PS-015",
-        "PS-016",
-        "PS-017",
-        "ARU-008",
-        "ARU-009"
-      ],
-      "prohibitedInterpretations": [
-        "pale-sun-equals-red-wash",
-        "walt-sutter-is-employee",
-        "cole-is-oracle",
-        "red-wash-is-unrestricted-laboratory"
-      ]
+      "title": "ARU / BS&T \u2014 ORGANIZATION",
+      "page": "docs/organization/ARU_BST_ORGANIZATION.md",
+      "asset": "docs/organization/assets/aru-bst-organization-2026.svg",
+      "purpose": "Distinct acquired operator, known railway component and open operating structure.",
+      "canonicalDate": "2026-08-31",
+      "relationshipSemantics": "functional authority and canon-locked operating relationships; not implicit HR reporting"
     },
     {
       "id": "SH-ORG-009",
-      "path": "docs/organization/PROJECT_CRADLE.md",
-      "title": "Project Cradle Organization Map",
-      "mapType": "program-team-and-business-boundary",
-      "canonicalState": "LOCKED founding team and business thesis; customer, process, economics, and legal structure OPEN",
-      "sourceDecisionIds": [
-        "AUS-004",
-        "CRD-001",
-        "CRD-002",
-        "CRD-003",
-        "CRD-004",
-        "CRD-005",
-        "CRD-006",
-        "CRD-007",
-        "CRD-008",
-        "CRD-009",
-        "CRD-010"
-      ],
-      "prohibitedInterpretations": [
-        "cradle-owns-host-mine",
-        "team-membership-is-reporting-line",
-        "first-customer-or-process-locked"
-      ]
-    },
-    {
-      "id": "SH-ORG-010",
-      "path": "docs/organization/ARU_BST_AND_ADVISORY.md",
-      "title": "ARU, BS&T, and Emerging Advisory Organization Map",
-      "mapType": "acquired-operator-component-and-method-transfer",
-      "canonicalState": "LOCKED acquisition, operating distinction, component, and Advisory direction; detailed structure OPEN",
-      "sourceDecisionIds": [
-        "FND-001",
-        "FF-003",
-        "ARU-001",
-        "ARU-002",
-        "ARU-003",
-        "ARU-004",
-        "ARU-005",
-        "ARU-006",
-        "ARU-007",
-        "ARU-008",
-        "ARU-009",
-        "ADV-001",
-        "ADV-002",
-        "ID-001",
-        "ID-002",
-        "ID-003"
-      ],
-      "prohibitedInterpretations": [
-        "aru-equals-bst",
-        "final-aru-legal-chain",
-        "advisory-is-fully-formed",
-        "advisory-is-generic-consulting"
-      ]
-    },
-    {
-      "id": "SH-ORG-011",
-      "path": "docs/organization/DECISION_RIGHTS_AND_OPERATING_GATES.md",
-      "title": "Decision Rights and Operating Gates",
-      "mapType": "cross-company-authority-and-gate-map",
-      "canonicalState": "LOCKED authority boundaries; exact executive delegation and capital-authority holder OPEN",
-      "sourceDecisionIds": [
-        "PPL-004",
-        "PPL-007",
-        "PPL-008",
-        "PPL-009",
-        "PPL-010",
-        "FF-006",
-        "WIL-012",
-        "WIL-013",
-        "ATL-010",
-        "ATL-011",
-        "ATL-012",
-        "ATL-013",
-        "ATL-014",
-        "ATL-015",
-        "PS-012",
-        "PS-013",
-        "PS-014",
-        "PS-015",
-        "ARU-008",
-        "ARU-009"
-      ],
-      "prohibitedInterpretations": [
-        "experiment-direct-to-production",
-        "atlas-autonomous-decision-authority",
-        "capital-authority-holder-invented"
-      ]
-    }
-  ],
-  "supportingArtifacts": [
-    {
-      "path": "docs/organization/README.md",
-      "purpose": "package index and publication guidance"
-    },
-    {
-      "path": "docs/organization/CHART_GOVERNANCE.md",
-      "purpose": "edge vocabulary and prohibited visual shortcuts"
-    },
-    {
-      "path": "docs/organization/CANON_TRACEABILITY_MATRIX.md",
-      "purpose": "human-readable claim-to-canon traceability"
-    },
-    {
-      "path": "scripts/validate_organization_maps.py",
-      "purpose": "automated structural and canon-reference validation"
+      "title": "THE ORIGINAL EIGHT \u2014 FORMATION & STATUS",
+      "page": "docs/organization/ORIGINAL_EIGHT.md",
+      "asset": "docs/organization/assets/original-eight-formation-and-status.svg",
+      "purpose": "Three founders plus five early employees, Blackridge continuity and 2026 status.",
+      "canonicalDate": "2026-08-31",
+      "relationshipSemantics": "functional authority and canon-locked operating relationships; not implicit HR reporting"
     }
   ]
 }

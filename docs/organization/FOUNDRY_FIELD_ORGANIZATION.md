@@ -1,11 +1,11 @@
-# THE ORIGINAL EIGHT — FORMATION & STATUS
+# FOUNDRY / FOUNDRY FIELD — ORGANIZATION
 
-**Chart ID:** `SH-ORG-009`  
+**Chart ID:** `SH-ORG-003`  
 **Canonical date:** August 31, 2026  
 **Status:** Canon-derived visual organization chart  
-**Purpose:** Three founders plus five early employees, Blackridge continuity and 2026 status.
+**Purpose:** Product, technical authority, deployment counterweights and application families.
 
-![THE ORIGINAL EIGHT — FORMATION & STATUS](assets/original-eight-formation-and-status.svg)
+![FOUNDRY / FOUNDRY FIELD — ORGANIZATION](assets/foundry-field-organization-2026.svg)
 
 ## Interpretation
 

@@ -1,11 +1,11 @@
-# THE ORIGINAL EIGHT — FORMATION & STATUS
+# PALE SUN / RED WASH — ORGANIZATION
 
-**Chart ID:** `SH-ORG-009`  
+**Chart ID:** `SH-ORG-006`  
 **Canonical date:** August 31, 2026  
 **Status:** Canon-derived visual organization chart  
-**Purpose:** Three founders plus five early employees, Blackridge continuity and 2026 status.
+**Purpose:** Operating-business and mine-authority organization, including qualified interfaces.
 
-![THE ORIGINAL EIGHT — FORMATION & STATUS](assets/original-eight-formation-and-status.svg)
+![PALE SUN / RED WASH — ORGANIZATION](assets/pale-sun-red-wash-organization-2026.svg)
 
 ## Interpretation
 

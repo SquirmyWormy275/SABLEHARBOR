@@ -1,11 +1,11 @@
-# THE ORIGINAL EIGHT — FORMATION & STATUS
+# ATLAS MERIDIAN — BRIDGE ORGANIZATION
 
-**Chart ID:** `SH-ORG-009`  
+**Chart ID:** `SH-ORG-005`  
 **Canonical date:** August 31, 2026  
 **Status:** Canon-derived visual organization chart  
-**Purpose:** Three founders plus five early employees, Blackridge continuity and 2026 status.
+**Purpose:** Cross-functional transition organization for repeatability and controlled commercialization.
 
-![THE ORIGINAL EIGHT — FORMATION & STATUS](assets/original-eight-formation-and-status.svg)
+![ATLAS MERIDIAN — BRIDGE ORGANIZATION](assets/atlas-meridian-bridge-2026.svg)
 
 ## Interpretation
 
