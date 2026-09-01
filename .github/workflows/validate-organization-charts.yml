@@ -7,15 +7,21 @@ on:
       - docs/canon/**
       - docs/organization/**
       - scripts/build_organization_charts.py
+      - scripts/regenerate_organization_package.py
+      - scripts/validate_organization_maps.py
       - .github/workflows/validate-organization-charts.yml
   push:
     branches:
-      - docs/organization-maps-v0.1
+      - main
+      - finance/enterprise-financial-platform-v0.1
+      - integration/enterprise-audit-and-dossiers-v0.1
     paths:
       - README.md
       - docs/canon/**
       - docs/organization/**
       - scripts/build_organization_charts.py
+      - scripts/regenerate_organization_package.py
+      - scripts/validate_organization_maps.py
       - .github/workflows/validate-organization-charts.yml
   workflow_dispatch:
 
@@ -34,8 +40,11 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Regenerate and XML-validate charts
-        run: python scripts/build_organization_charts.py
+      - name: Regenerate and XML-validate chart package
+        run: python scripts/regenerate_organization_package.py
 
-      - name: Verify rendered files are current
-        run: git diff --exit-code -- README.md docs/organization
+      - name: Validate chart register, pages, and assets
+        run: python scripts/validate_organization_maps.py
+
+      - name: Verify generated chart artifacts are current
+        run: git diff --exit-code -- docs/organization
