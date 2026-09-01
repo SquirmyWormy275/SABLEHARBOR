@@ -1,12 +1,12 @@
+<p align="center"><img src="https://raw.githubusercontent.com/SquirmyWormy275/SABLEHARBOR/main/assets/brand/logos/blood-sweat-and-tears-railway__primary-horizontal.svg" alt="Blood, Sweat & Tears Railway" width="700" /></p>
+
 # Blood, Sweat & Tears Railway
 
-![Blood, Sweat & Tears Railway](https://raw.githubusercontent.com/SquirmyWormy275/SABLEHARBOR/main/assets/brand/logos/blood-sweat-and-tears-railway__primary-horizontal.svg)
+BS&T is the railway or short-line operating component within American Resource Utility. Its exact legal name, route, interchanges, assets, workforce, and history remain open.
 
-**Role:** ARU operating component  
-**Canon state:** LOCKED name and relationship to ARU; legal identity, routes, assets, and history remain OPEN.
+[![ARU and BS&T organization](https://raw.githubusercontent.com/SquirmyWormy275/SABLEHARBOR/main/docs/organization/assets/aru-bst-organization-2026.svg)](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/main/docs/organization/ARU_BST_ORGANIZATION.md)
 
-The Blood, Sweat & Tears Railway (BS&T) is ARU's railway or short-line operating component. It persists as corporate archaeology inside Sable Harbor's acquired logistics estate.
+- [Full component dossier](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/main/docs/business-lines/BLOOD_SWEAT_AND_TEARS_RAILWAY.md)
+- [American Resource Utility](American-Resource-Utility)
 
-The wiki summarizes the controlling repository canon; it does not create or change canon.
-
-[Open the repository reference page](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/main/docs/business-lines/BLOOD_SWEAT_AND_TEARS_RAILWAY.md)
+PR #9 currently shares `ARU` / `ARU_BST` scope and has no distinct BS&T discriminator. A standalone railway database, route/fleet inventory, financial package, and letterhead are **not materialized**.

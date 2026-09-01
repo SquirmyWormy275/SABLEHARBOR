@@ -1,12 +1,12 @@
+<p align="center"><img src="https://raw.githubusercontent.com/SquirmyWormy275/SABLEHARBOR/main/assets/brand/logos/evalon__primary-horizontal.svg" alt="Evalon" width="700" /></p>
+
 # Evalon
 
-![Evalon](https://raw.githubusercontent.com/SquirmyWormy275/SABLEHARBOR/main/assets/brand/logos/evalon__primary-horizontal.svg)
+Evalon was the Pittsburgh-area advanced-engineering outpost active during 2020–2022. It failed as a conventional eastern operating concept and was closed; the surviving capability was rechartered as Willow.
 
-**Role:** historical advanced-engineering outpost  
-**Canon state:** LOCKED historical concept; closed and rechartered as Willow in 2022.
+- [Full historical dossier](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/main/docs/business-lines/EVALON.md)
+- [Willow](Willow)
+- [Emberline](Emberline)
+- [Organizational lineage](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/main/docs/organization/ORGANIZATIONAL_LINEAGE_2015_2026.md)
 
-Evalon was the Pittsburgh-area advanced-engineering outpost created under a coal and industrial mandate during 2020-2021. It failed as the business it was intended to become, concentrated experimental capability, and was closed as an operating concept before the surviving capability was rechartered as Project Willow.
-
-The wiki summarizes the controlling repository canon; it does not create or change canon.
-
-[Open the repository reference page](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/main/docs/business-lines/EVALON.md)
+The identity is archival. Exact team, projects, shop assets, customers, travel participants/costs, and historical financial records remain incomplete or open. No standalone historical package is materialized.
