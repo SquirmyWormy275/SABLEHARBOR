@@ -40,6 +40,7 @@ Where headquarters, leadership, or organizational structure remains unresolved i
 ```bash
 npm install --no-save pptxgenjs@4.0.0
 node tools/organization/build_org_briefing.js
+python tools/organization/postbuild_org_briefing.py
 ```
 
 The source builder reads official SVG marks directly from `assets/brand/logos/`.
