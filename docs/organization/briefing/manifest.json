@@ -1,0 +1,101 @@
+{
+  "package": "Sable Harbor Organization Briefing",
+  "version": "1.0.0",
+  "canonicalDate": "2026-08-31",
+  "officialLogoDirectory": "assets/brand/logos",
+  "slideCount": 8,
+  "oneImagePerSlide": true,
+  "officialLogoPolicy": "Only production SVG marks from assets/brand/logos are permitted; substitute clip art is prohibited.",
+  "enterpriseFields": [
+    "business-line name",
+    "headquarters or best-supported operating center",
+    "brief business description",
+    "current person in charge",
+    "current operating status"
+  ],
+  "slides": [
+    "Sable Harbor enterprise organization overview",
+    "Foundry / Foundry Field organization",
+    "Project Willow organization",
+    "Atlas Meridian organization",
+    "Pale Sun / Red Wash organization",
+    "Project Cradle organization",
+    "American Resource Utility / BS&T organization",
+    "Advisory organization"
+  ],
+  "requiredOfficialMarks": [
+    "sable-harbor__mark.svg",
+    "foundry__mark.svg",
+    "foundry-field__mark.svg",
+    "willow__mark.svg",
+    "atlas-meridian__mark.svg",
+    "pale-sun__mark.svg",
+    "red-wash-mine__mark.svg",
+    "project-cradle__mark.svg",
+    "american-resource-utility__mark.svg",
+    "blood-sweat-and-tears-railway__mark.svg",
+    "advisory__mark.svg"
+  ],
+  "files": [
+    {
+      "path": "docs/organization/briefing/README.md",
+      "bytes": 2046,
+      "sha256": "98b8a86ae7fc80d3552ba5bb2092b8424237b392e36d37a285db57168acd9104"
+    },
+    {
+      "path": "docs/organization/briefing/SABLE_HARBOR_Organization_Briefing_v1.0.pptx",
+      "bytes": 660860,
+      "sha256": "013b7008c57bd95073affe7772bc5028e26fa7b8b75740417acba79ef7774401"
+    },
+    {
+      "path": "docs/organization/briefing/SABLE_HARBOR_Organization_Briefing_v1.0.pdf",
+      "bytes": 399948,
+      "sha256": "3ad0e6d798cb575641b993bf02e850eb505f06a88ffc01c810be85977e826549"
+    },
+    {
+      "path": "docs/organization/briefing/images/01_sable_harbor_enterprise_organization.png",
+      "bytes": 236271,
+      "sha256": "7925501e0dac16efcb2d79fed62eefd0d4d0560005509ec08ac39eac4a9a6699"
+    },
+    {
+      "path": "docs/organization/briefing/images/02_foundry_foundry_field_organization.png",
+      "bytes": 140312,
+      "sha256": "01f66b42da0e23459e88348f7c624789ae21a60787d56f4aecf44ba7d006ba9f"
+    },
+    {
+      "path": "docs/organization/briefing/images/03_project_willow_organization.png",
+      "bytes": 166217,
+      "sha256": "87de95182d6068954e5f29cc1c3efe479ef2e3a342692bae755b0c1b6e99f233"
+    },
+    {
+      "path": "docs/organization/briefing/images/04_atlas_meridian_organization.png",
+      "bytes": 150055,
+      "sha256": "7b9b8fe8e18909b4ff91409f4052f430f8cc32b1df5d310dfe95a91e9df5f13d"
+    },
+    {
+      "path": "docs/organization/briefing/images/05_pale_sun_red_wash_organization.png",
+      "bytes": 152743,
+      "sha256": "3b565f2a8d2df8a5ad45bba5e0d1170925a6e30b25b92ee36752ed5a0b8b5c46"
+    },
+    {
+      "path": "docs/organization/briefing/images/06_project_cradle_organization.png",
+      "bytes": 132835,
+      "sha256": "2dd5d5a2cf89869ea4b7272620715d54f939a4abb05ed6eac4ee0d3cdf26806e"
+    },
+    {
+      "path": "docs/organization/briefing/images/07_american_resource_utility_bst_organization.png",
+      "bytes": 164655,
+      "sha256": "79f97544f420c9bd97bb92e672ea74ebbef8a57595874df57d4cc325971ef5b0"
+    },
+    {
+      "path": "docs/organization/briefing/images/08_advisory_organization.png",
+      "bytes": 143574,
+      "sha256": "c0ca3b63b7b7dd61e388496361dcb6cf0a2af2154dfa812b5545ce3ae09b4e67"
+    },
+    {
+      "path": "tools/organization/build_org_briefing.js",
+      "bytes": 34555,
+      "sha256": "8028751e7a124b626c439ad5e3e4c400837e77164d2cd84b66115b9fd48e926b"
+    }
+  ]
+}
