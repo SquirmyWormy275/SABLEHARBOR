@@ -33,6 +33,10 @@ def test_standard_generation_has_48_months_actual_forecast_and_is_idempotent() -
             .where(AccountingBook.entity_id == shi_id)
         )
         assert shi_periods == 48
+        marker = session.scalar(
+            select(ScenarioValue).where(ScenarioValue.period_code == "2023-2026")
+        )
+        assert marker is not None
         sources = set(session.scalars(select(JournalEntry.source_type)))
         assert {"monthly_actual", "monthly_forecast"}.issubset(sources)
         revenue = session.scalar(

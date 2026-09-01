@@ -243,7 +243,7 @@ class ScenarioValue(Base):
     scenario_code: Mapped[str] = mapped_column(String(20))
     metric_code: Mapped[str] = mapped_column(String(60))
     entity_code: Mapped[str] = mapped_column(String(32))
-    period_code: Mapped[str] = mapped_column(String(7))
+    period_code: Mapped[str] = mapped_column(String(16))
     amount: Mapped[Decimal] = mapped_column(Numeric(20, 4))
     unit: Mapped[str] = mapped_column(String(20))
     fact_state: Mapped[FactState] = mapped_column(Enum(FactState))

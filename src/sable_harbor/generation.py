@@ -29,6 +29,7 @@ from sable_harbor.accounting.models import (
     Site,
     Worker,
 )
+from sable_harbor.config.assumptions import load_assumptions
 from sable_harbor.core.ids import stable_id
 
 D = Decimal
@@ -54,35 +55,41 @@ class EntityPlan:
     site: str
 
 
-PLANS = (
-    EntityPlan(
-        "SHI",
-        "Sable Harbor, Inc. (model parent)",
-        D("130300000"),
-        D("140800000"),
-        450,
-        "CORE",
-        "SAC",
-    ),
-    EntityPlan(
-        "RWH",
-        "Red Wash Operations LLC (scenario entity)",
-        D("24700000"),
-        D("22300000"),
-        126,
-        "PALE_SUN",
-        "RED_WASH",
-    ),
-    EntityPlan(
-        "ARU",
-        "American Resource Utility, Inc. (scenario entity)",
-        D("23600000"),
-        D("20300000"),
-        132,
-        "ARU_BST",
-        "ARU_HUB",
-    ),
-)
+def entity_plans() -> tuple[EntityPlan, ...]:
+    assumptions = {
+        assumption.id: D(str(assumption.value))
+        for assumption in load_assumptions(Path("config/finance/assumptions"))
+        if assumption.id.startswith("FIN-Q-")
+    }
+    return (
+        EntityPlan(
+            "SHI",
+            "Sable Harbor, Inc. (model parent)",
+            assumptions["FIN-Q-001"],
+            assumptions["FIN-Q-002"],
+            450,
+            "CORE",
+            "SAC",
+        ),
+        EntityPlan(
+            "RWH",
+            "Red Wash Operations LLC (scenario entity)",
+            assumptions["FIN-Q-003"],
+            assumptions["FIN-Q-004"],
+            126,
+            "PALE_SUN",
+            "RED_WASH",
+        ),
+        EntityPlan(
+            "ARU",
+            "American Resource Utility, Inc. (scenario entity)",
+            assumptions["FIN-Q-005"],
+            assumptions["FIN-Q-006"],
+            132,
+            "ARU_BST",
+            "ARU_HUB",
+        ),
+    )
 
 
 ACCOUNTS = (
@@ -199,13 +206,14 @@ def generate_baseline(
             "contractors": contractors or 0,
         }
     rng = Random(seed)
+    plans = entity_plans()
 
     parent_id = _entity_id("SHI")
     entities = [
         LegalEntity(
             id=parent_id,
             code="SHI",
-            name=PLANS[0].name,
+            name=plans[0].name,
             fact_state=FactState.MODEL_PROPOSED,
             effective_from=date(2016, 1, 1),
             jurisdiction="US-DE",
@@ -213,7 +221,7 @@ def generate_baseline(
         LegalEntity(
             id=_entity_id("RWH"),
             code="RWH",
-            name=PLANS[1].name,
+            name=plans[1].name,
             parent_id=parent_id,
             fact_state=FactState.MODEL_PROPOSED,
             effective_from=date(2025, 7, 1),
@@ -222,7 +230,7 @@ def generate_baseline(
         LegalEntity(
             id=_entity_id("ARU"),
             code="ARU",
-            name=PLANS[2].name,
+            name=plans[2].name,
             parent_id=parent_id,
             fact_state=FactState.MODEL_PROPOSED,
             effective_from=date(2026, 2, 1),
@@ -332,7 +340,7 @@ def generate_baseline(
                 account,
                 debit=amount if amount > 0 else None,
                 credit=-amount if amount < 0 else None,
-                segment=next(plan.segment for plan in PLANS if plan.code == entity_code),
+                segment=next(plan.segment for plan in plans if plan.code == entity_code),
             )
             for index, (account, amount) in enumerate(balances, 1)
         ]
@@ -529,7 +537,7 @@ def generate_baseline(
         return {"scenario": scenario, "seed": seed, "employees": 708, "contractors": 61}
 
     # Summary ledgers: cash-realized revenue and expense; acquisition/opening positions.
-    for plan in PLANS:
+    for plan in plans:
         book, period = periods[plan.code]
         rev_account = "4000" if plan.code == "SHI" else "4030" if plan.code == "RWH" else "4040"
         _post(
@@ -670,6 +678,7 @@ def generate_standard(
 ) -> dict[str, int | str]:
     """Generate deterministic monthly 2023–2026 ledgers and operating driver values."""
     standard_scenario = f"standard_{scenario}"
+    revenue_multiplier, cost_multiplier = scenario_multipliers(scenario)
     marker = stable_id("scenario", f"{standard_scenario}:{seed}")
     marker_id = stable_id("scenario_value", f"{marker}:marker")
     if session.get(ScenarioValue, marker_id):
@@ -680,7 +689,6 @@ def generate_standard(
             "periods": 48,
         }
     generate_baseline(session, seed=seed, scenario=standard_scenario, post_summary=False)
-    revenue_multiplier, cost_multiplier = scenario_multipliers(scenario)
     books = {
         entity.code: book
         for entity, book in session.execute(
@@ -689,6 +697,7 @@ def generate_standard(
             )
         )
     }
+    plan_map = {plan.code: plan for plan in entity_plans()}
     yearly = {
         2023: {"SHI": (D("67200000"), D("75000000"))},
         2024: {"SHI": (D("85700000"), D("95000000"))},
@@ -697,9 +706,9 @@ def generate_standard(
             "RWH": (D("10000000"), D("11000000")),
         },
         2026: {
-            "SHI": (D("130300000"), D("140800000")),
-            "RWH": (D("24700000"), D("22300000")),
-            "ARU": (D("23600000"), D("20300000")),
+            "SHI": (plan_map["SHI"].revenue, plan_map["SHI"].operating_cost),
+            "RWH": (plan_map["RWH"].revenue, plan_map["RWH"].operating_cost),
+            "ARU": (plan_map["ARU"].revenue, plan_map["ARU"].operating_cost),
         },
     }
     revenue_accounts = {"SHI": "4000", "RWH": "4030", "ARU": "4040"}
