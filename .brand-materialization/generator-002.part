@@ -1,0 +1,161 @@
+        svg_path('M66 73 H81', stroke=main, stroke_width=16),
+        svg_path('M60 2 V118', stroke=accent, stroke_width=7),
+        svg_rect(53, 58, 14, 14, accent),
+    ]
+    return ''.join(e)
+
+
+def mark_pale_sun(main: str, accent: str) -> str:
+    # Two non-converged enclosures, carried as distinct operating and material paths.
+    e = [
+        svg_rect(10, 10, 68, 20, main),
+        svg_rect(10, 10, 20, 50, main),
+        svg_rect(10, 40, 48, 20, main),
+        svg_rect(42, 40, 20, 32, main),
+        svg_rect(42, 48, 68, 20, accent),
+        svg_rect(90, 48, 20, 62, accent),
+        svg_rect(42, 90, 68, 20, accent),
+        svg_rect(58, 70, 52, 20, accent),
+    ]
+    return ''.join(e)
+
+
+def mark_bst(main: str, accent: str) -> str:
+    e = [
+        svg_path('M10 18 H110', stroke=main, stroke_width=14),
+        svg_path('M10 48 H55 L76 20', stroke=main, stroke_width=14),
+        svg_path('M10 78 H53 L76 102 H110', stroke=main, stroke_width=14),
+        svg_path('M76 74 H110', stroke=main, stroke_width=14),
+        svg_path('M48 47 L73 77', stroke=accent, stroke_width=12),
+    ]
+    return ''.join(e)
+
+
+MARKS: dict[str, Callable[[str, str], str]] = {
+    'sable': mark_sable,
+    'foundry': mark_foundry,
+    'willow': mark_willow,
+    'advisory': mark_advisory,
+    'cradle': mark_cradle,
+    'aru': mark_aru,
+    'atlas': mark_atlas,
+    'pale-sun': mark_pale_sun,
+    'bst': mark_bst,
+}
+
+
+def mark_group(mark_name: str, x: float, y: float, size: float, main: str, accent: str) -> str:
+    scale = size / 120.0
+    body = MARKS[mark_name](main, accent)
+    return f'<g transform="translate({x:.3f},{y:.3f}) scale({scale:.8f})">{body}</g>'
+
+
+def svg_document(width: int, height: int, body: str, title: str, desc: str, background: str | None = None) -> str:
+    bg = '' if background is None else svg_rect(0, 0, width, height, background)
+    return (
+        f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" '
+        f'viewBox="0 0 {width} {height}" role="img" aria-labelledby="title desc">'
+        f'<title id="title">{escape(title)}</title><desc id="desc">{escape(desc)}</desc>'
+        f'{bg}{body}</svg>'
+    )
+
+
+def fitted_font_size(lines: tuple[str, ...], max_width: float, max_size: float, min_size: float, tracking_ratio: float = 0.10) -> tuple[float, float]:
+    size = max_size
+    while size > min_size:
+        tracking = size * tracking_ratio
+        widest = max(FONT_MEDIUM.measure(line, size, tracking) for line in lines)
+        if widest <= max_width:
+            return size, tracking
+        size -= 1
+    return min_size, min_size * tracking_ratio
+
+
+def render_horizontal(brand: Brand, reverse: bool = False, mono: bool = False) -> str:
+    width, height = 1600, 500
+    background = DARK if reverse else None
+    main = WHITE if reverse else INK
+    accent = main if mono else brand.accent
+    secondary = '#B7BCC1' if reverse else MUTED
+
+    mark_size = 280
+    mark_x = 80
+    mark_y = (height - mark_size) / 2
+    body = [mark_group(brand.mark, mark_x, mark_y, mark_size, main, accent)]
+
+    text_x = 430
+    text_max_width = 1080
+    n = len(brand.horizontal_lines)
+    if n == 1:
+        size_cap = 108
+        line_gap = 24
+    elif n == 2:
+        size_cap = 84
+        line_gap = 20
+    else:
+        size_cap = 74
+        line_gap = 12
+    size, tracking = fitted_font_size(brand.horizontal_lines, text_max_width, size_cap, 58)
+    line_height = size * 1.08 + line_gap
+    total_text_h = n * size + (n - 1) * (line_height - size)
+    endorsement_h = 20 if brand.endorsement else 0
+    group_total = total_text_h + (48 if brand.endorsement else 0)
+    first_baseline = (height - group_total) / 2 + size * 0.78
+
+    for i, line in enumerate(brand.horizontal_lines):
+        baseline = first_baseline + i * line_height
+        body.append(FONT_MEDIUM.paths(line, text_x, baseline, size, main, tracking))
+
+    last_baseline = first_baseline + (n - 1) * line_height
+    widest = max(FONT_MEDIUM.measure(line, size, tracking) for line in brand.horizontal_lines)
+    rule_y = last_baseline + 26
+    rule_width = min(widest, text_max_width)
+    body.append(svg_rect(text_x, rule_y, rule_width, 4, accent))
+    if brand.endorsement:
+        end_size = 16
+        end_track = 3.0
+        body.append(FONT_SEMIBOLD.paths(brand.endorsement, text_x, rule_y + 42, end_size, secondary, end_track))
+
+    variant = 'reverse horizontal' if reverse else ('one-color horizontal' if mono else 'primary horizontal')
+    return svg_document(width, height, ''.join(body), f'{brand.display_name} — {variant}', f'Individual {variant} logo asset for {brand.display_name}.', background)
+
+
+def render_stacked(brand: Brand) -> str:
+    width, height = 1000, 1000
+    mark_size = 390
+    mark_x = (width - mark_size) / 2
+    mark_y = 90
+    body = [mark_group(brand.mark, mark_x, mark_y, mark_size, INK, brand.accent)]
+
+    lines = brand.horizontal_lines
+    n = len(lines)
+    max_width = 820
+    size_cap = 92 if n == 1 else (76 if n == 2 else 64)
+    size, tracking = fitted_font_size(lines, max_width, size_cap, 50)
+    line_height = size * 1.18
+    first_baseline = 620 - (n - 1) * line_height / 2
+    for i, line in enumerate(lines):
+        body.append(FONT_MEDIUM.paths(line, width / 2, first_baseline + i * line_height, size, INK, tracking, anchor='middle'))
+    last_baseline = first_baseline + (n - 1) * line_height
+    if brand.endorsement:
+        body.append(svg_rect(240, last_baseline + 36, 520, 4, brand.accent))
+        body.append(FONT_SEMIBOLD.paths(brand.endorsement, width / 2, last_baseline + 84, 15, MUTED, 2.5, anchor='middle'))
+    return svg_document(width, height, ''.join(body), f'{brand.display_name} — stacked', f'Individual stacked logo asset for {brand.display_name}.')
+
+
+def render_mark(brand: Brand) -> str:
+    width, height = 1000, 1000
+    size = 680
+    body = mark_group(brand.mark, (width - size) / 2, (height - size) / 2, size, INK, brand.accent)
+    return svg_document(width, height, body, f'{brand.display_name} — mark', f'Individual mark-only logo asset for {brand.display_name}.')
+
+
+def render_variant(brand: Brand, variant: str) -> str:
+    if variant == 'primary-horizontal':
+        return render_horizontal(brand, reverse=False, mono=False)
+    if variant == 'reverse-horizontal':
+        return render_horizontal(brand, reverse=True, mono=False)
+    if variant == 'one-color-horizontal':
+        return render_horizontal(brand, reverse=False, mono=True)
+    if variant == 'stacked':
+        return r
