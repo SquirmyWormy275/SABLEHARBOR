@@ -11,6 +11,9 @@
 - Opened draft PR #9 against the current lore branch.
 - Implemented and verified balanced posting, trial balance, immutable posted journals, reversal entries, and period close controls.
 - Added Alembic fresh-database migrations and strict machine-readable assumption validation.
+- Added causal contract-to-cash, payroll, procurement/AP/payment, fixed-asset, debt, Red Wash, ARU/BS&T, Cradle, Willow, and Atlas vertical slices.
+- Added deterministic standard, stress, and full-history profiles; named queries; six workbooks; valuation; and public-demo releases.
+- Local PostgreSQL attempt: Docker daemon access denied; system PostgreSQL inactive; CI PostgreSQL 16 job added.
 - Recorded the user-approved v0.2 precedence decision and machine-readable canon collisions.
 - Compared quantitative Alternatives A, B, and C and selected reversible Alternative B.
 - Implemented commercial, payroll, procurement, asset, debt, mine, inventory, environmental, logistics, workforce, contract, scenario, and consolidation structures.
