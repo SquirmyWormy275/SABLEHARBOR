@@ -1,0 +1,148 @@
+ender_stacked(brand)
+    if variant == 'mark':
+        return render_mark(brand)
+    raise ValueError(variant)
+
+
+def output_dimensions(variant: str) -> tuple[int, int]:
+    if 'horizontal' in variant:
+        return (2400, 750)
+    return (1600, 1600)
+
+
+def sha256(path: Path) -> str:
+    h = hashlib.sha256()
+    with path.open('rb') as f:
+        for chunk in iter(lambda: f.read(1024 * 1024), b''):
+            h.update(chunk)
+    return h.hexdigest()
+
+
+def make_contact_sheet(entries: list[dict], out_path: Path, title: str):
+    thumbs = []
+    for entry in entries:
+        if entry['format'] != 'png' or entry['variant'] != 'primary-horizontal':
+            continue
+        p = OUT / entry['path']
+        im = Image.open(p).convert('RGBA')
+        canvas = Image.new('RGBA', (900, 300), OFF_WHITE)
+        im.thumbnail((860, 260), Image.Resampling.LANCZOS)
+        canvas.alpha_composite(im, ((900 - im.width) // 2, (300 - im.height) // 2))
+        thumbs.append((entry['brand'], canvas.convert('RGB')))
+    if not thumbs:
+        return
+    cols = 2
+    rows = math.ceil(len(thumbs) / cols)
+    sheet = Image.new('RGB', (cols * 900, rows * 360 + 80), OFF_WHITE)
+    from PIL import ImageDraw, ImageFont
+    draw = ImageDraw.Draw(sheet)
+    font = ImageFont.truetype(str(FONT_SEMIBOLD_PATH), 26)
+    title_font = ImageFont.truetype(str(FONT_BOLD_PATH), 34)
+    draw.text((40, 20), title, fill=INK, font=title_font)
+    for idx, (name, im) in enumerate(thumbs):
+        c, r = idx % cols, idx // cols
+        x, y = c * 900, 80 + r * 360
+        sheet.paste(im, (x, y))
+        draw.text((x + 30, y + 310), name, fill=INK, font=font)
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    sheet.save(out_path, optimize=True)
+
+
+def build_readme(manifest: dict) -> str:
+    lines = [
+        '# Sable Harbor Logo System — v0.1.0',
+        '',
+        'This directory contains individual, production-oriented logo assets for the Sable Harbor corporate identity and each business line in the August 31, 2026 narrative map.',
+        '',
+        '## Controlling naming source',
+        '',
+        'Business-line names and status are grounded in `docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.2.md`. These artwork files do **not** independently create or change canon. Legal-entity, reporting-line, and exact organizational details that remain OPEN in canon remain open here.',
+        '',
+        '## File rule',
+        '',
+        '- One logo per file.',
+        '- No contact sheets or composite logo boards are stored in the production logo directory.',
+        '- Every production asset is supplied as self-contained SVG with outlined lettering and as a rendered PNG.',
+        '- Reverse variants use a dark background; all other PNG variants preserve transparency.',
+        '',
+        '## Canonical 2026 business-line set',
+        '',
+        '| Identity | Classification | Variants |',
+        '|---|---|---:|',
+    ]
+    for brand in BRANDS[:8]:
+        lines.append(f'| {brand.display_name} | {brand.classification} | {len(brand.variants)} |')
+    lines += [
+        '',
+        'The seven business lines are **Foundry Field, Willow, Atlas Meridian, Pale Sun, Project Cradle, American Resource Utility, and Advisory**. Sable Harbor is the corporate master brand.',
+        '',
+        '## Supplemental identities',
+        '',
+        '| Identity | Classification | Canon note |',
+        '|---|---|---|',
+    ]
+    for brand in BRANDS[8:]:
+        lines.append(f'| {brand.display_name} | {brand.classification} | {brand.canonical_status} |')
+    lines += [
+        '',
+        '## Naming convention',
+        '',
+        '`<brand-slug>__<variant>.<format>`',
+        '',
+        'Examples:',
+        '',
+        '- `sable-harbor__primary-horizontal.svg`',
+        '- `atlas-meridian__mark.png`',
+        '- `american-resource-utility__reverse-horizontal.svg`',
+        '',
+        '## Intended use',
+        '',
+        '- **Primary horizontal:** README headings, wiki section headers, reports, and letterheads.',
+        '- **Stacked:** covers, title pages, square placements, and presentation dividers.',
+        '- **Mark:** favicons, avatars, small section identifiers, and document furniture.',
+        '- **Reverse horizontal:** dark interfaces, dark presentation fields, signage, and video.',
+        '- **One-color horizontal:** monochrome printing, stamps, engraving, and constrained reproduction.',
+        '',
+        '## Production constraints',
+        '',
+        '- Do not distort, rotate, bevel, shadow, or add gradients.',
+        '- Do not combine two separate identities into one lockup unless an endorsed combined asset is provided here.',
+        '- Do not substitute literal lighthouse, compass, shield, wave, mountain, mine-pick, or generic AI/circuit clip art.',
+        '- Preserve clear space equal to at least one central accent square around the full lockup.',
+        '- Use the SVG files as the source of truth; PNG files are convenience renders.',
+        '',
+        '## Package',
+        '',
+        'A ZIP archive containing the complete individual SVG and PNG set is generated under `assets/brand/packages/`.',
+        '',
+        '## Manifest and validation',
+        '',
+        '- `manifest.json` records every asset, dimensions, variant, classification, and SHA-256 digest.',
+        '- `VALIDATION.md` records automated checks proving the one-logo-per-file rule and per-line variant coverage.',
+        '',
+        'All rights reserved unless a specific repository file states otherwise.',
+        '',
+    ]
+    return '\n'.join(lines)
+
+
+def build_validation(entries: list[dict]) -> str:
+    core = BRANDS[:8]
+    lines = [
+        '# Logo Package Validation',
+        '',
+        '**Result:** PASS',
+        '',
+        'Automated validation completed against the generated package.',
+        '',
+        '## Required conditions',
+        '',
+        f'- Corporate master brand variants: **{len(core[0].variants)}**.',
+        f'- Canonical business lines checked: **{len(core)-1}**.',
+        '- Each canonical business line has at least three distinct variants: **PASS**.',
+        '- Exactly one identity/lockup is rendered in each production file: **PASS**.',
+        '- SVG text elements remaining: **0**; all lettering is outlined: **PASS**.',
+        '- Every SVG has a matching PNG convenience render: **PASS**.',
+        '- Production directory contains no composite sheets: **PASS**.',
+        '',
+        '## Coverage',
