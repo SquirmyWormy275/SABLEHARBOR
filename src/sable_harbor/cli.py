@@ -11,6 +11,7 @@ from sable_harbor.core.database import build_engine, session_for
 from sable_harbor.generation import generate_baseline, generate_standard
 from sable_harbor.reporting import build_workbook
 from sable_harbor.reporting_queries import named_queries, run_named_query
+from sable_harbor.workbooks.suite import generate_workbook_suite
 
 app = typer.Typer(no_args_is_help=True)
 
@@ -95,3 +96,14 @@ def query(name: str) -> None:
 @app.command("queries")
 def queries() -> None:
     typer.echo("\n".join(named_queries()))
+
+
+@app.command("workbooks")
+def workbooks(output: Path = Path("workbooks/outputs")) -> None:
+    engine = build_engine()
+    Base.metadata.create_all(engine)
+    with session_for(engine) as session:
+        generate_standard(session)
+        session.commit()
+        paths = generate_workbook_suite(session, output)
+    typer.echo("\n".join(str(path) for path in paths))
