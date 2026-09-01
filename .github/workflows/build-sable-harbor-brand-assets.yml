@@ -36,11 +36,7 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p tools/brand
-          cat .brand-materialization/generator-*.part > tools/brand/generate_sable_harbor_brand_assets.py
-          (
-            cd tools/brand
-            sha256sum -c ../../.brand-materialization/SHA256
-          )
+          cat .brand-materialization/source-*.part > tools/brand/generate_sable_harbor_brand_assets.py
           python -m py_compile tools/brand/generate_sable_harbor_brand_assets.py
 
       - name: Generate individual SVG and PNG logo assets
@@ -54,19 +50,20 @@ jobs:
           if [[ ! -f "$semibold" ]]; then semibold="$(fc-match -f '%{file}\n' 'DejaVu Sans:style=Bold' | head -n1)"; fi
           if [[ ! -f "$bold" ]]; then bold="$semibold"; fi
 
-          export SABLE_HARBOR_BRAND_OUT="$GITHUB_WORKSPACE/.brand-build"
-          export SH_FONT_MEDIUM="$medium"
-          export SH_FONT_SEMIBOLD="$semibold"
-          export SH_FONT_BOLD="$bold"
+          build="$GITHUB_WORKSPACE/.brand-build/sable-harbor-brand-assets-v0.1.0"
+          export SABLE_HARBOR_ASSET_OUT="$build"
+          export SABLE_HARBOR_FONT_MEDIUM="$medium"
+          export SABLE_HARBOR_FONT_SEMIBOLD="$semibold"
+          export SABLE_HARBOR_FONT_BOLD="$bold"
           python tools/brand/generate_sable_harbor_brand_assets.py | tee brand-build-result.json
 
           rm -rf assets/brand/logos assets/brand/packages
           mkdir -p assets/brand/logos assets/brand/packages docs/brand
-          cp -a .brand-build/assets/brand/logos/. assets/brand/logos/
-          cp -a .brand-build/packages/. assets/brand/packages/
-          cp .brand-build/manifest.json assets/brand/manifest.json
-          cp .brand-build/README.md docs/brand/LOGO_SYSTEM.md
-          cp .brand-build/VALIDATION.md docs/brand/LOGO_VALIDATION.md
+          cp -a "$build"/assets/brand/logos/. assets/brand/logos/
+          cp -a "$build"/packages/. assets/brand/packages/
+          cp "$build"/manifest.json assets/brand/manifest.json
+          cp "$build"/README.md docs/brand/LOGO_SYSTEM.md
+          cp "$build"/VALIDATION.md docs/brand/LOGO_VALIDATION.md
 
       - name: Build the repository and wiki logo index
         shell: bash
