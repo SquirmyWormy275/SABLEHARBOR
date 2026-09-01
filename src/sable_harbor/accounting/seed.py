@@ -177,6 +177,20 @@ def seed_smoke(session: Session) -> str:
                 normal_balance="CREDIT",
             ),
             Account(
+                id=stable_id("account", "4020"),
+                code="4020",
+                name="Atlas Meridian revenue",
+                account_class="REVENUE",
+                normal_balance="CREDIT",
+            ),
+            Account(
+                id=stable_id("account", "6000"),
+                code="6000",
+                name="Research and development",
+                account_class="EXPENSE",
+                normal_balance="DEBIT",
+            ),
+            Account(
                 id=stable_id("account", "5000"),
                 code="5000",
                 name="Cost of sales",

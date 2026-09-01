@@ -10,6 +10,7 @@ from sable_harbor.operations import models as operations_models  # noqa: F401
 from sable_harbor.mining import models as mining_models  # noqa: F401
 from sable_harbor.logistics import models as logistics_models  # noqa: F401
 from sable_harbor.recovery import models as recovery_models  # noqa: F401
+from sable_harbor.research import models as research_models  # noqa: F401
 
 config = context.config
 if configured_url := os.getenv("SHFIN_DATABASE_URL"):
