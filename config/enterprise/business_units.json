@@ -1,0 +1,289 @@
+{
+  "schema_version": "0.1.0",
+  "as_of": "2026-09-01",
+  "control_state": {
+    "controlling_canon": {
+      "branch": "main",
+      "commit": "c111ec6f4900edea656a52a391c71c600b880be1",
+      "document": "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.2.md"
+    },
+    "finance_release_candidate": {
+      "branch": "finance/enterprise-financial-platform-v0.1",
+      "commit": "1f294440a11e724e5f1bdcd3a7f59f7342169bfe",
+      "pr": 9,
+      "acceptance_state": "RELEASE_CANDIDATE_NOT_ACCEPTED"
+    },
+    "integration_branch": {
+      "name": "integration/enterprise-audit-and-dossiers-v0.1",
+      "base_branch": "finance/enterprise-financial-platform-v0.1",
+      "base_commit_at_creation": "1f294440a11e724e5f1bdcd3a7f59f7342169bfe",
+      "status": "DRAFT_INTEGRATION"
+    },
+    "standalone_unit_exports": "NOT_IMPLEMENTED",
+    "wiki_enabled": false,
+    "rulesets_detected": 0
+  },
+  "coverage_states": {
+    "COMPLETE": "Artifact exists, is linked, and has an automated structural check.",
+    "PARTIAL": "Material exists but the unit boundary, completeness, or standalone export is incomplete.",
+    "OPEN": "The controlling canon intentionally leaves the fact unresolved.",
+    "NOT_IMPLEMENTED": "The requested auditable artifact or export does not yet exist.",
+    "RELEASE_CANDIDATE": "Implemented on an unmerged branch and not accepted as controlling."
+  },
+  "units": [
+    {
+      "id": "foundry-field",
+      "name": "Foundry Field",
+      "page": "FOUNDRY_FIELD.md",
+      "wiki": "Foundry Field.md",
+      "role": "Current core business line and principal operating/economic interface.",
+      "canon_state": "LOCKED identity and role; exact legal, reporting, headcount, customer, and product-P&L details remain OPEN or scenario-controlled.",
+      "classification": "current_business_line",
+      "logo_slug": "foundry-field",
+      "letterhead_slug": "foundry-field",
+      "org_page": "docs/organization/FOUNDRY_FIELD_ORGANIZATION.md",
+      "org_chart": "docs/organization/assets/foundry-field-organization-2026.svg",
+      "entity_codes": [
+        "SHI"
+      ],
+      "segment_codes": [
+        "CORE",
+        "FOUNDRY_FIELD",
+        "DELIVERY"
+      ],
+      "site_codes": [
+        "SAC"
+      ],
+      "queries": [
+        "customer_arr_bridge",
+        "customer_profitability",
+        "deferred_revenue_rollforward",
+        "engagement_margin_wip",
+        "employee_loaded_cost",
+        "entity_trial_balance",
+        "journal_to_source_trace"
+      ],
+      "canon_links": [
+        "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.2.md",
+        "docs/organization/FOUNDRY_AND_FOUNDRY_FIELD.md"
+      ]
+    },
+    {
+      "id": "willow",
+      "name": "Willow",
+      "page": "WILLOW.md",
+      "wiki": "Willow.md",
+      "role": "Current core business line for bounded experiments and consequential unknowns.",
+      "canon_state": "LOCKED identity, role, and boundary logic; portfolio, leadership, budgets, commercialization, and legal structure remain OPEN or scenario-controlled.",
+      "classification": "current_business_line",
+      "logo_slug": "willow",
+      "letterhead_slug": "willow",
+      "org_page": "docs/organization/WILLOW_ORGANIZATION.md",
+      "org_chart": "docs/organization/assets/willow-organization-2026.svg",
+      "entity_codes": [
+        "SHI"
+      ],
+      "segment_codes": [
+        "WILLOW",
+        "CORE"
+      ],
+      "site_codes": [
+        "SAC"
+      ],
+      "queries": [
+        "assumption_impact",
+        "employee_loaded_cost",
+        "entity_trial_balance",
+        "journal_to_source_trace",
+        "source_to_journal_trace",
+        "release_coverage_lineage"
+      ],
+      "canon_links": [
+        "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.2.md",
+        "docs/organization/WILLOW_AND_ATLAS_MERIDIAN.md"
+      ]
+    },
+    {
+      "id": "atlas-meridian",
+      "name": "Atlas Meridian",
+      "page": "ATLAS_MERIDIAN.md",
+      "wiki": "Atlas Meridian.md",
+      "role": "Current core business line for investigation across represented evidence.",
+      "canon_state": "LOCKED identity, investigative role, and authority limits; commercial scale, leadership, customers, models, and legal structure remain OPEN or scenario-controlled.",
+      "classification": "current_business_line",
+      "logo_slug": "atlas-meridian",
+      "letterhead_slug": "atlas-meridian",
+      "org_page": "docs/organization/ATLAS_MERIDIAN_BRIDGE_ORGANIZATION.md",
+      "org_chart": "docs/organization/assets/atlas-meridian-bridge-2026.svg",
+      "entity_codes": [
+        "SHI"
+      ],
+      "segment_codes": [
+        "ATLAS",
+        "CORE"
+      ],
+      "site_codes": [
+        "SAC"
+      ],
+      "queries": [
+        "assumption_impact",
+        "customer_profitability",
+        "employee_loaded_cost",
+        "entity_trial_balance",
+        "journal_to_source_trace",
+        "source_to_journal_trace",
+        "release_coverage_lineage"
+      ],
+      "canon_links": [
+        "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.2.md",
+        "docs/organization/WILLOW_AND_ATLAS_MERIDIAN.md"
+      ]
+    },
+    {
+      "id": "pale-sun",
+      "name": "Pale Sun",
+      "page": "PALE_SUN.md",
+      "wiki": "Pale Sun.md",
+      "role": "Current operating business line responsible for Red Wash and the uranium operating thesis.",
+      "canon_state": "LOCKED identity, Red Wash relationship, and operating-control thesis; reserves, production plan, legal chain, exact estate, workforce, economics, and technical assumptions remain OPEN or scenario-controlled.",
+      "classification": "current_business_line",
+      "logo_slug": "pale-sun",
+      "letterhead_slug": "pale-sun",
+      "org_page": "docs/organization/PALE_SUN_RED_WASH_ORGANIZATION.md",
+      "org_chart": "docs/organization/assets/pale-sun-red-wash-organization-2026.svg",
+      "entity_codes": [
+        "RWH"
+      ],
+      "segment_codes": [
+        "PALE_SUN"
+      ],
+      "site_codes": [
+        "RED_WASH"
+      ],
+      "queries": [
+        "red_wash_unit_cost_bridge",
+        "mine_inventory_shipment_reconciliation",
+        "fixed_asset_rollforward",
+        "vendor_spend_concentration",
+        "debt_covenant_calculation",
+        "entity_trial_balance",
+        "journal_to_source_trace",
+        "intercompany_mismatch_elimination"
+      ],
+      "canon_links": [
+        "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.2.md",
+        "docs/organization/PALE_SUN_AND_RED_WASH.md"
+      ]
+    },
+    {
+      "id": "project-cradle",
+      "name": "Project Cradle",
+      "page": "PROJECT_CRADLE.md",
+      "wiki": "Project Cradle.md",
+      "role": "Current core business line for host-safe recovery and participation economics.",
+      "canon_state": "LOCKED identity, host-safe boundary, and recovery role; commercial structures, project pipeline, leadership, ownership, and economics remain OPEN or scenario-controlled.",
+      "classification": "current_business_line",
+      "logo_slug": "project-cradle",
+      "letterhead_slug": "project-cradle",
+      "org_page": "docs/organization/PROJECT_CRADLE_ORGANIZATION.md",
+      "org_chart": "docs/organization/assets/project-cradle-organization-2026.svg",
+      "entity_codes": [
+        "SHI"
+      ],
+      "segment_codes": [
+        "CRADLE"
+      ],
+      "site_codes": [
+        "SAC"
+      ],
+      "queries": [
+        "cradle_project_economics",
+        "customer_profitability",
+        "vendor_spend_concentration",
+        "fixed_asset_rollforward",
+        "entity_trial_balance",
+        "journal_to_source_trace"
+      ],
+      "canon_links": [
+        "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.2.md",
+        "docs/organization/PROJECT_CRADLE.md"
+      ]
+    },
+    {
+      "id": "american-resource-utility",
+      "name": "American Resource Utility",
+      "page": "AMERICAN_RESOURCE_UTILITY.md",
+      "wiki": "American Resource Utility.md",
+      "role": "Current distinct operating company and core resource-logistics line; BS&T is an operating component.",
+      "canon_state": "LOCKED identity, acquired-operator role, and BS&T relationship; routes, asset counts, terminals, leadership, workforce, exact legal chain, and economics remain OPEN or scenario-controlled.",
+      "classification": "current_business_line",
+      "logo_slug": "american-resource-utility",
+      "letterhead_slug": "american-resource-utility",
+      "org_page": "docs/organization/ARU_BST_ORGANIZATION.md",
+      "org_chart": "docs/organization/assets/aru-bst-organization-2026.svg",
+      "entity_codes": [
+        "ARU"
+      ],
+      "segment_codes": [
+        "ARU_BST"
+      ],
+      "site_codes": [
+        "ARU_HUB"
+      ],
+      "queries": [
+        "aru_route_customer_margin",
+        "intercompany_mismatch_elimination",
+        "fixed_asset_rollforward",
+        "vendor_spend_concentration",
+        "debt_covenant_calculation",
+        "employee_loaded_cost",
+        "entity_trial_balance",
+        "journal_to_source_trace"
+      ],
+      "canon_links": [
+        "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.2.md",
+        "docs/organization/ARU_BST_AND_ADVISORY.md"
+      ]
+    },
+    {
+      "id": "advisory",
+      "name": "Advisory",
+      "page": "ADVISORY.md",
+      "wiki": "Advisory.md",
+      "role": "Emerging current business line for method transfer where the client should own the system.",
+      "canon_state": "LOCKED emerging role and method-transfer boundary; name treatment, scale, leadership, customers, legal structure, and economics remain OPEN or scenario-controlled.",
+      "classification": "current_business_line",
+      "logo_slug": "advisory",
+      "letterhead_slug": "advisory",
+      "org_page": "docs/organization/ARU_BST_AND_ADVISORY.md",
+      "org_chart": "docs/organization/briefing/images/08_advisory_organization.png",
+      "entity_codes": [
+        "SHI"
+      ],
+      "segment_codes": [
+        "ADVISORY"
+      ],
+      "site_codes": [
+        "SAC"
+      ],
+      "queries": [
+        "engagement_margin_wip",
+        "customer_profitability",
+        "ar_ap_aging",
+        "employee_loaded_cost",
+        "entity_trial_balance",
+        "journal_to_source_trace"
+      ],
+      "canon_links": [
+        "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.2.md",
+        "docs/organization/ARU_BST_AND_ADVISORY.md"
+      ]
+    }
+  ],
+  "unit_export_specification": "docs/audit/UNIT_EXPORT_SPECIFICATION.md",
+  "notes": [
+    "Business-line dossiers index shared canonical assets and enterprise data; they do not duplicate source files.",
+    "Finance and generated-output references are release-candidate surfaces from PR #9, not accepted canon.",
+    "Standalone unit databases, inventory packages, financial statements, and checksummed bundles require implementation under the unit export specification."
+  ]
+}
