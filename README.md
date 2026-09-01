@@ -29,6 +29,15 @@ This is the canon-derived August 31, 2026 **functional enterprise organization c
 
 The full package contains dedicated charts for [leadership and authority](docs/organization/2026_LEADERSHIP_AND_AUTHORITY_MAP.md), [Foundry Field](docs/organization/FOUNDRY_FIELD_ORGANIZATION.md), [Project Willow](docs/organization/WILLOW_ORGANIZATION.md), [Atlas Meridian](docs/organization/ATLAS_MERIDIAN_BRIDGE_ORGANIZATION.md), [Pale Sun and Red Wash](docs/organization/PALE_SUN_RED_WASH_ORGANIZATION.md), [Project Cradle](docs/organization/PROJECT_CRADLE_ORGANIZATION.md), [ARU and BS&T](docs/organization/ARU_BST_ORGANIZATION.md), and [the Original Eight](docs/organization/ORIGINAL_EIGHT.md).
 
+### Official organization briefing
+
+The briefing-grade publication package uses the approved production logo system and includes one rendered 16:9 image per chart, an editable PowerPoint deck, a PDF, a packaged ZIP, a source builder, and a validation manifest.
+
+- [Organization briefing index](docs/organization/briefing/README.md)
+- [Editable PowerPoint](docs/organization/briefing/SABLE_HARBOR_Organization_Briefing_v1.0.pptx)
+- [Briefing PDF](docs/organization/briefing/SABLE_HARBOR_Organization_Briefing_v1.0.pdf)
+- [Complete briefing package](docs/organization/briefing/SABLE_HARBOR_Organization_Briefing_v1.0.zip)
+
 ## Blackridge status
 
 Blackridge remains the upstream founding wound and a separate executable case universe. The current connected repository branches expose only limited Blackridge scaffolding; the complete detailed Blackridge build must be imported and rechecked before it replaces the handover summary as the controlling source.
