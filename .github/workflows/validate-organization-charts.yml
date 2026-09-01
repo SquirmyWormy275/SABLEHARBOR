@@ -1,0 +1,41 @@
+name: Validate rendered organization charts
+
+on:
+  pull_request:
+    paths:
+      - README.md
+      - docs/canon/**
+      - docs/organization/**
+      - scripts/build_organization_charts.py
+      - .github/workflows/validate-organization-charts.yml
+  push:
+    branches:
+      - docs/organization-maps-v0.1
+    paths:
+      - README.md
+      - docs/canon/**
+      - docs/organization/**
+      - scripts/build_organization_charts.py
+      - .github/workflows/validate-organization-charts.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Regenerate and XML-validate charts
+        run: python scripts/build_organization_charts.py
+
+      - name: Verify rendered files are current
+        run: git diff --exit-code -- README.md docs/organization
