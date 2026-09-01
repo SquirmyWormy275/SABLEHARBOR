@@ -12,6 +12,7 @@ from sable_harbor.exports.release import package_public_demo
 from sable_harbor.generation import generate_baseline, generate_standard
 from sable_harbor.reporting import build_workbook
 from sable_harbor.reporting_queries import named_queries, run_named_query
+from sable_harbor.valuation.model import calculate_valuation, load_valuation_config
 from sable_harbor.workbooks.suite import generate_workbook_suite
 
 app = typer.Typer(no_args_is_help=True)
@@ -119,3 +120,8 @@ def package_release(output: Path = Path("releases/generated/public-demo-v0.1")) 
         session.commit()
         manifest = package_public_demo(session, output)
     typer.echo(manifest)
+
+
+@app.command("valuation")
+def valuation() -> None:
+    typer.echo(calculate_valuation(load_valuation_config()))

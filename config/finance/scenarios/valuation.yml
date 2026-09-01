@@ -1,0 +1,50 @@
+fact_state: MODEL_PROPOSED
+as_of_date: 2026-08-31
+components:
+  software_services_core:
+    method: revenue_multiple
+    driver: "127800000"
+    low_multiple: "1.75"
+    base_multiple: "2.50"
+    high_multiple: "3.50"
+  atlas_willow_optionality:
+    method: risk_adjusted_option
+    low_value: "10000000"
+    base_value: "25000000"
+    high_value: "50000000"
+  red_wash:
+    method: mine_nav_proxy
+    low_value: "32000000"
+    base_value: "48000000"
+    high_value: "72000000"
+  aru_bst:
+    method: transaction_ebitda_proxy
+    low_value: "50000000"
+    base_value: "76000000"
+    high_value: "115000000"
+  cradle:
+    method: risk_adjusted_project_option
+    low_value: "4000000"
+    base_value: "12000000"
+    high_value: "30000000"
+  advisory:
+    method: revenue_multiple_proxy
+    low_value: "2000000"
+    base_value: "5000000"
+    high_value: "12000000"
+  corporate_shared:
+    method: present_value_cost
+    low_value: "-60000000"
+    base_value: "-40000000"
+    high_value: "-25000000"
+transaction_bridge:
+  cash_acquired: "42000000"
+  debt: "111000000"
+  debt_like_items: "18500000"
+  transaction_fees: "8000000"
+  working_capital_adjustment: "-2000000"
+qoe:
+  reported_ebitda: "-4800000"
+  acquisition_integration_cost: "6000000"
+  stock_compensation: "12000000"
+  capitalized_rnd_normalization: "-4000000"
