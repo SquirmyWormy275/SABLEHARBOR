@@ -1,0 +1,140 @@
+name: Materialize official-logo organization briefing
+
+on:
+  push:
+    branches:
+      - docs/official-logo-org-briefing-v1.0
+    paths:
+      - .github/workflows/bootstrap-official-logo-org-briefing-v3.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out briefing branch
+        uses: actions/checkout@v4
+        with:
+          ref: docs/official-logo-org-briefing-v1.0
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install rendering dependencies
+        run: |
+          npm install --no-save pptxgenjs@4.0.0
+          python -m pip install pillow
+          sudo apt-get update
+          sudo apt-get install -y libreoffice-impress poppler-utils fonts-inter zip
+
+      - name: Restore deterministic PowerPoint builder
+        run: |
+          python - <<'PYCODE'
+          from pathlib import Path
+          import base64
+          import gzip
+          import re
+
+          bootstrap = Path('.github/workflows/bootstrap-official-logo-org-briefing.yml').read_text(encoding='utf-8')
+          match = re.search(
+              r"Path\('tools/organization/build_org_briefing\.js'\): '([^']+)'",
+              bootstrap,
+          )
+          if not match:
+              raise SystemExit('Unable to locate the briefing-builder payload')
+          builder = gzip.decompress(base64.b64decode(match.group(1)))
+          target = Path('tools/organization/build_org_briefing.js')
+          target.parent.mkdir(parents=True, exist_ok=True)
+          target.write_bytes(builder)
+          target.chmod(0o755)
+          PYCODE
+
+      - name: Build PowerPoint from official repository logos
+        run: node tools/organization/build_org_briefing.js
+
+      - name: Render PDF and one PNG per slide
+        run: |
+          set -euo pipefail
+          out="docs/organization/briefing"
+          pptx="$out/SABLE_HARBOR_Organization_Briefing_v1.0.pptx"
+          mkdir -p "$out/images"
+          libreoffice --headless --convert-to pdf --outdir "$out" "$pptx"
+          pdf="$out/SABLE_HARBOR_Organization_Briefing_v1.0.pdf"
+          rm -f "$out/images"/*.png /tmp/sable-harbor-org-*.png
+          pdftoppm -png -r 144 "$pdf" /tmp/sable-harbor-org
+          python - <<'PYCODE'
+          from pathlib import Path
+          import shutil
+
+          output = Path('docs/organization/briefing/images')
+          names = [
+              '01_sable_harbor_enterprise_organization.png',
+              '02_foundry_foundry_field_organization.png',
+              '03_project_willow_organization.png',
+              '04_atlas_meridian_organization.png',
+              '05_pale_sun_red_wash_organization.png',
+              '06_project_cradle_organization.png',
+              '07_american_resource_utility_bst_organization.png',
+              '08_advisory_organization.png',
+          ]
+          pages = sorted(
+              Path('/tmp').glob('sable-harbor-org-*.png'),
+              key=lambda path: int(path.stem.rsplit('-', 1)[1]),
+          )
+          if len(pages) != len(names):
+              raise SystemExit(f'Expected {len(names)} pages, found {len(pages)}')
+          for page, name in zip(pages, names):
+              shutil.move(str(page), output / name)
+          PYCODE
+          python tools/organization/postbuild_org_briefing.py
+          (
+            cd "$out"
+            rm -f SABLE_HARBOR_Organization_Briefing_v1.0.zip
+            zip -q -r SABLE_HARBOR_Organization_Briefing_v1.0.zip README.md manifest.json \
+              SABLE_HARBOR_Organization_Briefing_v1.0.pptx \
+              SABLE_HARBOR_Organization_Briefing_v1.0.pdf images
+          )
+
+      - name: Verify exclusive use of official logo assets
+        run: |
+          set -euo pipefail
+          script="tools/organization/build_org_briefing.js"
+          logos=(
+            sable-harbor__mark.svg
+            foundry-field__mark.svg
+            foundry__mark.svg
+            willow__mark.svg
+            atlas-meridian__mark.svg
+            pale-sun__mark.svg
+            project-cradle__mark.svg
+            american-resource-utility__mark.svg
+            advisory__mark.svg
+            red-wash-mine__mark.svg
+            blood-sweat-and-tears-railway__mark.svg
+          )
+          for logo in "${logos[@]}"; do
+            grep -Fq "$logo" "$script"
+            test -f "assets/brand/logos/$logo"
+          done
+          if grep -Eiq 'lighthouse|compass|generic clip art' "$script"; then
+            echo "Substitute-logo language found in builder" >&2
+            exit 1
+          fi
+
+      - name: Commit briefing package
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add tools/organization docs/organization/briefing
+          if git diff --cached --quiet; then
+            echo "No briefing changes to commit."
+            exit 0
+          fi
+          git commit -m "Build official-logo Sable Harbor organization briefing"
+          git push origin HEAD:docs/official-logo-org-briefing-v1.0
