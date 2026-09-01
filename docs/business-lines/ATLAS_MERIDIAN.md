@@ -1,33 +1,62 @@
+<p align="center"><img src="../../assets/brand/logos/atlas-meridian__primary-horizontal.svg" alt="Atlas Meridian" width="720" /></p>
+
 # Atlas Meridian
 
-<p align="center">
-  <img src="../../assets/brand/logos/atlas-meridian__primary-horizontal.svg" alt="Atlas Meridian logo" width="760" />
-</p>
+**Classification:** current core investigation and controlled-commercialization business line  
+**Dossier state:** review candidate
 
-| Field | Status |
-|---|---|
-| Role | current core business line |
-| Publication class | Current 2026 identity |
-| Canon state | LOCKED product lineage and decision-support boundary; launch details remain OPEN. |
-| Controlling source | [`docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.2.md`](../canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.2.md), Sections 9.1-9.9 and 13 |
+Atlas Meridian turns difficult operating questions into controlled investigations and decision support. It does not acquire operating authority merely because it produces analysis.
 
-## Role in the Sable Harbor system
+## Status and scope
 
-Atlas Meridian is a disciplined investigative system operating across represented industrial evidence. Foundry represents the terrain; Atlas Meridian investigates across it. It preserves provenance, authorities, constraints, stop conditions, and the difference between an answer and an investigation, and it remains decision support rather than an autonomous decision-maker.
+- Canon: locked role, lineage, and authority boundary; exact architecture, entitlements, customers, launch timing, staffing, and unit economics remain open.
+- Standalone Atlas database, model/evaluation inventory, P&L, and unit letterhead: **NOT MATERIALIZED**
 
-## Logo assets
+## Canon and history
 
-- [Primary Horizontal](../../assets/brand/logos/atlas-meridian__primary-horizontal.svg) ([PNG](../../assets/brand/logos/atlas-meridian__primary-horizontal.png))
-- [Stacked](../../assets/brand/logos/atlas-meridian__stacked.svg) ([PNG](../../assets/brand/logos/atlas-meridian__stacked.png))
-- [Mark](../../assets/brand/logos/atlas-meridian__mark.svg) ([PNG](../../assets/brand/logos/atlas-meridian__mark.png))
-- [Reverse Horizontal](../../assets/brand/logos/atlas-meridian__reverse-horizontal.svg) ([PNG](../../assets/brand/logos/atlas-meridian__reverse-horizontal.png))
-- [One Color Horizontal](../../assets/brand/logos/atlas-meridian__one-color-horizontal.svg) ([PNG](../../assets/brand/logos/atlas-meridian__one-color-horizontal.png))
+- [Corporate Lore Canon v0.2](../canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.2.md) — Atlas Meridian sections
+- [Decision Register](../canon/DECISION_REGISTER.md)
+- [Willow and Atlas narrative](../organization/WILLOW_AND_ATLAS_MERIDIAN.md)
 
-The SVG files are the production source of truth. Do not infer legal-entity status, reporting structure, economics, or public commercial use from the artwork.
+## Identity and collateral
 
-## Related material
+- [Primary SVG](../../assets/brand/logos/atlas-meridian__primary-horizontal.svg) · [PNG](../../assets/brand/logos/atlas-meridian__primary-horizontal.png)
+- [Stacked SVG](../../assets/brand/logos/atlas-meridian__stacked.svg) · [Mark SVG](../../assets/brand/logos/atlas-meridian__mark.svg)
+- [Reverse SVG](../../assets/brand/logos/atlas-meridian__reverse-horizontal.svg) · [One-color SVG](../../assets/brand/logos/atlas-meridian__one-color-horizontal.svg)
+- [Corporate collateral](../../assets/brand/collateral/README.md)
 
-- [Business-line index](README.md)
-- [Brand standards](../../assets/brand/BRAND_STANDARDS.md)
-- [Organization maps](../organization/README.md)
-- [Preliminary name and mark screen](../legal/PRELIMINARY_NAME_AND_MARK_SCREEN.md)
+## Organization and authority
+
+[![Atlas Meridian bridge](../organization/assets/atlas-meridian-bridge-2026.svg)](../organization/ATLAS_MERIDIAN_BRIDGE_ORGANIZATION.md)
+
+The bridge view distinguishes analytical recommendation from decision authority and operating execution.
+
+## Financials and accounting
+
+- Entity: `SHI`
+- Segments: `ATLAS`, `CORE`
+- Tables: `atlas_evaluation`, `customer`, `customer_contract`, `journal_entry`, `journal_line`
+- Queries: [`customer_profitability`](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/1f294440a11e724e5f1bdcd3a7f59f7342169bfe/db/sql/customer_profitability.sql), [`assumption_impact`](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/1f294440a11e724e5f1bdcd3a7f59f7342169bfe/db/sql/assumption_impact.sql), [`journal_to_source_trace`](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/1f294440a11e724e5f1bdcd3a7f59f7342169bfe/db/sql/journal_to_source_trace.sql), [`entity_trial_balance`](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/1f294440a11e724e5f1bdcd3a7f59f7342169bfe/db/sql/entity_trial_balance.sql)
+- Workbooks: software/services and capital/M&A/valuation suites
+
+Source coverage is on PR #9 and is not an accepted Atlas financial package.
+
+## Inventory, assets, and operations
+
+Evaluation IDs, model versions, investigation questions, validation cost, compute cost, customer fees, authority flags, decisions, and linked journals define the current data perimeter. A complete model registry and compute-asset inventory are not yet released.
+
+## Database and exports
+
+Target: allowlisted `atlas-meridian.sqlite`, evaluation/model registry, customer/economic extracts, governance/authority records, unit statements, validation, manifest, and checksums. Current state: **NOT MATERIALIZED**.
+
+## Audit controls and unresolved facts
+
+Controls must preserve model/version lineage, validation evidence, authority boundaries, customer isolation, source-to-journal trace, and enterprise reconciliation. Open: design partners/customers, architecture and entitlements, launch packaging, leader/headcount, P&L, letterhead, and standalone release.
+
+## Download map
+
+- [Organization bridge](../organization/ATLAS_MERIDIAN_BRIDGE_ORGANIZATION.md)
+- [Brand system](../../assets/brand/README.md)
+- [Finance register](../data/FINANCE_RELEASE_CANDIDATE.md)
+- [Unit package standard](../audit/UNIT_PACKAGE_STANDARD.md)
+- [Registry](registry.json)

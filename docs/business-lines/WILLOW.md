@@ -1,33 +1,65 @@
+<p align="center"><img src="../../assets/brand/logos/willow__primary-horizontal.svg" alt="Willow" width="720" /></p>
+
 # Willow
 
-<p align="center">
-  <img src="../../assets/brand/logos/willow__primary-horizontal.svg" alt="Willow logo" width="760" />
-</p>
+**Classification:** current core research and experimental business line  
+**Dossier state:** review candidate  
+**Historical predecessor:** Evalon
 
-| Field | Status |
-|---|---|
-| Role | current core business line |
-| Publication class | Current 2026 identity |
-| Canon state | LOCKED name, purpose, and two-center operating model; exact legal structure remains OPEN. |
-| Controlling source | [`docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.2.md`](../canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.2.md), Sections 7.7-8.6 and 13 |
+Willow is the present research system descended from Evalon's advanced-engineering outpost. Its job is disciplined inquiry, observation, belief revision, controlled transfer, and governance—not unconstrained commercialization.
 
-## Role in the Sable Harbor system
+## Status and scope
 
-Willow pursues consequential industrial questions that no existing product, delivery team, or operating unit can own, changing the physical world in bounded ways to learn what may be possible. Its formal loop is Question -> belief -> experiment -> observation -> decision; failure is survivable, drift is not.
+- Canon: locked lineage, purpose, and core boundary; exact charter language, team structure, budgets, facilities, and commercialization details remain partly open.
+- Standalone Willow database, budget/P&L, laboratory inventory, and unit letterhead: **NOT MATERIALIZED**
 
-## Logo assets
+## Canon and history
 
-- [Primary Horizontal](../../assets/brand/logos/willow__primary-horizontal.svg) ([PNG](../../assets/brand/logos/willow__primary-horizontal.png))
-- [Stacked](../../assets/brand/logos/willow__stacked.svg) ([PNG](../../assets/brand/logos/willow__stacked.png))
-- [Mark](../../assets/brand/logos/willow__mark.svg) ([PNG](../../assets/brand/logos/willow__mark.png))
-- [Reverse Horizontal](../../assets/brand/logos/willow__reverse-horizontal.svg) ([PNG](../../assets/brand/logos/willow__reverse-horizontal.png))
-- [One Color Horizontal](../../assets/brand/logos/willow__one-color-horizontal.svg) ([PNG](../../assets/brand/logos/willow__one-color-horizontal.png))
+- [Corporate Lore Canon v0.2](../canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.2.md) — Evalon and Willow sections
+- [Continuity Audit](../canon/SABLE_HARBOR_CONTINUITY_AUDIT_v0.2.md)
+- [Organizational lineage](../organization/ORGANIZATIONAL_LINEAGE_2015_2026.md)
+- [Evalon dossier](EVALON.md)
 
-The SVG files are the production source of truth. Do not infer legal-entity status, reporting structure, economics, or public commercial use from the artwork.
+## Identity and collateral
 
-## Related material
+- [Primary SVG](../../assets/brand/logos/willow__primary-horizontal.svg) · [PNG](../../assets/brand/logos/willow__primary-horizontal.png)
+- [Stacked SVG](../../assets/brand/logos/willow__stacked.svg) · [Mark SVG](../../assets/brand/logos/willow__mark.svg)
+- [Reverse SVG](../../assets/brand/logos/willow__reverse-horizontal.svg) · [One-color SVG](../../assets/brand/logos/willow__one-color-horizontal.svg)
+- [Corporate collateral](../../assets/brand/collateral/README.md)
 
-- [Business-line index](README.md)
-- [Brand standards](../../assets/brand/BRAND_STANDARDS.md)
-- [Organization maps](../organization/README.md)
-- [Preliminary name and mark screen](../legal/PRELIMINARY_NAME_AND_MARK_SCREEN.md)
+## Organization and authority
+
+[![Willow organization](../organization/assets/willow-organization-2026.svg)](../organization/WILLOW_ORGANIZATION.md)
+
+The accepted chart is a functional reference. Exact formal leadership, reporting, headcount, and legal structure remain open.
+
+## Financials and accounting
+
+Release-candidate scope:
+
+- Entity: `SHI`
+- Segments: `WILLOW`, `CORE`
+- Tables: `willow_experiment`, `worker`, `payroll_run`, `payroll_line`, `journal_entry`, `journal_line`
+- Queries: [`employee_loaded_cost`](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/1f294440a11e724e5f1bdcd3a7f59f7342169bfe/db/sql/employee_loaded_cost.sql), [`assumption_impact`](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/1f294440a11e724e5f1bdcd3a7f59f7342169bfe/db/sql/assumption_impact.sql), [`journal_to_source_trace`](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/1f294440a11e724e5f1bdcd3a7f59f7342169bfe/db/sql/journal_to_source_trace.sql), [`entity_trial_balance`](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/1f294440a11e724e5f1bdcd3a7f59f7342169bfe/db/sql/entity_trial_balance.sql)
+- Workbooks: software/services and GL/close suites
+
+## Inventory, assets, and operations
+
+The source perimeter includes experiments, questions, prior beliefs, observations, revised beliefs, gate decisions, transfer targets, budgets, actual costs, people, and any laboratory assets represented in the shared platform. No accepted physical laboratory register exists.
+
+## Database and exports
+
+Target: allowlisted `willow.sqlite`, experiment/research CSVs, budget and cost schedules, workforce/asset register, governance decisions, validation report, manifest, and checksums. Current state: **NOT MATERIALIZED**.
+
+## Audit controls and unresolved facts
+
+Controls must preserve research governance, prevent unsupported commercialization claims, trace experiment costs and decisions, isolate Willow records by run/scenario, and reconcile unit costs to the enterprise ledger. Open: charter, team/leader, detailed sites and equipment, accepted budget/P&L, letterhead, and standalone release.
+
+## Download map
+
+- [Organization](../organization/WILLOW_ORGANIZATION.md)
+- [Evalon history](EVALON.md)
+- [Brand system](../../assets/brand/README.md)
+- [Finance register](../data/FINANCE_RELEASE_CANDIDATE.md)
+- [Unit package standard](../audit/UNIT_PACKAGE_STANDARD.md)
+- [Registry](registry.json)

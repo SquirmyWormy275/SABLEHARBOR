@@ -1,33 +1,62 @@
+<p align="center"><img src="../../assets/brand/logos/pale-sun__primary-horizontal.svg" alt="Pale Sun" width="720" /></p>
+
 # Pale Sun
 
-<p align="center">
-  <img src="../../assets/brand/logos/pale-sun__primary-horizontal.svg" alt="Pale Sun logo" width="760" />
-</p>
+**Classification:** current operating business line  
+**Operating asset:** Red Wash Mine  
+**Dossier state:** review candidate
 
-| Field | Status |
-|---|---|
-| Role | current operating business line |
-| Publication class | Current 2026 identity |
-| Canon state | LOCKED operating thesis; detailed mine, transaction, permitting, and economic facts remain OPEN. |
-| Controlling source | [`docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.2.md`](../canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.2.md), Sections 10.1-10.11 and 13 |
+Pale Sun owns the operating-control thesis around Red Wash. The mine is an asset and operating environment; Pale Sun is the business line through which the enterprise applies control, learning, and economic discipline.
 
-## Role in the Sable Harbor system
+## Status and scope
 
-Pale Sun owns and operates the fictional Red Wash uranium mine where operating control is the thesis. It is an operation first and a proving ground second, preserving conservative information boundaries, field-qualification gates, human authority, and the distinction between claims, dispositions, and later outcomes.
+- Canon: locked name, role, and Red Wash relationship; legal structure, transaction terms, reserves, permits, workforce, mine plan, production/economics, and unit P&L remain open or scenario-controlled.
+- Standalone Pale Sun/Red Wash database, reserve report, inventory register, financial package, and unit letterhead: **NOT MATERIALIZED**
 
-## Logo assets
+## Canon and history
 
-- [Primary Horizontal](../../assets/brand/logos/pale-sun__primary-horizontal.svg) ([PNG](../../assets/brand/logos/pale-sun__primary-horizontal.png))
-- [Stacked](../../assets/brand/logos/pale-sun__stacked.svg) ([PNG](../../assets/brand/logos/pale-sun__stacked.png))
-- [Mark](../../assets/brand/logos/pale-sun__mark.svg) ([PNG](../../assets/brand/logos/pale-sun__mark.png))
-- [Reverse Horizontal](../../assets/brand/logos/pale-sun__reverse-horizontal.svg) ([PNG](../../assets/brand/logos/pale-sun__reverse-horizontal.png))
-- [One Color Horizontal](../../assets/brand/logos/pale-sun__one-color-horizontal.svg) ([PNG](../../assets/brand/logos/pale-sun__one-color-horizontal.png))
+- [Corporate Lore Canon v0.2](../canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.2.md)
+- [Pale Sun and Red Wash narrative](../organization/PALE_SUN_AND_RED_WASH.md)
+- [Red Wash Mine dossier](RED_WASH_MINE.md)
 
-The SVG files are the production source of truth. Do not infer legal-entity status, reporting structure, economics, or public commercial use from the artwork.
+## Identity and collateral
 
-## Related material
+- [Primary SVG](../../assets/brand/logos/pale-sun__primary-horizontal.svg) · [PNG](../../assets/brand/logos/pale-sun__primary-horizontal.png)
+- [Stacked SVG](../../assets/brand/logos/pale-sun__stacked.svg) · [Mark SVG](../../assets/brand/logos/pale-sun__mark.svg)
+- [Reverse SVG](../../assets/brand/logos/pale-sun__reverse-horizontal.svg) · [One-color SVG](../../assets/brand/logos/pale-sun__one-color-horizontal.svg)
+- [Corporate collateral](../../assets/brand/collateral/README.md)
 
-- [Business-line index](README.md)
-- [Brand standards](../../assets/brand/BRAND_STANDARDS.md)
-- [Organization maps](../organization/README.md)
-- [Preliminary name and mark screen](../legal/PRELIMINARY_NAME_AND_MARK_SCREEN.md)
+## Organization and authority
+
+[![Pale Sun and Red Wash organization](../organization/assets/pale-sun-red-wash-organization-2026.svg)](../organization/PALE_SUN_RED_WASH_ORGANIZATION.md)
+
+The chart is a combined functional view, not a reserve, ownership, or legal-entity statement.
+
+## Financials and accounting
+
+- Entity: `RWH`
+- Segment: `PALE_SUN`
+- Tables: `mine_production_batch`, `uranium_shipment`, `inventory_lot`, `production_record`, `environmental_obligation`, `fixed_asset`, `depreciation_record`, `journal_entry`, `journal_line`
+- Queries: [`red_wash_unit_cost_bridge`](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/1f294440a11e724e5f1bdcd3a7f59f7342169bfe/db/sql/red_wash_unit_cost_bridge.sql), [`mine_inventory_shipment_reconciliation`](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/1f294440a11e724e5f1bdcd3a7f59f7342169bfe/db/sql/mine_inventory_shipment_reconciliation.sql), [`fixed_asset_rollforward`](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/1f294440a11e724e5f1bdcd3a7f59f7342169bfe/db/sql/fixed_asset_rollforward.sql), [`debt_covenant_calculation`](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/1f294440a11e724e5f1bdcd3a7f59f7342169bfe/db/sql/debt_covenant_calculation.sql), [`entity_trial_balance`](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/1f294440a11e724e5f1bdcd3a7f59f7342169bfe/db/sql/entity_trial_balance.sql)
+- Workbooks: industrial operations, GL/close, and capital/M&A/valuation suites
+
+## Inventory, assets, and operations
+
+Required perimeter: production batches, ore/feed/recovery records, concentrate inventory and shipments, environmental obligations and ARO, mine/mill fixed assets and depreciation/depletion, workforce and procurement where represented, debt, cash, receivables/payables, and ARU intercompany freight. Scenario rows are not reserve estimates or audited actuals.
+
+## Database and exports
+
+Target: allowlisted `pale-sun-red-wash.sqlite`, production/inventory/shipments CSVs, asset and ARO registers, financial statements, mine economics, controls, manifest, and checksums. Current state: **NOT MATERIALIZED**.
+
+## Audit controls and unresolved facts
+
+Controls must reconcile feed × grade × recovery to production, opening + production − shipment to closing inventory, shipment to revenue/receivable, production costs to inventory/COGS, assets/ARO to the ledger, intercompany freight to eliminations, and unit books to enterprise consolidation. Open technical, legal, environmental, reserve, asset, labor, transaction, and economic facts remain open.
+
+## Download map
+
+- [Combined organization](../organization/PALE_SUN_RED_WASH_ORGANIZATION.md)
+- [Red Wash asset dossier](RED_WASH_MINE.md)
+- [Brand system](../../assets/brand/README.md)
+- [Finance register](../data/FINANCE_RELEASE_CANDIDATE.md)
+- [Unit package standard](../audit/UNIT_PACKAGE_STANDARD.md)
+- [Registry](registry.json)

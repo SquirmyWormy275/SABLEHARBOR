@@ -1,33 +1,69 @@
+<p align="center"><img src="../../assets/brand/logos/foundry-field__primary-horizontal.svg" alt="Foundry Field" width="720" /></p>
+
 # Foundry Field
 
-<p align="center">
-  <img src="../../assets/brand/logos/foundry-field__primary-horizontal.svg" alt="Foundry Field logo" width="760" />
-</p>
+**Classification:** current core business line  
+**Dossier state:** review-candidate index  
+**Finance/data state:** PR #9 release candidate; not accepted
 
-| Field | Status |
-|---|---|
-| Role | current core business line |
-| Publication class | Current 2026 identity |
-| Canon state | LOCKED name and role. |
-| Controlling source | [`docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.2.md`](../canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.2.md), Sections 6.1-6.8 and 13 |
+Foundry Field is Sable Harbor's primary operating and product application layer. Foundry is the underlying substrate; Foundry Field is the business line through which the system is applied to real operating environments.
 
-## Role in the Sable Harbor system
+## Status and scope
 
-Foundry Field is the deployable operational product and service configuration built on the Foundry substrate. It encounters, connects, and represents operational reality while preserving identity, provenance, competing definitions, effective dates, uncertainty, and the record of decisions.
+- Canon: locked name and distinction from Foundry; detailed legal treatment, leadership, customer roster, headcount, and unit P&L remain open.
+- Standalone database, inventory, and financial package: **NOT MATERIALIZED**
+- Unit-specific letterhead: **NOT MATERIALIZED**
 
-## Logo assets
+## Canon and history
 
-- [Primary Horizontal](../../assets/brand/logos/foundry-field__primary-horizontal.svg) ([PNG](../../assets/brand/logos/foundry-field__primary-horizontal.png))
-- [Stacked](../../assets/brand/logos/foundry-field__stacked.svg) ([PNG](../../assets/brand/logos/foundry-field__stacked.png))
-- [Mark](../../assets/brand/logos/foundry-field__mark.svg) ([PNG](../../assets/brand/logos/foundry-field__mark.png))
-- [Reverse Horizontal](../../assets/brand/logos/foundry-field__reverse-horizontal.svg) ([PNG](../../assets/brand/logos/foundry-field__reverse-horizontal.png))
-- [One Color Horizontal](../../assets/brand/logos/foundry-field__one-color-horizontal.svg) ([PNG](../../assets/brand/logos/foundry-field__one-color-horizontal.png))
+- [Corporate Lore Canon v0.2](../canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.2.md) — Foundry and Foundry Field sections
+- [Decision Register](../canon/DECISION_REGISTER.md)
+- [Foundry / Foundry Field organization narrative](../organization/FOUNDRY_AND_FOUNDRY_FIELD.md)
 
-The SVG files are the production source of truth. Do not infer legal-entity status, reporting structure, economics, or public commercial use from the artwork.
+## Identity and collateral
 
-## Related material
+- [Primary SVG](../../assets/brand/logos/foundry-field__primary-horizontal.svg) · [PNG](../../assets/brand/logos/foundry-field__primary-horizontal.png)
+- [Stacked SVG](../../assets/brand/logos/foundry-field__stacked.svg) · [PNG](../../assets/brand/logos/foundry-field__stacked.png)
+- [Mark SVG](../../assets/brand/logos/foundry-field__mark.svg) · [PNG](../../assets/brand/logos/foundry-field__mark.png)
+- [Reverse SVG](../../assets/brand/logos/foundry-field__reverse-horizontal.svg) · [One-color SVG](../../assets/brand/logos/foundry-field__one-color-horizontal.svg)
+- [Corporate collateral and stationery](../../assets/brand/collateral/README.md)
 
-- [Business-line index](README.md)
-- [Brand standards](../../assets/brand/BRAND_STANDARDS.md)
-- [Organization maps](../organization/README.md)
-- [Preliminary name and mark screen](../legal/PRELIMINARY_NAME_AND_MARK_SCREEN.md)
+Corporate stationery exists; a distinct Foundry Field letterhead remains ungenerated and unaccepted.
+
+## Organization and authority
+
+[![Foundry Field organization](../organization/assets/foundry-field-organization-2026.svg)](../organization/FOUNDRY_FIELD_ORGANIZATION.md)
+
+- [Organization page](../organization/FOUNDRY_FIELD_ORGANIZATION.md)
+- [Leadership and authority map](../organization/2026_LEADERSHIP_AND_AUTHORITY_MAP.md)
+
+## Financials and accounting
+
+Release-candidate entity/segment scope:
+
+- Entity: `SHI`
+- Segments: `FOUNDRY_FIELD`, `CORE`, `DELIVERY`
+- Tables: `customer`, `customer_contract`, `performance_obligation`, `invoice`, `invoice_line`, `revenue_recognition`, `cash_receipt`, `engagement`, `project_task`, `time_entry`, `project_cost`, `engagement_invoice_link`, `journal_entry`, `journal_line`
+- Workbooks: `SABLE_HARBOR_SOFTWARE_AND_SERVICES_v0.1.xlsx`, `SABLE_HARBOR_GL_CLOSE_AND_SUBLEDGERS_v0.1.xlsx`
+
+Queries: [`customer_arr_bridge`](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/1f294440a11e724e5f1bdcd3a7f59f7342169bfe/db/sql/customer_arr_bridge.sql), [`customer_profitability`](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/1f294440a11e724e5f1bdcd3a7f59f7342169bfe/db/sql/customer_profitability.sql), [`engagement_margin_wip`](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/1f294440a11e724e5f1bdcd3a7f59f7342169bfe/db/sql/engagement_margin_wip.sql), [`deferred_revenue_rollforward`](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/1f294440a11e724e5f1bdcd3a7f59f7342169bfe/db/sql/deferred_revenue_rollforward.sql), [`entity_trial_balance`](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/1f294440a11e724e5f1bdcd3a7f59f7342169bfe/db/sql/entity_trial_balance.sql).
+
+## Inventory, assets, and operations
+
+Customer contracts, deployments, implementation backlog, engagement WIP, time and cost records, delivery labor, software/service operating records, and linked journals define the current source perimeter. This is not yet a complete standalone product/customer inventory.
+
+## Database and exports
+
+Target: allowlisted `foundry-field.sqlite`, CSV extracts, contract/revenue and engagement schedules, unit statements, controls, manifest, and checksums. Current state: **NOT MATERIALIZED**.
+
+## Audit controls and unresolved facts
+
+Controls must reconcile contracts → invoices → revenue/receipts, engagement time/cost/WIP → invoices, unit trial balance → enterprise ledger, and any scoped release → manifest/checksums. Open: legal treatment, leader/reporting line, accepted customer roster, headcount, unit P&L, unit letterhead, and standalone package.
+
+## Download map
+
+- [Organization](../organization/FOUNDRY_FIELD_ORGANIZATION.md)
+- [Brand system](../../assets/brand/README.md)
+- [Finance register](../data/FINANCE_RELEASE_CANDIDATE.md)
+- [Unit package standard](../audit/UNIT_PACKAGE_STANDARD.md)
+- [Registry](registry.json)
