@@ -55,6 +55,11 @@ jobs:
           set -euo pipefail
           rm -f tools/brand/.brand-v0.2-part-*
           rm -f .github/workflows/materialize-brand-v0.2.yml
+          # Persistent workflows are added by the authenticated repository connector
+          # after this materialization commit. The Actions token intentionally has
+          # contents permission only and cannot itself create workflow files.
+          rm -f .github/workflows/validate-brand-system.yml
+          rm -f .github/workflows/publish-wiki.yml
           git config user.name "Sable Harbor Brand Bot"
           git config user.email "sable-harbor-brand-bot@users.noreply.github.com"
           git add -A
