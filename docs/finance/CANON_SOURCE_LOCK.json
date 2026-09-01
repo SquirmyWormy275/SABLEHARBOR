@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0",
+  "repository_remote": "https://github.com/SquirmyWormy275/SABLEHARBOR.git",
+  "canonical_date": "2026-08-31",
+  "extracted_at": "2026-09-01T07:59:40-07:00",
+  "implementation_branch": "finance/enterprise-financial-platform-v0.1",
+  "implementation_initial_commit": "5137c5abc025ad757a4e1af2a57279e4964578cf",
+  "controlling_source": {
+    "branch": "origin/canon/corporate-lore-v0.2",
+    "commit": "5137c5abc025ad757a4e1af2a57279e4964578cf",
+    "files": [
+      "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.2.md",
+      "docs/canon/DECISION_REGISTER.md",
+      "docs/canon/SABLE_HARBOR_CONTINUITY_AUDIT_v0.2.md",
+      "docs/canon/CANON_CHANGELOG_v0.2.md",
+      "docs/canon/SABLE_HARBOR_CANONICAL_ARCHITECTURE_HANDOVER.md",
+      "docs/organization/LEGAL_AND_REPORTING_STRUCTURE_STATUS.md",
+      "docs/organization/DECISION_RIGHTS_AND_OPERATING_GATES.md",
+      "docs/organization/ORGANIZATIONAL_LINEAGE_2015_2026.md"
+    ]
+  },
+  "noncontrolling_reference": {
+    "branch": "origin/architecture/corporate-operating-model-v0.1",
+    "commit": "f12d359f3c3f009a1eea1d290f61be0462ca1f2e",
+    "files": [
+      "docs/canon/SABLE_HARBOR_CORPORATE_FUNDAMENTALS_AND_2026_OPERATING_MODEL_v0.1.md"
+    ],
+    "use": "LEGACY_CALIBRATION only"
+  },
+  "missing_expected_sources": [
+    "Detailed Blackridge build is not visible on the controlling branch (DECISION_REGISTER BR-005)."
+  ],
+  "detected_branch_conflicts": [
+    "Legacy model continues Emberline and treats Pale Sun as incubation; current canon supersedes both positions.",
+    "Legacy model omits Red Wash operations, Cradle, ARU/BS&T, and re-emerging Advisory."
+  ],
+  "supersession_assessment": "No newer branch was found that explicitly supersedes corporate-lore-v0.2. main contains later merged presentation assets but no later declared lore authority."
+}

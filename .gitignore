@@ -1,7 +1,11 @@
-# Python
+.env
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.venv/
 __pycache__/
 *.py[cod]
-.pytest_cache/
-
-# Local deterministic brand builds
-.brand-build/
+var/*
+!var/.gitkeep
+data/generated/
+workbooks/outputs/*.xlsx

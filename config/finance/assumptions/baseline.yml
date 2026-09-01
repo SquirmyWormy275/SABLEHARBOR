@@ -1,0 +1,26 @@
+assumptions:
+  - id: FIN-BASE-001
+    name: Quantitative architecture
+    description: Treat the legacy 2026 operating model as CoreCo calibration and add current-lore industrial operations incrementally.
+    fact_state: MODEL_PROPOSED
+    source:
+      path: docs/canon/CANON_CHANGELOG_v0.2.md
+      decision_id: CHG-016
+      branch: origin/canon/corporate-lore-v0.2
+      commit: 5137c5abc025ad757a4e1af2a57279e4964578cf
+    effective_from: 2026-01-01
+    value: alternative_b_coreco
+    low: alternative_a_reclassify_total
+    high: alternative_c_full_rebase
+    units: architecture_choice
+    rationale: Current canon adds acquired physical operations that the old total omitted.
+    alternatives: [alternative_a_reclassify_total, alternative_c_full_rebase]
+    affected_entities: [SABLE_HARBOR, PALE_SUN, RED_WASH, ARU, BST, CRADLE]
+    affected_reports: [consolidated_statements, segment_pnl, valuation]
+    affected_calculations: [headcount, revenue, capex, debt, cash]
+    sensitivity: high
+    materiality: enterprise
+    reversible: true
+    decision_owner: Finance and canon owner
+    status: active
+    last_review_date: 2026-09-01
