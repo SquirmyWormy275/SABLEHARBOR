@@ -21,6 +21,34 @@ The `canon/corporate-lore-v0.2` branch contains the reconciled corporate-history
 - [`docs/canon/CANON_CHANGELOG_v0.2.md`](docs/canon/CANON_CHANGELOG_v0.2.md) — explicit inherited-canon clarifications and supersessions.
 - [`docs/canon/DECISION_REGISTER.md`](docs/canon/DECISION_REGISTER.md) — LOCKED, PROVISIONAL, OPEN, and SUPERSEDED decision index.
 
+## Organization at a glance
+
+This is the August 31, 2026 **operating topology**. It shows what each line of work does and how the pieces relate; it does not claim final legal entities, executive titles, or reporting lines.
+
+```mermaid
+flowchart TB
+    SH["SABLE HARBOR<br/>Industrial-systems company"]
+    FOUNDRY["Foundry / Foundry Field<br/><b>represents</b>"]
+    WILLOW["Project Willow<br/><b>tests</b>"]
+    ATLAS["Atlas Meridian<br/><b>investigates</b>"]
+    PALE["Pale Sun / Red Wash<br/><b>owns and operates</b>"]
+    CRADLE["Project Cradle<br/><b>recovers</b>"]
+    ARU["ARU / BS&T<br/><b>moves</b>"]
+    ADVISORY["Advisory<br/><b>transfers · emerging</b>"]
+
+    SH --> FOUNDRY
+    SH --> WILLOW
+    SH --> ATLAS
+    SH --> PALE
+    SH --> CRADLE
+    SH --> ARU
+    SH -.-> ADVISORY
+    FOUNDRY -->|represented terrain| ATLAS
+    WILLOW -->|experimental lineage| ATLAS
+```
+
+The full package includes the [2026 operating topology](docs/organization/2026_OPERATING_TOPOLOGY.md), [leadership and authority map](docs/organization/2026_LEADERSHIP_AND_AUTHORITY_MAP.md), [Original Eight map](docs/organization/ORIGINAL_EIGHT.md), [2015–2026 organizational lineage](docs/organization/ORGANIZATIONAL_LINEAGE_2015_2026.md), and [chart-governance rules](docs/organization/CHART_GOVERNANCE.md).
+
 ## Blackridge status
 
 Blackridge remains the upstream founding wound and a separate executable case universe. The current connected repository branches expose only limited Blackridge scaffolding; the complete detailed Blackridge build must be imported and rechecked before it replaces the handover summary as the controlling source.
