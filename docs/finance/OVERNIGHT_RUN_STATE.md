@@ -3,7 +3,7 @@
 - Source: `origin/canon/corporate-lore-v0.2` at `5137c5abc025ad757a4e1af2a57279e4964578cf`
 - Calibration: `origin/architecture/corporate-operating-model-v0.1` at `f12d359f3c3f009a1eea1d290f61be0462ca1f2e`
 - Implementation branch: `finance/enterprise-financial-platform-v0.1`
-- Current implementation checkpoint: `8f61b43382fd9adfcc05059bd6efbf3686af9e11`
+- Current implementation checkpoint: `50dd167f36cdd42244962c7d1117ce7868e4c7ba`
 - Draft PR: `https://github.com/SquirmyWormy275/SABLEHARBOR/pull/9`
 - Current phase: Stage 1 correctness verification; integrated monthly expansion has not begun
 - Completed: source lock and collisions; alternatives A/B/C; Alternative B operating model; legal/entity scenario; dimensional chart; immutable accounting kernel; migrations; commercial, professional-services engagement, and corporate subledgers; Red Wash, ARU/BS&T, Cradle, Willow and Atlas causal flows; deterministic base/low/high/stress profiles; 2023–2026 monthly standard model; 2016–2026 history; intercompany eliminations; reconciled statements; named queries; six-workbook suite; valuation; public release package; privacy/canon guardrails; SQLite and PostgreSQL CI definitions
@@ -59,9 +59,10 @@
   PostgreSQL-only test skipped locally). SQLite migration cycle and comprehensive schema parity
   PASS. SQLite schema SHA-256:
   `32da4de800ced2bf8f90bafd9b06570062c057bbcc58ec3fa181731569164bdb`.
-- Remote suite at `8f61b43`: PostgreSQL PASS twice (31s each), including migration cycle,
-  enum/fingerprint stability, generation and validation; SQLite PASS twice (42s/46s);
-  render-drift PASS (5s).
+- Remote suite at `50dd167`: PostgreSQL PASS twice (29s/30s), including migration cycle,
+  enum/fingerprint stability, generation and validation; SQLite PASS twice (48s/49s);
+  render-drift PASS (5s). PostgreSQL schema SHA-256:
+  `a0ab7750f7be88e30e4214a7c831afabe1576c3d3301b433a7e0938ac1eb93de`.
 - Generation order: base→stress equals stress→base. Base, low, high, and stress are idempotent,
   including second-created and reverse-order reruns. Every run has one lifecycle marker and no
   null-owned generated facts.
