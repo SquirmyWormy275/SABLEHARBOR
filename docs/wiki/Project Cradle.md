@@ -2,11 +2,17 @@
 
 ![Project Cradle](https://raw.githubusercontent.com/SquirmyWormy275/SABLEHARBOR/main/assets/brand/logos/project-cradle__primary-horizontal.svg)
 
-**Role:** current core business line  
-**Canon state:** LOCKED thesis and founding team; first commercial details remain OPEN.
+**Role:** Current core business line for host-safe recovery and participation economics.  
+**Canon boundary:** LOCKED identity, host-safe boundary, and recovery role; commercial structures, project pipeline, leadership, ownership, and economics remain OPEN or scenario-controlled.  
+**Working accounting scope:** `SHI` with segment/site filters documented in the dossier  
+**Independent unit package:** **NOT IMPLEMENTED**
 
-Project Cradle finds valuable rare-earth material that existing mines and processing plants already concentrate unintentionally, then adds the smallest recovery step that captures value without breaking the host operation. It seeks value in a process seam and generally avoids owning the host mine.
+Project Cradle recovers value from material streams the host system already creates. Its core audit boundary is host-safe participation: the model must distinguish host assets, recovered value, Sable Harbor economics, and the host’s contractual share.
 
-The wiki summarizes the controlling repository canon; it does not create or change canon.
+- [Full business-line dossier](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/main/docs/business-lines/PROJECT_CRADLE.md)
+- [Organization source](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/main/docs/organization/PROJECT_CRADLE_ORGANIZATION.md)
+- [Unit export specification](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/main/docs/audit/UNIT_EXPORT_SPECIFICATION.md)
+- [Logo files](https://github.com/SquirmyWormy275/SABLEHARBOR/tree/main/assets/brand/logos)
+- [Letterhead template](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/main/assets/brand/collateral/letterhead/business-lines/project-cradle-letterhead-us-letter.svg)
 
-[Open the repository reference page](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/main/docs/business-lines/PROJECT_CRADLE.md)
+The wiki is a derivative navigation layer. It does not create or resolve OPEN facts.

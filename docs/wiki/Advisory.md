@@ -2,11 +2,17 @@
 
 ![Advisory](https://raw.githubusercontent.com/SquirmyWormy275/SABLEHARBOR/main/assets/brand/logos/advisory__primary-horizontal.svg)
 
-**Role:** emerging current business line  
-**Canon state:** LOCKED direction; exact name, leader, launch date, service catalog, P&L, and organizational home remain OPEN.
+**Role:** Emerging current business line for method transfer where the client should own the system.  
+**Canon boundary:** LOCKED emerging role and method-transfer boundary; name treatment, scale, leadership, customers, legal structure, and economics remain OPEN or scenario-controlled.  
+**Working accounting scope:** `SHI` with segment/site filters documented in the dossier  
+**Independent unit package:** **NOT IMPLEMENTED**
 
-Advisory transfers Sable Harbor's method where a client can and should own the system. It is not generic consulting, a slide-deck practice, or merely software implementation; it enters a messy system, determines what is actually happening, and transfers a method the operator can sustain.
+Advisory transfers the Sable Harbor method where the client can and should own the resulting system. The boundary is deliberate: Advisory supports transfer and adoption without converting the client’s operating authority into Sable Harbor’s authority.
 
-The wiki summarizes the controlling repository canon; it does not create or change canon.
+- [Full business-line dossier](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/main/docs/business-lines/ADVISORY.md)
+- [Organization source](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/main/docs/organization/ARU_BST_AND_ADVISORY.md)
+- [Unit export specification](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/main/docs/audit/UNIT_EXPORT_SPECIFICATION.md)
+- [Logo files](https://github.com/SquirmyWormy275/SABLEHARBOR/tree/main/assets/brand/logos)
+- [Letterhead template](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/main/assets/brand/collateral/letterhead/business-lines/advisory-letterhead-us-letter.svg)
 
-[Open the repository reference page](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/main/docs/business-lines/ADVISORY.md)
+The wiki is a derivative navigation layer. It does not create or resolve OPEN facts.

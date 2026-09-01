@@ -2,11 +2,17 @@
 
 ![Atlas Meridian](https://raw.githubusercontent.com/SquirmyWormy275/SABLEHARBOR/main/assets/brand/logos/atlas-meridian__primary-horizontal.svg)
 
-**Role:** current core business line  
-**Canon state:** LOCKED product lineage and decision-support boundary; launch details remain OPEN.
+**Role:** Current core business line for investigation across represented evidence.  
+**Canon boundary:** LOCKED identity, investigative role, and authority limits; commercial scale, leadership, customers, models, and legal structure remain OPEN or scenario-controlled.  
+**Working accounting scope:** `SHI` with segment/site filters documented in the dossier  
+**Independent unit package:** **NOT IMPLEMENTED**
 
-Atlas Meridian is a disciplined investigative system operating across represented industrial evidence. Foundry represents the terrain; Atlas Meridian investigates across it. It preserves provenance, authorities, constraints, stop conditions, and the difference between an answer and an investigation, and it remains decision support rather than an autonomous decision-maker.
+Atlas Meridian investigates across represented evidence. Its current model records investigation questions, compute and validation economics, customer fees, and the explicit rule that Atlas does not silently own the final operating decision.
 
-The wiki summarizes the controlling repository canon; it does not create or change canon.
+- [Full business-line dossier](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/main/docs/business-lines/ATLAS_MERIDIAN.md)
+- [Organization source](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/main/docs/organization/ATLAS_MERIDIAN_BRIDGE_ORGANIZATION.md)
+- [Unit export specification](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/main/docs/audit/UNIT_EXPORT_SPECIFICATION.md)
+- [Logo files](https://github.com/SquirmyWormy275/SABLEHARBOR/tree/main/assets/brand/logos)
+- [Letterhead template](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/main/assets/brand/collateral/letterhead/business-lines/atlas-meridian-letterhead-us-letter.svg)
 
-[Open the repository reference page](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/main/docs/business-lines/ATLAS_MERIDIAN.md)
+The wiki is a derivative navigation layer. It does not create or resolve OPEN facts.
