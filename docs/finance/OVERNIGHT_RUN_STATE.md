@@ -92,7 +92,9 @@
 - Milestone 4 local evidence: Ruff PASS; strict mypy PASS (33 source files); pytest PASS
   (49 passed, one PostgreSQL-only test skipped). One Alembic-installed SQLite database proved
   `standard/base`, `full_history/base`, and `benchmark_private/base` each own nonzero distinct
-  journals. Remote CI and PostgreSQL profile/coexistence evidence for this checkpoint are pending.
+  journals. Remote CI at `de9fab8` PASS: PostgreSQL 28s/31s, SQLite 53s/56s, and organization
+  render validation 6s. The PostgreSQL jobs cover migration `0008`, standard generation, and
+  validation; the expanded all-profile/two-seed PostgreSQL matrix remains open.
   Stage 1 remains open. Exact resume point: add migration-backed two-seed actual-dataset natural-key
   namespacing and cross-run database ownership constraints/tests before cutoff partitioning and
   comparison-query work.

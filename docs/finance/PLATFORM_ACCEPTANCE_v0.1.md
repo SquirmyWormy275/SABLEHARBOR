@@ -16,12 +16,12 @@
 | Planning | Base, low, high and stress scenarios; invariant actual periods; 2023–2026 monthly standard profile; 2016–2022 revenue calibration anchors |
 | Reporting | Reconciled statements, named SQL queries, six-workbook suite and valuation/QoE bridge |
 | Release control | Review-blocked package scaffold; allowlisted SQLite construction and generated-artifact scan remain open |
-| Portability | Explicit Alembic migrations through `0008`; checkpoint PostgreSQL CI pending |
+| Portability | Explicit Alembic migrations through `0008`; SQLite/PostgreSQL checkpoint CI passes |
 
 ## Verified controls
 
-- Clean SQLite migrations apply through revision `0008`; the prior `0007` PostgreSQL
-  upgrade/downgrade/upgrade evidence remains valid, while `0008` PostgreSQL CI is pending.
+- Clean SQLite migrations apply through revision `0008`; PostgreSQL `0008` migration, generation,
+  and validation CI passes. The expanded all-profile/two-seed PostgreSQL matrix remains open.
 - Full-history generation produces 48 monthly planning periods plus seven 2016–2022 revenue
   calibration anchors, not complete historical statements.
 - Full-history trial balance reconciles at `$1,172,100,000.0000` debit and credit.
@@ -30,7 +30,8 @@
 - The current public release package is review blocked pending allowlist construction and generated
   artifact scanning.
 - Ruff, strict mypy, canon/privacy checks, and 49 local tests pass; one PostgreSQL-only test is
-  skipped locally. The `0008` remote CI result is pending.
+  skipped locally. At `de9fab8`, two PostgreSQL jobs, two SQLite jobs, and organization render
+  validation pass remotely.
 
 ## Open acceptance boundary
 
