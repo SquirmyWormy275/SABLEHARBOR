@@ -1,7 +1,7 @@
 from datetime import date, datetime
 from decimal import Decimal
 
-from sqlalchemy import Date, DateTime, Enum, ForeignKey, Numeric, String
+from sqlalchemy import Date, DateTime, Enum, ForeignKey, Numeric, String, UniqueConstraint
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from sable_harbor.accounting.models import Base, FactState
@@ -80,3 +80,55 @@ class CashReceipt(Base):
     amount: Mapped[Decimal] = mapped_column(Numeric(20, 4))
     currency: Mapped[str] = mapped_column(String(3))
     journal_entry_id: Mapped[str] = mapped_column(ForeignKey("journal_entry.id"))
+
+
+class Engagement(Base):
+    __tablename__ = "engagement"
+    id: Mapped[str] = mapped_column(String(36), primary_key=True)
+    contract_id: Mapped[str] = mapped_column(ForeignKey("customer_contract.id"))
+    engagement_code: Mapped[str] = mapped_column(String(60), unique=True)
+    name: Mapped[str] = mapped_column(String(200))
+    billing_method: Mapped[str] = mapped_column(String(30))
+    starts_on: Mapped[date] = mapped_column(Date)
+    ends_on: Mapped[date] = mapped_column(Date)
+    fact_state: Mapped[FactState] = mapped_column(Enum(FactState))
+
+
+class ProjectTask(Base):
+    __tablename__ = "project_task"
+    id: Mapped[str] = mapped_column(String(36), primary_key=True)
+    engagement_id: Mapped[str] = mapped_column(ForeignKey("engagement.id"))
+    task_code: Mapped[str] = mapped_column(String(40))
+    name: Mapped[str] = mapped_column(String(200))
+    __table_args__ = (UniqueConstraint("engagement_id", "task_code"),)
+
+
+class TimeEntry(Base):
+    __tablename__ = "time_entry"
+    id: Mapped[str] = mapped_column(String(36), primary_key=True)
+    task_id: Mapped[str] = mapped_column(ForeignKey("project_task.id"))
+    worker_id: Mapped[str] = mapped_column(ForeignKey("worker.id"))
+    work_date: Mapped[date] = mapped_column(Date)
+    hours: Mapped[Decimal] = mapped_column(Numeric(10, 2))
+    bill_rate: Mapped[Decimal] = mapped_column(Numeric(20, 4))
+    cost_rate: Mapped[Decimal] = mapped_column(Numeric(20, 4))
+    status: Mapped[str] = mapped_column(String(24))
+
+
+class ProjectCost(Base):
+    __tablename__ = "project_cost"
+    id: Mapped[str] = mapped_column(String(36), primary_key=True)
+    engagement_id: Mapped[str] = mapped_column(ForeignKey("engagement.id"))
+    time_entry_id: Mapped[str] = mapped_column(ForeignKey("time_entry.id"))
+    cost_date: Mapped[date] = mapped_column(Date)
+    amount: Mapped[Decimal] = mapped_column(Numeric(20, 4))
+    journal_entry_id: Mapped[str] = mapped_column(ForeignKey("journal_entry.id"))
+
+
+class EngagementInvoiceLink(Base):
+    __tablename__ = "engagement_invoice_link"
+    id: Mapped[str] = mapped_column(String(36), primary_key=True)
+    engagement_id: Mapped[str] = mapped_column(ForeignKey("engagement.id"))
+    invoice_id: Mapped[str] = mapped_column(ForeignKey("invoice.id"))
+    billed_hours: Mapped[Decimal] = mapped_column(Numeric(10, 2))
+    billed_amount: Mapped[Decimal] = mapped_column(Numeric(20, 4))

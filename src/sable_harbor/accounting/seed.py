@@ -197,6 +197,20 @@ def seed_smoke(session: Session) -> str:
                 account_class="EXPENSE",
                 normal_balance="DEBIT",
             ),
+            Account(
+                id=stable_id("account", "2000"),
+                code="2000",
+                name="Accrued liabilities",
+                account_class="LIABILITY",
+                normal_balance="CREDIT",
+            ),
+            Account(
+                id=stable_id("account", "4010"),
+                code="4010",
+                name="Implementation and support revenue",
+                account_class="REVENUE",
+                normal_balance="CREDIT",
+            ),
         ]
     )
     entry = JournalEntry(
