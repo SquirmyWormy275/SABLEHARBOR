@@ -1,0 +1,17 @@
+scenarios:
+  base:
+    revenue_multiplier: "1.00"
+    cost_multiplier: "1.00"
+    description: Model-proposed central case.
+  low:
+    revenue_multiplier: "0.90"
+    cost_multiplier: "1.05"
+    description: Lower commercial and operating performance with cost pressure.
+  high:
+    revenue_multiplier: "1.12"
+    cost_multiplier: "0.98"
+    description: Stronger volume, price, retention, and execution.
+  stress:
+    revenue_multiplier: "0.72"
+    cost_multiplier: "1.15"
+    description: Correlated churn, payment delay, mine downside, fuel and maintenance shock.

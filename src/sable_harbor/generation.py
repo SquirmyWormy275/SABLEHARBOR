@@ -2,8 +2,10 @@ from calendar import monthrange
 from dataclasses import dataclass
 from datetime import date
 from decimal import Decimal
+from pathlib import Path
 from random import Random
 
+import yaml
 from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
@@ -30,6 +32,15 @@ from sable_harbor.accounting.models import (
 from sable_harbor.core.ids import stable_id
 
 D = Decimal
+
+
+def scenario_multipliers(scenario: str) -> tuple[D, D]:
+    path = Path("config/finance/scenarios/operating.yml")
+    scenarios = yaml.safe_load(path.read_text())["scenarios"]
+    if scenario not in scenarios:
+        raise ValueError(f"Unknown scenario {scenario!r}")
+    selected = scenarios[scenario]
+    return D(selected["revenue_multiplier"]), D(selected["cost_multiplier"])
 
 
 @dataclass(frozen=True)
@@ -666,6 +677,7 @@ def generate_standard(
             "periods": 48,
         }
     generate_baseline(session, seed=seed, scenario=standard_scenario, post_summary=False)
+    revenue_multiplier, cost_multiplier = scenario_multipliers(scenario)
     books = {
         entity.code: book
         for entity, book in session.execute(
@@ -731,12 +743,14 @@ def generate_standard(
                 if entity_code == "ARU" and year == 2026:
                     active_weights = weights[1:]
                 denominator = sum(active_weights)
-                revenue = (annual_revenue * weight / denominator).quantize(D("0.01"))
-                cost = (annual_cost * weight / denominator).quantize(D("0.01"))
+                scenario_revenue = annual_revenue * revenue_multiplier
+                scenario_cost = annual_cost * cost_multiplier
+                revenue = (scenario_revenue * weight / denominator).quantize(D("0.01"))
+                cost = (scenario_cost * weight / denominator).quantize(D("0.01"))
                 is_last = month == 12
                 if is_last:
-                    revenue = annual_revenue - allocated_revenue
-                    cost = annual_cost - allocated_cost
+                    revenue = scenario_revenue - allocated_revenue
+                    cost = scenario_cost - allocated_cost
                 allocated_revenue += revenue
                 allocated_cost += cost
                 availability = (
@@ -784,3 +798,51 @@ def generate_standard(
                     )
     session.flush()
     return {"scenario": scenario, "profile": "standard", "seed": seed, "periods": 48}
+
+
+def generate_full_history(
+    session: Session, seed: int = 20260831, scenario: str = "base"
+) -> dict[str, int | str]:
+    result = generate_standard(session, seed=seed, scenario=scenario)
+    marker = stable_id("scenario", f"full_history:{scenario}:{seed}")
+    marker_id = stable_id("scenario_value", f"{marker}:marker")
+    if session.get(ScenarioValue, marker_id):
+        return {**result, "profile": "full_history", "history_start": 2016}
+    annual_revenue = {
+        2016: D("900000"),
+        2017: D("2700000"),
+        2018: D("6400000"),
+        2019: D("12200000"),
+        2020: D("13800000"),
+        2021: D("28100000"),
+        2022: D("46500000"),
+    }
+    for year, amount in annual_revenue.items():
+        session.add(
+            ScenarioValue(
+                id=stable_id("scenario_value", f"{marker}:SHI:{year}:revenue"),
+                scenario_code=scenario,
+                metric_code="historical_revenue_anchor",
+                entity_code="SHI",
+                period_code=str(year),
+                amount=amount,
+                unit="USD",
+                fact_state=FactState.LEGACY_CALIBRATION,
+                provenance="legacy operating model annual anchor; noncontrolling",
+            )
+        )
+    session.add(
+        ScenarioValue(
+            id=marker_id,
+            scenario_code=scenario,
+            metric_code="full_history_marker",
+            entity_code="CONSOLIDATED",
+            period_code="2016-2026",
+            amount=D(1),
+            unit="count",
+            fact_state=FactState.DERIVED,
+            provenance="full-history generation marker",
+        )
+    )
+    session.flush()
+    return {**result, "profile": "full_history", "history_start": 2016}

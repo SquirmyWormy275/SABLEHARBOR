@@ -9,7 +9,7 @@ from sable_harbor.accounting.models import Base, EntryState, JournalEntry, Journ
 from sable_harbor.accounting.seed import seed_smoke
 from sable_harbor.core.database import build_engine, session_for
 from sable_harbor.exports.release import package_public_demo
-from sable_harbor.generation import generate_baseline, generate_standard
+from sable_harbor.generation import generate_baseline, generate_full_history, generate_standard
 from sable_harbor.reporting import build_workbook
 from sable_harbor.reporting_queries import named_queries, run_named_query
 from sable_harbor.valuation.model import calculate_valuation, load_valuation_config
@@ -41,8 +41,10 @@ def generate(profile: str = "smoke", scenario: str = "base", seed: int = 2026083
             result = generate_baseline(session, seed=seed, scenario=scenario)
         elif profile == "standard":
             result = generate_standard(session, seed=seed, scenario=scenario)
+        elif profile == "full_history":
+            result = generate_full_history(session, seed=seed, scenario=scenario)
         else:
-            raise typer.BadParameter("Profile must be smoke, baseline, or standard")
+            raise typer.BadParameter("Profile must be smoke, baseline, standard, or full_history")
         session.commit()
     typer.echo(f"Generated profile={profile} scenario={scenario} seed={seed} result={result}")
 
