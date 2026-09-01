@@ -1,33 +1,59 @@
+<p align="center"><img src="../../assets/brand/logos/evalon__primary-horizontal.svg" alt="Evalon" width="720" /></p>
+
 # Evalon
 
-<p align="center">
-  <img src="../../assets/brand/logos/evalon__primary-horizontal.svg" alt="Evalon logo" width="760" />
-</p>
+**Classification:** historical advanced-engineering outpost  
+**Operational period:** 2020–2022  
+**Successor:** Willow  
+**Dossier state:** archival review candidate
 
-| Field | Status |
-|---|---|
-| Role | historical advanced-engineering outpost |
-| Publication class | Supplemental or historical identity |
-| Canon state | LOCKED historical concept; closed and rechartered as Willow in 2022. |
-| Controlling source | [`docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.2.md`](../canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.2.md), Sections 7.2-7.7 |
+Evalon was the Pittsburgh-area advanced-engineering outpost led by Gid Voss. It failed as the conventional eastern business it was expected to become, while accidentally concentrating a research capability that Sable Harbor preserved by closing Evalon and rechartering the surviving capability as Willow.
 
-## Role in the Sable Harbor system
+## Status and scope
 
-Evalon was the Pittsburgh-area advanced-engineering outpost created under a coal and industrial mandate during 2020-2021. It failed as the business it was intended to become, concentrated experimental capability, and was closed as an operating concept before the surviving capability was rechartered as Project Willow.
+- Canon: Evalon name, role, failure as an operating concept, and Willow succession are locked.
+- Exact team, projects, assets, customers, travel participants/costs, and legal/financial treatment remain partly open.
+- Standalone historical database, laboratory inventory, financial archive, and letterhead: **NOT MATERIALIZED**.
 
-## Logo assets
+## Canon and history
 
-- [Primary Horizontal](../../assets/brand/logos/evalon__primary-horizontal.svg) ([PNG](../../assets/brand/logos/evalon__primary-horizontal.png))
-- [Stacked](../../assets/brand/logos/evalon__stacked.svg) ([PNG](../../assets/brand/logos/evalon__stacked.png))
-- [Mark](../../assets/brand/logos/evalon__mark.svg) ([PNG](../../assets/brand/logos/evalon__mark.png))
-- [Reverse Horizontal](../../assets/brand/logos/evalon__reverse-horizontal.svg) ([PNG](../../assets/brand/logos/evalon__reverse-horizontal.png))
-- [One Color Horizontal](../../assets/brand/logos/evalon__one-color-horizontal.svg) ([PNG](../../assets/brand/logos/evalon__one-color-horizontal.png))
+- [Corporate Lore Canon v0.2](../canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.2.md) — Evalon, Sar-e-Sang, leadership visit, and Willow recharter
+- [Organizational lineage](../organization/ORGANIZATIONAL_LINEAGE_2015_2026.md)
+- [Willow dossier](WILLOW.md)
+- [Emberline dossier](EMBERLINE.md)
 
-The SVG files are the production source of truth. Do not infer legal-entity status, reporting structure, economics, or public commercial use from the artwork.
+## Identity and collateral
 
-## Related material
+- [Primary SVG](../../assets/brand/logos/evalon__primary-horizontal.svg) · [PNG](../../assets/brand/logos/evalon__primary-horizontal.png)
+- [Stacked SVG](../../assets/brand/logos/evalon__stacked.svg) · [Mark SVG](../../assets/brand/logos/evalon__mark.svg)
+- [Reverse SVG](../../assets/brand/logos/evalon__reverse-horizontal.svg) · [One-color SVG](../../assets/brand/logos/evalon__one-color-horizontal.svg)
 
-- [Business-line index](README.md)
-- [Brand standards](../../assets/brand/BRAND_STANDARDS.md)
-- [Organization maps](../organization/README.md)
-- [Preliminary name and mark screen](../legal/PRELIMINARY_NAME_AND_MARK_SCREEN.md)
+The identity is archival and must not be used as a current business line.
+
+## Organization and authority
+
+No accepted standalone Evalon chart exists. Use [organizational lineage](../organization/ORGANIZATIONAL_LINEAGE_2015_2026.md) and the [Willow organization](../organization/WILLOW_ORGANIZATION.md) for predecessor/successor context.
+
+## Financials and accounting
+
+Evalon is not separately represented in PR #9's current legal-entity or segment model. Willow research records do not automatically reconstruct Evalon's historical books. No accepted historical Evalon P&L, asset register, or project ledger exists.
+
+## Inventory, assets, and operations
+
+A complete archive would include the shop lease and fixtures, machine tools, prototypes, test fixtures, experiments and autopsies, personnel, customer work, Project Janus, travel and expenses, safety/governance events, and transfer/disposal into Willow. Those records remain unmaterialized.
+
+## Database and exports
+
+Target: a date-bounded archival package with predecessor/successor mappings, project and asset disposition, evidence states, and enterprise reconciliation. Current state: **NOT MATERIALIZED**.
+
+## Audit controls and unresolved facts
+
+Controls must preserve Evalon/Emberline distinction, classify the unit as historical, trace assets and work to Willow or disposal, maintain sensitive-trip boundaries, and avoid inventing participants or expense details. Open: exact team, projects, assets, customers, dates, travel parties/costs, and historical financials.
+
+## Download map
+
+- [Willow dossier](WILLOW.md)
+- [Emberline dossier](EMBERLINE.md)
+- [Organizational lineage](../organization/ORGANIZATIONAL_LINEAGE_2015_2026.md)
+- [Brand system](../../assets/brand/README.md)
+- [Registry](registry.json)
