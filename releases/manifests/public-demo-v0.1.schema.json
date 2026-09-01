@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Sable Harbor data release manifest",
+  "type": "object",
+  "required": [
+    "package_name", "package_version", "scenario", "profile", "generation_seed",
+    "git_commit", "source_canon_commit", "period_covered", "row_counts", "artifacts",
+    "classification", "license", "validation_status"
+  ],
+  "properties": {
+    "package_name": {"type": "string"},
+    "package_version": {"type": "string"},
+    "generation_seed": {"type": "integer"},
+    "row_counts": {"type": "object", "additionalProperties": {"type": "integer"}},
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["path", "bytes", "sha256"],
+        "properties": {
+          "path": {"type": "string"},
+          "bytes": {"type": "integer"},
+          "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+        }
+      }
+    }
+  }
+}

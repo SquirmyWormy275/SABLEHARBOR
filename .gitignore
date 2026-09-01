@@ -10,3 +10,4 @@ var/*
 data/generated/
 workbooks/outputs/*.xlsx
 reports/*.xlsx
+releases/generated/

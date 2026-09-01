@@ -8,6 +8,7 @@ from sable_harbor.accounting.ledger import trial_balance
 from sable_harbor.accounting.models import Base, EntryState, JournalEntry, JournalLine
 from sable_harbor.accounting.seed import seed_smoke
 from sable_harbor.core.database import build_engine, session_for
+from sable_harbor.exports.release import package_public_demo
 from sable_harbor.generation import generate_baseline, generate_standard
 from sable_harbor.reporting import build_workbook
 from sable_harbor.reporting_queries import named_queries, run_named_query
@@ -107,3 +108,14 @@ def workbooks(output: Path = Path("workbooks/outputs")) -> None:
         session.commit()
         paths = generate_workbook_suite(session, output)
     typer.echo("\n".join(str(path) for path in paths))
+
+
+@app.command("package-release")
+def package_release(output: Path = Path("releases/generated/public-demo-v0.1")) -> None:
+    engine = build_engine()
+    Base.metadata.create_all(engine)
+    with session_for(engine) as session:
+        generate_standard(session)
+        session.commit()
+        manifest = package_public_demo(session, output)
+    typer.echo(manifest)

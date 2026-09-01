@@ -3,7 +3,7 @@ PROFILE ?= smoke
 SCENARIO ?= base
 SEED ?= 20260831
 
-.PHONY: bootstrap migrate generate validate report workbooks test lint typecheck ci
+.PHONY: bootstrap migrate generate validate report workbooks package test lint typecheck ci
 bootstrap:
 	uv sync --all-extras
 
@@ -21,6 +21,9 @@ report:
 
 workbooks:
 	uv run shfin workbooks
+
+package:
+	uv run shfin package-release
 
 test:
 	uv run pytest
