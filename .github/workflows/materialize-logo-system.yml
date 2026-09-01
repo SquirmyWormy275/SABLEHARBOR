@@ -1,0 +1,122 @@
+name: Materialize Sable Harbor logo system
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - assets/corporate-logo-system-v0.1
+    paths:
+      - .brand-bootstrap/**
+      - tools/brand/generate_sable_harbor_brand_assets.py
+      - .github/workflows/materialize-logo-system.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sable-harbor-logo-system-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  materialize:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+
+    steps:
+      - name: Check out logo-system branch
+        uses: actions/checkout@v4
+        with:
+          ref: assets/corporate-logo-system-v0.1
+          fetch-depth: 0
+
+      - name: Install deterministic rendering dependencies
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends fonts-inter libcairo2
+          python -m pip install --disable-pip-version-check --no-cache-dir \
+            'cairosvg==2.8.2' \
+            'fonttools==4.63.0' \
+            'pillow==12.3.0'
+
+      - name: Restore the reviewed generator
+        run: |
+          set -euo pipefail
+          if compgen -G '.brand-bootstrap/generator.b64.part-*' > /dev/null; then
+            mkdir -p tools/brand
+            cat .brand-bootstrap/generator.b64.part-* | base64 --decode > tools/brand/generate_sable_harbor_brand_assets.py
+          fi
+          test -s tools/brand/generate_sable_harbor_brand_assets.py
+          python -m py_compile tools/brand/generate_sable_harbor_brand_assets.py
+
+      - name: Generate individual SVG and PNG assets
+        env:
+          SABLE_HARBOR_ASSET_OUT: ${{ github.workspace }}/.brand-build/sable-harbor-brand-assets-v0.1.0
+        run: |
+          set -euo pipefail
+          python tools/brand/generate_sable_harbor_brand_assets.py
+
+          build_root='.brand-build/sable-harbor-brand-assets-v0.1.0'
+          rm -rf assets/brand/logos assets/brand/packages
+          mkdir -p assets/brand
+          cp -a "$build_root/assets/brand/logos" assets/brand/logos
+          cp -a "$build_root/packages" assets/brand/packages
+          cp "$build_root/README.md" assets/brand/README.md
+          cp "$build_root/VALIDATION.md" assets/brand/VALIDATION.md
+          cp "$build_root/manifest.json" assets/brand/manifest.json
+
+      - name: Validate the production package
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import hashlib
+          import json
+          from pathlib import Path
+
+          root = Path('.')
+          logo_dir = root / 'assets' / 'brand' / 'logos'
+          manifest = json.loads((root / 'assets' / 'brand' / 'manifest.json').read_text(encoding='utf-8'))
+
+          assert manifest['one_logo_per_file'] is True
+          assert manifest['corporate_variant_count'] == 5
+          assert manifest['logo_count'] == 55
+          assert manifest['asset_count'] == 110
+
+          svgs = sorted(logo_dir.glob('*.svg'))
+          pngs = sorted(logo_dir.glob('*.png'))
+          assert len(svgs) == 55, len(svgs)
+          assert len(pngs) == 55, len(pngs)
+          assert not list(logo_dir.glob('*sheet*'))
+          assert not list(logo_dir.glob('*board*'))
+          assert not list(logo_dir.glob('*mockup*'))
+
+          for svg in svgs:
+              text = svg.read_text(encoding='utf-8')
+              assert text.lower().count('<svg') == 1, svg
+              assert '<text' not in text.lower(), svg
+              assert text.count('<title') == 1, svg
+
+          seen = set()
+          for item in manifest['assets']:
+              key = (item['brand_slug'], item['variant'], item['format'])
+              assert key not in seen, key
+              seen.add(key)
+              path = root / item['path']
+              assert path.is_file(), path
+              digest = hashlib.sha256(path.read_bytes()).hexdigest()
+              assert digest == item['sha256'], path
+
+          print('PASS: 55 individual logos, 110 production assets, manifest digests verified.')
+          PY
+
+      - name: Commit the frozen logo package
+        run: |
+          set -euo pipefail
+          rm -rf .brand-build .brand-bootstrap
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A assets/brand tools/brand .brand-bootstrap
+          git diff --cached --stat
+          git commit -m 'Add Sable Harbor corporate logo system v0.1.0'
+          git push origin HEAD:assets/corporate-logo-system-v0.1
