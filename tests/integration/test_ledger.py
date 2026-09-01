@@ -5,8 +5,21 @@ import pytest
 from sqlalchemy import create_engine
 from sqlalchemy.orm import Session
 
-from sable_harbor.accounting.ledger import LedgerError, post_entry, trial_balance
-from sable_harbor.accounting.models import Base, EntryState, JournalEntry, JournalLine
+from sable_harbor.accounting.ledger import (
+    LedgerError,
+    close_period,
+    post_entry,
+    reverse_entry,
+    trial_balance,
+)
+from sable_harbor.accounting.models import (
+    Base,
+    EntryState,
+    FiscalPeriod,
+    JournalEntry,
+    JournalLine,
+    PeriodState,
+)
 from sable_harbor.accounting.seed import seed_smoke
 from sable_harbor.core.ids import stable_id
 
@@ -54,3 +67,40 @@ def test_unbalanced_entry_is_rejected() -> None:
         with pytest.raises(LedgerError, match="balance"):
             post_entry(session, entry)
         assert entry.state is EntryState.DRAFT
+
+
+def test_posted_entry_is_immutable_and_reversal_nets_to_zero() -> None:
+    engine = create_engine("sqlite:///:memory:")
+    Base.metadata.create_all(engine)
+    with Session(engine) as session:
+        book_id = seed_smoke(session)
+        session.commit()
+        original = session.query(JournalEntry).one()
+        original.description = "mutated"
+        with pytest.raises(LedgerError, match="immutable"):
+            session.flush()
+        session.rollback()
+        original = session.query(JournalEntry).one()
+        reverse_entry(
+            session,
+            original,
+            date(2026, 8, 31),
+            original.period_id,
+            stable_id("journal", "SMOKE:OPENING_CAPITAL:REVERSAL"),
+        )
+        session.commit()
+        balances = trial_balance(session, book_id)
+        assert sum(row[1] - row[2] for row in balances) == Decimal("0.0000")
+        assert all(row[1] == row[2] for row in balances)
+
+
+def test_closed_period_rejects_new_posting() -> None:
+    engine = create_engine("sqlite:///:memory:")
+    Base.metadata.create_all(engine)
+    with Session(engine) as session:
+        seed_smoke(session)
+        session.commit()
+        period = session.query(FiscalPeriod).one()
+        close_period(session, period)
+        session.commit()
+        assert period.state is PeriodState.CLOSED
