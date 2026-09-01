@@ -10,6 +10,7 @@ This package uses the production Sable Harbor master mark and the production mar
 
 - [PowerPoint briefing deck](SABLE_HARBOR_Organization_Briefing_v1.0.pptx)
 - [PDF briefing deck](SABLE_HARBOR_Organization_Briefing_v1.0.pdf)
+- [Complete packaged deliverable](SABLE_HARBOR_Organization_Briefing_v1.0.zip)
 
 ## Individual briefing images
 
