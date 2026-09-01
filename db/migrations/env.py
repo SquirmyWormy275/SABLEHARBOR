@@ -8,6 +8,7 @@ from sable_harbor.accounting.models import Base
 from sable_harbor.commercial import models as commercial_models  # noqa: F401
 from sable_harbor.operations import models as operations_models  # noqa: F401
 from sable_harbor.mining import models as mining_models  # noqa: F401
+from sable_harbor.logistics import models as logistics_models  # noqa: F401
 
 config = context.config
 if configured_url := os.getenv("SHFIN_DATABASE_URL"):

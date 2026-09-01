@@ -156,6 +156,20 @@ def seed_smoke(session: Session) -> str:
                 normal_balance="CREDIT",
             ),
             Account(
+                id=stable_id("account", "4040"),
+                code="4040",
+                name="Freight revenue",
+                account_class="REVENUE",
+                normal_balance="CREDIT",
+            ),
+            Account(
+                id=stable_id("account", "4090"),
+                code="4090",
+                name="Intercompany revenue",
+                account_class="REVENUE",
+                normal_balance="CREDIT",
+            ),
+            Account(
                 id=stable_id("account", "5000"),
                 code="5000",
                 name="Cost of sales",
