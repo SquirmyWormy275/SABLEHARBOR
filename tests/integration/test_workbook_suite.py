@@ -7,7 +7,7 @@ from sqlalchemy.orm import Session
 
 from sable_harbor.accounting.models import Base
 from sable_harbor.generation import generate_standard
-from sable_harbor.provenance.service import record_generation_run
+from sable_harbor.provenance.service import complete_generation_run, record_generation_run
 from sable_harbor.workbooks.suite import WORKBOOKS, generate_workbook_suite
 
 
@@ -19,6 +19,7 @@ def test_six_workbooks_reopen_have_required_sheets_and_clean_links(tmp_path: Pat
             session, profile="standard", scenario_code="base", seed=20260831, git_commit="test"
         )
         generate_standard(session)
+        complete_generation_run(session, run)
         session.commit()
         outputs = generate_workbook_suite(session, tmp_path, generation_run_id=run.id)
     assert {path.name for path in outputs} == set(WORKBOOKS)

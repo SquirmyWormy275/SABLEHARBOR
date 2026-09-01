@@ -7,7 +7,7 @@ from sqlalchemy.orm import Session
 from sable_harbor.accounting.models import Base
 from sable_harbor.exports.release import package_public_demo, sha256
 from sable_harbor.generation import generate_standard
-from sable_harbor.provenance.service import record_generation_run
+from sable_harbor.provenance.service import complete_generation_run, record_generation_run
 
 
 def test_public_release_manifest_inventory_and_checksums(tmp_path: Path) -> None:
@@ -19,11 +19,12 @@ def test_public_release_manifest_inventory_and_checksums(tmp_path: Path) -> None
             session, profile="standard", scenario_code="base", seed=20260831, git_commit="test"
         )
         generate_standard(session)
+        complete_generation_run(session, run)
         session.commit()
         manifest_path = package_public_demo(session, tmp_path / "release", generation_run_id=run.id)
     manifest = json.loads(manifest_path.read_text())
     assert manifest["validation_status"] == "REVIEW_BLOCKED"
-    assert manifest["schema_versions"] == ["0007"]
+    assert manifest["schema_versions"] == ["0008"]
     assert manifest["classification"] == "PUBLIC_SAFE_SYNTHETIC"
     assert manifest["row_counts"]["journal_entry"] > 0
     for artifact in manifest["artifacts"]:

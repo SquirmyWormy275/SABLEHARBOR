@@ -7,7 +7,7 @@ from alembic.config import Config
 from sqlalchemy import func, inspect, select, text
 
 from sable_harbor import schema as schema  # noqa: F401
-from sable_harbor.accounting.ledger import close_period, post_entry, trial_balance
+from sable_harbor.accounting.ledger import close_period, post_entry
 from sable_harbor.accounting.models import (
     EntryState,
     FiscalPeriod,
@@ -17,13 +17,13 @@ from sable_harbor.accounting.models import (
 )
 from sable_harbor.accounting.seed import seed_smoke
 from sable_harbor.core.database import build_engine, require_migrated_schema, session_for
-from sable_harbor.core.ids import stable_id
 from sable_harbor.exports.release import package_public_demo
 from sable_harbor.generation import (
     generate_baseline_run,
     generate_full_history,
     generate_standard,
 )
+from sable_harbor.provenance.identity import RunIdentity
 from sable_harbor.provenance.service import (
     complete_generation_run,
     lineage_for,
@@ -55,7 +55,7 @@ def status() -> None:
 
 @app.command("run-id")
 def run_id(profile: str, scenario: str = "base", seed: int = 20260831) -> None:
-    typer.echo(stable_id("generation_run", f"v0.1:{profile}:{scenario}:{seed}"))
+    typer.echo(RunIdentity.build(profile=profile, scenario=scenario, seed=seed).run_id)
 
 
 @app.command("init-db")
@@ -85,7 +85,9 @@ def generate(profile: str = "smoke", scenario: str = "base", seed: int = 2026083
     engine = build_engine()
     require_migrated_schema(engine)
     with session_for(engine) as session:
-        effective_scenario = "stress" if profile == "stress" else scenario
+        profile, effective_scenario = RunIdentity.build(
+            profile=profile, scenario=scenario, seed=seed
+        ).profile, RunIdentity.build(profile=profile, scenario=scenario, seed=seed).scenario
         run = record_generation_run(
             session,
             profile=profile,
@@ -160,10 +162,7 @@ def validate(generation_run_id: str | None = None) -> None:
     with session_for(engine) as session:
         existing = session.scalar(select(func.count(JournalEntry.id))) or 0
         if existing == 0:
-            book_id = seed_smoke(session)
-            balances = trial_balance(session, book_id)
-            debit = sum(row[1] for row in balances)
-            credit = sum(row[2] for row in balances)
+            raise ValueError("Validation requires an existing completed generation run")
         else:
             context = run_context(session, generation_run_id)
             debit, credit = session.execute(

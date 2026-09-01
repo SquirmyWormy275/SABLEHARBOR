@@ -6,7 +6,7 @@ from sqlalchemy.orm import Session
 
 from sable_harbor.accounting.models import Base, JournalEntry, Worker
 from sable_harbor.generation import generate_baseline_run
-from sable_harbor.provenance.service import record_generation_run
+from sable_harbor.provenance.service import complete_generation_run, record_generation_run
 from sable_harbor.reporting import build_workbook
 
 
@@ -28,6 +28,8 @@ def test_baseline_generation_is_idempotent_and_workbook_reopens(tmp_path: Path) 
             session.scalar(select(func.count(Worker.id)).where(Worker.worker_type == "EMPLOYEE"))
             == 708
         )
+        complete_generation_run(session, run)
+        session.commit()
         output = build_workbook(session, tmp_path / "model.xlsx", run.id)
     workbook = load_workbook(output, data_only=False, read_only=True)
     assert {

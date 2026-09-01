@@ -3,7 +3,7 @@ from sqlalchemy.orm import Session
 
 from sable_harbor.accounting.models import Base
 from sable_harbor.generation import generate_standard
-from sable_harbor.provenance.service import record_generation_run
+from sable_harbor.provenance.service import complete_generation_run, record_generation_run
 from sable_harbor.reporting_queries import named_queries, run_named_query
 
 
@@ -15,6 +15,7 @@ def test_all_required_named_queries_execute() -> None:
             session, profile="standard", scenario_code="base", seed=20260831, git_commit="test"
         )
         generate_standard(session)
+        complete_generation_run(session, run)
         session.commit()
         names = named_queries()
         assert len(names) >= 20

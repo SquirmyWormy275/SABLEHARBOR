@@ -5,7 +5,7 @@ from sqlalchemy.orm import Session
 
 from sable_harbor.accounting.models import Base, JournalEntry, JournalLine
 from sable_harbor.generation import generate_standard
-from sable_harbor.provenance.service import record_generation_run
+from sable_harbor.provenance.service import complete_generation_run, record_generation_run
 from sable_harbor.reports.statements import statement_snapshot
 
 
@@ -17,6 +17,7 @@ def test_statements_balance_and_intercompany_eliminates() -> None:
             session, profile="standard", scenario_code="base", seed=20260831, git_commit="test"
         )
         generate_standard(session)
+        complete_generation_run(session, run)
         session.commit()
         statements = statement_snapshot(session, run.id)
         assert statements["balance_sheet_difference"] == Decimal("0.0000")

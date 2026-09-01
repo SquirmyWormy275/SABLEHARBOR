@@ -1,6 +1,8 @@
 import os
 from pathlib import Path
 
+from alembic.config import Config
+from alembic.script import ScriptDirectory
 from sqlalchemy import Engine, create_engine, text
 from sqlalchemy.exc import SQLAlchemyError
 from sqlalchemy.orm import Session
@@ -22,7 +24,11 @@ def session_for(engine: Engine) -> Session:
     return Session(engine)
 
 
-SCHEMA_HEAD = "0007"
+def required_schema_head(config: Config | None = None) -> str:
+    heads = ScriptDirectory.from_config(config or Config("alembic.ini")).get_heads()
+    if len(heads) != 1:
+        raise RuntimeError(f"Expected one Alembic head, found {heads!r}")
+    return heads[0]
 
 
 def require_migrated_schema(engine: Engine) -> None:
@@ -33,8 +39,9 @@ def require_migrated_schema(engine: Engine) -> None:
         raise RuntimeError(
             "Database is not installed; run `uv run alembic upgrade head`"
         ) from error
-    if revision != SCHEMA_HEAD:
+    schema_head = required_schema_head()
+    if revision != schema_head:
         raise RuntimeError(
-            f"Database revision {revision!r} does not match required head {SCHEMA_HEAD!r}; "
+            f"Database revision {revision!r} does not match required head {schema_head!r}; "
             "run `uv run alembic upgrade head`"
         )

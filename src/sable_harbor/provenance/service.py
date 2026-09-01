@@ -9,8 +9,15 @@ from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from sable_harbor.accounting.models import FactState, JournalEntry, ScenarioValue
+from sable_harbor.core.database import required_schema_head
 from sable_harbor.core.ids import stable_id
 
+from .identity import (
+    RunIdentity,
+    assumptions_digest,
+    canon_source_lock_digest,
+    generator_source_digest,
+)
 from .models import GenerationRun, LineageEdge, ModelAssumption, Scenario, SourceDocument
 
 GENERATION_RUN_SESSION_KEY = "generation_run_id"
@@ -86,6 +93,8 @@ def seed_provenance(
 def record_generation_run(
     session: Session, *, profile: str, scenario_code: str, seed: int, git_commit: str
 ) -> GenerationRun:
+    identity = RunIdentity.build(profile=profile, scenario=scenario_code, seed=seed)
+    profile, scenario_code = identity.profile, identity.scenario
     scenario = session.scalar(select(Scenario).where(Scenario.code == scenario_code))
     if scenario is None:
         scenario = Scenario(
@@ -97,23 +106,56 @@ def record_generation_run(
         )
         session.add(scenario)
         session.flush()
-    run_id = stable_id("generation_run", f"v0.1:{profile}:{scenario_code}:{seed}")
+    run_id = identity.run_id
     run = session.get(GenerationRun, run_id)
     now = datetime.now(UTC)
+    source_digest = generator_source_digest()
+    assumption_sha = assumptions_digest()
+    canon_sha = canon_source_lock_digest()
     if run is None:
         run = GenerationRun(
             id=run_id,
             profile=profile,
             scenario_id=scenario.id,
             seed=seed,
-            generator_version="0.1",
+            actual_dataset_id=identity.actual_dataset_id,
+            generator_version=identity.generator_version,
             git_commit=git_commit,
+            generator_source_digest=source_digest,
+            assumptions_digest=assumption_sha,
+            canon_source_lock_digest=canon_sha,
+            actual_through=identity.actual_through,
+            forecast_from=identity.forecast_from,
+            schema_head=required_schema_head(),
             started_at=now,
             completed_at=None,
             status="RUNNING",
         )
         session.add(run)
         session.flush()
+    elif run.status == "COMPLETED":
+        persisted = (
+            run.git_commit,
+            run.generator_source_digest,
+            run.assumptions_digest,
+            run.canon_source_lock_digest,
+            run.actual_through,
+            run.forecast_from,
+            run.schema_head,
+        )
+        requested = (
+            git_commit,
+            source_digest,
+            assumption_sha,
+            canon_sha,
+            identity.actual_through,
+            identity.forecast_from,
+            required_schema_head(),
+        )
+        if persisted != requested:
+            raise ValueError(
+                "Completed generation run identity mismatch; completed runs are immutable"
+            )
     session.info[GENERATION_RUN_SESSION_KEY] = run.id
     marker_id = stable_id("scenario_value", f"run:{run.id}:marker")
     if session.get(ScenarioValue, marker_id) is None:
@@ -124,7 +166,7 @@ def record_generation_run(
                 scenario_code=scenario_code,
                 metric_code="run_marker",
                 entity_code="CONSOLIDATED",
-                period_code=profile,
+                period_code="RUN",
                 amount=Decimal(1),
                 unit="count",
                 fact_state=FactState.DERIVED,
@@ -160,6 +202,8 @@ def run_context(session: Session, generation_run_id: str | None = None) -> RunCo
     run = session.get(GenerationRun, selected_id)
     if run is None:
         raise ValueError(f"Unknown generation run {selected_id!r}")
+    if run.status != "COMPLETED":
+        raise ValueError(f"Generation run {selected_id!r} must be COMPLETED")
     scenario = session.get(Scenario, run.scenario_id)
     if scenario is None:
         raise ValueError(f"Generation run {selected_id!r} has no scenario")

@@ -65,9 +65,16 @@ class GenerationRun(Base):
     actual_generation_run_id: Mapped[str | None] = mapped_column(
         ForeignKey("generation_run.id"), index=True
     )
+    actual_dataset_id: Mapped[str | None] = mapped_column(String(36), index=True)
     seed: Mapped[int] = mapped_column(Integer)
     generator_version: Mapped[str] = mapped_column(String(40))
     git_commit: Mapped[str] = mapped_column(String(40))
+    generator_source_digest: Mapped[str | None] = mapped_column(String(64))
+    assumptions_digest: Mapped[str | None] = mapped_column(String(64))
+    canon_source_lock_digest: Mapped[str | None] = mapped_column(String(64))
+    actual_through: Mapped[date | None] = mapped_column(Date)
+    forecast_from: Mapped[date | None] = mapped_column(Date)
+    schema_head: Mapped[str | None] = mapped_column(String(32))
     started_at: Mapped[datetime] = mapped_column(DateTime(timezone=True))
     completed_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
     status: Mapped[str] = mapped_column(String(24))

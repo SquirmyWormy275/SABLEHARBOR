@@ -6,12 +6,16 @@ from sqlalchemy.orm import Session
 
 from sable_harbor.accounting.models import Base, ScenarioValue
 from sable_harbor.generation import generate_full_history, generate_standard
+from sable_harbor.provenance.service import record_generation_run
 
 
 def _scenario_revenue(scenario: str) -> Decimal:
     engine = create_engine("sqlite:///:memory:")
     Base.metadata.create_all(engine)
     with Session(engine) as session:
+        record_generation_run(
+            session, profile="standard", scenario_code=scenario, seed=20260831, git_commit="test"
+        )
         generate_standard(session, scenario=scenario)
         return session.scalar(
             select(func.sum(ScenarioValue.amount)).where(
@@ -31,6 +35,13 @@ def test_full_history_adds_noncontrolling_2016_to_2022_anchors() -> None:
     engine = create_engine("sqlite:///:memory:")
     Base.metadata.create_all(engine)
     with Session(engine) as session:
+        record_generation_run(
+            session,
+            profile="full_history",
+            scenario_code="base",
+            seed=20260831,
+            git_commit="test",
+        )
         result = generate_full_history(session)
         anchors = session.scalars(
             select(ScenarioValue).where(ScenarioValue.metric_code == "historical_revenue_anchor")

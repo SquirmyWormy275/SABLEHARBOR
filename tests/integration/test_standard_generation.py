@@ -13,12 +13,16 @@ from sable_harbor.accounting.models import (
     ScenarioValue,
 )
 from sable_harbor.generation import generate_standard
+from sable_harbor.provenance.service import record_generation_run
 
 
 def test_standard_generation_has_48_months_actual_forecast_and_is_idempotent() -> None:
     engine = create_engine("sqlite:///:memory:")
     Base.metadata.create_all(engine)
     with Session(engine) as session:
+        record_generation_run(
+            session, profile="standard", scenario_code="base", seed=20260831, git_commit="test"
+        )
         first = generate_standard(session)
         session.commit()
         first_entries = session.scalar(select(func.count(JournalEntry.id)))

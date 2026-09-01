@@ -9,6 +9,7 @@ from typing import Any
 from sqlalchemy import inspect, text
 from sqlalchemy.orm import Session
 
+from sable_harbor.core.database import required_schema_head
 from sable_harbor.provenance.models import GenerationRun
 from sable_harbor.provenance.service import run_context
 from sable_harbor.workbooks.suite import generate_workbook_suite
@@ -157,7 +158,7 @@ def package_public_demo(
             "Advisory",
         ],
         "row_counts": row_counts,
-        "schema_versions": ["0007"],
+        "schema_versions": [required_schema_head()],
         "checksum_algorithm": "SHA-256",
         "artifacts": inventory,
         "classification": "PUBLIC_SAFE_SYNTHETIC",

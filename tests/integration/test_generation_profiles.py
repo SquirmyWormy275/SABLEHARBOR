@@ -8,7 +8,7 @@ from sqlalchemy.orm import Session
 from typer.testing import CliRunner
 
 from sable_harbor.cli import app
-from sable_harbor.core.ids import stable_id
+from sable_harbor.provenance.identity import RunIdentity
 from sable_harbor.provenance.models import GenerationRun
 
 
@@ -69,7 +69,7 @@ def test_generation_profile_has_run_marker_and_no_null_owned_facts(
     )
     assert result.exit_code == 0, result.output
 
-    run_id = stable_id("generation_run", f"v0.1:{profile}:{scenario}:20260831")
+    run_id = RunIdentity.build(profile=profile, scenario=scenario, seed=20260831).run_id
     engine = create_engine(url)
     with Session(engine) as session:
         run = session.get(GenerationRun, run_id)

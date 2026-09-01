@@ -729,10 +729,12 @@ def generate_standard(
     session: Session, seed: int = 20260831, scenario: str = "base"
 ) -> dict[str, int | str]:
     """Generate deterministic monthly 2023–2026 ledgers and operating driver values."""
-    standard_scenario = f"standard_{scenario}"
     revenue_multiplier, cost_multiplier = scenario_multipliers(scenario)
-    marker = stable_id("scenario", f"{standard_scenario}:{seed}")
-    marker_id = stable_id("scenario_value", f"{marker}:marker")
+    run_id = session.info.get(GENERATION_RUN_SESSION_KEY)
+    if run_id is None:
+        raise ValueError("Standard generation requires an active generation run")
+    marker = stable_id("generation_namespace", str(run_id))
+    marker_id = stable_id("scenario_value", f"run:{run_id}:generation-marker")
     if session.get(ScenarioValue, marker_id):
         return {
             "scenario": scenario,
@@ -984,8 +986,11 @@ def generate_full_history(
     session: Session, seed: int = 20260831, scenario: str = "base"
 ) -> dict[str, int | str]:
     result = generate_standard(session, seed=seed, scenario=scenario)
-    marker = stable_id("scenario", f"full_history:{scenario}:{seed}")
-    marker_id = stable_id("scenario_value", f"{marker}:marker")
+    run_id = session.info.get(GENERATION_RUN_SESSION_KEY)
+    if run_id is None:
+        raise ValueError("Full-history generation requires an active generation run")
+    marker = stable_id("generation_namespace", str(run_id))
+    marker_id = stable_id("scenario_value", f"run:{run_id}:full-history-marker")
     if session.get(ScenarioValue, marker_id):
         return {**result, "profile": "full_history", "history_start": 2016}
     annual_revenue = {
