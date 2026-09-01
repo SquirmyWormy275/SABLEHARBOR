@@ -3,12 +3,14 @@ from pathlib import Path
 import typer
 from sqlalchemy import func, select
 
+from sable_harbor import schema as schema  # noqa: F401
 from sable_harbor.accounting.ledger import trial_balance
 from sable_harbor.accounting.models import Base, EntryState, JournalEntry, JournalLine
 from sable_harbor.accounting.seed import seed_smoke
 from sable_harbor.core.database import build_engine, session_for
 from sable_harbor.generation import generate_baseline, generate_standard
 from sable_harbor.reporting import build_workbook
+from sable_harbor.reporting_queries import named_queries, run_named_query
 
 app = typer.Typer(no_args_is_help=True)
 
@@ -80,3 +82,16 @@ def source_lock() -> None:
     if not path.exists():
         raise typer.Exit(code=1)
     typer.echo(path)
+
+
+@app.command("query")
+def query(name: str) -> None:
+    engine = build_engine()
+    with session_for(engine) as session:
+        rows = run_named_query(session, name)
+    typer.echo({"query": name, "rows": rows})
+
+
+@app.command("queries")
+def queries() -> None:
+    typer.echo("\n".join(named_queries()))

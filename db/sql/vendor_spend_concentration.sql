@@ -1,0 +1,1 @@
+SELECT v.code,v.name,COALESCE(SUM(vb.amount),0) AS billed_spend FROM vendor v LEFT JOIN purchase_order po ON po.vendor_id=v.id LEFT JOIN vendor_bill vb ON vb.purchase_order_id=po.id GROUP BY v.code,v.name ORDER BY billed_spend DESC;

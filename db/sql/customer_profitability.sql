@@ -1,0 +1,1 @@
+SELECT c.customer_id, SUM(i.total) AS billings, SUM(rr.amount) AS recognized_revenue FROM customer_contract c LEFT JOIN invoice i ON i.contract_id=c.id LEFT JOIN performance_obligation po ON po.contract_id=c.id LEFT JOIN revenue_recognition rr ON rr.performance_obligation_id=po.id GROUP BY c.customer_id;

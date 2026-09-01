@@ -1,0 +1,1 @@
+SELECT run_number,feed_tons,recovered_units,gross_sale,host_share_amount,operating_cost,gross_sale-host_share_amount-operating_cost AS project_contribution FROM recovery_run ORDER BY run_date;

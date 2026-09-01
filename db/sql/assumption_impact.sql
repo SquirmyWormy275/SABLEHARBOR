@@ -1,0 +1,1 @@
+SELECT metric_code,entity_code,COUNT(DISTINCT scenario_code) AS scenario_count,MIN(amount) AS low,MAX(amount) AS high FROM scenario_value GROUP BY metric_code,entity_code ORDER BY metric_code,entity_code;

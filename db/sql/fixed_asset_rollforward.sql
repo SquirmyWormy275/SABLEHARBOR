@@ -1,0 +1,1 @@
+SELECT fa.entity_id,fa.asset_class,SUM(fa.cost) AS gross_cost,COALESCE(SUM(dr.amount),0) AS accumulated_depreciation FROM fixed_asset fa LEFT JOIN depreciation_record dr ON dr.asset_id=fa.id GROUP BY fa.entity_id,fa.asset_class;

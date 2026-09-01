@@ -1,0 +1,1 @@
+SELECT 'AR' AS ledger,COALESCE(SUM(CASE WHEN i.status!='PAID' THEN i.total ELSE 0 END),0) AS open_amount FROM invoice i UNION ALL SELECT 'AP',COALESCE(SUM(vb.amount),0)-COALESCE((SELECT SUM(amount) FROM vendor_payment),0) FROM vendor_bill vb;

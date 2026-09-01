@@ -1,0 +1,1 @@
+SELECT df.facility_number,df.commitment,COALESCE(SUM(dd.principal),0) AS drawn,df.commitment-COALESCE(SUM(dd.principal),0) AS availability FROM debt_facility df LEFT JOIN debt_draw dd ON dd.facility_id=df.id GROUP BY df.id,df.facility_number,df.commitment;

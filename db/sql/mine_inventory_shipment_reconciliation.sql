@@ -1,0 +1,1 @@
+SELECT mpb.batch_number,mpb.pounds_u3o8 AS produced,COALESCE(SUM(us.pounds_shipped),0) AS shipped,mpb.pounds_u3o8-COALESCE(SUM(us.pounds_shipped),0) AS closing FROM mine_production_batch mpb LEFT JOIN uranium_shipment us ON us.production_batch_id=mpb.id GROUP BY mpb.id,mpb.batch_number,mpb.pounds_u3o8;

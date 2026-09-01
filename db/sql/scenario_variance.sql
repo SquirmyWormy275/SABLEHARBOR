@@ -1,0 +1,1 @@
+SELECT metric_code,entity_code,period_code,MAX(CASE WHEN scenario_code='base' THEN amount END) AS base_amount,MAX(amount)-MIN(amount) AS scenario_range FROM scenario_value GROUP BY metric_code,entity_code,period_code ORDER BY metric_code,entity_code,period_code;

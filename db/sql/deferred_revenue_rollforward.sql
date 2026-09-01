@@ -1,0 +1,1 @@
+SELECT fp.code AS period,SUM(jl.credit-jl.debit) AS movement FROM journal_line jl JOIN journal_entry je ON je.id=jl.entry_id JOIN fiscal_period fp ON fp.id=je.period_id JOIN account a ON a.id=jl.account_id WHERE a.code='2200' AND je.state='POSTED' GROUP BY fp.code ORDER BY fp.code;
