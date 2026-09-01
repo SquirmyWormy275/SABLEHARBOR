@@ -1,0 +1,118 @@
+name: Bootstrap official-logo organization briefing
+
+on:
+  push:
+    branches:
+      - docs/official-logo-org-briefing-v1.0
+    paths:
+      - .github/workflows/bootstrap-official-logo-org-briefing.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out briefing branch
+        uses: actions/checkout@v4
+        with:
+          ref: docs/official-logo-org-briefing-v1.0
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install rendering dependencies
+        run: |
+          npm install --no-save pptxgenjs@4.0.0
+          python -m pip install pillow
+          sudo apt-get update
+          sudo apt-get install -y libreoffice-impress poppler-utils fonts-inter
+
+      - name: Restore deterministic briefing tools
+        run: |
+          mkdir -p tools/organization
+          python - <<'PYCODE'
+          from pathlib import Path
+          import base64
+          import gzip
+          payloads = {
+              Path('tools/organization/build_org_briefing.js'): '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',
+              Path('/tmp/postbuild_org_briefing.py'): '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',
+          }
+          for target, payload in payloads.items():
+              target.parent.mkdir(parents=True, exist_ok=True)
+              target.write_bytes(gzip.decompress(base64.b64decode(payload)))
+          Path('tools/organization/build_org_briefing.js').chmod(0o755)
+          PYCODE
+
+      - name: Build PowerPoint from official repository logos
+        run: node tools/organization/build_org_briefing.js
+
+      - name: Render PDF and one PNG per slide
+        run: |
+          set -euo pipefail
+          out="docs/organization/briefing"
+          pptx="$out/SABLE_HARBOR_Organization_Briefing_v1.0.pptx"
+          mkdir -p "$out/images"
+          libreoffice --headless --convert-to pdf --outdir "$out" "$pptx"
+          pdf="$out/SABLE_HARBOR_Organization_Briefing_v1.0.pdf"
+          rm -f "$out/images"/*.png
+          pdftoppm -png -r 144 "$pdf" /tmp/sable-harbor-org
+          names=(
+            01_sable_harbor_enterprise_organization
+            02_foundry_foundry_field_organization
+            03_project_willow_organization
+            04_atlas_meridian_organization
+            05_pale_sun_red_wash_organization
+            06_project_cradle_organization
+            07_american_resource_utility_bst_organization
+            08_advisory_organization
+          )
+          for i in "${!names[@]}"; do
+            page=$((i + 1))
+            mv "/tmp/sable-harbor-org-${page}.png" "$out/images/${names[$i]}.png"
+          done
+          python /tmp/postbuild_org_briefing.py
+
+      - name: Verify official logo references
+        run: |
+          set -euo pipefail
+          script="tools/organization/build_org_briefing.js"
+          logos=(
+            sable-harbor__mark.svg
+            foundry-field__mark.svg
+            foundry__mark.svg
+            willow__mark.svg
+            atlas-meridian__mark.svg
+            pale-sun__mark.svg
+            project-cradle__mark.svg
+            american-resource-utility__mark.svg
+            advisory__mark.svg
+            red-wash-mine__mark.svg
+            blood-sweat-and-tears-railway__mark.svg
+          )
+          for logo in "${logos[@]}"; do
+            grep -Fq "$logo" "$script"
+            test -f "assets/brand/logos/$logo"
+          done
+          if grep -Eiq 'lighthouse|compass|generic clip art' "$script"; then
+            echo "Substitute-logo language found in builder" >&2
+            exit 1
+          fi
+
+      - name: Commit official-logo briefing package
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add tools/organization/build_org_briefing.js docs/organization/briefing
+          if git diff --cached --quiet; then
+            echo "No briefing changes to commit."
+            exit 0
+          fi
+          git commit -m "Build official-logo Sable Harbor organization briefing"
+          git push origin HEAD:docs/official-logo-org-briefing-v1.0
