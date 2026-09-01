@@ -39,63 +39,63 @@
   "files": [
     {
       "path": "docs/organization/briefing/README.md",
-      "bytes": 1915,
-      "sha256": "d05018056738946cf334ff896c62c9d10a76be24deee1476bfef434990130ce6"
+      "bytes": 1994,
+      "sha256": "1460dd21f1d903ba2946d68df6ef124aa27aa219b36806aaafefe02b60295015"
     },
     {
       "path": "docs/organization/briefing/SABLE_HARBOR_Organization_Briefing_v1.0.pptx",
       "bytes": 660860,
-      "sha256": "2cd302c99e5c57da28c5608d81eaa3f6814580f1b89b2a312d3cc118e2805ca5"
+      "sha256": "013b7008c57bd95073affe7772bc5028e26fa7b8b75740417acba79ef7774401"
     },
     {
       "path": "docs/organization/briefing/SABLE_HARBOR_Organization_Briefing_v1.0.pdf",
       "bytes": 399948,
-      "sha256": "b8649640992991579603b15d2e38b8f86fecf4b54550ebef6382c6b02acfa48a"
+      "sha256": "3ad0e6d798cb575641b993bf02e850eb505f06a88ffc01c810be85977e826549"
     },
     {
       "path": "docs/organization/briefing/images/01_sable_harbor_enterprise_organization.png",
       "bytes": 236271,
-      "sha256": "ab8bac87a2b54b3429f676d4ddde734f3cb984583dca520e7175841592f80e61"
+      "sha256": "7925501e0dac16efcb2d79fed62eefd0d4d0560005509ec08ac39eac4a9a6699"
     },
     {
       "path": "docs/organization/briefing/images/02_foundry_foundry_field_organization.png",
       "bytes": 140312,
-      "sha256": "0fc35d64dabec79d3a7ea53a38f416727f127b2596441f36cf904793e2798142"
+      "sha256": "01f66b42da0e23459e88348f7c624789ae21a60787d56f4aecf44ba7d006ba9f"
     },
     {
       "path": "docs/organization/briefing/images/03_project_willow_organization.png",
       "bytes": 166217,
-      "sha256": "82ae50b46bcf4ec1fcb82b72601cf3784552df98201db52533fe9b341a26f4cf"
+      "sha256": "87de95182d6068954e5f29cc1c3efe479ef2e3a342692bae755b0c1b6e99f233"
     },
     {
       "path": "docs/organization/briefing/images/04_atlas_meridian_organization.png",
       "bytes": 150055,
-      "sha256": "638d6fa1ceeb8578dd94b3e95614c1b19be6c31338d15283f5e82cb1619c76c9"
+      "sha256": "7b9b8fe8e18909b4ff91409f4052f430f8cc32b1df5d310dfe95a91e9df5f13d"
     },
     {
       "path": "docs/organization/briefing/images/05_pale_sun_red_wash_organization.png",
       "bytes": 152743,
-      "sha256": "86cd59b7fd46ee50d5ed37c1d32d2164c3a0364912c45ab2dc090307ddc0028a"
+      "sha256": "3b565f2a8d2df8a5ad45bba5e0d1170925a6e30b25b92ee36752ed5a0b8b5c46"
     },
     {
       "path": "docs/organization/briefing/images/06_project_cradle_organization.png",
       "bytes": 132835,
-      "sha256": "1a14682a608cd74b458b329ee4d9836f3331a5a89d39970a046fa705341df73c"
+      "sha256": "2dd5d5a2cf89869ea4b7272620715d54f939a4abb05ed6eac4ee0d3cdf26806e"
     },
     {
       "path": "docs/organization/briefing/images/07_american_resource_utility_bst_organization.png",
       "bytes": 164655,
-      "sha256": "39d3c431673ae67323915dcd2cd8e2b7c75cbf30bfdeeb3da7485cc4e6dcc011"
+      "sha256": "79f97544f420c9bd97bb92e672ea74ebbef8a57595874df57d4cc325971ef5b0"
     },
     {
       "path": "docs/organization/briefing/images/08_advisory_organization.png",
       "bytes": 143574,
-      "sha256": "7a051a4a6a6a5115586a183f412f16f9a764069e4628ad3482053b09cd200cb5"
+      "sha256": "c0ca3b63b7b7dd61e388496361dcb6cf0a2af2154dfa812b5545ce3ae09b4e67"
     },
     {
       "path": "tools/organization/build_org_briefing.js",
-      "bytes": 34594,
-      "sha256": "fe05207ceae7f3546be633ef8e6bf0509dd3855b6246c823d945b0e2d57cb08c"
+      "bytes": 34555,
+      "sha256": "8028751e7a124b626c439ad5e3e4c400837e77164d2cd84b66115b9fd48e926b"
     }
   ]
 }
