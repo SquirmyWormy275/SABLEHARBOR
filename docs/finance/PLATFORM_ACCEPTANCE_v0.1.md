@@ -1,6 +1,6 @@
 # Enterprise platform v0.1 acceptance
 
-**Status:** Implementation complete; quantitative and legal assumptions remain noncanonical.  
+**Status:** RELEASE CANDIDATE — REVIEW BLOCKED — NOT ACCEPTED.
 **Branch:** `finance/enterprise-financial-platform-v0.1`  
 **Seed:** `20260831`
 
@@ -28,7 +28,13 @@
 - Public release manifest and checksums generate deterministically.
 - Ruff, strict mypy, canon/privacy checks, and all 27 local tests pass.
 
-## Completion boundary
+## Open acceptance boundary
 
-Platform v0.1 is complete when the above commands pass. Changes to `OPEN` legal, transaction, reserve, physical-asset, board, or quantitative facts are scenario/configuration revisions, not missing software functionality. Production use would require qualified accounting, legal, engineering, environmental, tax, security, and assurance review.
-
+Passing the legacy commands above does not establish acceptance. The controlling P0/P1 findings are
+in `docs/handoffs/SABLE_HARBOR_CODEX_EXECUTION_HANDOFF_2026-09-01.md`. Migration immutability
+is implemented at `4cb7671918d81b8093d2a4828e84a65fd1a93bcc` for SQLite; PostgreSQL
+upgrade/downgrade/upgrade and schema-equivalence evidence remains required. Run/scenario isolation,
+workbook semantics, public export allowlisting, generated-artifact scanning, integrated monthly
+statements and rollforwards, driver-based scenarios, accurate historical claims, and CI review
+artifacts remain open. This synthetic platform is not accepted, integration-ready, production-ready,
+or independently auditable.
