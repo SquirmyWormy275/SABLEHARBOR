@@ -1,0 +1,147 @@
+from datetime import UTC, date, datetime
+from pathlib import Path
+from typing import Any
+
+import yaml
+from sqlalchemy import select
+from sqlalchemy.orm import Session
+
+from sable_harbor.accounting.models import FactState, JournalEntry
+from sable_harbor.core.ids import stable_id
+
+from .models import GenerationRun, LineageEdge, ModelAssumption, Scenario, SourceDocument
+
+
+def _as_date(value: object) -> date:
+    if isinstance(value, date):
+        return value
+    return date.fromisoformat(str(value))
+
+
+def seed_provenance(
+    session: Session, path: Path = Path("config/finance/assumptions/quantitative.yml")
+) -> int:
+    source = session.scalar(
+        select(SourceDocument).where(
+            SourceDocument.path == str(path),
+            SourceDocument.commit_sha == "5137c5abc025ad757a4e1af2a57279e4964578cf",
+        )
+    )
+    if source is None:
+        source = SourceDocument(
+            id=stable_id("source_document", f"{path}:5137c5a"),
+            path=str(path),
+            branch="origin/canon/corporate-lore-v0.2",
+            commit_sha="5137c5abc025ad757a4e1af2a57279e4964578cf",
+            controlling=False,
+            fact_state=FactState.MODEL_PROPOSED,
+        )
+        session.add(source)
+        session.flush()
+    payload: dict[str, Any] = yaml.safe_load(path.read_text())
+    count = 0
+    for item in payload["assumptions"]:
+        code = str(item["id"])
+        if session.scalar(
+            select(ModelAssumption.id).where(ModelAssumption.assumption_code == code)
+        ):
+            continue
+        session.add(
+            ModelAssumption(
+                id=stable_id("assumption", code),
+                assumption_code=code,
+                name=str(item["name"]),
+                description=str(item["description"]),
+                fact_state=FactState(str(item["fact_state"])),
+                source_document_id=source.id,
+                effective_from=_as_date(item["effective_from"]),
+                base_value=str(item["value"]),
+                low_value=str(item.get("low")) if item.get("low") is not None else None,
+                high_value=str(item.get("high")) if item.get("high") is not None else None,
+                units=str(item["units"]),
+                rationale=str(item["rationale"]),
+                sensitivity=str(item["sensitivity"]),
+                reversible=bool(item["reversible"]),
+                decision_owner=str(item["decision_owner"]),
+                status=str(item["status"]),
+                last_review_date=_as_date(item["last_review_date"]),
+            )
+        )
+        count += 1
+    session.flush()
+    return count
+
+
+def record_generation_run(
+    session: Session, *, profile: str, scenario_code: str, seed: int, git_commit: str
+) -> GenerationRun:
+    scenario = session.scalar(select(Scenario).where(Scenario.code == scenario_code))
+    if scenario is None:
+        scenario = Scenario(
+            id=stable_id("scenario", scenario_code),
+            code=scenario_code,
+            name=scenario_code.replace("_", " ").title(),
+            description=f"Versioned {scenario_code} financial scenario",
+            fact_state=FactState.SCENARIO_INPUT,
+        )
+        session.add(scenario)
+        session.flush()
+    run_id = stable_id("generation_run", f"v0.1:{profile}:{scenario_code}:{seed}")
+    run = session.get(GenerationRun, run_id)
+    now = datetime.now(UTC)
+    if run is None:
+        run = GenerationRun(
+            id=run_id,
+            profile=profile,
+            scenario_id=scenario.id,
+            seed=seed,
+            generator_version="0.1",
+            git_commit=git_commit,
+            started_at=now,
+            completed_at=now,
+            status="COMPLETED",
+        )
+        session.add(run)
+        session.flush()
+    return run
+
+
+def link_journals(session: Session, run: GenerationRun) -> int:
+    count = 0
+    for entry in session.scalars(select(JournalEntry)):
+        edge_id = stable_id(
+            "lineage_edge", f"{run.id}:{entry.source_type}:{entry.source_id}:{entry.id}"
+        )
+        if session.get(LineageEdge, edge_id) is None:
+            session.add(
+                LineageEdge(
+                    id=edge_id,
+                    generation_run_id=run.id,
+                    upstream_type=entry.source_type,
+                    upstream_id=entry.source_id,
+                    downstream_type="journal_entry",
+                    downstream_id=entry.id,
+                    transformation="versioned_posting_rule",
+                )
+            )
+            count += 1
+    session.flush()
+    return count
+
+
+def lineage_for(session: Session, record_id: str) -> list[dict[str, str]]:
+    edges = session.scalars(
+        select(LineageEdge).where(
+            (LineageEdge.upstream_id == record_id) | (LineageEdge.downstream_id == record_id)
+        )
+    )
+    return [
+        {
+            "upstream_type": edge.upstream_type,
+            "upstream_id": edge.upstream_id,
+            "downstream_type": edge.downstream_type,
+            "downstream_id": edge.downstream_id,
+            "transformation": edge.transformation,
+        }
+        for edge in edges
+    ]

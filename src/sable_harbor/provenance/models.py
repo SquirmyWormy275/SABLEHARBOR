@@ -1,0 +1,111 @@
+from datetime import date, datetime
+
+from sqlalchemy import (
+    Boolean,
+    Date,
+    DateTime,
+    Enum,
+    ForeignKey,
+    Integer,
+    String,
+    Text,
+    UniqueConstraint,
+)
+from sqlalchemy.orm import Mapped, mapped_column
+
+from sable_harbor.accounting.models import Base, FactState
+
+
+class SourceDocument(Base):
+    __tablename__ = "source_document"
+    id: Mapped[str] = mapped_column(String(36), primary_key=True)
+    path: Mapped[str] = mapped_column(String(500))
+    branch: Mapped[str] = mapped_column(String(200))
+    commit_sha: Mapped[str] = mapped_column(String(40))
+    controlling: Mapped[bool] = mapped_column(Boolean)
+    fact_state: Mapped[FactState] = mapped_column(Enum(FactState))
+    __table_args__ = (UniqueConstraint("path", "commit_sha"),)
+
+
+class ModelAssumption(Base):
+    __tablename__ = "model_assumption"
+    id: Mapped[str] = mapped_column(String(36), primary_key=True)
+    assumption_code: Mapped[str] = mapped_column(String(40), unique=True)
+    name: Mapped[str] = mapped_column(String(200))
+    description: Mapped[str] = mapped_column(Text)
+    fact_state: Mapped[FactState] = mapped_column(Enum(FactState))
+    source_document_id: Mapped[str | None] = mapped_column(ForeignKey("source_document.id"))
+    effective_from: Mapped[date | None] = mapped_column(Date)
+    base_value: Mapped[str] = mapped_column(String(100))
+    low_value: Mapped[str | None] = mapped_column(String(100))
+    high_value: Mapped[str | None] = mapped_column(String(100))
+    units: Mapped[str] = mapped_column(String(40))
+    rationale: Mapped[str] = mapped_column(Text)
+    sensitivity: Mapped[str] = mapped_column(String(40))
+    reversible: Mapped[bool] = mapped_column(Boolean)
+    decision_owner: Mapped[str] = mapped_column(String(200))
+    status: Mapped[str] = mapped_column(String(40))
+    last_review_date: Mapped[date] = mapped_column(Date)
+
+
+class Scenario(Base):
+    __tablename__ = "scenario"
+    id: Mapped[str] = mapped_column(String(36), primary_key=True)
+    code: Mapped[str] = mapped_column(String(32), unique=True)
+    name: Mapped[str] = mapped_column(String(120))
+    description: Mapped[str] = mapped_column(Text)
+    fact_state: Mapped[FactState] = mapped_column(Enum(FactState))
+
+
+class GenerationRun(Base):
+    __tablename__ = "generation_run"
+    id: Mapped[str] = mapped_column(String(36), primary_key=True)
+    profile: Mapped[str] = mapped_column(String(32))
+    scenario_id: Mapped[str] = mapped_column(ForeignKey("scenario.id"))
+    seed: Mapped[int] = mapped_column(Integer)
+    generator_version: Mapped[str] = mapped_column(String(40))
+    git_commit: Mapped[str] = mapped_column(String(40))
+    started_at: Mapped[datetime] = mapped_column(DateTime(timezone=True))
+    completed_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+    status: Mapped[str] = mapped_column(String(24))
+    __table_args__ = (UniqueConstraint("profile", "scenario_id", "seed", "generator_version"),)
+
+
+class Artifact(Base):
+    __tablename__ = "artifact"
+    id: Mapped[str] = mapped_column(String(36), primary_key=True)
+    generation_run_id: Mapped[str] = mapped_column(ForeignKey("generation_run.id"))
+    artifact_type: Mapped[str] = mapped_column(String(40))
+    path: Mapped[str] = mapped_column(String(500))
+    sha256: Mapped[str | None] = mapped_column(String(64))
+    public_classification: Mapped[str] = mapped_column(String(24))
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True))
+    __table_args__ = (UniqueConstraint("generation_run_id", "path"),)
+
+
+class LineageEdge(Base):
+    __tablename__ = "lineage_edge"
+    id: Mapped[str] = mapped_column(String(36), primary_key=True)
+    generation_run_id: Mapped[str] = mapped_column(ForeignKey("generation_run.id"))
+    upstream_type: Mapped[str] = mapped_column(String(80))
+    upstream_id: Mapped[str] = mapped_column(String(100))
+    downstream_type: Mapped[str] = mapped_column(String(80))
+    downstream_id: Mapped[str] = mapped_column(String(100))
+    transformation: Mapped[str] = mapped_column(String(120))
+    __table_args__ = (
+        UniqueConstraint(
+            "generation_run_id", "upstream_type", "upstream_id", "downstream_type", "downstream_id"
+        ),
+    )
+
+
+class ValidationResult(Base):
+    __tablename__ = "validation_result"
+    id: Mapped[str] = mapped_column(String(36), primary_key=True)
+    generation_run_id: Mapped[str] = mapped_column(ForeignKey("generation_run.id"))
+    check_code: Mapped[str] = mapped_column(String(80))
+    status: Mapped[str] = mapped_column(String(16))
+    observed_value: Mapped[str] = mapped_column(String(200))
+    details: Mapped[str] = mapped_column(Text)
+    checked_at: Mapped[datetime] = mapped_column(DateTime(timezone=True))
+    __table_args__ = (UniqueConstraint("generation_run_id", "check_code"),)
