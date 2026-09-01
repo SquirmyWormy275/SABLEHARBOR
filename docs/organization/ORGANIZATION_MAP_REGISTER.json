@@ -1,0 +1,187 @@
+{
+  "schemaVersion": "0.1.0",
+  "registerVersion": "0.1.0",
+  "canonicalDate": "2026-08-31",
+  "status": "derived-presentation-layer",
+  "controllingSources": [
+    "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.2.md",
+    "docs/canon/DECISION_REGISTER.md",
+    "docs/canon/SABLE_HARBOR_CONTINUITY_AUDIT_v0.2.md"
+  ],
+  "interpretationRule": "Organization maps summarize controlling canon and may not independently create legal entities, titles, reporting lines, ownership relationships, or other canon.",
+  "statusVocabulary": [
+    "LOCKED",
+    "PROVISIONAL",
+    "OPEN",
+    "SUPERSEDED",
+    "HISTORICAL",
+    "EMERGING"
+  ],
+  "approvedRelationshipTypes": [
+    "owns-and-operates",
+    "operating-component",
+    "acquired-operator",
+    "commercial-product-and-substrate",
+    "bounded-experimental-capability",
+    "controlled-product-bridge",
+    "program-lead",
+    "institutional-seam",
+    "domain-authority",
+    "experimental-lineage",
+    "method-transfer",
+    "historical-absorption"
+  ],
+  "charts": [
+    {
+      "id": "SH-ORG-001",
+      "path": "docs/organization/2026_OPERATING_TOPOLOGY.md",
+      "title": "August 31, 2026 Operating Topology",
+      "mapType": "operating-topology",
+      "canonicalState": "LOCKED with explicitly OPEN Advisory structure",
+      "sourceDecisionIds": [
+        "ID-001",
+        "ID-002",
+        "ID-003",
+        "FF-001",
+        "FF-003",
+        "WIL-011",
+        "WIL-012",
+        "ATL-014",
+        "ATL-015",
+        "PS-001",
+        "PS-006",
+        "PS-015",
+        "CRD-001",
+        "CRD-002",
+        "ARU-001",
+        "ARU-002",
+        "ARU-003",
+        "ARU-006",
+        "ADV-001",
+        "ADV-002"
+      ],
+      "prohibitedInterpretations": [
+        "legal-entity-tree",
+        "reporting-line-tree",
+        "product-P-and-L-structure"
+      ]
+    },
+    {
+      "id": "SH-ORG-002",
+      "path": "docs/organization/2026_LEADERSHIP_AND_AUTHORITY_MAP.md",
+      "title": "August 31, 2026 Leadership and Authority Map",
+      "mapType": "role-and-authority-network",
+      "canonicalState": "LOCKED role domains; exact titles and reporting lines OPEN",
+      "sourceDecisionIds": [
+        "PPL-003",
+        "PPL-004",
+        "PPL-006",
+        "PPL-007",
+        "PPL-008",
+        "PPL-009",
+        "PPL-010",
+        "PPL-012",
+        "PPL-013",
+        "WIL-014",
+        "ATL-013",
+        "PS-003",
+        "PS-005",
+        "CRD-003",
+        "ARU-006",
+        "ARU-009",
+        "ADV-002",
+        "ID-004"
+      ],
+      "prohibitedInterpretations": [
+        "direct-report-structure",
+        "final-executive-titles",
+        "board-composition"
+      ]
+    },
+    {
+      "id": "SH-ORG-003",
+      "path": "docs/organization/ORIGINAL_EIGHT.md",
+      "title": "The Original Eight",
+      "mapType": "founding-and-status-map",
+      "canonicalState": "LOCKED identities and broad through-lines",
+      "sourceDecisionIds": [
+        "BR-002",
+        "BR-003",
+        "BR-004",
+        "PPL-001",
+        "PPL-002",
+        "PPL-003",
+        "PPL-004",
+        "PPL-005",
+        "PPL-006",
+        "PPL-007",
+        "PPL-008",
+        "PPL-009",
+        "PPL-010",
+        "PPL-011",
+        "PPL-012",
+        "PPL-013"
+      ],
+      "prohibitedInterpretations": [
+        "blackridge-team",
+        "equal-ownership",
+        "current-executive-committee"
+      ]
+    },
+    {
+      "id": "SH-ORG-004",
+      "path": "docs/organization/ORGANIZATIONAL_LINEAGE_2015_2026.md",
+      "title": "Organizational Lineage, 2015–2026",
+      "mapType": "historical-lineage",
+      "canonicalState": "LOCKED historical spine with noted OPEN details",
+      "sourceDecisionIds": [
+        "BR-001",
+        "FND-001",
+        "FND-003",
+        "FND-004",
+        "FND-005",
+        "FF-001",
+        "FF-003",
+        "CRX-001",
+        "WIL-003",
+        "EMB-001",
+        "WIL-011",
+        "ATL-001",
+        "ATL-002",
+        "ATL-014",
+        "PS-001",
+        "PS-006",
+        "CRD-001",
+        "ARU-001",
+        "ADV-001"
+      ],
+      "prohibitedInterpretations": [
+        "present-day-reporting-tree",
+        "evalon-current-division",
+        "emberline-current-core-division"
+      ]
+    },
+    {
+      "id": "SH-ORG-005",
+      "path": "docs/organization/LEGAL_AND_REPORTING_STRUCTURE_STATUS.md",
+      "title": "Legal and Reporting Structure Status",
+      "mapType": "open-workstream-guardrail",
+      "canonicalState": "OPEN",
+      "sourceDecisionIds": [
+        "ID-006",
+        "ID-007",
+        "ID-008",
+        "PS-011",
+        "PS-016",
+        "PS-017",
+        "ARU-007",
+        "ADV-002"
+      ],
+      "prohibitedInterpretations": [
+        "final-legal-structure",
+        "final-reporting-structure",
+        "final-headcount-allocation"
+      ]
+    }
+  ]
+}
