@@ -44,9 +44,17 @@ Blackridge remains the upstream founding wound and a separate executable case un
 
 ## Quantitative operating model
 
-The prior `architecture/corporate-operating-model-v0.1` branch is a noncontrolling first-pass draft. It must be revised in a separate workstream to account for Willow, Red Wash/Pale Sun, Project Cradle, American Resource Utility, the Blood, Sweat & Tears Railway, emerging Advisory, and Emberline's historical status.
+The prior `architecture/corporate-operating-model-v0.1` branch remains a noncontrolling calibration case. The finance workstream now provides a v0.2-compatible, reversible Alternative B baseline covering Willow, Red Wash/Pale Sun, Project Cradle, American Resource Utility, the Blood, Sweat & Tears Railway, emerging Advisory, and Emberline's historical status.
 
 No 2026 headcount, revenue, funding, office, legal-entity, reporting-line, or product-P&L value is locked by the corporate-lore branch.
+
+- [Corporate fundamentals and 2026 operating model](docs/finance/SABLE_HARBOR_CORPORATE_FUNDAMENTALS_AND_2026_OPERATING_MODEL_v0.1.md)
+- [Quantitative baseline reconciliation](docs/finance/QUANTITATIVE_BASELINE_RECONCILIATION.md)
+- [Canon source lock](docs/finance/CANON_SOURCE_LOCK.md) and [collision register](docs/finance/CANON_COLLISION_REGISTER.md)
+- [Database and accounting architecture](docs/finance/DATABASE_AND_ACCOUNTING_ARCHITECTURE.md)
+- [Chart of accounts](docs/finance/CHART_OF_ACCOUNTS.md)
+
+Run `uv sync --all-extras`, then `make generate validate report ci`. Generated databases and Excel outputs are intentionally ignored and reproducible from the seed and scenario.
 
 ## Public repository and wiki
 
