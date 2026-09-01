@@ -1,12 +1,12 @@
+<p align="center"><img src="https://raw.githubusercontent.com/SquirmyWormy275/SABLEHARBOR/main/assets/brand/logos/atlas-meridian__primary-horizontal.svg" alt="Atlas Meridian" width="700" /></p>
+
 # Atlas Meridian
 
-![Atlas Meridian](https://raw.githubusercontent.com/SquirmyWormy275/SABLEHARBOR/main/assets/brand/logos/atlas-meridian__primary-horizontal.svg)
+Atlas Meridian is the investigation and controlled-commercialization line. It produces decision support without acquiring operating authority.
 
-**Role:** current core business line  
-**Canon state:** LOCKED product lineage and decision-support boundary; launch details remain OPEN.
+[![Atlas Meridian bridge](https://raw.githubusercontent.com/SquirmyWormy275/SABLEHARBOR/main/docs/organization/assets/atlas-meridian-bridge-2026.svg)](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/main/docs/organization/ATLAS_MERIDIAN_BRIDGE_ORGANIZATION.md)
 
-Atlas Meridian is a disciplined investigative system operating across represented industrial evidence. Foundry represents the terrain; Atlas Meridian investigates across it. It preserves provenance, authorities, constraints, stop conditions, and the difference between an answer and an investigation, and it remains decision support rather than an autonomous decision-maker.
+- [Full audit dossier](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/main/docs/business-lines/ATLAS_MERIDIAN.md)
+- [Brand and collateral](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/main/assets/brand/README.md)
 
-The wiki summarizes the controlling repository canon; it does not create or change canon.
-
-[Open the repository reference page](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/main/docs/business-lines/ATLAS_MERIDIAN.md)
+PR #9 includes evaluation, model-version, compute/validation cost, customer-fee, authority, and journal structures. Standalone model/evaluation inventory, financial package, database, and letterhead are **not materialized**.

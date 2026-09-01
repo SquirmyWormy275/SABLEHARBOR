@@ -1,12 +1,15 @@
+<p align="center"><img src="https://raw.githubusercontent.com/SquirmyWormy275/SABLEHARBOR/main/assets/brand/logos/sable-harbor__primary-horizontal.svg" alt="Sable Harbor" width="760" /></p>
+
 # Sable Harbor
 
-![Sable Harbor](https://raw.githubusercontent.com/SquirmyWormy275/SABLEHARBOR/main/assets/brand/logos/sable-harbor__primary-horizontal.svg)
+Sable Harbor is an industrial-systems company and reusable synthetic enterprise. Its governing idea is that variation is normal: the work is to encounter it, represent it, understand it, and choose consciously what happens next.
 
-**Role:** corporate master brand  
-**Canon state:** LOCKED corporate identity; quantitative and legal structure remain separate workstreams.
+## Enterprise access
 
-Sable Harbor is an industrial-systems company and reusable synthetic enterprise spanning mining, natural resources, operational software, analytics, assurance, finance, governance, security, and professional training. Its governing idea is that variation is normal: the work is to encounter it, represent it, understand it, and choose consciously what happens next.
+- [Company dossier](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/main/docs/company/README.md)
+- [Business-line directory](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/main/docs/business-lines/README.md)
+- [Enterprise organization](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/main/docs/organization/README.md)
+- [Corporate brand and collateral](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/main/assets/brand/README.md)
+- [Data and finance architecture](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/main/docs/data/README.md)
 
-The wiki summarizes the controlling repository canon; it does not create or change canon.
-
-[Open the repository reference page](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/main/docs/business-lines/SABLE_HARBOR.md)
+The wiki is a publication layer. It does not independently lock canon, legal entities, quantitative assumptions, reporting lines, or operating facts.

@@ -1,12 +1,12 @@
+<p align="center"><img src="https://raw.githubusercontent.com/SquirmyWormy275/SABLEHARBOR/main/assets/brand/logos/project-cradle__primary-horizontal.svg" alt="Project Cradle" width="700" /></p>
+
 # Project Cradle
 
-![Project Cradle](https://raw.githubusercontent.com/SquirmyWormy275/SABLEHARBOR/main/assets/brand/logos/project-cradle__primary-horizontal.svg)
+Project Cradle is the recovery and host-safe participation line. Its accounting and organization must preserve host ownership, operating authority, and safety responsibility.
 
-**Role:** current core business line  
-**Canon state:** LOCKED thesis and founding team; first commercial details remain OPEN.
+[![Project Cradle organization](https://raw.githubusercontent.com/SquirmyWormy275/SABLEHARBOR/main/docs/organization/assets/project-cradle-organization-2026.svg)](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/main/docs/organization/PROJECT_CRADLE_ORGANIZATION.md)
 
-Project Cradle finds valuable rare-earth material that existing mines and processing plants already concentrate unintentionally, then adds the smallest recovery step that captures value without breaking the host operation. It seeks value in a process seam and generally avoids owning the host mine.
+- [Full audit dossier](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/main/docs/business-lines/PROJECT_CRADLE.md)
+- [Corporate collateral](https://github.com/SquirmyWormy275/SABLEHARBOR/tree/main/assets/brand/collateral)
 
-The wiki summarizes the controlling repository canon; it does not create or change canon.
-
-[Open the repository reference page](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/main/docs/business-lines/PROJECT_CRADLE.md)
+PR #9 includes recovery runs, host share, project economics, contracts, costs, and journals. Standalone project inventory, financial package, database, and letterhead are **not materialized**.

@@ -1,12 +1,12 @@
+<p align="center"><img src="https://raw.githubusercontent.com/SquirmyWormy275/SABLEHARBOR/main/assets/brand/logos/foundry-field__primary-horizontal.svg" alt="Foundry Field" width="700" /></p>
+
 # Foundry Field
 
-![Foundry Field](https://raw.githubusercontent.com/SquirmyWormy275/SABLEHARBOR/main/assets/brand/logos/foundry-field__primary-horizontal.svg)
+Foundry Field is the current core product and field-application line built on the Foundry substrate.
 
-**Role:** current core business line  
-**Canon state:** LOCKED name and role.
+- [Full audit dossier](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/main/docs/business-lines/FOUNDRY_FIELD.md)
+- [Current organization](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/main/docs/organization/FOUNDRY_FIELD_ORGANIZATION.md)
+- [Corporate stationery and collateral](https://github.com/SquirmyWormy275/SABLEHARBOR/tree/main/assets/brand/collateral)
+- [Finance/data register](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/main/docs/data/FINANCE_RELEASE_CANDIDATE.md)
 
-Foundry Field is the deployable operational product and service configuration built on the Foundry substrate. It encounters, connects, and represents operational reality while preserving identity, provenance, competing definitions, effective dates, uncertainty, and the record of decisions.
-
-The wiki summarizes the controlling repository canon; it does not create or change canon.
-
-[Open the repository reference page](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/main/docs/business-lines/FOUNDRY_FIELD.md)
+Release-candidate scope uses `SHI` with `FOUNDRY_FIELD`, `CORE`, and `DELIVERY`, including contracts, invoices, revenue recognition, receipts, engagements, time/cost, WIP, and journals. A standalone database, accepted financial package, product/customer inventory, and unit-specific letterhead are **not materialized**.

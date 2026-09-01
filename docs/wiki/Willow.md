@@ -1,12 +1,13 @@
+<p align="center"><img src="https://raw.githubusercontent.com/SquirmyWormy275/SABLEHARBOR/main/assets/brand/logos/willow__primary-horizontal.svg" alt="Willow" width="700" /></p>
+
 # Willow
 
-![Willow](https://raw.githubusercontent.com/SquirmyWormy275/SABLEHARBOR/main/assets/brand/logos/willow__primary-horizontal.svg)
+Willow is Sable Harbor's current research and experimental line, descended from the historical Evalon outpost.
 
-**Role:** current core business line  
-**Canon state:** LOCKED name, purpose, and two-center operating model; exact legal structure remains OPEN.
+[![Willow organization](https://raw.githubusercontent.com/SquirmyWormy275/SABLEHARBOR/main/docs/organization/assets/willow-organization-2026.svg)](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/main/docs/organization/WILLOW_ORGANIZATION.md)
 
-Willow pursues consequential industrial questions that no existing product, delivery team, or operating unit can own, changing the physical world in bounded ways to learn what may be possible. Its formal loop is Question -> belief -> experiment -> observation -> decision; failure is survivable, drift is not.
+- [Full audit dossier](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/main/docs/business-lines/WILLOW.md)
+- [Corporate collateral](https://github.com/SquirmyWormy275/SABLEHARBOR/tree/main/assets/brand/collateral)
+- [Evalon history](Evalon)
 
-The wiki summarizes the controlling repository canon; it does not create or change canon.
-
-[Open the repository reference page](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/main/docs/business-lines/WILLOW.md)
+PR #9 includes Willow experiment, workforce, cost, and journal source structures, but no accepted standalone Willow database, laboratory inventory, budget/P&L, or unit-specific letterhead.
