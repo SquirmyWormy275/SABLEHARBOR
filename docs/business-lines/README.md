@@ -1,48 +1,72 @@
-# Sable Harbor Business Lines and Institutional Identities
+<p align="center"><img src="../../assets/brand/logos/sable-harbor__primary-horizontal.svg" alt="Sable Harbor" width="800" /></p>
 
-<p align="center">
-  <img src="../../assets/brand/logos/sable-harbor__primary-horizontal.svg" alt="Sable Harbor" width="800" />
-</p>
+# Business-Line, Component, and Case Directory
 
-This index is a publication and navigation layer over corporate lore v0.2. It does not independently create canon.
+This directory is the enterprise-to-unit navigation layer. It does not replace the controlling canon, brand files, organization package, or accepted quantitative releases. Each page is an audit dossier that states what is accepted, what exists only on a release-candidate branch, and what has not yet been materialized.
+
+## How to read a dossier
+
+Every registered dossier uses the same nine sections:
+
+1. status and scope;
+2. canon and history;
+3. identity and collateral;
+4. organization and authority;
+5. financials and accounting;
+6. inventory, assets, and operations;
+7. database and exports;
+8. audit controls and unresolved facts;
+9. download map.
+
+A dossier can be complete as an index while its standalone operational package remains **NOT MATERIALIZED**.
 
 ## Current 2026 business lines
 
-| Mark | Identity | Role |
+| Mark | Unit | Enterprise role | Organization | Finance/data source | Standalone package |
+|---|---|---|---|---|---|
+| <img src="../../assets/brand/logos/foundry-field__mark.svg" width="48" alt="Foundry Field" /> | [Foundry Field](FOUNDRY_FIELD.md) | Core product and field-application line | [Direct chart](../organization/FOUNDRY_FIELD_ORGANIZATION.md) | Shared PR #9 scope: `SHI` / `FOUNDRY_FIELD`, `CORE`, `DELIVERY` | **NOT MATERIALIZED** |
+| <img src="../../assets/brand/logos/willow__mark.svg" width="48" alt="Willow" /> | [Willow](WILLOW.md) | Research and experimental line | [Direct chart](../organization/WILLOW_ORGANIZATION.md) | Shared PR #9 scope: `SHI` / `WILLOW`, `CORE` | **NOT MATERIALIZED** |
+| <img src="../../assets/brand/logos/atlas-meridian__mark.svg" width="48" alt="Atlas Meridian" /> | [Atlas Meridian](ATLAS_MERIDIAN.md) | Investigation and controlled-commercialization line | [Bridge chart](../organization/ATLAS_MERIDIAN_BRIDGE_ORGANIZATION.md) | Shared PR #9 scope: `SHI` / `ATLAS`, `CORE` | **NOT MATERIALIZED** |
+| <img src="../../assets/brand/logos/pale-sun__mark.svg" width="48" alt="Pale Sun" /> | [Pale Sun](PALE_SUN.md) | Operating-control line around Red Wash | [Combined chart](../organization/PALE_SUN_RED_WASH_ORGANIZATION.md) | Shared PR #9 scope: `RWH` / `PALE_SUN` | **NOT MATERIALIZED** |
+| <img src="../../assets/brand/logos/project-cradle__mark.svg" width="48" alt="Project Cradle" /> | [Project Cradle](PROJECT_CRADLE.md) | Recovery and host-safe participation line | [Direct chart](../organization/PROJECT_CRADLE_ORGANIZATION.md) | Shared PR #9 scope: `SHI` / `CRADLE` | **NOT MATERIALIZED** |
+| <img src="../../assets/brand/logos/american-resource-utility__mark.svg" width="48" alt="American Resource Utility" /> | [American Resource Utility](AMERICAN_RESOURCE_UTILITY.md) | Acquired regional resource-logistics operator | [Combined ARU/BS&T chart](../organization/ARU_BST_ORGANIZATION.md) | Shared PR #9 scope: `ARU` / `ARU_BST` | **NOT MATERIALIZED** |
+| <img src="../../assets/brand/logos/advisory__mark.svg" width="48" alt="Advisory" /> | [Advisory](ADVISORY.md) | Emerging method-transfer line | [Context](../organization/ARU_BST_AND_ADVISORY.md) | Partial shared PR #9 scope: `SHI` / `ADVISORY` | **NOT MATERIALIZED** |
+
+## Current components and substrates
+
+| Mark | Component | Parent/home | Data status |
+|---|---|---|---|
+| <img src="../../assets/brand/logos/foundry__mark.svg" width="42" alt="Foundry" /> | [Foundry](FOUNDRY.md) | Product substrate within Foundry Field | No distinct accepted entity/segment or standalone package |
+| <img src="../../assets/brand/logos/red-wash-mine__mark.svg" width="42" alt="Red Wash Mine" /> | [Red Wash Mine](RED_WASH_MINE.md) | Operating asset under Pale Sun | Shared `RWH` / `PALE_SUN` release-candidate scope |
+| <img src="../../assets/brand/logos/blood-sweat-and-tears-railway__mark.svg" width="42" alt="Blood, Sweat & Tears Railway" /> | [Blood, Sweat & Tears Railway](BLOOD_SWEAT_AND_TEARS_RAILWAY.md) | Railway component within ARU | Shared `ARU` / `ARU_BST`; no distinct component discriminator yet |
+
+## Historical identities
+
+| Mark | Identity | Historical disposition | Current successor/home |
+|---|---|---|---|
+| <img src="../../assets/brand/logos/emberline__mark.svg" width="42" alt="Emberline" /> | [Emberline](EMBERLINE.md) | Coal-focused line active through 2025, then absorbed | Foundry, Willow, field operations, Advisory |
+| <img src="../../assets/brand/logos/evalon__mark.svg" width="42" alt="Evalon" /> | [Evalon](EVALON.md) | Advanced-engineering outpost closed/rechartered in 2022 | Willow |
+
+## Separate case universe
+
+| Case | Relationship | Enterprise consolidation |
 |---|---|---|
-| [<img src="../../assets/brand/logos/foundry-field__mark.svg" width="72" alt="Foundry Field mark" />](FOUNDRY_FIELD.md) | [Foundry Field](FOUNDRY_FIELD.md) | current core business line |
-| [<img src="../../assets/brand/logos/willow__mark.svg" width="72" alt="Willow mark" />](WILLOW.md) | [Willow](WILLOW.md) | current core business line |
-| [<img src="../../assets/brand/logos/atlas-meridian__mark.svg" width="72" alt="Atlas Meridian mark" />](ATLAS_MERIDIAN.md) | [Atlas Meridian](ATLAS_MERIDIAN.md) | current core business line |
-| [<img src="../../assets/brand/logos/pale-sun__mark.svg" width="72" alt="Pale Sun mark" />](PALE_SUN.md) | [Pale Sun](PALE_SUN.md) | current operating business line |
-| [<img src="../../assets/brand/logos/project-cradle__mark.svg" width="72" alt="Project Cradle mark" />](PROJECT_CRADLE.md) | [Project Cradle](PROJECT_CRADLE.md) | current core business line |
-| [<img src="../../assets/brand/logos/american-resource-utility__mark.svg" width="72" alt="American Resource Utility mark" />](AMERICAN_RESOURCE_UTILITY.md) | [American Resource Utility](AMERICAN_RESOURCE_UTILITY.md) | current distinct operating company and core line |
-| [<img src="../../assets/brand/logos/advisory__mark.svg" width="72" alt="Advisory mark" />](ADVISORY.md) | [Advisory](ADVISORY.md) | emerging current business line |
+| [Blackridge](BLACKRIDGE.md) | Founding antecedent and future executable case universe | **Excluded**; not a Sable Harbor business unit or operating asset |
 
-## Supplemental and historical identities
+## Enterprise and supplemental pages
 
-| Identity | Role | Status |
-|---|---|---|
-| [Foundry](FOUNDRY.md) | supplemental product substrate | LOCKED distinction from Foundry Field. |
-| [Red Wash Mine](RED_WASH_MINE.md) | operating asset under Pale Sun | LOCKED fictional mine name; detailed asset facts remain OPEN. |
-| [Blood, Sweat & Tears Railway](BLOOD_SWEAT_AND_TEARS_RAILWAY.md) | ARU operating component | LOCKED name and relationship to ARU; legal identity, routes, assets, and history remain OPEN. |
-| [Emberline](EMBERLINE.md) | historical business line | LOCKED historical status: active through 2025, then absorbed into enduring 2026 work. |
-| [Evalon](EVALON.md) | historical advanced-engineering outpost | LOCKED historical concept; closed and rechartered as Willow in 2022. |
-| [Red Wash / Pale Sun](RED_WASH_PALE_SUN.md) | supplemental endorsed operating lockup | Supplemental lockup; does not replace either canonical name. |
+- [Sable Harbor company dossier](../company/README.md)
+- [Sable Harbor compatibility page](SABLE_HARBOR.md)
+- [Red Wash / Pale Sun endorsed lockup](RED_WASH_PALE_SUN.md)
+- [Machine-readable registry](registry.json)
+- [Business-line audit matrix](../audit/BUSINESS_LINE_AUDIT_MATRIX.md)
+- [Independent unit package standard](../audit/UNIT_PACKAGE_STANDARD.md)
+- [Data and finance index](../data/README.md)
 
-## Operating logic
+## Authority hierarchy
 
-- Foundry Field encounters, connects, and represents operational reality.
-- Willow tests consequential unknowns through bounded experiments.
-- Atlas Meridian investigates across represented evidence.
-- Pale Sun owns and operates a uranium asset where operating control is the thesis.
-- Project Cradle recovers value from material streams the host system already creates.
-- American Resource Utility operates logistics across physical and organizational boundaries.
-- Advisory transfers the method where the client can and should own the system.
-
-This is an analytical map, not a finalized legal or reporting structure.
-
-## Source and assets
-
-- [Corporate lore canon](../canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.2.md)
-- [Brand asset package](../../assets/brand/README.md)
-- [Organization maps](../organization/README.md)
+1. `docs/canon/` controls lore and decision state.
+2. `assets/brand/` controls production identity and collateral provenance.
+3. `docs/organization/` controls canon-derived organization artifacts.
+4. Accepted data releases control quantitative records; PR #9 remains a release candidate.
+5. These dossiers and the wiki are navigational/publication layers only.
