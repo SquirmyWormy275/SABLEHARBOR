@@ -1,5 +1,9 @@
 # ATLAS MERIDIAN — BRIDGE ORGANIZATION
 
+
+<!-- BRAND-HEADER:START -->
+<p align="center"><img src="../../assets/brand/logos/atlas-meridian__primary-horizontal.svg" alt="Atlas Meridian logo" width="760" /></p>
+<!-- BRAND-HEADER:END -->
 **Chart ID:** `SH-ORG-005`  
 **Canonical date:** August 31, 2026  
 **Status:** Canon-derived visual organization chart  

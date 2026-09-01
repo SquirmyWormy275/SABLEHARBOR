@@ -1,5 +1,9 @@
 # ARU / BS&T — ORGANIZATION
 
+
+<!-- BRAND-HEADER:START -->
+<p align="center"><img src="../../assets/brand/logos/american-resource-utility__primary-horizontal.svg" alt="American Resource Utility logo" width="760" /></p>
+<!-- BRAND-HEADER:END -->
 **Chart ID:** `SH-ORG-008`  
 **Canonical date:** August 31, 2026  
 **Status:** Canon-derived visual organization chart  

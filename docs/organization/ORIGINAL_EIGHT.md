@@ -1,5 +1,9 @@
 # THE ORIGINAL EIGHT — FORMATION & STATUS
 
+
+<!-- BRAND-HEADER:START -->
+<p align="center"><img src="../../assets/brand/logos/sable-harbor__primary-horizontal.svg" alt="Sable Harbor logo" width="760" /></p>
+<!-- BRAND-HEADER:END -->
 **Chart ID:** `SH-ORG-009`  
 **Canonical date:** August 31, 2026  
 **Status:** Canon-derived visual organization chart  

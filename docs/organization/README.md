@@ -1,5 +1,9 @@
 # SABLE HARBOR — ORGANIZATION CHARTS
 
+
+<!-- BRAND-HEADER:START -->
+<p align="center"><img src="../../assets/brand/logos/sable-harbor__primary-horizontal.svg" alt="Sable Harbor logo" width="760" /></p>
+<!-- BRAND-HEADER:END -->
 **Version:** 0.2.0  
 **Canonical date represented:** August 31, 2026  
 **Status:** Canon-derived publication package

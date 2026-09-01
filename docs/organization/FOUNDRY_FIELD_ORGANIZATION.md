@@ -1,5 +1,9 @@
 # FOUNDRY / FOUNDRY FIELD — ORGANIZATION
 
+
+<!-- BRAND-HEADER:START -->
+<p align="center"><img src="../../assets/brand/logos/foundry-field__primary-horizontal.svg" alt="Foundry Field logo" width="760" /></p>
+<!-- BRAND-HEADER:END -->
 **Chart ID:** `SH-ORG-003`  
 **Canonical date:** August 31, 2026  
 **Status:** Canon-derived visual organization chart  

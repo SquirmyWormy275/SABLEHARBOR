@@ -4,6 +4,29 @@ Sable Harbor is the canonical synthetic enterprise and reusable business-world s
 
 It is modeled as a company that would exist independently of any audit or benchmark. Business activity creates systems, records, contracts, communications, controls, mistakes, experiments, operating consequences, and evidence; downstream tools consume deliberate, versioned exports.
 
+
+<!-- BRAND-INTEGRATION:START -->
+<p align="center">
+  <img src="assets/brand/logos/sable-harbor__primary-horizontal.svg" alt="Sable Harbor" width="880" />
+</p>
+
+<p align="center">
+  <a href="docs/business-lines/README.md"><strong>Business lines</strong></a> &nbsp;·&nbsp;
+  <a href="assets/brand/README.md"><strong>Brand assets</strong></a> &nbsp;·&nbsp;
+  <a href="assets/brand/collateral/README.md"><strong>Corporate collateral</strong></a> &nbsp;·&nbsp;
+  <a href="docs/organization/README.md"><strong>Organization maps</strong></a> &nbsp;·&nbsp;
+  <a href="docs/wiki/Home.md"><strong>Wiki source</strong></a>
+</p>
+
+## Business lines
+
+<table>
+<tr><td align="center" width="25%"><a href="docs/business-lines/FOUNDRY_FIELD.md"><img src="assets/brand/logos/foundry-field__mark.svg" width="88" alt="Foundry Field mark"/><br/><strong>Foundry Field</strong></a><br/><sub>current core business line</sub></td><td align="center" width="25%"><a href="docs/business-lines/WILLOW.md"><img src="assets/brand/logos/willow__mark.svg" width="88" alt="Willow mark"/><br/><strong>Willow</strong></a><br/><sub>current core business line</sub></td><td align="center" width="25%"><a href="docs/business-lines/ATLAS_MERIDIAN.md"><img src="assets/brand/logos/atlas-meridian__mark.svg" width="88" alt="Atlas Meridian mark"/><br/><strong>Atlas Meridian</strong></a><br/><sub>current core business line</sub></td><td align="center" width="25%"><a href="docs/business-lines/PALE_SUN.md"><img src="assets/brand/logos/pale-sun__mark.svg" width="88" alt="Pale Sun mark"/><br/><strong>Pale Sun</strong></a><br/><sub>current operating business line</sub></td></tr>
+<tr><td align="center" width="25%"><a href="docs/business-lines/PROJECT_CRADLE.md"><img src="assets/brand/logos/project-cradle__mark.svg" width="88" alt="Project Cradle mark"/><br/><strong>Project Cradle</strong></a><br/><sub>current core business line</sub></td><td align="center" width="25%"><a href="docs/business-lines/AMERICAN_RESOURCE_UTILITY.md"><img src="assets/brand/logos/american-resource-utility__mark.svg" width="88" alt="American Resource Utility mark"/><br/><strong>American Resource Utility</strong></a><br/><sub>current distinct operating company and core line</sub></td><td align="center" width="25%"><a href="docs/business-lines/ADVISORY.md"><img src="assets/brand/logos/advisory__mark.svg" width="88" alt="Advisory mark"/><br/><strong>Advisory</strong></a><br/><sub>emerging current business line</sub></td><td></td></tr>
+</table>
+
+The rendered identities are a publication layer over corporate lore; they do not independently create legal entities, reporting lines, economics, or other facts that remain OPEN.
+<!-- BRAND-INTEGRATION:END -->
 ## Canon states
 
 - **LOCKED** — accepted canon;

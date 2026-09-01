@@ -1,0 +1,4 @@
+bd67372a33f813a120474ac48541aacb50e4c04762df2d9b1b43c03d7e2e53bf  sable-harbor-complete-brand-kit-v0.2.0.zip
+9a5124f634121325ac907b85adb14c4fe5381280edbb5cbbdb175ee9e01e1cc0  sable-harbor-corporate-collateral-v0.2.0.zip
+3d5fb8fc73304308926e85726380eb9867dd0f017eba31abe570f542801deec6  sable-harbor-logo-system-v0.1.0.zip
+619eb6a200e9d887d3bfc34c5a292aac5af602dec3458f7ed18f638a90d4a128  sable-harbor-logo-system-v0.2.0.zip
