@@ -10,3 +10,4 @@
 - Selected Alternative B as the initial reversible financial architecture.
 - Opened draft PR #9 against the current lore branch.
 - Implemented and verified balanced posting, trial balance, immutable posted journals, reversal entries, and period close controls.
+- Added Alembic fresh-database migrations and strict machine-readable assumption validation.

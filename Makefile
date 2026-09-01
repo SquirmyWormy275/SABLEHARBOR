@@ -8,7 +8,7 @@ bootstrap:
 	uv sync --all-extras
 
 migrate:
-	uv run shfin init-db
+	uv run alembic upgrade head
 
 generate:
 	uv run shfin generate --profile $(PROFILE) --scenario $(SCENARIO) --seed $(SEED)
