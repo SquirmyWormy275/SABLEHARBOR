@@ -870,7 +870,7 @@ Willow interviews him through one of his projects rather than through his academ
 
 Instead of an internship, Willow offers a full-time junior research-engineering role. Owen leaves school during his junior year and moves to Pittsburgh.
 
-The autonomy is familiar to him: a clear intent, broad freedom to solve the problem, and accountability for the result. Willow does not give him an literally unlimited budget, but from his prior experience the resources and trust feel almost unconstrained.
+The autonomy is familiar to him: a clear intent, broad freedom to solve the problem, and accountability for the result. Willow does not give him an unlimited budget, but from his prior experience the resources and trust feel almost unconstrained.
 
 His early work overbuilds Hound. He learns that boundaries are not punishment; they are what make autonomy repeatable.
 
