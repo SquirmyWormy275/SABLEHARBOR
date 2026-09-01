@@ -1,76 +1,71 @@
-# Sable Harbor Logo System — v0.1.0
+# Sable Harbor identity and collateral system
 
-This directory contains individual, production-oriented logo assets for the Sable Harbor corporate identity and each business line in the August 31, 2026 narrative map.
+This directory is the normalized source for Sable Harbor corporate and business-line identity assets. Logos are production assets accepted on `main`; recovered collateral and the business-line letterhead layer are production-oriented candidates on the integration branch.
 
-## Controlling naming source
+> Artwork does not create canon. Business-line names, status, ownership, legal entities, reporting lines, addresses, and operating facts remain governed by `docs/canon/` and the decision register.
 
-Business-line names and status are grounded in `docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.2.md`. These artwork files do **not** independently create or change canon. Legal-entity, reporting-line, and exact organizational details that remain OPEN in canon remain open here.
+## Navigate
 
-## File rule
+- [Enterprise dossier](../../docs/company/README.md)
+- [Business-line control index](../../docs/business-lines/README.md)
+- [Brand standards](BRAND_STANDARDS.md)
+- [Font provenance](FONT_PROVENANCE.md)
+- [Corporate and unit collateral](collateral/README.md)
+- [Production manifest](manifest.json)
+- [Validation record](VALIDATION.md)
 
-- One logo per file.
-- No contact sheets or composite logo boards are stored in the production logo directory.
-- Every production asset is supplied as self-contained SVG with outlined lettering and as a rendered PNG.
-- Reverse variants use a dark background; all other PNG variants preserve transparency.
+## Current 2026 identity set
 
-## Canonical 2026 business-line set
+| Identity | Classification | Dossier | Letterhead |
+|---|---|---|---|
+| Sable Harbor | Corporate master brand | [Company](../../docs/company/README.md) | [Corporate collateral](collateral/README.md) |
+| Foundry Field | Current core business line | [Dossier](../../docs/business-lines/FOUNDRY_FIELD.md) | [US Letter SVG](collateral/letterhead/business-lines/foundry-field-letterhead-us-letter.svg) |
+| Willow | Current core business line | [Dossier](../../docs/business-lines/WILLOW.md) | [US Letter SVG](collateral/letterhead/business-lines/willow-letterhead-us-letter.svg) |
+| Atlas Meridian | Current core business line | [Dossier](../../docs/business-lines/ATLAS_MERIDIAN.md) | [US Letter SVG](collateral/letterhead/business-lines/atlas-meridian-letterhead-us-letter.svg) |
+| Pale Sun | Current operating business line | [Dossier](../../docs/business-lines/PALE_SUN.md) | [US Letter SVG](collateral/letterhead/business-lines/pale-sun-letterhead-us-letter.svg) |
+| Project Cradle | Current core business line | [Dossier](../../docs/business-lines/PROJECT_CRADLE.md) | [US Letter SVG](collateral/letterhead/business-lines/project-cradle-letterhead-us-letter.svg) |
+| American Resource Utility | Distinct operating company and current core line | [Dossier](../../docs/business-lines/AMERICAN_RESOURCE_UTILITY.md) | [US Letter SVG](collateral/letterhead/business-lines/american-resource-utility-letterhead-us-letter.svg) |
+| Advisory | Emerging current business line | [Dossier](../../docs/business-lines/ADVISORY.md) | [US Letter SVG](collateral/letterhead/business-lines/advisory-letterhead-us-letter.svg) |
 
-| Identity | Classification | Variants |
-|---|---|---:|
-| Sable Harbor | corporate master brand | 5 |
-| Foundry Field | core business line | 5 |
-| Willow | core business line | 5 |
-| Atlas Meridian | core business line | 5 |
-| Pale Sun | core operating business line | 5 |
-| Project Cradle | core business line | 5 |
-| American Resource Utility | distinct operating company and core line | 5 |
-| Advisory | core business line | 5 |
+## Production logo files
 
-The seven business lines are **Foundry Field, Willow, Atlas Meridian, Pale Sun, Project Cradle, American Resource Utility, and Advisory**. Sable Harbor is the corporate master brand.
+`assets/brand/logos/` follows the rule **one logo per file**. Each production lockup is supplied as self-contained SVG with outlined lettering and a rendered PNG.
 
-## Supplemental identities
+Naming convention:
 
-| Identity | Classification | Canon note |
-|---|---|---|
-| Foundry | product substrate | LOCKED distinction: Foundry is the substrate; Foundry Field is the deployable operational product/service configuration. |
-| Red Wash Mine | operating asset | LOCKED fictional mine name under Pale Sun; transaction and legal details remain OPEN. |
-| Blood, Sweat & Tears Railway | ARU operating component | LOCKED name and relationship to ARU; exact legal and route details remain OPEN. |
-| Emberline | historical business line | LOCKED historical status: active through 2025, then absorbed into enduring 2026 work. |
-| Red Wash / Pale Sun | endorsed operating lockup | Supplemental endorsed lockup joining the Pale Sun line to its Red Wash operating asset; does not replace either canonical name. |
+```text
+<brand-slug>__<variant>.<format>
+```
 
-## Naming convention
+Five standard variants are used where supplied:
 
-`<brand-slug>__<variant>.<format>`
+- `primary-horizontal` — README, wiki, reports, and letterheads;
+- `stacked` — covers, square placements, and dividers;
+- `mark` — avatars, icons, and document furniture;
+- `reverse-horizontal` — dark fields and signage;
+- `one-color-horizontal` — monochrome reproduction.
 
-Examples:
+The production manifest records path, identity, classification, dimensions, variant, format, and SHA-256 digest for every logo asset.
 
-- `sable-harbor__primary-horizontal.svg`
-- `atlas-meridian__mark.png`
-- `american-resource-utility__reverse-horizontal.svg`
+## Supplemental and historical identities
 
-## Intended use
+- **Foundry** — product substrate, distinct from Foundry Field.
+- **Red Wash Mine** — operating asset under Pale Sun.
+- **Blood, Sweat & Tears Railway** — ARU operating component.
+- **Emberline** — historical line absorbed into enduring work.
+- **Red Wash / Pale Sun** — endorsed lockup; does not replace either canonical name.
 
-- **Primary horizontal:** README headings, wiki section headers, reports, and letterheads.
-- **Stacked:** covers, title pages, square placements, and presentation dividers.
-- **Mark:** favicons, avatars, small section identifiers, and document furniture.
-- **Reverse horizontal:** dark interfaces, dark presentation fields, signage, and video.
-- **One-color horizontal:** monochrome printing, stamps, engraving, and constrained reproduction.
-
-## Production constraints
+## Reproduction constraints
 
 - Do not distort, rotate, bevel, shadow, or add gradients.
-- Do not combine two separate identities into one lockup unless an endorsed combined asset is provided here.
-- Do not substitute literal lighthouse, compass, shield, wave, mountain, mine-pick, or generic AI/circuit clip art.
-- Preserve clear space equal to at least one central accent square around the full lockup.
-- Use the SVG files as the source of truth; PNG files are convenience renders.
+- Do not combine identities unless an endorsed combined asset is supplied.
+- Do not substitute generic lighthouse, compass, shield, wave, mine-pick, mountain, circuit, or AI clip art.
+- Preserve clear space equal to at least one central accent square.
+- Use SVG as the logo source of truth; PNG is a convenience render.
+- Replace all collateral placeholders before external use.
 
-## Package
+## Source versus generated packages
 
-A ZIP archive containing the complete individual SVG and PNG set is generated under `assets/brand/packages/`.
-
-## Manifest and validation
-
-- `manifest.json` records every asset, dimensions, variant, classification, and SHA-256 digest.
-- `VALIDATION.md` records automated checks proving the one-logo-per-file rule and per-line variant coverage.
+Individual logos, editable template sources, standards, manifests, and intentionally reviewed publication packages belong in Git. Reproducible recurring exports should be generated, validated, checksummed, and attached to CI/releases rather than duplicated across business-line directories.
 
 All rights reserved unless a specific repository file states otherwise.
