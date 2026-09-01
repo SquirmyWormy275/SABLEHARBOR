@@ -62,6 +62,9 @@ class GenerationRun(Base):
     id: Mapped[str] = mapped_column(String(36), primary_key=True)
     profile: Mapped[str] = mapped_column(String(32))
     scenario_id: Mapped[str] = mapped_column(ForeignKey("scenario.id"))
+    actual_generation_run_id: Mapped[str | None] = mapped_column(
+        ForeignKey("generation_run.id"), index=True
+    )
     seed: Mapped[int] = mapped_column(Integer)
     generator_version: Mapped[str] = mapped_column(String(40))
     git_commit: Mapped[str] = mapped_column(String(40))

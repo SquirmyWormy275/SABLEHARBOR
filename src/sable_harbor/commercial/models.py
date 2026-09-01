@@ -4,7 +4,7 @@ from decimal import Decimal
 from sqlalchemy import Date, DateTime, Enum, ForeignKey, Numeric, String, UniqueConstraint
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
-from sable_harbor.accounting.models import Base, FactState
+from sable_harbor.accounting.models import Base, FactState, GenerationOwnedMixin
 
 
 class Customer(Base):
@@ -15,7 +15,7 @@ class Customer(Base):
     fact_state: Mapped[FactState] = mapped_column(Enum(FactState))
 
 
-class Contract(Base):
+class Contract(GenerationOwnedMixin, Base):
     __tablename__ = "customer_contract"
     id: Mapped[str] = mapped_column(String(36), primary_key=True)
     customer_id: Mapped[str] = mapped_column(ForeignKey("customer.id"))
@@ -28,7 +28,7 @@ class Contract(Base):
     fact_state: Mapped[FactState] = mapped_column(Enum(FactState))
 
 
-class PerformanceObligation(Base):
+class PerformanceObligation(GenerationOwnedMixin, Base):
     __tablename__ = "performance_obligation"
     id: Mapped[str] = mapped_column(String(36), primary_key=True)
     contract_id: Mapped[str] = mapped_column(ForeignKey("customer_contract.id"))
@@ -37,7 +37,7 @@ class PerformanceObligation(Base):
     allocated_price: Mapped[Decimal] = mapped_column(Numeric(20, 4))
 
 
-class Invoice(Base):
+class Invoice(GenerationOwnedMixin, Base):
     __tablename__ = "invoice"
     id: Mapped[str] = mapped_column(String(36), primary_key=True)
     contract_id: Mapped[str] = mapped_column(ForeignKey("customer_contract.id"))
@@ -53,7 +53,7 @@ class Invoice(Base):
     )
 
 
-class InvoiceLine(Base):
+class InvoiceLine(GenerationOwnedMixin, Base):
     __tablename__ = "invoice_line"
     id: Mapped[str] = mapped_column(String(36), primary_key=True)
     invoice_id: Mapped[str] = mapped_column(ForeignKey("invoice.id"))
@@ -63,7 +63,7 @@ class InvoiceLine(Base):
     invoice: Mapped[Invoice] = relationship(back_populates="lines")
 
 
-class RevenueRecognition(Base):
+class RevenueRecognition(GenerationOwnedMixin, Base):
     __tablename__ = "revenue_recognition"
     id: Mapped[str] = mapped_column(String(36), primary_key=True)
     performance_obligation_id: Mapped[str] = mapped_column(ForeignKey("performance_obligation.id"))
@@ -72,7 +72,7 @@ class RevenueRecognition(Base):
     journal_entry_id: Mapped[str] = mapped_column(ForeignKey("journal_entry.id"))
 
 
-class CashReceipt(Base):
+class CashReceipt(GenerationOwnedMixin, Base):
     __tablename__ = "cash_receipt"
     id: Mapped[str] = mapped_column(String(36), primary_key=True)
     invoice_id: Mapped[str] = mapped_column(ForeignKey("invoice.id"))
@@ -82,7 +82,7 @@ class CashReceipt(Base):
     journal_entry_id: Mapped[str] = mapped_column(ForeignKey("journal_entry.id"))
 
 
-class Engagement(Base):
+class Engagement(GenerationOwnedMixin, Base):
     __tablename__ = "engagement"
     id: Mapped[str] = mapped_column(String(36), primary_key=True)
     contract_id: Mapped[str] = mapped_column(ForeignKey("customer_contract.id"))
@@ -94,7 +94,7 @@ class Engagement(Base):
     fact_state: Mapped[FactState] = mapped_column(Enum(FactState))
 
 
-class ProjectTask(Base):
+class ProjectTask(GenerationOwnedMixin, Base):
     __tablename__ = "project_task"
     id: Mapped[str] = mapped_column(String(36), primary_key=True)
     engagement_id: Mapped[str] = mapped_column(ForeignKey("engagement.id"))
@@ -103,7 +103,7 @@ class ProjectTask(Base):
     __table_args__ = (UniqueConstraint("engagement_id", "task_code"),)
 
 
-class TimeEntry(Base):
+class TimeEntry(GenerationOwnedMixin, Base):
     __tablename__ = "time_entry"
     id: Mapped[str] = mapped_column(String(36), primary_key=True)
     task_id: Mapped[str] = mapped_column(ForeignKey("project_task.id"))
@@ -115,7 +115,7 @@ class TimeEntry(Base):
     status: Mapped[str] = mapped_column(String(24))
 
 
-class ProjectCost(Base):
+class ProjectCost(GenerationOwnedMixin, Base):
     __tablename__ = "project_cost"
     id: Mapped[str] = mapped_column(String(36), primary_key=True)
     engagement_id: Mapped[str] = mapped_column(ForeignKey("engagement.id"))
@@ -125,7 +125,7 @@ class ProjectCost(Base):
     journal_entry_id: Mapped[str] = mapped_column(ForeignKey("journal_entry.id"))
 
 
-class EngagementInvoiceLink(Base):
+class EngagementInvoiceLink(GenerationOwnedMixin, Base):
     __tablename__ = "engagement_invoice_link"
     id: Mapped[str] = mapped_column(String(36), primary_key=True)
     engagement_id: Mapped[str] = mapped_column(ForeignKey("engagement.id"))

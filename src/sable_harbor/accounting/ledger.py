@@ -11,7 +11,6 @@ from .models import (
     JournalEntry,
     JournalLine,
     PeriodState,
-    ScenarioValue,
 )
 
 GENERATION_RUN_SESSION_KEY = "generation_run_id"
@@ -124,9 +123,7 @@ def attach_generation_context(
     if generation_run_id is None:
         return
     for item in session.new:
-        if isinstance(item, JournalEntry) and item.generation_run_id is None:
-            item.generation_run_id = str(generation_run_id)
-        if isinstance(item, ScenarioValue) and item.generation_run_id is None:
+        if hasattr(item, "generation_run_id") and item.generation_run_id is None:
             item.generation_run_id = str(generation_run_id)
 
 

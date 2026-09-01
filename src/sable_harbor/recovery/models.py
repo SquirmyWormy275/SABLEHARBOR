@@ -4,10 +4,10 @@ from decimal import Decimal
 from sqlalchemy import Boolean, Date, ForeignKey, Numeric, String
 from sqlalchemy.orm import Mapped, mapped_column
 
-from sable_harbor.accounting.models import Base
+from sable_harbor.accounting.models import Base, GenerationOwnedMixin
 
 
-class RecoveryRun(Base):
+class RecoveryRun(GenerationOwnedMixin, Base):
     __tablename__ = "recovery_run"
     id: Mapped[str] = mapped_column(String(36), primary_key=True)
     entity_id: Mapped[str] = mapped_column(ForeignKey("legal_entity.id"))

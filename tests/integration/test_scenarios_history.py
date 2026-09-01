@@ -22,9 +22,9 @@ def _scenario_revenue(scenario: str) -> Decimal:
 
 
 def test_low_high_and_stress_are_correlated_configured_cases() -> None:
-    assert _scenario_revenue("low") == Decimal("401760000.0000")
-    assert _scenario_revenue("high") == Decimal("499968000.0000")
-    assert _scenario_revenue("stress") == Decimal("321408000.0000")
+    assert _scenario_revenue("low") == Decimal("440027872.9730")
+    assert _scenario_revenue("high") == Decimal("454046552.4324")
+    assert _scenario_revenue("stress") == Decimal("428558044.3243")
 
 
 def test_full_history_adds_noncontrolling_2016_to_2022_anchors() -> None:

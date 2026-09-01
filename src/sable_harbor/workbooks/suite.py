@@ -12,6 +12,8 @@ from sable_harbor.accounting.models import (
     JournalLine,
     ScenarioValue,
 )
+from sable_harbor.provenance.models import GenerationRun
+from sable_harbor.provenance.service import run_context
 from sable_harbor.reporting_queries import run_named_query
 
 WORKBOOKS: dict[str, list[str]] = {
@@ -161,33 +163,35 @@ WORKBOOKS: dict[str, list[str]] = {
 }
 
 
-def _rows_for_sheet(session: Session, sheet_name: str) -> list[dict[str, Any]]:
+def _rows_for_sheet(
+    session: Session, sheet_name: str, generation_run_id: str
+) -> list[dict[str, Any]]:
     lower = sheet_name.lower()
     if "trial balance" in lower or "chart of accounts" in lower:
-        return run_named_query(session, "entity_trial_balance")[:5000]
+        return run_named_query(session, "entity_trial_balance", generation_run_id)[:5000]
     if "journal" in lower or "lineage" in lower:
-        return run_named_query(session, "journal_to_source_trace")[:5000]
+        return run_named_query(session, "journal_to_source_trace", generation_run_id)[:5000]
     if "red wash" in lower or "inventory" in lower:
-        rows = run_named_query(session, "red_wash_unit_cost_bridge")
-        return rows or run_named_query(session, "consolidated_monthly_pnl")
+        rows = run_named_query(session, "red_wash_unit_cost_bridge", generation_run_id)
+        return rows or run_named_query(session, "consolidated_monthly_pnl", generation_run_id)
     if "aru" in lower:
-        rows = run_named_query(session, "aru_route_customer_margin")
-        return rows or run_named_query(session, "consolidated_monthly_pnl")
+        rows = run_named_query(session, "aru_route_customer_margin", generation_run_id)
+        return rows or run_named_query(session, "consolidated_monthly_pnl", generation_run_id)
     if "cradle" in lower:
-        rows = run_named_query(session, "cradle_project_economics")
-        return rows or run_named_query(session, "assumption_impact")
+        rows = run_named_query(session, "cradle_project_economics", generation_run_id)
+        return rows or run_named_query(session, "assumption_impact", generation_run_id)
     if "customer" in lower or "arr" in lower or "contract" in lower:
-        return run_named_query(session, "customer_arr_bridge")
+        return run_named_query(session, "customer_arr_bridge", generation_run_id)
     if "debt" in lower or "liquidity" in lower:
-        rows = run_named_query(session, "debt_covenant_calculation")
-        return rows or run_named_query(session, "assumption_impact")
+        rows = run_named_query(session, "debt_covenant_calculation", generation_run_id)
+        return rows or run_named_query(session, "assumption_impact", generation_run_id)
     if "assumption" in lower or "scenario" in lower or "sensitivity" in lower:
-        return run_named_query(session, "assumption_impact")
+        return run_named_query(session, "assumption_impact", generation_run_id)
     if "monthly" in lower or "revenue" in lower or "income" in lower:
-        return run_named_query(session, "consolidated_monthly_pnl")
+        return run_named_query(session, "consolidated_monthly_pnl", generation_run_id)
     if "employee" in lower or "headcount" in lower or "payroll" in lower:
-        return run_named_query(session, "employee_loaded_cost")
-    return run_named_query(session, "release_coverage_lineage")
+        return run_named_query(session, "employee_loaded_cost", generation_run_id)
+    return run_named_query(session, "release_coverage_lineage", generation_run_id)
 
 
 def _write_rows(
@@ -214,18 +218,30 @@ def generate_workbook_suite(
     session: Session,
     output_directory: Path = Path("workbooks/outputs"),
     *,
-    scenario: str = "base",
-    seed: int = 20260831,
-    source_commit: str = "see release manifest",
+    generation_run_id: str,
 ) -> list[Path]:
+    context = run_context(session, generation_run_id)
+    run = session.get(GenerationRun, context.generation_run_id)
+    if run is None:
+        raise ValueError(f"Unknown generation run {generation_run_id!r}")
     output_directory.mkdir(parents=True, exist_ok=True)
     outputs: list[Path] = []
     debit, credit = session.execute(
         select(func.sum(JournalLine.debit), func.sum(JournalLine.credit))
+        .join(JournalEntry, JournalEntry.id == JournalLine.entry_id)
+        .where(JournalEntry.generation_run_id.in_(context.included_run_ids))
     ).one()
-    assumption_count = session.scalar(select(func.count(ScenarioValue.id))) or 0
+    assumption_count = session.scalar(
+        select(func.count(ScenarioValue.id)).where(
+            ScenarioValue.generation_run_id == context.generation_run_id
+        )
+    ) or 0
     account_count = session.scalar(select(func.count(Account.id))) or 0
-    journal_count = session.scalar(select(func.count(JournalEntry.id))) or 0
+    journal_count = session.scalar(
+        select(func.count(JournalEntry.id)).where(
+            JournalEntry.generation_run_id.in_(context.included_run_ids)
+        )
+    ) or 0
     for filename, sheets in WORKBOOKS.items():
         path = output_directory / filename
         workbook = xlsxwriter.Workbook(path)
@@ -248,13 +264,13 @@ def generate_workbook_suite(
             sheet.write(0, 0, f"SABLE HARBOR — {sheet_name}", title)
             sheet.merge_range(0, 0, 0, 5, f"SABLE HARBOR — {sheet_name}", title)
             sheet.write(2, 0, "Scenario", label)
-            sheet.write(2, 1, scenario, input_format)
+            sheet.write(2, 1, context.scenario_code, input_format)
             sheet.write(3, 0, "As of", label)
             sheet.write(3, 1, "2026-08-31")
             sheet.write(4, 0, "Generation seed", label)
-            sheet.write_number(4, 1, seed, input_format)
+            sheet.write_number(4, 1, run.seed, input_format)
             sheet.write(5, 0, "Source commit", label)
-            sheet.write(5, 1, source_commit)
+            sheet.write(5, 1, run.git_commit)
             if sheet_name == "Checks":
                 sheet.write_row(7, 0, ["Control", "Database value", "Workbook result"], header)
                 controls = [
@@ -269,7 +285,12 @@ def generate_workbook_suite(
                     formula = '=IF(B{0}=0,"PASS",IF(B{0}>0,"PASS","FAIL"))'.format(row_index + 1)
                     sheet.write_formula(row_index, 2, formula, pass_format, "PASS")
             else:
-                _write_rows(sheet, _rows_for_sheet(session, sheet_name), header, money)
+                _write_rows(
+                    sheet,
+                    _rows_for_sheet(session, sheet_name, generation_run_id),
+                    header,
+                    money,
+                )
         workbook.close()
         outputs.append(path)
     return outputs

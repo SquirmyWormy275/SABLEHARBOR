@@ -1,1 +1,1 @@
-SELECT je.id AS journal_id,je.source_type,je.source_id,je.entry_date,a.code AS account,jl.debit,jl.credit FROM journal_entry je JOIN journal_line jl ON jl.entry_id=je.id JOIN account a ON a.id=jl.account_id ORDER BY je.entry_date,je.id,a.code;
+SELECT je.id AS journal_id,je.source_type,je.source_id,je.entry_date,a.code AS account,jl.debit,jl.credit FROM journal_entry je JOIN journal_line jl ON jl.entry_id=je.id JOIN account a ON a.id=jl.account_id WHERE je.generation_run_id IN (:actual_run_id,:generation_run_id) ORDER BY je.entry_date,je.id,a.code;

@@ -4,21 +4,32 @@ from pathlib import Path
 import typer
 from alembic import command
 from alembic.config import Config
-from sqlalchemy import func, select
+from sqlalchemy import func, inspect, select, text
 
 from sable_harbor import schema as schema  # noqa: F401
 from sable_harbor.accounting.ledger import close_period, post_entry, trial_balance
-from sable_harbor.accounting.models import Base, EntryState, FiscalPeriod, JournalEntry, JournalLine
+from sable_harbor.accounting.models import (
+    EntryState,
+    FiscalPeriod,
+    JournalEntry,
+    JournalLine,
+    ScenarioValue,
+)
 from sable_harbor.accounting.seed import seed_smoke
-from sable_harbor.core.database import build_engine, session_for
+from sable_harbor.core.database import build_engine, require_migrated_schema, session_for
+from sable_harbor.core.ids import stable_id
 from sable_harbor.exports.release import package_public_demo
-from sable_harbor.generation import generate_baseline, generate_full_history, generate_standard
+from sable_harbor.generation import (
+    generate_baseline_run,
+    generate_full_history,
+    generate_standard,
+)
 from sable_harbor.provenance.service import (
     complete_generation_run,
     lineage_for,
     link_journals,
     record_generation_run,
-    resolve_generation_run,
+    run_context,
     seed_provenance,
 )
 from sable_harbor.reporting import build_workbook
@@ -42,11 +53,15 @@ def status() -> None:
     typer.echo("Sable Harbor finance platform v0.1")
 
 
+@app.command("run-id")
+def run_id(profile: str, scenario: str = "base", seed: int = 20260831) -> None:
+    typer.echo(stable_id("generation_run", f"v0.1:{profile}:{scenario}:{seed}"))
+
+
 @app.command("init-db")
 def init_db() -> None:
-    engine = build_engine()
-    Base.metadata.create_all(engine)
-    typer.echo(f"Initialized {engine.url.render_as_string(hide_password=True)}")
+    command.upgrade(Config("alembic.ini"), "head")
+    typer.echo("Database migrated to head")
 
 
 @app.command("migrate")
@@ -58,7 +73,7 @@ def migrate() -> None:
 @app.command("seed-canon")
 def seed_canon() -> None:
     engine = build_engine()
-    Base.metadata.create_all(engine)
+    require_migrated_schema(engine)
     with session_for(engine) as session:
         count = seed_provenance(session)
         session.commit()
@@ -68,7 +83,7 @@ def seed_canon() -> None:
 @app.command("generate")
 def generate(profile: str = "smoke", scenario: str = "base", seed: int = 20260831) -> None:
     engine = build_engine()
-    Base.metadata.create_all(engine)
+    require_migrated_schema(engine)
     with session_for(engine) as session:
         effective_scenario = "stress" if profile == "stress" else scenario
         run = record_generation_run(
@@ -81,7 +96,7 @@ def generate(profile: str = "smoke", scenario: str = "base", seed: int = 2026083
         if profile == "smoke":
             result: object = {"book": seed_smoke(session)}
         elif profile in {"baseline", "full"}:
-            result = generate_baseline(session, seed=seed, scenario=scenario)
+            result = generate_baseline_run(session, seed=seed, scenario=scenario)
         elif profile == "standard":
             result = generate_standard(session, seed=seed, scenario=scenario)
         elif profile == "full_history":
@@ -150,28 +165,61 @@ def validate(generation_run_id: str | None = None) -> None:
             debit = sum(row[1] for row in balances)
             credit = sum(row[2] for row in balances)
         else:
-            selected_run_id = resolve_generation_run(session, generation_run_id)
+            context = run_context(session, generation_run_id)
             debit, credit = session.execute(
                 select(func.sum(JournalLine.debit), func.sum(JournalLine.credit))
                 .join(JournalEntry, JournalEntry.id == JournalLine.entry_id)
                 .where(
                     JournalEntry.state == EntryState.POSTED,
-                    JournalEntry.generation_run_id == selected_run_id,
+                    JournalEntry.generation_run_id.in_(context.included_run_ids),
                 )
             ).one()
+            marker_count = session.scalar(
+                select(func.count(ScenarioValue.id)).where(
+                    ScenarioValue.generation_run_id == context.generation_run_id,
+                    ScenarioValue.metric_code == "run_marker",
+                )
+            )
+            if marker_count != 1:
+                raise ValueError("Selected generation run does not have exactly one run marker")
+            if len(context.included_run_ids) == 2:
+                opening_count = session.scalar(
+                    select(func.count(JournalEntry.id)).where(
+                        JournalEntry.generation_run_id == context.included_run_ids[0],
+                        JournalEntry.description.like("Scenario opening%"),
+                    )
+                )
+                if opening_count != 3:
+                    raise ValueError(
+                        f"Common actual layer has {opening_count} opening entries; expected 3"
+                    )
+            inspector = inspect(engine)
+            null_owned: list[str] = []
+            for table in inspector.get_table_names():
+                columns = {column["name"] for column in inspector.get_columns(table)}
+                if "generation_run_id" not in columns:
+                    continue
+                null_count = session.scalar(
+                    text(f'SELECT COUNT(*) FROM "{table}" WHERE generation_run_id IS NULL')
+                )
+                if null_count:
+                    null_owned.append(f"{table}={null_count}")
+            if null_owned:
+                raise ValueError("Null generation ownership: " + ", ".join(null_owned))
         if debit != credit:
             raise typer.Exit(code=1)
     typer.echo(f"PASS trial balance debit={debit} credit={credit}")
 
 
 @app.command("report")
-def report(output: Path = Path("reports/Sable_Harbor_FY2026_Model.xlsx")) -> None:
+def report(
+    generation_run_id: str = typer.Option(...),
+    output: Path = Path("reports/Sable_Harbor_FY2026_Model.xlsx"),
+) -> None:
     engine = build_engine()
-    Base.metadata.create_all(engine)
+    require_migrated_schema(engine)
     with session_for(engine) as session:
-        generate_baseline(session)
-        session.commit()
-        path = build_workbook(session, output)
+        path = build_workbook(session, output, generation_run_id)
     typer.echo(path)
 
 
@@ -184,10 +232,11 @@ def source_lock() -> None:
 
 
 @app.command("query")
-def query(name: str) -> None:
+def query(name: str, generation_run_id: str = typer.Option(...)) -> None:
     engine = build_engine()
+    require_migrated_schema(engine)
     with session_for(engine) as session:
-        rows = run_named_query(session, name)
+        rows = run_named_query(session, name, generation_run_id)
     typer.echo({"query": name, "rows": rows})
 
 
@@ -197,24 +246,25 @@ def queries() -> None:
 
 
 @app.command("workbooks")
-def workbooks(output: Path = Path("workbooks/outputs")) -> None:
+def workbooks(
+    generation_run_id: str = typer.Option(...), output: Path = Path("workbooks/outputs")
+) -> None:
     engine = build_engine()
-    Base.metadata.create_all(engine)
+    require_migrated_schema(engine)
     with session_for(engine) as session:
-        generate_standard(session)
-        session.commit()
-        paths = generate_workbook_suite(session, output)
+        paths = generate_workbook_suite(session, output, generation_run_id=generation_run_id)
     typer.echo("\n".join(str(path) for path in paths))
 
 
 @app.command("package-release")
-def package_release(output: Path = Path("releases/generated/public-demo-v0.1")) -> None:
+def package_release(
+    generation_run_id: str = typer.Option(...),
+    output: Path = Path("releases/generated/public-demo-v0.1"),
+) -> None:
     engine = build_engine()
-    Base.metadata.create_all(engine)
+    require_migrated_schema(engine)
     with session_for(engine) as session:
-        generate_standard(session)
-        session.commit()
-        manifest = package_public_demo(session, output)
+        manifest = package_public_demo(session, output, generation_run_id=generation_run_id)
     typer.echo(manifest)
 
 
@@ -224,10 +274,11 @@ def valuation() -> None:
 
 
 @app.command("statements")
-def statements() -> None:
+def statements(generation_run_id: str = typer.Option(...)) -> None:
     engine = build_engine()
+    require_migrated_schema(engine)
     with session_for(engine) as session:
-        typer.echo(statement_snapshot(session))
+        typer.echo(statement_snapshot(session, generation_run_id))
 
 
 @app.command("explain-lineage")

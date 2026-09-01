@@ -5,7 +5,8 @@ from sqlalchemy import create_engine, func, select
 from sqlalchemy.orm import Session
 
 from sable_harbor.accounting.models import Base, JournalEntry, Worker
-from sable_harbor.generation import generate_baseline
+from sable_harbor.generation import generate_baseline_run
+from sable_harbor.provenance.service import record_generation_run
 from sable_harbor.reporting import build_workbook
 
 
@@ -13,10 +14,13 @@ def test_baseline_generation_is_idempotent_and_workbook_reopens(tmp_path: Path) 
     engine = create_engine("sqlite:///:memory:")
     Base.metadata.create_all(engine)
     with Session(engine) as session:
-        first = generate_baseline(session)
+        run = record_generation_run(
+            session, profile="baseline", scenario_code="base", seed=20260831, git_commit="test"
+        )
+        first = generate_baseline_run(session)
         session.commit()
         entry_count = session.scalar(select(func.count(JournalEntry.id)))
-        second = generate_baseline(session)
+        second = generate_baseline_run(session)
         session.commit()
         assert second == first
         assert session.scalar(select(func.count(JournalEntry.id))) == entry_count
@@ -24,7 +28,7 @@ def test_baseline_generation_is_idempotent_and_workbook_reopens(tmp_path: Path) 
             session.scalar(select(func.count(Worker.id)).where(Worker.worker_type == "EMPLOYEE"))
             == 708
         )
-        output = build_workbook(session, tmp_path / "model.xlsx")
+        output = build_workbook(session, tmp_path / "model.xlsx", run.id)
     workbook = load_workbook(output, data_only=False, read_only=True)
     assert {
         "Read Me",

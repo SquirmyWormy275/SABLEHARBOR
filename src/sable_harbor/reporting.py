@@ -11,9 +11,13 @@ from sable_harbor.accounting.models import (
     JournalLine,
     ScenarioValue,
 )
+from sable_harbor.provenance.service import run_context
 
 
-def financial_rows(session: Session) -> list[tuple[str, str, str, float]]:
+def financial_rows(
+    session: Session, generation_run_id: str
+) -> list[tuple[str, str, str, float]]:
+    context = run_context(session, generation_run_id)
     stmt = (
         select(
             Account.code,
@@ -23,7 +27,10 @@ def financial_rows(session: Session) -> list[tuple[str, str, str, float]]:
         )
         .join(JournalLine, JournalLine.account_id == Account.id)
         .join(JournalEntry, JournalEntry.id == JournalLine.entry_id)
-        .where(JournalEntry.state == EntryState.POSTED)
+        .where(
+            JournalEntry.state == EntryState.POSTED,
+            JournalEntry.generation_run_id.in_(context.included_run_ids),
+        )
         .group_by(Account.code, Account.name, Account.account_class)
         .order_by(Account.code)
     )
@@ -32,7 +39,7 @@ def financial_rows(session: Session) -> list[tuple[str, str, str, float]]:
     ]
 
 
-def build_workbook(session: Session, destination: Path) -> Path:
+def build_workbook(session: Session, destination: Path, generation_run_id: str) -> Path:
     destination.parent.mkdir(parents=True, exist_ok=True)
     workbook = xlsxwriter.Workbook(destination)
     title = workbook.add_format({"bold": True, "font_size": 15, "font_color": "#17324D"})
@@ -52,7 +59,8 @@ def build_workbook(session: Session, destination: Path) -> Path:
     cover.set_column("A:A", 34)
     cover.set_column("B:B", 65)
 
-    data = financial_rows(session)
+    context = run_context(session, generation_run_id)
+    data = financial_rows(session, generation_run_id)
     tb = workbook.add_worksheet("Trial Balance")
     tb.write_row(0, 0, ["Account", "Name", "Class", "Debit less credit"], header)
     for row_index, row in enumerate(data, 1):
@@ -120,7 +128,11 @@ def build_workbook(session: Session, destination: Path) -> Path:
         ["Scenario", "Metric", "Entity", "Period", "Value", "Unit", "Fact state", "Provenance"],
         header,
     )
-    rows = session.scalars(select(ScenarioValue).order_by(ScenarioValue.metric_code)).all()
+    rows = session.scalars(
+        select(ScenarioValue)
+        .where(ScenarioValue.generation_run_id == context.generation_run_id)
+        .order_by(ScenarioValue.metric_code)
+    ).all()
     for idx, item in enumerate(rows, 1):
         assumptions.write_row(
             idx,

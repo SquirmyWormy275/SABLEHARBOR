@@ -5,6 +5,7 @@ from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
 from sable_harbor.accounting.models import Account, EntryState, JournalEntry, JournalLine
+from sable_harbor.provenance.service import run_context
 
 
 class StatementSnapshot(TypedDict):
@@ -19,7 +20,8 @@ class StatementSnapshot(TypedDict):
     ending_cash: Decimal
 
 
-def statement_snapshot(session: Session) -> StatementSnapshot:
+def statement_snapshot(session: Session, generation_run_id: str) -> StatementSnapshot:
+    context = run_context(session, generation_run_id)
     rows = session.execute(
         select(
             Account.code,
@@ -28,7 +30,10 @@ def statement_snapshot(session: Session) -> StatementSnapshot:
         )
         .join(JournalLine, JournalLine.account_id == Account.id)
         .join(JournalEntry, JournalEntry.id == JournalLine.entry_id)
-        .where(JournalEntry.state == EntryState.POSTED)
+        .where(
+            JournalEntry.state == EntryState.POSTED,
+            JournalEntry.generation_run_id.in_(context.included_run_ids),
+        )
         .group_by(Account.code, Account.account_class)
     ).all()
     assets = sum((amount for _, cls, amount in rows if cls == "ASSET"), Decimal(0))

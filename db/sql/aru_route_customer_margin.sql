@@ -1,1 +1,1 @@
-SELECT waybill_number,ton_miles,revenue,fuel_cost+crew_cost AS direct_cost,revenue-fuel_cost-crew_cost AS contribution_margin FROM waybill ORDER BY movement_date;
+SELECT waybill_number,ton_miles,revenue,fuel_cost+crew_cost AS direct_cost,revenue-fuel_cost-crew_cost AS contribution_margin FROM waybill WHERE generation_run_id IN (:actual_run_id,:generation_run_id) ORDER BY movement_date;

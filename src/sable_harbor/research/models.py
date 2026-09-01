@@ -4,10 +4,10 @@ from decimal import Decimal
 from sqlalchemy import Boolean, Date, ForeignKey, Numeric, String, Text
 from sqlalchemy.orm import Mapped, mapped_column
 
-from sable_harbor.accounting.models import Base
+from sable_harbor.accounting.models import Base, GenerationOwnedMixin
 
 
-class WillowExperiment(Base):
+class WillowExperiment(GenerationOwnedMixin, Base):
     __tablename__ = "willow_experiment"
     id: Mapped[str] = mapped_column(String(36), primary_key=True)
     entity_id: Mapped[str] = mapped_column(ForeignKey("legal_entity.id"))
@@ -23,7 +23,7 @@ class WillowExperiment(Base):
     journal_entry_id: Mapped[str] = mapped_column(ForeignKey("journal_entry.id"))
 
 
-class AtlasEvaluation(Base):
+class AtlasEvaluation(GenerationOwnedMixin, Base):
     __tablename__ = "atlas_evaluation"
     id: Mapped[str] = mapped_column(String(36), primary_key=True)
     entity_id: Mapped[str] = mapped_column(ForeignKey("legal_entity.id"))

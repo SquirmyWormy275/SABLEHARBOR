@@ -20,9 +20,9 @@ jobs:
       - run: mkdir -p var
       - run: SHFIN_DATABASE_URL=sqlite:///var/ci-standard.db uv run alembic upgrade head
       - run: SHFIN_DATABASE_URL=sqlite:///var/ci-standard.db uv run shfin generate --profile standard --scenario base --seed 20260831
-      - run: SHFIN_DATABASE_URL=sqlite:///var/ci-standard.db uv run shfin validate
-      - run: SHFIN_DATABASE_URL=sqlite:///var/ci-standard.db uv run shfin workbooks
-      - run: SHFIN_DATABASE_URL=sqlite:///var/ci-standard.db uv run shfin package-release
+      - run: SHFIN_DATABASE_URL=sqlite:///var/ci-standard.db uv run shfin validate --generation-run-id "$(uv run shfin run-id standard --scenario base --seed 20260831)"
+      - run: SHFIN_DATABASE_URL=sqlite:///var/ci-standard.db uv run shfin workbooks --generation-run-id "$(uv run shfin run-id standard --scenario base --seed 20260831)"
+      - run: SHFIN_DATABASE_URL=sqlite:///var/ci-standard.db uv run shfin package-release --generation-run-id "$(uv run shfin run-id standard --scenario base --seed 20260831)"
       - run: uv run python scripts/check_public_safety.py
 
   postgres:
@@ -42,10 +42,11 @@ jobs:
           --health-retries 10
     env:
       SHFIN_DATABASE_URL: postgresql+psycopg://sable_harbor:ci_only@localhost:5432/sable_harbor
+      SHFIN_POSTGRES_TEST_URL: postgresql+psycopg://sable_harbor:ci_only@localhost:5432/sable_harbor
     steps:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v6
       - run: uv sync --all-extras
-      - run: uv run alembic upgrade head
+      - run: uv run pytest tests/integration/test_migrations.py
       - run: uv run shfin generate --profile standard --scenario base --seed 20260831
-      - run: uv run shfin validate
+      - run: uv run shfin validate --generation-run-id "$(uv run shfin run-id standard --scenario base --seed 20260831)"

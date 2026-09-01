@@ -1,4 +1,6 @@
+from dataclasses import dataclass
 from datetime import UTC, date, datetime
+from decimal import Decimal
 from pathlib import Path
 from typing import Any
 
@@ -6,12 +8,19 @@ import yaml
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
-from sable_harbor.accounting.models import FactState, JournalEntry
+from sable_harbor.accounting.models import FactState, JournalEntry, ScenarioValue
 from sable_harbor.core.ids import stable_id
 
 from .models import GenerationRun, LineageEdge, ModelAssumption, Scenario, SourceDocument
 
 GENERATION_RUN_SESSION_KEY = "generation_run_id"
+
+
+@dataclass(frozen=True)
+class RunContext:
+    generation_run_id: str
+    scenario_code: str
+    included_run_ids: tuple[str, ...]
 
 
 def _as_date(value: object) -> date:
@@ -106,6 +115,23 @@ def record_generation_run(
         session.add(run)
         session.flush()
     session.info[GENERATION_RUN_SESSION_KEY] = run.id
+    marker_id = stable_id("scenario_value", f"run:{run.id}:marker")
+    if session.get(ScenarioValue, marker_id) is None:
+        session.add(
+            ScenarioValue(
+                id=marker_id,
+                generation_run_id=run.id,
+                scenario_code=scenario_code,
+                metric_code="run_marker",
+                entity_code="CONSOLIDATED",
+                period_code=profile,
+                amount=Decimal(1),
+                unit="count",
+                fact_state=FactState.DERIVED,
+                provenance="generation-run lifecycle marker",
+            )
+        )
+        session.flush()
     return run
 
 
@@ -127,6 +153,22 @@ def resolve_generation_run(session: Session, generation_run_id: str | None = Non
             f"{len(run_ids)} runs"
         )
     return run_ids[0]
+
+
+def run_context(session: Session, generation_run_id: str | None = None) -> RunContext:
+    selected_id = resolve_generation_run(session, generation_run_id)
+    run = session.get(GenerationRun, selected_id)
+    if run is None:
+        raise ValueError(f"Unknown generation run {selected_id!r}")
+    scenario = session.get(Scenario, run.scenario_id)
+    if scenario is None:
+        raise ValueError(f"Generation run {selected_id!r} has no scenario")
+    included = (
+        (run.actual_generation_run_id, run.id)
+        if run.actual_generation_run_id is not None
+        else (run.id,)
+    )
+    return RunContext(run.id, scenario.code, included)
 
 
 def link_journals(session: Session, run: GenerationRun) -> int:

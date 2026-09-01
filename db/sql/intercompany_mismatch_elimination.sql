@@ -1,1 +1,1 @@
-SELECT counterparty_entity_id,SUM(debit-credit) AS net_balance FROM journal_line WHERE counterparty_entity_id IS NOT NULL GROUP BY counterparty_entity_id;
+SELECT jl.counterparty_entity_id,SUM(jl.debit-jl.credit) AS net_balance FROM journal_line jl JOIN journal_entry je ON je.id=jl.entry_id WHERE jl.counterparty_entity_id IS NOT NULL AND je.generation_run_id IN (:actual_run_id,:generation_run_id) GROUP BY jl.counterparty_entity_id;

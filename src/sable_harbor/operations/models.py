@@ -4,10 +4,10 @@ from decimal import Decimal
 from sqlalchemy import Date, ForeignKey, Numeric, String
 from sqlalchemy.orm import Mapped, mapped_column
 
-from sable_harbor.accounting.models import Base
+from sable_harbor.accounting.models import Base, GenerationOwnedMixin
 
 
-class PayrollRun(Base):
+class PayrollRun(GenerationOwnedMixin, Base):
     __tablename__ = "payroll_run"
     id: Mapped[str] = mapped_column(String(36), primary_key=True)
     entity_id: Mapped[str] = mapped_column(ForeignKey("legal_entity.id"))
@@ -18,7 +18,7 @@ class PayrollRun(Base):
     journal_entry_id: Mapped[str] = mapped_column(ForeignKey("journal_entry.id"))
 
 
-class PayrollLine(Base):
+class PayrollLine(GenerationOwnedMixin, Base):
     __tablename__ = "payroll_line"
     id: Mapped[str] = mapped_column(String(36), primary_key=True)
     payroll_run_id: Mapped[str] = mapped_column(ForeignKey("payroll_run.id"))
@@ -35,7 +35,7 @@ class Vendor(Base):
     category: Mapped[str] = mapped_column(String(60))
 
 
-class PurchaseOrder(Base):
+class PurchaseOrder(GenerationOwnedMixin, Base):
     __tablename__ = "purchase_order"
     id: Mapped[str] = mapped_column(String(36), primary_key=True)
     entity_id: Mapped[str] = mapped_column(ForeignKey("legal_entity.id"))
@@ -46,7 +46,7 @@ class PurchaseOrder(Base):
     status: Mapped[str] = mapped_column(String(24))
 
 
-class GoodsReceipt(Base):
+class GoodsReceipt(GenerationOwnedMixin, Base):
     __tablename__ = "goods_receipt"
     id: Mapped[str] = mapped_column(String(36), primary_key=True)
     purchase_order_id: Mapped[str] = mapped_column(ForeignKey("purchase_order.id"))
@@ -54,7 +54,7 @@ class GoodsReceipt(Base):
     amount: Mapped[Decimal] = mapped_column(Numeric(20, 4))
 
 
-class VendorBill(Base):
+class VendorBill(GenerationOwnedMixin, Base):
     __tablename__ = "vendor_bill"
     id: Mapped[str] = mapped_column(String(36), primary_key=True)
     purchase_order_id: Mapped[str] = mapped_column(ForeignKey("purchase_order.id"))
@@ -66,7 +66,7 @@ class VendorBill(Base):
     journal_entry_id: Mapped[str] = mapped_column(ForeignKey("journal_entry.id"))
 
 
-class VendorPayment(Base):
+class VendorPayment(GenerationOwnedMixin, Base):
     __tablename__ = "vendor_payment"
     id: Mapped[str] = mapped_column(String(36), primary_key=True)
     vendor_bill_id: Mapped[str] = mapped_column(ForeignKey("vendor_bill.id"))
@@ -75,7 +75,7 @@ class VendorPayment(Base):
     journal_entry_id: Mapped[str] = mapped_column(ForeignKey("journal_entry.id"))
 
 
-class DepreciationRecord(Base):
+class DepreciationRecord(GenerationOwnedMixin, Base):
     __tablename__ = "depreciation_record"
     id: Mapped[str] = mapped_column(String(36), primary_key=True)
     asset_id: Mapped[str] = mapped_column(ForeignKey("fixed_asset.id"))
@@ -85,7 +85,7 @@ class DepreciationRecord(Base):
     journal_entry_id: Mapped[str] = mapped_column(ForeignKey("journal_entry.id"))
 
 
-class DebtFacility(Base):
+class DebtFacility(GenerationOwnedMixin, Base):
     __tablename__ = "debt_facility"
     id: Mapped[str] = mapped_column(String(36), primary_key=True)
     entity_id: Mapped[str] = mapped_column(ForeignKey("legal_entity.id"))
@@ -94,7 +94,7 @@ class DebtFacility(Base):
     annual_rate: Mapped[Decimal] = mapped_column(Numeric(12, 8))
 
 
-class DebtDraw(Base):
+class DebtDraw(GenerationOwnedMixin, Base):
     __tablename__ = "debt_draw"
     id: Mapped[str] = mapped_column(String(36), primary_key=True)
     facility_id: Mapped[str] = mapped_column(ForeignKey("debt_facility.id"))
@@ -103,7 +103,7 @@ class DebtDraw(Base):
     journal_entry_id: Mapped[str] = mapped_column(ForeignKey("journal_entry.id"))
 
 
-class InterestAccrual(Base):
+class InterestAccrual(GenerationOwnedMixin, Base):
     __tablename__ = "interest_accrual"
     id: Mapped[str] = mapped_column(String(36), primary_key=True)
     debt_draw_id: Mapped[str] = mapped_column(ForeignKey("debt_draw.id"))

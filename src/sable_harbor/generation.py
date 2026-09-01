@@ -31,6 +31,12 @@ from sable_harbor.accounting.models import (
 )
 from sable_harbor.config.assumptions import load_assumptions
 from sable_harbor.core.ids import stable_id
+from sable_harbor.provenance.models import GenerationRun
+from sable_harbor.provenance.service import (
+    GENERATION_RUN_SESSION_KEY,
+    complete_generation_run,
+    record_generation_run,
+)
 
 D = Decimal
 
@@ -673,6 +679,52 @@ def generate_baseline(
     return {"scenario": scenario, "seed": seed, "employees": 708, "contractors": 61}
 
 
+def _ensure_common_actual_layer(session: Session, seed: int) -> GenerationRun:
+    selected_run_id = session.info.get(GENERATION_RUN_SESSION_KEY)
+    selected_run = (
+        session.get(GenerationRun, str(selected_run_id)) if selected_run_id is not None else None
+    )
+    git_commit = selected_run.git_commit if selected_run is not None else "UNKNOWN"
+    actual_run = record_generation_run(
+        session,
+        profile="actual_common",
+        scenario_code="actual_common",
+        seed=seed,
+        git_commit=git_commit,
+    )
+    generate_baseline(session, seed=seed, scenario="actual_common", post_summary=False)
+    complete_generation_run(session, actual_run)
+    if selected_run is not None:
+        selected_run.actual_generation_run_id = actual_run.id
+        session.info[GENERATION_RUN_SESSION_KEY] = selected_run.id
+    return actual_run
+
+
+def generate_baseline_run(
+    session: Session, seed: int = 20260831, scenario: str = "base"
+) -> dict[str, int | str]:
+    """Attach a baseline scenario run to deterministic common opening and actual facts."""
+    _ensure_common_actual_layer(session, seed)
+    run_id = str(session.info[GENERATION_RUN_SESSION_KEY])
+    marker_id = stable_id("scenario_value", f"run:{run_id}:marker")
+    if session.get(ScenarioValue, marker_id) is None:
+        session.add(
+            ScenarioValue(
+                id=marker_id,
+                scenario_code=scenario,
+                metric_code="generation_marker",
+                entity_code="CONSOLIDATED",
+                period_code="BASELINE",
+                amount=D(1),
+                unit="count",
+                fact_state=FactState.DERIVED,
+                provenance="baseline run marker; includes deterministic common-actual layer",
+            )
+        )
+        session.flush()
+    return {"scenario": scenario, "seed": seed, "employees": 708, "contractors": 61}
+
+
 def generate_standard(
     session: Session, seed: int = 20260831, scenario: str = "base"
 ) -> dict[str, int | str]:
@@ -688,11 +740,7 @@ def generate_standard(
             "seed": seed,
             "periods": 48,
         }
-    enterprise_exists = session.scalar(
-        select(LegalEntity.id).where(LegalEntity.code == "SHI")
-    )
-    if enterprise_exists is None:
-        generate_baseline(session, seed=seed, scenario=standard_scenario, post_summary=False)
+    _ensure_common_actual_layer(session, seed)
     books = {
         entity.code: book
         for entity, book in session.execute(
@@ -735,6 +783,38 @@ def generate_standard(
             book = books[entity_code]
             allocated_revenue = D(0)
             allocated_cost = D(0)
+            first_active_month = (
+                7
+                if entity_code == "RWH" and year == 2025
+                else 2
+                if entity_code == "ARU" and year == 2026
+                else 1
+            )
+            denominator = sum(weights[first_active_month - 1 :])
+
+            def multiplier_for(
+                month: int, scenario_multiplier: D, calculation_year: int = year
+            ) -> D:
+                return (
+                    D(1)
+                    if date(calculation_year, month, 1) <= date(2026, 8, 1)
+                    else scenario_multiplier
+                )
+
+            target_revenue = sum(
+                annual_revenue
+                * multiplier_for(month, revenue_multiplier)
+                * weights[month - 1]
+                / denominator
+                for month in range(first_active_month, 13)
+            )
+            target_cost = sum(
+                annual_cost
+                * multiplier_for(month, cost_multiplier)
+                * weights[month - 1]
+                / denominator
+                for month in range(first_active_month, 13)
+            )
             for month, weight in enumerate(weights, start=1):
                 if entity_code == "RWH" and year == 2025 and month < 7:
                     continue
@@ -753,20 +833,17 @@ def generate_standard(
                     )
                     session.add(period)
                     session.flush()
-                active_weights = weights
-                if entity_code == "RWH" and year == 2025:
-                    active_weights = weights[6:]
-                if entity_code == "ARU" and year == 2026:
-                    active_weights = weights[1:]
-                denominator = sum(active_weights)
-                scenario_revenue = annual_revenue * revenue_multiplier
-                scenario_cost = annual_cost * cost_multiplier
+                is_actual = date(year, month, 1) <= date(2026, 8, 1)
+                period_revenue_multiplier = D(1) if is_actual else revenue_multiplier
+                period_cost_multiplier = D(1) if is_actual else cost_multiplier
+                scenario_revenue = annual_revenue * period_revenue_multiplier
+                scenario_cost = annual_cost * period_cost_multiplier
                 revenue = (scenario_revenue * weight / denominator).quantize(D("0.01"))
                 cost = (scenario_cost * weight / denominator).quantize(D("0.01"))
                 is_last = month == 12
                 if is_last:
-                    revenue = scenario_revenue - allocated_revenue
-                    cost = scenario_cost - allocated_cost
+                    revenue = target_revenue - allocated_revenue
+                    cost = target_cost - allocated_cost
                 allocated_revenue += revenue
                 allocated_cost += cost
                 availability = (
@@ -885,6 +962,19 @@ def generate_standard(
         ],
         entry_date=cons_period.ends_on,
         source_type="consolidation_elimination",
+    )
+    session.add(
+        ScenarioValue(
+            id=marker_id,
+            scenario_code=scenario,
+            metric_code="generation_marker",
+            entity_code="CONSOLIDATED",
+            period_code="2023-2026",
+            amount=D(1),
+            unit="count",
+            fact_state=FactState.DERIVED,
+            provenance="standard run marker; common actuals plus scenario forecast",
+        )
     )
     session.flush()
     return {"scenario": scenario, "profile": "standard", "seed": seed, "periods": 48}

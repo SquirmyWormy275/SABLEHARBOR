@@ -4,10 +4,10 @@ from decimal import Decimal
 from sqlalchemy import Date, ForeignKey, Numeric, String
 from sqlalchemy.orm import Mapped, mapped_column
 
-from sable_harbor.accounting.models import Base
+from sable_harbor.accounting.models import Base, GenerationOwnedMixin
 
 
-class MineProductionBatch(Base):
+class MineProductionBatch(GenerationOwnedMixin, Base):
     __tablename__ = "mine_production_batch"
     id: Mapped[str] = mapped_column(String(36), primary_key=True)
     entity_id: Mapped[str] = mapped_column(ForeignKey("legal_entity.id"))
@@ -23,7 +23,7 @@ class MineProductionBatch(Base):
     journal_entry_id: Mapped[str] = mapped_column(ForeignKey("journal_entry.id"))
 
 
-class UraniumShipment(Base):
+class UraniumShipment(GenerationOwnedMixin, Base):
     __tablename__ = "uranium_shipment"
     id: Mapped[str] = mapped_column(String(36), primary_key=True)
     production_batch_id: Mapped[str] = mapped_column(ForeignKey("mine_production_batch.id"))

@@ -14,11 +14,17 @@ from sqlalchemy import (
     Text,
     UniqueConstraint,
 )
-from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship
+from sqlalchemy.orm import DeclarativeBase, Mapped, declared_attr, mapped_column, relationship
 
 
 class Base(DeclarativeBase):
     pass
+
+
+class GenerationOwnedMixin:
+    @declared_attr
+    def generation_run_id(cls) -> Mapped[str | None]:
+        return mapped_column(ForeignKey("generation_run.id"), nullable=True, index=True)
 
 
 class FactState(StrEnum):
@@ -87,7 +93,9 @@ class Account(Base):
 class JournalEntry(Base):
     __tablename__ = "journal_entry"
     id: Mapped[str] = mapped_column(String(36), primary_key=True)
-    generation_run_id: Mapped[str | None] = mapped_column(ForeignKey("generation_run.id"))
+    generation_run_id: Mapped[str | None] = mapped_column(
+        ForeignKey("generation_run.id"), index=True
+    )
     book_id: Mapped[str] = mapped_column(ForeignKey("accounting_book.id"))
     period_id: Mapped[str] = mapped_column(ForeignKey("fiscal_period.id"))
     entry_date: Mapped[date] = mapped_column(Date)
@@ -131,7 +139,7 @@ class Site(Base):
     fact_state: Mapped[FactState] = mapped_column(Enum(FactState))
 
 
-class Worker(Base):
+class Worker(GenerationOwnedMixin, Base):
     __tablename__ = "worker"
     id: Mapped[str] = mapped_column(String(36), primary_key=True)
     worker_number: Mapped[str] = mapped_column(String(20), unique=True)
@@ -146,7 +154,7 @@ class Worker(Base):
     fact_state: Mapped[FactState] = mapped_column(Enum(FactState))
 
 
-class BusinessParty(Base):
+class BusinessParty(GenerationOwnedMixin, Base):
     __tablename__ = "business_party"
     id: Mapped[str] = mapped_column(String(36), primary_key=True)
     code: Mapped[str] = mapped_column(String(32), unique=True)
@@ -156,7 +164,7 @@ class BusinessParty(Base):
     fact_state: Mapped[FactState] = mapped_column(Enum(FactState))
 
 
-class Contract(Base):
+class Contract(GenerationOwnedMixin, Base):
     __tablename__ = "contract"
     id: Mapped[str] = mapped_column(String(36), primary_key=True)
     code: Mapped[str] = mapped_column(String(40), unique=True)
@@ -169,7 +177,7 @@ class Contract(Base):
     fact_state: Mapped[FactState] = mapped_column(Enum(FactState))
 
 
-class FixedAsset(Base):
+class FixedAsset(GenerationOwnedMixin, Base):
     __tablename__ = "fixed_asset"
     id: Mapped[str] = mapped_column(String(36), primary_key=True)
     asset_number: Mapped[str] = mapped_column(String(32), unique=True)
@@ -183,7 +191,7 @@ class FixedAsset(Base):
     fact_state: Mapped[FactState] = mapped_column(Enum(FactState))
 
 
-class InventoryLot(Base):
+class InventoryLot(GenerationOwnedMixin, Base):
     __tablename__ = "inventory_lot"
     id: Mapped[str] = mapped_column(String(36), primary_key=True)
     lot_number: Mapped[str] = mapped_column(String(40), unique=True)
@@ -197,7 +205,7 @@ class InventoryLot(Base):
     fact_state: Mapped[FactState] = mapped_column(Enum(FactState))
 
 
-class ProductionRecord(Base):
+class ProductionRecord(GenerationOwnedMixin, Base):
     __tablename__ = "production_record"
     id: Mapped[str] = mapped_column(String(36), primary_key=True)
     site_id: Mapped[str] = mapped_column(ForeignKey("site.id"))
@@ -210,7 +218,7 @@ class ProductionRecord(Base):
     __table_args__ = (UniqueConstraint("site_id", "period_code"),)
 
 
-class FreightMovement(Base):
+class FreightMovement(GenerationOwnedMixin, Base):
     __tablename__ = "freight_movement"
     id: Mapped[str] = mapped_column(String(36), primary_key=True)
     movement_number: Mapped[str] = mapped_column(String(40), unique=True)
@@ -225,7 +233,7 @@ class FreightMovement(Base):
     fact_state: Mapped[FactState] = mapped_column(Enum(FactState))
 
 
-class EnvironmentalObligation(Base):
+class EnvironmentalObligation(GenerationOwnedMixin, Base):
     __tablename__ = "environmental_obligation"
     id: Mapped[str] = mapped_column(String(36), primary_key=True)
     entity_id: Mapped[str] = mapped_column(ForeignKey("legal_entity.id"))
@@ -241,7 +249,9 @@ class EnvironmentalObligation(Base):
 class ScenarioValue(Base):
     __tablename__ = "scenario_value"
     id: Mapped[str] = mapped_column(String(36), primary_key=True)
-    generation_run_id: Mapped[str | None] = mapped_column(ForeignKey("generation_run.id"))
+    generation_run_id: Mapped[str | None] = mapped_column(
+        ForeignKey("generation_run.id"), index=True
+    )
     scenario_code: Mapped[str] = mapped_column(String(20))
     metric_code: Mapped[str] = mapped_column(String(60))
     entity_code: Mapped[str] = mapped_column(String(32))
@@ -252,6 +262,11 @@ class ScenarioValue(Base):
     provenance: Mapped[str] = mapped_column(Text)
     __table_args__ = (
         UniqueConstraint(
-            "generation_run_id", "scenario_code", "metric_code", "entity_code", "period_code"
+            "generation_run_id",
+            "scenario_code",
+            "metric_code",
+            "entity_code",
+            "period_code",
+            name="uq_scenario_value_run_metric_entity_period",
         ),
     )
