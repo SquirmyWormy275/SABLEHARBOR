@@ -21,175 +21,35 @@ jobs:
       - name: Record public repository and wiki policy
         run: |
           python - <<'PY'
+          import base64
           from pathlib import Path
+
+          readme_section = base64.b64decode('IyMgUHVibGljIHJlcG9zaXRvcnkgYW5kIHdpa2kKClRoaXMgcmVwb3NpdG9yeSBpcyBpbnRlbnRpb25hbGx5IHB1YmxpYyBzbyBTYWJsZSBIYXJib3IgY2FuIHN1cHBvcnQgYSBicm93c2FibGUgaW5zdGl0dXRpb25hbCBhcmNoaXZlIGFuZCBhIHB1YmxpYyBHaXRIdWIgd2lraS4gVGhpcyBkZWNpc2lvbiBzdXBlcnNlZGVzIHRoZSBwcmVzZXJ2ZWQgYXJjaGl0ZWN0dXJlIGhhbmRvdmVyJ3MgZWFybGllciBkZXNjcmlwdGlvbiBvZiB0aGUgY2Fub25pY2FsIHJlcG9zaXRvcnkgYXMgcHJpdmF0ZS4KClRoZSB2ZXJzaW9uZWQgZG9jdW1lbnRzIHVuZGVyIGBkb2NzL2Nhbm9uL2AgcmVtYWluIHRoZSBjb250cm9sbGluZyBzb3VyY2Ugb2YgdHJ1dGguIFRoZSB3aWtpIGlzIGEgcHVibGljLWZhY2luZyByZWZlcmVuY2UgYW5kIG5hdmlnYXRpb24gbGF5ZXI7IGl0IG1heSBzdW1tYXJpemUgY2Fub24sIGJ1dCBpdCBkb2VzIG5vdCBpbmRlcGVuZGVudGx5IGNyZWF0ZSBvciBjaGFuZ2UgY2Fub24uCgpUaGVyZSB3aWxsIGJlICoqbm8gc3RhbmRhbG9uZSBFYXN0ZXItZWdnIGluZGV4LCBkZWNvZGVyLCBvciBleGhhdXN0aXZlIGV4cGxhbmF0aW9uIHBhZ2UqKi4gRWFzdGVyIGVnZ3MgcmVtYWluIGVtYmVkZGVkIGluIHRoZSBoaXN0b3J5LCBuYW1lcywgYXJ0aWZhY3RzLCBhbmQgb3BlcmF0aW5nIGxvcmUgZm9yIHJlYWRlcnMgdG8gZW5jb3VudGVyIG5hdHVyYWxseS4KCkhpZGRlbiBiZW5jaG1hcmsgdHJ1dGgsIGV2YWx1YXRpb24gb3JhY2xlcywgY3JlZGVudGlhbHMsIHVucmVsZWFzZWQgc2NlbmFyaW8gYW5zd2VycywgYW5kIG90aGVyIG1hdGVyaWFsIHdob3NlIHZhbHVlIGRlcGVuZHMgb24gbm9ucHVibGljIGFjY2VzcyBtdXN0IG5vdCBiZSBjb21taXR0ZWQgdG8gdGhpcyBwdWJsaWMgcmVwb3NpdG9yeSBvciBwdWJsaXNoZWQgaW4gdGhlIHdpa2kuCgpTZWUgW2Bkb2NzL2dvdmVybmFuY2UvUFVCTElDX1JFUE9TSVRPUllfQU5EX1dJS0lfUE9MSUNZLm1kYF0oZG9jcy9nb3Zlcm5hbmNlL1BVQkxJQ19SRVBPU0lUT1JZX0FORF9XSUtJX1BPTElDWS5tZCkuCgo=').decode('utf-8')
+          policy_text = base64.b64decode('IyBTQUJMRSBIQVJCT1Ig4oCUIFBVQkxJQyBSRVBPU0lUT1JZIEFORCBXSUtJIFBPTElDWQoKKipWZXJzaW9uOioqIDAuMS4wICAKKipEYXRlOioqIEF1Z3VzdCAzMSwgMjAyNiAgCioqU3RhdHVzOioqIExPQ0tFRCByZXBvc2l0b3J5LWdvdmVybmFuY2UgZGVjaXNpb24KCiMjIDEuIFB1YmxpYyB2aXNpYmlsaXR5IGlzIGludGVudGlvbmFsCgpUaGUgU2FibGUgSGFyYm9yIHJlcG9zaXRvcnkgaXMgaW50ZW50aW9uYWxseSBwdWJsaWMuIFB1YmxpYyB2aXNpYmlsaXR5IHN1cHBvcnRzIGEgYnJvd3NhYmxlIGluc3RpdHV0aW9uYWwgYXJjaGl2ZSwgdHJhbnNwYXJlbnQgcHJvamVjdCBoaXN0b3J5LCBhbmQgYSBwdWJsaWMgR2l0SHViIHdpa2kuCgpUaGlzIGRlY2lzaW9uIHN1cGVyc2VkZXMgdGhlIGVhcmxpZXIgc3RhdGVtZW50IGluIHRoZSBwcmVzZXJ2ZWQgY2Fub25pY2FsIGFyY2hpdGVjdHVyZSBoYW5kb3ZlciB0aGF0IGRlc2NyaWJlZCB0aGUgcmVwb3NpdG9yeSBhcyBwcml2YXRlLiBUaGUgaGFuZG92ZXIgcmVtYWlucyB1bmNoYW5nZWQgYXMgYSBoaXN0b3JpY2FsIHNvdXJjZTsgdGhpcyBwb2xpY3kgY29udHJvbHMgY3VycmVudCByZXBvc2l0b3J5IHZpc2liaWxpdHkuCgpQdWJsaWMgYWNjZXNzIGlzIG5vdCBhbiBvcGVuLXNvdXJjZSBsaWNlbnNlLiBVbmxlc3MgYSBzcGVjaWZpYyBmaWxlIHN0YXRlcyBvdGhlcndpc2UsIGFsbCByaWdodHMgYXJlIHJlc2VydmVkIGFuZCBubyBwZXJtaXNzaW9uIGlzIGdyYW50ZWQgdG8gY29weSwgbW9kaWZ5LCBkaXN0cmlidXRlLCBzdWJsaWNlbnNlLCBvciBjb21tZXJjaWFsaXplIHRoZSBjb250ZW50cy4KCiMjIDIuIENhbm9uIHJlbWFpbnMgaW4gdGhlIHJlcG9zaXRvcnkKClZlcnNpb25lZCBkb2N1bWVudHMgdW5kZXIgYGRvY3MvY2Fub24vYCBhcmUgdGhlIGNvbnRyb2xsaW5nIHNvdXJjZSBvZiB0cnV0aC4KClRoZSB3aWtpIGlzIHNlY29uZGFyeS4gSXRzIHB1cnBvc2VzIGFyZSB0bzoKCi0gcHJvdmlkZSByZWFkYWJsZSBpbnN0aXR1dGlvbmFsIGhpc3Rvcnk7Ci0gZXhwbGFpbiBwcm9kdWN0cywgcHJvZ3JhbXMsIHBlb3BsZSwgZmFjaWxpdGllcywgYW5kIHRlcm1pbm9sb2d5OwotIHByb3ZpZGUgY2hyb25vbG9naWNhbCBhbmQgdGhlbWF0aWMgbmF2aWdhdGlvbjsKLSBsaW5rIHJlYWRlcnMgdG8gY29udHJvbGxpbmcgY2Fub24gZG9jdW1lbnRzOwotIGRpc3Rpbmd1aXNoIExPQ0tFRCwgUFJPVklTSU9OQUwsIE9QRU4sIGFuZCBTVVBFUlNFREVEIG1hdGVyaWFsLgoKQSB3aWtpIHBhZ2UgZG9lcyBub3QgbG9jayBjYW5vbiBtZXJlbHkgYmVjYXVzZSBpdHMgcHJvc2UgaXMgcG9saXNoZWQuIFdoZW4gYSB3aWtpIHBhZ2UgY29uZmxpY3RzIHdpdGggYSBjb250cm9sbGluZyBjYW5vbiBkb2N1bWVudCwgdGhlIGNhbm9uIGRvY3VtZW50IGNvbnRyb2xzLgoKTWF0ZXJpYWwgY2hhbmdlcyB0byBoaXN0b3J5LCBpZGVudGl0eSwgY2hyb25vbG9neSwgb3IgZGVjaXNpb24gc3RhdGUgc2hvdWxkIGJlIG1hZGUgdGhyb3VnaCByZXBvc2l0b3J5IHJldmlldyBmaXJzdCBhbmQgcmVmbGVjdGVkIGluIHRoZSB3aWtpIGFmdGVyd2FyZC4KCiMjIDMuIE5vIEVhc3Rlci1lZ2cgaW5kZXgKClNhYmxlIEhhcmJvciB3aWxsIG5vdCBtYWludGFpbiBhIHN0YW5kYWxvbmUgRWFzdGVyLWVnZyBpbmRleCwgZGVjb2RlciwgY2hlY2tsaXN0LCBvciBleGhhdXN0aXZlIGV4cGxhbmF0aW9uIHBhZ2UuCgpFYXN0ZXIgZWdncyBtYXkgcmVtYWluIGVtYmVkZGVkIGluOgoKLSBuYW1lczsKLSBwcm9qZWN0IHRpdGxlczsKLSBlcXVpcG1lbnQgYW5kIG1vZGVsIGlkZW50aWZpZXJzOwotIGxvY2F0aW9uczsKLSBxdW90YXRpb25zOwotIGV4cGVuc2UtcmVwb3J0IHN0b3JpZXM7Ci0gaW50ZXJuYWwgdGVybWlub2xvZ3k7Ci0gYW5kIGNvcnBvcmF0ZSBhcmNoYWVvbG9neS4KClRoZSB3aWtpIG1heSBkZXNjcmliZSBhbiBhcnRpZmFjdCBuYXR1cmFsbHkgd2hlbiBpdCBiZWxvbmdzIGluIHRoZSBoaXN0b3J5LiBJdCBzaG91bGQgbm90IGRlY29kZSB0aGUgb3V0c2lkZSByZWZlcmVuY2UsIGlkZW50aWZ5IHRoZSByZWFsLXdvcmxkIGluc3BpcmF0aW9uLCBvciBnYXRoZXIgRWFzdGVyIGVnZ3MgaW50byBhIGRpc2NvdmVyYWJsZSBtYXN0ZXIgbGlzdC4KCiMjIDQuIFB1YmxpYy1jb250ZW50IGJvdW5kYXJ5CgpUaGUgZm9sbG93aW5nIG11c3Qgbm90IGJlIHB1Ymxpc2hlZCBpbiB0aGUgcHVibGljIHJlcG9zaXRvcnkgb3Igd2lraToKCi0gaGlkZGVuIGJlbmNobWFyayBncm91bmQgdHJ1dGg7Ci0gZXZhbHVhdGlvbiBvcmFjbGVzIGFuZCBhbnN3ZXIga2V5czsKLSBjcmVkZW50aWFscywgdG9rZW5zLCBrZXlzLCBvciBwcml2YXRlIGVuZHBvaW50czsKLSB1bnJlbGVhc2VkIHNjZW5hcmlvIHNvbHV0aW9uczsKLSBwcml2YXRlIHBlcnNvbmFsIGluZm9ybWF0aW9uIGFib3V0IHJlYWwgcGVvcGxlOwotIHByb3ByaWV0YXJ5IE5BSUxFWCBpbXBsZW1lbnRhdGlvbiBkZXRhaWxzIHRoYXQgYXJlIG5vdCBkZWxpYmVyYXRlbHkgcmVsZWFzZWQ7Ci0gY3VzdG9tZXItY29uZmlkZW50aWFsIG9yIGxlZ2FsbHkgcmVzdHJpY3RlZCBtYXRlcmlhbDsKLSBzZWN1cml0eS1zZW5zaXRpdmUgb3BlcmF0aW5nIGRldGFpbHMgd2hvc2UgZGlzY2xvc3VyZSB3b3VsZCBjcmVhdGUgYXZvaWRhYmxlIHJpc2suCgpXaGVuIFNhYmxlIEhhcmJvciByZXF1aXJlcyBoaWRkZW4gdHJ1dGggb3Igc3BvaWxlci1zZW5zaXRpdmUgYmVuY2htYXJrIG1hdGVyaWFsLCB0aGF0IG1hdGVyaWFsIG11c3QgbGl2ZSBpbiBhIHNlcGFyYXRlIGNvbnRyb2xsZWQgcmVwb3NpdG9yeSwgcHJpdmF0ZSByZWxlYXNlIHBhY2thZ2UsIG9yIGxvY2FsIGdlbmVyYXRpb24gZW52aXJvbm1lbnQuIFB1YmxpYyBjYW5vbiBtYXkgZGVzY3JpYmUgdGhlIGV4aXN0ZW5jZSBhbmQgYm91bmRhcmllcyBvZiBzdWNoIG1hdGVyaWFsIHdpdGhvdXQgcmV2ZWFsaW5nIGl0LgoKIyMgNS4gV2lraS1wYWdlIGRpc2NpcGxpbmUKClN1YnN0YW50aXZlIHdpa2kgcGFnZXMgc2hvdWxkIGlkZW50aWZ5OgoKLSB0aGUgcGFnZSdzIHN1YmplY3Q7Ci0gdGhlIGFwcGxpY2FibGUgY2Fub24gc3RhdGU7Ci0gdGhlIGNvbnRyb2xsaW5nIHJlcG9zaXRvcnkgc291cmNlIG9yIHNvdXJjZXM7Ci0gdGhlIGxhc3Qgc3Vic3RhbnRpdmUgcmV2aWV3IGRhdGU7Ci0gYW55IHVucmVzb2x2ZWQgb3IgcHJvdmlzaW9uYWwgZGV0YWlscy4KClRoZSB3aWtpIG1heSB1c2UgYSBtb3JlIG5hcnJhdGl2ZSBzdHlsZSB0aGFuIHRoZSBjYW5vbiBkb2N1bWVudHMsIGJ1dCBpdCBtdXN0IG5vdCBzaWxlbnRseSBjb2xsYXBzZSB1bmNlcnRhaW50eSwgcmV3cml0ZSBjaHJvbm9sb2d5LCBvciBjb252ZXJ0IGF1dGhvcmlhbCBpbnNwaXJhdGlvbiBpbnRvIGluLXdvcmxkIGZhY3QuCgojIyA2LiBJbml0aWFsIHdpa2kgc2NvcGUKClRoZSBpbml0aWFsIHdpa2kgbWF5IGNvdmVyOgoKLSBIb21lIGFuZCBuYXZpZ2F0aW9uOwotIGNvcnBvcmF0ZSBoaXN0b3J5OwotIEJsYWNrcmlkZ2UgYW5kIHRoZSBmb3VuZGluZzsKLSB0aGUgT3JpZ2luYWwgRWlnaHQgYW5kIGxhdGVyIHBlb3BsZTsKLSBGb3VuZHJ5IGFuZCBGb3VuZHJ5IEZpZWxkOwotIFRoZSBDcm9zc2luZzsKLSBFdmFsb24sIEVtYmVybGluZSwgYW5kIFdpbGxvdzsKLSBBdGxhcyBNZXJpZGlhbjsKLSBQYWxlIFN1biBhbmQgUmVkIFdhc2g7Ci0gUHJvamVjdCBDcmFkbGU7Ci0gQW1lcmljYW4gUmVzb3VyY2UgVXRpbGl0eSBhbmQgQlMmVDsKLSBBZHZpc29yeTsKLSBsb2NhdGlvbnMgYW5kIGZhY2lsaXRpZXM7Ci0gdGltZWxpbmU7Ci0gZ2xvc3Nhcnk7Ci0gY2Fub24gYW5kIGNvbnRpbnVpdHkgcG9saWN5LgoKQW4gRWFzdGVyLWVnZyBpbmRleCBpcyBleHByZXNzbHkgZXhjbHVkZWQuCg==').decode('utf-8')
+          register_section = base64.b64decode('CgotLS0KCiMgSi4gUmVwb3NpdG9yeSB2aXNpYmlsaXR5IGFuZCB3aWtpCgp8IElEIHwgRGVjaXNpb24gfCBTdGF0ZSB8IENhbm9uaWNhbCByZXN1bHQgfAp8LS0tfC0tLXwtLS18LS0tfAp8IFJFUC0wMDEgfCBSZXBvc2l0b3J5IHZpc2liaWxpdHkgfCBMT0NLRUQgfCBQdWJsaWMgdmlzaWJpbGl0eSBpcyBpbnRlbnRpb25hbCBzbyBTYWJsZSBIYXJib3IgY2FuIHN1cHBvcnQgYSBicm93c2FibGUgYXJjaGl2ZSBhbmQgcHVibGljIHdpa2kgfAp8IFJFUC0wMDIgfCBFYXJsaWVyIHByaXZhdGUtcmVwb3NpdG9yeSB3b3JkaW5nIHwgU1VQRVJTRURFRCB8IFByZXNlcnZlZCBoYW5kb3ZlciByZW1haW5zIGhpc3RvcmljYWw7IGN1cnJlbnQgcmVwb3NpdG9yeSBpcyBpbnRlbnRpb25hbGx5IHB1YmxpYyB8CnwgUkVQLTAwMyB8IENhbm9uIGF1dGhvcml0eSB8IExPQ0tFRCB8IFZlcnNpb25lZCByZXBvc2l0b3J5IGNhbm9uIGNvbnRyb2xzOyB3aWtpIGlzIGEgc2Vjb25kYXJ5IHByZXNlbnRhdGlvbiBhbmQgbmF2aWdhdGlvbiBsYXllciB8CnwgUkVQLTAwNCB8IFdpa2kgc3RhdHVzIGRpc2NpcGxpbmUgfCBMT0NLRUQgfCBXaWtpIHBhZ2VzIG11c3QgaWRlbnRpZnkgY29udHJvbGxpbmcgc291cmNlcyBhbmQgcHJlc2VydmUgTE9DS0VELCBQUk9WSVNJT05BTCwgT1BFTiwgYW5kIFNVUEVSU0VERUQgZGlzdGluY3Rpb25zIHwKfCBSRVAtMDA1IHwgRWFzdGVyLWVnZyBpbmRleCB8IExPQ0tFRCBuZWdhdGl2ZSBkZWNpc2lvbiB8IE5vIHN0YW5kYWxvbmUgaW5kZXgsIGRlY29kZXIsIGNoZWNrbGlzdCwgb3IgZXhoYXVzdGl2ZSBleHBsYW5hdGlvbiBwYWdlIHwKfCBSRVAtMDA2IHwgUHVibGljLWNvbnRlbnQgYm91bmRhcnkgfCBMT0NLRUQgfCBIaWRkZW4gYmVuY2htYXJrIHRydXRoLCBldmFsdWF0aW9uIG9yYWNsZXMsIHNlY3JldHMsIHVucmVsZWFzZWQgYW5zd2VycywgYW5kIHJlc3RyaWN0ZWQgbWF0ZXJpYWwgcmVtYWluIG91dHNpZGUgdGhlIHB1YmxpYyByZXBvc2l0b3J5IGFuZCB3aWtpIHwKfCBSRVAtMDA3IHwgTGljZW5zZSBwb3N0dXJlIHwgTE9DS0VEIHwgUHVibGljIHZpc2liaWxpdHkgZG9lcyBub3QgZ3JhbnQgYW4gb3Blbi1zb3VyY2Ugb3IgY29udGVudCBsaWNlbnNlOyBhbGwgcmlnaHRzIHJlbWFpbiByZXNlcnZlZCB1bmxlc3Mgc3RhdGVkIG90aGVyd2lzZSB8CnwgUkVQLTAwOCB8IFdpa2kgaW1wbGVtZW50YXRpb24gfCBPUEVOIHwgUGFnZSBkZXNpZ24sIGluaXRpYWwgcHVibGljYXRpb24gc2VxdWVuY2UsIGFuZCBvbmdvaW5nIHN5bmNocm9uaXphdGlvbiBwcm9jZXNzIHJlbWFpbiB0byBiZSBidWlsdCB8Cg==').decode('utf-8')
+          changelog_section = base64.b64decode('CgotLS0KCiMjIENIRy0wMTcg4oCUIFB1YmxpYyByZXBvc2l0b3J5IGFuZCB3aWtpIHBvc3R1cmUKCioqUHJpb3IgZGlyZWN0aW9uOioqIFRoZSBwcmVzZXJ2ZWQgYXJjaGl0ZWN0dXJlIGhhbmRvdmVyIGRlc2NyaWJlZCB0aGUgY2Fub25pY2FsIFNhYmxlIEhhcmJvciByZXBvc2l0b3J5IGFzIHByaXZhdGUuCgoqKk5ldyBjYW5vbiBhbmQgZ292ZXJuYW5jZSBkZWNpc2lvbjoqKgoKLSBUaGUgcmVwb3NpdG9yeSBpcyBpbnRlbnRpb25hbGx5IHB1YmxpYyB0byBzdXBwb3J0IGEgYnJvd3NhYmxlIGluc3RpdHV0aW9uYWwgYXJjaGl2ZSBhbmQgcHVibGljIEdpdEh1YiB3aWtpLgotIFZlcnNpb25lZCByZXBvc2l0b3J5IGRvY3VtZW50cyByZW1haW4gY29udHJvbGxpbmcgY2Fub247IHRoZSB3aWtpIGlzIGEgc2Vjb25kYXJ5IHB1YmxpYy1mYWNpbmcgcmVmZXJlbmNlIGFuZCBuYXZpZ2F0aW9uIGxheWVyLgotIFB1YmxpYyB2aXNpYmlsaXR5IGRvZXMgbm90IGNyZWF0ZSBhbiBvcGVuLXNvdXJjZSBvciBjb250ZW50IGxpY2Vuc2UuCi0gSGlkZGVuIGJlbmNobWFyayB0cnV0aCwgZXZhbHVhdGlvbiBvcmFjbGVzLCBjcmVkZW50aWFscywgdW5yZWxlYXNlZCBhbnN3ZXJzLCBhbmQgcmVzdHJpY3RlZCBtYXRlcmlhbCByZW1haW4gb3V0c2lkZSB0aGUgcHVibGljIHJlcG9zaXRvcnkgYW5kIHdpa2kuCi0gTm8gc3RhbmRhbG9uZSBFYXN0ZXItZWdnIGluZGV4LCBkZWNvZGVyLCBjaGVja2xpc3QsIG9yIGV4aGF1c3RpdmUgZXhwbGFuYXRpb24gcGFnZSB3aWxsIGJlIGNyZWF0ZWQuCgoqKlN0YXRlOioqIExPQ0tFRCBzdXBlcnNlc3Npb24gIAoqKlJlYXNvbjoqKiBQdWJsaWMgYWNjZXNzaWJpbGl0eSBhbmQgYSByaWNoIHdpa2kgYXJlIGRlbGliZXJhdGUgcHJvamVjdCBmZWF0dXJlcywgd2hpbGUgY2Fub24gYXV0aG9yaXR5LCBpbnRlbGxlY3R1YWwtcHJvcGVydHkgcG9zdHVyZSwgc3BvaWxlciBjb250cm9sLCBhbmQgZW1iZWRkZWQgbG9yZSBzdGlsbCByZXF1aXJlIGV4cGxpY2l0IGJvdW5kYXJpZXMuCg==').decode('utf-8')
 
           readme = Path('README.md')
           text = readme.read_text(encoding='utf-8')
           marker = '## Separation from NAILEX\n'
-          section = '''## Public repository and wiki
-
-This repository is intentionally public so Sable Harbor can support a browsable institutional archive and a public GitHub wiki. This decision supersedes the preserved architecture handover's earlier description of the canonical repository as private.
-
-The versioned documents under `docs/canon/` remain the controlling source of truth. The wiki is a public-facing reference and navigation layer; it may summarize canon, but it does not independently create or change canon.
-
-There will be **no standalone Easter-egg index, decoder, or exhaustive explanation page**. Easter eggs remain embedded in the history, names, artifacts, and operating lore for readers to encounter naturally.
-
-Hidden benchmark truth, evaluation oracles, credentials, unreleased scenario answers, and other material whose value depends on nonpublic access must not be committed to this public repository or published in the wiki.
-
-See [`docs/governance/PUBLIC_REPOSITORY_AND_WIKI_POLICY.md`](docs/governance/PUBLIC_REPOSITORY_AND_WIKI_POLICY.md).
-
-'''
           if '## Public repository and wiki\n' not in text:
               if marker not in text:
                   raise SystemExit('README insertion marker not found')
-              text = text.replace(marker, section + marker, 1)
-              readme.write_text(text, encoding='utf-8')
+              readme.write_text(text.replace(marker, readme_section + marker, 1), encoding='utf-8')
 
           policy = Path('docs/governance/PUBLIC_REPOSITORY_AND_WIKI_POLICY.md')
           policy.parent.mkdir(parents=True, exist_ok=True)
-          policy.write_text('''# SABLE HARBOR — PUBLIC REPOSITORY AND WIKI POLICY
-
-**Version:** 0.1.0  
-**Date:** August 31, 2026  
-**Status:** LOCKED repository-governance decision
-
-## 1. Public visibility is intentional
-
-The Sable Harbor repository is intentionally public. Public visibility supports a browsable institutional archive, transparent project history, and a public GitHub wiki.
-
-This decision supersedes the earlier statement in the preserved canonical architecture handover that described the repository as private. The handover remains unchanged as a historical source; this policy controls current repository visibility.
-
-Public access is not an open-source license. Unless a specific file states otherwise, all rights are reserved and no permission is granted to copy, modify, distribute, sublicense, or commercialize the contents.
-
-## 2. Canon remains in the repository
-
-Versioned documents under `docs/canon/` are the controlling source of truth.
-
-The wiki is secondary. Its purposes are to:
-
-- provide readable institutional history;
-- explain products, programs, people, facilities, and terminology;
-- provide chronological and thematic navigation;
-- link readers to controlling canon documents;
-- distinguish LOCKED, PROVISIONAL, OPEN, and SUPERSEDED material.
-
-A wiki page does not lock canon merely because its prose is polished. When a wiki page conflicts with a controlling canon document, the canon document controls.
-
-Material changes to history, identity, chronology, or decision state should be made through repository review first and reflected in the wiki afterward.
-
-## 3. No Easter-egg index
-
-Sable Harbor will not maintain a standalone Easter-egg index, decoder, checklist, or exhaustive explanation page.
-
-Easter eggs may remain embedded in:
-
-- names;
-- project titles;
-- equipment and model identifiers;
-- locations;
-- quotations;
-- expense-report stories;
-- internal terminology;
-- and corporate archaeology.
-
-The wiki may describe an artifact naturally when it belongs in the history. It should not decode the outside reference, identify the real-world inspiration, or gather Easter eggs into a discoverable master list.
-
-## 4. Public-content boundary
-
-The following must not be published in the public repository or wiki:
-
-- hidden benchmark ground truth;
-- evaluation oracles and answer keys;
-- credentials, tokens, keys, or private endpoints;
-- unreleased scenario solutions;
-- private personal information about real people;
-- proprietary NAILEX implementation details that are not deliberately released;
-- customer-confidential or legally restricted material;
-- security-sensitive operating details whose disclosure would create avoidable risk.
-
-When Sable Harbor requires hidden truth or spoiler-sensitive benchmark material, that material must live in a separate controlled repository, private release package, or local generation environment. Public canon may describe the existence and boundaries of such material without revealing it.
-
-## 5. Wiki-page discipline
-
-Substantive wiki pages should identify:
-
-- the page's subject;
-- the applicable canon state;
-- the controlling repository source or sources;
-- the last substantive review date;
-- any unresolved or provisional details.
-
-The wiki may use a more narrative style than the canon documents, but it must not silently collapse uncertainty, rewrite chronology, or convert authorial inspiration into in-world fact.
-
-## 6. Initial wiki scope
-
-The initial wiki may cover:
-
-- Home and navigation;
-- corporate history;
-- Blackridge and the founding;
-- the Original Eight and later people;
-- Foundry and Foundry Field;
-- The Crossing;
-- Evalon, Emberline, and Willow;
-- Atlas Meridian;
-- Pale Sun and Red Wash;
-- Project Cradle;
-- American Resource Utility and BS&T;
-- Advisory;
-- locations and facilities;
-- timeline;
-- glossary;
-- canon and continuity policy.
-
-An Easter-egg index is expressly excluded.
-''', encoding='utf-8')
+          policy.write_text(policy_text, encoding='utf-8')
 
           register = Path('docs/canon/DECISION_REGISTER.md')
           text = register.read_text(encoding='utf-8').rstrip() + '\n'
           if '# J. Repository visibility and wiki' not in text:
-              text += '''
-
----
-
-# J. Repository visibility and wiki
-
-| ID | Decision | State | Canonical result |
-|---|---|---|---|
-| REP-001 | Repository visibility | LOCKED | Public visibility is intentional so Sable Harbor can support a browsable archive and public wiki |
-| REP-002 | Earlier private-repository wording | SUPERSEDED | Preserved handover remains historical; current repository is intentionally public |
-| REP-003 | Canon authority | LOCKED | Versioned repository canon controls; wiki is a secondary presentation and navigation layer |
-| REP-004 | Wiki status discipline | LOCKED | Wiki pages must identify controlling sources and preserve LOCKED, PROVISIONAL, OPEN, and SUPERSEDED distinctions |
-| REP-005 | Easter-egg index | LOCKED negative decision | No standalone index, decoder, checklist, or exhaustive explanation page |
-| REP-006 | Public-content boundary | LOCKED | Hidden benchmark truth, evaluation oracles, secrets, unreleased answers, and restricted material remain outside the public repository and wiki |
-| REP-007 | License posture | LOCKED | Public visibility does not grant an open-source or content license; all rights remain reserved unless stated otherwise |
-| REP-008 | Wiki implementation | OPEN | Page design, initial publication sequence, and ongoing synchronization process remain to be built |
-'''
-              register.write_text(text, encoding='utf-8')
+              register.write_text(text + register_section, encoding='utf-8')
 
           changelog = Path('docs/canon/CANON_CHANGELOG_v0.2.md')
           text = changelog.read_text(encoding='utf-8').rstrip() + '\n'
           if '## CHG-017 — Public repository and wiki posture' not in text:
-              text += '''
-
----
-
-## CHG-017 — Public repository and wiki posture
-
-**Prior direction:** The preserved architecture handover described the canonical Sable Harbor repository as private.
-
-**New canon and governance decision:**
-
-- The repository is intentionally public to support a browsable institutional archive and public GitHub wiki.
-- Versioned repository documents remain controlling canon; the wiki is a secondary public-facing reference and navigation layer.
-- Public visibility does not create an open-source or content license.
-- Hidden benchmark truth, evaluation oracles, credentials, unreleased answers, and restricted material remain outside the public repository and wiki.
-- No standalone Easter-egg index, decoder, checklist, or exhaustive explanation page will be created.
-
-**State:** LOCKED supersession  
-**Reason:** Public accessibility and a rich wiki are deliberate project features, while canon authority, intellectual-property posture, spoiler control, and embedded lore still require explicit boundaries.
-'''
-              changelog.write_text(text, encoding='utf-8')
+              changelog.write_text(text + changelog_section, encoding='utf-8')
           PY
 
       - name: Commit housekeeping
