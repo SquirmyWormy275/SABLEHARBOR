@@ -46,7 +46,9 @@
   database is not committed.
 - Milestone 2 remaining P0: direct run keys on applicable subledger/operational facts, selectors
   across all reports/queries/workbooks/exports, run-scoped uniqueness for repeat scenarios with
-  different seeds/versions, and PostgreSQL proof. Resume in the subledger models and reporting
+  different seeds/versions, and PostgreSQL downgrade/upgrade plus schema-fingerprint proof. Remote
+  checkpoint CI passed two PostgreSQL upgrade/generate/validate jobs (27s and 29s), two SQLite jobs
+  (31s and 32s), and organization validation (7s). Resume in the subledger models and reporting
   interfaces before expanding the monthly three-statement chains.
 - Human/canon review: legal entity chain, acquisition/PPA and financing terms, mine/ARU driver ranges, board and named executive structure. These remain deliberately reversible and do not block platform operation.
 - Uncommitted files: inspect with `git status --short`
