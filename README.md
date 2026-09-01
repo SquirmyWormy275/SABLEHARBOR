@@ -18,7 +18,7 @@ Sable Harbor is the canonical synthetic enterprise and reusable business-world s
 - [Finance/database platform](docs/finance/README.md)
 - [Repository audit](docs/audit/REPOSITORY_AUDIT_2026-09-01.md)
 
-[![Sable Harbor enterprise organization chart](docs/organization/assets/enterprise-organization-2026.svg)](docs/organization/README.md)
+## Enterprise organization
 
 ## Explore by business line
 
