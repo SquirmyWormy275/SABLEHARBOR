@@ -238,7 +238,10 @@ def generate_baseline(
             jurisdiction="N/A",
         ),
     ]
-    session.add_all(entities)
+    session.add(entities[0])
+    session.flush()
+    session.add_all(entities[1:])
+    session.flush()
     for code, name, cls, normal in ACCOUNTS:
         session.add(
             Account(

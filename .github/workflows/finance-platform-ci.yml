@@ -17,6 +17,7 @@ jobs:
       - run: uv run ruff check .
       - run: uv run mypy src
       - run: uv run pytest
+      - run: mkdir -p var
       - run: SHFIN_DATABASE_URL=sqlite:///var/ci-standard.db uv run alembic upgrade head
       - run: SHFIN_DATABASE_URL=sqlite:///var/ci-standard.db uv run shfin generate --profile standard --scenario base --seed 20260831
       - run: SHFIN_DATABASE_URL=sqlite:///var/ci-standard.db uv run shfin validate

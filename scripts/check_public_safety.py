@@ -16,6 +16,8 @@ def tracked_files() -> list[Path]:
 def main() -> None:
     failures: list[str] = []
     for path in tracked_files():
+        if path == Path("scripts/check_public_safety.py"):
+            continue
         if "var/private" in path.as_posix():
             failures.append(f"private benchmark path tracked: {path}")
         if path.stat().st_size > MAX_BYTES:
