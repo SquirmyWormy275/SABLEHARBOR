@@ -1,0 +1,100 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+BRANCH="finance/enterprise-financial-platform-v0.1"
+BUNDLE="ops/codex/supervisor.bundle.zip"
+BOOTSTRAP="scripts/bootstrap-codex-autopilot"
+ROOT="$(git rev-parse --show-toplevel 2>/dev/null || true)"
+
+if [[ -z "$ROOT" ]]; then
+  echo "Run this from anywhere inside the local SABLEHARBOR repository." >&2
+  exit 2
+fi
+cd "$ROOT"
+
+for command in git gh codex uv python3; do
+  command -v "$command" >/dev/null 2>&1 || {
+    echo "Missing required command: $command" >&2
+    exit 2
+  }
+done
+
+if ! codex exec --help 2>&1 | grep -q -- '--approve-for-me'; then
+  echo "Your Codex CLI is too old for the autonomous approval-review mode. Update Codex, then rerun this command." >&2
+  exit 2
+fi
+
+if [[ -n "$(git status --porcelain)" ]]; then
+  echo "The worktree is not clean. Commit or stash unrelated work, then rerun." >&2
+  git status --short
+  exit 2
+fi
+
+gh auth status >/dev/null 2>&1 || {
+  echo "GitHub CLI is not authenticated. Run: gh auth login" >&2
+  exit 2
+}
+gh auth setup-git >/dev/null 2>&1 || true
+
+git fetch origin --prune
+if [[ "$(git branch --show-current)" != "$BRANCH" ]]; then
+  if git show-ref --verify --quiet "refs/heads/$BRANCH"; then
+    git switch "$BRANCH"
+  else
+    git switch --track -c "$BRANCH" "origin/$BRANCH"
+  fi
+fi
+git pull --ff-only origin "$BRANCH"
+
+[[ -f "$BUNDLE" ]] || {
+  echo "Supervisor bundle is missing from $BRANCH: $BUNDLE" >&2
+  exit 2
+}
+
+if [[ -e tools/codex_supervisor/supervisor.py || -e ops/codex/program.json ]]; then
+  echo "A supervisor installation already exists. Use: scripts/codex-supervisor start" >&2
+  exit 2
+fi
+
+python3 - "$BUNDLE" "$ROOT" <<'PY'
+from pathlib import Path
+import sys
+import zipfile
+
+archive = Path(sys.argv[1]).resolve()
+destination = Path(sys.argv[2]).resolve()
+with zipfile.ZipFile(archive) as bundle:
+    for member in bundle.infolist():
+        target = (destination / member.filename).resolve()
+        if target != destination and destination not in target.parents:
+            raise SystemExit(f"Unsafe bundle path: {member.filename}")
+    bundle.extractall(destination)
+PY
+
+chmod +x scripts/codex-supervisor tools/codex_supervisor/supervisor.py
+if ! grep -qxF '.codex/runtime/' .gitignore; then
+  printf '\n# Local Codex supervisor runtime\n.codex/runtime/\n' >> .gitignore
+fi
+
+python3 -m py_compile tools/codex_supervisor/supervisor.py
+bash -n scripts/codex-supervisor
+python3 - <<'PY'
+import json
+from pathlib import Path
+for path in Path('ops/codex').rglob('*.json'):
+    json.loads(path.read_text(encoding='utf-8'))
+print('Supervisor control files validated.')
+PY
+
+git rm -- "$BUNDLE" "$BOOTSTRAP"
+git add .gitignore docs/finance/CODEX_SUPERVISOR_STATUS.md ops/codex scripts/codex-supervisor tools/codex_supervisor
+git commit -m "chore(codex): install autonomous build and review supervisor"
+git push origin "$BRANCH"
+
+scripts/codex-supervisor start
+
+echo
+echo "Sable Harbor Codex Autopilot is installed and running."
+echo "Status: scripts/codex-supervisor status"
+echo "Logs:   scripts/codex-supervisor logs"
+echo "Stop:   scripts/codex-supervisor stop"
