@@ -1,12 +1,13 @@
+<p align="center"><img src="https://raw.githubusercontent.com/SquirmyWormy275/SABLEHARBOR/main/assets/brand/logos/red-wash-mine__primary-horizontal.svg" alt="Red Wash Mine" width="700" /></p>
+
 # Red Wash Mine
 
-![Red Wash Mine](https://raw.githubusercontent.com/SquirmyWormy275/SABLEHARBOR/main/assets/brand/logos/red-wash-mine__primary-horizontal.svg)
+Red Wash is the operating asset and environment under Pale Sun. The accepted name and relationship do not establish reserves, permits, ownership, mine plan, production, workforce, closure obligations, or economics.
 
-**Role:** operating asset under Pale Sun  
-**Canon state:** LOCKED fictional mine name; detailed asset facts remain OPEN.
+[![Pale Sun and Red Wash organization](https://raw.githubusercontent.com/SquirmyWormy275/SABLEHARBOR/main/docs/organization/assets/pale-sun-red-wash-organization-2026.svg)](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/main/docs/organization/PALE_SUN_RED_WASH_ORGANIZATION.md)
 
-Red Wash is the fictional underground Wyoming uranium mine operated by Pale Sun. Its role in the canon is to force Sable Harbor's representational systems to confront physical reality, operating authority, environmental history, and incomplete evidence.
+- [Full mine dossier](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/main/docs/business-lines/RED_WASH_MINE.md)
+- [Pale Sun](Pale-Sun)
+- [Red Wash / Pale Sun lockup](Red-Wash---Pale-Sun)
 
-The wiki summarizes the controlling repository canon; it does not create or change canon.
-
-[Open the repository reference page](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/main/docs/business-lines/RED_WASH_MINE.md)
+PR #9 provides shared `RWH` / `PALE_SUN` / `RED_WASH` release-candidate structures for production, inventory, shipments, assets, ARO, debt, and journals. A standalone mine database, inventory/asset register, reserve report, financial package, and letterhead are **not materialized**.

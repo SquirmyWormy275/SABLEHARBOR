@@ -1,12 +1,11 @@
+<p align="center"><img src="https://raw.githubusercontent.com/SquirmyWormy275/SABLEHARBOR/main/assets/brand/logos/foundry__primary-horizontal.svg" alt="Foundry" width="700" /></p>
+
 # Foundry
 
-![Foundry](https://raw.githubusercontent.com/SquirmyWormy275/SABLEHARBOR/main/assets/brand/logos/foundry__primary-horizontal.svg)
+Foundry is the reusable product substrate underlying Foundry Field; it is not a separate current operating company.
 
-**Role:** supplemental product substrate  
-**Canon state:** LOCKED distinction from Foundry Field.
+- [Full component dossier](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/main/docs/business-lines/FOUNDRY.md)
+- [Foundry Field](Foundry-Field)
+- [Shared organization](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/main/docs/organization/FOUNDRY_FIELD_ORGANIZATION.md)
 
-Foundry is the underlying relationship, meaning, integration, provenance, and workflow substrate. Its graph represents relationships and local meaning without pretending every object has one permanent identifier or every question has one context-free answer.
-
-The wiki summarizes the controlling repository canon; it does not create or change canon.
-
-[Open the repository reference page](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/main/docs/business-lines/FOUNDRY.md)
+No distinct accepted entity, segment ledger, component inventory, financial package, database, or letterhead is presently published. Any future package must preserve version/provenance lineage and reconcile shared costs to Foundry Field and the enterprise.
