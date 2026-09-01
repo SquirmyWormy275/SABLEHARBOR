@@ -20,9 +20,10 @@ def test_baseline_generation_is_idempotent_and_workbook_reopens(tmp_path: Path) 
         session.commit()
         assert second == first
         assert session.scalar(select(func.count(JournalEntry.id))) == entry_count
-        assert session.scalar(
-            select(func.count(Worker.id)).where(Worker.worker_type == "EMPLOYEE")
-        ) == 708
+        assert (
+            session.scalar(select(func.count(Worker.id)).where(Worker.worker_type == "EMPLOYEE"))
+            == 708
+        )
         output = build_workbook(session, tmp_path / "model.xlsx")
     workbook = load_workbook(output, data_only=False, read_only=True)
     assert {

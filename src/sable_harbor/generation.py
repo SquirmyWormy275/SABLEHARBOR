@@ -808,6 +808,80 @@ def generate_standard(
                             provenance=f"{availability} from versioned annual driver",
                         )
                     )
+    ic = D("3000000")
+    ic_period = "2026-12"
+    aru_book = books["ARU"]
+    rwh_book = books["RWH"]
+    cons_book = books["CONS"]
+    aru_period = session.scalar(
+        select(FiscalPeriod).where(
+            FiscalPeriod.book_id == aru_book.id, FiscalPeriod.code == ic_period
+        )
+    )
+    rwh_period = session.scalar(
+        select(FiscalPeriod).where(
+            FiscalPeriod.book_id == rwh_book.id, FiscalPeriod.code == ic_period
+        )
+    )
+    cons_period = session.scalar(
+        select(FiscalPeriod).where(
+            FiscalPeriod.book_id == cons_book.id, FiscalPeriod.code == ic_period
+        )
+    )
+    if aru_period is not None and rwh_period is not None:
+        key = f"{marker}:ARU:RWH:IC"
+        _post(
+            session,
+            aru_book.id,
+            aru_period.id,
+            f"{key}:SELLER",
+            "ARU freight billed to Red Wash",
+            [
+                _line(key, 1, "1100", debit=ic, segment="ARU_BST", counterparty="RWH"),
+                _line(key, 2, "4090", credit=ic, segment="ARU_BST", counterparty="RWH"),
+            ],
+            entry_date=aru_period.ends_on,
+            source_type="intercompany_service",
+        )
+        _post(
+            session,
+            rwh_book.id,
+            rwh_period.id,
+            f"{key}:BUYER",
+            "Red Wash freight purchased from ARU",
+            [
+                _line(key, 3, "6400", debit=ic, segment="PALE_SUN", counterparty="ARU"),
+                _line(key, 4, "2000", credit=ic, segment="PALE_SUN", counterparty="ARU"),
+            ],
+            entry_date=rwh_period.ends_on,
+            source_type="intercompany_service",
+        )
+    if cons_period is None:
+        cons_period = FiscalPeriod(
+            id=stable_id("period", f"{cons_book.id}:{ic_period}"),
+            book_id=cons_book.id,
+            code=ic_period,
+            starts_on=date(2026, 12, 1),
+            ends_on=date(2026, 12, 31),
+        )
+        session.add(cons_period)
+        session.flush()
+    key = f"{marker}:CONS:IC_ELIM"
+    _post(
+        session,
+        cons_book.id,
+        cons_period.id,
+        key,
+        "Eliminate ARU and Red Wash intercompany freight",
+        [
+            _line(key, 1, "4090", debit=ic, segment="ELIMINATION", counterparty="ARU"),
+            _line(key, 2, "6400", credit=ic, segment="ELIMINATION", counterparty="RWH"),
+            _line(key, 3, "2000", debit=ic, segment="ELIMINATION", counterparty="RWH"),
+            _line(key, 4, "1100", credit=ic, segment="ELIMINATION", counterparty="ARU"),
+        ],
+        entry_date=cons_period.ends_on,
+        source_type="consolidation_elimination",
+    )
     session.flush()
     return {"scenario": scenario, "profile": "standard", "seed": seed, "periods": 48}
 
