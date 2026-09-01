@@ -31,6 +31,18 @@ The prior `architecture/corporate-operating-model-v0.1` branch is a noncontrolli
 
 No 2026 headcount, revenue, funding, office, legal-entity, reporting-line, or product-P&L value is locked by the corporate-lore branch.
 
+## Public repository and wiki
+
+This repository is intentionally public so Sable Harbor can support a browsable institutional archive and a public GitHub wiki. This decision supersedes the preserved architecture handover's earlier description of the canonical repository as private.
+
+The versioned documents under `docs/canon/` remain the controlling source of truth. The wiki is a public-facing reference and navigation layer; it may summarize canon, but it does not independently create or change canon.
+
+There will be **no standalone Easter-egg index, decoder, or exhaustive explanation page**. Easter eggs remain embedded in the history, names, artifacts, and operating lore for readers to encounter naturally.
+
+Hidden benchmark truth, evaluation oracles, credentials, unreleased scenario answers, and other material whose value depends on nonpublic access must not be committed to this public repository or published in the wiki.
+
+See [`docs/governance/PUBLIC_REPOSITORY_AND_WIKI_POLICY.md`](docs/governance/PUBLIC_REPOSITORY_AND_WIKI_POLICY.md).
+
 ## Separation from NAILEX
 
 NAILEX is a separate proprietary project. It should consume explicit, versioned Sable Harbor exports or benchmark packages rather than silently depending on the entire lore repository.

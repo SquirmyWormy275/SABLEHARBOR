@@ -202,3 +202,19 @@
 | ID-006 | Legal and reporting structure | OPEN | Separate corporate-structure workstream |
 | ID-007 | Quantitative operating model | OPEN | Headcount, revenue, funding, offices, P&Ls, acquisition capital |
 | ID-008 | Prior operating-model branch | PROVISIONAL/NONCONTROLLING | Must be revised around new lore before canonization |
+
+
+---
+
+# J. Repository visibility and wiki
+
+| ID | Decision | State | Canonical result |
+|---|---|---|---|
+| REP-001 | Repository visibility | LOCKED | Public visibility is intentional so Sable Harbor can support a browsable archive and public wiki |
+| REP-002 | Earlier private-repository wording | SUPERSEDED | Preserved handover remains historical; current repository is intentionally public |
+| REP-003 | Canon authority | LOCKED | Versioned repository canon controls; wiki is a secondary presentation and navigation layer |
+| REP-004 | Wiki status discipline | LOCKED | Wiki pages must identify controlling sources and preserve LOCKED, PROVISIONAL, OPEN, and SUPERSEDED distinctions |
+| REP-005 | Easter-egg index | LOCKED negative decision | No standalone index, decoder, checklist, or exhaustive explanation page |
+| REP-006 | Public-content boundary | LOCKED | Hidden benchmark truth, evaluation oracles, secrets, unreleased answers, and restricted material remain outside the public repository and wiki |
+| REP-007 | License posture | LOCKED | Public visibility does not grant an open-source or content license; all rights remain reserved unless stated otherwise |
+| REP-008 | Wiki implementation | OPEN | Page design, initial publication sequence, and ongoing synchronization process remain to be built |

@@ -235,3 +235,21 @@ Conceptual units:
 
 **State:** OPEN quantitative workstream  
 **Action:** Create a revised Corporate Fundamentals and 2026 Operating Model in a separate session.
+
+
+---
+
+## CHG-017 — Public repository and wiki posture
+
+**Prior direction:** The preserved architecture handover described the canonical Sable Harbor repository as private.
+
+**New canon and governance decision:**
+
+- The repository is intentionally public to support a browsable institutional archive and public GitHub wiki.
+- Versioned repository documents remain controlling canon; the wiki is a secondary public-facing reference and navigation layer.
+- Public visibility does not create an open-source or content license.
+- Hidden benchmark truth, evaluation oracles, credentials, unreleased answers, and restricted material remain outside the public repository and wiki.
+- No standalone Easter-egg index, decoder, checklist, or exhaustive explanation page will be created.
+
+**State:** LOCKED supersession  
+**Reason:** Public accessibility and a rich wiki are deliberate project features, while canon authority, intellectual-property posture, spoiler control, and embedded lore still require explicit boundaries.
