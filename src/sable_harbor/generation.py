@@ -149,14 +149,16 @@ def _post(
     key: str,
     description: str,
     lines: list[JournalLine],
+    entry_date: date = date(2026, 12, 31),
+    source_type: str = "deterministic_generation",
 ) -> None:
     entry = JournalEntry(
         id=stable_id("journal", key),
         book_id=book_id,
         period_id=period_id,
-        entry_date=date(2026, 12, 31),
+        entry_date=entry_date,
         description=description,
-        source_type="deterministic_generation",
+        source_type=source_type,
         source_id=stable_id("event", key),
         lines=lines,
     )
@@ -165,7 +167,10 @@ def _post(
 
 
 def generate_baseline(
-    session: Session, seed: int = 20260831, scenario: str = "base"
+    session: Session,
+    seed: int = 20260831,
+    scenario: str = "base",
+    post_summary: bool = True,
 ) -> dict[str, int | str]:
     """Generate a deterministic, public-safe FY2026 enterprise instance."""
     marker = stable_id("scenario", f"{scenario}:{seed}")
@@ -270,7 +275,7 @@ def generate_baseline(
                 id=period_id,
                 book_id=book_id,
                 code="2026-12",
-                starts_on=date(2026, 1, 1),
+                starts_on=date(2026, 12, 1),
                 ends_on=date(2026, 12, monthrange(2026, 12)[1]),
             )
         )
@@ -492,6 +497,23 @@ def generate_baseline(
             )
         )
 
+    if not post_summary:
+        session.add(
+            ScenarioValue(
+                id=stable_id("scenario_value", f"{marker}:marker"),
+                scenario_code=scenario,
+                metric_code="marker",
+                entity_code="CONSOLIDATED",
+                period_code="2023-2026",
+                amount=D("1"),
+                unit="count",
+                fact_state=FactState.DERIVED,
+                provenance="standard monthly generation marker",
+            )
+        )
+        session.flush()
+        return {"scenario": scenario, "seed": seed, "employees": 708, "contractors": 61}
+
     # Summary ledgers: cash-realized revenue and expense; acquisition/opening positions.
     for plan in PLANS:
         book, period = periods[plan.code]
@@ -627,3 +649,138 @@ def generate_baseline(
         )
     session.flush()
     return {"scenario": scenario, "seed": seed, "employees": 708, "contractors": 61}
+
+
+def generate_standard(
+    session: Session, seed: int = 20260831, scenario: str = "base"
+) -> dict[str, int | str]:
+    """Generate deterministic monthly 2023–2026 ledgers and operating driver values."""
+    standard_scenario = f"standard_{scenario}"
+    marker = stable_id("scenario", f"{standard_scenario}:{seed}")
+    marker_id = stable_id("scenario_value", f"{marker}:marker")
+    if session.get(ScenarioValue, marker_id):
+        return {
+            "scenario": scenario,
+            "profile": "standard",
+            "seed": seed,
+            "periods": 48,
+        }
+    generate_baseline(session, seed=seed, scenario=standard_scenario, post_summary=False)
+    books = {
+        entity.code: book
+        for entity, book in session.execute(
+            select(LegalEntity, AccountingBook).join(
+                AccountingBook, AccountingBook.entity_id == LegalEntity.id
+            )
+        )
+    }
+    yearly = {
+        2023: {"SHI": (D("67200000"), D("75000000"))},
+        2024: {"SHI": (D("85700000"), D("95000000"))},
+        2025: {
+            "SHI": (D("104900000"), D("115000000")),
+            "RWH": (D("10000000"), D("11000000")),
+        },
+        2026: {
+            "SHI": (D("130300000"), D("140800000")),
+            "RWH": (D("24700000"), D("22300000")),
+            "ARU": (D("23600000"), D("20300000")),
+        },
+    }
+    revenue_accounts = {"SHI": "4000", "RWH": "4030", "ARU": "4040"}
+    weights = [
+        D("0.075"),
+        D("0.077"),
+        D("0.080"),
+        D("0.081"),
+        D("0.082"),
+        D("0.083"),
+        D("0.084"),
+        D("0.085"),
+        D("0.086"),
+        D("0.087"),
+        D("0.089"),
+        D("0.091"),
+    ]
+    for year, entity_values in yearly.items():
+        for entity_code, (annual_revenue, annual_cost) in entity_values.items():
+            book = books[entity_code]
+            allocated_revenue = D(0)
+            allocated_cost = D(0)
+            for month, weight in enumerate(weights, start=1):
+                if entity_code == "RWH" and year == 2025 and month < 7:
+                    continue
+                if entity_code == "ARU" and year == 2026 and month < 2:
+                    continue
+                period_code = f"{year}-{month:02d}"
+                period_id = stable_id("period", f"{book.id}:{period_code}")
+                period = session.get(FiscalPeriod, period_id)
+                if period is None:
+                    period = FiscalPeriod(
+                        id=period_id,
+                        book_id=book.id,
+                        code=period_code,
+                        starts_on=date(year, month, 1),
+                        ends_on=date(year, month, monthrange(year, month)[1]),
+                    )
+                    session.add(period)
+                    session.flush()
+                active_weights = weights
+                if entity_code == "RWH" and year == 2025:
+                    active_weights = weights[6:]
+                if entity_code == "ARU" and year == 2026:
+                    active_weights = weights[1:]
+                denominator = sum(active_weights)
+                revenue = (annual_revenue * weight / denominator).quantize(D("0.01"))
+                cost = (annual_cost * weight / denominator).quantize(D("0.01"))
+                is_last = month == 12
+                if is_last:
+                    revenue = annual_revenue - allocated_revenue
+                    cost = annual_cost - allocated_cost
+                allocated_revenue += revenue
+                allocated_cost += cost
+                availability = (
+                    "monthly_actual"
+                    if date(year, month, 1) <= date(2026, 8, 1)
+                    else "monthly_forecast"
+                )
+                key = f"{marker}:{entity_code}:{period_code}:OPERATIONS"
+                _post(
+                    session,
+                    book.id,
+                    period.id,
+                    key,
+                    f"Monthly generated operating control — {entity_code} {period_code}",
+                    [
+                        _line(key, 1, "1000", debit=revenue, segment=entity_code),
+                        _line(
+                            key,
+                            2,
+                            revenue_accounts[entity_code],
+                            credit=revenue,
+                            segment=entity_code,
+                        ),
+                        _line(key, 3, "5000", debit=cost, segment=entity_code),
+                        _line(key, 4, "1000", credit=cost, segment=entity_code),
+                    ],
+                    entry_date=period.ends_on,
+                    source_type=availability,
+                )
+                for metric, amount in (("revenue", revenue), ("operating_cost", cost)):
+                    session.add(
+                        ScenarioValue(
+                            id=stable_id(
+                                "scenario_value", f"{marker}:{entity_code}:{period_code}:{metric}"
+                            ),
+                            scenario_code=scenario,
+                            metric_code=metric,
+                            entity_code=entity_code,
+                            period_code=period_code,
+                            amount=amount,
+                            unit="USD",
+                            fact_state=FactState.DERIVED,
+                            provenance=f"{availability} from versioned annual driver",
+                        )
+                    )
+    session.flush()
+    return {"scenario": scenario, "profile": "standard", "seed": seed, "periods": 48}

@@ -7,7 +7,7 @@ from sable_harbor.accounting.ledger import trial_balance
 from sable_harbor.accounting.models import Base, EntryState, JournalEntry, JournalLine
 from sable_harbor.accounting.seed import seed_smoke
 from sable_harbor.core.database import build_engine, session_for
-from sable_harbor.generation import generate_baseline
+from sable_harbor.generation import generate_baseline, generate_standard
 from sable_harbor.reporting import build_workbook
 
 app = typer.Typer(no_args_is_help=True)
@@ -34,8 +34,10 @@ def generate(profile: str = "smoke", scenario: str = "base", seed: int = 2026083
             result: object = {"book": seed_smoke(session)}
         elif profile in {"baseline", "full"}:
             result = generate_baseline(session, seed=seed, scenario=scenario)
+        elif profile == "standard":
+            result = generate_standard(session, seed=seed, scenario=scenario)
         else:
-            raise typer.BadParameter("Profile must be smoke or baseline")
+            raise typer.BadParameter("Profile must be smoke, baseline, or standard")
         session.commit()
     typer.echo(f"Generated profile={profile} scenario={scenario} seed={seed} result={result}")
 
