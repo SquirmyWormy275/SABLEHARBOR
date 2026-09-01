@@ -1,0 +1,39 @@
+name: Validate enterprise portal
+
+on:
+  pull_request:
+    paths:
+      - "README.md"
+      - "LICENSE.md"
+      - "CONTRIBUTING.md"
+      - "SECURITY.md"
+      - "assets/brand/**"
+      - "docs/**"
+      - "scripts/validate_brand_system.py"
+      - "scripts/validate_enterprise_portal.py"
+      - "scripts/validate_organization_maps.py"
+      - ".github/CODEOWNERS"
+      - ".github/PULL_REQUEST_TEMPLATE.md"
+      - ".github/ISSUE_TEMPLATE/**"
+      - ".github/workflows/validate-enterprise-portal.yml"
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate enterprise portal and unit registry
+        run: python scripts/validate_enterprise_portal.py
+      - name: Validate brand system and collateral scope
+        run: python scripts/validate_brand_system.py
+      - name: Validate organization maps
+        run: python scripts/validate_organization_maps.py
