@@ -1355,3 +1355,7 @@ def downgrade() -> None:
     op.drop_table("customer")
     op.drop_table("business_party")
     op.drop_table("account")
+    if op.get_bind().dialect.name == "postgresql":
+        op.execute("DROP TYPE IF EXISTS entrystate")
+        op.execute("DROP TYPE IF EXISTS periodstate")
+        op.execute("DROP TYPE IF EXISTS factstate")
