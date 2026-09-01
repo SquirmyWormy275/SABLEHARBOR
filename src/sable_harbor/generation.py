@@ -688,7 +688,11 @@ def generate_standard(
             "seed": seed,
             "periods": 48,
         }
-    generate_baseline(session, seed=seed, scenario=standard_scenario, post_summary=False)
+    enterprise_exists = session.scalar(
+        select(LegalEntity.id).where(LegalEntity.code == "SHI")
+    )
+    if enterprise_exists is None:
+        generate_baseline(session, seed=seed, scenario=standard_scenario, post_summary=False)
     books = {
         entity.code: book
         for entity, book in session.execute(

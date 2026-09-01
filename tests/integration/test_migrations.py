@@ -18,8 +18,10 @@ def _database_fingerprint(database: Path) -> dict[str, tuple[tuple[str, str, boo
     inspector = inspect(create_engine(f"sqlite:///{database}"))
     return {
         table: tuple(
-            (column["name"], column["type"].__class__.__name__, column["nullable"])
-            for column in inspector.get_columns(table)
+            sorted(
+                (column["name"], column["type"].__class__.__name__, column["nullable"])
+                for column in inspector.get_columns(table)
+            )
         )
         for table in inspector.get_table_names()
         if table != "alembic_version"

@@ -14,9 +14,11 @@ from sable_harbor.core.database import build_engine, session_for
 from sable_harbor.exports.release import package_public_demo
 from sable_harbor.generation import generate_baseline, generate_full_history, generate_standard
 from sable_harbor.provenance.service import (
+    complete_generation_run,
     lineage_for,
     link_journals,
     record_generation_run,
+    resolve_generation_run,
     seed_provenance,
 )
 from sable_harbor.reporting import build_workbook
@@ -68,6 +70,14 @@ def generate(profile: str = "smoke", scenario: str = "base", seed: int = 2026083
     engine = build_engine()
     Base.metadata.create_all(engine)
     with session_for(engine) as session:
+        effective_scenario = "stress" if profile == "stress" else scenario
+        run = record_generation_run(
+            session,
+            profile=profile,
+            scenario_code=effective_scenario,
+            seed=seed,
+            git_commit=_git_commit(),
+        )
         if profile == "smoke":
             result: object = {"book": seed_smoke(session)}
         elif profile in {"baseline", "full"}:
@@ -77,7 +87,7 @@ def generate(profile: str = "smoke", scenario: str = "base", seed: int = 2026083
         elif profile == "full_history":
             result = generate_full_history(session, seed=seed, scenario=scenario)
         elif profile == "stress":
-            scenario = "stress"
+            scenario = effective_scenario
             result = generate_standard(session, seed=seed, scenario=scenario)
         elif profile == "benchmark_private":
             if "var/private/" not in str(engine.url):
@@ -91,14 +101,8 @@ def generate(profile: str = "smoke", scenario: str = "base", seed: int = 2026083
                 "stress, or benchmark_private"
             )
         seed_provenance(session)
-        run = record_generation_run(
-            session,
-            profile=profile,
-            scenario_code=scenario,
-            seed=seed,
-            git_commit=_git_commit(),
-        )
         lineage_count = link_journals(session, run)
+        complete_generation_run(session, run)
         session.commit()
     typer.echo(
         f"Generated profile={profile} scenario={scenario} seed={seed} "
@@ -136,7 +140,7 @@ def close(through: str = typer.Option(..., help="Close periods through YYYY-MM")
 
 
 @app.command("validate")
-def validate() -> None:
+def validate(generation_run_id: str | None = None) -> None:
     engine = build_engine()
     with session_for(engine) as session:
         existing = session.scalar(select(func.count(JournalEntry.id))) or 0
@@ -146,10 +150,14 @@ def validate() -> None:
             debit = sum(row[1] for row in balances)
             credit = sum(row[2] for row in balances)
         else:
+            selected_run_id = resolve_generation_run(session, generation_run_id)
             debit, credit = session.execute(
                 select(func.sum(JournalLine.debit), func.sum(JournalLine.credit))
                 .join(JournalEntry, JournalEntry.id == JournalLine.entry_id)
-                .where(JournalEntry.state == EntryState.POSTED)
+                .where(
+                    JournalEntry.state == EntryState.POSTED,
+                    JournalEntry.generation_run_id == selected_run_id,
+                )
             ).one()
         if debit != credit:
             raise typer.Exit(code=1)

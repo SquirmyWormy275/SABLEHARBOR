@@ -87,6 +87,7 @@ class Account(Base):
 class JournalEntry(Base):
     __tablename__ = "journal_entry"
     id: Mapped[str] = mapped_column(String(36), primary_key=True)
+    generation_run_id: Mapped[str | None] = mapped_column(ForeignKey("generation_run.id"))
     book_id: Mapped[str] = mapped_column(ForeignKey("accounting_book.id"))
     period_id: Mapped[str] = mapped_column(ForeignKey("fiscal_period.id"))
     entry_date: Mapped[date] = mapped_column(Date)
@@ -240,6 +241,7 @@ class EnvironmentalObligation(Base):
 class ScenarioValue(Base):
     __tablename__ = "scenario_value"
     id: Mapped[str] = mapped_column(String(36), primary_key=True)
+    generation_run_id: Mapped[str | None] = mapped_column(ForeignKey("generation_run.id"))
     scenario_code: Mapped[str] = mapped_column(String(20))
     metric_code: Mapped[str] = mapped_column(String(60))
     entity_code: Mapped[str] = mapped_column(String(32))
@@ -249,5 +251,7 @@ class ScenarioValue(Base):
     fact_state: Mapped[FactState] = mapped_column(Enum(FactState))
     provenance: Mapped[str] = mapped_column(Text)
     __table_args__ = (
-        UniqueConstraint("scenario_code", "metric_code", "entity_code", "period_code"),
+        UniqueConstraint(
+            "generation_run_id", "scenario_code", "metric_code", "entity_code", "period_code"
+        ),
     )

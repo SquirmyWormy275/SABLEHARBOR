@@ -11,6 +11,8 @@ from sable_harbor.core.ids import stable_id
 
 from .models import GenerationRun, LineageEdge, ModelAssumption, Scenario, SourceDocument
 
+GENERATION_RUN_SESSION_KEY = "generation_run_id"
+
 
 def _as_date(value: object) -> date:
     if isinstance(value, date):
@@ -98,17 +100,40 @@ def record_generation_run(
             generator_version="0.1",
             git_commit=git_commit,
             started_at=now,
-            completed_at=now,
-            status="COMPLETED",
+            completed_at=None,
+            status="RUNNING",
         )
         session.add(run)
         session.flush()
+    session.info[GENERATION_RUN_SESSION_KEY] = run.id
     return run
+
+
+def complete_generation_run(session: Session, run: GenerationRun) -> None:
+    run.completed_at = datetime.now(UTC)
+    run.status = "COMPLETED"
+    session.flush()
+
+
+def resolve_generation_run(session: Session, generation_run_id: str | None = None) -> str:
+    if generation_run_id is not None:
+        if session.get(GenerationRun, generation_run_id) is None:
+            raise ValueError(f"Unknown generation run {generation_run_id!r}")
+        return generation_run_id
+    run_ids = list(session.scalars(select(GenerationRun.id).order_by(GenerationRun.id)))
+    if len(run_ids) != 1:
+        raise ValueError(
+            "An explicit generation run is required when the database contains "
+            f"{len(run_ids)} runs"
+        )
+    return run_ids[0]
 
 
 def link_journals(session: Session, run: GenerationRun) -> int:
     count = 0
-    for entry in session.scalars(select(JournalEntry)):
+    for entry in session.scalars(
+        select(JournalEntry).where(JournalEntry.generation_run_id == run.id)
+    ):
         edge_id = stable_id(
             "lineage_edge", f"{run.id}:{entry.source_type}:{entry.source_id}:{entry.id}"
         )

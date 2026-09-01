@@ -4,7 +4,17 @@ from decimal import Decimal
 from sqlalchemy import event, func, inspect, select
 from sqlalchemy.orm import Session
 
-from .models import Account, EntryState, FiscalPeriod, JournalEntry, JournalLine, PeriodState
+from .models import (
+    Account,
+    EntryState,
+    FiscalPeriod,
+    JournalEntry,
+    JournalLine,
+    PeriodState,
+    ScenarioValue,
+)
+
+GENERATION_RUN_SESSION_KEY = "generation_run_id"
 
 
 class LedgerError(ValueError):
@@ -107,6 +117,19 @@ def reject_posted_mutations(
                 raise LedgerError("Posted journal lines are immutable")
 
 
+def attach_generation_context(
+    session: Session, flush_context: object = None, instances: object = None
+) -> None:
+    generation_run_id = session.info.get(GENERATION_RUN_SESSION_KEY)
+    if generation_run_id is None:
+        return
+    for item in session.new:
+        if isinstance(item, JournalEntry) and item.generation_run_id is None:
+            item.generation_run_id = str(generation_run_id)
+        if isinstance(item, ScenarioValue) and item.generation_run_id is None:
+            item.generation_run_id = str(generation_run_id)
+
+
 def trial_balance(session: Session, book_id: str) -> list[tuple[str, Decimal, Decimal]]:
     statement = (
         select(Account.code, func.sum(JournalLine.debit), func.sum(JournalLine.credit))
@@ -120,3 +143,4 @@ def trial_balance(session: Session, book_id: str) -> list[tuple[str, Decimal, De
 
 
 event.listen(Session, "before_flush", reject_posted_mutations)
+event.listen(Session, "before_flush", attach_generation_context)
