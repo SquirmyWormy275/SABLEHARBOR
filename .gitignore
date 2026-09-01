@@ -1,10 +1,31 @@
+# Credentials and local environment
 .env
-.mypy_cache/
-.pytest_cache/
-.ruff_cache/
+.env.*
+!.env.example
+
+# Python
 .venv/
 __pycache__/
 *.py[cod]
+*.egg-info/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+build/
+dist/
+
+# Editors and operating systems
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Deterministic local builds and generated evidence
+.brand-build/
 var/*
 !var/.gitkeep
 data/generated/
