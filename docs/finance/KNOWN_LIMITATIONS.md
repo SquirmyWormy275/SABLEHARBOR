@@ -7,6 +7,10 @@
 - The initial proof workbook remains available for compatibility. The completed suite generates six database-controlled workbooks covering consolidation, software/services, industrial operations, close/subledgers, capital/valuation, and release control.
 - Legal entities, acquisition terms, mine economics, ARU estate, Cradle structure, headcount, and consolidated values remain `MODEL_PROPOSED` or `SCENARIO_INPUT`.
 - Local PostgreSQL verification on 2026-09-01 was unavailable because Docker API access to `/var/run/docker.sock` was denied, the system PostgreSQL service was inactive, and no Podman fallback was installed. CI runs migrations, standard generation, and validation against PostgreSQL 16.
+- Migration `0008` persists the intended actual cutoff and reproducible build identity, but the
+  common-actual generator still requires dated-fact partitioning and two-seed natural-key
+  namespacing. Database-level same-run parent/child enforcement and multi-run comparison contracts
+  also remain open; Stage 1 is not closed.
 - The public package is review blocked: it still uses a raw SQLite snapshot rather than building a
   new database from a versioned table-and-column allowlist, and generated CSV/SQLite/XLSX/archive
   contents do not yet pass the required comprehensive artifact safety scan.

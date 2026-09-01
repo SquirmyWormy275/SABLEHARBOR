@@ -2,6 +2,12 @@
 
 **State:** implemented Stage 1 correctness architecture; broader platform remains review blocked.
 
+Migration `0008` centralizes normalized run identity and persists generator/source, assumptions,
+canon-lock, source-commit, actual-dataset, cutoff, forecast-start, and schema-head fields. The
+current model cutoff is `2026-08-31`; forecasts begin `2026-09-01`. Completed run identity is
+immutable: a mismatched build fails instead of rewriting the completed record. The lifecycle marker
+uses the profile-independent value `RUN`.
+
 ## Ownership model
 
 The platform uses an explicit common-actual layer plus self-contained scenario forecast runs.
@@ -49,3 +55,7 @@ uv run shfin workbooks --generation-run-id "$RUN_ID"
 The public release implementation remains review blocked because its SQLite snapshot mechanism is
 not yet the required new-empty-database, versioned table-and-column allowlist construction and its
 generated-artifact safety scan is incomplete.
+
+Stage 1 is still open: migration-backed two-seed natural-key namespacing, cutoff partitioning of all
+dated operational facts, same-run database constraints, compatible completed actual-dataset checks,
+and explicit multi-run comparison queries are not yet accepted.

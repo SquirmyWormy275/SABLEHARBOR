@@ -3,7 +3,7 @@
 - Source: `origin/canon/corporate-lore-v0.2` at `5137c5abc025ad757a4e1af2a57279e4964578cf`
 - Calibration: `origin/architecture/corporate-operating-model-v0.1` at `f12d359f3c3f009a1eea1d290f61be0462ca1f2e`
 - Implementation branch: `finance/enterprise-financial-platform-v0.1`
-- Current implementation checkpoint: `50dd167f36cdd42244962c7d1117ce7868e4c7ba`
+- Current implementation checkpoint: `6c629e3a68e0697fa97b20cc7ece0ca96aec8302`
 - Draft PR: `https://github.com/SquirmyWormy275/SABLEHARBOR/pull/9`
 - Current phase: Stage 1 correctness verification; integrated monthly expansion has not begun
 - Completed: source lock and collisions; alternatives A/B/C; Alternative B operating model; legal/entity scenario; dimensional chart; immutable accounting kernel; migrations; commercial, professional-services engagement, and corporate subledgers; Red Wash, ARU/BS&T, Cradle, Willow and Atlas causal flows; deterministic base/low/high/stress profiles; 2023–2026 monthly standard model; 2016–2026 history; intercompany eliminations; reconciled statements; named queries; six-workbook suite; valuation; public release package; privacy/canon guardrails; SQLite and PostgreSQL CI definitions
@@ -82,5 +82,19 @@
   driver-based scenarios and integrated monthly subledgers/rollforwards remain open. Exact resume
   point: implement the public table/column allowlist builder and artifact scanner, then semantic
   workbook specifications before monthly three-statement expansion.
+- Milestone 4 implementation: `6c629e3a68e0697fa97b20cc7ece0ca96aec8302` at migration
+  head `0008`. Centralized identity now normalizes profile/scenario (including stress), persists
+  generator version `0.1.0`, actual dataset identity, source/assumption/canon digests,
+  `actual_through=2026-08-31`, `forecast_from=2026-09-01`, source commit, and schema head.
+  Completed runs reject build-identity mismatches; lifecycle markers use `RUN`; the required schema
+  head is derived from Alembic; validation no longer seeds an empty database. Profile generation
+  markers and their descendant standard journals/lines/events/values are run-owned.
+- Milestone 4 local evidence: Ruff PASS; strict mypy PASS (33 source files); pytest PASS
+  (49 passed, one PostgreSQL-only test skipped). One Alembic-installed SQLite database proved
+  `standard/base`, `full_history/base`, and `benchmark_private/base` each own nonzero distinct
+  journals. Remote CI and PostgreSQL profile/coexistence evidence for this checkpoint are pending.
+  Stage 1 remains open. Exact resume point: add migration-backed two-seed actual-dataset natural-key
+  namespacing and cross-run database ownership constraints/tests before cutoff partitioning and
+  comparison-query work.
 - Human/canon review: legal entity chain, acquisition/PPA and financing terms, mine/ARU driver ranges, board and named executive structure. These remain deliberately reversible and do not block platform operation.
 - Uncommitted files: inspect with `git status --short`
