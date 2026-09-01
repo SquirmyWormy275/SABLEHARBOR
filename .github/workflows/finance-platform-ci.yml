@@ -47,6 +47,6 @@ jobs:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v6
       - run: uv sync --all-extras
-      - run: uv run pytest tests/integration/test_migrations.py -k postgres
+      - run: uv run pytest -s tests/integration/test_migrations.py -k postgres
       - run: uv run shfin generate --profile standard --scenario base --seed 20260831
       - run: uv run shfin validate --generation-run-id "$(uv run shfin run-id standard --scenario base --seed 20260831)"

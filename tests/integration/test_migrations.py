@@ -1,3 +1,5 @@
+import hashlib
+import json
 import os
 from pathlib import Path
 from typing import Any
@@ -139,3 +141,7 @@ def test_postgres_upgrade_downgrade_upgrade_schema_fingerprint() -> None:
     command.downgrade(config, "base")
     command.upgrade(config, "head")
     assert schema_fingerprint(engine) == first
+    digest = hashlib.sha256(
+        json.dumps(first, sort_keys=True, default=str).encode()
+    ).hexdigest()
+    print(f"POSTGRES_SCHEMA_SHA256={digest}")

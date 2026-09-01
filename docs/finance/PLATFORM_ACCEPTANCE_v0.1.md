@@ -13,31 +13,33 @@
 | Accounting | Multi-entity books, periods, dimensions, immutable balanced journals, reversals, close, currencies and eliminations |
 | Corporate subledgers | Contract-to-cash, payroll, procurement/AP, fixed assets/depreciation and debt/interest |
 | Industrial subledgers | Mine production/inventory/sales, logistics waybills/custody, Cradle host-safe recovery and research programs |
-| Planning | Base, low, high and stress scenarios; assumptions and sensitivities; 2023–2026 monthly standard profile; 2016–2026 history |
+| Planning | Base, low, high and stress scenarios; invariant actual periods; 2023–2026 monthly standard profile; 2016–2022 revenue calibration anchors |
 | Reporting | Reconciled statements, named SQL queries, six-workbook suite and valuation/QoE bridge |
-| Release control | Deterministic SQLite public package, checksums, manifest, limitations and public-safety scan |
-| Portability | Alembic migrations; SQLite verified locally; PostgreSQL 16 service job defined in CI |
+| Release control | Review-blocked package scaffold; allowlisted SQLite construction and generated-artifact scan remain open |
+| Portability | Explicit Alembic migrations and SQLite/PostgreSQL migration-cycle CI through `0007` |
 
 ## Verified controls
 
-- Clean migrations apply through revision `0002`.
-- Full-history generation produces 48 monthly planning periods plus annual history from 2016.
+- Clean migrations apply through revision `0007`; SQLite and PostgreSQL
+  upgrade/downgrade/upgrade cycles pass.
+- Full-history generation produces 48 monthly planning periods plus seven 2016–2022 revenue
+  calibration anchors, not complete historical statements.
 - Full-history trial balance reconciles at `$1,172,100,000.0000` debit and credit.
 - Standard consolidated statements balance with zero difference after ARU–Red Wash eliminations.
 - Six XLSX files generate and pass structural tests.
-- Public release manifest and checksums generate deterministically.
-- Ruff, strict mypy, canon/privacy checks, and all 27 local tests pass.
+- The current public release package is review blocked pending allowlist construction and generated
+  artifact scanning.
+- Ruff, strict mypy, canon/privacy checks, and 43 local tests pass; one PostgreSQL-only test runs in
+  CI and passes there.
 
 ## Open acceptance boundary
 
 Passing the legacy commands above does not establish acceptance. The controlling P0/P1 findings are
 in `docs/handoffs/SABLE_HARBOR_CODEX_EXECUTION_HANDOFF_2026-09-01.md`. Migration immutability
-is implemented at `4cb7671918d81b8093d2a4828e84a65fd1a93bcc` for SQLite. Initial
-same-database base/stress journal and scenario-value isolation is implemented at
-`05314a7f18828bb58e98ae68ed2568570d8c1013`; applicable subledgers and every reporting/export
-surface are not yet fully run-scoped. PostgreSQL
-upgrade/downgrade/upgrade and schema-equivalence evidence remains required. Run/scenario isolation,
-workbook semantics, public export allowlisting, generated-artifact scanning, integrated monthly
+is implemented through `8f61b43382fd9adfcc05059bd6efbf3686af9e11`. Run/scenario isolation,
+common-actual inclusion, operational-fact ownership, explicit read contexts, migration cycles, and
+schema fingerprints are implemented through migration `0007`. Workbook semantics, public export
+allowlisting, generated-artifact scanning, integrated monthly
 statements and rollforwards, driver-based scenarios, accurate historical claims, and CI review
 artifacts remain open. This synthetic platform is not accepted, integration-ready, production-ready,
 or independently auditable.
