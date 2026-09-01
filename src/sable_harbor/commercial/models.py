@@ -57,9 +57,7 @@ class InvoiceLine(Base):
     __tablename__ = "invoice_line"
     id: Mapped[str] = mapped_column(String(36), primary_key=True)
     invoice_id: Mapped[str] = mapped_column(ForeignKey("invoice.id"))
-    performance_obligation_id: Mapped[str] = mapped_column(
-        ForeignKey("performance_obligation.id")
-    )
+    performance_obligation_id: Mapped[str] = mapped_column(ForeignKey("performance_obligation.id"))
     description: Mapped[str] = mapped_column(String(250))
     amount: Mapped[Decimal] = mapped_column(Numeric(20, 4))
     invoice: Mapped[Invoice] = relationship(back_populates="lines")
@@ -68,9 +66,7 @@ class InvoiceLine(Base):
 class RevenueRecognition(Base):
     __tablename__ = "revenue_recognition"
     id: Mapped[str] = mapped_column(String(36), primary_key=True)
-    performance_obligation_id: Mapped[str] = mapped_column(
-        ForeignKey("performance_obligation.id")
-    )
+    performance_obligation_id: Mapped[str] = mapped_column(ForeignKey("performance_obligation.id"))
     recognition_date: Mapped[date] = mapped_column(Date)
     amount: Mapped[Decimal] = mapped_column(Numeric(20, 4))
     journal_entry_id: Mapped[str] = mapped_column(ForeignKey("journal_entry.id"))

@@ -1,11 +1,14 @@
 from pathlib import Path
 
 import typer
+from sqlalchemy import func, select
 
 from sable_harbor.accounting.ledger import trial_balance
-from sable_harbor.accounting.models import Base
+from sable_harbor.accounting.models import Base, EntryState, JournalEntry, JournalLine
 from sable_harbor.accounting.seed import seed_smoke
 from sable_harbor.core.database import build_engine, session_for
+from sable_harbor.generation import generate_baseline
+from sable_harbor.reporting import build_workbook
 
 app = typer.Typer(no_args_is_help=True)
 
@@ -24,27 +27,49 @@ def init_db() -> None:
 
 @app.command("generate")
 def generate(profile: str = "smoke", scenario: str = "base", seed: int = 20260831) -> None:
-    if profile != "smoke":
-        raise typer.BadParameter("Only the smoke profile is implemented in this increment")
     engine = build_engine()
     Base.metadata.create_all(engine)
     with session_for(engine) as session:
-        book_id = seed_smoke(session)
+        if profile == "smoke":
+            result: object = {"book": seed_smoke(session)}
+        elif profile in {"baseline", "full"}:
+            result = generate_baseline(session, seed=seed, scenario=scenario)
+        else:
+            raise typer.BadParameter("Profile must be smoke or baseline")
         session.commit()
-    typer.echo(f"Generated profile={profile} scenario={scenario} seed={seed} book={book_id}")
+    typer.echo(f"Generated profile={profile} scenario={scenario} seed={seed} result={result}")
 
 
 @app.command("validate")
 def validate() -> None:
     engine = build_engine()
     with session_for(engine) as session:
-        book_id = seed_smoke(session)
-        balances = trial_balance(session, book_id)
-        debit = sum(row[1] for row in balances)
-        credit = sum(row[2] for row in balances)
+        existing = session.scalar(select(func.count(JournalEntry.id))) or 0
+        if existing == 0:
+            book_id = seed_smoke(session)
+            balances = trial_balance(session, book_id)
+            debit = sum(row[1] for row in balances)
+            credit = sum(row[2] for row in balances)
+        else:
+            debit, credit = session.execute(
+                select(func.sum(JournalLine.debit), func.sum(JournalLine.credit))
+                .join(JournalEntry, JournalEntry.id == JournalLine.entry_id)
+                .where(JournalEntry.state == EntryState.POSTED)
+            ).one()
         if debit != credit:
             raise typer.Exit(code=1)
     typer.echo(f"PASS trial balance debit={debit} credit={credit}")
+
+
+@app.command("report")
+def report(output: Path = Path("reports/Sable_Harbor_FY2026_Model.xlsx")) -> None:
+    engine = build_engine()
+    Base.metadata.create_all(engine)
+    with session_for(engine) as session:
+        generate_baseline(session)
+        session.commit()
+        path = build_workbook(session, output)
+    typer.echo(path)
 
 
 @app.command("source-lock")

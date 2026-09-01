@@ -68,8 +68,7 @@ def create_foundry_contract_flow(
         contract_number=f"CTR-{natural_key}",
         starts_on=invoice_date,
         ends_on=(
-            date(invoice_date.year + 1, invoice_date.month, invoice_date.day)
-            - timedelta(days=1)
+            date(invoice_date.year + 1, invoice_date.month, invoice_date.day) - timedelta(days=1)
         ),
         transaction_price=annual_value,
         fact_state=FactState.SYNTHETIC_INSTANCE,

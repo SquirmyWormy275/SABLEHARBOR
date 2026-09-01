@@ -9,3 +9,4 @@ var/*
 !var/.gitkeep
 data/generated/
 workbooks/outputs/*.xlsx
+reports/*.xlsx

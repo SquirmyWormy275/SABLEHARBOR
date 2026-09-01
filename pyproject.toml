@@ -17,7 +17,13 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-dev = ["mypy>=1.11,<2", "pytest>=8,<9", "ruff>=0.6,<1", "types-PyYAML>=6,<7"]
+dev = [
+  "mypy>=1.11,<2",
+  "openpyxl>=3.1,<4",
+  "pytest>=8,<9",
+  "ruff>=0.6,<1",
+  "types-PyYAML>=6,<7"
+]
 postgres = ["psycopg[binary]>=3.2,<4"]
 
 [project.scripts]
