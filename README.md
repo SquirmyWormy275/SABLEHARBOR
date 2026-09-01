@@ -50,3 +50,7 @@ NAILEX is a separate proprietary project. It should consume explicit, versioned 
 ## License and use
 
 No open-source license is granted. Repository visibility does not grant permission to copy, modify, distribute, sublicense, or commercialize the contents. All rights are reserved unless a specific file states otherwise.
+
+## Brand assets
+
+The versioned corporate and business-line logo system is indexed in [`docs/brand/LOGO_INDEX.md`](docs/brand/LOGO_INDEX.md). Individual SVG and PNG assets are stored under [`assets/brand/logos/`](assets/brand/logos/), with a complete downloadable package under [`assets/brand/packages/`](assets/brand/packages/).
