@@ -5,6 +5,7 @@ from alembic import context
 from sqlalchemy import engine_from_config, pool
 
 from sable_harbor.accounting.models import Base
+from sable_harbor.commercial import models as commercial_models  # noqa: F401
 
 config = context.config
 if configured_url := os.getenv("SHFIN_DATABASE_URL"):

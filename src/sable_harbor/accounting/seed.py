@@ -23,7 +23,10 @@ def seed_smoke(session: Session) -> str:
     book_id = stable_id("book", "SABLE_HARBOR_MODEL_PARENT:PRIMARY_USD")
     period_id = stable_id("period", f"{book_id}:2026-08")
     cash_id = stable_id("account", "1000")
+    receivable_id = stable_id("account", "1100")
+    deferred_revenue_id = stable_id("account", "2200")
     equity_id = stable_id("account", "3000")
+    revenue_id = stable_id("account", "4000")
     if session.get(LegalEntity, entity_id):
         return book_id
     session.add(
@@ -55,10 +58,31 @@ def seed_smoke(session: Session) -> str:
                 normal_balance="DEBIT",
             ),
             Account(
+                id=receivable_id,
+                code="1100",
+                name="Trade accounts receivable",
+                account_class="ASSET",
+                normal_balance="DEBIT",
+            ),
+            Account(
+                id=deferred_revenue_id,
+                code="2200",
+                name="Deferred revenue",
+                account_class="LIABILITY",
+                normal_balance="CREDIT",
+            ),
+            Account(
                 id=equity_id,
                 code="3000",
                 name="Model opening equity",
                 account_class="EQUITY",
+                normal_balance="CREDIT",
+            ),
+            Account(
+                id=revenue_id,
+                code="4000",
+                name="Foundry Field recurring platform revenue",
+                account_class="REVENUE",
                 normal_balance="CREDIT",
             ),
         ]
