@@ -6,10 +6,14 @@ This folder contains production-oriented, editable corporate templates. No addre
 
 ## Inventory
 
-### Letterhead
+### Corporate letterhead
 
 - US Letter: SVG, PNG, PDF, DOCX
 - A4: SVG, PNG, PDF, DOCX
+
+### Business-line working letterheads
+
+Seven US Letter SVG working templates are under [`letterhead/business-lines/`](letterhead/business-lines/). Each references the accepted unit logo and contains explicit contact/legal placeholders. These are reviewable working templates—not self-contained archival stationery—until the logo is embedded and SVG, PNG, PDF, and DOCX variants are generated, proofed, manifested, and checksummed.
 
 ### Memorandum
 
@@ -32,4 +36,4 @@ This folder contains production-oriented, editable corporate templates. No addre
 
 ## Use
 
-Use the SVG files as vector source; use DOCX and PPTX for editable office documents; use PDFs as reproduction references after local proofing. Replace bracketed placeholders and preserve the logo geometry and clear space.
+Use SVG files as vector source; use DOCX and PPTX for editable office documents; use PDFs as reproduction references after local proofing. Replace bracketed placeholders and preserve logo geometry and clear space. Do not represent a linked-logo working template as an accepted offline/archival unit letterhead.
