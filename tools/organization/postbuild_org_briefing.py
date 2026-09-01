@@ -27,6 +27,7 @@ This package uses the production Sable Harbor master mark and the production mar
 
 - [PowerPoint briefing deck](SABLE_HARBOR_Organization_Briefing_v1.0.pptx)
 - [PDF briefing deck](SABLE_HARBOR_Organization_Briefing_v1.0.pdf)
+- [Complete packaged deliverable](SABLE_HARBOR_Organization_Briefing_v1.0.zip)
 
 ## Individual briefing images
 
@@ -83,6 +84,37 @@ manifest = {
     'officialLogoDirectory': 'assets/brand/logos',
     'slideCount': 8,
     'oneImagePerSlide': True,
+    'officialLogoPolicy': 'Only production SVG marks from assets/brand/logos are permitted; substitute clip art is prohibited.',
+    'enterpriseFields': [
+        'business-line name',
+        'headquarters or best-supported operating center',
+        'brief business description',
+        'current person in charge',
+        'current operating status',
+    ],
+    'slides': [
+        'Sable Harbor enterprise organization overview',
+        'Foundry / Foundry Field organization',
+        'Project Willow organization',
+        'Atlas Meridian organization',
+        'Pale Sun / Red Wash organization',
+        'Project Cradle organization',
+        'American Resource Utility / BS&T organization',
+        'Advisory organization',
+    ],
+    'requiredOfficialMarks': [
+        'sable-harbor__mark.svg',
+        'foundry__mark.svg',
+        'foundry-field__mark.svg',
+        'willow__mark.svg',
+        'atlas-meridian__mark.svg',
+        'pale-sun__mark.svg',
+        'red-wash-mine__mark.svg',
+        'project-cradle__mark.svg',
+        'american-resource-utility__mark.svg',
+        'blood-sweat-and-tears-railway__mark.svg',
+        'advisory__mark.svg',
+    ],
     'files': records,
 }
 (root / 'manifest.json').write_text(json.dumps(manifest, indent=2) + '\n', encoding='utf-8')
