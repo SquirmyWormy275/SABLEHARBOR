@@ -32,7 +32,10 @@
 
 Passing the legacy commands above does not establish acceptance. The controlling P0/P1 findings are
 in `docs/handoffs/SABLE_HARBOR_CODEX_EXECUTION_HANDOFF_2026-09-01.md`. Migration immutability
-is implemented at `4cb7671918d81b8093d2a4828e84a65fd1a93bcc` for SQLite; PostgreSQL
+is implemented at `4cb7671918d81b8093d2a4828e84a65fd1a93bcc` for SQLite. Initial
+same-database base/stress journal and scenario-value isolation is implemented at
+`05314a7f18828bb58e98ae68ed2568570d8c1013`; applicable subledgers and every reporting/export
+surface are not yet fully run-scoped. PostgreSQL
 upgrade/downgrade/upgrade and schema-equivalence evidence remains required. Run/scenario isolation,
 workbook semantics, public export allowlisting, generated-artifact scanning, integrated monthly
 statements and rollforwards, driver-based scenarios, accurate historical claims, and CI review
