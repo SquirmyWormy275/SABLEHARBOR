@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0",
+  "company": "Sable Harbor",
+  "accepted_baseline": "c111ec6f4900edea656a52a391c71c600b880be1",
+  "finance_release_candidate": {
+    "branch": "finance/enterprise-financial-platform-v0.1",
+    "commit": "1f294440a11e724e5f1bdcd3a7f59f7342169bfe",
+    "pull_request": 9,
+    "status": "NOT_ACCEPTED"
+  },
+  "business_line_registry": "docs/business-lines/registry.json"
+}

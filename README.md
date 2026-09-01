@@ -1,69 +1,104 @@
+<p align="center">
+  <img src="assets/brand/logos/sable-harbor__primary-horizontal.svg" alt="Sable Harbor" width="820" />
+</p>
+
 # SABLE HARBOR
 
-Sable Harbor is the canonical synthetic enterprise and reusable business-world sandbox for mining, natural resources, industrial systems, enterprise software, assurance, analytics, finance, governance, security, incident response, and professional training.
+Sable Harbor is the canonical synthetic enterprise and reusable industrial business-world sandbox for mining, natural resources, logistics, enterprise software, research, analytics, assurance, finance, governance, security, incident response, and professional training.
 
-It is modeled as a company that would exist independently of any audit or benchmark. Business activity creates systems, records, contracts, communications, controls, mistakes, experiments, operating consequences, and evidence; downstream tools consume deliberate, versioned exports.
+This repository now supports two linked views:
 
-## Canon states
+1. **Company view** — corporate history, governing principles, enterprise organization, shared identity and collateral, consolidated data architecture, and repository controls.
+2. **Business-line view** — a standardized dossier for each current line, operating component, historical identity, and separate case universe.
 
-- **LOCKED** — accepted canon;
-- **PROVISIONAL** — accepted working direction pending exact implementation;
-- **OPEN** — unresolved and not to be silently invented;
-- **SUPERSEDED** — preserved prior direction that no longer controls current canon.
+The dossier layer indexes authoritative source material. It does not duplicate canon or promote model, scenario, branch-only, or synthetic records into accepted corporate fact.
 
-## Corporate lore v0.2
+## Evidence-state dashboard — September 1, 2026
 
-The `canon/corporate-lore-v0.2` branch contains the reconciled corporate-history package:
+| Layer | State | Entry point |
+|---|---|---|
+| Corporate lore v0.2 | **ACCEPTED ON `main`** | [Canon](docs/canon/) |
+| Production logo system v0.1.0 | **ACCEPTED ON `main`** | [Logos](assets/brand/logos/) |
+| Organization charts and briefing | **ACCEPTED ON `main`** | [Organization](docs/organization/README.md) |
+| Enterprise portal and unit dossiers | **REVIEW CANDIDATE** | [Company](docs/company/README.md) · [Business lines](docs/business-lines/README.md) |
+| Brand standards and corporate collateral v0.2 | **REVIEW CANDIDATE** | [Brand system](assets/brand/README.md) |
+| Financial/data platform v0.1 | **RELEASE CANDIDATE — PR #9; NOT ACCEPTED** | [Finance register](docs/data/FINANCE_RELEASE_CANDIDATE.md) |
+| GitHub wiki | **SOURCE READY; REPOSITORY WIKI DISABLED AT AUDIT** | [Wiki source](docs/wiki/) |
 
-- [`docs/canon/SABLE_HARBOR_CANONICAL_ARCHITECTURE_HANDOVER.md`](docs/canon/SABLE_HARBOR_CANONICAL_ARCHITECTURE_HANDOVER.md) — preserved inherited canon and operating instructions.
-- [`docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.2.md`](docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.2.md) — complete reconciled corporate lore through August 31, 2026.
-- [`docs/canon/SABLE_HARBOR_CONTINUITY_AUDIT_v0.2.md`](docs/canon/SABLE_HARBOR_CONTINUITY_AUDIT_v0.2.md) — Blackridge and timeline continuity review.
-- [`docs/canon/CANON_CHANGELOG_v0.2.md`](docs/canon/CANON_CHANGELOG_v0.2.md) — explicit inherited-canon clarifications and supersessions.
-- [`docs/canon/DECISION_REGISTER.md`](docs/canon/DECISION_REGISTER.md) — LOCKED, PROVISIONAL, OPEN, and SUPERSEDED decision index.
+Audit pins: accepted baseline `c111ec6f4900edea656a52a391c71c600b880be1`; finance candidate `1f294440a11e724e5f1bdcd3a7f59f7342169bfe`.
 
-## Organization at a glance
+## Start here
 
-This is the canon-derived August 31, 2026 **functional enterprise organization chart**. It shows company-wide authorities, operating lines, named leaders and known ownership/component relationships. Exact HR reporting lines and final legal entities remain deliberately open.
+| Need | Entry point |
+|---|---|
+| Understand Sable Harbor overall | [Company dossier](docs/company/README.md) |
+| Browse by business line or component | [Business-line directory](docs/business-lines/README.md) |
+| Inspect organization and authority | [Organization suite](docs/organization/README.md) |
+| Download logos, letterhead, memo, report, and presentation templates | [Brand and collateral](assets/brand/README.md) |
+| Inspect databases, financials, inventory scope, and releases | [Data and finance](docs/data/README.md) |
+| Review controlling lore and decisions | [Corporate canon](docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.2.md) |
+| Review repository findings and cleanup work | [Repository audit](docs/audit/README.md) |
+| Review publication-ready wiki source | [Wiki mirror](docs/wiki/Home.md) |
 
-[![Sable Harbor enterprise organization chart](docs/organization/assets/enterprise-organization-2026.svg)](docs/organization/README.md)
+## Enterprise organization
 
-The full package contains dedicated charts for [leadership and authority](docs/organization/2026_LEADERSHIP_AND_AUTHORITY_MAP.md), [Foundry Field](docs/organization/FOUNDRY_FIELD_ORGANIZATION.md), [Project Willow](docs/organization/WILLOW_ORGANIZATION.md), [Atlas Meridian](docs/organization/ATLAS_MERIDIAN_BRIDGE_ORGANIZATION.md), [Pale Sun and Red Wash](docs/organization/PALE_SUN_RED_WASH_ORGANIZATION.md), [Project Cradle](docs/organization/PROJECT_CRADLE_ORGANIZATION.md), [ARU and BS&T](docs/organization/ARU_BST_ORGANIZATION.md), and [the Original Eight](docs/organization/ORIGINAL_EIGHT.md).
+[![Sable Harbor enterprise organization](docs/organization/assets/enterprise-organization-2026.svg)](docs/organization/README.md)
 
-### Official organization briefing
+The chart is a canon-derived functional map, not a fabricated legal-entity or HR reporting tree. Exact entities, titles, reporting lines, headcount, and unit P&Ls remain open or scenario-controlled unless explicitly locked.
 
-The briefing-grade publication package uses the approved production logo system and includes one rendered 16:9 image per chart, an editable PowerPoint deck, a PDF, a packaged ZIP, a source builder, and a validation manifest.
+## Current business lines
 
-- [Organization briefing index](docs/organization/briefing/README.md)
-- [Editable PowerPoint](docs/organization/briefing/SABLE_HARBOR_Organization_Briefing_v1.0.pptx)
-- [Briefing PDF](docs/organization/briefing/SABLE_HARBOR_Organization_Briefing_v1.0.pdf)
-- [Complete briefing package](docs/organization/briefing/SABLE_HARBOR_Organization_Briefing_v1.0.zip)
+| Mark | Business line | Role |
+|---|---|---|
+| <img src="assets/brand/logos/foundry-field__mark.svg" width="46" alt="Foundry Field" /> | [Foundry Field](docs/business-lines/FOUNDRY_FIELD.md) | Core operating/product application layer |
+| <img src="assets/brand/logos/willow__mark.svg" width="46" alt="Willow" /> | [Willow](docs/business-lines/WILLOW.md) | Research and experimental line |
+| <img src="assets/brand/logos/atlas-meridian__mark.svg" width="46" alt="Atlas Meridian" /> | [Atlas Meridian](docs/business-lines/ATLAS_MERIDIAN.md) | Investigation and controlled-commercialization line |
+| <img src="assets/brand/logos/pale-sun__mark.svg" width="46" alt="Pale Sun" /> | [Pale Sun](docs/business-lines/PALE_SUN.md) | Operating-control line around Red Wash |
+| <img src="assets/brand/logos/project-cradle__mark.svg" width="46" alt="Project Cradle" /> | [Project Cradle](docs/business-lines/PROJECT_CRADLE.md) | Recovery and host-safe participation line |
+| <img src="assets/brand/logos/american-resource-utility__mark.svg" width="46" alt="American Resource Utility" /> | [American Resource Utility](docs/business-lines/AMERICAN_RESOURCE_UTILITY.md) | Acquired regional resource-logistics operator |
+| <img src="assets/brand/logos/advisory__mark.svg" width="46" alt="Advisory" /> | [Advisory](docs/business-lines/ADVISORY.md) | Emerging method-transfer line |
 
-## Blackridge status
+## Components, historical identities, and separate case material
 
-Blackridge remains the upstream founding wound and a separate executable case universe. The current connected repository branches expose only limited Blackridge scaffolding; the complete detailed Blackridge build must be imported and rechecked before it replaces the handover summary as the controlling source.
+| Mark | Identity | Classification |
+|---|---|---|
+| <img src="assets/brand/logos/foundry__mark.svg" width="38" alt="Foundry" /> | [Foundry](docs/business-lines/FOUNDRY.md) | Product substrate underlying Foundry Field |
+| <img src="assets/brand/logos/red-wash-mine__mark.svg" width="38" alt="Red Wash Mine" /> | [Red Wash Mine](docs/business-lines/RED_WASH_MINE.md) | Operating asset under Pale Sun |
+| <img src="assets/brand/logos/blood-sweat-and-tears-railway__mark.svg" width="38" alt="Blood, Sweat & Tears Railway" /> | [Blood, Sweat & Tears Railway](docs/business-lines/BLOOD_SWEAT_AND_TEARS_RAILWAY.md) | Railway component within ARU |
+| <img src="assets/brand/logos/emberline__mark.svg" width="38" alt="Emberline" /> | [Emberline](docs/business-lines/EMBERLINE.md) | Historical coal-focused line, active through 2025 |
+| <img src="assets/brand/logos/evalon__mark.svg" width="38" alt="Evalon" /> | [Evalon](docs/business-lines/EVALON.md) | Historical advanced-engineering outpost rechartered as Willow |
+| — | [Blackridge](docs/business-lines/BLACKRIDGE.md) | Separate executable case universe; not a Sable Harbor unit |
 
-## Quantitative operating model
+## Unit audit model
 
-The prior `architecture/corporate-operating-model-v0.1` branch is a noncontrolling first-pass draft. It must be revised in a separate workstream to account for Willow, Red Wash/Pale Sun, Project Cradle, American Resource Utility, the Blood, Sweat & Tears Railway, emerging Advisory, and Emberline's historical status.
+Every dossier contains the same sections: status and scope; canon/history; identity and collateral; organization and authority; financials and accounting; inventory/assets/operations; database and exports; controls; unresolved facts; and download map. A machine-readable [unit registry](docs/business-lines/registry.json) keeps those mappings synchronized.
 
-No 2026 headcount, revenue, funding, office, legal-entity, reporting-line, or product-P&L value is locked by the corporate-lore branch.
+A dossier may say **NOT MATERIALIZED**. That is deliberate. No standalone ARU database, ARU inventory register, ARU financial workbook, or unit-specific letterhead is treated as available until it is scoped, generated, reconciled, validated, directly inspected, registered, and checksummed.
 
-## Public repository and wiki
+## Repository map
 
-This repository is intentionally public so Sable Harbor can support a browsable institutional archive and a public GitHub wiki. This decision supersedes the preserved architecture handover's earlier description of the canonical repository as private.
+```text
+SABLEHARBOR/
+├── README.md
+├── assets/brand/                  # logos, standards, collateral, packages
+├── docs/
+│   ├── company/                   # enterprise dossier and manifest
+│   ├── business-lines/            # one auditable dossier per unit/component
+│   ├── canon/                     # controlling lore and decisions
+│   ├── organization/              # charts, authority maps, briefing
+│   ├── data/                      # finance/data acceptance and release map
+│   ├── audit/                     # findings, registers, matrices, backlog
+│   ├── governance/                # evidence and information architecture
+│   ├── legal/                     # preliminary name/mark screen
+│   └── wiki/                      # controlled publication source
+├── scripts/                       # validators/build support
+└── tools/                         # deterministic builders
+```
 
-The versioned documents under `docs/canon/` remain the controlling source of truth. The wiki is a public-facing reference and navigation layer; it may summarize canon, but it does not independently create or change canon.
+## Canon, privacy, and public-repository boundary
 
-There will be **no standalone Easter-egg index, decoder, or exhaustive explanation page**. Easter eggs remain embedded in the history, names, artifacts, and operating lore for readers to encounter naturally.
+The repository is intentionally public, but visibility grants no license. Open legal entities, transaction terms, reserves, routes, physical assets, headcount, reporting lines, and quantitative values remain open or scenario-controlled unless canon explicitly locks them. NAILEX remains separate and consumes only deliberate, versioned exports.
 
-Hidden benchmark truth, evaluation oracles, credentials, unreleased scenario answers, and other material whose value depends on nonpublic access must not be committed to this public repository or published in the wiki.
+## License
 
-See [`docs/governance/PUBLIC_REPOSITORY_AND_WIKI_POLICY.md`](docs/governance/PUBLIC_REPOSITORY_AND_WIKI_POLICY.md).
-
-## Separation from NAILEX
-
-NAILEX is a separate proprietary project. It should consume explicit, versioned Sable Harbor exports or benchmark packages rather than silently depending on the entire lore repository.
-
-## License and use
-
-No open-source license is granted. Repository visibility does not grant permission to copy, modify, distribute, sublicense, or commercialize the contents. All rights are reserved unless a specific file states otherwise.
+**All rights reserved.** See [LICENSE.md](LICENSE.md).
