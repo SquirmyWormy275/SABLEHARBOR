@@ -1,0 +1,19 @@
+    with zipfile.ZipFile(zip_path, 'w', compression=zipfile.ZIP_DEFLATED, compresslevel=9) as zf:
+        for p in sorted(LOGO_DIR.iterdir()):
+            zf.write(p, arcname=f'logos/{p.name}')
+        for p in (OUT / 'README.md', OUT / 'VALIDATION.md', OUT / 'manifest.json'):
+            zf.write(p, arcname=p.name)
+
+    print(json.dumps({
+        'output': str(OUT),
+        'logo_count': expected,
+        'asset_files': len(entries),
+        'svg_count': len(list(LOGO_DIR.glob('*.svg'))),
+        'png_count': len(list(LOGO_DIR.glob('*.png'))),
+        'zip': str(zip_path),
+        'zip_bytes': zip_path.stat().st_size,
+    }, indent=2))
+
+
+if __name__ == '__main__':
+    main()
