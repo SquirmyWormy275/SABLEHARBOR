@@ -23,31 +23,50 @@ The `canon/corporate-lore-v0.2` branch contains the reconciled corporate-history
 
 ## Organization at a glance
 
-This is the August 31, 2026 **operating topology**. It shows what each line of work does and how the pieces relate; it does not claim final legal entities, executive titles, or reporting lines.
+This is the canon-supported August 31, 2026 **operating topology**. The lines identify product lineage, operating ownership in the narrative canon, acquisition, or an emerging practice. They do **not** establish legal entities, executive rank, or reporting relationships.
 
 ```mermaid
 flowchart TB
-    SH["SABLE HARBOR<br/>Industrial-systems company"]
-    FOUNDRY["Foundry / Foundry Field<br/><b>represents</b>"]
-    WILLOW["Project Willow<br/><b>tests</b>"]
-    ATLAS["Atlas Meridian<br/><b>investigates</b>"]
-    PALE["Pale Sun / Red Wash<br/><b>owns and operates</b>"]
-    CRADLE["Project Cradle<br/><b>recovers</b>"]
-    ARU["ARU / BS&T<br/><b>moves</b>"]
-    ADVISORY["Advisory<br/><b>transfers · emerging</b>"]
+    SH["SABLE HARBOR<br/>industrial-systems company"]
+
+    FOUNDRY["Foundry<br/><b>underlying relationship-and-meaning substrate</b>"]
+    FIELD["Foundry Field<br/><b>encounters, connects, and represents</b>"]
+    WILLOW["Project Willow<br/><b>tests consequential unknowns</b>"]
+    ATLAS["Atlas Meridian<br/><b>investigates across represented evidence</b>"]
+    PALE["Pale Sun<br/><b>uranium operating business</b>"]
+    REDWASH["Red Wash Mine<br/><b>owned and operated in the narrative canon</b>"]
+    CRADLE["Project Cradle<br/><b>recovers value from host-created process streams</b>"]
+    ARU["American Resource Utility<br/><b>acquired logistics operator</b>"]
+    BST["Blood, Sweat & Tears Railway<br/><b>ARU operating component</b>"]
+    ADVISORY["Emerging Advisory<br/><b>transfers the method</b>"]
 
     SH --> FOUNDRY
+    FOUNDRY -->|commercial product built on the substrate| FIELD
+
     SH --> WILLOW
     SH --> ATLAS
+    FOUNDRY -->|represents the terrain| ATLAS
+    WILLOW -->|experimental and agent lineage| ATLAS
+
     SH --> PALE
+    PALE -->|owns and operates| REDWASH
+
     SH --> CRADLE
-    SH --> ARU
-    SH -.-> ADVISORY
-    FOUNDRY -->|represented terrain| ATLAS
-    WILLOW -->|experimental lineage| ATLAS
+
+    SH -->|acquired| ARU
+    ARU -->|railway / short-line component| BST
+
+    SH -.->|emerging; exact structure OPEN| ADVISORY
 ```
 
-The full package includes the [2026 operating topology](docs/organization/2026_OPERATING_TOPOLOGY.md), [leadership and authority map](docs/organization/2026_LEADERSHIP_AND_AUTHORITY_MAP.md), [Original Eight map](docs/organization/ORIGINAL_EIGHT.md), [2015–2026 organizational lineage](docs/organization/ORGANIZATIONAL_LINEAGE_2015_2026.md), and [chart-governance rules](docs/organization/CHART_GOVERNANCE.md).
+The complete [organization-map package](docs/organization/README.md) includes:
+
+- the [full 2026 operating topology](docs/organization/2026_OPERATING_TOPOLOGY.md);
+- the [leadership and authority map](docs/organization/2026_LEADERSHIP_AND_AUTHORITY_MAP.md);
+- [decision rights and operating gates](docs/organization/DECISION_RIGHTS_AND_OPERATING_GATES.md);
+- the [Original Eight](docs/organization/ORIGINAL_EIGHT.md);
+- the [2015–2026 organizational lineage](docs/organization/ORGANIZATIONAL_LINEAGE_2015_2026.md);
+- detailed maps for [Foundry and Foundry Field](docs/organization/FOUNDRY_AND_FOUNDRY_FIELD.md), [Willow and Atlas Meridian](docs/organization/WILLOW_AND_ATLAS_MERIDIAN.md), [Pale Sun and Red Wash](docs/organization/PALE_SUN_AND_RED_WASH.md), [Project Cradle](docs/organization/PROJECT_CRADLE.md), and [ARU, BS&T, and emerging Advisory](docs/organization/ARU_BST_AND_ADVISORY.md).
 
 ## Blackridge status
 

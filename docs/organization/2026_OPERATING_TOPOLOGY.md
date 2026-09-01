@@ -1,67 +1,76 @@
 # SABLE HARBOR — AUGUST 31, 2026 OPERATING TOPOLOGY
 
 **Map ID:** `SH-ORG-001`  
-**Status:** Canon-derived  
-**Important:** This is an operating-topology map, **not** a legal-entity chart and **not** a reporting-line chart.
+**Version:** 0.2.0  
+**Canonical date:** August 31, 2026  
+**Map type:** Operating topology  
+**Edge meaning:** Portfolio relationship, product lineage, operating ownership in the narrative canon, or documented institutional interface. **No edge in this map means “reports to.”**
 
 ```mermaid
 flowchart TB
-    SH["SABLE HARBOR<br/>Industrial-systems company<br/><i>sometimes owns the thing it studies</i>"]
+    SH["SABLE HARBOR<br/>Industrial-systems company<br/><i>sometimes owns the thing it studies when control of the constraint is essential</i>"]
 
-    subgraph CORE["REPRESENTATION, EXPERIMENTATION, AND INVESTIGATION"]
-        FOUNDRY["Foundry / Foundry Field<br/>Relationship, meaning, integration, and workflow substrate<br/><b>commercial platform</b>"]
-        WILLOW["Project Willow<br/>Bounded industrial experimentation<br/><b>Pittsburgh laboratory + Sacramento institutional seam</b>"]
-        ATLAS["Atlas Meridian<br/>Disciplined investigation across represented evidence<br/><b>controlled 2026 commercialization</b>"]
+    subgraph PRODUCT["PRODUCT AND KNOWLEDGE SYSTEM"]
+        FOUNDRY["Foundry<br/>Underlying relationship, meaning, integration, and workflow substrate"]
+        FIELD["Foundry Field<br/>Deployable commercial product and service configuration<br/><b>encounters, connects, and represents</b>"]
+        ATLAS["Atlas Meridian<br/>Controlled 2026 product expression of the Atlas lineage<br/><b>investigates across represented evidence</b>"]
     end
 
-    subgraph OPERATING["OPERATING VENTURES AND PHYSICAL CONSTRAINTS"]
+    subgraph EXPERIMENT["BOUNDED EXPERIMENTAL CAPABILITY"]
+        WILLOW["Project Willow / Willow Labs<br/>Pittsburgh experimental authority<br/>Sacramento institutional seam<br/><b>tests consequential unknowns</b>"]
+    end
+
+    subgraph OPERATIONS["OPERATING VENTURES AND PHYSICAL CONSTRAINTS"]
         PALE["Pale Sun<br/>Uranium operating business<br/><b>Pale Sun first; proving ground second</b>"]
-        REDWASH["Red Wash Mine<br/>Fictional underground Wyoming uranium mine<br/><b>owned and operated asset</b>"]
-        CRADLE["Project Cradle<br/>Rare-earth recovery from existing process streams<br/><b>generally avoids owning the host mine</b>"]
-        ARU["American Resource Utility<br/>Acquired resource-logistics operator<br/><b>remains organizationally distinct during integration</b>"]
-        BST["Blood, Sweat & Tears Railway<br/><b>ARU railway / short-line operating component</b>"]
+        REDWASH["Red Wash Mine<br/>Fictional underground Wyoming uranium operation"]
+        CRADLE["Project Cradle<br/>Rare-earth recovery from process streams<br/><b>generally avoids owning the host mine</b>"]
+        ARU["American Resource Utility<br/>Acquired resource-logistics operator<br/><b>operationally distinct during integration</b>"]
+        BST["Blood, Sweat & Tears Railway<br/>ARU railway / short-line operating component"]
     end
 
-    ADVISORY["Advisory<br/>Method transfer requested by operators<br/><b>emerging; final name, leader, and home OPEN</b>"]
+    ADVISORY["Emerging Advisory<br/>Operating and analytical method transfer<br/><b>final name, leader, P&L, and organizational home OPEN</b>"]
 
-    SH -->|commercial product and substrate| FOUNDRY
+    SH -->|underlying product substrate| FOUNDRY
+    FOUNDRY -->|commercial product built on the substrate| FIELD
+
     SH -->|bounded experimental capability| WILLOW
-    SH -->|controlled product bridge| ATLAS
-    SH -->|operating business| PALE
-    SH -->|recovery line| CRADLE
+    SH -->|controlled product expression| ATLAS
+    FOUNDRY -->|represents the terrain Atlas can investigate| ATLAS
+    WILLOW -->|experimental and agent lineage| ATLAS
+
+    SH -->|uranium operating business| PALE
+    PALE -->|owns and operates in the narrative canon| REDWASH
+
+    SH -->|rare-earth recovery line| CRADLE
+
     SH -->|acquired operator| ARU
+    ARU -->|railway / short-line operating component| BST
+
     SH -.->|emerging practice| ADVISORY
-
-    FOUNDRY -->|represents the terrain| ATLAS
-    WILLOW -->|experimental and evaluative lineage| ATLAS
-    PALE -->|owns and operates| REDWASH
-    ARU -->|operating component| BST
-
-    FOUNDRY -.->|representation and workflow| PALE
-    FOUNDRY -.->|representation and workflow| ARU
-    WILLOW -.->|qualified experiments only| PALE
-    PALE -.->|operating-method transfer| ADVISORY
-    ARU -.->|operating-method transfer| ADVISORY
+    FIELD -.->|mature product and deployment method| ADVISORY
+    PALE -.->|operating-method source| ADVISORY
+    ARU -.->|operating-method source| ADVISORY
 ```
 
-## How to read the map
+## Canonical reading
 
-- **Solid edges from Sable Harbor** identify the canonical relationship of each capability or operating line to the company. They do not establish a legal form or reporting relationship.
-- **Solid edges between units** identify a locked ownership, component, or product-lineage relationship.
-- **Dashed edges** identify method, information, experimentation, or emerging-practice relationships rather than ownership.
-- **Advisory remains emerging.** Its final name, leader, organizational home, pricing, and P&L are intentionally not shown as settled.
+The seven top-level 2026 lines of work—and the Foundry substrate beneath Foundry Field—retain distinct purposes:
 
-## What is deliberately absent
+| Line | Canonical role |
+|---|---|
+| **Foundry** | Underlying relationship-and-meaning substrate. |
+| **Foundry Field** | Mature deployable commercial product and service configuration built on Foundry. |
+| **Willow** | Bounded experimental capability whose unit of work is a consequential industrial question. |
+| **Atlas Meridian** | Disciplined investigative product operating across represented evidence; decision support, not autonomous decision authority. |
+| **Pale Sun** | Uranium operating business centered on ownership and operation of Red Wash. |
+| **Cradle** | Rare-earth recovery line that seeks value in host-created process seams rather than generally owning the host mine. |
+| **ARU / BS&T** | Acquired logistics operator and its railway or short-line component. |
+| **Advisory** | Emerging transfer of Sable Harbor's method to operators who should own the resulting system. |
 
-- a final parent/subsidiary tree;
-- exact executive titles and direct reports;
-- headcount by unit or location;
-- ARU's final integration model and named operating leader;
-- the legal form of Pale Sun, Red Wash, Cradle, Willow, or Advisory;
-- customer, revenue, and product-P&L allocations.
+## Deliberately unresolved
 
-Those belong to the revised operating-model workstream rather than this canon-derived map.
+This map does not choose the legal form of Foundry, Willow, Atlas Meridian, Pale Sun, Red Wash, Cradle, ARU, BS&T, or Advisory. It does not assign executive titles, direct reports, headcount, P&Ls, ownership percentages, intercompany agreements, or final ARU and Advisory leadership.
 
-## Controlling decisions
+## Controlling canon
 
-Primary decision-register anchors include `ID-001` through `ID-003`, `FF-001` through `FF-007`, `WIL-011` through `WIL-014`, `ATL-012` through `ATL-015`, `PS-001`, `PS-006`, `PS-015`, `CRD-001`, `CRD-002`, `ARU-001` through `ARU-006`, and `ADV-001` through `ADV-002`.
+Primary anchors: corporate-lore canon sections 6, 7, 9, 10, 11, 12, and 13; decision-register IDs `FF-001`–`FF-007`, `WIL-011`–`WIL-014`, `ATL-012`–`ATL-015`, `PS-001`, `PS-006`, `PS-015`, `CRD-001`–`CRD-002`, `ARU-001`–`ARU-006`, `ADV-001`–`ADV-002`, and `ID-001`–`ID-003`.

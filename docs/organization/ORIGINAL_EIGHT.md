@@ -1,13 +1,16 @@
 # SABLE HARBOR — THE ORIGINAL EIGHT
 
 **Map ID:** `SH-ORG-003`  
-**Status:** LOCKED identities and broad through-lines; exact 2026 titles remain outside this map
+**Version:** 0.2.0  
+**Canonical date:** August 31, 2026  
+**Map type:** Founding cohort and current-status map  
+**Edge meaning:** Membership in the Original Eight and documented August 31, 2026 status. **No edge establishes ownership, rank, or a reporting line.**
 
-The Original Eight are the three founders and five early employees who coalesced through Sable Harbor's 2016–2017 work. They were **not** an eight-person team at Blackridge. Daniel Mercer is the only future Sable Harbor leader directly exposed to the Blackridge failure.
+The Original Eight are the three founders and five early employees who coalesced through Sable Harbor's 2016–2017 work. They were **not** an eight-person Blackridge team. Daniel Mercer is the only future Sable Harbor leader directly exposed to the Blackridge failure.
 
 ```mermaid
 flowchart TB
-    OE["THE ORIGINAL EIGHT<br/>Three founders + five early employees"]
+    OE["THE ORIGINAL EIGHT<br/>three founders + five early employees"]
 
     subgraph FOUNDERS["FOUNDERS"]
         DANIEL["Daniel Mercer<br/><b>integrator</b><br/>no one owns the whole"]
@@ -20,23 +23,23 @@ flowchart TB
         MARCUS["Marcus Reed<br/><b>resolver</b><br/>a working fix starts the question"]
         MAYA["Dr. Maya Okafor<br/><b>epistemic discipline</b><br/>reconcile to what?"]
         CALEB["Caleb Hargrove<br/><b>operating translator</b><br/>why do they do it that way?"]
-        RACHEL["Rachel Kim<br/><b>solvency and institutional handoff</b><br/>made the company legible"]
+        RACHEL["Rachel Kim<br/><b>solvency, legibility, and institutional handoff</b>"]
     end
 
     subgraph STATUS["AUGUST 31, 2026 STATUS"]
         EMPLOYED["Still employed<br/><b>Daniel · Priya · Elena · Marcus · Maya · Caleb</b>"]
-        BOARD["Board-associated<br/><b>Jon</b><br/>left executive team in 2023"]
+        ASSOCIATED["Formally associated<br/><b>Jon</b><br/>left executive team in 2023<br/>board association is the working state; exact governance structure OPEN"]
         DEPARTED["Departed<br/><b>Rachel Kim</b><br/>voluntary departure in 2024"]
     end
 
-    OE --> DANIEL
-    OE --> PRIYA
-    OE --> JON
-    OE --> ELENA
-    OE --> MARCUS
-    OE --> MAYA
-    OE --> CALEB
-    OE --> RACHEL
+    OE --- DANIEL
+    OE --- PRIYA
+    OE --- JON
+    OE --- ELENA
+    OE --- MARCUS
+    OE --- MAYA
+    OE --- CALEB
+    OE --- RACHEL
 
     DANIEL --> EMPLOYED
     PRIYA --> EMPLOYED
@@ -44,25 +47,30 @@ flowchart TB
     MARCUS --> EMPLOYED
     MAYA --> EMPLOYED
     CALEB --> EMPLOYED
-    JON --> BOARD
+    JON --> ASSOCIATED
     RACHEL --> DEPARTED
 ```
 
-## Canonical formation sequence
+## Formation sequence
 
-- Daniel, Priya, and Jon form the company around three distinct necessities: the system-level wound, the semantic class of problem, and the recurrence/commercial test.
+- Daniel brings the system-level wound and the need to see the whole.
+- Priya identifies the semantic and structural class of problem.
+- Jon demands proof that the problem recurs and that customers will pay to solve it.
 - Elena, Marcus, Maya, Caleb, and Rachel join through the 2016–2017 operating work rather than being inserted into Blackridge.
-- The Forty-Seven Names, the Customer Is Right Twice, and the Spreadsheet That Would Not Die reveal the different disciplines the Original Eight bring to the company.
+- The Forty-Seven Names, the Customer Is Right Twice, and the Spreadsheet That Would Not Die reveal different disciplines inside the founding cohort.
+- Nora Singh is an important 2017 side-door hire but is not one of the Original Eight.
+- Ray Baca is a recurring external customer-side reality check and is not a Sable Harbor employee.
 
 ## What this map does not claim
 
 - equal founder or employee ownership;
 - a present-day executive committee;
-- exact titles or reporting lines;
+- exact titles, compensation, equity, or reporting lines;
 - that every member was present at incorporation;
-- that Jon retains operating authority;
-- that Rachel Kim remains an employee, adviser, or contractor.
+- that Jon retains day-to-day operating authority;
+- a final board structure;
+- any August 31, 2026 employment role for Rachel Kim.
 
-## Controlling decisions
+## Controlling canon
 
-Primary anchors are `PPL-001` through `PPL-013`, together with `BR-002` through `BR-004` and `FND-001` through `FND-005`.
+Primary anchors: corporate-lore canon sections 2.1, 3, and 5.1; decision-register IDs `BR-002`–`BR-004` and `PPL-001`–`PPL-013`.

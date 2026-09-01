@@ -1,45 +1,80 @@
 # SABLE HARBOR — LEGAL AND REPORTING STRUCTURE STATUS
 
 **Map ID:** `SH-ORG-005`  
-**Status:** OPEN workstream guardrail  
-**Purpose:** Prevent the organization maps from silently turning narrative roles into a legal-entity tree or reporting hierarchy.
+**Version:** 0.2.0  
+**Canonical date:** August 31, 2026  
+**Status:** OPEN legal-and-reporting workstream guardrail  
+**Map type:** Open-workstream boundary and publication-status map  
+**Edge meaning:** Supportability, constraint, or prerequisite relationship. **No edge establishes a legal entity, ownership chain, title, or reporting line.**  
+**Purpose:** Prevent canon-derived organization maps from silently becoming a final legal-entity tree, executive hierarchy, or quantitative operating model.
 
-## What is locked strongly enough to show now
+## Status diagram
 
-- Sable Harbor is the parent corporate identity and was incorporated in Sacramento in 2016.
-- Foundry and Foundry Field are the underlying substrate and mature commercial product identity.
-- Willow is a bounded experimental capability created by rechartering Evalon in 2022.
-- Atlas Meridian is the 2026 product expression of the Atlas research lineage.
-- Pale Sun is a uranium operating business and owns/operates Red Wash in the narrative spine.
+```mermaid
+flowchart LR
+    CANON["LOCKED CORPORATE LORE<br/>roles · purposes · historical lineage · narrative operating relationships"]
+    NOW["PERMITTED CURRENT MAPS<br/>operating topology · authority domains · unit composition · qualification gates · lineage"]
+    FUTURE["OPEN OPERATING-MODEL WORKSTREAM<br/>legal entities · reporting lines · board · headcount · P&Ls · capital and intercompany structure"]
+    LATER["POSSIBLE FUTURE LEGAL / REPORTING CHART<br/>only after explicit decisions are accepted into canon"]
+    PROHIBITED["PROHIBITED NOW<br/>a conventional parent-subsidiary tree or direct-report hierarchy presented as settled"]
+
+    CANON -->|supports now| NOW
+    CANON -.->|constrains but does not answer| FUTURE
+    FUTURE -->|resolved and canonized decisions may support| LATER
+    FUTURE -.->|unresolved today| PROHIBITED
+```
+
+The dotted edge identifies the present prohibition. A conventional legal or reporting chart becomes supportable only after the open operating-model decisions are explicitly resolved and accepted.
+
+## What is locked strongly enough to chart
+
+- Sable Harbor was incorporated in Sacramento in 2016 and is the controlling corporate identity for the narrative.
+- Foundry is the underlying relationship-and-meaning substrate.
+- Foundry Field is the mature deployable commercial product and service configuration built on Foundry.
+- Willow is the bounded experimental capability created when Evalon ended as an operating concept in 2022.
+- Atlas Meridian is the controlled 2026 product expression of the longer Atlas lineage.
+- Pale Sun is a uranium operating business and owns and operates Red Wash in the narrative canon.
 - Cradle is a rare-earth recovery line that generally avoids owning the host mine.
-- Sable Harbor acquired American Resource Utility; ARU remains a distinct operating company during integration and contains the Blood, Sweat & Tears Railway component.
+- Sable Harbor acquired American Resource Utility.
+- ARU remains a distinct operating company during integration.
+- Blood, Sweat & Tears Railway is ARU's railway or short-line operating component.
 - Advisory is emerging but not fully institutionalized.
-- Named people have locked domains of responsibility even where exact titles and reporting lines remain open.
+- Named people have locked domains of stewardship, authority, challenge, leadership, or institutional connection.
 
-## What a conventional org chart may not yet claim
+These are sufficient for operating and authority maps. They are not sufficient for a complete legal or reporting chart.
 
-The following remain intentionally unresolved in the controlling corporate-lore package:
+## What remains OPEN
 
-1. exact legal form and jurisdiction of the 2026 parent;
-2. whether Pale Sun, Red Wash, Cradle, Willow, or Advisory are divisions, subsidiaries, LLCs, or internal programs;
-3. the legal ownership chain between Sable Harbor, ARU, and BS&T;
-4. final ARU integration structure and named operating leader;
-5. final Advisory name, leader, P&L, pricing, and organizational home;
-6. exact executive titles and direct-report relationships;
-7. board composition and committee structure;
-8. headcount allocation by function, office, product, program, and operating company;
-9. product and venture P&Ls;
-10. acquisition consideration, financing, and intercompany arrangements.
+1. The exact legal form and jurisdiction of the August 31, 2026 parent entity.
+2. Whether Foundry, Foundry Field, Willow, Atlas Meridian, Pale Sun, Red Wash, Cradle, and Advisory are internal programs, divisions, subsidiaries, LLCs, product lines, or another form.
+3. The exact legal ownership chain among Sable Harbor, Pale Sun, Red Wash, ARU, and BS&T.
+4. Pale Sun and Red Wash transaction entities, financing, liability allocation, intercompany services, and governance.
+5. Cradle's process-right, equipment, royalty, recovery-right, or participation structures.
+6. ARU's final integration model and named operating leader.
+7. Advisory's final name, leader, P&L, pricing, service catalog, launch date, and organizational home.
+8. Exact executive titles and direct-report relationships.
+9. Board composition, committees, delegations, and Jon Bell's precise continuing governance role.
+10. Headcount allocation by function, office, product, program, or operating company.
+11. Product, venture, and operating-company P&Ls.
+12. Capital authority, acquisition consideration, debt, ownership percentages, and intercompany arrangements.
 
 ## Relationship to the prior operating-model branch
 
-The earlier `architecture/corporate-operating-model-v0.1` branch contains a detailed provisional legal, workforce, leadership, board, and financial model. The corporate-lore v0.2 package explicitly states that the earlier branch is **noncontrolling** where it conflicts with Willow, Red Wash/Pale Sun, Cradle, ARU/BS&T, emerging Advisory, or Emberline's historical 2026 status.
+The earlier `architecture/corporate-operating-model-v0.1` branch contains a detailed provisional legal, workforce, leadership, board, and financial model. The corporate-lore v0.2 package explicitly makes that draft noncontrolling where it conflicts with:
 
-The prior model should be mined for useful scale assumptions and then rewritten around the accepted lore. It should not be copied directly into a polished org chart.
+- Willow;
+- Red Wash and Pale Sun;
+- Project Cradle;
+- ARU and BS&T;
+- emerging Advisory;
+- Emberline's historical 2026 status;
+- the reconciled leadership and authority state.
 
-## Required next structure decisions
+Useful scale assumptions may later be reconsidered, but the previous tree must not be copied into a polished chart and treated as settled canon.
 
-A later legal-and-reporting workstream should resolve, in order:
+## Required future decisions
+
+A later operating-model workstream should resolve, in order:
 
 1. parent and subsidiary architecture;
 2. operating-company boundaries and intercompany services;
@@ -50,8 +85,8 @@ A later legal-and-reporting workstream should resolve, in order:
 7. P&L and capital-accountability structure;
 8. chart publication and effective date.
 
-Until then, `2026_OPERATING_TOPOLOGY.md` and `2026_LEADERSHIP_AND_AUTHORITY_MAP.md` are the authoritative diagram forms for public presentation.
+Until that work is accepted, `2026_OPERATING_TOPOLOGY.md`, `2026_LEADERSHIP_AND_AUTHORITY_MAP.md`, and `DECISION_RIGHTS_AND_OPERATING_GATES.md` are the correct public diagram forms.
 
-## Controlling decisions
+## Controlling canon
 
-Primary anchors are `ID-006` through `ID-008`, `ARU-006` through `ARU-007`, `ADV-002`, `PS-011`, `PS-016` through `PS-017`, and the open-items list in section 15 of the corporate-lore canon.
+Primary anchors: corporate-lore canon sections 13, 15, and the document-control scope statement; decision-register IDs `ID-006`–`ID-008`, `PS-011`, `PS-016`–`PS-017`, `ARU-006`–`ARU-007`, and `ADV-002`.
