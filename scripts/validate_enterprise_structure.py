@@ -62,7 +62,11 @@ def main() -> int:
             page = ROOT / page_rel
             if page.exists():
                 text = page.read_text(encoding="utf-8")
-                for marker in ("Standalone export", "NOT IMPLEMENTED", "Unit export specification"):
+                for marker in (
+                    "Standalone export",
+                    "RELEASE CANDIDATE GENERATED",
+                    "Unit export specification",
+                ):
                     if marker not in text:
                         fail(errors, f"{unit['id']}: dossier missing marker {marker!r}")
 

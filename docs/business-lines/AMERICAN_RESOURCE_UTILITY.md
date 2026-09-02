@@ -4,7 +4,7 @@
   <img src="../../assets/brand/logos/american-resource-utility__primary-horizontal.svg" alt="American Resource Utility logo" width="760" />
 </p>
 
-> **Dossier status: release-candidate index.** Canon, identity, organization, database, finance, and operational references are gathered here. A standalone unit database, inventory package, unit-only workbook, and checksummed audit bundle are **not yet implemented**.
+> **Dossier status: generated release candidate.** The finance branch generates scoped SQLite, financial, source-event, workbook, control, manifest, and checksum evidence for this unit.
 
 [Company](../company/README.md) · [Business lines](README.md) · [Organization](../organization/ARU_BST_ORGANIZATION.md) · [Wiki source](../wiki/American%20Resource%20Utility.md) · [Repository audit](../audit/REPOSITORY_AUDIT_2026-09-01.md)
 
@@ -19,7 +19,7 @@
 | Entity filter | `ARU` |
 | Segment filter | `ARU_BST` |
 | Site filter | `ARU_HUB` |
-| Standalone export | **NOT IMPLEMENTED** — current database and workbooks are enterprise-wide |
+| Standalone export | **RELEASE CANDIDATE GENERATED** — `shfin package-business-units`; publication remains acceptance-gated |
 | Dossier date | September 1, 2026 |
 
 ## Purpose and controlling sources

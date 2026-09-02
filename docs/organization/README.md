@@ -1,24 +1,34 @@
-# Organization and Authority
+# SABLE HARBOR — ORGANIZATION CHARTS
 
-This package contains canon-derived functional, combined, bridge, and historical views. It must not be interpreted as a fabricated legal-entity or HR reporting tree.
+**Version:** 0.2.0
+**Canonical date represented:** August 31, 2026
+**Status:** Canon-derived publication package
 
-## Enterprise views
+These are rendered organization charts for the repository README and public wiki. The charts preserve every locked organizational relationship currently available and display genuinely unresolved positions as OPEN rather than fabricating a polished hierarchy.
 
-- [2026 operating topology](2026_OPERATING_TOPOLOGY.md)
-- [2026 leadership and authority map](2026_LEADERSHIP_AND_AUTHORITY_MAP.md)
-- [Original Eight](ORIGINAL_EIGHT.md)
-- [Chart governance](CHART_GOVERNANCE.md)
-- [Official organization briefing](briefing/README.md)
+## Chart set
 
-## Business-line access
+| ID | Chart | Scope |
+|---|---|---|
+| `SH-ORG-001` | [SABLE HARBOR — ENTERPRISE ORGANIZATION](2026_OPERATING_TOPOLOGY.md) | Functional enterprise organization: company-wide authorities, operating lines and known ownership/component relationships. |
+| `SH-ORG-002` | [SABLE HARBOR — LEADERSHIP & AUTHORITY](2026_LEADERSHIP_AND_AUTHORITY_MAP.md) | Named leadership and domain-authority map. Edges and placement do not create direct-report relationships. |
+| `SH-ORG-003` | [FOUNDRY / FOUNDRY FIELD — ORGANIZATION](FOUNDRY_FIELD_ORGANIZATION.md) | Product, technical authority, deployment counterweights and application families. |
+| `SH-ORG-004` | [PROJECT WILLOW — ORGANIZATION](WILLOW_ORGANIZATION.md) | Pittsburgh laboratory, Sacramento institutional seam and operating qualification gate. |
+| `SH-ORG-005` | [ATLAS MERIDIAN — BRIDGE ORGANIZATION](ATLAS_MERIDIAN_BRIDGE_ORGANIZATION.md) | Cross-functional transition organization for repeatability and controlled commercialization. |
+| `SH-ORG-006` | [PALE SUN / RED WASH — ORGANIZATION](PALE_SUN_RED_WASH_ORGANIZATION.md) | Operating-business and mine-authority organization, including qualified interfaces. |
+| `SH-ORG-007` | [PROJECT CRADLE — ORGANIZATION](PROJECT_CRADLE_ORGANIZATION.md) | Founding team and the boundary among Cradle, its recovery intervention and the host operator. |
+| `SH-ORG-008` | [ARU / BS&T — ORGANIZATION](ARU_BST_ORGANIZATION.md) | Distinct acquired operator, known railway component and open operating structure. |
+| `SH-ORG-009` | [THE ORIGINAL EIGHT — FORMATION & STATUS](ORIGINAL_EIGHT.md) | Three founders plus five early employees, Blackridge continuity and 2026 status. |
 
-- [Foundry Field dossier](../business-lines/FOUNDRY_FIELD.md) → [organization reference](FOUNDRY_FIELD_ORGANIZATION.md)
-- [Willow dossier](../business-lines/WILLOW.md) → [organization reference](WILLOW_ORGANIZATION.md)
-- [Atlas Meridian dossier](../business-lines/ATLAS_MERIDIAN.md) → [bridge organization](ATLAS_MERIDIAN_BRIDGE_ORGANIZATION.md)
-- [Pale Sun / Red Wash dossiers](../business-lines/PALE_SUN.md) → [combined organization](PALE_SUN_RED_WASH_ORGANIZATION.md)
-- [Project Cradle dossier](../business-lines/PROJECT_CRADLE.md) → [organization reference](PROJECT_CRADLE_ORGANIZATION.md)
-- [ARU / BS&T dossiers](../business-lines/AMERICAN_RESOURCE_UTILITY.md) → [combined organization](ARU_BST_ORGANIZATION.md)
-- [Advisory dossier](../business-lines/ADVISORY.md) → [ARU/BS&T/Advisory context](ARU_BST_AND_ADVISORY.md)
-- [Emberline and Evalon](../business-lines/EMBERLINE.md) → [organizational lineage](ORGANIZATIONAL_LINEAGE_2015_2026.md)
+## Reading rule
 
-The unit dossiers qualify each chart's scope and identify unresolved legal, leadership, headcount, and reporting facts.
+The enterprise chart is a **functional organization chart**: it shows Sable Harbor's company-wide authorities, operating lines, known leaders and known ownership/component relationships. It is not a conventional HR reporting tree because the canon deliberately leaves exact executive titles and reporting lines open.
+
+The unit charts go deeper wherever the canon supports real team structure. They do not fill remaining gaps with plausible-sounding executives, mine departments, subsidiaries, or headcount.
+
+## Source and regeneration
+
+- Controlling canon: [`SABLE_HARBOR_CORPORATE_LORE_CANON_v0.2.md`](../canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.2.md)
+- Decision index: [`DECISION_REGISTER.md`](../canon/DECISION_REGISTER.md)
+- Chart governance: [`CHART_GOVERNANCE.md`](CHART_GOVERNANCE.md)
+- Deterministic renderer: [`scripts/build_organization_charts.py`](../../scripts/build_organization_charts.py)

@@ -20,6 +20,21 @@ Sable Harbor is the canonical synthetic enterprise and reusable business-world s
 
 ## Enterprise organization
 
+This is the canon-derived August 31, 2026 **functional enterprise organization chart**. It shows company-wide authorities, operating lines, named leaders and known ownership/component relationships. Exact HR reporting lines and final legal entities remain deliberately open.
+
+[![Sable Harbor enterprise organization chart](docs/organization/assets/enterprise-organization-2026.svg)](docs/organization/README.md)
+
+The full package contains dedicated charts for [leadership and authority](docs/organization/2026_LEADERSHIP_AND_AUTHORITY_MAP.md), [Foundry Field](docs/organization/FOUNDRY_FIELD_ORGANIZATION.md), [Project Willow](docs/organization/WILLOW_ORGANIZATION.md), [Atlas Meridian](docs/organization/ATLAS_MERIDIAN_BRIDGE_ORGANIZATION.md), [Pale Sun and Red Wash](docs/organization/PALE_SUN_RED_WASH_ORGANIZATION.md), [Project Cradle](docs/organization/PROJECT_CRADLE_ORGANIZATION.md), [ARU and BS&T](docs/organization/ARU_BST_ORGANIZATION.md), and [the Original Eight](docs/organization/ORIGINAL_EIGHT.md).
+
+### Official organization briefing
+
+The briefing-grade publication package uses the approved production logo system and includes one rendered 16:9 image per chart, an editable PowerPoint deck, a PDF, a packaged ZIP, a source builder, and a validation manifest.
+
+- [Organization briefing index](docs/organization/briefing/README.md)
+- [Editable PowerPoint](docs/organization/briefing/SABLE_HARBOR_Organization_Briefing_v1.0.pptx)
+- [Briefing PDF](docs/organization/briefing/SABLE_HARBOR_Organization_Briefing_v1.0.pdf)
+- [Complete briefing package](docs/organization/briefing/SABLE_HARBOR_Organization_Briefing_v1.0.zip)
+
 ## Explore by business line
 
 | Mark | Business line | Operating role | Current audit state |
@@ -45,7 +60,7 @@ Each dossier gathers the unit's logo variants, letterhead, canon sources, curren
 | Business-line dossiers | `docs/business-lines/` | Release-candidate control indexes |
 | Unit registry | `config/enterprise/business_units.json` | Machine-readable source map |
 | Finance/database implementation | `src/`, `db/`, `config/finance/`, `tests/` | PR #9 release candidate; acceptance blockers remain |
-| Unit databases/workbooks | generated output contract | **NOT IMPLEMENTED as standalone unit bundles** |
+| Unit databases/workbooks | `shfin package-business-units` | Seven RC generators; publication acceptance pending |
 | Wiki | `docs/wiki/` | Versioned source; live GitHub Wiki disabled |
 
 ## Repository map
@@ -76,6 +91,8 @@ SHFIN_DATABASE_URL=sqlite:///var/release.db uv run shfin generate \
   --profile full_history --scenario base --seed 20260831
 SHFIN_DATABASE_URL=sqlite:///var/release.db uv run shfin validate
 SHFIN_DATABASE_URL=sqlite:///var/release.db uv run shfin workbooks
+SHFIN_DATABASE_URL=sqlite:///var/release.db uv run shfin package-business-units \
+  --generation-run-id "$(SHFIN_DATABASE_URL=sqlite:///var/release.db uv run shfin run-id full_history --scenario base --seed 20260831)"
 ```
 
 Generated databases, workbooks, and release bundles are ignored source outputs. They must be published as validated, checksummed CI/release artifacts rather than committed repeatedly. See the [unit export specification](docs/audit/UNIT_EXPORT_SPECIFICATION.md).

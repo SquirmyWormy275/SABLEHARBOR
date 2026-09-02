@@ -4,7 +4,7 @@
   <img src="../../assets/brand/logos/atlas-meridian__primary-horizontal.svg" alt="Atlas Meridian logo" width="760" />
 </p>
 
-> **Dossier status: release-candidate index.** Canon, identity, organization, database, finance, and operational references are gathered here. A standalone unit database, inventory package, unit-only workbook, and checksummed audit bundle are **not yet implemented**.
+> **Dossier status: generated release candidate.** The finance branch generates scoped SQLite, financial, source-event, workbook, control, manifest, and checksum evidence for this unit.
 
 [Company](../company/README.md) · [Business lines](README.md) · [Organization](../organization/ATLAS_MERIDIAN_BRIDGE_ORGANIZATION.md) · [Wiki source](../wiki/Atlas%20Meridian.md) · [Repository audit](../audit/REPOSITORY_AUDIT_2026-09-01.md)
 
@@ -19,7 +19,7 @@
 | Entity filter | `SHI` |
 | Segment filter | `ATLAS`, `CORE` |
 | Site filter | `SAC` |
-| Standalone export | **NOT IMPLEMENTED** — current database and workbooks are enterprise-wide |
+| Standalone export | **RELEASE CANDIDATE GENERATED** — `shfin package-business-units`; publication remains acceptance-gated |
 | Dossier date | September 1, 2026 |
 
 ## Purpose and controlling sources

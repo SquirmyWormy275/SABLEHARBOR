@@ -19,6 +19,7 @@ from sable_harbor.accounting.models import (
 from sable_harbor.accounting.seed import seed_smoke
 from sable_harbor.core.database import build_engine, require_migrated_schema, session_for
 from sable_harbor.exports.release import package_public_demo
+from sable_harbor.exports.units import package_business_units
 from sable_harbor.generation import (
     generate_baseline_run,
     generate_full_history,
@@ -266,6 +267,20 @@ def package_release(
     with session_for(engine) as session:
         manifest = package_public_demo(session, output, generation_run_id=generation_run_id)
     typer.echo(manifest)
+
+
+@app.command("package-business-units")
+def package_units(
+    generation_run_id: str = typer.Option(...),
+    output: Path = Path("releases/generated/business-units"),
+) -> None:
+    engine = build_engine()
+    require_migrated_schema(engine)
+    with session_for(engine) as session:
+        manifests = package_business_units(
+            session, output, generation_run_id=generation_run_id
+        )
+    typer.echo("\n".join(str(path) for path in manifests))
 
 
 @app.command("valuation")

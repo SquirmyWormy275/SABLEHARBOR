@@ -19,7 +19,7 @@
       "base_commit_at_creation": "1f294440a11e724e5f1bdcd3a7f59f7342169bfe",
       "status": "DRAFT_INTEGRATION"
     },
-    "standalone_unit_exports": "NOT_IMPLEMENTED",
+    "standalone_unit_exports": "RELEASE_CANDIDATE_GENERATOR_IMPLEMENTED",
     "wiki_enabled": false,
     "rulesets_detected": 0
   },

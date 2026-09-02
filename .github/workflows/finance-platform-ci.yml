@@ -23,13 +23,16 @@ jobs:
       - run: SHFIN_DATABASE_URL=sqlite:///var/ci-standard.db uv run shfin validate --generation-run-id "$(uv run shfin run-id standard --scenario base --seed 20260831)"
       - run: SHFIN_DATABASE_URL=sqlite:///var/ci-standard.db uv run shfin workbooks --generation-run-id "$(uv run shfin run-id standard --scenario base --seed 20260831)"
       - run: SHFIN_DATABASE_URL=sqlite:///var/ci-standard.db uv run shfin package-release --generation-run-id "$(uv run shfin run-id standard --scenario base --seed 20260831)"
+      - run: SHFIN_DATABASE_URL=sqlite:///var/ci-standard.db uv run shfin package-business-units --generation-run-id "$(uv run shfin run-id standard --scenario base --seed 20260831)"
       - run: uv run python scripts/check_public_safety.py releases/generated/public-demo-v0.1
+      - run: uv run python scripts/check_public_safety.py releases/generated/business-units
       - uses: actions/upload-artifact@v4
         with:
           name: finance-review-artifacts
           path: |
             workbooks/outputs/*.xlsx
             releases/generated/public-demo-v0.1
+            releases/generated/business-units
 
   postgres:
     runs-on: ubuntu-latest
