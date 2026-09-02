@@ -43,10 +43,22 @@ def _constraint_name(table: str, first_column: str) -> str:
     return f"uq_{table}_{first_column}"
 
 
+def _existing_unique_name(table: str, columns: tuple[str, ...]) -> str:
+    connection = op.get_bind()
+    if connection.dialect.name == "sqlite":
+        # Batch mode applies the declared convention to legacy unnamed constraints.
+        return _constraint_name(table, columns[0])
+    for constraint in sa.inspect(connection).get_unique_constraints(table):
+        if tuple(constraint["column_names"]) == columns and constraint["name"]:
+            return str(constraint["name"])
+    raise RuntimeError(f"Missing expected unique constraint {table}{columns}")
+
+
 def upgrade() -> None:
     for table, natural_key in RUN_SCOPED_KEYS:
+        existing_name = _existing_unique_name(table, natural_key)
         with op.batch_alter_table(table, naming_convention=NAMING_CONVENTION) as batch:
-            batch.drop_constraint(_constraint_name(table, natural_key[0]), type_="unique")
+            batch.drop_constraint(existing_name, type_="unique")
             batch.create_unique_constraint(
                 _constraint_name(table, "generation_run_id"),
                 ("generation_run_id", *natural_key),
