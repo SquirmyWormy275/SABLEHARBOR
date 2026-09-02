@@ -42,6 +42,9 @@ def test_all_current_business_units_get_scoped_reconciled_packages(tmp_path) -> 
                 )
             }
         assert entities <= set(manifest["filters"]["entities"])
+        assert "NO_RECORDS" not in (
+            root / "operations/domain-registers/primary-register.csv"
+        ).read_text()
         for line in (root / "SHA256SUMS.txt").read_text().splitlines():
             expected, relative = line.split("  ", 1)
             assert hashlib.sha256((root / relative).read_bytes()).hexdigest() == expected

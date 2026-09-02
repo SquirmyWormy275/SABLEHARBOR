@@ -263,8 +263,10 @@
   run-pinned entity/segment-scoped audit bundles, with ARU/BS&T governed by the same control path as
   Foundry Field, Willow, Atlas Meridian, Pale Sun, Project Cradle, and Advisory. Each contains a
   filtered SQLite evidence database, journal CSV, trial balance and statement extracts, source-event
-  lineage, operational register placeholders with explicit empty states, an audit workbook,
+  lineage, scoped asset/inventory/workforce extracts, a unit-specific primary operating register,
+  an audit workbook,
   reconciliation and safety results, manifest, and verified SHA-256 inventory. Generation rejects
   incomplete runs, recreates stale output, reconciles debits to credits, proves entity non-leakage,
-  and scans every generated artifact. CI now builds, scans, and uploads all seven packages. Deeper
-  unit-specific asset/inventory/workforce registers remain a P2 expansion, not a hidden omission.
+  and scans every generated artifact. CI now builds, scans, and uploads all seven packages. The
+  primary registers cover Foundry contracts, Willow experiments, Atlas evaluations, Red Wash
+  production batches, Cradle recovery runs, ARU waybills, and Advisory engagements.

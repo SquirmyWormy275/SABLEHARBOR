@@ -92,6 +92,125 @@ def _trial_balance(lines: list[dict[str, Any]]) -> list[dict[str, Any]]:
     ]
 
 
+def _scoped_rows(
+    session: Session,
+    sql: str,
+    run_ids: tuple[str, ...],
+    entity_codes: list[str],
+) -> list[dict[str, Any]]:
+    statement = text(sql).bindparams(bindparam("entity_codes", expanding=True))
+    return [
+        {key: str(value) if value is not None else "" for key, value in row.items()}
+        for row in session.execute(
+            statement,
+            {
+                "actual_run_id": run_ids[0],
+                "generation_run_id": run_ids[-1],
+                "entity_codes": entity_codes,
+            },
+        ).mappings()
+    ]
+
+
+def _operational_registers(
+    session: Session, unit_id: str, run_ids: tuple[str, ...], entity_codes: list[str]
+) -> dict[str, list[dict[str, Any]]]:
+    shared = {
+        "asset-register": """
+            SELECT fa.asset_number, le.code AS entity_code, fa.asset_class,
+                   fa.placed_in_service, fa.cost, fa.useful_life_months, fa.fact_state
+            FROM fixed_asset fa JOIN legal_entity le ON le.id=fa.entity_id
+            WHERE le.code IN :entity_codes
+              AND fa.generation_run_id IN (:actual_run_id,:generation_run_id)
+            ORDER BY fa.asset_number
+        """,
+        "inventory-register": """
+            SELECT il.lot_number, le.code AS entity_code, il.inventory_stage, il.quantity,
+                   il.unit, il.carrying_value, il.as_of_date, il.fact_state
+            FROM inventory_lot il JOIN legal_entity le ON le.id=il.entity_id
+            WHERE le.code IN :entity_codes
+              AND il.generation_run_id IN (:actual_run_id,:generation_run_id)
+            ORDER BY il.lot_number
+        """,
+        "workforce-summary": """
+            SELECT le.code AS entity_code, w.worker_type, w.segment_code, w.function_code,
+                   COUNT(*) AS workers, SUM(w.annual_cost) AS annual_cost
+            FROM worker w JOIN legal_entity le ON le.id=w.entity_id
+            WHERE le.code IN :entity_codes
+            GROUP BY le.code,w.worker_type,w.segment_code,w.function_code
+            ORDER BY le.code,w.segment_code,w.function_code
+        """,
+    }
+    domain = {
+        "foundry-field": """
+            SELECT c.contract_number,c.starts_on,c.ends_on,c.currency,
+                   c.transaction_price,c.fact_state
+            FROM customer_contract c JOIN legal_entity le ON le.id=c.entity_id
+            WHERE le.code IN :entity_codes
+              AND c.generation_run_id IN (:actual_run_id,:generation_run_id)
+            ORDER BY c.contract_number
+        """,
+        "willow": """
+            SELECT we.experiment_number,we.experiment_date,we.question,we.belief,we.budget,
+                   we.actual_cost,we.observation,we.gate_decision,we.transfer_target
+            FROM willow_experiment we JOIN legal_entity le ON le.id=we.entity_id
+            WHERE le.code IN :entity_codes
+              AND we.generation_run_id IN (:actual_run_id,:generation_run_id)
+            ORDER BY we.experiment_number
+        """,
+        "atlas-meridian": """
+            SELECT ae.evaluation_number,ae.evaluation_date,ae.model_version,
+                   ae.investigation_question,ae.compute_cost,ae.validation_cost,
+                   ae.customer_fee,ae.owns_final_decision
+            FROM atlas_evaluation ae JOIN legal_entity le ON le.id=ae.entity_id
+            WHERE le.code IN :entity_codes
+              AND ae.generation_run_id IN (:actual_run_id,:generation_run_id)
+            ORDER BY ae.evaluation_number
+        """,
+        "pale-sun": """
+            SELECT mpb.batch_number,mpb.production_date,mpb.feed_tons,mpb.grade_fraction,
+                   mpb.recovery_fraction,mpb.pounds_u3o8,mpb.production_cost
+            FROM mine_production_batch mpb JOIN legal_entity le ON le.id=mpb.entity_id
+            WHERE le.code IN :entity_codes
+              AND mpb.generation_run_id IN (:actual_run_id,:generation_run_id)
+            ORDER BY mpb.batch_number
+        """,
+        "project-cradle": """
+            SELECT rr.run_number,rr.run_date,rr.host_operator_code,rr.feed_tons,
+                   rr.grade_fraction,rr.recovery_fraction,rr.recovered_units,
+                   rr.operating_cost,rr.host_share_amount,rr.gross_sale
+            FROM recovery_run rr JOIN legal_entity le ON le.id=rr.entity_id
+            WHERE le.code IN :entity_codes
+              AND rr.generation_run_id IN (:actual_run_id,:generation_run_id)
+            ORDER BY rr.run_number
+        """,
+        "american-resource-utility": """
+            SELECT w.waybill_number,w.movement_date,w.carloads,w.tons,w.route_miles,
+                   w.ton_miles,w.base_rate,w.fuel_surcharge,w.revenue,w.fuel_gallons,
+                   w.fuel_cost,w.crew_hours,w.crew_cost,w.custody_status
+            FROM waybill w JOIN legal_entity le ON le.id=w.entity_id
+            WHERE le.code IN :entity_codes
+              AND w.generation_run_id IN (:actual_run_id,:generation_run_id)
+            ORDER BY w.waybill_number
+        """,
+        "advisory": """
+            SELECT e.engagement_code,e.name,e.billing_method,e.starts_on,e.ends_on,e.fact_state
+            FROM engagement e JOIN customer_contract c ON c.id=e.contract_id
+            JOIN legal_entity le ON le.id=c.entity_id
+            WHERE le.code IN :entity_codes
+              AND e.generation_run_id IN (:actual_run_id,:generation_run_id)
+            ORDER BY e.engagement_code
+        """,
+    }
+    output = {
+        name: _scoped_rows(session, sql, run_ids, entity_codes) for name, sql in shared.items()
+    }
+    output["domain-registers/primary-register"] = _scoped_rows(
+        session, domain[unit_id], run_ids, entity_codes
+    )
+    return output
+
+
 def _statement_rows(trial_balance: list[dict[str, Any]], classes: set[str]) -> list[dict[str, Any]]:
     return [row for row in trial_balance if row["account_class"] in classes]
 
@@ -183,8 +302,11 @@ def package_business_units(
         ]
         _write_csv(root / "controls/source-lineage.csv", sources)
         _write_csv(root / "operations/domain-registers/source-events.csv", sources)
-        for name in ("asset-register", "inventory-register", "workforce-summary"):
-            _write_csv(root / f"operations/{name}.csv", [])
+        registers = _operational_registers(
+            session, unit["id"], context.included_run_ids, unit["entity_codes"]
+        )
+        for name, rows in registers.items():
+            _write_csv(root / f"operations/{name}.csv", rows)
         reconciliation = {
             "status": "PASS" if debit == credit else "FAIL",
             "debits": str(debit),
