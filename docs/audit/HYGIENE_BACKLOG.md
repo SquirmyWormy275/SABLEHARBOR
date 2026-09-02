@@ -3,7 +3,7 @@
 ## P0
 
 - Complete independent remediation and acceptance of PR #9.
-- Materialize unit-scoped release packages for every current operating line.
+- Obtain reviewer acceptance for the seven generated unit-scoped release packages.
 - Enable the GitHub wiki and publish the controlled `docs/wiki/` source.
 - Protect `main` and require review and relevant checks.
 - Update PR #9's description and return it to draft until acceptance.
@@ -20,7 +20,7 @@
 
 ## P2
 
-- Generate and proof unit-specific letterheads.
-- Generate unit packages deterministically from the finance platform.
+- Extend the proofed unit-specific letterheads into optional DOCX/PDF variants.
+- Expand unit packages with any reviewer-requested operational registers.
 - Add pinned external-link, schema-diff, branch-age, and stale-PR checks.
 - Consider Pages after source architecture stabilizes.

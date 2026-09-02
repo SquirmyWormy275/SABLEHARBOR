@@ -31,43 +31,20 @@
   tables and columns, removes stale outputs, supports controlled timestamps, and recursively scans
   generated CSV, SQLite, XLSX, manifests, and nested archives. CI publishes the reviewed package
   and six workbooks only after these gates pass.
-- The current uncommitted Stage 1 tranche passes Ruff, strict mypy, and 78 local tests; two
-  PostgreSQL-only tests are skipped locally because `SHFIN_POSTGRES_TEST_URL` is not configured.
-  At the committed PR head, two PostgreSQL jobs, two SQLite jobs, and organization render
-  validation evidence is refreshed by every branch checkpoint.
+- The committed platform passes Ruff, strict mypy, 86 local tests, and all enterprise, brand,
+  organization, link, and public-safety validators; two PostgreSQL-only tests are skipped locally
+  because `SHFIN_POSTGRES_TEST_URL` is not configured. Remote PostgreSQL 16 and SQLite jobs passed
+  at checkpoint `9e29668` and are refreshed by every branch checkpoint.
+- Seven standalone business-line generators produce fresh scoped SQLite evidence, financial and
+  operational registers, workbooks, reconciliation/safety results, manifests, and checksums.
 
 ## Open acceptance boundary
 
-Passing the legacy commands above does not establish acceptance. The controlling P0/P1 findings are
-in `docs/handoffs/SABLE_HARBOR_CODEX_EXECUTION_HANDOFF_2026-09-01.md`. Migration immutability
-is implemented through `8f61b43382fd9adfcc05059bd6efbf3686af9e11`. Run/scenario isolation,
-common-actual inclusion, operational-fact ownership, explicit read contexts, migration cycles, and
-schema fingerprints are implemented through migration `0007`. Migration `0008` adds centralized
-run/build identity, cutoff fields, dynamic head discovery, read-only validation, and run-owned
-profile generation. The uncommitted `0009`–`0012` tranche adds a portable complete input manifest,
-content-addressed build and actual-dataset identity, explicit profile contracts, immutable
-idempotent completion timestamps, content-addressed coexisting run IDs, and SQLite-proven two-seed
-natural-key namespacing with explicit populated-downgrade refusal, non-null generation ownership,
-same-run composite parent/child keys, compatible actual-dataset attachment, and database-guarded
-lifecycle transitions. Revision `0012` adds run-scoped period-close state; accounting trial balance,
-lineage, and close APIs now require or unambiguously resolve a compatible run context. Closing a
-scenario context closes its included common-actual layer, and posting/reversal reject an unrelated
-active session context. A same-seed base/stress regression proves that an existing shared-actual
-marker remains unchanged while the sibling scenario receives its missing close marker; repeated
-closure of the resulting compatible context is idempotent. Every profile that first completes the
-common-actual layer persists the same standard-actual superset and completion marker; a
-bidirectional baseline/standard regression proves profile-order-independent standard journal
-counts and debit totals. Explicit trial-balance comparison rejects same-run, incomplete,
-cross-seed, profile, actual-dataset, cutoff, forecast-start, and schema-incompatible contexts.
-Each compatibility dimension has a one-variable-at-a-time semantic regression, and a base/stress
-regression proves a scenario-attributable delta. The PostgreSQL two-seed and violation matrix is
-implemented, including explicit private-profile authorization, but remote evidence remains open. Standard monthly accounting controls, driver
-values, production, freight movements, and ending inventory now partition pre-cutoff actuals from
-scenario-owned forecasts, with a two-scenario semantic ownership audit. Effective-dated master and
-commitment records remain whole records rather than periodic facts. Workbook routing now uses an exact
-semantic registry for every sheet, with purpose, query, units, deterministic ordering, tolerance, and
-empty-state metadata; workbook tests compare database query headers to generated sheets and distinguish
-balance-sheet, P&L, journal-lineage, and industrial routes. Integrated monthly
-statements and rollforwards, driver-based scenarios, accurate historical claims, and CI review
-artifacts remain open. This synthetic platform is not accepted, integration-ready, production-ready,
-or independently auditable.
+This branch is a release candidate, not an accepted or audited production system. Remaining P1 is
+explicitly visible in the aging/debt controls: legacy acquisition and summary balances are not all
+represented by causal document-level subledgers, although the schedules bridge them exactly to the
+GL. The generated unit packages are independently inspectable release-candidate evidence, but final
+publication still requires the latest remote PostgreSQL/SQLite artifact jobs to pass and reviewer
+acceptance. GitHub Wiki publication is also gated by integration to `main`; this mandate does not
+authorize merging PR #9, #10, or #13. OPEN and scenario facts remain labeled and must not be promoted
+to LOCKED canon through acceptance.
