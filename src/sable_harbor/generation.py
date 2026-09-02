@@ -30,8 +30,16 @@ from sable_harbor.accounting.models import (
     Site,
     Worker,
 )
+from sable_harbor.commercial.contract_to_cash import (
+    create_foundry_contract_flow,
+    receive_cash,
+    recognize_month,
+)
+from sable_harbor.commercial.models import PerformanceObligation
 from sable_harbor.config.assumptions import load_assumptions
 from sable_harbor.core.ids import stable_id
+from sable_harbor.logistics.flows import operate_waybill
+from sable_harbor.mining.flows import produce_concentrate, ship_and_collect
 from sable_harbor.provenance.models import GenerationRun
 from sable_harbor.provenance.service import (
     GENERATION_RUN_SESSION_KEY,
@@ -166,6 +174,109 @@ def entity_plans() -> tuple[EntityPlan, ...]:
             "ARU_HUB",
         ),
     )
+
+
+def _generate_causal_month(
+    session: Session,
+    *,
+    entity_code: str,
+    entity_id: str,
+    site_id: str | None,
+    book_id: str,
+    period_id: str,
+    period_end: date,
+    key: str,
+    revenue: D,
+    cost: D,
+) -> tuple[D, D]:
+    """Materialize a causal forecast subledger slice and return GL amounts replaced."""
+    causal_revenue = (revenue * D("0.10")).quantize(D("0.01"))
+    causal_cost = (cost * D("0.10")).quantize(D("0.01"))
+    if entity_code == "SHI":
+        contract, invoice = create_foundry_contract_flow(
+            session,
+            book_id=book_id,
+            entity_id=entity_id,
+            period_id=period_id,
+            natural_key=f"{key}:FOUNDRY",
+            invoice_date=period_end,
+            annual_value=causal_revenue,
+        )
+        obligation = session.scalar(
+            select(PerformanceObligation).where(
+                PerformanceObligation.contract_id == contract.id
+            )
+        )
+        if obligation is None:
+            raise ValueError("Generated Foundry contract is missing its performance obligation")
+        recognize_month(
+            session,
+            obligation=obligation,
+            book_id=book_id,
+            period_id=period_id,
+            recognition_date=period_end,
+            amount=causal_revenue,
+        )
+        receive_cash(
+            session,
+            invoice=invoice,
+            book_id=book_id,
+            period_id=period_id,
+            receipt_date=period_end,
+        )
+        return causal_revenue, D(0)
+    if entity_code == "RWH":
+        if site_id is None:
+            raise ValueError("Red Wash causal generation requires a site")
+        feed_tons = D("1000")
+        grade = D("0.001")
+        recovery = D("0.80")
+        pounds = feed_tons * D(2000) * grade * recovery
+        batch = produce_concentrate(
+            session,
+            entity_id=entity_id,
+            site_id=site_id,
+            book_id=book_id,
+            period_id=period_id,
+            key=f"{key}:MINE",
+            production_date=period_end,
+            feed_tons=feed_tons,
+            grade_fraction=grade,
+            recovery_fraction=recovery,
+            production_cost=causal_cost,
+        )
+        ship_and_collect(
+            session,
+            batch=batch,
+            book_id=book_id,
+            period_id=period_id,
+            shipment_date=period_end,
+            pounds_shipped=pounds,
+            realized_price_per_lb=causal_revenue / pounds,
+        )
+        return causal_revenue, causal_cost
+    if entity_code == "ARU":
+        fuel_cost = (causal_cost * D("0.55")).quantize(D("0.01"))
+        crew_cost = causal_cost - fuel_cost
+        operate_waybill(
+            session,
+            entity_id=entity_id,
+            book_id=book_id,
+            period_id=period_id,
+            key=f"{key}:WAYBILL",
+            movement_date=period_end,
+            carloads=12,
+            tons=D("840"),
+            route_miles=D("120"),
+            base_rate=causal_revenue,
+            fuel_surcharge=D(0),
+            fuel_gallons=D("1000"),
+            fuel_price=fuel_cost / D("1000"),
+            crew_hours=D("100"),
+            crew_rate=crew_cost / D("100"),
+        )
+        return causal_revenue, causal_cost
+    return D(0), D(0)
 
 
 ACCOUNTS = (
@@ -915,6 +1026,7 @@ def generate_standard(
             )
         )
     }
+    site_ids = {site.code: site.id for site in session.scalars(select(Site))}
     plan_map = {plan.code: plan for plan in entity_plans()}
     yearly = {
         2023: {"SHI": (D("67200000"), D("75000000"))},
@@ -1032,6 +1144,23 @@ def generate_standard(
                 owner_scenario = "actual_common" if is_actual else scenario
                 owner_marker = stable_id("generation_namespace", owner_run_id)
                 key = f"{owner_marker}:{entity_code}:{period_code}:OPERATIONS"
+                reported_revenue = revenue
+                reported_cost = cost
+                if not is_actual and year == 2026:
+                    causal_revenue, causal_cost = _generate_causal_month(
+                        session,
+                        entity_code=entity_code,
+                        entity_id=book.entity_id,
+                        site_id=site_ids.get("RED_WASH") if entity_code == "RWH" else None,
+                        book_id=book.id,
+                        period_id=period.id,
+                        period_end=period.ends_on,
+                        key=key,
+                        revenue=revenue,
+                        cost=cost,
+                    )
+                    revenue -= causal_revenue
+                    cost -= causal_cost
                 if session.get(JournalEntry, stable_id("journal", key)) is None:
                     _post(
                         session,
@@ -1055,7 +1184,10 @@ def generate_standard(
                         source_type=availability,
                         generation_run_id=owner_run_id,
                     )
-                for metric, amount in (("revenue", revenue), ("operating_cost", cost)):
+                for metric, amount in (
+                    ("revenue", reported_revenue),
+                    ("operating_cost", reported_cost),
+                ):
                     value_id = stable_id(
                         "scenario_value",
                         f"{owner_marker}:{entity_code}:{period_code}:{metric}",

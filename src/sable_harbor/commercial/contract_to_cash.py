@@ -61,6 +61,10 @@ def create_foundry_contract_flow(
         segment="MID_TIER_MINER",
         fact_state=FactState.SYNTHETIC_INSTANCE,
     )
+    # Customer has no ORM relationship edge, so flush the FK parent explicitly;
+    # SQLite with foreign keys enabled and PostgreSQL must not depend on insert ordering.
+    session.add(customer)
+    session.flush()
     contract = Contract(
         id=stable_id("contract", natural_key),
         customer_id=customer.id,
@@ -116,7 +120,7 @@ def create_foundry_contract_flow(
         ],
     )
     invoice.journal_entry_id = journal.id
-    session.add_all([customer, contract, obligation, invoice, journal])
+    session.add_all([contract, obligation, invoice, journal])
     session.flush()
     post_entry(session, journal)
     return contract, invoice

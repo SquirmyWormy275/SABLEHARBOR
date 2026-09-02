@@ -12,7 +12,11 @@ from sable_harbor.accounting.models import (
     LegalEntity,
     ScenarioValue,
 )
+from sable_harbor.commercial.models import CashReceipt, RevenueRecognition
+from sable_harbor.commercial.models import Contract as CustomerContract
 from sable_harbor.generation import generate_standard
+from sable_harbor.logistics.models import Waybill
+from sable_harbor.mining.models import MineProductionBatch, UraniumShipment
 from sable_harbor.provenance.service import record_generation_run
 
 
@@ -43,6 +47,21 @@ def test_standard_generation_has_48_months_actual_forecast_and_is_idempotent() -
         assert marker is not None
         sources = set(session.scalars(select(JournalEntry.source_type)))
         assert {"monthly_actual", "monthly_forecast"}.issubset(sources)
+        assert {
+            "invoice",
+            "revenue_recognition",
+            "cash_receipt",
+            "mine_production_batch",
+            "uranium_shipment",
+            "uranium_cash_receipt",
+            "waybill",
+        }.issubset(sources)
+        assert session.scalar(select(func.count(CustomerContract.id))) == 4
+        assert session.scalar(select(func.count(RevenueRecognition.id))) == 4
+        assert session.scalar(select(func.count(CashReceipt.id))) == 4
+        assert session.scalar(select(func.count(MineProductionBatch.id))) == 4
+        assert session.scalar(select(func.count(UraniumShipment.id))) == 4
+        assert session.scalar(select(func.count(Waybill.id))) == 4
         revenue = session.scalar(
             select(func.sum(ScenarioValue.amount)).where(
                 ScenarioValue.generation_run_id.in_((run.actual_generation_run_id, run.id)),

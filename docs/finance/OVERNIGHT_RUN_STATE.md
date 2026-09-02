@@ -215,3 +215,10 @@
   The corresponding workbook sheets use these report-specific semantic sources. PostgreSQL CI
   passes the full Stage 1 matrix in both push and PR runs (39s and 38s); SQLite artifact jobs remain
   in progress. Resume at causal monthly subledger event generation and unit-package reconciliation.
+- Causal-subledger increment: every forecast month now replaces a controlled portion of the SHI,
+  Red Wash, and ARU summary journal with source-linked economic events while preserving total driver
+  economics. SHI generates contract, obligation, invoice, ratable recognition, AR, and collection;
+  Red Wash generates production batch, inventory lot, shipment, COGS, receivable, and collection;
+  ARU generates waybill, ton-miles, fuel/crew cost, receivable, and collection. The base run contains
+  four complete forecast chains per line, all run-owned and idempotent. Resume by expanding payroll,
+  procurement/AP, fixed assets, debt, Cradle, research, and Advisory into the monthly chain.
