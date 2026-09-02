@@ -24,3 +24,8 @@ narrative documentation, 75 semantically distinct domain queries, release public
 oracle publication. Corresponding acceptance gates remain `IN_PROGRESS` or `REVIEW_READY`; none is
 represented as independently accepted.
 
+## Continuation evidence
+
+The continuation added all seven cutoff databases, complete domain CSV exports, manifest hashing,
+and corruption/snapshot-leakage tests. The test suite now has four passing tests. These additions
+reduce but do not eliminate the remaining acceptance gaps above.

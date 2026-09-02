@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import csv
 import hashlib
 import json
 import random
@@ -654,6 +655,100 @@ def export_artifacts(path: Path, result: dict[str, object]) -> Path:
     return workbook
 
 
+def export_csv(path: Path) -> list[Path]:
+    out = PUBLIC / "extracts"
+    out.mkdir(parents=True, exist_ok=True)
+    db = sqlite3.connect(path)
+    exports: list[Path] = []
+    for table in [
+        "person",
+        "facility",
+        "asset",
+        "serialized_component",
+        "item_master",
+        "vendor",
+        "work_order",
+        "inventory_transaction",
+        "haul_cycle",
+        "plant_hourly",
+        "financial_statement",
+        "phase4_valuation",
+    ]:
+        target = out / f"{table}.csv"
+        cursor = db.execute(f'SELECT * FROM "{table}"')
+        with target.open("w", newline="", encoding="utf-8") as stream:
+            writer = csv.writer(stream)
+            writer.writerow([column[0] for column in cursor.description])
+            while rows := cursor.fetchmany(10_000):
+                writer.writerows(rows)
+        exports.append(target)
+    db.close()
+    return exports
+
+
+def build_snapshot(path: Path, cutoff: str) -> Path:
+    cutoff_at = f"{cutoff}T23:59:59+00:00"
+    out = PUBLIC / "snapshots"
+    out.mkdir(parents=True, exist_ok=True)
+    target = out / f"blackridge_case_cutoff_{cutoff}.sqlite3"
+    target.unlink(missing_ok=True)
+    source = sqlite3.connect(path)
+    snap = sqlite3.connect(target)
+    create_schema(snap)
+    for table in sorted(set(GENERIC_TABLES) | set(MASTER_COUNTS)):
+        columns = [row[1] for row in source.execute(f'PRAGMA table_info("{table}")')]
+        marks = ",".join("?" for _ in columns)
+        rows = source.execute(
+            f'SELECT * FROM "{table}" WHERE available_at IS NULL OR available_at <= ?',
+            (cutoff_at,),
+        )
+        snap.executemany(f'INSERT INTO "{table}" VALUES ({marks})', rows)
+    snap.executemany(
+        "INSERT INTO event_ledger VALUES(?,?,?,?,?,?,?,?,?,?)",
+        source.execute("SELECT * FROM event_ledger WHERE available_at <= ?", (cutoff_at,)),
+    )
+    snap.executemany(
+        "INSERT INTO journal_line_detail VALUES(?,?,?,?,?,?,?)",
+        source.execute("SELECT * FROM journal_line_detail WHERE period <= ?", (cutoff[:7],)),
+    )
+    snap.executemany(
+        "INSERT INTO financial_statement VALUES(?,?,?,?,?)",
+        source.execute("SELECT * FROM financial_statement WHERE period <= ?", (cutoff[:7],)),
+    )
+    if cutoff >= "2015-12-31":
+        snap.executemany(
+            "INSERT INTO phase4_valuation VALUES(?,?,?,?,?,?,?,?,?)",
+            source.execute("SELECT * FROM phase4_valuation"),
+        )
+    snap.commit()
+    source.close()
+    snap.close()
+    return target
+
+
+def manifest(path: Path) -> dict[str, object]:
+    result = validate(path)
+    artifacts = []
+    for candidate in sorted((PUBLIC).rglob("*")):
+        if candidate.is_file():
+            artifacts.append(
+                {
+                    "path": str(candidate.relative_to(ROOT)),
+                    "bytes": candidate.stat().st_size,
+                    "sha256": sha256(candidate),
+                    "classification": "public",
+                }
+            )
+    return {
+        "dataset_version": VERSION,
+        "schema_version": SCHEMA,
+        "seed": DEFAULT_SEED,
+        "validation_status": result["status"],
+        "row_counts": result["row_counts"],
+        "artifacts": artifacts,
+    }
+
+
 def doctor(json_mode: bool) -> int:
     payload = {
         "python": sys.version.split()[0],
@@ -691,15 +786,19 @@ def main(argv: list[str] | None = None) -> int:
     val = sub.add_parser("validate")
     val.add_argument("--profile", choices=["smoke", "m00", "full_2015"], default="smoke")
     exp = sub.add_parser("export")
-    exp.add_argument("kind", choices=["excel", "all"])
+    exp.add_argument("kind", choices=["excel", "csv", "all"])
     exp.add_argument("--profile", choices=["smoke", "m00", "full_2015"], default="full_2015")
+    snap = sub.add_parser("snapshot")
+    snap.add_argument("--cutoff", required=True)
+    sub.add_parser("manifest")
     args = p.parse_args(argv)
     if args.command == "doctor":
         return doctor(args.json)
+    profile = getattr(args, "profile", "full_2015")
     filename = (
         "blackridge_public_v0.1.0.sqlite3"
-        if args.profile == "full_2015"
-        else f"blackridge_{args.profile}_v0.1.0.sqlite3"
+        if profile == "full_2015"
+        else f"blackridge_{profile}_v0.1.0.sqlite3"
     )
     path = PUBLIC / "databases" / filename
     if args.command == "generate":
@@ -712,7 +811,20 @@ def main(argv: list[str] | None = None) -> int:
         return 2
     result = validate(path)
     if args.command == "export":
-        workbook = export_artifacts(path, result)
-        result["workbook"] = str(workbook)
+        if args.kind in {"excel", "all"}:
+            workbook = export_artifacts(path, result)
+            result["workbook"] = str(workbook)
+        if args.kind in {"csv", "all"}:
+            result["csv_exports"] = [str(item) for item in export_csv(path)]
+    elif args.command == "snapshot":
+        path = PUBLIC / "databases" / "blackridge_public_v0.1.0.sqlite3"
+        snapshot = build_snapshot(path, args.cutoff)
+        result = {"status": "PASS", "snapshot": str(snapshot), "sha256": sha256(snapshot)}
+    elif args.command == "manifest":
+        path = PUBLIC / "databases" / "blackridge_public_v0.1.0.sqlite3"
+        result = manifest(path)
+        result["status"] = result["validation_status"]
+        target = PUBLIC / "manifests" / "DATA_MANIFEST.json"
+        target.write_text(json.dumps(result, indent=2) + "\n")
     print(json.dumps(result, indent=2))
     return 0 if result["status"] == "PASS" else 1
