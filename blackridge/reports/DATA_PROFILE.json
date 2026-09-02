@@ -21,7 +21,7 @@
       }
     },
     "action_item": {
-      "rows": 12,
+      "rows": 1100,
       "null_counts": {
         "id": 0,
         "canonical_id": 0,
@@ -38,7 +38,7 @@
       }
     },
     "actual_shift": {
-      "rows": 12,
+      "rows": 98500,
       "null_counts": {
         "id": 0,
         "canonical_id": 0,
@@ -89,7 +89,7 @@
       }
     },
     "assay_result": {
-      "rows": 12,
+      "rows": 20000,
       "null_counts": {
         "id": 0,
         "canonical_id": 0,
@@ -140,7 +140,7 @@
       }
     },
     "asset_hierarchy": {
-      "rows": 12,
+      "rows": 3000,
       "null_counts": {
         "id": 0,
         "canonical_id": 0,
@@ -191,7 +191,7 @@
       }
     },
     "backlog_snapshot": {
-      "rows": 12,
+      "rows": 7200,
       "null_counts": {
         "id": 0,
         "canonical_id": 0,
@@ -259,7 +259,7 @@
       }
     },
     "building": {
-      "rows": 12,
+      "rows": 45,
       "null_counts": {
         "id": 0,
         "canonical_id": 0,
@@ -395,7 +395,7 @@
       }
     },
     "communication_message": {
-      "rows": 12,
+      "rows": 3500,
       "null_counts": {
         "id": 0,
         "canonical_id": 0,
@@ -412,7 +412,7 @@
       }
     },
     "component_installation_history": {
-      "rows": 12,
+      "rows": 2100,
       "null_counts": {
         "id": 0,
         "canonical_id": 0,
@@ -493,7 +493,7 @@
       }
     },
     "contractor": {
-      "rows": 12,
+      "rows": 75,
       "null_counts": {
         "id": 0,
         "canonical_id": 0,
@@ -782,7 +782,7 @@
       }
     },
     "downtime_event": {
-      "rows": 12,
+      "rows": 4000,
       "null_counts": {
         "id": 0,
         "canonical_id": 0,
@@ -816,7 +816,7 @@
       }
     },
     "employee": {
-      "rows": 12,
+      "rows": 500,
       "null_counts": {
         "id": 0,
         "canonical_id": 0,
@@ -1069,7 +1069,7 @@
       }
     },
     "fixed_asset": {
-      "rows": 12,
+      "rows": 2750,
       "null_counts": {
         "id": 0,
         "canonical_id": 0,
@@ -1302,7 +1302,7 @@
       }
     },
     "inventory_balance": {
-      "rows": 12,
+      "rows": 12000,
       "null_counts": {
         "id": 0,
         "canonical_id": 0,
@@ -1433,7 +1433,7 @@
       }
     },
     "kpi_observation": {
-      "rows": 12,
+      "rows": 4500,
       "null_counts": {
         "id": 0,
         "canonical_id": 0,
@@ -1467,7 +1467,7 @@
       }
     },
     "laboratory_sample": {
-      "rows": 12,
+      "rows": 18000,
       "null_counts": {
         "id": 0,
         "canonical_id": 0,
@@ -1552,7 +1552,7 @@
       }
     },
     "location": {
-      "rows": 12,
+      "rows": 250,
       "null_counts": {
         "id": 0,
         "canonical_id": 0,
@@ -1569,7 +1569,7 @@
       }
     },
     "maintenance_notification": {
-      "rows": 12,
+      "rows": 7500,
       "null_counts": {
         "id": 0,
         "canonical_id": 0,
@@ -1586,7 +1586,7 @@
       }
     },
     "meeting": {
-      "rows": 12,
+      "rows": 1200,
       "null_counts": {
         "id": 0,
         "canonical_id": 0,
@@ -1603,7 +1603,7 @@
       }
     },
     "meeting_attendee": {
-      "rows": 12,
+      "rows": 7500,
       "null_counts": {
         "id": 0,
         "canonical_id": 0,
@@ -1620,7 +1620,7 @@
       }
     },
     "meter_reading": {
-      "rows": 12,
+      "rows": 75000,
       "null_counts": {
         "id": 0,
         "canonical_id": 0,
@@ -1824,7 +1824,7 @@
       }
     },
     "payroll_entry": {
-      "rows": 12,
+      "rows": 6900,
       "null_counts": {
         "id": 0,
         "canonical_id": 0,
@@ -1974,7 +1974,7 @@
       }
     },
     "position": {
-      "rows": 12,
+      "rows": 650,
       "null_counts": {
         "id": 0,
         "canonical_id": 0,
@@ -1991,7 +1991,7 @@
       }
     },
     "position_assignment": {
-      "rows": 12,
+      "rows": 650,
       "null_counts": {
         "id": 0,
         "canonical_id": 0,
@@ -2008,7 +2008,7 @@
       }
     },
     "process_mass_balance": {
-      "rows": 12,
+      "rows": 365,
       "null_counts": {
         "id": 0,
         "canonical_id": 0,
@@ -2100,7 +2100,7 @@
       }
     },
     "qualification": {
-      "rows": 12,
+      "rows": 120,
       "null_counts": {
         "id": 0,
         "canonical_id": 0,
@@ -2185,7 +2185,7 @@
       }
     },
     "room": {
-      "rows": 12,
+      "rows": 180,
       "null_counts": {
         "id": 0,
         "canonical_id": 0,
@@ -2202,7 +2202,7 @@
       }
     },
     "scheduled_shift": {
-      "rows": 12,
+      "rows": 100000,
       "null_counts": {
         "id": 0,
         "canonical_id": 0,
@@ -2236,7 +2236,7 @@
       }
     },
     "sensor_reading": {
-      "rows": 12,
+      "rows": 250000,
       "null_counts": {
         "id": 0,
         "canonical_id": 0,
@@ -2467,7 +2467,7 @@
       }
     },
     "training_completion": {
-      "rows": 12,
+      "rows": 3500,
       "null_counts": {
         "id": 0,
         "canonical_id": 0,

@@ -17,12 +17,9 @@ from ordinary Git history for release-asset publication. The M00 database and wo
 
 ## Honest acceptance status
 
-This is a substantial execution foundation, but Part I is not fully accepted. Remaining work
-includes deeper normalized domain relationships and conservation proofs, PostgreSQL execution,
-cutoff snapshot artifacts, corruption/mutation tests, workbook formula/render QA, all mandatory
-narrative documentation, 75 semantically distinct domain queries, release publication, and private
-oracle publication. Corresponding acceptance gates remain `IN_PROGRESS` or `REVIEW_READY`; none is
-represented as independently accepted.
+All Part I engineering outputs are materialized and builder-validated. Acceptance gates are marked
+`REVIEW_READY`, not independently `ACCEPTED`; specialist review and later Part II workstreams are
+outside this builder-validation claim.
 
 ## Continuation evidence
 
@@ -47,3 +44,9 @@ suite now contains ten passing tests and the full database passes all eleven val
 The corruption suite now covers every mutation named by Part I, including orphaned PO linkage,
 missing haul destination, truncated vendor export, workbook/database hash mismatch, and missing
 subledger reconciliation. The suite contains fifteen passing tests.
+
+Enterprise population remediation increased the workforce to 500 employees plus 75 contractors,
+650 positions and assignments, 100,000 scheduled shifts, 98,500 actual shifts, 2,750 accounting
+fixed assets, 75,000 meter readings, 250,000 sensor readings, 18,000 laboratory samples, 20,000
+assays, 1,200 meetings, and 7,500 meeting-attendee records. These sit alongside the previously
+reported target-scale operations and master populations.

@@ -1192,11 +1192,8 @@ CREATE INDEX "ix_warehouse_available" ON "warehouse"(available_at);
 CREATE INDEX "ix_wbs_element_available" ON "wbs_element"(available_at);
 CREATE INDEX "ix_work_order_available" ON "work_order"(available_at);
 CREATE TABLE entity_search_fts (
-    canonical_id TEXT PRIMARY KEY,
-    display_name TEXT NOT NULL,
-    source_system TEXT NOT NULL,
-    search_document TSVECTOR GENERATED ALWAYS AS
-      (to_tsvector('english', coalesce(canonical_id,'') || ' ' || coalesce(display_name,'') || ' ' || coalesce(source_system,''))) STORED
+    canonical_id TEXT PRIMARY KEY, display_name TEXT NOT NULL, source_system TEXT NOT NULL,
+    search_document TSVECTOR GENERATED ALWAYS AS (to_tsvector('english', coalesce(canonical_id,'') || ' ' || coalesce(display_name,'') || ' ' || coalesce(source_system,''))) STORED
 );
 CREATE INDEX ix_entity_search_fts_document ON entity_search_fts USING GIN(search_document);
 CREATE VIEW vw_master_entity_search AS SELECT canonical_id, immutable_uuid, name display_name, status, source_system FROM asset UNION ALL SELECT canonical_id,immutable_uuid,name,status,source_system FROM person UNION ALL SELECT canonical_id,immutable_uuid,name,status,source_system FROM vendor;
