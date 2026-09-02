@@ -6,7 +6,7 @@ from sqlalchemy.orm import Session
 from sable_harbor.accounting.models import Base, JournalEntry, JournalLine
 from sable_harbor.generation import generate_standard
 from sable_harbor.provenance.service import complete_generation_run, record_generation_run
-from sable_harbor.reports.statements import statement_snapshot
+from sable_harbor.reports.statements import monthly_statements, statement_snapshot
 
 
 def test_statements_balance_and_intercompany_eliminates() -> None:
@@ -34,3 +34,28 @@ def test_statements_balance_and_intercompany_eliminates() -> None:
             .where(JournalEntry.source_type == "consolidation_elimination")
         )
         assert elimination_balance == Decimal("0.0000")
+
+
+def test_monthly_statements_and_rollforwards_reconcile_to_gl() -> None:
+    engine = create_engine("sqlite:///:memory:")
+    Base.metadata.create_all(engine)
+    with Session(engine) as session:
+        run = record_generation_run(
+            session, profile="standard", scenario_code="stress", seed=20260831, git_commit="test"
+        )
+        generate_standard(session, scenario="stress")
+        complete_generation_run(session, run)
+        session.commit()
+        monthly = monthly_statements(session, run.id)
+        snapshot = statement_snapshot(session, run.id)
+    assert len(monthly) == 48
+    assert all(row["balance_sheet_difference"] == Decimal("0.0000") for row in monthly)
+    assert sum((row["cash_flow"] for row in monthly), Decimal(0)) == monthly[-1]["ending_cash"]
+    assert abs(monthly[-1]["assets"] - snapshot["assets"]) <= Decimal("0.0001")
+    assert abs(monthly[-1]["liabilities"] - snapshot["liabilities"]) <= Decimal("0.0001")
+    assert abs(monthly[-1]["equity"] - snapshot["total_equity"]) <= Decimal("0.0001")
+    assert abs(monthly[-1]["ending_cash"] - snapshot["ending_cash"]) <= Decimal("0.0001")
+    assert all(
+        {"working_capital", "debt", "net_fixed_assets", "inventory"}.issubset(row)
+        for row in monthly
+    )

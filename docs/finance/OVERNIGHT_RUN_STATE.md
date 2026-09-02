@@ -208,3 +208,10 @@
   persisted as `SCENARIO_INPUT` with unit, effective period, owner, rationale, sensitivity, and source
   provenance. Tests prove all seven driver families persist and that low/high/stress outputs remain
   isolated and attributable. Resume at causal monthly subledger postings and rollforwards.
+- Monthly-reporting increment: `monthly_statements` derives 48 scoped periods of P&L, balance sheet,
+  cash flow, changes in equity, working capital, debt, net fixed assets, and inventory directly from
+  the posted GL. Every monthly balance sheet balances at zero difference; cash-flow changes sum to
+  ending cash; final assets, liabilities, equity, and cash reconcile to the consolidated snapshot.
+  The corresponding workbook sheets use these report-specific semantic sources. PostgreSQL CI
+  passes the full Stage 1 matrix in both push and PR runs (39s and 38s); SQLite artifact jobs remain
+  in progress. Resume at causal monthly subledger event generation and unit-package reconciliation.

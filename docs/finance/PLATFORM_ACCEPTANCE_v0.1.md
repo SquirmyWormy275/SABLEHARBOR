@@ -14,15 +14,14 @@
 | Corporate subledgers | Contract-to-cash, payroll, procurement/AP, fixed assets/depreciation and debt/interest |
 | Industrial subledgers | Mine production/inventory/sales, logistics waybills/custody, Cradle host-safe recovery and research programs |
 | Planning | Base, low, high and stress scenarios; invariant actual periods; 2023–2026 monthly standard profile; 2016–2022 revenue calibration anchors |
-| Reporting | Reconciled statements, named SQL queries, six-workbook suite and valuation/QoE bridge |
+| Reporting | Reconciled monthly P&L, balance sheet, cash flow, equity, working-capital, debt, fixed-asset and inventory rollforwards; named SQL queries; six-workbook suite; valuation/QoE bridge |
 | Release control | Versioned table/column allowlist; new-database construction; deterministic stale-safe packaging; recursive generated-artifact scan |
 | Portability | Explicit Alembic migrations through `0013`; local SQLite cycle passes; PostgreSQL matrix is encoded and under remote CI validation |
 
 ## Verified controls
 
-- Clean SQLite migrations apply through revision `0013`; PostgreSQL migration, generation,
-  and validation CI passes. The expanded all-profile/two-seed PostgreSQL matrix is wired into CI
-  and passes a local SQLite backend surrogate; acceptance remains open until PostgreSQL 16 runs it.
+- Clean SQLite migrations apply through revision `0013`; the expanded PostgreSQL 16 profile,
+  scenario, two-seed, constraint-violation, migration, generation, and validation matrix passes.
 - Full-history generation produces 48 monthly planning periods plus seven 2016–2022 revenue
   calibration anchors, not complete historical statements.
 - Full-history trial balance reconciles at `$1,172,100,000.0000` debit and credit.

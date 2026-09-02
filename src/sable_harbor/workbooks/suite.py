@@ -16,6 +16,7 @@ from sable_harbor.accounting.models import (
 from sable_harbor.provenance.models import GenerationRun
 from sable_harbor.provenance.service import run_context
 from sable_harbor.reporting_queries import run_named_query
+from sable_harbor.reports.statements import monthly_statements
 
 WORKBOOKS: dict[str, list[str]] = {
     "SABLE_HARBOR_CONSOLIDATED_OPERATING_MODEL_v0.1.xlsx": [
@@ -178,7 +179,7 @@ class SheetSpec:
 # Exact semantic routing. Titles are registry keys only; no title parsing influences data.
 _QUERY_GROUPS: dict[str, tuple[str, ...]] = {
     "entity_trial_balance": (
-        "Chart of Accounts", "Trial Balance", "Monthly Balance Sheet",
+        "Chart of Accounts", "Trial Balance",
     ),
     "journal_to_source_trace": (
         "Journal Summary", "Journal Detail Extract", "Lineage Examples",
@@ -186,7 +187,7 @@ _QUERY_GROUPS: dict[str, tuple[str, ...]] = {
     ),
     "consolidated_monthly_pnl": (
         "Executive Dashboard", "Historical Annual Summary", "Monthly Consolidated P&L",
-        "Monthly Cash Flow", "Changes in Equity", "Segment P&L", "Revenue Build",
+        "Segment P&L", "Revenue Build",
         "Gross Profit Cost Build", "Operating Expense Build", "Tax Summary",
         "Bookings Billings Revenue", "Foundry Revenue Build", "Foundry Cost Build",
         "Atlas Commercial Build", "Emerging Advisory", "Red Wash Revenue",
@@ -212,7 +213,6 @@ _QUERY_GROUPS: dict[str, tuple[str, ...]] = {
     "red_wash_unit_cost_bridge": (
         "Red Wash Operating Schedule", "Red Wash Production Inv", "Red Wash Capex and ARO",
         "Red Wash DCF-NAV", "Red Wash Acquisition", "Red Wash Mine NAV",
-        "Inventory Rollforward",
     ),
     "aru_route_customer_margin": (
         "ARU-BS&T Volume and Rates", "ARU-BS&T Operating Cost", "ARU-BS&T Fleet Assets",
@@ -222,10 +222,10 @@ _QUERY_GROUPS: dict[str, tuple[str, ...]] = {
         "Cradle Pilot Build", "Cradle Project DCF", "Cradle Project Option Value",
     ),
     "debt_covenant_calculation": (
-        "Debt and Liquidity", "Debt Schedule", "Debt and Warrants", "Financing History",
+        "Debt and Warrants", "Financing History",
         "Net Debt Debt-like Items",
     ),
-    "fixed_asset_rollforward": ("Capex Deprec Depletion", "Fixed Assets"),
+    "fixed_asset_rollforward": (),
     "deferred_revenue_rollforward": ("Deferred Revenue Rollforward",),
     "ar_ap_aging": ("AR Aging", "AP Aging"),
     "intercompany_mismatch_elimination": (
@@ -238,8 +238,15 @@ _QUERY_GROUPS: dict[str, tuple[str, ...]] = {
         "Coverage Metrics", "Data Quality Results", "Named Queries", "License Usage Terms",
         "Known Limitations", "Checksums", "Dimension Dictionary", "Capitalization Table",
         "Consolidated SOTP", "Software DCF-Multiples", "Atlas-Willow Optionality",
-        "Advisory Valuation", "EV to Equity Value", "Working Capital",
+        "Advisory Valuation", "EV to Equity Value",
     ),
+    "monthly_balance_sheet": ("Monthly Balance Sheet",),
+    "monthly_cash_flow": ("Monthly Cash Flow",),
+    "monthly_equity": ("Changes in Equity",),
+    "monthly_working_capital": ("Working Capital",),
+    "monthly_fixed_assets": ("Capex Deprec Depletion", "Fixed Assets"),
+    "monthly_debt": ("Debt and Liquidity", "Debt Schedule"),
+    "monthly_inventory": ("Inventory Rollforward",),
 }
 
 
@@ -275,6 +282,24 @@ def _rows_for_sheet(
     session: Session, sheet_name: str, generation_run_id: str
 ) -> list[dict[str, Any]]:
     specification = SHEET_SPECS[sheet_name]
+    monthly_columns = {
+        "monthly_balance_sheet": (
+            "period", "assets", "liabilities", "equity", "balance_sheet_difference"
+        ),
+        "monthly_cash_flow": ("period", "cash_flow", "ending_cash"),
+        "monthly_equity": ("period", "net_income", "equity"),
+        "monthly_working_capital": ("period", "working_capital"),
+        "monthly_fixed_assets": ("period", "net_fixed_assets"),
+        "monthly_debt": ("period", "debt"),
+        "monthly_inventory": ("period", "inventory"),
+    }
+    if specification.query in monthly_columns:
+        columns = monthly_columns[specification.query]
+        results: list[dict[str, Any]] = []
+        for row in monthly_statements(session, generation_run_id):
+            materialized: dict[str, Any] = dict(row)
+            results.append({column: materialized[column] for column in columns})
+        return results
     return run_named_query(session, specification.query, generation_run_id)[:5000]
 
 

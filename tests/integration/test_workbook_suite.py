@@ -30,10 +30,12 @@ def test_six_workbooks_reopen_have_required_sheets_and_clean_links(tmp_path: Pat
             sheet: list(run_named_query(session, SHEET_SPECS[sheet].query, run.id)[0])
             for sheet in (
                 "Monthly Consolidated P&L",
-                "Monthly Balance Sheet",
                 "Journal Detail Extract",
             )
         }
+        expected_headers["Monthly Balance Sheet"] = [
+            "period", "assets", "liabilities", "equity", "balance_sheet_difference"
+        ]
         outputs = generate_workbook_suite(session, tmp_path, generation_run_id=run.id)
     assert set(SHEET_SPECS) == {sheet for sheets in WORKBOOKS.values() for sheet in sheets}
     assert {path.name for path in outputs} == set(WORKBOOKS)
@@ -58,7 +60,7 @@ def test_six_workbooks_reopen_have_required_sheets_and_clean_links(tmp_path: Pat
 
 
 def test_sheet_routing_uses_exact_registry_not_title_substrings() -> None:
-    assert SHEET_SPECS["Monthly Balance Sheet"].query == "entity_trial_balance"
+    assert SHEET_SPECS["Monthly Balance Sheet"].query == "monthly_balance_sheet"
     assert SHEET_SPECS["Monthly Consolidated P&L"].query == "consolidated_monthly_pnl"
     assert SHEET_SPECS["Journal Detail Extract"].query == "journal_to_source_trace"
     assert SHEET_SPECS["Red Wash Production Inv"].query == "red_wash_unit_cost_bridge"
