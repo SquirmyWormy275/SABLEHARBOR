@@ -168,7 +168,7 @@
     {
       "period": "2015-12",
       "line": "NET_INCOME",
-      "amount_minor": -448000000
+      "amount_minor": -5653000000
     },
     {
       "period": "2015-12",
@@ -350,12 +350,12 @@
     {
       "period": "2015-12",
       "line": "ASSETS",
-      "amount_minor": 75900500000
+      "amount_minor": 70695500000
     },
     {
       "period": "2015-12",
       "line": "EQUITY",
-      "amount_minor": 48100500000
+      "amount_minor": 42895500000
     },
     {
       "period": "2015-12",
@@ -484,7 +484,7 @@
     {
       "period": "2015-12",
       "line": "ENDING_EQUITY",
-      "amount_minor": 48100500000
+      "amount_minor": 42895500000
     }
   ]
 }

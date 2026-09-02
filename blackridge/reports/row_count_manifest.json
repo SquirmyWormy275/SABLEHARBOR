@@ -88,7 +88,7 @@
     "item_master": 12000,
     "journal": 12,
     "journal_line": 105600,
-    "journal_line_detail": 74,
+    "journal_line_detail": 105600,
     "kpi_definition": 12,
     "kpi_observation": 4500,
     "labor_booking": 30500,

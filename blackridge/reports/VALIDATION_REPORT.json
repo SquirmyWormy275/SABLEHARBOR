@@ -13,7 +13,9 @@
     "nonnegative_inventory": true,
     "impairment_lineage": true,
     "haul_destinations": true,
-    "complete_subledger_links": true
+    "complete_subledger_links": true,
+    "subledger_activity_statement_neutral": true,
+    "impairment_in_statements": true
   },
   "impairment_minor": 5205000000,
   "row_counts": {
@@ -162,7 +164,7 @@
     "wbs_element": 12,
     "work_order": 6200,
     "event_ledger": 1000000,
-    "journal_line_detail": 74,
+    "journal_line_detail": 105600,
     "financial_statement": 96,
     "phase4_valuation": 1,
     "conservation_balance": 48,
@@ -171,7 +173,7 @@
     "purchase_order_line_link": 15600,
     "haul_cycle_detail": 151000
   },
-  "database_sha256": "628c92c722e8b67b1a3848f8d06e2bb66ae6ea4e53063d5666f5f5c0b90668bc",
-  "workbook_sha256": "a3f5294f8a9ba7c998bf79abb54d4be6d7e0d35db886fc7cabe2da68ef171619",
+  "database_sha256": "8730f8834e46889d8e7e8972e1eaa663b46f9a95dcbe01ad547ab156a7c058c9",
+  "workbook_sha256": "89e0c616b0df013e4e567820c5b72bfc97b0e5e8a12cb7463a541039fc5fde39",
   "workbook_sheets": 135
 }

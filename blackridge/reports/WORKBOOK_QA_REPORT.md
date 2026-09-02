@@ -12,8 +12,8 @@ Status: **PASS**
 - LibreOffice headless recalculation/open: pass
 - LibreOffice PDF rendering: pass
 - Selected PNG previews: 9 generated
-- Workbook SHA-256: `a3f5294f8a9ba7c998bf79abb54d4be6d7e0d35db886fc7cabe2da68ef171619`
-- Database SHA-256: `628c92c722e8b67b1a3848f8d06e2bb66ae6ea4e53063d5666f5f5c0b90668bc`
+- Workbook SHA-256: `89e0c616b0df013e4e567820c5b72bfc97b0e5e8a12cb7463a541039fc5fde39`
+- Database SHA-256: `8730f8834e46889d8e7e8972e1eaa663b46f9a95dcbe01ad547ab156a7c058c9`
 
 The machine-readable companion is `WORKBOOK_QA_REPORT.json`. A PDF render and selected PNG
 previews are preserved under `reports/workbook_previews/` for START_HERE, FIN_DASHBOARD,

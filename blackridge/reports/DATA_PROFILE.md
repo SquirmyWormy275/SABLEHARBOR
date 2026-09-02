@@ -91,7 +91,7 @@ Tables profiled: 159
 | item_master | 12,000 |
 | journal | 12 |
 | journal_line | 105,600 |
-| journal_line_detail | 74 |
+| journal_line_detail | 105,600 |
 | kpi_definition | 12 |
 | kpi_observation | 4,500 |
 | labor_booking | 30,500 |
