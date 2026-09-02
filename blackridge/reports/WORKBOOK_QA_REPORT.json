@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "checks": {
+    "required_sheets": true,
+    "unique_sheet_names": true,
+    "formula_errors": true,
+    "external_links": true,
+    "database_hash_embedded": true,
+    "freeze_panes": true,
+    "filters": true
+  },
+  "sheet_count": 135,
+  "missing_sheets": [],
+  "formula_error_cells": [],
+  "external_link_cells": [],
+  "workbook_sha256": "d51500a9fdba2602c6692fa156426c51e893ee4105602271f22dad512a2ec0d8",
+  "database_sha256": "aaaffa9483a4f9afb971ac574aa313cd615e95ed8e404709b719da410aae14d0"
+}

@@ -29,3 +29,7 @@ represented as independently accepted.
 The continuation added all seven cutoff databases, complete domain CSV exports, manifest hashing,
 and corruption/snapshot-leakage tests. The test suite now has four passing tests. These additions
 reduce but do not eliminate the remaining acceptance gaps above.
+
+Migration upgrade/downgrade/upgrade, M00 deterministic replay, execution of all 75 cookbook SQL
+statements, and automated QA across all 135 workbook sheets also pass. The test suite now contains
+five passing tests.

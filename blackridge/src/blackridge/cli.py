@@ -749,6 +749,68 @@ def manifest(path: Path) -> dict[str, object]:
     }
 
 
+def workbook_qa(workbook: Path, database: Path) -> dict[str, object]:
+    from openpyxl import load_workbook
+
+    book = load_workbook(workbook, read_only=False, data_only=False)
+    missing = sorted(set(WORKBOOK_SHEETS) - set(book.sheetnames))
+    error_tokens = ("#REF!", "#DIV/0!", "#VALUE!", "#NAME?", "#N/A")
+    formula_errors = []
+    external_links = []
+    frozen = 0
+    filtered = 0
+    for sheet in book.worksheets:
+        if sheet.freeze_panes:
+            frozen += 1
+        if sheet.auto_filter.ref:
+            filtered += 1
+        for row in sheet.iter_rows():
+            for cell in row:
+                value = cell.value
+                if isinstance(value, str):
+                    if any(token in value for token in error_tokens):
+                        formula_errors.append(f"{sheet.title}!{cell.coordinate}")
+                    if "[" in value and "]" in value and value.startswith("="):
+                        external_links.append(f"{sheet.title}!{cell.coordinate}")
+    embedded_hash = book["START_HERE"]["B3"].value
+    checks = {
+        "required_sheets": not missing,
+        "unique_sheet_names": len(book.sheetnames) == len(set(book.sheetnames)),
+        "formula_errors": not formula_errors,
+        "external_links": not external_links,
+        "database_hash_embedded": embedded_hash == sha256(database),
+        "freeze_panes": frozen == len(book.sheetnames),
+        "filters": filtered == len(book.sheetnames),
+    }
+    return {
+        "status": "PASS" if all(checks.values()) else "FAIL",
+        "checks": checks,
+        "sheet_count": len(book.sheetnames),
+        "missing_sheets": missing,
+        "formula_error_cells": formula_errors,
+        "external_link_cells": external_links,
+        "workbook_sha256": sha256(workbook),
+        "database_sha256": sha256(database),
+    }
+
+
+def deterministic_replay(profile: str, seed: int) -> dict[str, object]:
+    first = build_database(profile, seed)
+    first_hash = sha256(first)
+    first_copy = first.with_suffix(".first.sqlite3")
+    shutil.copy2(first, first_copy)
+    second = build_database(profile, seed)
+    second_hash = sha256(second)
+    first_copy.unlink()
+    return {
+        "status": "PASS" if first_hash == second_hash else "FAIL",
+        "profile": profile,
+        "seed": seed,
+        "first_sha256": first_hash,
+        "second_sha256": second_hash,
+    }
+
+
 def doctor(json_mode: bool) -> int:
     payload = {
         "python": sys.version.split()[0],
@@ -791,9 +853,31 @@ def main(argv: list[str] | None = None) -> int:
     snap = sub.add_parser("snapshot")
     snap.add_argument("--cutoff", required=True)
     sub.add_parser("manifest")
+    rep = sub.add_parser("replay")
+    rep.add_argument("--profile", choices=["smoke", "m00"], default="smoke")
+    rep.add_argument("--seed", type=int, default=DEFAULT_SEED)
+    query = sub.add_parser("query")
+    query.add_argument("--database", type=Path, required=True)
+    query.add_argument("--sql-file", type=Path, required=True)
+    sub.add_parser("reconcile")
+    sub.add_parser("workbook-qa")
     args = p.parse_args(argv)
     if args.command == "doctor":
         return doctor(args.json)
+    if args.command == "replay":
+        result = deterministic_replay(args.profile, args.seed)
+        print(json.dumps(result, indent=2))
+        return 0 if result["status"] == "PASS" else 1
+    if args.command == "query":
+        connection = sqlite3.connect(args.database)
+        statements = [part.strip() for part in args.sql_file.read_text().split(";") if part.strip()]
+        executed = 0
+        for statement in statements:
+            connection.execute(statement).fetchmany(25)
+            executed += 1
+        connection.close()
+        print(json.dumps({"status": "PASS", "statements_executed": executed}, indent=2))
+        return 0
     profile = getattr(args, "profile", "full_2015")
     filename = (
         "blackridge_public_v0.1.0.sqlite3"
@@ -826,5 +910,11 @@ def main(argv: list[str] | None = None) -> int:
         result["status"] = result["validation_status"]
         target = PUBLIC / "manifests" / "DATA_MANIFEST.json"
         target.write_text(json.dumps(result, indent=2) + "\n")
+    elif args.command == "reconcile":
+        result = validate(path)
+    elif args.command == "workbook-qa":
+        result = workbook_qa(PUBLIC / "workbooks" / "BLACKRIDGE_MASTER_TRACKER_v0.1.0.xlsx", path)
+        REPORTS.mkdir(parents=True, exist_ok=True)
+        (REPORTS / "WORKBOOK_QA_REPORT.json").write_text(json.dumps(result, indent=2) + "\n")
     print(json.dumps(result, indent=2))
     return 0 if result["status"] == "PASS" else 1

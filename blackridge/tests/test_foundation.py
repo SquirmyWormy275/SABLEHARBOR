@@ -1,7 +1,7 @@
 import sqlite3
 from pathlib import Path
 
-from blackridge.cli import build_database, build_snapshot, validate
+from blackridge.cli import build_database, build_snapshot, deterministic_replay, validate
 
 
 def test_smoke_build_and_reconcile(tmp_path: Path, monkeypatch) -> None:
@@ -50,3 +50,11 @@ def test_snapshot_excludes_future_available_records(tmp_path: Path, monkeypatch)
         "SELECT COUNT(*) FROM event_ledger WHERE available_at > '2015-05-18T23:59:59+00:00'"
     ).fetchone()[0]
     assert leaked == 0
+
+
+def test_deterministic_smoke_replay(tmp_path: Path, monkeypatch) -> None:
+    from blackridge import cli
+
+    monkeypatch.setattr(cli, "PUBLIC", tmp_path)
+    result = deterministic_replay("smoke", 20150112)
+    assert result["status"] == "PASS"

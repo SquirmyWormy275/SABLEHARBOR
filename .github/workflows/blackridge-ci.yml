@@ -18,7 +18,8 @@ jobs:
       - run: pip install -e 'blackridge[dev]'
       - run: ruff check blackridge/src blackridge/tests
       - run: pytest -q blackridge/tests
+      - run: cd blackridge && alembic upgrade head && alembic downgrade base && alembic upgrade head
       - run: python -m blackridge generate --profile smoke --seed 20150112
       - run: python -m blackridge generate --profile m00 --seed 20150112
       - run: python -m blackridge validate --profile m00
-
+      - run: python -m blackridge replay --profile m00 --seed 20150112
