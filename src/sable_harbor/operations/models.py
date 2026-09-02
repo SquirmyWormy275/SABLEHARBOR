@@ -106,6 +106,15 @@ class DebtDraw(GenerationOwnedMixin, Base):
     journal_entry_id: Mapped[str] = mapped_column(ForeignKey("journal_entry.id"))
 
 
+class DebtRepayment(GenerationOwnedMixin, Base):
+    __tablename__ = "debt_repayment"
+    id: Mapped[str] = mapped_column(String(36), primary_key=True)
+    debt_draw_id: Mapped[str] = mapped_column(ForeignKey("debt_draw.id"))
+    repayment_date: Mapped[date] = mapped_column(Date)
+    principal: Mapped[Decimal] = mapped_column(Numeric(20, 4))
+    journal_entry_id: Mapped[str] = mapped_column(ForeignKey("journal_entry.id"))
+
+
 class InterestAccrual(GenerationOwnedMixin, Base):
     __tablename__ = "interest_accrual"
     id: Mapped[str] = mapped_column(String(36), primary_key=True)

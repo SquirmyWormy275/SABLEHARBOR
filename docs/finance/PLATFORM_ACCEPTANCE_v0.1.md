@@ -16,11 +16,11 @@
 | Planning | Base, low, high and stress scenarios; invariant actual periods; 2023–2026 monthly standard profile; 2016–2022 revenue calibration anchors |
 | Reporting | Reconciled monthly P&L, balance sheet, cash flow, equity, working-capital, debt, fixed-asset and inventory rollforwards; named SQL queries; six-workbook suite; valuation/QoE bridge |
 | Release control | Versioned table/column allowlist; new-database construction; deterministic stale-safe packaging; recursive generated-artifact scan |
-| Portability | Explicit Alembic migrations through `0013`; local SQLite cycle passes; PostgreSQL matrix is encoded and under remote CI validation |
+| Portability | Explicit Alembic migrations through `0014`; local SQLite cycle passes; PostgreSQL matrix is encoded and under remote CI validation |
 
 ## Verified controls
 
-- Clean SQLite migrations apply through revision `0013`; the expanded PostgreSQL 16 profile,
+- Clean SQLite migrations apply through revision `0014`; the expanded PostgreSQL 16 profile,
   scenario, two-seed, constraint-violation, migration, generation, and validation matrix passes.
 - Full-history generation produces 48 monthly planning periods plus seven 2016–2022 revenue
   calibration anchors, not complete historical statements.

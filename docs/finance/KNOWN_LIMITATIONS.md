@@ -7,8 +7,8 @@
   replaces part of each forecast-month SHI, Red Wash, and ARU control with generated causal
   contract-to-cash, mine production/sale, waybill, payroll, procurement/AP/payment, fixed-asset/
   depreciation, debt/interest, Cradle recovery, Willow/Atlas, and Advisory engagement chains.
-  Debt repayment/covenant schedules and explicit month-end aging controls remain before the P1
-  model gate can be accepted.
+  Explicit repayments now accompany each forecast debt draw. Covenant calculations and explicit
+  month-end aging controls remain before the P1 model gate can be accepted.
 - The initial proof workbook remains available for compatibility. The completed suite generates six database-controlled workbooks covering consolidation, software/services, industrial operations, close/subledgers, capital/valuation, and release control.
 - All six workbooks now route every sheet through an exact semantic specification rather than title
   substring matching. Some optional industrial and valuation sheets correctly render explicit empty

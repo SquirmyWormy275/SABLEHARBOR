@@ -231,3 +231,8 @@
   run with operating cost, recovered value, host share, inventory and sale. All four families are
   run-owned, source-linked, idempotent, and preserve the controlling summary economics. Resume at
   debt repayment/covenant schedules, monthly AP/AR aging, and unit export packages.
+- Debt-repayment increment: migration `0014` adds an explicit run-owned repayment subledger linked
+  to each debt draw and its posted journal. Every SHI forecast month now draws $100,000 and repays
+  $25,000 through balanced debt/cash entries; validation rejects non-positive and over-principal
+  repayments. A clean SQLite migration reaches `0014`. Resume at covenant calculations and
+  month-end AR/AP aging reconciliation before constructing unit export packages.

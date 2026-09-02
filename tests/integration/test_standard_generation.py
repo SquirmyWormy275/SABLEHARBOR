@@ -19,6 +19,7 @@ from sable_harbor.logistics.models import Waybill
 from sable_harbor.mining.models import MineProductionBatch, UraniumShipment
 from sable_harbor.operations.models import (
     DebtDraw,
+    DebtRepayment,
     DepreciationRecord,
     PayrollRun,
     VendorBill,
@@ -76,6 +77,7 @@ def test_standard_generation_has_48_months_actual_forecast_and_is_idempotent() -
         assert session.scalar(select(func.count(VendorPayment.id))) == 4
         assert session.scalar(select(func.count(DepreciationRecord.id))) == 4
         assert session.scalar(select(func.count(DebtDraw.id))) == 4
+        assert session.scalar(select(func.count(DebtRepayment.id))) == 4
         assert session.scalar(select(func.count(Engagement.id))) == 4
         assert session.scalar(select(func.count(WillowExperiment.id))) == 4
         assert session.scalar(select(func.count(AtlasEvaluation.id))) == 4

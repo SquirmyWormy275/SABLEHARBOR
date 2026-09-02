@@ -18,6 +18,7 @@ from sable_harbor.core.ids import stable_id
 from .models import (
     DebtDraw,
     DebtFacility,
+    DebtRepayment,
     DepreciationRecord,
     GoodsReceipt,
     InterestAccrual,
@@ -335,3 +336,40 @@ def draw_debt_and_accrue_interest(
     )
     session.add(accrual)
     return draw, accrual
+
+
+def repay_debt(
+    session: Session,
+    *,
+    draw: DebtDraw,
+    book_id: str,
+    period_id: str,
+    repayment_date: date,
+    principal: Decimal,
+) -> DebtRepayment:
+    if principal <= 0 or principal > draw.principal:
+        raise ValueError("Debt repayment must be positive and cannot exceed the draw principal")
+    repayment_id = stable_id("debt_repayment", f"{draw.id}:{repayment_date}:{principal}")
+    entry = _post(
+        session,
+        key=f"DEBT_REPAYMENT:{repayment_id}",
+        book_id=book_id,
+        period_id=period_id,
+        event_date=repayment_date,
+        description=f"Debt repayment {draw.id}",
+        source_type="debt_repayment",
+        source_id=repayment_id,
+        lines=[
+            _line(f"{repayment_id}:DEBT", _account(session, "2500"), principal, Decimal(0)),
+            _line(f"{repayment_id}:CASH", _account(session, "1000"), Decimal(0), principal),
+        ],
+    )
+    repayment = DebtRepayment(
+        id=repayment_id,
+        debt_draw_id=draw.id,
+        repayment_date=repayment_date,
+        principal=principal,
+        journal_entry_id=entry.id,
+    )
+    session.add(repayment)
+    return repayment

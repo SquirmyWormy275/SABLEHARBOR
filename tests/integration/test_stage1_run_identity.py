@@ -68,7 +68,7 @@ def test_run_identity_normalizes_stress_and_cli_uses_same_service() -> None:
 
 def test_required_schema_head_comes_from_alembic_script_directory() -> None:
     config = Config("alembic.ini")
-    assert required_schema_head(config) == "0013"
+    assert required_schema_head(config) == "0014"
 
 
 def test_generation_input_manifest_is_complete_portable_and_cwd_independent(

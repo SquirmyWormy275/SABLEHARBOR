@@ -45,6 +45,7 @@ from sable_harbor.operations.flows import (
     depreciate_asset,
     draw_debt_and_accrue_interest,
     procure_and_pay_asset,
+    repay_debt,
     run_payroll,
 )
 from sable_harbor.provenance.models import GenerationRun
@@ -276,7 +277,7 @@ def _generate_causal_month(
             period_id=period_id,
             depreciation_date=period_end,
         )
-        draw_debt_and_accrue_interest(
+        draw, _ = draw_debt_and_accrue_interest(
             session,
             entity_id=entity_id,
             book_id=book_id,
@@ -285,6 +286,14 @@ def _generate_causal_month(
             event_date=period_end,
             principal=D("100000"),
             annual_rate=D("0.08"),
+        )
+        repay_debt(
+            session,
+            draw=draw,
+            book_id=book_id,
+            period_id=period_id,
+            repayment_date=period_end,
+            principal=D("25000"),
         )
         service_revenue = (revenue * D("0.01")).quantize(D("0.01"))
         service_cost = (cost * D("0.01")).quantize(D("0.01"))
