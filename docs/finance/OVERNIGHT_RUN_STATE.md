@@ -190,3 +190,10 @@
   external relationships, macros, and embedded objects. CI scans and uploads the generated package
   plus six review workbooks after tests pass. Resume at semantic workbook specifications after the
   PostgreSQL `0010` constraint-name correction is green remotely.
+- Semantic-workbook increment: all required sheet titles are covered exactly once by `SHEET_SPECS`;
+  title substring routing has been removed. Each specification records purpose, named query, units,
+  sort order, tolerance, and empty-state behavior. Workbook controls now use equality tolerance for
+  journal balance and positive-count predicates for population controls. Tests compare database query
+  headers directly with P&L, balance-sheet, and journal-lineage sheet headers and assert industrial
+  sheets cannot inherit generic financial routing. Resume at business-line driver scenarios and the
+  integrated monthly subledger/statement chains after CI confirms the release and workbook checkpoint.

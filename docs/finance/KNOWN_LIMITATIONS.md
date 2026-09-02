@@ -5,6 +5,9 @@
   calibration anchors only; they are not complete historical financial statements.
 - Summary journals remain available as a compact calibration profile. The standard profile provides causal contract-to-cash, payroll, procurement, assets, debt, Red Wash production/sales, ARU/BS&T movements, Cradle recovery, Willow/Atlas research, and consolidation-elimination records.
 - The initial proof workbook remains available for compatibility. The completed suite generates six database-controlled workbooks covering consolidation, software/services, industrial operations, close/subledgers, capital/valuation, and release control.
+- All six workbooks now route every sheet through an exact semantic specification rather than title
+  substring matching. Some optional industrial and valuation sheets correctly render explicit empty
+  states until their underlying monthly detail queries are populated by the next model stage.
 - Legal entities, acquisition terms, mine economics, ARU estate, Cradle structure, headcount, and consolidated values remain `MODEL_PROPOSED` or `SCENARIO_INPUT`.
 - Local PostgreSQL verification on 2026-09-01 was unavailable because Docker API access to `/var/run/docker.sock` was denied, the system PostgreSQL service was inactive, and no Podman fallback was installed. CI is configured to run migrations plus the all-profile, two-seed, scenario-coexistence, violation, lifecycle, and cutoff matrix against PostgreSQL 16; that uncommitted matrix still needs remote evidence.
 - Migrations `0008` through uncommitted `0012` persist the intended actual cutoff, repository-relative generation

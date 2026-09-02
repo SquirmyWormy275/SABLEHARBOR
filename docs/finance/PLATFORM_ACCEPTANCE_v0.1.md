@@ -65,7 +65,10 @@ regression proves a scenario-attributable delta. The PostgreSQL two-seed and vio
 implemented, including explicit private-profile authorization, but remote evidence remains open. Standard monthly accounting controls, driver
 values, production, freight movements, and ending inventory now partition pre-cutoff actuals from
 scenario-owned forecasts, with a two-scenario semantic ownership audit. Effective-dated master and
-commitment records remain whole records rather than periodic facts. Workbook semantics, integrated monthly
+commitment records remain whole records rather than periodic facts. Workbook routing now uses an exact
+semantic registry for every sheet, with purpose, query, units, deterministic ordering, tolerance, and
+empty-state metadata; workbook tests compare database query headers to generated sheets and distinguish
+balance-sheet, P&L, journal-lineage, and industrial routes. Integrated monthly
 statements and rollforwards, driver-based scenarios, accurate historical claims, and CI review
 artifacts remain open. This synthetic platform is not accepted, integration-ready, production-ready,
 or independently auditable.

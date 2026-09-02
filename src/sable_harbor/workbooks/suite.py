@@ -1,4 +1,5 @@
 from collections.abc import Iterable
+from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
@@ -163,35 +164,118 @@ WORKBOOKS: dict[str, list[str]] = {
 }
 
 
+@dataclass(frozen=True)
+class SheetSpec:
+    purpose: str
+    query: str
+    units: str = "as labeled"
+    sort_order: tuple[str, ...] = ()
+    required_columns: tuple[str, ...] = ()
+    empty_state: str = "No records for this optional domain"
+    tolerance: float = 0.0
+
+
+# Exact semantic routing. Titles are registry keys only; no title parsing influences data.
+_QUERY_GROUPS: dict[str, tuple[str, ...]] = {
+    "entity_trial_balance": (
+        "Chart of Accounts", "Trial Balance", "Monthly Balance Sheet",
+    ),
+    "journal_to_source_trace": (
+        "Journal Summary", "Journal Detail Extract", "Lineage Examples",
+        "Sources and Limitations",
+    ),
+    "consolidated_monthly_pnl": (
+        "Executive Dashboard", "Historical Annual Summary", "Monthly Consolidated P&L",
+        "Monthly Cash Flow", "Changes in Equity", "Segment P&L", "Revenue Build",
+        "Gross Profit Cost Build", "Operating Expense Build", "Tax Summary",
+        "Bookings Billings Revenue", "Foundry Revenue Build", "Foundry Cost Build",
+        "Atlas Commercial Build", "Emerging Advisory", "Red Wash Revenue",
+        "Red Wash Operating Cost", "ARU-BS&T EBITDA Cash Flow",
+    ),
+    "assumption_impact": (
+        "Control Panel", "Scenario Selector", "Key Assumptions", "Assumption Register",
+        "Red Wash Assumptions", "Red Wash Sensitivities", "ARU-BS&T Assumptions",
+        "Cradle Assumptions", "Cradle Contract Structures", "Scenario Definitions",
+        "Buyer Case", "Seller Case", "Sensitivities", "Willow Portfolio and Burn",
+        "Atlas R&D and Compute", "Integration Costs", "Purchase Price Allocation",
+        "Working Capital Peg", "Transaction Fees", "Equity Awards",
+    ),
+    "employee_loaded_cost": (
+        "Headcount and Compensation", "Payroll Summary", "Services Utilization",
+    ),
+    "customer_arr_bridge": (
+        "Customer Roster", "Sites and Deployments", "Contract Roster", "ARR-MRR Bridge",
+        "Deferred Revenue", "Retention and Cohorts", "Customer Concentration",
+        "Customer Unit Economics", "Implementation Backlog", "Historical Emberline Bridge",
+    ),
+    "engagement_margin_wip": ("Engagement Margin",),
+    "red_wash_unit_cost_bridge": (
+        "Red Wash Operating Schedule", "Red Wash Production Inv", "Red Wash Capex and ARO",
+        "Red Wash DCF-NAV", "Red Wash Acquisition", "Red Wash Mine NAV",
+        "Inventory Rollforward",
+    ),
+    "aru_route_customer_margin": (
+        "ARU-BS&T Volume and Rates", "ARU-BS&T Operating Cost", "ARU-BS&T Fleet Assets",
+        "ARU Acquisition", "ARU-BS&T Valuation", "Industrial Intercompany",
+    ),
+    "cradle_project_economics": (
+        "Cradle Pilot Build", "Cradle Project DCF", "Cradle Project Option Value",
+    ),
+    "debt_covenant_calculation": (
+        "Debt and Liquidity", "Debt Schedule", "Debt and Warrants", "Financing History",
+        "Net Debt Debt-like Items",
+    ),
+    "fixed_asset_rollforward": ("Capex Deprec Depletion", "Fixed Assets"),
+    "deferred_revenue_rollforward": ("Deferred Revenue Rollforward",),
+    "ar_ap_aging": ("AR Aging", "AP Aging"),
+    "intercompany_mismatch_elimination": (
+        "Intercompany Eliminations", "Intercompany Matches", "Consolidation Entries",
+    ),
+    "release_coverage_lineage": (
+        "Cover", "Read Me", "Checks", "Close Calendar", "Close Tasks",
+        "Account Reconciliations", "Release Summary", "Package Manifest", "Table Inventory",
+        "Field Dictionary", "Relationships", "Canon State Definitions", "Generation Runs",
+        "Coverage Metrics", "Data Quality Results", "Named Queries", "License Usage Terms",
+        "Known Limitations", "Checksums", "Dimension Dictionary", "Capitalization Table",
+        "Consolidated SOTP", "Software DCF-Multiples", "Atlas-Willow Optionality",
+        "Advisory Valuation", "EV to Equity Value", "Working Capital",
+    ),
+}
+
+
+def _build_sheet_specs() -> dict[str, SheetSpec]:
+    assignments: dict[str, str] = {}
+    for query, sheet_names in _QUERY_GROUPS.items():
+        for sheet_name in sheet_names:
+            if sheet_name in assignments:
+                raise ValueError(f"Duplicate workbook sheet specification: {sheet_name}")
+            assignments[sheet_name] = query
+    required = {sheet for sheets in WORKBOOKS.values() for sheet in sheets}
+    missing = required - assignments.keys()
+    unexpected = assignments.keys() - required
+    if missing or unexpected:
+        raise ValueError(
+            f"Workbook specification mismatch; missing={sorted(missing)}, "
+            f"unexpected={sorted(unexpected)}"
+        )
+    return {
+        sheet_name: SheetSpec(
+            purpose=f"Database-controlled evidence for {sheet_name}",
+            query=query,
+            sort_order=("query-defined deterministic order",),
+        )
+        for sheet_name, query in assignments.items()
+    }
+
+
+SHEET_SPECS = _build_sheet_specs()
+
+
 def _rows_for_sheet(
     session: Session, sheet_name: str, generation_run_id: str
 ) -> list[dict[str, Any]]:
-    lower = sheet_name.lower()
-    if "trial balance" in lower or "chart of accounts" in lower:
-        return run_named_query(session, "entity_trial_balance", generation_run_id)[:5000]
-    if "journal" in lower or "lineage" in lower:
-        return run_named_query(session, "journal_to_source_trace", generation_run_id)[:5000]
-    if "red wash" in lower or "inventory" in lower:
-        rows = run_named_query(session, "red_wash_unit_cost_bridge", generation_run_id)
-        return rows or run_named_query(session, "consolidated_monthly_pnl", generation_run_id)
-    if "aru" in lower:
-        rows = run_named_query(session, "aru_route_customer_margin", generation_run_id)
-        return rows or run_named_query(session, "consolidated_monthly_pnl", generation_run_id)
-    if "cradle" in lower:
-        rows = run_named_query(session, "cradle_project_economics", generation_run_id)
-        return rows or run_named_query(session, "assumption_impact", generation_run_id)
-    if "customer" in lower or "arr" in lower or "contract" in lower:
-        return run_named_query(session, "customer_arr_bridge", generation_run_id)
-    if "debt" in lower or "liquidity" in lower:
-        rows = run_named_query(session, "debt_covenant_calculation", generation_run_id)
-        return rows or run_named_query(session, "assumption_impact", generation_run_id)
-    if "assumption" in lower or "scenario" in lower or "sensitivity" in lower:
-        return run_named_query(session, "assumption_impact", generation_run_id)
-    if "monthly" in lower or "revenue" in lower or "income" in lower:
-        return run_named_query(session, "consolidated_monthly_pnl", generation_run_id)
-    if "employee" in lower or "headcount" in lower or "payroll" in lower:
-        return run_named_query(session, "employee_loaded_cost", generation_run_id)
-    return run_named_query(session, "release_coverage_lineage", generation_run_id)
+    specification = SHEET_SPECS[sheet_name]
+    return run_named_query(session, specification.query, generation_run_id)[:5000]
 
 
 def _write_rows(
@@ -289,7 +373,10 @@ def generate_workbook_suite(
                 for row_index, (control, value) in enumerate(controls, start=8):
                     sheet.write(row_index, 0, control)
                     sheet.write_number(row_index, 1, value, money)
-                    formula = '=IF(B{0}=0,"PASS",IF(B{0}>0,"PASS","FAIL"))'.format(row_index + 1)
+                    if control == "Journal debits equal credits":
+                        formula = f'=IF(ABS(B{row_index + 1})<=0.01,"PASS","FAIL")'
+                    else:
+                        formula = f'=IF(B{row_index + 1}>0,"PASS","FAIL")'
                     sheet.write_formula(row_index, 2, formula, pass_format, "PASS")
             else:
                 _write_rows(
