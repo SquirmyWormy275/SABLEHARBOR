@@ -151,7 +151,10 @@
     "event_ledger": 1000000,
     "journal_line_detail": 74,
     "financial_statement": 96,
-    "phase4_valuation": 1
+    "phase4_valuation": 1,
+    "conservation_balance": 48,
+    "exclusive_assignment": 60730,
+    "subledger_reconciliation": 72
   },
   "artifacts": [
     {
@@ -161,9 +164,15 @@
       "classification": "public"
     },
     {
+      "path": "data/public/databases/blackridge_migration_test.sqlite3",
+      "bytes": 20480,
+      "sha256": "233a35c61ac1322196202a3b6b18a66bda6d5696ddd34c80398d4508069e22cd",
+      "classification": "public"
+    },
+    {
       "path": "data/public/databases/blackridge_public_v0.1.0.sqlite3",
-      "bytes": 308502528,
-      "sha256": "aaaffa9483a4f9afb971ac574aa313cd615e95ed8e404709b719da410aae14d0",
+      "bytes": 321220608,
+      "sha256": "334b5f7ebd1a8c834f3f256cfb8f288f33516b6fbc0ecd81e83f30f5012fdf04",
       "classification": "public"
     },
     {
@@ -240,56 +249,68 @@
     },
     {
       "path": "data/public/manifests/DATA_MANIFEST.json",
-      "bytes": 6759,
-      "sha256": "2f45ac1a8e44163990924e8dec02e6472ed25e6abea61e7e67cb567771c4ca79",
+      "bytes": 9870,
+      "sha256": "2f526a89178d0a4081f00175863b0b195c9f8941cd2b253e2afe5edd059de8b4",
+      "classification": "public"
+    },
+    {
+      "path": "data/public/packages/blackridge_case_cutoffs_v0.1.0.zip",
+      "bytes": 380890124,
+      "sha256": "daa66f4b0ce7985338f7d3777b772924ac2ffb57386a464438bcdc8200a396a8",
+      "classification": "public"
+    },
+    {
+      "path": "data/public/packages/blackridge_domain_csv_extracts_v0.1.0.zip",
+      "bytes": 14797826,
+      "sha256": "79e210aa9cf0116a8631adb3cfcf470a3757d1aa374fd7efadb532edc6b62f6e",
       "classification": "public"
     },
     {
       "path": "data/public/snapshots/blackridge_case_cutoff_2015-04-30.sqlite3",
-      "bytes": 109735936,
-      "sha256": "29987ef3e9221daec927eb2021dd24759969c2a6a79686b65494cef4623bb367",
+      "bytes": 109764608,
+      "sha256": "6962f7e9770f002b076592dfa2ea93deb808141f5b1046f1aa03108c11613ea8",
       "classification": "public"
     },
     {
       "path": "data/public/snapshots/blackridge_case_cutoff_2015-05-18.sqlite3",
-      "bytes": 125890560,
-      "sha256": "d20787e676f2c0bc3cc307fa92a14eaedb54ea33f76424a7cfff364fc48c9567",
+      "bytes": 125919232,
+      "sha256": "a4ceab1355a643951fbc3682d8df512e7a762c8170f40d5d3c40db257f46cf95",
       "classification": "public"
     },
     {
       "path": "data/public/snapshots/blackridge_case_cutoff_2015-06-26.sqlite3",
-      "bytes": 160825344,
-      "sha256": "5d471437709563598195e01312d67450be7ae58b6282787154733b2ac6845766",
+      "bytes": 160854016,
+      "sha256": "708d354bf26ed4e2c48b02676da1234ee3e6b19fef9e02ec3d97e193167556d2",
       "classification": "public"
     },
     {
       "path": "data/public/snapshots/blackridge_case_cutoff_2015-09-30.sqlite3",
-      "bytes": 247242752,
-      "sha256": "622fe9f876b97bb72370832cd2a2674af85358f88aef7a84bd8888a0e3aa55e5",
+      "bytes": 247271424,
+      "sha256": "bcc21fdfdcfa8f0f1b1f892e8028159cff7ae4062b3da970114093738670f52e",
       "classification": "public"
     },
     {
       "path": "data/public/snapshots/blackridge_case_cutoff_2015-10-06.sqlite3",
-      "bytes": 252555264,
-      "sha256": "01c24d0596c0dd8db5834ec6e7d8ff097a3513f4e46b591590f35ba3dee45c35",
+      "bytes": 252583936,
+      "sha256": "5e8376631e9c85780be4bf7c5c24be123e3970b2e11686c3ed180b45a210f662",
       "classification": "public"
     },
     {
       "path": "data/public/snapshots/blackridge_case_cutoff_2015-10-19.sqlite3",
-      "bytes": 264392704,
-      "sha256": "d7d3ab9fdaab57ce8a9adfe6d443bb4797d6205bb8b6c49e63cb308f4007448c",
+      "bytes": 264421376,
+      "sha256": "608e8f2c02189827dbca8979e8796f7cb237e5d44f736d0697adf3f7f06b1127",
       "classification": "public"
     },
     {
       "path": "data/public/snapshots/blackridge_case_cutoff_2015-12-31.sqlite3",
-      "bytes": 330170368,
-      "sha256": "6252008ca6aded50f49019649b342b329cc01ad26e85775d9b940b6aeb7b7d3c",
+      "bytes": 330199040,
+      "sha256": "9231c931e7d04a544dde019f4fcc2841e162e2ccd0143c552c5b79c7cb8786fe",
       "classification": "public"
     },
     {
       "path": "data/public/workbooks/BLACKRIDGE_MASTER_TRACKER_v0.1.0.xlsx",
-      "bytes": 126287,
-      "sha256": "d51500a9fdba2602c6692fa156426c51e893ee4105602271f22dad512a2ec0d8",
+      "bytes": 126259,
+      "sha256": "d52ce212b1873f7e59f691abe73a32fd8a12069acf7ef8a8b5d6d78c35af8e53",
       "classification": "public"
     }
   ],

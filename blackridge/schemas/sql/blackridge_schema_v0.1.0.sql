@@ -8,6 +8,7 @@ CREATE INDEX "ix_asset_available" ON "asset"(available_at);
 CREATE INDEX "ix_asset_class_available" ON "asset_class"(available_at);
 CREATE INDEX "ix_asset_hierarchy_available" ON "asset_hierarchy"(available_at);
 CREATE INDEX "ix_asset_model_available" ON "asset_model"(available_at);
+CREATE INDEX ix_assignment_resource_time ON exclusive_assignment(resource_type,resource_id,starts_at,ends_at);
 CREATE INDEX "ix_assumption_available" ON "assumption"(available_at);
 CREATE INDEX "ix_backlog_snapshot_available" ON "backlog_snapshot"(available_at);
 CREATE INDEX "ix_bench_available" ON "bench"(available_at);
@@ -324,6 +325,11 @@ CREATE TABLE "concentrate_lot" (
             available_at TEXT, amount_minor INTEGER NOT NULL DEFAULT 0,
             quantity_milli INTEGER NOT NULL DEFAULT 0, source_system TEXT NOT NULL,
             provenance TEXT NOT NULL);
+CREATE TABLE conservation_balance (
+        id INTEGER PRIMARY KEY, period TEXT NOT NULL, domain TEXT NOT NULL,
+        opening_milli INTEGER NOT NULL, inflow_milli INTEGER NOT NULL,
+        outflow_milli INTEGER NOT NULL, closing_milli INTEGER NOT NULL,
+        tolerance_milli INTEGER NOT NULL DEFAULT 0, UNIQUE(period, domain));
 CREATE TABLE "construction_in_progress" (
             id INTEGER PRIMARY KEY, canonical_id TEXT NOT NULL UNIQUE,
             immutable_uuid TEXT NOT NULL UNIQUE, name TEXT NOT NULL,
@@ -510,6 +516,10 @@ CREATE TABLE "evidence_artifact" (
             available_at TEXT, amount_minor INTEGER NOT NULL DEFAULT 0,
             quantity_milli INTEGER NOT NULL DEFAULT 0, source_system TEXT NOT NULL,
             provenance TEXT NOT NULL);
+CREATE TABLE exclusive_assignment (
+        id INTEGER PRIMARY KEY, resource_type TEXT NOT NULL, resource_id TEXT NOT NULL,
+        assignment_id TEXT NOT NULL UNIQUE, starts_at TEXT NOT NULL, ends_at TEXT NOT NULL,
+        location_id TEXT NOT NULL, CHECK(starts_at < ends_at));
 CREATE TABLE "facility" (
             id INTEGER PRIMARY KEY, canonical_id TEXT NOT NULL UNIQUE,
             immutable_uuid TEXT NOT NULL UNIQUE, name TEXT NOT NULL,
@@ -1097,6 +1107,10 @@ CREATE TABLE "storage_location" (
             available_at TEXT, amount_minor INTEGER NOT NULL DEFAULT 0,
             quantity_milli INTEGER NOT NULL DEFAULT 0, source_system TEXT NOT NULL,
             provenance TEXT NOT NULL);
+CREATE TABLE subledger_reconciliation (
+        period TEXT NOT NULL, subledger TEXT NOT NULL, subledger_minor INTEGER NOT NULL,
+        control_minor INTEGER NOT NULL, difference_minor INTEGER NOT NULL,
+        PRIMARY KEY(period, subledger), CHECK(difference_minor = subledger_minor-control_minor));
 CREATE TABLE "supplier_invoice" (
             id INTEGER PRIMARY KEY, canonical_id TEXT NOT NULL UNIQUE,
             immutable_uuid TEXT NOT NULL UNIQUE, name TEXT NOT NULL,

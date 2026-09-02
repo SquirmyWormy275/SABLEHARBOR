@@ -342,6 +342,22 @@ def create_schema(db: sqlite3.Connection) -> None:
         discount_bps INTEGER NOT NULL, npv_minor INTEGER NOT NULL, irr_bps INTEGER NOT NULL,
         carrying_minor INTEGER NOT NULL, recoverable_minor INTEGER NOT NULL,
         impairment_minor INTEGER NOT NULL)""")
+    db.execute("""CREATE TABLE IF NOT EXISTS conservation_balance (
+        id INTEGER PRIMARY KEY, period TEXT NOT NULL, domain TEXT NOT NULL,
+        opening_milli INTEGER NOT NULL, inflow_milli INTEGER NOT NULL,
+        outflow_milli INTEGER NOT NULL, closing_milli INTEGER NOT NULL,
+        tolerance_milli INTEGER NOT NULL DEFAULT 0, UNIQUE(period, domain))""")
+    db.execute("""CREATE TABLE IF NOT EXISTS exclusive_assignment (
+        id INTEGER PRIMARY KEY, resource_type TEXT NOT NULL, resource_id TEXT NOT NULL,
+        assignment_id TEXT NOT NULL UNIQUE, starts_at TEXT NOT NULL, ends_at TEXT NOT NULL,
+        location_id TEXT NOT NULL, CHECK(starts_at < ends_at))""")
+    db.execute(
+        "CREATE INDEX IF NOT EXISTS ix_assignment_resource_time ON exclusive_assignment(resource_type,resource_id,starts_at,ends_at)"
+    )
+    db.execute("""CREATE TABLE IF NOT EXISTS subledger_reconciliation (
+        period TEXT NOT NULL, subledger TEXT NOT NULL, subledger_minor INTEGER NOT NULL,
+        control_minor INTEGER NOT NULL, difference_minor INTEGER NOT NULL,
+        PRIMARY KEY(period, subledger), CHECK(difference_minor = subledger_minor-control_minor))""")
 
 
 def populate_generic(db: sqlite3.Connection, table: str, count: int, seed: int) -> None:
@@ -482,6 +498,66 @@ def populate_events(db: sqlite3.Connection, count: int, seed: int) -> None:
         db.executemany("INSERT INTO event_ledger VALUES(?,?,?,?,?,?,?,?,?,?)", batch)
 
 
+def populate_conservation(db: sqlite3.Connection) -> None:
+    row_id = 1
+    openings = {"material": 4_000_000_000, "copper": 31_000_000, "gold": 420_000, "fuel": 8_500_000}
+    inflows = {"material": 7_500_000_000, "copper": 55_000_000, "gold": 680_000, "fuel": 12_000_000}
+    changes = {"material": 2_000_000, "copper": 10_000, "gold": 100, "fuel": 3_000}
+    for month in range(1, 13):
+        period = f"2015-{month:02d}"
+        for domain, opening in list(openings.items()):
+            inflow = inflows[domain]
+            outflow = inflow - month * changes[domain]
+            closing = opening + inflow - outflow
+            db.execute(
+                "INSERT INTO conservation_balance VALUES(?,?,?,?,?,?,?,?)",
+                (row_id, period, domain, opening, inflow, outflow, closing, 0),
+            )
+            openings[domain] = closing
+            row_id += 1
+        for subledger in ["AP", "AR", "PAYROLL", "INVENTORY", "FIXED_ASSET", "CIP"]:
+            amount = (month * 10_000_000 + sum(map(ord, subledger)) * 1000) * 100
+            db.execute(
+                "INSERT INTO subledger_reconciliation VALUES(?,?,?,?,?)",
+                (period, subledger, amount, amount, 0),
+            )
+    assignment_id = 1
+    start = datetime(2015, 1, 1, tzinfo=UTC)
+    for day in range(365):
+        for shift in range(2):
+            begins = start + timedelta(days=day, hours=shift * 12)
+            ends = begins + timedelta(hours=12)
+            for resource_type, total, prefix in [("TRUCK", 27, "HT"), ("OPERATOR", 54, "OP")]:
+                for resource in range(1, total + 1):
+                    db.execute(
+                        "INSERT INTO exclusive_assignment VALUES(?,?,?,?,?,?,?)",
+                        (
+                            assignment_id,
+                            resource_type,
+                            f"BRG-{prefix}-{resource:03d}",
+                            f"ASN-{assignment_id:08d}",
+                            begins.isoformat(),
+                            ends.isoformat(),
+                            "BLACKRIDGE-PIT",
+                        ),
+                    )
+                    assignment_id += 1
+    for component in range(1, 1601):
+        db.execute(
+            "INSERT INTO exclusive_assignment VALUES(?,?,?,?,?,?,?)",
+            (
+                assignment_id,
+                "COMPONENT",
+                f"BRG-CMP-{component:05d}",
+                f"ASN-{assignment_id:08d}",
+                start.isoformat(),
+                (start + timedelta(days=365)).isoformat(),
+                f"HOST-{component % 3000:04d}",
+            ),
+        )
+        assignment_id += 1
+
+
 def build_database(profile: str, seed: int) -> Path:
     out = PUBLIC / "databases"
     out.mkdir(parents=True, exist_ok=True)
@@ -503,6 +579,7 @@ def build_database(profile: str, seed: int) -> Path:
     populate_events(
         db, 1_000_000 if profile == "full_2015" else (5000 if profile == "m00" else 1000), seed
     )
+    populate_conservation(db)
     db.execute(
         "CREATE VIEW vw_trial_balance_monthly AS SELECT period, account_code, SUM(debit_minor) debit_minor, SUM(credit_minor) credit_minor FROM journal_line_detail GROUP BY period,account_code"
     )
@@ -541,6 +618,16 @@ def validate(path: Path) -> dict[str, object]:
     leakage = db.execute(
         "SELECT COUNT(*) FROM sqlite_master WHERE lower(sql) LIKE '%true_root_cause%' OR lower(name) LIKE '%oracle%'"
     ).fetchone()[0]
+    conservation_failures = db.execute(
+        "SELECT COUNT(*) FROM conservation_balance WHERE ABS(opening_milli+inflow_milli-outflow_milli-closing_milli)>tolerance_milli"
+    ).fetchone()[0]
+    subledger_failures = db.execute(
+        "SELECT COUNT(*) FROM subledger_reconciliation WHERE difference_minor<>0 OR subledger_minor<>control_minor"
+    ).fetchone()[0]
+    overlaps = db.execute("""SELECT COUNT(*) FROM exclusive_assignment a
+        JOIN exclusive_assignment b ON a.resource_type=b.resource_type
+        AND a.resource_id=b.resource_id AND a.id<b.id
+        AND a.starts_at < b.ends_at AND b.starts_at < a.ends_at""").fetchone()[0]
     counts = {
         row[0]: db.execute(f'SELECT COUNT(*) FROM "{row[0]}"').fetchone()[0]
         for row in db.execute(
@@ -554,6 +641,9 @@ def validate(path: Path) -> dict[str, object]:
         "journals_balanced": unbalanced == 0,
         "impairment_derived": 50_000_000_00 <= impairment <= 54_000_000_00,
         "oracle_leakage": leakage == 0,
+        "physical_conservation": conservation_failures == 0,
+        "subledgers_reconcile": subledger_failures == 0,
+        "resource_exclusivity": overlaps == 0,
     }
     return {
         "status": "PASS" if all(checks.values()) else "FAIL",

@@ -58,3 +58,17 @@ def test_deterministic_smoke_replay(tmp_path: Path, monkeypatch) -> None:
     monkeypatch.setattr(cli, "PUBLIC", tmp_path)
     result = deterministic_replay("smoke", 20150112)
     assert result["status"] == "PASS"
+
+
+def test_corruption_conservation_is_detected(tmp_path: Path, monkeypatch) -> None:
+    from blackridge import cli
+
+    monkeypatch.setattr(cli, "PUBLIC", tmp_path)
+    db_path = build_database("smoke", 20150112)
+    db = sqlite3.connect(db_path)
+    db.execute("UPDATE conservation_balance SET closing_milli=closing_milli+1 WHERE id=1")
+    db.commit()
+    db.close()
+    result = validate(db_path)
+    assert result["status"] == "FAIL"
+    assert not result["checks"]["physical_conservation"]

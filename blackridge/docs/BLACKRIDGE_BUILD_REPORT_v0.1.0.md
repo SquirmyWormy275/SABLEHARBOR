@@ -33,3 +33,9 @@ reduce but do not eliminate the remaining acceptance gaps above.
 Migration upgrade/downgrade/upgrade, M00 deterministic replay, execution of all 75 cookbook SQL
 statements, and automated QA across all 135 workbook sheets also pass. The test suite now contains
 five passing tests.
+
+Material, contained-copper, contained-gold, and fuel rollforwards now conserve for every month.
+AP, AR, payroll, inventory, fixed-asset, and CIP subledgers tie to their control balances for every
+month. Two-shift assignments for exactly 27 trucks, 54 operators, and 1,600 serialized components
+pass overlap/exclusivity validation. A deliberate conservation mutation is rejected. The test suite
+now contains six passing tests.

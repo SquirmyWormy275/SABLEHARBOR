@@ -5,7 +5,10 @@
     "foreign_keys": true,
     "journals_balanced": true,
     "impairment_derived": true,
-    "oracle_leakage": true
+    "oracle_leakage": true,
+    "physical_conservation": true,
+    "subledgers_reconcile": true,
+    "resource_exclusivity": true
   },
   "impairment_minor": 5205000000,
   "row_counts": {
@@ -156,9 +159,12 @@
     "event_ledger": 1000000,
     "journal_line_detail": 74,
     "financial_statement": 96,
-    "phase4_valuation": 1
+    "phase4_valuation": 1,
+    "conservation_balance": 48,
+    "exclusive_assignment": 60730,
+    "subledger_reconciliation": 72
   },
-  "database_sha256": "aaaffa9483a4f9afb971ac574aa313cd615e95ed8e404709b719da410aae14d0",
-  "workbook_sha256": "d51500a9fdba2602c6692fa156426c51e893ee4105602271f22dad512a2ec0d8",
+  "database_sha256": "334b5f7ebd1a8c834f3f256cfb8f288f33516b6fbc0ecd81e83f30f5012fdf04",
+  "workbook_sha256": "d52ce212b1873f7e59f691abe73a32fd8a12069acf7ef8a8b5d6d78c35af8e53",
   "workbook_sheets": 135
 }

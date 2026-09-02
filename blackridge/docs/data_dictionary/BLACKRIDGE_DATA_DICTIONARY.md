@@ -1,6 +1,6 @@
 # Blackridge Data Dictionary
 
-1775 columns across 154 tables.
+1795 columns across 157 tables.
 
 | Table | Column | Type | Required |
 |---|---|---|---|
@@ -316,6 +316,14 @@
 | concentrate_lot | quantity_milli | INTEGER | yes |
 | concentrate_lot | source_system | TEXT | yes |
 | concentrate_lot | provenance | TEXT | yes |
+| conservation_balance | id | INTEGER | no |
+| conservation_balance | period | TEXT | yes |
+| conservation_balance | domain | TEXT | yes |
+| conservation_balance | opening_milli | INTEGER | yes |
+| conservation_balance | inflow_milli | INTEGER | yes |
+| conservation_balance | outflow_milli | INTEGER | yes |
+| conservation_balance | closing_milli | INTEGER | yes |
+| conservation_balance | tolerance_milli | INTEGER | yes |
 | construction_in_progress | id | INTEGER | no |
 | construction_in_progress | canonical_id | TEXT | yes |
 | construction_in_progress | immutable_uuid | TEXT | yes |
@@ -642,6 +650,13 @@
 | evidence_artifact | quantity_milli | INTEGER | yes |
 | evidence_artifact | source_system | TEXT | yes |
 | evidence_artifact | provenance | TEXT | yes |
+| exclusive_assignment | id | INTEGER | no |
+| exclusive_assignment | resource_type | TEXT | yes |
+| exclusive_assignment | resource_id | TEXT | yes |
+| exclusive_assignment | assignment_id | TEXT | yes |
+| exclusive_assignment | starts_at | TEXT | yes |
+| exclusive_assignment | ends_at | TEXT | yes |
+| exclusive_assignment | location_id | TEXT | yes |
 | facility | id | INTEGER | no |
 | facility | canonical_id | TEXT | yes |
 | facility | immutable_uuid | TEXT | yes |
@@ -1647,6 +1662,11 @@
 | storage_location | quantity_milli | INTEGER | yes |
 | storage_location | source_system | TEXT | yes |
 | storage_location | provenance | TEXT | yes |
+| subledger_reconciliation | period | TEXT | yes |
+| subledger_reconciliation | subledger | TEXT | yes |
+| subledger_reconciliation | subledger_minor | INTEGER | yes |
+| subledger_reconciliation | control_minor | INTEGER | yes |
+| subledger_reconciliation | difference_minor | INTEGER | yes |
 | supplier_invoice | id | INTEGER | no |
 | supplier_invoice | canonical_id | TEXT | yes |
 | supplier_invoice | immutable_uuid | TEXT | yes |
