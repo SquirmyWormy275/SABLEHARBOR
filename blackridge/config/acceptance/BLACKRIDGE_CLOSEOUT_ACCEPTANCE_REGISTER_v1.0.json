@@ -1,0 +1,564 @@
+{
+  "document": {
+    "title": "Blackridge Closeout Acceptance Register",
+    "version": "1.0",
+    "date": "2026-09-01",
+    "status": "proposed_closeout_control"
+  },
+  "state_values": [
+    "NOT_STARTED",
+    "IN_PROGRESS",
+    "BLOCKED",
+    "REVIEW_READY",
+    "ACCEPTED_WITH_LIMITATION",
+    "ACCEPTED",
+    "SUPERSEDED"
+  ],
+  "completion_rule": "Blackridge v1.0 may be called accepted only when all P0 gates are ACCEPTED, all P1 gates are ACCEPTED or ACCEPTED_WITH_LIMITATION with recorded residual risk, and any deferred P2 gate is explicitly outside the v1.0 release claim.",
+  "gates": [
+    {
+      "gate_id": "BRG-G000",
+      "workstream": "repository",
+      "requirement": "Inspect all Blackridge branches, PRs, tags, workflows, dangling commits, and unreachable objects.",
+      "priority": "P0",
+      "evidence": [
+        "BLACKRIDGE_REPOSITORY_RECOVERY_AUDIT.md",
+        "branch_disposition_register.json"
+      ],
+      "classification": "public",
+      "depends_on": [],
+      "state": "ACCEPTED"
+    },
+    {
+      "gate_id": "BRG-G001",
+      "workstream": "repository",
+      "requirement": "Select accepted main as the canon base and avoid blind dependency on review-blocked finance work.",
+      "priority": "P0",
+      "evidence": [
+        "base_branch_record.json",
+        "controlling_source_map.md"
+      ],
+      "classification": "public",
+      "depends_on": [
+        "BRG-G000"
+      ],
+      "state": "ACCEPTED"
+    },
+    {
+      "gate_id": "BRG-G010",
+      "workstream": "canon",
+      "requirement": "Publish a controlling Blackridge canon bible with LOCKED, PROVISIONAL, OPEN, SUPERSEDED, MODEL_PROPOSED, SCENARIO_INPUT, SYNTHETIC_INSTANCE, DERIVED, and ORACLE_ONLY states.",
+      "priority": "P0",
+      "evidence": [
+        "BLACKRIDGE_CANON_BIBLE.md",
+        "BLACKRIDGE_DECISION_REGISTER.md"
+      ],
+      "classification": "public",
+      "depends_on": [
+        "BRG-G001"
+      ],
+      "state": "NOT_STARTED"
+    },
+    {
+      "gate_id": "BRG-G011",
+      "workstream": "canon",
+      "requirement": "Reconcile Blackridge people and chronology to the accepted Sable Harbor lore; Daniel Mercer remains the only future Sable Harbor leader directly exposed.",
+      "priority": "P0",
+      "evidence": [
+        "BLACKRIDGE_CONTINUITY_AUDIT.md"
+      ],
+      "classification": "public",
+      "depends_on": [
+        "BRG-G010"
+      ],
+      "state": "NOT_STARTED"
+    },
+    {
+      "gate_id": "BRG-G020",
+      "workstream": "data_foundation",
+      "requirement": "Build normalized SQL schema, explicit migrations, SQLite public database, and PostgreSQL-compatible DDL.",
+      "priority": "P0",
+      "evidence": [
+        "migration_test_report.json",
+        "schema_fingerprint.json",
+        "blackridge_public.sqlite3"
+      ],
+      "classification": "public",
+      "depends_on": [
+        "BRG-G010"
+      ],
+      "state": "ACCEPTED"
+    },
+    {
+      "gate_id": "BRG-G021",
+      "workstream": "data_foundation",
+      "requirement": "Generate BLACKRIDGE_MASTER_TRACKER Excel workbook exclusively from database views and validate it against SQL.",
+      "priority": "P0",
+      "evidence": [
+        "BLACKRIDGE_MASTER_TRACKER_v0.1.0.xlsx",
+        "WORKBOOK_QA_REPORT.md"
+      ],
+      "classification": "public",
+      "depends_on": [
+        "BRG-G020"
+      ],
+      "state": "ACCEPTED"
+    },
+    {
+      "gate_id": "BRG-G022",
+      "workstream": "data_foundation",
+      "requirement": "Populate full-scale workforce, facilities, assets, components, inventory, vendors, contracts, systems, and master data.",
+      "priority": "P0",
+      "evidence": [
+        "row_count_manifest.json",
+        "data_profile.json"
+      ],
+      "classification": "public",
+      "depends_on": [
+        "BRG-G020"
+      ],
+      "state": "ACCEPTED"
+    },
+    {
+      "gate_id": "BRG-G023",
+      "workstream": "operations",
+      "requirement": "Generate M00 and full 2015 mine, haul, maintenance, inventory, processing, commercial, and governance activity chronologically.",
+      "priority": "P0",
+      "evidence": [
+        "m00_validation.json",
+        "full_2015_validation.json"
+      ],
+      "classification": "public",
+      "depends_on": [
+        "BRG-G022"
+      ],
+      "state": "ACCEPTED"
+    },
+    {
+      "gate_id": "BRG-G024",
+      "workstream": "finance",
+      "requirement": "Produce 2014 opening balances, 12 monthly closes, four primary financial statements, subledgers, and a derived Phase 4 impairment.",
+      "priority": "P0",
+      "evidence": [
+        "financial_reconciliation.json",
+        "impairment_lineage.json"
+      ],
+      "classification": "public",
+      "depends_on": [
+        "BRG-G023"
+      ],
+      "state": "ACCEPTED"
+    },
+    {
+      "gate_id": "BRG-G025",
+      "workstream": "integrity",
+      "requirement": "Pass physical, metal, fuel, labor, asset, component, inventory, journal, statement, subledger, cutoff, and deterministic-replay checks.",
+      "priority": "P0",
+      "evidence": [
+        "VALIDATION_REPORT.json",
+        "RECONCILIATION_REPORT.json"
+      ],
+      "classification": "public",
+      "depends_on": [
+        "BRG-G024"
+      ],
+      "state": "ACCEPTED"
+    },
+    {
+      "gate_id": "BRG-G030",
+      "workstream": "calibration",
+      "requirement": "Create a calibration source register distinguishing public reference, canon, synthetic design, expert judgment, scenario input, and derived result.",
+      "priority": "P1",
+      "evidence": [
+        "calibration_source_register.json"
+      ],
+      "classification": "public",
+      "depends_on": [
+        "BRG-G010"
+      ],
+      "state": "NOT_STARTED"
+    },
+    {
+      "gate_id": "BRG-G031",
+      "workstream": "calibration",
+      "requirement": "Obtain recorded specialist review of mining, maintenance, metallurgy, accounting, supply chain, workforce, environmental, and data architecture.",
+      "priority": "P1",
+      "evidence": [
+        "expert_review_register.json",
+        "expert_review_findings.md"
+      ],
+      "classification": "public_summary_private_detail",
+      "depends_on": [
+        "BRG-G025",
+        "BRG-G030"
+      ],
+      "state": "NOT_STARTED"
+    },
+    {
+      "gate_id": "BRG-G040",
+      "workstream": "history",
+      "requirement": "Generate enough 2010\u20132013 history to support asset, workforce, contract, debt, system, and shadow-artifact opening states.",
+      "priority": "P1",
+      "evidence": [
+        "historical_coverage_report.json"
+      ],
+      "classification": "public",
+      "depends_on": [
+        "BRG-G022"
+      ],
+      "state": "NOT_STARTED"
+    },
+    {
+      "gate_id": "BRG-G041",
+      "workstream": "history",
+      "requirement": "Generate a high-resolution 2014 comparative baseline and a 2016 aftermath package.",
+      "priority": "P1",
+      "evidence": [
+        "2014_comparative_validation.json",
+        "2016_aftermath_manifest.json"
+      ],
+      "classification": "public",
+      "depends_on": [
+        "BRG-G040",
+        "BRG-G024"
+      ],
+      "state": "NOT_STARTED"
+    },
+    {
+      "gate_id": "BRG-G050",
+      "workstream": "source_systems",
+      "requirement": "Provide emulated source-system interfaces for GeoCore, StrataPlan, MineTrack, ForgeWorks, AssayLab, ProcessVault, Argent ERP, HR, procurement, reporting, and documents.",
+      "priority": "P1",
+      "evidence": [
+        "source_system_emulator_manifest.json",
+        "adapter_contracts/"
+      ],
+      "classification": "public",
+      "depends_on": [
+        "BRG-G023"
+      ],
+      "state": "NOT_STARTED"
+    },
+    {
+      "gate_id": "BRG-G051",
+      "workstream": "source_systems",
+      "requirement": "Model source-specific IDs, timezones, pagination, delayed sync, limited retention, revisions, permissions, and data-quality limitations.",
+      "priority": "P1",
+      "evidence": [
+        "source_system_behavior_tests.json"
+      ],
+      "classification": "public",
+      "depends_on": [
+        "BRG-G050"
+      ],
+      "state": "NOT_STARTED"
+    },
+    {
+      "gate_id": "BRG-G060",
+      "workstream": "evidence",
+      "requirement": "Generate period-authentic communications, workpapers, reports, system exports, trackers, contracts, invoices, lab records, maps, screenshots, and meeting material.",
+      "priority": "P1",
+      "evidence": [
+        "artifact_manifest.json",
+        "artifact_coverage_report.md"
+      ],
+      "classification": "public_participant",
+      "depends_on": [
+        "BRG-G023",
+        "BRG-G050"
+      ],
+      "state": "NOT_STARTED"
+    },
+    {
+      "gate_id": "BRG-G061",
+      "workstream": "evidence",
+      "requirement": "Every artifact has ID, creator, audience, timestamps, availability, version, hash, lineage, access, and limitations.",
+      "priority": "P0",
+      "evidence": [
+        "artifact_integrity_validation.json"
+      ],
+      "classification": "public",
+      "depends_on": [
+        "BRG-G060"
+      ],
+      "state": "NOT_STARTED"
+    },
+    {
+      "gate_id": "BRG-G062",
+      "workstream": "evidence",
+      "requirement": "Pass period-authenticity review with no hindsight narration or answer-revealing filenames.",
+      "priority": "P0",
+      "evidence": [
+        "period_authenticity_review.md",
+        "leakage_scan.json"
+      ],
+      "classification": "public_summary_private_detail",
+      "depends_on": [
+        "BRG-G060"
+      ],
+      "state": "NOT_STARTED"
+    },
+    {
+      "gate_id": "BRG-G070",
+      "workstream": "access",
+      "requirement": "Implement role-, permission-, and cutoff-aware data packages for at least fifteen personas.",
+      "priority": "P1",
+      "evidence": [
+        "persona_package_manifest.json",
+        "access_boundary_tests.json"
+      ],
+      "classification": "public",
+      "depends_on": [
+        "BRG-G051",
+        "BRG-G060"
+      ],
+      "state": "NOT_STARTED"
+    },
+    {
+      "gate_id": "BRG-G080",
+      "workstream": "oracle",
+      "requirement": "Create a private oracle repository or equivalently controlled private storage boundary.",
+      "priority": "P0",
+      "evidence": [
+        "oracle_repository_record.json",
+        "public_private_boundary.md"
+      ],
+      "classification": "public_metadata_private_content",
+      "depends_on": [
+        "BRG-G010"
+      ],
+      "state": "ACCEPTED"
+    },
+    {
+      "gate_id": "BRG-G081",
+      "workstream": "oracle",
+      "requirement": "Model hidden physical truth, actor knowledge states, causal graph, intervention outcomes, and scoring data.",
+      "priority": "P1",
+      "evidence": [
+        "oracle_manifest.json",
+        "oracle_validation.json"
+      ],
+      "classification": "private",
+      "depends_on": [
+        "BRG-G080",
+        "BRG-G023"
+      ],
+      "state": "ACCEPTED"
+    },
+    {
+      "gate_id": "BRG-G082",
+      "workstream": "oracle",
+      "requirement": "Prove public code, Git history, workbooks, archives, and releases do not leak oracle data.",
+      "priority": "P0",
+      "evidence": [
+        "oracle_leakage_scan.json"
+      ],
+      "classification": "public_summary_private_detail",
+      "depends_on": [
+        "BRG-G081"
+      ],
+      "state": "ACCEPTED"
+    },
+    {
+      "gate_id": "BRG-G090",
+      "workstream": "counterfactual",
+      "requirement": "Implement intervention scenarios that rerun the physical and financial causal model.",
+      "priority": "P1",
+      "evidence": [
+        "counterfactual_registry.json",
+        "counterfactual_validation.json"
+      ],
+      "classification": "private_or_controlled",
+      "depends_on": [
+        "BRG-G025",
+        "BRG-G081"
+      ],
+      "state": "NOT_STARTED"
+    },
+    {
+      "gate_id": "BRG-G091",
+      "workstream": "counterfactual",
+      "requirement": "Provide traceable outcomes for operational, capital, information/governance, supply-chain, and external scenarios at key intervention dates.",
+      "priority": "P1",
+      "evidence": [
+        "intervention_outcome_manifest.json"
+      ],
+      "classification": "private_or_controlled",
+      "depends_on": [
+        "BRG-G090"
+      ],
+      "state": "NOT_STARTED"
+    },
+    {
+      "gate_id": "BRG-G100",
+      "workstream": "benchmark",
+      "requirement": "Create a versioned benchmark question registry spanning retrieval through adversarial causal judgment.",
+      "priority": "P1",
+      "evidence": [
+        "benchmark_question_registry.json"
+      ],
+      "classification": "public_metadata_private_answers",
+      "depends_on": [
+        "BRG-G060",
+        "BRG-G081"
+      ],
+      "state": "NOT_STARTED"
+    },
+    {
+      "gate_id": "BRG-G101",
+      "workstream": "benchmark",
+      "requirement": "Implement evidence-based scoring with temporal validity, uncertainty, traceability, economic coherence, and alternative acceptable reasoning.",
+      "priority": "P1",
+      "evidence": [
+        "scoring_specification.md",
+        "scoring_tests.json"
+      ],
+      "classification": "private",
+      "depends_on": [
+        "BRG-G100"
+      ],
+      "state": "NOT_STARTED"
+    },
+    {
+      "gate_id": "BRG-G110",
+      "workstream": "audit",
+      "requirement": "Create audit-ready process, population, PBC, evidence, workpaper, and exception packages without hardcoding unsupported methodology.",
+      "priority": "P2",
+      "evidence": [
+        "audit_package_manifest.json",
+        "authority_mapping.json"
+      ],
+      "classification": "controlled",
+      "depends_on": [
+        "BRG-G060",
+        "BRG-G100"
+      ],
+      "state": "NOT_STARTED"
+    },
+    {
+      "gate_id": "BRG-G111",
+      "workstream": "audit",
+      "requirement": "Trace audit rules and methods to governing authority, criteria, professional guidance, firm methodology, or technical behavior.",
+      "priority": "P0",
+      "evidence": [
+        "audit_authority_validation.json"
+      ],
+      "classification": "controlled",
+      "depends_on": [
+        "BRG-G110"
+      ],
+      "state": "NOT_STARTED"
+    },
+    {
+      "gate_id": "BRG-G120",
+      "workstream": "case_packs",
+      "requirement": "Publish participant and facilitator packs for board, finance, accounting/audit, operations, maintenance, metallurgy, supply chain, data engineering, management, and AI.",
+      "priority": "P2",
+      "evidence": [
+        "case_pack_manifest.json"
+      ],
+      "classification": "public_and_private_facilitator",
+      "depends_on": [
+        "BRG-G060",
+        "BRG-G100"
+      ],
+      "state": "NOT_STARTED"
+    },
+    {
+      "gate_id": "BRG-G130",
+      "workstream": "visualization",
+      "requirement": "Publish mine, plant, facility, organization, authority, system, lineage, WBS, timeline, and causal visualizations with period/modern/oracle labels.",
+      "priority": "P2",
+      "evidence": [
+        "visual_asset_manifest.json"
+      ],
+      "classification": "public_and_private",
+      "depends_on": [
+        "BRG-G023",
+        "BRG-G060"
+      ],
+      "state": "NOT_STARTED"
+    },
+    {
+      "gate_id": "BRG-G140",
+      "workstream": "developer_experience",
+      "requirement": "Provide CLI, API, Parquet/DuckDB exports, JSON schemas, notebooks, containerized environment, and extension SDK.",
+      "priority": "P1",
+      "evidence": [
+        "developer_acceptance_report.md",
+        "notebook_test_report.json"
+      ],
+      "classification": "public",
+      "depends_on": [
+        "BRG-G020",
+        "BRG-G025"
+      ],
+      "state": "IN_PROGRESS"
+    },
+    {
+      "gate_id": "BRG-G150",
+      "workstream": "quality",
+      "requirement": "Pass unit, integration, property, mutation, corruption, performance, workbook, cutoff, access, oracle leakage, scenario isolation, and fresh-clone tests.",
+      "priority": "P0",
+      "evidence": [
+        "complete_test_evidence.json",
+        "fresh_clone_report.md"
+      ],
+      "classification": "public_summary_private_detail",
+      "depends_on": [
+        "BRG-G082",
+        "BRG-G091",
+        "BRG-G140"
+      ],
+      "state": "NOT_STARTED"
+    },
+    {
+      "gate_id": "BRG-G160",
+      "workstream": "release",
+      "requirement": "Publish immutable public, facilitator, and private evaluator releases with manifests, checksums, SBOM, lockfiles, limitations, and recovery instructions.",
+      "priority": "P0",
+      "evidence": [
+        "release_manifest.json",
+        "CHECKSUMS.sha256",
+        "SBOM.json"
+      ],
+      "classification": "split_public_private",
+      "depends_on": [
+        "BRG-G150",
+        "BRG-G031"
+      ],
+      "state": "NOT_STARTED"
+    },
+    {
+      "gate_id": "BRG-G170",
+      "workstream": "narrative",
+      "requirement": "Close the October reconstruction, year-end impairment, 2016 aftermath, and continuity bridge into Sable Harbor without retroactive founder insertion.",
+      "priority": "P1",
+      "evidence": [
+        "BLACKRIDGE_AFTERMATH_AND_SABLE_HARBOR_BRIDGE.md"
+      ],
+      "classification": "public",
+      "depends_on": [
+        "BRG-G011",
+        "BRG-G041"
+      ],
+      "state": "NOT_STARTED"
+    },
+    {
+      "gate_id": "BRG-G180",
+      "workstream": "closeout",
+      "requirement": "Complete an independent v1.0 closeout audit covering canon, data, physics, finance, evidence, scenarios, evaluation, accessibility, security, specialist review, and release.",
+      "priority": "P0",
+      "evidence": [
+        "BLACKRIDGE_V1_CLOSEOUT_AUDIT.md",
+        "BLACKRIDGE_V1_ACCEPTANCE.json"
+      ],
+      "classification": "public_summary_private_detail",
+      "depends_on": [
+        "BRG-G160",
+        "BRG-G170"
+      ],
+      "state": "NOT_STARTED"
+    }
+  ]
+}
