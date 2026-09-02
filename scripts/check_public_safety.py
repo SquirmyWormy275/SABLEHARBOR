@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 import subprocess
+import sys
 from pathlib import Path
+
+from sable_harbor.exports.safety import scan_generated_artifacts
 
 FORBIDDEN = ("ghp_", "github_pat_", "sk-proj-", "BEGIN PRIVATE KEY")
 MAX_BYTES = 10 * 1024 * 1024
@@ -28,6 +31,10 @@ def main() -> None:
         for marker in FORBIDDEN:
             if marker in text:
                 failures.append(f"possible credential marker {marker!r}: {path}")
+    if failures:
+        raise SystemExit("\n".join(failures))
+    for argument in sys.argv[1:]:
+        failures.extend(scan_generated_artifacts(Path(argument)))
     if failures:
         raise SystemExit("\n".join(failures))
     print("PASS: no tracked private benchmark paths, credential markers, or >10 MiB files")

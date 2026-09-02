@@ -245,7 +245,14 @@ def generate_workbook_suite(
     for filename, sheets in WORKBOOKS.items():
         path = output_directory / filename
         workbook = xlsxwriter.Workbook(path)
-        workbook.set_properties({"title": filename, "company": "Sable Harbor"})
+        workbook.set_properties(
+            {
+                "title": filename,
+                "company": "Sable Harbor",
+                # OOXML core metadata is otherwise wall-clock dependent.
+                "created": run.completed_at,
+            }
+        )
         title = workbook.add_format(
             {"bold": True, "font_size": 15, "font_color": "#FFFFFF", "bg_color": "#17384A"}
         )

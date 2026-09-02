@@ -15,7 +15,7 @@
 | Industrial subledgers | Mine production/inventory/sales, logistics waybills/custody, Cradle host-safe recovery and research programs |
 | Planning | Base, low, high and stress scenarios; invariant actual periods; 2023–2026 monthly standard profile; 2016–2022 revenue calibration anchors |
 | Reporting | Reconciled statements, named SQL queries, six-workbook suite and valuation/QoE bridge |
-| Release control | Review-blocked package scaffold; allowlisted SQLite construction and generated-artifact scan remain open |
+| Release control | Versioned table/column allowlist; new-database construction; deterministic stale-safe packaging; recursive generated-artifact scan |
 | Portability | Explicit Alembic migrations through uncommitted `0012`; local SQLite cycle passes; PostgreSQL `0012` matrix is encoded but remote evidence remains at committed `0008` |
 
 ## Verified controls
@@ -28,8 +28,10 @@
 - Full-history trial balance reconciles at `$1,172,100,000.0000` debit and credit.
 - Standard consolidated statements balance with zero difference after ARU–Red Wash eliminations.
 - Six XLSX files generate and pass structural tests.
-- The current public release package is review blocked pending allowlist construction and generated
-  artifact scanning.
+- The public release implementation builds a new database containing only versioned allowlisted
+  tables and columns, removes stale outputs, supports controlled timestamps, and recursively scans
+  generated CSV, SQLite, XLSX, manifests, and nested archives. CI publishes the reviewed package
+  and six workbooks only after these gates pass.
 - The current uncommitted Stage 1 tranche passes Ruff, strict mypy, and 78 local tests; two
   PostgreSQL-only tests are skipped locally because `SHFIN_POSTGRES_TEST_URL` is not configured.
   At the committed PR head, two PostgreSQL jobs, two SQLite jobs, and organization render
@@ -63,8 +65,7 @@ regression proves a scenario-attributable delta. The PostgreSQL two-seed and vio
 implemented, including explicit private-profile authorization, but remote evidence remains open. Standard monthly accounting controls, driver
 values, production, freight movements, and ending inventory now partition pre-cutoff actuals from
 scenario-owned forecasts, with a two-scenario semantic ownership audit. Effective-dated master and
-commitment records remain whole records rather than periodic facts. Workbook semantics, public export
-allowlisting, generated-artifact scanning, integrated monthly
+commitment records remain whole records rather than periodic facts. Workbook semantics, integrated monthly
 statements and rollforwards, driver-based scenarios, accurate historical claims, and CI review
 artifacts remain open. This synthetic platform is not accepted, integration-ready, production-ready,
 or independently auditable.

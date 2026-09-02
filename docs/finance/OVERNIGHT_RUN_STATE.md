@@ -182,3 +182,11 @@
   (78 passed, two PostgreSQL-only skips); the complete matrix PASS on a fresh migrated SQLite
   backend surrogate. PostgreSQL 16 execution remains pending because no local service is
   available and the outer controller owns commits/pushes that trigger CI.
+- Public-release increment: the package is constructed into a fresh SQLite database from
+  `config/releases/public-demo-v0.1.json`, which allowlists every exported table and column.
+  Packaging removes stale output and accepts a controlled timestamp; same-input package hashes are
+  deterministic. A recursive scanner inspects CSV headers/values, SQLite schema/text values,
+  XLSX ZIP/XML and relationships, manifests, and nested archives for credentials, local paths,
+  external relationships, macros, and embedded objects. CI scans and uploads the generated package
+  plus six review workbooks after tests pass. Resume at semantic workbook specifications after the
+  PostgreSQL `0010` constraint-name correction is green remotely.

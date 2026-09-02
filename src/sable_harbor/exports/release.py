@@ -1,6 +1,7 @@
 import csv
 import hashlib
 import json
+import shutil
 import sqlite3
 from datetime import UTC, datetime
 from pathlib import Path
@@ -10,22 +11,12 @@ from sqlalchemy import inspect, text
 from sqlalchemy.orm import Session
 
 from sable_harbor.core.database import required_schema_head
+from sable_harbor.exports.safety import scan_generated_artifacts
 from sable_harbor.provenance.models import GenerationRun
 from sable_harbor.provenance.service import run_context
 from sable_harbor.workbooks.suite import generate_workbook_suite
 
-PUBLIC_TABLES = [
-    "legal_entity",
-    "accounting_book",
-    "fiscal_period",
-    "account",
-    "journal_entry",
-    "journal_line",
-    "scenario_value",
-    "worker",
-    "production_record",
-    "freight_movement",
-]
+PUBLIC_ALLOWLIST = Path("config/releases/public-demo-v0.1.json")
 
 
 def sha256(path: Path) -> str:
@@ -37,24 +28,37 @@ def sha256(path: Path) -> str:
 
 
 def _export_csv(
-    session: Session, table: str, destination: Path, generation_run_id: str, actual_run_id: str
+    session: Session,
+    table: str,
+    selected_columns: list[str],
+    destination: Path,
+    generation_run_id: str,
+    actual_run_id: str,
 ) -> int:
     if session.bind is None:
         raise ValueError("Export session is not bound to a database")
     columns = {column["name"] for column in inspect(session.bind).get_columns(table)}
+    unknown = set(selected_columns) - columns
+    if unknown:
+        raise ValueError(f"Public allowlist has unknown columns for {table}: {sorted(unknown)}")
+    projection = ",".join(f'"{column}"' for column in selected_columns)
     if "generation_run_id" in columns:
         statement = text(
-            f'SELECT * FROM "{table}" WHERE generation_run_id IN '
+            f'SELECT {projection} FROM "{table}" WHERE generation_run_id IN '
             "(:actual_run_id,:generation_run_id)"
         )
     elif table == "journal_line":
+        qualified_projection = ",".join(
+            f'jl."{column}"' for column in selected_columns
+        )
         statement = text(
-            'SELECT jl.* FROM "journal_line" jl JOIN "journal_entry" je '
+            f"SELECT {qualified_projection} "
+            'FROM "journal_line" jl JOIN "journal_entry" je '
             "ON je.id=jl.entry_id WHERE je.generation_run_id IN "
             "(:actual_run_id,:generation_run_id)"
         )
     else:
-        statement = text(f'SELECT * FROM "{table}"')
+        statement = text(f'SELECT {projection} FROM "{table}"')
     rows = session.execute(
         statement,
         {"generation_run_id": generation_run_id, "actual_run_id": actual_run_id},
@@ -74,13 +78,35 @@ def _export_csv(
     return len(rows)
 
 
-def _sqlite_snapshot(session: Session, destination: Path) -> None:
-    raw = session.connection().connection.driver_connection
-    if not isinstance(raw, sqlite3.Connection):
-        raise ValueError("SQLite snapshot export currently requires the SQLite local target")
+def _allowlist() -> dict[str, list[str]]:
+    document = json.loads(PUBLIC_ALLOWLIST.read_text())
+    tables = document.get("tables")
+    if not isinstance(tables, dict) or not tables:
+        raise ValueError("Public release allowlist must define tables")
+    return {str(table): [str(column) for column in columns] for table, columns in tables.items()}
+
+
+def _sqlite_public_database(
+    csv_directory: Path, destination: Path, allowlist: dict[str, list[str]]
+) -> None:
+    """Build a new empty database containing only explicitly allowlisted columns."""
     target = sqlite3.connect(destination)
     try:
-        raw.backup(target)
+        for table, columns in allowlist.items():
+            declarations = ",".join(f'"{column}" TEXT' for column in columns)
+            target.execute(f'CREATE TABLE "{table}" ({declarations})')
+            with (csv_directory / f"{table}.csv").open(
+                newline="", encoding="utf-8"
+            ) as source:
+                rows = csv.DictReader(source)
+                if rows.fieldnames is None:
+                    continue
+                placeholders = ",".join("?" for _ in columns)
+                target.executemany(
+                    f'INSERT INTO "{table}" VALUES ({placeholders})',
+                    ([row[column] for column in columns] for row in rows),
+                )
+        target.commit()
     finally:
         target.close()
 
@@ -90,26 +116,33 @@ def package_public_demo(
     destination: Path = Path("releases/generated/public-demo-v0.1"),
     *,
     generation_run_id: str,
+    generated_at: datetime | None = None,
 ) -> Path:
     context = run_context(session, generation_run_id)
     run = session.get(GenerationRun, context.generation_run_id)
     if run is None:
         raise ValueError(f"Unknown generation run {generation_run_id!r}")
-    destination.mkdir(parents=True, exist_ok=True)
+    if destination.exists():
+        shutil.rmtree(destination)
+    destination.mkdir(parents=True)
     csv_directory = destination / "csv"
     workbook_directory = destination / "workbooks"
     csv_directory.mkdir(exist_ok=True)
+    allowlist = _allowlist()
     row_counts = {
         table: _export_csv(
             session,
             table,
+            columns,
             csv_directory / f"{table}.csv",
             context.generation_run_id,
             context.included_run_ids[0],
         )
-        for table in PUBLIC_TABLES
+        for table, columns in allowlist.items()
     }
-    _sqlite_snapshot(session, destination / "sable_harbor_public_demo.sqlite")
+    _sqlite_public_database(
+        csv_directory, destination / "sable_harbor_public_demo.sqlite", allowlist
+    )
     generate_workbook_suite(
         session,
         workbook_directory,
@@ -146,7 +179,9 @@ def package_public_demo(
         "git_commit": run.git_commit,
         "source_canon_branch": "origin/canon/corporate-lore-v0.2",
         "source_canon_commit": "5137c5abc025ad757a4e1af2a57279e4964578cf",
-        "generated_timestamp": datetime.now(UTC).isoformat(),
+        "generated_timestamp": (
+            generated_at or run.completed_at or datetime.now(UTC)
+        ).astimezone(UTC).isoformat(),
         "period_covered": "2023-01 through 2026-12",
         "business_lines": [
             "Foundry Field",
@@ -165,8 +200,14 @@ def package_public_demo(
         "license": "All rights reserved; see LICENSE_USAGE.md",
         "known_limitations": "See KNOWN_LIMITATIONS.md",
         "compatibility": ["SQLite 3", "PostgreSQL schema via Alembic", "Excel OOXML"],
-        "validation_status": "REVIEW_BLOCKED",
+        "validation_status": "PENDING_ARTIFACT_SCAN",
     }
     manifest_path = destination / "manifest.json"
+    manifest_path.write_text(json.dumps(manifest, indent=2) + "\n")
+    failures = scan_generated_artifacts(destination)
+    if failures:
+        raise ValueError("Generated-artifact safety scan failed:\n" + "\n".join(failures))
+    manifest["validation_status"] = "PASS"
+    manifest["artifact_safety_scan"] = {"status": "PASS", "failures": 0}
     manifest_path.write_text(json.dumps(manifest, indent=2) + "\n")
     return manifest_path

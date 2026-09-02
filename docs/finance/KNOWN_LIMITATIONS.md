@@ -31,7 +31,8 @@
   completed runs with the same profile, actual dataset, cutoff, forecast start, and schema, and
   rejects cross-seed comparisons. Broader comparison coverage beyond trial balances remains open;
   Stage 1 is not closed.
-- The public package is review blocked: it still uses a raw SQLite snapshot rather than building a
-  new database from a versioned table-and-column allowlist, and generated CSV/SQLite/XLSX/archive
-  contents do not yet pass the required comprehensive artifact safety scan.
+- The public package now uses a versioned table/column allowlist and a new empty SQLite target, and
+  its CSV, SQLite, XLSX, manifest, and nested archive contents pass the recursive artifact scanner.
+  Publication remains review blocked with the platform until the remaining workbook, monthly-model,
+  reconciliation, and audit-package gates close.
 - This is a synthetic enterprise reference platform, not audited financial statements, a reserve report, legal advice, tax advice, or a production mine/rail safety system.
