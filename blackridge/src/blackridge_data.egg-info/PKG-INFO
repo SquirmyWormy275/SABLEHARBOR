@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: blackridge-data
+Version: 0.1.0
+Requires-Python: >=3.11
+Requires-Dist: SQLAlchemy<3,>=2
+Requires-Dist: alembic<2,>=1.13
+Requires-Dist: pydantic<3,>=2
+Requires-Dist: openpyxl<4,>=3.1
+Provides-Extra: dev
+Requires-Dist: pytest>=8; extra == "dev"
+Requires-Dist: ruff>=0.6; extra == "dev"
+Requires-Dist: mypy>=1.10; extra == "dev"
