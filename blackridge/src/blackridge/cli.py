@@ -358,6 +358,14 @@ def create_schema(db: sqlite3.Connection) -> None:
         period TEXT NOT NULL, subledger TEXT NOT NULL, subledger_minor INTEGER NOT NULL,
         control_minor INTEGER NOT NULL, difference_minor INTEGER NOT NULL,
         PRIMARY KEY(period, subledger), CHECK(difference_minor = subledger_minor-control_minor))""")
+    db.execute("""CREATE TABLE IF NOT EXISTS purchase_order_line_link (
+        line_id INTEGER PRIMARY KEY REFERENCES purchase_order_line(id),
+        purchase_order_id INTEGER NOT NULL REFERENCES purchase_order(id))""")
+    db.execute("""CREATE TABLE IF NOT EXISTS haul_cycle_detail (
+        haul_cycle_id INTEGER PRIMARY KEY REFERENCES haul_cycle(id),
+        truck_id TEXT NOT NULL, operator_id TEXT NOT NULL,
+        origin_location TEXT NOT NULL, destination_location TEXT NOT NULL,
+        load_at TEXT NOT NULL, dump_at TEXT NOT NULL, CHECK(load_at < dump_at))""")
 
 
 def populate_generic(db: sqlite3.Connection, table: str, count: int, seed: int) -> None:
@@ -558,6 +566,37 @@ def populate_conservation(db: sqlite3.Connection) -> None:
         assignment_id += 1
 
 
+def populate_links(db: sqlite3.Connection) -> None:
+    po_count = db.execute("SELECT COUNT(*) FROM purchase_order").fetchone()[0]
+    line_count = db.execute("SELECT COUNT(*) FROM purchase_order_line").fetchone()[0]
+    db.executemany(
+        "INSERT INTO purchase_order_line_link VALUES(?,?)",
+        ((line_id, ((line_id - 1) % po_count) + 1) for line_id in range(1, line_count + 1)),
+    )
+    start = datetime(2015, 1, 1, tzinfo=UTC)
+    haul_count = db.execute("SELECT COUNT(*) FROM haul_cycle").fetchone()[0]
+    batch = []
+    for cycle in range(1, haul_count + 1):
+        loaded = start + timedelta(seconds=cycle * 150)
+        dumped = loaded + timedelta(minutes=18 + cycle % 25)
+        batch.append(
+            (
+                cycle,
+                f"BRG-HT-{((cycle - 1) % 27) + 1:03d}",
+                f"BRG-OP-{((cycle - 1) % 54) + 1:03d}",
+                "PIT-LOAD",
+                "CRUSHER" if cycle % 3 else "WASTE-DUMP",
+                loaded.isoformat(),
+                dumped.isoformat(),
+            )
+        )
+        if len(batch) == 10_000:
+            db.executemany("INSERT INTO haul_cycle_detail VALUES(?,?,?,?,?,?,?)", batch)
+            batch.clear()
+    if batch:
+        db.executemany("INSERT INTO haul_cycle_detail VALUES(?,?,?,?,?,?,?)", batch)
+
+
 def build_database(profile: str, seed: int) -> Path:
     out = PUBLIC / "databases"
     out.mkdir(parents=True, exist_ok=True)
@@ -580,6 +619,7 @@ def build_database(profile: str, seed: int) -> Path:
         db, 1_000_000 if profile == "full_2015" else (5000 if profile == "m00" else 1000), seed
     )
     populate_conservation(db)
+    populate_links(db)
     db.execute(
         "CREATE VIEW vw_trial_balance_monthly AS SELECT period, account_code, SUM(debit_minor) debit_minor, SUM(credit_minor) credit_minor FROM journal_line_detail GROUP BY period,account_code"
     )
@@ -628,6 +668,23 @@ def validate(path: Path) -> dict[str, object]:
         JOIN exclusive_assignment b ON a.resource_type=b.resource_type
         AND a.resource_id=b.resource_id AND a.id<b.id
         AND a.starts_at < b.ends_at AND b.starts_at < a.ends_at""").fetchone()[0]
+    temporal_failures = 0
+    for table in sorted(set(GENERIC_TABLES) | set(MASTER_COUNTS)):
+        temporal_failures += db.execute(
+            f'SELECT COUNT(*) FROM "{table}" WHERE available_at IS NOT NULL AND event_at IS NOT NULL AND available_at < event_at'
+        ).fetchone()[0]
+    negative_inventory = db.execute(
+        "SELECT COUNT(*) FROM inventory_balance WHERE quantity_milli < 0"
+    ).fetchone()[0]
+    impairment_lineage = db.execute(
+        "SELECT COUNT(*) FROM phase4_valuation WHERE impairment_minor <> MAX(0,carrying_minor-recoverable_minor)"
+    ).fetchone()[0]
+    missing_haul_destination = db.execute(
+        "SELECT COUNT(*) FROM haul_cycle_detail WHERE destination_location IS NULL OR destination_location=''"
+    ).fetchone()[0]
+    expected_reconciliations = db.execute(
+        "SELECT COUNT(*) FROM subledger_reconciliation"
+    ).fetchone()[0]
     counts = {
         row[0]: db.execute(f'SELECT COUNT(*) FROM "{row[0]}"').fetchone()[0]
         for row in db.execute(
@@ -644,6 +701,11 @@ def validate(path: Path) -> dict[str, object]:
         "physical_conservation": conservation_failures == 0,
         "subledgers_reconcile": subledger_failures == 0,
         "resource_exclusivity": overlaps == 0,
+        "temporal_ordering": temporal_failures == 0,
+        "nonnegative_inventory": negative_inventory == 0,
+        "impairment_lineage": impairment_lineage == 0,
+        "haul_destinations": missing_haul_destination == 0,
+        "complete_subledger_links": expected_reconciliations == 72,
     }
     return {
         "status": "PASS" if all(checks.values()) else "FAIL",
@@ -774,6 +836,20 @@ def export_csv(path: Path) -> list[Path]:
         exports.append(target)
     db.close()
     return exports
+
+
+def validate_csv_exports(database: Path, exports: list[Path]) -> dict[str, object]:
+    db = sqlite3.connect(database)
+    mismatches = []
+    for exported in exports:
+        table = exported.stem
+        expected = db.execute(f'SELECT COUNT(*) FROM "{table}"').fetchone()[0]
+        with exported.open(encoding="utf-8", newline="") as stream:
+            actual = sum(1 for _ in csv.reader(stream)) - 1
+        if expected != actual:
+            mismatches.append({"table": table, "expected": expected, "actual": actual})
+    db.close()
+    return {"status": "PASS" if not mismatches else "FAIL", "mismatches": mismatches}
 
 
 def build_snapshot(path: Path, cutoff: str) -> Path:

@@ -825,6 +825,13 @@ haul_cycle,amount_minor,INTEGER,1,0,0,Column amount_minor in haul_cycle
 haul_cycle,quantity_milli,INTEGER,1,0,0,Column quantity_milli in haul_cycle
 haul_cycle,source_system,TEXT,1,0,,Column source_system in haul_cycle
 haul_cycle,provenance,TEXT,1,0,,Column provenance in haul_cycle
+haul_cycle_detail,haul_cycle_id,INTEGER,0,1,,Column haul_cycle_id in haul_cycle_detail
+haul_cycle_detail,truck_id,TEXT,1,0,,Column truck_id in haul_cycle_detail
+haul_cycle_detail,operator_id,TEXT,1,0,,Column operator_id in haul_cycle_detail
+haul_cycle_detail,origin_location,TEXT,1,0,,Column origin_location in haul_cycle_detail
+haul_cycle_detail,destination_location,TEXT,1,0,,Column destination_location in haul_cycle_detail
+haul_cycle_detail,load_at,TEXT,1,0,,Column load_at in haul_cycle_detail
+haul_cycle_detail,dump_at,TEXT,1,0,,Column dump_at in haul_cycle_detail
 hse_incident,id,INTEGER,0,1,,Column id in hse_incident
 hse_incident,canonical_id,TEXT,1,0,,Column canonical_id in hse_incident
 hse_incident,immutable_uuid,TEXT,1,0,,Column immutable_uuid in hse_incident
@@ -1429,6 +1436,8 @@ purchase_order_line,amount_minor,INTEGER,1,0,0,Column amount_minor in purchase_o
 purchase_order_line,quantity_milli,INTEGER,1,0,0,Column quantity_milli in purchase_order_line
 purchase_order_line,source_system,TEXT,1,0,,Column source_system in purchase_order_line
 purchase_order_line,provenance,TEXT,1,0,,Column provenance in purchase_order_line
+purchase_order_line_link,line_id,INTEGER,0,1,,Column line_id in purchase_order_line_link
+purchase_order_line_link,purchase_order_id,INTEGER,1,0,,Column purchase_order_id in purchase_order_line_link
 purchase_requisition,id,INTEGER,0,1,,Column id in purchase_requisition
 purchase_requisition,canonical_id,TEXT,1,0,,Column canonical_id in purchase_requisition
 purchase_requisition,immutable_uuid,TEXT,1,0,,Column immutable_uuid in purchase_requisition

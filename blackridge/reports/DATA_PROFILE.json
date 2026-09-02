@@ -1204,6 +1204,18 @@
         "provenance": 0
       }
     },
+    "haul_cycle_detail": {
+      "rows": 151000,
+      "null_counts": {
+        "haul_cycle_id": 0,
+        "truck_id": 0,
+        "operator_id": 0,
+        "origin_location": 0,
+        "destination_location": 0,
+        "load_at": 0,
+        "dump_at": 0
+      }
+    },
     "hse_incident": {
       "rows": 12,
       "null_counts": {
@@ -2061,6 +2073,13 @@
         "quantity_milli": 0,
         "source_system": 0,
         "provenance": 0
+      }
+    },
+    "purchase_order_line_link": {
+      "rows": 15600,
+      "null_counts": {
+        "line_id": 0,
+        "purchase_order_id": 0
       }
     },
     "purchase_requisition": {

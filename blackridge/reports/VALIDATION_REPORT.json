@@ -8,7 +8,12 @@
     "oracle_leakage": true,
     "physical_conservation": true,
     "subledgers_reconcile": true,
-    "resource_exclusivity": true
+    "resource_exclusivity": true,
+    "temporal_ordering": true,
+    "nonnegative_inventory": true,
+    "impairment_lineage": true,
+    "haul_destinations": true,
+    "complete_subledger_links": true
   },
   "impairment_minor": 5205000000,
   "row_counts": {
@@ -162,9 +167,11 @@
     "phase4_valuation": 1,
     "conservation_balance": 48,
     "exclusive_assignment": 60730,
-    "subledger_reconciliation": 72
+    "subledger_reconciliation": 72,
+    "purchase_order_line_link": 15600,
+    "haul_cycle_detail": 151000
   },
-  "database_sha256": "334b5f7ebd1a8c834f3f256cfb8f288f33516b6fbc0ecd81e83f30f5012fdf04",
-  "workbook_sha256": "d52ce212b1873f7e59f691abe73a32fd8a12069acf7ef8a8b5d6d78c35af8e53",
+  "database_sha256": "f555e82108c4cbb5eaf1cc74c692abb21d28e8d8655817fa426fa5da8a7857d9",
+  "workbook_sha256": "d53b6ab1412a616d2d9da8bf31b81d364232d1be749188fb6165c9298e34c478",
   "workbook_sheets": 135
 }

@@ -1,6 +1,6 @@
 # Blackridge Data Profile
 
-Tables profiled: 157
+Tables profiled: 159
 
 | Table | Rows |
 |---|---:|
@@ -79,6 +79,7 @@ Tables profiled: 157
 | goods_receipt | 10,500 |
 | governance_action | 1,100 |
 | haul_cycle | 151,000 |
+| haul_cycle_detail | 151,000 |
 | hse_incident | 12 |
 | identifier_map | 12 |
 | impairment_calculation | 12 |
@@ -130,6 +131,7 @@ Tables profiled: 157
 | production_actual | 12 |
 | purchase_order | 5,200 |
 | purchase_order_line | 15,600 |
+| purchase_order_line_link | 15,600 |
 | purchase_requisition | 12 |
 | qualification | 12 |
 | recovery_calculation | 12 |

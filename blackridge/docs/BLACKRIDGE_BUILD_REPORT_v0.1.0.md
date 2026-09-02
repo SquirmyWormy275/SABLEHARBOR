@@ -39,3 +39,11 @@ AP, AR, payroll, inventory, fixed-asset, and CIP subledgers tie to their control
 month. Two-shift assignments for exactly 27 trucks, 54 operators, and 1,600 serialized components
 pass overlap/exclusivity validation. A deliberate conservation mutation is rejected. The test suite
 now contains six passing tests.
+
+Additional corruption tests now prove rejection of negative inventory, impossible availability
+timestamps, a damaged impairment lineage equation, and overlapping resource assignments. The
+suite now contains ten passing tests and the full database passes all eleven validation categories.
+
+The corruption suite now covers every mutation named by Part I, including orphaned PO linkage,
+missing haul destination, truncated vendor export, workbook/database hash mismatch, and missing
+subledger reconciliation. The suite contains fifteen passing tests.

@@ -1,6 +1,6 @@
 # Blackridge Data Dictionary
 
-1795 columns across 157 tables.
+1804 columns across 159 tables.
 
 | Table | Column | Type | Required |
 |---|---|---|---|
@@ -830,6 +830,13 @@
 | haul_cycle | quantity_milli | INTEGER | yes |
 | haul_cycle | source_system | TEXT | yes |
 | haul_cycle | provenance | TEXT | yes |
+| haul_cycle_detail | haul_cycle_id | INTEGER | no |
+| haul_cycle_detail | truck_id | TEXT | yes |
+| haul_cycle_detail | operator_id | TEXT | yes |
+| haul_cycle_detail | origin_location | TEXT | yes |
+| haul_cycle_detail | destination_location | TEXT | yes |
+| haul_cycle_detail | load_at | TEXT | yes |
+| haul_cycle_detail | dump_at | TEXT | yes |
 | hse_incident | id | INTEGER | no |
 | hse_incident | canonical_id | TEXT | yes |
 | hse_incident | immutable_uuid | TEXT | yes |
@@ -1434,6 +1441,8 @@
 | purchase_order_line | quantity_milli | INTEGER | yes |
 | purchase_order_line | source_system | TEXT | yes |
 | purchase_order_line | provenance | TEXT | yes |
+| purchase_order_line_link | line_id | INTEGER | no |
+| purchase_order_line_link | purchase_order_id | INTEGER | yes |
 | purchase_requisition | id | INTEGER | no |
 | purchase_requisition | canonical_id | TEXT | yes |
 | purchase_requisition | immutable_uuid | TEXT | yes |

@@ -622,6 +622,11 @@ CREATE TABLE "haul_cycle" (
             available_at TEXT, amount_minor INTEGER NOT NULL DEFAULT 0,
             quantity_milli INTEGER NOT NULL DEFAULT 0, source_system TEXT NOT NULL,
             provenance TEXT NOT NULL);
+CREATE TABLE haul_cycle_detail (
+        haul_cycle_id INTEGER PRIMARY KEY REFERENCES haul_cycle(id),
+        truck_id TEXT NOT NULL, operator_id TEXT NOT NULL,
+        origin_location TEXT NOT NULL, destination_location TEXT NOT NULL,
+        load_at TEXT NOT NULL, dump_at TEXT NOT NULL, CHECK(load_at < dump_at));
 CREATE TABLE "hse_incident" (
             id INTEGER PRIMARY KEY, canonical_id TEXT NOT NULL UNIQUE,
             immutable_uuid TEXT NOT NULL UNIQUE, name TEXT NOT NULL,
@@ -974,6 +979,9 @@ CREATE TABLE "purchase_order_line" (
             available_at TEXT, amount_minor INTEGER NOT NULL DEFAULT 0,
             quantity_milli INTEGER NOT NULL DEFAULT 0, source_system TEXT NOT NULL,
             provenance TEXT NOT NULL);
+CREATE TABLE purchase_order_line_link (
+        line_id INTEGER PRIMARY KEY REFERENCES purchase_order_line(id),
+        purchase_order_id INTEGER NOT NULL REFERENCES purchase_order(id));
 CREATE TABLE "purchase_requisition" (
             id INTEGER PRIMARY KEY, canonical_id TEXT NOT NULL UNIQUE,
             immutable_uuid TEXT NOT NULL UNIQUE, name TEXT NOT NULL,

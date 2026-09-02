@@ -9,8 +9,8 @@ Status: **PASS**
 - Source database SHA-256 embedded: pass
 - Freeze panes: pass on all sheets
 - Filters: pass on all sheets
-- Workbook SHA-256: `d52ce212b1873f7e59f691abe73a32fd8a12069acf7ef8a8b5d6d78c35af8e53`
-- Database SHA-256: `334b5f7ebd1a8c834f3f256cfb8f288f33516b6fbc0ecd81e83f30f5012fdf04`
+- Workbook SHA-256: `d53b6ab1412a616d2d9da8bf31b81d364232d1be749188fb6165c9298e34c478`
+- Database SHA-256: `f555e82108c4cbb5eaf1cc74c692abb21d28e8d8655817fa426fa5da8a7857d9`
 
 The machine-readable companion is `WORKBOOK_QA_REPORT.json`. LibreOffice rendering and screenshot
 evidence remain unavailable in the present environment and are not claimed.

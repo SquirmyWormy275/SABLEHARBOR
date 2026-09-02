@@ -154,13 +154,15 @@
     "phase4_valuation": 1,
     "conservation_balance": 48,
     "exclusive_assignment": 60730,
-    "subledger_reconciliation": 72
+    "subledger_reconciliation": 72,
+    "purchase_order_line_link": 15600,
+    "haul_cycle_detail": 151000
   },
   "artifacts": [
     {
       "path": "data/public/databases/blackridge_m00_v0.1.0.sqlite3",
-      "bytes": 4808704,
-      "sha256": "d5efb3908ff89295b5c713db901ded53f851b1602f618ce48d1b9a89fe8a8277",
+      "bytes": 17690624,
+      "sha256": "0be005a77ac0eacb5f137b800956f2ba105e203c129f43ec703038f1fc93a210",
       "classification": "public"
     },
     {
@@ -171,8 +173,8 @@
     },
     {
       "path": "data/public/databases/blackridge_public_v0.1.0.sqlite3",
-      "bytes": 321220608,
-      "sha256": "334b5f7ebd1a8c834f3f256cfb8f288f33516b6fbc0ecd81e83f30f5012fdf04",
+      "bytes": 336850944,
+      "sha256": "f555e82108c4cbb5eaf1cc74c692abb21d28e8d8655817fa426fa5da8a7857d9",
       "classification": "public"
     },
     {
@@ -249,8 +251,8 @@
     },
     {
       "path": "data/public/manifests/DATA_MANIFEST.json",
-      "bytes": 9870,
-      "sha256": "2f526a89178d0a4081f00175863b0b195c9f8941cd2b253e2afe5edd059de8b4",
+      "bytes": 4578,
+      "sha256": "36c15f63629fb76419f3a005ea4cc823400e5aec95affeae5ff4ad431062216a",
       "classification": "public"
     },
     {
@@ -309,8 +311,8 @@
     },
     {
       "path": "data/public/workbooks/BLACKRIDGE_MASTER_TRACKER_v0.1.0.xlsx",
-      "bytes": 126259,
-      "sha256": "d52ce212b1873f7e59f691abe73a32fd8a12069acf7ef8a8b5d6d78c35af8e53",
+      "bytes": 126545,
+      "sha256": "d53b6ab1412a616d2d9da8bf31b81d364232d1be749188fb6165c9298e34c478",
       "classification": "public"
     }
   ],
