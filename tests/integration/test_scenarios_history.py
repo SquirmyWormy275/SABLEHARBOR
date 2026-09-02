@@ -27,9 +27,32 @@ def _scenario_revenue(scenario: str) -> Decimal:
 
 
 def test_low_high_and_stress_are_correlated_configured_cases() -> None:
-    assert _scenario_revenue("low") == Decimal("440027872.9730")
-    assert _scenario_revenue("high") == Decimal("454046552.4324")
-    assert _scenario_revenue("stress") == Decimal("428558044.3243")
+    assert _scenario_revenue("low") == Decimal("440186387.7809")
+    assert _scenario_revenue("high") == Decimal("452638628.1338")
+    assert _scenario_revenue("stress") == Decimal("426344708.7567")
+
+
+def test_business_line_drivers_are_persisted_with_governance_metadata() -> None:
+    engine = create_engine("sqlite:///:memory:")
+    Base.metadata.create_all(engine)
+    with Session(engine) as session:
+        run = record_generation_run(
+            session, profile="standard", scenario_code="stress", seed=20260831, git_commit="test"
+        )
+        generate_standard(session, scenario="stress")
+        drivers = session.scalars(
+            select(ScenarioValue).where(
+                ScenarioValue.generation_run_id == run.id,
+                ScenarioValue.metric_code.like("driver_%"),
+            )
+        ).all()
+        assert {driver.entity_code for driver in drivers} == {
+            "SHI", "RWH", "ARU", "CRADLE", "RESEARCH", "ADVISORY", "CAPITAL"
+        }
+        assert all(driver.unit == "multiplier" for driver in drivers)
+        assert all(driver.fact_state.value == "SCENARIO_INPUT" for driver in drivers)
+        assert all('"owner": "FP&A"' in driver.provenance for driver in drivers)
+        assert all(driver.period_code == "2026-09_to_2026-12" for driver in drivers)
 
 
 def test_full_history_adds_noncontrolling_2016_to_2022_anchors() -> None:

@@ -202,3 +202,9 @@
   `0013` widens the field to 64 characters and refuses a lossy downgrade when populated values exceed
   the old limit. The tracked-file scanner now excludes only its two signature-definition source files
   while continuing to scan all generated artifacts. Remote PostgreSQL and SQLite CI are pending.
+- Driver-scenario increment: `operating.yml` now defines business-line revenue and cost drivers for
+  SHI, Red Wash, ARU/BS&T, Cradle, research, Advisory, and capital/liquidity. Forecast multipliers are
+  calculated from those drivers per entity rather than two enterprise-wide factors. Every driver is
+  persisted as `SCENARIO_INPUT` with unit, effective period, owner, rationale, sensitivity, and source
+  provenance. Tests prove all seven driver families persist and that low/high/stress outputs remain
+  isolated and attributable. Resume at causal monthly subledger postings and rollforwards.

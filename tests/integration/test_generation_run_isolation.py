@@ -72,7 +72,7 @@ def test_base_and_stress_coexist_without_cross_run_contamination() -> None:
             )
         )
         assert base_revenue == Decimal("446400000.0000")
-        assert stress_revenue == Decimal("428558044.3243")
+        assert stress_revenue == Decimal("426344708.7567")
         assert (
             session.scalar(
                 select(func.count(JournalEntry.id)).where(

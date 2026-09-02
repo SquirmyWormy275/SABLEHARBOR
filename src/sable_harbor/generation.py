@@ -1,3 +1,4 @@
+import json
 from calendar import monthrange
 from dataclasses import dataclass
 from datetime import date
@@ -41,13 +42,82 @@ from sable_harbor.provenance.service import (
 D = Decimal
 
 
-def scenario_multipliers(scenario: str) -> tuple[D, D]:
+def _scenario_document() -> dict[str, object]:
     path = Path("config/finance/scenarios/operating.yml")
-    scenarios = yaml.safe_load(path.read_text())["scenarios"]
+    return dict(yaml.safe_load(path.read_text()))
+
+
+def scenario_multipliers(scenario: str, entity_code: str = "SHI") -> tuple[D, D]:
+    document = _scenario_document()
+    scenarios = document["scenarios"]
+    assert isinstance(scenarios, dict)
     if scenario not in scenarios:
         raise ValueError(f"Unknown scenario {scenario!r}")
     selected = scenarios[scenario]
-    return D(selected["revenue_multiplier"]), D(selected["cost_multiplier"])
+    assert isinstance(selected, dict)
+    definitions = document["driver_definitions"]
+    assert isinstance(definitions, dict)
+    entity_definition = definitions[entity_code]
+    assert isinstance(entity_definition, dict)
+    values_by_entity = selected.get("values", {})
+    assert isinstance(values_by_entity, dict)
+    values = values_by_entity.get(entity_code, {})
+    assert isinstance(values, dict)
+
+    def product(kind: str) -> D:
+        result = D(1)
+        drivers = entity_definition[kind]
+        assert isinstance(drivers, list)
+        for driver in drivers:
+            result *= D(str(values.get(driver, "1.00")))
+        return result
+
+    return product("revenue"), product("cost")
+
+
+def _persist_scenario_drivers(
+    session: Session, run: GenerationRun, scenario_code: str
+) -> None:
+    document = _scenario_document()
+    scenarios = document["scenarios"]
+    definitions = document["driver_definitions"]
+    assert isinstance(scenarios, dict) and isinstance(definitions, dict)
+    selected = scenarios[scenario_code]
+    assert isinstance(selected, dict)
+    values_by_entity = selected.get("values", {})
+    assert isinstance(values_by_entity, dict)
+    for entity_code, kinds in definitions.items():
+        assert isinstance(kinds, dict)
+        entity_values = values_by_entity.get(entity_code, {})
+        assert isinstance(entity_values, dict)
+        for kind, drivers in kinds.items():
+            assert isinstance(drivers, list)
+            for driver in drivers:
+                record_id = stable_id(
+                    "scenario_value", f"{run.id}:driver:{entity_code}:{driver}"
+                )
+                if session.get(ScenarioValue, record_id) is not None:
+                    continue
+                metadata = {
+                    "owner": document["owner"],
+                    "rationale": selected["description"],
+                    "sensitivity": kind,
+                    "source": document["provenance"],
+                }
+                session.add(
+                    ScenarioValue(
+                        id=record_id,
+                        generation_run_id=run.id,
+                        scenario_code=scenario_code,
+                        metric_code=f"driver_{driver}",
+                        entity_code=str(entity_code),
+                        period_code=str(document["effective_period"]),
+                        amount=D(str(entity_values.get(driver, "1.00"))),
+                        unit="multiplier",
+                        fact_state=FactState.SCENARIO_INPUT,
+                        provenance=json.dumps(metadata, sort_keys=True),
+                    )
+                )
 
 
 @dataclass(frozen=True)
@@ -800,13 +870,15 @@ def generate_standard(
     session: Session, seed: int = 20260831, scenario: str = "base"
 ) -> dict[str, int | str]:
     """Generate deterministic monthly 2023–2026 ledgers and operating driver values."""
-    revenue_multiplier, cost_multiplier = scenario_multipliers(scenario)
+    # Validate the scenario contract before requiring a database run context.
+    scenario_multipliers(scenario)
     run_id = session.info.get(GENERATION_RUN_SESSION_KEY)
     if run_id is None:
         raise ValueError("Standard generation requires an active generation run")
     selected_run = session.get(GenerationRun, str(run_id))
     if selected_run is None:
         raise ValueError(f"Unknown active generation run {run_id!r}")
+    _persist_scenario_drivers(session, selected_run, scenario)
     marker = stable_id("generation_namespace", str(run_id))
     marker_id = stable_id("scenario_value", f"run:{run_id}:generation-marker")
     actuals_only = bool(session.info.get("populate_common_actuals_only"))
@@ -874,6 +946,9 @@ def generate_standard(
     ]
     for year, entity_values in yearly.items():
         for entity_code, (annual_revenue, annual_cost) in entity_values.items():
+            revenue_multiplier, cost_multiplier = scenario_multipliers(
+                scenario, entity_code
+            )
             book = books[entity_code]
             allocated_revenue = D(0)
             allocated_cost = D(0)
@@ -1039,14 +1114,15 @@ def generate_standard(
         forecast_rng.randrange(-1600, 1601)
         forecast_rng.random()
     red_wash_site_id = stable_id("site", "RED_WASH")
-    aru_revenue_multiplier = revenue_multiplier
+    rwh_revenue_multiplier, rwh_cost_multiplier = scenario_multipliers(scenario, "RWH")
+    aru_revenue_multiplier, _aru_cost_multiplier = scenario_multipliers(scenario, "ARU")
     for month in range(1, 13):
         period_start = date(2026, month, 1)
         period_end = date(2026, month, monthrange(2026, month)[1])
         if _period_is_actual(selected_run, period_start, period_end):
             continue
         ore = D(13500 + forecast_rng.randrange(-1600, 1601))
-        ore = (ore * revenue_multiplier).quantize(D("0.01"))
+        ore = (ore * rwh_revenue_multiplier).quantize(D("0.01"))
         recovery = D(str(0.812 + forecast_rng.random() * 0.048)).quantize(D("0.000001"))
         lbs = (ore * D("1.72") * recovery).quantize(D("0.01"))
         session.add(
@@ -1070,9 +1146,9 @@ def generate_standard(
                 entity_id=_entity_id("RWH"),
                 site_id=red_wash_site_id,
                 inventory_stage="CONCENTRATE",
-                quantity=(D("68400") * revenue_multiplier).quantize(D("0.01")),
+                quantity=(D("68400") * rwh_revenue_multiplier).quantize(D("0.01")),
                 unit="LB_U3O8",
-                carrying_value=(D("2900000") * cost_multiplier).quantize(D("0.01")),
+                carrying_value=(D("2900000") * rwh_cost_multiplier).quantize(D("0.01")),
                 as_of_date=ending_inventory_date,
                 fact_state=FactState.SYNTHETIC_INSTANCE,
             )
