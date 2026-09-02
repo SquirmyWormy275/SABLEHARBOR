@@ -58,6 +58,32 @@ def post_entry(session: Session, entry: JournalEntry) -> None:
     session.flush()
 
 
+def post_draft_entries(session: Session, generation_run_id: str) -> int:
+    """Post only drafts belonging to one completed, compatible run context."""
+    from sable_harbor.provenance.service import run_context
+
+    context = run_context(session, generation_run_id)
+    previous_run_id = session.info.get(GENERATION_RUN_SESSION_KEY)
+    session.info[GENERATION_RUN_SESSION_KEY] = context.generation_run_id
+    try:
+        drafts = list(
+            session.scalars(
+                select(JournalEntry).where(
+                    JournalEntry.state == EntryState.DRAFT,
+                    JournalEntry.generation_run_id.in_(context.included_run_ids),
+                )
+            )
+        )
+        for entry in drafts:
+            post_entry(session, entry)
+        return len(drafts)
+    finally:
+        if previous_run_id is None:
+            session.info.pop(GENERATION_RUN_SESSION_KEY, None)
+        else:
+            session.info[GENERATION_RUN_SESSION_KEY] = previous_run_id
+
+
 def close_period(
     session: Session, period: FiscalPeriod, generation_run_id: str | None = None
 ) -> None:

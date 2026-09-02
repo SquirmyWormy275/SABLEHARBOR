@@ -8,7 +8,7 @@ from alembic.config import Config
 from sqlalchemy import func, inspect, select, text
 
 from sable_harbor import schema as schema  # noqa: F401
-from sable_harbor.accounting.ledger import close_period, post_entry
+from sable_harbor.accounting.ledger import close_period, post_draft_entries
 from sable_harbor.accounting.models import (
     EntryState,
     FiscalPeriod,
@@ -131,16 +131,12 @@ def generate(profile: str = "smoke", scenario: str = "base", seed: int = 2026083
 
 
 @app.command("post")
-def post() -> None:
+def post(generation_run_id: str = typer.Option(...)) -> None:
     engine = build_engine()
     with session_for(engine) as session:
-        drafts = list(
-            session.scalars(select(JournalEntry).where(JournalEntry.state == EntryState.DRAFT))
-        )
-        for entry in drafts:
-            post_entry(session, entry)
+        posted_count = post_draft_entries(session, generation_run_id)
         session.commit()
-    typer.echo(f"Posted {len(drafts)} draft entries")
+    typer.echo(f"Posted {posted_count} draft entries for generation run {generation_run_id}")
 
 
 @app.command("close")

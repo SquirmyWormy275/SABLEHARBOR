@@ -1023,3 +1023,79 @@ def test_posting_and_reversal_reject_incompatible_active_run_context(tmp_path: P
                 original.period_id,
                 stable_id("incompatible_reversal", original.id),
             )
+
+
+def test_post_command_requires_run_and_leaves_unrelated_drafts_untouched(
+    tmp_path: Path,
+) -> None:
+    url = _migrated_url(tmp_path, "scoped-post-command.db")
+    runner = CliRunner()
+    run_ids = []
+    for seed in (11, 12):
+        result = runner.invoke(
+            app,
+            ["generate", "--profile", "baseline", "--seed", str(seed)],
+            env={"SHFIN_DATABASE_URL": url},
+        )
+        assert result.exit_code == 0, result.output
+        run_ids.append(RunIdentity.build(profile="baseline", scenario="base", seed=seed).run_id)
+
+    draft_ids: list[str] = []
+    with Session(create_engine(url)) as session:
+        for run_id in run_ids:
+            included_run_ids = run_context(session, run_id).included_run_ids
+            source = session.scalar(
+                select(JournalEntry).where(
+                    JournalEntry.generation_run_id.in_(included_run_ids)
+                )
+            )
+            assert source is not None
+            draft_id = stable_id("scoped_post_command", run_id)
+            draft_ids.append(draft_id)
+            session.add(
+                JournalEntry(
+                    id=draft_id,
+                    generation_run_id=run_id,
+                    book_id=source.book_id,
+                    period_id=source.period_id,
+                    entry_date=source.entry_date,
+                    description="run-scoped posting regression",
+                    source_type="test",
+                    source_id=draft_id,
+                    lines=[
+                        JournalLine(
+                            id=stable_id("scoped_post_command_line", f"{run_id}:1"),
+                            account_id=source.lines[0].account_id,
+                            debit=Decimal("1"),
+                            credit=Decimal("0"),
+                            functional_amount=Decimal("1"),
+                            reporting_amount=Decimal("1"),
+                            fact_state=source.lines[0].fact_state,
+                        ),
+                        JournalLine(
+                            id=stable_id("scoped_post_command_line", f"{run_id}:2"),
+                            account_id=source.lines[1].account_id,
+                            debit=Decimal("0"),
+                            credit=Decimal("1"),
+                            functional_amount=Decimal("-1"),
+                            reporting_amount=Decimal("-1"),
+                            fact_state=source.lines[1].fact_state,
+                        ),
+                    ],
+                )
+            )
+        session.commit()
+
+    missing_selector = runner.invoke(app, ["post"], env={"SHFIN_DATABASE_URL": url})
+    assert missing_selector.exit_code != 0
+    result = runner.invoke(
+        app,
+        ["post", "--generation-run-id", run_ids[0]],
+        env={"SHFIN_DATABASE_URL": url},
+    )
+    assert result.exit_code == 0, result.output
+    assert "Posted 1 draft entries" in result.output
+
+    with Session(create_engine(url)) as session:
+        assert session.get(JournalEntry, draft_ids[0]).state.value == "POSTED"
+        assert session.get(JournalEntry, draft_ids[1]).state.value == "DRAFT"
