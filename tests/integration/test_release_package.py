@@ -34,7 +34,7 @@ def test_public_release_manifest_inventory_and_checksums(tmp_path: Path) -> None
     manifest = json.loads(manifest_path.read_text())
     assert manifest["validation_status"] == "PASS"
     assert manifest["artifact_safety_scan"] == {"status": "PASS", "failures": 0}
-    assert manifest["schema_versions"] == ["0012"]
+    assert manifest["schema_versions"] == ["0013"]
     assert manifest["classification"] == "PUBLIC_SAFE_SYNTHETIC"
     assert manifest["row_counts"]["journal_entry"] > 0
     for artifact in manifest["artifacts"]:

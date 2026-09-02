@@ -68,7 +68,7 @@ def test_run_identity_normalizes_stress_and_cli_uses_same_service() -> None:
 
 def test_required_schema_head_comes_from_alembic_script_directory() -> None:
     config = Config("alembic.ini")
-    assert required_schema_head(config) == "0012"
+    assert required_schema_head(config) == "0013"
 
 
 def test_generation_input_manifest_is_complete_portable_and_cwd_independent(
@@ -663,6 +663,12 @@ def test_0012_preserves_legacy_closed_periods_across_upgrade_and_downgrade(
     assert result.exit_code == 0, result.output
     config = Config("alembic.ini")
     config.set_main_option("sqlalchemy.url", url)
+    # This test isolates revision 0012 behavior; make the populated fixture
+    # representable in its historical 16-character period-code schema first.
+    with create_engine(url).begin() as connection:
+        connection.execute(
+            text("UPDATE scenario_value SET period_code = substr(period_code, 1, 16)")
+        )
     command.downgrade(config, "0011")
 
     engine = create_engine(url)

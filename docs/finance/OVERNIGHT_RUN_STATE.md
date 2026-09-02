@@ -197,3 +197,8 @@
   headers directly with P&L, balance-sheet, and journal-lineage sheet headers and assert industrial
   sheets cannot inherit generic financial routing. Resume at business-line driver scenarios and the
   integrated monthly subledger/statement chains after CI confirms the release and workbook checkpoint.
+- PostgreSQL portability correction: CI proved that the explicit cutoff marker exceeds the legacy
+  16-character `scenario_value.period_code` width, a defect SQLite does not enforce. Forward migration
+  `0013` widens the field to 64 characters and refuses a lossy downgrade when populated values exceed
+  the old limit. The tracked-file scanner now excludes only its two signature-definition source files
+  while continuing to scan all generated artifacts. Remote PostgreSQL and SQLite CI are pending.

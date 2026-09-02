@@ -19,7 +19,10 @@ def tracked_files() -> list[Path]:
 def main() -> None:
     failures: list[str] = []
     for path in tracked_files():
-        if path == Path("scripts/check_public_safety.py"):
+        if path in {
+            Path("scripts/check_public_safety.py"),
+            Path("src/sable_harbor/exports/safety.py"),
+        }:
             continue
         if "var/private" in path.as_posix():
             failures.append(f"private benchmark path tracked: {path}")

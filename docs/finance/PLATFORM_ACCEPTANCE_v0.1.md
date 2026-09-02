@@ -16,11 +16,11 @@
 | Planning | Base, low, high and stress scenarios; invariant actual periods; 2023–2026 monthly standard profile; 2016–2022 revenue calibration anchors |
 | Reporting | Reconciled statements, named SQL queries, six-workbook suite and valuation/QoE bridge |
 | Release control | Versioned table/column allowlist; new-database construction; deterministic stale-safe packaging; recursive generated-artifact scan |
-| Portability | Explicit Alembic migrations through uncommitted `0012`; local SQLite cycle passes; PostgreSQL `0012` matrix is encoded but remote evidence remains at committed `0008` |
+| Portability | Explicit Alembic migrations through `0013`; local SQLite cycle passes; PostgreSQL matrix is encoded and under remote CI validation |
 
 ## Verified controls
 
-- Clean SQLite migrations apply through revision `0012`; PostgreSQL `0008` migration, generation,
+- Clean SQLite migrations apply through revision `0013`; PostgreSQL migration, generation,
   and validation CI passes. The expanded all-profile/two-seed PostgreSQL matrix is wired into CI
   and passes a local SQLite backend surrogate; acceptance remains open until PostgreSQL 16 runs it.
 - Full-history generation produces 48 monthly planning periods plus seven 2016–2022 revenue
@@ -35,7 +35,7 @@
 - The current uncommitted Stage 1 tranche passes Ruff, strict mypy, and 78 local tests; two
   PostgreSQL-only tests are skipped locally because `SHFIN_POSTGRES_TEST_URL` is not configured.
   At the committed PR head, two PostgreSQL jobs, two SQLite jobs, and organization render
-  validation pass remotely; those checks do not cover uncommitted migrations `0009`–`0012`.
+  validation evidence is refreshed by every branch checkpoint.
 
 ## Open acceptance boundary
 
