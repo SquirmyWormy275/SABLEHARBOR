@@ -1,0 +1,2587 @@
+{
+  "dataset_version": "0.1.0",
+  "schema_version": "0.1.0",
+  "seed": 20150112,
+  "tables": {
+    "account": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "action_item": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "actual_shift": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "application_system": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "artifact_manifest": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "assay_result": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "asset": {
+      "rows": 3000,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "asset_class": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "asset_hierarchy": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "asset_model": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "assumption": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "backlog_snapshot": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "bench": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "blend_option": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "budget_version": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "building": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "calendar_date": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "canon_reference": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "capital_authorization": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "capital_project": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "cash_receipt": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "close_task": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "commitment": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "communication_message": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "component_installation_history": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "concentrate_lot": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "conservation_balance": {
+      "rows": 48,
+      "null_counts": {
+        "id": 0,
+        "period": 0,
+        "domain": 0,
+        "opening_milli": 0,
+        "inflow_milli": 0,
+        "outflow_milli": 0,
+        "closing_milli": 0,
+        "tolerance_milli": 0
+      }
+    },
+    "construction_in_progress": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "contract": {
+      "rows": 60,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "contractor": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "control": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "control_execution": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "cost_center": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "crew": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "currency": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "customer": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "data_quality_rule": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "dataset_version": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "decision": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "decision_record": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "department": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "depreciation_run": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "discounted_cash_flow": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "dispatch_plan": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "document": {
+      "rows": 3100,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "document_version": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "downtime_event": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "dump_event": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "employee": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "entity_search_fts": {
+      "rows": 3900,
+      "null_counts": {
+        "canonical_id": 0,
+        "display_name": 0,
+        "source_system": 0
+      }
+    },
+    "entity_search_fts_config": {
+      "rows": 1,
+      "null_counts": {
+        "k": 0,
+        "v": 0
+      }
+    },
+    "entity_search_fts_content": {
+      "rows": 3900,
+      "null_counts": {
+        "id": 0,
+        "c0": 0,
+        "c1": 0,
+        "c2": 0
+      }
+    },
+    "entity_search_fts_data": {
+      "rows": 34,
+      "null_counts": {
+        "id": 0,
+        "block": 0
+      }
+    },
+    "entity_search_fts_docsize": {
+      "rows": 3900,
+      "null_counts": {
+        "id": 0,
+        "sz": 0
+      }
+    },
+    "entity_search_fts_idx": {
+      "rows": 24,
+      "null_counts": {
+        "segid": 0,
+        "term": 0,
+        "pgno": 0
+      }
+    },
+    "environmental_permit": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "equipment_assignment": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "event_ledger": {
+      "rows": 1000000,
+      "null_counts": {
+        "id": 0,
+        "event_id": 0,
+        "domain": 0,
+        "entity_id": 0,
+        "event_at": 0,
+        "available_at": 0,
+        "state_from": 0,
+        "state_to": 0,
+        "quantity_milli": 0,
+        "source_system": 0
+      }
+    },
+    "evidence_artifact": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "exclusive_assignment": {
+      "rows": 60730,
+      "null_counts": {
+        "id": 0,
+        "resource_type": 0,
+        "resource_id": 0,
+        "assignment_id": 0,
+        "starts_at": 0,
+        "ends_at": 0,
+        "location_id": 0
+      }
+    },
+    "facility": {
+      "rows": 275,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "failure_mode": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "feed_campaign": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "final_settlement": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "financial_statement": {
+      "rows": 96,
+      "null_counts": {
+        "id": 0,
+        "period": 0,
+        "statement": 0,
+        "line_code": 0,
+        "amount_minor": 0
+      }
+    },
+    "financial_statement_value": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "fiscal_period": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "fixed_asset": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "forecast_version": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "fuel_consumption": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "generation_run": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "geological_domain": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "goods_receipt": {
+      "rows": 10500,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "governance_action": {
+      "rows": 1100,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "haul_cycle": {
+      "rows": 151000,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "hse_incident": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "identifier_map": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "impairment_calculation": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "impairment_scenario": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "interface": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "inventory_balance": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "inventory_reservation": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "inventory_transaction": {
+      "rows": 76000,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "item_master": {
+      "rows": 12000,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "journal": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "journal_line": {
+      "rows": 105600,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "journal_line_detail": {
+      "rows": 74,
+      "null_counts": {
+        "id": 0,
+        "journal_id": 0,
+        "period": 0,
+        "account_code": 0,
+        "debit_minor": 0,
+        "credit_minor": 0,
+        "source_ref": 0
+      }
+    },
+    "kpi_definition": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "kpi_observation": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "labor_booking": {
+      "rows": 30500,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "laboratory_sample": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "ledger": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "legal_entity": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "lineage_edge": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "load_event": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "location": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "maintenance_notification": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "meeting": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "meeting_attendee": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "meter_reading": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "mine_plan_version": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "mining_block": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "offtake_contract": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "oil_sample": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "operating_area": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "operating_shift": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "operating_unit": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "operator_assignment": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "ore_block_estimate": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "organization": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "payment": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "payroll_entry": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "payroll_run": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "person": {
+      "rows": 575,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "phase": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "phase4_valuation": {
+      "rows": 1,
+      "null_counts": {
+        "valuation_date": 0,
+        "case_name": 0,
+        "cash_flow_minor": 0,
+        "discount_bps": 0,
+        "npv_minor": 0,
+        "irr_bps": 0,
+        "carrying_minor": 0,
+        "recoverable_minor": 0,
+        "impairment_minor": 0
+      }
+    },
+    "physical_progress": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "pit": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "plant_hourly": {
+      "rows": 8760,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "plant_unit": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "position": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "position_assignment": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "process_mass_balance": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "production_actual": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "purchase_order": {
+      "rows": 5200,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "purchase_order_line": {
+      "rows": 15600,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "purchase_requisition": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "qualification": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "recovery_calculation": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "reorder_policy": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "repairable_pool_status": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "report_definition": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "room": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "scheduled_shift": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "security_zone": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "sensor_reading": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "serialized_component": {
+      "rows": 1600,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "shadow_artifact": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "shipment_lot": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "snapshot_cutoff": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "source_system": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "stockout_event": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "stockpile": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "stockpile_movement": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "storage_location": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "subledger_reconciliation": {
+      "rows": 72,
+      "null_counts": {
+        "period": 0,
+        "subledger": 0,
+        "subledger_minor": 0,
+        "control_minor": 0,
+        "difference_minor": 0
+      }
+    },
+    "supplier_invoice": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "supplier_invoice_line": {
+      "rows": 15600,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "tracker_snapshot": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "training_completion": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "trial_balance": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "unit_of_measure": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "validation_result": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "vendor": {
+      "rows": 325,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "warehouse": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "wbs_element": {
+      "rows": 12,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    },
+    "work_order": {
+      "rows": 6200,
+      "null_counts": {
+        "id": 0,
+        "canonical_id": 0,
+        "immutable_uuid": 0,
+        "name": 0,
+        "status": 0,
+        "event_at": 0,
+        "recorded_at": 0,
+        "available_at": 0,
+        "amount_minor": 0,
+        "quantity_milli": 0,
+        "source_system": 0,
+        "provenance": 0
+      }
+    }
+  }
+}

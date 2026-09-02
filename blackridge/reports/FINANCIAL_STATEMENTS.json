@@ -1,0 +1,490 @@
+{
+  "INCOME_STATEMENT": [
+    {
+      "period": "2015-01",
+      "line": "NET_INCOME",
+      "amount_minor": 673500000
+    },
+    {
+      "period": "2015-01",
+      "line": "OPERATING_COST",
+      "amount_minor": -2665500000
+    },
+    {
+      "period": "2015-01",
+      "line": "REVENUE",
+      "amount_minor": 3519000000
+    },
+    {
+      "period": "2015-02",
+      "line": "NET_INCOME",
+      "amount_minor": 677000000
+    },
+    {
+      "period": "2015-02",
+      "line": "OPERATING_COST",
+      "amount_minor": -2681000000
+    },
+    {
+      "period": "2015-02",
+      "line": "REVENUE",
+      "amount_minor": 3538000000
+    },
+    {
+      "period": "2015-03",
+      "line": "NET_INCOME",
+      "amount_minor": 680500000
+    },
+    {
+      "period": "2015-03",
+      "line": "OPERATING_COST",
+      "amount_minor": -2696500000
+    },
+    {
+      "period": "2015-03",
+      "line": "REVENUE",
+      "amount_minor": 3557000000
+    },
+    {
+      "period": "2015-04",
+      "line": "NET_INCOME",
+      "amount_minor": 684000000
+    },
+    {
+      "period": "2015-04",
+      "line": "OPERATING_COST",
+      "amount_minor": -2712000000
+    },
+    {
+      "period": "2015-04",
+      "line": "REVENUE",
+      "amount_minor": 3576000000
+    },
+    {
+      "period": "2015-05",
+      "line": "NET_INCOME",
+      "amount_minor": 687500000
+    },
+    {
+      "period": "2015-05",
+      "line": "OPERATING_COST",
+      "amount_minor": -2727500000
+    },
+    {
+      "period": "2015-05",
+      "line": "REVENUE",
+      "amount_minor": 3595000000
+    },
+    {
+      "period": "2015-06",
+      "line": "NET_INCOME",
+      "amount_minor": 691000000
+    },
+    {
+      "period": "2015-06",
+      "line": "OPERATING_COST",
+      "amount_minor": -2743000000
+    },
+    {
+      "period": "2015-06",
+      "line": "REVENUE",
+      "amount_minor": 3614000000
+    },
+    {
+      "period": "2015-07",
+      "line": "NET_INCOME",
+      "amount_minor": 597000000
+    },
+    {
+      "period": "2015-07",
+      "line": "OPERATING_COST",
+      "amount_minor": -2856000000
+    },
+    {
+      "period": "2015-07",
+      "line": "REVENUE",
+      "amount_minor": 3633000000
+    },
+    {
+      "period": "2015-08",
+      "line": "NET_INCOME",
+      "amount_minor": 388000000
+    },
+    {
+      "period": "2015-08",
+      "line": "OPERATING_COST",
+      "amount_minor": -2969000000
+    },
+    {
+      "period": "2015-08",
+      "line": "REVENUE",
+      "amount_minor": 3537000000
+    },
+    {
+      "period": "2015-09",
+      "line": "NET_INCOME",
+      "amount_minor": 179000000
+    },
+    {
+      "period": "2015-09",
+      "line": "OPERATING_COST",
+      "amount_minor": -3082000000
+    },
+    {
+      "period": "2015-09",
+      "line": "REVENUE",
+      "amount_minor": 3441000000
+    },
+    {
+      "period": "2015-10",
+      "line": "NET_INCOME",
+      "amount_minor": -30000000
+    },
+    {
+      "period": "2015-10",
+      "line": "OPERATING_COST",
+      "amount_minor": -3195000000
+    },
+    {
+      "period": "2015-10",
+      "line": "REVENUE",
+      "amount_minor": 3345000000
+    },
+    {
+      "period": "2015-11",
+      "line": "NET_INCOME",
+      "amount_minor": -239000000
+    },
+    {
+      "period": "2015-11",
+      "line": "OPERATING_COST",
+      "amount_minor": -3308000000
+    },
+    {
+      "period": "2015-11",
+      "line": "REVENUE",
+      "amount_minor": 3249000000
+    },
+    {
+      "period": "2015-12",
+      "line": "NET_INCOME",
+      "amount_minor": -448000000
+    },
+    {
+      "period": "2015-12",
+      "line": "OPERATING_COST",
+      "amount_minor": -3421000000
+    },
+    {
+      "period": "2015-12",
+      "line": "REVENUE",
+      "amount_minor": 3153000000
+    }
+  ],
+  "BALANCE_SHEET": [
+    {
+      "period": "2015-01",
+      "line": "ASSETS",
+      "amount_minor": 70053500000
+    },
+    {
+      "period": "2015-01",
+      "line": "EQUITY",
+      "amount_minor": 42253500000
+    },
+    {
+      "period": "2015-01",
+      "line": "LIABILITIES",
+      "amount_minor": 27800000000
+    },
+    {
+      "period": "2015-02",
+      "line": "ASSETS",
+      "amount_minor": 70910500000
+    },
+    {
+      "period": "2015-02",
+      "line": "EQUITY",
+      "amount_minor": 43110500000
+    },
+    {
+      "period": "2015-02",
+      "line": "LIABILITIES",
+      "amount_minor": 27800000000
+    },
+    {
+      "period": "2015-03",
+      "line": "ASSETS",
+      "amount_minor": 71771000000
+    },
+    {
+      "period": "2015-03",
+      "line": "EQUITY",
+      "amount_minor": 43971000000
+    },
+    {
+      "period": "2015-03",
+      "line": "LIABILITIES",
+      "amount_minor": 27800000000
+    },
+    {
+      "period": "2015-04",
+      "line": "ASSETS",
+      "amount_minor": 72635000000
+    },
+    {
+      "period": "2015-04",
+      "line": "EQUITY",
+      "amount_minor": 44835000000
+    },
+    {
+      "period": "2015-04",
+      "line": "LIABILITIES",
+      "amount_minor": 27800000000
+    },
+    {
+      "period": "2015-05",
+      "line": "ASSETS",
+      "amount_minor": 73502500000
+    },
+    {
+      "period": "2015-05",
+      "line": "EQUITY",
+      "amount_minor": 45702500000
+    },
+    {
+      "period": "2015-05",
+      "line": "LIABILITIES",
+      "amount_minor": 27800000000
+    },
+    {
+      "period": "2015-06",
+      "line": "ASSETS",
+      "amount_minor": 74373500000
+    },
+    {
+      "period": "2015-06",
+      "line": "EQUITY",
+      "amount_minor": 46573500000
+    },
+    {
+      "period": "2015-06",
+      "line": "LIABILITIES",
+      "amount_minor": 27800000000
+    },
+    {
+      "period": "2015-07",
+      "line": "ASSETS",
+      "amount_minor": 75150500000
+    },
+    {
+      "period": "2015-07",
+      "line": "EQUITY",
+      "amount_minor": 47350500000
+    },
+    {
+      "period": "2015-07",
+      "line": "LIABILITIES",
+      "amount_minor": 27800000000
+    },
+    {
+      "period": "2015-08",
+      "line": "ASSETS",
+      "amount_minor": 75718500000
+    },
+    {
+      "period": "2015-08",
+      "line": "EQUITY",
+      "amount_minor": 47918500000
+    },
+    {
+      "period": "2015-08",
+      "line": "LIABILITIES",
+      "amount_minor": 27800000000
+    },
+    {
+      "period": "2015-09",
+      "line": "ASSETS",
+      "amount_minor": 76077500000
+    },
+    {
+      "period": "2015-09",
+      "line": "EQUITY",
+      "amount_minor": 48277500000
+    },
+    {
+      "period": "2015-09",
+      "line": "LIABILITIES",
+      "amount_minor": 27800000000
+    },
+    {
+      "period": "2015-10",
+      "line": "ASSETS",
+      "amount_minor": 76227500000
+    },
+    {
+      "period": "2015-10",
+      "line": "EQUITY",
+      "amount_minor": 48427500000
+    },
+    {
+      "period": "2015-10",
+      "line": "LIABILITIES",
+      "amount_minor": 27800000000
+    },
+    {
+      "period": "2015-11",
+      "line": "ASSETS",
+      "amount_minor": 76168500000
+    },
+    {
+      "period": "2015-11",
+      "line": "EQUITY",
+      "amount_minor": 48368500000
+    },
+    {
+      "period": "2015-11",
+      "line": "LIABILITIES",
+      "amount_minor": 27800000000
+    },
+    {
+      "period": "2015-12",
+      "line": "ASSETS",
+      "amount_minor": 75900500000
+    },
+    {
+      "period": "2015-12",
+      "line": "EQUITY",
+      "amount_minor": 48100500000
+    },
+    {
+      "period": "2015-12",
+      "line": "LIABILITIES",
+      "amount_minor": 27800000000
+    }
+  ],
+  "CASH_FLOW": [
+    {
+      "period": "2015-01",
+      "line": "ENDING_CASH",
+      "amount_minor": 9053500000
+    },
+    {
+      "period": "2015-02",
+      "line": "ENDING_CASH",
+      "amount_minor": 9910500000
+    },
+    {
+      "period": "2015-03",
+      "line": "ENDING_CASH",
+      "amount_minor": 10771000000
+    },
+    {
+      "period": "2015-04",
+      "line": "ENDING_CASH",
+      "amount_minor": 11635000000
+    },
+    {
+      "period": "2015-05",
+      "line": "ENDING_CASH",
+      "amount_minor": 12502500000
+    },
+    {
+      "period": "2015-06",
+      "line": "ENDING_CASH",
+      "amount_minor": 13373500000
+    },
+    {
+      "period": "2015-07",
+      "line": "ENDING_CASH",
+      "amount_minor": 14150500000
+    },
+    {
+      "period": "2015-08",
+      "line": "ENDING_CASH",
+      "amount_minor": 14718500000
+    },
+    {
+      "period": "2015-09",
+      "line": "ENDING_CASH",
+      "amount_minor": 15077500000
+    },
+    {
+      "period": "2015-10",
+      "line": "ENDING_CASH",
+      "amount_minor": 15227500000
+    },
+    {
+      "period": "2015-11",
+      "line": "ENDING_CASH",
+      "amount_minor": 15168500000
+    },
+    {
+      "period": "2015-12",
+      "line": "ENDING_CASH",
+      "amount_minor": 14900500000
+    }
+  ],
+  "EQUITY_STATEMENT": [
+    {
+      "period": "2015-01",
+      "line": "ENDING_EQUITY",
+      "amount_minor": 42253500000
+    },
+    {
+      "period": "2015-02",
+      "line": "ENDING_EQUITY",
+      "amount_minor": 43110500000
+    },
+    {
+      "period": "2015-03",
+      "line": "ENDING_EQUITY",
+      "amount_minor": 43971000000
+    },
+    {
+      "period": "2015-04",
+      "line": "ENDING_EQUITY",
+      "amount_minor": 44835000000
+    },
+    {
+      "period": "2015-05",
+      "line": "ENDING_EQUITY",
+      "amount_minor": 45702500000
+    },
+    {
+      "period": "2015-06",
+      "line": "ENDING_EQUITY",
+      "amount_minor": 46573500000
+    },
+    {
+      "period": "2015-07",
+      "line": "ENDING_EQUITY",
+      "amount_minor": 47350500000
+    },
+    {
+      "period": "2015-08",
+      "line": "ENDING_EQUITY",
+      "amount_minor": 47918500000
+    },
+    {
+      "period": "2015-09",
+      "line": "ENDING_EQUITY",
+      "amount_minor": 48277500000
+    },
+    {
+      "period": "2015-10",
+      "line": "ENDING_EQUITY",
+      "amount_minor": 48427500000
+    },
+    {
+      "period": "2015-11",
+      "line": "ENDING_EQUITY",
+      "amount_minor": 48368500000
+    },
+    {
+      "period": "2015-12",
+      "line": "ENDING_EQUITY",
+      "amount_minor": 48100500000
+    }
+  ]
+}
