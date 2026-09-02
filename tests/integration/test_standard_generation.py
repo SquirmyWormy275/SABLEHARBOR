@@ -12,7 +12,7 @@ from sable_harbor.accounting.models import (
     LegalEntity,
     ScenarioValue,
 )
-from sable_harbor.commercial.models import CashReceipt, RevenueRecognition
+from sable_harbor.commercial.models import CashReceipt, Engagement, RevenueRecognition
 from sable_harbor.commercial.models import Contract as CustomerContract
 from sable_harbor.generation import generate_standard
 from sable_harbor.logistics.models import Waybill
@@ -25,6 +25,8 @@ from sable_harbor.operations.models import (
     VendorPayment,
 )
 from sable_harbor.provenance.service import record_generation_run
+from sable_harbor.recovery.models import RecoveryRun
+from sable_harbor.research.models import AtlasEvaluation, WillowExperiment
 
 
 def test_standard_generation_has_48_months_actual_forecast_and_is_idempotent() -> None:
@@ -74,6 +76,10 @@ def test_standard_generation_has_48_months_actual_forecast_and_is_idempotent() -
         assert session.scalar(select(func.count(VendorPayment.id))) == 4
         assert session.scalar(select(func.count(DepreciationRecord.id))) == 4
         assert session.scalar(select(func.count(DebtDraw.id))) == 4
+        assert session.scalar(select(func.count(Engagement.id))) == 4
+        assert session.scalar(select(func.count(WillowExperiment.id))) == 4
+        assert session.scalar(select(func.count(AtlasEvaluation.id))) == 4
+        assert session.scalar(select(func.count(RecoveryRun.id))) == 4
         revenue = session.scalar(
             select(func.sum(ScenarioValue.amount)).where(
                 ScenarioValue.generation_run_id.in_((run.actual_generation_run_id, run.id)),

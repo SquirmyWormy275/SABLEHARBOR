@@ -35,6 +35,7 @@ from sable_harbor.commercial.contract_to_cash import (
     receive_cash,
     recognize_month,
 )
+from sable_harbor.commercial.engagements import deliver_and_bill_engagement
 from sable_harbor.commercial.models import PerformanceObligation
 from sable_harbor.config.assumptions import load_assumptions
 from sable_harbor.core.ids import stable_id
@@ -52,6 +53,8 @@ from sable_harbor.provenance.service import (
     complete_generation_run,
     record_generation_run,
 )
+from sable_harbor.recovery.flows import execute_recovery_run
+from sable_harbor.research.flows import run_atlas_evaluation, run_willow_experiment
 
 D = Decimal
 
@@ -283,7 +286,79 @@ def _generate_causal_month(
             principal=D("100000"),
             annual_rate=D("0.08"),
         )
-        return causal_revenue, payroll_gross + payroll_employer + depreciation.amount
+        service_revenue = (revenue * D("0.01")).quantize(D("0.01"))
+        service_cost = (cost * D("0.01")).quantize(D("0.01"))
+        deliver_and_bill_engagement(
+            session,
+            contract=contract,
+            worker=worker,
+            book_id=book_id,
+            period_id=period_id,
+            key=f"{compact_key}:ADV",
+            work_date=period_end,
+            hours=D("100"),
+            bill_rate=service_revenue / D("100"),
+            cost_rate=service_cost / D("100"),
+        )
+        willow_cost = (cost * D("0.005")).quantize(D("0.01"))
+        run_willow_experiment(
+            session,
+            entity_id=entity_id,
+            book_id=book_id,
+            period_id=period_id,
+            key=f"{compact_key}:WIL",
+            experiment_date=period_end,
+            question="Can the reversible forecast experiment improve field decisions?",
+            belief="Controlled synthetic evidence can inform a later operating gate.",
+            budget=willow_cost,
+            actual_cost=willow_cost,
+            observation="Synthetic forecast observation; no canon change.",
+            gate_decision="CONTINUE",
+        )
+        atlas_cost = (cost * D("0.005")).quantize(D("0.01"))
+        atlas_fee = (revenue * D("0.005")).quantize(D("0.01"))
+        run_atlas_evaluation(
+            session,
+            entity_id=entity_id,
+            book_id=book_id,
+            period_id=period_id,
+            key=f"{compact_key}:ATL",
+            evaluation_date=period_end,
+            model_version="scenario-v0.1",
+            investigation_question="Forecast validation under explicit scenario drivers",
+            compute_cost=atlas_cost * D("0.60"),
+            validation_cost=atlas_cost * D("0.40"),
+            customer_fee=atlas_fee,
+        )
+        cradle_revenue = (revenue * D("0.005")).quantize(D("0.01"))
+        recovery_run = execute_recovery_run(
+            session,
+            entity_id=entity_id,
+            book_id=book_id,
+            period_id=period_id,
+            key=f"{compact_key}:CRA",
+            run_date=period_end,
+            feed_tons=D("100"),
+            grade_fraction=D("0.001"),
+            recovery_fraction=D("0.80"),
+            price_per_unit=cradle_revenue / D("160"),
+            host_share=D("0.20"),
+            operating_cost=(cost * D("0.005")).quantize(D("0.01")),
+        )
+        replaced_revenue = (
+            causal_revenue + service_revenue + atlas_fee + recovery_run.gross_sale
+        )
+        replaced_cost = (
+            payroll_gross
+            + payroll_employer
+            + depreciation.amount
+            + service_cost
+            + willow_cost
+            + atlas_cost
+            + recovery_run.operating_cost
+            + recovery_run.host_share_amount
+        )
+        return replaced_revenue, replaced_cost
     if entity_code == "RWH":
         if site_id is None:
             raise ValueError("Red Wash causal generation requires a site")

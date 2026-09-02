@@ -225,3 +225,9 @@
   vendor payment, fixed asset, depreciation, debt draw, and interest accrual. Explicit parent flushes
   make every chain portable under enforced SQLite/PostgreSQL foreign keys. Resume by expanding Cradle,
   research, and Advisory into the monthly chain and adding debt repayment/covenant schedules.
+- Specialist-line monthly integration: each forecast month now includes an Advisory engagement,
+  approved time, project cost, invoice and margin link; a Willow experiment with explicit gate; an
+  Atlas evaluation with compute/validation cost and customer fee; and a host-safe Cradle recovery
+  run with operating cost, recovered value, host share, inventory and sale. All four families are
+  run-owned, source-linked, idempotent, and preserve the controlling summary economics. Resume at
+  debt repayment/covenant schedules, monthly AP/AR aging, and unit export packages.

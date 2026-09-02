@@ -44,12 +44,16 @@ def deliver_and_bill_engagement(
         ends_on=work_date + timedelta(days=30),
         fact_state=FactState.SYNTHETIC_INSTANCE,
     )
+    session.add(engagement)
+    session.flush()
     task = ProjectTask(
         id=stable_id("project_task", f"{key}:IMPLEMENT"),
         engagement_id=engagement.id,
         task_code="IMPLEMENT",
         name="Implementation and integration",
     )
+    session.add(task)
+    session.flush()
     time = TimeEntry(
         id=stable_id("time_entry", f"{key}:{work_date.isoformat()}"),
         task_id=task.id,
@@ -60,6 +64,8 @@ def deliver_and_bill_engagement(
         cost_rate=cost_rate,
         status="APPROVED",
     )
+    session.add(time)
+    session.flush()
     revenue = hours * bill_rate
     cost = hours * cost_rate
     obligation = PerformanceObligation(
@@ -69,6 +75,8 @@ def deliver_and_bill_engagement(
         revenue_method="AS_PERFORMED",
         allocated_price=revenue,
     )
+    session.add(obligation)
+    session.flush()
     cost_journal = JournalEntry(
         id=stable_id("journal", f"{key}:SERVICES_COST"),
         book_id=book_id,
@@ -90,6 +98,8 @@ def deliver_and_bill_engagement(
         amount=cost,
         journal_entry_id=cost_journal.id,
     )
+    session.add_all([cost_journal, project_cost])
+    session.flush()
     invoice = Invoice(
         id=stable_id("invoice", f"{key}:SERVICES"),
         contract_id=contract.id,
@@ -121,6 +131,8 @@ def deliver_and_bill_engagement(
         ],
     )
     invoice.journal_entry_id = billing_journal.id
+    session.add_all([invoice, billing_journal])
+    session.flush()
     link = EngagementInvoiceLink(
         id=stable_id("engagement_invoice_link", key),
         engagement_id=engagement.id,
@@ -128,19 +140,7 @@ def deliver_and_bill_engagement(
         billed_hours=hours,
         billed_amount=revenue,
     )
-    session.add_all(
-        [
-            engagement,
-            task,
-            time,
-            obligation,
-            cost_journal,
-            project_cost,
-            invoice,
-            billing_journal,
-            link,
-        ]
-    )
+    session.add(link)
     session.flush()
     post_entry(session, cost_journal)
     post_entry(session, billing_journal)
