@@ -501,6 +501,10 @@ def test_two_seeds_coexist_with_run_scoped_operational_natural_keys(tmp_path: Pa
 
     config = Config("alembic.ini")
     config.set_main_option("sqlalchemy.url", url)
+    with create_engine(url).begin() as connection:
+        connection.execute(
+            text("UPDATE scenario_value SET period_code = substr(period_code, 1, 16)")
+        )
     with pytest.raises(RuntimeError, match="Cannot downgrade revision 0010"):
         command.downgrade(config, "0009")
     with Session(create_engine(url)) as session:

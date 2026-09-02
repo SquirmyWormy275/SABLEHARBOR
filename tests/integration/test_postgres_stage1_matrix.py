@@ -5,7 +5,7 @@ import pytest
 from alembic import command
 from alembic.config import Config
 from sqlalchemy import text
-from sqlalchemy.exc import IntegrityError
+from sqlalchemy.exc import DBAPIError, IntegrityError
 from sqlalchemy.orm import Session
 from typer.testing import CliRunner
 
@@ -132,7 +132,7 @@ def test_postgres_stage1_profile_coexistence_and_integrity_matrix() -> None:
             session.commit()
         session.rollback()
 
-        with pytest.raises(IntegrityError):
+        with pytest.raises(DBAPIError, match="immutable"):
             session.execute(
                 text(
                     "UPDATE generation_run SET actual_generation_run_id = :actual "
@@ -143,7 +143,7 @@ def test_postgres_stage1_profile_coexistence_and_integrity_matrix() -> None:
             session.commit()
         session.rollback()
 
-        with pytest.raises(IntegrityError, match="immutable"):
+        with pytest.raises(DBAPIError, match="immutable"):
             session.execute(
                 text("UPDATE generation_run SET seed = seed + 1 WHERE id = :run"),
                 {"run": base_101},
