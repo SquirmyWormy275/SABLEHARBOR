@@ -251,3 +251,11 @@
   18.9 MiB public SQLite database from current `main`, so the tracked-file gate now permits only
   that exact path, a 20 MiB ceiling, and its pinned SHA-256; every other tracked file retains the
   10 MiB ceiling. Resume after both PostgreSQL and SQLite jobs confirm these corrections.
+- PR #10/#13 reconciliation increment: without merging either PR, the finance branch now carries
+  their complementary enterprise control plane, current-line and historical/component/Blackridge
+  dossiers, wiki source, company/audit/governance indexes, logo collateral, corporate templates,
+  seven business-line letterheads, and both enterprise and unit registries. Where the PRs offered
+  competing navigation pages, the finance-based PR #10 current-line dossiers were preserved and
+  unique PR #13 case/registry/audit material was harvested. Enterprise structure, 55-lockup brand
+  manifest, and nine rendered organization-chart validations pass locally. Standalone generated
+  audit packages remain the next materialization gate; neither source PR was merged.

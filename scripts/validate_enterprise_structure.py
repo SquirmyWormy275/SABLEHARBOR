@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+import subprocess
 import sys
 from pathlib import Path
 
@@ -81,7 +82,11 @@ def main() -> int:
             fail(errors, f"missing enterprise control file: {rel}")
 
     forbidden_names = {".connector-push-probe", ".DS_Store", "Thumbs.db"}
-    for path in ROOT.rglob("*"):
+    tracked = subprocess.run(
+        ["git", "ls-files", "-z"], cwd=ROOT, check=True, capture_output=True
+    ).stdout.decode().split("\0")
+    for relative in filter(None, tracked):
+        path = ROOT / relative
         if path.name in forbidden_names or path.suffix == ".pyc" or "__pycache__" in path.parts:
             fail(errors, f"repository hygiene artifact present: {path.relative_to(ROOT)}")
 

@@ -22,7 +22,7 @@ for p in LOGOS.iterdir():
     if any(x in p.name.lower() for x in ('board','contact-sheet','mockup','concept')):
         errors.append(f'{p}: production directory contains forbidden board/mockup filename')
 manifest=json.loads((ROOT/'assets/brand/manifest.json').read_text())
-for rec in manifest['files']:
+for rec in manifest.get('assets', manifest.get('files', [])):
     p=ROOT/rec['path']
     if not p.exists(): errors.append(f"manifest path missing: {rec['path']}"); continue
     if hashlib.sha256(p.read_bytes()).hexdigest()!=rec['sha256']:
