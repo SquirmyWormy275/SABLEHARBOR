@@ -27,7 +27,7 @@
       ],
       "classification": "public",
       "depends_on": [],
-      "state": "REVIEW_READY"
+      "state": "ACCEPTED"
     },
     {
       "gate_id": "BRG-G001",
@@ -42,7 +42,7 @@
       "depends_on": [
         "BRG-G000"
       ],
-      "state": "REVIEW_READY"
+      "state": "ACCEPTED"
     },
     {
       "gate_id": "BRG-G010",
@@ -87,7 +87,7 @@
       "depends_on": [
         "BRG-G010"
       ],
-      "state": "REVIEW_READY"
+      "state": "ACCEPTED"
     },
     {
       "gate_id": "BRG-G021",
@@ -102,7 +102,7 @@
       "depends_on": [
         "BRG-G020"
       ],
-      "state": "REVIEW_READY"
+      "state": "ACCEPTED"
     },
     {
       "gate_id": "BRG-G022",
@@ -117,7 +117,7 @@
       "depends_on": [
         "BRG-G020"
       ],
-      "state": "REVIEW_READY"
+      "state": "ACCEPTED"
     },
     {
       "gate_id": "BRG-G023",
@@ -132,7 +132,7 @@
       "depends_on": [
         "BRG-G022"
       ],
-      "state": "REVIEW_READY"
+      "state": "ACCEPTED"
     },
     {
       "gate_id": "BRG-G024",
@@ -147,7 +147,7 @@
       "depends_on": [
         "BRG-G023"
       ],
-      "state": "REVIEW_READY"
+      "state": "ACCEPTED"
     },
     {
       "gate_id": "BRG-G025",
@@ -162,7 +162,7 @@
       "depends_on": [
         "BRG-G024"
       ],
-      "state": "REVIEW_READY"
+      "state": "ACCEPTED"
     },
     {
       "gate_id": "BRG-G030",
@@ -327,7 +327,7 @@
       "depends_on": [
         "BRG-G010"
       ],
-      "state": "REVIEW_READY"
+      "state": "ACCEPTED"
     },
     {
       "gate_id": "BRG-G081",
@@ -343,7 +343,7 @@
         "BRG-G080",
         "BRG-G023"
       ],
-      "state": "REVIEW_READY"
+      "state": "ACCEPTED"
     },
     {
       "gate_id": "BRG-G082",
@@ -357,7 +357,7 @@
       "depends_on": [
         "BRG-G081"
       ],
-      "state": "REVIEW_READY"
+      "state": "ACCEPTED"
     },
     {
       "gate_id": "BRG-G090",
