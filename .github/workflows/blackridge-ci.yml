@@ -8,6 +8,18 @@ on:
 jobs:
   validate:
     runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_PASSWORD: blackridge_test
+          POSTGRES_DB: blackridge
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U postgres -d blackridge"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
     strategy:
       matrix:
         python-version: ["3.11", "3.12", "3.13"]
@@ -19,6 +31,8 @@ jobs:
       - run: ruff check blackridge/src blackridge/tests
       - run: pytest -q blackridge/tests
       - run: cd blackridge && alembic upgrade head && alembic downgrade base && alembic upgrade head
+      - run: psql -h localhost -U postgres -d blackridge -v ON_ERROR_STOP=1 -f blackridge/schemas/sql/blackridge_postgresql_v0.1.0.sql
+        env: {PGPASSWORD: blackridge_test}
       - run: python -m blackridge generate --profile smoke --seed 20150112
       - run: python -m blackridge generate --profile m00 --seed 20150112
       - run: python -m blackridge validate --profile m00

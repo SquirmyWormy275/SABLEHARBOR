@@ -486,11 +486,14 @@ CREATE TABLE "employee" (
             quantity_milli INTEGER NOT NULL DEFAULT 0, source_system TEXT NOT NULL,
             provenance TEXT NOT NULL);
 -- entity_search_fts: use a PostgreSQL tsvector GIN index
-CREATE TABLE 'entity_search_fts_config'(k PRIMARY KEY, v) WITHOUT ROWID;
-CREATE TABLE 'entity_search_fts_content'(id INTEGER PRIMARY KEY, c0, c1, c2);
-CREATE TABLE 'entity_search_fts_data'(id INTEGER PRIMARY KEY, block BLOB);
-CREATE TABLE 'entity_search_fts_docsize'(id INTEGER PRIMARY KEY, sz BLOB);
-CREATE TABLE 'entity_search_fts_idx'(segid, term, pgno, PRIMARY KEY(segid, term)) WITHOUT ROWID;
+CREATE TABLE entity_search_fts (
+    canonical_id TEXT PRIMARY KEY,
+    display_name TEXT NOT NULL,
+    source_system TEXT NOT NULL,
+    search_document TSVECTOR GENERATED ALWAYS AS
+      (to_tsvector('english', coalesce(canonical_id,'') || ' ' || coalesce(display_name,'') || ' ' || coalesce(source_system,''))) STORED
+);
+CREATE INDEX ix_entity_search_fts_document ON entity_search_fts USING GIN(search_document);
 CREATE TABLE "environmental_permit" (
             id INTEGER PRIMARY KEY, canonical_id TEXT NOT NULL UNIQUE,
             immutable_uuid TEXT NOT NULL UNIQUE, name TEXT NOT NULL,
