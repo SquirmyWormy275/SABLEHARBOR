@@ -236,3 +236,11 @@
   $25,000 through balanced debt/cash entries; validation rejects non-positive and over-principal
   repayments. A clean SQLite migration reaches `0014`. Resume at covenant calculations and
   month-end AR/AP aging reconciliation before constructing unit export packages.
+- Aging/covenant-control increment: AR and AP aging now reports document totals, settlement totals,
+  current/open balances, overdue buckets, and a separately labeled subledger-allocation difference;
+  its open balances reconcile exactly to scoped GL accounts 1100 and 2100. The debt calculation now
+  reports draw, repayment, principal outstanding, interest, availability, and a provisional status
+  for every facility. A separately labeled `GL_UNALLOCATED_CONTROL` row exposes the summary-model
+  debt not yet represented by causal facility records, and the complete schedule reconciles to the
+  monthly debt rollforward. No unavailable covenant threshold is presented as LOCKED canon. Resume
+  by eliminating the disclosed summary/subledger allocations and constructing unit export packages.
