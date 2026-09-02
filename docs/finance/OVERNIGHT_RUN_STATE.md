@@ -242,8 +242,7 @@
   reports draw, repayment, principal outstanding, interest, availability, and a provisional status
   for every facility. A separately labeled `GL_UNALLOCATED_CONTROL` row exposes the summary-model
   debt not yet represented by causal facility records, and the complete schedule reconciles to the
-  monthly debt rollforward. No unavailable covenant threshold is presented as LOCKED canon. Resume
-  by eliminating the disclosed summary/subledger allocations and constructing unit export packages.
+  monthly debt rollforward. No unavailable covenant threshold is presented as LOCKED canon.
 - PostgreSQL/public-safety correction: remote PostgreSQL exposed four externally visible industrial
   identifiers longer than their 40-character schema contract. Mine lots, production batches,
   shipments, and waybills now use deterministic compact numbers while retaining full stable UUID
@@ -270,3 +269,8 @@
   and scans every generated artifact. CI now builds, scans, and uploads all seven packages. The
   primary registers cover Foundry contracts, Willow experiments, Atlas evaluations, Red Wash
   production batches, Cradle recovery runs, ARU waybills, and Advisory engagements.
+- Aging/debt classification closure: the reconciliations now distinguish formal invoice/vendor-bill
+  documents from other source-event operational receivables and accruals, leaving zero unallocated
+  GL balance. The debt schedule separately identifies forecast facilities and provisional acquisition
+  opening balances while keeping unavailable covenant thresholds OPEN. This closes the allocation
+  classification finding without inventing agreements or relabeling opening balances as new draws.

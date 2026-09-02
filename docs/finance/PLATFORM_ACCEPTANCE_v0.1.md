@@ -40,10 +40,10 @@
 
 ## Open acceptance boundary
 
-This branch is a release candidate, not an accepted or audited production system. Remaining P1 is
-explicitly visible in the aging/debt controls: legacy acquisition and summary balances are not all
-represented by causal document-level subledgers, although the schedules bridge them exactly to the
-GL. The generated unit packages are independently inspectable release-candidate evidence, but final
+This branch is a release candidate, not an audited production system. Aging and debt controls
+separately identify formal documents, source-event operational accruals, causal facilities, and
+provisional acquisition opening balances, with zero unallocated GL balance. The generated unit
+packages are independently inspectable release-candidate evidence, but final
 publication still requires the latest remote PostgreSQL/SQLite artifact jobs to pass and reviewer
 acceptance. GitHub Wiki publication is also gated by integration to `main`; this mandate does not
 authorize merging PR #9, #10, or #13. OPEN and scenario facts remain labeled and must not be promoted

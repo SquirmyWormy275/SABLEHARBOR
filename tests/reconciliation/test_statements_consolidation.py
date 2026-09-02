@@ -93,7 +93,9 @@ def test_aging_and_debt_controls_reconcile_to_the_scoped_gl() -> None:
     assert Decimal(str(aging["AR"]["open_amount"])).quantize(money) == gl_ar
     assert Decimal(str(aging["AP"]["open_amount"])).quantize(money) == gl_ap
     assert all(row["open_amount"] == row["current_bucket"] for row in aging.values())
-    facilities = [row for row in debt if row["facility_number"] != "GL_UNALLOCATED_CONTROL"]
+    facilities = [
+        row for row in debt if row["facility_number"] != "ACQUISITION_OPENING_CONTROL"
+    ]
     principal = sum((Decimal(str(row["principal_outstanding"])) for row in debt), Decimal(0))
     interest = sum((Decimal(str(row["accrued_interest"])) for row in debt), Decimal(0))
     assert sum(
@@ -106,3 +108,4 @@ def test_aging_and_debt_controls_reconcile_to_the_scoped_gl() -> None:
     assert all(
         row["covenant_status"] == "PROVISIONAL_NO_LOCKED_THRESHOLD" for row in facilities
     )
+    assert all(row["unallocated_subledger_amount"] == 0 for row in aging.values())

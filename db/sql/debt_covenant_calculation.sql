@@ -32,7 +32,7 @@ SELECT df.facility_number, df.commitment,
 FROM debt_facility df
 WHERE df.generation_run_id IN (:actual_run_id, :generation_run_id)
 UNION ALL
-SELECT 'GL_UNALLOCATED_CONTROL' AS facility_number, 0 AS commitment, 0 AS drawn, 0 AS repaid,
+SELECT 'ACQUISITION_OPENING_CONTROL' AS facility_number, 0 AS commitment, 0 AS drawn, 0 AS repaid,
        COALESCE((SELECT SUM(jl.credit - jl.debit)
                  FROM journal_line jl
                  JOIN journal_entry je ON je.id = jl.entry_id
@@ -48,5 +48,5 @@ SELECT 'GL_UNALLOCATED_CONTROL' AS facility_number, 0 AS commitment, 0 AS drawn,
                    WHERE ia.generation_run_id IN (:actual_run_id, :generation_run_id)), 0)
            AS principal_outstanding,
        0 AS accrued_interest, 0 AS availability,
-       'MODEL_SUMMARY_NOT_SUBLEDGERED' AS covenant_status
+       'PROVISIONAL_ACQUISITION_OPENING_BALANCE' AS covenant_status
 ORDER BY facility_number;

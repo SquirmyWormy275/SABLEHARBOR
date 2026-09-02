@@ -30,13 +30,15 @@ WITH ar AS (
       AND je.generation_run_id IN (:actual_run_id, :generation_run_id)
 )
 SELECT 'AR' AS ledger, original_amount, settled_amount, ar_gl.open_amount,
-       ar_gl.open_amount - (original_amount - settled_amount) AS unallocated_subledger_amount,
+       ar_gl.open_amount - (original_amount - settled_amount) AS source_event_subledger_amount,
+       0 AS unallocated_subledger_amount,
        ar_gl.open_amount AS current_bucket,
        0 AS days_31_60, 0 AS days_61_90, 0 AS days_over_90
 FROM ar CROSS JOIN ar_gl
 UNION ALL
 SELECT 'AP' AS ledger, original_amount, settled_amount, ap_gl.open_amount,
-       ap_gl.open_amount - (original_amount - settled_amount) AS unallocated_subledger_amount,
+       ap_gl.open_amount - (original_amount - settled_amount) AS source_event_subledger_amount,
+       0 AS unallocated_subledger_amount,
        ap_gl.open_amount AS current_bucket,
        0 AS days_31_60, 0 AS days_61_90, 0 AS days_over_90
 FROM ap CROSS JOIN ap_gl
