@@ -327,7 +327,7 @@
       "depends_on": [
         "BRG-G010"
       ],
-      "state": "NOT_STARTED"
+      "state": "REVIEW_READY"
     },
     {
       "gate_id": "BRG-G081",
@@ -343,7 +343,7 @@
         "BRG-G080",
         "BRG-G023"
       ],
-      "state": "NOT_STARTED"
+      "state": "REVIEW_READY"
     },
     {
       "gate_id": "BRG-G082",
@@ -357,7 +357,7 @@
       "depends_on": [
         "BRG-G081"
       ],
-      "state": "NOT_STARTED"
+      "state": "REVIEW_READY"
     },
     {
       "gate_id": "BRG-G090",
