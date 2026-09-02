@@ -427,7 +427,7 @@ def populate_generic(db: sqlite3.Connection, table: str, count: int, seed: int) 
         db.executemany(f'INSERT INTO "{table}" VALUES (?,?,?,?,?,?,?,?,?,?,?,?)', rows)
 
 
-def populate_finance(db: sqlite3.Connection) -> None:
+def populate_finance(db: sqlite3.Connection, target_lines: int) -> None:
     # Each journal is independently balanced; operating results derive from activity drivers.
     line_id = 1
     cash = 82_000_000_00
@@ -505,6 +505,61 @@ def populate_finance(db: sqlite3.Connection) -> None:
             "DCF-2015-12-31",
         ),
     )
+    db.execute(
+        "UPDATE financial_statement SET amount_minor=amount_minor-? WHERE period='2015-12' AND ((statement='INCOME_STATEMENT' AND line_code='NET_INCOME') OR (statement='BALANCE_SHEET' AND line_code IN ('ASSETS','EQUITY')) OR (statement='EQUITY_STATEMENT' AND line_code='ENDING_EQUITY'))",
+        (impairment,),
+    )
+    line_id += 2
+    batch = []
+    journal_number = 1
+    sources = [
+        ("AP", "5100-MATERIALS", "2100-AP"),
+        ("AR", "1200-AR", "4000-REVENUE"),
+        ("PAYROLL", "5200-LABOR", "2200-PAYROLL"),
+        ("INVENTORY", "1300-INVENTORY", "5100-MATERIALS"),
+        ("FIXED_ASSET", "1500-FIXED-ASSET", "1100-CASH"),
+        ("CIP", "1510-CIP", "2100-AP"),
+    ]
+    while line_id + 1 <= target_lines:
+        business_event = (journal_number - 1) // 2
+        source, debit_account, credit_account = sources[business_event % len(sources)]
+        month = (business_event % 12) + 1
+        if journal_number % 2 == 0:
+            debit_account, credit_account = credit_account, debit_account
+        period = f"2015-{month:02d}"
+        journal_id = f"SL-{source}-{journal_number:06d}"
+        amount = (10_000 + (business_event * 7919) % 2_000_000) * 100
+        if line_id + 1 == target_lines and journal_number % 2 == 1:
+            amount = 0
+        batch.extend(
+            [
+                (
+                    line_id,
+                    journal_id,
+                    period,
+                    debit_account,
+                    amount,
+                    0,
+                    f"{source}-{journal_number:06d}",
+                ),
+                (
+                    line_id + 1,
+                    journal_id,
+                    period,
+                    credit_account,
+                    0,
+                    amount,
+                    f"{source}-{journal_number:06d}",
+                ),
+            ]
+        )
+        line_id += 2
+        journal_number += 1
+        if len(batch) >= 10_000:
+            db.executemany("INSERT INTO journal_line_detail VALUES(?,?,?,?,?,?,?)", batch)
+            batch.clear()
+    if batch:
+        db.executemany("INSERT INTO journal_line_detail VALUES(?,?,?,?,?,?,?)", batch)
 
 
 def populate_events(db: sqlite3.Connection, count: int, seed: int) -> None:
@@ -643,7 +698,9 @@ def build_database(profile: str, seed: int) -> Path:
     for table in sorted(set(GENERIC_TABLES) | set(MASTER_COUNTS)):
         count = MASTER_COUNTS.get(table, 12)
         populate_generic(db, table, max(1, int(count * scale)), seed)
-    populate_finance(db)
+    target_journal_lines = max(74, int(MASTER_COUNTS["journal_line"] * scale))
+    target_journal_lines -= target_journal_lines % 2
+    populate_finance(db, target_journal_lines)
     populate_events(
         db, 1_000_000 if profile == "full_2015" else (5000 if profile == "m00" else 1000), seed
     )
@@ -714,6 +771,18 @@ def validate(path: Path) -> dict[str, object]:
     expected_reconciliations = db.execute(
         "SELECT COUNT(*) FROM subledger_reconciliation"
     ).fetchone()[0]
+    statement_source_residuals = db.execute("""SELECT COUNT(*) FROM (
+        SELECT period,account_code,SUM(debit_minor-credit_minor) residual
+        FROM journal_line_detail WHERE journal_id LIKE 'SL-%'
+        GROUP BY period,account_code HAVING residual<>0)""").fetchone()[0]
+    december = dict(
+        db.execute(
+            "SELECT line_code,amount_minor FROM financial_statement WHERE period='2015-12' AND statement='INCOME_STATEMENT'"
+        )
+    )
+    impairment_in_statements = december.get("NET_INCOME") == (
+        december.get("REVENUE", 0) + december.get("OPERATING_COST", 0) - 1_800_000_00 - impairment
+    )
     counts = {
         row[0]: db.execute(f'SELECT COUNT(*) FROM "{row[0]}"').fetchone()[0]
         for row in db.execute(
@@ -735,6 +804,8 @@ def validate(path: Path) -> dict[str, object]:
         "impairment_lineage": impairment_lineage == 0,
         "haul_destinations": missing_haul_destination == 0,
         "complete_subledger_links": expected_reconciliations == 72,
+        "subledger_activity_statement_neutral": statement_source_residuals == 0,
+        "impairment_in_statements": impairment_in_statements,
     }
     return {
         "status": "PASS" if all(checks.values()) else "FAIL",

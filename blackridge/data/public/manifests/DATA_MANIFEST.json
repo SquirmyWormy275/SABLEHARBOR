@@ -149,7 +149,7 @@
     "wbs_element": 12,
     "work_order": 6200,
     "event_ledger": 1000000,
-    "journal_line_detail": 74,
+    "journal_line_detail": 105600,
     "financial_statement": 96,
     "phase4_valuation": 1,
     "conservation_balance": 48,
@@ -173,8 +173,14 @@
     },
     {
       "path": "data/public/databases/blackridge_public_v0.1.0.sqlite3",
-      "bytes": 550080512,
-      "sha256": "628c92c722e8b67b1a3848f8d06e2bb66ae6ea4e53063d5666f5f5c0b90668bc",
+      "bytes": 556929024,
+      "sha256": "8730f8834e46889d8e7e8972e1eaa663b46f9a95dcbe01ad547ab156a7c058c9",
+      "classification": "public"
+    },
+    {
+      "path": "data/public/databases/blackridge_smoke_v0.1.0.sqlite3",
+      "bytes": 16179200,
+      "sha256": "7dfec4189b0b9b38ac46174ae7252ca1af94c328db3b8d79777135640d8ac6a2",
       "classification": "public"
     },
     {
@@ -191,8 +197,8 @@
     },
     {
       "path": "data/public/extracts/financial_statement.csv",
-      "bytes": 4775,
-      "sha256": "9dc411369b16368eb35c6d234ba13a5c1dc114ef50bbdde8a7e0e651daa7bcda",
+      "bytes": 4776,
+      "sha256": "9a7b23fc2e48b764cb062647a487b0530eb85001fd1a581894acff0e89135077",
       "classification": "public"
     },
     {
@@ -251,68 +257,68 @@
     },
     {
       "path": "data/public/manifests/DATA_MANIFEST.json",
-      "bytes": 4634,
-      "sha256": "7dc212d1db67e685d400cf93857b48214d43d5a47dc5b06b071514965c71bf10",
+      "bytes": 4638,
+      "sha256": "3d7fd129a049ef716ab4ecc542431a6354e23f9c666ce12c62f851353fb1bb66",
       "classification": "public"
     },
     {
       "path": "data/public/packages/blackridge_case_cutoffs_v0.1.0.zip",
-      "bytes": 380893715,
-      "sha256": "c529f1ca07cda4c3cf13731626cb4eb30840080f2187de5806ff119657a69cd7",
+      "bytes": 721565765,
+      "sha256": "1e48ba1c5d431704834b479f0bfc19332078e51bf968826e2499af0e72745562",
       "classification": "public"
     },
     {
       "path": "data/public/packages/blackridge_domain_csv_extracts_v0.1.0.zip",
       "bytes": 14797826,
-      "sha256": "ae44d3f295289197df31b243c8c6458d280a979907b579f92ae2f4ad9cb9430c",
+      "sha256": "5c868a800469a7103055ab8a1944ea2de1412dd507a15f490dd252c0e320e789",
       "classification": "public"
     },
     {
       "path": "data/public/snapshots/blackridge_case_cutoff_2015-04-30.sqlite3",
-      "bytes": 109772800,
-      "sha256": "f784165baad1eb9183beca5e715ddaf74af3c9e4bf034539a090b42e9d550133",
+      "bytes": 188043264,
+      "sha256": "de790ebcb0a94d6009bba2f0254566b04d21aaecd6ccb99659a3c2a362ab34bc",
       "classification": "public"
     },
     {
       "path": "data/public/snapshots/blackridge_case_cutoff_2015-05-18.sqlite3",
-      "bytes": 125927424,
-      "sha256": "c8afe689391a89495e6ff5bc2e5174a0f4d70aff6c607220c5d7d74f4ae13688",
+      "bytes": 216092672,
+      "sha256": "1cb5ff6b72ab3873b9070ff7a60f3cc179c2d7d75ea37692c1da5b93de328681",
       "classification": "public"
     },
     {
       "path": "data/public/snapshots/blackridge_case_cutoff_2015-06-26.sqlite3",
-      "bytes": 160862208,
-      "sha256": "db63a4e81e3272abfb4c79d00c444b81b50dfee49d3c1d391254b228f703dccc",
+      "bytes": 276656128,
+      "sha256": "21a0db847622e91c78dd0dd49827c0321787c3445b5ab1c8155855d77dc35060",
       "classification": "public"
     },
     {
       "path": "data/public/snapshots/blackridge_case_cutoff_2015-09-30.sqlite3",
-      "bytes": 247279616,
-      "sha256": "1127d665e8d8e5a354cde1a4b603700644687c354781b213b142e10e587581a4",
+      "bytes": 426586112,
+      "sha256": "d6e148853bf6a7dfdeb1520d0f7108a741f6aa61570f2f76d966195e184f53a8",
       "classification": "public"
     },
     {
       "path": "data/public/snapshots/blackridge_case_cutoff_2015-10-06.sqlite3",
-      "bytes": 252592128,
-      "sha256": "9af1439fdb536126e68ad8cb95f21209697828cf1aec53f2bd0390f06188644f",
+      "bytes": 435822592,
+      "sha256": "19d0ed894af02cead2715e08086ab4780375106ab397e2c9b70082fa91b0471d",
       "classification": "public"
     },
     {
       "path": "data/public/snapshots/blackridge_case_cutoff_2015-10-19.sqlite3",
-      "bytes": 264429568,
-      "sha256": "7c9a8e881de05357b6756062b132a6cc4290f52493ffdbafb2598bec0d6eb94a",
+      "bytes": 456388608,
+      "sha256": "f5fdbd7f86d6ec0d192cfffe90184eadb1bac88eb9cd0f89824b94f68d510c10",
       "classification": "public"
     },
     {
       "path": "data/public/snapshots/blackridge_case_cutoff_2015-12-31.sqlite3",
-      "bytes": 330207232,
-      "sha256": "8d74489978f85e1035654c8f05441b0ecc3d869881c7f9ffb6b6c0541b5418d9",
+      "bytes": 570257408,
+      "sha256": "f408df194c07298935a519ea2ef5a188edac0e0f990a065370c5ee3a8fca4146",
       "classification": "public"
     },
     {
       "path": "data/public/workbooks/BLACKRIDGE_MASTER_TRACKER_v0.1.0.xlsx",
-      "bytes": 126540,
-      "sha256": "a3f5294f8a9ba7c998bf79abb54d4be6d7e0d35db886fc7cabe2da68ef171619",
+      "bytes": 126594,
+      "sha256": "89e0c616b0df013e4e567820c5b72bfc97b0e5e8a12cb7463a541039fc5fde39",
       "classification": "public"
     }
   ],

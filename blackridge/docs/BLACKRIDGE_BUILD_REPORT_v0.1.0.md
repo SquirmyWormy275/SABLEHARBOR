@@ -50,3 +50,8 @@ Enterprise population remediation increased the workforce to 500 employees plus 
 fixed assets, 75,000 meter readings, 250,000 sensor readings, 18,000 laboratory samples, 20,000
 assays, 1,200 meetings, and 7,500 meeting-attendee records. These sit alongside the previously
 reported target-scale operations and master populations.
+
+Final ledger closeout replaced the earlier 74-line detailed proof with 105,600 enforceably balanced
+double-entry lines tied to 52,776 source references. Per-period subledger transaction/reversal pairs
+net to zero without unexplained statement residual, and the $52.05 million impairment is reflected
+in December net income, assets, and equity as well as its balanced journal.

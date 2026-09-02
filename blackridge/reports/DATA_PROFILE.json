@@ -1404,7 +1404,7 @@
       }
     },
     "journal_line_detail": {
-      "rows": 74,
+      "rows": 105600,
       "null_counts": {
         "id": 0,
         "journal_id": 0,
