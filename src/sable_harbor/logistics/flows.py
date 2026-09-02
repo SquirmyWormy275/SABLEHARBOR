@@ -127,7 +127,7 @@ def operate_waybill(
     waybill = Waybill(
         id=waybill_id,
         entity_id=entity_id,
-        waybill_number=f"WB-{key}",
+        waybill_number=f"WB-{waybill_id.replace('-', '')[:20]}",
         movement_date=movement_date,
         carloads=carloads,
         tons=tons,

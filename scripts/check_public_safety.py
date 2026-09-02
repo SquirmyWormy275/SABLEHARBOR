@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import hashlib
 import subprocess
 import sys
 from pathlib import Path
@@ -7,6 +8,12 @@ from sable_harbor.exports.safety import scan_generated_artifacts
 
 FORBIDDEN = ("ghp_", "github_pat_", "sk-proj-", "BEGIN PRIVATE KEY")
 MAX_BYTES = 10 * 1024 * 1024
+ALLOWED_LARGE_PUBLIC_ARTIFACTS = {
+    Path("blackridge/data/public/databases/blackridge_m00_v0.1.0.sqlite3"): (
+        20 * 1024 * 1024,
+        "fb9e2d3ae690e7ea779305bb18b18393f9dd31ada2c67d2b33f02851fe27f5be",
+    ),
+}
 
 
 def tracked_files() -> list[Path]:
@@ -27,7 +34,10 @@ def main() -> None:
         if "var/private" in path.as_posix():
             failures.append(f"private benchmark path tracked: {path}")
         if path.stat().st_size > MAX_BYTES:
-            failures.append(f"large file exceeds 10 MiB: {path}")
+            allowance = ALLOWED_LARGE_PUBLIC_ARTIFACTS.get(path)
+            digest = hashlib.sha256(path.read_bytes()).hexdigest()
+            if allowance is None or path.stat().st_size > allowance[0] or digest != allowance[1]:
+                failures.append(f"unapproved large file exceeds 10 MiB: {path}")
         if path.suffix.lower() in {".png", ".pdf", ".pptx", ".zip", ".xlsx"}:
             continue
         text = path.read_text(errors="ignore")

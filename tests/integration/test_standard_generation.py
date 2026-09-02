@@ -7,6 +7,7 @@ from sable_harbor.accounting.models import (
     AccountingBook,
     Base,
     FiscalPeriod,
+    InventoryLot,
     JournalEntry,
     JournalLine,
     LegalEntity,
@@ -82,6 +83,14 @@ def test_standard_generation_has_48_months_actual_forecast_and_is_idempotent() -
         assert session.scalar(select(func.count(WillowExperiment.id))) == 4
         assert session.scalar(select(func.count(AtlasEvaluation.id))) == 4
         assert session.scalar(select(func.count(RecoveryRun.id))) == 4
+        assert max(len(value) for value in session.scalars(select(InventoryLot.lot_number))) <= 40
+        assert max(
+            len(value) for value in session.scalars(select(MineProductionBatch.batch_number))
+        ) <= 40
+        assert max(
+            len(value) for value in session.scalars(select(UraniumShipment.shipment_number))
+        ) <= 40
+        assert max(len(value) for value in session.scalars(select(Waybill.waybill_number))) <= 40
         revenue = session.scalar(
             select(func.sum(ScenarioValue.amount)).where(
                 ScenarioValue.generation_run_id.in_((run.actual_generation_run_id, run.id)),

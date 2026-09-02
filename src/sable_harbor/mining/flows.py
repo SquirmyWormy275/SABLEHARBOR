@@ -81,9 +81,11 @@ def produce_concentrate(
     pounds = (feed_tons * Decimal(2000) * grade_fraction * recovery_fraction).quantize(
         Decimal("0.0001")
     )
+    lot_id = stable_id("inventory_lot", key)
+    batch_id = stable_id("mine_production_batch", key)
     lot = InventoryLot(
-        id=stable_id("inventory_lot", key),
-        lot_number=f"LOT-{key}",
+        id=lot_id,
+        lot_number=f"LOT-{lot_id.replace('-', '')[:20]}",
         entity_id=entity_id,
         site_id=site_id,
         inventory_stage="CONCENTRATE",
@@ -93,7 +95,6 @@ def produce_concentrate(
         as_of_date=production_date,
         fact_state=FactState.SYNTHETIC_INSTANCE,
     )
-    batch_id = stable_id("mine_production_batch", key)
     session.add(lot)
     entry = _post(
         session,
@@ -112,7 +113,7 @@ def produce_concentrate(
         id=batch_id,
         entity_id=entity_id,
         site_id=site_id,
-        batch_number=f"BATCH-{key}",
+        batch_number=f"BATCH-{batch_id.replace('-', '')[:20]}",
         production_date=production_date,
         feed_tons=feed_tons,
         grade_fraction=grade_fraction,
@@ -173,7 +174,7 @@ def ship_and_collect(
     shipment = UraniumShipment(
         id=shipment_id,
         production_batch_id=batch.id,
-        shipment_number=f"SHIP-{key}",
+        shipment_number=f"SHIP-{shipment_id.replace('-', '')[:20]}",
         shipment_date=shipment_date,
         pounds_shipped=pounds_shipped,
         realized_price_per_lb=realized_price_per_lb,

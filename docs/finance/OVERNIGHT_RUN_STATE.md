@@ -244,3 +244,10 @@
   debt not yet represented by causal facility records, and the complete schedule reconciles to the
   monthly debt rollforward. No unavailable covenant threshold is presented as LOCKED canon. Resume
   by eliminating the disclosed summary/subledger allocations and constructing unit export packages.
+- PostgreSQL/public-safety correction: remote PostgreSQL exposed four externally visible industrial
+  identifiers longer than their 40-character schema contract. Mine lots, production batches,
+  shipments, and waybills now use deterministic compact numbers while retaining full stable UUID
+  identity and lineage; a regression caps all four. Pull-request CI also inherits Blackridge's
+  18.9 MiB public SQLite database from current `main`, so the tracked-file gate now permits only
+  that exact path, a 20 MiB ceiling, and its pinned SHA-256; every other tracked file retains the
+  10 MiB ceiling. Resume after both PostgreSQL and SQLite jobs confirm these corrections.
