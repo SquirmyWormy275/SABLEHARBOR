@@ -27,7 +27,7 @@
       ],
       "classification": "public",
       "depends_on": [],
-      "state": "NOT_STARTED"
+      "state": "REVIEW_READY"
     },
     {
       "gate_id": "BRG-G001",
@@ -42,7 +42,7 @@
       "depends_on": [
         "BRG-G000"
       ],
-      "state": "NOT_STARTED"
+      "state": "REVIEW_READY"
     },
     {
       "gate_id": "BRG-G010",
@@ -87,7 +87,7 @@
       "depends_on": [
         "BRG-G010"
       ],
-      "state": "NOT_STARTED"
+      "state": "IN_PROGRESS"
     },
     {
       "gate_id": "BRG-G021",
@@ -102,7 +102,7 @@
       "depends_on": [
         "BRG-G020"
       ],
-      "state": "NOT_STARTED"
+      "state": "IN_PROGRESS"
     },
     {
       "gate_id": "BRG-G022",
@@ -117,7 +117,7 @@
       "depends_on": [
         "BRG-G020"
       ],
-      "state": "NOT_STARTED"
+      "state": "IN_PROGRESS"
     },
     {
       "gate_id": "BRG-G023",
@@ -132,7 +132,7 @@
       "depends_on": [
         "BRG-G022"
       ],
-      "state": "NOT_STARTED"
+      "state": "IN_PROGRESS"
     },
     {
       "gate_id": "BRG-G024",
@@ -147,7 +147,7 @@
       "depends_on": [
         "BRG-G023"
       ],
-      "state": "NOT_STARTED"
+      "state": "IN_PROGRESS"
     },
     {
       "gate_id": "BRG-G025",
@@ -162,7 +162,7 @@
       "depends_on": [
         "BRG-G024"
       ],
-      "state": "NOT_STARTED"
+      "state": "IN_PROGRESS"
     },
     {
       "gate_id": "BRG-G030",
@@ -197,7 +197,7 @@
     {
       "gate_id": "BRG-G040",
       "workstream": "history",
-      "requirement": "Generate enough 2010–2013 history to support asset, workforce, contract, debt, system, and shadow-artifact opening states.",
+      "requirement": "Generate enough 2010\u20132013 history to support asset, workforce, contract, debt, system, and shadow-artifact opening states.",
       "priority": "P1",
       "evidence": [
         "historical_coverage_report.json"
@@ -493,7 +493,7 @@
         "BRG-G020",
         "BRG-G025"
       ],
-      "state": "NOT_STARTED"
+      "state": "IN_PROGRESS"
     },
     {
       "gate_id": "BRG-G150",
