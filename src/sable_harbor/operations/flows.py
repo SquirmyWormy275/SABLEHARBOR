@@ -114,17 +114,16 @@ def run_payroll(
         employer_cost=employer_cost,
         journal_entry_id=entry.id,
     )
-    session.add_all(
-        [
-            run,
-            PayrollLine(
-                id=stable_id("payroll_line", key),
-                payroll_run_id=run.id,
-                worker_id=worker.id,
-                gross_pay=gross_pay,
-                employer_cost=employer_cost,
-            ),
-        ]
+    session.add(run)
+    session.flush()
+    session.add(
+        PayrollLine(
+            id=stable_id("payroll_line", key),
+            payroll_run_id=run.id,
+            worker_id=worker.id,
+            gross_pay=gross_pay,
+            employer_cost=employer_cost,
+        )
     )
     return run
 
@@ -145,6 +144,8 @@ def procure_and_pay_asset(
         name=f"Synthetic vendor {key}",
         category="FIELD_EQUIPMENT",
     )
+    session.add(vendor)
+    session.flush()
     po = PurchaseOrder(
         id=stable_id("purchase_order", key),
         entity_id=entity_id,
@@ -154,12 +155,16 @@ def procure_and_pay_asset(
         amount=amount,
         status="RECEIVED",
     )
+    session.add(po)
+    session.flush()
     receipt = GoodsReceipt(
         id=stable_id("goods_receipt", key),
         purchase_order_id=po.id,
         receipt_date=event_date,
         amount=amount,
     )
+    session.add(receipt)
+    session.flush()
     bill_id = stable_id("vendor_bill", key)
     bill_entry = _post(
         session,
@@ -185,6 +190,8 @@ def procure_and_pay_asset(
         match_status="MATCHED",
         journal_entry_id=bill_entry.id,
     )
+    session.add(bill)
+    session.flush()
     payment_id = stable_id("vendor_payment", key)
     payment_entry = _post(
         session,
@@ -218,7 +225,7 @@ def procure_and_pay_asset(
         acquisition_layer=False,
         fact_state=FactState.SYNTHETIC_INSTANCE,
     )
-    session.add_all([vendor, po, receipt, bill, payment, asset])
+    session.add_all([payment, asset])
     return bill, payment, asset
 
 
@@ -277,6 +284,8 @@ def draw_debt_and_accrue_interest(
         commitment=principal,
         annual_rate=annual_rate,
     )
+    session.add(facility)
+    session.flush()
     draw_id = stable_id("debt_draw", key)
     draw_entry = _post(
         session,
@@ -299,6 +308,8 @@ def draw_debt_and_accrue_interest(
         principal=principal,
         journal_entry_id=draw_entry.id,
     )
+    session.add(draw)
+    session.flush()
     interest = (principal * annual_rate / Decimal(12)).quantize(Decimal("0.0001"))
     accrual_id = stable_id("interest_accrual", key)
     interest_entry = _post(
@@ -322,5 +333,5 @@ def draw_debt_and_accrue_interest(
         amount=interest,
         journal_entry_id=interest_entry.id,
     )
-    session.add_all([facility, draw, accrual])
+    session.add(accrual)
     return draw, accrual

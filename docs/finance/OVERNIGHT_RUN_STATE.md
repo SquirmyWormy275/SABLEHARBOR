@@ -220,5 +220,8 @@
   economics. SHI generates contract, obligation, invoice, ratable recognition, AR, and collection;
   Red Wash generates production batch, inventory lot, shipment, COGS, receivable, and collection;
   ARU generates waybill, ton-miles, fuel/crew cost, receivable, and collection. The base run contains
-  four complete forecast chains per line, all run-owned and idempotent. Resume by expanding payroll,
-  procurement/AP, fixed assets, debt, Cradle, research, and Advisory into the monthly chain.
+  four complete forecast chains per line, all run-owned and idempotent. SHI forecast months also
+  generate a run-owned payroll cohort, payroll/benefit posting, purchase order, receipt, matched bill,
+  vendor payment, fixed asset, depreciation, debt draw, and interest accrual. Explicit parent flushes
+  make every chain portable under enforced SQLite/PostgreSQL foreign keys. Resume by expanding Cradle,
+  research, and Advisory into the monthly chain and adding debt repayment/covenant schedules.

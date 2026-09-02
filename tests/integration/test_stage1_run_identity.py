@@ -508,7 +508,9 @@ def test_two_seeds_coexist_with_run_scoped_operational_natural_keys(tmp_path: Pa
     with pytest.raises(RuntimeError, match="Cannot downgrade revision 0010"):
         command.downgrade(config, "0009")
     with Session(create_engine(url)) as session:
-        assert session.scalar(select(func.count(Worker.id))) == 2 * 769
+        # Each selected forecast run adds four explicitly run-owned monthly
+        # payroll-cohort workers in addition to its 769 common-actual workers.
+        assert session.scalar(select(func.count(Worker.id))) == 2 * (769 + 4)
     assert inspect(create_engine(url)).get_unique_constraints("worker") == [
         {
             "name": "uq_worker_generation_run_id",

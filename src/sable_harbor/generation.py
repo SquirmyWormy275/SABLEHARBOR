@@ -40,6 +40,12 @@ from sable_harbor.config.assumptions import load_assumptions
 from sable_harbor.core.ids import stable_id
 from sable_harbor.logistics.flows import operate_waybill
 from sable_harbor.mining.flows import produce_concentrate, ship_and_collect
+from sable_harbor.operations.flows import (
+    depreciate_asset,
+    draw_debt_and_accrue_interest,
+    procure_and_pay_asset,
+    run_payroll,
+)
 from sable_harbor.provenance.models import GenerationRun
 from sable_harbor.provenance.service import (
     GENERATION_RUN_SESSION_KEY,
@@ -224,7 +230,60 @@ def _generate_causal_month(
             period_id=period_id,
             receipt_date=period_end,
         )
-        return causal_revenue, D(0)
+        worker_key = stable_id("forecast_worker", key)
+        worker = Worker(
+            id=worker_key,
+            worker_number=f"FC-{period_end:%Y%m}",
+            worker_type="EMPLOYEE",
+            entity_id=entity_id,
+            segment_code="CORE",
+            function_code="FORECAST_COHORT",
+            annual_cost=cost,
+            starts_on=period_end.replace(day=1),
+            fact_state=FactState.SYNTHETIC_INSTANCE,
+        )
+        session.add(worker)
+        session.flush()
+        payroll_gross = (causal_cost * D("0.04")).quantize(D("0.01"))
+        payroll_employer = (causal_cost * D("0.01")).quantize(D("0.01"))
+        run_payroll(
+            session,
+            entity_id=entity_id,
+            book_id=book_id,
+            period_id=period_id,
+            worker=worker,
+            pay_date=period_end,
+            gross_pay=payroll_gross,
+            employer_cost=payroll_employer,
+        )
+        compact_key = stable_id("forecast_capital", key).replace("-", "")[:20]
+        _, _, asset = procure_and_pay_asset(
+            session,
+            entity_id=entity_id,
+            book_id=book_id,
+            period_id=period_id,
+            key=compact_key,
+            event_date=period_end,
+            amount=(cost * D("0.01")).quantize(D("0.01")),
+        )
+        depreciation = depreciate_asset(
+            session,
+            asset=asset,
+            book_id=book_id,
+            period_id=period_id,
+            depreciation_date=period_end,
+        )
+        draw_debt_and_accrue_interest(
+            session,
+            entity_id=entity_id,
+            book_id=book_id,
+            period_id=period_id,
+            key=compact_key,
+            event_date=period_end,
+            principal=D("100000"),
+            annual_rate=D("0.08"),
+        )
+        return causal_revenue, payroll_gross + payroll_employer + depreciation.amount
     if entity_code == "RWH":
         if site_id is None:
             raise ValueError("Red Wash causal generation requires a site")
@@ -309,6 +368,7 @@ ACCOUNTS = (
     ("6200", "General and administrative", "EXPENSE", "DEBIT"),
     ("6300", "Depreciation depletion and accretion", "EXPENSE", "DEBIT"),
     ("6400", "Intercompany freight and services", "EXPENSE", "DEBIT"),
+    ("7100", "Interest expense", "OTHER_EXPENSE", "DEBIT"),
     ("9000", "Consolidation eliminations", "EQUITY", "CREDIT"),
 )
 
