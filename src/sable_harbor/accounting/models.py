@@ -23,8 +23,8 @@ class Base(DeclarativeBase):
 
 class GenerationOwnedMixin:
     @declared_attr
-    def generation_run_id(cls) -> Mapped[str | None]:
-        return mapped_column(ForeignKey("generation_run.id"), nullable=True, index=True)
+    def generation_run_id(cls) -> Mapped[str]:
+        return mapped_column(ForeignKey("generation_run.id"), nullable=False, index=True)
 
 
 class FactState(StrEnum):
@@ -81,6 +81,15 @@ class FiscalPeriod(Base):
     __table_args__ = (UniqueConstraint("book_id", "code"),)
 
 
+class GenerationPeriodClose(Base):
+    __tablename__ = "generation_period_close"
+    generation_run_id: Mapped[str] = mapped_column(
+        ForeignKey("generation_run.id"), primary_key=True
+    )
+    period_id: Mapped[str] = mapped_column(ForeignKey("fiscal_period.id"), primary_key=True)
+    closed_at: Mapped[datetime] = mapped_column(DateTime(timezone=True))
+
+
 class Account(Base):
     __tablename__ = "account"
     id: Mapped[str] = mapped_column(String(36), primary_key=True)
@@ -93,8 +102,8 @@ class Account(Base):
 class JournalEntry(Base):
     __tablename__ = "journal_entry"
     id: Mapped[str] = mapped_column(String(36), primary_key=True)
-    generation_run_id: Mapped[str | None] = mapped_column(
-        ForeignKey("generation_run.id"), index=True
+    generation_run_id: Mapped[str] = mapped_column(
+        ForeignKey("generation_run.id"), nullable=False, index=True
     )
     book_id: Mapped[str] = mapped_column(ForeignKey("accounting_book.id"))
     period_id: Mapped[str] = mapped_column(ForeignKey("fiscal_period.id"))
@@ -142,7 +151,7 @@ class Site(Base):
 class Worker(GenerationOwnedMixin, Base):
     __tablename__ = "worker"
     id: Mapped[str] = mapped_column(String(36), primary_key=True)
-    worker_number: Mapped[str] = mapped_column(String(20), unique=True)
+    worker_number: Mapped[str] = mapped_column(String(20))
     worker_type: Mapped[str] = mapped_column(String(20))
     entity_id: Mapped[str] = mapped_column(ForeignKey("legal_entity.id"))
     site_id: Mapped[str | None] = mapped_column(ForeignKey("site.id"))
@@ -152,22 +161,24 @@ class Worker(GenerationOwnedMixin, Base):
     starts_on: Mapped[date] = mapped_column(Date)
     ends_on: Mapped[date | None] = mapped_column(Date)
     fact_state: Mapped[FactState] = mapped_column(Enum(FactState))
+    __table_args__ = (UniqueConstraint("generation_run_id", "worker_number"),)
 
 
 class BusinessParty(GenerationOwnedMixin, Base):
     __tablename__ = "business_party"
     id: Mapped[str] = mapped_column(String(36), primary_key=True)
-    code: Mapped[str] = mapped_column(String(32), unique=True)
+    code: Mapped[str] = mapped_column(String(32))
     party_type: Mapped[str] = mapped_column(String(20))
     segment_code: Mapped[str] = mapped_column(String(32))
     risk_tier: Mapped[str] = mapped_column(String(16))
     fact_state: Mapped[FactState] = mapped_column(Enum(FactState))
+    __table_args__ = (UniqueConstraint("generation_run_id", "code"),)
 
 
 class Contract(GenerationOwnedMixin, Base):
     __tablename__ = "contract"
     id: Mapped[str] = mapped_column(String(36), primary_key=True)
-    code: Mapped[str] = mapped_column(String(40), unique=True)
+    code: Mapped[str] = mapped_column(String(40))
     entity_id: Mapped[str] = mapped_column(ForeignKey("legal_entity.id"))
     party_id: Mapped[str] = mapped_column(ForeignKey("business_party.id"))
     contract_type: Mapped[str] = mapped_column(String(32))
@@ -175,12 +186,13 @@ class Contract(GenerationOwnedMixin, Base):
     ends_on: Mapped[date | None] = mapped_column(Date)
     committed_value: Mapped[Decimal] = mapped_column(Numeric(20, 2))
     fact_state: Mapped[FactState] = mapped_column(Enum(FactState))
+    __table_args__ = (UniqueConstraint("generation_run_id", "code"),)
 
 
 class FixedAsset(GenerationOwnedMixin, Base):
     __tablename__ = "fixed_asset"
     id: Mapped[str] = mapped_column(String(36), primary_key=True)
-    asset_number: Mapped[str] = mapped_column(String(32), unique=True)
+    asset_number: Mapped[str] = mapped_column(String(32))
     entity_id: Mapped[str] = mapped_column(ForeignKey("legal_entity.id"))
     site_id: Mapped[str | None] = mapped_column(ForeignKey("site.id"))
     asset_class: Mapped[str] = mapped_column(String(40))
@@ -189,12 +201,13 @@ class FixedAsset(GenerationOwnedMixin, Base):
     useful_life_months: Mapped[int] = mapped_column(Integer)
     acquisition_layer: Mapped[bool] = mapped_column(Boolean, default=False)
     fact_state: Mapped[FactState] = mapped_column(Enum(FactState))
+    __table_args__ = (UniqueConstraint("generation_run_id", "asset_number"),)
 
 
 class InventoryLot(GenerationOwnedMixin, Base):
     __tablename__ = "inventory_lot"
     id: Mapped[str] = mapped_column(String(36), primary_key=True)
-    lot_number: Mapped[str] = mapped_column(String(40), unique=True)
+    lot_number: Mapped[str] = mapped_column(String(40))
     entity_id: Mapped[str] = mapped_column(ForeignKey("legal_entity.id"))
     site_id: Mapped[str] = mapped_column(ForeignKey("site.id"))
     inventory_stage: Mapped[str] = mapped_column(String(24))
@@ -203,6 +216,7 @@ class InventoryLot(GenerationOwnedMixin, Base):
     carrying_value: Mapped[Decimal] = mapped_column(Numeric(20, 2))
     as_of_date: Mapped[date] = mapped_column(Date)
     fact_state: Mapped[FactState] = mapped_column(Enum(FactState))
+    __table_args__ = (UniqueConstraint("generation_run_id", "lot_number"),)
 
 
 class ProductionRecord(GenerationOwnedMixin, Base):
@@ -215,13 +229,15 @@ class ProductionRecord(GenerationOwnedMixin, Base):
     concentrate_lbs: Mapped[Decimal] = mapped_column(Numeric(20, 2))
     recovery_rate: Mapped[Decimal] = mapped_column(Numeric(9, 6))
     fact_state: Mapped[FactState] = mapped_column(Enum(FactState))
-    __table_args__ = (UniqueConstraint("site_id", "period_code"),)
+    __table_args__ = (
+        UniqueConstraint("generation_run_id", "site_id", "period_code"),
+    )
 
 
 class FreightMovement(GenerationOwnedMixin, Base):
     __tablename__ = "freight_movement"
     id: Mapped[str] = mapped_column(String(36), primary_key=True)
-    movement_number: Mapped[str] = mapped_column(String(40), unique=True)
+    movement_number: Mapped[str] = mapped_column(String(40))
     entity_id: Mapped[str] = mapped_column(ForeignKey("legal_entity.id"))
     customer_party_id: Mapped[str | None] = mapped_column(ForeignKey("business_party.id"))
     movement_date: Mapped[date] = mapped_column(Date)
@@ -231,6 +247,7 @@ class FreightMovement(GenerationOwnedMixin, Base):
     intercompany: Mapped[bool] = mapped_column(Boolean, default=False)
     custody_status: Mapped[str] = mapped_column(String(24))
     fact_state: Mapped[FactState] = mapped_column(Enum(FactState))
+    __table_args__ = (UniqueConstraint("generation_run_id", "movement_number"),)
 
 
 class EnvironmentalObligation(GenerationOwnedMixin, Base):
@@ -249,8 +266,8 @@ class EnvironmentalObligation(GenerationOwnedMixin, Base):
 class ScenarioValue(Base):
     __tablename__ = "scenario_value"
     id: Mapped[str] = mapped_column(String(36), primary_key=True)
-    generation_run_id: Mapped[str | None] = mapped_column(
-        ForeignKey("generation_run.id"), index=True
+    generation_run_id: Mapped[str] = mapped_column(
+        ForeignKey("generation_run.id"), nullable=False, index=True
     )
     scenario_code: Mapped[str] = mapped_column(String(20))
     metric_code: Mapped[str] = mapped_column(String(60))

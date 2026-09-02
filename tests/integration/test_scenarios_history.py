@@ -13,13 +13,14 @@ def _scenario_revenue(scenario: str) -> Decimal:
     engine = create_engine("sqlite:///:memory:")
     Base.metadata.create_all(engine)
     with Session(engine) as session:
-        record_generation_run(
+        run = record_generation_run(
             session, profile="standard", scenario_code=scenario, seed=20260831, git_commit="test"
         )
         generate_standard(session, scenario=scenario)
+        assert run.actual_generation_run_id is not None
         return session.scalar(
             select(func.sum(ScenarioValue.amount)).where(
-                ScenarioValue.scenario_code == scenario,
+                ScenarioValue.generation_run_id.in_((run.actual_generation_run_id, run.id)),
                 ScenarioValue.metric_code == "revenue",
             )
         )

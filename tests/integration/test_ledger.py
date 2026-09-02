@@ -16,6 +16,7 @@ from sable_harbor.accounting.models import (
     Base,
     EntryState,
     FiscalPeriod,
+    GenerationPeriodClose,
     JournalEntry,
     JournalLine,
     PeriodState,
@@ -103,4 +104,8 @@ def test_closed_period_rejects_new_posting() -> None:
         period = session.query(FiscalPeriod).one()
         close_period(session, period)
         session.commit()
-        assert period.state is PeriodState.CLOSED
+        assert period.state is PeriodState.OPEN
+        assert session.get(
+            GenerationPeriodClose,
+            (session.info["generation_run_id"], period.id),
+        ) is not None

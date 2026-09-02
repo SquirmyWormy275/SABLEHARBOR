@@ -1,3 +1,4 @@
+import os
 import subprocess
 from pathlib import Path
 
@@ -107,9 +108,11 @@ def generate(profile: str = "smoke", scenario: str = "base", seed: int = 2026083
             scenario = effective_scenario
             result = generate_standard(session, seed=seed, scenario=scenario)
         elif profile == "benchmark_private":
-            if "var/private/" not in str(engine.url):
+            private_profile_enabled = os.getenv("SHFIN_PRIVATE_BENCHMARK") == "1"
+            if "var/private/" not in str(engine.url) and not private_profile_enabled:
                 raise typer.BadParameter(
-                    "benchmark_private requires SHFIN_DATABASE_URL under var/private/"
+                    "benchmark_private requires SHFIN_DATABASE_URL under var/private/ "
+                    "or SHFIN_PRIVATE_BENCHMARK=1"
                 )
             result = generate_standard(session, seed=seed, scenario=scenario)
         else:
@@ -141,7 +144,10 @@ def post() -> None:
 
 
 @app.command("close")
-def close(through: str = typer.Option(..., help="Close periods through YYYY-MM")) -> None:
+def close(
+    through: str = typer.Option(..., help="Close periods through YYYY-MM"),
+    generation_run_id: str = typer.Option(...),
+) -> None:
     engine = build_engine()
     with session_for(engine) as session:
         periods = list(
@@ -150,8 +156,7 @@ def close(through: str = typer.Option(..., help="Close periods through YYYY-MM")
             )
         )
         for period in periods:
-            if period.state.value == "OPEN":
-                close_period(session, period)
+            close_period(session, period, generation_run_id)
         session.commit()
     typer.echo(f"Closed {len(periods)} eligible periods through {through}")
 
@@ -281,10 +286,10 @@ def statements(generation_run_id: str = typer.Option(...)) -> None:
 
 
 @app.command("explain-lineage")
-def explain_lineage(record_id: str) -> None:
+def explain_lineage(record_id: str, generation_run_id: str = typer.Option(...)) -> None:
     engine = build_engine()
     with session_for(engine) as session:
-        rows = lineage_for(session, record_id)
+        rows = lineage_for(session, record_id, generation_run_id)
     if not rows:
         typer.echo(f"No lineage edges found for {record_id}")
         raise typer.Exit(code=1)

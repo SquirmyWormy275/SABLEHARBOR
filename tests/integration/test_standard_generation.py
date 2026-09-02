@@ -20,7 +20,7 @@ def test_standard_generation_has_48_months_actual_forecast_and_is_idempotent() -
     engine = create_engine("sqlite:///:memory:")
     Base.metadata.create_all(engine)
     with Session(engine) as session:
-        record_generation_run(
+        run = record_generation_run(
             session, profile="standard", scenario_code="base", seed=20260831, git_commit="test"
         )
         first = generate_standard(session)
@@ -45,7 +45,7 @@ def test_standard_generation_has_48_months_actual_forecast_and_is_idempotent() -
         assert {"monthly_actual", "monthly_forecast"}.issubset(sources)
         revenue = session.scalar(
             select(func.sum(ScenarioValue.amount)).where(
-                ScenarioValue.scenario_code == "base",
+                ScenarioValue.generation_run_id.in_((run.actual_generation_run_id, run.id)),
                 ScenarioValue.metric_code == "revenue",
             )
         )

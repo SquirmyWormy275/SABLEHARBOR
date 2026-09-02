@@ -112,6 +112,7 @@ def record_generation_run(
     source_digest = generator_source_digest()
     assumption_sha = assumptions_digest()
     canon_sha = canon_source_lock_digest()
+    manifest_sha = identity.input_manifest_digest
     if run is None:
         run = GenerationRun(
             id=run_id,
@@ -119,6 +120,8 @@ def record_generation_run(
             scenario_id=scenario.id,
             seed=seed,
             actual_dataset_id=identity.actual_dataset_id,
+            build_id=identity.build_id,
+            input_manifest_digest=manifest_sha,
             generator_version=identity.generator_version,
             git_commit=git_commit,
             generator_source_digest=source_digest,
@@ -142,6 +145,8 @@ def record_generation_run(
             run.actual_through,
             run.forecast_from,
             run.schema_head,
+            run.build_id,
+            run.input_manifest_digest,
         )
         requested = (
             git_commit,
@@ -151,6 +156,8 @@ def record_generation_run(
             identity.actual_through,
             identity.forecast_from,
             required_schema_head(),
+            identity.build_id,
+            manifest_sha,
         )
         if persisted != requested:
             raise ValueError(
@@ -178,6 +185,12 @@ def record_generation_run(
 
 
 def complete_generation_run(session: Session, run: GenerationRun) -> None:
+    if run.status == "COMPLETED" and run.completed_at is not None:
+        return
+    if run.status != "RUNNING" or run.completed_at is not None:
+        raise ValueError(
+            f"Generation run {run.id!r} cannot transition from {run.status!r} to COMPLETED"
+        )
     run.completed_at = datetime.now(UTC)
     run.status = "COMPLETED"
     session.flush()
@@ -217,17 +230,23 @@ def run_context(session: Session, generation_run_id: str | None = None) -> RunCo
 
 def link_journals(session: Session, run: GenerationRun) -> int:
     count = 0
+    included_run_ids = (
+        (run.actual_generation_run_id, run.id)
+        if run.actual_generation_run_id is not None
+        else (run.id,)
+    )
     for entry in session.scalars(
-        select(JournalEntry).where(JournalEntry.generation_run_id == run.id)
+        select(JournalEntry).where(JournalEntry.generation_run_id.in_(included_run_ids))
     ):
         edge_id = stable_id(
-            "lineage_edge", f"{run.id}:{entry.source_type}:{entry.source_id}:{entry.id}"
+            "lineage_edge",
+            f"{entry.generation_run_id}:{entry.source_type}:{entry.source_id}:{entry.id}",
         )
         if session.get(LineageEdge, edge_id) is None:
             session.add(
                 LineageEdge(
                     id=edge_id,
-                    generation_run_id=run.id,
+                    generation_run_id=entry.generation_run_id,
                     upstream_type=entry.source_type,
                     upstream_id=entry.source_id,
                     downstream_type="journal_entry",
@@ -240,10 +259,14 @@ def link_journals(session: Session, run: GenerationRun) -> int:
     return count
 
 
-def lineage_for(session: Session, record_id: str) -> list[dict[str, str]]:
+def lineage_for(
+    session: Session, record_id: str, generation_run_id: str | None = None
+) -> list[dict[str, str]]:
+    context = run_context(session, generation_run_id)
     edges = session.scalars(
         select(LineageEdge).where(
-            (LineageEdge.upstream_id == record_id) | (LineageEdge.downstream_id == record_id)
+            LineageEdge.generation_run_id.in_(context.included_run_ids),
+            (LineageEdge.upstream_id == record_id) | (LineageEdge.downstream_id == record_id),
         )
     )
     return [

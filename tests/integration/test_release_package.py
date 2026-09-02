@@ -24,7 +24,7 @@ def test_public_release_manifest_inventory_and_checksums(tmp_path: Path) -> None
         manifest_path = package_public_demo(session, tmp_path / "release", generation_run_id=run.id)
     manifest = json.loads(manifest_path.read_text())
     assert manifest["validation_status"] == "REVIEW_BLOCKED"
-    assert manifest["schema_versions"] == ["0008"]
+    assert manifest["schema_versions"] == ["0012"]
     assert manifest["classification"] == "PUBLIC_SAFE_SYNTHETIC"
     assert manifest["row_counts"]["journal_entry"] > 0
     for artifact in manifest["artifacts"]:

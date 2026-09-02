@@ -1,7 +1,7 @@
 from datetime import date
 from decimal import Decimal
 
-from sqlalchemy import Date, ForeignKey, Numeric, String
+from sqlalchemy import Date, ForeignKey, Numeric, String, UniqueConstraint
 from sqlalchemy.orm import Mapped, mapped_column
 
 from sable_harbor.accounting.models import Base, GenerationOwnedMixin
@@ -40,10 +40,11 @@ class PurchaseOrder(GenerationOwnedMixin, Base):
     id: Mapped[str] = mapped_column(String(36), primary_key=True)
     entity_id: Mapped[str] = mapped_column(ForeignKey("legal_entity.id"))
     vendor_id: Mapped[str] = mapped_column(ForeignKey("vendor.id"))
-    po_number: Mapped[str] = mapped_column(String(40), unique=True)
+    po_number: Mapped[str] = mapped_column(String(40))
     order_date: Mapped[date] = mapped_column(Date)
     amount: Mapped[Decimal] = mapped_column(Numeric(20, 4))
     status: Mapped[str] = mapped_column(String(24))
+    __table_args__ = (UniqueConstraint("generation_run_id", "po_number"),)
 
 
 class GoodsReceipt(GenerationOwnedMixin, Base):
@@ -59,11 +60,12 @@ class VendorBill(GenerationOwnedMixin, Base):
     id: Mapped[str] = mapped_column(String(36), primary_key=True)
     purchase_order_id: Mapped[str] = mapped_column(ForeignKey("purchase_order.id"))
     receipt_id: Mapped[str] = mapped_column(ForeignKey("goods_receipt.id"))
-    bill_number: Mapped[str] = mapped_column(String(40), unique=True)
+    bill_number: Mapped[str] = mapped_column(String(40))
     bill_date: Mapped[date] = mapped_column(Date)
     amount: Mapped[Decimal] = mapped_column(Numeric(20, 4))
     match_status: Mapped[str] = mapped_column(String(24))
     journal_entry_id: Mapped[str] = mapped_column(ForeignKey("journal_entry.id"))
+    __table_args__ = (UniqueConstraint("generation_run_id", "bill_number"),)
 
 
 class VendorPayment(GenerationOwnedMixin, Base):
@@ -89,9 +91,10 @@ class DebtFacility(GenerationOwnedMixin, Base):
     __tablename__ = "debt_facility"
     id: Mapped[str] = mapped_column(String(36), primary_key=True)
     entity_id: Mapped[str] = mapped_column(ForeignKey("legal_entity.id"))
-    facility_number: Mapped[str] = mapped_column(String(40), unique=True)
+    facility_number: Mapped[str] = mapped_column(String(40))
     commitment: Mapped[Decimal] = mapped_column(Numeric(20, 4))
     annual_rate: Mapped[Decimal] = mapped_column(Numeric(12, 8))
+    __table_args__ = (UniqueConstraint("generation_run_id", "facility_number"),)
 
 
 class DebtDraw(GenerationOwnedMixin, Base):

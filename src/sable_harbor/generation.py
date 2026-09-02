@@ -175,9 +175,11 @@ def _post(
     lines: list[JournalLine],
     entry_date: date = date(2026, 12, 31),
     source_type: str = "deterministic_generation",
+    generation_run_id: str | None = None,
 ) -> None:
     entry = JournalEntry(
         id=stable_id("journal", key),
+        generation_run_id=generation_run_id,
         book_id=book_id,
         period_id=period_id,
         entry_date=entry_date,
@@ -188,6 +190,34 @@ def _post(
     )
     session.add(entry)
     post_entry(session, entry)
+
+
+def _period_is_actual(run: GenerationRun, starts_on: date, ends_on: date) -> bool:
+    """Classify a whole reporting period from the persisted run contract."""
+    if run.actual_through is None or run.forecast_from is None:
+        raise ValueError(f"Generation run {run.id!r} has no cutoff contract")
+    if ends_on <= run.actual_through:
+        return True
+    if starts_on >= run.forecast_from:
+        return False
+    raise ValueError(
+        f"Reporting period {starts_on}..{ends_on} crosses or is not covered by the "
+        f"persisted cutoff {run.actual_through} / {run.forecast_from}"
+    )
+
+
+def _dated_fact_is_actual(run: GenerationRun, effective_on: date) -> bool:
+    """Classify a point-in-time fact from the persisted run contract."""
+    if run.actual_through is None or run.forecast_from is None:
+        raise ValueError(f"Generation run {run.id!r} has no cutoff contract")
+    if effective_on <= run.actual_through:
+        return True
+    if effective_on >= run.forecast_from:
+        return False
+    raise ValueError(
+        f"Fact date {effective_on} is not covered by persisted cutoff "
+        f"{run.actual_through} / {run.forecast_from}"
+    )
 
 
 def generate_baseline(
@@ -213,6 +243,12 @@ def generate_baseline(
         }
     rng = Random(seed)
     plans = entity_plans()
+    active_run_id = session.info.get(GENERATION_RUN_SESSION_KEY)
+    active_run = (
+        session.get(GenerationRun, str(active_run_id)) if active_run_id is not None else None
+    )
+    if active_run is None or active_run.actual_through is None or active_run.forecast_from is None:
+        raise ValueError("Baseline generation requires a persisted run cutoff contract")
 
     parent_id = _entity_id("SHI")
     entities = [
@@ -252,16 +288,22 @@ def generate_baseline(
             jurisdiction="N/A",
         ),
     ]
-    session.add(entities[0])
-    session.flush()
-    session.add_all(entities[1:])
+    for entity in entities:
+        if session.get(LegalEntity, entity.id) is None:
+            session.add(entity)
     session.flush()
     for code, name, cls, normal in ACCOUNTS:
-        session.add(
-            Account(
-                id=_account_id(code), code=code, name=name, account_class=cls, normal_balance=normal
+        account_id = _account_id(code)
+        if session.get(Account, account_id) is None:
+            session.add(
+                Account(
+                    id=account_id,
+                    code=code,
+                    name=name,
+                    account_class=cls,
+                    normal_balance=normal,
+                )
             )
-        )
 
     sites = {
         "SAC": Site(
@@ -292,21 +334,27 @@ def generate_baseline(
             fact_state=FactState.MODEL_PROPOSED,
         ),
     }
-    session.add_all(sites.values())
+    for site_record in sites.values():
+        if session.get(Site, site_record.id) is None:
+            session.add(site_record)
     periods: dict[str, tuple[str, str]] = {}
     for entity_obj in entities:
         book_id = stable_id("book", f"{entity_obj.code}:PRIMARY_USD")
         period_id = stable_id("period", f"{book_id}:2026-12")
-        session.add(AccountingBook(id=book_id, entity_id=entity_obj.id, code="PRIMARY_USD"))
-        session.add(
-            FiscalPeriod(
-                id=period_id,
-                book_id=book_id,
-                code="2026-12",
-                starts_on=date(2026, 12, 1),
-                ends_on=date(2026, 12, monthrange(2026, 12)[1]),
+        if session.get(AccountingBook, book_id) is None:
+            session.add(
+                AccountingBook(id=book_id, entity_id=entity_obj.id, code="PRIMARY_USD")
             )
-        )
+        if session.get(FiscalPeriod, period_id) is None:
+            session.add(
+                FiscalPeriod(
+                    id=period_id,
+                    book_id=book_id,
+                    code="2026-12",
+                    starts_on=date(2026, 12, 1),
+                    ends_on=date(2026, 12, monthrange(2026, 12)[1]),
+                )
+            )
         periods[entity_obj.code] = (book_id, period_id)
     session.flush()
 
@@ -374,7 +422,7 @@ def generate_baseline(
             number = f"SHW-{worker_no:05d}"
             session.add(
                 Worker(
-                    id=stable_id("worker", number),
+                    id=stable_id("worker", f"{marker}:{number}"),
                     worker_number=number,
                     worker_type="EMPLOYEE",
                     entity_id=_entity_id(entity_code),
@@ -391,7 +439,7 @@ def generate_baseline(
         number = f"SHC-{i:05d}"
         session.add(
             Worker(
-                id=stable_id("worker", number),
+                id=stable_id("worker", f"{marker}:{number}"),
                 worker_number=number,
                 worker_type="CONTRACTOR",
                 entity_id=parent_id,
@@ -409,7 +457,7 @@ def generate_baseline(
     for i in range(1, 59):
         code = f"CUS-{i:04d}"
         party = BusinessParty(
-            id=stable_id("party", code),
+            id=stable_id("party", f"{marker}:{code}"),
             code=code,
             party_type="CUSTOMER",
             segment_code="CORE",
@@ -419,7 +467,7 @@ def generate_baseline(
         session.add(party)
         session.add(
             Contract(
-                id=stable_id("contract", code),
+                id=stable_id("contract", f"{marker}:{code}"),
                 code=f"MSA-2026-{i:04d}",
                 entity_id=parent_id,
                 party_id=party.id,
@@ -434,7 +482,7 @@ def generate_baseline(
         code = f"VEN-{i:04d}"
         session.add(
             BusinessParty(
-                id=stable_id("party", code),
+                id=stable_id("party", f"{marker}:{code}"),
                 code=code,
                 party_type="VENDOR",
                 segment_code="ENTERPRISE",
@@ -453,7 +501,7 @@ def generate_baseline(
     ]:
         session.add(
             FixedAsset(
-                id=stable_id("asset", asset_no),
+                id=stable_id("asset", f"{marker}:{asset_no}"),
                 asset_number=asset_no,
                 entity_id=_entity_id(entity_code),
                 site_id=sites[site].id,
@@ -465,13 +513,20 @@ def generate_baseline(
                 fact_state=FactState.SCENARIO_INPUT,
             )
         )
+    # The common-actual layer stops at its persisted cutoff. Future
+    # operating facts are materialized by ``generate_standard`` in the selected
+    # scenario run; keeping them here would make forecasts look observed.
     for month in range(1, 13):
+        period_start = date(2026, month, 1)
+        period_end = date(2026, month, monthrange(2026, month)[1])
+        if not _period_is_actual(active_run, period_start, period_end):
+            continue
         ore = D(13500 + rng.randrange(-1600, 1601))
         recovery = D(str(0.812 + rng.random() * 0.048)).quantize(D("0.000001"))
         lbs = (ore * D("1.72") * recovery).quantize(D("0.01"))
         session.add(
             ProductionRecord(
-                id=stable_id("production", f"RWH:2026-{month:02d}"),
+                id=stable_id("production", f"{marker}:RWH:2026-{month:02d}"),
                 site_id=sites["RED_WASH"].id,
                 period_code=f"2026-{month:02d}",
                 ore_tonnes=ore,
@@ -481,23 +536,27 @@ def generate_baseline(
                 fact_state=FactState.SYNTHETIC_INSTANCE,
             )
         )
-    session.add(
-        InventoryLot(
-            id=stable_id("lot", "RWH-2026-ENDING"),
-            lot_number="RWH-2026-ENDING",
-            entity_id=_entity_id("RWH"),
-            site_id=sites["RED_WASH"].id,
-            inventory_stage="CONCENTRATE",
-            quantity=D("68400"),
-            unit="LB_U3O8",
-            carrying_value=D("2900000"),
-            as_of_date=date(2026, 12, 31),
-            fact_state=FactState.SYNTHETIC_INSTANCE,
-        )
-    )
+    ending_inventory_date = date(2026, 12, 31)
+    if _dated_fact_is_actual(active_run, ending_inventory_date):
+        ending_inventory_id = stable_id("lot", f"{marker}:RWH-2026-ENDING")
+        if session.get(InventoryLot, ending_inventory_id) is None:
+            session.add(
+                InventoryLot(
+                    id=ending_inventory_id,
+                    lot_number="RWH-2026-ENDING",
+                    entity_id=_entity_id("RWH"),
+                    site_id=sites["RED_WASH"].id,
+                    inventory_stage="CONCENTRATE",
+                    quantity=D("68400"),
+                    unit="LB_U3O8",
+                    carrying_value=D("2900000"),
+                    as_of_date=ending_inventory_date,
+                    fact_state=FactState.SYNTHETIC_INSTANCE,
+                )
+            )
     session.add(
         EnvironmentalObligation(
-            id=stable_id("obligation", "RWH-ARO"),
+            id=stable_id("obligation", f"{marker}:RWH-ARO"),
             entity_id=_entity_id("RWH"),
             site_id=sites["RED_WASH"].id,
             obligation_type="MINE_CLOSURE_ARO",
@@ -509,13 +568,17 @@ def generate_baseline(
         )
     )
     for i in range(1, 121):
+        movement_month = ((i - 1) % 12) + 1
+        movement_date = date(2026, movement_month, min(25, ((i * 7) % 27) + 1))
+        if not _dated_fact_is_actual(active_run, movement_date):
+            continue
         intercompany = i % 20 == 0
         session.add(
             FreightMovement(
-                id=stable_id("movement", f"ARU-2026-{i:04d}"),
+                id=stable_id("movement", f"{marker}:ARU-2026-{i:04d}"),
                 movement_number=f"ARU-2026-{i:04d}",
                 entity_id=_entity_id("ARU"),
-                movement_date=date(2026, ((i - 1) % 12) + 1, min(25, ((i * 7) % 27) + 1)),
+                movement_date=movement_date,
                 commodity="URANIUM_CONCENTRATE" if intercompany else "MINERAL_PRODUCTS",
                 tonnes=D(65 if intercompany else 740 + rng.randrange(-120, 121)),
                 revenue=D("500000") if intercompany else D(100000 + rng.randrange(20000, 90001)),
@@ -679,7 +742,9 @@ def generate_baseline(
     return {"scenario": scenario, "seed": seed, "employees": 708, "contractors": 61}
 
 
-def _ensure_common_actual_layer(session: Session, seed: int) -> GenerationRun:
+def _ensure_common_actual_layer(
+    session: Session, seed: int, *, complete: bool = True
+) -> GenerationRun:
     selected_run_id = session.info.get(GENERATION_RUN_SESSION_KEY)
     selected_run = (
         session.get(GenerationRun, str(selected_run_id)) if selected_run_id is not None else None
@@ -693,7 +758,8 @@ def _ensure_common_actual_layer(session: Session, seed: int) -> GenerationRun:
         git_commit=git_commit,
     )
     generate_baseline(session, seed=seed, scenario="actual_common", post_summary=False)
-    complete_generation_run(session, actual_run)
+    if complete and actual_run.status == "RUNNING":
+        complete_generation_run(session, actual_run)
     if selected_run is not None:
         selected_run.actual_generation_run_id = actual_run.id
         session.info[GENERATION_RUN_SESSION_KEY] = selected_run.id
@@ -704,7 +770,12 @@ def generate_baseline_run(
     session: Session, seed: int = 20260831, scenario: str = "base"
 ) -> dict[str, int | str]:
     """Attach a baseline scenario run to deterministic common opening and actual facts."""
-    _ensure_common_actual_layer(session, seed)
+    _ensure_common_actual_layer(session, seed, complete=False)
+    session.info["populate_common_actuals_only"] = True
+    try:
+        generate_standard(session, seed=seed, scenario=scenario)
+    finally:
+        session.info.pop("populate_common_actuals_only", None)
     run_id = str(session.info[GENERATION_RUN_SESSION_KEY])
     marker_id = stable_id("scenario_value", f"run:{run_id}:marker")
     if session.get(ScenarioValue, marker_id) is None:
@@ -733,16 +804,37 @@ def generate_standard(
     run_id = session.info.get(GENERATION_RUN_SESSION_KEY)
     if run_id is None:
         raise ValueError("Standard generation requires an active generation run")
+    selected_run = session.get(GenerationRun, str(run_id))
+    if selected_run is None:
+        raise ValueError(f"Unknown active generation run {run_id!r}")
     marker = stable_id("generation_namespace", str(run_id))
     marker_id = stable_id("scenario_value", f"run:{run_id}:generation-marker")
-    if session.get(ScenarioValue, marker_id):
+    actuals_only = bool(session.info.get("populate_common_actuals_only"))
+    existing_marker = session.get(ScenarioValue, marker_id)
+    if not actuals_only and existing_marker is not None:
         return {
             "scenario": scenario,
             "profile": "standard",
             "seed": seed,
             "periods": 48,
         }
-    _ensure_common_actual_layer(session, seed)
+    actual_run = _ensure_common_actual_layer(session, seed, complete=False)
+    if (
+        selected_run.actual_through != actual_run.actual_through
+        or selected_run.forecast_from != actual_run.forecast_from
+    ):
+        raise ValueError("Selected and common-actual runs have incompatible cutoff contracts")
+    actual_standard_marker_id = stable_id(
+        "scenario_value", f"run:{actual_run.id}:standard-actual-marker"
+    )
+    if (
+        actual_run.status == "COMPLETED"
+        and session.get(ScenarioValue, actual_standard_marker_id) is None
+    ):
+        raise ValueError(
+            "Completed common-actual layer does not satisfy the standard profile contract; "
+            "completed generation runs are immutable"
+        )
     books = {
         entity.code: book
         for entity, book in session.execute(
@@ -799,7 +891,15 @@ def generate_standard(
             ) -> D:
                 return (
                     D(1)
-                    if date(calculation_year, month, 1) <= date(2026, 8, 1)
+                    if _period_is_actual(
+                        selected_run,
+                        date(calculation_year, month, 1),
+                        date(
+                            calculation_year,
+                            month,
+                            monthrange(calculation_year, month)[1],
+                        ),
+                    )
                     else scenario_multiplier
                 )
 
@@ -835,7 +935,9 @@ def generate_standard(
                     )
                     session.add(period)
                     session.flush()
-                is_actual = date(year, month, 1) <= date(2026, 8, 1)
+                is_actual = _period_is_actual(selected_run, period.starts_on, period.ends_on)
+                if actuals_only and not is_actual:
+                    continue
                 period_revenue_multiplier = D(1) if is_actual else revenue_multiplier
                 period_cost_multiplier = D(1) if is_actual else cost_multiplier
                 scenario_revenue = annual_revenue * period_revenue_multiplier
@@ -849,48 +951,156 @@ def generate_standard(
                 allocated_revenue += revenue
                 allocated_cost += cost
                 availability = (
-                    "monthly_actual"
-                    if date(year, month, 1) <= date(2026, 8, 1)
-                    else "monthly_forecast"
+                    "monthly_actual" if is_actual else "monthly_forecast"
                 )
-                key = f"{marker}:{entity_code}:{period_code}:OPERATIONS"
-                _post(
-                    session,
-                    book.id,
-                    period.id,
-                    key,
-                    f"Monthly generated operating control — {entity_code} {period_code}",
-                    [
-                        _line(key, 1, "1000", debit=revenue, segment=entity_code),
-                        _line(
-                            key,
-                            2,
-                            revenue_accounts[entity_code],
-                            credit=revenue,
-                            segment=entity_code,
-                        ),
-                        _line(key, 3, "5000", debit=cost, segment=entity_code),
-                        _line(key, 4, "1000", credit=cost, segment=entity_code),
-                    ],
-                    entry_date=period.ends_on,
-                    source_type=availability,
-                )
-                for metric, amount in (("revenue", revenue), ("operating_cost", cost)):
-                    session.add(
-                        ScenarioValue(
-                            id=stable_id(
-                                "scenario_value", f"{marker}:{entity_code}:{period_code}:{metric}"
+                owner_run_id = actual_run.id if is_actual else str(run_id)
+                owner_scenario = "actual_common" if is_actual else scenario
+                owner_marker = stable_id("generation_namespace", owner_run_id)
+                key = f"{owner_marker}:{entity_code}:{period_code}:OPERATIONS"
+                if session.get(JournalEntry, stable_id("journal", key)) is None:
+                    _post(
+                        session,
+                        book.id,
+                        period.id,
+                        key,
+                        f"Monthly generated operating control — {entity_code} {period_code}",
+                        [
+                            _line(key, 1, "1000", debit=revenue, segment=entity_code),
+                            _line(
+                                key,
+                                2,
+                                revenue_accounts[entity_code],
+                                credit=revenue,
+                                segment=entity_code,
                             ),
-                            scenario_code=scenario,
-                            metric_code=metric,
-                            entity_code=entity_code,
-                            period_code=period_code,
-                            amount=amount,
-                            unit="USD",
-                            fact_state=FactState.DERIVED,
-                            provenance=f"{availability} from versioned annual driver",
-                        )
+                            _line(key, 3, "5000", debit=cost, segment=entity_code),
+                            _line(key, 4, "1000", credit=cost, segment=entity_code),
+                        ],
+                        entry_date=period.ends_on,
+                        source_type=availability,
+                        generation_run_id=owner_run_id,
                     )
+                for metric, amount in (("revenue", revenue), ("operating_cost", cost)):
+                    value_id = stable_id(
+                        "scenario_value",
+                        f"{owner_marker}:{entity_code}:{period_code}:{metric}",
+                    )
+                    if session.get(ScenarioValue, value_id) is None:
+                        session.add(
+                            ScenarioValue(
+                                id=value_id,
+                                generation_run_id=owner_run_id,
+                                scenario_code=owner_scenario,
+                                metric_code=metric,
+                                entity_code=entity_code,
+                                period_code=period_code,
+                                amount=amount,
+                                unit="USD",
+                                fact_state=FactState.DERIVED,
+                                provenance=f"{availability} from versioned annual driver",
+                            )
+                        )
+    if actuals_only:
+        if session.get(ScenarioValue, actual_standard_marker_id) is None:
+            session.add(
+                ScenarioValue(
+                    id=actual_standard_marker_id,
+                    generation_run_id=actual_run.id,
+                    scenario_code="actual_common",
+                    metric_code="standard_actual_completion_marker",
+                    entity_code="CONSOLIDATED",
+                    period_code=(
+                        f"2023-2026_ACTUAL_THROUGH_{actual_run.actual_through:%Y-%m-%d}"
+                    ),
+                    amount=D(1),
+                    unit="count",
+                    fact_state=FactState.DERIVED,
+                    provenance="common actual superset contract marker",
+                )
+            )
+        if actual_run.status == "RUNNING":
+            complete_generation_run(session, actual_run)
+        session.flush()
+        return {"scenario": scenario, "profile": "standard", "seed": seed, "periods": 44}
+
+    # Scenario-owned operating forecasts.  These deliberately mirror the dated
+    # actual registers above without placing post-cutoff records in actual_common.
+    forecast_rng = Random(seed)
+    actual_production_months = [
+        month
+        for month in range(1, 13)
+        if _period_is_actual(
+            selected_run,
+            date(2026, month, 1),
+            date(2026, month, monthrange(2026, month)[1]),
+        )
+    ]
+    for _ in actual_production_months:
+        forecast_rng.randrange(-1600, 1601)
+        forecast_rng.random()
+    red_wash_site_id = stable_id("site", "RED_WASH")
+    aru_revenue_multiplier = revenue_multiplier
+    for month in range(1, 13):
+        period_start = date(2026, month, 1)
+        period_end = date(2026, month, monthrange(2026, month)[1])
+        if _period_is_actual(selected_run, period_start, period_end):
+            continue
+        ore = D(13500 + forecast_rng.randrange(-1600, 1601))
+        ore = (ore * revenue_multiplier).quantize(D("0.01"))
+        recovery = D(str(0.812 + forecast_rng.random() * 0.048)).quantize(D("0.000001"))
+        lbs = (ore * D("1.72") * recovery).quantize(D("0.01"))
+        session.add(
+            ProductionRecord(
+                id=stable_id("production", f"{marker}:RWH:2026-{month:02d}"),
+                site_id=red_wash_site_id,
+                period_code=f"2026-{month:02d}",
+                ore_tonnes=ore,
+                mill_feed_tonnes=(ore * D("0.94")).quantize(D("0.01")),
+                concentrate_lbs=lbs,
+                recovery_rate=recovery,
+                fact_state=FactState.SYNTHETIC_INSTANCE,
+            )
+        )
+    ending_inventory_date = date(2026, 12, 31)
+    if not _dated_fact_is_actual(selected_run, ending_inventory_date):
+        session.add(
+            InventoryLot(
+                id=stable_id("lot", f"{marker}:RWH-2026-ENDING"),
+                lot_number="RWH-2026-ENDING",
+                entity_id=_entity_id("RWH"),
+                site_id=red_wash_site_id,
+                inventory_stage="CONCENTRATE",
+                quantity=(D("68400") * revenue_multiplier).quantize(D("0.01")),
+                unit="LB_U3O8",
+                carrying_value=(D("2900000") * cost_multiplier).quantize(D("0.01")),
+                as_of_date=ending_inventory_date,
+                fact_state=FactState.SYNTHETIC_INSTANCE,
+            )
+        )
+    for i in range(1, 121):
+        movement_month = ((i - 1) % 12) + 1
+        movement_date = date(2026, movement_month, min(25, ((i * 7) % 27) + 1))
+        if _dated_fact_is_actual(selected_run, movement_date):
+            continue
+        intercompany = i % 20 == 0
+        baseline_revenue = D("500000") if intercompany else D(
+            100000 + forecast_rng.randrange(20000, 90001)
+        )
+        session.add(
+            FreightMovement(
+                id=stable_id("movement", f"{marker}:ARU-2026-{i:04d}"),
+                movement_number=f"ARU-2026-{i:04d}",
+                entity_id=_entity_id("ARU"),
+                movement_date=movement_date,
+                commodity="URANIUM_CONCENTRATE" if intercompany else "MINERAL_PRODUCTS",
+                tonnes=D(65 if intercompany else 740 + forecast_rng.randrange(-120, 121)),
+                revenue=(baseline_revenue * aru_revenue_multiplier).quantize(D("0.01")),
+                intercompany=intercompany,
+                custody_status="HELD_RECONCILIATION" if i == 100 else "COMPLETE",
+                fact_state=FactState.SYNTHETIC_INSTANCE,
+            )
+        )
+
     ic = D("3000000")
     ic_period = "2026-12"
     aru_book = books["ARU"]
@@ -978,6 +1188,25 @@ def generate_standard(
             provenance="standard run marker; common actuals plus scenario forecast",
         )
     )
+    if session.get(ScenarioValue, actual_standard_marker_id) is None:
+        session.add(
+            ScenarioValue(
+                id=actual_standard_marker_id,
+                generation_run_id=actual_run.id,
+                scenario_code="actual_common",
+                metric_code="standard_actual_completion_marker",
+                entity_code="CONSOLIDATED",
+                period_code=(
+                    f"2023-2026_ACTUAL_THROUGH_{actual_run.actual_through:%Y-%m-%d}"
+                ),
+                amount=D(1),
+                unit="count",
+                fact_state=FactState.DERIVED,
+                provenance="standard profile common-actual contract marker",
+            )
+        )
+    if actual_run.status == "RUNNING":
+        complete_generation_run(session, actual_run)
     session.flush()
     return {"scenario": scenario, "profile": "standard", "seed": seed, "periods": 48}
 

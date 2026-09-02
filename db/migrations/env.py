@@ -5,6 +5,7 @@ from alembic import context
 from sqlalchemy import engine_from_config, pool
 
 from sable_harbor.accounting.models import Base
+from sable_harbor import schema as _schema  # noqa: F401
 from sable_harbor.commercial import models as commercial_models  # noqa: F401
 from sable_harbor.operations import models as operations_models  # noqa: F401
 from sable_harbor.mining import models as mining_models  # noqa: F401

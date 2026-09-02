@@ -19,6 +19,23 @@ from .models import (
 
 
 def seed_smoke(session: Session) -> str:
+    if "generation_run_id" not in session.info:
+        # Standalone accounting-kernel fixtures still require an explicit,
+        # persisted generation owner now that ownership is database mandatory.
+        from sable_harbor.provenance.service import (
+            complete_generation_run,
+            record_generation_run,
+        )
+
+        fixture_run = record_generation_run(
+            session,
+            profile="smoke",
+            scenario_code="base",
+            seed=20260831,
+            git_commit="0" * 40,
+        )
+        complete_generation_run(session, fixture_run)
+
     entity_id = stable_id("entity", "SABLE_HARBOR_MODEL_PARENT")
     book_id = stable_id("book", "SABLE_HARBOR_MODEL_PARENT:PRIMARY_USD")
     period_id = stable_id("period", f"{book_id}:2026-08")
@@ -38,7 +55,9 @@ def seed_smoke(session: Session) -> str:
             effective_from=date(2016, 1, 1),
         )
     )
+    session.flush()
     session.add(AccountingBook(id=book_id, entity_id=entity_id, code="PRIMARY_USD"))
+    session.flush()
     session.add(
         FiscalPeriod(
             id=period_id,
@@ -213,6 +232,7 @@ def seed_smoke(session: Session) -> str:
             ),
         ]
     )
+    session.flush()
     entry = JournalEntry(
         id=stable_id("journal", "SMOKE:OPENING_CAPITAL"),
         book_id=book_id,

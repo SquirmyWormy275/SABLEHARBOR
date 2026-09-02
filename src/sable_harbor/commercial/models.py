@@ -20,12 +20,13 @@ class Contract(GenerationOwnedMixin, Base):
     id: Mapped[str] = mapped_column(String(36), primary_key=True)
     customer_id: Mapped[str] = mapped_column(ForeignKey("customer.id"))
     entity_id: Mapped[str] = mapped_column(ForeignKey("legal_entity.id"))
-    contract_number: Mapped[str] = mapped_column(String(80), unique=True)
+    contract_number: Mapped[str] = mapped_column(String(80))
     starts_on: Mapped[date] = mapped_column(Date)
     ends_on: Mapped[date] = mapped_column(Date)
     transaction_price: Mapped[Decimal] = mapped_column(Numeric(20, 4))
     currency: Mapped[str] = mapped_column(String(3), default="USD")
     fact_state: Mapped[FactState] = mapped_column(Enum(FactState))
+    __table_args__ = (UniqueConstraint("generation_run_id", "contract_number"),)
 
 
 class PerformanceObligation(GenerationOwnedMixin, Base):
@@ -41,7 +42,7 @@ class Invoice(GenerationOwnedMixin, Base):
     __tablename__ = "invoice"
     id: Mapped[str] = mapped_column(String(36), primary_key=True)
     contract_id: Mapped[str] = mapped_column(ForeignKey("customer_contract.id"))
-    invoice_number: Mapped[str] = mapped_column(String(80), unique=True)
+    invoice_number: Mapped[str] = mapped_column(String(80))
     invoice_date: Mapped[date] = mapped_column(Date)
     due_date: Mapped[date] = mapped_column(Date)
     currency: Mapped[str] = mapped_column(String(3))
@@ -49,8 +50,11 @@ class Invoice(GenerationOwnedMixin, Base):
     status: Mapped[str] = mapped_column(String(30), default="ISSUED")
     journal_entry_id: Mapped[str | None] = mapped_column(ForeignKey("journal_entry.id"))
     lines: Mapped[list["InvoiceLine"]] = relationship(
-        back_populates="invoice", cascade="all, delete-orphan"
+        back_populates="invoice",
+        cascade="all, delete-orphan",
+        foreign_keys="InvoiceLine.invoice_id",
     )
+    __table_args__ = (UniqueConstraint("generation_run_id", "invoice_number"),)
 
 
 class InvoiceLine(GenerationOwnedMixin, Base):
@@ -60,7 +64,7 @@ class InvoiceLine(GenerationOwnedMixin, Base):
     performance_obligation_id: Mapped[str] = mapped_column(ForeignKey("performance_obligation.id"))
     description: Mapped[str] = mapped_column(String(250))
     amount: Mapped[Decimal] = mapped_column(Numeric(20, 4))
-    invoice: Mapped[Invoice] = relationship(back_populates="lines")
+    invoice: Mapped[Invoice] = relationship(back_populates="lines", foreign_keys=[invoice_id])
 
 
 class RevenueRecognition(GenerationOwnedMixin, Base):
@@ -86,12 +90,13 @@ class Engagement(GenerationOwnedMixin, Base):
     __tablename__ = "engagement"
     id: Mapped[str] = mapped_column(String(36), primary_key=True)
     contract_id: Mapped[str] = mapped_column(ForeignKey("customer_contract.id"))
-    engagement_code: Mapped[str] = mapped_column(String(60), unique=True)
+    engagement_code: Mapped[str] = mapped_column(String(60))
     name: Mapped[str] = mapped_column(String(200))
     billing_method: Mapped[str] = mapped_column(String(30))
     starts_on: Mapped[date] = mapped_column(Date)
     ends_on: Mapped[date] = mapped_column(Date)
     fact_state: Mapped[FactState] = mapped_column(Enum(FactState))
+    __table_args__ = (UniqueConstraint("generation_run_id", "engagement_code"),)
 
 
 class ProjectTask(GenerationOwnedMixin, Base):

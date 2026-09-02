@@ -2,10 +2,12 @@ from datetime import date, datetime
 
 from sqlalchemy import (
     Boolean,
+    CheckConstraint,
     Date,
     DateTime,
     Enum,
     ForeignKey,
+    ForeignKeyConstraint,
     Integer,
     String,
     Text,
@@ -65,7 +67,9 @@ class GenerationRun(Base):
     actual_generation_run_id: Mapped[str | None] = mapped_column(
         ForeignKey("generation_run.id"), index=True
     )
-    actual_dataset_id: Mapped[str | None] = mapped_column(String(36), index=True)
+    actual_dataset_id: Mapped[str] = mapped_column(String(36), nullable=False, index=True)
+    build_id: Mapped[str] = mapped_column(String(36), nullable=False, unique=True)
+    input_manifest_digest: Mapped[str] = mapped_column(String(64), nullable=False)
     seed: Mapped[int] = mapped_column(Integer)
     generator_version: Mapped[str] = mapped_column(String(40))
     git_commit: Mapped[str] = mapped_column(String(40))
@@ -78,7 +82,19 @@ class GenerationRun(Base):
     started_at: Mapped[datetime] = mapped_column(DateTime(timezone=True))
     completed_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
     status: Mapped[str] = mapped_column(String(24))
-    __table_args__ = (UniqueConstraint("profile", "scenario_id", "seed", "generator_version"),)
+    __table_args__ = (
+        UniqueConstraint("id", "actual_dataset_id", name="uq_generation_run_id_actual_dataset_id"),
+        ForeignKeyConstraint(
+            ["actual_generation_run_id", "actual_dataset_id"],
+            ["generation_run.id", "generation_run.actual_dataset_id"],
+            name="fk_generation_run_actual_dataset_compatible",
+        ),
+        CheckConstraint(
+            "(status = 'RUNNING' AND completed_at IS NULL) OR "
+            "(status = 'COMPLETED' AND completed_at IS NOT NULL)",
+            name="ck_generation_run_lifecycle",
+        ),
+    )
 
 
 class Artifact(Base):

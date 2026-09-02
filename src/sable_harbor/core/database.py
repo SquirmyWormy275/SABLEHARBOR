@@ -3,7 +3,7 @@ from pathlib import Path
 
 from alembic.config import Config
 from alembic.script import ScriptDirectory
-from sqlalchemy import Engine, create_engine, text
+from sqlalchemy import Engine, create_engine, event, text
 from sqlalchemy.exc import SQLAlchemyError
 from sqlalchemy.orm import Session
 
@@ -17,7 +17,17 @@ def build_engine(url: str | None = None) -> Engine:
     if selected.startswith("sqlite:///"):
         path = Path(selected.removeprefix("sqlite:///"))
         path.parent.mkdir(parents=True, exist_ok=True)
-    return create_engine(selected)
+    engine = create_engine(selected)
+    if selected.startswith("sqlite:"):
+        @event.listens_for(engine, "connect")
+        def _enable_sqlite_foreign_keys(dbapi_connection: object, _record: object) -> None:
+            cursor = dbapi_connection.cursor()  # type: ignore[attr-defined]
+            try:
+                cursor.execute("PRAGMA foreign_keys=ON")
+            finally:
+                cursor.close()
+
+    return engine
 
 
 def session_for(engine: Engine) -> Session:

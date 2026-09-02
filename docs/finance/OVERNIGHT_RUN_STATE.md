@@ -95,8 +95,90 @@
   journals. Remote CI at `de9fab8` PASS: PostgreSQL 28s/31s, SQLite 53s/56s, and organization
   render validation 6s. The PostgreSQL jobs cover migration `0008`, standard generation, and
   validation; the expanded all-profile/two-seed PostgreSQL matrix remains open.
-  Stage 1 remains open. Exact resume point: add migration-backed two-seed actual-dataset natural-key
-  namespacing and cross-run database ownership constraints/tests before cutoff partitioning and
-  comparison-query work.
+  Stage 1 remains open. The subsequent uncommitted tranche adds SQLite two-seed namespacing;
+  cross-run database ownership constraints/tests remain the next dependency before cutoff
+  partitioning and comparison-query work.
 - Human/canon review: legal entity chain, acquisition/PPA and financing terms, mine/ARU driver ranges, board and named executive structure. These remain deliberately reversible and do not block platform operation.
+- Current uncommitted tranche advances migration head through `0012`. It adds a complete
+  repository-relative generation-input manifest, content-addressed build and actual-dataset IDs,
+  explicit profile/scenario contracts, and idempotent immutable completion timestamps. Local
+  validation: Ruff PASS; strict mypy PASS (33 source files); pytest PASS (55 passed, one
+  PostgreSQL-only test skipped because `SHFIN_POSTGRES_TEST_URL` is not configured). SQLite
+  two-seed natural-key namespacing now passes. Revision `0011` makes all generated ownership
+  non-null, adds same-run composite parent/child constraints and compatible actual-dataset
+  attachment, guards lifecycle combinations, and prevents completed identity mutation in the
+  database. Revision `0012` adds run-scoped close state and scoped accounting/lineage APIs. Cutoff
+  partitioning, broader comparison APIs, and the expanded PostgreSQL matrix remain open.
+- The profile contract includes the CLI-default `smoke/base` profile. Semantic tests exercise both
+  the no-option default and explicit `--profile smoke` generation, verify the persisted completed
+  run context and owned journals, and reject incompatible `smoke/stress` requests.
 - Uncommitted files: inspect with `git status --short`
+- The current uncommitted migration head is `0012`. Generated natural keys and common-actual
+  primary keys are seed/run namespaced. A migrated SQLite database proves two `standard/base`
+  seeds coexist with 1,538 separately owned workers and each scenario run references its own
+  actual layer. Run IDs now include the complete input-manifest digest, allowing changed builds to
+  coexist rather than collide. A populated downgrade preflight refuses the lossy return to global
+  natural keys and preserves the `0010` data/schema. SQLite semantic violations now prove rejection
+  of null ownership, cross-run generated links, incompatible actual layers, invalid lifecycle
+  combinations, and mutation of completed run identity, including source/canon/assumption digests
+  and start time. Trial balance, lineage, and close APIs pass a two-run contamination test.
+  PostgreSQL two-seed/violation proof, cutoff auditing, and broader comparison APIs remain open.
+- Follow-up correction evidence: run-context close now records closure for both the selected
+  scenario and its included common-actual run; semantic tests prove both owners reject later
+  posting. Explicit journal ownership and reversal are rejected when incompatible with the active
+  session context. Local validation after this correction: Ruff PASS; strict mypy PASS (33 source
+  files); pytest PASS (66 passed, one PostgreSQL-only skip). PostgreSQL `0009`–`0012` proof remains
+  open.
+- Migration `0012` correction: legacy globally closed fiscal periods are materialized for every
+  existing run during upgrade and remain a compatibility posting guard. Downgrade projects only
+  uniform run close state back to the global field and refuses mixed state. The regression test
+  upgrades a populated closed-period database, proves posting is still rejected, proves a lossless
+  downgrade preserves `CLOSED`, and proves a lossy downgrade is refused. Local validation after
+  this correction: Ruff PASS; strict mypy PASS (33 source files); pytest PASS (68 passed, one
+  PostgreSQL-only skip). PostgreSQL `0009`–`0012` proof remains open.
+- Cutoff partition increment: standard-profile monthly journals and revenue/cost driver values
+  through `2026-08-31` are owned once by the common-actual run; forecast records from `2026-09-01`
+  remain scenario-owned. The actual run is completed only after these monthly records are written,
+  and sibling scenarios reuse it. A semantic test rejects scenario-owned pre-cutoff monthly facts
+  and actual-owned post-cutoff facts. A migration-backed regression persists a deliberately
+  different June 30 / July 1 contract and proves journals, driver values, production, freight, and
+  ending-inventory ownership follow it. Broader comparison APIs and PostgreSQL `0009`–`0012`
+  matrices remain open.
+- Profile-order correction: every profile that completes the common-actual layer first populates
+  the same deterministic monthly actual superset. The bidirectional baseline→standard and
+  standard→baseline regression proves both orders succeed and yield identical common-actual and
+  standard journal counts and debit totals without enriching a completed layer.
+- Semantic comparison increment: `compare_trial_balances` requires two explicit, distinct,
+  completed runs with the same profile, actual dataset, cutoff, forecast start, and schema. A
+  SQLite base/stress regression proves a nonzero scenario delta and rejects same-run and
+  cross-seed comparisons. Broader comparison reports, remaining dated-fact cutoff auditing, and
+  PostgreSQL `0009`–`0012` parity remain open.
+- Comparison-matrix correction: one-variable-at-a-time SQLite regressions now prove rejection of
+  profile, actual-dataset, actual-through cutoff, forecast-start, and schema-head mismatches, plus
+  an explicit incomplete-run rejection. Local validation after this correction: Ruff PASS;
+  strict mypy PASS (33 source files); pytest PASS (77 passed, one PostgreSQL-only skip). The
+  uncommitted `0009`–`0012` PostgreSQL matrix, remaining dated-fact cutoff audit, and broader
+  comparison reports remain open.
+- Dated-fact cutoff correction: Red Wash production and ARU freight movements through August 2026
+  are owned once by `actual_common`; September–December production and movements and the December
+  ending-inventory lot are scenario-owned. A two-scenario semantic audit rejects both post-cutoff
+  actual facts and pre-cutoff scenario facts across all three registers. A December 31 cutoff
+  boundary regression additionally proves that the ending-inventory lot is materialized exactly
+  once by `actual_common`, with its expected date, quantity, and carrying value, rather than being
+  omitted when the lot becomes actual. Local validation after this correction: Ruff PASS; strict
+  mypy PASS (33 source files); pytest PASS (78 passed, one PostgreSQL-only skip). Effective-dated
+  master and commitment records are not periodic facts and remain whole records. Broader
+  comparison reports and PostgreSQL `0009`–`0012` parity remain open.
+- PostgreSQL acceptance-matrix increment: the PostgreSQL 16 CI job now runs an explicit Stage 1
+  matrix after the migration cycle. It generates smoke, baseline, standard, full, full-history,
+  and benchmark-private profiles; base/low/high/stress siblings; and a second standard seed. It
+  proves duplicate natural keys coexist and deliberately attempts null ownership, cross-run
+  generated linkage, incompatible actual attachment, and completed identity mutation, then audits
+  production, freight, and inventory cutoff ownership. The matrix exposed and corrected a real
+  portability defect: `benchmark_private` previously required a SQLite-style `var/private/` URL
+  and therefore could not run on PostgreSQL. Server databases now require the explicit
+  `SHFIN_PRIVATE_BENCHMARK=1` authorization while private-path SQLite remains supported. Local
+  evidence after this increment: Ruff PASS; strict mypy PASS (33 source files); pytest PASS
+  (78 passed, two PostgreSQL-only skips); the complete matrix PASS on a fresh migrated SQLite
+  backend surrogate. PostgreSQL 16 execution remains pending because no local service is
+  available and the outer controller owns commits/pushes that trigger CI.

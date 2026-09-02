@@ -43,10 +43,15 @@ jobs:
     env:
       SHFIN_DATABASE_URL: postgresql+psycopg://sable_harbor:ci_only@localhost:5432/sable_harbor
       SHFIN_POSTGRES_TEST_URL: postgresql+psycopg://sable_harbor:ci_only@localhost:5432/sable_harbor
+      SHFIN_PRIVATE_BENCHMARK: "1"
     steps:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v6
       - run: uv sync --all-extras
-      - run: uv run pytest -s tests/integration/test_migrations.py -k postgres
+      - run: >-
+          uv run pytest -s
+          tests/integration/test_migrations.py
+          tests/integration/test_postgres_stage1_matrix.py
+          -k postgres
       - run: uv run shfin generate --profile standard --scenario base --seed 20260831
       - run: uv run shfin validate --generation-run-id "$(uv run shfin run-id standard --scenario base --seed 20260831)"

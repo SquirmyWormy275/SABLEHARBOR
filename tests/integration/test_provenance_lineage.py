@@ -36,7 +36,7 @@ def test_assumptions_generation_and_journals_are_queryable() -> None:
         entry = session.scalars(select(JournalEntry).order_by(JournalEntry.id)).first()
         assert entry is not None
         assert edge_count > 0
-        assert lineage_for(session, entry.id)
+        assert lineage_for(session, entry.id, run.id)
         assert session.scalar(select(func.count(ModelAssumption.id))) == 8
         assert session.scalar(select(func.count(GenerationRun.id))) == 2
         assert session.scalar(select(func.count(LineageEdge.id))) == edge_count
