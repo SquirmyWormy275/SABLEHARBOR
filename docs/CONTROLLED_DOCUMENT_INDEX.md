@@ -1,17 +1,17 @@
 # SABLE HARBOR CONTROLLED DOCUMENT INDEX
 
-**Index version:** 1.0.4 | **As of:** September 3, 2026
+**Index version:** 1.0.5 | **As of:** September 3, 2026
 
 ## Authority order
 
 1. [Corporate lore v0.3](canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md)
-2. [Decision register](canon/DECISION_REGISTER.md), [v0.3 changelog](canon/CANON_CHANGELOG_v0.3.md), and [board approval records](governance/board-records/README.md)
+2. [Decision register](canon/DECISION_REGISTER.md), [September 3 decision-register addendum](canon/DECISION_REGISTER_ADDENDUM_2026-09-03.md), [v0.3 changelog](canon/CANON_CHANGELOG_v0.3.md), and [board approval records](governance/board-records/README.md)
 3. Approved governance and J2 instruments listed below
 4. [Chat-derived J2/Alexandria canon ledger](internal/CHAT_CANON_LEDGER_J2_ALEXANDRIA.md), used to preserve originating design-session fidelity
 5. [Canon authority and publication boundaries](internal/CANON_AUTHORITY_AND_PUBLICATION_BOUNDARIES.md), used to prevent generated publications/catalogs from laundering unsupported authority
 6. Structured representations and generated publications, which reconcile to their canonical Markdown source
 
-Earlier versions and SUPERSEDED records remain available for history but do not silently override current material. Generated PDFs, catalogs, validators, and publication manifests do not independently create canon; they publish or index source records.
+Where the September 3 addendum explicitly supersedes an OPEN or PROVISIONAL row in `DECISION_REGISTER.md` v0.3.0, the addendum controls until the next consolidated register release. Earlier versions and SUPERSEDED records remain available for history but do not silently override current material. Generated PDFs, catalogs, validators, and publication manifests do not independently create canon; they publish or index source records.
 
 ## Repository maintenance and post-merge hygiene
 
