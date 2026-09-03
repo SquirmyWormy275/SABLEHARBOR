@@ -17,6 +17,8 @@ These records are not used to invent new governance concepts. They ratify and se
 | 2024-02-15 | [Independent Chair and committee architecture minutes](2024-02-15_independent-chair-and-committee-architecture-minutes.md) | Records Daniel's voluntary CEO/Chair separation, Kincaid's election as independent Chair, and five-committee maturation. |
 | 2026-09-02 | [Governance, J2, and Alexandria written consent](2026-09-02_governance-j2-alexandria-ratification-written-consent.md) | Ratifies the governance constitution, J2, Alexandria, J2 identity, and controlled-document package now represented in PR #16. |
 
+The September 2 consent's artifact-list exhibits are [Governance](exhibits/2026-09-02_exhibit-a-governance-package.md), [J2](exhibits/2026-09-02_exhibit-b-j2-package.md), [Alexandria](exhibits/2026-09-02_exhibit-c-alexandria-package.md), and [controlled publications/catalogs](exhibits/2026-09-02_exhibit-d-controlled-publication-and-catalog-package.md). They index approved artifacts without adding doctrine.
+
 ## Structured record
 
 The machine-readable register is [`../structured/board_approval_records.json`](../structured/board_approval_records.json).

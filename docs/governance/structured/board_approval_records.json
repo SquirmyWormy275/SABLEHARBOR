@@ -39,6 +39,12 @@
       "date": "2026-09-02",
       "type": "unanimous_written_consent",
       "source": "docs/governance/board-records/2026-09-02_governance-j2-alexandria-ratification-written-consent.md",
+      "exhibits": [
+        "docs/governance/board-records/exhibits/2026-09-02_exhibit-a-governance-package.md",
+        "docs/governance/board-records/exhibits/2026-09-02_exhibit-b-j2-package.md",
+        "docs/governance/board-records/exhibits/2026-09-02_exhibit-c-alexandria-package.md",
+        "docs/governance/board-records/exhibits/2026-09-02_exhibit-d-controlled-publication-and-catalog-package.md"
+      ],
       "state": "LOCKED_IN_UNIVERSE_BOARD_RECORD",
       "directors_consented": ["Maggie Kincaid", "Daniel", "Priya Raman", "Jon Bell", "Tom Calder", "Evan Mercer", "Marianne Voss", "Lilia Galiullina", "Hendrik van der Velde"],
       "approvals": ["Governance Constitution", "governance doctrines", "J2 Judgment & Junction", "J2 identity and letterhead", "Alexandria", "Pinakes", "Semaphore", "Canon", "Daedalus", "corporate document system"],
