@@ -1,6 +1,6 @@
 # SABLE HARBOR — J2 IDENTITY AND STATIONERY
 
-**Version:** 0.1.0  
+**Version:** 0.1.1  
 **Decision date:** September 2, 2026  
 **Status:** LOCKED
 
@@ -12,12 +12,14 @@ J2 is an internal Sable Harbor enterprise directorate and institutional capabili
 
 ## Official logos
 
-Two identity assets are approved and controlling:
+Two identity assets are approved and controlling, each retained in both vector and rendered raster form:
 
 1. **J2 Mark** — three nested, bottom-aligned black circles crossed by a vertical black centerline.
    - `assets/brand/logos/j2__mark.svg`
+   - `assets/brand/logos/j2__mark.png`
 2. **J2 Primary Horizontal** — the approved J2 mark, black divider, and block red `J2` wordmark.
    - `assets/brand/logos/j2__primary-horizontal.svg`
+   - `assets/brand/logos/j2__primary-horizontal.png`
 
 The red wordmark is the approved J2 red (`#BE0E0C`). The mark remains black.
 
@@ -36,6 +38,7 @@ J2 stationery follows `SH-GOV-DOC-001` and therefore remains subordinate to the 
 
 - Use the **mark** for small-format identity, portals, badges, internal application furniture, org charts, and document furniture.
 - Use the **primary horizontal** logo for J2 headers, briefings, letterhead, covers, internal portals, and formal J2 publications.
+- Use SVG as the production vector source; PNG is the approved raster convenience/rendered form.
 - Do not replace the approved mark with generic intelligence, military, eye, target, radar, shield, compass, brain, network, or AI iconography.
 - Do not recolor the black mark or substitute another red without a formal identity revision.
 - Do not add slogans, seals, gradients, shadows, bevels, or decorative effects to the production identity.
