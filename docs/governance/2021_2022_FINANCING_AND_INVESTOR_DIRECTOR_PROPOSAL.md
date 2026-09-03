@@ -1,8 +1,10 @@
-# SABLE HARBOR — 2021–2022 FINANCING & INVESTOR-DIRECTOR PROPOSAL
+# SABLE HARBOR — SUPERSEDED 2021–2022 FINANCING & INVESTOR-DIRECTOR PROPOSAL
+
+> **SUPERSEDED September 2, 2026. Historical, noncontrolling artifact.** Current financing, board, and committee canon is `BOARD_AND_CAPITAL_GOVERNANCE.md`. Every organization and person proposed below is preserved only to show prior provisional thinking and must not be presented as current or proposed 2026 governance.
 
 **Version:** 0.1.0  
 **Date:** September 2, 2026  
-**Status:** PROVISIONAL — designed from locked balanced-governance philosophy; not canon until accepted
+**Status:** SUPERSEDED — preserved intellectual history; never accepted as canon
 
 ## Design constraints already locked
 

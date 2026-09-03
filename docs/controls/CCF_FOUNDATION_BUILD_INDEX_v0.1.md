@@ -31,7 +31,9 @@ This index defines the current SH-CCF v0.1 package and its internal dependencies
 13. `../governance/2026_ENTITY_AND_BOARD_GOVERNANCE_DECISIONS.md` — selective subsidiary architecture, nine-seat unitary board, five committees, independent Chair and core board roles.
 14. `../governance/2026_BOARD_COMPOSITION_AND_FINANCING_MODEL.md` — board seat architecture and financing-history design principles.
 15. `../governance/2026_CAPITAL_AND_ASSURANCE_MODEL.md` — delegated-capital architecture and internal-assurance implementation envelope.
-16. `../governance/2021_2022_FINANCING_AND_INVESTOR_DIRECTOR_PROPOSAL.md` — concrete proposed financing rounds, investor profiles/directors and remaining independent directors.
+16. `../governance/BOARD_AND_CAPITAL_GOVERNANCE.md` — accepted financing, nine directors, biographies, evolution, committee membership, and five committee charters.
+17. `../governance/GOVERNANCE_CONSTITUTION.md` — delegated authority, reserved matters, rapid adjudication, risk assumption, abstention, subsidiary autonomy, conflict integrity, and AAR doctrine.
+18. `../j2/README.md` — J2/Alexandria governance and intelligence system now consumed by the CCF.
 
 ## What v0.1 establishes
 
@@ -60,12 +62,12 @@ The following are next-phase work rather than missing foundation content:
 
 1. exact criterion/control IDs for AICPA TSC/COSO/NIST/ISO/COBIT/CIS/CSA and other crosswalks, which require version-pinned source validation;
 2. fully instantiated local implementation records naming actual systems, locations, procedures, owners and evidence populations;
-3. the actual corporate policy/charter documents listed in the artifact inventory;
+3. policy/charter documents beyond the Wave-1 governance and J2 instruments now published;
 4. historical board minutes, risk reviews, incident files, training records, access reviews and other longitudinal evidence populations;
 5. detailed control testing procedures and sampling — an assurance layer, not corporate control design;
 6. exact SOC 1 system/ICFR scope and SOC 2 system/service/Trust Services Category scope;
 7. machine-readable SQL/JSON/CSV population of the logical CCF schema;
-8. final canonical acceptance of proposed investor organizations/director names and financing economics;
+8. runtime implementation evidence for the accepted J2/Alexandria/Daedalus architecture;
 9. final 2026 internal-assurance maturity choice if the provisional co-sourced model is not accepted.
 
 ## Build rule for the next phase

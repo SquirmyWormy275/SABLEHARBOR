@@ -11,9 +11,11 @@ It is modeled as a company that would exist independently of any audit or benchm
 - **OPEN** — unresolved and not to be silently invented;
 - **SUPERSEDED** — preserved prior direction that no longer controls current canon.
 
-## Corporate lore v0.2
+## Corporate lore v0.3
 
 The `canon/corporate-lore-v0.2` branch contains the reconciled corporate-history package:
+
+The controlling September 2 layer is [`SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md`](docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md), which preserves v0.2 and integrates the 2026 board, capital, governance constitution, J2, and Alexandria. The [decision register](docs/canon/DECISION_REGISTER.md) and [v0.3 changelog](docs/canon/CANON_CHANGELOG_v0.3.md) carry fact state and supersession.
 
 - [`docs/canon/SABLE_HARBOR_CANONICAL_ARCHITECTURE_HANDOVER.md`](docs/canon/SABLE_HARBOR_CANONICAL_ARCHITECTURE_HANDOVER.md) — preserved inherited canon and operating instructions.
 - [`docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.2.md`](docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.2.md) — complete reconciled corporate lore through August 31, 2026.
@@ -28,6 +30,14 @@ This is the canon-derived August 31, 2026 **functional enterprise organization c
 [![Sable Harbor enterprise organization chart](docs/organization/assets/enterprise-organization-2026.svg)](docs/organization/README.md)
 
 The full package contains dedicated charts for [leadership and authority](docs/organization/2026_LEADERSHIP_AND_AUTHORITY_MAP.md), [Foundry Field](docs/organization/FOUNDRY_FIELD_ORGANIZATION.md), [Project Willow](docs/organization/WILLOW_ORGANIZATION.md), [Atlas Meridian](docs/organization/ATLAS_MERIDIAN_BRIDGE_ORGANIZATION.md), [Pale Sun and Red Wash](docs/organization/PALE_SUN_RED_WASH_ORGANIZATION.md), [Project Cradle](docs/organization/PROJECT_CRADLE_ORGANIZATION.md), [ARU and BS&T](docs/organization/ARU_BST_ORGANIZATION.md), and [the Original Eight](docs/organization/ORIGINAL_EIGHT.md).
+
+## Governance, J2, and Alexandria
+
+- [2026 board, history, capital, biographies, and five committee charters](docs/governance/BOARD_AND_CAPITAL_GOVERNANCE.md)
+- [Operational governance constitution](docs/governance/GOVERNANCE_CONSTITUTION.md)
+- [J2 — Judgment & Junction](docs/j2/README.md), an internal capability rather than a legal entity or product
+- [Alexandria institutional intelligence environment](docs/j2/alexandria/README.md), with Pinakes, Semaphore, Canon, and Daedalus
+- [J2 organization and interface charts](docs/organization/J2_ORGANIZATION.md)
 
 ### Official organization briefing
 
@@ -50,7 +60,7 @@ No 2026 headcount, revenue, funding, office, legal-entity, reporting-line, or pr
 
 ## Public repository and wiki
 
-This repository is intentionally public so Sable Harbor can support a browsable institutional archive and a public GitHub wiki. This decision supersedes the preserved architecture handover's earlier description of the canonical repository as private.
+Repository policy supports a browsable institutional archive and a GitHub wiki presentation layer. The wiki implementation remains OPEN; this README does not claim a live wiki exists.
 
 The versioned documents under `docs/canon/` remain the controlling source of truth. The wiki is a public-facing reference and navigation layer; it may summarize canon, but it does not independently create or change canon.
 

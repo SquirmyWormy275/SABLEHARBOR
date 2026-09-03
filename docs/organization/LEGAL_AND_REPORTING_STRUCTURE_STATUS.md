@@ -1,9 +1,9 @@
 # SABLE HARBOR — LEGAL AND REPORTING STRUCTURE STATUS
 
 **Map ID:** `SH-ORG-005`  
-**Version:** 0.2.0  
-**Canonical date:** August 31, 2026  
-**Status:** OPEN legal-and-reporting workstream guardrail  
+**Version:** 0.3.0
+**Canonical date:** September 2, 2026
+**Status:** PARTIALLY RESOLVED legal-and-reporting workstream guardrail
 **Map type:** Open-workstream boundary and publication-status map  
 **Edge meaning:** Supportability, constraint, or prerequisite relationship. **No edge establishes a legal entity, ownership chain, title, or reporting line.**  
 **Purpose:** Prevent canon-derived organization maps from silently becoming a final legal-entity tree, executive hierarchy, or quantitative operating model.
@@ -28,6 +28,11 @@ The dotted edge identifies the present prohibition. A conventional legal or repo
 
 ## What is locked strongly enough to chart
 
+- Sable Harbor is primarily one operating company with business lines, not a conglomerate of named capabilities.
+- ARU is a controlled acquired subsidiary; BS&T is a legal subsidiary beneath ARU.
+- Red Wash operates through a dedicated legal operating company; Pale Sun remains the strategic/business-line identity.
+- Foundry, Foundry Field, Willow, Atlas Meridian, Emberline, Cradle, Advisory, and J2 are not separate legal entities merely because they have names.
+
 - Sable Harbor was incorporated in Sacramento in 2016 and is the controlling corporate identity for the narrative.
 - Foundry is the underlying relationship-and-meaning substrate.
 - Foundry Field is the mature deployable commercial product and service configuration built on Foundry.
@@ -46,14 +51,14 @@ These are sufficient for operating and authority maps. They are not sufficient f
 ## What remains OPEN
 
 1. The exact legal form and jurisdiction of the August 31, 2026 parent entity.
-2. Whether Foundry, Foundry Field, Willow, Atlas Meridian, Pale Sun, Red Wash, Cradle, and Advisory are internal programs, divisions, subsidiaries, LLCs, product lines, or another form.
-3. The exact legal ownership chain among Sable Harbor, Pale Sun, Red Wash, ARU, and BS&T.
+2. Exact internal divisional/program form for named business capabilities, without changing their non-entity default.
+3. Exact formal legal names/jurisdictions in the locked Sable Harbor→ARU→BS&T and Sable Harbor→dedicated Red Wash operator relationships.
 4. Pale Sun and Red Wash transaction entities, financing, liability allocation, intercompany services, and governance.
 5. Cradle's process-right, equipment, royalty, recovery-right, or participation structures.
 6. ARU's final integration model and named operating leader.
 7. Advisory's final name, leader, P&L, pricing, service catalog, launch date, and organizational home.
 8. Exact executive titles and direct-report relationships.
-9. Board composition, committees, delegations, and Jon Bell's precise continuing governance role.
+9. Exact legal-document implementation of the locked board/committee/delegation architecture; composition and Jon Bell's non-management directorship are resolved.
 10. Headcount allocation by function, office, product, program, or operating company.
 11. Product, venture, and operating-company P&Ls.
 12. Capital authority, acquisition consideration, debt, ownership percentages, and intercompany arrangements.
