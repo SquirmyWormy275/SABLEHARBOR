@@ -1,20 +1,22 @@
 # SABLE HARBOR CONTROLLED DOCUMENT INDEX
 
-**Index version:** 1.0.0 | **As of:** September 3, 2026
+**Index version:** 1.0.1 | **As of:** September 3, 2026
 
 ## Authority order
 
 1. [Corporate lore v0.3](canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md)
-2. [Decision register](canon/DECISION_REGISTER.md) and [v0.3 changelog](canon/CANON_CHANGELOG_v0.3.md)
+2. [Decision register](canon/DECISION_REGISTER.md), [v0.3 changelog](canon/CANON_CHANGELOG_v0.3.md), and [board approval records](governance/board-records/README.md)
 3. Approved governance and J2 instruments listed below
-4. Structured representations and generated publications, which reconcile to their canonical Markdown source
+4. [Chat-derived J2/Alexandria canon ledger](internal/CHAT_CANON_LEDGER_J2_ALEXANDRIA.md), used to preserve originating design-session fidelity
+5. Structured representations and generated publications, which reconcile to their canonical Markdown source
 
-Earlier versions and SUPERSEDED records remain available for history but do not silently override current material.
+Earlier versions and SUPERSEDED records remain available for history but do not silently override current material. Generated PDFs, catalogs, validators, and publication manifests do not independently create canon; they publish or index source records.
 
 ## Governance
 
 - [Board and capital governance](governance/BOARD_AND_CAPITAL_GOVERNANCE.md)
 - [Board evolution, 2016–2026](governance/BOARD_EVOLUTION_2016_2026.md)
+- [Board approval records](governance/board-records/README.md) and [structured board approval register](governance/structured/board_approval_records.json)
 - [Governance constitution](governance/GOVERNANCE_CONSTITUTION.md)
 - [Five committee charters](governance/committees/README.md)
 - [Assumption of Risk form](governance/ASSUMPTION_OF_RISK_FORM.md)
@@ -35,6 +37,7 @@ Earlier versions and SUPERSEDED records remain available for history but do not 
 - [Pinakes registry](j2/structured/pinakes_portals.json)
 - [Daedalus policy](j2/structured/daedalus_policy.json)
 - [J2 rendered-chart suite](organization/J2_ORGANIZATION.md)
+- [Chat-derived canon ledger](internal/CHAT_CANON_LEDGER_J2_ALEXANDRIA.md) and [structured ledger](internal/chat_canon_ledger_j2_alexandria.json)
 - [Phase 2 coverage audit](internal/COVERAGE_AUDIT_PHASE2.md) and [structured audit record](internal/coverage_audit_phase2.json)
 - [Phase 2 doctrine registry](internal/DOCTRINE_REGISTER.json)
 - [Institutional catalog query guide](internal/INSTITUTIONAL_CATALOG_QUERY_GUIDE.md)
