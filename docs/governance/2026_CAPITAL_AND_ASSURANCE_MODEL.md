@@ -1,10 +1,10 @@
 # SABLE HARBOR — CAPITAL DELEGATION AND INDEPENDENT ASSURANCE MODEL
 
-**Version:** 0.1.0  
-**Date:** September 2, 2026  
-**Status:** SUPERSEDED IN PART — governance doctrine replaced; assurance alternative remains historical PROVISIONAL
+**Version:** 0.2.0  
+**Date:** September 3, 2026  
+**Status:** PARTIALLY SUPERSEDED — capital doctrine historical; assurance model resolved and cross-referenced
 
-> Current authority, reserved-matter, subsidiary-autonomy, dissent, and risk-assumption doctrine is [`GOVERNANCE_CONSTITUTION.md`](GOVERNANCE_CONSTITUTION.md). The co-sourced assurance model below is an earlier working alternative only; the 2026 Internal Audit model remains OPEN.
+> Current authority, reserved-matter, subsidiary-autonomy, dissent, and risk-assumption doctrine is [`GOVERNANCE_CONSTITUTION.md`](GOVERNANCE_CONSTITUTION.md). Current ESS and Internal Audit doctrine is [`ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md`](ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md).
 
 ## Capital authority
 
@@ -34,27 +34,21 @@ The board retains authority over matters such as transformative acquisitions/dis
 - Procurement authority is not automatically capital authority.
 - Budget ownership does not eliminate escalation requirements for high-risk categories.
 
-## Independent assurance maturity
+## Independent assurance — LOCKED
 
-The CCF requires a clear distinction among first-line control ownership, second-line risk/compliance challenge, and independent assurance. The final 2026 maturity choice remains a canon decision unless separately locked.
+Sable Harbor distinguishes first-line management ownership, second-line Legal/Compliance/Risk challenge, independent Internal Audit, and J2's separate intelligence/orientation function.
 
-### Historical working implementation assumption — NONCONTROLLING
+The administrative umbrella is **Enterprise Support Services (ESS)**. ESS includes OGC, Legal, Compliance, a modest risk-coordination function, and Internal Audit for administrative association only.
 
-Until that decision is finalized, architecture should support a **small internal assurance capability with co-sourcing**, reporting functionally to the Audit & Compliance Committee and administratively through an appropriate senior enterprise role.
+Internal Audit is independent of ESS substantive management and independent of J2. It reports functionally to the Board Audit & Compliance Committee and has an administrative relationship to the CEO. It may evaluate J2 where within scope, and J2 may provide facts or uncertainty relevant to audit work, but neither supervises the other.
 
-This model allows:
+Management owns controls and remediation. Compliance and Risk challenge and coordinate. Internal Audit evaluates. J2 establishes Contact, forms Judgment, and provides Orientation. None of these functions may silently acquire another's authority.
 
-- independent reviews of selected financial, technology, compliance, and operational-control areas;
-- specialist co-sourcing for areas beyond internal capability;
-- direct escalation to the Audit & Compliance Committee;
-- separation from the Trust/Risk/Compliance second line;
-- gradual maturation as ARU, BS&T, Red Wash, and other physical operations increase enterprise complexity.
-
-The CCF must not assume that internal audit performs management controls or owns remediation. Management owns controls and remediation; independent assurance evaluates and reports.
+The complete locked independence doctrine, reporting lines, escalation protections, and physical-separation principle are controlled by [`ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md`](ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md).
 
 ## Governance artifacts implied by this model
 
-The eventual governance-document set should include at minimum:
+The governance-document set should include at minimum:
 
 - board charter/governance guidelines;
 - five standing committee charters;
@@ -62,8 +56,8 @@ The eventual governance-document set should include at minimum:
 - reserved-matters schedule;
 - capital-investment governance standard;
 - conflicts/related-party policy;
-- internal assurance charter if/when the function is canonically established;
-- enterprise risk-management policy;
+- Internal Audit charter consistent with the locked independence doctrine;
+- enterprise risk-coordination policy;
 - policy-governance standard;
 - subsidiary-governance and intercompany standard;
 - acquisition/integration governance standard.
