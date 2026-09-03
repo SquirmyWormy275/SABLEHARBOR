@@ -14,6 +14,15 @@ Automated validation completed against the generated package.
 - Every SVG has a matching PNG convenience render: **PASS**.
 - Production directory contains no composite sheets: **PASS**.
 
+## Approved J2 identity
+
+- Controlling primary-horizontal PNG is byte-identical to the approved source: **PASS** (`SHA-256 9ee44d72f7cf52474d10ab37662c4690e56a01b6d621a52d26ec22bbd0a7a1e2`).
+- Controlling mark PNG is byte-identical to the approved source: **PASS** (`SHA-256 383f2f27108a8379171a220517a8c2e6c834cd82f821fc72d6d4f0566efe5af9`).
+- Both approved PNGs decode as RGB PNG files at their recorded dimensions: **PASS**.
+- Every J2 letterhead references `assets/brand/logos/j2__primary-horizontal.png`: **PASS**.
+- Logo, collateral, and package manifests parse as JSON and contain no exploratory J2 production asset: **PASS**.
+- Exploratory J2 concepts are designated historical only: **PASS**.
+
 ## Coverage
 
 | Identity | SVG files | PNG files | Variant count |

@@ -21,13 +21,61 @@
     "Emberline",
     "Red Wash / Pale Sun"
   ],
-  "asset_count": 110,
-  "logo_count": 55,
+  "asset_count": 114,
+  "logo_count": 57,
   "formats": [
     "svg",
     "png"
   ],
   "assets": [
+    {
+      "brand": "J2 — Judgment & Junction",
+      "brand_slug": "j2",
+      "classification": "approved internal enterprise directorate identity",
+      "canonical_status": "LOCKED September 2, 2026; controlling user-approved source asset.",
+      "variant": "primary-horizontal",
+      "format": "png",
+      "width": 1774,
+      "height": 887,
+      "path": "assets/brand/logos/j2__primary-horizontal.png",
+      "sha256": "9ee44d72f7cf52474d10ab37662c4690e56a01b6d621a52d26ec22bbd0a7a1e2"
+    },
+    {
+      "brand": "J2 — Judgment & Junction",
+      "brand_slug": "j2",
+      "classification": "approved internal enterprise directorate identity",
+      "canonical_status": "LOCKED September 2, 2026; vector derivative of controlling approved PNG.",
+      "variant": "primary-horizontal",
+      "format": "svg",
+      "width": 1310,
+      "height": 507,
+      "path": "assets/brand/logos/j2__primary-horizontal.svg",
+      "sha256": "de17265dd599b1cd68a81f091c56c7409b44bfd8d12555af9c019046468f922c"
+    },
+    {
+      "brand": "J2 — Judgment & Junction",
+      "brand_slug": "j2",
+      "classification": "approved internal enterprise directorate identity",
+      "canonical_status": "LOCKED September 2, 2026; controlling user-approved source asset.",
+      "variant": "mark",
+      "format": "png",
+      "width": 1200,
+      "height": 1200,
+      "path": "assets/brand/logos/j2__mark.png",
+      "sha256": "383f2f27108a8379171a220517a8c2e6c834cd82f821fc72d6d4f0566efe5af9"
+    },
+    {
+      "brand": "J2 — Judgment & Junction",
+      "brand_slug": "j2",
+      "classification": "approved internal enterprise directorate identity",
+      "canonical_status": "LOCKED September 2, 2026; vector derivative of controlling approved PNG.",
+      "variant": "mark",
+      "format": "svg",
+      "width": 469,
+      "height": 523,
+      "path": "assets/brand/logos/j2__mark.svg",
+      "sha256": "af2934fa343b613473b6744781f9cbb32f85941f1c5f2dbc25051fc9ec6d283c"
+    },
     {
       "brand": "Sable Harbor",
       "brand_slug": "sable-harbor",

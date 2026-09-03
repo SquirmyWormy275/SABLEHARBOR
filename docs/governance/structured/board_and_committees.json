@@ -1,0 +1,25 @@
+{
+  "document_id": "SH-GOV-BOARD-001",
+  "version": "1.0.0",
+  "effective_date": "2026-09-02",
+  "state": "LOCKED",
+  "canonical_source": "docs/governance/BOARD_AND_CAPITAL_GOVERNANCE.md",
+  "directors": [
+    {"id":"DIR-KINCAID","name":"Margaret \"Maggie\" Kincaid","capacity":"independent-chair","joined":2023},
+    {"id":"DIR-DANIEL","name":"Daniel","capacity":"founder-ceo-director","joined":2016},
+    {"id":"DIR-RAMAN","name":"Priya Raman","capacity":"founder-director","joined":2016},
+    {"id":"DIR-BELL","name":"Jon Bell","capacity":"founder-non-management-director","joined":2016},
+    {"id":"DIR-CALDER","name":"Thomas \"Tom\" Calder","capacity":"independent-director","joined":2022},
+    {"id":"DIR-MERCER","name":"Evan Mercer","capacity":"harrison-vale-director","joined":2021},
+    {"id":"DIR-VOSS","name":"Marianne Voss","capacity":"wolf-ridge-director","joined":2022},
+    {"id":"DIR-GALIULLINA","name":"Dr. Lilia Maratovna Galiullina","capacity":"independent-director","joined":2020},
+    {"id":"DIR-VAN-DER-VELDE","name":"Hendrik \"Harry\" van der Velde","capacity":"independent-director","joined":2019}
+  ],
+  "committees": [
+    {"id":"COM-AUDIT","name":"Audit & Compliance","chair":"DIR-CALDER","members":["DIR-CALDER","DIR-GALIULLINA","DIR-KINCAID"]},
+    {"id":"COM-FINANCE","name":"Finance & Investment","chair":"DIR-VAN-DER-VELDE","members":["DIR-VAN-DER-VELDE","DIR-VOSS","DIR-MERCER","DIR-DANIEL"]},
+    {"id":"COM-TECHOPS","name":"Technology & Operations","chair":"DIR-GALIULLINA","members":["DIR-GALIULLINA","DIR-RAMAN","DIR-KINCAID","DIR-MERCER"]},
+    {"id":"COM-COMP","name":"Compensation & Human Capital","chair":"DIR-KINCAID","members":["DIR-KINCAID","DIR-GALIULLINA","DIR-VAN-DER-VELDE"]},
+    {"id":"COM-GOVNOM","name":"Governance & Nominating","chair":"DIR-KINCAID","members":["DIR-KINCAID","DIR-CALDER","DIR-BELL"]}
+  ]
+}

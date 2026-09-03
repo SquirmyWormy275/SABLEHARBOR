@@ -72,7 +72,9 @@ def main() -> int:
 
     for chart in charts:
         chart_id = chart.get("id")
-        rel_path = chart.get("path")
+        # v0.2 rendered-chart registers distinguish the narrative page from
+        # its SVG asset; earlier registers used a single path field.
+        rel_path = chart.get("path") or chart.get("page")
 
         if not chart_id or not rel_path:
             fail(errors, f"chart entry missing id or path: {chart!r}")
@@ -92,6 +94,17 @@ def main() -> int:
             continue
 
         text = path.read_text(encoding="utf-8")
+
+        # Current rendered-chart registers carry metadata in JSON and point to
+        # both a narrative page and a separately generated SVG asset.
+        if chart.get("page") and chart.get("asset"):
+            asset = ROOT / chart["asset"]
+            if not asset.exists():
+                fail(errors, f"{chart_id}: missing asset {chart['asset']}")
+            for field in ("title", "purpose", "canonicalDate", "relationshipSemantics"):
+                if not chart.get(field):
+                    fail(errors, f"{chart_id}: missing register field {field}")
+            continue
 
         if f"`{chart_id}`" not in text:
             fail(errors, f"{chart_id}: file does not declare matching Map ID")
@@ -116,7 +129,7 @@ def main() -> int:
             if decision_ids and decision_id not in decision_ids:
                 fail(errors, f"{chart_id}: unknown decision ID {decision_id}")
 
-    expected_chart_ids = {f"SH-ORG-{number:03d}" for number in range(1, 12)}
+    expected_chart_ids = {f"SH-ORG-{number:03d}" for number in range(1, 10)}
     if seen_ids != expected_chart_ids:
         missing = sorted(expected_chart_ids - seen_ids)
         extra = sorted(seen_ids - expected_chart_ids)

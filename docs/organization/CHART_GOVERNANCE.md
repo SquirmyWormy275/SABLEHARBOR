@@ -90,7 +90,7 @@ The arrow's direction indicates the direction of the named relationship, not ran
 
 ## 6. Legal and operating language
 
-The canon may state that Pale Sun owns and operates Red Wash while the exact legal entity, jurisdiction, financing, and transaction chain remain OPEN. Charts must preserve both truths.
+The canon states that Red Wash operates through a dedicated legal operating company while Pale Sun remains its strategic/business-line identity. Exact entity name, suffix, jurisdiction, financing, and transaction chain remain OPEN. Charts must preserve both truths.
 
 Likewise, Sable Harbor acquired ARU and ARU remains a distinct operating company during integration, but the exact ownership chain between Sable Harbor, ARU, and BS&T remains open.
 

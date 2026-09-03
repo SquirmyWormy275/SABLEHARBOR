@@ -12,7 +12,7 @@ The table below traces the load-bearing organizational claims to the controlling
 | Daniel Mercer is the only future Sable Harbor leader directly exposed to Blackridge. | LOCKED | Canon §2.1; `BR-002` |
 | The Original Eight are three founders plus five early employees, not the Blackridge team. | LOCKED | Canon §5.1; `PPL-001`–`PPL-002` |
 | Six Original Eight members remain employed in the working 2026 lore. | LOCKED working lore | Canon §13.1; `PPL-013` |
-| Jon Bell left the executive team in 2023 and remains formally associated; board association is the working state. | LOCKED role / governance detail partly OPEN | Canon §5.1 and §13.1; `PPL-006` |
+| Jon Bell left executive management and is a non-management founder director in 2026. | LOCKED | Canon v0.3 §17.2; `PPL-006`, `GOV-001` |
 | Rachel Kim voluntarily departed in 2024 after professionalizing finance and operations. | LOCKED | Canon §5.1 and §13.1; `PPL-011`–`PPL-012` |
 | Foundry begins in 2018 as the reusable relationship-and-meaning substrate. | LOCKED | Canon §6.1; `FF-001`–`FF-002` |
 | Foundry Field is the deployable commercial product and service configuration formed during the Crossing and standardized in 2021. | LOCKED | Canon §6.7–§6.8; `FF-003`, `CRX-004` |
@@ -44,7 +44,7 @@ The table below traces the load-bearing organizational claims to the controlling
 | Blood, Sweat & Tears Railway is ARU's railway or short-line operating component. | LOCKED role / legal detail OPEN | Canon §12.3; `ARU-003` |
 | Operational accountability owns the immediate consequence of an operating event; technical and capital authority remain distinct. | LOCKED authority rule | Canon §12.5; `ARU-009` |
 | Advisory is an emerging transfer of Sable Harbor's method, not generic consulting or a fully formed 2026 division. | LOCKED direction / formal structure OPEN | Canon §12.6; `ADV-001`–`ADV-002` |
-| Exact legal entities, executive titles, reporting lines, headcount, P&Ls, board structure, and ownership percentages remain outside the lore lock. | OPEN | Canon document-control scope, §13, and §15; `ID-006`–`ID-008` |
+| Board structure and selective subsidiary direction are locked; exact legal implementation, unresolved executive/reporting detail, headcount, P&Ls, and unprovided ownership mechanics remain OPEN. | MIXED | Canon v0.3 §17.1–17.2; `GOV-001`–`GOV-003`, `ENT-001`–`ENT-002` |
 
 ## Review rule
 

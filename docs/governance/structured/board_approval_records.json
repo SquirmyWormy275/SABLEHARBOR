@@ -1,0 +1,48 @@
+{
+  "register_id": "SH-BRD-APPROVAL-REG-001",
+  "version": "1.0.0",
+  "effective_date": "2026-09-02",
+  "authority": "Canonical in-universe board paper trail for PR #16 governance, J2, Alexandria, financing, and publication approvals.",
+  "records": [
+    {
+      "id": "SH-BRD-MIN-2021-06-18",
+      "date": "2021-06-18",
+      "type": "special_board_meeting_minutes",
+      "source": "docs/governance/board-records/2021-06-18_harrison-vale-growth-financing-minutes.md",
+      "state": "LOCKED_IN_UNIVERSE_BOARD_RECORD",
+      "directors_present": ["Daniel", "Priya Raman", "Jon Bell", "Hendrik van der Velde", "Lilia Galiullina"],
+      "approvals": ["Harrison Vale Partners growth financing", "Evan Mercer board seat", "balanced investor governance", "use of proceeds for productization/reliability/scale"],
+      "open_boundaries": ["definitive legal provisions", "option-pool mechanics", "side-letter implementation"]
+    },
+    {
+      "id": "SH-BRD-MIN-2022-10-28",
+      "date": "2022-10-28",
+      "type": "special_board_meeting_minutes",
+      "source": "docs/governance/board-records/2022-10-28_wolf-ridge-industrial-financing-minutes.md",
+      "state": "LOCKED_IN_UNIVERSE_BOARD_RECORD",
+      "directors_present": ["Daniel", "Priya Raman", "Jon Bell", "Hendrik van der Velde", "Lilia Galiullina", "Evan Mercer"],
+      "approvals": ["Wolf Ridge Holdings industrial financing", "Marianne Voss board seat", "Tom Calder independent director appointment", "finance/capital oversight separated from audit/control oversight"],
+      "open_boundaries": ["definitive legal provisions", "investor thresholds", "side-agreement implementation", "later ARU/BS&T/Red Wash transactions"]
+    },
+    {
+      "id": "SH-BRD-MIN-2024-02-15",
+      "date": "2024-02-15",
+      "type": "regular_board_meeting_minutes",
+      "source": "docs/governance/board-records/2024-02-15_independent-chair-and-committee-architecture-minutes.md",
+      "state": "LOCKED_IN_UNIVERSE_BOARD_RECORD",
+      "directors_present": ["Maggie Kincaid", "Daniel", "Priya Raman", "Jon Bell", "Tom Calder", "Evan Mercer", "Marianne Voss", "Lilia Galiullina", "Hendrik van der Velde"],
+      "approvals": ["CEO/Chair separation", "Maggie Kincaid independent Chair", "five standing committee architecture", "founder conviction without sovereignty"],
+      "open_boundaries": ["J2 final structure", "Alexandria architecture", "Internal Audit maturity", "legal-entity implementation"]
+    },
+    {
+      "id": "SH-BRD-CONSENT-2026-09-02",
+      "date": "2026-09-02",
+      "type": "unanimous_written_consent",
+      "source": "docs/governance/board-records/2026-09-02_governance-j2-alexandria-ratification-written-consent.md",
+      "state": "LOCKED_IN_UNIVERSE_BOARD_RECORD",
+      "directors_consented": ["Maggie Kincaid", "Daniel", "Priya Raman", "Jon Bell", "Tom Calder", "Evan Mercer", "Marianne Voss", "Lilia Galiullina", "Hendrik van der Velde"],
+      "approvals": ["Governance Constitution", "governance doctrines", "J2 Judgment & Junction", "J2 identity and letterhead", "Alexandria", "Pinakes", "Semaphore", "Canon", "Daedalus", "corporate document system"],
+      "open_boundaries": ["Internal Audit operating model", "exact legal implementation", "total J2 staffing", "named J2 leaders", "Orientation rank nomenclature", "former Head non-executive director eligibility", "Alexandria technology stack", "raw Collection entitlement implementation", "Semaphore precedence vocabulary", "retention/deletion implementation", "spatial/AR implementation"]
+    }
+  ]
+}
