@@ -2,7 +2,9 @@
 
 **Version:** 0.1.0  
 **Date:** September 2, 2026  
-**Status:** Mixed LOCKED / PROVISIONAL
+**Status:** SUPERSEDED September 2, 2026 — historical design record
+
+> Current board population, financing, history, committee membership, and biographies are controlled by [`BOARD_AND_CAPITAL_GOVERNANCE.md`](BOARD_AND_CAPITAL_GOVERNANCE.md). Unnamed-seat and unpopulated-financing language below records the intermediate design state only and is not current.
 
 ## 1. Board composition model
 

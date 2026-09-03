@@ -56,6 +56,8 @@ Terms are genuinely balanced: no founder dictatorship, investor control, ordinar
 
 Each committee supports the board and does not displace lawful board or management authority. Committee chairs control agendas and report material conclusions and dissent. Investor-appointed directors act for Sable Harbor, disclose conflicts, and recuse where appropriate.
 
+Formal separately controlled charters are published under [`committees/`](committees/README.md); the summaries below reconcile to those instruments.
+
 ### Audit & Compliance
 
 **Members:** Calder (Chair), Galiullina, Kincaid. Oversees financial reporting/control, compliance, whistleblowing, material adverse findings, and independent assurance interfaces. It does not settle the still-OPEN Internal Audit operating model.

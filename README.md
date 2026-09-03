@@ -2,6 +2,8 @@
 
 Sable Harbor is the canonical synthetic enterprise and reusable business-world sandbox for mining, natural resources, industrial systems, enterprise software, assurance, analytics, finance, governance, security, incident response, and professional training.
 
+**Start here:** the [controlled document index](docs/CONTROLLED_DOCUMENT_INDEX.md) distinguishes current authority, generated representations, and preserved historical records.
+
 It is modeled as a company that would exist independently of any audit or benchmark. Business activity creates systems, records, contracts, communications, controls, mistakes, experiments, operating consequences, and evidence; downstream tools consume deliberate, versioned exports.
 
 ## Canon states
@@ -30,23 +32,6 @@ This is the canon-derived August 31, 2026 **functional enterprise organization c
 [![Sable Harbor enterprise organization chart](docs/organization/assets/enterprise-organization-2026.svg)](docs/organization/README.md)
 
 The full package contains dedicated charts for [leadership and authority](docs/organization/2026_LEADERSHIP_AND_AUTHORITY_MAP.md), [Foundry Field](docs/organization/FOUNDRY_FIELD_ORGANIZATION.md), [Project Willow](docs/organization/WILLOW_ORGANIZATION.md), [Atlas Meridian](docs/organization/ATLAS_MERIDIAN_BRIDGE_ORGANIZATION.md), [Pale Sun and Red Wash](docs/organization/PALE_SUN_RED_WASH_ORGANIZATION.md), [Project Cradle](docs/organization/PROJECT_CRADLE_ORGANIZATION.md), [ARU and BS&T](docs/organization/ARU_BST_ORGANIZATION.md), and [the Original Eight](docs/organization/ORIGINAL_EIGHT.md).
-
-## Governance, J2, and Alexandria
-
-- [2026 board, history, capital, biographies, and five committee charters](docs/governance/BOARD_AND_CAPITAL_GOVERNANCE.md)
-- [Operational governance constitution](docs/governance/GOVERNANCE_CONSTITUTION.md)
-- [J2 — Judgment & Junction](docs/j2/README.md), an internal capability rather than a legal entity or product
-- [Alexandria institutional intelligence environment](docs/j2/alexandria/README.md), with Pinakes, Semaphore, Canon, and Daedalus
-- [J2 organization and interface charts](docs/organization/J2_ORGANIZATION.md)
-
-### Official organization briefing
-
-The briefing-grade publication package uses the approved production logo system and includes one rendered 16:9 image per chart, an editable PowerPoint deck, a PDF, a packaged ZIP, a source builder, and a validation manifest.
-
-- [Organization briefing index](docs/organization/briefing/README.md)
-- [Editable PowerPoint](docs/organization/briefing/SABLE_HARBOR_Organization_Briefing_v1.0.pptx)
-- [Briefing PDF](docs/organization/briefing/SABLE_HARBOR_Organization_Briefing_v1.0.pdf)
-- [Complete briefing package](docs/organization/briefing/SABLE_HARBOR_Organization_Briefing_v1.0.zip)
 
 ## Blackridge status
 

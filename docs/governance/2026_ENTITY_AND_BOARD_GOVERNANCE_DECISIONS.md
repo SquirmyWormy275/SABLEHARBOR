@@ -2,7 +2,9 @@
 
 **Version:** 0.1.0  
 **Decision date:** September 2, 2026  
-**Status:** LOCKED where explicitly stated; PROVISIONAL where implementation detail remains to be populated
+**Status:** SUPERSEDED IN PART September 2, 2026 — entity principles retained; board/capital gaps resolved
+
+> Current board, investor, financing, committee, reserved-matter, and legal-boundary decisions are controlled by [`BOARD_AND_CAPITAL_GOVERNANCE.md`](BOARD_AND_CAPITAL_GOVERNANCE.md), [`GOVERNANCE_CONSTITUTION.md`](GOVERNANCE_CONSTITUTION.md), and corporate lore v0.3. Earlier “remaining/open” language below is historical wherever those sources resolve it.
 
 ## Purpose
 
@@ -86,7 +88,7 @@ The two investors should create legitimate strategic differences — for example
 
 Preferred-share and governance terms are **genuinely balanced**. Neither founders nor investors receive implausible unilateral control. Reserved matters, protective provisions, board rights, and management authority should be designed accordingly.
 
-Exact round amounts, valuations, security terms, investor organizations, director names, and cap-table percentages remain to be populated from this locked philosophy.
+Round direction, investor organizations, directors, and accepted working economics are now resolved in `BOARD_AND_CAPITAL_GOVERNANCE.md`. Exact unprovided security/legal drafting remains OPEN.
 
 ## 6. Relationship to the CCF
 
@@ -108,9 +110,8 @@ The following remain open and must not be silently invented as locked facts:
 
 - exact names/jurisdictions of the Red Wash operating entity and any asset-holding entities;
 - exact ARU/BS&T legal names and formation jurisdictions if not already established elsewhere in canon;
-- financing round economics and investor identities;
-- the remaining independent directors and final committee memberships;
-- detailed board reserved-matter thresholds;
-- management delegation-of-authority thresholds;
+- exact unprovided financing security/legal mechanics;
+- detailed numeric delegation thresholds where later justified;
+- management numeric delegation-of-authority thresholds;
 - internal-audit/independent-assurance maturity decision if not separately resolved;
 - exact executive titles/direct-report hierarchy where still open in canon.

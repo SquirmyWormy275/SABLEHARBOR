@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import json, re, sys
+import hashlib, json, re, subprocess, sys
 from pathlib import Path
 R=Path(__file__).resolve().parents[1]; errors=[]
 def need(ok,msg):
@@ -31,10 +31,27 @@ manifest=R/'docs/governance/publication_manifest.json'
 need(manifest.is_file(),'publication manifest missing')
 if manifest.is_file():
     for a in json.loads(manifest.read_text())['artifacts']:
-        need((R/a['publication']).is_file(),f"missing publication {a['publication']}")
+        src=R/a['source']; pub=R/a['publication']
+        need(pub.is_file(),f"missing publication {a['publication']}")
+        need(src.is_file(),f"missing source {a['source']}")
+        if src.is_file(): need(hashlib.sha256(src.read_bytes()).hexdigest()==a['source_sha256'],f"source hash drift: {a['source']}")
+        if pub.is_file():
+            need(hashlib.sha256(pub.read_bytes()).hexdigest()==a['sha256'],f"publication hash drift: {a['publication']}")
+            info=subprocess.run(['pdfinfo',str(pub)],capture_output=True,text=True).stdout
+            need('612 x 792 pts (letter)' in info,f"publication not US Letter: {a['publication']}")
+            extracted=subprocess.run(['pdftotext',str(pub),'-'],capture_output=True,text=True).stdout
+            need('Controlled publication' in extracted,f"publication missing controlled footer: {a['publication']}")
+chartreg=R/'docs/organization/J2_CHART_REGISTER.json'
+need(chartreg.is_file(),'J2 chart register missing')
+if chartreg.is_file():
+    charts=json.loads(chartreg.read_text())['charts']; need(len(charts)==5,'J2 chart register must contain exactly 5 charts')
+    for c in charts:
+        for key in ['svg','png']:
+            p=R/c[key]; need(p.is_file(),f"missing J2 chart {c[key]}")
+            if p.is_file(): need(hashlib.sha256(p.read_bytes()).hexdigest()==c[key+'Sha256'],f"J2 chart hash drift: {c[key]}")
 for md in list((R/'docs/j2').rglob('*.md'))+list((R/'docs/governance').glob('*.md')):
     for link in re.findall(r'\[[^]]+\]\(([^)#]+)',md.read_text()):
         if '://' not in link: need((md.parent/link).resolve().exists(),f'broken link {md.relative_to(R)} -> {link}')
 if errors:
     print('\n'.join('FAIL '+e for e in errors)); sys.exit(1)
-print('PASS governance/J2 validation: 9 directors, 5 committees, 9 portals, Daedalus boundaries, assets, publications, links, supersession')
+print('PASS governance/J2 validation: 9 directors, 5 committees, 9 portals, 5 rendered charts, Daedalus boundaries, source/PDF hashes, US-Letter publications, links, supersession')

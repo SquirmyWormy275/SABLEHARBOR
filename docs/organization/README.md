@@ -24,13 +24,11 @@ These are rendered organization charts for the repository README and public wiki
 
 The enterprise chart is a **functional organization chart**: it shows Sable Harbor's company-wide authorities, operating lines, known leaders and known ownership/component relationships. It is not a conventional HR reporting tree because the canon deliberately leaves exact executive titles and reporting lines open.
 
-The September 2 package adds [J2 organization and interface charts](J2_ORGANIZATION.md). J2 is an internal enterprise capability, not a legal entity or customer-facing business line; chart edges distinguish work-product, collection-direction, advisory, assignment, and standards relationships from reporting.
-
 The unit charts go deeper wherever the canon supports real team structure. They do not fill remaining gaps with plausible-sounding executives, mine departments, subsidiaries, or headcount.
 
 ## Source and regeneration
 
-- Controlling canon: [`SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md`](../canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md)
+- Controlling canon: [`SABLE_HARBOR_CORPORATE_LORE_CANON_v0.2.md`](../canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.2.md)
 - Decision index: [`DECISION_REGISTER.md`](../canon/DECISION_REGISTER.md)
 - Chart governance: [`CHART_GOVERNANCE.md`](CHART_GOVERNANCE.md)
 - Deterministic renderer: [`scripts/build_organization_charts.py`](../../scripts/build_organization_charts.py)

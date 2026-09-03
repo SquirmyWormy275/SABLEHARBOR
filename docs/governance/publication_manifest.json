@@ -5,119 +5,154 @@
     {
       "source": "docs/governance/BOARD_AND_CAPITAL_GOVERNANCE.md",
       "publication": "docs/governance/publications/SH-GOV-BOARD-001_v1.0.0.pdf",
-      "sha256": "6f2fb709a8f678c4fe7ed69498a61fb97e5b2f0bf2543eaff0e47aa524aaf2dd",
-      "source_sha256": "54f25bde66b8496fd6dc510f6d90239e5e214618a40d6db2057837e0c26df476",
+      "sha256": "07e324c78d190c987966948b46c0e478a722a63cc415095ce8185ad06881016a",
+      "source_sha256": "40d04804259c66d13cd425c105fa86f0d9ad4dd98f7b23fa93ab8bbbda00ef43",
       "brand": "corporate"
     },
     {
       "source": "docs/governance/GOVERNANCE_CONSTITUTION.md",
       "publication": "docs/governance/publications/SH-GOV-CONST-001_v1.0.0.pdf",
-      "sha256": "c3b15896df8a703f591cd040cf276e616aa6d3e6575e65ded53542221d766def",
+      "sha256": "096e4d0a8bb9949f612ba58bbb0cab2d560495149b0a6755726cd688d638a735",
       "source_sha256": "ad5a957351380bc89d8aeb71ca716c6cbe74a631a0e816aebbe3bb66361bcafb",
       "brand": "corporate"
     },
     {
       "source": "docs/governance/ASSUMPTION_OF_RISK_FORM.md",
       "publication": "docs/governance/publications/SH-GOV-RISK-001_v1.0.0.pdf",
-      "sha256": "04d5c45e9af2b4a0cfd78645b821fe30b64434628d9eb98e1182d812a9322800",
+      "sha256": "30f7178efee22261b99b41e7bd0ba627ed56759d14d181e88415b97817e4d70d",
       "source_sha256": "2a82611c913ac4343b0c4bf75b36a7a56d96108b2dd2a595e1c0338575cccfd1",
+      "brand": "corporate"
+    },
+    {
+      "source": "docs/governance/committees/AUDIT_AND_COMPLIANCE_COMMITTEE_CHARTER.md",
+      "publication": "docs/governance/publications/SH-GOV-COM-AUDIT-001_v1.0.0.pdf",
+      "sha256": "f9c7b38458f32d205e6979023beab67a788c73c5b97cd461029d413cbe5f816e",
+      "source_sha256": "d564275a7d67eee4120149a0001a21614a6173a79bef1550da50474bd57074f4",
+      "brand": "corporate"
+    },
+    {
+      "source": "docs/governance/committees/FINANCE_AND_INVESTMENT_COMMITTEE_CHARTER.md",
+      "publication": "docs/governance/publications/SH-GOV-COM-FIN-001_v1.0.0.pdf",
+      "sha256": "96a45d47453d7c067411d002f9c1413f8f6558f9e207436091473e04fff6e740",
+      "source_sha256": "7e5aa45bb65b74f679627ded1214c1bbbb45bfe73b7644ace5273bef04be497a",
+      "brand": "corporate"
+    },
+    {
+      "source": "docs/governance/committees/TECHNOLOGY_AND_OPERATIONS_COMMITTEE_CHARTER.md",
+      "publication": "docs/governance/publications/SH-GOV-COM-TECHOPS-001_v1.0.0.pdf",
+      "sha256": "359836e3160481c62b8a4f55445fe70c5434264053016e307ede8991dba2c364",
+      "source_sha256": "ad512a653693b84840539c7fcacc3ec20b24a699a6d91a9b0db0c69e637872c2",
+      "brand": "corporate"
+    },
+    {
+      "source": "docs/governance/committees/COMPENSATION_AND_HUMAN_CAPITAL_COMMITTEE_CHARTER.md",
+      "publication": "docs/governance/publications/SH-GOV-COM-COMP-001_v1.0.0.pdf",
+      "sha256": "35778108971a3cf9f0d20a89268b03da8569d79d0a50202cca712e8407bd80d7",
+      "source_sha256": "d4d954212ef8375632cb754f6cb2c3b447c872978c926d4ee0c4e1e076b97199",
+      "brand": "corporate"
+    },
+    {
+      "source": "docs/governance/committees/GOVERNANCE_AND_NOMINATING_COMMITTEE_CHARTER.md",
+      "publication": "docs/governance/publications/SH-GOV-COM-GOVNOM-001_v1.0.0.pdf",
+      "sha256": "06174857946fee0c1a0d84c9207d5d3d125259a92b6d327693f805dd26e710e0",
+      "source_sha256": "4d48eb809813e90ec307b71bfd8e39e86ef04b107144055892f72f52c68c5ba0",
       "brand": "corporate"
     },
     {
       "source": "docs/j2/J2_CHARTER.md",
       "publication": "docs/j2/publications/SH-J2-CHARTER-001_v1.0.0.pdf",
-      "sha256": "d6109f4ad728f7cf55dfcba0e48494feff3f1d2e68bbfe4fad0ac90b81066538",
+      "sha256": "baab2ab36f4dcff66ef50414a4464c1189a3f20da9403ff22446ed0a9bb954f7",
       "source_sha256": "5c4e1c5382cbe82da2a1bcfa0a0166de40d5c73e7cdd8f85a6dbaf6b5916e11f",
       "brand": "j2"
     },
     {
       "source": "docs/j2/J2_OPERATING_MODEL.md",
       "publication": "docs/j2/publications/SH-J2-OPS-001_v1.0.0.pdf",
-      "sha256": "524b2bfbfb74ef6dbbbb87a90f78efbb43be2dc882d596105b31f242b7c937ab",
+      "sha256": "3f2426f40b0da46789db73c6786e4d98414227304e8cfb00c0e623ed9f797524",
       "source_sha256": "c3ee5b32a2df72c8057e4b5abfe714d8c80a0fcb154475a93ee03b5c1fc36fb3",
       "brand": "j2"
     },
     {
       "source": "docs/j2/CONTACT.md",
       "publication": "docs/j2/publications/SH-J2-CONTACT-001_v1.0.0.pdf",
-      "sha256": "2265e65270272d6aa3791a8ca932ca8f0757274ec27aece4877de8f6144b8ffd",
+      "sha256": "d5789e91983b871114f5daacf2a7ccedb5eb7a735d04ff36f6c30c3c2ddd6d15",
       "source_sha256": "4fc00731a891b81dd24ab03cb1658f383e17b256884491f837fcd529deeb055e",
       "brand": "j2"
     },
     {
       "source": "docs/j2/JUDGMENT.md",
       "publication": "docs/j2/publications/SH-J2-JUDGMENT-001_v1.0.0.pdf",
-      "sha256": "85fd825e6c4195073c0bddbafb93a03bf0e1b1802449f6f23bcedbc661094886",
+      "sha256": "174efbd9c14a4dc65609ccbd6a4e6745e12cb257e8d8307bf12f31edc873c89a",
       "source_sha256": "0ed72c8de41a762a631c1f5a9ccbb8a4fe6dd4beb539451379b21ac9d339cba3",
       "brand": "j2"
     },
     {
       "source": "docs/j2/ORIENTATION.md",
       "publication": "docs/j2/publications/SH-J2-ORIENT-001_v1.0.0.pdf",
-      "sha256": "8c4a2f1f76826c853761c9ddb0bbf5085c38e2f5f229b5132f8d25934e49c567",
+      "sha256": "169c4851c9c22a68e31dc3a7061de699555865b49d555b1c8206ddfabc429959",
       "source_sha256": "f127f12d510cd6ad6cf3afeb9157c57521745dde0218ca815dcf138e360ac80c",
       "brand": "j2"
     },
     {
       "source": "docs/j2/JUNCTION_ADVISORY_GROUP.md",
       "publication": "docs/j2/publications/SH-J2-JAG-001_v1.0.0.pdf",
-      "sha256": "19190a5e66e026045012b9ea0c2e9c9d12d80f641dc8d0c76382ed4af6b3b606",
+      "sha256": "707492b94f0a97864be629d6c021cf836ebd5ee011721c55343cd556c21b5434",
       "source_sha256": "dd196dea448ef4793e1756ec6ffd68e841061d73de1a04f8b97d99d4b540fdf1",
       "brand": "j2"
     },
     {
       "source": "docs/j2/EDUCATION.md",
       "publication": "docs/j2/publications/SH-J2-EDU-001_v1.0.0.pdf",
-      "sha256": "5fd0c3e868e86a313adc08c18b03d2a2fdffb504b465534f45c0dd3b380a7b64",
+      "sha256": "1a4e1c9087eb05bfdb5094597324758ac63473c87a1af360623d33bcd17d8665",
       "source_sha256": "4d5f32525b1e75ec103c7abce86503cd3c779aa52f2c3de4b9b7cb3da19e0e83",
       "brand": "j2"
     },
     {
       "source": "docs/j2/EIB_AND_ENTERPRISE_QUESTIONS.md",
       "publication": "docs/j2/publications/SH-J2-EIB-001_v1.0.0.pdf",
-      "sha256": "84cf748fe3ee45baaed99d0e5c8da55108d771feda0b1cc86a84b007e3e7fa1d",
+      "sha256": "5073eb2d028a1df666bc8b58701014f93cfcbd725d673d882194519f885e5de0",
       "source_sha256": "7331f27cc1a058b3a1e23fb1ac229d58d66b2729c9877a81b3b9bd586b42839e",
       "brand": "j2"
     },
     {
       "source": "docs/j2/INFORMATION_ACCESS_DOCTRINE.md",
       "publication": "docs/j2/publications/SH-J2-ACCESS-001_v1.0.0.pdf",
-      "sha256": "aace7c8cc1fdc2f14ddd729e67284c078aa0eb6362141b6889e899f53981371f",
+      "sha256": "a1214720ed8f183f77947525acff13746c6d0ef30c6adde319d557588f29bd34",
       "source_sha256": "f827dc4c7d84b3559e4f72435e96e0678272bc96d948d6b69993efaf9d8ad085",
       "brand": "j2"
     },
     {
       "source": "docs/j2/alexandria/ALEXANDRIA_CHARTER.md",
       "publication": "docs/j2/publications/SH-J2-ALX-001_v1.0.0.pdf",
-      "sha256": "7026f9e8c7955d2970d1929f4fbcd34559411a50e3054544d2a279a91423346b",
+      "sha256": "7678f180152354b5d1236f8ccafcafc7f42e1333f668d7242d490be61a666e69",
       "source_sha256": "6c84fb4d593f852b6b50f47db70946fa26eed702b3946d3a68145b00857c557f",
       "brand": "j2"
     },
     {
       "source": "docs/j2/alexandria/PINAKES_PORTAL_AND_UX.md",
       "publication": "docs/j2/publications/SH-J2-PINAKES-001_v1.0.0.pdf",
-      "sha256": "30f287abdd6bb240cd7fa5f0b12fe3d4d2e109ed0a3a8884d8602f2e7bf1c8b0",
+      "sha256": "8af5f95968e8e4c6e400d68b510f5d751fa504bbb03afa90eafc70c90169a2ef",
       "source_sha256": "e6fd565c0636f605ea82cc6b00bc89b007ae4be106422c61eee763df8f124393",
       "brand": "j2"
     },
     {
       "source": "docs/j2/alexandria/SEMAPHORE_TRAFFIC_SYSTEM.md",
       "publication": "docs/j2/publications/SH-J2-SEMAPHORE-001_v1.0.0.pdf",
-      "sha256": "28720a83a81ee09df4ccef259993288bc317f0fd5bb83ca83a1b609076fd5ef8",
+      "sha256": "57e180b3d403d52c48e033d4a568ef0489866785096c71d4deabbe11bb6010ed",
       "source_sha256": "5ede76739c70a5e330af91a2321e14de80cf5a31787f23317ac2b5856df7c8e9",
       "brand": "j2"
     },
     {
       "source": "docs/j2/alexandria/CANON_INSTITUTIONAL_KNOWLEDGE.md",
       "publication": "docs/j2/publications/SH-J2-CANON-001_v1.0.0.pdf",
-      "sha256": "e8ad4bf50fef73eee02dec2fe1129c60e8cb54dfc5fd386462056f3d660bd581",
+      "sha256": "00d84038ce98bc85cf417128685067f01b61892bf84b4b48d9fb1e9a4a10e823",
       "source_sha256": "9f07703a24fa939b764bc9cae78c4c018026cf138087afc171403e8f56a41cda",
       "brand": "j2"
     },
     {
       "source": "docs/j2/alexandria/DAEDALUS_OPERATING_DOCTRINE.md",
       "publication": "docs/j2/publications/SH-J2-DAEDALUS-001_v1.0.0.pdf",
-      "sha256": "641a39b6656efa96de3344eda7e9f3e15b347ef74eb18450b70c9aa666121784",
+      "sha256": "fde5141a8a5104b4cfbd873fad322dcfb603990e73a002a9f2f811e6c87d7c07",
       "source_sha256": "dd754b30c046fc7418d6a9b5f2d3e649143fa0984f4a8597c5ffebdbbc48d9e4",
       "brand": "j2"
     }

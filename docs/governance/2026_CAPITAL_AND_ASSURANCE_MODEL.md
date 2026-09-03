@@ -2,7 +2,9 @@
 
 **Version:** 0.1.0  
 **Date:** September 2, 2026  
-**Status:** PROVISIONAL implementation model under CCF v0.1
+**Status:** SUPERSEDED IN PART — governance doctrine replaced; assurance alternative remains historical PROVISIONAL
+
+> Current authority, reserved-matter, subsidiary-autonomy, dissent, and risk-assumption doctrine is [`GOVERNANCE_CONSTITUTION.md`](GOVERNANCE_CONSTITUTION.md). The co-sourced assurance model below is an earlier working alternative only; the 2026 Internal Audit model remains OPEN.
 
 ## Capital authority
 
@@ -36,7 +38,7 @@ The board retains authority over matters such as transformative acquisitions/dis
 
 The CCF requires a clear distinction among first-line control ownership, second-line risk/compliance challenge, and independent assurance. The final 2026 maturity choice remains a canon decision unless separately locked.
 
-### Working implementation assumption
+### Historical working implementation assumption — NONCONTROLLING
 
 Until that decision is finalized, architecture should support a **small internal assurance capability with co-sourcing**, reporting functionally to the Audit & Compliance Committee and administratively through an appropriate senior enterprise role.
 

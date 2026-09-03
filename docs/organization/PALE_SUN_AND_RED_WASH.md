@@ -19,13 +19,14 @@ flowchart TB
     WALT["Walt Sutter<br/>retired geologist<br/><b>external historical source, not an oracle</b>"]
 
     SH -->|uranium operating business| PALE
-    PALE -->|owns and operates in the narrative canon; exact legal form OPEN| REDWASH
+    PALE -->|strategic / business-line identity| REDWASH
+    SH -->|controls dedicated operator; exact legal implementation OPEN| REDWASH
     MARI -->|operating leadership| PALE
     COLE -->|site operating authority| REDWASH
     WALT -.->|diligence evidence and operating memory| REDWASH
 ```
 
-Walt's dotted line does not indicate employment. The seller, transaction structure, acquisition price, financing, and exact legal ownership chain remain open; the provisional Northstar Resources and Martin Shaw names are therefore not presented as current organizational facts.
+Walt's dotted line does not indicate employment. Dedicated Red Wash operating-company direction is LOCKED. Its exact name, suffix, jurisdiction, transaction structure, acquisition price, financing, and detailed ownership mechanics remain open; provisional seller/deal names are not presented as current organizational facts.
 
 ## Field qualification and operating-ownership gate
 
