@@ -1,6 +1,6 @@
 # SABLE HARBOR CONTROLLED DOCUMENT INDEX
 
-**Index version:** 1.0.2 | **As of:** September 3, 2026
+**Index version:** 1.0.3 | **As of:** September 3, 2026
 
 ## Authority order
 
@@ -12,6 +12,13 @@
 6. Structured representations and generated publications, which reconcile to their canonical Markdown source
 
 Earlier versions and SUPERSEDED records remain available for history but do not silently override current material. Generated PDFs, catalogs, validators, and publication manifests do not independently create canon; they publish or index source records.
+
+## Repository maintenance and post-merge hygiene
+
+- [Maintainer rules](../MAINTAINERS.md) — repository operating rules for canon, generated artifacts, validation, issue hygiene, and public safety
+- [Open canon and hygiene issue index](internal/OPEN_CANON_AND_HYGIENE_ISSUE_INDEX.md) — issue navigation, not a decision register
+- [Canon v0.3 / CCF-J2-Alexandria release notes](internal/RELEASE_NOTES_canon-v0.3-ccf-j2-alexandria.md)
+- [Post-merge hygiene status v0.3.1](internal/POST_MERGE_HYGIENE_STATUS_v0.3.1.md)
 
 ## Governance
 
