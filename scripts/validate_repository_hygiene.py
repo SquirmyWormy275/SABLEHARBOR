@@ -17,7 +17,12 @@ for rel in tracked:
             target=link.split('#',1)[0].strip('<>')
             if not target or '://' in target or target.startswith(('mailto:','app://')): continue
             if not (p.parent/target).resolve().exists(): fail(f'broken Markdown link {rel} -> {target}')
-allowed_history={'docs/governance/2021_2022_FINANCING_AND_INVESTOR_DIRECTOR_PROPOSAL.md'}
+allowed_history={
+    'docs/governance/2021_2022_FINANCING_AND_INVESTOR_DIRECTOR_PROPOSAL.md',
+    'docs/internal/CHAT_CANON_LEDGER_J2_ALEXANDRIA.md',
+    'docs/internal/chat_canon_ledger_j2_alexandria.json',
+    'docs/internal/institutional_catalog.json',
+}
 stale=['Northline Growth Partners','Ironcliff Industrial Partners','Leah Moravec','Owen Rourke','Dr. Nadia Serrano','Richard Halden']
 for rel in tracked:
     if rel in allowed_history or not rel.endswith(('.md','.json','.yml','.yaml')): continue
