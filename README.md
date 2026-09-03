@@ -27,14 +27,6 @@ Inherited canon and provenance records remain available:
 - [`docs/canon/CANON_CHANGELOG_v0.2.md`](docs/canon/CANON_CHANGELOG_v0.2.md) — explicit inherited-canon clarifications and supersessions.
 - [`docs/canon/DECISION_REGISTER.md`](docs/canon/DECISION_REGISTER.md) — LOCKED, PROVISIONAL, OPEN, and SUPERSEDED decision index.
 
-## Organization at a glance
-
-This is the canon-derived August 31, 2026 **functional enterprise organization chart**. It shows company-wide authorities, operating lines, named leaders and known ownership/component relationships. Exact HR reporting lines and final legal entities remain deliberately open.
-
-[![Sable Harbor enterprise organization chart](docs/organization/assets/enterprise-organization-2026.svg)](docs/organization/README.md)
-
-The full package contains dedicated charts for [leadership and authority](docs/organization/2026_LEADERSHIP_AND_AUTHORITY_MAP.md), [Foundry Field](docs/organization/FOUNDRY_FIELD_ORGANIZATION.md), [Project Willow](docs/organization/WILLOW_ORGANIZATION.md), [Atlas Meridian](docs/organization/ATLAS_MERIDIAN_BRIDGE_ORGANIZATION.md), [Pale Sun and Red Wash](docs/organization/PALE_SUN_RED_WASH_ORGANIZATION.md), [Project Cradle](docs/organization/PROJECT_CRADLE_ORGANIZATION.md), [ARU and BS&T](docs/organization/ARU_BST_ORGANIZATION.md), and [the Original Eight](docs/organization/ORIGINAL_EIGHT.md).
-
 ## Governance, J2, Alexandria, and controls
 
 - [Controlled document index](docs/CONTROLLED_DOCUMENT_INDEX.md)
@@ -44,6 +36,14 @@ The full package contains dedicated charts for [leadership and authority](docs/o
 - [Common Controls Framework index](docs/controls/CCF_FOUNDATION_BUILD_INDEX_v0.1.md)
 - [Open canon and hygiene issue index](docs/internal/OPEN_CANON_AND_HYGIENE_ISSUE_INDEX.md)
 - [Canon v0.3 release notes](docs/internal/RELEASE_NOTES_canon-v0.3-ccf-j2-alexandria.md)
+
+## Organization at a glance
+
+This is the canon-derived August 31, 2026 **functional enterprise organization chart**. It shows company-wide authorities, operating lines, named leaders and known ownership/component relationships. Exact HR reporting lines and final legal entities remain deliberately open.
+
+[![Sable Harbor enterprise organization chart](docs/organization/assets/enterprise-organization-2026.svg)](docs/organization/README.md)
+
+The full package contains dedicated charts for [leadership and authority](docs/organization/2026_LEADERSHIP_AND_AUTHORITY_MAP.md), [Foundry Field](docs/organization/FOUNDRY_FIELD_ORGANIZATION.md), [Project Willow](docs/organization/WILLOW_ORGANIZATION.md), [Atlas Meridian](docs/organization/ATLAS_MERIDIAN_BRIDGE_ORGANIZATION.md), [Pale Sun and Red Wash](docs/organization/PALE_SUN_RED_WASH_ORGANIZATION.md), [Project Cradle](docs/organization/PROJECT_CRADLE_ORGANIZATION.md), [ARU and BS&T](docs/organization/ARU_BST_ORGANIZATION.md), and [the Original Eight](docs/organization/ORIGINAL_EIGHT.md).
 
 ## Blackridge status
 
