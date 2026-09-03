@@ -85,11 +85,15 @@ need('no generic research-analyst seat' in jag.lower() or 'no generic research a
 # J2 classification.
 need('not a legal entity or customer-facing business line' in read('docs/j2/README.md'), 'J2 classification missing')
 
-# Superseded names must not appear as current authority outside the superseded historical proposal.
-md_paths = [p for p in (R / 'docs').rglob('*.md') if p.name != '2021_2022_FINANCING_AND_INVESTOR_DIRECTOR_PROPOSAL.md']
+# Superseded names must not appear as current authority. Explicit supersession/fidelity records are allowed to mention them.
+allowed_stale_context = {
+    'docs/governance/2021_2022_FINANCING_AND_INVESTOR_DIRECTOR_PROPOSAL.md',
+    'docs/internal/CHAT_CANON_LEDGER_J2_ALEXANDRIA.md',
+}
+md_paths = [p for p in (R / 'docs').rglob('*.md') if str(p.relative_to(R)) not in allowed_stale_context]
 all_current = '\n'.join(p.read_text(errors='ignore') for p in md_paths)
 for old in ['Northline Growth Partners', 'Ironcliff Industrial Partners', 'Leah Moravec', 'Owen Rourke', 'Dr. Nadia Serrano', 'Richard Halden']:
-    need(old not in all_current, f'superseded name presented outside historical artifact: {old}')
+    need(old not in all_current, f'superseded name presented outside historical/fidelity artifact: {old}')
 need('Pharos is the' not in all_current and 'Pharos as the main portal' not in all_current, 'Pharos presented as current portal')
 
 # Publication manifest: source/PDF checksum and US Letter checks.
