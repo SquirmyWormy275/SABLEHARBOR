@@ -36,7 +36,13 @@ A polished letterhead, checksum, or validation pass never turns an unapproved id
 
 A document may be publication version `1.0.0` while its underlying implementation remains `LOCKED DIRECTION`, `LOCKED ARCHITECTURAL DIRECTION`, `PROVISIONAL`, or `OPEN` in specific areas.
 
-The state field must describe substantive authority, not visual polish.
+The state field describes substantive authority, not visual polish.
+
+## Validation discipline
+
+Validators may enforce actually approved canon, required files, source/publication reconciliation, and safety boundaries. They must not convert a one-time implementation snapshot into permanent canon merely because a previous phase happened to produce a specific number of topics, PDFs, rows, or files.
+
+Counts that are true canon, such as nine current directors, five standing committees, and the nine accepted Pinakes doors, may be enforced. Counts that are historical execution metadata should be treated as minimum sanity checks or audit facts rather than governing design.
 
 ## Slop control
 
