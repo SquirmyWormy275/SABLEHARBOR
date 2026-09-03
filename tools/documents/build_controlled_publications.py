@@ -9,12 +9,21 @@ DOCS = [
  ("docs/governance/BOARD_AND_CAPITAL_GOVERNANCE.md","docs/governance/publications/SH-GOV-BOARD-001_v1.0.0.pdf","corporate"),
  ("docs/governance/GOVERNANCE_CONSTITUTION.md","docs/governance/publications/SH-GOV-CONST-001_v1.0.0.pdf","corporate"),
  ("docs/governance/ASSUMPTION_OF_RISK_FORM.md","docs/governance/publications/SH-GOV-RISK-001_v1.0.0.pdf","corporate"),
+ ("docs/governance/RESERVED_MATTERS_AND_SUBSIDIARY_AUTONOMY.md","docs/governance/publications/SH-GOV-AUTH-001_v1.0.0.pdf","corporate"),
+ ("docs/governance/CONTROL_DISSENT_AND_RAPID_ADJUDICATION.md","docs/governance/publications/SH-GOV-DISSENT-001_v1.0.0.pdf","corporate"),
+ ("docs/governance/ABSTENTION_AND_INFORMATION_DEFICIENCY.md","docs/governance/publications/SH-GOV-ABSTAIN-001_v1.0.0.pdf","corporate"),
+ ("docs/governance/DECISION_QUALITY_AND_AFTER_ACTION_LEARNING.md","docs/governance/publications/SH-GOV-LEARN-001_v1.0.0.pdf","corporate"),
+ ("docs/governance/CONFLICT_INTEGRITY_AND_FOUNDER_AUTHORITY.md","docs/governance/publications/SH-GOV-CONFLICT-001_v1.0.0.pdf","corporate"),
  ("docs/governance/committees/AUDIT_AND_COMPLIANCE_COMMITTEE_CHARTER.md","docs/governance/publications/SH-GOV-COM-AUDIT-001_v1.0.0.pdf","corporate"),
  ("docs/governance/committees/FINANCE_AND_INVESTMENT_COMMITTEE_CHARTER.md","docs/governance/publications/SH-GOV-COM-FIN-001_v1.0.0.pdf","corporate"),
  ("docs/governance/committees/TECHNOLOGY_AND_OPERATIONS_COMMITTEE_CHARTER.md","docs/governance/publications/SH-GOV-COM-TECHOPS-001_v1.0.0.pdf","corporate"),
  ("docs/governance/committees/COMPENSATION_AND_HUMAN_CAPITAL_COMMITTEE_CHARTER.md","docs/governance/publications/SH-GOV-COM-COMP-001_v1.0.0.pdf","corporate"),
  ("docs/governance/committees/GOVERNANCE_AND_NOMINATING_COMMITTEE_CHARTER.md","docs/governance/publications/SH-GOV-COM-GOVNOM-001_v1.0.0.pdf","corporate"),
  ("docs/j2/J2_CHARTER.md","docs/j2/publications/SH-J2-CHARTER-001_v1.0.0.pdf","j2"),
+ ("docs/j2/J2_HEADQUARTERS.md","docs/j2/publications/SH-J2-HQ-001_v1.0.0.pdf","j2"),
+ ("docs/j2/CONTACT_COLLECTION_MANAGEMENT.md","docs/j2/publications/SH-J2-COLLECT-001_v1.0.0.pdf","j2"),
+ ("docs/j2/JUDGMENT_OFFICER_PROFESSION.md","docs/j2/publications/SH-J2-JO-001_v1.0.0.pdf","j2"),
+ ("docs/j2/ORIENTATION_OFFICER_PROFESSION.md","docs/j2/publications/SH-J2-OO-001_v1.0.0.pdf","j2"),
  ("docs/j2/J2_OPERATING_MODEL.md","docs/j2/publications/SH-J2-OPS-001_v1.0.0.pdf","j2"),
  ("docs/j2/CONTACT.md","docs/j2/publications/SH-J2-CONTACT-001_v1.0.0.pdf","j2"),
  ("docs/j2/JUDGMENT.md","docs/j2/publications/SH-J2-JUDGMENT-001_v1.0.0.pdf","j2"),
@@ -24,10 +33,16 @@ DOCS = [
  ("docs/j2/EIB_AND_ENTERPRISE_QUESTIONS.md","docs/j2/publications/SH-J2-EIB-001_v1.0.0.pdf","j2"),
  ("docs/j2/INFORMATION_ACCESS_DOCTRINE.md","docs/j2/publications/SH-J2-ACCESS-001_v1.0.0.pdf","j2"),
  ("docs/j2/alexandria/ALEXANDRIA_CHARTER.md","docs/j2/publications/SH-J2-ALX-001_v1.0.0.pdf","j2"),
+ ("docs/j2/alexandria/TEMPORAL_INTEGRITY.md","docs/j2/publications/SH-J2-ALX-TIME-001_v1.0.0.pdf","j2"),
+ ("docs/j2/alexandria/PROVENANCE_AND_LINEAGE.md","docs/j2/publications/SH-J2-ALX-PROV-001_v1.0.0.pdf","j2"),
+ ("docs/j2/alexandria/INFORMATION_ACCESS_AND_DISCLOSURE.md","docs/j2/publications/SH-J2-ALX-DISCLOSE-001_v1.0.0.pdf","j2"),
+ ("docs/j2/alexandria/AI_AUTHORITY_AND_HUMAN_AUTHORSHIP.md","docs/j2/publications/SH-J2-ALX-AI-001_v1.0.0.pdf","j2"),
+ ("docs/j2/alexandria/DAEDALUS_PERSONAL_INSTANCE_AND_WORKSPACE.md","docs/j2/publications/SH-J2-DAEDALUS-PERSONAL-001_v1.0.0.pdf","j2"),
  ("docs/j2/alexandria/PINAKES_PORTAL_AND_UX.md","docs/j2/publications/SH-J2-PINAKES-001_v1.0.0.pdf","j2"),
  ("docs/j2/alexandria/SEMAPHORE_TRAFFIC_SYSTEM.md","docs/j2/publications/SH-J2-SEMAPHORE-001_v1.0.0.pdf","j2"),
  ("docs/j2/alexandria/CANON_INSTITUTIONAL_KNOWLEDGE.md","docs/j2/publications/SH-J2-CANON-001_v1.0.0.pdf","j2"),
- ("docs/j2/alexandria/DAEDALUS_OPERATING_DOCTRINE.md","docs/j2/publications/SH-J2-DAEDALUS-001_v1.0.0.pdf","j2")]
+ ("docs/j2/alexandria/DAEDALUS_OPERATING_DOCTRINE.md","docs/j2/publications/SH-J2-DAEDALUS-001_v1.0.0.pdf","j2"),
+ ("docs/internal/COVERAGE_AUDIT_PHASE2.md","docs/internal/COVERAGE_AUDIT_PHASE2.pdf","corporate")]
 
 def inline(s: str) -> str:
     s=html.escape(s)
@@ -66,7 +81,7 @@ def main():
             src=ROOT/src_rel; out=ROOT/out_rel; out.parent.mkdir(parents=True,exist_ok=True)
             logo=ROOT/("assets/brand/logos/j2__primary-horizontal.svg" if brand=='j2' else "assets/brand/logos/sable-harbor__primary-horizontal.svg")
             color='#BE0E0C' if brand=='j2' else '#C45124'
-            page=f'''<!doctype html><html><head><meta charset="utf-8"><style>@page{{size:Letter;margin:.65in .72in .62in}}body{{font:10.5pt Arial;color:#101214;line-height:1.35}}header{{border-bottom:3px solid {color};padding-bottom:10px;margin-bottom:24px}}header img{{width:220px;max-height:55px}}h1{{font-size:22pt;margin:14px 0;color:#101214;display:block;clear:both}}h2{{font-size:15pt;color:{color};margin-top:20px;border-bottom:1px solid #bbb;display:block;clear:both}}h3{{font-size:12pt;display:block;clear:both}}p{{margin:7px 0;display:block;clear:both}}.bullet{{margin-left:16px}}table{{border-collapse:collapse;width:100%;font-size:8.5pt;margin:10px 0}}th,td{{border:1px solid #aaa;padding:4px;vertical-align:top}}th{{background:#eee}}blockquote{{border-left:3px solid {color};padding-left:10px;color:#555}}footer{{margin-top:24px;border-top:1px solid #777;padding-top:7px;font-size:8pt;color:#666}}code{{font-family:monospace}}</style></head><body><header><img src="{logo.as_uri()}"></header>{body(src.read_text())}<footer>Controlled publication • Generated from {src_rel} • Do not alter PDF manually</footer></body></html>'''
+            page=f'''<!doctype html><html><head><meta charset="utf-8"><style>@page{{size:Letter;margin:.62in .7in .58in}}body{{font:10pt Arial;color:#101214;line-height:1.28}}header{{border-bottom:3px solid {color};padding-bottom:8px;margin-bottom:18px}}header img{{width:220px;max-height:52px}}h1{{font-size:21pt;margin:12px 0;color:#101214;display:block;clear:both}}h2{{font-size:14pt;color:{color};margin-top:16px;margin-bottom:6px;border-bottom:1px solid #bbb;display:block;clear:both;page-break-after:avoid}}h3{{font-size:11.5pt;display:block;clear:both;page-break-after:avoid}}p{{margin:6px 0;display:block;clear:both}}.bullet{{margin-left:16px}}table{{border-collapse:collapse;width:100%;font-size:8pt;margin:8px 0}}th,td{{border:1px solid #aaa;padding:3px;vertical-align:top}}th{{background:#eee}}blockquote{{border-left:3px solid {color};padding-left:10px;color:#555}}footer{{margin-top:18px;border-top:1px solid #777;padding-top:6px;font-size:7.5pt;color:#666}}code{{font-family:monospace}}</style></head><body><header><img src="{logo.as_uri()}"></header>{body(src.read_text())}<footer>Controlled publication • Generated from {src_rel} • Do not alter PDF manually</footer></body></html>'''
             hp=tmp/(out.stem+'.html'); hp.write_text(page)
             subprocess.run(['libreoffice','--headless','--convert-to','pdf','--outdir',str(tmp),str(hp)],check=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
             generated=tmp/(hp.stem+'.pdf')

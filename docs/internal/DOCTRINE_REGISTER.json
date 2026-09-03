@@ -1,0 +1,19 @@
+{
+  "register_id":"SH-INT-DOCTRINE-001","version":"1.0.0","effective_date":"2026-09-03","purpose":"Machine-readable index of Phase 2 first-class doctrine expansions",
+  "records":[
+    {"id":"SH-GOV-AUTH-001","source":"docs/governance/RESERVED_MATTERS_AND_SUBSIDIARY_AUTONOMY.md","state":"LOCKED_DIRECTION","principles":["three authority bands","exposure over spend","anti-circumvention","subsidiary right to be wrong","contagion required"]},
+    {"id":"SH-GOV-DISSENT-001","source":"docs/governance/CONTROL_DISSENT_AND_RAPID_ADJUDICATION.md","state":"LOCKED_DIRECTION","principles":["finding escalates not vetoes","two protected categories","48-hour handling target","72-hour adjudication target","one evidence-specific extension"]},
+    {"id":"SH-GOV-ABSTAIN-001","source":"docs/governance/ABSTENTION_AND_INFORMATION_DEFICIENCY.md","state":"LOCKED","principles":["abstention permitted","reason and missing information recorded","telemetry","no mechanical strikes"]},
+    {"id":"SH-GOV-LEARN-001","source":"docs/governance/DECISION_QUALITY_AND_AFTER_ACTION_LEARNING.md","state":"LOCKED","principles":["ex-ante quality","outcome is not quality","AAR closure requires institutional disposition","respectful candor"]},
+    {"id":"SH-GOV-CONFLICT-001","source":"docs/governance/CONFLICT_INTEGRITY_AND_FOUNDER_AUTHORITY.md","state":"LOCKED","principles":["directors serve Sable Harbor","advice is not authority","founder conviction is not sovereignty","dissent is not endorsement"]},
+    {"id":"SH-J2-HQ-001","source":"docs/j2/J2_HEADQUARTERS.md","state":"LOCKED_DIRECTION","principles":["small headquarters","doctrine and professional standards","priority arbitration","not a command tower"]},
+    {"id":"SH-J2-COLLECT-001","source":"docs/j2/CONTACT_COLLECTION_MANAGEMENT.md","state":"LOCKED_DIRECTION","principles":["Contact not self-directing","six collection disciplines","provenance handoff","value not volume"]},
+    {"id":"SH-J2-JO-001","source":"docs/j2/JUDGMENT_OFFICER_PROFESSION.md","state":"LOCKED_DIRECTION","principles":["human problem owner","four directed plus one curiosity problem","attention not command","Problem Book","human handoff","no throughput score"]},
+    {"id":"SH-J2-OO-001","source":"docs/j2/ORIENTATION_OFFICER_PROFESSION.md","state":"LOCKED_DIRECTION","principles":["vocation","permanent line-power prohibition","anti-court","decision-environment coverage","professional self-government"]},
+    {"id":"SH-J2-ALX-TIME-001","source":"docs/j2/alexandria/TEMPORAL_INTEGRITY.md","state":"LOCKED","principles":["five temporal dimensions","actual knowledge versus knowability","no silent backfill"]},
+    {"id":"SH-J2-ALX-PROV-001","source":"docs/j2/alexandria/PROVENANCE_AND_LINEAGE.md","state":"LOCKED_DIRECTION","principles":["source that","contrary missing contested rejected evidence","dead ends preserved","forward and backward trace"]},
+    {"id":"SH-J2-ALX-DISCLOSE-001","source":"docs/j2/alexandria/INFORMATION_ACCESS_AND_DISCLOSURE.md","state":"LOCKED_ARCHITECTURAL_DIRECTION","principles":["maximum useful visibility","questions wider than answers","universal read bounded disclosure","no inferential leakage"]},
+    {"id":"SH-J2-ALX-AI-001","source":"docs/j2/alexandria/AI_AUTHORITY_AND_HUMAN_AUTHORSHIP.md","state":"LOCKED","principles":["intellectual aggression","no write","no self-promotion","no institutional authority","independent human authorship"]},
+    {"id":"SH-J2-DAEDALUS-PERSONAL-001","source":"docs/j2/alexandria/DAEDALUS_PERSONAL_INSTANCE_AND_WORKSPACE.md","state":"LOCKED_ARCHITECTURAL_DIRECTION","principles":["personal persistent memory","cross-user isolation","content-free skill sharing","persistent synthetic workspace","hold pull trace reconstruct challenge explore compare visualize"]}
+  ]
+}

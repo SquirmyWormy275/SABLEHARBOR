@@ -17,6 +17,11 @@ Earlier versions and SUPERSEDED records remain available for history but do not 
 - [Governance constitution](governance/GOVERNANCE_CONSTITUTION.md)
 - [Five committee charters](governance/committees/README.md)
 - [Assumption of Risk form](governance/ASSUMPTION_OF_RISK_FORM.md)
+- [Reserved matters and subsidiary autonomy](governance/RESERVED_MATTERS_AND_SUBSIDIARY_AUTONOMY.md)
+- [Rapid adjudication](governance/CONTROL_DISSENT_AND_RAPID_ADJUDICATION.md)
+- [Abstention and information deficiency](governance/ABSTENTION_AND_INFORMATION_DEFICIENCY.md)
+- [Decision quality and AAR](governance/DECISION_QUALITY_AND_AFTER_ACTION_LEARNING.md)
+- [Conflict integrity and founder authority](governance/CONFLICT_INTEGRITY_AND_FOUNDER_AUTHORITY.md)
 - [Corporate document standard](governance/CORPORATE_DOCUMENT_STANDARD_v0.1.md)
 - [Structured board register](governance/structured/board_and_committees.json)
 - [Publication manifest](governance/publication_manifest.json)
@@ -28,6 +33,8 @@ Earlier versions and SUPERSEDED records remain available for history but do not 
 - [Pinakes registry](j2/structured/pinakes_portals.json)
 - [Daedalus policy](j2/structured/daedalus_policy.json)
 - [J2 rendered-chart suite](organization/J2_ORGANIZATION.md)
+- [Phase 2 coverage audit](internal/COVERAGE_AUDIT_PHASE2.md) and [structured audit record](internal/coverage_audit_phase2.json)
+- [Phase 2 doctrine registry](internal/DOCTRINE_REGISTER.json)
 
 ## Controls and presentation
 

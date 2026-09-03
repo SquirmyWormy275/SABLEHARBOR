@@ -49,9 +49,17 @@ if chartreg.is_file():
         for key in ['svg','png']:
             p=R/c[key]; need(p.is_file(),f"missing J2 chart {c[key]}")
             if p.is_file(): need(hashlib.sha256(p.read_bytes()).hexdigest()==c[key+'Sha256'],f"J2 chart hash drift: {c[key]}")
+coverage=R/'docs/internal/coverage_audit_phase2.json'; doctrine=R/'docs/internal/DOCTRINE_REGISTER.json'
+need(coverage.is_file(),'Phase 2 structured coverage audit missing')
+need(doctrine.is_file(),'Phase 2 doctrine register missing')
+if coverage.is_file():
+    cov=json.loads(coverage.read_text()); need(cov['result']=='EXPANSION_COMPLETE','Phase 2 coverage audit not complete'); need(cov['counts']['topics_reviewed']==48,'Phase 2 topic count mismatch')
+if doctrine.is_file():
+    recs=json.loads(doctrine.read_text())['records']; need(len(recs)==14,'Phase 2 doctrine register must contain 14 expansions')
+    for rec in recs: need((R/rec['source']).is_file(),f"missing registered doctrine {rec['source']}")
 for md in list((R/'docs/j2').rglob('*.md'))+list((R/'docs/governance').glob('*.md')):
     for link in re.findall(r'\[[^]]+\]\(([^)#]+)',md.read_text()):
         if '://' not in link: need((md.parent/link).resolve().exists(),f'broken link {md.relative_to(R)} -> {link}')
 if errors:
     print('\n'.join('FAIL '+e for e in errors)); sys.exit(1)
-print('PASS governance/J2 validation: 9 directors, 5 committees, 9 portals, 5 rendered charts, Daedalus boundaries, source/PDF hashes, US-Letter publications, links, supersession')
+print('PASS governance/J2 validation: 48-topic Phase 2 audit, 14 expanded doctrines, 9 directors, 5 committees, 9 portals, 5 rendered charts, Daedalus boundaries, source/PDF hashes, US-Letter publications, links, supersession')
