@@ -10,7 +10,8 @@ Business-line names and status are grounded in `docs/canon/SABLE_HARBOR_CORPORAT
 
 - One logo per file.
 - No contact sheets or composite logo boards are stored in the production logo directory.
-- SVG is the production source of truth; PNG and office-document renders are convenience/generated forms where supplied.
+- The approved J2 PNG files are controlling source artwork. Existing J2 SVG files are vector derivatives and must not supersede or alter the PNG artwork.
+- For all other identities, SVG is the production source of truth; PNG and office-document renders are convenience/generated forms where supplied.
 - Reverse variants use a dark background; all other raster convenience variants preserve transparency.
 
 ## Canonical 2026 business-line set
@@ -37,7 +38,7 @@ The seven business lines are **Foundry Field, Willow, Atlas Meridian, Pale Sun, 
 | Blood, Sweat & Tears Railway | ARU operating component | LOCKED name and relationship to ARU. |
 | Emberline | historical business line | LOCKED historical status: active through 2025, then absorbed into enduring 2026 work. |
 | Red Wash / Pale Sun | endorsed operating lockup | Supplemental endorsed lockup joining the Pale Sun line to its Red Wash operating asset. |
-| J2 — Judgment & Junction | internal enterprise directorate identity | LOCKED September 2, 2026. Approved production assets are `j2__mark.svg` and `j2__primary-horizontal.svg`; J2 is not a separate legal entity or customer-facing business line. |
+| J2 — Judgment & Junction | internal enterprise directorate identity | LOCKED September 2, 2026. Controlling production assets are `j2__mark.png` and `j2__primary-horizontal.png`; J2 is not a separate legal entity or customer-facing business line. |
 
 ## Naming convention
 
@@ -50,6 +51,8 @@ Examples:
 - `american-resource-utility__reverse-horizontal.svg`
 - `j2__mark.svg`
 - `j2__primary-horizontal.svg`
+- `j2__mark.png`
+- `j2__primary-horizontal.png`
 
 ## Intended use
 
@@ -59,7 +62,11 @@ Examples:
 - **Reverse horizontal:** dark interfaces, dark presentation fields, signage, and video.
 - **One-color horizontal:** monochrome printing, stamps, engraving, and constrained reproduction.
 
-J2 currently has two explicitly approved production forms: mark and primary horizontal. Do not manufacture additional J2 variants without an identity decision.
+J2 currently has two explicitly approved production forms: mark and primary horizontal. The PNGs are installed byte-for-byte from the approved source files; the SVGs are matching-use vector derivatives. Do not manufacture additional J2 variants without an identity decision.
+
+All exploratory J2 logo concepts and mockups are historical-only materials. They are excluded from production manifests, packages, stationery, and publication use.
+
+J2 is a controlled internal institutional identity. It must not be placed in the canonical customer-facing business-line set or represented as a legal entity. Controlled J2 doctrine publications use this identity while remaining within Sable Harbor document-control lineage (`SH-GOV-DOC-001`).
 
 ## Production constraints
 
@@ -67,7 +74,7 @@ J2 currently has two explicitly approved production forms: mark and primary hori
 - Do not combine two separate identities into one lockup unless an endorsed combined asset is provided here.
 - Do not substitute literal lighthouse, compass, shield, wave, mountain, mine-pick, generic intelligence, military, target, eye, brain, or AI/circuit clip art.
 - Preserve appropriate clear space around the full lockup.
-- Use the SVG files as the source of truth; raster files are convenience renders.
+- For J2, use the approved PNGs as source of truth. For the rest of this package, use SVG as source of truth.
 
 ## J2 stationery
 
@@ -80,12 +87,13 @@ The controlling identity/stationery record is `docs/organization/J2_IDENTITY_AND
 
 ## Package
 
-Generated collateral packages may be produced under `assets/brand/packages/`.
+Generated collateral packages and their manifest are maintained under `assets/brand/packages/`.
 
 ## Manifest and validation
 
-- `manifest.json` records production brand assets where the current generator has populated them.
-- `VALIDATION.md` records automated checks for the established brand system.
-- Newly approved identities should be added to deterministic manifest/validation tooling as that tooling is extended; approval does not depend on silently altering historical manifests.
+- `manifest.json` records production logo assets, dimensions, status, and SHA-256 digests.
+- `collateral/manifest.json` records controlled J2 stationery and its approved-logo references.
+- `packages/manifest.json` records distributable brand packages and SHA-256 digests.
+- `VALIDATION.md` records automated checks for the established brand system and approved J2 source integrity.
 
 All rights reserved unless a specific repository file states otherwise.

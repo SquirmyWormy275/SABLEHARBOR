@@ -2,7 +2,7 @@
 <title id="title">J2 Judgment &amp; Junction letterhead — A4</title>
 <desc id="desc">Controlled Sable Harbor J2 A4 letterhead using the approved J2 horizontal identity.</desc>
 <rect width="794" height="1123" fill="#F4F1EA"/>
-<image href="../../../logos/j2__primary-horizontal.svg" x="52" y="36" width="350" height="136" preserveAspectRatio="xMinYMid meet"/>
+<image href="../../../logos/j2__primary-horizontal.png" x="52" y="36" width="350" height="175" preserveAspectRatio="xMinYMin meet"/>
 <text x="742" y="78" text-anchor="end" font-family="Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1.8" fill="#101214">JUDGMENT &amp; JUNCTION</text>
 <text x="742" y="103" text-anchor="end" font-family="Arial, sans-serif" font-size="10" letter-spacing="1.1" fill="#747A80">[DATE]  |  [REFERENCE]</text>
 <rect x="52" y="177" width="690" height="3" fill="#BE0E0C"/>
