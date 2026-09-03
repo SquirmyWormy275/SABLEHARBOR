@@ -24,7 +24,7 @@ Earlier versions and SUPERSEDED records remain available for history but do not 
 
 - [Board and capital governance](governance/BOARD_AND_CAPITAL_GOVERNANCE.md)
 - [Board evolution, 2016–2026](governance/BOARD_EVOLUTION_2016_2026.md)
-- [Board approval records](governance/board-records/README.md) and [structured board approval register](governance/structured/board_approval_records.json)
+- [Board approval records and September 2 artifact-list exhibits](governance/board-records/README.md) and [structured board approval register](governance/structured/board_approval_records.json)
 - [Governance constitution](governance/GOVERNANCE_CONSTITUTION.md)
 - [Five committee charters](governance/committees/README.md)
 - [Assumption of Risk form](governance/ASSUMPTION_OF_RISK_FORM.md)

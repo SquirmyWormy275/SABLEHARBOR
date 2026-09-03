@@ -13,7 +13,6 @@ This index makes unresolved work discoverable without converting GitHub issues i
 | #17 | Internal Audit operating model | OPEN |
 | #18 | Legal entity implementation mechanics | OPEN |
 | #20 | Orientation ranks and former-Head board eligibility | OPEN |
-| #41 | September 2026 governance/J2 board-minute exhibits | OPEN implementation detail |
 | #44 | Finance portal source boundaries | OPEN refinement |
 
 ## J2 and Alexandria canon
@@ -33,37 +32,29 @@ This index makes unresolved work discoverable without converting GitHub issues i
 
 | Issue | Topic | Current state |
 |---:|---|---|
-| #26 | Tag canon v0.3 / CCF-J2-Alexandria merge point and remove merged branch | Requires local Git/tag/branch privileges |
-| #30 | Post-merge main validation from fresh clone | Requires local validation evidence |
-| #43 | Local validation evidence packet for main | Requires local validation evidence |
 | #50 | Archive merged PR branch after tag | Requires local Git/branch privileges |
 
 ## Generated artifacts and publication hygiene
 
 | Issue | Topic | Current state |
 |---:|---|---|
-| #27 | Binary and generated-artifact size audit | OPEN |
-| #29 | Controlled-publication reproducibility audit | OPEN |
-| #32 | Generated artifact source-of-truth boundary | OPEN |
 | #33 | Controlled publication board-paper-trail reconciliation | OPEN |
 | #35 | Release artifact packaging decision | OPEN |
 | #37 | Generated catalog and SQLite lifecycle | OPEN |
 | #48 | Corporate-document index source/publication review | OPEN |
-| #52 | Canon state banner normalization | OPEN |
 
 ## Presentation, safety, and maintainer hygiene
 
 | Issue | Topic | Current state |
 |---:|---|---|
-| #28 | Wiki presentation sync boundary | OPEN |
 | #31 | Root navigation and maintainer entry-point review | OPEN |
-| #36 | Label and milestone taxonomy for canon work | OPEN |
-| #40 | Public repository safety and hidden-oracle sweep | OPEN |
 | #42 | Release notes for canon v0.3 CCF/J2/Alexandria | Addressed by `RELEASE_NOTES_canon-v0.3-ccf-j2-alexandria.md`; close after merge if accepted |
-| #47 | Validator scope audit after PR #16 | OPEN |
 | #49 | Preserve PR #16 implementation audit trail | OPEN |
-| #51 | CCF-to-native-canon separation review | OPEN |
 | #53 | Commit post-merge maintainer rules | Addressed by root `MAINTAINERS.md`; close after merge if accepted |
+
+## Closeout v0.3.2
+
+Issues #26, #27, #28, #29, #30, #32, #36, #39, #40, #41, #43, #47, #51, and #52 are completed by the September 3, 2026 tag/branch cleanup, validation and audit records, board-consent artifact-list exhibits, and GitHub label rollout. This index omits them from the remaining-work tables; their issue records retain the closeout history.
 
 ## Duplicate issue policy
 

@@ -32,6 +32,8 @@ Management and J2 design leads have now presented a consolidated governance, J2,
 
 The directors reviewed the governance constitution; board/capital governance; board-evolution record; committee charters; reserved-matters/subsidiary-autonomy doctrine; control-dissent and rapid-adjudication doctrine; Assumption of Risk doctrine and form; abstention/information-deficiency doctrine; decision-quality/AAR doctrine; conflict-integrity/founder-authority doctrine; J2 charter and operating model; Contact, Judgment, Orientation, JAG, Education, and EIB doctrine; Alexandria charter; Pinakes, Semaphore, Canon, Daedalus, temporal-integrity, provenance, information-access, AI-authority, human-authorship, and personal-workspace doctrine; J2 identity and letterhead package; controlled-document index; structured registers; and validation results.
 
+The approved artifact lists are attached as [Exhibit A — Governance](exhibits/2026-09-02_exhibit-a-governance-package.md), [Exhibit B — J2](exhibits/2026-09-02_exhibit-b-j2-package.md), [Exhibit C — Alexandria](exhibits/2026-09-02_exhibit-c-alexandria-package.md), and [Exhibit D — Controlled Publications and Catalogs](exhibits/2026-09-02_exhibit-d-controlled-publication-and-catalog-package.md). The exhibits are indexes only and do not alter the resolutions or settle open matters.
+
 ## Resolutions
 
 The Board ratifies the **Governance Constitution** as Sable Harbor's controlling governance doctrine, including authority following exposure and accountability; freedom inside the envelope; consequence rather than uncertainty as the escalation trigger; the duty of challenge and humility; and conflict integrity.
