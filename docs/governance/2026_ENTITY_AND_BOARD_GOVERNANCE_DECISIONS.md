@@ -1,20 +1,20 @@
 # SABLE HARBOR — 2026 ENTITY AND BOARD GOVERNANCE DECISIONS
 
-**Version:** 0.1.0  
-**Decision date:** September 2, 2026  
-**Status:** SUPERSEDED IN PART September 2, 2026 — entity principles retained; board/capital gaps resolved
+**Version:** 0.2.0  
+**Decision date:** September 3, 2026  
+**Status:** LOCKED WHERE MARKED — board/capital detail controlled by current governance sources
 
-> Current board, investor, financing, committee, reserved-matter, and legal-boundary decisions are controlled by [`BOARD_AND_CAPITAL_GOVERNANCE.md`](BOARD_AND_CAPITAL_GOVERNANCE.md), [`GOVERNANCE_CONSTITUTION.md`](GOVERNANCE_CONSTITUTION.md), and corporate lore v0.3. Earlier “remaining/open” language below is historical wherever those sources resolve it.
+> Current board, investor, financing, committee, reserved-matter, and legal-boundary decisions are controlled by [`BOARD_AND_CAPITAL_GOVERNANCE.md`](BOARD_AND_CAPITAL_GOVERNANCE.md), [`GOVERNANCE_CONSTITUTION.md`](GOVERNANCE_CONSTITUTION.md), and corporate lore. Current ESS/Internal Audit doctrine is controlled by [`ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md`](ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md).
 
 ## Purpose
 
-This record captures the governance architecture decisions made during CCF Foundation v0.1. It does not redesign Sable Harbor around an audit framework. It resolves previously open corporate-world facts needed for credible governance, financial, legal, and control architecture.
+This record captures the governance architecture decisions made during CCF Foundation work and subsequent canon closure. It does not redesign Sable Harbor around an audit framework. It resolves corporate-world facts needed for credible governance, financial, legal, and control architecture.
 
 ## 1. Legal-entity philosophy — LOCKED
 
-Sable Harbor is predominantly one principal operating company with internal products, programs, and business lines. Separate legal entities are deliberately limited to circumstances where acquisition history, regulated operations, physical-asset liability, financing, or another concrete business reason warrants legal separation.
+Sable Harbor is predominantly one principal operating company with internal products, programs, business lines, institutions, and capabilities. Separate legal entities are deliberately limited to circumstances where acquisition history, regulated operations, physical-asset liability, financing, tax, ownership, or another concrete business reason warrants legal separation.
 
-The following are **not separate legal entities merely because they are named business capabilities**:
+The following are **not separate legal entities merely because they are named business capabilities or institutions**:
 
 - Foundry;
 - Foundry Field;
@@ -22,7 +22,22 @@ The following are **not separate legal entities merely because they are named bu
 - Atlas Meridian;
 - Project Emberline;
 - Project Cradle;
-- Advisory.
+- Advisory;
+- J2;
+- Enterprise Support Services (ESS);
+- Alexandria and its internal services/institutions.
+
+The governing principle is: **legal entity follows necessity, not the org chart.**
+
+### Entity-creation authority — LOCKED
+
+Because legal-entity creation can alter liability, governance, ownership, financing, regulatory, tax, and control boundaries, the authority is explicit rather than implied.
+
+No executive, business line, operating function, J2 arm, ESS function, or other management body may unilaterally create a Sable Harbor subsidiary or other controlled legal entity.
+
+Creation, acquisition, dissolution, or material restructuring of a controlled legal entity requires approval by the **Board of Directors** or by a **Board committee acting under explicit delegated authority** that covers the action. Management may study, propose, negotiate within authorized limits, and execute approved formation mechanics, but may not originate the legal boundary by administrative action alone.
+
+This rule does not prevent ordinary management actions inside an already authorized entity structure. It prevents org-chart drift from silently becoming corporate-law reality.
 
 ### Selective subsidiary architecture — LOCKED DIRECTION
 
@@ -37,13 +52,13 @@ Sable Harbor uses a **unitary U.S.-style board**, not a two-tier supervisory/man
 
 By 2026 the board has **nine directors** and separates the roles of Chief Executive Officer and Chair of the Board.
 
-The board is designed to combine founder continuity, investor representation, and independent industrial/financial/technology oversight. Preferred financing terms and governance rights are to be genuinely balanced rather than structurally founder-dominant or investor-dominant.
+The board is designed to combine founder continuity, investor representation, and independent industrial/financial/technology oversight. Preferred financing terms and governance rights are genuinely balanced rather than structurally founder-dominant or investor-dominant.
 
 ### Standing committees — LOCKED
 
 The 2026 board maintains five standing committees:
 
-1. **Audit & Compliance Committee** — financial reporting, external audit/assurance, internal control, compliance, whistleblower matters, significant control deficiencies, and independent-assurance oversight.
+1. **Audit & Compliance Committee** — financial reporting, external audit/assurance, internal control, compliance, whistleblower matters, significant control deficiencies, and Internal Audit oversight.
 2. **Compensation & Human Capital Committee** — executive compensation, succession, leadership development, workforce/culture matters, and material human-capital risk.
 3. **Governance & Nominating Committee** — board composition, director independence, governance practices, succession for board leadership, and committee architecture.
 4. **Finance & Investment Committee** — financing, capital allocation, material investments, acquisitions/dispositions, major physical-asset commitments, and recommendations on reserved capital matters.
@@ -75,6 +90,8 @@ Tom Calder is an independent director and chairs the Audit & Compliance Committe
 
 The surname **Wexler** is expressly rejected for this character and should not be restored by later drafts.
 
+Internal Audit reports functionally to this committee under the separate ESS/independence doctrine. Administrative association with ESS does not alter that reporting line.
+
 ## 5. Investor representation and financing philosophy — LOCKED DIRECTION
 
 Two board seats arise from meaningful institutional financing events rather than being arbitrary governance appointments.
@@ -86,9 +103,9 @@ The capital history should include:
 
 The two investors should create legitimate strategic differences — for example, software scalability/economics versus patient industrial expansion — without either being written as a villain.
 
-Preferred-share and governance terms are **genuinely balanced**. Neither founders nor investors receive implausible unilateral control. Reserved matters, protective provisions, board rights, and management authority should be designed accordingly.
+Preferred-share and governance terms are genuinely balanced. Neither founders nor investors receive implausible unilateral control. Reserved matters, protective provisions, board rights, and management authority should be designed accordingly.
 
-Round direction, investor organizations, directors, and accepted working economics are now resolved in `BOARD_AND_CAPITAL_GOVERNANCE.md`. Exact unprovided security/legal drafting remains OPEN.
+Round direction, investor organizations, directors, and accepted working economics are resolved in `BOARD_AND_CAPITAL_GOVERNANCE.md`. Exact unprovided security/legal drafting remains OPEN.
 
 ## 6. Relationship to the CCF
 
@@ -98,6 +115,7 @@ These decisions allow the CCF to distinguish:
 - common controls from ARU, BS&T, and Red Wash local implementations;
 - board-reserved matters from delegated management authority;
 - Audit & Compliance oversight from management operation of controls;
+- Internal Audit from Legal/Compliance/Risk and from J2;
 - Finance & Investment oversight from operational stop authority;
 - Technology & Operations oversight from product/engineering management;
 - founder, investor, and independent governance perspectives.
@@ -113,5 +131,6 @@ The following remain open and must not be silently invented as locked facts:
 - exact unprovided financing security/legal mechanics;
 - detailed numeric delegation thresholds where later justified;
 - management numeric delegation-of-authority thresholds;
-- internal-audit/independent-assurance maturity decision if not separately resolved;
-- exact executive titles/direct-report hierarchy where still open in canon.
+- exact executive titles/direct-report hierarchy where still open in canon beyond the reporting lines explicitly resolved elsewhere.
+
+The prior internal-audit/independent-assurance maturity gap is **closed** by `ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md`.
