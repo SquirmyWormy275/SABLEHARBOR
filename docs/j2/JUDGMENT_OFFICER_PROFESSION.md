@@ -1,6 +1,7 @@
 # JUDGMENT OFFICER PROFESSION
 
 **Document ID:** `SH-J2-JO-001` | **Version:** 1.0.0 | **Effective:** September 2, 2026 | **State:** LOCKED DIRECTION
+**Owner:** Judgment | **Related:** Contact, Judgment Watch, JAG, Orientation | **Cross-reference:** `JUDGMENT.md`; `CONTACT_COLLECTION_MANAGEMENT.md`; `ORIENTATION.md`
 
 ## Commission and ownership
 

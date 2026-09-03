@@ -1,6 +1,6 @@
 # Governance
 
-For a human-readable entry point, begin with [Board and Capital Governance](BOARD_AND_CAPITAL_GOVERNANCE.md) and the [Governance Constitution](GOVERNANCE_CONSTITUTION.md). The [five committee charters](committees/README.md) and [Assumption of Risk form](ASSUMPTION_OF_RISK_FORM.md) are separately controlled.
+For a human-readable entry point, begin with [Board and Capital Governance](BOARD_AND_CAPITAL_GOVERNANCE.md), [Board Evolution 2016–2026](BOARD_EVOLUTION_2016_2026.md), and the [Governance Constitution](GOVERNANCE_CONSTITUTION.md). The [five committee charters](committees/README.md), [Assumption of Risk doctrine](ASSUMPTION_OF_RISK_DOCTRINE.md), and [controlled form](ASSUMPTION_OF_RISK_FORM.md) are separately controlled.
 
 Operational doctrines:
 

@@ -1,6 +1,7 @@
 # ABSTENTION AND INFORMATION-DEFICIENCY DOCTRINE
 
 **Document ID:** `SH-GOV-ABSTAIN-001` | **Version:** 1.0.0 | **Effective:** September 2, 2026 | **State:** LOCKED
+**Owner:** Corporate Governance | **Related:** board intelligence, EIB, decision quality | **Cross-reference:** `DECISION_QUALITY_AND_AFTER_ACTION_LEARNING.md`; `../j2/EIB_AND_ENTERPRISE_QUESTIONS.md`
 
 ## Permission to say “I don't know”
 

@@ -2,6 +2,7 @@
 
 **Document ID:** `SH-GOV-RISK-001` | **Version:** 1.0.0 | **Status:** CONTROLLED FORM  
 **Authority:** `GOVERNANCE_CONSTITUTION.md` | **Distribution:** According to subject matter
+**Owner:** Corporate Governance | **Related:** Assumption of Risk doctrine, rapid adjudication | **Cross-reference:** `ASSUMPTION_OF_RISK_DOCTRINE.md`; `CONTROL_DISSENT_AND_RAPID_ADJUDICATION.md`
 
 This record documents authorized risk acceptance; it does not expand authority or transfer another party's exposure.
 

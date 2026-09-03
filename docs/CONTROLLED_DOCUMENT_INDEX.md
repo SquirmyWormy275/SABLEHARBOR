@@ -14,9 +14,11 @@ Earlier versions and SUPERSEDED records remain available for history but do not 
 ## Governance
 
 - [Board and capital governance](governance/BOARD_AND_CAPITAL_GOVERNANCE.md)
+- [Board evolution, 2016–2026](governance/BOARD_EVOLUTION_2016_2026.md)
 - [Governance constitution](governance/GOVERNANCE_CONSTITUTION.md)
 - [Five committee charters](governance/committees/README.md)
 - [Assumption of Risk form](governance/ASSUMPTION_OF_RISK_FORM.md)
+- [Assumption of Risk doctrine](governance/ASSUMPTION_OF_RISK_DOCTRINE.md)
 - [Reserved matters and subsidiary autonomy](governance/RESERVED_MATTERS_AND_SUBSIDIARY_AUTONOMY.md)
 - [Rapid adjudication](governance/CONTROL_DISSENT_AND_RAPID_ADJUDICATION.md)
 - [Abstention and information deficiency](governance/ABSTENTION_AND_INFORMATION_DEFICIENCY.md)
@@ -35,6 +37,8 @@ Earlier versions and SUPERSEDED records remain available for history but do not 
 - [J2 rendered-chart suite](organization/J2_ORGANIZATION.md)
 - [Phase 2 coverage audit](internal/COVERAGE_AUDIT_PHASE2.md) and [structured audit record](internal/coverage_audit_phase2.json)
 - [Phase 2 doctrine registry](internal/DOCTRINE_REGISTER.json)
+- [Institutional catalog query guide](internal/INSTITUTIONAL_CATALOG_QUERY_GUIDE.md)
+- [Institutional catalog JSON](internal/institutional_catalog.json) and [SQLite database](internal/institutional_catalog.sqlite3)
 
 ## Controls and presentation
 

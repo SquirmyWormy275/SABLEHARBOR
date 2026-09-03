@@ -1,6 +1,7 @@
 # INFORMATION ACCESS DOCTRINE
 
 **Document ID:** `SH-J2-ACCESS-001` | **Version:** 1.0.0 | **State:** LOCKED
+**Owner:** Corporate Governance / J2 Headquarters | **Related:** Immaculate Intelligence, disclosure | **Cross-reference:** `alexandria/INFORMATION_ACCESS_AND_DISCLOSURE.md`; `J2_CHARTER.md`
 
 **Maximum useful visibility. Minimum necessary restriction.** Default access is open. Restriction is driven by information nature—not rank—including personal information, privilege, active M&A, and narrowly compartmented regulated/federal material.
 

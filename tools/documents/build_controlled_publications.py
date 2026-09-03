@@ -7,8 +7,10 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 DOCS = [
  ("docs/governance/BOARD_AND_CAPITAL_GOVERNANCE.md","docs/governance/publications/SH-GOV-BOARD-001_v1.0.0.pdf","corporate"),
+ ("docs/governance/BOARD_EVOLUTION_2016_2026.md","docs/governance/publications/SH-GOV-BOARD-HIST-001_v1.0.0.pdf","corporate"),
  ("docs/governance/GOVERNANCE_CONSTITUTION.md","docs/governance/publications/SH-GOV-CONST-001_v1.0.0.pdf","corporate"),
  ("docs/governance/ASSUMPTION_OF_RISK_FORM.md","docs/governance/publications/SH-GOV-RISK-001_v1.0.0.pdf","corporate"),
+ ("docs/governance/ASSUMPTION_OF_RISK_DOCTRINE.md","docs/governance/publications/SH-GOV-RISK-DOCTRINE-001_v1.0.0.pdf","corporate"),
  ("docs/governance/RESERVED_MATTERS_AND_SUBSIDIARY_AUTONOMY.md","docs/governance/publications/SH-GOV-AUTH-001_v1.0.0.pdf","corporate"),
  ("docs/governance/CONTROL_DISSENT_AND_RAPID_ADJUDICATION.md","docs/governance/publications/SH-GOV-DISSENT-001_v1.0.0.pdf","corporate"),
  ("docs/governance/ABSTENTION_AND_INFORMATION_DEFICIENCY.md","docs/governance/publications/SH-GOV-ABSTAIN-001_v1.0.0.pdf","corporate"),
@@ -33,6 +35,9 @@ DOCS = [
  ("docs/j2/EIB_AND_ENTERPRISE_QUESTIONS.md","docs/j2/publications/SH-J2-EIB-001_v1.0.0.pdf","j2"),
  ("docs/j2/INFORMATION_ACCESS_DOCTRINE.md","docs/j2/publications/SH-J2-ACCESS-001_v1.0.0.pdf","j2"),
  ("docs/j2/alexandria/ALEXANDRIA_CHARTER.md","docs/j2/publications/SH-J2-ALX-001_v1.0.0.pdf","j2"),
+ ("docs/j2/alexandria/INSTITUTIONAL_MEMORY_AND_CONNECTION.md","docs/j2/publications/SH-J2-ALX-MEMORY-001_v1.0.0.pdf","j2"),
+ ("docs/j2/alexandria/SEARCH_AND_HISTORICAL_RECONSTRUCTION.md","docs/j2/publications/SH-J2-ALX-SEARCH-001_v1.0.0.pdf","j2"),
+ ("docs/j2/alexandria/VISUALIZATION_AND_BRANCHING_HISTORY.md","docs/j2/publications/SH-J2-ALX-VIS-001_v1.0.0.pdf","j2"),
  ("docs/j2/alexandria/TEMPORAL_INTEGRITY.md","docs/j2/publications/SH-J2-ALX-TIME-001_v1.0.0.pdf","j2"),
  ("docs/j2/alexandria/PROVENANCE_AND_LINEAGE.md","docs/j2/publications/SH-J2-ALX-PROV-001_v1.0.0.pdf","j2"),
  ("docs/j2/alexandria/INFORMATION_ACCESS_AND_DISCLOSURE.md","docs/j2/publications/SH-J2-ALX-DISCLOSE-001_v1.0.0.pdf","j2"),
@@ -42,7 +47,8 @@ DOCS = [
  ("docs/j2/alexandria/SEMAPHORE_TRAFFIC_SYSTEM.md","docs/j2/publications/SH-J2-SEMAPHORE-001_v1.0.0.pdf","j2"),
  ("docs/j2/alexandria/CANON_INSTITUTIONAL_KNOWLEDGE.md","docs/j2/publications/SH-J2-CANON-001_v1.0.0.pdf","j2"),
  ("docs/j2/alexandria/DAEDALUS_OPERATING_DOCTRINE.md","docs/j2/publications/SH-J2-DAEDALUS-001_v1.0.0.pdf","j2"),
- ("docs/internal/COVERAGE_AUDIT_PHASE2.md","docs/internal/COVERAGE_AUDIT_PHASE2.pdf","corporate")]
+ ("docs/internal/COVERAGE_AUDIT_PHASE2.md","docs/internal/COVERAGE_AUDIT_PHASE2.pdf","corporate"),
+ ("docs/internal/INSTITUTIONAL_CATALOG_QUERY_GUIDE.md","docs/internal/INSTITUTIONAL_CATALOG_QUERY_GUIDE.pdf","corporate")]
 
 def inline(s: str) -> str:
     s=html.escape(s)

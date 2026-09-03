@@ -1,6 +1,7 @@
 # CONTACT COLLECTION MANAGEMENT
 
 **Document ID:** `SH-J2-COLLECT-001` | **Version:** 1.0.0 | **Effective:** September 2, 2026 | **State:** LOCKED DIRECTION
+**Owner:** Contact | **Related:** Judgment, Judgment Watch, JAG, Orientation priorities | **Cross-reference:** `CONTACT.md`; `JUDGMENT_OFFICER_PROFESSION.md`
 
 ## Requirements contract
 

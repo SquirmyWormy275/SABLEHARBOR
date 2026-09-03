@@ -1,6 +1,7 @@
 # ALEXANDRIA INFORMATION ACCESS AND DISCLOSURE
 
 **Document ID:** `SH-J2-ALX-DISCLOSE-001` | **Version:** 1.0.0 | **Effective:** September 2, 2026 | **State:** LOCKED ARCHITECTURAL DIRECTION
+**Owner:** Orientation / Information Governance | **Related:** information access, Pinakes, Collection, Daedalus | **Cross-reference:** `../INFORMATION_ACCESS_DOCTRINE.md`; `PINAKES_PORTAL_AND_UX.md`; `DAEDALUS_OPERATING_DOCTRINE.md`
 
 Alexandria implements Sable Harbor's doctrine of maximum useful visibility and minimum necessary restriction. The default is open. Restriction follows the nature of information—not rank—and may include personal information, legal privilege, active M&A, narrowly compartmented regulated/federal material, and other genuinely protected classes.
 

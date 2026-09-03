@@ -1,6 +1,7 @@
 # RESERVED MATTERS, ESCALATION, AND SUBSIDIARY AUTONOMY
 
 **Document ID:** `SH-GOV-AUTH-001` | **Version:** 1.0.0 | **Effective:** September 2, 2026 | **State:** LOCKED DIRECTION
+**Owner:** Corporate Governance | **Related:** governance constitution, risk assumption, board committees | **Cross-reference:** `GOVERNANCE_CONSTITUTION.md`; `ASSUMPTION_OF_RISK_DOCTRINE.md`
 
 ## Purpose
 

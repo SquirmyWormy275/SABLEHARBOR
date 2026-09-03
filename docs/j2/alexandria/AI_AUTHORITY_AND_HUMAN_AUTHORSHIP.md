@@ -1,6 +1,7 @@
 # AI AUTHORITY AND HUMAN AUTHORSHIP
 
 **Document ID:** `SH-J2-ALX-AI-001` | **Version:** 1.0.0 | **Effective:** September 2, 2026 | **State:** LOCKED
+**Owner:** J2 Headquarters / Orientation | **Related:** Daedalus, Canon, Semaphore, Judgment, EIB | **Cross-reference:** `DAEDALUS_OPERATING_DOCTRINE.md`; `CANON_INSTITUTIONAL_KNOWLEDGE.md`; `SEMAPHORE_TRAFFIC_SYSTEM.md`
 
 Sable Harbor wants useful, intellectually aggressive AI. The boundary is institutional authority, not thought. Daedalus may form opinions, challenge a user, speculate with a label, propose hypotheses, synthesize evidence, and recommend investigative directions. It may say, “I think you're wrong, and here is why.”
 

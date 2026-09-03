@@ -3,6 +3,7 @@
 **Document ID:** `SH-GOV-CONST-001`  
 **Version:** 1.0.0 | **Effective:** September 2, 2026 | **State:** LOCKED  
 **Owner:** Corporate Governance | **Approving body:** Board | **Distribution:** Internal
+**Related:** reserved matters, control dissent, decision quality | **Cross-reference:** `RESERVED_MATTERS_AND_SUBSIDIARY_AUTONOMY.md`; `CONTROL_DISSENT_AND_RAPID_ADJUDICATION.md`
 
 ## Constitutional principles
 

@@ -1,6 +1,7 @@
 # ALEXANDRIA CHARTER: TEMPORAL INTEGRITY, PROVENANCE, AND LINEAGE
 
 **Document ID:** `SH-J2-ALX-001` | **Version:** 1.0.0 | **State:** LOCKED DIRECTION
+**Owner:** Orientation | **Related:** temporal integrity, provenance, connection, search | **Cross-reference:** `TEMPORAL_INTEGRITY.md`; `PROVENANCE_AND_LINEAGE.md`; `INSTITUTIONAL_MEMORY_AND_CONNECTION.md`
 
 Alexandria **preserves** what Sable Harbor believed, when, why, and what changed; **connects** questions, evidence, judgments, decisions, outcomes, finance, business lines, JAG, and learning; and **orients** users to what is current, disputed, unresolved, historical, or superseded. Machine suggestions never silently become facts.
 

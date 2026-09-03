@@ -1,6 +1,7 @@
 # CONTACT — COLLECTION DOCTRINE
 
 **Document ID:** `SH-J2-CONTACT-001` | **Version:** 1.0.0 | **State:** LOCKED DIRECTION
+**Owner:** Contact | **Related:** collection management, Judgment Watch, JAG | **Cross-reference:** `CONTACT_COLLECTION_MANAGEMENT.md`; `JUDGMENT.md`
 
 Contact is a collection apparatus, not a think tank and not self-directing. Orientation sets broad priority questions; Judgment Officers own problem-specific requirements/RFIs; HQ arbitrates scarce capacity; Contact selects lawful methods, sources, timing, and provenance and hands evidence onward without converting retrieval into institutional judgment.
 

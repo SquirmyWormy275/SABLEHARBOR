@@ -1,6 +1,7 @@
 # ALEXANDRIA PROVENANCE AND LINEAGE
 
 **Document ID:** `SH-J2-ALX-PROV-001` | **Version:** 1.0.0 | **Effective:** September 2, 2026 | **State:** LOCKED DIRECTION
+**Owner:** Orientation / Alexandria stewardship | **Related:** temporal integrity, connection, search, Daedalus | **Cross-reference:** `TEMPORAL_INTEGRITY.md`; `INSTITUTIONAL_MEMORY_AND_CONNECTION.md`; `SEARCH_AND_HISTORICAL_RECONSTRUCTION.md`
 
 Nothing important should require blind trust. “Source that” must work from Canon, EIB, Judgment, decision, Semaphore traffic, or Daedalus synthesis toward underlying evidence wherever the user's access permits.
 

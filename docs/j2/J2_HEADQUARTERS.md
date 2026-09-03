@@ -1,6 +1,7 @@
 # J2 HEADQUARTERS DOCTRINE
 
 **Document ID:** `SH-J2-HQ-001` | **Version:** 1.0.0 | **Effective:** September 2, 2026 | **State:** LOCKED DIRECTION
+**Owner:** J2 Headquarters | **Related:** Contact, Judgment, Orientation, JAG, Education | **Cross-reference:** `J2_CHARTER.md`; `J2_OPERATING_MODEL.md`
 
 J2 Headquarters exists so Contact, Judgment, Orientation, JAG, and Education remain one institution rather than disconnected expert teams. It is deliberately small. Its legitimacy comes from stewardship and professional rigor, not a large command tower.
 

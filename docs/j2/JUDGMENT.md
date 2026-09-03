@@ -1,6 +1,7 @@
 # JUDGMENT — PROBLEM OWNERSHIP DOCTRINE
 
 **Document ID:** `SH-J2-JUDGMENT-001` | **Version:** 1.0.0 | **State:** LOCKED DIRECTION
+**Owner:** Judgment | **Related:** Judgment Officers, Contact, Orientation | **Cross-reference:** `JUDGMENT_OFFICER_PROFESSION.md`; `CONTACT.md`
 
 Judgment Officers are human case owners and roving intellectual commissions, not analysts at the end of a queue. A working portfolio is approximately five live problems: four directed and one mandatory, bounded self-directed curiosity problem. The officer states why it matters and closes/hands it off before opening another.
 

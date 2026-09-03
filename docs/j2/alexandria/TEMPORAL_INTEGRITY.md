@@ -1,6 +1,7 @@
 # ALEXANDRIA TEMPORAL INTEGRITY
 
 **Document ID:** `SH-J2-ALX-TIME-001` | **Version:** 1.0.0 | **Effective:** September 2, 2026 | **State:** LOCKED
+**Owner:** Orientation / Alexandria stewardship | **Related:** Canon, Semaphore, provenance, historical reconstruction | **Cross-reference:** `CANON_INSTITUTIONAL_KNOWLEDGE.md`; `SEARCH_AND_HISTORICAL_RECONSTRUCTION.md`
 
 Time is a first-class property, not one timestamp. Where applicable Alexandria distinguishes when an event happened, when it was recorded, when Sable Harbor could access it, when a person or function understood it, and when it changed institutional understanding.
 

@@ -1,6 +1,7 @@
 # DAEDALUS PERSONAL INSTANCE AND INVESTIGATIVE WORKSPACE
 
 **Document ID:** `SH-J2-DAEDALUS-PERSONAL-001` | **Version:** 1.0.0 | **Effective:** September 2, 2026 | **State:** LOCKED ARCHITECTURAL DIRECTION
+**Owner:** J2 Headquarters / Daedalus doctrine | **Related:** AI authorship, access/disclosure, search, visualization | **Cross-reference:** `DAEDALUS_OPERATING_DOCTRINE.md`; `INFORMATION_ACCESS_AND_DISCLOSURE.md`; `VISUALIZATION_AND_BRANCHING_HISTORY.md`
 
 Each user receives credentials, an individual Daedalus instance/context, and persistent segregated memory. Years of lawful use should create an exceptionally refined assistant for that person without cross-pollinating conversations, working sets, copied material, private synthesis, or user-specific memory.
 

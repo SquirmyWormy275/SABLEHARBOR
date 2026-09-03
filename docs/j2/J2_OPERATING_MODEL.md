@@ -1,6 +1,7 @@
 # J2 OPERATING MODEL
 
 **Document ID:** `SH-J2-OPS-001` | **Version:** 1.0.0 | **State:** LOCKED DIRECTION
+**Owner:** J2 Headquarters | **Related:** Contact, Judgment, Orientation, JAG, Education | **Cross-reference:** `J2_CHARTER.md`; `J2_HEADQUARTERS.md`
 
 ## High-level organization
 

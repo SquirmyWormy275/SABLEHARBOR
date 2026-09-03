@@ -1,6 +1,7 @@
 # SABLE HARBOR — PHASE 2 COVERAGE AUDIT
 
-**Audit ID:** `SH-INT-AUDIT-P2-001` | **Version:** 1.0.0 | **Audit date:** September 3, 2026
+**Document ID:** `SH-INT-AUDIT-P2-001` | **Version:** 1.0.0 | **Effective:** September 3, 2026 | **State:** HISTORICAL CONTROLLED RECORD
+**Owner:** Corporate Governance / J2 Headquarters | **Related:** governance, J2, Alexandria | **Cross-reference:** `../CONTROLLED_DOCUMENT_INDEX.md`; `INSTITUTIONAL_CATALOG_QUERY_GUIDE.md`
 **Baseline:** September 2 design-session handover | **Disposition:** EXPANSION COMPLETE
 **Structured record:** `coverage_audit_phase2.json`
 

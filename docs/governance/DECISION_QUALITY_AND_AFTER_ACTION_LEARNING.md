@@ -1,6 +1,7 @@
 # DECISION QUALITY AND AFTER-ACTION LEARNING
 
 **Document ID:** `SH-GOV-LEARN-001` | **Version:** 1.0.0 | **Effective:** September 2, 2026 | **State:** LOCKED
+**Owner:** Corporate Governance / J2 Education | **Related:** AAR, Orientation, Canon, risk assumption | **Cross-reference:** `../j2/EDUCATION.md`; `../j2/ORIENTATION.md`
 
 ## Decision quality under uncertainty
 

@@ -1,0 +1,997 @@
+{
+  "catalog_id": "SH-ALX-CATALOG-001",
+  "version": "1.0.0",
+  "effective_date": "2026-09-02",
+  "authority": "Derived from canonical Markdown and the controlled-publication manifest; not a parallel source of truth.",
+  "objects": [
+    {
+      "id": "SH-GOV-BOARD-001",
+      "title": "SABLE HARBOR \u2014 BOARD AND CAPITAL GOVERNANCE",
+      "category": "governance policy",
+      "owner": "Corporate Governance",
+      "version": "1.0.0",
+      "status": "LOCKED",
+      "source": "docs/governance/BOARD_AND_CAPITAL_GOVERNANCE.md",
+      "publication": "docs/governance/publications/SH-GOV-BOARD-001_v1.0.0.pdf",
+      "source_sha256": "20249592680765fcfcfce057e9c62557b9694e6694adc84c63211cad3b76d933",
+      "publication_sha256": "aa5a69252093e21b9debcaf1129aceb6a5366e4d981961c4b55a1d9589db00be",
+      "related_doctrines": [
+        "board evolution",
+        "committee charters",
+        "financing"
+      ],
+      "cross_references": [
+        "BOARD_EVOLUTION_2016_2026.md",
+        "GOVERNANCE_CONSTITUTION.md"
+      ],
+      "search_text": "sable harbor \u2014 board and capital governance docs/governance/board_and_capital_governance.md # sable harbor \u2014 board and capital governance\n\n**document id:** `sh-gov-board-001`  \n**version:** 1.0.0 | **effective:** september 2, 2026 | **state:** locked  \n**owner:** corporate governance | **approving body:** board | **distribution:** internal  \n**structured record:** `structured/board_and_committees.json`\n**related:** board evolution, committee charters, financing | **cross-reference:** `board_evolution_2016_2026.md`; `governance_constitution.md`\n\n## 2026 board\n\nsable harbor has one nine-member u.s.-style unitary board. the ceo and chair are separate.\n\n| director | capacity | joined | institutional contribution |\n|---|---|---:|---|\n| margaret \u201cmaggie\u201d kincaid | independent chair (chair since 2024) | 2023 | mining/heavy-industrial operating governance |\n| daniel | founder, ceo, director; former chair | 2016 | enterprise coherence and founder conviction without sovereignty |\n| priya raman | founder, director | 2016 | product and technical substrate |\n| jon bell | founder, non-management director | 2016 | institutional continuity and commercial skepticism |\n| thomas \u201ctom\u201d calder | independent; audit & compliance chair | 2022 | public-company reporting, audit, and controls |\n| evan mercer | harrison vale partners director | 2021 | technology growth, repeatability, software economics |\n| marianne voss | wolf ridge holdings director | 2022 | long-duration industrial capital, assets, and cycles |\n| dr. lilia maratovna galiullina | independent; technology & operations chair | 2020 | applied mathematics, scientific computing, physical reality |\n| hendrik \u201charry\u201d van der velde | independent; finance & investment chair | 2019 | ag-industrial operations, finance, capital discipline, cycle memory |\n\ndaniel's surname is not supplied by controlling canon and is not invented here.\n\n## director biographies\n\nkincaid joined in 2023 after a mining/heavy-industrial operating and governance career and became independent chair when daniel voluntarily separated the roles in 2024. calder joined in 2022 as the independent reporting/control specialist; his mandate is distinct from harry's capital mandate.\n\nmercer is chicago-connected and joined with harrison vale's 2021 financing. he asks whether deployment repeats, margins are durable, product focus holds, and the service/product relationship is disciplined. voss joined with wolf ridge in 2022 and brings physical-asset, commodity, industrial-family-capital, and infrastructure judgment. mercer asks, \u201cdoes this scale?\u201d voss asks, \u201cdoes this survive the cycle?\u201d neither is a caricature or constituency veto-holder.\n\ngaliullina was born in ufa, bashkir assr, soviet union, in the mid-1960s working chronology. her late-soviet applied-mathematics/computational-science formation survived a post-soviet transition; she came to the united states around 2001\u20132002 and built a major second act at the university of illinois urbana-champaign through research/postdoctoral/scientific-computing work and deep ties to computer science, scientific computing, and student science programs. her posture is that computation helps understand physical reality; it does not replace it.\n\nvan der velde is a dutch immigrant who grew up around demotte, indiana and the agricultural midwest. he studied feed/animal sciences at kansas state, began in animal-feed/agricultural operations, accepted an opportunity at harvard business school rather than returning permanently to the farm, and moved into major ag-industrial finance/cfo leadership. his final fictional employer remains provisional. he was the first substantial independent director in 2019.\n\n## evolution\n\n- **2016\u20132018:** daniel, priya, and jon; daniel is ceo and chair.\n- **2019:** van der velde adds the first independent capital/industrial voice.\n- **2020:** galiullina adds independent scientific/technical depth.\n- **2021:** harrison vale financing brings mercer.\n- **2022:** wolf ridge brings voss; calder adds independent audit/control depth.\n- **2023:** kincaid adds mature industrial governance.\n- **2024:** daniel voluntarily separates ceo and chair; kincaid becomes chair.\n- **2025\u20132026:** five standing committees harden as complexity grows; this structure is not retroactive.\n\n## financing record\n\nharrison vale partners, a chicago-anchored vertical enterprise/data/industrial-software growth investor, led approximately $48 million in 2021 after the crossing-era breakthrough. proceeds supported repeatability, scaling, productization, security/reliability, and commercial growth. the financing did not cause or rescue the crossing.\n\nwolf ridge holdings, chicago/midwest permanent or very long-duration industrial capital with roots in family capital, infrastructure, resources, specialty manufacturing, and industrial technology, led approximately $135 million in 2022 at approximately $900 million post-money. there was no founder secondary; working post-round ownership was approximately 66.5% insiders and 33.5% outside capital.\n\nterms are genuinely balanced: no founder dictatorship, investor control, ordinary-operations veto, privileged commercial-information channel, or informal pressure through future financing.\n\n## standing committees and charters\n\neach committee supports the board and does not displace lawful board or management authority. committee chairs control agendas and report material conclusions and dissent. investor-appointed directors act for sable harbor, disclose conflicts, and recuse where appropriate.\n\nformal separately controlled charters are published under [`committees/`](committees/readme.md); the summaries below reconcile to those instruments.\n\n### audit & compliance\n\n**members:** calder (chair), galiullina, kincaid. oversees financial reporting/control, compliance, whistleblowing, material adverse findings, and independent assurance interfaces. it does not settle the still-open internal audit operating model.\n\n### finance & investment\n\n**members:** van der velde (chair), voss, mercer, daniel. oversees capital allocation, liquidity, leverage, guarantees, major investment and acquisition economics, and financial exposure. it applies reserved matters without becoming an operating investment desk.\n\n### technology & operations\n\n**members:** galiullina (chair), raman, kincaid, mercer. oversees material technology/model risk, cybersecurity posture, physical operational exposure, asset integrity, reliability, and the boundary between computation and reality.\n\n### compensation & human capital\n\n**members:** kincaid (chair), galiullina, van der velde. oversees executive compensation, succession, leadership fitness, human-capital philosophy, and cultural health, including decision-quality and respectful candor.\n\n### governance & nominating\n\n**members:** kincaid (chair), calder, bell. oversees board composition, independence, conflicts, committee architecture, governance effectiveness, and nominations. it prevents continuity from becoming hereditary power.\n\n## conflict integrity\n\ndirectors steward sable harbor, not appointing capital. actual or apparent conflicts require disclosure, independent consideration, and recusal where appropriate. harrison vale and wolf ridge receive full board voice but no private operational veto, privileged commercial access, or special channel outside proper governance.\n\n## supersession\n\nthe earlier provisional financing/director proposal is retained as historical intellectual record and marked superseded. it must not be used as current governance.\n"
+    },
+    {
+      "id": "SH-GOV-BOARD-HIST-001",
+      "title": "BOARD EVOLUTION, 2016\u20132026",
+      "category": "governance policy",
+      "owner": "Corporate Governance",
+      "version": "1.0.0",
+      "status": "LOCKED",
+      "source": "docs/governance/BOARD_EVOLUTION_2016_2026.md",
+      "publication": "docs/governance/publications/SH-GOV-BOARD-HIST-001_v1.0.0.pdf",
+      "source_sha256": "7dec94acf9fb62eca3cf7dc4f9ed55a81cd36513cd5a2619cae23b34b8e7edd3",
+      "publication_sha256": "cc43e75309ab07ebca21177801cb80ee08f5ff71fe4c6ab23f37b19794caabc6",
+      "related_doctrines": [
+        "Board governance",
+        "financing",
+        "committee charters"
+      ],
+      "cross_references": [
+        "BOARD_AND_CAPITAL_GOVERNANCE.md",
+        "committees/README.md"
+      ],
+      "search_text": "board evolution, 2016\u20132026 docs/governance/board_evolution_2016_2026.md # board evolution, 2016\u20132026\n\n**document id:** `sh-gov-board-hist-001` | **version:** 1.0.0 | **effective:** september 2, 2026 | **state:** locked\n**owner:** corporate governance | **related:** board governance, financing, committee charters | **cross-reference:** `board_and_capital_governance.md`; `committees/readme.md`\n\n## purpose\n\nthe 2026 board is the result of earned institutional maturation. this record prevents present governance from being projected backward onto a smaller company whose exposures, capital, and operating complexity were different. historical evidence\u2014appointments, minutes, approvals, charters, and committee records\u2014must reflect the authority system then in force.\n\n## 2016\u20132018 \u2014 founder board\n\ndaniel, priya raman, and jon bell form the board. daniel serves as ceo and chair. governance is founder-dominated because the business is a small services-first company. priya supplies product and technical-substrate judgment; jon supplies recurrence and commercial challenge; daniel integrates the enterprise. the later independent-chair and committee system does not yet exist.\n\n## 2019 \u2014 first independent capital voice\n\nhendrik \u201charry\u201d van der velde joins as the first substantial independent capital/industrial director. his agricultural and commodity-cycle formation introduces a long-memory question: can the company and its commitments survive the cycle? his presence begins independent challenge without displacing founder operating authority.\n\n## 2020 \u2014 scientific and technical depth\n\ndr. lilia maratovna galiullina joins. her applied-mathematics and scientific-computing formation adds independent technical depth and an insistence that computation remain accountable to physical reality. her appointment precedes the full formalization that follows institutional financing.\n\n## 2021 \u2014 growth financing and repeatability\n\nharrison vale partners' approximately $48 million growth financing brings evan mercer to the board. the investment follows the crossing-era product breakthrough; it does not rewrite the crossing as investor rescue. mercer introduces disciplined attention to repeatable deployment, software economics, margin quality, product focus, reliability/security investment, and the services/product boundary.\n\n## 2022 \u2014 industrial capital and control discipline\n\nwolf ridge holdings' approximately $135 million financing brings marianne voss and the long-duration physical-asset/cycle perspective. thomas \u201ctom\u201d calder joins independently with public-company cfo, reporting, audit, and control experience.\n\nthe board intentionally distinguishes harry's capital/cycle discipline from calder's reporting/control/audit discipline. voss asks whether a course survives the cycle; mercer asks whether it scales. neither investor speaks as a constituency sovereign.\n\n## 2023 \u2014 mature industrial governance\n\nmargaret \u201cmaggie\u201d kincaid joins with mining and heavy-industrial operating/governance experience. the appointment adds board leadership capable of integrating software, physical operations, capital, and accountability without converting the board into management.\n\n## 2024 \u2014 independent chair\n\ndaniel voluntarily separates ceo and chair. kincaid becomes independent chair. the separation is an act of institutional maturity, not founder defeat. daniel retains founder conviction, strategic runway, and a director's full voice, while accepting that conviction is not sovereignty.\n\n## 2025\u20132026 \u2014 committee architecture hardens\n\naudit & compliance, compensation & human capital, governance & nominating, finance & investment, and technology & operations become the five standing committees as ai/model risk, physical operations, acquisitions, capital intensity, j2, and enterprise-control complexity become materially greater.\n\nthe mature structure is not backdated. a future historical reconstruction must be able to show when each oversight practice actually became available, what the board then knew, and which authority owned each judgment.\n"
+    },
+    {
+      "id": "SH-GOV-CONST-001",
+      "title": "SABLE HARBOR \u2014 GOVERNANCE CONSTITUTION",
+      "category": "governance policy",
+      "owner": "Corporate Governance",
+      "version": "1.0.0",
+      "status": "LOCKED",
+      "source": "docs/governance/GOVERNANCE_CONSTITUTION.md",
+      "publication": "docs/governance/publications/SH-GOV-CONST-001_v1.0.0.pdf",
+      "source_sha256": "efa3e78c9d86786f66159c6470a163dffc77f811679d16b876f049bc23498cef",
+      "publication_sha256": "b1bb98e18a50f734e641e2686b68d5df8f9896f26c751d7c3a80b810935f0ebc",
+      "related_doctrines": [
+        "reserved matters",
+        "control dissent",
+        "decision quality"
+      ],
+      "cross_references": [
+        "RESERVED_MATTERS_AND_SUBSIDIARY_AUTONOMY.md",
+        "CONTROL_DISSENT_AND_RAPID_ADJUDICATION.md"
+      ],
+      "search_text": "sable harbor \u2014 governance constitution docs/governance/governance_constitution.md # sable harbor \u2014 governance constitution\n\n**document id:** `sh-gov-const-001`  \n**version:** 1.0.0 | **effective:** september 2, 2026 | **state:** locked  \n**owner:** corporate governance | **approving body:** board | **distribution:** internal\n**related:** reserved matters, control dissent, decision quality | **cross-reference:** `reserved_matters_and_subsidiary_autonomy.md`; `control_dissent_and_rapid_adjudication.md`\n\n## constitutional principles\n\n1. **authority follows exposure and accountability.** authority belongs with people accountable for, knowledgeable of, and able to manage the exposure. it expands with demonstrated competence and judgment and may contract when exposure outruns control. title alone is insufficient; peers may appropriately hold different latitude.\n2. **freedom inside the envelope; discipline at the boundary.** experimentation inside an explicitly approved strategic/risk envelope is presumed permissible. ask whether an action crosses the boundary, not repeatedly whether experimentation is allowed. bounded experimental failure is expected; control failure at the boundary is different.\n3. **govern consequence, not uncertainty.** escalation turns on irreversibility, external propagation, catastrophic potential, and legal, regulatory, environmental, community, safety, or uncontrolled enterprise exposure.\n4. **authority carries challenge and humility.** accountable insiders retain authority but must seek and seriously consider informed challenge. advice informs judgment; it does not confer authority. no \u201coriginal\u201d group is a permanent caste.\n5. **conflict integrity.** directors act for sable harbor. disclosure, independent consideration, and recusal govern actual/apparent conflicts.\n\nfounder conviction earns latitude, listening, and strategic runway\u2014not sovereignty. when a matter belongs to the board, daniel must persuade it. pre-decision: argue hard. post-decision: execute fully.\n\n## decision bands\n\n**band 1 \u2014 management.** management operates inside approved strategy, budget, and exposure envelope.\n\n**band 2 \u2014 board-reserved.** annual strategy/budget; material unplanned commitments; material debt/guarantees; entity creation; material related-party matters; consequential but nonexistential m&a; senior executive appointment/removal; and major plan deviations.\n\n**band 3 \u2014 transformational.** matters capable of changing what sable harbor is: sale/control, genuinely new regulated domain or asset class, enterprise-threatening leverage, fundamental restructuring, or existential strategic bet.\n\nthe board culturally targets broad support roughly equivalent to 5/9 for ordinary reserved matters and 6/9 for transformational matters. these are not automatic legal supermajority rights. exposure outranks spend. related commitments cannot be sliced to avoid escalation.\n\n## subsidiary autonomy and contagion\n\na subsidiary has a right to be wrong inside its approved envelope. corporate preference alone cannot pull a delegated decision upward. intervention identifies a real contagion path: parent guarantee, shared scarce capacity or liability, enterprise reputation/regulatory effect, cross-business dependency, or common capital exposure.\n\n## rapid control-function adjudication\n\na material adverse finding compels rapid escalation but is not automatically a veto. only credible catastrophic safety/operating risk or credible unlawful conduct pauses the specific disputed action pending review. the accountable executive names the decision, finding, authority, safeguards, and needed evidence; initial handling targets 48 hours. protected disputes ordinarily receive initial adjudication within 72 hours. one tightly bounded extension may be granted only for identified evidence, with reason and new deadline recorded. governance is a crash-prevention system, not a parking brake.\n\n## assumption of risk\n\na properly authorized decision-maker proceeding despite a material adverse finding records: decision; finding/dissent; known evidence; important assumptions; foreseeable consequences; mitigations; and accepting authority. no one may assume risk beyond their office or owned by another accountable party.\n\nif the board overrules management, the board owns strategic authorization risk and management owns execution quality. recorded dissent remains dissent; good-faith execution is not retroactive endorsement, and sandbagging is prohibited. material new information may reopen the matter. judgment ownership is never rewritten.\n\n## abstention and information deficiency\n\n\u201ci don't know\u201d is permitted. consequential abstention records substantive reason, missing information, and what would enable better judgment where knowable. repeated abstention prompts inquiry into intelligence, process, briefing, structural access, or individual fitness. there is no mechanical strike rule. i don't know is acceptable; refusing to find out is not.\n\n## decision quality and aar\n\noutcome does not determine decision quality. review asks whether ex-ante reasoning was competent, evidence appropriately gathered, assumptions visible, contrary evidence considered, controls followed, and lessons absorbed.\n\nhot washes, aars, postmortems, forecast accountability, explicit lessons, and changed models/controls are institutional practice. authority does not contract merely because a competent probabilistic decision loses, but the system adapts. sable harbor is slow to condemn or fire solely for variance, fast to examine and correct, relentless about learning, hard on ideas/evidence, and never demeaning. respect is non-negotiable; rank grants no immunity.\n\n## information principle\n\nimmaculate intelligence means sharing the important questions, not forcing shared answers. maximum useful visibility; minimum necessary restriction. questions are common property and propagate wider than answers. restriction follows information nature, not rank, and creates named ownership, reason, challenge, review, and reconsideration. where lawful, the system may disclose that relevant restricted material exists. access failure is studied as an intelligence failure.\n"
+    },
+    {
+      "id": "SH-GOV-RISK-001",
+      "title": "SABLE HARBOR \u2014 ASSUMPTION OF RISK RECORD",
+      "category": "governance policy",
+      "owner": "Corporate Governance",
+      "version": "1.0.0",
+      "status": "CONTROLLED FORM",
+      "source": "docs/governance/ASSUMPTION_OF_RISK_FORM.md",
+      "publication": "docs/governance/publications/SH-GOV-RISK-001_v1.0.0.pdf",
+      "source_sha256": "7bd0eb2367bf7d961bb33f60cd49ab7197233d027fd85cc59c146a562c3ba9f4",
+      "publication_sha256": "5d6e91b3060004d0474384b4bcbb0345b0b34e1210fc3ea483e2ae9bb2cbaf38",
+      "related_doctrines": [
+        "Assumption of Risk doctrine",
+        "rapid adjudication"
+      ],
+      "cross_references": [
+        "ASSUMPTION_OF_RISK_DOCTRINE.md",
+        "CONTROL_DISSENT_AND_RAPID_ADJUDICATION.md"
+      ],
+      "search_text": "sable harbor \u2014 assumption of risk record docs/governance/assumption_of_risk_form.md # sable harbor \u2014 assumption of risk record\n\n**document id:** `sh-gov-risk-001` | **version:** 1.0.0 | **status:** controlled form  \n**authority:** `governance_constitution.md` | **distribution:** according to subject matter\n**owner:** corporate governance | **related:** assumption of risk doctrine, rapid adjudication | **cross-reference:** `assumption_of_risk_doctrine.md`; `control_dissent_and_rapid_adjudication.md`\n\nthis record documents authorized risk acceptance; it does not expand authority or transfer another party's exposure.\n\n| required field | entry |\n|---|---|\n| record id / date-time | |\n| decision and specific action | |\n| accountable decision-maker | |\n| authority relied upon | |\n| material adverse finding / dissent | |\n| known evidence and provenance references | |\n| important assumptions / unknowns | |\n| foreseeable consequences | |\n| mitigations, limits, stop conditions | |\n| review/reopen triggers | |\n| strategic authorization owner | |\n| execution-quality owner | |\n| decision and signature/attestation reference | |\n\nprotected safety/unlawfulness disputes remain paused until rapid adjudication. a board authorization does not erase management dissent; execution does not imply endorsement.\n"
+    },
+    {
+      "id": "SH-GOV-RISK-DOCTRINE-001",
+      "title": "ASSUMPTION OF RISK DOCTRINE",
+      "category": "governance policy",
+      "owner": "Corporate Governance",
+      "version": "1.0.0",
+      "status": "LOCKED",
+      "source": "docs/governance/ASSUMPTION_OF_RISK_DOCTRINE.md",
+      "publication": "docs/governance/publications/SH-GOV-RISK-DOCTRINE-001_v1.0.0.pdf",
+      "source_sha256": "86f7980f5f83fe867cb528c231463f85622bba2372ce89f80f75264f2b1ada68",
+      "publication_sha256": "3d1f06be1345663aace69b405cc19058aaa38042bb6dfa456f39b445a6356d77",
+      "related_doctrines": [
+        "rapid adjudication",
+        "reserved matters",
+        "decision quality"
+      ],
+      "cross_references": [
+        "CONTROL_DISSENT_AND_RAPID_ADJUDICATION.md",
+        "ASSUMPTION_OF_RISK_FORM.md"
+      ],
+      "search_text": "assumption of risk doctrine docs/governance/assumption_of_risk_doctrine.md # assumption of risk doctrine\n\n**document id:** `sh-gov-risk-doctrine-001` | **version:** 1.0.0 | **effective:** september 2, 2026 | **state:** locked\n**owner:** corporate governance | **related:** rapid adjudication, reserved matters, decision quality | **cross-reference:** `control_dissent_and_rapid_adjudication.md`; `assumption_of_risk_form.md`\n\n## function\n\nan assumption of risk is the formal act by which a properly authorized decision-maker proceeds after a material adverse finding while preserving the finding, evidence, ownership, and consequences. it is neither a waiver of law or control nor a ritual signature that transfers blame.\n\nthe instrument exists because a control function's serious dissent must receive institutional attention without automatically becoming a veto. it makes the actual decision legible: who accepted which exposure, under what authority, based on what evidence and assumptions, with what mitigations and stop conditions.\n\n## preconditions\n\nthe relevant rapid-adjudication process has identified the specific action, material finding, accountable authority, immediate safeguards, and evidence reasonably needed for decision. a protected catastrophic-safety/operating or unlawful-conduct dispute remains paused until initial adjudication. the underlying action must be within the accepting office's lawful and delegated authority.\n\nno person may assume exposure owned by another accountable party, expand the authority of office through the form, excuse unlawful conduct, or convert unknown/unbounded exposure into an accepted risk through labels alone. where consequence belongs at a board-reserved or transformational band, only that authority can act.\n\n## required institutional statement\n\nthe record identifies the decision and precise action; adverse finding and dissent; known evidence and provenance; important assumptions and unknowns; foreseeable consequences, including tail risks; mitigations, limits, stop conditions, and monitoring; authority relied upon; strategic-authorization owner; execution-quality owner; review/reopen triggers; effective time; and human attestation.\n\nthe statement is specific enough for a future reader to understand the ex-ante judgment. references may protect restricted evidence but may not make the rationale disappear.\n\n## board and management ownership\n\nwhen the board overrules management, the board owns strategic authorization risk and management owns execution quality. if daniel or another executive formally dissents, that dissent remains in the institutional record. good-faith execution does not become retroactive endorsement, and dissent does not authorize sandbagging.\n\nif new material information arises, the decision may reopen. reopening changes the current decision state; it does not rewrite the original knowledge, assumptions, or ownership.\n\n## learning and review\n\nrisk assumptions are reviewed at their stated triggers and after material outcomes. aar practice evaluates the quality of the original reasoning separately from the outcome and asks whether an envelope, model, control, question, or canon state should change. repeated assumptions around the same boundary may indicate a defective control, unrealistic envelope, capability gap, or normalization of deviance and require systemic review.\n\nthe controlled form is `sh-gov-risk-001` in `assumption_of_risk_form.md`.\n"
+    },
+    {
+      "id": "SH-GOV-AUTH-001",
+      "title": "RESERVED MATTERS, ESCALATION, AND SUBSIDIARY AUTONOMY",
+      "category": "governance policy",
+      "owner": "Corporate Governance",
+      "version": "1.0.0",
+      "status": "LOCKED DIRECTION",
+      "source": "docs/governance/RESERVED_MATTERS_AND_SUBSIDIARY_AUTONOMY.md",
+      "publication": "docs/governance/publications/SH-GOV-AUTH-001_v1.0.0.pdf",
+      "source_sha256": "323a9611891d41dafa6eb00ed891ba4b0917a4b2329fd29e52bd730cc92d3313",
+      "publication_sha256": "ac249a801e73f96043e6713725a0bc67062c473ff7cadf2354c5d9529849e6ad",
+      "related_doctrines": [
+        "governance constitution",
+        "risk assumption",
+        "board committees"
+      ],
+      "cross_references": [
+        "GOVERNANCE_CONSTITUTION.md",
+        "ASSUMPTION_OF_RISK_DOCTRINE.md"
+      ],
+      "search_text": "reserved matters, escalation, and subsidiary autonomy docs/governance/reserved_matters_and_subsidiary_autonomy.md # reserved matters, escalation, and subsidiary autonomy\n\n**document id:** `sh-gov-auth-001` | **version:** 1.0.0 | **effective:** september 2, 2026 | **state:** locked direction\n**owner:** corporate governance | **related:** governance constitution, risk assumption, board committees | **cross-reference:** `governance_constitution.md`; `assumption_of_risk_doctrine.md`\n\n## purpose\n\nthis doctrine keeps authority close to accountable competence while ensuring exposures capable of changing or contaminating the enterprise receive the right attention. it is not a spending-approval ladder. authority follows exposure, accountability, knowledge, and demonstrated judgment; title alone does not determine latitude.\n\n## band 1 \u2014 management\n\nmanagement operates without repeated permission inside approved strategy, budget, and exposure envelope. experimentation in that envelope is presumed permissible. two similarly titled leaders may have different latitude where competence, operating record, or exposure differs. a bounded experiment can be large in dollars and remain delegated when its consequence is genuinely capped.\n\n## band 2 \u2014 board-reserved\n\nboard reservation ordinarily includes annual strategy and budget; material unplanned commitments; material debt, guarantees, or security; creation of legal entities; material related-party matters; consequential but nonexistential m&a; senior executive appointment/removal; and major departure from approved operating plans. the list describes consequence classes, not a device for converting every decision into board administration.\n\n## band 3 \u2014 transformational\n\ntransformational matters can change what sable harbor is rather than merely what it owns or how it operates. examples are sale or change of control; entry into a genuinely new regulated domain or asset class; enterprise-threatening leverage; fundamental restructuring; and existential strategic bets.\n\nthe cultural target is broad support roughly equivalent to five of nine directors for ordinary reserved matters and six of nine for transformational matters. these are deliberative norms, not mathematical legal vetoes or investor protections.\n\n## exposure over spend\n\nescalation responds to irreversibility, external propagation, catastrophic potential, legal/regulatory exposure, environmental/community exposure, safety consequence, and uncontrolled enterprise exposure. a small action with an uncapped safety, environmental, or legal tail may escalate at once. a larger but genuinely capped financial trial may not.\n\n## anti-circumvention\n\neconomically or operationally related commitments are considered together. a decision may not be split by invoice, phase, entity, counterparty, timing, or nominal workstream to evade an approval boundary. discovery that a series forms one exposure triggers reassessment; it does not automatically imply misconduct where aggregation was not reasonably knowable.\n\n## subsidiary right to be wrong\n\naru, bs&t, and the dedicated red wash operator retain delegated judgment inside their envelopes. corporate preference, status, or hindsight is insufficient to seize a decision. corporate intervention identifies a real enterprise contagion path, such as parent guarantee, shared scarce capacity, shared liability, enterprise reputation/regulatory effect, cross-business dependency, or common capital exposure.\n\nif no path exists, the accountable subsidiary may make a decision corporate would not choose. corporate can challenge, request evidence, change a future envelope through proper governance, or learn afterward; it cannot manufacture contagion to win an ordinary disagreement.\n\n## decision record\n\nescalation records the decision, accountable owner, applicable envelope, identified exposure, aggregation analysis, requested decision body, material assumptions/unknowns, dissent, and later disposition. the record preserves who owned the judgment at the time.\n"
+    },
+    {
+      "id": "SH-GOV-DISSENT-001",
+      "title": "CONTROL-FUNCTION DISSENT AND RAPID ADJUDICATION",
+      "category": "governance policy",
+      "owner": "Corporate Governance",
+      "version": "1.0.0",
+      "status": "LOCKED DIRECTION",
+      "source": "docs/governance/CONTROL_DISSENT_AND_RAPID_ADJUDICATION.md",
+      "publication": "docs/governance/publications/SH-GOV-DISSENT-001_v1.0.0.pdf",
+      "source_sha256": "9726c3702beccc3fea34168e7d140a7327d35abd37852c031c229fa4aa3049d4",
+      "publication_sha256": "3bde313aa3a1a3b734f9a0cd81d7c5ca4052e56610d306e53ec7edbf14c9e12a",
+      "related_doctrines": [
+        "Assumption of Risk",
+        "control functions",
+        "reserved matters"
+      ],
+      "cross_references": [
+        "ASSUMPTION_OF_RISK_DOCTRINE.md",
+        "RESERVED_MATTERS_AND_SUBSIDIARY_AUTONOMY.md"
+      ],
+      "search_text": "control-function dissent and rapid adjudication docs/governance/control_dissent_and_rapid_adjudication.md # control-function dissent and rapid adjudication\n\n**document id:** `sh-gov-dissent-001` | **version:** 1.0.0 | **effective:** september 2, 2026 | **state:** locked direction\n**owner:** corporate governance | **related:** assumption of risk, control functions, reserved matters | **cross-reference:** `assumption_of_risk_doctrine.md`; `reserved_matters_and_subsidiary_autonomy.md`\n\n## operating premise\n\ngovernance is a crash-prevention system, not a parking brake. a serious control challenge must reach accountable authority quickly without becoming a six-month paralysis mechanism. a material adverse finding forces rapid escalation; it does not automatically create a veto.\n\n## material adverse finding\n\na finding is material when credible evidence indicates the proposed action may cross an approved boundary, create consequential uncontrolled exposure, rely on a materially false representation, or defeat an applicable control. the finding identifies the disputed action, evidence, consequence, uncertainty, accountable parties, and requested safeguard. general discomfort or uncertainty alone is insufficient.\n\n## protected findings and narrow pause\n\nonly two categories justify pausing the specific disputed action pending review:\n\n1. credible catastrophic safety or operating risk;\n2. credible unlawful conduct.\n\nthe pause is narrow. unrelated work continues. a protected finding is not casually asserted to gain leverage, and the initial review tests both credibility and scope without requiring final proof before temporary protection applies.\n\n## time-boxed path\n\n1. the finder promptly informs the accountable decision-maker and relevant control leader, preserving evidence and immediate safeguards.\n2. initial handling occurs on the order of 48 hours: confirm ownership, classify whether protected, define the exact action at issue, establish interim limits, and assemble the smallest competent review group.\n3. a protected dispute ordinarily receives initial adjudication on the order of 72 hours. the adjudicator may uphold the pause, authorize with limits, return for defined evidence, or determine the protected threshold is not met.\n4. one tightly bounded extension may be granted only to obtain specifically identified evidence. the reason, evidence sought, responsible collector, and new deadline are explicit.\n\nthe doctrine uses \u201con the order of\u201d because operational reality matters; it does not license open-ended delay. missing a target requires recorded explanation and immediate re-baselining.\n\n## authority and disposition\n\nthe lawful authority for the underlying action decides after review unless the matter belongs at a higher reserved band. control functions retain challenge and escalation rights but do not acquire operational authority merely by issuing a finding. the final record preserves evidence, dissent, assumptions, safeguards, authority, decision, and reopen triggers.\n\nwhere the authorized decision is to proceed over a material finding, `sh-gov-risk-001` documents assumption of risk. no assumption may cover exposure outside the acceptor's office or owned by another accountable party.\n"
+    },
+    {
+      "id": "SH-GOV-ABSTAIN-001",
+      "title": "ABSTENTION AND INFORMATION-DEFICIENCY DOCTRINE",
+      "category": "governance policy",
+      "owner": "Corporate Governance",
+      "version": "1.0.0",
+      "status": "LOCKED",
+      "source": "docs/governance/ABSTENTION_AND_INFORMATION_DEFICIENCY.md",
+      "publication": "docs/governance/publications/SH-GOV-ABSTAIN-001_v1.0.0.pdf",
+      "source_sha256": "46a4106d2eff962a5fd11da4f5e23d567a6f6d1df7b3ba83e1d7f27c26868e4b",
+      "publication_sha256": "8d7d179c11d9c3a5ea5716e2ef5c2f745295a996ed8fdaf73df5aa104b81368f",
+      "related_doctrines": [
+        "board intelligence",
+        "EIB",
+        "decision quality"
+      ],
+      "cross_references": [
+        "DECISION_QUALITY_AND_AFTER_ACTION_LEARNING.md",
+        "../j2/EIB_AND_ENTERPRISE_QUESTIONS.md"
+      ],
+      "search_text": "abstention and information-deficiency doctrine docs/governance/abstention_and_information_deficiency.md # abstention and information-deficiency doctrine\n\n**document id:** `sh-gov-abstain-001` | **version:** 1.0.0 | **effective:** september 2, 2026 | **state:** locked\n**owner:** corporate governance | **related:** board intelligence, eib, decision quality | **cross-reference:** `decision_quality_and_after_action_learning.md`; `../j2/eib_and_enterprise_questions.md`\n\n## permission to say \u201ci don't know\u201d\n\nabstention is permitted. sable harbor would rather preserve honest uncertainty than manufacture confidence for appearance or speed. an abstention is neither silent assent nor automatic opposition.\n\non a consequential matter, the abstainer records the substantive reason, information believed missing, and what would support a better judgment where reasonably knowable. a conflict-based recusal is recorded separately so it is not mistaken for epistemic abstention.\n\n## abstention as telemetry\n\nabstention reveals the health of institutional intelligence. patterns prompt inquiry into:\n\n- inadequate board or management intelligence;\n- poor briefing or decision framing;\n- insufficient time or inaccessible evidence;\n- structural information-routing failure;\n- unclear ownership or authority;\n- an individual's inability or unwillingness to exercise judgment.\n\nthe inquiry seeks the cause rather than punishing the signal. if the system is failing, the system is repaired. if a person persistently refuses to learn, inquire, or exercise the judgment required by office, the issue may eventually become fitness for office.\n\nthere is no mechanical three-strikes rule. frequency alone proves little; subject, consequence, access, effort, and pattern matter. **i don't know is acceptable. refusing to find out is not.**\n\n## decision record and follow-through\n\nthe decision record distinguishes abstention, recusal, dissent, and absence. material missing information becomes a visible requirement with ownership and disposition where appropriate. later acquisition of the missing information does not silently rewrite the original vote or state of knowledge.\n"
+    },
+    {
+      "id": "SH-GOV-LEARN-001",
+      "title": "DECISION QUALITY AND AFTER-ACTION LEARNING",
+      "category": "governance policy",
+      "owner": "Corporate Governance / J2 Education",
+      "version": "1.0.0",
+      "status": "LOCKED",
+      "source": "docs/governance/DECISION_QUALITY_AND_AFTER_ACTION_LEARNING.md",
+      "publication": "docs/governance/publications/SH-GOV-LEARN-001_v1.0.0.pdf",
+      "source_sha256": "3b5b5899797000712c4aa951a7cbf6284456f47548aadd76ce75843cecb909fb",
+      "publication_sha256": "f1ea68a1999e1af45d34449819af2ec84287b7e437d6813296ffc06737b31f7f",
+      "related_doctrines": [
+        "AAR",
+        "Orientation",
+        "Canon",
+        "risk assumption"
+      ],
+      "cross_references": [
+        "../j2/EDUCATION.md",
+        "../j2/ORIENTATION.md"
+      ],
+      "search_text": "decision quality and after-action learning docs/governance/decision_quality_and_after_action_learning.md # decision quality and after-action learning\n\n**document id:** `sh-gov-learn-001` | **version:** 1.0.0 | **effective:** september 2, 2026 | **state:** locked\n**owner:** corporate governance / j2 education | **related:** aar, orientation, canon, risk assumption | **cross-reference:** `../j2/education.md`; `../j2/orientation.md`\n\n## decision quality under uncertainty\n\na good decision can lose and a bad decision can get lucky. sable harbor does not evaluate judgment by outcome alone. review asks:\n\n1. was ex-ante reasoning competent given what was knowable?\n2. was evidence gathered appropriately?\n3. were assumptions, confidence, and unknowns visible?\n4. was contrary evidence seriously considered?\n5. were applicable boundaries and controls followed?\n6. what did reality teach afterward?\n\nauthority does not automatically contract because a competent probabilistic decision produced a bad result. it may contract where evidence shows poor judgment, concealed assumptions, boundary failure, refusal to learn, or exposure beyond competence. meanwhile the system changes when reality reveals a missing variable, altered market, bad model, or previously unknowable factor.\n\n## learning practices\n\nhot washes capture immediate observations while memory and artifacts are fresh. aars and postmortems reconstruct intent, predictions, evidence, actions, outcomes, and surprise. forecast accountability compares what people expected with reality without turning probabilistic work into a scorekeeping trap. lessons are explicit and identify which question, assumption, model, control, training, or envelope changes.\n\nan aar is not complete because a meeting occurred or a report exists. learning closes when the relevant institutional representation changes\u2014or when accountable leadership explicitly records why no change is warranted. j2 orientation determines when an important lesson should enter enterprise questions, canon, eib, or education through the appropriate human-authored processes.\n\n## cultural posture\n\nsable harbor is slow to condemn, slow to fire solely for variance, and slow to contract authority without evidence of judgment failure. it is fast to examine, fast to course-correct, and relentless about learning.\n\nchallenge is hard on ideas and evidence and never demeaning to people. respect is non-negotiable. rank provides no immunity; candor does not authorize humiliation. a \u201croast culture\u201d that makes people hide bad news is a control failure.\n\nthis philosophy should inform later recruiting, selection, promotion, development, education, and leadership evaluation. those detailed talent systems remain future work and are not invented here.\n"
+    },
+    {
+      "id": "SH-GOV-CONFLICT-001",
+      "title": "CONFLICT INTEGRITY, CHALLENGE, AND FOUNDER AUTHORITY",
+      "category": "governance policy",
+      "owner": "Corporate Governance",
+      "version": "1.0.0",
+      "status": "LOCKED",
+      "source": "docs/governance/CONFLICT_INTEGRITY_AND_FOUNDER_AUTHORITY.md",
+      "publication": "docs/governance/publications/SH-GOV-CONFLICT-001_v1.0.0.pdf",
+      "source_sha256": "2e565f983a38683b0533f5da45a947158cd257039b45abf1df4c6b758dd184bd",
+      "publication_sha256": "929800a6b8ece960144496ece7d75df13d534e3df3a718d2c93c7c646489e3d5",
+      "related_doctrines": [
+        "board governance",
+        "reserved matters",
+        "dissent"
+      ],
+      "cross_references": [
+        "BOARD_AND_CAPITAL_GOVERNANCE.md",
+        "RESERVED_MATTERS_AND_SUBSIDIARY_AUTONOMY.md"
+      ],
+      "search_text": "conflict integrity, challenge, and founder authority docs/governance/conflict_integrity_and_founder_authority.md # conflict integrity, challenge, and founder authority\n\n**document id:** `sh-gov-conflict-001` | **version:** 1.0.0 | **effective:** september 2, 2026 | **state:** locked\n**owner:** corporate governance | **related:** board governance, reserved matters, dissent | **cross-reference:** `board_and_capital_governance.md`; `reserved_matters_and_subsidiary_autonomy.md`\n\ndirectors are stewards of sable harbor, not representatives of appointing capital. actual or apparent conflicts trigger disclosure, independent consideration, and recusal where appropriate. harrison vale and wolf ridge receive full board voice but no privileged commercial channel, private operational veto, special access outside proper process, or informal pressure through future financing.\n\noutside advisers, investors, scientists, specialists, customers, and employees may challenge aggressively. outsider status does not confer authority, and insider knowledge is not infallibility. authority stays with those accountable for the enterprise and carries an affirmative duty to seek and seriously consider informed challenge. advice informs judgment; it does not confer authority.\n\ninstitutional memory matters, but power is not hereditary. the original eight are not a permanent caste. authority expands through demonstrated competence and judgment and can contract when exposure outruns control.\n\nfounder conviction earns latitude, listening, and strategic runway. it does not create sovereignty. if daniel cannot persuade the board on a matter properly belonging to the board, conviction alone does not override it. before decision, argue hard. after lawful decision, execute fully.\n\nif the board overrules management, the board owns strategic authorization risk and management owns execution quality. daniel's recorded good-faith dissent remains dissent; execution is not retrospective endorsement. he must not sandbag the decision. new material information can reopen it, but history never rewrites who owned the underlying judgment.\n"
+    },
+    {
+      "id": "SH-GOV-COM-AUDIT-001",
+      "title": "AUDIT & COMPLIANCE COMMITTEE CHARTER",
+      "category": "committee charter",
+      "owner": "Board / Audit & Compliance Committee",
+      "version": "1.0.0",
+      "status": "LOCKED",
+      "source": "docs/governance/committees/AUDIT_AND_COMPLIANCE_COMMITTEE_CHARTER.md",
+      "publication": "docs/governance/publications/SH-GOV-COM-AUDIT-001_v1.0.0.pdf",
+      "source_sha256": "d59a708310e56dbe67fc28629efbedd4f790a4ef9765d841b651f3335ab8e993",
+      "publication_sha256": "65fef24b0bbf2bab9d8a726c2ca9aa13e5346c5ebe457d13616bf34d78968c2b",
+      "related_doctrines": [
+        "control dissent",
+        "assurance",
+        "compliance"
+      ],
+      "cross_references": [
+        "../CONTROL_DISSENT_AND_RAPID_ADJUDICATION.md",
+        "../ASSUMPTION_OF_RISK_DOCTRINE.md"
+      ],
+      "search_text": "audit & compliance committee charter docs/governance/committees/audit_and_compliance_committee_charter.md # audit & compliance committee charter\n\n**document id:** `sh-gov-com-audit-001` | **version:** 1.0.0 | **effective:** september 2, 2026 | **state:** locked\n**members:** tom calder (chair), lilia galiullina, maggie kincaid\n**owner:** board / audit & compliance committee | **related:** control dissent, assurance, compliance | **cross-reference:** `../control_dissent_and_rapid_adjudication.md`; `../assumption_of_risk_doctrine.md`\n\nthe committee assists the board with financial reporting and control, compliance, whistleblowing, material adverse findings, and independent-assurance interfaces. it receives serious control dissent, monitors rapid adjudication and assumption of risk records, and preserves dissent and accountability. it does not command operations, replace the board, or settle the still-open 2026 internal audit operating model.\n\nthe chair controls agendas and reports material conclusions, unresolved dissent, conflicts, and recusals to the board. members act for sable harbor rather than any constituency.\n"
+    },
+    {
+      "id": "SH-GOV-COM-FIN-001",
+      "title": "FINANCE & INVESTMENT COMMITTEE CHARTER",
+      "category": "committee charter",
+      "owner": "Board / Finance & Investment Committee",
+      "version": "1.0.0",
+      "status": "LOCKED",
+      "source": "docs/governance/committees/FINANCE_AND_INVESTMENT_COMMITTEE_CHARTER.md",
+      "publication": "docs/governance/publications/SH-GOV-COM-FIN-001_v1.0.0.pdf",
+      "source_sha256": "7c3990aa3537281c2a53e42de941334b98a3859e55e9e9cbfa66c5c233db1361",
+      "publication_sha256": "8c63537fac72aa1f97d2990ab1223046ae745bf530773f1ffc6e946daba6fe7d",
+      "related_doctrines": [
+        "financing",
+        "capital allocation",
+        "reserved matters"
+      ],
+      "cross_references": [
+        "../BOARD_AND_CAPITAL_GOVERNANCE.md",
+        "../RESERVED_MATTERS_AND_SUBSIDIARY_AUTONOMY.md"
+      ],
+      "search_text": "finance & investment committee charter docs/governance/committees/finance_and_investment_committee_charter.md # finance & investment committee charter\n\n**document id:** `sh-gov-com-fin-001` | **version:** 1.0.0 | **effective:** september 2, 2026 | **state:** locked\n**members:** harry van der velde (chair), marianne voss, evan mercer, daniel\n**owner:** board / finance & investment committee | **related:** financing, capital allocation, reserved matters | **cross-reference:** `../board_and_capital_governance.md`; `../reserved_matters_and_subsidiary_autonomy.md`\n\nthe committee assists the board with capital allocation, liquidity, leverage, guarantees, investment and acquisition economics, and financial exposure. it distinguishes scalable software economics from long-cycle physical-asset resilience and applies the reserved-matters framework without becoming an operating investment desk.\n\nno investor director receives an ordinary-operations veto, privileged commercial channel, or constituency authority. conflicts require disclosure, independent consideration, and recusal where appropriate.\n"
+    },
+    {
+      "id": "SH-GOV-COM-TECHOPS-001",
+      "title": "TECHNOLOGY & OPERATIONS COMMITTEE CHARTER",
+      "category": "committee charter",
+      "owner": "Board / Technology & Operations Committee",
+      "version": "1.0.0",
+      "status": "LOCKED",
+      "source": "docs/governance/committees/TECHNOLOGY_AND_OPERATIONS_COMMITTEE_CHARTER.md",
+      "publication": "docs/governance/publications/SH-GOV-COM-TECHOPS-001_v1.0.0.pdf",
+      "source_sha256": "953b7eaa91e5439df5d0ca86d398c01874ffe35f68f56d6c6e05e2c9c545a860",
+      "publication_sha256": "e36fad4d3dbbab6f53454422ec99e400a7a5a26e3abb4a488b7acdd4df4c92de",
+      "related_doctrines": [
+        "technology risk",
+        "operations",
+        "experimentation"
+      ],
+      "cross_references": [
+        "../GOVERNANCE_CONSTITUTION.md",
+        "../../j2/J2_CHARTER.md"
+      ],
+      "search_text": "technology & operations committee charter docs/governance/committees/technology_and_operations_committee_charter.md # technology & operations committee charter\n\n**document id:** `sh-gov-com-techops-001` | **version:** 1.0.0 | **effective:** september 2, 2026 | **state:** locked\n**members:** lilia galiullina (chair), priya raman, maggie kincaid, evan mercer\n**owner:** board / technology & operations committee | **related:** technology risk, operations, experimentation | **cross-reference:** `../governance_constitution.md`; `../../j2/j2_charter.md`\n\nthe committee assists the board with material technology and model risk, cybersecurity posture, physical operating exposure, asset integrity, reliability, and the boundary between computation and physical reality. it reviews whether experimentation remains inside approved envelopes and escalates consequence rather than uncertainty alone.\n\nthe committee does not operate products, mines, railways, laboratories, or technology teams. management retains execution authority inside approved boundaries.\n"
+    },
+    {
+      "id": "SH-GOV-COM-COMP-001",
+      "title": "COMPENSATION & HUMAN CAPITAL COMMITTEE CHARTER",
+      "category": "committee charter",
+      "owner": "Board / Compensation & Human Capital Committee",
+      "version": "1.0.0",
+      "status": "LOCKED",
+      "source": "docs/governance/committees/COMPENSATION_AND_HUMAN_CAPITAL_COMMITTEE_CHARTER.md",
+      "publication": "docs/governance/publications/SH-GOV-COM-COMP-001_v1.0.0.pdf",
+      "source_sha256": "e7fe92afc99946ca4c61ed32980c67556aa3b9227abef852b1931182bd7ea295",
+      "publication_sha256": "60882d9862db4e182f9b87fab0d7d8fe446a6c8ac1c41310684391ea4b9fbd9e",
+      "related_doctrines": [
+        "leadership",
+        "decision quality",
+        "learning"
+      ],
+      "cross_references": [
+        "../DECISION_QUALITY_AND_AFTER_ACTION_LEARNING.md",
+        "../../j2/EDUCATION.md"
+      ],
+      "search_text": "compensation & human capital committee charter docs/governance/committees/compensation_and_human_capital_committee_charter.md # compensation & human capital committee charter\n\n**document id:** `sh-gov-com-comp-001` | **version:** 1.0.0 | **effective:** september 2, 2026 | **state:** locked\n**members:** maggie kincaid (chair), lilia galiullina, harry van der velde\n**owner:** board / compensation & human capital committee | **related:** leadership, decision quality, learning | **cross-reference:** `../decision_quality_and_after_action_learning.md`; `../../j2/education.md`\n\nthe committee assists the board with executive compensation, succession, leadership fitness, human-capital philosophy, and cultural health. it protects decision-quality evaluation from outcome-only judgment and expects candor that is hard on ideas and evidence but never demeaning to people.\n\ndedicated recruiting, promotion, and talent architecture remains future work; this charter does not invent it.\n"
+    },
+    {
+      "id": "SH-GOV-COM-GOVNOM-001",
+      "title": "GOVERNANCE & NOMINATING COMMITTEE CHARTER",
+      "category": "committee charter",
+      "owner": "Board / Governance & Nominating Committee",
+      "version": "1.0.0",
+      "status": "LOCKED",
+      "source": "docs/governance/committees/GOVERNANCE_AND_NOMINATING_COMMITTEE_CHARTER.md",
+      "publication": "docs/governance/publications/SH-GOV-COM-GOVNOM-001_v1.0.0.pdf",
+      "source_sha256": "d3afcfbaad2af59209b50994b15ae0846c329ebfb807e6ab14876bd2d9eb544e",
+      "publication_sha256": "fbcb15aae6ec178218f8c28c8f7583bf1e25a0999431da359ac11a315dbe1dfc",
+      "related_doctrines": [
+        "board composition",
+        "independence",
+        "abstention"
+      ],
+      "cross_references": [
+        "../BOARD_EVOLUTION_2016_2026.md",
+        "../ABSTENTION_AND_INFORMATION_DEFICIENCY.md"
+      ],
+      "search_text": "governance & nominating committee charter docs/governance/committees/governance_and_nominating_committee_charter.md # governance & nominating committee charter\n\n**document id:** `sh-gov-com-govnom-001` | **version:** 1.0.0 | **effective:** september 2, 2026 | **state:** locked\n**members:** maggie kincaid (chair), tom calder, jon bell\n**owner:** board / governance & nominating committee | **related:** board composition, independence, abstention | **cross-reference:** `../board_evolution_2016_2026.md`; `../abstention_and_information_deficiency.md`\n\nthe committee assists the board with composition, independence, nominations, conflicts, committee architecture, and governance effectiveness. it protects the separation of chair and ceo, prevents institutional continuity from becoming hereditary power, and reviews whether board abstentions reveal deficient intelligence/process or individual fitness concerns.\n\nthe committee applies cultural consensus norms without manufacturing legal veto rights.\n"
+    },
+    {
+      "id": "SH-J2-CHARTER-001",
+      "title": "J2 \u2014 JUDGMENT & JUNCTION CHARTER",
+      "category": "J2 doctrine",
+      "owner": "J2 Headquarters",
+      "version": "1.0.0",
+      "status": "LOCKED",
+      "source": "docs/j2/J2_CHARTER.md",
+      "publication": "docs/j2/publications/SH-J2-CHARTER-001_v1.0.0.pdf",
+      "source_sha256": "41ef61948f33dff2ddb3553ff314d27a30155dcf691b01b1b2363a13ee457b7f",
+      "publication_sha256": "b0e8c682da52f047a0e405f1e16578fe764cb9c8e260ac7fee88c8832107461a",
+      "related_doctrines": [
+        "Contact",
+        "Judgment",
+        "Orientation",
+        "JAG",
+        "Education"
+      ],
+      "cross_references": [
+        "J2_OPERATING_MODEL.md",
+        "alexandria/ALEXANDRIA_CHARTER.md"
+      ],
+      "search_text": "j2 \u2014 judgment & junction charter docs/j2/j2_charter.md # j2 \u2014 judgment & junction charter\n\n**document id:** `sh-j2-charter-001` | **version:** 1.0.0 | **effective:** september 2, 2026 | **state:** locked  \n**owner:** j2 headquarters | **approving body:** board | **distribution:** internal\n**related:** contact, judgment, orientation, jag, education | **cross-reference:** `j2_operating_model.md`; `alexandria/alexandria_charter.md`\n\n## mission\n\nj2 maintains an enterprise-level apparatus for intelligence, judgment, orientation, education, and learning worthy of immaculate intelligence: sable harbor asks the same important questions even when it does not share the same answers.\n\n## organization\n\nj2 headquarters is small and owns doctrine, professional/training standards, daedalus doctrine, cross-loop priorities, scarce-collection arbitration, and continuity. earlier direction for a chief judgment & junction officer reporting administratively to daniel with protected board access remains locked direction; exact title, reporting detail, deputies, billets, and footprint remain open.\n\nthe three loops are **contact** (reality to evidence), **judgment** (evidence to warranted belief), and **orientation** (judgment to enterprise reorientation and new questions). **junction advisory group** and **education** cross-cut the loops. this is a human context-and-responsibility system, not a queue or llm pipeline.\n\n## boundaries\n\nj2 does not command operations, vote for the board, replace line strategy, become internal audit, or create a parallel lore system. orientation owns canon and the eib; human judgment officers own judgments; human orientation officers issue semaphore traffic. alexandria preserves and connects the work.\n\n## scale and open matters\n\nsix active five-person jag teams and approximately 20\u201325 commissioned orientation officers are accepted working scale. no final total j2 headcount is implied. named permanent leaders, contact/judgment/education/hq staffing, and exact orientation rank nomenclature remain open/provisional as registered in canon.\n"
+    },
+    {
+      "id": "SH-J2-HQ-001",
+      "title": "J2 HEADQUARTERS DOCTRINE",
+      "category": "J2 doctrine",
+      "owner": "J2 Headquarters",
+      "version": "1.0.0",
+      "status": "LOCKED DIRECTION",
+      "source": "docs/j2/J2_HEADQUARTERS.md",
+      "publication": "docs/j2/publications/SH-J2-HQ-001_v1.0.0.pdf",
+      "source_sha256": "1fb5ac91ab066f44e4b0c0b6507090917d91844f9e27141e28785d68647d679f",
+      "publication_sha256": "c317e7e876d64d153012e06d6237300f1122618f67643c9c340262599d0138e5",
+      "related_doctrines": [
+        "Contact",
+        "Judgment",
+        "Orientation",
+        "JAG",
+        "Education"
+      ],
+      "cross_references": [
+        "J2_CHARTER.md",
+        "J2_OPERATING_MODEL.md"
+      ],
+      "search_text": "j2 headquarters doctrine docs/j2/j2_headquarters.md # j2 headquarters doctrine\n\n**document id:** `sh-j2-hq-001` | **version:** 1.0.0 | **effective:** september 2, 2026 | **state:** locked direction\n**owner:** j2 headquarters | **related:** contact, judgment, orientation, jag, education | **cross-reference:** `j2_charter.md`; `j2_operating_model.md`\n\nj2 headquarters exists so contact, judgment, orientation, jag, and education remain one institution rather than disconnected expert teams. it is deliberately small. its legitimacy comes from stewardship and professional rigor, not a large command tower.\n\nhq is custodian of j2 doctrine, professional standards, training standards, daedalus doctrine, cross-loop priorities, collection-priority arbitration when capacity conflicts, profession/talent stewardship, and institutional continuity. it ensures handoffs preserve context, recurring learning crosses loops, and local optimization does not fracture the whole.\n\norientation sets broad enterprise intelligence priorities; judgment officers own problem-specific requirements; contact owns collection method. hq intervenes only where requirements conflict, scarce collection capacity requires choice, doctrine is disputed, or enterprise continuity is at risk. it does not replace those accountabilities with centralized tasking.\n\nearlier accepted direction contemplates a chief judgment & junction officer with administrative reporting to daniel and protected board access. the existence and need for protected access are locked direction. exact title, reporting-line detail, deputy arrangement, hq billets, and physical footprint remain open. no named leader is invented.\n\nhq owns professional standards without turning j2 into a credential bureaucracy. it protects judgment curiosity, orientation independence, contact provenance, jag field truth, and education quality. it also protects operating units from j2 mission creep: j2 does not command, punish, conduct personnel actions, or silently become internal audit.\n"
+    },
+    {
+      "id": "SH-J2-COLLECT-001",
+      "title": "CONTACT COLLECTION MANAGEMENT",
+      "category": "J2 doctrine",
+      "owner": "Contact",
+      "version": "1.0.0",
+      "status": "LOCKED DIRECTION",
+      "source": "docs/j2/CONTACT_COLLECTION_MANAGEMENT.md",
+      "publication": "docs/j2/publications/SH-J2-COLLECT-001_v1.0.0.pdf",
+      "source_sha256": "565d65697d0568b689939ee19c6348ea375ce4b7b77ef48c9294f64d251f0755",
+      "publication_sha256": "9f8ecd401f56a628ee1745251329f786ca37eafe418f5d7b3e20123ce984eb93",
+      "related_doctrines": [
+        "Judgment",
+        "Judgment Watch",
+        "JAG",
+        "Orientation priorities"
+      ],
+      "cross_references": [
+        "CONTACT.md",
+        "JUDGMENT_OFFICER_PROFESSION.md"
+      ],
+      "search_text": "contact collection management docs/j2/contact_collection_management.md # contact collection management\n\n**document id:** `sh-j2-collect-001` | **version:** 1.0.0 | **effective:** september 2, 2026 | **state:** locked direction\n**owner:** contact | **related:** judgment, judgment watch, jag, orientation priorities | **cross-reference:** `contact.md`; `judgment_officer_profession.md`\n\n## requirements contract\n\ncontact is not self-directing. orientation establishes broad enterprise questions and priority intelligence requirements. a judgment officer translates a problem commission into specific collection requirements and rfis. j2 hq arbitrates conflicts and scarce capacity. contact determines lawful source, collection method, timing, provenance, and handoff.\n\na requirement states the question, discriminating evidence sought, why it matters, responsible problem owner, timing, known gaps, restrictions, and completion/disposition. the requirement must not imply the desired answer. contact may challenge an infeasible or poorly discriminating requirement and return it for refinement; this is professional collection judgment, not ownership of the underlying belief.\n\n## six disciplines\n\n**systems collection** retrieves from databases, logs, operational platforms, finance systems, foundry, and other internal systems through queries, extracts, standing pulls, time-bounded captures, and preservation. retrieval does not become institutional judgment.\n\n**human collection** uses structured elicitation rather than vague interviewing. directed asks may tell employees what observations matter during a defined period, which facts to capture, and how to report them. employees become distributed sensors without becoming covert surveillance subjects.\n\n**jag collection** tasks field teams for observation, artifacts, interviews, operating context, and ground truth. jag reports what it saw and the limits of observation; it does not issue institutional conclusions.\n\n**external collection** is requirement-driven lawful research across public, regulatory, commercial, market, expert, and other authorized sources. contact does not substitute generic news aggregation for a collection plan.\n\n**exploitation** recognizes an information-rich event\u2014lost bid, incident, unusual maintenance, successful intervention, capital decision, outage, customer failure\u2014as a fleeting collection opportunity. contact acts while evidence, memory, and artifacts remain fresh and respects legal, safety, privilege, and preservation constraints.\n\n**directed observation and evidence creation** applies when discriminating evidence does not exist. contact can help design a controlled test, new measurement, structured observation, targeted data capture, or structured interview program. the record distinguishes observed evidence from designed conditions and preserves method and limitations.\n\n## collection board\n\nthe active register shows requirements, assigned method/source, clock, current status, outstanding gaps, restrictions, provenance state, and evidentiary handoff. flash/current/active/standing tempo language remains provisional and may not be presented as final policy.\n\nmetrics emphasize important gaps closed, relevance, timeliness, provenance quality, and discriminating value. report count, event volume, and data accumulation are not success measures. universal surveillance, fishing expeditions, and raw-event hoarding violate doctrine.\n\n## handoff\n\nevidence is handed to the owning jo with source identity or protected-source handling, event/record/access time, method, chain of custody where applicable, known limitations, and unanswered gaps. contact preserves the raw signal; it does not smooth ambiguity into a convenient summary.\n"
+    },
+    {
+      "id": "SH-J2-JO-001",
+      "title": "JUDGMENT OFFICER PROFESSION",
+      "category": "J2 doctrine",
+      "owner": "Judgment",
+      "version": "1.0.0",
+      "status": "LOCKED DIRECTION",
+      "source": "docs/j2/JUDGMENT_OFFICER_PROFESSION.md",
+      "publication": "docs/j2/publications/SH-J2-JO-001_v1.0.0.pdf",
+      "source_sha256": "4cda92394c6d536d2ba3acf6b83ba062fe0950029ffb74e458be38ab6831d6a2",
+      "publication_sha256": "c5969b9a70f4880eb9b9ac0ae39298fd1935cb99fd525b1a574fd8a6cd07c768",
+      "related_doctrines": [
+        "Contact",
+        "Judgment Watch",
+        "JAG",
+        "Orientation"
+      ],
+      "cross_references": [
+        "JUDGMENT.md",
+        "CONTACT_COLLECTION_MANAGEMENT.md",
+        "ORIENTATION.md"
+      ],
+      "search_text": "judgment officer profession docs/j2/judgment_officer_profession.md # judgment officer profession\n\n**document id:** `sh-j2-jo-001` | **version:** 1.0.0 | **effective:** september 2, 2026 | **state:** locked direction\n**owner:** judgment | **related:** contact, judgment watch, jag, orientation | **cross-reference:** `judgment.md`; `contact_collection_management.md`; `orientation.md`\n\n## commission and ownership\n\na consequential judgment problem receives a short commission stating the question the officer is charged to understand. it does not imply an answer. once commissioned, the judgment officer owns the problem end to end, preserves context, directs problem-specific collection requirements, and remains personally accountable for the resulting judgment.\n\njudgment is not \u201cevidence enters a queue and an analyst writes an assessment.\u201d officers work like case officers, internal investigators, and roving intellectual commissions. they follow the problem across organizational boundaries and remain close enough to evidence and people to notice what a queue would flatten.\n\n## portfolio and curiosity\n\nthe working norm is approximately five live problems: four directed from board, orientation, dissent, jag, contact patterns, operating failure, abstention/information deficiency, or other enterprise need; and one self-directed problem. the 20% curiosity outlet is mandatory because ruthless inquiry is part of the profession, but it is bounded: one question, stated importance, and closure or handoff before another opens.\n\n## rights\n\nwithin legal/security boundaries an officer may speak directly with people throughout sable harbor; attend ordinary operations; visit business lines and sites; sit with collectors; ride with jag; request records and additional collection through contact; engage technical and external experts; hold open problem hours; protect sensitive sources appropriately; and ask uncomfortable questions without management gatekeeping.\n\nthese rights create access, not command. a jo cannot order a business action merely because the officer holds a judgment. the asymmetric power is the power to compel institutional attention to a question, not operational action.\n\n## problem book\n\nthe problem book is a living working record, not a production report. at any time it makes visible: the question; current belief and reasons; evidence and provenance; contrary/missing evidence; assumptions and confidence; what does not make sense; next collection/inquiry; and what would change the officer's mind. \u201cthings that do not make sense\u201d is an affirmative discipline, not an appendix added at publication.\n\n## human access and handoff\n\nrecurring open problem hours let employees walk in, call, share an observation, or challenge reasoning without management filtering. when jag evidence touches a live problem, the team sits with the officer for conversation and read-back; uploading a report is insufficient.\n\nproblem transfer requires a formal handover, conversation, read-back, current problem book, unresolved gaps, sensitive-source handling, and acceptance by the receiving officer. reassigning a ticket does not transfer understanding.\n\n## judgment table and dissent\n\nbefore issuing a consequential judgment, other judgment officers may attack evidence, assumptions, alternative explanations, and confidence. the table is not a vote or consensus committee. the originating officer remains responsible. serious dissent travels with the judgment, and multiple interpretations may coexist when reality warrants them.\n\n## closure and self-knowledge\n\nclosure may be resolved, superseded, merged, unresolvable with available evidence, or premise invalid. labels serve intellectual history rather than throughput management.\n\neach officer maintains a private longitudinal record of forecasts, confidence, surprise, recurring blind spots, and over/underconfidence. it supports calibration and growth, never a gamified score, ranking, or punishment engine. report volume, ticket throughput, and document count are poor primary measures. the management question is: **are you getting closer to the truth?**\n"
+    },
+    {
+      "id": "SH-J2-OO-001",
+      "title": "ORIENTATION OFFICER PROFESSION",
+      "category": "J2 doctrine",
+      "owner": "Orientation",
+      "version": "1.0.0",
+      "status": "LOCKED DIRECTION",
+      "source": "docs/j2/ORIENTATION_OFFICER_PROFESSION.md",
+      "publication": "docs/j2/publications/SH-J2-OO-001_v1.0.0.pdf",
+      "source_sha256": "7cc2e441e757c53196453bddf6fbd3feb2959281f35b6fb4871b0c31c18b139c",
+      "publication_sha256": "4aeebc45aea116e184e92ed17bab4c82267f07433b91a356a47446b90f1b1225",
+      "related_doctrines": [
+        "EIB",
+        "Canon",
+        "Board",
+        "CEO",
+        "Finance"
+      ],
+      "cross_references": [
+        "ORIENTATION.md",
+        "EIB_AND_ENTERPRISE_QUESTIONS.md",
+        "alexandria/CANON_INSTITUTIONAL_KNOWLEDGE.md"
+      ],
+      "search_text": "orientation officer profession docs/j2/orientation_officer_profession.md # orientation officer profession\n\n**document id:** `sh-j2-oo-001` | **version:** 1.0.0 | **effective:** september 2, 2026 | **state:** locked direction\n**owner:** orientation | **related:** eib, canon, board, ceo, finance | **cross-reference:** `orientation.md`; `eib_and_enterprise_questions.md`; `alexandria/canon_institutional_knowledge.md`\n\n## vocation\n\norientation officer is a vocation, not an executive rotation, chief-of-staff credential, or stepping stone into power. the working corps target is approximately 20\u201325 commissioned officers; fellows/trainees may sit outside it. officer, senior officer, and distinguished officer are possible rank directions, not final nomenclature. distinguished status means expertise, respect, compensation, freedom, and professional contribution\u2014not a people-management empire.\n\nin exchange for exceptional compensation, unparalleled institutional access, intellectual freedom, research resources, sabbaticals, field exposure, education, and prestige, an ordinary commissioned officer permanently gives up later c-suite line office, operating vp authority, voting board membership, and equivalent decision-making power. the head/director remains inside the profession rather than converting to line command. whether a former head could later become a nonexecutive director remains open and no exception is implied.\n\n## work in decision environments\n\nthe officer knows the state, provenance, confidence, dissent, and limits of what sable harbor thinks it knows. in an executive or board room the officer has a narrow standing duty to intervene when material uncertainty is represented as fact, consequential dissent is omitted, confidence materially overstated, or a known information deficiency matters. the officer does not vote, direct the outcome, own the agenda, or automatically delay. \u201cnoted and proceeding\u201d is a valid response.\n\nthe office of ceo and board receive separate dedicated officers. the board officer attends key board/committee meetings, supports the eib, clarifies confidence/dissent/unknowns/judgment ownership, and may meet independent directors without management where appropriate. this is protection from exclusively management-filtered understanding, not a gotcha mechanism.\n\nfinance is a standing observation post because beliefs become numbers people later mistake for facts. a senior officer works with the cfo office and approximately 2\u20133 embeds work across planning/performance areas as a refinable model. they sit with model builders, ask where assumptions came from and who owns them, connect them to judgment problems, inspect actual operations, and ask what variance taught about the belief beneath the number.\n\ntemporary assignments follow consequential uncertainty: major acquisition, red wash expansion, transformative capital program, new regulated exposure, or similar environment. presence is not a prestige perk.\n\n## anti-court architecture\n\nofficers do not own operating deliverables, supervise line employees, control budgets, conduct personnel actions, gatekeep executive access or calendars, broker politics, map who is politically rising/falling, stockpile private intelligence, say \u201cwe\u201d for an executive's business decision, or convert access into future executive power.\n\nmaterial institutional information returns to the system through appropriate channels. sable harbor preserves judgments, dissent, assumptions, decisions, and knowledge changes; it deliberately does not build a forensic graph reconstructing which officer influenced which executive. such a graph would be incomplete, scapegoating-prone, and itself politically toxic.\n\nexecutive-office assignments rotate approximately 24\u201336 months. language names the office\u2014\u201corientation officer assigned to the office of the ceo\u201d\u2014not the person. most officers are not permanently attached; they also work enterprise questions, eib, canon, research, field immersion, education, and study tours.\n\n## professional self-government\n\norientation is trusted to orient itself through a named head/director and a strong culture of professional challenge. there is no permanent steering committee above its thinking. the head is first among rigor, not a czar of institutional truth.\n"
+    },
+    {
+      "id": "SH-J2-OPS-001",
+      "title": "J2 OPERATING MODEL",
+      "category": "J2 doctrine",
+      "owner": "J2 Headquarters",
+      "version": "1.0.0",
+      "status": "LOCKED DIRECTION",
+      "source": "docs/j2/J2_OPERATING_MODEL.md",
+      "publication": "docs/j2/publications/SH-J2-OPS-001_v1.0.0.pdf",
+      "source_sha256": "4a67aa543068983fdbb1b8d8b7e9ce616aca8fc8a09c2e403125106e69b758a7",
+      "publication_sha256": "a5712e58a9e5423f1bded7b3672b1b3569af240d3b9226ea87f385ff9df8eaa6",
+      "related_doctrines": [
+        "Contact",
+        "Judgment",
+        "Orientation",
+        "JAG",
+        "Education"
+      ],
+      "cross_references": [
+        "J2_CHARTER.md",
+        "J2_HEADQUARTERS.md"
+      ],
+      "search_text": "j2 operating model docs/j2/j2_operating_model.md # j2 operating model\n\n**document id:** `sh-j2-ops-001` | **version:** 1.0.0 | **state:** locked direction\n**owner:** j2 headquarters | **related:** contact, judgment, orientation, jag, education | **cross-reference:** `j2_charter.md`; `j2_headquarters.md`\n\n## high-level organization\n\n```mermaid\nflowchart tb\n  hq[j2 headquarters]\n  hq -. doctrine / standards .-> c[contact]\n  hq -. doctrine / standards .-> j[judgment]\n  hq -. doctrine / standards .-> o[orientation]\n  hq -. cross-cutting arm .-> jag[junction advisory group]\n  hq -. cross-cutting arm .-> edu[education]\n```\n\n## functional loop\n\n```mermaid\nflowchart lr\n  hq[j2 headquarters] -. doctrine / priorities / arbitration .-> c[contact]\n  hq -. professional standards .-> j[judgment]\n  hq -. professional standards .-> o[orientation]\n  c -->|evidence with provenance| j\n  j -->|human-authored judgments + dissent| o\n  o -->|reoriented questions / requirements| c\n  jag[junction advisory group] -. field observation / reach-back .-> c\n  jag -. human context transfer .-> j\n  edu[education] -. learning / pedagogy .-> o\n  o -. enterprise learning needs .-> edu\n```\n\nsolid arrows are work-product flows, not reporting lines. dotted edges are doctrine, collection, reach-back, cross-cutting-arm, or learning relationships. hq is not a giant command tower.\n\ncontact collection is directed broadly by orientation's enterprise priorities and specifically by judgment officers' collection requirements/rfis. hq arbitrates conflicts/scarcity. contact chooses lawful source, method, timing, and provenance. judgment watch belongs to judgment but works at contact intake; it triages and correlates signals, routes them to live problems, or proposes a new problem. once assigned, the judgment officer owns the problem.\n\nj2 outputs connect to governance: material findings may trigger rapid adjudication; board and executive orientation officers protect epistemic integrity; jag may surge as a fact witness/ground-truth collector; education converts important learning into instruction. none of these relationships creates line command.\n"
+    },
+    {
+      "id": "SH-J2-CONTACT-001",
+      "title": "CONTACT \u2014 COLLECTION DOCTRINE",
+      "category": "J2 doctrine",
+      "owner": "Contact",
+      "version": "1.0.0",
+      "status": "LOCKED DIRECTION",
+      "source": "docs/j2/CONTACT.md",
+      "publication": "docs/j2/publications/SH-J2-CONTACT-001_v1.0.0.pdf",
+      "source_sha256": "bf39d89c55fc0a5bf4cd9e8977808ae943b8c1197258ff5cf49aa328f2207901",
+      "publication_sha256": "8cfd2896d9885f86e322a80614a5c88875460bd1c4a477505243f35d594cc5fb",
+      "related_doctrines": [
+        "collection management",
+        "Judgment Watch",
+        "JAG"
+      ],
+      "cross_references": [
+        "CONTACT_COLLECTION_MANAGEMENT.md",
+        "JUDGMENT.md"
+      ],
+      "search_text": "contact \u2014 collection doctrine docs/j2/contact.md # contact \u2014 collection doctrine\n\n**document id:** `sh-j2-contact-001` | **version:** 1.0.0 | **state:** locked direction\n**owner:** contact | **related:** collection management, judgment watch, jag | **cross-reference:** `contact_collection_management.md`; `judgment.md`\n\ncontact is a collection apparatus, not a think tank and not self-directing. orientation sets broad priority questions; judgment officers own problem-specific requirements/rfis; hq arbitrates scarce capacity; contact selects lawful methods, sources, timing, and provenance and hands evidence onward without converting retrieval into institutional judgment.\n\nsix disciplines are controlled: **systems collection** (queries, extracts, logs, operational/finance/foundry sources); **human collection** (structured elicitation and time-bounded directed asks); **jag collection** (field artifacts, observation, interviews, context); **external collection** (requirement-driven lawful osint, regulatory, market, commercial, expert sources); **exploitation** (incidents, bids, maintenance, interventions, capital decisions, outages, and failures while memory/artifacts are fresh); and **directed observation/evidence creation** (controlled tests, new measurement, structured observation/data capture/interview programs).\n\ncollection management tracks active requirements, methods, clocks, gaps, status, and evidentiary handoff. flash/current/active/standing labels remain provisional. success means gaps closed, relevance, provenance, timeliness, and discriminating value\u2014not report volume. universal surveillance, fishing expeditions, and raw-event hoarding violate doctrine.\n"
+    },
+    {
+      "id": "SH-J2-JUDGMENT-001",
+      "title": "JUDGMENT \u2014 PROBLEM OWNERSHIP DOCTRINE",
+      "category": "J2 doctrine",
+      "owner": "Judgment",
+      "version": "1.0.0",
+      "status": "LOCKED DIRECTION",
+      "source": "docs/j2/JUDGMENT.md",
+      "publication": "docs/j2/publications/SH-J2-JUDGMENT-001_v1.0.0.pdf",
+      "source_sha256": "3e23cf3bf3cb0c124a911c20463bbe18aeea52afcca151a58065c7b128c9bad5",
+      "publication_sha256": "36330b9819013848c78ba5bc28d23ffa695a72a1504f09b0291d5ec982c9a7a9",
+      "related_doctrines": [
+        "Judgment Officers",
+        "Contact",
+        "Orientation"
+      ],
+      "cross_references": [
+        "JUDGMENT_OFFICER_PROFESSION.md",
+        "CONTACT.md"
+      ],
+      "search_text": "judgment \u2014 problem ownership doctrine docs/j2/judgment.md # judgment \u2014 problem ownership doctrine\n\n**document id:** `sh-j2-judgment-001` | **version:** 1.0.0 | **state:** locked direction\n**owner:** judgment | **related:** judgment officers, contact, orientation | **cross-reference:** `judgment_officer_profession.md`; `contact.md`\n\njudgment officers are human case owners and roving intellectual commissions, not analysts at the end of a queue. a working portfolio is approximately five live problems: four directed and one mandatory, bounded self-directed curiosity problem. the officer states why it matters and closes/hands it off before opening another.\n\neach consequential problem has a short commission stating the question without implying the answer. within legal/security boundaries the jo may speak directly across sable harbor, attend ordinary operations, visit sites, sit with collectors, ride with jag, engage technical/external experts, request records or collection through contact, hold open problem hours, and protect sensitive sources. the jo has no line command: power compels institutional attention to a question, not operational action.\n\nthe living **problem book** answers: what am i trying to understand? what do i believe and why? what does not make sense? what next? what would change my mind? \u201cthings that do not make sense\u201d remains explicit. jag handoff and problem transfer require conversation/read-back, not ticket reassignment.\n\nat the judgment table, other officers professionally attack a consequential judgment. it is not a vote; the originator remains responsible and dissents travel. closure may be resolved, superseded, merged, unresolvable with available evidence, or premise invalid without excessive bureaucracy.\n\n**judgment watch** is a small judgment function physically/operationally at contact intake. it preserves raw signals, correlates weak signals, routes material, and proposes new problems but never owns the resulting problem.\n\na private longitudinal self-knowledge record supports calibration and blind-spot learning, not gamified ranking or punishment. volume and throughput are poor primary measures; management asks whether the officer is getting closer to truth.\n"
+    },
+    {
+      "id": "SH-J2-ORIENT-001",
+      "title": "ORIENTATION \u2014 INSTITUTIONAL MENTAL MODEL",
+      "category": "J2 doctrine",
+      "owner": "Orientation",
+      "version": "1.0.0",
+      "status": "LOCKED DIRECTION",
+      "source": "docs/j2/ORIENTATION.md",
+      "publication": "docs/j2/publications/SH-J2-ORIENT-001_v1.0.0.pdf",
+      "source_sha256": "e27d1c93cd7ea13a0fe4f682688ca22c5423f791bf5cd8059a0242df87b3e530",
+      "publication_sha256": "4d678434923093c10c3352b36ac41c18a9ab66b9f5ed387ec28fcbfee7e5fc95",
+      "related_doctrines": [
+        "EIB",
+        "Canon",
+        "executive/board/finance placement"
+      ],
+      "cross_references": [
+        "ORIENTATION_OFFICER_PROFESSION.md",
+        "EIB_AND_ENTERPRISE_QUESTIONS.md"
+      ],
+      "search_text": "orientation \u2014 institutional mental model docs/j2/orientation.md # orientation \u2014 institutional mental model\n\n**document id:** `sh-j2-orient-001` | **version:** 1.0.0 | **state:** locked direction\n**owner:** orientation | **related:** eib, canon, executive/board/finance placement | **cross-reference:** `orientation_officer_profession.md`; `eib_and_enterprise_questions.md`\n\norientation owns the eib, enterprise questions and assumptions, changes of mind, reorientation, consequential dissent travel, intellectual history, learning-to-education identification, canon, and epistemic integrity in executive/board decisions. it does not own collection, investigations, line strategy, it, generic communications, execution follow-up, command, or internal audit.\n\norientation lives close to j2 hq, ceo, and board interface. an officer may intervene when material uncertainty is presented as fact, dissent omitted, confidence overstated, or a known information deficiency matters. the officer does not vote, direct outcome, automatically delay, or own the agenda. \u201cnoted and proceeding\u201d is valid.\n\n## vocation and anti-court bargain\n\napproximately 20\u201325 commissioned officers is the working target; trainees/fellows may sit outside it. possible officer/senior/distinguished ranks are provisional. in exchange for compensation, access, freedom, research, sabbaticals, field exposure, education, and prestige, an ordinary commissioned officer permanently gives up later c-suite line office, operating vp authority, voting board membership, and equivalent decision power. whether a former head may later become a nonexecutive director remains open.\n\nofficers do not supervise line staff, own operating deliverables/budgets, conduct personnel actions, gatekeep executives/calendars, broker politics, map who is \u201cup/down,\u201d keep private intelligence for leverage, claim \u201cwe\u201d for executive decisions, or turn access into future power. material institutional information returns through proper channels. alexandria preserves judgments/dissents/assumptions/decisions, not a forensic blame graph of interpersonal influence.\n\nexecutive assignments rotate roughly 24\u201336 months and are styled \u201corientation officer assigned to the office of the ceo,\u201d never a person's possession. most officers also work enterprise questions, eib, canon, field immersion, research, education, and study tours.\n\n## coverage\n\nthe office of ceo and board each have separate dedicated officers. the board officer attends key board/committee meetings, may meet independent directors appropriately, and prevents exclusively management-filtered understanding without becoming gotcha compliance. finance has a permanent senior cfo-office presence plus approximately 2\u20133 working embeds (exact placement count refinable). temporary coverage follows consequential decision environments such as acquisition, red wash expansion, major capital programs, or new regulated exposure\u2014not prestige.\n\nfinance embeds observe beliefs becoming numbers while models are built, test ownership/provenance of assumptions, compare actuals to the belief beneath the variance, create/reopen judgment problems when material, and leave the spreadsheet to see operations.\n\norientation orients itself through a named head/director and professional challenge, not a steering committee. the head is first among rigor, not czar of truth.\n"
+    },
+    {
+      "id": "SH-J2-JAG-001",
+      "title": "JUNCTION ADVISORY GROUP \u2014 FIELD DOCTRINE",
+      "category": "J2 doctrine",
+      "owner": "Junction Advisory Group",
+      "version": "1.0.0",
+      "status": "LOCKED DIRECTION",
+      "source": "docs/j2/JUNCTION_ADVISORY_GROUP.md",
+      "publication": "docs/j2/publications/SH-J2-JAG-001_v1.0.0.pdf",
+      "source_sha256": "c38f697044871d7be274eb2947f89b04f19c2221d045d551b97d06c237107921",
+      "publication_sha256": "5c17e324876c5bc80234fc9bb8c21c50c3477cb65293bec792dee28959e4c6cb",
+      "related_doctrines": [
+        "Contact",
+        "Judgment",
+        "Willow",
+        "Education"
+      ],
+      "cross_references": [
+        "CONTACT_COLLECTION_MANAGEMENT.md",
+        "JUDGMENT_OFFICER_PROFESSION.md",
+        "EDUCATION.md"
+      ],
+      "search_text": "junction advisory group \u2014 field doctrine docs/j2/junction_advisory_group.md # junction advisory group \u2014 field doctrine\n\n**document id:** `sh-j2-jag-001` | **version:** 1.0.0 | **state:** locked direction\n**owner:** junction advisory group | **related:** contact, judgment, willow, education | **cross-reference:** `contact_collection_management.md`; `judgment_officer_profession.md`; `education.md`\n\neach standard jag team has exactly five billets: senior management-track **team lead**, quantitative **data scientist**, software/systems-heavy **technical systems advisor**, line/field **operational advisor**, and human-factors/culture/incentives **human systems advisor**. research is everyone's job; no generic research-analyst seat is added.\n\n```mermaid\nflowchart tb\n  tl[team lead] --- ds[data scientist]\n  tl --- ts[technical systems advisor]\n  tl --- oa[operational advisor]\n  tl --- hs[human systems advisor]\n```\n\nthe roughly one-year tour has: a 30\u201345 day first embed to learn/observe/map/build relationships; several months at j2/willow/experts building and testing; a 30\u201345 day return embed to implement/test against reality; and approximately 90 days stewarding lessons, teaching, mentoring, updating j2, and supporting course/team redesign.\n\nteams belong to j2, rotate rather than attach permanently, and target roughly two touches per business line per year. six active teams (about 30 billets) is working scale. later teams deliberately test earlier intervention with fresh eyes. this is not consulting tourism.\n\nj2 may surge a team for crisis, serious failure, major adverse finding/board dissent, or consequential uncertainty. it may appear to the board as fact witness, ground-truth collector, or conditions investigator. jag does not arbitrate, command, audit, or punish. it returns evidence/context, supports willow reach-back, and transfers context to the relevant jo in person.\n\n## team philosophy and billet contribution\n\nthe team lead is a senior management-track professional in the post-senior-manager/pre-national-enterprise-leadership career stage. the tour is a career-making broadening assignment because the lead must see across the company without acquiring line command over the host.\n\nthe data scientist investigates quantitatively and tests whether patterns survive disciplined analysis. the technical systems advisor understands software, development, interfaces, and system behavior. the operational advisor tests whether a proposed idea survives actual line or field execution. the human systems advisor studies human factors, organizational behavior, culture, incentives, and why organizations behave as they do; the role is not generic hr. research belongs to all five billets, so no generic research-analyst seat is added.\n\n## deployment compact\n\nbefore deployment, j2 states the question, host environment, access/safety boundaries, relationships to live judgment problems and contact requirements, and expected handoffs without predetermining conclusions. the host understands that jag observes and assists but does not evaluate personnel or take command.\n\nthe first 30\u201345 day embed privileges learning, observation, mapping, problem discovery, and human trust. the middle build period uses j2, willow, and relevant experts to create and test interventions. the second 30\u201345 day embed returns to implement or test and determine whether the idea survives reality. the final approximately 90 days preserves lessons, teaches, mentors, updates j2, supports course redesign, and helps other teams.\n\ntwo different jag touches per business line per year is a working operating aim, not two permanently assigned teams. rotation creates constructive replication: a later team tests what happened with fresh eyes. teams belong to j2 and cannot become a host leader's private staff.\n\n## surge and board fact-finding\n\na surge is scoped to conditions and evidence. in a crisis, serious failure, adverse finding, board dissent, or consequential uncertainty, jag can establish what is occurring, what people are seeing, what artifacts exist, and which context is missing. before the board, it speaks as fact witness or collector, clearly separating observation, source report, analysis, and uncertainty. it does not arbitrate the dispute or recommend itself into authority.\n\n## willow and closure\n\njag provides a direct route from operating reality to willow technical support where a bounded experiment or build is appropriate. willow does not turn the host into an uncontrolled laboratory; jag does not promise a technical solution before evidence. closure includes host read-back, evidence transfer to contact/judgment, intervention outcome, follow-up ownership, reusable lesson disposition, and education handoff where warranted.\n"
+    },
+    {
+      "id": "SH-J2-EDU-001",
+      "title": "J2 EDUCATION",
+      "category": "J2 doctrine",
+      "owner": "J2 Education",
+      "version": "1.0.0",
+      "status": "LOCKED",
+      "source": "docs/j2/EDUCATION.md",
+      "publication": "docs/j2/publications/SH-J2-EDU-001_v1.0.0.pdf",
+      "source_sha256": "4b9b71d7357bdf564afdaa48daff8190c21f8286bc6782cbcdebc248a1a67e38",
+      "publication_sha256": "7b17a62633d9e8bfbc1766256fd45f07e59bcfdf765643da0c0a247644d6f5d3",
+      "related_doctrines": [
+        "Orientation",
+        "Canon",
+        "EIB",
+        "JAG",
+        "decision quality"
+      ],
+      "cross_references": [
+        "ORIENTATION.md",
+        "../governance/DECISION_QUALITY_AND_AFTER_ACTION_LEARNING.md"
+      ],
+      "search_text": "j2 education docs/j2/education.md # j2 education\n\n**document id:** `sh-j2-edu-001` | **version:** 1.0.0 | **state:** locked\n**owner:** j2 education | **related:** orientation, canon, eib, jag, decision quality | **cross-reference:** `orientation.md`; `../governance/decision_quality_and_after_action_learning.md`\n\neducation is a separate j2 arm tightly coupled to orientation. it owns teaching practice: deep corporate and role education, business-line literacy, learning paths, cases, lessons learned, mandatory compliance education, and the conversion of important learning into usable instruction.\n\nlegal, safety, hr, and compliance may own requirements, subject matter, and required legal content. j2 education owns pedagogy, instructional/delivery design, relevance, engagement, and connection to real work. sexual-harassment, workplace-violence, safety, compliance, assurance, and technical education receive the same standard of excellence; mandatory never means intentionally lifeless.\n\n## educational constitution\n\neducation makes sable harbor legible to its people. institutional literacy includes why the company exists, how its business lines actually operate, where authority sits, how evidence becomes judgment, how physical reality constrains models, and how lessons change institutional behavior. deep learning and mandatory learning belong to one profession because both require respect for the learner and fidelity to reality.\n\neducation converts doctrine and operational learning into instruction without claiming ownership of the underlying law, safety rule, control, technical truth, or business decision. subject-matter owners approve required content. education challenges incoherent, irrelevant, or pedagogically ineffective material and designs delivery, practice, assessment, reinforcement, and refresh.\n\n## learning products\n\nthe arm maintains role pathways, business-line literacy, technical deep dives, cases, field-derived lessons, leadership learning, and mandatory curricula. a case preserves uncertainty and decision context rather than flattening history into a moral with an obvious answer. when lawful, learners encounter the evidence, assumptions, dissent, and consequences that made the situation real.\n\nlearning effectiveness is not completion alone. evidence may include recall, application, changed field behavior, reduced repeated error, better escalation, improved question quality, and learner feedback. education does not manipulate these into vanity metrics.\n\n## relationship to orientation and jag\n\norientation identifies changes in institutional understanding that require education. jag returns field context, reusable practices, failed interventions, and teaching material through human handoff. education may support the final stewardship phase of a jag tour and may send instructors into operating environments to understand the work being taught.\n\nthe exact education staffing model, course platform, and detailed talent architecture remain open. those implementation choices cannot dilute the locked ownership of pedagogy.\n"
+    },
+    {
+      "id": "SH-J2-EIB-001",
+      "title": "ENTERPRISE INTELLIGENCE BRIEF AND EDGE REPORTING STANDARD",
+      "category": "J2 doctrine",
+      "owner": "Orientation",
+      "version": "1.0.0",
+      "status": "LOCKED DIRECTION",
+      "source": "docs/j2/EIB_AND_ENTERPRISE_QUESTIONS.md",
+      "publication": "docs/j2/publications/SH-J2-EIB-001_v1.0.0.pdf",
+      "source_sha256": "df43320eb65800cf8f0d908fc24d862c6f995cbac5273d7d83356c3eff3841be",
+      "publication_sha256": "909c79f5c7df8ea4e943f1e9b26a9daf29fa2b6b0ce465773f78a777e86af7c4",
+      "related_doctrines": [
+        "Canon",
+        "Judgment",
+        "Contact",
+        "Pinakes"
+      ],
+      "cross_references": [
+        "ORIENTATION.md",
+        "alexandria/CANON_INSTITUTIONAL_KNOWLEDGE.md",
+        "alexandria/PINAKES_PORTAL_AND_UX.md"
+      ],
+      "search_text": "enterprise intelligence brief and edge reporting standard docs/j2/eib_and_enterprise_questions.md # enterprise intelligence brief and edge reporting standard\n\n**document id:** `sh-j2-eib-001` | **version:** 1.0.0 | **state:** locked direction\n**owner:** orientation | **related:** canon, judgment, contact, pinakes | **cross-reference:** `orientation.md`; `alexandria/canon_institutional_knowledge.md`; `alexandria/pinakes_portal_and_ux.md`\n\nthe eib is normally approximately two pages, enterprise-visible by default, a navigational front door rather than the house, and discussed rather than read aloud. each category contains no more than five linked items: **what sable harbor currently believes; what changed our mind; what doesn't fit; what we're arguing about; what we wish we knew.** items drill into alexandria; evidence may remain restricted.\n\nsable harbor maintains a short set of important enterprise questions, priority requirements, and plain-language \u201ctell j2 if you see this\u201d triggers. every employee has the right and duty to contribute relevant signal. a submission is evidence, not institutional truth. material signals receive documented disposition\u2014no screaming into a void. the question stays visible whenever lawful even if relevant evidence is restricted.\n\n## form and editorial standard\n\nthe brief normally occupies approximately two pages. each of its five categories contains no more than five items. compression is disciplined selection, not removal of dissent or uncertainty. each item states the point, why it matters now, confidence/state where material, and a route into deeper alexandria material. restricted evidence may remain restricted while the question and properly releasable institutional position remain visible.\n\n**what sable harbor currently believes** contains consequential current beliefs or assumptions, not a corporate-news digest. **what changed our mind** identifies the evidence or judgment that moved understanding and the prior state it superseded. **what doesn't fit** preserves anomalies that resist the current model. **what we're arguing about** presents genuine competing interpretations and serious dissent. **what we wish we knew** exposes the highest-value unknowns and intelligence requirements.\n\norientation owns selection, synthesis, dissent integrity, and publication. the briefer does not read the page aloud or convert it into a conclusion-delivery ritual. the eib starts discussion, invites edge knowledge, and gives employees a navigational front door into institutional reasoning.\n\n## enterprise-wide access and sensing\n\nthe newest aru hire should be able to see the same core questions as senior leadership unless the nature of information requires restriction. that employee may recognize a local observation leadership cannot see and becomes an institutional sensor. submissions travel to contact intake, retain raw signal, and receive a disposition through judgment watch or the relevant problem owner.\n\npriority questions and \u201ctell j2 if you see this\u201d triggers are written in plain language and specify useful observations without encouraging universal surveillance or accusation. a contributor does not become responsible for deciding whether the signal is true or enterprise-significant.\n\nevery issued eib remains in the pinakes eib archive. later correction or changed belief links to, rather than overwrites, the earlier brief so a historical reader can reconstruct the institutional state.\n"
+    },
+    {
+      "id": "SH-J2-ACCESS-001",
+      "title": "INFORMATION ACCESS DOCTRINE",
+      "category": "J2 doctrine",
+      "owner": "Corporate Governance / J2 Headquarters",
+      "version": "1.0.0",
+      "status": "LOCKED",
+      "source": "docs/j2/INFORMATION_ACCESS_DOCTRINE.md",
+      "publication": "docs/j2/publications/SH-J2-ACCESS-001_v1.0.0.pdf",
+      "source_sha256": "f6c3b291cb4528147c733e851890e8fbdbcf1bcedc90581da0a52f5003a8b562",
+      "publication_sha256": "f38e2773c6df0d64739e7b25809c44a8f230bfbfae910b8da0fae5e017a2a5a2",
+      "related_doctrines": [
+        "Immaculate Intelligence",
+        "disclosure"
+      ],
+      "cross_references": [
+        "alexandria/INFORMATION_ACCESS_AND_DISCLOSURE.md",
+        "J2_CHARTER.md"
+      ],
+      "search_text": "information access doctrine docs/j2/information_access_doctrine.md # information access doctrine\n\n**document id:** `sh-j2-access-001` | **version:** 1.0.0 | **state:** locked\n**owner:** corporate governance / j2 headquarters | **related:** immaculate intelligence, disclosure | **cross-reference:** `alexandria/information_access_and_disclosure.md`; `j2_charter.md`\n\n**maximum useful visibility. minimum necessary restriction.** default access is open. restriction is driven by information nature\u2014not rank\u2014including personal information, privilege, active m&a, and narrowly compartmented regulated/federal material.\n\nquestions are common property and propagate wider than answers. where lawful and appropriate, a user may see that relevant material exists but is restricted. restriction creates named ownership, reason, challenge path, review, and duration/reconsideration. a failure to get knowledge to someone who needed it is investigated as an intelligence-system failure, not merely hr/it administration. security and iam implement this doctrine; they do not define it.\n"
+    },
+    {
+      "id": "SH-J2-ALX-001",
+      "title": "ALEXANDRIA CHARTER: TEMPORAL INTEGRITY, PROVENANCE, AND LINEAGE",
+      "category": "Alexandria doctrine",
+      "owner": "Orientation",
+      "version": "1.0.0",
+      "status": "LOCKED DIRECTION",
+      "source": "docs/j2/alexandria/ALEXANDRIA_CHARTER.md",
+      "publication": "docs/j2/publications/SH-J2-ALX-001_v1.0.0.pdf",
+      "source_sha256": "c7c73a82a54f1c499d330e763291ece595390bd0cf439bcfa8fa1c608f4149bf",
+      "publication_sha256": "8f3fb56f947b3641ca2cae44cfaf7b32c95466bcf48372851389ecd81805e233",
+      "related_doctrines": [
+        "temporal integrity",
+        "provenance",
+        "connection",
+        "search"
+      ],
+      "cross_references": [
+        "TEMPORAL_INTEGRITY.md",
+        "PROVENANCE_AND_LINEAGE.md",
+        "INSTITUTIONAL_MEMORY_AND_CONNECTION.md"
+      ],
+      "search_text": "alexandria charter: temporal integrity, provenance, and lineage docs/j2/alexandria/alexandria_charter.md # alexandria charter: temporal integrity, provenance, and lineage\n\n**document id:** `sh-j2-alx-001` | **version:** 1.0.0 | **state:** locked direction\n**owner:** orientation | **related:** temporal integrity, provenance, connection, search | **cross-reference:** `temporal_integrity.md`; `provenance_and_lineage.md`; `institutional_memory_and_connection.md`\n\nalexandria **preserves** what sable harbor believed, when, why, and what changed; **connects** questions, evidence, judgments, decisions, outcomes, finance, business lines, jag, and learning; and **orients** users to what is current, disputed, unresolved, historical, or superseded. machine suggestions never silently become facts.\n\n## time\n\nrecords distinguish where applicable: event time; recorded time; institutional-access time; understood time; and institutional-change time. queries must separately support \u201cwhat did sable harbor actually know on date x?\u201d and \u201cwhat information existed or could reasonably have been known on date x?\u201d later knowledge may explain an earlier state, never silently backfill it. current/active, superseded, disputed, historical, and unresolved states remain human-legible without status-code excess.\n\n## provenance\n\n\u201csource that\u201d traverses canon, eib, judgment, decision, semaphore, or daedalus synthesis toward evidence where access permits. lineage represents supporting, contrary, missing, contested, and considered/rejected evidence. a dead-end chain remains useful history. source-supported statements and ai inference are visibly distinct.\n\n## access and retention boundary\n\ninformation access follows `../information_access_doctrine.md`. raw collection is most heavily gated. restrictions may preserve visible questions/existence notices without disclosure. exact entitlement roles, technology stack, retention/deletion implementation, and spatial/ar form remain open; no \u201cnever delete\u201d promise overrides later law or privacy duties.\n"
+    },
+    {
+      "id": "SH-J2-ALX-MEMORY-001",
+      "title": "ALEXANDRIA INSTITUTIONAL MEMORY AND CONNECTION",
+      "category": "Alexandria doctrine",
+      "owner": "Orientation",
+      "version": "1.0.0",
+      "status": "LOCKED DIRECTION",
+      "source": "docs/j2/alexandria/INSTITUTIONAL_MEMORY_AND_CONNECTION.md",
+      "publication": "docs/j2/publications/SH-J2-ALX-MEMORY-001_v1.0.0.pdf",
+      "source_sha256": "4e1fe3e2a1f18756da4ed530a9f23cb7fb3149aa35a8dee20699bee792d383e4",
+      "publication_sha256": "3f8bb877027e4ec75dbebcf5f0305265981c92b95baf3cb50df7138efd3a7af1",
+      "related_doctrines": [
+        "Canon",
+        "provenance",
+        "temporal integrity",
+        "search"
+      ],
+      "cross_references": [
+        "CANON_INSTITUTIONAL_KNOWLEDGE.md",
+        "PROVENANCE_AND_LINEAGE.md",
+        "TEMPORAL_INTEGRITY.md"
+      ],
+      "search_text": "alexandria institutional memory and connection docs/j2/alexandria/institutional_memory_and_connection.md # alexandria institutional memory and connection\n\n**document id:** `sh-j2-alx-memory-001` | **version:** 1.0.0 | **effective:** september 2, 2026 | **state:** locked direction\n**owner:** orientation | **related:** canon, provenance, temporal integrity, search | **cross-reference:** `canon_institutional_knowledge.md`; `provenance_and_lineage.md`; `temporal_integrity.md`\n\n## constitutional promise\n\nalexandria exists so sable harbor does not lose what it learns. preservation means more than retaining documents. the environment preserves what the institution believed, when, why, with what confidence and dissent, and what later changed. a superseded state remains part of institutional memory rather than an embarrassment to erase.\n\n## connected institutional record\n\nsable harbor's world is not a folder tree. a question can touch a judgment problem, contact requirement, field observation, finance assumption, board decision, jag deployment, business line, incident, lesson, course, canon state, and later outcome. alexandria maintains those relationships so a person can move through the institutional mind rather than guess which department filed the answer.\n\nconnection is explicit and typed where useful: supports, contradicts, qualifies, relies on, supersedes, corrects, prompted, resulted in, observed at, applies to, taught by, and remains unresolved by. relationships preserve author/source, time, confidence, access boundary, and status. the system avoids an ornate ontology whose complexity exceeds human value; connection serves navigation and reasoning.\n\nmachine intelligence may propose a potential relationship, anomaly, or cluster. a suggestion remains synthetic until a human professional accepts it into the appropriate institutional artifact. repeated co-occurrence is not causation, and graph proximity is not institutional belief.\n\n## memory of error\n\nlater evidence can explain why an earlier belief failed, but it cannot silently edit the prior state. contrary evidence, rejected paths, dead ends, and dissent remain traversable when lawful. this protects decision-quality review from hindsight and allows future officers to see whether a failed path was unreasonable, unknowable, or simply unlucky.\n\n## continuity\n\nhuman handovers, officer transfers, leadership succession, acquisitions, and business-line change use alexandria to carry context. a record is not \u201cpreserved\u201d if its links, provenance, access, or contemporary meaning are lost. orientation stewards this continuity; owning functions remain responsible for human authorship and the substance of their records.\n"
+    },
+    {
+      "id": "SH-J2-ALX-SEARCH-001",
+      "title": "ALEXANDRIA SEARCH AND HISTORICAL RECONSTRUCTION",
+      "category": "Alexandria doctrine",
+      "owner": "Orientation / Alexandria stewardship",
+      "version": "1.0.0",
+      "status": "LOCKED DIRECTION",
+      "source": "docs/j2/alexandria/SEARCH_AND_HISTORICAL_RECONSTRUCTION.md",
+      "publication": "docs/j2/publications/SH-J2-ALX-SEARCH-001_v1.0.0.pdf",
+      "source_sha256": "98108fac7ab9ed598c80190fef4f8b61459f28c8a22c0bf3469ed0ff1d9b2b59",
+      "publication_sha256": "6258e3392f307c0963e4f6457eb988756fefc3af06c4b4fcdc68824cc79ad413",
+      "related_doctrines": [
+        "Pinakes",
+        "temporal integrity",
+        "provenance",
+        "Daedalus"
+      ],
+      "cross_references": [
+        "PINAKES_PORTAL_AND_UX.md",
+        "TEMPORAL_INTEGRITY.md",
+        "PROVENANCE_AND_LINEAGE.md"
+      ],
+      "search_text": "alexandria search and historical reconstruction docs/j2/alexandria/search_and_historical_reconstruction.md # alexandria search and historical reconstruction\n\n**document id:** `sh-j2-alx-search-001` | **version:** 1.0.0 | **effective:** september 2, 2026 | **state:** locked direction\n**owner:** orientation / alexandria stewardship | **related:** pinakes, temporal integrity, provenance, daedalus | **cross-reference:** `pinakes_portal_and_ux.md`; `temporal_integrity.md`; `provenance_and_lineage.md`\n\n## search as institutional navigation\n\nalexandria search is built for people who may not know the repository name, owning function, final terminology, or perfect query. a future employee searching `transportation scheduling` should be able to enter years of relevant questions, evidence, traffic, judgments, decisions, outcomes, jag observations, finance assumptions, business-line material, and learning\u2014subject to access.\n\nsearch operates across full text and structured relationships: subject, topic, business line, entity/asset where applicable, related decision, judgment problem, collection requirement, author/origin, time dimensions, current state, supersession/correction, confidence, dissent, and reference thread. results distinguish authoritative records, evidence, and daedalus synthetic material.\n\nrabbit holes are a feature when provenance and orientation remain visible. a user can hold an item, follow references, move backward to sources, move forward to reliance/outcomes, compare periods or businesses, and return to the original question without losing the investigative trail.\n\n## historical reconstruction\n\n\u201ctake me to what we knew on the morning of x\u201d reconstructs the accessible institutional state then: records available, understanding formed, current canon, live judgments and dissent, unresolved gaps, and decisions already made. it excludes later knowledge unless clearly shown as a later explanatory overlay.\n\na separate knowability inquiry identifies information that existed or could reasonably have been accessed at the time even if sable harbor had not found, routed, or understood it. the system never collapses actual knowledge and possible knowledge into one hindsight narrative.\n\n## restricted results\n\nsearch does not become an entitlement bypass. questions and existence notices may travel wider than evidence, but result counts, snippets, relationship graphs, comparisons, and daedalus answers must not leak protected content or enable prohibited inference. the exact retrieval engine and authorization implementation remain open; this doctrine defines acceptance behavior.\n\n## quality\n\nsearch quality is judged by relevant discovery, provenance preservation, temporal correctness, understandable status, and safe disclosure\u2014not clicks, query volume, or the appearance of a single definitive answer.\n"
+    },
+    {
+      "id": "SH-J2-ALX-VIS-001",
+      "title": "ALEXANDRIA VISUALIZATION AND BRANCHING HISTORY",
+      "category": "Alexandria doctrine",
+      "owner": "Orientation / Alexandria stewardship",
+      "version": "1.0.0",
+      "status": "LOCKED DIRECTION",
+      "source": "docs/j2/alexandria/VISUALIZATION_AND_BRANCHING_HISTORY.md",
+      "publication": "docs/j2/publications/SH-J2-ALX-VIS-001_v1.0.0.pdf",
+      "source_sha256": "86c3d5209d096ad0739544a968c19674c27a2df0061b24070f794de045e09fc4",
+      "publication_sha256": "a1de4e1315e69d2ba4b14d30b48fbed03e87993ec2db2c65a0971a47d1f5d9a6",
+      "related_doctrines": [
+        "connection",
+        "provenance",
+        "temporal integrity",
+        "Daedalus"
+      ],
+      "cross_references": [
+        "INSTITUTIONAL_MEMORY_AND_CONNECTION.md",
+        "PROVENANCE_AND_LINEAGE.md",
+        "DAEDALUS_PERSONAL_INSTANCE_AND_WORKSPACE.md"
+      ],
+      "search_text": "alexandria visualization and branching history docs/j2/alexandria/visualization_and_branching_history.md # alexandria visualization and branching history\n\n**document id:** `sh-j2-alx-vis-001` | **version:** 1.0.0 | **effective:** september 2, 2026 | **state:** locked direction\n**owner:** orientation / alexandria stewardship | **related:** connection, provenance, temporal integrity, daedalus | **cross-reference:** `institutional_memory_and_connection.md`; `provenance_and_lineage.md`; `daedalus_personal_instance_and_workspace.md`\n\nvisualization helps a person reason about institutional time and connection; it is not decorative dashboarding. alexandria and daedalus may present timelines, branching histories, connection maps, evidence lineage, assumption dependence, cross-business comparison, and git-like branches of institutional understanding.\n\na timeline distinguishes event, record, access, understanding, and institutional-change times where material. a branch view shows competing interpretations, the evidence each relied upon, dissent, merge or supersession, and what remained unresolved. a lineage view moves from institutional statement toward sources and from an assumption toward later decisions and outcomes.\n\nvisual prominence does not create authority. node size, color, proximity, centrality, or machine-suggested connection must not imply truth, consensus, causation, importance, or access that the underlying record does not support. every visual element remains traceable to its source/state, and restricted relationships cannot be exposed through shape or absence.\n\ndaedalus can assemble persistent user-side investigative visuals. they are marked synthetic and non-authoritative, remain outside alexandria, and cannot promote themselves into canon, semaphore, judgment, or eib. a human may independently author an institutional visual under the applicable process.\n\nspatial or augmented-reality interaction is a future capability direction, not a v0.1 dependency. the constitutional requirement is faithful, navigable representation of time, provenance, disagreement, and connection regardless of interface technology.\n"
+    },
+    {
+      "id": "SH-J2-ALX-TIME-001",
+      "title": "ALEXANDRIA TEMPORAL INTEGRITY",
+      "category": "Alexandria doctrine",
+      "owner": "Orientation / Alexandria stewardship",
+      "version": "1.0.0",
+      "status": "LOCKED",
+      "source": "docs/j2/alexandria/TEMPORAL_INTEGRITY.md",
+      "publication": "docs/j2/publications/SH-J2-ALX-TIME-001_v1.0.0.pdf",
+      "source_sha256": "e2cdc51b055e07f3161794b9a8fcd904809a610bd1d87d33952cfe5ed5dea0b0",
+      "publication_sha256": "214f7dee65a9d476b23a1aa9afbefc618f7a65cdf59c9be86b9aac82d9d90c74",
+      "related_doctrines": [
+        "Canon",
+        "Semaphore",
+        "provenance",
+        "historical reconstruction"
+      ],
+      "cross_references": [
+        "CANON_INSTITUTIONAL_KNOWLEDGE.md",
+        "SEARCH_AND_HISTORICAL_RECONSTRUCTION.md"
+      ],
+      "search_text": "alexandria temporal integrity docs/j2/alexandria/temporal_integrity.md # alexandria temporal integrity\n\n**document id:** `sh-j2-alx-time-001` | **version:** 1.0.0 | **effective:** september 2, 2026 | **state:** locked\n**owner:** orientation / alexandria stewardship | **related:** canon, semaphore, provenance, historical reconstruction | **cross-reference:** `canon_institutional_knowledge.md`; `search_and_historical_reconstruction.md`\n\ntime is a first-class property, not one timestamp. where applicable alexandria distinguishes when an event happened, when it was recorded, when sable harbor could access it, when a person or function understood it, and when it changed institutional understanding.\n\nthese dimensions answer different questions. event time reconstructs reality; recorded time shows the contemporary artifact; access time constrains what the institution could use; understood time shows when meaning formed; institutional-change time identifies when canon, eib, a judgment, decision, model, or question actually moved.\n\nthe environment must support both:\n\n- **what did sable harbor actually know on date x?** this uses institutional records, access, understanding, confidence, and dissent as they stood then.\n- **what information existed or could reasonably have been known on date x?** this may include evidence then available but not yet found, routed, understood, or incorporated.\n\nthose answers must not be conflated to reward or blame with hindsight. later knowledge may annotate and explain an earlier record, create a correction, or supersede a state. it may never silently revise the earlier state as though sable harbor always knew. the institution remembers being wrong faithfully.\n\ncurrent/active, disputed, unresolved, historical, corrected, and superseded states must be navigable. a state transition preserves predecessor, effective/change time, human author, reason, evidence, dissent, and downstream relationships. legal/privacy deletion requirements may later remove content, but the architecture does not promise unlawful \u201cnever delete\u201d; retention implementation remains open.\n"
+    },
+    {
+      "id": "SH-J2-ALX-PROV-001",
+      "title": "ALEXANDRIA PROVENANCE AND LINEAGE",
+      "category": "Alexandria doctrine",
+      "owner": "Orientation / Alexandria stewardship",
+      "version": "1.0.0",
+      "status": "LOCKED DIRECTION",
+      "source": "docs/j2/alexandria/PROVENANCE_AND_LINEAGE.md",
+      "publication": "docs/j2/publications/SH-J2-ALX-PROV-001_v1.0.0.pdf",
+      "source_sha256": "53365ff93b6124ac5a952b1789600f2d02bf5f26914d9b065c02c28479bd7f0d",
+      "publication_sha256": "274d71a666f2f7b0f340bfc9eba6b8c9e5985bab48a88075ae0b324084413a13",
+      "related_doctrines": [
+        "temporal integrity",
+        "connection",
+        "search",
+        "Daedalus"
+      ],
+      "cross_references": [
+        "TEMPORAL_INTEGRITY.md",
+        "INSTITUTIONAL_MEMORY_AND_CONNECTION.md",
+        "SEARCH_AND_HISTORICAL_RECONSTRUCTION.md"
+      ],
+      "search_text": "alexandria provenance and lineage docs/j2/alexandria/provenance_and_lineage.md # alexandria provenance and lineage\n\n**document id:** `sh-j2-alx-prov-001` | **version:** 1.0.0 | **effective:** september 2, 2026 | **state:** locked direction\n**owner:** orientation / alexandria stewardship | **related:** temporal integrity, connection, search, daedalus | **cross-reference:** `temporal_integrity.md`; `institutional_memory_and_connection.md`; `search_and_historical_reconstruction.md`\n\nnothing important should require blind trust. \u201csource that\u201d must work from canon, eib, judgment, decision, semaphore traffic, or daedalus synthesis toward underlying evidence wherever the user's access permits.\n\nlineage preserves the originating artifact or observation; collector and method; relevant event/record/access times; transformations; citations and references; author and accountable judgment owner; confidence and assumptions; supporting, contrary, missing, contested, and considered/rejected evidence; corrections; supersession; and downstream reliance.\n\nprovenance is not a single \u201csource url.\u201d it makes clear what a source is authoritative for and where authority ends. a finance ledger may establish what was booked without proving physical occurrence; a field observation may establish local conditions without proving enterprise prevalence; an expert may provide a hypothesis without institutional authority.\n\ndead ends remain useful. an abandoned hypothesis, rejected source, or superseded chain stays historically navigable when lawful because it explains why sable harbor once believed something and prevents repeated unproductive work.\n\nmachine intelligence may suggest relationships, anomalies, or likely lineage. a human must decide whether those connections enter an institutional record. daedalus visibly distinguishes source-supported statements, direct quotations/retrieval, transformations, and daedalus inference. where a user cannot access evidence, the system may reveal the existence and relevance of restricted material only when disclosure policy allows; provenance must not become a side channel.\n\nforward trace answers what later relied on an assumption, judgment, or decision. backward trace reconstructs the evidence and reasoning supporting it. branch views show competing interpretations and supersession without flattening disagreement into one folder or one \u201clatest\u201d file.\n"
+    },
+    {
+      "id": "SH-J2-ALX-DISCLOSE-001",
+      "title": "ALEXANDRIA INFORMATION ACCESS AND DISCLOSURE",
+      "category": "Alexandria doctrine",
+      "owner": "Orientation / Information Governance",
+      "version": "1.0.0",
+      "status": "LOCKED ARCHITECTURAL DIRECTION",
+      "source": "docs/j2/alexandria/INFORMATION_ACCESS_AND_DISCLOSURE.md",
+      "publication": "docs/j2/publications/SH-J2-ALX-DISCLOSE-001_v1.0.0.pdf",
+      "source_sha256": "d286201998a94058c9c1c16165537a9e612b6bd84cb29442d052f68da869c752",
+      "publication_sha256": "f1df419bebb5d2b633074f5eda130d2933b28ddf43302b6080abd03accb97f3e",
+      "related_doctrines": [
+        "information access",
+        "Pinakes",
+        "Collection",
+        "Daedalus"
+      ],
+      "cross_references": [
+        "../INFORMATION_ACCESS_DOCTRINE.md",
+        "PINAKES_PORTAL_AND_UX.md",
+        "DAEDALUS_OPERATING_DOCTRINE.md"
+      ],
+      "search_text": "alexandria information access and disclosure docs/j2/alexandria/information_access_and_disclosure.md # alexandria information access and disclosure\n\n**document id:** `sh-j2-alx-disclose-001` | **version:** 1.0.0 | **effective:** september 2, 2026 | **state:** locked architectural direction\n**owner:** orientation / information governance | **related:** information access, pinakes, collection, daedalus | **cross-reference:** `../information_access_doctrine.md`; `pinakes_portal_and_ux.md`; `daedalus_operating_doctrine.md`\n\nalexandria implements sable harbor's doctrine of maximum useful visibility and minimum necessary restriction. the default is open. restriction follows the nature of information\u2014not rank\u2014and may include personal information, legal privilege, active m&a, narrowly compartmented regulated/federal material, and other genuinely protected classes.\n\nquestions are common property. the question remains visible whenever lawful even if evidence or an answer is restricted. questions propagate wider than answers. where appropriate, a user may see \u201crelevant material exists but is restricted\u201d without receiving content, identity, quantity, or inference that defeats the restriction.\n\nrestriction creates work: named owner, reason/class, scope, review/challenge route, start/effective time, reconsideration trigger or duration, and lawful disposition. security and iam implement these decisions; they do not redefine the information doctrine as generic least privilege.\n\ncollection is pinakes' most heavily provisioned portal because raw material may expose personal, privileged, regulated, commercially sensitive, or source-protection concerns. other portals separate broad visibility of questions/current judgments from entitlement to underlying evidence.\n\ndaedalus has universal institutional read authority and bounded disclosure authority. it can know restricted material exists and is relevant but cannot quote, summarize, confirm, deny, aggregate, compare, visualize, or infer restricted content for an unauthorized user. the policy layer evaluates direct and inferential disclosure in the requesting user's context. model/tool access never substitutes for user entitlement.\n\nexact runtime roles, policy engine, redaction mechanism, audit events, inference-leakage tests, and raw collection entitlements remain open implementation. the architecture must demonstrate them before claiming operational enforcement. an access failure that prevented knowledge from reaching an entitled person is studied as an intelligence-system failure, not merely an it ticket.\n"
+    },
+    {
+      "id": "SH-J2-ALX-AI-001",
+      "title": "AI AUTHORITY AND HUMAN AUTHORSHIP",
+      "category": "Alexandria doctrine",
+      "owner": "J2 Headquarters / Orientation",
+      "version": "1.0.0",
+      "status": "LOCKED",
+      "source": "docs/j2/alexandria/AI_AUTHORITY_AND_HUMAN_AUTHORSHIP.md",
+      "publication": "docs/j2/publications/SH-J2-ALX-AI-001_v1.0.0.pdf",
+      "source_sha256": "b2490e603378757104b7cc783d9fd6f5e651c799b9d974cb2c6549eaeadf6125",
+      "publication_sha256": "45291705430c738716d240a436e235f67e95156a75486292b1dac8a7709ef35e",
+      "related_doctrines": [
+        "Daedalus",
+        "Canon",
+        "Semaphore",
+        "Judgment",
+        "EIB"
+      ],
+      "cross_references": [
+        "DAEDALUS_OPERATING_DOCTRINE.md",
+        "CANON_INSTITUTIONAL_KNOWLEDGE.md",
+        "SEMAPHORE_TRAFFIC_SYSTEM.md"
+      ],
+      "search_text": "ai authority and human authorship docs/j2/alexandria/ai_authority_and_human_authorship.md # ai authority and human authorship\n\n**document id:** `sh-j2-alx-ai-001` | **version:** 1.0.0 | **effective:** september 2, 2026 | **state:** locked\n**owner:** j2 headquarters / orientation | **related:** daedalus, canon, semaphore, judgment, eib | **cross-reference:** `daedalus_operating_doctrine.md`; `canon_institutional_knowledge.md`; `semaphore_traffic_system.md`\n\nsable harbor wants useful, intellectually aggressive ai. the boundary is institutional authority, not thought. daedalus may form opinions, challenge a user, speculate with a label, propose hypotheses, synthesize evidence, and recommend investigative directions. it may say, \u201ci think you're wrong, and here is why.\u201d\n\nthree boundaries are absolute:\n\n1. **no authoritative record write.** daedalus has no write path into authoritative alexandria material.\n2. **no self-promotion.** daedalus output cannot automatically become canon, judgment, semaphore, eib, or institutional position.\n3. **no institutional authority.** daedalus cannot state \u201csable harbor judges x\u201d unless accurately quoting a human-authored institutional record.\n\njudgment officers author institutional judgments. orientation officers author semaphore traffic and material canon changes. orientation owns eib publication. ai may aid their research, compare sources, test hypotheses, or prepare private synthetic work, but sable harbor does not create a hidden conveyor in which a human merely approves an ai draft and thereby makes the ai functional author.\n\nindependent human authorship requires that the responsible professional understands the question, examines relevant evidence and limitations, makes the judgment, chooses language/confidence, owns dissent treatment, and issues the artifact under their authority. tool assistance is provenance-relevant where material, but the institution records responsibility rather than every private influence chain.\n\ndaedalus synthetic reports, timelines, maps, comparisons, notes, and working syntheses may persist in the user's own workspace. they remain outside alexandria, visibly marked `daedalus-generated / non-authoritative`, and have no automatic promotion path. a human may use them to support genuinely human-authored work.\n"
+    },
+    {
+      "id": "SH-J2-DAEDALUS-PERSONAL-001",
+      "title": "DAEDALUS PERSONAL INSTANCE AND INVESTIGATIVE WORKSPACE",
+      "category": "Alexandria doctrine",
+      "owner": "J2 Headquarters / Daedalus doctrine",
+      "version": "1.0.0",
+      "status": "LOCKED ARCHITECTURAL DIRECTION",
+      "source": "docs/j2/alexandria/DAEDALUS_PERSONAL_INSTANCE_AND_WORKSPACE.md",
+      "publication": "docs/j2/publications/SH-J2-DAEDALUS-PERSONAL-001_v1.0.0.pdf",
+      "source_sha256": "36e520d51263bf4204382caf49b65b378df18740072e5c8c0e532834d0dd791c",
+      "publication_sha256": "d5e9f1ce9b97f2d167266dbaf888aad8c0bfdb9e6576b4e69e7c5cda1d446e2e",
+      "related_doctrines": [
+        "AI authorship",
+        "access/disclosure",
+        "search",
+        "visualization"
+      ],
+      "cross_references": [
+        "DAEDALUS_OPERATING_DOCTRINE.md",
+        "INFORMATION_ACCESS_AND_DISCLOSURE.md",
+        "VISUALIZATION_AND_BRANCHING_HISTORY.md"
+      ],
+      "search_text": "daedalus personal instance and investigative workspace docs/j2/alexandria/daedalus_personal_instance_and_workspace.md # daedalus personal instance and investigative workspace\n\n**document id:** `sh-j2-daedalus-personal-001` | **version:** 1.0.0 | **effective:** september 2, 2026 | **state:** locked architectural direction\n**owner:** j2 headquarters / daedalus doctrine | **related:** ai authorship, access/disclosure, search, visualization | **cross-reference:** `daedalus_operating_doctrine.md`; `information_access_and_disclosure.md`; `visualization_and_branching_history.md`\n\neach user receives credentials, an individual daedalus instance/context, and persistent segregated memory. years of lawful use should create an exceptionally refined assistant for that person without cross-pollinating conversations, working sets, copied material, private synthesis, or user-specific memory.\n\nsystem, model, and skill updates may change behavior globally. they do not merge user memory or content. users may deliberately share content-free techniques, settings patterns, prompt/behavior practices, markdown skill files, and workflow templates. a shareable package may not include private memory, copied alexandria extracts, user conversations, or derived content. the principle is **share practice without bypassing discovery**.\n\n## investigative verbs\n\n- **hold:** maintain a user-controlled working set, such as \u201chold this cable.\u201d\n- **pull:** retrieve potentially relevant material across entitled alexandria space when the perfect query is unknown.\n- **trace/lineage:** move backward to evidence or forward to later reliance.\n- **historical reconstruction:** return to the institution's actual state of knowledge on a specified date without silent hindsight.\n- **challenge:** try to disprove a position by surfacing contradiction, dissent, strange assumptions, and overlooked evidence.\n- **explore:** identify anomalies and weak/unexpected connections without pretending they are conclusions.\n- **compare:** compare periods, business lines, judgments, decisions, assumptions, and branches.\n- **visualize:** build timelines, branching histories, connection maps, evidence lineage, and git-like branches of institutional understanding.\n\nspatial/ar visualization may emerge later but is not required for v0.1. the workspace may persist user-selected synthetic artifacts, all marked non-authoritative and outside alexandria. user export preserves marking, provenance references, and access restrictions. there is no automatic import or promotion back to the authoritative environment.\n\nuniversal read/bounded disclosure applies throughout. a working set cannot be used to launder restricted content into a less restricted artifact, compare unauthorized populations, or infer protected facts.\n"
+    },
+    {
+      "id": "SH-J2-PINAKES-001",
+      "title": "PINAKES PORTAL AND HUMAN UX",
+      "category": "Alexandria doctrine",
+      "owner": "Orientation / Alexandria stewardship",
+      "version": "1.0.0",
+      "status": "LOCKED DIRECTION",
+      "source": "docs/j2/alexandria/PINAKES_PORTAL_AND_UX.md",
+      "publication": "docs/j2/publications/SH-J2-PINAKES-001_v1.0.0.pdf",
+      "source_sha256": "79956ce8754a0076202387ae00ea91b38aeecaddea085e4f6b35d9ece416bf19",
+      "publication_sha256": "efb26c77885236b3971a40925506dd6749fde9ac9d3143458ee7d770084b752e",
+      "related_doctrines": [
+        "all Alexandria portals",
+        "search",
+        "Daedalus"
+      ],
+      "cross_references": [
+        "SEARCH_AND_HISTORICAL_RECONSTRUCTION.md",
+        "DAEDALUS_PERSONAL_INSTANCE_AND_WORKSPACE.md",
+        "../structured/pinakes_portals.json"
+      ],
+      "search_text": "pinakes portal and human ux docs/j2/alexandria/pinakes_portal_and_ux.md # pinakes portal and human ux\n\n**document id:** `sh-j2-pinakes-001` | **version:** 1.0.0 | **state:** locked direction\n**owner:** orientation / alexandria stewardship | **related:** all alexandria portals, search, daedalus | **cross-reference:** `search_and_historical_reconstruction.md`; `daedalus_personal_instance_and_workspace.md`; `../structured/pinakes_portals.json`\n\npinakes\u2014named for callimachus's catalog of alexandria\u2014is the **human-facing catalog and portal**, not primarily an invisible ontology. the earlier pharos main-portal concept is superseded.\n\nthe nine doors are: **eib archive** (every issued brief across time); **finance** (authorized finance/analysis); **judgment** (live/closed problems and judgments); **jag knowledge** (deployments, interventions, follow-up and reusable lessons); **semaphore** (traffic corpus); **canon** (current and historical institutional understanding); **business lines** (foundry/field, willow, atlas meridian, pale sun/red wash, cradle, aru/bs&t, advisory, emberline history, and canon-supported lines without implying entities); **collection** (authorized underlying contact material); and **education** (mandatory/deep learning, literacy, cases, pathways).\n\n## employee journey\n\nan employee opens current or historical eib, follows an item into its portal, and\u2014where authorized\u2014can source it, trace backward/forward, see correction/supersession, related judgments/decisions, timelines, branches, and point-in-time comparisons. search spans full text, topics, time, business line, status, decisions, problems, and references. rabbit holes are a feature.\n\ndaedalus accompanies the user across doors and maintains a user-side working set. it can hold, pull, trace, reconstruct, challenge, compare, explore, and visualize without touching authoritative sources. restricted detail is never disclosed through synthesis or inference.\n\nthe machine registry is `../structured/pinakes_portals.json`; it supports this human experience and is not a premature ontology.\n\n## catalog, not dashboard\n\npinakes answers: where can i enter the institutional record, what kind of material is there, who stewards it, what may i see, and how can i follow it? it does not reduce the company to executive metrics, arrange information by prestige, or pretend that nine tiles are the institution itself. it is the catalog and threshold of alexandria.\n\nthe nine doors exist because they are the actual institutional environments sable harbor designed\u2014not because nine is an ontology requirement. adding, removing, or renaming a door therefore requires an institutional decision and registry change, not a ui preference.\n\n## the nine doors\n\n**eib archive** preserves every issued brief with its contemporary links and later supersession. **finance** enters finance records and analytical environments under appropriate controls. **judgment** exposes live and closed problems, judgments, dissent, and appropriate work context. **jag knowledge** carries deployments, interventions, follow-up, field lessons, and reusable practices.\n\n**semaphore** enters durable traffic and its threads. **canon** enters current best institutional understanding and its history. **business lines** enters foundry/foundry field, willow, atlas meridian, pale sun/red wash, cradle, aru/bs&t, advisory, emberline history, and other supported operating worlds without implying separate legal entities. **collection** enters entitled raw/source material and is most heavily gated. **education** enters required and deep learning, business literacy, cases, and pathways.\n\n## continuity of experience\n\nfrom every item, authorized users can source it, trace backward and forward, see correction/supersession, inspect related judgments/decisions, compare time, and open relevant business or learning context. navigation keeps the user aware of authoritative state, historical point, restrictions, and whether material is institutional or daedalus-generated.\n\ndaedalus accompanies rather than occupies a door. its working set can cross portals within disclosure authority, but it cannot alter portal records or become a tenth system. the authoritative item remains untouched while the user explores.\n\n## employee acceptance standard\n\na new employee who knows only a plain-language concern must be able to enter pinakes, discover the current enterprise questions, locate relevant institutional records, recognize access limits, follow provenance, view the controlled publication, and identify the human owner. if specialist repository knowledge is required, pinakes has failed its human purpose.\n"
+    },
+    {
+      "id": "SH-J2-SEMAPHORE-001",
+      "title": "SEMAPHORE TRAFFIC SYSTEM",
+      "category": "Alexandria doctrine",
+      "owner": "Orientation",
+      "version": "1.0.0",
+      "status": "LOCKED DIRECTION",
+      "source": "docs/j2/alexandria/SEMAPHORE_TRAFFIC_SYSTEM.md",
+      "publication": "docs/j2/publications/SH-J2-SEMAPHORE-001_v1.0.0.pdf",
+      "source_sha256": "176c38e5b3c4863467699bc99285d097bef9047ce091c40e39ca5b52686d2e42",
+      "publication_sha256": "99c9511cd4298bb37438436dd9a2aadc59fd534715b6458730f9e46326ef8604",
+      "related_doctrines": [
+        "Canon",
+        "Judgment",
+        "EIB",
+        "provenance",
+        "temporal integrity"
+      ],
+      "cross_references": [
+        "PROVENANCE_AND_LINEAGE.md",
+        "TEMPORAL_INTEGRITY.md",
+        "AI_AUTHORITY_AND_HUMAN_AUTHORSHIP.md"
+      ],
+      "search_text": "semaphore traffic system docs/j2/alexandria/semaphore_traffic_system.md # semaphore traffic system\n\n**document id:** `sh-j2-semaphore-001` | **version:** 1.0.0 | **state:** locked direction\n**owner:** orientation | **related:** canon, judgment, eib, provenance, temporal integrity | **cross-reference:** `provenance_and_lineage.md`; `temporal_integrity.md`; `ai_authority_and_human_authorship.md`\n\nsemaphore is the cable-like longitudinal intelligence/decision traffic medium: durable, searchable, threaded, referential, supersession-aware, historically navigable, and human-authored. it is not slack with formal typography and not a one-page cap on major decisions.\n\ntraffic retains durable id, human originator, issue/event time, subject stating why it matters, concise point-first opening, references/thread, distribution/access, business line/topics, related decisions/problems, corrections/supersession, and priority where useful. routine/priority/immediate/flash remain provisional labels. orientation officers exercise professional judgment over what merits traffic; policy does not enumerate every allowed subject.\n\nthe record captures decisions, relied-upon judgments, alternatives, assumptions, unknowns, dissent, evidence references, predictions, triggers, later changes, and supersession\u2014not every hallway conversation, private thought, or interpersonal influence chain. retention follows future legal/privacy rules while preserving provenance wherever lawful.\n\nai may assist research; only a human orientation officer writes/issues institutional traffic. daedalus cannot author, issue, or promote a cable.\n\n## institutional purpose\n\nsemaphore carries the institution's evolving understanding across time and organizational distance. it is not chat, email, a ticket queue, a document repository, or a one-page decision memo. a cable can report a change, anomaly, field condition, consequential interpretation, correction, dissent, decision context, or other matter that an orientation officer judges worthy of durable institutional traffic. the medium remains broad because professional judgment\u2014not an eligibility checklist\u2014determines what deserves a cable.\n\n## cable construction\n\nthe subject tells a reader why the traffic matters rather than merely naming a project. the opening states the point concisely. the body preserves enough context, evidence references, assumptions, confidence, alternatives, unknowns, and dissent for a future reader to understand the issue without pretending one cable is the entire record.\n\na durable cable id never changes. origin identifies the human issuing office/officer. event, issue, and record times remain distinguishable. distribution reflects information nature and need, not prestige. references create explicit threads across earlier/later cables, judgment problems, decisions, canon states, eib items, jag deployments, finance assumptions, and source material.\n\npossible routine, priority, immediate, and flash precedence language remains provisional. precedence, if adopted, communicates handling urgency rather than truth, importance forever, or author rank.\n\n## threading, correction, and supersession\n\na reply or follow-on references the earlier cable while remaining its own record. a correction states what was wrong, what changes, why, and which downstream readers or artifacts may be affected. supersession identifies the new controlling traffic without making the prior cable disappear. a cable may remain historically significant even when its conclusion is wrong.\n\nthread navigation supports chronological reading, branch/alternative interpretation, forward reliance, backward sourcing, and related-topic traversal. traffic concerning `transportation scheduling`, for example, remains discoverable across years even when authors used different project names.\n\n## authorship and accountability\n\nthe orientation officer exercises judgment about issue, framing, distribution, and record state and is accountable for the issued traffic. ai can retrieve, compare, challenge, and support research, but an officer must independently understand and author the cable. there is no \u201capprove generated draft\u201d process that makes daedalus the hidden institutional author.\n\nsemaphore records the institutional mind\u2014not a forensic influence map. it preserves relied-upon judgments, assumptions, dissent, alternatives, predictions, and change. it does not attempt to capture every conversation or assign later blame for private interpersonal influence.\n"
+    },
+    {
+      "id": "SH-J2-CANON-001",
+      "title": "CANON \u2014 INSTITUTIONAL KNOWLEDGE CORPUS",
+      "category": "Alexandria doctrine",
+      "owner": "Orientation",
+      "version": "1.0.0",
+      "status": "LOCKED",
+      "source": "docs/j2/alexandria/CANON_INSTITUTIONAL_KNOWLEDGE.md",
+      "publication": "docs/j2/publications/SH-J2-CANON-001_v1.0.0.pdf",
+      "source_sha256": "9f6da032c4143f482f76530b0381abe16d88399f99a958ef0e19e0ed870c5c38",
+      "publication_sha256": "06a3ea39877f8927f6db24a55579d53ca0bcd60415659e74e4d5e1258c1dacb7",
+      "related_doctrines": [
+        "Judgment",
+        "EIB",
+        "Semaphore",
+        "temporal integrity",
+        "provenance"
+      ],
+      "cross_references": [
+        "TEMPORAL_INTEGRITY.md",
+        "PROVENANCE_AND_LINEAGE.md",
+        "AI_AUTHORITY_AND_HUMAN_AUTHORSHIP.md"
+      ],
+      "search_text": "canon \u2014 institutional knowledge corpus docs/j2/alexandria/canon_institutional_knowledge.md # canon \u2014 institutional knowledge corpus\n\n**document id:** `sh-j2-canon-001` | **version:** 1.0.0 | **state:** locked\n**owner:** orientation | **related:** judgment, eib, semaphore, temporal integrity, provenance | **cross-reference:** `temporal_integrity.md`; `provenance_and_lineage.md`; `ai_authority_and_human_authorship.md`\n\ncanon means: **what sable harbor can responsibly say it knows at this point in time.** it is living, versioned current best understanding, not eternal certainty; uncertainty can itself be canonical. orientation owns canon and judgment supplies much of its analytical basis.\n\nfor a material change, one orientation officer authors the proposed institutional change and a second reviews/stress-tests it. if material disagreement cannot be resolved, the head/director of orientation breaks the deadlock. there is no standing canon committee. every superseded state remains accessible with time, evidence, dissent, and change reason.\n\n## \u201cwe know this now\u201d\n\ncanon gives sable harbor an explicit present-tense institutional read. it prevents the company from hiding behind permanent ambiguity while also refusing false certainty. a canonical statement may say that evidence is incomplete, confidence is bounded, interpretations remain disputed, or an important question is unresolved. those are institutional knowledge states, not editorial failures.\n\ncanon distinguishes observation, evidence, warranted judgment, adopted institutional understanding, assumption, and unknown. it does not transform an authoritative source for one purpose into universal physical truth. a ledger may canonically establish what was recorded; it may not establish what physically occurred without additional evidence.\n\n## entry and material change\n\njudgment commonly supplies analytical basis, but a judgment does not automatically become canon. the originating orientation officer states the proposed knowledge change, prior state, evidence and provenance, confidence, material dissent, scope, effective time, and downstream consequences. a second officer independently stress-tests it. the head resolves a material editorial deadlock without becoming a czar of truth.\n\nmateriality depends on whether the change could alter important enterprise questions, decisions, finance assumptions, operating models, risk envelopes, education, or interpretation of prior events\u2014not word count or executive interest.\n\n## supersession and intellectual history\n\na new state links to the one it supersedes. the former state remains accessible with the evidence and reasoning then available. later explanation is layered as later knowledge. canon never silently backfills history or deletes a dissent because one view eventually prevailed.\n\ndownstream owners receive notice or discoverable linkage when a material canon change affects an eib item, decision, model, control, course, or live judgment problem. orientation owns the institutional knowledge state; accountable operating functions still own their decisions and execution.\n\n## negative authority\n\ncanon is not a command, vote, legal conclusion beyond its sources, or substitute for operating accountability. daedalus cannot write or promote itself into canon. no committee votes truth into existence, and no executive can make evidence settled merely by repeating it.\n"
+    },
+    {
+      "id": "SH-J2-DAEDALUS-001",
+      "title": "DAEDALUS OPERATING DOCTRINE AND AI AUTHORITY BOUNDARIES",
+      "category": "Alexandria doctrine",
+      "owner": "J2 Headquarters / Daedalus doctrine",
+      "version": "1.0.0",
+      "status": "LOCKED ARCHITECTURAL DIRECTION",
+      "source": "docs/j2/alexandria/DAEDALUS_OPERATING_DOCTRINE.md",
+      "publication": "docs/j2/publications/SH-J2-DAEDALUS-001_v1.0.0.pdf",
+      "source_sha256": "7c3a1e30b3aa0dd0f5993557d16cd6170e6df5fde080f98482f3216e7240dd3e",
+      "publication_sha256": "a0f3ed0f45ef69d7a4d1b1140007f9d3068dfaacbedc36b0a874c49faaed1f69",
+      "related_doctrines": [
+        "human authorship",
+        "disclosure",
+        "personal workspace"
+      ],
+      "cross_references": [
+        "AI_AUTHORITY_AND_HUMAN_AUTHORSHIP.md",
+        "DAEDALUS_PERSONAL_INSTANCE_AND_WORKSPACE.md"
+      ],
+      "search_text": "daedalus operating doctrine and ai authority boundaries docs/j2/alexandria/daedalus_operating_doctrine.md # daedalus operating doctrine and ai authority boundaries\n\n**document id:** `sh-j2-daedalus-001` | **version:** 1.0.0 | **state:** locked architectural direction\n**owner:** j2 headquarters / daedalus doctrine | **related:** human authorship, disclosure, personal workspace | **cross-reference:** `ai_authority_and_human_authorship.md`; `daedalus_personal_instance_and_workspace.md`\n\ndaedalus is the personally provisioned ai agent around alexandria\u2014not alexandria and not pinakes door ten. it may traverse, retrieve/pull, hold, compare, trace/lineage, historically reconstruct, visualize, synthesize, challenge, explore, converse, form labeled opinions, and recommend investigation. it may say, \u201ci think you're wrong, and here is why.\u201d its rule is **intellectual aggression without institutional authority**.\n\n## hard boundaries\n\n1. **no authoritative write.** no write path into alexandria's institutional record.\n2. **no self-promotion.** a synthesis/opinion never automatically becomes canon, judgment, semaphore, eib, or institutional position.\n3. **no institutional authority.** it cannot say sable harbor judges something unless quoting an actual human-authored record.\n\njudgment officers author judgments; orientation officers author semaphore and canon changes; orientation owns eib publication. there is no hidden approve-an-ai-draft conveyor. daedalus synthetic reports, timelines, comparisons, visualizations, and research notes may persist in a user's workspace but remain clearly marked synthetic, non-authoritative, and outside alexandria; a human may independently use them in authored work.\n\neach user has credentials, individual context, and segregated persistent memory. no cross-user conversation, working-set, copied-material, synthesis, or memory access. global system/model/skill updates may change behavior without merging content. users may deliberately share content-free techniques, skills, settings, markdown skill files, and workflow templates\u2014never private memory or alexandria extracts. user export preserves synthetic marking and access constraints.\n\n## universal read; bounded disclosure\n\ndaedalus may read the full alexandria environment so it can identify relevance, including that restricted material exists. disclosure is evaluated for the requesting user and context. restricted content and disallowed inferences cannot leak merely because the model read them. the runtime policy layer, entitlement implementation, inference-leakage tests, logging, and redaction controls are acceptance requirements; this v0.1 doctrine does not claim a runtime exists.\n\nthe testable policy manifest is `../structured/daedalus_policy.json`.\n"
+    },
+    {
+      "id": "SH-INT-AUDIT-P2-001",
+      "title": "SABLE HARBOR \u2014 PHASE 2 COVERAGE AUDIT",
+      "category": "institutional assurance",
+      "owner": "Corporate Governance / J2 Headquarters",
+      "version": "1.0.0",
+      "status": "HISTORICAL CONTROLLED RECORD",
+      "source": "docs/internal/COVERAGE_AUDIT_PHASE2.md",
+      "publication": "docs/internal/COVERAGE_AUDIT_PHASE2.pdf",
+      "source_sha256": "a0e76ab697e6dd3312abcc9b010644de082ec328d57a2f73d26d0cf5010e3a29",
+      "publication_sha256": "4e1ab9f1c6deaf577cb8cbe0abaf08d0b22f0cf18c8384b2ffdbe768fae68cba",
+      "related_doctrines": [
+        "governance",
+        "J2",
+        "Alexandria"
+      ],
+      "cross_references": [
+        "../CONTROLLED_DOCUMENT_INDEX.md",
+        "INSTITUTIONAL_CATALOG_QUERY_GUIDE.md"
+      ],
+      "search_text": "sable harbor \u2014 phase 2 coverage audit docs/internal/coverage_audit_phase2.md # sable harbor \u2014 phase 2 coverage audit\n\n**document id:** `sh-int-audit-p2-001` | **version:** 1.0.0 | **effective:** september 3, 2026 | **state:** historical controlled record\n**owner:** corporate governance / j2 headquarters | **related:** governance, j2, alexandria | **cross-reference:** `../controlled_document_index.md`; `institutional_catalog_query_guide.md`\n**baseline:** september 2 design-session handover | **disposition:** expansion complete\n**structured record:** `coverage_audit_phase2.json`\n\n## method and conclusion\n\nthe audit treated the design-session decisions as expected truth and compared their individual doctrines, exceptions, rights, negative boundaries, temporal behavior, and unresolved states to the branch at commit `626db32`. file presence alone did not count as coverage. a short paragraph covering a deeply designed institution was classified **compressed** even if factually correct.\n\nthe first-phase package preserved the architecture accurately but compressed important governance procedures, contact collection management, both officer professions, headquarters, and alexandria's temporal/provenance/disclosure/authorship doctrines. phase 2 expanded each into first-class corporate artifacts. no omitted locked decision was converted into an invented implementation fact.\n\n## coverage table\n\n| topic | expected depth | existing files before phase 2 | quality before expansion | missing decisions / nuance | expansion required and disposition |\n|---|---|---|---|---|---|\n| board philosophy | stewardship, balanced authority, challenge, no constituency veto | `board_and_capital_governance.md`, `governance_constitution.md` | adequate but consolidated | founder limit, outsider/insider challenge, execution after dissent deserved independent permanence | created `conflict_integrity_and_founder_authority.md` |\n| board evolution | annual maturation without retroactive committees | board governance | preserved | none material | no new doctrine; retained chronology and validation |\n| financing history | crossing relationship, uses, economics, constructive investor tension | board governance + historical proposal | preserved | historical drafts could appear current | marked three predecessor documents superseded/superseded in part and added index |\n| committee philosophy | five mandates, membership, board/management boundary | one combined instrument + thin charters | compressed | independent controlled instruments | five standalone committee charters and pdfs completed |\n| reserved matters | three bands, consequence classes, cultural vote norms | governance constitution | compressed | exposure/spend examples, anti-circumvention mechanics | created `reserved_matters_and_subsidiary_autonomy.md` |\n| subsidiary autonomy | right to be wrong and real contagion paths | governance constitution | compressed | corporate preference prohibition and intervention test | expanded in authority doctrine |\n| rapid adjudication | finding threshold, protected pause, ~48/~72 clocks, one extension | governance constitution | compressed | stepwise handling, narrow pause, disposition | created `control_dissent_and_rapid_adjudication.md` |\n| assumption of risk | required fields and scope limits | form + constitution | preserved | connection to protected dispute/adjudication | cross-referenced in rapid-adjudication doctrine |\n| abstention | reason, missing information, telemetry, fitness inquiry, no strikes | governance constitution | compressed | recusal distinction and system-remediation loop | created `abstention_and_information_deficiency.md` |\n| decision quality | ex-ante six-question test, luck/outcome separation | governance constitution | compressed | authority contraction criteria and learning closure | created `decision_quality_and_after_action_learning.md` |\n| aar/learning culture | hot wash, aar, forecasts, changed model/control, respectful candor | governance constitution | compressed | difference between meeting and institutional learning | expanded in learning doctrine |\n| immaculate intelligence | same questions, differing answers, edge as sensor | canon + access/eib docs | preserved but distributed | institutional sensor contract could be easier to find | cross-linked through j2/access/eib indexes |\n| information access | maximum visibility, nature-based restriction, question visibility, obligation | access doctrine | accurate but thin | alexandria-specific disclosure and inferential leakage | created alexandria disclosure doctrine |\n| j2 headquarters | small custodian, standards, priorities, arbitration, continuity | j2 charter | compressed | hq intervention limits; reporting/title open discipline | created `j2_headquarters.md` |\n| j2 loop | output semantics, human context, non-queue | operating model + charts | preserved | none material | retained and linked rendered charts |\n| contact direction | orientation priorities, jo rfis, hq arbitration, contact methods | `contact.md` | compressed | requirements contract and collector challenge | created `contact_collection_management.md` |\n| six contact disciplines | systems, human, jag, external, exploitation, evidence creation | `contact.md` | accurate but brief | methods, limits, handoff semantics | expanded each discipline in collection-management doctrine |\n| collection management | requirements, methods, clocks, gaps, status, handoff, provisional tempo | one paragraph | compressed | real register behavior and success measures | expanded; exact tempo remains provisional |\n| judgment watch | judgment home, contact placement, triage/correlation/proposal | `judgment.md`, chart | preserved | none material | retained with interface chart |\n| jo commission/problem ownership | non-leading writ, end-to-end human context | `judgment.md` | compressed | commission ownership and anti-queue rationale | created `judgment_officer_profession.md` |\n| jo portfolio/curiosity | four directed, one self-directed, close before next | `judgment.md` | preserved but brief | professional rationale | expanded in jo profession |\n| jo rights and limits | direct access, visits, experts, collection, sources, no command | `judgment.md` | compressed | complete enumerated rights and asymmetric-power boundary | expanded in jo profession |\n| problem book/open hours | living questions/beliefs/gaps/change-my-mind; accessible channel | `judgment.md` | compressed | operational content and purpose | expanded in jo profession |\n| human handoff/transfer | conversation/read-back, not report/ticket | `judgment.md` | compressed | transfer acceptance and sensitive-source continuity | expanded in jo profession |\n| judgment table/closure | attack without vote; dissent travels; five conceptual closures | `judgment.md` | preserved but brief | responsibility and non-throughput purpose | expanded in jo profession |\n| jo self-knowledge/evaluation | private calibration, no score/rank, truth not volume | `judgment.md` | compressed | forecast/confidence/blind-spot record | expanded in jo profession |\n| orientation purpose/rights | mental-model custody and narrow intervention | `orientation.md` | preserved | none material | retained and deepened in profession doctrine |\n| orientation vocation/career bargain | 20\u201325, status without command, permanent line-power bar | `orientation.md` | compressed | rank meaning, head boundary, unresolved director exception | created `orientation_officer_profession.md` |\n| anti-court controls | no budgets/staff/politics/gatekeeping/stash; no blame graph | `orientation.md` | accurate but compressed | structural explanation and influence-graph rejection | expanded in profession doctrine |\n| ceo/board/finance embeds | separate officers, finance observation posts, model-building/field work | `orientation.md`, chart | compressed | decision-environment practice and role distinctions | expanded in profession doctrine |\n| rotation/self-orientation | 24\u201336 months, office naming, most unattached, head first among rigor | `orientation.md` | preserved but brief | professional self-government | expanded in profession doctrine |\n| education | separate arm, pedagogy ownership, mandatory excellence | `education.md` | preserved but concise | no missing locked decision | no expansion required; kept bounded to avoid invented talent architecture |\n| jag | five billets, tour phases, rotating touches, surge, willow, negative powers | `junction_advisory_group.md`, charts | preserved | no missing locked decision | standalone doctrine already adequate; validated |\n| eib | two pages, five categories/max five, front door, enterprise default | eib standard | preserved | no missing locked decision | no expansion required |\n| enterprise questions/edge reporting | pir-like questions/triggers, right/duty, disposition | eib standard | preserved but concise | no screaming into void and evidence-not-truth already present | no new doctrine required |\n| alexandria charter | preserve/connect/orient, crown jewel, state, provenance | alexandria charter | compressed | dedicated time/lineage/access doctrines | expanded into three standalone doctrines |\n| temporal integrity | five times, two historical questions, no silent backfill | charter paragraph | compressed | full distinction and transitions | created `temporal_integrity.md` |\n| provenance/connection | source/contrary/missing/rejected, forward/back trace, dead ends | charter paragraph | compressed | authority-for-purpose and graph/branch behavior | created `provenance_and_lineage.md` |\n| pinakes | human portal, not ontology; exactly nine doors; employee-first ux | pinakes doc + json | preserved | none material | retained and validated at exactly nine |\n| semaphore | medium not checklist; metadata, threading, search, supersession, human author | semaphore doc | preserved | exact precedence remains provisional | no expansion required |\n| canon | current responsible knowledge, uncertainty allowed, two-officer edit | canon doc | preserved | none material | no expansion required |\n| daedalus capabilities | hold/pull/trace/history/challenge/explore/compare/visualize | daedalus doctrine | compressed | persistent personal workspace and verb semantics | created personal-instance/workspace doctrine |\n| daedalus memory/skills | personal segregation, updates don't merge, content-free sharing | daedalus doctrine + policy json | compressed | share-package boundary and export behavior | expanded in personal-instance doctrine |\n| ai authority/human authorship | aggressive thought, no write/promotion/authority, real human authors | daedalus doctrine | compressed | independent-authorship test and no approval conveyor | created `ai_authority_and_human_authorship.md` |\n| universal read/bounded disclosure | omniscient corpus access without direct/inferential leak | daedalus doctrine + json | compressed | concrete prohibited disclosure modes; honest runtime boundary | expanded in alexandria disclosure doctrine |\n| synthetic artifacts | persistent, watermarked, outside alexandria, no auto-promotion | daedalus doctrine + json | preserved but brief | user export and laundering boundary | expanded in personal/workspace and authorship doctrines |\n| brand | approved j2 svg/png, stationery, manifests, identity status | brand package | preserved | none | existing approved artifacts retained unchanged |\n| controlled representations | markdown, pdf, structured lineage | publication system | preserved; expanded set needed | new doctrines lacked representations | all phase 2 doctrines added to publication generator/manifest; coverage json added |\n\n## open decisions protected\n\nthe audit did not invent internal audit maturity; exact j2 headcount; named j2 leaders; final orientation ranks; former-head director exception; alexandria stack; raw collection role model; final semaphore precedence terms; retention/deletion law; or spatial/ar implementation. their absence is faithful open-state preservation, not compression.\n"
+    },
+    {
+      "id": "SH-ALX-CATALOG-GUIDE-001",
+      "title": "ALEXANDRIA INSTITUTIONAL CATALOG \u2014 QUERY GUIDE",
+      "category": "institutional assurance",
+      "owner": "Orientation",
+      "version": "1.0.0",
+      "status": "CONTROLLED",
+      "source": "docs/internal/INSTITUTIONAL_CATALOG_QUERY_GUIDE.md",
+      "publication": "docs/internal/INSTITUTIONAL_CATALOG_QUERY_GUIDE.pdf",
+      "source_sha256": "60df1aaa4dc4011f052afda260b71d7106716a87f4784819b404b80f2d0085d3",
+      "publication_sha256": "094b391642b13b28209c9c2508333cd96493a980b2226469998aacb0e9094f22",
+      "related_doctrines": [
+        "Pinakes",
+        "Alexandria",
+        "controlled-document system"
+      ],
+      "cross_references": [
+        "institutional_catalog.json",
+        "institutional_catalog.sqlite3",
+        "../CONTROLLED_DOCUMENT_INDEX.md"
+      ],
+      "search_text": "alexandria institutional catalog \u2014 query guide docs/internal/institutional_catalog_query_guide.md # alexandria institutional catalog \u2014 query guide\n\n**document id:** `sh-alx-catalog-guide-001` | **version:** 1.0.0 | **effective:** september 2, 2026 | **state:** controlled\n**owner:** orientation | **related:** pinakes, alexandria, controlled-document system | **cross-reference:** `institutional_catalog.json`; `institutional_catalog.sqlite3`; `../controlled_document_index.md`\n\n## purpose and authority\n\nthe institutional catalog makes sable harbor doctrine discoverable without becoming another source of truth. canonical markdown governs content. the controlled-publication manifest binds each source to its publication checksum. the json catalog and sqlite database are generated views of those records and can always be rebuilt.\n\nthe database contains `institutional_object`, `relationship`, `institutional_search`, and `current_institutional_object`. each object has a stable document id, title, category, owner, version, state, canonical source, controlled publication, and both checksums. relationships expose related doctrines and cross-references. full-text search supports discovery across titles and source content.\n\n## representative queries\n\n```sql\n-- every judgment doctrine\nselect id, title, source_path from institutional_object where search_text like '%judgment%';\n\n-- governance policies and committee charters\nselect id, title from institutional_object where category in ('governance policy','committee charter');\n\n-- doctrine owned by orientation\nselect id, title from institutional_object where owner like 'orientation%';\n\n-- anything related to daedalus, jag, or finance\nselect id, title from institutional_object where search_text like '%daedalus%';\nselect id, title from institutional_object where search_text like '%jag%';\nselect id, title from institutional_object where search_text like '%finance%';\n\n-- superseded institutional objects\nselect id, title, status from institutional_object where upper(status) like 'superseded%';\n\n-- full-text discovery\nselect id, title from institutional_search where institutional_search match 'temporal integrity';\n```\n\n## employee navigation contract\n\npinakes is the human front door. search results must take the employee to the canonical source, controlled publication, structured record, and available lineage. access controls may restrict evidence, but they should preserve the visible question and the existence of relevant restricted material where lawful. a broken source, publication, checksum, relationship, or search record is a controlled-document defect.\n"
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 # ORIENTATION — INSTITUTIONAL MENTAL MODEL
 
 **Document ID:** `SH-J2-ORIENT-001` | **Version:** 1.0.0 | **State:** LOCKED DIRECTION
+**Owner:** Orientation | **Related:** EIB, Canon, executive/board/finance placement | **Cross-reference:** `ORIENTATION_OFFICER_PROFESSION.md`; `EIB_AND_ENTERPRISE_QUESTIONS.md`
 
 Orientation owns the EIB, enterprise questions and assumptions, changes of mind, reorientation, consequential dissent travel, intellectual history, learning-to-education identification, Canon, and epistemic integrity in executive/board decisions. It does not own collection, investigations, line strategy, IT, generic communications, execution follow-up, command, or Internal Audit.
 

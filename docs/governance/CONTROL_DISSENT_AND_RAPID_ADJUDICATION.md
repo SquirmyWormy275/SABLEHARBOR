@@ -1,6 +1,7 @@
 # CONTROL-FUNCTION DISSENT AND RAPID ADJUDICATION
 
 **Document ID:** `SH-GOV-DISSENT-001` | **Version:** 1.0.0 | **Effective:** September 2, 2026 | **State:** LOCKED DIRECTION
+**Owner:** Corporate Governance | **Related:** Assumption of Risk, control functions, reserved matters | **Cross-reference:** `ASSUMPTION_OF_RISK_DOCTRINE.md`; `RESERVED_MATTERS_AND_SUBSIDIARY_AUTONOMY.md`
 
 ## Operating premise
 

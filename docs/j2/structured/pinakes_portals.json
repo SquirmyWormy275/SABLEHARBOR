@@ -4,6 +4,8 @@
   "effective_date":"2026-09-02",
   "status":"LOCKED_DIRECTION",
   "canonical_source":"docs/j2/alexandria/PINAKES_PORTAL_AND_UX.md",
+  "institutional_catalog":"docs/internal/institutional_catalog.json",
+  "institutional_database":"docs/internal/institutional_catalog.sqlite3",
   "portals":[
     {"id":"PIN-EIB","display_name":"EIB Archive","description":"Every issued EIB, browsable across time.","owning_function":"Orientation","canonical_source":"docs/j2/EIB_AND_ENTERPRISE_QUESTIONS.md","access_posture":"enterprise-open by default; evidence separately controlled","searchability":"full-text, time, item, reference","daedalus_availability":"bounded-disclosure read","structured_data_reference":"future EIB register","status":"current","version":"1.0.0","effective_date":"2026-09-02"},
     {"id":"PIN-FIN","display_name":"Finance","description":"Finance records and analytical environments.","owning_function":"Finance","canonical_source":"docs/j2/ORIENTATION.md","access_posture":"authorized","searchability":"metadata and entitled content","daedalus_availability":"bounded-disclosure read","structured_data_reference":"future finance endpoints","status":"current","version":"1.0.0","effective_date":"2026-09-02"},

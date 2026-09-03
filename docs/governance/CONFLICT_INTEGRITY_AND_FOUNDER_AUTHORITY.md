@@ -1,6 +1,7 @@
 # CONFLICT INTEGRITY, CHALLENGE, AND FOUNDER AUTHORITY
 
 **Document ID:** `SH-GOV-CONFLICT-001` | **Version:** 1.0.0 | **Effective:** September 2, 2026 | **State:** LOCKED
+**Owner:** Corporate Governance | **Related:** board governance, reserved matters, dissent | **Cross-reference:** `BOARD_AND_CAPITAL_GOVERNANCE.md`; `RESERVED_MATTERS_AND_SUBSIDIARY_AUTONOMY.md`
 
 Directors are stewards of Sable Harbor, not representatives of appointing capital. Actual or apparent conflicts trigger disclosure, independent consideration, and recusal where appropriate. Harrison Vale and Wolf Ridge receive full board voice but no privileged commercial channel, private operational veto, special access outside proper process, or informal pressure through future financing.
 

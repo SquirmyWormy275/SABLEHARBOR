@@ -2,6 +2,7 @@
 
 **Document ID:** `SH-J2-CHARTER-001` | **Version:** 1.0.0 | **Effective:** September 2, 2026 | **State:** LOCKED  
 **Owner:** J2 Headquarters | **Approving body:** Board | **Distribution:** Internal
+**Related:** Contact, Judgment, Orientation, JAG, Education | **Cross-reference:** `J2_OPERATING_MODEL.md`; `alexandria/ALEXANDRIA_CHARTER.md`
 
 ## Mission
 

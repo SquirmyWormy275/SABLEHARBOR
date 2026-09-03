@@ -4,6 +4,7 @@
 **Version:** 1.0.0 | **Effective:** September 2, 2026 | **State:** LOCKED  
 **Owner:** Corporate Governance | **Approving body:** Board | **Distribution:** Internal  
 **Structured record:** `structured/board_and_committees.json`
+**Related:** board evolution, committee charters, financing | **Cross-reference:** `BOARD_EVOLUTION_2016_2026.md`; `GOVERNANCE_CONSTITUTION.md`
 
 ## 2026 board
 
