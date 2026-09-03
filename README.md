@@ -4,6 +4,8 @@ Sable Harbor is the canonical synthetic enterprise and reusable business-world s
 
 **Start here:** the [controlled document index](docs/CONTROLLED_DOCUMENT_INDEX.md) distinguishes current authority, generated representations, and preserved historical records.
 
+**Maintainers:** use [MAINTAINERS.md](MAINTAINERS.md) before changing canon, generated publications, structured catalogs, validators, public-repository boundaries, or issue state.
+
 It is modeled as a company that would exist independently of any audit or benchmark. Business activity creates systems, records, contracts, communications, controls, mistakes, experiments, operating consequences, and evidence; downstream tools consume deliberate, versioned exports.
 
 ## Canon states
@@ -15,9 +17,9 @@ It is modeled as a company that would exist independently of any audit or benchm
 
 ## Corporate lore v0.3
 
-The `canon/corporate-lore-v0.2` branch contains the reconciled corporate-history package:
+The controlling September 2-3, 2026 layer is [`SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md`](docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md), which preserves v0.2 and integrates the 2026 board, capital, governance constitution, J2, and Alexandria. The [decision register](docs/canon/DECISION_REGISTER.md), [v0.3 changelog](docs/canon/CANON_CHANGELOG_v0.3.md), [board approval records](docs/governance/board-records/README.md), and [chat-derived J2/Alexandria canon ledger](docs/internal/CHAT_CANON_LEDGER_J2_ALEXANDRIA.md) carry fact state, ratification, and supersession.
 
-The controlling September 2 layer is [`SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md`](docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md), which preserves v0.2 and integrates the 2026 board, capital, governance constitution, J2, and Alexandria. The [decision register](docs/canon/DECISION_REGISTER.md) and [v0.3 changelog](docs/canon/CANON_CHANGELOG_v0.3.md) carry fact state and supersession.
+Inherited canon and provenance records remain available:
 
 - [`docs/canon/SABLE_HARBOR_CANONICAL_ARCHITECTURE_HANDOVER.md`](docs/canon/SABLE_HARBOR_CANONICAL_ARCHITECTURE_HANDOVER.md) — preserved inherited canon and operating instructions.
 - [`docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.2.md`](docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.2.md) — complete reconciled corporate lore through August 31, 2026.
@@ -32,6 +34,16 @@ This is the canon-derived August 31, 2026 **functional enterprise organization c
 [![Sable Harbor enterprise organization chart](docs/organization/assets/enterprise-organization-2026.svg)](docs/organization/README.md)
 
 The full package contains dedicated charts for [leadership and authority](docs/organization/2026_LEADERSHIP_AND_AUTHORITY_MAP.md), [Foundry Field](docs/organization/FOUNDRY_FIELD_ORGANIZATION.md), [Project Willow](docs/organization/WILLOW_ORGANIZATION.md), [Atlas Meridian](docs/organization/ATLAS_MERIDIAN_BRIDGE_ORGANIZATION.md), [Pale Sun and Red Wash](docs/organization/PALE_SUN_RED_WASH_ORGANIZATION.md), [Project Cradle](docs/organization/PROJECT_CRADLE_ORGANIZATION.md), [ARU and BS&T](docs/organization/ARU_BST_ORGANIZATION.md), and [the Original Eight](docs/organization/ORIGINAL_EIGHT.md).
+
+## Governance, J2, Alexandria, and controls
+
+- [Controlled document index](docs/CONTROLLED_DOCUMENT_INDEX.md)
+- [Governance package](docs/governance/README.md)
+- [J2 package](docs/j2/README.md)
+- [Alexandria package](docs/j2/alexandria/README.md)
+- [Common Controls Framework index](docs/controls/CCF_FOUNDATION_BUILD_INDEX_v0.1.md)
+- [Open canon and hygiene issue index](docs/internal/OPEN_CANON_AND_HYGIENE_ISSUE_INDEX.md)
+- [Canon v0.3 release notes](docs/internal/RELEASE_NOTES_canon-v0.3-ccf-j2-alexandria.md)
 
 ## Blackridge status
 
