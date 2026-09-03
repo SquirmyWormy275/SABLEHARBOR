@@ -1,6 +1,6 @@
 # SABLE HARBOR CONTROLLED DOCUMENT INDEX
 
-**Index version:** 1.0.3 | **As of:** September 3, 2026
+**Index version:** 1.0.4 | **As of:** September 3, 2026
 
 ## Authority order
 
@@ -26,6 +26,7 @@ Earlier versions and SUPERSEDED records remain available for history but do not 
 - [Board evolution, 2016–2026](governance/BOARD_EVOLUTION_2016_2026.md)
 - [Board approval records and September 2 artifact-list exhibits](governance/board-records/README.md) and [structured board approval register](governance/structured/board_approval_records.json)
 - [Governance constitution](governance/GOVERNANCE_CONSTITUTION.md)
+- [Enterprise Support Services and independence doctrine](governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md)
 - [Five committee charters](governance/committees/README.md)
 - [Assumption of Risk form](governance/ASSUMPTION_OF_RISK_FORM.md)
 - [Assumption of Risk doctrine](governance/ASSUMPTION_OF_RISK_DOCTRINE.md)
@@ -41,6 +42,11 @@ Earlier versions and SUPERSEDED records remain available for history but do not 
 ## J2 and Alexandria
 
 - [J2 package index](j2/README.md)
+- [J2 establishment](j2/J2_ESTABLISHMENT.md)
+- [J2 headquarters doctrine](j2/J2_HEADQUARTERS.md)
+- [Contact collection management](j2/CONTACT_COLLECTION_MANAGEMENT.md)
+- [Orientation Officer profession](j2/ORIENTATION_OFFICER_PROFESSION.md)
+- [Education](j2/EDUCATION.md)
 - [Alexandria package index](j2/alexandria/README.md)
 - [Pinakes registry](j2/structured/pinakes_portals.json)
 - [Daedalus policy](j2/structured/daedalus_policy.json)
@@ -63,5 +69,5 @@ Earlier versions and SUPERSEDED records remain available for history but do not 
 
 - `governance/2021_2022_FINANCING_AND_INVESTOR_DIRECTOR_PROPOSAL.md` — SUPERSEDED historical proposal
 - `governance/2026_BOARD_COMPOSITION_AND_FINANCING_MODEL.md` — SUPERSEDED intermediate design record
-- `governance/2026_ENTITY_AND_BOARD_GOVERNANCE_DECISIONS.md` — SUPERSEDED IN PART; entity principles retained, later instruments control resolved gaps
-- `governance/2026_CAPITAL_AND_ASSURANCE_MODEL.md` — SUPERSEDED IN PART; Internal Audit choice remains OPEN
+- `governance/2026_ENTITY_AND_BOARD_GOVERNANCE_DECISIONS.md` — current entity-authorization boundary is locked; older board/capital material is controlled by later instruments
+- `governance/2026_CAPITAL_AND_ASSURANCE_MODEL.md` — capital material is historical where superseded; Internal Audit/ESS choice is resolved by `ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md`
