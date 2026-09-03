@@ -19,6 +19,8 @@ Earlier versions and SUPERSEDED records remain available for history but do not 
 - [Open canon and hygiene issue index](internal/OPEN_CANON_AND_HYGIENE_ISSUE_INDEX.md) — issue navigation, not a decision register
 - [Canon v0.3 / CCF-J2-Alexandria release notes](internal/RELEASE_NOTES_canon-v0.3-ccf-j2-alexandria.md)
 - [Post-merge hygiene status v0.3.1](internal/POST_MERGE_HYGIENE_STATUS_v0.3.1.md)
+- [Alexandria Control public/private boundary](internal/ALEXANDRIA_CONTROL_BOUNDARY.md)
+- [Alexandria Control migration review](internal/ALEXANDRIA_CONTROL_MIGRATION_REVIEW_2026-09-03.md)
 
 ## Governance
 

@@ -60,6 +60,11 @@ The following must not be published in the public repository or wiki:
 
 When Sable Harbor requires hidden truth or spoiler-sensitive benchmark material, that material must live in a separate controlled repository, private release package, or local generation environment. Public canon may describe the existence and boundaries of such material without revealing it.
 
+The designated private evaluator control plane is `SABLEHARBOR-ALEXANDRIA-CONTROL`. Public files
+may identify its existence and purpose and may carry non-revealing version/checksum references;
+they must not reproduce its hidden physical or causal truth, actor knowledge state, seeded
+exceptions, expected detections, scoring rubrics, leakage tests, or evaluator answers.
+
 ## 5. Wiki-page discipline
 
 Substantive wiki pages should identify:

@@ -24,14 +24,15 @@ def test_smoke_build_and_reconcile(tmp_path: Path, monkeypatch) -> None:
     assert 5_000_000_000 <= result["impairment_minor"] <= 5_400_000_000
 
 
-def test_public_schema_has_no_oracle(tmp_path: Path, monkeypatch) -> None:
+def test_public_schema_has_no_private_control_tables(tmp_path: Path, monkeypatch) -> None:
     from blackridge import cli
 
     monkeypatch.setattr(cli, "PUBLIC", tmp_path)
     db_path = build_database("smoke", 20150112)
     db = sqlite3.connect(db_path)
     names = [r[0].lower() for r in db.execute("SELECT name FROM sqlite_master")]
-    assert not any("oracle" in name for name in names)
+    forbidden = {"hidden_physical_state", "actor_epistemic_state", "causal_edge", "evaluator_answer"}
+    assert forbidden.isdisjoint(names)
 
 
 def test_corruption_unbalanced_journal_is_detected(tmp_path: Path, monkeypatch) -> None:

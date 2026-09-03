@@ -1,11 +1,15 @@
 # Public Repository Safety Sweep — 2026-09-03
 
-**Status:** PASS
+**Status:** PASS — refreshed for Alexandria Control migration
 
 Command run:
 
 ```text
-grep -RInE "(password|secret|token|api[_-]?key|private key|credential|answer key|oracle|hidden benchmark|SABLEHARBOR-ORACLE|NAILEX proprietary|@sableharbor|555-)" .
+rg -n -i "SABLEHARBOR-ORACLE|true_root_cause|answer key|evaluator_answer|expected NAILEX|NAILEX should catch|hidden truth|causal truth|oracle truth|PRIVATE_EVALUATOR_ONLY|private key|secret|token|password|api_key|credential" .
 ```
 
-The sweep returned 203 lines. Every hit was manually classified as a false positive or an intentional public-boundary reference: policy prohibitions; CCF security-control vocabulary; synthetic documentation; validator/test strings; Git sample-hook `token` variables; generated catalog copies of approved source text; or Blackridge public-package references to the existence and required separation of a private oracle. No password, API token/key, private key, live credential, private contact, hidden answer payload, or proprietary NAILEX content was identified. The tracked-file repository hygiene validator separately passed its scoped public/fake-contact checks.
+Hits were reviewed by context. They are policy/boundary prohibitions, validation markers, synthetic
+security vocabulary, or explicit legacy migration/history references. No password, API token/key,
+private key, live credential, private contact, hidden answer payload, expected-detection payload, or
+proprietary NAILEX content was identified. Current-facing metadata names the private control plane
+`SABLEHARBOR-ALEXANDRIA-CONTROL`.

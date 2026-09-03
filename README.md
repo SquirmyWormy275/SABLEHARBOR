@@ -65,6 +65,10 @@ There will be **no standalone Easter-egg index, decoder, or exhaustive explanati
 
 Hidden benchmark truth, evaluation oracles, credentials, unreleased scenario answers, and other material whose value depends on nonpublic access must not be committed to this public repository or published in the wiki.
 
+Private evaluator control-plane materials live in `SABLEHARBOR-ALEXANDRIA-CONTROL`; see the
+[Alexandria Control boundary](docs/internal/ALEXANDRIA_CONTROL_BOUNDARY.md). This repository remains
+the observable in-world surface and does not expose that private repository's contents.
+
 See [`docs/governance/PUBLIC_REPOSITORY_AND_WIKI_POLICY.md`](docs/governance/PUBLIC_REPOSITORY_AND_WIKI_POLICY.md).
 
 ## Separation from NAILEX

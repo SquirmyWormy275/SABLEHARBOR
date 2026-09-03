@@ -7,6 +7,7 @@ def fail(msg): errors.append(msg)
 tracked=subprocess.run(['git','ls-files'],cwd=R,capture_output=True,text=True,check=True).stdout.splitlines()
 for rel in tracked:
     p=R/rel
+    if not p.exists(): continue
     if p.suffix=='.json':
         try: json.loads(p.read_text())
         except Exception as e: fail(f'invalid JSON {rel}: {e}')
@@ -25,7 +26,7 @@ allowed_history={
 }
 stale=['Northline Growth Partners','Ironcliff Industrial Partners','Leah Moravec','Owen Rourke','Dr. Nadia Serrano','Richard Halden']
 for rel in tracked:
-    if rel in allowed_history or not rel.endswith(('.md','.json','.yml','.yaml')): continue
+    if not (R/rel).exists() or rel in allowed_history or not rel.endswith(('.md','.json','.yml','.yaml')): continue
     text=(R/rel).read_text(errors='ignore')
     for term in stale:
         if term in text: fail(f'superseded current-facing name in {rel}: {term}')
@@ -37,6 +38,19 @@ for prefix in new_scope:
             t=p.read_text(errors='ignore')
             for forbidden in ['SABLEHARBOR-ORACLE','NAILEX benchmark','@sableharbor','.com','555-']:
                 if forbidden in t: fail(f'private/fake contact material in {p.relative_to(R)}: {forbidden}')
+legacy_name_allowed={
+    'docs/internal/ALEXANDRIA_CONTROL_MIGRATION_REVIEW_2026-09-03.md',
+    'docs/internal/PUBLIC_REPOSITORY_SAFETY_SWEEP_2026-09-03.md',
+}
+for rel in tracked:
+    if not (R/rel).exists(): continue
+    if rel.startswith('docs/handoffs/') or rel in legacy_name_allowed or rel == 'scripts/validate_repository_hygiene.py':
+        continue
+    if not rel.endswith(('.md','.json','.yml','.yaml','.py','.sql')):
+        continue
+    text=(R/rel).read_text(errors='ignore')
+    if 'SABLEHARBOR-ORACLE' in text:
+        fail(f'legacy private repository name in current-facing file {rel}')
 if errors:
     print('\n'.join('FAIL '+e for e in errors)); sys.exit(1)
 print(f'PASS repository hygiene: {len(tracked)} tracked paths; JSON, Markdown links, stale names, private/fake-contact boundaries')

@@ -5,7 +5,7 @@
     "foreign_keys": true,
     "journals_balanced": true,
     "impairment_derived": true,
-    "oracle_leakage": true
+    "private_control_leakage": true
   },
   "impairment_minor": 5205000000,
   "row_counts": {

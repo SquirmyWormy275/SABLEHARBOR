@@ -51,6 +51,7 @@ This index makes unresolved work discoverable without converting GitHub issues i
 | #42 | Release notes for canon v0.3 CCF/J2/Alexandria | Addressed by `RELEASE_NOTES_canon-v0.3-ccf-j2-alexandria.md`; close after merge if accepted |
 | #49 | Preserve PR #16 implementation audit trail | OPEN |
 | #53 | Commit post-merge maintainer rules | Addressed by root `MAINTAINERS.md`; close after merge if accepted |
+| #85 | Alexandria Control public/private scenario boundary | Implementation tracking; does not resolve canon |
 
 ## Closeout v0.3.2
 

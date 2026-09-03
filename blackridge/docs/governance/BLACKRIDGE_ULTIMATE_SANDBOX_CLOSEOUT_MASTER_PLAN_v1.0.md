@@ -11,7 +11,7 @@
 
 ## 1. Executive conclusion
 
-The existing **Blackridge Enterprise Data Foundation** Codex mandate is the correct first execution package. It is deliberately large: it requires the SQL database, Excel master workbook, deterministic full-year generation, operational subledgers, financial statements, inventory, assets, workforce, maintenance, processing, commercial settlement, governance, systems, shadow IT, provenance, tests, CI, releases, and a private-oracle boundary.
+The existing **Blackridge Enterprise Data Foundation** Codex mandate is the correct first execution package. It is deliberately large: it requires the SQL database, Excel master workbook, deterministic full-year generation, operational subledgers, financial statements, inventory, assets, workforce, maintenance, processing, commercial settlement, governance, systems, shadow IT, provenance, tests, CI, releases, and a private-Alexandria Control boundary.
 
 That build is necessary, but it does not by itself make Blackridge the “ultimate sandbox.”
 
@@ -20,7 +20,7 @@ A complete Blackridge v1.0 requires five additional layers:
 1. **Canonical world closure** — a single controlling account of what exists, what happened, what remained unknown, and which details are provisional.
 2. **Period-authentic evidence closure** — the files, reports, messages, screens, trackers, physical records, and management representations through which people actually encountered the world.
 3. **Scenario and counterfactual closure** — alternate operating paths and intervention windows that remain physically, financially, and temporally coherent.
-4. **Evaluation and instructional closure** — participant editions, private oracle, benchmark questions, scoring, facilitator material, and discipline-specific case packs.
+4. **Evaluation and instructional closure** — participant editions, private Alexandria Control, benchmark questions, scoring, facilitator material, and discipline-specific case packs.
 5. **Institutional closure** — independent validation, release governance, reproducibility, archival controls, documentation, and a final acceptance audit.
 
 The proper definition of “closed” is therefore:
@@ -39,7 +39,7 @@ At the time of this plan:
 - The enterprise-finance platform exists as a separate release candidate and remains review-blocked.
 - The enterprise-portal work is open and correctly avoids claiming that Blackridge has already been materialized.
 - Several old `blackridge/m00-*` branches exist and require a documented recovery/disposition audit.
-- The proposed private companion repository `SABLEHARBOR-ORACLE` is not yet part of the accepted Blackridge package.
+- The proposed private companion repository `SABLEHARBOR-ALEXANDRIA-CONTROL` is not yet part of the accepted Blackridge package.
 
 ### Consequence
 
@@ -64,7 +64,7 @@ Contains:
 - build tooling;
 - tests;
 - public-safe fixtures;
-- interface definitions for private oracle data.
+- interface definitions for private Alexandria Control data.
 
 ### 3.2 Public world edition
 
@@ -164,7 +164,7 @@ Establish a defensible repository baseline before adding more Blackridge history
   - canon changes;
   - model changes;
   - public releases;
-  - oracle releases;
+  - Alexandria Control releases;
   - accounting policy changes;
   - scoring changes.
 - Add repository labels and issue templates for:
@@ -730,7 +730,7 @@ A participant edition must not expose information that its persona could not hav
 
 ---
 
-## 12. Workstream 8 — private oracle and epistemic model
+## 12. Workstream 8 — private Alexandria Control and epistemic model
 
 ### Objective
 
@@ -761,13 +761,13 @@ Separate truth, evidence, belief, and decision.
 - public filenames and IDs do not leak answers;
 - public workbook formulas do not reference private files;
 - release archives exclude private paths;
-- Git history contains no removed oracle data;
+- Git history contains no removed control-plane data;
 - participant snapshots cannot query later availability;
 - benchmark prompts do not leak expected conclusions.
 
 ### Private repository
 
-Create and govern a private `SABLEHARBOR-ORACLE` repository or an equivalently controlled private storage boundary.
+Create and govern a private `SABLEHARBOR-ALEXANDRIA-CONTROL` repository or an equivalently controlled private storage boundary.
 
 ---
 
@@ -992,7 +992,7 @@ The existing authority research must govern any later SOC/IS-audit pack. Blackri
 - incomplete evidence;
 - reviewer comments;
 - workpapers;
-- answer key in private oracle;
+- answer key in private Alexandria Control;
 - versioned authority references.
 
 ---
@@ -1196,7 +1196,7 @@ Prove the sandbox is coherent, difficult, fair, and nonleaky.
 - Can a component be installed twice?
 - Can inventory go negative?
 - Can a counterfactual change final results without changing causal events?
-- Can the public package reach a private oracle table?
+- Can the public package reach a private Alexandria Control table?
 - Can one random seed contaminate another?
 - Can two scenarios aggregate accidentally?
 - Can a user query future evidence through an unrestricted view?
@@ -1311,7 +1311,7 @@ Include:
 - one-command full build;
 - one-command validation;
 - one-command public release;
-- private oracle build instructions.
+- private Alexandria Control build instructions.
 
 ### Archival controls
 
@@ -1497,7 +1497,7 @@ Blackridge may be called **accepted v1.0** only after a formal closeout audit.
 ### 24.9 Security and separation
 
 - public repository contains no oracle;
-- private oracle boundary exists;
+- private Alexandria Control boundary exists;
 - public release is scanned;
 - real PII/secrets absent;
 - licenses and usage terms documented.
@@ -1513,7 +1513,7 @@ Blackridge may be called **accepted v1.0** only after a formal closeout audit.
 
 - immutable tag;
 - public release;
-- private oracle release;
+- private Alexandria Control release;
 - manifests;
 - checksums;
 - SBOM;
@@ -1550,7 +1550,7 @@ Tag and preserve the accepted substrate before adding narrative/evidence complex
 
 This is the most important missing layer after the database. Create the actual records through which Blackridge personnel experienced 2015.
 
-### Stage 5 — Create the private oracle and evaluator
+### Stage 5 — Create the private Alexandria Control and evaluator
 
 Do this before publishing benchmark questions.
 
@@ -1588,7 +1588,7 @@ Publish public, facilitator, and private evaluator editions with a closeout repo
 6. `BRG-EPIC-05 Source-system emulators`
 7. `BRG-EPIC-06 Period-authentic evidence factory`
 8. `BRG-EPIC-07 Access and persona packages`
-9. `BRG-EPIC-08 Private oracle and evaluator`
+9. `BRG-EPIC-08 Private Alexandria Control evaluator`
 10. `BRG-EPIC-09 Scenario/counterfactual engine`
 11. `BRG-EPIC-10 Benchmark and question registry`
 12. `BRG-EPIC-11 Audit and assurance packs`
@@ -1634,7 +1634,7 @@ The current mega-prompt is already broad. The most important additional work is 
 2. source-system emulators;
 3. a period-authentic evidence corpus;
 4. role- and cutoff-specific participant packages;
-5. a private oracle repository and evaluator;
+5. a private Alexandria Control repository and evaluator;
 6. a genuine counterfactual engine;
 7. a question/scoring registry;
 8. multi-disciplinary participant and facilitator case packs;

@@ -1,8 +1,8 @@
 # Blackridge Enterprise Data Foundation v0.1.0
 
 This package deterministically builds the public Blackridge 2015 enterprise database and
-SQL-derived master workbook. It preserves the public/private boundary: no oracle truth is
-stored in the public schema or generated workbook.
+SQL-derived master workbook. It preserves the public/private boundary: no private evaluator
+control-plane data is stored in the public schema or generated workbook.
 
 ```bash
 cd blackridge
@@ -18,4 +18,3 @@ pytest
 
 The canonical source is SQLite. Excel is a generated human interface. Generated databases,
 workbooks, reports, and manifests record hashes and validation state.
-
