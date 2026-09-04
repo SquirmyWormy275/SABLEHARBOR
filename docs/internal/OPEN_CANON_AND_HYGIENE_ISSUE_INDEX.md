@@ -30,6 +30,8 @@ Resolved September 3: #17 Internal Audit operating model and #20 Orientation ran
 
 The September 3 decision is to preserve Alexandria as an **access fabric** conceptually and avoid duplicating CCF/technology-policy design prematurely.
 
+The Alexandria Control repository migration/public-private scenario boundary is complete: public PR #86 and private `SABLEHARBOR-ALEXANDRIA-CONTROL` PR #1 are merged; issue #85 is CLOSED.
+
 ## September 3 corporate-headquarters continuation
 
 | Issue | Topic | Current state |
@@ -45,7 +47,6 @@ SHMS drafting must begin with canon extraction/archaeology, not generic manageme
 |---:|---|---|
 | #11 | Repository administration: Wiki, main protection, branch retirement | OPEN administration |
 | #50 | Archive merged PR branch after tag | Requires local Git/branch privileges |
-| #85 | Alexandria Control public/private scenario boundary | OPEN repository-architecture work |
 
 ## Generated artifacts and publication hygiene
 
@@ -64,7 +65,7 @@ SHMS drafting must begin with canon extraction/archaeology, not generic manageme
 | #31 | Root navigation and maintainer entry-point review | OPEN |
 | #49 | Preserve PR #16 implementation audit trail | OPEN |
 
-Issues #42 and #53 are already CLOSED and therefore omitted from remaining-work tables.
+Issues #42, #46, #53, #85, and #89 are CLOSED and therefore omitted from remaining-work tables.
 
 ## Business/audit implementation
 
