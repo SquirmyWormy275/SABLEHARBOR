@@ -1,38 +1,52 @@
 # Open Canon and Post-Merge Hygiene Issue Index
 
 **Index date:** September 3, 2026  
-**Scope:** Post-merge follow-up after PR #16 / canon v0.3 CCF-J2-Alexandria integration.  
+**Scope:** Current unresolved canon, deliberately deferred work, and repository/publication closeout.  
 **Status:** Tracking index only; not a decision register.
 
-This index makes unresolved work discoverable without converting GitHub issues into canon. Current authority remains in `docs/canon/DECISION_REGISTER.md`, the controlled document index, and the applicable canonical Markdown sources.
+Current authority remains in `docs/canon/DECISION_REGISTER.md`, September 3 controlling canon, the controlled document index, and applicable canonical Markdown sources.
 
 ## Governance and legal canon
 
 | Issue | Topic | Current state |
 |---:|---|---|
-| #17 | Internal Audit operating model | OPEN |
-| #18 | Legal entity implementation mechanics | OPEN |
-| #20 | Orientation ranks and former-Head board eligibility | OPEN |
-| #44 | Finance portal source boundaries | OPEN refinement |
+| #18 | Exact legal entity implementation mechanics | OPEN |
+| #44 | Finance portal source boundaries | DEFERRED with Alexandria implementation cluster |
 
-## J2 and Alexandria canon
+Resolved September 3: #17 Internal Audit operating model and #20 Orientation ranks/former-officer board eligibility are CLOSED by controlling canon.
+
+## J2 and Alexandria
 
 | Issue | Topic | Current state |
 |---:|---|---|
-| #19 | J2 staffing and named leadership | OPEN |
-| #21 | Alexandria runtime technology stack | OPEN |
-| #22 | Collection entitlement and raw-source access model | OPEN |
-| #23 | Semaphore precedence vocabulary | OPEN / PROVISIONAL vocabulary |
-| #24 | Retention and deletion rules | OPEN |
-| #25 | Spatial and AR interaction model | OPEN future direction |
-| #34 | Daedalus runtime policy and leakage tests | OPEN implementation/canon boundary |
-| #38 | Business-line interface to Alexandria | OPEN refinement |
+| #19 | J2 staffing and named leadership | PARTIAL — 237-billet establishment LOCKED; named individuals remain OPEN |
+| #21 | Alexandria runtime technology stack | DEFERRED pending CCF/technology-control architecture |
+| #22 | Collection entitlement and raw-source access model | DEFERRED pending CCF/technology-control architecture |
+| #23 | Semaphore precedence vocabulary | DEFERRED / prior provisional vocabulary remains noncontrolling |
+| #24 | Retention and deletion rules | DEFERRED pending CCF/technology-control architecture |
+| #25 | Spatial and AR interaction model | OPEN future direction / not required |
+| #34 | Daedalus runtime policy and leakage tests | DEFERRED implementation/canon boundary |
+| #38 | Business-line interface to Alexandria | DEFERRED refinement |
+
+The September 3 decision is to preserve Alexandria as an **access fabric** conceptually and avoid duplicating CCF/technology-policy design prematurely.
+
+## September 3 corporate-headquarters continuation
+
+| Issue | Topic | Current state |
+|---:|---|---|
+| #87 | Develop Sable Harbor Management System (SHMS) | **NEXT PRIORITY** |
+| #88 | Generate controlled publications and ingest canonical Sacramento HQ image | CLOSEOUT |
+| #89 | Reconcile historical issue states to September 3 canon | CLOSEOUT |
+
+SHMS drafting must begin with canon extraction/archaeology, not generic management-system prose. Detailed failing-business intervention and organic new-business formation/incubation are deliberately parked until later.
 
 ## Repository operations
 
 | Issue | Topic | Current state |
 |---:|---|---|
+| #11 | Repository administration: Wiki, main protection, branch retirement | OPEN administration |
 | #50 | Archive merged PR branch after tag | Requires local Git/branch privileges |
+| #85 | Alexandria Control public/private scenario boundary | OPEN repository-architecture work |
 
 ## Generated artifacts and publication hygiene
 
@@ -42,20 +56,23 @@ This index makes unresolved work discoverable without converting GitHub issues i
 | #35 | Release artifact packaging decision | OPEN |
 | #37 | Generated catalog and SQLite lifecycle | OPEN |
 | #48 | Corporate-document index source/publication review | OPEN |
+| #88 | September 3 three-representation/publication closeout | OPEN |
 
 ## Presentation, safety, and maintainer hygiene
 
 | Issue | Topic | Current state |
 |---:|---|---|
 | #31 | Root navigation and maintainer entry-point review | OPEN |
-| #42 | Release notes for canon v0.3 CCF/J2/Alexandria | Addressed by `RELEASE_NOTES_canon-v0.3-ccf-j2-alexandria.md`; close after merge if accepted |
+| #42 | Release notes for canon v0.3 CCF/J2/Alexandria | Previously addressed; verify close state |
 | #49 | Preserve PR #16 implementation audit trail | OPEN |
-| #53 | Commit post-merge maintainer rules | Addressed by root `MAINTAINERS.md`; close after merge if accepted |
+| #53 | Commit post-merge maintainer rules | Previously addressed; verify close state |
 
-## Closeout v0.3.2
+## Business/audit implementation
 
-Issues #26, #27, #28, #29, #30, #32, #36, #39, #40, #41, #43, #47, #51, and #52 are completed by the September 3, 2026 tag/branch cleanup, validation and audit records, board-consent artifact-list exhibits, and GitHub label rollout. This index omits them from the remaining-work tables; their issue records retain the closeout history.
+| Issue | Topic | Current state |
+|---:|---|---|
+| #12 | Standalone business-unit audit packages | OPEN implementation; not corporate-canon blocker |
 
-## Duplicate issue policy
+## Closeout principle
 
-Administrative duplicate issues opened during the immediate sweep should remain closed as duplicates. Substantive open-canon issues should remain separate unless a later canon decision combines their scope.
+Historical OPEN language must not override later controlling canon. Resolved issues should be closed or explicitly narrowed; deliberately deferred issues must remain visibly deferred rather than being silently invented. Administrative duplicate issues remain closed as duplicates.
