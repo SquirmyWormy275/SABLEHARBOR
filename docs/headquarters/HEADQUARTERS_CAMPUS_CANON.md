@@ -17,7 +17,9 @@ The campus is **beautiful, formidable, distinctive, and quiet in posture**. It s
 
 The locked visual language is represented by the canonical September 3, 2026 exterior render at:
 
-`assets/headquarters/sable-harbor-hq-sacramento-canon-2026-09-03.png`
+`assets/headquarters/sable-harbor-hq-sacramento-canon-2026-09-03.webp`
+
+The repository WebP is a loss-preserving visual derivative of the user-approved render for practical repository use; the design itself, not a later reinterpretation, is canonical.
 
 The render controls the intended architectural language: low-rise modern institutional massing; concrete, metal, glass, and warm wood; strong horizontal lines; a recognizable Sable Harbor arrival monument; carefully designed Sacramento-appropriate landscape; water and stone used with restraint; warm interior light; generous pedestrian approaches; and an overall impression of advanced research campus meeting durable modern institution.
 
