@@ -1,0 +1,35 @@
+{
+  "document_id": "SH-GOV-SHMS-001",
+  "title": "Sable Harbor Management System (SHMS)",
+  "version": "1.0.0",
+  "decision_date": "2026-09-03",
+  "state": "LOCKED",
+  "owner": "Chief Executive Officer",
+  "stewardship": "Orientation Officer practice, collaboratively with the Chief Executive Officer",
+  "principles": [
+    {"number": 1, "principle": "Own your decision."},
+    {"number": 2, "principle": "Spend the company's money like it's your own."},
+    {"number": 3, "principle": "Give people room to be wrong."},
+    {"number": 4, "principle": "Don't build bureaucracy to cover for weak management."},
+    {"number": 5, "principle": "Know when to get out of the way."},
+    {"number": 6, "principle": "Build something that can outlast you."},
+    {"number": 7, "principle": "Reality gets a vote."},
+    {"number": 8, "principle": "Build successors, not followers."},
+    {"number": 9, "principle": "Build the thing you wish existed."},
+    {"number": 10, "principle": "Competence and continuity are capital."}
+  ],
+  "boundary": {
+    "universal_management_workflow": false,
+    "separate_process_office": false,
+    "management_scorecard": false,
+    "certification_system": false,
+    "shadow_authority_structure": false,
+    "managerial_judgment_preserved": true
+  },
+  "succession": "The Orientation Officer practice stewards SHMS collaboratively with the CEO, including as part of each CEO transition.",
+  "representation_rule": [
+    "canonical Markdown",
+    "controlled corporate-letterhead publication",
+    "structured/database representation"
+  ]
+}
