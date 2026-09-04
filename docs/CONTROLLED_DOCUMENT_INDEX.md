@@ -1,12 +1,12 @@
 # SABLE HARBOR CONTROLLED DOCUMENT INDEX
 
-**Index version:** 1.0.5 | **As of:** September 3, 2026
+**Index version:** 1.0.6 | **As of:** September 3, 2026
 
 ## Authority order
 
 1. [Corporate lore v0.3](canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md)
 2. [Decision register](canon/DECISION_REGISTER.md), [September 3 decision-register addendum](canon/DECISION_REGISTER_ADDENDUM_2026-09-03.md), [v0.3 changelog](canon/CANON_CHANGELOG_v0.3.md), and [board approval records](governance/board-records/README.md)
-3. Approved governance and J2 instruments listed below
+3. Approved governance, headquarters, and J2 instruments listed below
 4. [Chat-derived J2/Alexandria canon ledger](internal/CHAT_CANON_LEDGER_J2_ALEXANDRIA.md), used to preserve originating design-session fidelity
 5. [Canon authority and publication boundaries](internal/CANON_AUTHORITY_AND_PUBLICATION_BOUNDARIES.md), used to prevent generated publications/catalogs from laundering unsupported authority
 6. Structured representations and generated publications, which reconcile to their canonical Markdown source
@@ -17,6 +17,7 @@ Where the September 3 addendum explicitly supersedes an OPEN or PROVISIONAL row 
 
 - [Maintainer rules](../MAINTAINERS.md) — repository operating rules for canon, generated artifacts, validation, issue hygiene, and public safety
 - [Open canon and hygiene issue index](internal/OPEN_CANON_AND_HYGIENE_ISSUE_INDEX.md) — issue navigation, not a decision register
+- [September 3 headquarters closeout](internal/HEADQUARTERS_CLOSEOUT_2026-09-03.md) — continuity record for the headquarters design session
 - [Canon v0.3 / CCF-J2-Alexandria release notes](internal/RELEASE_NOTES_canon-v0.3-ccf-j2-alexandria.md)
 - [Post-merge hygiene status v0.3.1](internal/POST_MERGE_HYGIENE_STATUS_v0.3.1.md)
 
@@ -38,6 +39,19 @@ Where the September 3 addendum explicitly supersedes an OPEN or PROVISIONAL row 
 - [Corporate document standard](governance/CORPORATE_DOCUMENT_STANDARD_v0.1.md)
 - [Structured board register](governance/structured/board_and_committees.json)
 - [Publication manifest](governance/publication_manifest.json)
+
+## Headquarters and enterprise management
+
+- [Headquarters package index](headquarters/README.md)
+- [Enterprise Support Services Charter](headquarters/ENTERPRISE_SUPPORT_SERVICES_CHARTER.md)
+- [People & Culture Doctrine](headquarters/PEOPLE_AND_CULTURE_DOCTRINE.md)
+- [Technology Services Doctrine](headquarters/TECHNOLOGY_SERVICES_DOCTRINE.md)
+- [Enterprise Authority, Portfolio, and Professional Practice](headquarters/ENTERPRISE_AUTHORITY_PORTFOLIO_AND_PROFESSIONS.md)
+- [Capital, Planning, Performance, and Executive Rhythm](headquarters/CAPITAL_PLANNING_AND_EXECUTIVE_RHYTHM.md)
+- [Headquarters Campus Canon](headquarters/HEADQUARTERS_CAMPUS_CANON.md)
+- [SHMS Development Framework](headquarters/SHMS_DEVELOPMENT_FRAMEWORK.md) — NEXT PRIORITY / OPEN, not completed doctrine
+- [Structured headquarters decision register](headquarters/structured/headquarters_decisions.json)
+- [Headquarters decision SQLite mirror](headquarters/structured/headquarters_decisions.sqlite3)
 
 ## J2 and Alexandria
 
