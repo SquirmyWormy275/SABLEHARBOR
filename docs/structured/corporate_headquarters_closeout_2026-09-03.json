@@ -1,0 +1,155 @@
+{
+  "document_id": "SH-CORP-HQ-20260903",
+  "version": "1.0.0",
+  "decision_date": "2026-09-03",
+  "status": "LOCKED_WITH_EXPLICIT_DEFERRED_ITEMS",
+  "canonical_markdown": "docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md",
+  "corporate_document_standard": "docs/governance/CORPORATE_DOCUMENT_STANDARD_v0.1.md",
+  "headquarters": {
+    "city": "Sacramento",
+    "state": "California",
+    "visual_reference_sha256": "2bf5a1209b9c3ece435271f2fbf5a3c827bbbccf242ea4ee60535749ccee9d92",
+    "visual_state": "CANONICAL_REFERENCE_APPROVED_BINARY_INGEST_PENDING"
+  },
+  "enterprise_model": {
+    "board_and_ceo": "enterprise authority",
+    "businesses": "end-to-end operating authority within enterprise boundaries",
+    "ess": "administrative umbrella for enterprise support functions",
+    "j2": "distinct institutional intelligence/judgment/learning capability outside ESS",
+    "internal_audit": "independent assurance; functional line to Board Audit & Compliance Committee",
+    "authority_principle": "vertical authority; horizontal expertise; shared foundations; dotted lines do not decide"
+  },
+  "ess": {
+    "chief_role": "administrative head, not super-executive or de facto COO",
+    "functions": [
+      "Office of General Counsel / Corporate Secretary",
+      "Risk & Compliance",
+      "Finance",
+      "People & Culture",
+      "Technology Services",
+      "Enterprise Security / CISO boundary",
+      "Procurement and vendor/technology supply chain",
+      "Safety/environmental governance where enterprise-wide",
+      "Quality/technical standards stewardship where justified",
+      "Facilities/workplace services",
+      "Continuity/crisis coordination as Corporate Secretary/ESS duty"
+    ],
+    "internal_audit_is_separate": true
+  },
+  "finance": {
+    "doctrine": "imperial over financial truth, bounded on business judgment",
+    "use_it_or_lose_it_budgeting": false,
+    "surplus_capital_allocation": "corporate"
+  },
+  "people_and_culture": {
+    "primary_principle": "continuity is capital",
+    "hybrid_work": "work where the work works best",
+    "benefit_friction_rule": "never give with one hand and take with the other",
+    "up_or_out": false,
+    "performance_questions": ["How is the work going?", "Where could you go from here?"],
+    "mobility": "right to explore; current manager has consultation but no silent veto",
+    "talent_cycle": ["Spot", "Assess", "Evaluate", "Recruit", "Develop", "Run"],
+    "candidate_feedback_rule": "meaningful human interaction creates duty of human conclusion/feedback",
+    "exploration_assessments": [
+      "The Unknown",
+      "The Build",
+      "The Teach",
+      "The Hand-Off",
+      "Judgment Under Trade-Offs",
+      "Critique",
+      "Prioritization",
+      "Self-Correction"
+    ],
+    "ownership_direction": "fair cash compensation + profit participation + long-duration broad employee ownership; conservatively structured ESOP or similar trust preferred",
+    "automation_principle": "automation creates capacity, not casualties",
+    "workforce_reduction_principle": "reversible levers, redeployment, retraining and leadership sacrifice precede unavoidable RIF",
+    "employee_surveillance": false
+  },
+  "technology_services": {
+    "identity": "internal product and engineering organization",
+    "product_engineering_location": "businesses",
+    "core_product_lines": [
+      "employee technology and experience",
+      "enterprise platforms",
+      "developer platform and engineering systems",
+      "cloud/compute infrastructure",
+      "enterprise AI and automation",
+      "technology architecture and supply chain",
+      "reliability/service engineering"
+    ],
+    "operating_principle": "standardize the foundation hard; keep the edges soft",
+    "restriction_burden": "IT restrictions on autonomy require a material institutional reason",
+    "shadow_it": "signal before sin",
+    "security": {
+      "doctrine": "strong security, low theater",
+      "default_response": "yes, securely",
+      "employee_surveillance": false,
+      "incident_postmortem": "blameless by default with accountability for malice or clear recklessness"
+    },
+    "ai": {
+      "architecture": "tiered local/private + Sable Harbor-hosted + frontier-model capability",
+      "governance_basis": ["data", "authority", "consequence", "capability"],
+      "agent_identity_required": true,
+      "agent_delegation": "explicit, scoped, narrowing rather than expanding"
+    }
+  },
+  "decision_doctrine": {
+    "single_accountable_owner": true,
+    "default": "judgment",
+    "decision_quality_basis": "what was reasonably knowable at the time, not outcome alone",
+    "documentation_trigger": "stakes, not habit",
+    "autonomy_rule": "autonomy does not require justification; restrictions do",
+    "meeting_default": "no meeting unless synchronous interaction has a clear purpose/owner"
+  },
+  "capital_allocation": {
+    "rhythm": ["continuous", "quarterly", "annual", "extraordinary/ad_hoc"],
+    "local_operating_capital_authority": true,
+    "corporate_surplus_capital_authority": true,
+    "allocation_basis": "durable opportunity rather than history, politics, size, or prior-year spend"
+  },
+  "planning_and_performance": {
+    "forecasts_are_promises": false,
+    "monthly_corporate_theater": false,
+    "quarterly_business_reviews": true,
+    "annual_strategy_and_capital_review": true,
+    "bad_news_timing": "immediate",
+    "common_metrics": "primarily economic/enterprise; operating measures business-specific"
+  },
+  "executive_architecture": {
+    "rings": [
+      {"name": "Authority Core", "purpose": "speed and enterprise decision rights"},
+      {"name": "Enterprise Staff / information network", "target_size": "roughly 20-40 based on information value", "purpose": "information symmetry and direct challenge"},
+      {"name": "Issue Rooms", "purpose": "temporary one-owner problem teams with all material knowledge present"}
+    ],
+    "epistemic_rule": "hierarchy sets accountability, not epistemology",
+    "j2_role": "information coherence and uncertainty context, not executive decision ownership"
+  },
+  "professional_practices": {
+    "rule": "functions own the profession; businesses own the work",
+    "practice_leaders": "conveners/stewards, not shadow executives",
+    "dual_decision_matrix": false
+  },
+  "portfolio": {
+    "default_structure": ["Sable Harbor", "business", "operating unit"],
+    "operating_group_by_default": false,
+    "business_status_test": ["coherent market/economic logic", "genuine leadership capacity", "permanence such that autonomy improves decisions"],
+    "acquisition_paths": ["integrate into existing business", "operate as a business", "incubate for learning with explicit intent"]
+  },
+  "deferred": [
+    "full Sable Harbor Management System (SHMS) doctrine — next priority",
+    "detailed failing-business intervention doctrine",
+    "detailed organic business formation/incubation doctrine",
+    "Alexandria runtime/entitlements/retention/Semaphore/Daedalus/spatial/business-finance portal implementation until CCF/technology-control architecture",
+    "exact legal entity suffix/jurisdiction/tax/SPV/intercompany implementation",
+    "unresolved named corporate leaders/titles",
+    "detailed ITGC/CCF control implementation"
+  ],
+  "publication_state": {
+    "markdown": "COMMITTED",
+    "structured": "COMMITTED",
+    "controlled_publication_pdf_or_office": "PENDING_ISSUE_88"
+  },
+  "next_priority_issue": 87,
+  "publication_closeout_issue": 88,
+  "issue_reconciliation": 89
+}
