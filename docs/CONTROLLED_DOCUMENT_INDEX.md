@@ -1,22 +1,30 @@
 # SABLE HARBOR CONTROLLED DOCUMENT INDEX
 
-**Index version:** 1.0.5 | **As of:** September 3, 2026
+**Index version:** 1.0.6 | **As of:** September 3, 2026
 
 ## Authority order
 
 1. [Corporate lore v0.3](canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md)
-2. [Decision register](canon/DECISION_REGISTER.md), [September 3 decision-register addendum](canon/DECISION_REGISTER_ADDENDUM_2026-09-03.md), [v0.3 changelog](canon/CANON_CHANGELOG_v0.3.md), and [board approval records](governance/board-records/README.md)
+2. [Decision register](canon/DECISION_REGISTER.md), [September 3 decision-register addendum](canon/DECISION_REGISTER_ADDENDUM_2026-09-03.md), [September 3 corporate headquarters closeout](canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md), [v0.3 changelog](canon/CANON_CHANGELOG_v0.3.md), and [board approval records](governance/board-records/README.md)
 3. Approved governance and J2 instruments listed below
 4. [Chat-derived J2/Alexandria canon ledger](internal/CHAT_CANON_LEDGER_J2_ALEXANDRIA.md), used to preserve originating design-session fidelity
-5. [Canon authority and publication boundaries](internal/CANON_AUTHORITY_AND_PUBLICATION_BOUNDARIES.md), used to prevent generated publications/catalogs from laundering unsupported authority
+5. [Canon authority and publication boundaries](internal/CANON_AUTHORITY_AND_PUBLICATION_BOUNDARIES.md)
 6. Structured representations and generated publications, which reconcile to their canonical Markdown source
 
-Where the September 3 addendum explicitly supersedes an OPEN or PROVISIONAL row in `DECISION_REGISTER.md` v0.3.0, the addendum controls until the next consolidated register release. Earlier versions and SUPERSEDED records remain available for history but do not silently override current material. Generated PDFs, catalogs, validators, and publication manifests do not independently create canon; they publish or index source records.
+Where a September 3 controlling source explicitly supersedes an OPEN or PROVISIONAL row in `DECISION_REGISTER.md` v0.3.0, the later controlling source governs until the next consolidated register release. Earlier versions and SUPERSEDED records remain available for history but do not silently override current material.
+
+## September 3 headquarters closeout
+
+- [Corporate headquarters closeout](canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md) — ESS, OGC, Risk & Compliance, Finance, People & Culture, Technology Services, decision/autonomy doctrine, capital/planning rhythm, executive architecture, professional practices, portfolio architecture, and Sacramento headquarters physical doctrine
+- [Structured headquarters closeout record](structured/corporate_headquarters_closeout_2026-09-03.json)
+- GitHub issue #87 — SHMS is the deliberate next-priority development thread
+- GitHub issue #88 — complete controlled PDF/office publications, manifests/checksums, and canonical headquarters-image ingestion under the three-representation rule
+- GitHub issue #89 — reconcile historical OPEN issue state to September 3 canon
 
 ## Repository maintenance and post-merge hygiene
 
-- [Maintainer rules](../MAINTAINERS.md) — repository operating rules for canon, generated artifacts, validation, issue hygiene, and public safety
-- [Open canon and hygiene issue index](internal/OPEN_CANON_AND_HYGIENE_ISSUE_INDEX.md) — issue navigation, not a decision register
+- [Maintainer rules](../MAINTAINERS.md)
+- [Open canon and hygiene issue index](internal/OPEN_CANON_AND_HYGIENE_ISSUE_INDEX.md)
 - [Canon v0.3 / CCF-J2-Alexandria release notes](internal/RELEASE_NOTES_canon-v0.3-ccf-j2-alexandria.md)
 - [Post-merge hygiene status v0.3.1](internal/POST_MERGE_HYGIENE_STATUS_v0.3.1.md)
 
@@ -24,7 +32,7 @@ Where the September 3 addendum explicitly supersedes an OPEN or PROVISIONAL row 
 
 - [Board and capital governance](governance/BOARD_AND_CAPITAL_GOVERNANCE.md)
 - [Board evolution, 2016–2026](governance/BOARD_EVOLUTION_2016_2026.md)
-- [Board approval records and September 2 artifact-list exhibits](governance/board-records/README.md) and [structured board approval register](governance/structured/board_approval_records.json)
+- [Board approval records](governance/board-records/README.md) and [structured board approval register](governance/structured/board_approval_records.json)
 - [Governance constitution](governance/GOVERNANCE_CONSTITUTION.md)
 - [Enterprise Support Services and independence doctrine](governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md)
 - [Five committee charters](governance/committees/README.md)
@@ -63,7 +71,7 @@ Where the September 3 addendum explicitly supersedes an OPEN or PROVISIONAL row 
 - [CCF foundation index](controls/CCF_FOUNDATION_BUILD_INDEX_v0.1.md)
 - [CCF governance/J2 integration](controls/CCF_GOVERNANCE_J2_INTEGRATION_v0.1.md)
 - [Organization package](organization/README.md)
-- [Wiki source](wiki/README.md) — source only; no claim that GitHub Wiki is enabled
+- [Wiki source](wiki/README.md)
 
 ## Historical and superseded governance records
 
