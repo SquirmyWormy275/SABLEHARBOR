@@ -1,6 +1,6 @@
 # SABLE HARBOR CONTROLLED DOCUMENT INDEX
 
-**Index version:** 1.0.7 | **As of:** September 3, 2026
+**Index version:** 1.0.8 | **As of:** September 3, 2026
 
 ## Authority order
 
@@ -21,9 +21,10 @@ Where a September 3 controlling source explicitly supersedes an OPEN or PROVISIO
 - [Enterprise authority, capital, and executive rhythm](governance/ENTERPRISE_AUTHORITY_CAPITAL_AND_EXECUTIVE_RHYTHM.md)
 - [SHMS development framework](governance/SABLE_HARBOR_MANAGEMENT_SYSTEM_FRAMEWORK.md) — **NEXT PRIORITY / NOT YET CANON**
 - [Structured headquarters closeout record](structured/corporate_headquarters_closeout_2026-09-03.json)
+- [Canonical Sacramento headquarters image manifest](../assets/headquarters/CANONICAL_HEADQUARTERS_IMAGE_MANIFEST.md) — approved reference identified by SHA-256; binary ingestion pending
 - GitHub issue #87 — SHMS is the deliberate next-priority development thread
-- GitHub issue #88 — complete controlled PDF/office publications, manifests/checksums, and canonical headquarters-image ingestion under the three-representation rule
-- GitHub issue #89 — reconcile historical OPEN issue state to September 3 canon
+- GitHub issue #88 — complete controlled PDF/office publications, manifests/checksums, and canonical headquarters-image binary ingestion under the three-representation rule
+- GitHub issue #89 — CLOSED after historical OPEN issue-state reconciliation
 
 ## Repository maintenance and post-merge hygiene
 
