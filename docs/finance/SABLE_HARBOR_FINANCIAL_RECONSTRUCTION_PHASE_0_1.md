@@ -22,8 +22,9 @@ $27–34B high-performing enterprise**. Its cash compensation and benefits alone
 **$6.5–7.5B**; people plus ordinary work enablement would likely cost **$7.5–9.0B** annually. It
 would require a large multi-asset mining portfolio and a major regional or national logistics estate,
 not the single Red Wash mine and acquired operator currently described. In short, the present story
-reads like a complex, well-funded, subscale-to-middle-market group; 47,000 employees reads like a
-different industrial company.
+reads like a complex, well-funded, middle-market group. A separately modeled canon-congruent
+reference has **5,000 employees and $2.3B revenue**; 47,000 employees reads like a different
+industrial company.
 
 PR #9 does not solve this conflict. Its 708 employees and $178.6M revenue are `MODEL_PROPOSED`; the
 older 426-person/$124.5M model is `LEGACY_CALIBRATION`. Both predate the September 3 corporate
@@ -284,8 +285,8 @@ hosted/private compute and frontier usage; architecture/supply-chain; service an
 | **Total** | **$0.9–1.8B** | `SUPPORTED ESTIMATE`; 4–8% of healthy-case revenue. |
 
 The upper range is justified only if the enterprise truly operates the data/AI fabric described at
-global scale. At a canon-congruent 1,000–3,000 employees, the same doctrine could be delivered for
-roughly $35–120M annually, with many platforms purchased rather than built.
+global scale. The 5,000-person canon-congruent reference carries approximately $115M annually, with
+many platforms purchased rather than built.
 
 ## 7. Facilities and headquarters
 
@@ -331,8 +332,8 @@ The central equation is:
 
 For the illustrative 47K mix, all-in people-enabled cost is about $8.1B. Adding nonlabor mine/rail
 operations, energy/fuel/materials, enterprise technology not already in role loads, insurance,
-facilities, professional fees and target EBITDA yields $5.9B–$13.2B of gross profit depending on
-case. At blended gross margins of 38–44%, required revenue is $15.5B–$30.0B.
+facilities, professional fees and target EBITDA yields $5.27B–$15.83B of gross profit depending on
+case. At blended gross margins of 34–53%, required revenue is $15.5B–$30.0B.
 
 ## 10. Three diagnostic scale cases
 
@@ -341,7 +342,7 @@ USD billions except headcount and per-employee amounts.
 | Measure | Case A — minimum survival | Case B — healthy | Case C — high performance |
 |---|---:|---:|---:|
 | Revenue | $15.50 | $22.00 | $30.00 |
-| Gross profit | 5.90 (38.1%) | 9.00 (40.9%) | 13.20 (44.0%) |
+| Gross profit | 5.27 (34.0%) | 9.71 (44.1%) | 15.83 (52.8%) |
 | EBITDA | 0.45 (2.9%) | 2.20 (10.0%) | 4.80 (16.0%) |
 | EBIT | (0.25) | 1.25 | 3.65 |
 | Net income | (0.35) | 0.68 | 2.35 |
@@ -350,7 +351,7 @@ USD billions except headcount and per-employee amounts.
 | Free cash flow | **(0.45)** | **0.45** | **2.35** |
 | Headcount | 47,000 | 47,000 | 47,000 |
 | Revenue / employee | $330K | $468K | $638K |
-| Gross profit / employee | $126K | $191K | $281K |
+| Gross profit / employee | $112K | $207K | $337K |
 | EBITDA / employee | $10K | $47K | $102K |
 | Cash compensation + benefits | $6.65 | $6.90 | $7.30 |
 | Corporate recurring cost | $0.80 | $0.95 | $1.10 |
@@ -377,6 +378,21 @@ of the stated culture and reinvestment philosophy. Case C requires excellent sof
 rail efficiency, commodity execution, professional-services utilization and capital discipline
 simultaneously.
 
+### Canon-congruent reference—not a fourth 47K case
+
+To avoid leaving only the giant-company answer, the executable model also provides a separate
+`PROVISIONAL ASSUMPTION` reference for the organization the narrative currently appears to describe:
+5,000 employees, $2.3B revenue, $1.094B gross profit, $250M EBITDA, $115M EBIT, $50M net income,
+$225M operating cash flow, $190M capex and $35M free cash flow. It assigns 1,350 people to Foundry
+Field, 75 Willow, 225 Atlas, 550 Pale Sun/Red Wash, 75 Cradle, 1,750 ARU/BS&T, 375 Advisory, 363
+other corporate/ESS and 237 J2.
+
+This reference is economically possible but still tight: J2 costs about $82M, technology about
+$115M, and total people-enabled cost about $960M. It is much more consistent with one mine, a
+regional logistics operator, a scaled industrial-software business, and an emerging advisory line
+than 47,000 employees. It should replace the earlier 1,000–3,000 shorthand as the preferred modeling
+envelope unless management chooses to expand the asset narrative.
+
 Illustrative healthy-case debt of $4–7B would imply 1.8–3.2× debt/EBITDA. At a 6.5–8.0% cash rate,
 interest would be about $260–560M and EBIT interest coverage about 2.2–4.8×. These are `SCENARIO`
 sensitivities only: current debt principal, rates and covenants are `OPEN`.
@@ -401,7 +417,7 @@ sensitivities only: current debt principal, rates and covenants are `OPEN`.
 | Interest coverage | 2.2–4.8× scenario | Lower end leaves limited cycle resilience. |
 | Consolidated ROIC | Not measurable | Invested capital/acquisition prices and asset values are open. |
 | Revenue concentration | Not measurable | Customer/offtake/freight populations are open. |
-| Overhead absorption | $0.95B corporate / $9.0B GP = 10.6% | Manageable in Case B; catastrophic in PR #9 model. |
+| Overhead absorption | $0.95B corporate / $9.71B GP = 9.8% | Manageable in Case B; catastrophic in PR #9 model. |
 
 ## 12. Organizational overbuild findings
 
@@ -474,7 +490,7 @@ That capital is insufficient by itself to create the 47K estate implied above.
 
 1. **What is the intended 2026 scale: hundreds, low thousands, or approximately 47,000 employees?**
    Evidence: canon leaves total open; prior noncanon work says 708. Recommendation: select a
-   canon-congruent **1,000–3,000 employee planning envelope** unless the user intends to add a major
+   canon-congruent **approximately 5,000-employee / $2–3B planning envelope** unless the user intends to add a major
    mining/logistics portfolio. Sensitivity: every 1,000 employees adds roughly $140–230M of all-in
    people cost; 47K requires roughly $15–30B revenue.
 2. **What are Red Wash's physical model and acquisition terms?** At minimum: reserve/resource basis,
