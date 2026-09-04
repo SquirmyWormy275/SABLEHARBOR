@@ -13,7 +13,7 @@ Current authority remains in `docs/canon/DECISION_REGISTER.md`, September 3 cont
 | #18 | Exact legal entity implementation mechanics | OPEN |
 | #44 | Finance portal source boundaries | DEFERRED with Alexandria implementation cluster |
 
-Resolved September 3: #17 Internal Audit operating model and #20 Orientation ranks/former-officer board eligibility are CLOSED by controlling canon.
+Resolved September 3: #17 Internal Audit operating model and #20 Orientation ranks/board eligibility are CLOSED by controlling canon.
 
 ## J2 and Alexandria
 
@@ -36,7 +36,6 @@ The September 3 decision is to preserve Alexandria as an **access fabric** conce
 |---:|---|---|
 | #87 | Develop Sable Harbor Management System (SHMS) | **NEXT PRIORITY** |
 | #88 | Generate controlled publications and ingest canonical Sacramento HQ image | CLOSEOUT |
-| #89 | Reconcile historical issue states to September 3 canon | CLOSEOUT |
 
 SHMS drafting must begin with canon extraction/archaeology, not generic management-system prose. Detailed failing-business intervention and organic new-business formation/incubation are deliberately parked until later.
 
@@ -63,9 +62,9 @@ SHMS drafting must begin with canon extraction/archaeology, not generic manageme
 | Issue | Topic | Current state |
 |---:|---|---|
 | #31 | Root navigation and maintainer entry-point review | OPEN |
-| #42 | Release notes for canon v0.3 CCF/J2/Alexandria | Previously addressed; verify close state |
 | #49 | Preserve PR #16 implementation audit trail | OPEN |
-| #53 | Commit post-merge maintainer rules | Previously addressed; verify close state |
+
+Issues #42 and #53 are already CLOSED and therefore omitted from remaining-work tables.
 
 ## Business/audit implementation
 
