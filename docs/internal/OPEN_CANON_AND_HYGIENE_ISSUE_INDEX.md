@@ -45,16 +45,15 @@ SHMS drafting must begin with canon extraction/archaeology, not generic manageme
 |---:|---|---|
 | #9 | Enterprise financial data platform v0.1 | OPEN / REVIEW BLOCKED — substantive engineering work remains |
 | #10 | Enterprise/auditable business-line dossiers | CLOSED AS SUPERSEDED by later PR #13; branch retained pending branch-retirement capability |
-| #13 | Enterprise portal, dossiers, and repo hygiene | OPEN / RECONCILIATION REQUIRED — useful unique work remains, but branch is materially behind current `main` and must not overwrite September 3 canon |
+| #13 | Enterprise portal, dossiers, and repo hygiene | OPEN DRAFT / RECONCILIATION REQUIRED — useful unique work remains, but branch materially predates current `main` and must not overwrite September 3 canon |
 
 ## Repository operations
 
 | Issue | Topic | Current state |
 |---:|---|---|
-| #11 | Repository administration: Wiki, main protection, branch retirement | OPEN administration; Wiki now enabled, branch retirement still pending |
-| #50 | Archive merged PR branch after tag | Requires branch-deletion/local Git capability not exposed by current connector |
+| #11 | Repository administration: main protection and branch retirement | OPEN administration; Wiki now enabled, PR cleanup partially complete, branch retirement/settings work remains |
 
-Alexandria boundary issue #85 is RESOLVED and CLOSED after coordinated public/private migration and PR #86 merge.
+Issues #26 and #50 are already CLOSED; #50 is a duplicate of #26. Alexandria boundary issue #85 is RESOLVED and CLOSED after coordinated public/private migration and PR #86 merge.
 
 ## Generated artifacts and publication hygiene
 
