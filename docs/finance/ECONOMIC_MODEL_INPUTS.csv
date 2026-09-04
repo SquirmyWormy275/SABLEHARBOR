@@ -1,0 +1,19 @@
+input_id,section,item,case_or_population,value_low,value_base,value_high,unit,evidence_class,source_or_basis,notes
+HC-001,workforce,Enterprise employees,current_canon,237,237,237,billets,LOCKED,DECISION_REGISTER_ADDENDUM_2026-09-03 J2-006A,Only quantified establishment; not total enterprise headcount
+HC-002,workforce,Enterprise employees,47k_diagnostic,47000,47000,47000,employees,SCENARIO,User-directed reality test,Not supported as actual by current canon
+LAB-001,labor,Annual wage and cash incentive,software_product,135000,150000,180000,USD_per_employee,SUPPORTED ESTIMATE,BLS OEWS May 2025 plus industrial software premium,Excludes benefits and work enablement
+LAB-002,labor,Annual wage and cash incentive,mine_operations,70000,85000,105000,USD_per_employee,SUPPORTED ESTIMATE,BLS OEWS and underground operating mix,Includes shift and overtime blend
+LAB-003,labor,Annual wage and cash incentive,rail_logistics,65000,78000,95000,USD_per_employee,SUPPORTED ESTIMATE,BLS OEWS and union transportation mix,Includes shift and overtime blend
+LAB-004,labor,Annual wage and cash incentive,advisory,120000,140000,175000,USD_per_employee,SUPPORTED ESTIMATE,BLS management analyst and professional-services mix,Excludes benefits
+LAB-005,labor,Annual wage and cash incentive,corporate,125000,145000,180000,USD_per_employee,SUPPORTED ESTIMATE,BLS functional occupation mix,Excludes benefits
+LAB-006,labor,Annual wage and cash incentive,j2,135000,155000,190000,USD_per_employee,SUPPORTED ESTIMATE,Role-weighted specialist estimate,Excludes benefits and mission support
+LAB-007,labor,Benefit and statutory load,private_industry,28,31,42,percent_of_wage,SUPPORTED ESTIMATE,BLS ECEC March 2026,Upper bound reflects industrial union and rich-benefit populations
+LAB-008,labor,47k cash compensation and benefits,47k_diagnostic,6100,6900,7500,USD_millions,DERIVED,Role mix times wage and benefit assumptions,Base includes healthy profit participation and overtime mix; excludes work enablement and contractors
+LAB-009,labor,47k all-in people-enabled cost,47k_diagnostic,7500,8056,9000,USD_millions,DERIVED,Population-specific loaded cost model,Includes equipment software travel training and workplace allocation
+J2-001,corporate,J2 recurring annual cost,47k_diagnostic,90,110,145,USD_millions,SUPPORTED ESTIMATE,237 billets plus mission support,Includes rich support travel education research and allocated technology
+TECH-001,technology,Enterprise technology expense,47k_diagnostic,900,1200,1800,USD_millions,SUPPORTED ESTIMATE,Bottom-up endpoint platform cloud security data and AI envelope,Includes technology labor so avoid double counting
+HQ-001,facilities,Sacramento HQ development cost,owned_scenario,1000,1600,2300,USD_millions,SCENARIO,1.2-2.5m square feet campus envelope times development cost,Ownership and size are not canon
+HQ-002,facilities,Sacramento HQ recurring occupancy cost,47k_diagnostic,100,155,220,USD_millions,SUPPORTED ESTIMATE,Utilities maintenance security tax insurance and lifecycle reserve,Financing structure remains open
+CASE-A,scale_case,Revenue,minimum_survival,14500,15500,17000,USD_millions,SCENARIO,Reverse-solved mixed business economics,Not canon
+CASE-B,scale_case,Revenue,healthy,20000,22000,25000,USD_millions,SCENARIO,Reverse-solved mixed business economics,Not canon
+CASE-C,scale_case,Revenue,high_performance,27000,30000,34000,USD_millions,SCENARIO,Reverse-solved mixed business economics,Not canon
