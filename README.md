@@ -15,59 +15,72 @@ It is modeled as a company that would exist independently of any audit or benchm
 - **OPEN** — unresolved and not to be silently invented;
 - **SUPERSEDED** — preserved prior direction that no longer controls current canon.
 
-## Corporate lore v0.3
+## Current canon
 
-The controlling September 2-3, 2026 layer is [`SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md`](docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md), which preserves v0.2 and integrates the 2026 board, capital, governance constitution, J2, and Alexandria. The [decision register](docs/canon/DECISION_REGISTER.md), [v0.3 changelog](docs/canon/CANON_CHANGELOG_v0.3.md), [board approval records](docs/governance/board-records/README.md), and [chat-derived J2/Alexandria canon ledger](docs/internal/CHAT_CANON_LEDGER_J2_ALEXANDRIA.md) carry fact state, ratification, and supersession.
+The controlling September 2–3, 2026 layer begins with [`SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md`](docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md) and is extended by the [decision register](docs/canon/DECISION_REGISTER.md), [September 3 decision-register addendum](docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-03.md), [corporate headquarters closeout](docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md), [v0.3 changelog](docs/canon/CANON_CHANGELOG_v0.3.md), and [board approval records](docs/governance/board-records/README.md).
 
-Inherited canon and provenance records remain available:
+The September 3 headquarters closeout locks the ESS umbrella, Internal Audit independence, J2 establishment, Orientation selection/tenure, People & Culture doctrine, Enterprise Technology Services doctrine, authority/capital/planning/executive rhythm, professional-practice model, portfolio architecture, and Sacramento headquarters physical direction. The [SHMS framework](docs/governance/SABLE_HARBOR_MANAGEMENT_SYSTEM_FRAMEWORK.md) is explicitly the **next-priority development thread** and is not yet completed doctrine.
 
-- [`docs/canon/SABLE_HARBOR_CANONICAL_ARCHITECTURE_HANDOVER.md`](docs/canon/SABLE_HARBOR_CANONICAL_ARCHITECTURE_HANDOVER.md) — preserved inherited canon and operating instructions.
-- [`docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.2.md`](docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.2.md) — complete reconciled corporate lore through August 31, 2026.
-- [`docs/canon/SABLE_HARBOR_CONTINUITY_AUDIT_v0.2.md`](docs/canon/SABLE_HARBOR_CONTINUITY_AUDIT_v0.2.md) — Blackridge and timeline continuity review.
-- [`docs/canon/CANON_CHANGELOG_v0.2.md`](docs/canon/CANON_CHANGELOG_v0.2.md) — explicit inherited-canon clarifications and supersessions.
-- [`docs/canon/DECISION_REGISTER.md`](docs/canon/DECISION_REGISTER.md) — LOCKED, PROVISIONAL, OPEN, and SUPERSEDED decision index.
+Inherited canon and provenance remain available as history:
 
-## Governance, J2, Alexandria, and controls
+- [`docs/canon/SABLE_HARBOR_CANONICAL_ARCHITECTURE_HANDOVER.md`](docs/canon/SABLE_HARBOR_CANONICAL_ARCHITECTURE_HANDOVER.md)
+- [`docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.2.md`](docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.2.md)
+- [`docs/canon/SABLE_HARBOR_CONTINUITY_AUDIT_v0.2.md`](docs/canon/SABLE_HARBOR_CONTINUITY_AUDIT_v0.2.md)
+- [`docs/canon/CANON_CHANGELOG_v0.2.md`](docs/canon/CANON_CHANGELOG_v0.2.md)
+
+Historical branch names are provenance only; they are not current work instructions or authority.
+
+## Governance, headquarters, J2, Alexandria, and controls
 
 - [Controlled document index](docs/CONTROLLED_DOCUMENT_INDEX.md)
+- [Corporate headquarters closeout](docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md)
 - [Governance package](docs/governance/README.md)
+- [People & Culture doctrine](docs/governance/PEOPLE_AND_CULTURE_DOCTRINE.md)
+- [Enterprise Technology Services doctrine](docs/governance/ENTERPRISE_TECHNOLOGY_SERVICES_DOCTRINE.md)
+- [Enterprise authority, capital, and executive rhythm](docs/governance/ENTERPRISE_AUTHORITY_CAPITAL_AND_EXECUTIVE_RHYTHM.md)
 - [J2 package](docs/j2/README.md)
 - [Alexandria package](docs/j2/alexandria/README.md)
 - [Common Controls Framework index](docs/controls/CCF_FOUNDATION_BUILD_INDEX_v0.1.md)
 - [Open canon and hygiene issue index](docs/internal/OPEN_CANON_AND_HYGIENE_ISSUE_INDEX.md)
-- [Canon v0.3 release notes](docs/internal/RELEASE_NOTES_canon-v0.3-ccf-j2-alexandria.md)
 
 ## Organization at a glance
 
-This is the canon-derived August 31, 2026 **functional enterprise organization chart**. It shows company-wide authorities, operating lines, named leaders and known ownership/component relationships. Exact HR reporting lines and final legal entities remain deliberately open.
+The existing rendered organization package remains a useful August 31 baseline, but September 3 canon adds a stronger institutional architecture:
+
+- **Board / CEO** — enterprise authority;
+- **operating businesses** — end-to-end business authority inside enterprise boundaries;
+- **Enterprise Support Services (ESS)** — administrative umbrella for enterprise support functions, led administratively rather than as a super-executive command chain;
+- **J2** — distinct Judgment & Junction institution outside ESS;
+- **Internal Audit** — functionally independent to the Board Audit & Compliance Committee;
+- **professional practices** — horizontal standards/profession stewardship without dual operating authority.
 
 [![Sable Harbor enterprise organization chart](docs/organization/assets/enterprise-organization-2026.svg)](docs/organization/README.md)
 
-The full package contains dedicated charts for [leadership and authority](docs/organization/2026_LEADERSHIP_AND_AUTHORITY_MAP.md), [Foundry Field](docs/organization/FOUNDRY_FIELD_ORGANIZATION.md), [Project Willow](docs/organization/WILLOW_ORGANIZATION.md), [Atlas Meridian](docs/organization/ATLAS_MERIDIAN_BRIDGE_ORGANIZATION.md), [Pale Sun and Red Wash](docs/organization/PALE_SUN_RED_WASH_ORGANIZATION.md), [Project Cradle](docs/organization/PROJECT_CRADLE_ORGANIZATION.md), [ARU and BS&T](docs/organization/ARU_BST_ORGANIZATION.md), and [the Original Eight](docs/organization/ORIGINAL_EIGHT.md).
+The organization charts should be refreshed in a later rendering pass to reflect the September 3 headquarters model without inventing unnamed leaders.
+
+## Headquarters
+
+Sable Harbor headquarters is in **Sacramento, California**. The canonical physical direction is a beautiful, formidable long-duration research/industrial campus rather than a conventional glass tower or gaudy corporate palace. The approved September 3 exterior reference is identified in the headquarters closeout and structured register; repository ingestion of the binary image and controlled publication package is tracked as closeout work.
 
 ## Blackridge status
 
-Blackridge remains the upstream founding wound and a separate executable case universe. The current connected repository branches expose only limited Blackridge scaffolding; the complete detailed Blackridge build must be imported and rechecked before it replaces the handover summary as the controlling source.
+Blackridge remains the upstream founding wound and a separate executable case universe. The public/private scenario boundary and Alexandria Control migration are tracked separately; repository architecture work must not rewrite Blackridge or corporate canon merely for implementation convenience.
 
 ## Quantitative operating model
 
-The prior `architecture/corporate-operating-model-v0.1` branch is a noncontrolling first-pass draft. It must be revised in a separate workstream to account for Willow, Red Wash/Pale Sun, Project Cradle, American Resource Utility, the Blood, Sweat & Tears Railway, emerging Advisory, and Emberline's historical status.
+A prior `architecture/corporate-operating-model-v0.1` branch remains historical/noncontrolling. September 3 canon now establishes several **institutional design points** that supersede the old blanket statement that all headquarters/headcount architecture is open, including the 237-billet J2 establishment and the headquarters/ESS/People & Culture/Technology/authority model.
 
-No 2026 headcount, revenue, funding, office, legal-entity, reporting-line, or product-P&L value is locked by the corporate-lore branch.
+Exact enterprise-wide 2026 total headcount, revenue, product P&Ls, detailed legal suffix/jurisdiction mechanics, and some named leadership details remain open unless separately controlled elsewhere.
 
 ## Public repository and wiki
 
-Repository policy supports a browsable institutional archive and a GitHub wiki presentation layer. The wiki implementation remains OPEN; this README does not claim a live wiki exists.
+Repository policy supports a browsable institutional archive and a GitHub wiki presentation layer. Repository administration and wiki publication remain tracked work; this README does not claim a live wiki unless repository settings and publication evidence show one.
 
-The versioned documents under `docs/canon/` remain the controlling source of truth. The wiki is a public-facing reference and navigation layer; it may summarize canon, but it does not independently create or change canon.
+The versioned documents under `docs/canon/` and the controlled document index remain the controlling source of truth. The wiki is a presentation/navigation layer and does not independently create canon.
 
-There will be **no standalone Easter-egg index, decoder, or exhaustive explanation page**. Easter eggs remain embedded in the history, names, artifacts, and operating lore for readers to encounter naturally.
+There is **no standalone Easter-egg index, decoder, or exhaustive explanation page**. Hidden benchmark truth, evaluation oracles, credentials, unreleased scenario answers, and other material whose value depends on nonpublic access must not be committed to the public repository or wiki.
 
-Hidden benchmark truth, evaluation oracles, credentials, unreleased scenario answers, and other material whose value depends on nonpublic access must not be committed to this public repository or published in the wiki.
-
-Private evaluator control-plane materials live in `SABLEHARBOR-ALEXANDRIA-CONTROL`; see the
-[Alexandria Control boundary](docs/internal/ALEXANDRIA_CONTROL_BOUNDARY.md). This repository remains
-the observable in-world surface and does not expose that private repository's contents.
+Private evaluator control-plane materials live in `SABLEHARBOR-ALEXANDRIA-CONTROL`; see the [Alexandria Control boundary](docs/internal/ALEXANDRIA_CONTROL_BOUNDARY.md). This repository remains the observable in-world surface and does not expose that private repository's contents.
 
 See [`docs/governance/PUBLIC_REPOSITORY_AND_WIKI_POLICY.md`](docs/governance/PUBLIC_REPOSITORY_AND_WIKI_POLICY.md).
 
