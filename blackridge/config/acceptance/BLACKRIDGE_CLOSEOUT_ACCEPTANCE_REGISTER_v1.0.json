@@ -316,11 +316,11 @@
     },
     {
       "gate_id": "BRG-G080",
-      "workstream": "oracle",
-      "requirement": "Create a private oracle repository or equivalently controlled private storage boundary.",
+      "workstream": "alexandria_control",
+      "requirement": "Create a private Alexandria Control repository or equivalently controlled private storage boundary.",
       "priority": "P0",
       "evidence": [
-        "oracle_repository_record.json",
+        "alexandria_control_repository_record.json",
         "public_private_boundary.md"
       ],
       "classification": "public_metadata_private_content",
@@ -331,12 +331,12 @@
     },
     {
       "gate_id": "BRG-G081",
-      "workstream": "oracle",
+      "workstream": "alexandria_control",
       "requirement": "Model hidden physical truth, actor knowledge states, causal graph, intervention outcomes, and scoring data.",
       "priority": "P1",
       "evidence": [
-        "oracle_manifest.json",
-        "oracle_validation.json"
+        "alexandria_control_manifest.json",
+        "alexandria_control_validation.json"
       ],
       "classification": "private",
       "depends_on": [
@@ -347,11 +347,11 @@
     },
     {
       "gate_id": "BRG-G082",
-      "workstream": "oracle",
-      "requirement": "Prove public code, Git history, workbooks, archives, and releases do not leak oracle data.",
+      "workstream": "alexandria_control",
+      "requirement": "Prove public code, Git history, workbooks, archives, and releases do not leak private evaluator data.",
       "priority": "P0",
       "evidence": [
-        "oracle_leakage_scan.json"
+        "alexandria_control_boundary_scan.json"
       ],
       "classification": "public_summary_private_detail",
       "depends_on": [

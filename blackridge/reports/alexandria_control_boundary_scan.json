@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "scope": ["public working tree", "public generated workbook", "public database schema"],
+  "restricted_fingerprints_found": 0,
+  "private_repository": "SquirmyWormy275/SABLEHARBOR-ALEXANDRIA-CONTROL",
+  "private_repository_visibility": "PRIVATE"
+}

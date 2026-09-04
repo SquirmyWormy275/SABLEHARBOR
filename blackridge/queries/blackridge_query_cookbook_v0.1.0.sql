@@ -67,7 +67,7 @@ SELECT b.canonical_id budget,a.amount_minor actual_minor,b.amount_minor budget_m
 -- Q22: Run Phase 4 impairment and sensitivity inputs.
 SELECT valuation_date,case_name,npv_minor,irr_bps,carrying_minor,recoverable_minor,impairment_minor FROM phase4_valuation;
 
--- Q23: Show causal precursors without oracle truth fields.
+-- Q23: Summarize observable event transitions by domain before a selected cutoff.
 SELECT domain,state_from,state_to,COUNT(*) events,SUM(quantity_milli) quantity_milli FROM event_ledger WHERE event_at<'2015-10-06T00:00:00+00:00' GROUP BY domain,state_from,state_to ORDER BY domain;
 
 -- Q24: Prove physical material metal and fuel conservation.

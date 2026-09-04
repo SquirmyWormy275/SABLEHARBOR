@@ -479,7 +479,7 @@ def populate_finance(db: sqlite3.Connection, target_lines: int) -> None:
         "INSERT INTO phase4_valuation VALUES(?,?,?,?,?,?,?,?,?)",
         (
             "2015-12-31",
-            "revised_correlated_downside",
+            "q4_management_valuation_case",
             287_900_000_00,
             1200,
             132_700_000_00,
@@ -742,7 +742,9 @@ def validate(path: Path) -> dict[str, object]:
     ).fetchone()[0]
     impairment = db.execute("SELECT impairment_minor FROM phase4_valuation").fetchone()[0]
     leakage = db.execute(
-        "SELECT COUNT(*) FROM sqlite_master WHERE lower(sql) LIKE '%true_root_cause%' OR lower(name) LIKE '%oracle%'"
+        "SELECT COUNT(*) FROM sqlite_master WHERE lower(sql) LIKE '%true_root_cause%' "
+        "OR lower(sql) LIKE '%evaluator_answer%' OR lower(name) LIKE '%hidden_physical_state%' "
+        "OR lower(name) LIKE '%actor_epistemic_state%' OR lower(name) LIKE '%causal_edge%'"
     ).fetchone()[0]
     conservation_failures = db.execute(
         "SELECT COUNT(*) FROM conservation_balance WHERE ABS(opening_milli+inflow_milli-outflow_milli-closing_milli)>tolerance_milli"
@@ -795,7 +797,7 @@ def validate(path: Path) -> dict[str, object]:
         "foreign_keys": not fk,
         "journals_balanced": unbalanced == 0,
         "impairment_derived": 50_000_000_00 <= impairment <= 54_000_000_00,
-        "oracle_leakage": leakage == 0,
+        "private_control_leakage": leakage == 0,
         "physical_conservation": conservation_failures == 0,
         "subledgers_reconcile": subledger_failures == 0,
         "resource_exclusivity": overlaps == 0,

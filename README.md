@@ -80,6 +80,8 @@ The versioned documents under `docs/canon/` and the controlled document index re
 
 There is **no standalone Easter-egg index, decoder, or exhaustive explanation page**. Hidden benchmark truth, evaluation oracles, credentials, unreleased scenario answers, and other material whose value depends on nonpublic access must not be committed to the public repository or wiki.
 
+Private evaluator control-plane materials live in `SABLEHARBOR-ALEXANDRIA-CONTROL`; see the [Alexandria Control boundary](docs/internal/ALEXANDRIA_CONTROL_BOUNDARY.md). This repository remains the observable in-world surface and does not expose that private repository's contents.
+
 See [`docs/governance/PUBLIC_REPOSITORY_AND_WIKI_POLICY.md`](docs/governance/PUBLIC_REPOSITORY_AND_WIKI_POLICY.md).
 
 ## Separation from NAILEX

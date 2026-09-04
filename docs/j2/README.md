@@ -6,7 +6,6 @@ J2 is Sable Harbor's internal intelligence, judgment, orientation, education, an
 
 - [Charter](J2_CHARTER.md)
 - [Headquarters doctrine](J2_HEADQUARTERS.md)
-- [Canonical establishment](J2_ESTABLISHMENT.md)
 - [Operating model](J2_OPERATING_MODEL.md)
 - [Contact](CONTACT.md) and [collection management](CONTACT_COLLECTION_MANAGEMENT.md)
 - [Judgment](JUDGMENT.md) and the [Judgment Officer profession](JUDGMENT_OFFICER_PROFESSION.md)
@@ -19,4 +18,4 @@ J2 is Sable Harbor's internal intelligence, judgment, orientation, education, an
 - Controlled PDFs: [publications](publications/)
 - Phase 2 source-to-doctrine coverage: [`../internal/COVERAGE_AUDIT_PHASE2.md`](../internal/COVERAGE_AUDIT_PHASE2.md)
 
-Canonical corporate integration is in `docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md`; governance doctrine is under `docs/governance/`. ESS and Internal Audit independence are controlled by [`../governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md`](../governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md). Approved J2 identity assets remain under `assets/brand/`.
+Canonical corporate integration is in `docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md`; governance doctrine is under `docs/governance/`. Approved J2 identity assets remain under `assets/brand/`.

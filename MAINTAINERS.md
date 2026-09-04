@@ -93,6 +93,8 @@ Do not commit:
 - material whose value depends on remaining outside the public Sable Harbor archive.
 
 Fictional public content must remain distinguishable from private assessment material.
+Private evaluator material belongs in `SABLEHARBOR-ALEXANDRIA-CONTROL`. Public references may name
+that repository and its purpose, version, or checksum, but must not describe its hidden payloads.
 
 ## Board records and approvals
 

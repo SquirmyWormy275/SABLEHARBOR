@@ -1,6 +1,6 @@
 # SABLE HARBOR CONTROLLED DOCUMENT INDEX
 
-**Index version:** 1.0.8 | **As of:** September 3, 2026
+**Index version:** 1.0.9 | **As of:** September 3, 2026
 
 ## Authority order
 
@@ -32,6 +32,8 @@ Where a September 3 controlling source explicitly supersedes an OPEN or PROVISIO
 - [Open canon and hygiene issue index](internal/OPEN_CANON_AND_HYGIENE_ISSUE_INDEX.md)
 - [Canon v0.3 / CCF-J2-Alexandria release notes](internal/RELEASE_NOTES_canon-v0.3-ccf-j2-alexandria.md)
 - [Post-merge hygiene status v0.3.1](internal/POST_MERGE_HYGIENE_STATUS_v0.3.1.md)
+- [Alexandria Control public/private boundary](internal/ALEXANDRIA_CONTROL_BOUNDARY.md)
+- [Alexandria Control migration review](internal/ALEXANDRIA_CONTROL_MIGRATION_REVIEW_2026-09-03.md)
 
 ## Governance
 
