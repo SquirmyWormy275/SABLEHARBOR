@@ -30,8 +30,6 @@ Resolved September 3: #17 Internal Audit operating model and #20 Orientation ran
 
 The September 3 decision is to preserve Alexandria as an **access fabric** conceptually and avoid duplicating CCF/technology-policy design prematurely.
 
-The Alexandria Control repository migration/public-private scenario boundary is complete: public PR #86 and private `SABLEHARBOR-ALEXANDRIA-CONTROL` PR #1 are merged; issue #85 is CLOSED.
-
 ## September 3 corporate-headquarters continuation
 
 | Issue | Topic | Current state |
@@ -41,12 +39,22 @@ The Alexandria Control repository migration/public-private scenario boundary is 
 
 SHMS drafting must begin with canon extraction/archaeology, not generic management-system prose. Detailed failing-business intervention and organic new-business formation/incubation are deliberately parked until later.
 
+## Pull-request disposition
+
+| PR | Topic | Current state |
+|---:|---|---|
+| #9 | Enterprise financial data platform v0.1 | OPEN / REVIEW BLOCKED — substantive engineering work remains |
+| #10 | Enterprise/auditable business-line dossiers | CLOSED AS SUPERSEDED by later PR #13; branch retained pending branch-retirement capability |
+| #13 | Enterprise portal, dossiers, and repo hygiene | OPEN / RECONCILIATION REQUIRED — useful unique work remains, but branch is materially behind current `main` and must not overwrite September 3 canon |
+
 ## Repository operations
 
 | Issue | Topic | Current state |
 |---:|---|---|
-| #11 | Repository administration: Wiki, main protection, branch retirement | OPEN administration |
-| #50 | Archive merged PR branch after tag | Requires local Git/branch privileges |
+| #11 | Repository administration: Wiki, main protection, branch retirement | OPEN administration; Wiki now enabled, branch retirement still pending |
+| #50 | Archive merged PR branch after tag | Requires branch-deletion/local Git capability not exposed by current connector |
+
+Alexandria boundary issue #85 is RESOLVED and CLOSED after coordinated public/private migration and PR #86 merge.
 
 ## Generated artifacts and publication hygiene
 
@@ -65,7 +73,7 @@ SHMS drafting must begin with canon extraction/archaeology, not generic manageme
 | #31 | Root navigation and maintainer entry-point review | OPEN |
 | #49 | Preserve PR #16 implementation audit trail | OPEN |
 
-Issues #42, #46, #53, #85, and #89 are CLOSED and therefore omitted from remaining-work tables.
+Issues #42 and #53 are already CLOSED and therefore omitted from remaining-work tables.
 
 ## Business/audit implementation
 
@@ -75,4 +83,4 @@ Issues #42, #46, #53, #85, and #89 are CLOSED and therefore omitted from remaini
 
 ## Closeout principle
 
-Historical OPEN language must not override later controlling canon. Resolved issues should be closed or explicitly narrowed; deliberately deferred issues must remain visibly deferred rather than being silently invented. Administrative duplicate issues remain closed as duplicates.
+Historical OPEN language must not override later controlling canon. Resolved issues should be closed or explicitly narrowed; deliberately deferred issues must remain visibly deferred rather than being silently invented. Administrative duplicate issues remain closed as duplicates. Stale branches must be retired only after accepted unique content is preserved or positively shown to be superseded.
