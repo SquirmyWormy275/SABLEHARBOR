@@ -1,0 +1,26 @@
+assumptions:
+  - id: FIN-BASE-001
+    name: Quantitative architecture
+    description: Treat the legacy 2026 operating model as a synthetic CoreCo scenario calibration and add current-canon industrial operations incrementally without representing generated values as company results.
+    fact_state: MODEL_PROPOSED
+    source:
+      path: docs/canon/CANON_CHANGELOG_v0.3.md
+      decision_id: CHG-016
+      branch: main
+      commit: 712076751a31534cd9e6e41458336cdc7b6585b5
+    effective_from: 2026-01-01
+    value: alternative_b_coreco
+    low: alternative_a_reclassify_total
+    high: alternative_c_full_rebase
+    units: architecture_choice
+    rationale: Current canon adds acquired physical operations that the historical calibration omitted; the selected envelope remains a reversible synthetic scenario rather than an observed total.
+    alternatives: [alternative_a_reclassify_total, alternative_c_full_rebase]
+    affected_entities: [SABLE_HARBOR, PALE_SUN, RED_WASH, ARU, BST, CRADLE]
+    affected_reports: [consolidated_statements, segment_pnl, valuation]
+    affected_calculations: [headcount, revenue, capex, debt, cash]
+    sensitivity: high
+    materiality: enterprise
+    reversible: true
+    decision_owner: Finance Planning; Orientation reviews canon alignment
+    status: active
+    last_review_date: 2026-09-05

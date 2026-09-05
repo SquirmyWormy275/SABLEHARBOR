@@ -5,3 +5,25 @@ __pycache__/
 
 # Local deterministic brand builds
 .brand-build/
+
+# Local finance environments, caches, and generated evidence
+.env
+.env.*
+!.env.example
+.venv/
+*.egg-info/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+build/
+dist/
+var/*
+!var/.gitkeep
+data/generated/
+workbooks/outputs/*.xlsx
+workbooks/outputs/workbook-suite-manifest.json
+workbooks/outputs/SHA256SUMS.txt
+reports/*.xlsx
+releases/generated/

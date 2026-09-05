@@ -1,0 +1,52 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "sable-harbor-finance"
+version = "0.1.0"
+description = "Sable Harbor enterprise financial data platform"
+requires-python = ">=3.11"
+dependencies = [
+  "alembic>=1.13,<2",
+  "jsonschema>=4.23,<5",
+  "pydantic>=2.8,<3",
+  "PyYAML>=6,<7",
+  "sqlalchemy>=2.0,<3",
+  "typer>=0.12,<1",
+  "xlsxwriter>=3.2,<4"
+]
+
+[project.optional-dependencies]
+dev = [
+  "mypy>=1.11,<2",
+  "openpyxl>=3.1,<4",
+  "pytest>=8,<9",
+  "ruff>=0.6,<1",
+  "types-PyYAML>=6,<7"
+]
+postgres = ["psycopg[binary]>=3.2,<4"]
+
+[project.scripts]
+shfin = "sable_harbor.cli:app"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/sable_harbor"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+include = ["src/**/*.py", "tests/**/*.py"]
+extend-exclude = ["blackridge"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+packages = ["sable_harbor"]

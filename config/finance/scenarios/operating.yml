@@ -1,0 +1,57 @@
+effective_period: 2026-09_to_2026-12
+fact_state: SCENARIO_INPUT
+owner: FP&A
+provenance: docs/finance/QUANTITATIVE_BASELINE_PROPOSAL.md
+implementation_scope:
+  applied_to_generation: [SHI, RWH, ARU]
+  booking_entities: {SHI: [SHI], RWH: [RWH], ARU: [BST]}
+  recorded_only_not_applied: [CRADLE, RESEARCH, ADVISORY, CAPITAL]
+  note: ARU is an aggregate driver family whose railway economics book to wholly owned BS&T; recorded-only families are governed inputs for future causal implementations and v0.1 does not claim that they drive generated amounts.
+driver_definitions:
+  SHI:
+    revenue: [bookings, renewal, retention, expansion, implementation, collection]
+    cost: [hosting_cost, support_cost, headcount_cost]
+  RWH:
+    revenue: [uranium_price, tonnes, grade, recovery, availability, shipment_timing]
+    cost: [labor_cost, power_cost, consumables_cost, contractor_cost, capex_timing, aro_cost]
+  ARU:
+    revenue: [carloads, ton_miles, rates, terminal_use, traffic_mix, collection]
+    cost: [fuel_cost, crew_cost, asset_downtime, maintenance_cost]
+  CRADLE:
+    revenue: [projects, recovered_value, participation, host_share, success_rate]
+    cost: [project_cost, abandonment_cost]
+  RESEARCH:
+    revenue: [programs, commercial_relationships, release_timing]
+    cost: [validation_labor, compute_cost, delay_cost]
+  ADVISORY:
+    revenue: [engagements, utilization, billing_rate, collection]
+    cost: [delivery_labor, subcontractor_cost]
+  CAPITAL:
+    revenue: [capital_availability]
+    cost: [interest_rate, minimum_cash, covenant_pressure, integration_cost, capex_deferral]
+scenarios:
+  base:
+    description: Model-proposed central case.
+    values: {}
+  low:
+    description: Reversible business-line downside case.
+    values:
+      SHI: {bookings: "0.96", renewal: "0.99", retention: "0.98", expansion: "0.98", implementation: "0.99", collection: "0.99", hosting_cost: "1.01", support_cost: "1.02", headcount_cost: "1.02"}
+      RWH: {uranium_price: "0.97", tonnes: "0.98", grade: "0.99", recovery: "0.99", availability: "0.98", shipment_timing: "0.99", labor_cost: "1.02", power_cost: "1.03", consumables_cost: "1.02", contractor_cost: "1.02", capex_timing: "1.00", aro_cost: "1.00"}
+      ARU: {carloads: "0.98", ton_miles: "0.99", rates: "0.99", terminal_use: "0.99", traffic_mix: "1.00", collection: "0.99", fuel_cost: "1.03", crew_cost: "1.02", asset_downtime: "1.02", maintenance_cost: "1.03"}
+  high:
+    description: Reversible business-line upside case.
+    values:
+      SHI: {bookings: "1.04", renewal: "1.01", retention: "1.01", expansion: "1.02", implementation: "1.01", collection: "1.01", hosting_cost: "0.99", support_cost: "0.99", headcount_cost: "1.00"}
+      RWH: {uranium_price: "1.03", tonnes: "1.02", grade: "1.01", recovery: "1.01", availability: "1.01", shipment_timing: "1.01", labor_cost: "0.99", power_cost: "0.99", consumables_cost: "0.99", contractor_cost: "0.99", capex_timing: "1.00", aro_cost: "1.00"}
+      ARU: {carloads: "1.02", ton_miles: "1.01", rates: "1.02", terminal_use: "1.01", traffic_mix: "1.00", collection: "1.01", fuel_cost: "0.99", crew_cost: "0.99", asset_downtime: "0.99", maintenance_cost: "0.99"}
+  stress:
+    description: Correlated but attributable operating and capital stress.
+    values:
+      SHI: {bookings: "0.86", renewal: "0.96", retention: "0.94", expansion: "0.94", implementation: "0.96", collection: "0.96", hosting_cost: "1.06", support_cost: "1.08", headcount_cost: "1.03"}
+      RWH: {uranium_price: "0.90", tonnes: "0.93", grade: "0.97", recovery: "0.96", availability: "0.94", shipment_timing: "0.96", labor_cost: "1.08", power_cost: "1.12", consumables_cost: "1.10", contractor_cost: "1.08", capex_timing: "1.05", aro_cost: "1.05"}
+      ARU: {carloads: "0.91", ton_miles: "0.94", rates: "0.96", terminal_use: "0.96", traffic_mix: "0.98", collection: "0.95", fuel_cost: "1.15", crew_cost: "1.08", asset_downtime: "1.10", maintenance_cost: "1.12"}
+      CRADLE: {projects: "0.85", recovered_value: "0.90", participation: "0.95", host_share: "1.00", success_rate: "0.85", project_cost: "1.12", abandonment_cost: "1.15"}
+      RESEARCH: {programs: "0.90", commercial_relationships: "0.85", release_timing: "0.85", validation_labor: "1.08", compute_cost: "1.15", delay_cost: "1.12"}
+      ADVISORY: {engagements: "0.85", utilization: "0.90", billing_rate: "0.95", collection: "0.94", delivery_labor: "1.05", subcontractor_cost: "1.08"}
+      CAPITAL: {capital_availability: "0.80", interest_rate: "1.20", minimum_cash: "1.10", covenant_pressure: "1.20", integration_cost: "1.15", capex_deferral: "1.20"}

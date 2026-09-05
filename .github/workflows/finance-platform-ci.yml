@@ -1,0 +1,90 @@
+name: Finance platform CI
+
+on:
+  pull_request:
+  push:
+    branches: [main, finance/enterprise-financial-platform-v0.1]
+
+permissions:
+  contents: read
+
+jobs:
+  sqlite:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          fetch-depth: 0
+      - uses: astral-sh/setup-uv@d0cc045d04ccac9d8b7881df0226f9e82c39688e # v6
+        with:
+          enable-cache: true
+      - run: uv sync --all-extras
+      - run: mkdir -p var
+      - run: uv run ruff format --check .
+      - run: uv run ruff check .
+      - run: uv run mypy src
+      - run: uv run pytest
+      - run: echo "SHFIN_DATABASE_URL=sqlite:///var/ci-standard.db" >> "$GITHUB_ENV"
+      - run: uv run alembic upgrade head
+      - run: uv run shfin generate --profile standard --scenario base --seed 20260831
+      - run: uv run shfin validate --generation-run-id "$(uv run shfin run-id standard --scenario base --seed 20260831)"
+      - run: uv run shfin workbooks --generation-run-id "$(uv run shfin run-id standard --scenario base --seed 20260831)"
+      - run: uv run shfin package-release --generation-run-id "$(uv run shfin run-id standard --scenario base --seed 20260831)"
+      - run: uv run shfin package-business-units --generation-run-id "$(uv run shfin run-id standard --scenario base --seed 20260831)"
+      - run: uv run python scripts/check_public_safety.py releases/generated/public-demo-v0.1
+      - run: uv run python scripts/check_public_safety.py releases/generated/business-units
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: finance-review-artifacts
+          path: |
+            workbooks/outputs/*.xlsx
+            workbooks/outputs/workbook-suite-manifest.json
+            workbooks/outputs/SHA256SUMS.txt
+            releases/generated/public-demo-v0.1
+            releases/generated/business-units
+
+  postgres:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_DB: sable_harbor
+          POSTGRES_USER: sable_harbor
+          POSTGRES_PASSWORD: ci_only
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U sable_harbor"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+    env:
+      SHFIN_DATABASE_URL: postgresql+psycopg://sable_harbor:ci_only@localhost:5432/sable_harbor
+      SHFIN_POSTGRES_TEST_URL: postgresql+psycopg://sable_harbor:ci_only@localhost:5432/sable_harbor
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          fetch-depth: 0
+      - uses: astral-sh/setup-uv@d0cc045d04ccac9d8b7881df0226f9e82c39688e # v6
+      - run: uv sync --all-extras
+      - run: >-
+          uv run pytest -s
+          tests/integration/test_migrations.py
+          tests/integration/test_postgres_stage1_matrix.py
+          -k postgres
+      - run: uv run shfin generate --profile standard --scenario base --seed 20260831
+      - run: uv run shfin validate --generation-run-id "$(uv run shfin run-id standard --scenario base --seed 20260831)"
+      - run: uv run shfin workbooks --generation-run-id "$(uv run shfin run-id standard --scenario base --seed 20260831)"
+      - run: uv run shfin package-release --generation-run-id "$(uv run shfin run-id standard --scenario base --seed 20260831)"
+      - run: uv run shfin package-business-units --generation-run-id "$(uv run shfin run-id standard --scenario base --seed 20260831)"
+      - run: uv run python scripts/check_public_safety.py releases/generated/public-demo-v0.1
+      - run: uv run python scripts/check_public_safety.py releases/generated/business-units
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: finance-postgres16-review-artifacts
+          path: |
+            workbooks/outputs/*.xlsx
+            workbooks/outputs/workbook-suite-manifest.json
+            workbooks/outputs/SHA256SUMS.txt
+            releases/generated/public-demo-v0.1
+            releases/generated/business-units

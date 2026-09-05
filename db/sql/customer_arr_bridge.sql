@@ -1,0 +1,1 @@
+SELECT c.customer_id, SUM(c.transaction_price) AS contracted_value, MIN(c.starts_on) AS first_start, MAX(c.ends_on) AS latest_end FROM customer_contract c WHERE c.generation_run_id IN (:actual_run_id,:generation_run_id) GROUP BY c.customer_id ORDER BY contracted_value DESC,c.customer_id;

@@ -1,0 +1,1 @@
+SELECT segment_code,function_code,COUNT(*) AS workers,SUM(annual_cost) AS annual_loaded_cost FROM worker WHERE generation_run_id IN (:actual_run_id,:generation_run_id) GROUP BY segment_code,function_code ORDER BY segment_code,function_code;

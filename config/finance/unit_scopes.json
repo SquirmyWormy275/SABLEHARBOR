@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0.0",
+  "control_state": {
+    "controlling_canon": {
+      "branch": "main",
+      "commit": "712076751a31534cd9e6e41458336cdc7b6585b5",
+      "document": "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md"
+    }
+  },
+  "classification": "MODEL_PROPOSED_FINANCE_REPORTING_SCOPE",
+  "units": [
+    {
+      "id": "foundry-field",
+      "name": "Foundry Field",
+      "entity_codes": ["SHI"],
+      "segment_codes": ["SHI", "CORE", "FOUNDRY_FIELD", "DELIVERY"],
+      "site_codes": ["SAC"],
+      "include_unsegmented": false
+    },
+    {
+      "id": "willow",
+      "name": "Willow",
+      "entity_codes": ["SHI"],
+      "segment_codes": ["WILLOW"],
+      "site_codes": ["PIT", "SAC"],
+      "include_unsegmented": false
+    },
+    {
+      "id": "atlas-meridian",
+      "name": "Atlas Meridian",
+      "entity_codes": ["SHI"],
+      "segment_codes": ["ATLAS"],
+      "site_codes": ["SAC"],
+      "include_unsegmented": false
+    },
+    {
+      "id": "pale-sun",
+      "name": "Pale Sun",
+      "entity_codes": ["RWH"],
+      "segment_codes": ["RWH", "PALE_SUN"],
+      "site_codes": ["RED_WASH"],
+      "include_unsegmented": false
+    },
+    {
+      "id": "project-cradle",
+      "name": "Project Cradle",
+      "entity_codes": ["SHI"],
+      "segment_codes": ["CRADLE"],
+      "site_codes": ["SAC"],
+      "include_unsegmented": false
+    },
+    {
+      "id": "american-resource-utility",
+      "name": "ARU Group — BS&T Railway",
+      "entity_codes": ["ARU", "BST"],
+      "segment_codes": ["ARU", "ARU_BST"],
+      "site_codes": ["ARU_HUB"],
+      "include_unsegmented": false
+    },
+    {
+      "id": "advisory",
+      "name": "Advisory",
+      "entity_codes": ["SHI"],
+      "segment_codes": ["ADVISORY"],
+      "site_codes": ["SAC"],
+      "include_unsegmented": false
+    }
+  ]
+}

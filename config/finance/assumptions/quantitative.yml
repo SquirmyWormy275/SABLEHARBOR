@@ -1,0 +1,103 @@
+assumptions:
+  - &base
+    id: FIN-Q-001
+    name: CoreCo 2026 revenue
+    description: Synthetic scenario calibration for Core software, services, Atlas, Cradle, and Advisory revenue after Emberline reclassification; not an observed company result.
+    fact_state: MODEL_PROPOSED
+    source: {path: docs/finance/QUANTITATIVE_BASELINE_RECONCILIATION.md, decision_id: CHG-016, branch: finance/enterprise-financial-platform-v0.1, commit: e0bdd48cee0310dc509b42988273dadc37ceb74a}
+    effective_from: 2026-01-01
+    value: "130300000"
+    low: "116000000"
+    high: "142000000"
+    units: USD
+    rationale: Reversible legacy CoreCo scenario calibration adjusted for absorbed Emberline and current emerging lines.
+    alternatives: [alternative_a_reallocated_total, alternative_c_first_principles]
+    affected_entities: [SHI]
+    affected_reports: [consolidated_statements, segment_pnl, valuation]
+    affected_calculations: [monthly_revenue, cash, enterprise_value]
+    sensitivity: high
+    materiality: enterprise
+    reversible: true
+    decision_owner: Finance Planning; Orientation reviews canon alignment
+    status: active
+    last_review_date: 2026-09-05
+  - <<: *base
+    id: FIN-Q-002
+    name: CoreCo 2026 operating cost
+    description: Synthetic CoreCo operating-cost scenario calibration for the working model.
+    value: "140800000"
+    low: "132000000"
+    high: "152000000"
+    units: USD
+    rationale: Reversible operating-cost calibration for integration analysis; it is not an observed result or a reality-forward target case.
+    affected_calculations: [monthly_operating_cost, cash, normalized_ebitda]
+  - <<: *base
+    id: FIN-Q-003
+    name: Red Wash 2026 revenue
+    description: Synthetic scenario-driven uranium revenue; not an observed result, reserve statement, or production canon statement.
+    fact_state: SCENARIO_INPUT
+    value: "24700000"
+    low: "14000000"
+    high: "40000000"
+    units: USD
+    rationale: Reversible price, grade, recovery, schedule, and shipment calibration.
+    affected_entities: [RWH]
+    affected_calculations: [mine_revenue, mine_nav, liquidity]
+  - <<: *base
+    id: FIN-Q-004
+    name: Red Wash 2026 operating cost
+    description: Synthetic scenario-driven mine operating cost; not an observed company result.
+    fact_state: SCENARIO_INPUT
+    value: "22300000"
+    low: "18500000"
+    high: "30000000"
+    units: USD
+    rationale: Underground mine and mill cost calibration pending technical review.
+    affected_entities: [RWH]
+    affected_calculations: [mine_cash_cost, inventory, mine_nav]
+  - <<: *base
+    id: FIN-Q-005
+    name: ARU and BS&T 2026 external revenue
+    description: Synthetic scenario calibration for external freight, terminal, storage, and handling revenue.
+    fact_state: SCENARIO_INPUT
+    value: "23600000"
+    low: "16000000"
+    high: "34000000"
+    units: USD
+    rationale: Credible acquired regional resource-logistics scale without implying a national railroad.
+    affected_entities: [ARU, BST]
+    affected_calculations: [freight_revenue, route_margin, aru_valuation]
+  - <<: *base
+    id: FIN-Q-006
+    name: ARU and BS&T 2026 operating cost
+    description: Synthetic scenario calibration for crew, fuel, maintenance, terminal, and operating cost.
+    fact_state: SCENARIO_INPUT
+    value: "20300000"
+    low: "17000000"
+    high: "29000000"
+    units: USD
+    rationale: Regional operator cost calibration with maintenance and fuel sensitivity.
+    affected_entities: [ARU, BST]
+    affected_calculations: [route_margin, EBITDA, free_cash_flow]
+  - <<: *base
+    id: FIN-Q-007
+    name: Consolidated employee population
+    description: Synthetic model-proposed employee population across CoreCo, Red Wash, ARU, Cradle, and Advisory; not an observed roster.
+    value: "708"
+    low: "570"
+    high: "880"
+    units: employees
+    rationale: Alternative B adds acquired industrial workforces to adjusted CoreCo.
+    affected_entities: [SHI, RWH, ARU, BST]
+    affected_calculations: [payroll, headcount, operating_cost]
+  - <<: *base
+    id: FIN-Q-008
+    name: Long-term contractor population
+    description: Privacy-safe synthetic scenario contractor population; not an observed roster.
+    value: "61"
+    low: "40"
+    high: "90"
+    units: contractors
+    rationale: Specialist capacity across software, mining, logistics, recovery, and research.
+    affected_entities: [SHI, RWH, ARU, BST]
+    affected_calculations: [vendor_spend, workforce_cost]

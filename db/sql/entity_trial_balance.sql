@@ -1,0 +1,19 @@
+SELECT
+    le.code AS entity,
+    a.code AS account,
+    SUM(jl.debit) AS debit,
+    SUM(jl.credit) AS credit
+FROM journal_line jl
+JOIN journal_entry je
+    ON je.id = jl.entry_id
+JOIN accounting_book b
+    ON b.id = je.book_id
+JOIN legal_entity le
+    ON le.id = b.entity_id
+JOIN account a
+    ON a.id = jl.account_id
+WHERE je.state = 'POSTED'
+    AND je.generation_run_id IN (:actual_run_id, :generation_run_id)
+    AND b.code = 'PRIMARY_USD'
+GROUP BY le.code, a.code
+ORDER BY le.code, a.code;

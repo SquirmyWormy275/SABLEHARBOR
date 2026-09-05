@@ -1,0 +1,50 @@
+from logging.config import fileConfig
+import os
+
+from alembic import context
+from sqlalchemy import engine_from_config, pool
+
+from sable_harbor.accounting.models import Base
+from sable_harbor import schema as _schema  # noqa: F401
+from sable_harbor.commercial import models as commercial_models  # noqa: F401
+from sable_harbor.operations import models as operations_models  # noqa: F401
+from sable_harbor.mining import models as mining_models  # noqa: F401
+from sable_harbor.logistics import models as logistics_models  # noqa: F401
+from sable_harbor.recovery import models as recovery_models  # noqa: F401
+from sable_harbor.research import models as research_models  # noqa: F401
+
+config = context.config
+if configured_url := os.getenv("SHFIN_DATABASE_URL"):
+    config.set_main_option("sqlalchemy.url", configured_url.replace("%", "%%"))
+if config.config_file_name:
+    fileConfig(config.config_file_name)
+target_metadata = Base.metadata
+
+
+def run_migrations_offline() -> None:
+    context.configure(
+        url=config.get_main_option("sqlalchemy.url"),
+        target_metadata=target_metadata,
+        literal_binds=True,
+        dialect_opts={"paramstyle": "named"},
+    )
+    with context.begin_transaction():
+        context.run_migrations()
+
+
+def run_migrations_online() -> None:
+    connectable = engine_from_config(
+        config.get_section(config.config_ini_section, {}),
+        prefix="sqlalchemy.",
+        poolclass=pool.NullPool,
+    )
+    with connectable.connect() as connection:
+        context.configure(connection=connection, target_metadata=target_metadata)
+        with context.begin_transaction():
+            context.run_migrations()
+
+
+if context.is_offline_mode():
+    run_migrations_offline()
+else:
+    run_migrations_online()

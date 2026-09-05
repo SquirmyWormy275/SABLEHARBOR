@@ -1,0 +1,1 @@
+SELECT mpb.batch_number,mpb.production_cost,mpb.pounds_u3o8,CASE WHEN mpb.pounds_u3o8=0 THEN NULL ELSE mpb.production_cost/mpb.pounds_u3o8 END AS cost_per_lb FROM mine_production_batch mpb JOIN legal_entity le ON le.id=mpb.entity_id WHERE mpb.generation_run_id IN (:actual_run_id,:generation_run_id) AND le.code='RWH' ORDER BY mpb.production_date,mpb.batch_number;

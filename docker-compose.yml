@@ -1,0 +1,13 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: sable_harbor
+      POSTGRES_USER: sable_harbor
+      POSTGRES_PASSWORD: local_development_only
+    ports: ["5432:5432"]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U sable_harbor"]
+      interval: 5s
+      timeout: 5s
+      retries: 10

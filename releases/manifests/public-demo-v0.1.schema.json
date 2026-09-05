@@ -1,0 +1,308 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Sable Harbor public demo v0.1 manifest",
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+        "package_name",
+        "package_version",
+        "generation_run_id",
+        "included_run_ids",
+        "included_runs",
+        "profile",
+        "seed",
+        "source_commit",
+        "period_covered",
+        "calibration_classification",
+        "business_lines",
+        "row_counts",
+        "schema_versions",
+        "checksum_algorithm",
+        "artifacts",
+        "output_hashes",
+        "package_input_digests",
+        "classification",
+        "database_artifact_type",
+        "license",
+        "known_limitations",
+        "compatibility",
+        "financial_validation",
+        "validation_status",
+        "artifact_safety_scan",
+        "epistemic_mode",
+        "canon_effective_through",
+        "canon_reconciled_at",
+        "prepared_at",
+        "source_snapshot_ids",
+        "source_snapshot_digests",
+        "canon_source_lock_schema_version",
+        "scenario_id",
+        "scenario_code",
+        "scenario_version",
+        "generator_version",
+        "generator_source_digest",
+        "package_builder_source_digest",
+        "input_version",
+        "input_manifest_digest",
+        "assumptions_digest",
+        "canon_source_lock_digest",
+        "build_id",
+        "built_at",
+        "effective_period",
+        "synthetic_calibration_through",
+        "forecast_from"
+    ],
+    "properties": {
+        "package_name": {"const": "public-demo"},
+        "package_version": {"const": "0.1.0"},
+        "generation_run_id": {"type": "string", "minLength": 1},
+        "included_run_ids": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "uniqueItems": true,
+            "items": {"type": "string", "minLength": 1}
+        },
+        "included_runs": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "uniqueItems": true,
+            "allOf": [
+                {
+                    "contains": {
+                        "type": "object",
+                        "required": ["data_role"],
+                        "properties": {"data_role": {"const": "selected_synthetic_scenario"}}
+                    },
+                    "minContains": 1,
+                    "maxContains": 1
+                },
+                {
+                    "contains": {
+                        "type": "object",
+                        "required": ["data_role"],
+                        "properties": {"data_role": {"const": "shared_synthetic_calibration"}}
+                    },
+                    "minContains": 1,
+                    "maxContains": 1
+                }
+            ],
+            "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                    "generation_run_id",
+                    "data_role",
+                    "profile",
+                    "scenario_id",
+                    "seed",
+                    "status",
+                    "generator_version",
+                    "build_id",
+                    "input_manifest_digest",
+                    "synthetic_calibration_through",
+                    "forecast_from",
+                    "schema_head"
+                ],
+                "properties": {
+                    "generation_run_id": {"type": "string", "minLength": 1},
+                    "data_role": {
+                        "enum": ["selected_synthetic_scenario", "shared_synthetic_calibration"]
+                    },
+                    "profile": {"type": "string", "not": {"pattern": "actual"}},
+                    "scenario_id": {"type": "string", "minLength": 1},
+                    "seed": {"type": "integer"},
+                    "status": {"const": "COMPLETED"},
+                    "generator_version": {"type": "string", "minLength": 1},
+                    "build_id": {"type": "string", "minLength": 1},
+                    "input_manifest_digest": {"$ref": "#/$defs/sha256"},
+                    "synthetic_calibration_through": {"type": "string", "format": "date"},
+                    "forecast_from": {"type": "string", "format": "date"},
+                    "schema_head": {"type": "string", "minLength": 1}
+                }
+            }
+        },
+        "profile": {"const": "standard"},
+        "seed": {"type": "integer"},
+        "source_commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+        "period_covered": {"type": "string", "minLength": 1},
+        "calibration_classification": {"const": "SHARED_SYNTHETIC_CALIBRATION_REFERENCE"},
+        "business_lines": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {"type": "string", "minLength": 1}
+        },
+        "row_counts": {"type": "object", "additionalProperties": {"type": "integer", "minimum": 0}},
+        "schema_versions": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 1,
+            "uniqueItems": true,
+            "items": {"type": "string", "minLength": 1}
+        },
+        "artifacts": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["path", "bytes", "sha256"],
+                "properties": {
+                    "path": {"$ref": "#/$defs/safe_relative_path"},
+                    "bytes": {"type": "integer", "minimum": 0},
+                    "sha256": {"$ref": "#/$defs/sha256"}
+                }
+            }
+        },
+        "output_hashes": {
+            "type": "object",
+            "minProperties": 1,
+            "propertyNames": {"$ref": "#/$defs/safe_relative_path"},
+            "additionalProperties": {"$ref": "#/$defs/sha256"}
+        },
+        "package_input_digests": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+                "public_allowlist_sha256",
+                "public_manifest_schema_sha256",
+                "known_limitations_sha256"
+            ],
+            "properties": {
+                "public_allowlist_sha256": {"$ref": "#/$defs/sha256"},
+                "public_manifest_schema_sha256": {"$ref": "#/$defs/sha256"},
+                "known_limitations_sha256": {"$ref": "#/$defs/sha256"}
+            }
+        },
+        "checksum_algorithm": {"const": "SHA-256"},
+        "classification": {"const": "PUBLIC_SAFE_SYNTHETIC"},
+        "financial_validation": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["generation_run_id", "status", "control_count", "controls"],
+            "properties": {
+                "generation_run_id": {"type": "string", "minLength": 1},
+                "status": {"const": "PASS"},
+                "control_count": {"type": "integer", "minimum": 1},
+                "controls": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": ["code", "status", "observed", "details"],
+                        "properties": {
+                            "code": {"type": "string", "minLength": 1},
+                            "status": {"const": "PASS"},
+                            "observed": {"type": "string"},
+                            "details": {"type": "string"}
+                        }
+                    }
+                }
+            }
+        },
+        "validation_status": {"const": "PASS"},
+        "artifact_safety_scan": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["status", "failures", "scope"],
+            "properties": {
+                "status": {"const": "PASS"},
+                "failures": {"const": 0},
+                "scope": {"type": "string", "minLength": 1}
+            }
+        },
+        "database_artifact_type": {"const": "ALLOWLISTED_EVIDENCE_EXTRACT_NOT_SOURCE_SCHEMA"},
+        "license": {"type": "string", "minLength": 1},
+        "known_limitations": {"type": "string", "minLength": 1},
+        "compatibility": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {"type": "string", "minLength": 1}
+        },
+        "epistemic_mode": {"const": "RETROSPECTIVE_CURRENT_CANON"},
+        "canon_effective_through": {"const": "2026-09-03"},
+        "canon_reconciled_at": {"const": "2026-09-05"},
+        "prepared_at": {"const": "2026-09-05"},
+        "source_snapshot_ids": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+                "current_canon",
+                "historical_context",
+                "noncontrolling_legacy_calibration_reference",
+                "canon_source_lock"
+            ],
+            "properties": {
+                "current_canon": {"$ref": "#/$defs/snapshot_id"},
+                "historical_context": {"$ref": "#/$defs/snapshot_id"},
+                "noncontrolling_legacy_calibration_reference": {"$ref": "#/$defs/snapshot_id"},
+                "canon_source_lock": {
+                    "type": "string",
+                    "pattern": "^docs/finance/CANON_SOURCE_LOCK\\.json@[^\\s]+$"
+                }
+            }
+        },
+        "source_snapshot_digests": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+                "current_canon_git_commit",
+                "historical_context_git_commit",
+                "noncontrolling_legacy_calibration_reference_git_commit",
+                "canon_source_lock_sha256",
+                "current_canon_content_sha256",
+                "historical_context_content_sha256",
+                "noncontrolling_legacy_calibration_reference_content_sha256"
+            ],
+            "properties": {
+                "current_canon_git_commit": {"$ref": "#/$defs/sha1"},
+                "historical_context_git_commit": {"$ref": "#/$defs/sha1"},
+                "noncontrolling_legacy_calibration_reference_git_commit": {"$ref": "#/$defs/sha1"},
+                "canon_source_lock_sha256": {"$ref": "#/$defs/sha256"},
+                "current_canon_content_sha256": {"$ref": "#/$defs/sha256"},
+                "historical_context_content_sha256": {"$ref": "#/$defs/sha256"},
+                "noncontrolling_legacy_calibration_reference_content_sha256": {
+                    "$ref": "#/$defs/sha256"
+                }
+            }
+        },
+        "canon_source_lock_schema_version": {"type": "string", "minLength": 1},
+        "scenario_id": {"type": "string", "minLength": 1},
+        "scenario_code": {"type": "string", "minLength": 1},
+        "scenario_version": {"type": "string", "minLength": 1},
+        "generator_version": {"type": "string", "minLength": 1},
+        "generator_source_digest": {"$ref": "#/$defs/sha256"},
+        "package_builder_source_digest": {"$ref": "#/$defs/sha256"},
+        "input_version": {"type": "string", "minLength": 1},
+        "input_manifest_digest": {"$ref": "#/$defs/sha256"},
+        "assumptions_digest": {"$ref": "#/$defs/sha256"},
+        "canon_source_lock_digest": {"$ref": "#/$defs/sha256"},
+        "build_id": {"type": "string", "minLength": 1},
+        "built_at": {"type": "string", "format": "date-time"},
+        "effective_period": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["from", "through", "basis"],
+            "properties": {
+                "from": {"type": "string", "pattern": "^[0-9]{4}-(0[1-9]|1[0-2])$"},
+                "through": {"type": "string", "pattern": "^[0-9]{4}-(0[1-9]|1[0-2])$"},
+                "basis": {"type": "string", "minLength": 1}
+            }
+        },
+        "synthetic_calibration_through": {"type": "string", "format": "date"},
+        "forecast_from": {"type": "string", "format": "date"}
+    },
+    "$defs": {
+        "sha1": {"type": "string", "pattern": "^[a-f0-9]{40}$"},
+        "safe_relative_path": {
+            "type": "string",
+            "pattern": "^(?![A-Za-z]:)(?!/)(?!.*(?:^|/)\\.\\.?(/|$))(?!.*\\\\)[^/]+(?:/[^/]+)*$"
+        },
+        "snapshot_id": {"type": "string", "pattern": "^.+@[a-f0-9]{40}$"},
+        "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+    }
+}
