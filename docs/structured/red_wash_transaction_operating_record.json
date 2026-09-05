@@ -1,0 +1,79 @@
+{
+  "record_id": "SH-PS-RW-TOR-001",
+  "title": "Red Wash Transaction and Operating Record",
+  "version": "1.0.0",
+  "decision_date": "2026-09-05",
+  "as_of_date": "2026-08-31",
+  "classification": "PUBLIC_SYNTHETIC_DIEGETIC",
+  "business_line": "Pale Sun",
+  "operating_asset": "Red Wash Mine",
+  "location": {
+    "county": "Carbon County",
+    "state": "Wyoming",
+    "latitude": 42.3127,
+    "longitude": -106.9213,
+    "elevation_ft": 6420
+  },
+  "legal_structure": {
+    "parent": "Sable Harbor",
+    "business_line": "Pale Sun",
+    "operating_company": "Red Wash Operating Company",
+    "seller": "Northstar Resources (Wyoming) LLC",
+    "implementation_note": "Formal suffix and jurisdiction remain implementation details."
+  },
+  "transaction": {
+    "close_date": "2025-07-18",
+    "cash_consideration_usd": 28000000,
+    "operating_asset_fair_value_usd": 42000000,
+    "acquired_current_assets_usd": 4500000,
+    "aro_assumed_usd": 16000000,
+    "other_liabilities_assumed_usd": 2500000,
+    "goodwill_usd": 0,
+    "transaction_debt_usd": 0,
+    "environmental_title_escrow_usd": 3000000,
+    "holdback_usd": 500000,
+    "h2_2025_stabilization_usd": 11000000,
+    "capitalized_rehabilitation_usd": 8000000,
+    "repair_stabilization_expense_usd": 3000000
+  },
+  "workforce_2026": {
+    "enterprise_total": 140,
+    "red_wash_site": 128,
+    "pale_sun_business_layer": 12
+  },
+  "mine_2026": {
+    "ore_tons": 175000,
+    "head_grade_u3o8_pct": 0.17,
+    "recovery_pct": 92.0,
+    "contained_lb": 595000,
+    "produced_lb": 547400,
+    "opening_finished_inventory_lb": 125000,
+    "sold_lb": 500000,
+    "ending_finished_inventory_lb": 172400,
+    "nameplate_tpd": 600,
+    "planned_depth_ft": 2500,
+    "method": "selective drift-and-fill with cemented paste backfill"
+  },
+  "finance_2026": {
+    "revenue_usd": 36475000,
+    "weighted_realized_price_per_lb": 72.95,
+    "cash_production_cost_incurred_usd": 27950000,
+    "sustaining_capex_usd": 4000000,
+    "rehab_capex_usd": 5000000,
+    "dd_and_a_incurred_usd": 3500000,
+    "production_mineral_taxes_usd": 2125000,
+    "royalties_usd": 729500,
+    "freight_assay_handling_usd": 600000,
+    "current_cost_closure_basis_usd": 25000000,
+    "opening_aro_usd": 16000000
+  },
+  "resource_basis": {
+    "indicated_including_reserve_tons": 2500000,
+    "indicated_grade_pct": 0.17,
+    "contained_lb": 8500000,
+    "recoverable_lb": 7820000,
+    "inferred_tons": 900000,
+    "inferred_grade_pct": 0.145,
+    "basis": "Internal acquisition and operating basis; not a public S-K 1300 reserve disclosure."
+  }
+}
