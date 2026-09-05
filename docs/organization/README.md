@@ -1,7 +1,7 @@
 # SABLE HARBOR — ORGANIZATION CHARTS
 
-**Version:** 0.2.0
-**Canonical date represented:** August 31, 2026
+**Version:** 0.2.0  
+**Canonical date represented:** August 31, 2026  
 **Status:** Canon-derived publication package
 
 These are rendered organization charts for the repository README and public wiki. The charts preserve every locked organizational relationship currently available and display genuinely unresolved positions as OPEN rather than fabricating a polished hierarchy.

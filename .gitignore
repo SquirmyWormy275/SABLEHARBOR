@@ -1,31 +1,24 @@
-# Credentials and local environment
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Local deterministic brand builds
+.brand-build/
+
+# Local finance environments, caches, and generated evidence
 .env
 .env.*
 !.env.example
-
-# Python
 .venv/
-__pycache__/
-*.py[cod]
 *.egg-info/
 .mypy_cache/
-.pytest_cache/
 .ruff_cache/
 .coverage
 coverage.xml
 htmlcov/
 build/
 dist/
-
-# Editors and operating systems
-.vscode/
-.idea/
-*.swp
-.DS_Store
-Thumbs.db
-
-# Deterministic local builds and generated evidence
-.brand-build/
 var/*
 !var/.gitkeep
 data/generated/

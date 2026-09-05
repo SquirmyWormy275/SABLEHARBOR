@@ -1,4 +1,4 @@
-name: Check rendered organization chart drift
+name: Validate rendered organization charts
 
 on:
   pull_request:
@@ -23,7 +23,7 @@ permissions:
   contents: read
 
 jobs:
-  render-drift:
+  validate:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
@@ -34,7 +34,7 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Regenerate and XML-check rendered charts
+      - name: Regenerate and XML-validate charts
         run: python scripts/build_organization_charts.py
 
       - name: Verify rendered files are current

@@ -17,7 +17,7 @@ from sable_harbor.exports.safety import scan_generated_artifacts
 from sable_harbor.provenance.models import GenerationRun
 from sable_harbor.provenance.service import run_context
 
-UNIT_REGISTRY = Path("config/enterprise/business_units.json")
+UNIT_REGISTRY = Path("config/finance/unit_scopes.json")
 
 
 def _write_csv(path: Path, rows: list[dict[str, Any]]) -> None:
