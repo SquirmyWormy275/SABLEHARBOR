@@ -1,0 +1,38 @@
+{
+  "manifest_id": "SH-BRAND-PS-RW-001",
+  "version": "1.0.0",
+  "decision_date": "2026-09-05",
+  "approval_state": "LOCKED",
+  "binary_ingestion_state": "REQUIRED_BEFORE_VISUAL_CLOSEOUT",
+  "rule": "Only binaries matching these SHA-256 values are canonical. A regenerated approximation is not equivalent.",
+  "assets": [
+    {
+      "canonical_path": "assets/brand/logos/pale_sun__canonical.png",
+      "role": "Pale Sun canonical logo",
+      "sha256": "eedcabfca73460e8ff5ad72864c9f669ba2375097b05daa2912f30c9ff35c025",
+      "source_filename": "a_clean_high_contrast_minimalist_graphic_logo_br.png",
+      "approval_state": "LOCKED"
+    },
+    {
+      "canonical_path": "assets/brand/logos/red_wash__canonical.png",
+      "role": "Red Wash canonical logo",
+      "sha256": "7c26b8afd7954045d9dd4b5c691ba820cdce2e3ccb8e41ac6873b103f0c59720",
+      "source_filename": "wide_cinematic_minimalist_logo_branding_design_on.png",
+      "approval_state": "LOCKED"
+    },
+    {
+      "canonical_path": "assets/brand/maps/red_wash__underground_plan.png",
+      "role": "Red Wash site and underground technical plan",
+      "sha256": "0658de3b7c63ecc9757b545f29895eab51801b2148cb3862935620b6049a7dda",
+      "source_filename": "a_wide_dark_technical_infographic_map_poster_sho.png",
+      "approval_state": "LOCKED"
+    },
+    {
+      "canonical_path": "assets/brand/maps/red_wash__site_overview.png",
+      "role": "Corrected Red Wash overhead site overview",
+      "sha256": "8dbb0053c4a563d57d5a24be4f4687dc11e2e00e2b1e62c279d9be945f68d77a",
+      "source_filename": "a_high_resolution_photorealistic_infographic_map.png",
+      "approval_state": "LOCKED"
+    }
+  ]
+}
