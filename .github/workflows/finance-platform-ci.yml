@@ -11,8 +11,6 @@ permissions:
 jobs:
   sqlite:
     runs-on: ubuntu-latest
-    env:
-      SHFIN_DATABASE_URL: sqlite:///var/ci-standard.db
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
@@ -26,6 +24,7 @@ jobs:
       - run: uv run ruff check .
       - run: uv run mypy src
       - run: uv run pytest
+      - run: echo "SHFIN_DATABASE_URL=sqlite:///var/ci-standard.db" >> "$GITHUB_ENV"
       - run: uv run alembic upgrade head
       - run: uv run shfin generate --profile standard --scenario base --seed 20260831
       - run: uv run shfin validate --generation-run-id "$(uv run shfin run-id standard --scenario base --seed 20260831)"
