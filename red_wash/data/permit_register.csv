@@ -1,0 +1,15 @@
+permit_id,permit,number,authority,effective_date,legal_basis,status
+RW-PER-001,BLM Plan of Operations,DOI-BLM-WY-C050-RW-2011-01,BLM,2011-11-18,43 CFR 3809,ACTIVE SYNTHETIC
+RW-PER-002,Environmental Assessment and FONSI,DOI-BLM-WY-C050-2011-0042-EA,BLM,2011-10-07,NEPA,ACTIVE SYNTHETIC
+RW-PER-003,Non-coal mine permit,RW-PT-0617,WDEQ Land Quality,2012-02-14,Wyoming Environmental Quality Act,ACTIVE SYNTHETIC
+RW-PER-004,Source material license,WYSML-094,WDEQ Uranium Recovery,2018-09-30,10 CFR Part 40 and Agreement State,ACTIVE SYNTHETIC
+RW-PER-005,Air quality permit,AP-7-1294,WDEQ Air Quality,2012-05-22,Wyoming air rules,ACTIVE SYNTHETIC
+RW-PER-006,Industrial stormwater,WYR00-RW17,WDEQ Water Quality,2012-04-10,WYPDES,ACTIVE SYNTHETIC
+RW-PER-007,Groundwater protection,GWP-19-047,WDEQ Water Quality,2012-08-03,Wyoming groundwater rules,ACTIVE SYNTHETIC
+RW-PER-008,Tailings authorization,TMC-1A,WDEQ and source license,2012-07-21,10 CFR Part 40 Appendix A and 40 CFR Part 192,ACTIVE SYNTHETIC
+RW-PER-009,MSHA mine ID,48-01999,MSHA,2012-01-09,30 CFR Parts 50 57 and 62,ACTIVE SYNTHETIC
+RW-PER-010,Explosives user permit,WY-RW-0419,ATF,2024-05-01,27 CFR Part 555,ACTIVE SYNTHETIC
+RW-PER-011,Hazmat registration,HMR-RW-2026,PHMSA,2026-07-01,49 CFR Parts 171 through 180,ACTIVE SYNTHETIC
+RW-PER-012,Water appropriation permits,P-119312 through P-119318,Wyoming State Engineer,2011-06-01,Wyoming water law,ACTIVE SYNTHETIC
+RW-PER-013,Reclamation performance bond,BOND-RW-2026,WDEQ Land Quality,2026-06-30,annual surety review,ACTIVE SYNTHETIC
+RW-PER-014,Radon NESHAP program,RW-NESHAP-W,EPA Region 8 and WDEQ,2012-07-21,40 CFR Part 61 Subpart W,ACTIVE SYNTHETIC
