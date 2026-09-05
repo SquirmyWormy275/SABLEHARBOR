@@ -9,12 +9,23 @@
   `5137c5abc025ad757a4e1af2a57279e4964578cf`, authoritative only for the August 31 knowledge state.
 - Calibration: `origin/architecture/corporate-operating-model-v0.1` at `f12d359f3c3f009a1eea1d290f61be0462ca1f2e`
 - Implementation branch: `finance/enterprise-financial-platform-v0.1`
-- Draft PR: `https://github.com/SquirmyWormy275/SABLEHARBOR/pull/9`
-- Current phase: release-candidate reconciliation and review; authoritative acceptance status is in
-  `PLATFORM_ACCEPTANCE_v0.1.md` and current CI, not an older checkpoint below.
-- Current migration target: `0015`. Final fresh SQLite/PostgreSQL migration, generation, validation,
-  workbook, unit-package, release, and artifact-safety evidence for this integration state remains
-  pending and must not be inferred from the historical checkpoints below.
+- PR: `https://github.com/SquirmyWormy275/SABLEHARBOR/pull/9`
+- Final implementation evidence commit: `3fb7fc7d5ae3b138760e64560d3143fde18a8a47`.
+- Current phase: local acceptance passed; current remote PR checks and merge remain. Authoritative
+  acceptance status is in `PLATFORM_ACCEPTANCE_v0.1.md` and current CI, not an older checkpoint
+  below.
+- Current migration target: `0015`. Fresh SQLite and PostgreSQL 16.6/18.6 migration, generation,
+  validation, query, workbook, unit-package, release, checksum, direct-guard, and artifact-safety
+  evidence passed at the implementation evidence commit. Both PostgreSQL versions produced schema
+  SHA-256 `68d35c79bc07b59e8697e40cfdf5c7f49bc3e88e0a5ebd593a5dd26426d0a4b7`.
+- Final local suite: Ruff format/lint PASS; strict mypy PASS across 37 source files; all 128 collected
+  tests exercised, with 125 local passes and three PostgreSQL-only local skips that passed on each
+  certified PostgreSQL version. A clean standard/base run passed all ten financial controls and all
+  21 named-query paths, with final balance-sheet difference `$0.0000`.
+- Final artifact evidence: six workbooks plus suite manifest/checksums (9 files), one public release
+  (26 files), and seven unit evidence packages (149 files) passed manifests, hashes, enterprise
+  bridges, recursive safety, and same-persisted-snapshot byte-determinism checks on SQLite,
+  PostgreSQL 16.6, and PostgreSQL 18.6.
 - Classification: every generated 2023–2026 numeric record is synthetic scenario/calibration data.
   The current shared-layer profile is `synthetic_common`; deprecated database columns containing
   `actual` are internal migration/storage aliases only. Current APIs and outputs use
@@ -308,9 +319,9 @@
   separately identifies forecast facilities and provisional acquisition
   opening balances while keeping unavailable covenant thresholds OPEN. This closes the allocation
   classification finding without inventing agreements or relabeling opening balances as new draws.
-- Current `0015` integrity tranche (implementation, not final evidence): adds generated customer and
+- Current `0015` integrity tranche: adds generated customer and
   vendor ownership, same-run links, journal-line equations, fiscal-period/book/date constraints,
   completed-run content immutability, and database-side run-completion guards. The central validation
-  registry now gates workbook and release producers, and the unit-package generator records the
-  enterprise validation result. Final clean SQLite and PostgreSQL execution plus workbook, unit,
-  release, checksum, and artifact-safety evidence remains required before acceptance.
+  registry gates workbook and release producers, and the unit-package generator records the
+  enterprise validation result. Final clean SQLite and PostgreSQL 16.6/18.6 execution plus workbook,
+  unit, release, checksum, direct-guard, and artifact-safety evidence passed at `3fb7fc7`.

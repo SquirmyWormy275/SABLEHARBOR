@@ -1,5 +1,21 @@
 # Worklog
 
+## 2026-09-05
+
+- Reconciled PR #9 onto current SABLEHARBOR `main` at
+  `712076751a31534cd9e6e41458336cdc7b6585b5` and removed stale authoring/overlap collateral.
+- Audited the implementation against the Alexandria World-Building Constitution and its temporal,
+  epistemic, diegetic-boundary, reality-anchoring, and conditional-retcon standards. Generated
+  values remain synthetic; retrospective and open/model-proposed facts remain explicitly labeled.
+- Completed migration `0015`, populated-upgrade reconciliation, run and cutoff isolation, comparison
+  contracts, independent financial controls, immutable completed evidence, public/unit exports,
+  semantic workbooks, source-lock verification, and release-safety gates.
+- Candidate `3fb7fc7d5ae3b138760e64560d3143fde18a8a47` passed the 128-test local collection,
+  PostgreSQL 16.6 and 18.6 migration/profile/direct-guard matrices, all 21 named-query paths, all ten
+  financial controls, balanced statements, and deterministic same-snapshot artifact rebuilds.
+- Deferred only the explicitly recorded depth and unresolved-canon items in `BACKLOG.md` and
+  `KNOWN_LIMITATIONS.md`; no open item is a v0.1 merge blocker.
+
 ## 2026-09-01
 
 - Found no repository at the initially supplied working directory.
