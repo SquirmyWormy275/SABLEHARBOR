@@ -7,6 +7,10 @@
    runs at implementation evidence commit `3fb7fc7`.
 2. Ran and reviewed the six-workbook, seven scoped unit-package, public-release, checksum, bridge,
    same-snapshot determinism, and recursive artifact-safety gates against completed `standard` runs.
+3. Merged PR #9 through a provenance-preserving merge commit, passed post-merge `main` CI, reconciled
+   live acceptance guidance, and moved finance CI to immutable Node 24 action pins with one PR run
+   per candidate and one push run on `main`. Uploaded review archives retain generated ownership
+   markers so their internal manifests and checksum inventories remain complete after download.
 
 ## Deferred, nonblocking depth
 

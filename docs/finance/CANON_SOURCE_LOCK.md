@@ -1,8 +1,9 @@
 # Sable Harbor finance canon source lock
 
 - **Reconciled:** 2026-09-05
-- **Implementation branch:** `finance/enterprise-financial-platform-v0.1`
-- **Current repository integration point:** `main` at `712076751a31534cd9e6e41458336cdc7b6585b5`
+- **Implementation source branch:** `finance/enterprise-financial-platform-v0.1`, merged through PR #9
+- **Pinned controlling-canon integration point:** pre-merge `main` at `712076751a31534cd9e6e41458336cdc7b6585b5`
+- **Merged platform integration commit:** `b048e121b280e752ca5289e734d49208388e0f42`
 - **Current lore:** `docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md`, with the September 3 decision-register addendum and controlled governance/J2 instruments
 - **Historical knowledge snapshot:** August 31, 2026, v0.2 at `5137c5abc025ad757a4e1af2a57279e4964578cf`
 
@@ -45,8 +46,9 @@ uses v0.3 and the September 3 addendum, while retaining the effective dates of t
 ## Boundaries and limitations
 
 - The public Blackridge case build is present on current `main`. It is a separate case world, not a
-  Sable Harbor company, business unit, legal entity, or source ledger. PR9 does not create or import
-  Blackridge hidden truth; any future benchmark use requires explicit external/scenario provenance.
+  Sable Harbor company, business unit, legal entity, or source ledger. Merged PR #9 did not create
+  or import Blackridge hidden truth; any future benchmark use requires explicit external/scenario
+  provenance.
 - The relationship shapes Sable Harbor → controlled ARU → wholly owned BS&T and Sable Harbor →
   dedicated Red Wash legal operator are `LOCKED`. Exact legal names, suffixes, jurisdictions, tax
   elections, SPVs, intercompany agreements, acquisition terms, reserves, mine plan, ARU estate,

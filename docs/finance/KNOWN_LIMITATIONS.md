@@ -40,10 +40,6 @@
   237-billet design establishment, but establishment is not occupancy; no 237-person hiring claim is
   inferred. J2 occupancy and ESS/Internal Audit cost-center allocation remain explicit scenario
   work, with Internal Audit independence and J2/ESS separation preserved.
-- Local PostgreSQL verification on 2026-09-01 was unavailable because Docker API access to
-  `/var/run/docker.sock` was denied, the system PostgreSQL service was inactive, and no Podman
-  fallback was installed. The PostgreSQL 16 matrix is committed in CI; current remote evidence must
-  be taken from the PR checks rather than this historical local limitation.
 - Migrations `0008` through `0015` persist the intended synthetic calibration cutoff,
   repository-relative generation input manifest, and content-addressed build and shared-dataset
   identity. Deprecated physical database columns containing `actual` remain internal
@@ -56,9 +52,10 @@
   master and commitment records remain whole records rather than periodic facts. SQLite now proves two-seed
   natural-key namespacing and explicit non-lossy downgrade refusal for populated duplicate keys;
   Migration `0011` adds non-null ownership, same-run composite relationships, compatible
-  shared-dataset attachment, and database lifecycle guards. Their equivalent PostgreSQL 16
-  matrix is now encoded in CI and passes a SQLite backend surrogate, but remains open pending a
-  remote PostgreSQL run. Migration `0012` and scoped APIs isolate trial balances, lineage,
+  shared-dataset attachment, and database lifecycle guards. The equivalent PostgreSQL 16 matrix
+  passed at the final PR head and merge commit; independent PostgreSQL 16.6 and 18.6 matrices also
+  passed and produced the same schema fingerprint. Migration `0012` and scoped APIs isolate trial
+  balances, lineage,
   and accounting-period close state by compatible run context. Close markers cover both the
   selected scenario and included shared calibration layer, and active sessions reject unrelated
   journal posting and reversal. Same-seed sibling scenarios reuse one completed pre-cutoff monthly
@@ -70,12 +67,13 @@
   Legacy global closes are preserved during `0012` upgrade; downgrade preserves uniform closes
   and rejects unrepresentable mixed run state. Trial-balance comparison now requires distinct,
   completed runs with the same profile, shared dataset, cutoff, forecast start, and schema, and
-  rejects cross-seed comparisons. Broader comparison coverage beyond trial balances remains open;
-  Stage 1 is not closed. Revision `0013` widens cutoff-marker period codes and guards lossy
+  rejects cross-seed comparisons. The v0.1 Stage 1 acceptance is closed; broader comparison
+  coverage beyond trial balances remains deferred. Revision `0013` widens cutoff-marker period
+  codes and guards lossy
   downgrade; `0014` adds the run-owned debt-repayment subledger; the current `0015` target adds
   customer/vendor ownership, same-run links, ledger and period constraints, completed-run content
   guards, and database-side completion checks. Final fresh SQLite and PostgreSQL evidence for the
-  current `0015` integration state has not yet been recorded.
+  accepted `0015` integration state is recorded in `PLATFORM_ACCEPTANCE_v0.1.md`.
 - Generation, validation, workbook, and packaging commands in v0.1 require the full governed
   SABLEHARBOR repository checkout, its repo-level configuration/docs/migrations/release schemas,
   and all Git objects pinned by `CANON_SOURCE_LOCK.json`. A shallow checkout or standalone wheel is
@@ -87,8 +85,8 @@
   CSV text is neutralized against spreadsheet formula injection, XLSX string formula/URL detection
   is disabled, and an external `SHA256SUMS.txt` authenticates the finalized manifest. Package
   replacement uses a validated, marked staging directory and refuses broad or unowned targets.
-  Publication remains review blocked until the current-tree SQLite/PostgreSQL, workbook, unit,
-  release, checksum, reconciliation, and artifact-safety gates run and their evidence is reviewed.
+  The v0.1 SQLite/PostgreSQL, workbook, unit, release, checksum, reconciliation, and artifact-safety
+  publication gates passed. Formal publication remains a separate immutable tag/release action.
 - Deterministic generation means stable identifiers, modeled values, and ordering for unchanged
   governed inputs. Repackaging one persisted run from an unchanged, immutable source-database
   snapshot with the same controlled package timestamp is byte reproducible. Shared legal-entity,

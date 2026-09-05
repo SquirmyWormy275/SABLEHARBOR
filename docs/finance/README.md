@@ -7,7 +7,8 @@ slices, synthetic 2023–2026 monthly scenario/calibration generation, earlier c
 scenarios, named SQL queries, six workbook outputs with an explicit valuation limitation, scoped
 business-unit evidence packages, and an allowlisted public-demo release generator. Generated values
 are not observed company history or audited records. The current Alembic target is `0015`; final
-SQLite/PostgreSQL and artifact acceptance evidence for the current worktree is still required.
+SQLite/PostgreSQL and artifact acceptance passed for v0.1 and is recorded in
+`PLATFORM_ACCEPTANCE_v0.1.md`.
 
 ```bash
 uv sync --all-extras

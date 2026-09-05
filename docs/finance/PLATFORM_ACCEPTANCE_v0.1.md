@@ -1,8 +1,11 @@
 # Enterprise platform v0.1 acceptance
 
-**Status:** LOCAL ACCEPTANCE PASS — CURRENT REMOTE PR CHECKS PENDING.
-**Branch:** `finance/enterprise-financial-platform-v0.1`
+**Status:** ACCEPTED AND MERGED — POST-MERGE `main` CI PASS.
+**Pull request:** [#9](https://github.com/SquirmyWormy275/SABLEHARBOR/pull/9)
+**Final candidate head:** `8699eca44efc22622930f57b69bc92a71a476c4c`
+**Merge commit:** `b048e121b280e752ca5289e734d49208388e0f42`
 **Implementation evidence commit:** `3fb7fc7d5ae3b138760e64560d3143fde18a8a47`
+**Post-merge CI:** [run 33963418260](https://github.com/SquirmyWormy275/SABLEHARBOR/actions/runs/33963418260)
 **Seed:** `20260831`
 
 ## Acceptance coverage
@@ -64,16 +67,17 @@
   an enterprise bridge, two safety scans, a manifest, and checksums. These are not standalone source
   databases or independently audited business-unit statements.
 
-## Open acceptance boundary
+## Accepted scope and open boundary
 
-This branch is a release candidate, not an audited production system. AR/AP exposure and debt
+This accepted v0.1 platform is a synthetic reference implementation, not an audited production
+system. AR/AP exposure and debt
 controls separately identify formal documents, disclosed residual source-event exposures, causal
 facilities, and provisional acquisition opening balances. AR has due-date buckets; AP due dates are
 unavailable in the current schema. Document exposure plus the disclosed residual bridge reconciles
-to the GL. The generated unit packages are scoped release-candidate evidence. Local reviewer,
-SQLite, PostgreSQL, workbook, release, reconciliation, and safety gates have passed; merge still
-requires the current remote PR checks and mergeability gate to pass. This acceptance scope is PR #9
-only; it does not authorize importing or changing PR #10/#13
+to the GL. The generated unit packages are scoped v0.1 evidence. Local review and final-head push
+and pull-request CI passed before merge; the post-merge `main` workflow then passed both PostgreSQL
+and full SQLite/static/artifact jobs at the merge commit. This acceptance scope is PR #9 only; it
+does not authorize importing or changing PR #10/#13
 collateral. OPEN and scenario facts remain labeled and must not be promoted to LOCKED canon through
 acceptance.
 

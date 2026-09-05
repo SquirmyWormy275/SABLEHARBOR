@@ -6,9 +6,8 @@ effective dates; v0.2 is only the August 31 historical knowledge snapshot. The w
 canon: all generated 2023–2026 numbers are synthetic scenario/calibration records and new
 quantitative structure remains `MODEL_PROPOSED` or `SCENARIO_INPUT`.
 
-If GitHub authentication blocks automation, push with:
-
-```bash
-git push -u origin finance/enterprise-financial-platform-v0.1
-gh pr create --draft --base main --head finance/enterprise-financial-platform-v0.1 --title "Build Sable Harbor enterprise financial data platform v0.1"
-```
+PR #9 is accepted and merged at `b048e121b280e752ca5289e734d49208388e0f42`; its final candidate
+head is retained at `8699eca44efc22622930f57b69bc92a71a476c4c` for provenance. Begin new work
+from current `origin/main` on a separate branch. Do not reuse the merged PR branch or reinterpret its
+synthetic records as canon. Current deferred depth is listed in `BACKLOG.md` and
+`KNOWN_LIMITATIONS.md`.

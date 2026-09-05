@@ -3,17 +3,20 @@
 - **Status note (2026-09-05):** this file is a chronological engineering log, not live branch or
   canon authority. Resolve the current implementation commit with `git rev-parse HEAD`; references
   below to a tranche being “uncommitted” describe its state when that historical entry was written.
-- Current canon source: `main` at `712076751a31534cd9e6e41458336cdc7b6585b5`, including corporate
-  lore v0.3 and the September 3 decision-register addendum.
+- Pinned controlling canon source for PR #9: pre-merge `main` at
+  `712076751a31534cd9e6e41458336cdc7b6585b5`, including corporate lore v0.3 and the September 3
+  decision-register addendum.
 - Historical knowledge snapshot: v0.2 at
   `5137c5abc025ad757a4e1af2a57279e4964578cf`, authoritative only for the August 31 knowledge state.
 - Calibration: `origin/architecture/corporate-operating-model-v0.1` at `f12d359f3c3f009a1eea1d290f61be0462ca1f2e`
-- Implementation branch: `finance/enterprise-financial-platform-v0.1`
-- PR: `https://github.com/SquirmyWormy275/SABLEHARBOR/pull/9`
+- Final implementation branch: `finance/enterprise-financial-platform-v0.1` at
+  `8699eca44efc22622930f57b69bc92a71a476c4c`.
+- PR: `https://github.com/SquirmyWormy275/SABLEHARBOR/pull/9`, merged by regular two-parent commit
+  `b048e121b280e752ca5289e734d49208388e0f42`.
 - Final implementation evidence commit: `3fb7fc7d5ae3b138760e64560d3143fde18a8a47`.
-- Current phase: local acceptance passed; current remote PR checks and merge remain. Authoritative
-  acceptance status is in `PLATFORM_ACCEPTANCE_v0.1.md` and current CI, not an older checkpoint
-  below.
+- Current phase: v0.1 accepted and merged. Both final-head PR/push matrices passed, and post-merge
+  `main` workflow `33963418260` passed its PostgreSQL and full SQLite/static/artifact jobs.
+  Authoritative acceptance status is in `PLATFORM_ACCEPTANCE_v0.1.md`, not an older checkpoint below.
 - Current migration target: `0015`. Fresh SQLite and PostgreSQL 16.6/18.6 migration, generation,
   validation, query, workbook, unit-package, release, checksum, direct-guard, and artifact-safety
   evidence passed at the implementation evidence commit. Both PostgreSQL versions produced schema
@@ -30,7 +33,8 @@
   The current shared-layer profile is `synthetic_common`; deprecated database columns containing
   `actual` are internal migration/storage aliases only. Current APIs and outputs use
   synthetic-calibration semantics and do not assert observed company results or audited books.
-- Implemented surfaces under review: source lock and collisions; alternatives A/B/C; Alternative B
+- Technically accepted v0.1 implementation surfaces: source lock and collisions; alternatives A/B/C;
+  Alternative B
   operating model; legal/entity scenario; dimensional chart; accounting kernel and migrations;
   commercial, professional-services engagement, and corporate subledgers; Red Wash, ARU/BS&T,
   Cradle, Willow, and Atlas causal flows; deterministic base/low/high/stress scenarios; synthetic
