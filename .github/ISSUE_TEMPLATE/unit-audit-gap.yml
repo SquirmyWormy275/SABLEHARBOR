@@ -1,0 +1,74 @@
+name: Business-line audit gap
+description: Record a missing, stale, inconsistent, or unvalidated unit artifact
+title: "[UNIT AUDIT] "
+labels: []
+body:
+  - type: dropdown
+    id: unit
+    attributes:
+      label: Business line, component, historical identity, or case
+      options:
+        - Foundry Field
+        - Willow
+        - Atlas Meridian
+        - Pale Sun
+        - Project Cradle
+        - American Resource Utility
+        - Advisory
+        - Foundry
+        - Red Wash Mine
+        - Blood, Sweat & Tears Railway
+        - Emberline
+        - Evalon
+        - Blackridge
+    validations:
+      required: true
+  - type: dropdown
+    id: domain
+    attributes:
+      label: Artifact domain
+      options:
+        - Canon/history
+        - Identity/collateral
+        - Organization/authority
+        - Financials/accounting
+        - Inventory/assets/operations
+        - Database/exports
+        - Controls/validation
+        - Wiki/navigation
+    validations:
+      required: true
+  - type: dropdown
+    id: evidence_state
+    attributes:
+      label: Current evidence state
+      options:
+        - OPEN
+        - NOT_MATERIALIZED
+        - SOURCE_ONLY
+        - REVIEW_CANDIDATE
+        - RELEASE_CANDIDATE_NOT_ACCEPTED
+        - HISTORICAL_OR_SUPERSEDED
+        - ACCEPTED_BUT_STALE
+    validations:
+      required: true
+  - type: textarea
+    id: finding
+    attributes:
+      label: Finding
+      description: State the gap, affected files, and why it matters.
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Controlling sources and pinned commits
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: Define the artifacts, tests, reconciliation, direct inspection, manifest, and checksums required to close the gap.
+    validations:
+      required: true
