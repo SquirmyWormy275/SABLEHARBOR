@@ -1,0 +1,68 @@
+name: Red Wash transaction and operating record
+
+on:
+  push:
+    branches:
+      - main
+      - feature/red-wash-transaction-operating-record-v2
+    paths:
+      - 'red_wash/**'
+      - 'docs/canon/*RED_WASH*'
+      - 'docs/structured/red_wash_transaction_operating_record.json'
+      - 'docs/finance/RED_WASH_FINANCE_PLATFORM_BRIDGE.md'
+      - 'config/finance/assumptions/red_wash_transaction_operating_record.yml'
+      - 'assets/brand/red_wash_visual_manifest.json'
+      - '.github/workflows/red-wash-case-ci.yml'
+  pull_request:
+    paths:
+      - 'red_wash/**'
+      - 'docs/canon/*RED_WASH*'
+      - 'docs/structured/red_wash_transaction_operating_record.json'
+      - 'docs/finance/RED_WASH_FINANCE_PLATFORM_BRIDGE.md'
+      - 'config/finance/assumptions/red_wash_transaction_operating_record.yml'
+      - 'assets/brand/red_wash_visual_manifest.json'
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build deterministic Red Wash source package
+        run: python red_wash/tools/build_red_wash_package.py
+      - name: Validate Red Wash reconciliations
+        run: python red_wash/tools/validate_red_wash_record.py
+      - name: Run Red Wash tests
+        run: python -m unittest discover -s red_wash/tests -p 'test_*.py' -v
+      - name: Verify generated database
+        run: |
+          python - <<'PY'
+          import sqlite3
+          from pathlib import Path
+          db = Path('red_wash/dist/red_wash_transaction_operating_record_v1.sqlite3')
+          con = sqlite3.connect(db)
+          assert con.execute('PRAGMA integrity_check').fetchone()[0] == 'ok'
+          assert con.execute('SELECT COUNT(*) FROM drill_collars').fetchone()[0] == 240
+          assert con.execute('SELECT COUNT(*) FROM assays').fetchone()[0] == 2400
+          assert con.execute('SELECT COUNT(*) FROM virtual_data_room_index').fetchone()[0] == 176
+          con.close()
+          PY
+      - name: Package generated source evidence
+        run: |
+          mkdir -p red-wash-release
+          cp -R red_wash red-wash-release/
+          cp RED_WASH.md red-wash-release/
+          cp docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05.md red-wash-release/
+          cp docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-05_RED_WASH.md red-wash-release/
+          cp docs/structured/red_wash_transaction_operating_record.json red-wash-release/
+          cp assets/brand/red_wash_visual_manifest.json red-wash-release/
+      - uses: actions/upload-artifact@v4
+        with:
+          name: red-wash-transaction-operating-record
+          path: red-wash-release
+          if-no-files-found: error
