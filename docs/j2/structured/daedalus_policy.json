@@ -1,0 +1,23 @@
+{
+  "policy_id":"SH-J2-DAEDALUS-POL-001","version":"1.0.0","effective_date":"2026-09-02","status":"LOCKED_ARCHITECTURAL_DIRECTION",
+  "canonical_source":"docs/j2/alexandria/DAEDALUS_OPERATING_DOCTRINE.md",
+  "identity":{"kind":"personal-ai-agent","environment":"Alexandria","is_alexandria":false,"is_pinakes_portal":false},
+  "access":{"institutional_read_scope":"universal","disclosure":"requesting-user entitlement and context bounded","inferential_leakage_prohibited":true,"runtime_implementation":"future"},
+  "memory":{"personal_persistent":true,"cross_user_read":false,"global_updates_merge_content":false},
+  "authority":{"authoritative_record_write":false,"self_promotion":false,"institutional_authority":false},
+  "allowed_verbs":["traverse","retrieve","pull","hold","compare","trace","reconstruct","visualize","synthesize","challenge","explore","converse","hypothesize"],
+  "synthetic_artifacts":{"may_persist_user_side":true,"authoritative":false,"outside_alexandria":true,"marking_required":"DAEDALUS-GENERATED / NON-AUTHORITATIVE","automatic_promotion":false},
+  "human_authorship":{"judgment":"Judgment Officer","semaphore":"Orientation Officer","canon_change":"Orientation Officer","eib":"Orientation"},
+  "provenance":{"source_trace_required":true,"inference_label_required":true,"contrary_missing_contested_evidence_supported":true},
+  "sharing":{"content_free_skills_allowed":true,"user_content_allowed":false,"alexandria_extracts_allowed":false},
+  "user_export":{"allowed":true,"synthetic_marking_preserved":true,"access_constraints_preserved":true},
+  "invariants":[
+    "Daedalus-generated artifacts cannot automatically become Canon.",
+    "Daedalus-generated artifacts cannot create Semaphore traffic.",
+    "Daedalus-generated artifacts cannot become Judgment records without independent human authorship.",
+    "Cross-user private-memory reads are prohibited.",
+    "Shareable skill packages contain no user content.",
+    "Restricted data cannot be disclosed merely because Daedalus has global read access.",
+    "AI inference is visibly distinguishable from source-derived material."
+  ]
+}

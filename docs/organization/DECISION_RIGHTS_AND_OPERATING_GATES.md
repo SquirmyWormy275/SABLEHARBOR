@@ -111,7 +111,7 @@ flowchart LR
 - Red Wash accepts tests only through field qualification and an operating owner.
 - Atlas Meridian investigates and supports decisions; it does not own final acquisition, capital, or operating decisions.
 - When records disagree during an operating event, operational accountability owns the immediate consequence. Technical and capital authority remain distinct.
-- Exact executive titles, reporting lines, board delegations, and the identity of capital authority remain open.
+- Exact unresolved executive titles, reporting lines, and numeric management thresholds remain open. Board delegation bands and committee/capital oversight identities are controlled by the current governance instruments.
 
 ## Controlling canon
 

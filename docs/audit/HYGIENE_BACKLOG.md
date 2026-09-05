@@ -1,26 +1,23 @@
 # Repository Hygiene Backlog
 
-## P0
+**Updated:** September 3, 2026
 
-- Complete independent remediation and acceptance of PR #9.
-- Obtain reviewer acceptance for the seven generated unit-scoped release packages.
-- Enable the GitHub wiki and publish the controlled `docs/wiki/` source.
-- Protect `main` and require review and relevant checks.
-- Update PR #9's description and return it to draft until acceptance.
-- Close PR #1 as superseded while preserving historical calibration.
+## Active
 
-## P1
+- Reconcile PR #13 with current `main` before any merge. Preserve September 3 controlling canon; treat PR #13 as a source of unique portal/dossier/wiki/brand/hygiene material, not as a replacement repository baseline.
+- Complete PR #9 finance/data-platform acceptance work or explicitly abandon it. It remains review-blocked and must not be merged by cleanup fiat.
+- Retire stale branches after unique-content verification. The current connector does not expose branch deletion, so actual ref deletion requires repository administration/local Git capability.
+- Enable/verify `main` branch protection/rulesets and automatic merged-branch cleanup when repository settings are available.
+- Complete controlled-publication/database reconciliation tracked by #33, #35, #37, #48, and #88.
 
-- Retire merged and selectively harvested source branches.
-- Consolidate Blackridge stubs into one canonical branch.
-- Decide whether earlier logo work contains unique material, preserve it, then retire.
-- Add repository description and topics; enable merged-branch auto-deletion.
-- Create signed or annotated tags and GitHub Releases with manifests and checksums.
-- Establish release-retention and supersession policy.
+## Completed in September 3 cleanup
 
-## P2
+- Alexandria Control public/private migration reconciled and PR #86 merged.
+- Alexandria boundary issue #85 closed as resolved.
+- PR #10 closed as superseded by the later PR #13 integration path.
+- Open-canon/hygiene index reconciled with current issue and PR disposition.
+- Branch/PR register refreshed so stale heads are not mistaken for active work.
 
-- Extend the proofed unit-specific letterheads into optional DOCX/PDF variants.
-- Expand unit packages with any reviewer-requested operational registers.
-- Add pinned external-link, schema-diff, branch-age, and stale-PR checks.
-- Consider Pages after source architecture stabilizes.
+## Principle
+
+Repository cleanliness is subordinate to evidence preservation and canon integrity. Close and retire obsolete work aggressively only after confirming that no accepted unique content would disappear and no stale branch can overwrite newer controlling canon.

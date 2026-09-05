@@ -1,20 +1,10 @@
-# Sable Harbor
+# Sable Harbor Institutional Index
 
-![Sable Harbor](https://raw.githubusercontent.com/SquirmyWormy275/SABLEHARBOR/main/assets/brand/logos/sable-harbor__primary-horizontal.svg)
+**Presentation status:** Wiki source; not independent canon.  
+**Controlling source:** `docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md`
 
-Sable Harbor is the canonical synthetic enterprise and reusable business-world sandbox spanning enterprise software, research, mining, recovery, logistics, advisory, finance, governance, assurance, security, incident response, and professional training.
+Sable Harbor is primarily one operating company with selective subsidiaries and named business/program capabilities. Its 2026 governance is documented in the [board/capital instrument](../governance/BOARD_AND_CAPITAL_GOVERNANCE.md) and [governance constitution](../governance/GOVERNANCE_CONSTITUTION.md).
 
-## Start with the enterprise
+[J2 — Judgment & Junction](../j2/README.md) is the internal intelligence, judgment, orientation, education, and learning capability. [Alexandria](../j2/alexandria/README.md) preserves and connects institutional learning; Pinakes is its nine-door human portal, Semaphore its traffic corpus, Canon its current best understanding, and Daedalus its non-authoritative personal AI companion.
 
-- [[Business Lines]]
-- [[Organization]]
-- [[Data and Auditability]]
-- [[Corporate History]]
-- [[Brand Assets]]
-- [[Canon and Governance]]
-
-## Publication status
-
-This directory is the versioned wiki source. The repository's GitHub Wiki is currently disabled; these pages become the live derivative only after the setting is enabled and the controlled publishing workflow succeeds.
-
-Versioned repository documents remain controlling. The wiki summarizes and navigates; it does not create canon.
+For fact state and unresolved matters, use the [decision register](../canon/DECISION_REGISTER.md). LOCKED, PROVISIONAL, OPEN, and SUPERSEDED distinctions remain controlling.

@@ -1,107 +1,92 @@
-<p align="center">
-  <img src="assets/brand/logos/sable-harbor__primary-horizontal.svg" alt="Sable Harbor" width="860" />
-</p>
-
 # SABLE HARBOR
 
-Sable Harbor is the canonical synthetic enterprise and reusable business-world sandbox for enterprise software, research, mining, resource recovery, logistics, advisory, finance, governance, assurance, security, incident response, and professional training.
+Sable Harbor is the canonical synthetic enterprise and reusable business-world sandbox for mining, natural resources, industrial systems, enterprise software, assurance, analytics, finance, governance, security, incident response, and professional training.
 
-> **Status as of September 1, 2026:** corporate lore v0.2, the production logo system, and the organization publication package are accepted on `main`. The finance/data platform in PR #9 and the company/business-line dossier layer on the stacked integration branch are release candidates, not accepted production systems.
+**Start here:** the [controlled document index](docs/CONTROLLED_DOCUMENT_INDEX.md) distinguishes current authority, generated representations, and preserved historical records.
 
-## View the company
+**Maintainers:** use [MAINTAINERS.md](MAINTAINERS.md) before changing canon, generated publications, structured catalogs, validators, public-repository boundaries, or issue state.
 
-- [Enterprise dossier](docs/company/README.md)
-- [Corporate lore and decision register](docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.2.md)
-- [Enterprise organization chart](docs/organization/README.md)
-- [Official organization briefing](docs/organization/briefing/README.md)
-- [Brand assets and collateral](assets/brand/README.md)
-- [Finance/database platform](docs/finance/README.md)
-- [Repository audit](docs/audit/REPOSITORY_AUDIT_2026-09-01.md)
+It is modeled as a company that would exist independently of any audit or benchmark. Business activity creates systems, records, contracts, communications, controls, mistakes, experiments, operating consequences, and evidence; downstream tools consume deliberate, versioned exports.
 
-## Enterprise organization
+## Canon states
 
-This is the canon-derived August 31, 2026 **functional enterprise organization chart**. It shows company-wide authorities, operating lines, named leaders and known ownership/component relationships. Exact HR reporting lines and final legal entities remain deliberately open.
+- **LOCKED** — accepted canon;
+- **PROVISIONAL** — accepted working direction pending exact implementation;
+- **OPEN** — unresolved and not to be silently invented;
+- **SUPERSEDED** — preserved prior direction that no longer controls current canon.
+
+## Current canon
+
+The controlling September 2–3, 2026 layer begins with [`SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md`](docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md) and is extended by the [decision register](docs/canon/DECISION_REGISTER.md), [September 3 decision-register addendum](docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-03.md), [corporate headquarters closeout](docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md), [v0.3 changelog](docs/canon/CANON_CHANGELOG_v0.3.md), and [board approval records](docs/governance/board-records/README.md).
+
+The September 3 headquarters closeout locks the ESS umbrella, Internal Audit independence, J2 establishment, Orientation selection/tenure, People & Culture doctrine, Enterprise Technology Services doctrine, authority/capital/planning/executive rhythm, professional-practice model, portfolio architecture, and Sacramento headquarters physical direction. The [SHMS framework](docs/governance/SABLE_HARBOR_MANAGEMENT_SYSTEM_FRAMEWORK.md) is explicitly the **next-priority development thread** and is not yet completed doctrine.
+
+Inherited canon and provenance remain available as history:
+
+- [`docs/canon/SABLE_HARBOR_CANONICAL_ARCHITECTURE_HANDOVER.md`](docs/canon/SABLE_HARBOR_CANONICAL_ARCHITECTURE_HANDOVER.md)
+- [`docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.2.md`](docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.2.md)
+- [`docs/canon/SABLE_HARBOR_CONTINUITY_AUDIT_v0.2.md`](docs/canon/SABLE_HARBOR_CONTINUITY_AUDIT_v0.2.md)
+- [`docs/canon/CANON_CHANGELOG_v0.2.md`](docs/canon/CANON_CHANGELOG_v0.2.md)
+
+Historical branch names are provenance only; they are not current work instructions or authority.
+
+## Governance, headquarters, J2, Alexandria, and controls
+
+- [Controlled document index](docs/CONTROLLED_DOCUMENT_INDEX.md)
+- [Corporate headquarters closeout](docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md)
+- [Governance package](docs/governance/README.md)
+- [People & Culture doctrine](docs/governance/PEOPLE_AND_CULTURE_DOCTRINE.md)
+- [Enterprise Technology Services doctrine](docs/governance/ENTERPRISE_TECHNOLOGY_SERVICES_DOCTRINE.md)
+- [Enterprise authority, capital, and executive rhythm](docs/governance/ENTERPRISE_AUTHORITY_CAPITAL_AND_EXECUTIVE_RHYTHM.md)
+- [J2 package](docs/j2/README.md)
+- [Alexandria package](docs/j2/alexandria/README.md)
+- [Common Controls Framework index](docs/controls/CCF_FOUNDATION_BUILD_INDEX_v0.1.md)
+- [Open canon and hygiene issue index](docs/internal/OPEN_CANON_AND_HYGIENE_ISSUE_INDEX.md)
+
+## Organization at a glance
+
+The existing rendered organization package remains a useful August 31 baseline, but September 3 canon adds a stronger institutional architecture:
+
+- **Board / CEO** — enterprise authority;
+- **operating businesses** — end-to-end business authority inside enterprise boundaries;
+- **Enterprise Support Services (ESS)** — administrative umbrella for enterprise support functions, led administratively rather than as a super-executive command chain;
+- **J2** — distinct Judgment & Junction institution outside ESS;
+- **Internal Audit** — functionally independent to the Board Audit & Compliance Committee;
+- **professional practices** — horizontal standards/profession stewardship without dual operating authority.
 
 [![Sable Harbor enterprise organization chart](docs/organization/assets/enterprise-organization-2026.svg)](docs/organization/README.md)
 
-The full package contains dedicated charts for [leadership and authority](docs/organization/2026_LEADERSHIP_AND_AUTHORITY_MAP.md), [Foundry Field](docs/organization/FOUNDRY_FIELD_ORGANIZATION.md), [Project Willow](docs/organization/WILLOW_ORGANIZATION.md), [Atlas Meridian](docs/organization/ATLAS_MERIDIAN_BRIDGE_ORGANIZATION.md), [Pale Sun and Red Wash](docs/organization/PALE_SUN_RED_WASH_ORGANIZATION.md), [Project Cradle](docs/organization/PROJECT_CRADLE_ORGANIZATION.md), [ARU and BS&T](docs/organization/ARU_BST_ORGANIZATION.md), and [the Original Eight](docs/organization/ORIGINAL_EIGHT.md).
+The organization charts should be refreshed in a later rendering pass to reflect the September 3 headquarters model without inventing unnamed leaders.
 
-### Official organization briefing
+## Headquarters
 
-The briefing-grade publication package uses the approved production logo system and includes one rendered 16:9 image per chart, an editable PowerPoint deck, a PDF, a packaged ZIP, a source builder, and a validation manifest.
+Sable Harbor headquarters is in **Sacramento, California**. The canonical physical direction is a beautiful, formidable long-duration research/industrial campus rather than a conventional glass tower or gaudy corporate palace. The approved September 3 exterior reference is identified in the headquarters closeout and structured register; repository ingestion of the binary image and controlled publication package is tracked as closeout work.
 
-- [Organization briefing index](docs/organization/briefing/README.md)
-- [Editable PowerPoint](docs/organization/briefing/SABLE_HARBOR_Organization_Briefing_v1.0.pptx)
-- [Briefing PDF](docs/organization/briefing/SABLE_HARBOR_Organization_Briefing_v1.0.pdf)
-- [Complete briefing package](docs/organization/briefing/SABLE_HARBOR_Organization_Briefing_v1.0.zip)
+## Blackridge status
 
-## Explore by business line
+Blackridge remains the upstream founding wound and a separate executable case universe. The public/private scenario boundary and Alexandria Control migration are tracked separately; repository architecture work must not rewrite Blackridge or corporate canon merely for implementation convenience.
 
-| Mark | Business line | Operating role | Current audit state |
-|---|---|---|---|
-| [<img src="assets/brand/logos/foundry-field__mark.svg" width="52" alt="Foundry Field mark" />](docs/business-lines/FOUNDRY_FIELD.md) | [Foundry Field](docs/business-lines/FOUNDRY_FIELD.md) | Current core business line and principal operating/economic interface. | RC dossier; unit bundle absent |
-| [<img src="assets/brand/logos/willow__mark.svg" width="52" alt="Willow mark" />](docs/business-lines/WILLOW.md) | [Willow](docs/business-lines/WILLOW.md) | Current core business line for bounded experiments and consequential unknowns. | RC dossier; unit bundle absent |
-| [<img src="assets/brand/logos/atlas-meridian__mark.svg" width="52" alt="Atlas Meridian mark" />](docs/business-lines/ATLAS_MERIDIAN.md) | [Atlas Meridian](docs/business-lines/ATLAS_MERIDIAN.md) | Current core business line for investigation across represented evidence. | RC dossier; unit bundle absent |
-| [<img src="assets/brand/logos/pale-sun__mark.svg" width="52" alt="Pale Sun mark" />](docs/business-lines/PALE_SUN.md) | [Pale Sun](docs/business-lines/PALE_SUN.md) | Current operating business line responsible for Red Wash and the uranium operating thesis. | RC dossier; unit bundle absent |
-| [<img src="assets/brand/logos/project-cradle__mark.svg" width="52" alt="Project Cradle mark" />](docs/business-lines/PROJECT_CRADLE.md) | [Project Cradle](docs/business-lines/PROJECT_CRADLE.md) | Current core business line for host-safe recovery and participation economics. | RC dossier; unit bundle absent |
-| [<img src="assets/brand/logos/american-resource-utility__mark.svg" width="52" alt="American Resource Utility mark" />](docs/business-lines/AMERICAN_RESOURCE_UTILITY.md) | [American Resource Utility](docs/business-lines/AMERICAN_RESOURCE_UTILITY.md) | Current distinct operating company and core resource-logistics line; BS&T is an operating component. | RC dossier; unit bundle absent |
-| [<img src="assets/brand/logos/advisory__mark.svg" width="52" alt="Advisory mark" />](docs/business-lines/ADVISORY.md) | [Advisory](docs/business-lines/ADVISORY.md) | Emerging current business line for method transfer where the client should own the system. | RC dossier; unit bundle absent |
+## Quantitative operating model
 
-Each dossier gathers the unit's logo variants, letterhead, canon sources, current organization view, entity/segment/site filters, relevant tables, named SQL queries, workbook surfaces, operational/inventory coverage, reproduction commands, and explicit gaps. Shared source assets remain normalized rather than duplicated.
+A prior `architecture/corporate-operating-model-v0.1` branch remains historical/noncontrolling. September 3 canon now establishes several **institutional design points** that supersede the old blanket statement that all headquarters/headcount architecture is open, including the 237-billet J2 establishment and the headquarters/ESS/People & Culture/Technology/authority model.
 
-## Audit coverage
+Exact enterprise-wide 2026 total headcount, revenue, product P&Ls, detailed legal suffix/jurisdiction mechanics, and some named leadership details remain open unless separately controlled elsewhere.
 
-| Layer | Location | Status |
-|---|---|---|
-| Controlling lore | `docs/canon/` | Accepted; OPEN decisions remain OPEN |
-| Organization/authority | `docs/organization/` | Accepted canon-derived maps; not full HR/legal trees |
-| Logos | `assets/brand/logos/` | Production assets |
-| Collateral | `assets/brand/collateral/` | Production-oriented candidate templates |
-| Business-line dossiers | `docs/business-lines/` | Release-candidate control indexes |
-| Unit registry | `config/enterprise/business_units.json` | Machine-readable source map |
-| Finance/database implementation | `src/`, `db/`, `config/finance/`, `tests/` | PR #9 release candidate; acceptance blockers remain |
-| Unit databases/workbooks | `shfin package-business-units` | Seven RC generators; publication acceptance pending |
-| Wiki | `docs/wiki/` | Versioned source; live GitHub Wiki disabled |
+## Public repository and wiki
 
-## Repository map
+Repository policy supports a browsable institutional archive and a GitHub wiki presentation layer. Repository administration and wiki publication remain tracked work; this README does not claim a live wiki unless repository settings and publication evidence show one.
 
-```text
-assets/brand/          logos, standards, collateral, manifests, packages
-docs/canon/            controlling lore, continuity, changelog, decisions
-docs/company/          enterprise dossier
-docs/business-lines/   one audit-control dossier per business line
-docs/organization/     organization sources, charts, briefing publications
-docs/finance/          finance/data-platform architecture and limitations
-docs/audit/            repository audit, branch register, unit export contract
-docs/governance/       public and repository governance
-docs/wiki/             versioned source for the derivative GitHub Wiki
-config/enterprise/     machine-readable business-unit registry
-config/finance/        model assumptions and scenarios
-db/                    migrations and named SQL queries
-src/sable_harbor/      accounting and domain implementation
-tests/                 unit, integration, canon, and reconciliation tests
-```
+The versioned documents under `docs/canon/` and the controlled document index remain the controlling source of truth. The wiki is a presentation/navigation layer and does not independently create canon.
 
-## Reproduce the finance release candidate
+There is **no standalone Easter-egg index, decoder, or exhaustive explanation page**. Hidden benchmark truth, evaluation oracles, credentials, unreleased scenario answers, and other material whose value depends on nonpublic access must not be committed to the public repository or wiki.
 
-```bash
-uv sync --all-extras
-SHFIN_DATABASE_URL=sqlite:///var/release.db uv run alembic upgrade head
-SHFIN_DATABASE_URL=sqlite:///var/release.db uv run shfin generate \
-  --profile full_history --scenario base --seed 20260831
-SHFIN_DATABASE_URL=sqlite:///var/release.db uv run shfin validate
-SHFIN_DATABASE_URL=sqlite:///var/release.db uv run shfin workbooks
-SHFIN_DATABASE_URL=sqlite:///var/release.db uv run shfin package-business-units \
-  --generation-run-id "$(SHFIN_DATABASE_URL=sqlite:///var/release.db uv run shfin run-id full_history --scenario base --seed 20260831)"
-```
+Private evaluator control-plane materials live in `SABLEHARBOR-ALEXANDRIA-CONTROL`; see the [Alexandria Control boundary](docs/internal/ALEXANDRIA_CONTROL_BOUNDARY.md). This repository remains the observable in-world surface and does not expose that private repository's contents.
 
-Generated databases, workbooks, and release bundles are ignored source outputs. They must be published as validated, checksummed CI/release artifacts rather than committed repeatedly. See the [unit export specification](docs/audit/UNIT_EXPORT_SPECIFICATION.md).
+See [`docs/governance/PUBLIC_REPOSITORY_AND_WIKI_POLICY.md`](docs/governance/PUBLIC_REPOSITORY_AND_WIKI_POLICY.md).
 
-## Fact and publication boundaries
+## Separation from NAILEX
 
-Repository material distinguishes accepted canon from provisional/open facts and model states. A logo, chart, model, workbook title, or dossier link does not independently establish a legal entity, reporting line, employee count, asset count, route, reserve, financial result, or commercial claim.
-
-The repository is public. Hidden benchmark truth, evaluation oracles, credentials, unreleased scenario answers, proprietary NAILEX implementation, and other nonpublic material must remain outside it. NAILEX consumes deliberate, versioned exports rather than the entire repository.
+NAILEX is a separate proprietary project. It should consume explicit, versioned Sable Harbor exports or benchmark packages rather than silently depending on the entire lore repository.
 
 ## License and use
 

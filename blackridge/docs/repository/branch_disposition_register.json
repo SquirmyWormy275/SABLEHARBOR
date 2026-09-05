@@ -1,0 +1,12 @@
+{
+  "audit_date": "2026-09-01",
+  "branches": [
+    {"branch": "origin/blackridge/m00-foundation", "disposition": "retained_historical", "reusable_implementation": false},
+    {"branch": "origin/blackridge/m00-v0.1.0-final", "disposition": "retained_historical", "reusable_implementation": false},
+    {"branch": "origin/blackridge/m00-v0.1.0-review", "disposition": "retained_historical", "reusable_implementation": false},
+    {"branch": "origin/blackridge/m00-v0.1.0", "disposition": "retained_historical", "reusable_implementation": false},
+    {"branch": "origin/blackridge/m00-ci-fix", "disposition": "retained_historical", "reusable_implementation": false},
+    {"branch": "origin/finance/enterprise-financial-platform-v0.1", "disposition": "review_blocked_not_dependency"},
+    {"branch": "origin/docs/enterprise-portal-and-repo-hygiene-v0.1", "disposition": "separate_open_workstream"}
+  ]
+}

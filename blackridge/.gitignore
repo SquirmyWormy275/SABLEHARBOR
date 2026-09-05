@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+data/restricted/*
+!data/restricted/README.md
+data/public/databases/blackridge_public_v0.1.0.sqlite3
+data/public/databases/blackridge_smoke_v0.1.0.sqlite3
+data/public/databases/blackridge_migration_test.sqlite3
+data/public/extracts/*.csv
+data/public/snapshots/*.sqlite3
+data/public/databases/*.first.sqlite3
+data/public/packages/*.zip

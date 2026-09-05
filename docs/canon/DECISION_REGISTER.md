@@ -1,7 +1,7 @@
 # SABLE HARBOR — DECISION REGISTER
 
-**Version:** 0.2.0  
-**Date:** August 31, 2026  
+**Version:** 0.3.0
+**Date:** September 2, 2026
 **Scope:** Corporate lore only. Quantitative operating-model decisions remain separate.
 
 ## State definitions
@@ -218,3 +218,42 @@
 | REP-006 | Public-content boundary | LOCKED | Hidden benchmark truth, evaluation oracles, secrets, unreleased answers, and restricted material remain outside the public repository and wiki |
 | REP-007 | License posture | LOCKED | Public visibility does not grant an open-source or content license; all rights remain reserved unless stated otherwise |
 | REP-008 | Wiki implementation | OPEN | Page design, initial publication sequence, and ongoing synchronization process remain to be built |
+
+---
+
+# K. September 2 governance, J2, and Alexandria
+
+| ID | Decision | State | Canonical result |
+|---|---|---|---|
+| GOV-001 | 2026 board | LOCKED | Nine-seat unitary board: Kincaid, Daniel, Raman, Bell, Calder, Mercer, Voss, Galiullina, van der Velde |
+| GOV-002 | Board evolution | LOCKED | Founder board; Harry 2019; Lilia 2020; Mercer 2021; Voss/Calder 2022; Kincaid 2023; independent Chair 2024 |
+| GOV-003 | Committees | LOCKED | Five standing committees and 2026 memberships in board governance instrument |
+| GOV-004 | Governance constitution | LOCKED | Authority follows exposure/accountability; freedom inside envelope; govern consequence; challenge/humility; conflict integrity |
+| GOV-005 | Reserved matters | LOCKED direction | Management, board-reserved, transformational bands; exposure-over-spend; anti-circumvention; subsidiary contagion test |
+| GOV-006 | Board support norms | LOCKED | Rough 5/9 and 6/9 cultural targets, not legal veto thresholds |
+| GOV-007 | Rapid adjudication | LOCKED direction | Material dissent rapidly escalates; protected safety/unlawfulness pauses; ~48/~72-hour targets; bounded evidence extension |
+| GOV-008 | Assumption of Risk | LOCKED | Authorized, scoped written acceptance; judgment ownership and execution responsibility preserved |
+| GOV-009 | Abstention | LOCKED | Substantive reason/information deficiency recorded; repeated patterns prompt inquiry; no mechanical strikes |
+| GOV-010 | Decision quality/AAR | LOCKED | Evaluate ex-ante quality and learning, not outcome alone; candor without humiliation |
+| GOV-011 | Internal Audit maturity | OPEN | Standalone, co-sourced, or other 2026 assurance model not settled |
+| FIN-001 | Harrison Vale financing | LOCKED direction | Chicago lead; approx. $48m in 2021; growth/productization; Evan Mercer seat |
+| FIN-002 | Wolf Ridge financing | LOCKED | Long-duration industrial lead; approx. $135m at approx. $900m post-money in 2022; no founder secondary; approx. 66.5/33.5 ownership; Marianne Voss seat |
+| FIN-003 | Prior financing/director proposal | SUPERSEDED | Historical and noncontrolling; see superseded source artifact |
+| ENT-001 | Selective legal entities | LOCKED direction | One operating company; ARU subsidiary; BS&T beneath ARU; dedicated Red Wash operator; named programs/lines are not legal entities |
+| ENT-002 | Legal implementation | OPEN | Jurisdictions, suffixes, tax elections, SPVs, and intercompany agreements |
+| II-001 | Immaculate Intelligence | LOCKED | Same important questions, not necessarily same answers; questions propagate wider than answers |
+| II-002 | Information access | LOCKED | Maximum useful visibility/minimum necessary restriction; restriction follows information nature and creates obligations |
+| J2-001 | J2 identity | LOCKED | Judgment & Junction; internal capability/directorate, not entity or customer-facing business line |
+| J2-002 | J2 structure | LOCKED direction | Small HQ; Contact/Judgment/Orientation loops; JAG and Education cross-cutting arms |
+| J2-003 | JAG | LOCKED direction | Six active five-person teams; rotating one-year/two-embed tour and surge fact-finding model |
+| J2-004 | Judgment | LOCKED | Human problem ownership; Watch at Contact intake; roughly four directed plus one self-directed problem |
+| J2-005 | Orientation | LOCKED | Custodian of enterprise mental model/EIB/Canon; vocation without later ordinary line power; anti-court controls |
+| J2-006 | Orientation staffing | PROVISIONAL | Approximately 20–25 commissioned officers; exact ranks provisional |
+| J2-007 | Remaining J2 staffing/leaders | OPEN | Total staffing and permanent named leaders/title detail |
+| ALX-001 | Alexandria | LOCKED | Preserve/connect/orient environment with temporal integrity and provenance |
+| ALX-002 | Pinakes | LOCKED | Human portal/catalog with exactly nine defined portals |
+| ALX-003 | Pharos portal concept | SUPERSEDED | Not the current main portal; Pinakes controls |
+| ALX-004 | Semaphore | LOCKED direction | Human-authored durable cable-like traffic; exact precedence labels PROVISIONAL |
+| ALX-005 | Canon corpus | LOCKED | Orientation-owned current best understanding; two-officer material change model; supersession preserved |
+| ALX-006 | Daedalus | LOCKED | Personal AI with universal read/bounded disclosure and no authoritative write, self-promotion, or institutional authority |
+| ALX-007 | Technology/access implementation | OPEN | Stack, raw Collection role model, detailed retention law, and spatial/AR implementation |

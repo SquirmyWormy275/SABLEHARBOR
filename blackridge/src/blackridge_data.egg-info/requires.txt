@@ -1,0 +1,9 @@
+SQLAlchemy<3,>=2
+alembic<2,>=1.13
+pydantic<3,>=2
+openpyxl<4,>=3.1
+
+[dev]
+pytest>=8
+ruff>=0.6
+mypy>=1.10

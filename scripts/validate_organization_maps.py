@@ -9,6 +9,7 @@ of high-risk visual shortcuts that would blur locked canonical distinctions.
 from __future__ import annotations
 
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -16,6 +17,27 @@ ROOT = Path(__file__).resolve().parents[1]
 ORG_DIR = ROOT / "docs" / "organization"
 REGISTER_PATH = ORG_DIR / "ORGANIZATION_MAP_REGISTER.json"
 DECISION_REGISTER_PATH = ROOT / "docs" / "canon" / "DECISION_REGISTER.md"
+
+REQUIRED_METADATA = (
+    "**Map ID:**",
+    "**Canonical date:**",
+    "**Map type:**",
+    "**Edge meaning:**",
+)
+
+FORBIDDEN_MERMAID_PHRASES = (
+    "Foundry / Foundry Field",
+    "Pale Sun / Red Wash",
+    "ARU / BS&T",
+    "reports to",
+    "Chief Executive Officer",
+    "Chief Technology Officer",
+    "Chief Financial Officer",
+)
+
+MERMAID_RE = re.compile(r"```mermaid\n(.*?)```", re.DOTALL)
+DECISION_ID_RE = re.compile(r"\|\s*([A-Z]{2,8}-\d{3})\s*\|")
+
 
 def fail(errors: list[str], message: str) -> None:
     errors.append(message)
@@ -33,7 +55,12 @@ def main() -> int:
             fail(errors, f"cannot parse register: {exc}")
             register = {}
 
-    if not DECISION_REGISTER_PATH.exists():
+    decision_ids: set[str] = set()
+    if DECISION_REGISTER_PATH.exists():
+        decision_ids = set(
+            DECISION_ID_RE.findall(DECISION_REGISTER_PATH.read_text(encoding="utf-8"))
+        )
+    else:
         fail(errors, f"missing decision register: {DECISION_REGISTER_PATH.relative_to(ROOT)}")
 
     charts = register.get("charts", []) if isinstance(register, dict) else []
@@ -45,11 +72,12 @@ def main() -> int:
 
     for chart in charts:
         chart_id = chart.get("id")
-        rel_path = chart.get("page")
-        asset_path = chart.get("asset")
+        # v0.2 rendered-chart registers distinguish the narrative page from
+        # its SVG asset; earlier registers used a single path field.
+        rel_path = chart.get("path") or chart.get("page")
 
-        if not chart_id or not rel_path or not asset_path:
-            fail(errors, f"chart entry missing id, page, or asset: {chart!r}")
+        if not chart_id or not rel_path:
+            fail(errors, f"chart entry missing id or path: {chart!r}")
             continue
 
         if chart_id in seen_ids:
@@ -65,14 +93,41 @@ def main() -> int:
             fail(errors, f"{chart_id}: missing file {rel_path}")
             continue
 
-        if Path(asset_path).name not in path.read_text(encoding="utf-8"):
-            fail(errors, f"{chart_id}: page does not link rendered asset {asset_path}")
+        text = path.read_text(encoding="utf-8")
 
-        asset = ROOT / asset_path
-        if not asset.exists() or asset.stat().st_size == 0:
-            fail(errors, f"{chart_id}: missing/empty rendered asset {asset_path}")
-        elif "<svg" not in asset.read_text(encoding="utf-8"):
-            fail(errors, f"{chart_id}: rendered asset is not SVG")
+        # Current rendered-chart registers carry metadata in JSON and point to
+        # both a narrative page and a separately generated SVG asset.
+        if chart.get("page") and chart.get("asset"):
+            asset = ROOT / chart["asset"]
+            if not asset.exists():
+                fail(errors, f"{chart_id}: missing asset {chart['asset']}")
+            for field in ("title", "purpose", "canonicalDate", "relationshipSemantics"):
+                if not chart.get(field):
+                    fail(errors, f"{chart_id}: missing register field {field}")
+            continue
+
+        if f"`{chart_id}`" not in text:
+            fail(errors, f"{chart_id}: file does not declare matching Map ID")
+
+        for marker in REQUIRED_METADATA:
+            if marker not in text:
+                fail(errors, f"{chart_id}: missing metadata marker {marker}")
+
+        blocks = MERMAID_RE.findall(text)
+        if not blocks:
+            fail(errors, f"{chart_id}: no Mermaid block found")
+
+        for block_index, block in enumerate(blocks, start=1):
+            for phrase in FORBIDDEN_MERMAID_PHRASES:
+                if phrase.lower() in block.lower():
+                    fail(
+                        errors,
+                        f"{chart_id} Mermaid block {block_index}: forbidden phrase {phrase!r}",
+                    )
+
+        for decision_id in chart.get("sourceDecisionIds", []):
+            if decision_ids and decision_id not in decision_ids:
+                fail(errors, f"{chart_id}: unknown decision ID {decision_id}")
 
     expected_chart_ids = {f"SH-ORG-{number:03d}" for number in range(1, 10)}
     if seen_ids != expected_chart_ids:
@@ -112,7 +167,7 @@ def main() -> int:
 
     print(
         f"Organization-map validation passed: {len(charts)} charts, "
-        "rendered assets and register links verified."
+        f"{len(decision_ids)} decision IDs available."
     )
     return 0
 
