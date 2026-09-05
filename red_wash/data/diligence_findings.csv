@@ -1,0 +1,26 @@
+finding_id,domain,severity,finding,disposition
+DD-001,Resource model,HIGH,Seller smoothed East 12 lens boundaries and overstated mineable continuity,Exclude unsupported stope shapes
+DD-002,Grade control,MEDIUM,Historic dilution used inconsistent ore-control cutoffs,Reconstruct cutoff history
+DD-003,Mill recovery,HIGH,Carbonate-rich feed creates nonlinear acid and recovery response,Add blending constraint
+DD-004,Tailings,HIGH,Cell 1 underdrain and MW-17 trends were disclosed separately,Integrate corrective action and escrow
+DD-005,ARO,HIGH,Seller omitted monitoring and mill-demolition scopes,Use 25 million dollar current cost and 16 million dollar ARO
+DD-006,Maintenance,HIGH,Backlog exceeds seller schedule by approximately 5.6 million dollars,Fund 11 million dollar stabilization
+DD-007,Ventilation,HIGH,Main exhaust fan and control redundancy inadequate,Install redundant drive and controls
+DD-008,Electrical,MEDIUM,Motor-control-center obsolescence creates restart risk,Replace priority buckets
+DD-009,Inventory,HIGH,Drum ledger has moisture and assay timing inconsistencies,Reweigh resample and reseal
+DD-010,Contracts,MEDIUM,One escalation workbook used the wrong reference month,Recalculate and acknowledge
+DD-011,Contracts,HIGH,Change-of-control consents incomplete,Make consent a closing condition
+DD-012,Royalty,MEDIUM,East 12 has a production-threshold step-up,Reflect in plan and valuation
+DD-013,Title,HIGH,Two easements recorded under predecessor names,Cure and insure
+DD-014,Water,MEDIUM,One well-purpose record mismatched mill use,Amend before expansion
+DD-015,Safety,HIGH,Ground-control plan omitted combined-condition stop authority,Formalize Cole disposition authority
+DD-016,Radiation,MEDIUM,Dosimetry was stored in a retired vendor format,Migrate while preserving originals
+DD-017,Insurance,MEDIUM,Pollution coverage excludes known-condition costs,Use escrow and parent coverage
+DD-018,People,HIGH,Cole and five veterans hold undocumented continuity,Retention and succession
+DD-019,Quality of earnings,HIGH,2024 EBITDA benefits from inventory liquidation and capitalized repairs,Normalize 7.1 million dollars to 2.4 million dollars
+DD-020,Tax,MEDIUM,Ad valorem accruals lag final assessment,Catch-up and indemnity
+DD-021,Cyber and OT,MEDIUM,Mill historian shared an unmanaged trust path,Segment before remote integration
+DD-022,Data room,MEDIUM,Superseded resource models were not clearly marked,Create authoritative version register
+DD-023,Reagents,LOW,Acid-supply minimum take is unfavorable,Renegotiate post-close
+DD-024,Logistics,MEDIUM,Custody timestamps lacked authority semantics,Preserve source timestamps
+DD-025,Community,MEDIUM,Restart schedule underweighted substantive consultation,Retain schedule contingency
