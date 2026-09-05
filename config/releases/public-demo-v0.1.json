@@ -1,9 +1,10 @@
 {
   "version": "0.1.0",
   "tables": {
-    "legal_entity": ["id", "code", "name", "fact_state", "effective_from", "parent_id", "jurisdiction"],
+    "legal_entity": ["id", "code", "name", "fact_state", "existence_state", "identity_state", "relationship_state", "effective_date_state", "effective_from", "valid_to", "recorded_on", "known_on", "superseded_on", "source_reference", "parent_id", "jurisdiction"],
+    "site": ["id", "code", "name", "site_type", "region", "owner_entity_id", "fact_state", "effective_from", "valid_to", "recorded_on", "known_on", "superseded_on", "source_reference"],
     "accounting_book": ["id", "entity_id", "code", "currency"],
-    "fiscal_period": ["id", "book_id", "code", "starts_on", "ends_on", "state"],
+    "fiscal_period": ["id", "book_id", "code", "starts_on", "ends_on"],
     "account": ["id", "code", "name", "account_class", "normal_balance"],
     "journal_entry": ["id", "generation_run_id", "book_id", "period_id", "entry_date", "description", "source_type", "source_id", "state", "posted_at", "reversal_of_id"],
     "journal_line": ["id", "entry_id", "account_id", "debit", "credit", "transaction_currency", "functional_amount", "reporting_amount", "fact_state", "segment_code", "cost_center_code", "project_code", "counterparty_entity_id"],

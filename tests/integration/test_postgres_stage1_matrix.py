@@ -11,7 +11,9 @@ from typer.testing import CliRunner
 
 from sable_harbor.cli import app
 from sable_harbor.core.database import build_engine
+from sable_harbor.generation import generate_standard
 from sable_harbor.provenance.identity import RunIdentity
+from sable_harbor.provenance.service import record_generation_run
 
 
 def _postgres_url() -> str:
@@ -40,10 +42,7 @@ def _generate(runner: CliRunner, url: str, profile: str, scenario: str, seed: in
             "--seed",
             str(seed),
         ],
-        env={
-            "SHFIN_DATABASE_URL": url,
-            "SHFIN_PRIVATE_BENCHMARK": "1" if profile == "benchmark_private" else "0",
-        },
+        env={"SHFIN_DATABASE_URL": url},
     )
     assert result.exit_code == 0, result.output
 
@@ -59,7 +58,6 @@ def test_postgres_stage1_profile_coexistence_and_integrity_matrix() -> None:
         "standard",
         "full",
         "full_history",
-        "benchmark_private",
     ):
         _generate(runner, url, profile, "base", 101)
     for scenario in ("low", "high", "stress"):
@@ -68,10 +66,10 @@ def test_postgres_stage1_profile_coexistence_and_integrity_matrix() -> None:
 
     engine = build_engine(url)
     actual_101 = RunIdentity.build(
-        profile="actual_common", scenario="actual_common", seed=101
+        profile="synthetic_common", scenario="synthetic_common", seed=101
     ).run_id
     actual_202 = RunIdentity.build(
-        profile="actual_common", scenario="actual_common", seed=202
+        profile="synthetic_common", scenario="synthetic_common", seed=202
     ).run_id
     base_101 = RunIdentity.build(profile="standard", scenario="base", seed=101).run_id
 
@@ -93,7 +91,6 @@ def test_postgres_stage1_profile_coexistence_and_integrity_matrix() -> None:
                 ("standard", "stress"),
                 ("full", "base"),
                 ("full_history", "base"),
-                ("benchmark_private", "base"),
             )
         }.issubset(set(identities))
         assert ("standard", "base", 202, "COMPLETED") in identities
@@ -107,27 +104,41 @@ def test_postgres_stage1_profile_coexistence_and_integrity_matrix() -> None:
         ).all()
         assert worker_numbers
 
-        with pytest.raises(IntegrityError):
+        with pytest.raises(DBAPIError, match="immutable"):
             session.execute(
-                text("UPDATE worker SET generation_run_id = NULL WHERE generation_run_id = :run"),
+                text(
+                    "UPDATE worker SET function_code = function_code WHERE generation_run_id = :run"
+                ),
                 {"run": actual_101},
             )
             session.commit()
         session.rollback()
 
+        running_runs = []
+        for scenario in ("base", "stress"):
+            running = record_generation_run(
+                session,
+                profile="standard",
+                scenario_code=scenario,
+                seed=303,
+                git_commit="a" * 40,
+            )
+            generate_standard(session, seed=303, scenario=scenario)
+            session.commit()
+            running_runs.append(running.id)
         contract_id = session.scalar(
-            text("SELECT id FROM contract WHERE generation_run_id = :run LIMIT 1"),
-            {"run": actual_101},
+            text("SELECT id FROM customer_contract WHERE generation_run_id = :run LIMIT 1"),
+            {"run": running_runs[0]},
         )
-        party_id = session.scalar(
-            text("SELECT id FROM business_party WHERE generation_run_id = :run LIMIT 1"),
-            {"run": actual_202},
+        customer_id = session.scalar(
+            text("SELECT id FROM customer WHERE generation_run_id = :run LIMIT 1"),
+            {"run": running_runs[1]},
         )
-        assert contract_id is not None and party_id is not None
+        assert contract_id is not None and customer_id is not None
         with pytest.raises(IntegrityError):
             session.execute(
-                text("UPDATE contract SET party_id = :party WHERE id = :contract"),
-                {"party": party_id, "contract": contract_id},
+                text("UPDATE customer_contract SET customer_id = :customer WHERE id = :contract"),
+                {"customer": customer_id, "contract": contract_id},
             )
             session.commit()
         session.rollback()

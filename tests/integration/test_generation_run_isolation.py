@@ -34,7 +34,7 @@ def _generate(session: Session, scenario: str) -> str:
         profile="standard",
         scenario_code=scenario,
         seed=20260831,
-        git_commit="test-commit",
+        git_commit="a" * 40,
     )
     generate_standard(session, scenario=scenario)
     complete_generation_run(session, run)
@@ -122,8 +122,8 @@ def _order_snapshot(order: tuple[str, ...]) -> dict[str, tuple[Decimal, Decimal,
                 or 0,
             )
             assert len(context.included_run_ids) == 2
-            actual_run = session.get(GenerationRun, context.included_run_ids[0])
-            assert actual_run is not None and actual_run.profile == "actual_common"
+            calibration_run = session.get(GenerationRun, context.included_run_ids[0])
+            assert calibration_run is not None and calibration_run.profile == "synthetic_common"
         for scenario in reversed(order):
             _generate(session, scenario)
         for scenario, run_id in run_ids.items():
@@ -161,7 +161,7 @@ def test_monthly_actuals_and_forecasts_obey_the_persisted_run_cutoff_partition(
 ) -> None:
     # Use a deliberately non-default cutoff so this test fails if generation
     # embeds the production August boundary instead of reading GenerationRun.
-    monkeypatch.setattr(identity_module, "ACTUAL_THROUGH", date(2026, 6, 30))
+    monkeypatch.setattr(identity_module, "SYNTHETIC_CALIBRATION_THROUGH", date(2026, 6, 30))
     monkeypatch.setattr(identity_module, "FORECAST_FROM", date(2026, 7, 1))
     database = tmp_path / "persisted-cutoff.db"
     url = f"sqlite:///{database}"
@@ -182,12 +182,15 @@ def test_monthly_actuals_and_forecasts_obey_the_persisted_run_cutoff_partition(
         assert persisted_run.forecast_from == date(2026, 7, 1)
         cutoff_period = persisted_run.actual_through.strftime("%Y-%m")
 
-        assert session.scalar(
-            select(func.count(JournalEntry.id)).where(
-                JournalEntry.source_type == "monthly_actual",
-                JournalEntry.generation_run_id.in_((base_run, stress_run)),
+        assert (
+            session.scalar(
+                select(func.count(JournalEntry.id)).where(
+                    JournalEntry.source_type == "synthetic_common_reference",
+                    JournalEntry.generation_run_id.in_((base_run, stress_run)),
+                )
             )
-        ) == 0
+            == 0
+        )
 
         dated_fact_specs = (
             (ProductionRecord, ProductionRecord.period_code, cutoff_period),
@@ -195,60 +198,84 @@ def test_monthly_actuals_and_forecasts_obey_the_persisted_run_cutoff_partition(
             (InventoryLot, InventoryLot.as_of_date, persisted_run.actual_through),
         )
         for model, date_column, cutoff in dated_fact_specs:
-            assert session.scalar(
-                select(func.count(model.id)).where(
-                    model.generation_run_id == actual_run_id,
-                    date_column > cutoff,
+            assert (
+                session.scalar(
+                    select(func.count(model.id)).where(
+                        model.generation_run_id == actual_run_id,
+                        date_column > cutoff,
+                    )
                 )
-            ) == 0
-            assert session.scalar(
-                select(func.count(model.id)).where(
-                    model.generation_run_id.in_((base_run, stress_run)),
-                    date_column <= cutoff,
+                == 0
+            )
+            assert (
+                session.scalar(
+                    select(func.count(model.id)).where(
+                        model.generation_run_id.in_((base_run, stress_run)),
+                        date_column <= cutoff,
+                    )
                 )
-            ) == 0
-        assert session.scalar(
-            select(func.count(ProductionRecord.id)).where(
-                ProductionRecord.generation_run_id == actual_run_id
+                == 0
             )
-        ) == 6
-        assert session.scalar(
-            select(func.count(ProductionRecord.id)).where(
-                ProductionRecord.generation_run_id == base_run
+        assert (
+            session.scalar(
+                select(func.count(ProductionRecord.id)).where(
+                    ProductionRecord.generation_run_id == actual_run_id
+                )
             )
-        ) == 6
-        assert session.scalar(
-            select(func.count(JournalEntry.id)).where(
-                JournalEntry.source_type == "monthly_actual",
-                JournalEntry.generation_run_id == actual_run_id,
+            == 6
+        )
+        assert (
+            session.scalar(
+                select(func.count(ProductionRecord.id)).where(
+                    ProductionRecord.generation_run_id == base_run
+                )
             )
-        ) > 0
-        assert session.scalar(
-            select(func.count(JournalEntry.id)).where(
-                JournalEntry.source_type == "monthly_forecast",
-                JournalEntry.generation_run_id == actual_run_id,
+            == 6
+        )
+        assert (
+            session.scalar(
+                select(func.count(JournalEntry.id)).where(
+                    JournalEntry.source_type == "synthetic_common_reference",
+                    JournalEntry.generation_run_id == actual_run_id,
+                )
             )
-        ) == 0
-        assert session.scalar(
-            select(func.count(ScenarioValue.id)).where(
-                ScenarioValue.metric_code.in_(("revenue", "operating_cost")),
-                ScenarioValue.period_code <= cutoff_period,
-                ScenarioValue.generation_run_id.in_((base_run, stress_run)),
+            > 0
+        )
+        assert (
+            session.scalar(
+                select(func.count(JournalEntry.id)).where(
+                    JournalEntry.source_type == "synthetic_scenario_forecast",
+                    JournalEntry.generation_run_id == actual_run_id,
+                )
             )
-        ) == 0
-        assert session.scalar(
-            select(func.count(ScenarioValue.id)).where(
-                ScenarioValue.metric_code.in_(("revenue", "operating_cost")),
-                ScenarioValue.period_code > cutoff_period,
-                ScenarioValue.generation_run_id == actual_run_id,
+            == 0
+        )
+        assert (
+            session.scalar(
+                select(func.count(ScenarioValue.id)).where(
+                    ScenarioValue.metric_code.in_(("revenue", "operating_cost")),
+                    ScenarioValue.period_code <= cutoff_period,
+                    ScenarioValue.generation_run_id.in_((base_run, stress_run)),
+                )
             )
-        ) == 0
+            == 0
+        )
+        assert (
+            session.scalar(
+                select(func.count(ScenarioValue.id)).where(
+                    ScenarioValue.metric_code.in_(("revenue", "operating_cost")),
+                    ScenarioValue.period_code > cutoff_period,
+                    ScenarioValue.generation_run_id == actual_run_id,
+                )
+            )
+            == 0
+        )
 
 
 def test_ending_inventory_is_materialized_by_actual_layer_at_cutoff(
     tmp_path: Path, monkeypatch: pytest.MonkeyPatch
 ) -> None:
-    monkeypatch.setattr(identity_module, "ACTUAL_THROUGH", date(2026, 12, 31))
+    monkeypatch.setattr(identity_module, "SYNTHETIC_CALIBRATION_THROUGH", date(2026, 12, 31))
     monkeypatch.setattr(identity_module, "FORECAST_FROM", date(2027, 1, 1))
     database = tmp_path / "actual-ending-inventory.db"
     url = f"sqlite:///{database}"
@@ -270,9 +297,30 @@ def test_ending_inventory_is_materialized_by_actual_layer_at_cutoff(
         assert ending_lots[0].as_of_date == date(2026, 12, 31)
         assert ending_lots[0].quantity == Decimal("68400.0000")
         assert ending_lots[0].carrying_value == Decimal("2900000.00")
-        assert session.scalar(
-            select(func.count(InventoryLot.id)).where(
-                InventoryLot.generation_run_id == base_run,
-                InventoryLot.as_of_date <= date(2026, 12, 31),
+        assert (
+            session.scalar(
+                select(func.count(InventoryLot.id)).where(
+                    InventoryLot.generation_run_id == base_run,
+                    InventoryLot.as_of_date <= date(2026, 12, 31),
+                )
             )
-        ) == 0
+            == 0
+        )
+        assert (
+            session.scalar(
+                select(func.count(JournalEntry.id)).where(
+                    JournalEntry.generation_run_id == base_run,
+                    JournalEntry.entry_date < date(2027, 1, 1),
+                )
+            )
+            == 0
+        )
+        assert (
+            session.scalar(
+                select(func.count(JournalEntry.id)).where(
+                    JournalEntry.generation_run_id == actual_run_id,
+                    JournalEntry.entry_date > date(2026, 12, 31),
+                )
+            )
+            == 0
+        )

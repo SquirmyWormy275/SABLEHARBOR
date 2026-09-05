@@ -1,5 +1,10 @@
+schema_version: finance-valuation-preview/v1
+classification: INTERNAL_SYNTHETIC_ANALYTICAL_PREVIEW_NOT_RELEASE_ARTIFACT
+scope_status: INCOMPLETE_MODEL_PROPOSAL
+epistemic_mode: RETROSPECTIVE_CURRENT_CANON
 fact_state: MODEL_PROPOSED
 as_of_date: 2026-08-31
+as_of_date_basis: RETROSPECTIVE_SYNTHETIC_VALUATION_DATE
 components:
   software_services_core:
     method: revenue_multiple

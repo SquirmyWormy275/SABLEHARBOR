@@ -1,7 +1,7 @@
 from datetime import date
 from decimal import Decimal
 
-from sqlalchemy import select
+from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
 from sable_harbor.accounting.ledger import post_entry
@@ -38,7 +38,13 @@ def _account(session: Session, code: str) -> str:
     return account
 
 
-def _line(key: str, account_id: str, debit: Decimal, credit: Decimal) -> JournalLine:
+def _line(
+    key: str,
+    account_id: str,
+    debit: Decimal,
+    credit: Decimal,
+    segment_code: str | None = None,
+) -> JournalLine:
     return JournalLine(
         id=stable_id("journal_line", key),
         account_id=account_id,
@@ -47,6 +53,8 @@ def _line(key: str, account_id: str, debit: Decimal, credit: Decimal) -> Journal
         functional_amount=debit - credit,
         reporting_amount=debit - credit,
         fact_state=FactState.DERIVED,
+        segment_code=segment_code,
+        cost_center_code=segment_code,
     )
 
 
@@ -102,8 +110,8 @@ def run_payroll(
         source_type="payroll_run",
         source_id=run_id,
         lines=[
-            _line(f"{key}:EXP", _account(session, "6100"), total, Decimal(0)),
-            _line(f"{key}:CASH", _account(session, "1000"), Decimal(0), total),
+            _line(f"{key}:EXP", _account(session, "6100"), total, Decimal(0), worker.segment_code),
+            _line(f"{key}:CASH", _account(session, "1000"), Decimal(0), total, worker.segment_code),
         ],
     )
     run = PayrollRun(
@@ -138,6 +146,7 @@ def procure_and_pay_asset(
     key: str,
     event_date: date,
     amount: Decimal,
+    segment_code: str = "CORPORATE",
 ) -> tuple[VendorBill, VendorPayment, FixedAsset]:
     vendor = Vendor(
         id=stable_id("vendor", key),
@@ -177,8 +186,8 @@ def procure_and_pay_asset(
         source_type="vendor_bill",
         source_id=bill_id,
         lines=[
-            _line(f"{key}:ASSET", _account(session, "1500"), amount, Decimal(0)),
-            _line(f"{key}:AP", _account(session, "2100"), Decimal(0), amount),
+            _line(f"{key}:ASSET", _account(session, "1500"), amount, Decimal(0), segment_code),
+            _line(f"{key}:AP", _account(session, "2100"), Decimal(0), amount, segment_code),
         ],
     )
     bill = VendorBill(
@@ -204,8 +213,8 @@ def procure_and_pay_asset(
         source_type="vendor_payment",
         source_id=payment_id,
         lines=[
-            _line(f"{key}:AP:PAY", _account(session, "2100"), amount, Decimal(0)),
-            _line(f"{key}:CASH:PAY", _account(session, "1000"), Decimal(0), amount),
+            _line(f"{key}:AP:PAY", _account(session, "2100"), amount, Decimal(0), segment_code),
+            _line(f"{key}:CASH:PAY", _account(session, "1000"), Decimal(0), amount, segment_code),
         ],
     )
     payment = VendorPayment(
@@ -237,6 +246,7 @@ def depreciate_asset(
     book_id: str,
     period_id: str,
     depreciation_date: date,
+    segment_code: str = "CORPORATE",
 ) -> DepreciationRecord:
     amount = (asset.cost / Decimal(asset.useful_life_months)).quantize(Decimal("0.0001"))
     key = f"{asset.id}:{depreciation_date.isoformat()}"
@@ -251,8 +261,8 @@ def depreciate_asset(
         source_type="depreciation",
         source_id=record_id,
         lines=[
-            _line(f"{key}:EXP", _account(session, "6300"), amount, Decimal(0)),
-            _line(f"{key}:ACC", _account(session, "1590"), Decimal(0), amount),
+            _line(f"{key}:EXP", _account(session, "6300"), amount, Decimal(0), segment_code),
+            _line(f"{key}:ACC", _account(session, "1590"), Decimal(0), amount, segment_code),
         ],
     )
     record = DepreciationRecord(
@@ -277,6 +287,7 @@ def draw_debt_and_accrue_interest(
     event_date: date,
     principal: Decimal,
     annual_rate: Decimal,
+    segment_code: str = "CORPORATE",
 ) -> tuple[DebtDraw, InterestAccrual]:
     facility = DebtFacility(
         id=stable_id("debt_facility", key),
@@ -298,8 +309,8 @@ def draw_debt_and_accrue_interest(
         source_type="debt_draw",
         source_id=draw_id,
         lines=[
-            _line(f"{key}:CASH", _account(session, "1000"), principal, Decimal(0)),
-            _line(f"{key}:DEBT", _account(session, "2500"), Decimal(0), principal),
+            _line(f"{key}:CASH", _account(session, "1000"), principal, Decimal(0), segment_code),
+            _line(f"{key}:DEBT", _account(session, "2500"), Decimal(0), principal, segment_code),
         ],
     )
     draw = DebtDraw(
@@ -323,8 +334,8 @@ def draw_debt_and_accrue_interest(
         source_type="interest_accrual",
         source_id=accrual_id,
         lines=[
-            _line(f"{key}:INTEXP", _account(session, "7100"), interest, Decimal(0)),
-            _line(f"{key}:INTPAY", _account(session, "2510"), Decimal(0), interest),
+            _line(f"{key}:INTEXP", _account(session, "7100"), interest, Decimal(0), segment_code),
+            _line(f"{key}:INTPAY", _account(session, "2510"), Decimal(0), interest, segment_code),
         ],
     )
     accrual = InterestAccrual(
@@ -346,9 +357,21 @@ def repay_debt(
     period_id: str,
     repayment_date: date,
     principal: Decimal,
+    segment_code: str = "CORPORATE",
 ) -> DebtRepayment:
-    if principal <= 0 or principal > draw.principal:
-        raise ValueError("Debt repayment must be positive and cannot exceed the draw principal")
+    if principal <= 0:
+        raise ValueError("Debt repayment must be positive")
+    session.flush()
+    locked_draw = session.scalar(select(DebtDraw).where(DebtDraw.id == draw.id).with_for_update())
+    if locked_draw is None:
+        raise ValueError("Debt repayment requires a persisted draw")
+    already_repaid = session.scalar(
+        select(func.coalesce(func.sum(DebtRepayment.principal), 0)).where(
+            DebtRepayment.debt_draw_id == draw.id
+        )
+    )
+    if Decimal(already_repaid or 0) + principal > locked_draw.principal:
+        raise ValueError("Cumulative debt repayments cannot exceed the draw principal")
     repayment_id = stable_id("debt_repayment", f"{draw.id}:{repayment_date}:{principal}")
     entry = _post(
         session,
@@ -360,8 +383,20 @@ def repay_debt(
         source_type="debt_repayment",
         source_id=repayment_id,
         lines=[
-            _line(f"{repayment_id}:DEBT", _account(session, "2500"), principal, Decimal(0)),
-            _line(f"{repayment_id}:CASH", _account(session, "1000"), Decimal(0), principal),
+            _line(
+                f"{repayment_id}:DEBT",
+                _account(session, "2500"),
+                principal,
+                Decimal(0),
+                segment_code,
+            ),
+            _line(
+                f"{repayment_id}:CASH",
+                _account(session, "1000"),
+                Decimal(0),
+                principal,
+                segment_code,
+            ),
         ],
     )
     repayment = DebtRepayment(

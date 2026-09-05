@@ -13,13 +13,15 @@ from sable_harbor.commercial.contract_to_cash import (
     recognize_month,
 )
 from sable_harbor.commercial.models import PerformanceObligation
+from sable_harbor.provenance.models import GenerationRun
+from sable_harbor.provenance.service import complete_generation_run
 
 
 def test_contract_invoice_revenue_cash_reconcile_to_gl() -> None:
     engine = create_engine("sqlite:///:memory:")
     Base.metadata.create_all(engine)
     with Session(engine) as session:
-        book_id = seed_smoke(session)
+        book_id = seed_smoke(session, complete=False)
         entity_id = session.query(LegalEntity.id).scalar()
         period_id = session.query(FiscalPeriod.id).scalar()
         contract, invoice = create_foundry_contract_flow(
@@ -47,6 +49,9 @@ def test_contract_invoice_revenue_cash_reconcile_to_gl() -> None:
             period_id=period_id,
             receipt_date=date(2026, 8, 25),
         )
+        run = session.get(GenerationRun, session.info["generation_run_id"])
+        assert run is not None
+        complete_generation_run(session, run)
         session.commit()
         by_account = {
             code: (debit, credit) for code, debit, credit in trial_balance(session, book_id)

@@ -11,25 +11,31 @@ MAX_BYTES = 10 * 1024 * 1024
 ALLOWED_LARGE_PUBLIC_ARTIFACTS = {
     Path("blackridge/data/public/databases/blackridge_m00_v0.1.0.sqlite3"): (
         20 * 1024 * 1024,
-        "fb9e2d3ae690e7ea779305bb18b18393f9dd31ada2c67d2b33f02851fe27f5be",
+        "2e6622d0e710f784c49cd6b773514820dbe247c4ec50a18f4c9cbbcf784587d5",
     ),
 }
 
 
-def tracked_files() -> list[Path]:
+def review_files() -> list[Path]:
     output = subprocess.run(
-        ["git", "ls-files", "-z"], check=True, capture_output=True
+        ["git", "ls-files", "--cached", "--others", "--exclude-standard", "-z"],
+        check=True,
+        capture_output=True,
     ).stdout.decode()
     return [Path(name) for name in output.split("\0") if name]
 
 
 def main() -> None:
     failures: list[str] = []
-    for path in tracked_files():
+    for path in review_files():
         if path in {
             Path("scripts/check_public_safety.py"),
             Path("src/sable_harbor/exports/safety.py"),
         }:
+            continue
+        if not path.is_file():
+            # A pre-commit scan may see paths deleted from the working tree
+            # before the index is updated; only materialized content is scannable.
             continue
         if "var/private" in path.as_posix():
             failures.append(f"private benchmark path tracked: {path}")
@@ -50,7 +56,10 @@ def main() -> None:
         failures.extend(scan_generated_artifacts(Path(argument)))
     if failures:
         raise SystemExit("\n".join(failures))
-    print("PASS: no tracked private benchmark paths, credential markers, or >10 MiB files")
+    print(
+        "PASS: no tracked/untracked reviewable private benchmark paths, credential markers, "
+        "or unapproved >10 MiB files"
+    )
 
 
 if __name__ == "__main__":

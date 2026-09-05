@@ -14,13 +14,15 @@ from sable_harbor.operations.flows import (
     procure_and_pay_asset,
     run_payroll,
 )
+from sable_harbor.provenance.models import GenerationRun
+from sable_harbor.provenance.service import complete_generation_run
 
 
 def test_payroll_procurement_asset_and_debt_flows_reconcile() -> None:
     engine = create_engine("sqlite:///:memory:")
     Base.metadata.create_all(engine)
     with Session(engine) as session:
-        book_id = seed_smoke(session)
+        book_id = seed_smoke(session, complete=False)
         entity_id = session.query(LegalEntity.id).scalar()
         period_id = session.query(FiscalPeriod.id).scalar()
         worker = Worker(
@@ -71,6 +73,9 @@ def test_payroll_procurement_asset_and_debt_flows_reconcile() -> None:
             principal=Decimal("120000"),
             annual_rate=Decimal("0.12"),
         )
+        generation_run = session.get(GenerationRun, session.info["generation_run_id"])
+        assert generation_run is not None
+        complete_generation_run(session, generation_run)
         session.commit()
         balances = trial_balance(session, book_id)
         assert sum(debit for _, debit, _ in balances) == sum(credit for _, _, credit in balances)

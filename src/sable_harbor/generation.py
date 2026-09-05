@@ -5,6 +5,7 @@ from datetime import date
 from decimal import Decimal
 from pathlib import Path
 from random import Random
+from typing import Any
 
 import yaml
 from sqlalchemy import func, select
@@ -17,6 +18,7 @@ from sable_harbor.accounting.models import (
     BusinessParty,
     Contract,
     EnvironmentalObligation,
+    EpistemicState,
     FactState,
     FiscalPeriod,
     FixedAsset,
@@ -52,16 +54,65 @@ from sable_harbor.provenance.models import GenerationRun
 from sable_harbor.provenance.service import (
     GENERATION_RUN_SESSION_KEY,
     complete_generation_run,
+    link_journals,
     record_generation_run,
 )
 from sable_harbor.recovery.flows import execute_recovery_run
 from sable_harbor.research.flows import run_atlas_evaluation, run_willow_experiment
 
 D = Decimal
+REPOSITORY_ROOT = Path(__file__).resolve().parents[2]
+
+
+def _synchronize_code_master(session: Session, desired: Any, *, attributes: tuple[str, ...]) -> Any:
+    """Insert or reconcile a controlled global master by deterministic ID and code."""
+    model = type(desired)
+    desired_id = str(desired.id)
+    desired_code = str(desired.code)
+    existing = session.get(model, desired_id)
+    code_owner = session.scalar(select(model).where(model.code == desired_code))
+    if code_owner is not None and str(code_owner.id) != desired_id:
+        raise ValueError(
+            f"Cannot synchronize {model.__name__} {desired_code!r}: its code belongs to "
+            f"a different deterministic ID"
+        )
+    if existing is None:
+        session.add(desired)
+        return desired
+    for attribute in attributes:
+        setattr(existing, attribute, getattr(desired, attribute))
+    return existing
+
+
+def _synchronize_scoped_master(
+    session: Session,
+    desired: Any,
+    *,
+    attributes: tuple[str, ...],
+    natural_key: tuple[str, ...],
+) -> Any:
+    """Insert or reconcile an ID-stable master whose natural key is composite."""
+    model = type(desired)
+    desired_id = str(desired.id)
+    existing = session.get(model, desired_id)
+    conditions = [getattr(model, key) == getattr(desired, key) for key in natural_key]
+    key_owner = session.scalar(select(model).where(*conditions))
+    if key_owner is not None and str(key_owner.id) != desired_id:
+        rendered_key = ", ".join(f"{key}={getattr(desired, key)!r}" for key in natural_key)
+        raise ValueError(
+            f"Cannot synchronize {model.__name__} ({rendered_key}): its natural key "
+            "belongs to a different deterministic ID"
+        )
+    if existing is None:
+        session.add(desired)
+        return desired
+    for attribute in attributes:
+        setattr(existing, attribute, getattr(desired, attribute))
+    return existing
 
 
 def _scenario_document() -> dict[str, object]:
-    path = Path("config/finance/scenarios/operating.yml")
+    path = REPOSITORY_ROOT / "config/finance/scenarios/operating.yml"
     return dict(yaml.safe_load(path.read_text()))
 
 
@@ -93,13 +144,18 @@ def scenario_multipliers(scenario: str, entity_code: str = "SHI") -> tuple[D, D]
     return product("revenue"), product("cost")
 
 
-def _persist_scenario_drivers(
-    session: Session, run: GenerationRun, scenario_code: str
-) -> None:
+def _persist_scenario_drivers(session: Session, run: GenerationRun, scenario_code: str) -> None:
     document = _scenario_document()
     scenarios = document["scenarios"]
     definitions = document["driver_definitions"]
     assert isinstance(scenarios, dict) and isinstance(definitions, dict)
+    implementation_scope = document.get("implementation_scope", {})
+    assert isinstance(implementation_scope, dict)
+    applied_families = {
+        str(value) for value in implementation_scope.get("applied_to_generation", [])
+    }
+    booking_entities = implementation_scope.get("booking_entities", {})
+    assert isinstance(booking_entities, dict)
     selected = scenarios[scenario_code]
     assert isinstance(selected, dict)
     values_by_entity = selected.get("values", {})
@@ -111,9 +167,7 @@ def _persist_scenario_drivers(
         for kind, drivers in kinds.items():
             assert isinstance(drivers, list)
             for driver in drivers:
-                record_id = stable_id(
-                    "scenario_value", f"{run.id}:driver:{entity_code}:{driver}"
-                )
+                record_id = stable_id("scenario_value", f"{run.id}:driver:{entity_code}:{driver}")
                 if session.get(ScenarioValue, record_id) is not None:
                     continue
                 metadata = {
@@ -121,6 +175,14 @@ def _persist_scenario_drivers(
                     "rationale": selected["description"],
                     "sensitivity": kind,
                     "source": document["provenance"],
+                    "application_status": (
+                        "APPLIED_TO_GENERATION"
+                        if str(entity_code) in applied_families
+                        else "RECORDED_ONLY_NOT_APPLIED"
+                    ),
+                    "booking_entities": [
+                        str(value) for value in booking_entities.get(str(entity_code), [])
+                    ],
                 }
                 session.add(
                     ScenarioValue(
@@ -142,6 +204,7 @@ def _persist_scenario_drivers(
 class EntityPlan:
     code: str
     name: str
+    driver_family: str
     revenue: D
     operating_cost: D
     employees: int
@@ -152,13 +215,14 @@ class EntityPlan:
 def entity_plans() -> tuple[EntityPlan, ...]:
     assumptions = {
         assumption.id: D(str(assumption.value))
-        for assumption in load_assumptions(Path("config/finance/assumptions"))
+        for assumption in load_assumptions(REPOSITORY_ROOT / "config/finance/assumptions")
         if assumption.id.startswith("FIN-Q-")
     }
     return (
         EntityPlan(
             "SHI",
-            "Sable Harbor, Inc. (model parent)",
+            "Sable Harbor (model parent; formal legal name open)",
+            "SHI",
             assumptions["FIN-Q-001"],
             assumptions["FIN-Q-002"],
             450,
@@ -167,7 +231,8 @@ def entity_plans() -> tuple[EntityPlan, ...]:
         ),
         EntityPlan(
             "RWH",
-            "Red Wash Operations LLC (scenario entity)",
+            "Dedicated Red Wash operator (formal legal identity open)",
+            "RWH",
             assumptions["FIN-Q-003"],
             assumptions["FIN-Q-004"],
             126,
@@ -175,8 +240,9 @@ def entity_plans() -> tuple[EntityPlan, ...]:
             "RED_WASH",
         ),
         EntityPlan(
+            "BST",
+            "Blood, Sweat & Tears Railway (formal legal name open)",
             "ARU",
-            "American Resource Utility, Inc. (scenario entity)",
             assumptions["FIN-Q-005"],
             assumptions["FIN-Q-006"],
             132,
@@ -213,9 +279,7 @@ def _generate_causal_month(
             annual_value=causal_revenue,
         )
         obligation = session.scalar(
-            select(PerformanceObligation).where(
-                PerformanceObligation.contract_id == contract.id
-            )
+            select(PerformanceObligation).where(PerformanceObligation.contract_id == contract.id)
         )
         if obligation is None:
             raise ValueError("Generated Foundry contract is missing its performance obligation")
@@ -317,11 +381,11 @@ def _generate_causal_month(
             period_id=period_id,
             key=f"{compact_key}:WIL",
             experiment_date=period_end,
-            question="Can the reversible forecast experiment improve field decisions?",
-            belief="Controlled synthetic evidence can inform a later operating gate.",
+            question="Can this bounded test improve the quality of a field decision?",
+            belief="A measured intervention may justify advancing to the operating gate.",
             budget=willow_cost,
             actual_cost=willow_cost,
-            observation="Synthetic forecast observation; no canon change.",
+            observation="The test produced a bounded observation for operating-owner review.",
             gate_decision="CONTINUE",
         )
         atlas_cost = (cost * D("0.005")).quantize(D("0.01"))
@@ -354,9 +418,7 @@ def _generate_causal_month(
             host_share=D("0.20"),
             operating_cost=(cost * D("0.005")).quantize(D("0.01")),
         )
-        replaced_revenue = (
-            causal_revenue + service_revenue + atlas_fee + recovery_run.gross_sale
-        )
+        replaced_revenue = causal_revenue + service_revenue + atlas_fee + recovery_run.gross_sale
         replaced_cost = (
             payroll_gross
             + payroll_employer
@@ -398,7 +460,7 @@ def _generate_causal_month(
             realized_price_per_lb=causal_revenue / pounds,
         )
         return causal_revenue, causal_cost
-    if entity_code == "ARU":
+    if entity_code == "BST":
         fuel_cost = (causal_cost * D("0.55")).quantize(D("0.01"))
         crew_cost = causal_cost - fuel_cost
         operate_waybill(
@@ -517,31 +579,32 @@ def _post(
     post_entry(session, entry)
 
 
-def _period_is_actual(run: GenerationRun, starts_on: date, ends_on: date) -> bool:
-    """Classify a whole reporting period from the persisted run contract."""
-    if run.actual_through is None or run.forecast_from is None:
+def _period_is_calibration(run: GenerationRun, starts_on: date, ends_on: date) -> bool:
+    """Classify a whole reporting period from the persisted synthetic-run contract."""
+    if run.synthetic_calibration_through is None or run.forecast_from is None:
         raise ValueError(f"Generation run {run.id!r} has no cutoff contract")
-    if ends_on <= run.actual_through:
+    if ends_on <= run.synthetic_calibration_through:
         return True
     if starts_on >= run.forecast_from:
         return False
     raise ValueError(
         f"Reporting period {starts_on}..{ends_on} crosses or is not covered by the "
-        f"persisted cutoff {run.actual_through} / {run.forecast_from}"
+        f"persisted synthetic calibration cutoff "
+        f"{run.synthetic_calibration_through} / {run.forecast_from}"
     )
 
 
-def _dated_fact_is_actual(run: GenerationRun, effective_on: date) -> bool:
-    """Classify a point-in-time fact from the persisted run contract."""
-    if run.actual_through is None or run.forecast_from is None:
+def _dated_fact_is_calibration(run: GenerationRun, effective_on: date) -> bool:
+    """Classify a synthetic point-in-time fact from the persisted run contract."""
+    if run.synthetic_calibration_through is None or run.forecast_from is None:
         raise ValueError(f"Generation run {run.id!r} has no cutoff contract")
-    if effective_on <= run.actual_through:
+    if effective_on <= run.synthetic_calibration_through:
         return True
     if effective_on >= run.forecast_from:
         return False
     raise ValueError(
-        f"Fact date {effective_on} is not covered by persisted cutoff "
-        f"{run.actual_through} / {run.forecast_from}"
+        f"Synthetic fact date {effective_on} is not covered by persisted cutoff "
+        f"{run.synthetic_calibration_through} / {run.forecast_from}"
     )
 
 
@@ -552,83 +615,125 @@ def generate_baseline(
     post_summary: bool = True,
 ) -> dict[str, int | str]:
     """Generate a deterministic, public-safe FY2026 enterprise instance."""
-    marker = stable_id("scenario", f"{scenario}:{seed}")
-    if session.get(ScenarioValue, stable_id("scenario_value", f"{marker}:marker")):
-        employees = session.scalar(
-            select(func.count(Worker.id)).where(Worker.worker_type == "EMPLOYEE")
-        )
-        contractors = session.scalar(
-            select(func.count(Worker.id)).where(Worker.worker_type == "CONTRACTOR")
-        )
-        return {
-            "scenario": scenario,
-            "seed": seed,
-            "employees": employees or 0,
-            "contractors": contractors or 0,
-        }
-    rng = Random(seed)
-    plans = entity_plans()
     active_run_id = session.info.get(GENERATION_RUN_SESSION_KEY)
     active_run = (
         session.get(GenerationRun, str(active_run_id)) if active_run_id is not None else None
     )
-    if active_run is None or active_run.actual_through is None or active_run.forecast_from is None:
+    if (
+        active_run is None
+        or active_run.synthetic_calibration_through is None
+        or active_run.forecast_from is None
+    ):
         raise ValueError("Baseline generation requires a persisted run cutoff contract")
+    # Every generated key is namespaced by the content-addressed owning run. A
+    # later build with the same scenario/seed must coexist with its predecessor.
+    marker = stable_id("generation_namespace", active_run.id)
+    rng = Random(seed)
+    plans = entity_plans()
+    plans_by_code = {plan.code: plan for plan in plans}
 
     parent_id = _entity_id("SHI")
     entities = [
         LegalEntity(
             id=parent_id,
             code="SHI",
-            name=plans[0].name,
+            name=plans_by_code["SHI"].name,
             fact_state=FactState.MODEL_PROPOSED,
+            existence_state=EpistemicState.LOCKED,
+            identity_state=EpistemicState.OPEN,
+            relationship_state=EpistemicState.LOCKED,
+            effective_date_state=EpistemicState.PROVISIONAL_ASSUMPTION,
             effective_from=date(2016, 1, 1),
-            jurisdiction="US-DE",
+            recorded_on=date(2026, 9, 5),
+            known_on=date(2026, 9, 3),
+            source_reference="docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md",
+            jurisdiction="OPEN",
         ),
         LegalEntity(
             id=_entity_id("RWH"),
             code="RWH",
-            name=plans[1].name,
+            name=plans_by_code["RWH"].name,
             parent_id=parent_id,
             fact_state=FactState.MODEL_PROPOSED,
+            existence_state=EpistemicState.LOCKED,
+            identity_state=EpistemicState.OPEN,
+            relationship_state=EpistemicState.LOCKED,
+            effective_date_state=EpistemicState.PROVISIONAL_ASSUMPTION,
             effective_from=date(2025, 7, 1),
-            jurisdiction="US-WY",
+            recorded_on=date(2026, 9, 5),
+            known_on=date(2026, 9, 3),
+            source_reference=("docs/governance/2026_ENTITY_AND_BOARD_GOVERNANCE_DECISIONS.md"),
+            jurisdiction="OPEN",
         ),
         LegalEntity(
             id=_entity_id("ARU"),
             code="ARU",
-            name=plans[2].name,
+            name="American Resource Utility (formal legal name open)",
             parent_id=parent_id,
             fact_state=FactState.MODEL_PROPOSED,
+            existence_state=EpistemicState.LOCKED,
+            identity_state=EpistemicState.OPEN,
+            relationship_state=EpistemicState.LOCKED,
+            effective_date_state=EpistemicState.PROVISIONAL_ASSUMPTION,
             effective_from=date(2026, 2, 1),
-            jurisdiction="US-WY",
+            recorded_on=date(2026, 9, 5),
+            known_on=date(2026, 9, 3),
+            source_reference=("docs/governance/2026_ENTITY_AND_BOARD_GOVERNANCE_DECISIONS.md"),
+            jurisdiction="OPEN",
         ),
         LegalEntity(
-            id=_entity_id("CONS"),
-            code="CONS",
-            name="Sable Harbor consolidation book",
-            parent_id=parent_id,
+            id=_entity_id("BST"),
+            code="BST",
+            name=plans_by_code["BST"].name,
+            parent_id=_entity_id("ARU"),
             fact_state=FactState.MODEL_PROPOSED,
-            effective_from=date(2026, 1, 1),
-            jurisdiction="N/A",
+            existence_state=EpistemicState.LOCKED,
+            identity_state=EpistemicState.OPEN,
+            relationship_state=EpistemicState.LOCKED,
+            effective_date_state=EpistemicState.PROVISIONAL_ASSUMPTION,
+            effective_from=date(2026, 2, 1),
+            recorded_on=date(2026, 9, 5),
+            known_on=date(2026, 9, 3),
+            source_reference=("docs/governance/2026_ENTITY_AND_BOARD_GOVERNANCE_DECISIONS.md"),
+            jurisdiction="OPEN",
         ),
     ]
     for entity in entities:
-        if session.get(LegalEntity, entity.id) is None:
-            session.add(entity)
+        _synchronize_code_master(
+            session,
+            entity,
+            attributes=(
+                "code",
+                "name",
+                "fact_state",
+                "existence_state",
+                "identity_state",
+                "relationship_state",
+                "effective_date_state",
+                "effective_from",
+                "valid_to",
+                "recorded_on",
+                "known_on",
+                "superseded_on",
+                "source_reference",
+                "parent_id",
+                "jurisdiction",
+            ),
+        )
     session.flush()
     for code, name, cls, normal in ACCOUNTS:
         account_id = _account_id(code)
-        if session.get(Account, account_id) is None:
-            session.add(
-                Account(
-                    id=account_id,
-                    code=code,
-                    name=name,
-                    account_class=cls,
-                    normal_balance=normal,
-                )
-            )
+        _synchronize_code_master(
+            session,
+            Account(
+                id=account_id,
+                code=code,
+                name=name,
+                account_class=cls,
+                normal_balance=normal,
+            ),
+            attributes=("code", "name", "account_class", "normal_balance"),
+        )
 
     sites = {
         "SAC": Site(
@@ -639,6 +744,22 @@ def generate_baseline(
             region="California",
             owner_entity_id=parent_id,
             fact_state=FactState.MODEL_PROPOSED,
+            effective_from=date(2016, 1, 1),
+            recorded_on=date(2026, 9, 5),
+            known_on=date(2026, 9, 5),
+            source_reference="docs/finance/QUANTITATIVE_BASELINE_RECONCILIATION.md",
+        ),
+        "PIT": Site(
+            id=stable_id("site", "PIT"),
+            code="PIT",
+            name="Willow laboratory — Pittsburgh area",
+            site_type="LABORATORY",
+            region="Pittsburgh area",
+            owner_entity_id=parent_id,
+            fact_state=FactState.LOCKED_CANON,
+            recorded_on=date(2026, 9, 5),
+            known_on=date(2026, 9, 3),
+            source_reference="docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md",
         ),
         "RED_WASH": Site(
             id=stable_id("site", "RED_WASH"),
@@ -648,40 +769,152 @@ def generate_baseline(
             region="Wyoming",
             owner_entity_id=_entity_id("RWH"),
             fact_state=FactState.LOCKED_CANON,
+            recorded_on=date(2026, 9, 5),
+            known_on=date(2026, 9, 3),
+            source_reference="docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md",
         ),
         "ARU_HUB": Site(
             id=stable_id("site", "ARU_HUB"),
             code="ARU_HUB",
-            name="ARU regional operating estate",
+            name="BS&T railway operating estate (details open)",
             site_type="RAIL_TERMINAL_NETWORK",
             region="Mountain West",
-            owner_entity_id=_entity_id("ARU"),
+            owner_entity_id=_entity_id("BST"),
             fact_state=FactState.MODEL_PROPOSED,
+            recorded_on=date(2026, 9, 5),
+            known_on=date(2026, 9, 5),
+            source_reference="docs/finance/QUANTITATIVE_BASELINE_RECONCILIATION.md",
         ),
     }
     for site_record in sites.values():
-        if session.get(Site, site_record.id) is None:
-            session.add(site_record)
+        _synchronize_code_master(
+            session,
+            site_record,
+            attributes=(
+                "code",
+                "name",
+                "site_type",
+                "region",
+                "owner_entity_id",
+                "fact_state",
+                "effective_from",
+                "valid_to",
+                "recorded_on",
+                "known_on",
+                "superseded_on",
+                "source_reference",
+            ),
+        )
     periods: dict[str, tuple[str, str]] = {}
+    opening_periods: dict[str, tuple[str, str, date]] = {}
+    opening_dates = {
+        "SHI": date(2023, 1, 1),
+        "RWH": date(2025, 7, 1),
+        "ARU": date(2026, 2, 1),
+        "BST": date(2026, 2, 1),
+    }
     for entity_obj in entities:
         book_id = stable_id("book", f"{entity_obj.code}:PRIMARY_USD")
         period_id = stable_id("period", f"{book_id}:2026-12")
-        if session.get(AccountingBook, book_id) is None:
-            session.add(
-                AccountingBook(id=book_id, entity_id=entity_obj.id, code="PRIMARY_USD")
-            )
-        if session.get(FiscalPeriod, period_id) is None:
-            session.add(
-                FiscalPeriod(
-                    id=period_id,
-                    book_id=book_id,
-                    code="2026-12",
-                    starts_on=date(2026, 12, 1),
-                    ends_on=date(2026, 12, monthrange(2026, 12)[1]),
-                )
-            )
+        _synchronize_scoped_master(
+            session,
+            AccountingBook(
+                id=book_id,
+                entity_id=entity_obj.id,
+                code="PRIMARY_USD",
+                currency="USD",
+            ),
+            attributes=("entity_id", "code", "currency"),
+            natural_key=("entity_id", "code"),
+        )
+        _synchronize_scoped_master(
+            session,
+            FiscalPeriod(
+                id=period_id,
+                book_id=book_id,
+                code="2026-12",
+                starts_on=date(2026, 12, 1),
+                ends_on=date(2026, 12, monthrange(2026, 12)[1]),
+            ),
+            attributes=("book_id", "code", "starts_on", "ends_on"),
+            natural_key=("book_id", "code"),
+        )
         periods[entity_obj.code] = (book_id, period_id)
+        if entity_obj.code in opening_dates:
+            opening_date = opening_dates[entity_obj.code]
+            opening_code = opening_date.strftime("%Y-%m")
+            opening_period_id = stable_id("period", f"{book_id}:{opening_code}")
+            _synchronize_scoped_master(
+                session,
+                FiscalPeriod(
+                    id=opening_period_id,
+                    book_id=book_id,
+                    code=opening_code,
+                    starts_on=opening_date.replace(day=1),
+                    ends_on=date(
+                        opening_date.year,
+                        opening_date.month,
+                        monthrange(opening_date.year, opening_date.month)[1],
+                    ),
+                ),
+                attributes=("book_id", "code", "starts_on", "ends_on"),
+                natural_key=("book_id", "code"),
+            )
+            opening_periods[entity_obj.code] = (
+                book_id,
+                opening_period_id,
+                opening_date,
+            )
+    # Consolidation is an accounting view of Sable Harbor, not a fictional
+    # legal entity. Preserve the historical CONS lookup alias only in-memory.
+    consolidation_book_id = stable_id("book", "CONS:PRIMARY_USD")
+    consolidation_period_id = stable_id("period", f"{consolidation_book_id}:2026-12")
+    _synchronize_scoped_master(
+        session,
+        AccountingBook(
+            id=consolidation_book_id,
+            entity_id=parent_id,
+            code="CONSOLIDATION_USD",
+            currency="USD",
+        ),
+        attributes=("entity_id", "code", "currency"),
+        natural_key=("entity_id", "code"),
+    )
+    _synchronize_scoped_master(
+        session,
+        FiscalPeriod(
+            id=consolidation_period_id,
+            book_id=consolidation_book_id,
+            code="2026-12",
+            starts_on=date(2026, 12, 1),
+            ends_on=date(2026, 12, 31),
+        ),
+        attributes=("book_id", "code", "starts_on", "ends_on"),
+        natural_key=("book_id", "code"),
+    )
+    periods["CONS"] = (consolidation_book_id, consolidation_period_id)
     session.flush()
+
+    existing_marker = session.get(ScenarioValue, stable_id("scenario_value", f"{marker}:marker"))
+    if existing_marker is not None:
+        employees = session.scalar(
+            select(func.count(Worker.id)).where(
+                Worker.worker_type == "EMPLOYEE",
+                Worker.generation_run_id == active_run.id,
+            )
+        )
+        contractors = session.scalar(
+            select(func.count(Worker.id)).where(
+                Worker.worker_type == "CONTRACTOR",
+                Worker.generation_run_id == active_run.id,
+            )
+        )
+        return {
+            "scenario": scenario,
+            "seed": seed,
+            "employees": employees or 0,
+            "contractors": contractors or 0,
+        }
 
     opening_layers = {
         "SHI": [
@@ -702,15 +935,18 @@ def generate_baseline(
         ],
         "ARU": [
             ("1000", D("7000000")),
-            ("1500", D("82000000")),
             ("1600", D("15000000")),
             ("2000", -D("8000000")),
+            ("3000", -D("14000000")),
+        ],
+        "BST": [
+            ("1500", D("82000000")),
             ("2500", -D("44000000")),
-            ("3000", -D("52000000")),
+            ("3000", -D("38000000")),
         ],
     }
     for entity_code, balances in opening_layers.items():
-        book, period = periods[entity_code]
+        book, period, opening_date = opening_periods[entity_code]
         key = f"{marker}:{entity_code}:OPENING"
         lines = [
             _line(
@@ -719,7 +955,9 @@ def generate_baseline(
                 account,
                 debit=amount if amount > 0 else None,
                 credit=-amount if amount < 0 else None,
-                segment=next(plan.segment for plan in plans if plan.code == entity_code),
+                segment=(
+                    plans_by_code[entity_code].segment if entity_code in plans_by_code else "ARU"
+                ),
             )
             for index, (account, amount) in enumerate(balances, 1)
         ]
@@ -730,6 +968,7 @@ def generate_baseline(
             key,
             f"Scenario opening and acquisition balances — {entity_code}",
             lines,
+            entry_date=opening_date,
         )
 
     # CoreCo includes Foundry/Atlas/Willow; Cradle and Advisory remain traceable segments.
@@ -738,7 +977,7 @@ def generate_baseline(
         ("SHI", "CRADLE", "RECOVERY", 12, "SAC"),
         ("SHI", "ADVISORY", "ADVISORY", 7, "SAC"),
         ("RWH", "PALE_SUN", "MINE_OPERATIONS", 126, "RED_WASH"),
-        ("ARU", "ARU_BST", "LOGISTICS", 132, "ARU_HUB"),
+        ("BST", "ARU_BST", "RAILWAY_OPERATIONS", 132, "ARU_HUB"),
     ]
     worker_no = 1
     for entity_code, segment, function, count, site in allocations:
@@ -820,8 +1059,8 @@ def generate_baseline(
     for asset_no, entity_code, site, cls, cost, life, layer in [
         ("RWH-MINERAL", "RWH", "RED_WASH", "MINERAL_INTEREST", D("22000000"), 120, True),
         ("RWH-PLANT", "RWH", "RED_WASH", "MILL_AND_MINE_PLANT", D("31500000"), 144, True),
-        ("ARU-TRACK", "ARU", "ARU_HUB", "TRACK_AND_TERMINALS", D("54000000"), 240, True),
-        ("ARU-ROLL", "ARU", "ARU_HUB", "ROLLING_STOCK", D("28000000"), 180, True),
+        ("BST-TRACK", "BST", "ARU_HUB", "TRACK_AND_TERMINALS", D("54000000"), 240, True),
+        ("BST-ROLL", "BST", "ARU_HUB", "ROLLING_STOCK", D("28000000"), 180, True),
         ("SHI-PLATFORM", "SHI", "SAC", "PLATFORM_INFRASTRUCTURE", D("9000000"), 48, False),
     ]:
         session.add(
@@ -838,13 +1077,13 @@ def generate_baseline(
                 fact_state=FactState.SCENARIO_INPUT,
             )
         )
-    # The common-actual layer stops at its persisted cutoff. Future
+    # The shared synthetic calibration layer stops at its persisted cutoff. Future
     # operating facts are materialized by ``generate_standard`` in the selected
     # scenario run; keeping them here would make forecasts look observed.
     for month in range(1, 13):
         period_start = date(2026, month, 1)
         period_end = date(2026, month, monthrange(2026, month)[1])
-        if not _period_is_actual(active_run, period_start, period_end):
+        if not _period_is_calibration(active_run, period_start, period_end):
             continue
         ore = D(13500 + rng.randrange(-1600, 1601))
         recovery = D(str(0.812 + rng.random() * 0.048)).quantize(D("0.000001"))
@@ -862,7 +1101,7 @@ def generate_baseline(
             )
         )
     ending_inventory_date = date(2026, 12, 31)
-    if _dated_fact_is_actual(active_run, ending_inventory_date):
+    if _dated_fact_is_calibration(active_run, ending_inventory_date):
         ending_inventory_id = stable_id("lot", f"{marker}:RWH-2026-ENDING")
         if session.get(InventoryLot, ending_inventory_id) is None:
             session.add(
@@ -895,14 +1134,14 @@ def generate_baseline(
     for i in range(1, 121):
         movement_month = ((i - 1) % 12) + 1
         movement_date = date(2026, movement_month, min(25, ((i * 7) % 27) + 1))
-        if not _dated_fact_is_actual(active_run, movement_date):
+        if not _dated_fact_is_calibration(active_run, movement_date):
             continue
         intercompany = i % 20 == 0
         session.add(
             FreightMovement(
-                id=stable_id("movement", f"{marker}:ARU-2026-{i:04d}"),
-                movement_number=f"ARU-2026-{i:04d}",
-                entity_id=_entity_id("ARU"),
+                id=stable_id("movement", f"{marker}:BST-2026-{i:04d}"),
+                movement_number=f"BST-2026-{i:04d}",
+                entity_id=_entity_id("BST"),
                 movement_date=movement_date,
                 commodity="URANIUM_CONCENTRATE" if intercompany else "MINERAL_PRODUCTS",
                 tonnes=D(65 if intercompany else 740 + rng.randrange(-120, 121)),
@@ -970,6 +1209,7 @@ def generate_baseline(
                     segment=plan.segment,
                 ),
             ],
+            entry_date=date(2026, 12, 31),
         )
     # Reclassify parent revenue into its real lines without changing total.
     book, period = periods["SHI"]
@@ -988,21 +1228,23 @@ def generate_baseline(
             _line(key, 5, "4050", credit=D("1300000"), segment="CRADLE"),
             _line(key, 6, "4060", credit=D("1200000"), segment="ADVISORY"),
         ],
+        entry_date=date(2026, 12, 31),
     )
     # Intercompany freight and its consolidation elimination ($3.0M).
     ic = D("3000000")
-    aru_book, aru_period = periods["ARU"]
-    key = f"{marker}:ARU:IC"
+    bst_book, bst_period = periods["BST"]
+    key = f"{marker}:BST:IC"
     _post(
         session,
-        aru_book,
-        aru_period,
+        bst_book,
+        bst_period,
         key,
-        "Freight billed to Red Wash",
+        "BS&T railway freight billed to Red Wash",
         [
             _line(key, 1, "1100", debit=ic, segment="ARU_BST", counterparty="RWH"),
             _line(key, 2, "4090", credit=ic, segment="ARU_BST", counterparty="RWH"),
         ],
+        entry_date=date(2026, 12, 31),
     )
     rwh_book, rwh_period = periods["RWH"]
     key = f"{marker}:RWH:IC"
@@ -1011,11 +1253,12 @@ def generate_baseline(
         rwh_book,
         rwh_period,
         key,
-        "Freight purchased from ARU",
+        "Freight purchased from BS&T",
         [
-            _line(key, 1, "6400", debit=ic, segment="PALE_SUN", counterparty="ARU"),
-            _line(key, 2, "2000", credit=ic, segment="PALE_SUN", counterparty="ARU"),
+            _line(key, 1, "6400", debit=ic, segment="PALE_SUN", counterparty="BST"),
+            _line(key, 2, "2000", credit=ic, segment="PALE_SUN", counterparty="BST"),
         ],
+        entry_date=date(2026, 12, 31),
     )
     cons_book, cons_period = periods["CONS"]
     key = f"{marker}:CONS:IC_ELIM"
@@ -1024,13 +1267,14 @@ def generate_baseline(
         cons_book,
         cons_period,
         key,
-        "Eliminate ARU–Red Wash intercompany freight",
+        "Eliminate BS&T–Red Wash intercompany freight",
         [
-            _line(key, 1, "4090", debit=ic, segment="ELIMINATION", counterparty="ARU"),
+            _line(key, 1, "4090", debit=ic, segment="ELIMINATION", counterparty="BST"),
             _line(key, 2, "6400", credit=ic, segment="ELIMINATION", counterparty="RWH"),
             _line(key, 3, "2000", debit=ic, segment="ELIMINATION", counterparty="RWH"),
-            _line(key, 4, "1100", credit=ic, segment="ELIMINATION", counterparty="ARU"),
+            _line(key, 4, "1100", credit=ic, segment="ELIMINATION", counterparty="BST"),
         ],
+        entry_date=date(2026, 12, 31),
     )
 
     # Scenario registry, including a marker for idempotence.
@@ -1067,40 +1311,42 @@ def generate_baseline(
     return {"scenario": scenario, "seed": seed, "employees": 708, "contractors": 61}
 
 
-def _ensure_common_actual_layer(
+def _ensure_shared_synthetic_calibration_layer(
     session: Session, seed: int, *, complete: bool = True
 ) -> GenerationRun:
     selected_run_id = session.info.get(GENERATION_RUN_SESSION_KEY)
     selected_run = (
         session.get(GenerationRun, str(selected_run_id)) if selected_run_id is not None else None
     )
-    git_commit = selected_run.git_commit if selected_run is not None else "UNKNOWN"
-    actual_run = record_generation_run(
+    if selected_run is None:
+        raise ValueError("Shared synthetic calibration requires an active selected run")
+    git_commit = selected_run.git_commit
+    calibration_run = record_generation_run(
         session,
-        profile="actual_common",
-        scenario_code="actual_common",
+        profile="synthetic_common",
+        scenario_code="synthetic_common",
         seed=seed,
         git_commit=git_commit,
     )
-    generate_baseline(session, seed=seed, scenario="actual_common", post_summary=False)
-    if complete and actual_run.status == "RUNNING":
-        complete_generation_run(session, actual_run)
+    generate_baseline(session, seed=seed, scenario="synthetic_common", post_summary=False)
+    if complete and calibration_run.status == "RUNNING":
+        complete_generation_run(session, calibration_run)
     if selected_run is not None:
-        selected_run.actual_generation_run_id = actual_run.id
+        selected_run.shared_synthetic_calibration_run_id = calibration_run.id
         session.info[GENERATION_RUN_SESSION_KEY] = selected_run.id
-    return actual_run
+    return calibration_run
 
 
 def generate_baseline_run(
     session: Session, seed: int = 20260831, scenario: str = "base"
 ) -> dict[str, int | str]:
-    """Attach a baseline scenario run to deterministic common opening and actual facts."""
-    _ensure_common_actual_layer(session, seed, complete=False)
-    session.info["populate_common_actuals_only"] = True
+    """Attach a baseline scenario run to a shared synthetic calibration layer."""
+    _ensure_shared_synthetic_calibration_layer(session, seed, complete=False)
+    session.info["populate_shared_synthetic_calibration_only"] = True
     try:
         generate_standard(session, seed=seed, scenario=scenario)
     finally:
-        session.info.pop("populate_common_actuals_only", None)
+        session.info.pop("populate_shared_synthetic_calibration_only", None)
     run_id = str(session.info[GENERATION_RUN_SESSION_KEY])
     marker_id = stable_id("scenario_value", f"run:{run_id}:marker")
     if session.get(ScenarioValue, marker_id) is None:
@@ -1114,7 +1360,7 @@ def generate_baseline_run(
                 amount=D(1),
                 unit="count",
                 fact_state=FactState.DERIVED,
-                provenance="baseline run marker; includes deterministic common-actual layer",
+                provenance="baseline run marker; includes shared synthetic calibration layer",
             )
         )
         session.flush()
@@ -1136,40 +1382,45 @@ def generate_standard(
     _persist_scenario_drivers(session, selected_run, scenario)
     marker = stable_id("generation_namespace", str(run_id))
     marker_id = stable_id("scenario_value", f"run:{run_id}:generation-marker")
-    actuals_only = bool(session.info.get("populate_common_actuals_only"))
+    calibration_only = bool(session.info.get("populate_shared_synthetic_calibration_only"))
+    calibration_run = _ensure_shared_synthetic_calibration_layer(session, seed, complete=False)
+    if (
+        selected_run.synthetic_calibration_through != calibration_run.synthetic_calibration_through
+        or selected_run.forecast_from != calibration_run.forecast_from
+    ):
+        raise ValueError(
+            "Selected and shared synthetic calibration runs have incompatible cutoff contracts"
+        )
+    calibration_standard_marker_id = stable_id(
+        "scenario_value", f"run:{calibration_run.id}:standard-calibration-marker"
+    )
+    if (
+        calibration_run.status == "COMPLETED"
+        and session.get(ScenarioValue, calibration_standard_marker_id) is None
+    ):
+        raise ValueError(
+            "Completed shared synthetic calibration layer does not satisfy the standard profile "
+            "contract; "
+            "completed generation runs are immutable"
+        )
     existing_marker = session.get(ScenarioValue, marker_id)
-    if not actuals_only and existing_marker is not None:
+    if not calibration_only and existing_marker is not None:
         return {
             "scenario": scenario,
             "profile": "standard",
             "seed": seed,
             "periods": 48,
         }
-    actual_run = _ensure_common_actual_layer(session, seed, complete=False)
-    if (
-        selected_run.actual_through != actual_run.actual_through
-        or selected_run.forecast_from != actual_run.forecast_from
-    ):
-        raise ValueError("Selected and common-actual runs have incompatible cutoff contracts")
-    actual_standard_marker_id = stable_id(
-        "scenario_value", f"run:{actual_run.id}:standard-actual-marker"
-    )
-    if (
-        actual_run.status == "COMPLETED"
-        and session.get(ScenarioValue, actual_standard_marker_id) is None
-    ):
-        raise ValueError(
-            "Completed common-actual layer does not satisfy the standard profile contract; "
-            "completed generation runs are immutable"
+    books: dict[str, AccountingBook] = {}
+    for entity, book in session.execute(
+        select(LegalEntity, AccountingBook).join(
+            AccountingBook, AccountingBook.entity_id == LegalEntity.id
         )
-    books = {
-        entity.code: book
-        for entity, book in session.execute(
-            select(LegalEntity, AccountingBook).join(
-                AccountingBook, AccountingBook.entity_id == LegalEntity.id
-            )
-        )
-    }
+    ):
+        if book.code == "PRIMARY_USD":
+            books[entity.code] = book
+        elif entity.code == "SHI" and book.code == "CONSOLIDATION_USD":
+            books["CONS"] = book
     site_ids = {site.code: site.id for site in session.scalars(select(Site))}
     plan_map = {plan.code: plan for plan in entity_plans()}
     yearly = {
@@ -1182,10 +1433,10 @@ def generate_standard(
         2026: {
             "SHI": (plan_map["SHI"].revenue, plan_map["SHI"].operating_cost),
             "RWH": (plan_map["RWH"].revenue, plan_map["RWH"].operating_cost),
-            "ARU": (plan_map["ARU"].revenue, plan_map["ARU"].operating_cost),
+            "BST": (plan_map["BST"].revenue, plan_map["BST"].operating_cost),
         },
     }
-    revenue_accounts = {"SHI": "4000", "RWH": "4030", "ARU": "4040"}
+    revenue_accounts = {"SHI": "4000", "RWH": "4030", "BST": "4040"}
     weights = [
         D("0.075"),
         D("0.077"),
@@ -1202,9 +1453,8 @@ def generate_standard(
     ]
     for year, entity_values in yearly.items():
         for entity_code, (annual_revenue, annual_cost) in entity_values.items():
-            revenue_multiplier, cost_multiplier = scenario_multipliers(
-                scenario, entity_code
-            )
+            driver_family = plan_map[entity_code].driver_family
+            revenue_multiplier, cost_multiplier = scenario_multipliers(scenario, driver_family)
             book = books[entity_code]
             allocated_revenue = D(0)
             allocated_cost = D(0)
@@ -1212,7 +1462,7 @@ def generate_standard(
                 7
                 if entity_code == "RWH" and year == 2025
                 else 2
-                if entity_code == "ARU" and year == 2026
+                if entity_code == "BST" and year == 2026
                 else 1
             )
             denominator = sum(weights[first_active_month - 1 :])
@@ -1222,7 +1472,7 @@ def generate_standard(
             ) -> D:
                 return (
                     D(1)
-                    if _period_is_actual(
+                    if _period_is_calibration(
                         selected_run,
                         date(calculation_year, month, 1),
                         date(
@@ -1251,7 +1501,7 @@ def generate_standard(
             for month, weight in enumerate(weights, start=1):
                 if entity_code == "RWH" and year == 2025 and month < 7:
                     continue
-                if entity_code == "ARU" and year == 2026 and month < 2:
+                if entity_code == "BST" and year == 2026 and month < 2:
                     continue
                 period_code = f"{year}-{month:02d}"
                 period_id = stable_id("period", f"{book.id}:{period_code}")
@@ -1266,11 +1516,13 @@ def generate_standard(
                     )
                     session.add(period)
                     session.flush()
-                is_actual = _period_is_actual(selected_run, period.starts_on, period.ends_on)
-                if actuals_only and not is_actual:
+                is_calibration = _period_is_calibration(
+                    selected_run, period.starts_on, period.ends_on
+                )
+                if calibration_only and not is_calibration:
                     continue
-                period_revenue_multiplier = D(1) if is_actual else revenue_multiplier
-                period_cost_multiplier = D(1) if is_actual else cost_multiplier
+                period_revenue_multiplier = D(1) if is_calibration else revenue_multiplier
+                period_cost_multiplier = D(1) if is_calibration else cost_multiplier
                 scenario_revenue = annual_revenue * period_revenue_multiplier
                 scenario_cost = annual_cost * period_cost_multiplier
                 revenue = (scenario_revenue * weight / denominator).quantize(D("0.01"))
@@ -1282,15 +1534,17 @@ def generate_standard(
                 allocated_revenue += revenue
                 allocated_cost += cost
                 availability = (
-                    "monthly_actual" if is_actual else "monthly_forecast"
+                    "synthetic_common_reference"
+                    if is_calibration
+                    else "synthetic_scenario_forecast"
                 )
-                owner_run_id = actual_run.id if is_actual else str(run_id)
-                owner_scenario = "actual_common" if is_actual else scenario
+                owner_run_id = calibration_run.id if is_calibration else str(run_id)
+                owner_scenario = "synthetic_common" if is_calibration else scenario
                 owner_marker = stable_id("generation_namespace", owner_run_id)
                 key = f"{owner_marker}:{entity_code}:{period_code}:OPERATIONS"
                 reported_revenue = revenue
                 reported_cost = cost
-                if not is_actual and year == 2026:
+                if not is_calibration and year == 2026:
                     causal_revenue, causal_cost = _generate_causal_month(
                         session,
                         entity_code=entity_code,
@@ -1313,16 +1567,34 @@ def generate_standard(
                         key,
                         f"Monthly generated operating control — {entity_code} {period_code}",
                         [
-                            _line(key, 1, "1000", debit=revenue, segment=entity_code),
+                            _line(
+                                key,
+                                1,
+                                "1000",
+                                debit=revenue,
+                                segment=plan_map[entity_code].segment,
+                            ),
                             _line(
                                 key,
                                 2,
                                 revenue_accounts[entity_code],
                                 credit=revenue,
-                                segment=entity_code,
+                                segment=plan_map[entity_code].segment,
                             ),
-                            _line(key, 3, "5000", debit=cost, segment=entity_code),
-                            _line(key, 4, "1000", credit=cost, segment=entity_code),
+                            _line(
+                                key,
+                                3,
+                                "5000",
+                                debit=cost,
+                                segment=plan_map[entity_code].segment,
+                            ),
+                            _line(
+                                key,
+                                4,
+                                "1000",
+                                credit=cost,
+                                segment=plan_map[entity_code].segment,
+                            ),
                         ],
                         entry_date=period.ends_on,
                         source_type=availability,
@@ -1351,51 +1623,53 @@ def generate_standard(
                                 provenance=f"{availability} from versioned annual driver",
                             )
                         )
-    if actuals_only:
-        if session.get(ScenarioValue, actual_standard_marker_id) is None:
+    if calibration_only:
+        if session.get(ScenarioValue, calibration_standard_marker_id) is None:
             session.add(
                 ScenarioValue(
-                    id=actual_standard_marker_id,
-                    generation_run_id=actual_run.id,
-                    scenario_code="actual_common",
-                    metric_code="standard_actual_completion_marker",
+                    id=calibration_standard_marker_id,
+                    generation_run_id=calibration_run.id,
+                    scenario_code="synthetic_common",
+                    metric_code="standard_synthetic_calibration_completion_marker",
                     entity_code="CONSOLIDATED",
                     period_code=(
-                        f"2023-2026_ACTUAL_THROUGH_{actual_run.actual_through:%Y-%m-%d}"
+                        "2023-2026_SYNTHETIC_CALIBRATION_THROUGH_"
+                        f"{calibration_run.synthetic_calibration_through:%Y-%m-%d}"
                     ),
                     amount=D(1),
                     unit="count",
                     fact_state=FactState.DERIVED,
-                    provenance="common actual superset contract marker",
+                    provenance="shared synthetic calibration superset contract marker",
                 )
             )
-        if actual_run.status == "RUNNING":
-            complete_generation_run(session, actual_run)
+        if calibration_run.status == "RUNNING":
+            link_journals(session, calibration_run)
+            complete_generation_run(session, calibration_run)
         session.flush()
         return {"scenario": scenario, "profile": "standard", "seed": seed, "periods": 44}
 
-    # Scenario-owned operating forecasts.  These deliberately mirror the dated
-    # actual registers above without placing post-cutoff records in actual_common.
+    # Scenario-owned operating forecasts mirror the dated synthetic registers above
+    # without placing post-cutoff records in the shared calibration layer.
     forecast_rng = Random(seed)
-    actual_production_months = [
+    calibration_production_months = [
         month
         for month in range(1, 13)
-        if _period_is_actual(
+        if _period_is_calibration(
             selected_run,
             date(2026, month, 1),
             date(2026, month, monthrange(2026, month)[1]),
         )
     ]
-    for _ in actual_production_months:
+    for _ in calibration_production_months:
         forecast_rng.randrange(-1600, 1601)
         forecast_rng.random()
     red_wash_site_id = stable_id("site", "RED_WASH")
     rwh_revenue_multiplier, rwh_cost_multiplier = scenario_multipliers(scenario, "RWH")
-    aru_revenue_multiplier, _aru_cost_multiplier = scenario_multipliers(scenario, "ARU")
+    rail_revenue_multiplier, _rail_cost_multiplier = scenario_multipliers(scenario, "ARU")
     for month in range(1, 13):
         period_start = date(2026, month, 1)
         period_end = date(2026, month, monthrange(2026, month)[1])
-        if _period_is_actual(selected_run, period_start, period_end):
+        if _period_is_calibration(selected_run, period_start, period_end):
             continue
         ore = D(13500 + forecast_rng.randrange(-1600, 1601))
         ore = (ore * rwh_revenue_multiplier).quantize(D("0.01"))
@@ -1414,7 +1688,7 @@ def generate_standard(
             )
         )
     ending_inventory_date = date(2026, 12, 31)
-    if not _dated_fact_is_actual(selected_run, ending_inventory_date):
+    if not _dated_fact_is_calibration(selected_run, ending_inventory_date):
         session.add(
             InventoryLot(
                 id=stable_id("lot", f"{marker}:RWH-2026-ENDING"),
@@ -1432,21 +1706,21 @@ def generate_standard(
     for i in range(1, 121):
         movement_month = ((i - 1) % 12) + 1
         movement_date = date(2026, movement_month, min(25, ((i * 7) % 27) + 1))
-        if _dated_fact_is_actual(selected_run, movement_date):
+        if _dated_fact_is_calibration(selected_run, movement_date):
             continue
         intercompany = i % 20 == 0
-        baseline_revenue = D("500000") if intercompany else D(
-            100000 + forecast_rng.randrange(20000, 90001)
+        baseline_revenue = (
+            D("500000") if intercompany else D(100000 + forecast_rng.randrange(20000, 90001))
         )
         session.add(
             FreightMovement(
-                id=stable_id("movement", f"{marker}:ARU-2026-{i:04d}"),
-                movement_number=f"ARU-2026-{i:04d}",
-                entity_id=_entity_id("ARU"),
+                id=stable_id("movement", f"{marker}:BST-2026-{i:04d}"),
+                movement_number=f"BST-2026-{i:04d}",
+                entity_id=_entity_id("BST"),
                 movement_date=movement_date,
                 commodity="URANIUM_CONCENTRATE" if intercompany else "MINERAL_PRODUCTS",
                 tonnes=D(65 if intercompany else 740 + forecast_rng.randrange(-120, 121)),
-                revenue=(baseline_revenue * aru_revenue_multiplier).quantize(D("0.01")),
+                revenue=(baseline_revenue * rail_revenue_multiplier).quantize(D("0.01")),
                 intercompany=intercompany,
                 custody_status="HELD_RECONCILIATION" if i == 100 else "COMPLETE",
                 fact_state=FactState.SYNTHETIC_INSTANCE,
@@ -1455,12 +1729,17 @@ def generate_standard(
 
     ic = D("3000000")
     ic_period = "2026-12"
-    aru_book = books["ARU"]
+    intercompany_is_calibration = _period_is_calibration(
+        selected_run, date(2026, 12, 1), date(2026, 12, 31)
+    )
+    intercompany_run_id = calibration_run.id if intercompany_is_calibration else str(run_id)
+    intercompany_marker = stable_id("generation_namespace", intercompany_run_id)
+    bst_book = books["BST"]
     rwh_book = books["RWH"]
     cons_book = books["CONS"]
-    aru_period = session.scalar(
+    bst_period = session.scalar(
         select(FiscalPeriod).where(
-            FiscalPeriod.book_id == aru_book.id, FiscalPeriod.code == ic_period
+            FiscalPeriod.book_id == bst_book.id, FiscalPeriod.code == ic_period
         )
     )
     rwh_period = session.scalar(
@@ -1473,33 +1752,35 @@ def generate_standard(
             FiscalPeriod.book_id == cons_book.id, FiscalPeriod.code == ic_period
         )
     )
-    if aru_period is not None and rwh_period is not None:
-        key = f"{marker}:ARU:RWH:IC"
+    if bst_period is not None and rwh_period is not None:
+        key = f"{intercompany_marker}:BST:RWH:IC"
         _post(
             session,
-            aru_book.id,
-            aru_period.id,
+            bst_book.id,
+            bst_period.id,
             f"{key}:SELLER",
-            "ARU freight billed to Red Wash",
+            "BS&T railway freight billed to Red Wash",
             [
                 _line(key, 1, "1100", debit=ic, segment="ARU_BST", counterparty="RWH"),
                 _line(key, 2, "4090", credit=ic, segment="ARU_BST", counterparty="RWH"),
             ],
-            entry_date=aru_period.ends_on,
+            entry_date=bst_period.ends_on,
             source_type="intercompany_service",
+            generation_run_id=intercompany_run_id,
         )
         _post(
             session,
             rwh_book.id,
             rwh_period.id,
             f"{key}:BUYER",
-            "Red Wash freight purchased from ARU",
+            "Red Wash freight purchased from BS&T",
             [
-                _line(key, 3, "6400", debit=ic, segment="PALE_SUN", counterparty="ARU"),
-                _line(key, 4, "2000", credit=ic, segment="PALE_SUN", counterparty="ARU"),
+                _line(key, 3, "6400", debit=ic, segment="PALE_SUN", counterparty="BST"),
+                _line(key, 4, "2000", credit=ic, segment="PALE_SUN", counterparty="BST"),
             ],
             entry_date=rwh_period.ends_on,
             source_type="intercompany_service",
+            generation_run_id=intercompany_run_id,
         )
     if cons_period is None:
         cons_period = FiscalPeriod(
@@ -1511,21 +1792,22 @@ def generate_standard(
         )
         session.add(cons_period)
         session.flush()
-    key = f"{marker}:CONS:IC_ELIM"
+    key = f"{intercompany_marker}:CONS:IC_ELIM"
     _post(
         session,
         cons_book.id,
         cons_period.id,
         key,
-        "Eliminate ARU and Red Wash intercompany freight",
+        "Eliminate BS&T and Red Wash intercompany freight",
         [
-            _line(key, 1, "4090", debit=ic, segment="ELIMINATION", counterparty="ARU"),
+            _line(key, 1, "4090", debit=ic, segment="ELIMINATION", counterparty="BST"),
             _line(key, 2, "6400", credit=ic, segment="ELIMINATION", counterparty="RWH"),
             _line(key, 3, "2000", debit=ic, segment="ELIMINATION", counterparty="RWH"),
-            _line(key, 4, "1100", credit=ic, segment="ELIMINATION", counterparty="ARU"),
+            _line(key, 4, "1100", credit=ic, segment="ELIMINATION", counterparty="BST"),
         ],
         entry_date=cons_period.ends_on,
         source_type="consolidation_elimination",
+        generation_run_id=intercompany_run_id,
     )
     session.add(
         ScenarioValue(
@@ -1537,28 +1819,30 @@ def generate_standard(
             amount=D(1),
             unit="count",
             fact_state=FactState.DERIVED,
-            provenance="standard run marker; common actuals plus scenario forecast",
+            provenance="standard run marker; shared synthetic calibration plus scenario forecast",
         )
     )
-    if session.get(ScenarioValue, actual_standard_marker_id) is None:
+    if session.get(ScenarioValue, calibration_standard_marker_id) is None:
         session.add(
             ScenarioValue(
-                id=actual_standard_marker_id,
-                generation_run_id=actual_run.id,
-                scenario_code="actual_common",
-                metric_code="standard_actual_completion_marker",
+                id=calibration_standard_marker_id,
+                generation_run_id=calibration_run.id,
+                scenario_code="synthetic_common",
+                metric_code="standard_synthetic_calibration_completion_marker",
                 entity_code="CONSOLIDATED",
                 period_code=(
-                    f"2023-2026_ACTUAL_THROUGH_{actual_run.actual_through:%Y-%m-%d}"
+                    "2023-2026_SYNTHETIC_CALIBRATION_THROUGH_"
+                    f"{calibration_run.synthetic_calibration_through:%Y-%m-%d}"
                 ),
                 amount=D(1),
                 unit="count",
                 fact_state=FactState.DERIVED,
-                provenance="standard profile common-actual contract marker",
+                provenance="standard profile shared synthetic calibration contract marker",
             )
         )
-    if actual_run.status == "RUNNING":
-        complete_generation_run(session, actual_run)
+    if calibration_run.status == "RUNNING":
+        link_journals(session, calibration_run)
+        complete_generation_run(session, calibration_run)
     session.flush()
     return {"scenario": scenario, "profile": "standard", "seed": seed, "periods": 48}
 

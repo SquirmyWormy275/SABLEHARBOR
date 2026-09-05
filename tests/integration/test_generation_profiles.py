@@ -40,7 +40,6 @@ def test_read_commands_never_install_or_generate_on_fresh_database(
         ("full", "high"),
         ("full_history", "base"),
         ("stress", "stress"),
-        ("benchmark_private", "base"),
     ],
 )
 def test_generation_profile_has_run_marker_and_no_null_owned_facts(

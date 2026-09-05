@@ -1,7 +1,7 @@
 from datetime import date
 from decimal import Decimal
 
-from sqlalchemy import Date, ForeignKey, Numeric, String, UniqueConstraint
+from sqlalchemy import Date, ForeignKey, ForeignKeyConstraint, Numeric, String, UniqueConstraint
 from sqlalchemy.orm import Mapped, mapped_column
 
 from sable_harbor.accounting.models import Base, GenerationOwnedMixin
@@ -27,12 +27,16 @@ class PayrollLine(GenerationOwnedMixin, Base):
     employer_cost: Mapped[Decimal] = mapped_column(Numeric(20, 4))
 
 
-class Vendor(Base):
+class Vendor(GenerationOwnedMixin, Base):
     __tablename__ = "vendor"
     id: Mapped[str] = mapped_column(String(36), primary_key=True)
-    code: Mapped[str] = mapped_column(String(32), unique=True)
+    code: Mapped[str] = mapped_column(String(32))
     name: Mapped[str] = mapped_column(String(160))
     category: Mapped[str] = mapped_column(String(60))
+    __table_args__ = (
+        UniqueConstraint("generation_run_id", "code"),
+        UniqueConstraint("id", "generation_run_id", name="uq_vendor_id_generation_run_id"),
+    )
 
 
 class PurchaseOrder(GenerationOwnedMixin, Base):
@@ -44,7 +48,14 @@ class PurchaseOrder(GenerationOwnedMixin, Base):
     order_date: Mapped[date] = mapped_column(Date)
     amount: Mapped[Decimal] = mapped_column(Numeric(20, 4))
     status: Mapped[str] = mapped_column(String(24))
-    __table_args__ = (UniqueConstraint("generation_run_id", "po_number"),)
+    __table_args__ = (
+        UniqueConstraint("generation_run_id", "po_number"),
+        ForeignKeyConstraint(
+            ["vendor_id", "generation_run_id"],
+            ["vendor.id", "vendor.generation_run_id"],
+            name="fk_purchase_order_vendor_id_same_run",
+        ),
+    )
 
 
 class GoodsReceipt(GenerationOwnedMixin, Base):

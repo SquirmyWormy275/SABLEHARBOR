@@ -10,13 +10,15 @@ from sable_harbor.accounting.seed import seed_smoke
 from sable_harbor.commercial.contract_to_cash import create_foundry_contract_flow
 from sable_harbor.commercial.engagements import deliver_and_bill_engagement
 from sable_harbor.core.ids import stable_id
+from sable_harbor.provenance.models import GenerationRun
+from sable_harbor.provenance.service import complete_generation_run
 
 
 def test_services_time_cost_billing_and_margin_tie_to_gl() -> None:
     engine = create_engine("sqlite:///:memory:")
     Base.metadata.create_all(engine)
     with Session(engine) as session:
-        book_id = seed_smoke(session)
+        book_id = seed_smoke(session, complete=False)
         entity_id = session.query(LegalEntity.id).scalar()
         period_id = session.query(FiscalPeriod.id).scalar()
         contract, _ = create_foundry_contract_flow(
@@ -52,10 +54,12 @@ def test_services_time_cost_billing_and_margin_tie_to_gl() -> None:
             bill_rate=Decimal("250"),
             cost_rate=Decimal("100"),
         )
+        run = session.get(GenerationRun, session.info["generation_run_id"])
+        assert run is not None
+        complete_generation_run(session, run)
         session.commit()
         balances = {
-            code: (debit, credit)
-            for code, debit, credit in trial_balance(session, book_id)
+            code: (debit, credit) for code, debit, credit in trial_balance(session, book_id)
         }
         assert time.hours == Decimal("100.00")
         assert invoice.total == Decimal("25000.0000")

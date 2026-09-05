@@ -32,6 +32,7 @@ def _line(
     account: str,
     debit: Decimal,
     credit: Decimal,
+    segment_code: str | None = None,
 ) -> JournalLine:
     signed = debit - credit
     return JournalLine(
@@ -42,6 +43,8 @@ def _line(
         functional_amount=signed,
         reporting_amount=signed,
         fact_state=FactState.DERIVED,
+        segment_code=segment_code,
+        cost_center_code=segment_code,
     )
 
 
@@ -54,6 +57,7 @@ def create_foundry_contract_flow(
     natural_key: str,
     invoice_date: date,
     annual_value: Decimal,
+    segment_code: str = "FOUNDRY_FIELD",
 ) -> tuple[Contract, Invoice]:
     customer = Customer(
         id=stable_id("customer", natural_key),
@@ -110,12 +114,19 @@ def create_foundry_contract_flow(
         source_type="invoice",
         source_id=invoice.id,
         lines=[
-            _line(f"{natural_key}:INV:AR", account_id(session, "1100"), annual_value, Decimal(0)),
+            _line(
+                f"{natural_key}:INV:AR",
+                account_id(session, "1100"),
+                annual_value,
+                Decimal(0),
+                segment_code,
+            ),
             _line(
                 f"{natural_key}:INV:DEFREV",
                 account_id(session, "2200"),
                 Decimal(0),
                 annual_value,
+                segment_code,
             ),
         ],
     )
@@ -134,6 +145,7 @@ def recognize_month(
     period_id: str,
     recognition_date: date,
     amount: Decimal,
+    segment_code: str = "FOUNDRY_FIELD",
 ) -> RevenueRecognition:
     key = f"{obligation.id}:{recognition_date.isoformat()}"
     journal = JournalEntry(
@@ -145,8 +157,8 @@ def recognize_month(
         source_type="revenue_recognition",
         source_id=stable_id("revenue_recognition", key),
         lines=[
-            _line(f"{key}:DR", account_id(session, "2200"), amount, Decimal(0)),
-            _line(f"{key}:CR", account_id(session, "4000"), Decimal(0), amount),
+            _line(f"{key}:DR", account_id(session, "2200"), amount, Decimal(0), segment_code),
+            _line(f"{key}:CR", account_id(session, "4000"), Decimal(0), amount, segment_code),
         ],
     )
     recognition = RevenueRecognition(
@@ -169,6 +181,7 @@ def receive_cash(
     book_id: str,
     period_id: str,
     receipt_date: date,
+    segment_code: str = "FOUNDRY_FIELD",
 ) -> CashReceipt:
     key = invoice.id
     journal = JournalEntry(
@@ -180,8 +193,20 @@ def receive_cash(
         source_type="cash_receipt",
         source_id=stable_id("cash_receipt", key),
         lines=[
-            _line(f"{key}:CASH", account_id(session, "1000"), invoice.total, Decimal(0)),
-            _line(f"{key}:AR", account_id(session, "1100"), Decimal(0), invoice.total),
+            _line(
+                f"{key}:CASH",
+                account_id(session, "1000"),
+                invoice.total,
+                Decimal(0),
+                segment_code,
+            ),
+            _line(
+                f"{key}:AR",
+                account_id(session, "1100"),
+                Decimal(0),
+                invoice.total,
+                segment_code,
+            ),
         ],
     )
     receipt = CashReceipt(

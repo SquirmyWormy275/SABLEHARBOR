@@ -33,6 +33,7 @@ def deliver_and_bill_engagement(
     hours: Decimal,
     bill_rate: Decimal,
     cost_rate: Decimal,
+    segment_code: str = "ADVISORY",
 ) -> tuple[Engagement, TimeEntry, Invoice]:
     engagement = Engagement(
         id=stable_id("engagement", key),
@@ -86,8 +87,8 @@ def deliver_and_bill_engagement(
         source_type="project_cost",
         source_id=stable_id("project_cost", key),
         lines=[
-            _line(f"{key}:COST:DR", account_id(session, "5000"), cost, Decimal(0)),
-            _line(f"{key}:COST:CR", account_id(session, "2000"), Decimal(0), cost),
+            _line(f"{key}:COST:DR", account_id(session, "5000"), cost, Decimal(0), segment_code),
+            _line(f"{key}:COST:CR", account_id(session, "2000"), Decimal(0), cost, segment_code),
         ],
     )
     project_cost = ProjectCost(
@@ -126,8 +127,8 @@ def deliver_and_bill_engagement(
         source_type="engagement_invoice",
         source_id=invoice.id,
         lines=[
-            _line(f"{key}:BILL:DR", account_id(session, "1100"), revenue, Decimal(0)),
-            _line(f"{key}:BILL:CR", account_id(session, "4010"), Decimal(0), revenue),
+            _line(f"{key}:BILL:DR", account_id(session, "1100"), revenue, Decimal(0), segment_code),
+            _line(f"{key}:BILL:CR", account_id(session, "4010"), Decimal(0), revenue, segment_code),
         ],
     )
     invoice.journal_entry_id = billing_journal.id

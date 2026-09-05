@@ -1,6 +1,9 @@
 # Sable Harbor database and SQL index
 
-The finance platform uses one enterprise schema with entity, segment, site, project, counterparty, period, scenario, generation, provenance, and fact-state dimensions. The current implementation is a release candidate in PR #9; it does **not** yet produce seven accepted standalone unit databases.
+The finance platform uses one enterprise schema with entity, segment, site, project, counterparty,
+period, scenario, generation, provenance, and fact-state dimensions. The current PR #9 implementation
+can derive seven scoped release-candidate evidence packages from that enterprise source; it does not
+produce seven standalone source-system databases or independently audited unit statements.
 
 ## Structure
 
@@ -11,17 +14,23 @@ The finance platform uses one enterprise schema with entity, segment, site, proj
 
 ## Unit filter map
 
-| Unit | Entity | Segment | Site | Principal named queries |
+| Unit | Entity | Segment | Site | Implemented primary register |
 |---|---|---|---|---|
-| Foundry Field | SHI | CORE, FOUNDRY_FIELD, DELIVERY | SAC | customer_arr_bridge, customer_profitability, deferred_revenue_rollforward, engagement_margin_wip, employee_loaded_cost, entity_trial_balance, journal_to_source_trace |
-| Willow | SHI | WILLOW, CORE | SAC | assumption_impact, employee_loaded_cost, entity_trial_balance, journal_to_source_trace, source_to_journal_trace, release_coverage_lineage |
-| Atlas Meridian | SHI | ATLAS, CORE | SAC | assumption_impact, customer_profitability, employee_loaded_cost, entity_trial_balance, journal_to_source_trace, source_to_journal_trace, release_coverage_lineage |
-| Pale Sun | RWH | PALE_SUN | RED_WASH | red_wash_unit_cost_bridge, mine_inventory_shipment_reconciliation, fixed_asset_rollforward, vendor_spend_concentration, debt_covenant_calculation, entity_trial_balance, journal_to_source_trace, intercompany_mismatch_elimination |
-| Project Cradle | SHI | CRADLE | SAC | cradle_project_economics, customer_profitability, vendor_spend_concentration, fixed_asset_rollforward, entity_trial_balance, journal_to_source_trace |
-| American Resource Utility | ARU | ARU_BST | ARU_HUB | aru_route_customer_margin, intercompany_mismatch_elimination, fixed_asset_rollforward, vendor_spend_concentration, debt_covenant_calculation, employee_loaded_cost, entity_trial_balance, journal_to_source_trace |
-| Advisory | SHI | ADVISORY | SAC | engagement_margin_wip, customer_profitability, ar_ap_aging, employee_loaded_cost, entity_trial_balance, journal_to_source_trace |
+| Foundry Field | SHI | SHI, CORE, FOUNDRY_FIELD, DELIVERY | SAC | Customer contracts |
+| Willow | SHI | WILLOW | PIT, SAC | Willow experiments |
+| Atlas Meridian | SHI | ATLAS | SAC | Atlas evaluations |
+| Pale Sun | RWH | RWH, PALE_SUN | RED_WASH | Mine production batches |
+| Project Cradle | SHI | CRADLE | SAC | Recovery runs |
+| ARU Group — BS&T Railway | ARU, BST | ARU, ARU_BST | ARU_HUB | BS&T waybills |
+| Advisory | SHI | ADVISORY | SAC | Engagements |
 
-Entity/segment/site filtering alone is insufficient for accepted exports. Every report/export must also identify its generation run, scenario, profile, seed, period coverage, fact states, and shared/intercompany treatment.
+These entries mirror the current `MODEL_PROPOSED_FINANCE_REPORTING_SCOPE` registry; they do not lock
+legal names, jurisdictions, organizational boundaries, or physical-site assignments where canon
+leaves them open. Every package also includes scoped journal/financial evidence, shared asset,
+inventory and workforce registers where its filters select records, source lineage, validation,
+reconciliation, manifest, safety results, and checksums. Entity/segment/site filtering alone is
+insufficient: every report/export must identify its generation run, scenario, profile, seed, period
+coverage, fact states, and shared/intercompany treatment.
 
 ## Reproduce a local enterprise database
 
@@ -30,8 +39,11 @@ uv sync --all-extras
 SHFIN_DATABASE_URL=sqlite:///var/sable_harbor.db uv run alembic upgrade head
 SHFIN_DATABASE_URL=sqlite:///var/sable_harbor.db uv run shfin generate \
   --profile standard --scenario base --seed 20260831
-SHFIN_DATABASE_URL=sqlite:///var/sable_harbor.db uv run shfin validate
+RUN_ID=$(SHFIN_DATABASE_URL=sqlite:///var/sable_harbor.db uv run shfin run-id standard \
+  --scenario base --seed 20260831)
+SHFIN_DATABASE_URL=sqlite:///var/sable_harbor.db uv run shfin validate \
+  --generation-run-id "$RUN_ID"
 ```
 
-For the finance-owned standalone package contract, see
+For the scoped evidence-package contract, see
 [`docs/finance/UNIT_PACKAGE_CONTRACT.md`](../docs/finance/UNIT_PACKAGE_CONTRACT.md).

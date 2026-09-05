@@ -80,9 +80,7 @@ def statement_snapshot(session: Session, generation_run_id: str) -> StatementSna
     }
 
 
-def monthly_statements(
-    session: Session, generation_run_id: str
-) -> list[MonthlyStatement]:
+def monthly_statements(session: Session, generation_run_id: str) -> list[MonthlyStatement]:
     """Build reconciled monthly statements and principal rollforwards from the scoped GL."""
     context = run_context(session, generation_run_id)
     rows = session.execute(
@@ -132,11 +130,7 @@ def monthly_statements(
             (amount for code, amount in balances.items() if code.startswith("4")), Decimal(0)
         )
         cumulative_expenses = sum(
-            (
-                amount
-                for code, amount in balances.items()
-                if code.startswith(("5", "6", "7"))
-            ),
+            (amount for code, amount in balances.items() if code.startswith(("5", "6", "7"))),
             Decimal(0),
         )
         equity = contributed_equity + cumulative_revenue - cumulative_expenses
@@ -155,10 +149,7 @@ def monthly_statements(
                 "ending_cash": cash,
                 "cash_flow": cash - prior_cash,
                 "working_capital": (
-                    balances["1100"]
-                    + balances["1200"]
-                    + balances["2100"]
-                    + balances["2200"]
+                    balances["1100"] + balances["1200"] + balances["2100"] + balances["2200"]
                 ),
                 "debt": -(balances["2500"] + balances["2510"]),
                 "net_fixed_assets": balances["1500"] + balances["1590"],

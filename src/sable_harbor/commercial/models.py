@@ -1,18 +1,30 @@
 from datetime import date, datetime
 from decimal import Decimal
 
-from sqlalchemy import Date, DateTime, Enum, ForeignKey, Numeric, String, UniqueConstraint
+from sqlalchemy import (
+    Date,
+    DateTime,
+    Enum,
+    ForeignKey,
+    ForeignKeyConstraint,
+    Numeric,
+    String,
+    UniqueConstraint,
+)
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from sable_harbor.accounting.models import Base, FactState, GenerationOwnedMixin
 
 
-class Customer(Base):
+class Customer(GenerationOwnedMixin, Base):
     __tablename__ = "customer"
     id: Mapped[str] = mapped_column(String(36), primary_key=True)
     name: Mapped[str] = mapped_column(String(200))
     segment: Mapped[str] = mapped_column(String(80))
     fact_state: Mapped[FactState] = mapped_column(Enum(FactState))
+    __table_args__ = (
+        UniqueConstraint("id", "generation_run_id", name="uq_customer_id_generation_run_id"),
+    )
 
 
 class Contract(GenerationOwnedMixin, Base):
@@ -26,7 +38,14 @@ class Contract(GenerationOwnedMixin, Base):
     transaction_price: Mapped[Decimal] = mapped_column(Numeric(20, 4))
     currency: Mapped[str] = mapped_column(String(3), default="USD")
     fact_state: Mapped[FactState] = mapped_column(Enum(FactState))
-    __table_args__ = (UniqueConstraint("generation_run_id", "contract_number"),)
+    __table_args__ = (
+        UniqueConstraint("generation_run_id", "contract_number"),
+        ForeignKeyConstraint(
+            ["customer_id", "generation_run_id"],
+            ["customer.id", "customer.generation_run_id"],
+            name="fk_customer_contract_customer_id_same_run",
+        ),
+    )
 
 
 class PerformanceObligation(GenerationOwnedMixin, Base):

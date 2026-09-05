@@ -16,4 +16,3 @@ The chart deliberately distinguishes software, services, mining, logistics, reco
 Account codes are globally stable; legal entity and segment are dimensions rather than encoded into account numbers. This prevents separate charts from making consolidation and cross-business analysis opaque.
 
 Revenue recognition policies, depletion methods, ARO measurement, PPA useful lives, impairment units, capitalization policies, and tax books remain accounting-policy decisions rather than properties inferred from account names.
-

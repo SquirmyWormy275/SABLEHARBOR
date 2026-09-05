@@ -18,7 +18,8 @@ from .models import (
 )
 
 
-def seed_smoke(session: Session) -> str:
+def seed_smoke(session: Session, *, complete: bool = True) -> str:
+    fixture_run = None
     if "generation_run_id" not in session.info:
         # Standalone accounting-kernel fixtures still require an explicit,
         # persisted generation owner now that ownership is database mandatory.
@@ -34,7 +35,6 @@ def seed_smoke(session: Session) -> str:
             seed=20260831,
             git_commit="0" * 40,
         )
-        complete_generation_run(session, fixture_run)
 
     entity_id = stable_id("entity", "SABLE_HARBOR_MODEL_PARENT")
     book_id = stable_id("book", "SABLE_HARBOR_MODEL_PARENT:PRIMARY_USD")
@@ -53,6 +53,7 @@ def seed_smoke(session: Session) -> str:
             name="Sable Harbor model parent",
             fact_state=FactState.MODEL_PROPOSED,
             effective_from=date(2016, 1, 1),
+            jurisdiction="OPEN",
         )
     )
     session.flush()
@@ -265,4 +266,6 @@ def seed_smoke(session: Session) -> str:
     session.add(entry)
     session.flush()
     post_entry(session, entry)
+    if fixture_run is not None and complete:
+        complete_generation_run(session, fixture_run)
     return book_id

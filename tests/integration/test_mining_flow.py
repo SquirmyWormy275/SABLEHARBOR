@@ -9,13 +9,15 @@ from sable_harbor.accounting.models import Base, FactState, FiscalPeriod, LegalE
 from sable_harbor.accounting.seed import seed_smoke
 from sable_harbor.core.ids import stable_id
 from sable_harbor.mining.flows import produce_concentrate, ship_and_collect
+from sable_harbor.provenance.models import GenerationRun
+from sable_harbor.provenance.service import complete_generation_run
 
 
 def test_red_wash_quantity_inventory_sales_and_gl_reconcile() -> None:
     engine = create_engine("sqlite:///:memory:")
     Base.metadata.create_all(engine)
     with Session(engine) as session:
-        book_id = seed_smoke(session)
+        book_id = seed_smoke(session, complete=False)
         entity_id = session.query(LegalEntity.id).scalar()
         period_id = session.query(FiscalPeriod.id).scalar()
         site = Site(
@@ -50,6 +52,9 @@ def test_red_wash_quantity_inventory_sales_and_gl_reconcile() -> None:
             pounds_shipped=Decimal("1200"),
             realized_price_per_lb=Decimal("80"),
         )
+        run = session.get(GenerationRun, session.info["generation_run_id"])
+        assert run is not None
+        complete_generation_run(session, run)
         session.commit()
         assert batch.pounds_u3o8 == Decimal("1800.0000")
         assert batch.pounds_u3o8 - shipment.pounds_shipped == Decimal("600.0000")

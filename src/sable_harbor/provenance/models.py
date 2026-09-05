@@ -64,6 +64,9 @@ class GenerationRun(Base):
     id: Mapped[str] = mapped_column(String(36), primary_key=True)
     profile: Mapped[str] = mapped_column(String(32))
     scenario_id: Mapped[str] = mapped_column(ForeignKey("scenario.id"))
+    # These three ``actual_*`` column names are deprecated storage aliases retained
+    # for pre-release Alembic-history compatibility. Application and output surfaces
+    # use the explicitly synthetic properties below.
     actual_generation_run_id: Mapped[str | None] = mapped_column(
         ForeignKey("generation_run.id"), index=True
     )
@@ -95,6 +98,30 @@ class GenerationRun(Base):
             name="ck_generation_run_lifecycle",
         ),
     )
+
+    @property
+    def shared_synthetic_calibration_run_id(self) -> str | None:
+        return self.actual_generation_run_id
+
+    @shared_synthetic_calibration_run_id.setter
+    def shared_synthetic_calibration_run_id(self, value: str | None) -> None:
+        self.actual_generation_run_id = value
+
+    @property
+    def synthetic_calibration_dataset_id(self) -> str:
+        return self.actual_dataset_id
+
+    @synthetic_calibration_dataset_id.setter
+    def synthetic_calibration_dataset_id(self, value: str) -> None:
+        self.actual_dataset_id = value
+
+    @property
+    def synthetic_calibration_through(self) -> date | None:
+        return self.actual_through
+
+    @synthetic_calibration_through.setter
+    def synthetic_calibration_through(self, value: date | None) -> None:
+        self.actual_through = value
 
 
 class Artifact(Base):

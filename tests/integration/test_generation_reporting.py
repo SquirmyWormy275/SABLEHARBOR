@@ -15,7 +15,7 @@ def test_baseline_generation_is_idempotent_and_workbook_reopens(tmp_path: Path) 
     Base.metadata.create_all(engine)
     with Session(engine) as session:
         run = record_generation_run(
-            session, profile="baseline", scenario_code="base", seed=20260831, git_commit="test"
+            session, profile="baseline", scenario_code="base", seed=20260831, git_commit="a" * 40
         )
         first = generate_baseline_run(session)
         session.commit()

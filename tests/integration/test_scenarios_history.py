@@ -14,7 +14,7 @@ def _scenario_revenue(scenario: str) -> Decimal:
     Base.metadata.create_all(engine)
     with Session(engine) as session:
         run = record_generation_run(
-            session, profile="standard", scenario_code=scenario, seed=20260831, git_commit="test"
+            session, profile="standard", scenario_code=scenario, seed=20260831, git_commit="a" * 40
         )
         generate_standard(session, scenario=scenario)
         assert run.actual_generation_run_id is not None
@@ -37,7 +37,7 @@ def test_business_line_drivers_are_persisted_with_governance_metadata() -> None:
     Base.metadata.create_all(engine)
     with Session(engine) as session:
         run = record_generation_run(
-            session, profile="standard", scenario_code="stress", seed=20260831, git_commit="test"
+            session, profile="standard", scenario_code="stress", seed=20260831, git_commit="a" * 40
         )
         generate_standard(session, scenario="stress")
         drivers = session.scalars(
@@ -47,11 +47,27 @@ def test_business_line_drivers_are_persisted_with_governance_metadata() -> None:
             )
         ).all()
         assert {driver.entity_code for driver in drivers} == {
-            "SHI", "RWH", "ARU", "CRADLE", "RESEARCH", "ADVISORY", "CAPITAL"
+            "SHI",
+            "RWH",
+            "ARU",
+            "CRADLE",
+            "RESEARCH",
+            "ADVISORY",
+            "CAPITAL",
         }
         assert all(driver.unit == "multiplier" for driver in drivers)
         assert all(driver.fact_state.value == "SCENARIO_INPUT" for driver in drivers)
         assert all('"owner": "FP&A"' in driver.provenance for driver in drivers)
+        applied = {"SHI", "RWH", "ARU"}
+        assert all(
+            (
+                '"application_status": "APPLIED_TO_GENERATION"'
+                if driver.entity_code in applied
+                else '"application_status": "RECORDED_ONLY_NOT_APPLIED"'
+            )
+            in driver.provenance
+            for driver in drivers
+        )
         assert all(driver.period_code == "2026-09_to_2026-12" for driver in drivers)
 
 
@@ -64,7 +80,7 @@ def test_full_history_adds_noncontrolling_2016_to_2022_anchors() -> None:
             profile="full_history",
             scenario_code="base",
             seed=20260831,
-            git_commit="test",
+            git_commit="a" * 40,
         )
         result = generate_full_history(session)
         anchors = session.scalars(

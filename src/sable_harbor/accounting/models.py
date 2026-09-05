@@ -4,10 +4,12 @@ from enum import StrEnum
 
 from sqlalchemy import (
     Boolean,
+    CheckConstraint,
     Date,
     DateTime,
     Enum,
     ForeignKey,
+    ForeignKeyConstraint,
     Integer,
     Numeric,
     String,
@@ -40,6 +42,19 @@ class FactState(StrEnum):
     EXTERNAL_RESEARCH = "EXTERNAL_RESEARCH"
 
 
+class EpistemicState(StrEnum):
+    """Constitutional authority state for canon-sensitive master-data facets."""
+
+    LOCKED = "LOCKED"
+    DERIVED = "DERIVED"
+    SUPPORTED_ESTIMATE = "SUPPORTED_ESTIMATE"
+    PROVISIONAL_ASSUMPTION = "PROVISIONAL_ASSUMPTION"
+    SCENARIO = "SCENARIO"
+    OPEN = "OPEN"
+    CONFLICT = "CONFLICT"
+    SUPERSEDED = "SUPERSEDED"
+
+
 class PeriodState(StrEnum):
     OPEN = "OPEN"
     CLOSED = "CLOSED"
@@ -56,9 +71,26 @@ class LegalEntity(Base):
     code: Mapped[str] = mapped_column(String(32), unique=True)
     name: Mapped[str] = mapped_column(String(200))
     fact_state: Mapped[FactState] = mapped_column(Enum(FactState))
+    existence_state: Mapped[EpistemicState] = mapped_column(
+        Enum(EpistemicState), default=EpistemicState.PROVISIONAL_ASSUMPTION
+    )
+    identity_state: Mapped[EpistemicState] = mapped_column(
+        Enum(EpistemicState), default=EpistemicState.PROVISIONAL_ASSUMPTION
+    )
+    relationship_state: Mapped[EpistemicState] = mapped_column(
+        Enum(EpistemicState), default=EpistemicState.PROVISIONAL_ASSUMPTION
+    )
+    effective_date_state: Mapped[EpistemicState] = mapped_column(
+        Enum(EpistemicState), default=EpistemicState.PROVISIONAL_ASSUMPTION
+    )
     effective_from: Mapped[date] = mapped_column(Date)
+    valid_to: Mapped[date | None] = mapped_column(Date)
+    recorded_on: Mapped[date | None] = mapped_column(Date)
+    known_on: Mapped[date | None] = mapped_column(Date)
+    superseded_on: Mapped[date | None] = mapped_column(Date)
+    source_reference: Mapped[str | None] = mapped_column(String(500))
     parent_id: Mapped[str | None] = mapped_column(ForeignKey("legal_entity.id"))
-    jurisdiction: Mapped[str] = mapped_column(String(80), default="US-DE")
+    jurisdiction: Mapped[str] = mapped_column(String(80), default="OPEN")
 
 
 class AccountingBook(Base):
@@ -78,7 +110,11 @@ class FiscalPeriod(Base):
     starts_on: Mapped[date] = mapped_column(Date)
     ends_on: Mapped[date] = mapped_column(Date)
     state: Mapped[PeriodState] = mapped_column(Enum(PeriodState), default=PeriodState.OPEN)
-    __table_args__ = (UniqueConstraint("book_id", "code"),)
+    __table_args__ = (
+        UniqueConstraint("book_id", "code"),
+        UniqueConstraint("id", "book_id", name="uq_fiscal_period_id_book_id"),
+        CheckConstraint("starts_on <= ends_on", name="ck_fiscal_period_date_order"),
+    )
 
 
 class GenerationPeriodClose(Base):
@@ -117,6 +153,29 @@ class JournalEntry(Base):
     lines: Mapped[list["JournalLine"]] = relationship(
         back_populates="entry", cascade="all, delete-orphan"
     )
+    __table_args__ = (
+        UniqueConstraint("id", "generation_run_id", name="uq_journal_entry_id_generation_run_id"),
+        UniqueConstraint(
+            "generation_run_id",
+            "reversal_of_id",
+            name="uq_journal_entry_generation_run_id_reversal_of_id",
+        ),
+        ForeignKeyConstraint(
+            ["period_id", "book_id"],
+            ["fiscal_period.id", "fiscal_period.book_id"],
+            name="fk_journal_entry_period_book",
+        ),
+        ForeignKeyConstraint(
+            ["reversal_of_id", "generation_run_id"],
+            ["journal_entry.id", "journal_entry.generation_run_id"],
+            name="fk_journal_entry_reversal_of_id_same_run",
+        ),
+        CheckConstraint(
+            "(state = 'DRAFT' AND posted_at IS NULL) OR "
+            "(state = 'POSTED' AND posted_at IS NOT NULL)",
+            name="ck_journal_entry_lifecycle",
+        ),
+    )
 
 
 class JournalLine(Base):
@@ -135,6 +194,21 @@ class JournalLine(Base):
     project_code: Mapped[str | None] = mapped_column(String(32))
     counterparty_entity_id: Mapped[str | None] = mapped_column(ForeignKey("legal_entity.id"))
     entry: Mapped[JournalEntry] = relationship(back_populates="lines")
+    __table_args__ = (
+        CheckConstraint("debit >= 0 AND credit >= 0", name="ck_journal_line_nonnegative"),
+        CheckConstraint(
+            "(debit > 0 AND credit = 0) OR (credit > 0 AND debit = 0)",
+            name="ck_journal_line_one_side",
+        ),
+        CheckConstraint(
+            "functional_amount = debit - credit",
+            name="ck_journal_line_functional_equation",
+        ),
+        CheckConstraint(
+            "reporting_amount = functional_amount",
+            name="ck_journal_line_reporting_equation",
+        ),
+    )
 
 
 class Site(Base):
@@ -146,6 +220,12 @@ class Site(Base):
     region: Mapped[str] = mapped_column(String(80))
     owner_entity_id: Mapped[str | None] = mapped_column(ForeignKey("legal_entity.id"))
     fact_state: Mapped[FactState] = mapped_column(Enum(FactState))
+    effective_from: Mapped[date | None] = mapped_column(Date)
+    valid_to: Mapped[date | None] = mapped_column(Date)
+    recorded_on: Mapped[date | None] = mapped_column(Date)
+    known_on: Mapped[date | None] = mapped_column(Date)
+    superseded_on: Mapped[date | None] = mapped_column(Date)
+    source_reference: Mapped[str | None] = mapped_column(String(500))
 
 
 class Worker(GenerationOwnedMixin, Base):
@@ -229,9 +309,7 @@ class ProductionRecord(GenerationOwnedMixin, Base):
     concentrate_lbs: Mapped[Decimal] = mapped_column(Numeric(20, 2))
     recovery_rate: Mapped[Decimal] = mapped_column(Numeric(9, 6))
     fact_state: Mapped[FactState] = mapped_column(Enum(FactState))
-    __table_args__ = (
-        UniqueConstraint("generation_run_id", "site_id", "period_code"),
-    )
+    __table_args__ = (UniqueConstraint("generation_run_id", "site_id", "period_code"),)
 
 
 class FreightMovement(GenerationOwnedMixin, Base):

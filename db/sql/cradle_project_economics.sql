@@ -1,1 +1,1 @@
-SELECT run_number,feed_tons,recovered_units,gross_sale,host_share_amount,operating_cost,gross_sale-host_share_amount-operating_cost AS project_contribution FROM recovery_run WHERE generation_run_id IN (:actual_run_id,:generation_run_id) ORDER BY run_date;
+SELECT run_number,feed_tons,recovered_units,gross_sale,host_share_amount,operating_cost,gross_sale-host_share_amount-operating_cost AS project_contribution FROM recovery_run WHERE generation_run_id IN (:actual_run_id,:generation_run_id) ORDER BY run_date,run_number;

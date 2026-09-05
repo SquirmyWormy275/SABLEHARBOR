@@ -23,5 +23,7 @@ var/*
 !var/.gitkeep
 data/generated/
 workbooks/outputs/*.xlsx
+workbooks/outputs/workbook-suite-manifest.json
+workbooks/outputs/SHA256SUMS.txt
 reports/*.xlsx
 releases/generated/

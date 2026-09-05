@@ -1,23 +1,19 @@
-import os
-import subprocess
+import json
 from pathlib import Path
 
 import typer
 from alembic import command
 from alembic.config import Config
-from sqlalchemy import func, inspect, select, text
+from sqlalchemy import select
+from sqlalchemy.orm import Session
 
 from sable_harbor import schema as schema  # noqa: F401
 from sable_harbor.accounting.ledger import close_period, post_draft_entries
-from sable_harbor.accounting.models import (
-    EntryState,
-    FiscalPeriod,
-    JournalEntry,
-    JournalLine,
-    ScenarioValue,
-)
+from sable_harbor.accounting.models import FiscalPeriod, JournalEntry
 from sable_harbor.accounting.seed import seed_smoke
+from sable_harbor.accounting.validation import validate_financial_integrity
 from sable_harbor.core.database import build_engine, require_migrated_schema, session_for
+from sable_harbor.exports.metadata import public_profile
 from sable_harbor.exports.release import package_public_demo
 from sable_harbor.exports.units import package_business_units
 from sable_harbor.generation import (
@@ -25,7 +21,8 @@ from sable_harbor.generation import (
     generate_full_history,
     generate_standard,
 )
-from sable_harbor.provenance.identity import RunIdentity
+from sable_harbor.provenance.identity import RunIdentity, repository_head
+from sable_harbor.provenance.models import GenerationRun
 from sable_harbor.provenance.service import (
     complete_generation_run,
     lineage_for,
@@ -41,13 +38,30 @@ from sable_harbor.valuation.model import calculate_valuation, load_valuation_con
 from sable_harbor.workbooks.suite import generate_workbook_suite
 
 app = typer.Typer(no_args_is_help=True)
+INTERNAL_INSPECTION_CLASSIFICATION = "INTERNAL_SYNTHETIC_INSPECTION_NOT_RELEASE_ARTIFACT"
 
 
-def _git_commit() -> str:
-    result = subprocess.run(
-        ["git", "rev-parse", "HEAD"], check=False, capture_output=True, text=True
-    )
-    return result.stdout.strip() if result.returncode == 0 else "UNKNOWN"
+def _inspection_envelope(
+    session: Session, generation_run_id: str, *, payload_name: str, payload: object
+) -> dict[str, object]:
+    context = run_context(session, generation_run_id)
+    run = session.get(GenerationRun, context.generation_run_id)
+    if run is None:  # guarded by run_context
+        raise ValueError(f"Unknown generation run {generation_run_id!r}")
+    return {
+        "classification": INTERNAL_INSPECTION_CLASSIFICATION,
+        "generation_run_id": context.generation_run_id,
+        "included_run_ids": list(context.included_run_ids),
+        "profile": public_profile(run.profile),
+        "scenario_code": context.scenario_code,
+        "synthetic_calibration_through": (
+            run.synthetic_calibration_through.isoformat()
+            if run.synthetic_calibration_through
+            else None
+        ),
+        "forecast_from": run.forecast_from.isoformat() if run.forecast_from else None,
+        payload_name: payload,
+    }
 
 
 @app.command("status")
@@ -87,15 +101,16 @@ def generate(profile: str = "smoke", scenario: str = "base", seed: int = 2026083
     engine = build_engine()
     require_migrated_schema(engine)
     with session_for(engine) as session:
-        profile, effective_scenario = RunIdentity.build(
-            profile=profile, scenario=scenario, seed=seed
-        ).profile, RunIdentity.build(profile=profile, scenario=scenario, seed=seed).scenario
+        profile, effective_scenario = (
+            RunIdentity.build(profile=profile, scenario=scenario, seed=seed).profile,
+            RunIdentity.build(profile=profile, scenario=scenario, seed=seed).scenario,
+        )
         run = record_generation_run(
             session,
             profile=profile,
             scenario_code=effective_scenario,
             seed=seed,
-            git_commit=_git_commit(),
+            git_commit=repository_head(),
         )
         if profile == "smoke":
             result: object = {"book": seed_smoke(session)}
@@ -108,18 +123,9 @@ def generate(profile: str = "smoke", scenario: str = "base", seed: int = 2026083
         elif profile == "stress":
             scenario = effective_scenario
             result = generate_standard(session, seed=seed, scenario=scenario)
-        elif profile == "benchmark_private":
-            private_profile_enabled = os.getenv("SHFIN_PRIVATE_BENCHMARK") == "1"
-            if "var/private/" not in str(engine.url) and not private_profile_enabled:
-                raise typer.BadParameter(
-                    "benchmark_private requires SHFIN_DATABASE_URL under var/private/ "
-                    "or SHFIN_PRIVATE_BENCHMARK=1"
-                )
-            result = generate_standard(session, seed=seed, scenario=scenario)
         else:
             raise typer.BadParameter(
-                "Profile must be smoke, baseline, standard, full_history, "
-                "stress, or benchmark_private"
+                "Profile must be smoke, baseline, standard, full_history, stress, or full"
             )
         seed_provenance(session)
         lineage_count = link_journals(session, run)
@@ -147,9 +153,17 @@ def close(
 ) -> None:
     engine = build_engine()
     with session_for(engine) as session:
+        context = run_context(session, generation_run_id)
         periods = list(
             session.scalars(
-                select(FiscalPeriod).where(FiscalPeriod.code <= through).order_by(FiscalPeriod.code)
+                select(FiscalPeriod)
+                .join(JournalEntry, JournalEntry.period_id == FiscalPeriod.id)
+                .where(
+                    FiscalPeriod.code <= through,
+                    JournalEntry.generation_run_id.in_(context.included_run_ids),
+                )
+                .distinct()
+                .order_by(FiscalPeriod.code, FiscalPeriod.id)
             )
         )
         for period in periods:
@@ -161,61 +175,17 @@ def close(
 @app.command("validate")
 def validate(generation_run_id: str | None = None) -> None:
     engine = build_engine()
+    require_migrated_schema(engine)
     with session_for(engine) as session:
-        existing = session.scalar(select(func.count(JournalEntry.id))) or 0
-        if existing == 0:
-            raise ValueError("Validation requires an existing completed generation run")
-        else:
-            context = run_context(session, generation_run_id)
-            debit, credit = session.execute(
-                select(func.sum(JournalLine.debit), func.sum(JournalLine.credit))
-                .join(JournalEntry, JournalEntry.id == JournalLine.entry_id)
-                .where(
-                    JournalEntry.state == EntryState.POSTED,
-                    JournalEntry.generation_run_id.in_(context.included_run_ids),
-                )
-            ).one()
-            marker_count = session.scalar(
-                select(func.count(ScenarioValue.id)).where(
-                    ScenarioValue.generation_run_id == context.generation_run_id,
-                    ScenarioValue.metric_code == "run_marker",
-                )
-            )
-            if marker_count != 1:
-                raise ValueError("Selected generation run does not have exactly one run marker")
-            if len(context.included_run_ids) == 2:
-                opening_count = session.scalar(
-                    select(func.count(JournalEntry.id)).where(
-                        JournalEntry.generation_run_id == context.included_run_ids[0],
-                        JournalEntry.description.like("Scenario opening%"),
-                    )
-                )
-                if opening_count != 3:
-                    raise ValueError(
-                        f"Common actual layer has {opening_count} opening entries; expected 3"
-                    )
-            inspector = inspect(engine)
-            null_owned: list[str] = []
-            for table in inspector.get_table_names():
-                columns = {column["name"] for column in inspector.get_columns(table)}
-                if "generation_run_id" not in columns:
-                    continue
-                null_count = session.scalar(
-                    text(f'SELECT COUNT(*) FROM "{table}" WHERE generation_run_id IS NULL')
-                )
-                if null_count:
-                    null_owned.append(f"{table}={null_count}")
-            if null_owned:
-                raise ValueError("Null generation ownership: " + ", ".join(null_owned))
-        if debit != credit:
-            raise typer.Exit(code=1)
-    typer.echo(f"PASS trial balance debit={debit} credit={credit}")
+        selected_id = run_context(session, generation_run_id).generation_run_id
+        report = validate_financial_integrity(session, selected_id)
+    typer.echo(f"PASS generation_run_id={report.generation_run_id} controls={len(report.controls)}")
 
 
 @app.command("report")
 def report(
     generation_run_id: str = typer.Option(...),
-    output: Path = Path("reports/Sable_Harbor_FY2026_Model.xlsx"),
+    output: Path = Path("reports/Sable_Harbor_Synthetic_Model_Preview.xlsx"),
 ) -> None:
     engine = build_engine()
     require_migrated_schema(engine)
@@ -233,12 +203,31 @@ def source_lock() -> None:
 
 
 @app.command("query")
-def query(name: str, generation_run_id: str = typer.Option(...)) -> None:
+def query(
+    name: str,
+    generation_run_id: str = typer.Option(...),
+    comparison_generation_run_id: str | None = typer.Option(None),
+) -> None:
     engine = build_engine()
     require_migrated_schema(engine)
     with session_for(engine) as session:
-        rows = run_named_query(session, name, generation_run_id)
-    typer.echo({"query": name, "rows": rows})
+        rows = run_named_query(
+            session,
+            name,
+            generation_run_id,
+            comparison_generation_run_id=comparison_generation_run_id,
+        )
+        output = _inspection_envelope(
+            session,
+            generation_run_id,
+            payload_name="result",
+            payload={
+                "query": name,
+                "comparison_generation_run_id": comparison_generation_run_id,
+                "rows": rows,
+            },
+        )
+    typer.echo(output)
 
 
 @app.command("queries")
@@ -277,15 +266,15 @@ def package_units(
     engine = build_engine()
     require_migrated_schema(engine)
     with session_for(engine) as session:
-        manifests = package_business_units(
-            session, output, generation_run_id=generation_run_id
-        )
+        manifests = package_business_units(session, output, generation_run_id=generation_run_id)
     typer.echo("\n".join(str(path) for path in manifests))
 
 
 @app.command("valuation")
 def valuation() -> None:
-    typer.echo(calculate_valuation(load_valuation_config()))
+    typer.echo(
+        json.dumps(calculate_valuation(load_valuation_config()), default=str, sort_keys=True)
+    )
 
 
 @app.command("statements")
@@ -293,7 +282,13 @@ def statements(generation_run_id: str = typer.Option(...)) -> None:
     engine = build_engine()
     require_migrated_schema(engine)
     with session_for(engine) as session:
-        typer.echo(statement_snapshot(session, generation_run_id))
+        output = _inspection_envelope(
+            session,
+            generation_run_id,
+            payload_name="statements",
+            payload=statement_snapshot(session, generation_run_id),
+        )
+    typer.echo(output)
 
 
 @app.command("explain-lineage")
@@ -301,7 +296,13 @@ def explain_lineage(record_id: str, generation_run_id: str = typer.Option(...)) 
     engine = build_engine()
     with session_for(engine) as session:
         rows = lineage_for(session, record_id, generation_run_id)
-    if not rows:
-        typer.echo(f"No lineage edges found for {record_id}")
-        raise typer.Exit(code=1)
-    typer.echo(rows)
+        if not rows:
+            typer.echo(f"No lineage edges found for {record_id}")
+            raise typer.Exit(code=1)
+        output = _inspection_envelope(
+            session,
+            generation_run_id,
+            payload_name="lineage_edges",
+            payload=rows,
+        )
+    typer.echo(output)

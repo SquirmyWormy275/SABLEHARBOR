@@ -1,7 +1,14 @@
 # Finance execution plan
 
-The ordered program is Phase 0 source control, Phase 1 reconciliation, Phase 2 platform, Phase 3 accounting kernel, then causal commercial and industrial vertical slices. Each slice is tested, documented, committed, pushed, and added to the draft PR before the next slice.
+The program sequence was Phase 0 source control, Phase 1 reconciliation, Phase 2 platform, Phase 3
+accounting kernel, then causal commercial and industrial vertical slices. The branch is now in final
+integration and acceptance review; older checkpoint results remain chronology rather than proof of
+the current worktree.
 
-Current slice: a durable provenance foundation plus a working multi-entity, multi-book, period-aware balanced journal and trial balance on SQLite. PostgreSQL compatibility, subledgers, generators, reports, workbooks, valuation, and release packaging follow in that order.
+Current slice: reconcile the `0015` accounting-integrity target, central enterprise validation,
+AR/AP exposure query, six run-pinned workbooks, seven scoped unit evidence packages, and allowlisted
+public release. Run fresh SQLite and PostgreSQL migrations and the full validation/artifact matrix
+before acceptance or merge. Valuation and unresolved canon remain explicitly limited or
+model-proposed; this slice must not invent them.
 
 Completion claims are limited to code and commands actually verified.

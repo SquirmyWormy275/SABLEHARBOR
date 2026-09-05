@@ -9,6 +9,7 @@ description = "Sable Harbor enterprise financial data platform"
 requires-python = ">=3.11"
 dependencies = [
   "alembic>=1.13,<2",
+  "jsonschema>=4.23,<5",
   "pydantic>=2.8,<3",
   "PyYAML>=6,<7",
   "sqlalchemy>=2.0,<3",
@@ -40,6 +41,7 @@ addopts = "-q"
 line-length = 100
 target-version = "py311"
 include = ["src/**/*.py", "tests/**/*.py"]
+extend-exclude = ["blackridge"]
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP", "B"]

@@ -22,8 +22,7 @@ def _enforce_same_run_relationships() -> None:
     for table in owned.values():
         if not any(
             isinstance(constraint, UniqueConstraint)
-            and tuple(column.name for column in constraint.columns)
-            == ("id", "generation_run_id")
+            and tuple(column.name for column in constraint.columns) == ("id", "generation_run_id")
             for constraint in table.constraints
         ):
             table.append_constraint(

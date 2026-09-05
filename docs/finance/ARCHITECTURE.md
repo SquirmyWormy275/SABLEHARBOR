@@ -6,7 +6,7 @@ flowchart LR
   M --> O[Operational events]
   O --> S[Subledgers and source records]
   S --> G[Immutable double-entry ledger]
-  G --> R[SQL reporting and valuation]
+  G --> R[SQL reporting and scoped model outputs]
   R --> X[Workbooks and releases]
   C --> L[Fact states and lineage]
   L --> O

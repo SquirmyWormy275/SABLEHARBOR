@@ -2,6 +2,11 @@ effective_period: 2026-09_to_2026-12
 fact_state: SCENARIO_INPUT
 owner: FP&A
 provenance: docs/finance/QUANTITATIVE_BASELINE_PROPOSAL.md
+implementation_scope:
+  applied_to_generation: [SHI, RWH, ARU]
+  booking_entities: {SHI: [SHI], RWH: [RWH], ARU: [BST]}
+  recorded_only_not_applied: [CRADLE, RESEARCH, ADVISORY, CAPITAL]
+  note: ARU is an aggregate driver family whose railway economics book to wholly owned BS&T; recorded-only families are governed inputs for future causal implementations and v0.1 does not claim that they drive generated amounts.
 driver_definitions:
   SHI:
     revenue: [bookings, renewal, retention, expansion, implementation, collection]

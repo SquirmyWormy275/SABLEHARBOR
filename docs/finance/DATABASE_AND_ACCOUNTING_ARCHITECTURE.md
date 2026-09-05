@@ -36,5 +36,9 @@ The baseline segments are `FOUNDRY_FIELD`, `DELIVERY`, `ATLAS`, `WILLOW`, `PALE_
 
 ## Known next increments
 
-Monthly AR/AP, payroll, procurement, maintenance work orders, fixed-asset depreciation/depletion, detailed PPA, tax, debt amortization, revenue-performance obligations, budgets/forecasts, and full cash-flow statements require additional subledger detail. The current schema supplies stable boundaries for those additions without claiming that summary journals are source-level evidence.
-
+The current AR/AP exposure reconciliation bridges invoice/vendor-bill documents and disclosed
+residual source-event exposure to the GL; AR has due-date buckets, while AP due dates remain
+unavailable. Full AP aging, maintenance work orders, depletion, detailed PPA, tax, complete debt
+amortization, broader revenue-performance-obligation detail, and a classified cash-flow statement
+require additional subledger or reporting detail. The current schema supplies stable boundaries for
+those additions without claiming that summary journals are source-level evidence.

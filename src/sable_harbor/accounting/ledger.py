@@ -4,8 +4,11 @@ from decimal import Decimal
 from sqlalchemy import event, func, inspect, select
 from sqlalchemy.orm import Session
 
+from sable_harbor.core.ids import stable_id
+
 from .models import (
     Account,
+    AccountingBook,
     EntryState,
     FiscalPeriod,
     GenerationPeriodClose,
@@ -23,28 +26,46 @@ class LedgerError(ValueError):
 def post_entry(session: Session, entry: JournalEntry) -> None:
     if entry.state not in (None, EntryState.DRAFT):
         raise LedgerError("Only draft entries can be posted")
-    period = session.get(FiscalPeriod, entry.period_id)
-    if period is None or period.state.value == "CLOSED":
-        raise LedgerError("Posting period is missing or closed")
     active_run_id = session.info.get(GENERATION_RUN_SESSION_KEY)
     if not entry.generation_run_id and active_run_id:
         entry.generation_run_id = str(active_run_id)
     if not entry.generation_run_id:
         raise LedgerError("Posting requires an explicit generation run")
-    if active_run_id:
-        from sable_harbor.provenance.models import GenerationRun
+    from sable_harbor.provenance.models import GenerationRun
 
-        active_run = session.get(GenerationRun, str(active_run_id))
+    with session.no_autoflush:
+        run = session.get(GenerationRun, entry.generation_run_id)
+        period = session.get(FiscalPeriod, entry.period_id)
+        book = session.get(AccountingBook, entry.book_id)
+    if run is None:
+        raise LedgerError(f"Generation run {entry.generation_run_id!r} does not exist")
+    if run.status != "RUNNING":
+        raise LedgerError("Posting requires a RUNNING generation run; completed runs are frozen")
+    if period is None or period.state.value == "CLOSED":
+        raise LedgerError("Posting period is missing or closed")
+    if book is None:
+        raise LedgerError("Posting book is missing")
+    if period.book_id != entry.book_id:
+        raise LedgerError("Posting period does not belong to the journal's accounting book")
+    if not period.starts_on <= entry.entry_date <= period.ends_on:
+        raise LedgerError("Journal entry date must fall within its fiscal period")
+    if active_run_id:
+        with session.no_autoflush:
+            active_run = session.get(GenerationRun, str(active_run_id))
         if active_run is None:
             raise LedgerError(f"Active generation run {active_run_id!r} does not exist")
         compatible_run_ids = {active_run.id}
-        if active_run.actual_generation_run_id is not None:
-            compatible_run_ids.add(active_run.actual_generation_run_id)
+        if active_run.shared_synthetic_calibration_run_id is not None:
+            compatible_run_ids.add(active_run.shared_synthetic_calibration_run_id)
         if entry.generation_run_id not in compatible_run_ids:
             raise LedgerError(
                 "Journal generation run is incompatible with the active session context"
             )
-    if session.get(GenerationPeriodClose, (entry.generation_run_id, entry.period_id)):
+    with session.no_autoflush:
+        period_close = session.get(
+            GenerationPeriodClose, (entry.generation_run_id, entry.period_id)
+        )
+    if period_close:
         raise LedgerError("Posting period is closed for this generation run")
     debit = sum((line.debit for line in entry.lines), Decimal("0"))
     credit = sum((line.credit for line in entry.lines), Decimal("0"))
@@ -53,24 +74,44 @@ def post_entry(session: Session, entry: JournalEntry) -> None:
     for line in entry.lines:
         if line.debit < 0 or line.credit < 0 or bool(line.debit) == bool(line.credit):
             raise LedgerError("Each line must contain exactly one positive debit or credit")
+        signed_amount = line.debit - line.credit
+        if line.functional_amount != signed_amount:
+            raise LedgerError("Functional amount must equal debit less credit")
+        if line.reporting_amount != line.functional_amount:
+            raise LedgerError("Reporting amount must equal functional amount for the USD ledger")
+        if line.transaction_currency is None:
+            line.transaction_currency = book.currency
+        elif line.transaction_currency != book.currency:
+            raise LedgerError("Transaction currency must match the book until FX accounting exists")
+    # Persist the draft and its validated lines before the state transition. This
+    # gives database triggers a stable line set to validate and lets them reject
+    # every later write to posted evidence, including writes issued outside the
+    # ORM service.
+    entry.state = EntryState.DRAFT
+    entry.posted_at = None
+    session.flush()
     entry.state = EntryState.POSTED
     entry.posted_at = datetime.now(UTC)
     session.flush()
 
 
 def post_draft_entries(session: Session, generation_run_id: str) -> int:
-    """Post only drafts belonging to one completed, compatible run context."""
-    from sable_harbor.provenance.service import run_context
+    """Post drafts only while their owning generation run is still open."""
+    from sable_harbor.provenance.models import GenerationRun
 
-    context = run_context(session, generation_run_id)
+    run = session.get(GenerationRun, generation_run_id)
+    if run is None:
+        raise LedgerError(f"Unknown generation run {generation_run_id!r}")
+    if run.status != "RUNNING":
+        raise LedgerError("Completed generation runs are immutable; use a new adjustment run")
     previous_run_id = session.info.get(GENERATION_RUN_SESSION_KEY)
-    session.info[GENERATION_RUN_SESSION_KEY] = context.generation_run_id
+    session.info[GENERATION_RUN_SESSION_KEY] = run.id
     try:
         drafts = list(
             session.scalars(
                 select(JournalEntry).where(
                     JournalEntry.state == EntryState.DRAFT,
-                    JournalEntry.generation_run_id.in_(context.included_run_ids),
+                    JournalEntry.generation_run_id == run.id,
                 )
             )
         )
@@ -90,6 +131,16 @@ def close_period(
     from sable_harbor.provenance.service import run_context
 
     context = run_context(session, generation_run_id)
+    referenced = session.scalar(
+        select(func.count(JournalEntry.id)).where(
+            JournalEntry.period_id == period.id,
+            JournalEntry.generation_run_id.in_(context.included_run_ids),
+        )
+    )
+    if not referenced:
+        raise LedgerError(
+            "Cannot close a fiscal period that is not referenced by the selected run context"
+        )
     missing_run_ids = tuple(
         run_id
         for run_id in context.included_run_ids
@@ -129,6 +180,13 @@ def reverse_entry(
 ) -> JournalEntry:
     if original.state is not EntryState.POSTED:
         raise LedgerError("Only posted entries can be reversed")
+    if session.scalar(
+        select(JournalEntry.id).where(
+            JournalEntry.generation_run_id == original.generation_run_id,
+            JournalEntry.reversal_of_id == original.id,
+        )
+    ):
+        raise LedgerError("A journal entry may be reversed only once within a generation run")
     reversal = JournalEntry(
         id=reversal_id,
         generation_run_id=original.generation_run_id,
@@ -141,7 +199,7 @@ def reverse_entry(
         reversal_of_id=original.id,
         lines=[
             JournalLine(
-                id=f"{reversal_id[:-1]}{index}",
+                id=stable_id("journal_line", f"{reversal_id}:{index}"),
                 account_id=line.account_id,
                 debit=line.credit,
                 credit=line.debit,
@@ -149,6 +207,10 @@ def reverse_entry(
                 functional_amount=-line.functional_amount,
                 reporting_amount=-line.reporting_amount,
                 fact_state=line.fact_state,
+                segment_code=line.segment_code,
+                cost_center_code=line.cost_center_code,
+                project_code=line.project_code,
+                counterparty_entity_id=line.counterparty_entity_id,
             )
             for index, line in enumerate(original.lines, start=1)
         ],
@@ -162,7 +224,7 @@ def reject_posted_mutations(
     session: Session, flush_context: object = None, instances: object = None
 ) -> None:
     """Reject edits/deletes to posted journals; corrections must use reversal entries."""
-    for item in session.dirty.union(session.deleted):
+    for item in session.dirty.union(session.deleted).union(session.new):
         if isinstance(item, JournalEntry):
             state_history = inspect(item).attrs.state.history
             posting_now = item.state is EntryState.POSTED and state_history.has_changes()
@@ -182,6 +244,33 @@ def reject_posted_mutations(
             )
             if entry is not None and entry.state is EntryState.POSTED and not posting_now:
                 raise LedgerError("Posted journal lines are immutable")
+
+
+def reject_completed_run_content_mutations(
+    session: Session, flush_context: object = None, instances: object = None
+) -> None:
+    """Freeze run-owned evidence when its generation lifecycle is completed."""
+    from sable_harbor.provenance.models import GenerationRun
+
+    candidates = session.new.union(session.dirty).union(session.deleted)
+    for item in candidates:
+        if isinstance(item, GenerationPeriodClose):
+            if item in session.dirty or item in session.deleted:
+                raise LedgerError("Period-close evidence is immutable")
+            continue
+        if isinstance(item, GenerationRun):
+            continue
+        run_id = getattr(item, "generation_run_id", None)
+        if run_id is None and isinstance(item, JournalLine) and item.entry is not None:
+            run_id = item.entry.generation_run_id
+        if run_id is None:
+            continue
+        with session.no_autoflush:
+            run = session.get(GenerationRun, str(run_id))
+        if run is not None and run.status == "COMPLETED":
+            raise LedgerError(
+                f"Generation run {run.id!r} is completed; its owned evidence is immutable"
+            )
 
 
 def attach_generation_context(
@@ -222,41 +311,20 @@ def compare_trial_balances(
     left_generation_run_id: str,
     right_generation_run_id: str,
 ) -> list[tuple[str, Decimal, Decimal, Decimal, Decimal, Decimal, Decimal]]:
-    """Compare two scenario runs that share one compatible actual dataset.
+    """Compare two scenario runs that share one compatible synthetic calibration dataset.
 
     The explicit, distinct selectors prevent an accidental comparison against the
-    session default. Requiring the same profile and actual dataset makes the delta
+    session default. Requiring the same profile and synthetic calibration dataset makes the delta
     attributable to scenario-owned forecast facts rather than seed, profile, or
-    actual-layer differences.
+    shared-calibration-layer differences.
     """
-    from sable_harbor.provenance.models import GenerationRun
-    from sable_harbor.provenance.service import run_context
+    from sable_harbor.provenance.service import comparison_run_contexts
 
-    if left_generation_run_id == right_generation_run_id:
-        raise ValueError("Comparison requires two distinct generation runs")
-    left_context = run_context(session, left_generation_run_id)
-    right_context = run_context(session, right_generation_run_id)
-    left_run = session.get(GenerationRun, left_context.generation_run_id)
-    right_run = session.get(GenerationRun, right_context.generation_run_id)
-    if left_run is None or right_run is None:  # guarded by run_context
-        raise ValueError("Comparison generation run does not exist")
-    if (
-        left_run.profile != right_run.profile
-        or left_run.actual_dataset_id != right_run.actual_dataset_id
-        or left_run.actual_through != right_run.actual_through
-        or left_run.forecast_from != right_run.forecast_from
-        or left_run.schema_head != right_run.schema_head
-    ):
-        raise ValueError(
-            "Comparison runs must use the same profile, actual dataset, cutoff, "
-            "forecast start, and schema"
-        )
+    comparison_run_contexts(session, left_generation_run_id, right_generation_run_id)
 
     left = {
         code: (debit, credit)
-        for code, debit, credit in trial_balance(
-            session, book_id, left_generation_run_id
-        )
+        for code, debit, credit in trial_balance(session, book_id, left_generation_run_id)
     }
     right = {
         code: (debit, credit)
@@ -282,3 +350,4 @@ def compare_trial_balances(
 
 event.listen(Session, "before_flush", reject_posted_mutations)
 event.listen(Session, "before_flush", attach_generation_context)
+event.listen(Session, "before_flush", reject_completed_run_content_mutations)

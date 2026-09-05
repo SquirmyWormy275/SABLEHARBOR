@@ -15,7 +15,7 @@ def test_statements_balance_and_intercompany_eliminates() -> None:
     Base.metadata.create_all(engine)
     with Session(engine) as session:
         run = record_generation_run(
-            session, profile="standard", scenario_code="base", seed=20260831, git_commit="test"
+            session, profile="standard", scenario_code="base", seed=20260831, git_commit="a" * 40
         )
         generate_standard(session)
         complete_generation_run(session, run)
@@ -42,7 +42,7 @@ def test_monthly_statements_and_rollforwards_reconcile_to_gl() -> None:
     Base.metadata.create_all(engine)
     with Session(engine) as session:
         run = record_generation_run(
-            session, profile="standard", scenario_code="stress", seed=20260831, git_commit="test"
+            session, profile="standard", scenario_code="stress", seed=20260831, git_commit="a" * 40
         )
         generate_standard(session, scenario="stress")
         complete_generation_run(session, run)
@@ -67,12 +67,15 @@ def test_aging_and_debt_controls_reconcile_to_the_scoped_gl() -> None:
     Base.metadata.create_all(engine)
     with Session(engine) as session:
         run = record_generation_run(
-            session, profile="standard", scenario_code="base", seed=20260831, git_commit="test"
+            session, profile="standard", scenario_code="base", seed=20260831, git_commit="a" * 40
         )
         generate_standard(session)
         complete_generation_run(session, run)
         session.commit()
-        aging = {row["ledger"]: row for row in run_named_query(session, "ar_ap_aging", run.id)}
+        exposure = {
+            row["ledger"]: row
+            for row in run_named_query(session, "ar_ap_exposure_reconciliation", run.id)
+        }
         debt = run_named_query(session, "debt_covenant_calculation", run.id)
         monthly = monthly_statements(session, run.id)
         included_runs = (run.actual_generation_run_id, run.id)
@@ -90,22 +93,22 @@ def test_aging_and_debt_controls_reconcile_to_the_scoped_gl() -> None:
         )
 
     money = Decimal("0.0001")
-    assert Decimal(str(aging["AR"]["open_amount"])).quantize(money) == gl_ar
-    assert Decimal(str(aging["AP"]["open_amount"])).quantize(money) == gl_ap
-    assert all(row["open_amount"] == row["current_bucket"] for row in aging.values())
-    facilities = [
-        row for row in debt if row["facility_number"] != "ACQUISITION_OPENING_CONTROL"
-    ]
+    assert Decimal(str(exposure["AR"]["open_amount"])).quantize(money) == gl_ar
+    assert Decimal(str(exposure["AP"]["open_amount"])).quantize(money) == gl_ap
+    assert all(row["reconciliation_difference"] == 0 for row in exposure.values())
+    assert (
+        exposure["AR"]["not_due_amount"] + exposure["AR"]["past_due_amount"]
+        == exposure["AR"]["document_open_amount"]
+    )
+    assert exposure["AP"]["due_date_unavailable_amount"] == exposure["AP"]["document_open_amount"]
+    facilities = [row for row in debt if row["facility_number"] != "ACQUISITION_OPENING_CONTROL"]
     principal = sum((Decimal(str(row["principal_outstanding"])) for row in debt), Decimal(0))
     interest = sum((Decimal(str(row["accrued_interest"])) for row in debt), Decimal(0))
     assert sum(
         (Decimal(str(row["principal_outstanding"])) for row in facilities), Decimal(0)
     ) == Decimal("300000.0000")
-    assert sum(
-        (Decimal(str(row["accrued_interest"])) for row in facilities), Decimal(0)
-    ).quantize(money) == Decimal("2666.6668")
+    assert sum((Decimal(str(row["accrued_interest"])) for row in facilities), Decimal(0)).quantize(
+        money
+    ) == Decimal("2666.6668")
     assert (principal + interest).quantize(money) == monthly[-1]["debt"]
-    assert all(
-        row["covenant_status"] == "PROVISIONAL_NO_LOCKED_THRESHOLD" for row in facilities
-    )
-    assert all(row["unallocated_subledger_amount"] == 0 for row in aging.values())
+    assert all(row["covenant_status"] == "PROVISIONAL_NO_LOCKED_THRESHOLD" for row in facilities)
