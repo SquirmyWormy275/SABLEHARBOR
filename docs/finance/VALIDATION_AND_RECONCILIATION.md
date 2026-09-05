@@ -11,8 +11,8 @@ generated 2023–2026 values observed company results or audited records.
 Migration and test suites separately cover deterministic IDs, assumption schema, posting and
 completed-run immutability, reversals, period close, idempotence, shared synthetic pre-cutoff/
 forecast partitioning, scenario isolation, canon states, and causal subledger/GL flows. The current
-Alembic target is `0015`; final fresh SQLite and PostgreSQL evidence for this integration state must
-be recorded before acceptance.
+Alembic target is `0015`; final fresh and populated SQLite plus PostgreSQL 16.6/18.6 evidence passed
+before acceptance and is recorded in `PLATFORM_ACCEPTANCE_v0.1.md`.
 
 Domain equations tested include:
 
@@ -28,6 +28,7 @@ Domain equations tested include:
   with AR due-date buckets and AP due dates explicitly unavailable;
 - workbook database controls and release SHA-256 digests.
 
-The configured CI job performs PostgreSQL 16 migration, generation, and validation. Earlier local
-PostgreSQL execution was unavailable due Docker socket permissions; neither that limitation nor
-older green checkpoint results constitute final evidence for the current `0015` worktree.
+The configured CI job performs PostgreSQL 16 migration, generation, validation, packaging, and
+safety checks. An earlier local PostgreSQL attempt was unavailable due Docker socket permissions;
+final acceptance instead used certified PostgreSQL 16.6/18.6 runs plus successful final-head and
+post-merge `main` CI. The historical local limitation is not the current evidence state.

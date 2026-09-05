@@ -15,6 +15,13 @@
   financial controls, balanced statements, and deterministic same-snapshot artifact rebuilds.
 - Deferred only the explicitly recorded depth and unresolved-canon items in `BACKLOG.md` and
   `KNOWN_LIMITATIONS.md`; no open item is a v0.1 merge blocker.
+- Final candidate `8699eca44efc22622930f57b69bc92a71a476c4c` isolated SQLite test databases
+  from the workflow's later end-to-end database. Both push- and pull-request-triggered final-head
+  matrices passed: two PostgreSQL jobs and two full SQLite/static/artifact jobs.
+- PR #9 merged through regular two-parent commit
+  `b048e121b280e752ca5289e734d49208388e0f42`. Post-merge `main` workflow `33963418260`
+  passed both jobs, preserving the branch's source/calibration provenance and closing v0.1
+  acceptance.
 
 ## 2026-09-01
 

@@ -25,7 +25,7 @@ workbook and the finalized manifest. Named-query rows are emitted completely rat
 truncated. The test contract reopens generated files
 and checks the required sheet structure, formulas, links, metadata, hashes, and selected
 database-to-sheet semantics. Passing those technical controls does not make any workbook an audited
-statement or a system of record, and final current-tree workbook evidence must still be produced
-during acceptance.
+statement or a system of record. Final v0.1 workbook evidence passed and is recorded in
+`PLATFORM_ACCEPTANCE_v0.1.md`.
 
 Excel forbids `/` in sheet names and limits names to 31 characters. Required logical labels such as `ARU/BS&T` use `ARU-BS&T`; unusually long labels are shortened without changing their meaning. Generated `.xlsx` files are ignored by default and are release artifacts rather than systems of record.

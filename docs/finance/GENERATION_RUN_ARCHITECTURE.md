@@ -1,6 +1,6 @@
 # Generation-run and scenario architecture
 
-**State:** implemented Stage 1 correctness architecture; broader platform remains review blocked.
+**State:** Stage 1 v0.1 accepted and merged; broader production and audit depth remains deferred.
 
 **Epistemic classification:** every generated 2023–2026 number is synthetic scenario/calibration
 data. The current shared-layer profile is `synthetic_common`. Physical database columns
@@ -75,8 +75,8 @@ an immutable snapshot of the selected persisted database and pass the same contr
 
 Alembic is the schema installation authority. The current worktree requires migration head `0015`.
 Normal generation and read commands verify that head and never call `Base.metadata.create_all()`.
-This target statement does not substitute for the still-required final fresh SQLite and PostgreSQL
-migration evidence.
+Final fresh SQLite and PostgreSQL migration evidence for v0.1 passed and is recorded in
+`PLATFORM_ACCEPTANCE_v0.1.md`.
 
 Generate first, then pass the explicit run ID to every read command:
 
@@ -90,8 +90,9 @@ uv run shfin workbooks --generation-run-id "$RUN_ID"
 ```
 
 The public release implementation now builds a new empty database from a versioned table/column
-allowlist and scans generated artifacts recursively. Publication remains review blocked pending the
-current acceptance gates; these controls do not elevate synthetic calibration into company history.
+allowlist and scans generated artifacts recursively. The v0.1 publication gates passed; formal
+publication remains a separate immutable tag/release action. These controls do not elevate synthetic
+calibration into company history.
 
 Migration `0010` scopes generated operational natural keys to their owning run and namespaces
 shared-calibration primary keys by seed. A migration-backed SQLite test proves two standard/base
@@ -126,7 +127,7 @@ downgrade. Migration `0014` adds run-owned debt-repayment records. The current `
 run ownership for generated customer/vendor masters, same-run relationships, ledger equations and
 period/book/date constraints, completed-run content guards, and database-side completion checks.
 Those `0015` controls describe the current implementation target; final clean SQLite and PostgreSQL
-upgrade/downgrade/generation evidence for this integration worktree remains an acceptance gate.
+upgrade/downgrade/generation evidence passed for the accepted v0.1 integration state.
 
 Standard-profile monthly accounting controls and their revenue/cost driver values are partitioned
 at the persisted cutoff: synthetic periods ending on or before `synthetic_calibration_through` are
@@ -159,7 +160,7 @@ two seeds, duplicate natural keys, null ownership, cross-run generated links, in
 calibration attachment, completed-run immutability, and dated-fact cutoff ownership. A legacy
 evaluator-only profile and its environment switch have been removed; PR #9 exposes no active private
 evaluator-generation interface. Prior checkpoint evidence does not establish the current `0015`
-worktree. Stage 1 remains open pending final SQLite/PostgreSQL execution and broader comparison
-coverage beyond trial balances. Effective-dated master
+worktree. Final SQLite/PostgreSQL execution closed v0.1 Stage 1 acceptance; broader comparison
+coverage beyond trial balances remains deferred. Effective-dated master
 and commitment records (workers, contracts, and fixed assets) remain whole records rather than
 periodic facts and are therefore not split at the reporting cutoff.
