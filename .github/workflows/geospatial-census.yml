@@ -1,0 +1,64 @@
+name: Geospatial census
+on:
+  pull_request:
+    paths:
+      - 'geospatial/**'
+      - '.github/workflows/geospatial-census.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  census:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Inventory pinned public source tree
+        env:
+          CANON_REF: '8d20e51a7cf0068729e3296840ccb5ba1ac1d7bd'
+        run: |
+          python - <<'PY'
+          import csv, hashlib, io, json, os, pathlib, re, subprocess, tarfile
+          out = pathlib.Path('geospatial-census-artifact')
+          out.mkdir(exist_ok=True)
+          ref = subprocess.check_output(['git', 'rev-parse', os.environ['CANON_REF']], text=True).strip()
+          raw = subprocess.check_output(['git', 'archive', '--format=tar', ref])
+          (out / 'canon-source.tar').write_bytes(raw)
+          terms = re.compile(r'\b(location|site|facility|office|headquarters|HQ|mine|plant|yard|terminal|rail|railroad|warehouse|campus|lab|field|district|region|state|county|city|route|corridor|port|interchange|branch|acquisition|lease|property|parcel|Sacramento|Pittsburgh|Charleston|Belle|Kanawha|Hazelwood|Wamsutter|Bloodstone|Nevada|Wyoming|Deloraine)\b', re.I)
+          extensions = {'.md','.txt','.csv','.json','.geojson','.yaml','.yml','.sql','.py','.html','.svg','.xml'}
+          rows, hits = [], []
+          with tarfile.open(fileobj=io.BytesIO(raw)) as archive:
+              for member in archive:
+                  if not member.isfile():
+                      continue
+                  data = archive.extractfile(member).read()
+                  path = pathlib.PurePosixPath(member.name)
+                  is_text = path.suffix.lower() in extensions
+                  try:
+                      text = data.decode('utf-8') if is_text else None
+                  except UnicodeDecodeError:
+                      text = None
+                  status = 'TEXT_SCANNED' if text is not None else 'BINARY_REGISTERED_NOT_REVIEWED'
+                  rows.append({'path':member.name,'bytes':len(data),'sha256':hashlib.sha256(data).hexdigest(),'source_commit':ref,'coverage':status})
+                  if text is not None:
+                      for number, line in enumerate(text.splitlines(),1):
+                          matches = sorted(set(x.group().lower() for x in terms.finditer(line)))
+                          if matches:
+                              hits.append({'source_path':member.name,'line':number,'source_commit':ref,'matched_terms':';'.join(matches),'exact_source_wording':line,'review_status':'UNREVIEWED_CANDIDATE'})
+          for name, records in [('SOURCE_COVERAGE.csv',rows),('GEOGRAPHIC_CANDIDATE_OCCURRENCES.csv',hits)]:
+              with (out/name).open('w',newline='',encoding='utf-8') as handle:
+                  writer=csv.DictWriter(handle,fieldnames=list(records[0]) if records else ['status'])
+                  writer.writeheader(); writer.writerows(records)
+          manifest={'source_commit':ref,'tracked_files':len(rows),'text_files_scanned':sum(r['coverage']=='TEXT_SCANNED' for r in rows),'candidate_occurrences':len(hits),'semantic_census_complete':False,'image_review_complete':False,'warning':'Keyword occurrences are candidates, not canonical assets. Human adjudication and binary review remain required.','archive_sha256':hashlib.sha256(raw).hexdigest()}
+          (out/'CENSUS_MANIFEST.json').write_text(json.dumps(manifest,indent=2)+'\n')
+          print(json.dumps(manifest,indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sable-harbor-geospatial-census
+          path: geospatial-census-artifact/
+          retention-days: 7
+          if-no-files-found: error

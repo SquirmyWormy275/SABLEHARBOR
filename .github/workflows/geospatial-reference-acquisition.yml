@@ -1,0 +1,66 @@
+name: Geospatial reference acquisition
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/geospatial-reference-acquisition.yml'
+permissions:
+  contents: read
+jobs:
+  acquire:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          persist-credentials: false
+      - name: Acquire bounded public reference inputs
+        shell: bash
+        run: |
+          mkdir -p /tmp/geo-reference
+          git archive --format=tar HEAD > /tmp/geo-reference/branch-source.tar
+          python - <<'PY'
+          import concurrent.futures, datetime, hashlib, json, pathlib, urllib.parse, urllib.request
+          out=pathlib.Path('/tmp/geo-reference')
+          bbox='-108.65,41.60,-107.75,42.35'
+          dem='https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer'
+          rail='https://services.arcgis.com/xOi1kZaI0eWDREZv/arcgis/rest/services/NTAD_North_American_Rail_Network_Lines/FeatureServer/0'
+          county='https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/State_County/MapServer/1'
+          def url(base,params):return base+'?'+urllib.parse.urlencode(params)
+          items=[
+            ('usgs_3dep_metadata.json',url(dem,{'f':'pjson'}),'USGS 3DEP; U.S. federal public-domain data'),
+            ('wyoming_screening_dem.tif',url(dem+'/exportImage',{'bbox':bbox,'bboxSR':4326,'imageSR':32612,'size':'1000,1100','format':'tiff','pixelType':'F32','interpolation':'RSP_BilinearInterpolation','renderingRule':json.dumps({'rasterFunction':'None'}),'f':'image'}),'USGS 3DEP; resampled screening DEM; not survey data'),
+            ('fra_narn_metadata.json',url(rail,{'f':'pjson'}),'USDOT FRA/BTS NTAD; unrestricted U.S. federal public use'),
+            ('wamsutter_host_rail.geojson',url(rail+'/query',{'where':'1=1','geometry':bbox,'geometryType':'esriGeometryEnvelope','inSR':4326,'spatialRel':'esriSpatialRelIntersects','outFields':'*','outSR':4326,'returnGeometry':'true','f':'geojson','resultRecordCount':2000}),'USDOT FRA/BTS NTAD; unrestricted U.S. federal public use'),
+            ('census_county_metadata.json',url(county,{'f':'pjson'}),'U.S. Census Bureau TIGERweb; federal reference boundaries, not land tenure'),
+            ('wyoming_counties.geojson',url(county+'/query',{'where':"STATE='56'",'outFields':'NAME,GEOID,STATE,COUNTY','outSR':4326,'returnGeometry':'true','maxAllowableOffset':0.0002,'geometryPrecision':6,'f':'geojson'}),'U.S. Census Bureau TIGERweb; generalized federal reference boundaries')
+          ]
+          def acquire(item):
+            name,address,license=item
+            record={'file':name,'url':address,'license_note':license,'retrieved_at':datetime.datetime.now(datetime.timezone.utc).isoformat()}
+            try:
+              request=urllib.request.Request(address,headers={'User-Agent':'SableHarbor-Geospatial-Research/0.2'})
+              with urllib.request.urlopen(request,timeout=150) as response: data=response.read(); record['content_type']=response.headers.get('Content-Type')
+              if name.endswith(('.json','.geojson')):
+                parsed=json.loads(data)
+                if 'error' in parsed:raise ValueError(str(parsed['error']))
+                if name.endswith('.geojson'):
+                  assert parsed.get('type')=='FeatureCollection', 'not GeoJSON'
+                  assert not parsed.get('exceededTransferLimit'), 'pagination required'
+                  record['feature_count']=len(parsed['features'])
+                  assert record['feature_count']>0, 'no features'
+              else:
+                assert data[:2] in (b'II',b'MM'), 'not a TIFF response'
+              (out/name).write_bytes(data)
+              record.update(status='ACQUIRED',bytes=len(data),sha256=hashlib.sha256(data).hexdigest())
+            except Exception as error:record.update(status='FAILED',error=str(error))
+            return record
+          with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool: records=list(pool.map(acquire,items))
+          (out/'SOURCE_ACQUISITION.json').write_text(json.dumps(records,indent=2)+'\n')
+          print(json.dumps(records,indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sable-harbor-geospatial-approved-addendum-references
+          path: /tmp/geo-reference
+          retention-days: 14

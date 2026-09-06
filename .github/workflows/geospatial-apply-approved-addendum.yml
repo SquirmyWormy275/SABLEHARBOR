@@ -1,0 +1,81 @@
+name: Apply approved geographic addendum
+on:
+  pull_request:
+    paths:
+      - 'geospatial/scripts/apply_repository_addendum.py'
+      - 'geospatial/data/GOVERNING_GEOGRAPHIC_ADDENDUM_2026-09-05.md'
+      - '.github/workflows/geospatial-apply-approved-addendum.yml'
+permissions:
+  contents: write
+jobs:
+  apply:
+    if: github.event.pull_request.head.repo.full_name == github.repository && github.event.pull_request.head.ref == 'feature/master-geospatial-package'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Restore exact source bytes after text transport
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from hashlib import sha256
+          p=Path('geospatial/data/GOVERNING_GEOGRAPHIC_ADDENDUM_2026-09-05.md')
+          b=p.read_bytes()
+          expected='5ec4448308e0e19fdf11dc5307b24380b19e6ab51482e11bd41883aff703f150'
+          if sha256(b).hexdigest()=='d5b1574be9ae6c1205166bdcebc8174e44c7ff1d9143c237e39efdbed8647e66':
+              assert b.endswith(b'\n') and sha256(b[:-1]).hexdigest()==expected
+              p.write_bytes(b[:-1])
+          assert sha256(p.read_bytes()).hexdigest()==expected
+          PY
+      - name: Apply source corrections and preserve original revisions
+        run: |
+          python geospatial/scripts/apply_repository_addendum.py
+          python geospatial/scripts/build_search_areas.py
+          python red_wash/tools/build_red_wash_package.py
+          python red_wash/tools/validate_red_wash_record.py
+          python - <<'PY'
+          import json,pathlib
+          r=pathlib.Path('.')
+          n=json.loads((r/'red_wash/source/core_operating_data.json').read_text())
+          o=json.loads((r/'geospatial/history/pre-addendum-source/red_wash/source/core_operating_data.json').read_text())
+          assert all(v==n[k] for k,v in o.items() if k!='location')
+          assert n['location']['county']=='Sweetwater County'
+          assert [n['location']['longitude'],n['location']['latitude']]==[-108.18,42.22]
+          assert n['location']['elevation_ft'] is None
+          print('All non-location operating inputs preserved; approved anchor applied.')
+          PY
+      - name: Regression checks
+        run: |
+          python -m pip install -e '.[dev]' >/dev/null
+          python -m pytest -q red_wash/tests tests/unit/test_brand_visual_asset_guard.py
+          git diff --check
+      - name: Commit corrected sources only to this branch
+        env:
+          EXPECTED_HEAD: ${{ github.event.pull_request.head.sha }}
+        run: |
+          set -euo pipefail
+          branch='feature/master-geospatial-package'
+          remote=$(git ls-remote origin "refs/heads/$branch" | cut -f1)
+          test "$remote" = "$EXPECTED_HEAD"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- geospatial/history geospatial/data/GOVERNING_GEOGRAPHIC_ADDENDUM_2026-09-05.md geospatial/data/constraints.json geospatial/geojson geospatial/registers/REPOSITORY_ADDENDUM_CORRECTIONS.json red_wash/source/core_operating_data.json red_wash/RED_WASH_CASEBOOK.md red_wash/docs/02_GEOLOGICAL_TECHNICAL_REPORT.md red_wash/TRANSACTION_OPERATING_RECORD.md red_wash/README.md assets/brand/red_wash_visual_manifest.json assets/brand/README.md assets/brand/maps/README.md
+          if ! git diff --cached --quiet; then
+            git commit -m 'Apply user-approved Red Wash anchor and Taylor rename; preserve superseded source bytes'
+            git push origin "HEAD:refs/heads/$branch"
+          fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: applied-geographic-addendum-source-checks
+          path: |
+            geospatial/geojson/
+            geospatial/registers/REPOSITORY_ADDENDUM_CORRECTIONS.json
+            red_wash/dist/
+          if-no-files-found: error
+          retention-days: 30

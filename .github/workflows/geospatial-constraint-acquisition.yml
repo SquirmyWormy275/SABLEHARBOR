@@ -1,0 +1,57 @@
+name: Geospatial constraint acquisition
+on:
+  pull_request:
+    paths: ['.github/workflows/geospatial-constraint-acquisition.yml']
+permissions:
+  contents: read
+jobs:
+  acquire:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Download bounded federal screening layers
+        shell: bash
+        run: |
+          python - <<'PY'
+          import concurrent.futures,datetime,hashlib,json,pathlib,urllib.parse,urllib.request
+          out=pathlib.Path('/tmp/geo-constraints');out.mkdir()
+          bbox='-108.38,41.62,-107.82,42.30'
+          services=[
+            ('interstate','https://cartowfs.nationalmap.gov/arcgis/rest/services/transportation/MapServer/3','USGS/TIGER federal public-domain transportation reference'),
+            ('local_roads','https://cartowfs.nationalmap.gov/arcgis/rest/services/transportation/MapServer/7','USGS/TIGER federal public-domain transportation reference'),
+            ('drainage','https://hydro.nationalmap.gov/arcgis/rest/services/nhd/MapServer/6','USGS NHD: open non-proprietary; no site-specific regulatory determination'),
+            ('surface_management','https://gis.blm.gov/arcgis/rest/services/lands/BLM_Natl_SMA_Cached_without_PriUnk/MapServer/1','BLM federal administrative-jurisdiction reference; NOT ownership/title or permission')]
+          def get(base,p):
+            url=base+'?'+urllib.parse.urlencode(p)
+            req=urllib.request.Request(url,headers={'User-Agent':'SableHarbor-Geospatial-Research/0.2'})
+            with urllib.request.urlopen(req,timeout=150) as r:d=json.load(r)
+            if 'error' in d:raise ValueError(str(d['error']))
+            return url,d
+          def task(item):
+            name,base,license=item
+            rec={'name':name,'service':base,'license_note':license,'retrieved_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'bbox':bbox,'requests':[]}
+            try:
+              u,meta=get(base,{'f':'pjson'});(out/(name+'_metadata.json')).write_text(json.dumps(meta,indent=2)+'\n')
+              u,ids=get(base+'/query',{'where':'1=1','geometry':bbox,'geometryType':'esriGeometryEnvelope','inSR':4326,'spatialRel':'esriSpatialRelIntersects','returnIdsOnly':'true','f':'json'})
+              rec['requests'].append(u);order=sorted(ids.get('objectIds') or []);assert len(order)<=15000,'bounded request too large'
+              features=[]
+              for i in range(0,len(order),300):
+                batch=order[i:i+300]
+                u,d=get(base+'/query',{'objectIds':','.join(map(str,batch)),'outFields':'*','outSR':4326,'returnGeometry':'true','geometryPrecision':6,'maxAllowableOffset':0.00005,'f':'geojson'})
+                rec['requests'].append(u);assert d.get('type')=='FeatureCollection' and not d.get('exceededTransferLimit'), 'invalid or truncated response'
+                assert len(d['features'])==len(batch),'object-ID count mismatch'
+                features.extend(d['features'])
+              data=(json.dumps({'type':'FeatureCollection','features':features},separators=(',',':'))+'\n').encode()
+              (out/(name+'.geojson')).write_bytes(data)
+              rec.update(status='ACQUIRED',feature_count=len(features),bytes=len(data),sha256=hashlib.sha256(data).hexdigest(),object_ids=order)
+            except Exception as e:rec.update(status='FAILED',error=str(e))
+            return rec
+          with concurrent.futures.ThreadPoolExecutor(max_workers=4) as ex:records=list(ex.map(task,services))
+          (out/'CONSTRAINT_ACQUISITION.json').write_text(json.dumps(records,indent=2)+'\n')
+          print(json.dumps([{k:v for k,v in r.items() if k not in {'requests','object_ids'}} for r in records],indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sable-harbor-geospatial-addendum-constraints
+          path: /tmp/geo-constraints
+          retention-days: 14

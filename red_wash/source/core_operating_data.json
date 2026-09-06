@@ -53,11 +53,11 @@
     }
   ],
   "location": {
-    "county": "Carbon County",
+    "county": "Sweetwater County",
     "state": "Wyoming",
-    "latitude": 42.3127,
-    "longitude": -106.9213,
-    "elevation_ft": 6420,
+    "latitude": 42.22,
+    "longitude": -108.18,
+    "elevation_ft": null,
     "property_acres": 7480,
     "disturbance_acres": 620
   },
@@ -123,10 +123,46 @@
     "ending_finished_inventory_lb": 172400
   },
   "contract_book_2026": [
-    {"contract_id": "UCA-2019-04", "buyer": "Prairie States Electric Cooperative", "pounds": 150000, "price_usd_lb": 61, "structure": "base-escalated utility term", "origin": "inherited", "delivery_point": "licensed conversion facility, Illinois", "assignability": "consent obtained at closing"},
-    {"contract_id": "UCA-2024-11", "buyer": "Great Basin Nuclear Supply Pool", "pounds": 150000, "price_usd_lb": 72, "structure": "market-related utility term collar", "origin": "inherited", "delivery_point": "licensed conversion facility, Illinois", "assignability": "change-of-control notice satisfied"},
-    {"contract_id": "UCA-2025-03", "buyer": "Heartland Atomic Power LLC", "pounds": 125000, "price_usd_lb": 80, "structure": "fixed-price term", "origin": "inherited and renegotiated", "delivery_point": "licensed conversion facility, Illinois", "assignability": "consent obtained at closing"},
-    {"contract_id": "SPOT-2026-01", "buyer": "Continental Nuclear Trading LLC", "pounds": 75000, "price_usd_lb": 87, "structure": "discretionary placement", "origin": "Pale Sun", "delivery_point": "licensed conversion facility, Illinois", "assignability": "not applicable"}
+    {
+      "contract_id": "UCA-2019-04",
+      "buyer": "Prairie States Electric Cooperative",
+      "pounds": 150000,
+      "price_usd_lb": 61,
+      "structure": "base-escalated utility term",
+      "origin": "inherited",
+      "delivery_point": "licensed conversion facility, Illinois",
+      "assignability": "consent obtained at closing"
+    },
+    {
+      "contract_id": "UCA-2024-11",
+      "buyer": "Great Basin Nuclear Supply Pool",
+      "pounds": 150000,
+      "price_usd_lb": 72,
+      "structure": "market-related utility term collar",
+      "origin": "inherited",
+      "delivery_point": "licensed conversion facility, Illinois",
+      "assignability": "change-of-control notice satisfied"
+    },
+    {
+      "contract_id": "UCA-2025-03",
+      "buyer": "Heartland Atomic Power LLC",
+      "pounds": 125000,
+      "price_usd_lb": 80,
+      "structure": "fixed-price term",
+      "origin": "inherited and renegotiated",
+      "delivery_point": "licensed conversion facility, Illinois",
+      "assignability": "consent obtained at closing"
+    },
+    {
+      "contract_id": "SPOT-2026-01",
+      "buyer": "Continental Nuclear Trading LLC",
+      "pounds": 75000,
+      "price_usd_lb": 87,
+      "structure": "discretionary placement",
+      "origin": "Pale Sun",
+      "delivery_point": "licensed conversion facility, Illinois",
+      "assignability": "not applicable"
+    }
   ],
   "finance_2026": {
     "weighted_realized_price_usd_lb": 72.95,
@@ -167,80 +203,564 @@
     "inflation_pct": 2.5,
     "discount_pct": 6.5,
     "cash_flow_years": "2026-2039",
-    "scopes": ["progressive reclamation", "underground sealing and demobilization", "mill decontamination and demolition", "tailings final cover", "water management", "monitoring", "long-term surveillance transfer"]
+    "scopes": [
+      "progressive reclamation",
+      "underground sealing and demobilization",
+      "mill decontamination and demolition",
+      "tailings final cover",
+      "water management",
+      "monitoring",
+      "long-term surveillance transfer"
+    ]
   },
   "permit_register": [
-    {"permit_id": "RW-PER-001", "permit": "BLM Plan of Operations", "number": "DOI-BLM-WY-C050-RW-2011-01", "authority": "BLM", "legal_basis": "43 CFR 3809", "status": "ACTIVE_SYNTHETIC"},
-    {"permit_id": "RW-PER-002", "permit": "Environmental Assessment / FONSI", "number": "DOI-BLM-WY-C050-2011-0042-EA", "authority": "BLM", "legal_basis": "NEPA", "status": "ACTIVE_SYNTHETIC"},
-    {"permit_id": "RW-PER-003", "permit": "Non-coal mine permit", "number": "RW-PT-0617", "authority": "WDEQ Land Quality", "legal_basis": "Wyoming Environmental Quality Act", "status": "ACTIVE_SYNTHETIC"},
-    {"permit_id": "RW-PER-004", "permit": "Source material license", "number": "WYSML-094", "authority": "WDEQ Uranium Recovery", "legal_basis": "10 CFR Part 40 / Agreement State", "status": "ACTIVE_SYNTHETIC"},
-    {"permit_id": "RW-PER-005", "permit": "Air quality permit", "number": "AP-7-1294", "authority": "WDEQ Air Quality", "legal_basis": "state air rules", "status": "ACTIVE_SYNTHETIC"},
-    {"permit_id": "RW-PER-006", "permit": "Industrial stormwater", "number": "WYR00-RW17", "authority": "WDEQ Water Quality", "legal_basis": "WYPDES", "status": "ACTIVE_SYNTHETIC"},
-    {"permit_id": "RW-PER-007", "permit": "Groundwater protection", "number": "GWP-19-047", "authority": "WDEQ Water Quality", "legal_basis": "state groundwater rules", "status": "ACTIVE_SYNTHETIC"},
-    {"permit_id": "RW-PER-008", "permit": "Tailings authorization", "number": "TMC-1A", "authority": "WDEQ / source license", "legal_basis": "10 CFR 40 Appendix A / 40 CFR 192", "status": "ACTIVE_SYNTHETIC"},
-    {"permit_id": "RW-PER-009", "permit": "MSHA mine ID", "number": "48-01999", "authority": "MSHA", "legal_basis": "30 CFR Parts 50, 57, and 62", "status": "ACTIVE_SYNTHETIC"},
-    {"permit_id": "RW-PER-010", "permit": "Explosives user permit", "number": "WY-RW-0419", "authority": "ATF", "legal_basis": "27 CFR Part 555", "status": "ACTIVE_SYNTHETIC"},
-    {"permit_id": "RW-PER-011", "permit": "Hazmat registration", "number": "HMR-RW-2026", "authority": "PHMSA", "legal_basis": "49 CFR Parts 171-180", "status": "ACTIVE_SYNTHETIC"},
-    {"permit_id": "RW-PER-012", "permit": "Water appropriation permits", "number": "P-119312–P-119318", "authority": "Wyoming State Engineer", "legal_basis": "Wyoming water law", "status": "ACTIVE_SYNTHETIC"},
-    {"permit_id": "RW-PER-013", "permit": "Reclamation performance bond", "number": "BOND-RW-2026", "authority": "WDEQ Land Quality", "legal_basis": "annual surety review", "status": "ACTIVE_SYNTHETIC"},
-    {"permit_id": "RW-PER-014", "permit": "Radon NESHAP program", "number": "RW-NESHAP-W", "authority": "EPA Region 8 / WDEQ", "legal_basis": "40 CFR Part 61 Subpart W", "status": "ACTIVE_SYNTHETIC"}
+    {
+      "permit_id": "RW-PER-001",
+      "permit": "BLM Plan of Operations",
+      "number": "DOI-BLM-WY-C050-RW-2011-01",
+      "authority": "BLM",
+      "legal_basis": "43 CFR 3809",
+      "status": "ACTIVE_SYNTHETIC"
+    },
+    {
+      "permit_id": "RW-PER-002",
+      "permit": "Environmental Assessment / FONSI",
+      "number": "DOI-BLM-WY-C050-2011-0042-EA",
+      "authority": "BLM",
+      "legal_basis": "NEPA",
+      "status": "ACTIVE_SYNTHETIC"
+    },
+    {
+      "permit_id": "RW-PER-003",
+      "permit": "Non-coal mine permit",
+      "number": "RW-PT-0617",
+      "authority": "WDEQ Land Quality",
+      "legal_basis": "Wyoming Environmental Quality Act",
+      "status": "ACTIVE_SYNTHETIC"
+    },
+    {
+      "permit_id": "RW-PER-004",
+      "permit": "Source material license",
+      "number": "WYSML-094",
+      "authority": "WDEQ Uranium Recovery",
+      "legal_basis": "10 CFR Part 40 / Agreement State",
+      "status": "ACTIVE_SYNTHETIC"
+    },
+    {
+      "permit_id": "RW-PER-005",
+      "permit": "Air quality permit",
+      "number": "AP-7-1294",
+      "authority": "WDEQ Air Quality",
+      "legal_basis": "state air rules",
+      "status": "ACTIVE_SYNTHETIC"
+    },
+    {
+      "permit_id": "RW-PER-006",
+      "permit": "Industrial stormwater",
+      "number": "WYR00-RW17",
+      "authority": "WDEQ Water Quality",
+      "legal_basis": "WYPDES",
+      "status": "ACTIVE_SYNTHETIC"
+    },
+    {
+      "permit_id": "RW-PER-007",
+      "permit": "Groundwater protection",
+      "number": "GWP-19-047",
+      "authority": "WDEQ Water Quality",
+      "legal_basis": "state groundwater rules",
+      "status": "ACTIVE_SYNTHETIC"
+    },
+    {
+      "permit_id": "RW-PER-008",
+      "permit": "Tailings authorization",
+      "number": "TMC-1A",
+      "authority": "WDEQ / source license",
+      "legal_basis": "10 CFR 40 Appendix A / 40 CFR 192",
+      "status": "ACTIVE_SYNTHETIC"
+    },
+    {
+      "permit_id": "RW-PER-009",
+      "permit": "MSHA mine ID",
+      "number": "48-01999",
+      "authority": "MSHA",
+      "legal_basis": "30 CFR Parts 50, 57, and 62",
+      "status": "ACTIVE_SYNTHETIC"
+    },
+    {
+      "permit_id": "RW-PER-010",
+      "permit": "Explosives user permit",
+      "number": "WY-RW-0419",
+      "authority": "ATF",
+      "legal_basis": "27 CFR Part 555",
+      "status": "ACTIVE_SYNTHETIC"
+    },
+    {
+      "permit_id": "RW-PER-011",
+      "permit": "Hazmat registration",
+      "number": "HMR-RW-2026",
+      "authority": "PHMSA",
+      "legal_basis": "49 CFR Parts 171-180",
+      "status": "ACTIVE_SYNTHETIC"
+    },
+    {
+      "permit_id": "RW-PER-012",
+      "permit": "Water appropriation permits",
+      "number": "P-119312\u2013P-119318",
+      "authority": "Wyoming State Engineer",
+      "legal_basis": "Wyoming water law",
+      "status": "ACTIVE_SYNTHETIC"
+    },
+    {
+      "permit_id": "RW-PER-013",
+      "permit": "Reclamation performance bond",
+      "number": "BOND-RW-2026",
+      "authority": "WDEQ Land Quality",
+      "legal_basis": "annual surety review",
+      "status": "ACTIVE_SYNTHETIC"
+    },
+    {
+      "permit_id": "RW-PER-014",
+      "permit": "Radon NESHAP program",
+      "number": "RW-NESHAP-W",
+      "authority": "EPA Region 8 / WDEQ",
+      "legal_basis": "40 CFR Part 61 Subpart W",
+      "status": "ACTIVE_SYNTHETIC"
+    }
   ],
   "diligence_findings": [
-    {"id": "DD-001", "domain": "Resource model", "severity": "HIGH", "finding": "Seller smoothed East 12 lens boundaries and overstated mineable continuity.", "disposition": "Exclude unsupported stope shapes."},
-    {"id": "DD-002", "domain": "Grade control", "severity": "MEDIUM", "finding": "Historic dilution used inconsistent ore-control cutoffs.", "disposition": "Reconstruct cutoff history."},
-    {"id": "DD-003", "domain": "Mill recovery", "severity": "HIGH", "finding": "Carbonate-rich feed creates nonlinear acid and recovery response.", "disposition": "Add blending constraint."},
-    {"id": "DD-004", "domain": "Tailings", "severity": "HIGH", "finding": "Cell 1 underdrain and MW-17 trends were disclosed separately.", "disposition": "Integrate corrective action and escrow."},
-    {"id": "DD-005", "domain": "ARO", "severity": "HIGH", "finding": "Seller omitted monitoring and mill demolition scopes.", "disposition": "Use $25M current cost and $16M ARO."},
-    {"id": "DD-006", "domain": "Maintenance", "severity": "HIGH", "finding": "Backlog exceeds seller schedule by approximately $5.6M.", "disposition": "Fund $11M stabilization."},
-    {"id": "DD-007", "domain": "Ventilation", "severity": "HIGH", "finding": "Main exhaust fan and control redundancy inadequate.", "disposition": "Install redundant drive and controls."},
-    {"id": "DD-008", "domain": "Electrical", "severity": "MEDIUM", "finding": "Motor-control-center obsolescence creates restart risk.", "disposition": "Replace priority buckets."},
-    {"id": "DD-009", "domain": "Inventory", "severity": "HIGH", "finding": "Drum ledger has moisture and assay timing inconsistencies.", "disposition": "Reweigh, resample, and reseal."},
-    {"id": "DD-010", "domain": "Contracts", "severity": "MEDIUM", "finding": "One escalation workbook used the wrong reference month.", "disposition": "Recalculate and acknowledge."},
-    {"id": "DD-011", "domain": "Contracts", "severity": "HIGH", "finding": "Change-of-control consents incomplete.", "disposition": "Make consent a closing condition."},
-    {"id": "DD-012", "domain": "Royalty", "severity": "MEDIUM", "finding": "East 12 has a production-threshold step-up.", "disposition": "Reflect in plan and valuation."},
-    {"id": "DD-013", "domain": "Title", "severity": "HIGH", "finding": "Two easements recorded under predecessor names.", "disposition": "Cure and insure."},
-    {"id": "DD-014", "domain": "Water", "severity": "MEDIUM", "finding": "One well-purpose record mismatched mill use.", "disposition": "Amend before expansion."},
-    {"id": "DD-015", "domain": "Safety", "severity": "HIGH", "finding": "Ground-control plan omitted combined-condition stop authority.", "disposition": "Formalize Cole's disposition authority."},
-    {"id": "DD-016", "domain": "Radiation", "severity": "MEDIUM", "finding": "Dosimetry was stored in a retired vendor format.", "disposition": "Migrate while preserving originals."},
-    {"id": "DD-017", "domain": "Insurance", "severity": "MEDIUM", "finding": "Pollution coverage excludes known-condition costs.", "disposition": "Use escrow and parent coverage."},
-    {"id": "DD-018", "domain": "People", "severity": "HIGH", "finding": "Cole and five veterans hold undocumented continuity.", "disposition": "Retention and succession."},
-    {"id": "DD-019", "domain": "Quality of earnings", "severity": "HIGH", "finding": "2024 EBITDA benefits from inventory liquidation and capitalized repairs.", "disposition": "Normalize $7.1M to $2.4M."},
-    {"id": "DD-020", "domain": "Tax", "severity": "MEDIUM", "finding": "Ad valorem accruals lag final assessment.", "disposition": "Catch-up and indemnity."},
-    {"id": "DD-021", "domain": "Cyber / OT", "severity": "MEDIUM", "finding": "Mill historian shared an unmanaged trust path.", "disposition": "Segment before remote integration."},
-    {"id": "DD-022", "domain": "Data room", "severity": "MEDIUM", "finding": "Superseded resource models were not clearly marked.", "disposition": "Create an authoritative version register."},
-    {"id": "DD-023", "domain": "Reagents", "severity": "LOW", "finding": "Acid-supply minimum take is unfavorable.", "disposition": "Renegotiate post-close."},
-    {"id": "DD-024", "domain": "Logistics", "severity": "MEDIUM", "finding": "Custody timestamps lacked authority semantics.", "disposition": "Preserve source timestamps."},
-    {"id": "DD-025", "domain": "Community", "severity": "MEDIUM", "finding": "Restart schedule underweighted substantive consultation.", "disposition": "Retain schedule contingency."}
+    {
+      "id": "DD-001",
+      "domain": "Resource model",
+      "severity": "HIGH",
+      "finding": "Seller smoothed East 12 lens boundaries and overstated mineable continuity.",
+      "disposition": "Exclude unsupported stope shapes."
+    },
+    {
+      "id": "DD-002",
+      "domain": "Grade control",
+      "severity": "MEDIUM",
+      "finding": "Historic dilution used inconsistent ore-control cutoffs.",
+      "disposition": "Reconstruct cutoff history."
+    },
+    {
+      "id": "DD-003",
+      "domain": "Mill recovery",
+      "severity": "HIGH",
+      "finding": "Carbonate-rich feed creates nonlinear acid and recovery response.",
+      "disposition": "Add blending constraint."
+    },
+    {
+      "id": "DD-004",
+      "domain": "Tailings",
+      "severity": "HIGH",
+      "finding": "Cell 1 underdrain and MW-17 trends were disclosed separately.",
+      "disposition": "Integrate corrective action and escrow."
+    },
+    {
+      "id": "DD-005",
+      "domain": "ARO",
+      "severity": "HIGH",
+      "finding": "Seller omitted monitoring and mill demolition scopes.",
+      "disposition": "Use $25M current cost and $16M ARO."
+    },
+    {
+      "id": "DD-006",
+      "domain": "Maintenance",
+      "severity": "HIGH",
+      "finding": "Backlog exceeds seller schedule by approximately $5.6M.",
+      "disposition": "Fund $11M stabilization."
+    },
+    {
+      "id": "DD-007",
+      "domain": "Ventilation",
+      "severity": "HIGH",
+      "finding": "Main exhaust fan and control redundancy inadequate.",
+      "disposition": "Install redundant drive and controls."
+    },
+    {
+      "id": "DD-008",
+      "domain": "Electrical",
+      "severity": "MEDIUM",
+      "finding": "Motor-control-center obsolescence creates restart risk.",
+      "disposition": "Replace priority buckets."
+    },
+    {
+      "id": "DD-009",
+      "domain": "Inventory",
+      "severity": "HIGH",
+      "finding": "Drum ledger has moisture and assay timing inconsistencies.",
+      "disposition": "Reweigh, resample, and reseal."
+    },
+    {
+      "id": "DD-010",
+      "domain": "Contracts",
+      "severity": "MEDIUM",
+      "finding": "One escalation workbook used the wrong reference month.",
+      "disposition": "Recalculate and acknowledge."
+    },
+    {
+      "id": "DD-011",
+      "domain": "Contracts",
+      "severity": "HIGH",
+      "finding": "Change-of-control consents incomplete.",
+      "disposition": "Make consent a closing condition."
+    },
+    {
+      "id": "DD-012",
+      "domain": "Royalty",
+      "severity": "MEDIUM",
+      "finding": "East 12 has a production-threshold step-up.",
+      "disposition": "Reflect in plan and valuation."
+    },
+    {
+      "id": "DD-013",
+      "domain": "Title",
+      "severity": "HIGH",
+      "finding": "Two easements recorded under predecessor names.",
+      "disposition": "Cure and insure."
+    },
+    {
+      "id": "DD-014",
+      "domain": "Water",
+      "severity": "MEDIUM",
+      "finding": "One well-purpose record mismatched mill use.",
+      "disposition": "Amend before expansion."
+    },
+    {
+      "id": "DD-015",
+      "domain": "Safety",
+      "severity": "HIGH",
+      "finding": "Ground-control plan omitted combined-condition stop authority.",
+      "disposition": "Formalize Cole's disposition authority."
+    },
+    {
+      "id": "DD-016",
+      "domain": "Radiation",
+      "severity": "MEDIUM",
+      "finding": "Dosimetry was stored in a retired vendor format.",
+      "disposition": "Migrate while preserving originals."
+    },
+    {
+      "id": "DD-017",
+      "domain": "Insurance",
+      "severity": "MEDIUM",
+      "finding": "Pollution coverage excludes known-condition costs.",
+      "disposition": "Use escrow and parent coverage."
+    },
+    {
+      "id": "DD-018",
+      "domain": "People",
+      "severity": "HIGH",
+      "finding": "Cole and five veterans hold undocumented continuity.",
+      "disposition": "Retention and succession."
+    },
+    {
+      "id": "DD-019",
+      "domain": "Quality of earnings",
+      "severity": "HIGH",
+      "finding": "2024 EBITDA benefits from inventory liquidation and capitalized repairs.",
+      "disposition": "Normalize $7.1M to $2.4M."
+    },
+    {
+      "id": "DD-020",
+      "domain": "Tax",
+      "severity": "MEDIUM",
+      "finding": "Ad valorem accruals lag final assessment.",
+      "disposition": "Catch-up and indemnity."
+    },
+    {
+      "id": "DD-021",
+      "domain": "Cyber / OT",
+      "severity": "MEDIUM",
+      "finding": "Mill historian shared an unmanaged trust path.",
+      "disposition": "Segment before remote integration."
+    },
+    {
+      "id": "DD-022",
+      "domain": "Data room",
+      "severity": "MEDIUM",
+      "finding": "Superseded resource models were not clearly marked.",
+      "disposition": "Create an authoritative version register."
+    },
+    {
+      "id": "DD-023",
+      "domain": "Reagents",
+      "severity": "LOW",
+      "finding": "Acid-supply minimum take is unfavorable.",
+      "disposition": "Renegotiate post-close."
+    },
+    {
+      "id": "DD-024",
+      "domain": "Logistics",
+      "severity": "MEDIUM",
+      "finding": "Custody timestamps lacked authority semantics.",
+      "disposition": "Preserve source timestamps."
+    },
+    {
+      "id": "DD-025",
+      "domain": "Community",
+      "severity": "MEDIUM",
+      "finding": "Restart schedule underweighted substantive consultation.",
+      "disposition": "Retain schedule contingency."
+    }
   ],
   "quality_of_earnings": [
-    {"line": "Seller-reported 2024 EBITDA", "amount_usd": 7100000},
-    {"line": "Inventory liquidation benefit", "amount_usd": -2700000},
-    {"line": "Capitalized repair normalization", "amount_usd": -1100000},
-    {"line": "Deferred environmental monitoring", "amount_usd": -500000},
-    {"line": "Related-party undercharge", "amount_usd": -400000},
-    {"line": "Normalized 2024 EBITDA", "amount_usd": 2400000}
+    {
+      "line": "Seller-reported 2024 EBITDA",
+      "amount_usd": 7100000
+    },
+    {
+      "line": "Inventory liquidation benefit",
+      "amount_usd": -2700000
+    },
+    {
+      "line": "Capitalized repair normalization",
+      "amount_usd": -1100000
+    },
+    {
+      "line": "Deferred environmental monitoring",
+      "amount_usd": -500000
+    },
+    {
+      "line": "Related-party undercharge",
+      "amount_usd": -400000
+    },
+    {
+      "line": "Normalized 2024 EBITDA",
+      "amount_usd": 2400000
+    }
   ],
   "transaction_timeline": [
-    {"event_id": "RW-TXN-001", "period": "2024-08-19", "date_precision": "DAY", "event": "Mari Varela opens western uranium graveyard review.", "category": "strategy", "record_origin": "PUBLIC_SYNTHETIC_DIEGETIC", "fact_state": "SYNTHETIC_INSTANCE", "epistemic_state": "SCENARIO", "source_id": "SH-PS-RW-TOR-001"},
-    {"event_id": "RW-TXN-002", "period": "2024-10-04", "date_precision": "DAY", "event": "Northstar circulates the Red Wash teaser.", "category": "sale", "record_origin": "PUBLIC_SYNTHETIC_DIEGETIC", "fact_state": "SYNTHETIC_INSTANCE", "epistemic_state": "SCENARIO", "source_id": "SH-PS-RW-TOR-001"},
-    {"event_id": "RW-TXN-003", "period": "2024-10-18", "date_precision": "DAY", "event": "Mutual nondisclosure agreement executed.", "category": "transaction", "record_origin": "PUBLIC_SYNTHETIC_DIEGETIC", "fact_state": "SYNTHETIC_INSTANCE", "epistemic_state": "SCENARIO", "source_id": "SH-PS-RW-TOR-001"},
-    {"event_id": "RW-TXN-004", "period": "2024-11-01", "date_precision": "DAY", "event": "Virtual data room opens.", "category": "diligence", "record_origin": "PUBLIC_SYNTHETIC_DIEGETIC", "fact_state": "SYNTHETIC_INSTANCE", "epistemic_state": "SCENARIO", "source_id": "SH-PS-RW-TOR-001"},
-    {"event_id": "RW-TXN-005", "period": "2025-01-17", "date_precision": "DAY", "event": "Sable Harbor submits a $34 million indication of interest.", "category": "transaction", "record_origin": "PUBLIC_SYNTHETIC_DIEGETIC", "fact_state": "SYNTHETIC_INSTANCE", "epistemic_state": "SCENARIO", "source_id": "SH-PS-RW-TOR-001"},
-    {"event_id": "RW-TXN-006", "period": "2025-02-07", "date_precision": "DAY", "event": "Nonbinding LOI establishes a $38 million preliminary operating value.", "category": "transaction", "record_origin": "PUBLIC_SYNTHETIC_DIEGETIC", "fact_state": "SYNTHETIC_INSTANCE", "epistemic_state": "SCENARIO", "source_id": "SH-PS-RW-TOR-001"},
-    {"event_id": "RW-TXN-007", "period": "2025-03-14", "date_precision": "DAY", "event": "East 12 continuity issue confirmed.", "category": "diligence", "record_origin": "PUBLIC_SYNTHETIC_DIEGETIC", "fact_state": "SYNTHETIC_INSTANCE", "epistemic_state": "SCENARIO", "source_id": "SH-PS-RW-TOR-001"},
-    {"event_id": "RW-TXN-008", "period": "2025-03-27", "date_precision": "DAY", "event": "MW-17 and Tailings Cell 1 underdrain evidence linked.", "category": "diligence", "record_origin": "PUBLIC_SYNTHETIC_DIEGETIC", "fact_state": "SYNTHETIC_INSTANCE", "epistemic_state": "SCENARIO", "source_id": "SH-PS-RW-TOR-001"},
-    {"event_id": "RW-TXN-009", "period": "2025-04-11", "date_precision": "DAY", "event": "Seller re-trades to $48 million.", "category": "sale", "record_origin": "PUBLIC_SYNTHETIC_DIEGETIC", "fact_state": "SYNTHETIC_INSTANCE", "epistemic_state": "SCENARIO", "source_id": "SH-PS-RW-TOR-001"},
-    {"event_id": "RW-TXN-010", "period": "2025-05-05", "date_precision": "DAY", "event": "Sable Harbor walks away; the sequence is LOCKED but this exact date is scenario detail.", "category": "transaction", "record_origin": "PUBLIC_SYNTHETIC_DIEGETIC", "fact_state": "SYNTHETIC_INSTANCE", "epistemic_state": "SCENARIO", "source_id": "SH-PS-RW-TOR-001"},
-    {"event_id": "RW-TXN-011", "period": "2025-05-29", "date_precision": "DAY", "event": "Northstar returns; the sequence is LOCKED but this exact date is scenario detail.", "category": "sale", "record_origin": "PUBLIC_SYNTHETIC_DIEGETIC", "fact_state": "SYNTHETIC_INSTANCE", "epistemic_state": "SCENARIO", "source_id": "SH-PS-RW-TOR-001"},
-    {"event_id": "RW-TXN-012", "period": "2025-06-06", "date_precision": "DAY", "event": "Revised structure establishes the LOCKED $42 million operating-asset value and $28 million cash consideration; this exact date is scenario detail.", "category": "transaction", "record_origin": "PUBLIC_SYNTHETIC_DIEGETIC", "fact_state": "SYNTHETIC_INSTANCE", "epistemic_state": "SCENARIO", "source_id": "SH-PS-RW-TOR-001"},
-    {"event_id": "RW-TXN-013", "period": "2025-06-20", "date_precision": "DAY", "event": "Final integrated diligence reports issued.", "category": "diligence", "record_origin": "PUBLIC_SYNTHETIC_DIEGETIC", "fact_state": "SYNTHETIC_INSTANCE", "epistemic_state": "SCENARIO", "source_id": "SH-PS-RW-TOR-001"},
-    {"event_id": "RW-TXN-014", "period": "2025-06-27", "date_precision": "DAY", "event": "Sable Harbor Board authorizes the transaction.", "category": "governance", "record_origin": "PUBLIC_SYNTHETIC_DIEGETIC", "fact_state": "SYNTHETIC_INSTANCE", "epistemic_state": "SCENARIO", "source_id": "SH-PS-RW-TOR-001"},
-    {"event_id": "RW-TXN-015", "period": "2025-07-02", "date_precision": "DAY", "event": "Equity Purchase Agreement signed.", "category": "transaction", "record_origin": "PUBLIC_SYNTHETIC_DIEGETIC", "fact_state": "SYNTHETIC_INSTANCE", "epistemic_state": "SCENARIO", "source_id": "SH-PS-RW-TOR-001"},
-    {"event_id": "RW-TXN-016", "period": "2025-07-18", "date_precision": "DAY", "event": "Transaction closes.", "category": "closing", "record_origin": "PUBLIC_SYNTHETIC_DIEGETIC", "fact_state": "LOCKED_CANON", "epistemic_state": "LOCKED", "source_id": "SH-PS-RW-TOR-001"},
-    {"event_id": "RW-TXN-017", "period": "2025-07-19", "date_precision": "DAY", "event": "One-hundred-day stabilization begins.", "category": "integration", "record_origin": "PUBLIC_SYNTHETIC_DIEGETIC", "fact_state": "SYNTHETIC_INSTANCE", "epistemic_state": "SCENARIO", "source_id": "SH-PS-RW-TOR-001"},
-    {"event_id": "RW-TXN-018", "period": "2025-09-14", "date_precision": "DAY", "event": "Cole invokes temporary stop authority; the stop event is LOCKED but this exact date is scenario detail.", "category": "operations", "record_origin": "PUBLIC_SYNTHETIC_DIEGETIC", "fact_state": "SYNTHETIC_INSTANCE", "epistemic_state": "SCENARIO", "source_id": "SH-PS-RW-TOR-001"},
-    {"event_id": "RW-TXN-019", "period": "2025-09-16", "date_precision": "DAY", "event": "Fourteen millimeters of convergence is measured in the selected case.", "category": "operations", "record_origin": "PUBLIC_SYNTHETIC_DIEGETIC", "fact_state": "SYNTHETIC_INSTANCE", "epistemic_state": "SCENARIO", "source_id": "SH-PS-RW-TOR-001"},
-    {"event_id": "RW-TXN-020", "period": "2025-12-31", "date_precision": "DAY", "event": "H2 stabilization accounting closes.", "category": "integration", "record_origin": "PUBLIC_SYNTHETIC_DIEGETIC", "fact_state": "SYNTHETIC_INSTANCE", "epistemic_state": "SCENARIO", "source_id": "SH-PS-RW-TOR-001"},
-    {"event_id": "RW-TXN-021", "period": "2026-08-31", "date_precision": "DAY", "event": "Synthetic calibration period ends.", "category": "reporting", "record_origin": "PUBLIC_SYNTHETIC_DIEGETIC", "fact_state": "SCENARIO_INPUT", "epistemic_state": "SCENARIO", "source_id": "SH-PS-RW-TOR-001"}
+    {
+      "event_id": "RW-TXN-001",
+      "period": "2024-08-19",
+      "date_precision": "DAY",
+      "event": "Mari Varela opens western uranium graveyard review.",
+      "category": "strategy",
+      "record_origin": "PUBLIC_SYNTHETIC_DIEGETIC",
+      "fact_state": "SYNTHETIC_INSTANCE",
+      "epistemic_state": "SCENARIO",
+      "source_id": "SH-PS-RW-TOR-001"
+    },
+    {
+      "event_id": "RW-TXN-002",
+      "period": "2024-10-04",
+      "date_precision": "DAY",
+      "event": "Northstar circulates the Red Wash teaser.",
+      "category": "sale",
+      "record_origin": "PUBLIC_SYNTHETIC_DIEGETIC",
+      "fact_state": "SYNTHETIC_INSTANCE",
+      "epistemic_state": "SCENARIO",
+      "source_id": "SH-PS-RW-TOR-001"
+    },
+    {
+      "event_id": "RW-TXN-003",
+      "period": "2024-10-18",
+      "date_precision": "DAY",
+      "event": "Mutual nondisclosure agreement executed.",
+      "category": "transaction",
+      "record_origin": "PUBLIC_SYNTHETIC_DIEGETIC",
+      "fact_state": "SYNTHETIC_INSTANCE",
+      "epistemic_state": "SCENARIO",
+      "source_id": "SH-PS-RW-TOR-001"
+    },
+    {
+      "event_id": "RW-TXN-004",
+      "period": "2024-11-01",
+      "date_precision": "DAY",
+      "event": "Virtual data room opens.",
+      "category": "diligence",
+      "record_origin": "PUBLIC_SYNTHETIC_DIEGETIC",
+      "fact_state": "SYNTHETIC_INSTANCE",
+      "epistemic_state": "SCENARIO",
+      "source_id": "SH-PS-RW-TOR-001"
+    },
+    {
+      "event_id": "RW-TXN-005",
+      "period": "2025-01-17",
+      "date_precision": "DAY",
+      "event": "Sable Harbor submits a $34 million indication of interest.",
+      "category": "transaction",
+      "record_origin": "PUBLIC_SYNTHETIC_DIEGETIC",
+      "fact_state": "SYNTHETIC_INSTANCE",
+      "epistemic_state": "SCENARIO",
+      "source_id": "SH-PS-RW-TOR-001"
+    },
+    {
+      "event_id": "RW-TXN-006",
+      "period": "2025-02-07",
+      "date_precision": "DAY",
+      "event": "Nonbinding LOI establishes a $38 million preliminary operating value.",
+      "category": "transaction",
+      "record_origin": "PUBLIC_SYNTHETIC_DIEGETIC",
+      "fact_state": "SYNTHETIC_INSTANCE",
+      "epistemic_state": "SCENARIO",
+      "source_id": "SH-PS-RW-TOR-001"
+    },
+    {
+      "event_id": "RW-TXN-007",
+      "period": "2025-03-14",
+      "date_precision": "DAY",
+      "event": "East 12 continuity issue confirmed.",
+      "category": "diligence",
+      "record_origin": "PUBLIC_SYNTHETIC_DIEGETIC",
+      "fact_state": "SYNTHETIC_INSTANCE",
+      "epistemic_state": "SCENARIO",
+      "source_id": "SH-PS-RW-TOR-001"
+    },
+    {
+      "event_id": "RW-TXN-008",
+      "period": "2025-03-27",
+      "date_precision": "DAY",
+      "event": "MW-17 and Tailings Cell 1 underdrain evidence linked.",
+      "category": "diligence",
+      "record_origin": "PUBLIC_SYNTHETIC_DIEGETIC",
+      "fact_state": "SYNTHETIC_INSTANCE",
+      "epistemic_state": "SCENARIO",
+      "source_id": "SH-PS-RW-TOR-001"
+    },
+    {
+      "event_id": "RW-TXN-009",
+      "period": "2025-04-11",
+      "date_precision": "DAY",
+      "event": "Seller re-trades to $48 million.",
+      "category": "sale",
+      "record_origin": "PUBLIC_SYNTHETIC_DIEGETIC",
+      "fact_state": "SYNTHETIC_INSTANCE",
+      "epistemic_state": "SCENARIO",
+      "source_id": "SH-PS-RW-TOR-001"
+    },
+    {
+      "event_id": "RW-TXN-010",
+      "period": "2025-05-05",
+      "date_precision": "DAY",
+      "event": "Sable Harbor walks away; the sequence is LOCKED but this exact date is scenario detail.",
+      "category": "transaction",
+      "record_origin": "PUBLIC_SYNTHETIC_DIEGETIC",
+      "fact_state": "SYNTHETIC_INSTANCE",
+      "epistemic_state": "SCENARIO",
+      "source_id": "SH-PS-RW-TOR-001"
+    },
+    {
+      "event_id": "RW-TXN-011",
+      "period": "2025-05-29",
+      "date_precision": "DAY",
+      "event": "Northstar returns; the sequence is LOCKED but this exact date is scenario detail.",
+      "category": "sale",
+      "record_origin": "PUBLIC_SYNTHETIC_DIEGETIC",
+      "fact_state": "SYNTHETIC_INSTANCE",
+      "epistemic_state": "SCENARIO",
+      "source_id": "SH-PS-RW-TOR-001"
+    },
+    {
+      "event_id": "RW-TXN-012",
+      "period": "2025-06-06",
+      "date_precision": "DAY",
+      "event": "Revised structure establishes the LOCKED $42 million operating-asset value and $28 million cash consideration; this exact date is scenario detail.",
+      "category": "transaction",
+      "record_origin": "PUBLIC_SYNTHETIC_DIEGETIC",
+      "fact_state": "SYNTHETIC_INSTANCE",
+      "epistemic_state": "SCENARIO",
+      "source_id": "SH-PS-RW-TOR-001"
+    },
+    {
+      "event_id": "RW-TXN-013",
+      "period": "2025-06-20",
+      "date_precision": "DAY",
+      "event": "Final integrated diligence reports issued.",
+      "category": "diligence",
+      "record_origin": "PUBLIC_SYNTHETIC_DIEGETIC",
+      "fact_state": "SYNTHETIC_INSTANCE",
+      "epistemic_state": "SCENARIO",
+      "source_id": "SH-PS-RW-TOR-001"
+    },
+    {
+      "event_id": "RW-TXN-014",
+      "period": "2025-06-27",
+      "date_precision": "DAY",
+      "event": "Sable Harbor Board authorizes the transaction.",
+      "category": "governance",
+      "record_origin": "PUBLIC_SYNTHETIC_DIEGETIC",
+      "fact_state": "SYNTHETIC_INSTANCE",
+      "epistemic_state": "SCENARIO",
+      "source_id": "SH-PS-RW-TOR-001"
+    },
+    {
+      "event_id": "RW-TXN-015",
+      "period": "2025-07-02",
+      "date_precision": "DAY",
+      "event": "Equity Purchase Agreement signed.",
+      "category": "transaction",
+      "record_origin": "PUBLIC_SYNTHETIC_DIEGETIC",
+      "fact_state": "SYNTHETIC_INSTANCE",
+      "epistemic_state": "SCENARIO",
+      "source_id": "SH-PS-RW-TOR-001"
+    },
+    {
+      "event_id": "RW-TXN-016",
+      "period": "2025-07-18",
+      "date_precision": "DAY",
+      "event": "Transaction closes.",
+      "category": "closing",
+      "record_origin": "PUBLIC_SYNTHETIC_DIEGETIC",
+      "fact_state": "LOCKED_CANON",
+      "epistemic_state": "LOCKED",
+      "source_id": "SH-PS-RW-TOR-001"
+    },
+    {
+      "event_id": "RW-TXN-017",
+      "period": "2025-07-19",
+      "date_precision": "DAY",
+      "event": "One-hundred-day stabilization begins.",
+      "category": "integration",
+      "record_origin": "PUBLIC_SYNTHETIC_DIEGETIC",
+      "fact_state": "SYNTHETIC_INSTANCE",
+      "epistemic_state": "SCENARIO",
+      "source_id": "SH-PS-RW-TOR-001"
+    },
+    {
+      "event_id": "RW-TXN-018",
+      "period": "2025-09-14",
+      "date_precision": "DAY",
+      "event": "Cole invokes temporary stop authority; the stop event is LOCKED but this exact date is scenario detail.",
+      "category": "operations",
+      "record_origin": "PUBLIC_SYNTHETIC_DIEGETIC",
+      "fact_state": "SYNTHETIC_INSTANCE",
+      "epistemic_state": "SCENARIO",
+      "source_id": "SH-PS-RW-TOR-001"
+    },
+    {
+      "event_id": "RW-TXN-019",
+      "period": "2025-09-16",
+      "date_precision": "DAY",
+      "event": "Fourteen millimeters of convergence is measured in the selected case.",
+      "category": "operations",
+      "record_origin": "PUBLIC_SYNTHETIC_DIEGETIC",
+      "fact_state": "SYNTHETIC_INSTANCE",
+      "epistemic_state": "SCENARIO",
+      "source_id": "SH-PS-RW-TOR-001"
+    },
+    {
+      "event_id": "RW-TXN-020",
+      "period": "2025-12-31",
+      "date_precision": "DAY",
+      "event": "H2 stabilization accounting closes.",
+      "category": "integration",
+      "record_origin": "PUBLIC_SYNTHETIC_DIEGETIC",
+      "fact_state": "SYNTHETIC_INSTANCE",
+      "epistemic_state": "SCENARIO",
+      "source_id": "SH-PS-RW-TOR-001"
+    },
+    {
+      "event_id": "RW-TXN-021",
+      "period": "2026-08-31",
+      "date_precision": "DAY",
+      "event": "Synthetic calibration period ends.",
+      "category": "reporting",
+      "record_origin": "PUBLIC_SYNTHETIC_DIEGETIC",
+      "fact_state": "SCENARIO_INPUT",
+      "epistemic_state": "SCENARIO",
+      "source_id": "SH-PS-RW-TOR-001"
+    }
   ]
 }

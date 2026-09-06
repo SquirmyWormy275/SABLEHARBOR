@@ -1,7 +1,5 @@
 # Red Wash Transaction and Operating Casebook
 
-> **GEOGRAPHIC SUPERSESSION — 5 September 2026:** Original Red Wash map PNGs are preserved historical artwork, not current geographic authority. Their old county, coordinate, grid, elevation and highway labels are superseded. Use the 0.2.0 geospatial release. Approved source-image bytes remain unchanged.
-
 [![Approved Red Wash site overview](../assets/brand/maps/red_wash__site_overview.png)](../assets/brand/maps/red_wash__site_overview.png)
 
 The owner-approved [Red Wash logo](../assets/brand/logos/red_wash__canonical.png),
@@ -36,7 +34,7 @@ No preferred margin or return is imposed after the fact. The operating and finan
 
 ## 2. Asset identity
 
-Red Wash is a fictional underground uranium mine and compact conventional uranium mill in the Great Divide Basin / Red Desert, Sweetwater County, Wyoming, north of Wamsutter. The user-approved working map anchor is 42.22 N, 108.18 W; it is not a surveyed portal or a real named mine. Prior county, coordinate, grid, access-road and 6,420-foot elevation annotations are superseded. The legacy 7,480-acre property and 620-acre disturbance quantities remain scenario inputs, not measured or cadastral boundaries. See geospatial/docs/RED_WASH_LOCATION_SUPERSESSION_NOTE.md.
+Red Wash is a fictional underground uranium mine and compact conventional uranium mill in Wyoming. The selected synthetic site scenario places it in Carbon County at 42.3127° N, 106.9213° W and approximately 6,420 feet elevation, on approximately 7,480 acres with an approximately 620-acre disturbed operating footprint. Those site-specific values are scenario detail, not separately locked geographic canon.
 
 The mine uses selective drift-and-fill mining with cemented paste backfill. Access is by decline. The current operating plan extends through five principal levels to an approximate maximum depth of 2,500 feet. Ore is trucked to surface, crushed, ground, acid leached, washed, purified, precipitated, dried and packed as U3O8 concentrate. Red Wash does not enrich uranium or fabricate nuclear fuel.
 
