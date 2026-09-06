@@ -1,0 +1,29 @@
+name: Materialize approved geospatial package
+on:
+  push:
+    branches: [feature/geospatial-execution-current]
+    paths: ['.geospatial-publication/**']
+permissions:
+  contents: write
+concurrency:
+  group: geospatial-package-publication
+  cancel-in-progress: false
+jobs:
+  materialize:
+    if: github.repository == 'SquirmyWormy275/SABLEHARBOR'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feature/geospatial-execution-current
+          fetch-depth: 1
+      - name: Restore and verify prepared package bytes
+        run: python tools/geospatial_publication/materialize.py
+      - name: Commit package to the authorized branch
+        run: |
+          if git diff --cached --quiet; then exit 0; fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'Restore checksum-verified geospatial package binaries'
+          git push origin HEAD:refs/heads/feature/geospatial-execution-current
