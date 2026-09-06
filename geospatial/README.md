@@ -1,19 +1,23 @@
-# Master geospatial program — foundation / conflict review
+# Sable Harbor geospatial program
 
-Canon baseline: `8d20e51a7cf0068729e3296840ccb5ba1ac1d7bd` (5 September 2026 Pacific). Branch: `feature/master-geospatial-package`; PR #94.
+## Current geographic authority
 
-The pinned repository census has inventoried 673 tracked files, scanned 506 text files and returned 2,603 candidate occurrences. A separate reviewed foundation contains 41 geographic objects, 19 sources, six approximate study polygons and two location/reference points. Keyword hits are NOT canonical objects or proof of semantic completeness.
+The complete user-approved [5 September 2026 addendum](data/GOVERNING_GEOGRAPHIC_ADDENDUM_2026-09-05.md) supersedes conflicting earlier geography. Red Wash: fictional underground uranium mine, Sweetwater County / Great Divide Basin / Red Desert, north of Wamsutter; working map anchor **42.22, -108.18**, not a survey. **Taylor** replaces the prior community name. Taylor's exact candidate coordinate **41.98, -108.23** is implementer-engineered; the user locked its name, role and relative geography, not that precise coordinate.
 
-The companion downloadable `sable-harbor-geospatial-0.1.0-foundation.zip` contains the working 12-layer GeoPackage, controlled inputs, Python builders, validator, tests, GeoJSON, QGIS project, registers, two vector map plates and exact source-map evidence. It passed 345 automated foundation checks and 11 tests locally. A repeated same-environment GeoPackage build produced the same SHA-256. Four PDF pages were rendered and visually inspected. QGIS runtime opening was NOT tested; Fiona/GDAL layer reading and QGIS project XML/path checks passed.
+See the [decision register](registers/GEOGRAPHIC_DECISION_REGISTER.md), [supersession note](docs/RED_WASH_LOCATION_SUPERSESSION_NOTE.md), [conflict log](registers/GEOGRAPHIC_CONFLICTS.md), and [regenerated-product record](registers/REGENERATED_OUTPUTS.md).
 
-## Repository integration boundary
+## Applied to this branch
 
-This initial repository commit preserves the source hierarchy, discovered conflicts, schema, study-area inputs, generated study-area GeoJSON, and an execution record. The full downloadable release and every builder/source file have NOT yet been uploaded to this branch. Do not claim a clean repository checkout can rebuild the complete release at this commit. The earlier read-only census workflow can reproduce the pinned whole-tree candidate inventory as an Actions artifact.
+The mine source JSON, casebook, technical report, operating record, map-use notices and visual manifest were corrected by the branch-specific application workflow. Original source revisions and approved PNG bytes were preserved. Study-window input, anchor GeoJSON and Taylor candidate GeoJSON are updated. All non-location mine operating inputs remain unchanged. No main merge is authorized by this branch update.
 
-No exact mine, campus, yard, interchange or railway is approved here. No source image is modified. No controlling canon is changed. No main merge is requested while the location conflict remains open.
+## Separately delivered full 0.2.0 release
 
-## Blocking Red Wash decision
+`SABLE_HARBOR_Geospatial_Addendum_v0.2.0.zip` contains the full current GeoPackage, 41 reviewed geographic objects, 28 sources, six decisions, sixteen spatial layers, real-reference snapshots, terrain-screened route alternatives, site and hub envelopes, builders, tests, maps, full original mandates and historical evidence. The companion nine-page atlas and two-page source-evidence PDF were rendered and visually checked. The GeoPackage's repeated same-environment build was byte-identical. Actual QGIS application opening remains NOT_RUN.
 
-The two approved maps in `assets/brand/maps/` print 42.3127 N, 106.9213 W, Carbon County. Their bytes match the approved manifest. The current handover instead selects Sweetwater County, north of Wamsutter. Both claims are preserved; neither is silently superseded. See `reports/OPEN_CONFLICTS.md`.
+**Full release integration remains incomplete: not all of that ZIP's files or map binaries are present on this branch.** A file hash or product listing here does not claim that binary was uploaded.
 
-RW-017 through RW-025 also prohibit importing a historical BS&T relationship into Red Wash: no pre-existing carrier arrangement, all 2025 movements by external carriers, no existing direct mine connection on discovery, and the full ARU/BS&T transaction and route case remains open.
+## Engineering boundaries
+
+The screened Taylor–Wamsutter spine is 32.39 miles. The working pre-acquisition business scale remains approximately 40 route-miles; 7.61 miles are geographically unallocated, not filled with invented customer branches. An optional 20.23-mile Taylor–Red Wash extension is a future integration screen, not existing infrastructure or pre-acquisition mileage. Ground slopes are not final track grades, and the $15M integration ceiling is not a railway construction estimate. No current uranium custody or invented acquisition date is implied. Other retained city/corridor decisions remain controlling.
+
+The historic census (673 files, 506 text files, 2,603 candidate occurrences) is not a completed semantic enterprise census. Its original evidence remains historical. The resolved Red Wash location is no longer a decision blocker.
