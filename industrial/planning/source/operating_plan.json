@@ -1,0 +1,286 @@
+{
+  "schema_version": "1.0",
+  "record_id": "SH-PLAN-OPS-001",
+  "cutoff": "2026-09-06T00:00:00-07:00",
+  "period_role": "CONDITIONAL_FORECAST",
+  "years": [
+    2027,
+    2028,
+    2029,
+    2030,
+    2031
+  ],
+  "baseline_reference": "industrial/source/operations.json",
+  "baseline_sha256": "e7488b55c1c963d102db66e7a7b6f1373a3d68a9f94b8f99b164092245713a3b",
+  "source_policy": "New conditional forecast available September 6. Accepted v1 full-year 2026 closing balances and quantities are a fixed reference scenario, including future months that remain forecast at the cutoff. Approved 2026 capital is carried in that reference opening and never rebooked as 2027 growth. No scenario grants land rights, commissioning, operating authority, financing or direct uranium custody.",
+  "monthly_weights": [
+    7,
+    7,
+    8,
+    8,
+    9,
+    9,
+    9,
+    9,
+    9,
+    9,
+    8,
+    8
+  ],
+  "annual_2025_units": {
+    "BST": 9000,
+    "TERMINALS": 254000,
+    "TRUCKING": 15000,
+    "WAREHOUSE": 141000
+  },
+  "baseline_fte": {
+    "BST": 58,
+    "TERMINALS": 27,
+    "TRUCKING": 24,
+    "WAREHOUSE": 12,
+    "ARU": 10
+  },
+  "annual_price_growth": 0.02,
+  "annual_cost_growth": 0.03,
+  "external_2026_price_index": 1.02,
+  "external_2026_cost_index": 1.03,
+  "mine": {
+    "daily_nameplate_tons": 600,
+    "normal_availability": 0.94,
+    "grade_fraction": 0.0017,
+    "recovery_fraction": 0.92,
+    "opening_product_inventory_lb": 172400,
+    "minimum_product_inventory_lb": 60000,
+    "uranium_price_2026_usd_lb": 72.95,
+    "sales_demand_2027_lb": 570000,
+    "sales_growth": 0.035,
+    "opening_acid_tons": 290,
+    "acid_minimum_tons": 210,
+    "acid_maximum_tons": 340,
+    "acid_tons_per_ore_ton": 0.030222222222222223,
+    "opening_binder_tons": 340,
+    "binder_minimum_tons": 245,
+    "binder_maximum_tons": 450,
+    "binder_tons_per_ore_ton": 0.035555555555555556,
+    "ordinary_annual_cars_at_225000_ore_tons": {
+      "lime": 17,
+      "steel": 28,
+      "mro": 12
+    },
+    "annual_project_cars": 10,
+    "maximum_product_inventory_lb": 250000,
+    "annual_processing_days": 330
+  },
+  "rail": {
+    "normal_round_trips_daily": 3,
+    "conditional_maximum_round_trips_daily": 4,
+    "normal_average_mph": 20,
+    "failure_average_mph": 15,
+    "branch_hours_daily": 1.5,
+    "switch_hours_round_trip": 1.2,
+    "normal_crew_duty_hours_daily": 16,
+    "expanded_crew_duty_hours_daily": 24,
+    "gross_car_tons": 143,
+    "normal_locomotive_tons": 260,
+    "failure_locomotive_tons": 255,
+    "normal_tractive_effort_lb": 109400,
+    "failure_tractive_effort_lb": 108700,
+    "ruling_grade_pct": 1.8,
+    "rolling_resistance_lb_per_ton": 5,
+    "mainline_miles": 33.34847676361104,
+    "winter_tractive_factor": 0.9,
+    "normal_train_limit": 16,
+    "reserve_tractive_effort_lb": 54000,
+    "reserve_locomotive_tons": 125,
+    "single_average_mph": 12
+  },
+  "capacity": {
+    "terminal_tons_year": 300000,
+    "warehouse_slots": 15000,
+    "drivers": 20,
+    "tractors": 18,
+    "driver_productive_hours_year": 1800,
+    "tractor_available_hours_year": 2125,
+    "external_truck_hours_per_dispatch": 2,
+    "winter_truck_cycle_multiplier": 1.15
+  },
+  "replacements": {
+    "mine_remaining_rehab_by_year": {
+      "2027": 3000000,
+      "2028": 2000000,
+      "2029": 0,
+      "2030": 0,
+      "2031": 0
+    },
+    "incremental_installed_asset_replacement_fraction": 0.03,
+    "policy": "Complete annual future sustaining/rehabilitation outlays. Finance adds no second sustaining schedule. The 2026 ARU catch-up and interface outlays are excluded.",
+    "aru_2026_base_usd": 3300000,
+    "mine_2026_sustaining_usd": 4000000
+  },
+  "outside_capacity": {
+    "BST": {
+      "annual_units": 4160,
+      "unit_cost_2026_usd": 1450,
+      "method": "Conditional qualified contract locomotive/crew with a fourth interchange path; same system maximum of four round trips, not a new parallel railroad."
+    },
+    "TERMINALS": {
+      "annual_units": 80000,
+      "unit_cost_2026_usd": 44,
+      "method": "Qualified third-party offsite handling contracted by ARU as principal; custody/transport costs included in assumed quote."
+    },
+    "TRUCKING": {
+      "annual_units": 5000,
+      "unit_cost_2026_usd": 475,
+      "method": "Qualified outside motor-carrier dispatch; no implied addition to ARU-owned tractor hours."
+    },
+    "WAREHOUSE": {
+      "annual_units": 36000,
+      "unit_cost_2026_usd": 36,
+      "method": "Third-party reserved pallet-months; no addition to owned-site slots."
+    }
+  },
+  "scenarios": {
+    "base": {
+      "strategy": "current",
+      "external_demand_growth": {
+        "BST": 0.02,
+        "TERMINALS": 0.015,
+        "TRUCKING": 0.015,
+        "WAREHOUSE": 0.015
+      },
+      "annual_ore_targets": [
+        180000,
+        182000,
+        184000,
+        186000,
+        188000
+      ],
+      "mine_growth": false,
+      "uranium_price_multiplier": 1,
+      "ordinary_external_outsource_fraction": 0.5
+    },
+    "downside": {
+      "strategy": "current",
+      "external_demand_growth": {
+        "BST": 0,
+        "TERMINALS": 0,
+        "TRUCKING": 0,
+        "WAREHOUSE": 0
+      },
+      "annual_ore_targets": [
+        180000,
+        182000,
+        184000,
+        186000,
+        188000
+      ],
+      "mine_growth": false,
+      "uranium_price_multiplier": 0.8,
+      "ordinary_external_outsource_fraction": 0.5
+    },
+    "expansion": {
+      "strategy": "owned",
+      "external_demand_growth": {
+        "BST": 0.1,
+        "TERMINALS": 0.07,
+        "TRUCKING": 0.06,
+        "WAREHOUSE": 0.05
+      },
+      "annual_ore_targets": [
+        185000,
+        190000,
+        225000,
+        225000,
+        225000
+      ],
+      "mine_growth": true,
+      "uranium_price_multiplier": 1,
+      "ordinary_external_outsource_fraction": 1,
+      "sales_growth": 0.08
+    }
+  },
+  "events": [
+    {
+      "id": "WINTER-2027",
+      "scenario": "downside",
+      "months": [
+        "2027-01",
+        "2027-02"
+      ],
+      "type": "winter",
+      "rail_lost_service_days": 6,
+      "truck_cycle_multiplier": 1.4,
+      "additional_cost_by_segment": {
+        "BST": 45000,
+        "TERMINALS": 20000,
+        "TRUCKING": 30000
+      },
+      "fact_state": "PROVISIONAL_STRESS_ASSUMPTION"
+    },
+    {
+      "id": "LOCO-FAILURE-2027",
+      "scenario": "downside",
+      "months": [
+        "2027-03"
+      ],
+      "type": "locomotive_failure",
+      "failed_units": 1,
+      "downtime_service_days": 23,
+      "additional_cost_by_segment": {
+        "BST": 280000
+      },
+      "fact_state": "PROVISIONAL_STRESS_ASSUMPTION",
+      "rail_lost_service_days": 2
+    },
+    {
+      "id": "CUSTOMER-LOSS-2028",
+      "scenario": "downside",
+      "start_month": "2028-06",
+      "end_month": "2031-12",
+      "type": "customer_loss",
+      "customer_id": "ARU-C-001",
+      "loss_fraction_by_segment": {
+        "BST": 0.24444444444444444,
+        "TERMINALS": 0.10590551181102362
+      },
+      "fact_state": "PROVISIONAL_STRESS_ASSUMPTION",
+      "loss_revenue_fraction_by_segment": {
+        "BST": 0.21129032258064517,
+        "TERMINALS": 0.10346153846153847
+      }
+    },
+    {
+      "id": "MINE-INTERRUPTION-2027",
+      "scenario": "downside",
+      "months": [
+        "2027-08"
+      ],
+      "type": "mine_interruption",
+      "unavailable_calendar_days": 20,
+      "mine_repair_cash_usd": 450000,
+      "fact_state": "PROVISIONAL_STRESS_ASSUMPTION"
+    },
+    {
+      "id": "ACID-SUPPLY-2028",
+      "scenario": "downside",
+      "months": [
+        "2028-02"
+      ],
+      "type": "inventory_disruption",
+      "acid_delivery_fraction": 0.4,
+      "mine_repair_cash_usd": 35000,
+      "fact_state": "PROVISIONAL_STRESS_ASSUMPTION"
+    }
+  ],
+  "available_at": "2026-09-06T00:00:00-07:00",
+  "reference_case_cutoff": "2026-09-05T23:59:59-07:00",
+  "outside_inbound_service_per_car_2026_usd": {
+    "acid": 4063.5000000000005,
+    "binder": 3226.5,
+    "lime": 3375.0,
+    "steel": 3678.7500000000005,
+    "mro": 2565.0,
+    "project": 6210.0
+  },
+  "outside_inbound_quote_basis": "Separate provisional external-provider cost assumptions, originally calibrated 35% above v1 bundled service prices. They remain independent of future intercompany repricing; no actual carrier quote asserted."
+}

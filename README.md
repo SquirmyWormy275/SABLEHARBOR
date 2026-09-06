@@ -70,6 +70,8 @@ The organization renderer preserves unnamed roles as open and reproduces all nin
 
 The [industrial case](industrial/README.md) contains Pale Sun's formation and leadership history, Red Wash and ARU transaction files, the BS&T network and operating registers, monthly financial books, capital/funding schedules and intercompany eliminations. The [participant guide](industrial/CASE_GUIDE.md) and [release index](docs/releases/INDUSTRIAL_CASE_RELEASES.md) identify the selected corpus and dated distribution.
 
+The [industrial planning and enterprise successor](industrial/planning/README.md) adds 2027–2031 monthly scenarios, incremental capital appraisal, linked transaction evidence, legal and operating-unit consolidation, and an offline case browser. Future funding and expansion remain conditional; the prior release remains preserved.
+
 The [Red Wash package](red_wash/README.md) retains the standalone mine comparison and its historical sources. Current mine maps use the Sweetwater County anchor at 42.22° N, 108.18° W. The [interface record](red_wash/logistics/ARU_BST_INTERFACE_AND_DEPENDENCY_RECORD.md) selects $8.5 million of phase-one capital and a partial 2026 start-up. Qualified external carriers remain authoritative for 2025 movements and current uranium transport.
 
 ## Headquarters

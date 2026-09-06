@@ -1,0 +1,156 @@
+{
+  "schema_version": "1.0",
+  "record_id": "SH-PLAN-CAP-001",
+  "decision_state": "PROSPECTIVE_OPTIONS_NOT_APPROVAL",
+  "valuation_start": "2026-12-31",
+  "valuation_end": "2031-12-31",
+  "discount_rate": 0.1,
+  "cash_tax_rate": 0.25,
+  "net_working_capital_fraction_of_incremental_external_revenue": 0.12,
+  "residual_fraction_of_growth_cost": 0.45,
+  "residual_policy": "Explicit end-2031 gross disposal sensitivity, net of modeled tax on disposal versus straight-line book basis; not a perpetuity or asserted appraisal. Working capital is recovered only on the same terminal disposal assumption.",
+  "depreciation_years": {
+    "ARU": 15,
+    "RWH": 15
+  },
+  "tax_policy": "Annual cash tax on positive incremental taxable operating profit; project losses carry with an 80% positive-income utilization ceiling, matching the forecast scenario ceiling. No immediate refund or group offset assumed. Disposal gain/loss uses remaining project basis and available project loss balance subject to the same ceiling.",
+  "project_scope": "Compare the same expansion demand and conditional mine-growth path under current assets, third-party incremental capacity and staged owned logistics. Intercompany billing is eliminated; only actual third-party costs and incremental external customer economics enter project cash flow. The common conditional mine expansion is disclosed separately from differences between logistics options.",
+  "growth_projects": [
+    {
+      "id": "RAIL-RESILIENCE",
+      "owner": "ARU",
+      "segment": "BST",
+      "growth_cost_usd": 4200000,
+      "spend_months": [
+        "2027-09",
+        "2027-10",
+        "2027-11",
+        "2027-12"
+      ],
+      "conditional_service_month": "2028-07",
+      "capacity_changes": {
+        "rail_round_trips_daily": 4
+      },
+      "fte_added": 0,
+      "incremental_fixed_opex_year_usd": 190000,
+      "basis": "Provisional $3M additional road locomotive plus $1.2M yard/control/customer-work readiness. Existing funded train crews have sufficient modeled hours; qualification and four-path interchange remain conditions."
+    },
+    {
+      "id": "TERMINAL-EXPANSION",
+      "owner": "ARU",
+      "segment": "TERMINALS",
+      "growth_cost_usd": 3300000,
+      "spend_months": [
+        "2028-01",
+        "2028-02",
+        "2028-03",
+        "2028-04",
+        "2028-05",
+        "2028-06"
+      ],
+      "conditional_service_month": "2028-07",
+      "capacity_changes": {
+        "terminal_tons_year": 380000
+      },
+      "fte_added": 4,
+      "incremental_fixed_opex_year_usd": 90000,
+      "basis": "Provisional additional handling/storage areas and equipment; 380k ton design envelope requires civil, environmental and customer commitments."
+    },
+    {
+      "id": "TRUCK-CAPACITY",
+      "owner": "ARU",
+      "segment": "TRUCKING",
+      "growth_cost_usd": 1100000,
+      "spend_months": [
+        "2028-04",
+        "2028-05",
+        "2028-06"
+      ],
+      "conditional_service_month": "2028-07",
+      "capacity_changes": {
+        "drivers": 24,
+        "tractors": 21
+      },
+      "fte_added": 4,
+      "incremental_fixed_opex_year_usd": 35000,
+      "basis": "Three tractors/trailer packages plus onboarding; four incremental drivers added to existing 24-person unit."
+    },
+    {
+      "id": "WAREHOUSE-CAPACITY",
+      "owner": "ARU",
+      "segment": "WAREHOUSE",
+      "growth_cost_usd": 800000,
+      "spend_months": [
+        "2029-01",
+        "2029-02",
+        "2029-03",
+        "2029-04",
+        "2029-05",
+        "2029-06"
+      ],
+      "conditional_service_month": "2029-07",
+      "capacity_changes": {
+        "warehouse_slots": 17000
+      },
+      "fte_added": 2,
+      "incremental_fixed_opex_year_usd": 30000,
+      "basis": "Two thousand incremental rack slots and handling/control equipment; two incremental warehouse employees."
+    },
+    {
+      "id": "MINE-CAPACITY",
+      "owner": "RWH",
+      "segment": "RWH",
+      "growth_cost_usd": 8000000,
+      "spend_months": [
+        "2028-01",
+        "2028-02",
+        "2028-03",
+        "2028-04",
+        "2028-05",
+        "2028-06",
+        "2028-07",
+        "2028-08",
+        "2028-09",
+        "2028-10"
+      ],
+      "conditional_service_month": "2029-01",
+      "capacity_changes": {
+        "daily_nameplate_tons": 750
+      },
+      "fte_added": 0,
+      "incremental_fixed_opex_year_usd": 250000,
+      "basis": "Provisional mine/plant productivity and reliability project; existing 128 site FTE retained. Geotechnical, metallurgical, ventilation, closure, permit, financing and operating acceptance conditions remain open."
+    }
+  ],
+  "retrospective": {
+    "completed_interface_capex_usd": 8500000,
+    "mine_owned_usd": 3250000,
+    "aru_owned_usd": 5250000,
+    "normalized_intercompany_revenue_usd": 583480,
+    "normalized_aru_incremental_ebitda_usd": 203290,
+    "prior_external_cost_saving_proved_usd": 0,
+    "policy": "Already incurred 2026 spend is sunk in every prospective option. $203290 is ARU EBITDA before depreciation/tax/WC/replacement, not consolidated investment return. Internal billing disappears on consolidation; no unproved avoided third-party expense is credited."
+  },
+  "conditions": [
+    "No further capital authorization is granted by this review.",
+    "External customer commitments must cover the breakeven volume and margin.",
+    "Actual third-party quotes and asset/land rights must validate provisional prices and capacities.",
+    "Qualified crews, customer paths, mine engineering and permit evidence remain required.",
+    "No project gives ARU or BS&T direct uranium custody."
+  ],
+  "available_at": "2026-09-06T00:00:00-07:00",
+  "cutoff": "2026-09-06T00:00:00-07:00",
+  "reference_case_cutoff": "2026-09-05T23:59:59-07:00",
+  "outsourcing_setup_cost_by_segment": {
+    "BST": 75000,
+    "TERMINALS": 50000,
+    "TRUCKING": 25000
+  },
+  "cost_basis_policy": "Main option comparison uses the same transactions.procurement_costs schedule and accepted census payroll as the forecast; all external-provider, disruption and incremental fixed costs are added once.",
+  "cash_timing": "Monthly end-of-month unlevered cash flows; cash taxes settle each December in this project screen. NPV uses the effective monthly equivalent of the stated annual discount rate. IRR is annualized from the unique conventional monthly root.",
+  "terminal_disposal": true,
+  "replacement_depreciation_years": 15,
+  "nol_utilization_limit_fraction": 0.8,
+  "depreciation_policy": "Growth enters modeled construction in progress when paid, with depreciation beginning the month following conditional service. Replacement depreciates over 15 years beginning the month following payment, matching the ARU forecast convention.",
+  "revenue_basis_policy": "Use accepted customer_schedules and the forecast customer-specific renewal multipliers after lost-customer exclusion. Whole-dollar target, largest-remainder allocation and per-contract rounding match the forecast invoice convention."
+}

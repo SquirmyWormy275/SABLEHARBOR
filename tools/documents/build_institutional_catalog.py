@@ -20,6 +20,10 @@ def field(text: str, name: str, default: str = "") -> str:
 
 
 def category(path: str) -> str:
+    if path == "docs/canon/INDUSTRIAL_PLANNING_SUCCESSOR_2026-09-06.md":
+        return "industrial planning authority"
+    if path.startswith("industrial/planning/"):
+        return "industrial conditional planning record"
     if path == "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-06_CLOSEOUT.md":
         return "canon decision addendum"
     if path == "docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05_R2.md":
@@ -40,6 +44,8 @@ def category(path: str) -> str:
 
 
 def inferred_owner(path: str) -> str:
+    if path == "docs/canon/INDUSTRIAL_PLANNING_SUCCESSOR_2026-09-06.md":
+        return "Repository owner"
     if path.startswith("industrial/"):
         return "Sable Harbor Industrial Holdings"
     name = Path(path).stem

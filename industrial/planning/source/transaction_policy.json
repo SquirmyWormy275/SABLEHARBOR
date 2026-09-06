@@ -1,0 +1,116 @@
+{
+  "schema_version": "2.0.0",
+  "record_id": "SH-PLAN-TRANSACTIONS-002",
+  "available_at": "2026-09-06T00:00:00-07:00",
+  "fact_state": "PROVISIONAL_PLANNING_ASSUMPTION",
+  "record_origin": "PUBLIC_SYNTHETIC_PLANNING_MODEL",
+  "seed": 20260906,
+  "calibration_basis": "2025 segment external nonpayroll envelopes less census payroll. Starting unit rates are explicitly calibrated, not supplier quotations. Future physical quantities and prices determine modeled purchases; no target profit or forecast margin is solved for.",
+  "vendor_payment_days": 30,
+  "bank_clearing_days": 2,
+  "purchase_lead_days": 7,
+  "expense_categories": [
+    {
+      "id": "MAT",
+      "name": "Materials and fuel",
+      "unit": "activity_consumption_unit",
+      "variable_fraction": "0.90",
+      "work_order": false
+    },
+    {
+      "id": "MAINT",
+      "name": "Contract maintenance and equipment services",
+      "unit": "maintenance_service_unit",
+      "variable_fraction": "0.50",
+      "work_order": true
+    },
+    {
+      "id": "OCC",
+      "name": "Occupancy and utilities",
+      "unit": "facility_service_month",
+      "variable_fraction": "0.15",
+      "work_order": false
+    },
+    {
+      "id": "INS",
+      "name": "Insurance and environmental services",
+      "unit": "coverage_service_month",
+      "variable_fraction": "0.00",
+      "work_order": false
+    },
+    {
+      "id": "SERV",
+      "name": "Other purchased operating services",
+      "unit": "operating_service_unit",
+      "variable_fraction": "0.35",
+      "work_order": false
+    }
+  ],
+  "segment_activity_bases": {
+    "BST": {
+      "unit": "loaded_revenue_car",
+      "annual_units_2025": 9000,
+      "weights": [
+        20,
+        25,
+        18,
+        17,
+        20
+      ]
+    },
+    "TERMINALS": {
+      "unit": "handled_short_ton",
+      "annual_units_2025": 254000,
+      "weights": [
+        25,
+        25,
+        20,
+        15,
+        15
+      ]
+    },
+    "TRUCKING": {
+      "unit": "billed_dispatch",
+      "annual_units_2025": 15000,
+      "weights": [
+        35,
+        25,
+        20,
+        10,
+        10
+      ]
+    },
+    "WAREHOUSE": {
+      "unit": "occupied_slot_month",
+      "annual_units_2025": 141000,
+      "weights": [
+        35,
+        20,
+        15,
+        15,
+        15
+      ]
+    },
+    "ARU": {
+      "unit": "corporate_service_month",
+      "annual_units_2025": 12,
+      "weights": [
+        25,
+        25,
+        20,
+        20,
+        10
+      ]
+    }
+  },
+  "classification": "PUBLIC_SYNTHETIC_FORECAST_EVIDENCE",
+  "evidence_boundary": "Detailed modeled procurement is an input to the forecast. Other documents are transparent reconstructions of forecast journal events and are labeled accordingly. A generated invoice, bank statement or work order is not external corroboration of its own assumptions.",
+  "incremental_staffing_roles": {
+    "BST": "Train Engine employee",
+    "TERMINALS": "Terminal employee",
+    "TRUCKING": "Qualified regional industrial driver",
+    "WAREHOUSE": "Warehouse employee",
+    "ARU": "Corporate employee"
+  },
+  "incremental_staffing_budget_basis": "Additional frontline positions use the forecast segment-average loaded employer cost as an explicit budget proxy. Accepted census role capacities remain unchanged; extra drivers and handling workers are separate planned position pools, not proportional additions to management."
+}

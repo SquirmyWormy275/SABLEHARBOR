@@ -592,6 +592,54 @@
       "source_sha256": "4f185dffc7906ecc6abda8420fc9d026d4fb5bc470d506eb99dbab968560b2c5",
       "brand": "aru",
       "normalizer": "qpdf"
+    },
+    {
+      "source": "docs/canon/INDUSTRIAL_PLANNING_SUCCESSOR_2026-09-06.md",
+      "publication": "industrial/planning/publications/SH-IND-PLAN-DEC-002_v2.0.0.pdf",
+      "sha256": "c4e6b405e5595049dccc29035300f817b1db637c98543d7a73e72f3565234d92",
+      "source_sha256": "7426f5b49ee3a41077382e199ea876f152b0baff79ced1d40cd3cf31516213e3",
+      "brand": "corporate",
+      "normalizer": "qpdf"
+    },
+    {
+      "source": "industrial/planning/docs/FIVE_YEAR_FINANCIAL_PLAN.md",
+      "publication": "industrial/planning/publications/SH-PLAN-FIN-001_v2.0.0.pdf",
+      "sha256": "a212ffff056cbb7e715cddca01cbe52d4a95aa074a811a3827025643f1fb7dc2",
+      "source_sha256": "99226d8c59a9cc06e85bc1298363f7f82e73b67bf6e3ac558638d2aa0aeabbb0",
+      "brand": "aru",
+      "normalizer": "qpdf"
+    },
+    {
+      "source": "industrial/planning/docs/OPERATING_SCENARIOS.md",
+      "publication": "industrial/planning/publications/SH-PLAN-OPS-001_v1.0.0.pdf",
+      "sha256": "d9157a362526e6efe9e819eb841bd38e2a87c8ed09241392459cc2d2ab4d680a",
+      "source_sha256": "ed4ffbe72873e16666d96bde0e46a129cd22c7aaca291128066a54a834cf2796",
+      "brand": "bst",
+      "normalizer": "qpdf"
+    },
+    {
+      "source": "industrial/planning/docs/CAPITAL_INVESTMENT_REVIEW.md",
+      "publication": "industrial/planning/publications/SH-PLAN-CAP-001_v1.0.0.pdf",
+      "sha256": "9d1dfdf6798190177db04220356bcdcc7961c46722dbeb57138ae9b5ca4d01ab",
+      "source_sha256": "8c2f1238baab76ddaa42f804ae2998991bbd307eab67695730b02bf08ea6c8ba",
+      "brand": "aru",
+      "normalizer": "qpdf"
+    },
+    {
+      "source": "industrial/planning/docs/TRANSACTION_EVIDENCE.md",
+      "publication": "industrial/planning/publications/SH-PLAN-EVIDENCE-002_v2.0.0.pdf",
+      "sha256": "2e28ddf5a746d27b02d991960c1bc9118e66e040e27dca97039e6aef22aad819",
+      "source_sha256": "6005e7b9edb2a4a6ab348dd12b7bc6fe2aa2a99302c5f4f37da00618f157041c",
+      "brand": "aru",
+      "normalizer": "qpdf"
+    },
+    {
+      "source": "industrial/planning/docs/ENTERPRISE_INTEGRATION.md",
+      "publication": "industrial/planning/publications/SH-PLAN-ENTERPRISE-002_v2.0.0.pdf",
+      "sha256": "2c21e0a2678a2b26f2091de8220e74307043f252d22f567a560eb6b08eeb5a9b",
+      "source_sha256": "6b5552431ced57a4bf7a1161d5a4e8ae43f332aae8474ac4ee96d78373cf7c9d",
+      "brand": "corporate",
+      "normalizer": "qpdf"
     }
   ]
 }

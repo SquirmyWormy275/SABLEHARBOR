@@ -1,0 +1,51 @@
+name: Industrial planning successor acceptance
+
+on:
+  pull_request:
+    paths:
+      - industrial/**
+      - red_wash/**
+      - src/**
+      - config/**
+      - docs/canon/**
+      - tools/documents/**
+      - uv.lock
+      - .github/workflows/industrial-planning-ci.yml
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  reconcile-and-reproduce:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+      - uses: astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d # v10.0.1
+        with:
+          version: "0.12.4"
+          python-version: "3.12.14"
+      - run: uv sync --frozen --all-extras
+      - run: uv run python -m pytest industrial/planning/tests
+      - name: Build and independently reconcile the complete successor
+        run: uv run python -m industrial.planning.build
+      - name: Rebuild every model and compare the complete release bytes
+        run: |
+          cp industrial/dist/v2.0.0/SHA256SUMS.txt /tmp/planning-first-sha256.txt
+          uv run python -m industrial.planning.build
+          cmp /tmp/planning-first-sha256.txt industrial/dist/v2.0.0/SHA256SUMS.txt
+      - name: Validate preserved industrial accounts
+        run: uv run python industrial/tools/validate_industrial_case.py --generate
+      - name: Inspect the extracted public participant corpus
+        run: |
+          uv run python -c "import zipfile; zipfile.ZipFile('industrial/dist/v2.0.0/sable-harbor-industrial-participant-v2.0.0.zip').extractall('/tmp/planning-participant-case')"
+          uv run python scripts/check_public_safety.py /tmp/planning-participant-case
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: industrial-planning-v2-review
+          path: industrial/dist/v2.0.0/
+          if-no-files-found: error

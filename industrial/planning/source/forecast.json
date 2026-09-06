@@ -1,0 +1,424 @@
+{
+  "schema_version": "1.0",
+  "record_id": "SH-PLAN-FIN-20260906-001",
+  "available_at": "2026-09-06T00:00:00-07:00",
+  "forecast_years": [
+    2027,
+    2028,
+    2029,
+    2030,
+    2031
+  ],
+  "scenarios": [
+    "base",
+    "downside",
+    "expansion"
+  ],
+  "fact_state": "CONDITIONAL_FORECAST",
+  "record_origin": "PUBLIC_SYNTHETIC_PLANNING_MODEL",
+  "anchor": {
+    "source_release": "industrial-participant-v1.0.0",
+    "source_commit": "c792dfcdfaa9b48168cadd3bb9c26d113c24af34",
+    "zip_sha256": "b4d546bdad2e0add933c98d2a70d29658da4b8f2969c4b9e7153dd75906fc0be",
+    "artifact_sha256": {
+      "aru_2026_trial_balance.csv": "a887aff898d4f5222d728dcf07fd25ad5f0ed92a7ba2912597b26571aca7eaa9",
+      "red_wash_2026_trial_balance.csv": "8f512471feecc6d1006d81cde23e9347a3ce697f9bf509d00b663fde4844fef1"
+    },
+    "period_end": "2026-12-31",
+    "boundary": "Accepted closing scenario, not observed December accounts. P&L closes into retained earnings without changing accepted net assets or cash.",
+    "opening_balances": {
+      "ARU_GROUP": {
+        "1000": 4198440,
+        "1100": 6120000,
+        "1150": 49240,
+        "1200": 1854000,
+        "1300": 721000,
+        "1400": 61550000,
+        "1490": -2684091,
+        "1500": 2500000,
+        "1590": -491783,
+        "1600": 14762500,
+        "1700": 240968,
+        "1800": 587500,
+        "2000": -3090000,
+        "2100": -1030000,
+        "2110": -241781,
+        "2200": -1750000,
+        "2250": -216667,
+        "2300": -600000,
+        "2400": -21375000,
+        "2600": -2008219,
+        "3000": -56004880,
+        "3100": -3091227
+      },
+      "RWH_PS": {
+        "1000": 2000000,
+        "1100": 4550000,
+        "1200": 8608462,
+        "1210": 1073654,
+        "1300": 500000,
+        "1400": 62250000,
+        "1490": -3581250,
+        "2000": -3000000,
+        "2150": -49240,
+        "2200": -17281868,
+        "2300": -2500000,
+        "3000": -55439133,
+        "3100": 2869375
+      }
+    }
+  },
+  "adjustments": {
+    "base": {
+      "revenue_price_multiplier": 1,
+      "cash_cost_multiplier": 1,
+      "payroll_multiplier": 1,
+      "contract_renewal_price_multipliers": {
+        "ARU-C-002": 1
+      }
+    },
+    "downside": {
+      "revenue_price_multiplier": 1,
+      "cash_cost_multiplier": 1,
+      "payroll_multiplier": 1,
+      "contract_renewal_price_multipliers": {
+        "ARU-C-002": 0.88
+      }
+    },
+    "expansion": {
+      "revenue_price_multiplier": 1,
+      "cash_cost_multiplier": 1,
+      "payroll_multiplier": 1,
+      "contract_renewal_price_multipliers": {
+        "ARU-C-002": 1.03
+      }
+    }
+  },
+  "working_capital": {
+    "external_collection_profile": [
+      {
+        "lag_months": 1,
+        "fraction": 0.5
+      },
+      {
+        "lag_months": 2,
+        "fraction": 0.5
+      }
+    ],
+    "opening_ar_collection_profile": [
+      {
+        "lag_months": 0,
+        "fraction": 0.75
+      },
+      {
+        "lag_months": 1,
+        "fraction": 0.25
+      }
+    ],
+    "opening_payables_due_month": 1,
+    "opening_operating_accruals_due_month": 2,
+    "aru_safety_stock_minimum_usd": 1854000,
+    "aru_safety_stock_growth_share": 0.25,
+    "prepaids_boundary": "Inherited prepaids maintained as rolling deposits; no fictional refund or income release.",
+    "collection_boundary": "Synthetic collections and opening aging reconstruction, not observed receipts.",
+    "opening_ic_payable_by_seller_segment_usd": {
+      "BST": 16550,
+      "TERMINALS": 10650,
+      "TRUCKING": 22040
+    }
+  },
+  "payroll": {
+    "corporate_fte": 10,
+    "boundary": "Accepted 2025 loaded payroll scaled by declared segment FTE and operating cost index."
+  },
+  "debt": {
+    "legacy_term_rate_pct": 6.75,
+    "legacy_quarterly_principal_usd": 375000,
+    "legacy_principal_months": [
+      1,
+      4,
+      7,
+      10
+    ],
+    "legacy_term_maturity": "2031-01-07",
+    "legacy_issue_amortization_per_month_usd": 5000,
+    "lease_rate_pct": 5,
+    "lease_annual_principal_usd": 500000,
+    "revolver_capacity_usd": 5000000,
+    "revolver_fee_pct": 0.25,
+    "refinancing": {
+      "base": {
+        "available_principal_usd": 18000000,
+        "rate_pct": 7,
+        "fee_pct": 1
+      },
+      "downside": {
+        "available_principal_usd": 12000000,
+        "rate_pct": 9,
+        "fee_pct": 1.5
+      },
+      "expansion": {
+        "available_principal_usd": 20000000,
+        "rate_pct": 7.5,
+        "fee_pct": 1
+      }
+    },
+    "new_term_months": 60,
+    "new_term_annual_principal_pct": 5,
+    "boundary": "Conditional January 2031 refinancing, not executed facilities. Finite availability; unpaid maturities stay old debt. Revolver undrawn. Legacy 60-month fee term interpreted as five-year maturity.",
+    "interest_timing_convention": "Monthly opening principal balances accrue ACT/365 interest; scheduled principal and refinancing settle in the maturity/payment month-end bucket. A new draw accrues interest beginning the next month, avoiding double interest on a same-month refinance. This disclosed monthly approximation does not claim exact seventh-of-month cash interest.",
+    "lease_annual_rou_depreciation_usd": 500000
+  },
+  "tax": {
+    "ARU_GROUP": {
+      "rate_pct": 25,
+      "nol_utilization_limit_pct": 80,
+      "recognize_new_nol_dta": false,
+      "opening_nol_usd": 0
+    },
+    "RWH_PS": {
+      "rate_pct": 18,
+      "nol_utilization_limit_pct": 80,
+      "recognize_new_nol_dta": false,
+      "opening_nol_usd": 0
+    },
+    "payment_months": [
+      3,
+      6,
+      9,
+      12
+    ],
+    "goodwill_original_tax_basis_usd": 13000000,
+    "goodwill_original_amortization_months": 180,
+    "goodwill_completed_months_at_anchor": 12,
+    "opening_goodwill_amortization_usd": 866667,
+    "initial_goodwill_excess_usd": 1762500,
+    "reserve_dta_policy": "Carry accepted opening $587,500 conditional DTA; downside explicitly records full prospective valuation allowance from January2027. No ARU reserve settlement occurs. Future settlement requires redetermined tax basis, not automatic expense deduction.",
+    "nol_policy": "80% utilization ceiling, indefinite modeled carryforward, full valuation allowance on newly generated losses; no speculative NOL DTA income. Scenario convention, not a return.",
+    "mine_tax_boundary": "Continue accepted simplified 18% book-based mine convention including ARO accretion, not statutory federal/state tax.",
+    "goodwill_policy": "Independent original $13M tax goodwill amortizes over 180 months; preserve conditional no-opening-DTL treatment of initial $1.7625M book excess.",
+    "reserve_temporary_difference_usd": 2350000,
+    "reserve_dta_valuation_allowance_pct": {
+      "base": 0,
+      "downside": 100,
+      "expansion": 0
+    }
+  },
+  "funding": {
+    "cash_floor_usd": {
+      "ARU_GROUP": 2000000,
+      "RWH_PS": 2000000
+    },
+    "annual_conditional_equity_limits_usd": {
+      "base": {
+        "2027": {
+          "ARU_GROUP": 6000000,
+          "RWH_PS": 12000000
+        },
+        "2028": {
+          "ARU_GROUP": 6000000,
+          "RWH_PS": 12000000
+        },
+        "2029": {
+          "ARU_GROUP": 6000000,
+          "RWH_PS": 12000000
+        },
+        "2030": {
+          "ARU_GROUP": 6000000,
+          "RWH_PS": 12000000
+        },
+        "2031": {
+          "ARU_GROUP": 6000000,
+          "RWH_PS": 12000000
+        }
+      },
+      "downside": {
+        "2027": {
+          "ARU_GROUP": 4000000,
+          "RWH_PS": 12000000
+        },
+        "2028": {
+          "ARU_GROUP": 4000000,
+          "RWH_PS": 12000000
+        },
+        "2029": {
+          "ARU_GROUP": 4000000,
+          "RWH_PS": 12000000
+        },
+        "2030": {
+          "ARU_GROUP": 4000000,
+          "RWH_PS": 12000000
+        },
+        "2031": {
+          "ARU_GROUP": 4000000,
+          "RWH_PS": 12000000
+        }
+      },
+      "expansion": {
+        "2027": {
+          "ARU_GROUP": 10000000,
+          "RWH_PS": 15000000
+        },
+        "2028": {
+          "ARU_GROUP": 10000000,
+          "RWH_PS": 15000000
+        },
+        "2029": {
+          "ARU_GROUP": 10000000,
+          "RWH_PS": 15000000
+        },
+        "2030": {
+          "ARU_GROUP": 10000000,
+          "RWH_PS": 15000000
+        },
+        "2031": {
+          "ARU_GROUP": 10000000,
+          "RWH_PS": 15000000
+        }
+      }
+    },
+    "boundary": "Finite conditional management allocations, not bank/member commitments. Only modeled receipts enter cash. Unfunded due costs stay liabilities; unfunded capex is deferred. Positive cash floors do not establish solvency when arrears exist."
+  },
+  "mine": {
+    "opening_finished_inventory_lb": 172400,
+    "base_annual_production_cash_usd": 27950000,
+    "base_annual_ore_tons": 175000,
+    "production_fixed_cost_share": 0.35,
+    "legacy_production_dda_usd_lb": "6.393861892583119",
+    "production_tax_usd_per_lb_at_base_price": "3.882170259408111",
+    "base_price_usd_lb": 72.95,
+    "royalty_revenue_pct": 2,
+    "annual_freight_assay_base_usd": 600000,
+    "annual_platform_site_ga_base_usd": 2800000,
+    "base_sales_lb": 500000,
+    "aro_discount_pct": 6.5,
+    "aro_settlement_schedule_usd": {
+      "2027": 262656,
+      "2028": 269223,
+      "2029": 275953,
+      "2030": 6064549,
+      "2031": 289923
+    },
+    "production_cost_base_index": 1.03,
+    "base_annual_production_lb": 547400,
+    "idle_capacity_accounting": "Fixed production overhead and fixed production-asset depreciation are allocated to inventory only up to actual/normal production; abnormal idle share remains expense. No stock asset is created merely by standing idle.",
+    "baseline_site_fte": 128,
+    "site_staff_cost_exposure_share": 0.5,
+    "baseline_platform_fte": 12,
+    "platform_staff_cost_exposure_share": 0.5,
+    "staffing_cost_boundary": "Site and platform FTE change cash costs through explicit 50% cost-exposure elasticities around accepted operating staffing. This is a calibrated sensitivity, not individual mine payroll/timecard evidence."
+  },
+  "capital": {
+    "aru_new_asset_life_years": 15,
+    "mine_new_asset_life_years": 20,
+    "depreciation_convention": "Replacement assets enter owned PPE when paid and depreciate from the following month. Paid growth enters account1410 construction in progress, transfers without cash to owned PPE only after full project funding and its conditional in-service date, and depreciates from the following month. A missed funding gate preserves paid CIP without fabricated commissioning.",
+    "growth_project_by_segment": {
+      "BST": "RAIL-RESILIENCE",
+      "TERMINALS": "TERMINAL-EXPANSION",
+      "TRUCKING": "TRUCK-CAPACITY",
+      "WAREHOUSE": "WAREHOUSE-CAPACITY",
+      "RWH": "MINE-CAPACITY"
+    }
+  },
+  "opening_assets": [
+    {
+      "entity": "ARU_GROUP",
+      "asset_id": "ARU-LAND",
+      "gross_usd": 8000000,
+      "accum_usd": 0,
+      "annual_depreciation_usd": 0,
+      "mode": "LAND"
+    },
+    {
+      "entity": "ARU_GROUP",
+      "asset_id": "ARU-TRACK",
+      "gross_usd": 15000000,
+      "accum_usd": 491781,
+      "annual_depreciation_usd": 500000,
+      "mode": "STRAIGHT_LINE"
+    },
+    {
+      "entity": "ARU_GROUP",
+      "asset_id": "ARU-TERMINAL",
+      "gross_usd": 12000000,
+      "accum_usd": 590137,
+      "annual_depreciation_usd": 600000,
+      "mode": "STRAIGHT_LINE"
+    },
+    {
+      "entity": "ARU_GROUP",
+      "asset_id": "ARU-MOBILE",
+      "gross_usd": 7000000,
+      "accum_usd": 983562,
+      "annual_depreciation_usd": 1000000,
+      "mode": "STRAIGHT_LINE"
+    },
+    {
+      "entity": "ARU_GROUP",
+      "asset_id": "ARU-SUSTAIN-2026",
+      "gross_usd": 3300000,
+      "accum_usd": 151250,
+      "annual_depreciation_usd": 330000,
+      "mode": "STRAIGHT_LINE"
+    },
+    {
+      "entity": "ARU_GROUP",
+      "asset_id": "ARU-CATCHUP-2026",
+      "gross_usd": 11000000,
+      "accum_usd": 336111,
+      "annual_depreciation_usd": "733333.333333333333",
+      "mode": "STRAIGHT_LINE"
+    },
+    {
+      "entity": "ARU_GROUP",
+      "asset_id": "ARU-INTERFACE-2026",
+      "gross_usd": 5250000,
+      "accum_usd": 131250,
+      "annual_depreciation_usd": 262500,
+      "mode": "STRAIGHT_LINE"
+    },
+    {
+      "entity": "RWH_PS",
+      "asset_id": "RW-LEGACY-PRODUCTION",
+      "gross_usd": 59000000,
+      "accum_usd": 3500000,
+      "annual_depreciation_usd": 0,
+      "mode": "UNITS_OF_PRODUCTION"
+    },
+    {
+      "entity": "RWH_PS",
+      "asset_id": "RW-INTERFACE-2026",
+      "gross_usd": 3250000,
+      "accum_usd": 81250,
+      "annual_depreciation_usd": 162500,
+      "mode": "STRAIGHT_LINE"
+    }
+  ],
+  "assumption_register": [
+    {
+      "id": "FWD-001",
+      "state": "CONDITIONAL_FORECAST",
+      "decision": "2027\u20132031 prospective scenarios as of September 6, 2026; published 2026 remains unchanged."
+    },
+    {
+      "id": "FWD-002",
+      "state": "PROVISIONAL_ASSUMPTION",
+      "decision": "Synthetic opening asset-card allocations reconcile exactly to accepted gross/accumulated totals."
+    },
+    {
+      "id": "FWD-003",
+      "state": "PROVISIONAL_ASSUMPTION",
+      "decision": "Renewal multipliers change future prices. Operations supplies physical served volumes and capacity losses; no executed renewal is claimed."
+    },
+    {
+      "id": "FWD-004",
+      "state": "PROVISIONAL_ASSUMPTION",
+      "decision": "Calibrated item quantities/rates drive procurement and declared FTE drive payroll; no invented supplier quotation."
+    },
+    {
+      "id": "FWD-005",
+      "state": "CONDITIONAL_FORECAST",
+      "decision": "Funding gaps, unpaid obligations and deferred capital remain explicit; no unlimited capital or income plug."
+    }
+  ]
+}
