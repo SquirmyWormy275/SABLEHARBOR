@@ -210,6 +210,12 @@ def producer_pins(output, root=ROOT):
             ):
                 raise ValueError("forecast effective policy differs from canonical release policy")
     enterprise = json.loads((output / "enterprise/summary.json").read_text())
+    revision = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=root, text=True).strip()
+    if (
+        enterprise.get("source_revision") != revision
+        or enterprise["identity"].get("legacy_metadata", {}).get("source_revision") != revision
+    ):
+        raise ValueError("Enterprise and legacy execution must bind to the same source revision")
     for name, expected in enterprise["identity"]["source_inputs"].items():
         if hashlib.sha256((root / name).read_bytes()).hexdigest() != expected:
             raise ValueError(f"stale enterprise input: {name}")

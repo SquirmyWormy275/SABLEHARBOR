@@ -17,7 +17,10 @@ from industrial.planning.integrity import (
 
 class ExportIntegrityTests(unittest.TestCase):
     def test_in_memory_policy_override_cannot_be_rebound_as_default_release(self):
-        with tempfile.TemporaryDirectory() as temp:
+        with (
+            tempfile.TemporaryDirectory() as temp,
+            patch("industrial.planning.integrity.subprocess.check_output", return_value="a" * 40),
+        ):
             root = Path(temp)
             source = root / "industrial/planning/source"
             source.mkdir(parents=True)
@@ -29,7 +32,15 @@ class ExportIntegrityTests(unittest.TestCase):
                 (output / scope).mkdir(parents=True)
                 if scope == "enterprise":
                     (output / scope / "summary.json").write_text(
-                        json.dumps({"identity": {"source_inputs": {}}})
+                        json.dumps(
+                            {
+                                "source_revision": "a" * 40,
+                                "identity": {
+                                    "source_inputs": {},
+                                    "legacy_metadata": {"source_revision": "a" * 40},
+                                },
+                            }
+                        )
                     )
                     continue
                 (output / scope / "manifest.json").write_text(
@@ -52,6 +63,14 @@ class ExportIntegrityTests(unittest.TestCase):
             ).hexdigest()
             path.write_text(json.dumps(manifest))
             with self.assertRaisesRegex(ValueError, "noncanonical effective"):
+                producer_pins(output, root)
+            manifest["effective_input_sha256"]["operating_plan"] = digest
+            path.write_text(json.dumps(manifest))
+            enterprise = output / "enterprise/summary.json"
+            value = json.loads(enterprise.read_text())
+            value["identity"]["legacy_metadata"]["source_revision"] = "b" * 40
+            enterprise.write_text(json.dumps(value))
+            with self.assertRaisesRegex(ValueError, "same source revision"):
                 producer_pins(output, root)
 
     def test_stale_source_or_altered_export_cannot_reuse_acceptance(self):

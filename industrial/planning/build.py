@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import subprocess
 from pathlib import Path
 
 from industrial.planning import (
@@ -24,6 +25,8 @@ def build(output=OUT, *, allow_working_tree=False, package=True):
     """Rebuild all dependencies before accepting or distributing their outputs."""
     output = Path(output)
     output.mkdir(parents=True, exist_ok=True)
+    revision = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()
+    inputs = integrity.source_fingerprint()
     print("Rebuilding preserved v1 industrial and mine anchors", flush=True)
     run_builders()
     integrity.preservation()
@@ -39,6 +42,12 @@ def build(output=OUT, *, allow_working_tree=False, package=True):
     )
     print("Building legal, enterprise and unit consolidation", flush=True)
     enterprise.build(output / "enterprise", forecast_result=finances)
+    if (
+        revision
+        != subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()
+        or inputs != integrity.source_fingerprint()
+    ):
+        raise ValueError("Source changed during model execution; repeat from a stable checkout")
     print("Independently recomputing exported accounts and temporal controls", flush=True)
     report = integrity.validate(output)
     if package:
