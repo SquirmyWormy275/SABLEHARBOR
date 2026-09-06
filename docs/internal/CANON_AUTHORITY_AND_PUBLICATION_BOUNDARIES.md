@@ -1,10 +1,11 @@
 # CANON AUTHORITY AND PUBLICATION BOUNDARIES
 
 **Document ID:** `SH-INT-AUTH-BDY-001`  
-**Version:** 1.0.0  
+**Version:** 1.1.0
+**Updated:** September 6, 2026
 **Status:** LOCKED INTERPRETIVE CONTROL  
 **Owner:** Corporate Governance / J2 Headquarters  
-**Related:** `CHAT_CANON_LEDGER_J2_ALEXANDRIA.md`; `../governance/board-records/README.md`; `../CONTROLLED_DOCUMENT_INDEX.md`
+**Related:** [Design-session ledger](CHAT_CANON_LEDGER_J2_ALEXANDRIA.md); [board records](../governance/board-records/README.md); [controlled-document index](../CONTROLLED_DOCUMENT_INDEX.md); [delivery and packaging policy](../governance/REPOSITORY_DELIVERY_AND_PACKAGING_POLICY.md)
 
 ## Purpose
 
@@ -12,17 +13,47 @@ This record prevents generated artifacts from laundering unsupported authority i
 
 A repository commit, controlled PDF, publication manifest, validation pass, SQLite catalog entry, or repeated cross-reference does not independently prove that a proposition was approved. Those artifacts are evidence of implementation and reconciliation. They do not create approval by themselves.
 
-## Source hierarchy for the September 2026 package
+## Current source hierarchy
 
-1. Pre-existing controlling Sable Harbor canon where it constrains the design.
-2. The September 2026 design-session decisions captured in the chat-derived canon ledger.
-3. The in-universe board approval records that ratify the governance, J2, Alexandria, and controlled-publication package.
+1. Current accepted controlling canon under `docs/canon/`, including dated decisions and their explicit supersession scope.
+2. The in-universe board approval records where they ratify governance, financing, J2, Alexandria, and controlled-publication authority.
+3. Repository-stored design-session ledgers and forensic audit records preserving originating decisions, except where a later accepted controlling record supersedes them.
 4. Canonical Markdown source doctrine.
 5. Generated publications, structured records, catalogs, validators, and indexes.
 
 If a generated publication or structured record conflicts with the source doctrine, the source doctrine controls until corrected.
 
-If source doctrine conflicts with the chat-derived canon ledger or board records, the conflict must be reviewed and resolved rather than hidden by regeneration.
+If source doctrine conflicts with an applicable ledger or board record, resolve and record the
+conflict rather than hiding it through regeneration. Preserve historical statements with their
+original dates; identify the later controlling resolution in current-facing records. This order
+aligns with [MAINTAINERS.md](../../MAINTAINERS.md) and does not retroactively rewrite the
+September design sessions or invent a later in-universe Board approval.
+
+## Repository acceptance and delivery
+
+Conversation approval is authority to make the approved change and provenance for its recorded
+decision. It is not a substitute for delivery. Preserve the approval's substantive content in
+the repository, reconcile affected sources, and accept the result into controlling canon.
+Only then does the accepted record become the source of truth within its stated scope.
+No reader should need a private conversation or attachment to discover current canon.
+
+A pending branch or PR is a preserved checkpoint, not completed canonical integration. Neither
+a commit without approval nor a completion statement without delivered bytes establishes canon
+or closes work. The accepted source record controls its structured/publication representations;
+those representations preserve and expose its meaning rather than independently approving it.
+
+The [September 6 closeout addendum](../canon/DECISION_REGISTER_ADDENDUM_2026-09-06_CLOSEOUT.md)
+records the owner's approved decisions and their integration boundary. The
+[delivery policy](../governance/REPOSITORY_DELIVERY_AND_PACKAGING_POLICY.md) defines actual
+artifact locations, indexed releases, historical exceptions, and closeout evidence. It leaves
+issue #37's specific catalog/SQLite lifecycle unresolved and preserves public/private boundaries.
+
+The finance-pinned v0.3 lore, base decision register, and board v1.0.0 source are preserved
+byte-for-byte for the older finance snapshot. CLOSE-001 supersedes their conflicting surname
+statements; the [current board doctrine is v1.0.1](../governance/BOARD_AND_CAPITAL_GOVERNANCE_v1.0.1.md).
+The dated addendum and separately versioned successor provide current authority while the
+unchanged earlier sources preserve historical reproducibility. A later canon decision does
+not silently alter the source perimeter or bytes of an already published finance release.
 
 ## Board approval versus document generation
 

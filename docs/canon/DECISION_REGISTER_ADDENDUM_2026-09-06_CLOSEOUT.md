@@ -3,17 +3,20 @@
 **Document ID:** `SH-CANON-CLOSEOUT-20260906-001`  
 **Version:** 1.0.0  
 **Decision date:** September 6, 2026  
+**Owner:** Repository owner
+**State:** LOCKED decisions; expressly reserved implementation remains OPEN
 **Decision authority:** Repository owner's explicit approvals in the canon-closeout conversation  
-**Repository promotion:** PENDING - draft source checkpoint, not completed closeout  
+**Repository promotion:** Controlling when PR #97 is accepted into `main`; branch copies alone are not canonical promotion
 **Structured companion:** [Closeout decision record](../structured/canon_closeout_decisions_2026-09-06.json)
 
 ## Status and authority
 
 The owner explicitly approved the decisions below. Their approval is preserved here so the
-record does not depend on access to a conversation or attachment. This draft does not claim
-that current `main`, controlled publications, catalogs, finance exports, or issue state have
-already been reconciled. Approval, repository integration, canonical promotion, publication,
-and issue closure are distinct events.
+record does not depend on access to a conversation or attachment. The accepted repository
+record is the source of truth. Approval, repository integration, canonical promotion,
+publication, and issue closure are distinct events. PR #97 supplies the integration history;
+the [validation record](../internal/validation/CANON_CLOSEOUT_2026-09-06.md) supplies execution
+evidence. A draft branch, generated PDF, checksum, or passing test alone does not create approval.
 
 Once reconciled and accepted into the repository's controlling canon, this dated addendum
 supersedes conflicting earlier statements within its exact scope. Unrelated OPEN matters
@@ -23,7 +26,7 @@ record does not invent a new in-universe board meeting or backdate these approva
 
 ## CLOSE-001 - Daniel Mercer
 
-**Approved canon state on promotion:** LOCKED
+**Canon state:** LOCKED
 
 The founder and chief executive's full name is **Daniel Mercer**. This preserves the name
 already used in the founding narrative and decision BR-002. Current-facing statements that
@@ -33,14 +36,18 @@ This naming decision does not establish any family relationship with Evan Mercer
 not change either person's identity, role, board membership, or history, and it does not
 resolve other characters' surnames by implication.
 
-Reconcile the current board doctrine and structured director record, corporate-lore
-current-governance section, and finance collision COL-013. Preserve the collision's prior
-statements and dated resolution rather than deleting its history. Existing finance source
-locks and released packages must not be silently rewritten.
+The current [board doctrine v1.0.1](../governance/BOARD_AND_CAPITAL_GOVERNANCE_v1.0.1.md),
+structured director record, and finance collision COL-013 agree with this name. This
+addendum supersedes conflicting current-governance statements in the earlier corporate
+lore and decision register within this scope. The collision retains its prior statements
+and dated resolution. The finance-pinned corporate lore v0.3, original decision register,
+and board doctrine v1.0.0 retain their exact source bytes; they are historical baselines,
+not competing current answers. Existing finance source locks and released packages retain
+their original snapshots; they must not be silently rewritten.
 
 ## CLOSE-002 - Semaphore precedence
 
-**Approved canon state on promotion:** LOCKED vocabulary; runtime implementation remains separate  
+**Canon state:** LOCKED vocabulary; runtime implementation remains separate
 **Issue:** #23
 
 | Level | Agreed handling meaning |
@@ -62,7 +69,7 @@ not rewrite the metadata or vocabulary of historical cables.
 
 ## CLOSE-003 - Planned Alexandria AR and VR integration
 
-**Approved canon state on promotion:** LOCKED ARCHITECTURAL DIRECTION; delivery details OPEN  
+**Canon state:** LOCKED ARCHITECTURAL DIRECTION; delivery details OPEN
 **Issue:** #25
 
 Alexandria must be fully usable through an ordinary desktop interface. Future augmented
@@ -82,7 +89,7 @@ content remains non-authoritative and cannot automatically enter institutional r
 
 ## CLOSE-004 - Repository delivery and packaging
 
-**Approved canon state on promotion:** LOCKED repository policy  
+**Canon state:** LOCKED repository policy
 **Issue:** #35; #37's specific catalog/SQLite lifecycle remains a separate unresolved decision
 
 | Material | Agreed location and treatment |
@@ -111,34 +118,29 @@ Additional documentation must add traceability rather than create competing sour
 The existing public/private boundary is unchanged; private evaluator material is not made
 public by a repository-delivery requirement.
 
-## Implementation checkpoint - September 6, 2026
+## Repository implementation and historical checkpoint
 
-**Base reviewed:** `8d20e51a7cf0068729e3296840ccb5ba1ac1d7bd`  
-**Checkpoint state:** SOURCE-ONLY DRAFT; publications and final acceptance pending
+**Base reviewed:** `8d20e51a7cf0068729e3296840ccb5ba1ac1d7bd`
 
-The four affected Alexandria doctrine sources and the existing Pinakes Semaphore entry
-have been edited to reflect CLOSE-002 and CLOSE-003. This addendum and its structured companion
-preserve all four approvals. Remaining current-source, authority-policy, navigation, and
-Daniel/COL-013 reconciliation is not claimed complete.
+The initial source-only checkpoint was preserved in commit
+`26644c3bb51625fde8e5f866cb561cf729f3357e`. It accurately recorded the then-missing qpdf
+dependency and denied package-installation attempt. The owner subsequently authorized a
+narrow publication-builder compatibility update, reconciliation, validation, and merge.
+That permission does not grant new in-world authority to an AI or change Daedalus doctrine.
 
-The existing publication builder requires LibreOffice, Ghostscript, and qpdf. This environment
-provides a headless office runtime and Ghostscript, but qpdf was absent. Normal package
-installation/update failed, including environment permission errors. No installation bypass,
-alternative renderer, or successful publication rebuild is claimed. Existing PDF files and
-their manifests/catalogs are therefore not current representations of these source edits.
+The compatible build keeps office rendering and Ghostscript page sizing, adds an explicit
+pypdf normalization backend, and records the selected backend on newly built publications.
+It does not promise byte identity across different toolchains. Historical PDFs and package
+bytes are retained with their original identity; the current manifest identifies replacements.
 
-Before canonical promotion and issue closure:
-
-- [ ] Finish current-facing Daniel, decision-register, authority-policy, and navigation reconciliation.
-- [ ] Publish the approved packaging policy and index its source/structured/publication representations.
-- [ ] Align current-source versions and controlled-publication output versions.
-- [ ] Rebuild affected controlled PDFs, publication manifests, JSON catalog, and SQLite catalog using an accepted toolchain.
-- [ ] Visually inspect changed publications and verify source/output hashes and links.
-- [ ] Run applicable maintainer validators, focused regression tests, the repository test suite, and diff checks.
-- [ ] Accept the reconciled commit into controlling canon on `main`; record the actual commit/PR and validation evidence.
-- [ ] Close #23 and #25 only for the agreed decision scope; retain AR/VR implementation limits explicitly.
-- [ ] Close #35 only after its repository-wide policy and artifact disposition criteria are satisfied.
+The [delivery policy](../governance/REPOSITORY_DELIVERY_AND_PACKAGING_POLICY.md) records the
+repository-wide artifact disposition, including named historical ZIP exceptions and the
+existing finance release. The [validation record](../internal/validation/CANON_CLOSEOUT_2026-09-06.md)
+records checks actually executed, limitations, and the publication/merge evidence. GitHub
+issue state records actual closure: #23 and #25 cover these decision scopes, and #35 covers
+the adopted packaging policy and documented disposition. AR/VR runtime completion is not
+claimed by closing its architectural-direction issue.
 
 Issues #11, #12, #18, #19, #21, #22, #24, #33, #34, #37, #38, #44, and #88 are not
-resolved by this checkpoint. No claim is made that the separate geospatial or ARU draft PRs
+resolved by this addendum. No claim is made that the separate geospatial or ARU draft PRs
 have been integrated.

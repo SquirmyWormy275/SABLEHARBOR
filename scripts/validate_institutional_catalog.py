@@ -1,20 +1,21 @@
 #!/usr/bin/env python3
 """Deterministic reconciliation and employee-discovery acceptance tests."""
 import hashlib, json, sqlite3
+from datetime import date
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 manifest = json.loads((ROOT/'docs/governance/publication_manifest.json').read_text())
 catalog = json.loads((ROOT/'docs/internal/institutional_catalog.json').read_text())
 artifacts = manifest['artifacts']; objects = catalog['objects']
-assert manifest['generated_for_version'] == '2026-09-05'
+assert date.fromisoformat(manifest['generated_for_version']) >= date(2026, 9, 6)
 assert manifest['reproducibility'] == {
     'mutable_pdf_metadata': 'removed',
     'document_id': 'derived from page content',
     'page_size': 'US Letter',
 }
-assert catalog['version'] == '1.0.1'
-assert catalog['effective_date'] == '2026-09-05'
+assert catalog['version'] == '1.0.2'
+assert catalog['effective_date'] == manifest['generated_for_version']
 assert len(objects) == len(artifacts), 'catalog/publication count mismatch'
 by_source = {o['source']:o for o in objects}
 artifacts_by_source = {a['source']:a for a in artifacts}
@@ -27,6 +28,17 @@ for a in artifacts:
     assert hashlib.sha256(src.read_bytes()).hexdigest() == a['source_sha256'] == o['source_sha256']
     assert hashlib.sha256(pdf.read_bytes()).hexdigest() == a['sha256'] == o['publication_sha256']
     assert all(o[k] for k in ('id','title','owner','version','status','source','publication'))
+
+for source, version in {
+    'docs/governance/BOARD_AND_CAPITAL_GOVERNANCE_v1.0.1.md': '1.0.1',
+    'docs/j2/alexandria/SEMAPHORE_TRAFFIC_SYSTEM.md': '1.0.1',
+    'docs/j2/alexandria/ALEXANDRIA_CHARTER.md': '1.0.1',
+    'docs/j2/alexandria/VISUALIZATION_AND_BRANCHING_HISTORY.md': '1.0.1',
+    'docs/j2/alexandria/DAEDALUS_PERSONAL_INSTANCE_AND_WORKSPACE.md': '1.0.1',
+    'docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-06_CLOSEOUT.md': '1.0.0',
+    'docs/governance/REPOSITORY_DELIVERY_AND_PACKAGING_POLICY.md': '1.0.0',
+}.items():
+    assert by_source[source]['version'] == version, f'closeout version mismatch: {source}'
 
 red_wash_records = {
     'docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05.md': {
@@ -59,7 +71,11 @@ tests = {
  'Orientation ownership':'orientation', 'Daedalus relationship':'daedalus',
  'JAG publication':'jag', 'committee charter':'committee', 'finance doctrine':'finance',
  'Red Wash transaction record':'red wash transaction',
- 'Red Wash logistics dependency':'transportation dependency'}
+ 'Red Wash logistics dependency':'transportation dependency',
+ 'Founder name':'"Daniel Mercer"',
+ 'Semaphore precedence':'"handling urgency"',
+ 'Planned VR interface':'"virtual reality"',
+ 'Repository delivery policy':'"repository delivery"'}
 for label, term in tests.items():
     assert db.execute('select count(*) from institutional_search where institutional_search match ?', (term,)).fetchone()[0] > 0, label
 assert db.execute("select count(*) from institutional_object where category='committee charter'").fetchone()[0] == 5

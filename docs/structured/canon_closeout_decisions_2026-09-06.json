@@ -5,9 +5,11 @@
   "canonical_source": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-06_CLOSEOUT.md",
   "approval_authority": "repository_owner_explicit_conversation_approvals",
   "base_reviewed": "8d20e51a7cf0068729e3296840ccb5ba1ac1d7bd",
-  "repository_promotion": "PENDING",
-  "publication_reconciliation": "NOT_COMPLETED",
-  "issue_closure": "NOT_PERFORMED",
+  "repository_promotion": "ON_ACCEPTED_MERGE_OF_PR_97_TO_MAIN",
+  "state": "LOCKED_DECISIONS_WITH_EXPLICIT_OPEN_IMPLEMENTATION",
+  "publication_reconciliation": "SEE_VALIDATION_RECORD",
+  "validation_record": "docs/internal/validation/CANON_CLOSEOUT_2026-09-06.md",
+  "issue_closure": "GITHUB_STATE_AFTER_ACCEPTED_INTEGRATION",
   "decisions": [
     {
       "id": "CLOSE-001",
@@ -64,10 +66,10 @@
       "public_private_boundary": "UNCHANGED"
     }
   ],
-  "validation_checkpoint": {
-    "source_diff_check": "PASS",
-    "controlled_publication_rebuild": "BLOCKED_MISSING_QPDF_AND_PACKAGE_INSTALL_PERMISSION",
-    "catalog_rebuild": "NOT_RUN",
-    "full_maintainer_acceptance": "NOT_RUN"
+  "historical_checkpoint": {
+    "commit": "26644c3bb51625fde8e5f866cb561cf729f3357e",
+    "state": "SOURCE_ONLY_DRAFT",
+    "blocker": "MISSING_QPDF_AND_PACKAGE_INSTALL_PERMISSION",
+    "subsequent_owner_authorization": "COMPATIBLE_PUBLICATION_BUILDER_RECONCILIATION_VALIDATION_AND_MERGE"
   }
 }

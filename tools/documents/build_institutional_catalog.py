@@ -20,6 +20,8 @@ def field(text: str, name: str, default: str = "") -> str:
 
 
 def category(path: str) -> str:
+    if path == "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-06_CLOSEOUT.md":
+        return "canon decision addendum"
     if path == "docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05.md":
         return "Red Wash transaction and operating record"
     if path.startswith("red_wash/logistics/"):
@@ -37,6 +39,8 @@ def category(path: str) -> str:
 
 def inferred_owner(path: str) -> str:
     name = Path(path).stem
+    if path == "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-06_CLOSEOUT.md":
+        return "Repository owner"
     if path == "docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05.md":
         return "Pale Sun operating authority"
     if path.startswith("red_wash/logistics/"):
@@ -106,8 +110,8 @@ def main() -> None:
 
     payload = {
         "catalog_id": "SH-ALX-CATALOG-001",
-        "version": "1.0.1",
-        "effective_date": "2026-09-05",
+        "version": "1.0.2",
+        "effective_date": manifest["generated_for_version"],
         "authority": "Derived from canonical Markdown and the controlled-publication manifest; not a parallel source of truth.",
         "objects": objects,
     }

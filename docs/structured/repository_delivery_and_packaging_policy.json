@@ -1,0 +1,199 @@
+{
+  "document_id": "SH-GOV-DELIVERY-001",
+  "title": "Repository Delivery and Packaging Policy",
+  "version": "1.0.0",
+  "decision_date": "2026-09-06",
+  "state": "LOCKED",
+  "state_applies_when": "Accepted into controlling repository canon; a pending branch or PR is not canonical integration.",
+  "owner": "Repository owner",
+  "stewardship": "Repository maintainers",
+  "decision_authority": "Repository owner's explicit approval, recorded as CLOSE-004",
+  "board_approval_asserted": false,
+  "source": "docs/governance/REPOSITORY_DELIVERY_AND_PACKAGING_POLICY.md",
+  "decision_record": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-06_CLOSEOUT.md",
+  "delivery_boundary": {
+    "chat_only_is_delivery": false,
+    "attachment_only_is_delivery": false,
+    "scratch_only_is_delivery": false,
+    "checksum_without_retrievable_bytes_is_delivery": false,
+    "commit_alone_creates_approval": false,
+    "pending_pr_is_canonical_integration": false,
+    "conversation_role": "Originating approval and provenance, preserved substantively in a dated repository decision record.",
+    "source_of_truth": "Reconciled and accepted controlling repository canon, within the accepted record's explicit scope.",
+    "closeout_evidence": [
+      "Accepted commit or PR",
+      "Controlling record paths",
+      "Retrievable artifact paths or release URLs",
+      "Applicable validation results",
+      "Remaining implementation limits"
+    ]
+  },
+  "artifact_disposition": [
+    {
+      "class": "Canonical documents, code, schemas, configuration, generators",
+      "location": "Git",
+      "rule": "Versioned source with identifiers, status, and lineage."
+    },
+    {
+      "class": "Approved source artwork and canonical visual references",
+      "location": "Git",
+      "rule": "Preserve provenance, rights information, and explicit source-artwork exceptions including controlling J2 PNGs."
+    },
+    {
+      "class": "Controlled corporate PDFs and publications",
+      "location": "Git",
+      "rule": "Regenerate from accepted source and reconcile versions, manifests, and hashes; publications do not independently create canon."
+    },
+    {
+      "class": "New distributable ZIP packages and other complete packaged bundles",
+      "location": "Indexed GitHub Releases",
+      "rule": "Versioned assets with manifests, SHA-256 checksums, source identity, and limitations; no duplicate current package bytes in Git by default."
+    },
+    {
+      "class": "Convenience renders and previews",
+      "location": "Temporary by default",
+      "rule": "Retain deliberately for an identified review or evidence purpose with source lineage; no independent authority."
+    },
+    {
+      "class": "Temporary previews, intermediate renders, caches, build debris",
+      "location": "Excluded from Git unless deliberately retained as evidence",
+      "rule": "Local generation is a working step, not delivery."
+    },
+    {
+      "class": "Generated institutional JSON and SQLite catalogs",
+      "location": "Existing in-tree placement",
+      "rule": "Keep current regeneration rules pending separate issue #37 lifecycle decision.",
+      "issue": 37,
+      "state": "OPEN"
+    }
+  ],
+  "release_rules": {
+    "index": "docs/CONTROLLED_DOCUMENT_INDEX.md",
+    "discovery": "Direct package link or indexed release record.",
+    "required_identity": [
+      "Version/tag",
+      "Source commit and relevant canon snapshot",
+      "Asset names and retrievable release URLs",
+      "Manifests",
+      "SHA-256 checksums",
+      "Limitations",
+      "Supersession or historical status where applicable"
+    ],
+    "automatic_source_archive_is_controlled_package": false,
+    "published_bytes_preserved": true,
+    "correction_requires_new_version_and_changelog": true,
+    "migration_requires": [
+      "Verify destination retrieval and byte hash",
+      "Preserve identity and disposition flags",
+      "Update navigation and provenance"
+    ],
+    "migration_claimed_by_this_policy": false,
+    "bulk_deletion_authorized": false,
+    "finance_process": "docs/commercialization/RELEASE_PROCESS.md"
+  },
+  "existing_package_inventory": {
+    "observed_date": "2026-09-06",
+    "scope": "Two ZIP packages tracked in the closeout checkout and the existing finance v0.1.0 GitHub Release; not an inventory of every past commit's artifacts.",
+    "local_hash_method": "SHA-256 calculated from local tracked ZIP bytes.",
+    "release_metadata_source": "https://api.github.com/repos/SquirmyWormy275/SABLEHARBOR/releases/tags/sable-harbor-finance-v0.1.0",
+    "release_verification_scope": "GitHub API asset metadata/digests and published release record read; no new local download or revalidation of internal manifests claimed.",
+    "historical_exceptions": [
+      {
+        "path": "assets/brand/packages/sable-harbor-logo-system-v0.1.0.zip",
+        "version": "0.1.0",
+        "bytes": 2635913,
+        "sha256": "8c5d9c6c0de8163896a6ddc9c318f90a4927f5b2e54eba081c829aac20301ecd",
+        "disposition": "Retain unchanged in-tree as explicit historical placement exception.",
+        "artifact_state": "SUPERSEDED",
+        "retention_role": "HISTORICAL_SNAPSHOT",
+        "distribution_state": "DO_NOT_DISTRIBUTE",
+        "canon_effective_through": "2026-09-02",
+        "superseded_on": "2026-09-05",
+        "source_manifest": "assets/brand/packages/manifest.json",
+        "reason": "Predates approved Pale Sun/Red Wash raster-source overrides and contains noncurrent J2 stationery.",
+        "current_replacement": null,
+        "migration_performed": false,
+        "future_distribution": "Requires a separately built, reviewed, versioned package with current approved assets."
+      },
+      {
+        "path": "docs/organization/briefing/SABLE_HARBOR_Organization_Briefing_v1.0.zip",
+        "version": "1.0.0",
+        "bytes": 1437035,
+        "sha256": "6a058ac51d686ef24987fa4a46e3299f79a2e22891569aa676621b6d88a84b6e",
+        "disposition": "Retain unchanged in-tree as explicit historical placement exception; preserve existing links and prior delivery history.",
+        "source_manifest": "docs/organization/briefing/manifest.json",
+        "source_index": "docs/organization/briefing/README.md",
+        "canonical_date_in_manifest": "2026-08-31",
+        "distribution_state_in_source_manifest": null,
+        "distribution_state_note": "No separate distribution-state flag is supplied by the existing manifest; none is invented here.",
+        "zip_hash_note": "New inventory of enclosing ZIP; existing briefing manifest inventories individual outputs.",
+        "revalidated_against_later_canon": false,
+        "migration_performed": false,
+        "future_revised_version_location": "GitHub Release; do not silently overwrite prior ZIP bytes."
+      }
+    ],
+    "releases": [
+      {
+        "tag": "sable-harbor-finance-v0.1.0",
+        "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/sable-harbor-finance-v0.1.0",
+        "published_at": "2026-09-05T16:39:26Z",
+        "source_commit": "4f837ebb229c68baa3655312726febb31cd0d2ba",
+        "pinned_canon_source": "712076751a31534cd9e6e41458336cdc7b6585b5",
+        "release_classification": "PUBLIC_SAFE_SYNTHETIC",
+        "epistemic_mode": "RETROSPECTIVE_CURRENT_CANON",
+        "canon_effective_through": "2026-09-03",
+        "prepared_on": "2026-09-05",
+        "synthetic_calibration_boundary": "2026-08-31",
+        "disposition": "Preserve published snapshot at its existing release location.",
+        "nested_manifests": "Both ZIPs contain manifests and nested checksum inventories according to the published release record.",
+        "inventory_closes_issue_12": false,
+        "artifacts": [
+          {
+            "name": "sable-harbor-finance-public-demo-v0.1.0.zip",
+            "bytes": 364064,
+            "sha256": "9eee33de25040a784abe82c12252011a98c129a94637268ba1fd8598f8cbbb8d",
+            "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/sable-harbor-finance-v0.1.0/sable-harbor-finance-public-demo-v0.1.0.zip"
+          },
+          {
+            "name": "sable-harbor-finance-business-unit-evidence-v0.1.0.zip",
+            "bytes": 216637,
+            "sha256": "ee2253e4ca340aa38f08bc6a1b9d4bd0b045ceccdb58139e6204be9f51e52f36",
+            "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/sable-harbor-finance-v0.1.0/sable-harbor-finance-business-unit-evidence-v0.1.0.zip"
+          },
+          {
+            "name": "sable-harbor-finance-v0.1.0-SHA256SUMS.txt",
+            "bytes": 231,
+            "sha256": "0b252f7c54d724bd9cbc0ee790d03d770d571e7c998bf2b67d356eb70ba5e515",
+            "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/sable-harbor-finance-v0.1.0/sable-harbor-finance-v0.1.0-SHA256SUMS.txt"
+          }
+        ]
+      }
+    ]
+  },
+  "documentation_requirements": [
+    "One controlling source per decision",
+    "Stable identifiers, dates, owners where applicable, and status",
+    "Navigable README and controlled-document index",
+    "Cross-references and explicit supersession links",
+    "Synchronized structured records, publications, manifests, and derived catalogs",
+    "Historical context and current-facing links to later resolutions"
+  ],
+  "boundaries": {
+    "issue_35_closeout": "Policy and disposition inventory accepted and indexed; historical in-tree exceptions satisfy its justification criterion without migration.",
+    "issue_37": "OPEN; current institutional catalog/SQLite placement and regeneration remain under existing rules.",
+    "retention_deletion_policy_resolved": false,
+    "collection_access_policy_resolved": false,
+    "public_private_boundary_unchanged": true,
+    "private_evaluator_repository": "SABLEHARBOR-ALEXANDRIA-CONTROL",
+    "historical_size_audit": "docs/internal/REPOSITORY_SIZE_AND_GENERATED_ARTIFACT_AUDIT_2026-09-03.md",
+    "historical_size_audit_treatment": "Preserve unchanged as a dated observation; later placement policy controls prospectively within its scope.",
+    "existing_convenience_renders": "Remain unless deliberately reviewed; no deletion or mass reclassification is implied.",
+    "validation_rules": "MAINTAINERS.md",
+    "actual_acceptance_and_results_required": true
+  },
+  "representation_rule": [
+    "Canonical Markdown",
+    "Controlled corporate-letterhead publication",
+    "Structured/database representation"
+  ]
+}

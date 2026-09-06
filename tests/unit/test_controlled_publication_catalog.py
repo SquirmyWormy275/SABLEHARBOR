@@ -36,9 +36,9 @@ def test_red_wash_publications_reconcile_to_sources_and_catalog() -> None:
     artifacts = {artifact["source"]: artifact for artifact in manifest["artifacts"]}
     objects = {obj["source"]: obj for obj in catalog["objects"]}
 
-    assert manifest["generated_for_version"] == "2026-09-05"
+    assert manifest["generated_for_version"] >= "2026-09-05"
     assert manifest["reproducibility"]["mutable_pdf_metadata"] == "removed"
-    assert catalog["effective_date"] == "2026-09-05"
+    assert catalog["effective_date"] == manifest["generated_for_version"]
 
     with sqlite3.connect(ROOT / "docs/internal/institutional_catalog.sqlite3") as db:
         for source, expected in RECORDS.items():

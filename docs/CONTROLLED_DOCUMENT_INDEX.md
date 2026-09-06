@@ -1,17 +1,34 @@
 # SABLE HARBOR CONTROLLED DOCUMENT INDEX
 
-**Index version:** 1.0.10 | **As of:** September 5, 2026
+**Index version:** 1.0.11 | **As of:** September 6, 2026
 
 ## Authority order
 
-1. [Corporate lore v0.3](canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md)
-2. [Decision register](canon/DECISION_REGISTER.md), [September 3 decision-register addendum](canon/DECISION_REGISTER_ADDENDUM_2026-09-03.md), [September 3 corporate headquarters closeout](canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md), [September 5 Red Wash addendum](canon/DECISION_REGISTER_ADDENDUM_2026-09-05_RED_WASH.md), [Red Wash transaction and operating record](canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05.md), [v0.3 changelog](canon/CANON_CHANGELOG_v0.3.md), [Red Wash closeout changelog](canon/RED_WASH_CLOSEOUT_CHANGELOG_2026-09-05.md), and [board approval records](governance/board-records/README.md)
-3. Approved governance, People & Culture, Technology Services, and J2 instruments listed below
-4. [Chat-derived J2/Alexandria canon ledger](internal/CHAT_CANON_LEDGER_J2_ALEXANDRIA.md)
-5. [Canon authority and publication boundaries](internal/CANON_AUTHORITY_AND_PUBLICATION_BOUNDARIES.md)
-6. Structured representations and generated publications, which reconcile to their canonical Markdown source
+1. Accepted controlling canon under `docs/canon/`, including [corporate lore v0.3](canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md), the [decision register](canon/DECISION_REGISTER.md), and dated addenda with their explicit supersession scope. The [September 6 closeout addendum](canon/DECISION_REGISTER_ADDENDUM_2026-09-06_CLOSEOUT.md) controls the four closeout decisions.
+2. [In-universe board approval records](governance/board-records/README.md) within their actual ratification scope.
+3. Repository-stored originating design ledgers and forensic records, including the [J2/Alexandria ledger](internal/CHAT_CANON_LEDGER_J2_ALEXANDRIA.md), except where later accepted controlling decisions supersede them.
+4. Canonical Markdown doctrine, including approved governance, People & Culture, Technology Services, and J2 instruments listed below.
+5. Structured representations and generated publications, catalogs, validators, and indexes, which reconcile to their controlling sources.
 
-Where a September 3 or September 5 controlling source explicitly supersedes an OPEN or PROVISIONAL row in `DECISION_REGISTER.md` v0.3.0, the later controlling source governs until the next consolidated register release. Earlier versions and SUPERSEDED records remain available for history but do not silently override current material.
+This order follows [MAINTAINERS.md](../MAINTAINERS.md) and the [canon authority and publication boundaries](internal/CANON_AUTHORITY_AND_PUBLICATION_BOUNDARIES.md). Where a dated controlling addendum explicitly supersedes an earlier statement or state, the later accepted repository record governs within that scope. Earlier versions and SUPERSEDED records remain available for history but do not silently override current material. Conversation approvals are preserved as provenance; the canonically accepted repository record is the source of truth. Branch copies alone are not canonical promotion.
+
+The earlier controlling layers remain indexed in the [September 3 decision-register addendum](canon/DECISION_REGISTER_ADDENDUM_2026-09-03.md), [September 3 headquarters closeout](canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md), [September 5 Red Wash addendum](canon/DECISION_REGISTER_ADDENDUM_2026-09-05_RED_WASH.md), [Red Wash transaction and operating record](canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05.md), [v0.3 changelog](canon/CANON_CHANGELOG_v0.3.md), and [Red Wash closeout changelog](canon/RED_WASH_CLOSEOUT_CHANGELOG_2026-09-05.md).
+
+## September 6 canon and delivery closeout
+
+- [Decision-register addendum](canon/DECISION_REGISTER_ADDENDUM_2026-09-06_CLOSEOUT.md) and [controlled publication](governance/publications/SH-CANON-CLOSEOUT-20260906-001_v1.0.0.pdf)
+- [Structured closeout decisions](structured/canon_closeout_decisions_2026-09-06.json)
+- [Repository delivery and packaging policy](governance/REPOSITORY_DELIVERY_AND_PACKAGING_POLICY.md), [structured policy](structured/repository_delivery_and_packaging_policy.json), and [controlled publication](governance/publications/SH-GOV-DELIVERY-001_v1.0.0.pdf)
+- [Board doctrine v1.0.1](governance/BOARD_AND_CAPITAL_GOVERNANCE_v1.0.1.md) and [current board publication](governance/publications/SH-GOV-BOARD-001_v1.0.1.pdf) - Daniel Mercer reconciled without changing director identities or inventing family relationships
+- [Semaphore doctrine](j2/alexandria/SEMAPHORE_TRAFFIC_SYSTEM.md) and [current publication](j2/publications/SH-J2-SEMAPHORE-001_v1.0.1.pdf) - Routine / Priority / Immediate / Flash are approved urgency labels
+- [Alexandria charter](j2/alexandria/ALEXANDRIA_CHARTER.md) and [current publication](j2/publications/SH-J2-ALX-001_v1.0.1.pdf)
+- [Visualization doctrine](j2/alexandria/VISUALIZATION_AND_BRANCHING_HISTORY.md) and [current publication](j2/publications/SH-J2-ALX-VIS-001_v1.0.1.pdf)
+- [Daedalus workspace doctrine](j2/alexandria/DAEDALUS_PERSONAL_INSTANCE_AND_WORKSPACE.md) and [current publication](j2/publications/SH-J2-DAEDALUS-PERSONAL-001_v1.0.1.pdf)
+- [Validation and delivery evidence](internal/validation/CANON_CLOSEOUT_2026-09-06.md) and [publication build instructions](../tools/documents/README.md)
+
+Future AR and VR integration is planned while ordinary desktop use remains complete. This is an architectural direction, not a claim of shipped AR/VR functionality. Prior v1.0.0 PDFs remain historical representations; the current manifest and catalog identify the current versions. GitHub PR #97 records actual integration and issue disposition.
+
+The finance-pinned v0.3 lore, base decision register, and [board v1.0.0 source](governance/BOARD_AND_CAPITAL_GOVERNANCE.md) retain their original bytes so historical finance generation remains reproducible. Their superseded surname statements are controlled by the September 6 addendum and current board v1.0.1 source. Preservation of the earlier files is not a competing current naming decision.
 
 ## September 5 Red Wash closeout
 
@@ -31,10 +48,10 @@ The transaction and interface PDFs are generated representations. The canonical 
 - [People & Culture doctrine](governance/PEOPLE_AND_CULTURE_DOCTRINE.md)
 - [Enterprise Technology Services doctrine](governance/ENTERPRISE_TECHNOLOGY_SERVICES_DOCTRINE.md)
 - [Enterprise authority, capital, and executive rhythm](governance/ENTERPRISE_AUTHORITY_CAPITAL_AND_EXECUTIVE_RHYTHM.md)
-- [SHMS development framework](governance/SABLE_HARBOR_MANAGEMENT_SYSTEM_FRAMEWORK.md) — **NEXT PRIORITY / NOT YET CANON**
+- [SHMS doctrine](governance/SABLE_HARBOR_MANAGEMENT_SYSTEM.md) - LOCKED; [development framework](governance/SABLE_HARBOR_MANAGEMENT_SYSTEM_FRAMEWORK.md) retained as superseded history
 - [Structured headquarters closeout record](structured/corporate_headquarters_closeout_2026-09-03.json)
 - [Canonical Sacramento headquarters image manifest](../assets/headquarters/CANONICAL_HEADQUARTERS_IMAGE_MANIFEST.md) — approved reference identified by SHA-256; binary ingestion pending
-- GitHub issue #87 — SHMS is the deliberate next-priority development thread
+- GitHub issue #87 - CLOSED after SHMS doctrine development
 - GitHub issue #88 — complete controlled PDF/office publications, manifests/checksums, and canonical headquarters-image binary ingestion under the three-representation rule
 - GitHub issue #89 — CLOSED after historical OPEN issue-state reconciliation
 
@@ -49,7 +66,7 @@ The transaction and interface PDFs are generated representations. The canonical 
 
 ## Governance
 
-- [Board and capital governance](governance/BOARD_AND_CAPITAL_GOVERNANCE.md)
+- [Board and capital governance v1.0.1](governance/BOARD_AND_CAPITAL_GOVERNANCE_v1.0.1.md)
 - [Board evolution, 2016–2026](governance/BOARD_EVOLUTION_2016_2026.md)
 - [Board approval records](governance/board-records/README.md) and [structured board approval register](governance/structured/board_approval_records.json)
 - [Governance constitution](governance/GOVERNANCE_CONSTITUTION.md)
