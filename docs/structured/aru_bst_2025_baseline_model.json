@@ -1,0 +1,234 @@
+{
+  "record_id": "SH-ARU-FIN-2025-BASELINE-001",
+  "title": "ARU and BS&T 2025 Bottom-Up Operating Baseline",
+  "version": "0.1.0",
+  "as_of_date": "2025-12-31",
+  "acquisition_close_date": "2026-01-07",
+  "currency": "USD",
+  "status": "WORKING_BASELINE",
+  "governance": {
+    "locked_user_decisions": [
+      "ARU consolidated 2025 revenue approximately USD 42,000,000",
+      "ARU consolidated normalized EBITDA approximately USD 9,800,000",
+      "BS&T 2025 revenue approximately USD 15,500,000",
+      "BS&T 2025 normalized EBITDA approximately USD 1,500,000",
+      "BS&T 2025 revenue carloads approximately 9,000",
+      "ARU consolidated headcount approximately 131",
+      "BS&T headcount approximately 58",
+      "ARU sustaining capital expenditure approximately USD 3,300,000",
+      "Deferred catch-up capital expenditure approximately USD 11,000,000",
+      "Sable Harbor acquisition close date 2026-01-07"
+    ],
+    "derived_allocations_state": "MODEL_DERIVED_PENDING_CONTRACT_AND_ASSET_REGISTER_RECONCILIATION",
+    "supersession_candidates": [
+      "FIN-Q-005 ARU and BS&T 2026 external revenue of USD 23,600,000",
+      "FIN-Q-006 ARU and BS&T 2026 operating cost of USD 20,300,000"
+    ]
+  },
+  "bst_operating_profile": {
+    "route_miles_working": 40,
+    "service_days_per_week": 5,
+    "annual_service_days": 260,
+    "annual_revenue_carloads": 9000,
+    "loaded_carloads_per_service_day": 34.6154,
+    "estimated_empty_returns": 8100,
+    "estimated_total_car_movements": 17100,
+    "estimated_car_movements_per_service_day": 65.7692,
+    "locomotives_owned": 4,
+    "locomotives_generally_available": 3,
+    "locomotives_normally_required": 2,
+    "employees": 58,
+    "targeted_capex_incremental_capacity_carloads_low": 5000,
+    "targeted_capex_incremental_capacity_carloads_high": 7500
+  },
+  "bst_revenue_schedule": [
+    {
+      "traffic_class": "soda_ash_trona_and_minerals",
+      "carloads": 3150,
+      "average_revenue_per_car": 1375,
+      "revenue": 4331250
+    },
+    {
+      "traffic_class": "energy_and_oilfield_materials",
+      "carloads": 1650,
+      "average_revenue_per_car": 1950,
+      "revenue": 3217500
+    },
+    {
+      "traffic_class": "aggregates_and_construction",
+      "carloads": 1350,
+      "average_revenue_per_car": 1250,
+      "revenue": 1687500
+    },
+    {
+      "traffic_class": "industrial_chemicals_and_metals",
+      "carloads": 1050,
+      "average_revenue_per_car": 1925,
+      "revenue": 2021250
+    },
+    {
+      "traffic_class": "agriculture_and_ranch_supply",
+      "carloads": 750,
+      "average_revenue_per_car": 1300,
+      "revenue": 975000
+    },
+    {
+      "traffic_class": "transload_project_and_other",
+      "carloads": 1050,
+      "average_revenue_per_car": 1635,
+      "revenue": 1716750
+    }
+  ],
+  "bst_other_revenue": [
+    {
+      "revenue_class": "switching_accessorial_storage_and_demurrage",
+      "revenue": 1550750
+    }
+  ],
+  "bst_expense_schedule": [
+    {
+      "expense_class": "train_and_engine_labor_and_benefits",
+      "expense": 2800000
+    },
+    {
+      "expense_class": "maintenance_of_way_labor_and_materials",
+      "expense": 2150000
+    },
+    {
+      "expense_class": "mechanical_labor_parts_and_contract_work",
+      "expense": 1650000
+    },
+    {
+      "expense_class": "fuel_and_lubricants",
+      "expense": 1120000
+    },
+    {
+      "expense_class": "car_hire_and_equipment_leases",
+      "expense": 760000
+    },
+    {
+      "expense_class": "purchased_services_and_interchange_handling",
+      "expense": 450000
+    },
+    {
+      "expense_class": "insurance_and_claims",
+      "expense": 950000
+    },
+    {
+      "expense_class": "property_tax_regulatory_and_fees",
+      "expense": 520000
+    },
+    {
+      "expense_class": "facilities_utilities_and_communications",
+      "expense": 400000
+    },
+    {
+      "expense_class": "safety_environmental_and_compliance",
+      "expense": 340000
+    },
+    {
+      "expense_class": "management_admin_and_customer_service",
+      "expense": 1280000
+    },
+    {
+      "expense_class": "aru_shared_services_allocation",
+      "expense": 830000
+    },
+    {
+      "expense_class": "other_operating_expense",
+      "expense": 750000
+    }
+  ],
+  "bst_headcount_schedule": [
+    {
+      "function": "train_and_engine",
+      "fte": 22
+    },
+    {
+      "function": "maintenance_of_way",
+      "fte": 10
+    },
+    {
+      "function": "mechanical",
+      "fte": 8
+    },
+    {
+      "function": "operations_dispatch_and_customer_service",
+      "fte": 6
+    },
+    {
+      "function": "safety_environmental_and_compliance",
+      "fte": 3
+    },
+    {
+      "function": "management_and_administration",
+      "fte": 9
+    }
+  ],
+  "aru_segment_summary": [
+    {
+      "segment": "bst_railway",
+      "revenue": 15500000,
+      "normalized_ebitda": 1500000,
+      "employees": 58,
+      "sustaining_capex": 2050000
+    },
+    {
+      "segment": "industrial_terminals_and_transload",
+      "revenue": 13000000,
+      "normalized_ebitda": 4300000,
+      "employees": 27,
+      "sustaining_capex": 550000
+    },
+    {
+      "segment": "heavy_industrial_trucking_and_drayage",
+      "revenue": 7500000,
+      "normalized_ebitda": 1500000,
+      "employees": 24,
+      "sustaining_capex": 480000
+    },
+    {
+      "segment": "warehousing_and_materials_handling",
+      "revenue": 6000000,
+      "normalized_ebitda": 2700000,
+      "employees": 12,
+      "sustaining_capex": 220000
+    },
+    {
+      "segment": "aru_corporate_and_unallocated",
+      "revenue": 0,
+      "normalized_ebitda": -200000,
+      "employees": 10,
+      "sustaining_capex": 0
+    }
+  ],
+  "consolidated_summary": {
+    "revenue": 42000000,
+    "operating_expense_before_da": 32200000,
+    "normalized_ebitda": 9800000,
+    "normalized_ebitda_margin": 0.233333,
+    "employees": 131,
+    "sustaining_capex": 3300000,
+    "ebitda_less_sustaining_capex": 6500000,
+    "deferred_catch_up_capex": 11000000
+  },
+  "customer_concentration": {
+    "largest_customer_revenue_share": 0.11,
+    "top_five_revenue_share": 0.4,
+    "largest_customer_implied_revenue": 4620000,
+    "top_five_implied_revenue": 16800000,
+    "meaningful_renewal_risk_count": 1
+  },
+  "open_reconciliation_items": [
+    "Named customer and contract register",
+    "Contract-level rate and volume support",
+    "Monthly seasonality and working-capital schedule",
+    "D&A and fixed-asset rollforward",
+    "Interest, tax, and full three-statement model",
+    "Asset-level sustaining and catch-up capex schedule",
+    "Reported-to-normalized EBITDA bridge",
+    "Exact owned and leased railcar roster",
+    "Exact terminal, trucking, and warehouse asset register",
+    "Generation-engine implementation for ARU non-rail books rather than booking all ARU economics to BS&T"
+  ]
+}
