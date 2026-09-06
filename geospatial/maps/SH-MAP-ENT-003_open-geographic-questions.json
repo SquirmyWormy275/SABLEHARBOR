@@ -1,0 +1,36 @@
+{
+  "map_id": "SH-MAP-ENT-003_open-geographic-questions",
+  "title": "Open geographic questions",
+  "version": "0.1.0-rc3",
+  "effective_date": "2026-09-05",
+  "world_state": "CANON_WITH_APPROVED_OPERATING_OVERLAY_2026-09-06",
+  "canon_status": "CONFLICT_REVIEW",
+  "source_package_version": "0.1.0-rc3",
+  "source_commit": "8d20e51a7cf0068729e3296840ccb5ba1ac1d7bd",
+  "source_geopackage_sha256": "af3a821b37e6d11430cde4dde25355e029761c6971e82eed58f95962578248b7",
+  "projection": "EPSG:26913;26917",
+  "build_timestamp": "2026-09-06T02:29:42+00:00",
+  "builder": "geospatial/scripts/render_maps.py",
+  "review_status": "VISUAL_QA_PASS_RENDERED_PDF_CONTACT_SHEET",
+  "layers": [
+    "search_areas",
+    "red_wash_anchor",
+    "federal reference layers",
+    "conflicts",
+    "object_registry"
+  ],
+  "files": {
+    "pdf": {
+      "path": "SH-MAP-ENT-003_open-geographic-questions.pdf",
+      "sha256": "ed3cd3eda8a30678c31690c3b8e4a8768f63ac79238599ca01b22253793a0857"
+    },
+    "svg": {
+      "path": "SH-MAP-ENT-003_open-geographic-questions.svg",
+      "sha256": "05a001a9776cab262a846d159ae4eb673bf858659b23fce2a36ba7a65663d017"
+    },
+    "png": {
+      "path": "SH-MAP-ENT-003_open-geographic-questions.png",
+      "sha256": "fe347bd8c6f51cab2537a1edc42b967921cd575088b6dc662c48d77bf0256a77"
+    }
+  }
+}

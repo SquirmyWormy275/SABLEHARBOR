@@ -1,0 +1,36 @@
+{
+  "map_id": "SH-MAP-BST-002_bst-engineering-alignment",
+  "title": "BS&T / preliminary alignment",
+  "version": "0.1.0-rc3",
+  "effective_date": "2026-09-05",
+  "world_state": "CANON_WITH_APPROVED_OPERATING_OVERLAY_2026-09-06",
+  "canon_status": "PRELIMINARY_ENGINEERING_PROPOSAL",
+  "source_package_version": "0.1.0-rc3",
+  "source_commit": "8d20e51a7cf0068729e3296840ccb5ba1ac1d7bd",
+  "source_geopackage_sha256": "af3a821b37e6d11430cde4dde25355e029761c6971e82eed58f95962578248b7",
+  "projection": "EPSG:26913",
+  "build_timestamp": "2026-09-06T02:29:42+00:00",
+  "builder": "geospatial/scripts/render_maps.py",
+  "review_status": "VISUAL_QA_PASS_RENDERED_PDF_CONTACT_SHEET",
+  "layers": [
+    "rail_segments",
+    "rail_nodes",
+    "ref_wyoming_waterbodies",
+    "ref_wamsutter_*",
+    "DEM-USGS-WYOMING"
+  ],
+  "files": {
+    "pdf": {
+      "path": "SH-MAP-BST-002_bst-engineering-alignment.pdf",
+      "sha256": "e18328f64214428605c884d07fd2cd56132ac335a698d699df69315bb1aac702"
+    },
+    "svg": {
+      "path": "SH-MAP-BST-002_bst-engineering-alignment.svg",
+      "sha256": "750fcd10d50aeb93e2df5124fb6d323655054c29a66dfb17ad1f13b42d669621"
+    },
+    "png": {
+      "path": "SH-MAP-BST-002_bst-engineering-alignment.png",
+      "sha256": "b8966c1ca427556b657b256a755e4a4525b6832db1b568f15260ed018b357b36"
+    }
+  }
+}

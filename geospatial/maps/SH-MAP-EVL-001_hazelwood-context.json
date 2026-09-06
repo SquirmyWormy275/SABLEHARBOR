@@ -1,0 +1,33 @@
+{
+  "map_id": "SH-MAP-EVL-001_hazelwood-context",
+  "title": "Hazelwood / Willow lineage",
+  "version": "0.1.0-rc3",
+  "effective_date": "2026-09-05",
+  "world_state": "CANON_WITH_APPROVED_OPERATING_OVERLAY_2026-09-06",
+  "canon_status": "PROPOSED_SEARCH_AREA",
+  "source_package_version": "0.1.0-rc3",
+  "source_commit": "8d20e51a7cf0068729e3296840ccb5ba1ac1d7bd",
+  "source_geopackage_sha256": "af3a821b37e6d11430cde4dde25355e029761c6971e82eed58f95962578248b7",
+  "projection": "EPSG:26917",
+  "build_timestamp": "2026-09-06T02:29:42+00:00",
+  "builder": "geospatial/scripts/render_maps.py",
+  "review_status": "VISUAL_QA_PASS_RENDERED_PDF_CONTACT_SHEET",
+  "layers": [
+    "search_areas",
+    "ref_hazelwood_*"
+  ],
+  "files": {
+    "pdf": {
+      "path": "SH-MAP-EVL-001_hazelwood-context.pdf",
+      "sha256": "c0d6205806ace07b267c61d222d6d9ff176042b099c5fca6b6e4b9264aed64ea"
+    },
+    "svg": {
+      "path": "SH-MAP-EVL-001_hazelwood-context.svg",
+      "sha256": "c93d78d61d3f145002c2afa97293088267da541eb8a70a416fa76c91cd2a83c3"
+    },
+    "png": {
+      "path": "SH-MAP-EVL-001_hazelwood-context.png",
+      "sha256": "e58c7daaad3c1b8c51c04c591b581c2feced9739f4d13940d4c115f9c6e700df"
+    }
+  }
+}

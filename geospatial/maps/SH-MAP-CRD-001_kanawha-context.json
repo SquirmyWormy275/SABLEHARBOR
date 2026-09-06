@@ -1,0 +1,33 @@
+{
+  "map_id": "SH-MAP-CRD-001_kanawha-context",
+  "title": "Cradle / Kanawha Valley",
+  "version": "0.1.0-rc3",
+  "effective_date": "2026-09-05",
+  "world_state": "CANON_WITH_APPROVED_OPERATING_OVERLAY_2026-09-06",
+  "canon_status": "PROPOSED_SEARCH_AREA",
+  "source_package_version": "0.1.0-rc3",
+  "source_commit": "8d20e51a7cf0068729e3296840ccb5ba1ac1d7bd",
+  "source_geopackage_sha256": "af3a821b37e6d11430cde4dde25355e029761c6971e82eed58f95962578248b7",
+  "projection": "EPSG:26917",
+  "build_timestamp": "2026-09-06T02:29:42+00:00",
+  "builder": "geospatial/scripts/render_maps.py",
+  "review_status": "VISUAL_QA_PASS_RENDERED_PDF_CONTACT_SHEET",
+  "layers": [
+    "search_areas",
+    "ref_kanawha_*"
+  ],
+  "files": {
+    "pdf": {
+      "path": "SH-MAP-CRD-001_kanawha-context.pdf",
+      "sha256": "79ef8bb6909ff26fd5d1a6c9bf91709cca6691c1ffd1923fa64723150f30b69d"
+    },
+    "svg": {
+      "path": "SH-MAP-CRD-001_kanawha-context.svg",
+      "sha256": "e96a51a9868d311f5a0b7815710c89d6785ee0608a4858d8916c690958607007"
+    },
+    "png": {
+      "path": "SH-MAP-CRD-001_kanawha-context.png",
+      "sha256": "9fb84920530da0712ef78f5141d9232b3a4f19b6af7ce9229b87835b4d865e5f"
+    }
+  }
+}
