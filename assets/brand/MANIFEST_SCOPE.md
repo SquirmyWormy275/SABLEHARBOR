@@ -1,11 +1,22 @@
 # Brand Manifest Scope
 
-The original v0.2 build manifest is preserved as `manifest.v0.2.0-legacy.json`. It records the immutable build snapshot, including publication pages generated at that time.
+The manifests presently committed under `assets/brand/` have separate, bounded
+authority:
 
-The current `manifest.json` governs the brand system itself and delegates current company, business-line, and wiki publication structure to:
+- `manifest.json` records the generated v0.1.0 logo-system assets, their hashes, and
+  their build-time v0.2 canon reference as historical provenance rather than current
+  naming authority;
+- `red_wash_visual_manifest.json` controls the four later owner-approved Pale
+  Sun/Red Wash raster sources byte-for-byte; and
+- `packages/manifest.json` records the retained v0.1.0 archive and its mandatory
+  `SUPERSEDED` / `HISTORICAL_SNAPSHOT` / `DO_NOT_DISTRIBUTE` quarantine state.
 
-- `docs/company/README.md`;
-- `docs/business-lines/registry.json`;
-- `docs/wiki/`.
+The later approved-raster manifest controls where it conflicts with a legacy Pale
+Sun or Red Wash SVG/PNG variant. None of these manifests independently locks legal
+entities, organization facts, financial facts, or other canon.
 
-Publication-page hashes in the legacy manifest are historical build evidence, not current authority after the enterprise portal reorganization. The brand validator checks only the legacy records within `assets/brand/` and separately verifies the present identity matrix and required collateral.
+The retained corporate templates under `assets/brand/collateral/` are inventoried in
+that subtree's `README.md`; they do not currently have a cryptographic manifest.
+They must not be represented as manifested or as a J2 stationery release. There is
+no committed `manifest.v0.2.0-legacy.json`, and this scope record does not delegate
+authority to nonexistent company or business-line registry paths.

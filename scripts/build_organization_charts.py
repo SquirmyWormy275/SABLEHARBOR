@@ -454,8 +454,9 @@ def write_pages() -> None:
 
 ## Interpretation
 
-This chart renders relationships that the corporate canon actually locks, including
-Sable Harbor control of ARU and BS&T as a wholly owned legal subsidiary beneath ARU.
+This chart renders only relationships that the corporate canon actually locks. Where
+represented, Sable Harbor controls ARU, and BS&T is a wholly owned legal subsidiary
+beneath ARU.
 It does **not** invent exact legal names, suffixes, jurisdictions, executive titles,
 headcount, or person-to-person reporting lines. Where a headcount appears, it is a
 source-backed synthetic selected-case value, not an implied enterprise total or

@@ -4,7 +4,7 @@ This directory contains individual, production-oriented logo assets for the Sabl
 
 ## Controlling naming source
 
-Business-line names and status are grounded in `docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.2.md` and subsequent locked governance/organization decisions. Artwork files do **not** independently create or change canon. Legal-entity, reporting-line, and exact organizational details that remain OPEN in canon remain open here.
+Business-line names and status are grounded in `docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md` and subsequent controlled canon, decision-register, governance, and organization records. Artwork files do **not** independently create or change canon. Legal-entity, reporting-line, and exact organizational details that remain OPEN in canon remain open here.
 
 ## File rule
 
@@ -77,25 +77,28 @@ J2 is a controlled internal institutional identity. It must not be placed in the
 - Preserve appropriate clear space around the full lockup.
 - For J2 and the four paths in `red_wash_visual_manifest.json`, use the approved PNGs as source of truth. For identities without a later approved override, use SVG as source of truth.
 
-## J2 stationery
+## J2 document use
 
-Approved J2 stationery is maintained under:
-
-- `assets/brand/collateral/letterhead/j2/j2-letterhead-us-letter.svg`
-- `assets/brand/collateral/letterhead/j2/j2-letterhead-a4.svg`
-
-The controlling identity/stationery record is `docs/organization/J2_IDENTITY_AND_STATIONERY.md`.
+The repository currently distributes no dedicated J2 letterhead templates or J2
+stationery manifest. The locked J2 logo sources remain available for controlled J2
+documents under `docs/organization/J2_IDENTITY_AND_STATIONERY.md`. Any future
+stationery release must be separately versioned, proofed, manifested, and bound to
+the approved J2 PNG source artwork.
 
 ## Package
 
-Generated collateral packages and their manifest are maintained under `assets/brand/packages/`.
+There is no current consolidated distributable brand archive. The v0.1.0 ZIP under
+`assets/brand/packages/` is `SUPERSEDED`, retained only as a `HISTORICAL_SNAPSHOT`,
+and has an explicit `DO_NOT_DISTRIBUTE` state: it predates the September 5 approved Pale Sun/Red Wash
+sources and contains J2 stationery that is no longer in the current collateral tree.
+Use the live repository assets and their applicable manifests instead.
 
 ## Manifest and validation
 
 - `manifest.json` records production logo assets, dimensions, status, and SHA-256 digests.
 - `red_wash_visual_manifest.json` controls the exact Pale Sun logo, Red Wash logo, site overview, and underground-plan sources approved on September 5, 2026.
-- `collateral/manifest.json` records controlled J2 stationery and its approved-logo references.
-- `packages/manifest.json` records distributable brand packages and SHA-256 digests.
+- `collateral/README.md` inventories the retained corporate collateral; that subtree has no current cryptographic manifest and does not constitute a J2 stationery release.
+- `packages/manifest.json` records the historical archive's SHA-256 and mandatory quarantine state.
 - `VALIDATION.md` records automated checks for the established brand system and approved J2 source integrity.
 
 All rights reserved unless a specific repository file states otherwise.

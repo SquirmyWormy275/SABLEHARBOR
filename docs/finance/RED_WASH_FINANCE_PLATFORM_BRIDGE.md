@@ -17,9 +17,10 @@ rewrite its released statements, or relabel its synthetic calibration data.
 Red Wash therefore ships first as its own versioned source, CSV, SQLite, statement,
 manifest, and release package. Enterprise integration is a successor change that must
 be implemented deliberately with a new source lock, assumptions version, migration,
-scenario/run identity, reconciliation baseline, and release acceptance. The source
-file `config/finance/assumptions/red_wash_transaction_operating_record.yml` is not part
-of v0.1 and must not be used as a side-door input.
+scenario/run identity, reconciliation baseline, and release acceptance. No file at
+`config/finance/assumptions/red_wash_transaction_operating_record.yml` is part of v0.1
+or this release, and that nonexistent path must not be used as a side-door input. The
+only Red Wash release inputs are the three controlled files under `red_wash/source/`.
 
 ## Entity mapping for a successor release
 

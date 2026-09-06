@@ -13,3 +13,9 @@ This exhibit is an artifact list only and adds no doctrine.
 | Judgment package | `docs/j2/JUDGMENT.md`; `docs/j2/JUDGMENT_OFFICER_PROFESSION.md` | `docs/j2/publications/SH-J2-JUDGMENT-001_v1.0.0.pdf`; `docs/j2/publications/SH-J2-JO-001_v1.0.0.pdf` | LOCKED DIRECTION | Judgment |
 | Orientation, JAG, Education, EIB, and access package | `docs/j2/README.md` | `docs/j2/publications/` | Approved states per source | J2 component owners |
 | J2 organization and identity package | `docs/organization/J2_ORGANIZATION.md`; `docs/organization/J2_IDENTITY_AND_STATIONERY.md` | `docs/organization/J2_CHART_REGISTER.json`; `assets/brand/manifest.json`; `assets/brand/collateral/j2_manifest.json` | LOCKED / approved source artwork | J2 Headquarters / Brand stewardship |
+
+Repository note (September 5, 2026): the table preserves the as-approved artifact
+list. The former J2 stationery manifest path is historical and is not distributed in
+the current collateral tree. See `docs/organization/J2_IDENTITY_AND_STATIONERY.md`
+v0.1.2 for the current implementation state; the locked J2 identity and controlling
+PNG source artwork are unchanged.

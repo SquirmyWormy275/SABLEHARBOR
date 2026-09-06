@@ -32,10 +32,13 @@ except ImportError:  # Direct script execution.
 REPO_ROOT = Path(
     os.environ.get('GITHUB_WORKSPACE', Path(__file__).resolve().parents[2])
 ).resolve()
+PACKAGE_VERSION = '0.1.1'
+GENERATED_UTC = '2026-09-05T00:00:00Z'
+ZIP_TIMESTAMP = (2026, 9, 5, 0, 0, 0)
 OUT = Path(
     os.environ.get(
         'SABLE_HARBOR_ASSET_OUT',
-        REPO_ROOT / '.brand-build' / 'sable-harbor-brand-assets-v0.1.0',
+        REPO_ROOT / '.brand-build' / f'sable-harbor-brand-assets-v{PACKAGE_VERSION}',
     )
 ).resolve()
 LOGO_DIR = OUT / 'assets' / 'brand' / 'logos'
@@ -611,7 +614,7 @@ def write_deterministic_zip_member(
 ) -> None:
     """Write a stable ZIP member without inheriting filesystem timestamps."""
 
-    info = zipfile.ZipInfo(archive_name, date_time=(2026, 9, 1, 0, 0, 0))
+    info = zipfile.ZipInfo(archive_name, date_time=ZIP_TIMESTAMP)
     info.compress_type = zipfile.ZIP_DEFLATED
     info.create_system = 3
     info.external_attr = 0o100644 << 16
@@ -655,13 +658,13 @@ def make_contact_sheet(entries: list[dict], out_path: Path, title: str):
 
 def build_readme(manifest: dict) -> str:
     lines = [
-        '# Sable Harbor Logo System — v0.1.0',
+        f'# Sable Harbor Logo System — v{manifest["version"]}',
         '',
         'This directory contains individual, production-oriented generated logo assets for the Sable Harbor corporate identity and each business line in the August 31, 2026 narrative map.',
         '',
         '## Controlling naming source',
         '',
-        'Business-line names and status are grounded in `docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.2.md`. These artwork files do **not** independently create or change canon. Legal-entity, reporting-line, and exact organizational details that remain OPEN in canon remain open here.',
+        'Business-line names and status are grounded in `docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md` and later controlled canon and decision-register addenda. These artwork files do **not** independently create or change canon. Legal-entity, reporting-line, and exact organizational details that remain OPEN in canon remain open here.',
         '',
         '## File rule',
         '',
@@ -844,9 +847,9 @@ def main():
 
     manifest = {
         'package': 'Sable Harbor Logo System',
-        'version': '0.1.0',
-        'generated_utc': '2026-09-01T00:00:00Z',
-        'controlling_canon': 'docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.2.md',
+        'version': PACKAGE_VERSION,
+        'generated_utc': GENERATED_UTC,
+        'controlling_canon': 'docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md',
         'one_logo_per_file': True,
         'corporate_variant_count': len(BRANDS[0].variants),
         'canonical_business_lines': [b.display_name for b in BRANDS[1:8]],
@@ -866,7 +869,7 @@ def main():
     make_contact_sheet(entries[16:], PREVIEW_DIR / 'all-primary-horizontal-qa.png', 'SABLE HARBOR — ALL PRIMARY LOCKUPS QA')
 
     # Convenience archive contains only production assets and documentation, not QA sheets.
-    zip_path = PACKAGE_DIR / 'sable-harbor-logo-system-v0.1.0.zip'
+    zip_path = PACKAGE_DIR / f'sable-harbor-logo-system-v{PACKAGE_VERSION}.zip'
     with zipfile.ZipFile(zip_path, 'w', compression=zipfile.ZIP_DEFLATED, compresslevel=9) as zf:
         for p in sorted(LOGO_DIR.iterdir()):
             write_deterministic_zip_member(zf, p, f'logos/{p.name}')

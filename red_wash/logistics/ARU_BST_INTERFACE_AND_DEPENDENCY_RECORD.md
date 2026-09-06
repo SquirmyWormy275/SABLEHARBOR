@@ -139,8 +139,8 @@ amounts remain open until later diligence supplies a defensible basis.
 
 ## Gate sequence
 
-The planning sequence is relative to a future or separately controlled ARU acquisition date, which
-this record does not establish:
+The planning sequence is relative to the separately controlled ARU acquisition date, which this
+Red Wash interface record does not establish:
 
 | Period after acquisition | Work and gate |
 |---|---|
