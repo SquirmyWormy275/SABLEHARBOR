@@ -1,0 +1,266 @@
+{
+  "schema_version": "1.0.0",
+  "source_revision": "dd505286d7a66d25a2929981150d028935f27fbe",
+  "created_at": "2026-09-05T22:16:52-07:00",
+  "decision_cutoff": "2026-09-05T23:59:59-07:00",
+  "record_origin": "PUBLIC_SYNTHETIC_DIEGETIC",
+  "fact_state": "LOCKED_DERIVED_IMPLEMENTATION",
+  "evidence_state": "SYNTHETIC_RECONSTRUCTED",
+  "boundary": "Fictional decisions adopted for the case. No actual government filing, registry certification, executed agreement or historical source document is represented. External law, mathematics and real geography control their own domains.",
+  "record_id": "SH-IND-ENT-001",
+  "effective_on": "2026-09-05",
+  "available_on": "2026-09-05",
+  "entities": [
+    {
+      "entity_id": "SHI",
+      "legal_name": "Sable Harbor, LLC",
+      "jurisdiction": "Delaware",
+      "legal_form": "LLC",
+      "owner_entity_id": null,
+      "ownership_percent": null,
+      "formed_on": "2016",
+      "scope": "Parent operating/governance company; SHI key does not mean Inc.",
+      "date_precision": "year",
+      "headquarters": "Sacramento, California",
+      "foreign_qualification": "California; synthetic implementation",
+      "federal_tax_status": "Unresolved outside industrial acquisition model"
+    },
+    {
+      "entity_id": "SHIH",
+      "legal_name": "Sable Harbor Industrial Holdings, Inc.",
+      "jurisdiction": "Delaware",
+      "legal_form": "corporation",
+      "owner_entity_id": "SHI",
+      "ownership_percent": 100,
+      "formed_on": "2024-12-02",
+      "scope": "Industrial holding company and ARU stock buyer",
+      "ownership_effective_on": "2024-12-02",
+      "federal_tax_status": "C corporation"
+    },
+    {
+      "entity_id": "PS",
+      "legal_name": "Pale Sun Inc.",
+      "jurisdiction": "Delaware",
+      "legal_form": "corporation",
+      "owner_entity_id": "SHIH",
+      "ownership_percent": 100,
+      "formed_on": "2025-01-13",
+      "scope": "Uranium platform and Red Wash equity owner",
+      "ownership_effective_on": "2025-01-13",
+      "federal_tax_status": "C corporation",
+      "selected_fte": 12,
+      "officers": [
+        {
+          "name": "Evan Vilander",
+          "title": "President",
+          "effective_on": "2025-11-03"
+        },
+        {
+          "name": "Marianne Varela",
+          "display_name": "Mari Varela",
+          "title": "Chief Operating Officer",
+          "effective_on": "2025-01-13"
+        }
+      ]
+    },
+    {
+      "entity_id": "RWH",
+      "legal_name": "Red Wash Mining, LLC",
+      "jurisdiction": "Wyoming",
+      "legal_form": "LLC",
+      "owner_entity_id": "PS",
+      "ownership_percent": 100,
+      "formed_on": "2007-09-29",
+      "scope": "Separate mine operator; own books, permits and liabilities",
+      "ownership_effective_on": "2025-07-18",
+      "previous_owner_entity_id": "NMI",
+      "previous_owner_effective_on": "2010-12-18",
+      "federal_tax_status": "Single-member disregarded entity owned by PS; derived assumption",
+      "selected_fte": 128,
+      "officers": [
+        {
+          "name": "Marianne Varela",
+          "display_name": "Mari Varela",
+          "title": "Chief Executive Officer",
+          "effective_on": "2025-07-18"
+        }
+      ],
+      "fte_note": "Mari counted once at PS; Cole occupies the existing site general-management billet"
+    },
+    {
+      "entity_id": "ARU",
+      "legal_name": "American Resource Utility, Inc.",
+      "jurisdiction": "Wyoming",
+      "legal_form": "corporation",
+      "owner_entity_id": "SHIH",
+      "ownership_percent": 100,
+      "formed_on": "1991-01-02",
+      "scope": "Resource-logistics operating company",
+      "ownership_effective_on": "2026-01-07",
+      "federal_tax_status_pre_close": "S corporation; conditional synthetic eligibility assumption",
+      "federal_tax_status_post_close": "C corporation; intended joint section 338(h)(10) election subject to eligibility and documented filing",
+      "selected_fte": 73,
+      "consolidated_selected_fte": 131,
+      "officers": [
+        {
+          "name": "Nora Ashcombe",
+          "title": "President and Chief Operating Officer",
+          "effective_on": "2026-01-07"
+        }
+      ]
+    },
+    {
+      "entity_id": "BST",
+      "legal_name": "Blood, Sweat & Tears Railway Company",
+      "jurisdiction": "Wyoming",
+      "legal_form": "corporation",
+      "owner_entity_id": "ARU",
+      "ownership_percent": 100,
+      "formed_on": "1954-07-01",
+      "scope": "Separate railway legal company and operating authority",
+      "ownership_effective_on": "1991-01-02",
+      "predecessor_name": "Bloodstone & Southern Railway",
+      "predecessor_organized_on": "1898-04-06",
+      "federal_tax_status_pre_close": "QSub of ARU; assumed valid election effective 2008-01-01",
+      "federal_tax_status_post_close": "C corporation after QSub termination; legal identity persists",
+      "selected_fte": 58,
+      "officers": [
+        {
+          "name": "Seth Kettering",
+          "title": "General Manager",
+          "effective_year": 2013,
+          "date_precision": "year"
+        }
+      ]
+    },
+    {
+      "entity_id": "NMI",
+      "legal_name": "Northstar Minerals, Inc.",
+      "jurisdiction": "Wyoming",
+      "legal_form": "corporation",
+      "owner_entity_id": null,
+      "ownership_percent": null,
+      "formed_on": null,
+      "scope": "External Red Wash seller, Henry Norwood principal; outside consolidation perimeter"
+    }
+  ],
+  "named_aru_leaders": [
+    {
+      "employee_id": "EMP-001",
+      "name": "Nora Ashcombe",
+      "entity_id": "ARU",
+      "authority_source": "industrial/corporate/LEADERSHIP_AND_AUTHORITY.md",
+      "compensation_source": "industrial/source/finance.json"
+    },
+    {
+      "employee_id": "EMP-002",
+      "name": "Gareth Pike",
+      "entity_id": "ARU",
+      "authority_source": "industrial/corporate/LEADERSHIP_AND_AUTHORITY.md",
+      "compensation_source": "industrial/source/finance.json"
+    },
+    {
+      "employee_id": "EMP-003",
+      "name": "Tessa Rourke",
+      "entity_id": "ARU",
+      "authority_source": "industrial/corporate/LEADERSHIP_AND_AUTHORITY.md",
+      "compensation_source": "industrial/source/finance.json"
+    },
+    {
+      "employee_id": "EMP-004",
+      "name": "Owen Halberg",
+      "entity_id": "ARU",
+      "authority_source": "industrial/corporate/LEADERSHIP_AND_AUTHORITY.md",
+      "compensation_source": "industrial/source/finance.json"
+    },
+    {
+      "employee_id": "EMP-005",
+      "name": "Leah Denning",
+      "entity_id": "ARU",
+      "authority_source": "industrial/corporate/LEADERSHIP_AND_AUTHORITY.md",
+      "compensation_source": "industrial/source/finance.json"
+    },
+    {
+      "employee_id": "EMP-006",
+      "name": "Miles Harker",
+      "entity_id": "ARU",
+      "authority_source": "industrial/corporate/LEADERSHIP_AND_AUTHORITY.md",
+      "compensation_source": "industrial/source/finance.json"
+    },
+    {
+      "employee_id": "EMP-007",
+      "name": "Seth Kettering",
+      "entity_id": "BST",
+      "authority_source": "industrial/corporate/LEADERSHIP_AND_AUTHORITY.md",
+      "compensation_source": "industrial/source/finance.json"
+    },
+    {
+      "employee_id": "EMP-008",
+      "name": "Anika Soren",
+      "entity_id": "BST",
+      "authority_source": "industrial/corporate/LEADERSHIP_AND_AUTHORITY.md",
+      "compensation_source": "industrial/source/finance.json"
+    },
+    {
+      "employee_id": "EMP-009",
+      "name": "Calvin Mott",
+      "entity_id": "BST",
+      "authority_source": "industrial/corporate/LEADERSHIP_AND_AUTHORITY.md",
+      "compensation_source": "industrial/source/finance.json"
+    },
+    {
+      "employee_id": "EMP-010",
+      "name": "Paulina Dace",
+      "entity_id": "BST",
+      "authority_source": "industrial/corporate/LEADERSHIP_AND_AUTHORITY.md",
+      "compensation_source": "industrial/source/finance.json"
+    },
+    {
+      "employee_id": "EMP-011",
+      "name": "Silas Wren",
+      "entity_id": "BST",
+      "authority_source": "industrial/corporate/LEADERSHIP_AND_AUTHORITY.md",
+      "compensation_source": "industrial/source/finance.json"
+    },
+    {
+      "employee_id": "EMP-012",
+      "name": "Derek Fenwick",
+      "entity_id": "ARU",
+      "authority_source": "industrial/corporate/LEADERSHIP_AND_AUTHORITY.md",
+      "compensation_source": "industrial/source/finance.json"
+    },
+    {
+      "employee_id": "EMP-013",
+      "name": "Marta Ellery",
+      "entity_id": "ARU",
+      "authority_source": "industrial/corporate/LEADERSHIP_AND_AUTHORITY.md",
+      "compensation_source": "industrial/source/finance.json"
+    },
+    {
+      "employee_id": "EMP-014",
+      "name": "Inez Calderon",
+      "entity_id": "ARU",
+      "authority_source": "industrial/corporate/LEADERSHIP_AND_AUTHORITY.md",
+      "compensation_source": "industrial/source/finance.json"
+    }
+  ],
+  "non_entity_capabilities": [
+    "Foundry",
+    "Foundry Field",
+    "Project Willow",
+    "Atlas Meridian",
+    "Project Cradle",
+    "Advisory",
+    "J2"
+  ],
+  "headcount_boundaries": {
+    "pale_sun_platform": 12,
+    "red_wash_site": 128,
+    "pale_sun_red_wash_total": 140,
+    "aru_nonrail_and_corporate": 73,
+    "bst": 58,
+    "aru_consolidated": 131,
+    "enterprise_total": "Not restated; legacy enterprise scale schedules are historical and require an explicit reconciliation before aggregation"
+  },
+  "controlling_narrative": "docs/canon/INDUSTRIAL_CLOSEOUT_2026-09-05.md"
+}

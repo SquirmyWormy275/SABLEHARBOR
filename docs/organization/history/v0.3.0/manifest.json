@@ -1,0 +1,164 @@
+{
+  "record_id": "SH-ORG-HISTORY-003",
+  "archived_from": "dd505286d7a66d25a2929981150d028935f27fbe",
+  "created_at": "2026-09-05T22:16:52-07:00",
+  "status": "Historical v0.3 source/chart and unchanged briefing artifacts; not current industrial authority",
+  "artifacts": [
+    {
+      "original_path": "docs/organization/README.md",
+      "preserved_path": "docs/organization/history/v0.3.0/README.md",
+      "sha256": "22d6c8ddd6ee8ac894c8da150412acfec104d21d699f5bd39b8504e0dd7e3220",
+      "status": "HISTORICAL_SUPERSEDED"
+    },
+    {
+      "original_path": "docs/organization/CHART_GOVERNANCE.md",
+      "preserved_path": "docs/organization/history/v0.3.0/CHART_GOVERNANCE.md",
+      "sha256": "b942d755193d16fd3267b9c9dea13445ff4aca220eff988f9577e24cefa57b41",
+      "status": "HISTORICAL_SUPERSEDED"
+    },
+    {
+      "original_path": "docs/organization/CANON_TRACEABILITY_MATRIX.md",
+      "preserved_path": "docs/organization/history/v0.3.0/CANON_TRACEABILITY_MATRIX.md",
+      "sha256": "6f9f7abcecf9edb3373c1be5739dc812a4eec0527516405195c17077042a3f66",
+      "status": "HISTORICAL_SUPERSEDED"
+    },
+    {
+      "original_path": "docs/organization/LEGAL_AND_REPORTING_STRUCTURE_STATUS.md",
+      "preserved_path": "docs/organization/history/v0.3.0/LEGAL_AND_REPORTING_STRUCTURE_STATUS.md",
+      "sha256": "282c7f09785ac2466d2ac5158db7635012a028ae8b665cfa284d577857516a99",
+      "status": "HISTORICAL_SUPERSEDED"
+    },
+    {
+      "original_path": "docs/organization/PALE_SUN_AND_RED_WASH.md",
+      "preserved_path": "docs/organization/history/v0.3.0/PALE_SUN_AND_RED_WASH.md",
+      "sha256": "1b22ee32afb7833c0cbce038114bbf69266441870a0705974b81c52271b949c4",
+      "status": "HISTORICAL_SUPERSEDED"
+    },
+    {
+      "original_path": "docs/organization/PALE_SUN_RED_WASH_ORGANIZATION.md",
+      "preserved_path": "docs/organization/history/v0.3.0/PALE_SUN_RED_WASH_ORGANIZATION.md",
+      "sha256": "c36759f5be967b58eba3d6369d026381eb6eaa4cfe7f1cbf740d1477e4d8db70",
+      "status": "HISTORICAL_SUPERSEDED"
+    },
+    {
+      "original_path": "docs/organization/ARU_BST_AND_ADVISORY.md",
+      "preserved_path": "docs/organization/history/v0.3.0/ARU_BST_AND_ADVISORY.md",
+      "sha256": "d8e68912f7d0df3f6b45c3e58eba338d24d3113abb12825d406589017b6cefa5",
+      "status": "HISTORICAL_SUPERSEDED"
+    },
+    {
+      "original_path": "docs/organization/ARU_BST_ORGANIZATION.md",
+      "preserved_path": "docs/organization/history/v0.3.0/ARU_BST_ORGANIZATION.md",
+      "sha256": "6955d9f1258f6749b27513f84f7861d5f1497c4732af6536f7d0d51fc0bcb09e",
+      "status": "HISTORICAL_SUPERSEDED"
+    },
+    {
+      "original_path": "docs/organization/2026_OPERATING_TOPOLOGY.md",
+      "preserved_path": "docs/organization/history/v0.3.0/2026_OPERATING_TOPOLOGY.md",
+      "sha256": "ed0c3c0ee10174e1cb4c4b9b6a76d7a7bcb507646be2574e9bdc78a977c41197",
+      "status": "HISTORICAL_SUPERSEDED"
+    },
+    {
+      "original_path": "docs/organization/2026_LEADERSHIP_AND_AUTHORITY_MAP.md",
+      "preserved_path": "docs/organization/history/v0.3.0/2026_LEADERSHIP_AND_AUTHORITY_MAP.md",
+      "sha256": "7d3c09c7bb44703c8a3cb0be0d687dd0be4c322c8043609492b02290ddfc28ec",
+      "status": "HISTORICAL_SUPERSEDED"
+    },
+    {
+      "original_path": "docs/organization/ORGANIZATION_MAP_REGISTER.json",
+      "preserved_path": "docs/organization/history/v0.3.0/ORGANIZATION_MAP_REGISTER.json",
+      "sha256": "54e317066ee6906df38628afa75f9338f91934fca6859bdef91c2387a6b1f818",
+      "status": "HISTORICAL_SUPERSEDED"
+    },
+    {
+      "original_path": "docs/organization/assets/enterprise-organization-2026.svg",
+      "preserved_path": "docs/organization/history/v0.3.0/assets/enterprise-organization-2026.svg",
+      "sha256": "d5dd14eed36ff56e42e93275fdea19403c1d61155610b15acc5945287dadda51",
+      "status": "HISTORICAL_SUPERSEDED"
+    },
+    {
+      "original_path": "docs/organization/assets/leadership-authority-2026.svg",
+      "preserved_path": "docs/organization/history/v0.3.0/assets/leadership-authority-2026.svg",
+      "sha256": "1b86ca8d1f563433b9d903664766f2cfca610a772f256bb3f14821e128633c7d",
+      "status": "HISTORICAL_SUPERSEDED"
+    },
+    {
+      "original_path": "docs/organization/assets/pale-sun-red-wash-organization-2026.svg",
+      "preserved_path": "docs/organization/history/v0.3.0/assets/pale-sun-red-wash-organization-2026.svg",
+      "sha256": "c4163ef5a84ce5eabe471646b41877f6f17a7dc71d76dfe25fd347d4af52e680",
+      "status": "HISTORICAL_SUPERSEDED"
+    },
+    {
+      "original_path": "docs/organization/assets/aru-bst-organization-2026.svg",
+      "preserved_path": "docs/organization/history/v0.3.0/assets/aru-bst-organization-2026.svg",
+      "sha256": "6761026c106b4de82162ed6e1446aa83f859f74d3eaf55e208928f197e053ba0",
+      "status": "HISTORICAL_SUPERSEDED"
+    },
+    {
+      "original_path": "docs/organization/briefing/SABLE_HARBOR_Organization_Briefing_v1.0.pdf",
+      "preserved_path": "docs/organization/briefing/SABLE_HARBOR_Organization_Briefing_v1.0.pdf",
+      "sha256": "3ad0e6d798cb575641b993bf02e850eb505f06a88ffc01c810be85977e826549",
+      "status": "HISTORICAL_UNCHANGED_BYTES"
+    },
+    {
+      "original_path": "docs/organization/briefing/SABLE_HARBOR_Organization_Briefing_v1.0.pptx",
+      "preserved_path": "docs/organization/briefing/SABLE_HARBOR_Organization_Briefing_v1.0.pptx",
+      "sha256": "013b7008c57bd95073affe7772bc5028e26fa7b8b75740417acba79ef7774401",
+      "status": "HISTORICAL_UNCHANGED_BYTES"
+    },
+    {
+      "original_path": "docs/organization/briefing/SABLE_HARBOR_Organization_Briefing_v1.0.zip",
+      "preserved_path": "docs/organization/briefing/SABLE_HARBOR_Organization_Briefing_v1.0.zip",
+      "sha256": "6a058ac51d686ef24987fa4a46e3299f79a2e22891569aa676621b6d88a84b6e",
+      "status": "HISTORICAL_UNCHANGED_BYTES"
+    },
+    {
+      "original_path": "docs/organization/briefing/images/01_sable_harbor_enterprise_organization.png",
+      "preserved_path": "docs/organization/briefing/images/01_sable_harbor_enterprise_organization.png",
+      "sha256": "7925501e0dac16efcb2d79fed62eefd0d4d0560005509ec08ac39eac4a9a6699",
+      "status": "HISTORICAL_UNCHANGED_BYTES"
+    },
+    {
+      "original_path": "docs/organization/briefing/images/02_foundry_foundry_field_organization.png",
+      "preserved_path": "docs/organization/briefing/images/02_foundry_foundry_field_organization.png",
+      "sha256": "01f66b42da0e23459e88348f7c624789ae21a60787d56f4aecf44ba7d006ba9f",
+      "status": "HISTORICAL_UNCHANGED_BYTES"
+    },
+    {
+      "original_path": "docs/organization/briefing/images/03_project_willow_organization.png",
+      "preserved_path": "docs/organization/briefing/images/03_project_willow_organization.png",
+      "sha256": "87de95182d6068954e5f29cc1c3efe479ef2e3a342692bae755b0c1b6e99f233",
+      "status": "HISTORICAL_UNCHANGED_BYTES"
+    },
+    {
+      "original_path": "docs/organization/briefing/images/04_atlas_meridian_organization.png",
+      "preserved_path": "docs/organization/briefing/images/04_atlas_meridian_organization.png",
+      "sha256": "7b9b8fe8e18909b4ff91409f4052f430f8cc32b1df5d310dfe95a91e9df5f13d",
+      "status": "HISTORICAL_UNCHANGED_BYTES"
+    },
+    {
+      "original_path": "docs/organization/briefing/images/05_pale_sun_red_wash_organization.png",
+      "preserved_path": "docs/organization/briefing/images/05_pale_sun_red_wash_organization.png",
+      "sha256": "3b565f2a8d2df8a5ad45bba5e0d1170925a6e30b25b92ee36752ed5a0b8b5c46",
+      "status": "HISTORICAL_UNCHANGED_BYTES"
+    },
+    {
+      "original_path": "docs/organization/briefing/images/06_project_cradle_organization.png",
+      "preserved_path": "docs/organization/briefing/images/06_project_cradle_organization.png",
+      "sha256": "2dd5d5a2cf89869ea4b7272620715d54f939a4abb05ed6eac4ee0d3cdf26806e",
+      "status": "HISTORICAL_UNCHANGED_BYTES"
+    },
+    {
+      "original_path": "docs/organization/briefing/images/07_american_resource_utility_bst_organization.png",
+      "preserved_path": "docs/organization/briefing/images/07_american_resource_utility_bst_organization.png",
+      "sha256": "79f97544f420c9bd97bb92e672ea74ebbef8a57595874df57d4cc325971ef5b0",
+      "status": "HISTORICAL_UNCHANGED_BYTES"
+    },
+    {
+      "original_path": "docs/organization/briefing/images/08_advisory_organization.png",
+      "preserved_path": "docs/organization/briefing/images/08_advisory_organization.png",
+      "sha256": "c0ca3b63b7b7dd61e388496361dcb6cf0a2af2154dfa812b5545ce3ae09b4e67",
+      "status": "HISTORICAL_UNCHANGED_BYTES"
+    }
+  ]
+}

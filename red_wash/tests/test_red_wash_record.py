@@ -182,15 +182,15 @@ class RedWashRecordTests(unittest.TestCase):
 
     def test_source_backed_provenance_preserves_mixed_evidence_states(self) -> None:
         ownership = {row["owner_display_name"]: row for row in rows("ownership_history.csv")}
-        northstar = ownership["Northstar Resources"]
-        self.assertEqual(northstar["owner_display_name_state"], "PROVISIONAL")
-        self.assertEqual(northstar["owner_legal_name"], "")
-        self.assertEqual(northstar["owner_legal_name_state"], "OPEN")
-        self.assertEqual(northstar["fact_state"], "PROVISIONAL_CANON")
+        northstar = ownership["Northstar Minerals, Inc."]
+        self.assertEqual(northstar["owner_display_name_state"], "LOCKED")
+        self.assertEqual(northstar["owner_legal_name"], "Northstar Minerals, Inc.")
+        self.assertEqual(northstar["owner_legal_name_state"], "LOCKED")
+        self.assertEqual(northstar["fact_state"], "LOCKED_CANON")
         current = next(row for row in ownership.values() if row["end_date"] == "")
-        self.assertEqual(current["owner_display_name"], "Sable Harbor")
+        self.assertEqual(current["owner_display_name"], "Pale Sun Inc.")
         self.assertEqual(current["owner_display_name_state"], "LOCKED")
-        self.assertEqual(current["owner_legal_name_state"], "OPEN")
+        self.assertEqual(current["owner_legal_name_state"], "LOCKED")
 
         resources = rows("resource_basis.csv")
         self.assertTrue(all(row["epistemic_state"] == "SUPPORTED_ESTIMATE" for row in resources))
@@ -239,7 +239,7 @@ class RedWashRecordTests(unittest.TestCase):
         self.assertEqual(manifest["scenario_id"], "red-wash-2025-2026")
         self.assertEqual(manifest["scenario_version"], core["version"])
         self.assertEqual(manifest["generator_version"], builder.GENERATOR_VERSION)
-        self.assertEqual(manifest["input_version"], "red-wash-public-source/1.0.0")
+        self.assertEqual(manifest["input_version"], "red-wash-public-source/1.1.0")
         self.assertEqual(manifest["seed"], 20250718)
         self.assertEqual(
             manifest["effective_period"],
@@ -301,12 +301,12 @@ class RedWashRecordTests(unittest.TestCase):
         collars = rows("drill_collars.csv")
         self.assertTrue(
             all(
-                row["coordinate_crs"] == "NAD83 / UTM zone 13N"
-                and row["epsg_code"] == "26913"
-                and row["utm_zone"] == "13N"
+                row["coordinate_crs"] == "NAD83 / UTM zone 12N"
+                and row["epsg_code"] == "26912"
+                and row["utm_zone"] == "12N"
                 and row["horizontal_datum"] == "NAD83"
-                and Decimal("339560") <= Decimal(row["easting_m"]) <= Decimal("343760")
-                and Decimal("4684780") <= Decimal(row["northing_m"]) <= Decimal("4687780")
+                and Decimal("730648.78") <= Decimal(row["easting_m"]) <= Decimal("734848.79")
+                and Decimal("4676553.61") <= Decimal(row["northing_m"]) <= Decimal("4679553.62")
                 for row in collars
             )
         )
@@ -507,17 +507,17 @@ class RedWashRecordTests(unittest.TestCase):
         self.assertEqual(boundaries["preliminary_interface_envelope_usd"], 15_000_000)
         self.assertFalse(boundaries["interface_envelope_booked"])
         self.assertFalse(boundaries["direct_uranium_custody_authorized"])
-        self.assertFalse(boundaries["full_aru_case_authorized"])
-        self.assertEqual(len(bridge["open_aru_fields"]), 32)
+        self.assertTrue(boundaries["full_aru_case_authorized"])
+        self.assertEqual(len(bridge["open_aru_fields"]), 3)
 
         rail = rows("rail_access_candidates.csv")
         self.assertEqual(len(rail), 1)
         self.assertEqual(rail[0]["direct_mine_connection"], "0")
-        self.assertEqual(rail[0]["suitable_transload"], "0")
+        self.assertEqual(rail[0]["suitable_transload"], "1")
         self.assertEqual(rail[0]["uranium_capability"], "0")
         capex = rows("aru_red_wash_preliminary_capex.csv")
         quantified = [row for row in capex if row["amount_usd"]]
-        self.assertEqual(len(quantified), 1)
+        self.assertEqual(len(quantified), 4)
         self.assertEqual(Decimal(quantified[0]["amount_usd"]), 15_000_000)
         self.assertTrue(
             all(row["amount_state"] == "OPEN" for row in capex if not row["amount_usd"])
@@ -586,7 +586,7 @@ class RedWashRecordTests(unittest.TestCase):
             if not condition
         ]
         self.assertIn(
-            "structured bridge preserves the exact ordered set of 32 OPEN ARU fields",
+            "structured bridge preserves the exact ordered set of three gated ARU fields",
             failures,
         )
         self.assertIn(

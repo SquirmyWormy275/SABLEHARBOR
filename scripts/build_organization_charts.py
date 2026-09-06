@@ -15,7 +15,19 @@ SNAPSHOT_DATE = "2026-08-31"
 SNAPSHOT_DATE_DISPLAY = "August 31, 2026"
 CANON_REVIEW_DATE = "2026-09-05"
 CANON_REVIEW_DATE_DISPLAY = "September 5, 2026"
-PACKAGE_VERSION = "0.3.0"
+PACKAGE_VERSION = "0.4.0"
+INDUSTRIAL_DATE = "2026-09-05"
+INDUSTRIAL_PAGES = {"PALE_SUN_RED_WASH_ORGANIZATION.md", "ARU_BST_ORGANIZATION.md"}
+CURRENT_CHARTS = {"enterprise-organization-2026.svg", "leadership-authority-2026.svg",
+                  "pale-sun-red-wash-organization-2026.svg", "aru-bst-organization-2026.svg"}
+ENTITY_SOURCE = json.loads((ROOT / "industrial/source/entities.json").read_text())
+ENTITIES = {entity["entity_id"]: entity for entity in ENTITY_SOURCE["entities"]}
+
+
+def officer(entity_id: str, title: str) -> str:
+    return next(person.get("display_name", person["name"])
+                for person in ENTITIES[entity_id]["officers"] if person["title"] == title)
+
 
 C = {
     "bg": "#F4F0E6", "paper": "#FFFFFF", "ink": "#122532", "navy": "#17384A",
@@ -101,6 +113,9 @@ def line(x1: int, y1: int, x2: int, y2: int, *, dashed: bool = False) -> str:
 
 def chart(filename: str, width: int, height: int, title: str, subtitle: str,
           desc: str, body: str) -> None:
+    canonical_date = INDUSTRIAL_DATE if filename in CURRENT_CHARTS else SNAPSHOT_DATE
+    relationship_label = ("LABELED OWNERSHIP / OPERATING AUTHORITY" if filename in CURRENT_CHARTS
+                          else "LOCKED OPERATING RELATIONSHIP")
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img" aria-labelledby="title desc">
 <title id="title">{escape(title)}</title><desc id="desc">{escape(desc)}</desc>
 <style>{STYLE}</style>
@@ -109,7 +124,7 @@ def chart(filename: str, width: int, height: int, title: str, subtitle: str,
 <text x="48" y="52" class="title">{escape(title)}</text>
 <text x="48" y="78" class="subtitle">{escape(subtitle)}</text>
 {body}
-<text x="48" y="{height-24}" class="footer">CANONICAL DATE: 2026-08-31  •  SOLID = LOCKED OPERATING RELATIONSHIP  •  DASHED = SEAM / OPEN STRUCTURE  •  NOT AN HR REPORTING TREE</text>
+<text x="48" y="{height-24}" class="footer">CANONICAL DATE: {canonical_date}  •  SOLID = {relationship_label}  •  DASHED = SEAM / OPEN STRUCTURE  •  NOT AN HR REPORTING TREE</text>
 </svg>'''
     (ASSETS / filename).write_text(svg, encoding="utf-8")
 
@@ -133,12 +148,12 @@ def build_enterprise() -> None:
         (50, "FOUNDRY / FOUNDRY FIELD", "Represents operational reality", "Priya Raman — product/technical substrate", C["orange"], False),
         (350, "PROJECT WILLOW", "Tests consequential unknowns", "Gid Voss — Pittsburgh laboratory", C["green"], False),
         (650, "ATLAS MERIDIAN", "Investigates represented evidence", "Simone Vale — transition/repeatability", C["gold"], False),
-        (950, "PALE SUN", "Owns and operates Red Wash", "Mari Varela — operating thesis", C["red"], False),
+        (950, "PALE SUN", "Owns and operates Red Wash", "Evan Vilander — President; Mari Varela — COO", C["red"], False),
         (1250, "PROJECT CRADLE", "Recovers value from process streams", "Kenji Arakawa — program lead", C["green"], False),
     ]
     for x, n, r, ldr, ac, op in units:
         b.append(unit_card(x, 525, 260, 142, n, r, ldr, accent=ac, open_state=op))
-    b.append(unit_card(350, 735, 260, 142, "AMERICAN RESOURCE UTILITY", "Operates resource logistics", "Operating leadership: OPEN", accent=C["steel"], open_state=True))
+    b.append(unit_card(350, 735, 260, 142, "AMERICAN RESOURCE UTILITY", "Operates resource logistics", "Nora Ashcombe — President / COO", accent=C["steel"]))
     b.append(unit_card(650, 735, 260, 142, "ADVISORY", "Transfers the method", "Name, leader and home: OPEN", accent=C["gold"], open_state=True))
     b.append(unit_card(950, 735, 260, 142, "RED WASH MINE", "Wyoming uranium operating asset", "Pale Sun owns and operates", accent=C["red"]))
     # company to operating band; intentionally no person-to-person reporting connectors
@@ -150,8 +165,8 @@ def build_enterprise() -> None:
     b.append(connector(800, 224, 780, 735, dashed=True))
     b.append(connector(1080, 667, 1080, 735, label="owns + operates", label_x=1160, label_y=712))
     chart("enterprise-organization-2026.svg", 1600, 940, "SABLE HARBOR — ENTERPRISE ORGANIZATION",
-          "Operating ownership and authority map • exact HR reporting lines and legal entities remain open",
-          "Organization chart showing enterprise authorities and Sable Harbor operating lines as of August 31, 2026.", "".join(b))
+          "Functional map • industrial ownership/officers resolved September 5; see current legal tree",
+          "Organization chart showing enterprise authorities and Sable Harbor operating lines with the September 5 industrial closeout applied.", "".join(b))
 
 
 def build_leadership() -> None:
@@ -172,12 +187,12 @@ def build_leadership() -> None:
         (50, "GID VOSS", "Project Willow", "Runs Pittsburgh laboratory", C["green"], False),
         (330, "RACHEL SLOANE", "Advanced-program seam", "Sacramento; not Gid's boss", C["steel"], False),
         (610, "SIMONE VALE", "Atlas transition", "Repeatability + product boundary", C["gold"], False),
-        (890, "MARI VARELA", "Pale Sun", "Red Wash operating thesis", C["red"], False),
+        (890, "MARI VARELA", "Pale Sun COO / Red Wash CEO", "Evan Vilander: Pale Sun President", C["red"], False),
         (1170, "KENJI ARAKAWA", "Project Cradle", "Extractive metallurgy + program", C["green"], False),
     ]
     for x, n, r, note, ac, op in leaders:
         b.append(card(x, 515, 240, 128, n, r, note, accent=ac, status="LOCKED ROLE"))
-    b.append(card(330, 710, 240, 128, "ARU OPERATING LEADER", "Identity unresolved", "ARU remains operationally distinct", accent=C["steel"], status="OPEN", dashed=True, fill=C["open"]))
+    b.append(card(330, 710, 240, 128, "NORA ASHCOMBE", "ARU President / COO", "Seth Kettering: BS&T General Manager", accent=C["steel"], status="DERIVED SYNTHETIC CASE"))
     b.append(card(610, 710, 240, 128, "ADVISORY LEADER", "Identity + home unresolved", "Emerging practice", accent=C["gold"], status="OPEN", dashed=True, fill=C["open"]))
     b.append(card(890, 710, 240, 128, "JON BELL", "Board-associated", "Left executive team in 2023", accent=C["steel"], status="LOCKED STATUS"))
     chart("leadership-authority-2026.svg", 1460, 900, "SABLE HARBOR — LEADERSHIP & AUTHORITY",
@@ -275,44 +290,39 @@ def build_atlas() -> None:
 
 
 def build_pale_sun() -> None:
-    b = [card(505, 105, 390, 122, "MARIANNE “MARI” VARELA", "Leads Pale Sun's operating thesis",
-              "Protects Red Wash from becoming a science fair", accent=C["red"], status="LOCKED ROLE")]
-    b.append(card(505, 300, 390, 140, "PALE SUN", "Uranium operating business\n12 FTE business layer — 2026 case",
-                  "Operation first; proving ground second", accent=C["red"],
-                  status="LOCKED / SYNTHETIC CASE"))
-    b.append(connector(700, 227, 700, 300))
-    b.append(card(505, 515, 390, 140, "RED WASH MINE", "Underground Wyoming uranium mine\n128 FTE site — 2026 case",
-                  "Owned and operated by Pale Sun", accent=C["red"],
-                  status="LOCKED / SYNTHETIC CASE"))
-    b.append(connector(700, 440, 700, 515, label="owns + operates", label_x=790, label_y=485))
-    b.append(card(160, 515, 270, 140, "COLE", "Red Wash site superintendent", "Surname OPEN; defined temporary stop authority", accent=C["gold"], status="LOCKED ROLE"))
-    b.append(line(505, 585, 430, 585))
-    b.append(card(970, 515, 270, 140, "WALT SUTTER", "Retired geologist — external source", "Useful source; not employee and not oracle", accent=C["steel"], status="EXTERNAL"))
-    b.append(line(895, 585, 970, 585, dashed=True))
-    b.append(lines_text(50, 710, ["TECHNOLOGY AND RESEARCH INTERFACES — ACCESS THROUGH QUALIFICATION GATES"], "band"))
-    interfaces = [
-        (100, "CALEB HARGROVE", "Field qualification + operating boundary", C["green"]),
-        (410, "FOUNDRY", "Representation + workflow", C["orange"]),
-        (720, "WILLOW", "Qualified experiments only", C["green"]),
-        (1030, "ATLAS MERIDIAN", "Decision support only", C["gold"]),
-    ]
-    for x, n, r, ac in interfaces:
-        b.append(card(x, 735, 270, 112, n, r, "Pale Sun operating accountability controls consequence", accent=ac, status="LOCKED INTERFACE"))
-        b.append(connector(700, 655, x+135, 735, dashed=True))
-    b.append(lines_text(50, 920, ["TRANSPORT BOUNDARY AND LIMITED ARU / BS&T SCREEN"], "band"))
-    b.append(card(60, 945, 380, 140, "QUALIFIED EXTERNAL CARRIERS", "All Red Wash transport throughout 2025",
-                  "Shipment authority remains external unless later gates pass", accent=C["steel"],
-                  status="LOCKED TRANSPORT BOUNDARY"))
-    b.append(card(510, 945, 380, 140, "AMERICAN RESOURCE UTILITY", "Mapped diligence candidate — not turnkey",
-                  "No direct mine connection or suitable secure transload",
-                  accent=C["steel"], status="OPEN GATES / NO CUSTODY", dashed=True,
-                  fill=C["open"]))
-    b.append(card(960, 945, 380, 140, "BLOOD, SWEAT & TEARS RAILWAY", "ARU railway / short-line component",
-                  "No demonstrated uranium capability or custody", accent=C["red"],
-                  status="OPEN GATES / NO CUSTODY", dashed=True, fill=C["open"]))
-    chart("pale-sun-red-wash-organization-2026.svg", 1400, 1135, "PALE SUN / RED WASH — ORGANIZATION",
-          "140 FTE selected case: 12 Pale Sun + 128 site • external carrier remains authoritative",
-          "Pale Sun organization chart showing the approved 2026 workforce split, site authority, qualified external-carrier boundary, limited ARU and BS&T screen, and technology qualification gates.", "".join(b))
+    ps, rw = ENTITIES["PS"], ENTITIES["RWH"]
+    b = [card(500, 110, 440, 120, "INDUSTRIAL HOLDINGS", ENTITIES["SHIH"]["legal_name"],
+              "100% owner of Pale Sun Inc.", status="LOCKED SYNTHETIC OWNERSHIP")]
+    b.append(card(150, 315, 440, 145, officer("PS", "President").upper(), "Pale Sun President",
+                  "Platform strategy, capital cases and downstream relationships\nAppointed November 3, 2025", accent=C["red"], status="DERIVED APPOINTMENT"))
+    b.append(card(850, 315, 440, 145, officer("PS", "Chief Operating Officer").upper(), "Pale Sun COO / Red Wash CEO",
+                  "Mining operations, protection and qualification of change\nOne platform FTE despite two officer titles", accent=C["red"], status="DERIVED APPOINTMENT"))
+    b.append(connector(720, 230, 370, 315, label="PS officer authority"))
+    b.append(connector(720, 230, 1070, 315, label="PS / RWH officer authority"))
+    b.append(card(150, 545, 440, 135, ps["legal_name"], f"{ps['selected_fte']} FTE business layer — 2026 case",
+                  "Separate platform company; 100% owner of RWH", accent=C["red"], status="LOCKED / SYNTHETIC CASE"))
+    b.append(card(850, 545, 440, 135, rw["legal_name"], f"{rw['selected_fte']} FTE site — 2026 case",
+                  "Wyoming underground uranium mine; acquired July 18, 2025", accent=C["red"], status="LOCKED / SYNTHETIC CASE"))
+    b.append(connector(370, 460, 370, 545))
+    b.append(connector(1070, 460, 1070, 545))
+    b.append(line(590, 610, 850, 610))
+    b.append(lines_text(720, 590, ["100% ownership"], "edge-label", anchor="middle"))
+    b.append(card(160, 745, 310, 125, "COLE", "Red Wash site superintendent",
+                  "Surname unestablished; temporary stop authority\nExisting single site general-management billet", accent=C["gold"], status="LOCKED ROLE"))
+    b.append(card(565, 745, 310, 125, "WALT SUTTER", "External retired geologist",
+                  "Source evidence; no employee or oracle status", accent=C["steel"], status="EXTERNAL"))
+    b.append(card(970, 745, 310, 125, "QUALIFICATION INTERFACES", "Caleb / Foundry / Willow / Atlas",
+                  "Participation does not transfer operating authority", accent=C["green"], status="QUALIFIED INTERFACE"))
+    b.append(connector(1070, 680, 315, 745))
+    b.append(connector(1070, 680, 720, 745, dashed=True))
+    b.append(connector(1070, 680, 1125, 745, dashed=True))
+    b.append(card(120, 975, 550, 135, "QUALIFIED EXTERNAL CARRIERS", "All Red Wash transport throughout 2025",
+                  "Later ownership never backdates a transport relationship", accent=C["steel"], status="LOCKED TRANSPORT BOUNDARY"))
+    b.append(card(770, 975, 550, 135, "ARU / BS&T INTERFACE", "131-FTE acquired industrial operator; January 7, 2026 close",
+                  "No direct mine connection or authorized uranium custody", accent=C["steel"], status="OPEN GATES / NO CUSTODY", dashed=True, fill=C["open"]))
+    chart("pale-sun-red-wash-organization-2026.svg", 1440, 1180, "PALE SUN / RED WASH — ORGANIZATION",
+          "140 FTE selected case: 12 Pale Sun + 128 site • legal ownership and named authority, September 5 closeout",
+          "Pale Sun legal ownership and named officer chart, 140-FTE split, site authority, external carrier boundary and gated ARU interface.", "".join(b))
 
 
 def build_cradle() -> None:
@@ -343,25 +353,27 @@ def build_cradle() -> None:
 
 
 def build_aru() -> None:
-    b = [unit_card(500, 105, 400, 128, "AMERICAN RESOURCE UTILITY", "Acquired resource-logistics operator",
-                   "Remains operationally distinct during integration", accent=C["steel"])]
-    b.append(card(500, 310, 400, 118, "ARU OPERATING LEADERSHIP", "Identity and exact title unresolved",
-                  "Legacy operating accountability remains real", accent=C["steel"], status="OPEN", dashed=True, fill=C["open"]))
-    b.append(connector(700, 233, 700, 310))
-    b.append(lines_text(50, 500, ["LOCKED OPERATING COMPONENT AND ESTATE"], "band"))
-    b.append(unit_card(190, 525, 360, 135, "BLOOD, SWEAT & TEARS RAILWAY", "ARU railway / short-line component",
-                       "Wholly owned legal subsidiary; suffix, routes + assets OPEN", accent=C["red"]))
-    b.append(unit_card(850, 525, 360, 135, "LEGACY LOGISTICS OPERATIONS", "Customers, dispatch, terminals, equipment + know-how",
-                       "Detailed structure and footprint OPEN", accent=C["steel"], open_state=True))
-    b.append(connector(700, 428, 370, 525))
-    b.append(connector(700, 428, 1030, 525, dashed=True))
-    b.append(lines_text(50, 735, ["SABLE HARBOR INTERFACES"], "band"))
-    b.append(card(210, 760, 300, 112, "RED WASH INTERFACE SCREEN", "Pale Sun logistics dependency catalyst", "No direct connection or automatic custody", accent=C["red"], status="LOCKED BOUNDARY"))
-    b.append(card(550, 760, 300, 112, "FOUNDRY", "Representation + workflow", "May not overstate source certainty", accent=C["orange"], status="LOCKED INTERFACE"))
-    b.append(card(890, 760, 300, 112, "CALEB / OPERATIONS", "Immediate operating consequence", "Technical and capital authority remain distinct", accent=C["green"], status="LOCKED RULE"))
-    chart("aru-bst-organization-2026.svg", 1400, 930, "ARU / BS&T — ORGANIZATION",
-          "Distinct acquired operator • Red Wash interface remains bounded, screened and custody-gated",
-          "American Resource Utility organization chart showing its open operating leadership, BS&T railway component, and limited Red Wash interface boundary.", "".join(b))
+    aru, bst = ENTITIES["ARU"], ENTITIES["BST"]
+    b = [card(500, 110, 440, 125, "INDUSTRIAL HOLDINGS", ENTITIES["SHIH"]["legal_name"],
+              "100% ARU stock ownership from January 7, 2026", status="LOCKED SYNTHETIC OWNERSHIP")]
+    b.append(card(500, 310, 440, 140, aru["legal_name"], f"{aru['consolidated_selected_fte']} FTE consolidated; {aru['selected_fte']} direct ARU employees",
+                  officer("ARU", "President and Chief Operating Officer") + " — President / COO\nFred Tolman: external transition consultant; no authority", accent=C["steel"], status="DERIVED SYNTHETIC CASE"))
+    b.append(connector(720, 235, 720, 310, label="100% equity"))
+    b.append(card(60, 550, 500, 155, bst["legal_name"], f"{bst['selected_fte']} FTE railway; 100% ARU-owned legal subsidiary",
+                  officer("BST", "General Manager") + " — General Manager\nAnika Soren: dispatch; Calvin Mott: MOW\nPaulina Dace: mechanical; Silas Wren: compliance", accent=C["red"], status="SEPARATE RAIL OPERATING AUTHORITY"))
+    b.append(card(820, 550, 560, 155, "ARU NONRAIL OPERATIONS", "Gareth Pike — Industrial Operations",
+                  "27 terminal: Derek Fenwick; 24 trucking: Marta Ellery\n12 warehouse: Inez Calderon; 10 corporate\nTessa Rourke: Controller; Owen Halberg: Safety / Environment", accent=C["steel"], status="73 DIRECT ARU EMPLOYEES"))
+    b.append(connector(720, 450, 310, 550, label="100% legal ownership"))
+    b.append(connector(720, 450, 1100, 550, label="operating responsibility"))
+    b.append(card(80, 805, 400, 145, "WORKFORCE BOUNDARY", "58 + 27 + 24 + 12 + 10 = 131 FTE",
+                  "14 named leaders occupy existing billets\nNo additional management overlay or Fred employee", accent=C["gold"], status="RECONCILED CENSUS"))
+    b.append(card(520, 805, 400, 145, "OPERATING CONTINUITY", "Legacy customers, people and railway knowledge",
+                  "Corporate capital and technical support do not\nrelease trains or override qualified operating stops", accent=C["green"], status="RETAINED AUTHORITY"))
+    b.append(card(960, 805, 400, 145, "RED WASH INTERFACE", "Taylor: ordinary industrial terminal",
+                  "External qualified carriers remain valid\nUranium custody requires separate documented gates", accent=C["red"], status="OPEN GATES / NO CUSTODY", dashed=True, fill=C["open"]))
+    chart("aru-bst-organization-2026.svg", 1440, 1020, "ARU / BS&T — ORGANIZATION",
+          "Named retained management • 131-FTE selected case • legal ownership does not grant uranium custody",
+          "ARU and BS&T current legal ownership, Nora Ashcombe and Seth Kettering authority, 131-FTE workforce and gated Red Wash interface.", "".join(b))
 
 
 def build_original_eight() -> None:
@@ -417,7 +429,7 @@ PAGES = {
     "PROJECT_CRADLE_ORGANIZATION.md": ("PROJECT CRADLE — ORGANIZATION", "project-cradle-organization-2026.svg", "SH-ORG-007",
         "Founding team and the boundary among Cradle, its recovery intervention and the host operator."),
     "ARU_BST_ORGANIZATION.md": ("ARU / BS&T — ORGANIZATION", "aru-bst-organization-2026.svg", "SH-ORG-008",
-        "Distinct acquired operator, known railway component, open operating structure, and limited Red Wash interface boundary."),
+        "Distinct acquired operator, named retained leadership, 131-FTE case and gated Red Wash interface."),
     "ORIGINAL_EIGHT.md": ("THE ORIGINAL EIGHT — FORMATION & STATUS", "original-eight-formation-and-status.svg", "SH-ORG-009",
         "Three founders plus five early employees, Blackridge continuity and 2026 status."),
 }
@@ -425,7 +437,14 @@ PAGES = {
 
 def write_pages() -> None:
     for path, (title, image, chart_id, purpose) in PAGES.items():
+        # These pages are substantive maintained sources, not disposable wrappers.
+        # Fail if absent rather than quietly replace them with a generic template.
+        if path in INDUSTRIAL_PAGES:
+            if not (ORG / path).is_file():
+                raise FileNotFoundError(f"Missing authored industrial page: {path}")
+            continue
         source_lines = [
+            "- [Industrial closeout](../canon/INDUSTRIAL_CLOSEOUT_2026-09-05.md)",
             "- [`SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md`](../canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md)",
             "- [`DECISION_REGISTER.md`](../canon/DECISION_REGISTER.md)",
             "- [`DECISION_REGISTER_ADDENDUM_2026-09-03.md`](../canon/DECISION_REGISTER_ADDENDUM_2026-09-03.md)",
@@ -433,19 +452,19 @@ def write_pages() -> None:
         ]
         if path == "PALE_SUN_RED_WASH_ORGANIZATION.md":
             source_lines.extend([
-                "- [`SH-PS-RW-DR-001` — `RW-017`–`RW-025`](../canon/DECISION_REGISTER_ADDENDUM_2026-09-05_RED_WASH.md)",
-                "- [`RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05.md`](../canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05.md)",
+                "- [`SH-PS-RW-DR-001` — `RW-017`–`RW-025`](../canon/DECISION_REGISTER_ADDENDUM_2026-09-05_RED_WASH_R2.md)",
+                "- [`RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05_R2.md`](../canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05_R2.md)",
                 "- [`ARU_BST_INTERFACE_AND_DEPENDENCY_RECORD.md`](../../red_wash/logistics/ARU_BST_INTERFACE_AND_DEPENDENCY_RECORD.md)",
             ])
         elif path == "ARU_BST_ORGANIZATION.md":
             source_lines.extend([
-                "- [`SH-PS-RW-DR-001` — `RW-017`–`RW-025`](../canon/DECISION_REGISTER_ADDENDUM_2026-09-05_RED_WASH.md)",
+                "- [`SH-PS-RW-DR-001` — `RW-017`–`RW-025`](../canon/DECISION_REGISTER_ADDENDUM_2026-09-05_RED_WASH_R2.md)",
                 "- [`ARU_BST_INTERFACE_AND_DEPENDENCY_RECORD.md`](../../red_wash/logistics/ARU_BST_INTERFACE_AND_DEPENDENCY_RECORD.md)",
             ])
         content = f"""# {title}
 
 **Chart ID:** `{chart_id}`
-**Canonical date:** {SNAPSHOT_DATE_DISPLAY}
+**Canonical date:** {CANON_REVIEW_DATE_DISPLAY if image in CURRENT_CHARTS else SNAPSHOT_DATE_DISPLAY}
 **Canon reviewed through:** {CANON_REVIEW_DATE_DISPLAY}
 **Status:** Canon-derived visual organization chart
 **Purpose:** {purpose}
@@ -457,8 +476,8 @@ def write_pages() -> None:
 This chart renders only relationships that the corporate canon actually locks. Where
 represented, Sable Harbor controls ARU, and BS&T is a wholly owned legal subsidiary
 beneath ARU.
-It does **not** invent exact legal names, suffixes, jurisdictions, executive titles,
-headcount, or person-to-person reporting lines. Where a headcount appears, it is a
+The industrial closeout expressly supplies current legal names, ownership and appointed
+officers; other unprovided reporting lines remain unresolved. Where headcount appears, it is a
 source-backed synthetic selected-case value, not an implied enterprise total or
 reporting structure. Dashed structures identify an institutional seam,
 historical/functional relationship, or deliberately OPEN detail.
@@ -481,7 +500,7 @@ The SVG is a repository artifact generated by [`scripts/build_organization_chart
 **Canon reviewed through:** {CANON_REVIEW_DATE_DISPLAY}
 **Status:** Canon-derived publication package
 
-These are rendered organization charts for the repository and public wiki. The diagrams preserve the August 31 operating snapshot, carry the approved Red Wash selected-case workforce and limited ARU/BS&T interface boundary, and display genuinely unresolved positions as OPEN rather than fabricating a polished hierarchy.
+These are rendered organization charts for the repository and public wiki. The broader capability charts retain the August 31 snapshot. Enterprise, leadership, Pale Sun and ARU charts apply the September 5 industrial closeout. Current industrial legal identities, officers and selected workforce are resolved; unrelated unresolved positions remain OPEN.
 
 The September 3 headquarters closeout controls the Board/CEO, Enterprise Support Services, J2, Internal Audit, and professional-practice architecture. The existing enterprise SVG is a narrower operating-line and authority baseline; omission from that image does not supersede or weaken the later headquarters decisions.
 
@@ -493,11 +512,11 @@ The September 3 headquarters closeout controls the Board/CEO, Enterprise Support
 
 ## Reading rule
 
-The enterprise chart is a **functional organization chart**: it shows Sable Harbor's company-wide authorities, operating lines, known leaders and known ownership/component relationships. It is not a conventional HR reporting tree because the canon deliberately leaves exact executive titles and reporting lines open.
+The enterprise chart is a **functional organization chart**: it shows Sable Harbor's company-wide authorities, operating lines, known leaders and known ownership/component relationships. Named industrial officers and legal ownership are now resolved; the [current legal tree](LEGAL_AND_REPORTING_STRUCTURE_STATUS_R2.md) carries those explicit relationships. Other personal reporting lines are not inferred.
 
-The unit charts go deeper wherever the canon supports real team structure. They do not fill remaining gaps with plausible-sounding executives, mine departments, subsidiaries, or headcount. The 140-FTE Pale Sun/Red Wash value is an approved synthetic selected-case input: 12 FTE in the Pale Sun business layer and 128 FTE at the Red Wash site.
+The unit charts go deeper wherever the canon supports real team structure. They consume the accepted structured case and distinguish derived synthetic details from historical originals. The 140-FTE Pale Sun/Red Wash value is an approved synthetic selected-case input: 12 FTE in the Pale Sun business layer and 128 FTE at the Red Wash site.
 
-The ARU/BS&T bridge is deliberately limited. It does not create a pre-2026 relationship, replace the qualified external carriers used throughout 2025, grant uranium custody, or settle ARU acquisition, network, workforce, leadership, legal, or financial details.
+ARU discovery and diligence begin October 2025; ownership begins January 7, 2026. Its acquisition, network, workforce, leadership, legal and financial case are now explicitly sourced. All 2025 Red Wash transport remains with qualified external carriers, and ARU/BS&T uranium custody remains OPEN_GATED. The 131-FTE ARU case comprises 58 railway, 27 terminal, 24 trucking, 12 warehouse and 10 corporate; named management occupies those billets.
 
 ## Detailed narrative and controls
 
@@ -505,13 +524,20 @@ The ARU/BS&T bridge is deliberately limited. It does not create a pre-2026 relat
 - [Chart governance](CHART_GOVERNANCE.md) — relationship semantics and anti-invention rules.
 - [Canon traceability matrix](CANON_TRACEABILITY_MATRIX.md) — source support and carried fact state.
 
+## Historical artwork
+
+[Archived v0.3 sources and SVGs](history/v0.3.0/HISTORY.md) preserve earlier bytes. Existing versioned briefing PNG/PDF/PPTX/ZIP exports are historical, with hashes in the archive manifest; their old OPEN labels do not control current industrial decisions.
+
 ## Source and regeneration
+
+- Industrial closeout: [SH-IND-DR-001](../canon/INDUSTRIAL_CLOSEOUT_2026-09-05.md)
+- Entity/authority source: [entities.json](../../industrial/source/entities.json)
 
 - Controlling canon: [`SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md`](../canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md)
 - Decision index: [`DECISION_REGISTER.md`](../canon/DECISION_REGISTER.md)
 - September 3 decisions: [`DECISION_REGISTER_ADDENDUM_2026-09-03.md`](../canon/DECISION_REGISTER_ADDENDUM_2026-09-03.md)
-- September 5 Red Wash decisions: [`SH-PS-RW-DR-001` — `RW-017`–`RW-025`](../canon/DECISION_REGISTER_ADDENDUM_2026-09-05_RED_WASH.md)
-- Red Wash record: [`RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05.md`](../canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05.md)
+- September 5 Red Wash decisions: [`SH-PS-RW-DR-001` — `RW-017`–`RW-025`](../canon/DECISION_REGISTER_ADDENDUM_2026-09-05_RED_WASH_R2.md)
+- Red Wash record: [`RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05_R2.md`](../canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05_R2.md)
 - Limited logistics interface: [`ARU_BST_INTERFACE_AND_DEPENDENCY_RECORD.md`](../../red_wash/logistics/ARU_BST_INTERFACE_AND_DEPENDENCY_RECORD.md)
 - Chart governance: [`CHART_GOVERNANCE.md`](CHART_GOVERNANCE.md)
 - Deterministic renderer: [`scripts/build_organization_charts.py`](../../scripts/build_organization_charts.py)
@@ -528,7 +554,7 @@ def write_register() -> None:
             "page": f"docs/organization/{path}",
             "asset": f"docs/organization/assets/{image}",
             "purpose": purpose,
-            "canonicalDate": SNAPSHOT_DATE,
+            "canonicalDate": INDUSTRIAL_DATE if image in CURRENT_CHARTS else SNAPSHOT_DATE,
             "canonReviewedThrough": CANON_REVIEW_DATE,
             "relationshipSemantics": "functional authority and canon-locked operating relationships; not implicit HR reporting",
         })
@@ -538,23 +564,27 @@ def write_register() -> None:
         "canonicalDate": SNAPSHOT_DATE,
         "canonReviewedThrough": CANON_REVIEW_DATE,
         "status": "canon-derived-rendered-chart-package",
+        "industrialEffectiveDate": INDUSTRIAL_DATE,
+        "historicalArchive": "docs/organization/history/v0.3.0/manifest.json",
         "controllingSources": [
+            "docs/canon/INDUSTRIAL_CLOSEOUT_2026-09-05.md",
+            "industrial/source/entities.json",
             "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md",
             "docs/canon/DECISION_REGISTER.md",
             "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-03.md",
-            "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-05_RED_WASH.md",
-            "docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05.md",
+            "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-05_RED_WASH_R2.md",
+            "docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05_R2.md",
             "red_wash/logistics/ARU_BST_INTERFACE_AND_DEPENDENCY_RECORD.md",
         ],
         "prohibitedInferences": [
-            "unstated direct-report relationship", "final executive title", "final legal-entity structure",
+            "unstated direct-report relationship", "unstated executive title", "unstated legal-entity structure",
             "unstated headcount", "unstated ownership percentage", "OPEN detail presented as settled",
             "synthetic selected-case headcount presented as an external actual",
             "ARU or BS&T uranium custody before every applicable gate passes",
         ],
         "redWashBridgeDecisionSource": {
             "recordId": "SH-PS-RW-DR-001",
-            "path": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-05_RED_WASH.md",
+            "path": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-05_RED_WASH_R2.md",
             "decisionIds": [f"RW-{number:03d}" for number in range(17, 26)],
         },
         "charts": charts,

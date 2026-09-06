@@ -1,0 +1,20 @@
+{
+  "state": "SUPERSEDED_HISTORICAL_REPRESENTATION",
+  "source_revision": "dd505286d7a66d25a2929981150d028935f27fbe",
+  "artifacts": [
+    {
+      "source": "docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05.md",
+      "publication": "docs/governance/publications/SH-PS-RW-TOR-001_v1.0.0.pdf",
+      "sha256": "79b356782c9ba326ffe567717a0c5ddbdae62e5e7c69ab24bd50a2bb35d59abe",
+      "source_sha256": "6e90bdb9280a562e80e04561af45fabf1856a18b55ea48541f292a42711171d5",
+      "brand": "pale_sun"
+    },
+    {
+      "source": "red_wash/logistics/ARU_BST_INTERFACE_AND_DEPENDENCY_RECORD.md",
+      "publication": "docs/governance/publications/SH-PS-RW-LOG-001_v1.0.0.pdf",
+      "sha256": "831be684e5fa5b5a3368a26027d9c310e4b2067f2c83f098cf48e39b6c95ff76",
+      "source_sha256": "b55f1561df9ecabf63e57963006f484f92beb309c88eef188b9cab5bff6e7ff0",
+      "brand": "red_wash"
+    }
+  ]
+}

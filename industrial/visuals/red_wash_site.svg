@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="960" viewBox="0 0 1400 960">
+<title>RED WASH · SITE AND RECEIVING</title>
+<style>text{font-family:Arial,Helvetica,sans-serif;fill:#182b32}.muted{fill:#586b70}.small{font-size:14px}.label{font-size:17px}.title{font-size:30px;font-weight:700}.sub{font-size:17px}.panel{fill:#f3f5f2;stroke:#b6c1bc}</style>
+<rect width="1400" height="960" fill="#faf9f4"/>
+<text x="48.00" y="53.00" class="title" >RED WASH · SITE AND RECEIVING</text>
+<text x="48.00" y="86.00" class="sub" >Red Wash Mining, LLC · Sweetwater County, Wyoming · Pale Sun Inc. ownership</text>
+<path d="M48 105 H1352" stroke="#224d57" stroke-width="3"/>
+<rect x="48.00" y="130.00" width="790.00" height="680.00" fill="#f1efe3" stroke="#bac5b9"/>
+<rect x="134.00" y="221.00" width="162.00" height="96.00" fill="#d7d3bc" stroke="#497169"/>
+<text x="142.00" y="244.00" class="small" >Tailings Cell 1</text>
+<rect x="332.00" y="221.00" width="162.00" height="99.00" fill="#e4ddc5" stroke="#497169"/>
+<text x="340.00" y="244.00" class="small" >Tailings Cell 2 / cover plan</text>
+<rect x="176.00" y="422.00" width="138.00" height="96.00" fill="#dce6df" stroke="#497169"/>
+<text x="184.00" y="445.00" class="small" >Mill / product handling</text>
+<rect x="365.00" y="428.00" width="90.00" height="66.00" fill="#dce6df" stroke="#497169"/>
+<text x="373.00" y="451.00" class="small" >Shaft / hoist</text>
+<rect x="506.00" y="419.00" width="120.00" height="90.00" fill="#dce6df" stroke="#497169"/>
+<text x="514.00" y="442.00" class="small" >Shop / mine services</text>
+<rect x="176.00" y="578.00" width="153.00" height="114.00" fill="#d2dce4" stroke="#497169"/>
+<text x="184.00" y="601.00" class="small" >Truck receiving / scales</text>
+<rect x="353.00" y="578.00" width="117.00" height="114.00" fill="#d2dce4" stroke="#497169"/>
+<text x="361.00" y="601.00" class="small" >Binder / MRO</text>
+<rect x="500.00" y="578.00" width="114.00" height="114.00" fill="#e7d6c8" stroke="#497169"/>
+<text x="508.00" y="601.00" class="small" >Acid containment</text>
+<rect x="641.00" y="578.00" width="84.00" height="96.00" fill="#d2dce4" stroke="#497169"/>
+<text x="649.00" y="601.00" class="small" >Steel laydown</text>
+<rect x="572.00" y="227.00" width="129.00" height="96.00" fill="#cfdee3" stroke="#497169"/>
+<text x="580.00" y="250.00" class="small" >Water controls</text>
+<path d="M68.00,734.00 L248.00,734.00 L248.00,668.00" stroke="#b66531" stroke-width="8" fill="none" stroke-dasharray=""/>
+<text x="65.00" y="770.00" class="small" >To Taylor: existing synthetic industrial road, 9 mi; 2026 targeted rehabilitation</text>
+<path d="M143.00,326.00 L143.00,371.00 L650.00,371.00 L650.00,323.00" stroke="#6992a4" stroke-width="2" fill="none" stroke-dasharray="5 4"/>
+<circle cx="167.00" cy="377.00" r="4" fill="#477f96"/>
+<circle cx="626.00" cy="353.00" r="4" fill="#477f96"/>
+<circle cx="638.00" cy="398.00" r="4" fill="#477f96"/>
+<text x="647.00" y="403.00" class="small" >MW-17</text>
+<path d="M792.00,218.00 L792.00,170.00" stroke="#183f49" stroke-width="3" fill="none" stroke-dasharray=""/>
+<path d="M784.00,185.00 L792.00,170.00 L800.00,185.00" stroke="#183f49" stroke-width="2" fill="none" stroke-dasharray=""/>
+<text x="785.00" y="158.00" class="label" >N</text>
+<path d="M80.00,798.00 L200.00,798.00" stroke="#183f49" stroke-width="4" fill="none" stroke-dasharray=""/>
+<text x="80.00" y="785.00" class="small" >0</text>
+<text x="175.00" y="785.00" class="small" >200 m</text>
+<text x="865.00" y="153.00" class="label" >CONTROLLED SITE BASIS</text>
+<text x="865.00" y="177.00" class="small" >Operator: Red Wash Mining, LLC</text>
+<text x="865.00" y="201.00" class="small" >Site workforce: 128; platform: 12</text>
+<text x="865.00" y="225.00" class="small" >Anchor: 42.2200° N / 108.1800° W</text>
+<text x="865.00" y="249.00" class="small" >NAD83 / UTM 12N: 732,749 E / 4,678,054 N</text>
+<text x="865.00" y="273.00" class="small" >DEM screening: 2,098 m / 6,885 ft</text>
+<text x="865.00" y="297.00" class="small" ></text>
+<text x="865.00" y="321.00" class="small" >RECEIVING: JULY 7, 2026</text>
+<text x="865.00" y="345.00" class="small" >Truck scales, signed custody handoffs</text>
+<text x="865.00" y="369.00" class="small" >Two 30,000-gallon acid tanks</text>
+<text x="865.00" y="393.00" class="small" >Acid: 210 t minimum / 290 t reorder</text>
+<text x="865.00" y="417.00" class="small" >Three 150-ton binder silos</text>
+<text x="865.00" y="441.00" class="small" >Binder: 245 t minimum / 340 t reorder</text>
+<text x="865.00" y="465.00" class="small" >10–14 operating-day buffer policy</text>
+<text x="865.00" y="489.00" class="small" ></text>
+<text x="865.00" y="513.00" class="small" >Mine-specific Phase 1: $3.25M</text>
+<text x="865.00" y="537.00" class="small" >Total interface Phase 1: $8.50M</text>
+<text x="865.00" y="561.00" class="small" >No mine rail spur or rail loadout</text>
+<text x="865.00" y="585.00" class="small" >Uranium product: qualified outside carriers</text>
+<text x="865.00" y="609.00" class="small" ></text>
+<text x="865.00" y="633.00" class="small" >KNOWN OPERATING DEFECTS RETAINED</text>
+<text x="865.00" y="657.00" class="small" >Cell 1 underdrain / MW-17 trends</text>
+<text x="865.00" y="681.00" class="small" >Fan redundancy and electrical backlog</text>
+<text x="865.00" y="705.00" class="small" >Progressive reclamation / water controls</text>
+<text x="865.00" y="729.00" class="small" ></text>
+<text x="865.00" y="753.00" class="small" >Blue: receiving · green: operating plant</text>
+<text x="865.00" y="777.00" class="small" >Tan: tailings · dots/dashes: water controls</text>
+<text x="48.00" y="854.00" class="small" >Local metre-based design schematic; surface reference CRS: NAD83/UTM 12N. Building placement and footprints are synthetic.</text>
+<text x="48.00" y="881.00" class="small" >Source: controlled Red Wash operating record; verified Census county; pinned USGS elevation. Scale refers to this conceptual local layout.</text>
+<text x="48.00" y="908.00" class="small" >Preserves diligence defects; does not substitute for licensed mine plans, tank design, land rights, containment design or surveyed drainage.</text>
+</svg>

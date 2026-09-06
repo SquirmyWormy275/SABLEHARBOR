@@ -1,0 +1,5 @@
+# Preserved evidence is hashed byte for byte, including original Markdown hard
+# line breaks. Suppress only end-of-line whitespace checks for these archives.
+docs/handoffs/industrial_r2/** -text whitespace=-blank-at-eol
+docs/organization/history/v0.3.0/** -text whitespace=-blank-at-eol
+red_wash/history/v1.0.0/** -text whitespace=-blank-at-eol

@@ -1,0 +1,107 @@
+{
+  "package_id": "SH-ARU-RW-PS-CODEX-HANDOFF-2026-09-05-R2",
+  "zip_sha256": "a13300543de9a66b08d715e062cffd10c21a37d8328910a7dc3bf61572a1643e",
+  "source_base_revision": "dd505286d7a66d25a2929981150d028935f27fbe",
+  "authority_amendment": "Owner explicitly authorizes logical reworking to make all financial, physical, temporal and organizational schedules reconcile; record each derived adjustment.",
+  "participant_distribution": false,
+  "entries": [
+    {
+      "original_member": "ASSET_MANIFEST.json",
+      "repository_path": "docs/handoffs/industrial_r2/ASSET_MANIFEST.json",
+      "bytes": 4160,
+      "sha256": "01de1c5db5f1bde9bedd5edddf101eb946ac5cd8a2b7097c0a45f192307e3aa6",
+      "classification": "EDITORIAL_HANDOFF_PROVENANCE"
+    },
+    {
+      "original_member": "CHECKSUMS.sha256",
+      "repository_path": "docs/handoffs/industrial_r2/CHECKSUMS.sha256",
+      "bytes": 1434,
+      "sha256": "670da41ea096463bf82f5d937b689801bbd86c5c7700ed9d114039f1f27a32c2",
+      "classification": "EDITORIAL_HANDOFF_PROVENANCE"
+    },
+    {
+      "original_member": "DECISION_LEDGER_FULL.json",
+      "repository_path": "docs/handoffs/industrial_r2/DECISION_LEDGER_FULL.json",
+      "bytes": 9194,
+      "sha256": "e2afef9489f2f9acef4dc3817cecc096ce9719b9902fdbb2d8e5ece9042f7ced",
+      "classification": "EDITORIAL_HANDOFF_PROVENANCE"
+    },
+    {
+      "original_member": "EXECUTION_AUTHORITY_CORRECTION_R2.md",
+      "repository_path": "docs/handoffs/industrial_r2/EXECUTION_AUTHORITY_CORRECTION_R2.md",
+      "bytes": 871,
+      "sha256": "bc707b34463aaac26021c17dc2d6827606812c70d7ac2fdaa548858d8e71b428",
+      "classification": "EDITORIAL_HANDOFF_PROVENANCE"
+    },
+    {
+      "original_member": "README.md",
+      "repository_path": "docs/handoffs/industrial_r2/README.md",
+      "bytes": 1019,
+      "sha256": "429fd658fefa636b3c2b220ca2c0d178ee35c2148b213b7d1ba18fb6da7ca247",
+      "classification": "EDITORIAL_HANDOFF_PROVENANCE"
+    },
+    {
+      "original_member": "SABLE_HARBOR_ARU_RED_WASH_PALE_SUN_CODEX_HANDOFF_FULL_STATE.md",
+      "repository_path": "docs/handoffs/industrial_r2/SABLE_HARBOR_ARU_RED_WASH_PALE_SUN_CODEX_HANDOFF_FULL_STATE.md",
+      "bytes": 126540,
+      "sha256": "6cc8b5093b2060f4a3d1cec44f295656681817c05035087b900979fdaf051751",
+      "classification": "EDITORIAL_HANDOFF_PROVENANCE"
+    },
+    {
+      "original_member": "assets/aru/aru_alternate_chat_asset.png",
+      "repository_path": "assets/brand/industrial_sources/aru/aru_alternate_chat_asset.png",
+      "bytes": 874990,
+      "sha256": "0bc5f917298db93bf48b3052f65e40a88e978ea8e2f01b7d99042ed1c28fa839",
+      "classification": "APPROVED_OR_REFERENCE_SOURCE_ARTWORK"
+    },
+    {
+      "original_member": "assets/aru/aru_brand_board_chat_asset.png",
+      "repository_path": "assets/brand/industrial_sources/aru/aru_brand_board_chat_asset.png",
+      "bytes": 1923281,
+      "sha256": "05204f15c6a86c10de70c3dfc17996326063a06c0d382147d90ce12834b85888",
+      "classification": "APPROVED_OR_REFERENCE_SOURCE_ARTWORK"
+    },
+    {
+      "original_member": "assets/aru/aru_primary_centered_chat_asset.png",
+      "repository_path": "assets/brand/industrial_sources/aru/aru_primary_centered_chat_asset.png",
+      "bytes": 1071679,
+      "sha256": "5892792a95e7fbc2a16171fea38b96d2aee5becf0603b68687f0d48e1bd9fc46",
+      "classification": "APPROVED_OR_REFERENCE_SOURCE_ARTWORK"
+    },
+    {
+      "original_member": "assets/bst/bst_bulk_storage_transport_candidate.png",
+      "repository_path": "assets/brand/industrial_sources/bst/bst_bulk_storage_transport_candidate.png",
+      "bytes": 808700,
+      "sha256": "60c642acb956ae908aafa3abea9ad21705ca0cd95258232926fbca2894eb4e92",
+      "classification": "APPROVED_OR_REFERENCE_SOURCE_ARTWORK"
+    },
+    {
+      "original_member": "assets/bst/bst_railway_primary_chat_asset.png",
+      "repository_path": "assets/brand/industrial_sources/bst/bst_railway_primary_chat_asset.png",
+      "bytes": 839885,
+      "sha256": "9af275b2f65ff5a82bca760609ab166ecd055c7a266d171bbf558b05c7e37a05",
+      "classification": "APPROVED_OR_REFERENCE_SOURCE_ARTWORK"
+    },
+    {
+      "original_member": "source_reconciliation/ARU_BST_RECONCILIATION_REPORT_2026-09-05.md",
+      "repository_path": "docs/handoffs/industrial_r2/source_reconciliation/ARU_BST_RECONCILIATION_REPORT_2026-09-05.md",
+      "bytes": 23958,
+      "sha256": "ca4be35149e33ef5b1336ebde2ada7b98fb64ebaa2b434ae5d8a12c6d8d7d677",
+      "classification": "EDITORIAL_HANDOFF_PROVENANCE"
+    },
+    {
+      "original_member": "source_reconciliation/ARU_BST_RECONCILIATION_REPORT_v1.0.md",
+      "repository_path": "docs/handoffs/industrial_r2/source_reconciliation/ARU_BST_RECONCILIATION_REPORT_v1.0.md",
+      "bytes": 26283,
+      "sha256": "0cf06a619bbf6c6e7113c05d0472c70dd9026cb59344cb3058cef806ebfad89c",
+      "classification": "EDITORIAL_HANDOFF_PROVENANCE"
+    },
+    {
+      "original_member": "source_reconciliation/aru_bst_reconciled_decision_ledger_v1.0.json",
+      "repository_path": "docs/handoffs/industrial_r2/source_reconciliation/aru_bst_reconciled_decision_ledger_v1.0.json",
+      "bytes": 4455,
+      "sha256": "16aa2f3238291b960d7b4245a09b17eef00eabf68456596edd9d6ce298cb7c5c",
+      "classification": "EDITORIAL_HANDOFF_PROVENANCE"
+    }
+  ]
+}

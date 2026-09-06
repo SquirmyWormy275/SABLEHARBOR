@@ -1,0 +1,42 @@
+name: Industrial case acceptance
+
+on:
+  pull_request:
+    paths:
+      - industrial/**
+      - red_wash/**
+      - docs/canon/**
+      - docs/structured/**
+      - docs/organization/**
+      - assets/brand/**
+      - .github/workflows/industrial-case-ci.yml
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python industrial/tools/validate_industrial_case.py --generate
+      - run: python -m unittest discover -s industrial/tests -v
+      - run: python -m unittest discover -s red_wash/tests -v
+      - name: Build clean source-bound participant release
+        run: python industrial/tools/build_package.py
+      - name: Independently rebuild all inputs and compare archive bytes
+        run: |
+          cp industrial/dist/SHA256SUMS.txt /tmp/industrial-first-sha256.txt
+          python industrial/tools/build_package.py
+          cmp /tmp/industrial-first-sha256.txt industrial/dist/SHA256SUMS.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: industrial-participant-review
+          path: industrial/dist/
+          if-no-files-found: error

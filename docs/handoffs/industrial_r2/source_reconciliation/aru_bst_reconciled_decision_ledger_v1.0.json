@@ -1,0 +1,136 @@
+{
+  "record_id": "SH-ARU-REC-001",
+  "version": "1.0.0-draft",
+  "decision_cutoff": "2026-09-05",
+  "repo_main_commit_reviewed": "8d20e51a7cf0068729e3296840ccb5ba1ac1d7bd",
+  "graphics_inspected_in_this_pass": false,
+  "repository_write_authorized": false,
+  "entities": {
+    "parent": "Sable Harbor",
+    "aru": "American Resource Utility",
+    "bst": "Blood, Sweat & Tears Railway",
+    "ownership_chain": [
+      "Sable Harbor",
+      "American Resource Utility",
+      "Blood, Sweat & Tears Railway"
+    ],
+    "red_wash_separate_from_aru": true
+  },
+  "chronology": {
+    "red_wash_close": "2025-07-18",
+    "aru_discovery_period_reconciled": "2025-Q4",
+    "aru_baseline_date": "2025-12-31",
+    "aru_close": "2026-01-07",
+    "seller_ceo_transition_months": 9
+  },
+  "aru_2025": {
+    "revenue_usd": 42000000,
+    "operating_expense_before_da_usd": 32200000,
+    "normalized_ebitda_usd": 9800000,
+    "employees": 131,
+    "sustaining_capex_usd": 3300000,
+    "deferred_catch_up_capex_usd": 11000000
+  },
+  "bst_2025": {
+    "route_miles_approx": 40,
+    "revenue_carloads": 9000,
+    "revenue_usd": 15500000,
+    "operating_expense_before_da_usd": 14000000,
+    "normalized_ebitda_usd": 1500000,
+    "employees": 58,
+    "locomotives_owned": 4,
+    "locomotives_generally_available": 3,
+    "locomotives_normally_required": 2,
+    "service_days_per_week": 5,
+    "incremental_capacity_carloads_low": 5000,
+    "incremental_capacity_carloads_high": 7500
+  },
+  "transaction": {
+    "enterprise_value_usd": 62000000,
+    "seller_equity_value_usd": 49500000,
+    "new_acquisition_debt_usd": 22500000,
+    "new_revolver_capacity_usd": 5000000,
+    "new_revolver_draw_at_close_usd": 0,
+    "escrow_usd": 3000000,
+    "minimum_cash_retained_usd": 2000000,
+    "excess_cash_bridge_usd": 1500000,
+    "debt_refinanced_usd": 13500000,
+    "finance_leases_retained_usd": 2500000,
+    "sable_harbor_closing_equity_before_fees_usd": 39000000,
+    "retention_pool_usd": 500000,
+    "seller_ceo_consulting_usd": 225000,
+    "earnout": false,
+    "seller_rollover": false
+  },
+  "red_wash": {
+    "location": {
+      "region": "Great Divide Basin / Red Desert",
+      "county": "Sweetwater County",
+      "state": "Wyoming",
+      "latitude": 42.22,
+      "longitude": -108.18,
+      "fictional_in_real_geography": true
+    },
+    "superseded_location": {
+      "county": "Carbon County",
+      "latitude": 42.3127,
+      "longitude": -106.9213
+    },
+    "town_hub": "Taylor, Wyoming",
+    "bloodstone_as_town_superseded": true,
+    "v1_direct_mine_spur": false,
+    "recurring_rail_loads": 225,
+    "design_allowance_rail_loads": 300,
+    "intercompany_revenue_usd": 875000,
+    "incremental_ebitda_usd": 365000,
+    "phase_1_capex_usd": 8500000,
+    "integration_capex_ceiling_usd": 15000000,
+    "product_rail_eligible": true,
+    "direct_uranium_custody_automatic": false,
+    "service_term_years": 5,
+    "scheduled_windows_per_week": 2,
+    "default_car_cycle_hours": 72,
+    "critical_inventory_buffer_days_low": 10,
+    "critical_inventory_buffer_days_high": 14
+  },
+  "production_cases": [
+    {
+      "case": "2026_rehabilitation",
+      "ore_short_tons": 175000,
+      "u3o8_produced_lb": 547400,
+      "state": "LOCKED"
+    },
+    {
+      "case": "normalized_target",
+      "ore_short_tons": 225000,
+      "u3o8_produced_lb_approx": 703800,
+      "state": "LOCKED_PLANNING_TARGET_YEAR_OPEN"
+    },
+    {
+      "case": "future_expansion",
+      "ore_short_tons": 300000,
+      "u3o8_produced_lb_approx": 880000,
+      "state": "LOCKED_OPTION_NOT_COMMITTED"
+    }
+  ],
+  "superseded": [
+    "FIN-Q-005 ARU/BS&T 2026 external revenue USD 23.6M",
+    "FIN-Q-006 ARU/BS&T 2026 operating cost USD 20.3M",
+    "ARU acquisition enterprise value USD 76M",
+    "Red Wash Carbon County location 42.3127,-106.9213",
+    "Bloodstone as current railroad town",
+    "5000 annual Red Wash loaded railcars as forecast",
+    "375 recurring Red Wash rail loads",
+    "categorical rule that concentrate stays off rail",
+    "2026-Q1 first discovery of ARU/BS&T"
+  ],
+  "history_source_recovery_required": [
+    "original railroad corporate name",
+    "exact pre-1954 founding year",
+    "final approval status and wording of proposed 1907 wreck",
+    "final approval status and wording of proposed 1916 mine fire",
+    "1970s second industrial-line details",
+    "exact ARU predecessor consolidation chronology",
+    "exact date BS&T became wholly owned by ARU"
+  ]
+}

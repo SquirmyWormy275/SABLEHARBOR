@@ -41,16 +41,16 @@ for source, version in {
     assert by_source[source]['version'] == version, f'closeout version mismatch: {source}'
 
 red_wash_records = {
-    'docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05.md': {
+    'docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05_R2.md': {
         'id': 'SH-PS-RW-TOR-001',
-        'publication': 'docs/governance/publications/SH-PS-RW-TOR-001_v1.0.0.pdf',
+        'publication': 'docs/governance/publications/SH-PS-RW-TOR-001_v1.1.0.pdf',
         'brand': 'pale_sun',
         'category': 'Red Wash transaction and operating record',
         'owner': 'Pale Sun operating authority',
     },
     'red_wash/logistics/ARU_BST_INTERFACE_AND_DEPENDENCY_RECORD.md': {
         'id': 'SH-PS-RW-LOG-001',
-        'publication': 'docs/governance/publications/SH-PS-RW-LOG-001_v1.0.0.pdf',
+        'publication': 'docs/governance/publications/SH-PS-RW-LOG-001_v1.1.0.pdf',
         'brand': 'red_wash',
         'category': 'Red Wash logistics dependency record',
         'owner': 'Pale Sun / Red Wash',

@@ -1,0 +1,44 @@
+{
+  "method": "Projected line/polygon intersections in EPSG26912; screening only. Highway structures are fictional at actual reference crossings.",
+  "input_sha256": {
+    "network.geojson": "bd6ea938ec59f50c79ee0a23fb5aa2817dcb1bb98fce8a951a073d0152a406f5",
+    "wyoming_waterbodies.geojson": "82c333660ce69714452e999c9ef871adb5bbcf328776cc81ce2dd003482a046f",
+    "wamsutter_highways.geojson": "81fe705260fefe9d195d4a1c8f362930af6aad7b6bf40064c9017795b838e24f"
+  },
+  "waterbody_overlaps": [
+    {
+      "route_id": "BST-MAIN",
+      "overlap_metres": 0.0
+    },
+    {
+      "route_id": "BST-EAST",
+      "overlap_metres": 0.0
+    },
+    {
+      "route_id": "BST-MINERAL",
+      "overlap_metres": 0.0
+    },
+    {
+      "route_id": "ROAD-RW-01",
+      "overlap_metres": 0.0
+    }
+  ],
+  "i80_crossings": [
+    {
+      "reference_id": "REF-WAMSUTTER-HIGHWAYS-4",
+      "lon_lat": [
+        -107.9710163548332,
+        41.67930112876496
+      ],
+      "projected_milepost": 0.4338486504634681
+    },
+    {
+      "reference_id": "REF-WAMSUTTER-HIGHWAYS-151",
+      "lon_lat": [
+        -107.97062132925036,
+        41.678992799552994
+      ],
+      "projected_milepost": 0.4043327541069508
+    }
+  ]
+}

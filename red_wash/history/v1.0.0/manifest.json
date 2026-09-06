@@ -1,0 +1,67 @@
+{
+  "state": "SUPERSEDED_HISTORICAL_SOURCE",
+  "source_revision": "dd505286d7a66d25a2929981150d028935f27fbe",
+  "successor": "red_wash/source/",
+  "files": [
+    {
+      "path": "red_wash/history/v1.0.0/documents/README.md",
+      "sha256": "f8cc00768c5678caaa987a410c6d922879342a594be4842d875835e1d3867c1e",
+      "original_path": "red_wash/README.md"
+    },
+    {
+      "path": "red_wash/history/v1.0.0/documents/RED_WASH_CASEBOOK.md",
+      "sha256": "6d1901527eddf25c89373e8def91a2ade152ef6047d8749dd513cf8d7325c5d7",
+      "original_path": "red_wash/RED_WASH_CASEBOOK.md"
+    },
+    {
+      "path": "red_wash/history/v1.0.0/documents/TRANSACTION_OPERATING_RECORD.md",
+      "sha256": "f1645067f4b06447258342e4de92dae2d587656734de7c86bbddd29f19cb8506",
+      "original_path": "red_wash/TRANSACTION_OPERATING_RECORD.md"
+    },
+    {
+      "path": "red_wash/history/v1.0.0/documents/agreements/TRANSACTION_AND_COMMERCIAL_INSTRUMENTS.md",
+      "sha256": "95a33bc7697b40ebfee9c27acbfe46a4e15b8176e88f62c7e5144715024bed7f",
+      "original_path": "red_wash/agreements/TRANSACTION_AND_COMMERCIAL_INSTRUMENTS.md"
+    },
+    {
+      "path": "red_wash/history/v1.0.0/documents/docs/02_GEOLOGICAL_TECHNICAL_REPORT.md",
+      "sha256": "9a00c2bd344227c1cf06701cba3ec2477f1384643df59628627f0321909b6b23",
+      "original_path": "red_wash/docs/02_GEOLOGICAL_TECHNICAL_REPORT.md"
+    },
+    {
+      "path": "red_wash/history/v1.0.0/documents/docs/03_MINE_PLAN_AND_OPERATING_SYSTEM.md",
+      "sha256": "a0951a1d22f48aa9fe822f591a9e508419fe22ca18ffdce12a09611f23bf9164",
+      "original_path": "red_wash/docs/03_MINE_PLAN_AND_OPERATING_SYSTEM.md"
+    },
+    {
+      "path": "red_wash/history/v1.0.0/documents/docs/04_PROCESSING_METALLURGY_AND_PRODUCT.md",
+      "sha256": "064c7225de72630d0983cbe7d157e6b01626c250915350320eca03181e16c9e1",
+      "original_path": "red_wash/docs/04_PROCESSING_METALLURGY_AND_PRODUCT.md"
+    },
+    {
+      "path": "red_wash/history/v1.0.0/documents/logistics/ARU_BST_INTERFACE_AND_DEPENDENCY_RECORD.md",
+      "sha256": "b55f1561df9ecabf63e57963006f484f92beb309c88eef188b9cab5bff6e7ff0",
+      "original_path": "red_wash/logistics/ARU_BST_INTERFACE_AND_DEPENDENCY_RECORD.md"
+    },
+    {
+      "path": "red_wash/history/v1.0.0/documents/regulatory/REGULATORY_PERMIT_AND_ENVIRONMENTAL_FILE.md",
+      "sha256": "3fd3a77f95a3ae56014b8018d3ca86a7778c2ffb9355b11125b87f1d31da0fb1",
+      "original_path": "red_wash/regulatory/REGULATORY_PERMIT_AND_ENVIRONMENTAL_FILE.md"
+    },
+    {
+      "path": "red_wash/history/v1.0.0/source/aru_bst_bridge.json",
+      "sha256": "581b634c384c43b996ef4b60fcad6a5c0d3d53c9d2a1721b8923a7bb12021b8a",
+      "original_path": "red_wash/source/aru_bst_bridge.json"
+    },
+    {
+      "path": "red_wash/history/v1.0.0/source/core_operating_data.json",
+      "sha256": "f826075eddf28ded3301756d078d952e38e1cc39f4e1a0b9aecd9e07eb9e9480",
+      "original_path": "red_wash/source/core_operating_data.json"
+    },
+    {
+      "path": "red_wash/history/v1.0.0/source/external_source_register.csv",
+      "sha256": "989c7fae3110dc6308f56da9f7831a2881be1295e8dfe08de686c51cdc71b7f7",
+      "original_path": "red_wash/source/external_source_register.csv"
+    }
+  ]
+}

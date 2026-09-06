@@ -1,7 +1,7 @@
 # SABLE HARBOR — ENTERPRISE ORGANIZATION
 
 **Chart ID:** `SH-ORG-001`
-**Canonical date:** August 31, 2026
+**Canonical date:** September 5, 2026
 **Canon reviewed through:** September 5, 2026
 **Status:** Canon-derived visual organization chart
 **Purpose:** August 31 functional operating-line baseline; later headquarters institutions remain controlled by the September 3 closeout.
@@ -13,14 +13,15 @@
 This chart renders only relationships that the corporate canon actually locks. Where
 represented, Sable Harbor controls ARU, and BS&T is a wholly owned legal subsidiary
 beneath ARU.
-It does **not** invent exact legal names, suffixes, jurisdictions, executive titles,
-headcount, or person-to-person reporting lines. Where a headcount appears, it is a
+The industrial closeout expressly supplies current legal names, ownership and appointed
+officers; other unprovided reporting lines remain unresolved. Where headcount appears, it is a
 source-backed synthetic selected-case value, not an implied enterprise total or
 reporting structure. Dashed structures identify an institutional seam,
 historical/functional relationship, or deliberately OPEN detail.
 
 ## Controlling sources
 
+- [Industrial closeout](../canon/INDUSTRIAL_CLOSEOUT_2026-09-05.md)
 - [`SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md`](../canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md)
 - [`DECISION_REGISTER.md`](../canon/DECISION_REGISTER.md)
 - [`DECISION_REGISTER_ADDENDUM_2026-09-03.md`](../canon/DECISION_REGISTER_ADDENDUM_2026-09-03.md)

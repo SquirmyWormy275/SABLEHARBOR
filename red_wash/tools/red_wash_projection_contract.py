@@ -21,10 +21,10 @@ TRANSACTION_PROJECTION_PATH = (
 )
 BRIDGE_PROJECTION_PATH = REPOSITORY_ROOT / "docs/structured/aru_bst_red_wash_bridge.json"
 TRANSACTION_CANON_PATH = (
-    REPOSITORY_ROOT / "docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05.md"
+    REPOSITORY_ROOT / "docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05_R2.md"
 )
 DECISION_ADDENDUM_PATH = (
-    REPOSITORY_ROOT / "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-05_RED_WASH.md"
+    REPOSITORY_ROOT / "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-05_RED_WASH_R2.md"
 )
 
 TRANSACTION_DECISION_IDS = tuple(f"RW-{number:03d}" for number in range(1, 17))
@@ -99,14 +99,14 @@ def projection_checks(
     expected_transaction_contract = {
         "authoritative_operating_source": "red_wash/source/core_operating_data.json",
         "authoritative_bridge_source": "red_wash/source/aru_bst_bridge.json",
-        "decision_addendum": ("docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-05_RED_WASH.md"),
+        "decision_addendum": ("docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-05_RED_WASH_R2.md"),
         "decision_record_id": "SH-PS-RW-DR-001",
         "transaction_decision_ids": list(TRANSACTION_DECISION_IDS),
         "bridge_decision_ids": list(BRIDGE_DECISION_IDS),
     }
     expected_bridge_contract = {
         "authoritative_source": "red_wash/source/aru_bst_bridge.json",
-        "decision_addendum": ("docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-05_RED_WASH.md"),
+        "decision_addendum": ("docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-05_RED_WASH_R2.md"),
         "decision_record_id": "SH-PS-RW-DR-001",
         "decision_ids": list(BRIDGE_DECISION_IDS),
     }
@@ -193,14 +193,7 @@ def projection_checks(
         row.get("gap_id"): row for row in bridge_projection.get("current_fit_gaps", [])
     }
     source_gap_by_id = {row["gap_id"]: row for row in bridge["fit_gaps"]}
-    expected_gap_text_by_domain = {
-        "physical_connection": "no direct mine connection",
-        "transload_terminal": "no suitable secure Red Wash transload/interface terminal",
-        "uranium_capability": (
-            "no demonstrated uranium-specific compliance, custody, security, training, "
-            "insurance, or operating capability"
-        ),
-    }
+    expected_gap_text_by_domain = {row["domain"]: row["current_state"] for row in bridge["fit_gaps"]}
     gap_projection_agrees = set(projected_gap_by_id) == set(source_gap_by_id) and all(
         projected_gap_by_id[gap_id].get("state") == source_gap["status"]
         and projected_gap_by_id[gap_id].get("blocks_direct_custody") == source_gap["blocks_custody"]
@@ -226,7 +219,7 @@ def projection_checks(
         projected.get("source_gate_id") == source["gate_id"]
         and projected.get("earliest_month") == source["earliest_month"]
         and projected.get("latest_month") == source["latest_month"]
-        and projected.get("state") == ("PROVISIONAL_ASSUMPTION" if index < 2 else "OPEN")
+        and projected.get("state") == source["status"]
         for index, (projected, source) in enumerate(zip(projected_gates, source_gates, strict=True))
     )
 
@@ -234,7 +227,7 @@ def projection_checks(
     expected_all_decision_ids = TRANSACTION_DECISION_IDS + BRIDGE_DECISION_IDS
     decision_fragments = {
         "RW-001": ("18 July 2025",),
-        "RW-002": (transaction["seller_display_name"], "exact legal name", "OPEN"),
+        "RW-002": (transaction["seller_display_name"], "exact legal name", "LOCKED"),
         "RW-003": ("$28.0M", "$3.0M", "$0.5M", "no transaction debt", "no goodwill"),
         "RW-004": ("$42.0M", "$4.5M", "$16.0M ARO", "$2.5M", "$28.0M"),
         "RW-005": ("$11.0M", "$8.0M", "$3.0M"),
@@ -250,10 +243,10 @@ def projection_checks(
         "RW-019": ("soft, costly, uneven freight", "sales and revenue do not change"),
         "RW-020": ("Replacement-carrier search", "Whose line is this?", "not a banker pitch"),
         "RW-021": ("no direct mine connection", "secure transload", "uranium capability"),
-        "RW-022": ("$15.0M", "unbooked", "unapproved", "not ARU purchase price"),
+        "RW-022": ("$15.0M", "$8.5M", "$3.25M", "$5.25M", "unapproved", "not ARU purchase price"),
         "RW-023": ("0–3", "3–6", "month 6", "12–18"),
         "RW-024": ("No automatic", "external carrier remains authoritative", "gate"),
-        "RW-025": ("OPEN", "Acquisition date and terms", "final custody decision"),
+        "RW-025": ("SELECTED_SUCCESSOR", "Acquisition date and terms", "final custody decision"),
     }
     decision_facts_agree = all(
         _all_fragments(decision_rows.get(decision_id, ""), fragments)
@@ -299,12 +292,10 @@ def projection_checks(
             "no direct mine connection, suitable secure transload, or\n  demonstrated "
             "uranium-specific ARU/BS&T capability"
         ),
-        "$15.0M is an unbooked preliminary interface screening envelope",
+        "$15.0M is an unbooked ceiling; $8.5M Phase 1 is approved",
         "no ARU/BS&T uranium custody or service begins automatically",
         (
-            "full ARU/BS&T case—including acquisition date and terms, seller, routes, "
-            "assets,\ncustomers, workforce, financial statements, final interface design, "
-            "and final uranium\ncustody decision—remains `OPEN`"
+            "full ARU/BS&T case is implemented in the industrial successor; direct uranium custody remains OPEN"
         ),
     )
 
@@ -410,8 +401,8 @@ def projection_checks(
         ),
         (
             bridge_projection.get("open_aru_fields") == bridge["open_aru_fields"]
-            and len(bridge_projection.get("open_aru_fields", [])) == 32,
-            "structured bridge preserves the exact ordered set of 32 OPEN ARU fields",
+            and len(bridge_projection.get("open_aru_fields", [])) == 3,
+            "structured bridge preserves the exact ordered set of three gated ARU fields",
         ),
         (
             projected_events == source_events and len(projected_events) == len(source_events),
@@ -429,18 +420,15 @@ def projection_checks(
             "structured bridge projects every source integration gate and 0-18 month horizon",
         ),
         (
-            len(quantified_capex) == 1
-            and bridge_projection.get("planning_capex", {}).get("amount_usd")
-            == quantified_capex[0]["amount_usd"]
-            and bridge_projection.get("planning_capex", {}).get("fact_state")
-            == quantified_capex[0]["fact_state"]
-            and bridge_projection.get("planning_capex", {}).get("epistemic_state")
-            == quantified_capex[0]["epistemic_state"]
+            len(quantified_capex) == 4
+            and bridge_projection.get("planning_capex", {}).get("amount_usd") == 15_000_000
             and bridge_projection.get("planning_capex", {}).get("booked") is False
-            and bridge_projection.get("planning_capex", {}).get("approved") is False
-            and bridge_projection.get("planning_capex", {}).get("is_purchase_price") is False
-            and all(row["amount_state"] == "OPEN" for row in open_capex),
-            "structured $15 million screen remains sole quantified, unbooked interface amount",
+            and bridge_projection.get("planning_capex", {}).get("phase_1_approved_usd") == 8_500_000
+            and bridge_projection.get("planning_capex", {}).get("red_wash_owned_usd") == 3_250_000
+            and bridge_projection.get("planning_capex", {}).get("aru_owned_usd") == 5_250_000
+            and bridge_projection.get("planning_capex", {}).get("unapproved_residual_usd") == 6_500_000
+            and sum(row["amount_usd"] for row in quantified_capex[1:3]) == 8_500_000,
+            "structured interface separates approved capital from unbooked ceiling and residual",
         ),
         (
             bridge_projection.get("custody", {}).get("current_authority")

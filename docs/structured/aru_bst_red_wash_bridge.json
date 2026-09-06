@@ -1,14 +1,14 @@
 {
   "record_id": "SH-PS-RW-LOG-001",
   "title": "ARU/BS&T Red Wash Interface and Dependency Record",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "decision_date": "2026-09-05",
   "canon_effective_through": "2026-09-05",
   "classification": "PUBLIC_SYNTHETIC_DIEGETIC",
   "source_commit_state": "REQUIRES_EXACT_RELEASE_MANIFEST_BINDING",
   "projection_contract": {
     "authoritative_source": "red_wash/source/aru_bst_bridge.json",
-    "decision_addendum": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-05_RED_WASH.md",
+    "decision_addendum": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-05_RED_WASH_R2.md",
     "decision_record_id": "SH-PS-RW-DR-001",
     "decision_ids": [
       "RW-017",
@@ -23,9 +23,9 @@
     ]
   },
   "names": {
-    "aru": "American Resource Utility",
+    "aru": "American Resource Utility, Inc.",
     "aru_abbreviation": "ARU",
-    "bst": "Blood, Sweat & Tears Railway",
+    "bst": "Blood, Sweat & Tears Railway Company",
     "bst_abbreviation": "BS&T"
   },
   "boundaries": {
@@ -35,7 +35,7 @@
     "preliminary_interface_envelope_usd": 15000000,
     "interface_envelope_booked": false,
     "direct_uranium_custody_authorized": false,
-    "full_aru_case_authorized": false
+    "full_aru_case_authorized": true
   },
   "derived_controls": {
     "external_carriers_throughout_2025": true,
@@ -67,7 +67,9 @@
       "affected_process": "qualified carrier capacity",
       "event": "A fictional carrier consolidation reduces the qualified providers willing and able to serve the Red Wash lane.",
       "annual_financial_impact_usd": 0,
-      "source_ids": ["SH-PS-RW-LOG-001"]
+      "source_ids": [
+        "SH-PS-RW-LOG-001"
+      ]
     },
     {
       "event_id": "RW-LOG-EVT-003",
@@ -78,7 +80,9 @@
       "affected_process": "shipment scheduling",
       "event": "Reduced lane allocation forces rescheduling and exposes near-term delivery risk without annual lost sales or revenue change.",
       "annual_financial_impact_usd": 0,
-      "source_ids": ["SH-PS-RW-LOG-001"]
+      "source_ids": [
+        "SH-PS-RW-LOG-001"
+      ]
     },
     {
       "event_id": "RW-LOG-EVT-004",
@@ -89,18 +93,22 @@
       "affected_process": "replacement capacity search",
       "event": "Red Wash opens a replacement/additional-qualified-carrier search; operating analysis later broadens the question to rail access.",
       "annual_financial_impact_usd": 0,
-      "source_ids": ["SH-PS-RW-LOG-001"]
+      "source_ids": [
+        "SH-PS-RW-LOG-001"
+      ]
     },
     {
       "event_id": "RW-LOG-EVT-005",
-      "period": "2026-Q1",
+      "period": "2025-Q4",
       "date_precision": "QUARTER",
       "fact_state": "SYNTHETIC_INSTANCE",
       "epistemic_state": "SCENARIO",
       "affected_process": "rail-access mapping and acquisition diligence",
       "event": "Route and interface mapping prompts the question 'Whose line is this?' and surfaces ARU/BS&T through operating analysis.",
       "annual_financial_impact_usd": 0,
-      "source_ids": ["SH-PS-RW-LOG-001"]
+      "source_ids": [
+        "SH-PS-RW-LOG-001"
+      ]
     }
   ],
   "acquisition_thesis_relationship": {
@@ -113,19 +121,19 @@
   "current_fit_gaps": [
     {
       "gap_id": "RW-ARU-GAP-001",
-      "gap": "no direct mine connection",
-      "state": "OPEN",
+      "gap": "Truck last mile serves Red Wash; no direct mine spur is required or authorized.",
+      "state": "CLOSED_FOR_INBOUND",
       "blocks_direct_custody": true
     },
     {
       "gap_id": "RW-ARU-GAP-002",
-      "gap": "no suitable secure Red Wash transload/interface terminal",
-      "state": "OPEN",
+      "gap": "Taylor ordinary industrial-input transload is commissioned in the selected July 2026 case; this does not qualify uranium custody.",
+      "state": "CLOSED_FOR_INBOUND",
       "blocks_direct_custody": true
     },
     {
       "gap_id": "RW-ARU-GAP-003",
-      "gap": "no demonstrated uranium-specific compliance, custody, security, training, insurance, or operating capability",
+      "gap": "ARU/BS&T lacks demonstrated uranium-specific authority, custody, security, training, insurance, and operating capability.",
       "state": "OPEN",
       "blocks_direct_custody": true
     }
@@ -137,7 +145,11 @@
     "booked": false,
     "approved": false,
     "is_purchase_price": false,
-    "component_amounts_state": "OPEN"
+    "component_amounts_state": "DERIVED",
+    "phase_1_approved_usd": 8500000,
+    "red_wash_owned_usd": 3250000,
+    "aru_owned_usd": 5250000,
+    "unapproved_residual_usd": 6500000
   },
   "integration_sequence": [
     {
@@ -145,24 +157,24 @@
       "phase": "0-3 months after ARU acquisition",
       "earliest_month": 0,
       "latest_month": 3,
-      "state": "PROVISIONAL_ASSUMPTION",
-      "scope": "mapping, condition, route/interchange, legal, regulatory, insurance, service, commercial, and custody diligence"
+      "state": "COMPLETE_SYNTHETIC",
+      "scope": "January-March confirmatory operating/condition verification after November-December 2025 acquisition diligence."
     },
     {
       "source_gate_id": "RW-ARU-GATE-002",
       "phase": "3-6 months",
       "earliest_month": 3,
       "latest_month": 6,
-      "state": "PROVISIONAL_ASSUMPTION",
-      "scope": "engineering, approvals, contracting, procurement, training, and early implementation"
+      "state": "COMPLETE_SYNTHETIC",
+      "scope": "Engineering, permitting/approvals, contracting, procurement, training, and early implementation."
     },
     {
       "source_gate_id": "RW-ARU-GATE-003",
       "phase": "month 6 onward",
       "earliest_month": 6,
       "latest_month": 18,
-      "state": "OPEN",
-      "scope": "limited service only after every applicable gate passes"
+      "state": "LIMITED_INBOUND_SERVICE",
+      "scope": "Selected July 2026 limited acid/binder/industrial-input service after applicable gates. Direct uranium service remains unauthorized and outside this evidence."
     },
     {
       "source_gate_id": "RW-ARU-GATE-004",
@@ -170,7 +182,7 @@
       "earliest_month": 12,
       "latest_month": 18,
       "state": "OPEN",
-      "scope": "mature integration review; mixed external-carrier, truck, transload, and rail model remains permissible"
+      "scope": "Mature integration review; a mixed external-carrier, truck, transload, and rail model remains permissible."
     }
   ],
   "custody": {
@@ -181,38 +193,9 @@
     "automatic_transfer_prohibited": true
   },
   "open_aru_fields": [
-    "exact ARU acquisition date within 2026",
-    "seller identity",
-    "acquisition price",
-    "financing",
-    "enterprise value",
-    "debt",
-    "legal jurisdictions",
-    "tax elections",
-    "route miles",
-    "railroad class",
-    "complete route map",
-    "interchange partners",
-    "customers",
-    "commodity mix",
-    "terminal locations",
-    "locomotive count",
-    "railcar count",
-    "track class",
-    "bridge inventory",
-    "employee census",
-    "labor agreements",
-    "accident history",
-    "maintenance backlog",
-    "revenue",
-    "EBITDA",
-    "operating ratio",
-    "capex plan outside the $15 million Red Wash screening envelope",
-    "precise post-acquisition management team",
     "whether BS&T ultimately takes direct uranium custody",
-    "final service rates",
-    "final intercompany pricing",
-    "final Red Wash volume committed to ARU"
+    "future direct mine spur",
+    "Red Wash expansion commissioning dates"
   ],
   "source_records": [
     "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-05_RED_WASH.md",

@@ -4,7 +4,7 @@
 
 ## Property and setting
 
-The locked location is Wyoming. The selected synthetic site scenario places Red Wash on the high plains of Carbon County at 42.3127° N, 106.9213° W and approximately 6,420 feet elevation, across roughly 7,480 acres with approximately 620 acres of current disturbance. Those site-specific values are scenario details rather than separately locked geographic canon.
+The locked location is Wyoming. The selected synthetic site scenario places Red Wash on the high plains of Sweetwater County at 42.2200° N, 108.1800° W and approximately 6,885 feet elevation, across roughly 7,480 acres with approximately 620 acres of current disturbance. The county and anchor are selected canon; elevation is DEM screening evidence and the physical mine model remains synthetic.
 
 Mineralization is hosted by permeable lower Eocene fluvial sandstone. Uranium precipitated along reduction–oxidation interfaces where oxidized, uranium-bearing groundwater encountered reducing carbonaceous material and sulfides. The deposit is expressed as stacked, sinuous lenses rather than one continuous sheet. That geometry explains both the mine's selectivity and the historic tendency for broad models to overstate continuity.
 

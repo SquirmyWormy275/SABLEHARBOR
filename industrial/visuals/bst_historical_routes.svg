@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="960" viewBox="0 0 1400 960">
+<title>BS&amp;T · HISTORICAL ROUTE DEVELOPMENT</title>
+<style>text{font-family:Arial,Helvetica,sans-serif;fill:#182b32}.muted{fill:#586b70}.small{font-size:14px}.label{font-size:17px}.title{font-size:30px;font-weight:700}.sub{font-size:17px}.panel{fill:#f3f5f2;stroke:#b6c1bc}</style>
+<rect width="1400" height="960" fill="#faf9f4"/>
+<text x="48.00" y="53.00" class="title" >BS&amp;T · HISTORICAL ROUTE DEVELOPMENT</text>
+<text x="48.00" y="86.00" class="sub" >1898 coal origin · 1954 rescue · later industrial extensions · September 5, 2026 case cutoff</text>
+<path d="M48 105 H1352" stroke="#224d57" stroke-width="3"/>
+<rect x="48.00" y="132.00" width="410.00" height="532.00" fill="#f0eee4" stroke="#c0c8bd"/>
+<text x="66.00" y="160.00" class="label" >1898 / 1954 · COAL ESTATE</text>
+<rect x="478.00" y="132.00" width="410.00" height="532.00" fill="#f0eee4" stroke="#c0c8bd"/>
+<text x="496.00" y="160.00" class="label" >1968 · TAYLOR MAINLINE</text>
+<rect x="908.00" y="132.00" width="410.00" height="532.00" fill="#f0eee4" stroke="#c0c8bd"/>
+<text x="926.00" y="160.00" class="label" >1972 / 1986 · BRANCHES</text>
+<path d="M170.00,548.00 L188.00,445.00 L171.00,363.00 L209.00,273.00" stroke="#8b684c" stroke-width="7" fill="none" stroke-dasharray="9 7"/>
+<rect x="129.00" y="249.00" width="124.00" height="328.00" fill="none" stroke="#8b684c"/>
+<circle cx="170.00" cy="548.00" r="6" fill="#8b684c"/>
+<text x="148.00" y="602.00" class="small" >1954 surviving extent: 14–16 mi</text>
+<text x="76.00" y="195.00" class="small" >1898: predecessor organized for coal</text>
+<text x="76.00" y="219.00" class="small" >Original extent and alignment unknown</text>
+<text x="267.00" y="340.00" class="small" >Coal workings</text>
+<text x="267.00" y="366.00" class="small" >Unlocated</text>
+<text x="267.00" y="392.00" class="small" >reconstruction</text>
+<text x="76.00" y="635.00" class="small" >Rescue does not establish an 1898 survey.</text>
+<path d="M625.00,570.00 L606.00,492.00 L650.00,398.00 L633.00,315.00 L654.00,248.00" stroke="#1f5261" stroke-width="7" fill="none" stroke-dasharray=""/>
+<circle cx="625.00" cy="570.00" r="6" fill="#224d57"/>
+<circle cx="654.00" cy="248.00" r="6" fill="#224d57"/>
+<text x="668.00" y="249.00" class="small" >Taylor hub</text>
+<text x="654.00" y="591.00" class="small" >Wamsutter context</text>
+<text x="500.00" y="196.00" class="small" >Completed October 14, 1968</text>
+<text x="500.00" y="620.00" class="small" >Mainline: 33.3485 route-mi</text>
+<text x="500.00" y="645.00" class="small" >Old-line retention / relocation unverified.</text>
+<path d="M1041.00,570.00 L1027.00,492.00 L1069.00,397.00 L1056.00,315.00 L1077.00,248.00" stroke="#1f5261" stroke-width="7" fill="none" stroke-dasharray=""/>
+<path d="M1049.00,442.00 L1140.00,402.00 L1190.00,359.00" stroke="#ba803d" stroke-width="6" fill="none" stroke-dasharray=""/>
+<path d="M1064.00,283.00 L1140.00,285.00 L1200.00,250.00" stroke="#548375" stroke-width="6" fill="none" stroke-dasharray=""/>
+<circle cx="1041.00" cy="570.00" r="6" fill="#224d57"/>
+<circle cx="1077.00" cy="248.00" r="6" fill="#224d57"/>
+<text x="927.00" y="196.00" class="small" >1972 East +4.0000 mi</text>
+<text x="927.00" y="222.00" class="small" >1986 Mineral +2.6515 mi</text>
+<text x="1157.00" y="335.00" class="small" >Mineral</text>
+<text x="1160.00" y="430.00" class="small" >East</text>
+<text x="1050.00" y="612.00" class="small" >Current total: 40.0000 mi</text>
+<text x="927.00" y="645.00" class="small" >1991 ARU ownership: no added mileage.</text>
+<text x="50.00" y="704.00" class="label" >HOW TO READ THIS HISTORY</text>
+<text x="50.00" y="733.00" class="small" >Dashed brown: unlocated coal-era reconstruction. Navy: derived 1968 mainline. Ochre: 1972 East. Green: 1986 Mineral.</text>
+<text x="50.00" y="759.00" class="small" >The 14–16-mile range belongs to the surviving 1954 estate; it is not a precise 1898 length or a surveyed old boundary.</text>
+<text x="50.00" y="785.00" class="small" >1968 net route growth is about 17.35–19.35 miles; gross new construction and realigned old mileage are not established.</text>
+<text x="50.00" y="811.00" class="small" >1972 total: 37.3485 miles. 1986, 1991 and current total: 40.0000. Parallel yard tracks add no unique route-miles.</text>
+<text x="50.00" y="837.00" class="small" >Red Wash is absent from every rail epoch: ordinary mine receipts use trucks, and direct uranium custody remains gated.</text>
+<text x="50.00" y="890.00" class="small" >CRS / scale: logical schematic canvas, not georeferenced. North and a ground-distance scale cannot be established for the early estate.</text>
+<text x="50.00" y="917.00" class="small" >Sources: controlled history and source/operations.json historical_route_epochs; current geographic geometry is separately published in bst_network.svg.</text>
+<text x="50.00" y="944.00" class="small" >Fictional reconstruction. Exact extension dates are declared case derivations; no historical survey, mapped property right or professional certification is claimed.</text>
+</svg>

@@ -2,41 +2,29 @@ name: Red Wash transaction and operating record
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
     paths:
-      - 'RED_WASH.md'
-      - 'red_wash/**'
-      - 'docs/canon/DECISION_REGISTER.md'
-      - 'docs/canon/CANON_CHANGELOG_v0.3.md'
-      - 'docs/canon/*RED_WASH*'
-      - 'docs/structured/red_wash_transaction_operating_record.json'
-      - 'docs/structured/aru_bst_red_wash_bridge.json'
-      - 'docs/finance/RED_WASH_FINANCE_PLATFORM_BRIDGE.md'
-      - 'docs/organization/**'
-      - 'docs/governance/publications/SH-PS-RW-*.pdf'
-      - 'assets/brand/red_wash_visual_manifest.json'
-      - 'assets/brand/logos/pale_sun__canonical.png'
-      - 'assets/brand/logos/red_wash__canonical.png'
-      - 'assets/brand/maps/red_wash__*.png'
-      - '.github/workflows/red-wash-case-ci.yml'
+      - RED_WASH.md
+      - red_wash/**
+      - industrial/**
+      - docs/**
+      - assets/brand/**
+      - tools/documents/**
+      - scripts/check_public_safety.py
+      - src/sable_harbor/exports/safety.py
+      - .github/workflows/red-wash-case-ci.yml
   pull_request:
     paths:
-      - 'RED_WASH.md'
-      - 'red_wash/**'
-      - 'docs/canon/DECISION_REGISTER.md'
-      - 'docs/canon/CANON_CHANGELOG_v0.3.md'
-      - 'docs/canon/*RED_WASH*'
-      - 'docs/structured/red_wash_transaction_operating_record.json'
-      - 'docs/structured/aru_bst_red_wash_bridge.json'
-      - 'docs/finance/RED_WASH_FINANCE_PLATFORM_BRIDGE.md'
-      - 'docs/organization/**'
-      - 'docs/governance/publications/SH-PS-RW-*.pdf'
-      - 'assets/brand/red_wash_visual_manifest.json'
-      - 'assets/brand/logos/pale_sun__canonical.png'
-      - 'assets/brand/logos/red_wash__canonical.png'
-      - 'assets/brand/maps/red_wash__*.png'
-      - '.github/workflows/red-wash-case-ci.yml'
+      - RED_WASH.md
+      - red_wash/**
+      - industrial/**
+      - docs/**
+      - assets/brand/**
+      - tools/documents/**
+      - scripts/check_public_safety.py
+      - src/sable_harbor/exports/safety.py
+      - .github/workflows/red-wash-case-ci.yml
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -94,152 +82,97 @@ jobs:
               changed = sorted(set(before) | set(after))
               raise SystemExit(f"repeat build changed generated outputs: {changed}")
           PY
-      - name: Stage allowlisted public artifact for safety validation
+      - name: Build current participant corpus from the clean source revision
+        run: python industrial/tools/build_package.py
+      - name: Verify source binding and safely extract the selected participant archive
+        id: participant
         run: |
-          mkdir -p red-wash-release/docs/canon
-          mkdir -p red-wash-release/docs/finance
-          mkdir -p red-wash-release/docs/governance/publications
-          mkdir -p red-wash-release/docs/structured
-          mkdir -p red-wash-release/assets/brand/logos
-          mkdir -p red-wash-release/assets/brand/maps
-          mkdir -p red-wash-release/red_wash/agreements
-          mkdir -p red-wash-release/red_wash/docs
-          mkdir -p red-wash-release/red_wash/generated
-          mkdir -p red-wash-release/red_wash/logistics
-          mkdir -p red-wash-release/red_wash/regulatory
-          mkdir -p red-wash-release/red_wash/source
-          mkdir -p red-wash-release/red_wash/dist
-          mkdir -p red-wash-release/red_wash/tests
-          mkdir -p red-wash-release/red_wash/tools
-          cp red_wash/README.md red_wash/RED_WASH_CASEBOOK.md red_wash/TRANSACTION_OPERATING_RECORD.md red-wash-release/red_wash/
-          cp -R red_wash/agreements/. red-wash-release/red_wash/agreements/
-          cp -R red_wash/docs/. red-wash-release/red_wash/docs/
-          cp -R red_wash/generated/. red-wash-release/red_wash/generated/
-          cp -R red_wash/logistics/. red-wash-release/red_wash/logistics/
-          cp -R red_wash/regulatory/. red-wash-release/red_wash/regulatory/
-          cp -R red_wash/source/. red-wash-release/red_wash/source/
-          cp -R red_wash/dist/. red-wash-release/red_wash/dist/
-          cp red_wash/tests/*.py red-wash-release/red_wash/tests/
-          cp red_wash/tools/*.py red-wash-release/red_wash/tools/
-          cp RED_WASH.md red-wash-release/
-          cp docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05.md red-wash-release/docs/canon/
-          cp docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-05_RED_WASH.md red-wash-release/docs/canon/
-          cp docs/canon/RED_WASH_CLOSEOUT_CHANGELOG_2026-09-05.md red-wash-release/docs/canon/
-          cp docs/finance/RED_WASH_FINANCE_PLATFORM_BRIDGE.md red-wash-release/docs/finance/
-          cp docs/governance/publications/SH-PS-RW-LOG-001_v1.0.0.pdf red-wash-release/docs/governance/publications/
-          cp docs/governance/publications/SH-PS-RW-TOR-001_v1.0.0.pdf red-wash-release/docs/governance/publications/
-          cp docs/structured/red_wash_transaction_operating_record.json red-wash-release/docs/structured/
-          cp docs/structured/aru_bst_red_wash_bridge.json red-wash-release/docs/structured/
-          cp assets/brand/red_wash_visual_manifest.json red-wash-release/assets/brand/
-          cp assets/brand/logos/pale_sun__canonical.png red-wash-release/assets/brand/logos/
-          cp assets/brand/logos/red_wash__canonical.png red-wash-release/assets/brand/logos/
-          cp assets/brand/maps/red_wash__site_overview.png red-wash-release/assets/brand/maps/
-          cp assets/brand/maps/red_wash__underground_plan.png red-wash-release/assets/brand/maps/
-      - name: Verify staged artifact safety and write release manifest
-        env:
-          RED_WASH_EVENT_NAME: ${{ github.event_name }}
-          RED_WASH_GITHUB_REF: ${{ github.ref }}
-          RED_WASH_SOURCE_SHA: ${{ github.sha }}
-        run: |
-          python - <<'PY'
+          python - <<'PYCODE'
           import hashlib
           import json
           import os
-          from pathlib import Path
+          import stat
+          import tempfile
+          import zipfile
+          from pathlib import Path, PurePosixPath
 
-          root = Path("red-wash-release")
-          publication_source = Path("docs/governance/publication_manifest.json")
-          publication_manifest = json.loads(publication_source.read_text(encoding="utf-8"))
-          expected_publications = {
-              "docs/governance/publications/SH-PS-RW-LOG-001_v1.0.0.pdf",
-              "docs/governance/publications/SH-PS-RW-TOR-001_v1.0.0.pdf",
-          }
-          selected_publications = [
-              item
-              for item in publication_manifest["artifacts"]
-              if item["publication"] in expected_publications
-          ]
-          if {item["publication"] for item in selected_publications} != expected_publications:
-              raise SystemExit("publication manifest does not contain both Red Wash PDFs")
-          filtered_publication_manifest = {
-              "standard": publication_manifest["standard"],
-              "generated_for_version": publication_manifest["generated_for_version"],
-              "reproducibility": publication_manifest["reproducibility"],
-              "artifacts": selected_publications,
-          }
-          (root / "docs/governance/publication_manifest.json").write_text(
-              json.dumps(filtered_publication_manifest, indent=2, sort_keys=True) + "\n",
-              encoding="utf-8",
-          )
-          prohibited_names = {
-              ".env",
-              "credentials",
-              "credentials.json",
-              "id_rsa",
-              "id_ed25519",
-          }
-          files = []
-          for path in sorted(root.rglob("*")):
-              if path.is_symlink():
-                  raise SystemExit(f"release contains symlink: {path}")
-              if not path.is_file():
-                  continue
-              relative = path.relative_to(root).as_posix()
-              lower_name = path.name.lower()
+          repository = Path.cwd().resolve()
+          dist = repository / "industrial/dist"
+          validation = json.loads((dist / "validation.json").read_text())
+          if validation["status"] != "PASS" or validation["source_state"] != "CLEAN_COMMIT":
+              raise SystemExit("participant build is not a validated clean-source artifact")
+          if validation["source_revision"] != os.environ["GITHUB_SHA"]:
+              raise SystemExit("participant source revision differs from the checked-out CI revision")
+          archive_path = (repository / validation["zip_path"]).resolve()
+          if not archive_path.is_relative_to(dist) or not archive_path.is_file():
+              raise SystemExit("participant archive is outside the expected distribution directory")
+          if hashlib.sha256(archive_path.read_bytes()).hexdigest() != validation["zip_sha256"]:
+              raise SystemExit("participant archive checksum differs from build validation")
+
+          # Staging must remain outside the checkout: a review artifact must not
+          # dirty the source revision used by the clean-commit package builder.
+          stage = Path(tempfile.mkdtemp(prefix="industrial-participant-ci-", dir=os.environ["RUNNER_TEMP"]))
+          if stage.resolve().is_relative_to(repository):
+              raise SystemExit("participant staging must be outside the source checkout")
+          with zipfile.ZipFile(archive_path) as archive:
+              if archive.testzip() is not None:
+                  raise SystemExit("participant archive CRC validation failed")
+              members = archive.infolist()
+              names = [member.filename for member in members]
+              if len(names) != len(set(names)):
+                  raise SystemExit("participant archive contains duplicate member names")
+              for member in members:
+                  path = PurePosixPath(member.filename)
+                  if (
+                      path.is_absolute()
+                      or ".." in path.parts
+                      or "\\" in member.filename
+                      or member.is_dir()
+                      or stat.S_ISLNK(member.external_attr >> 16)
+                      or not member.filename
+                  ):
+                      raise SystemExit(f"unsafe participant archive member: {member.filename}")
+              manifest = json.loads(archive.read("manifest.json"))
               if (
-                  lower_name in prohibited_names
-                  or lower_name.endswith((".key", ".pem", ".pyc", ".pyo"))
-                  or "__pycache__" in path.parts
-                  or ".git" in path.parts
+                  manifest["source_revision"] != os.environ["GITHUB_SHA"]
+                  or manifest["source_state"] != "CLEAN_COMMIT"
+                  or manifest["editorial_handoff_included"]
+                  or manifest["private_assessment_material_included"]
               ):
-                  raise SystemExit(f"release contains prohibited file: {relative}")
-              files.append(
-                  {
-                      "path": relative,
-                      "bytes": path.stat().st_size,
-                      "sha256": hashlib.sha256(path.read_bytes()).hexdigest(),
-                  }
-              )
-          if not files:
-              raise SystemExit("release staging directory is empty")
-          checksums = root / "SHA256SUMS.txt"
-          checksums.write_text(
-              "".join(f"{item['sha256']}  {item['path']}\n" for item in files),
-              encoding="utf-8",
-          )
-          files.append(
-              {
-                  "path": checksums.relative_to(root).as_posix(),
-                  "bytes": checksums.stat().st_size,
-                  "sha256": hashlib.sha256(checksums.read_bytes()).hexdigest(),
-              }
-          )
-          release_name = "red-wash-transaction-operating-record-v1.0.0"
-          is_release = (
-              os.environ["RED_WASH_EVENT_NAME"] == "push"
-              and os.environ["RED_WASH_GITHUB_REF"] == "refs/heads/main"
-          )
-          manifest = {
-              "artifact_state": "MERGED_MAIN_RELEASE" if is_release else "PULL_REQUEST_CANDIDATE",
-              "candidate_for": release_name,
-              "classification": "PUBLIC_SYNTHETIC_DIEGETIC",
-              "release": release_name if is_release else None,
-              "source_commit": os.environ["RED_WASH_SOURCE_SHA"],
-              "files": files,
-          }
-          (root / "release_manifest.json").write_text(
-              json.dumps(manifest, indent=2, sort_keys=True) + "\n",
-              encoding="utf-8",
-          )
-          PY
-      - name: Scan staged public content and binary containers
-        run: PYTHONPATH=src python scripts/check_public_safety.py red-wash-release
-      - name: Upload verified public release artifact from merged main
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+                  raise SystemExit("participant manifest source/classification boundary failed")
+              expected = {entry["path"] for entry in manifest["artifacts"]}
+              expected.update({manifest["database"]["path"], "README.md", "manifest.json", "CHECKSUMS.sha256"})
+              if set(names) != expected:
+                  raise SystemExit("archive members differ from the reviewed participant manifest")
+              checksums = {}
+              for line in archive.read("CHECKSUMS.sha256").decode().splitlines():
+                  checksum, name = line.split("  ", 1)
+                  if name in checksums:
+                      raise SystemExit("duplicate participant checksum entry")
+                  checksums[name] = checksum
+              if set(checksums) != set(names) - {"CHECKSUMS.sha256"}:
+                  raise SystemExit("participant checksum inventory is incomplete")
+              for name, checksum in checksums.items():
+                  if hashlib.sha256(archive.read(name)).hexdigest() != checksum:
+                      raise SystemExit(f"participant member checksum mismatch: {name}")
+              for member in members:
+                  target = stage / member.filename
+                  target.parent.mkdir(parents=True, exist_ok=True)
+                  target.write_bytes(archive.read(member))
+          with Path(os.environ["GITHUB_OUTPUT"]).open("a") as output:
+              output.write(f"stage={stage}\n")
+          print(f"Verified {len(members)} participant members from {manifest['source_revision']}")
+          PYCODE
+      - name: Scan selected public content and binary containers
+        env:
+          PARTICIPANT_STAGE: ${{ steps.participant.outputs.stage }}
+        run: PYTHONPATH=src python scripts/check_public_safety.py "$PARTICIPANT_STAGE"
+      - name: Upload source-bound CI review artifact
+        # This is an Actions review artifact, not a GitHub Release publication.
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
-          name: red-wash-transaction-operating-record-v1.0.0-${{ github.sha }}
-          path: red-wash-release
+          name: industrial-participant-ci-${{ github.sha }}
+          path: industrial/dist/
           if-no-files-found: error
           include-hidden-files: true
           retention-days: 30

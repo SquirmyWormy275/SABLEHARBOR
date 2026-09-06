@@ -38,20 +38,24 @@ The table below traces the load-bearing organizational claims to the controlling
 | Cole is Red Wash site superintendent and has meaningful temporary stop authority. | LOCKED role / surname OPEN | Canon §10.8–§10.9; `PS-012`–`PS-013` |
 | Walt Sutter is a retired-geologist source, not an employee or oracle. | LOCKED role | Canon §10.4; `PS-007` |
 | Work from Willow, Foundry, Atlas, or any other unit reaches Red Wash only through field qualification and an operating owner. | LOCKED gate | Canon §10.11; `PS-015` |
-| The selected Red Wash transaction closes for $28.0M cash, with $3.0M escrow, $0.5M holdback, no transaction debt and no goodwill; exact seller and operating-company legal forms remain OPEN. | LOCKED selected case / PROVISIONAL seller identity / OPEN legal forms | `SH-PS-RW-TOR-001`; `SH-PS-RW-DR-001` decisions `RW-001`–`RW-005` |
+| The selected Red Wash transaction closes for $28.0M cash, with $3.0M escrow, $0.5M holdback, no transaction debt and no goodwill; NMI and Red Wash Mining, LLC legal identities are now resolved. | LOCKED case / derived legal implementation | `SH-PS-RW-TOR-001`; `SH-PS-RW-DR-001` decisions `RW-001`–`RW-005` |
 | The approved 2026 Pale Sun/Red Wash selected case has 140 FTE: 12 in the Pale Sun business layer and 128 at the Red Wash site. | LOCKED synthetic selected-case input | `SH-PS-RW-TOR-001`; `SH-PS-RW-DR-001` decision `RW-006` |
 | Project Cradle is a rare-earth recovery line that generally avoids owning the host mine. | LOCKED | Canon §11.1; `CRD-001`–`CRD-002` |
 | Cradle's founding team is Kenji Arakawa, Tessa Quinn, Luis Ortega, and Maeve Donnelly. | LOCKED | Canon §11.2–§11.3; `CRD-003`–`CRD-004` |
 | Sable Harbor acquired American Resource Utility rather than building a railway from scratch. | LOCKED | Canon §12.1–§12.2; `ARU-001`–`ARU-002` |
 | ARU remains a distinct operating company during integration. | LOCKED direction | Canon §12.2; `ARU-006` |
-| Blood, Sweat & Tears Railway is ARU's railway or short-line operating component. | LOCKED role / legal detail OPEN | Canon §12.3; `ARU-003` |
+| Blood, Sweat & Tears Railway is ARU's railway or short-line operating component. | LOCKED role / current legal identity resolved | Canon §12.3; `ARU-003`; industrial `IND-001` |
 | Operational accountability owns the immediate consequence of an operating event; technical and capital authority remain distinct. | LOCKED authority rule | Canon §12.5; `ARU-009` |
 | Red Wash had no pre-existing ARU/BS&T commercial relationship, and qualified external carriers handled every 2025 movement without a change to annual 2025 sales or revenue. | LOCKED bridge boundary / synthetic company event | `SH-PS-RW-LOG-001`; `SH-PS-RW-DR-001` decisions `RW-017`–`RW-019` |
 | Mapping surfaced ARU/BS&T as a bounded diligence candidate, but no direct mine connection, suitable secure transload, or demonstrated uranium capability/custody existed at discovery. | LOCKED sequence / OPEN implementation | `SH-PS-RW-LOG-001`; `SH-PS-RW-DR-001` decisions `RW-020`–`RW-021` |
 | The $15 million Red Wash interface value is an unbooked preliminary screen; limited service remains conditional on applicable gates and does not settle the full ARU case. | PROVISIONAL planning input / OPEN implementation | `SH-PS-RW-LOG-001`; `SH-PS-RW-DR-001` decisions `RW-022`–`RW-025` |
 | Advisory is an emerging transfer of Sable Harbor's method, not generic consulting or a fully formed 2026 division. | LOCKED direction / formal structure OPEN | Canon §12.6; `ADV-001`–`ADV-002` |
-| Board structure and selective subsidiary direction are locked; exact legal implementation, unresolved executive/reporting detail, headcount, P&Ls, and unprovided ownership mechanics remain OPEN. | MIXED | Canon v0.3 §17.1–17.2; `GOV-001`–`GOV-003`, `ENT-001`–`ENT-002` |
+| Board architecture remains locked; industrial legal identities, officers, 140/131-FTE selected cases and finance are resolved. Unrelated unprovided enterprise detail remains OPEN. | MIXED | Canon v0.3 §17.1–17.2; `GOV-001`–`GOV-003`, `ENT-001`–`ENT-002` |
 
 ## Review rule
 
 A proposed chart change should identify the row it changes or add a new row with a controlling source. When a source remains OPEN or PROVISIONAL, the chart must carry the same state instead of resolving it visually.
+
+## September 5 industrial closeout application
+
+[SH-IND-DR-001](../canon/INDUSTRIAL_CLOSEOUT_2026-09-05.md) supersedes earlier OPEN state only for its explicit industrial scope. It resolves SHI/SHIH/PS/RWH/ARU/BST legal identity and ownership, Vilander and Mari appointments, retained ARU leadership, acquisition and selected operating/financial cases. The earlier $15M screen remains unbooked and direct uranium custody remains OPEN_GATED. Historical records are preserved in [the v0.3 archive](history/v0.3.0/HISTORY.md). External law, arithmetic and real geography control their domains; synthetic company records do not become authentic originals.

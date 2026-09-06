@@ -22,10 +22,12 @@ def field(text: str, name: str, default: str = "") -> str:
 def category(path: str) -> str:
     if path == "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-06_CLOSEOUT.md":
         return "canon decision addendum"
-    if path == "docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05.md":
+    if path == "docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05_R2.md":
         return "Red Wash transaction and operating record"
     if path.startswith("red_wash/logistics/"):
         return "Red Wash logistics dependency record"
+    if path.startswith("industrial/"):
+        return "industrial synthetic company record"
     if "/committees/" in path:
         return "committee charter"
     if path.startswith("docs/governance/"):
@@ -38,10 +40,12 @@ def category(path: str) -> str:
 
 
 def inferred_owner(path: str) -> str:
+    if path.startswith("industrial/"):
+        return "Sable Harbor Industrial Holdings"
     name = Path(path).stem
     if path == "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-06_CLOSEOUT.md":
         return "Repository owner"
-    if path == "docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05.md":
+    if path == "docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05_R2.md":
         return "Pale Sun operating authority"
     if path.startswith("red_wash/logistics/"):
         return "Pale Sun / Red Wash"

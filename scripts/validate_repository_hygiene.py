@@ -1,10 +1,36 @@
 #!/usr/bin/env python3
 """Deterministic human-facing repository hygiene checks."""
-import json, re, subprocess, sys
+import hashlib, json, re, subprocess, sys
 from pathlib import Path
 R=Path(__file__).resolve().parents[1]; errors=[]
 def fail(msg): errors.append(msg)
 tracked=subprocess.run(['git','ls-files'],cwd=R,capture_output=True,text=True,check=True).stdout.splitlines()
+# Byte-exact historical sources keep their original relative-link context.
+# Do not rewrite preserved evidence merely because its archive directory moved.
+historical_context = {}
+for manifest_path, key, path_key in [
+    ('red_wash/history/v1.0.0/manifest.json', 'files', 'path'),
+    ('docs/organization/history/v0.3.0/manifest.json', 'artifacts', 'preserved_path'),
+]:
+    manifest = R / manifest_path
+    if not manifest.is_file():
+        continue
+    for artifact in json.loads(manifest.read_text())[key]:
+        if path_key not in artifact:
+            continue
+        path = R / artifact[path_key]
+        if not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest() != artifact['sha256']:
+            fail(f'historical source checksum drift: {artifact[path_key]}')
+        historical_context[artifact[path_key]] = R / artifact['original_path']
+editorial_sources = set()
+ingestion = R / 'docs/handoffs/industrial_r2/repository_ingestion.json'
+if ingestion.is_file():
+    for artifact in json.loads(ingestion.read_text())['entries']:
+        path = R / artifact['repository_path']
+        if not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest() != artifact['sha256']:
+            fail(f'ingested handoff checksum drift: {artifact["repository_path"]}')
+        if artifact['classification'] == 'EDITORIAL_HANDOFF_PROVENANCE':
+            editorial_sources.add(artifact['repository_path'])
 for rel in tracked:
     p=R/rel
     if not p.exists(): continue
@@ -14,10 +40,13 @@ for rel in tracked:
     if p.suffix=='.md':
         text=p.read_text(errors='replace')
         if '\ufffd' in text: fail(f'encoding replacement character in {rel}')
-        for link in re.findall(r'\[[^]]*\]\(([^)]+)\)',text):
+        # Ingested chat/attachment prose may reference its original download
+        # context. Its exact bytes are verified above; it is not navigation.
+        for link in [] if rel in editorial_sources else re.findall(r'\[[^]]*\]\(([^)]+)\)',text):
             target=link.split('#',1)[0].strip('<>')
             if not target or '://' in target or target.startswith(('mailto:','app://')): continue
-            if not (p.parent/target).resolve().exists(): fail(f'broken Markdown link {rel} -> {target}')
+            context = historical_context.get(rel, p)
+            if not (context.parent/target).resolve().exists(): fail(f'broken Markdown link {rel} -> {target}')
 allowed_history={
     'docs/governance/2021_2022_FINANCING_AND_INVESTOR_DIRECTOR_PROPOSAL.md',
     'docs/internal/CHAT_CANON_LEDGER_J2_ALEXANDRIA.md',

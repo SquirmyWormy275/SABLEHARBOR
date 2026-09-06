@@ -1,0 +1,222 @@
+{
+  "package_id": "SH-ARU-RW-PS-CODEX-HANDOFF-2026-09-05-R2",
+  "decision_cutoff": "2026-09-05",
+  "authority": "Latest explicit user decisions in this conversation",
+  "repository_operations": {
+    "implementation_authorized": true,
+    "create_or_reuse_branch_authorized": true,
+    "commit_authorized": true,
+    "push_implementation_branch_authorized": true,
+    "open_or_update_pull_request_authorized": true,
+    "merge_authorized_by_this_handoff": true,
+    "push_main_authorized": true,
+    "delivery_target": "Complete reconciled and validated implementation merged into and pushed to main",
+    "pull_request_policy": "Optional delivery mechanism only; not a user approval or review stop",
+    "draft_pr_95_policy": "Inspect and harvest only reconciled valid work, then update/merge, supersede, replace, or close it as appropriate; never merge it merely because it exists",
+    "destructive_git_policy": "Use non-destructive operations; do not force-push, rewrite published history, or delete unrelated branches",
+    "historical_reconciliation_override": "Any earlier no-PR/no-push/no-merge language in appended reconciliation reports is superseded by this R2 authority",
+    "instruction": "Implement, validate, commit, push, and merge the completed package into main. Do not stop at a local branch, unpushed commit, draft PR, or artificial review checkpoint."
+  },
+  "legal_structure": {
+    "sable_harbor": {
+      "legal_name": "Sable Harbor, LLC",
+      "form": "Delaware limited liability company",
+      "headquarters": "Sacramento, California",
+      "california_status": "Foreign LLC registered/qualified to do business in California",
+      "state": "LOCKED",
+      "formation_filings_scope": "OUT_OF_SCOPE_FOR_THIS_HANDOFF"
+    },
+    "industrial_holdings": {
+      "legal_name": "Sable Harbor Industrial Holdings, Inc.",
+      "form": "Delaware C corporation",
+      "owner": "Sable Harbor, LLC",
+      "state": "LOCKED"
+    },
+    "pale_sun": {
+      "legal_name": "Pale Sun Inc.",
+      "form": "Delaware C corporation",
+      "owner": "Sable Harbor, LLC, implemented through Sable Harbor Industrial Holdings, Inc. as the industrial intermediate",
+      "state": "LOCKED_WITH_DERIVED_INTERMEDIATE_PLACEMENT"
+    },
+    "red_wash": {
+      "legal_name": "Red Wash Mining, LLC",
+      "form": "Wyoming limited liability company",
+      "owner": "Pale Sun Inc.",
+      "state": "LOCKED"
+    },
+    "northstar": {
+      "legal_name": "Northstar Minerals, Inc.",
+      "abbreviation": "NMI",
+      "form": "Wyoming corporation",
+      "owner_ceo_seller": "Henry Norwood",
+      "state": "LOCKED"
+    },
+    "aru": {
+      "legal_name": "American Resource Utility, Inc.",
+      "form": "Wyoming corporation",
+      "owner_post_close": "Sable Harbor Industrial Holdings, Inc.",
+      "seller_group_lead": "Fred Tolman",
+      "state": "LOCKED"
+    },
+    "bst": {
+      "legal_name": "Blood, Sweat & Tears Railway Company",
+      "form": "Wyoming corporation",
+      "owner": "American Resource Utility, Inc.",
+      "classification": "STB Class III common-carrier shortline railroad",
+      "state": "LOCKED"
+    }
+  },
+  "names": {
+    "Daniel": "Daniel Mercer",
+    "red_wash_deal_lead": "Martin Shaw",
+    "red_wash_seller": "Henry Norwood",
+    "aru_seller_group_lead": "Fred Tolman",
+    "pale_sun_founder_president": "Evan Vilander",
+    "spelling_controls": [
+      "Vilander, not Vylander",
+      "Vilander, not Rylander",
+      "Judgment Officer, not judge advocate"
+    ]
+  },
+  "red_wash_geography": {
+    "current": {
+      "region": "Great Divide Basin / Red Desert",
+      "county": "Sweetwater County",
+      "state": "Wyoming",
+      "working_anchor": {
+        "latitude": 42.22,
+        "longitude": -108.18
+      },
+      "relation": "north of Wamsutter"
+    },
+    "superseded": {
+      "county": "Carbon County",
+      "latitude": 42.3127,
+      "longitude": -106.9213,
+      "preservation": "Preserve old maps as superseded historical originals; create corrected current maps."
+    }
+  },
+  "aru_transaction": {
+    "close_date": "2026-01-07",
+    "seller_group_lead": "Fred Tolman",
+    "enterprise_value_usd": 62000000,
+    "seller_equity_value_usd": 49500000,
+    "buyer_funded_purchase_consideration_usd": 48000000,
+    "cash_paid_at_close_usd": 45000000,
+    "escrow_usd": 3000000,
+    "new_acquisition_debt_usd": 22500000,
+    "sable_harbor_equity_before_fees_usd": 39000000,
+    "preclose_debt_usd": 16000000,
+    "preclose_cash_usd": 3500000,
+    "net_debt_usd": 12500000,
+    "debt_refinanced_usd": 13500000,
+    "finance_leases_retained_usd": 2500000,
+    "minimum_cash_retained_usd": 2000000,
+    "new_revolver_capacity_usd": 5000000,
+    "new_revolver_draw_at_close_usd": 0,
+    "seller_rollover": false,
+    "earnout": false,
+    "seller_ceo_transition_months": 9,
+    "seller_ceo_consulting_compensation_usd": 225000,
+    "management_retention_pool_usd": 500000,
+    "tax_structure": "100% stock purchase by Sable Harbor Industrial Holdings, Inc. with joint IRC 338(h)(10) election; ARU is an eligible S corporation immediately before close, all eligible shareholders consent, S status terminates at acquisition by the corporate buyer."
+  },
+  "aru_2025": {
+    "revenue_usd": 42000000,
+    "operating_expense_before_da_usd": 32200000,
+    "normalized_ebitda_usd": 9800000,
+    "normalized_ebitda_margin_pct": 23.333333,
+    "fte": 131,
+    "sustaining_capex_usd": 3300000,
+    "deferred_catch_up_capex_usd": 11000000
+  },
+  "bst_2025": {
+    "route_miles_approx": 40,
+    "revenue_carloads": 9000,
+    "revenue_usd": 15500000,
+    "operating_expense_before_da_usd": 14000000,
+    "normalized_ebitda_usd": 1500000,
+    "operating_ratio_pct": 90.322581,
+    "fte": 58,
+    "locomotives_owned": 4,
+    "locomotives_generally_available": 3,
+    "locomotives_normally_required": 2,
+    "service_days_per_week": 5,
+    "interchange_partner": "Union Pacific at Wamsutter",
+    "track": {
+      "main_and_branches": "FRA Class 2, 25 mph freight max",
+      "yards_and_spurs": "FRA Class 1, 10 mph max"
+    },
+    "labor": {
+      "train_and_engine": "property-specific SMART-TD CBA",
+      "maintenance_of_way": "property-specific BMWED CBA",
+      "other_functions": "nonunion"
+    }
+  },
+  "red_wash_interface": {
+    "v1_direct_mine_spur": false,
+    "hub": "Taylor, Wyoming",
+    "recurring_annual_inbound_cars": 225,
+    "design_allowance_annual_cars": 300,
+    "phase_1_capex_usd": 8500000,
+    "capex_ceiling_usd": 15000000,
+    "mine_specific_capex_range_usd": [
+      3000000,
+      3500000
+    ],
+    "aru_strategic_capex_range_usd": [
+      5000000,
+      5500000
+    ],
+    "service_windows_per_week": 2,
+    "default_car_cycle_hours": 72,
+    "goal_car_cycle_hours": [
+      36,
+      48
+    ],
+    "steel_max_cycle_hours": 96,
+    "critical_inventory_buffer_days": [
+      10,
+      14
+    ],
+    "permanent_mixed_mode_right": true,
+    "automatic_direct_uranium_custody": false,
+    "planning_revenue_usd_not_forced": 875000,
+    "planning_incremental_ebitda_usd_not_forced": 365000
+  },
+  "pale_sun": {
+    "purpose": "Sable Harbor nuclear materials, uranium commercialization, federal/strategic interface, downstream partnership, and future nuclear-materials acquisition platform.",
+    "first_operating_asset": "Red Wash Mining, LLC",
+    "founder_president": "Evan Vilander",
+    "existing_mining_operator": "Marianne “Mari” Varela retains substantive mine operating and technical authority; implementation must assign a coherent title without erasing her locked role.",
+    "logo": "Preserve existing canonical Pale Sun logo exact bytes; do not regenerate.",
+    "slogan": "OPEN; no slogan was locked in this conversation."
+  },
+  "participant_case": {
+    "build": true,
+    "type": "Point-in-time M&A participant case study covering Pale Sun, Red Wash, ARU, and BS&T acquisition/integration history and evidence.",
+    "pattern": "Inspect and mirror the Blackridge participant-facing case structure.",
+    "not_the_whole_repo": true,
+    "evaluator_repo_separate": "SABLEHARBOR-ALEXANDRIA-CONTROL",
+    "hidden_evaluator_material_in_sableharbor_prohibited": true,
+    "cutoff": "Use a controlled 2026-09-05 publication cutoff with time-stamped evidence unless the existing Blackridge mechanical pattern requires an equivalent exact binding. No post-cutoff facts."
+  },
+  "superseded": [
+    "Red Wash in Carbon County at 42.3127,-106.9213",
+    "Bloodstone as the current railroad town",
+    "2026-Q1 as first ARU discovery",
+    "USD 76M ARU acquisition enterprise value",
+    "USD 23.6M ARU/BS&T revenue scenario as governing case",
+    "USD 20.3M ARU/BS&T operating cost scenario as governing case",
+    "5,000 annual Red Wash cars as demand forecast",
+    "375 recurring Red Wash cars",
+    "automatic direct BS&T uranium custody",
+    "Pale Sun as merely a nonlegal business-line label",
+    "Huck Lamb as ARU seller lead",
+    "Northstar Resources, Inc. as seller legal name",
+    "judge advocate as Evan Vilander role",
+    "participant edition deferred or replaced by whole-repo access"
+  ],
+  "revision": "R2_EXECUTION_AUTHORITY_CORRECTED",
+  "supersedes_package_id": "SH-ARU-RW-PS-CODEX-HANDOFF-2026-09-05"
+}

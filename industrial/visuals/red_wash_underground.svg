@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="960" viewBox="0 0 1400 960">
+<title>RED WASH · UNDERGROUND OPERATING PLAN</title>
+<style>text{font-family:Arial,Helvetica,sans-serif;fill:#182b32}.muted{fill:#586b70}.small{font-size:14px}.label{font-size:17px}.title{font-size:30px;font-weight:700}.sub{font-size:17px}.panel{fill:#f3f5f2;stroke:#b6c1bc}</style>
+<rect width="1400" height="960" fill="#faf9f4"/>
+<text x="48.00" y="53.00" class="title" >RED WASH · UNDERGROUND OPERATING PLAN</text>
+<text x="48.00" y="86.00" class="sub" >Selective drift-and-fill with cemented paste backfill · conceptual 2,500-foot working depth</text>
+<path d="M48 105 H1352" stroke="#224d57" stroke-width="3"/>
+<rect x="48.00" y="130.00" width="790.00" height="670.00" fill="#eeeee8" stroke="#bac5b9"/>
+<path d="M161.00,666.00 L280.00,610.00 L420.00,470.00 L476.00,344.00 L560.00,260.00" stroke="#294b59" stroke-width="9" fill="none" stroke-dasharray=""/>
+<path d="M273.00,599.50 L434.00,550.50" stroke="#52747b" stroke-width="6" fill="none" stroke-dasharray=""/>
+<path d="M313.25,587.25 L351.75,534.75" stroke="#879b91" stroke-width="4" fill="none" stroke-dasharray=""/>
+<path d="M353.50,575.00 L392.00,522.50" stroke="#879b91" stroke-width="4" fill="none" stroke-dasharray=""/>
+<path d="M393.75,562.75 L432.25,510.25" stroke="#879b91" stroke-width="4" fill="none" stroke-dasharray=""/>
+<path d="M336.00,547.00 L497.00,606.50" stroke="#52747b" stroke-width="6" fill="none" stroke-dasharray=""/>
+<path d="M376.25,561.88 L414.75,509.38" stroke="#879b91" stroke-width="4" fill="none" stroke-dasharray=""/>
+<path d="M416.50,576.75 L455.00,524.25" stroke="#879b91" stroke-width="4" fill="none" stroke-dasharray=""/>
+<path d="M456.75,591.62 L495.25,539.12" stroke="#879b91" stroke-width="4" fill="none" stroke-dasharray=""/>
+<path d="M458.50,372.00 L619.50,316.00" stroke="#52747b" stroke-width="6" fill="none" stroke-dasharray=""/>
+<path d="M498.75,358.00 L537.25,305.50" stroke="#879b91" stroke-width="4" fill="none" stroke-dasharray=""/>
+<path d="M539.00,344.00 L577.50,291.50" stroke="#879b91" stroke-width="4" fill="none" stroke-dasharray=""/>
+<path d="M579.25,330.00 L617.75,277.50" stroke="#879b91" stroke-width="4" fill="none" stroke-dasharray=""/>
+<path d="M504.00,305.50 L665.00,361.50" stroke="#52747b" stroke-width="6" fill="none" stroke-dasharray=""/>
+<path d="M544.25,319.50 L582.75,267.00" stroke="#879b91" stroke-width="4" fill="none" stroke-dasharray=""/>
+<path d="M584.50,333.50 L623.00,281.00" stroke="#879b91" stroke-width="4" fill="none" stroke-dasharray=""/>
+<path d="M624.75,347.50 L663.25,295.00" stroke="#879b91" stroke-width="4" fill="none" stroke-dasharray=""/>
+<path d="M420.00,358.00 L539.00,260.00 L696.50,309.00 L602.00,407.00 L420.00,358.00" stroke="#a0693d" stroke-width="3" fill="none" stroke-dasharray="8 5"/>
+<text x="480.00" y="255.00" class="small" >East 12 lens: continuity disputed</text>
+<circle cx="420.00" cy="470.00" r="10" fill="#224d57"/>
+<text x="438.00" y="477.00" class="small" >Main shaft / access</text>
+<path d="M231.00,526.00 L378.00,372.00 L392.00,246.00" stroke="#8b5850" stroke-width="3" fill="none" stroke-dasharray="6 4"/>
+<text x="142.00" y="380.00" class="small" >Ventilation return</text>
+<text x="76.00" y="739.00" class="small" >Subsurface traces are local synthetic engineering geometry, not geographic surface boundaries.</text>
+<path d="M790.00,223.00 L790.00,175.00" stroke="#183f49" stroke-width="3" fill="none" stroke-dasharray=""/>
+<path d="M782.00,190.00 L790.00,175.00 L798.00,190.00" stroke="#183f49" stroke-width="2" fill="none" stroke-dasharray=""/>
+<text x="783.00" y="163.00" class="label" >N</text>
+<path d="M78.00,781.00 L218.00,781.00" stroke="#183f49" stroke-width="4" fill="none" stroke-dasharray=""/>
+<text x="78.00" y="768.00" class="small" >0</text>
+<text x="195.00" y="768.00" class="small" >200 m</text>
+<text x="865.00" y="152.00" class="label" >OPERATING AND RESOURCE BASIS</text>
+<text x="865.00" y="178.00" class="small" >Surface anchor: 42.22° N / 108.18° W</text>
+<text x="865.00" y="204.00" class="small" >Operator: Red Wash Mining, LLC</text>
+<text x="865.00" y="230.00" class="small" >Site 128 FTE / platform 12 FTE</text>
+<text x="865.00" y="256.00" class="small" ></text>
+<text x="865.00" y="282.00" class="small" >2026 selected: 175,000 short tons</text>
+<text x="865.00" y="308.00" class="small" >Grade 0.17% U3O8 · recovery 92%</text>
+<text x="865.00" y="334.00" class="small" >547,400 lb produced in annual plan</text>
+<text x="865.00" y="360.00" class="small" >225,000 t normalized target is a later case</text>
+<text x="865.00" y="386.00" class="small" >Future throughput requires capacity bridge</text>
+<text x="865.00" y="412.00" class="small" ></text>
+<text x="865.00" y="438.00" class="small" >Navy: main development / access</text>
+<text x="865.00" y="464.00" class="small" >Gray-green: stopes and backfill sequence</text>
+<text x="865.00" y="490.00" class="small" >Rust dashed: conceptual ventilation return</text>
+<text x="865.00" y="516.00" class="small" >Ochre dashed: uncertain resource continuity</text>
+<text x="865.00" y="542.00" class="small" ></text>
+<text x="865.00" y="568.00" class="small" >TECHNICAL DEFECTS REMAIN VISIBLE</text>
+<text x="865.00" y="594.00" class="small" >East 12 lens smoothing / cutoff issues</text>
+<text x="865.00" y="620.00" class="small" >Carbonate-rich acid/recovery response</text>
+<text x="865.00" y="646.00" class="small" >Main exhaust fan / control redundancy</text>
+<text x="865.00" y="672.00" class="small" >No inferred tonnes in base valuation</text>
+<text x="865.00" y="698.00" class="small" ></text>
+<text x="865.00" y="724.00" class="small" >No mine rail track exists in this plan.</text>
+<text x="865.00" y="750.00" class="small" >This is a schematic: no survey, reserve</text>
+<text x="865.00" y="776.00" class="small" >certification or approved ventilation design.</text>
+<text x="48.00" y="852.00" class="small" >Local mine grid in metres, oriented to conceptual north. Surface reference CRS: NAD83 / UTM zone 12N; no surveyed underground tie claimed.</text>
+<text x="48.00" y="880.00" class="small" >Source: selected Red Wash technical case, with original raster preserved separately as a superseded historical artifact.</text>
+<text x="48.00" y="908.00" class="small" >Depth, stope geometry, ventilation traces and lens boundaries are synthetic case assumptions whose uncertainty is part of the participant evidence.</text>
+</svg>

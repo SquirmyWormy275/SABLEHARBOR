@@ -1,7 +1,7 @@
 {
   "record_id": "SH-PS-RW-TOR-001",
   "title": "Red Wash Transaction and Operating Record",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "decision_date": "2026-09-05",
   "canon_effective_through": "2026-09-05",
   "synthetic_calibration_through": "2026-08-31",
@@ -11,7 +11,7 @@
   "projection_contract": {
     "authoritative_operating_source": "red_wash/source/core_operating_data.json",
     "authoritative_bridge_source": "red_wash/source/aru_bst_bridge.json",
-    "decision_addendum": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-05_RED_WASH.md",
+    "decision_addendum": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-05_RED_WASH_R2.md",
     "decision_record_id": "SH-PS-RW-DR-001",
     "transaction_decision_ids": [
       "RW-001",
@@ -52,21 +52,27 @@
     "operating_asset": "Red Wash",
     "product": "natural uranium concentrate reported as U3O8",
     "state": "LOCKED",
-    "operating_company_legal_name": null,
-    "operating_company_legal_name_state": "OPEN",
+    "operating_company_legal_name": "Red Wash Mining, LLC",
+    "operating_company_legal_name_state": "LOCKED",
     "location": {
       "state": "Wyoming",
       "state_status": "LOCKED",
-      "site_specific_details_status": "SCENARIO"
+      "site_specific_details_status": "SCENARIO",
+      "county": "Sweetwater County",
+      "latitude": 42.22,
+      "longitude": -108.18,
+      "elevation_ft": 6885,
+      "property_acres": 7480,
+      "disturbance_acres": 620
     }
   },
   "seller": {
-    "display_name": "Northstar Resources",
-    "display_name_state": "PROVISIONAL",
-    "legal_name": null,
-    "legal_name_state": "OPEN",
-    "jurisdiction": null,
-    "jurisdiction_state": "OPEN"
+    "display_name": "Northstar Minerals, Inc.",
+    "display_name_state": "LOCKED",
+    "legal_name": "Northstar Minerals, Inc.",
+    "legal_name_state": "LOCKED",
+    "jurisdiction": "Wyoming",
+    "jurisdiction_state": "LOCKED"
   },
   "transaction": {
     "canon_state": "LOCKED",
