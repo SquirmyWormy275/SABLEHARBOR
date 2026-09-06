@@ -1,6 +1,6 @@
 {
   "standard": "SH-GOV-DOC-001",
-  "generated_for_version": "2026-09-05",
+  "generated_for_version": "2026-09-06",
   "reproducibility": {
     "mutable_pdf_metadata": "removed",
     "document_id": "derived from page content",
@@ -8,11 +8,12 @@
   },
   "artifacts": [
     {
-      "source": "docs/governance/BOARD_AND_CAPITAL_GOVERNANCE.md",
-      "publication": "docs/governance/publications/SH-GOV-BOARD-001_v1.0.0.pdf",
-      "sha256": "9b7d5637e486377dd7002e66be21c97f2d469a8916da1acc5576bca1705cc3a5",
-      "source_sha256": "20249592680765fcfcfce057e9c62557b9694e6694adc84c63211cad3b76d933",
-      "brand": "corporate"
+      "source": "docs/governance/BOARD_AND_CAPITAL_GOVERNANCE_v1.0.1.md",
+      "publication": "docs/governance/publications/SH-GOV-BOARD-001_v1.0.1.pdf",
+      "sha256": "88d43aa1faeab2317ca8c1ad05992045d69b1896ccadb371773bba4215f989ab",
+      "source_sha256": "dc1e2e3ea6e7ea8d364eae87bd890a8c79a5a577a7554ed371cda3810ea945a8",
+      "brand": "corporate",
+      "normalizer": "pypdf"
     },
     {
       "source": "docs/governance/BOARD_EVOLUTION_2016_2026.md",
@@ -205,10 +206,11 @@
     },
     {
       "source": "docs/j2/alexandria/ALEXANDRIA_CHARTER.md",
-      "publication": "docs/j2/publications/SH-J2-ALX-001_v1.0.0.pdf",
-      "sha256": "18643f0f1659a73866185ffeea3a9b0d4ae6dc15b0d76de56df691f3f5bdeb99",
-      "source_sha256": "c7c73a82a54f1c499d330e763291ece595390bd0cf439bcfa8fa1c608f4149bf",
-      "brand": "j2"
+      "publication": "docs/j2/publications/SH-J2-ALX-001_v1.0.1.pdf",
+      "sha256": "40b3a0b43b1a9fe5d77d036d4c6f0343730698e7a31794666a4e8d63355de826",
+      "source_sha256": "10ea9d21612ee1fa965d4c1dc3a06121680c68d1422cb30f5c34eb9b3e1734ad",
+      "brand": "j2",
+      "normalizer": "pypdf"
     },
     {
       "source": "docs/j2/alexandria/INSTITUTIONAL_MEMORY_AND_CONNECTION.md",
@@ -226,10 +228,11 @@
     },
     {
       "source": "docs/j2/alexandria/VISUALIZATION_AND_BRANCHING_HISTORY.md",
-      "publication": "docs/j2/publications/SH-J2-ALX-VIS-001_v1.0.0.pdf",
-      "sha256": "8d5c8e176c52703055461ecbc6a555e4aaebded2d4a10e770cf1d513eb6ad458",
-      "source_sha256": "86c3d5209d096ad0739544a968c19674c27a2df0061b24070f794de045e09fc4",
-      "brand": "j2"
+      "publication": "docs/j2/publications/SH-J2-ALX-VIS-001_v1.0.1.pdf",
+      "sha256": "78a0fe06b594ef2470b20c3d99e949cced39f70a19763b8628feeb7f672866ac",
+      "source_sha256": "0d1565a9a7e487a866ee1c9ac05b63b1e5abe86002253677a37463403232b863",
+      "brand": "j2",
+      "normalizer": "pypdf"
     },
     {
       "source": "docs/j2/alexandria/TEMPORAL_INTEGRITY.md",
@@ -261,10 +264,11 @@
     },
     {
       "source": "docs/j2/alexandria/DAEDALUS_PERSONAL_INSTANCE_AND_WORKSPACE.md",
-      "publication": "docs/j2/publications/SH-J2-DAEDALUS-PERSONAL-001_v1.0.0.pdf",
-      "sha256": "80a90881219c6a13dd8905d801555dde6d14273f57cd2ec13390b067a5544b48",
-      "source_sha256": "36e520d51263bf4204382caf49b65b378df18740072e5c8c0e532834d0dd791c",
-      "brand": "j2"
+      "publication": "docs/j2/publications/SH-J2-DAEDALUS-PERSONAL-001_v1.0.1.pdf",
+      "sha256": "30838f2e11915f99e274b1d3ab9016e20130b8d036bfef240f485e9f946eab76",
+      "source_sha256": "d91c6191dd095639e546c1cf623e05adf6d614f46fe5f1c9d4e7e7fa3758fb97",
+      "brand": "j2",
+      "normalizer": "pypdf"
     },
     {
       "source": "docs/j2/alexandria/PINAKES_PORTAL_AND_UX.md",
@@ -275,10 +279,11 @@
     },
     {
       "source": "docs/j2/alexandria/SEMAPHORE_TRAFFIC_SYSTEM.md",
-      "publication": "docs/j2/publications/SH-J2-SEMAPHORE-001_v1.0.0.pdf",
-      "sha256": "9ad676f9d8b66f04f790668ba9e522b97c28d7a6f94bf82383cb837cf51ccdf8",
-      "source_sha256": "176c38e5b3c4863467699bc99285d097bef9047ce091c40e39ca5b52686d2e42",
-      "brand": "j2"
+      "publication": "docs/j2/publications/SH-J2-SEMAPHORE-001_v1.0.1.pdf",
+      "sha256": "0b683eb79bb32f9e48c7856e2de4aa9d42b6a8c801772ab820f62729b2f92ced",
+      "source_sha256": "f3f475a9a096fa3956b8d573c6f34cea5e4fa3ede17fec04f5233a5279ec8b83",
+      "brand": "j2",
+      "normalizer": "pypdf"
     },
     {
       "source": "docs/j2/alexandria/CANON_INSTITUTIONAL_KNOWLEDGE.md",
@@ -321,6 +326,22 @@
       "sha256": "5a0c391489fc4beb23c628e39997e7125a72c25caa3bf21a7e6a8c52878ff181",
       "source_sha256": "60df1aaa4dc4011f052afda260b71d7106716a87f4784819b404b80f2d0085d3",
       "brand": "corporate"
+    },
+    {
+      "source": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-06_CLOSEOUT.md",
+      "publication": "docs/governance/publications/SH-CANON-CLOSEOUT-20260906-001_v1.0.0.pdf",
+      "sha256": "71410682527d972ad07b343886b157e1a03323e2447662deb5a865a586ddbdbb",
+      "source_sha256": "7405bf888afc85634f9dfaa062a51c440e06a2588df0f44ac7ef9953b892530e",
+      "brand": "corporate",
+      "normalizer": "pypdf"
+    },
+    {
+      "source": "docs/governance/REPOSITORY_DELIVERY_AND_PACKAGING_POLICY.md",
+      "publication": "docs/governance/publications/SH-GOV-DELIVERY-001_v1.0.0.pdf",
+      "sha256": "aff7a679e15f8daf65126260a4839fe685edfca2d614ef2e364224e87f8f9d05",
+      "source_sha256": "925c058e6826264ec612c841835e07ac8b77fe4440c429f183ccd7f89e5f85d2",
+      "brand": "corporate",
+      "normalizer": "pypdf"
     }
   ]
 }

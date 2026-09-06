@@ -1,7 +1,7 @@
 # Canon collision register
 
 This register resolves inherited statements against current v0.3 canon and the September 3 and
-September 5 addenda without erasing the August 31 v0.2 knowledge snapshot. Machine-readable detail is in
+September 5 addenda, with the September 6 COL-013 resolution below, without erasing the August 31 v0.2 knowledge snapshot. Machine-readable detail is in
 `canon_collision_register.json`.
 
 | ID | Topic | Older statement | Newer controlling statement | State | Financial/database effect |
@@ -18,7 +18,30 @@ September 5 addenda without erasing the August 31 v0.2 knowledge snapshot. Machi
 | COL-010 | Quantitative envelope | 426 FTE and $124.5M represented total company | Prior draft is noncontrolling (`CHG-016`, `ID-007`) | OPEN | Retained only as CoreCo calibration in Scenario B; v0.1 applies scenario drivers only to SHI/RWH/ARU, while Cradle/Research/Advisory/Capital remain recorded-only without causal attribution |
 | COL-011 | Federal subsidiary | Federal Systems LLC proposed as current entity | Federal boundary and subsidiary remain open (`PS-017`) | OPEN | Excluded from baseline entity chain; optional scenario only |
 | COL-012 | 2026 board | Seven-seat working board and three committees | Nine-member unitary board and five standing committees (`GOV-001`–`003`) | LOCKED supersession | Finance governance, approvals, committee reporting, and workbook descriptions use the controlled board structure |
-| COL-013 | Daniel surname | Some earlier canon text says “Daniel Mercer” | Current controlled board governance says Daniel's surname is not supplied; v0.3 also preserves conflicting wording | CONFLICT | New finance prose uses “Daniel” only; preserve both sources and defer any surname correction to the independent canon process |
+| COL-013 | Daniel surname | Earlier canon text says “Daniel Mercer”; board governance v1.0.0 later said his surname was not supplied, and v0.3 preserved both statements | September 6 CLOSE-001 explicitly confirms Daniel Mercer as founder and CEO; no family relationship with Evan Mercer is established | RESOLVED — owner-approved September 6, 2026 | Current prose may use Daniel Mercer; preserve stable identities, prior collision history, finance source locks, and released snapshot bytes |
+
+## COL-013 dated resolution
+
+**Decision:** CLOSE-001, [September 6 canon closeout addendum](../canon/DECISION_REGISTER_ADDENDUM_2026-09-06_CLOSEOUT.md#close-001---daniel-mercer).
+
+**Authority:** Repository owner's explicit approval.
+
+**Resolution date:** September 6, 2026.
+
+**Current state:** RESOLVED; Daniel Mercer is the accepted founder/CEO name.
+
+The prior collision is retained: earlier founding canon and BR-002 used “Daniel Mercer”; board
+governance v1.0.0 said the surname was not supplied; the v0.3 current-governance section left it
+unstated despite the earlier narrative. While that conflict was open, new finance prose used
+“Daniel” only and deferred a surname correction to the independent canon process. That interim
+rule is now superseded by CLOSE-001. Daniel Mercer (`DIR-DANIEL`) and Evan Mercer (`DIR-MERCER`)
+remain distinct directors; the decision supplies no family relationship.
+
+The structured register's `controlling_commit` remains its September 5 baseline. Its explicit
+September 6 resolution addendum records this later change without inventing a future commit
+hash. No existing finance source lock, released package, historical board minute, or original
+chat ledger is rewritten by this reconciliation; a future financial release must carry its own
+source lineage.
 
 ## Controlling source locations
 
@@ -30,6 +53,7 @@ September 5 addenda without erasing the August 31 v0.2 knowledge snapshot. Machi
   `GOV-001`–`GOV-003`, and `ENT-001`–`ENT-002`, as closed or extended by
   `DECISION_REGISTER_ADDENDUM_2026-09-03.md` and
   `DECISION_REGISTER_ADDENDUM_2026-09-05_RED_WASH.md`.
+- COL-013 resolution only: `DECISION_REGISTER_ADDENDUM_2026-09-06_CLOSEOUT.md`, CLOSE-001.
 
 All generated 2023–2026 quantities remain synthetic scenario/calibration data. This register does
 not promote them into canon or observed company history.

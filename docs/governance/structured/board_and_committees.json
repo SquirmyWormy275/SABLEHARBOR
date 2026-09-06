@@ -1,12 +1,14 @@
 {
   "document_id": "SH-GOV-BOARD-001",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "effective_date": "2026-09-02",
+  "revised_date": "2026-09-06",
   "state": "LOCKED",
-  "canonical_source": "docs/governance/BOARD_AND_CAPITAL_GOVERNANCE.md",
+  "canonical_source": "docs/governance/BOARD_AND_CAPITAL_GOVERNANCE_v1.0.1.md",
+  "revision": {"decision":"CLOSE-001","source":"docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-06_CLOSEOUT.md","authority":"repository owner's explicit approval","scope":"founder name reconciliation; original effective date, board approval history, director IDs, and appointments retained","family_relationship_to_evan_mercer":"not established by this decision"},
   "directors": [
     {"id":"DIR-KINCAID","name":"Margaret \"Maggie\" Kincaid","capacity":"independent-chair","joined":2023},
-    {"id":"DIR-DANIEL","name":"Daniel","capacity":"founder-ceo-director","joined":2016},
+    {"id":"DIR-DANIEL","name":"Daniel Mercer","capacity":"founder-ceo-director","joined":2016},
     {"id":"DIR-RAMAN","name":"Priya Raman","capacity":"founder-director","joined":2016},
     {"id":"DIR-BELL","name":"Jon Bell","capacity":"founder-non-management-director","joined":2016},
     {"id":"DIR-CALDER","name":"Thomas \"Tom\" Calder","capacity":"independent-director","joined":2022},

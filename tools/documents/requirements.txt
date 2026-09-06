@@ -1,0 +1,3 @@
+# Optional compatibility normalizer when qpdf is unavailable.
+# Install separately from the finance application environment.
+pypdf==6.10.0

@@ -4,15 +4,45 @@ This repository is the Sable Harbor canonical synthetic enterprise archive. Main
 
 ## Authority order
 
-Use this order when resolving conflicts:
+Use this order when resolving conflicts among accepted repository records:
 
-1. Current controlling canon under `docs/canon/`.
+1. Current controlling canon under `docs/canon/`, including accepted dated decisions and their explicit supersession scope.
 2. In-universe board records where they ratify governance, financing, J2, Alexandria, or publication authority.
-3. Chat-derived canon ledgers and forensic audit records where they preserve originating design decisions.
+3. Repository-stored chat-derived canon ledgers and forensic audit records where they preserve originating design decisions, except where a later accepted controlling decision supersedes them.
 4. Canonical Markdown source documents under `docs/`, including governance, organization, controls, J2, and Alexandria doctrine.
 5. Structured records, generated PDFs, catalogs, SQLite indexes, rendered images, and distributable packages.
 
 Generated artifacts never create canon by repetition, polish, checksum, or catalog inclusion. If a generated artifact conflicts with a canonical source, correct the source or generator first, then regenerate.
+
+Conversation approval authorizes a change; it must be preserved in a repository decision record,
+reconciled, and accepted into controlling canon before the change is treated as canonical.
+An external conversation is provenance, not a competing live source of truth. A branch or PR
+remains pending until accepted. A commit alone does not create approval. See
+[Canon authority and publication boundaries](docs/internal/CANON_AUTHORITY_AND_PUBLICATION_BOUNDARIES.md).
+
+Preserve source files explicitly pinned by an immutable finance release. Record later canon
+through a dated superseding addendum and, where needed, a separately versioned successor
+source. The September 6 closeout retains the pinned v0.3 lore, base decision register, and
+board v1.0.0 source; [board v1.0.1](docs/governance/BOARD_AND_CAPITAL_GOVERNANCE_v1.0.1.md)
+and CLOSE-001 govern the current founder/CEO name. Do not weaken source-lock validation to
+make a later canon update appear to belong to an older finance snapshot.
+
+## Delivery and packaging
+
+Follow the [Repository Delivery and Packaging Policy](docs/governance/REPOSITORY_DELIVERY_AND_PACKAGING_POLICY.md),
+approved under CLOSE-004. Nothing is delivered or closed solely because it exists in chat,
+an attachment, scratch storage, or a completion statement. Record the accepted commit/PR,
+controlling paths, artifact locations, validation evidence, and remaining limits.
+
+Keep canonical source, code, approved visual sources, and controlled corporate publications
+in Git. Publish new complete distributable package versions in indexed GitHub Releases with
+manifests and checksums. Preserve the policy's explicitly inventoried historical ZIP exceptions
+and all existing disposition flags; do not rewrite prior bytes or imply a migration occurred.
+Exclude temporary build outputs unless deliberately retained as evidence. Keep documentation
+thorough and indexed, with one controlling source per decision and synchronized derivatives.
+
+Issue #37 remains OPEN: the generated institutional catalog and SQLite index retain their
+current placement and regeneration rules pending their specific lifecycle decision.
 
 ## Canon states
 
