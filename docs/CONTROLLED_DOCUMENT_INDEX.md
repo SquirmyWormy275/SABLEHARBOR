@@ -129,3 +129,13 @@ The transaction and interface PDFs are generated representations. The canonical 
 - `governance/2026_BOARD_COMPOSITION_AND_FINANCING_MODEL.md` — SUPERSEDED intermediate design record
 - `governance/2026_ENTITY_AND_BOARD_GOVERNANCE_DECISIONS.md` — current entity-authorization boundary is locked; older board/capital material is controlled by later instruments
 - `governance/2026_CAPITAL_AND_ASSURANCE_MODEL.md` — capital material is historical where superseded; Internal Audit/ESS choice is resolved by `ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md`
+
+## Industrial planning successor
+
+- [Planning authority](canon/INDUSTRIAL_PLANNING_SUCCESSOR_2026-09-06.md)
+- [Planning and case browser guide](../industrial/planning/README.md)
+- [Five-year financial plan](../industrial/planning/docs/FIVE_YEAR_FINANCIAL_PLAN.md)
+- [Operating scenarios](../industrial/planning/docs/OPERATING_SCENARIOS.md)
+- [Capital investment review](../industrial/planning/docs/CAPITAL_INVESTMENT_REVIEW.md)
+- [Transaction evidence](../industrial/planning/docs/TRANSACTION_EVIDENCE.md)
+- [Enterprise integration](../industrial/planning/docs/ENTERPRISE_INTEGRATION.md)

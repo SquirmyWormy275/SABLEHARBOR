@@ -1,0 +1,124 @@
+{
+  "schema_version": "2.0.0",
+  "model_id": "SH-ENTERPRISE-PLANNING-V2",
+  "seed": 20260831,
+  "knowledge_cutoff": "2026-09-06T00:00:00-07:00",
+  "created_on": "2026-09-06",
+  "fact_state": "PROVISIONAL_ASSUMPTION",
+  "period_role": "MANAGEMENT_FORECAST",
+  "legacy_adapter": {
+    "profile": "standard",
+    "scenario": "base",
+    "retain_entity": "SHI",
+    "retain_book": "PRIMARY_USD",
+    "remove_entities": [
+      "RWH",
+      "ARU",
+      "BST"
+    ],
+    "remove_books": [
+      "CONSOLIDATION_USD"
+    ],
+    "calibration_boundary": "Legacy CoreCo remains a synthetic top-down envelope. Its $30M unallocated goodwill is retained as a separately identified nonindustrial model balance, not independently substantiated acquired value."
+  },
+  "legal_entities": [
+    "SHI",
+    "SHIH",
+    "PS",
+    "RWH",
+    "ARU",
+    "BST"
+  ],
+  "owners": {
+    "SHIH": "SHI",
+    "PS": "SHIH",
+    "ARU": "SHIH",
+    "RWH": "PS",
+    "BST": "ARU"
+  },
+  "segment_mapping": {
+    "CORE": "foundry-field",
+    "FOUNDRY_FIELD": "foundry-field",
+    "DELIVERY": "foundry-field",
+    "WILLOW": "willow",
+    "ATLAS": "atlas-meridian",
+    "CRADLE": "project-cradle",
+    "ADVISORY": "advisory",
+    "CORPORATE": "corporate"
+  },
+  "units": [
+    "foundry-field",
+    "willow",
+    "atlas-meridian",
+    "project-cradle",
+    "advisory",
+    "pale-sun",
+    "american-resource-utility",
+    "corporate",
+    "eliminations"
+  ],
+  "forecast_years": [
+    2027,
+    2028,
+    2029,
+    2030,
+    2031
+  ],
+  "core": {
+    "minimum_cash_usd": 2000000,
+    "annual_sustaining_capital_usd": 1200000,
+    "new_capital_life_months": 60,
+    "existing_net_ppe_remaining_life_months": 84,
+    "annual_debt_principal_usd": 1200000,
+    "debt_interest_pct": 6.5,
+    "receivable_collection_months": 1,
+    "operating_payable_months": 1,
+    "member_equity_2026_limit_usd": 90000000,
+    "tax_boundary": "SHI is an LLC with unresolved tax classification. No entity-level income tax is imputed; owner taxes remain outside this explicit model.",
+    "deficit_policy": "Finite member funding; when unavailable, identified Core operating payments are deferred and the scenario is infeasible. The model reports liabilities and shortfalls instead of posting invented financing.",
+    "opening_working_capital": "Collect legacy operating receivables and settle legacy accounts payable and accrued operating liabilities in January2027; any unfunded operating payment remains a reported obligation."
+  },
+  "scenarios": {
+    "base": {
+      "core_revenue_growth_pct": 4,
+      "core_cost_growth_pct": 3,
+      "member_equity_annual_limit_usd": 30000000,
+      "reserved_subsidiary_equity_annual_usd": 18000000
+    },
+    "downside": {
+      "core_revenue_growth_pct": -2,
+      "core_cost_growth_pct": 5,
+      "member_equity_annual_limit_usd": 25000000,
+      "reserved_subsidiary_equity_annual_usd": 16000000
+    },
+    "expansion": {
+      "core_revenue_growth_pct": 8,
+      "core_cost_growth_pct": 4,
+      "member_equity_annual_limit_usd": 40000000,
+      "reserved_subsidiary_equity_annual_usd": 25000000
+    }
+  },
+  "shared_services": {
+    "effective_from": "2027-01-01",
+    "annual_aru_fee_usd": 600000,
+    "annual_ps_fee_usd": 400000,
+    "annual_growth_pct": 3,
+    "settlement": "Accrue identified intercompany receivable/payable; quarterly settle only available legal-entity cash above the accepted $2M group floor. No external cost is added to consolidated Core support costs.",
+    "authority": "Derived planning cost-allocation agreement, not an executed historical invoice.",
+    "tax_treatment": "Book-only management allocation; no assumed income-tax deduction or recipient taxable-income uplift until legal tax characterization is established. Forecast operating-company tax is unchanged by this reporting charge."
+  },
+  "opening_bridge": {
+    "mine_historical_parent_basis": "Recognize the accepted mine contributed capital through PS and SHIH with equal additional pre-2026 member contributed capital at SHI. The legacy engine omitted reciprocal industrial investments; this is a disclosed noncash opening reconstruction, not 2026 cash revenue or a recovered bank transfer.",
+    "aru_2026": "January 7 pushdown capital is the parent's net stock investment after acquisition financing and debt issuance contribution. Transaction expense remains separate. The cash-flow bridge separately presents external acquisition/refinancing flows."
+  },
+  "canonical_sources": [
+    "industrial/source/entities.json",
+    "industrial/source/finance.json",
+    "industrial/source/operations.json",
+    "docs/canon/INDUSTRIAL_CLOSEOUT_2026-09-05.md",
+    "docs/finance/CANON_SOURCE_LOCK.json",
+    "docs/finance/GENERATION_RUN_ARCHITECTURE.md",
+    "config/finance/unit_scopes.json"
+  ],
+  "holding_company_tax": "No assumed tax consolidation election. SHIH acquisition expense and PS management-allocation losses generate no recognized deferred tax benefit; hypothetical tax losses are fully valuation-allowed in this bounded management model."
+}

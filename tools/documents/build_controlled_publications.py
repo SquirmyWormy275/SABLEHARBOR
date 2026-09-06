@@ -90,6 +90,15 @@ if industrial_chronology.is_file():
             INDUSTRIAL_DOCS.append((source, document["document_id"], "pale_sun" if "/pale_sun/" in source or "/01_RW_" in source else "aru"))
 DOCS.extend((source, f"industrial/publications/{document_id}_v1.0.0.pdf", brand) for source, document_id, brand in INDUSTRIAL_DOCS)
 
+DOCS.extend([
+    ("docs/canon/INDUSTRIAL_PLANNING_SUCCESSOR_2026-09-06.md", "industrial/planning/publications/SH-IND-PLAN-DEC-002_v2.0.0.pdf", "corporate"),
+    ("industrial/planning/docs/FIVE_YEAR_FINANCIAL_PLAN.md", "industrial/planning/publications/SH-PLAN-FIN-001_v2.0.0.pdf", "aru"),
+    ("industrial/planning/docs/OPERATING_SCENARIOS.md", "industrial/planning/publications/SH-PLAN-OPS-001_v1.0.0.pdf", "bst"),
+    ("industrial/planning/docs/CAPITAL_INVESTMENT_REVIEW.md", "industrial/planning/publications/SH-PLAN-CAP-001_v1.0.0.pdf", "aru"),
+    ("industrial/planning/docs/TRANSACTION_EVIDENCE.md", "industrial/planning/publications/SH-PLAN-EVIDENCE-002_v2.0.0.pdf", "aru"),
+    ("industrial/planning/docs/ENTERPRISE_INTEGRATION.md", "industrial/planning/publications/SH-PLAN-ENTERPRISE-002_v2.0.0.pdf", "corporate"),
+])
+
 BRANDS = {
     "aru": {
         "logo": "assets/brand/industrial_sources/aru/aru_primary_centered_chat_asset.png",

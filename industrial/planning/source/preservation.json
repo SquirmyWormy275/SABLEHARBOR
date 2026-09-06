@@ -1,0 +1,1004 @@
+{
+  "artifacts": [
+    {
+      "bytes": 874990,
+      "path": "assets/brand/industrial_sources/aru/aru_alternate_chat_asset.png",
+      "sha256": "0bc5f917298db93bf48b3052f65e40a88e978ea8e2f01b7d99042ed1c28fa839"
+    },
+    {
+      "bytes": 1923281,
+      "path": "assets/brand/industrial_sources/aru/aru_brand_board_chat_asset.png",
+      "sha256": "05204f15c6a86c10de70c3dfc17996326063a06c0d382147d90ce12834b85888"
+    },
+    {
+      "bytes": 1071679,
+      "path": "assets/brand/industrial_sources/aru/aru_primary_centered_chat_asset.png",
+      "sha256": "5892792a95e7fbc2a16171fea38b96d2aee5becf0603b68687f0d48e1bd9fc46"
+    },
+    {
+      "bytes": 808700,
+      "path": "assets/brand/industrial_sources/bst/bst_bulk_storage_transport_candidate.png",
+      "sha256": "60c642acb956ae908aafa3abea9ad21705ca0cd95258232926fbca2894eb4e92"
+    },
+    {
+      "bytes": 839885,
+      "path": "assets/brand/industrial_sources/bst/bst_railway_primary_chat_asset.png",
+      "sha256": "9af275b2f65ff5a82bca760609ab166ecd055c7a266d171bbf558b05c7e37a05"
+    },
+    {
+      "bytes": 12750,
+      "path": "assets/brand/industrial_visual_manifest.json",
+      "sha256": "1b2ad6e0317b1ab7a1a562b0ec7fda8057d7b5f1fc5055aa296a7434ff3cdd67"
+    },
+    {
+      "bytes": 837461,
+      "path": "assets/brand/logos/pale_sun__canonical.png",
+      "sha256": "eedcabfca73460e8ff5ad72864c9f669ba2375097b05daa2912f30c9ff35c025"
+    },
+    {
+      "bytes": 738834,
+      "path": "assets/brand/logos/red_wash__canonical.png",
+      "sha256": "7c26b8afd7954045d9dd4b5c691ba820cdce2e3ccb8e41ac6873b103f0c59720"
+    },
+    {
+      "bytes": 74126,
+      "path": "docs/governance/publications/SH-PS-RW-LOG-001_v1.1.0.pdf",
+      "sha256": "80495603c1c53c6703fb70afda6dc75201405738dca8b5e981d5b90d8020eec6"
+    },
+    {
+      "bytes": 2170,
+      "path": "docs/j2/JUDGMENT.md",
+      "sha256": "3e23cf3bf3cb0c124a911c20463bbe18aeea52afcca151a58065c7b128c9bad5"
+    },
+    {
+      "bytes": 4070,
+      "path": "docs/j2/JUDGMENT_OFFICER_PROFESSION.md",
+      "sha256": "4cda92394c6d536d2ba3acf6b83ba062fe0950029ffb74e458be38ab6831d6a2"
+    },
+    {
+      "bytes": 2226,
+      "path": "docs/j2/alexandria/AI_AUTHORITY_AND_HUMAN_AUTHORSHIP.md",
+      "sha256": "b2490e603378757104b7cc783d9fd6f5e651c799b9d974cb2c6549eaeadf6125"
+    },
+    {
+      "bytes": 4601,
+      "path": "docs/j2/alexandria/PINAKES_PORTAL_AND_UX.md",
+      "sha256": "79956ce8754a0076202387ae00ea91b38aeecaddea085e4f6b35d9ece416bf19"
+    },
+    {
+      "bytes": 43384,
+      "path": "docs/j2/publications/SH-J2-ALX-AI-001_v1.0.0.pdf",
+      "sha256": "3a1092326d0f6e0a23042b9e0ecfa24eba95fcd4e2d13bc4c4cbe626fb1c825a"
+    },
+    {
+      "bytes": 58404,
+      "path": "docs/j2/publications/SH-J2-JO-001_v1.0.0.pdf",
+      "sha256": "573237702e4293b5da7877161b2b67540c00fd2b9ae3dbd90b13fe00a0169b64"
+    },
+    {
+      "bytes": 41259,
+      "path": "docs/j2/publications/SH-J2-JUDGMENT-001_v1.0.0.pdf",
+      "sha256": "1c0edd7d9ff24f233106bd2637f0c063516e213d7a77cdee47be1c54f5f80d6d"
+    },
+    {
+      "bytes": 63416,
+      "path": "docs/j2/publications/SH-J2-PINAKES-001_v1.0.0.pdf",
+      "sha256": "1d5727d91e562416fd2b7aae37998f01935628257d1e4ee70faa00f916054466"
+    },
+    {
+      "bytes": 5801,
+      "path": "industrial/CASE_GUIDE.md",
+      "sha256": "6cae6f0322656f86623671fc175c5f03a8abe7504adcb676cf401b2dbbbc7a6c"
+    },
+    {
+      "bytes": 4345,
+      "path": "industrial/IMPLEMENTATION_DECISIONS.md",
+      "sha256": "008499ffc23a9a531569eee56daabc7e9bc3b6aaf67dfada80893e585082eb50"
+    },
+    {
+      "bytes": 8751,
+      "path": "industrial/corporate/LEADERSHIP_AND_AUTHORITY.md",
+      "sha256": "61a32c036e8cdb2fbf7ab0234d26a925ebd423b48869667724c5a254ca14fda1"
+    },
+    {
+      "bytes": 6630,
+      "path": "industrial/corporate/LEGAL_STRUCTURE_AND_FORMATION.md",
+      "sha256": "5a10f112b015d5dfa7ca3b500108718015a41369182092cabc44dfb224119fbc"
+    },
+    {
+      "bytes": 5928,
+      "path": "industrial/finance/ASSUMPTIONS_AND_TEMPORAL_CONTROLS.md",
+      "sha256": "933330f510acc9c05423f08f62d30c981dde8a26c2ae0325161f29d401ab43d8"
+    },
+    {
+      "bytes": 8994,
+      "path": "industrial/finance/DRIVERS_AND_COST_SUPPORT.md",
+      "sha256": "bf0c78a2c8d96ebabd34674d4c75f49a2d0ca19be68bb662073d0566bc85a83a"
+    },
+    {
+      "bytes": 5996,
+      "path": "industrial/finance/RED_WASH_AND_FUNDING.md",
+      "sha256": "5f54d6254e1d4e21ba37e2ed911fd8468d304e729f0272b4f45141b081a5fe94"
+    },
+    {
+      "bytes": 12563,
+      "path": "industrial/finance/TRANSACTION_ACCOUNTING.md",
+      "sha256": "d13f142968958585cfc56a7b06d54b5e95bccef6d434d11bb6bba93933a0aa58"
+    },
+    {
+      "bytes": 412087,
+      "path": "industrial/generated/finance/aru_2025_journal.csv",
+      "sha256": "f0ad2e32daee28a5b614da5bd150d8120d6f978d325234c6124b6760e75faf01"
+    },
+    {
+      "bytes": 3675,
+      "path": "industrial/generated/finance/aru_2025_monthly_statements.csv",
+      "sha256": "64d26f08aacde2b6f08a90ff7618bc347e1f18616a873400fa2186c54fc4a944"
+    },
+    {
+      "bytes": 8206,
+      "path": "industrial/generated/finance/aru_2025_trial_balance.csv",
+      "sha256": "8d8305551fb2e09fa6e890e4e75ae3dbef5e6c9b83ab91cba96a0e3db346d1ff"
+    },
+    {
+      "bytes": 2380,
+      "path": "industrial/generated/finance/aru_2026_debt_leases.csv",
+      "sha256": "833b6b1029cc35de046cb9293850019a3a45dff7bba9324528909c1205a6a3d9"
+    },
+    {
+      "bytes": 2182,
+      "path": "industrial/generated/finance/aru_2026_fixed_assets.csv",
+      "sha256": "ae262ba9b4d65eacc2263740a07f10341518002e5506291f9c1fcd4cbf4c15e0"
+    },
+    {
+      "bytes": 539636,
+      "path": "industrial/generated/finance/aru_2026_journal.csv",
+      "sha256": "ce8a730f3e7e1b7fea3ceb04301f6eae99db84fc0918f55b52c40f46712fc848"
+    },
+    {
+      "bytes": 3631,
+      "path": "industrial/generated/finance/aru_2026_monthly_statements.csv",
+      "sha256": "d9c66ae7cd35a3be0adc09c3fbc22d83e26dd78825a8fb3b61a9a7add93a2928"
+    },
+    {
+      "bytes": 2989,
+      "path": "industrial/generated/finance/aru_2026_tax_rollforward.csv",
+      "sha256": "7e9db6cc6dc333873225f4bb450bfedd441789bfb9df457cf21baad3c4f5edf5"
+    },
+    {
+      "bytes": 8633,
+      "path": "industrial/generated/finance/aru_2026_trial_balance.csv",
+      "sha256": "a887aff898d4f5222d728dcf07fd25ad5f0ed92a7ba2912597b26571aca7eaa9"
+    },
+    {
+      "bytes": 3047,
+      "path": "industrial/generated/finance/aru_acquisition_opening_trial_balance.csv",
+      "sha256": "f31f6331c6ba511e905b131852b707ceef9364e2fabe48e4a7563c15d38c3a5f"
+    },
+    {
+      "bytes": 2239,
+      "path": "industrial/generated/finance/aru_acquisition_tax_allocation.csv",
+      "sha256": "71d79e77cd6fc2db103ce3d89cbdb92be728d2a634bcb414ec86ef002dfe5172"
+    },
+    {
+      "bytes": 77050,
+      "path": "industrial/generated/finance/contract_monthly_2025.csv",
+      "sha256": "41ada362333e01745010b6ba9e6c7818217d8d82e02b1ec364c65314926eb1c0"
+    },
+    {
+      "bytes": 13938,
+      "path": "industrial/generated/finance/contract_register.csv",
+      "sha256": "3f357b85f588f3eded29aa39d332375572fe8246639e80d3af8fbbbb119f1920"
+    },
+    {
+      "bytes": 7560,
+      "path": "industrial/generated/finance/customer_register.csv",
+      "sha256": "93f7bd5e553b15eabfaa37aaf15110c3abf6466e5d9b1ffd73443eabe021096a"
+    },
+    {
+      "bytes": 48188,
+      "path": "industrial/generated/finance/employee_census_payroll.csv",
+      "sha256": "3b53b2001ae3785f341e94a6fe5fe66a1206ecaf40592bfdb46f58f34f342a3b"
+    },
+    {
+      "bytes": 11541,
+      "path": "industrial/generated/finance/external_cost_budget_support.csv",
+      "sha256": "bb17df7ad28db9d22f1292ca8344bb5e6a9207a6c547128295ee8b4366b53d2a"
+    },
+    {
+      "bytes": 30215,
+      "path": "industrial/generated/finance/financial_statements.csv",
+      "sha256": "26f943491d0b0456269de4c1593cc2cbec4c24bb790fe0bcd8d2c51386201c5c"
+    },
+    {
+      "bytes": 15466,
+      "path": "industrial/generated/finance/financial_summary.json",
+      "sha256": "8222addfbabd1d7cbe97f2dec4c884bbc5c4aa402b4fcdfd0b7734f0f8755b87"
+    },
+    {
+      "bytes": 496,
+      "path": "industrial/generated/finance/intercompany_eliminations.csv",
+      "sha256": "53d608ab8bb6ca3ae36bd9becdb21eaf10160026eef56a20111f6b4c3c221f92"
+    },
+    {
+      "bytes": 21378,
+      "path": "industrial/generated/finance/intercompany_invoices_2026.csv",
+      "sha256": "543c9855c8c80b3e6c9cf6b6b40bd904a194bab9d522d17c20523aa7488132e4"
+    },
+    {
+      "bytes": 1161,
+      "path": "industrial/generated/finance/interface_normalized_economics.csv",
+      "sha256": "aedec4a15219200e02c449c0146dbbdab20678c63770f5ab6aa16e429bc1bc5b"
+    },
+    {
+      "bytes": 1492,
+      "path": "industrial/generated/finance/ownership_and_treasury_eliminations.csv",
+      "sha256": "94cfe49087757f8e6a43e1592fc54c9038af90668d9400048321557cd4700ec9"
+    },
+    {
+      "bytes": 4081,
+      "path": "industrial/generated/finance/parent_equity_funding_2026.csv",
+      "sha256": "703451e45cd0578f06627d73a33640c1577dbe6a51cdd77fcd5fee5a701aef6d"
+    },
+    {
+      "bytes": 5615,
+      "path": "industrial/generated/finance/parts_fuel_materials_inventory.csv",
+      "sha256": "492f1e220e3c2281d8fb80224e58badf2eead0bcdd727cee46d9acfaa2f0f2c7"
+    },
+    {
+      "bytes": 4632,
+      "path": "industrial/generated/finance/rail_opex_class_bridge.csv",
+      "sha256": "6c5d33e67f0a685017279bb21db98e69f4276810b1000ad1b3df6b376ec3b9b7"
+    },
+    {
+      "bytes": 2292,
+      "path": "industrial/generated/finance/receivables_aging_and_allowance.csv",
+      "sha256": "294940d4e5f0dee9dcb947310ab024ae4e40b1f63abeca88adfe915d2687dc9e"
+    },
+    {
+      "bytes": 155156,
+      "path": "industrial/generated/finance/red_wash_2026_journal.csv",
+      "sha256": "e3f74e7ea45b496bb0c5b6ed5acfcf7626531a4e7f8876875c47a9cc936cf9fe"
+    },
+    {
+      "bytes": 3574,
+      "path": "industrial/generated/finance/red_wash_2026_monthly_statements.csv",
+      "sha256": "d96a87827bea803737823487e47cdf2cd75969cfa7ef554a0a74ea489102f043"
+    },
+    {
+      "bytes": 3931,
+      "path": "industrial/generated/finance/red_wash_2026_trial_balance.csv",
+      "sha256": "8f512471feecc6d1006d81cde23e9347a3ce697f9bf509d00b663fde4844fef1"
+    },
+    {
+      "bytes": 5025,
+      "path": "industrial/generated/finance/red_wash_closure_cashflow_calibration.csv",
+      "sha256": "cf549aa3da6100c9fc79c1d72fd7824a06e60951495e99ca81ec35957a5cf9d0"
+    },
+    {
+      "bytes": 1089,
+      "path": "industrial/generated/finance/reported_to_normalized_ebitda.csv",
+      "sha256": "db7cccbb75854befe5027fc7a65f5d6c3f32f0dd5d761d4e1d4a78babac19ed9"
+    },
+    {
+      "bytes": 4758,
+      "path": "industrial/generated/finance/scenario_sensitivities.csv",
+      "sha256": "b3438cee53284ee4eca0d7318217e3f24af275908d6c02c7dd4f8c6ad338cf41"
+    },
+    {
+      "bytes": 790,
+      "path": "industrial/generated/finance/seller_cap_table.csv",
+      "sha256": "cf951eb86625d3b3575a2d75c3be8b4538f8d9c68e774b35a6fdba78e1eacfbc"
+    },
+    {
+      "bytes": 36645,
+      "path": "industrial/generated/finance/separate_legal_entity_trial_balances.csv",
+      "sha256": "8e2b04ad22b93648220c24d9c17c1508655f262f85d41f836436f8623934332d"
+    },
+    {
+      "bytes": 24709,
+      "path": "industrial/generated/operations/geography/facilities.geojson",
+      "sha256": "8c71199d697422242213fdd41f9d3ce95ac9af167160f0d9473213f7ee340d20"
+    },
+    {
+      "bytes": 156563,
+      "path": "industrial/generated/operations/geography/network.geojson",
+      "sha256": "f87dc4feb330bab0b2e7db44500830bfb6de53a40e92baec4737830ef029dbf3"
+    },
+    {
+      "bytes": 1568,
+      "path": "industrial/generated/operations/geography/nodes_and_mileposts.csv",
+      "sha256": "437e6beba4cd7c5d5b1b162272289147a6b08fa637287fee451b3b28bc47c201"
+    },
+    {
+      "bytes": 27570,
+      "path": "industrial/generated/operations/geography/structure_points.geojson",
+      "sha256": "e14f93237a75123d1fe688c675755a14289b0dca9911c826bcde1d9c7f97d840"
+    },
+    {
+      "bytes": 190057,
+      "path": "industrial/generated/operations/geography/track_segments.geojson",
+      "sha256": "60aba8c905adf61ccbc3e9017e5ae8f737ba941def752b1d33b7be39361a8c6c"
+    },
+    {
+      "bytes": 3999,
+      "path": "industrial/generated/operations/interface_economics.json",
+      "sha256": "dc285a0a02673edf20e4fc5d8877e24681fb1c1978237d2ee582d7004dd1583a"
+    },
+    {
+      "bytes": 4840,
+      "path": "industrial/generated/operations/physical_finance_bridge.json",
+      "sha256": "7c528ab3d0ebe9ba7c42303a10c25f08899500555283d909ce7c70809a52e568"
+    },
+    {
+      "bytes": 6635,
+      "path": "industrial/generated/operations/registers/catchup_capital.csv",
+      "sha256": "b843d2845258714b406de9ed91dcfb87ccb46738dc18f7226c2c8a7beb14612a"
+    },
+    {
+      "bytes": 8661,
+      "path": "industrial/generated/operations/registers/contract_facility_assignments.csv",
+      "sha256": "1d3acc805a55fd60cb144ef9329120e1637094060cdc44aa2581b87e99fc7252"
+    },
+    {
+      "bytes": 1445,
+      "path": "industrial/generated/operations/registers/employee_allocations.csv",
+      "sha256": "15fa5867d13a9210ac6e7f59cd4c49fb78a14b8dcda451a1fb108080e15f5573"
+    },
+    {
+      "bytes": 2909,
+      "path": "industrial/generated/operations/registers/external_references.csv",
+      "sha256": "d1090d207c7d9d1a08918082116ba39b3aa6c1f41238ffce0d0d965e72287b2b"
+    },
+    {
+      "bytes": 9159,
+      "path": "industrial/generated/operations/registers/facilities.csv",
+      "sha256": "d8e11209a30d1290f3465c6ac19afcc3c322ca32c79ceb4f9e386c4431419e31"
+    },
+    {
+      "bytes": 3793,
+      "path": "industrial/generated/operations/registers/handling_equipment.csv",
+      "sha256": "13e407c19fd0c3013ad6e5673c22ed17af84865d383f7c06525a8e9c02db106c"
+    },
+    {
+      "bytes": 3152,
+      "path": "industrial/generated/operations/registers/history.csv",
+      "sha256": "3755a3c25c18528b5cb52ac6bb4343b07c018dc3456f14bb939a806fac8d6e20"
+    },
+    {
+      "bytes": 1976,
+      "path": "industrial/generated/operations/registers/labor_agreements.csv",
+      "sha256": "d283bcd7ccc71eb6c4351ec8f93e18c24080ac7a1d9d7c432300ee553ac47676"
+    },
+    {
+      "bytes": 1747,
+      "path": "industrial/generated/operations/registers/locomotives.csv",
+      "sha256": "ebcdf71a54e9b75735270ccb2d3cf4bb30861080cebfb0558a0c56afc271bdfe"
+    },
+    {
+      "bytes": 5587,
+      "path": "industrial/generated/operations/registers/management.csv",
+      "sha256": "3dbc8a6b13cf63789df239934a32b05440b22b49291da321b65deb15a592a91a"
+    },
+    {
+      "bytes": 3349,
+      "path": "industrial/generated/operations/registers/normalized_interface_rates.csv",
+      "sha256": "7f48cc9ab294f36808a1dadb9e45d6ae3bb80606369c0694e22aafcb4bc80398"
+    },
+    {
+      "bytes": 5637,
+      "path": "industrial/generated/operations/registers/phase1_capital.csv",
+      "sha256": "5d98176c57d08142c18969bbe15d0501f5a261165f01992e0775d6a14ab2b385"
+    },
+    {
+      "bytes": 5863,
+      "path": "industrial/generated/operations/registers/railcars.csv",
+      "sha256": "e3cd775acb149cbc77326385d347dd4101dd152355ca47bec66f237dd2073b61"
+    },
+    {
+      "bytes": 16345,
+      "path": "industrial/generated/operations/registers/road_equipment.csv",
+      "sha256": "2f30e2e7a9b303760271479976f51378a3b1b9d1e08a142fcdf554f438349700"
+    },
+    {
+      "bytes": 7982,
+      "path": "industrial/generated/operations/registers/safety_events.csv",
+      "sha256": "4ed461d3f098bf99d45a95c46305dcb77b081d6952b639fce7580152385e6466"
+    },
+    {
+      "bytes": 11721,
+      "path": "industrial/generated/operations/registers/structures.csv",
+      "sha256": "91e235277b264c2a51483e0e373c6aef7ce7bb6fa2cd7a8da2a61c5daf9c6d1d"
+    },
+    {
+      "bytes": 15926,
+      "path": "industrial/generated/operations/registers/track_segments.csv",
+      "sha256": "07767987ae6e3057ea9046a35fc459f510b55e29b68401f8f4cad968c669df16"
+    },
+    {
+      "bytes": 2493,
+      "path": "industrial/generated/operations/service_calendar_cases.json",
+      "sha256": "fd62f2ce634007ae2574fd4227f3b34f794519e22b3ea2946461c3d471a2d1f1"
+    },
+    {
+      "bytes": 5735,
+      "path": "industrial/operations/GEOGRAPHY_AND_ENGINEERING.md",
+      "sha256": "c34380a2fa4484653b7414c639093ddd1f327b1d3ef9fb624aacec65d0c54d0f"
+    },
+    {
+      "bytes": 6085,
+      "path": "industrial/operations/LABOR_SAFETY_AND_CONTROLS.md",
+      "sha256": "586d3aa95bbb894c3891ceded1ddb78b6d73fb0df54e4d20b58ab523c9d622d6"
+    },
+    {
+      "bytes": 8974,
+      "path": "industrial/operations/OPERATING_AND_SERVICE_PLAN.md",
+      "sha256": "8f1f9db0ad7958f9f967ef77fae5bc01bdaee5a5822258f4a284a8f2c218175e"
+    },
+    {
+      "bytes": 6200,
+      "path": "industrial/operations/RATE_AND_CAPITAL_MEMORANDUM.md",
+      "sha256": "e0ac18eeb5794dc6c08871d73123b9dff7f319bbde8df70d76f49be2a70cfc64"
+    },
+    {
+      "bytes": 5467,
+      "path": "industrial/pale_sun/01_VILANDER_BIOGRAPHY.md",
+      "sha256": "8e4ceb274a64bd06d89ad0cc3586239c63e564040f2f07b72334c6165dbe2816"
+    },
+    {
+      "bytes": 4874,
+      "path": "industrial/pale_sun/02_BTC_RECRUITMENT_AND_ASSESSMENT.md",
+      "sha256": "48ad0f9635508526d051356e2e29ec2d8781a499cba495210cdc38b6ccff55de"
+    },
+    {
+      "bytes": 5109,
+      "path": "industrial/pale_sun/03_URANIUM_PROBLEM_BOOK.md",
+      "sha256": "4fafd76ac9a680f3c40ed8c5332eae4613678b923e8739dfbb5fb71a8749fd3b"
+    },
+    {
+      "bytes": 5943,
+      "path": "industrial/pale_sun/04_ALEXANDRIA_AND_ESCALATION_RECORD.md",
+      "sha256": "f7e1d920f556e78058d3e1133e3be5df1bf2176e11bd90e05485ce0eff2a2b8e"
+    },
+    {
+      "bytes": 4768,
+      "path": "industrial/pale_sun/05_FALSE_START_CEDAR_JUNCTION.md",
+      "sha256": "2f922e81b39b52b29a3bba4ec5d24489688715cee9ac38094901132bd0481fcc"
+    },
+    {
+      "bytes": 4503,
+      "path": "industrial/pale_sun/06_FALSE_START_JUNIPER_MESA.md",
+      "sha256": "7391bd1f09afa3c6e1b54f5e18739271e77236cbd4e728fda59cbdff736bb0a9"
+    },
+    {
+      "bytes": 4685,
+      "path": "industrial/pale_sun/07_FALSE_START_SALT_RIM.md",
+      "sha256": "2640adebc7826e638578611adfbd49a6f2d786b6af185ec051db2bfac6ba0f3e"
+    },
+    {
+      "bytes": 4922,
+      "path": "industrial/pale_sun/08_FOUNDING_AND_APPOINTMENT.md",
+      "sha256": "a7b11742351fc8acc351343ed2440a9927ec9d9654ee92ba01710233856b0b4c"
+    },
+    {
+      "bytes": 4416,
+      "path": "industrial/pale_sun/09_RED_WASH_JUDGMENT_AAR.md",
+      "sha256": "0755b620e7b9f6f808f55c5ffa7f01c9514d545821ca46794942cea3fc6eb057"
+    },
+    {
+      "bytes": 6283,
+      "path": "industrial/pale_sun/10_FEDERAL_AND_DOWNSTREAM_BRIEF.md",
+      "sha256": "a2639d8f05ff4320e8b4d2d24aa59ff26969081dc23368a82e5bfb419770c239"
+    },
+    {
+      "bytes": 55231,
+      "path": "industrial/publications/SH-IND-ARU-CLOSE-001_v1.0.0.pdf",
+      "sha256": "2db8049ce4ee571d4a681505321b73af49739adb2cbd86d1fae78e92082d7883"
+    },
+    {
+      "bytes": 58525,
+      "path": "industrial/publications/SH-IND-ARU-DD-001_v1.0.0.pdf",
+      "sha256": "e7db91ce67e920998f6768d1c43a9d5f53239e4a29c90359d82180a2dfe20a74"
+    },
+    {
+      "bytes": 55918,
+      "path": "industrial/publications/SH-IND-ARU-HR-001_v1.0.0.pdf",
+      "sha256": "99d6a2a430b81cec7a3c47c495cf64d1284a335d89bc978dc07b7d4eb47e93d8"
+    },
+    {
+      "bytes": 52099,
+      "path": "industrial/publications/SH-IND-ARU-LOI-001_v1.0.0.pdf",
+      "sha256": "6d8c425bd59eb480d35fbb5fe1b77d0ec91c267eb85c5c0bdc4a9c8fcda1f79f"
+    },
+    {
+      "bytes": 55819,
+      "path": "industrial/publications/SH-IND-ARU-SPA-001_v1.0.0.pdf",
+      "sha256": "dc94b847ed9a2c6d77961c465fa0cf32816d00ac1760b0c7281beed466d25e82"
+    },
+    {
+      "bytes": 72930,
+      "path": "industrial/publications/SH-IND-ARU-TAX-001_v1.0.0.pdf",
+      "sha256": "c612faabb6e9d401d2298268b5d57d5fffe3881171aa8355f268926a0e0aeee4"
+    },
+    {
+      "bytes": 53365,
+      "path": "industrial/publications/SH-IND-CASE-001_v1.0.0.pdf",
+      "sha256": "43d03689f1a30097db9971669a748ef2ad17a27b942ad1fc8e2402c1b1464d44"
+    },
+    {
+      "bytes": 57118,
+      "path": "industrial/publications/SH-IND-COM-001_v1.0.0.pdf",
+      "sha256": "ec2a4d65fb32676e6cbb25054548e1daf18e8cc73fcf36e1f0cba020784ad98e"
+    },
+    {
+      "bytes": 60394,
+      "path": "industrial/publications/SH-IND-COR-001_v1.0.0.pdf",
+      "sha256": "c5b964e667db3c9dd9a8e85f2d226ea6b3d0114c80e4675a830bb569ec18bee9"
+    },
+    {
+      "bytes": 44542,
+      "path": "industrial/publications/SH-IND-DEC-001_v1.0.0.pdf",
+      "sha256": "78d7f86536786e63be6913e15cd08d546c2bb98fe6bf282f4c42ea62ab28d23b"
+    },
+    {
+      "bytes": 67984,
+      "path": "industrial/publications/SH-IND-FIN-ASM-001_v1.0.0.pdf",
+      "sha256": "8e0f6dec162aa7fdf77ae8bbae1da79e4dd11e8f5ee7ccf8c852af5f9038f488"
+    },
+    {
+      "bytes": 69046,
+      "path": "industrial/publications/SH-IND-FIN-DRV-001_v1.0.0.pdf",
+      "sha256": "817293e0ff9b100f3ced324d6e0176f6d678278d237a1c78aa9471a8441dfcc5"
+    },
+    {
+      "bytes": 67677,
+      "path": "industrial/publications/SH-IND-FIN-RWF-001_v1.0.0.pdf",
+      "sha256": "b583d8108f5d4966a635ed3c01ed83f8b87a96f586cfc5803b08c533657fe894"
+    },
+    {
+      "bytes": 87188,
+      "path": "industrial/publications/SH-IND-FIN-TXN-001_v1.0.0.pdf",
+      "sha256": "1cd173fa65f2ff6af92ed08736e2bfef9927ff2b601474f6c485577a3fd29716"
+    },
+    {
+      "bytes": 75936,
+      "path": "industrial/publications/SH-IND-GEO-001_v1.0.0.pdf",
+      "sha256": "4a526eaa1ab5f30fc43736b236777eca079313b246c3927685e0d754d69cb0bc"
+    },
+    {
+      "bytes": 63137,
+      "path": "industrial/publications/SH-IND-HR-001_v1.0.0.pdf",
+      "sha256": "d7bba71ef45e110323a3533860ef5c0260025b84c56e102e23eebbb43df76cf8"
+    },
+    {
+      "bytes": 80660,
+      "path": "industrial/publications/SH-IND-IC-001_v1.0.0.pdf",
+      "sha256": "6edd5e8f041b09b9447f51dee8f0dcc1179b1a58083396230642e31f383134f1"
+    },
+    {
+      "bytes": 66206,
+      "path": "industrial/publications/SH-IND-IC-PRC-001_v1.0.0.pdf",
+      "sha256": "7d15313e75f6c0c8fab9410beb4917daf908671997e7dcf995fcff7f663c5277"
+    },
+    {
+      "bytes": 66815,
+      "path": "industrial/publications/SH-IND-OPS-002_v1.0.0.pdf",
+      "sha256": "78dff55152a4dd0b816a8481cea24b5cdd97113a257e5d5099600539f9b8369b"
+    },
+    {
+      "bytes": 56429,
+      "path": "industrial/publications/SH-IND-RW-TXN-001_v1.0.0.pdf",
+      "sha256": "594220926f587a23fc11f42d64c1ea37b58281fa7bc8bae84dd66a876a748d6b"
+    },
+    {
+      "bytes": 66931,
+      "path": "industrial/publications/SH-IND-SAF-001_v1.0.0.pdf",
+      "sha256": "f5b1a06b569a5b8900d1fe233d568f2ce7f04b97fb2a6119e06a531345092861"
+    },
+    {
+      "bytes": 56726,
+      "path": "industrial/publications/SH-PS-AAR-001_v1.0.0.pdf",
+      "sha256": "11a951f5995c74927a61a72e4d0aa4a72df593c02a92ab34f0f1784ef59e26bc"
+    },
+    {
+      "bytes": 62712,
+      "path": "industrial/publications/SH-PS-ALX-001_v1.0.0.pdf",
+      "sha256": "61171edf9e18f17578d60d372103a5e89b318cb442c22faf55ada7db8e9e04c0"
+    },
+    {
+      "bytes": 57716,
+      "path": "industrial/publications/SH-PS-COR-001_v1.0.0.pdf",
+      "sha256": "06dd1c71184faa73c5b4ca84327bf3c9b760effc4a917f499e6a48bc95a486c1"
+    },
+    {
+      "bytes": 59708,
+      "path": "industrial/publications/SH-PS-EV-001_v1.0.0.pdf",
+      "sha256": "7e22a43bf28ba8312ef42d1cec144a9f6b669c3fc4b1267a03e3f6a20055bed4"
+    },
+    {
+      "bytes": 57969,
+      "path": "industrial/publications/SH-PS-EV-002_v1.0.0.pdf",
+      "sha256": "5fe025c18b24fb89936924fd4009c204130e5f640ba2cd21e7dc181f9d0818d2"
+    },
+    {
+      "bytes": 63440,
+      "path": "industrial/publications/SH-PS-FED-001_v1.0.0.pdf",
+      "sha256": "87ad39e20035437bfd9dbb56a87a54df990393656878d6352dcc4ff5bf8f444e"
+    },
+    {
+      "bytes": 59027,
+      "path": "industrial/publications/SH-PS-FS-001_v1.0.0.pdf",
+      "sha256": "c7c6b5922f9ebbe5ee6ee7eb7ceebd4cbbaf4583e3a92eab0bc0567fd75c0d65"
+    },
+    {
+      "bytes": 56954,
+      "path": "industrial/publications/SH-PS-FS-002_v1.0.0.pdf",
+      "sha256": "9432a3d0a51fe1b7209c4633e0fce32d770fff5a6f235bc265648a0c7874e5c2"
+    },
+    {
+      "bytes": 59009,
+      "path": "industrial/publications/SH-PS-FS-003_v1.0.0.pdf",
+      "sha256": "5828268c166a47945ca3aef1a865996fcca9178a1441eebc4d6199e4d69672fa"
+    },
+    {
+      "bytes": 60404,
+      "path": "industrial/publications/SH-PS-JO-001_v1.0.0.pdf",
+      "sha256": "f3c322bf45b0a1a025b55aebbeb439e4750902230a23dbcf9bc8913425b8dfc2"
+    },
+    {
+      "bytes": 39840,
+      "path": "industrial/source/chronology.json",
+      "sha256": "53fe564b06301176a3a8322aedb82fee5a61c82caeae3d333e0a2c520b3eedc5"
+    },
+    {
+      "bytes": 9419,
+      "path": "industrial/source/entities.json",
+      "sha256": "799a24baf3240d50c5d6a80ac0f9ddb9d023b7a36de058ec12546aac60caee29"
+    },
+    {
+      "bytes": 124427,
+      "path": "industrial/source/finance.json",
+      "sha256": "0d4461abfcdb138da36db503ff0cfea7c47ea7fd7109494126514225fd43e38c"
+    },
+    {
+      "bytes": 433498,
+      "path": "industrial/source/geography/candidate_comparison.json",
+      "sha256": "bf57f866ca9289227f23c17cc01733c942cbcdf1d3025999f5bb853a4101e982"
+    },
+    {
+      "bytes": 1567,
+      "path": "industrial/source/geography/dem_manifest.json",
+      "sha256": "3a6da11c438f93bdfc4050b31e3b3d008f752b78e02d10039a3f821fbd095c4b"
+    },
+    {
+      "bytes": 37828,
+      "path": "industrial/source/geography/derived_ground_profiles.json",
+      "sha256": "b1aad8b21f726c4012cb89a7e955dd3d621c0c6d32176fc990d0d1697ca7fbcf"
+    },
+    {
+      "bytes": 156563,
+      "path": "industrial/source/geography/network.geojson",
+      "sha256": "bd6ea938ec59f50c79ee0a23fb5aa2817dcb1bb98fce8a951a073d0152a406f5"
+    },
+    {
+      "bytes": 53137,
+      "path": "industrial/source/geography/reference_manifest.json",
+      "sha256": "f4ad599b41d8f0e3301408990fa3ccc7f626425a1f625db34263388e71f33783"
+    },
+    {
+      "bytes": 130420,
+      "path": "industrial/source/geography/selected_mainline.geojson",
+      "sha256": "31e41659650ea9117fdd2623ed0b9f2fcd024a7f29b9fb44591548f78251afc4"
+    },
+    {
+      "bytes": 1201,
+      "path": "industrial/source/geography/spatial_screen.json",
+      "sha256": "72ae6cd29e1d7ae131b96e9660a6e388fa4d2255907621e428b6df38d75de461"
+    },
+    {
+      "bytes": 25896,
+      "path": "industrial/source/geography/wamsutter_fra_rail.geojson",
+      "sha256": "d24d20bdae879bff9cbbbb2ca968e52697b42913aba7614e9dca7038542c9b42"
+    },
+    {
+      "bytes": 242685,
+      "path": "industrial/source/geography/wamsutter_highways.geojson",
+      "sha256": "81fe705260fefe9d195d4a1c8f362930af6aad7b6bf40064c9017795b838e24f"
+    },
+    {
+      "bytes": 65951,
+      "path": "industrial/source/geography/wyoming_counties.geojson",
+      "sha256": "77b08fefe008358324d49b9ef769257ad1aa5cb3f91f72ff15b8a37313a6e5ab"
+    },
+    {
+      "bytes": 12981,
+      "path": "industrial/source/geography/wyoming_dem_service.json",
+      "sha256": "a300a739a6e47627d1cd6921fca368004d88a8ac62d6d32c64571c669e4349bb"
+    },
+    {
+      "bytes": 3777905,
+      "path": "industrial/source/geography/wyoming_local_roads.geojson",
+      "sha256": "7e3345de206ce8dd2610ad4469175b239ea72f0126dff0c89ada3c5b8b058c75"
+    },
+    {
+      "bytes": 3540536,
+      "path": "industrial/source/geography/wyoming_screening_dem.tif",
+      "sha256": "0ea3719bb01c73e6e4ccaf1c21defa609a945ae7342ce58409479f574ba19b96"
+    },
+    {
+      "bytes": 544275,
+      "path": "industrial/source/geography/wyoming_waterbodies.geojson",
+      "sha256": "82c333660ce69714452e999c9ef871adb5bbcf328776cc81ce2dd003482a046f"
+    },
+    {
+      "bytes": 217088,
+      "path": "industrial/source/operations.json",
+      "sha256": "e7488b55c1c963d102db66e7a7b6f1373a3d68a9f94b8f99b164092245713a3b"
+    },
+    {
+      "bytes": 4431,
+      "path": "industrial/transaction/01_RW_TRANSACTION_FILE.md",
+      "sha256": "902ff083d3857004b5c868b106fddc8e3600e59ad959201fb97c99d68dba298c"
+    },
+    {
+      "bytes": 3933,
+      "path": "industrial/transaction/02_ARU_LOI_AND_SELLER_FILE.md",
+      "sha256": "e012644ca645384234ddf8f47e78d176b1cc11d4cef97449723f23f2803f5615"
+    },
+    {
+      "bytes": 5214,
+      "path": "industrial/transaction/03_ARU_DILIGENCE_MEMORANDUM.md",
+      "sha256": "1591f3a761202385693de6b689377400a4905862910b0213acb326ace0bbc272"
+    },
+    {
+      "bytes": 5142,
+      "path": "industrial/transaction/04_ARU_APPROVAL_AND_PURCHASE_AGREEMENT.md",
+      "sha256": "3b40effe8efb1d4a69216180d508dad90f7fc6a778679b39ee2ed5371d0de9eb"
+    },
+    {
+      "bytes": 4303,
+      "path": "industrial/transaction/05_ARU_CLOSING_AND_TAX_DELIVERY.md",
+      "sha256": "a6dd448ed3a4a3ad6f0f3748e79dd918ea43c75685de762fe00843477a5d22c9"
+    },
+    {
+      "bytes": 4211,
+      "path": "industrial/transaction/06_ARU_TRANSITION_AND_RETENTION.md",
+      "sha256": "3e3653f95a286d71aa513410603dd0c78684db0ad94e2460708c434a6fc4aec0"
+    },
+    {
+      "bytes": 10248,
+      "path": "industrial/transaction/07_ARU_TAX_STRUCTURE_MEMORANDUM.md",
+      "sha256": "d42c4d67873e1b8e9b6488eac9a70a16643680718735ab0c3948327a37b16a44"
+    },
+    {
+      "bytes": 12019,
+      "path": "industrial/transaction/08_INTERCOMPANY_LOGISTICS_AGREEMENT.md",
+      "sha256": "23153dc86a3e9ea9fd501bce6bdf3c8478dbdf3ab79fa5e8abc84ca8bbb771fc"
+    },
+    {
+      "bytes": 5931,
+      "path": "industrial/transaction/09_SERVICE_PRICING_COMPARISON.md",
+      "sha256": "4f185dffc7906ecc6abda8420fc9d026d4fb5bc470d506eb99dbab968560b2c5"
+    },
+    {
+      "bytes": 5147,
+      "path": "industrial/visuals/bst_historical_routes.svg",
+      "sha256": "15d2775a744d9970e615434064c052d0da4f47ff7b143a47c3d3673dc25d5f5a"
+    },
+    {
+      "bytes": 739433,
+      "path": "industrial/visuals/bst_network.svg",
+      "sha256": "4022262902d42db1585419976867ff66a05a5767f563e4833daee8613261c2a9"
+    },
+    {
+      "bytes": 3001,
+      "path": "industrial/visuals/manifest.json",
+      "sha256": "b0636b6a60ee2be206ad14f7f960abbbd6e558f2a61fe276bc50a48da44dbb7c"
+    },
+    {
+      "bytes": 6199,
+      "path": "industrial/visuals/red_wash_site.svg",
+      "sha256": "b76c4c23ef4fe76ee8896235e20f4050c90a33a67690a01466932b71f9065d78"
+    },
+    {
+      "bytes": 6490,
+      "path": "industrial/visuals/red_wash_underground.svg",
+      "sha256": "b0476a694a48d922a02bd518d054abfa9109b5ae7eee891982c0dda59497eb8c"
+    },
+    {
+      "bytes": 26414,
+      "path": "red_wash/RED_WASH_CASEBOOK.md",
+      "sha256": "fb397cfa401f2e20c2e7ae0bbd9da61079ebd3aa6754aba199fb27c52995b520"
+    },
+    {
+      "bytes": 28325,
+      "path": "red_wash/TRANSACTION_OPERATING_RECORD.md",
+      "sha256": "8442bda857eb6ffe0acdcde14597fc5380f31782de7e672e82cd65af0a0f9290"
+    },
+    {
+      "bytes": 10303,
+      "path": "red_wash/agreements/TRANSACTION_AND_COMMERCIAL_INSTRUMENTS.md",
+      "sha256": "5ee3715b0b5b08ba2fd259504ff7455da005d3d2e3701668945aa1ca90477808"
+    },
+    {
+      "bytes": 3516,
+      "path": "red_wash/docs/02_GEOLOGICAL_TECHNICAL_REPORT.md",
+      "sha256": "8d2f0dd5e9ae05f66f1657717b73eeee7401d489b12a163bc562bf9429c65ca2"
+    },
+    {
+      "bytes": 2782,
+      "path": "red_wash/docs/03_MINE_PLAN_AND_OPERATING_SYSTEM.md",
+      "sha256": "a0951a1d22f48aa9fe822f591a9e508419fe22ca18ffdce12a09611f23bf9164"
+    },
+    {
+      "bytes": 2332,
+      "path": "red_wash/docs/04_PROCESSING_METALLURGY_AND_PRODUCT.md",
+      "sha256": "064c7225de72630d0983cbe7d157e6b01626c250915350320eca03181e16c9e1"
+    },
+    {
+      "bytes": 1065,
+      "path": "red_wash/generated/aru_red_wash_fit_gap.csv",
+      "sha256": "4510ed17c401f7aa63a62c01da9b5dfcc402d6db682e89f58d7de638d52366ff"
+    },
+    {
+      "bytes": 1312,
+      "path": "red_wash/generated/aru_red_wash_integration_gates.csv",
+      "sha256": "f512ea17ed137d3fead1188b8c15de3358b51084ee5ead850b2b7a32bb9c8309"
+    },
+    {
+      "bytes": 1251,
+      "path": "red_wash/generated/aru_red_wash_preliminary_capex.csv",
+      "sha256": "fdf24139ceb2cada941a708ce0725e07559e5946984fff7aabd7254c724c4331"
+    },
+    {
+      "bytes": 407583,
+      "path": "red_wash/generated/assays.csv",
+      "sha256": "115f95d960a274426510a831f1320dd5d68aafe88f206221b5b0382deacf314c"
+    },
+    {
+      "bytes": 826,
+      "path": "red_wash/generated/carrier_market_scan.csv",
+      "sha256": "93400263551088cc68b2f99eb8bdad31b17980099e8549cd22f3e8e88729fff4"
+    },
+    {
+      "bytes": 1276,
+      "path": "red_wash/generated/custody_authority_matrix.csv",
+      "sha256": "76754110ba4c51abd3447c680db038edce2567dcda472ab107e59a675b12c951"
+    },
+    {
+      "bytes": 5284,
+      "path": "red_wash/generated/diligence_findings.csv",
+      "sha256": "88b43f5a581ae1787c24ea14dbd6dbc0fb943b273ea1548eef7e78c91eaacc70"
+    },
+    {
+      "bytes": 79242,
+      "path": "red_wash/generated/downhole_surveys.csv",
+      "sha256": "cea4fa1f603d10ecd35d6511cb8dc11a97381e3e3fb66d54a6be91563a924b62"
+    },
+    {
+      "bytes": 42568,
+      "path": "red_wash/generated/drill_collars.csv",
+      "sha256": "e11574d54f155c24854dc787c9d8fb3e12907d412bfa1d7e6d3ee9036e24f861"
+    },
+    {
+      "bytes": 27496,
+      "path": "red_wash/generated/employee_census_2026.csv",
+      "sha256": "2c2a56a1482e26c9cfbdbd4ad031352b2669b97013a161c0dc6bcc7661f01160"
+    },
+    {
+      "bytes": 18720,
+      "path": "red_wash/generated/environmental_monitoring.csv",
+      "sha256": "769e6e3d807c67d9089237a1f21f71103aee6f12c937cebe7fced38dceb52c1b"
+    },
+    {
+      "bytes": 11371,
+      "path": "red_wash/generated/external_source_register.csv",
+      "sha256": "7cdfa139a1d212099c67dcfd7f9762101225575d516f94c8335ba3d266ec4f85"
+    },
+    {
+      "bytes": 3875,
+      "path": "red_wash/generated/financial_statements_2026.csv",
+      "sha256": "6dbb23624d9de335c128282f383d6e91b516382ded0a1ad8ebcc959a1e140bef"
+    },
+    {
+      "bytes": 1433,
+      "path": "red_wash/generated/inventory_rollforward_2026.csv",
+      "sha256": "741bfabb5f9d5b4c8427e6772f4da4aa207f68793d3cc73501a500da038119c9"
+    },
+    {
+      "bytes": 9838,
+      "path": "red_wash/generated/maintenance_backlog.csv",
+      "sha256": "0bdaeabdab1dbcc294ed286d2e9d3195eed2b3332c8fc2a6c7c3f59d9e4f93ec"
+    },
+    {
+      "bytes": 2087,
+      "path": "red_wash/generated/monthly_production_2026.csv",
+      "sha256": "9ff3adc3aa1f27983602136f84511da2aab64844609974364e1f0c2aaf25b23a"
+    },
+    {
+      "bytes": 1104,
+      "path": "red_wash/generated/ownership_history.csv",
+      "sha256": "368607012b9932e6cd5229a879b4fe56c203d1ec2cdc5ada545f9363349cf523"
+    },
+    {
+      "bytes": 2502,
+      "path": "red_wash/generated/permit_register.csv",
+      "sha256": "d167aafe5472ddb293d9632849e4c0d5fbdc8bbdf9400c6148c6e13a57c9760f"
+    },
+    {
+      "bytes": 901,
+      "path": "red_wash/generated/purchase_price_allocation.csv",
+      "sha256": "034b0df69edb2863c84c342508e54256645e373669cae150c9589923bcfe6501"
+    },
+    {
+      "bytes": 815,
+      "path": "red_wash/generated/quality_of_earnings.csv",
+      "sha256": "57ea42554069079fe72a44a4354e3c7329485efae6e1fd574e506e543b8df60b"
+    },
+    {
+      "bytes": 523,
+      "path": "red_wash/generated/rail_access_candidates.csv",
+      "sha256": "ba7a7578036b0284c47a4e1e77b04c72f49a0ddba0d44ef8bc3fcdd5c54da782"
+    },
+    {
+      "bytes": 482,
+      "path": "red_wash/generated/resource_basis.csv",
+      "sha256": "01068501e689b096a147971c4c395097791b086f6dfc0428484e4f73d294f41a"
+    },
+    {
+      "bytes": 474,
+      "path": "red_wash/generated/shipment_schedule_exceptions.csv",
+      "sha256": "56779ded9c7effccd621c8f96bd2a4fd62de227c0cf2ab6735b97018a87e77ce"
+    },
+    {
+      "bytes": 3489,
+      "path": "red_wash/generated/transaction_timeline.csv",
+      "sha256": "43841359bfbd8bbe601271a0dee1cbc24d312e82b801bf34c7482dc8ed3c7737"
+    },
+    {
+      "bytes": 2076,
+      "path": "red_wash/generated/transport_capacity_events.csv",
+      "sha256": "a383200ba1426176e1cde13182952ffbddafcabdc4afe787e059b88995f29cca"
+    },
+    {
+      "bytes": 1065,
+      "path": "red_wash/generated/uranium_contracts.csv",
+      "sha256": "3a6855189f28dbab2fa80c80c980d54ea40a9c37ed13018e16ba827a0b4369cf"
+    },
+    {
+      "bytes": 36200,
+      "path": "red_wash/generated/virtual_data_room_index.csv",
+      "sha256": "3540df02791483c6418ed13aefdcad2f902ec35351e7572ed6b0698321ad3172"
+    },
+    {
+      "bytes": 7970,
+      "path": "red_wash/logistics/ARU_BST_INTERFACE_AND_DEPENDENCY_RECORD.md",
+      "sha256": "b83e4b5d553faf154514647e948e7438b3aee4287817ed6be14048e6440796f4"
+    },
+    {
+      "bytes": 13805,
+      "path": "red_wash/regulatory/REGULATORY_PERMIT_AND_ENVIRONMENTAL_FILE.md",
+      "sha256": "3fd3a77f95a3ae56014b8018d3ca86a7778c2ffb9355b11125b87f1d31da0fb1"
+    },
+    {
+      "bytes": 15829,
+      "path": "red_wash/source/aru_bst_bridge.json",
+      "sha256": "7154036322bf3f7f235c822b443eaf56f94070a4d87a4ecd58ef37e76db2916e"
+    },
+    {
+      "bytes": 24832,
+      "path": "red_wash/source/core_operating_data.json",
+      "sha256": "eb5601f3a519ac175bef07744fa3c23939734f80b5774efeed4800aa73e8aa3f"
+    },
+    {
+      "bytes": 10485,
+      "path": "red_wash/source/external_source_register.csv",
+      "sha256": "989c7fae3110dc6308f56da9f7831a2881be1295e8dfe08de686c51cdc71b7f7"
+    }
+  ],
+  "policy": "Every selected v1 participant member remains exact, including 2026 generated numerical anchors. New planning artifacts are additional dated successors.",
+  "record_id": "SH-PLAN-PRESERVATION-002",
+  "reference_release": "sable-harbor-industrial-case-v1.0.0",
+  "reference_source_revision": "c792dfcdfaa9b48168cadd3bb9c26d113c24af34",
+  "reference_zip_sha256": "b4d546bdad2e0add933c98d2a70d29658da4b8f2969c4b9e7153dd75906fc0be"
+}

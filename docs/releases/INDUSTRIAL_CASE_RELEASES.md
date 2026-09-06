@@ -10,6 +10,10 @@
 
 The completed [industrial successor](../../industrial/README.md) was accepted through [PR #98](https://github.com/SquirmyWormy275/SABLEHARBOR/pull/98). The release is built from clean merged source commit [`c792dfcdfaa9b48168cadd3bb9c26d113c24af34`](https://github.com/SquirmyWormy275/SABLEHARBOR/commit/c792dfcdfaa9b48168cadd3bb9c26d113c24af34). This delivery-index followup is intentionally later than that immutable release source; it does not claim the archive was rebuilt from a later documentation commit. Historical published finance and Red Wash v1.0.0 packages retain their original bytes and source scopes.
 
+## Planning successor v2
+
+The [planning and enterprise successor](../../industrial/planning/README.md) is separately versioned from the preserved v1 snapshot. Its [acceptance record](../internal/validation/INDUSTRIAL_PLANNING_2026-09-06.md) documents the five-year model, capital review, operating disruptions, linked evidence, enterprise consolidation and offline browser. Publication identities are added here only after the merged release assets are retrieved and verified.
+
 ## Source and integration binding
 
 - Reviewed main baseline: `dd505286d7a66d25a2929981150d028935f27fbe`.
