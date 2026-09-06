@@ -1,0 +1,56 @@
+[
+  {
+    "path": "red_wash/source/core_operating_data.json",
+    "prior_sha256": "f826075eddf28ded3301756d078d952e38e1cc39f4e1a0b9aecd9e07eb9e9480",
+    "new_sha256": "06775645e2d7390c5045255ed762e897d859198e4ae54c412e2bdee4a95840aa",
+    "history_path": "geospatial/history/pre-addendum-source/red_wash/source/core_operating_data.json"
+  },
+  {
+    "path": "red_wash/RED_WASH_CASEBOOK.md",
+    "prior_sha256": "6d1901527eddf25c89373e8def91a2ade152ef6047d8749dd513cf8d7325c5d7",
+    "new_sha256": "0d618b80a4cb157056f4573255a5aa288b0bc980902c7be79d6a038b4a9686a2",
+    "history_path": "geospatial/history/pre-addendum-source/red_wash/RED_WASH_CASEBOOK.md"
+  },
+  {
+    "path": "red_wash/docs/02_GEOLOGICAL_TECHNICAL_REPORT.md",
+    "prior_sha256": "9a00c2bd344227c1cf06701cba3ec2477f1384643df59628627f0321909b6b23",
+    "new_sha256": "b2c8b9914004347128487f9860f72ecae74ecc8717d4287e706788e9366e7d8b",
+    "history_path": "geospatial/history/pre-addendum-source/red_wash/docs/02_GEOLOGICAL_TECHNICAL_REPORT.md"
+  },
+  {
+    "path": "red_wash/TRANSACTION_OPERATING_RECORD.md",
+    "prior_sha256": "f1645067f4b06447258342e4de92dae2d587656734de7c86bbddd29f19cb8506",
+    "new_sha256": "ef3aaf6567a1bcc7026ffb5385360ef4e9742360625a40383db48909e4f06878",
+    "history_path": "geospatial/history/pre-addendum-source/red_wash/TRANSACTION_OPERATING_RECORD.md"
+  },
+  {
+    "path": "red_wash/README.md",
+    "prior_sha256": "f8cc00768c5678caaa987a410c6d922879342a594be4842d875835e1d3867c1e",
+    "new_sha256": "0f96150a270e8e293e61b6bc39f8475dd0a7026b7a54d590d7059eabd1469f72",
+    "history_path": "geospatial/history/pre-addendum-source/red_wash/README.md"
+  },
+  {
+    "path": "assets/brand/README.md",
+    "prior_sha256": "c0539f3c4969fc7be33b94df072211d728575a553859e4bfdaa07aad7096ef17",
+    "new_sha256": "ac3ffada93207bf1fcc8883d3137db39ba512e5772fdb6a48984a61dcf7f4f17",
+    "history_path": "geospatial/history/pre-addendum-source/assets/brand/README.md"
+  },
+  {
+    "path": "red_wash/RED_WASH_CASEBOOK.md",
+    "prior_sha256": "0d618b80a4cb157056f4573255a5aa288b0bc980902c7be79d6a038b4a9686a2",
+    "new_sha256": "e0b93f839cab25f7b2955bde3778a7d394b21fa24172650744ceb7e9d9fcadad",
+    "history_path": "geospatial/history/pre-addendum-source/red_wash/RED_WASH_CASEBOOK.md"
+  },
+  {
+    "path": "assets/brand/red_wash_visual_manifest.json",
+    "prior_sha256": "6c14b6aa28e9763046b0819e29cc8e7e850edde8e9e1339179bb2786cfb0d7b1",
+    "new_sha256": "a6f9a6c72d186793d36fa8d18c2c02752d9acd00c23fcf19545b98fd2b112a78",
+    "history_path": "geospatial/history/pre-addendum-source/assets/brand/red_wash_visual_manifest.json"
+  },
+  {
+    "path": "geospatial/data/constraints.json",
+    "prior_sha256": "e972e98190b215fbf2c1aec2dbeda3300c62df2b58c7060615e710ac76b3d189",
+    "new_sha256": "fafc1863321211a3e3015ba3f69018dbab1a836a50a06e535d8ceb79f98d0e77",
+    "history_path": "geospatial/history/pre-addendum-source/geospatial/data/constraints.json"
+  }
+]

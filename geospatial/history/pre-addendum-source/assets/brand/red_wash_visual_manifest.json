@@ -42,10 +42,7 @@
       "width": 1536,
       "height": 1024,
       "source_filename": "a_wide_dark_technical_infographic_map_poster_sho.png",
-      "approval_state": "LOCKED",
-      "geographic_authority": "SUPERSEDED",
-      "current_geographic_use": false,
-      "supersession_note": "geospatial/docs/RED_WASH_LOCATION_SUPERSESSION_NOTE.md"
+      "approval_state": "LOCKED"
     },
     {
       "canonical_path": "assets/brand/maps/red_wash__site_overview.png",
@@ -55,21 +52,7 @@
       "width": 1536,
       "height": 1024,
       "source_filename": "a_high_resolution_photorealistic_infographic_map.png",
-      "approval_state": "LOCKED",
-      "geographic_authority": "SUPERSEDED",
-      "current_geographic_use": false,
-      "supersession_note": "geospatial/docs/RED_WASH_LOCATION_SUPERSESSION_NOTE.md"
+      "approval_state": "LOCKED"
     }
-  ],
-  "geographic_supersession": {
-    "decision_date": "2026-09-05",
-    "source": "geospatial/data/GOVERNING_GEOGRAPHIC_ADDENDUM_2026-09-05.md",
-    "status": "SUPERSEDED_GEOGRAPHIC_ANNOTATIONS",
-    "current_anchor": {
-      "latitude": 42.22,
-      "longitude": -108.18,
-      "county": "Sweetwater County"
-    },
-    "rule": "Original map bytes and approved hashes are preserved; neither map is current geographic authority."
-  }
+  ]
 }

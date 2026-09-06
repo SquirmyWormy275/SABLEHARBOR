@@ -1,0 +1,18 @@
+{
+  "source_commit": "8d20e51a7cf0068729e3296840ccb5ba1ac1d7bd",
+  "world_state_date": "2026-09-05",
+  "package_version": "0.1.0-foundation",
+  "full_program_complete": false,
+  "geometry_policy": "All rectangles are approximate study windows, not locked polygon vertices, official district boundaries, deposits, parcels or ownership claims.",
+  "search_areas": [
+    {"id":"SH-AREA-0001","object_id":"SH-GEO-0036","name":"Sacramento headquarters search envelope","bbox":[-121.515,38.589,-121.476,38.609],"status":"PROPOSED","note":"Railyards / River District direction; eventual 8-15 acre campus remains unsited."},
+    {"id":"SH-AREA-0002","object_id":"SH-GEO-0037","name":"Hazelwood research-site search envelope","bbox":[-79.965,40.401,-79.936,40.428],"status":"CONFLICTING","note":"Original outside-Pittsburgh lease versus Hazelwood timing unresolved; real tenants are not appropriated."},
+    {"id":"SH-AREA-0003","object_id":"SH-GEO-0038","name":"Belle / Kanawha recovery search envelope","bbox":[-81.575,38.212,-81.475,38.265],"status":"PROPOSED","note":"Corridor context only, not OxyChem/Belle plant ownership or selected 20-30 acre site."},
+    {"id":"SH-AREA-0004","object_id":"SH-GEO-0039","name":"Red Wash north-of-Wamsutter search envelope","bbox":[-108.3,41.73,-107.61,42.2],"status":"CONFLICTING","note":"Not a selected mine; county, geology, land tenure and environmental clipping not completed."},
+    {"id":"SH-AREA-0005","object_id":"SH-GEO-0040","name":"Bloodstone settlement / yard study envelope","bbox":[-108.16,41.7,-107.76,42.05],"status":"PROPOSED","note":"Joint endpoint study window only; no town or yard location selected."},
+    {"id":"SH-AREA-0006","object_id":"SH-GEO-0041","name":"Wamsutter interchange study envelope","bbox":[-108.04,41.645,-107.91,41.705],"status":"PROPOSED","note":"Not real track geometry, host ownership or an approved connection."}
+  ],
+  "recovered_location":{"id":"SH-CLAIM-0001","object_id":"SH-GEO-0007","coordinates":[-106.9213,42.3127],"label_county":"Carbon County, Wyoming","status":"CONFLICTING","location_method":"VISUALLY_TRANSCRIBED_COORDINATE_LABEL","datum":"Unverified; WGS84 is a display assumption only","source_paths":["assets/brand/maps/red_wash__site_overview.png","assets/brand/maps/red_wash__underground_plan.png"]},
+  "wamsutter_reference":{"coordinates":[-107.98,41.67],"source":"NOAA PSL historical station location listing","url":"https://www.psl.noaa.gov/data/atmoswrit/distributions/list.stat.html","precision":"CITY_SCALE","note":"Rounded regional reference, not interchange or surveyed town-center geometry."},
+  "rail_readiness":{"segments":0,"pre_acquisition_date":null,"engineering_complete":false,"reason":"RW-021 excludes an existing mine connection; RW-025 leaves route/acquisition state open; Red Wash endpoint conflict awaits user decision."}
+}

@@ -1,0 +1,30 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "SH-GEO-0040",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -108.23,
+          41.98
+        ]
+      },
+      "properties": {
+        "object_id": "SH-GEO-0040",
+        "canonical_name": "Taylor, Wyoming",
+        "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+        "canon_status": "CANON_SITED",
+        "geometry_status": "ENGINEERED_PENDING_FINAL_SITE_GEOMETRY",
+        "location_method": "ENGINEERED_FROM_CONSTRAINTS",
+        "source_document": "geospatial/data/GOVERNING_GEOGRAPHIC_ADDENDUM_2026-09-05.md",
+        "horizontal_accuracy_m": null,
+        "valid_from": null,
+        "valid_to": null,
+        "recorded_at": "2026-09-06T02:38:00Z",
+        "notes": "Name and role locked; engineering is not survey, property title, constructed railway or uranium custody."
+      }
+    }
+  ]
+}

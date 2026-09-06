@@ -1,7 +1,5 @@
 # Sable Harbor Logo System — v0.1.0
 
-> **GEOGRAPHIC SUPERSESSION — 5 September 2026:** Original Red Wash map PNGs are preserved historical artwork, not current geographic authority. Their old county, coordinate, grid, elevation and highway labels are superseded. Use the 0.2.0 geospatial release. Approved source-image bytes remain unchanged.
-
 This directory contains individual, production-oriented logo assets for the Sable Harbor corporate identity, business lines, and approved internal identities in the August 31–September 2, 2026 narrative map.
 
 ## Controlling naming source
