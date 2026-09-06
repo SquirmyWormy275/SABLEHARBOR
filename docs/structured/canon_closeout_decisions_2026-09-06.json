@@ -1,0 +1,73 @@
+{
+  "record_id": "SH-CANON-CLOSEOUT-20260906-001",
+  "version": "1.0.0",
+  "decision_date": "2026-09-06",
+  "canonical_source": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-06_CLOSEOUT.md",
+  "approval_authority": "repository_owner_explicit_conversation_approvals",
+  "base_reviewed": "8d20e51a7cf0068729e3296840ccb5ba1ac1d7bd",
+  "repository_promotion": "PENDING",
+  "publication_reconciliation": "NOT_COMPLETED",
+  "issue_closure": "NOT_PERFORMED",
+  "decisions": [
+    {
+      "id": "CLOSE-001",
+      "subject": "founder_ceo_full_name",
+      "approved_state_on_promotion": "LOCKED",
+      "value": "Daniel Mercer",
+      "collision": "COL-013",
+      "family_relationship_with_evan_mercer_established_by_this_decision": false,
+      "prior_finance_release_rewrite_authorized": false
+    },
+    {
+      "id": "CLOSE-002",
+      "subject": "semaphore_precedence",
+      "issue": 23,
+      "approved_state_on_promotion": "LOCKED_VOCABULARY",
+      "levels": [
+        {"name": "Routine", "meaning": "Normal reading and response cycle."},
+        {"name": "Priority", "meaning": "Expedite; normal-cycle delay could materially impair a decision."},
+        {"name": "Immediate", "meaning": "Interrupt normal work for prompt attention to an active situation."},
+        {"name": "Flash", "meaning": "Exceptional time-critical traffic; delay could cause severe imminent consequences."}
+      ],
+      "semantics": "handling_urgency_only",
+      "foundational_fixed_response_times": null,
+      "confers_truth_confidence_rank_or_command_authority": false,
+      "historical_metadata_backfill": false
+    },
+    {
+      "id": "CLOSE-003",
+      "subject": "alexandria_future_interfaces",
+      "issue": 25,
+      "approved_state_on_promotion": "LOCKED_ARCHITECTURAL_DIRECTION",
+      "ordinary_desktop_fully_usable": true,
+      "planned_integrations": ["augmented_reality", "virtual_reality"],
+      "headsets_required_for_core_use": false,
+      "implemented_capability_claim": false,
+      "device_vendor_and_delivery_date": "OPEN",
+      "existing_access_provenance_and_authority_boundaries": "UNCHANGED"
+    },
+    {
+      "id": "CLOSE-004",
+      "subject": "repository_delivery_and_packaging",
+      "issue": 35,
+      "approved_state_on_promotion": "LOCKED_REPOSITORY_POLICY",
+      "in_repository": ["canonical_sources", "code", "schemas", "configuration", "generators", "approved_source_artwork", "canonical_visual_references", "controlled_publications"],
+      "distributable_zip_location": "GITHUB_RELEASES_WITH_REPOSITORY_INDEX_LINK",
+      "required_package_identity": ["version", "manifest", "checksums"],
+      "chat_attachment_alone_is_delivery": false,
+      "branch_or_pr_alone_is_canonical_acceptance": false,
+      "temporary_outputs": "EXCLUDE_UNLESS_DELIBERATELY_PRESERVED_AS_EVIDENCE",
+      "historical_packages": "PRESERVE_OR_DELIBERATELY_MIGRATE_WITH_IDENTITY_AND_HASHES",
+      "bulk_deletion_authorized": false,
+      "specific_catalog_sqlite_lifecycle_issue": 37,
+      "documentation": "THOROUGH_ORGANIZED_SINGLE_CONTROLLING_SOURCE_WITH_INDEXES_AND_PROVENANCE",
+      "public_private_boundary": "UNCHANGED"
+    }
+  ],
+  "validation_checkpoint": {
+    "source_diff_check": "PASS",
+    "controlled_publication_rebuild": "BLOCKED_MISSING_QPDF_AND_PACKAGE_INSTALL_PERMISSION",
+    "catalog_rebuild": "NOT_RUN",
+    "full_maintainer_acceptance": "NOT_RUN"
+  }
+}
