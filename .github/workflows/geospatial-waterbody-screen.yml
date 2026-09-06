@@ -1,0 +1,44 @@
+name: Geospatial waterbody screen
+on:
+  pull_request:
+    paths: ['.github/workflows/geospatial-waterbody-screen.yml']
+permissions:
+  contents: read
+jobs:
+  acquire:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Acquire bounded NHD waterbody polygons
+        run: |
+          python - <<'PY'
+          import json,pathlib,urllib.request,urllib.parse,hashlib,datetime
+          out=pathlib.Path('/tmp/waterbodies');out.mkdir()
+          base='https://hydro.nationalmap.gov/arcgis/rest/services/nhd/MapServer/12'
+          urls=[]
+          def get(endpoint,p):
+            u=endpoint+'?'+urllib.parse.urlencode(p);urls.append(u)
+            with urllib.request.urlopen(u,timeout=90) as r:d=json.load(r)
+            assert 'error' not in d,str(d.get('error'))
+            return d
+          meta=get(base,{'f':'pjson'})
+          (out/'waterbody_metadata.json').write_text(json.dumps(meta,indent=2)+'\n')
+          ids=get(base+'/query',{'where':'1=1','geometry':'-108.38,41.62,-107.82,42.30','geometryType':'esriGeometryEnvelope','inSR':4326,'spatialRel':'esriSpatialRelIntersects','returnIdsOnly':'true','f':'json'})
+          ids=sorted(ids.get('objectIds') or []); assert len(ids)<15000
+          features=[]
+          for i in range(0,len(ids),250):
+            batch=ids[i:i+250]
+            d=get(base+'/query',{'objectIds':','.join(map(str,batch)),'outFields':'*','outSR':4326,'returnGeometry':'true','geometryPrecision':6,'maxAllowableOffset':0.00002,'f':'geojson'})
+            assert not d.get('exceededTransferLimit') and len(d['features'])==len(batch)
+            features.extend(d['features'])
+          data=(json.dumps({'type':'FeatureCollection','features':features},separators=(',',':'))+'\n').encode()
+          (out/'waterbodies.geojson').write_bytes(data)
+          record={'publisher':'USGS NHD','license':'U.S. federal public-domain data; not a wetland or regulatory determination','retrieved_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'requests':urls,'count':len(features),'sha256':hashlib.sha256(data).hexdigest(),'bytes':len(data)}
+          (out/'WATERBODY_ACQUISITION.json').write_text(json.dumps(record,indent=2)+'\n')
+          print(json.dumps(record))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sable-harbor-taylor-waterbody-screen
+          path: /tmp/waterbodies
+          retention-days: 14
