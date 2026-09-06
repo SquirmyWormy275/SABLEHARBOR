@@ -20,6 +20,19 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Restore exact source bytes after text transport
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from hashlib import sha256
+          p=Path('geospatial/data/GOVERNING_GEOGRAPHIC_ADDENDUM_2026-09-05.md')
+          b=p.read_bytes()
+          expected='5ec4448308e0e19fdf11dc5307b24380b19e6ab51482e11bd41883aff703f150'
+          if sha256(b).hexdigest()=='d5b1574be9ae6c1205166bdcebc8174e44c7ff1d9143c237e39efdbed8647e66':
+              assert b.endswith(b'\n') and sha256(b[:-1]).hexdigest()==expected
+              p.write_bytes(b[:-1])
+          assert sha256(p.read_bytes()).hexdigest()==expected
+          PY
       - name: Apply source corrections and preserve original revisions
         run: |
           python geospatial/scripts/apply_repository_addendum.py
@@ -52,7 +65,7 @@ jobs:
           test "$remote" = "$EXPECTED_HEAD"
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -- geospatial/history geospatial/data/constraints.json geospatial/geojson geospatial/registers/REPOSITORY_ADDENDUM_CORRECTIONS.json red_wash/source/core_operating_data.json red_wash/RED_WASH_CASEBOOK.md red_wash/docs/02_GEOLOGICAL_TECHNICAL_REPORT.md red_wash/TRANSACTION_OPERATING_RECORD.md red_wash/README.md assets/brand/red_wash_visual_manifest.json assets/brand/README.md assets/brand/maps/README.md
+          git add -- geospatial/history geospatial/data/GOVERNING_GEOGRAPHIC_ADDENDUM_2026-09-05.md geospatial/data/constraints.json geospatial/geojson geospatial/registers/REPOSITORY_ADDENDUM_CORRECTIONS.json red_wash/source/core_operating_data.json red_wash/RED_WASH_CASEBOOK.md red_wash/docs/02_GEOLOGICAL_TECHNICAL_REPORT.md red_wash/TRANSACTION_OPERATING_RECORD.md red_wash/README.md assets/brand/red_wash_visual_manifest.json assets/brand/README.md assets/brand/maps/README.md
           if ! git diff --cached --quiet; then
             git commit -m 'Apply user-approved Red Wash anchor and Taylor rename; preserve superseded source bytes'
             git push origin "HEAD:refs/heads/$branch"
