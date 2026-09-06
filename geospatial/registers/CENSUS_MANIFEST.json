@@ -1,0 +1,19 @@
+{
+  "source_commit": "8d20e51a7cf0068729e3296840ccb5ba1ac1d7bd",
+  "tracked_files": 673,
+  "candidate_occurrences": 65932,
+  "extraction_methods": {
+    "TEXT_SCANNED": 482,
+    "PDF_TEXT_EXTRACTED_VISUAL_REVIEW_SEPARATE": 53,
+    "OFFICE_XML_EXTRACTED": 8,
+    "IMAGE_OCR_NOT_VISUAL_VERIFICATION": 87,
+    "JSON_STRINGS_EXTRACTED": 39,
+    "ARCHIVE_EXTRACTED:IMAGE_OCR_NOT_VISUAL_VERIFICATION;JSON_STRINGS_EXTRACTED;PDF_TEXT_EXTRACTED_VISUAL_REVIEW_SEPARATE;TEXT_SCANNED": 1,
+    "SQLITE_TEXT_EXTRACTED": 2,
+    "ARCHIVE_EXTRACTED:IMAGE_OCR_NOT_VISUAL_VERIFICATION;JSON_STRINGS_EXTRACTED;OFFICE_XML_EXTRACTED;PDF_TEXT_EXTRACTED_VISUAL_REVIEW_SEPARATE;TEXT_SCANNED": 1
+  },
+  "errors": [],
+  "semantic_census_complete": false,
+  "scope": "Entire pinned main tree, including Office XML, PDF text, SQLite text, ZIP contents, raster OCR. OCR is an extraction aid; named map originals receive separate visual review.",
+  "canon_promotion": "None. Adjudicated objects live in GEOGRAPHIC_CENSUS_v0.1.csv."
+}
