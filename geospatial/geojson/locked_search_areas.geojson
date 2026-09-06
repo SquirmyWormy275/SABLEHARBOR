@@ -1,0 +1,371 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "SH-GEO-0001",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -121.483,
+              38.589
+            ],
+            [
+              -121.483,
+              38.602
+            ],
+            [
+              -121.506,
+              38.602
+            ],
+            [
+              -121.506,
+              38.589
+            ],
+            [
+              -121.483,
+              38.589
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "feature_id": "SH-GEO-0001",
+        "object_id": "SH-SITE-0001",
+        "canonical_name": "Sacramento Railyards / River District search envelope",
+        "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+        "real_world_relation": "WITHIN_REAL_DISTRICT",
+        "canon_status": "CANON_CONSTRAINED",
+        "geometry_status": "ANALYST_DEFINED_SEARCH_ENVELOPE",
+        "location_method": "ENGINEERED_FROM_CONSTRAINTS",
+        "precision_class": "CORRIDOR_SCALE",
+        "horizontal_accuracy_m": null,
+        "vertical_accuracy_m": null,
+        "public_precision": "SEARCH_AREA",
+        "source_id": "SRC-40E5C203B8CD",
+        "decision_id": "GEO-D001",
+        "valid_from": null,
+        "valid_to": null,
+        "recorded_at": "2026-09-06T02:29:42+00:00",
+        "superseded_at": null,
+        "world_state_date": "2026-09-05",
+        "source_effective_date": "2026-09-05",
+        "owner_entity": null,
+        "operator_entity": null,
+        "reference_source_ids": [
+          "REF-SACRAMENTO-RAIL"
+        ],
+        "construction_method": "Bounding study window chosen around named handover context; Red Wash clipped to generalized Sweetwater county geometry.",
+        "geometry_area_acres": 714.5160938135627,
+        "notes": "Search boundary only. Not a site footprint, legal parcel, ownership claim, official district boundary, proven resource envelope, or approved facility. Exact vertices are implementation proposals; named geographic direction is separately controlled."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SH-GEO-0002",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -79.945,
+              40.405
+            ],
+            [
+              -79.945,
+              40.428
+            ],
+            [
+              -79.966,
+              40.428
+            ],
+            [
+              -79.966,
+              40.405
+            ],
+            [
+              -79.945,
+              40.405
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "feature_id": "SH-GEO-0002",
+        "object_id": "SH-SITE-0002",
+        "canonical_name": "Hazelwood study envelope \u2014 historical site unresolved",
+        "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+        "real_world_relation": "WITHIN_REAL_DISTRICT",
+        "canon_status": "CONFLICTING",
+        "geometry_status": "ANALYST_DEFINED_SEARCH_ENVELOPE",
+        "location_method": "ENGINEERED_FROM_CONSTRAINTS",
+        "precision_class": "CORRIDOR_SCALE",
+        "horizontal_accuracy_m": null,
+        "vertical_accuracy_m": null,
+        "public_precision": "SEARCH_AREA",
+        "source_id": "SRC-40E5C203B8CD",
+        "decision_id": "GEO-D002",
+        "valid_from": null,
+        "valid_to": null,
+        "recorded_at": "2026-09-06T02:29:42+00:00",
+        "superseded_at": null,
+        "world_state_date": "2026-09-05",
+        "source_effective_date": "2026-09-05",
+        "owner_entity": null,
+        "operator_entity": null,
+        "reference_source_ids": [
+          "REF-HAZELWOOD-RAIL"
+        ],
+        "construction_method": "Bounding study window chosen around named handover context; Red Wash clipped to generalized Sweetwater county geometry.",
+        "geometry_area_acres": 1124.8316561112786,
+        "notes": "Search boundary only. Not a site footprint, legal parcel, ownership claim, official district boundary, proven resource envelope, or approved facility. Exact vertices are implementation proposals; named geographic direction is separately controlled."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SH-GEO-0003",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -81.49,
+              38.217
+            ],
+            [
+              -81.49,
+              38.27
+            ],
+            [
+              -81.582,
+              38.27
+            ],
+            [
+              -81.582,
+              38.217
+            ],
+            [
+              -81.49,
+              38.217
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "feature_id": "SH-GEO-0003",
+        "object_id": "SH-SITE-0005",
+        "canonical_name": "Cradle Belle / Kanawha corridor search envelope",
+        "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+        "real_world_relation": "WITHIN_REAL_DISTRICT",
+        "canon_status": "CANON_CONSTRAINED",
+        "geometry_status": "ANALYST_DEFINED_SEARCH_ENVELOPE",
+        "location_method": "ENGINEERED_FROM_CONSTRAINTS",
+        "precision_class": "CORRIDOR_SCALE",
+        "horizontal_accuracy_m": null,
+        "vertical_accuracy_m": null,
+        "public_precision": "SEARCH_AREA",
+        "source_id": "SRC-40E5C203B8CD",
+        "decision_id": "GEO-D003",
+        "valid_from": null,
+        "valid_to": null,
+        "recorded_at": "2026-09-06T02:29:42+00:00",
+        "superseded_at": null,
+        "world_state_date": "2026-09-05",
+        "source_effective_date": "2026-09-05",
+        "owner_entity": null,
+        "operator_entity": null,
+        "reference_source_ids": [
+          "REF-KANAWHA-RAIL"
+        ],
+        "construction_method": "Bounding study window chosen around named handover context; Red Wash clipped to generalized Sweetwater county geometry.",
+        "geometry_area_acres": 11708.08408306448,
+        "notes": "Search boundary only. Not a site footprint, legal parcel, ownership claim, official district boundary, proven resource envelope, or approved facility. Exact vertices are implementation proposals; named geographic direction is separately controlled."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SH-GEO-0004",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -107.65,
+              41.9
+            ],
+            [
+              -108.3,
+              41.9
+            ],
+            [
+              -108.3,
+              42.263502051152905
+            ],
+            [
+              -107.65,
+              42.26204191301778
+            ],
+            [
+              -107.65,
+              41.9
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "feature_id": "SH-GEO-0004",
+        "object_id": "SH-SITE-0006",
+        "canonical_name": "Red Wash Sweetwater candidate search envelope",
+        "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+        "real_world_relation": "WITHIN_REAL_DISTRICT",
+        "canon_status": "CANON_CONSTRAINED",
+        "geometry_status": "ANALYST_DEFINED_SEARCH_ENVELOPE",
+        "location_method": "ENGINEERED_FROM_CONSTRAINTS",
+        "precision_class": "CORRIDOR_SCALE",
+        "horizontal_accuracy_m": null,
+        "vertical_accuracy_m": null,
+        "public_precision": "SEARCH_AREA",
+        "source_id": "SRC-ADDENDUM-20260905",
+        "decision_id": "GEO-D009",
+        "valid_from": null,
+        "valid_to": null,
+        "recorded_at": "2026-09-06T02:29:42+00:00",
+        "superseded_at": null,
+        "world_state_date": "2026-09-05",
+        "source_effective_date": "2026-09-05",
+        "owner_entity": null,
+        "operator_entity": null,
+        "reference_source_ids": [
+          "REF-WYOMING-COUNTIES"
+        ],
+        "construction_method": "Bounding study window chosen around named handover context; Red Wash clipped to generalized Sweetwater county geometry.",
+        "geometry_area_acres": 535531.5486821984,
+        "notes": "Approved Sweetwater regional lock; analyst window around locked anchor. Not a lease, deposit or site polygon."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SH-GEO-0005",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -108.05,
+              42.08
+            ],
+            [
+              -108.05,
+              42.2
+            ],
+            [
+              -108.28,
+              42.2
+            ],
+            [
+              -108.28,
+              42.08
+            ],
+            [
+              -108.05,
+              42.08
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "feature_id": "SH-GEO-0005",
+        "object_id": "SH-SITE-0007",
+        "canonical_name": "Taylor hub study envelope",
+        "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+        "real_world_relation": "WITHIN_REAL_DISTRICT",
+        "canon_status": "CANON_CONSTRAINED",
+        "geometry_status": "ANALYST_DEFINED_SEARCH_ENVELOPE",
+        "location_method": "ENGINEERED_FROM_CONSTRAINTS",
+        "precision_class": "CORRIDOR_SCALE",
+        "horizontal_accuracy_m": null,
+        "vertical_accuracy_m": null,
+        "public_precision": "SEARCH_AREA",
+        "source_id": "SRC-RAIL-PRELIM-ENGINEERING",
+        "decision_id": "GEO-D014",
+        "valid_from": null,
+        "valid_to": null,
+        "recorded_at": "2026-09-06T02:29:42+00:00",
+        "superseded_at": null,
+        "world_state_date": "2026-09-05",
+        "source_effective_date": "2026-09-05",
+        "owner_entity": null,
+        "operator_entity": null,
+        "reference_source_ids": [
+          "REF-WAMSUTTER-RAIL"
+        ],
+        "construction_method": "Analyst window covering compared Taylor A/B/C alternatives; replaces earlier southern window after approved anchor/name addendum.",
+        "geometry_area_acres": 182368.67050313315,
+        "notes": "Taylor is the fictional northern operating hub between Red Wash and Wamsutter. Window vertices provisional; point C remains a preferred engineering proposal."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SH-GEO-0006",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -107.905,
+              41.65
+            ],
+            [
+              -107.905,
+              41.705
+            ],
+            [
+              -108.095,
+              41.705
+            ],
+            [
+              -108.095,
+              41.65
+            ],
+            [
+              -107.905,
+              41.65
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "feature_id": "SH-GEO-0006",
+        "object_id": "SH-SITE-0008",
+        "canonical_name": "Wamsutter interchange study envelope",
+        "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+        "real_world_relation": "WITHIN_REAL_DISTRICT",
+        "canon_status": "CANON_CONSTRAINED",
+        "geometry_status": "ANALYST_DEFINED_SEARCH_ENVELOPE",
+        "location_method": "ENGINEERED_FROM_CONSTRAINTS",
+        "precision_class": "CORRIDOR_SCALE",
+        "horizontal_accuracy_m": null,
+        "vertical_accuracy_m": null,
+        "public_precision": "SEARCH_AREA",
+        "source_id": "SRC-40E5C203B8CD",
+        "decision_id": "GEO-D006",
+        "valid_from": null,
+        "valid_to": null,
+        "recorded_at": "2026-09-06T02:29:42+00:00",
+        "superseded_at": null,
+        "world_state_date": "2026-09-05",
+        "source_effective_date": "2026-09-05",
+        "owner_entity": null,
+        "operator_entity": null,
+        "reference_source_ids": [
+          "REF-WAMSUTTER-RAIL"
+        ],
+        "construction_method": "Bounding study window chosen around named handover context; Red Wash clipped to generalized Sweetwater county geometry.",
+        "geometry_area_acres": 23881.437565672106,
+        "notes": "Search boundary only. Not a site footprint, legal parcel, ownership claim, official district boundary, proven resource envelope, or approved facility. Exact vertices are implementation proposals; named geographic direction is separately controlled."
+      }
+    }
+  ]
+}

@@ -1,0 +1,170 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "SH-GEO-REF-001",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.5367005,
+          38.2353882
+        ]
+      },
+      "properties": {
+        "feature_id": "SH-GEO-REF-001",
+        "object_id": "SH-REF-0006",
+        "canonical_name": "Belle town",
+        "fictionality": "REAL",
+        "real_world_relation": "REFERENCE_ONLY",
+        "canon_status": "REAL_REFERENCE",
+        "geometry_status": "MUNICIPAL_LABEL_POINT",
+        "location_method": "CENTROID",
+        "precision_class": "CITY_SCALE",
+        "horizontal_accuracy_m": null,
+        "public_precision": "CITY_SCALE",
+        "source_id": "REF-CONTEXT-PLACES",
+        "decision_id": null,
+        "recorded_at": "2026-09-06T02:29:42+00:00",
+        "world_state_date": null,
+        "reference_source_ids": [
+          "REF-CONTEXT-PLACES"
+        ],
+        "construction_method": "Census INTPTLON / INTPTLAT geographic internal point; used for labels, never company facility location.",
+        "notes": "Census internal point is not necessarily a mathematical centroid; no exact site or ownership inference."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SH-GEO-REF-002",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -107.9791419,
+          41.6679766
+        ]
+      },
+      "properties": {
+        "feature_id": "SH-GEO-REF-002",
+        "object_id": "SH-REF-0008",
+        "canonical_name": "Wamsutter town",
+        "fictionality": "REAL",
+        "real_world_relation": "REFERENCE_ONLY",
+        "canon_status": "REAL_REFERENCE",
+        "geometry_status": "MUNICIPAL_LABEL_POINT",
+        "location_method": "CENTROID",
+        "precision_class": "CITY_SCALE",
+        "horizontal_accuracy_m": null,
+        "public_precision": "CITY_SCALE",
+        "source_id": "REF-CONTEXT-PLACES",
+        "decision_id": null,
+        "recorded_at": "2026-09-06T02:29:42+00:00",
+        "world_state_date": null,
+        "reference_source_ids": [
+          "REF-CONTEXT-PLACES"
+        ],
+        "construction_method": "Census INTPTLON / INTPTLAT geographic internal point; used for labels, never company facility location.",
+        "notes": "Census internal point is not necessarily a mathematical centroid; no exact site or ownership inference."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SH-GEO-REF-003",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.632324,
+          38.3486917
+        ]
+      },
+      "properties": {
+        "feature_id": "SH-GEO-REF-003",
+        "object_id": "SH-REF-0005",
+        "canonical_name": "Charleston city",
+        "fictionality": "REAL",
+        "real_world_relation": "REFERENCE_ONLY",
+        "canon_status": "REAL_REFERENCE",
+        "geometry_status": "MUNICIPAL_LABEL_POINT",
+        "location_method": "CENTROID",
+        "precision_class": "CITY_SCALE",
+        "horizontal_accuracy_m": null,
+        "public_precision": "CITY_SCALE",
+        "source_id": "REF-CONTEXT-PLACES",
+        "decision_id": null,
+        "recorded_at": "2026-09-06T02:29:42+00:00",
+        "world_state_date": null,
+        "reference_source_ids": [
+          "REF-CONTEXT-PLACES"
+        ],
+        "construction_method": "Census INTPTLON / INTPTLAT geographic internal point; used for labels, never company facility location.",
+        "notes": "Census internal point is not necessarily a mathematical centroid; no exact site or ownership inference."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SH-GEO-REF-004",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.9754718,
+          40.4398925
+        ]
+      },
+      "properties": {
+        "feature_id": "SH-GEO-REF-004",
+        "object_id": "SH-REF-0003",
+        "canonical_name": "Pittsburgh city",
+        "fictionality": "REAL",
+        "real_world_relation": "REFERENCE_ONLY",
+        "canon_status": "REAL_REFERENCE",
+        "geometry_status": "MUNICIPAL_LABEL_POINT",
+        "location_method": "CENTROID",
+        "precision_class": "CITY_SCALE",
+        "horizontal_accuracy_m": null,
+        "public_precision": "CITY_SCALE",
+        "source_id": "REF-CONTEXT-PLACES",
+        "decision_id": null,
+        "recorded_at": "2026-09-06T02:29:42+00:00",
+        "world_state_date": null,
+        "reference_source_ids": [
+          "REF-CONTEXT-PLACES"
+        ],
+        "construction_method": "Census INTPTLON / INTPTLAT geographic internal point; used for labels, never company facility location.",
+        "notes": "Census internal point is not necessarily a mathematical centroid; no exact site or ownership inference."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SH-GEO-REF-005",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.4681605,
+          38.5676936
+        ]
+      },
+      "properties": {
+        "feature_id": "SH-GEO-REF-005",
+        "object_id": "SH-REF-0001",
+        "canonical_name": "Sacramento city",
+        "fictionality": "REAL",
+        "real_world_relation": "REFERENCE_ONLY",
+        "canon_status": "REAL_REFERENCE",
+        "geometry_status": "MUNICIPAL_LABEL_POINT",
+        "location_method": "CENTROID",
+        "precision_class": "CITY_SCALE",
+        "horizontal_accuracy_m": null,
+        "public_precision": "CITY_SCALE",
+        "source_id": "REF-CONTEXT-PLACES",
+        "decision_id": null,
+        "recorded_at": "2026-09-06T02:29:42+00:00",
+        "world_state_date": null,
+        "reference_source_ids": [
+          "REF-CONTEXT-PLACES"
+        ],
+        "construction_method": "Census INTPTLON / INTPTLAT geographic internal point; used for labels, never company facility location.",
+        "notes": "Census internal point is not necessarily a mathematical centroid; no exact site or ownership inference."
+      }
+    }
+  ]
+}

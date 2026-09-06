@@ -1,0 +1,105 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "BST-NODE-TAY",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -108.225,
+          42.17
+        ]
+      },
+      "properties": {
+        "feature_id": "BST-NODE-TAY",
+        "object_id": "SH-SITE-0007",
+        "canonical_name": "Taylor candidate C operating hub",
+        "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+        "real_world_relation": "UNKNOWN",
+        "canon_status": "PROPOSED",
+        "geometry_status": "PRELIMINARY_ENGINEERING_PROPOSAL",
+        "location_method": "ENGINEERED_FROM_CONSTRAINTS",
+        "precision_class": "PRELIMINARY_DESIGN",
+        "horizontal_accuracy_m": null,
+        "public_precision": "FICTIONAL_CONTROL_OR_PROPOSAL",
+        "source_id": "SRC-RAIL-PRELIM-ENGINEERING",
+        "decision_id": "GEO-D014",
+        "recorded_at": "2026-09-06T02:29:42+00:00",
+        "world_state_date": "2026-09-05",
+        "reference_source_ids": [
+          "SRC-ADDENDUM-20260905",
+          "DEM-USGS-WYOMING",
+          "REF-WYOMING-WATERBODIES",
+          "REF-WAMSUTTER-FRA-RAIL"
+        ],
+        "construction_method": "Declared analyst candidate geometry supported by pinned terrain/water analysis; see GEO-D014.",
+        "notes": "Proposed fictional geometry in real geography. No real land title, access/operating right, construction approval or historical operation inferred.",
+        "valid_from": null,
+        "valid_to": null,
+        "owner_entity": null,
+        "operator_entity": null
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SITE-TAY-PROP-001",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -108.21702886357028,
+              42.16797278293719
+            ],
+            [
+              -108.21725693382585,
+              42.172468871368565
+            ],
+            [
+              -108.23297161592414,
+              42.172026644131336
+            ],
+            [
+              -108.23274243638116,
+              42.167530624974766
+            ],
+            [
+              -108.21702886357028,
+              42.16797278293719
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "feature_id": "SITE-TAY-PROP-001",
+        "object_id": "SH-SITE-0007",
+        "canonical_name": "Taylor community and operating-hub planning envelope",
+        "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+        "real_world_relation": "UNKNOWN",
+        "canon_status": "PROPOSED",
+        "geometry_status": "PRELIMINARY_ENGINEERING_PROPOSAL",
+        "location_method": "ENGINEERED_FROM_CONSTRAINTS",
+        "precision_class": "PRELIMINARY_DESIGN",
+        "horizontal_accuracy_m": null,
+        "public_precision": "FICTIONAL_CONTROL_OR_PROPOSAL",
+        "source_id": "SRC-RAIL-PRELIM-ENGINEERING",
+        "decision_id": "GEO-D014",
+        "recorded_at": "2026-09-06T02:29:42+00:00",
+        "world_state_date": "2026-09-05",
+        "reference_source_ids": [
+          "SRC-ADDENDUM-20260905",
+          "DEM-USGS-WYOMING",
+          "REF-WYOMING-WATERBODIES",
+          "REF-WAMSUTTER-FRA-RAIL"
+        ],
+        "construction_method": "Declared analyst candidate geometry supported by pinned terrain/water analysis; see GEO-D014.",
+        "notes": "Proposed fictional geometry in real geography. No real land title, access/operating right, construction approval or historical operation inferred. Candidate C1300x500m window. No NHD waterbody overlap at source scale.",
+        "valid_from": null,
+        "valid_to": null,
+        "owner_entity": null,
+        "operator_entity": null
+      }
+    }
+  ]
+}
