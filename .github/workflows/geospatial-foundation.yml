@@ -1,0 +1,53 @@
+name: Geospatial foundation checks
+on:
+  pull_request:
+    paths:
+      - 'geospatial/**'
+      - '.github/workflows/geospatial-foundation.yml'
+permissions:
+  contents: read
+jobs:
+  foundation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build and validate study windows and relational schema
+        run: |
+          python geospatial/scripts/build_search_areas.py
+          python - <<'PY'
+          import hashlib,json,sqlite3
+          from pathlib import Path
+          root=Path('geospatial')
+          data=json.loads((root/'geojson/locked_search_areas.geojson').read_text())
+          assert len(data['features'])==6
+          assert len({f['id'] for f in data['features']})==6
+          for feature in data['features']:
+              assert feature['properties']['geometry_status'] in {'PROPOSED','CONFLICTING'}
+              assert feature['properties']['horizontal_accuracy_m'] is None
+              ring=feature['geometry']['coordinates'][0]
+              assert ring[0]==ring[-1] and len(ring)==5
+          with sqlite3.connect(':memory:') as db:
+              db.executescript((root/'schema/geospatial_schema.sql').read_text())
+              assert db.execute('PRAGMA integrity_check').fetchone()[0]=='ok'
+          manifest=json.loads(Path('assets/brand/red_wash_visual_manifest.json').read_text())
+          for asset in manifest['assets']:
+              p=Path(asset['canonical_path'])
+              assert hashlib.sha256(p.read_bytes()).hexdigest()==asset['sha256'],p
+          result={'scope':'REPOSITORY_STUDY_WINDOW_AND_SCHEMA_ONLY','passed':True,'study_windows':6,'exact_sites':0,'engineered_rail_segments':0,'approved_image_hashes_verified':4,'full_local_release_integration_complete':False}
+          (root/'reports/REPOSITORY_FOUNDATION_CHECKS.json').write_text(json.dumps(result,indent=2)+'\n')
+          print(json.dumps(result,indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sable-harbor-study-window-export
+          path: |
+            geospatial/geojson/locked_search_areas.geojson
+            geospatial/reports/REPOSITORY_FOUNDATION_CHECKS.json
+          if-no-files-found: error
+          retention-days: 30
