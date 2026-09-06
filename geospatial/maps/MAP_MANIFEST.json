@@ -1,0 +1,381 @@
+[
+  {
+    "map_id": "SH-MAP-ENT-001_locked-geographic-framework",
+    "title": "Locked geographic framework",
+    "version": "0.1.0-rc3",
+    "effective_date": "2026-09-05",
+    "world_state": "CANON_WITH_APPROVED_OPERATING_OVERLAY_2026-09-06",
+    "canon_status": "CONFLICT_REVIEW",
+    "source_package_version": "0.1.0-rc3",
+    "source_commit": "8d20e51a7cf0068729e3296840ccb5ba1ac1d7bd",
+    "source_geopackage_sha256": "af3a821b37e6d11430cde4dde25355e029761c6971e82eed58f95962578248b7",
+    "projection": "EPSG:26910;26917;26913",
+    "build_timestamp": "2026-09-06T02:29:42+00:00",
+    "builder": "geospatial/scripts/render_maps.py",
+    "review_status": "VISUAL_QA_PASS_RENDERED_PDF_CONTACT_SHEET",
+    "layers": [
+      "search_areas",
+      "red_wash_anchor",
+      "federal reference layers"
+    ],
+    "files": {
+      "pdf": {
+        "path": "SH-MAP-ENT-001_locked-geographic-framework.pdf",
+        "sha256": "febc790d40d8d39d732506ff3837dc2114a330c76938ccdc356e6e82b0323541"
+      },
+      "svg": {
+        "path": "SH-MAP-ENT-001_locked-geographic-framework.svg",
+        "sha256": "196b57a38906e1f591ad94812cf74a11dfbab70869901a30c325ea43ce2791c4"
+      },
+      "png": {
+        "path": "SH-MAP-ENT-001_locked-geographic-framework.png",
+        "sha256": "5708a151fb2cf8bd6f2b46bc86e1af34d2dfac04ffb590b724691b946c2a694e"
+      }
+    }
+  },
+  {
+    "map_id": "SH-MAP-ENT-002_corporate-geographic-census",
+    "title": "Corporate geographic census",
+    "version": "0.1.0-rc3",
+    "effective_date": "2026-09-05",
+    "world_state": "CANON_WITH_APPROVED_OPERATING_OVERLAY_2026-09-06",
+    "canon_status": "CONSTRAINED_CENSUS",
+    "source_package_version": "0.1.0-rc3",
+    "source_commit": "8d20e51a7cf0068729e3296840ccb5ba1ac1d7bd",
+    "source_geopackage_sha256": "af3a821b37e6d11430cde4dde25355e029761c6971e82eed58f95962578248b7",
+    "projection": "EPSG:5070",
+    "build_timestamp": "2026-09-06T02:29:42+00:00",
+    "builder": "geospatial/scripts/render_maps.py",
+    "review_status": "VISUAL_QA_PASS_RENDERED_PDF_CONTACT_SHEET",
+    "layers": [
+      "ref_us_states",
+      "reference_place_labels",
+      "search_areas",
+      "object_registry"
+    ],
+    "files": {
+      "pdf": {
+        "path": "SH-MAP-ENT-002_corporate-geographic-census.pdf",
+        "sha256": "7a0555137b82f6c5dd24301ae7a2b87a869cb5e2df9869468ed66c0e3eb3faf5"
+      },
+      "svg": {
+        "path": "SH-MAP-ENT-002_corporate-geographic-census.svg",
+        "sha256": "570e678ad9f32ff5d13894fe7378a9d49157fe4a697981bc458dc502c9b19fc4"
+      },
+      "png": {
+        "path": "SH-MAP-ENT-002_corporate-geographic-census.png",
+        "sha256": "6458968b5c1de7956e5ac2492888c911894ca7d3126e20756d33bf13babe0aa0"
+      }
+    }
+  },
+  {
+    "map_id": "SH-MAP-RWM-001_red-wash-context",
+    "title": "Red Wash current Sweetwater context",
+    "version": "0.1.0-rc3",
+    "effective_date": "2026-09-05",
+    "world_state": "CANON_WITH_APPROVED_OPERATING_OVERLAY_2026-09-06",
+    "canon_status": "CANON_ANCHOR_WITH_PROPOSED_SITE_GEOMETRY",
+    "source_package_version": "0.1.0-rc3",
+    "source_commit": "8d20e51a7cf0068729e3296840ccb5ba1ac1d7bd",
+    "source_geopackage_sha256": "af3a821b37e6d11430cde4dde25355e029761c6971e82eed58f95962578248b7",
+    "projection": "EPSG:26913",
+    "build_timestamp": "2026-09-06T02:29:42+00:00",
+    "builder": "geospatial/scripts/render_maps.py",
+    "review_status": "VISUAL_QA_PASS_RENDERED_PDF_CONTACT_SHEET",
+    "layers": [
+      "search_areas",
+      "red_wash_anchor",
+      "ref_wyoming_counties",
+      "ref_wamsutter_*"
+    ],
+    "files": {
+      "pdf": {
+        "path": "SH-MAP-RWM-001_red-wash-context.pdf",
+        "sha256": "c67d12abbfc2cd9dcdc141a59a1ffc5290330fb66a7f80431449e36dee3b3a01"
+      },
+      "svg": {
+        "path": "SH-MAP-RWM-001_red-wash-context.svg",
+        "sha256": "eff43251948b19a2892e1eeadacd5104fedce87a84c9e3b38280d565e0abc401"
+      },
+      "png": {
+        "path": "SH-MAP-RWM-001_red-wash-context.png",
+        "sha256": "9794da3cda74336b0ab8fbe547961e3b110279109dcb9f763f943a91814721d1"
+      }
+    }
+  },
+  {
+    "map_id": "SH-MAP-SAC-001_headquarters-context",
+    "title": "Sacramento headquarters",
+    "version": "0.1.0-rc3",
+    "effective_date": "2026-09-05",
+    "world_state": "CANON_WITH_APPROVED_OPERATING_OVERLAY_2026-09-06",
+    "canon_status": "PROPOSED_SEARCH_AREA",
+    "source_package_version": "0.1.0-rc3",
+    "source_commit": "8d20e51a7cf0068729e3296840ccb5ba1ac1d7bd",
+    "source_geopackage_sha256": "af3a821b37e6d11430cde4dde25355e029761c6971e82eed58f95962578248b7",
+    "projection": "EPSG:26910",
+    "build_timestamp": "2026-09-06T02:29:42+00:00",
+    "builder": "geospatial/scripts/render_maps.py",
+    "review_status": "VISUAL_QA_PASS_RENDERED_PDF_CONTACT_SHEET",
+    "layers": [
+      "search_areas",
+      "ref_sacramento_*"
+    ],
+    "files": {
+      "pdf": {
+        "path": "SH-MAP-SAC-001_headquarters-context.pdf",
+        "sha256": "9cddde9f1d985c5ba13eb37c83f9720370494a496426107610dc0eb6418aaf37"
+      },
+      "svg": {
+        "path": "SH-MAP-SAC-001_headquarters-context.svg",
+        "sha256": "06e22c2b20725027f3601e9d012a47114dff49c270329c9ccd9ba902392dbafc"
+      },
+      "png": {
+        "path": "SH-MAP-SAC-001_headquarters-context.png",
+        "sha256": "fabf8fcb0e1fa0eef8899296b8e851518af857ba9bb039dfd357ffff07e601d2"
+      }
+    }
+  },
+  {
+    "map_id": "SH-MAP-EVL-001_hazelwood-context",
+    "title": "Hazelwood / Willow lineage",
+    "version": "0.1.0-rc3",
+    "effective_date": "2026-09-05",
+    "world_state": "CANON_WITH_APPROVED_OPERATING_OVERLAY_2026-09-06",
+    "canon_status": "PROPOSED_SEARCH_AREA",
+    "source_package_version": "0.1.0-rc3",
+    "source_commit": "8d20e51a7cf0068729e3296840ccb5ba1ac1d7bd",
+    "source_geopackage_sha256": "af3a821b37e6d11430cde4dde25355e029761c6971e82eed58f95962578248b7",
+    "projection": "EPSG:26917",
+    "build_timestamp": "2026-09-06T02:29:42+00:00",
+    "builder": "geospatial/scripts/render_maps.py",
+    "review_status": "VISUAL_QA_PASS_RENDERED_PDF_CONTACT_SHEET",
+    "layers": [
+      "search_areas",
+      "ref_hazelwood_*"
+    ],
+    "files": {
+      "pdf": {
+        "path": "SH-MAP-EVL-001_hazelwood-context.pdf",
+        "sha256": "c0d6205806ace07b267c61d222d6d9ff176042b099c5fca6b6e4b9264aed64ea"
+      },
+      "svg": {
+        "path": "SH-MAP-EVL-001_hazelwood-context.svg",
+        "sha256": "c93d78d61d3f145002c2afa97293088267da541eb8a70a416fa76c91cd2a83c3"
+      },
+      "png": {
+        "path": "SH-MAP-EVL-001_hazelwood-context.png",
+        "sha256": "e58c7daaad3c1b8c51c04c591b581c2feced9739f4d13940d4c115f9c6e700df"
+      }
+    }
+  },
+  {
+    "map_id": "SH-MAP-CRD-001_kanawha-context",
+    "title": "Cradle / Kanawha Valley",
+    "version": "0.1.0-rc3",
+    "effective_date": "2026-09-05",
+    "world_state": "CANON_WITH_APPROVED_OPERATING_OVERLAY_2026-09-06",
+    "canon_status": "PROPOSED_SEARCH_AREA",
+    "source_package_version": "0.1.0-rc3",
+    "source_commit": "8d20e51a7cf0068729e3296840ccb5ba1ac1d7bd",
+    "source_geopackage_sha256": "af3a821b37e6d11430cde4dde25355e029761c6971e82eed58f95962578248b7",
+    "projection": "EPSG:26917",
+    "build_timestamp": "2026-09-06T02:29:42+00:00",
+    "builder": "geospatial/scripts/render_maps.py",
+    "review_status": "VISUAL_QA_PASS_RENDERED_PDF_CONTACT_SHEET",
+    "layers": [
+      "search_areas",
+      "ref_kanawha_*"
+    ],
+    "files": {
+      "pdf": {
+        "path": "SH-MAP-CRD-001_kanawha-context.pdf",
+        "sha256": "79ef8bb6909ff26fd5d1a6c9bf91709cca6691c1ffd1923fa64723150f30b69d"
+      },
+      "svg": {
+        "path": "SH-MAP-CRD-001_kanawha-context.svg",
+        "sha256": "e96a51a9868d311f5a0b7815710c89d6785ee0608a4858d8916c690958607007"
+      },
+      "png": {
+        "path": "SH-MAP-CRD-001_kanawha-context.png",
+        "sha256": "9fb84920530da0712ef78f5141d9232b3a4f19b6af7ce9229b87835b4d865e5f"
+      }
+    }
+  },
+  {
+    "map_id": "SH-MAP-BST-001_wamsutter-interchange-study",
+    "title": "Wamsutter interchange study",
+    "version": "0.1.0-rc3",
+    "effective_date": "2026-09-05",
+    "world_state": "CANON_WITH_APPROVED_OPERATING_OVERLAY_2026-09-06",
+    "canon_status": "PROPOSED_SEARCH_AREA",
+    "source_package_version": "0.1.0-rc3",
+    "source_commit": "8d20e51a7cf0068729e3296840ccb5ba1ac1d7bd",
+    "source_geopackage_sha256": "af3a821b37e6d11430cde4dde25355e029761c6971e82eed58f95962578248b7",
+    "projection": "EPSG:26913",
+    "build_timestamp": "2026-09-06T02:29:42+00:00",
+    "builder": "geospatial/scripts/render_maps.py",
+    "review_status": "VISUAL_QA_PASS_RENDERED_PDF_CONTACT_SHEET",
+    "layers": [
+      "search_areas",
+      "ref_wamsutter_*"
+    ],
+    "files": {
+      "pdf": {
+        "path": "SH-MAP-BST-001_wamsutter-interchange-study.pdf",
+        "sha256": "d0e46ae205b87f210b97cfc89d61e799566135bb9f0c5d41681edc12708f6635"
+      },
+      "svg": {
+        "path": "SH-MAP-BST-001_wamsutter-interchange-study.svg",
+        "sha256": "9949dacd678501e015c38f0421d52b918508f5071a44c99ccc0864e6dcad4542"
+      },
+      "png": {
+        "path": "SH-MAP-BST-001_wamsutter-interchange-study.png",
+        "sha256": "8193ecc9ece7ba50d6ed5d03a34c6e2207e80f8c524daed8760c764975978981"
+      }
+    }
+  },
+  {
+    "map_id": "SH-MAP-ENT-003_open-geographic-questions",
+    "title": "Open geographic questions",
+    "version": "0.1.0-rc3",
+    "effective_date": "2026-09-05",
+    "world_state": "CANON_WITH_APPROVED_OPERATING_OVERLAY_2026-09-06",
+    "canon_status": "CONFLICT_REVIEW",
+    "source_package_version": "0.1.0-rc3",
+    "source_commit": "8d20e51a7cf0068729e3296840ccb5ba1ac1d7bd",
+    "source_geopackage_sha256": "af3a821b37e6d11430cde4dde25355e029761c6971e82eed58f95962578248b7",
+    "projection": "EPSG:26913;26917",
+    "build_timestamp": "2026-09-06T02:29:42+00:00",
+    "builder": "geospatial/scripts/render_maps.py",
+    "review_status": "VISUAL_QA_PASS_RENDERED_PDF_CONTACT_SHEET",
+    "layers": [
+      "search_areas",
+      "red_wash_anchor",
+      "federal reference layers",
+      "conflicts",
+      "object_registry"
+    ],
+    "files": {
+      "pdf": {
+        "path": "SH-MAP-ENT-003_open-geographic-questions.pdf",
+        "sha256": "ed3cd3eda8a30678c31690c3b8e4a8768f63ac79238599ca01b22253793a0857"
+      },
+      "svg": {
+        "path": "SH-MAP-ENT-003_open-geographic-questions.svg",
+        "sha256": "05a001a9776cab262a846d159ae4eb673bf858659b23fce2a36ba7a65663d017"
+      },
+      "png": {
+        "path": "SH-MAP-ENT-003_open-geographic-questions.png",
+        "sha256": "fe347bd8c6f51cab2537a1edc42b967921cd575088b6dc662c48d77bf0256a77"
+      }
+    }
+  },
+  {
+    "map_id": "SH-MAP-RWM-002_red-wash-site-study",
+    "title": "Red Wash surface site study",
+    "version": "0.1.0-rc3",
+    "effective_date": "2026-09-05",
+    "world_state": "CANON_WITH_APPROVED_OPERATING_OVERLAY_2026-09-06",
+    "canon_status": "PROPOSED_SITE_GEOMETRY",
+    "source_package_version": "0.1.0-rc3",
+    "source_commit": "8d20e51a7cf0068729e3296840ccb5ba1ac1d7bd",
+    "source_geopackage_sha256": "af3a821b37e6d11430cde4dde25355e029761c6971e82eed58f95962578248b7",
+    "projection": "EPSG:26913",
+    "build_timestamp": "2026-09-06T02:29:42+00:00",
+    "builder": "geospatial/scripts/render_maps.py",
+    "review_status": "VISUAL_QA_PASS_RENDERED_PDF_CONTACT_SHEET",
+    "layers": [
+      "spatial_assets",
+      "facilities",
+      "red_wash_anchor",
+      "ref_wamsutter_*"
+    ],
+    "files": {
+      "pdf": {
+        "path": "SH-MAP-RWM-002_red-wash-site-study.pdf",
+        "sha256": "8c72d858284c640ec1ab0982f16e4e94470a25c348d3ffbdca79ebee5c22d0e8"
+      },
+      "svg": {
+        "path": "SH-MAP-RWM-002_red-wash-site-study.svg",
+        "sha256": "316b0cf3c033b2e9b709a851f159bdfd9ce8dcc70a7507279fc2dcd8fdea396e"
+      },
+      "png": {
+        "path": "SH-MAP-RWM-002_red-wash-site-study.png",
+        "sha256": "d1d7211bb4f5b2a16a28791eb52bf192b7b00a0fa8976c73f3810ee4a559d5fa"
+      }
+    }
+  },
+  {
+    "map_id": "SH-MAP-BST-001_bst-pre-acquisition-system",
+    "title": "BS&T / pre-acquisition scenario",
+    "version": "0.1.0-rc3",
+    "effective_date": "2026-01-06",
+    "world_state": "CANON_WITH_APPROVED_OPERATING_OVERLAY_2026-09-06",
+    "canon_status": "PRE_ACQUISITION_2026_01_06_GEOMETRY_PROPOSED",
+    "source_package_version": "0.1.0-rc3",
+    "source_commit": "8d20e51a7cf0068729e3296840ccb5ba1ac1d7bd",
+    "source_geopackage_sha256": "af3a821b37e6d11430cde4dde25355e029761c6971e82eed58f95962578248b7",
+    "projection": "EPSG:26913",
+    "build_timestamp": "2026-09-06T02:29:42+00:00",
+    "builder": "geospatial/scripts/render_maps.py",
+    "review_status": "VISUAL_QA_PASS_RENDERED_PDF_CONTACT_SHEET",
+    "layers": [
+      "rail_segments",
+      "rail_nodes",
+      "ref_wyoming_waterbodies",
+      "ref_wamsutter_*",
+      "DEM-USGS-WYOMING"
+    ],
+    "files": {
+      "pdf": {
+        "path": "SH-MAP-BST-001_bst-pre-acquisition-system.pdf",
+        "sha256": "b0957f229835974dfb5bb4a066170e142bbbd95f2c3cc99cf21b176cf95a149c"
+      },
+      "svg": {
+        "path": "SH-MAP-BST-001_bst-pre-acquisition-system.svg",
+        "sha256": "61d404bc69776f87744e370ff7181493dbad9704be170f7ee5febcea9b871574"
+      },
+      "png": {
+        "path": "SH-MAP-BST-001_bst-pre-acquisition-system.png",
+        "sha256": "4fe5e19c296bdafc533653a7872fa2e4358b291b95e1a47d01f0fba82daeee6e"
+      }
+    }
+  },
+  {
+    "map_id": "SH-MAP-BST-002_bst-engineering-alignment",
+    "title": "BS&T / preliminary alignment",
+    "version": "0.1.0-rc3",
+    "effective_date": "2026-09-05",
+    "world_state": "CANON_WITH_APPROVED_OPERATING_OVERLAY_2026-09-06",
+    "canon_status": "PRELIMINARY_ENGINEERING_PROPOSAL",
+    "source_package_version": "0.1.0-rc3",
+    "source_commit": "8d20e51a7cf0068729e3296840ccb5ba1ac1d7bd",
+    "source_geopackage_sha256": "af3a821b37e6d11430cde4dde25355e029761c6971e82eed58f95962578248b7",
+    "projection": "EPSG:26913",
+    "build_timestamp": "2026-09-06T02:29:42+00:00",
+    "builder": "geospatial/scripts/render_maps.py",
+    "review_status": "VISUAL_QA_PASS_RENDERED_PDF_CONTACT_SHEET",
+    "layers": [
+      "rail_segments",
+      "rail_nodes",
+      "ref_wyoming_waterbodies",
+      "ref_wamsutter_*",
+      "DEM-USGS-WYOMING"
+    ],
+    "files": {
+      "pdf": {
+        "path": "SH-MAP-BST-002_bst-engineering-alignment.pdf",
+        "sha256": "e18328f64214428605c884d07fd2cd56132ac335a698d699df69315bb1aac702"
+      },
+      "svg": {
+        "path": "SH-MAP-BST-002_bst-engineering-alignment.svg",
+        "sha256": "750fcd10d50aeb93e2df5124fb6d323655054c29a66dfb17ad1f13b42d669621"
+      },
+      "png": {
+        "path": "SH-MAP-BST-002_bst-engineering-alignment.png",
+        "sha256": "b8966c1ca427556b657b256a755e4a4525b6832db1b568f15260ed018b357b36"
+      }
+    }
+  }
+]

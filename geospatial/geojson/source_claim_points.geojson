@@ -1,0 +1,71 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "SH-GEO-0101",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -106.9213,
+          42.3127
+        ]
+      },
+      "properties": {
+        "feature_id": "SH-GEO-0101",
+        "object_id": "SH-SITE-0006",
+        "canonical_name": "Red Wash printed Carbon County coordinate claim",
+        "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+        "real_world_relation": "UNKNOWN",
+        "canon_status": "HISTORICAL",
+        "geometry_status": "SUPERSEDED_SOURCE_CLAIM",
+        "location_method": "DIGITIZED_FROM_SOURCE",
+        "precision_class": "UNKNOWN",
+        "horizontal_accuracy_m": null,
+        "public_precision": "DISPUTED_SOURCE_CLAIM",
+        "source_id": "SRC-7B82D38FA142",
+        "decision_id": "GEO-D011",
+        "recorded_at": "2026-09-06T02:29:42+00:00",
+        "world_state_date": "2026-09-05",
+        "reference_source_ids": [
+          "REF-WYOMING-COUNTIES"
+        ],
+        "construction_method": "DIGITIZED_FROM_SOURCE",
+        "notes": "Literal coordinate label, no surveyed point role or accuracy supplied. Server-side Census county check returns Carbon County. Do not use as settled mine coordinate. Historical/obsolete geographic claim, retained for provenance only."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SH-GEO-0102",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -103.3327711650426,
+          43.62883392001495
+        ]
+      },
+      "properties": {
+        "feature_id": "SH-GEO-0102",
+        "object_id": "SH-SITE-0006",
+        "canonical_name": "Overview grid central-value diagnostic",
+        "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+        "real_world_relation": "UNKNOWN",
+        "canon_status": "HISTORICAL",
+        "geometry_status": "SUPERSEDED_SOURCE_CLAIM",
+        "location_method": "ENGINEERED_FROM_CONSTRAINTS",
+        "precision_class": "UNKNOWN",
+        "horizontal_accuracy_m": null,
+        "public_precision": "DISPUTED_SOURCE_CLAIM",
+        "source_id": "SRC-7B82D38FA142",
+        "decision_id": "GEO-D011",
+        "recorded_at": "2026-09-06T02:29:42+00:00",
+        "world_state_date": "2026-09-05",
+        "reference_source_ids": [
+          "REF-WYOMING-COUNTIES"
+        ],
+        "construction_method": "ENGINEERED_FROM_CONSTRAINTS",
+        "notes": "Diagnostic only: invert representative mid-grid east/north values under the printed NAD83 / UTM zone 13N label. This is not a georeferenced image, recovered map pin, or alternate proposed mine site. Historical/obsolete geographic claim, retained for provenance only."
+      }
+    }
+  ]
+}

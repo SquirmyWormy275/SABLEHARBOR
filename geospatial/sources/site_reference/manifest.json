@@ -1,0 +1,64 @@
+[
+  {
+    "name": "sacramento",
+    "source_id": "IMG-NAIP-SACRAMENTO",
+    "authority": "USDA NAIP via USGS The National Map",
+    "requested_bbox": [
+      -121.506,
+      38.589,
+      -121.483,
+      38.602
+    ],
+    "returned_extent": {
+      "xmin": -121.506,
+      "ymin": 38.586875,
+      "xmax": -121.483,
+      "ymax": 38.604124999999996,
+      "spatialReference": {
+        "wkid": 4326,
+        "latestWkid": 4326
+      }
+    },
+    "metadata_request_url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-121.506%2C38.589%2C-121.483%2C38.602&bboxSR=4326&imageSR=4326&size=1600%2C1200&format=png&f=json",
+    "metadata_sha256": "e077f01aff9005edd2bbfc774eb0e44ee7ead359bf62656b6e7aabbc7b11182b",
+    "raster_file": "sources/site_reference/sacramento.png",
+    "raster_sha256": "70e4bfad0f135587a1e9276575881736c82783fe06c2bb7cef9d113e3ea450cd",
+    "catalog_request_url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/query?f=json&where=1%3D1&geometry=-121.506%2C38.589%2C-121.483%2C38.602&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=%2A&returnGeometry=false",
+    "catalog_sha256": "9f66b2c65816dd3fc201bfda817dc9c6d5e24288931b173f6f8ddc31e076c36c",
+    "accessed_date": "2026-09-06",
+    "license": "Public domain U.S. federal imagery; verify catalog-specific attribution",
+    "use": "Visual site feasibility screening only; no footprint digitized and no title or vacancy inference",
+    "inspected": true
+  },
+  {
+    "name": "kanawha",
+    "source_id": "IMG-NAIP-KANAWHA",
+    "authority": "USDA NAIP via USGS The National Map",
+    "requested_bbox": [
+      -81.582,
+      38.217,
+      -81.49,
+      38.27
+    ],
+    "returned_extent": {
+      "xmin": -81.582,
+      "ymin": 38.209,
+      "xmax": -81.49,
+      "ymax": 38.278,
+      "spatialReference": {
+        "wkid": 4326,
+        "latestWkid": 4326
+      }
+    },
+    "metadata_request_url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-81.582%2C38.217%2C-81.49%2C38.27&bboxSR=4326&imageSR=4326&size=1600%2C1200&format=png&f=json",
+    "metadata_sha256": "a033cf7f34eb632763ec4bee8a3cb6ab376521b8e89cc9ac717fcf263d100078",
+    "raster_file": "sources/site_reference/kanawha.png",
+    "raster_sha256": "83c68038d598ef1187af80b6e5a72ab456c3d0d8812b7f02c275b10bcac5e6a5",
+    "catalog_request_url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/query?f=json&where=1%3D1&geometry=-81.582%2C38.217%2C-81.49%2C38.27&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=%2A&returnGeometry=false",
+    "catalog_sha256": "611487ee4e48921134b5f98227e4c9057d023f7758fe2cfecd2ef6d401f8cb56",
+    "accessed_date": "2026-09-06",
+    "license": "Public domain U.S. federal imagery; verify catalog-specific attribution",
+    "use": "Visual site feasibility screening only; no footprint digitized and no title or vacancy inference",
+    "inspected": true
+  }
+]

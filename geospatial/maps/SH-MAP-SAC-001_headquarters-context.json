@@ -1,0 +1,33 @@
+{
+  "map_id": "SH-MAP-SAC-001_headquarters-context",
+  "title": "Sacramento headquarters",
+  "version": "0.1.0-rc3",
+  "effective_date": "2026-09-05",
+  "world_state": "CANON_WITH_APPROVED_OPERATING_OVERLAY_2026-09-06",
+  "canon_status": "PROPOSED_SEARCH_AREA",
+  "source_package_version": "0.1.0-rc3",
+  "source_commit": "8d20e51a7cf0068729e3296840ccb5ba1ac1d7bd",
+  "source_geopackage_sha256": "af3a821b37e6d11430cde4dde25355e029761c6971e82eed58f95962578248b7",
+  "projection": "EPSG:26910",
+  "build_timestamp": "2026-09-06T02:29:42+00:00",
+  "builder": "geospatial/scripts/render_maps.py",
+  "review_status": "VISUAL_QA_PASS_RENDERED_PDF_CONTACT_SHEET",
+  "layers": [
+    "search_areas",
+    "ref_sacramento_*"
+  ],
+  "files": {
+    "pdf": {
+      "path": "SH-MAP-SAC-001_headquarters-context.pdf",
+      "sha256": "9cddde9f1d985c5ba13eb37c83f9720370494a496426107610dc0eb6418aaf37"
+    },
+    "svg": {
+      "path": "SH-MAP-SAC-001_headquarters-context.svg",
+      "sha256": "06e22c2b20725027f3601e9d012a47114dff49c270329c9ccd9ba902392dbafc"
+    },
+    "png": {
+      "path": "SH-MAP-SAC-001_headquarters-context.png",
+      "sha256": "fabf8fcb0e1fa0eef8899296b8e851518af857ba9bb039dfd357ffff07e601d2"
+    }
+  }
+}

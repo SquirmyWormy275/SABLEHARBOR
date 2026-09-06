@@ -1,0 +1,36 @@
+{
+  "map_id": "SH-MAP-BST-001_bst-pre-acquisition-system",
+  "title": "BS&T / pre-acquisition scenario",
+  "version": "0.1.0-rc3",
+  "effective_date": "2026-01-06",
+  "world_state": "CANON_WITH_APPROVED_OPERATING_OVERLAY_2026-09-06",
+  "canon_status": "PRE_ACQUISITION_2026_01_06_GEOMETRY_PROPOSED",
+  "source_package_version": "0.1.0-rc3",
+  "source_commit": "8d20e51a7cf0068729e3296840ccb5ba1ac1d7bd",
+  "source_geopackage_sha256": "af3a821b37e6d11430cde4dde25355e029761c6971e82eed58f95962578248b7",
+  "projection": "EPSG:26913",
+  "build_timestamp": "2026-09-06T02:29:42+00:00",
+  "builder": "geospatial/scripts/render_maps.py",
+  "review_status": "VISUAL_QA_PASS_RENDERED_PDF_CONTACT_SHEET",
+  "layers": [
+    "rail_segments",
+    "rail_nodes",
+    "ref_wyoming_waterbodies",
+    "ref_wamsutter_*",
+    "DEM-USGS-WYOMING"
+  ],
+  "files": {
+    "pdf": {
+      "path": "SH-MAP-BST-001_bst-pre-acquisition-system.pdf",
+      "sha256": "b0957f229835974dfb5bb4a066170e142bbbd95f2c3cc99cf21b176cf95a149c"
+    },
+    "svg": {
+      "path": "SH-MAP-BST-001_bst-pre-acquisition-system.svg",
+      "sha256": "61d404bc69776f87744e370ff7181493dbad9704be170f7ee5febcea9b871574"
+    },
+    "png": {
+      "path": "SH-MAP-BST-001_bst-pre-acquisition-system.png",
+      "sha256": "4fe5e19c296bdafc533653a7872fa2e4358b291b95e1a47d01f0fba82daeee6e"
+    }
+  }
+}

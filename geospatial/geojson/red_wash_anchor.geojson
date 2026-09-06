@@ -1,0 +1,38 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "SH-GEO-0201",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -108.18,
+          42.22
+        ]
+      },
+      "properties": {
+        "feature_id": "SH-GEO-0201",
+        "object_id": "SH-SITE-0006",
+        "canonical_name": "Red Wash Mine \u2014 approved working map anchor",
+        "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+        "real_world_relation": "UNKNOWN",
+        "canon_status": "CANON_SITED",
+        "geometry_status": "ENGINEERED_PENDING_FULL_SITE_POLYGON",
+        "location_method": "USER_LOCKED",
+        "precision_class": "USER_CONTROL_COORDINATE",
+        "horizontal_accuracy_m": null,
+        "public_precision": "FICTIONAL_CONTROL_OR_PROPOSAL",
+        "source_id": "SRC-ADDENDUM-20260905",
+        "decision_id": "GEO-D010",
+        "recorded_at": "2026-09-06T02:29:42+00:00",
+        "world_state_date": "2026-09-05",
+        "reference_source_ids": [
+          "SRC-ADDENDUM-20260905"
+        ],
+        "construction_method": "Exact longitude/latitude copied from section 2.2 of governing addendum.",
+        "notes": "User-approved fictional map control coordinate 42.22,-108.18. No survey-grade accuracy, real mine identity or property title implied."
+      }
+    }
+  ]
+}

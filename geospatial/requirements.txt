@@ -1,0 +1,11 @@
+# Python 3.12. QGIS validation uses the runner's distribution python3-qgis.
+fiona==1.10.1
+shapely==2.1.2
+pyproj==3.8.0
+matplotlib==3.10.8
+numpy==2.3.5
+pypdf==6.10.0
+Pillow==12.3.0
+pytest==9.1.1
+scipy==1.17.0
+rasterio==1.5.1

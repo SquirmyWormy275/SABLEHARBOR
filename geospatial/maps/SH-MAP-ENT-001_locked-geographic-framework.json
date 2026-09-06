@@ -1,0 +1,34 @@
+{
+  "map_id": "SH-MAP-ENT-001_locked-geographic-framework",
+  "title": "Locked geographic framework",
+  "version": "0.1.0-rc3",
+  "effective_date": "2026-09-05",
+  "world_state": "CANON_WITH_APPROVED_OPERATING_OVERLAY_2026-09-06",
+  "canon_status": "CONFLICT_REVIEW",
+  "source_package_version": "0.1.0-rc3",
+  "source_commit": "8d20e51a7cf0068729e3296840ccb5ba1ac1d7bd",
+  "source_geopackage_sha256": "af3a821b37e6d11430cde4dde25355e029761c6971e82eed58f95962578248b7",
+  "projection": "EPSG:26910;26917;26913",
+  "build_timestamp": "2026-09-06T02:29:42+00:00",
+  "builder": "geospatial/scripts/render_maps.py",
+  "review_status": "VISUAL_QA_PASS_RENDERED_PDF_CONTACT_SHEET",
+  "layers": [
+    "search_areas",
+    "red_wash_anchor",
+    "federal reference layers"
+  ],
+  "files": {
+    "pdf": {
+      "path": "SH-MAP-ENT-001_locked-geographic-framework.pdf",
+      "sha256": "febc790d40d8d39d732506ff3837dc2114a330c76938ccdc356e6e82b0323541"
+    },
+    "svg": {
+      "path": "SH-MAP-ENT-001_locked-geographic-framework.svg",
+      "sha256": "196b57a38906e1f591ad94812cf74a11dfbab70869901a30c325ea43ce2791c4"
+    },
+    "png": {
+      "path": "SH-MAP-ENT-001_locked-geographic-framework.png",
+      "sha256": "5708a151fb2cf8bd6f2b46bc86e1af34d2dfac04ffb590b724691b946c2a694e"
+    }
+  }
+}

@@ -1,0 +1,5 @@
+__pycache__/
+.pytest_cache/
+*.building.gpkg
+*.tmp
+registers/GEOGRAPHIC_CANDIDATE_OCCURRENCES.csv

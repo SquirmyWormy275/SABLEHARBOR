@@ -1,0 +1,66 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "YARD-TAY-PROP-001",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -108.21951482606286,
+              42.16925372229265
+            ],
+            [
+              -108.21960612243117,
+              42.17105215341089
+            ],
+            [
+              -108.2304852873468,
+              42.1707460104793
+            ],
+            [
+              -108.2303936837912,
+              42.16894759854487
+            ],
+            [
+              -108.21951482606286,
+              42.16925372229265
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "feature_id": "YARD-TAY-PROP-001",
+        "object_id": "SH-SITE-0007",
+        "canonical_name": "Taylor yard and shops preliminary reservation",
+        "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+        "real_world_relation": "UNKNOWN",
+        "canon_status": "PROPOSED",
+        "geometry_status": "PRELIMINARY_ENGINEERING_PROPOSAL",
+        "location_method": "ENGINEERED_FROM_CONSTRAINTS",
+        "precision_class": "PRELIMINARY_DESIGN",
+        "horizontal_accuracy_m": null,
+        "public_precision": "FICTIONAL_CONTROL_OR_PROPOSAL",
+        "source_id": "SRC-RAIL-PRELIM-ENGINEERING",
+        "decision_id": "GEO-D014",
+        "recorded_at": "2026-09-06T02:29:42+00:00",
+        "world_state_date": "2026-09-05",
+        "reference_source_ids": [
+          "SRC-ADDENDUM-20260905",
+          "DEM-USGS-WYOMING",
+          "REF-WYOMING-WATERBODIES",
+          "REF-WAMSUTTER-FRA-RAIL"
+        ],
+        "construction_method": "Declared analyst candidate geometry supported by pinned terrain/water analysis; see GEO-D014.",
+        "notes": "Proposed fictional geometry in real geography. No real land title, access/operating right, construction approval or historical operation inferred. 900x200m reservation. Track leads, ladders, switch geometry and capacity remain unengineered.",
+        "valid_from": null,
+        "valid_to": null,
+        "owner_entity": null,
+        "operator_entity": "SH-ENT-009",
+        "rights_type": "PROPOSED_OPERATION_NO_TITLE"
+      }
+    }
+  ]
+}

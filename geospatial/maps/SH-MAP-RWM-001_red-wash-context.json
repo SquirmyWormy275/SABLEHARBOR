@@ -1,0 +1,35 @@
+{
+  "map_id": "SH-MAP-RWM-001_red-wash-context",
+  "title": "Red Wash current Sweetwater context",
+  "version": "0.1.0-rc3",
+  "effective_date": "2026-09-05",
+  "world_state": "CANON_WITH_APPROVED_OPERATING_OVERLAY_2026-09-06",
+  "canon_status": "CANON_ANCHOR_WITH_PROPOSED_SITE_GEOMETRY",
+  "source_package_version": "0.1.0-rc3",
+  "source_commit": "8d20e51a7cf0068729e3296840ccb5ba1ac1d7bd",
+  "source_geopackage_sha256": "af3a821b37e6d11430cde4dde25355e029761c6971e82eed58f95962578248b7",
+  "projection": "EPSG:26913",
+  "build_timestamp": "2026-09-06T02:29:42+00:00",
+  "builder": "geospatial/scripts/render_maps.py",
+  "review_status": "VISUAL_QA_PASS_RENDERED_PDF_CONTACT_SHEET",
+  "layers": [
+    "search_areas",
+    "red_wash_anchor",
+    "ref_wyoming_counties",
+    "ref_wamsutter_*"
+  ],
+  "files": {
+    "pdf": {
+      "path": "SH-MAP-RWM-001_red-wash-context.pdf",
+      "sha256": "c67d12abbfc2cd9dcdc141a59a1ffc5290330fb66a7f80431449e36dee3b3a01"
+    },
+    "svg": {
+      "path": "SH-MAP-RWM-001_red-wash-context.svg",
+      "sha256": "eff43251948b19a2892e1eeadacd5104fedce87a84c9e3b38280d565e0abc401"
+    },
+    "png": {
+      "path": "SH-MAP-RWM-001_red-wash-context.png",
+      "sha256": "9794da3cda74336b0ab8fbe547961e3b110279109dcb9f763f943a91814721d1"
+    }
+  }
+}

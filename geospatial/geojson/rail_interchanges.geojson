@@ -1,0 +1,65 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "INT-WAM-PROP-001",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -107.95963659159482,
+              41.674831247538954
+            ],
+            [
+              -107.9596943349962,
+              41.6760905669775
+            ],
+            [
+              -107.97169217300014,
+              41.67578070602204
+            ],
+            [
+              -107.97163419636033,
+              41.674521400205556
+            ],
+            [
+              -107.95963659159482,
+              41.674831247538954
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "feature_id": "INT-WAM-PROP-001",
+        "object_id": "SH-RAIL-0002",
+        "canonical_name": "Wamsutter interchange planning reservation",
+        "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+        "real_world_relation": "UNKNOWN",
+        "canon_status": "PROPOSED",
+        "geometry_status": "PRELIMINARY_ENGINEERING_PROPOSAL",
+        "location_method": "ENGINEERED_FROM_CONSTRAINTS",
+        "precision_class": "PRELIMINARY_DESIGN",
+        "horizontal_accuracy_m": null,
+        "public_precision": "FICTIONAL_CONTROL_OR_PROPOSAL",
+        "source_id": "SRC-RAIL-PRELIM-ENGINEERING",
+        "decision_id": "GEO-D014",
+        "recorded_at": "2026-09-06T02:29:42+00:00",
+        "world_state_date": "2026-09-05",
+        "reference_source_ids": [
+          "SRC-ADDENDUM-20260905",
+          "DEM-USGS-WYOMING",
+          "REF-WYOMING-WATERBODIES",
+          "REF-WAMSUTTER-FRA-RAIL"
+        ],
+        "construction_method": "Declared analyst candidate geometry supported by pinned terrain/water analysis; see GEO-D014.",
+        "notes": "Proposed fictional geometry in real geography. No real land title, access/operating right, construction approval or historical operation inferred. 1000x140m conceptual north-side reservation; exact orientation, buildings, roads, turnout and host-rights unresolved.",
+        "valid_from": null,
+        "valid_to": null,
+        "owner_entity": null,
+        "operator_entity": null
+      }
+    }
+  ]
+}

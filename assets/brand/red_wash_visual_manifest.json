@@ -54,5 +54,20 @@
       "source_filename": "a_high_resolution_photorealistic_infographic_map.png",
       "approval_state": "LOCKED"
     }
-  ]
+  ],
+  "geographic_supersession": {
+    "status": "SUPERSEDED_LOCATION_LABELS",
+    "decision_ids": [
+      "GEO-D009",
+      "GEO-D010",
+      "GEO-D011"
+    ],
+    "approved_image_bytes_preserved": true,
+    "current_anchor": {
+      "latitude": 42.22,
+      "longitude": -108.18,
+      "county": "Sweetwater County"
+    },
+    "note": "Original imagery remains historical/conceptual evidence. Printed Carbon County coordinates and grid are obsolete for current geographic use. See geospatial/docs/RED_WASH_LOCATION_SUPERSESSION_NOTE.md."
+  }
 }

@@ -4,7 +4,7 @@
 
 ## Property and setting
 
-The locked location is Wyoming. The selected synthetic site scenario places Red Wash on the high plains of Carbon County at 42.3127° N, 106.9213° W and approximately 6,420 feet elevation, across roughly 7,480 acres with approximately 620 acres of current disturbance. Those site-specific values are scenario details rather than separately locked geographic canon.
+The governing September5,2026 addendum supersedes the Carbon County scenario. Red Wash is a fictional underground uranium mine in the Great Divide Basin / Red Desert, Sweetwater County, Wyoming, north of Wamsutter, with a user-approved working map anchor at42.22N,108.18W. The point is not a surveyed portal, real mine identity or property title. Earlier elevation, acreage and disturbance metrics remain scenario inputs pending revalidation at the new anchor. See `geospatial/docs/RED_WASH_LOCATION_SUPERSESSION_NOTE.md`.
 
 Mineralization is hosted by permeable lower Eocene fluvial sandstone. Uranium precipitated along reduction–oxidation interfaces where oxidized, uranium-bearing groundwater encountered reducing carbonaceous material and sulfides. The deposit is expressed as stacked, sinuous lenses rather than one continuous sheet. That geometry explains both the mine's selectivity and the historic tendency for broad models to overstate continuity.
 

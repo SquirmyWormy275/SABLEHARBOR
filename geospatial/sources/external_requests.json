@@ -1,0 +1,390 @@
+[
+  {
+    "name": "us_states",
+    "endpoint": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/State_County/MapServer/0/query",
+    "params": {
+      "where": "STATE NOT IN ('02','15','60','66','69','72','78')",
+      "maxAllowableOffset": 0.02
+    },
+    "authority": "U.S. Census Bureau",
+    "notes": "Generalized continental US context; not for county or parcel containment.",
+    "horizontal_accuracy_m": null,
+    "extraction_precision": "0.02 degree generalization"
+  },
+  {
+    "name": "wyoming_counties",
+    "endpoint": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/State_County/MapServer/1/query",
+    "params": {
+      "where": "STATE='56'",
+      "maxAllowableOffset": 0.001
+    },
+    "authority": "U.S. Census Bureau",
+    "notes": "Wyoming county context. Unsimplified point-containment response is separately archived.",
+    "horizontal_accuracy_m": null,
+    "extraction_precision": "0.001 degree generalization"
+  },
+  {
+    "name": "context_places",
+    "endpoint": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Current/MapServer/28/query",
+    "params": {
+      "where": "(STATE='56' AND NAME LIKE 'Wamsutter%') OR (STATE='06' AND NAME LIKE 'Sacramento%') OR (STATE='42' AND NAME LIKE 'Pittsburgh%') OR (STATE='54' AND (NAME LIKE 'Belle %' OR NAME LIKE 'Charleston%'))",
+      "maxAllowableOffset": 0.0001
+    },
+    "authority": "U.S. Census Bureau",
+    "notes": "Incorporated place boundaries. These are reference municipalities, never company footprints.",
+    "horizontal_accuracy_m": null,
+    "extraction_precision": "0.0001 degree generalization"
+  },
+  {
+    "name": "sacramento_rail",
+    "endpoint": "https://carto.nationalmap.gov/arcgis/rest/services/transportation/MapServer/38/query",
+    "params": {
+      "geometry": "-121.513,38.579,-121.463,38.61",
+      "geometryType": "esriGeometryEnvelope",
+      "inSR": 4326,
+      "spatialRel": "esriSpatialRelIntersects"
+    },
+    "authority": "USGS The National Map / U.S. Census Bureau / U.S. Forest Service",
+    "notes": "Reference transportation geometry; names do not prove current ownership, operating rights, track condition, or interchange authority.",
+    "horizontal_accuracy_m": null,
+    "extraction_precision": "native service geometry rounded to six decimals"
+  },
+  {
+    "name": "sacramento_highways",
+    "endpoint": "https://carto.nationalmap.gov/arcgis/rest/services/transportation/MapServer/29/query",
+    "params": {
+      "geometry": "-121.513,38.579,-121.463,38.61",
+      "geometryType": "esriGeometryEnvelope",
+      "inSR": 4326,
+      "spatialRel": "esriSpatialRelIntersects"
+    },
+    "authority": "USGS The National Map / U.S. Census Bureau / U.S. Forest Service",
+    "notes": "Reference transportation geometry; names do not prove current ownership, operating rights, track condition, or interchange authority.",
+    "horizontal_accuracy_m": null,
+    "extraction_precision": "native service geometry rounded to six decimals"
+  },
+  {
+    "name": "sacramento_secondary_roads",
+    "endpoint": "https://carto.nationalmap.gov/arcgis/rest/services/transportation/MapServer/30/query",
+    "params": {
+      "geometry": "-121.513,38.579,-121.463,38.61",
+      "geometryType": "esriGeometryEnvelope",
+      "inSR": 4326,
+      "spatialRel": "esriSpatialRelIntersects"
+    },
+    "authority": "USGS The National Map / U.S. Census Bureau / U.S. Forest Service",
+    "notes": "Reference transportation geometry; names do not prove current ownership, operating rights, track condition, or interchange authority.",
+    "horizontal_accuracy_m": null,
+    "extraction_precision": "native service geometry rounded to six decimals"
+  },
+  {
+    "name": "sacramento_connecting_roads",
+    "endpoint": "https://carto.nationalmap.gov/arcgis/rest/services/transportation/MapServer/31/query",
+    "params": {
+      "geometry": "-121.513,38.579,-121.463,38.61",
+      "geometryType": "esriGeometryEnvelope",
+      "inSR": 4326,
+      "spatialRel": "esriSpatialRelIntersects"
+    },
+    "authority": "USGS The National Map / U.S. Census Bureau / U.S. Forest Service",
+    "notes": "Reference transportation geometry; names do not prove current ownership, operating rights, track condition, or interchange authority.",
+    "horizontal_accuracy_m": null,
+    "extraction_precision": "native service geometry rounded to six decimals"
+  },
+  {
+    "name": "sacramento_local_roads",
+    "endpoint": "https://carto.nationalmap.gov/arcgis/rest/services/transportation/MapServer/32/query",
+    "params": {
+      "geometry": "-121.513,38.579,-121.463,38.61",
+      "geometryType": "esriGeometryEnvelope",
+      "inSR": 4326,
+      "spatialRel": "esriSpatialRelIntersects"
+    },
+    "authority": "USGS The National Map / U.S. Census Bureau / U.S. Forest Service",
+    "notes": "Reference local roads; no fictional property interest.",
+    "horizontal_accuracy_m": null,
+    "extraction_precision": "native service geometry rounded to six decimals"
+  },
+  {
+    "name": "sacramento_hydro",
+    "endpoint": "https://hydro.nationalmap.gov/arcgis/rest/services/nhd/MapServer/6/query",
+    "params": {
+      "geometry": "-121.513,38.579,-121.463,38.61",
+      "geometryType": "esriGeometryEnvelope",
+      "inSR": 4326,
+      "spatialRel": "esriSpatialRelIntersects"
+    },
+    "authority": "USGS National Hydrography Dataset",
+    "notes": "Hydrography context; not a floodplain, wetland, or navigability determination.",
+    "horizontal_accuracy_m": null,
+    "extraction_precision": "native service geometry rounded to six decimals"
+  },
+  {
+    "name": "hazelwood_rail",
+    "endpoint": "https://carto.nationalmap.gov/arcgis/rest/services/transportation/MapServer/38/query",
+    "params": {
+      "geometry": "-79.973,40.398,-79.935,40.431",
+      "geometryType": "esriGeometryEnvelope",
+      "inSR": 4326,
+      "spatialRel": "esriSpatialRelIntersects"
+    },
+    "authority": "USGS The National Map / U.S. Census Bureau / U.S. Forest Service",
+    "notes": "Reference transportation geometry; names do not prove current ownership, operating rights, track condition, or interchange authority.",
+    "horizontal_accuracy_m": null,
+    "extraction_precision": "native service geometry rounded to six decimals"
+  },
+  {
+    "name": "hazelwood_highways",
+    "endpoint": "https://carto.nationalmap.gov/arcgis/rest/services/transportation/MapServer/29/query",
+    "params": {
+      "geometry": "-79.973,40.398,-79.935,40.431",
+      "geometryType": "esriGeometryEnvelope",
+      "inSR": 4326,
+      "spatialRel": "esriSpatialRelIntersects"
+    },
+    "authority": "USGS The National Map / U.S. Census Bureau / U.S. Forest Service",
+    "notes": "Reference transportation geometry; names do not prove current ownership, operating rights, track condition, or interchange authority.",
+    "horizontal_accuracy_m": null,
+    "extraction_precision": "native service geometry rounded to six decimals"
+  },
+  {
+    "name": "hazelwood_secondary_roads",
+    "endpoint": "https://carto.nationalmap.gov/arcgis/rest/services/transportation/MapServer/30/query",
+    "params": {
+      "geometry": "-79.973,40.398,-79.935,40.431",
+      "geometryType": "esriGeometryEnvelope",
+      "inSR": 4326,
+      "spatialRel": "esriSpatialRelIntersects"
+    },
+    "authority": "USGS The National Map / U.S. Census Bureau / U.S. Forest Service",
+    "notes": "Reference transportation geometry; names do not prove current ownership, operating rights, track condition, or interchange authority.",
+    "horizontal_accuracy_m": null,
+    "extraction_precision": "native service geometry rounded to six decimals"
+  },
+  {
+    "name": "hazelwood_connecting_roads",
+    "endpoint": "https://carto.nationalmap.gov/arcgis/rest/services/transportation/MapServer/31/query",
+    "params": {
+      "geometry": "-79.973,40.398,-79.935,40.431",
+      "geometryType": "esriGeometryEnvelope",
+      "inSR": 4326,
+      "spatialRel": "esriSpatialRelIntersects"
+    },
+    "authority": "USGS The National Map / U.S. Census Bureau / U.S. Forest Service",
+    "notes": "Reference transportation geometry; names do not prove current ownership, operating rights, track condition, or interchange authority.",
+    "horizontal_accuracy_m": null,
+    "extraction_precision": "native service geometry rounded to six decimals"
+  },
+  {
+    "name": "hazelwood_local_roads",
+    "endpoint": "https://carto.nationalmap.gov/arcgis/rest/services/transportation/MapServer/32/query",
+    "params": {
+      "geometry": "-79.973,40.398,-79.935,40.431",
+      "geometryType": "esriGeometryEnvelope",
+      "inSR": 4326,
+      "spatialRel": "esriSpatialRelIntersects"
+    },
+    "authority": "USGS The National Map / U.S. Census Bureau / U.S. Forest Service",
+    "notes": "Reference local roads; no fictional property interest.",
+    "horizontal_accuracy_m": null,
+    "extraction_precision": "native service geometry rounded to six decimals"
+  },
+  {
+    "name": "hazelwood_hydro",
+    "endpoint": "https://hydro.nationalmap.gov/arcgis/rest/services/nhd/MapServer/6/query",
+    "params": {
+      "geometry": "-79.973,40.398,-79.935,40.431",
+      "geometryType": "esriGeometryEnvelope",
+      "inSR": 4326,
+      "spatialRel": "esriSpatialRelIntersects"
+    },
+    "authority": "USGS National Hydrography Dataset",
+    "notes": "Hydrography context; not a floodplain, wetland, or navigability determination.",
+    "horizontal_accuracy_m": null,
+    "extraction_precision": "native service geometry rounded to six decimals"
+  },
+  {
+    "name": "kanawha_rail",
+    "endpoint": "https://carto.nationalmap.gov/arcgis/rest/services/transportation/MapServer/38/query",
+    "params": {
+      "geometry": "-81.68,38.19,-81.44,38.38",
+      "geometryType": "esriGeometryEnvelope",
+      "inSR": 4326,
+      "spatialRel": "esriSpatialRelIntersects"
+    },
+    "authority": "USGS The National Map / U.S. Census Bureau / U.S. Forest Service",
+    "notes": "Reference transportation geometry; names do not prove current ownership, operating rights, track condition, or interchange authority.",
+    "horizontal_accuracy_m": null,
+    "extraction_precision": "native service geometry rounded to six decimals"
+  },
+  {
+    "name": "kanawha_highways",
+    "endpoint": "https://carto.nationalmap.gov/arcgis/rest/services/transportation/MapServer/29/query",
+    "params": {
+      "geometry": "-81.68,38.19,-81.44,38.38",
+      "geometryType": "esriGeometryEnvelope",
+      "inSR": 4326,
+      "spatialRel": "esriSpatialRelIntersects"
+    },
+    "authority": "USGS The National Map / U.S. Census Bureau / U.S. Forest Service",
+    "notes": "Reference transportation geometry; names do not prove current ownership, operating rights, track condition, or interchange authority.",
+    "horizontal_accuracy_m": null,
+    "extraction_precision": "native service geometry rounded to six decimals"
+  },
+  {
+    "name": "kanawha_secondary_roads",
+    "endpoint": "https://carto.nationalmap.gov/arcgis/rest/services/transportation/MapServer/30/query",
+    "params": {
+      "geometry": "-81.68,38.19,-81.44,38.38",
+      "geometryType": "esriGeometryEnvelope",
+      "inSR": 4326,
+      "spatialRel": "esriSpatialRelIntersects"
+    },
+    "authority": "USGS The National Map / U.S. Census Bureau / U.S. Forest Service",
+    "notes": "Reference transportation geometry; names do not prove current ownership, operating rights, track condition, or interchange authority.",
+    "horizontal_accuracy_m": null,
+    "extraction_precision": "native service geometry rounded to six decimals"
+  },
+  {
+    "name": "kanawha_connecting_roads",
+    "endpoint": "https://carto.nationalmap.gov/arcgis/rest/services/transportation/MapServer/31/query",
+    "params": {
+      "geometry": "-81.68,38.19,-81.44,38.38",
+      "geometryType": "esriGeometryEnvelope",
+      "inSR": 4326,
+      "spatialRel": "esriSpatialRelIntersects"
+    },
+    "authority": "USGS The National Map / U.S. Census Bureau / U.S. Forest Service",
+    "notes": "Reference transportation geometry; names do not prove current ownership, operating rights, track condition, or interchange authority.",
+    "horizontal_accuracy_m": null,
+    "extraction_precision": "native service geometry rounded to six decimals"
+  },
+  {
+    "name": "kanawha_hydro",
+    "endpoint": "https://hydro.nationalmap.gov/arcgis/rest/services/nhd/MapServer/6/query",
+    "params": {
+      "geometry": "-81.68,38.19,-81.44,38.38",
+      "geometryType": "esriGeometryEnvelope",
+      "inSR": 4326,
+      "spatialRel": "esriSpatialRelIntersects"
+    },
+    "authority": "USGS National Hydrography Dataset",
+    "notes": "Hydrography context; not a floodplain, wetland, or navigability determination.",
+    "horizontal_accuracy_m": null,
+    "extraction_precision": "native service geometry rounded to six decimals"
+  },
+  {
+    "name": "wamsutter_rail",
+    "endpoint": "https://carto.nationalmap.gov/arcgis/rest/services/transportation/MapServer/38/query",
+    "params": {
+      "geometry": "-108.5,41.52,-106.65,42.55",
+      "geometryType": "esriGeometryEnvelope",
+      "inSR": 4326,
+      "spatialRel": "esriSpatialRelIntersects"
+    },
+    "authority": "USGS The National Map / U.S. Census Bureau / U.S. Forest Service",
+    "notes": "Reference transportation geometry; names do not prove current ownership, operating rights, track condition, or interchange authority.",
+    "horizontal_accuracy_m": null,
+    "extraction_precision": "native service geometry rounded to six decimals"
+  },
+  {
+    "name": "wamsutter_highways",
+    "endpoint": "https://carto.nationalmap.gov/arcgis/rest/services/transportation/MapServer/29/query",
+    "params": {
+      "geometry": "-108.5,41.52,-106.65,42.55",
+      "geometryType": "esriGeometryEnvelope",
+      "inSR": 4326,
+      "spatialRel": "esriSpatialRelIntersects"
+    },
+    "authority": "USGS The National Map / U.S. Census Bureau / U.S. Forest Service",
+    "notes": "Reference transportation geometry; names do not prove current ownership, operating rights, track condition, or interchange authority.",
+    "horizontal_accuracy_m": null,
+    "extraction_precision": "native service geometry rounded to six decimals"
+  },
+  {
+    "name": "wamsutter_secondary_roads",
+    "endpoint": "https://carto.nationalmap.gov/arcgis/rest/services/transportation/MapServer/30/query",
+    "params": {
+      "geometry": "-108.5,41.52,-106.65,42.55",
+      "geometryType": "esriGeometryEnvelope",
+      "inSR": 4326,
+      "spatialRel": "esriSpatialRelIntersects"
+    },
+    "authority": "USGS The National Map / U.S. Census Bureau / U.S. Forest Service",
+    "notes": "Reference transportation geometry; names do not prove current ownership, operating rights, track condition, or interchange authority.",
+    "horizontal_accuracy_m": null,
+    "extraction_precision": "native service geometry rounded to six decimals"
+  },
+  {
+    "name": "wamsutter_connecting_roads",
+    "endpoint": "https://carto.nationalmap.gov/arcgis/rest/services/transportation/MapServer/31/query",
+    "params": {
+      "geometry": "-108.5,41.52,-106.65,42.55",
+      "geometryType": "esriGeometryEnvelope",
+      "inSR": 4326,
+      "spatialRel": "esriSpatialRelIntersects"
+    },
+    "authority": "USGS The National Map / U.S. Census Bureau / U.S. Forest Service",
+    "notes": "Reference transportation geometry; names do not prove current ownership, operating rights, track condition, or interchange authority.",
+    "horizontal_accuracy_m": null,
+    "extraction_precision": "native service geometry rounded to six decimals"
+  },
+  {
+    "name": "wamsutter_hydro",
+    "endpoint": "https://hydro.nationalmap.gov/arcgis/rest/services/nhd/MapServer/4/query",
+    "params": {
+      "geometry": "-108.5,41.52,-106.65,42.55",
+      "geometryType": "esriGeometryEnvelope",
+      "inSR": 4326,
+      "spatialRel": "esriSpatialRelIntersects"
+    },
+    "authority": "USGS National Hydrography Dataset",
+    "notes": "Hydrography context; not a floodplain, wetland, or navigability determination.",
+    "horizontal_accuracy_m": null,
+    "extraction_precision": "native service geometry rounded to six decimals"
+  },
+  {
+    "name": "wamsutter_fra_rail",
+    "endpoint": "https://services.arcgis.com/xOi1kZaI0eWDREZv/arcgis/rest/services/NTAD_North_American_Rail_Network_Lines/FeatureServer/0/query",
+    "params": {
+      "geometry": "-108.15,41.6,-107.80,41.75",
+      "geometryType": "esriGeometryEnvelope",
+      "inSR": 4326,
+      "spatialRel": "esriSpatialRelIntersects"
+    },
+    "authority": "Federal Railroad Administration / Bureau of Transportation Statistics",
+    "notes": "FRA reference railroad ownership and topology, no fictional interchange rights.",
+    "horizontal_accuracy_m": null,
+    "extraction_precision": "native service geometry rounded to six decimals"
+  },
+  {
+    "name": "wyoming_waterbodies",
+    "endpoint": "https://hydro.nationalmap.gov/arcgis/rest/services/nhd/MapServer/12/query",
+    "params": {
+      "geometry": "-108.38,41.62,-107.82,42.30",
+      "geometryType": "esriGeometryEnvelope",
+      "inSR": 4326,
+      "spatialRel": "esriSpatialRelIntersects",
+      "maxAllowableOffset": 2e-05
+    },
+    "authority": "USGS National Hydrography Dataset",
+    "notes": "Waterbody screening polygons; not wetlands, floodplain or site permission.",
+    "horizontal_accuracy_m": null,
+    "extraction_precision": "Six decimals and 0.00002 degree generalization; screening only"
+  },
+  {
+    "name": "wyoming_local_roads",
+    "endpoint": "https://cartowfs.nationalmap.gov/arcgis/rest/services/transportation/MapServer/7/query",
+    "params": {
+      "geometry": "-108.38,41.62,-107.82,42.30",
+      "geometryType": "esriGeometryEnvelope",
+      "inSR": 4326,
+      "spatialRel": "esriSpatialRelIntersects",
+      "maxAllowableOffset": 2e-05
+    },
+    "authority": "USGS The National Map / U.S. Census Bureau",
+    "notes": "Reference local roads near approved Red Wash anchor; no access rights inferred.",
+    "horizontal_accuracy_m": null,
+    "extraction_precision": "Six decimals and 0.00002 degree generalization; screening only"
+  }
+]
