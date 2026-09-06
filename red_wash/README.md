@@ -1,64 +1,99 @@
 # Red Wash Transaction and Operating Record
 
-**Record:** `SH-PS-RW-TOR-001`  
-**Version:** 1.0.0  
-**Current through:** 2026-08-31  
-**Classification:** public synthetic diegetic company record
+**Record:** `SH-PS-RW-TOR-001`
+**Version:** 1.0.0
+**Synthetic calibration through:** 2026-08-31
+**Canon reconciled through:** 2026-09-05
+**Classification:** `PUBLIC_SYNTHETIC_DIEGETIC`
+**Epistemic mode:** `RETROSPECTIVE_CURRENT_CANON`
 
-> **Synthetic diegetic record.** This package belongs to the fictional Sable Harbor enterprise. Agency names, legal frameworks and external benchmarks are real where cited; Red Wash, its parties, permits, contracts, facts and financial records are synthetic unless explicitly identified as an external source.
+> This package belongs to the fictional Sable Harbor enterprise. Agency names, legal frameworks,
+> and external benchmarks are real only where identified in the source register. Red Wash parties,
+> permits, contracts, measurements, generated rows, and financial records are synthetic unless a
+> record explicitly says otherwise.
 
-Red Wash is Sable Harbor's definitive acquisition and commodity-operating case. It supports M&A, finance, geology, mine planning, metallurgy, environmental, safety, legal, governance, assurance, data-lineage and quantitative work from one causal record.
+This is Sable Harbor's controlled public Red Wash acquisition and commodity-operating case. The
+owner has approved the selected transaction and 2026 operating baseline. Approval fixes the case
+used for this publication; it does not turn generated evidence into observed or audited history.
 
 ## Operating chain
 
-> Geology → resource basis → mine plan → ore → mill recovery → product lots → inventory → uranium contracts → custody → invoice → cash → financial statements → valuation.
+> Geology → resource basis → mine plan → ore → mill recovery → product → inventory → contracts →
+> custody → invoice → cash → statements and valuation.
 
-## Corpus
+The limited ARU/BS&T bridge follows a separate causal chain:
 
-The controlled source package contains:
+> 2025 carrier-market pressure → fictional carrier consolidation → Red Wash lane-capacity loss →
+> preserved annual delivery → replacement-carrier search → rail mapping → ARU/BS&T discovery →
+> gated interface screen.
 
-- twenty-plus years of ownership, drilling, assay, resource, operating and financial history;
-- a deterministic 240-hole collar file, 720 downhole surveys and 2,400 assay intervals;
-- resource-estimate evolution and the acquisition operating basis;
-- 2025–2026 monthly mine, mill, product, inventory, contract and delivery records;
-- federal, Wyoming, MSHA, radiation, air, water, tailings and reclamation records;
-- environmental monitoring, safety events and a sixty-item maintenance backlog;
-- the complete 2025 sale chronology and principal transaction instruments;
-- twenty-five integrated diligence findings and quality-of-earnings reconciliation;
-- four 2026 uranium arrangements totaling 500,000 pounds;
-- purchase-price allocation, ARO, chart of accounts, journals, trial balance and statements;
-- a 176-item virtual-data-room index;
-- deterministic SQLite and spreadsheet-generation tooling;
-- approved Pale Sun and Red Wash identities and the approved mine maps;
-- a private Alexandria Control companion held outside this public repository.
+ARU was not a pre-existing Red Wash vendor, carried no Red Wash material in 2025, and receives no
+automatic uranium-custody authority. The $15 million interface amount is an unbooked preliminary
+screen. The complete ARU transaction and operating case remains open and outside this package.
 
-## Primary navigation
+## Source, generated, and release boundaries
+
+- `source/` contains the three manually controlled input records.
+- `generated/` is an ignored build directory rebuilt from empty by the canonical generator; its
+  27 CSV datasets ship in the verified release artifact rather than as self-referential source.
+- `dist/` is an ignored build directory containing the deterministic SQLite database and database
+  manifest; CI stages the broader release artifact from an explicit public allowlist.
+- Unexpected source or generated files are rejected; stale files cannot satisfy validation.
+- The generation manifest's RFC3339 `built_at` is deterministically normalized from the controlled
+  `prepared_at` date to `00:00:00Z`; it is a reproducibility coordinate, not wall-clock execution
+  time. `REQUIRES_EXACT_RELEASE_MANIFEST_BINDING` remains a policy state until a post-merge release
+  manifest supplies the exact commit-binding evidence.
+
+## Navigation
 
 | Area | Entry point |
 |---|---|
-| Controlling decisions | `../docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05.md` |
+| Controlling transaction/operating record | `../docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05.md` |
+| Decision-register closeout | `../docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-05_RED_WASH.md` |
 | Integrated casebook | `RED_WASH_CASEBOOK.md` |
-| Structured operating record | `record.json` |
-| Quantitative input register | `data/assumption_register.csv` |
-| Diligence findings | `data/diligence_findings.csv` |
-| Contract book | `data/uranium_contracts.csv` |
-| Financial statements | `data/financial_statements_2026.csv` |
-| Reality anchors | `data/source_register.csv` |
-| Corpus generator | `tools/generate_red_wash_corpus.py` |
+| Structured transaction/operating record | `../docs/structured/red_wash_transaction_operating_record.json` |
+| ARU/BS&T interface record | `logistics/ARU_BST_INTERFACE_AND_DEPENDENCY_RECORD.md` |
+| Structured ARU/BS&T bridge | `../docs/structured/aru_bst_red_wash_bridge.json` |
+| Controlled core input | `source/core_operating_data.json` |
+| Controlled bridge input | `source/aru_bst_bridge.json` |
+| External evidence register | `source/external_source_register.csv` |
+| Canonical generator | `tools/build_red_wash_package.py` |
+| Compatibility entry point | `tools/generate_red_wash_corpus.py` |
 | Validator | `tools/validate_red_wash_record.py` |
 | Visual control | `../assets/brand/red_wash_visual_manifest.json` |
 
-## Evidence states
+## Authority and evidence states
 
-- `LOCKED` — accepted Sable Harbor canon;
-- `LOCKED WORKING CASE` — accepted quantitative operating case, subject to controlled future revision rather than silent drift;
-- `DERIVED` — mechanical output from identified inputs;
-- `SUPPORTED ASSUMPTION` — reality-anchored synthetic model input;
-- `SYNTHETIC OPERATING RECORD` — diegetic evidence generated inside the case universe;
-- `OPEN` — intentionally unresolved.
+Canon-document decisions use the repository's `LOCKED`, `PROVISIONAL`, `OPEN`, and supersession
+vocabulary. Machine records preserve separate finance `fact_state` and constitutional
+`epistemic_state` fields. In particular:
 
-Generated volume does not create canon. The controlling Markdown and structured record govern.
+- an owner-approved selected case may be `LOCKED` as a decision;
+- an input inside that case may remain `SCENARIO_INPUT`, `MODEL_PROPOSED`, or
+  `PROVISIONAL_ASSUMPTION`;
+- generated rows remain `SYNTHETIC_INSTANCE`;
+- arithmetic and accounting outputs remain `DERIVED`;
+- cited real-world observations remain `EXTERNAL_RESEARCH` with dates and limitations;
+- unresolved ARU implementation details remain `OPEN`.
+
+There is no `ACTUAL` layer in this package. January–August 2026 rows are shared synthetic
+calibration; September–December rows are selected synthetic-scenario forecasts.
+
+## Visual originals
+
+The approved Pale Sun logo, Red Wash logo, site overview, and underground plan are present at their
+canonical paths and verified against the exact hashes in the visual manifest. They must not be
+recompressed or replaced. Any derivative uses a different filename and independent provenance.
+
+| Approved original | Repository view |
+|---|---|
+| Pale Sun logo | [![Pale Sun approved canonical logo](../assets/brand/logos/pale_sun__canonical.png)](../assets/brand/logos/pale_sun__canonical.png) |
+| Red Wash logo | [![Red Wash approved canonical logo](../assets/brand/logos/red_wash__canonical.png)](../assets/brand/logos/red_wash__canonical.png) |
+| Red Wash site overview | [![Red Wash approved site overview](../assets/brand/maps/red_wash__site_overview.png)](../assets/brand/maps/red_wash__site_overview.png) |
+| Red Wash underground plan | [![Red Wash approved underground plan](../assets/brand/maps/red_wash__underground_plan.png)](../assets/brand/maps/red_wash__underground_plan.png) |
 
 ## Public/private boundary
 
-This public package contains company evidence and the decision case. Hidden physical/economic truth, seller-knowledge truth, actor epistemic state, expected detections, scoring, counterfactual outcomes and the private teaching note remain in `SABLEHARBOR-ALEXANDRIA-CONTROL/scenarios/red_wash/` and are cryptographically bound to the public source commit.
+This repository contains company-facing evidence and decisions only. The private Alexandria case
+may bind to the exact final public merge commit after this record reaches `main`; no statement here
+claims that binding already exists. Nonpublic evaluation material does not belong in this package.

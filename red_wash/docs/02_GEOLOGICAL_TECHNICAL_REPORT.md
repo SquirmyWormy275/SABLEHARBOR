@@ -4,7 +4,7 @@
 
 ## Property and setting
 
-Red Wash lies on the high plains of Carbon County, Wyoming, at the fictional site reference 42.3127° N, 106.9213° W and approximately 6,420 feet elevation. The property covers roughly 7,480 acres with approximately 620 acres of current disturbance.
+The locked location is Wyoming. The selected synthetic site scenario places Red Wash on the high plains of Carbon County at 42.3127° N, 106.9213° W and approximately 6,420 feet elevation, across roughly 7,480 acres with approximately 620 acres of current disturbance. Those site-specific values are scenario details rather than separately locked geographic canon.
 
 Mineralization is hosted by permeable lower Eocene fluvial sandstone. Uranium precipitated along reduction–oxidation interfaces where oxidized, uranium-bearing groundwater encountered reducing carbonaceous material and sulfides. The deposit is expressed as stacked, sinuous lenses rather than one continuous sheet. That geometry explains both the mine's selectivity and the historic tendency for broad models to overstate continuity.
 
@@ -24,7 +24,7 @@ Diligence re-blocking addressed coordinate/survey lineage, density, capping/comp
 
 ## Resource basis
 
-The accepted acquisition basis is 2.5 million short tons at 0.170% U3O8, containing 8.5 million pounds and supporting 7.82 million recoverable pounds at 92% modeled recovery. A further 0.9 million tons at 0.145% is inferred exploration inventory and contributes no base-case acquisition value or scheduled production.
+The selected supported-estimate acquisition basis is 2.5 million short tons at 0.170% U3O8, containing 8.5 million pounds and supporting 7.82 million recoverable pounds at 92% modeled recovery. A further 0.9 million tons at 0.145% is inferred exploration inventory and contributes no base-case acquisition value or scheduled production.
 
 This is an internal acquisition and operating basis, not a public S-K 1300 technical report. Geological inventory, mineable schedule, metallurgical recovery and valuation remain separate concepts.
 

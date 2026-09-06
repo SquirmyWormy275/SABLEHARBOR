@@ -6,7 +6,7 @@
 
 The 2026 plan schedules 175,000 short tons through a nominal 600-ton-per-day mill. Nameplate is not treated as continuous annual throughput. Planned availability includes maintenance shutdowns, development constraints, environmental work and deliberate rehabilitation.
 
-The package separates production drifts, development footage, backfill and geologic domain. Actual records run through 31 August 2026; September–December records are management forecast.
+The package separates production drifts, development footage, backfill and geologic domain. January–August records are shared `SYNTHETIC_CALIBRATION` rows; September–December records are `MANAGEMENT_FORECAST`. Neither layer is observed or audited historical actual.
 
 ## Workforce
 

@@ -1,8 +1,9 @@
 # SABLE HARBOR — ORGANIZATION CHART GOVERNANCE
 
-**Version:** 0.2.0  
-**Canonical date:** August 31, 2026  
-**Status:** Derived-document governance  
+**Version:** 0.3.0
+**Canonical date:** August 31, 2026
+**Canon reviewed through:** September 5, 2026
+**Status:** Derived-document governance
 **Scope:** Repository README, repository documentation, and public wiki organization diagrams
 
 ## 1. Authority order
@@ -11,11 +12,12 @@ Organization charts summarize accepted canon. They do not create canon by visual
 
 1. detailed Blackridge canon, when present, for Blackridge-specific facts;
 2. `SABLE_HARBOR_CANONICAL_ARCHITECTURE_HANDOVER.md` for inherited Sable Harbor context;
-3. `SABLE_HARBOR_CORPORATE_LORE_CANON_v0.2.md` for the reconciled corporate-lore layer;
-4. `DECISION_REGISTER.md` and the continuity audit;
-5. `ORGANIZATION_MAP_REGISTER.json`;
-6. repository diagrams;
-7. wiki reproductions and summaries.
+3. `SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md` for the reconciled corporate-lore layer;
+4. later controlled decision addenda and closeout records, including the September 3 headquarters and September 5 Red Wash records;
+5. `DECISION_REGISTER.md` and the continuity audit;
+6. `ORGANIZATION_MAP_REGISTER.json`;
+7. repository diagrams;
+8. wiki reproductions and summaries.
 
 A chart that conflicts with a controlling source must be corrected. It does not supersede canon merely because it is easier to read.
 
@@ -90,9 +92,28 @@ The arrow's direction indicates the direction of the named relationship, not ran
 
 ## 6. Legal and operating language
 
-The canon states that Red Wash operates through a dedicated legal operating company while Pale Sun remains its strategic/business-line identity. Exact entity name, suffix, jurisdiction, financing, and transaction chain remain OPEN. Charts must preserve both truths.
+The canon states that Red Wash operates through a dedicated legal operating company while Pale Sun
+remains its strategic/business-line identity. The selected case locks $28.0 million cash
+consideration, $3.0 million escrow, $0.5 million holdback, no transaction debt, no goodwill, and
+the opening purchase-accounting basis. The seller's and operating company's exact legal names,
+suffixes, and jurisdictions—and detailed legal, ownership, liability-allocation, intercompany, and
+governance mechanics—remain OPEN. Charts must preserve all of these states.
 
-Likewise, Sable Harbor acquired ARU and ARU remains a distinct operating company during integration, but the exact ownership chain between Sable Harbor, ARU, and BS&T remains open.
+Likewise, Sable Harbor acquired and controls ARU, and BS&T is a wholly owned legal
+subsidiary beneath ARU. ARU remains a distinct operating company during integration.
+Exact legal names, suffixes, jurisdictions, tax elections, and implementation documents
+remain OPEN; charts must not confuse those open mechanics with the locked ownership shape.
+
+The approved 2026 Red Wash selected case establishes a 140-FTE envelope: 12 FTE in the Pale Sun
+business layer and 128 FTE at the Red Wash site. A chart may render those source-backed synthetic
+case values if it labels them as case inputs and does not infer exact legal employers, reporting
+lines, titles, or an enterprise-wide total.
+
+The limited Red Wash logistics bridge may show that operating analysis surfaced ARU and BS&T. It
+must also show or state that there was no pre-existing commercial relationship, qualified external
+carriers handled all 2025 movements, ARU/BS&T was not a turnkey uranium carrier, and direct custody
+remains gated. The bridge may not invent the full ARU acquisition, route, terminal, fleet,
+workforce, management, financial, service-rate, or uranium-custody case.
 
 ## 7. Wiki synchronization
 

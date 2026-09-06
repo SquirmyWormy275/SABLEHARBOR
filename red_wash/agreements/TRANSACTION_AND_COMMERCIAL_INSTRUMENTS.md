@@ -1,15 +1,19 @@
 # RED WASH TRANSACTION AND COMMERCIAL INSTRUMENTS
 
-**Classification:** PUBLIC SYNTHETIC DIEGETIC  
+**Classification:** PUBLIC SYNTHETIC DIEGETIC
 **Related record:** `SH-PS-RW-TOR-001`
 
-> The instruments below are fictional but are structured to preserve the commercial, legal, environmental, title, regulatory, employee, and source-record issues established in the transaction case.
+> The instruments below are fictional but are structured to preserve the commercial, legal, environmental, title, regulatory, employee, and source-record issues established in the transaction case. `Northstar Resources` is a provisional seller display name; exact seller and Red Wash operator legal names, suffixes, and jurisdictions remain open.
+
+The transaction sequence and exact July 18, 2025 close are selected canon. Other
+day-level instrument dates are synthetic scenario precision unless a controlling
+record separately locks one.
 
 ---
 
 ## 1. Mutual Nondisclosure Agreement — October 18, 2024
 
-Parties: Sable Harbor and Northstar Resources (Wyoming) LLC.
+Parties: Sable Harbor and the seller using the provisional display name Northstar Resources.
 
 Confidential information includes native files and metadata, superseded models, operational knowledge, regulatory correspondence, contracts, financial records, the transaction's existence, and information communicated orally and later identified. No summary or management presentation supersedes the underlying source records. Access is limited to representatives with need to know. Neither party is obligated to transact, and no representation of accuracy arises except in a definitive agreement. Wyoming law governs.
 
@@ -65,7 +69,7 @@ Northstar transfers all equity interests of the dedicated Red Wash operating com
 
 ### Consideration and liabilities
 
-Buyer pays $28.0 million cash, funds the $3.0 million escrow, and retains the $0.5 million holdback. Buyer assumes only scheduled liabilities, including the $16.0 million ARO and $2.5 million other liabilities. Transaction debt and goodwill are zero.
+Buyer pays $28.0 million cash consideration, with $3.0 million administered through the environmental/title escrow and $0.5 million retained as a holdback under the modeled risk-allocation mechanics. Those amounts are disclosed separately and are not added to consideration a second time. Buyer assumes only scheduled liabilities, including the $16.0 million ARO and $2.5 million other liabilities. Transaction debt and goodwill are zero.
 
 ### Representations
 
@@ -140,6 +144,6 @@ Pricing may be fixed, base-escalated, market-related with floor/ceiling, or disc
 
 ## 14. Qualified Carrier and Custody Agreement
 
-A fictional qualified carrier, High Plains Nuclear Logistics LLC, performs transport. Red Wash retains shipper obligations, packaging, release, marks/labels, shipping papers, emergency information, carrier qualification, and receiver authorization. Carrier owns transport execution and its timestamp. The conversion facility owns receiving and final-assay evidence. Differences among source timestamps remain visible.
+A qualified external carrier performs transport throughout 2025. Any carrier name in a generated operating record is a synthetic instance, not a canonized counterparty. Red Wash retains shipper obligations, packaging, release, marks/labels, shipping papers, emergency information, carrier qualification, and receiver authorization. Carrier owns transport execution and its timestamp. The conversion facility owns receiving and final-assay evidence. Differences among source timestamps remain visible.
 
-ARU may provide scheduling, terminal-interface analysis, and later qualified services only after a separate operating, legal, safety, regulatory, insurance, and custody gate. The agreement creates no automatic ARU carrier or licensee authority.
+ARU/BS&T had no pre-existing Red Wash relationship and is not inserted into a 2025 shipment. It may support later mapping or interface analysis, and may provide service only after every applicable operating, legal, safety, regulatory, insurance, customer, and custody gate. The agreement creates no automatic ARU carrier, shipper, licensee, or custody authority.

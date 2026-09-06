@@ -1,5 +1,0 @@
-contract_id,buyer,origin,committed_lb,pricing_type,modeled_price_usd_lb,delivery_point,assignability
-UCA-2019-04,Prairie States Electric Cooperative,inherited,150000,base-escalated utility term,61,licensed conversion facility Illinois,consent obtained at closing
-UCA-2024-11,Great Basin Nuclear Supply Pool,inherited,150000,market-related utility term collar,72,licensed conversion facility Illinois,change-of-control notice satisfied
-UCA-2025-03,Heartland Atomic Power LLC,inherited and renegotiated,125000,fixed-price term,80,licensed conversion facility Illinois,consent obtained at closing
-SPOT-2026-01,Continental Nuclear Trading LLC,Pale Sun,75000,discretionary placement,87,licensed conversion facility Illinois,not applicable

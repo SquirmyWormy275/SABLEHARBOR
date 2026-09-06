@@ -35,7 +35,10 @@ flowchart TB
     ARU --- CUSTOMERS
 ```
 
-The map does not invent routes, terminals, equipment counts, rolling stock, interchange relationships, workforce, customers, acquisition terms, or the exact legal relationship between ARU and BS&T.
+The map preserves the locked shape: Sable Harbor controls ARU and BS&T is a wholly
+owned legal subsidiary beneath ARU. It does not invent routes, terminals, equipment
+counts, rolling stock, interchange relationships, workforce, customers, acquisition
+terms, or the OPEN legal suffix, jurisdiction, tax, and implementation mechanics.
 
 ## Advisory's return
 

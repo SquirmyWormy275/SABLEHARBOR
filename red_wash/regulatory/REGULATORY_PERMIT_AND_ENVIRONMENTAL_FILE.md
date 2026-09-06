@@ -1,6 +1,6 @@
 # RED WASH REGULATORY, PERMIT, ENVIRONMENTAL, SAFETY, AND CLOSURE FILE
 
-**Classification:** PUBLIC SYNTHETIC DIEGETIC  
+**Classification:** PUBLIC SYNTHETIC DIEGETIC
 **Related record:** `SH-PS-RW-TOR-001`
 
 > The permits and identifiers below are fictional. The governing federal and Wyoming frameworks are real and constrain the synthetic record.
@@ -69,7 +69,7 @@ The synthetic Environmental Assessment evaluates:
 
 Mitigation includes phased disturbance, topsoil handling, stormwater controls, dust suppression, groundwater and underdrain monitoring, cultural-resource avoidance, wildlife timing measures, transport routing, progressive reclamation, financial assurance, and adaptive response.
 
-The synthetic FONSI does not represent federal approval of the actual fictional facts; it is part of the diegetic record.
+The synthetic FONSI does not represent federal approval of the modeled site facts; it is part of the diegetic record.
 
 ---
 

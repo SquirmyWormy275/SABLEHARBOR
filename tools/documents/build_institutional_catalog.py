@@ -20,6 +20,10 @@ def field(text: str, name: str, default: str = "") -> str:
 
 
 def category(path: str) -> str:
+    if path == "docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05.md":
+        return "Red Wash transaction and operating record"
+    if path.startswith("red_wash/logistics/"):
+        return "Red Wash logistics dependency record"
     if "/committees/" in path:
         return "committee charter"
     if path.startswith("docs/governance/"):
@@ -33,6 +37,10 @@ def category(path: str) -> str:
 
 def inferred_owner(path: str) -> str:
     name = Path(path).stem
+    if path == "docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05.md":
+        return "Pale Sun operating authority"
+    if path.startswith("red_wash/logistics/"):
+        return "Pale Sun / Red Wash"
     if path.startswith("docs/governance/"):
         return "Corporate Governance"
     if any(x in name for x in ("ORIENTATION", "EIB", "CANON", "SEMAPHORE")):
@@ -57,7 +65,19 @@ def main() -> None:
     objects = []
     for artifact in manifest["artifacts"]:
         source = artifact["source"]
-        text = (ROOT / source).read_text()
+        source_path = ROOT / source
+        publication_path = ROOT / artifact["publication"]
+        for path in (source_path, publication_path):
+            if not path.is_file():
+                raise SystemExit(f"controlled artifact missing: {path.relative_to(ROOT)}")
+        source_sha256 = hashlib.sha256(source_path.read_bytes()).hexdigest()
+        publication_sha256 = hashlib.sha256(publication_path.read_bytes()).hexdigest()
+        if source_sha256 != artifact["source_sha256"]:
+            raise SystemExit(f"controlled source hash drift: {source}")
+        if publication_sha256 != artifact["sha256"]:
+            raise SystemExit(f"controlled publication hash drift: {artifact['publication']}")
+
+        text = source_path.read_text()
         title_match = re.search(r"^#\s+(.+)$", text, re.M)
         doc_id = field(text, "Document ID")
         if not title_match or not doc_id:
@@ -74,16 +94,20 @@ def main() -> None:
             "status": field(text, "State", field(text, "Status", "CONTROLLED")),
             "source": source,
             "publication": artifact["publication"],
-            "source_sha256": artifact["source_sha256"],
-            "publication_sha256": artifact["sha256"],
+            "source_sha256": source_sha256,
+            "publication_sha256": publication_sha256,
             "related_doctrines": related,
             "cross_references": cross_refs,
             "search_text": searchable,
         })
+    object_ids = [obj["id"] for obj in objects]
+    if len(object_ids) != len(set(object_ids)):
+        raise SystemExit("controlled catalog contains duplicate document IDs")
+
     payload = {
         "catalog_id": "SH-ALX-CATALOG-001",
-        "version": "1.0.0",
-        "effective_date": "2026-09-02",
+        "version": "1.0.1",
+        "effective_date": "2026-09-05",
         "authority": "Derived from canonical Markdown and the controlled-publication manifest; not a parallel source of truth.",
         "objects": objects,
     }

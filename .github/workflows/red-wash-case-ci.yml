@@ -4,65 +4,242 @@ on:
   push:
     branches:
       - main
-      - feature/red-wash-transaction-operating-record-v2
     paths:
+      - 'RED_WASH.md'
       - 'red_wash/**'
+      - 'docs/canon/DECISION_REGISTER.md'
+      - 'docs/canon/CANON_CHANGELOG_v0.3.md'
       - 'docs/canon/*RED_WASH*'
       - 'docs/structured/red_wash_transaction_operating_record.json'
+      - 'docs/structured/aru_bst_red_wash_bridge.json'
       - 'docs/finance/RED_WASH_FINANCE_PLATFORM_BRIDGE.md'
-      - 'config/finance/assumptions/red_wash_transaction_operating_record.yml'
+      - 'docs/organization/**'
+      - 'docs/governance/publications/SH-PS-RW-*.pdf'
       - 'assets/brand/red_wash_visual_manifest.json'
+      - 'assets/brand/logos/pale_sun__canonical.png'
+      - 'assets/brand/logos/red_wash__canonical.png'
+      - 'assets/brand/maps/red_wash__*.png'
       - '.github/workflows/red-wash-case-ci.yml'
   pull_request:
     paths:
+      - 'RED_WASH.md'
       - 'red_wash/**'
+      - 'docs/canon/DECISION_REGISTER.md'
+      - 'docs/canon/CANON_CHANGELOG_v0.3.md'
       - 'docs/canon/*RED_WASH*'
       - 'docs/structured/red_wash_transaction_operating_record.json'
+      - 'docs/structured/aru_bst_red_wash_bridge.json'
       - 'docs/finance/RED_WASH_FINANCE_PLATFORM_BRIDGE.md'
-      - 'config/finance/assumptions/red_wash_transaction_operating_record.yml'
+      - 'docs/organization/**'
+      - 'docs/governance/publications/SH-PS-RW-*.pdf'
       - 'assets/brand/red_wash_visual_manifest.json'
+      - 'assets/brand/logos/pale_sun__canonical.png'
+      - 'assets/brand/logos/red_wash__canonical.png'
+      - 'assets/brand/maps/red_wash__*.png'
+      - '.github/workflows/red-wash-case-ci.yml'
 
 permissions:
   contents: read
 
+concurrency:
+  group: red-wash-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+defaults:
+  run:
+    shell: bash --noprofile --norc -euo pipefail {0}
+
 jobs:
   build-and-validate:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - name: Check out exact source revision
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Set up Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
         with:
           python-version: '3.12'
-      - name: Build deterministic Red Wash source package
+      - name: Build deterministic Red Wash package
         run: python red_wash/tools/build_red_wash_package.py
-      - name: Validate Red Wash reconciliations
+      - name: Validate reconciliations, provenance, database, and visual hashes
         run: python red_wash/tools/validate_red_wash_record.py
       - name: Run Red Wash tests
         run: python -m unittest discover -s red_wash/tests -p 'test_*.py' -v
-      - name: Verify generated database
+      - name: Prove repeat build stability
         run: |
           python - <<'PY'
-          import sqlite3
+          import hashlib
+          import subprocess
           from pathlib import Path
-          db = Path('red_wash/dist/red_wash_transaction_operating_record_v1.sqlite3')
-          con = sqlite3.connect(db)
-          assert con.execute('PRAGMA integrity_check').fetchone()[0] == 'ok'
-          assert con.execute('SELECT COUNT(*) FROM drill_collars').fetchone()[0] == 240
-          assert con.execute('SELECT COUNT(*) FROM assays').fetchone()[0] == 2400
-          assert con.execute('SELECT COUNT(*) FROM virtual_data_room_index').fetchone()[0] == 176
-          con.close()
+
+          roots = (Path("red_wash/generated"), Path("red_wash/dist"))
+
+          def hashes():
+              return {
+                  path.as_posix(): hashlib.sha256(path.read_bytes()).hexdigest()
+                  for root in roots
+                  for path in sorted(root.iterdir())
+                  if path.is_file()
+              }
+
+          before = hashes()
+          subprocess.run(
+              ["python", "red_wash/tools/build_red_wash_package.py"], check=True
+          )
+          after = hashes()
+          if before != after:
+              changed = sorted(set(before) | set(after))
+              raise SystemExit(f"repeat build changed generated outputs: {changed}")
           PY
-      - name: Package generated source evidence
+      - name: Stage allowlisted public artifact for safety validation
         run: |
-          mkdir -p red-wash-release
-          cp -R red_wash red-wash-release/
+          mkdir -p red-wash-release/docs/canon
+          mkdir -p red-wash-release/docs/finance
+          mkdir -p red-wash-release/docs/governance/publications
+          mkdir -p red-wash-release/docs/structured
+          mkdir -p red-wash-release/assets/brand/logos
+          mkdir -p red-wash-release/assets/brand/maps
+          mkdir -p red-wash-release/red_wash/agreements
+          mkdir -p red-wash-release/red_wash/docs
+          mkdir -p red-wash-release/red_wash/generated
+          mkdir -p red-wash-release/red_wash/logistics
+          mkdir -p red-wash-release/red_wash/regulatory
+          mkdir -p red-wash-release/red_wash/source
+          mkdir -p red-wash-release/red_wash/dist
+          mkdir -p red-wash-release/red_wash/tests
+          mkdir -p red-wash-release/red_wash/tools
+          cp red_wash/README.md red_wash/RED_WASH_CASEBOOK.md red_wash/TRANSACTION_OPERATING_RECORD.md red-wash-release/red_wash/
+          cp -R red_wash/agreements/. red-wash-release/red_wash/agreements/
+          cp -R red_wash/docs/. red-wash-release/red_wash/docs/
+          cp -R red_wash/generated/. red-wash-release/red_wash/generated/
+          cp -R red_wash/logistics/. red-wash-release/red_wash/logistics/
+          cp -R red_wash/regulatory/. red-wash-release/red_wash/regulatory/
+          cp -R red_wash/source/. red-wash-release/red_wash/source/
+          cp -R red_wash/dist/. red-wash-release/red_wash/dist/
+          cp red_wash/tests/*.py red-wash-release/red_wash/tests/
+          cp red_wash/tools/*.py red-wash-release/red_wash/tools/
           cp RED_WASH.md red-wash-release/
-          cp docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05.md red-wash-release/
-          cp docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-05_RED_WASH.md red-wash-release/
-          cp docs/structured/red_wash_transaction_operating_record.json red-wash-release/
-          cp assets/brand/red_wash_visual_manifest.json red-wash-release/
-      - uses: actions/upload-artifact@v4
+          cp docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05.md red-wash-release/docs/canon/
+          cp docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-05_RED_WASH.md red-wash-release/docs/canon/
+          cp docs/canon/RED_WASH_CLOSEOUT_CHANGELOG_2026-09-05.md red-wash-release/docs/canon/
+          cp docs/finance/RED_WASH_FINANCE_PLATFORM_BRIDGE.md red-wash-release/docs/finance/
+          cp docs/governance/publications/SH-PS-RW-LOG-001_v1.0.0.pdf red-wash-release/docs/governance/publications/
+          cp docs/governance/publications/SH-PS-RW-TOR-001_v1.0.0.pdf red-wash-release/docs/governance/publications/
+          cp docs/structured/red_wash_transaction_operating_record.json red-wash-release/docs/structured/
+          cp docs/structured/aru_bst_red_wash_bridge.json red-wash-release/docs/structured/
+          cp assets/brand/red_wash_visual_manifest.json red-wash-release/assets/brand/
+          cp assets/brand/logos/pale_sun__canonical.png red-wash-release/assets/brand/logos/
+          cp assets/brand/logos/red_wash__canonical.png red-wash-release/assets/brand/logos/
+          cp assets/brand/maps/red_wash__site_overview.png red-wash-release/assets/brand/maps/
+          cp assets/brand/maps/red_wash__underground_plan.png red-wash-release/assets/brand/maps/
+      - name: Verify staged artifact safety and write release manifest
+        env:
+          RED_WASH_EVENT_NAME: ${{ github.event_name }}
+          RED_WASH_GITHUB_REF: ${{ github.ref }}
+          RED_WASH_SOURCE_SHA: ${{ github.sha }}
+        run: |
+          python - <<'PY'
+          import hashlib
+          import json
+          import os
+          from pathlib import Path
+
+          root = Path("red-wash-release")
+          publication_source = Path("docs/governance/publication_manifest.json")
+          publication_manifest = json.loads(publication_source.read_text(encoding="utf-8"))
+          expected_publications = {
+              "docs/governance/publications/SH-PS-RW-LOG-001_v1.0.0.pdf",
+              "docs/governance/publications/SH-PS-RW-TOR-001_v1.0.0.pdf",
+          }
+          selected_publications = [
+              item
+              for item in publication_manifest["artifacts"]
+              if item["publication"] in expected_publications
+          ]
+          if {item["publication"] for item in selected_publications} != expected_publications:
+              raise SystemExit("publication manifest does not contain both Red Wash PDFs")
+          filtered_publication_manifest = {
+              "standard": publication_manifest["standard"],
+              "generated_for_version": publication_manifest["generated_for_version"],
+              "reproducibility": publication_manifest["reproducibility"],
+              "artifacts": selected_publications,
+          }
+          (root / "docs/governance/publication_manifest.json").write_text(
+              json.dumps(filtered_publication_manifest, indent=2, sort_keys=True) + "\n",
+              encoding="utf-8",
+          )
+          prohibited_names = {
+              ".env",
+              "credentials",
+              "credentials.json",
+              "id_rsa",
+              "id_ed25519",
+          }
+          files = []
+          for path in sorted(root.rglob("*")):
+              if path.is_symlink():
+                  raise SystemExit(f"release contains symlink: {path}")
+              if not path.is_file():
+                  continue
+              relative = path.relative_to(root).as_posix()
+              lower_name = path.name.lower()
+              if (
+                  lower_name in prohibited_names
+                  or lower_name.endswith((".key", ".pem", ".pyc", ".pyo"))
+                  or "__pycache__" in path.parts
+                  or ".git" in path.parts
+              ):
+                  raise SystemExit(f"release contains prohibited file: {relative}")
+              files.append(
+                  {
+                      "path": relative,
+                      "bytes": path.stat().st_size,
+                      "sha256": hashlib.sha256(path.read_bytes()).hexdigest(),
+                  }
+              )
+          if not files:
+              raise SystemExit("release staging directory is empty")
+          checksums = root / "SHA256SUMS.txt"
+          checksums.write_text(
+              "".join(f"{item['sha256']}  {item['path']}\n" for item in files),
+              encoding="utf-8",
+          )
+          files.append(
+              {
+                  "path": checksums.relative_to(root).as_posix(),
+                  "bytes": checksums.stat().st_size,
+                  "sha256": hashlib.sha256(checksums.read_bytes()).hexdigest(),
+              }
+          )
+          release_name = "red-wash-transaction-operating-record-v1.0.0"
+          is_release = (
+              os.environ["RED_WASH_EVENT_NAME"] == "push"
+              and os.environ["RED_WASH_GITHUB_REF"] == "refs/heads/main"
+          )
+          manifest = {
+              "artifact_state": "MERGED_MAIN_RELEASE" if is_release else "PULL_REQUEST_CANDIDATE",
+              "candidate_for": release_name,
+              "classification": "PUBLIC_SYNTHETIC_DIEGETIC",
+              "release": release_name if is_release else None,
+              "source_commit": os.environ["RED_WASH_SOURCE_SHA"],
+              "files": files,
+          }
+          (root / "release_manifest.json").write_text(
+              json.dumps(manifest, indent=2, sort_keys=True) + "\n",
+              encoding="utf-8",
+          )
+          PY
+      - name: Scan staged public content and binary containers
+        run: PYTHONPATH=src python scripts/check_public_safety.py red-wash-release
+      - name: Upload verified public release artifact from merged main
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
-          name: red-wash-transaction-operating-record
+          name: red-wash-transaction-operating-record-v1.0.0-${{ github.sha }}
           path: red-wash-release
           if-no-files-found: error
+          include-hidden-files: true
+          retention-days: 30

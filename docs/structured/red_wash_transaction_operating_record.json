@@ -3,48 +3,108 @@
   "title": "Red Wash Transaction and Operating Record",
   "version": "1.0.0",
   "decision_date": "2026-09-05",
-  "as_of_date": "2026-08-31",
+  "canon_effective_through": "2026-09-05",
+  "synthetic_calibration_through": "2026-08-31",
   "classification": "PUBLIC_SYNTHETIC_DIEGETIC",
-  "business_line": "Pale Sun",
-  "operating_asset": "Red Wash Mine",
-  "location": {
-    "county": "Carbon County",
-    "state": "Wyoming",
-    "latitude": 42.3127,
-    "longitude": -106.9213,
-    "elevation_ft": 6420
+  "record_origin": "PUBLIC_SYNTHETIC_DIEGETIC",
+  "actual_layer_present": false,
+  "projection_contract": {
+    "authoritative_operating_source": "red_wash/source/core_operating_data.json",
+    "authoritative_bridge_source": "red_wash/source/aru_bst_bridge.json",
+    "decision_addendum": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-05_RED_WASH.md",
+    "decision_record_id": "SH-PS-RW-DR-001",
+    "transaction_decision_ids": [
+      "RW-001",
+      "RW-002",
+      "RW-003",
+      "RW-004",
+      "RW-005",
+      "RW-006",
+      "RW-007",
+      "RW-008",
+      "RW-009",
+      "RW-010",
+      "RW-011",
+      "RW-012",
+      "RW-013",
+      "RW-014",
+      "RW-015",
+      "RW-016"
+    ],
+    "bridge_decision_ids": [
+      "RW-017",
+      "RW-018",
+      "RW-019",
+      "RW-020",
+      "RW-021",
+      "RW-022",
+      "RW-023",
+      "RW-024",
+      "RW-025"
+    ]
   },
-  "legal_structure": {
-    "parent": "Sable Harbor",
+  "period_roles": {
+    "2026-01_through_2026-08": "SYNTHETIC_CALIBRATION",
+    "2026-09_through_2026-12": "MANAGEMENT_FORECAST"
+  },
+  "identity": {
     "business_line": "Pale Sun",
-    "operating_company": "Red Wash Operating Company",
-    "seller": "Northstar Resources (Wyoming) LLC",
-    "implementation_note": "Formal suffix and jurisdiction remain implementation details."
+    "operating_asset": "Red Wash",
+    "product": "natural uranium concentrate reported as U3O8",
+    "state": "LOCKED",
+    "operating_company_legal_name": null,
+    "operating_company_legal_name_state": "OPEN",
+    "location": {
+      "state": "Wyoming",
+      "state_status": "LOCKED",
+      "site_specific_details_status": "SCENARIO"
+    }
+  },
+  "seller": {
+    "display_name": "Northstar Resources",
+    "display_name_state": "PROVISIONAL",
+    "legal_name": null,
+    "legal_name_state": "OPEN",
+    "jurisdiction": null,
+    "jurisdiction_state": "OPEN"
   },
   "transaction": {
+    "canon_state": "LOCKED",
+    "fact_state": "SCENARIO_INPUT",
     "close_date": "2025-07-18",
     "cash_consideration_usd": 28000000,
     "operating_asset_fair_value_usd": 42000000,
     "acquired_current_assets_usd": 4500000,
     "aro_assumed_usd": 16000000,
     "other_liabilities_assumed_usd": 2500000,
+    "net_identifiable_assets_usd": 28000000,
     "goodwill_usd": 0,
     "transaction_debt_usd": 0,
     "environmental_title_escrow_usd": 3000000,
     "holdback_usd": 500000,
     "h2_2025_stabilization_usd": 11000000,
     "capitalized_rehabilitation_usd": 8000000,
-    "repair_stabilization_expense_usd": 3000000
+    "repair_stabilization_expense_usd": 3000000,
+    "friction_preserved": [
+      "seller_retrade",
+      "sable_harbor_walk_away",
+      "changed_risk_allocation",
+      "return_to_transaction"
+    ]
   },
   "workforce_2026": {
-    "enterprise_total": 140,
+    "fact_state": "SCENARIO_INPUT",
+    "pale_sun_red_wash_total": 140,
     "red_wash_site": 128,
     "pale_sun_business_layer": 12
   },
   "mine_2026": {
+    "fact_state": "SCENARIO_INPUT_AND_DERIVED",
     "ore_tons": 175000,
     "head_grade_u3o8_pct": 0.17,
+    "head_grade_state": "SUPPORTED_ESTIMATE",
     "recovery_pct": 92.0,
+    "recovery_state": "SUPPORTED_ESTIMATE",
     "contained_lb": 595000,
     "produced_lb": 547400,
     "opening_finished_inventory_lb": 125000,
@@ -55,25 +115,79 @@
     "method": "selective drift-and-fill with cemented paste backfill"
   },
   "finance_2026": {
-    "revenue_usd": 36475000,
-    "weighted_realized_price_per_lb": 72.95,
+    "modeled_revenue_usd": 36475000,
+    "modeled_weighted_realized_price_per_lb": 72.95,
     "cash_production_cost_incurred_usd": 27950000,
     "sustaining_capex_usd": 4000000,
-    "rehab_capex_usd": 5000000,
+    "rehabilitation_capex_usd": 5000000,
     "dd_and_a_incurred_usd": 3500000,
+    "dd_and_a_state": "DERIVED",
     "production_mineral_taxes_usd": 2125000,
     "royalties_usd": 729500,
     "freight_assay_handling_usd": 600000,
+    "pale_sun_site_g_and_a_usd": 2800000,
+    "aro_accretion_usd": 1040000,
     "current_cost_closure_basis_usd": 25000000,
-    "opening_aro_usd": 16000000
+    "opening_aro_usd": 16000000,
+    "statement_outputs_state": "DERIVED"
+  },
+  "dd_and_a_model_2026": {
+    "method": "COMPOSITE_UNITS_OF_PRODUCTION",
+    "asset_basis_component_paths": [
+      "transaction.operating_assets_usd",
+      "transaction.capitalized_rehabilitation_usd"
+    ],
+    "recoverable_units_source_path": "resource_basis.recoverable_lb",
+    "production_units_source_path": "mine_2026.produced_u3o8_lb",
+    "rounding": "ROUND_HALF_UP_TO_WHOLE_USD",
+    "fact_state": "MODEL_PROPOSED",
+    "epistemic_state": "SUPPORTED_ESTIMATE",
+    "boundary": "Simplified selected-case composite units-of-production model; it does not allocate purchase-price classes or establish audited GAAP useful lives, tax basis, or DD&A."
+  },
+  "inventory_cost_assumptions_2026": {
+    "fact_state": "SCENARIO_INPUT",
+    "epistemic_state": "SUPPORTED_ESTIMATE",
+    "opening_finished_inventory_cash_cost_usd_lb": 45.0,
+    "opening_finished_inventory_dd_and_a_usd_lb": 5.5,
+    "income_tax_rate_pct": 18.0,
+    "other_working_capital_use_usd": 550000
   },
   "resource_basis": {
+    "epistemic_state": "SUPPORTED_ESTIMATE",
     "indicated_including_reserve_tons": 2500000,
     "indicated_grade_pct": 0.17,
     "contained_lb": 8500000,
+    "modeled_recovery_pct": 92.0,
     "recoverable_lb": 7820000,
     "inferred_tons": 900000,
     "inferred_grade_pct": 0.145,
-    "basis": "Internal acquisition and operating basis; not a public S-K 1300 reserve disclosure."
+    "inferred_in_base_value": false,
+    "disclosure_boundary": "Internal synthetic acquisition and operating basis; not a public S-K 1300 reserve disclosure."
+  },
+  "aru_bst_bridge": {
+    "record_id": "SH-PS-RW-LOG-001",
+    "structured_record": "docs/structured/aru_bst_red_wash_bridge.json",
+    "pre_existing_relationship": false,
+    "external_carriers_throughout_2025": true,
+    "annual_2025_revenue_impact_usd": 0,
+    "preliminary_interface_envelope_usd": 15000000,
+    "interface_envelope_booked": false,
+    "direct_uranium_custody_authorized": false,
+    "full_aru_case_state": "OPEN"
+  },
+  "source_records": [
+    "docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05.md",
+    "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-05_RED_WASH.md",
+    "red_wash/source/core_operating_data.json",
+    "red_wash/source/aru_bst_bridge.json",
+    "red_wash/source/external_source_register.csv",
+    "assets/brand/red_wash_visual_manifest.json"
+  ],
+  "superseded_exploratory_values": {
+    "revenue_usd": 24700000,
+    "generic_operating_cost_usd": 22300000,
+    "employees": 126,
+    "aro_usd": 18500000,
+    "state": "SUPERSEDED"
   }
 }

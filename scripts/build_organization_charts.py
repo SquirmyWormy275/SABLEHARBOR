@@ -3,15 +3,19 @@
 from __future__ import annotations
 
 from pathlib import Path
-from textwrap import dedent
 from xml.sax.saxutils import escape
 import json
-import re
 
 ROOT = Path(__file__).resolve().parents[1]
 ORG = ROOT / "docs" / "organization"
 ASSETS = ORG / "assets"
 ASSETS.mkdir(parents=True, exist_ok=True)
+
+SNAPSHOT_DATE = "2026-08-31"
+SNAPSHOT_DATE_DISPLAY = "August 31, 2026"
+CANON_REVIEW_DATE = "2026-09-05"
+CANON_REVIEW_DATE_DISPLAY = "September 5, 2026"
+PACKAGE_VERSION = "0.3.0"
 
 C = {
     "bg": "#F4F0E6", "paper": "#FFFFFF", "ink": "#122532", "navy": "#17384A",
@@ -273,17 +277,19 @@ def build_atlas() -> None:
 def build_pale_sun() -> None:
     b = [card(505, 105, 390, 122, "MARIANNE “MARI” VARELA", "Leads Pale Sun's operating thesis",
               "Protects Red Wash from becoming a science fair", accent=C["red"], status="LOCKED ROLE")]
-    b.append(unit_card(505, 300, 390, 130, "PALE SUN", "Uranium operating business",
-                       "Operation first; proving ground second", accent=C["red"]))
+    b.append(card(505, 300, 390, 140, "PALE SUN", "Uranium operating business\n12 FTE business layer — 2026 case",
+                  "Operation first; proving ground second", accent=C["red"],
+                  status="LOCKED / SYNTHETIC CASE"))
     b.append(connector(700, 227, 700, 300))
-    b.append(unit_card(505, 505, 390, 130, "RED WASH MINE", "Underground Wyoming uranium mine",
-                       "Owned and operated by Pale Sun", accent=C["red"]))
-    b.append(connector(700, 430, 700, 505, label="owns + operates", label_x=790, label_y=475))
-    b.append(card(160, 505, 270, 130, "COLE", "Red Wash site superintendent", "Surname OPEN; defined temporary stop authority", accent=C["gold"], status="LOCKED ROLE"))
-    b.append(connector(565, 570, 430, 570))
-    b.append(card(970, 505, 270, 130, "WALT SUTTER", "Retired geologist — external source", "Useful source; not employee and not oracle", accent=C["steel"], status="EXTERNAL"))
-    b.append(line(895, 570, 970, 570, dashed=True))
-    b.append(lines_text(50, 720, ["OPERATING INTERFACES — ACCESS THROUGH QUALIFICATION GATES"], "band"))
+    b.append(card(505, 515, 390, 140, "RED WASH MINE", "Underground Wyoming uranium mine\n128 FTE site — 2026 case",
+                  "Owned and operated by Pale Sun", accent=C["red"],
+                  status="LOCKED / SYNTHETIC CASE"))
+    b.append(connector(700, 440, 700, 515, label="owns + operates", label_x=790, label_y=485))
+    b.append(card(160, 515, 270, 140, "COLE", "Red Wash site superintendent", "Surname OPEN; defined temporary stop authority", accent=C["gold"], status="LOCKED ROLE"))
+    b.append(line(505, 585, 430, 585))
+    b.append(card(970, 515, 270, 140, "WALT SUTTER", "Retired geologist — external source", "Useful source; not employee and not oracle", accent=C["steel"], status="EXTERNAL"))
+    b.append(line(895, 585, 970, 585, dashed=True))
+    b.append(lines_text(50, 710, ["TECHNOLOGY AND RESEARCH INTERFACES — ACCESS THROUGH QUALIFICATION GATES"], "band"))
     interfaces = [
         (100, "CALEB HARGROVE", "Field qualification + operating boundary", C["green"]),
         (410, "FOUNDRY", "Representation + workflow", C["orange"]),
@@ -291,11 +297,22 @@ def build_pale_sun() -> None:
         (1030, "ATLAS MERIDIAN", "Decision support only", C["gold"]),
     ]
     for x, n, r, ac in interfaces:
-        b.append(card(x, 745, 270, 112, n, r, "Pale Sun operating accountability controls consequence", accent=ac, status="LOCKED INTERFACE"))
-        b.append(connector(700, 635, x+135, 745, dashed=True))
-    chart("pale-sun-red-wash-organization-2026.svg", 1400, 920, "PALE SUN / RED WASH — ORGANIZATION",
-          "Operating business and mine authority • Pale Sun first, proving ground second",
-          "Pale Sun organization chart showing Mari Varela, Red Wash, Cole, Walt Sutter and qualified interfaces.", "".join(b))
+        b.append(card(x, 735, 270, 112, n, r, "Pale Sun operating accountability controls consequence", accent=ac, status="LOCKED INTERFACE"))
+        b.append(connector(700, 655, x+135, 735, dashed=True))
+    b.append(lines_text(50, 920, ["TRANSPORT BOUNDARY AND LIMITED ARU / BS&T SCREEN"], "band"))
+    b.append(card(60, 945, 380, 140, "QUALIFIED EXTERNAL CARRIERS", "All Red Wash transport throughout 2025",
+                  "Shipment authority remains external unless later gates pass", accent=C["steel"],
+                  status="LOCKED TRANSPORT BOUNDARY"))
+    b.append(card(510, 945, 380, 140, "AMERICAN RESOURCE UTILITY", "Mapped diligence candidate — not turnkey",
+                  "No direct mine connection or suitable secure transload",
+                  accent=C["steel"], status="OPEN GATES / NO CUSTODY", dashed=True,
+                  fill=C["open"]))
+    b.append(card(960, 945, 380, 140, "BLOOD, SWEAT & TEARS RAILWAY", "ARU railway / short-line component",
+                  "No demonstrated uranium capability or custody", accent=C["red"],
+                  status="OPEN GATES / NO CUSTODY", dashed=True, fill=C["open"]))
+    chart("pale-sun-red-wash-organization-2026.svg", 1400, 1135, "PALE SUN / RED WASH — ORGANIZATION",
+          "140 FTE selected case: 12 Pale Sun + 128 site • external carrier remains authoritative",
+          "Pale Sun organization chart showing the approved 2026 workforce split, site authority, qualified external-carrier boundary, limited ARU and BS&T screen, and technology qualification gates.", "".join(b))
 
 
 def build_cradle() -> None:
@@ -333,18 +350,18 @@ def build_aru() -> None:
     b.append(connector(700, 233, 700, 310))
     b.append(lines_text(50, 500, ["LOCKED OPERATING COMPONENT AND ESTATE"], "band"))
     b.append(unit_card(190, 525, 360, 135, "BLOOD, SWEAT & TEARS RAILWAY", "ARU railway / short-line component",
-                       "Exact legal name, routes and asset count OPEN", accent=C["red"]))
+                       "Wholly owned legal subsidiary; suffix, routes + assets OPEN", accent=C["red"]))
     b.append(unit_card(850, 525, 360, 135, "LEGACY LOGISTICS OPERATIONS", "Customers, dispatch, terminals, equipment + know-how",
                        "Detailed structure and footprint OPEN", accent=C["steel"], open_state=True))
     b.append(connector(700, 428, 370, 525))
     b.append(connector(700, 428, 1030, 525, dashed=True))
     b.append(lines_text(50, 735, ["SABLE HARBOR INTERFACES"], "band"))
-    b.append(card(210, 760, 300, 112, "PALE SUN", "Logistics + custody constraint", "Acquisition rationale", accent=C["red"], status="LOCKED INTERFACE"))
+    b.append(card(210, 760, 300, 112, "RED WASH INTERFACE SCREEN", "Pale Sun logistics dependency catalyst", "No direct connection or automatic custody", accent=C["red"], status="LOCKED BOUNDARY"))
     b.append(card(550, 760, 300, 112, "FOUNDRY", "Representation + workflow", "May not overstate source certainty", accent=C["orange"], status="LOCKED INTERFACE"))
     b.append(card(890, 760, 300, 112, "CALEB / OPERATIONS", "Immediate operating consequence", "Technical and capital authority remain distinct", accent=C["green"], status="LOCKED RULE"))
     chart("aru-bst-organization-2026.svg", 1400, 930, "ARU / BS&T — ORGANIZATION",
-          "Distinct acquired operator • detailed leadership, footprint and legal structure remain open",
-          "American Resource Utility organization chart showing its open operating leadership and BS&T railway component.", "".join(b))
+          "Distinct acquired operator • Red Wash interface remains bounded, screened and custody-gated",
+          "American Resource Utility organization chart showing its open operating leadership, BS&T railway component, and limited Red Wash interface boundary.", "".join(b))
 
 
 def build_original_eight() -> None:
@@ -386,7 +403,7 @@ def build_original_eight() -> None:
 
 PAGES = {
     "2026_OPERATING_TOPOLOGY.md": ("SABLE HARBOR — ENTERPRISE ORGANIZATION", "enterprise-organization-2026.svg", "SH-ORG-001",
-        "Functional enterprise organization: company-wide authorities, operating lines and known ownership/component relationships."),
+        "August 31 functional operating-line baseline; later headquarters institutions remain controlled by the September 3 closeout."),
     "2026_LEADERSHIP_AND_AUTHORITY_MAP.md": ("SABLE HARBOR — LEADERSHIP & AUTHORITY", "leadership-authority-2026.svg", "SH-ORG-002",
         "Named leadership and domain-authority map. Edges and placement do not create direct-report relationships."),
     "FOUNDRY_FIELD_ORGANIZATION.md": ("FOUNDRY / FOUNDRY FIELD — ORGANIZATION", "foundry-field-organization-2026.svg", "SH-ORG-003",
@@ -396,11 +413,11 @@ PAGES = {
     "ATLAS_MERIDIAN_BRIDGE_ORGANIZATION.md": ("ATLAS MERIDIAN — BRIDGE ORGANIZATION", "atlas-meridian-bridge-2026.svg", "SH-ORG-005",
         "Cross-functional transition organization for repeatability and controlled commercialization."),
     "PALE_SUN_RED_WASH_ORGANIZATION.md": ("PALE SUN / RED WASH — ORGANIZATION", "pale-sun-red-wash-organization-2026.svg", "SH-ORG-006",
-        "Operating-business and mine-authority organization, including qualified interfaces."),
+        "Operating-business and mine-authority organization, approved 140-FTE case split, and qualified interfaces."),
     "PROJECT_CRADLE_ORGANIZATION.md": ("PROJECT CRADLE — ORGANIZATION", "project-cradle-organization-2026.svg", "SH-ORG-007",
         "Founding team and the boundary among Cradle, its recovery intervention and the host operator."),
     "ARU_BST_ORGANIZATION.md": ("ARU / BS&T — ORGANIZATION", "aru-bst-organization-2026.svg", "SH-ORG-008",
-        "Distinct acquired operator, known railway component and open operating structure."),
+        "Distinct acquired operator, known railway component, open operating structure, and limited Red Wash interface boundary."),
     "ORIGINAL_EIGHT.md": ("THE ORIGINAL EIGHT — FORMATION & STATUS", "original-eight-formation-and-status.svg", "SH-ORG-009",
         "Three founders plus five early employees, Blackridge continuity and 2026 status."),
 }
@@ -408,24 +425,46 @@ PAGES = {
 
 def write_pages() -> None:
     for path, (title, image, chart_id, purpose) in PAGES.items():
+        source_lines = [
+            "- [`SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md`](../canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md)",
+            "- [`DECISION_REGISTER.md`](../canon/DECISION_REGISTER.md)",
+            "- [`DECISION_REGISTER_ADDENDUM_2026-09-03.md`](../canon/DECISION_REGISTER_ADDENDUM_2026-09-03.md)",
+            "- [`CHART_GOVERNANCE.md`](CHART_GOVERNANCE.md)",
+        ]
+        if path == "PALE_SUN_RED_WASH_ORGANIZATION.md":
+            source_lines.extend([
+                "- [`SH-PS-RW-DR-001` — `RW-017`–`RW-025`](../canon/DECISION_REGISTER_ADDENDUM_2026-09-05_RED_WASH.md)",
+                "- [`RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05.md`](../canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05.md)",
+                "- [`ARU_BST_INTERFACE_AND_DEPENDENCY_RECORD.md`](../../red_wash/logistics/ARU_BST_INTERFACE_AND_DEPENDENCY_RECORD.md)",
+            ])
+        elif path == "ARU_BST_ORGANIZATION.md":
+            source_lines.extend([
+                "- [`SH-PS-RW-DR-001` — `RW-017`–`RW-025`](../canon/DECISION_REGISTER_ADDENDUM_2026-09-05_RED_WASH.md)",
+                "- [`ARU_BST_INTERFACE_AND_DEPENDENCY_RECORD.md`](../../red_wash/logistics/ARU_BST_INTERFACE_AND_DEPENDENCY_RECORD.md)",
+            ])
         content = f"""# {title}
 
-**Chart ID:** `{chart_id}`  
-**Canonical date:** August 31, 2026  
-**Status:** Canon-derived visual organization chart  
+**Chart ID:** `{chart_id}`
+**Canonical date:** {SNAPSHOT_DATE_DISPLAY}
+**Canon reviewed through:** {CANON_REVIEW_DATE_DISPLAY}
+**Status:** Canon-derived visual organization chart
 **Purpose:** {purpose}
 
 ![{title}](assets/{image})
 
 ## Interpretation
 
-This chart renders relationships that the corporate canon actually locks. It does **not** invent final legal entities, executive titles, headcount, or person-to-person reporting lines. Dashed structures identify an institutional seam, historical/functional relationship, or deliberately OPEN detail.
+This chart renders relationships that the corporate canon actually locks, including
+Sable Harbor control of ARU and BS&T as a wholly owned legal subsidiary beneath ARU.
+It does **not** invent exact legal names, suffixes, jurisdictions, executive titles,
+headcount, or person-to-person reporting lines. Where a headcount appears, it is a
+source-backed synthetic selected-case value, not an implied enterprise total or
+reporting structure. Dashed structures identify an institutional seam,
+historical/functional relationship, or deliberately OPEN detail.
 
 ## Controlling sources
 
-- [`SABLE_HARBOR_CORPORATE_LORE_CANON_v0.2.md`](../canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.2.md)
-- [`DECISION_REGISTER.md`](../canon/DECISION_REGISTER.md)
-- [`CHART_GOVERNANCE.md`](CHART_GOVERNANCE.md)
+{chr(10).join(source_lines)}
 
 The SVG is a repository artifact generated by [`scripts/build_organization_charts.py`](../../scripts/build_organization_charts.py).
 """
@@ -436,11 +475,14 @@ The SVG is a repository artifact generated by [`scripts/build_organization_chart
         rows.append(f"| `{chart_id}` | [{title}]({path}) | {purpose} |")
     index = f"""# SABLE HARBOR — ORGANIZATION CHARTS
 
-**Version:** 0.2.0  
-**Canonical date represented:** August 31, 2026  
+**Version:** {PACKAGE_VERSION}
+**Canonical date represented:** {SNAPSHOT_DATE_DISPLAY}
+**Canon reviewed through:** {CANON_REVIEW_DATE_DISPLAY}
 **Status:** Canon-derived publication package
 
-These are rendered organization charts for the repository README and public wiki. The charts preserve every locked organizational relationship currently available and display genuinely unresolved positions as OPEN rather than fabricating a polished hierarchy.
+These are rendered organization charts for the repository and public wiki. The diagrams preserve the August 31 operating snapshot, carry the approved Red Wash selected-case workforce and limited ARU/BS&T interface boundary, and display genuinely unresolved positions as OPEN rather than fabricating a polished hierarchy.
+
+The September 3 headquarters closeout controls the Board/CEO, Enterprise Support Services, J2, Internal Audit, and professional-practice architecture. The existing enterprise SVG is a narrower operating-line and authority baseline; omission from that image does not supersede or weaken the later headquarters decisions.
 
 ## Chart set
 
@@ -452,34 +494,28 @@ These are rendered organization charts for the repository README and public wiki
 
 The enterprise chart is a **functional organization chart**: it shows Sable Harbor's company-wide authorities, operating lines, known leaders and known ownership/component relationships. It is not a conventional HR reporting tree because the canon deliberately leaves exact executive titles and reporting lines open.
 
-The unit charts go deeper wherever the canon supports real team structure. They do not fill remaining gaps with plausible-sounding executives, mine departments, subsidiaries, or headcount.
+The unit charts go deeper wherever the canon supports real team structure. They do not fill remaining gaps with plausible-sounding executives, mine departments, subsidiaries, or headcount. The 140-FTE Pale Sun/Red Wash value is an approved synthetic selected-case input: 12 FTE in the Pale Sun business layer and 128 FTE at the Red Wash site.
+
+The ARU/BS&T bridge is deliberately limited. It does not create a pre-2026 relationship, replace the qualified external carriers used throughout 2025, grant uranium custody, or settle ARU acquisition, network, workforce, leadership, legal, or financial details.
+
+## Detailed narrative and controls
+
+- [Pale Sun and Red Wash organization map](PALE_SUN_AND_RED_WASH.md) — workforce envelope, site authority, field-qualification gate, and limited transport-interface sequence.
+- [Chart governance](CHART_GOVERNANCE.md) — relationship semantics and anti-invention rules.
+- [Canon traceability matrix](CANON_TRACEABILITY_MATRIX.md) — source support and carried fact state.
 
 ## Source and regeneration
 
-- Controlling canon: [`SABLE_HARBOR_CORPORATE_LORE_CANON_v0.2.md`](../canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.2.md)
+- Controlling canon: [`SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md`](../canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md)
 - Decision index: [`DECISION_REGISTER.md`](../canon/DECISION_REGISTER.md)
+- September 3 decisions: [`DECISION_REGISTER_ADDENDUM_2026-09-03.md`](../canon/DECISION_REGISTER_ADDENDUM_2026-09-03.md)
+- September 5 Red Wash decisions: [`SH-PS-RW-DR-001` — `RW-017`–`RW-025`](../canon/DECISION_REGISTER_ADDENDUM_2026-09-05_RED_WASH.md)
+- Red Wash record: [`RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05.md`](../canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05.md)
+- Limited logistics interface: [`ARU_BST_INTERFACE_AND_DEPENDENCY_RECORD.md`](../../red_wash/logistics/ARU_BST_INTERFACE_AND_DEPENDENCY_RECORD.md)
 - Chart governance: [`CHART_GOVERNANCE.md`](CHART_GOVERNANCE.md)
 - Deterministic renderer: [`scripts/build_organization_charts.py`](../../scripts/build_organization_charts.py)
 """
     (ORG / "README.md").write_text(index, encoding="utf-8")
-
-
-def update_root_readme() -> None:
-    readme_path = ROOT / "README.md"
-    text = readme_path.read_text(encoding="utf-8")
-    section = """## Organization at a glance
-
-This is the canon-derived August 31, 2026 **functional enterprise organization chart**. It shows company-wide authorities, operating lines, named leaders and known ownership/component relationships. Exact HR reporting lines and final legal entities remain deliberately open.
-
-[![Sable Harbor enterprise organization chart](docs/organization/assets/enterprise-organization-2026.svg)](docs/organization/README.md)
-
-The full package contains dedicated charts for [leadership and authority](docs/organization/2026_LEADERSHIP_AND_AUTHORITY_MAP.md), [Foundry Field](docs/organization/FOUNDRY_FIELD_ORGANIZATION.md), [Project Willow](docs/organization/WILLOW_ORGANIZATION.md), [Atlas Meridian](docs/organization/ATLAS_MERIDIAN_BRIDGE_ORGANIZATION.md), [Pale Sun and Red Wash](docs/organization/PALE_SUN_RED_WASH_ORGANIZATION.md), [Project Cradle](docs/organization/PROJECT_CRADLE_ORGANIZATION.md), [ARU and BS&T](docs/organization/ARU_BST_ORGANIZATION.md), and [the Original Eight](docs/organization/ORIGINAL_EIGHT.md).
-
-"""
-    pattern = re.compile(r"## Organization at a glance\n.*?(?=## Blackridge status\n)", re.S)
-    if not pattern.search(text):
-        raise RuntimeError("README organization section not found")
-    readme_path.write_text(pattern.sub(section, text), encoding="utf-8")
 
 
 def write_register() -> None:
@@ -491,22 +527,35 @@ def write_register() -> None:
             "page": f"docs/organization/{path}",
             "asset": f"docs/organization/assets/{image}",
             "purpose": purpose,
-            "canonicalDate": "2026-08-31",
+            "canonicalDate": SNAPSHOT_DATE,
+            "canonReviewedThrough": CANON_REVIEW_DATE,
             "relationshipSemantics": "functional authority and canon-locked operating relationships; not implicit HR reporting",
         })
     register = {
-        "schemaVersion": "0.2.0",
-        "registerVersion": "0.2.0",
-        "canonicalDate": "2026-08-31",
+        "schemaVersion": PACKAGE_VERSION,
+        "registerVersion": PACKAGE_VERSION,
+        "canonicalDate": SNAPSHOT_DATE,
+        "canonReviewedThrough": CANON_REVIEW_DATE,
         "status": "canon-derived-rendered-chart-package",
         "controllingSources": [
-            "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.2.md",
+            "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md",
             "docs/canon/DECISION_REGISTER.md",
+            "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-03.md",
+            "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-05_RED_WASH.md",
+            "docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05.md",
+            "red_wash/logistics/ARU_BST_INTERFACE_AND_DEPENDENCY_RECORD.md",
         ],
         "prohibitedInferences": [
             "unstated direct-report relationship", "final executive title", "final legal-entity structure",
             "unstated headcount", "unstated ownership percentage", "OPEN detail presented as settled",
+            "synthetic selected-case headcount presented as an external actual",
+            "ARU or BS&T uranium custody before every applicable gate passes",
         ],
+        "redWashBridgeDecisionSource": {
+            "recordId": "SH-PS-RW-DR-001",
+            "path": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-05_RED_WASH.md",
+            "decisionIds": [f"RW-{number:03d}" for number in range(17, 26)],
+        },
         "charts": charts,
     }
     (ORG / "ORGANIZATION_MAP_REGISTER.json").write_text(json.dumps(register, indent=2) + "\n", encoding="utf-8")
@@ -515,7 +564,7 @@ def write_register() -> None:
 def main() -> None:
     build_enterprise(); build_leadership(); build_foundry(); build_willow(); build_atlas()
     build_pale_sun(); build_cradle(); build_aru(); build_original_eight()
-    write_pages(); write_register(); update_root_readme()
+    write_pages(); write_register()
     # Parse every SVG as XML to fail the build on malformed output.
     import xml.etree.ElementTree as ET
     for svg in ASSETS.glob("*.svg"):

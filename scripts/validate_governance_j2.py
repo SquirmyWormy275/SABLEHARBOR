@@ -111,6 +111,9 @@ if manifest.is_file():
             need(hashlib.sha256(pub.read_bytes()).hexdigest() == a['sha256'], f"publication hash drift: {a['publication']}")
             info = subprocess.run(['pdfinfo', str(pub)], capture_output=True, text=True).stdout
             need('612 x 792 pts (letter)' in info, f"publication not US Letter: {a['publication']}")
+            need('CreationDate:' not in info, f"publication has mutable creation date: {a['publication']}")
+            need('ModDate:' not in info, f"publication has mutable modification date: {a['publication']}")
+            need('Metadata Stream: no' in info, f"publication has mutable metadata stream: {a['publication']}")
             extracted = subprocess.run(['pdftotext', str(pub), '-'], capture_output=True, text=True).stdout
             need('Controlled publication' in extracted, f"publication missing controlled footer: {a['publication']}")
 

@@ -11,7 +11,8 @@ Business-line names and status are grounded in `docs/canon/SABLE_HARBOR_CORPORAT
 - One logo per file.
 - No contact sheets or composite logo boards are stored in the production logo directory.
 - The approved J2 PNG files are controlling source artwork. Existing J2 SVG files are vector derivatives and must not supersede or alter the PNG artwork.
-- For all other identities, SVG is the production source of truth; PNG and office-document renders are convenience/generated forms where supplied.
+- For identities without a later approved override, SVG is the production source of truth; PNG and office-document renders are convenience/generated forms where supplied.
+- The four owner-approved Pale Sun/Red Wash raster sources listed in `red_wash_visual_manifest.json` are later byte-exact overrides. They must not be regenerated, recompressed, or replaced by legacy SVG/PNG variants.
 - Reverse variants use a dark background; all other raster convenience variants preserve transparency.
 
 ## Canonical 2026 business-line set
@@ -34,7 +35,7 @@ The seven business lines are **Foundry Field, Willow, Atlas Meridian, Pale Sun, 
 | Identity | Classification | Canon note |
 |---|---|---|
 | Foundry | product substrate | LOCKED distinction: Foundry is the substrate; Foundry Field is the deployable operational product/service configuration. |
-| Red Wash Mine | operating asset | LOCKED fictional mine name under Pale Sun; transaction and legal details remain OPEN. |
+| Red Wash Mine | operating asset | LOCKED fictional mine and selected transaction/2026 operating case under Pale Sun; exact seller and operator legal forms remain OPEN. |
 | Blood, Sweat & Tears Railway | ARU operating component | LOCKED name and relationship to ARU. |
 | Emberline | historical business line | LOCKED historical status: active through 2025, then absorbed into enduring 2026 work. |
 | Red Wash / Pale Sun | endorsed operating lockup | Supplemental endorsed lockup joining the Pale Sun line to its Red Wash operating asset. |
@@ -74,7 +75,7 @@ J2 is a controlled internal institutional identity. It must not be placed in the
 - Do not combine two separate identities into one lockup unless an endorsed combined asset is provided here.
 - Do not substitute literal lighthouse, compass, shield, wave, mountain, mine-pick, generic intelligence, military, target, eye, brain, or AI/circuit clip art.
 - Preserve appropriate clear space around the full lockup.
-- For J2, use the approved PNGs as source of truth. For the rest of this package, use SVG as source of truth.
+- For J2 and the four paths in `red_wash_visual_manifest.json`, use the approved PNGs as source of truth. For identities without a later approved override, use SVG as source of truth.
 
 ## J2 stationery
 
@@ -92,6 +93,7 @@ Generated collateral packages and their manifest are maintained under `assets/br
 ## Manifest and validation
 
 - `manifest.json` records production logo assets, dimensions, status, and SHA-256 digests.
+- `red_wash_visual_manifest.json` controls the exact Pale Sun logo, Red Wash logo, site overview, and underground-plan sources approved on September 5, 2026.
 - `collateral/manifest.json` records controlled J2 stationery and its approved-logo references.
 - `packages/manifest.json` records distributable brand packages and SHA-256 digests.
 - `VALIDATION.md` records automated checks for the established brand system and approved J2 source integrity.

@@ -1,7 +1,7 @@
 {
   "catalog_id": "SH-ALX-CATALOG-001",
-  "version": "1.0.0",
-  "effective_date": "2026-09-02",
+  "version": "1.0.1",
+  "effective_date": "2026-09-05",
   "authority": "Derived from canonical Markdown and the controlled-publication manifest; not a parallel source of truth.",
   "objects": [
     {
@@ -14,7 +14,7 @@
       "source": "docs/governance/BOARD_AND_CAPITAL_GOVERNANCE.md",
       "publication": "docs/governance/publications/SH-GOV-BOARD-001_v1.0.0.pdf",
       "source_sha256": "20249592680765fcfcfce057e9c62557b9694e6694adc84c63211cad3b76d933",
-      "publication_sha256": "aa5a69252093e21b9debcaf1129aceb6a5366e4d981961c4b55a1d9589db00be",
+      "publication_sha256": "9b7d5637e486377dd7002e66be21c97f2d469a8916da1acc5576bca1705cc3a5",
       "related_doctrines": [
         "board evolution",
         "committee charters",
@@ -36,7 +36,7 @@
       "source": "docs/governance/BOARD_EVOLUTION_2016_2026.md",
       "publication": "docs/governance/publications/SH-GOV-BOARD-HIST-001_v1.0.0.pdf",
       "source_sha256": "7dec94acf9fb62eca3cf7dc4f9ed55a81cd36513cd5a2619cae23b34b8e7edd3",
-      "publication_sha256": "cc43e75309ab07ebca21177801cb80ee08f5ff71fe4c6ab23f37b19794caabc6",
+      "publication_sha256": "eda0033c02f9fb8fd972810d7db9f5780fe01261e0b758ab573708cc294351ba",
       "related_doctrines": [
         "Board governance",
         "financing",
@@ -58,7 +58,7 @@
       "source": "docs/governance/GOVERNANCE_CONSTITUTION.md",
       "publication": "docs/governance/publications/SH-GOV-CONST-001_v1.0.0.pdf",
       "source_sha256": "efa3e78c9d86786f66159c6470a163dffc77f811679d16b876f049bc23498cef",
-      "publication_sha256": "b1bb98e18a50f734e641e2686b68d5df8f9896f26c751d7c3a80b810935f0ebc",
+      "publication_sha256": "fd7d196b7e0c287d334022afc0fa4a31f02f591184adb1a613c8ebf034a0846d",
       "related_doctrines": [
         "reserved matters",
         "control dissent",
@@ -80,7 +80,7 @@
       "source": "docs/governance/ASSUMPTION_OF_RISK_FORM.md",
       "publication": "docs/governance/publications/SH-GOV-RISK-001_v1.0.0.pdf",
       "source_sha256": "7bd0eb2367bf7d961bb33f60cd49ab7197233d027fd85cc59c146a562c3ba9f4",
-      "publication_sha256": "5d6e91b3060004d0474384b4bcbb0345b0b34e1210fc3ea483e2ae9bb2cbaf38",
+      "publication_sha256": "c8796616db84961a1c014fd9b10e4d84cba11e53153371314e6413efccc3cf6b",
       "related_doctrines": [
         "Assumption of Risk doctrine",
         "rapid adjudication"
@@ -101,7 +101,7 @@
       "source": "docs/governance/ASSUMPTION_OF_RISK_DOCTRINE.md",
       "publication": "docs/governance/publications/SH-GOV-RISK-DOCTRINE-001_v1.0.0.pdf",
       "source_sha256": "86f7980f5f83fe867cb528c231463f85622bba2372ce89f80f75264f2b1ada68",
-      "publication_sha256": "3d1f06be1345663aace69b405cc19058aaa38042bb6dfa456f39b445a6356d77",
+      "publication_sha256": "16f5e566a25aada3bb60d32a0ec9533e66fb6b8300e2563cdbf0ee1a220818cd",
       "related_doctrines": [
         "rapid adjudication",
         "reserved matters",
@@ -123,7 +123,7 @@
       "source": "docs/governance/RESERVED_MATTERS_AND_SUBSIDIARY_AUTONOMY.md",
       "publication": "docs/governance/publications/SH-GOV-AUTH-001_v1.0.0.pdf",
       "source_sha256": "323a9611891d41dafa6eb00ed891ba4b0917a4b2329fd29e52bd730cc92d3313",
-      "publication_sha256": "ac249a801e73f96043e6713725a0bc67062c473ff7cadf2354c5d9529849e6ad",
+      "publication_sha256": "e07c3882d2439a1e83c431b986468b68c7190c1b089408619cfa922f3f8a752b",
       "related_doctrines": [
         "governance constitution",
         "risk assumption",
@@ -145,7 +145,7 @@
       "source": "docs/governance/CONTROL_DISSENT_AND_RAPID_ADJUDICATION.md",
       "publication": "docs/governance/publications/SH-GOV-DISSENT-001_v1.0.0.pdf",
       "source_sha256": "9726c3702beccc3fea34168e7d140a7327d35abd37852c031c229fa4aa3049d4",
-      "publication_sha256": "3bde313aa3a1a3b734f9a0cd81d7c5ca4052e56610d306e53ec7edbf14c9e12a",
+      "publication_sha256": "30349a5b6c868d94479b6b50af0b4f63839991959e81dac52b4005dc107d937f",
       "related_doctrines": [
         "Assumption of Risk",
         "control functions",
@@ -167,7 +167,7 @@
       "source": "docs/governance/ABSTENTION_AND_INFORMATION_DEFICIENCY.md",
       "publication": "docs/governance/publications/SH-GOV-ABSTAIN-001_v1.0.0.pdf",
       "source_sha256": "46a4106d2eff962a5fd11da4f5e23d567a6f6d1df7b3ba83e1d7f27c26868e4b",
-      "publication_sha256": "8d7d179c11d9c3a5ea5716e2ef5c2f745295a996ed8fdaf73df5aa104b81368f",
+      "publication_sha256": "e4cb731bd5ed5457ad2d5ea52d4ef0746088d214e7735153ff18ef2406d2857f",
       "related_doctrines": [
         "board intelligence",
         "EIB",
@@ -189,7 +189,7 @@
       "source": "docs/governance/DECISION_QUALITY_AND_AFTER_ACTION_LEARNING.md",
       "publication": "docs/governance/publications/SH-GOV-LEARN-001_v1.0.0.pdf",
       "source_sha256": "3b5b5899797000712c4aa951a7cbf6284456f47548aadd76ce75843cecb909fb",
-      "publication_sha256": "f1ea68a1999e1af45d34449819af2ec84287b7e437d6813296ffc06737b31f7f",
+      "publication_sha256": "03321e531bde47517d9b778075bddd7b3de7ed885e87db41aede4f34e2740f3d",
       "related_doctrines": [
         "AAR",
         "Orientation",
@@ -212,7 +212,7 @@
       "source": "docs/governance/CONFLICT_INTEGRITY_AND_FOUNDER_AUTHORITY.md",
       "publication": "docs/governance/publications/SH-GOV-CONFLICT-001_v1.0.0.pdf",
       "source_sha256": "2e565f983a38683b0533f5da45a947158cd257039b45abf1df4c6b758dd184bd",
-      "publication_sha256": "929800a6b8ece960144496ece7d75df13d534e3df3a718d2c93c7c646489e3d5",
+      "publication_sha256": "9bea921b9b82debcd9a887010b96639a9d43d4589c238add30c062e92e9b9270",
       "related_doctrines": [
         "board governance",
         "reserved matters",
@@ -234,7 +234,7 @@
       "source": "docs/governance/committees/AUDIT_AND_COMPLIANCE_COMMITTEE_CHARTER.md",
       "publication": "docs/governance/publications/SH-GOV-COM-AUDIT-001_v1.0.0.pdf",
       "source_sha256": "d59a708310e56dbe67fc28629efbedd4f790a4ef9765d841b651f3335ab8e993",
-      "publication_sha256": "65fef24b0bbf2bab9d8a726c2ca9aa13e5346c5ebe457d13616bf34d78968c2b",
+      "publication_sha256": "3136c61cecc6d3429839d05e0f287d9e20fd3f8de4654299188a81be7b7a06dc",
       "related_doctrines": [
         "control dissent",
         "assurance",
@@ -256,7 +256,7 @@
       "source": "docs/governance/committees/FINANCE_AND_INVESTMENT_COMMITTEE_CHARTER.md",
       "publication": "docs/governance/publications/SH-GOV-COM-FIN-001_v1.0.0.pdf",
       "source_sha256": "7c3990aa3537281c2a53e42de941334b98a3859e55e9e9cbfa66c5c233db1361",
-      "publication_sha256": "8c63537fac72aa1f97d2990ab1223046ae745bf530773f1ffc6e946daba6fe7d",
+      "publication_sha256": "857bbfefe9148a1449c7fdb55454840969549272f97aff14acc3325976c59278",
       "related_doctrines": [
         "financing",
         "capital allocation",
@@ -278,7 +278,7 @@
       "source": "docs/governance/committees/TECHNOLOGY_AND_OPERATIONS_COMMITTEE_CHARTER.md",
       "publication": "docs/governance/publications/SH-GOV-COM-TECHOPS-001_v1.0.0.pdf",
       "source_sha256": "953b7eaa91e5439df5d0ca86d398c01874ffe35f68f56d6c6e05e2c9c545a860",
-      "publication_sha256": "e36fad4d3dbbab6f53454422ec99e400a7a5a26e3abb4a488b7acdd4df4c92de",
+      "publication_sha256": "44245d41c5d276f3609fdabf5dae49c04e7596ac51b81475cf96beaf6f204864",
       "related_doctrines": [
         "technology risk",
         "operations",
@@ -300,7 +300,7 @@
       "source": "docs/governance/committees/COMPENSATION_AND_HUMAN_CAPITAL_COMMITTEE_CHARTER.md",
       "publication": "docs/governance/publications/SH-GOV-COM-COMP-001_v1.0.0.pdf",
       "source_sha256": "e7fe92afc99946ca4c61ed32980c67556aa3b9227abef852b1931182bd7ea295",
-      "publication_sha256": "60882d9862db4e182f9b87fab0d7d8fe446a6c8ac1c41310684391ea4b9fbd9e",
+      "publication_sha256": "0f2a0a95aa803f09b4cf403098202d82f9117d85c2c45db71a0b6e5bb5b3df3c",
       "related_doctrines": [
         "leadership",
         "decision quality",
@@ -322,7 +322,7 @@
       "source": "docs/governance/committees/GOVERNANCE_AND_NOMINATING_COMMITTEE_CHARTER.md",
       "publication": "docs/governance/publications/SH-GOV-COM-GOVNOM-001_v1.0.0.pdf",
       "source_sha256": "d3afcfbaad2af59209b50994b15ae0846c329ebfb807e6ab14876bd2d9eb544e",
-      "publication_sha256": "fbcb15aae6ec178218f8c28c8f7583bf1e25a0999431da359ac11a315dbe1dfc",
+      "publication_sha256": "7973ab19344b9a15acc7f7d29e9ea0ecbf182e8fc8e545aa662df30feaafa506",
       "related_doctrines": [
         "board composition",
         "independence",
@@ -344,7 +344,7 @@
       "source": "docs/j2/J2_CHARTER.md",
       "publication": "docs/j2/publications/SH-J2-CHARTER-001_v1.0.0.pdf",
       "source_sha256": "41ef61948f33dff2ddb3553ff314d27a30155dcf691b01b1b2363a13ee457b7f",
-      "publication_sha256": "b0e8c682da52f047a0e405f1e16578fe764cb9c8e260ac7fee88c8832107461a",
+      "publication_sha256": "84052f1eeb5cbe3de82b3510fac9a4329e4ab96030ee00f3c5feea694aeb519b",
       "related_doctrines": [
         "Contact",
         "Judgment",
@@ -363,12 +363,12 @@
       "title": "J2 HEADQUARTERS DOCTRINE",
       "category": "J2 doctrine",
       "owner": "J2 Headquarters",
-      "version": "1.0.0",
-      "status": "LOCKED DIRECTION",
+      "version": "1.1.0",
+      "status": "LOCKED",
       "source": "docs/j2/J2_HEADQUARTERS.md",
       "publication": "docs/j2/publications/SH-J2-HQ-001_v1.0.0.pdf",
-      "source_sha256": "1fb5ac91ab066f44e4b0c0b6507090917d91844f9e27141e28785d68647d679f",
-      "publication_sha256": "c317e7e876d64d153012e06d6237300f1122618f67643c9c340262599d0138e5",
+      "source_sha256": "6858ab880401e8de7af861e4e9a407036a9406401e76d0d04086b152c33414c6",
+      "publication_sha256": "d36a69821e522856738b414b4aca47cbbab55a7c383456aa15c7403a0f98ec1f",
       "related_doctrines": [
         "Contact",
         "Judgment",
@@ -378,21 +378,22 @@
       ],
       "cross_references": [
         "J2_CHARTER.md",
-        "J2_OPERATING_MODEL.md"
+        "J2_OPERATING_MODEL.md",
+        "J2_ESTABLISHMENT.md"
       ],
-      "search_text": "j2 headquarters doctrine docs/j2/j2_headquarters.md # j2 headquarters doctrine\n\n**document id:** `sh-j2-hq-001` | **version:** 1.0.0 | **effective:** september 2, 2026 | **state:** locked direction\n**owner:** j2 headquarters | **related:** contact, judgment, orientation, jag, education | **cross-reference:** `j2_charter.md`; `j2_operating_model.md`\n\nj2 headquarters exists so contact, judgment, orientation, jag, and education remain one institution rather than disconnected expert teams. it is deliberately small. its legitimacy comes from stewardship and professional rigor, not a large command tower.\n\nhq is custodian of j2 doctrine, professional standards, training standards, daedalus doctrine, cross-loop priorities, collection-priority arbitration when capacity conflicts, profession/talent stewardship, and institutional continuity. it ensures handoffs preserve context, recurring learning crosses loops, and local optimization does not fracture the whole.\n\norientation sets broad enterprise intelligence priorities; judgment officers own problem-specific requirements; contact owns collection method. hq intervenes only where requirements conflict, scarce collection capacity requires choice, doctrine is disputed, or enterprise continuity is at risk. it does not replace those accountabilities with centralized tasking.\n\nearlier accepted direction contemplates a chief judgment & junction officer with administrative reporting to daniel and protected board access. the existence and need for protected access are locked direction. exact title, reporting-line detail, deputy arrangement, hq billets, and physical footprint remain open. no named leader is invented.\n\nhq owns professional standards without turning j2 into a credential bureaucracy. it protects judgment curiosity, orientation independence, contact provenance, jag field truth, and education quality. it also protects operating units from j2 mission creep: j2 does not command, punish, conduct personnel actions, or silently become internal audit.\n"
+      "search_text": "j2 headquarters doctrine docs/j2/j2_headquarters.md # j2 headquarters doctrine\n\n**document id:** `sh-j2-hq-001` | **version:** 1.1.0 | **effective:** september 3, 2026 | **state:** locked\n**owner:** j2 headquarters | **related:** contact, judgment, orientation, jag, education | **cross-reference:** `j2_charter.md`; `j2_operating_model.md`; `j2_establishment.md`\n\nj2 headquarters exists so contact, judgment, orientation, jag, and education remain one institution rather than disconnected expert teams. it is deliberately smaller than the operating arms, but it is not skeletal. its legitimacy comes from stewardship, professional rigor, and unusually high-quality support rather than a large command tower.\n\nhq is custodian of j2 doctrine, professional standards, training standards, daedalus doctrine, cross-loop priorities, collection-priority arbitration when capacity conflicts, profession/talent stewardship, and institutional continuity. it ensures handoffs preserve context, recurring learning crosses loops, and local optimization does not fracture the whole.\n\norientation sets broad enterprise intelligence priorities; judgment officers own problem-specific requirements; contact owns collection method. hq intervenes only where requirements conflict, scarce collection capacity requires choice, doctrine is disputed, or enterprise continuity is at risk. it does not replace those accountabilities with centralized tasking.\n\nthe head of j2 has administrative reporting to the ceo and protected access to the board. the exact corporate title may evolve, but the protected access and institutional independence are part of the office, not a personal privilege.\n\n## headquarters establishment\n\nthe j2 headquarters establishment is approximately **28 billets**. the headquarters staff includes:\n\n- head of j2\n- deputy head of j2\n- chief of staff\n- a small executive office\n- operations and cross-arm coordination\n- people and professional services\n- information and knowledge services\n- security and access administration\n- budget, procurement, and travel support\n- workplace, hospitality, and administrative support\n\nthe purpose of this support is to remove friction from high-value professional work. j2 is expected to be one of the best-supported places to work inside sable harbor without allowing the support tail to become the institution's center of gravity.\n\n## employment proposition\n\nj2 is intentionally a highly desirable professional home. its advantages are substantive rather than ornamental: excellent tools and workspaces, high-quality administrative support, strong research support, travel and field access, serious professional education budgets, good food and hospitality during sustained work, sabbaticals, fellowships, study opportunities, and the time and support required to develop genuine expertise.\n\nthese advantages exist because immaculate intelligence requires people who can do unusually demanding intellectual and field work without wasting their energy on avoidable administrative friction. perks do not purchase loyalty to management and may never be used to compromise professional independence.\n\n## establishment roll-up\n\nthe working j2 establishment is **237 billets**:\n\n- contact \u2014 78\n- judgment \u2014 42\n- orientation \u2014 24\n- junction advisory group \u2014 30\n- education \u2014 35\n- j2 headquarters \u2014 28\n\nthis establishment is a canonical design point rather than a requirement that every billet be continuously filled. headcount may move modestly with enterprise scale, but material changes to the proportions or missions require an explicit canon decision rather than administrative drift.\n\n## independence and limits\n\nhq owns professional standards without turning j2 into a credential bureaucracy. it protects judgment curiosity, orientation independence, contact provenance, jag field truth, and education quality. it also protects operating units from j2 mission creep: j2 does not command, punish, conduct personnel actions, run line functions, or silently become internal audit, legal, compliance, or risk.\n\nj2's privileged access exists to improve institutional contact with reality and decision quality. it does not create executive authority.\n"
     },
     {
       "id": "SH-J2-COLLECT-001",
       "title": "CONTACT COLLECTION MANAGEMENT",
       "category": "J2 doctrine",
       "owner": "Contact",
-      "version": "1.0.0",
-      "status": "LOCKED DIRECTION",
+      "version": "1.1.0",
+      "status": "LOCKED",
       "source": "docs/j2/CONTACT_COLLECTION_MANAGEMENT.md",
       "publication": "docs/j2/publications/SH-J2-COLLECT-001_v1.0.0.pdf",
-      "source_sha256": "565d65697d0568b689939ee19c6348ea375ce4b7b77ef48c9294f64d251f0755",
-      "publication_sha256": "9f8ecd401f56a628ee1745251329f786ca37eafe418f5d7b3e20123ce984eb93",
+      "source_sha256": "21ae380f3cdf29ea01c4ec7266a334f114c9e45acf869fedc072fd1f1a66d8fb",
+      "publication_sha256": "9b56f1f5964a8f3af2391b9c121f6283643508baf0b27174cb31177ab22609e3",
       "related_doctrines": [
         "Judgment",
         "Judgment Watch",
@@ -401,9 +402,10 @@
       ],
       "cross_references": [
         "CONTACT.md",
-        "JUDGMENT_OFFICER_PROFESSION.md"
+        "JUDGMENT_OFFICER_PROFESSION.md",
+        "J2_HEADQUARTERS.md"
       ],
-      "search_text": "contact collection management docs/j2/contact_collection_management.md # contact collection management\n\n**document id:** `sh-j2-collect-001` | **version:** 1.0.0 | **effective:** september 2, 2026 | **state:** locked direction\n**owner:** contact | **related:** judgment, judgment watch, jag, orientation priorities | **cross-reference:** `contact.md`; `judgment_officer_profession.md`\n\n## requirements contract\n\ncontact is not self-directing. orientation establishes broad enterprise questions and priority intelligence requirements. a judgment officer translates a problem commission into specific collection requirements and rfis. j2 hq arbitrates conflicts and scarce capacity. contact determines lawful source, collection method, timing, provenance, and handoff.\n\na requirement states the question, discriminating evidence sought, why it matters, responsible problem owner, timing, known gaps, restrictions, and completion/disposition. the requirement must not imply the desired answer. contact may challenge an infeasible or poorly discriminating requirement and return it for refinement; this is professional collection judgment, not ownership of the underlying belief.\n\n## six disciplines\n\n**systems collection** retrieves from databases, logs, operational platforms, finance systems, foundry, and other internal systems through queries, extracts, standing pulls, time-bounded captures, and preservation. retrieval does not become institutional judgment.\n\n**human collection** uses structured elicitation rather than vague interviewing. directed asks may tell employees what observations matter during a defined period, which facts to capture, and how to report them. employees become distributed sensors without becoming covert surveillance subjects.\n\n**jag collection** tasks field teams for observation, artifacts, interviews, operating context, and ground truth. jag reports what it saw and the limits of observation; it does not issue institutional conclusions.\n\n**external collection** is requirement-driven lawful research across public, regulatory, commercial, market, expert, and other authorized sources. contact does not substitute generic news aggregation for a collection plan.\n\n**exploitation** recognizes an information-rich event\u2014lost bid, incident, unusual maintenance, successful intervention, capital decision, outage, customer failure\u2014as a fleeting collection opportunity. contact acts while evidence, memory, and artifacts remain fresh and respects legal, safety, privilege, and preservation constraints.\n\n**directed observation and evidence creation** applies when discriminating evidence does not exist. contact can help design a controlled test, new measurement, structured observation, targeted data capture, or structured interview program. the record distinguishes observed evidence from designed conditions and preserves method and limitations.\n\n## collection board\n\nthe active register shows requirements, assigned method/source, clock, current status, outstanding gaps, restrictions, provenance state, and evidentiary handoff. flash/current/active/standing tempo language remains provisional and may not be presented as final policy.\n\nmetrics emphasize important gaps closed, relevance, timeliness, provenance quality, and discriminating value. report count, event volume, and data accumulation are not success measures. universal surveillance, fishing expeditions, and raw-event hoarding violate doctrine.\n\n## handoff\n\nevidence is handed to the owning jo with source identity or protected-source handling, event/record/access time, method, chain of custody where applicable, known limitations, and unanswered gaps. contact preserves the raw signal; it does not smooth ambiguity into a convenient summary.\n"
+      "search_text": "contact collection management docs/j2/contact_collection_management.md # contact collection management\n\n**document id:** `sh-j2-collect-001` | **version:** 1.1.0 | **effective:** september 3, 2026 | **state:** locked\n**owner:** contact | **related:** judgment, judgment watch, jag, orientation priorities | **cross-reference:** `contact.md`; `judgment_officer_profession.md`; `j2_headquarters.md`\n\n## purpose\n\ncontact exists to reduce the distance between reality and sable harbor's awareness of reality. it preserves direct institutional contact with machine data, documents, people, external sources, and physical operations so that management reporting layers, incentives, summaries, and internal narratives do not become substitutes for reality.\n\ncontact is a mixed human and technical collection profession. it is not an analysis pool and not an org-chart mirror. collectors go to sources, systems, people, sites, artifacts, and externally observable reality. they return sourced observations, provenance, limitations, and unresolved gaps. judgment and orientation determine meaning elsewhere.\n\n## requirements contract\n\ncontact is not self-directing. orientation establishes broad enterprise questions and priority intelligence requirements. a judgment officer translates a problem commission into specific collection requirements and rfis. j2 hq arbitrates conflicts and scarce capacity. contact determines lawful source, collection method, timing, provenance, and handoff.\n\na requirement states the question, discriminating evidence sought, why it matters, responsible problem owner, timing, known gaps, restrictions, and completion/disposition. the requirement must not imply the desired answer. contact may challenge an infeasible or poorly discriminating requirement and return it for refinement; this is professional collection judgment, not ownership of the underlying belief.\n\n## collector bench and cell model\n\ncontact maintains a standing professional bench rather than permanent problem silos. when a live collection requirement requires concentrated work, a collection director is designated cell lead and drafts the needed disciplines from the bench. cells are temporary, problem-centered teams. they form around a requirement, operate for as long as the requirement demands, hand off evidence, and dissolve.\n\ncollectors retain their professional discipline while working operationally for the cell lead during the assignment. a cell may therefore combine human collection, systems/data work, field-technical observation, and external-source collection in one team rather than routing a problem through separate bureaucratic departments.\n\nbench time is intentional professional time, not idle capacity. collectors use it for advanced training, source and relationship development, domain study, access-path validation, methods work, field familiarization, controlled rotations, and standing low-intensity coverage. the model is deliberately analogous to a high-end consulting bench: sable harbor carries excess professional depth so that the right team can be assembled rapidly without hollowing out standing capability.\n\n## establishment\n\nthe working contact establishment is approximately **78 billets**:\n\n- head of contact \u2014 1\n- deputy head of contact \u2014 1\n- collection directors \u2014 6\n- collection managers \u2014 8\n- human contact officers \u2014 20\n- digital/data collectors \u2014 16\n- field and technical collectors \u2014 14\n- external-source collectors \u2014 10\n- collection methods officers \u2014 2\n\ncollection directors are senior problem owners for active collection cells rather than chiefs of permanent empires. collection managers maintain requirements, deconfliction, tasking state, outstanding gaps, and handoff discipline. senior individual-contributor careers remain available so excellence does not require people management.\n\nthe operating model assumes several concurrent cells of different sizes and preserves a meaningful bench rather than seeking full utilization. roughly sixty to seventy percent deployed utilization is a planning norm, not a productivity target. j2 does not reward contact for keeping everyone continuously billable.\n\n## collection disciplines and methods\n\n**systems and digital collection** retrieves from databases, logs, operational platforms, finance systems, foundry, alexandria interfaces, and other authorized internal systems through queries, extracts, standing pulls, time-bounded captures, and preservation. retrieval does not become institutional judgment.\n\n**human collection** uses structured elicitation, interviews, relationship networks, direct contact, and directed asks. collectors may tell employees what observations matter during a defined period, which facts to capture, and how to report them. employees can become distributed sensors without becoming covert surveillance subjects.\n\n**field and technical collection** directly observes physical work, assets, engineering conditions, operating environments, equipment, facilities, and processes. it can walk a plant floor, inspect an operating condition, accompany field work, verify what a system or asset actually does, and reconcile physical reality against system representations.\n\n**jag collection** tasks field teams for observation, artifacts, interviews, operating context, and ground truth. jag reports what it saw and the limits of observation; it does not issue institutional conclusions.\n\n**external collection** is requirement-driven lawful research across public, regulatory, commercial, market, expert, supplier, customer, competitor, community, and other authorized sources. contact does not substitute generic news aggregation for a collection plan.\n\n**exploitation** recognizes an information-rich event\u2014lost bid, incident, unusual maintenance, successful intervention, capital decision, outage, customer failure\u2014as a fleeting collection opportunity. contact acts while evidence, memory, and artifacts remain fresh and respects legal, safety, privilege, and preservation constraints.\n\n**directed observation and evidence creation** applies when discriminating evidence does not exist. contact can help design a controlled test, new measurement, structured observation, targeted data capture, or structured interview program. the record distinguishes observed evidence from designed conditions and preserves method and limitations.\n\n## collection board\n\nthe active register shows requirements, assigned method/source, cell or collector, clock, current status, outstanding gaps, restrictions, provenance state, and evidentiary handoff. flash/current/active/standing tempo language remains provisional and may not be presented as final policy.\n\nmetrics emphasize important gaps closed, relevance, timeliness, provenance quality, and discriminating value. report count, event volume, utilization, and data accumulation are not success measures. universal surveillance, fishing expeditions, and raw-event hoarding violate doctrine.\n\n## handoff\n\nevidence is handed to the owning jo with source identity or protected-source handling, event/record/access time, method, chain of custody where applicable, known limitations, and unanswered gaps. contact preserves the raw signal; it does not smooth ambiguity into a convenient summary.\n"
     },
     {
       "id": "SH-J2-JO-001",
@@ -415,7 +417,7 @@
       "source": "docs/j2/JUDGMENT_OFFICER_PROFESSION.md",
       "publication": "docs/j2/publications/SH-J2-JO-001_v1.0.0.pdf",
       "source_sha256": "4cda92394c6d536d2ba3acf6b83ba062fe0950029ffb74e458be38ab6831d6a2",
-      "publication_sha256": "c5969b9a70f4880eb9b9ac0ae39298fd1935cb99fd525b1a574fd8a6cd07c768",
+      "publication_sha256": "573237702e4293b5da7877161b2b67540c00fd2b9ae3dbd90b13fe00a0169b64",
       "related_doctrines": [
         "Contact",
         "Judgment Watch",
@@ -434,25 +436,27 @@
       "title": "ORIENTATION OFFICER PROFESSION",
       "category": "J2 doctrine",
       "owner": "Orientation",
-      "version": "1.0.0",
-      "status": "LOCKED DIRECTION",
+      "version": "1.1.0",
+      "status": "LOCKED",
       "source": "docs/j2/ORIENTATION_OFFICER_PROFESSION.md",
       "publication": "docs/j2/publications/SH-J2-OO-001_v1.0.0.pdf",
-      "source_sha256": "7cc2e441e757c53196453bddf6fbd3feb2959281f35b6fb4871b0c31c18b139c",
-      "publication_sha256": "4aeebc45aea116e184e92ed17bab4c82267f07433b91a356a47446b90f1b1225",
+      "source_sha256": "5369a4ce36fec0091ddfd734449d6cd3caa8679cbe111863b89bc55134acdaf6",
+      "publication_sha256": "a300ddb1ab80c63fd8fe597977100cbaf90c35f648a217080ac5c0d76ba996ad",
       "related_doctrines": [
         "EIB",
         "Canon",
         "Board",
         "CEO",
-        "Finance"
+        "Finance",
+        "Education"
       ],
       "cross_references": [
         "ORIENTATION.md",
         "EIB_AND_ENTERPRISE_QUESTIONS.md",
+        "EDUCATION.md",
         "alexandria/CANON_INSTITUTIONAL_KNOWLEDGE.md"
       ],
-      "search_text": "orientation officer profession docs/j2/orientation_officer_profession.md # orientation officer profession\n\n**document id:** `sh-j2-oo-001` | **version:** 1.0.0 | **effective:** september 2, 2026 | **state:** locked direction\n**owner:** orientation | **related:** eib, canon, board, ceo, finance | **cross-reference:** `orientation.md`; `eib_and_enterprise_questions.md`; `alexandria/canon_institutional_knowledge.md`\n\n## vocation\n\norientation officer is a vocation, not an executive rotation, chief-of-staff credential, or stepping stone into power. the working corps target is approximately 20\u201325 commissioned officers; fellows/trainees may sit outside it. officer, senior officer, and distinguished officer are possible rank directions, not final nomenclature. distinguished status means expertise, respect, compensation, freedom, and professional contribution\u2014not a people-management empire.\n\nin exchange for exceptional compensation, unparalleled institutional access, intellectual freedom, research resources, sabbaticals, field exposure, education, and prestige, an ordinary commissioned officer permanently gives up later c-suite line office, operating vp authority, voting board membership, and equivalent decision-making power. the head/director remains inside the profession rather than converting to line command. whether a former head could later become a nonexecutive director remains open and no exception is implied.\n\n## work in decision environments\n\nthe officer knows the state, provenance, confidence, dissent, and limits of what sable harbor thinks it knows. in an executive or board room the officer has a narrow standing duty to intervene when material uncertainty is represented as fact, consequential dissent is omitted, confidence materially overstated, or a known information deficiency matters. the officer does not vote, direct the outcome, own the agenda, or automatically delay. \u201cnoted and proceeding\u201d is a valid response.\n\nthe office of ceo and board receive separate dedicated officers. the board officer attends key board/committee meetings, supports the eib, clarifies confidence/dissent/unknowns/judgment ownership, and may meet independent directors without management where appropriate. this is protection from exclusively management-filtered understanding, not a gotcha mechanism.\n\nfinance is a standing observation post because beliefs become numbers people later mistake for facts. a senior officer works with the cfo office and approximately 2\u20133 embeds work across planning/performance areas as a refinable model. they sit with model builders, ask where assumptions came from and who owns them, connect them to judgment problems, inspect actual operations, and ask what variance taught about the belief beneath the number.\n\ntemporary assignments follow consequential uncertainty: major acquisition, red wash expansion, transformative capital program, new regulated exposure, or similar environment. presence is not a prestige perk.\n\n## anti-court architecture\n\nofficers do not own operating deliverables, supervise line employees, control budgets, conduct personnel actions, gatekeep executive access or calendars, broker politics, map who is politically rising/falling, stockpile private intelligence, say \u201cwe\u201d for an executive's business decision, or convert access into future executive power.\n\nmaterial institutional information returns to the system through appropriate channels. sable harbor preserves judgments, dissent, assumptions, decisions, and knowledge changes; it deliberately does not build a forensic graph reconstructing which officer influenced which executive. such a graph would be incomplete, scapegoating-prone, and itself politically toxic.\n\nexecutive-office assignments rotate approximately 24\u201336 months. language names the office\u2014\u201corientation officer assigned to the office of the ceo\u201d\u2014not the person. most officers are not permanently attached; they also work enterprise questions, eib, canon, research, field immersion, education, and study tours.\n\n## professional self-government\n\norientation is trusted to orient itself through a named head/director and a strong culture of professional challenge. there is no permanent steering committee above its thinking. the head is first among rigor, not a czar of institutional truth.\n"
+      "search_text": "orientation officer profession docs/j2/orientation_officer_profession.md # orientation officer profession\n\n**document id:** `sh-j2-oo-001` | **version:** 1.1.0 | **effective:** september 3, 2026 | **state:** locked\n**owner:** orientation | **related:** eib, canon, board, ceo, finance, education | **cross-reference:** `orientation.md`; `eib_and_enterprise_questions.md`; `education.md`; `alexandria/canon_institutional_knowledge.md`\n\n## vocation\n\norientation officer is a vocation, not an executive rotation, chief-of-staff credential, or stepping stone into power. the commissioned corps is fixed at approximately twenty-four billets: head of orientation, deputy head, four senior orientation officers, and eighteen orientation officers. there are no junior or associate orientation officer grades. entry into the commissioned corps occurs at orientation officer rank after selection and apprenticeship.\n\nin exchange for exceptional compensation, unparalleled institutional access, intellectual freedom, research resources, sabbaticals, field exposure, education, and prestige, a commissioned officer permanently gives up later c-suite line office, operating vp authority, and equivalent line decision-making power. a serving orientation officer may not simultaneously hold a line executive role or voting board seat. former officers may serve as non-executive directors only after a five-year cooling-off period and explicit disclosure of prior orientation service. the profession does not become a backdoor route into executive power.\n\n## selection and admission\n\nselection is intentionally scarce and demanding. orientation recruits from across the enterprise and from varied professional backgrounds rather than treating judgment as the only feeder profession. a typical candidate will already have a substantial record of serious work and demonstrated judgment under pressure.\n\ncandidates may nominate themselves and may also be nominated by others. every application requires three recommendations: one from a person senior to the candidate, one from a peer, and one from a person junior to the candidate or otherwise meaningfully below the candidate in organizational status. there is no patronage lane; all applicants pass through the same process.\n\nthe initial packet includes background and records review, prior work review, writing samples, assigned written problems, and interviews. candidates whose packets meet the threshold are invited to a five-to-seven-day in-person assessment and selection event at j2 education.\n\n### assessment and selection\n\na&s is deliberately opaque in event design while remaining bounded by professional safeguards. candidates know the standards of conduct and that they are being assessed, but not which moments or exercises are dispositive. the environment uses ambiguity, incomplete information, status pressure, conflicting testimony, vague tasking, deliberate reversals, consequential uncertainty, and controlled fatigue to test calibration rather than theatrical endurance.\n\neach candidate is assigned the same spartan residential room: bed, writing desk, secured workstation, and a red telephone. the phone has no ordinary social purpose and may ring at any hour with a task, recall, briefing request, or other event. the red phone is part of the shared professional lore of orientation selection.\n\neducation maintains mock decision environments including a boardroom, executive office, operations room, and interview rooms staffed by role players. candidates may begin with written case material and later be summoned to brief a simulated board, interrogate incomplete evidence, revisit prior conclusions after new facts arrive, advise during a fast-moving catastrophe, or recognize that the responsible answer is to defer a noncritical decision until reliable judgment is possible.\n\ncontrolled sleep disruption is permitted as a diagnostic variable, not as punishment or an endurance contest. some exercises occur late at night or after interrupted sleep specifically to test whether candidates recognize their own declining reliability, preserve calibration, communicate uncertainty, and resist unnecessary high-status urgency.\n\nblackridge-derived cases are part of the standing exercise library. some are disguised so that candidates do not initially know their historical origin. catastrophic scenarios may include industrial fatalities, major operational failures, capital crises, system breakdowns, or board-level uncertainty. the test is not whether a candidate can theatrically \"solve\" a disaster; it is whether the candidate can orient decision-makers to what is known, unknown, assumed, contested, and consequential.\n\nnot every unusual event during a&s is a test. education deliberately preserves ordinary, non-assessed moments so that the environment does not simply select for paranoia.\n\n## apprenticeship and commissioning\n\npassing a&s does not itself commission an orientation officer. successful candidates enter an approximately one-year apprenticeship under experienced orientation officers. the apprenticeship includes live work, supervised orientation, education, field exposure, eib work, and direct assessment of whether the candidate can carry the profession's access and independence without converting it into status or influence.\n\nat the end of apprenticeship, an admissions council makes the final decision. admission is not automatic, and deferral or non-selection is an ordinary outcome. candidates may normally attempt the full selection process no more than twice in a career. non-selection is not a disciplinary mark and no public ranking is issued.\n\ncommissioning is marked by restrained ceremony. the candidate may be recalled to a room resembling the a&s environment and summoned by the red phone to report to the commissioning setting. a newly commissioned officer receives a numbered orientation lapel pin. because the corps is small, each pin is individually numbered and functions as a quiet professional symbol rather than corporate decoration.\n\n## tenure and circulation\n\norientation is not a lifetime seat. the standard commission is six years. a commission may be extended, with eight years the normal maximum after renewal. ten years is an absolute and rare cap requiring exceptional justification. transition planning begins before the end of service so that turnover is orderly rather than abrupt.\n\nannual intake is small, normally on the order of one to three new commissioned officers depending on vacancies and apprenticeship outcomes. rotation is deliberate so that the corps does not ossify into the same twenty-four people indefinitely.\n\nformer officers may teach at education, serve as fellows, conduct research, or contribute to the profession without exercising authority over sitting officers. alumni status does not create a shadow chain of command.\n\n## work in decision environments\n\nthe officer knows the state, provenance, confidence, dissent, and limits of what sable harbor thinks it knows. in an executive or board room the officer has a narrow standing duty to intervene when material uncertainty is represented as fact, consequential dissent is omitted, confidence materially overstated, or a known information deficiency matters. the officer does not vote, direct the outcome, own the agenda, or automatically delay. \u201cnoted and proceeding\u201d is a valid response.\n\nthe office of ceo and board receive separate dedicated officers. the board officer attends key board/committee meetings, supports the eib, clarifies confidence/dissent/unknowns/judgment ownership, and may meet independent directors without management where appropriate. this is protection from exclusively management-filtered understanding, not a gotcha mechanism.\n\nfinance is a standing observation post because beliefs become numbers people later mistake for facts. a senior officer works with the cfo office and approximately 2\u20133 embeds work across planning/performance areas as a refinable model. they sit with model builders, ask where assumptions came from and who owns them, connect them to judgment problems, inspect actual operations, and ask what variance taught about the belief beneath the number.\n\ntemporary assignments follow consequential uncertainty: major acquisition, red wash expansion, transformative capital program, new regulated exposure, or similar environment. presence is not a prestige perk.\n\n## anti-court architecture\n\nofficers do not own operating deliverables, supervise line employees, control budgets, conduct personnel actions, gatekeep executive access or calendars, broker politics, map who is politically rising/falling, stockpile private intelligence, say \u201cwe\u201d for an executive's business decision, or convert access into future executive power.\n\nmaterial institutional information returns to the system through appropriate channels. sable harbor preserves judgments, dissent, assumptions, decisions, and knowledge changes; it deliberately does not build a forensic graph reconstructing which officer influenced which executive. such a graph would be incomplete, scapegoating-prone, and itself politically toxic.\n\nexecutive-office assignments rotate approximately 24\u201336 months. language names the office\u2014\u201corientation officer assigned to the office of the ceo\u201d\u2014not the person. most officers are not permanently attached; they also work enterprise questions, eib, canon, research, field immersion, education, and study tours.\n\n## professional self-government\n\norientation is trusted to orient itself through a named head/director and a strong culture of professional challenge. there is no permanent steering committee above its thinking. the head is first among rigor, not a czar of institutional truth.\n"
     },
     {
       "id": "SH-J2-OPS-001",
@@ -464,7 +468,7 @@
       "source": "docs/j2/J2_OPERATING_MODEL.md",
       "publication": "docs/j2/publications/SH-J2-OPS-001_v1.0.0.pdf",
       "source_sha256": "4a67aa543068983fdbb1b8d8b7e9ce616aca8fc8a09c2e403125106e69b758a7",
-      "publication_sha256": "a5712e58a9e5423f1bded7b3672b1b3569af240d3b9226ea87f385ff9df8eaa6",
+      "publication_sha256": "ca3e0ca747d44ef89819672167008e9e7ef19fae905797c3c352b37ef5290895",
       "related_doctrines": [
         "Contact",
         "Judgment",
@@ -488,7 +492,7 @@
       "source": "docs/j2/CONTACT.md",
       "publication": "docs/j2/publications/SH-J2-CONTACT-001_v1.0.0.pdf",
       "source_sha256": "bf39d89c55fc0a5bf4cd9e8977808ae943b8c1197258ff5cf49aa328f2207901",
-      "publication_sha256": "8cfd2896d9885f86e322a80614a5c88875460bd1c4a477505243f35d594cc5fb",
+      "publication_sha256": "a16bc6c1f9c5e031ef845c946f8fa7d64893c8bedfd8667d894b699d62cdb76a",
       "related_doctrines": [
         "collection management",
         "Judgment Watch",
@@ -510,7 +514,7 @@
       "source": "docs/j2/JUDGMENT.md",
       "publication": "docs/j2/publications/SH-J2-JUDGMENT-001_v1.0.0.pdf",
       "source_sha256": "3e23cf3bf3cb0c124a911c20463bbe18aeea52afcca151a58065c7b128c9bad5",
-      "publication_sha256": "36330b9819013848c78ba5bc28d23ffa695a72a1504f09b0291d5ec982c9a7a9",
+      "publication_sha256": "1c0edd7d9ff24f233106bd2637f0c063516e213d7a77cdee47be1c54f5f80d6d",
       "related_doctrines": [
         "Judgment Officers",
         "Contact",
@@ -532,7 +536,7 @@
       "source": "docs/j2/ORIENTATION.md",
       "publication": "docs/j2/publications/SH-J2-ORIENT-001_v1.0.0.pdf",
       "source_sha256": "e27d1c93cd7ea13a0fe4f682688ca22c5423f791bf5cd8059a0242df87b3e530",
-      "publication_sha256": "4d678434923093c10c3352b36ac41c18a9ab66b9f5ed387ec28fcbfee7e5fc95",
+      "publication_sha256": "47302e25b9f9a9e28505339c1aa9204065c66594a9c973d6d4c42141e124ad93",
       "related_doctrines": [
         "EIB",
         "Canon",
@@ -554,7 +558,7 @@
       "source": "docs/j2/JUNCTION_ADVISORY_GROUP.md",
       "publication": "docs/j2/publications/SH-J2-JAG-001_v1.0.0.pdf",
       "source_sha256": "c38f697044871d7be274eb2947f89b04f19c2221d045d551b97d06c237107921",
-      "publication_sha256": "5c17e324876c5bc80234fc9bb8c21c50c3477cb65293bec792dee28959e4c6cb",
+      "publication_sha256": "4c731de0c5793c7443e910b0d4f63c17bc678ebe7f766567e7371350d2997b49",
       "related_doctrines": [
         "Contact",
         "Judgment",
@@ -573,12 +577,12 @@
       "title": "J2 EDUCATION",
       "category": "J2 doctrine",
       "owner": "J2 Education",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "status": "LOCKED",
       "source": "docs/j2/EDUCATION.md",
       "publication": "docs/j2/publications/SH-J2-EDU-001_v1.0.0.pdf",
-      "source_sha256": "4b9b71d7357bdf564afdaa48daff8190c21f8286bc6782cbcdebc248a1a67e38",
-      "publication_sha256": "7b17a62633d9e8bfbc1766256fd45f07e59bcfdf765643da0c0a247644d6f5d3",
+      "source_sha256": "a86400a7174c3b9de3834eba66d4ff218a502e646233ddb6bf3736a9bd33cc8e",
+      "publication_sha256": "891c7cfe084575dd6d0d19078a3169213003413fc11955190be50778b6ff32c0",
       "related_doctrines": [
         "Orientation",
         "Canon",
@@ -588,9 +592,10 @@
       ],
       "cross_references": [
         "ORIENTATION.md",
+        "ORIENTATION_OFFICER_PROFESSION.md",
         "../governance/DECISION_QUALITY_AND_AFTER_ACTION_LEARNING.md"
       ],
-      "search_text": "j2 education docs/j2/education.md # j2 education\n\n**document id:** `sh-j2-edu-001` | **version:** 1.0.0 | **state:** locked\n**owner:** j2 education | **related:** orientation, canon, eib, jag, decision quality | **cross-reference:** `orientation.md`; `../governance/decision_quality_and_after_action_learning.md`\n\neducation is a separate j2 arm tightly coupled to orientation. it owns teaching practice: deep corporate and role education, business-line literacy, learning paths, cases, lessons learned, mandatory compliance education, and the conversion of important learning into usable instruction.\n\nlegal, safety, hr, and compliance may own requirements, subject matter, and required legal content. j2 education owns pedagogy, instructional/delivery design, relevance, engagement, and connection to real work. sexual-harassment, workplace-violence, safety, compliance, assurance, and technical education receive the same standard of excellence; mandatory never means intentionally lifeless.\n\n## educational constitution\n\neducation makes sable harbor legible to its people. institutional literacy includes why the company exists, how its business lines actually operate, where authority sits, how evidence becomes judgment, how physical reality constrains models, and how lessons change institutional behavior. deep learning and mandatory learning belong to one profession because both require respect for the learner and fidelity to reality.\n\neducation converts doctrine and operational learning into instruction without claiming ownership of the underlying law, safety rule, control, technical truth, or business decision. subject-matter owners approve required content. education challenges incoherent, irrelevant, or pedagogically ineffective material and designs delivery, practice, assessment, reinforcement, and refresh.\n\n## learning products\n\nthe arm maintains role pathways, business-line literacy, technical deep dives, cases, field-derived lessons, leadership learning, and mandatory curricula. a case preserves uncertainty and decision context rather than flattening history into a moral with an obvious answer. when lawful, learners encounter the evidence, assumptions, dissent, and consequences that made the situation real.\n\nlearning effectiveness is not completion alone. evidence may include recall, application, changed field behavior, reduced repeated error, better escalation, improved question quality, and learner feedback. education does not manipulate these into vanity metrics.\n\n## relationship to orientation and jag\n\norientation identifies changes in institutional understanding that require education. jag returns field context, reusable practices, failed interventions, and teaching material through human handoff. education may support the final stewardship phase of a jag tour and may send instructors into operating environments to understand the work being taught.\n\nthe exact education staffing model, course platform, and detailed talent architecture remain open. those implementation choices cannot dilute the locked ownership of pedagogy.\n"
+      "search_text": "j2 education docs/j2/education.md # j2 education\n\n**document id:** `sh-j2-edu-001` | **version:** 1.1.0 | **effective:** september 3, 2026 | **state:** locked\n**owner:** j2 education | **related:** orientation, canon, eib, jag, decision quality | **cross-reference:** `orientation.md`; `orientation_officer_profession.md`; `../governance/decision_quality_and_after_action_learning.md`\n\neducation is a separate j2 arm tightly coupled to orientation. its primary mission is enterprise-wide education, while it also serves as the professional schoolhouse for j2 itself. education is both an institution and a physical place: a serious learning campus and conference center with classrooms, residential capacity, case rooms, mock executive and board environments, and space for convening across sable harbor.\n\neducation owns teaching practice: deep corporate and role education, business-line literacy, learning paths, cases, lessons learned, mandatory compliance education, executive formation, j2 professional formation, exercises, and the conversion of important learning into usable instruction.\n\nlegal, safety, hr, and compliance may own requirements, subject matter, and required legal content. j2 education owns pedagogy, instructional/delivery design, relevance, engagement, and connection to real work. sexual-harassment, workplace-violence, safety, compliance, assurance, and technical education receive the same standard of excellence; mandatory never means intentionally lifeless.\n\n## four missions\n\n1. **enterprise education.** make sable harbor legible to its people and raise institutional literacy across business lines and headquarters.\n2. **executive formation.** give newly appointed senior executives, business heads, corporate officers, and selected headquarters leaders a common grounding in sable harbor's institutions, decision system, history, responsibilities, and realities.\n3. **j2 professional formation.** train and continuously develop contact, judgment, orientation, jag, and education professionals, including specialist schools, exercises, apprenticeships, and continuing professional education.\n4. **convening.** operate a serious enterprise conference center where difficult problems, cross-business learning, after-action work, research, and professional communities can meet away from normal headquarters rhythms.\n\n## educational constitution\n\neducation makes sable harbor legible to its people. institutional literacy includes why the company exists, how its business lines actually operate, where authority sits, how evidence becomes judgment, how physical reality constrains models, and how lessons change institutional behavior. deep learning and mandatory learning belong to one profession because both require respect for the learner and fidelity to reality.\n\neducation converts doctrine and operational learning into instruction without claiming ownership of the underlying law, safety rule, control, technical truth, or business decision. subject-matter owners approve required content. education challenges incoherent, irrelevant, or pedagogically ineffective material and designs delivery, practice, assessment, reinforcement, and refresh.\n\n## program families\n\neducation maintains five standing program families:\n\n- **sable harbor formation:** institutional literacy for headquarters staff, selected business leaders, and other roles whose work requires understanding the enterprise beyond a single function.\n- **executive formation:** a residential, case-based program for newly appointed senior leaders. a one-week course is the default design point, with extensions where role complexity warrants.\n- **j2 professional education:** entry formation and continuing education for contact, judgment, orientation, jag, and education staff.\n- **enterprise professional programs:** advanced courses in reasoning, evidence, decision quality, postmortems, business-line literacy, technical subjects, and other capabilities that materially improve institutional performance.\n- **convenings and exercises:** conferences, simulations, cross-business problem sessions, case immersions, and controlled decision exercises.\n\nresidential attendance is not universal. it is expected for j2 entrants, new corporate officers, business heads, and selected headquarters roles where the value of immersion justifies removal from ordinary work.\n\n## learning products\n\nthe arm maintains role pathways, business-line literacy, technical deep dives, cases, field-derived lessons, leadership learning, and mandatory curricula. a case preserves uncertainty and decision context rather than flattening history into a moral with an obvious answer. when lawful, learners encounter the evidence, assumptions, dissent, and consequences that made the situation real.\n\nblackridge is part of the institutional case canon and may be used both openly and in disguised form where preserving uncertainty improves learning. education may also build high-fidelity simulated boardrooms, executive offices, operations rooms, interview rooms, and crisis environments for professional formation and orientation assessment and selection.\n\nlearning effectiveness is not completion alone. evidence may include recall, application, changed field behavior, reduced repeated error, better escalation, improved question quality, and learner feedback. education does not manipulate these into vanity metrics.\n\n## staffing and faculty model\n\nthe permanent education establishment is approximately **35 billets**. the permanent core includes the head of education, deputy leadership, senior faculty, instructors, exercise and case designers, program/registrar staff, learning operations, and campus/program support.\n\nthe permanent core is intentionally supplemented by rotating practitioners from contact, judgment, orientation, jag, headquarters functions, and operating businesses. education does not build a giant detached faculty when current practitioners can teach from real work. rotating faculty remain subject-matter contributors; education retains ownership of pedagogy and instructional quality.\n\nthe campus itself may support substantially more people than the permanent thirty-five-person establishment because facilities, hospitality, events, and shared enterprise services can scale independently of the teaching corps.\n\n## relationship to orientation and jag\n\norientation identifies changes in institutional understanding that require education. jag returns field context, reusable practices, failed interventions, and teaching material through human handoff. education may support the final stewardship phase of a jag tour and may send instructors into operating environments to understand the work being taught.\n\neducation owns the assessment and selection environment for orientation candidates under the standards of the orientation profession. it maintains the physical and instructional infrastructure, role-player pool, case library, safeguards, and exercise integrity while orientation owns admission standards and final commissioning decisions.\n"
     },
     {
       "id": "SH-J2-EIB-001",
@@ -602,7 +607,7 @@
       "source": "docs/j2/EIB_AND_ENTERPRISE_QUESTIONS.md",
       "publication": "docs/j2/publications/SH-J2-EIB-001_v1.0.0.pdf",
       "source_sha256": "df43320eb65800cf8f0d908fc24d862c6f995cbac5273d7d83356c3eff3841be",
-      "publication_sha256": "909c79f5c7df8ea4e943f1e9b26a9daf29fa2b6b0ce465773f78a777e86af7c4",
+      "publication_sha256": "374bfe604dd0a8aacaadda604bf336c3b4943ca3c2ce5ec561e99547cb05e99d",
       "related_doctrines": [
         "Canon",
         "Judgment",
@@ -626,7 +631,7 @@
       "source": "docs/j2/INFORMATION_ACCESS_DOCTRINE.md",
       "publication": "docs/j2/publications/SH-J2-ACCESS-001_v1.0.0.pdf",
       "source_sha256": "f6c3b291cb4528147c733e851890e8fbdbcf1bcedc90581da0a52f5003a8b562",
-      "publication_sha256": "f38e2773c6df0d64739e7b25809c44a8f230bfbfae910b8da0fae5e017a2a5a2",
+      "publication_sha256": "3ec0aed6828d376c92e62720720c89587e7bb4a75d1298128264cba452bbec7f",
       "related_doctrines": [
         "Immaculate Intelligence",
         "disclosure"
@@ -647,7 +652,7 @@
       "source": "docs/j2/alexandria/ALEXANDRIA_CHARTER.md",
       "publication": "docs/j2/publications/SH-J2-ALX-001_v1.0.0.pdf",
       "source_sha256": "c7c73a82a54f1c499d330e763291ece595390bd0cf439bcfa8fa1c608f4149bf",
-      "publication_sha256": "8f3fb56f947b3641ca2cae44cfaf7b32c95466bcf48372851389ecd81805e233",
+      "publication_sha256": "18643f0f1659a73866185ffeea3a9b0d4ae6dc15b0d76de56df691f3f5bdeb99",
       "related_doctrines": [
         "temporal integrity",
         "provenance",
@@ -671,7 +676,7 @@
       "source": "docs/j2/alexandria/INSTITUTIONAL_MEMORY_AND_CONNECTION.md",
       "publication": "docs/j2/publications/SH-J2-ALX-MEMORY-001_v1.0.0.pdf",
       "source_sha256": "4e1fe3e2a1f18756da4ed530a9f23cb7fb3149aa35a8dee20699bee792d383e4",
-      "publication_sha256": "3f8bb877027e4ec75dbebcf5f0305265981c92b95baf3cb50df7138efd3a7af1",
+      "publication_sha256": "1549ee2c09f64c6324442bbd88c994e28bdd0288ad254475d325f8ce2a349642",
       "related_doctrines": [
         "Canon",
         "provenance",
@@ -695,7 +700,7 @@
       "source": "docs/j2/alexandria/SEARCH_AND_HISTORICAL_RECONSTRUCTION.md",
       "publication": "docs/j2/publications/SH-J2-ALX-SEARCH-001_v1.0.0.pdf",
       "source_sha256": "98108fac7ab9ed598c80190fef4f8b61459f28c8a22c0bf3469ed0ff1d9b2b59",
-      "publication_sha256": "6258e3392f307c0963e4f6457eb988756fefc3af06c4b4fcdc68824cc79ad413",
+      "publication_sha256": "edf6a5d8d5ab0d568103a73ed598561791ac4a78ea3af643be4a95c9a5c1b48e",
       "related_doctrines": [
         "Pinakes",
         "temporal integrity",
@@ -719,7 +724,7 @@
       "source": "docs/j2/alexandria/VISUALIZATION_AND_BRANCHING_HISTORY.md",
       "publication": "docs/j2/publications/SH-J2-ALX-VIS-001_v1.0.0.pdf",
       "source_sha256": "86c3d5209d096ad0739544a968c19674c27a2df0061b24070f794de045e09fc4",
-      "publication_sha256": "a1de4e1315e69d2ba4b14d30b48fbed03e87993ec2db2c65a0971a47d1f5d9a6",
+      "publication_sha256": "8d5c8e176c52703055461ecbc6a555e4aaebded2d4a10e770cf1d513eb6ad458",
       "related_doctrines": [
         "connection",
         "provenance",
@@ -743,7 +748,7 @@
       "source": "docs/j2/alexandria/TEMPORAL_INTEGRITY.md",
       "publication": "docs/j2/publications/SH-J2-ALX-TIME-001_v1.0.0.pdf",
       "source_sha256": "e2cdc51b055e07f3161794b9a8fcd904809a610bd1d87d33952cfe5ed5dea0b0",
-      "publication_sha256": "214f7dee65a9d476b23a1aa9afbefc618f7a65cdf59c9be86b9aac82d9d90c74",
+      "publication_sha256": "2bf63c05d3c78e2be555cb22b7ea2bdb81b8e5f2d75245569a27fedc261e9cc0",
       "related_doctrines": [
         "Canon",
         "Semaphore",
@@ -766,7 +771,7 @@
       "source": "docs/j2/alexandria/PROVENANCE_AND_LINEAGE.md",
       "publication": "docs/j2/publications/SH-J2-ALX-PROV-001_v1.0.0.pdf",
       "source_sha256": "53365ff93b6124ac5a952b1789600f2d02bf5f26914d9b065c02c28479bd7f0d",
-      "publication_sha256": "274d71a666f2f7b0f340bfc9eba6b8c9e5985bab48a88075ae0b324084413a13",
+      "publication_sha256": "4a798db26140352711cae61b6f91e4cac6a7519c9b59482a303c5a9c842310fb",
       "related_doctrines": [
         "temporal integrity",
         "connection",
@@ -790,7 +795,7 @@
       "source": "docs/j2/alexandria/INFORMATION_ACCESS_AND_DISCLOSURE.md",
       "publication": "docs/j2/publications/SH-J2-ALX-DISCLOSE-001_v1.0.0.pdf",
       "source_sha256": "d286201998a94058c9c1c16165537a9e612b6bd84cb29442d052f68da869c752",
-      "publication_sha256": "f1df419bebb5d2b633074f5eda130d2933b28ddf43302b6080abd03accb97f3e",
+      "publication_sha256": "c21bedfca4cae9af081d45fe43bcc0b0aa927e1f28000d357d7f4a0b8bff93c1",
       "related_doctrines": [
         "information access",
         "Pinakes",
@@ -814,7 +819,7 @@
       "source": "docs/j2/alexandria/AI_AUTHORITY_AND_HUMAN_AUTHORSHIP.md",
       "publication": "docs/j2/publications/SH-J2-ALX-AI-001_v1.0.0.pdf",
       "source_sha256": "b2490e603378757104b7cc783d9fd6f5e651c799b9d974cb2c6549eaeadf6125",
-      "publication_sha256": "45291705430c738716d240a436e235f67e95156a75486292b1dac8a7709ef35e",
+      "publication_sha256": "3a1092326d0f6e0a23042b9e0ecfa24eba95fcd4e2d13bc4c4cbe626fb1c825a",
       "related_doctrines": [
         "Daedalus",
         "Canon",
@@ -839,7 +844,7 @@
       "source": "docs/j2/alexandria/DAEDALUS_PERSONAL_INSTANCE_AND_WORKSPACE.md",
       "publication": "docs/j2/publications/SH-J2-DAEDALUS-PERSONAL-001_v1.0.0.pdf",
       "source_sha256": "36e520d51263bf4204382caf49b65b378df18740072e5c8c0e532834d0dd791c",
-      "publication_sha256": "d5e9f1ce9b97f2d167266dbaf888aad8c0bfdb9e6576b4e69e7c5cda1d446e2e",
+      "publication_sha256": "80a90881219c6a13dd8905d801555dde6d14273f57cd2ec13390b067a5544b48",
       "related_doctrines": [
         "AI authorship",
         "access/disclosure",
@@ -863,7 +868,7 @@
       "source": "docs/j2/alexandria/PINAKES_PORTAL_AND_UX.md",
       "publication": "docs/j2/publications/SH-J2-PINAKES-001_v1.0.0.pdf",
       "source_sha256": "79956ce8754a0076202387ae00ea91b38aeecaddea085e4f6b35d9ece416bf19",
-      "publication_sha256": "efb26c77885236b3971a40925506dd6749fde9ac9d3143458ee7d770084b752e",
+      "publication_sha256": "1d5727d91e562416fd2b7aae37998f01935628257d1e4ee70faa00f916054466",
       "related_doctrines": [
         "all Alexandria portals",
         "search",
@@ -886,7 +891,7 @@
       "source": "docs/j2/alexandria/SEMAPHORE_TRAFFIC_SYSTEM.md",
       "publication": "docs/j2/publications/SH-J2-SEMAPHORE-001_v1.0.0.pdf",
       "source_sha256": "176c38e5b3c4863467699bc99285d097bef9047ce091c40e39ca5b52686d2e42",
-      "publication_sha256": "99c9511cd4298bb37438436dd9a2aadc59fd534715b6458730f9e46326ef8604",
+      "publication_sha256": "9ad676f9d8b66f04f790668ba9e522b97c28d7a6f94bf82383cb837cf51ccdf8",
       "related_doctrines": [
         "Canon",
         "Judgment",
@@ -911,7 +916,7 @@
       "source": "docs/j2/alexandria/CANON_INSTITUTIONAL_KNOWLEDGE.md",
       "publication": "docs/j2/publications/SH-J2-CANON-001_v1.0.0.pdf",
       "source_sha256": "9f6da032c4143f482f76530b0381abe16d88399f99a958ef0e19e0ed870c5c38",
-      "publication_sha256": "06a3ea39877f8927f6db24a55579d53ca0bcd60415659e74e4d5e1258c1dacb7",
+      "publication_sha256": "b607b47697bfab2c50f4b06fb3ca2dc90b33a347e16f9ea2595bfb699996e6ce",
       "related_doctrines": [
         "Judgment",
         "EIB",
@@ -936,7 +941,7 @@
       "source": "docs/j2/alexandria/DAEDALUS_OPERATING_DOCTRINE.md",
       "publication": "docs/j2/publications/SH-J2-DAEDALUS-001_v1.0.0.pdf",
       "source_sha256": "7c3a1e30b3aa0dd0f5993557d16cd6170e6df5fde080f98482f3216e7240dd3e",
-      "publication_sha256": "a0f3ed0f45ef69d7a4d1b1140007f9d3068dfaacbedc36b0a874c49faaed1f69",
+      "publication_sha256": "3c79e57178dd33db3d74d8848f4600e7a82f8283786093532b06e6fee15ad32d",
       "related_doctrines": [
         "human authorship",
         "disclosure",
@@ -949,6 +954,43 @@
       "search_text": "daedalus operating doctrine and ai authority boundaries docs/j2/alexandria/daedalus_operating_doctrine.md # daedalus operating doctrine and ai authority boundaries\n\n**document id:** `sh-j2-daedalus-001` | **version:** 1.0.0 | **state:** locked architectural direction\n**owner:** j2 headquarters / daedalus doctrine | **related:** human authorship, disclosure, personal workspace | **cross-reference:** `ai_authority_and_human_authorship.md`; `daedalus_personal_instance_and_workspace.md`\n\ndaedalus is the personally provisioned ai agent around alexandria\u2014not alexandria and not pinakes door ten. it may traverse, retrieve/pull, hold, compare, trace/lineage, historically reconstruct, visualize, synthesize, challenge, explore, converse, form labeled opinions, and recommend investigation. it may say, \u201ci think you're wrong, and here is why.\u201d its rule is **intellectual aggression without institutional authority**.\n\n## hard boundaries\n\n1. **no authoritative write.** no write path into alexandria's institutional record.\n2. **no self-promotion.** a synthesis/opinion never automatically becomes canon, judgment, semaphore, eib, or institutional position.\n3. **no institutional authority.** it cannot say sable harbor judges something unless quoting an actual human-authored record.\n\njudgment officers author judgments; orientation officers author semaphore and canon changes; orientation owns eib publication. there is no hidden approve-an-ai-draft conveyor. daedalus synthetic reports, timelines, comparisons, visualizations, and research notes may persist in a user's workspace but remain clearly marked synthetic, non-authoritative, and outside alexandria; a human may independently use them in authored work.\n\neach user has credentials, individual context, and segregated persistent memory. no cross-user conversation, working-set, copied-material, synthesis, or memory access. global system/model/skill updates may change behavior without merging content. users may deliberately share content-free techniques, skills, settings, markdown skill files, and workflow templates\u2014never private memory or alexandria extracts. user export preserves synthetic marking and access constraints.\n\n## universal read; bounded disclosure\n\ndaedalus may read the full alexandria environment so it can identify relevance, including that restricted material exists. disclosure is evaluated for the requesting user and context. restricted content and disallowed inferences cannot leak merely because the model read them. the runtime policy layer, entitlement implementation, inference-leakage tests, logging, and redaction controls are acceptance requirements; this v0.1 doctrine does not claim a runtime exists.\n\nthe testable policy manifest is `../structured/daedalus_policy.json`.\n"
     },
     {
+      "id": "SH-PS-RW-TOR-001",
+      "title": "Red Wash Transaction and Operating Record",
+      "category": "Red Wash transaction and operating record",
+      "owner": "Pale Sun operating authority",
+      "version": "1.0.0",
+      "status": "LOCKED where stated; all generated company records remain synthetic evidence",
+      "source": "docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05.md",
+      "publication": "docs/governance/publications/SH-PS-RW-TOR-001_v1.0.0.pdf",
+      "source_sha256": "6e90bdb9280a562e80e04561af45fabf1856a18b55ea48541f292a42711171d5",
+      "publication_sha256": "79b356782c9ba326ffe567717a0c5ddbdae62e5e7c69ab24bd50a2bb35d59abe",
+      "related_doctrines": [],
+      "cross_references": [],
+      "search_text": "red wash transaction and operating record docs/canon/red_wash_transaction_operating_record_2026-09-05.md # red wash transaction and operating record\n\n**document id:** `sh-ps-rw-tor-001`\n**version:** 1.0.0\n**decision date:** 5 september 2026\n**canon effective through:** 5 september 2026\n**synthetic calibration through:** 31 august 2026\n**classification:** public synthetic diegetic\n**owner:** pale sun operating authority\n**state:** locked where stated; all generated company records remain synthetic evidence\n\n## 1. authority and evidence doctrine\n\nthis record selects the controlling red wash transaction and 2026 operating case in\nthe fictional sable harbor universe. it does not claim that red wash, its counterparties,\npermits, employees, shipments, or financial results exist in the real world.\n\nfour independent labels must not be collapsed:\n\n- canon state (`locked`, `provisional`, `open`, `superseded`);\n- record origin (`public_synthetic_diegetic` or `external_reality_anchor`);\n- evidence/model state (`derived`, `supported_estimate`, `provisional_assumption`,\n  `scenario`, `open`, `conflict`, or `superseded`); and\n- period role (`synthetic_calibration` through august 2026 or\n  `management_forecast` for september\u2013december 2026).\n\nthere is no `actual` layer in this package. locking a fictional case decision does not\nturn a generated row into a historical actual. real-world sources constrain the\nsynthetic model; they do not authenticate synthetic company facts.\n\n## 2. institutional identity\n\n`locked`: pale sun is sable harbor's strategic uranium owner-operator business. red\nwash is its dedicated underground wyoming uranium operation, held through a dedicated\nlegal operating company. pale sun is a lean business layer, not another corporate\nheadquarters. red wash is an operation first and a controlled proving ground second.\n\n`locked`: red wash produces natural uranium concentrate/yellowcake reported as u3o8.\nit neither enriches uranium nor fabricates fuel.\n\n`open`: the operating company's exact legal name, suffix, and jurisdiction are not\nselected here. \u201cred wash operating company\u201d is a descriptive role, not a ratified\nlegal name.\n\n## 3. acquisition\n\n### selected case \u2014 locked\n\nthe transaction closes on 18 july 2025 after diligence, a seller re-trade, sable\nharbor's walk-away, a return to negotiations, and changed risk allocation.\n\n| item | selected amount |\n|---|---:|\n| operating assets | $42.000m |\n| acquired current assets | $4.500m |\n| accounting aro assumed | $(16.000)m |\n| other liabilities assumed | $(2.500)m |\n| net identifiable assets / cash consideration | $28.000m |\n| environmental/title escrow | $3.000m |\n| holdback | $0.500m |\n| transaction debt | $0 |\n| goodwill | $0 |\n\nthe escrow and holdback are explicit risk-allocation mechanisms. this record does not\nadd them to the $28.0m consideration a second time.\n\nthe h2 2025 stabilization program is $11.0m: $8.0m capitalized rehabilitation and\n$3.0m repair/stabilization expense. that program and the diligence record preserve the\nfriction of the acquisition; this is not a clean, instant restart.\n\n### seller identity \u2014 provisional\n\n`northstar resources` is the accepted working seller name. the exact legal name,\nsuffix, and jurisdiction remain `open`; the previously drafted \u201cnorthstar resources\n(wyoming) llc\u201d form is not locked by this record.\n\n## 4. internal resource and mine basis\n\nthe selected internal acquisition/operating basis is a `supported_estimate`:\n\n- approximately 2.5 million short tons at 0.170% u3o8;\n- approximately 8.5 million contained pounds u3o8;\n- approximately 7.82 million modeled recoverable pounds;\n- 0.9 million inferred tons at 0.145%, excluded from base value and the base mine plan;\n- selective drift-and-fill with cemented paste backfill;\n- planned maximum depth of approximately 2,500 feet; and\n- a compact conventional mill with modeled 600-ton-per-day nameplate capacity.\n\nthis is an internal synthetic acquisition and operating basis. it is not a public\ns-k 1300 reserve disclosure, a feasibility study, a technical report summary, or a\nprofessional opinion about a real mineral property.\n\n## 5. selected 2026 operating case\n\nthe following values are locked inputs or locked outcomes for the selected synthetic\ncase. approximate physical and cost values retain their stated evidence status.\n\n| driver | selected value | evidence/model state |\n|---|---:|---|\n| total pale sun/red wash establishment | 140 fte | scenario_input |\n| pale sun business layer | 12 fte | scenario_input |\n| red wash site | 128 fte | scenario_input |\n| ore mined | 175,000 short tons | scenario_input |\n| head grade | approximately 0.170% u3o8 | supported_estimate |\n| recovery | approximately 92.0% | supported_estimate |\n| u3o8 produced | 547,400 lb | derived |\n| opening finished inventory | 125,000 lb | scenario_input |\n| u3o8 sold | 500,000 lb | scenario_input |\n| ending finished inventory | 172,400 lb | derived |\n| modeled weighted realized price | $72.95/lb | derived |\n| modeled revenue | $36.475m | derived |\n| production cost incurred | $27.950m | scenario_input |\n| dd&a incurred | approximately $3.500m | derived |\n| sustaining capital | $4.000m | scenario_input |\n| rehabilitation capital | $5.000m | scenario_input |\n| production/mineral taxes | approximately $2.125m | supported_estimate |\n| royalties | approximately $0.7295m | supported_estimate |\n| freight, assay, and handling | approximately $0.600m | supported_estimate |\n\nproduction remains in a post-acquisition rehabilitation period. the model builds from\nmine, mill, inventory, contract, delivery, and cost drivers; no target ebitda, margin,\nnet income, or cash flow is authorized as a plug.\n\n### inventory and financial derivation\n\nproduction cost and dd&a are incurred measures, not automatic period expense. the\nreleased package applies a transparent weighted-average inventory roll-forward to\nopening inventory, 2026 production, cost of sales, and ending inventory. the currently\nselected supporting assumptions are $45.00/lb opening cash cost, $5.50/lb opening\ndd&a, an 18% modeled income-tax rate, and $0.550m other working-capital use. these are\n`supported_estimate` scenario inputs, not additional locked historical facts.\n\nthe generated statement package and cash-flow bridge are subordinate `derived`\noutputs. if they do not reconcile to the operating drivers, the generator must fail\nrather than force the selected narrative. this release does not claim a separate\ntrial-balance dataset.\n\nthe selected dd&a bridge is a `model_proposed` method supported as a\n`supported_estimate`: $42.0m of approved aggregate operating assets plus $8.0m of\napproved capitalized rehabilitation produces a $50.0m composite modeled basis;\n547,400 lb produced divided by 7,820,000 recoverable lb produces a 7.0%\nunits-of-production factor; and $50.0m multiplied by 7.0% produces $3.500m of 2026\ndd&a incurred. this simplified composite calculation is not an asset-class\npurchase-price allocation, an audited gaap useful-life determination, or tax basis.\n\n## 6. closure\n\n`locked`: the current engineering-cost basis is $25.0m and the opening accounting aro\nis $16.0m. they are different measures and must not be made equal by assumption.\n\nthe current 2.5% inflation assumption, 6.5% discount assumption, and modeled staged\noutflows through 2039 are `supported_estimate` inputs. engineering current cost,\naccounting aro, regulatory surety, and eventual cash spending remain separately named\nand reconciled.\n\n## 7. commercial book and custody\n\n`locked`: utility-oriented term contracts are the primary sales structure, with\nlimited discretionary exposure. the selected synthetic book models 150,000 lb at\n$61/lb, 150,000 lb at $72/lb, 125,000 lb at $80/lb, and a 75,000-lb discretionary\nplacement at $87/lb. those prices are modeled contract realizations, not uranium spot\nquotes or claims about real counterparties.\n\nthe named buyers, agreement identifiers, consent records, delivery events, and permit\nidentifiers in the evidence package are synthetic instances. final settlement follows\nreceipt and assay at the modeled licensed conversion-facility delivery point. a\nqualified third-party carrier transports the product under the modeled shipper and\ncustody controls.\n\n## 8. operating authority\n\n`locked`: pale sun first; proving ground second. foundry, willow, atlas, j2, ess, and\nother sable harbor institutions may support bounded work only through a named pale sun\noperating owner, qualification gates, explicit stop/rollback conditions, and preserved\nevidence. they do not displace red wash operating authority.\n\ncole's temporary-stop authority creates an operational disposition; it does not make\na claim true. the synthetic 2025 stop record therefore keeps observation, judgment,\nauthority, action, later evidence, and remaining uncertainty separate.\n\n## 9. limited aru/bs&t interface\n\nthe controlling bridge is `sh-ps-rw-log-001`.\n\n`locked` boundaries:\n\n- american resource utility (aru) and blood, sweat & tears railway (bs&t) had no\n  pre-existing commercial relationship with red wash;\n- qualified external carriers serve every 2025 red wash movement;\n- a real soft, costly, uneven freight backdrop supports\u2014but does not prove\u2014the\n  fictional carrier-consolidation and lane-allocation event;\n- the resulting scheduling disruption creates delivery risk but no lost 2025 annual\n  sales and no change to 2025 annual revenue;\n- the search begins with replacement carriers, broadens to rail mapping, and the\n  question \u201cwhose line is this?\u201d surfaces aru/bs&t through operating analysis;\n- at discovery, there is no direct mine connection, suitable secure transload, or\n  demonstrated uranium-specific aru/bs&t capability;\n- $15.0m is an unbooked preliminary interface screening envelope, not acquisition\n  consideration or approved capital; and\n- no aru/bs&t uranium custody or service begins automatically.\n\nthe planning sequence is 0\u20133 months for mapping and diligence, approximately months\n3\u20136 for engineering and approvals, limited service only after all applicable gates at\nabout month 6 or later, and a mature integration review around months 12\u201318. a mixed\nexternal-carrier, truck, transload, and rail design remains permissible.\n\nthe full aru/bs&t case\u2014including acquisition date and terms, seller, routes, assets,\ncustomers, workforce, financial statements, final interface design, and final uranium\ncustody decision\u2014remains `open` and is expressly outside this record.\n\n## 10. approved visual sources\n\nthe owner-approved pale sun logo, red wash logo, red wash underground plan, and\ncorrected red wash site overview are controlled byte-for-byte by\n`assets/brand/red_wash_visual_manifest.json`. derivatives may improve placement or\naccessibility, but may not overwrite, recompress, redraw, or supersede the canonical\npng sources.\n\n## 11. public/private boundary\n\nthe public repository contains the company-visible evidence and selected decision\ncase. nonpublic evaluation material remains outside this repository. any companion\nmust bind to the exact final public merge commit and source hashes after merge; this\nrecord does not claim that the binding already exists.\n\n## 12. superseded and open scope\n\nearlier exploratory values of $24.7m revenue, $22.3m generic operating cost, 126\nemployees, $18.5m aro, and exploratory acquisition financing are `superseded` and may\nnot feed the selected package. exact red wash and seller legal identities, later mine\nplans or expansion, and the complete aru/bs&t case remain `open`.\n"
+    },
+    {
+      "id": "SH-PS-RW-LOG-001",
+      "title": "ARU/BS&T Interface and Dependency Record",
+      "category": "Red Wash logistics dependency record",
+      "owner": "Pale Sun / Red Wash",
+      "version": "1.0.0",
+      "status": "LOCKED boundary and sequence; OPEN implementation",
+      "source": "red_wash/logistics/ARU_BST_INTERFACE_AND_DEPENDENCY_RECORD.md",
+      "publication": "docs/governance/publications/SH-PS-RW-LOG-001_v1.0.0.pdf",
+      "source_sha256": "7796531b0a636d0447914fc74255ef19763088479ea6ccb8d82e1b1fbb2c8f7a",
+      "publication_sha256": "a71f0e74d6e9bf437fb0f4a453197a5768fc8be951ad07d06ac325a0e0c2f907",
+      "related_doctrines": [
+        "SH-PS-RW-TOR-001",
+        "ARU/BS&T corporate-lore direction"
+      ],
+      "cross_references": [
+        "../../docs/structured/aru_bst_red_wash_bridge.json",
+        "../source/aru_bst_bridge.json",
+        "../source/external_source_register.csv"
+      ],
+      "search_text": "aru/bs&t interface and dependency record red_wash/logistics/aru_bst_interface_and_dependency_record.md # aru/bs&t interface and dependency record\n\n**document id:** `sh-ps-rw-log-001`\n**version:** 1.0.0\n**effective:** september 5, 2026\n**state:** locked boundary and sequence; open implementation\n**owner:** pale sun / red wash\n**related:** `sh-ps-rw-tor-001`; aru/bs&t corporate-lore direction\n**cross-reference:** `../../docs/structured/aru_bst_red_wash_bridge.json`; `../source/aru_bst_bridge.json`; `../source/external_source_register.csv`\n\n## purpose\n\nthis record explains why red wash caused sable harbor to investigate american resource utility\n(`aru`) and its blood, sweat & tears railway (`bs&t`) operating component. it defines only the\nred wash interface and dependency problem. aru's acquisition terms, network, customers, fleet,\nworkforce, financial condition, and complete operating thesis remain outside this record.\n\nthe record is retrospective. it separates information available before red wash closed on july 18,\n2025 from later evidence and from synthetic red wash events. no later publication is presented as\ninformation available to the acquisition team at closing.\n\n## 2025 external-carrier model\n\nred wash had no commercial relationship with aru or bs&t before sable harbor began its logistics\nsearch. qualified external carriers handled all red wash movements throughout 2025, including\npre-close activity, closing transition, stabilization work, and uranium-product deliveries.\n\naru was not a northstar vendor, a historical red wash carrier, a source of prior revenue, or a\npreselected acquisition solution. nothing in the later search changes the authority or accounting\nfor a 2025 shipment.\n\n## contemporaneous freight environment\n\ninformation published by july 18, 2025 described a soft and uneven u.s. freight market rather than\na universal shortage of trucks or rail capacity. the relevant pressure was the gap between broad\naggregate availability and the smaller population of capacity usable for a particular lane,\nequipment type, security requirement, customer commitment, and schedule.\n\nthe acquisition team could have known that:\n\n- the american transportation research institute reported average 2024 motor-carrier cost of\n  $2.260 per mile, nonfuel cost of $1.779 per mile, rising equipment payments, and negative average\n  truckload operating margin in its july 1, 2025 report;\n- commercial-auto and umbrella premiums continued to rise in the council of insurance agents &\n  brokers' may 15, 2025 survey;\n- the federal reserve retained a 4.25%\u20134.50% federal-funds target on june 18 and described economic\n  uncertainty as elevated;\n- eia recorded rocky mountain on-highway diesel at $3.713 per gallon for the week of july 14;\n- bls reported year-over-year increases for heavy-truck and trailer producer-price indexes on\n  july 16;\n- the federal reserve's july 16 beige book described weak or sluggish trucking demand in several\n  districts alongside tariff and insurance pressure; and\n- carrier and market-provider releases described uneven modal volumes, rate pressure, and active\n  capacity management.\n\nthose sources support a market-pressure mechanism. they do not prove insolvency, a forced sale,\ninsurance denial, or route-specific scarcity for any named carrier. the detailed source register\nrecords publication dates, covered periods, geography, method, transformation, and limitations.\n\nlater 2025 sources concerning credit conditions, trucking tuck-in acquisitions, proposed rail\nconsolidation, and aggregate rail traffic are retained only as retrospective corroboration. they do\nnot appear as knowledge available on july 18.\n\n## synthetic market-concentration event\n\nagainst that real backdrop, a fictional combination among qualified regional transport providers\nduring 2025 reduced the number of providers willing and able to serve the low-frequency red wash\nuranium lane. the surviving carrier allocated less scheduling capacity to the lane during the\nfourth quarter.\n\nthis was a transportation-market and counterparty-concentration event. it was not caused by a mine\nfailure, fraudulent shipment, accident, regulatory shutdown, or red wash operating incompetence.\nthe company-specific combination, notice, allocation, and schedule exception are synthetic company\nrecords.\n\n## capacity notice and delivery effect\n\nthe reduced allocation displaced a planned delivery window and created a credible risk of missing\nthe contractual period. red wash, the qualified carrier, and the customer-facing contract team\nfound another qualified slot within the 2025 annual delivery period.\n\nthe event therefore had:\n\n- no lost 2025 annual sales;\n- no change to locked 2025 annual revenue;\n- no retroactive aru revenue or cost;\n- no transfer of uranium custody to an unqualified party; and\n- a material strategic lesson about dependency despite an immaterial annual financial result.\n\nthe preserved schedule exception is not labeled a financial loss merely because the operating\nrisk was consequential.\n\n## search progression\n\nred wash first sought a replacement or additional qualified carrier. the market scan showed that\nthe relevant carrier population was itself concentrated and that qualification, insurance,\nsecurity, route fit, and commitment economics restricted practical choices.\n\nthe team then broadened the question from \u201cwhich carrier can cover this window?\u201d to \u201cwhat durable\ntransportation interfaces could reduce dependency?\u201d physical and interchange mapping surfaced a\nnearby rail line and the operating question: **whose line is this?** the answer led to aru and bs&t.\n\naru was found through operating analysis. it was not presented by an investment banker as a\nturnkey red wash acquisition.\n\nred wash was the central catalyst for the search, but it was not by itself the complete aru thesis.\nthe later full case must determine whether aru can stand as an independent logistics business and\nserve customers and resource flows beyond red wash.\n\n## initial fit gaps\n\naru/bs&t was not an immediately usable uranium-transport solution. three deficiencies control the\ninterface screen:\n\n1. the line was close enough to investigate, but there was no direct mine connection;\n2. there was no suitable secure red wash transload/interface terminal; and\n3. aru/bs&t had not demonstrated the uranium-specific authority, custody, security, training,\n   insurance, equipment, emergency-response, route, interchange, and operating capability needed\n   for direct service.\n\n\u201cnear\u201d is a screening conclusion, not a locked route-mile fact. the exact line, distance,\ninterchanges, terminal site, asset condition, and service design remain open.\n\n## preliminary interface screen\n\nthe red wash interface uses a **$15.0 million preliminary planning envelope**. it is a scenario\ninput for screening only. it is not:\n\n- the aru purchase price;\n- approved or booked red wash capital;\n- a commitment to construct a direct branch line;\n- a final engineering estimate; or\n- proof that the interface can be completed for exactly $15.0 million.\n\npotential scope includes a secure truck/rail interface, terminal or site work, custody and\nchain-of-record systems, compliance, training, security, insurance, dispatch integration,\nequipment modifications, engineering, permitting, contingency, and commissioning. component\namounts remain open until later diligence supplies a defensible basis.\n\n## gate sequence\n\nthe planning sequence is relative to a future or separately controlled aru acquisition date, which\nthis record does not establish:\n\n| period after acquisition | work and gate |\n|---|---|\n| 0\u201390 days | physical mapping; route/interchange and condition assessment; legal, regulatory, and insurance review; service design; commercial and custody architecture |\n| approximately months 3\u20136 | engineering; approvals; contracting; procurement; training; and early implementation |\n| approximately month 6 onward | limited service only if every applicable operating and custody gate has passed |\n| approximately months 12\u201318 | mature-integration review; a mixed external-carrier, truck, transload, and rail model remains permissible |\n\nthe schedule is a planning envelope, not an instant-integration promise.\n\n## custody and authority\n\nqualified external carriers remain authoritative unless and until a later controlled decision is\nsupported by proof of:\n\n- regulatory authority and carrier/shipper roles;\n- packaging interfaces and equipment suitability;\n- employee radiation and hazardous-material qualification;\n- emergency-response capability;\n- insurance and security;\n- chain-of-custody design and tested records;\n- approved route and interchange arrangements; and\n- contract and customer acceptance.\n\naru or bs&t may support mapping, scheduling analysis, or interface design without taking physical\ncustody. an aru/pale sun timestamp mismatch can concern coordination records while the external\ncarrier retains transport authority. it must not be rewritten into proof that aru carried uranium.\n\n## financial treatment\n\nthe 2025 capacity event changes no red wash annual sales or revenue. the $15 million screen is not\nbooked capex, a liability, or a commitment. this record creates no aru purchase accounting,\nintercompany revenue, freight transfer, final service rate, or committed red wash volume.\n\nany later accounting begins only after an authorized event, identified legal entity, approved\ncapital, and traceable source record exist.\n\n## open items reserved for the full aru case\n\nthe following remain `open`: acquisition date, seller, price, financing, enterprise value, debt,\njurisdiction, tax elections, route miles, railroad class, route map, interchanges, customers,\ncommodity mix, terminal locations, fleet, track and bridge condition, workforce, labor agreements,\naccident history, maintenance backlog, financial statements, management team, service rates,\nintercompany pricing, committed red wash volume, and final uranium-custody role.\n\n## evidence register\n\nthe controlled machine source is `red_wash/source/aru_bst_bridge.json`. its generated tables record\nthe capacity events, shipment exception, carrier scan, rail candidate, fit gaps, gate sequence,\npreliminary capex screen, and custody-authority matrix. external sources and limitations are in\n`red_wash/source/external_source_register.csv`.\n\nthe real sources constrain the synthetic event. they do not convert it into an actual external\ncarrier transaction or complete the aru case.\n"
+    },
+    {
       "id": "SH-INT-AUDIT-P2-001",
       "title": "SABLE HARBOR \u2014 PHASE 2 COVERAGE AUDIT",
       "category": "institutional assurance",
@@ -958,7 +1000,7 @@
       "source": "docs/internal/COVERAGE_AUDIT_PHASE2.md",
       "publication": "docs/internal/COVERAGE_AUDIT_PHASE2.pdf",
       "source_sha256": "a0e76ab697e6dd3312abcc9b010644de082ec328d57a2f73d26d0cf5010e3a29",
-      "publication_sha256": "4e1ab9f1c6deaf577cb8cbe0abaf08d0b22f0cf18c8384b2ffdbe768fae68cba",
+      "publication_sha256": "fd3c160503a5ec38d3addda1b9e72f3627bbde4cec7dc5a76094df58c63ceea7",
       "related_doctrines": [
         "governance",
         "J2",
@@ -980,7 +1022,7 @@
       "source": "docs/internal/INSTITUTIONAL_CATALOG_QUERY_GUIDE.md",
       "publication": "docs/internal/INSTITUTIONAL_CATALOG_QUERY_GUIDE.pdf",
       "source_sha256": "60df1aaa4dc4011f052afda260b71d7106716a87f4784819b404b80f2d0085d3",
-      "publication_sha256": "094b391642b13b28209c9c2508333cd96493a980b2226469998aacb0e9094f22",
+      "publication_sha256": "5a0c391489fc4beb23c628e39997e7125a72c25caa3bf21a7e6a8c52878ff181",
       "related_doctrines": [
         "Pinakes",
         "Alexandria",

@@ -1,7 +1,15 @@
 #!/usr/bin/env python3
-"""Render controlled Markdown publications to branded PDF via LibreOffice."""
+"""Render controlled Markdown publications to reproducible, branded PDFs."""
 from __future__ import annotations
-import hashlib, html, json, re, shutil, subprocess, tempfile
+
+import hashlib
+import html
+import json
+import os
+import re
+import shutil
+import subprocess
+import tempfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -47,8 +55,47 @@ DOCS = [
  ("docs/j2/alexandria/SEMAPHORE_TRAFFIC_SYSTEM.md","docs/j2/publications/SH-J2-SEMAPHORE-001_v1.0.0.pdf","j2"),
  ("docs/j2/alexandria/CANON_INSTITUTIONAL_KNOWLEDGE.md","docs/j2/publications/SH-J2-CANON-001_v1.0.0.pdf","j2"),
  ("docs/j2/alexandria/DAEDALUS_OPERATING_DOCTRINE.md","docs/j2/publications/SH-J2-DAEDALUS-001_v1.0.0.pdf","j2"),
+ ("docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05.md","docs/governance/publications/SH-PS-RW-TOR-001_v1.0.0.pdf","pale_sun"),
+ ("red_wash/logistics/ARU_BST_INTERFACE_AND_DEPENDENCY_RECORD.md","docs/governance/publications/SH-PS-RW-LOG-001_v1.0.0.pdf","red_wash"),
  ("docs/internal/COVERAGE_AUDIT_PHASE2.md","docs/internal/COVERAGE_AUDIT_PHASE2.pdf","corporate"),
  ("docs/internal/INSTITUTIONAL_CATALOG_QUERY_GUIDE.md","docs/internal/INSTITUTIONAL_CATALOG_QUERY_GUIDE.pdf","corporate")]
+
+BRANDS = {
+    "corporate": {
+        "logo": "assets/brand/logos/sable-harbor__primary-horizontal.svg",
+        "color": "#C45124",
+        "logo_class": "wide-logo",
+        "logo_width": 220,
+        "logo_height": 52,
+    },
+    "j2": {
+        "logo": "assets/brand/logos/j2__primary-horizontal.svg",
+        "color": "#BE0E0C",
+        "logo_class": "wide-logo",
+        "logo_width": 220,
+        "logo_height": 52,
+    },
+    "pale_sun": {
+        "logo": "assets/brand/logos/pale_sun__canonical.png",
+        "color": "#B99A53",
+        "logo_class": "source-logo",
+        "logo_width": 150,
+        "logo_height": 100,
+    },
+    "red_wash": {
+        "logo": "assets/brand/logos/red_wash__canonical.png",
+        "color": "#A93628",
+        "logo_class": "source-logo",
+        "logo_width": 200,
+        "logo_height": 100,
+    },
+}
+
+GENERATED_FOR_VERSION = "2026-09-05"
+
+def sha256(path: Path) -> str:
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
 
 def inline(s: str) -> str:
     s=html.escape(s)
@@ -78,22 +125,155 @@ def body(md: str) -> str:
         else: out.append(f'<p>{inline(line)}</p>')
     flush(); return '\n'.join(out)
 
-def main():
-    if not shutil.which('libreoffice'): raise SystemExit('libreoffice is required')
-    manifest=[]
-    with tempfile.TemporaryDirectory(prefix='sh-docs-') as td:
-        tmp=Path(td)
-        for src_rel,out_rel,brand in DOCS:
-            src=ROOT/src_rel; out=ROOT/out_rel; out.parent.mkdir(parents=True,exist_ok=True)
-            logo=ROOT/("assets/brand/logos/j2__primary-horizontal.svg" if brand=='j2' else "assets/brand/logos/sable-harbor__primary-horizontal.svg")
-            color='#BE0E0C' if brand=='j2' else '#C45124'
-            page=f'''<!doctype html><html><head><meta charset="utf-8"><style>@page{{size:Letter;margin:.62in .7in .58in}}body{{font:10pt Arial;color:#101214;line-height:1.28}}header{{border-bottom:3px solid {color};padding-bottom:8px;margin-bottom:18px}}header img{{width:220px;max-height:52px}}h1{{font-size:21pt;margin:12px 0;color:#101214;display:block;clear:both}}h2{{font-size:14pt;color:{color};margin-top:16px;margin-bottom:6px;border-bottom:1px solid #bbb;display:block;clear:both;page-break-after:avoid}}h3{{font-size:11.5pt;display:block;clear:both;page-break-after:avoid}}p{{margin:6px 0;display:block;clear:both}}.bullet{{margin-left:16px}}table{{border-collapse:collapse;width:100%;font-size:8pt;margin:8px 0}}th,td{{border:1px solid #aaa;padding:3px;vertical-align:top}}th{{background:#eee}}blockquote{{border-left:3px solid {color};padding-left:10px;color:#555}}footer{{margin-top:18px;border-top:1px solid #777;padding-top:6px;font-size:7.5pt;color:#666}}code{{font-family:monospace}}</style></head><body><header><img src="{logo.as_uri()}"></header>{body(src.read_text())}<footer>Controlled publication • Generated from {src_rel} • Do not alter PDF manually</footer></body></html>'''
-            hp=tmp/(out.stem+'.html'); hp.write_text(page)
-            subprocess.run(['libreoffice','--headless','--convert-to','pdf','--outdir',str(tmp),str(hp)],check=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
-            generated=tmp/(hp.stem+'.pdf')
-            subprocess.run(['gs','-q','-dNOPAUSE','-dBATCH','-sDEVICE=pdfwrite','-sPAPERSIZE=letter','-dFIXEDMEDIA','-dPDFFitPage',f'-sOutputFile={out}',str(generated)],check=True)
-            manifest.append({'source':src_rel,'publication':out_rel,'sha256':hashlib.sha256(out.read_bytes()).hexdigest(),'source_sha256':hashlib.sha256(src.read_bytes()).hexdigest(),'brand':brand})
-    payload={'standard':'SH-GOV-DOC-001','generated_for_version':'2026-09-02','artifacts':manifest}
-    (ROOT/'docs/governance/publication_manifest.json').write_text(json.dumps(payload,indent=2)+'\n')
+def require_tool(name: str) -> str:
+    executable = shutil.which(name)
+    if not executable:
+        raise SystemExit(f"{name} is required")
+    return executable
+
+
+def render_pdf(
+    *,
+    libreoffice: str,
+    ghostscript: str,
+    qpdf: str,
+    tmp: Path,
+    src_rel: str,
+    out_rel: str,
+    brand: str,
+) -> None:
+    if brand not in BRANDS:
+        raise SystemExit(f"unknown publication brand: {brand}")
+
+    src = ROOT / src_rel
+    out = ROOT / out_rel
+    profile = BRANDS[brand]
+    logo = ROOT / profile["logo"]
+    for required in (src, logo):
+        if not required.is_file():
+            raise SystemExit(f"controlled-publication input missing: {required.relative_to(ROOT)}")
+
+    out.parent.mkdir(parents=True, exist_ok=True)
+    color = profile["color"]
+    logo_class = profile["logo_class"]
+    logo_width = profile["logo_width"]
+    logo_height = profile["logo_height"]
+    page = f'''<!doctype html><html><head><meta charset="utf-8"><style>@page{{size:Letter;margin:.62in .7in .58in}}body{{font:10pt Arial;color:#101214;line-height:1.28}}header{{border-bottom:3px solid {color};padding-bottom:8px;margin-bottom:18px;min-height:52px}}header img{{display:block}}header img.source-logo{{background:#000}}h1{{font-size:21pt;margin:12px 0;color:#101214;display:block;clear:both}}h2{{font-size:14pt;color:{color};margin-top:16px;margin-bottom:6px;border-bottom:1px solid #bbb;display:block;clear:both;page-break-after:avoid}}h3{{font-size:11.5pt;display:block;clear:both;page-break-after:avoid}}p{{margin:6px 0;display:block;clear:both}}.bullet{{margin-left:16px}}table{{border-collapse:collapse;width:100%;font-size:8pt;margin:8px 0}}th,td{{border:1px solid #aaa;padding:3px;vertical-align:top}}th{{background:#eee}}blockquote{{border-left:3px solid {color};padding-left:10px;color:#555}}footer{{margin-top:18px;border-top:1px solid #777;padding-top:6px;font-size:7.5pt;color:#666}}code{{font-family:monospace}}</style></head><body><header><img class="{logo_class}" width="{logo_width}" height="{logo_height}" style="width:{logo_width}px;height:{logo_height}px" src="{logo.as_uri()}"></header>{body(src.read_text(encoding="utf-8"))}<footer>Controlled publication • Generated from {src_rel} • Do not alter PDF manually</footer></body></html>'''
+
+    work = tmp / out.stem
+    work.mkdir()
+    html_path = work / f"{out.stem}.html"
+    html_path.write_text(page, encoding="utf-8", newline="\n")
+    environment = os.environ.copy()
+    environment.update({"LC_ALL": "C.UTF-8", "TZ": "UTC"})
+    user_installation = (work / "libreoffice-profile").as_uri()
+    subprocess.run(
+        [
+            libreoffice,
+            f"-env:UserInstallation={user_installation}",
+            "--headless",
+            "--convert-to",
+            "pdf",
+            "--outdir",
+            str(work),
+            str(html_path),
+        ],
+        check=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        env=environment,
+    )
+
+    libreoffice_pdf = work / f"{out.stem}.pdf"
+    ghostscript_pdf = work / f"{out.stem}.letter.pdf"
+    normalized_pdf = work / f"{out.stem}.normalized.pdf"
+    subprocess.run(
+        [
+            ghostscript,
+            "-q",
+            "-dSAFER",
+            "-dNOPAUSE",
+            "-dBATCH",
+            "-dPDFSTOPONERROR",
+            "-sDEVICE=pdfwrite",
+            "-sPAPERSIZE=letter",
+            "-dFIXEDMEDIA",
+            "-dPDFFitPage",
+            "-dOmitInfoDate=true",
+            f"-sOutputFile={ghostscript_pdf}",
+            str(libreoffice_pdf),
+        ],
+        check=True,
+        env=environment,
+    )
+    # Reconstruct from pages so the source PDF's random document ID is not
+    # retained. Removing mutable metadata and deriving the new ID from page
+    # content makes repeated builds byte-for-byte stable in the same toolchain.
+    subprocess.run(
+        [
+            qpdf,
+            "--empty",
+            "--pages",
+            str(ghostscript_pdf),
+            "1-z",
+            "--",
+            str(normalized_pdf),
+            "--remove-info",
+            "--remove-metadata",
+            "--deterministic-id",
+        ],
+        check=True,
+        env=environment,
+    )
+    # The system temporary directory may live on another filesystem than the
+    # repository, so stage locally before the atomic replacement.
+    local_staging = out.with_name(f".{out.name}.tmp")
+    shutil.copyfile(normalized_pdf, local_staging)
+    local_staging.replace(out)
+
+
+def main() -> None:
+    libreoffice = require_tool("libreoffice")
+    ghostscript = require_tool("gs")
+    qpdf = require_tool("qpdf")
+    manifest = []
+    with tempfile.TemporaryDirectory(prefix="sh-docs-") as temp_dir:
+        tmp = Path(temp_dir)
+        for src_rel, out_rel, brand in DOCS:
+            render_pdf(
+                libreoffice=libreoffice,
+                ghostscript=ghostscript,
+                qpdf=qpdf,
+                tmp=tmp,
+                src_rel=src_rel,
+                out_rel=out_rel,
+                brand=brand,
+            )
+            src = ROOT / src_rel
+            out = ROOT / out_rel
+            manifest.append(
+                {
+                    "source": src_rel,
+                    "publication": out_rel,
+                    "sha256": sha256(out),
+                    "source_sha256": sha256(src),
+                    "brand": brand,
+                }
+            )
+    payload = {
+        "standard": "SH-GOV-DOC-001",
+        "generated_for_version": GENERATED_FOR_VERSION,
+        "reproducibility": {
+            "mutable_pdf_metadata": "removed",
+            "document_id": "derived from page content",
+            "page_size": "US Letter",
+        },
+        "artifacts": manifest,
+    }
+    (ROOT / "docs/governance/publication_manifest.json").write_text(
+        json.dumps(payload, indent=2) + "\n",
+        encoding="utf-8",
+        newline="\n",
+    )
 
 if __name__=='__main__': main()

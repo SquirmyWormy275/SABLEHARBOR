@@ -42,4 +42,6 @@ Title does not pass when a truck leaves Red Wash. Under the modeled contracts, t
 
 Tailings are neutralized and placed in engineered impoundment cells under the source-material license and environmental program. Process water is recycled where practical. Underdrain, groundwater and radon controls are operating systems rather than end-of-life paperwork.
 
-The MW-17 trend and Cell 1 underdrain record are addressed together in the post-close corrective program. The public record contains measurements and actions; Alexandria Control preserves hidden causality and seller-knowledge analysis.
+The MW-17 trend and Cell 1 underdrain record are addressed together in the post-close
+corrective program. The public record contains company-facing measurements and actions;
+nonpublic evaluation material remains outside this repository.

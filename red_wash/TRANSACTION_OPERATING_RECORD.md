@@ -1,8 +1,8 @@
 # RED WASH TRANSACTION AND OPERATING RECORD — CONSOLIDATED SOURCE
 
-**Record:** `SH-PS-RW-TOR-001`  
-**Version:** 1.0.0  
-**Operating record current through:** August 31, 2026  
+**Record:** `SH-PS-RW-TOR-001`
+**Version:** 1.0.0
+**Synthetic calibration through:** August 31, 2026
 **Classification:** PUBLIC SYNTHETIC DIEGETIC
 
 > Red Wash, its parties, permits, contracts, and operating facts are fictional. Agency frameworks and external market sources are real where cited. This document is a company-facing source. Hidden evaluator truth remains private.
@@ -11,13 +11,13 @@
 
 # 1. Executive case
 
-Red Wash is a compact conventional underground uranium mine and mill in Carbon County, Wyoming. It is operated through a dedicated Sable Harbor-controlled company under the Pale Sun business line. Pale Sun owns resource stewardship, mine planning, commercial contracting, closure, capital allocation, and the parent interface. Red Wash is the physical site and operating boundary.
+Red Wash is a compact conventional underground uranium mine and mill in Wyoming. The selected synthetic site scenario places it in Carbon County; that county-level placement is not separately locked geographic canon. It is operated through a dedicated Sable Harbor-controlled company under the Pale Sun business line. Pale Sun owns resource stewardship, mine planning, commercial contracting, closure, capital allocation, and the parent interface. Red Wash is the physical site and operating boundary; the operator's exact legal name, suffix, and jurisdiction remain open.
 
-Sable Harbor acquired the business from Northstar Resources (Wyoming) LLC on July 18, 2025 after a seller re-trade, a Sable Harbor walk-away, and a return on materially different terms. The transaction recognized $42.0 million of operating assets, $4.5 million of current assets, a $16.0 million ARO, $2.5 million of other liabilities, and $28.0 million of cash consideration. Goodwill and transaction debt were zero.
+Sable Harbor acquired the business from the seller using the provisional display name Northstar Resources on July 18, 2025 after a seller re-trade, a Sable Harbor walk-away, and a return on materially different terms. The exact seller legal name, suffix, and jurisdiction remain open. The transaction recognized $42.0 million of operating assets, $4.5 million of current assets, a $16.0 million ARO, $2.5 million of other liabilities, and $28.0 million of cash consideration. Goodwill and transaction debt were zero.
 
 The acquisition was not justified by heroic commodity pricing. The thesis was narrower: weak records, deferred maintenance, fragmented institutional knowledge, and real operating uncertainty had been treated as if they proved an absence of operable value. Sable Harbor accepted only the smaller case that survived technical, environmental, legal, commercial, financial, and operating challenge.
 
-The 2026 plan carries 140 FTE, 175,000 tons at 0.170% U3O8, 92.0% recovery, 547,400 pounds produced, 500,000 pounds sold, $36.475 million revenue, $27.950 million cash production cost, $3.500 million DD&A, $4.000 million sustaining capital, and $5.000 million rehabilitation capital. The operation is profitable before inherited rehabilitation spending and negative after the full capital program. That is a derived result, not a chosen target.
+The 2026 plan carries 140 FTE, 175,000 tons at 0.170% U3O8, 92.0% recovery, 547,400 pounds produced, 500,000 pounds sold, $36.475 million modeled revenue, $27.950 million production cost incurred, approximately $3.500 million derived DD&A, $4.000 million sustaining capital, and $5.000 million rehabilitation capital. The weighted-average inventory, statement, and cash-flow results are derived rather than selected targets.
 
 ---
 
@@ -33,7 +33,7 @@ Carbon Basin acquired the position and established that mineralization occurred 
 
 ## 2.3 Northstar Resources, 2010–2025
 
-Northstar acquired the project in December 2010, consolidated permitting, constructed a decline-access underground mine, compact 600-ton-per-day mill, tailings system, roads, power, water, laboratory, warehouse, administration, dry, and maintenance facilities. First concentrate shipped in 2013.
+Northstar Resources is a provisional display name; its exact legal identity remains open. In the selected synthetic history, Northstar acquired the project in December 2010, consolidated permitting, constructed a decline-access underground mine, compact 600-ton-per-day mill, tailings system, roads, power, water, laboratory, warehouse, administration, dry, and maintenance facilities. First concentrate shipped in 2013.
 
 The mine operated through 2017. Production improved, but development lagged; experienced employees carried unrecorded continuity; maintenance was deferred; resource and grade-control models accumulated multiple versions; and the commercial book, inventory ledger, and environmental records did not share one authoritative timeline.
 
@@ -45,7 +45,12 @@ Northstar's 2024 result appeared stronger than the normalized operation because 
 
 Northstar opened a controlled sale in October 2024. Sable Harbor initially valued the business at a higher operating value than the final deal because the first data-room view did not integrate geological continuity, maintenance, tailings/groundwater, source-record integrity, contract consents, title, inventory, and key-person dependency.
 
-Sable Harbor walked on May 5, 2025 when Northstar raised its price while the risk picture weakened. Northstar later returned with a structure that separated operating asset value from assumed liabilities, created escrow and holdback, obtained utility consents, cured title matters, delivered source records, and retained personnel whose knowledge constituted part of the acquired asset.
+In the selected synthetic chronology, Sable Harbor walked on May 5, 2025 when Northstar
+raised its price while the risk picture weakened. Northstar later returned with a
+structure that separated operating asset value from assumed liabilities, created escrow
+and holdback, obtained utility consents, cured title matters, delivered source records,
+and retained personnel whose knowledge constituted part of the acquired asset. The
+walk-away date is scenario precision; the sequence is the locked element.
 
 Pale Sun now governs the business. Red Wash is an operation first and a proving ground second.
 
@@ -76,9 +81,11 @@ The deterministic package builds:
 - 2,400 assay intervals;
 - duplicate, blank, standard, and primary QA/QC records;
 - coordinate, elevation, depth, orientation, interval, laboratory, method, and validation fields;
-- six historical resource-model states.
+- two selected resource-basis rows—indicated including reserve, and inferred—with
+  classification, disclosure boundary, and provenance fields.
 
-Source and supersession state are preserved. Later interpretation does not erase the model management actually used at the time.
+The selected source and epistemic states are preserved. The generator does not invent
+unstated historical resource snapshots.
 
 ## 3.3 Acquisition basis
 
@@ -183,6 +190,10 @@ The $25.0 million current-cost closure basis covers progressive reclamation, und
 
 # 7. Sale process and M&A chronology
 
+The sequence, walk-away, return, changed risk allocation, and July 18, 2025 close are
+selected canon. Except for that exact close date, the day-level dates below are
+synthetic scenario precision and do not independently promote those dates to LOCKED.
+
 - **August 19, 2024:** Mari Varela opens the western uranium graveyard review.
 - **October 4, 2024:** Northstar circulates a teaser.
 - **October 18, 2024:** Sable Harbor and Northstar execute a mutual NDA.
@@ -202,7 +213,7 @@ The $25.0 million current-cost closure basis covers progressive reclamation, und
 - **July 19, 2025:** 100-day stabilization begins.
 - **September 14–16, 2025:** Cole stop event and later convergence measurement.
 - **December 31, 2025:** H2 stabilization accounting closes.
-- **August 31, 2026:** current actual reporting cutoff.
+- **August 31, 2026:** synthetic calibration period ends; this is not an actual-reporting assertion.
 
 ## 7.1 Principal terms
 
@@ -287,9 +298,25 @@ The 2026 contract book consists of:
 
 A lot may be allocated only after mass-balance close, dry-weight determination, laboratory assay, QA release, drum/seal reconciliation, shipping review, and contract allocation.
 
-A fictional qualified carrier, High Plains Nuclear Logistics LLC, transports concentrate to a fictional licensed conversion facility in Illinois. Red Wash retains the source-material shipment record; the carrier owns transport execution inside its authority; the receiver owns receipt and converter-assay evidence. Title and final quantity transfer at the contractually named point.
+A qualified external carrier transports concentrate to a modeled licensed conversion facility in Illinois. Red Wash retains the source-material shipment record; the carrier owns transport execution inside its authority; the receiver owns receipt and converter-assay evidence. Title and final quantity transfer at the contractually named point. Any carrier, receiver, contract, or facility identifier in generated evidence is a synthetic instance.
 
 Shipment evidence preserves product lot, drum, seal, weight, assay, moisture, shipper timestamp, carrier timestamp, receiving timestamp, converter assay, title-transfer point, invoice, and cash receipt. Timestamp disagreement is preserved rather than normalized into false certainty.
+
+## 10.1 Limited ARU/BS&T interface
+
+ARU/BS&T had no commercial relationship with Red Wash before Sable Harbor's search,
+and qualified external carriers handle all Red Wash movements throughout 2025. A
+fictional carrier consolidation within the real 2025 freight backdrop reduces qualified
+lane allocation and causes a scheduling disruption, but no annual sale is lost and
+2025 annual revenue does not change.
+
+The response begins as a replacement-carrier search and broadens to rail-access
+mapping. The question “Whose line is this?” surfaces ARU/BS&T through operating
+analysis—not a banker pitch. At discovery there is no direct mine connection, suitable
+secure transload, or demonstrated uranium-specific capability. The $15.0 million
+interface figure is an unbooked preliminary screen. Service may begin only after all
+applicable gates, direct uranium custody is not authorized by implication, and the full
+ARU transaction and operating case remains open. `SH-PS-RW-LOG-001` is controlling.
 
 ---
 
@@ -300,15 +327,27 @@ The purchase-price allocation is:
 | Line | Amount |
 |---|---:|
 | Acquired current assets | $4.5M |
-| Mineral properties and mine development | $24.0M |
-| Mill and processing plant | $14.0M |
-| Surface infrastructure and mobile equipment | $4.0M |
+| Operating assets pending supported asset-class allocation | $42.0M |
 | ARO | $(16.0)M |
 | Other liabilities | $(2.5)M |
 | Net identifiable assets / consideration | $28.0M |
 | Goodwill | $0 |
 
-The 2026 ledger is driven by monthly mine production, mill mass balance, product inventory, contract allocation, delivery, taxes, royalty, freight, G&A, ARO accretion, and capital. Cash production cost and DD&A are capitalized into inventory and released as pounds sell. Actual records run through August 31, 2026; September–December remain `MANAGEMENT_FORECAST`.
+The aggregate $42.0 million operating-asset value is locked. A mineral-property,
+mine-development, plant, infrastructure, and equipment split is not invented merely to
+complete a purchase-price-allocation table; that class-level allocation remains open
+until a supported valuation record exists.
+
+For the selected 2026 case, DD&A uses a simplified composite units-of-production
+model. The approved $42.0 million aggregate operating-asset amount plus the approved
+$8.0 million capitalized rehabilitation amount produces a $50.0 million modeled
+composite basis. Current-period production of 547,400 pounds divided by the 7.82
+million-pound recoverable basis is exactly 7.0%; applying that factor derives $3.500
+million of incurred DD&A. The model is `MODEL_PROPOSED` / `SUPPORTED_ESTIMATE`; it is
+not an asset-class purchase-price allocation, an audited GAAP useful-life conclusion,
+or a tax basis.
+
+The 2026 ledger is driven by monthly mine production, mill mass balance, product inventory, contract allocation, delivery, taxes, royalty, freight, G&A, ARO accretion, and capital. Production cost and DD&A are capitalized into inventory and released as pounds sell under a transparent weighted-average method. January–August rows are `SYNTHETIC_CALIBRATION`; September–December are `MANAGEMENT_FORECAST`. Neither is historical actual.
 
 The model records:
 
@@ -324,7 +363,7 @@ The model records:
 
 Cost of sales is derived through moving weighted-average inventory cost. The financial statement is not a plug.
 
-The source package maps into the enterprise financial platform without bypassing run identity, scenario identity, cutoff partition, period close, provenance, or consolidation.
+The source package is a standalone Red Wash v1.0.0 release. It does not alter the closed enterprise finance-platform v0.1 input perimeter. A future v0.2-or-later integration must adopt it through a new source lock, versioned assumptions, migrations, run/scenario identity, cutoff partition, period close, provenance, consolidation, SQLite/PostgreSQL proof, and release gates.
 
 ---
 
@@ -376,7 +415,9 @@ The committee had to distinguish:
 
 Options included accepting, negotiating without walking, walking while preserving a return path, or terminating. Sable Harbor walked. Northstar returned. The deal closed with a different allocation of risk.
 
-The public record does not declare every decision correct. The private Alexandria companion contains seller knowledge, hidden causal truth, expected detections, counterfactuals, and the teaching note.
+The public record does not declare every decision correct. A separately controlled
+private evaluation companion may test this public record without adding evaluator
+material to the company-facing surface.
 
 ---
 
@@ -401,17 +442,8 @@ Real sources constrain the fiction. They do not make fictional Red Wash records 
 
 # 15. Public/private control boundary
 
-SABLEHARBOR contains the company-facing operating and transaction record. `SABLEHARBOR-ALEXANDRIA-CONTROL/scenarios/red_wash` contains:
-
-- hidden physical and economic truth;
-- seller representations and actual seller knowledge;
-- actor-specific epistemic states;
-- causal edges;
-- intervention truth;
-- expected detections;
-- acquisition, technical, environmental/closure, quality-of-earnings, and post-close rubrics;
-- counterfactuals;
-- scoring guidance;
-- private teaching note.
-
-The private scenario is bound to the exact public source commit. Control may evaluate and propose; it may not silently rewrite the company record.
+SABLEHARBOR contains the company-facing operating and transaction record. Any private
+evaluation material remains outside this repository and may bind to the exact final
+public merge commit only after this record reaches `main`. No binding is claimed here.
+The private control plane may evaluate and propose; it may not silently rewrite the
+company record.
