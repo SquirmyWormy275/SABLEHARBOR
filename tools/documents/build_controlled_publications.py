@@ -57,14 +57,50 @@ DOCS = [
  ("docs/j2/alexandria/SEMAPHORE_TRAFFIC_SYSTEM.md","docs/j2/publications/SH-J2-SEMAPHORE-001_v1.0.1.pdf","j2"),
  ("docs/j2/alexandria/CANON_INSTITUTIONAL_KNOWLEDGE.md","docs/j2/publications/SH-J2-CANON-001_v1.0.0.pdf","j2"),
  ("docs/j2/alexandria/DAEDALUS_OPERATING_DOCTRINE.md","docs/j2/publications/SH-J2-DAEDALUS-001_v1.0.0.pdf","j2"),
- ("docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05.md","docs/governance/publications/SH-PS-RW-TOR-001_v1.0.0.pdf","pale_sun"),
- ("red_wash/logistics/ARU_BST_INTERFACE_AND_DEPENDENCY_RECORD.md","docs/governance/publications/SH-PS-RW-LOG-001_v1.0.0.pdf","red_wash"),
+ ("docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05_R2.md","docs/governance/publications/SH-PS-RW-TOR-001_v1.1.0.pdf","pale_sun"),
+ ("red_wash/logistics/ARU_BST_INTERFACE_AND_DEPENDENCY_RECORD.md","docs/governance/publications/SH-PS-RW-LOG-001_v1.1.0.pdf","red_wash"),
  ("docs/internal/COVERAGE_AUDIT_PHASE2.md","docs/internal/COVERAGE_AUDIT_PHASE2.pdf","corporate"),
  ("docs/internal/INSTITUTIONAL_CATALOG_QUERY_GUIDE.md","docs/internal/INSTITUTIONAL_CATALOG_QUERY_GUIDE.pdf","corporate"),
  ("docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-06_CLOSEOUT.md","docs/governance/publications/SH-CANON-CLOSEOUT-20260906-001_v1.0.0.pdf","corporate"),
  ("docs/governance/REPOSITORY_DELIVERY_AND_PACKAGING_POLICY.md","docs/governance/publications/SH-GOV-DELIVERY-001_v1.0.0.pdf","corporate")]
 
+# Explicit industrial publications. Each source is a controlled synthetic record.
+# Historical predecessor PDFs remain preserved and indexed separately.
+INDUSTRIAL_DOCS = [
+    ("industrial/CASE_GUIDE.md", "SH-IND-CASE-001", "corporate"),
+    ("industrial/IMPLEMENTATION_DECISIONS.md", "SH-IND-DEC-001", "corporate"),
+    ("industrial/corporate/LEGAL_STRUCTURE_AND_FORMATION.md", "SH-IND-COR-001", "corporate"),
+    ("industrial/corporate/LEADERSHIP_AND_AUTHORITY.md", "SH-IND-HR-001", "corporate"),
+    ("industrial/finance/ASSUMPTIONS_AND_TEMPORAL_CONTROLS.md", "SH-IND-FIN-ASM-001", "aru"),
+    ("industrial/finance/DRIVERS_AND_COST_SUPPORT.md", "SH-IND-FIN-DRV-001", "aru"),
+    ("industrial/finance/RED_WASH_AND_FUNDING.md", "SH-IND-FIN-RWF-001", "pale_sun"),
+    ("industrial/finance/TRANSACTION_ACCOUNTING.md", "SH-IND-FIN-TXN-001", "aru"),
+    ("industrial/operations/GEOGRAPHY_AND_ENGINEERING.md", "SH-IND-GEO-001", "bst"),
+    ("industrial/operations/LABOR_SAFETY_AND_CONTROLS.md", "SH-IND-SAF-001", "bst"),
+    ("industrial/operations/OPERATING_AND_SERVICE_PLAN.md", "SH-IND-OPS-002", "aru"),
+    ("industrial/operations/RATE_AND_CAPITAL_MEMORANDUM.md", "SH-IND-COM-001", "aru"),
+]
+# The chronology is itself controlled and explicitly enumerates the authored
+# records; this does not glob arbitrary handoffs or working documents.
+industrial_chronology = ROOT / "industrial/source/chronology.json"
+if industrial_chronology.is_file():
+    for document in json.loads(industrial_chronology.read_text())["documents"]:
+        source = document["path"]
+        if source.startswith(("industrial/pale_sun/", "industrial/transaction/")):
+            INDUSTRIAL_DOCS.append((source, document["document_id"], "pale_sun" if "/pale_sun/" in source or "/01_RW_" in source else "aru"))
+DOCS.extend((source, f"industrial/publications/{document_id}_v1.0.0.pdf", brand) for source, document_id, brand in INDUSTRIAL_DOCS)
+
 BRANDS = {
+    "aru": {
+        "logo": "assets/brand/industrial_sources/aru/aru_primary_centered_chat_asset.png",
+        "color": "#1D5B3F", "logo_class": "approved-source",
+        "logo_width": 110, "logo_height": 110,
+    },
+    "bst": {
+        "logo": "assets/brand/industrial_sources/bst/bst_railway_primary_chat_asset.png",
+        "color": "#7B1B18", "logo_class": "approved-source",
+        "logo_width": 210, "logo_height": 105,
+    },
     "corporate": {
         "logo": "assets/brand/logos/sable-harbor__primary-horizontal.svg",
         "color": "#C45124",
@@ -111,6 +147,7 @@ def inline(s: str) -> str:
 def body(md: str, source_url: str = "") -> str:
     out = []
     in_code = False
+    code_lines = []
     rows = []
     paragraph = []
 
@@ -143,9 +180,14 @@ def body(md: str, source_url: str = "") -> str:
         if line.startswith('```'):
             flush_paragraph()
             flush_table()
+            if in_code:
+                out.append('<pre style="font-family:monospace;font-size:8pt;white-space:pre-wrap">'
+                           + html.escape('\n'.join(code_lines)) + '</pre>')
+                code_lines.clear()
             in_code = not in_code
             continue
         if in_code:
+            code_lines.append(line)
             continue
         if line.startswith('|'):
             flush_paragraph()
@@ -176,6 +218,8 @@ def body(md: str, source_url: str = "") -> str:
             flush_paragraph()
     flush_paragraph()
     flush_table()
+    if code_lines:
+        out.append('<pre>' + html.escape('\n'.join(code_lines)) + '</pre>')
     rendered = '\n'.join(out)
     if source_url:
         rendered = re.sub(

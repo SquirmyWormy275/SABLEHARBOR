@@ -1,0 +1,71 @@
+{
+  "package_id": "SH-ARU-RW-PS-CODEX-HANDOFF-2026-09-05-R2",
+  "created_from": "Current conversation and locally supplied chat assets; package construction itself performed no repository write. This R2 package authorizes Codex to implement, commit, push, and merge the completed scope.",
+  "assets": [
+    {
+      "path": "assets/aru/aru_primary_centered_chat_asset.png",
+      "title": "ARU primary centered logo supplied in this chat",
+      "state": "CHAT_SUPPLIED_APPROVED_CONCEPT",
+      "sha256": "5892792a95e7fbc2a16171fea38b96d2aee5becf0603b68687f0d48e1bd9fc46",
+      "bytes": 1071679,
+      "width_px": 1254,
+      "height_px": 1254,
+      "mode": "RGB",
+      "note": "Preserve exact bytes in the implementation package. Reconcile against any existing repository ARU mark before declaring one canonical. Do not silently redraw."
+    },
+    {
+      "path": "assets/aru/aru_brand_board_chat_asset.png",
+      "title": "ARU brand presentation board supplied in this chat",
+      "state": "CHAT_SUPPLIED_APPROVED_CONCEPT",
+      "sha256": "05204f15c6a86c10de70c3dfc17996326063a06c0d382147d90ce12834b85888",
+      "bytes": 1923281,
+      "width_px": 1536,
+      "height_px": 1024,
+      "mode": "RGB",
+      "note": "Preserve exact bytes. Text visible in the board, including “People Purpose Progress” and “Stronger Together,” is embedded concept-board content and is not separately locked as corporate canon unless the repository already establishes it."
+    },
+    {
+      "path": "assets/aru/aru_alternate_chat_asset.png",
+      "title": "Alternate ARU logo supplied in the broader chat asset set",
+      "state": "REFERENCE_VARIANT_NOT_AUTOMATICALLY_CANONICAL",
+      "sha256": "0bc5f917298db93bf48b3052f65e40a88e978ea8e2f01b7d99042ed1c28fa839",
+      "bytes": 874990,
+      "width_px": 1254,
+      "height_px": 1254,
+      "mode": "RGB",
+      "note": "Retain for provenance and comparison. Do not replace the approved concept with this variant without an explicit reconciliation record."
+    },
+    {
+      "path": "assets/bst/bst_railway_primary_chat_asset.png",
+      "title": "Blood, Sweat & Tears Railway logo supplied in this chat",
+      "state": "CHAT_SUPPLIED_APPROVED_CONCEPT",
+      "sha256": "9af275b2f65ff5a82bca760609ab166ecd055c7a266d171bbf558b05c7e37a05",
+      "bytes": 839885,
+      "width_px": 1774,
+      "height_px": 887,
+      "mode": "RGB",
+      "note": "Preserve exact bytes and reconcile with the existing repository BS&T mark. Do not silently redraw or rename the railway."
+    },
+    {
+      "path": "assets/bst/bst_bulk_storage_transport_candidate.png",
+      "title": "BS&T “Bulk Storage & Transport” candidate/companion logo supplied in the chat asset set",
+      "state": "REFERENCE_CANDIDATE_REQUIRES_RECONCILIATION",
+      "sha256": "60c642acb956ae908aafa3abea9ad21705ca0cd95258232926fbca2894eb4e92",
+      "bytes": 808700,
+      "width_px": 1254,
+      "height_px": 1254,
+      "mode": "RGB",
+      "note": "This wording is not the locked legal name of the railway. Preserve as reference only unless Codex can place it as a separate ARU service brand without colliding with Blood, Sweat & Tears Railway Company."
+    }
+  ],
+  "pale_sun_logo": {
+    "state": "LOCKED_EXISTING_ASSET_NOT_PHYSICALLY_PRESENT_IN_THIS_LOCAL_CHAT_BUNDLE",
+    "instruction": "Locate the existing canonical Pale Sun logo in the repository and preserve its exact bytes. Do not regenerate or replace it.",
+    "corrupted_chat_hash_record": "eedcabfca73460e8ff5ad72864c9f669ba2375097daa2912f30c9ff35c025",
+    "hash_warning": "The hash-like string stated earlier in voice chat is only 61 hexadecimal characters, so it is not a valid SHA-256 digest. Treat it as a corrupted transcript record, not cryptographic truth. Compute the actual SHA-256 from the repository asset and reconcile it to the repository manifest."
+  },
+  "red_wash_maps": {
+    "state": "MUST_BE_REGENERATED_FOR_CURRENT_GEOGRAPHY",
+    "instruction": "Preserve existing Carbon County map bytes as superseded historical originals, then generate corrected Sweetwater County/Great Divide Basin current maps and update every derivative graphic and manifest."
+  }
+}

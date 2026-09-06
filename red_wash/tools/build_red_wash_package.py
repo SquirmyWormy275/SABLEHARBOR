@@ -43,9 +43,9 @@ from red_wash_contract import (
 )
 
 SEED = 20250718
-GENERATOR_VERSION = "1.0.0"
+GENERATOR_VERSION = "1.1.0"
 SCENARIO_ID = "red-wash-2025-2026"
-INPUT_VERSION = "red-wash-public-source/1.0.0"
+INPUT_VERSION = "red-wash-public-source/1.1.0"
 EFFECTIVE_PERIOD = {
     "from": "2024-08-19",
     "through": "2026-12-31",
@@ -273,14 +273,19 @@ def validate_core(core: dict[str, Any]) -> None:
         "transaction",
     )
     transaction = core["transaction"]
-    if (
-        transaction["seller_display_name_state"] != "PROVISIONAL"
-        or transaction["seller_legal_name"] is not None
-        or transaction["seller_legal_name_state"] != "OPEN"
-        or transaction["seller_jurisdiction"] is not None
-        or transaction["seller_jurisdiction_state"] != "OPEN"
-    ):
-        raise ValueError("seller display identity must remain PROVISIONAL and legal details OPEN")
+    if any(transaction[field] != value for field, value in {
+        "seller_display_name": "Northstar Minerals, Inc.",
+        "seller_display_name_state": "LOCKED",
+        "seller_legal_name": "Northstar Minerals, Inc.",
+        "seller_legal_name_state": "LOCKED",
+        "seller_jurisdiction": "Wyoming",
+        "seller_jurisdiction_state": "LOCKED",
+    }.items()):
+        raise ValueError("seller identity must match the approved NMI Wyoming corporation")
+    if core["location"]["county"] != "Sweetwater County" or (
+        core["location"]["latitude"], core["location"]["longitude"]
+    ) != (42.22, -108.18):
+        raise ValueError("selected geography must use the approved Great Divide Basin anchor")
     if (
         transaction["operating_assets_usd"]
         + transaction["current_assets_usd"]
@@ -491,25 +496,13 @@ def validate_core(core: dict[str, Any]) -> None:
             raise ValueError(f"ownership_history[{index}] legal name and OPEN state must agree")
         if row["fact_state"] not in FACT_STATES or row["epistemic_state"] not in EPISTEMIC_STATES:
             raise ValueError(f"ownership_history[{index}] has invalid row provenance")
-    northstar = next(row for row in ownership if row["owner_display_name"] == "Northstar Resources")
+    northstar = next(row for row in ownership if row["owner_display_name"] == "Northstar Minerals, Inc.")
     current_owner = next(row for row in ownership if row["end"] is None)
-    if (
-        northstar["owner_display_name_state"] != "PROVISIONAL"
-        or northstar["owner_legal_name"] is not None
-        or northstar["owner_legal_name_state"] != "OPEN"
-    ):
-        raise ValueError(
-            "Northstar must remain a PROVISIONAL display name with legal identity OPEN"
-        )
-    if (
-        current_owner["owner_display_name"] != "Sable Harbor"
-        or current_owner["owner_display_name_state"] != "LOCKED"
-        or current_owner["owner_legal_name"] is not None
-        or current_owner["owner_legal_name_state"] != "OPEN"
-    ):
-        raise ValueError(
-            "current ownership must be locked while exact operator legal identity is OPEN"
-        )
+    for row, expected in ((northstar, "Northstar Minerals, Inc."), (current_owner, "Pale Sun Inc.")):
+        if row["owner_legal_name"] != expected or any(
+            row[field] != "LOCKED" for field in ("owner_display_name_state", "owner_legal_name_state")
+        ):
+            raise ValueError("ownership must preserve the approved separate legal entities")
 
     mine = core["mine_2026"]
     resource = core["resource_basis"]
@@ -612,9 +605,9 @@ def validate_bridge_source(bridge: dict[str, Any]) -> None:
         "aru_bst_bridge.names",
     )
     if bridge["names"] != {
-        "aru": "American Resource Utility",
+        "aru": "American Resource Utility, Inc.",
         "aru_abbreviation": "ARU",
-        "bst": "Blood, Sweat & Tears Railway",
+        "bst": "Blood, Sweat & Tears Railway Company",
         "bst_abbreviation": "BS&T",
     }:
         raise ValueError("unexpected ARU/BS&T names")
@@ -630,16 +623,16 @@ def validate_bridge_source(bridge: dict[str, Any]) -> None:
         raise ValueError("preliminary interface envelope must not be booked")
     if boundaries["direct_uranium_custody_authorized"] is not False:
         raise ValueError("direct ARU/BS&T uranium custody must remain unauthorized")
-    if boundaries["full_aru_case_authorized"] is not False:
-        raise ValueError("the full ARU case is outside this package")
+    if boundaries["full_aru_case_authorized"] is not True:
+        raise ValueError("the industrial successor implements the authorized full ARU case")
     open_fields = bridge["open_aru_fields"]
     if (
         not isinstance(open_fields, list)
-        or len(open_fields) != 32
+        or set(open_fields) != {"whether BS&T ultimately takes direct uranium custody", "future direct mine spur", "Red Wash expansion commissioning dates"}
         or any(not isinstance(field, str) or not field.strip() for field in open_fields)
         or len(set(open_fields)) != len(open_fields)
     ):
-        raise ValueError("the bridge must enumerate 32 unique unresolved full-case ARU fields")
+        raise ValueError("the bridge must preserve the three specifically gated future decisions")
     for array_name in BRIDGE_ARRAY_FILES:
         if not isinstance(bridge[array_name], list) or not bridge[array_name]:
             raise ValueError(f"bridge array {array_name} must be a non-empty list")
@@ -715,7 +708,7 @@ def provenance(
 
 
 def drill_rows(
-    rng: random.Random,
+    rng: random.Random, core: dict[str, Any],
 ) -> tuple[list[dict[str, object]], list[dict[str, object]], list[dict[str, object]]]:
     domains = ["North Roll", "Central Lens", "East 12", "Lower Channel", "South Limb"]
     factors = {
@@ -740,12 +733,12 @@ def drill_rows(
             {
                 "hole_id": hole,
                 "year_drilled": year,
-                "easting_m": round(341660 + rng.uniform(-2100, 2100), 2),
-                "northing_m": round(4686280 + rng.uniform(-1500, 1500), 2),
-                "elevation_m": round((6370 + rng.uniform(-70, 90)) * 0.3048, 2),
-                "coordinate_crs": "NAD83 / UTM zone 13N",
-                "epsg_code": 26913,
-                "utm_zone": "13N",
+                "easting_m": round(732748.781991 + rng.uniform(-2100, 2100), 2),
+                "northing_m": round(4678053.610642 + rng.uniform(-1500, 1500), 2),
+                "elevation_m": round((core["location"]["elevation_ft"] + rng.uniform(-70, 90)) * 0.3048, 2),
+                "coordinate_crs": "NAD83 / UTM zone 12N",
+                "epsg_code": 26912,
+                "utm_zone": "12N",
                 "horizontal_datum": "NAD83",
                 "total_depth_ft": depth,
                 "azimuth_deg": azimuth,
@@ -1549,7 +1542,7 @@ def all_generated_rows(
     core: dict[str, Any], bridge: dict[str, Any], external: list[dict[str, str]]
 ) -> dict[str, list[dict[str, object]]]:
     rng = random.Random(SEED)
-    collars, surveys, assays = drill_rows(rng)
+    collars, surveys, assays = drill_rows(rng, core)
     production, inventory = production_and_inventory(core)
     monitoring, backlog, vdr = deterministic_evidence(rng)
     rows = source_backed_rows(core, external)
@@ -1792,7 +1785,7 @@ def build_database(
            FROM shipment_schedule_exceptions) AS exception_revenue_impact_usd,
           (SELECT COALESCE(SUM(amount_usd),0)
            FROM aru_red_wash_preliminary_capex
-           WHERE amount_state = 'SCENARIO_INPUT') AS preliminary_envelope_usd,
+           WHERE component_id = 'RW-ARU-CAPEX-000') AS preliminary_envelope_usd,
           (SELECT COUNT(*) FROM custody_authority_matrix
            WHERE status = 'OPEN') AS open_custody_gate_count;
 
@@ -1836,7 +1829,7 @@ def build_database(
         "annual_2025_revenue_impact_usd": "0",
         "preliminary_capex_envelope_usd": "15000000",
         "custody_state": "OPEN",
-        "full_aru_case_state": "OPEN",
+        "full_aru_case_state": "SELECTED_SUCCESSOR",
         "open_aru_fields_json": open_fields,
     }
     connection.executemany(
@@ -2033,7 +2026,7 @@ def write_manifest(
                 "preliminary_interface_envelope_usd"
             ],
             "custody_state": "OPEN",
-            "full_aru_case_state": "OPEN",
+            "full_aru_case_state": "SELECTED_SUCCESSOR",
             "open_aru_fields": sorted(bridge["open_aru_fields"]),
         },
     }

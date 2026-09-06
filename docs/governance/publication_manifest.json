@@ -300,18 +300,20 @@
       "brand": "j2"
     },
     {
-      "source": "docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05.md",
-      "publication": "docs/governance/publications/SH-PS-RW-TOR-001_v1.0.0.pdf",
-      "sha256": "79b356782c9ba326ffe567717a0c5ddbdae62e5e7c69ab24bd50a2bb35d59abe",
-      "source_sha256": "6e90bdb9280a562e80e04561af45fabf1856a18b55ea48541f292a42711171d5",
-      "brand": "pale_sun"
+      "source": "docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05_R2.md",
+      "publication": "docs/governance/publications/SH-PS-RW-TOR-001_v1.1.0.pdf",
+      "sha256": "07803244a434990acbf8cdda0d81e09610368190aed3631cb59f65f002c6e49e",
+      "source_sha256": "89eae89e18db1d3cf3ab4f7bf7f54fa57efabb84c57127717b731572048d563b",
+      "brand": "pale_sun",
+      "normalizer": "qpdf"
     },
     {
       "source": "red_wash/logistics/ARU_BST_INTERFACE_AND_DEPENDENCY_RECORD.md",
-      "publication": "docs/governance/publications/SH-PS-RW-LOG-001_v1.0.0.pdf",
-      "sha256": "831be684e5fa5b5a3368a26027d9c310e4b2067f2c83f098cf48e39b6c95ff76",
-      "source_sha256": "b55f1561df9ecabf63e57963006f484f92beb309c88eef188b9cab5bff6e7ff0",
-      "brand": "red_wash"
+      "publication": "docs/governance/publications/SH-PS-RW-LOG-001_v1.1.0.pdf",
+      "sha256": "80495603c1c53c6703fb70afda6dc75201405738dca8b5e981d5b90d8020eec6",
+      "source_sha256": "b83e4b5d553faf154514647e948e7438b3aee4287817ed6be14048e6440796f4",
+      "brand": "red_wash",
+      "normalizer": "qpdf"
     },
     {
       "source": "docs/internal/COVERAGE_AUDIT_PHASE2.md",
@@ -342,6 +344,254 @@
       "source_sha256": "925c058e6826264ec612c841835e07ac8b77fe4440c429f183ccd7f89e5f85d2",
       "brand": "corporate",
       "normalizer": "pypdf"
+    },
+    {
+      "source": "industrial/CASE_GUIDE.md",
+      "publication": "industrial/publications/SH-IND-CASE-001_v1.0.0.pdf",
+      "sha256": "43d03689f1a30097db9971669a748ef2ad17a27b942ad1fc8e2402c1b1464d44",
+      "source_sha256": "6cae6f0322656f86623671fc175c5f03a8abe7504adcb676cf401b2dbbbc7a6c",
+      "brand": "corporate",
+      "normalizer": "qpdf"
+    },
+    {
+      "source": "industrial/IMPLEMENTATION_DECISIONS.md",
+      "publication": "industrial/publications/SH-IND-DEC-001_v1.0.0.pdf",
+      "sha256": "78d7f86536786e63be6913e15cd08d546c2bb98fe6bf282f4c42ea62ab28d23b",
+      "source_sha256": "008499ffc23a9a531569eee56daabc7e9bc3b6aaf67dfada80893e585082eb50",
+      "brand": "corporate",
+      "normalizer": "qpdf"
+    },
+    {
+      "source": "industrial/corporate/LEGAL_STRUCTURE_AND_FORMATION.md",
+      "publication": "industrial/publications/SH-IND-COR-001_v1.0.0.pdf",
+      "sha256": "c5b964e667db3c9dd9a8e85f2d226ea6b3d0114c80e4675a830bb569ec18bee9",
+      "source_sha256": "5a10f112b015d5dfa7ca3b500108718015a41369182092cabc44dfb224119fbc",
+      "brand": "corporate",
+      "normalizer": "qpdf"
+    },
+    {
+      "source": "industrial/corporate/LEADERSHIP_AND_AUTHORITY.md",
+      "publication": "industrial/publications/SH-IND-HR-001_v1.0.0.pdf",
+      "sha256": "d7bba71ef45e110323a3533860ef5c0260025b84c56e102e23eebbb43df76cf8",
+      "source_sha256": "61a32c036e8cdb2fbf7ab0234d26a925ebd423b48869667724c5a254ca14fda1",
+      "brand": "corporate",
+      "normalizer": "qpdf"
+    },
+    {
+      "source": "industrial/finance/ASSUMPTIONS_AND_TEMPORAL_CONTROLS.md",
+      "publication": "industrial/publications/SH-IND-FIN-ASM-001_v1.0.0.pdf",
+      "sha256": "8e0f6dec162aa7fdf77ae8bbae1da79e4dd11e8f5ee7ccf8c852af5f9038f488",
+      "source_sha256": "933330f510acc9c05423f08f62d30c981dde8a26c2ae0325161f29d401ab43d8",
+      "brand": "aru",
+      "normalizer": "qpdf"
+    },
+    {
+      "source": "industrial/finance/DRIVERS_AND_COST_SUPPORT.md",
+      "publication": "industrial/publications/SH-IND-FIN-DRV-001_v1.0.0.pdf",
+      "sha256": "817293e0ff9b100f3ced324d6e0176f6d678278d237a1c78aa9471a8441dfcc5",
+      "source_sha256": "bf0c78a2c8d96ebabd34674d4c75f49a2d0ca19be68bb662073d0566bc85a83a",
+      "brand": "aru",
+      "normalizer": "qpdf"
+    },
+    {
+      "source": "industrial/finance/RED_WASH_AND_FUNDING.md",
+      "publication": "industrial/publications/SH-IND-FIN-RWF-001_v1.0.0.pdf",
+      "sha256": "b583d8108f5d4966a635ed3c01ed83f8b87a96f586cfc5803b08c533657fe894",
+      "source_sha256": "5f54d6254e1d4e21ba37e2ed911fd8468d304e729f0272b4f45141b081a5fe94",
+      "brand": "pale_sun",
+      "normalizer": "qpdf"
+    },
+    {
+      "source": "industrial/finance/TRANSACTION_ACCOUNTING.md",
+      "publication": "industrial/publications/SH-IND-FIN-TXN-001_v1.0.0.pdf",
+      "sha256": "1cd173fa65f2ff6af92ed08736e2bfef9927ff2b601474f6c485577a3fd29716",
+      "source_sha256": "d13f142968958585cfc56a7b06d54b5e95bccef6d434d11bb6bba93933a0aa58",
+      "brand": "aru",
+      "normalizer": "qpdf"
+    },
+    {
+      "source": "industrial/operations/GEOGRAPHY_AND_ENGINEERING.md",
+      "publication": "industrial/publications/SH-IND-GEO-001_v1.0.0.pdf",
+      "sha256": "4a526eaa1ab5f30fc43736b236777eca079313b246c3927685e0d754d69cb0bc",
+      "source_sha256": "c34380a2fa4484653b7414c639093ddd1f327b1d3ef9fb624aacec65d0c54d0f",
+      "brand": "bst",
+      "normalizer": "qpdf"
+    },
+    {
+      "source": "industrial/operations/LABOR_SAFETY_AND_CONTROLS.md",
+      "publication": "industrial/publications/SH-IND-SAF-001_v1.0.0.pdf",
+      "sha256": "f5b1a06b569a5b8900d1fe233d568f2ce7f04b97fb2a6119e06a531345092861",
+      "source_sha256": "586d3aa95bbb894c3891ceded1ddb78b6d73fb0df54e4d20b58ab523c9d622d6",
+      "brand": "bst",
+      "normalizer": "qpdf"
+    },
+    {
+      "source": "industrial/operations/OPERATING_AND_SERVICE_PLAN.md",
+      "publication": "industrial/publications/SH-IND-OPS-002_v1.0.0.pdf",
+      "sha256": "78dff55152a4dd0b816a8481cea24b5cdd97113a257e5d5099600539f9b8369b",
+      "source_sha256": "8f1f9db0ad7958f9f967ef77fae5bc01bdaee5a5822258f4a284a8f2c218175e",
+      "brand": "aru",
+      "normalizer": "qpdf"
+    },
+    {
+      "source": "industrial/operations/RATE_AND_CAPITAL_MEMORANDUM.md",
+      "publication": "industrial/publications/SH-IND-COM-001_v1.0.0.pdf",
+      "sha256": "ec2a4d65fb32676e6cbb25054548e1daf18e8cc73fcf36e1f0cba020784ad98e",
+      "source_sha256": "e0ac18eeb5794dc6c08871d73123b9dff7f319bbde8df70d76f49be2a70cfc64",
+      "brand": "aru",
+      "normalizer": "qpdf"
+    },
+    {
+      "source": "industrial/pale_sun/01_VILANDER_BIOGRAPHY.md",
+      "publication": "industrial/publications/SH-PS-EV-001_v1.0.0.pdf",
+      "sha256": "7e22a43bf28ba8312ef42d1cec144a9f6b669c3fc4b1267a03e3f6a20055bed4",
+      "source_sha256": "8e4ceb274a64bd06d89ad0cc3586239c63e564040f2f07b72334c6165dbe2816",
+      "brand": "pale_sun",
+      "normalizer": "qpdf"
+    },
+    {
+      "source": "industrial/pale_sun/02_BTC_RECRUITMENT_AND_ASSESSMENT.md",
+      "publication": "industrial/publications/SH-PS-EV-002_v1.0.0.pdf",
+      "sha256": "5fe025c18b24fb89936924fd4009c204130e5f640ba2cd21e7dc181f9d0818d2",
+      "source_sha256": "48ad0f9635508526d051356e2e29ec2d8781a499cba495210cdc38b6ccff55de",
+      "brand": "pale_sun",
+      "normalizer": "qpdf"
+    },
+    {
+      "source": "industrial/pale_sun/03_URANIUM_PROBLEM_BOOK.md",
+      "publication": "industrial/publications/SH-PS-JO-001_v1.0.0.pdf",
+      "sha256": "f3c322bf45b0a1a025b55aebbeb439e4750902230a23dbcf9bc8913425b8dfc2",
+      "source_sha256": "4fafd76ac9a680f3c40ed8c5332eae4613678b923e8739dfbb5fb71a8749fd3b",
+      "brand": "pale_sun",
+      "normalizer": "qpdf"
+    },
+    {
+      "source": "industrial/pale_sun/04_ALEXANDRIA_AND_ESCALATION_RECORD.md",
+      "publication": "industrial/publications/SH-PS-ALX-001_v1.0.0.pdf",
+      "sha256": "61171edf9e18f17578d60d372103a5e89b318cb442c22faf55ada7db8e9e04c0",
+      "source_sha256": "f7e1d920f556e78058d3e1133e3be5df1bf2176e11bd90e05485ce0eff2a2b8e",
+      "brand": "pale_sun",
+      "normalizer": "qpdf"
+    },
+    {
+      "source": "industrial/pale_sun/05_FALSE_START_CEDAR_JUNCTION.md",
+      "publication": "industrial/publications/SH-PS-FS-001_v1.0.0.pdf",
+      "sha256": "c7c6b5922f9ebbe5ee6ee7eb7ceebd4cbbaf4583e3a92eab0bc0567fd75c0d65",
+      "source_sha256": "2f922e81b39b52b29a3bba4ec5d24489688715cee9ac38094901132bd0481fcc",
+      "brand": "pale_sun",
+      "normalizer": "qpdf"
+    },
+    {
+      "source": "industrial/pale_sun/06_FALSE_START_JUNIPER_MESA.md",
+      "publication": "industrial/publications/SH-PS-FS-002_v1.0.0.pdf",
+      "sha256": "9432a3d0a51fe1b7209c4633e0fce32d770fff5a6f235bc265648a0c7874e5c2",
+      "source_sha256": "7391bd1f09afa3c6e1b54f5e18739271e77236cbd4e728fda59cbdff736bb0a9",
+      "brand": "pale_sun",
+      "normalizer": "qpdf"
+    },
+    {
+      "source": "industrial/pale_sun/07_FALSE_START_SALT_RIM.md",
+      "publication": "industrial/publications/SH-PS-FS-003_v1.0.0.pdf",
+      "sha256": "5828268c166a47945ca3aef1a865996fcca9178a1441eebc4d6199e4d69672fa",
+      "source_sha256": "2640adebc7826e638578611adfbd49a6f2d786b6af185ec051db2bfac6ba0f3e",
+      "brand": "pale_sun",
+      "normalizer": "qpdf"
+    },
+    {
+      "source": "industrial/pale_sun/08_FOUNDING_AND_APPOINTMENT.md",
+      "publication": "industrial/publications/SH-PS-COR-001_v1.0.0.pdf",
+      "sha256": "06dd1c71184faa73c5b4ca84327bf3c9b760effc4a917f499e6a48bc95a486c1",
+      "source_sha256": "a7b11742351fc8acc351343ed2440a9927ec9d9654ee92ba01710233856b0b4c",
+      "brand": "pale_sun",
+      "normalizer": "qpdf"
+    },
+    {
+      "source": "industrial/pale_sun/09_RED_WASH_JUDGMENT_AAR.md",
+      "publication": "industrial/publications/SH-PS-AAR-001_v1.0.0.pdf",
+      "sha256": "11a951f5995c74927a61a72e4d0aa4a72df593c02a92ab34f0f1784ef59e26bc",
+      "source_sha256": "0755b620e7b9f6f808f55c5ffa7f01c9514d545821ca46794942cea3fc6eb057",
+      "brand": "pale_sun",
+      "normalizer": "qpdf"
+    },
+    {
+      "source": "industrial/pale_sun/10_FEDERAL_AND_DOWNSTREAM_BRIEF.md",
+      "publication": "industrial/publications/SH-PS-FED-001_v1.0.0.pdf",
+      "sha256": "87ad39e20035437bfd9dbb56a87a54df990393656878d6352dcc4ff5bf8f444e",
+      "source_sha256": "a2639d8f05ff4320e8b4d2d24aa59ff26969081dc23368a82e5bfb419770c239",
+      "brand": "pale_sun",
+      "normalizer": "qpdf"
+    },
+    {
+      "source": "industrial/transaction/01_RW_TRANSACTION_FILE.md",
+      "publication": "industrial/publications/SH-IND-RW-TXN-001_v1.0.0.pdf",
+      "sha256": "594220926f587a23fc11f42d64c1ea37b58281fa7bc8bae84dd66a876a748d6b",
+      "source_sha256": "902ff083d3857004b5c868b106fddc8e3600e59ad959201fb97c99d68dba298c",
+      "brand": "pale_sun",
+      "normalizer": "qpdf"
+    },
+    {
+      "source": "industrial/transaction/02_ARU_LOI_AND_SELLER_FILE.md",
+      "publication": "industrial/publications/SH-IND-ARU-LOI-001_v1.0.0.pdf",
+      "sha256": "6d8c425bd59eb480d35fbb5fe1b77d0ec91c267eb85c5c0bdc4a9c8fcda1f79f",
+      "source_sha256": "e012644ca645384234ddf8f47e78d176b1cc11d4cef97449723f23f2803f5615",
+      "brand": "aru",
+      "normalizer": "qpdf"
+    },
+    {
+      "source": "industrial/transaction/03_ARU_DILIGENCE_MEMORANDUM.md",
+      "publication": "industrial/publications/SH-IND-ARU-DD-001_v1.0.0.pdf",
+      "sha256": "e7db91ce67e920998f6768d1c43a9d5f53239e4a29c90359d82180a2dfe20a74",
+      "source_sha256": "1591f3a761202385693de6b689377400a4905862910b0213acb326ace0bbc272",
+      "brand": "aru",
+      "normalizer": "qpdf"
+    },
+    {
+      "source": "industrial/transaction/04_ARU_APPROVAL_AND_PURCHASE_AGREEMENT.md",
+      "publication": "industrial/publications/SH-IND-ARU-SPA-001_v1.0.0.pdf",
+      "sha256": "dc94b847ed9a2c6d77961c465fa0cf32816d00ac1760b0c7281beed466d25e82",
+      "source_sha256": "3b40effe8efb1d4a69216180d508dad90f7fc6a778679b39ee2ed5371d0de9eb",
+      "brand": "aru",
+      "normalizer": "qpdf"
+    },
+    {
+      "source": "industrial/transaction/05_ARU_CLOSING_AND_TAX_DELIVERY.md",
+      "publication": "industrial/publications/SH-IND-ARU-CLOSE-001_v1.0.0.pdf",
+      "sha256": "2db8049ce4ee571d4a681505321b73af49739adb2cbd86d1fae78e92082d7883",
+      "source_sha256": "a6dd448ed3a4a3ad6f0f3748e79dd918ea43c75685de762fe00843477a5d22c9",
+      "brand": "aru",
+      "normalizer": "qpdf"
+    },
+    {
+      "source": "industrial/transaction/06_ARU_TRANSITION_AND_RETENTION.md",
+      "publication": "industrial/publications/SH-IND-ARU-HR-001_v1.0.0.pdf",
+      "sha256": "99d6a2a430b81cec7a3c47c495cf64d1284a335d89bc978dc07b7d4eb47e93d8",
+      "source_sha256": "3e3653f95a286d71aa513410603dd0c78684db0ad94e2460708c434a6fc4aec0",
+      "brand": "aru",
+      "normalizer": "qpdf"
+    },
+    {
+      "source": "industrial/transaction/07_ARU_TAX_STRUCTURE_MEMORANDUM.md",
+      "publication": "industrial/publications/SH-IND-ARU-TAX-001_v1.0.0.pdf",
+      "sha256": "c612faabb6e9d401d2298268b5d57d5fffe3881171aa8355f268926a0e0aeee4",
+      "source_sha256": "d42c4d67873e1b8e9b6488eac9a70a16643680718735ab0c3948327a37b16a44",
+      "brand": "aru",
+      "normalizer": "qpdf"
+    },
+    {
+      "source": "industrial/transaction/08_INTERCOMPANY_LOGISTICS_AGREEMENT.md",
+      "publication": "industrial/publications/SH-IND-IC-001_v1.0.0.pdf",
+      "sha256": "6edd5e8f041b09b9447f51dee8f0dcc1179b1a58083396230642e31f383134f1",
+      "source_sha256": "23153dc86a3e9ea9fd501bce6bdf3c8478dbdf3ab79fa5e8abc84ca8bbb771fc",
+      "brand": "aru",
+      "normalizer": "qpdf"
+    },
+    {
+      "source": "industrial/transaction/09_SERVICE_PRICING_COMPARISON.md",
+      "publication": "industrial/publications/SH-IND-IC-PRC-001_v1.0.0.pdf",
+      "sha256": "7d15313e75f6c0c8fab9410beb4917daf908671997e7dcf995fcff7f663c5277",
+      "source_sha256": "4f185dffc7906ecc6abda8420fc9d026d4fb5bc470d506eb99dbab968560b2c5",
+      "brand": "aru",
+      "normalizer": "qpdf"
     }
   ]
 }

@@ -1,7 +1,7 @@
 # RED WASH TRANSACTION AND OPERATING RECORD — CONSOLIDATED SOURCE
 
 **Record:** `SH-PS-RW-TOR-001`
-**Version:** 1.0.0
+**Version:** 1.1.0
 **Synthetic calibration through:** August 31, 2026
 **Classification:** PUBLIC SYNTHETIC DIEGETIC
 
@@ -11,9 +11,9 @@
 
 # 1. Executive case
 
-Red Wash is a compact conventional underground uranium mine and mill in Wyoming. The selected synthetic site scenario places it in Carbon County; that county-level placement is not separately locked geographic canon. It is operated through a dedicated Sable Harbor-controlled company under the Pale Sun business line. Pale Sun owns resource stewardship, mine planning, commercial contracting, closure, capital allocation, and the parent interface. Red Wash is the physical site and operating boundary; the operator's exact legal name, suffix, and jurisdiction remain open.
+Red Wash is a compact conventional underground uranium mine and mill in Wyoming. The selected fictional site is in Sweetwater County at42.2200N,108.1800W. Red Wash Mining, LLC is the Wyoming operating company, wholly owned by Pale Sun Inc., a Delaware corporation beneath Sable Harbor Industrial Holdings, Inc. Evan Vilander holds platform presidential authority; Mari Varela is Pale Sun COO and Red Wash CEO; Cole retains site-superintendent and stop authority.
 
-Sable Harbor acquired the business from the seller using the provisional display name Northstar Resources on July 18, 2025 after a seller re-trade, a Sable Harbor walk-away, and a return on materially different terms. The exact seller legal name, suffix, and jurisdiction remain open. The transaction recognized $42.0 million of operating assets, $4.5 million of current assets, a $16.0 million ARO, $2.5 million of other liabilities, and $28.0 million of cash consideration. Goodwill and transaction debt were zero.
+Sable Harbor acquired the business from Northstar Minerals, Inc. (NMI) on July 18, 2025 after a seller re-trade, a Sable Harbor walk-away, and a return on materially different terms. Northstar Minerals, Inc. is a Wyoming corporation led by Henry Norwood. The transaction recognized $42.0 million of operating assets, $4.5 million of current assets, a $16.0 million ARO, $2.5 million of other liabilities, and $28.0 million of cash consideration. Goodwill and transaction debt were zero.
 
 The acquisition was not justified by heroic commodity pricing. The thesis was narrower: weak records, deferred maintenance, fragmented institutional knowledge, and real operating uncertainty had been treated as if they proved an absence of operable value. Sable Harbor accepted only the smaller case that survived technical, environmental, legal, commercial, financial, and operating challenge.
 
@@ -31,9 +31,9 @@ Frontier Basin assembled federal claims, private mineral leases, surface-access 
 
 Carbon Basin acquired the position and established that mineralization occurred as stacked, sinuous, discontinuous redox-front lenses rather than one continuous tabular body. Its 2008 internal resource was directionally useful but relied too heavily on broad sectional polygons. Capital-market deterioration and uranium prices prevented construction.
 
-## 2.3 Northstar Resources, 2010–2025
+## 2.3 Northstar Minerals, Inc., 2010–2025
 
-Northstar Resources is a provisional display name; its exact legal identity remains open. In the selected synthetic history, Northstar acquired the project in December 2010, consolidated permitting, constructed a decline-access underground mine, compact 600-ton-per-day mill, tailings system, roads, power, water, laboratory, warehouse, administration, dry, and maintenance facilities. First concentrate shipped in 2013.
+Northstar Minerals, Inc. (NMI) is the locked Wyoming corporate seller, led by Henry Norwood. In the selected synthetic history, Northstar acquired the project in December 2010, consolidated permitting, constructed a decline-access underground mine, compact 600-ton-per-day mill, tailings system, roads, power, water, laboratory, warehouse, administration, dry, and maintenance facilities. First concentrate shipped in 2013.
 
 The mine operated through 2017. Production improved, but development lagged; experienced employees carried unrecorded continuity; maintenance was deferred; resource and grade-control models accumulated multiple versions; and the commercial book, inventory ledger, and environmental records did not share one authoritative timeline.
 
@@ -310,13 +310,7 @@ fictional carrier consolidation within the real 2025 freight backdrop reduces qu
 lane allocation and causes a scheduling disruption, but no annual sale is lost and
 2025 annual revenue does not change.
 
-The response begins as a replacement-carrier search and broadens to rail-access
-mapping. The question “Whose line is this?” surfaces ARU/BS&T through operating
-analysis—not a banker pitch. At discovery there is no direct mine connection, suitable
-secure transload, or demonstrated uranium-specific capability. The $15.0 million
-interface figure is an unbooked preliminary screen. Service may begin only after all
-applicable gates, direct uranium custody is not authorized by implication, and the full
-ARU transaction and operating case remains open. `SH-PS-RW-LOG-001` is controlling.
+The response begins as a replacement-carrier search and broadens to rail-access mapping. The question “Whose line is this?” surfaces ARU/BS&T through operating analysis. At discovery there is no direct mine connection, suitable secure transload, or demonstrated uranium-specific capability. The selected successor closes the ARU acquisition on January 7, 2026 and begins ordinary inbound service on July 7. Its $8.5 million phase-one program comprises $3.25 million at the mine and $5.25 million at ARU. The $6.5 million remainder of the old $15 million screen is unapproved. Direct uranium custody and a future mine spur remain gated; `SH-PS-RW-LOG-001` controls the current interface.
 
 ---
 

@@ -21,6 +21,8 @@ build/
 dist/
 /red_wash/generated/
 /red_wash/dist/
+/industrial/generated/
+/industrial/dist/
 var/*
 !var/.gitkeep
 data/generated/

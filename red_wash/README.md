@@ -1,99 +1,71 @@
-# Red Wash Transaction and Operating Record
+# Red Wash transaction and operating evidence
 
-**Record:** `SH-PS-RW-TOR-001`
-**Version:** 1.0.0
-**Synthetic calibration through:** 2026-08-31
-**Canon reconciled through:** 2026-09-05
+**Record:** `SH-PS-RW-TOR-001` · **Version:** 1.1.0
+**Case cutoff:** September 5, 2026 · **Synthetic calibration:** through August 31, 2026
 **Classification:** `PUBLIC_SYNTHETIC_DIEGETIC`
-**Epistemic mode:** `RETROSPECTIVE_CURRENT_CANON`
 
-> This package belongs to the fictional Sable Harbor enterprise. Agency names, legal frameworks,
-> and external benchmarks are real only where identified in the source register. Red Wash parties,
-> permits, contracts, measurements, generated rows, and financial records are synthetic unless a
-> record explicitly says otherwise.
+Red Wash Mining, LLC is the Wyoming mine operator, wholly owned by Pale Sun Inc.
+The controlling industrial structure, acquisitions, integrated financing and Taylor
+service case are in the [industrial package](../industrial/README.md). This directory
+supplies its detailed mine, diligence, operating and commercial evidence.
 
-This is Sable Harbor's controlled public Red Wash acquisition and commodity-operating case. The
-owner has approved the selected transaction and 2026 operating baseline. Approval fixes the case
-used for this publication; it does not turn generated evidence into observed or audited history.
+The preserved standalone 2026 numerical baseline remains reproducible here. The
+industrial successor separately identifies additional interface costs, capital,
+financing and the acquisition-to-opening ARO rollforward. The two model versions
+must not be presented as the same projection. Neither contains observed or audited
+company results: January–August is synthetic calibration and September–December is
+management forecast available at the publication cutoff.
 
-## Operating chain
+## Current records
 
-> Geology → resource basis → mine plan → ore → mill recovery → product → inventory → contracts →
-> custody → invoice → cash → statements and valuation.
-
-The limited ARU/BS&T bridge follows a separate causal chain:
-
-> 2025 carrier-market pressure → fictional carrier consolidation → Red Wash lane-capacity loss →
-> preserved annual delivery → replacement-carrier search → rail mapping → ARU/BS&T discovery →
-> gated interface screen.
-
-ARU was not a pre-existing Red Wash vendor, carried no Red Wash material in 2025, and receives no
-automatic uranium-custody authority. The $15 million interface amount is an unbooked preliminary
-screen. The complete ARU transaction and operating case remains open and outside this package.
-
-## Source, generated, and release boundaries
-
-- `source/` contains the three manually controlled input records.
-- `generated/` is an ignored build directory rebuilt from empty by the canonical generator; its
-  27 CSV datasets ship in the verified release artifact rather than as self-referential source.
-- `dist/` is an ignored build directory containing the deterministic SQLite database and database
-  manifest; CI stages the broader release artifact from an explicit public allowlist.
-- Unexpected source or generated files are rejected; stale files cannot satisfy validation.
-- The generation manifest's RFC3339 `built_at` is deterministically normalized from the controlled
-  `prepared_at` date to `00:00:00Z`; it is a reproducibility coordinate, not wall-clock execution
-  time. `REQUIRES_EXACT_RELEASE_MANIFEST_BINDING` remains a policy state until a post-merge release
-  manifest supplies the exact commit-binding evidence.
-
-## Navigation
-
-| Area | Entry point |
+| Record | Source |
 |---|---|
-| Controlling transaction/operating record | `../docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05.md` |
-| Decision-register closeout | `../docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-05_RED_WASH.md` |
-| Integrated casebook | `RED_WASH_CASEBOOK.md` |
-| Structured transaction/operating record | `../docs/structured/red_wash_transaction_operating_record.json` |
-| ARU/BS&T interface record | `logistics/ARU_BST_INTERFACE_AND_DEPENDENCY_RECORD.md` |
-| Structured ARU/BS&T bridge | `../docs/structured/aru_bst_red_wash_bridge.json` |
-| Controlled core input | `source/core_operating_data.json` |
-| Controlled bridge input | `source/aru_bst_bridge.json` |
-| External evidence register | `source/external_source_register.csv` |
-| Canonical generator | `tools/build_red_wash_package.py` |
-| Compatibility entry point | `tools/generate_red_wash_corpus.py` |
-| Validator | `tools/validate_red_wash_record.py` |
-| Visual control | `../assets/brand/red_wash_visual_manifest.json` |
+| Selected transaction and standalone baseline | [Canon 1.1](../docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05_R2.md) |
+| Reconciled decisions | [Decision addendum 1.1](../docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-05_RED_WASH_R2.md) |
+| Full mine evidence narrative | [Casebook](RED_WASH_CASEBOOK.md) |
+| Operating archaeology and diligence | [Operating record](TRANSACTION_OPERATING_RECORD.md) |
+| Commercial instruments | [Transaction and contracts](agreements/TRANSACTION_AND_COMMERCIAL_INSTRUMENTS.md) |
+| Permits and closure | [Regulatory record](regulatory/REGULATORY_PERMIT_AND_ENVIRONMENTAL_FILE.md) |
+| Taylor relationship | [Interface record](logistics/ARU_BST_INTERFACE_AND_DEPENDENCY_RECORD.md) |
+| Controlled mine inputs | [Core source](source/core_operating_data.json) |
+| Controlled interface inputs | [Bridge source](source/aru_bst_bridge.json) |
+| External references | [Source register](source/external_source_register.csv) |
+| Historical source bytes | [Version 1.0 preservation manifest](history/v1.0.0/manifest.json) |
 
-## Authority and evidence states
+## Geographic and visual control
 
-Canon-document decisions use the repository's `LOCKED`, `PROVISIONAL`, `OPEN`, and supersession
-vocabulary. Machine records preserve separate finance `fact_state` and constitutional
-`epistemic_state` fields. In particular:
+The selected fictional mine is in Sweetwater County's Great Divide Basin, north of
+Wamsutter, at 42.2200 N, 108.1800 W. Approximately 6,885 feet is a DEM screening
+value, not a survey. Current synthetic drill collars use NAD83 / UTM zone 12N
+(EPSG:26912). Resource, mine and facility geometry remain synthetic engineering data.
 
-- an owner-approved selected case may be `LOCKED` as a decision;
-- an input inside that case may remain `SCENARIO_INPUT`, `MODEL_PROPOSED`, or
-  `PROVISIONAL_ASSUMPTION`;
-- generated rows remain `SYNTHETIC_INSTANCE`;
-- arithmetic and accounting outputs remain `DERIVED`;
-- cited real-world observations remain `EXTERNAL_RESEARCH` with dates and limitations;
-- unresolved ARU implementation details remain `OPEN`.
+[Current site schematic](../industrial/visuals/red_wash_site.svg) ·
+[Current underground schematic](../industrial/visuals/red_wash_underground.svg)
 
-There is no `ACTUAL` layer in this package. January–August 2026 rows are shared synthetic
-calibration; September–December rows are selected synthetic-scenario forecasts.
+The approved [Pale Sun logo](../assets/brand/logos/pale_sun__canonical.png) and
+[Red Wash logo](../assets/brand/logos/red_wash__canonical.png) remain byte-identical.
+The old Carbon County map PNGs retain their original bytes as superseded historical
+illustrations. Their approval manifest preserves provenance; their old location,
+elevation, operator and rail-loadout labels do not describe the current case.
 
-## Visual originals
+## Build and validation
 
-The approved Pale Sun logo, Red Wash logo, site overview, and underground plan are present at their
-canonical paths and verified against the exact hashes in the visual manifest. They must not be
-recompressed or replaced. Any derivative uses a different filename and independent provenance.
+```bash
+python red_wash/tools/validate_red_wash_record.py --generate
+python -m unittest discover -s red_wash/tests -q
+```
 
-| Approved original | Repository view |
-|---|---|
-| Pale Sun logo | [![Pale Sun approved canonical logo](../assets/brand/logos/pale_sun__canonical.png)](../assets/brand/logos/pale_sun__canonical.png) |
-| Red Wash logo | [![Red Wash approved canonical logo](../assets/brand/logos/red_wash__canonical.png)](../assets/brand/logos/red_wash__canonical.png) |
-| Red Wash site overview | [![Red Wash approved site overview](../assets/brand/maps/red_wash__site_overview.png)](../assets/brand/maps/red_wash__site_overview.png) |
-| Red Wash underground plan | [![Red Wash approved underground plan](../assets/brand/maps/red_wash__underground_plan.png)](../assets/brand/maps/red_wash__underground_plan.png) |
+The builder emits 27 typed CSV datasets, a constrained SQLite database and source
+hash manifests into ignored `generated/` and `dist/` directories. Independent
+validation recomputes production, inventory, statements, capital and source bindings.
+The industrial builder assembles a versioned participant corpus from explicitly
+selected evidence. Source lineage remains distinct from participant availability.
 
-## Public/private boundary
+## Custody and chronology
 
-This repository contains company-facing evidence and decisions only. The private Alexandria case
-may bind to the exact final public merge commit after this record reaches `main`; no statement here
-claims that binding already exists. Nonpublic evaluation material does not belong in this package.
+Qualified external carriers handled every 2025 Red Wash movement. Operating analysis
+surfaced ARU in Q4 2025; its acquisition closed January 7, 2026. Selected Taylor
+ordinary industrial-input service starts July 7, 2026. That service does not confer
+uranium custody. Qualified external carriers remain available permanently; there is
+no minimum-volume promise or mine rail spur. Nonpublic evaluation material remains
+in the separate private control repository and is excluded from these public sources.

@@ -1,0 +1,132 @@
+{
+  "schemaVersion": "0.3.0",
+  "registerVersion": "0.3.0",
+  "canonicalDate": "2026-08-31",
+  "canonReviewedThrough": "2026-09-05",
+  "status": "canon-derived-rendered-chart-package",
+  "controllingSources": [
+    "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md",
+    "docs/canon/DECISION_REGISTER.md",
+    "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-03.md",
+    "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-05_RED_WASH.md",
+    "docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05.md",
+    "red_wash/logistics/ARU_BST_INTERFACE_AND_DEPENDENCY_RECORD.md"
+  ],
+  "prohibitedInferences": [
+    "unstated direct-report relationship",
+    "final executive title",
+    "final legal-entity structure",
+    "unstated headcount",
+    "unstated ownership percentage",
+    "OPEN detail presented as settled",
+    "synthetic selected-case headcount presented as an external actual",
+    "ARU or BS&T uranium custody before every applicable gate passes"
+  ],
+  "redWashBridgeDecisionSource": {
+    "recordId": "SH-PS-RW-DR-001",
+    "path": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-05_RED_WASH.md",
+    "decisionIds": [
+      "RW-017",
+      "RW-018",
+      "RW-019",
+      "RW-020",
+      "RW-021",
+      "RW-022",
+      "RW-023",
+      "RW-024",
+      "RW-025"
+    ]
+  },
+  "charts": [
+    {
+      "id": "SH-ORG-001",
+      "title": "SABLE HARBOR \u2014 ENTERPRISE ORGANIZATION",
+      "page": "docs/organization/2026_OPERATING_TOPOLOGY.md",
+      "asset": "docs/organization/assets/enterprise-organization-2026.svg",
+      "purpose": "August 31 functional operating-line baseline; later headquarters institutions remain controlled by the September 3 closeout.",
+      "canonicalDate": "2026-08-31",
+      "canonReviewedThrough": "2026-09-05",
+      "relationshipSemantics": "functional authority and canon-locked operating relationships; not implicit HR reporting"
+    },
+    {
+      "id": "SH-ORG-002",
+      "title": "SABLE HARBOR \u2014 LEADERSHIP & AUTHORITY",
+      "page": "docs/organization/2026_LEADERSHIP_AND_AUTHORITY_MAP.md",
+      "asset": "docs/organization/assets/leadership-authority-2026.svg",
+      "purpose": "Named leadership and domain-authority map. Edges and placement do not create direct-report relationships.",
+      "canonicalDate": "2026-08-31",
+      "canonReviewedThrough": "2026-09-05",
+      "relationshipSemantics": "functional authority and canon-locked operating relationships; not implicit HR reporting"
+    },
+    {
+      "id": "SH-ORG-003",
+      "title": "FOUNDRY / FOUNDRY FIELD \u2014 ORGANIZATION",
+      "page": "docs/organization/FOUNDRY_FIELD_ORGANIZATION.md",
+      "asset": "docs/organization/assets/foundry-field-organization-2026.svg",
+      "purpose": "Product, technical authority, deployment counterweights and application families.",
+      "canonicalDate": "2026-08-31",
+      "canonReviewedThrough": "2026-09-05",
+      "relationshipSemantics": "functional authority and canon-locked operating relationships; not implicit HR reporting"
+    },
+    {
+      "id": "SH-ORG-004",
+      "title": "PROJECT WILLOW \u2014 ORGANIZATION",
+      "page": "docs/organization/WILLOW_ORGANIZATION.md",
+      "asset": "docs/organization/assets/willow-organization-2026.svg",
+      "purpose": "Pittsburgh laboratory, Sacramento institutional seam and operating qualification gate.",
+      "canonicalDate": "2026-08-31",
+      "canonReviewedThrough": "2026-09-05",
+      "relationshipSemantics": "functional authority and canon-locked operating relationships; not implicit HR reporting"
+    },
+    {
+      "id": "SH-ORG-005",
+      "title": "ATLAS MERIDIAN \u2014 BRIDGE ORGANIZATION",
+      "page": "docs/organization/ATLAS_MERIDIAN_BRIDGE_ORGANIZATION.md",
+      "asset": "docs/organization/assets/atlas-meridian-bridge-2026.svg",
+      "purpose": "Cross-functional transition organization for repeatability and controlled commercialization.",
+      "canonicalDate": "2026-08-31",
+      "canonReviewedThrough": "2026-09-05",
+      "relationshipSemantics": "functional authority and canon-locked operating relationships; not implicit HR reporting"
+    },
+    {
+      "id": "SH-ORG-006",
+      "title": "PALE SUN / RED WASH \u2014 ORGANIZATION",
+      "page": "docs/organization/PALE_SUN_RED_WASH_ORGANIZATION.md",
+      "asset": "docs/organization/assets/pale-sun-red-wash-organization-2026.svg",
+      "purpose": "Operating-business and mine-authority organization, approved 140-FTE case split, and qualified interfaces.",
+      "canonicalDate": "2026-08-31",
+      "canonReviewedThrough": "2026-09-05",
+      "relationshipSemantics": "functional authority and canon-locked operating relationships; not implicit HR reporting"
+    },
+    {
+      "id": "SH-ORG-007",
+      "title": "PROJECT CRADLE \u2014 ORGANIZATION",
+      "page": "docs/organization/PROJECT_CRADLE_ORGANIZATION.md",
+      "asset": "docs/organization/assets/project-cradle-organization-2026.svg",
+      "purpose": "Founding team and the boundary among Cradle, its recovery intervention and the host operator.",
+      "canonicalDate": "2026-08-31",
+      "canonReviewedThrough": "2026-09-05",
+      "relationshipSemantics": "functional authority and canon-locked operating relationships; not implicit HR reporting"
+    },
+    {
+      "id": "SH-ORG-008",
+      "title": "ARU / BS&T \u2014 ORGANIZATION",
+      "page": "docs/organization/ARU_BST_ORGANIZATION.md",
+      "asset": "docs/organization/assets/aru-bst-organization-2026.svg",
+      "purpose": "Distinct acquired operator, known railway component, open operating structure, and limited Red Wash interface boundary.",
+      "canonicalDate": "2026-08-31",
+      "canonReviewedThrough": "2026-09-05",
+      "relationshipSemantics": "functional authority and canon-locked operating relationships; not implicit HR reporting"
+    },
+    {
+      "id": "SH-ORG-009",
+      "title": "THE ORIGINAL EIGHT \u2014 FORMATION & STATUS",
+      "page": "docs/organization/ORIGINAL_EIGHT.md",
+      "asset": "docs/organization/assets/original-eight-formation-and-status.svg",
+      "purpose": "Three founders plus five early employees, Blackridge continuity and 2026 status.",
+      "canonicalDate": "2026-08-31",
+      "canonReviewedThrough": "2026-09-05",
+      "relationshipSemantics": "functional authority and canon-locked operating relationships; not implicit HR reporting"
+    }
+  ]
+}

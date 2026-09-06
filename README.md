@@ -2,6 +2,8 @@
 
 Sable Harbor is the canonical synthetic enterprise and reusable business-world sandbox for mining, natural resources, industrial systems, enterprise software, assurance, analytics, finance, governance, security, incident response, and professional training.
 
+**Industrial case:** the [Pale Sun / Red Wash / ARU / BS&T package](industrial/README.md) implements the selected corporate, transaction, operating and financial successor. Its [decision record](docs/canon/INDUSTRIAL_CLOSEOUT_2026-09-05.md) controls this scope; its retrospective case cutoff is September 5, 2026.
+
 **Start here:** the [controlled document index](docs/CONTROLLED_DOCUMENT_INDEX.md) distinguishes current authority, generated representations, and preserved historical records.
 
 **Maintainers:** use [MAINTAINERS.md](MAINTAINERS.md) before changing canon, generated publications, structured catalogs, validators, public-repository boundaries, or issue state.
@@ -58,7 +60,7 @@ The rendered organization package is reconciled through the September 5 Red Wash
 - **Internal Audit** — functionally independent to the Board Audit & Compliance Committee;
 - **professional practices** — horizontal standards/profession stewardship without dual operating authority.
 - **Pale Sun / Red Wash** — 12 business-layer FTE and 128 site FTE, with qualified external carriers authoritative throughout 2025;
-- **ARU / BS&T interface** — a separately gated candidate relationship with no automatic uranium custody.
+- **ARU / BS&T interface** — acquired January 7, 2026; limited ordinary-inbound service from July 7, with direct uranium custody still gated.
 
 [![Sable Harbor enterprise organization chart](docs/organization/assets/enterprise-organization-2026.svg)](docs/organization/README.md)
 
@@ -66,13 +68,9 @@ The organization renderer preserves unnamed roles as open and reproduces all nin
 
 ## Pale Sun and Red Wash
 
-The [Red Wash package index](red_wash/README.md) is the entry point for the selected public
-synthetic acquisition and 2026 operating case. It includes a deterministic source/CSV/SQLite
-package, byte-exact owner-approved visuals, and the deliberately limited
-[ARU/BS&T interface record](red_wash/logistics/ARU_BST_INTERFACE_AND_DEPENDENCY_RECORD.md).
-The bridge records no pre-existing relationship, no ARU/BS&T role in 2025 movements, no change
-to 2025 annual sales or revenue, an unbooked $15 million interface screen, and no automatic
-uranium custody. The complete ARU/BS&T transaction and operating case remains open.
+The [industrial case](industrial/README.md) contains Pale Sun's formation and leadership history, Red Wash and ARU transaction files, the BS&T network and operating registers, monthly financial books, capital/funding schedules and intercompany eliminations. The [participant guide](industrial/CASE_GUIDE.md) and [release index](docs/releases/INDUSTRIAL_CASE_RELEASES.md) identify the selected corpus and dated distribution.
+
+The [Red Wash package](red_wash/README.md) retains the standalone mine comparison and its historical sources. Current mine maps use the Sweetwater County anchor at 42.22° N, 108.18° W. The [interface record](red_wash/logistics/ARU_BST_INTERFACE_AND_DEPENDENCY_RECORD.md) selects $8.5 million of phase-one capital and a partial 2026 start-up. Qualified external carriers remain authoritative for 2025 movements and current uranium transport.
 
 ## Headquarters
 
@@ -86,7 +84,7 @@ Blackridge remains the upstream founding wound and a separate executable case un
 
 A prior `architecture/corporate-operating-model-v0.1` branch remains historical/noncontrolling. September 3 canon now establishes several **institutional design points** that supersede the old blanket statement that all headquarters/headcount architecture is open, including the 237-billet J2 establishment and the headquarters/ESS/People & Culture/Technology/authority model.
 
-Exact enterprise-wide 2026 total headcount, revenue, product P&Ls, detailed legal suffix/jurisdiction mechanics, and some named leadership details remain open unless separately controlled elsewhere. The selected standalone Red Wash case now controls its 140-FTE, physical, transaction, closure, and modeled economic inputs without silently changing the released enterprise finance-platform v0.1 perimeter.
+Exact enterprise-wide 2026 total headcount, revenue, product P&Ls, unrelated businesses’ legal mechanics, and some named leadership details remain open unless separately controlled elsewhere. The industrial successor locks its own legal identities and jurisdictions. The selected standalone Red Wash case now controls its 140-FTE, physical, transaction, closure, and modeled economic inputs without silently changing the released enterprise finance-platform v0.1 perimeter.
 
 ## Public repository and wiki
 

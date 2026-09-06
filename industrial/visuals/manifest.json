@@ -1,0 +1,57 @@
+{
+  "manifest_id": "SH-IND-MAPS-001",
+  "version": "1.0.0",
+  "cutoff": "2026-09-05T23:59:59-07:00",
+  "supersedes_current_use_of": [
+    "assets/brand/maps/red_wash__site_overview.png",
+    "assets/brand/maps/red_wash__underground_plan.png"
+  ],
+  "original_bytes_preserved_in_place": true,
+  "original_approval_manifest": "assets/brand/red_wash_visual_manifest.json",
+  "artifacts": [
+    {
+      "path": "industrial/visuals/bst_network.svg",
+      "sha256": "4022262902d42db1585419976867ff66a05a5767f563e4833daee8613261c2a9",
+      "bytes": 739433,
+      "generated_from": "industrial/generated/operations/maps/bst_network.svg",
+      "builder": "industrial/tools/build_operations.py",
+      "fact_state": "CURRENT_SYNTHETIC_SCREENING_MAP",
+      "coordinate_source": "industrial/source/geography/network.geojson",
+      "geographic_basis": "EPSG:4326 source; declared local metric display; mine coordinate reference NAD83 / UTM12N EPSG:26912",
+      "engineering_state": "SCHEMATIC_NOT_SURVEY_OR_APPROVAL"
+    },
+    {
+      "path": "industrial/visuals/red_wash_site.svg",
+      "sha256": "b76c4c23ef4fe76ee8896235e20f4050c90a33a67690a01466932b71f9065d78",
+      "bytes": 6199,
+      "generated_from": "industrial/generated/operations/maps/red_wash_site.svg",
+      "builder": "industrial/tools/build_operations.py",
+      "fact_state": "CURRENT_SYNTHETIC_SCREENING_MAP",
+      "coordinate_source": "industrial/source/geography/network.geojson",
+      "geographic_basis": "EPSG:4326 source; declared local metric display; mine coordinate reference NAD83 / UTM12N EPSG:26912",
+      "engineering_state": "SCHEMATIC_NOT_SURVEY_OR_APPROVAL"
+    },
+    {
+      "path": "industrial/visuals/red_wash_underground.svg",
+      "sha256": "b0476a694a48d922a02bd518d054abfa9109b5ae7eee891982c0dda59497eb8c",
+      "bytes": 6490,
+      "generated_from": "industrial/generated/operations/maps/red_wash_underground.svg",
+      "builder": "industrial/tools/build_operations.py",
+      "fact_state": "CURRENT_SYNTHETIC_SCREENING_MAP",
+      "coordinate_source": "industrial/source/geography/network.geojson",
+      "geographic_basis": "EPSG:4326 source; declared local metric display; mine coordinate reference NAD83 / UTM12N EPSG:26912",
+      "engineering_state": "SCHEMATIC_NOT_SURVEY_OR_APPROVAL"
+    },
+    {
+      "path": "industrial/visuals/bst_historical_routes.svg",
+      "sha256": "15d2775a744d9970e615434064c052d0da4f47ff7b143a47c3d3673dc25d5f5a",
+      "bytes": 5147,
+      "generated_from": "industrial/generated/operations/maps/bst_historical_routes.svg",
+      "builder": "industrial/tools/build_operations.py",
+      "fact_state": "HISTORICAL_ROUTE_RECONSTRUCTION",
+      "coordinate_source": "industrial/source/operations.json geography.historical_route_epochs",
+      "geographic_basis": "Early alignment unlocated and schematic; dated growth toward current network shown separately. No surveyed early route is claimed.",
+      "engineering_state": "HISTORICAL_SCHEMATIC_NOT_SURVEY"
+    }
+  ]
+}

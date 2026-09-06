@@ -1,16 +1,17 @@
 # Red Wash Transaction and Operating Casebook
 
-[![Approved Red Wash site overview](../assets/brand/maps/red_wash__site_overview.png)](../assets/brand/maps/red_wash__site_overview.png)
+[![Approved Red Wash site overview](../industrial/visuals/red_wash_site.svg)](../industrial/visuals/red_wash_site.svg)
 
-The owner-approved [Red Wash logo](../assets/brand/logos/red_wash__canonical.png),
-[Pale Sun logo](../assets/brand/logos/pale_sun__canonical.png),
-[site overview](../assets/brand/maps/red_wash__site_overview.png), and
-[underground plan](../assets/brand/maps/red_wash__underground_plan.png) are controlled
-byte-exact originals. The [visual manifest](../assets/brand/red_wash_visual_manifest.json)
-governs their paths and hashes.
+The original approved Red Wash and Pale Sun logos remain byte-identical. The current
+site and underground schematics use the corrected Sweetwater County geography;
+original Carbon County map PNGs remain superseded historical source artwork.
+
+The financial tables below preserve the standalone mine baseline. The integrated
+industrial successor separately reconciles interface costs, the full ARO rollforward,
+capital and financing; its adjustment bridge is part of the participant case.
 
 **Case ID:** `SH-PS-RW-TOR-001`
-**Version:** 1.0.0
+**Version:** 1.1.0
 **Synthetic calibration through:** 2026-08-31
 **Classification:** PUBLIC SYNTHETIC DIEGETIC
 
@@ -34,11 +35,11 @@ No preferred margin or return is imposed after the fact. The operating and finan
 
 ## 2. Asset identity
 
-Red Wash is a fictional underground uranium mine and compact conventional uranium mill in Wyoming. The selected synthetic site scenario places it in Carbon County at 42.3127° N, 106.9213° W and approximately 6,420 feet elevation, on approximately 7,480 acres with an approximately 620-acre disturbed operating footprint. Those site-specific values are scenario detail, not separately locked geographic canon.
+Red Wash is a fictional underground uranium mine and compact conventional uranium mill in Wyoming. The selected synthetic site scenario places it in Sweetwater County at 42.2200° N, 108.1800° W and approximately 6,885 feet elevation, on approximately 7,480 acres with an approximately 620-acre disturbed operating footprint. The county and anchor are selected canon; the approximate6,885-foot elevation is DEM screening evidence, while acreage and mine geometry remain synthetic engineering assumptions.
 
 The mine uses selective drift-and-fill mining with cemented paste backfill. Access is by decline. The current operating plan extends through five principal levels to an approximate maximum depth of 2,500 feet. Ore is trucked to surface, crushed, ground, acid leached, washed, purified, precipitated, dried and packed as U3O8 concentrate. Red Wash does not enrich uranium or fabricate nuclear fuel.
 
-Pale Sun is the Sable Harbor business line that owns the operating thesis. Red Wash operates through a dedicated legal operating company. Pale Sun is not itself a separate legal entity merely because it has a name.
+Pale Sun Inc. is a Delaware legal company and platform brand. Its Wyoming subsidiary Red Wash Mining, LLC operates the mine. Evan Vilander is Pale Sun President; Mari Varela holds Pale Sun COO and Red Wash CEO authority. Martin Shaw led the formal Red Wash transaction. The twelve platform roles and128 site roles total140FTE.
 
 ---
 
@@ -52,9 +53,9 @@ Frontier Basin assembled federal claims, state leases, surface-access rights and
 
 Carbon Basin acquired Frontier Basin in September 2007, expanded drilling, completed initial bottle-roll and column-leach tests and issued the first internal resource estimate in 2008. Falling uranium prices and the financing environment delayed construction. Carbon Basin nevertheless advanced the federal plan-of-operations, environmental and source-material licensing packages far enough to make the property acquirable rather than merely speculative.
 
-### Northstar Resources — 2010–2025
+### Northstar Minerals, Inc. — 2010–2025
 
-Northstar Resources is the provisional seller display name; its exact legal name, suffix, and jurisdiction remain open. In the selected synthetic history, Northstar acquired the project in December 2010, completed permitting, constructed the decline and a compact conventional mill, and shipped first concentrate in 2013. Production rose through 2016. Western-lens dilution, commodity weakness and deferred development then reduced performance. The mine entered limited care and maintenance in 2018, remained constrained through the pandemic, and underwent staged restart work in 2021–2023.
+Northstar Minerals, Inc. (NMI), a Wyoming corporation led by Henry Norwood, is the selected seller. In the selected synthetic history, Northstar acquired the project in December 2010, completed permitting, constructed the decline and a compact conventional mill, and shipped first concentrate in 2013. Production rose through 2016. Western-lens dilution, commodity weakness and deferred development then reduced performance. The mine entered limited care and maintenance in 2018, remained constrained through the pandemic, and underwent staged restart work in 2021–2023.
 
 Northstar's 2024 operating year looked materially stronger than the underlying system. Throughput and sales increased, but reported EBITDA benefited from liquidation of lower-cost legacy inventory, capitalization of work that did not create new asset capability, delayed environmental work and below-market affiliated services.
 
@@ -239,7 +240,7 @@ The walk-away is part of the value-creation record. Sable Harbor did not “win�
 
 ## 11. Purchase agreement and closing structure
 
-The transaction is a purchase of the Red Wash operating company from the seller using the provisional display name Northstar Resources. The exact seller and operator legal names, suffixes, and jurisdictions remain open. Principal economics:
+The transaction is a purchase of the Red Wash operating company from Northstar Minerals, Inc. (NMI). The seller is Northstar Minerals, Inc., a Wyoming corporation; the acquired operator is Red Wash Mining, LLC, a Wyoming limited liability company. Principal economics:
 
 | Item | Amount |
 |---|---:|
@@ -325,7 +326,7 @@ Product is moved by qualified external carriers under documented package, drum, 
 
 A fictional 2025 carrier consolidation, situated within a real soft but costly and uneven freight market, reduces qualified capacity allocated to the low-frequency Red Wash lane. A delivery window is rescheduled, creating a real operational warning without lost annual sales or a change to 2025 annual revenue.
 
-Red Wash first searches for another qualified carrier. The search broadens to rail-access mapping, where the question “Whose line is this?” surfaces American Resource Utility and Blood, Sweat & Tears Railway through operating analysis. They are not a turnkey answer: there is no direct mine connection, suitable secure transload, or demonstrated uranium-specific capability. The $15.0 million interface number is an unbooked preliminary screen. Limited service can begin only after applicable gates, no automatic uranium custody is authorized, and the complete ARU/BS&T case remains open.
+Red Wash first searches for another qualified carrier. The search broadens to rail-access mapping, where the question “Whose line is this?” surfaces American Resource Utility and Blood, Sweat & Tears Railway through operating analysis. The selected successor acquires ARU on January 7, 2026 and commissions a limited ordinary-inbound interface on July 7. Phase-one capital is $8.5 million: $3.25 million at the mine and $5.25 million at ARU. The old $15 million number remains a screening ceiling with $6.5 million unapproved. There is no direct mine connection or approved uranium custody. The complete ARU operating and transaction case is now supplied by the industrial successor.
 
 ---
 

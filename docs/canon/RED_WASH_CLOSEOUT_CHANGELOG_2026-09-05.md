@@ -1,5 +1,7 @@
 # Red Wash Closeout Changelog
 
+> **Preserved v1.0.0 closeout snapshot.** Current industrial legal/ownership/ARU state is controlled by [SH-IND-DR-001](INDUSTRIAL_CLOSEOUT_2026-09-05.md), and current mine/bridge changes by the [Red Wash R2 record](RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05_R2.md) and [R2 decisions](DECISION_REGISTER_ADDENDUM_2026-09-05_RED_WASH_R2.md). The OPEN/nonentity/provisional-name statements below describe the earlier closeout; they are not current industrial instructions. Existing finance v0.1 source locks and original historical package bytes remain preserved.
+
 **Document ID:** `SH-PS-RW-CHG-001`
 **Version:** 1.0.0
 **Date:** September 5, 2026

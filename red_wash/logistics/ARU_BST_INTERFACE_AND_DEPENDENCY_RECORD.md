@@ -1,197 +1,130 @@
-# ARU/BS&T Interface and Dependency Record
+# ARU/BS&T interface and dependency record
 
 **Document ID:** `SH-PS-RW-LOG-001`
-**Version:** 1.0.0
-**Effective:** September 5, 2026
-**State:** LOCKED boundary and sequence; OPEN implementation
-**Owner:** Pale Sun / Red Wash
-**Related:** `SH-PS-RW-TOR-001`; ARU/BS&T corporate-lore direction
-**Cross-reference:** `../../docs/structured/aru_bst_red_wash_bridge.json`; `../source/aru_bst_bridge.json`; `../source/external_source_register.csv`
+**Version:** 1.1.0
+**Classification:** `PUBLIC_SYNTHETIC_DIEGETIC`
+**Case available at:** 2026-09-05T23:59:59-07:00
+**Source:** `red_wash/source/aru_bst_bridge.json` and the industrial source registers
 
-## Purpose
+This successor retains the discovery evidence and implements the selected acquisition
+and ordinary industrial-input interface. The transportation dependency record ties
+service authority to the physical and financial model. Version 1.0 remains archived with its
+original open decisions. Corporate decisions, derived planning assumptions, synthetic
+operating evidence and actual external requirements are separate evidence states.
 
-This record explains why Red Wash caused Sable Harbor to investigate American Resource Utility
-(`ARU`) and its Blood, Sweat & Tears Railway (`BS&T`) operating component. It defines only the
-Red Wash interface and dependency problem. ARU's acquisition terms, network, customers, fleet,
-workforce, financial condition, and complete operating thesis remain outside this record.
+## Discovery and acquisition chronology
 
-The record is retrospective. It separates information available before Red Wash closed on July 18,
-2025 from later evidence and from synthetic Red Wash events. No later publication is presented as
-information available to the acquisition team at closing.
+Qualified external carriers handled every Red Wash movement in 2025. ARU and BS&T
+were not Northstar vendors or historical Red Wash carriers. The Q3 2025 fictional
+carrier consolidation and Q4 lane-allocation constraint expose a scheduling problem;
+all annual Red Wash sales and revenue are preserved. The carrier search broadens
+into operating geography and asks whose railway can support durable logistics.
 
-## 2025 external-carrier model
+ARU is surfaced in Q4 2025. Acquisition diligence, financing and negotiation occur
+before the January 7, 2026 close. The first 90 days after closing are confirmatory
+condition work and urgent stewardship, not a substitute for pre-close diligence.
+Fred Tolman leads the seller group and has no post-close operating authority.
+Northstar Minerals, Inc. and Henry Norwood belong to the separate Red Wash deal.
 
-Red Wash had no commercial relationship with ARU or BS&T before Sable Harbor began its logistics
-search. Qualified external carriers handled all Red Wash movements throughout 2025, including
-pre-close activity, closing transition, stabilization work, and uranium-product deliveries.
+American Resource Utility, Inc. remains independently viable as an acquired group.
+Blood, Sweat & Tears Railway Company is its wholly owned railway subsidiary. Both
+are Wyoming corporations; their regulatory and operating identities survive the
+stock acquisition. The industrial holding company is the corporate buyer.
 
-ARU was not a Northstar vendor, a historical Red Wash carrier, a source of prior revenue, or a
-preselected acquisition solution. Nothing in the later search changes the authority or accounting
-for a 2025 shipment.
+## Physical operating boundary
 
-## Contemporaneous freight environment
+Taylor is the fictional yard, shop and transload hub. Wamsutter supplies real-reference
+Union Pacific interchange context. The selected BS&T network is approximately
+40 total route-miles, comprising the main line and historic branches. It is not a
+40-mile mine spur. A modeled truck road completes the mine last mile. Geospatial
+sources identify real reference features separately from synthetic route vertices,
+structures, industrial access and facility boundaries.
 
-Information published by July 18, 2025 described a soft and uneven U.S. freight market rather than
-a universal shortage of trucks or rail capacity. The relevant pressure was the gap between broad
-aggregate availability and the smaller population of capacity usable for a particular lane,
-equipment type, security requirement, customer commitment, and schedule.
+The mine anchor is 42.2200 N, 108.1800 W in Sweetwater County. Its new geographic
+setting requires independent terrain, road, elevation and coordinate treatment;
+legacy Carbon County maps remain superseded originals. Approximately 6,885 feet is
+a sampled screening elevation, not a survey or construction design.
 
-The acquisition team could have known that:
+Taylor has two ten-car general transload tracks, a six-car liquid track, hardstand,
+warehouse interface, transfer controls and truck staging. Red Wash has receiving,
+acid and binder inventory, laydown, scales and custody systems. The site has no mine
+rail spur. Ordinary-input commissioning does not qualify uranium-product custody.
 
-- the American Transportation Research Institute reported average 2024 motor-carrier cost of
-  $2.260 per mile, nonfuel cost of $1.779 per mile, rising equipment payments, and negative average
-  truckload operating margin in its July 1, 2025 report;
-- commercial-auto and umbrella premiums continued to rise in the Council of Insurance Agents &
-  Brokers' May 15, 2025 survey;
-- the Federal Reserve retained a 4.25%–4.50% federal-funds target on June 18 and described economic
-  uncertainty as elevated;
-- EIA recorded Rocky Mountain on-highway diesel at $3.713 per gallon for the week of July 14;
-- BLS reported year-over-year increases for heavy-truck and trailer producer-price indexes on
-  July 16;
-- the Federal Reserve's July 16 Beige Book described weak or sluggish trucking demand in several
-  districts alongside tariff and insurance pressure; and
-- carrier and market-provider releases described uneven modal volumes, rate pressure, and active
-  capacity management.
+## Demand, storage and service
 
-Those sources support a market-pressure mechanism. They do not prove insolvency, a forced sale,
-insurance denial, or route-specific scarcity for any named carrier. The detailed source register
-records publication dates, covered periods, geography, method, transformation, and limitations.
+The annual planning allowance is 225 inbound car equivalents: 205 base commodity
+cars, ten project cars and ten conditional buffer cars. The 300-car figure is design
+capacity. Neither buffer nor unused capacity creates an invoice or a volume promise.
+The commodity register separates acid, binder, lime, steel, MRO and projects; aggregate
+is locally sourced and fuel begins truck-delivered. Product concentrate is excluded.
 
-Later 2025 sources concerning credit conditions, trucking tuck-in acquisitions, proposed rail
-consolidation, and aggregate rail traffic are retained only as retrospective corroboration. They do
-not appear as knowledge available on July 18.
+The operating model translates payload and commodity consumption into tonnage,
+truck trips, usable storage, replenishment batches and the 10–14-day critical-stock
+requirement. Capacity and buffer assumptions are explicitly synthetic engineering
+inputs. They are not manufacturer certificates or evidence of licensed operation.
 
-## Synthetic market-concentration event
+Tuesday and Friday are scheduled handling windows, within the five-day railway
+service. Dispatch exception moves protect the elapsed-hour SLA for off-window
+arrivals; a 96-hour Friday-to-Tuesday gap cannot be disguised as 72 business hours.
+The ordinary-input default is 72 hours from interchange receipt to empty release,
+with a 36–48-hour operating goal and a 96-hour steel maximum. The calendar model
+measures arrivals, handling, release and exception costs. Acid/binder service targets
+95% on time. Cause-based demurrage and each custodian's timestamp remain explicit.
 
-Against that real backdrop, a fictional combination among qualified regional transport providers
-during 2025 reduced the number of providers willing and able to serve the low-frequency Red Wash
-uranium lane. The surviving carrier allocated less scheduling capacity to the lane during the
-fourth quarter.
+Selected limited ordinary-input service starts July 7, 2026. A partial startup year
+is not a full normalized year. September–December plans remain forecasts as of the
+September 5 cutoff; future maturity review and expansion are not completed events.
 
-This was a transportation-market and counterparty-concentration event. It was not caused by a mine
-failure, fraudulent shipment, accident, regulatory shutdown, or Red Wash operating incompetence.
-The company-specific combination, notice, allocation, and schedule exception are synthetic company
-records.
+## Capital ownership and cash
 
-## Capacity notice and delivery effect
+| Component | Selected amount | Treatment |
+|---|---:|---|
+| Red Wash receiving and storage | $3,250,000 | Mine-owned Phase 1 assets |
+| Reusable Taylor infrastructure | $5,250,000 | ARU-owned multi-customer Phase 1 assets |
+| Approved Phase 1 total | $8,500,000 | Funded and timed once in the industrial ledger |
+| Unapproved expansion residual | $6,500,000 | Future gate, not expenditure |
+| Interface maximum ceiling | $15,000,000 | Ceiling, not an additional ledger line |
 
-The reduced allocation displaced a planned delivery window and created a credible risk of missing
-the contractual period. Red Wash, the qualified carrier, and the customer-facing contract team
-found another qualified slot within the 2025 annual delivery period.
+The $11 million ARU catch-up program and $3.3 million annual sustaining capital are
+separate from this interface. The original mine's $4 million sustaining and $5 million
+rehabilitation budgets do not conceal its new $3.25 million interface investment.
+The successor funding schedule distinguishes operating cash, parent equity, debt,
+fees, capital and working capital. Equity contributions are financing, never revenue.
 
-The event therefore had:
+## Commercial and custody controls
 
-- no lost 2025 annual sales;
-- no change to locked 2025 annual revenue;
-- no retroactive ARU revenue or cost;
-- no transfer of uranium custody to an unqualified party; and
-- a material strategic lesson about dependency despite an immaterial annual financial result.
+The five-year agreement uses separately identified railway, terminal and trucking
+charges, annual indexing/review and cost-to-serve support. The final selected rate
+card follows the model's costs and benchmark limitations; the earlier $875,000 revenue
+and $365,000 incremental EBITDA figures are comparison anchors, not required plugs.
+External Class I linehaul is distinguished from ARU revenue. No service price is
+represented as an actual tariff quote or third-party bid.
 
-The preserved schedule exception is not labeled a financial loss merely because the operating
-risk was consequential.
+There is no minimum-volume guarantee, hidden operating subsidy, automatic preference
+or prohibition on outside carriers. Red Wash and ARU keep separate P&Ls; invoices,
+receivables/payables and intercompany expense/revenue eliminate at the industrial
+consolidation boundary. Capital allocation remains visible rather than being hidden
+inside railway pricing. Customer return and multi-customer investment justify the
+Taylor asset case; Red Wash does not retrospectively justify the entire acquisition.
 
-## Search progression
+Direct uranium custody remains OPEN_GATED. The gate register assigns material,
+packaging, route, custody, training, emergency-response, insurance, commercial and
+customer requirements to their actual responsible parties. A blanket invented NRC
+carrier license is not a substitute for that role analysis. Qualified external
+carriers remain permanently permissible. Government permits, license replicas and
+regulatory approvals are not fabricated by this record.
 
-Red Wash first sought a replacement or additional qualified carrier. The market scan showed that
-the relevant carrier population was itself concentrated and that qualification, insurance,
-security, route fit, and commitment economics restricted practical choices.
+## Current evidence navigation
 
-The team then broadened the question from “which carrier can cover this window?” to “what durable
-transportation interfaces could reduce dependency?” Physical and interchange mapping surfaced a
-nearby rail line and the operating question: **Whose line is this?** The answer led to ARU and BS&T.
+- [Operating source](../../industrial/source/operations.json): capacities, facilities,
+  equipment, represented crafts, safety history, rates and the modeled SLA calendar.
+- [Finance source](../../industrial/source/finance.json): acquisition and operating
+  schedules, capital timing, invoice elimination and funding.
+- [Corporate sources](../../industrial/source/entities.json): ownership and authority.
+- [Industrial case](../../industrial/CASE_GUIDE.md): controlled documents, generated
+  evidence, maps, build instructions and participant-edition manifest.
 
-ARU was found through operating analysis. It was not presented by an investment banker as a
-turnkey Red Wash acquisition.
-
-Red Wash was the central catalyst for the search, but it was not by itself the complete ARU thesis.
-The later full case must determine whether ARU can stand as an independent logistics business and
-serve customers and resource flows beyond Red Wash.
-
-## Initial fit gaps
-
-ARU/BS&T was not an immediately usable uranium-transport solution. Three deficiencies control the
-interface screen:
-
-1. the line was close enough to investigate, but there was no direct mine connection;
-2. there was no suitable secure Red Wash transload/interface terminal; and
-3. ARU/BS&T had not demonstrated the uranium-specific authority, custody, security, training,
-   insurance, equipment, emergency-response, route, interchange, and operating capability needed
-   for direct service.
-
-“Near” is a screening conclusion, not a locked route-mile fact. The exact line, distance,
-interchanges, terminal site, asset condition, and service design remain open.
-
-## Preliminary interface screen
-
-The Red Wash interface uses a **$15.0 million preliminary planning envelope**. It is a scenario
-input for screening only. It is not:
-
-- the ARU purchase price;
-- approved or booked Red Wash capital;
-- a commitment to construct a direct branch line;
-- a final engineering estimate; or
-- proof that the interface can be completed for exactly $15.0 million.
-
-Potential scope includes a secure truck/rail interface, terminal or site work, custody and
-chain-of-record systems, compliance, training, security, insurance, dispatch integration,
-equipment modifications, engineering, permitting, contingency, and commissioning. Component
-amounts remain open until later diligence supplies a defensible basis.
-
-## Gate sequence
-
-The planning sequence is relative to the separately controlled ARU acquisition date, which this
-Red Wash interface record does not establish:
-
-| Period after acquisition | Work and gate |
-|---|---|
-| 0–90 days | Physical mapping; route/interchange and condition assessment; legal, regulatory, and insurance review; service design; commercial and custody architecture |
-| Approximately months 3–6 | Engineering; approvals; contracting; procurement; training; and early implementation |
-| Approximately month 6 onward | Limited service only if every applicable operating and custody gate has passed |
-| Approximately months 12–18 | Mature-integration review; a mixed external-carrier, truck, transload, and rail model remains permissible |
-
-The schedule is a planning envelope, not an instant-integration promise.
-
-## Custody and authority
-
-Qualified external carriers remain authoritative unless and until a later controlled decision is
-supported by proof of:
-
-- regulatory authority and carrier/shipper roles;
-- packaging interfaces and equipment suitability;
-- employee radiation and hazardous-material qualification;
-- emergency-response capability;
-- insurance and security;
-- chain-of-custody design and tested records;
-- approved route and interchange arrangements; and
-- contract and customer acceptance.
-
-ARU or BS&T may support mapping, scheduling analysis, or interface design without taking physical
-custody. An ARU/Pale Sun timestamp mismatch can concern coordination records while the external
-carrier retains transport authority. It must not be rewritten into proof that ARU carried uranium.
-
-## Financial treatment
-
-The 2025 capacity event changes no Red Wash annual sales or revenue. The $15 million screen is not
-booked capex, a liability, or a commitment. This record creates no ARU purchase accounting,
-intercompany revenue, freight transfer, final service rate, or committed Red Wash volume.
-
-Any later accounting begins only after an authorized event, identified legal entity, approved
-capital, and traceable source record exist.
-
-## Open items reserved for the full ARU case
-
-The following remain `OPEN`: acquisition date, seller, price, financing, enterprise value, debt,
-jurisdiction, tax elections, route miles, railroad class, route map, interchanges, customers,
-commodity mix, terminal locations, fleet, track and bridge condition, workforce, labor agreements,
-accident history, maintenance backlog, financial statements, management team, service rates,
-intercompany pricing, committed Red Wash volume, and final uranium-custody role.
-
-## Evidence register
-
-The controlled machine source is `red_wash/source/aru_bst_bridge.json`. Its generated tables record
-the capacity events, shipment exception, carrier scan, rail candidate, fit gaps, gate sequence,
-preliminary capex screen, and custody-authority matrix. External sources and limitations are in
-`red_wash/source/external_source_register.csv`.
-
-The real sources constrain the synthetic event. They do not convert it into an actual external
-carrier transaction or complete the ARU case.
+Only direct uranium custody, a future mine spur and expansion commissioning dates
+remain future operating decisions in this bridge. Historical discovery gaps remain
+visible with their original timing; they do not reopen implemented ordinary-input
+facilities or the acquired company's selected financial baseline.

@@ -1,0 +1,210 @@
+{
+  "manifest_id": "SH-BRAND-INDUSTRIAL-001",
+  "version": "1.0.0",
+  "effective_at": "2026-09-05",
+  "reconciliation": "Visual inspection confirms earlier geometric ARU and BS&T system marks differ from the supplied masters. Selected primary publications use exact supplied ARU centered and BS&T railway images. Alternate ARU, brand-board text and Bulk Storage & Transport candidate remain references, not new names or slogans. Pale Sun and Red Wash logos retain original bytes.",
+  "original_manifest_preserved": "assets/brand/red_wash_visual_manifest.json",
+  "current_maps": "industrial/visuals/manifest.json",
+  "artifacts": [
+    {
+      "path": "assets/brand/industrial_sources/aru/aru_primary_centered_chat_asset.png",
+      "sha256": "5892792a95e7fbc2a16171fea38b96d2aee5becf0603b68687f0d48e1bd9fc46",
+      "bytes": 1071679,
+      "current_use": "CURRENT_APPROVED_SOURCE",
+      "original_approval": "CHAT_SUPPLIED_APPROVED_CONCEPT",
+      "notes": "Preserve exact bytes in the implementation package. Reconcile against any existing repository ARU mark before declaring one canonical. Do not silently redraw."
+    },
+    {
+      "path": "assets/brand/industrial_sources/aru/aru_brand_board_chat_asset.png",
+      "sha256": "05204f15c6a86c10de70c3dfc17996326063a06c0d382147d90ce12834b85888",
+      "bytes": 1923281,
+      "current_use": "REFERENCE_ONLY_NOT_A_PRIMARY_IDENTITY",
+      "original_approval": "CHAT_SUPPLIED_APPROVED_CONCEPT",
+      "notes": "Preserve exact bytes. Text visible in the board, including \u201cPeople Purpose Progress\u201d and \u201cStronger Together,\u201d is embedded concept-board content and is not separately locked as corporate canon unless the repository already establishes it."
+    },
+    {
+      "path": "assets/brand/industrial_sources/aru/aru_alternate_chat_asset.png",
+      "sha256": "0bc5f917298db93bf48b3052f65e40a88e978ea8e2f01b7d99042ed1c28fa839",
+      "bytes": 874990,
+      "current_use": "REFERENCE_ONLY_NOT_A_PRIMARY_IDENTITY",
+      "original_approval": "REFERENCE_VARIANT_NOT_AUTOMATICALLY_CANONICAL",
+      "notes": "Retain for provenance and comparison. Do not replace the approved concept with this variant without an explicit reconciliation record."
+    },
+    {
+      "path": "assets/brand/industrial_sources/bst/bst_railway_primary_chat_asset.png",
+      "sha256": "9af275b2f65ff5a82bca760609ab166ecd055c7a266d171bbf558b05c7e37a05",
+      "bytes": 839885,
+      "current_use": "CURRENT_APPROVED_SOURCE",
+      "original_approval": "CHAT_SUPPLIED_APPROVED_CONCEPT",
+      "notes": "Preserve exact bytes and reconcile with the existing repository BS&T mark. Do not silently redraw or rename the railway."
+    },
+    {
+      "path": "assets/brand/industrial_sources/bst/bst_bulk_storage_transport_candidate.png",
+      "sha256": "60c642acb956ae908aafa3abea9ad21705ca0cd95258232926fbca2894eb4e92",
+      "bytes": 808700,
+      "current_use": "REFERENCE_ONLY_NOT_A_PRIMARY_IDENTITY",
+      "original_approval": "REFERENCE_CANDIDATE_REQUIRES_RECONCILIATION",
+      "notes": "This wording is not the locked legal name of the railway. Preserve as reference only unless Codex can place it as a separate ARU service brand without colliding with Blood, Sweat & Tears Railway Company."
+    },
+    {
+      "path": "assets/brand/logos/pale_sun__canonical.png",
+      "sha256": "eedcabfca73460e8ff5ad72864c9f669ba2375097b05daa2912f30c9ff35c025",
+      "bytes": 837461,
+      "current_use": "CURRENT_APPROVED_SOURCE",
+      "original_approval": "LOCKED",
+      "notes": "Unchanged approved master; no slogan added."
+    },
+    {
+      "path": "assets/brand/logos/red_wash__canonical.png",
+      "sha256": "7c26b8afd7954045d9dd4b5c691ba820cdce2e3ccb8e41ac6873b103f0c59720",
+      "bytes": 738834,
+      "current_use": "CURRENT_APPROVED_SOURCE",
+      "original_approval": "LOCKED",
+      "notes": "Unchanged approved master; no slogan added."
+    },
+    {
+      "path": "assets/brand/maps/red_wash__underground_plan.png",
+      "sha256": "0658de3b7c63ecc9757b545f29895eab51801b2148cb3862935620b6049a7dda",
+      "bytes": 2401412,
+      "current_use": "SUPERSEDED_HISTORICAL_GEOGRAPHY",
+      "original_approval": "LOCKED",
+      "notes": "Original bytes preserved; original approval does not make superseded coordinates current."
+    },
+    {
+      "path": "assets/brand/maps/red_wash__site_overview.png",
+      "sha256": "8dbb0053c4a563d57d5a24be4f4687dc11e2e00e2b1e62c279d9be945f68d77a",
+      "bytes": 3230867,
+      "current_use": "SUPERSEDED_HISTORICAL_GEOGRAPHY",
+      "original_approval": "LOCKED",
+      "notes": "Original bytes preserved; original approval does not make superseded coordinates current."
+    },
+    {
+      "path": "assets/brand/logos/american-resource-utility__mark.png",
+      "sha256": "42259432b716cddf2b50190e02016206ccd00c82d5d552c9e0be3946ad2b2fae",
+      "bytes": 21389,
+      "current_use": "HISTORICAL_SYSTEM_DERIVATIVE",
+      "original_approval": "PREEXISTING_REPOSITORY_VARIANT",
+      "notes": "Earlier geometric system artwork is distinct from the supplied approved source; preserved without redrawing. Current industrial publications use the approved source above."
+    },
+    {
+      "path": "assets/brand/logos/american-resource-utility__mark.svg",
+      "sha256": "71ffb81d87876bc8bb011a748db60086d1d63c8c5bb0ae4d997768caa3f39f92",
+      "bytes": 912,
+      "current_use": "HISTORICAL_SYSTEM_DERIVATIVE",
+      "original_approval": "PREEXISTING_REPOSITORY_VARIANT",
+      "notes": "Earlier geometric system artwork is distinct from the supplied approved source; preserved without redrawing. Current industrial publications use the approved source above."
+    },
+    {
+      "path": "assets/brand/logos/american-resource-utility__one-color-horizontal.png",
+      "sha256": "14aadafb59b27bfc5e5571bc4e5a00b304d06276004d96f31d1652b3d2523ea5",
+      "bytes": 50730,
+      "current_use": "HISTORICAL_SYSTEM_DERIVATIVE",
+      "original_approval": "PREEXISTING_REPOSITORY_VARIANT",
+      "notes": "Earlier geometric system artwork is distinct from the supplied approved source; preserved without redrawing. Current industrial publications use the approved source above."
+    },
+    {
+      "path": "assets/brand/logos/american-resource-utility__one-color-horizontal.svg",
+      "sha256": "7ffb32c6b6d55cae45350532bd8e066908c5753bbb4a787a7983ad142e32c0c2",
+      "bytes": 11740,
+      "current_use": "HISTORICAL_SYSTEM_DERIVATIVE",
+      "original_approval": "PREEXISTING_REPOSITORY_VARIANT",
+      "notes": "Earlier geometric system artwork is distinct from the supplied approved source; preserved without redrawing. Current industrial publications use the approved source above."
+    },
+    {
+      "path": "assets/brand/logos/american-resource-utility__primary-horizontal.png",
+      "sha256": "97968ac835bc2a79f39a7717398a328d9a1b71c0301a2a3a4ffba507a34e21b8",
+      "bytes": 50919,
+      "current_use": "HISTORICAL_SYSTEM_DERIVATIVE",
+      "original_approval": "PREEXISTING_REPOSITORY_VARIANT",
+      "notes": "Earlier geometric system artwork is distinct from the supplied approved source; preserved without redrawing. Current industrial publications use the approved source above."
+    },
+    {
+      "path": "assets/brand/logos/american-resource-utility__primary-horizontal.svg",
+      "sha256": "9a54ce922352c3b3171d82557d2be28cbfebc891efe941a0ecd5e76eb1a0cada",
+      "bytes": 11736,
+      "current_use": "HISTORICAL_SYSTEM_DERIVATIVE",
+      "original_approval": "PREEXISTING_REPOSITORY_VARIANT",
+      "notes": "Earlier geometric system artwork is distinct from the supplied approved source; preserved without redrawing. Current industrial publications use the approved source above."
+    },
+    {
+      "path": "assets/brand/logos/american-resource-utility__reverse-horizontal.png",
+      "sha256": "560fea618c33a6eb3d39b983be68254b48f13e4952cba6284c616a8316310d3e",
+      "bytes": 51319,
+      "current_use": "HISTORICAL_SYSTEM_DERIVATIVE",
+      "original_approval": "PREEXISTING_REPOSITORY_VARIANT",
+      "notes": "Earlier geometric system artwork is distinct from the supplied approved source; preserved without redrawing. Current industrial publications use the approved source above."
+    },
+    {
+      "path": "assets/brand/logos/american-resource-utility__reverse-horizontal.svg",
+      "sha256": "e1e155433aea31bd06ad2cefd057118f0563680eda11195fb69a25371a3c632e",
+      "bytes": 11796,
+      "current_use": "HISTORICAL_SYSTEM_DERIVATIVE",
+      "original_approval": "PREEXISTING_REPOSITORY_VARIANT",
+      "notes": "Earlier geometric system artwork is distinct from the supplied approved source; preserved without redrawing. Current industrial publications use the approved source above."
+    },
+    {
+      "path": "assets/brand/logos/american-resource-utility__stacked.png",
+      "sha256": "5992203e0280dca708f72457d4b43b260c5ec2005ff6904c056a818fa11bbafa",
+      "bytes": 53848,
+      "current_use": "HISTORICAL_SYSTEM_DERIVATIVE",
+      "original_approval": "PREEXISTING_REPOSITORY_VARIANT",
+      "notes": "Earlier geometric system artwork is distinct from the supplied approved source; preserved without redrawing. Current industrial publications use the approved source above."
+    },
+    {
+      "path": "assets/brand/logos/american-resource-utility__stacked.svg",
+      "sha256": "4e3a06db1d8e1729fa8f7e5bdd4ee1577587d1e4556c6cd4405ae3c22318ebd5",
+      "bytes": 11701,
+      "current_use": "HISTORICAL_SYSTEM_DERIVATIVE",
+      "original_approval": "PREEXISTING_REPOSITORY_VARIANT",
+      "notes": "Earlier geometric system artwork is distinct from the supplied approved source; preserved without redrawing. Current industrial publications use the approved source above."
+    },
+    {
+      "path": "assets/brand/logos/blood-sweat-and-tears-railway__mark.png",
+      "sha256": "1451b45e36d1dcc560f1e95560be213a240655258f4ddf943d2e3b535fe1675f",
+      "bytes": 30694,
+      "current_use": "HISTORICAL_SYSTEM_DERIVATIVE",
+      "original_approval": "PREEXISTING_REPOSITORY_VARIANT",
+      "notes": "Earlier geometric system artwork is distinct from the supplied approved source; preserved without redrawing. Current industrial publications use the approved source above."
+    },
+    {
+      "path": "assets/brand/logos/blood-sweat-and-tears-railway__mark.svg",
+      "sha256": "4202676cd94e8f9e12519105d9b73b1ba968ca23bedd196cfbeb92e4d2cb024a",
+      "bytes": 970,
+      "current_use": "HISTORICAL_SYSTEM_DERIVATIVE",
+      "original_approval": "PREEXISTING_REPOSITORY_VARIANT",
+      "notes": "Earlier geometric system artwork is distinct from the supplied approved source; preserved without redrawing. Current industrial publications use the approved source above."
+    },
+    {
+      "path": "assets/brand/logos/blood-sweat-and-tears-railway__primary-horizontal.png",
+      "sha256": "ecf75550eb4884d0fa09376f3d3188c448ef08565723a99de9166889e7d7b899",
+      "bytes": 77400,
+      "current_use": "HISTORICAL_SYSTEM_DERIVATIVE",
+      "original_approval": "PREEXISTING_REPOSITORY_VARIANT",
+      "notes": "Earlier geometric system artwork is distinct from the supplied approved source; preserved without redrawing. Current industrial publications use the approved source above."
+    },
+    {
+      "path": "assets/brand/logos/blood-sweat-and-tears-railway__primary-horizontal.svg",
+      "sha256": "ef0f20919c4ec07773a56ce01a9b1bb52c94562ed439bcfa08f6cebf51d2eeea",
+      "bytes": 16228,
+      "current_use": "HISTORICAL_SYSTEM_DERIVATIVE",
+      "original_approval": "PREEXISTING_REPOSITORY_VARIANT",
+      "notes": "Earlier geometric system artwork is distinct from the supplied approved source; preserved without redrawing. Current industrial publications use the approved source above."
+    },
+    {
+      "path": "assets/brand/logos/blood-sweat-and-tears-railway__reverse-horizontal.png",
+      "sha256": "174bbee045f8ab1ba095d904b7f66765fae8cf6f6ae25ece1e86680ad3c3b5dd",
+      "bytes": 75941,
+      "current_use": "HISTORICAL_SYSTEM_DERIVATIVE",
+      "original_approval": "PREEXISTING_REPOSITORY_VARIANT",
+      "notes": "Earlier geometric system artwork is distinct from the supplied approved source; preserved without redrawing. Current industrial publications use the approved source above."
+    },
+    {
+      "path": "assets/brand/logos/blood-sweat-and-tears-railway__reverse-horizontal.svg",
+      "sha256": "45c15fc61ec94127b5f07c908bdf07d5d6e3957f1f5b36b89c3349da7e61af81",
+      "bytes": 16288,
+      "current_use": "HISTORICAL_SYSTEM_DERIVATIVE",
+      "original_approval": "PREEXISTING_REPOSITORY_VARIANT",
+      "notes": "Earlier geometric system artwork is distinct from the supplied approved source; preserved without redrawing. Current industrial publications use the approved source above."
+    }
+  ]
+}

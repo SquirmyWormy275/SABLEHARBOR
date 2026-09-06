@@ -1,5 +1,7 @@
 # Sable Harbor finance platform
 
+The current selected industrial successor is the [Pale Sun / Red Wash / ARU / BS&T case](../../industrial/README.md), with its [finance bridge](INDUSTRIAL_FINANCE_BRIDGE_v1.0.md). The platform described below remains the reproducible enterprise v0.1 snapshot; industrial legal names and current operating assumptions are controlled by that successor.
+
 The platform is a Python/SQLAlchemy financial-data foundation with SQLite local execution and
 PostgreSQL migrations/CI. It currently implements deterministic identities, explicit canon/model
 states, balanced immutable journals, reversals, period close, trial balance, causal transaction

@@ -1,8 +1,10 @@
 # Canon collision register
 
-This register resolves inherited statements against current v0.3 canon and the September 3 and
-September 5 addenda, with the September 6 COL-013 resolution below, without erasing the August 31 v0.2 knowledge snapshot. Machine-readable detail is in
-`canon_collision_register.json`.
+This register preserves the finance v0.1 collision snapshot against v0.3 and the September 3/5 addenda, with the separately dated September 6 COL-013 editorial resolution below. Its historical row descriptions and structured `canon_collision_register.json` companion remain the released finance baseline.
+
+**Current industrial successor:** [SH-IND-DR-001](../canon/INDUSTRIAL_CLOSEOUT_2026-09-05.md), [legal structure R2](../organization/LEGAL_AND_REPORTING_STRUCTURE_STATUS_R2.md), and [current entity register](../../industrial/source/entities.json) supersede COL-003/004/007 only for the explicitly resolved industrial scope. Pale Sun Inc. is a legal company; NMI/RWH legal identities are resolved; the full ARU acquisition and selected operating/financial case now exist. The [Red Wash R2 record](../canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05_R2.md) controls current mine interpretation. Remaining uranium-custody gates and unrelated enterprise uncertainty persist. Neither this pointer nor the successor rewrites the pinned old source lock, finance release bytes or September 6 editorial timing.
+
+## Preserved collision snapshot
 
 | ID | Topic | Older statement | Newer controlling statement | State | Financial/database effect |
 |---|---|---|---|---|---|

@@ -1,21 +1,25 @@
 {
-  "schemaVersion": "0.3.0",
-  "registerVersion": "0.3.0",
+  "schemaVersion": "0.4.0",
+  "registerVersion": "0.4.0",
   "canonicalDate": "2026-08-31",
   "canonReviewedThrough": "2026-09-05",
   "status": "canon-derived-rendered-chart-package",
+  "industrialEffectiveDate": "2026-09-05",
+  "historicalArchive": "docs/organization/history/v0.3.0/manifest.json",
   "controllingSources": [
+    "docs/canon/INDUSTRIAL_CLOSEOUT_2026-09-05.md",
+    "industrial/source/entities.json",
     "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md",
     "docs/canon/DECISION_REGISTER.md",
     "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-03.md",
-    "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-05_RED_WASH.md",
-    "docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05.md",
+    "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-05_RED_WASH_R2.md",
+    "docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05_R2.md",
     "red_wash/logistics/ARU_BST_INTERFACE_AND_DEPENDENCY_RECORD.md"
   ],
   "prohibitedInferences": [
     "unstated direct-report relationship",
-    "final executive title",
-    "final legal-entity structure",
+    "unstated executive title",
+    "unstated legal-entity structure",
     "unstated headcount",
     "unstated ownership percentage",
     "OPEN detail presented as settled",
@@ -24,7 +28,7 @@
   ],
   "redWashBridgeDecisionSource": {
     "recordId": "SH-PS-RW-DR-001",
-    "path": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-05_RED_WASH.md",
+    "path": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-05_RED_WASH_R2.md",
     "decisionIds": [
       "RW-017",
       "RW-018",
@@ -44,7 +48,7 @@
       "page": "docs/organization/2026_OPERATING_TOPOLOGY.md",
       "asset": "docs/organization/assets/enterprise-organization-2026.svg",
       "purpose": "August 31 functional operating-line baseline; later headquarters institutions remain controlled by the September 3 closeout.",
-      "canonicalDate": "2026-08-31",
+      "canonicalDate": "2026-09-05",
       "canonReviewedThrough": "2026-09-05",
       "relationshipSemantics": "functional authority and canon-locked operating relationships; not implicit HR reporting"
     },
@@ -54,7 +58,7 @@
       "page": "docs/organization/2026_LEADERSHIP_AND_AUTHORITY_MAP.md",
       "asset": "docs/organization/assets/leadership-authority-2026.svg",
       "purpose": "Named leadership and domain-authority map. Edges and placement do not create direct-report relationships.",
-      "canonicalDate": "2026-08-31",
+      "canonicalDate": "2026-09-05",
       "canonReviewedThrough": "2026-09-05",
       "relationshipSemantics": "functional authority and canon-locked operating relationships; not implicit HR reporting"
     },
@@ -94,7 +98,7 @@
       "page": "docs/organization/PALE_SUN_RED_WASH_ORGANIZATION.md",
       "asset": "docs/organization/assets/pale-sun-red-wash-organization-2026.svg",
       "purpose": "Operating-business and mine-authority organization, approved 140-FTE case split, and qualified interfaces.",
-      "canonicalDate": "2026-08-31",
+      "canonicalDate": "2026-09-05",
       "canonReviewedThrough": "2026-09-05",
       "relationshipSemantics": "functional authority and canon-locked operating relationships; not implicit HR reporting"
     },
@@ -113,8 +117,8 @@
       "title": "ARU / BS&T \u2014 ORGANIZATION",
       "page": "docs/organization/ARU_BST_ORGANIZATION.md",
       "asset": "docs/organization/assets/aru-bst-organization-2026.svg",
-      "purpose": "Distinct acquired operator, known railway component, open operating structure, and limited Red Wash interface boundary.",
-      "canonicalDate": "2026-08-31",
+      "purpose": "Distinct acquired operator, named retained leadership, 131-FTE case and gated Red Wash interface.",
+      "canonicalDate": "2026-09-05",
       "canonReviewedThrough": "2026-09-05",
       "relationshipSemantics": "functional authority and canon-locked operating relationships; not implicit HR reporting"
     },

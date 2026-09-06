@@ -341,18 +341,18 @@ def validate(generate: bool = False) -> dict[str, object]:
     check(len(collars) == 240, "240 drill collars")
     check(
         all(
-            row["coordinate_crs"] == "NAD83 / UTM zone 13N"
-            and row["epsg_code"] == "26913"
-            and row["utm_zone"] == "13N"
+            row["coordinate_crs"] == "NAD83 / UTM zone 12N"
+            and row["epsg_code"] == "26912"
+            and row["utm_zone"] == "12N"
             and row["horizontal_datum"] == "NAD83"
             for row in collars
         ),
-        "drill coordinates declare NAD83 / UTM zone 13N (EPSG:26913)",
+        "drill coordinates declare NAD83 / UTM zone 12N (EPSG:26912)",
     )
     check(
         all(
-            Decimal("339560") <= Decimal(row["easting_m"]) <= Decimal("343760")
-            and Decimal("4684780") <= Decimal(row["northing_m"]) <= Decimal("4687780")
+            Decimal("730648.78") <= Decimal(row["easting_m"]) <= Decimal("734848.79")
+            and Decimal("4676553.61") <= Decimal(row["northing_m"]) <= Decimal("4679553.62")
             for row in collars
         ),
         "drill coordinates remain in the projected Red Wash site envelope",
@@ -450,25 +450,18 @@ def validate(generate: bool = False) -> dict[str, object]:
     )
 
     ownership_by_display = {row["owner_display_name"]: row for row in ownership}
-    northstar = ownership_by_display.get("Northstar Resources", {})
+    northstar = ownership_by_display.get("Northstar Minerals, Inc.", {})
     current_owner = next((row for row in ownership if row["end_date"] == ""), {})
-    check(
-        northstar.get("owner_display_name_state") == "PROVISIONAL"
-        and northstar.get("owner_legal_name") == ""
-        and northstar.get("owner_legal_name_state") == "OPEN"
-        and northstar.get("fact_state") == "PROVISIONAL_CANON"
-        and northstar.get("epistemic_state") == "PROVISIONAL_ASSUMPTION",
-        "Northstar display identity remains PROVISIONAL and legal identity OPEN",
-    )
-    check(
-        current_owner.get("owner_display_name") == "Sable Harbor"
-        and current_owner.get("owner_display_name_state") == "LOCKED"
-        and current_owner.get("owner_legal_name") == ""
-        and current_owner.get("owner_legal_name_state") == "OPEN"
-        and current_owner.get("fact_state") == "LOCKED_CANON"
-        and current_owner.get("epistemic_state") == "LOCKED",
-        "current ownership is LOCKED without inventing operator legal identity",
-    )
+    for row, legal_name in ((northstar, "Northstar Minerals, Inc."), (current_owner, "Pale Sun Inc.")):
+        check(
+            row.get("owner_display_name") == legal_name
+            and row.get("owner_display_name_state") == "LOCKED"
+            and row.get("owner_legal_name") == legal_name
+            and row.get("owner_legal_name_state") == "LOCKED"
+            and row.get("fact_state") == "LOCKED_CANON"
+            and row.get("epistemic_state") == "LOCKED",
+            f"approved legal ownership and evidence state: {legal_name}",
+        )
     check(
         all(
             (row["owner_legal_name_state"] == "OPEN") == (row["owner_legal_name"] == "")
@@ -706,37 +699,33 @@ def validate(generate: bool = False) -> dict[str, object]:
     check(
         len(rail) == 1
         and rail[0]["direct_mine_connection"] == "0"
-        and rail[0]["suitable_transload"] == "0"
+        and rail[0]["suitable_transload"] == "1"
         and rail[0]["uranium_capability"] == "0",
         "ARU/BS&T remains an imperfect, non-turnkey interface",
     )
     check(
         len(fit_gaps) == 3
-        and all(row["status"] == "OPEN" and row["blocks_custody"] == "1" for row in fit_gaps),
-        "all three required ARU fit gaps remain open and custody-blocking",
+        and [row["status"] for row in fit_gaps] == ["CLOSED_FOR_INBOUND", "CLOSED_FOR_INBOUND", "OPEN"]
+        and all(row["blocks_custody"] == "1" for row in fit_gaps),
+        "ordinary inbound fit gaps close while uranium custody remains gated",
     )
     check(
         min(int(row["earliest_month"]) for row in gates) == 0
         and max(int(row["latest_month"]) for row in gates) == 18
-        and all(row["status"] == "OPEN" for row in gates),
-        "integration gates preserve the 0-18 month open planning horizon",
+        and [row["status"] for row in gates] == ["COMPLETE_SYNTHETIC", "COMPLETE_SYNTHETIC", "LIMITED_INBOUND_SERVICE", "OPEN"],
+        "integration gates preserve phased synthetic completion and future maturity review",
     )
-    capex_with_amount = [row for row in capex if row["amount_usd"]]
+    capex_by_id = {row["component_id"]: row for row in capex}
     check(
-        len(capex_with_amount) == 1
-        and Decimal(capex_with_amount[0]["amount_usd"]) == 15_000_000
-        and capex_with_amount[0]["amount_state"] == "SCENARIO_INPUT",
-        "$15 million preliminary screen is the only quantified interface amount",
+        [Decimal(capex_by_id[f"RW-ARU-CAPEX-{i:03d}"]["amount_usd"]) for i in range(4)]
+        == [15_000_000, 3_250_000, 5_250_000, 6_500_000],
+        "interface capital separately identifies ceiling, two owned allocations and residual",
     )
     check(
-        all(
-            row["amount_usd"] == ""
-            and row["amount_state"] == "OPEN"
-            and row["epistemic_state"] == "OPEN"
-            for row in capex
-            if row not in capex_with_amount
-        ),
-        "preliminary capex components remain unquantified and OPEN",
+        sum(Decimal(capex_by_id[f"RW-ARU-CAPEX-{i:03d}"]["amount_usd"]) for i in (1,2))
+        == Decimal(capex_by_id["RW-ARU-CAPEX-000"]["amount_usd"])
+        - Decimal(capex_by_id["RW-ARU-CAPEX-003"]["amount_usd"]),
+        "approved phase1 and unapproved residual reconcile without spending the ceiling twice",
     )
     check(
         any(
@@ -760,13 +749,13 @@ def validate(generate: bool = False) -> dict[str, object]:
     )
     check(
         bridge["boundaries"]["direct_uranium_custody_authorized"] is False
-        and bridge["boundaries"]["full_aru_case_authorized"] is False,
-        "authoritative bridge boundary leaves custody and full ARU case unauthorized",
+        and bridge["boundaries"]["full_aru_case_authorized"] is True,
+        "authoritative bridge authorizes industrial implementation while preserving custody gate",
     )
     check(
-        len(bridge["open_aru_fields"]) == 32
+        len(bridge["open_aru_fields"]) == 3
         and "whether BS&T ultimately takes direct uranium custody" in bridge["open_aru_fields"],
-        "all 32 full-case ARU fields remain explicitly open",
+        "only three specifically gated future decisions remain open",
     )
     for condition, label in projection_checks(
         core,
@@ -797,13 +786,13 @@ def validate(generate: bool = False) -> dict[str, object]:
     )
     check(
         manifest["scenario_id"] == "red-wash-2025-2026"
-        and manifest["scenario_version"] == core["version"] == "1.0.0"
-        and manifest["input_version"] == "red-wash-public-source/1.0.0"
+        and manifest["scenario_version"] == core["version"] == "1.1.0"
+        and manifest["input_version"] == "red-wash-public-source/1.1.0"
         and manifest["seed"] == 20250718,
         "generation manifest binds the governed scenario, inputs, and seed",
     )
     check(
-        manifest["generator_version"] == manifest["generator"]["version"] == "1.0.0"
+        manifest["generator_version"] == manifest["generator"]["version"] == "1.1.0"
         and manifest["seed"] == manifest["generator"]["seed"],
         "top-level generator lineage agrees with detailed generator identity",
     )
@@ -907,8 +896,8 @@ def validate(generate: bool = False) -> dict[str, object]:
     )
     check(
         manifest["aru_bst_bridge_controls"]["open_aru_fields"] == sorted(bridge["open_aru_fields"])
-        and manifest["aru_bst_bridge_controls"]["full_aru_case_state"] == "OPEN",
-        "manifest preserves every unresolved ARU field and OPEN full-case state",
+        and manifest["aru_bst_bridge_controls"]["full_aru_case_state"] == "SELECTED_SUCCESSOR",
+        "manifest preserves every unresolved ARU field and selected successor state",
     )
     check(
         manifest["aru_bst_bridge_controls"]["source_commit_state"]
@@ -1012,7 +1001,7 @@ def validate(generate: bool = False) -> dict[str, object]:
             and metadata["annual_2025_revenue_impact_usd"] == "0"
             and metadata["preliminary_capex_envelope_usd"] == "15000000"
             and metadata["custody_state"] == "OPEN"
-            and metadata["full_aru_case_state"] == "OPEN",
+            and metadata["full_aru_case_state"] == "SELECTED_SUCCESSOR",
             "SQLite package metadata preserves bridge boundaries",
         )
         check(

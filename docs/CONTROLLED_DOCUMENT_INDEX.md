@@ -1,6 +1,6 @@
 # SABLE HARBOR CONTROLLED DOCUMENT INDEX
 
-**Index version:** 1.0.11 | **As of:** September 6, 2026
+**Index version:** 1.0.12 | **As of:** September 6, 2026
 
 ## Authority order
 
@@ -13,6 +13,17 @@
 This order follows [MAINTAINERS.md](../MAINTAINERS.md) and the [canon authority and publication boundaries](internal/CANON_AUTHORITY_AND_PUBLICATION_BOUNDARIES.md). Where a dated controlling addendum explicitly supersedes an earlier statement or state, the later accepted repository record governs within that scope. Earlier versions and SUPERSEDED records remain available for history but do not silently override current material. Conversation approvals are preserved as provenance; the canonically accepted repository record is the source of truth. Branch copies alone are not canonical promotion.
 
 The earlier controlling layers remain indexed in the [September 3 decision-register addendum](canon/DECISION_REGISTER_ADDENDUM_2026-09-03.md), [September 3 headquarters closeout](canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md), [September 5 Red Wash addendum](canon/DECISION_REGISTER_ADDENDUM_2026-09-05_RED_WASH.md), [Red Wash transaction and operating record](canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05.md), [v0.3 changelog](canon/CANON_CHANGELOG_v0.3.md), and [Red Wash closeout changelog](canon/RED_WASH_CLOSEOUT_CHANGELOG_2026-09-05.md).
+
+## Selected industrial successor
+
+- [Industrial canon and supersession scope](canon/INDUSTRIAL_CLOSEOUT_2026-09-05.md)
+- [Complete case index](../industrial/README.md), [participant guide](../industrial/CASE_GUIDE.md) and [model decisions](../industrial/IMPLEMENTATION_DECISIONS.md)
+- [Current Red Wash transaction record](canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05_R2.md), [v1.1 publication](governance/publications/SH-PS-RW-TOR-001_v1.1.0.pdf) and [current mine addendum](canon/DECISION_REGISTER_ADDENDUM_2026-09-05_RED_WASH_R2.md)
+- [Current logistics interface](../red_wash/logistics/ARU_BST_INTERFACE_AND_DEPENDENCY_RECORD.md), [v1.1 publication](governance/publications/SH-PS-RW-LOG-001_v1.1.0.pdf) and [current visual manifest](../industrial/visuals/manifest.json)
+- [Industrial finance bridge](finance/INDUSTRIAL_FINANCE_BRIDGE_v1.0.md)
+- [Release index](releases/INDUSTRIAL_CASE_RELEASES.md)
+
+This successor resolves the industrial legal structure, full ARU/BS&T case, mine geography and interface model. Earlier limited-bridge records and original maps remain historical. The case's September 5 retrospective cutoff does not import September 6 editorial decisions as earlier company knowledge.
 
 ## September 6 canon and delivery closeout
 
@@ -30,12 +41,12 @@ Future AR and VR integration is planned while ordinary desktop use remains compl
 
 The finance-pinned v0.3 lore, base decision register, and [board v1.0.0 source](governance/BOARD_AND_CAPITAL_GOVERNANCE.md) retain their original bytes so historical finance generation remains reproducible. Their superseded surname statements are controlled by the September 6 addendum and current board v1.0.1 source. Preservation of the earlier files is not a competing current naming decision.
 
-## September 5 Red Wash closeout
+## September 5 Red Wash closeout — predecessor snapshot
 
 - [Red Wash decision-register addendum](canon/DECISION_REGISTER_ADDENDUM_2026-09-05_RED_WASH.md)
 - [Red Wash closeout changelog](canon/RED_WASH_CLOSEOUT_CHANGELOG_2026-09-05.md)
 - [Red Wash transaction and operating record](canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05.md) and [controlled U.S.-Letter publication](governance/publications/SH-PS-RW-TOR-001_v1.0.0.pdf)
-- [ARU/BS&T interface and dependency record](../red_wash/logistics/ARU_BST_INTERFACE_AND_DEPENDENCY_RECORD.md) and [controlled U.S.-Letter publication](governance/publications/SH-PS-RW-LOG-001_v1.0.0.pdf)
+- [Archived ARU/BS&T interface record](../red_wash/history/v1.0.0/documents/logistics/ARU_BST_INTERFACE_AND_DEPENDENCY_RECORD.md) and [historical U.S.-Letter publication](governance/publications/SH-PS-RW-LOG-001_v1.0.0.pdf)
 - [Structured Red Wash transaction record](structured/red_wash_transaction_operating_record.json)
 - [Structured Red Wash–ARU/BS&T bridge](structured/aru_bst_red_wash_bridge.json)
 - [Red Wash package index](../red_wash/README.md) and [approved visual manifest](../assets/brand/red_wash_visual_manifest.json)

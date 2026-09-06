@@ -3,7 +3,7 @@
 **Classification:** PUBLIC SYNTHETIC DIEGETIC
 **Related record:** `SH-PS-RW-TOR-001`
 
-> The instruments below are fictional but are structured to preserve the commercial, legal, environmental, title, regulatory, employee, and source-record issues established in the transaction case. `Northstar Resources` is a provisional seller display name; exact seller and Red Wash operator legal names, suffixes, and jurisdictions remain open.
+> The instruments below are fictional but are structured to preserve the commercial, legal, environmental, title, regulatory, employee, and source-record issues established in the transaction case. Northstar Minerals, Inc. is the Wyoming corporate seller; Red Wash Mining, LLC is the Wyoming operating company; Pale Sun Inc. is the Delaware buyer/platform.
 
 The transaction sequence and exact July 18, 2025 close are selected canon. Other
 day-level instrument dates are synthetic scenario precision unless a controlling
@@ -13,7 +13,7 @@ record separately locks one.
 
 ## 1. Mutual Nondisclosure Agreement — October 18, 2024
 
-Parties: Sable Harbor and the seller using the provisional display name Northstar Resources.
+Parties: Sable Harbor and Northstar Minerals, Inc. (NMI).
 
 Confidential information includes native files and metadata, superseded models, operational knowledge, regulatory correspondence, contracts, financial records, the transaction's existence, and information communicated orally and later identified. No summary or management presentation supersedes the underlying source records. Access is limited to representatives with need to know. Neither party is obligated to transact, and no representation of accuracy arises except in a definitive agreement. Wyoming law governs.
 
