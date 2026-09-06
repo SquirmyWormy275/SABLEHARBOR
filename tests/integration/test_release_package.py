@@ -309,6 +309,23 @@ def test_generated_artifact_scan_reads_values_and_xlsx_relationships(tmp_path: P
     assert scan_generated_artifacts(formula_csv) == []
 
 
+def test_generated_artifact_scan_reads_sqlite_text_without_raw_page_false_positives(
+    tmp_path: Path,
+) -> None:
+    clean_database = tmp_path / "clean.sqlite3"
+    with sqlite3.connect(clean_database) as connection:
+        connection.execute("CREATE TABLE evidence (value TEXT NOT NULL)")
+        connection.execute("INSERT INTO evidence VALUES (?)", ("synthetic public evidence",))
+    assert scan_generated_artifacts(clean_database) == []
+
+    with sqlite3.connect(clean_database) as connection:
+        connection.execute("INSERT INTO evidence VALUES (?)", ("person@example.invalid",))
+    assert any(
+        "email-address-shaped value" in failure
+        for failure in scan_generated_artifacts(clean_database)
+    )
+
+
 @pytest.mark.parametrize(
     "tables",
     (

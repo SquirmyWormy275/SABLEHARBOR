@@ -1,8 +1,9 @@
 # SABLE HARBOR — J2 IDENTITY AND STATIONERY
 
-**Version:** 0.1.1  
-**Decision date:** September 2, 2026  
-**Status:** LOCKED
+**Version:** 0.1.2
+**Decision date:** September 2, 2026
+**Repository reconciliation date:** September 5, 2026
+**Status:** LOCKED identity; dedicated stationery implementation OPEN
 
 ## Identity
 
@@ -25,16 +26,17 @@ The controlling PNGs are installed byte-for-byte from the user-approved source f
 
 These two designs were approved by the user on September 2, 2026 and supersede all exploratory J2 logo mockups. Every exploratory concept or mockup is historical only—not a production identity asset—and must not appear in a production manifest, collateral package, letterhead, or publication.
 
-## Stationery
+## Stationery implementation state
 
-J2 maintains controlled stationery within the Sable Harbor corporate document system:
+J2 remains eligible for controlled stationery within the Sable Harbor corporate
+document system, but the current repository distributes no dedicated J2 letterhead
+template and no J2 stationery manifest. This implementation/package state does not
+change the locked identity decision or make J2 a separate legal entity.
 
-- US Letter: `assets/brand/collateral/letterhead/j2/j2-letterhead-us-letter.svg`
-- A4: `assets/brand/collateral/letterhead/j2/j2-letterhead-a4.svg`
-
-J2 stationery follows `SH-GOV-DOC-001` and therefore remains subordinate to the Sable Harbor corporate document standard, controlled-document metadata, versioning, and publication rules.
-
-Every J2 letterhead must reference `assets/brand/logos/j2__primary-horizontal.png` directly. It may not embed a redraw or point to an exploratory asset.
+Any future J2 stationery release must follow `SH-GOV-DOC-001`, be separately
+versioned, proofed, manifested, and published, and reference
+`assets/brand/logos/j2__primary-horizontal.png` directly. It may not embed a redraw
+or point to exploratory artwork.
 
 ## Use rules
 

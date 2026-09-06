@@ -4,14 +4,15 @@ This directory contains individual, production-oriented logo assets for the Sabl
 
 ## Controlling naming source
 
-Business-line names and status are grounded in `docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.2.md` and subsequent locked governance/organization decisions. Artwork files do **not** independently create or change canon. Legal-entity, reporting-line, and exact organizational details that remain OPEN in canon remain open here.
+Business-line names and status are grounded in `docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md` and subsequent controlled canon, decision-register, governance, and organization records. Artwork files do **not** independently create or change canon. Legal-entity, reporting-line, and exact organizational details that remain OPEN in canon remain open here.
 
 ## File rule
 
 - One logo per file.
 - No contact sheets or composite logo boards are stored in the production logo directory.
 - The approved J2 PNG files are controlling source artwork. Existing J2 SVG files are vector derivatives and must not supersede or alter the PNG artwork.
-- For all other identities, SVG is the production source of truth; PNG and office-document renders are convenience/generated forms where supplied.
+- For identities without a later approved override, SVG is the production source of truth; PNG and office-document renders are convenience/generated forms where supplied.
+- The four owner-approved Pale Sun/Red Wash raster sources listed in `red_wash_visual_manifest.json` are later byte-exact overrides. They must not be regenerated, recompressed, or replaced by legacy SVG/PNG variants.
 - Reverse variants use a dark background; all other raster convenience variants preserve transparency.
 
 ## Canonical 2026 business-line set
@@ -34,7 +35,7 @@ The seven business lines are **Foundry Field, Willow, Atlas Meridian, Pale Sun, 
 | Identity | Classification | Canon note |
 |---|---|---|
 | Foundry | product substrate | LOCKED distinction: Foundry is the substrate; Foundry Field is the deployable operational product/service configuration. |
-| Red Wash Mine | operating asset | LOCKED fictional mine name under Pale Sun; transaction and legal details remain OPEN. |
+| Red Wash Mine | operating asset | LOCKED fictional mine and selected transaction/2026 operating case under Pale Sun; exact seller and operator legal forms remain OPEN. |
 | Blood, Sweat & Tears Railway | ARU operating component | LOCKED name and relationship to ARU. |
 | Emberline | historical business line | LOCKED historical status: active through 2025, then absorbed into enduring 2026 work. |
 | Red Wash / Pale Sun | endorsed operating lockup | Supplemental endorsed lockup joining the Pale Sun line to its Red Wash operating asset. |
@@ -74,26 +75,30 @@ J2 is a controlled internal institutional identity. It must not be placed in the
 - Do not combine two separate identities into one lockup unless an endorsed combined asset is provided here.
 - Do not substitute literal lighthouse, compass, shield, wave, mountain, mine-pick, generic intelligence, military, target, eye, brain, or AI/circuit clip art.
 - Preserve appropriate clear space around the full lockup.
-- For J2, use the approved PNGs as source of truth. For the rest of this package, use SVG as source of truth.
+- For J2 and the four paths in `red_wash_visual_manifest.json`, use the approved PNGs as source of truth. For identities without a later approved override, use SVG as source of truth.
 
-## J2 stationery
+## J2 document use
 
-Approved J2 stationery is maintained under:
-
-- `assets/brand/collateral/letterhead/j2/j2-letterhead-us-letter.svg`
-- `assets/brand/collateral/letterhead/j2/j2-letterhead-a4.svg`
-
-The controlling identity/stationery record is `docs/organization/J2_IDENTITY_AND_STATIONERY.md`.
+The repository currently distributes no dedicated J2 letterhead templates or J2
+stationery manifest. The locked J2 logo sources remain available for controlled J2
+documents under `docs/organization/J2_IDENTITY_AND_STATIONERY.md`. Any future
+stationery release must be separately versioned, proofed, manifested, and bound to
+the approved J2 PNG source artwork.
 
 ## Package
 
-Generated collateral packages and their manifest are maintained under `assets/brand/packages/`.
+There is no current consolidated distributable brand archive. The v0.1.0 ZIP under
+`assets/brand/packages/` is `SUPERSEDED`, retained only as a `HISTORICAL_SNAPSHOT`,
+and has an explicit `DO_NOT_DISTRIBUTE` state: it predates the September 5 approved Pale Sun/Red Wash
+sources and contains J2 stationery that is no longer in the current collateral tree.
+Use the live repository assets and their applicable manifests instead.
 
 ## Manifest and validation
 
 - `manifest.json` records production logo assets, dimensions, status, and SHA-256 digests.
-- `collateral/manifest.json` records controlled J2 stationery and its approved-logo references.
-- `packages/manifest.json` records distributable brand packages and SHA-256 digests.
+- `red_wash_visual_manifest.json` controls the exact Pale Sun logo, Red Wash logo, site overview, and underground-plan sources approved on September 5, 2026.
+- `collateral/README.md` inventories the retained corporate collateral; that subtree has no current cryptographic manifest and does not constitute a J2 stationery release.
+- `packages/manifest.json` records the historical archive's SHA-256 and mandatory quarantine state.
 - `VALIDATION.md` records automated checks for the established brand system and approved J2 source integrity.
 
 All rights reserved unless a specific repository file states otherwise.

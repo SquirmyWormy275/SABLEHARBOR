@@ -18,8 +18,29 @@ from fontTools.pens.svgPathPen import SVGPathPen
 from fontTools.ttLib import TTFont
 from PIL import Image
 
-REPO_ROOT = Path(os.environ.get('GITHUB_WORKSPACE', Path.cwd()))
-OUT = Path(os.environ.get('SABLE_HARBOR_ASSET_OUT', REPO_ROOT / '.brand-build' / 'sable-harbor-brand-assets-v0.1.0'))
+try:
+    from .validate_red_wash_visual_assets import (
+        assert_safe_generation_output,
+        validate_red_wash_visual_assets,
+    )
+except ImportError:  # Direct script execution.
+    from validate_red_wash_visual_assets import (
+        assert_safe_generation_output,
+        validate_red_wash_visual_assets,
+    )
+
+REPO_ROOT = Path(
+    os.environ.get('GITHUB_WORKSPACE', Path(__file__).resolve().parents[2])
+).resolve()
+PACKAGE_VERSION = '0.1.1'
+GENERATED_UTC = '2026-09-05T00:00:00Z'
+ZIP_TIMESTAMP = (2026, 9, 5, 0, 0, 0)
+OUT = Path(
+    os.environ.get(
+        'SABLE_HARBOR_ASSET_OUT',
+        REPO_ROOT / '.brand-build' / f'sable-harbor-brand-assets-v{PACKAGE_VERSION}',
+    )
+).resolve()
 LOGO_DIR = OUT / 'assets' / 'brand' / 'logos'
 PREVIEW_DIR = OUT / 'qa-previews'
 PACKAGE_DIR = OUT / 'packages'
@@ -588,6 +609,23 @@ def sha256(path: Path) -> str:
     return h.hexdigest()
 
 
+def write_deterministic_zip_member(
+    archive: zipfile.ZipFile, source: Path, archive_name: str
+) -> None:
+    """Write a stable ZIP member without inheriting filesystem timestamps."""
+
+    info = zipfile.ZipInfo(archive_name, date_time=ZIP_TIMESTAMP)
+    info.compress_type = zipfile.ZIP_DEFLATED
+    info.create_system = 3
+    info.external_attr = 0o100644 << 16
+    archive.writestr(
+        info,
+        source.read_bytes(),
+        compress_type=zipfile.ZIP_DEFLATED,
+        compresslevel=9,
+    )
+
+
 def make_contact_sheet(entries: list[dict], out_path: Path, title: str):
     thumbs = []
     for entry in entries:
@@ -620,19 +658,20 @@ def make_contact_sheet(entries: list[dict], out_path: Path, title: str):
 
 def build_readme(manifest: dict) -> str:
     lines = [
-        '# Sable Harbor Logo System — v0.1.0',
+        f'# Sable Harbor Logo System — v{manifest["version"]}',
         '',
-        'This directory contains individual, production-oriented logo assets for the Sable Harbor corporate identity and each business line in the August 31, 2026 narrative map.',
+        'This directory contains individual, production-oriented generated logo assets for the Sable Harbor corporate identity and each business line in the August 31, 2026 narrative map.',
         '',
         '## Controlling naming source',
         '',
-        'Business-line names and status are grounded in `docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.2.md`. These artwork files do **not** independently create or change canon. Legal-entity, reporting-line, and exact organizational details that remain OPEN in canon remain open here.',
+        'Business-line names and status are grounded in `docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md` and later controlled canon and decision-register addenda. These artwork files do **not** independently create or change canon. Legal-entity, reporting-line, and exact organizational details that remain OPEN in canon remain open here.',
         '',
         '## File rule',
         '',
         '- One logo per file.',
         '- No contact sheets or composite logo boards are stored in the production logo directory.',
-        '- Every production asset is supplied as self-contained SVG with outlined lettering and as a rendered PNG.',
+        '- Every generated production asset is supplied as self-contained SVG with outlined lettering and as a rendered PNG.',
+        '- The four owner-approved Pale Sun/Red Wash raster sources listed in repository `assets/brand/red_wash_visual_manifest.json` are byte-exact overrides. The generator validates them in place and never regenerates, recompresses, or packages them as legacy v0.1 logo variants.',
         '- Reverse variants use a dark background; all other PNG variants preserve transparency.',
         '',
         '## Canonical 2026 business-line set',
@@ -679,7 +718,8 @@ def build_readme(manifest: dict) -> str:
         '- Do not combine two separate identities into one lockup unless an endorsed combined asset is provided here.',
         '- Do not substitute literal lighthouse, compass, shield, wave, mountain, mine-pick, or generic AI/circuit clip art.',
         '- Preserve clear space equal to at least one central accent square around the full lockup.',
-        '- Use the SVG files as the source of truth; PNG files are convenience renders.',
+        '- For identities without a later approved override, SVG files are the source of truth and PNG files are convenience renders.',
+        '- The repository-level Pale Sun/Red Wash approved PNGs are controlling source artwork; legacy generated variants do not supersede them.',
         '',
         '## Package',
         '',
@@ -688,6 +728,7 @@ def build_readme(manifest: dict) -> str:
         '## Manifest and validation',
         '',
         '- `manifest.json` records every asset, dimensions, variant, classification, and SHA-256 digest.',
+        '- Repository `assets/brand/red_wash_visual_manifest.json` separately controls the four approved Pale Sun/Red Wash raster sources.',
         '- `VALIDATION.md` records automated checks proving the one-logo-per-file rule and per-line variant coverage.',
         '',
         'All rights reserved unless a specific repository file states otherwise.',
@@ -696,7 +737,7 @@ def build_readme(manifest: dict) -> str:
     return '\n'.join(lines)
 
 
-def build_validation(entries: list[dict]) -> str:
+def build_validation(entries: list[dict], visual_assets: dict) -> str:
     core = BRANDS[:8]
     lines = [
         '# Logo Package Validation',
@@ -714,6 +755,19 @@ def build_validation(entries: list[dict]) -> str:
         '- SVG text elements remaining: **0**; all lettering is outlined: **PASS**.',
         '- Every SVG has a matching PNG convenience render: **PASS**.',
         '- Production directory contains no composite sheets: **PASS**.',
+        '',
+        '## Approved Pale Sun / Red Wash raster sources',
+        '',
+        '- Repository manifest identity and approval state: **PASS**.',
+        '- Exact path, byte count, dimensions, and SHA-256 for all four sources: **PASS**.',
+        '- Generator output cleanup cannot contain or delete the controlled sources: **PASS**.',
+        '',
+        '| Controlled source | SHA-256 |',
+        '|---|---|',
+    ]
+    for asset in visual_assets['assets']:
+        lines.append(f"| `{asset['path']}` | `{asset['sha256']}` |")
+    lines += [
         '',
         '## Coverage',
         '',
@@ -735,6 +789,8 @@ def build_validation(entries: list[dict]) -> str:
 
 
 def main():
+    visual_assets_before = validate_red_wash_visual_assets(REPO_ROOT)
+    assert_safe_generation_output(OUT, REPO_ROOT)
     if OUT.exists():
         shutil.rmtree(OUT)
     LOGO_DIR.mkdir(parents=True, exist_ok=True)
@@ -791,9 +847,9 @@ def main():
 
     manifest = {
         'package': 'Sable Harbor Logo System',
-        'version': '0.1.0',
-        'generated_utc': '2026-09-01T00:00:00Z',
-        'controlling_canon': 'docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.2.md',
+        'version': PACKAGE_VERSION,
+        'generated_utc': GENERATED_UTC,
+        'controlling_canon': 'docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md',
         'one_logo_per_file': True,
         'corporate_variant_count': len(BRANDS[0].variants),
         'canonical_business_lines': [b.display_name for b in BRANDS[1:8]],
@@ -805,18 +861,24 @@ def main():
     }
     (OUT / 'manifest.json').write_text(json.dumps(manifest, indent=2) + '\n', encoding='utf-8')
     (OUT / 'README.md').write_text(build_readme(manifest), encoding='utf-8')
-    (OUT / 'VALIDATION.md').write_text(build_validation(entries), encoding='utf-8')
+    (OUT / 'VALIDATION.md').write_text(
+        build_validation(entries, visual_assets_before), encoding='utf-8'
+    )
 
     make_contact_sheet(entries, PREVIEW_DIR / 'core-primary-horizontal-qa.png', 'SABLE HARBOR — CORE IDENTITY QA')
     make_contact_sheet(entries[16:], PREVIEW_DIR / 'all-primary-horizontal-qa.png', 'SABLE HARBOR — ALL PRIMARY LOCKUPS QA')
 
     # Convenience archive contains only production assets and documentation, not QA sheets.
-    zip_path = PACKAGE_DIR / 'sable-harbor-logo-system-v0.1.0.zip'
+    zip_path = PACKAGE_DIR / f'sable-harbor-logo-system-v{PACKAGE_VERSION}.zip'
     with zipfile.ZipFile(zip_path, 'w', compression=zipfile.ZIP_DEFLATED, compresslevel=9) as zf:
         for p in sorted(LOGO_DIR.iterdir()):
-            zf.write(p, arcname=f'logos/{p.name}')
+            write_deterministic_zip_member(zf, p, f'logos/{p.name}')
         for p in (OUT / 'README.md', OUT / 'VALIDATION.md', OUT / 'manifest.json'):
-            zf.write(p, arcname=p.name)
+            write_deterministic_zip_member(zf, p, p.name)
+
+    visual_assets_after = validate_red_wash_visual_assets(REPO_ROOT)
+    if visual_assets_after != visual_assets_before:
+        raise RuntimeError('controlled Pale Sun/Red Wash visual assets changed during generation')
 
     print(json.dumps({
         'output': str(OUT),
@@ -826,6 +888,7 @@ def main():
         'png_count': len(list(LOGO_DIR.glob('*.png'))),
         'zip': str(zip_path),
         'zip_bytes': zip_path.stat().st_size,
+        'controlled_visual_assets': visual_assets_after,
     }, indent=2))
 
 

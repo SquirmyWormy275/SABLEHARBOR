@@ -2,7 +2,7 @@
 <title id="title">Pale Sun letterhead — US Letter</title>
 <desc id="desc">Linked-logo working letterhead template with explicit placeholders and no invented contact information.</desc>
 <rect width="816" height="1056" fill="#F4F1EA"/>
-<image href="https://raw.githubusercontent.com/SquirmyWormy275/SABLEHARBOR/main/assets/brand/logos/pale-sun__primary-horizontal.svg" x="54" y="38" width="420" height="132" preserveAspectRatio="xMinYMid meet"/>
+<image href="https://raw.githubusercontent.com/SquirmyWormy275/SABLEHARBOR/main/assets/brand/logos/pale_sun__canonical.png" x="54" y="38" width="420" height="132" preserveAspectRatio="xMinYMid meet"/>
 <text x="762" y="78" text-anchor="end" font-family="Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1.7" fill="#101214">PALE SUN</text>
 <text x="762" y="102" text-anchor="end" font-family="Arial, sans-serif" font-size="10" letter-spacing="1.2" fill="#747A80">[DATE]  |  [REFERENCE]</text>
 <rect x="54" y="166" width="708" height="3" fill="#C45124"/>

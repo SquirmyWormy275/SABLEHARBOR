@@ -1,17 +1,29 @@
 # SABLE HARBOR CONTROLLED DOCUMENT INDEX
 
-**Index version:** 1.0.9 | **As of:** September 3, 2026
+**Index version:** 1.0.10 | **As of:** September 5, 2026
 
 ## Authority order
 
 1. [Corporate lore v0.3](canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md)
-2. [Decision register](canon/DECISION_REGISTER.md), [September 3 decision-register addendum](canon/DECISION_REGISTER_ADDENDUM_2026-09-03.md), [September 3 corporate headquarters closeout](canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md), [v0.3 changelog](canon/CANON_CHANGELOG_v0.3.md), and [board approval records](governance/board-records/README.md)
+2. [Decision register](canon/DECISION_REGISTER.md), [September 3 decision-register addendum](canon/DECISION_REGISTER_ADDENDUM_2026-09-03.md), [September 3 corporate headquarters closeout](canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md), [September 5 Red Wash addendum](canon/DECISION_REGISTER_ADDENDUM_2026-09-05_RED_WASH.md), [Red Wash transaction and operating record](canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05.md), [v0.3 changelog](canon/CANON_CHANGELOG_v0.3.md), [Red Wash closeout changelog](canon/RED_WASH_CLOSEOUT_CHANGELOG_2026-09-05.md), and [board approval records](governance/board-records/README.md)
 3. Approved governance, People & Culture, Technology Services, and J2 instruments listed below
 4. [Chat-derived J2/Alexandria canon ledger](internal/CHAT_CANON_LEDGER_J2_ALEXANDRIA.md)
 5. [Canon authority and publication boundaries](internal/CANON_AUTHORITY_AND_PUBLICATION_BOUNDARIES.md)
 6. Structured representations and generated publications, which reconcile to their canonical Markdown source
 
-Where a September 3 controlling source explicitly supersedes an OPEN or PROVISIONAL row in `DECISION_REGISTER.md` v0.3.0, the later controlling source governs until the next consolidated register release. Earlier versions and SUPERSEDED records remain available for history but do not silently override current material.
+Where a September 3 or September 5 controlling source explicitly supersedes an OPEN or PROVISIONAL row in `DECISION_REGISTER.md` v0.3.0, the later controlling source governs until the next consolidated register release. Earlier versions and SUPERSEDED records remain available for history but do not silently override current material.
+
+## September 5 Red Wash closeout
+
+- [Red Wash decision-register addendum](canon/DECISION_REGISTER_ADDENDUM_2026-09-05_RED_WASH.md)
+- [Red Wash closeout changelog](canon/RED_WASH_CLOSEOUT_CHANGELOG_2026-09-05.md)
+- [Red Wash transaction and operating record](canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05.md) and [controlled U.S.-Letter publication](governance/publications/SH-PS-RW-TOR-001_v1.0.0.pdf)
+- [ARU/BS&T interface and dependency record](../red_wash/logistics/ARU_BST_INTERFACE_AND_DEPENDENCY_RECORD.md) and [controlled U.S.-Letter publication](governance/publications/SH-PS-RW-LOG-001_v1.0.0.pdf)
+- [Structured Red Wash transaction record](structured/red_wash_transaction_operating_record.json)
+- [Structured Red Wash–ARU/BS&T bridge](structured/aru_bst_red_wash_bridge.json)
+- [Red Wash package index](../red_wash/README.md) and [approved visual manifest](../assets/brand/red_wash_visual_manifest.json)
+
+The transaction and interface PDFs are generated representations. The canonical Markdown sources and their stated evidence boundaries control.
 
 ## September 3 headquarters closeout
 

@@ -17,7 +17,7 @@ It is modeled as a company that would exist independently of any audit or benchm
 
 ## Current canon
 
-The controlling September 2–3, 2026 layer begins with [`SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md`](docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md) and is extended by the [decision register](docs/canon/DECISION_REGISTER.md), [September 3 decision-register addendum](docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-03.md), [corporate headquarters closeout](docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md), [v0.3 changelog](docs/canon/CANON_CHANGELOG_v0.3.md), and [board approval records](docs/governance/board-records/README.md).
+The controlling September 2–5, 2026 layer begins with [`SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md`](docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md) and is extended by the [decision register](docs/canon/DECISION_REGISTER.md), [September 3 decision-register addendum](docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-03.md), [corporate headquarters closeout](docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md), [September 5 Red Wash addendum](docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-05_RED_WASH.md), [Red Wash transaction and operating record](docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05.md), [v0.3 changelog](docs/canon/CANON_CHANGELOG_v0.3.md), [Red Wash closeout changelog](docs/canon/RED_WASH_CLOSEOUT_CHANGELOG_2026-09-05.md), and [board approval records](docs/governance/board-records/README.md).
 
 The September 3 headquarters closeout locks the ESS umbrella, Internal Audit independence, J2 establishment, Orientation selection/tenure, People & Culture doctrine, Enterprise Technology Services doctrine, authority/capital/planning/executive rhythm, professional-practice model, portfolio architecture, and Sacramento headquarters physical direction. The [SHMS framework](docs/governance/SABLE_HARBOR_MANAGEMENT_SYSTEM_FRAMEWORK.md) is explicitly the **next-priority development thread** and is not yet completed doctrine.
 
@@ -45,7 +45,7 @@ Historical branch names are provenance only; they are not current work instructi
 
 ## Organization at a glance
 
-The existing rendered organization package remains a useful August 31 baseline, but September 3 canon adds a stronger institutional architecture:
+The rendered organization package is reconciled through the September 5 Red Wash closeout and preserves the September 3 institutional architecture:
 
 - **Board / CEO** — enterprise authority;
 - **operating businesses** — end-to-end business authority inside enterprise boundaries;
@@ -53,10 +53,22 @@ The existing rendered organization package remains a useful August 31 baseline, 
 - **J2** — distinct Judgment & Junction institution outside ESS;
 - **Internal Audit** — functionally independent to the Board Audit & Compliance Committee;
 - **professional practices** — horizontal standards/profession stewardship without dual operating authority.
+- **Pale Sun / Red Wash** — 12 business-layer FTE and 128 site FTE, with qualified external carriers authoritative throughout 2025;
+- **ARU / BS&T interface** — a separately gated candidate relationship with no automatic uranium custody.
 
 [![Sable Harbor enterprise organization chart](docs/organization/assets/enterprise-organization-2026.svg)](docs/organization/README.md)
 
-The organization charts should be refreshed in a later rendering pass to reflect the September 3 headquarters model without inventing unnamed leaders.
+The organization renderer preserves unnamed roles as open and reproduces all nine charts from controlled sources.
+
+## Pale Sun and Red Wash
+
+The [Red Wash package index](red_wash/README.md) is the entry point for the selected public
+synthetic acquisition and 2026 operating case. It includes a deterministic source/CSV/SQLite
+package, byte-exact owner-approved visuals, and the deliberately limited
+[ARU/BS&T interface record](red_wash/logistics/ARU_BST_INTERFACE_AND_DEPENDENCY_RECORD.md).
+The bridge records no pre-existing relationship, no ARU/BS&T role in 2025 movements, no change
+to 2025 annual sales or revenue, an unbooked $15 million interface screen, and no automatic
+uranium custody. The complete ARU/BS&T transaction and operating case remains open.
 
 ## Headquarters
 
@@ -70,7 +82,7 @@ Blackridge remains the upstream founding wound and a separate executable case un
 
 A prior `architecture/corporate-operating-model-v0.1` branch remains historical/noncontrolling. September 3 canon now establishes several **institutional design points** that supersede the old blanket statement that all headquarters/headcount architecture is open, including the 237-billet J2 establishment and the headquarters/ESS/People & Culture/Technology/authority model.
 
-Exact enterprise-wide 2026 total headcount, revenue, product P&Ls, detailed legal suffix/jurisdiction mechanics, and some named leadership details remain open unless separately controlled elsewhere.
+Exact enterprise-wide 2026 total headcount, revenue, product P&Ls, detailed legal suffix/jurisdiction mechanics, and some named leadership details remain open unless separately controlled elsewhere. The selected standalone Red Wash case now controls its 140-FTE, physical, transaction, closure, and modeled economic inputs without silently changing the released enterprise finance-platform v0.1 perimeter.
 
 ## Public repository and wiki
 

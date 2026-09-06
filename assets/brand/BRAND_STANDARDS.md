@@ -1,7 +1,7 @@
 # Sable Harbor Brand Standards
 
-**Version:** 0.2.0  
-**Date:** 2026-09-01  
+**Version:** 0.2.1
+**Date:** 2026-09-05
 **Status:** Production candidate identity system; does not independently create or change canon
 
 ## 1. Governing idea
@@ -58,7 +58,13 @@ Digital HEX/RGB values are controlling. CMYK values below are mathematical worki
 
 ## 6. Reproduction rules
 
-- Use SVG as the production source of truth; use PNG for convenience.
+- Use SVG as the production source of truth for identities without an approved
+  source-art exception.
+- The controlling J2 mark and primary-horizontal PNGs are approved source artwork;
+  their SVGs are vector derivatives.
+- The four owner-approved Pale Sun/Red Wash PNGs listed in
+  `red_wash_visual_manifest.json` are later byte-exact source-art overrides. Do not
+  regenerate, recompress, redraw, or supersede them with legacy generated variants.
 - Use the supplied reverse asset rather than manually inverting a primary file.
 - Do not distort, rotate, bevel, shadow, outline, add gradients, or recolor outside the approved palette.
 - Do not place the mark on visually noisy imagery without an adequate solid field.
@@ -73,10 +79,12 @@ Digital HEX/RGB values are controlling. CMYK values below are mathematical worki
 - **Memoranda:** primary horizontal lockup with explicit `TO`, `FROM`, `DATE`, and `SUBJECT` fields.
 - **Reports:** stacked lockup on covers; primary horizontal in body headers.
 - **Presentations:** reverse lockup on dark title fields; current business-line lockup on unit-specific sections.
-- **Wiki and README:** SVG assets linked directly from `assets/brand/logos/`.
+- **Wiki and README:** use the applicable controlling source form from
+  `assets/brand/`; do not substitute a legacy SVG where an approved PNG override
+  controls.
 
 ## 8. Governance
 
-The controlling naming source is [`docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.2.md`](../../docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.2.md). Artwork does not lock legal entities, reporting lines, titles, economics, offices, public domains, contact details, or other OPEN decisions.
+The controlling naming source is [`docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md`](../../docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md), together with later controlled canon and decision-register addenda. Artwork does not lock legal entities, reporting lines, titles, economics, offices, public domains, contact details, or other OPEN decisions. Where this document's earlier v0.2.0 PDF reproduction differs from the September 5 approved-raster manifest, the later manifest controls the artwork source and preservation rule.
 
 Before external commercial adoption, review [`docs/legal/PRELIMINARY_NAME_AND_MARK_SCREEN.md`](../../docs/legal/PRELIMINARY_NAME_AND_MARK_SCREEN.md) and obtain qualified trademark counsel.

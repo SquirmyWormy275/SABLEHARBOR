@@ -30,10 +30,11 @@ Seven US Letter SVG working templates are under [`letterhead/business-lines/`](l
 
 ### Standards
 
-- Brand standards: Markdown, PDF
+- Current brand standards: `assets/brand/BRAND_STANDARDS.md` (v0.2.1)
+- Historical reproduction reference: `guides/sable-harbor-brand-standards-v0.2.0.pdf`
 - Font provenance: Markdown
 - Preliminary name-and-mark screen: Markdown
 
 ## Use
 
-Use SVG files as vector source; use DOCX and PPTX for editable office documents; use PDFs as reproduction references after local proofing. Replace bracketed placeholders and preserve logo geometry and clear space. Do not represent a linked-logo working template as an accepted offline/archival unit letterhead.
+Use SVG files as vector source except where an approved source-art manifest specifies a controlling PNG; use DOCX and PPTX for editable office documents; use PDFs as reproduction references after local proofing. Replace bracketed placeholders and preserve logo geometry and clear space. Do not represent a linked-logo working template as an accepted offline/archival unit letterhead. This retained corporate-collateral subtree has no current cryptographic manifest and is not a J2 stationery release.

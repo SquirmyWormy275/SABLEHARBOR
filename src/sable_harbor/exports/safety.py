@@ -151,17 +151,24 @@ def staged_package_directory(
             shutil.rmtree(staging)
 
 
-def _scan_bytes(data: bytes, label: str, failures: list[str]) -> None:
+def _scan_bytes(
+    data: bytes,
+    label: str,
+    failures: list[str],
+    *,
+    scan_pii_shapes: bool = True,
+) -> None:
     lowered = data.lower()
     for marker in FORBIDDEN_BYTES:
         if marker.lower() in lowered:
             failures.append(f"forbidden marker {marker!r} in {label}")
     if FORBIDDEN_SEMANTIC_FIELD.search(data):
         failures.append(f"hidden-truth/evaluator field marker in {label}")
-    if EMAIL_ADDRESS.search(data):
-        failures.append(f"email-address-shaped value in {label}")
-    if US_SSN.search(data):
-        failures.append(f"US-SSN-shaped value in {label}")
+    if scan_pii_shapes:
+        if EMAIL_ADDRESS.search(data):
+            failures.append(f"email-address-shaped value in {label}")
+        if US_SSN.search(data):
+            failures.append(f"US-SSN-shaped value in {label}")
 
 
 def _scan_zip(data: bytes, label: str, failures: list[str], depth: int = 0) -> None:
@@ -227,8 +234,16 @@ def scan_generated_artifacts(root: Path) -> list[str]:
     paths = [root] if root.is_file() else sorted(item for item in root.rglob("*") if item.is_file())
     for path in paths:
         data = path.read_bytes()
-        _scan_bytes(data, str(path), failures)
         suffix = path.suffix.lower()
+        # Opaque SQLite page bytes can accidentally resemble an email address or SSN.
+        # Scan their high-signal byte markers here, then inspect schema and every
+        # textual cell below for semantic fields, credentials, paths, and PII.
+        _scan_bytes(
+            data,
+            str(path),
+            failures,
+            scan_pii_shapes=suffix not in {".sqlite", ".db", ".sqlite3"},
+        )
         if suffix in {".zip", ".xlsx", ".xlsm"}:
             try:
                 _scan_zip(data, str(path), failures)

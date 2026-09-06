@@ -19,11 +19,14 @@ coverage.xml
 htmlcov/
 build/
 dist/
+/red_wash/generated/
+/red_wash/dist/
 var/*
 !var/.gitkeep
 data/generated/
 workbooks/outputs/*.xlsx
 workbooks/outputs/workbook-suite-manifest.json
 workbooks/outputs/SHA256SUMS.txt
+workbooks/outputs/.sable-harbor-generated.json
 reports/*.xlsx
 releases/generated/

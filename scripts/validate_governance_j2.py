@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import hashlib, json, re, subprocess, sys
+import zipfile
 from pathlib import Path
 
 R = Path(__file__).resolve().parents[1]
@@ -61,20 +62,49 @@ need(len({p['id'] for p in pin['portals']}) == 9, 'Pinakes IDs must be unique')
 policy = json.loads(read('docs/j2/structured/daedalus_policy.json'))
 need(policy['authority'] == {'authoritative_record_write': False, 'self_promotion': False, 'institutional_authority': False}, 'Daedalus hard boundaries mismatch')
 
-# Official J2 identity and stationery.
+# Official J2 identity. Dedicated stationery is not part of the current package.
 for p in [
     'assets/brand/logos/j2__mark.png',
     'assets/brand/logos/j2__primary-horizontal.png',
     'assets/brand/logos/j2__mark.svg',
     'assets/brand/logos/j2__primary-horizontal.svg',
-    'assets/brand/collateral/letterhead/j2/j2-letterhead-us-letter.svg',
-    'assets/brand/collateral/letterhead/j2/j2-letterhead-a4.svg',
 ]:
     need((R / p).is_file(), f'missing {p}')
-for p in ['assets/brand/manifest.json', 'assets/brand/collateral/j2_manifest.json']:
+for p in ['assets/brand/manifest.json', 'assets/brand/red_wash_visual_manifest.json', 'assets/brand/packages/manifest.json']:
     need((R / p).is_file(), f'missing manifest {p}')
     if (R / p).is_file():
         json.loads(read(p))
+for p in [
+    'assets/brand/collateral/j2_manifest.json',
+    'assets/brand/collateral/manifest.json',
+    'assets/brand/collateral/letterhead/j2/j2-letterhead-us-letter.svg',
+    'assets/brand/collateral/letterhead/j2/j2-letterhead-a4.svg',
+]:
+    need(not (R / p).exists(), f'stale J2 stationery artifact must not reappear: {p}')
+identity_record = read('docs/organization/J2_IDENTITY_AND_STATIONERY.md')
+need('dedicated stationery implementation OPEN' in identity_record, 'J2 stationery implementation state missing')
+need('distributes no dedicated J2 letterhead' in identity_record, 'J2 package boundary missing')
+package_manifest = json.loads(read('assets/brand/packages/manifest.json'))
+packages = package_manifest.get('packages', [])
+need(len(packages) == 1, 'brand package register must contain exactly one historical archive')
+if len(packages) == 1:
+    package = packages[0]
+    need(package.get('artifact_state') == 'SUPERSEDED', 'legacy brand archive state mismatch')
+    need(package.get('retention_role') == 'HISTORICAL_SNAPSHOT', 'legacy brand archive retention role mismatch')
+    need(package.get('distribution_state') == 'DO_NOT_DISTRIBUTE', 'legacy brand archive must be quarantined')
+    need(package.get('canon_effective_through') == '2026-09-02', 'legacy brand archive cutoff mismatch')
+    need(package.get('current_replacement') is None, 'brand package register invents a current replacement')
+    archive = R / package['path']
+    need(archive.is_file(), f'missing historical brand archive {package["path"]}')
+    if archive.is_file():
+        need(hashlib.sha256(archive.read_bytes()).hexdigest() == package['sha256'], 'historical brand archive hash drift')
+        with zipfile.ZipFile(archive) as bundle:
+            members = set(bundle.namelist())
+        need('collateral/j2_manifest.json' in members, 'historical archive content disclosure mismatch')
+        need('collateral/letterhead/j2/j2-letterhead-us-letter.svg' in members, 'historical J2 stationery disclosure mismatch')
+pale_sun_letterhead = read('assets/brand/collateral/letterhead/business-lines/pale-sun-letterhead-us-letter.svg')
+need('assets/brand/logos/pale_sun__canonical.png' in pale_sun_letterhead, 'Pale Sun letterhead does not use approved PNG')
+need('pale-sun__primary-horizontal.svg' not in pale_sun_letterhead, 'Pale Sun letterhead uses superseded SVG')
 
 # JAG billets: exact five-billet package.
 jag = read('docs/j2/JUNCTION_ADVISORY_GROUP.md')
@@ -111,6 +141,9 @@ if manifest.is_file():
             need(hashlib.sha256(pub.read_bytes()).hexdigest() == a['sha256'], f"publication hash drift: {a['publication']}")
             info = subprocess.run(['pdfinfo', str(pub)], capture_output=True, text=True).stdout
             need('612 x 792 pts (letter)' in info, f"publication not US Letter: {a['publication']}")
+            need('CreationDate:' not in info, f"publication has mutable creation date: {a['publication']}")
+            need('ModDate:' not in info, f"publication has mutable modification date: {a['publication']}")
+            need('Metadata Stream: no' in info, f"publication has mutable metadata stream: {a['publication']}")
             extracted = subprocess.run(['pdftotext', str(pub), '-'], capture_output=True, text=True).stdout
             need('Controlled publication' in extracted, f"publication missing controlled footer: {a['publication']}")
 

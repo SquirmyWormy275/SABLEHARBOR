@@ -1,11 +1,20 @@
 {
   "packages": [
     {
-      "name": "Sable Harbor Logo System",
+      "name": "Sable Harbor Logo System (historical snapshot)",
       "version": "0.1.0",
       "path": "assets/brand/packages/sable-harbor-logo-system-v0.1.0.zip",
       "sha256": "8c5d9c6c0de8163896a6ddc9c318f90a4927f5b2e54eba081c829aac20301ecd",
+      "artifact_state": "SUPERSEDED",
+      "retention_role": "HISTORICAL_SNAPSHOT",
+      "distribution_state": "DO_NOT_DISTRIBUTE",
+      "canon_effective_through": "2026-09-02",
+      "superseded_on": "2026-09-05",
+      "supersession_reason": "Archive predates the approved Pale Sun/Red Wash raster-source overrides and contains J2 stationery that is not part of the current collateral tree.",
+      "current_replacement": null,
       "includes_approved_j2_assets": true,
+      "includes_noncurrent_j2_stationery": true,
+      "predates_red_wash_visual_manifest": true,
       "j2_controlling_assets": [
         "assets/brand/logos/j2__primary-horizontal.png",
         "assets/brand/logos/j2__mark.png"
