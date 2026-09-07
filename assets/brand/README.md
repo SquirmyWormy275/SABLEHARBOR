@@ -113,3 +113,11 @@ All rights reserved unless a specific repository file states otherwise.
 The [September 7 identity decision](../../docs/canon/EMBERLINE_VISUAL_IDENTITY_2026-09-07.md) locks the heavy slab-serif wordmark, coal ridge/seams, oxide-red roundel and ivory field. The [horizontal PNG](logos/emberline__primary-horizontal.png) is the sole approved form and overrides the general SVG-first rule. Its exact bytes are recorded in [emberline_visual_manifest.json](emberline_visual_manifest.json).
 
 Earlier mark, horizontal and reverse SVG/PNG forms are [archived as superseded artwork](history/emberline/2026-09-07/README.md). They are excluded from the current production manifest. The legacy generator reproduces its historical design system; its outputs and old ZIP are not current Emberline source artwork.
+
+## External company identities
+
+| Identity | Relationship | Approved artwork |
+|---|---|---|
+| Kelly Gang Mining | Independent fictional Tasmanian operator; host for Cradle's Stream 17 recovery intervention. | [Stacked PNG](logos/kelly-gang-mining__stacked.png), controlled by [KGM-VIS-001](../../docs/canon/KELLY_GANG_MINING_VISUAL_IDENTITY_2026-09-07.md) and [visual manifest](kelly_gang_mining_visual_manifest.json). |
+
+These identities support the synthetic enterprise's company and counterparty records. Their inclusion in the artwork inventory does not make them Sable Harbor subsidiaries or current business lines. Kelly Gang Mining's exact approved PNG overrides the general SVG-first rule; only the complete stacked emblem is approved.

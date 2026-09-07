@@ -12,3 +12,5 @@ For fact state and unresolved matters, use the [decision register](../canon/DECI
 The historical Pittsburgh outpost is **Klein**, rechartered as Willow in 2022. Its [name and approved identity](../canon/KLEIN_NAME_AND_IDENTITY_2026-09-07.md) and [corporate record](../organization/WILLOW_KLEIN_CORPORATE_RECORD.md) distinguish it from Emberline.
 
 Emberline's [approved historical identity](../canon/EMBERLINE_VISUAL_IDENTITY_2026-09-07.md) uses the owner-selected coal-company logo; its earlier geometric artwork is superseded.
+
+[Kelly Gang Mining's approved emblem](../canon/KELLY_GANG_MINING_VISUAL_IDENTITY_2026-09-07.md) identifies the fictional external Tasmanian operator hosting Cradle's Stream 17 intervention.

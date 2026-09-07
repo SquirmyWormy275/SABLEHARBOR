@@ -1,6 +1,6 @@
 # SABLE HARBOR CONTROLLED DOCUMENT INDEX
 
-**Index version:** 1.0.14 | **As of:** September 7, 2026
+**Index version:** 1.0.15 | **As of:** September 7, 2026
 
 ## Authority order
 
@@ -156,3 +156,9 @@ The v0.3 lore, base decision register, original lineage and other finance-pinned
 - [Approved horizontal logo](../assets/brand/logos/emberline__primary-horizontal.png) and [source/provenance manifest](../assets/brand/emberline_visual_manifest.json)
 - [Superseded artwork and preservation record](../assets/brand/history/emberline/2026-09-07/README.md)
 - [Brand validation](../assets/brand/VALIDATION.md)
+
+## September 7 Kelly Gang Mining artwork approval
+
+- [Controlling visual identity decision](canon/KELLY_GANG_MINING_VISUAL_IDENTITY_2026-09-07.md)
+- [Approved stacked emblem](../assets/brand/logos/kelly-gang-mining__stacked.png) and [source manifest](../assets/brand/kelly_gang_mining_visual_manifest.json)
+- [Cradle host relationship](canon/CRADLE_CLOSEOUT_2026-09-06.md) and [brand validation](../assets/brand/VALIDATION.md)

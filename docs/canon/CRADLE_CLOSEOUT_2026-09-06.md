@@ -223,3 +223,7 @@ After this record:
 No additional owner decision is required to close Project Cradle canon.
 
 Remaining enterprise-wide implementation or governance work must not be relabeled as an unresolved Cradle canon decision merely because Cradle is one consumer of it.
+
+## Kelly Gang Mining visual identity — September 7
+
+The [KGM-VIS-001 artwork decision](KELLY_GANG_MINING_VISUAL_IDENTITY_2026-09-07.md) locks the owner-selected Ned Kelly/two-pickaxe logo for the existing Stream 17 host operator. It changes no company relationship, host authority, recovery right or financial assumption in this closeout.

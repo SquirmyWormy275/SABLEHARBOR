@@ -77,3 +77,14 @@ The QA contact sheet used during generation is intentionally excluded from `asse
 - Historical brand distribution ZIP and all prior release/source-lock files remain unchanged.
 
 The integration PR records the repository validation and full CI results before merge. The [controlling decision](../../docs/canon/EMBERLINE_VISUAL_IDENTITY_2026-09-07.md) defines the approval and supersession scope.
+
+## September 7 Kelly Gang Mining source approval
+
+- Exact selected-output comparison, PNG structural verification and full pixel decode: PASS.
+- Approved source: `logos/kelly-gang-mining__stacked.png`, 1254 × 1254 RGBA pixels, 1,509,892 bytes.
+- SHA-256: `2b6958413abe5989120a5ed9b85480750cb385a397cb8228fa871f1a392f22e6`.
+- One approved stacked form is recorded in the production inventory and [dedicated manifest](kelly_gang_mining_visual_manifest.json).
+- Kelly Gang Mining remains an external host operator. Its addition does not change the seven-current-business-line set.
+- Earlier approved source art, finance inputs and historical archives remain byte-preserved.
+
+The integration PR records canon, catalog, organization, hygiene, public-content and full CI checks before merge.

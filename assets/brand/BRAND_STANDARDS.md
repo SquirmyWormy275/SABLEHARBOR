@@ -1,6 +1,6 @@
 # Sable Harbor Brand Standards
 
-**Version:** 0.2.3
+**Version:** 0.2.4
 **Date:** 2026-09-07
 **Status:** Production candidate identity system; does not independently create or change canon
 
@@ -97,3 +97,9 @@ The September 7 selected PNG and [Klein visual manifest](klein_visual_manifest.j
 The [September 7 decision](../../docs/canon/EMBERLINE_VISUAL_IDENTITY_2026-09-07.md) and [visual manifest](emberline_visual_manifest.json) control Emberline's coal ridge/seam emblem, heavy lettering, oxide red, coal black and ivory source artwork. The selected coal ridge is an approved motif. The earlier geometric system and all six old Emberline SVG/PNG files are superseded.
 
 Use the exact approved horizontal PNG, including its ivory field. No current reverse, one-color, isolated mark or vector master is supplied. Do not substitute a historical SVG or manufacture additional approved variants. Emberline remains a historical program and is not added to the seven current business lines.
+
+## Kelly Gang Mining — external company identity
+
+The [approved visual decision](../../docs/canon/KELLY_GANG_MINING_VISUAL_IDENTITY_2026-09-07.md) controls the Ned Kelly figure, two held pickaxes and complete stacked company emblem. These are approved motifs for this specific artwork. Preserve the PNG and its alpha channel as recorded in [the visual manifest](kelly_gang_mining_visual_manifest.json).
+
+Kelly Gang Mining is an external Cradle host operator. It is not an additional Sable Harbor business line or a new subsidiary. No alternate production forms are supplied.
