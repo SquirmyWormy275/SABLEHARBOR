@@ -47,7 +47,7 @@ The connected GitHub interface used for this cleanup can inspect and move branch
 
 ## Geo reconciliation — September 7, 2026
 
-The rc4 successor on `geo/canon-reconciliation-2026-09-07` reconciles accepted
+The rc4 successor, PR #105 on `geo/canon-reconciliation-2026-09-07`, reconciles accepted
 Cradle/Bedford, Klein/Fort and industrial geography without merging stale canon.
 PRs #94 and #96 are superseded **after the successor lands**; preserve both heads.
 Their complete Geo path/blob inventories, including historical ZIPs, are in
@@ -57,3 +57,6 @@ No standalone open Geo issue was found in the live issue inventory. Unrelated
 enterprise issues remain outside this closeout. Remaining Geo work is explicitly
 listed in the [50-section program disposition](../../geospatial/docs/PROGRAM_CLOSEOUT_MATRIX.md);
 framework acceptance does not close the entire original program.
+
+Remaining Geo work is tracked as #106 (sites/occupancy), #107 (early railway and
+detailed engineering), and #108 (semantic census and temporal program).

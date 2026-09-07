@@ -9,6 +9,16 @@ from sable_harbor.exports.safety import scan_generated_artifacts
 FORBIDDEN = ("ghp_", "github_pat_", "sk-proj-", "BEGIN PRIVATE KEY")
 MAX_BYTES = 10 * 1024 * 1024
 ALLOWED_LARGE_PUBLIC_ARTIFACTS = {
+    # Reviewed rc4 GeoPackage; public reference data and fictional case geometry.
+    Path("geospatial/master/sable_harbor_master_v0.1.gpkg"): (
+        40 * 1024 * 1024,
+        "0a1489e6e4605373cf0d25dd6e25a020c8d922ee9ec6c052d9410ad4e2303f0f",
+    ),
+    # Byte-identical preservation copy of the already approved public database below.
+    Path("geospatial/sources/canon_snapshot/blackridge/data/public/databases/blackridge_m00_v0.1.0.sqlite3"): (
+        20 * 1024 * 1024,
+        "2e6622d0e710f784c49cd6b773514820dbe247c4ec50a18f4c9cbbcf784587d5",
+    ),
     Path("blackridge/data/public/databases/blackridge_m00_v0.1.0.sqlite3"): (
         20 * 1024 * 1024,
         "2e6622d0e710f784c49cd6b773514820dbe247c4ec50a18f4c9cbbcf784587d5",

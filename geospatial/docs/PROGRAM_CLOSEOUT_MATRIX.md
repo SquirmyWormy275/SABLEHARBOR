@@ -18,11 +18,13 @@ PR #94 is the original partial addendum; #96 is the superseded rc3 checkpoint. T
 | Legal perimeter | SHI → SHIH → Pale Sun → RWH; SHIH → ARU → BS&T; Northstar Minerals external |
 | Source inventory | 919 main-tree files, 78,145 discovery occurrences, zero extraction errors; OCR and semantic review separately qualified |
 
+Successor: [PR #105](https://github.com/SquirmyWormy275/SABLEHARBOR/pull/105).
+
 ## Remaining work
 
-1. **Exact sites and occupancy history:** HQ, Fort, Bedford, Demotte, Kelly Gang Mining; Klein/Fort linkage; J2 residential campus; Blackridge precise location; Wallaby/Glasshouse; provisional and former offices; hosting and conversion destination.
-2. **Engineering and early railway geometry:** survey-grade transitions/profiles, actual land/access records, early coal/1954 and abandoned alignments, exact external client-site footprints. The current accepted synthetic estate is already implemented.
-3. **Complete geographic program:** semantic adjudication of discovery occurrences, complete enterprise asset histories, remaining temporal map series and future interactive views.
+1. **Exact sites and occupancy history ([#106](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/106)):** HQ, Fort, Bedford, Demotte, Kelly Gang Mining; Klein/Fort linkage; J2 residential campus; Blackridge precise location; Wallaby/Glasshouse; provisional and former offices; hosting and conversion destination.
+2. **Engineering and early railway geometry ([#107](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/107)):** survey-grade transitions/profiles, actual land/access records, early coal/1954 and abandoned alignments, exact external client-site footprints. The current accepted synthetic estate is already implemented.
+3. **Complete geographic program ([#108](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/108)):** semantic adjudication of discovery occurrences, complete enterprise asset histories, remaining temporal map series and future interactive views.
 
 Cradle business canon, Fort functions, current names, current railway case and January 7 acquisition do not require renewed owner decisions. Uranium custody remains OPEN_GATED independently of geography. Existing enterprise issues #11, #12, #18, #19, #21, #22, #24, #33, #34, #37, #38, #44 and #88 are outside this closure. The initial live issue inventory had no standalone open Geo issue; #94 and #96 were the open Geo PRs.
 
