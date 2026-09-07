@@ -1,0 +1,66 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "SH-GEO-0003",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -81.49,
+              38.217
+            ],
+            [
+              -81.49,
+              38.27
+            ],
+            [
+              -81.582,
+              38.27
+            ],
+            [
+              -81.582,
+              38.217
+            ],
+            [
+              -81.49,
+              38.217
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "feature_id": "SH-GEO-0003",
+        "object_id": "SH-SITE-0005",
+        "canonical_name": "Cradle Belle / Kanawha corridor search envelope",
+        "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+        "real_world_relation": "WITHIN_REAL_DISTRICT",
+        "canon_status": "HISTORICAL",
+        "geometry_status": "SUPERSEDED_EDITORIAL_SITING",
+        "location_method": "ENGINEERED_FROM_CONSTRAINTS",
+        "precision_class": "CORRIDOR_SCALE",
+        "horizontal_accuracy_m": null,
+        "vertical_accuracy_m": null,
+        "public_precision": "SEARCH_AREA",
+        "source_id": "SRC-40E5C203B8CD",
+        "decision_id": "GEO-D003",
+        "valid_from": null,
+        "valid_to": null,
+        "recorded_at": "2026-09-06T02:29:42+00:00",
+        "superseded_at": "2026-09-07T16:00:00+00:00",
+        "world_state_date": "2026-09-05",
+        "source_effective_date": "2026-09-05",
+        "owner_entity": null,
+        "operator_entity": null,
+        "reference_source_ids": [
+          "REF-KANAWHA-RAIL"
+        ],
+        "construction_method": "Bounding study window chosen around named handover context; Red Wash clipped to generalized Sweetwater county geometry.",
+        "geometry_area_acres": 11708.08408306448,
+        "notes": "Superseded Belle/Kanawha proposal; no actual Cradle occupancy or relocation implied."
+      }
+    }
+  ]
+}

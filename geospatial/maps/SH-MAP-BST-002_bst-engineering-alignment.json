@@ -1,0 +1,36 @@
+{
+  "map_id": "SH-MAP-BST-002_bst-engineering-alignment",
+  "title": "BS&T / accepted case geography",
+  "version": "0.1.0-rc4",
+  "effective_date": "2026-09-07",
+  "world_state": "CANON_RECONCILED_2026-09-07",
+  "canon_status": "LOCKED_DERIVED_IMPLEMENTATION",
+  "source_package_version": "0.1.0-rc4",
+  "source_commit": "d91a22c35c91b213204411421de88815f27d8e16",
+  "source_geopackage_sha256": "0a1489e6e4605373cf0d25dd6e25a020c8d922ee9ec6c052d9410ad4e2303f0f",
+  "projection": "EPSG:26913",
+  "build_timestamp": "2026-09-07T16:00:00+00:00",
+  "builder": "geospatial/scripts/render_maps.py",
+  "review_status": "RENDERED_PENDING_VISUAL_QA",
+  "layers": [
+    "rail_segments",
+    "roads",
+    "rail_nodes",
+    "rail_bridges",
+    "rail_crossings"
+  ],
+  "files": {
+    "pdf": {
+      "path": "SH-MAP-BST-002_bst-engineering-alignment.pdf",
+      "sha256": "856f00f66089276dcaf23df6665f57bfdf0dd3f06c55b6bcc53ba3a0e38f33f2"
+    },
+    "svg": {
+      "path": "SH-MAP-BST-002_bst-engineering-alignment.svg",
+      "sha256": "e5e6b5b0ef5932eaf0c6aa567e68b6007e95958b387eb752ce74b31da449edb7"
+    },
+    "png": {
+      "path": "SH-MAP-BST-002_bst-engineering-alignment.png",
+      "sha256": "acbc90c0fdf12089a161903b35660b5404e7ba2ab4690370cec490cfb5cdefaa"
+    }
+  }
+}

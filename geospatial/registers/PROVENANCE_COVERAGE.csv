@@ -1,0 +1,176 @@
+object_id,source_id,source_path,source_locator,decision_id,status
+SH-SITE-0001,SRC-1412A4959F32,docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-03.md,line:36,GEO-D001,CANON_CONSTRAINED
+SH-SITE-0002,SRC-CURRENT-CURRENT-LORE,docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md,line:579,GEO-D017,CONFLICTING
+SH-SITE-0003,SRC-CURRENT-FORT,docs/canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md,line:75,GEO-D017,CANON_CONSTRAINED
+SH-SITE-0004,SRC-A6FFA504C779,docs/canon/DECISION_REGISTER.md,line:88,GEO-D007,HISTORICAL
+SH-SITE-0005,SRC-CURRENT-CRADLE,docs/canon/CRADLE_CLOSEOUT_2026-09-06.md,line:136,GEO-D016,CANON_CONSTRAINED
+SH-SITE-0006,SRC-ADDENDUM-20260905,geospatial/sources/GOVERNING_CANON_ADDENDUM_2026-09-05.md,section:2.1-2.3,GEO-D010,CANON_SITED
+SH-SITE-0007,SRC-CURRENT-OPS,industrial/source/operations.json,/geography,GEO-D018,ENGINEERED
+SH-SITE-0008,SRC-CURRENT-OPS,industrial/source/operations.json,/facilities/0,GEO-D018,ENGINEERED
+SH-SITE-0009,SRC-9525A89B2336,docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md,line:68,GEO-D008,CANON_CONSTRAINED
+SH-SITE-0010,SRC-A6FFA504C779,docs/canon/DECISION_REGISTER.md,line:27,GEO-D008,CANON_CONSTRAINED
+SH-SITE-0011,SRC-D038D3A87100,docs/canon/SABLE_HARBOR_CANONICAL_ARCHITECTURE_HANDOVER.md,line:655,GEO-D008,PROPOSED
+SH-SITE-0012,SRC-D038D3A87100,docs/canon/SABLE_HARBOR_CANONICAL_ARCHITECTURE_HANDOVER.md,line:656,GEO-D008,PROPOSED
+SH-SITE-0013,SRC-D038D3A87100,docs/canon/SABLE_HARBOR_CANONICAL_ARCHITECTURE_HANDOVER.md,line:657,GEO-D008,PROPOSED
+SH-SITE-0014,SRC-A3ABC1DA40B3,docs/j2/EDUCATION.md,line:6,GEO-D008,UNKNOWN
+SH-SITE-0015,SRC-0DA566D3CF72,docs/j2/J2_HEADQUARTERS.md,line:6,GEO-D008,UNKNOWN
+SH-SITE-0016,SRC-F57EE60ABBEA,docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md,line:352,GEO-D008,UNKNOWN
+SH-SITE-0017,SRC-D038D3A87100,docs/canon/SABLE_HARBOR_CANONICAL_ARCHITECTURE_HANDOVER.md,line:1097,GEO-D008,UNKNOWN
+SH-SITE-0018,SRC-A6FFA504C779,docs/canon/DECISION_REGISTER.md,line:203,GEO-D008,UNKNOWN
+SH-SITE-0019,SRC-BE31B2023403,docs/organization/ARU_BST_AND_ADVISORY.md,line:52,GEO-D008,UNKNOWN
+SH-SITE-0020,SRC-CURRENT-OPS,industrial/source/operations.json,/facilities,GEO-D018,ENGINEERED
+SH-SITE-0021,SRC-CURRENT-OPS,industrial/source/operations.json,/contract_facility_assignments,GEO-D018,ENGINEERED
+SH-SITE-0022,SRC-9525A89B2336,docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md,line:1337,GEO-D008,UNKNOWN
+SH-SITE-0023,SRC-CURRENT-CRADLE,docs/canon/CRADLE_CLOSEOUT_2026-09-06.md,line:49,GEO-D016,CANON_CONSTRAINED
+SH-SITE-0024,SRC-A6FFA504C779,docs/canon/DECISION_REGISTER.md,line:101,GEO-D008,UNKNOWN
+SH-SITE-0025,SRC-748B20676052,docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05.md,line:166,GEO-D008,UNKNOWN
+SH-SITE-0026,SRC-40E5C203B8CD,geospatial/sources/MASTER_EXECUTION_MANDATE.md,line:2572,GEO-D008,UNKNOWN
+SH-RAIL-0001,SRC-CURRENT-OPS,industrial/source/operations.json,/geography,GEO-D018,ENGINEERED
+SH-RAIL-0002,SRC-CURRENT-OPS,industrial/source/operations.json,/geography,GEO-D018,ENGINEERED
+SH-RAIL-0003,SRC-9C0F6B8A1E54,docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-05_RED_WASH.md,line:41,GEO-D008,UNKNOWN
+SH-REF-0001,SRC-40E5C203B8CD,geospatial/sources/MASTER_EXECUTION_MANDATE.md,line:1498,GEO-D008,REAL_REFERENCE
+SH-REF-0002,SRC-40E5C203B8CD,geospatial/sources/MASTER_EXECUTION_MANDATE.md,line:1499,GEO-D008,REAL_REFERENCE
+SH-REF-0003,SRC-9525A89B2336,docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md,line:706,GEO-D008,REAL_REFERENCE
+SH-REF-0004,SRC-40E5C203B8CD,geospatial/sources/MASTER_EXECUTION_MANDATE.md,line:320,GEO-D008,REAL_REFERENCE
+SH-REF-0005,SRC-A6FFA504C779,docs/canon/DECISION_REGISTER.md,line:88,GEO-D008,REAL_REFERENCE
+SH-REF-0006,SRC-40E5C203B8CD,geospatial/sources/MASTER_EXECUTION_MANDATE.md,line:347,GEO-D008,REAL_REFERENCE
+SH-REF-0007,SRC-40E5C203B8CD,geospatial/sources/MASTER_EXECUTION_MANDATE.md,line:360,GEO-D008,REAL_REFERENCE
+SH-REF-0008,SRC-40E5C203B8CD,geospatial/sources/MASTER_EXECUTION_MANDATE.md,line:446,GEO-D008,REAL_REFERENCE
+SH-REF-0009,SRC-40E5C203B8CD,geospatial/sources/MASTER_EXECUTION_MANDATE.md,line:390,GEO-D008,REAL_REFERENCE
+SH-REF-0010,SRC-40E5C203B8CD,geospatial/sources/MASTER_EXECUTION_MANDATE.md,line:391,GEO-D008,REAL_REFERENCE
+SH-REF-0011,SRC-8A959F20B570,red_wash/docs/02_GEOLOGICAL_TECHNICAL_REPORT.md,line:7,GEO-D008,REAL_REFERENCE
+SH-REF-0012,SRC-9525A89B2336,docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md,line:68,GEO-D008,REAL_REFERENCE
+SH-REF-0013,SRC-9525A89B2336,docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md,line:1089,GEO-D008,REAL_REFERENCE
+SH-REF-0014,SRC-9525A89B2336,docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md,line:1091,GEO-D008,REAL_REFERENCE
+SH-REF-0015,SRC-9525A89B2336,docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md,line:1093,GEO-D008,REAL_REFERENCE
+SH-REF-0016,SRC-9525A89B2336,docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md,line:1110,GEO-D008,REAL_REFERENCE
+SH-REF-0017,SRC-A6FFA504C779,docs/canon/DECISION_REGISTER.md,line:160,GEO-D008,REAL_REFERENCE
+SH-REF-0018,SRC-1BC6AF8E56F7,docs/canon/SABLE_HARBOR_CONTINUITY_AUDIT_v0.2.md,line:409,GEO-D008,REAL_REFERENCE
+SH-REF-0019,SRC-9525A89B2336,docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md,line:620,GEO-D008,REAL_REFERENCE
+SH-REF-0020,SRC-9525A89B2336,docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md,line:620,GEO-D008,REAL_REFERENCE
+SH-REF-0021,SRC-9525A89B2336,docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md,line:620,GEO-D008,REAL_REFERENCE
+SH-REF-0022,SRC-9525A89B2336,docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md,line:867,GEO-D008,REAL_REFERENCE
+SH-REF-0023,SRC-9525A89B2336,docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md,line:883,GEO-D008,REAL_REFERENCE
+SH-REF-0024,SRC-6529D6724FBF,docs/legal/PRELIMINARY_NAME_AND_MARK_SCREEN.md,line:113,GEO-D008,REAL_REFERENCE
+SH-REF-0025,SRC-F57EE60ABBEA,docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md,line:341,GEO-D008,REAL_REFERENCE
+SH-REF-0026,SRC-F57EE60ABBEA,docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md,line:341,GEO-D008,REAL_REFERENCE
+SH-FAC-RW-001,SRC-7B82D38FA142,assets/brand/maps/red_wash__site_overview.png,site key / visible label: Mine Portal (Decline),GEO-D008,UNKNOWN
+SH-FAC-RW-002,SRC-7B82D38FA142,assets/brand/maps/red_wash__site_overview.png,site key / visible label: Surface Operations,GEO-D008,UNKNOWN
+SH-FAC-RW-003,SRC-7B82D38FA142,assets/brand/maps/red_wash__site_overview.png,site key / visible label: Ventilation Raise (Exhaust),GEO-D008,UNKNOWN
+SH-FAC-RW-004,SRC-7B82D38FA142,assets/brand/maps/red_wash__site_overview.png,site key / visible label: Fresh Air Intake,GEO-D008,UNKNOWN
+SH-FAC-RW-005,SRC-7B82D38FA142,assets/brand/maps/red_wash__site_overview.png,site key / visible label: Processing Plant,GEO-D008,UNKNOWN
+SH-FAC-RW-006,SRC-7B82D38FA142,assets/brand/maps/red_wash__site_overview.png,site key / visible label: Loadout (Rail/Truck),GEO-D008,UNKNOWN
+SH-FAC-RW-007,SRC-7B82D38FA142,assets/brand/maps/red_wash__site_overview.png,site key / visible label: Tailings Management Facility,GEO-D008,UNKNOWN
+SH-FAC-RW-008,SRC-7B82D38FA142,assets/brand/maps/red_wash__site_overview.png,site key / visible label: Administration / Dry,GEO-D008,UNKNOWN
+SH-FAC-RW-009,SRC-7B82D38FA142,assets/brand/maps/red_wash__site_overview.png,site key / visible label: Power Substation,GEO-D008,UNKNOWN
+SH-FAC-RW-010,SRC-7B82D38FA142,assets/brand/maps/red_wash__site_overview.png,site key / visible label: Maintenance,GEO-D008,UNKNOWN
+SH-FAC-RW-011,SRC-7B82D38FA142,assets/brand/maps/red_wash__site_overview.png,site key / visible label: Mine Rescue / Emergency,GEO-D008,UNKNOWN
+SH-FAC-RW-012,SRC-7B82D38FA142,assets/brand/maps/red_wash__site_overview.png,site key / visible label: Fuel & Explosives Storage,GEO-D008,UNKNOWN
+SH-FAC-RW-013,SRC-7B82D38FA142,assets/brand/maps/red_wash__site_overview.png,site key / visible label: Water Management,GEO-D008,UNKNOWN
+SH-FAC-RW-L1,SRC-4BCEA6C47614,assets/brand/maps/red_wash__underground_plan.png,underground level 1,GEO-D008,UNKNOWN
+SH-FAC-RW-L2,SRC-4BCEA6C47614,assets/brand/maps/red_wash__underground_plan.png,underground level 2,GEO-D008,UNKNOWN
+SH-FAC-RW-L3,SRC-4BCEA6C47614,assets/brand/maps/red_wash__underground_plan.png,underground level 3,GEO-D008,UNKNOWN
+SH-FAC-RW-L4,SRC-4BCEA6C47614,assets/brand/maps/red_wash__underground_plan.png,underground level 4,GEO-D008,UNKNOWN
+SH-FAC-RW-L5,SRC-4BCEA6C47614,assets/brand/maps/red_wash__underground_plan.png,underground level 5,GEO-D008,UNKNOWN
+SH-BR-FACILITY-001,SRC-62D9DE5F51D2,blackridge/data/public/databases/blackridge_m00_v0.1.0.sqlite3,table:facility:distinct-name:Facility 1,GEO-D008,ILLUSTRATIVE
+SH-BR-FACILITY-002,SRC-62D9DE5F51D2,blackridge/data/public/databases/blackridge_m00_v0.1.0.sqlite3,table:facility:distinct-name:Facility 2,GEO-D008,ILLUSTRATIVE
+SH-BR-WAREHOUSE-001,SRC-62D9DE5F51D2,blackridge/data/public/databases/blackridge_m00_v0.1.0.sqlite3,table:warehouse:distinct-name:Warehouse 1,GEO-D008,ILLUSTRATIVE
+SH-BR-PIT-001,SRC-62D9DE5F51D2,blackridge/data/public/databases/blackridge_m00_v0.1.0.sqlite3,table:pit:distinct-name:Pit 1,GEO-D008,ILLUSTRATIVE
+SH-BR-BENCH-001,SRC-62D9DE5F51D2,blackridge/data/public/databases/blackridge_m00_v0.1.0.sqlite3,table:bench:distinct-name:Bench 1,GEO-D008,ILLUSTRATIVE
+SH-BR-STOCKPILE-001,SRC-62D9DE5F51D2,blackridge/data/public/databases/blackridge_m00_v0.1.0.sqlite3,table:stockpile:distinct-name:Stockpile 1,GEO-D008,ILLUSTRATIVE
+SH-BR-BUILDING-001,SRC-62D9DE5F51D2,blackridge/data/public/databases/blackridge_m00_v0.1.0.sqlite3,table:building:distinct-name:Building 1,GEO-D008,ILLUSTRATIVE
+SH-EVT-0001,SRC-9C0F6B8A1E54,docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-05_RED_WASH.md,line:17,GEO-D008,CANON_CONSTRAINED
+SH-EVT-0002,SRC-A6FFA504C779,docs/canon/DECISION_REGISTER.md,line:161,GEO-D008,CANON_CONSTRAINED
+SH-EVT-0003,SRC-A6FFA504C779,docs/canon/DECISION_REGISTER.md,line:159,GEO-D008,CANON_CONSTRAINED
+SH-EVT-0004,SRC-A6FFA504C779,docs/canon/DECISION_REGISTER.md,line:95,GEO-D008,CANON_CONSTRAINED
+SH-EVT-0005,SRC-A6FFA504C779,docs/canon/DECISION_REGISTER.md,line:97,GEO-D008,CANON_CONSTRAINED
+SH-EVT-0006,SRC-A6FFA504C779,docs/canon/DECISION_REGISTER.md,line:88,GEO-D008,CANON_CONSTRAINED
+SH-EVT-0007,SRC-A6FFA504C779,docs/canon/DECISION_REGISTER.md,line:27,GEO-D008,CANON_CONSTRAINED
+SH-EVT-0008,SRC-CURRENT-OPS,industrial/source/operations.json,industrial/source/entities.json#/entities/4,GEO-D018,ENGINEERED
+SH-BR-AREA-001,SRC-FDAF759E748F,blackridge/docs/canon/BLACKRIDGE_CANON_IMPLEMENTATION_SPEC.md,lines:3-4,GEO-D008,CANON_CONSTRAINED
+SH-SITE-0027,SRC-CURRENT-CRADLE,docs/canon/CRADLE_CLOSEOUT_2026-09-06.md,line:95,GEO-D016,CANON_CONSTRAINED
+SH-FAC-FORT-BIG,SRC-CURRENT-FORT,docs/canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md,line:79,GEO-D017,CANON_CONSTRAINED
+SH-FAC-FORT-SMALL,SRC-CURRENT-FORT,docs/canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md,line:80,GEO-D017,CANON_CONSTRAINED
+SH-FAC-FORT-WHITE,SRC-CURRENT-FORT,docs/canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md,line:81,GEO-D017,CANON_CONSTRAINED
+SH-FAC-FORT-MUSEUM,SRC-CURRENT-FORT,docs/canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md,line:83,GEO-D017,CANON_CONSTRAINED
+SH-IND-FAC-WAM-INT,SRC-CURRENT-OPS,industrial/source/operations.json,/facilities/0,GEO-D018,ENGINEERED
+SH-IND-FAC-TAY-YARD,SRC-CURRENT-OPS,industrial/source/operations.json,/facilities/1,GEO-D018,ENGINEERED
+SH-IND-FAC-TAY-TERMINAL,SRC-CURRENT-OPS,industrial/source/operations.json,/facilities/2,GEO-D018,ENGINEERED
+SH-IND-FAC-TAY-WAREHOUSE,SRC-CURRENT-OPS,industrial/source/operations.json,/facilities/3,GEO-D018,ENGINEERED
+SH-IND-FAC-TAY-TRUCK,SRC-CURRENT-OPS,industrial/source/operations.json,/facilities/4,GEO-D018,ENGINEERED
+SH-IND-FAC-EAST-MATERIALS,SRC-CURRENT-OPS,industrial/source/operations.json,/facilities/5,GEO-D018,ENGINEERED
+SH-IND-FAC-MINERAL-TEAM,SRC-CURRENT-OPS,industrial/source/operations.json,/facilities/6,GEO-D018,ENGINEERED
+SH-IND-FAC-RAW-TERMINAL,SRC-CURRENT-OPS,industrial/source/operations.json,/facilities/7,GEO-D018,ENGINEERED
+SH-IND-FAC-RAW-WAREHOUSE,SRC-CURRENT-OPS,industrial/source/operations.json,/facilities/8,GEO-D018,ENGINEERED
+SH-IND-FAC-RAW-TRUCK,SRC-CURRENT-OPS,industrial/source/operations.json,/facilities/9,GEO-D018,ENGINEERED
+SH-IND-FAC-ARU-OFFICE,SRC-CURRENT-OPS,industrial/source/operations.json,/facilities/10,GEO-D018,ENGINEERED
+SH-IND-FAC-RW-RECEIVING,SRC-CURRENT-OPS,industrial/source/operations.json,/facilities/11,GEO-D018,ENGINEERED
+SH-IND-BR-01,SRC-CURRENT-OPS,industrial/source/operations.json,/structures/0,GEO-D018,ENGINEERED
+SH-IND-BR-02,SRC-CURRENT-OPS,industrial/source/operations.json,/structures/1,GEO-D018,ENGINEERED
+SH-IND-BR-03,SRC-CURRENT-OPS,industrial/source/operations.json,/structures/2,GEO-D018,ENGINEERED
+SH-IND-BR-04,SRC-CURRENT-OPS,industrial/source/operations.json,/structures/3,GEO-D018,ENGINEERED
+SH-IND-CUL-01,SRC-CURRENT-OPS,industrial/source/operations.json,/structures/4,GEO-D018,ENGINEERED
+SH-IND-CUL-02,SRC-CURRENT-OPS,industrial/source/operations.json,/structures/5,GEO-D018,ENGINEERED
+SH-IND-CUL-03,SRC-CURRENT-OPS,industrial/source/operations.json,/structures/6,GEO-D018,ENGINEERED
+SH-IND-CUL-04,SRC-CURRENT-OPS,industrial/source/operations.json,/structures/7,GEO-D018,ENGINEERED
+SH-IND-CUL-05,SRC-CURRENT-OPS,industrial/source/operations.json,/structures/8,GEO-D018,ENGINEERED
+SH-IND-CUL-06,SRC-CURRENT-OPS,industrial/source/operations.json,/structures/9,GEO-D018,ENGINEERED
+SH-IND-CUL-07,SRC-CURRENT-OPS,industrial/source/operations.json,/structures/10,GEO-D018,ENGINEERED
+SH-IND-CUL-08,SRC-CURRENT-OPS,industrial/source/operations.json,/structures/11,GEO-D018,ENGINEERED
+SH-IND-CUL-09,SRC-CURRENT-OPS,industrial/source/operations.json,/structures/12,GEO-D018,ENGINEERED
+SH-IND-CUL-10,SRC-CURRENT-OPS,industrial/source/operations.json,/structures/13,GEO-D018,ENGINEERED
+SH-IND-CUL-11,SRC-CURRENT-OPS,industrial/source/operations.json,/structures/14,GEO-D018,ENGINEERED
+SH-IND-CUL-12,SRC-CURRENT-OPS,industrial/source/operations.json,/structures/15,GEO-D018,ENGINEERED
+SH-IND-CUL-13,SRC-CURRENT-OPS,industrial/source/operations.json,/structures/16,GEO-D018,ENGINEERED
+SH-IND-CUL-14,SRC-CURRENT-OPS,industrial/source/operations.json,/structures/17,GEO-D018,ENGINEERED
+SH-IND-CUL-15,SRC-CURRENT-OPS,industrial/source/operations.json,/structures/18,GEO-D018,ENGINEERED
+SH-IND-CUL-16,SRC-CURRENT-OPS,industrial/source/operations.json,/structures/19,GEO-D018,ENGINEERED
+SH-IND-CUL-17,SRC-CURRENT-OPS,industrial/source/operations.json,/structures/20,GEO-D018,ENGINEERED
+SH-IND-CUL-18,SRC-CURRENT-OPS,industrial/source/operations.json,/structures/21,GEO-D018,ENGINEERED
+SH-IND-CUL-19,SRC-CURRENT-OPS,industrial/source/operations.json,/structures/22,GEO-D018,ENGINEERED
+SH-IND-CUL-20,SRC-CURRENT-OPS,industrial/source/operations.json,/structures/23,GEO-D018,ENGINEERED
+SH-IND-HWY-I80-1,SRC-CURRENT-OPS,industrial/source/operations.json,/structures/24,GEO-D018,ENGINEERED
+SH-IND-HWY-I80-2,SRC-CURRENT-OPS,industrial/source/operations.json,/structures/25,GEO-D018,ENGINEERED
+SH-IND-TRK-BST-MAIN-0,SRC-CURRENT-OPS,industrial/source/operations.json,/track_segments/0,GEO-D018,ENGINEERED
+SH-IND-TRK-BST-MAIN-4,SRC-CURRENT-OPS,industrial/source/operations.json,/track_segments/1,GEO-D018,ENGINEERED
+SH-IND-TRK-BST-MAIN-10,SRC-CURRENT-OPS,industrial/source/operations.json,/track_segments/2,GEO-D018,ENGINEERED
+SH-IND-TRK-BST-MAIN-15,SRC-CURRENT-OPS,industrial/source/operations.json,/track_segments/3,GEO-D018,ENGINEERED
+SH-IND-TRK-BST-MAIN-22,SRC-CURRENT-OPS,industrial/source/operations.json,/track_segments/4,GEO-D018,ENGINEERED
+SH-IND-TRK-BST-MAIN-26,SRC-CURRENT-OPS,industrial/source/operations.json,/track_segments/5,GEO-D018,ENGINEERED
+SH-IND-TRK-BST-MAIN-30,SRC-CURRENT-OPS,industrial/source/operations.json,/track_segments/6,GEO-D018,ENGINEERED
+SH-IND-TRK-BST-EAST-0,SRC-CURRENT-OPS,industrial/source/operations.json,/track_segments/7,GEO-D018,ENGINEERED
+SH-IND-TRK-BST-EAST-2,SRC-CURRENT-OPS,industrial/source/operations.json,/track_segments/8,GEO-D018,ENGINEERED
+SH-IND-TRK-BST-MINERAL-0,SRC-CURRENT-OPS,industrial/source/operations.json,/track_segments/9,GEO-D018,ENGINEERED
+SH-IND-TRK-BST-MINERAL-1.25,SRC-CURRENT-OPS,industrial/source/operations.json,/track_segments/10,GEO-D018,ENGINEERED
+SH-IND-YARD-FAC-TAY-YARD-arrival,SRC-CURRENT-OPS,industrial/source/operations.json,/track_segments/11,GEO-D018,ENGINEERED
+SH-IND-YARD-FAC-TAY-YARD-departure,SRC-CURRENT-OPS,industrial/source/operations.json,/track_segments/12,GEO-D018,ENGINEERED
+SH-IND-YARD-FAC-TAY-YARD-classification1,SRC-CURRENT-OPS,industrial/source/operations.json,/track_segments/13,GEO-D018,ENGINEERED
+SH-IND-YARD-FAC-TAY-YARD-classification2,SRC-CURRENT-OPS,industrial/source/operations.json,/track_segments/14,GEO-D018,ENGINEERED
+SH-IND-YARD-FAC-TAY-YARD-shop,SRC-CURRENT-OPS,industrial/source/operations.json,/track_segments/15,GEO-D018,ENGINEERED
+SH-IND-YARD-FAC-TAY-YARD-fuel,SRC-CURRENT-OPS,industrial/source/operations.json,/track_segments/16,GEO-D018,ENGINEERED
+SH-IND-YARD-FAC-TAY-YARD-storage,SRC-CURRENT-OPS,industrial/source/operations.json,/track_segments/17,GEO-D018,ENGINEERED
+SH-IND-YARD-FAC-WAM-INT-receipt,SRC-CURRENT-OPS,industrial/source/operations.json,/track_segments/18,GEO-D018,ENGINEERED
+SH-IND-YARD-FAC-WAM-INT-release,SRC-CURRENT-OPS,industrial/source/operations.json,/track_segments/19,GEO-D018,ENGINEERED
+SH-IND-YARD-FAC-WAM-INT-hold,SRC-CURRENT-OPS,industrial/source/operations.json,/track_segments/20,GEO-D018,ENGINEERED
+SH-IND-YARD-FAC-TAY-TERMINAL-legacygeneral,SRC-CURRENT-OPS,industrial/source/operations.json,/track_segments/21,GEO-D018,ENGINEERED
+SH-IND-YARD-FAC-TAY-TERMINAL-legacyteam,SRC-CURRENT-OPS,industrial/source/operations.json,/track_segments/22,GEO-D018,ENGINEERED
+SH-IND-YARD-FAC-TAY-TERMINAL-phase1generalA,SRC-CURRENT-OPS,industrial/source/operations.json,/track_segments/23,GEO-D018,ENGINEERED
+SH-IND-YARD-FAC-TAY-TERMINAL-phase1generalB,SRC-CURRENT-OPS,industrial/source/operations.json,/track_segments/24,GEO-D018,ENGINEERED
+SH-IND-YARD-FAC-TAY-TERMINAL-phase1liquid,SRC-CURRENT-OPS,industrial/source/operations.json,/track_segments/25,GEO-D018,ENGINEERED
+SH-IND-YARD-FAC-TAY-WAREHOUSE-warehouse,SRC-CURRENT-OPS,industrial/source/operations.json,/track_segments/26,GEO-D018,ENGINEERED
+SH-IND-YARD-FAC-EAST-MATERIALS-materials1,SRC-CURRENT-OPS,industrial/source/operations.json,/track_segments/27,GEO-D018,ENGINEERED
+SH-IND-YARD-FAC-EAST-MATERIALS-materials2,SRC-CURRENT-OPS,industrial/source/operations.json,/track_segments/28,GEO-D018,ENGINEERED
+SH-IND-YARD-FAC-MINERAL-TEAM-mineral1,SRC-CURRENT-OPS,industrial/source/operations.json,/track_segments/29,GEO-D018,ENGINEERED
+SH-IND-YARD-FAC-MINERAL-TEAM-mineral2,SRC-CURRENT-OPS,industrial/source/operations.json,/track_segments/30,GEO-D018,ENGINEERED
+SH-IND-BST-EAST,SRC-CURRENT-OPS,industrial/source/operations.json,/geography/branches,GEO-D018,ENGINEERED
+SH-IND-BST-MINERAL,SRC-CURRENT-OPS,industrial/source/operations.json,/geography/branches,GEO-D018,ENGINEERED
+SH-IND-HIST-1898,SRC-CURRENT-OPS,industrial/source/operations.json,/history/0,GEO-D018,ENGINEERED
+SH-IND-HIST-1907,SRC-CURRENT-OPS,industrial/source/operations.json,/history/1,GEO-D018,ENGINEERED
+SH-IND-HIST-1909,SRC-CURRENT-OPS,industrial/source/operations.json,/history/2,GEO-D018,ENGINEERED
+SH-IND-HIST-1916,SRC-CURRENT-OPS,industrial/source/operations.json,/history/3,GEO-D018,ENGINEERED
+SH-IND-HIST-1953,SRC-CURRENT-OPS,industrial/source/operations.json,/history/4,GEO-D018,ENGINEERED
+SH-IND-HIST-1954,SRC-CURRENT-OPS,industrial/source/operations.json,/history/5,GEO-D018,ENGINEERED
+SH-IND-HIST-1968,SRC-CURRENT-OPS,industrial/source/operations.json,/history/6,GEO-D018,ENGINEERED
+SH-IND-HIST-1972,SRC-CURRENT-OPS,industrial/source/operations.json,/history/7,GEO-D018,ENGINEERED
+SH-IND-HIST-1986,SRC-CURRENT-OPS,industrial/source/operations.json,/history/8,GEO-D018,ENGINEERED
+SH-IND-HIST-1991,SRC-CURRENT-OPS,industrial/source/operations.json,/history/9,GEO-D018,ENGINEERED

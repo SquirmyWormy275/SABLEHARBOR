@@ -41,7 +41,7 @@ addopts = "-q"
 line-length = 100
 target-version = "py311"
 include = ["src/**/*.py", "tests/**/*.py"]
-extend-exclude = ["blackridge"]
+extend-exclude = ["blackridge", "geospatial"]
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP", "B"]

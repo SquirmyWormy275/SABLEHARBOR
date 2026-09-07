@@ -1,0 +1,7 @@
+{
+  "status": "NOT_RUN_LOCAL_DEPENDENCY_UNAVAILABLE",
+  "reason": "Local runtime cannot import qgis.core. Native validation is a separate CI job; earlier evidence is historical.",
+  "package_sha256": "0a1489e6e4605373cf0d25dd6e25a020c8d922ee9ec6c052d9410ad4e2303f0f",
+  "project_sha256": "e209070b1fef55c3a3118ec2c906343df98fa5ca2c5431cb1e490b0b882abb57",
+  "fallback": "Current Fiona/GDAL geometry readback and QGIS relative source-path validation passed."
+}

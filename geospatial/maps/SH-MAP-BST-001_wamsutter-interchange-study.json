@@ -1,0 +1,33 @@
+{
+  "map_id": "SH-MAP-BST-001_wamsutter-interchange-study",
+  "title": "Wamsutter interchange study",
+  "version": "0.1.0-rc4",
+  "effective_date": "2026-09-07",
+  "world_state": "CANON_RECONCILED_2026-09-07",
+  "canon_status": "PROPOSED_SEARCH_AREA",
+  "source_package_version": "0.1.0-rc4",
+  "source_commit": "d91a22c35c91b213204411421de88815f27d8e16",
+  "source_geopackage_sha256": "0a1489e6e4605373cf0d25dd6e25a020c8d922ee9ec6c052d9410ad4e2303f0f",
+  "projection": "EPSG:26913",
+  "build_timestamp": "2026-09-07T16:00:00+00:00",
+  "builder": "geospatial/scripts/render_maps.py",
+  "review_status": "RENDERED_PENDING_VISUAL_QA",
+  "layers": [
+    "search_areas",
+    "ref_wamsutter_*"
+  ],
+  "files": {
+    "pdf": {
+      "path": "SH-MAP-BST-001_wamsutter-interchange-study.pdf",
+      "sha256": "994412336f42a66d3172f4e090bdde4911f3cbcf60294268d2f9fd469e27433e"
+    },
+    "svg": {
+      "path": "SH-MAP-BST-001_wamsutter-interchange-study.svg",
+      "sha256": "d44f3fc270ccfdfbea856dca1b27483281ea285e28e8483e20931b6a818a6d8d"
+    },
+    "png": {
+      "path": "SH-MAP-BST-001_wamsutter-interchange-study.png",
+      "sha256": "ed3d35bf214d69877afce773d71cb405e78059fc0f3ccd30a5ae0d081d94d29c"
+    }
+  }
+}

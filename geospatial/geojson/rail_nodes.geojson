@@ -1,0 +1,227 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "IND-NODE-WAM",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -107.96562715205644,
+          41.6744965783547
+        ]
+      },
+      "properties": {
+        "name": "BS&T WAM",
+        "owner": "Blood, Sweat & Tears Railway Company",
+        "feature_id": "IND-NODE-WAM",
+        "object_id": "SH-RAIL-0001",
+        "canonical_name": "BS&T WAM",
+        "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+        "real_world_relation": "SYNTHETIC_CASE_NOT_REAL_PROPERTY",
+        "canon_status": "ENGINEERED",
+        "geometry_status": "LOCKED_DERIVED_IMPLEMENTATION",
+        "location_method": "DERIVED_FROM_ACCEPTED_SOURCE",
+        "precision_class": "CASE_ENGINEERING_NOT_SURVEY",
+        "horizontal_accuracy_m": null,
+        "vertical_accuracy_m": null,
+        "public_precision": "SYNTHETIC_CASE",
+        "source_id": "SRC-CURRENT-NETWORK",
+        "decision_id": "GEO-D018",
+        "recorded_at": "2026-09-07T16:00:00+00:00",
+        "world_state_date": "2026-09-07",
+        "owner_entity": "SH-ENT-009",
+        "operator_entity": "SH-ENT-009",
+        "valid_from": null,
+        "valid_to": null,
+        "construction_method": "Geo adapter of industrial source; geometry and original attributes retained.",
+        "notes": "Owner/operator identify the current synthetic case, not a timeless real-property right. Source opening date is not automatically the current owner acquisition date."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "IND-NODE-EAST-J",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -108.06913082528824,
+          41.86427758524971
+        ]
+      },
+      "properties": {
+        "name": "BS&T EAST-J",
+        "owner": "Blood, Sweat & Tears Railway Company",
+        "feature_id": "IND-NODE-EAST-J",
+        "object_id": "SH-RAIL-0001",
+        "canonical_name": "BS&T EAST-J",
+        "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+        "real_world_relation": "SYNTHETIC_CASE_NOT_REAL_PROPERTY",
+        "canon_status": "ENGINEERED",
+        "geometry_status": "LOCKED_DERIVED_IMPLEMENTATION",
+        "location_method": "DERIVED_FROM_ACCEPTED_SOURCE",
+        "precision_class": "CASE_ENGINEERING_NOT_SURVEY",
+        "horizontal_accuracy_m": null,
+        "vertical_accuracy_m": null,
+        "public_precision": "SYNTHETIC_CASE",
+        "source_id": "SRC-CURRENT-NETWORK",
+        "decision_id": "GEO-D018",
+        "recorded_at": "2026-09-07T16:00:00+00:00",
+        "world_state_date": "2026-09-07",
+        "owner_entity": "SH-ENT-009",
+        "operator_entity": "SH-ENT-009",
+        "valid_from": null,
+        "valid_to": null,
+        "construction_method": "Geo adapter of industrial source; geometry and original attributes retained.",
+        "notes": "Owner/operator identify the current synthetic case, not a timeless real-property right. Source opening date is not automatically the current owner acquisition date."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "IND-NODE-MINERAL-J",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -108.11616017126433,
+          42.017007957526936
+        ]
+      },
+      "properties": {
+        "name": "BS&T MINERAL-J",
+        "owner": "Blood, Sweat & Tears Railway Company",
+        "feature_id": "IND-NODE-MINERAL-J",
+        "object_id": "SH-RAIL-0001",
+        "canonical_name": "BS&T MINERAL-J",
+        "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+        "real_world_relation": "SYNTHETIC_CASE_NOT_REAL_PROPERTY",
+        "canon_status": "ENGINEERED",
+        "geometry_status": "LOCKED_DERIVED_IMPLEMENTATION",
+        "location_method": "DERIVED_FROM_ACCEPTED_SOURCE",
+        "precision_class": "CASE_ENGINEERING_NOT_SURVEY",
+        "horizontal_accuracy_m": null,
+        "vertical_accuracy_m": null,
+        "public_precision": "SYNTHETIC_CASE",
+        "source_id": "SRC-CURRENT-NETWORK",
+        "decision_id": "GEO-D018",
+        "recorded_at": "2026-09-07T16:00:00+00:00",
+        "world_state_date": "2026-09-07",
+        "owner_entity": "SH-ENT-009",
+        "operator_entity": "SH-ENT-009",
+        "valid_from": null,
+        "valid_to": null,
+        "construction_method": "Geo adapter of industrial source; geometry and original attributes retained.",
+        "notes": "Owner/operator identify the current synthetic case, not a timeless real-property right. Source opening date is not automatically the current owner acquisition date."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "IND-NODE-TAY",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -108.1,
+          42.12
+        ]
+      },
+      "properties": {
+        "name": "BS&T TAY",
+        "owner": "Blood, Sweat & Tears Railway Company",
+        "feature_id": "IND-NODE-TAY",
+        "object_id": "SH-RAIL-0001",
+        "canonical_name": "BS&T TAY",
+        "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+        "real_world_relation": "SYNTHETIC_CASE_NOT_REAL_PROPERTY",
+        "canon_status": "ENGINEERED",
+        "geometry_status": "LOCKED_DERIVED_IMPLEMENTATION",
+        "location_method": "DERIVED_FROM_ACCEPTED_SOURCE",
+        "precision_class": "CASE_ENGINEERING_NOT_SURVEY",
+        "horizontal_accuracy_m": null,
+        "vertical_accuracy_m": null,
+        "public_precision": "SYNTHETIC_CASE",
+        "source_id": "SRC-CURRENT-NETWORK",
+        "decision_id": "GEO-D018",
+        "recorded_at": "2026-09-07T16:00:00+00:00",
+        "world_state_date": "2026-09-07",
+        "owner_entity": "SH-ENT-009",
+        "operator_entity": "SH-ENT-009",
+        "valid_from": null,
+        "valid_to": null,
+        "construction_method": "Geo adapter of industrial source; geometry and original attributes retained.",
+        "notes": "Owner/operator identify the current synthetic case, not a timeless real-property right. Source opening date is not automatically the current owner acquisition date."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "IND-NODE-EAST-END",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -108.01259365641332,
+          41.90370776148441
+        ]
+      },
+      "properties": {
+        "name": "BS&T EAST-END",
+        "owner": "Blood, Sweat & Tears Railway Company",
+        "feature_id": "IND-NODE-EAST-END",
+        "object_id": "SH-RAIL-0001",
+        "canonical_name": "BS&T EAST-END",
+        "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+        "real_world_relation": "SYNTHETIC_CASE_NOT_REAL_PROPERTY",
+        "canon_status": "ENGINEERED",
+        "geometry_status": "LOCKED_DERIVED_IMPLEMENTATION",
+        "location_method": "DERIVED_FROM_ACCEPTED_SOURCE",
+        "precision_class": "CASE_ENGINEERING_NOT_SURVEY",
+        "horizontal_accuracy_m": null,
+        "vertical_accuracy_m": null,
+        "public_precision": "SYNTHETIC_CASE",
+        "source_id": "SRC-CURRENT-NETWORK",
+        "decision_id": "GEO-D018",
+        "recorded_at": "2026-09-07T16:00:00+00:00",
+        "world_state_date": "2026-09-07",
+        "owner_entity": "SH-ENT-009",
+        "operator_entity": "SH-ENT-009",
+        "valid_from": null,
+        "valid_to": null,
+        "construction_method": "Geo adapter of industrial source; geometry and original attributes retained.",
+        "notes": "Owner/operator identify the current synthetic case, not a timeless real-property right. Source opening date is not automatically the current owner acquisition date."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "IND-NODE-MINERAL-END",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -108.07098660485325,
+          42.03495699312325
+        ]
+      },
+      "properties": {
+        "name": "BS&T MINERAL-END",
+        "owner": "Blood, Sweat & Tears Railway Company",
+        "feature_id": "IND-NODE-MINERAL-END",
+        "object_id": "SH-RAIL-0001",
+        "canonical_name": "BS&T MINERAL-END",
+        "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+        "real_world_relation": "SYNTHETIC_CASE_NOT_REAL_PROPERTY",
+        "canon_status": "ENGINEERED",
+        "geometry_status": "LOCKED_DERIVED_IMPLEMENTATION",
+        "location_method": "DERIVED_FROM_ACCEPTED_SOURCE",
+        "precision_class": "CASE_ENGINEERING_NOT_SURVEY",
+        "horizontal_accuracy_m": null,
+        "vertical_accuracy_m": null,
+        "public_precision": "SYNTHETIC_CASE",
+        "source_id": "SRC-CURRENT-NETWORK",
+        "decision_id": "GEO-D018",
+        "recorded_at": "2026-09-07T16:00:00+00:00",
+        "world_state_date": "2026-09-07",
+        "owner_entity": "SH-ENT-009",
+        "operator_entity": "SH-ENT-009",
+        "valid_from": null,
+        "valid_to": null,
+        "construction_method": "Geo adapter of industrial source; geometry and original attributes retained.",
+        "notes": "Owner/operator identify the current synthetic case, not a timeless real-property right. Source opening date is not automatically the current owner acquisition date."
+      }
+    }
+  ]
+}

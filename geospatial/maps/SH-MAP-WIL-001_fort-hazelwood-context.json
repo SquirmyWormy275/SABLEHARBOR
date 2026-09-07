@@ -1,0 +1,33 @@
+{
+  "map_id": "SH-MAP-WIL-001_fort-hazelwood-context",
+  "title": "The Fort / Willow",
+  "version": "0.1.0-rc4",
+  "effective_date": "2026-09-07",
+  "world_state": "CANON_RECONCILED_2026-09-07",
+  "canon_status": "PROPOSED_SEARCH_AREA",
+  "source_package_version": "0.1.0-rc4",
+  "source_commit": "d91a22c35c91b213204411421de88815f27d8e16",
+  "source_geopackage_sha256": "0a1489e6e4605373cf0d25dd6e25a020c8d922ee9ec6c052d9410ad4e2303f0f",
+  "projection": "EPSG:26917",
+  "build_timestamp": "2026-09-07T16:00:00+00:00",
+  "builder": "geospatial/scripts/render_maps.py",
+  "review_status": "RENDERED_PENDING_VISUAL_QA",
+  "layers": [
+    "search_areas",
+    "ref_hazelwood_*"
+  ],
+  "files": {
+    "pdf": {
+      "path": "SH-MAP-WIL-001_fort-hazelwood-context.pdf",
+      "sha256": "f5a1083b6416ee64787c36304c1bd09feda3a6ab1a6cb1d86365a9c7612713ad"
+    },
+    "svg": {
+      "path": "SH-MAP-WIL-001_fort-hazelwood-context.svg",
+      "sha256": "5384c9c7a59b19939b3f9a6d1285b4d0aab3f0e9878dda128d703dde96becbd8"
+    },
+    "png": {
+      "path": "SH-MAP-WIL-001_fort-hazelwood-context.png",
+      "sha256": "abdd60f0dd84265a1ce824ed44f239702b277d7e56bfc85e6ada19b6219cb52b"
+    }
+  }
+}
