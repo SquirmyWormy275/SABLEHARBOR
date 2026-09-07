@@ -1,6 +1,6 @@
 # SABLE HARBOR CONTROLLED DOCUMENT INDEX
 
-**Index version:** 1.0.17 | **As of:** September 7, 2026
+**Index version:** 1.0.18 | **As of:** September 7, 2026
 
 ## Authority order
 
@@ -174,3 +174,9 @@ The v0.3 lore, base decision register, original lineage and other finance-pinned
 - [Controlling name-and-identity decision](canon/DEMOTTE_RECLAMATION_NAME_AND_IDENTITY_2026-09-07.md)
 - [Horizontal source PNG](../assets/brand/logos/demotte-reclamation-services__primary-horizontal.png) and [visual manifest](../assets/brand/demotte_reclamation_visual_manifest.json)
 - [Current Cradle closeout](canon/CRADLE_CLOSEOUT_2026-09-06.md) and [structured record](structured/cradle_closeout_2026-09-06.json)
+
+## September 7 Northstar Minerals artwork approval
+
+- [Controlling visual identity decision](canon/NORTHSTAR_MINERALS_VISUAL_IDENTITY_2026-09-07.md)
+- [Approved horizontal logo](../assets/brand/logos/northstar-minerals__primary-horizontal.png) and [source manifest](../assets/brand/northstar_minerals_visual_manifest.json)
+- [Existing R2 seller identity](canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05_R2.md#seller-identity--locked) and [brand validation](../assets/brand/VALIDATION.md)

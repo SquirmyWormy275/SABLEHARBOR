@@ -69,3 +69,5 @@ Kelly Gang Mining's external-company artwork is controlled by [KGM-VIS-001](../c
 Quality Forest Communications' historical artwork is controlled by [QFC-VIS-001](../canon/QUALITY_FOREST_COMMUNICATIONS_VISUAL_IDENTITY_2026-09-07.md). Its role remains Hoberg's pre-Sable Harbor forestry-communications company in the [Willow/Klein closeout](../canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md#eli-hoberg).
 
 [DEM-RS-001](../canon/DEMOTTE_RECLAMATION_NAME_AND_IDENTITY_2026-09-07.md) controls the Demotte Reclamation Services name and owner-directed artwork for Cradle's existing U.S. host. Host authority, remediation liability and recovery boundaries remain unchanged in the [Cradle map](PROJECT_CRADLE.md).
+
+Northstar Minerals, Inc.'s external-company artwork is controlled by [NMI-VIS-001](../canon/NORTHSTAR_MINERALS_VISUAL_IDENTITY_2026-09-07.md). The R2 Red Wash record continues to control the company, Henry Norwood's role and transaction facts.

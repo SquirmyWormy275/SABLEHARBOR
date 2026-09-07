@@ -18,3 +18,5 @@ Emberline's [approved historical identity](../canon/EMBERLINE_VISUAL_IDENTITY_20
 [Quality Forest Communications' approved logo](../canon/QUALITY_FOREST_COMMUNICATIONS_VISUAL_IDENTITY_2026-09-07.md) identifies Eli Hoberg's historical forestry-communications company.
 
 [Demotte Reclamation Services](../canon/DEMOTTE_RECLAMATION_NAME_AND_IDENTITY_2026-09-07.md) is the current name and identity of Cradle's external U.S. mine-water treatment host.
+
+[Northstar Minerals, Inc.'s approved logo](../canon/NORTHSTAR_MINERALS_VISUAL_IDENTITY_2026-09-07.md) identifies the external Red Wash seller.
