@@ -1,0 +1,825 @@
+{
+  "qgis_version": "3.44.11-Solothurn",
+  "validation_commit": null,
+  "package_sha256": "7f6f55f60f0c8de88bc7e41d2377f216787be1d48758a05a6555400fbad1e4f9",
+  "project_sha256": "da69344be0186a571ae3fc2d24461e09cdeeb47d930ab1bfb3c1b719eeb3ba0e",
+  "checks": [
+    {
+      "check": "original",
+      "project_read": true,
+      "layer_count": 50,
+      "layers": [
+        {
+          "name": "event_locations",
+          "valid": true,
+          "feature_count": 0,
+          "expected_count": 0,
+          "crs": "EPSG:4326",
+          "renderer": null
+        },
+        {
+          "name": "facilities",
+          "valid": true,
+          "feature_count": 4,
+          "expected_count": 4,
+          "crs": "EPSG:4326",
+          "renderer": "singleSymbol"
+        },
+        {
+          "name": "historical_sites",
+          "valid": true,
+          "feature_count": 0,
+          "expected_count": 0,
+          "crs": "EPSG:4326",
+          "renderer": null
+        },
+        {
+          "name": "operating_territories",
+          "valid": true,
+          "feature_count": 0,
+          "expected_count": 0,
+          "crs": "EPSG:4326",
+          "renderer": null
+        },
+        {
+          "name": "rail_abandoned",
+          "valid": true,
+          "feature_count": 0,
+          "expected_count": 0,
+          "crs": "EPSG:4326",
+          "renderer": null
+        },
+        {
+          "name": "rail_bridges",
+          "valid": true,
+          "feature_count": 0,
+          "expected_count": 0,
+          "crs": "EPSG:4326",
+          "renderer": null
+        },
+        {
+          "name": "rail_crossings",
+          "valid": true,
+          "feature_count": 0,
+          "expected_count": 0,
+          "crs": "EPSG:4326",
+          "renderer": null
+        },
+        {
+          "name": "rail_industries",
+          "valid": true,
+          "feature_count": 0,
+          "expected_count": 0,
+          "crs": "EPSG:4326",
+          "renderer": null
+        },
+        {
+          "name": "rail_interchanges",
+          "valid": true,
+          "feature_count": 1,
+          "expected_count": 1,
+          "crs": "EPSG:4326",
+          "renderer": "singleSymbol"
+        },
+        {
+          "name": "rail_mileposts",
+          "valid": true,
+          "feature_count": 0,
+          "expected_count": 0,
+          "crs": "EPSG:4326",
+          "renderer": null
+        },
+        {
+          "name": "rail_nodes",
+          "valid": true,
+          "feature_count": 3,
+          "expected_count": 3,
+          "crs": "EPSG:4326",
+          "renderer": "singleSymbol"
+        },
+        {
+          "name": "rail_segments",
+          "valid": true,
+          "feature_count": 2,
+          "expected_count": 2,
+          "crs": "EPSG:4326",
+          "renderer": "singleSymbol"
+        },
+        {
+          "name": "rail_trackage_rights",
+          "valid": true,
+          "feature_count": 0,
+          "expected_count": 0,
+          "crs": "EPSG:4326",
+          "renderer": null
+        },
+        {
+          "name": "rail_tunnels",
+          "valid": true,
+          "feature_count": 0,
+          "expected_count": 0,
+          "crs": "EPSG:4326",
+          "renderer": null
+        },
+        {
+          "name": "rail_yards",
+          "valid": true,
+          "feature_count": 1,
+          "expected_count": 1,
+          "crs": "EPSG:4326",
+          "renderer": "singleSymbol"
+        },
+        {
+          "name": "red_wash_anchor",
+          "valid": true,
+          "feature_count": 1,
+          "expected_count": 1,
+          "crs": "EPSG:4326",
+          "renderer": "singleSymbol"
+        },
+        {
+          "name": "ref_context_places",
+          "valid": true,
+          "feature_count": 5,
+          "expected_count": 5,
+          "crs": "EPSG:4326",
+          "renderer": "singleSymbol"
+        },
+        {
+          "name": "ref_hazelwood_connecting_roads",
+          "valid": true,
+          "feature_count": 47,
+          "expected_count": 47,
+          "crs": "EPSG:4326",
+          "renderer": "singleSymbol"
+        },
+        {
+          "name": "ref_hazelwood_highways",
+          "valid": true,
+          "feature_count": 14,
+          "expected_count": 14,
+          "crs": "EPSG:4326",
+          "renderer": "singleSymbol"
+        },
+        {
+          "name": "ref_hazelwood_hydro",
+          "valid": true,
+          "feature_count": 9,
+          "expected_count": 9,
+          "crs": "EPSG:4326",
+          "renderer": "singleSymbol"
+        },
+        {
+          "name": "ref_hazelwood_local_roads",
+          "valid": true,
+          "feature_count": 1166,
+          "expected_count": 1166,
+          "crs": "EPSG:4326",
+          "renderer": "singleSymbol"
+        },
+        {
+          "name": "ref_hazelwood_rail",
+          "valid": true,
+          "feature_count": 115,
+          "expected_count": 115,
+          "crs": "EPSG:4326",
+          "renderer": "singleSymbol"
+        },
+        {
+          "name": "ref_hazelwood_secondary_roads",
+          "valid": true,
+          "feature_count": 0,
+          "expected_count": 0,
+          "crs": "EPSG:4326",
+          "renderer": null
+        },
+        {
+          "name": "ref_kanawha_connecting_roads",
+          "valid": true,
+          "feature_count": 471,
+          "expected_count": 471,
+          "crs": "EPSG:4326",
+          "renderer": "singleSymbol"
+        },
+        {
+          "name": "ref_kanawha_highways",
+          "valid": true,
+          "feature_count": 218,
+          "expected_count": 218,
+          "crs": "EPSG:4326",
+          "renderer": "singleSymbol"
+        },
+        {
+          "name": "ref_kanawha_hydro",
+          "valid": true,
+          "feature_count": 688,
+          "expected_count": 688,
+          "crs": "EPSG:4326",
+          "renderer": "singleSymbol"
+        },
+        {
+          "name": "ref_kanawha_rail",
+          "valid": true,
+          "feature_count": 97,
+          "expected_count": 97,
+          "crs": "EPSG:4326",
+          "renderer": "singleSymbol"
+        },
+        {
+          "name": "ref_kanawha_secondary_roads",
+          "valid": true,
+          "feature_count": 437,
+          "expected_count": 437,
+          "crs": "EPSG:4326",
+          "renderer": "singleSymbol"
+        },
+        {
+          "name": "ref_sacramento_connecting_roads",
+          "valid": true,
+          "feature_count": 51,
+          "expected_count": 51,
+          "crs": "EPSG:4326",
+          "renderer": "singleSymbol"
+        },
+        {
+          "name": "ref_sacramento_highways",
+          "valid": true,
+          "feature_count": 50,
+          "expected_count": 50,
+          "crs": "EPSG:4326",
+          "renderer": "singleSymbol"
+        },
+        {
+          "name": "ref_sacramento_hydro",
+          "valid": true,
+          "feature_count": 8,
+          "expected_count": 8,
+          "crs": "EPSG:4326",
+          "renderer": "singleSymbol"
+        },
+        {
+          "name": "ref_sacramento_local_roads",
+          "valid": true,
+          "feature_count": 903,
+          "expected_count": 903,
+          "crs": "EPSG:4326",
+          "renderer": "singleSymbol"
+        },
+        {
+          "name": "ref_sacramento_rail",
+          "valid": true,
+          "feature_count": 55,
+          "expected_count": 55,
+          "crs": "EPSG:4326",
+          "renderer": "singleSymbol"
+        },
+        {
+          "name": "ref_sacramento_secondary_roads",
+          "valid": true,
+          "feature_count": 0,
+          "expected_count": 0,
+          "crs": "EPSG:4326",
+          "renderer": null
+        },
+        {
+          "name": "ref_us_states",
+          "valid": true,
+          "feature_count": 49,
+          "expected_count": 49,
+          "crs": "EPSG:4326",
+          "renderer": "singleSymbol"
+        },
+        {
+          "name": "ref_wamsutter_connecting_roads",
+          "valid": true,
+          "feature_count": 107,
+          "expected_count": 107,
+          "crs": "EPSG:4326",
+          "renderer": "singleSymbol"
+        },
+        {
+          "name": "ref_wamsutter_fra_rail",
+          "valid": true,
+          "feature_count": 18,
+          "expected_count": 18,
+          "crs": "EPSG:4326",
+          "renderer": "singleSymbol"
+        },
+        {
+          "name": "ref_wamsutter_highways",
+          "valid": true,
+          "feature_count": 177,
+          "expected_count": 177,
+          "crs": "EPSG:4326",
+          "renderer": "singleSymbol"
+        },
+        {
+          "name": "ref_wamsutter_hydro",
+          "valid": true,
+          "feature_count": 2658,
+          "expected_count": 2658,
+          "crs": "EPSG:4326",
+          "renderer": "singleSymbol"
+        },
+        {
+          "name": "ref_wamsutter_rail",
+          "valid": true,
+          "feature_count": 106,
+          "expected_count": 106,
+          "crs": "EPSG:4326",
+          "renderer": "singleSymbol"
+        },
+        {
+          "name": "ref_wamsutter_secondary_roads",
+          "valid": true,
+          "feature_count": 224,
+          "expected_count": 224,
+          "crs": "EPSG:4326",
+          "renderer": "singleSymbol"
+        },
+        {
+          "name": "ref_wyoming_counties",
+          "valid": true,
+          "feature_count": 23,
+          "expected_count": 23,
+          "crs": "EPSG:4326",
+          "renderer": "singleSymbol"
+        },
+        {
+          "name": "ref_wyoming_local_roads",
+          "valid": true,
+          "feature_count": 3195,
+          "expected_count": 3195,
+          "crs": "EPSG:4326",
+          "renderer": "singleSymbol"
+        },
+        {
+          "name": "ref_wyoming_waterbodies",
+          "valid": true,
+          "feature_count": 540,
+          "expected_count": 540,
+          "crs": "EPSG:4326",
+          "renderer": "singleSymbol"
+        },
+        {
+          "name": "reference_place_labels",
+          "valid": true,
+          "feature_count": 5,
+          "expected_count": 5,
+          "crs": "EPSG:4326",
+          "renderer": "singleSymbol"
+        },
+        {
+          "name": "resource_areas",
+          "valid": true,
+          "feature_count": 0,
+          "expected_count": 0,
+          "crs": "EPSG:4326",
+          "renderer": null
+        },
+        {
+          "name": "roads",
+          "valid": true,
+          "feature_count": 0,
+          "expected_count": 0,
+          "crs": "EPSG:4326",
+          "renderer": null
+        },
+        {
+          "name": "search_areas",
+          "valid": true,
+          "feature_count": 6,
+          "expected_count": 6,
+          "crs": "EPSG:4326",
+          "renderer": "categorizedSymbol"
+        },
+        {
+          "name": "source_claim_points",
+          "valid": true,
+          "feature_count": 2,
+          "expected_count": 2,
+          "crs": "EPSG:4326",
+          "renderer": "singleSymbol"
+        },
+        {
+          "name": "spatial_assets",
+          "valid": true,
+          "feature_count": 2,
+          "expected_count": 2,
+          "crs": "EPSG:4326",
+          "renderer": "singleSymbol"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "check": "relocated",
+      "project_read": true,
+      "layer_count": 50,
+      "layers": [
+        {
+          "name": "event_locations",
+          "valid": true,
+          "feature_count": 0,
+          "expected_count": 0,
+          "crs": "EPSG:4326",
+          "renderer": null
+        },
+        {
+          "name": "facilities",
+          "valid": true,
+          "feature_count": 4,
+          "expected_count": 4,
+          "crs": "EPSG:4326",
+          "renderer": "singleSymbol"
+        },
+        {
+          "name": "historical_sites",
+          "valid": true,
+          "feature_count": 0,
+          "expected_count": 0,
+          "crs": "EPSG:4326",
+          "renderer": null
+        },
+        {
+          "name": "operating_territories",
+          "valid": true,
+          "feature_count": 0,
+          "expected_count": 0,
+          "crs": "EPSG:4326",
+          "renderer": null
+        },
+        {
+          "name": "rail_abandoned",
+          "valid": true,
+          "feature_count": 0,
+          "expected_count": 0,
+          "crs": "EPSG:4326",
+          "renderer": null
+        },
+        {
+          "name": "rail_bridges",
+          "valid": true,
+          "feature_count": 0,
+          "expected_count": 0,
+          "crs": "EPSG:4326",
+          "renderer": null
+        },
+        {
+          "name": "rail_crossings",
+          "valid": true,
+          "feature_count": 0,
+          "expected_count": 0,
+          "crs": "EPSG:4326",
+          "renderer": null
+        },
+        {
+          "name": "rail_industries",
+          "valid": true,
+          "feature_count": 0,
+          "expected_count": 0,
+          "crs": "EPSG:4326",
+          "renderer": null
+        },
+        {
+          "name": "rail_interchanges",
+          "valid": true,
+          "feature_count": 1,
+          "expected_count": 1,
+          "crs": "EPSG:4326",
+          "renderer": "singleSymbol"
+        },
+        {
+          "name": "rail_mileposts",
+          "valid": true,
+          "feature_count": 0,
+          "expected_count": 0,
+          "crs": "EPSG:4326",
+          "renderer": null
+        },
+        {
+          "name": "rail_nodes",
+          "valid": true,
+          "feature_count": 3,
+          "expected_count": 3,
+          "crs": "EPSG:4326",
+          "renderer": "singleSymbol"
+        },
+        {
+          "name": "rail_segments",
+          "valid": true,
+          "feature_count": 2,
+          "expected_count": 2,
+          "crs": "EPSG:4326",
+          "renderer": "singleSymbol"
+        },
+        {
+          "name": "rail_trackage_rights",
+          "valid": true,
+          "feature_count": 0,
+          "expected_count": 0,
+          "crs": "EPSG:4326",
+          "renderer": null
+        },
+        {
+          "name": "rail_tunnels",
+          "valid": true,
+          "feature_count": 0,
+          "expected_count": 0,
+          "crs": "EPSG:4326",
+          "renderer": null
+        },
+        {
+          "name": "rail_yards",
+          "valid": true,
+          "feature_count": 1,
+          "expected_count": 1,
+          "crs": "EPSG:4326",
+          "renderer": "singleSymbol"
+        },
+        {
+          "name": "red_wash_anchor",
+          "valid": true,
+          "feature_count": 1,
+          "expected_count": 1,
+          "crs": "EPSG:4326",
+          "renderer": "singleSymbol"
+        },
+        {
+          "name": "ref_context_places",
+          "valid": true,
+          "feature_count": 5,
+          "expected_count": 5,
+          "crs": "EPSG:4326",
+          "renderer": "singleSymbol"
+        },
+        {
+          "name": "ref_hazelwood_connecting_roads",
+          "valid": true,
+          "feature_count": 47,
+          "expected_count": 47,
+          "crs": "EPSG:4326",
+          "renderer": "singleSymbol"
+        },
+        {
+          "name": "ref_hazelwood_highways",
+          "valid": true,
+          "feature_count": 14,
+          "expected_count": 14,
+          "crs": "EPSG:4326",
+          "renderer": "singleSymbol"
+        },
+        {
+          "name": "ref_hazelwood_hydro",
+          "valid": true,
+          "feature_count": 9,
+          "expected_count": 9,
+          "crs": "EPSG:4326",
+          "renderer": "singleSymbol"
+        },
+        {
+          "name": "ref_hazelwood_local_roads",
+          "valid": true,
+          "feature_count": 1166,
+          "expected_count": 1166,
+          "crs": "EPSG:4326",
+          "renderer": "singleSymbol"
+        },
+        {
+          "name": "ref_hazelwood_rail",
+          "valid": true,
+          "feature_count": 115,
+          "expected_count": 115,
+          "crs": "EPSG:4326",
+          "renderer": "singleSymbol"
+        },
+        {
+          "name": "ref_hazelwood_secondary_roads",
+          "valid": true,
+          "feature_count": 0,
+          "expected_count": 0,
+          "crs": "EPSG:4326",
+          "renderer": null
+        },
+        {
+          "name": "ref_kanawha_connecting_roads",
+          "valid": true,
+          "feature_count": 471,
+          "expected_count": 471,
+          "crs": "EPSG:4326",
+          "renderer": "singleSymbol"
+        },
+        {
+          "name": "ref_kanawha_highways",
+          "valid": true,
+          "feature_count": 218,
+          "expected_count": 218,
+          "crs": "EPSG:4326",
+          "renderer": "singleSymbol"
+        },
+        {
+          "name": "ref_kanawha_hydro",
+          "valid": true,
+          "feature_count": 688,
+          "expected_count": 688,
+          "crs": "EPSG:4326",
+          "renderer": "singleSymbol"
+        },
+        {
+          "name": "ref_kanawha_rail",
+          "valid": true,
+          "feature_count": 97,
+          "expected_count": 97,
+          "crs": "EPSG:4326",
+          "renderer": "singleSymbol"
+        },
+        {
+          "name": "ref_kanawha_secondary_roads",
+          "valid": true,
+          "feature_count": 437,
+          "expected_count": 437,
+          "crs": "EPSG:4326",
+          "renderer": "singleSymbol"
+        },
+        {
+          "name": "ref_sacramento_connecting_roads",
+          "valid": true,
+          "feature_count": 51,
+          "expected_count": 51,
+          "crs": "EPSG:4326",
+          "renderer": "singleSymbol"
+        },
+        {
+          "name": "ref_sacramento_highways",
+          "valid": true,
+          "feature_count": 50,
+          "expected_count": 50,
+          "crs": "EPSG:4326",
+          "renderer": "singleSymbol"
+        },
+        {
+          "name": "ref_sacramento_hydro",
+          "valid": true,
+          "feature_count": 8,
+          "expected_count": 8,
+          "crs": "EPSG:4326",
+          "renderer": "singleSymbol"
+        },
+        {
+          "name": "ref_sacramento_local_roads",
+          "valid": true,
+          "feature_count": 903,
+          "expected_count": 903,
+          "crs": "EPSG:4326",
+          "renderer": "singleSymbol"
+        },
+        {
+          "name": "ref_sacramento_rail",
+          "valid": true,
+          "feature_count": 55,
+          "expected_count": 55,
+          "crs": "EPSG:4326",
+          "renderer": "singleSymbol"
+        },
+        {
+          "name": "ref_sacramento_secondary_roads",
+          "valid": true,
+          "feature_count": 0,
+          "expected_count": 0,
+          "crs": "EPSG:4326",
+          "renderer": null
+        },
+        {
+          "name": "ref_us_states",
+          "valid": true,
+          "feature_count": 49,
+          "expected_count": 49,
+          "crs": "EPSG:4326",
+          "renderer": "singleSymbol"
+        },
+        {
+          "name": "ref_wamsutter_connecting_roads",
+          "valid": true,
+          "feature_count": 107,
+          "expected_count": 107,
+          "crs": "EPSG:4326",
+          "renderer": "singleSymbol"
+        },
+        {
+          "name": "ref_wamsutter_fra_rail",
+          "valid": true,
+          "feature_count": 18,
+          "expected_count": 18,
+          "crs": "EPSG:4326",
+          "renderer": "singleSymbol"
+        },
+        {
+          "name": "ref_wamsutter_highways",
+          "valid": true,
+          "feature_count": 177,
+          "expected_count": 177,
+          "crs": "EPSG:4326",
+          "renderer": "singleSymbol"
+        },
+        {
+          "name": "ref_wamsutter_hydro",
+          "valid": true,
+          "feature_count": 2658,
+          "expected_count": 2658,
+          "crs": "EPSG:4326",
+          "renderer": "singleSymbol"
+        },
+        {
+          "name": "ref_wamsutter_rail",
+          "valid": true,
+          "feature_count": 106,
+          "expected_count": 106,
+          "crs": "EPSG:4326",
+          "renderer": "singleSymbol"
+        },
+        {
+          "name": "ref_wamsutter_secondary_roads",
+          "valid": true,
+          "feature_count": 224,
+          "expected_count": 224,
+          "crs": "EPSG:4326",
+          "renderer": "singleSymbol"
+        },
+        {
+          "name": "ref_wyoming_counties",
+          "valid": true,
+          "feature_count": 23,
+          "expected_count": 23,
+          "crs": "EPSG:4326",
+          "renderer": "singleSymbol"
+        },
+        {
+          "name": "ref_wyoming_local_roads",
+          "valid": true,
+          "feature_count": 3195,
+          "expected_count": 3195,
+          "crs": "EPSG:4326",
+          "renderer": "singleSymbol"
+        },
+        {
+          "name": "ref_wyoming_waterbodies",
+          "valid": true,
+          "feature_count": 540,
+          "expected_count": 540,
+          "crs": "EPSG:4326",
+          "renderer": "singleSymbol"
+        },
+        {
+          "name": "reference_place_labels",
+          "valid": true,
+          "feature_count": 5,
+          "expected_count": 5,
+          "crs": "EPSG:4326",
+          "renderer": "singleSymbol"
+        },
+        {
+          "name": "resource_areas",
+          "valid": true,
+          "feature_count": 0,
+          "expected_count": 0,
+          "crs": "EPSG:4326",
+          "renderer": null
+        },
+        {
+          "name": "roads",
+          "valid": true,
+          "feature_count": 0,
+          "expected_count": 0,
+          "crs": "EPSG:4326",
+          "renderer": null
+        },
+        {
+          "name": "search_areas",
+          "valid": true,
+          "feature_count": 6,
+          "expected_count": 6,
+          "crs": "EPSG:4326",
+          "renderer": "categorizedSymbol"
+        },
+        {
+          "name": "source_claim_points",
+          "valid": true,
+          "feature_count": 2,
+          "expected_count": 2,
+          "crs": "EPSG:4326",
+          "renderer": "singleSymbol"
+        },
+        {
+          "name": "spatial_assets",
+          "valid": true,
+          "feature_count": 2,
+          "expected_count": 2,
+          "crs": "EPSG:4326",
+          "renderer": "singleSymbol"
+        }
+      ],
+      "status": "PASS"
+    }
+  ],
+  "status": "PASS"
+}

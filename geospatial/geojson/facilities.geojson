@@ -1,0 +1,245 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "FAC-RW-PLANT-PROP",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -108.1776224223069,
+              42.21849008695079
+            ],
+            [
+              -108.17769012037971,
+              42.219838953978986
+            ],
+            [
+              -108.17986773027688,
+              42.21977854654614
+            ],
+            [
+              -108.17979998600251,
+              42.21842968235657
+            ],
+            [
+              -108.1776224223069,
+              42.21849008695079
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "feature_id": "FAC-RW-PLANT-PROP",
+        "object_id": "SH-FAC-RW-005",
+        "canonical_name": "Surface processing planning zone",
+        "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+        "real_world_relation": "UNKNOWN",
+        "canon_status": "PROPOSED",
+        "geometry_status": "PRELIMINARY_ENGINEERING_PROPOSAL",
+        "location_method": "ENGINEERED_FROM_CONSTRAINTS",
+        "precision_class": "PRELIMINARY_DESIGN",
+        "horizontal_accuracy_m": null,
+        "public_precision": "FICTIONAL_CONTROL_OR_PROPOSAL",
+        "source_id": "SRC-RAIL-PRELIM-ENGINEERING",
+        "decision_id": "GEO-D014",
+        "recorded_at": "2026-09-06T02:29:42+00:00",
+        "world_state_date": "2026-09-05",
+        "reference_source_ids": [
+          "SRC-ADDENDUM-20260905",
+          "DEM-USGS-WYOMING",
+          "REF-WYOMING-WATERBODIES",
+          "REF-WAMSUTTER-FRA-RAIL"
+        ],
+        "construction_method": "Declared analyst candidate geometry supported by pinned terrain/water analysis; see GEO-D014.",
+        "notes": "Proposed fictional geometry in real geography. No real land title, access/operating right, construction approval or historical operation inferred. Functional zone only; not geotechnically selected or derived from old conceptual artwork coordinates.",
+        "valid_from": null,
+        "valid_to": null,
+        "owner_entity": null,
+        "operator_entity": null
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "FAC-RW-ADMIN-PROP",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -108.18172203605491,
+              42.21810618235741
+            ],
+            [
+              -108.18177174417052,
+              42.219095347677666
+            ],
+            [
+              -108.18370736735258,
+              42.21904158610633
+            ],
+            [
+              -108.1836576291217,
+              42.21805242263871
+            ],
+            [
+              -108.18172203605491,
+              42.21810618235741
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "feature_id": "FAC-RW-ADMIN-PROP",
+        "object_id": "SH-FAC-RW-008",
+        "canonical_name": "Administration and workshops planning zone",
+        "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+        "real_world_relation": "UNKNOWN",
+        "canon_status": "PROPOSED",
+        "geometry_status": "PRELIMINARY_ENGINEERING_PROPOSAL",
+        "location_method": "ENGINEERED_FROM_CONSTRAINTS",
+        "precision_class": "PRELIMINARY_DESIGN",
+        "horizontal_accuracy_m": null,
+        "public_precision": "FICTIONAL_CONTROL_OR_PROPOSAL",
+        "source_id": "SRC-RAIL-PRELIM-ENGINEERING",
+        "decision_id": "GEO-D014",
+        "recorded_at": "2026-09-06T02:29:42+00:00",
+        "world_state_date": "2026-09-05",
+        "reference_source_ids": [
+          "SRC-ADDENDUM-20260905",
+          "DEM-USGS-WYOMING",
+          "REF-WYOMING-WATERBODIES",
+          "REF-WAMSUTTER-FRA-RAIL"
+        ],
+        "construction_method": "Declared analyst candidate geometry supported by pinned terrain/water analysis; see GEO-D014.",
+        "notes": "Proposed fictional geometry in real geography. No real land title, access/operating right, construction approval or historical operation inferred. Functional zone only; not geotechnically selected or derived from old conceptual artwork coordinates.",
+        "valid_from": null,
+        "valid_to": null,
+        "owner_entity": null,
+        "operator_entity": null
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "FAC-RW-WATER-PROP",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -108.17616127825708,
+              42.217134825606976
+            ],
+            [
+              -108.17620638691834,
+              42.218034071826054
+            ],
+            [
+              -108.17826296305974,
+              42.21797705000889
+            ],
+            [
+              -108.17821782531077,
+              42.217077805576196
+            ],
+            [
+              -108.17616127825708,
+              42.217134825606976
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "feature_id": "FAC-RW-WATER-PROP",
+        "object_id": "SH-FAC-RW-013",
+        "canonical_name": "Water-management study zone",
+        "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+        "real_world_relation": "UNKNOWN",
+        "canon_status": "PROPOSED",
+        "geometry_status": "PRELIMINARY_ENGINEERING_PROPOSAL",
+        "location_method": "ENGINEERED_FROM_CONSTRAINTS",
+        "precision_class": "PRELIMINARY_DESIGN",
+        "horizontal_accuracy_m": null,
+        "public_precision": "FICTIONAL_CONTROL_OR_PROPOSAL",
+        "source_id": "SRC-RAIL-PRELIM-ENGINEERING",
+        "decision_id": "GEO-D014",
+        "recorded_at": "2026-09-06T02:29:42+00:00",
+        "world_state_date": "2026-09-05",
+        "reference_source_ids": [
+          "SRC-ADDENDUM-20260905",
+          "DEM-USGS-WYOMING",
+          "REF-WYOMING-WATERBODIES",
+          "REF-WAMSUTTER-FRA-RAIL"
+        ],
+        "construction_method": "Declared analyst candidate geometry supported by pinned terrain/water analysis; see GEO-D014.",
+        "notes": "Proposed fictional geometry in real geography. No real land title, access/operating right, construction approval or historical operation inferred. Functional zone only; not geotechnically selected or derived from old conceptual artwork coordinates.",
+        "valid_from": null,
+        "valid_to": null,
+        "owner_entity": null,
+        "operator_entity": null
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "FAC-RW-PORTAL-PROP",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -108.18127304371306,
+              42.22122535880559
+            ],
+            [
+              -108.18130919367371,
+              42.22194475170932
+            ],
+            [
+              -108.18251901371897,
+              42.22191115760201
+            ],
+            [
+              -108.18248285006744,
+              42.22119176554021
+            ],
+            [
+              -108.18127304371306,
+              42.22122535880559
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "feature_id": "FAC-RW-PORTAL-PROP",
+        "object_id": "SH-FAC-RW-001",
+        "canonical_name": "Portal siting study zone",
+        "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+        "real_world_relation": "UNKNOWN",
+        "canon_status": "PROPOSED",
+        "geometry_status": "PRELIMINARY_ENGINEERING_PROPOSAL",
+        "location_method": "ENGINEERED_FROM_CONSTRAINTS",
+        "precision_class": "PRELIMINARY_DESIGN",
+        "horizontal_accuracy_m": null,
+        "public_precision": "FICTIONAL_CONTROL_OR_PROPOSAL",
+        "source_id": "SRC-RAIL-PRELIM-ENGINEERING",
+        "decision_id": "GEO-D014",
+        "recorded_at": "2026-09-06T02:29:42+00:00",
+        "world_state_date": "2026-09-05",
+        "reference_source_ids": [
+          "SRC-ADDENDUM-20260905",
+          "DEM-USGS-WYOMING",
+          "REF-WYOMING-WATERBODIES",
+          "REF-WAMSUTTER-FRA-RAIL"
+        ],
+        "construction_method": "Declared analyst candidate geometry supported by pinned terrain/water analysis; see GEO-D014.",
+        "notes": "Proposed fictional geometry in real geography. No real land title, access/operating right, construction approval or historical operation inferred. Functional zone only; not geotechnically selected or derived from old conceptual artwork coordinates.",
+        "valid_from": null,
+        "valid_to": null,
+        "owner_entity": null,
+        "operator_entity": null
+      }
+    }
+  ]
+}

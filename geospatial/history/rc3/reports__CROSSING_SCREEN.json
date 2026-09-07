@@ -1,0 +1,316 @@
+{
+  "projection": "EPSG:26913",
+  "results": [
+    {
+      "segment_id": "BST-SEG-001",
+      "screens": [
+        {
+          "source_layer": "wamsutter_highways",
+          "intersected_reference_features": 2,
+          "hits": [
+            {
+              "reference_id": "REF-WAMSUTTER-HIGHWAYS-4",
+              "intersection_wkt_projected": "POINT (252718.43981610597 4618444.564455705)"
+            },
+            {
+              "reference_id": "REF-WAMSUTTER-HIGHWAYS-151",
+              "intersection_wkt_projected": "POINT (252750.0891142823 4618409.2706741905)"
+            }
+          ],
+          "interpretation": "Raw intersected reference features, not unique structures. Coincident road records, drainage branches and grade separation require review."
+        },
+        {
+          "source_layer": "wyoming_local_roads",
+          "intersected_reference_features": 55,
+          "hits": [
+            {
+              "reference_id": "REF-WYOMING-LOCAL-ROADS-126",
+              "intersection_wkt_projected": "POINT (235443.3426207055 4672484.266396145)"
+            },
+            {
+              "reference_id": "REF-WYOMING-LOCAL-ROADS-251",
+              "intersection_wkt_projected": "POINT (241926.66585670988 4659502.150402722)"
+            },
+            {
+              "reference_id": "REF-WYOMING-LOCAL-ROADS-286",
+              "intersection_wkt_projected": "POINT (248185.92589514452 4629474.7256451845)"
+            },
+            {
+              "reference_id": "REF-WYOMING-LOCAL-ROADS-321",
+              "intersection_wkt_projected": "POINT (242397.36373296578 4648942.2502278825)"
+            },
+            {
+              "reference_id": "REF-WYOMING-LOCAL-ROADS-357",
+              "intersection_wkt_projected": "POINT (240902.51824721077 4666456.435781052)"
+            },
+            {
+              "reference_id": "REF-WYOMING-LOCAL-ROADS-439",
+              "intersection_wkt_projected": "POINT (248409.85769229967 4628872.572770271)"
+            },
+            {
+              "reference_id": "REF-WYOMING-LOCAL-ROADS-469",
+              "intersection_wkt_projected": "POINT (244606.06698458895 4640192.468608689)"
+            },
+            {
+              "reference_id": "REF-WYOMING-LOCAL-ROADS-473",
+              "intersection_wkt_projected": "POINT (249340.81244393365 4622272.003724787)"
+            },
+            {
+              "reference_id": "REF-WYOMING-LOCAL-ROADS-504",
+              "intersection_wkt_projected": "POINT (252541.99700525647 4618630.273908779)"
+            },
+            {
+              "reference_id": "REF-WYOMING-LOCAL-ROADS-582",
+              "intersection_wkt_projected": "POINT (243551.44033104708 4642818.9420942655)"
+            },
+            {
+              "reference_id": "REF-WYOMING-LOCAL-ROADS-643",
+              "intersection_wkt_projected": "POINT (248072.36103190534 4630301.821980305)"
+            },
+            {
+              "reference_id": "REF-WYOMING-LOCAL-ROADS-774",
+              "intersection_wkt_projected": "POINT (246363.1404216206 4636230.469526498)"
+            },
+            {
+              "reference_id": "REF-WYOMING-LOCAL-ROADS-963",
+              "intersection_wkt_projected": "POINT (247047.66271254042 4635190.998177307)"
+            },
+            {
+              "reference_id": "REF-WYOMING-LOCAL-ROADS-1038",
+              "intersection_wkt_projected": "POINT (245703.99210959845 4637309.429534205)"
+            },
+            {
+              "reference_id": "REF-WYOMING-LOCAL-ROADS-1064",
+              "intersection_wkt_projected": "POINT (244272.8977950936 4641013.373060178)"
+            },
+            {
+              "reference_id": "REF-WYOMING-LOCAL-ROADS-1104",
+              "intersection_wkt_projected": "POINT (250674.75344616122 4620262.697552885)"
+            },
+            {
+              "reference_id": "REF-WYOMING-LOCAL-ROADS-1142",
+              "intersection_wkt_projected": "POINT (247052.49729790387 4635183.354084093)"
+            },
+            {
+              "reference_id": "REF-WYOMING-LOCAL-ROADS-1187",
+              "intersection_wkt_projected": "POINT (245727.62300487648 4638375.419323007)"
+            },
+            {
+              "reference_id": "REF-WYOMING-LOCAL-ROADS-1310",
+              "intersection_wkt_projected": "POINT (248068.42930279192 4632794.446344231)"
+            },
+            {
+              "reference_id": "REF-WYOMING-LOCAL-ROADS-1351",
+              "intersection_wkt_projected": "POINT (239209.8269320884 4669268.95550165)"
+            },
+            {
+              "reference_id": "REF-WYOMING-LOCAL-ROADS-1391",
+              "intersection_wkt_projected": "POINT (249343.20698342664 4622746.263233553)"
+            },
+            {
+              "reference_id": "REF-WYOMING-LOCAL-ROADS-1392",
+              "intersection_wkt_projected": "POINT (251748.5973455425 4619345.895283305)"
+            },
+            {
+              "reference_id": "REF-WYOMING-LOCAL-ROADS-1436",
+              "intersection_wkt_projected": "POINT (249432.85920970674 4626307.370002851)"
+            },
+            {
+              "reference_id": "REF-WYOMING-LOCAL-ROADS-1451",
+              "intersection_wkt_projected": "POINT (235074.29019928988 4672646.752377689)"
+            },
+            {
+              "reference_id": "REF-WYOMING-LOCAL-ROADS-1453",
+              "intersection_wkt_projected": "POINT (241680.62421624365 4663904.931486016)"
+            },
+            {
+              "reference_id": "REF-WYOMING-LOCAL-ROADS-1494",
+              "intersection_wkt_projected": "POINT (239748.99611694156 4668634.950552645)"
+            },
+            {
+              "reference_id": "REF-WYOMING-LOCAL-ROADS-1665",
+              "intersection_wkt_projected": "POINT (249435.40087012443 4626296.172008932)"
+            },
+            {
+              "reference_id": "REF-WYOMING-LOCAL-ROADS-1674",
+              "intersection_wkt_projected": "POINT (247593.9823450676 4634252.694769011)"
+            },
+            {
+              "reference_id": "REF-WYOMING-LOCAL-ROADS-1792",
+              "intersection_wkt_projected": "POINT (242983.66085259142 4646079.576294505)"
+            },
+            {
+              "reference_id": "REF-WYOMING-LOCAL-ROADS-1830",
+              "intersection_wkt_projected": "POINT (251806.62584376114 4619296.82290493)"
+            },
+            {
+              "reference_id": "REF-WYOMING-LOCAL-ROADS-1865",
+              "intersection_wkt_projected": "POINT (242039.522641811 4651352.074996035)"
+            },
+            {
+              "reference_id": "REF-WYOMING-LOCAL-ROADS-1933",
+              "intersection_wkt_projected": "POINT (244598.12890180777 4640208.308778534)"
+            },
+            {
+              "reference_id": "REF-WYOMING-LOCAL-ROADS-1965",
+              "intersection_wkt_projected": "POINT (240470.19956995937 4667459.993486694)"
+            },
+            {
+              "reference_id": "REF-WYOMING-LOCAL-ROADS-2035",
+              "intersection_wkt_projected": "POINT (241948.49655016197 4657953.234390788)"
+            },
+            {
+              "reference_id": "REF-WYOMING-LOCAL-ROADS-2056",
+              "intersection_wkt_projected": "POINT (245716.90296262957 4638571.95881903)"
+            },
+            {
+              "reference_id": "REF-WYOMING-LOCAL-ROADS-2165",
+              "intersection_wkt_projected": "POINT (249575.01377360264 4625434.132158599)"
+            },
+            {
+              "reference_id": "REF-WYOMING-LOCAL-ROADS-2167",
+              "intersection_wkt_projected": "POINT (249472.18972954713 4623543.033567521)"
+            },
+            {
+              "reference_id": "REF-WYOMING-LOCAL-ROADS-2209",
+              "intersection_wkt_projected": "POINT (248097.7026166277 4632540.777346644)"
+            },
+            {
+              "reference_id": "REF-WYOMING-LOCAL-ROADS-2324",
+              "intersection_wkt_projected": "POINT (244444.3194591211 4640552.923017938)"
+            },
+            {
+              "reference_id": "REF-WYOMING-LOCAL-ROADS-2335",
+              "intersection_wkt_projected": "POINT (247102.4122759325 4635104.099793465)"
+            },
+            {
+              "reference_id": "REF-WYOMING-LOCAL-ROADS-2352",
+              "intersection_wkt_projected": "POINT (242946.3748347161 4644943.034825265)"
+            },
+            {
+              "reference_id": "REF-WYOMING-LOCAL-ROADS-2471",
+              "intersection_wkt_projected": "POINT (238516.76944439227 4670004.993985047)"
+            },
+            {
+              "reference_id": "REF-WYOMING-LOCAL-ROADS-2520",
+              "intersection_wkt_projected": "POINT (237098.92690501077 4671577.253992843)"
+            },
+            {
+              "reference_id": "REF-WYOMING-LOCAL-ROADS-2541",
+              "intersection_wkt_projected": "POINT (252402.6495311453 4618766.764967913)"
+            },
+            {
+              "reference_id": "REF-WYOMING-LOCAL-ROADS-2597",
+              "intersection_wkt_projected": "POINT (246956.23971023603 4635334.59920146)"
+            },
+            {
+              "reference_id": "REF-WYOMING-LOCAL-ROADS-2625",
+              "intersection_wkt_projected": "POINT (242956.053152242 4645665.462953923)"
+            },
+            {
+              "reference_id": "REF-WYOMING-LOCAL-ROADS-2670",
+              "intersection_wkt_projected": "POINT (239846.21242206532 4668503.561398514)"
+            },
+            {
+              "reference_id": "REF-WYOMING-LOCAL-ROADS-2761",
+              "intersection_wkt_projected": "POINT (252447.35978787017 4618723.751637244)"
+            },
+            {
+              "reference_id": "REF-WYOMING-LOCAL-ROADS-2763",
+              "intersection_wkt_projected": "POINT (247241.38818603344 4634879.017475937)"
+            },
+            {
+              "reference_id": "REF-WYOMING-LOCAL-ROADS-2846",
+              "intersection_wkt_projected": "POINT (246329.36913328554 4636279.880115411)"
+            },
+            {
+              "reference_id": "REF-WYOMING-LOCAL-ROADS-2872",
+              "intersection_wkt_projected": "POINT (242997.35626971826 4646782.99491155)"
+            },
+            {
+              "reference_id": "REF-WYOMING-LOCAL-ROADS-2981",
+              "intersection_wkt_projected": "POINT (248121.49672663692 4631905.129516474)"
+            },
+            {
+              "reference_id": "REF-WYOMING-LOCAL-ROADS-3034",
+              "intersection_wkt_projected": "POINT (242073.8815507547 4650795.968358546)"
+            },
+            {
+              "reference_id": "REF-WYOMING-LOCAL-ROADS-3135",
+              "intersection_wkt_projected": "POINT (253105.97544918634 4617933.742020973)"
+            },
+            {
+              "reference_id": "REF-WYOMING-LOCAL-ROADS-3140",
+              "intersection_wkt_projected": "POINT (252829.7780008863 4618316.836521692)"
+            }
+          ],
+          "interpretation": "Raw intersected reference features, not unique structures. Coincident road records, drainage branches and grade separation require review."
+        },
+        {
+          "source_layer": "wamsutter_hydro",
+          "intersected_reference_features": 6,
+          "hits": [
+            {
+              "reference_id": "REF-WAMSUTTER-HYDRO-1788",
+              "intersection_wkt_projected": "POINT (241412.29299107738 4664913.019772999)"
+            },
+            {
+              "reference_id": "REF-WAMSUTTER-HYDRO-1789",
+              "intersection_wkt_projected": "MULTIPOINT ((241610.05784989122 4664202.7322841715), (241824.28183960394 4663055.441124571))"
+            },
+            {
+              "reference_id": "REF-WAMSUTTER-HYDRO-1877",
+              "intersection_wkt_projected": "POINT (248301.70502921566 4629128.510096913)"
+            },
+            {
+              "reference_id": "REF-WAMSUTTER-HYDRO-2448",
+              "intersection_wkt_projected": "POINT (249476.8537768528 4623567.732237373)"
+            },
+            {
+              "reference_id": "REF-WAMSUTTER-HYDRO-2464",
+              "intersection_wkt_projected": "POINT (245671.9333484162 4638743.787405899)"
+            },
+            {
+              "reference_id": "REF-WAMSUTTER-HYDRO-2469",
+              "intersection_wkt_projected": "POINT (249330.2519125994 4622478.3448382355)"
+            }
+          ],
+          "interpretation": "Raw intersected reference features, not unique structures. Coincident road records, drainage branches and grade separation require review."
+        }
+      ]
+    },
+    {
+      "segment_id": "BST-SEG-002",
+      "screens": [
+        {
+          "source_layer": "wamsutter_highways",
+          "intersected_reference_features": 0,
+          "hits": [],
+          "interpretation": "Raw intersected reference features, not unique structures. Coincident road records, drainage branches and grade separation require review."
+        },
+        {
+          "source_layer": "wyoming_local_roads",
+          "intersected_reference_features": 2,
+          "hits": [
+            {
+              "reference_id": "REF-WYOMING-LOCAL-ROADS-1761",
+              "intersection_wkt_projected": "POINT (235525.00986330234 4675935.282924636)"
+            },
+            {
+              "reference_id": "REF-WYOMING-LOCAL-ROADS-2082",
+              "intersection_wkt_projected": "POINT (235457.14549004356 4675867.155958374)"
+            }
+          ],
+          "interpretation": "Raw intersected reference features, not unique structures. Coincident road records, drainage branches and grade separation require review."
+        },
+        {
+          "source_layer": "wamsutter_hydro",
+          "intersected_reference_features": 0,
+          "hits": [],
+          "interpretation": "Raw intersected reference features, not unique structures. Coincident road records, drainage branches and grade separation require review."
+        }
+      ]
+    }
+  ],
+  "status": "SCREENED_STRUCTURES_UNRESOLVED"
+}

@@ -1,0 +1,43 @@
+{
+  "record_id": "GEO-OPERATING-20260906",
+  "source_type": "RETRIEVED_USER_DECISIONS",
+  "retrieved_on": "2026-09-06",
+  "provenance_note": "Personal-context retrieval reports user approvals from 2026-09-06 02:05, 02:25, 02:28 and 02:32 UTC. This is a structured retrieval record, not a verbatim transcript. Closing date independently matches branch snapshot.",
+  "acquisition": {
+    "buyer": "Sable Harbor",
+    "target": "ARU",
+    "close_date": "2026-01-07",
+    "pre_acquisition_map_as_of": "2026-01-06"
+  },
+  "red_wash_logistics": {
+    "hub": "Taylor",
+    "mine_spur": false,
+    "last_mile": "TRUCK",
+    "recurring_annual_rail_loads": 225,
+    "ordinary_design_allowance_loads": 300,
+    "storage_days": [
+      10,
+      14
+    ],
+    "weekly_windows": 2,
+    "phase_one_capex_usd": 8500000,
+    "gated_remaining_capex_usd": 6500000,
+    "catch_up_capex_separate_usd": 11000000,
+    "ordinary_cycle_hours_max": 72,
+    "cycle_goal_hours": [
+      36,
+      48
+    ],
+    "critical_material_otp_target": 0.95
+  },
+  "branch_snapshot": {
+    "ref": "feature/aru-bst-2025-baseline",
+    "commit": "e385d29c4cd6fc49438e956027c8165102608e1b",
+    "path": "docs/structured/aru_bst_2025_baseline_model.json",
+    "state": "UNMERGED_WORKING_BASELINE"
+  },
+  "limits": [
+    "No actual road alignment has been selected.",
+    "Acquisition closing does not establish the geometry or original BS&T founding/ARU acquisition date."
+  ]
+}

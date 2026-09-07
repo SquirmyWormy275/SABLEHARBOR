@@ -1,0 +1,5 @@
+# Exact source wording can contain trailing spaces; do not mutate evidence.
+registers/*.csv -whitespace
+sources/MASTER_EXECUTION_MANDATE.md -whitespace
+reference/*.geojson linguist-generated=true
+maps/*.svg linguist-generated=true

@@ -1,0 +1,486 @@
+[
+  {
+    "name": "Red Wash",
+    "coordinate": [
+      -108.18,
+      42.22
+    ],
+    "url": "https://gis.blm.gov/arcgis/rest/services/lands/BLM_Natl_SMA_Cached_without_PriUnk/MapServer/1/query?f=json&where=1%3D1&geometry=-108.18%2C42.22&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&returnGeometry=false&outFields=%2A",
+    "sha256": "74eaf9f128557a797a7d48cc3993a130204676bf2b7c83f8a75b327206ec130d",
+    "response": {
+      "displayFieldName": "ADMIN_UNIT_NAME",
+      "fieldAliases": {
+        "OBJECTID": "OBJECTID",
+        "SMA_ID": "SMA_ID",
+        "HOLD_ID": "HOLD_ID",
+        "ADMIN_DEPT_CODE": "ADMIN_DEPT_CODE",
+        "ADMIN_AGENCY_CODE": "ADMIN_AGENCY_CODE",
+        "ADMIN_UNIT_NAME": "ADMIN_UNIT_NAME",
+        "ADMIN_UNIT_TYPE": "ADMIN_UNIT_TYPE",
+        "HOLD_DEPT_CODE": "HOLD_DEPT_CODE",
+        "HOLD_AGENCY_CODE": "HOLD_AGENCY_CODE",
+        "SHAPE_Length": "Shape_Length",
+        "SHAPE_Area": "Shape_Area",
+        "ADMIN_ST": "ADMIN_ST",
+        "FAU_ID": "FAU_ID"
+      },
+      "fields": [
+        {
+          "name": "OBJECTID",
+          "type": "esriFieldTypeOID",
+          "alias": "OBJECTID"
+        },
+        {
+          "name": "SMA_ID",
+          "type": "esriFieldTypeSmallInteger",
+          "alias": "SMA_ID"
+        },
+        {
+          "name": "HOLD_ID",
+          "type": "esriFieldTypeSmallInteger",
+          "alias": "HOLD_ID"
+        },
+        {
+          "name": "ADMIN_DEPT_CODE",
+          "type": "esriFieldTypeString",
+          "alias": "ADMIN_DEPT_CODE",
+          "length": 6
+        },
+        {
+          "name": "ADMIN_AGENCY_CODE",
+          "type": "esriFieldTypeString",
+          "alias": "ADMIN_AGENCY_CODE",
+          "length": 8
+        },
+        {
+          "name": "ADMIN_UNIT_NAME",
+          "type": "esriFieldTypeString",
+          "alias": "ADMIN_UNIT_NAME",
+          "length": 255
+        },
+        {
+          "name": "ADMIN_UNIT_TYPE",
+          "type": "esriFieldTypeString",
+          "alias": "ADMIN_UNIT_TYPE",
+          "length": 255
+        },
+        {
+          "name": "HOLD_DEPT_CODE",
+          "type": "esriFieldTypeString",
+          "alias": "HOLD_DEPT_CODE",
+          "length": 255
+        },
+        {
+          "name": "HOLD_AGENCY_CODE",
+          "type": "esriFieldTypeString",
+          "alias": "HOLD_AGENCY_CODE",
+          "length": 255
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "esriFieldTypeDouble",
+          "alias": "Shape_Length"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "esriFieldTypeDouble",
+          "alias": "Shape_Area"
+        },
+        {
+          "name": "ADMIN_ST",
+          "type": "esriFieldTypeString",
+          "alias": "ADMIN_ST",
+          "length": 2
+        },
+        {
+          "name": "FAU_ID",
+          "type": "esriFieldTypeSmallInteger",
+          "alias": "FAU_ID"
+        }
+      ],
+      "features": [
+        {
+          "attributes": {
+            "OBJECTID": 33,
+            "SMA_ID": 2,
+            "HOLD_ID": null,
+            "ADMIN_DEPT_CODE": "DOI",
+            "ADMIN_AGENCY_CODE": "BLM",
+            "ADMIN_UNIT_NAME": "Bureau of Land Management",
+            "ADMIN_UNIT_TYPE": "Bureau of Land Management WY",
+            "HOLD_DEPT_CODE": null,
+            "HOLD_AGENCY_CODE": null,
+            "SHAPE_Length": 123714626.85707027,
+            "SHAPE_Area": 130960572125.47108,
+            "ADMIN_ST": "WY",
+            "FAU_ID": null
+          }
+        }
+      ]
+    },
+    "note": "Reference administrative management at point only; no boundary, title, permission or private/unknown coverage inferred."
+  },
+  {
+    "name": "Taylor A",
+    "coordinate": [
+      -108.1,
+      42.12
+    ],
+    "url": "https://gis.blm.gov/arcgis/rest/services/lands/BLM_Natl_SMA_Cached_without_PriUnk/MapServer/1/query?f=json&where=1%3D1&geometry=-108.1%2C42.12&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&returnGeometry=false&outFields=%2A",
+    "sha256": "74eaf9f128557a797a7d48cc3993a130204676bf2b7c83f8a75b327206ec130d",
+    "response": {
+      "displayFieldName": "ADMIN_UNIT_NAME",
+      "fieldAliases": {
+        "OBJECTID": "OBJECTID",
+        "SMA_ID": "SMA_ID",
+        "HOLD_ID": "HOLD_ID",
+        "ADMIN_DEPT_CODE": "ADMIN_DEPT_CODE",
+        "ADMIN_AGENCY_CODE": "ADMIN_AGENCY_CODE",
+        "ADMIN_UNIT_NAME": "ADMIN_UNIT_NAME",
+        "ADMIN_UNIT_TYPE": "ADMIN_UNIT_TYPE",
+        "HOLD_DEPT_CODE": "HOLD_DEPT_CODE",
+        "HOLD_AGENCY_CODE": "HOLD_AGENCY_CODE",
+        "SHAPE_Length": "Shape_Length",
+        "SHAPE_Area": "Shape_Area",
+        "ADMIN_ST": "ADMIN_ST",
+        "FAU_ID": "FAU_ID"
+      },
+      "fields": [
+        {
+          "name": "OBJECTID",
+          "type": "esriFieldTypeOID",
+          "alias": "OBJECTID"
+        },
+        {
+          "name": "SMA_ID",
+          "type": "esriFieldTypeSmallInteger",
+          "alias": "SMA_ID"
+        },
+        {
+          "name": "HOLD_ID",
+          "type": "esriFieldTypeSmallInteger",
+          "alias": "HOLD_ID"
+        },
+        {
+          "name": "ADMIN_DEPT_CODE",
+          "type": "esriFieldTypeString",
+          "alias": "ADMIN_DEPT_CODE",
+          "length": 6
+        },
+        {
+          "name": "ADMIN_AGENCY_CODE",
+          "type": "esriFieldTypeString",
+          "alias": "ADMIN_AGENCY_CODE",
+          "length": 8
+        },
+        {
+          "name": "ADMIN_UNIT_NAME",
+          "type": "esriFieldTypeString",
+          "alias": "ADMIN_UNIT_NAME",
+          "length": 255
+        },
+        {
+          "name": "ADMIN_UNIT_TYPE",
+          "type": "esriFieldTypeString",
+          "alias": "ADMIN_UNIT_TYPE",
+          "length": 255
+        },
+        {
+          "name": "HOLD_DEPT_CODE",
+          "type": "esriFieldTypeString",
+          "alias": "HOLD_DEPT_CODE",
+          "length": 255
+        },
+        {
+          "name": "HOLD_AGENCY_CODE",
+          "type": "esriFieldTypeString",
+          "alias": "HOLD_AGENCY_CODE",
+          "length": 255
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "esriFieldTypeDouble",
+          "alias": "Shape_Length"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "esriFieldTypeDouble",
+          "alias": "Shape_Area"
+        },
+        {
+          "name": "ADMIN_ST",
+          "type": "esriFieldTypeString",
+          "alias": "ADMIN_ST",
+          "length": 2
+        },
+        {
+          "name": "FAU_ID",
+          "type": "esriFieldTypeSmallInteger",
+          "alias": "FAU_ID"
+        }
+      ],
+      "features": [
+        {
+          "attributes": {
+            "OBJECTID": 33,
+            "SMA_ID": 2,
+            "HOLD_ID": null,
+            "ADMIN_DEPT_CODE": "DOI",
+            "ADMIN_AGENCY_CODE": "BLM",
+            "ADMIN_UNIT_NAME": "Bureau of Land Management",
+            "ADMIN_UNIT_TYPE": "Bureau of Land Management WY",
+            "HOLD_DEPT_CODE": null,
+            "HOLD_AGENCY_CODE": null,
+            "SHAPE_Length": 123714626.85707027,
+            "SHAPE_Area": 130960572125.47108,
+            "ADMIN_ST": "WY",
+            "FAU_ID": null
+          }
+        }
+      ]
+    },
+    "note": "Reference administrative management at point only; no boundary, title, permission or private/unknown coverage inferred."
+  },
+  {
+    "name": "Taylor B",
+    "coordinate": [
+      -108.205,
+      42.15
+    ],
+    "url": "https://gis.blm.gov/arcgis/rest/services/lands/BLM_Natl_SMA_Cached_without_PriUnk/MapServer/1/query?f=json&where=1%3D1&geometry=-108.205%2C42.15&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&returnGeometry=false&outFields=%2A",
+    "sha256": "74eaf9f128557a797a7d48cc3993a130204676bf2b7c83f8a75b327206ec130d",
+    "response": {
+      "displayFieldName": "ADMIN_UNIT_NAME",
+      "fieldAliases": {
+        "OBJECTID": "OBJECTID",
+        "SMA_ID": "SMA_ID",
+        "HOLD_ID": "HOLD_ID",
+        "ADMIN_DEPT_CODE": "ADMIN_DEPT_CODE",
+        "ADMIN_AGENCY_CODE": "ADMIN_AGENCY_CODE",
+        "ADMIN_UNIT_NAME": "ADMIN_UNIT_NAME",
+        "ADMIN_UNIT_TYPE": "ADMIN_UNIT_TYPE",
+        "HOLD_DEPT_CODE": "HOLD_DEPT_CODE",
+        "HOLD_AGENCY_CODE": "HOLD_AGENCY_CODE",
+        "SHAPE_Length": "Shape_Length",
+        "SHAPE_Area": "Shape_Area",
+        "ADMIN_ST": "ADMIN_ST",
+        "FAU_ID": "FAU_ID"
+      },
+      "fields": [
+        {
+          "name": "OBJECTID",
+          "type": "esriFieldTypeOID",
+          "alias": "OBJECTID"
+        },
+        {
+          "name": "SMA_ID",
+          "type": "esriFieldTypeSmallInteger",
+          "alias": "SMA_ID"
+        },
+        {
+          "name": "HOLD_ID",
+          "type": "esriFieldTypeSmallInteger",
+          "alias": "HOLD_ID"
+        },
+        {
+          "name": "ADMIN_DEPT_CODE",
+          "type": "esriFieldTypeString",
+          "alias": "ADMIN_DEPT_CODE",
+          "length": 6
+        },
+        {
+          "name": "ADMIN_AGENCY_CODE",
+          "type": "esriFieldTypeString",
+          "alias": "ADMIN_AGENCY_CODE",
+          "length": 8
+        },
+        {
+          "name": "ADMIN_UNIT_NAME",
+          "type": "esriFieldTypeString",
+          "alias": "ADMIN_UNIT_NAME",
+          "length": 255
+        },
+        {
+          "name": "ADMIN_UNIT_TYPE",
+          "type": "esriFieldTypeString",
+          "alias": "ADMIN_UNIT_TYPE",
+          "length": 255
+        },
+        {
+          "name": "HOLD_DEPT_CODE",
+          "type": "esriFieldTypeString",
+          "alias": "HOLD_DEPT_CODE",
+          "length": 255
+        },
+        {
+          "name": "HOLD_AGENCY_CODE",
+          "type": "esriFieldTypeString",
+          "alias": "HOLD_AGENCY_CODE",
+          "length": 255
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "esriFieldTypeDouble",
+          "alias": "Shape_Length"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "esriFieldTypeDouble",
+          "alias": "Shape_Area"
+        },
+        {
+          "name": "ADMIN_ST",
+          "type": "esriFieldTypeString",
+          "alias": "ADMIN_ST",
+          "length": 2
+        },
+        {
+          "name": "FAU_ID",
+          "type": "esriFieldTypeSmallInteger",
+          "alias": "FAU_ID"
+        }
+      ],
+      "features": [
+        {
+          "attributes": {
+            "OBJECTID": 33,
+            "SMA_ID": 2,
+            "HOLD_ID": null,
+            "ADMIN_DEPT_CODE": "DOI",
+            "ADMIN_AGENCY_CODE": "BLM",
+            "ADMIN_UNIT_NAME": "Bureau of Land Management",
+            "ADMIN_UNIT_TYPE": "Bureau of Land Management WY",
+            "HOLD_DEPT_CODE": null,
+            "HOLD_AGENCY_CODE": null,
+            "SHAPE_Length": 123714626.85707027,
+            "SHAPE_Area": 130960572125.47108,
+            "ADMIN_ST": "WY",
+            "FAU_ID": null
+          }
+        }
+      ]
+    },
+    "note": "Reference administrative management at point only; no boundary, title, permission or private/unknown coverage inferred."
+  },
+  {
+    "name": "Taylor C",
+    "coordinate": [
+      -108.225,
+      42.17
+    ],
+    "url": "https://gis.blm.gov/arcgis/rest/services/lands/BLM_Natl_SMA_Cached_without_PriUnk/MapServer/1/query?f=json&where=1%3D1&geometry=-108.225%2C42.17&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&returnGeometry=false&outFields=%2A",
+    "sha256": "74eaf9f128557a797a7d48cc3993a130204676bf2b7c83f8a75b327206ec130d",
+    "response": {
+      "displayFieldName": "ADMIN_UNIT_NAME",
+      "fieldAliases": {
+        "OBJECTID": "OBJECTID",
+        "SMA_ID": "SMA_ID",
+        "HOLD_ID": "HOLD_ID",
+        "ADMIN_DEPT_CODE": "ADMIN_DEPT_CODE",
+        "ADMIN_AGENCY_CODE": "ADMIN_AGENCY_CODE",
+        "ADMIN_UNIT_NAME": "ADMIN_UNIT_NAME",
+        "ADMIN_UNIT_TYPE": "ADMIN_UNIT_TYPE",
+        "HOLD_DEPT_CODE": "HOLD_DEPT_CODE",
+        "HOLD_AGENCY_CODE": "HOLD_AGENCY_CODE",
+        "SHAPE_Length": "Shape_Length",
+        "SHAPE_Area": "Shape_Area",
+        "ADMIN_ST": "ADMIN_ST",
+        "FAU_ID": "FAU_ID"
+      },
+      "fields": [
+        {
+          "name": "OBJECTID",
+          "type": "esriFieldTypeOID",
+          "alias": "OBJECTID"
+        },
+        {
+          "name": "SMA_ID",
+          "type": "esriFieldTypeSmallInteger",
+          "alias": "SMA_ID"
+        },
+        {
+          "name": "HOLD_ID",
+          "type": "esriFieldTypeSmallInteger",
+          "alias": "HOLD_ID"
+        },
+        {
+          "name": "ADMIN_DEPT_CODE",
+          "type": "esriFieldTypeString",
+          "alias": "ADMIN_DEPT_CODE",
+          "length": 6
+        },
+        {
+          "name": "ADMIN_AGENCY_CODE",
+          "type": "esriFieldTypeString",
+          "alias": "ADMIN_AGENCY_CODE",
+          "length": 8
+        },
+        {
+          "name": "ADMIN_UNIT_NAME",
+          "type": "esriFieldTypeString",
+          "alias": "ADMIN_UNIT_NAME",
+          "length": 255
+        },
+        {
+          "name": "ADMIN_UNIT_TYPE",
+          "type": "esriFieldTypeString",
+          "alias": "ADMIN_UNIT_TYPE",
+          "length": 255
+        },
+        {
+          "name": "HOLD_DEPT_CODE",
+          "type": "esriFieldTypeString",
+          "alias": "HOLD_DEPT_CODE",
+          "length": 255
+        },
+        {
+          "name": "HOLD_AGENCY_CODE",
+          "type": "esriFieldTypeString",
+          "alias": "HOLD_AGENCY_CODE",
+          "length": 255
+        },
+        {
+          "name": "SHAPE_Length",
+          "type": "esriFieldTypeDouble",
+          "alias": "Shape_Length"
+        },
+        {
+          "name": "SHAPE_Area",
+          "type": "esriFieldTypeDouble",
+          "alias": "Shape_Area"
+        },
+        {
+          "name": "ADMIN_ST",
+          "type": "esriFieldTypeString",
+          "alias": "ADMIN_ST",
+          "length": 2
+        },
+        {
+          "name": "FAU_ID",
+          "type": "esriFieldTypeSmallInteger",
+          "alias": "FAU_ID"
+        }
+      ],
+      "features": [
+        {
+          "attributes": {
+            "OBJECTID": 33,
+            "SMA_ID": 2,
+            "HOLD_ID": null,
+            "ADMIN_DEPT_CODE": "DOI",
+            "ADMIN_AGENCY_CODE": "BLM",
+            "ADMIN_UNIT_NAME": "Bureau of Land Management",
+            "ADMIN_UNIT_TYPE": "Bureau of Land Management WY",
+            "HOLD_DEPT_CODE": null,
+            "HOLD_AGENCY_CODE": null,
+            "SHAPE_Length": 123714626.85707027,
+            "SHAPE_Area": 130960572125.47108,
+            "ADMIN_ST": "WY",
+            "FAU_ID": null
+          }
+        }
+      ]
+    },
+    "note": "Reference administrative management at point only; no boundary, title, permission or private/unknown coverage inferred."
+  }
+]
