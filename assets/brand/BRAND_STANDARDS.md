@@ -1,6 +1,6 @@
 # Sable Harbor Brand Standards
 
-**Version:** 0.2.4
+**Version:** 0.2.6
 **Date:** 2026-09-07
 **Status:** Production candidate identity system; does not independently create or change canon
 
@@ -103,3 +103,13 @@ Use the exact approved horizontal PNG, including its ivory field. No current rev
 The [approved visual decision](../../docs/canon/KELLY_GANG_MINING_VISUAL_IDENTITY_2026-09-07.md) controls the Ned Kelly figure, two held pickaxes and complete stacked company emblem. These are approved motifs for this specific artwork. Preserve the PNG and its alpha channel as recorded in [the visual manifest](kelly_gang_mining_visual_manifest.json).
 
 Kelly Gang Mining is an external Cradle host operator. It is not an additional Sable Harbor business line or a new subsidiary. No alternate production forms are supplied.
+
+## Quality Forest Communications — historical external identity
+
+[QFC-VIS-001](../../docs/canon/QUALITY_FOREST_COMMUNICATIONS_VISUAL_IDENTITY_2026-09-07.md) controls the owner-approved green pine, yellow Q, contained AN/PRC-117G, tree-mounted 2055 SATCOM antenna and black script wordmark. Preserve the exact white-background horizontal PNG recorded in [the source manifest](quality_forest_communications_visual_manifest.json). The depicted tree and communications equipment are approved motifs for this artwork.
+
+QFC remains Hoberg's historical company before Sable Harbor. Only the complete horizontal form is approved.
+
+## Demotte Reclamation Services — external host identity
+
+[DEM-RS-001](../../docs/canon/DEMOTTE_RECLAMATION_NAME_AND_IDENTITY_2026-09-07.md) controls the current company name and owner-directed ridge/strata/stream logo. Preserve the complete blue-and-white PNG and its background in [the source manifest](demotte_reclamation_visual_manifest.json). This identity's landscape motif and raster source are specific overrides of the general brand rules. QFC's separately locked name and artwork are unaffected.

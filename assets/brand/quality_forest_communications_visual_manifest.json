@@ -1,0 +1,23 @@
+{
+  "identity": "Quality Forest Communications",
+  "state": "APPROVED_SOURCE_ARTWORK",
+  "approval_date": "2026-09-07",
+  "controlling_decision": "docs/canon/QUALITY_FOREST_COMMUNICATIONS_VISUAL_IDENTITY_2026-09-07.md",
+  "classification": "historical external forestry-communications company founded by Ellis (Eli) Hoberg before Sable Harbor",
+  "approval_basis": "Owner supplied a Quality Forest Management visual reference, requested Quality Forest Communications with an AN/PRC-117G and tree antenna, restored the yellow Q, then specified a smaller radio inside the Q and the classic 2055 SATCOM antenna. After viewing the final revision, the owner instructed: Nice. Lock it for QFC.",
+  "assets": [
+    {
+      "path": "assets/brand/logos/quality-forest-communications__primary-horizontal.png",
+      "sha256": "d72708de214894d0184cc0c1211bcb99647c5df6bbf61a2323d668451f91060d",
+      "bytes": 1099423,
+      "width": 1821,
+      "height": 864,
+      "mode": "RGB",
+      "format": "png",
+      "variant": "primary-horizontal",
+      "source": "Exact owner-selected final imagegen output, copied byte-for-byte without edits"
+    }
+  ],
+  "reproduction_rule": "The full horizontal PNG is the sole approved form. Preserve source pixels and white background; no separate tree/Q mark, vector, monochrome, reverse or transparent derivative is approved.",
+  "relationship_rule": "QFC is Hoberg's pre-Sable Harbor company. The logo does not establish a Sable Harbor subsidiary, current business line, acquisition or new legal or military relationship."
+}

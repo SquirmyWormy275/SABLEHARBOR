@@ -21,10 +21,12 @@
     "Emberline",
     "Red Wash / Pale Sun",
     "Klein",
-    "Kelly Gang Mining"
+    "Kelly Gang Mining",
+    "Quality Forest Communications",
+    "Demotte Reclamation Services"
   ],
-  "asset_count": 111,
-  "logo_count": 57,
+  "asset_count": 113,
+  "logo_count": 59,
   "formats": [
     "svg",
     "png"
@@ -1361,11 +1363,37 @@
       "height": 1254,
       "path": "assets/brand/logos/kelly-gang-mining__stacked.png",
       "sha256": "2b6958413abe5989120a5ed9b85480750cb385a397cb8228fa871f1a392f22e6"
+    },
+    {
+      "brand": "Quality Forest Communications",
+      "brand_slug": "quality-forest-communications",
+      "classification": "historical external forestry-communications company",
+      "canonical_status": "LOCKED September 7, 2026; controlling owner-approved PNG source artwork.",
+      "variant": "primary-horizontal",
+      "format": "png",
+      "width": 1821,
+      "height": 864,
+      "path": "assets/brand/logos/quality-forest-communications__primary-horizontal.png",
+      "sha256": "d72708de214894d0184cc0c1211bcb99647c5df6bbf61a2323d668451f91060d"
+    },
+    {
+      "brand": "Demotte Reclamation Services",
+      "brand_slug": "demotte-reclamation-services",
+      "classification": "external fictional Cradle U.S. host operator",
+      "canonical_status": "LOCKED September 7, 2026; controlling owner-approved blue-and-white PNG source artwork.",
+      "variant": "primary-horizontal",
+      "format": "png",
+      "width": 2079,
+      "height": 756,
+      "path": "assets/brand/logos/demotte-reclamation-services__primary-horizontal.png",
+      "sha256": "cb5bdbc6cb950dac198312222eb47659547ae6a30994c90dff514b0707cfd15f"
     }
   ],
   "current_industrial_identity_manifest": "assets/brand/industrial_visual_manifest.json",
   "klein_source_override": "assets/brand/klein_visual_manifest.json",
   "emberline_source_override": "assets/brand/emberline_visual_manifest.json",
   "last_source_update": "2026-09-07",
-  "kelly_gang_mining_source_override": "assets/brand/kelly_gang_mining_visual_manifest.json"
+  "kelly_gang_mining_source_override": "assets/brand/kelly_gang_mining_visual_manifest.json",
+  "quality_forest_communications_source_override": "assets/brand/quality_forest_communications_visual_manifest.json",
+  "demotte_reclamation_source_override": "assets/brand/demotte_reclamation_visual_manifest.json"
 }

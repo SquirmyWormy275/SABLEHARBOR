@@ -81,10 +81,36 @@ The integration PR records the repository validation and full CI results before 
 ## September 7 Kelly Gang Mining source approval
 
 - Exact selected-output comparison, PNG structural verification and full pixel decode: PASS.
-- Approved source: `logos/kelly-gang-mining__stacked.png`, 1254 × 1254 RGBA pixels, 1,509,892 bytes.
+- Approved source: `logos/kelly-gang-mining__stacked.png`, 1254 × 1254 RGB pixels, 1,509,892 bytes.
 - SHA-256: `2b6958413abe5989120a5ed9b85480750cb385a397cb8228fa871f1a392f22e6`.
 - One approved stacked form is recorded in the production inventory and [dedicated manifest](kelly_gang_mining_visual_manifest.json).
 - Kelly Gang Mining remains an external host operator. Its addition does not change the seven-current-business-line set.
 - Earlier approved source art, finance inputs and historical archives remain byte-preserved.
 
 The integration PR records canon, catalog, organization, hygiene, public-content and full CI checks before merge.
+
+## September 7 Quality Forest Communications source approval
+
+- Exact selected-output comparison, PNG structural verification and full pixel decode: PASS.
+- Approved source: `logos/quality-forest-communications__primary-horizontal.png`, 1821 × 864 RGB pixels, 1,099,423 bytes.
+- SHA-256: `d72708de214894d0184cc0c1211bcb99647c5df6bbf61a2323d668451f91060d`.
+- One approved horizontal form is recorded in the production inventory and [dedicated manifest](quality_forest_communications_visual_manifest.json).
+- The radio and both protective handles fit within the yellow Q; the selected tree antenna depicts the classic 2055 SATCOM form.
+- QFC remains a historical external company; the seven-current-business-line set is unchanged.
+- Earlier approved artwork, finance inputs and historical archives remain byte-preserved.
+
+The integration PR records canon, catalog, organization, hygiene, public-content and full CI checks before merge.
+
+## September 7 Demotte Reclamation Services source approval
+
+- PNG structural verification, full pixel decode and exact generated-source comparison: PASS.
+- Source: `logos/demotte-reclamation-services__primary-horizontal.png`, 2079 × 756 RGB pixels, 881,116 bytes.
+- SHA-256: `cb5bdbc6cb950dac198312222eb47659547ae6a30994c90dff514b0707cfd15f`.
+- The production manifest contains one complete horizontal form, classified as an external host identity.
+- QFC remains Quality Forest Communications and uses its exact selected yellow-Q/117G/2055 PNG, SHA-256 `d72708de214894d0184cc0c1211bcb99647c5df6bbf61a2323d668451f91060d`.
+- The rejected Demotte Communications/tree-D image is absent from the repository.
+- Finance-pinned source files, historical archives and prior approved artwork are byte-preserved.
+
+The integration PR records focused checks and the required full CI results before merge.
+
+The owner explicitly approved the final blue-and-white Demotte revision for locking and repository delivery after viewing it.

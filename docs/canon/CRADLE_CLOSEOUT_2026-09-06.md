@@ -1,7 +1,7 @@
 # SABLE HARBOR — PROJECT CRADLE CLOSEOUT
 
 **Record ID:** `SH-CRD-CLOSEOUT-20260906`  
-**Version:** 1.0.0  
+**Version:** 1.0.1
 **Decision date:** September 6, 2026  
 **Status:** LOCKED canon except where explicitly marked IMPLEMENTATION or OPEN_NONBLOCKING  
 **Scope:** Project Cradle origin, Stream 17, first U.S. recovery deployment, Bedford, operating boundary, material genealogy, 2026 state, and supersession of `CRD-008` / `CRD-010` open language.
@@ -88,13 +88,13 @@ For commercial recovery work, the genealogy extends through:
 
 Every link preserves provenance, time, uncertainty, transformation and disposition. A later analytical or financial record may summarize the chain but may not erase it.
 
-## 5. First U.S. deployment — Morrow Run
+## 5. First U.S. deployment — Demotte
 
 ### LOCKED
 
-Cradle's first U.S. reference deployment is an acid-mine-drainage recovery installation in north-central West Virginia operated in partnership with the fictional **Morrow Run Reclamation Services**.
+Cradle's first U.S. reference deployment is an acid-mine-drainage recovery installation in north-central West Virginia operated in partnership with the fictional **Demotte Reclamation Services**.
 
-Morrow Run operates ordinary treatment for water from a legacy underground coal complex. Environmental treatment and discharge obligations remain with the host operator. Cradle does not acquire the mine, the remediation liability or the host treatment system.
+Demotte operates ordinary treatment for water from a legacy underground coal complex. Environmental treatment and discharge obligations remain with the host operator. Cradle does not acquire the mine, the remediation liability or the host treatment system.
 
 The first-generation Cradle unit is a containerized / skid-based **Gen 1 recovery module** connected to a controlled slipstream ahead of ordinary treatment.
 
@@ -135,7 +135,7 @@ The Cradle U.S. recovery-development center is named **Bedford**.
 
 Bedford is located in the **Fairmont area of north-central West Virginia** on a fictional redeveloped industrial brownfield. The working site scale is approximately **15–20 acres**.
 
-Bedford is not a mine and is not the Morrow Run treatment site. It is the central development, integration and upgrading facility supporting distributed recovery deployments.
+Bedford is not a mine and is not the Demotte treatment site. It is the central development, integration and upgrading facility supporting distributed recovery deployments.
 
 Bedford's 2026 role includes:
 
@@ -158,7 +158,7 @@ By the closeout date it has:
 
 - the completed Wallaby failure history;
 - the Stream 17 commercial reference case with Kelly Gang Mining;
-- one operating U.S. Gen 1 reference deployment at Morrow Run;
+- one operating U.S. Gen 1 reference deployment at Demotte;
 - Bedford as its U.S. development and upgrading center;
 - additional candidate streams and deployments under disciplined evaluation;
 - a high kill rate by design rather than a requirement to convert every target into a project.
@@ -227,3 +227,7 @@ Remaining enterprise-wide implementation or governance work must not be relabele
 ## Kelly Gang Mining visual identity — September 7
 
 The [KGM-VIS-001 artwork decision](KELLY_GANG_MINING_VISUAL_IDENTITY_2026-09-07.md) locks the owner-selected Ned Kelly/two-pickaxe logo for the existing Stream 17 host operator. It changes no company relationship, host authority, recovery right or financial assumption in this closeout.
+
+## Demotte naming and artwork — September 7
+
+[DEM-RS-001](DEMOTTE_RECLAMATION_NAME_AND_IDENTITY_2026-09-07.md) replaces the former Morrow Run company name with Demotte Reclamation Services as an editorial correction and records the owner-directed logo. This version incorporates that naming decision; all host, recovery, financial and operating boundaries remain unchanged.

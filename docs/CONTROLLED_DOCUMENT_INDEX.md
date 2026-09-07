@@ -1,6 +1,6 @@
 # SABLE HARBOR CONTROLLED DOCUMENT INDEX
 
-**Index version:** 1.0.15 | **As of:** September 7, 2026
+**Index version:** 1.0.17 | **As of:** September 7, 2026
 
 ## Authority order
 
@@ -162,3 +162,15 @@ The v0.3 lore, base decision register, original lineage and other finance-pinned
 - [Controlling visual identity decision](canon/KELLY_GANG_MINING_VISUAL_IDENTITY_2026-09-07.md)
 - [Approved stacked emblem](../assets/brand/logos/kelly-gang-mining__stacked.png) and [source manifest](../assets/brand/kelly_gang_mining_visual_manifest.json)
 - [Cradle host relationship](canon/CRADLE_CLOSEOUT_2026-09-06.md) and [brand validation](../assets/brand/VALIDATION.md)
+
+## September 7 Quality Forest Communications artwork approval
+
+- [Controlling visual identity decision](canon/QUALITY_FOREST_COMMUNICATIONS_VISUAL_IDENTITY_2026-09-07.md)
+- [Approved horizontal logo](../assets/brand/logos/quality-forest-communications__primary-horizontal.png) and [source manifest](../assets/brand/quality_forest_communications_visual_manifest.json)
+- [Hoberg and QFC history](canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md#eli-hoberg) and [brand validation](../assets/brand/VALIDATION.md)
+
+## September 7 Demotte Reclamation Services name and artwork
+
+- [Controlling name-and-identity decision](canon/DEMOTTE_RECLAMATION_NAME_AND_IDENTITY_2026-09-07.md)
+- [Horizontal source PNG](../assets/brand/logos/demotte-reclamation-services__primary-horizontal.png) and [visual manifest](../assets/brand/demotte_reclamation_visual_manifest.json)
+- [Current Cradle closeout](canon/CRADLE_CLOSEOUT_2026-09-06.md) and [structured record](structured/cradle_closeout_2026-09-06.json)

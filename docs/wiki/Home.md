@@ -14,3 +14,7 @@ The historical Pittsburgh outpost is **Klein**, rechartered as Willow in 2022. I
 Emberline's [approved historical identity](../canon/EMBERLINE_VISUAL_IDENTITY_2026-09-07.md) uses the owner-selected coal-company logo; its earlier geometric artwork is superseded.
 
 [Kelly Gang Mining's approved emblem](../canon/KELLY_GANG_MINING_VISUAL_IDENTITY_2026-09-07.md) identifies the fictional external Tasmanian operator hosting Cradle's Stream 17 intervention.
+
+[Quality Forest Communications' approved logo](../canon/QUALITY_FOREST_COMMUNICATIONS_VISUAL_IDENTITY_2026-09-07.md) identifies Eli Hoberg's historical forestry-communications company.
+
+[Demotte Reclamation Services](../canon/DEMOTTE_RECLAMATION_NAME_AND_IDENTITY_2026-09-07.md) is the current name and identity of Cradle's external U.S. mine-water treatment host.
