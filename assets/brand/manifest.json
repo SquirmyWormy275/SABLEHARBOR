@@ -20,10 +20,11 @@
     "Blood, Sweat & Tears Railway",
     "Emberline",
     "Red Wash / Pale Sun",
-    "Klein"
+    "Klein",
+    "Kelly Gang Mining"
   ],
-  "asset_count": 110,
-  "logo_count": 56,
+  "asset_count": 111,
+  "logo_count": 57,
   "formats": [
     "svg",
     "png"
@@ -1348,10 +1349,23 @@
       "height": 724,
       "path": "assets/brand/logos/emberline__primary-horizontal.png",
       "sha256": "ddf4273bca6f9e0c9b050a1fc741b151550b86af5e2d2a98c46fdadfaf849312"
+    },
+    {
+      "brand": "Kelly Gang Mining",
+      "brand_slug": "kelly-gang-mining",
+      "classification": "external fictional Cradle host operator",
+      "canonical_status": "LOCKED September 7, 2026; controlling owner-approved PNG source artwork.",
+      "variant": "stacked",
+      "format": "png",
+      "width": 1254,
+      "height": 1254,
+      "path": "assets/brand/logos/kelly-gang-mining__stacked.png",
+      "sha256": "2b6958413abe5989120a5ed9b85480750cb385a397cb8228fa871f1a392f22e6"
     }
   ],
   "current_industrial_identity_manifest": "assets/brand/industrial_visual_manifest.json",
   "klein_source_override": "assets/brand/klein_visual_manifest.json",
   "emberline_source_override": "assets/brand/emberline_visual_manifest.json",
-  "last_source_update": "2026-09-07"
+  "last_source_update": "2026-09-07",
+  "kelly_gang_mining_source_override": "assets/brand/kelly_gang_mining_visual_manifest.json"
 }

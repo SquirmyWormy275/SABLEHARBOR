@@ -1,0 +1,23 @@
+{
+  "identity": "Kelly Gang Mining",
+  "state": "APPROVED_SOURCE_ARTWORK",
+  "approval_date": "2026-09-07",
+  "controlling_decision": "docs/canon/KELLY_GANG_MINING_VISUAL_IDENTITY_2026-09-07.md",
+  "classification": "external fictional Tasmanian industrial-minerals / heavy-mineral operator; Cradle Stream 17 host",
+  "approval_basis": "Owner requested Ned Kelly wielding pickaxes, viewed the generated design, then instructed: hell yeah. lock the kelly gang mining.",
+  "assets": [
+    {
+      "path": "assets/brand/logos/kelly-gang-mining__stacked.png",
+      "sha256": "2b6958413abe5989120a5ed9b85480750cb385a397cb8228fa871f1a392f22e6",
+      "bytes": 1509892,
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "format": "png",
+      "variant": "stacked",
+      "source": "Exact owner-selected imagegen output, copied byte-for-byte without edits"
+    }
+  ],
+  "reproduction_rule": "The full stacked PNG is the sole approved form. Preserve source pixels and alpha; no implied approval of separate figure, text-only, vector, monochrome or reverse derivatives.",
+  "relationship_rule": "Kelly Gang Mining is an external host operator. The logo does not make it a Sable Harbor subsidiary, current business line or Cradle-owned mine."
+}
