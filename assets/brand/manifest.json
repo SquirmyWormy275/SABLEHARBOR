@@ -2,7 +2,7 @@
   "package": "Sable Harbor Logo System",
   "version": "0.1.0",
   "generated_utc": "2026-09-01T00:00:00Z",
-  "controlling_canon": "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.2.md",
+  "controlling_canon": "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md",
   "one_logo_per_file": true,
   "corporate_variant_count": 5,
   "canonical_business_lines": [
@@ -19,10 +19,11 @@
     "Red Wash Mine",
     "Blood, Sweat & Tears Railway",
     "Emberline",
-    "Red Wash / Pale Sun"
+    "Red Wash / Pale Sun",
+    "Klein"
   ],
-  "asset_count": 114,
-  "logo_count": 57,
+  "asset_count": 115,
+  "logo_count": 58,
   "formats": [
     "svg",
     "png"
@@ -1395,7 +1396,20 @@
       "height": 750,
       "path": "assets/brand/logos/red-wash-pale-sun__reverse-horizontal.png",
       "sha256": "18f1d73279bdecf1f0bf47beab2cf1d71cffa5658997dc9d4acb950485e5d6c1"
+    },
+    {
+      "brand": "Klein",
+      "brand_slug": "klein",
+      "classification": "historical advanced-engineering outpost",
+      "canonical_status": "LOCKED September 7, 2026; controlling owner-approved PNG source artwork.",
+      "variant": "primary-horizontal",
+      "format": "png",
+      "width": 1774,
+      "height": 887,
+      "path": "assets/brand/logos/klein__primary-horizontal.png",
+      "sha256": "907036b9121328c49498d1cd4c856e2f52235c792c5b4d49be0b4fee09127f1e"
     }
   ],
-  "current_industrial_identity_manifest": "assets/brand/industrial_visual_manifest.json"
+  "current_industrial_identity_manifest": "assets/brand/industrial_visual_manifest.json",
+  "klein_source_override": "assets/brand/klein_visual_manifest.json"
 }

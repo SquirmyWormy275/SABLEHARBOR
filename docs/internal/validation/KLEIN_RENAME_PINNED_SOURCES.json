@@ -1,0 +1,69 @@
+{
+  "base_commit": "498421e4e209880e167a6357ac92d9d9031c0791",
+  "files": [
+    {
+      "path": "docs/canon/CANON_CHANGELOG_v0.2.md",
+      "sha256": "3790eee2f22fa7c180ea89e51e20bb4e89c932e420fea17abf3ae7ac941e78a2"
+    },
+    {
+      "path": "docs/canon/CANON_CHANGELOG_v0.3.md",
+      "sha256": "b12cd87a48ee6a7859a2e05fc79406df2591326ccd104c97b1eaccf46c98d921"
+    },
+    {
+      "path": "docs/canon/DECISION_REGISTER.md",
+      "sha256": "070dc6e6dad18b8e4c18fa530366b9fc8a396986371aee8a0e16ba732e6e1de4"
+    },
+    {
+      "path": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-03.md",
+      "sha256": "9fd150d5b6ae1517fe3db17ddcf834d802bdd3908662806c319e18b9b4ce5877"
+    },
+    {
+      "path": "docs/canon/SABLE_HARBOR_CANONICAL_ARCHITECTURE_HANDOVER.md",
+      "sha256": "ef0fe5602ab41f1de0a0c29146476dbb406cb56e28407652f7d00f357e3fc636"
+    },
+    {
+      "path": "docs/canon/SABLE_HARBOR_CONTINUITY_AUDIT_v0.2.md",
+      "sha256": "3d3d4596087c9dd56bcf1d01904f70dff3e3a413a33af5a24336492768fec52c"
+    },
+    {
+      "path": "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.2.md",
+      "sha256": "db29a8398a29b53e2d6e803e6e49528bdd2a0d9bc4197e34cc28fa194780c5f6"
+    },
+    {
+      "path": "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md",
+      "sha256": "e1b0d123eed483f91240362f335d62210ea67da49b27b21bced7264e36c711cc"
+    },
+    {
+      "path": "docs/governance/2026_ENTITY_AND_BOARD_GOVERNANCE_DECISIONS.md",
+      "sha256": "ae8001b487a7196a697022de965f79e58c447e922e65383ad6446eaf4e763800"
+    },
+    {
+      "path": "docs/governance/BOARD_AND_CAPITAL_GOVERNANCE.md",
+      "sha256": "20249592680765fcfcfce057e9c62557b9694e6694adc84c63211cad3b76d933"
+    },
+    {
+      "path": "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
+      "sha256": "40b45496c66d6e7e5eb5dcd118c3ba37feb710744760c3617acbddcd899e466f"
+    },
+    {
+      "path": "docs/governance/SABLE_HARBOR_MANAGEMENT_SYSTEM.md",
+      "sha256": "783c319545189c19f40961db6f2b7f7c36a06d3d9984c6e78b659d9dba8fbd9b"
+    },
+    {
+      "path": "docs/j2/J2_ESTABLISHMENT.md",
+      "sha256": "826bbe8b359d73938c69f8bbd984114fd3b73109bbb9e8af7f003f6b39590c82"
+    },
+    {
+      "path": "docs/organization/DECISION_RIGHTS_AND_OPERATING_GATES.md",
+      "sha256": "590b398c3c44b872a52b932a1aec64bf4b7ac372aba5bab556458e4e18296d41"
+    },
+    {
+      "path": "docs/organization/LEGAL_AND_REPORTING_STRUCTURE_STATUS.md",
+      "sha256": "282c7f09785ac2466d2ac5158db7635012a028ae8b665cfa284d577857516a99"
+    },
+    {
+      "path": "docs/organization/ORGANIZATIONAL_LINEAGE_2015_2026.md",
+      "sha256": "386f20b1af36fb97f61a00edf1520704b80afd2e106fd2cde1d63473d541863f"
+    }
+  ]
+}

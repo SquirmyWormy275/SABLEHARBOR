@@ -445,8 +445,8 @@ def write_pages() -> None:
             continue
         source_lines = [
             "- [Industrial closeout](../canon/INDUSTRIAL_CLOSEOUT_2026-09-05.md)",
-            "- [`SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md`](../canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md)",
-            "- [`DECISION_REGISTER.md`](../canon/DECISION_REGISTER.md)",
+            "- [`SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md`](../canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md)",
+            "- [`DECISION_REGISTER_v0.3.1.md`](../canon/DECISION_REGISTER_v0.3.1.md)",
             "- [`DECISION_REGISTER_ADDENDUM_2026-09-03.md`](../canon/DECISION_REGISTER_ADDENDUM_2026-09-03.md)",
             "- [`CHART_GOVERNANCE.md`](CHART_GOVERNANCE.md)",
         ]
@@ -533,8 +533,8 @@ ARU discovery and diligence begin October 2025; ownership begins January 7, 2026
 - Industrial closeout: [SH-IND-DR-001](../canon/INDUSTRIAL_CLOSEOUT_2026-09-05.md)
 - Entity/authority source: [entities.json](../../industrial/source/entities.json)
 
-- Controlling canon: [`SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md`](../canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md)
-- Decision index: [`DECISION_REGISTER.md`](../canon/DECISION_REGISTER.md)
+- Controlling canon: [`SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md`](../canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md)
+- Decision index: [`DECISION_REGISTER_v0.3.1.md`](../canon/DECISION_REGISTER_v0.3.1.md)
 - September 3 decisions: [`DECISION_REGISTER_ADDENDUM_2026-09-03.md`](../canon/DECISION_REGISTER_ADDENDUM_2026-09-03.md)
 - September 5 Red Wash decisions: [`SH-PS-RW-DR-001` — `RW-017`–`RW-025`](../canon/DECISION_REGISTER_ADDENDUM_2026-09-05_RED_WASH_R2.md)
 - Red Wash record: [`RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05_R2.md`](../canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05_R2.md)
@@ -569,8 +569,8 @@ def write_register() -> None:
         "controllingSources": [
             "docs/canon/INDUSTRIAL_CLOSEOUT_2026-09-05.md",
             "industrial/source/entities.json",
-            "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md",
-            "docs/canon/DECISION_REGISTER.md",
+            "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md",
+            "docs/canon/DECISION_REGISTER_v0.3.1.md",
             "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-03.md",
             "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-05_RED_WASH_R2.md",
             "docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05_R2.md",

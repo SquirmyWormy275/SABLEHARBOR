@@ -1,7 +1,7 @@
 # SABLE HARBOR — PUBLIC REPOSITORY AND WIKI POLICY
 
-**Version:** 0.1.0  
-**Date:** August 31, 2026  
+**Version:** 0.1.0
+**Date:** August 31, 2026
 **Status:** LOCKED repository-governance decision
 
 ## 1. Public visibility is intentional
@@ -87,7 +87,7 @@ The initial wiki may cover:
 - the Original Eight and later people;
 - Foundry and Foundry Field;
 - The Crossing;
-- Evalon, Emberline, and Willow;
+- Klein, Emberline, and Willow;
 - Atlas Meridian;
 - Pale Sun and Red Wash;
 - Project Cradle;

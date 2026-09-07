@@ -1,7 +1,7 @@
 # Sable Harbor Brand Standards
 
-**Version:** 0.2.1
-**Date:** 2026-09-05
+**Version:** 0.2.2
+**Date:** 2026-09-07
 **Status:** Production candidate identity system; does not independently create or change canon
 
 ## 1. Governing idea
@@ -15,7 +15,7 @@ The identity system translates that proposition into explicit geometry: visible 
 1. **Sable Harbor** is the corporate master brand.
 2. **Foundry Field, Willow, Atlas Meridian, Pale Sun, Project Cradle, American Resource Utility, and Advisory** are the seven 2026 business lines represented in the narrative map.
 3. **Foundry, Red Wash Mine, Blood, Sweat & Tears Railway, and Red Wash / Pale Sun** are supplemental identities or endorsed relationships.
-4. **Emberline and Evalon** are historical identities. Evalon is an archival advanced-engineering outpost that was closed and rechartered as Willow; it is not an eighth current business line.
+4. **Emberline and Klein** are historical identities. Klein is an archival advanced-engineering outpost that was closed and rechartered as Willow; it is not an eighth current business line.
 
 ## 3. Master-brand configurations
 
@@ -50,7 +50,6 @@ Digital HEX/RGB values are controlling. CMYK values below are mathematical worki
 | Pale Sun Gold | `#C38B1F` | `195, 139, 31` | `0, 29, 84, 24` |
 | Advisory Steel Blue | `#456C98` | `69, 108, 152` | `55, 29, 0, 40` |
 | Red Wash Oxide | `#B94C2C` | `185, 76, 44` | `0, 59, 76, 27` |
-| Evalon Steel | `#687C86` | `104, 124, 134` | `22, 7, 0, 47` |
 | Paper | `#F4F1EA` | `244, 241, 234` | `0, 1, 4, 4` |
 | Reverse Field | `#101419` | `16, 20, 25` | `36, 20, 0, 90` |
 | Reverse White | `#F7F5EF` | `247, 245, 239` | `0, 1, 3, 3` |
@@ -85,6 +84,10 @@ Digital HEX/RGB values are controlling. CMYK values below are mathematical worki
 
 ## 8. Governance
 
-The controlling naming source is [`docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md`](../../docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md), together with later controlled canon and decision-register addenda. Artwork does not lock legal entities, reporting lines, titles, economics, offices, public domains, contact details, or other OPEN decisions. Where this document's earlier v0.2.0 PDF reproduction differs from the September 5 approved-raster manifest, the later manifest controls the artwork source and preservation rule.
+The controlling naming source is [`docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md`](../../docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md), together with later controlled canon and decision-register addenda. Artwork does not lock legal entities, reporting lines, titles, economics, offices, public domains, contact details, or other OPEN decisions. Where this document's earlier v0.2.0 PDF reproduction differs from the September 5 approved-raster manifest, the later manifest controls the artwork source and preservation rule.
 
 Before external commercial adoption, review [`docs/legal/PRELIMINARY_NAME_AND_MARK_SCREEN.md`](../../docs/legal/PRELIMINARY_NAME_AND_MARK_SCREEN.md) and obtain qualified trademark counsel.
+
+## Klein approved historical identity
+
+The September 7 selected PNG and [Klein visual manifest](klein_visual_manifest.json) control Klein artwork. It is a historical identity, not an additional current business line. Preserve the source bytes; petrol blue and graphite describe the selected artwork without asserting unapproved production color specifications. The previous name's steel swatch and orange/stone design do not transfer to Klein.

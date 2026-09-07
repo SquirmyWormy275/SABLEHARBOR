@@ -1,10 +1,10 @@
 # SABLE HARBOR CONTROLLED DOCUMENT INDEX
 
-**Index version:** 1.0.12 | **As of:** September 6, 2026
+**Index version:** 1.0.13 | **As of:** September 7, 2026
 
 ## Authority order
 
-1. Accepted controlling canon under `docs/canon/`, including [corporate lore v0.3](canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md), the [decision register](canon/DECISION_REGISTER.md), and dated addenda with their explicit supersession scope. The [September 6 closeout addendum](canon/DECISION_REGISTER_ADDENDUM_2026-09-06_CLOSEOUT.md) controls the four closeout decisions.
+1. Accepted controlling canon under `docs/canon/`, including [corporate lore v0.3.1](canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md), the [decision register](canon/DECISION_REGISTER_v0.3.1.md), and dated addenda with their explicit supersession scope. The [September 6 closeout addendum](canon/DECISION_REGISTER_ADDENDUM_2026-09-06_CLOSEOUT.md) controls the four closeout decisions.
 2. [In-universe board approval records](governance/board-records/README.md) within their actual ratification scope.
 3. Repository-stored originating design ledgers and forensic records, including the [J2/Alexandria ledger](internal/CHAT_CANON_LEDGER_J2_ALEXANDRIA.md), except where later accepted controlling decisions supersede them.
 4. Canonical Markdown doctrine, including approved governance, People & Culture, Technology Services, and J2 instruments listed below.
@@ -139,3 +139,13 @@ The transaction and interface PDFs are generated representations. The canonical 
 - [Capital investment review](../industrial/planning/docs/CAPITAL_INVESTMENT_REVIEW.md)
 - [Transaction evidence](../industrial/planning/docs/TRANSACTION_EVIDENCE.md)
 - [Enterprise integration](../industrial/planning/docs/ENTERPRISE_INTEGRATION.md)
+
+## September 7 Klein name and identity
+
+- [Controlling name and logo decision](canon/KLEIN_NAME_AND_IDENTITY_2026-09-07.md)
+- [Corporate lore naming successor](canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md) and [decision-register naming successor](canon/DECISION_REGISTER_v0.3.1.md)
+- [Willow/Klein closeout](canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md), [corporate record](organization/WILLOW_KLEIN_CORPORATE_RECORD.md), and [finance model](finance/WILLOW_KLEIN_FINANCE_AND_CORPORATE_MODEL_2026-09-06.md)
+- [Organizational lineage](organization/ORGANIZATIONAL_LINEAGE_2015_2026_v0.3.1.md)
+- [Approved identity and source prompt](../assets/brand/KLEIN_IDENTITY.md), [visual manifest](../assets/brand/klein_visual_manifest.json) and [validation evidence](internal/validation/KLEIN_RENAME_2026-09-07.md)
+
+The v0.3 lore, base decision register, original lineage and other finance-pinned files remain byte-preserved historical inputs. Their former outpost name is superseded by Klein throughout the story.

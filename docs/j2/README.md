@@ -18,4 +18,4 @@ J2 is Sable Harbor's internal intelligence, judgment, orientation, education, an
 - Controlled PDFs: [publications](publications/)
 - Phase 2 source-to-doctrine coverage: [`../internal/COVERAGE_AUDIT_PHASE2.md`](../internal/COVERAGE_AUDIT_PHASE2.md)
 
-Canonical corporate integration is in `docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md`; governance doctrine is under `docs/governance/`. Approved J2 identity assets remain under `assets/brand/`.
+Canonical corporate integration is in `docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md`; governance doctrine is under `docs/governance/`. Approved J2 identity assets remain under `assets/brand/`.

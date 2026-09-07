@@ -23,8 +23,8 @@ The table below traces the load-bearing organizational claims to the controlling
 | Marcus Reed remains a senior technical authority without a management empire or sole-knowledge dependency. | LOCKED role | Canon §5.1 and §13.1; `PPL-008` |
 | Caleb Hargrove owns or strongly influences field operations, experimental qualification, and the test/operating boundary. | LOCKED role | Canon §5.1 and §13.1; `PPL-010` |
 | Dr. Maya Okafor retains formal independence to challenge scientific and model claims. | LOCKED role | Canon §5.1 and §13.1; `PPL-009` |
-| Evalon was a Pittsburgh-area advanced-engineering outpost, not the final Willow organization. | LOCKED historical | Canon §7.2–§7.4; `WIL-003`–`WIL-005` |
-| Evalon ended as an operating concept in 2022; its surviving capability was rechartered as Willow. | LOCKED | Canon §7.6–§7.7; `WIL-011` |
+| Klein was a Pittsburgh-area advanced-engineering outpost, not the final Willow organization. | LOCKED historical | Canon §7.2–§7.4; `WIL-003`–`WIL-005` |
+| Klein ended as an operating concept in 2022; its surviving capability was rechartered as Willow. | LOCKED | Canon §7.6–§7.7; `WIL-011` |
 | Emberline was the Charleston coal field/commercial program and is not a standalone 2026 core division. | LOCKED historical | Canon §7.3; `EMB-001`–`EMB-002` |
 | Gid Voss runs Willow from Pittsburgh. | LOCKED role | Canon §7.8 and §13.1 |
 | Rachel Sloane is Willow's Sacramento institutional seam and is explicitly not Gid's boss. | LOCKED role and boundary | Canon §7.8; `PPL-016`, `WIL-014` |
@@ -59,3 +59,5 @@ A proposed chart change should identify the row it changes or add a new row with
 ## September 5 industrial closeout application
 
 [SH-IND-DR-001](../canon/INDUSTRIAL_CLOSEOUT_2026-09-05.md) supersedes earlier OPEN state only for its explicit industrial scope. It resolves SHI/SHIH/PS/RWH/ARU/BST legal identity and ownership, Vilander and Mari appointments, retained ARU leadership, acquisition and selected operating/financial cases. The earlier $15M screen remains unbooked and direct uranium custody remains OPEN_GATED. Historical records are preserved in [the v0.3 archive](history/v0.3.0/HISTORY.md). External law, arithmetic and real geography control their domains; synthetic company records do not become authentic originals.
+
+The [September 7 Klein decision](../canon/KLEIN_NAME_AND_IDENTITY_2026-09-07.md) governs the historical outpost name across the WIL records above. [Current corporate lore](../canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md) and the [Willow/Klein closeout](../canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md) provide the naming successor and later substantive details.

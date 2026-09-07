@@ -4,7 +4,7 @@ This directory contains individual, production-oriented logo assets for the Sabl
 
 ## Controlling naming source
 
-Business-line names and status are grounded in `docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md` and subsequent controlled canon, decision-register, governance, and organization records. Artwork files do **not** independently create or change canon. Legal-entity, reporting-line, and exact organizational details that remain OPEN in canon remain open here.
+Business-line names and status are grounded in `docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md` and subsequent controlled canon, decision-register, governance, and organization records. Artwork files do **not** independently create or change canon. Legal-entity, reporting-line, and exact organizational details that remain OPEN in canon remain open here.
 
 ## File rule
 
@@ -37,6 +37,7 @@ The seven business lines are **Foundry Field, Willow, Atlas Meridian, Pale Sun, 
 | Foundry | product substrate | LOCKED distinction: Foundry is the substrate; Foundry Field is the deployable operational product/service configuration. |
 | Red Wash Mine | operating asset | LOCKED fictional mine and selected transaction/2026 operating case under Pale Sun; exact seller and operator legal forms remain OPEN. |
 | Blood, Sweat & Tears Railway | ARU operating component | LOCKED name and relationship to ARU. |
+| Klein | historical Pittsburgh outpost | LOCKED September 7 name and approved PNG; rechartered as Willow in 2022. See [identity](KLEIN_IDENTITY.md) and [visual manifest](klein_visual_manifest.json). |
 | Emberline | historical business line | LOCKED historical status: active through 2025, then absorbed into enduring 2026 work. |
 | Red Wash / Pale Sun | endorsed operating lockup | Supplemental endorsed lockup joining the Pale Sun line to its Red Wash operating asset. |
 | J2 — Judgment & Junction | internal enterprise directorate identity | LOCKED September 2, 2026. Controlling production assets are `j2__mark.png` and `j2__primary-horizontal.png`; J2 is not a separate legal entity or customer-facing business line. |
@@ -102,3 +103,7 @@ Use the live repository assets and their applicable manifests instead.
 - `VALIDATION.md` records automated checks for the established brand system and approved J2 source integrity.
 
 All rights reserved unless a specific repository file states otherwise.
+
+## Klein approved source artwork
+
+[The approved horizontal PNG](logos/klein__primary-horizontal.png) is the sole approved Klein form. Its exact source bytes and approval are recorded in [klein_visual_manifest.json](klein_visual_manifest.json). It overrides the general SVG-first rule for this identity. The retired truncated PNG under the former name is removed from the current tree; Git history and the supersession manifest preserve its provenance. Historical distribution archives are unchanged.
