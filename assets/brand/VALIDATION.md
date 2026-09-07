@@ -114,3 +114,14 @@ The integration PR records canon, catalog, organization, hygiene, public-content
 The integration PR records focused checks and the required full CI results before merge.
 
 The owner explicitly approved the final blue-and-white Demotte revision for locking and repository delivery after viewing it.
+
+## September 7 Northstar Minerals source approval
+
+- PNG structure, full pixel decode and exact selected-source comparison: PASS.
+- Approved source: `logos/northstar-minerals__primary-horizontal.png`, 1991 × 790 RGBA pixels, 386,375 bytes.
+- SHA-256: `2eed6519ad15584898003ffdb44cbb304ae91135baae651799fcd48aa1bd7ed6`.
+- One complete horizontal form is recorded in the production inventory and [dedicated manifest](northstar_minerals_visual_manifest.json).
+- Northstar remains an external counterparty; the seven-current-business-line set is unchanged.
+- Existing approved source art, transaction records, finance-pinned files and historical archives remain byte-preserved.
+
+The integration PR records focused validation and all required CI checks before merge.

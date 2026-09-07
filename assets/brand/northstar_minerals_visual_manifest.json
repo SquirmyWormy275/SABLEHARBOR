@@ -1,0 +1,23 @@
+{
+  "identity": "Northstar Minerals, Inc.",
+  "state": "APPROVED_SOURCE_ARTWORK",
+  "approval_date": "2026-09-07",
+  "controlling_decision": "docs/canon/NORTHSTAR_MINERALS_VISUAL_IDENTITY_2026-09-07.md",
+  "classification": "external fictional Wyoming mining company; Red Wash seller",
+  "approval_basis": "Owner requested the Northstar logo, viewed the generated burgundy-star and graphite-strata design, then instructed: ok lock it.",
+  "assets": [
+    {
+      "path": "assets/brand/logos/northstar-minerals__primary-horizontal.png",
+      "sha256": "2eed6519ad15584898003ffdb44cbb304ae91135baae651799fcd48aa1bd7ed6",
+      "bytes": 386375,
+      "width": 1991,
+      "height": 790,
+      "mode": "RGBA",
+      "format": "png",
+      "variant": "primary-horizontal",
+      "source": "Exact owner-selected imagegen output copied byte-for-byte without edits"
+    }
+  ],
+  "reproduction_rule": "Preserve the full horizontal PNG and alpha channel; no standalone emblem, vector, monochrome or reverse derivative is approved.",
+  "relationship_rule": "Northstar Minerals, Inc. remains the external Red Wash seller under the R2 transaction canon. The logo changes no company, leadership, transaction term, ownership or financial input."
+}

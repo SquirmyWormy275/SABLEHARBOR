@@ -23,10 +23,11 @@
     "Klein",
     "Kelly Gang Mining",
     "Quality Forest Communications",
-    "Demotte Reclamation Services"
+    "Demotte Reclamation Services",
+    "Northstar Minerals, Inc."
   ],
-  "asset_count": 113,
-  "logo_count": 59,
+  "asset_count": 114,
+  "logo_count": 60,
   "formats": [
     "svg",
     "png"
@@ -1387,6 +1388,18 @@
       "height": 756,
       "path": "assets/brand/logos/demotte-reclamation-services__primary-horizontal.png",
       "sha256": "cb5bdbc6cb950dac198312222eb47659547ae6a30994c90dff514b0707cfd15f"
+    },
+    {
+      "brand": "Northstar Minerals, Inc.",
+      "brand_slug": "northstar-minerals",
+      "classification": "external fictional Red Wash seller",
+      "canonical_status": "LOCKED September 7, 2026; controlling owner-approved PNG source artwork.",
+      "variant": "primary-horizontal",
+      "format": "png",
+      "width": 1991,
+      "height": 790,
+      "path": "assets/brand/logos/northstar-minerals__primary-horizontal.png",
+      "sha256": "2eed6519ad15584898003ffdb44cbb304ae91135baae651799fcd48aa1bd7ed6"
     }
   ],
   "current_industrial_identity_manifest": "assets/brand/industrial_visual_manifest.json",
@@ -1395,5 +1408,6 @@
   "last_source_update": "2026-09-07",
   "kelly_gang_mining_source_override": "assets/brand/kelly_gang_mining_visual_manifest.json",
   "quality_forest_communications_source_override": "assets/brand/quality_forest_communications_visual_manifest.json",
-  "demotte_reclamation_source_override": "assets/brand/demotte_reclamation_visual_manifest.json"
+  "demotte_reclamation_source_override": "assets/brand/demotte_reclamation_visual_manifest.json",
+  "northstar_minerals_source_override": "assets/brand/northstar_minerals_visual_manifest.json"
 }

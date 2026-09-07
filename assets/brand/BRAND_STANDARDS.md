@@ -1,6 +1,6 @@
 # Sable Harbor Brand Standards
 
-**Version:** 0.2.6
+**Version:** 0.2.7
 **Date:** 2026-09-07
 **Status:** Production candidate identity system; does not independently create or change canon
 
@@ -113,3 +113,7 @@ QFC remains Hoberg's historical company before Sable Harbor. Only the complete h
 ## Demotte Reclamation Services — external host identity
 
 [DEM-RS-001](../../docs/canon/DEMOTTE_RECLAMATION_NAME_AND_IDENTITY_2026-09-07.md) controls the current company name and owner-directed ridge/strata/stream logo. Preserve the complete blue-and-white PNG and its background in [the source manifest](demotte_reclamation_visual_manifest.json). This identity's landscape motif and raster source are specific overrides of the general brand rules. QFC's separately locked name and artwork are unaffected.
+
+## Northstar Minerals, Inc. — external seller identity
+
+[NMI-VIS-001](../../docs/canon/NORTHSTAR_MINERALS_VISUAL_IDENTITY_2026-09-07.md) controls the burgundy north star, graphite strata and complete horizontal wordmark. Preserve the PNG and its alpha channel recorded in [the source manifest](northstar_minerals_visual_manifest.json). The exact emblem and raster source are specific overrides of the general brand rules. Northstar remains the external Red Wash seller.

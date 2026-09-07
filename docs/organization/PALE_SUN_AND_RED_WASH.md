@@ -31,3 +31,7 @@ There was **no pre-existing commercial relationship** with ARU/BS&T at discovery
 The **$15 million preliminary screen is unbooked**. It does not become ARU consideration, construction capex or a uranium permit. Current geography, fleet, workforce, management, finance and ordinary service terms now have an explicitly synthetic source model. Taylor remains an ordinary industrial terminal; the corridor is not a direct mine connection or certified engineering/cadastral survey. **ARU/BS&T uranium custody remains OPEN_GATED** pending documented site, carrier, packaging, security, insurance, customer, regulatory and operating qualification.
 
 The [R2 addendum](../canon/DECISION_REGISTER_ADDENDUM_2026-09-05_RED_WASH_R2.md) carries `RW-017`–`RW-025` transport safeguards forward. The [industrial closeout](../canon/INDUSTRIAL_CLOSEOUT_2026-09-05.md), [operations](../../industrial/source/operations.json) and [current bridge](../../red_wash/logistics/ARU_BST_INTERFACE_AND_DEPENDENCY_RECORD.md) resolve current scope without relaxing them.
+
+## Northstar seller identity artwork — September 7
+
+[NMI-VIS-001](../canon/NORTHSTAR_MINERALS_VISUAL_IDENTITY_2026-09-07.md) records the owner-selected Northstar Minerals, Inc. logo. The existing seller identity, Henry Norwood's role and all R2 transaction terms remain unchanged.
