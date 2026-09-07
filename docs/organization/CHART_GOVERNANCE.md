@@ -12,9 +12,9 @@ Organization charts summarize accepted canon. They do not create canon by visual
 
 1. detailed Blackridge canon, when present, for Blackridge-specific facts;
 2. `SABLE_HARBOR_CANONICAL_ARCHITECTURE_HANDOVER.md` for inherited Sable Harbor context;
-3. `SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md` for the reconciled corporate-lore layer;
+3. `SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md` for the reconciled corporate-lore layer;
 4. later controlled decision addenda and closeout records, including September 3 headquarters, September 5 canon decisions, the industrial closeout and Red Wash R2;
-5. `DECISION_REGISTER.md` and the continuity audit;
+5. `DECISION_REGISTER_v0.3.1.md` and the continuity audit;
 6. `ORGANIZATION_MAP_REGISTER.json`;
 7. repository diagrams;
 8. wiki reproductions and summaries.
@@ -71,7 +71,7 @@ Do not:
 - turn Rachel Sloane's institutional seam into supervision of Gid or Willow;
 - represent Maya's independent challenge as subordinate product approval;
 - represent Marcus's technical authority as a large management empire;
-- show Evalon or Emberline as standalone August 31, 2026 divisions;
+- show Klein or Emberline as standalone August 31, 2026 divisions;
 - show Advisory as fully formed;
 - show Blackridge as a Sable Harbor business unit or the Original Eight as a Blackridge team;
 - show Cradle as owning its host mine by default;

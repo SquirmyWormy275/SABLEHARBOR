@@ -22,8 +22,8 @@ historical/functional relationship, or deliberately OPEN detail.
 ## Controlling sources
 
 - [Industrial closeout](../canon/INDUSTRIAL_CLOSEOUT_2026-09-05.md)
-- [`SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md`](../canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md)
-- [`DECISION_REGISTER.md`](../canon/DECISION_REGISTER.md)
+- [`SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md`](../canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md)
+- [`DECISION_REGISTER_v0.3.1.md`](../canon/DECISION_REGISTER_v0.3.1.md)
 - [`DECISION_REGISTER_ADDENDUM_2026-09-03.md`](../canon/DECISION_REGISTER_ADDENDUM_2026-09-03.md)
 - [`CHART_GOVERNANCE.md`](CHART_GOVERNANCE.md)
 

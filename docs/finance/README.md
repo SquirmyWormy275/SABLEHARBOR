@@ -26,3 +26,7 @@ Read `KNOWN_LIMITATIONS.md` before interpreting any output. Quantitative values 
 implementation details are not locked canon. The relationship shapes Sable Harbor → controlled ARU
 → wholly owned BS&T and Sable Harbor → dedicated Red Wash operator are locked and are not optional
 entity scenarios.
+
+## Current Willow / Klein model
+
+The [Willow/Klein finance and corporate model](WILLOW_KLEIN_FINANCE_AND_CORPORATE_MODEL_2026-09-06.md) uses the owner-selected historical name under the [September 7 decision](../canon/KLEIN_NAME_AND_IDENTITY_2026-09-07.md). Klein is a closed historical program, not a new current reporting segment. All prior finance source-lock files and release inputs remain unchanged.

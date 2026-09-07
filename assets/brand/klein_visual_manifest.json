@@ -1,0 +1,29 @@
+{
+  "identity": "Klein",
+  "state": "APPROVED_SOURCE_ARTWORK",
+  "approval_date": "2026-09-07",
+  "controlling_decision": "docs/canon/KLEIN_NAME_AND_IDENTITY_2026-09-07.md",
+  "classification": "historical Pittsburgh outpost; predecessor to Willow",
+  "approval_basis": "Owner selected Klein, viewed this generated image, then instructed: push the name changes and logo to the repo.",
+  "assets": [
+    {
+      "path": "assets/brand/logos/klein__primary-horizontal.png",
+      "sha256": "907036b9121328c49498d1cd4c856e2f52235c792c5b4d49be0b4fee09127f1e",
+      "bytes": 236847,
+      "width": 1774,
+      "height": 887,
+      "mode": "RGBA",
+      "format": "png",
+      "variant": "primary-horizontal",
+      "source": "Original imagegen output copied byte-for-byte; no redraw or recompression"
+    }
+  ],
+  "retired_asset": {
+    "path": "assets/brand/logos/evalon/evalon-logo-canonical.png",
+    "sha256": "c0485e80801d0d36081dd6eaf3c7b6e5b8f21be2dadc3ca6a1d1afa7d1e5f0da",
+    "bytes": 4392,
+    "state": "SUPERSEDED_TRUNCATED_PNG_REMOVED_FROM_CURRENT_TREE",
+    "preserved_in_commit": "498421e4e209880e167a6357ac92d9d9031c0791"
+  },
+  "reproduction_rule": "Approved PNG is controlling; do not regenerate, redraw, recolor, or manufacture approved variants."
+}

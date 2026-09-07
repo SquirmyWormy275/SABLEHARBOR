@@ -1,7 +1,7 @@
 # Preliminary Name and Mark Screen
 
-**Date:** 2026-09-01  
-**Scope:** U.S.-focused knockout and common-law planning screen  
+**Date:** 2026-09-01
+**Scope:** U.S.-focused knockout and common-law planning screen
 **Status:** Research aid only - not a legal opinion, comprehensive clearance search, registrability determination, or freedom-to-operate conclusion
 
 ## 1. Method and limitations
@@ -128,3 +128,7 @@ The limited screen found historical **Upper Red Wash Mine** uranium references i
 ## 5. Practical recommendation
 
 For the synthetic enterprise and repository, retain the names as canon. For a real commercial company, the highest-priority naming decisions are **Willow, Foundry/Foundry Field, Atlas Meridian, American Resource Utility/ARU, Advisory, Emberline, and Evalon**. Keep **Emberline** and **Evalon** historical, choose a distinctive final name for **Advisory**, and obtain counsel-led clearance before using any line externally.
+
+## September 7 editorial supersession
+
+The prior fictional name **Evalon** is replaced by **Klein** under the [accepted decision](../canon/KLEIN_NAME_AND_IDENTITY_2026-09-07.md). The Evalon rows, citations and screening conclusions above are historical findings about that former candidate; they do not apply to Klein. Klein has not been evaluated by this earlier screen.
