@@ -1,0 +1,104 @@
+{
+  "record_id": "SH-CRD-CLOSEOUT-20260906",
+  "version": "1.0.0",
+  "decision_date": "2026-09-06",
+  "status": "LOCKED",
+  "scope": "Project Cradle canon closeout",
+  "supersedes": [
+    "CRD-008 provisional Gunns identity",
+    "CRD-010 OPEN first customer/material/economics",
+    "Belle / Kanawha Valley Cradle development-site direction"
+  ],
+  "business": {
+    "name": "Project Cradle",
+    "leader": "Kenji Arakawa",
+    "purpose": "Recover rare-earth value from process streams an existing operator already creates or must already manage",
+    "doctrine": [
+      "Do not break the host system",
+      "The orebody is not the business boundary"
+    ],
+    "2026_state": "early-commercial"
+  },
+  "stream_17": {
+    "host": "Kelly Gang Mining",
+    "host_status": "fictional Tasmanian industrial-minerals / heavy-mineral operator",
+    "stream": "Stream 17",
+    "material": "monazite-bearing heavy-mineral side stream",
+    "product": "mixed REE mineral concentrate",
+    "downstream": "specialist refiner",
+    "commercial_model": {
+      "cradle_owns_recovery_equipment": true,
+      "exclusive_recovery_right": true,
+      "title_transfer": "defined capture point",
+      "host_participation": "negotiated share of realized recovered-product value",
+      "host_process_must_depend_on_cradle": false
+    },
+    "economics": "modestly directly profitable; immaterial at Sable Harbor enterprise scale",
+    "exact_numeric_terms_locked": false
+  },
+  "maeve_chain": {
+    "wallaby_trigger": "experienced host operator describes physical process differently from official flowsheet / administrative categories",
+    "wallaby_result": "project remains killed",
+    "genealogy": [
+      "source",
+      "host process",
+      "designated stream",
+      "sample/assay",
+      "recovery run",
+      "captured intermediate",
+      "Bedford batch",
+      "outbound product",
+      "downstream acceptance",
+      "host settlement",
+      "financial record"
+    ]
+  },
+  "us_reference_deployment": {
+    "host": "Morrow Run Reclamation Services",
+    "region": "north-central West Virginia",
+    "feed_context": "acid mine drainage from legacy underground coal complex",
+    "unit": "Gen 1 containerized / skid-based slipstream recovery module",
+    "hard_bypass": true,
+    "host_retains_treatment_and_compliance_authority": true,
+    "cradle_owns_module": true,
+    "learning": "field-chemistry variability causes more fouling than expected and drives Gen 2 continuous characterization and maintainability improvements"
+  },
+  "ree_product_boundary": {
+    "economic_emphasis": ["Dy", "Tb", "Y"],
+    "co_recovery_where_present": ["Nd", "Pr"],
+    "field_product": "traceable REE-rich intermediate",
+    "bedford_product": "saleable mixed rare-earth concentrate / mixed-oxide product",
+    "individual_element_separation_in_2026": false,
+    "magnet_manufacturing": false
+  },
+  "bedford": {
+    "name": "Bedford",
+    "region": "Fairmont area, north-central West Virginia",
+    "site_type": "fictional redeveloped industrial brownfield",
+    "working_acres": "15-20",
+    "exact_parcel_status": "IMPLEMENTATION",
+    "roles": [
+      "analysis and process development",
+      "field-unit assembly and refurbishment",
+      "intermediate receipt and genealogy verification",
+      "blending and upgrading",
+      "secure storage and outbound logistics",
+      "deployment support and autopsy work"
+    ]
+  },
+  "interfaces": {
+    "foundry": "representation and provenance",
+    "willow": "bounded experimental support",
+    "atlas_meridian": "investigation support only; no operating authority",
+    "alexandria": "institutional memory and entitled discovery",
+    "finance": "authoritative financial representation; no operating command"
+  },
+  "nonblocking_enterprise_items": [
+    "GitHub issue #12 standalone business-unit audit packages",
+    "GitHub issue #18 legal-entity implementation mechanics",
+    "GitHub issue #38 business-line interface to Alexandria",
+    "exact Bedford parcel and detailed geospatial engineering",
+    "bottom-up finance/software successor"
+  ],
+  "cradle_canon_closed": true
+}
