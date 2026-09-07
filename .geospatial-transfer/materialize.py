@@ -26,6 +26,8 @@ subprocess.run(['git','rm','-r','--','.geospatial-transfer','.github/workflows/g
 subprocess.run(['git','add','--',*[e['path'] for e in m['files']]],check=True)
 actual=subprocess.check_output(['git','write-tree'],text=True).strip()
 assert actual==m['expected_tree'],(actual,m['expected_tree'])
+# The repository connection owns workflow edits. Preserve all workflows here.
+subprocess.run(['git','restore','--source','HEAD','--staged','--worktree','--','.github/workflows/geospatial-transfer.yml'],check=True)
 subprocess.run(['git','config','user.name','github-actions[bot]'],check=True)
 subprocess.run(['git','config','user.email','41898282+github-actions[bot]@users.noreply.github.com'],check=True)
 subprocess.run(['git','commit','-m','Materialize byte-verified Geo canon reconciliation and release sources'],check=True)

@@ -1,0 +1,27 @@
+name: Publish controlled Geo release
+on:
+  push:
+    branches: [main]
+    paths: ['geospatial/releases/version.json']
+permissions:
+  contents: write
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Package exact accepted repository bytes twice
+        run: |
+          python geospatial/scripts/package_release.py
+          cp geospatial/dist/SHA256SUMS.txt /tmp/geo-first-sums.txt
+          python geospatial/scripts/package_release.py
+          cmp /tmp/geo-first-sums.txt geospatial/dist/SHA256SUMS.txt
+      - name: Publish immutable prerelease
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          GEO_TAG=$(python -c "import json; print(json.load(open('geospatial/releases/version.json'))['tag'])")
+          gh release create "$GEO_TAG" --target "$GITHUB_SHA" --prerelease --title "Sable Harbor geospatial v0.1.0-rc4" --notes-file geospatial/releases/RELEASE_NOTES_rc4.md geospatial/dist/sable-harbor-geospatial-v0.1.0-rc4.zip geospatial/dist/MANIFEST.json geospatial/dist/SHA256SUMS.txt
