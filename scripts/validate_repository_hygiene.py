@@ -23,6 +23,19 @@ for manifest_path, key, path_key in [
             fail(f'historical source checksum drift: {artifact[path_key]}')
         historical_context[artifact[path_key]] = R / artifact['original_path']
 editorial_sources = set()
+geo_preservation = R / 'geospatial/history/PRESERVATION_MANIFEST.json'
+if geo_preservation.is_file():
+    for artifact in json.loads(geo_preservation.read_text())['artifacts']:
+        rel = artifact['path']
+        if not rel.startswith(('geospatial/history/rc3/', 'geospatial/sources/canon_snapshot/')):
+            fail(f'geospatial preservation path outside historical scope: {rel}')
+            continue
+        path = R / rel
+        if not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest() != artifact['sha256']:
+            fail(f'geospatial preserved source checksum drift: {rel}')
+        # Exact prior source bytes are evidence; links retain their dated source
+        # context and are not current navigation. Current Geo documents are checked.
+        editorial_sources.add(rel)
 ingestion = R / 'docs/handoffs/industrial_r2/repository_ingestion.json'
 if ingestion.is_file():
     for artifact in json.loads(ingestion.read_text())['entries']:
@@ -55,7 +68,7 @@ allowed_history={
 }
 stale=['Northline Growth Partners','Ironcliff Industrial Partners','Leah Moravec','Owen Rourke','Dr. Nadia Serrano','Richard Halden']
 for rel in tracked:
-    if not (R/rel).exists() or rel in allowed_history or not rel.endswith(('.md','.json','.yml','.yaml')): continue
+    if not (R/rel).exists() or rel in allowed_history or rel in editorial_sources or not rel.endswith(('.md','.json','.yml','.yaml')): continue
     text=(R/rel).read_text(errors='ignore')
     for term in stale:
         if term in text: fail(f'superseded current-facing name in {rel}: {term}')

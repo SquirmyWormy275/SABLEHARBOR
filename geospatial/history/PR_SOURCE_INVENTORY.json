@@ -1,0 +1,1591 @@
+[
+  {
+    "commit": "7471ba0f405e94e22813b03890d950f5a8aa1582",
+    "path": "geospatial/README.md",
+    "git_blob_sha": "2d8391409c8cc32ada061c85502c349042207200",
+    "bytes": 2947,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/7471ba0f405e94e22813b03890d950f5a8aa1582/geospatial/README.md"
+  },
+  {
+    "commit": "7471ba0f405e94e22813b03890d950f5a8aa1582",
+    "path": "geospatial/data/GOVERNING_GEOGRAPHIC_ADDENDUM_2026-09-05.md",
+    "git_blob_sha": "cf7fa20e2e43c514a1d86404e853309d8f01f3f9",
+    "bytes": 15583,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/7471ba0f405e94e22813b03890d950f5a8aa1582/geospatial/data/GOVERNING_GEOGRAPHIC_ADDENDUM_2026-09-05.md"
+  },
+  {
+    "commit": "7471ba0f405e94e22813b03890d950f5a8aa1582",
+    "path": "geospatial/data/constraints.json",
+    "git_blob_sha": "c253bc9b4b8a1b13386d70ac005f21fd6ffea857",
+    "bytes": 3804,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/7471ba0f405e94e22813b03890d950f5a8aa1582/geospatial/data/constraints.json"
+  },
+  {
+    "commit": "7471ba0f405e94e22813b03890d950f5a8aa1582",
+    "path": "geospatial/docs/CANON_SOURCE_HIERARCHY.md",
+    "git_blob_sha": "6be3bd2d1d94397d2a26c1bc52c9a3e074955498",
+    "bytes": 769,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/7471ba0f405e94e22813b03890d950f5a8aa1582/geospatial/docs/CANON_SOURCE_HIERARCHY.md"
+  },
+  {
+    "commit": "7471ba0f405e94e22813b03890d950f5a8aa1582",
+    "path": "geospatial/docs/RED_WASH_LOCATION_SUPERSESSION_NOTE.md",
+    "git_blob_sha": "9530722cb30630ad7d0ac1c41f1453f6a5821270",
+    "bytes": 2014,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/7471ba0f405e94e22813b03890d950f5a8aa1582/geospatial/docs/RED_WASH_LOCATION_SUPERSESSION_NOTE.md"
+  },
+  {
+    "commit": "7471ba0f405e94e22813b03890d950f5a8aa1582",
+    "path": "geospatial/geojson/locked_search_areas.geojson",
+    "git_blob_sha": "13460924dfeb2bcfec0450a4ded37ff923e15c39",
+    "bytes": 7102,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/7471ba0f405e94e22813b03890d950f5a8aa1582/geospatial/geojson/locked_search_areas.geojson"
+  },
+  {
+    "commit": "7471ba0f405e94e22813b03890d950f5a8aa1582",
+    "path": "geospatial/geojson/red_wash_anchor.geojson",
+    "git_blob_sha": "65b4e018fe7aa35fb162f1db2979dea4fc039c56",
+    "bytes": 909,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/7471ba0f405e94e22813b03890d950f5a8aa1582/geospatial/geojson/red_wash_anchor.geojson"
+  },
+  {
+    "commit": "7471ba0f405e94e22813b03890d950f5a8aa1582",
+    "path": "geospatial/geojson/taylor_hub.geojson",
+    "git_blob_sha": "fa0d619401da7ca222d2831201df65b936b5395d",
+    "bytes": 929,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/7471ba0f405e94e22813b03890d950f5a8aa1582/geospatial/geojson/taylor_hub.geojson"
+  },
+  {
+    "commit": "7471ba0f405e94e22813b03890d950f5a8aa1582",
+    "path": "geospatial/history/README.md",
+    "git_blob_sha": "da9ee66aa45d57676390585f5b48d3e7c1fcaec2",
+    "bytes": 230,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/7471ba0f405e94e22813b03890d950f5a8aa1582/geospatial/history/README.md"
+  },
+  {
+    "commit": "7471ba0f405e94e22813b03890d950f5a8aa1582",
+    "path": "geospatial/history/pre-addendum-source/assets/brand/README.md",
+    "git_blob_sha": "73bbfac244fddfb84597090b84865e427631993b",
+    "bytes": 6764,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/7471ba0f405e94e22813b03890d950f5a8aa1582/geospatial/history/pre-addendum-source/assets/brand/README.md"
+  },
+  {
+    "commit": "7471ba0f405e94e22813b03890d950f5a8aa1582",
+    "path": "geospatial/history/pre-addendum-source/assets/brand/logos/pale_sun__canonical.png",
+    "git_blob_sha": "78109ba6b9947bac972d19f69259a2d86d6831a4",
+    "bytes": 837461,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/7471ba0f405e94e22813b03890d950f5a8aa1582/geospatial/history/pre-addendum-source/assets/brand/logos/pale_sun__canonical.png"
+  },
+  {
+    "commit": "7471ba0f405e94e22813b03890d950f5a8aa1582",
+    "path": "geospatial/history/pre-addendum-source/assets/brand/logos/red_wash__canonical.png",
+    "git_blob_sha": "829ebbcfc88e87f9e27aae2d5adb3b722bad503b",
+    "bytes": 738834,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/7471ba0f405e94e22813b03890d950f5a8aa1582/geospatial/history/pre-addendum-source/assets/brand/logos/red_wash__canonical.png"
+  },
+  {
+    "commit": "7471ba0f405e94e22813b03890d950f5a8aa1582",
+    "path": "geospatial/history/pre-addendum-source/assets/brand/maps/red_wash__site_overview.png",
+    "git_blob_sha": "57633ea73ecb3809313d3e7746df018a3f521d20",
+    "bytes": 3230867,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/7471ba0f405e94e22813b03890d950f5a8aa1582/geospatial/history/pre-addendum-source/assets/brand/maps/red_wash__site_overview.png"
+  },
+  {
+    "commit": "7471ba0f405e94e22813b03890d950f5a8aa1582",
+    "path": "geospatial/history/pre-addendum-source/assets/brand/maps/red_wash__underground_plan.png",
+    "git_blob_sha": "3ee96956f50c4d6f53ca0da992164fb61a06ff69",
+    "bytes": 2401412,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/7471ba0f405e94e22813b03890d950f5a8aa1582/geospatial/history/pre-addendum-source/assets/brand/maps/red_wash__underground_plan.png"
+  },
+  {
+    "commit": "7471ba0f405e94e22813b03890d950f5a8aa1582",
+    "path": "geospatial/history/pre-addendum-source/assets/brand/red_wash_visual_manifest.json",
+    "git_blob_sha": "ddf6b5a95c8b9474abc9754f92e4c275800bd17a",
+    "bytes": 2356,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/7471ba0f405e94e22813b03890d950f5a8aa1582/geospatial/history/pre-addendum-source/assets/brand/red_wash_visual_manifest.json"
+  },
+  {
+    "commit": "7471ba0f405e94e22813b03890d950f5a8aa1582",
+    "path": "geospatial/history/pre-addendum-source/geospatial/README.md",
+    "git_blob_sha": "df63bd59c6e46f8de580a3755bb5c8de2ea50e02",
+    "bytes": 2428,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/7471ba0f405e94e22813b03890d950f5a8aa1582/geospatial/history/pre-addendum-source/geospatial/README.md"
+  },
+  {
+    "commit": "7471ba0f405e94e22813b03890d950f5a8aa1582",
+    "path": "geospatial/history/pre-addendum-source/geospatial/data/constraints.json",
+    "git_blob_sha": "d48d39a9dcc292d95a96fc494c9b5a91eccacded",
+    "bytes": 2840,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/7471ba0f405e94e22813b03890d950f5a8aa1582/geospatial/history/pre-addendum-source/geospatial/data/constraints.json"
+  },
+  {
+    "commit": "7471ba0f405e94e22813b03890d950f5a8aa1582",
+    "path": "geospatial/history/pre-addendum-source/geospatial/docs/CANON_SOURCE_HIERARCHY.md",
+    "git_blob_sha": "866617513bd89703816b7f1d59f0d1ad3704c81b",
+    "bytes": 1689,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/7471ba0f405e94e22813b03890d950f5a8aa1582/geospatial/history/pre-addendum-source/geospatial/docs/CANON_SOURCE_HIERARCHY.md"
+  },
+  {
+    "commit": "7471ba0f405e94e22813b03890d950f5a8aa1582",
+    "path": "geospatial/history/pre-addendum-source/geospatial/reports/FOUNDATION_EXECUTION_RECORD.md",
+    "git_blob_sha": "0af8dd39056dbd819fea00a95aba8a961850a8d2",
+    "bytes": 2423,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/7471ba0f405e94e22813b03890d950f5a8aa1582/geospatial/history/pre-addendum-source/geospatial/reports/FOUNDATION_EXECUTION_RECORD.md"
+  },
+  {
+    "commit": "7471ba0f405e94e22813b03890d950f5a8aa1582",
+    "path": "geospatial/history/pre-addendum-source/geospatial/reports/OPEN_CONFLICTS.md",
+    "git_blob_sha": "fb32667ad37595544dd8ff115dd3cde0f15d913d",
+    "bytes": 2746,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/7471ba0f405e94e22813b03890d950f5a8aa1582/geospatial/history/pre-addendum-source/geospatial/reports/OPEN_CONFLICTS.md"
+  },
+  {
+    "commit": "7471ba0f405e94e22813b03890d950f5a8aa1582",
+    "path": "geospatial/history/pre-addendum-source/red_wash/README.md",
+    "git_blob_sha": "047c869f336ed217a6c5e2eae52a05d8168b12ab",
+    "bytes": 5831,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/7471ba0f405e94e22813b03890d950f5a8aa1582/geospatial/history/pre-addendum-source/red_wash/README.md"
+  },
+  {
+    "commit": "7471ba0f405e94e22813b03890d950f5a8aa1582",
+    "path": "geospatial/history/pre-addendum-source/red_wash/RED_WASH_CASEBOOK.md",
+    "git_blob_sha": "f04dc2e3c55bc5f579d1b274ed597f8a07fcadb2",
+    "bytes": 26058,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/7471ba0f405e94e22813b03890d950f5a8aa1582/geospatial/history/pre-addendum-source/red_wash/RED_WASH_CASEBOOK.md"
+  },
+  {
+    "commit": "7471ba0f405e94e22813b03890d950f5a8aa1582",
+    "path": "geospatial/history/pre-addendum-source/red_wash/TRANSACTION_OPERATING_RECORD.md",
+    "git_blob_sha": "3d9bf6f9a09610af0156538c0992b43fd34ac135",
+    "bytes": 28357,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/7471ba0f405e94e22813b03890d950f5a8aa1582/geospatial/history/pre-addendum-source/red_wash/TRANSACTION_OPERATING_RECORD.md"
+  },
+  {
+    "commit": "7471ba0f405e94e22813b03890d950f5a8aa1582",
+    "path": "geospatial/history/pre-addendum-source/red_wash/docs/02_GEOLOGICAL_TECHNICAL_REPORT.md",
+    "git_blob_sha": "87bb725dac7ac75ca37066f2b20a4a2883e67dad",
+    "bytes": 3483,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/7471ba0f405e94e22813b03890d950f5a8aa1582/geospatial/history/pre-addendum-source/red_wash/docs/02_GEOLOGICAL_TECHNICAL_REPORT.md"
+  },
+  {
+    "commit": "7471ba0f405e94e22813b03890d950f5a8aa1582",
+    "path": "geospatial/history/pre-addendum-source/red_wash/source/core_operating_data.json",
+    "git_blob_sha": "49de254a771eb362c1ff4224bf3a02e674b4fe8c",
+    "bytes": 21631,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/7471ba0f405e94e22813b03890d950f5a8aa1582/geospatial/history/pre-addendum-source/red_wash/source/core_operating_data.json"
+  },
+  {
+    "commit": "7471ba0f405e94e22813b03890d950f5a8aa1582",
+    "path": "geospatial/registers/GEOGRAPHIC_CONFLICTS.md",
+    "git_blob_sha": "0c4d86b8b0cdf32c40071aeee5c0df477245a61e",
+    "bytes": 1541,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/7471ba0f405e94e22813b03890d950f5a8aa1582/geospatial/registers/GEOGRAPHIC_CONFLICTS.md"
+  },
+  {
+    "commit": "7471ba0f405e94e22813b03890d950f5a8aa1582",
+    "path": "geospatial/registers/GEOGRAPHIC_DECISION_REGISTER.md",
+    "git_blob_sha": "94ce2773e49ac25e9953be7a4d559a71d4d376da",
+    "bytes": 1640,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/7471ba0f405e94e22813b03890d950f5a8aa1582/geospatial/registers/GEOGRAPHIC_DECISION_REGISTER.md"
+  },
+  {
+    "commit": "7471ba0f405e94e22813b03890d950f5a8aa1582",
+    "path": "geospatial/registers/REGENERATED_OUTPUTS.md",
+    "git_blob_sha": "f1de945578d6a2f186a28f841a056698668746bf",
+    "bytes": 2120,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/7471ba0f405e94e22813b03890d950f5a8aa1582/geospatial/registers/REGENERATED_OUTPUTS.md"
+  },
+  {
+    "commit": "7471ba0f405e94e22813b03890d950f5a8aa1582",
+    "path": "geospatial/registers/REPOSITORY_ADDENDUM_CORRECTIONS.json",
+    "git_blob_sha": "1215bf59706d85eaf36fb4ab113859bbb98e116e",
+    "bytes": 2950,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/7471ba0f405e94e22813b03890d950f5a8aa1582/geospatial/registers/REPOSITORY_ADDENDUM_CORRECTIONS.json"
+  },
+  {
+    "commit": "7471ba0f405e94e22813b03890d950f5a8aa1582",
+    "path": "geospatial/reports/FOUNDATION_EXECUTION_RECORD.md",
+    "git_blob_sha": "95f9e1c4b34aaa2e8e2001a2487c907233dceb7e",
+    "bytes": 541,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/7471ba0f405e94e22813b03890d950f5a8aa1582/geospatial/reports/FOUNDATION_EXECUTION_RECORD.md"
+  },
+  {
+    "commit": "7471ba0f405e94e22813b03890d950f5a8aa1582",
+    "path": "geospatial/reports/OPEN_CONFLICTS.md",
+    "git_blob_sha": "bda28c506fd7622f8b2e4063a7e253e4c1da7902",
+    "bytes": 1154,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/7471ba0f405e94e22813b03890d950f5a8aa1582/geospatial/reports/OPEN_CONFLICTS.md"
+  },
+  {
+    "commit": "7471ba0f405e94e22813b03890d950f5a8aa1582",
+    "path": "geospatial/schema/geospatial_schema.sql",
+    "git_blob_sha": "bcf61a72efd2f69d190306b38aed38e543dffe72",
+    "bytes": 5050,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/7471ba0f405e94e22813b03890d950f5a8aa1582/geospatial/schema/geospatial_schema.sql"
+  },
+  {
+    "commit": "7471ba0f405e94e22813b03890d950f5a8aa1582",
+    "path": "geospatial/scripts/apply_repository_addendum.py",
+    "git_blob_sha": "5b23b9c6b8d4c44f61478fcae359cadb2aac99dc",
+    "bytes": 7251,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/7471ba0f405e94e22813b03890d950f5a8aa1582/geospatial/scripts/apply_repository_addendum.py"
+  },
+  {
+    "commit": "7471ba0f405e94e22813b03890d950f5a8aa1582",
+    "path": "geospatial/scripts/build_search_areas.py",
+    "git_blob_sha": "6d27e55c356a42fa7af3055e0350874709f6c8fa",
+    "bytes": 1847,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/7471ba0f405e94e22813b03890d950f5a8aa1582/geospatial/scripts/build_search_areas.py"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/.gitattributes",
+    "git_blob_sha": "390151f587969f6f5648292059fa4336b58eb0ee",
+    "bytes": 231,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/.gitattributes"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/.gitignore",
+    "git_blob_sha": "fc12da6cd3734fd88614b9a376f6c53697a559e8",
+    "bytes": 97,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/.gitignore"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/LICENSES.md",
+    "git_blob_sha": "231a3ab148614804d615376e8cb5cf939fcc93d5",
+    "bytes": 2573,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/LICENSES.md"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/README.md",
+    "git_blob_sha": "2e638db647e84b8411683615c34ac0c79493e8e4",
+    "bytes": 2859,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/README.md"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/docs/ARU_BST_GEOGRAPHY_ADDENDUM_IMPLEMENTATION_SUMMARY.md",
+    "git_blob_sha": "9a02a81ef102dd3bf180904730ba2d4651b30df9",
+    "bytes": 4411,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/docs/ARU_BST_GEOGRAPHY_ADDENDUM_IMPLEMENTATION_SUMMARY.md"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/docs/CANON_CONFLICT_EVIDENCE.md",
+    "git_blob_sha": "55d523f1c2e8e9b941282f03c3c919b05f493f09",
+    "bytes": 2385,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/docs/CANON_CONFLICT_EVIDENCE.md"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/docs/CARTOGRAPHIC_STANDARD.md",
+    "git_blob_sha": "61c901365a4f83b87ee63b531359b51003b3135a",
+    "bytes": 1680,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/docs/CARTOGRAPHIC_STANDARD.md"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/docs/CRADLE_GEOGRAPHY_SUPERSESSION_2026-09-06.md",
+    "git_blob_sha": "b875539964bc09e46ab1f048aa0bbcc91303b73c",
+    "bytes": 1463,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/docs/CRADLE_GEOGRAPHY_SUPERSESSION_2026-09-06.md"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/docs/DATA_MODEL.md",
+    "git_blob_sha": "8464a050872622a3593f8ea7e5fd5071792771ad",
+    "bytes": 4702,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/docs/DATA_MODEL.md"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/docs/DEFINITION_OF_DONE.md",
+    "git_blob_sha": "f8b5f73d6024e3029993b7f3cd9d57676ec86213",
+    "bytes": 2910,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/docs/DEFINITION_OF_DONE.md"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/docs/NEXT_CHAT_HANDOFF.md",
+    "git_blob_sha": "1e69268369652c6f1f004b53a0a4232f745fff62",
+    "bytes": 3253,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/docs/NEXT_CHAT_HANDOFF.md"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/docs/OPERATING_MODEL_RECONCILIATION_20260906.md",
+    "git_blob_sha": "d1b15c1a568ff06e3f5a98ad9c2e1cc6aa05e965",
+    "bytes": 2101,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/docs/OPERATING_MODEL_RECONCILIATION_20260906.md"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/docs/PROVENANCE_AND_REPRODUCIBILITY.md",
+    "git_blob_sha": "337dd2e232c91992496ca10133496cad5998c72d",
+    "bytes": 4564,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/docs/PROVENANCE_AND_REPRODUCIBILITY.md"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/docs/RED_WASH_LOCATION_SUPERSESSION_NOTE.md",
+    "git_blob_sha": "5e5efcf509ed013bb055f401f96a2a9479af2ee7",
+    "bytes": 2504,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/docs/RED_WASH_LOCATION_SUPERSESSION_NOTE.md"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/docs/SITE_SELECTION_EVIDENCE.md",
+    "git_blob_sha": "5fa5e516274f6184e90813187024084fb02d2bf2",
+    "bytes": 7740,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/docs/SITE_SELECTION_EVIDENCE.md"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/docs/TEMPORAL_MODEL.md",
+    "git_blob_sha": "dc70bb1bbf1ba790dc53ae3d67e25a27fb31ad4a",
+    "bytes": 1822,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/docs/TEMPORAL_MODEL.md"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/geojson/bst_alignment_current.geojson",
+    "git_blob_sha": "ae804fbddc089748ddb7c09715a0c7efe627cc4c",
+    "bytes": 152259,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/geojson/bst_alignment_current.geojson"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/geojson/events.geojson",
+    "git_blob_sha": "8b3698faf7fa84fe8ba04361daf74805a2d10154",
+    "bytes": 52,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/geojson/events.geojson"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/geojson/facilities.geojson",
+    "git_blob_sha": "619f879c962147e1be97c1dcdd9a4853b7fd0902",
+    "bytes": 8524,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/geojson/facilities.geojson"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/geojson/historical_sites.geojson",
+    "git_blob_sha": "8b3698faf7fa84fe8ba04361daf74805a2d10154",
+    "bytes": 52,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/geojson/historical_sites.geojson"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/geojson/locked_search_areas.geojson",
+    "git_blob_sha": "0a3550610ebd938e4880b2af29ed3935d1f81da2",
+    "bytes": 12302,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/geojson/locked_search_areas.geojson"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/geojson/operating_territories.geojson",
+    "git_blob_sha": "8b3698faf7fa84fe8ba04361daf74805a2d10154",
+    "bytes": 52,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/geojson/operating_territories.geojson"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/geojson/rail_abandoned.geojson",
+    "git_blob_sha": "8b3698faf7fa84fe8ba04361daf74805a2d10154",
+    "bytes": 52,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/geojson/rail_abandoned.geojson"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/geojson/rail_bridges.geojson",
+    "git_blob_sha": "8b3698faf7fa84fe8ba04361daf74805a2d10154",
+    "bytes": 52,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/geojson/rail_bridges.geojson"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/geojson/rail_crossings.geojson",
+    "git_blob_sha": "8b3698faf7fa84fe8ba04361daf74805a2d10154",
+    "bytes": 52,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/geojson/rail_crossings.geojson"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/geojson/rail_industries.geojson",
+    "git_blob_sha": "8b3698faf7fa84fe8ba04361daf74805a2d10154",
+    "bytes": 52,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/geojson/rail_industries.geojson"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/geojson/rail_interchanges.geojson",
+    "git_blob_sha": "260797a6455c6ea5fc499ceab8727514fd790fa0",
+    "bytes": 2195,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/geojson/rail_interchanges.geojson"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/geojson/rail_mileposts.geojson",
+    "git_blob_sha": "8b3698faf7fa84fe8ba04361daf74805a2d10154",
+    "bytes": 52,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/geojson/rail_mileposts.geojson"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/geojson/rail_network.geojson",
+    "git_blob_sha": "ae804fbddc089748ddb7c09715a0c7efe627cc4c",
+    "bytes": 152259,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/geojson/rail_network.geojson"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/geojson/rail_nodes.geojson",
+    "git_blob_sha": "5487b5c62cc1ba900aab4a7e492c9fa9c7c2c654",
+    "bytes": 3291,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/geojson/rail_nodes.geojson"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/geojson/rail_trackage_rights.geojson",
+    "git_blob_sha": "8b3698faf7fa84fe8ba04361daf74805a2d10154",
+    "bytes": 52,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/geojson/rail_trackage_rights.geojson"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/geojson/rail_tunnels.geojson",
+    "git_blob_sha": "8b3698faf7fa84fe8ba04361daf74805a2d10154",
+    "bytes": 52,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/geojson/rail_tunnels.geojson"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/geojson/rail_yards.geojson",
+    "git_blob_sha": "8eabb643c02afb2254036819ac7bdeda997af052",
+    "bytes": 2234,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/geojson/rail_yards.geojson"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/geojson/red_wash_anchor.geojson",
+    "git_blob_sha": "1637b4651d701b14c9517d6f7970ce4ac058a0c2",
+    "bytes": 1337,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/geojson/red_wash_anchor.geojson"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/geojson/reference_place_labels.geojson",
+    "git_blob_sha": "8a66719c906b9fcef8794cb4f77f739048023296",
+    "bytes": 5964,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/geojson/reference_place_labels.geojson"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/geojson/resource_areas.geojson",
+    "git_blob_sha": "8b3698faf7fa84fe8ba04361daf74805a2d10154",
+    "bytes": 52,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/geojson/resource_areas.geojson"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/geojson/roads.geojson",
+    "git_blob_sha": "8b3698faf7fa84fe8ba04361daf74805a2d10154",
+    "bytes": 52,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/geojson/roads.geojson"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/geojson/sites.geojson",
+    "git_blob_sha": "23af73ddf36695f07fa3f193c7179bbcadfe2a7b",
+    "bytes": 4308,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/geojson/sites.geojson"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/geojson/source_claim_points.geojson",
+    "git_blob_sha": "fd74ce443318b6c0aacb5e9282a701e6433d293a",
+    "bytes": 2712,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/geojson/source_claim_points.geojson"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/geojson/taylor_hub.geojson",
+    "git_blob_sha": "8ad34f7ac03fa059fab8ed38f27ed30a516ba2ca",
+    "bytes": 3697,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/geojson/taylor_hub.geojson"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/history/QGIS_VALIDATION_rc2.json",
+    "git_blob_sha": "0ed3fce4f1a1a10d770983ecbe49094f555634ee",
+    "bytes": 21962,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/history/QGIS_VALIDATION_rc2.json"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/history/sable-harbor-pre-addendum-v0.1.0-rc1.zip",
+    "git_blob_sha": "5d04c572353a8cec8eb81579a692cf4e8c008803",
+    "bytes": 21478847,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/history/sable-harbor-pre-addendum-v0.1.0-rc1.zip"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/history/sable-harbor-rc2-superseded-mine-spur.zip",
+    "git_blob_sha": "1f5f118f1cedbf213f7bf5cb87c42041bd0e563c",
+    "bytes": 18076454,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/history/sable-harbor-rc2-superseded-mine-spur.zip"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/history/superseded_mine_connector.geojson",
+    "git_blob_sha": "5d094f66446b19a44953353335b44d1c7bba8db9",
+    "bytes": 18851,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/history/superseded_mine_connector.geojson"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/maps/MAP_MANIFEST.json",
+    "git_blob_sha": "0a2a2bab84727a64f1ad4d94190b3710858fe452",
+    "bytes": 14760,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/maps/MAP_MANIFEST.json"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/maps/SABLE_HARBOR_Geographic_Framework_Atlas_v0.1.0-rc3.pdf",
+    "git_blob_sha": "cb4df3e11d5c5b93990208097f64b27c49041943",
+    "bytes": 3797352,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/maps/SABLE_HARBOR_Geographic_Framework_Atlas_v0.1.0-rc3.pdf"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/maps/SH-MAP-BST-001_bst-pre-acquisition-system.json",
+    "git_blob_sha": "09fb5532e5dd90a8412710c2db3f9009a42f119e",
+    "bytes": 1347,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/maps/SH-MAP-BST-001_bst-pre-acquisition-system.json"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/maps/SH-MAP-BST-001_bst-pre-acquisition-system.pdf",
+    "git_blob_sha": "5b6f01b86f8becdda94bf4ad450b3ebcde507145",
+    "bytes": 539952,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/maps/SH-MAP-BST-001_bst-pre-acquisition-system.pdf"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/maps/SH-MAP-BST-001_bst-pre-acquisition-system.png",
+    "git_blob_sha": "d990f8c7ed0c48dff065e5710c47526ce01f405c",
+    "bytes": 737688,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/maps/SH-MAP-BST-001_bst-pre-acquisition-system.png"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/maps/SH-MAP-BST-001_bst-pre-acquisition-system.svg",
+    "git_blob_sha": "709a802048e8c75afcda97f90d51cef6c624f821",
+    "bytes": 1101261,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/maps/SH-MAP-BST-001_bst-pre-acquisition-system.svg"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/maps/SH-MAP-BST-001_wamsutter-interchange-study.json",
+    "git_blob_sha": "0e8a4b560fc28216459e35022c102fe64e7e35a0",
+    "bytes": 1249,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/maps/SH-MAP-BST-001_wamsutter-interchange-study.json"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/maps/SH-MAP-BST-001_wamsutter-interchange-study.pdf",
+    "git_blob_sha": "5be916c6f4ee69d0899cc3ccc69d5cb794e50aa2",
+    "bytes": 55888,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/maps/SH-MAP-BST-001_wamsutter-interchange-study.pdf"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/maps/SH-MAP-BST-001_wamsutter-interchange-study.png",
+    "git_blob_sha": "11ac719b0975ad6183f50a365d78736e74ff4c06",
+    "bytes": 483671,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/maps/SH-MAP-BST-001_wamsutter-interchange-study.png"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/maps/SH-MAP-BST-001_wamsutter-interchange-study.svg",
+    "git_blob_sha": "b7a2eaee39ecdf03184bf43eb8f9748ed4016058",
+    "bytes": 68419,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/maps/SH-MAP-BST-001_wamsutter-interchange-study.svg"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/maps/SH-MAP-BST-002_bst-engineering-alignment.json",
+    "git_blob_sha": "ec511c4f40517bac4d5029adae50477311bf9e2f",
+    "bytes": 1328,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/maps/SH-MAP-BST-002_bst-engineering-alignment.json"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/maps/SH-MAP-BST-002_bst-engineering-alignment.pdf",
+    "git_blob_sha": "05cba9379a368aa4b1641c8809d3a31988099c6a",
+    "bytes": 415406,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/maps/SH-MAP-BST-002_bst-engineering-alignment.pdf"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/maps/SH-MAP-BST-002_bst-engineering-alignment.png",
+    "git_blob_sha": "67952718e397090f36cf492024b65a1c3dd0ad71",
+    "bytes": 619737,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/maps/SH-MAP-BST-002_bst-engineering-alignment.png"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/maps/SH-MAP-BST-002_bst-engineering-alignment.svg",
+    "git_blob_sha": "1533a62345c118085dfa60c9533a06a183484b08",
+    "bytes": 949319,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/maps/SH-MAP-BST-002_bst-engineering-alignment.svg"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/maps/SH-MAP-CRD-001_kanawha-context.json",
+    "git_blob_sha": "a475a8d225a6555a36e5c1db41ea06220cf65bbe",
+    "bytes": 1195,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/maps/SH-MAP-CRD-001_kanawha-context.json"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/maps/SH-MAP-CRD-001_kanawha-context.pdf",
+    "git_blob_sha": "b14f6e89bfb7a0efcc328ab817b9954a91609b08",
+    "bytes": 237502,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/maps/SH-MAP-CRD-001_kanawha-context.pdf"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/maps/SH-MAP-CRD-001_kanawha-context.png",
+    "git_blob_sha": "97907b9d8a711456bc0279868292511ddd9a747b",
+    "bytes": 691228,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/maps/SH-MAP-CRD-001_kanawha-context.png"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/maps/SH-MAP-CRD-001_kanawha-context.svg",
+    "git_blob_sha": "4922a47ac69234cd45aca5f72e3cbfb49acd999d",
+    "bytes": 617430,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/maps/SH-MAP-CRD-001_kanawha-context.svg"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/maps/SH-MAP-ENT-001_locked-geographic-framework.json",
+    "git_blob_sha": "bd4f2cc40d42ffdb4c499e46909ceb219d0d179d",
+    "bytes": 1288,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/maps/SH-MAP-ENT-001_locked-geographic-framework.json"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/maps/SH-MAP-ENT-001_locked-geographic-framework.pdf",
+    "git_blob_sha": "e4ac8122d6e82908e932050450ba25891eb43695",
+    "bytes": 981685,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/maps/SH-MAP-ENT-001_locked-geographic-framework.pdf"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/maps/SH-MAP-ENT-001_locked-geographic-framework.png",
+    "git_blob_sha": "7913b2d6a287c62c1979f13471e8cc5cfef54c7c",
+    "bytes": 1011989,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/maps/SH-MAP-ENT-001_locked-geographic-framework.png"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/maps/SH-MAP-ENT-001_locked-geographic-framework.svg",
+    "git_blob_sha": "08b5c2b577b14815d904d27cbf68665ca0e34329",
+    "bytes": 3180627,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/maps/SH-MAP-ENT-001_locked-geographic-framework.svg"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/maps/SH-MAP-ENT-002_corporate-geographic-census.json",
+    "git_blob_sha": "d29e5fe47387f4bdda8a34772f57aaf68c8f1f3a",
+    "bytes": 1297,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/maps/SH-MAP-ENT-002_corporate-geographic-census.json"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/maps/SH-MAP-ENT-002_corporate-geographic-census.pdf",
+    "git_blob_sha": "08a37fe3388e0b9e4f9d31eef905fef41e42fbd3",
+    "bytes": 90327,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/maps/SH-MAP-ENT-002_corporate-geographic-census.pdf"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/maps/SH-MAP-ENT-002_corporate-geographic-census.png",
+    "git_blob_sha": "2f5fe099d5322d93ac7b9297db7c21d7f45311f3",
+    "bytes": 404290,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/maps/SH-MAP-ENT-002_corporate-geographic-census.png"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/maps/SH-MAP-ENT-002_corporate-geographic-census.svg",
+    "git_blob_sha": "673de51bc3e176e4dc88793e6ad4f3be74818309",
+    "bytes": 191008,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/maps/SH-MAP-ENT-002_corporate-geographic-census.svg"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/maps/SH-MAP-ENT-003_open-geographic-questions.json",
+    "git_blob_sha": "6ba8eb69e9b6507e218e0b28c422e814e42fc61a",
+    "bytes": 1312,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/maps/SH-MAP-ENT-003_open-geographic-questions.json"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/maps/SH-MAP-ENT-003_open-geographic-questions.pdf",
+    "git_blob_sha": "ed3abaf8d8725ebab9aaeaaed9d1995133be728c",
+    "bytes": 1030822,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/maps/SH-MAP-ENT-003_open-geographic-questions.pdf"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/maps/SH-MAP-ENT-003_open-geographic-questions.png",
+    "git_blob_sha": "a719f5cbfcf25a9c4c545f0126f43662f594d4be",
+    "bytes": 988433,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/maps/SH-MAP-ENT-003_open-geographic-questions.png"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/maps/SH-MAP-ENT-003_open-geographic-questions.svg",
+    "git_blob_sha": "bb7831ae3e1d6e47cb6f20c272adaf9ffa591ad1",
+    "bytes": 3162126,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/maps/SH-MAP-ENT-003_open-geographic-questions.svg"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/maps/SH-MAP-EVL-001_hazelwood-context.json",
+    "git_blob_sha": "9f8c343e13ea47d47eda4f159793f6bbe3f5beae",
+    "bytes": 1208,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/maps/SH-MAP-EVL-001_hazelwood-context.json"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/maps/SH-MAP-EVL-001_hazelwood-context.pdf",
+    "git_blob_sha": "9c982f37af8a9daadddfe7e762faafdec7a5a168",
+    "bytes": 127015,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/maps/SH-MAP-EVL-001_hazelwood-context.pdf"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/maps/SH-MAP-EVL-001_hazelwood-context.png",
+    "git_blob_sha": "26e2b7af2368cfb2d06392f2502971383e86a9da",
+    "bytes": 765130,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/maps/SH-MAP-EVL-001_hazelwood-context.png"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/maps/SH-MAP-EVL-001_hazelwood-context.svg",
+    "git_blob_sha": "ed7f7b0a2d51ea6f74d651f3508bc6043b4fabb5",
+    "bytes": 428823,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/maps/SH-MAP-EVL-001_hazelwood-context.svg"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/maps/SH-MAP-RWM-001_red-wash-context.json",
+    "git_blob_sha": "f1ea7a388bd6794caf5fd9c3fc350ec8a3b38c0a",
+    "bytes": 1284,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/maps/SH-MAP-RWM-001_red-wash-context.json"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/maps/SH-MAP-RWM-001_red-wash-context.pdf",
+    "git_blob_sha": "d5456d9593d3239472375f508d3bdb84befef48d",
+    "bytes": 210012,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/maps/SH-MAP-RWM-001_red-wash-context.pdf"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/maps/SH-MAP-RWM-001_red-wash-context.png",
+    "git_blob_sha": "cbb58c54f389b413feb29aa6f1cf7546713b8dfd",
+    "bytes": 577575,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/maps/SH-MAP-RWM-001_red-wash-context.png"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/maps/SH-MAP-RWM-001_red-wash-context.svg",
+    "git_blob_sha": "987d93cd2f8ff2d678e94fffd8aee82b4a79d969",
+    "bytes": 504476,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/maps/SH-MAP-RWM-001_red-wash-context.svg"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/maps/SH-MAP-RWM-002_red-wash-site-study.json",
+    "git_blob_sha": "873505de99c3faee0dccb05cdbc9c44b11bcbc6a",
+    "bytes": 1262,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/maps/SH-MAP-RWM-002_red-wash-site-study.json"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/maps/SH-MAP-RWM-002_red-wash-site-study.pdf",
+    "git_blob_sha": "9a78b2c24f69dcfc89ef564ebd0fd5e12889545a",
+    "bytes": 38309,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/maps/SH-MAP-RWM-002_red-wash-site-study.pdf"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/maps/SH-MAP-RWM-002_red-wash-site-study.png",
+    "git_blob_sha": "db66d4e1735eb7ca7d63a7a3039cd7f37876d373",
+    "bytes": 390931,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/maps/SH-MAP-RWM-002_red-wash-site-study.png"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/maps/SH-MAP-RWM-002_red-wash-site-study.svg",
+    "git_blob_sha": "2733cde2dda037813c6217eeb20452d8228723dd",
+    "bytes": 22771,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/maps/SH-MAP-RWM-002_red-wash-site-study.svg"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/maps/SH-MAP-SAC-001_headquarters-context.json",
+    "git_blob_sha": "bb62c5a23bc7b883228906f6658fa6ba36026eb2",
+    "bytes": 1218,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/maps/SH-MAP-SAC-001_headquarters-context.json"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/maps/SH-MAP-SAC-001_headquarters-context.pdf",
+    "git_blob_sha": "3499e345997e8447ee014d0d64768a01cb5ccf21",
+    "bytes": 75437,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/maps/SH-MAP-SAC-001_headquarters-context.pdf"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/maps/SH-MAP-SAC-001_headquarters-context.png",
+    "git_blob_sha": "2c1bdbba7cb55051d359a63a845a119afb76ced1",
+    "bytes": 672049,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/maps/SH-MAP-SAC-001_headquarters-context.png"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/maps/SH-MAP-SAC-001_headquarters-context.svg",
+    "git_blob_sha": "727dc01233d4fc7368bbd9e7f90be7de4be6bc62",
+    "bytes": 268400,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/maps/SH-MAP-SAC-001_headquarters-context.svg"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/master/sable_harbor_master_v0.1.building.gpkg-journal",
+    "git_blob_sha": "28c825a3d1ae1c6aafd3120fad7c702af165aa3f",
+    "bytes": 128512,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/master/sable_harbor_master_v0.1.building.gpkg-journal"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/master/sable_harbor_master_v0.1.gpkg",
+    "git_blob_sha": "4e305baf1f4f65dee50e0f797200e051e97d3b60",
+    "bytes": 36700160,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/master/sable_harbor_master_v0.1.gpkg"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/qgis/sable_harbor_master.qgz",
+    "git_blob_sha": "3cbef857784930a86cfb95dce15c27ad1fdb73de",
+    "bytes": 3846,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/qgis/sable_harbor_master.qgz"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/reference/context_places.geojson",
+    "git_blob_sha": "5f3765f213a8d2c158823c26e2af467b5be067a8",
+    "bytes": 45854,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/reference/context_places.geojson"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/reference/hazelwood_connecting_roads.geojson",
+    "git_blob_sha": "e2b7fa861a32ec5ebad015279f830d74bb7e1285",
+    "bytes": 56193,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/reference/hazelwood_connecting_roads.geojson"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/reference/hazelwood_highways.geojson",
+    "git_blob_sha": "1cfa2b6ce9f1ff401016c2705c223fc0977e2b2b",
+    "bytes": 17775,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/reference/hazelwood_highways.geojson"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/reference/hazelwood_hydro.geojson",
+    "git_blob_sha": "78dc970d00d2e594fa92679e739818d839c2e6e5",
+    "bytes": 11336,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/reference/hazelwood_hydro.geojson"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/reference/hazelwood_local_roads.geojson",
+    "git_blob_sha": "850da6c19a423ccba311158ff5b2d99bcf379ec6",
+    "bytes": 1336848,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/reference/hazelwood_local_roads.geojson"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/reference/hazelwood_rail.geojson",
+    "git_blob_sha": "316a813aa08cb1fa78ae73fd1656d778e647d13e",
+    "bytes": 127842,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/reference/hazelwood_rail.geojson"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/reference/hazelwood_secondary_roads.geojson",
+    "git_blob_sha": "0d03d78b09032442f3f5f7347368dc2914613ea7",
+    "bytes": 43,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/reference/hazelwood_secondary_roads.geojson"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/reference/kanawha_connecting_roads.geojson",
+    "git_blob_sha": "9ec40ebdc092d7c154d08743a4348bc52acfb4c4",
+    "bytes": 539857,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/reference/kanawha_connecting_roads.geojson"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/reference/kanawha_highways.geojson",
+    "git_blob_sha": "56ed40396307a96b1a5722cdeeb7bc1e8fa157c3",
+    "bytes": 267869,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/reference/kanawha_highways.geojson"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/reference/kanawha_hydro.geojson",
+    "git_blob_sha": "65aaa00d316c8db9082148c0cef656ffe6b4b918",
+    "bytes": 1388219,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/reference/kanawha_hydro.geojson"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/reference/kanawha_rail.geojson",
+    "git_blob_sha": "234b101c52fd3798320a2992572b17377495d975",
+    "bytes": 119477,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/reference/kanawha_rail.geojson"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/reference/kanawha_secondary_roads.geojson",
+    "git_blob_sha": "687f67bd1de858e2603f65a38fd8d37f68f1a3b5",
+    "bytes": 498097,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/reference/kanawha_secondary_roads.geojson"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/reference/sacramento_connecting_roads.geojson",
+    "git_blob_sha": "d8389c67029d030202f428b6325321d964e1bfff",
+    "bytes": 56652,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/reference/sacramento_connecting_roads.geojson"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/reference/sacramento_highways.geojson",
+    "git_blob_sha": "77b1f6859bcb6550acb50fb41b750d5dd6172f25",
+    "bytes": 57252,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/reference/sacramento_highways.geojson"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/reference/sacramento_hydro.geojson",
+    "git_blob_sha": "76010fb30122c4b8835d73b33691a737905ba7a4",
+    "bytes": 7613,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/reference/sacramento_hydro.geojson"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/reference/sacramento_local_roads.geojson",
+    "git_blob_sha": "8611972483919a897e7a75c3dc7042cc78aec9d8",
+    "bytes": 992429,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/reference/sacramento_local_roads.geojson"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/reference/sacramento_rail.geojson",
+    "git_blob_sha": "1b55b541da87ed436fe0d1fb45522d6642dfc7f9",
+    "bytes": 59617,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/reference/sacramento_rail.geojson"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/reference/sacramento_secondary_roads.geojson",
+    "git_blob_sha": "0d03d78b09032442f3f5f7347368dc2914613ea7",
+    "bytes": 43,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/reference/sacramento_secondary_roads.geojson"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/reference/us_states.geojson",
+    "git_blob_sha": "a0cc851d5fdf96874f5e6be929e548e5e7cb54f8",
+    "bytes": 126817,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/reference/us_states.geojson"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/reference/wamsutter_connecting_roads.geojson",
+    "git_blob_sha": "f1221a502ef42b236db07b32f4f1d1804b706c64",
+    "bytes": 140318,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/reference/wamsutter_connecting_roads.geojson"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/reference/wamsutter_fra_rail.geojson",
+    "git_blob_sha": "68104c66766fe9c7d28c57a2b0a899956a463007",
+    "bytes": 25896,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/reference/wamsutter_fra_rail.geojson"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/reference/wamsutter_highways.geojson",
+    "git_blob_sha": "2899a3e02b38b654b22dd0f02cc84a0aaeafc650",
+    "bytes": 242685,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/reference/wamsutter_highways.geojson"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/reference/wamsutter_hydro.geojson",
+    "git_blob_sha": "83d1c115df719763121f5181e85cb8546d62a532",
+    "bytes": 8993261,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/reference/wamsutter_hydro.geojson"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/reference/wamsutter_rail.geojson",
+    "git_blob_sha": "977e193660882134487e23e3bb8ac8fe396e4021",
+    "bytes": 137161,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/reference/wamsutter_rail.geojson"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/reference/wamsutter_secondary_roads.geojson",
+    "git_blob_sha": "d312b93bcdb68b65c14d708c4bd63740075a3fa1",
+    "bytes": 291271,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/reference/wamsutter_secondary_roads.geojson"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/reference/wyoming_counties.geojson",
+    "git_blob_sha": "5a20c9c7f520b20361fce4e2358c7c6213747195",
+    "bytes": 65951,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/reference/wyoming_counties.geojson"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/reference/wyoming_local_roads.geojson",
+    "git_blob_sha": "cf7a023d6b0b69c0d78776ed6e3e7eaa0043fc85",
+    "bytes": 3777905,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/reference/wyoming_local_roads.geojson"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/reference/wyoming_screening_dem.tif",
+    "git_blob_sha": "57f58bb59407c9c3f32885031d39e01c85ae69dc",
+    "bytes": 3540536,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/reference/wyoming_screening_dem.tif"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/reference/wyoming_waterbodies.geojson",
+    "git_blob_sha": "26556a72a94a7059d882d964dd29415e265e27c3",
+    "bytes": 544275,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/reference/wyoming_waterbodies.geojson"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/registers/CENSUS_MANIFEST.json",
+    "git_blob_sha": "d7cc958c6b82d0d48d69979ef6c6890eee38fd47",
+    "bytes": 1002,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/registers/CENSUS_MANIFEST.json"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/registers/DISCOVERY_STATEMENTS.csv",
+    "git_blob_sha": "8447b9b4a4debee5d9af2b2ab7fb668b1edce42d",
+    "bytes": 1251929,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/registers/DISCOVERY_STATEMENTS.csv"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/registers/GEOGRAPHIC_CANDIDATE_OCCURRENCES.csv.gz",
+    "git_blob_sha": "37ea381f63964e82293f6b4a8aee2fb4fabab65d",
+    "bytes": 1359306,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/registers/GEOGRAPHIC_CANDIDATE_OCCURRENCES.csv.gz"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/registers/GEOGRAPHIC_CENSUS_v0.1.csv",
+    "git_blob_sha": "4bf66a9572551e9d665b2430c84573989cbdb606",
+    "bytes": 50239,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/registers/GEOGRAPHIC_CENSUS_v0.1.csv"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/registers/GEOGRAPHIC_CONFLICTS.md",
+    "git_blob_sha": "1e47f0f9e0f43191006b021d99d73741ca60b6a8",
+    "bytes": 482,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/registers/GEOGRAPHIC_CONFLICTS.md"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/registers/GEOGRAPHIC_DECISION_REGISTER.md",
+    "git_blob_sha": "7be6e342045f4fb3f4eb86812cc81e292543d884",
+    "bytes": 2722,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/registers/GEOGRAPHIC_DECISION_REGISTER.md"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/registers/GEOGRAPHIC_DECISION_REGISTER_v0.1.md",
+    "git_blob_sha": "cb7f0e3a9fc8b738dcabf22b608701454c0a24a1",
+    "bytes": 21124,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/registers/GEOGRAPHIC_DECISION_REGISTER_v0.1.md"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/registers/OPEN_GEOGRAPHIC_QUESTIONS_v0.1.md",
+    "git_blob_sha": "b95c1dc80366b50f0c9c93ff8a061f6d6dd787d8",
+    "bytes": 2000,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/registers/OPEN_GEOGRAPHIC_QUESTIONS_v0.1.md"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/registers/PROVENANCE_COVERAGE.csv",
+    "git_blob_sha": "3f4efb4f8ea074d14f2edf0f77771d51ee005ae1",
+    "bytes": 10576,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/registers/PROVENANCE_COVERAGE.csv"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/registers/PROVENANCE_REGISTER.md",
+    "git_blob_sha": "7fcee07130682e39a6dff0226afc206ecc74057f",
+    "bytes": 9954,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/registers/PROVENANCE_REGISTER.md"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/registers/SITE_REGISTER.csv",
+    "git_blob_sha": "63fc2536e8c41e7a2f1d95c38b801d1c0373b590",
+    "bytes": 30134,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/registers/SITE_REGISTER.csv"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/registers/SOURCE_COVERAGE.csv",
+    "git_blob_sha": "1da9055dafb63dabd49a3613b9dd3791b77344f1",
+    "bytes": 122614,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/registers/SOURCE_COVERAGE.csv"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/releases/MANIFEST_rc3.json",
+    "git_blob_sha": "6af185eab2b962dd657146a25afee2ecaef99353",
+    "bytes": 33094,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/releases/MANIFEST_rc3.json"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/releases/sable-harbor-geospatial-v0.1.0-rc3.zip",
+    "git_blob_sha": "38dd83cffa45736c40215ee59ffbbaffe03aa3e8",
+    "bytes": 48984193,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/releases/sable-harbor-geospatial-v0.1.0-rc3.zip"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/reports/CROSSING_SCREEN.json",
+    "git_blob_sha": "8746029852d1746194c780daa575d09ee7478997",
+    "bytes": 13939,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/reports/CROSSING_SCREEN.json"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/reports/GEOMETRY_VALIDATION.json",
+    "git_blob_sha": "bf3fda5d8b403ec554747de6d73843ceb846252a",
+    "bytes": 2716,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/reports/GEOMETRY_VALIDATION.json"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/reports/GEOSPATIAL_VALIDATION_REPORT.md",
+    "git_blob_sha": "87f745dc46ce773553f124fa2b318bc4bda04338",
+    "bytes": 1185,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/reports/GEOSPATIAL_VALIDATION_REPORT.md"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/reports/OPEN_CONFLICTS.md",
+    "git_blob_sha": "b95c1dc80366b50f0c9c93ff8a061f6d6dd787d8",
+    "bytes": 2000,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/reports/OPEN_CONFLICTS.md"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/reports/QGIS_VALIDATION.json",
+    "git_blob_sha": "55a6cd68622c7515241e2202a4bc128ca218ceb1",
+    "bytes": 359,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/reports/QGIS_VALIDATION.json"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/reports/RAIL_CANDIDATE_COMPARISON.json",
+    "git_blob_sha": "52b574acbc346188deda42a683d1d1c11c3d92db",
+    "bytes": 433498,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/reports/RAIL_CANDIDATE_COMPARISON.json"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/reports/TEST_RESULTS.xml",
+    "git_blob_sha": "f147f970459b4092f55b829fdf4f1c6f2f9044ba",
+    "bytes": 2118,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/reports/TEST_RESULTS.xml"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/reports/VISUAL_QA.md",
+    "git_blob_sha": "21e2797f44ad03743cf8955c1e13d01e6ecedd38",
+    "bytes": 511,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/reports/VISUAL_QA.md"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/requirements.txt",
+    "git_blob_sha": "85b56dfdbc3a33004b751f5281fa11b095c8af93",
+    "bytes": 224,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/requirements.txt"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/schema/geospatial_schema.sql",
+    "git_blob_sha": "a15e852ec0e4f7881d086315d5b24846cbbd8508",
+    "bytes": 5813,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/schema/geospatial_schema.sql"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/scripts/build_geopackage.py",
+    "git_blob_sha": "510c6676a6309e1bbffa386760422079883a167b",
+    "bytes": 19185,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/scripts/build_geopackage.py"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/scripts/census.py",
+    "git_blob_sha": "0ac9a8f3450b1575ec4fd63d490ae414f49c5ea2",
+    "bytes": 8992,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/scripts/census.py"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/scripts/engineer_candidates.py",
+    "git_blob_sha": "9b8879cb716dff07761e7703d2be1bfa118bca2f",
+    "bytes": 9329,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/scripts/engineer_candidates.py"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/scripts/fetch_reference.py",
+    "git_blob_sha": "f1d2e1c8ed242ca31f4cd4c5ef7165dc29be4303",
+    "bytes": 8878,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/scripts/fetch_reference.py"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/scripts/model.py",
+    "git_blob_sha": "f1387f8d71aa99f853042b3eebccba58651cc9dc",
+    "bytes": 4431,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/scripts/model.py"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/scripts/package_release.py",
+    "git_blob_sha": "094766cfc8c7fecff9eaa8fa2a619fc609113d3e",
+    "bytes": 1381,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/scripts/package_release.py"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/scripts/render_maps.py",
+    "git_blob_sha": "9c8d72fb3a573c40b3a56f6a042cff657300ff12",
+    "bytes": 29525,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/scripts/render_maps.py"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/scripts/validate_geospatial.py",
+    "git_blob_sha": "053309fd5484844827ea32217a9faa9b4b05d0b1",
+    "bytes": 10889,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/scripts/validate_geospatial.py"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/scripts/validate_qgis.py",
+    "git_blob_sha": "b9199e57bca8cf4f24bb19d82a95d744873d669d",
+    "bytes": 2631,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/scripts/validate_qgis.py"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/sources/APPROVED_OPERATING_DECISIONS_20260906.json",
+    "git_blob_sha": "28dd870df3a4b3402c10438b068abe7ce7308782",
+    "bytes": 1438,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/sources/APPROVED_OPERATING_DECISIONS_20260906.json"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/sources/ARU_BST_BRANCH_BASELINE.json",
+    "git_blob_sha": "af561698045bc58ede5052754092b90ce731be63",
+    "bytes": 6781,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/sources/ARU_BST_BRANCH_BASELINE.json"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/sources/BLM_POINT_SCREEN.json",
+    "git_blob_sha": "3fef1877605a3b979c1bb77000c7ce14216b2145",
+    "bytes": 14649,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/sources/BLM_POINT_SCREEN.json"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/sources/GOVERNING_CANON_ADDENDUM_2026-09-05.md",
+    "git_blob_sha": "cf7fa20e2e43c514a1d86404e853309d8f01f3f9",
+    "bytes": 15583,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/sources/GOVERNING_CANON_ADDENDUM_2026-09-05.md"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/sources/MASTER_EXECUTION_MANDATE.md",
+    "git_blob_sha": "211bf88a6fc14d414774e69d1c360dfbf9886235",
+    "bytes": 78334,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/sources/MASTER_EXECUTION_MANDATE.md"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/sources/canon_snapshot/assets/brand/maps/red_wash__site_overview.png",
+    "git_blob_sha": "57633ea73ecb3809313d3e7746df018a3f521d20",
+    "bytes": 3230867,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/sources/canon_snapshot/assets/brand/maps/red_wash__site_overview.png"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/sources/canon_snapshot/assets/brand/maps/red_wash__underground_plan.png",
+    "git_blob_sha": "3ee96956f50c4d6f53ca0da992164fb61a06ff69",
+    "bytes": 2401412,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/sources/canon_snapshot/assets/brand/maps/red_wash__underground_plan.png"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/sources/canon_snapshot/blackridge/data/public/databases/blackridge_m00_v0.1.0.sqlite3",
+    "git_blob_sha": "8fc62fab928af2f0dee3333fb09c6b52256aad42",
+    "bytes": 19836928,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/sources/canon_snapshot/blackridge/data/public/databases/blackridge_m00_v0.1.0.sqlite3"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/sources/canon_snapshot/blackridge/docs/canon/BLACKRIDGE_CANON_IMPLEMENTATION_SPEC.md",
+    "git_blob_sha": "12b056456e0d76baed8998b9dba0994b97d5adbb",
+    "bytes": 490,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/sources/canon_snapshot/blackridge/docs/canon/BLACKRIDGE_CANON_IMPLEMENTATION_SPEC.md"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/sources/canon_snapshot/docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md",
+    "git_blob_sha": "dfc8c9451e28ca54686d0f195594e4a7635dafa8",
+    "bytes": 27771,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/sources/canon_snapshot/docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/sources/canon_snapshot/docs/canon/DECISION_REGISTER.md",
+    "git_blob_sha": "3419446c5d15184251e39d9babc48fe7eef1b2ab",
+    "bytes": 21910,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/sources/canon_snapshot/docs/canon/DECISION_REGISTER.md"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/sources/canon_snapshot/docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-03.md",
+    "git_blob_sha": "66d02d709ba930516c5ee9445cfea72401a51c0d",
+    "bytes": 17195,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/sources/canon_snapshot/docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-03.md"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/sources/canon_snapshot/docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-05_RED_WASH.md",
+    "git_blob_sha": "449af941f032db54769b57b93e1a2983ecd7efb5",
+    "bytes": 5819,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/sources/canon_snapshot/docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-05_RED_WASH.md"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/sources/canon_snapshot/docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05.md",
+    "git_blob_sha": "60f16bf5cdf58ad9ce2602982c0c82e359055540",
+    "bytes": 11449,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/sources/canon_snapshot/docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05.md"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/sources/canon_snapshot/docs/canon/SABLE_HARBOR_CANONICAL_ARCHITECTURE_HANDOVER.md",
+    "git_blob_sha": "ed038f334a8a90f8b537be75861cf134274c9d07",
+    "bytes": 36394,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/sources/canon_snapshot/docs/canon/SABLE_HARBOR_CANONICAL_ARCHITECTURE_HANDOVER.md"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/sources/canon_snapshot/docs/canon/SABLE_HARBOR_CONTINUITY_AUDIT_v0.2.md",
+    "git_blob_sha": "631d0c6fe6409d36e5b4c9fd267439a6b3254f13",
+    "bytes": 18443,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/sources/canon_snapshot/docs/canon/SABLE_HARBOR_CONTINUITY_AUDIT_v0.2.md"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/sources/canon_snapshot/docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md",
+    "git_blob_sha": "e47d9eb7e040eb950103bd41e0bf76b588937473",
+    "bytes": 83837,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/sources/canon_snapshot/docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/sources/canon_snapshot/docs/j2/EDUCATION.md",
+    "git_blob_sha": "c348209643f80fd31db5ff84e7c79c0a5927396f",
+    "bytes": 7026,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/sources/canon_snapshot/docs/j2/EDUCATION.md"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/sources/canon_snapshot/docs/j2/J2_HEADQUARTERS.md",
+    "git_blob_sha": "492304bf0b8d83257f49a8c3ad5dbbff654d66d3",
+    "bytes": 4146,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/sources/canon_snapshot/docs/j2/J2_HEADQUARTERS.md"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/sources/canon_snapshot/docs/legal/PRELIMINARY_NAME_AND_MARK_SCREEN.md",
+    "git_blob_sha": "518bd059e9ab7eb2350fda425dfd8ce8fd41053f",
+    "bytes": 10679,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/sources/canon_snapshot/docs/legal/PRELIMINARY_NAME_AND_MARK_SCREEN.md"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/sources/canon_snapshot/docs/organization/ARU_BST_AND_ADVISORY.md",
+    "git_blob_sha": "185aee7323ffe444f36b3aa45c61f488537a314f",
+    "bytes": 3678,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/sources/canon_snapshot/docs/organization/ARU_BST_AND_ADVISORY.md"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/sources/canon_snapshot/red_wash/docs/02_GEOLOGICAL_TECHNICAL_REPORT.md",
+    "git_blob_sha": "87bb725dac7ac75ca37066f2b20a4a2883e67dad",
+    "bytes": 3483,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/sources/canon_snapshot/red_wash/docs/02_GEOLOGICAL_TECHNICAL_REPORT.md"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/sources/canon_snapshot/red_wash/logistics/ARU_BST_INTERFACE_AND_DEPENDENCY_RECORD.md",
+    "git_blob_sha": "c33b54334f8ff039ea32c77033115f5a5e956027",
+    "bytes": 10417,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/sources/canon_snapshot/red_wash/logistics/ARU_BST_INTERFACE_AND_DEPENDENCY_RECORD.md"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/sources/catalog.json",
+    "git_blob_sha": "51685de988f4aa56b5190bf1f9ddf0444b51f7d1",
+    "bytes": 185169,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/sources/catalog.json"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/sources/dem_manifest.json",
+    "git_blob_sha": "a3d29f13862789a3da8eda919063757ac243603e",
+    "bytes": 1567,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/sources/dem_manifest.json"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/sources/external_requests.json",
+    "git_blob_sha": "3d433c0a72b62b73044b3700103010fce2387415",
+    "bytes": 18058,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/sources/external_requests.json"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/sources/rail_candidate_geometry.json",
+    "git_blob_sha": "9c4b1ecb9d338dfe531e7d7634f86bc7870989d9",
+    "bytes": 708290,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/sources/rail_candidate_geometry.json"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/sources/red_wash_county_check.json",
+    "git_blob_sha": "bc2f6be61a40212fc7695624746e0f5323a5cf26",
+    "bytes": 790,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/sources/red_wash_county_check.json"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/sources/reference_manifest.json",
+    "git_blob_sha": "b4d797e314f73c084337a5a85f6129927d0fb1f4",
+    "bytes": 170675,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/sources/reference_manifest.json"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/sources/site_reference/kanawha.png",
+    "git_blob_sha": "20f3914e0e521e877baa7bdbde00152cb1cef5f3",
+    "bytes": 4073887,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/sources/site_reference/kanawha.png"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/sources/site_reference/kanawha_catalog.json",
+    "git_blob_sha": "86ab16153c140280d33d75445626858975c95916",
+    "bytes": 116892,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/sources/site_reference/kanawha_catalog.json"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/sources/site_reference/kanawha_export.json",
+    "git_blob_sha": "d0b41e0f58bb7961c82f1965b63a9740e6cbcd0e",
+    "bytes": 360,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/sources/site_reference/kanawha_export.json"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/sources/site_reference/manifest.json",
+    "git_blob_sha": "49b108a31eba23912739a08e46cf1f76f6729617",
+    "bytes": 3080,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/sources/site_reference/manifest.json"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/sources/site_reference/sacramento.png",
+    "git_blob_sha": "175861aecf96d03fa57e3f55a512caa4d0805c57",
+    "bytes": 2825939,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/sources/site_reference/sacramento.png"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/sources/site_reference/sacramento_catalog.json",
+    "git_blob_sha": "322be6e642f63e03733bc3a0194ef2306bdea5dd",
+    "bytes": 34537,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/sources/site_reference/sacramento_catalog.json"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/sources/site_reference/sacramento_export.json",
+    "git_blob_sha": "07b0ac4b312f0d4d2b7bd809491cfa9724611789",
+    "bytes": 338,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/sources/site_reference/sacramento_export.json"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/sources/wyoming_dem_service.json",
+    "git_blob_sha": "3f67e1c2a4fd2dc907ac00707491a19fe4853086",
+    "bytes": 12981,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/sources/wyoming_dem_service.json"
+  },
+  {
+    "commit": "2849424fd25dd626d1ea2523add65a374f884457",
+    "path": "geospatial/tests/test_geospatial.py",
+    "git_blob_sha": "70b7347fcf27dc97640b23c20d901c2db3e7a866",
+    "bytes": 5954,
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/2849424fd25dd626d1ea2523add65a374f884457/geospatial/tests/test_geospatial.py"
+  }
+]

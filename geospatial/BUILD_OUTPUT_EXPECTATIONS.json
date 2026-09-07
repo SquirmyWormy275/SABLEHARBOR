@@ -1,0 +1,206 @@
+{
+  "version": "0.1.0-rc4",
+  "purpose": "Exact local reviewed output bytes for remote materialization; source tree remains authoritative",
+  "files": [
+    {
+      "path": "geospatial/maps/MAP_MANIFEST.json",
+      "sha256": "e0ec9973a1dc51f768dcfebfa4520b67cd51047a85f88920d0688bbfa613bc9f"
+    },
+    {
+      "path": "geospatial/maps/SABLE_HARBOR_Geographic_Framework_Atlas_v0.1.0-rc4.pdf",
+      "sha256": "d8e890cc584bfdbb8c05ba30ab3d4a6a09fe6ccdb40c693f327bf752a8b503b5"
+    },
+    {
+      "path": "geospatial/maps/SH-MAP-BST-001_bst-pre-acquisition-system.json",
+      "sha256": "a1611012bf811c010c87e090d814f761d2eef45e12cf4334e6f35e5bc0fe9e89"
+    },
+    {
+      "path": "geospatial/maps/SH-MAP-BST-001_bst-pre-acquisition-system.pdf",
+      "sha256": "61d63984c01fa2b37052e4b82e03d8bb87020db510f79673e8c44de8e461428c"
+    },
+    {
+      "path": "geospatial/maps/SH-MAP-BST-001_bst-pre-acquisition-system.png",
+      "sha256": "285bd2f917b6418381ccaba3df0508ef5bc6e6a16def37f2fb4c6029461793cc"
+    },
+    {
+      "path": "geospatial/maps/SH-MAP-BST-001_bst-pre-acquisition-system.svg",
+      "sha256": "f009bd84f2dfceb535794d11fe0f667e753d922c24eb4d81b058baa1b0ccbb27"
+    },
+    {
+      "path": "geospatial/maps/SH-MAP-BST-001_wamsutter-interchange-study.json",
+      "sha256": "7ae5801a729c32fa5ff9a7263d5b38b552ee69585c9e435b994e18aff99b8a80"
+    },
+    {
+      "path": "geospatial/maps/SH-MAP-BST-001_wamsutter-interchange-study.pdf",
+      "sha256": "994412336f42a66d3172f4e090bdde4911f3cbcf60294268d2f9fd469e27433e"
+    },
+    {
+      "path": "geospatial/maps/SH-MAP-BST-001_wamsutter-interchange-study.png",
+      "sha256": "ed3d35bf214d69877afce773d71cb405e78059fc0f3ccd30a5ae0d081d94d29c"
+    },
+    {
+      "path": "geospatial/maps/SH-MAP-BST-001_wamsutter-interchange-study.svg",
+      "sha256": "d44f3fc270ccfdfbea856dca1b27483281ea285e28e8483e20931b6a818a6d8d"
+    },
+    {
+      "path": "geospatial/maps/SH-MAP-BST-002_bst-engineering-alignment.json",
+      "sha256": "c0c3ca4fbdf0aa0ffa261e927382e91b65d8ba67c5ace0cccffcd90d412b6eaa"
+    },
+    {
+      "path": "geospatial/maps/SH-MAP-BST-002_bst-engineering-alignment.pdf",
+      "sha256": "856f00f66089276dcaf23df6665f57bfdf0dd3f06c55b6bcc53ba3a0e38f33f2"
+    },
+    {
+      "path": "geospatial/maps/SH-MAP-BST-002_bst-engineering-alignment.png",
+      "sha256": "acbc90c0fdf12089a161903b35660b5404e7ba2ab4690370cec490cfb5cdefaa"
+    },
+    {
+      "path": "geospatial/maps/SH-MAP-BST-002_bst-engineering-alignment.svg",
+      "sha256": "e5e6b5b0ef5932eaf0c6aa567e68b6007e95958b387eb752ce74b31da449edb7"
+    },
+    {
+      "path": "geospatial/maps/SH-MAP-CRD-001_bedford-fairmont-context.json",
+      "sha256": "5660ff6fd58f6980579ee9cac8769207b6f24c00393d31cde111e5a42881c930"
+    },
+    {
+      "path": "geospatial/maps/SH-MAP-CRD-001_bedford-fairmont-context.pdf",
+      "sha256": "1afb2e0f54676ca8cb485afc498a90b0d02439441ef405aca1124156cc7af70c"
+    },
+    {
+      "path": "geospatial/maps/SH-MAP-CRD-001_bedford-fairmont-context.png",
+      "sha256": "b5364cff696b2f58779523b295a2c2d3bab0644eae01ba4e9a7ad394d7e73632"
+    },
+    {
+      "path": "geospatial/maps/SH-MAP-CRD-001_bedford-fairmont-context.svg",
+      "sha256": "bfd4dec26d872f83b4291b12cf312573d5e770f6c3e10cb623472154acc70472"
+    },
+    {
+      "path": "geospatial/maps/SH-MAP-ENT-001_locked-geographic-framework.json",
+      "sha256": "d3fdee827e1ec9ceb5e1957db678f6c042403c62eff03b1b7b701bc409ea2eca"
+    },
+    {
+      "path": "geospatial/maps/SH-MAP-ENT-001_locked-geographic-framework.pdf",
+      "sha256": "f7e5cb4f3fb04d31182a10206246aaf4b2473e3745c949a19607906d347fbc34"
+    },
+    {
+      "path": "geospatial/maps/SH-MAP-ENT-001_locked-geographic-framework.png",
+      "sha256": "4763ce2705a3f14c9b30b40e31415304a0621cbe7bc5fb15147734721b53f3f3"
+    },
+    {
+      "path": "geospatial/maps/SH-MAP-ENT-001_locked-geographic-framework.svg",
+      "sha256": "05effca77a8d8cb085f56c23063d91fe3ead23cd84eaaea7fce19404f1b5cf93"
+    },
+    {
+      "path": "geospatial/maps/SH-MAP-ENT-002_corporate-geographic-census.json",
+      "sha256": "53e1c7478060295de0523a30fe7981a10d116301a44f0ff74a3779d76e645060"
+    },
+    {
+      "path": "geospatial/maps/SH-MAP-ENT-002_corporate-geographic-census.pdf",
+      "sha256": "5ba3177803f06df500627e1d6a98bba29c8332d5a551b77941af382746a2dcc8"
+    },
+    {
+      "path": "geospatial/maps/SH-MAP-ENT-002_corporate-geographic-census.png",
+      "sha256": "08e354089d27e9bc8e00fdc053b375191464ba903361576e853707b8fcb8f0ae"
+    },
+    {
+      "path": "geospatial/maps/SH-MAP-ENT-002_corporate-geographic-census.svg",
+      "sha256": "a3cc0b0e48f05104dbfe99a2f0800ecbbf4c3d36cab939fe49b8d3cf0af02bf8"
+    },
+    {
+      "path": "geospatial/maps/SH-MAP-ENT-003_open-geographic-questions.json",
+      "sha256": "b41d412af095451b14437ca2670344d0f812fd7e14a1d45d52b985e062bf3a3f"
+    },
+    {
+      "path": "geospatial/maps/SH-MAP-ENT-003_open-geographic-questions.pdf",
+      "sha256": "6dfe1c1665075e5de96bcc99f973d9019d291215f4d7a39ef037d001fb172f17"
+    },
+    {
+      "path": "geospatial/maps/SH-MAP-ENT-003_open-geographic-questions.png",
+      "sha256": "c58d456eaba26d79331ee5096762179abb8f0abbd3a9682d6cfd5624e908462b"
+    },
+    {
+      "path": "geospatial/maps/SH-MAP-ENT-003_open-geographic-questions.svg",
+      "sha256": "05bffbf7a33c6d5594192f215dd9e2e00858be15754fae14d364a2bc0ba834f4"
+    },
+    {
+      "path": "geospatial/maps/SH-MAP-RWM-001_red-wash-context.json",
+      "sha256": "3f10c2bc7e97934e6aeadfe3d8d00d81ccf5afe0b50b39a302750fd8e2bfae77"
+    },
+    {
+      "path": "geospatial/maps/SH-MAP-RWM-001_red-wash-context.pdf",
+      "sha256": "fb76d27036533c25531f94ada5169d6946ebb8b148385629eccc67a3b43f96fa"
+    },
+    {
+      "path": "geospatial/maps/SH-MAP-RWM-001_red-wash-context.png",
+      "sha256": "da8ec7bee77a18b7338271f906ace7dcad5c19ddeb47547490f299ab75be1f3d"
+    },
+    {
+      "path": "geospatial/maps/SH-MAP-RWM-001_red-wash-context.svg",
+      "sha256": "9d90c8bd3aac54bae114a4cf12a059ba1f7f1a16d1b25db19ed0a7ca8b515339"
+    },
+    {
+      "path": "geospatial/maps/SH-MAP-RWM-002_red-wash-site-study.json",
+      "sha256": "27463358c7a57a3b1089eb07bac75c71f6cc2bc59de6417e1415a867b218c101"
+    },
+    {
+      "path": "geospatial/maps/SH-MAP-RWM-002_red-wash-site-study.pdf",
+      "sha256": "de48efb015a6eedc842a10aa7a5b166a89ce70c8b9cb0cf23e12110176b94fad"
+    },
+    {
+      "path": "geospatial/maps/SH-MAP-RWM-002_red-wash-site-study.png",
+      "sha256": "f4934e8908c626bd7731afb41379918613c407f1f5f380be0e338f04e7138bba"
+    },
+    {
+      "path": "geospatial/maps/SH-MAP-RWM-002_red-wash-site-study.svg",
+      "sha256": "53271ee4260c72690ec87c6d60e8dd00dcac8523c12abeb1574f359bda3d9456"
+    },
+    {
+      "path": "geospatial/maps/SH-MAP-SAC-001_headquarters-context.json",
+      "sha256": "78bc9b6aa56aac1f8cc0b04c053f5f786277a463b10b784d988ca4d9afa4fa5c"
+    },
+    {
+      "path": "geospatial/maps/SH-MAP-SAC-001_headquarters-context.pdf",
+      "sha256": "fe11938b1a0d6bfd5c958e6d3c98518af1a6cf5df8d0015aa0aabaec03cd6cb1"
+    },
+    {
+      "path": "geospatial/maps/SH-MAP-SAC-001_headquarters-context.png",
+      "sha256": "5941fad695e10eb4f1d49655db8db326575edc718d7a92572c8c22af1250e289"
+    },
+    {
+      "path": "geospatial/maps/SH-MAP-SAC-001_headquarters-context.svg",
+      "sha256": "30389796b85dbe0da3cbc1424578de9824732f76a7111accf35649d020e9814d"
+    },
+    {
+      "path": "geospatial/maps/SH-MAP-WIL-001_fort-hazelwood-context.json",
+      "sha256": "ed9b087be06c059f2c4d9078140a2f2188874ccff0e29a8703a7d07313aa39d1"
+    },
+    {
+      "path": "geospatial/maps/SH-MAP-WIL-001_fort-hazelwood-context.pdf",
+      "sha256": "f5a1083b6416ee64787c36304c1bd09feda3a6ab1a6cb1d86365a9c7612713ad"
+    },
+    {
+      "path": "geospatial/maps/SH-MAP-WIL-001_fort-hazelwood-context.png",
+      "sha256": "abdd60f0dd84265a1ce824ed44f239702b277d7e56bfc85e6ada19b6219cb52b"
+    },
+    {
+      "path": "geospatial/maps/SH-MAP-WIL-001_fort-hazelwood-context.svg",
+      "sha256": "5384c9c7a59b19939b3f9a6d1285b4d0aab3f0e9878dda128d703dde96becbd8"
+    },
+    {
+      "path": "geospatial/master/sable_harbor_master_v0.1.building.gpkg",
+      "sha256": "aae8ed08a8c740bd43e0a4f9f13f47babc87bea6322a17481b2d9c8b1ab63905"
+    },
+    {
+      "path": "geospatial/master/sable_harbor_master_v0.1.building.gpkg-journal",
+      "sha256": "d8c180a6102f61197b38d0b0fda85e12b1f223e3f26b6c1faf87818490268faa"
+    },
+    {
+      "path": "geospatial/master/sable_harbor_master_v0.1.gpkg",
+      "sha256": "0a1489e6e4605373cf0d25dd6e25a020c8d922ee9ec6c052d9410ad4e2303f0f"
+    },
+    {
+      "path": "geospatial/qgis/sable_harbor_master.qgz",
+      "sha256": "e209070b1fef55c3a3118ec2c906343df98fa5ca2c5431cb1e490b0b882abb57"
+    }
+  ]
+}

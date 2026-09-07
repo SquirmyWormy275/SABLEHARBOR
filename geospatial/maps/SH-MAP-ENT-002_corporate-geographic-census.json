@@ -1,0 +1,35 @@
+{
+  "map_id": "SH-MAP-ENT-002_corporate-geographic-census",
+  "title": "Corporate geographic census",
+  "version": "0.1.0-rc4",
+  "effective_date": "2026-09-07",
+  "world_state": "CANON_RECONCILED_2026-09-07",
+  "canon_status": "CONSTRAINED_CENSUS",
+  "source_package_version": "0.1.0-rc4",
+  "source_commit": "d91a22c35c91b213204411421de88815f27d8e16",
+  "source_geopackage_sha256": "0a1489e6e4605373cf0d25dd6e25a020c8d922ee9ec6c052d9410ad4e2303f0f",
+  "projection": "EPSG:5070",
+  "build_timestamp": "2026-09-07T16:00:00+00:00",
+  "builder": "geospatial/scripts/render_maps.py",
+  "review_status": "RENDERED_PENDING_VISUAL_QA",
+  "layers": [
+    "ref_us_states",
+    "reference_place_labels",
+    "search_areas",
+    "object_registry"
+  ],
+  "files": {
+    "pdf": {
+      "path": "SH-MAP-ENT-002_corporate-geographic-census.pdf",
+      "sha256": "5ba3177803f06df500627e1d6a98bba29c8332d5a551b77941af382746a2dcc8"
+    },
+    "svg": {
+      "path": "SH-MAP-ENT-002_corporate-geographic-census.svg",
+      "sha256": "a3cc0b0e48f05104dbfe99a2f0800ecbbf4c3d36cab939fe49b8d3cf0af02bf8"
+    },
+    "png": {
+      "path": "SH-MAP-ENT-002_corporate-geographic-census.png",
+      "sha256": "08e354089d27e9bc8e00fdc053b375191464ba903361576e853707b8fcb8f0ae"
+    }
+  }
+}

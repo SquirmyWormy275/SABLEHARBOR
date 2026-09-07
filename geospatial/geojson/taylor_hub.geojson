@@ -1,0 +1,42 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "IND-TAYLOR-CURRENT",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -108.1,
+          42.12
+        ]
+      },
+      "properties": {
+        "name": "Taylor industrial hub",
+        "owner": "Blood, Sweat & Tears Railway Company",
+        "feature_id": "IND-TAYLOR-CURRENT",
+        "object_id": "SH-SITE-0007",
+        "canonical_name": "Taylor industrial hub",
+        "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+        "real_world_relation": "SYNTHETIC_CASE_NOT_REAL_PROPERTY",
+        "canon_status": "ENGINEERED",
+        "geometry_status": "LOCKED_DERIVED_IMPLEMENTATION",
+        "location_method": "DERIVED_FROM_ACCEPTED_SOURCE",
+        "precision_class": "CASE_ENGINEERING_NOT_SURVEY",
+        "horizontal_accuracy_m": null,
+        "vertical_accuracy_m": null,
+        "public_precision": "SYNTHETIC_CASE",
+        "source_id": "SRC-CURRENT-OPS",
+        "decision_id": "GEO-D018",
+        "recorded_at": "2026-09-07T16:00:00+00:00",
+        "world_state_date": "2026-09-07",
+        "owner_entity": "SH-ENT-009",
+        "operator_entity": "SH-ENT-009",
+        "valid_from": null,
+        "valid_to": null,
+        "construction_method": "Geo adapter of industrial source; geometry and original attributes retained.",
+        "notes": "Owner/operator identify the current synthetic case, not a timeless real-property right. Source opening date is not automatically the current owner acquisition date."
+      }
+    }
+  ]
+}

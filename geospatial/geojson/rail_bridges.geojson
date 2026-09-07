@@ -1,0 +1,225 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "IND-BR-01",
+      "geometry": {
+        "coordinates": [
+          -108.01201424817681,
+          41.73381486747628
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "catchup_usd": 120000,
+        "condition": "fair; drainage/deck repairs, no replacement crisis",
+        "constructed": 1958,
+        "design_allowance_gross_railcar_lb": 286000,
+        "fact_state": "LOCKED_DERIVED_IMPLEMENTATION",
+        "id": "BR-01",
+        "inspection_date": "2025-10-21",
+        "kind": "rail_bridge",
+        "lon_lat": [
+          -108.01201424817681,
+          41.73381486747628
+        ],
+        "material": "steel girder on concrete abutments",
+        "milepost": 5.2,
+        "provenance": "Synthetic case implementation derived from reconciled handoff and explicit user authority; no external party or surveyed certification claimed",
+        "rating_state": "SYNTHETIC_RATING_ASSUMPTION; not a professional load rating",
+        "restriction": "track class speed subject to inspection",
+        "route_id": "BST-MAIN",
+        "span_m": 24,
+        "waterway": "ephemeral draw A",
+        "feature_id": "IND-BR-01",
+        "object_id": "SH-IND-BR-01",
+        "canonical_name": "BR-01 rail_bridge",
+        "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+        "real_world_relation": "SYNTHETIC_CASE_NOT_REAL_PROPERTY",
+        "canon_status": "ENGINEERED",
+        "geometry_status": "LOCKED_DERIVED_IMPLEMENTATION",
+        "location_method": "DERIVED_FROM_ACCEPTED_SOURCE",
+        "precision_class": "CASE_ENGINEERING_NOT_SURVEY",
+        "horizontal_accuracy_m": null,
+        "vertical_accuracy_m": null,
+        "public_precision": "SYNTHETIC_CASE",
+        "source_id": "SRC-CURRENT-OPS",
+        "decision_id": "GEO-D018",
+        "recorded_at": "2026-09-07T16:00:00+00:00",
+        "world_state_date": "2026-09-07",
+        "owner_entity": "SH-ENT-009",
+        "operator_entity": "SH-ENT-009",
+        "valid_from": null,
+        "valid_to": null,
+        "construction_method": "Geo adapter of industrial source; geometry and original attributes retained.",
+        "notes": "Owner/operator identify the current synthetic case, not a timeless real-property right. Source opening date is not automatically the current owner acquisition date."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "IND-BR-02",
+      "geometry": {
+        "coordinates": [
+          -108.09628603873543,
+          41.90413195697425
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "catchup_usd": 180000,
+        "condition": "fair; drainage/deck repairs, no replacement crisis",
+        "constructed": 1970,
+        "design_allowance_gross_railcar_lb": 286000,
+        "fact_state": "LOCKED_DERIVED_IMPLEMENTATION",
+        "id": "BR-02",
+        "inspection_date": "2025-10-21",
+        "kind": "rail_bridge",
+        "lon_lat": [
+          -108.09628603873543,
+          41.90413195697425
+        ],
+        "material": "timber trestle with steel deck",
+        "milepost": 18.1,
+        "provenance": "Synthetic case implementation derived from reconciled handoff and explicit user authority; no external party or surveyed certification claimed",
+        "rating_state": "SYNTHETIC_RATING_ASSUMPTION; not a professional load rating",
+        "restriction": "10mph at BR-02 until deck repair2026-05-15",
+        "route_id": "BST-MAIN",
+        "span_m": 18,
+        "waterway": "ephemeral draw B",
+        "feature_id": "IND-BR-02",
+        "object_id": "SH-IND-BR-02",
+        "canonical_name": "BR-02 rail_bridge",
+        "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+        "real_world_relation": "SYNTHETIC_CASE_NOT_REAL_PROPERTY",
+        "canon_status": "ENGINEERED",
+        "geometry_status": "LOCKED_DERIVED_IMPLEMENTATION",
+        "location_method": "DERIVED_FROM_ACCEPTED_SOURCE",
+        "precision_class": "CASE_ENGINEERING_NOT_SURVEY",
+        "horizontal_accuracy_m": null,
+        "vertical_accuracy_m": null,
+        "public_precision": "SYNTHETIC_CASE",
+        "source_id": "SRC-CURRENT-OPS",
+        "decision_id": "GEO-D018",
+        "recorded_at": "2026-09-07T16:00:00+00:00",
+        "world_state_date": "2026-09-07",
+        "owner_entity": "SH-ENT-009",
+        "operator_entity": "SH-ENT-009",
+        "valid_from": null,
+        "valid_to": null,
+        "construction_method": "Geo adapter of industrial source; geometry and original attributes retained.",
+        "notes": "Owner/operator identify the current synthetic case, not a timeless real-property right. Source opening date is not automatically the current owner acquisition date."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "IND-BR-03",
+      "geometry": {
+        "coordinates": [
+          -108.11771566813813,
+          42.05176207202351
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "catchup_usd": 130000,
+        "condition": "fair; drainage/deck repairs, no replacement crisis",
+        "constructed": 1981,
+        "design_allowance_gross_railcar_lb": 286000,
+        "fact_state": "LOCKED_DERIVED_IMPLEMENTATION",
+        "id": "BR-03",
+        "inspection_date": "2025-10-21",
+        "kind": "rail_bridge",
+        "lon_lat": [
+          -108.11771566813813,
+          42.05176207202351
+        ],
+        "material": "reinforced concrete slab",
+        "milepost": 28.4,
+        "provenance": "Synthetic case implementation derived from reconciled handoff and explicit user authority; no external party or surveyed certification claimed",
+        "rating_state": "SYNTHETIC_RATING_ASSUMPTION; not a professional load rating",
+        "restriction": "track class speed subject to inspection",
+        "route_id": "BST-MAIN",
+        "span_m": 16,
+        "waterway": "ephemeral draw C",
+        "feature_id": "IND-BR-03",
+        "object_id": "SH-IND-BR-03",
+        "canonical_name": "BR-03 rail_bridge",
+        "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+        "real_world_relation": "SYNTHETIC_CASE_NOT_REAL_PROPERTY",
+        "canon_status": "ENGINEERED",
+        "geometry_status": "LOCKED_DERIVED_IMPLEMENTATION",
+        "location_method": "DERIVED_FROM_ACCEPTED_SOURCE",
+        "precision_class": "CASE_ENGINEERING_NOT_SURVEY",
+        "horizontal_accuracy_m": null,
+        "vertical_accuracy_m": null,
+        "public_precision": "SYNTHETIC_CASE",
+        "source_id": "SRC-CURRENT-OPS",
+        "decision_id": "GEO-D018",
+        "recorded_at": "2026-09-07T16:00:00+00:00",
+        "world_state_date": "2026-09-07",
+        "owner_entity": "SH-ENT-009",
+        "operator_entity": "SH-ENT-009",
+        "valid_from": null,
+        "valid_to": null,
+        "construction_method": "Geo adapter of industrial source; geometry and original attributes retained.",
+        "notes": "Owner/operator identify the current synthetic case, not a timeless real-property right. Source opening date is not automatically the current owner acquisition date."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "IND-BR-04",
+      "geometry": {
+        "coordinates": [
+          -108.02807654658882,
+          41.89072893104462
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "catchup_usd": 70000,
+        "condition": "fair; drainage/deck repairs, no replacement crisis",
+        "constructed": 1972,
+        "design_allowance_gross_railcar_lb": 286000,
+        "fact_state": "LOCKED_DERIVED_IMPLEMENTATION",
+        "id": "BR-04",
+        "inspection_date": "2025-10-21",
+        "kind": "rail_bridge",
+        "lon_lat": [
+          -108.02807654658882,
+          41.89072893104462
+        ],
+        "material": "reinforced concrete box",
+        "milepost": 2.8,
+        "provenance": "Synthetic case implementation derived from reconciled handoff and explicit user authority; no external party or surveyed certification claimed",
+        "rating_state": "SYNTHETIC_RATING_ASSUMPTION; not a professional load rating",
+        "restriction": "track class speed subject to inspection",
+        "route_id": "BST-EAST",
+        "span_m": 12,
+        "waterway": "East Materials drainage",
+        "feature_id": "IND-BR-04",
+        "object_id": "SH-IND-BR-04",
+        "canonical_name": "BR-04 rail_bridge",
+        "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+        "real_world_relation": "SYNTHETIC_CASE_NOT_REAL_PROPERTY",
+        "canon_status": "ENGINEERED",
+        "geometry_status": "LOCKED_DERIVED_IMPLEMENTATION",
+        "location_method": "DERIVED_FROM_ACCEPTED_SOURCE",
+        "precision_class": "CASE_ENGINEERING_NOT_SURVEY",
+        "horizontal_accuracy_m": null,
+        "vertical_accuracy_m": null,
+        "public_precision": "SYNTHETIC_CASE",
+        "source_id": "SRC-CURRENT-OPS",
+        "decision_id": "GEO-D018",
+        "recorded_at": "2026-09-07T16:00:00+00:00",
+        "world_state_date": "2026-09-07",
+        "owner_entity": "SH-ENT-009",
+        "operator_entity": "SH-ENT-009",
+        "valid_from": null,
+        "valid_to": null,
+        "construction_method": "Geo adapter of industrial source; geometry and original attributes retained.",
+        "notes": "Owner/operator identify the current synthetic case, not a timeless real-property right. Source opening date is not automatically the current owner acquisition date."
+      }
+    }
+  ]
+}

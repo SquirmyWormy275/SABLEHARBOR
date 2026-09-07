@@ -1,0 +1,953 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "IND-FAC-WAM-INT",
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -107.96844137286348,
+              41.673795899085135
+            ],
+            [
+              -107.9628129312494,
+              41.673795899085135
+            ],
+            [
+              -107.9628129312494,
+              41.67519725762426
+            ],
+            [
+              -107.96844137286348,
+              41.67519725762426
+            ],
+            [
+              -107.96844137286348,
+              41.673795899085135
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "properties": {
+        "acreage": 18,
+        "annual_external_ton_capacity": 0,
+        "assigned_fte": 6,
+        "car_spots": 60,
+        "case_status": "SYNTHETIC_OPERATING",
+        "condition": "serviceable with identified maintenance backlog",
+        "environmental_controls": "segregated drainage, spillkits, stormwater inspection, protected storage and recorded custody",
+        "fact_state": "LOCKED_DERIVED_IMPLEMENTATION",
+        "footprint_aspect_ratio": 3,
+        "footprint_basis": "Rectangular site envelope derived from stated acreage and declared aspect ratio; not a cadastral boundary or surveyed property.",
+        "geometry_role": "synthetic derived site envelope; not a cadastral parcel",
+        "id": "FAC-WAM-INT",
+        "lon_lat": [
+          -107.96562715205644,
+          41.6744965783547
+        ],
+        "name": "Wamsutter interchange",
+        "opened": "1968-10-14",
+        "operating_hours": "five-day service; dispatch/oncall exceptions; mine continuous receiving by appointment",
+        "owner": "Blood, Sweat & Tears Railway Company",
+        "pallet_slots": 0,
+        "provenance": "Synthetic case implementation derived from reconciled handoff and explicit user authority; no external party or surveyed certification claimed",
+        "services": "Three20car tracks; each accommodates16car roadtrain plus pairedlocomotives; synthetic UP interchange agreement",
+        "track_count": 3,
+        "feature_id": "IND-FAC-WAM-INT",
+        "object_id": "SH-IND-FAC-WAM-INT",
+        "canonical_name": "Wamsutter interchange",
+        "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+        "real_world_relation": "SYNTHETIC_CASE_NOT_REAL_PROPERTY",
+        "canon_status": "ENGINEERED",
+        "geometry_status": "LOCKED_DERIVED_IMPLEMENTATION",
+        "location_method": "DERIVED_FROM_ACCEPTED_SOURCE",
+        "precision_class": "CASE_ENGINEERING_NOT_SURVEY",
+        "horizontal_accuracy_m": null,
+        "vertical_accuracy_m": null,
+        "public_precision": "SYNTHETIC_CASE",
+        "source_id": "SRC-CURRENT-OPS",
+        "decision_id": "GEO-D018",
+        "recorded_at": "2026-09-07T16:00:00+00:00",
+        "world_state_date": "2026-09-07",
+        "owner_entity": "SH-ENT-009",
+        "operator_entity": "SH-ENT-009",
+        "valid_from": null,
+        "valid_to": null,
+        "construction_method": "Geo adapter of industrial source; geometry and original attributes retained.",
+        "notes": "Owner/operator identify the current synthetic case, not a timeless real-property right. Source opening date is not automatically the current owner acquisition date."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "IND-FAC-TAY-YARD",
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -108.10377856173301,
+              42.11906576097392
+            ],
+            [
+              -108.09622143826698,
+              42.11906576097392
+            ],
+            [
+              -108.09622143826698,
+              42.12093423902608
+            ],
+            [
+              -108.10377856173301,
+              42.12093423902608
+            ],
+            [
+              -108.10377856173301,
+              42.11906576097392
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "properties": {
+        "acreage": 32,
+        "annual_external_ton_capacity": 0,
+        "assigned_fte": 46,
+        "car_spots": 100,
+        "case_status": "SYNTHETIC_OPERATING",
+        "condition": "serviceable with identified maintenance backlog",
+        "environmental_controls": "segregated drainage, spillkits, stormwater inspection, protected storage and recorded custody",
+        "fact_state": "LOCKED_DERIVED_IMPLEMENTATION",
+        "footprint_aspect_ratio": 3,
+        "footprint_basis": "Rectangular site envelope derived from stated acreage and declared aspect ratio; not a cadastral boundary or surveyed property.",
+        "geometry_role": "synthetic derived site envelope; not a cadastral parcel",
+        "id": "FAC-TAY-YARD",
+        "lon_lat": [
+          -108.1,
+          42.12
+        ],
+        "name": "Taylor Yard and Shops",
+        "opened": "1968-10-14",
+        "operating_hours": "five-day service; dispatch/oncall exceptions; mine continuous receiving by appointment",
+        "owner": "Blood, Sweat & Tears Railway Company",
+        "pallet_slots": 0,
+        "provenance": "Synthetic case implementation derived from reconciled handoff and explicit user authority; no external party or surveyed certification claimed",
+        "services": "classification, locomotive shop, fuelpoint, dispatch and crew facilities",
+        "track_count": 7,
+        "feature_id": "IND-FAC-TAY-YARD",
+        "object_id": "SH-IND-FAC-TAY-YARD",
+        "canonical_name": "Taylor Yard and Shops",
+        "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+        "real_world_relation": "SYNTHETIC_CASE_NOT_REAL_PROPERTY",
+        "canon_status": "ENGINEERED",
+        "geometry_status": "LOCKED_DERIVED_IMPLEMENTATION",
+        "location_method": "DERIVED_FROM_ACCEPTED_SOURCE",
+        "precision_class": "CASE_ENGINEERING_NOT_SURVEY",
+        "horizontal_accuracy_m": null,
+        "vertical_accuracy_m": null,
+        "public_precision": "SYNTHETIC_CASE",
+        "source_id": "SRC-CURRENT-OPS",
+        "decision_id": "GEO-D018",
+        "recorded_at": "2026-09-07T16:00:00+00:00",
+        "world_state_date": "2026-09-07",
+        "owner_entity": "SH-ENT-009",
+        "operator_entity": "SH-ENT-009",
+        "valid_from": null,
+        "valid_to": null,
+        "construction_method": "Geo adapter of industrial source; geometry and original attributes retained.",
+        "notes": "Owner/operator identify the current synthetic case, not a timeless real-property right. Source opening date is not automatically the current owner acquisition date."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "IND-FAC-TAY-TERMINAL",
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -108.11011563220013,
+              42.11905990695307
+            ],
+            [
+              -108.10488436779987,
+              42.11905990695307
+            ],
+            [
+              -108.10488436779987,
+              42.122940093046935
+            ],
+            [
+              -108.11011563220013,
+              42.122940093046935
+            ],
+            [
+              -108.11011563220013,
+              42.11905990695307
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "properties": {
+        "acreage": 46,
+        "annual_external_ton_capacity": 210000,
+        "assigned_fte": 19,
+        "car_spots": 50,
+        "case_status": "SYNTHETIC_OPERATING",
+        "condition": "serviceable with identified maintenance backlog",
+        "environmental_controls": "segregated drainage, spillkits, stormwater inspection, protected storage and recorded custody",
+        "fact_state": "LOCKED_DERIVED_IMPLEMENTATION",
+        "footprint_aspect_ratio": 1,
+        "footprint_basis": "Rectangular site envelope derived from stated acreage and declared aspect ratio; not a cadastral boundary or surveyed property.",
+        "geometry_role": "synthetic derived site envelope; not a cadastral parcel",
+        "id": "FAC-TAY-TERMINAL",
+        "lon_lat": [
+          -108.1075,
+          42.121
+        ],
+        "name": "Taylor Industrial Transload Complex",
+        "opened": "1972-05-08",
+        "operating_hours": "Mon–Fri06:00–22:00 plus contracted exception service",
+        "owner": "American Resource Utility, Inc.",
+        "pallet_slots": 0,
+        "provenance": "Synthetic case implementation derived from reconciled handoff and explicit user authority; no external party or surveyed certification claimed",
+        "services": "existing general transload and Phase1 two10car tracks plus sixcar liquidtrack; acids segregated from general cargo",
+        "track_count": 5,
+        "feature_id": "IND-FAC-TAY-TERMINAL",
+        "object_id": "SH-IND-FAC-TAY-TERMINAL",
+        "canonical_name": "Taylor Industrial Transload Complex",
+        "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+        "real_world_relation": "SYNTHETIC_CASE_NOT_REAL_PROPERTY",
+        "canon_status": "ENGINEERED",
+        "geometry_status": "LOCKED_DERIVED_IMPLEMENTATION",
+        "location_method": "DERIVED_FROM_ACCEPTED_SOURCE",
+        "precision_class": "CASE_ENGINEERING_NOT_SURVEY",
+        "horizontal_accuracy_m": null,
+        "vertical_accuracy_m": null,
+        "public_precision": "SYNTHETIC_CASE",
+        "source_id": "SRC-CURRENT-OPS",
+        "decision_id": "GEO-D018",
+        "recorded_at": "2026-09-07T16:00:00+00:00",
+        "world_state_date": "2026-09-07",
+        "owner_entity": "SH-ENT-008",
+        "operator_entity": "SH-ENT-008",
+        "valid_from": null,
+        "valid_to": null,
+        "construction_method": "Geo adapter of industrial source; geometry and original attributes retained.",
+        "notes": "Owner/operator identify the current synthetic case, not a timeless real-property right. Source opening date is not automatically the current owner acquisition date."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "IND-FAC-TAY-WAREHOUSE",
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -108.10663629434602,
+              42.123786387905305
+            ],
+            [
+              -108.10336370565399,
+              42.123786387905305
+            ],
+            [
+              -108.10336370565399,
+              42.126213612094695
+            ],
+            [
+              -108.10663629434602,
+              42.126213612094695
+            ],
+            [
+              -108.10663629434602,
+              42.123786387905305
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "properties": {
+        "acreage": 18,
+        "annual_external_ton_capacity": 0,
+        "assigned_fte": 8,
+        "car_spots": 8,
+        "case_status": "SYNTHETIC_OPERATING",
+        "condition": "serviceable with identified maintenance backlog",
+        "environmental_controls": "segregated drainage, spillkits, stormwater inspection, protected storage and recorded custody",
+        "fact_state": "LOCKED_DERIVED_IMPLEMENTATION",
+        "footprint_aspect_ratio": 1,
+        "footprint_basis": "Rectangular site envelope derived from stated acreage and declared aspect ratio; not a cadastral boundary or surveyed property.",
+        "geometry_role": "synthetic derived site envelope; not a cadastral parcel",
+        "id": "FAC-TAY-WAREHOUSE",
+        "lon_lat": [
+          -108.105,
+          42.125
+        ],
+        "name": "Taylor warehouse",
+        "opened": "1974-06-03",
+        "operating_hours": "Mon–Fri06:00–22:00 plus contracted exception service",
+        "owner": "American Resource Utility, Inc.",
+        "pallet_slots": 11000,
+        "provenance": "Synthetic case implementation derived from reconciled handoff and explicit user authority; no external party or surveyed certification claimed",
+        "services": "210000sf reserved palletcapacity; three handling shifts; rail/truck interface",
+        "track_count": 1,
+        "feature_id": "IND-FAC-TAY-WAREHOUSE",
+        "object_id": "SH-IND-FAC-TAY-WAREHOUSE",
+        "canonical_name": "Taylor warehouse",
+        "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+        "real_world_relation": "SYNTHETIC_CASE_NOT_REAL_PROPERTY",
+        "canon_status": "ENGINEERED",
+        "geometry_status": "LOCKED_DERIVED_IMPLEMENTATION",
+        "location_method": "DERIVED_FROM_ACCEPTED_SOURCE",
+        "precision_class": "CASE_ENGINEERING_NOT_SURVEY",
+        "horizontal_accuracy_m": null,
+        "vertical_accuracy_m": null,
+        "public_precision": "SYNTHETIC_CASE",
+        "source_id": "SRC-CURRENT-OPS",
+        "decision_id": "GEO-D018",
+        "recorded_at": "2026-09-07T16:00:00+00:00",
+        "world_state_date": "2026-09-07",
+        "owner_entity": "SH-ENT-008",
+        "operator_entity": "SH-ENT-008",
+        "valid_from": null,
+        "valid_to": null,
+        "construction_method": "Geo adapter of industrial source; geometry and original attributes retained.",
+        "notes": "Owner/operator identify the current synthetic case, not a timeless real-property right. Source opening date is not automatically the current owner acquisition date."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "IND-FAC-TAY-TRUCK",
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -108.09409077681686,
+              42.1191909252702
+            ],
+            [
+              -108.09190922318315,
+              42.1191909252702
+            ],
+            [
+              -108.09190922318315,
+              42.12080907472979
+            ],
+            [
+              -108.09409077681686,
+              42.12080907472979
+            ],
+            [
+              -108.09409077681686,
+              42.1191909252702
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "properties": {
+        "acreage": 8,
+        "annual_external_ton_capacity": 0,
+        "assigned_fte": 20,
+        "car_spots": 0,
+        "case_status": "SYNTHETIC_OPERATING",
+        "condition": "serviceable with identified maintenance backlog",
+        "environmental_controls": "segregated drainage, spillkits, stormwater inspection, protected storage and recorded custody",
+        "fact_state": "LOCKED_DERIVED_IMPLEMENTATION",
+        "footprint_aspect_ratio": 1,
+        "footprint_basis": "Rectangular site envelope derived from stated acreage and declared aspect ratio; not a cadastral boundary or surveyed property.",
+        "geometry_role": "synthetic derived site envelope; not a cadastral parcel",
+        "id": "FAC-TAY-TRUCK",
+        "lon_lat": [
+          -108.093,
+          42.12
+        ],
+        "name": "Taylor trucking depot",
+        "opened": "1989-10-02",
+        "operating_hours": "Mon–Fri06:00–22:00 plus contracted exception service",
+        "owner": "American Resource Utility, Inc.",
+        "pallet_slots": 0,
+        "provenance": "Synthetic case implementation derived from reconciled handoff and explicit user authority; no external party or surveyed certification claimed",
+        "services": "tractor/trailer parking, inspection bays and dispatch",
+        "track_count": 0,
+        "feature_id": "IND-FAC-TAY-TRUCK",
+        "object_id": "SH-IND-FAC-TAY-TRUCK",
+        "canonical_name": "Taylor trucking depot",
+        "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+        "real_world_relation": "SYNTHETIC_CASE_NOT_REAL_PROPERTY",
+        "canon_status": "ENGINEERED",
+        "geometry_status": "LOCKED_DERIVED_IMPLEMENTATION",
+        "location_method": "DERIVED_FROM_ACCEPTED_SOURCE",
+        "precision_class": "CASE_ENGINEERING_NOT_SURVEY",
+        "horizontal_accuracy_m": null,
+        "vertical_accuracy_m": null,
+        "public_precision": "SYNTHETIC_CASE",
+        "source_id": "SRC-CURRENT-OPS",
+        "decision_id": "GEO-D018",
+        "recorded_at": "2026-09-07T16:00:00+00:00",
+        "world_state_date": "2026-09-07",
+        "owner_entity": "SH-ENT-008",
+        "operator_entity": "SH-ENT-008",
+        "valid_from": null,
+        "valid_to": null,
+        "construction_method": "Geo adapter of industrial source; geometry and original attributes retained.",
+        "notes": "Owner/operator identify the current synthetic case, not a timeless real-property right. Source opening date is not automatically the current owner acquisition date."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "IND-FAC-EAST-MATERIALS",
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -108.01459073882835,
+              41.903212306421466
+            ],
+            [
+              -108.01059657399828,
+              41.903212306421466
+            ],
+            [
+              -108.01059657399828,
+              41.90420321654736
+            ],
+            [
+              -108.01459073882835,
+              41.90420321654736
+            ],
+            [
+              -108.01459073882835,
+              41.903212306421466
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "properties": {
+        "acreage": 9,
+        "annual_external_ton_capacity": 0,
+        "assigned_fte": 3,
+        "car_spots": 20,
+        "case_status": "SYNTHETIC_OPERATING",
+        "condition": "serviceable with identified maintenance backlog",
+        "environmental_controls": "segregated drainage, spillkits, stormwater inspection, protected storage and recorded custody",
+        "fact_state": "LOCKED_DERIVED_IMPLEMENTATION",
+        "footprint_aspect_ratio": 3,
+        "footprint_basis": "Rectangular site envelope derived from stated acreage and declared aspect ratio; not a cadastral boundary or surveyed property.",
+        "geometry_role": "synthetic derived site envelope; not a cadastral parcel",
+        "id": "FAC-EAST-MATERIALS",
+        "lon_lat": [
+          -108.01259365641332,
+          41.90370776148441
+        ],
+        "name": "East Materials team track",
+        "opened": "1972-05-08",
+        "operating_hours": "five-day service; dispatch/oncall exceptions; mine continuous receiving by appointment",
+        "owner": "Blood, Sweat & Tears Railway Company",
+        "pallet_slots": 0,
+        "provenance": "Synthetic case implementation derived from reconciled handoff and explicit user authority; no external party or surveyed certification claimed",
+        "services": "pipe, scrap, aggregates; customer sidings operate by appointment",
+        "track_count": 2,
+        "feature_id": "IND-FAC-EAST-MATERIALS",
+        "object_id": "SH-IND-FAC-EAST-MATERIALS",
+        "canonical_name": "East Materials team track",
+        "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+        "real_world_relation": "SYNTHETIC_CASE_NOT_REAL_PROPERTY",
+        "canon_status": "ENGINEERED",
+        "geometry_status": "LOCKED_DERIVED_IMPLEMENTATION",
+        "location_method": "DERIVED_FROM_ACCEPTED_SOURCE",
+        "precision_class": "CASE_ENGINEERING_NOT_SURVEY",
+        "horizontal_accuracy_m": null,
+        "vertical_accuracy_m": null,
+        "public_precision": "SYNTHETIC_CASE",
+        "source_id": "SRC-CURRENT-OPS",
+        "decision_id": "GEO-D018",
+        "recorded_at": "2026-09-07T16:00:00+00:00",
+        "world_state_date": "2026-09-07",
+        "owner_entity": "SH-ENT-009",
+        "operator_entity": "SH-ENT-009",
+        "valid_from": null,
+        "valid_to": null,
+        "construction_method": "Geo adapter of industrial source; geometry and original attributes retained.",
+        "notes": "Owner/operator identify the current synthetic case, not a timeless real-property right. Source opening date is not automatically the current owner acquisition date."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "IND-FAC-MINERAL-TEAM",
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -108.07319901622013,
+              42.03440924694183
+            ],
+            [
+              -108.06877419348636,
+              42.03440924694183
+            ],
+            [
+              -108.06877419348636,
+              42.03550473930468
+            ],
+            [
+              -108.07319901622013,
+              42.03550473930468
+            ],
+            [
+              -108.07319901622013,
+              42.03440924694183
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "properties": {
+        "acreage": 11,
+        "annual_external_ton_capacity": 0,
+        "assigned_fte": 3,
+        "car_spots": 18,
+        "case_status": "SYNTHETIC_OPERATING",
+        "condition": "serviceable with identified maintenance backlog",
+        "environmental_controls": "segregated drainage, spillkits, stormwater inspection, protected storage and recorded custody",
+        "fact_state": "LOCKED_DERIVED_IMPLEMENTATION",
+        "footprint_aspect_ratio": 3,
+        "footprint_basis": "Rectangular site envelope derived from stated acreage and declared aspect ratio; not a cadastral boundary or surveyed property.",
+        "geometry_role": "synthetic derived site envelope; not a cadastral parcel",
+        "id": "FAC-MINERAL-TEAM",
+        "lon_lat": [
+          -108.07098660485325,
+          42.03495699312325
+        ],
+        "name": "Mineral Transfer team track",
+        "opened": "1986-09-19",
+        "operating_hours": "five-day service; dispatch/oncall exceptions; mine continuous receiving by appointment",
+        "owner": "Blood, Sweat & Tears Railway Company",
+        "pallet_slots": 0,
+        "provenance": "Synthetic case implementation derived from reconciled handoff and explicit user authority; no external party or surveyed certification claimed",
+        "services": "inbound and outbound minerals transfer; sodaash is customer throughput, not a claim of a local trona mine",
+        "track_count": 2,
+        "feature_id": "IND-FAC-MINERAL-TEAM",
+        "object_id": "SH-IND-FAC-MINERAL-TEAM",
+        "canonical_name": "Mineral Transfer team track",
+        "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+        "real_world_relation": "SYNTHETIC_CASE_NOT_REAL_PROPERTY",
+        "canon_status": "ENGINEERED",
+        "geometry_status": "LOCKED_DERIVED_IMPLEMENTATION",
+        "location_method": "DERIVED_FROM_ACCEPTED_SOURCE",
+        "precision_class": "CASE_ENGINEERING_NOT_SURVEY",
+        "horizontal_accuracy_m": null,
+        "vertical_accuracy_m": null,
+        "public_precision": "SYNTHETIC_CASE",
+        "source_id": "SRC-CURRENT-OPS",
+        "decision_id": "GEO-D018",
+        "recorded_at": "2026-09-07T16:00:00+00:00",
+        "world_state_date": "2026-09-07",
+        "owner_entity": "SH-ENT-009",
+        "operator_entity": "SH-ENT-009",
+        "valid_from": null,
+        "valid_to": null,
+        "construction_method": "Geo adapter of industrial source; geometry and original attributes retained.",
+        "notes": "Owner/operator identify the current synthetic case, not a timeless real-property right. Source opening date is not automatically the current owner acquisition date."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "IND-FAC-RAW-TERMINAL",
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -107.23479939479734,
+              41.78465830134696
+            ],
+            [
+              -107.23120060520267,
+              41.78465830134696
+            ],
+            [
+              -107.23120060520267,
+              41.787341698653044
+            ],
+            [
+              -107.23479939479734,
+              41.787341698653044
+            ],
+            [
+              -107.23479939479734,
+              41.78465830134696
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "properties": {
+        "acreage": 22,
+        "annual_external_ton_capacity": 90000,
+        "assigned_fte": 8,
+        "car_spots": 0,
+        "case_status": "SYNTHETIC_OPERATING",
+        "condition": "serviceable with identified maintenance backlog",
+        "environmental_controls": "segregated drainage, spillkits, stormwater inspection, protected storage and recorded custody",
+        "fact_state": "LOCKED_DERIVED_IMPLEMENTATION",
+        "footprint_aspect_ratio": 1,
+        "footprint_basis": "Rectangular site envelope derived from stated acreage and declared aspect ratio; not a cadastral boundary or surveyed property.",
+        "geometry_role": "synthetic derived site envelope; not a cadastral parcel",
+        "id": "FAC-RAW-TERMINAL",
+        "lon_lat": [
+          -107.233,
+          41.786
+        ],
+        "name": "Rawlins satellite terminal",
+        "opened": "1978-09-12",
+        "operating_hours": "Mon–Fri06:00–22:00 plus contracted exception service",
+        "owner": "American Resource Utility, Inc.",
+        "pallet_slots": 0,
+        "provenance": "Synthetic case implementation derived from reconciled handoff and explicit user authority; no external party or surveyed certification claimed",
+        "services": "off-BS&T truck-served terminal; external railcar material arrives through qualified third-party transload",
+        "track_count": 0,
+        "feature_id": "IND-FAC-RAW-TERMINAL",
+        "object_id": "SH-IND-FAC-RAW-TERMINAL",
+        "canonical_name": "Rawlins satellite terminal",
+        "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+        "real_world_relation": "SYNTHETIC_CASE_NOT_REAL_PROPERTY",
+        "canon_status": "ENGINEERED",
+        "geometry_status": "LOCKED_DERIVED_IMPLEMENTATION",
+        "location_method": "DERIVED_FROM_ACCEPTED_SOURCE",
+        "precision_class": "CASE_ENGINEERING_NOT_SURVEY",
+        "horizontal_accuracy_m": null,
+        "vertical_accuracy_m": null,
+        "public_precision": "SYNTHETIC_CASE",
+        "source_id": "SRC-CURRENT-OPS",
+        "decision_id": "GEO-D018",
+        "recorded_at": "2026-09-07T16:00:00+00:00",
+        "world_state_date": "2026-09-07",
+        "owner_entity": "SH-ENT-008",
+        "operator_entity": "SH-ENT-008",
+        "valid_from": null,
+        "valid_to": null,
+        "construction_method": "Geo adapter of industrial source; geometry and original attributes retained.",
+        "notes": "Owner/operator identify the current synthetic case, not a timeless real-property right. Source opening date is not automatically the current owner acquisition date."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "IND-FAC-RAW-WAREHOUSE",
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -107.22901504305173,
+              41.7882431798902
+            ],
+            [
+              -107.22698495694826,
+              41.7882431798902
+            ],
+            [
+              -107.22698495694826,
+              41.7897568201098
+            ],
+            [
+              -107.22901504305173,
+              41.7897568201098
+            ],
+            [
+              -107.22901504305173,
+              41.7882431798902
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "properties": {
+        "acreage": 7,
+        "annual_external_ton_capacity": 0,
+        "assigned_fte": 4,
+        "car_spots": 0,
+        "case_status": "SYNTHETIC_OPERATING",
+        "condition": "serviceable with identified maintenance backlog",
+        "environmental_controls": "segregated drainage, spillkits, stormwater inspection, protected storage and recorded custody",
+        "fact_state": "LOCKED_DERIVED_IMPLEMENTATION",
+        "footprint_aspect_ratio": 1,
+        "footprint_basis": "Rectangular site envelope derived from stated acreage and declared aspect ratio; not a cadastral boundary or surveyed property.",
+        "geometry_role": "synthetic derived site envelope; not a cadastral parcel",
+        "id": "FAC-RAW-WAREHOUSE",
+        "lon_lat": [
+          -107.228,
+          41.789
+        ],
+        "name": "Rawlins warehouse",
+        "opened": "1980-04-07",
+        "operating_hours": "Mon–Fri06:00–22:00 plus contracted exception service",
+        "owner": "American Resource Utility, Inc.",
+        "pallet_slots": 4000,
+        "provenance": "Synthetic case implementation derived from reconciled handoff and explicit user authority; no external party or surveyed certification claimed",
+        "services": "75000sf satellite contract storage and orderpick",
+        "track_count": 0,
+        "feature_id": "IND-FAC-RAW-WAREHOUSE",
+        "object_id": "SH-IND-FAC-RAW-WAREHOUSE",
+        "canonical_name": "Rawlins warehouse",
+        "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+        "real_world_relation": "SYNTHETIC_CASE_NOT_REAL_PROPERTY",
+        "canon_status": "ENGINEERED",
+        "geometry_status": "LOCKED_DERIVED_IMPLEMENTATION",
+        "location_method": "DERIVED_FROM_ACCEPTED_SOURCE",
+        "precision_class": "CASE_ENGINEERING_NOT_SURVEY",
+        "horizontal_accuracy_m": null,
+        "vertical_accuracy_m": null,
+        "public_precision": "SYNTHETIC_CASE",
+        "source_id": "SRC-CURRENT-OPS",
+        "decision_id": "GEO-D018",
+        "recorded_at": "2026-09-07T16:00:00+00:00",
+        "world_state_date": "2026-09-07",
+        "owner_entity": "SH-ENT-008",
+        "operator_entity": "SH-ENT-008",
+        "valid_from": null,
+        "valid_to": null,
+        "construction_method": "Geo adapter of industrial source; geometry and original attributes retained.",
+        "notes": "Owner/operator identify the current synthetic case, not a timeless real-property right. Source opening date is not automatically the current owner acquisition date."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "IND-FAC-RAW-TRUCK",
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -107.2347672166552,
+              41.78142789777207
+            ],
+            [
+              -107.23323278334479,
+              41.78142789777207
+            ],
+            [
+              -107.23323278334479,
+              41.782572102227924
+            ],
+            [
+              -107.2347672166552,
+              41.782572102227924
+            ],
+            [
+              -107.2347672166552,
+              41.78142789777207
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "properties": {
+        "acreage": 4,
+        "annual_external_ton_capacity": 0,
+        "assigned_fte": 4,
+        "car_spots": 0,
+        "case_status": "SYNTHETIC_OPERATING",
+        "condition": "serviceable with identified maintenance backlog",
+        "environmental_controls": "segregated drainage, spillkits, stormwater inspection, protected storage and recorded custody",
+        "fact_state": "LOCKED_DERIVED_IMPLEMENTATION",
+        "footprint_aspect_ratio": 1,
+        "footprint_basis": "Rectangular site envelope derived from stated acreage and declared aspect ratio; not a cadastral boundary or surveyed property.",
+        "geometry_role": "synthetic derived site envelope; not a cadastral parcel",
+        "id": "FAC-RAW-TRUCK",
+        "lon_lat": [
+          -107.234,
+          41.782
+        ],
+        "name": "Rawlins trucking satellite",
+        "opened": "1989-10-02",
+        "operating_hours": "Mon–Fri06:00–22:00 plus contracted exception service",
+        "owner": "American Resource Utility, Inc.",
+        "pallet_slots": 0,
+        "provenance": "Synthetic case implementation derived from reconciled handoff and explicit user authority; no external party or surveyed certification claimed",
+        "services": "external heavyhaul staging",
+        "track_count": 0,
+        "feature_id": "IND-FAC-RAW-TRUCK",
+        "object_id": "SH-IND-FAC-RAW-TRUCK",
+        "canonical_name": "Rawlins trucking satellite",
+        "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+        "real_world_relation": "SYNTHETIC_CASE_NOT_REAL_PROPERTY",
+        "canon_status": "ENGINEERED",
+        "geometry_status": "LOCKED_DERIVED_IMPLEMENTATION",
+        "location_method": "DERIVED_FROM_ACCEPTED_SOURCE",
+        "precision_class": "CASE_ENGINEERING_NOT_SURVEY",
+        "horizontal_accuracy_m": null,
+        "vertical_accuracy_m": null,
+        "public_precision": "SYNTHETIC_CASE",
+        "source_id": "SRC-CURRENT-OPS",
+        "decision_id": "GEO-D018",
+        "recorded_at": "2026-09-07T16:00:00+00:00",
+        "world_state_date": "2026-09-07",
+        "owner_entity": "SH-ENT-008",
+        "operator_entity": "SH-ENT-008",
+        "valid_from": null,
+        "valid_to": null,
+        "construction_method": "Geo adapter of industrial source; geometry and original attributes retained.",
+        "notes": "Owner/operator identify the current synthetic case, not a timeless real-property right. Source opening date is not automatically the current owner acquisition date."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "IND-FAC-ARU-OFFICE",
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -108.09804542283975,
+              42.1235954626351
+            ],
+            [
+              -108.09695457716025,
+              42.1235954626351
+            ],
+            [
+              -108.09695457716025,
+              42.1244045373649
+            ],
+            [
+              -108.09804542283975,
+              42.1244045373649
+            ],
+            [
+              -108.09804542283975,
+              42.1235954626351
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "properties": {
+        "acreage": 2,
+        "annual_external_ton_capacity": 0,
+        "assigned_fte": 10,
+        "car_spots": 0,
+        "case_status": "SYNTHETIC_OPERATING",
+        "condition": "serviceable with identified maintenance backlog",
+        "environmental_controls": "segregated drainage, spillkits, stormwater inspection, protected storage and recorded custody",
+        "fact_state": "LOCKED_DERIVED_IMPLEMENTATION",
+        "footprint_aspect_ratio": 1,
+        "footprint_basis": "Rectangular site envelope derived from stated acreage and declared aspect ratio; not a cadastral boundary or surveyed property.",
+        "geometry_role": "synthetic derived site envelope; not a cadastral parcel",
+        "id": "FAC-ARU-OFFICE",
+        "lon_lat": [
+          -108.0975,
+          42.124
+        ],
+        "name": "Taylor ARU office",
+        "opened": "1991-01-02",
+        "operating_hours": "Mon–Fri06:00–22:00 plus contracted exception service",
+        "owner": "American Resource Utility, Inc.",
+        "pallet_slots": 0,
+        "provenance": "Synthetic case implementation derived from reconciled handoff and explicit user authority; no external party or surveyed certification claimed",
+        "services": "corporate shared services and customerdesk",
+        "track_count": 0,
+        "feature_id": "IND-FAC-ARU-OFFICE",
+        "object_id": "SH-IND-FAC-ARU-OFFICE",
+        "canonical_name": "Taylor ARU office",
+        "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+        "real_world_relation": "SYNTHETIC_CASE_NOT_REAL_PROPERTY",
+        "canon_status": "ENGINEERED",
+        "geometry_status": "LOCKED_DERIVED_IMPLEMENTATION",
+        "location_method": "DERIVED_FROM_ACCEPTED_SOURCE",
+        "precision_class": "CASE_ENGINEERING_NOT_SURVEY",
+        "horizontal_accuracy_m": null,
+        "vertical_accuracy_m": null,
+        "public_precision": "SYNTHETIC_CASE",
+        "source_id": "SRC-CURRENT-OPS",
+        "decision_id": "GEO-D018",
+        "recorded_at": "2026-09-07T16:00:00+00:00",
+        "world_state_date": "2026-09-07",
+        "owner_entity": "SH-ENT-008",
+        "operator_entity": "SH-ENT-008",
+        "valid_from": null,
+        "valid_to": null,
+        "construction_method": "Geo adapter of industrial source; geometry and original attributes retained.",
+        "notes": "Owner/operator identify the current synthetic case, not a timeless real-property right. Source opening date is not automatically the current owner acquisition date."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "IND-FAC-RW-RECEIVING",
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -108.18144524508565,
+              42.218929694736445
+            ],
+            [
+              -108.17855475491436,
+              42.218929694736445
+            ],
+            [
+              -108.17855475491436,
+              42.22107030526355
+            ],
+            [
+              -108.18144524508565,
+              42.22107030526355
+            ],
+            [
+              -108.18144524508565,
+              42.218929694736445
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "properties": {
+        "acreage": 14,
+        "annual_external_ton_capacity": 0,
+        "assigned_fte": 6,
+        "car_spots": 0,
+        "case_status": "SYNTHETIC_IN_SERVICE_2026_07_07",
+        "condition": "serviceable with identified maintenance backlog",
+        "environmental_controls": "segregated drainage, spillkits, stormwater inspection, protected storage and recorded custody",
+        "fact_state": "LOCKED_DERIVED_IMPLEMENTATION",
+        "footprint_aspect_ratio": 1,
+        "footprint_basis": "Rectangular site envelope derived from stated acreage and declared aspect ratio; not a cadastral boundary or surveyed property.",
+        "geometry_role": "synthetic derived site envelope; not a cadastral parcel",
+        "id": "FAC-RW-RECEIVING",
+        "lon_lat": [
+          -108.18,
+          42.22
+        ],
+        "name": "Red Wash receiving and reagent storage",
+        "opened": "2026-07-07",
+        "operating_hours": "five-day service; dispatch/oncall exceptions; mine continuous receiving by appointment",
+        "owner": "Red Wash Mining, LLC",
+        "pallet_slots": 0,
+        "provenance": "Synthetic case implementation derived from reconciled handoff and explicit user authority; no external party or surveyed certification claimed",
+        "services": "truck only; receiving, acid/binderstorage, scales, MRO and steel; workers are within128siteFTE",
+        "track_count": 0,
+        "feature_id": "IND-FAC-RW-RECEIVING",
+        "object_id": "SH-IND-FAC-RW-RECEIVING",
+        "canonical_name": "Red Wash receiving and reagent storage",
+        "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+        "real_world_relation": "SYNTHETIC_CASE_NOT_REAL_PROPERTY",
+        "canon_status": "ENGINEERED",
+        "geometry_status": "LOCKED_DERIVED_IMPLEMENTATION",
+        "location_method": "DERIVED_FROM_ACCEPTED_SOURCE",
+        "precision_class": "CASE_ENGINEERING_NOT_SURVEY",
+        "horizontal_accuracy_m": null,
+        "vertical_accuracy_m": null,
+        "public_precision": "SYNTHETIC_CASE",
+        "source_id": "SRC-CURRENT-OPS",
+        "decision_id": "GEO-D018",
+        "recorded_at": "2026-09-07T16:00:00+00:00",
+        "world_state_date": "2026-09-07",
+        "owner_entity": "SH-ENT-007",
+        "operator_entity": "SH-ENT-007",
+        "valid_from": null,
+        "valid_to": null,
+        "construction_method": "Geo adapter of industrial source; geometry and original attributes retained.",
+        "notes": "Owner/operator identify the current synthetic case, not a timeless real-property right. Source opening date is not automatically the current owner acquisition date."
+      }
+    }
+  ]
+}

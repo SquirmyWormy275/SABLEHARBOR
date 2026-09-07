@@ -44,3 +44,19 @@ The following historical heads are candidates for deletion after ancestry/unique
 ## Current capability constraint
 
 The connected GitHub interface used for this cleanup can inspect and move branch refs but does not expose branch-reference deletion. Therefore destructive branch retirement remains an administrative/local-Git action. This is a tooling limitation, not a reason to treat stale branches as active work.
+
+## Geo reconciliation — September 7, 2026
+
+The rc4 successor, PR #105 on `geo/canon-reconciliation-2026-09-07`, reconciles accepted
+Cradle/Bedford, Klein/Fort and industrial geography without merging stale canon.
+PRs #94 and #96 are superseded **after the successor lands**; preserve both heads.
+Their complete Geo path/blob inventories, including historical ZIPs, are in
+[`geospatial/history/PR_SOURCE_INVENTORY.json`](../../geospatial/history/PR_SOURCE_INVENTORY.json).
+
+No standalone open Geo issue was found in the live issue inventory. Unrelated
+enterprise issues remain outside this closeout. Remaining Geo work is explicitly
+listed in the [50-section program disposition](../../geospatial/docs/PROGRAM_CLOSEOUT_MATRIX.md);
+framework acceptance does not close the entire original program.
+
+Remaining Geo work is tracked as #106 (sites/occupancy), #107 (early railway and
+detailed engineering), and #108 (semantic census and temporal program).

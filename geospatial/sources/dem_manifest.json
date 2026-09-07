@@ -1,0 +1,43 @@
+{
+  "source_id": "DEM-USGS-WYOMING",
+  "title": "USGS 3DEP Wyoming screening DEM",
+  "authority": "USGS 3DEP",
+  "request_url": "https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer/exportImage?bbox=-108.38%2C41.62%2C-107.82%2C42.30&bboxSR=4326&imageSR=26913&size=700%2C1100&format=tiff&pixelType=F32&interpolation=RSP_BilinearInterpolation&renderingRule=%7B%22rasterFunction%22%3A+%22None%22%7D&f=image",
+  "service_metadata_url": "https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer?f=pjson",
+  "file": "reference/wyoming_screening_dem.tif",
+  "sha256": "0ea3719bb01c73e6e4ccaf1c21defa609a945ae7342ce58409479f574ba19b96",
+  "metadata_sha256": "a300a739a6e47627d1cd6921fca368004d88a8ac62d6d32c64571c669e4349bb",
+  "accessed_date": "2026-09-06",
+  "license": "USGS public domain",
+  "license_url": "https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits",
+  "purpose": "Resampled preliminary terrain comparison, not surveyed rail grades",
+  "raster": {
+    "width": 700,
+    "height": 1100,
+    "crs": "EPSG:26913",
+    "transform": [
+      70.21109393542558,
+      0.0,
+      218398.62534596218,
+      0.0,
+      -70.21109393542548,
+      4688639.620386049,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "resolution": [
+      70.21109393542558,
+      70.21109393542548
+    ],
+    "bounds": [
+      218398.62534596218,
+      4611407.417057081,
+      267546.3911007601,
+      4688639.620386049
+    ],
+    "nodata": null,
+    "min": 1973.4420166015625,
+    "max": 2290.337646484375
+  }
+}

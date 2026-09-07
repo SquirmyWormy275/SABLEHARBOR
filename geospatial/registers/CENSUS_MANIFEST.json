@@ -1,0 +1,21 @@
+{
+  "source_commit": "d91a22c35c91b213204411421de88815f27d8e16",
+  "tracked_files": 919,
+  "candidate_occurrences": 78145,
+  "extraction_methods": {
+    "TEXT_SCANNED": 624,
+    "PDF_TEXT_EXTRACTED_VISUAL_REVIEW_SEPARATE": 99,
+    "OFFICE_XML_EXTRACTED": 8,
+    "IMAGE_REGISTERED_OCR_DEFERRED": 97,
+    "JSON_STRINGS_EXTRACTED": 86,
+    "ARCHIVE_EXTRACTED:IMAGE_REGISTERED_OCR_DEFERRED;JSON_STRINGS_EXTRACTED;PDF_TEXT_EXTRACTED_VISUAL_REVIEW_SEPARATE;TEXT_SCANNED": 1,
+    "SQLITE_TEXT_EXTRACTED": 2,
+    "ARCHIVE_EXTRACTED:IMAGE_REGISTERED_OCR_DEFERRED;JSON_STRINGS_EXTRACTED;OFFICE_XML_EXTRACTED;PDF_TEXT_EXTRACTED_VISUAL_REVIEW_SEPARATE;TEXT_SCANNED": 1,
+    "UNSUPPORTED_BINARY_REGISTERED": 1
+  },
+  "errors": [],
+  "semantic_census_complete": false,
+  "scope": "Entire pinned main tree; text, Office XML, PDF text, SQLite and ZIP contents extracted. Raster extraction status is explicit per file; no blanket visual-review claim.",
+  "ocr_enabled": false,
+  "canon_promotion": "None. Adjudicated objects live in GEOGRAPHIC_CENSUS_v0.1.csv."
+}

@@ -1,0 +1,41 @@
+name: Geospatial canon and geometry
+on:
+  pull_request:
+    paths: ['geospatial/**', 'industrial/source/**', 'industrial/tools/build_operations.py', '.github/workflows/geospatial-ci.yml']
+  push:
+    branches: [main]
+    paths: ['geospatial/**', 'industrial/source/**']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r geospatial/requirements.txt ruff
+      - run: ruff check geospatial --config geospatial/pyproject.toml --force-exclude
+      - run: ruff format geospatial --config geospatial/pyproject.toml --force-exclude --check
+      - run: python geospatial/scripts/sync_industrial.py
+      - run: python geospatial/scripts/build_geopackage.py --output /tmp/geo-rebuild.gpkg --database-only
+      - run: python geospatial/scripts/validate_geospatial.py
+      - run: python -m pytest geospatial/tests -q
+      - name: Source and generated data do not drift on rebuild
+        run: git diff --exit-code -- geospatial/sources/catalog.json geospatial/geojson geospatial/qgis
+  native-qgis:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install native QGIS reader
+        run: sudo apt-get update && sudo apt-get install -y python3-qgis
+      - run: QT_QPA_PLATFORM=offscreen /usr/bin/python3 geospatial/scripts/validate_qgis.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: geospatial-native-qgis-evidence
+          path: geospatial/reports/QGIS_VALIDATION.json
+          if-no-files-found: error

@@ -1,0 +1,35 @@
+{
+  "map_id": "SH-MAP-RWM-002_red-wash-site-study",
+  "title": "Red Wash surface site study",
+  "version": "0.1.0-rc4",
+  "effective_date": "2026-09-07",
+  "world_state": "CANON_RECONCILED_2026-09-07",
+  "canon_status": "PROPOSED_SITE_GEOMETRY",
+  "source_package_version": "0.1.0-rc4",
+  "source_commit": "d91a22c35c91b213204411421de88815f27d8e16",
+  "source_geopackage_sha256": "0a1489e6e4605373cf0d25dd6e25a020c8d922ee9ec6c052d9410ad4e2303f0f",
+  "projection": "EPSG:26913",
+  "build_timestamp": "2026-09-07T16:00:00+00:00",
+  "builder": "geospatial/scripts/render_maps.py",
+  "review_status": "RENDERED_PENDING_VISUAL_QA",
+  "layers": [
+    "spatial_assets",
+    "facilities",
+    "red_wash_anchor",
+    "ref_wamsutter_*"
+  ],
+  "files": {
+    "pdf": {
+      "path": "SH-MAP-RWM-002_red-wash-site-study.pdf",
+      "sha256": "de48efb015a6eedc842a10aa7a5b166a89ce70c8b9cb0cf23e12110176b94fad"
+    },
+    "svg": {
+      "path": "SH-MAP-RWM-002_red-wash-site-study.svg",
+      "sha256": "53271ee4260c72690ec87c6d60e8dd00dcac8523c12abeb1574f359bda3d9456"
+    },
+    "png": {
+      "path": "SH-MAP-RWM-002_red-wash-site-study.png",
+      "sha256": "f4934e8908c626bd7731afb41379918613c407f1f5f380be0e338f04e7138bba"
+    }
+  }
+}

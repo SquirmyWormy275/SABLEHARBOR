@@ -1,0 +1,943 @@
+{
+  "version": "0.1.0-rc3",
+  "status": "INCOMPLETE_ENGINEERING_REVIEW_PACKAGE",
+  "source_commit": "8d20e51a7cf0068729e3296840ccb5ba1ac1d7bd",
+  "history_note": "Superseded source images and catalogs remain in git history/archives; current source snapshots are included.",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 231,
+      "sha256": "f74e78537c46a3696d2498646aeb5448a556531f469fa1eeaee604edcb2620ba"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 97,
+      "sha256": "4d2c9c174b6c5ecb519ea4a7846c0dcc7a3cef930c01fcb10a6db8b5548029d8"
+    },
+    {
+      "path": "LICENSES.md",
+      "bytes": 2573,
+      "sha256": "fcdbc9323658e6fa19d31577a1bd80ada5f33def72721c7855999d1dde63eedb"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2859,
+      "sha256": "dc39e94772bcb937f4b90a48a9bf7b98e28641cb7d1cf88855b3ae2da0ac8cc1"
+    },
+    {
+      "path": "docs/ARU_BST_GEOGRAPHY_ADDENDUM_IMPLEMENTATION_SUMMARY.md",
+      "bytes": 4411,
+      "sha256": "a6a27e2b5b326f3233b6216e0f7e33e809d284797603381be03f298cbaf9b47a"
+    },
+    {
+      "path": "docs/CANON_CONFLICT_EVIDENCE.md",
+      "bytes": 2385,
+      "sha256": "a43a8a6809eb701f19c7751a60d75ec0f01656f7a5f0a774e8d2e347f9b17868"
+    },
+    {
+      "path": "docs/CARTOGRAPHIC_STANDARD.md",
+      "bytes": 1680,
+      "sha256": "8dd8c53fceeae7c8496062bf440698373d3829d238912b524a3bab55ed370acb"
+    },
+    {
+      "path": "docs/DATA_MODEL.md",
+      "bytes": 4702,
+      "sha256": "2dc5ec50978bbed4c0cddb223b77d67487b5a9c5fdee19b38a3aa5ab1e7f544c"
+    },
+    {
+      "path": "docs/DEFINITION_OF_DONE.md",
+      "bytes": 2910,
+      "sha256": "f7629863cf39e2f11507767a7a36e0b4c0960e1e4bc00c2e6eb7f070c400cbc9"
+    },
+    {
+      "path": "docs/NEXT_CHAT_HANDOFF.md",
+      "bytes": 3253,
+      "sha256": "8f3c69be0de3870f0bc89f954dff87c450990c991568a24e4c39699b5092efb8"
+    },
+    {
+      "path": "docs/OPERATING_MODEL_RECONCILIATION_20260906.md",
+      "bytes": 2101,
+      "sha256": "ed52475b00a224299f81071d88dfde772c6acc2112fa22ae1e9800ebeceb9e41"
+    },
+    {
+      "path": "docs/PROVENANCE_AND_REPRODUCIBILITY.md",
+      "bytes": 4564,
+      "sha256": "d418ea98776d28463638ed610293137a6770d03353b01172fa7538efdcc112dc"
+    },
+    {
+      "path": "docs/RED_WASH_LOCATION_SUPERSESSION_NOTE.md",
+      "bytes": 2504,
+      "sha256": "d019c6033debacd2b2913c4ee1d06d2ac0e4133ca8ec2709c1e61c0c267853fb"
+    },
+    {
+      "path": "docs/SITE_SELECTION_EVIDENCE.md",
+      "bytes": 7740,
+      "sha256": "ddeedb8ebb8d8e8a4d6200f73080d7f2bade2302d885a726a08a94b4a59bb2ac"
+    },
+    {
+      "path": "docs/TEMPORAL_MODEL.md",
+      "bytes": 1822,
+      "sha256": "93d979cf36c2038bb6d0c1f9638bac9e712d709e485985deb5510664279608ab"
+    },
+    {
+      "path": "geojson/bst_alignment_current.geojson",
+      "bytes": 152259,
+      "sha256": "b508baea1222b9d8f36c262b823652c57ac680e8f9f742832e24ab2ac4f13011"
+    },
+    {
+      "path": "geojson/events.geojson",
+      "bytes": 52,
+      "sha256": "b3049ad7a1062091e169bd352424d59721a26b8b6229942aef26d11b0c6a96e1"
+    },
+    {
+      "path": "geojson/facilities.geojson",
+      "bytes": 8524,
+      "sha256": "ea33d6280302fd948ad6000bf5508b663b741c8b28f5a5206c8bbf6459004aa1"
+    },
+    {
+      "path": "geojson/historical_sites.geojson",
+      "bytes": 52,
+      "sha256": "b3049ad7a1062091e169bd352424d59721a26b8b6229942aef26d11b0c6a96e1"
+    },
+    {
+      "path": "geojson/locked_search_areas.geojson",
+      "bytes": 12302,
+      "sha256": "56abd6cbadf3e2c23fdaf6d66b9b5e88681fa5aa38729ef7b47664934f8f88f4"
+    },
+    {
+      "path": "geojson/operating_territories.geojson",
+      "bytes": 52,
+      "sha256": "b3049ad7a1062091e169bd352424d59721a26b8b6229942aef26d11b0c6a96e1"
+    },
+    {
+      "path": "geojson/rail_abandoned.geojson",
+      "bytes": 52,
+      "sha256": "b3049ad7a1062091e169bd352424d59721a26b8b6229942aef26d11b0c6a96e1"
+    },
+    {
+      "path": "geojson/rail_bridges.geojson",
+      "bytes": 52,
+      "sha256": "b3049ad7a1062091e169bd352424d59721a26b8b6229942aef26d11b0c6a96e1"
+    },
+    {
+      "path": "geojson/rail_crossings.geojson",
+      "bytes": 52,
+      "sha256": "b3049ad7a1062091e169bd352424d59721a26b8b6229942aef26d11b0c6a96e1"
+    },
+    {
+      "path": "geojson/rail_industries.geojson",
+      "bytes": 52,
+      "sha256": "b3049ad7a1062091e169bd352424d59721a26b8b6229942aef26d11b0c6a96e1"
+    },
+    {
+      "path": "geojson/rail_interchanges.geojson",
+      "bytes": 2195,
+      "sha256": "887f31a1bcf308a3af2f76320b0b03c9d62425c257ef63e97aa84c5838c0c78b"
+    },
+    {
+      "path": "geojson/rail_mileposts.geojson",
+      "bytes": 52,
+      "sha256": "b3049ad7a1062091e169bd352424d59721a26b8b6229942aef26d11b0c6a96e1"
+    },
+    {
+      "path": "geojson/rail_network.geojson",
+      "bytes": 152259,
+      "sha256": "b508baea1222b9d8f36c262b823652c57ac680e8f9f742832e24ab2ac4f13011"
+    },
+    {
+      "path": "geojson/rail_nodes.geojson",
+      "bytes": 3291,
+      "sha256": "94f1a89b4ad62b29b9a255e9f05764ff53a07bbf2f83bc32119b7edbf770fa7d"
+    },
+    {
+      "path": "geojson/rail_trackage_rights.geojson",
+      "bytes": 52,
+      "sha256": "b3049ad7a1062091e169bd352424d59721a26b8b6229942aef26d11b0c6a96e1"
+    },
+    {
+      "path": "geojson/rail_tunnels.geojson",
+      "bytes": 52,
+      "sha256": "b3049ad7a1062091e169bd352424d59721a26b8b6229942aef26d11b0c6a96e1"
+    },
+    {
+      "path": "geojson/rail_yards.geojson",
+      "bytes": 2234,
+      "sha256": "8b5ca179372445dc77ba54714ae03070d65dcc14bf736a44d65578d9d689b18b"
+    },
+    {
+      "path": "geojson/red_wash_anchor.geojson",
+      "bytes": 1337,
+      "sha256": "3f9a0c4f4ada6077d163bd16c01d69a98a0adee23d6a9974d8560eea405c4025"
+    },
+    {
+      "path": "geojson/reference_place_labels.geojson",
+      "bytes": 5964,
+      "sha256": "aeb52f05811f23cffaa26aedb48be586a98e959332ce8dfc475f09fbe3036209"
+    },
+    {
+      "path": "geojson/resource_areas.geojson",
+      "bytes": 52,
+      "sha256": "b3049ad7a1062091e169bd352424d59721a26b8b6229942aef26d11b0c6a96e1"
+    },
+    {
+      "path": "geojson/roads.geojson",
+      "bytes": 52,
+      "sha256": "b3049ad7a1062091e169bd352424d59721a26b8b6229942aef26d11b0c6a96e1"
+    },
+    {
+      "path": "geojson/sites.geojson",
+      "bytes": 4308,
+      "sha256": "b250b7c7d34a53862ac7f5603ffffefeec0d5c6781774e55db5b4c15356c5935"
+    },
+    {
+      "path": "geojson/source_claim_points.geojson",
+      "bytes": 2712,
+      "sha256": "8fef00546b68e003a9ce76528351c982c1e4f03ffc7c66870cede540c8f5b641"
+    },
+    {
+      "path": "geojson/taylor_hub.geojson",
+      "bytes": 3697,
+      "sha256": "601f85fce7552473b7c69e0a5dfa65fc528fb4757b6076bb1f0a8833fccc95d1"
+    },
+    {
+      "path": "maps/MAP_MANIFEST.json",
+      "bytes": 14760,
+      "sha256": "afc1492b7730dbba91d6e5a73585022287c0464f78bc33d8ee4d6576c072eba5"
+    },
+    {
+      "path": "maps/SABLE_HARBOR_Geographic_Framework_Atlas_v0.1.0-rc3.pdf",
+      "bytes": 3797352,
+      "sha256": "4216ebe228d4f4bd74b69018e82d2e0cbb0f52e96e505e62623fe080e4ca10cb"
+    },
+    {
+      "path": "maps/SH-MAP-BST-001_bst-pre-acquisition-system.json",
+      "bytes": 1347,
+      "sha256": "3d57ae53bf331b1d3ccc736bb2d413106362862f1d20f007a378ee278eeba59c"
+    },
+    {
+      "path": "maps/SH-MAP-BST-001_bst-pre-acquisition-system.pdf",
+      "bytes": 539952,
+      "sha256": "b0957f229835974dfb5bb4a066170e142bbbd95f2c3cc99cf21b176cf95a149c"
+    },
+    {
+      "path": "maps/SH-MAP-BST-001_bst-pre-acquisition-system.png",
+      "bytes": 737688,
+      "sha256": "4fe5e19c296bdafc533653a7872fa2e4358b291b95e1a47d01f0fba82daeee6e"
+    },
+    {
+      "path": "maps/SH-MAP-BST-001_bst-pre-acquisition-system.svg",
+      "bytes": 1101261,
+      "sha256": "61d404bc69776f87744e370ff7181493dbad9704be170f7ee5febcea9b871574"
+    },
+    {
+      "path": "maps/SH-MAP-BST-001_wamsutter-interchange-study.json",
+      "bytes": 1249,
+      "sha256": "c191e374ef36801baa94f7448e655b3ced2df7d6091b689d71c79d8585043b1c"
+    },
+    {
+      "path": "maps/SH-MAP-BST-001_wamsutter-interchange-study.pdf",
+      "bytes": 55888,
+      "sha256": "d0e46ae205b87f210b97cfc89d61e799566135bb9f0c5d41681edc12708f6635"
+    },
+    {
+      "path": "maps/SH-MAP-BST-001_wamsutter-interchange-study.png",
+      "bytes": 483671,
+      "sha256": "8193ecc9ece7ba50d6ed5d03a34c6e2207e80f8c524daed8760c764975978981"
+    },
+    {
+      "path": "maps/SH-MAP-BST-001_wamsutter-interchange-study.svg",
+      "bytes": 68419,
+      "sha256": "9949dacd678501e015c38f0421d52b918508f5071a44c99ccc0864e6dcad4542"
+    },
+    {
+      "path": "maps/SH-MAP-BST-002_bst-engineering-alignment.json",
+      "bytes": 1328,
+      "sha256": "6d2d4d106743955cc718d791d92a902ac69e7b7fee4f93236a40163e7d27bb32"
+    },
+    {
+      "path": "maps/SH-MAP-BST-002_bst-engineering-alignment.pdf",
+      "bytes": 415406,
+      "sha256": "e18328f64214428605c884d07fd2cd56132ac335a698d699df69315bb1aac702"
+    },
+    {
+      "path": "maps/SH-MAP-BST-002_bst-engineering-alignment.png",
+      "bytes": 619737,
+      "sha256": "b8966c1ca427556b657b256a755e4a4525b6832db1b568f15260ed018b357b36"
+    },
+    {
+      "path": "maps/SH-MAP-BST-002_bst-engineering-alignment.svg",
+      "bytes": 949319,
+      "sha256": "750fcd10d50aeb93e2df5124fb6d323655054c29a66dfb17ad1f13b42d669621"
+    },
+    {
+      "path": "maps/SH-MAP-CRD-001_kanawha-context.json",
+      "bytes": 1195,
+      "sha256": "5d6394f21ac9714c0679a8918ad1598bf0bd45ee60061351d29c3aa1c8c02ec9"
+    },
+    {
+      "path": "maps/SH-MAP-CRD-001_kanawha-context.pdf",
+      "bytes": 237502,
+      "sha256": "79ef8bb6909ff26fd5d1a6c9bf91709cca6691c1ffd1923fa64723150f30b69d"
+    },
+    {
+      "path": "maps/SH-MAP-CRD-001_kanawha-context.png",
+      "bytes": 691228,
+      "sha256": "9fb84920530da0712ef78f5141d9232b3a4f19b6af7ce9229b87835b4d865e5f"
+    },
+    {
+      "path": "maps/SH-MAP-CRD-001_kanawha-context.svg",
+      "bytes": 617430,
+      "sha256": "e96a51a9868d311f5a0b7815710c89d6785ee0608a4858d8916c690958607007"
+    },
+    {
+      "path": "maps/SH-MAP-ENT-001_locked-geographic-framework.json",
+      "bytes": 1288,
+      "sha256": "29cb2fcccca50d183932fdbdc4297936246614bc4b668d5b233c2ccd26925c90"
+    },
+    {
+      "path": "maps/SH-MAP-ENT-001_locked-geographic-framework.pdf",
+      "bytes": 981685,
+      "sha256": "febc790d40d8d39d732506ff3837dc2114a330c76938ccdc356e6e82b0323541"
+    },
+    {
+      "path": "maps/SH-MAP-ENT-001_locked-geographic-framework.png",
+      "bytes": 1011989,
+      "sha256": "5708a151fb2cf8bd6f2b46bc86e1af34d2dfac04ffb590b724691b946c2a694e"
+    },
+    {
+      "path": "maps/SH-MAP-ENT-001_locked-geographic-framework.svg",
+      "bytes": 3180627,
+      "sha256": "196b57a38906e1f591ad94812cf74a11dfbab70869901a30c325ea43ce2791c4"
+    },
+    {
+      "path": "maps/SH-MAP-ENT-002_corporate-geographic-census.json",
+      "bytes": 1297,
+      "sha256": "05be26ff246834c32cbfb1e8efb9058526315e469178925ba5089e3391af619c"
+    },
+    {
+      "path": "maps/SH-MAP-ENT-002_corporate-geographic-census.pdf",
+      "bytes": 90327,
+      "sha256": "7a0555137b82f6c5dd24301ae7a2b87a869cb5e2df9869468ed66c0e3eb3faf5"
+    },
+    {
+      "path": "maps/SH-MAP-ENT-002_corporate-geographic-census.png",
+      "bytes": 404290,
+      "sha256": "6458968b5c1de7956e5ac2492888c911894ca7d3126e20756d33bf13babe0aa0"
+    },
+    {
+      "path": "maps/SH-MAP-ENT-002_corporate-geographic-census.svg",
+      "bytes": 191008,
+      "sha256": "570e678ad9f32ff5d13894fe7378a9d49157fe4a697981bc458dc502c9b19fc4"
+    },
+    {
+      "path": "maps/SH-MAP-ENT-003_open-geographic-questions.json",
+      "bytes": 1312,
+      "sha256": "4383e04b78719429a1ac5341430ca7442dc0280dd0a702a4e81000dd15914a13"
+    },
+    {
+      "path": "maps/SH-MAP-ENT-003_open-geographic-questions.pdf",
+      "bytes": 1030822,
+      "sha256": "ed3cd3eda8a30678c31690c3b8e4a8768f63ac79238599ca01b22253793a0857"
+    },
+    {
+      "path": "maps/SH-MAP-ENT-003_open-geographic-questions.png",
+      "bytes": 988433,
+      "sha256": "fe347bd8c6f51cab2537a1edc42b967921cd575088b6dc662c48d77bf0256a77"
+    },
+    {
+      "path": "maps/SH-MAP-ENT-003_open-geographic-questions.svg",
+      "bytes": 3162126,
+      "sha256": "05a001a9776cab262a846d159ae4eb673bf858659b23fce2a36ba7a65663d017"
+    },
+    {
+      "path": "maps/SH-MAP-EVL-001_hazelwood-context.json",
+      "bytes": 1208,
+      "sha256": "106c8f71d6f95b7d46a0b0afbd98956e6c38d66f34d8f89a3aca58427bdde7eb"
+    },
+    {
+      "path": "maps/SH-MAP-EVL-001_hazelwood-context.pdf",
+      "bytes": 127015,
+      "sha256": "c0d6205806ace07b267c61d222d6d9ff176042b099c5fca6b6e4b9264aed64ea"
+    },
+    {
+      "path": "maps/SH-MAP-EVL-001_hazelwood-context.png",
+      "bytes": 765130,
+      "sha256": "e58c7daaad3c1b8c51c04c591b581c2feced9739f4d13940d4c115f9c6e700df"
+    },
+    {
+      "path": "maps/SH-MAP-EVL-001_hazelwood-context.svg",
+      "bytes": 428823,
+      "sha256": "c93d78d61d3f145002c2afa97293088267da541eb8a70a416fa76c91cd2a83c3"
+    },
+    {
+      "path": "maps/SH-MAP-RWM-001_red-wash-context.json",
+      "bytes": 1284,
+      "sha256": "f3d35a6fead0ce6e21eb7067a51de9794109dd9dff43362855c9218d3b9049c6"
+    },
+    {
+      "path": "maps/SH-MAP-RWM-001_red-wash-context.pdf",
+      "bytes": 210012,
+      "sha256": "c67d12abbfc2cd9dcdc141a59a1ffc5290330fb66a7f80431449e36dee3b3a01"
+    },
+    {
+      "path": "maps/SH-MAP-RWM-001_red-wash-context.png",
+      "bytes": 577575,
+      "sha256": "9794da3cda74336b0ab8fbe547961e3b110279109dcb9f763f943a91814721d1"
+    },
+    {
+      "path": "maps/SH-MAP-RWM-001_red-wash-context.svg",
+      "bytes": 504476,
+      "sha256": "eff43251948b19a2892e1eeadacd5104fedce87a84c9e3b38280d565e0abc401"
+    },
+    {
+      "path": "maps/SH-MAP-RWM-002_red-wash-site-study.json",
+      "bytes": 1262,
+      "sha256": "90345435da6779765a024b04e4827eb99914a9f0dfc3b380b69e120e51e90cc8"
+    },
+    {
+      "path": "maps/SH-MAP-RWM-002_red-wash-site-study.pdf",
+      "bytes": 38309,
+      "sha256": "8c72d858284c640ec1ab0982f16e4e94470a25c348d3ffbdca79ebee5c22d0e8"
+    },
+    {
+      "path": "maps/SH-MAP-RWM-002_red-wash-site-study.png",
+      "bytes": 390931,
+      "sha256": "d1d7211bb4f5b2a16a28791eb52bf192b7b00a0fa8976c73f3810ee4a559d5fa"
+    },
+    {
+      "path": "maps/SH-MAP-RWM-002_red-wash-site-study.svg",
+      "bytes": 22771,
+      "sha256": "316b0cf3c033b2e9b709a851f159bdfd9ce8dcc70a7507279fc2dcd8fdea396e"
+    },
+    {
+      "path": "maps/SH-MAP-SAC-001_headquarters-context.json",
+      "bytes": 1218,
+      "sha256": "e61ec4c17aac857caed019ffaa40458e8d9ad546488638e765160bf8cd4d99a4"
+    },
+    {
+      "path": "maps/SH-MAP-SAC-001_headquarters-context.pdf",
+      "bytes": 75437,
+      "sha256": "9cddde9f1d985c5ba13eb37c83f9720370494a496426107610dc0eb6418aaf37"
+    },
+    {
+      "path": "maps/SH-MAP-SAC-001_headquarters-context.png",
+      "bytes": 672049,
+      "sha256": "fabf8fcb0e1fa0eef8899296b8e851518af857ba9bb039dfd357ffff07e601d2"
+    },
+    {
+      "path": "maps/SH-MAP-SAC-001_headquarters-context.svg",
+      "bytes": 268400,
+      "sha256": "06e22c2b20725027f3601e9d012a47114dff49c270329c9ccd9ba902392dbafc"
+    },
+    {
+      "path": "master/sable_harbor_master_v0.1.building.gpkg",
+      "bytes": 11542528,
+      "sha256": "15d760fde5cc3ca58e0a7533feb936bfd513e25d09cd6ab181213577b2f6d7f8"
+    },
+    {
+      "path": "master/sable_harbor_master_v0.1.building.gpkg-journal",
+      "bytes": 128512,
+      "sha256": "c743723e0a15c1337f2076b72804734372864b5a09ccb3361a9edaff9c4be788"
+    },
+    {
+      "path": "master/sable_harbor_master_v0.1.gpkg",
+      "bytes": 36700160,
+      "sha256": "af3a821b37e6d11430cde4dde25355e029761c6971e82eed58f95962578248b7"
+    },
+    {
+      "path": "qgis/sable_harbor_master.qgz",
+      "bytes": 3846,
+      "sha256": "da69344be0186a571ae3fc2d24461e09cdeeb47d930ab1bfb3c1b719eeb3ba0e"
+    },
+    {
+      "path": "reference/context_places.geojson",
+      "bytes": 45854,
+      "sha256": "6096d170ba40b7cc92355c5ba9a775023dc7f51b195c61acd78ee3ac8dd955af"
+    },
+    {
+      "path": "reference/hazelwood_connecting_roads.geojson",
+      "bytes": 56193,
+      "sha256": "6dfe260261719f80ee587feb3ead8870ba334d36ba35317debac636a7187c8b3"
+    },
+    {
+      "path": "reference/hazelwood_highways.geojson",
+      "bytes": 17775,
+      "sha256": "96cea8a975c264fe3a69ab733a3ec86ab00804fbe7801933e6112814e9b464f4"
+    },
+    {
+      "path": "reference/hazelwood_hydro.geojson",
+      "bytes": 11336,
+      "sha256": "4feebf27c90c99bfbf1d7dc7861b226aa8a6a069ebf913627960022739c2c69e"
+    },
+    {
+      "path": "reference/hazelwood_local_roads.geojson",
+      "bytes": 1336848,
+      "sha256": "7d961e9292f87ce71faf52a0f6b8d612233a30ca138c271938bb60de970f5b68"
+    },
+    {
+      "path": "reference/hazelwood_rail.geojson",
+      "bytes": 127842,
+      "sha256": "7d6118a459a800dcc475accc96b693f837b0aedfbef9493596a893a7f1eec010"
+    },
+    {
+      "path": "reference/hazelwood_secondary_roads.geojson",
+      "bytes": 43,
+      "sha256": "6d6b80a88dc60e65991d34024fe7cf2eb86531ffba8b75efb697fe0a601f2799"
+    },
+    {
+      "path": "reference/kanawha_connecting_roads.geojson",
+      "bytes": 539857,
+      "sha256": "c10aa3c6a9763adcd57f19627d8f56e2c989b857b5d313ba519a39b79eaee7cb"
+    },
+    {
+      "path": "reference/kanawha_highways.geojson",
+      "bytes": 267869,
+      "sha256": "c9c670267e8521f45b3977ff1ded5603198123dc495f1a3ad8ab8f9a202c494e"
+    },
+    {
+      "path": "reference/kanawha_hydro.geojson",
+      "bytes": 1388219,
+      "sha256": "06133f868891b4fccb4e5feb56b6d9a7c7279f22fb5a2f8270b5a8d6dc6a0897"
+    },
+    {
+      "path": "reference/kanawha_rail.geojson",
+      "bytes": 119477,
+      "sha256": "1d97b8cab2b5fef4bef07762dd1cc93238248baf4306aefb1e56ed3984e06dcb"
+    },
+    {
+      "path": "reference/kanawha_secondary_roads.geojson",
+      "bytes": 498097,
+      "sha256": "a63d24b1c184daf7aef304c64960850d9f5621182ce7029ab72a586911d4be5c"
+    },
+    {
+      "path": "reference/sacramento_connecting_roads.geojson",
+      "bytes": 56652,
+      "sha256": "05c2cc267e125bd36cb436a5f2a3fabf60d9fe6c3c445b21dbf3de0477d92e57"
+    },
+    {
+      "path": "reference/sacramento_highways.geojson",
+      "bytes": 57252,
+      "sha256": "746fad45f6aa54ac4b1afb15bcadd04268302a262957089b6428ef5da4327178"
+    },
+    {
+      "path": "reference/sacramento_hydro.geojson",
+      "bytes": 7613,
+      "sha256": "d11fb9f1c02956abcfc47d7d3180fdea93fa259b54c1d82d81d6535cb24c8708"
+    },
+    {
+      "path": "reference/sacramento_local_roads.geojson",
+      "bytes": 992429,
+      "sha256": "683c8c7d16e5e614621c7d2b554c67c58f893ed135bd5b2321ba4f2702424f5c"
+    },
+    {
+      "path": "reference/sacramento_rail.geojson",
+      "bytes": 59617,
+      "sha256": "3115b02fff101730d9c45e05e821f8611e304158b467d3ad19ca30339e4fc242"
+    },
+    {
+      "path": "reference/sacramento_secondary_roads.geojson",
+      "bytes": 43,
+      "sha256": "6d6b80a88dc60e65991d34024fe7cf2eb86531ffba8b75efb697fe0a601f2799"
+    },
+    {
+      "path": "reference/us_states.geojson",
+      "bytes": 126817,
+      "sha256": "bb8763fa9673ee8bd5ed7e2d368d052f2b1bc086b83d3f561169f7b22e7710d4"
+    },
+    {
+      "path": "reference/wamsutter_connecting_roads.geojson",
+      "bytes": 140318,
+      "sha256": "1b229df5d03f807372bd0615755b658928e822c20fd77f4ddbf2d5eb28e8a22e"
+    },
+    {
+      "path": "reference/wamsutter_fra_rail.geojson",
+      "bytes": 25896,
+      "sha256": "d24d20bdae879bff9cbbbb2ca968e52697b42913aba7614e9dca7038542c9b42"
+    },
+    {
+      "path": "reference/wamsutter_highways.geojson",
+      "bytes": 242685,
+      "sha256": "81fe705260fefe9d195d4a1c8f362930af6aad7b6bf40064c9017795b838e24f"
+    },
+    {
+      "path": "reference/wamsutter_hydro.geojson",
+      "bytes": 8993261,
+      "sha256": "26fc25cf87693e6210d0367a45539c4b2d61332f9f3718fd600f22668242f457"
+    },
+    {
+      "path": "reference/wamsutter_rail.geojson",
+      "bytes": 137161,
+      "sha256": "bfa8faaf84564371f7f6786fde2f58c6c108f918c7c55607433ecd2c0ae8fc56"
+    },
+    {
+      "path": "reference/wamsutter_secondary_roads.geojson",
+      "bytes": 291271,
+      "sha256": "abc7d8a914e122ef3ef64e0aa791aa888c848cdf007d08201c9d2d908e5b5cef"
+    },
+    {
+      "path": "reference/wyoming_counties.geojson",
+      "bytes": 65951,
+      "sha256": "77b08fefe008358324d49b9ef769257ad1aa5cb3f91f72ff15b8a37313a6e5ab"
+    },
+    {
+      "path": "reference/wyoming_local_roads.geojson",
+      "bytes": 3777905,
+      "sha256": "7e3345de206ce8dd2610ad4469175b239ea72f0126dff0c89ada3c5b8b058c75"
+    },
+    {
+      "path": "reference/wyoming_screening_dem.tif",
+      "bytes": 3540536,
+      "sha256": "0ea3719bb01c73e6e4ccaf1c21defa609a945ae7342ce58409479f574ba19b96"
+    },
+    {
+      "path": "reference/wyoming_waterbodies.geojson",
+      "bytes": 544275,
+      "sha256": "82c333660ce69714452e999c9ef871adb5bbcf328776cc81ce2dd003482a046f"
+    },
+    {
+      "path": "registers/CENSUS_MANIFEST.json",
+      "bytes": 1002,
+      "sha256": "0c4c120e0f7bb49203775155e0f79d3af07efeced4c132bfe4cbf1e2cc7aa923"
+    },
+    {
+      "path": "registers/DISCOVERY_STATEMENTS.csv",
+      "bytes": 1251929,
+      "sha256": "35b66ceafa4717f649006e66bc9659c3a8052838c5449d173285ee7dd8ef9b70"
+    },
+    {
+      "path": "registers/GEOGRAPHIC_CANDIDATE_OCCURRENCES.csv.gz",
+      "bytes": 1359306,
+      "sha256": "0cfad9bc46d8725bf5bb4a51d38888b3668b4142a29dce04d46a17e657905c90"
+    },
+    {
+      "path": "registers/GEOGRAPHIC_CENSUS_v0.1.csv",
+      "bytes": 50239,
+      "sha256": "b48e3bf323d801473026b7643cf860143cf89de7bfa796a598367858934dbf93"
+    },
+    {
+      "path": "registers/GEOGRAPHIC_CONFLICTS.md",
+      "bytes": 482,
+      "sha256": "4bbcfd849c5e9ac8bdab564acadc05a191ed72b2f87d66380d3feec1f991b60f"
+    },
+    {
+      "path": "registers/GEOGRAPHIC_DECISION_REGISTER.md",
+      "bytes": 2722,
+      "sha256": "0eb2f1511999fa8e108e1af44cd3cbd663849fe50dae2e97f809ea07acdd2382"
+    },
+    {
+      "path": "registers/GEOGRAPHIC_DECISION_REGISTER_v0.1.md",
+      "bytes": 21124,
+      "sha256": "7ddf2ae0bc4661df79873801efac49387e00d904a5465947b50f811fd60b8756"
+    },
+    {
+      "path": "registers/OPEN_GEOGRAPHIC_QUESTIONS_v0.1.md",
+      "bytes": 2000,
+      "sha256": "7326e3ac61aa3b2264b988a0df07833bdd9ffec352a470b5b9f48938ce2630c7"
+    },
+    {
+      "path": "registers/PROVENANCE_COVERAGE.csv",
+      "bytes": 10576,
+      "sha256": "94bf44545268cdb33fecb43bb81a798b74fcbede9be2e27b5c6bd8132cf88ea9"
+    },
+    {
+      "path": "registers/PROVENANCE_REGISTER.md",
+      "bytes": 9954,
+      "sha256": "fdd5a9d7c4f2507925879ba05d5c316f7a9a2afdb689faf4699a9647deedd9ba"
+    },
+    {
+      "path": "registers/SITE_REGISTER.csv",
+      "bytes": 30134,
+      "sha256": "d8e657127c7a456a421be5772c77636acb64780bbc2cfd47c45cfd2d3999aa3e"
+    },
+    {
+      "path": "registers/SOURCE_COVERAGE.csv",
+      "bytes": 122614,
+      "sha256": "83971932f67b2e8d1178ea7a6545563c3ecf2aae8628a2e327fc2b743bcac3de"
+    },
+    {
+      "path": "reports/CROSSING_SCREEN.json",
+      "bytes": 13939,
+      "sha256": "eac8f911338da4a442b26b1a790bdfb1464f65f8c262726a82612d3ff8ec1e98"
+    },
+    {
+      "path": "reports/GEOMETRY_VALIDATION.json",
+      "bytes": 2716,
+      "sha256": "e833da4fab0100df6467a28d9bef71dc50f6d848598ac53d081e2cbc5a723d9c"
+    },
+    {
+      "path": "reports/GEOSPATIAL_VALIDATION_REPORT.md",
+      "bytes": 1185,
+      "sha256": "852d3192c9790ccd57bf589879a3bb027ad3672fc97af5574ce934b9100121d6"
+    },
+    {
+      "path": "reports/OPEN_CONFLICTS.md",
+      "bytes": 2000,
+      "sha256": "7326e3ac61aa3b2264b988a0df07833bdd9ffec352a470b5b9f48938ce2630c7"
+    },
+    {
+      "path": "reports/QGIS_VALIDATION.json",
+      "bytes": 359,
+      "sha256": "d87d0713455d3bc4efc2cde98d584ae8a2cf5bcc2343c8b5d3e45fed538d222c"
+    },
+    {
+      "path": "reports/RAIL_CANDIDATE_COMPARISON.json",
+      "bytes": 433498,
+      "sha256": "bf57f866ca9289227f23c17cc01733c942cbcdf1d3025999f5bb853a4101e982"
+    },
+    {
+      "path": "reports/TEST_RESULTS.xml",
+      "bytes": 2118,
+      "sha256": "db704c825cdd84a83c751312df6fe604b5c236ad26f66c7b07b675e167da8f2f"
+    },
+    {
+      "path": "reports/VISUAL_QA.md",
+      "bytes": 511,
+      "sha256": "5de5cf43dda069c14bce0b7bb9909c6e88c302b89671bb061d8d328c6cd66fc8"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 224,
+      "sha256": "0d2e457214e9d5277b256e7eb11d3c91314b6ce8f80f90fbc5dc96a7533af415"
+    },
+    {
+      "path": "schema/geospatial_schema.sql",
+      "bytes": 5813,
+      "sha256": "4a329527491024df83a359e9ea9873b8d46149fee6e99f136f1f12cd02d6937c"
+    },
+    {
+      "path": "scripts/build_geopackage.py",
+      "bytes": 19185,
+      "sha256": "b063d7e3f48e57e393397692114f3b1b1c1c92043412f3feb72cb9a10eebd61f"
+    },
+    {
+      "path": "scripts/census.py",
+      "bytes": 8992,
+      "sha256": "a087166feb7d1fdd4b533b0b9a62a2a7b088f793cc131a08763ed64058525652"
+    },
+    {
+      "path": "scripts/engineer_candidates.py",
+      "bytes": 9329,
+      "sha256": "b84a891cec513140bb59789e199258f76ed9650134365356ffef4bf761f9443f"
+    },
+    {
+      "path": "scripts/fetch_reference.py",
+      "bytes": 8878,
+      "sha256": "5b831c46607bcb026d7590b531d204d46083a7ccb7f62045a56a70fa7021d02e"
+    },
+    {
+      "path": "scripts/model.py",
+      "bytes": 4431,
+      "sha256": "3df6c62444a76a38e1fe424deb01cccb33d123a7e2e40435d86042570b85d910"
+    },
+    {
+      "path": "scripts/package_release.py",
+      "bytes": 1381,
+      "sha256": "f219ad4bef438645750e40686b915b1f92f5e94344e698228c211016f11c5a95"
+    },
+    {
+      "path": "scripts/render_maps.py",
+      "bytes": 29525,
+      "sha256": "1306f93a8f54899d25781b9e80b9e4bb5094d34cfe825226a706e4b6704d49e8"
+    },
+    {
+      "path": "scripts/validate_geospatial.py",
+      "bytes": 10889,
+      "sha256": "383cadb0f5c087a768cc8d5b0f1e803207c4e830ffdf91dd5e28ef20d950d5c7"
+    },
+    {
+      "path": "scripts/validate_qgis.py",
+      "bytes": 2631,
+      "sha256": "ef28116e73965fea7bfd70518a40c51ffdb45a908c5b12212f716c5d9b9a47a3"
+    },
+    {
+      "path": "sources/APPROVED_OPERATING_DECISIONS_20260906.json",
+      "bytes": 1438,
+      "sha256": "dd1f58c9f8ce8f02fa1dd7c0cffe21eac9bfe91a710fcead84851c1e4a5371a9"
+    },
+    {
+      "path": "sources/ARU_BST_BRANCH_BASELINE.json",
+      "bytes": 6781,
+      "sha256": "a4b80e7776b0f3c0bae1283ac7fc176e937c59220b8b853706586247140a652a"
+    },
+    {
+      "path": "sources/BLM_POINT_SCREEN.json",
+      "bytes": 14649,
+      "sha256": "e3aadb71bf05af09ea41cfe9bbb6a360dede18280f6e97b18004440389db7acc"
+    },
+    {
+      "path": "sources/GOVERNING_CANON_ADDENDUM_2026-09-05.md",
+      "bytes": 15583,
+      "sha256": "5ec4448308e0e19fdf11dc5307b24380b19e6ab51482e11bd41883aff703f150"
+    },
+    {
+      "path": "sources/MASTER_EXECUTION_MANDATE.md",
+      "bytes": 78334,
+      "sha256": "d49a4f30625aae0220b6d252c9f75c4e746099273c5a2dee2800caf934a1f991"
+    },
+    {
+      "path": "sources/canon_snapshot/assets/brand/maps/red_wash__site_overview.png",
+      "bytes": 3230867,
+      "sha256": "8dbb0053c4a563d57d5a24be4f4687dc11e2e00e2b1e62c279d9be945f68d77a"
+    },
+    {
+      "path": "sources/canon_snapshot/assets/brand/maps/red_wash__underground_plan.png",
+      "bytes": 2401412,
+      "sha256": "0658de3b7c63ecc9757b545f29895eab51801b2148cb3862935620b6049a7dda"
+    },
+    {
+      "path": "sources/canon_snapshot/blackridge/data/public/databases/blackridge_m00_v0.1.0.sqlite3",
+      "bytes": 19836928,
+      "sha256": "2e6622d0e710f784c49cd6b773514820dbe247c4ec50a18f4c9cbbcf784587d5"
+    },
+    {
+      "path": "sources/canon_snapshot/blackridge/docs/canon/BLACKRIDGE_CANON_IMPLEMENTATION_SPEC.md",
+      "bytes": 490,
+      "sha256": "b08934c9dd9128da423f5585ee17d734d175d9f88ba3da8f2d8e205c110dd30a"
+    },
+    {
+      "path": "sources/canon_snapshot/docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md",
+      "bytes": 27771,
+      "sha256": "85173b40c1be06f18076aef47a2c1daa646a243b2a16de584d72b277afbc2930"
+    },
+    {
+      "path": "sources/canon_snapshot/docs/canon/DECISION_REGISTER.md",
+      "bytes": 21910,
+      "sha256": "070dc6e6dad18b8e4c18fa530366b9fc8a396986371aee8a0e16ba732e6e1de4"
+    },
+    {
+      "path": "sources/canon_snapshot/docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-03.md",
+      "bytes": 17195,
+      "sha256": "9fd150d5b6ae1517fe3db17ddcf834d802bdd3908662806c319e18b9b4ce5877"
+    },
+    {
+      "path": "sources/canon_snapshot/docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-05_RED_WASH.md",
+      "bytes": 5819,
+      "sha256": "79a7fab1fe3cf614d4679a018a5631892689109f1dc95bb67421c868280537d4"
+    },
+    {
+      "path": "sources/canon_snapshot/docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05.md",
+      "bytes": 11449,
+      "sha256": "6e90bdb9280a562e80e04561af45fabf1856a18b55ea48541f292a42711171d5"
+    },
+    {
+      "path": "sources/canon_snapshot/docs/canon/SABLE_HARBOR_CANONICAL_ARCHITECTURE_HANDOVER.md",
+      "bytes": 36394,
+      "sha256": "ef0fe5602ab41f1de0a0c29146476dbb406cb56e28407652f7d00f357e3fc636"
+    },
+    {
+      "path": "sources/canon_snapshot/docs/canon/SABLE_HARBOR_CONTINUITY_AUDIT_v0.2.md",
+      "bytes": 18443,
+      "sha256": "3d3d4596087c9dd56bcf1d01904f70dff3e3a413a33af5a24336492768fec52c"
+    },
+    {
+      "path": "sources/canon_snapshot/docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md",
+      "bytes": 83837,
+      "sha256": "e1b0d123eed483f91240362f335d62210ea67da49b27b21bced7264e36c711cc"
+    },
+    {
+      "path": "sources/canon_snapshot/docs/j2/EDUCATION.md",
+      "bytes": 7026,
+      "sha256": "a86400a7174c3b9de3834eba66d4ff218a502e646233ddb6bf3736a9bd33cc8e"
+    },
+    {
+      "path": "sources/canon_snapshot/docs/j2/J2_HEADQUARTERS.md",
+      "bytes": 4146,
+      "sha256": "6858ab880401e8de7af861e4e9a407036a9406401e76d0d04086b152c33414c6"
+    },
+    {
+      "path": "sources/canon_snapshot/docs/legal/PRELIMINARY_NAME_AND_MARK_SCREEN.md",
+      "bytes": 10679,
+      "sha256": "ae7a0af93da0d8231fbefb82b1a1afdf16f46da6d43a1ae4f5a11ae512fc2478"
+    },
+    {
+      "path": "sources/canon_snapshot/docs/organization/ARU_BST_AND_ADVISORY.md",
+      "bytes": 3678,
+      "sha256": "d8e68912f7d0df3f6b45c3e58eba338d24d3113abb12825d406589017b6cefa5"
+    },
+    {
+      "path": "sources/canon_snapshot/red_wash/docs/02_GEOLOGICAL_TECHNICAL_REPORT.md",
+      "bytes": 3483,
+      "sha256": "9a00c2bd344227c1cf06701cba3ec2477f1384643df59628627f0321909b6b23"
+    },
+    {
+      "path": "sources/canon_snapshot/red_wash/logistics/ARU_BST_INTERFACE_AND_DEPENDENCY_RECORD.md",
+      "bytes": 10417,
+      "sha256": "b55f1561df9ecabf63e57963006f484f92beb309c88eef188b9cab5bff6e7ff0"
+    },
+    {
+      "path": "sources/catalog.json",
+      "bytes": 185169,
+      "sha256": "51e6e31e6a15d89f735daddd29c3b63403f9f5f74748a0fbdb68a8409710a7bd"
+    },
+    {
+      "path": "sources/dem_manifest.json",
+      "bytes": 1567,
+      "sha256": "3a6da11c438f93bdfc4050b31e3b3d008f752b78e02d10039a3f821fbd095c4b"
+    },
+    {
+      "path": "sources/external_requests.json",
+      "bytes": 18058,
+      "sha256": "31af6664a9cf583fe887154ab60f000ab32964b3a44fa8f6c8a5d6a91f645982"
+    },
+    {
+      "path": "sources/rail_candidate_geometry.json",
+      "bytes": 708290,
+      "sha256": "3ec1790a52e7affb1d7762d4a386ba2837bee011bc3570ff4a34c505f61497b8"
+    },
+    {
+      "path": "sources/red_wash_county_check.json",
+      "bytes": 790,
+      "sha256": "54193df5121de73f459e3684024cc00d67f7f18778024b85082e5b67dc4b9d77"
+    },
+    {
+      "path": "sources/reference_manifest.json",
+      "bytes": 170675,
+      "sha256": "48bd0b064bbda5af91e513fba0927b699b3da7fa469e70cd4573d1402ba193b9"
+    },
+    {
+      "path": "sources/site_reference/kanawha.png",
+      "bytes": 4073887,
+      "sha256": "83c68038d598ef1187af80b6e5a72ab456c3d0d8812b7f02c275b10bcac5e6a5"
+    },
+    {
+      "path": "sources/site_reference/kanawha_catalog.json",
+      "bytes": 116892,
+      "sha256": "611487ee4e48921134b5f98227e4c9057d023f7758fe2cfecd2ef6d401f8cb56"
+    },
+    {
+      "path": "sources/site_reference/kanawha_export.json",
+      "bytes": 360,
+      "sha256": "a033cf7f34eb632763ec4bee8a3cb6ab376521b8e89cc9ac717fcf263d100078"
+    },
+    {
+      "path": "sources/site_reference/manifest.json",
+      "bytes": 3080,
+      "sha256": "041c8d13f2feefa05bb8d8d30a50308878804a7a13d9fa974005b810c4b5819f"
+    },
+    {
+      "path": "sources/site_reference/sacramento.png",
+      "bytes": 2825939,
+      "sha256": "70e4bfad0f135587a1e9276575881736c82783fe06c2bb7cef9d113e3ea450cd"
+    },
+    {
+      "path": "sources/site_reference/sacramento_catalog.json",
+      "bytes": 34537,
+      "sha256": "9f66b2c65816dd3fc201bfda817dc9c6d5e24288931b173f6f8ddc31e076c36c"
+    },
+    {
+      "path": "sources/site_reference/sacramento_export.json",
+      "bytes": 338,
+      "sha256": "e077f01aff9005edd2bbfc774eb0e44ee7ead359bf62656b6e7aabbc7b11182b"
+    },
+    {
+      "path": "sources/wyoming_dem_service.json",
+      "bytes": 12981,
+      "sha256": "a300a739a6e47627d1cd6921fca368004d88a8ac62d6d32c64571c669e4349bb"
+    },
+    {
+      "path": "tests/test_geospatial.py",
+      "bytes": 5954,
+      "sha256": "1a4cf8769ccd573ef77d15ab9b40d45154300ff888e5cd4e5b1e189f288d1d44"
+    }
+  ]
+}

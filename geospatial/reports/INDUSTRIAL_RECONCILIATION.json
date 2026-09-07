@@ -1,0 +1,24 @@
+{
+  "source_commit": "d91a22c35c91b213204411421de88815f27d8e16",
+  "source_pins": {
+    "docs/canon/CRADLE_CLOSEOUT_2026-09-06.md": "b49eaf96f1582f11886e9543b1543013f47acc99aa5533082d73717ab523e8aa",
+    "docs/canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md": "3289ad8ce5d20d767b38f1ad3ed804feeb80300c59d7e96653bfe68f1eaa24b6",
+    "docs/canon/KLEIN_NAME_AND_IDENTITY_2026-09-07.md": "8e757baf09b34eebab5c8d675fb995bfbd303aa2dd0d370cdbe4dcb6204780ff",
+    "docs/canon/DEMOTTE_RECLAMATION_NAME_AND_IDENTITY_2026-09-07.md": "538f2477e662f56f513861697c53945fe6db4acd6583db559ad5d59a57b475f5",
+    "industrial/source/operations.json": "e7488b55c1c963d102db66e7a7b6f1373a3d68a9f94b8f99b164092245713a3b",
+    "industrial/source/entities.json": "799a24baf3240d50c5d6a80ac0f9ddb9d023b7a36de058ec12546aac60caee29",
+    "industrial/source/geography/network.geojson": "bd6ea938ec59f50c79ee0a23fb5aa2817dcb1bb98fce8a951a073d0152a406f5",
+    "docs/canon/INDUSTRIAL_CLOSEOUT_2026-09-05.md": "0b21f22c2a8ffe55fa4e43898834ddc38389e42efe2e9c11ff48c7418dad8be7",
+    "industrial/operations/GEOGRAPHY_AND_ENGINEERING.md": "c34380a2fa4484653b7414c639093ddd1f327b1d3ef9fb624aacec65d0c54d0f",
+    "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md": "5bc15670b1d7c3c98d754329a0fad44bd4a82ea7db977bfa064b5db80062b2f7"
+  },
+  "selected_candidate": "TAYLOR-A",
+  "network_route_miles": 40.000000000000135,
+  "road_miles": 9.00000000000137,
+  "facilities": 12,
+  "track_register_segments": 31,
+  "structures": 26,
+  "history_events": 10,
+  "old_pr96_candidate": "TAYLOR-C_SUPERSEDED",
+  "preserves_source_geometries": true
+}

@@ -1,0 +1,394 @@
+[
+  {
+    "section": 0,
+    "title": "WORK TRANSFER CONTEXT AND SUPPLIED SOURCE ASSETS",
+    "status": "IMPLEMENTED_FOR_FRAMEWORK",
+    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above."
+  },
+  {
+    "section": 1,
+    "title": "FIRST PRINCIPLE",
+    "status": "IMPLEMENTED_FOR_FRAMEWORK",
+    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above."
+  },
+  {
+    "section": 2,
+    "title": "DATA ARCHITECTURE",
+    "status": "IMPLEMENTED_FOR_FRAMEWORK",
+    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above."
+  },
+  {
+    "section": 3,
+    "title": "CANON / PROVENANCE CLASSIFICATION",
+    "status": "IMPLEMENTED_FOR_FRAMEWORK",
+    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above."
+  },
+  {
+    "section": 4,
+    "title": "IMPORTANT LESSON FROM THE RED WASH PROBLEM",
+    "status": "IMPLEMENTED_FOR_FRAMEWORK",
+    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above."
+  },
+  {
+    "section": 5,
+    "title": "GEOGRAPHIC DECISIONS MADE IN THE PARENT CONVERSATION",
+    "status": "IMPLEMENTED_FOR_FRAMEWORK",
+    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above."
+  },
+  {
+    "section": 6,
+    "title": "OTHER KNOWN GEOGRAPHIC CANON TO INVENTORY",
+    "status": "PARTIAL_OR_FUTURE",
+    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above.",
+    "follow_up_issues": [
+      108
+    ]
+  },
+  {
+    "section": 7,
+    "title": "BUILD A GEOGRAPHIC DECISION REGISTER FIRST",
+    "status": "IMPLEMENTED_FOR_FRAMEWORK",
+    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above."
+  },
+  {
+    "section": 8,
+    "title": "MASTER SITE IDENTIFIERS",
+    "status": "IMPLEMENTED_FOR_FRAMEWORK",
+    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above."
+  },
+  {
+    "section": 9,
+    "title": "TEMPORAL GIS",
+    "status": "PARTIAL_OR_FUTURE",
+    "disposition": "Temporal machinery implemented; full occupancy histories incomplete.",
+    "follow_up_issues": [
+      108
+    ]
+  },
+  {
+    "section": 10,
+    "title": "RAILWAY MODEL",
+    "status": "PARTIAL_OR_FUTURE",
+    "disposition": "Current accepted 40-mile network present; early/abandoned and final survey geometry incomplete.",
+    "follow_up_issues": [
+      107
+    ]
+  },
+  {
+    "section": 11,
+    "title": "RESOURCE GEOGRAPHY",
+    "status": "PARTIAL_OR_FUTURE",
+    "disposition": "Mine anchor and resource context retained; detailed mine design remains.",
+    "follow_up_issues": [
+      107
+    ]
+  },
+  {
+    "section": 12,
+    "title": "CORPORATE FOOTPRINT",
+    "status": "PARTIAL_OR_FUTURE",
+    "disposition": "HQ/Fort/Bedford constraints and industrial estate represented; exact enterprise parcels remain.",
+    "follow_up_issues": [
+      106
+    ]
+  },
+  {
+    "section": 13,
+    "title": "EVENT GEOGRAPHY",
+    "status": "PARTIAL_OR_FUTURE",
+    "disposition": "Ten industrial history events plus corporate event register; unlocated events stay unlocated.",
+    "follow_up_issues": [
+      108
+    ]
+  },
+  {
+    "section": 14,
+    "title": "CARTOGRAPHIC PRODUCTS",
+    "status": "PARTIAL_OR_FUTURE",
+    "disposition": "Eleven-sheet atlas regenerated; full historical series incomplete.",
+    "follow_up_issues": [
+      108
+    ]
+  },
+  {
+    "section": 15,
+    "title": "MAP DESIGN STANDARD",
+    "status": "PARTIAL_OR_FUTURE",
+    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above.",
+    "follow_up_issues": [
+      108
+    ]
+  },
+  {
+    "section": 16,
+    "title": "CANONICAL GEOSPATIAL TECHNOLOGY STACK",
+    "status": "IMPLEMENTED_FOR_FRAMEWORK",
+    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above."
+  },
+  {
+    "section": 17,
+    "title": "CORE DATA MODEL",
+    "status": "IMPLEMENTED_FOR_FRAMEWORK",
+    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above."
+  },
+  {
+    "section": 18,
+    "title": "FICTIONALITY AND REAL-WORLD RELATION POLICY",
+    "status": "IMPLEMENTED_FOR_FRAMEWORK",
+    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above."
+  },
+  {
+    "section": 19,
+    "title": "GEOGRAPHIC PRECISION POLICY",
+    "status": "IMPLEMENTED_FOR_FRAMEWORK",
+    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above."
+  },
+  {
+    "section": 20,
+    "title": "SOURCE ACQUISITION AND LICENSING",
+    "status": "IMPLEMENTED_FOR_FRAMEWORK",
+    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above."
+  },
+  {
+    "section": 21,
+    "title": "LOCKED DECISIONS VERSUS ENGINEERING DETAILS",
+    "status": "IMPLEMENTED_FOR_FRAMEWORK",
+    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above."
+  },
+  {
+    "section": 22,
+    "title": "RED WASH EXACT-SITING WORKFLOW",
+    "status": "PARTIAL_OR_FUTURE",
+    "disposition": "Sweetwater anchor locked; complete detailed mine/site engineering remains.",
+    "follow_up_issues": [
+      107
+    ]
+  },
+  {
+    "section": 23,
+    "title": "BS&T NETWORK ENGINEERING WORKFLOW",
+    "status": "PARTIAL_OR_FUTURE",
+    "disposition": "Current network, branches, road, tracks and structures consumed; detailed survey/design remains.",
+    "follow_up_issues": [
+      107
+    ]
+  },
+  {
+    "section": 24,
+    "title": "SACRAMENTO HQ GEOMETRY",
+    "status": "PARTIAL_OR_FUTURE",
+    "disposition": "Sacramento district retained; exact parcel unfinished.",
+    "follow_up_issues": [
+      106
+    ]
+  },
+  {
+    "section": 25,
+    "title": "EVALON / HAZELWOOD GEOMETRY",
+    "status": "PARTIAL_OR_FUTURE",
+    "disposition": "Klein/Fort concept implemented; exact parcel and historical occupancy linkage remain.",
+    "follow_up_issues": [
+      106
+    ]
+  },
+  {
+    "section": 26,
+    "title": "CRADLE / BELLE GEOMETRY",
+    "status": "PARTIAL_OR_FUTURE",
+    "disposition": "Bedford/Fairmont supersedes Belle; exact site/access unfinished.",
+    "follow_up_issues": [
+      106
+    ]
+  },
+  {
+    "section": 27,
+    "title": "BLACKRIDGE AND OTHER MAJOR ASSETS",
+    "status": "PARTIAL_OR_FUTURE",
+    "disposition": "Blackridge Nevada scope retained; exact site unresolved.",
+    "follow_up_issues": [
+      106
+    ]
+  },
+  {
+    "section": 28,
+    "title": "CORPORATE ASSET CENSUS",
+    "status": "PARTIAL_OR_FUTURE",
+    "disposition": "919 files and 78,145 discovery occurrences indexed; semantic long tail remains.",
+    "follow_up_issues": [
+      108
+    ]
+  },
+  {
+    "section": 29,
+    "title": "TEMPORAL AND BITEMPORAL INTEGRITY",
+    "status": "PARTIAL_OR_FUTURE",
+    "disposition": "Half-open dates supported; institutional founding no longer invents physical occupancy.",
+    "follow_up_issues": [
+      108
+    ]
+  },
+  {
+    "section": 30,
+    "title": "CORPORATE-HISTORY MAP ENGINE",
+    "status": "PARTIAL_OR_FUTURE",
+    "disposition": "Current/pre-acquisition BS&T maps present; early route geometry unlocated.",
+    "follow_up_issues": [
+      108
+    ]
+  },
+  {
+    "section": 31,
+    "title": "PROVENANCE MUST BE FEATURE-LEVEL",
+    "status": "IMPLEMENTED_FOR_FRAMEWORK",
+    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above."
+  },
+  {
+    "section": 32,
+    "title": "REPOSITORY INTEGRATION",
+    "status": "IMPLEMENTED_FOR_FRAMEWORK",
+    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above."
+  },
+  {
+    "section": 33,
+    "title": "BRAND ASSET HANDLING",
+    "status": "IMPLEMENTED_FOR_FRAMEWORK",
+    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above."
+  },
+  {
+    "section": 34,
+    "title": "MAP PRODUCT CONTROL",
+    "status": "IMPLEMENTED_FOR_FRAMEWORK",
+    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above."
+  },
+  {
+    "section": 35,
+    "title": "VALIDATION REQUIREMENTS",
+    "status": "IMPLEMENTED_FOR_FRAMEWORK",
+    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above."
+  },
+  {
+    "section": 36,
+    "title": "TESTS",
+    "status": "IMPLEMENTED_FOR_FRAMEWORK",
+    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above."
+  },
+  {
+    "section": 37,
+    "title": "WEB AND INTERACTIVE MAP FUTURE",
+    "status": "PARTIAL_OR_FUTURE",
+    "disposition": "Future interactive views deferred; portable QGIS supplied.",
+    "follow_up_issues": [
+      108
+    ]
+  },
+  {
+    "section": 38,
+    "title": "DECISION-MAKING METHOD",
+    "status": "IMPLEMENTED_FOR_FRAMEWORK",
+    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above."
+  },
+  {
+    "section": 39,
+    "title": "USER CONTINUATION RULE",
+    "status": "IMPLEMENTED_FOR_FRAMEWORK",
+    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above."
+  },
+  {
+    "section": 40,
+    "title": "OPEN QUESTIONS TO SURFACE, NOT SILENTLY ANSWER",
+    "status": "PARTIAL_OR_FUTURE",
+    "disposition": "Known decisions closed; remaining history and implementation gaps explicitly listed.",
+    "follow_up_issues": [
+      106,
+      107,
+      108
+    ]
+  },
+  {
+    "section": 41,
+    "title": "FIRST EXECUTION PHASE",
+    "status": "PARTIAL_OR_FUTURE",
+    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above.",
+    "follow_up_issues": [
+      106,
+      107,
+      108
+    ]
+  },
+  {
+    "section": 42,
+    "title": "SECOND EXECUTION PHASE",
+    "status": "PARTIAL_OR_FUTURE",
+    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above.",
+    "follow_up_issues": [
+      106,
+      107,
+      108
+    ]
+  },
+  {
+    "section": 43,
+    "title": "THIRD EXECUTION PHASE",
+    "status": "PARTIAL_OR_FUTURE",
+    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above.",
+    "follow_up_issues": [
+      106,
+      107,
+      108
+    ]
+  },
+  {
+    "section": 44,
+    "title": "FOURTH EXECUTION PHASE",
+    "status": "PARTIAL_OR_FUTURE",
+    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above.",
+    "follow_up_issues": [
+      106,
+      107,
+      108
+    ]
+  },
+  {
+    "section": 45,
+    "title": "FIFTH EXECUTION PHASE",
+    "status": "PARTIAL_OR_FUTURE",
+    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above.",
+    "follow_up_issues": [
+      106,
+      107,
+      108
+    ]
+  },
+  {
+    "section": 46,
+    "title": "RELEASE PACKAGE",
+    "status": "PARTIAL_OR_FUTURE",
+    "disposition": "New bundles built to ignored dist for GitHub Releases; prior bytes remain immutable.",
+    "follow_up_issues": [
+      108
+    ]
+  },
+  {
+    "section": 47,
+    "title": "DEFINITION OF DONE",
+    "status": "PARTIAL_OR_FUTURE",
+    "disposition": "Framework reconciliation eligible for closure; entire geographic program incomplete.",
+    "follow_up_issues": [
+      106,
+      107,
+      108
+    ]
+  },
+  {
+    "section": 48,
+    "title": "DO-NOT-DO LIST",
+    "status": "IMPLEMENTED_FOR_FRAMEWORK",
+    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above."
+  },
+  {
+    "section": 49,
+    "title": "IMMEDIATE START INSTRUCTION",
+    "status": "IMPLEMENTED_FOR_FRAMEWORK",
+    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above."
+  }
+]

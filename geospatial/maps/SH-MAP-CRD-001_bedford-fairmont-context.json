@@ -1,0 +1,33 @@
+{
+  "map_id": "SH-MAP-CRD-001_bedford-fairmont-context",
+  "title": "Bedford / Cradle",
+  "version": "0.1.0-rc4",
+  "effective_date": "2026-09-07",
+  "world_state": "CANON_RECONCILED_2026-09-07",
+  "canon_status": "PROPOSED_SEARCH_AREA",
+  "source_package_version": "0.1.0-rc4",
+  "source_commit": "d91a22c35c91b213204411421de88815f27d8e16",
+  "source_geopackage_sha256": "0a1489e6e4605373cf0d25dd6e25a020c8d922ee9ec6c052d9410ad4e2303f0f",
+  "projection": "EPSG:26917",
+  "build_timestamp": "2026-09-07T16:00:00+00:00",
+  "builder": "geospatial/scripts/render_maps.py",
+  "review_status": "RENDERED_PENDING_VISUAL_QA",
+  "layers": [
+    "search_areas",
+    "ref_fairmont_*"
+  ],
+  "files": {
+    "pdf": {
+      "path": "SH-MAP-CRD-001_bedford-fairmont-context.pdf",
+      "sha256": "1afb2e0f54676ca8cb485afc498a90b0d02439441ef405aca1124156cc7af70c"
+    },
+    "svg": {
+      "path": "SH-MAP-CRD-001_bedford-fairmont-context.svg",
+      "sha256": "bfd4dec26d872f83b4291b12cf312573d5e770f6c3e10cb623472154acc70472"
+    },
+    "png": {
+      "path": "SH-MAP-CRD-001_bedford-fairmont-context.png",
+      "sha256": "b5364cff696b2f58779523b295a2c2d3bab0644eae01ba4e9a7ad394d7e73632"
+    }
+  }
+}

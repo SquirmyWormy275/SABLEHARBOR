@@ -175,6 +175,15 @@ The v0.3 lore, base decision register, original lineage and other finance-pinned
 - [Horizontal source PNG](../assets/brand/logos/demotte-reclamation-services__primary-horizontal.png) and [visual manifest](../assets/brand/demotte_reclamation_visual_manifest.json)
 - [Current Cradle closeout](canon/CRADLE_CLOSEOUT_2026-09-06.md) and [structured record](structured/cradle_closeout_2026-09-06.json)
 
+## Geospatial framework — September 7 reconciliation
+
+- [Geo source, authority and rebuild guide](../geospatial/README.md)
+- [Geographic framework atlas v0.1.0-rc4](../geospatial/maps/SABLE_HARBOR_Geographic_Framework_Atlas_v0.1.0-rc4.pdf)
+- [Program closeout matrix, original sections 0–49](../geospatial/docs/PROGRAM_CLOSEOUT_MATRIX.md)
+- [Numerical industrial/GIS reconciliation](../geospatial/reports/INDUSTRIAL_RECONCILIATION.json)
+- [Immutable source inventory for Geo PRs #94 and #96](../geospatial/history/PR_SOURCE_INVENTORY.json)
+- [Geo release and supersession record](../geospatial/releases/README.md)
+
 ## September 7 Northstar Minerals artwork approval
 
 - [Controlling visual identity decision](canon/NORTHSTAR_MINERALS_VISUAL_IDENTITY_2026-09-07.md)

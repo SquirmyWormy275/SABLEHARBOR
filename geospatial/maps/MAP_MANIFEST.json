@@ -1,0 +1,381 @@
+[
+  {
+    "map_id": "SH-MAP-ENT-001_locked-geographic-framework",
+    "title": "Locked geographic framework",
+    "version": "0.1.0-rc4",
+    "effective_date": "2026-09-07",
+    "world_state": "CANON_RECONCILED_2026-09-07",
+    "canon_status": "CONFLICT_REVIEW",
+    "source_package_version": "0.1.0-rc4",
+    "source_commit": "d91a22c35c91b213204411421de88815f27d8e16",
+    "source_geopackage_sha256": "0a1489e6e4605373cf0d25dd6e25a020c8d922ee9ec6c052d9410ad4e2303f0f",
+    "projection": "EPSG:26910;26917;26913",
+    "build_timestamp": "2026-09-07T16:00:00+00:00",
+    "builder": "geospatial/scripts/render_maps.py",
+    "review_status": "RENDERED_PENDING_VISUAL_QA",
+    "layers": [
+      "search_areas",
+      "red_wash_anchor",
+      "federal reference layers"
+    ],
+    "files": {
+      "pdf": {
+        "path": "SH-MAP-ENT-001_locked-geographic-framework.pdf",
+        "sha256": "f7e5cb4f3fb04d31182a10206246aaf4b2473e3745c949a19607906d347fbc34"
+      },
+      "svg": {
+        "path": "SH-MAP-ENT-001_locked-geographic-framework.svg",
+        "sha256": "05effca77a8d8cb085f56c23063d91fe3ead23cd84eaaea7fce19404f1b5cf93"
+      },
+      "png": {
+        "path": "SH-MAP-ENT-001_locked-geographic-framework.png",
+        "sha256": "4763ce2705a3f14c9b30b40e31415304a0621cbe7bc5fb15147734721b53f3f3"
+      }
+    }
+  },
+  {
+    "map_id": "SH-MAP-ENT-002_corporate-geographic-census",
+    "title": "Corporate geographic census",
+    "version": "0.1.0-rc4",
+    "effective_date": "2026-09-07",
+    "world_state": "CANON_RECONCILED_2026-09-07",
+    "canon_status": "CONSTRAINED_CENSUS",
+    "source_package_version": "0.1.0-rc4",
+    "source_commit": "d91a22c35c91b213204411421de88815f27d8e16",
+    "source_geopackage_sha256": "0a1489e6e4605373cf0d25dd6e25a020c8d922ee9ec6c052d9410ad4e2303f0f",
+    "projection": "EPSG:5070",
+    "build_timestamp": "2026-09-07T16:00:00+00:00",
+    "builder": "geospatial/scripts/render_maps.py",
+    "review_status": "RENDERED_PENDING_VISUAL_QA",
+    "layers": [
+      "ref_us_states",
+      "reference_place_labels",
+      "search_areas",
+      "object_registry"
+    ],
+    "files": {
+      "pdf": {
+        "path": "SH-MAP-ENT-002_corporate-geographic-census.pdf",
+        "sha256": "5ba3177803f06df500627e1d6a98bba29c8332d5a551b77941af382746a2dcc8"
+      },
+      "svg": {
+        "path": "SH-MAP-ENT-002_corporate-geographic-census.svg",
+        "sha256": "a3cc0b0e48f05104dbfe99a2f0800ecbbf4c3d36cab939fe49b8d3cf0af02bf8"
+      },
+      "png": {
+        "path": "SH-MAP-ENT-002_corporate-geographic-census.png",
+        "sha256": "08e354089d27e9bc8e00fdc053b375191464ba903361576e853707b8fcb8f0ae"
+      }
+    }
+  },
+  {
+    "map_id": "SH-MAP-RWM-001_red-wash-context",
+    "title": "Red Wash current Sweetwater context",
+    "version": "0.1.0-rc4",
+    "effective_date": "2026-09-07",
+    "world_state": "CANON_RECONCILED_2026-09-07",
+    "canon_status": "CANON_ANCHOR_WITH_PROPOSED_SITE_GEOMETRY",
+    "source_package_version": "0.1.0-rc4",
+    "source_commit": "d91a22c35c91b213204411421de88815f27d8e16",
+    "source_geopackage_sha256": "0a1489e6e4605373cf0d25dd6e25a020c8d922ee9ec6c052d9410ad4e2303f0f",
+    "projection": "EPSG:26913",
+    "build_timestamp": "2026-09-07T16:00:00+00:00",
+    "builder": "geospatial/scripts/render_maps.py",
+    "review_status": "RENDERED_PENDING_VISUAL_QA",
+    "layers": [
+      "search_areas",
+      "red_wash_anchor",
+      "ref_wyoming_counties",
+      "ref_wamsutter_*"
+    ],
+    "files": {
+      "pdf": {
+        "path": "SH-MAP-RWM-001_red-wash-context.pdf",
+        "sha256": "fb76d27036533c25531f94ada5169d6946ebb8b148385629eccc67a3b43f96fa"
+      },
+      "svg": {
+        "path": "SH-MAP-RWM-001_red-wash-context.svg",
+        "sha256": "9d90c8bd3aac54bae114a4cf12a059ba1f7f1a16d1b25db19ed0a7ca8b515339"
+      },
+      "png": {
+        "path": "SH-MAP-RWM-001_red-wash-context.png",
+        "sha256": "da8ec7bee77a18b7338271f906ace7dcad5c19ddeb47547490f299ab75be1f3d"
+      }
+    }
+  },
+  {
+    "map_id": "SH-MAP-SAC-001_headquarters-context",
+    "title": "Sacramento headquarters",
+    "version": "0.1.0-rc4",
+    "effective_date": "2026-09-07",
+    "world_state": "CANON_RECONCILED_2026-09-07",
+    "canon_status": "PROPOSED_SEARCH_AREA",
+    "source_package_version": "0.1.0-rc4",
+    "source_commit": "d91a22c35c91b213204411421de88815f27d8e16",
+    "source_geopackage_sha256": "0a1489e6e4605373cf0d25dd6e25a020c8d922ee9ec6c052d9410ad4e2303f0f",
+    "projection": "EPSG:26910",
+    "build_timestamp": "2026-09-07T16:00:00+00:00",
+    "builder": "geospatial/scripts/render_maps.py",
+    "review_status": "RENDERED_PENDING_VISUAL_QA",
+    "layers": [
+      "search_areas",
+      "ref_sacramento_*"
+    ],
+    "files": {
+      "pdf": {
+        "path": "SH-MAP-SAC-001_headquarters-context.pdf",
+        "sha256": "fe11938b1a0d6bfd5c958e6d3c98518af1a6cf5df8d0015aa0aabaec03cd6cb1"
+      },
+      "svg": {
+        "path": "SH-MAP-SAC-001_headquarters-context.svg",
+        "sha256": "30389796b85dbe0da3cbc1424578de9824732f76a7111accf35649d020e9814d"
+      },
+      "png": {
+        "path": "SH-MAP-SAC-001_headquarters-context.png",
+        "sha256": "5941fad695e10eb4f1d49655db8db326575edc718d7a92572c8c22af1250e289"
+      }
+    }
+  },
+  {
+    "map_id": "SH-MAP-WIL-001_fort-hazelwood-context",
+    "title": "The Fort / Willow",
+    "version": "0.1.0-rc4",
+    "effective_date": "2026-09-07",
+    "world_state": "CANON_RECONCILED_2026-09-07",
+    "canon_status": "PROPOSED_SEARCH_AREA",
+    "source_package_version": "0.1.0-rc4",
+    "source_commit": "d91a22c35c91b213204411421de88815f27d8e16",
+    "source_geopackage_sha256": "0a1489e6e4605373cf0d25dd6e25a020c8d922ee9ec6c052d9410ad4e2303f0f",
+    "projection": "EPSG:26917",
+    "build_timestamp": "2026-09-07T16:00:00+00:00",
+    "builder": "geospatial/scripts/render_maps.py",
+    "review_status": "RENDERED_PENDING_VISUAL_QA",
+    "layers": [
+      "search_areas",
+      "ref_hazelwood_*"
+    ],
+    "files": {
+      "pdf": {
+        "path": "SH-MAP-WIL-001_fort-hazelwood-context.pdf",
+        "sha256": "f5a1083b6416ee64787c36304c1bd09feda3a6ab1a6cb1d86365a9c7612713ad"
+      },
+      "svg": {
+        "path": "SH-MAP-WIL-001_fort-hazelwood-context.svg",
+        "sha256": "5384c9c7a59b19939b3f9a6d1285b4d0aab3f0e9878dda128d703dde96becbd8"
+      },
+      "png": {
+        "path": "SH-MAP-WIL-001_fort-hazelwood-context.png",
+        "sha256": "abdd60f0dd84265a1ce824ed44f239702b277d7e56bfc85e6ada19b6219cb52b"
+      }
+    }
+  },
+  {
+    "map_id": "SH-MAP-CRD-001_bedford-fairmont-context",
+    "title": "Bedford / Cradle",
+    "version": "0.1.0-rc4",
+    "effective_date": "2026-09-07",
+    "world_state": "CANON_RECONCILED_2026-09-07",
+    "canon_status": "PROPOSED_SEARCH_AREA",
+    "source_package_version": "0.1.0-rc4",
+    "source_commit": "d91a22c35c91b213204411421de88815f27d8e16",
+    "source_geopackage_sha256": "0a1489e6e4605373cf0d25dd6e25a020c8d922ee9ec6c052d9410ad4e2303f0f",
+    "projection": "EPSG:26917",
+    "build_timestamp": "2026-09-07T16:00:00+00:00",
+    "builder": "geospatial/scripts/render_maps.py",
+    "review_status": "RENDERED_PENDING_VISUAL_QA",
+    "layers": [
+      "search_areas",
+      "ref_fairmont_*"
+    ],
+    "files": {
+      "pdf": {
+        "path": "SH-MAP-CRD-001_bedford-fairmont-context.pdf",
+        "sha256": "1afb2e0f54676ca8cb485afc498a90b0d02439441ef405aca1124156cc7af70c"
+      },
+      "svg": {
+        "path": "SH-MAP-CRD-001_bedford-fairmont-context.svg",
+        "sha256": "bfd4dec26d872f83b4291b12cf312573d5e770f6c3e10cb623472154acc70472"
+      },
+      "png": {
+        "path": "SH-MAP-CRD-001_bedford-fairmont-context.png",
+        "sha256": "b5364cff696b2f58779523b295a2c2d3bab0644eae01ba4e9a7ad394d7e73632"
+      }
+    }
+  },
+  {
+    "map_id": "SH-MAP-BST-001_wamsutter-interchange-study",
+    "title": "Wamsutter interchange study",
+    "version": "0.1.0-rc4",
+    "effective_date": "2026-09-07",
+    "world_state": "CANON_RECONCILED_2026-09-07",
+    "canon_status": "PROPOSED_SEARCH_AREA",
+    "source_package_version": "0.1.0-rc4",
+    "source_commit": "d91a22c35c91b213204411421de88815f27d8e16",
+    "source_geopackage_sha256": "0a1489e6e4605373cf0d25dd6e25a020c8d922ee9ec6c052d9410ad4e2303f0f",
+    "projection": "EPSG:26913",
+    "build_timestamp": "2026-09-07T16:00:00+00:00",
+    "builder": "geospatial/scripts/render_maps.py",
+    "review_status": "RENDERED_PENDING_VISUAL_QA",
+    "layers": [
+      "search_areas",
+      "ref_wamsutter_*"
+    ],
+    "files": {
+      "pdf": {
+        "path": "SH-MAP-BST-001_wamsutter-interchange-study.pdf",
+        "sha256": "994412336f42a66d3172f4e090bdde4911f3cbcf60294268d2f9fd469e27433e"
+      },
+      "svg": {
+        "path": "SH-MAP-BST-001_wamsutter-interchange-study.svg",
+        "sha256": "d44f3fc270ccfdfbea856dca1b27483281ea285e28e8483e20931b6a818a6d8d"
+      },
+      "png": {
+        "path": "SH-MAP-BST-001_wamsutter-interchange-study.png",
+        "sha256": "ed3d35bf214d69877afce773d71cb405e78059fc0f3ccd30a5ae0d081d94d29c"
+      }
+    }
+  },
+  {
+    "map_id": "SH-MAP-ENT-003_open-geographic-questions",
+    "title": "Open geographic questions",
+    "version": "0.1.0-rc4",
+    "effective_date": "2026-09-07",
+    "world_state": "CANON_RECONCILED_2026-09-07",
+    "canon_status": "CONFLICT_REVIEW",
+    "source_package_version": "0.1.0-rc4",
+    "source_commit": "d91a22c35c91b213204411421de88815f27d8e16",
+    "source_geopackage_sha256": "0a1489e6e4605373cf0d25dd6e25a020c8d922ee9ec6c052d9410ad4e2303f0f",
+    "projection": "EPSG:26913;26917",
+    "build_timestamp": "2026-09-07T16:00:00+00:00",
+    "builder": "geospatial/scripts/render_maps.py",
+    "review_status": "RENDERED_PENDING_VISUAL_QA",
+    "layers": [
+      "search_areas",
+      "red_wash_anchor",
+      "federal reference layers",
+      "conflicts",
+      "object_registry"
+    ],
+    "files": {
+      "pdf": {
+        "path": "SH-MAP-ENT-003_open-geographic-questions.pdf",
+        "sha256": "6dfe1c1665075e5de96bcc99f973d9019d291215f4d7a39ef037d001fb172f17"
+      },
+      "svg": {
+        "path": "SH-MAP-ENT-003_open-geographic-questions.svg",
+        "sha256": "05bffbf7a33c6d5594192f215dd9e2e00858be15754fae14d364a2bc0ba834f4"
+      },
+      "png": {
+        "path": "SH-MAP-ENT-003_open-geographic-questions.png",
+        "sha256": "c58d456eaba26d79331ee5096762179abb8f0abbd3a9682d6cfd5624e908462b"
+      }
+    }
+  },
+  {
+    "map_id": "SH-MAP-RWM-002_red-wash-site-study",
+    "title": "Red Wash surface site study",
+    "version": "0.1.0-rc4",
+    "effective_date": "2026-09-07",
+    "world_state": "CANON_RECONCILED_2026-09-07",
+    "canon_status": "PROPOSED_SITE_GEOMETRY",
+    "source_package_version": "0.1.0-rc4",
+    "source_commit": "d91a22c35c91b213204411421de88815f27d8e16",
+    "source_geopackage_sha256": "0a1489e6e4605373cf0d25dd6e25a020c8d922ee9ec6c052d9410ad4e2303f0f",
+    "projection": "EPSG:26913",
+    "build_timestamp": "2026-09-07T16:00:00+00:00",
+    "builder": "geospatial/scripts/render_maps.py",
+    "review_status": "RENDERED_PENDING_VISUAL_QA",
+    "layers": [
+      "spatial_assets",
+      "facilities",
+      "red_wash_anchor",
+      "ref_wamsutter_*"
+    ],
+    "files": {
+      "pdf": {
+        "path": "SH-MAP-RWM-002_red-wash-site-study.pdf",
+        "sha256": "de48efb015a6eedc842a10aa7a5b166a89ce70c8b9cb0cf23e12110176b94fad"
+      },
+      "svg": {
+        "path": "SH-MAP-RWM-002_red-wash-site-study.svg",
+        "sha256": "53271ee4260c72690ec87c6d60e8dd00dcac8523c12abeb1574f359bda3d9456"
+      },
+      "png": {
+        "path": "SH-MAP-RWM-002_red-wash-site-study.png",
+        "sha256": "f4934e8908c626bd7731afb41379918613c407f1f5f380be0e338f04e7138bba"
+      }
+    }
+  },
+  {
+    "map_id": "SH-MAP-BST-001_bst-pre-acquisition-system",
+    "title": "BS&T / pre-acquisition case",
+    "version": "0.1.0-rc4",
+    "effective_date": "2026-01-06",
+    "world_state": "CANON_RECONCILED_2026-09-07",
+    "canon_status": "PRE_ACQUISITION_CASE_2026_01_06",
+    "source_package_version": "0.1.0-rc4",
+    "source_commit": "d91a22c35c91b213204411421de88815f27d8e16",
+    "source_geopackage_sha256": "0a1489e6e4605373cf0d25dd6e25a020c8d922ee9ec6c052d9410ad4e2303f0f",
+    "projection": "EPSG:26913",
+    "build_timestamp": "2026-09-07T16:00:00+00:00",
+    "builder": "geospatial/scripts/render_maps.py",
+    "review_status": "RENDERED_PENDING_VISUAL_QA",
+    "layers": [
+      "rail_segments",
+      "roads",
+      "rail_nodes",
+      "rail_bridges",
+      "rail_crossings"
+    ],
+    "files": {
+      "pdf": {
+        "path": "SH-MAP-BST-001_bst-pre-acquisition-system.pdf",
+        "sha256": "61d63984c01fa2b37052e4b82e03d8bb87020db510f79673e8c44de8e461428c"
+      },
+      "svg": {
+        "path": "SH-MAP-BST-001_bst-pre-acquisition-system.svg",
+        "sha256": "f009bd84f2dfceb535794d11fe0f667e753d922c24eb4d81b058baa1b0ccbb27"
+      },
+      "png": {
+        "path": "SH-MAP-BST-001_bst-pre-acquisition-system.png",
+        "sha256": "285bd2f917b6418381ccaba3df0508ef5bc6e6a16def37f2fb4c6029461793cc"
+      }
+    }
+  },
+  {
+    "map_id": "SH-MAP-BST-002_bst-engineering-alignment",
+    "title": "BS&T / accepted case geography",
+    "version": "0.1.0-rc4",
+    "effective_date": "2026-09-07",
+    "world_state": "CANON_RECONCILED_2026-09-07",
+    "canon_status": "LOCKED_DERIVED_IMPLEMENTATION",
+    "source_package_version": "0.1.0-rc4",
+    "source_commit": "d91a22c35c91b213204411421de88815f27d8e16",
+    "source_geopackage_sha256": "0a1489e6e4605373cf0d25dd6e25a020c8d922ee9ec6c052d9410ad4e2303f0f",
+    "projection": "EPSG:26913",
+    "build_timestamp": "2026-09-07T16:00:00+00:00",
+    "builder": "geospatial/scripts/render_maps.py",
+    "review_status": "RENDERED_PENDING_VISUAL_QA",
+    "layers": [
+      "rail_segments",
+      "roads",
+      "rail_nodes",
+      "rail_bridges",
+      "rail_crossings"
+    ],
+    "files": {
+      "pdf": {
+        "path": "SH-MAP-BST-002_bst-engineering-alignment.pdf",
+        "sha256": "856f00f66089276dcaf23df6665f57bfdf0dd3f06c55b6bcc53ba3a0e38f33f2"
+      },
+      "svg": {
+        "path": "SH-MAP-BST-002_bst-engineering-alignment.svg",
+        "sha256": "e5e6b5b0ef5932eaf0c6aa567e68b6007e95958b387eb752ce74b31da449edb7"
+      },
+      "png": {
+        "path": "SH-MAP-BST-002_bst-engineering-alignment.png",
+        "sha256": "acbc90c0fdf12089a161903b35660b5404e7ba2ab4690370cec490cfb5cdefaa"
+      }
+    }
+  }
+]

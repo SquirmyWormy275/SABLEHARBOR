@@ -111,3 +111,7 @@ No open-source license is granted. Repository visibility does not grant permissi
 ## Klein historical identity — September 7 update
 
 **Klein** is the name of Gid Voss's historical Pittsburgh outpost, rechartered as Willow in 2022. The [name and identity decision](docs/canon/KLEIN_NAME_AND_IDENTITY_2026-09-07.md), [Willow/Klein closeout](docs/canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md), [corporate record](docs/organization/WILLOW_KLEIN_CORPORATE_RECORD.md) and [approved logo](assets/brand/logos/klein__primary-horizontal.png) control the update. Earlier names survive only in preserved source history and supersession records. The v0.3.1 sources are current naming successors; dated addenda retain precedence.
+
+## Geographic framework
+
+The [reconciled Geo package](geospatial/README.md) combines current enterprise canon with the accepted industrial geography. Open the [atlas](geospatial/maps/SABLE_HARBOR_Geographic_Framework_Atlas_v0.1.0-rc4.pdf), [QGIS project](geospatial/qgis/sable_harbor_master.qgz), and [remaining-work matrix](geospatial/docs/PROGRAM_CLOSEOUT_MATRIX.md). Source and geometry status govern each representation.

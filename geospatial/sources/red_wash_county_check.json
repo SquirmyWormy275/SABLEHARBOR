@@ -1,0 +1,21 @@
+{
+  "request_url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/State_County/MapServer/1/query?f=geojson&geometry=-106.9213%2C42.3127&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=NAME%2CSTATE%2CCOUNTY%2CGEOID&returnGeometry=false",
+  "response": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "geometry": null,
+        "properties": {
+          "NAME": "Carbon County",
+          "STATE": "56",
+          "COUNTY": "007",
+          "GEOID": "56007"
+        }
+      }
+    ]
+  },
+  "response_sha256": "c5316201eda3210e817056a58b69b91752c2c29064bf0d103c2f1c2822564629",
+  "accessed_date": "2026-09-06",
+  "method": "Server-side point intersection with unsimplified county geometry"
+}
