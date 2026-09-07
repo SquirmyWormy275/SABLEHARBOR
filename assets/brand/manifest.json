@@ -22,8 +22,8 @@
     "Red Wash / Pale Sun",
     "Klein"
   ],
-  "asset_count": 115,
-  "logo_count": 58,
+  "asset_count": 110,
+  "logo_count": 56,
   "formats": [
     "svg",
     "png"
@@ -1254,78 +1254,6 @@
       "sha256": "174bbee045f8ab1ba095d904b7f66765fae8cf6f6ae25ece1e86680ad3c3b5dd"
     },
     {
-      "brand": "Emberline",
-      "brand_slug": "emberline",
-      "classification": "historical business line",
-      "canonical_status": "LOCKED historical status: active through 2025, then absorbed into enduring 2026 work.",
-      "variant": "primary-horizontal",
-      "format": "svg",
-      "width": 1600,
-      "height": 500,
-      "path": "assets/brand/logos/emberline__primary-horizontal.svg",
-      "sha256": "e43af0f305aa3d4ca07ff80b9c897aaa9be944cfbff0192c0010ad0c04569948"
-    },
-    {
-      "brand": "Emberline",
-      "brand_slug": "emberline",
-      "classification": "historical business line",
-      "canonical_status": "LOCKED historical status: active through 2025, then absorbed into enduring 2026 work.",
-      "variant": "primary-horizontal",
-      "format": "png",
-      "width": 2400,
-      "height": 750,
-      "path": "assets/brand/logos/emberline__primary-horizontal.png",
-      "sha256": "8cb73d9e030683fa8bc045723181895382c2452eb13b15857bd036cb3d206f50"
-    },
-    {
-      "brand": "Emberline",
-      "brand_slug": "emberline",
-      "classification": "historical business line",
-      "canonical_status": "LOCKED historical status: active through 2025, then absorbed into enduring 2026 work.",
-      "variant": "mark",
-      "format": "svg",
-      "width": 1000,
-      "height": 1000,
-      "path": "assets/brand/logos/emberline__mark.svg",
-      "sha256": "eb3609c8c53c34efc08e8f8f3ba78cf87cbd09d2fc8275c786033e44c06dce31"
-    },
-    {
-      "brand": "Emberline",
-      "brand_slug": "emberline",
-      "classification": "historical business line",
-      "canonical_status": "LOCKED historical status: active through 2025, then absorbed into enduring 2026 work.",
-      "variant": "mark",
-      "format": "png",
-      "width": 1600,
-      "height": 1600,
-      "path": "assets/brand/logos/emberline__mark.png",
-      "sha256": "ab862db3697184d3cc94e9b6c5767d7e26e68ddf7a7ac7117ac049fc2e22dc25"
-    },
-    {
-      "brand": "Emberline",
-      "brand_slug": "emberline",
-      "classification": "historical business line",
-      "canonical_status": "LOCKED historical status: active through 2025, then absorbed into enduring 2026 work.",
-      "variant": "reverse-horizontal",
-      "format": "svg",
-      "width": 1600,
-      "height": 500,
-      "path": "assets/brand/logos/emberline__reverse-horizontal.svg",
-      "sha256": "41717ef6f1f69d6d73ef9f9456e403869bca2c7c354d73bb343f2090c6fb88af"
-    },
-    {
-      "brand": "Emberline",
-      "brand_slug": "emberline",
-      "classification": "historical business line",
-      "canonical_status": "LOCKED historical status: active through 2025, then absorbed into enduring 2026 work.",
-      "variant": "reverse-horizontal",
-      "format": "png",
-      "width": 2400,
-      "height": 750,
-      "path": "assets/brand/logos/emberline__reverse-horizontal.png",
-      "sha256": "ea339ad7dc0e0a50cb7ae253699ab0ba68eaa71cdbcfa7797ba0f73d151b67c3"
-    },
-    {
       "brand": "Red Wash / Pale Sun",
       "brand_slug": "red-wash-pale-sun",
       "classification": "endorsed operating lockup",
@@ -1408,8 +1336,22 @@
       "height": 887,
       "path": "assets/brand/logos/klein__primary-horizontal.png",
       "sha256": "907036b9121328c49498d1cd4c856e2f52235c792c5b4d49be0b4fee09127f1e"
+    },
+    {
+      "brand": "Emberline",
+      "brand_slug": "emberline",
+      "classification": "historical coal field and commercial program",
+      "canonical_status": "LOCKED September 7, 2026; controlling owner-approved PNG source artwork. Earlier SVG/PNG forms are superseded.",
+      "variant": "primary-horizontal",
+      "format": "png",
+      "width": 2172,
+      "height": 724,
+      "path": "assets/brand/logos/emberline__primary-horizontal.png",
+      "sha256": "ddf4273bca6f9e0c9b050a1fc741b151550b86af5e2d2a98c46fdadfaf849312"
     }
   ],
   "current_industrial_identity_manifest": "assets/brand/industrial_visual_manifest.json",
-  "klein_source_override": "assets/brand/klein_visual_manifest.json"
+  "klein_source_override": "assets/brand/klein_visual_manifest.json",
+  "emberline_source_override": "assets/brand/emberline_visual_manifest.json",
+  "last_source_update": "2026-09-07"
 }

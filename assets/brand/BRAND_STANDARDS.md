@@ -1,6 +1,6 @@
 # Sable Harbor Brand Standards
 
-**Version:** 0.2.2
+**Version:** 0.2.3
 **Date:** 2026-09-07
 **Status:** Production candidate identity system; does not independently create or change canon
 
@@ -91,3 +91,9 @@ Before external commercial adoption, review [`docs/legal/PRELIMINARY_NAME_AND_MA
 ## Klein approved historical identity
 
 The September 7 selected PNG and [Klein visual manifest](klein_visual_manifest.json) control Klein artwork. It is a historical identity, not an additional current business line. Preserve the source bytes; petrol blue and graphite describe the selected artwork without asserting unapproved production color specifications. The previous name's steel swatch and orange/stone design do not transfer to Klein.
+
+## Emberline approved historical identity
+
+The [September 7 decision](../../docs/canon/EMBERLINE_VISUAL_IDENTITY_2026-09-07.md) and [visual manifest](emberline_visual_manifest.json) control Emberline's coal ridge/seam emblem, heavy lettering, oxide red, coal black and ivory source artwork. The selected coal ridge is an approved motif. The earlier geometric system and all six old Emberline SVG/PNG files are superseded.
+
+Use the exact approved horizontal PNG, including its ivory field. No current reverse, one-color, isolated mark or vector master is supplied. Do not substitute a historical SVG or manufacture additional approved variants. Emberline remains a historical program and is not added to the seven current business lines.

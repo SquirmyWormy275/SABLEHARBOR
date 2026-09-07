@@ -59,9 +59,21 @@ below and is not a current distribution candidate.
 | Foundry | 3 | 3 | 3 |
 | Red Wash Mine | 3 | 3 | 3 |
 | Blood, Sweat & Tears Railway | 3 | 3 | 3 |
-| Emberline | 3 | 3 | 3 |
+| Emberline | 0 | 1 | 1 |
 | Red Wash / Pale Sun | 3 | 3 | 3 |
 
 ## Notes
 
 The QA contact sheet used during generation is intentionally excluded from `assets/brand/logos/` and from the GitHub production package. It is not a production logo asset.
+
+## September 7 Emberline source approval
+
+- Exact owner-selected image copied to `logos/emberline__primary-horizontal.png`; 2172 × 724 RGB pixels, 939,954 bytes.
+- SHA-256: `ddf4273bca6f9e0c9b050a1fc741b151550b86af5e2d2a98c46fdadfaf849312`.
+- PNG structural verification and full pixel decode: PASS.
+- Selected-output comparison: PASS, byte-for-byte; no recompression or background removal.
+- All six prior Emberline SVG/PNG sources: PASS, preserved with their original SHA-256 in `history/emberline/2026-09-07/manifest.json` and excluded from the current production inventory.
+- Current Emberline production entry: one approved horizontal PNG. The generic requirement that each SVG has a convenience PNG remains applicable to the retained vector system; it does not require inventing a vector source for this approved raster override.
+- Historical brand distribution ZIP and all prior release/source-lock files remain unchanged.
+
+The integration PR records the repository validation and full CI results before merge. The [controlling decision](../../docs/canon/EMBERLINE_VISUAL_IDENTITY_2026-09-07.md) defines the approval and supersession scope.

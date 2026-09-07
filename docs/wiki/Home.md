@@ -10,3 +10,5 @@ Sable Harbor is primarily one operating company with selective subsidiaries and 
 For fact state and unresolved matters, use the [decision register](../canon/DECISION_REGISTER_v0.3.1.md). LOCKED, PROVISIONAL, OPEN, and SUPERSEDED distinctions remain controlling.
 
 The historical Pittsburgh outpost is **Klein**, rechartered as Willow in 2022. Its [name and approved identity](../canon/KLEIN_NAME_AND_IDENTITY_2026-09-07.md) and [corporate record](../organization/WILLOW_KLEIN_CORPORATE_RECORD.md) distinguish it from Emberline.
+
+Emberline's [approved historical identity](../canon/EMBERLINE_VISUAL_IDENTITY_2026-09-07.md) uses the owner-selected coal-company logo; its earlier geometric artwork is superseded.
