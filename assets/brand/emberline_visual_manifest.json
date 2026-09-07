@@ -1,0 +1,66 @@
+{
+  "identity": "Emberline",
+  "state": "APPROVED_SOURCE_ARTWORK",
+  "approval_date": "2026-09-07",
+  "controlling_decision": "docs/canon/EMBERLINE_VISUAL_IDENTITY_2026-09-07.md",
+  "classification": "historical Charleston coal field and commercial program, active through 2025",
+  "approval_basis": "Owner requested an industrial, coal-like, old-school redesign, viewed the generated image and said: nice. Lock it.",
+  "assets": [
+    {
+      "path": "assets/brand/logos/emberline__primary-horizontal.png",
+      "sha256": "ddf4273bca6f9e0c9b050a1fc741b151550b86af5e2d2a98c46fdadfaf849312",
+      "bytes": 939954,
+      "width": 2172,
+      "height": 724,
+      "mode": "RGB",
+      "format": "png",
+      "variant": "primary-horizontal",
+      "source": "Exact owner-selected imagegen PNG; no redraw, cropping, recompression or background removal"
+    }
+  ],
+  "superseded_artifacts": [
+    {
+      "original_path": "assets/brand/logos/emberline__mark.png",
+      "preserved_path": "assets/brand/history/emberline/2026-09-07/emberline__mark.png",
+      "sha256": "ab862db3697184d3cc94e9b6c5767d7e26e68ddf7a7ac7117ac049fc2e22dc25",
+      "bytes": 14217,
+      "git_blob_sha": "85ed6c5a49a5e16ea77dc67a632f65c6476b74b4"
+    },
+    {
+      "original_path": "assets/brand/logos/emberline__mark.svg",
+      "preserved_path": "assets/brand/history/emberline/2026-09-07/emberline__mark.svg",
+      "sha256": "eb3609c8c53c34efc08e8f8f3ba78cf87cbd09d2fc8275c786033e44c06dce31",
+      "bytes": 785,
+      "git_blob_sha": "f3e91c3b1218c86d0ddb56d8cc06d8b0f3d0b8bc"
+    },
+    {
+      "original_path": "assets/brand/logos/emberline__primary-horizontal.png",
+      "preserved_path": "assets/brand/history/emberline/2026-09-07/emberline__primary-horizontal.png",
+      "sha256": "8cb73d9e030683fa8bc045723181895382c2452eb13b15857bd036cb3d206f50",
+      "bytes": 29336,
+      "git_blob_sha": "1b41606a7cf5c21c7c7350668586732c971e6d0e"
+    },
+    {
+      "original_path": "assets/brand/logos/emberline__primary-horizontal.svg",
+      "preserved_path": "assets/brand/history/emberline/2026-09-07/emberline__primary-horizontal.svg",
+      "sha256": "e43af0f305aa3d4ca07ff80b9c897aaa9be944cfbff0192c0010ad0c04569948",
+      "bytes": 8327,
+      "git_blob_sha": "36ce837ce1d550ec06089e83a5402eafa2802a0f"
+    },
+    {
+      "original_path": "assets/brand/logos/emberline__reverse-horizontal.png",
+      "preserved_path": "assets/brand/history/emberline/2026-09-07/emberline__reverse-horizontal.png",
+      "sha256": "ea339ad7dc0e0a50cb7ae253699ab0ba68eaa71cdbcfa7797ba0f73d151b67c3",
+      "bytes": 28753,
+      "git_blob_sha": "e6ce86e86050b9001c4e8e355f0ae22dea9a2bac"
+    },
+    {
+      "original_path": "assets/brand/logos/emberline__reverse-horizontal.svg",
+      "preserved_path": "assets/brand/history/emberline/2026-09-07/emberline__reverse-horizontal.svg",
+      "sha256": "41717ef6f1f69d6d73ef9f9456e403869bca2c7c354d73bb343f2090c6fb88af",
+      "bytes": 8387,
+      "git_blob_sha": "46147540db5cd91061a707e269bf911bf4940a4a"
+    }
+  ],
+  "reproduction_rule": "This PNG is the sole approved Emberline form. Preserve the ivory field and source bytes. The earlier SVGs and PNGs are historical and cannot substitute for this image."
+}

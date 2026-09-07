@@ -1,6 +1,6 @@
 # SABLE HARBOR CONTROLLED DOCUMENT INDEX
 
-**Index version:** 1.0.13 | **As of:** September 7, 2026
+**Index version:** 1.0.14 | **As of:** September 7, 2026
 
 ## Authority order
 
@@ -149,3 +149,10 @@ The transaction and interface PDFs are generated representations. The canonical 
 - [Approved identity and source prompt](../assets/brand/KLEIN_IDENTITY.md), [visual manifest](../assets/brand/klein_visual_manifest.json) and [validation evidence](internal/validation/KLEIN_RENAME_2026-09-07.md)
 
 The v0.3 lore, base decision register, original lineage and other finance-pinned files remain byte-preserved historical inputs. Their former outpost name is superseded by Klein throughout the story.
+
+## September 7 Emberline artwork approval
+
+- [Controlling identity decision](canon/EMBERLINE_VISUAL_IDENTITY_2026-09-07.md)
+- [Approved horizontal logo](../assets/brand/logos/emberline__primary-horizontal.png) and [source/provenance manifest](../assets/brand/emberline_visual_manifest.json)
+- [Superseded artwork and preservation record](../assets/brand/history/emberline/2026-09-07/README.md)
+- [Brand validation](../assets/brand/VALIDATION.md)

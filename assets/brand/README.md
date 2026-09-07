@@ -38,7 +38,7 @@ The seven business lines are **Foundry Field, Willow, Atlas Meridian, Pale Sun, 
 | Red Wash Mine | operating asset | LOCKED fictional mine and selected transaction/2026 operating case under Pale Sun; exact seller and operator legal forms remain OPEN. |
 | Blood, Sweat & Tears Railway | ARU operating component | LOCKED name and relationship to ARU. |
 | Klein | historical Pittsburgh outpost | LOCKED September 7 name and approved PNG; rechartered as Willow in 2022. See [identity](KLEIN_IDENTITY.md) and [visual manifest](klein_visual_manifest.json). |
-| Emberline | historical business line | LOCKED historical status: active through 2025, then absorbed into enduring 2026 work. |
+| Emberline | historical business line | LOCKED September 7 coal-company artwork in [the approved PNG](logos/emberline__primary-horizontal.png); [visual manifest](emberline_visual_manifest.json). Active through 2025; earlier artwork is superseded. |
 | Red Wash / Pale Sun | endorsed operating lockup | Supplemental endorsed lockup joining the Pale Sun line to its Red Wash operating asset. |
 | J2 — Judgment & Junction | internal enterprise directorate identity | LOCKED September 2, 2026. Controlling production assets are `j2__mark.png` and `j2__primary-horizontal.png`; J2 is not a separate legal entity or customer-facing business line. |
 
@@ -107,3 +107,9 @@ All rights reserved unless a specific repository file states otherwise.
 ## Klein approved source artwork
 
 [The approved horizontal PNG](logos/klein__primary-horizontal.png) is the sole approved Klein form. Its exact source bytes and approval are recorded in [klein_visual_manifest.json](klein_visual_manifest.json). It overrides the general SVG-first rule for this identity. The retired truncated PNG under the former name is removed from the current tree; Git history and the supersession manifest preserve its provenance. Historical distribution archives are unchanged.
+
+## Emberline approved source artwork
+
+The [September 7 identity decision](../../docs/canon/EMBERLINE_VISUAL_IDENTITY_2026-09-07.md) locks the heavy slab-serif wordmark, coal ridge/seams, oxide-red roundel and ivory field. The [horizontal PNG](logos/emberline__primary-horizontal.png) is the sole approved form and overrides the general SVG-first rule. Its exact bytes are recorded in [emberline_visual_manifest.json](emberline_visual_manifest.json).
+
+Earlier mark, horizontal and reverse SVG/PNG forms are [archived as superseded artwork](history/emberline/2026-09-07/README.md). They are excluded from the current production manifest. The legacy generator reproduces its historical design system; its outputs and old ZIP are not current Emberline source artwork.
