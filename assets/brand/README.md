@@ -119,5 +119,11 @@ Earlier mark, horizontal and reverse SVG/PNG forms are [archived as superseded a
 | Identity | Relationship | Approved artwork |
 |---|---|---|
 | Kelly Gang Mining | Independent fictional Tasmanian operator; host for Cradle's Stream 17 recovery intervention. | [Stacked PNG](logos/kelly-gang-mining__stacked.png), controlled by [KGM-VIS-001](../../docs/canon/KELLY_GANG_MINING_VISUAL_IDENTITY_2026-09-07.md) and [visual manifest](kelly_gang_mining_visual_manifest.json). |
+| Quality Forest Communications | Ellis “Eli” Hoberg's historical forestry-communications company before Sable Harbor. | [Horizontal PNG](logos/quality-forest-communications__primary-horizontal.png), controlled by [QFC-VIS-001](../../docs/canon/QUALITY_FOREST_COMMUNICATIONS_VISUAL_IDENTITY_2026-09-07.md) and [visual manifest](quality_forest_communications_visual_manifest.json). |
+| Demotte Reclamation Services | External West Virginia mine-water treatment operator; Cradle's first U.S. host. | [Horizontal PNG](logos/demotte-reclamation-services__primary-horizontal.png), controlled by [DEM-RS-001](../../docs/canon/DEMOTTE_RECLAMATION_NAME_AND_IDENTITY_2026-09-07.md) and [visual manifest](demotte_reclamation_visual_manifest.json). |
 
 These identities support the synthetic enterprise's company and counterparty records. Their inclusion in the artwork inventory does not make them Sable Harbor subsidiaries or current business lines. Kelly Gang Mining's exact approved PNG overrides the general SVG-first rule; only the complete stacked emblem is approved.
+
+Quality Forest Communications' exact approved PNG also overrides the general SVG-first rule. Preserve the full tree, yellow Q, contained radio, 2055 antenna and script wordmark on its white field.
+
+Demotte Reclamation Services' owner-directed source PNG overrides the general SVG-first rule for that identity. Use its dedicated name-and-identity decision for the replacement of the former company name.

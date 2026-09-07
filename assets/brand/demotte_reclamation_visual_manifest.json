@@ -1,0 +1,26 @@
+{
+  "identity": "Demotte Reclamation Services",
+  "state": "APPROVED_SOURCE_ARTWORK",
+  "decision_date": "2026-09-07",
+  "controlling_decision": "docs/canon/DEMOTTE_RECLAMATION_NAME_AND_IDENTITY_2026-09-07.md",
+  "classification": "external fictional West Virginia reclamation and mine-water treatment operator; Cradle U.S. host",
+  "authorization_basis": "Owner directed rename to Demotte, image regeneration and repository update; subsequently expressly reaffirmed the separate QFC name and approved logo. Owner then directed a blue-and-white revision with a more retro 1980s mining-company style.",
+  "assets": [
+    {
+      "path": "assets/brand/logos/demotte-reclamation-services__primary-horizontal.png",
+      "sha256": "cb5bdbc6cb950dac198312222eb47659547ae6a30994c90dff514b0707cfd15f",
+      "bytes": 881116,
+      "width": 2079,
+      "height": 756,
+      "mode": "RGB",
+      "format": "png",
+      "variant": "primary-horizontal",
+      "source": "Exact blue-and-white retro-1980s imagegen revision requested by the owner, copied byte-for-byte without edits"
+    }
+  ],
+  "superseded_name": "Morrow Run Reclamation Services",
+  "reproduction_rule": "Preserve the exact complete blue-and-white horizontal PNG and its background; no alternate production variants supplied.",
+  "relationship_rule": "External Cradle host; ownership, host compliance authority, remediation liability and recovery rights unchanged.",
+  "approval_date": "2026-09-07",
+  "approval_basis": "After viewing the blue-and-white retro-1980s revision, the owner instructed: nice. lock it and send it to the repo."
+}

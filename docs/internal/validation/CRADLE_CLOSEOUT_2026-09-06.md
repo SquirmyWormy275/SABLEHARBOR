@@ -72,3 +72,7 @@ The only known stale Cradle-specific repository surface outside main is the Bell
 - standalone unit evidence package: **ENTERPRISE IMPLEMENTATION (#12)**
 - legal entity mechanics: **ENTERPRISE CANON / IMPLEMENTATION (#18)**
 - Alexandria business-line interface detail: **ENTERPRISE REFINEMENT (#38)**
+
+## September 7 naming addendum
+
+The September 6 findings above retain their original company naming as historical review evidence. [DEM-RS-001](../../canon/DEMOTTE_RECLAMATION_NAME_AND_IDENTITY_2026-09-07.md) subsequently replaces Morrow Run Reclamation Services with Demotte Reclamation Services in current canon. The host-liability and operating-boundary findings remain unchanged.

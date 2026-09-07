@@ -95,3 +95,7 @@ The [September 7 name and identity decision](KLEIN_NAME_AND_IDENTITY_2026-09-07.
 ## Closeout boundary
 
 This closeout resolves the prior OPEN/PROVISIONAL state of Gid's first incident, Eli's surname/background, WIL-010's substantive incident details, Klein's historical carryover, and Willow's Fort/site concept. It does not silently settle unrelated Willow/Atlas personnel details, exact statutory property records, exact parcel/address, or matters outside this scope.
+
+## Quality Forest Communications visual identity — September 7
+
+[QFC-VIS-001](QUALITY_FOREST_COMMUNICATIONS_VISUAL_IDENTITY_2026-09-07.md) locks the owner-selected tree/yellow-Q logo with its contained AN/PRC-117G, 2055 SATCOM antenna and script company name. It supplies the historical company artwork without changing Hoberg's history or the company relationships in this closeout.

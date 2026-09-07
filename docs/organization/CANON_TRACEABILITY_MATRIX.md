@@ -65,3 +65,7 @@ The [September 7 Klein decision](../canon/KLEIN_NAME_AND_IDENTITY_2026-09-07.md)
 Emberline's historical logo is locked by [EMB-VIS-001](../canon/EMBERLINE_VISUAL_IDENTITY_2026-09-07.md). The artwork decision preserves the program's existing history and does not create a current division or new legal entity.
 
 Kelly Gang Mining's external-company artwork is controlled by [KGM-VIS-001](../canon/KELLY_GANG_MINING_VISUAL_IDENTITY_2026-09-07.md). Its role remains the independently operated Tasmanian Stream 17 host described in the [Cradle closeout](../canon/CRADLE_CLOSEOUT_2026-09-06.md).
+
+Quality Forest Communications' historical artwork is controlled by [QFC-VIS-001](../canon/QUALITY_FOREST_COMMUNICATIONS_VISUAL_IDENTITY_2026-09-07.md). Its role remains Hoberg's pre-Sable Harbor forestry-communications company in the [Willow/Klein closeout](../canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md#eli-hoberg).
+
+[DEM-RS-001](../canon/DEMOTTE_RECLAMATION_NAME_AND_IDENTITY_2026-09-07.md) controls the Demotte Reclamation Services name and owner-directed artwork for Cradle's existing U.S. host. Host authority, remediation liability and recovery boundaries remain unchanged in the [Cradle map](PROJECT_CRADLE.md).

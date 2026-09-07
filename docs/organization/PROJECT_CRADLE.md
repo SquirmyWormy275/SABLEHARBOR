@@ -1,7 +1,7 @@
 # SABLE HARBOR — PROJECT CRADLE ORGANIZATION MAP
 
 **Map ID:** `SH-ORG-009`  
-**Version:** 0.3.0  
+**Version:** 0.3.1
 **Canonical date:** September 6, 2026  
 **Map type:** Program/business operating-boundary map  
 **Current authority:** [`CRADLE_CLOSEOUT_2026-09-06.md`](../canon/CRADLE_CLOSEOUT_2026-09-06.md)
@@ -56,10 +56,10 @@ flowchart LR
 - recovered mixed REE mineral concentrate goes to a specialist downstream refiner;
 - host production can continue when Cradle is bypassed.
 
-### Morrow Run — first U.S. reference deployment
+### Demotte — first U.S. reference deployment
 
 - north-central West Virginia acid-mine-drainage treatment setting;
-- fictional Morrow Run Reclamation Services is the host operator;
+- fictional Demotte Reclamation Services is the host operator;
 - Gen 1 is a containerized / skid-based controlled-slipstream recovery module;
 - normal treatment remains continuously available through hard bypass;
 - host retains treatment, compliance and immediate stop/bypass authority;
@@ -95,3 +95,5 @@ The commercial chain is:
 ## Controlling canon
 
 Primary anchors: [`CRADLE_CLOSEOUT_2026-09-06.md`](../canon/CRADLE_CLOSEOUT_2026-09-06.md), corporate-lore canon sections 10.6 and 11, and decision-register IDs `AUS-004` and `CRD-001`–`CRD-010` as superseded within the closeout's stated scope.
+
+The September 7 [Demotte name-and-identity decision](../canon/DEMOTTE_RECLAMATION_NAME_AND_IDENTITY_2026-09-07.md) controls the U.S. host's current name. Its operating role and authority are unchanged.
