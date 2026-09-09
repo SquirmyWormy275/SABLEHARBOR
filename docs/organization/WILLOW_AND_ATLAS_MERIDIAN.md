@@ -1,8 +1,8 @@
 # SABLE HARBOR — WILLOW AND ATLAS MERIDIAN ORGANIZATION MAP
 
 **Map ID:** `SH-ORG-007`  
-**Version:** 0.3.0  
-**Canonical date:** September 8, 2026  
+**Version:** 0.4.0  
+**Canonical date:** September 9, 2026  
 **Map type:** Laboratory composition, product lineage, and current product-organization boundary  
 **Edge meaning:** Documented membership, contribution, authority, lineage, or product/professional interface. **Edges are not reporting lines unless explicitly stated as “runs.”**
 
@@ -80,7 +80,7 @@ flowchart TB
     WILLOW -->|experimental lineage| ATLAS
 ```
 
-The historical bridge remains part of Atlas's formation. The September 8 closeout changes the **current organizational interpretation**, not the lineage: the dedicated Atlas organization is now a product-development organization rather than a cross-functional professional-services bench.
+The historical bridge remains part of Atlas's formation. The September 8/9 closeouts change the **current organizational interpretation**, not the lineage: the dedicated Atlas organization is now a product-development organization rather than a cross-functional professional-services bench.
 
 ## Current Atlas Meridian organization boundary
 
@@ -92,6 +92,7 @@ flowchart LR
     EVAL["AI / agent evaluation<br/>tests · safety · provenance · authority rails"]
     SEC["Security / tenancy / entitlements<br/>client isolation · data controls"]
     TRANSFER["Transfer + developer tooling<br/>client-owned derivatives · export · runbooks"]
+    SUCCESS["Product support / success<br/>implementation · release · enterprise support"]
     ADV["SABLE HARBOR ADVISORY<br/>client-facing professional business<br/>three practices · one bench"]
     CLIENT["CLIENT PLANE<br/>client data · matters · workflows · agents · transfer"]
     PRO["SABLE HARBOR PROFESSIONAL PLANE<br/>protected methods · cross-matter learning · firm-only capabilities"]
@@ -102,6 +103,7 @@ flowchart LR
     ATL --- EVAL
     ATL --- SEC
     ATL --- TRANSFER
+    ATL --- SUCCESS
     ATL --> CLIENT
     ATL --> PRO
     ATL -.->|product substrate and matter system| ADV
@@ -110,7 +112,18 @@ flowchart LR
     PRO -.->|controlled firm-only capability| ADV
 ```
 
-The nodes inside the Atlas product organization are capability groupings, not locked departments or headcount allocations. Exact org structure, titles and staffing remain implementation decisions unless separately canonized.
+The nodes inside the Atlas product organization are capability groupings, not locked departments or headcount allocations. Exact reporting lines and staffing remain product implementation decisions unless separately canonized.
+
+## Commercial product architecture
+
+Atlas now has four controlled commercial configurations:
+
+- **Core** — evidence, provenance, investigation/matter workspace, controlled agents and transferable workflows;
+- **Enterprise** — enterprise tenancy, advanced entitlements, connectors/APIs, evaluation, audit export, SSO/SCIM and governance;
+- **Professional** — Sable Harbor-controlled professional plane used by Advisory and not generally sold as a client edition;
+- **Managed** — client-plane capability operated by Sable Harbor under explicit managed-continuity terms.
+
+Default licensing is institutional/tenant-based. Product pricing, support, security, export, agent packaging and evaluation are controlled by `SH-ATL-017`.
 
 ## Product and professional boundaries
 
@@ -133,6 +146,7 @@ Primary historical anchors remain corporate-lore canon sections 7.4–7.8, 8, 9 
 
 Current product/advisory interpretation is controlled by:
 
-- [`SH-ADV-ATL-DR-001`](../canon/ADVISORY_ATLAS_MERIDIAN_CLOSEOUT_2026-09-08.md)
+- [`SH-ADV-ATL-DR-003`](../canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md)
 - [`SH-ATL-016`](../advisory/ATLAS_MERIDIAN_PROFESSIONAL_PLATFORM.md)
-- [`SH-ADV-001`](../advisory/OPERATING_MODEL.md)
+- [`SH-ATL-017`](../advisory/ATLAS_MERIDIAN_COMMERCIAL_PRODUCT_STANDARD.md)
+- [`SH-ADV-MAN-001`](../advisory/SABLE_HARBOR_ADVISORY_FIRM_MANUAL_2026-09-09.md)
