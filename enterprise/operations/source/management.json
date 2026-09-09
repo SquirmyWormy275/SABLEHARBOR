@@ -1,0 +1,20 @@
+{
+  "version": "1.0.0",
+  "classification": "PUBLIC_SYNTHETIC_PLANNING_ASSUMPTIONS",
+  "cost_pool_basis": "ESS payroll split into technology 40%, finance 30%, people 30%; facility/vendor expense to technology; independent audit payroll to assurance. J2 mission and other corporate expense retained centrally. Existing statutory fees credited once, with no journal reposting.",
+  "usage": {
+    "technology": {"foundry-field": 120, "atlas-meridian": 65, "advisory": 25, "willow": 20, "project-cradle": 15, "pale-sun": 70, "american-resource-utility": 65, "corporate": 90},
+    "finance": {"foundry-field": 30, "atlas-meridian": 20, "advisory": 30, "willow": 25, "project-cradle": 30, "pale-sun": 120, "american-resource-utility": 140, "corporate": 45},
+    "people": {"foundry-field": 0, "atlas-meridian": 0, "advisory": 0, "willow": 0, "project-cradle": 0, "pale-sun": 140, "american-resource-utility": 131, "corporate": 0},
+    "assurance": {"foundry-field": 20, "atlas-meridian": 20, "advisory": 30, "willow": 35, "project-cradle": 40, "pale-sun": 65, "american-resource-utility": 60, "corporate": 50}
+  },
+  "usage_boundary": "Monthly synthetic service-unit commitments supplemented by actual generated platform/finance/matter/research events and occupied-position payroll service demand. Industrial people units retain the separate accepted 140/131 population; no combined 2026 headcount claim. Weights are planning consumption assumptions, not observed timesheets or vendor bills.",
+  "forecast": {
+    "frozen_through_month": 6,
+    "price_factor": "1.03",
+    "volume_factor": "1.10",
+    "timing_delay_months": 1,
+    "workforce_change": {"change_id": "WF-FORECAST-001", "month": 8, "action": "JOIN", "position_id": "SYN-FOUNDRY-FIELD-162", "person_id": "SYN-PERSON-FF-FORECAST-162", "ramp_months": 3},
+    "boundary": "Budget is the selected operating-model input set; revised and synthetic_outturn are separately rebuilt alternatives. Changes apply only to commercial populations starting after June 2027 and an August 2027 planned join. Core cash is requested operating/investing cash before enterprise Treasury, not funded consolidated cash or actual outturn. Sequential attribution order is price, volume, timing, workforce; interactions fall to the later driver."
+  }
+}

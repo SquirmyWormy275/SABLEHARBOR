@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0.0",
+  "classification": "PUBLIC_SYNTHETIC_CONTROL_EXERCISE",
+  "available_at": "2026-09-09",
+  "registry_source": "docs/structured/business-lines/interfaces.json",
+  "exception_exercises": [
+    {
+      "exception_id": "SYN-EXC-REVENUE-001",
+      "scenario": "base",
+      "unit": "advisory",
+      "local_control_id": "LC-REVENUE",
+      "original_month": 3,
+      "withheld_table": "journal",
+      "waiver_end_month": 3,
+      "remediation_month": 5,
+      "independent_retest_month": 6,
+      "preparer": "SYN-Advisory-revenue-preparer",
+      "reviewer": "SYN-Finance-independent-reviewer",
+      "reason": "A synthetic attachment omission tests evidence completeness, expiry, remediation and independent closure; underlying ledger rows are preserved."
+    }
+  ]
+}

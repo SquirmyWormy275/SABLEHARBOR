@@ -29,6 +29,8 @@ The [seven business dossiers](docs/business-lines/README.md) connect operating l
 
 The [business-driven financial successor](enterprise/business/README.md) supplies causal 2027–2031 Core economics, preserved industrial integration and seven reconciled unit evidence packages. See the [release index](docs/releases/BUSINESS_FINANCE_RELEASES.md).
 
+The [business operations successor](enterprise/operations/README.md) adds customer and collection histories, evidence-gated delivery, research and custody records, staffing changes, industrial service detail, forecast revisions and scheduled controls across all seven lines. Its [release index](docs/releases/BUSINESS_OPERATIONS_RELEASES.md) records acceptance status.
+
 ## Current canon
 
 The controlling September 2–7, 2026 layer begins with [`SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md`](docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md) and is extended by the [decision register](docs/canon/DECISION_REGISTER_v0.3.1.md), [September 3 decision-register addendum](docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-03.md), [corporate headquarters closeout](docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md), [September 5 Red Wash addendum](docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-05_RED_WASH.md), [Red Wash transaction and operating record](docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05.md), [September 6 canon closeout addendum](docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-06_CLOSEOUT.md), [v0.3 changelog](docs/canon/CANON_CHANGELOG_v0.3.md), [Red Wash closeout changelog](docs/canon/RED_WASH_CLOSEOUT_CHANGELOG_2026-09-05.md), and [board approval records](docs/governance/board-records/README.md).

@@ -1,7 +1,7 @@
 # Atlas Meridian — current business dossier
 
 **Document ID:** `SH-BIZ-ATLAS-MERIDIAN-001`
-**Version:** 1.1.0
+**Version:** 1.2.0
 **As of:** September 9, 2026
 **State:** CURRENT SOURCE SYNTHESIS
 **Owner:** Atlas Meridian product organization
@@ -37,6 +37,10 @@ The [local control and interface register](BUSINESS_FINANCE_AND_ALEXANDRIA_INTER
 ## Executable financial evidence
 
 The [business-driven successor](../../enterprise/business/README.md) now implements the current operating model and produces this unit's reconciled CSV, SQLite and audit workbook package. The [financial design](../finance/BUSINESS_DRIVEN_SUCCESSOR_2026-09-09.md) and [export contract](../audit/UNIT_EXPORT_SPECIFICATION.md) identify source events, preserved industrial references, scenario assumptions and remaining granularity. New Core economics begin in 2027; retained 2026 calibration remains explicit. Treasury schedules identify unfunded payment requests.
+
+## Operating histories and evidence
+
+The [operating successor](../../enterprise/operations/README.md) adds dated commercial changes, capacity-limited deployment and service, incident credits and renewal outcomes. Atlas product obligations remain separate from Advisory fees and staffing. Its ARR and deferred-revenue bridges reconcile to invoice and recognition histories; client bundles confer no Alexandria entitlement.
 
 ## Remaining boundaries
 

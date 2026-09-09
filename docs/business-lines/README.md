@@ -1,5 +1,7 @@
 # Current business lines
 
+The [operating successor](../../enterprise/operations/README.md) adds deeper histories, reconciled finances, control exercises and scoped evidence across all seven lines.
+
 Seven current operating worlds have one source-linked dossier each. The structured [register](../structured/business-lines/register.json) separates reporting lines from legal entities. A dossier is a current navigation and implementation record; its linked controlling source resolves conflicts.
 
 | Business | Role | Legal books |

@@ -1,5 +1,7 @@
 # Sable Harbor finance platform
 
+The [business operating successor](../../enterprise/operations/README.md) extends customer, credit, workforce, matter, research and industrial evidence. Its [release record](../releases/BUSINESS_OPERATIONS_RELEASES.md) tracks acceptance; earlier releases remain unchanged.
+
 The [business-driven enterprise successor](../../enterprise/business/README.md) now adds current Foundry, Atlas, Advisory, Willow and Cradle economics, integrates the preserved industrial model and exports all seven units. Its [design](BUSINESS_DRIVEN_SUCCESSOR_2026-09-09.md) and [release index](../releases/BUSINESS_FINANCE_RELEASES.md) define its 2027–2031 replacement boundary.
 
 The current selected industrial successor is the [Pale Sun / Red Wash / ARU / BS&T case](../../industrial/README.md), with its [finance bridge](INDUSTRIAL_FINANCE_BRIDGE_v1.0.md). The platform described below remains the reproducible enterprise v0.1 snapshot; industrial legal names and current operating assumptions are controlled by that successor.

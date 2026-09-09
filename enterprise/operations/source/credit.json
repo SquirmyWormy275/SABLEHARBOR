@@ -1,0 +1,12 @@
+{
+  "version": "1.0.0",
+  "record_origin": "PUBLIC_SYNTHETIC_PLANNING_MODEL",
+  "boundary": "Illustrative collection outcomes, not observed defaults or credit approvals. One invoice-specific scenario history per profile; other invoices retain contractual modeled collection timing.",
+  "allowance_rates": {"current": "0.02", "past_due": "0.10", "disputed": "0.35", "default": "1"},
+  "profiles": [
+    {"profile_id": "PARTIAL-001", "source_id": "FF-001-TERM-0", "kind": "PARTIAL", "first_fraction": "0.60", "final_delay_months": 2},
+    {"profile_id": "DISPUTE-002", "source_id": "FF-002-TERM-0", "kind": "DISPUTED", "first_fraction": "0.25", "final_delay_months": 3},
+    {"profile_id": "DEFAULT-003", "source_id": "FF-003-TERM-0", "kind": "DEFAULT", "first_fraction": "0.25", "writeoff_delay_months": 4, "recovery_delay_months": 8, "recovery_fraction": "0.10"}
+  ],
+  "treasury_allocation": "FIFO modeled attribution within each cash-flow category to the existing finite-funded enterprise journal. A payroll batch allocation does not identify an actual employee payment. No within-month liquidity claim."
+}

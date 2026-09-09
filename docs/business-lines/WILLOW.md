@@ -1,7 +1,7 @@
 # Willow — current business dossier
 
 **Document ID:** `SH-BIZ-WILLOW-001`
-**Version:** 1.1.0
+**Version:** 1.2.0
 **As of:** September 9, 2026
 **State:** CURRENT SOURCE SYNTHESIS
 **Owner:** Gid Voss experimental authority / Rachel Sloane institutional seam
@@ -37,6 +37,10 @@ The [local control and interface register](BUSINESS_FINANCE_AND_ALEXANDRIA_INTER
 ## Executable financial evidence
 
 The [business-driven successor](../../enterprise/business/README.md) now implements the current operating model and produces this unit's reconciled CSV, SQLite and audit workbook package. The [financial design](../finance/BUSINESS_DRIVEN_SUCCESSOR_2026-09-09.md) and [export contract](../audit/UNIT_EXPORT_SPECIFICATION.md) identify source events, preserved industrial references, scenario assumptions and remaining granularity. New Core economics begin in 2027; retained 2026 calibration remains explicit. Treasury schedules identify unfunded payment requests.
+
+## Operating histories and evidence
+
+The [operating successor](../../enterprise/operations/README.md) adds bounded follow-on awards, failed and corrected experimental attempts, qualification evidence and material budgets, commitments and cost-to-complete forecasts. Transfers still require a receiver, qualification and maintenance owner; staff assignment changes reconcile without duplicating payroll.
 
 ## Remaining boundaries
 

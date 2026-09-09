@@ -643,57 +643,57 @@
     },
     {
       "source": "docs/business-lines/FOUNDRY_FIELD.md",
-      "publication": "docs/business-lines/publications/SH-BIZ-FOUNDRY-FIELD-001_v1.1.0.pdf",
-      "sha256": "a4cbceb39bda0357d7b1e7a113185fb0522978b02f692df9c7a5a8c79ffd6c0b",
-      "source_sha256": "b1eea0ad6cbfc79d164e87e44832dbdeccb194e3aa9fbea579ecb47d7e9ddf06",
+      "publication": "docs/business-lines/publications/SH-BIZ-FOUNDRY-FIELD-001_v1.2.0.pdf",
+      "sha256": "626accacada1243e13c1ef7c77ca1d41123f4ee7180226cc2fb8aac664e04d2d",
+      "source_sha256": "d380188e95d1e0e7491523cb13a00076c890f946ba004f6030984b217ec4edfd",
       "brand": "corporate",
       "normalizer": "pypdf"
     },
     {
       "source": "docs/business-lines/ATLAS_MERIDIAN.md",
-      "publication": "docs/business-lines/publications/SH-BIZ-ATLAS-MERIDIAN-001_v1.1.0.pdf",
-      "sha256": "54ac41319bbf0d195c833fd4d0d871b8b50fcc9e613db9a58cc9fb0304e7ddb1",
-      "source_sha256": "1c90623d56d853ca6247156296953f9451e4790a1b57ba755d00f5e5e15f2ac2",
+      "publication": "docs/business-lines/publications/SH-BIZ-ATLAS-MERIDIAN-001_v1.2.0.pdf",
+      "sha256": "8123e77f0c1517d40de908dbe86165712b668aed092969ccbc704b123c23e3ab",
+      "source_sha256": "cc495e9960a0fe4b6ee464e8d94f61e9aae668d72ed68cc77310295a0c148d27",
       "brand": "corporate",
       "normalizer": "pypdf"
     },
     {
       "source": "docs/business-lines/WILLOW.md",
-      "publication": "docs/business-lines/publications/SH-BIZ-WILLOW-001_v1.1.0.pdf",
-      "sha256": "4260ccaa45811568268b7db3dfe9afbdc78020aee5f62104c018d0ff0f0fc7ec",
-      "source_sha256": "239d4a7d70db0a7885c30cd7ba226a459ff419a48566ec9742c76a7267111115",
+      "publication": "docs/business-lines/publications/SH-BIZ-WILLOW-001_v1.2.0.pdf",
+      "sha256": "cbbc2c89c41b74524327ba8136db43c611ffdffcd32693da1b42f9e63b02b4db",
+      "source_sha256": "b7453933d13d569a3a272fa3c1b0898ef531dfc918c5a5ed2000efbd4168b00d",
       "brand": "corporate",
       "normalizer": "pypdf"
     },
     {
       "source": "docs/business-lines/PROJECT_CRADLE.md",
-      "publication": "docs/business-lines/publications/SH-BIZ-PROJECT-CRADLE-001_v1.1.0.pdf",
-      "sha256": "4d99bda81aa6cf9a826aa326cc18f57b6ab14b506fdacc7b6da45fc2b54e759f",
-      "source_sha256": "7bc25bd32bb5e0bdf81dc01bb341ca5a488801f5348a829a0fffc835ea8b8fca",
+      "publication": "docs/business-lines/publications/SH-BIZ-PROJECT-CRADLE-001_v1.2.0.pdf",
+      "sha256": "f3e196ca4dcc1c7a2235df41325046e2f9387008c93969bc543f87b857cd643a",
+      "source_sha256": "84eff08e2c0fc0bfc21c8d36cd1883623b00cc22e4a1b4d8c3e5b391110df8cd",
       "brand": "corporate",
       "normalizer": "pypdf"
     },
     {
       "source": "docs/business-lines/PALE_SUN.md",
-      "publication": "docs/business-lines/publications/SH-BIZ-PALE-SUN-001_v1.1.0.pdf",
-      "sha256": "96b713f3abd1714a5138f8e57f49c2d2338bcf1d966cf3e9b789fe1c5685ef51",
-      "source_sha256": "685940c869e66495714dcd2a5f5d9cf01594e992617343c84086927e78965d7b",
+      "publication": "docs/business-lines/publications/SH-BIZ-PALE-SUN-001_v1.2.0.pdf",
+      "sha256": "d7a0b56a04f849b6ec751f78e914af6cc3739f78fc52cf337ef56af6db1155d8",
+      "source_sha256": "de1a0371f0b7a29aec26308dac972a2efa0c77ae21a60bf9597d650fb11b1dfb",
       "brand": "corporate",
       "normalizer": "pypdf"
     },
     {
       "source": "docs/business-lines/AMERICAN_RESOURCE_UTILITY.md",
-      "publication": "docs/business-lines/publications/SH-BIZ-AMERICAN-RESOURCE-UTILITY-001_v1.1.0.pdf",
-      "sha256": "1e024b5aecef171c175d13d499fa155597eeafaba59c350150ab8bfcc82cc598",
-      "source_sha256": "d5145fa26378aed21edbe97b6b632a76a75dd301a076db32fd089f41be3a2d12",
+      "publication": "docs/business-lines/publications/SH-BIZ-AMERICAN-RESOURCE-UTILITY-001_v1.2.0.pdf",
+      "sha256": "d919406f97bcc5891abbbec4436abede4e0f4ac1c82d4fe653495139305c6e75",
+      "source_sha256": "d6ecb7ca4fed3f4a208b35e2521b65b2efc38474b187053b8c40d5deb7aa54bd",
       "brand": "corporate",
       "normalizer": "pypdf"
     },
     {
       "source": "docs/business-lines/ADVISORY.md",
-      "publication": "docs/business-lines/publications/SH-BIZ-ADVISORY-001_v1.1.0.pdf",
-      "sha256": "e695a0bf3ed881180ca3b2c9028b1f54b63a8515cd21b87eba1eff7cefa79889",
-      "source_sha256": "5f8abdd2f713626f642e21b06a72473fac522e2e1b0f20f4efc8d3d4e50dca6d",
+      "publication": "docs/business-lines/publications/SH-BIZ-ADVISORY-001_v1.2.0.pdf",
+      "sha256": "65bad0231a222fccfc2f8f4c7c05dcf74395df8015c66dde38416bce05b2f422",
+      "source_sha256": "66dccd62d83fdb9e34285e8753514d2e8f443384d550d57d4c9fab0929ea33a3",
       "brand": "corporate",
       "normalizer": "pypdf"
     },
@@ -715,9 +715,9 @@
     },
     {
       "source": "docs/business-lines/BUSINESS_FINANCE_AND_ALEXANDRIA_INTERFACES.md",
-      "publication": "docs/governance/publications/SH-BIZ-ALX-FIN-001_v1.0.0.pdf",
-      "sha256": "4816a5f579788f7743ca0ef7b11f05890611ef6f73106da5d4479d2a74e2038a",
-      "source_sha256": "64ac68cf1ce4255ef957ba5b6226e05116d2575d95fb94768ce1bf7605e40058",
+      "publication": "docs/governance/publications/SH-BIZ-ALX-FIN-001_v1.0.1.pdf",
+      "sha256": "f125156a9c5392cc2047e5143027e667a74cf670921f0cad6b7c1b769065c083",
+      "source_sha256": "87914d3264b132f360369d85a6af18264c5569f2e25d38a3cc49f309cf4ff253",
       "brand": "corporate",
       "normalizer": "pypdf"
     },
@@ -822,6 +822,22 @@
       "publication": "docs/governance/publications/SH-BRD-CONSENT-2026-09-02_v1.0.0.pdf",
       "sha256": "db6dd49d108d0e0d8b6c42831509c25cab9ade6258bbf29c897bece05a585592",
       "source_sha256": "2a0afb5615327345daf491c308e2b89e7e6236e44be1b3b09b3663389b344400",
+      "brand": "corporate",
+      "normalizer": "pypdf"
+    },
+    {
+      "source": "docs/finance/OPERATING_DEPTH_SUCCESSOR_2026-09-09.md",
+      "publication": "docs/finance/publications/SH-FIN-OPERATIONS-001_v1.0.0.pdf",
+      "sha256": "c4f4484dae126a9688ac4a2242bf8b0afcfe8d066398ef15142738f378c292b6",
+      "source_sha256": "964170aa97a8a698cf7488ed6593c96dba72fd22202e81a112f952fb14caad64",
+      "brand": "corporate",
+      "normalizer": "pypdf"
+    },
+    {
+      "source": "docs/audit/OPERATING_DEPTH_EXPORT_SPECIFICATION.md",
+      "publication": "docs/finance/publications/SH-AUDIT-OPERATIONS-001_v1.0.0.pdf",
+      "sha256": "1754301720e49139d8c23c7ce5b726627679f3a314448f614313fde82d001ee8",
+      "source_sha256": "d25a82761f015201045b569e46465afd3008ff0f3725c33967fa6fda1fc6cfa8",
       "brand": "corporate",
       "normalizer": "pypdf"
     },

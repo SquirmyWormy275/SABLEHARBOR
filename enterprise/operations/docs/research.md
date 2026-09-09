@@ -1,0 +1,37 @@
+# Research, captured material and industrial operating detail
+
+This successor adds conditional 2027–2031 operating records to Willow, Project Cradle, American Resource Utility and Pale Sun/Red Wash. Source assumptions live in [research.json](../source/research.json); execution and independent checks live in [research.py](../research.py). These records are public synthetic scenarios. They are neither observed operating history nor evidence of executed awards, supplier inspections, shipments or legal authority.
+
+## Willow follow-on phases
+
+The four initial research projects, original asset purchases, depreciation and transfers remain in the accepted business model. Six separately identified follow-on phases extend RF retesting, vibration drift and chemistry qualification through 2031. Each phase has a start, gate, direct-materials budget, monthly spending rate, initial attempt, independent corrected replicate, score threshold and disposition. The source explicitly distinguishes five successful transfer qualifications from one chemistry phase that stops after its replicate still fails.
+
+The first failed attempt remains in `research_attempts` after correction. A changed protocol and predecessor attempt link identify the replicate, and a separate reviewer prevents the operator from self-certifying. SHA-256 evidence digests bind the scores, thresholds, protocol and reviewer to `research_gate_evidence`. A modeled transfer requires a passing replicate, receiver and maintenance owner. A budget hold also blocks qualification. Laboratory qualification grants no new operating authority or staffing establishment.
+
+`research_awards` records conditional scenario authorization. `research_phase_forecasts` records cumulative materials incurred, remaining cost to complete, the next two months' modeled materials commitments, estimate at completion and budget headroom. The commitments are a planning subset of remaining cost, not executed purchase orders or incremental spending. Actual materials in this scenario produce `BIZ_RESEARCH` journals and vendor payables; the independent validator ties cumulative forecasts to these journals. Workforce records already contain research payroll, so labor is not charged again here. Original research budgets and all four initial projects remain separately visible.
+
+## Cradle assay and lot control
+
+Each monthly stream is divided into three run records. Feed, contained mass, recovered mass and allocated direct cost conserve the original monthly quantities at four-decimal reporting precision. Stream 17 processing and its assigned direct labor enter inventory once. Demotte experimental costs remain expenses. The original hard-bypass months produce no recovered material and no saleable lot.
+
+`recovery_run_assays` holds individual assay scores and custodians. `recovery_genealogy` records feed splits and the merge of recovered outputs into one Bedford batch. Feed tonnes or cubic metres are not added to recovered kilograms; every edge labels its mass basis. Evidence hashes bind a lot to all of its component assays. The existing `recovery_lots` table gains original cost, assay disposition and evidence identity, while preserving the accepted business subledger fields.
+
+Six selected stream/month combinations per scenario contain one failed run assay. The entire affected batch is quarantined, held out of sale and written to zero modeled recoverable value. There are 18 such lots across the three scenarios. This conservative rejection assumption does not assert that an unqualified process can simply be corrected or that quarantined material has been disposed of. Custody remains recorded in `recovery_custody`.
+
+Only an acceptable batch reaching its declared downstream acceptance month can change to `ACCEPTED_SALE`, emit acceptance evidence and generate an invoice. Revenue does not arise from capture. Host shares use the existing invoice interface and are settled by the credit module from collected proceeds; rejected lots create no sale or host claim. No primary host operation, stop authority, environmental permission or uranium custody is transferred by this model.
+
+## Industrial dates, maintenance and capacity
+
+The industrial layer consumes the existing monthly physical forecast, customer service manifests, customer invoices, supplier invoices, work orders and positive production-cost journal rows. It does not repost any revenue, cost, financing or shipment. `industrial_detail_reconciliation` demonstrates exact source-to-detail quantity and amount ties.
+
+External rail service is allocated in batches no larger than the month's loaded-car limit; truck service retains integral dispatches; terminal and warehouse records retain their source units. Each dated row identifies the manifest, invoice, contract, customer, route description, resource pool, provider, quantity and allocated revenue. Owned and outside-provider quantities preserve their separate monthly populations. Dated outside-provider service does not assert independent provider-capacity verification. Warehouse rows allocate reserved pallet-months; they are not inventory receipts, physical dwell records or proof of daily occupancy.
+
+`industrial_shift_capacity` checks owned resource pools by date. Crew and equipment hours are reduced by the existing Red Wash interface allocation and scheduled maintenance downtime. Its displayed inputs recompute net available hours, requested hours and excess hours exactly at four decimals. A schedule can reconcile financially while exceeding its available hours; such rows remain `INFEASIBLE_CAPACITY` and require rescheduling or supported capacity changes. These exceptions are visible planning results, not validator failures to conceal. They do not change the accepted monthly model or authorize additional equipment, land rights or operating hours.
+
+Existing maintenance work orders divide into two dated jobs, conserving their supplier-invoice costs and planned service quantities. These are planned services, not completed inspections. Pale Sun/Red Wash has a separate disclosed 8% maintenance allocation within existing mine production cost, with the remainder retained as other production cost. The mine allocation has no invented supplier invoice, no additional journal and no newly assumed downtime. Only positive `PRODUCTION_COST` journal rows are included; negative credits and later payment entries cannot inflate or cancel the production-cost basis.
+
+The dated service allocator does not independently construct a dispatch-ready timetable, optimize train consists, verify outside-provider availability, certify completed maintenance, establish a mining permit or remove the `OPEN_GATED` direct-uranium-custody boundary. Further operating decisions require supported inputs and explicit changes to their source policies.
+
+## Verification
+
+Run `python -m pytest enterprise/operations/tests/test_research.py`. The tests exercise budget overruns, failed and corrected qualification, unchanged equipment history, rejected-lot billing, hard bypass, evidence tampering, conservation of source quantities and revenue, source-invoice mismatch, maintenance downtime, infeasible capacity and the production-cost/payment distinction. The full successor build also executes these checks against all scenarios and reconciles the combined Core journal with the preserved industrial and 2026 financial boundaries.

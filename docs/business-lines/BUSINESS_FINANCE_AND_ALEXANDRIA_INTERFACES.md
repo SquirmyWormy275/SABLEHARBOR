@@ -1,7 +1,7 @@
 # Business, Finance and Alexandria interfaces
 
 **Document ID:** `SH-BIZ-ALX-FIN-001`
-**Version:** 1.0.0
+**Version:** 1.0.1
 **As of:** September 9, 2026
 **State:** PROVISIONAL implementation contract
 **Owner:** Business source owners / CFO office / Alexandria stewardship
@@ -16,17 +16,17 @@ Orientation’s Finance observation post can trace beliefs into assumptions, que
 
 ## Business entry contracts
 
-Every row carries source, owner, steward, access, purpose, knowledge timing and the relationships to Canon, Judgment, Collection, JAG and Education. The seven dossier entries and Emberline history are explicit; historical Klein is reached through Willow and the historical boundary register.
+Every row carries source, owner, steward, access, purpose, knowledge timing and the relationships to Canon, Judgment, Collection, JAG and Education. The seven dossier entries and Emberline history are explicit; historical Klein is reached through Willow and the historical boundary register. Each current dossier locates Canon and links decisions to Judgment. Underlying Collection sources require independent entitlement.
 
-| Entry | Source owner | Canon / Judgment / Collection relationship |
+| Entry | Source owner | Record scope |
 |---|---|---|
-| Foundry Field | Foundry Field product and deployment leadership | Dossier locates current canon; decisions link to Judgment; underlying sources require independent Collection entitlement. |
-| Atlas Meridian | Atlas Meridian product organization | Dossier locates current canon; decisions link to Judgment; underlying sources require independent Collection entitlement. |
-| Willow | Gid Voss experimental authority / Rachel Sloane institutional seam | Dossier locates current canon; decisions link to Judgment; underlying sources require independent Collection entitlement. |
-| Cradle | Cradle operating leadership and accountable host interfaces | Dossier locates current canon; decisions link to Judgment; underlying sources require independent Collection entitlement. |
-| Pale Sun / Red Wash | Evan Vilander / Mari / Red Wash operating leadership | Dossier locates current canon; decisions link to Judgment; underlying sources require independent Collection entitlement. |
-| American Resource Utility / BS&T | Nora Ashcombe / Seth Kettering rail authority | Dossier locates current canon; decisions link to Judgment; underlying sources require independent Collection entitlement. |
-| Advisory | President, Advisory — individual OPEN | Dossier locates current canon; decisions link to Judgment; underlying sources require independent Collection entitlement. |
+| Foundry Field | Foundry Field product and deployment leadership | Product and deployment records. |
+| Atlas Meridian | Atlas Meridian product organization | Product and client workspace records. |
+| Willow | Gid Voss experimental authority / Rachel Sloane institutional seam | Experimental and transfer records. |
+| Cradle | Cradle operating leadership and accountable host interfaces | Recovery and host records. |
+| Pale Sun / Red Wash | Evan Vilander / Mari / Red Wash operating leadership | Mining and platform records. |
+| ARU / BS&T | Nora Ashcombe / Seth Kettering rail authority | Rail and logistics records. |
+| Advisory | President — individual OPEN | Matter and professional records. |
 | Emberline history | Corporate records and receiving business | Historical effective periods and transfers; later judgments do not rewrite contemporary knowledge; original restrictions persist. |
 
 JAG links approved internal interventions and follow-up learning. Commercial Advisory is not JAG. Education uses cleared cases and learning material; a teaching copy does not carry privileged client files. Foundry’s representation of a claim or authority does not certify physical truth. Physical measurements retain methods, units, limitations and custody where relevant.
@@ -138,4 +138,4 @@ The independent Value Office owns baseline, attribution, outcome certification a
 
 Content acceptance requires all eight business/history and four Finance entries to identify source, owner/steward, disclosure posture and temporal/authority relationships. Every local control must resolve to an existing CCF control and natural evidence population. The repository validator checks these structural claims and the distinction between historical/external names and current legal books.
 
-This supplies the requested source-boundary refinements for #38/#44. Runtime access enforcement and tests require their own implementation evidence and remain outside a documentation-only closeout. A fully generated unit package additionally needs operational populations, subledger/statement reconciliation and its own tested safety allowlist under #12.
+This supplies the requested source-boundary refinements for #38/#44. The accepted business-finance release in PR #111 supplies the original seven unit packages. The [operating successor](../../enterprise/operations/README.md) deepens their histories, reconciliations, scope checks and control exercises. Synthetic test results do not establish production access enforcement or operational effectiveness; runtime deployment remains independently gated.

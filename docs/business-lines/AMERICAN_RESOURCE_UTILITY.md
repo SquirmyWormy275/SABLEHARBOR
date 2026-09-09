@@ -1,7 +1,7 @@
 # American Resource Utility / BS&T — current business dossier
 
 **Document ID:** `SH-BIZ-AMERICAN-RESOURCE-UTILITY-001`
-**Version:** 1.1.0
+**Version:** 1.2.0
 **As of:** September 9, 2026
 **State:** CURRENT SOURCE SYNTHESIS
 **Owner:** Nora Ashcombe / Seth Kettering rail authority
@@ -37,6 +37,10 @@ The [local control and interface register](BUSINESS_FINANCE_AND_ALEXANDRIA_INTER
 ## Executable financial evidence
 
 The [business-driven successor](../../enterprise/business/README.md) now implements the current operating model and produces this unit's reconciled CSV, SQLite and audit workbook package. The [financial design](../finance/BUSINESS_DRIVEN_SUCCESSOR_2026-09-09.md) and [export contract](../audit/UNIT_EXPORT_SPECIFICATION.md) identify source events, preserved industrial references, scenario assumptions and remaining granularity. New Core economics begin in 2027; retained 2026 calibration remains explicit. Treasury schedules identify unfunded payment requests.
+
+## Operating histories and evidence
+
+The [operating successor](../../enterprise/operations/README.md) adds dated rail, truck, terminal and warehouse allocations, maintenance jobs and equipment/crew/downtime checks. Quantities and revenue reconcile to existing service and invoice records without posting duplicate finances. Infeasible schedules remain visible; uranium custody and mine-spur authority remain independently gated.
 
 ## Remaining boundaries
 

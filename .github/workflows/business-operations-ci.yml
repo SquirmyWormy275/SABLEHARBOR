@@ -1,0 +1,111 @@
+name: Business operations successor acceptance
+
+on:
+  pull_request:
+    paths:
+      - enterprise/**
+      - industrial/**
+      - red_wash/**
+      - src/**
+      - config/**
+      - db/**
+      - docs/canon/**
+      - docs/structured/**
+      - docs/advisory/**
+      - docs/business-lines/**
+      - docs/finance/**
+      - docs/audit/OPERATING_DEPTH_EXPORT_SPECIFICATION.md
+      - pyproject.toml
+      - alembic.ini
+      - uv.lock
+      - .github/workflows/business-operations-ci.yml
+  push:
+    branches: [main]
+    paths:
+      - enterprise/**
+      - industrial/**
+      - red_wash/**
+      - src/**
+      - config/**
+      - db/**
+      - docs/canon/**
+      - docs/structured/**
+      - docs/advisory/**
+      - docs/business-lines/**
+      - docs/finance/**
+      - docs/audit/OPERATING_DEPTH_EXPORT_SPECIFICATION.md
+      - pyproject.toml
+      - alembic.ini
+      - uv.lock
+      - .github/workflows/business-operations-ci.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          fetch-depth: 0
+      - uses: astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d
+        with:
+          version: "0.12.4"
+          python-version: "3.12"
+      - run: uv sync --frozen --all-extras
+      - run: uv run python -m pytest enterprise/operations/tests enterprise/business/tests industrial/planning/tests
+      - name: Build operating and financial evidence
+        run: uv run python -m enterprise.operations.build
+      - name: Reproduce complete distribution bytes
+        run: |
+          cp enterprise/dist/operations-v1.0.0/SHA256SUMS.txt /tmp/operations-first-sha256.txt
+          uv run python -m enterprise.operations.build
+          cmp /tmp/operations-first-sha256.txt enterprise/dist/operations-v1.0.0/SHA256SUMS.txt
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: business-operations-v1-review
+          path: enterprise/dist/operations-v1.0.0/
+          if-no-files-found: error
+
+  publish:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: reconcile
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      actions: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - name: Download exact checked artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh run download "$GITHUB_RUN_ID" --name business-operations-v1-review --dir /tmp/operations-release
+      - name: Verify source and publish immutable release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cd /tmp/operations-release
+          sha256sum --check SHA256SUMS.txt
+          python - <<'PY'
+          import json, os, zipfile
+          with zipfile.ZipFile('sable-harbor-business-operations-v1.0.0.zip') as bundle:
+              identity = json.loads(bundle.read('identity.json'))
+              assert identity['source_revision'] == os.environ['GITHUB_SHA']
+              assert identity['dirty_development_build'] is False
+              assert identity['schema_draft'] is False
+              assert identity['review_preparation_only'] is False
+              assert json.loads(bundle.read('validation.json'))['status'] == 'PASS'
+              assert json.loads(bundle.read('public_safety.json'))['status'] == 'PASS'
+          PY
+          if gh release view business-operations-v1.0.0 --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            echo 'Version already published; preserve its tag and bytes.'
+            exit 0
+          fi
+          gh release create business-operations-v1.0.0 \
+            --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" \
+            --title 'Business operations and financial evidence v1.0.0' \
+            --notes-file "$GITHUB_WORKSPACE/docs/releases/BUSINESS_OPERATIONS_RELEASES.md" \
+            sable-harbor-business-operations-v1.0.0.zip SHA256SUMS.txt
