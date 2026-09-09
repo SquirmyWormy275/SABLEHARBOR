@@ -4,13 +4,13 @@
 **Scope:** Current unresolved canon, deliberately deferred work, and repository/publication closeout.  
 **Status:** Tracking index only; not a decision register.
 
-Current authority remains in the accepted repository canon and dated addenda, the controlled document index, and applicable canonical Markdown sources. The [September 6 closeout](../canon/DECISION_REGISTER_ADDENDUM_2026-09-06_CLOSEOUT.md) resolves Daniel's full name as Daniel Mercer and adopts the Semaphore, AR/VR, and packaging decisions below. Merged PR #97 records repository integration; the linked GitHub issues record actual closure. A draft branch or chat approval alone is not closeout.
+Current authority remains in the accepted repository canon and dated addenda, the controlled document index, and applicable canonical Markdown sources. The [September 6 closeout](../canon/DECISION_REGISTER_ADDENDUM_2026-09-06_CLOSEOUT.md) resolves Daniel's full name as Daniel Mercer and adopts the Semaphore, AR/VR, and packaging decisions below. The [September 9 Advisory Tier 1 addendum](../canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md) resolves the remaining Advisory operating-model, carry and Atlas commercial mechanics within its stated scope. A draft branch or chat approval alone is not closeout.
 
 ## Governance and legal canon
 
 | Issue | Topic | Current state |
 |---:|---|---|
-| #18 | Remaining legal implementation mechanics | PARTIAL — industrial identities/ownership settled; parent tax and remaining mechanics OPEN |
+| #18 | Parent tax and external legal execution | PARTIAL — Advisory operating name/form/carry architecture resolved by PR #113; SHI tax elections, counsel/tax carry implementation, trademark clearance and transaction-specific future legal mechanics remain OPEN |
 | #44 | Finance portal source boundaries | CLOSED by PR #110; runtime implementation remains with Alexandria cluster |
 
 Resolved September 3: #17 Internal Audit operating model and #20 Orientation ranks/board eligibility are CLOSED by controlling canon.
@@ -30,6 +30,22 @@ Resolved September 3: #17 Internal Audit operating model and #20 Orientation ran
 
 The September 3 decision is to preserve Alexandria as an **access fabric** conceptually and avoid duplicating CCF/technology-policy design prematurely.
 
+## Advisory and Atlas Meridian
+
+Merged PR #113 closes the prior Advisory operating-model gaps without pretending outside legal or professional sign-off has occurred.
+
+Resolved in `SH-ADV-ATL-DR-003`:
+
+- Sable Harbor Advisory operating/business-line name;
+- business-line legal-form direction under the existing Sable Harbor contracting entity;
+- dual management/professional hierarchy and matter-role architecture;
+- Education carry gate and negative J2HQ shortcut decision;
+- phantom-carry pool, hurdle, units, vesting, holdback and clawback design;
+- measurable-value bands, 60/40 default, payout curve and normal $150,000 matter minimum;
+- Atlas Core / Enterprise / Professional / Managed commercial architecture and institutional pricing calibration.
+
+Remaining external execution is tracked narrowly in #18. The individual Advisory President remains an appointment decision, not an unresolved operating-model dependency.
+
 ## September 3 corporate-headquarters continuation
 
 | Issue | Topic | Current state |
@@ -46,6 +62,7 @@ SHMS development is complete under `docs/governance/SABLE_HARBOR_MANAGEMENT_SYST
 | #9 | Enterprise financial data platform v0.1 | MERGED; v0.1.0 release published; #12 retains broader standalone audit-package scope |
 | #10 | Enterprise/auditable business-line dossiers | CLOSED AS SUPERSEDED by later PR #13; branch retained pending branch-retirement capability |
 | #13 | Enterprise portal, dossiers, and repo hygiene | CLOSED as reconciled/superseded through merged PR #93; retained branch is provenance |
+| #113 | Advisory Tier 1 operating system + Atlas commercial product architecture | MERGED after all seven current CI workflows passed; operating/business design controlling through `SH-ADV-ATL-DR-003` |
 
 ## Repository operations
 
@@ -92,4 +109,4 @@ Historical OPEN language must not override later controlling canon. Resolved iss
 | #107 | Historical railway geometry and engineering | OPEN; accepted current topology preserved |
 | #108 | Semantic geographic census and temporal program | OPEN; accepted program closeout matrix controls scope |
 
-The [business-line dossiers](../business-lines/README.md) and [source crosswalk](../business-lines/CURRENT_SOURCE_CROSSWALK.md) provide the current operating/finance entry point.
+The [business-line dossiers](../business-lines/README.md), [Advisory operating package](../advisory/README.md) and [source crosswalk](../business-lines/CURRENT_SOURCE_CROSSWALK.md) provide the current operating/finance entry points.
