@@ -189,3 +189,13 @@ The v0.3 lore, base decision register, original lineage and other finance-pinned
 - [Controlling visual identity decision](canon/NORTHSTAR_MINERALS_VISUAL_IDENTITY_2026-09-07.md)
 - [Approved horizontal logo](../assets/brand/logos/northstar-minerals__primary-horizontal.png) and [source manifest](../assets/brand/northstar_minerals_visual_manifest.json)
 - [Existing R2 seller identity](canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05_R2.md#seller-identity--locked) and [brand validation](../assets/brand/VALIDATION.md)
+
+## September 9 business and publication reconciliation
+
+- [Seven current business dossiers](business-lines/README.md)
+- [Business and Finance interface contract](business-lines/BUSINESS_FINANCE_AND_ALEXANDRIA_INTERFACES.md)
+- [Current source and release crosswalk](business-lines/CURRENT_SOURCE_CROSSWALK.md)
+- [Scoped implementation direction](canon/BUSINESS_DEVELOPMENT_DIRECTION_2026-09-09.md)
+- [Generated-records lifecycle](governance/GENERATED_RECORDS_LIFECYCLE.md)
+
+The current publication manifest includes the headquarters/ESS/People/IT/authority/SHMS/J2-establishment sources and the four 2021–2026 board approval records. The exact approved Sacramento HQ image remains an independently tracked asset-ingestion gap (#88); publication of its doctrine does not supply the missing binary.

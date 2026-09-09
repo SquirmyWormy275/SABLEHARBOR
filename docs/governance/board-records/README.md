@@ -27,6 +27,6 @@ The machine-readable register is [`../structured/board_approval_records.json`](.
 
 - These records do not settle items that remain OPEN in canon.
 - These records do not make J2 a legal entity or customer-facing business line.
-- These records do not convert Internal Audit into a settled 2026 model.
+- These September 2 records do not settle the then-open Internal Audit model; the later September 3 headquarters closeout separately settles its independence and ESS boundary.
 - These records do not authorize any special investor veto or privileged commercial channel.
 - These records preserve historical sequencing; the 2026 committee architecture is not backdated into 2016-2020 operations.

@@ -1,7 +1,7 @@
 # SABLE HARBOR — CORPORATE HEADQUARTERS CLOSEOUT
 
 **Document ID:** `SH-CORP-HQ-20260903`  
-**Version:** 1.0.0  
+**Version:** 1.0.1
 **Decision date:** September 3, 2026  
 **Status:** LOCKED unless explicitly marked DEFERRED  
 **Scope:** Enterprise headquarters, ESS, People & Culture, Technology Services, authority, capital/planning rhythm, executive architecture, portfolio model, and headquarters physical doctrine.
@@ -346,7 +346,7 @@ Corporate leaders are expected to spend meaningful time in the businesses. Headq
 
 The following are intentionally not resolved by this closeout:
 
-- Sable Harbor Management System (SHMS) full doctrine — **NEXT PRIORITY**;
+- Sable Harbor Management System (SHMS) full doctrine — subsequently **LOCKED** in [the SHMS doctrine](../governance/SABLE_HARBOR_MANAGEMENT_SYSTEM.md); #87 closed;
 - detailed failing-business intervention doctrine;
 - detailed organic business formation/incubation doctrine;
 - detailed Alexandria runtime stack, raw-source entitlements, retention/deletion, Semaphore precedence, Daedalus runtime/leakage controls, spatial/AR, business/finance portal boundaries — defer until the CCF and technology-control architecture provide the underlying environment;

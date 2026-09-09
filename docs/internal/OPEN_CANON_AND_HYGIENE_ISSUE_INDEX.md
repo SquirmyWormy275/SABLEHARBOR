@@ -1,17 +1,17 @@
 # Open Canon and Post-Merge Hygiene Issue Index
 
-**Index date:** September 6, 2026
+**Index date:** September 9, 2026
 **Scope:** Current unresolved canon, deliberately deferred work, and repository/publication closeout.  
 **Status:** Tracking index only; not a decision register.
 
-Current authority remains in the accepted repository canon and dated addenda, the controlled document index, and applicable canonical Markdown sources. The [September 6 closeout](../canon/DECISION_REGISTER_ADDENDUM_2026-09-06_CLOSEOUT.md) resolves Daniel's full name as Daniel Mercer and adopts the Semaphore, AR/VR, and packaging decisions below. PR #97 records repository integration; the linked GitHub issues record actual closure. A draft branch or chat approval alone is not closeout.
+Current authority remains in the accepted repository canon and dated addenda, the controlled document index, and applicable canonical Markdown sources. The [September 6 closeout](../canon/DECISION_REGISTER_ADDENDUM_2026-09-06_CLOSEOUT.md) resolves Daniel's full name as Daniel Mercer and adopts the Semaphore, AR/VR, and packaging decisions below. Merged PR #97 records repository integration; the linked GitHub issues record actual closure. A draft branch or chat approval alone is not closeout.
 
 ## Governance and legal canon
 
 | Issue | Topic | Current state |
 |---:|---|---|
-| #18 | Exact legal entity implementation mechanics | OPEN |
-| #44 | Finance portal source boundaries | DEFERRED with Alexandria implementation cluster |
+| #18 | Remaining legal implementation mechanics | PARTIAL — industrial identities/ownership settled; parent tax and remaining mechanics OPEN |
+| #44 | Finance portal source boundaries | Content/authority/temporal contract prepared; runtime implementation remains with Alexandria cluster |
 
 Resolved September 3: #17 Internal Audit operating model and #20 Orientation ranks/board eligibility are CLOSED by controlling canon.
 
@@ -22,11 +22,11 @@ Resolved September 3: #17 Internal Audit operating model and #20 Orientation ran
 | #19 | J2 staffing and named leadership | PARTIAL — 237-billet establishment LOCKED; named individuals remain OPEN |
 | #21 | Alexandria runtime technology stack | DEFERRED pending CCF/technology-control architecture |
 | #22 | Collection entitlement and raw-source access model | DEFERRED pending CCF/technology-control architecture |
-| #23 | Semaphore precedence vocabulary | DECISION RESOLVED in September 6 addendum: Routine / Priority / Immediate / Flash, urgency only; integration tracked by PR #97 |
+| #23 | Semaphore precedence vocabulary | DECISION RESOLVED in September 6 addendum: Routine / Priority / Immediate / Flash, urgency only; integrated through merged PR #97 |
 | #24 | Retention and deletion rules | DEFERRED pending CCF/technology-control architecture |
-| #25 | Spatial, AR, and VR interaction direction | DIRECTION RESOLVED: future AR and VR integration planned; ordinary desktop fully usable; implementation details OPEN; integration tracked by PR #97 |
+| #25 | Spatial, AR, and VR interaction direction | DIRECTION RESOLVED: future AR and VR integration planned; ordinary desktop fully usable; implementation details OPEN; integrated through merged PR #97 |
 | #34 | Daedalus runtime policy and leakage tests | DEFERRED implementation/canon boundary |
-| #38 | Business-line interface to Alexandria | DEFERRED refinement |
+| #38 | Business-line interface to Alexandria | Source/owner/evidence matrix now prepared; runtime and entitlement implementation remain scoped separately |
 
 The September 3 decision is to preserve Alexandria as an **access fabric** conceptually and avoid duplicating CCF/technology-policy design prematurely.
 
@@ -60,7 +60,7 @@ Issues #26 and #50 are already CLOSED; #50 is a duplicate of #26. Alexandria bou
 | Issue | Topic | Current state |
 |---:|---|---|
 | #33 | Controlled publication board-paper-trail reconciliation | OPEN |
-| #35 | Release artifact packaging decision | POLICY RESOLVED in September 6 delivery policy with explicit historical exceptions; integration tracked by PR #97 |
+| #35 | Release artifact packaging decision | POLICY RESOLVED in September 6 delivery policy with explicit historical exceptions; integrated through merged PR #97 |
 | #37 | Generated catalog and SQLite lifecycle | OPEN |
 | #48 | Corporate-document index source/publication review | CLOSED by PR #83; subsequent current-state reconciliation recorded separately |
 | #88 | September 3 three-representation/publication closeout | OPEN |
@@ -83,3 +83,13 @@ Issues #42 and #53 are already CLOSED and therefore omitted from remaining-work 
 ## Closeout principle
 
 Historical OPEN language must not override later controlling canon. Resolved issues should be closed or explicitly narrowed; deliberately deferred issues must remain visibly deferred rather than being silently invented. Administrative duplicate issues remain closed as duplicates. Stale branches must be retired only after accepted unique content is preserved or positively shown to be superseded.
+
+## Geographic evidence remaining after PR #105
+
+| Issue | Topic | Current state |
+|---:|---|---|
+| #106 | Exact site/occupancy evidence | OPEN; accepted approximate site concepts preserved |
+| #107 | Historical railway geometry and engineering | OPEN; accepted current topology preserved |
+| #108 | Semantic geographic census and temporal program | OPEN; accepted program closeout matrix controls scope |
+
+The [business-line dossiers](../business-lines/README.md) and [source crosswalk](../business-lines/CURRENT_SOURCE_CROSSWALK.md) provide the current operating/finance entry point.

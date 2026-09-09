@@ -1,6 +1,6 @@
 # SABLE HARBOR — ENTERPRISE AUTHORITY, CAPITAL, AND EXECUTIVE RHYTHM
 
-**Document ID:** `SH-GOV-AUTH-002` | **Version:** 1.0.0 | **Effective:** September 3, 2026 | **State:** LOCKED
+**Document ID:** `SH-GOV-AUTH-002` | **Version:** 1.0.1 | **Effective:** September 3, 2026 | **State:** LOCKED
 **Owner:** Office of the CEO | **Controlling source:** `../canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md`
 
 ## 1. Authority architecture
@@ -101,7 +101,7 @@ Acquisitions have three legitimate paths: integrate into an existing business; o
 
 ## 9. Management-system boundary
 
-The future Sable Harbor Management System (SHMS) will curate the management disciplines beneath this doctrine. It is intentionally not developed here. SHMS is the next-priority workstream and must be derived from canon rather than invented as a process framework.
+The [Sable Harbor Management System](SABLE_HARBOR_MANAGEMENT_SYSTEM.md) is now LOCKED under the September 3 closeout. It supplies the ten-principle management doctrine beneath this authority architecture. The earlier next-workstream description is superseded; issue #87 is closed.
 
 ## 10. Deferred topics
 
