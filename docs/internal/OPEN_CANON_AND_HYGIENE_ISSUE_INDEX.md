@@ -78,7 +78,7 @@ Issues #42 and #53 are already CLOSED and therefore omitted from remaining-work 
 
 | Issue | Topic | Current state |
 |---:|---|---|
-| #12 | Standalone business-unit audit packages | Implemented by business successor; final acceptance requires merged PR, seven-unit reconciliation and CI release |
+| #12 | Standalone business-unit audit packages | CLOSED by PR #111; seven reconciled unit packages published in business-finance-v1.0.0 |
 
 ## Closeout principle
 
