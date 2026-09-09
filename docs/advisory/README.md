@@ -8,6 +8,10 @@ Sable Harbor Advisory is a client-facing professional-services business adjacent
 
 The practice is deliberately designed as a mature professional institution rather than a conventional labor pyramid.
 
+## Integrated firm manual
+
+The consolidated executive operating artifact is [`SABLE_HARBOR_ADVISORY_FIRM_MANUAL_2026-09-09.md`](SABLE_HARBOR_ADVISORY_FIRM_MANUAL_2026-09-09.md). Detailed controlled standards below govern where more specific.
+
 ## Practice architecture
 
 - **Intelligence Advisory** — apply Sable Harbor investigative capability to consequential client questions.
@@ -34,6 +38,10 @@ All three practices draw from one common bench. The problem determines the team.
 | [IP, data and method transfer](IP_DATA_AND_METHOD_TRANSFER_STANDARD.md) | Client-owned/licensed/reserved/restricted classes and practice-specific transfer rules |
 | [Legal and contracting term sheet](LEGAL_AND_CONTRACTING_TERM_SHEET.md) | Required MSA/SOW/Atlas/Outcome/Transfer contract architecture for counsel implementation |
 | [Financial operating model](ADVISORY_FINANCIAL_OPERATING_MODEL.md) | Revenue streams, matter P&L, backlog, capacity, reserves, compensation and management reporting |
+| [Client portfolio and market development](CLIENT_PORTFOLIO_AND_MARKET_DEVELOPMENT_STANDARD.md) | Target clients, account/pursuit governance, credentials, thought leadership, pipeline and cross-sell |
+| [Knowledge, method and case learning](KNOWLEDGE_METHOD_AND_CASE_LEARNING_STANDARD.md) | Institutional learning, method ownership, cross-matter rights, sanitized case library and expert locator |
+| [Expert network and third parties](EXPERT_NETWORK_AND_THIRD_PARTY_STANDARD.md) | Experts, subcontractors, technical providers, diligence, access, independence and continuity |
+| [Management scorecard and annual planning](MANAGEMENT_SCORECARD_AND_ANNUAL_PLANNING.md) | Monthly scorecard, annual plan, scenarios, practice planning and enterprise reporting |
 | [Atlas Meridian professional platform](ATLAS_MERIDIAN_PROFESSIONAL_PLATFORM.md) | Product/advisory boundary, client/professional planes, portal, agent constellations and transfer |
 | [Atlas Meridian commercial product standard](ATLAS_MERIDIAN_COMMERCIAL_PRODUCT_STANDARD.md) | Editions, tenant model, connectors, agent packaging, evaluation, support, security, export and licensing |
 | [Executive memorandum](SABLE_HARBOR_ADVISORY_EXECUTIVE_MEMORANDUM_2026-09-08.md) | Partner-committee-level summary of the original operating-model closeout |
@@ -67,6 +75,6 @@ All three practices draw from one common bench. The problem determines the team.
 
 ## Current implementation state
 
-The operating/business-line name **Sable Harbor Advisory** is the accepted working institutional name. Advisory remains a business line of the existing controlling Sable Harbor contracting entity unless a later approved transaction creates a separate entity. The individual President is an appointment decision, not an unresolved operating-model dependency.
+The operating/business-line name **Sable Harbor Advisory** is the accepted institutional name. Advisory remains a business line of the existing controlling Sable Harbor contracting entity unless a later approved transaction creates a separate entity. The individual President is an appointment decision, not an unresolved operating-model dependency.
 
 Qualified counsel, tax, insurance, privacy, security and trademark work are execution requirements before real external commercialization; the repository does not pretend those professional sign-offs have occurred merely because the operating design is complete.
