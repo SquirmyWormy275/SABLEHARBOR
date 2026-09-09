@@ -643,57 +643,57 @@
     },
     {
       "source": "docs/business-lines/FOUNDRY_FIELD.md",
-      "publication": "docs/business-lines/publications/SH-BIZ-FOUNDRY-FIELD-001_v1.0.0.pdf",
-      "sha256": "79f4e51dd4b54fb3b6208f73508226378a2dcce1c71cb1531ddacfb4cd9b842e",
-      "source_sha256": "beee00070cd7a75d369ff57bda8a56b76c06c91dc9e6586b8b58786bcf786394",
+      "publication": "docs/business-lines/publications/SH-BIZ-FOUNDRY-FIELD-001_v1.1.0.pdf",
+      "sha256": "a4cbceb39bda0357d7b1e7a113185fb0522978b02f692df9c7a5a8c79ffd6c0b",
+      "source_sha256": "b1eea0ad6cbfc79d164e87e44832dbdeccb194e3aa9fbea579ecb47d7e9ddf06",
       "brand": "corporate",
       "normalizer": "pypdf"
     },
     {
       "source": "docs/business-lines/ATLAS_MERIDIAN.md",
-      "publication": "docs/business-lines/publications/SH-BIZ-ATLAS-MERIDIAN-001_v1.0.0.pdf",
-      "sha256": "9a0b506916c8363aacdacb5b2fff56b9bf5989a0d7c7961df2c5ef91eeb4d177",
-      "source_sha256": "8bc554f231545947ddcadacfa607b3de4e6fc1c0794be5c37ca28baec920ac37",
+      "publication": "docs/business-lines/publications/SH-BIZ-ATLAS-MERIDIAN-001_v1.1.0.pdf",
+      "sha256": "54ac41319bbf0d195c833fd4d0d871b8b50fcc9e613db9a58cc9fb0304e7ddb1",
+      "source_sha256": "1c90623d56d853ca6247156296953f9451e4790a1b57ba755d00f5e5e15f2ac2",
       "brand": "corporate",
       "normalizer": "pypdf"
     },
     {
       "source": "docs/business-lines/WILLOW.md",
-      "publication": "docs/business-lines/publications/SH-BIZ-WILLOW-001_v1.0.0.pdf",
-      "sha256": "ea6d6ef272a1680486ae64d82ead87eccfb59d1994526b0bbba4d748f430bd16",
-      "source_sha256": "473587b976e53612ca903a5c827b5b7d3c656a78cdb0c6ef44dc0d5557086456",
+      "publication": "docs/business-lines/publications/SH-BIZ-WILLOW-001_v1.1.0.pdf",
+      "sha256": "4260ccaa45811568268b7db3dfe9afbdc78020aee5f62104c018d0ff0f0fc7ec",
+      "source_sha256": "239d4a7d70db0a7885c30cd7ba226a459ff419a48566ec9742c76a7267111115",
       "brand": "corporate",
       "normalizer": "pypdf"
     },
     {
       "source": "docs/business-lines/PROJECT_CRADLE.md",
-      "publication": "docs/business-lines/publications/SH-BIZ-PROJECT-CRADLE-001_v1.0.0.pdf",
-      "sha256": "4df5327c1aab43c554e53c9f796e9d277bd3ec192eb93b5f315f623060d117b4",
-      "source_sha256": "a3d79e6fa37358fc0701986e37316039ab5556e6ef58999356be2e6b48e85ba3",
+      "publication": "docs/business-lines/publications/SH-BIZ-PROJECT-CRADLE-001_v1.1.0.pdf",
+      "sha256": "4d99bda81aa6cf9a826aa326cc18f57b6ab14b506fdacc7b6da45fc2b54e759f",
+      "source_sha256": "7bc25bd32bb5e0bdf81dc01bb341ca5a488801f5348a829a0fffc835ea8b8fca",
       "brand": "corporate",
       "normalizer": "pypdf"
     },
     {
       "source": "docs/business-lines/PALE_SUN.md",
-      "publication": "docs/business-lines/publications/SH-BIZ-PALE-SUN-001_v1.0.0.pdf",
-      "sha256": "32d778394eabc4632494d835b7c1f8c2d3f2809cdbaad8c07a140419c2577f31",
-      "source_sha256": "a3a5d23c7040bf355fa54f6cfde07c7a544410f622a9f84d30859c37c3b1790d",
+      "publication": "docs/business-lines/publications/SH-BIZ-PALE-SUN-001_v1.1.0.pdf",
+      "sha256": "96b713f3abd1714a5138f8e57f49c2d2338bcf1d966cf3e9b789fe1c5685ef51",
+      "source_sha256": "685940c869e66495714dcd2a5f5d9cf01594e992617343c84086927e78965d7b",
       "brand": "corporate",
       "normalizer": "pypdf"
     },
     {
       "source": "docs/business-lines/AMERICAN_RESOURCE_UTILITY.md",
-      "publication": "docs/business-lines/publications/SH-BIZ-AMERICAN-RESOURCE-UTILITY-001_v1.0.0.pdf",
-      "sha256": "ef83e5004896fa65ceb08682f6b6449f61f27383391aa23b1a9d316e96586033",
-      "source_sha256": "bafbf3ed6894a33ed97177590e9a7ef4ee59040d7a995fd75a52d0e8125b98da",
+      "publication": "docs/business-lines/publications/SH-BIZ-AMERICAN-RESOURCE-UTILITY-001_v1.1.0.pdf",
+      "sha256": "1e024b5aecef171c175d13d499fa155597eeafaba59c350150ab8bfcc82cc598",
+      "source_sha256": "d5145fa26378aed21edbe97b6b632a76a75dd301a076db32fd089f41be3a2d12",
       "brand": "corporate",
       "normalizer": "pypdf"
     },
     {
       "source": "docs/business-lines/ADVISORY.md",
-      "publication": "docs/business-lines/publications/SH-BIZ-ADVISORY-001_v1.0.0.pdf",
-      "sha256": "26556fdbe330d155d8aa98cf695d1f93a4a8e16bfd5cf6a57f68e084ed8b9efd",
-      "source_sha256": "4f23491217da438499f95a7e28be57e444775f6479b7a5c3e801988c321f4539",
+      "publication": "docs/business-lines/publications/SH-BIZ-ADVISORY-001_v1.1.0.pdf",
+      "sha256": "e695a0bf3ed881180ca3b2c9028b1f54b63a8515cd21b87eba1eff7cefa79889",
+      "source_sha256": "5f8abdd2f713626f642e21b06a72473fac522e2e1b0f20f4efc8d3d4e50dca6d",
       "brand": "corporate",
       "normalizer": "pypdf"
     },
@@ -886,6 +886,22 @@
       "publication": "docs/advisory/publications/SH-ADV-CTRL-001_v1.0.0.pdf",
       "sha256": "25ffb18d79e35c5e9428126bd78092c1949f03a6433a0943393fcf196c81adb0",
       "source_sha256": "d2c815df4efc1aa004ee64c0a460ed678e1ba5459d1bc43b91518e2ab750cbc3",
+      "brand": "corporate",
+      "normalizer": "pypdf"
+    },
+    {
+      "source": "docs/finance/BUSINESS_DRIVEN_SUCCESSOR_2026-09-09.md",
+      "publication": "docs/finance/publications/SH-FIN-BUSINESS-001_v1.0.0.pdf",
+      "sha256": "b8b53402ebe7a3be8859d19bee3cd98b29e5dc354ca3732a1dc9c872131699df",
+      "source_sha256": "0deb6793d18f1c84ff65048a4b17f9bc6ca55aac21632522082db4699bcd574c",
+      "brand": "corporate",
+      "normalizer": "pypdf"
+    },
+    {
+      "source": "docs/audit/UNIT_EXPORT_SPECIFICATION.md",
+      "publication": "docs/finance/publications/SH-AUDIT-UNIT-EXPORT-001_v1.0.0.pdf",
+      "sha256": "1253b4bde032132958a2af5ef971358b23b04bbaf2e4a19163a794abaf655345",
+      "source_sha256": "6d08de8c18deef4c337dfaecdd24016c824f4fef7bba2308c97a95368926cd06",
       "brand": "corporate",
       "normalizer": "pypdf"
     }

@@ -11,12 +11,14 @@
       "owner": "Foundry Field product and deployment leadership",
       "sources": [
         "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md",
-        "docs/organization/FOUNDRY_AND_FOUNDRY_FIELD.md"
+        "docs/organization/FOUNDRY_AND_FOUNDRY_FIELD.md",
+        "docs/finance/BUSINESS_DRIVEN_SUCCESSOR_2026-09-09.md"
       ],
       "dossier": "docs/business-lines/FOUNDRY_FIELD.md",
       "state": "CURRENT_SOURCE_SYNTHESIS",
       "as_of": "2026-09-09",
-      "model_state": "SYNTHETIC_ASSUMPTIONS_SEPARATE_FROM_CANON"
+      "model_state": "BUSINESS_DRIVEN_SUCCESSOR_2027_2031_WITH_PRESERVED_2026_AND_INDUSTRIAL_SOURCE",
+      "implementation": "enterprise/business/README.md"
     },
     {
       "id": "atlas-meridian",
@@ -26,12 +28,14 @@
       "owner": "Atlas Meridian product organization",
       "sources": [
         "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md",
-        "docs/canon/ADVISORY_ATLAS_MERIDIAN_CLOSEOUT_2026-09-08.md"
+        "docs/canon/ADVISORY_ATLAS_MERIDIAN_CLOSEOUT_2026-09-08.md",
+        "docs/finance/BUSINESS_DRIVEN_SUCCESSOR_2026-09-09.md"
       ],
       "dossier": "docs/business-lines/ATLAS_MERIDIAN.md",
       "state": "CURRENT_SOURCE_SYNTHESIS",
       "as_of": "2026-09-09",
-      "model_state": "SYNTHETIC_ASSUMPTIONS_SEPARATE_FROM_CANON"
+      "model_state": "BUSINESS_DRIVEN_SUCCESSOR_2027_2031_WITH_PRESERVED_2026_AND_INDUSTRIAL_SOURCE",
+      "implementation": "enterprise/business/README.md"
     },
     {
       "id": "willow",
@@ -42,12 +46,14 @@
       "sources": [
         "docs/canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md",
         "docs/finance/WILLOW_KLEIN_FINANCE_AND_CORPORATE_MODEL_2026-09-06.md",
-        "docs/organization/WILLOW_KLEIN_CORPORATE_RECORD.md"
+        "docs/organization/WILLOW_KLEIN_CORPORATE_RECORD.md",
+        "docs/finance/BUSINESS_DRIVEN_SUCCESSOR_2026-09-09.md"
       ],
       "dossier": "docs/business-lines/WILLOW.md",
       "state": "CURRENT_SOURCE_SYNTHESIS",
       "as_of": "2026-09-09",
-      "model_state": "SYNTHETIC_ASSUMPTIONS_SEPARATE_FROM_CANON"
+      "model_state": "BUSINESS_DRIVEN_SUCCESSOR_2027_2031_WITH_PRESERVED_2026_AND_INDUSTRIAL_SOURCE",
+      "implementation": "enterprise/business/README.md"
     },
     {
       "id": "project-cradle",
@@ -57,12 +63,14 @@
       "owner": "Cradle operating leadership and accountable host interfaces",
       "sources": [
         "docs/canon/CRADLE_CLOSEOUT_2026-09-06.md",
-        "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md"
+        "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md",
+        "docs/finance/BUSINESS_DRIVEN_SUCCESSOR_2026-09-09.md"
       ],
       "dossier": "docs/business-lines/PROJECT_CRADLE.md",
       "state": "CURRENT_SOURCE_SYNTHESIS",
       "as_of": "2026-09-09",
-      "model_state": "SYNTHETIC_ASSUMPTIONS_SEPARATE_FROM_CANON"
+      "model_state": "BUSINESS_DRIVEN_SUCCESSOR_2027_2031_WITH_PRESERVED_2026_AND_INDUSTRIAL_SOURCE",
+      "implementation": "enterprise/business/README.md"
     },
     {
       "id": "pale-sun",
@@ -74,12 +82,14 @@
         "docs/canon/INDUSTRIAL_CLOSEOUT_2026-09-05.md",
         "industrial/source/entities.json",
         "industrial/planning/docs/FIVE_YEAR_FINANCIAL_PLAN.md",
-        "geospatial/docs/PROGRAM_CLOSEOUT_MATRIX.md"
+        "geospatial/docs/PROGRAM_CLOSEOUT_MATRIX.md",
+        "docs/finance/BUSINESS_DRIVEN_SUCCESSOR_2026-09-09.md"
       ],
       "dossier": "docs/business-lines/PALE_SUN.md",
       "state": "CURRENT_SOURCE_SYNTHESIS",
       "as_of": "2026-09-09",
-      "model_state": "SYNTHETIC_ASSUMPTIONS_SEPARATE_FROM_CANON"
+      "model_state": "BUSINESS_DRIVEN_SUCCESSOR_2027_2031_WITH_PRESERVED_2026_AND_INDUSTRIAL_SOURCE",
+      "implementation": "enterprise/business/README.md"
     },
     {
       "id": "american-resource-utility",
@@ -91,12 +101,14 @@
         "docs/canon/INDUSTRIAL_CLOSEOUT_2026-09-05.md",
         "industrial/source/entities.json",
         "industrial/planning/docs/OPERATING_SCENARIOS.md",
-        "industrial/planning/docs/CAPITAL_INVESTMENT_REVIEW.md"
+        "industrial/planning/docs/CAPITAL_INVESTMENT_REVIEW.md",
+        "docs/finance/BUSINESS_DRIVEN_SUCCESSOR_2026-09-09.md"
       ],
       "dossier": "docs/business-lines/AMERICAN_RESOURCE_UTILITY.md",
       "state": "CURRENT_SOURCE_SYNTHESIS",
       "as_of": "2026-09-09",
-      "model_state": "SYNTHETIC_ASSUMPTIONS_SEPARATE_FROM_CANON"
+      "model_state": "BUSINESS_DRIVEN_SUCCESSOR_2027_2031_WITH_PRESERVED_2026_AND_INDUSTRIAL_SOURCE",
+      "implementation": "enterprise/business/README.md"
     },
     {
       "id": "advisory",
@@ -106,13 +118,15 @@
       "owner": "President, Sable Harbor Advisory \u2014 individual OPEN",
       "sources": [
         "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md",
-        "docs/canon/ADVISORY_ATLAS_MERIDIAN_CLOSEOUT_2026-09-08.md"
+        "docs/canon/ADVISORY_ATLAS_MERIDIAN_CLOSEOUT_2026-09-08.md",
+        "docs/finance/BUSINESS_DRIVEN_SUCCESSOR_2026-09-09.md"
       ],
       "dossier": "docs/business-lines/ADVISORY.md",
       "state": "CURRENT_SOURCE_SYNTHESIS",
       "as_of": "2026-09-09",
-      "model_state": "SYNTHETIC_ASSUMPTIONS_SEPARATE_FROM_CANON",
-      "legal_book_status": "EXISTING_PARENT_MODEL_SCOPE; permanent legal form remains OPEN"
+      "model_state": "BUSINESS_DRIVEN_SUCCESSOR_2027_2031_WITH_PRESERVED_2026_AND_INDUSTRIAL_SOURCE",
+      "legal_book_status": "EXISTING_PARENT_MODEL_SCOPE; permanent legal form remains OPEN",
+      "implementation": "enterprise/business/README.md"
     }
   ]
 }

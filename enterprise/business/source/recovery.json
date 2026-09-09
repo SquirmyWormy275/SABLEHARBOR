@@ -1,0 +1,38 @@
+{
+  "stream17": {
+    "host": "Kelly Gang Mining",
+    "site": "CRD-KGM17",
+    "monthly_feed_tonnes": 150,
+    "contained_reo_fraction": "0.030",
+    "realized_usd_per_kg": 40,
+    "assay_payable_fraction": "0.94",
+    "host_share": "0.20",
+    "processing_usd_per_feed_tonne": 65,
+    "bedford_and_freight_usd_per_kg": "1.5",
+    "sale_lag_months": 1,
+    "direct_payroll_fte": 3
+  },
+  "demotte": {
+    "host": "Demotte Reclamation Services",
+    "site": "CRD-DEMOTTE",
+    "monthly_water_m3": 20000,
+    "concentration_mg_l": 6,
+    "gen1_recovery": "0.35",
+    "gen2_recovery": "0.55",
+    "gen1_availability": "0.55",
+    "gen2_availability": "0.82",
+    "gen2_from_month": 5,
+    "hard_bypass_months": [
+      3,
+      22,
+      41
+    ],
+    "realized_usd_per_kg": 30,
+    "assay_payable_fraction": "0.80",
+    "host_share": "0",
+    "monthly_reagent_and_lab_usd": 18500,
+    "sale_lag_months": 2,
+    "direct_payroll_fte": 4
+  },
+  "inventory_policy": "Stream 17 direct processing and assigned direct labor are costed to captured lots, with lower-of-cost/assayed modeled NRV; AMD experimental costs expensed. Sales require batch acceptance, not just recovery. Bedford lineage retained; no transport qualification is inferred."
+}

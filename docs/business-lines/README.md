@@ -13,3 +13,5 @@ Seven current operating worlds have one source-linked dossier each. The structur
 | [Advisory](ADVISORY.md) | commercial professional services | SHI |
 
 Use the [business, Finance and Alexandria interface record](BUSINESS_FINANCE_AND_ALEXANDRIA_INTERFACES.md), [current source crosswalk](CURRENT_SOURCE_CROSSWALK.md) and [historical/external boundary register](HISTORICAL_AND_EXTERNAL_BOUNDARIES.md) with these dossiers. J2, ESS and Internal Audit are enabling institutions, not additional commercial subsidiaries. Financial scenario records are separate from permanent corporate canon.
+
+The [executable finance successor](../../enterprise/business/README.md) generates the seven reconciled evidence packages under the [unit export contract](../audit/UNIT_EXPORT_SPECIFICATION.md).

@@ -1,0 +1,48 @@
+{
+  "fact_state": "CONDITIONAL_INVESTMENT_CASE",
+  "available_at": "2026-09-09",
+  "currency": "USD",
+  "mine_upgrade": {
+    "investment_year": 2028,
+    "capital_usd": 8000000,
+    "annual_incremental_payable_lb": 85000,
+    "price_usd_per_lb": 62,
+    "incremental_cash_cost_usd_per_lb": 29,
+    "annual_sustaining_usd": 350000,
+    "annual_closure_funding_usd": 150000,
+    "operating_years": 5,
+    "discount_rate": "0.10",
+    "tax_rate": "0.21",
+    "salvage_usd": 0,
+    "tax_boundary": "Isolated unlevered case with stated assumed marginal tax; no new tax election or deduction claim.",
+    "cases": {
+      "base": {
+        "volume_factor": "1",
+        "price_factor": "1",
+        "capital_factor": "1"
+      },
+      "downside": {
+        "volume_factor": "0.70",
+        "price_factor": "0.85",
+        "capital_factor": "1.20"
+      },
+      "upside": {
+        "volume_factor": "1.15",
+        "price_factor": "1.10",
+        "capital_factor": "1"
+      }
+    }
+  },
+  "closure_sensitivity": {
+    "base_cash_obligation_usd": 12000000,
+    "funded_cash_usd": 3000000,
+    "years_to_settlement": 10,
+    "discount_rate": "0.04",
+    "cost_factors": [
+      "1",
+      "1.25",
+      "1.50"
+    ],
+    "boundary": "Illustrative standalone support/funding stress, not a replacement mine engineering estimate, booked ARO, surety instrument or restricted cash balance."
+  }
+}

@@ -1,0 +1,51 @@
+[
+  {
+    "asset_id": "FORT-TEST-RIG",
+    "unit": "willow",
+    "site": "WIL-FORT-PGH",
+    "cost_center": "WIL-200",
+    "purchase_month": 1,
+    "cost_usd": 240000,
+    "life_months": 60,
+    "transfer_month": 10,
+    "transfer_unit": "foundry-field",
+    "qualification_required": true,
+    "qualified": true
+  },
+  {
+    "asset_id": "FORT-ANALYTICAL",
+    "unit": "willow",
+    "site": "WIL-FORT-PGH",
+    "cost_center": "WIL-300",
+    "purchase_month": 2,
+    "cost_usd": 180000,
+    "life_months": 60
+  },
+  {
+    "asset_id": "BEDFORD-MODULE",
+    "unit": "project-cradle",
+    "site": "CRD-BEDFORD",
+    "cost_center": "CRD-BEDFORD",
+    "purchase_month": 2,
+    "cost_usd": 650000,
+    "life_months": 84
+  },
+  {
+    "asset_id": "STREAM17-MODULE",
+    "unit": "project-cradle",
+    "site": "CRD-KGM17",
+    "cost_center": "CRD-KGM17",
+    "purchase_month": 1,
+    "cost_usd": 320000,
+    "life_months": 60
+  },
+  {
+    "asset_id": "DEMOTTE-GEN2",
+    "unit": "project-cradle",
+    "site": "CRD-DEMOTTE",
+    "cost_center": "CRD-AMD",
+    "purchase_month": 5,
+    "cost_usd": 210000,
+    "life_months": 60
+  }
+]

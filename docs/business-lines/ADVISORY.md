@@ -1,7 +1,7 @@
 # Advisory — current business dossier
 
 **Document ID:** `SH-BIZ-ADVISORY-001`
-**Version:** 1.0.0
+**Version:** 1.1.0
 **As of:** September 9, 2026
 **State:** CURRENT SOURCE SYNTHESIS
 **Owner:** President, Sable Harbor Advisory — individual OPEN
@@ -33,6 +33,10 @@ Conflict and rights review; engagement letter and outcome schedule; staffing ass
 Priority failure modes: Hours silently becoming revenue, pressure to sell a favorable judgment, unapproved J2 methods disclosed, a client receiving another client’s working files, unclear acceptance and uncompensated rework.
 
 The [local control and interface register](BUSINESS_FINANCE_AND_ALEXANDRIA_INTERFACES.md) connects owner roles, evidence populations and existing CCF controls. Listed evidence requirements are not assertions that real controls operated.
+
+## Executable financial evidence
+
+The [business-driven successor](../../enterprise/business/README.md) now implements the current operating model and produces this unit's reconciled CSV, SQLite and audit workbook package. The [financial design](../finance/BUSINESS_DRIVEN_SUCCESSOR_2026-09-09.md) and [export contract](../audit/UNIT_EXPORT_SPECIFICATION.md) identify source events, preserved industrial references, scenario assumptions and remaining granularity. New Core economics begin in 2027; retained 2026 calibration remains explicit. Treasury schedules identify unfunded payment requests.
 
 ## Remaining boundaries
 
