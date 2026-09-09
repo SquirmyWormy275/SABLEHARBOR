@@ -1,7 +1,7 @@
 # Enterprise planning successor v2
 
 **Document ID:** SH-PLAN-ENTERPRISE-002
-**Version:** 2.0.0
+**Version:** 2.0.1
 **Owner:** Sable Harbor controller and treasury team (synthetic)
 **State:** CONDITIONAL_FORECAST / SYNTHETIC_RECONSTRUCTION
 
@@ -21,7 +21,7 @@ The semantic legacy extract, included run IDs, input-manifest digest, schema rev
 
 ## Legal ownership and opening bridge
 
-Current legal ownership is SHI (Sable Harbor LLC) → SHIH (Industrial Holdings Inc.) → PS (Pale Sun Inc.) → RWH (Red Wash Holdings LLC), alongside SHIH → ARU (American Resource Utility Inc.) → BS&T. The six legal books are SHI, SHIH, PS, RWH, ARU and BST; ELIM is a consolidation book. Current names and ownership derive from [the entity register](../../source/entities.json), with accepted balance ownership from [finance.json](../../source/finance.json).
+Current legal ownership is SHI (Sable Harbor LLC) → SHIH (Industrial Holdings Inc.) → PS (Pale Sun Inc.) → RWH (Red Wash Mining, LLC), alongside SHIH → ARU (American Resource Utility Inc.) → BS&T. The six legal books are SHI, SHIH, PS, RWH, ARU and BST; ELIM is a consolidation book. Current names and ownership derive from [the entity register](../../source/entities.json), with accepted balance ownership from [finance.json](../../source/finance.json).
 
 The accepted mine contributed capital is carried through RWH, PS and SHIH. The legacy parent omitted reciprocal industrial investment accounts, so an equal additional pre-2026 member-capital reconstruction supports SHI's opening industrial investment. This is an explicitly additional, noncash opening reconstruction. It is not a recovered bank receipt, 2026 revenue, or an assertion that the earlier legacy parent statements already reconciled.
 

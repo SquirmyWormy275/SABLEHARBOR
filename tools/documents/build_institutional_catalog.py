@@ -22,6 +22,12 @@ def field(text: str, name: str, default: str = "") -> str:
 def category(path: str) -> str:
     if path == "docs/canon/INDUSTRIAL_PLANNING_SUCCESSOR_2026-09-06.md":
         return "industrial planning authority"
+    if path.startswith("docs/advisory/"):
+        return "Advisory professional and Atlas product record"
+    if path.startswith("docs/business-lines/"):
+        return "business-line operating and finance record"
+    if path.startswith("docs/governance/board-records/"):
+        return "board approval record"
     if path.startswith("industrial/planning/"):
         return "industrial conditional planning record"
     if path == "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-06_CLOSEOUT.md":
@@ -48,6 +54,8 @@ def inferred_owner(path: str) -> str:
         return "Repository owner"
     if path.startswith("industrial/"):
         return "Sable Harbor Industrial Holdings"
+    if path.startswith("docs/advisory/") or "ADVISORY" in path:
+        return "Advisory President / Atlas product organization"
     name = Path(path).stem
     if path == "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-06_CLOSEOUT.md":
         return "Repository owner"
@@ -93,7 +101,7 @@ def main() -> None:
 
         text = source_path.read_text()
         title_match = re.search(r"^#\s+(.+)$", text, re.M)
-        doc_id = field(text, "Document ID")
+        doc_id = field(text, "Document ID", field(text, "Record ID"))
         if not title_match or not doc_id:
             raise SystemExit(f"controlled source lacks title or document ID: {source}")
         related = split_refs(field(text, "Related"))
@@ -105,7 +113,7 @@ def main() -> None:
             "category": category(source),
             "owner": field(text, "Owner", inferred_owner(source)),
             "version": field(text, "Version", "1.0.0"),
-            "status": field(text, "State", field(text, "Status", "CONTROLLED")),
+            "status": field(text, "State", field(text, "Status", field(text, "Record state", "CONTROLLED"))),
             "source": source,
             "publication": artifact["publication"],
             "source_sha256": source_sha256,

@@ -68,7 +68,9 @@ The following are next-phase work rather than missing foundation content:
 6. exact SOC 1 system/ICFR scope and SOC 2 system/service/Trust Services Category scope;
 7. machine-readable SQL/JSON/CSV population of the logical CCF schema;
 8. runtime implementation evidence for the accepted J2/Alexandria/Daedalus architecture;
-9. final 2026 internal-assurance maturity choice if the provisional co-sourced model is not accepted.
+9. historical assurance-maturity choice: RESOLVED by the September 3 headquarters closeout and current Internal Audit/ESS doctrine (#17 closed); remaining local operating and testing evidence is still implementation work.
+
+The September 9 [local implementation register](../structured/business-lines/interfaces.json) starts the scoped business/Finance evidence layer. It does not claim longitudinal operating effectiveness or completed external-framework mapping.
 
 ## Build rule for the next phase
 

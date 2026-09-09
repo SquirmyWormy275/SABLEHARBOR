@@ -635,11 +635,259 @@
     },
     {
       "source": "industrial/planning/docs/ENTERPRISE_INTEGRATION.md",
-      "publication": "industrial/planning/publications/SH-PLAN-ENTERPRISE-002_v2.0.0.pdf",
-      "sha256": "2c21e0a2678a2b26f2091de8220e74307043f252d22f567a560eb6b08eeb5a9b",
-      "source_sha256": "6b5552431ced57a4bf7a1161d5a4e8ae43f332aae8474ac4ee96d78373cf7c9d",
+      "publication": "industrial/planning/publications/SH-PLAN-ENTERPRISE-002_v2.0.1.pdf",
+      "sha256": "d50352f4022c28c7f224bbe2e8db05387d725129eaf249dbc24c273cac798d73",
+      "source_sha256": "4aa8c2894ce122427a5744c8141d73ddc616d0788996e939f51c4f486bc76b98",
       "brand": "corporate",
-      "normalizer": "qpdf"
+      "normalizer": "pypdf"
+    },
+    {
+      "source": "docs/business-lines/FOUNDRY_FIELD.md",
+      "publication": "docs/business-lines/publications/SH-BIZ-FOUNDRY-FIELD-001_v1.0.0.pdf",
+      "sha256": "79f4e51dd4b54fb3b6208f73508226378a2dcce1c71cb1531ddacfb4cd9b842e",
+      "source_sha256": "beee00070cd7a75d369ff57bda8a56b76c06c91dc9e6586b8b58786bcf786394",
+      "brand": "corporate",
+      "normalizer": "pypdf"
+    },
+    {
+      "source": "docs/business-lines/ATLAS_MERIDIAN.md",
+      "publication": "docs/business-lines/publications/SH-BIZ-ATLAS-MERIDIAN-001_v1.0.0.pdf",
+      "sha256": "9a0b506916c8363aacdacb5b2fff56b9bf5989a0d7c7961df2c5ef91eeb4d177",
+      "source_sha256": "8bc554f231545947ddcadacfa607b3de4e6fc1c0794be5c37ca28baec920ac37",
+      "brand": "corporate",
+      "normalizer": "pypdf"
+    },
+    {
+      "source": "docs/business-lines/WILLOW.md",
+      "publication": "docs/business-lines/publications/SH-BIZ-WILLOW-001_v1.0.0.pdf",
+      "sha256": "ea6d6ef272a1680486ae64d82ead87eccfb59d1994526b0bbba4d748f430bd16",
+      "source_sha256": "473587b976e53612ca903a5c827b5b7d3c656a78cdb0c6ef44dc0d5557086456",
+      "brand": "corporate",
+      "normalizer": "pypdf"
+    },
+    {
+      "source": "docs/business-lines/PROJECT_CRADLE.md",
+      "publication": "docs/business-lines/publications/SH-BIZ-PROJECT-CRADLE-001_v1.0.0.pdf",
+      "sha256": "4df5327c1aab43c554e53c9f796e9d277bd3ec192eb93b5f315f623060d117b4",
+      "source_sha256": "a3d79e6fa37358fc0701986e37316039ab5556e6ef58999356be2e6b48e85ba3",
+      "brand": "corporate",
+      "normalizer": "pypdf"
+    },
+    {
+      "source": "docs/business-lines/PALE_SUN.md",
+      "publication": "docs/business-lines/publications/SH-BIZ-PALE-SUN-001_v1.0.0.pdf",
+      "sha256": "32d778394eabc4632494d835b7c1f8c2d3f2809cdbaad8c07a140419c2577f31",
+      "source_sha256": "a3a5d23c7040bf355fa54f6cfde07c7a544410f622a9f84d30859c37c3b1790d",
+      "brand": "corporate",
+      "normalizer": "pypdf"
+    },
+    {
+      "source": "docs/business-lines/AMERICAN_RESOURCE_UTILITY.md",
+      "publication": "docs/business-lines/publications/SH-BIZ-AMERICAN-RESOURCE-UTILITY-001_v1.0.0.pdf",
+      "sha256": "ef83e5004896fa65ceb08682f6b6449f61f27383391aa23b1a9d316e96586033",
+      "source_sha256": "bafbf3ed6894a33ed97177590e9a7ef4ee59040d7a995fd75a52d0e8125b98da",
+      "brand": "corporate",
+      "normalizer": "pypdf"
+    },
+    {
+      "source": "docs/business-lines/ADVISORY.md",
+      "publication": "docs/business-lines/publications/SH-BIZ-ADVISORY-001_v1.0.0.pdf",
+      "sha256": "26556fdbe330d155d8aa98cf695d1f93a4a8e16bfd5cf6a57f68e084ed8b9efd",
+      "source_sha256": "4f23491217da438499f95a7e28be57e444775f6479b7a5c3e801988c321f4539",
+      "brand": "corporate",
+      "normalizer": "pypdf"
+    },
+    {
+      "source": "docs/business-lines/CURRENT_SOURCE_CROSSWALK.md",
+      "publication": "docs/governance/publications/SH-BIZ-SOURCES-001_v1.0.0.pdf",
+      "sha256": "071a8dde3d6d61e84f699202ad7ac56568519930733b2db545f38deca3217bc0",
+      "source_sha256": "1d93384a5d471c0e053e8affd87b370a13f3f07dc5a1501833d874860e5b9f7f",
+      "brand": "corporate",
+      "normalizer": "pypdf"
+    },
+    {
+      "source": "docs/business-lines/HISTORICAL_AND_EXTERNAL_BOUNDARIES.md",
+      "publication": "docs/governance/publications/SH-BIZ-BOUNDARY-001_v1.0.0.pdf",
+      "sha256": "bbf1fe40a5d4c5b9edfa88173822089721e10af7da956fc1b20804f0544e5599",
+      "source_sha256": "043514fdeffae8c54220a162fb7b08dc3e3d92541821fe6dff3497673725909f",
+      "brand": "corporate",
+      "normalizer": "pypdf"
+    },
+    {
+      "source": "docs/business-lines/BUSINESS_FINANCE_AND_ALEXANDRIA_INTERFACES.md",
+      "publication": "docs/governance/publications/SH-BIZ-ALX-FIN-001_v1.0.0.pdf",
+      "sha256": "4816a5f579788f7743ca0ef7b11f05890611ef6f73106da5d4479d2a74e2038a",
+      "source_sha256": "64ac68cf1ce4255ef957ba5b6226e05116d2575d95fb94768ce1bf7605e40058",
+      "brand": "corporate",
+      "normalizer": "pypdf"
+    },
+    {
+      "source": "docs/canon/BUSINESS_DEVELOPMENT_DIRECTION_2026-09-09.md",
+      "publication": "docs/governance/publications/SH-CANON-BIZ-20260909-001_v1.0.0.pdf",
+      "sha256": "8881740797457cda02dbf380db47598d2bde71d91040b9724d8f11ccc2715205",
+      "source_sha256": "ca9394763b4157843d681ffde8a085844e813d3e40dd40438c7d15c80121ba00",
+      "brand": "corporate",
+      "normalizer": "pypdf"
+    },
+    {
+      "source": "docs/governance/GENERATED_RECORDS_LIFECYCLE.md",
+      "publication": "docs/governance/publications/SH-GOV-GEN-001_v1.0.0.pdf",
+      "sha256": "84c5e205e2d51352e65ba035a50a46df9aab6d7bed8e1926d1567fded5b9b6e5",
+      "source_sha256": "6ccf966b6d8f041b57ad8c0c5f8a43ae908324dd4321ed91126b894cc2aecfc5",
+      "brand": "corporate",
+      "normalizer": "pypdf"
+    },
+    {
+      "source": "docs/governance/ENTERPRISE_AUTHORITY_CAPITAL_AND_EXECUTIVE_RHYTHM.md",
+      "publication": "docs/governance/publications/SH-GOV-AUTH-002_v1.0.1.pdf",
+      "sha256": "f82da2c1710f0d30d9a9427c55f0f1b5b35e8d170c4223d6e7e6ff69c93ce71e",
+      "source_sha256": "ae3593997b0bba2ace0cd4d9864374278b7a54f9c3c527c63a9b7143aecd997b",
+      "brand": "corporate",
+      "normalizer": "pypdf"
+    },
+    {
+      "source": "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
+      "publication": "docs/governance/publications/SH-GOV-ESS-001_v1.1.0.pdf",
+      "sha256": "6890fb4e2f7fe57dca2a3930692530d335c850aff882b1b87aada54bf8b2900e",
+      "source_sha256": "40b45496c66d6e7e5eb5dcd118c3ba37feb710744760c3617acbddcd899e466f",
+      "brand": "corporate",
+      "normalizer": "pypdf"
+    },
+    {
+      "source": "docs/governance/PEOPLE_AND_CULTURE_DOCTRINE.md",
+      "publication": "docs/governance/publications/SH-PNC-001_v1.0.0.pdf",
+      "sha256": "20c937f6355d12d8ff0d202b475d553ebda1927522328c17396ea61986d43880",
+      "source_sha256": "9e8c8b6b3b3ce8500553adfc0e35e94956a8251d395fd8d39355f3d84c1dc5ee",
+      "brand": "corporate",
+      "normalizer": "pypdf"
+    },
+    {
+      "source": "docs/governance/ENTERPRISE_TECHNOLOGY_SERVICES_DOCTRINE.md",
+      "publication": "docs/governance/publications/SH-ITS-001_v1.0.0.pdf",
+      "sha256": "c4b78109fcf116cdaf31db2c53b408ecd24bfd65e8f36749636fa36a98e4caae",
+      "source_sha256": "8dbfbd6a7b9414df28088d6e37ec7ba9e086616b5d4a2deb5cd33da845fa64fd",
+      "brand": "corporate",
+      "normalizer": "pypdf"
+    },
+    {
+      "source": "docs/governance/SABLE_HARBOR_MANAGEMENT_SYSTEM.md",
+      "publication": "docs/governance/publications/SH-GOV-SHMS-001_v1.0.0.pdf",
+      "sha256": "2872d789f50838f21c2d09008feb188d6a6db470c18fe7a2d303ea9b495ed1cf",
+      "source_sha256": "783c319545189c19f40961db6f2b7f7c36a06d3d9984c6e78b659d9dba8fbd9b",
+      "brand": "corporate",
+      "normalizer": "pypdf"
+    },
+    {
+      "source": "docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md",
+      "publication": "docs/governance/publications/SH-CORP-HQ-20260903_v1.0.1.pdf",
+      "sha256": "e0c8af04aa70b1c9ab424fee9ba9c53a4e21f76cb44c81dac61549c28e13db39",
+      "source_sha256": "25e484d7fbc2c83a37f0e7ae7fe20ff741cde176bd0c2ba7be742fa7fb3e2624",
+      "brand": "corporate",
+      "normalizer": "pypdf"
+    },
+    {
+      "source": "docs/j2/J2_ESTABLISHMENT.md",
+      "publication": "docs/governance/publications/SH-J2-EST-001_v1.0.0.pdf",
+      "sha256": "9191227bd9be7120d35ac239efbbd00a0b4d77e495926d182f3f55f345ccde05",
+      "source_sha256": "826bbe8b359d73938c69f8bbd984114fd3b73109bbb9e8af7f003f6b39590c82",
+      "brand": "j2",
+      "normalizer": "pypdf"
+    },
+    {
+      "source": "docs/governance/board-records/2021-06-18_harrison-vale-growth-financing-minutes.md",
+      "publication": "docs/governance/publications/SH-BRD-MIN-2021-06-18_v1.0.0.pdf",
+      "sha256": "04d14fa0c58142454cb0d330c15d2882ab6a8562531c82892d6716cd37233ad6",
+      "source_sha256": "b994512c64f86abe0d649f95d4ea3d3e00fd0c2c22af0ed56b62bd7ed41fae97",
+      "brand": "corporate",
+      "normalizer": "pypdf"
+    },
+    {
+      "source": "docs/governance/board-records/2022-10-28_wolf-ridge-industrial-financing-minutes.md",
+      "publication": "docs/governance/publications/SH-BRD-MIN-2022-10-28_v1.0.0.pdf",
+      "sha256": "ee67ff3691ba771a81742f601df73b06d520400acff7fb918426a955f2dd3288",
+      "source_sha256": "ec3625726d23588816c073afb4bd76cce51085a195833c6089faea3c3efed1a4",
+      "brand": "corporate",
+      "normalizer": "pypdf"
+    },
+    {
+      "source": "docs/governance/board-records/2024-02-15_independent-chair-and-committee-architecture-minutes.md",
+      "publication": "docs/governance/publications/SH-BRD-MIN-2024-02-15_v1.0.0.pdf",
+      "sha256": "609ca5859a1aa625eeca1c8473f7fa445f04fd9949c6ec8986e3006b67e46daf",
+      "source_sha256": "ff5ad2d4299617a7b931924b757e6ca2316795d2133a656c219094528ce0c9a4",
+      "brand": "corporate",
+      "normalizer": "pypdf"
+    },
+    {
+      "source": "docs/governance/board-records/2026-09-02_governance-j2-alexandria-ratification-written-consent.md",
+      "publication": "docs/governance/publications/SH-BRD-CONSENT-2026-09-02_v1.0.0.pdf",
+      "sha256": "db6dd49d108d0e0d8b6c42831509c25cab9ade6258bbf29c897bece05a585592",
+      "source_sha256": "2a0afb5615327345daf491c308e2b89e7e6236e44be1b3b09b3663389b344400",
+      "brand": "corporate",
+      "normalizer": "pypdf"
+    },
+    {
+      "source": "docs/advisory/SABLE_HARBOR_ADVISORY_EXECUTIVE_MEMORANDUM_2026-09-08.md",
+      "publication": "docs/advisory/publications/SH-ADV-MEM-20260908-001_v1.0.0.pdf",
+      "sha256": "b9e8a753ac9badb052fbc50c519bd68736ce3fbd5bcddc2ab6c7c1f40f0f1e77",
+      "source_sha256": "9321cbfd9ef7feb8488d81e8ae9a15a5597ec051cade180386da0f394c56ed3c",
+      "brand": "corporate",
+      "normalizer": "pypdf"
+    },
+    {
+      "source": "docs/advisory/OPERATING_MODEL.md",
+      "publication": "docs/advisory/publications/SH-ADV-001_v1.0.0.pdf",
+      "sha256": "cc43454b7199317ccf6c6a6910506e80f376f9a1eed5769c166b6e028af79696",
+      "source_sha256": "d5a439276bc98260ca0c3b990b551a7faeff4e7098438d6fd27b27f4ccb36fe5",
+      "brand": "corporate",
+      "normalizer": "pypdf"
+    },
+    {
+      "source": "docs/advisory/MATTER_GOVERNANCE_AND_ECONOMICS.md",
+      "publication": "docs/advisory/publications/SH-ADV-002_v1.0.0.pdf",
+      "sha256": "c09be6b5aad62582fd995b41a889745f9ac5f9da67230147cd4994c3d8402e0c",
+      "source_sha256": "b9c9c21d5dd468bd94b4fbb2d78d4f5ec4191c67fd279ca708f4c60e454177a1",
+      "brand": "corporate",
+      "normalizer": "pypdf"
+    },
+    {
+      "source": "docs/advisory/TALENT_MOBILITY_AND_CARRY.md",
+      "publication": "docs/advisory/publications/SH-ADV-003_v1.0.0.pdf",
+      "sha256": "bc9efe65e0418482ff017080212069b2a38306ceb40bee462a3a4ed61692b73d",
+      "source_sha256": "d61c2616c817a82a7c7f33be067dde51f353fd1ba3f7502d316b4fec83cb3e7e",
+      "brand": "corporate",
+      "normalizer": "pypdf"
+    },
+    {
+      "source": "docs/advisory/ATLAS_MERIDIAN_PROFESSIONAL_PLATFORM.md",
+      "publication": "docs/advisory/publications/SH-ATL-016_v1.0.0.pdf",
+      "sha256": "9f1338ac472d78d5b3f1f97159587ea127614c0a7170cacdc1ceb670af55a0b5",
+      "source_sha256": "509f9f48f9a41d590228271ae853cadfd56a793c07af012df61db195c1e5a94c",
+      "brand": "corporate",
+      "normalizer": "pypdf"
+    },
+    {
+      "source": "docs/canon/ADVISORY_ATLAS_MERIDIAN_CLOSEOUT_2026-09-08.md",
+      "publication": "docs/advisory/publications/SH-ADV-ATL-DR-001_v1.0.0.pdf",
+      "sha256": "11d733b92fb6f59aeec7c54d289803e1861e449ef5e1f7680a0a80b0e09921f1",
+      "source_sha256": "93a2f8f472923d057ba928ff9f75fa21f4a3ee7c9323baf445c745fb51436daf",
+      "brand": "corporate",
+      "normalizer": "pypdf"
+    },
+    {
+      "source": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-08_ADVISORY.md",
+      "publication": "docs/advisory/publications/SH-ADV-ATL-DR-002_v1.0.0.pdf",
+      "sha256": "8e172e037c3e2a1a93418be4cf6d7645d5b460d38e17ed85c241db36b2f30e83",
+      "source_sha256": "24fec12b3a1dcf0d876a9251831bc0edaebab329755c50007f7071503e0f69c4",
+      "brand": "corporate",
+      "normalizer": "pypdf"
+    },
+    {
+      "source": "docs/controls/ADVISORY_MATTER_CONTROLS_v1.0.md",
+      "publication": "docs/advisory/publications/SH-ADV-CTRL-001_v1.0.0.pdf",
+      "sha256": "25ffb18d79e35c5e9428126bd78092c1949f03a6433a0943393fcf196c81adb0",
+      "source_sha256": "d2c815df4efc1aa004ee64c0a460ed678e1ba5459d1bc43b91518e2ab750cbc3",
+      "brand": "corporate",
+      "normalizer": "pypdf"
     }
   ]
 }

@@ -1,0 +1,118 @@
+{
+  "schema_version": "1.0.0",
+  "as_of": "2026-09-09",
+  "authority": "docs/canon/BUSINESS_DEVELOPMENT_DIRECTION_2026-09-09.md",
+  "business_lines": [
+    {
+      "id": "foundry-field",
+      "name": "Foundry Field",
+      "entity": "SHI",
+      "role": "commercial product",
+      "owner": "Foundry Field product and deployment leadership",
+      "sources": [
+        "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md",
+        "docs/organization/FOUNDRY_AND_FOUNDRY_FIELD.md"
+      ],
+      "dossier": "docs/business-lines/FOUNDRY_FIELD.md",
+      "state": "CURRENT_SOURCE_SYNTHESIS",
+      "as_of": "2026-09-09",
+      "model_state": "SYNTHETIC_ASSUMPTIONS_SEPARATE_FROM_CANON"
+    },
+    {
+      "id": "atlas-meridian",
+      "name": "Atlas Meridian",
+      "entity": "SHI",
+      "role": "commercial product and internal capability",
+      "owner": "Atlas Meridian product organization",
+      "sources": [
+        "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md",
+        "docs/canon/ADVISORY_ATLAS_MERIDIAN_CLOSEOUT_2026-09-08.md"
+      ],
+      "dossier": "docs/business-lines/ATLAS_MERIDIAN.md",
+      "state": "CURRENT_SOURCE_SYNTHESIS",
+      "as_of": "2026-09-09",
+      "model_state": "SYNTHETIC_ASSUMPTIONS_SEPARATE_FROM_CANON"
+    },
+    {
+      "id": "willow",
+      "name": "Willow",
+      "entity": "SHI",
+      "role": "internal laboratory and cost center",
+      "owner": "Gid Voss experimental authority / Rachel Sloane institutional seam",
+      "sources": [
+        "docs/canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md",
+        "docs/finance/WILLOW_KLEIN_FINANCE_AND_CORPORATE_MODEL_2026-09-06.md",
+        "docs/organization/WILLOW_KLEIN_CORPORATE_RECORD.md"
+      ],
+      "dossier": "docs/business-lines/WILLOW.md",
+      "state": "CURRENT_SOURCE_SYNTHESIS",
+      "as_of": "2026-09-09",
+      "model_state": "SYNTHETIC_ASSUMPTIONS_SEPARATE_FROM_CANON"
+    },
+    {
+      "id": "project-cradle",
+      "name": "Cradle",
+      "entity": "SHI",
+      "role": "early commercial recovery",
+      "owner": "Cradle operating leadership and accountable host interfaces",
+      "sources": [
+        "docs/canon/CRADLE_CLOSEOUT_2026-09-06.md",
+        "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md"
+      ],
+      "dossier": "docs/business-lines/PROJECT_CRADLE.md",
+      "state": "CURRENT_SOURCE_SYNTHESIS",
+      "as_of": "2026-09-09",
+      "model_state": "SYNTHETIC_ASSUMPTIONS_SEPARATE_FROM_CANON"
+    },
+    {
+      "id": "pale-sun",
+      "name": "Pale Sun / Red Wash",
+      "entity": "PS/RWH",
+      "role": "industrial business and mine operating subsidiary",
+      "owner": "Evan Vilander / Mari / Red Wash operating leadership",
+      "sources": [
+        "docs/canon/INDUSTRIAL_CLOSEOUT_2026-09-05.md",
+        "industrial/source/entities.json",
+        "industrial/planning/docs/FIVE_YEAR_FINANCIAL_PLAN.md",
+        "geospatial/docs/PROGRAM_CLOSEOUT_MATRIX.md"
+      ],
+      "dossier": "docs/business-lines/PALE_SUN.md",
+      "state": "CURRENT_SOURCE_SYNTHESIS",
+      "as_of": "2026-09-09",
+      "model_state": "SYNTHETIC_ASSUMPTIONS_SEPARATE_FROM_CANON"
+    },
+    {
+      "id": "american-resource-utility",
+      "name": "American Resource Utility / BS&T",
+      "entity": "ARU/BST",
+      "role": "multimodal industrial services business",
+      "owner": "Nora Ashcombe / Seth Kettering rail authority",
+      "sources": [
+        "docs/canon/INDUSTRIAL_CLOSEOUT_2026-09-05.md",
+        "industrial/source/entities.json",
+        "industrial/planning/docs/OPERATING_SCENARIOS.md",
+        "industrial/planning/docs/CAPITAL_INVESTMENT_REVIEW.md"
+      ],
+      "dossier": "docs/business-lines/AMERICAN_RESOURCE_UTILITY.md",
+      "state": "CURRENT_SOURCE_SYNTHESIS",
+      "as_of": "2026-09-09",
+      "model_state": "SYNTHETIC_ASSUMPTIONS_SEPARATE_FROM_CANON"
+    },
+    {
+      "id": "advisory",
+      "name": "Advisory",
+      "entity": "SHI",
+      "role": "commercial professional services",
+      "owner": "President, Sable Harbor Advisory \u2014 individual OPEN",
+      "sources": [
+        "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md",
+        "docs/canon/ADVISORY_ATLAS_MERIDIAN_CLOSEOUT_2026-09-08.md"
+      ],
+      "dossier": "docs/business-lines/ADVISORY.md",
+      "state": "CURRENT_SOURCE_SYNTHESIS",
+      "as_of": "2026-09-09",
+      "model_state": "SYNTHETIC_ASSUMPTIONS_SEPARATE_FROM_CANON",
+      "legal_book_status": "EXISTING_PARENT_MODEL_SCOPE; permanent legal form remains OPEN"
+    }
+  ]
+}

@@ -16,6 +16,8 @@ on:
       - tests/unit/test_controlled_publication_catalog.py
       - docs/internal/**
       - docs/structured/**
+      - docs/business-lines/**
+      - scripts/validate_business_records.py
       - .github/workflows/validate-governance-j2.yml
   push:
     branches: [architecture/common-controls-framework-v0.1]
@@ -41,3 +43,4 @@ jobs:
       - run: python scripts/validate_institutional_catalog.py
       - run: python scripts/validate_organization_maps.py
       - run: python scripts/validate_repository_hygiene.py
+      - run: python scripts/validate_business_records.py

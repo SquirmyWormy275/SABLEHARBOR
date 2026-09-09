@@ -3,7 +3,7 @@
 **Presentation status:** Wiki source; not independent canon.
 **Controlling source:** `docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md`
 
-Sable Harbor is primarily one operating company with selective subsidiaries and named business/program capabilities. Its 2026 governance is documented in the [board/capital instrument](../governance/BOARD_AND_CAPITAL_GOVERNANCE.md) and [governance constitution](../governance/GOVERNANCE_CONSTITUTION.md).
+Sable Harbor is primarily one operating company with selective subsidiaries and named business/program capabilities. Its 2026 governance is documented in the [board/capital instrument](../governance/BOARD_AND_CAPITAL_GOVERNANCE_v1.0.1.md) and [governance constitution](../governance/GOVERNANCE_CONSTITUTION.md).
 
 [J2 — Judgment & Junction](../j2/README.md) is the internal intelligence, judgment, orientation, education, and learning capability. [Alexandria](../j2/alexandria/README.md) preserves and connects institutional learning; Pinakes is its nine-door human portal, Semaphore its traffic corpus, Canon its current best understanding, and Daedalus its non-authoritative personal AI companion.
 
@@ -20,3 +20,5 @@ Emberline's [approved historical identity](../canon/EMBERLINE_VISUAL_IDENTITY_20
 [Demotte Reclamation Services](../canon/DEMOTTE_RECLAMATION_NAME_AND_IDENTITY_2026-09-07.md) is the current name and identity of Cradle's external U.S. mine-water treatment host.
 
 [Northstar Minerals, Inc.'s approved logo](../canon/NORTHSTAR_MINERALS_VISUAL_IDENTITY_2026-09-07.md) identifies the external Red Wash seller.
+
+Use the [seven current business dossiers](../business-lines/README.md) and [source crosswalk](../business-lines/CURRENT_SOURCE_CROSSWALK.md) for operating and financial context.

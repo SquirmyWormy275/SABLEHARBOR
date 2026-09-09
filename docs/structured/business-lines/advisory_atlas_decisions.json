@@ -1,0 +1,293 @@
+{
+  "schema_version": "1.0.0",
+  "decisions": [
+    {
+      "id": "ADV-101",
+      "topic": "J2 relationship",
+      "state": "LOCKED",
+      "result": "Advisory is adjacent to J2, not inside it; J2 is not a commercial feeder",
+      "source": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-08_ADVISORY.md",
+      "decision_date": "2026-09-08",
+      "accepted_commit": "0e27bcd0f64bd3d6a94f075ed09be21b99e1a378"
+    },
+    {
+      "id": "ADV-102",
+      "topic": "Practice architecture",
+      "state": "LOCKED",
+      "result": "Intelligence Advisory, Intelligence Capability and Operational Excellence share one common bench",
+      "source": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-08_ADVISORY.md",
+      "decision_date": "2026-09-08",
+      "accepted_commit": "0e27bcd0f64bd3d6a94f075ed09be21b99e1a378"
+    },
+    {
+      "id": "ADV-103",
+      "topic": "Production model",
+      "state": "LOCKED",
+      "result": "Matter is unit of production; Frame \u2192 Observe \u2192 Understand \u2192 Intervene \u2192 Prove \u2192 Transfer \u2192 Exit/Remain Reachable",
+      "source": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-08_ADVISORY.md",
+      "decision_date": "2026-09-08",
+      "accepted_commit": "0e27bcd0f64bd3d6a94f075ed09be21b99e1a378"
+    },
+    {
+      "id": "ADV-104",
+      "topic": "Advisory executive",
+      "state": "LOCKED role / OPEN person",
+      "result": "Operating business led by a President of Sable Harbor Advisory; individual unresolved",
+      "source": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-08_ADVISORY.md",
+      "decision_date": "2026-09-08",
+      "accepted_commit": "0e27bcd0f64bd3d6a94f075ed09be21b99e1a378"
+    },
+    {
+      "id": "ADV-105",
+      "topic": "Matter Principal",
+      "state": "LOCKED",
+      "result": "One non-delegable accountable Matter Principal per matter",
+      "source": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-08_ADVISORY.md",
+      "decision_date": "2026-09-08",
+      "accepted_commit": "0e27bcd0f64bd3d6a94f075ed09be21b99e1a378"
+    },
+    {
+      "id": "ADV-106",
+      "topic": "Acceptance",
+      "state": "LOCKED",
+      "result": "Independent Acceptance Principal affirms competence, conflicts, authority, economics, data and no purchased conclusion",
+      "source": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-08_ADVISORY.md",
+      "decision_date": "2026-09-08",
+      "accepted_commit": "0e27bcd0f64bd3d6a94f075ed09be21b99e1a378"
+    },
+    {
+      "id": "ADV-107",
+      "topic": "Value Office",
+      "state": "LOCKED",
+      "result": "Independent outcome-baseline and value certification capability",
+      "source": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-08_ADVISORY.md",
+      "decision_date": "2026-09-08",
+      "accepted_commit": "0e27bcd0f64bd3d6a94f075ed09be21b99e1a378"
+    },
+    {
+      "id": "ADV-108",
+      "topic": "Independent review",
+      "state": "LOCKED",
+      "result": "Consequential matters receive independent professional challenge without dual command",
+      "source": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-08_ADVISORY.md",
+      "decision_date": "2026-09-08",
+      "accepted_commit": "0e27bcd0f64bd3d6a94f075ed09be21b99e1a378"
+    },
+    {
+      "id": "ADV-109",
+      "topic": "Conclusion integrity",
+      "state": "LOCKED",
+      "result": "Client cannot purchase a preferred conclusion",
+      "source": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-08_ADVISORY.md",
+      "decision_date": "2026-09-08",
+      "accepted_commit": "0e27bcd0f64bd3d6a94f075ed09be21b99e1a378"
+    },
+    {
+      "id": "ADV-110",
+      "topic": "General recruiting",
+      "state": "LOCKED",
+      "result": "Advisory may recruit externally and aggressively from operating lines",
+      "source": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-08_ADVISORY.md",
+      "decision_date": "2026-09-08",
+      "accepted_commit": "0e27bcd0f64bd3d6a94f075ed09be21b99e1a378"
+    },
+    {
+      "id": "ADV-111",
+      "topic": "Serving J2 non-solicitation",
+      "state": "LOCKED",
+      "result": "No recruitment, courtship, pre-negotiation, role reservation, carry discussion or application while serving in J2",
+      "source": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-08_ADVISORY.md",
+      "decision_date": "2026-09-08",
+      "accepted_commit": "0e27bcd0f64bd3d6a94f075ed09be21b99e1a378"
+    },
+    {
+      "id": "ADV-112",
+      "topic": "Carry population",
+      "state": "LOCKED",
+      "result": "Carry is reserved to qualifying former J2 professionals; eligibility does not equal allocation",
+      "source": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-08_ADVISORY.md",
+      "decision_date": "2026-09-08",
+      "accepted_commit": "0e27bcd0f64bd3d6a94f075ed09be21b99e1a378"
+    },
+    {
+      "id": "ADV-113",
+      "topic": "Orientation carry gate",
+      "state": "LOCKED",
+      "result": "Full Orientation tour/commission plus one qualifying fellowship",
+      "source": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-08_ADVISORY.md",
+      "decision_date": "2026-09-08",
+      "accepted_commit": "0e27bcd0f64bd3d6a94f075ed09be21b99e1a378"
+    },
+    {
+      "id": "ADV-114",
+      "topic": "Judgment carry gate",
+      "state": "LOCKED",
+      "result": "Five years Judgment Officer service plus two years actual operating-business service; JAG does not substitute",
+      "source": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-08_ADVISORY.md",
+      "decision_date": "2026-09-08",
+      "accepted_commit": "0e27bcd0f64bd3d6a94f075ed09be21b99e1a378"
+    },
+    {
+      "id": "ADV-115",
+      "topic": "Contact carry gate",
+      "state": "LOCKED",
+      "result": "Four years substantive Contact leadership with accountability for people and collection outcomes",
+      "source": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-08_ADVISORY.md",
+      "decision_date": "2026-09-08",
+      "accepted_commit": "0e27bcd0f64bd3d6a94f075ed09be21b99e1a378"
+    },
+    {
+      "id": "ADV-116",
+      "topic": "Education / J2HQ carry",
+      "state": "OPEN",
+      "result": "No gate established yet",
+      "source": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-08_ADVISORY.md",
+      "decision_date": "2026-09-08",
+      "accepted_commit": "0e27bcd0f64bd3d6a94f075ed09be21b99e1a378"
+    },
+    {
+      "id": "ADV-117",
+      "topic": "Carry economics",
+      "state": "LOCKED direction / OPEN mechanics",
+      "result": "Advisory is highest-upside professional destination; exact pool and instrument mechanics unresolved",
+      "source": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-08_ADVISORY.md",
+      "decision_date": "2026-09-08",
+      "accepted_commit": "0e27bcd0f64bd3d6a94f075ed09be21b99e1a378"
+    },
+    {
+      "id": "ADV-118",
+      "topic": "Hourly pricing",
+      "state": "LOCKED direction",
+      "result": "Core Advisory work is not sold by billable hour, seat, junior leverage or token consumption",
+      "source": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-08_ADVISORY.md",
+      "decision_date": "2026-09-08",
+      "accepted_commit": "0e27bcd0f64bd3d6a94f075ed09be21b99e1a378"
+    },
+    {
+      "id": "ADV-119",
+      "topic": "Matter-value contract",
+      "state": "LOCKED direction",
+      "result": "Baseline, target, attribution, client obligations, measurement period, fee and dispute mechanics set before substantive work",
+      "source": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-08_ADVISORY.md",
+      "decision_date": "2026-09-08",
+      "accepted_commit": "0e27bcd0f64bd3d6a94f075ed09be21b99e1a378"
+    },
+    {
+      "id": "ADV-120",
+      "topic": "60/40 default",
+      "state": "MODEL_PROPOSED",
+      "result": "Working measurable-value default is 60% committed / 40% outcome-variable",
+      "source": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-08_ADVISORY.md",
+      "decision_date": "2026-09-08",
+      "accepted_commit": "0e27bcd0f64bd3d6a94f075ed09be21b99e1a378"
+    },
+    {
+      "id": "ADV-121",
+      "topic": "Matter-value bands",
+      "state": "MODEL_PROPOSED",
+      "result": "Working percentage bands and $150k initial matter minimum established for quoting discipline",
+      "source": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-08_ADVISORY.md",
+      "decision_date": "2026-09-08",
+      "accepted_commit": "0e27bcd0f64bd3d6a94f075ed09be21b99e1a378"
+    },
+    {
+      "id": "ADV-122",
+      "topic": "Nonfinancial outcomes",
+      "state": "LOCKED direction",
+      "result": "Capability matters use testable acceptance milestones rather than subjective completion",
+      "source": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-08_ADVISORY.md",
+      "decision_date": "2026-09-08",
+      "accepted_commit": "0e27bcd0f64bd3d6a94f075ed09be21b99e1a378"
+    },
+    {
+      "id": "ADV-123",
+      "topic": "Atlas continuity economics",
+      "state": "LOCKED direction / OPEN prices",
+      "result": "Atlas licensing is separate from Advisory matter economics; institutional/value pricing direction",
+      "source": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-08_ADVISORY.md",
+      "decision_date": "2026-09-08",
+      "accepted_commit": "0e27bcd0f64bd3d6a94f075ed09be21b99e1a378"
+    },
+    {
+      "id": "ADV-124",
+      "topic": "IP transfer boundary",
+      "state": "LOCKED",
+      "result": "Transfer client capability, not unrelated Sable Harbor crown-jewel IP",
+      "source": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-08_ADVISORY.md",
+      "decision_date": "2026-09-08",
+      "accepted_commit": "0e27bcd0f64bd3d6a94f075ed09be21b99e1a378"
+    },
+    {
+      "id": "ADV-125",
+      "topic": "Dependency",
+      "state": "LOCKED",
+      "result": "No intentional dependency where transfer is promised",
+      "source": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-08_ADVISORY.md",
+      "decision_date": "2026-09-08",
+      "accepted_commit": "0e27bcd0f64bd3d6a94f075ed09be21b99e1a378"
+    },
+    {
+      "id": "ATL-101",
+      "topic": "Atlas organization",
+      "state": "LOCKED",
+      "result": "Dedicated Atlas team is a product-development organization, not Advisory staffing reserve",
+      "source": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-08_ADVISORY.md",
+      "decision_date": "2026-09-08",
+      "accepted_commit": "0e27bcd0f64bd3d6a94f075ed09be21b99e1a378"
+    },
+    {
+      "id": "ATL-102",
+      "topic": "Dual product role",
+      "state": "LOCKED",
+      "result": "Atlas is both commercial client product and Advisory professional substrate",
+      "source": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-08_ADVISORY.md",
+      "decision_date": "2026-09-08",
+      "accepted_commit": "0e27bcd0f64bd3d6a94f075ed09be21b99e1a378"
+    },
+    {
+      "id": "ATL-103",
+      "topic": "Two-plane architecture",
+      "state": "LOCKED direction",
+      "result": "Sable Harbor professional plane and client plane; 70/30 is a heuristic, not ownership math",
+      "source": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-08_ADVISORY.md",
+      "decision_date": "2026-09-08",
+      "accepted_commit": "0e27bcd0f64bd3d6a94f075ed09be21b99e1a378"
+    },
+    {
+      "id": "ATL-104",
+      "topic": "Client portal",
+      "state": "LOCKED",
+      "result": "Atlas is Advisory's digital client front door for evidence, matter workflow, collaboration and value records",
+      "source": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-08_ADVISORY.md",
+      "decision_date": "2026-09-08",
+      "accepted_commit": "0e27bcd0f64bd3d6a94f075ed09be21b99e1a378"
+    },
+    {
+      "id": "ATL-105",
+      "topic": "Agent constellations",
+      "state": "LOCKED",
+      "result": "Problem-specific governed agent constellations with human accountability",
+      "source": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-08_ADVISORY.md",
+      "decision_date": "2026-09-08",
+      "accepted_commit": "0e27bcd0f64bd3d6a94f075ed09be21b99e1a378"
+    },
+    {
+      "id": "ATL-106",
+      "topic": "Client-ownable derivative",
+      "state": "LOCKED",
+      "result": "Transferable matters can hand over hardened client-specific agents/workflows without leaking protected firm capability",
+      "source": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-08_ADVISORY.md",
+      "decision_date": "2026-09-08",
+      "accepted_commit": "0e27bcd0f64bd3d6a94f075ed09be21b99e1a378"
+    },
+    {
+      "id": "ATL-107",
+      "topic": "Commercial modes",
+      "state": "LOCKED direction",
+      "result": "Tell me / Work with me / Let me do it myself",
+      "source": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-08_ADVISORY.md",
+      "decision_date": "2026-09-08",
+      "accepted_commit": "0e27bcd0f64bd3d6a94f075ed09be21b99e1a378"
+    }
+  ]
+}

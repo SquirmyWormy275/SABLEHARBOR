@@ -4,7 +4,7 @@
 **Version:** 1.0.0  
 **Decision date:** September 8, 2026  
 **State:** `LOCKED DIRECTION` except where a row is explicitly marked `OPEN` or `MODEL_PROPOSED`  
-**Authority:** Owner-approved design session; repository publication makes the decision controlling  
+**Authority:** Owner-approved design session; accepted repository integration makes the decision controlling
 **Supersedes in part:** `ADV-002` open-form treatment and any Atlas organization language that treats Atlas personnel as an advisory or engagement-delivery bench  
 **Preserves:** `ADV-001`; `ATL-001`–`ATL-015`; J2 professional doctrine; Foundry/Foundry Field distinctions; Sable Harbor governance and authority doctrine
 

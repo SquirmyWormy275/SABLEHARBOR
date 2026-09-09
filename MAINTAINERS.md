@@ -41,8 +41,10 @@ and all existing disposition flags; do not rewrite prior bytes or imply a migrat
 Exclude temporary build outputs unless deliberately retained as evidence. Keep documentation
 thorough and indexed, with one controlling source per decision and synchronized derivatives.
 
-Issue #37 remains OPEN: the generated institutional catalog and SQLite index retain their
-current placement and regeneration rules pending their specific lifecycle decision.
+The [generated-records lifecycle](docs/governance/GENERATED_RECORDS_LIFECYCLE.md) explicitly
+retains the institutional catalog and SQLite index as tracked generated convenience artifacts.
+Issue #37 records acceptance of that scoped repository-lifecycle decision; Alexandria data
+retention and deletion remain separately governed.
 
 ## Canon states
 
