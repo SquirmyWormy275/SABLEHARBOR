@@ -570,15 +570,39 @@ def validate_treasury(model, enterprise_result):
     by_month = defaultdict(dict)
     for r in model.tables["treasury_reconciliation"]:
         by_month[r["scenario"], int(r["year"]), int(r["month"])][r["cash_flow"]] = r
+    seen_periods = set()
     for f in enterprise_result["funding_rows"]:
+        entity = f.get("entity")
+        scope = f.get("scope", "")
+        if (
+            entity in {"RWH_PS", "ARU_GROUP"}
+            and scope == "INDUSTRIAL_SUBSIDIARY_CONDITIONAL_ENVELOPE"
+        ):
+            # These are separately validated industrial capital envelopes, not
+            # Core's obligation-level payment deferral and arrears population.
+            continue
+        if entity != "SHI" or scope not in (None, ""):
+            raise ValueError("Unknown enterprise funding scope/entity")
+        required = (
+            "unpaid_operating_obligations_usd",
+            "unpaid_capital_obligations_usd",
+            "unpaid_debt_obligations_usd",
+            "new_payment_deferral_usd",
+            "arrears_paid_usd",
+        )
+        if any(f.get(field) in (None, "") for field in required):
+            raise ValueError("Missing Core funding reconciliation field")
         key = (f["scenario"], int(f["year"]), int(f["month"]))
+        if key in seen_periods or key not in by_month:
+            raise ValueError("Duplicate or unexpected Core funding period")
+        seen_periods.add(key)
         rows = by_month[key]
         for flow, field in (
             ("OPERATING", "unpaid_operating_obligations_usd"),
             ("INVESTING", "unpaid_capital_obligations_usd"),
             ("FINANCING", "unpaid_debt_obligations_usd"),
         ):
-            if D(rows[flow]["closing_unpaid_usd"]) != D(f.get(field, 0)):
+            if D(rows[flow]["closing_unpaid_usd"]) != D(f[field]):
                 raise ValueError("Individual allocations fail enterprise funding reconciliation")
         for out, src in (
             ("new_deferral_usd", "new_payment_deferral_usd"),
@@ -586,6 +610,8 @@ def validate_treasury(model, enterprise_result):
         ):
             if sum((D(r[out]) for r in rows.values()), D(0)) != D(f[src]):
                 raise ValueError("Treasury monthly flow differs from enterprise source")
+    if seen_periods != set(by_month):
+        raise ValueError("Core funding period coverage is incomplete")
     return {
         "status": "PASS",
         "requests": len(model.tables["treasury_obligations"]),

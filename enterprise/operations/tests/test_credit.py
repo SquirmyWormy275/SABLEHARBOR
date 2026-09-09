@@ -237,18 +237,24 @@ def treasury_fixture():
         "journal_rows": rows,
         "funding_rows": [
             {
+                "entity": "SHI",
                 "scenario": "base",
                 "year": 2027,
                 "month": 1,
                 "unpaid_operating_obligations_usd": "50",
+                "unpaid_capital_obligations_usd": "0",
+                "unpaid_debt_obligations_usd": "0",
                 "new_payment_deferral_usd": "50",
                 "arrears_paid_usd": "0",
             },
             {
+                "entity": "SHI",
                 "scenario": "base",
                 "year": 2027,
                 "month": 2,
                 "unpaid_operating_obligations_usd": "20",
+                "unpaid_capital_obligations_usd": "0",
+                "unpaid_debt_obligations_usd": "0",
                 "new_payment_deferral_usd": "0",
                 "arrears_paid_usd": "30",
             },
@@ -275,6 +281,39 @@ def test_treasury_rejects_unidentified_funding_gap():
     result["journal_rows"][2]["signed_usd"] = "-121"
     with pytest.raises(ValueError, match="eligible requests"):
         allocate_treasury(m, result)
+
+
+def test_treasury_separates_explicit_industrial_envelopes():
+    result = treasury_fixture()
+    for entity in ("RWH_PS", "ARU_GROUP"):
+        result["funding_rows"].append(
+            {
+                "entity": entity,
+                "scope": "INDUSTRIAL_SUBSIDIARY_CONDITIONAL_ENVELOPE",
+                "scenario": "base",
+                "year": 2027,
+                "month": 1,
+                "funding_gap_usd": "999",
+            }
+        )
+    assert allocate_treasury(model(), result)["requests"] == 2
+
+
+@pytest.mark.parametrize("mutation", ["entity", "scope", "field", "missing_period", "duplicate"])
+def test_treasury_rejects_ambiguous_or_incomplete_core_population(mutation):
+    result = treasury_fixture()
+    if mutation == "entity":
+        result["funding_rows"][0]["entity"] = "UNRECOGNIZED"
+    elif mutation == "scope":
+        result["funding_rows"][0]["scope"] = "UNKNOWN"
+    elif mutation == "field":
+        del result["funding_rows"][0]["unpaid_capital_obligations_usd"]
+    elif mutation == "missing_period":
+        result["funding_rows"].pop()
+    else:
+        result["funding_rows"].append(deepcopy(result["funding_rows"][0]))
+    with pytest.raises(ValueError, match="funding"):
+        allocate_treasury(model(), result)
 
 
 def test_treasury_rejects_source_funding_mismatch():

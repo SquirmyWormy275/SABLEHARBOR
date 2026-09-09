@@ -254,3 +254,10 @@ def test_inventory_rejects_symlink_to_outside_payload(tmp_path):
     (package / "evidence.csv").symlink_to(outside)
     with pytest.raises(ValueError, match="[Ss]ymbolic|[Ss]ymlink|link"):
         exports.inventory(package, {"unit": "advisory"})
+
+
+def test_removed_non_scope_column_cannot_silently_become_blank():
+
+    schema = {"rows": ["amount", "scenario", "unit"]}
+    with pytest.raises(ValueError, match="Missing approved columns"):
+        exports.validate_schema({"rows": [{"scenario": "base", "unit": "advisory"}]}, schema)

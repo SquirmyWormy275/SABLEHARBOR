@@ -58,6 +58,9 @@ def validate_schema(tables, schema, scope=None):
         extra = set(columns(rows)) - set(schema[name]) if rows else set()
         if extra:
             raise ValueError(f"Unapproved columns in {name}: {sorted(extra)}")
+        missing = set(schema[name]) - set(columns(rows)) if rows else set()
+        if missing:
+            raise ValueError(f"Missing approved columns in {name}: {sorted(missing)}")
         for row in rows:
             if row.get("scenario") not in (None, "", "base", "downside", "expansion"):
                 raise ValueError(f"Unexpected scenario in {name}")

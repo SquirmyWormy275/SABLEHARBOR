@@ -11,6 +11,11 @@ on:
       - db/**
       - docs/canon/**
       - docs/structured/**
+      - docs/controls/**
+      - docs/governance/**
+      - docs/j2/**
+      - docs/organization/**
+      - releases/manifests/**
       - docs/advisory/**
       - docs/business-lines/**
       - docs/finance/**
@@ -30,6 +35,11 @@ on:
       - db/**
       - docs/canon/**
       - docs/structured/**
+      - docs/controls/**
+      - docs/governance/**
+      - docs/j2/**
+      - docs/organization/**
+      - releases/manifests/**
       - docs/advisory/**
       - docs/business-lines/**
       - docs/finance/**
