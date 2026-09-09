@@ -1,11 +1,11 @@
 # SABLE HARBOR ADVISORY — TALENT, MOBILITY AND CARRY
 
 **Document ID:** `SH-ADV-003`  
-**Version:** 1.1.0  
-**Effective:** September 9, 2026  
-**State:** `LOCKED DIRECTION`  
+**Version:** 1.0.0  
+**Effective:** September 8, 2026  
+**State:** `LOCKED DIRECTION`; carry mechanics remain `OPEN` where stated  
 **Owner:** President, Sable Harbor Advisory with People & Culture  
-**Related:** `SH-PNC-001`; J2 professional doctrine; `SH-ADV-004`; `SH-ADV-005`; `SH-ADV-012`
+**Related:** `SH-PNC-001`; J2 professional doctrine; `SH-ADV-ATL-DR-001`
 
 ## 1. Talent thesis
 
@@ -17,23 +17,27 @@ The firm should be able to hire:
 - people who have built unusual technical or institutional capability;
 - former J2 professionals who have completed qualifying service;
 - external specialists with deep domain credibility;
-- high-slope early-career people worth apprenticing into judgment rather than repetitive production work.
+- high-slope early-career people worth apprenticing into judgment rather than into repetitive production work.
 
-The professional hierarchy allows a master practitioner to out-earn a manager without acquiring line authority.
+The professional hierarchy should allow a master practitioner to out-earn a manager without acquiring line authority.
 
 ## 2. Recruiting regimes
 
-### External market
+### 2.1 External market
 
-Advisory may recruit aggressively from the external market, including direct by-name recruiting, unconventional profiles and market premiums for unusual professional depth. External hires may receive strong salary, bonus, retention and other approved compensation. Carry remains reserved to qualifying former J2 professionals.
+Advisory may recruit aggressively from the external market. It may approach people directly, recruit by name, use scouts, hire unconventional profiles and pay a premium for unusual professional depth.
 
-### Sable Harbor operating business lines
+External hires may receive strong salary, bonus, profit participation, retention awards and other approved compensation. Advisory carry, however, is reserved to qualifying former J2 professionals.
 
-Advisory may actively recruit from Sable Harbor operating lines, including by name. This is intentional: people who have actually operated mines, logistics networks, recovery systems, industrial programs, software deployments and other consequential systems carry tacit knowledge that is unusually valuable in client work.
+### 2.2 Sable Harbor operating business lines
 
-Internal recruiting remains subject to continuity and transition obligations. Advisory may recruit; it may not destabilize an operating line by bypassing transition discipline.
+Advisory may actively recruit from Sable Harbor operating lines, including by name.
 
-### Serving J2 personnel
+The business reason is explicit: people who have actually operated mines, logistics networks, recovery systems, industrial programs, software deployments and other consequential systems carry tacit knowledge that is unusually valuable in client work.
+
+Internal recruiting remains subject to enterprise mobility and continuity doctrine. Advisory may recruit; it may not sabotage an operating line's continuity or bypass ordinary transition obligations.
+
+### 2.3 Serving J2 personnel
 
 **Hands off.**
 
@@ -53,7 +57,9 @@ Prohibited conduct includes:
 - encouraging a manager or colleague to steer the person toward Advisory;
 - shaping a J2 assignment to increase future Advisory value.
 
-The rule applies to all serving J2 personnel. The purpose is to prevent J2 service from becoming a commercial audition.
+The rule applies to all serving J2 personnel, not only Orientation.
+
+The purpose is not to make post-J2 careers difficult. It is to prevent J2 service from becoming a commercial audition.
 
 ## 3. Employee-initiated post-J2 entry
 
@@ -61,127 +67,172 @@ A former J2 professional may approach Advisory immediately after qualifying serv
 
 The process must begin on the former J2 professional's initiative. Advisory may publish neutral information about career paths and eligibility rules, but it may not privately cultivate a serving individual.
 
+No J2 manager, Orientation Officer, Judgment Officer, Contact leader, JAG participant or Education professional should need to wonder whether a judgment made in service will affect a promised Advisory role.
+
 ## 4. Carry
 
-Sable Harbor deliberately uses the term **carry**.
+### 4.1 Definition
 
-Advisory carry is long-duration participation in the value of the Advisory business. It is not ordinary salary, guaranteed deferred bonus, a reward for leaving J2, a voting interest, or an automatic grant.
+Sable Harbor uses the term **carry** deliberately.
 
-**Eligibility** and **allocation** remain separate. Eligibility means service gates are satisfied. Allocation means a defined grant is actually approved under `SH-ADV-005`.
+Advisory carry is long-duration economic participation in the value of the Advisory business. It is conceptually analogous to carried interest in investment businesses: the participant shares in durable value creation beyond salary and annual bonus.
 
-Carry is J2-restricted because it recognizes a specific institutional bargain: serious J2 service should open a later path to exceptional professional wealth without requiring corporate command, while J2 itself remains a complete career and not an Advisory feeder.
+It is not ordinary salary, a guaranteed deferred bonus, an automatic profit share for every employee, or a reward for leaving J2.
 
-## 5. Carry eligibility gates
+### 4.2 Eligibility versus allocation
 
-### Orientation
+These are separate decisions.
 
-A former commissioned Orientation Officer is eligible after:
+**Eligibility** means a former J2 professional has completed the institutional-service gate required to be considered for carry.
+
+**Allocation** means Advisory actually grants that person a defined economic interest under the carry plan.
+
+A qualifying former J2 professional is not owed a carry percentage merely because eligibility exists.
+
+### 4.3 Why carry is J2-restricted
+
+The restriction is intended to recognize a specific institutional bargain:
+
+- J2 service requires unusual professional discipline and, in Orientation, a permanent sacrifice of later line authority;
+- J2 should be a prestigious career in its own right, not a feeder program;
+- people who complete serious J2 service should have access to a later professional career with exceptional economic upside without needing to convert institutional access into corporate command;
+- limiting carry to qualifying former J2 professionals gives the economic instrument a meaning distinct from ordinary Advisory compensation.
+
+The restriction does **not** imply former J2 professionals are inherently better consultants than operating-line veterans or outside experts.
+
+## 5. Carry gates
+
+### 5.1 Orientation
+
+A former commissioned Orientation Officer is carry-eligible after:
 
 1. completing one full Orientation tour/commission; and
 2. completing one qualifying fellowship.
 
-This remains the lowest additional Advisory gate because admission, formation and commission into Orientation already carry an unusually high threshold.
+This is the lowest additional Advisory gate because admission, formation and commission into Orientation already carry an unusually high institutional threshold.
 
 Carry eligibility does not relax the permanent Orientation line-authority restriction.
 
-### Judgment
+### 5.2 Judgment
 
-A former Judgment Officer is eligible after:
+A former Judgment Officer is carry-eligible after:
 
 1. at least five years in a Judgment Officer position; and
 2. at least two years of substantive service in an actual Sable Harbor operating business line.
 
-The operating service may occur before or after Judgment service. JAG does not count as the operating-line requirement; JAG is a temporary field-tour institution, not an operating line and not a permanent Judgment career.
+The operating service may occur before or after Judgment service unless later doctrine specifies sequencing.
 
-### Contact
+JAG does not count as the operating-line requirement. JAG is a temporary field-tour institution, not an operating line and not a permanent Judgment role.
 
-A former Contact professional is eligible after at least four years in substantive Contact leadership with genuine responsibility for people and collection outcomes. Title-only leadership does not qualify.
+### 5.3 Contact
 
-Contact intentionally carries the highest threshold among the core standing intelligence professions because it has less natural operating-line laterality and leadership mastery is the clearest evidence that the person progressed beyond technical collection skill alone.
+A former Contact professional is carry-eligible after at least four years in substantive Contact leadership.
 
-### Education
+Qualifying leadership requires genuine responsibility for people and collection outcomes. A title without corresponding accountability does not qualify.
 
-A former J2 Education professional is eligible after:
+Contact intentionally carries the highest threshold among the currently decided gates because it is a standing intelligence profession with less natural operating-line laterality and because leadership mastery is the clearest evidence that the candidate has progressed beyond technical collection skill alone.
 
-1. at least five years in J2 Education; and
-2. at least two years with substantive ownership of professional formation, curriculum, fellowship, doctrine, evaluation or training systems used across J2.
+### 5.4 Education and J2 Headquarters
 
-Purely administrative service does not qualify. The rationale is that Education can create unusually valuable Advisory capability in institutional design and client intelligence-capability formation, but eligibility should reflect genuine professional stewardship rather than proximity to the institution.
+`OPEN.` No gate is created by implication.
 
-### J2 Headquarters
-
-J2 Headquarters service does **not** independently create carry eligibility. A former Headquarters professional qualifies only through an underlying Orientation, Judgment, Contact or Education service gate.
-
-This prevents administrative proximity, senior title or access from becoming a shortcut around professional service.
-
-## 6. Carry plan mechanics
-
-The complete operating mechanics are controlled by [`CARRY_PLAN_STANDARD.md`](CARRY_PLAN_STANDARD.md).
-
-Core terms are:
-
-- contractual phantom carry rather than automatic voting equity;
-- a pool equal to 20% of Excess Advisory Economic Profit after losses, reserves and hurdle;
-- 10,000 notional units;
-- five-year vesting at 20% per completed year;
-- annual distributions after Finance certification and required reserves;
-- rolling holdback, clawback and malus for restatement, misconduct or manipulated outcome economics;
-- good-leaver/bad-leaver treatment;
-- no automatic governance, board or line authority;
-- no matter-level percentage ownership that would encourage a Matter Principal to manipulate a client result.
-
-Legal and tax implementation must preserve these principles even if the exact instrument changes for compliance.
-
-## 7. Orientation professional track
+## 6. Orientation professional track in Advisory
 
 Former Orientation Officers require a career path that can become economically exceptional without violating the anti-court bargain.
 
-Advisory separates **professional authority** from **line authority**. A former Orientation Officer may:
+Advisory therefore separates **professional authority** from **line authority**.
 
-- become Principal, Senior Principal or Distinguished Principal;
+A former Orientation Officer may hold senior professional titles and may:
+
 - originate and lead professional matters;
-- serve as Matter Principal;
 - own professional judgment;
+- serve as Matter Principal where compatible with the role's non-line design;
 - review consequential matters;
 - develop methodology;
 - mentor professionals;
 - hold carry;
 - earn more than line executives.
 
-The role may not become a disguised operating-VP office through control of headcount, operating budgets, business-line command, hiring/firing authority or equivalent prohibited line rights.
+The role may not become a disguised operating-VP office through control of headcount, enterprise operating budgets, business-line command or equivalent line decision rights prohibited by Orientation doctrine.
 
-## 8. Management and professional leadership
+## 7. Management and professional leadership
 
-Advisory maintains two equal-status ladders defined in `SH-ADV-004`.
+Advisory should maintain two high-status ladders:
 
-The **management ladder** owns P&L, workforce, capacity, budget and operation of the business.
+### Management track
 
-The **professional ladder** owns client judgment, matter quality, craft, methods, review, reputation, mentorship and difficult problem leadership.
+Owns:
 
-The tracks may intersect, but highest compensation does not imply highest line authority.
+- business-line P&L;
+- workforce decisions;
+- capacity;
+- budget;
+- enterprise commitments;
+- operations of the Advisory business.
 
-## 9. Compensation hierarchy
+### Professional track
+
+Owns:
+
+- client judgment;
+- matter quality;
+- professional craft;
+- methods;
+- review;
+- reputation;
+- mentorship;
+- difficult client problem leadership.
+
+The tracks may intersect but must not be collapsed into the assumption that the highest-paid person must be the person with the most line authority.
+
+## 8. Compensation hierarchy
 
 Advisory is intended to have the highest **upside ceiling** within Sable Harbor's professional careers.
 
-That does not mean every Advisory employee is paid more than every employee elsewhere, J2 is intentionally underpaid, operating-line experts are second class, or carry substitutes for fair cash compensation.
+That does not mean:
 
-Operating-line veterans should be among the most highly compensated non-carry professionals because their tacit operating experience is a core differentiator. External and operating-line professionals can build elite careers through cash compensation, senior professional status, matter leadership and institutional reputation even though carry remains J2-specific.
+- every Advisory employee is paid more than every employee elsewhere;
+- J2 is intentionally underpaid;
+- operating-line experts are treated as second class;
+- carry substitutes for fair cash compensation.
+
+Operating-line veterans recruited into Advisory should be among the most highly compensated non-carry professionals because their tacit operating experience is a core differentiator.
+
+## 9. Carry mechanics still open
+
+The following require a later legal/finance plan and are not invented here:
+
+- pool size;
+- whether the instrument references Advisory profit, equity value, a phantom pool or another value base;
+- grant units;
+- vesting schedule;
+- realization events;
+- annual distributions;
+- retirement treatment;
+- good-leaver/bad-leaver rules;
+- forfeiture;
+- clawback;
+- tax treatment;
+- valuation method;
+- dilution;
+- governance rights, if any;
+- treatment if Advisory becomes a separate legal entity.
+
+Carry should confer economics, not automatic management or governance authority.
 
 ## 10. Anti-gaming controls
 
-The system fails if people optimize J2 careers around future Advisory eligibility.
+The carry system fails if people can optimize J2 careers around eligibility rather than institutional service.
 
-Controls include:
+Controls should therefore include:
 
-- no Advisory recruiting or individualized career discussion while serving;
+- no Advisory recruiting while serving;
 - no carry promise while serving;
-- no accelerated J2 assignment/promotion for future Advisory value;
-- qualifying service based on substantive role evidence, not nominal dates;
-- no title-only Contact/Education qualification;
+- no accelerated J2 promotion for future Advisory value;
+- qualifying service measured from substantive role completion, not nominal assignment dates;
+- no title-only Contact leadership qualification;
 - no JAG substitution for Judgment's operating-line requirement;
-- no J2HQ shortcut;
-- no waiver for a commercially desirable candidate without an explicit owner-approved canon change.
+- no retroactive waiver invented for a commercially desirable candidate without an explicit owner-approved change to the rule.
 
 ## 11. Cultural test
 
