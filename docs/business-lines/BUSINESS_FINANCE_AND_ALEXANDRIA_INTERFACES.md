@@ -21,12 +21,12 @@ Every row carries source, owner, steward, access, purpose, knowledge timing and 
 | Entry | Source owner | Canon / Judgment / Collection relationship |
 |---|---|---|
 | Foundry Field | Foundry Field product and deployment leadership | Dossier locates current canon; decisions link to Judgment; underlying sources require independent Collection entitlement. |
-| Atlas Meridian | Atlas product leadership / Simone Vale transition | Dossier locates current canon; decisions link to Judgment; underlying sources require independent Collection entitlement. |
+| Atlas Meridian | Atlas Meridian product organization | Dossier locates current canon; decisions link to Judgment; underlying sources require independent Collection entitlement. |
 | Willow | Gid Voss experimental authority / Rachel Sloane institutional seam | Dossier locates current canon; decisions link to Judgment; underlying sources require independent Collection entitlement. |
 | Cradle | Cradle operating leadership and accountable host interfaces | Dossier locates current canon; decisions link to Judgment; underlying sources require independent Collection entitlement. |
 | Pale Sun / Red Wash | Evan Vilander / Mari / Red Wash operating leadership | Dossier locates current canon; decisions link to Judgment; underlying sources require independent Collection entitlement. |
 | American Resource Utility / BS&T | Nora Ashcombe / Seth Kettering rail authority | Dossier locates current canon; decisions link to Judgment; underlying sources require independent Collection entitlement. |
-| Advisory | Advisory accountable commercial leadership; permanent appointment open | Dossier locates current canon; decisions link to Judgment; underlying sources require independent Collection entitlement. |
+| Advisory | President, Advisory — individual OPEN | Dossier locates current canon; decisions link to Judgment; underlying sources require independent Collection entitlement. |
 | Emberline history | Corporate records and receiving business | Historical effective periods and transfers; later judgments do not rewrite contemporary knowledge; original restrictions persist. |
 
 JAG links approved internal interventions and follow-up learning. Commercial Advisory is not JAG. Education uses cleared cases and learning material; a teaching copy does not carry privileged client files. Foundry’s representation of a claim or authority does not certify physical truth. Physical measurements retain methods, units, limitations and custody where relevant.
@@ -129,6 +129,10 @@ Owner: Accountable mine/rail/nonrail operator. Scope: pale-sun,american-resource
 Constrain demand by qualified equipment, labor, route and capacity; uranium custody remains gated independently of ordinary inbound availability.
 
 Evidence population: operating plan; service/production rows; qualification and capacity exception.
+
+### LC-ADVISORY-VALUE — SH-FIN-004
+
+The independent Value Office owns baseline, attribution, outcome certification and the reproducible variable-fee calculation under ADV-VAL-01 through ADV-VAL-05. The originating sponsor, Matter Principal, Acceptance Principal and independent reviewer retain separate duties. Atlas product licensing and Advisory matter economics remain distinct. Serving J2 cannot enter Advisory recruiting or application; current Atlas product staff are not an Advisory staffing reserve.
 
 ## Acceptance and remaining scope
 

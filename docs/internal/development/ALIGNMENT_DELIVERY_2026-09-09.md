@@ -27,7 +27,7 @@ All table source paths are relative to `docs/governance/`. The existing `board_a
 
 ## Validation
 
-The build regenerated the publication manifest and institutional JSON/SQLite catalog. Governance, catalog, organization, repository hygiene and business-record validators check source relationships and hashes. The publication unittest suite checks normalization and retained financial content. The full repository pytest suite passed (five environment-dependent PostgreSQL skips); all eight publication tests and all five applicable validators passed. The accepting PR records remote CI results.
+The build regenerated the publication manifest and institutional JSON/SQLite catalog. Governance, catalog, organization, repository hygiene and business-record validators check source relationships and hashes. The publication unittest suite checks normalization and retained financial content. The full repository pytest suite passed (five environment-dependent skips); all eight publication tests and all five applicable validators passed. The accepting PR records remote CI results.
 
 Visual review covered all 59 pages in the 24 new/changed publications. Text and tables remained within the approved US-Letter layout; the later headquarters status correction was regenerated. The catalog contains 107 objects at this revision; acceptance relies on source pairing and useful search rather than that incidental total.
 
@@ -36,3 +36,9 @@ Visual review covered all 59 pages in the 24 new/changed publications. Text and 
 This package supplies #33 publication reconciliation, #37 repository catalog lifecycle, #38 business-source interfaces and #44 Finance-source boundaries. Their GitHub closure follows accepted merge. The #88 doctrine/publication portion is complete; its exact approved Sacramento HQ image binary remains absent and must not be recreated as if it were the approved hash.
 
 The business-driven financial engine, granular unit evidence and remaining #12 acceptance criteria are the next implementation package, not completed by these dossiers. Runtime/entitlements/deletion/Daedalus implementation (#21/#22/#24/#34), permanent J2 naming (#19), residual legal mechanics (#18), administration (#11) and source-specific Geo work (#106–108) retain their explicit boundaries. No stale branch was deleted or repository protection claimed without evidence.
+
+## Concurrent Advisory/Atlas reconciliation
+
+PR #109 appeared during execution, passed six remote workflows and merged at `0e27bcd0f64bd3d6a94f075ed09be21b99e1a378`. The current dossiers, source crosswalk and structured records were reconciled to its more specific accepted decisions. Earlier conversation-summary uncertainty does not override the named practices, President role, separate Atlas product team, independent Value Office or serving-J2 prohibition. Its eight substantive Markdown sources were added to controlled publication and catalog coverage. Exact pricing, individual President, permanent legal form and carry-plan mechanics retain their accepted open/model states.
+
+The follow-up visual review covered all 55 pages across 13 new or revised Advisory/reconciliation publications. Current catalog coverage is 115 source/publication pairs. The structured companion preserves all 32 ADV-101–125 / ATL-101–107 decision IDs and their exact source states.

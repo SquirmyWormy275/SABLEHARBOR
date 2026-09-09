@@ -38,6 +38,13 @@ def validate():
         assert all(control[k] for k in ('owner', 'scope', 'frequency', 'procedure', 'evidence'))
     for portal in portals:
         assert set(portal['control_ids']) <= control_ids
+    decisions = json.loads((ROOT / 'docs/structured/business-lines/advisory_atlas_decisions.json').read_text())['decisions']
+    narrative = (ROOT / 'docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-08_ADVISORY.md').read_text()
+    expected_ids = set(re.findall(r'\| ((?:ADV|ATL)-\d+) \|', narrative))
+    assert {d['id'] for d in decisions} == expected_ids
+    assert len(decisions) == len(expected_ids)
+    for decision in decisions:
+        assert decision['state'] in narrative and (ROOT / decision['source']).is_file()
     print(f'Business records passed: {len(lines)} lines, {len(portals)} interfaces, '
           f'{len(interfaces["local_controls"])} existing-CCF implementations')
 

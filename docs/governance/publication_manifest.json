@@ -652,8 +652,8 @@
     {
       "source": "docs/business-lines/ATLAS_MERIDIAN.md",
       "publication": "docs/business-lines/publications/SH-BIZ-ATLAS-MERIDIAN-001_v1.0.0.pdf",
-      "sha256": "97fcd7c4a68cf59dccc40376377c7df192258a933400b9f2aaa81edc52eb8f85",
-      "source_sha256": "6799b945403bee92ca2fb4eab4480572a1b2cac839dde70a2b0499375e931e25",
+      "sha256": "9a0b506916c8363aacdacb5b2fff56b9bf5989a0d7c7961df2c5ef91eeb4d177",
+      "source_sha256": "8bc554f231545947ddcadacfa607b3de4e6fc1c0794be5c37ca28baec920ac37",
       "brand": "corporate",
       "normalizer": "pypdf"
     },
@@ -692,16 +692,16 @@
     {
       "source": "docs/business-lines/ADVISORY.md",
       "publication": "docs/business-lines/publications/SH-BIZ-ADVISORY-001_v1.0.0.pdf",
-      "sha256": "f3caebafbe9f88a0d812eb81be6b95981e5dadebf1b0399133d210fc991f8601",
-      "source_sha256": "6f075270fd84f52249316bc60bd60131eaa9e2998e728a281b81fd996d1e3ada",
+      "sha256": "26556fdbe330d155d8aa98cf695d1f93a4a8e16bfd5cf6a57f68e084ed8b9efd",
+      "source_sha256": "4f23491217da438499f95a7e28be57e444775f6479b7a5c3e801988c321f4539",
       "brand": "corporate",
       "normalizer": "pypdf"
     },
     {
       "source": "docs/business-lines/CURRENT_SOURCE_CROSSWALK.md",
       "publication": "docs/governance/publications/SH-BIZ-SOURCES-001_v1.0.0.pdf",
-      "sha256": "dc8ea475647ae88149b1fc9972f1ba2cbdd0a02106f1008486cf9b4d41064e41",
-      "source_sha256": "0c32ea16c1b4d9525dfe180b3f960f132ebca0668fe6dc2705f4b95b1f212b22",
+      "sha256": "071a8dde3d6d61e84f699202ad7ac56568519930733b2db545f38deca3217bc0",
+      "source_sha256": "1d93384a5d471c0e053e8affd87b370a13f3f07dc5a1501833d874860e5b9f7f",
       "brand": "corporate",
       "normalizer": "pypdf"
     },
@@ -716,16 +716,16 @@
     {
       "source": "docs/business-lines/BUSINESS_FINANCE_AND_ALEXANDRIA_INTERFACES.md",
       "publication": "docs/governance/publications/SH-BIZ-ALX-FIN-001_v1.0.0.pdf",
-      "sha256": "9e97e5e72f3ba73dd84808c9a3dfaec25fabc9e3b5849cef4c2b658a7568bba1",
-      "source_sha256": "bc5c955b976338c60e707e19dad5a1e12b51f66fa2f47bc34d491496712cc332",
+      "sha256": "4816a5f579788f7743ca0ef7b11f05890611ef6f73106da5d4479d2a74e2038a",
+      "source_sha256": "64ac68cf1ce4255ef957ba5b6226e05116d2575d95fb94768ce1bf7605e40058",
       "brand": "corporate",
       "normalizer": "pypdf"
     },
     {
       "source": "docs/canon/BUSINESS_DEVELOPMENT_DIRECTION_2026-09-09.md",
       "publication": "docs/governance/publications/SH-CANON-BIZ-20260909-001_v1.0.0.pdf",
-      "sha256": "9dadacd7bfca3bc4317623b3aff4f6a2d9bc9c57ac5fb5c6dbc5808aa4365c8c",
-      "source_sha256": "632d192f0e6a038887b544e05c02ab0e9cd17e9b52ddd6a7d71309e23dc48b4f",
+      "sha256": "8881740797457cda02dbf380db47598d2bde71d91040b9724d8f11ccc2715205",
+      "source_sha256": "ca9394763b4157843d681ffde8a085844e813d3e40dd40438c7d15c80121ba00",
       "brand": "corporate",
       "normalizer": "pypdf"
     },
@@ -822,6 +822,70 @@
       "publication": "docs/governance/publications/SH-BRD-CONSENT-2026-09-02_v1.0.0.pdf",
       "sha256": "db6dd49d108d0e0d8b6c42831509c25cab9ade6258bbf29c897bece05a585592",
       "source_sha256": "2a0afb5615327345daf491c308e2b89e7e6236e44be1b3b09b3663389b344400",
+      "brand": "corporate",
+      "normalizer": "pypdf"
+    },
+    {
+      "source": "docs/advisory/SABLE_HARBOR_ADVISORY_EXECUTIVE_MEMORANDUM_2026-09-08.md",
+      "publication": "docs/advisory/publications/SH-ADV-MEM-20260908-001_v1.0.0.pdf",
+      "sha256": "b9e8a753ac9badb052fbc50c519bd68736ce3fbd5bcddc2ab6c7c1f40f0f1e77",
+      "source_sha256": "9321cbfd9ef7feb8488d81e8ae9a15a5597ec051cade180386da0f394c56ed3c",
+      "brand": "corporate",
+      "normalizer": "pypdf"
+    },
+    {
+      "source": "docs/advisory/OPERATING_MODEL.md",
+      "publication": "docs/advisory/publications/SH-ADV-001_v1.0.0.pdf",
+      "sha256": "cc43454b7199317ccf6c6a6910506e80f376f9a1eed5769c166b6e028af79696",
+      "source_sha256": "d5a439276bc98260ca0c3b990b551a7faeff4e7098438d6fd27b27f4ccb36fe5",
+      "brand": "corporate",
+      "normalizer": "pypdf"
+    },
+    {
+      "source": "docs/advisory/MATTER_GOVERNANCE_AND_ECONOMICS.md",
+      "publication": "docs/advisory/publications/SH-ADV-002_v1.0.0.pdf",
+      "sha256": "c09be6b5aad62582fd995b41a889745f9ac5f9da67230147cd4994c3d8402e0c",
+      "source_sha256": "b9c9c21d5dd468bd94b4fbb2d78d4f5ec4191c67fd279ca708f4c60e454177a1",
+      "brand": "corporate",
+      "normalizer": "pypdf"
+    },
+    {
+      "source": "docs/advisory/TALENT_MOBILITY_AND_CARRY.md",
+      "publication": "docs/advisory/publications/SH-ADV-003_v1.0.0.pdf",
+      "sha256": "bc9efe65e0418482ff017080212069b2a38306ceb40bee462a3a4ed61692b73d",
+      "source_sha256": "d61c2616c817a82a7c7f33be067dde51f353fd1ba3f7502d316b4fec83cb3e7e",
+      "brand": "corporate",
+      "normalizer": "pypdf"
+    },
+    {
+      "source": "docs/advisory/ATLAS_MERIDIAN_PROFESSIONAL_PLATFORM.md",
+      "publication": "docs/advisory/publications/SH-ATL-016_v1.0.0.pdf",
+      "sha256": "9f1338ac472d78d5b3f1f97159587ea127614c0a7170cacdc1ceb670af55a0b5",
+      "source_sha256": "509f9f48f9a41d590228271ae853cadfd56a793c07af012df61db195c1e5a94c",
+      "brand": "corporate",
+      "normalizer": "pypdf"
+    },
+    {
+      "source": "docs/canon/ADVISORY_ATLAS_MERIDIAN_CLOSEOUT_2026-09-08.md",
+      "publication": "docs/advisory/publications/SH-ADV-ATL-DR-001_v1.0.0.pdf",
+      "sha256": "11d733b92fb6f59aeec7c54d289803e1861e449ef5e1f7680a0a80b0e09921f1",
+      "source_sha256": "93a2f8f472923d057ba928ff9f75fa21f4a3ee7c9323baf445c745fb51436daf",
+      "brand": "corporate",
+      "normalizer": "pypdf"
+    },
+    {
+      "source": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-08_ADVISORY.md",
+      "publication": "docs/advisory/publications/SH-ADV-ATL-DR-002_v1.0.0.pdf",
+      "sha256": "8e172e037c3e2a1a93418be4cf6d7645d5b460d38e17ed85c241db36b2f30e83",
+      "source_sha256": "24fec12b3a1dcf0d876a9251831bc0edaebab329755c50007f7071503e0f69c4",
+      "brand": "corporate",
+      "normalizer": "pypdf"
+    },
+    {
+      "source": "docs/controls/ADVISORY_MATTER_CONTROLS_v1.0.md",
+      "publication": "docs/advisory/publications/SH-ADV-CTRL-001_v1.0.0.pdf",
+      "sha256": "25ffb18d79e35c5e9428126bd78092c1949f03a6433a0943393fcf196c81adb0",
+      "source_sha256": "d2c815df4efc1aa004ee64c0a460ed678e1ba5459d1bc43b91518e2ab750cbc3",
       "brand": "corporate",
       "normalizer": "pypdf"
     }

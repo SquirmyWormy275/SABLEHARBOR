@@ -23,10 +23,10 @@
       "name": "Atlas Meridian",
       "entity": "SHI",
       "role": "commercial product and internal capability",
-      "owner": "Atlas product leadership / Simone Vale transition",
+      "owner": "Atlas Meridian product organization",
       "sources": [
         "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md",
-        "docs/canon/BUSINESS_DEVELOPMENT_DIRECTION_2026-09-09.md"
+        "docs/canon/ADVISORY_ATLAS_MERIDIAN_CLOSEOUT_2026-09-08.md"
       ],
       "dossier": "docs/business-lines/ATLAS_MERIDIAN.md",
       "state": "CURRENT_SOURCE_SYNTHESIS",
@@ -103,15 +103,16 @@
       "name": "Advisory",
       "entity": "SHI",
       "role": "commercial professional services",
-      "owner": "Advisory accountable commercial leadership; permanent appointment open",
+      "owner": "President, Sable Harbor Advisory \u2014 individual OPEN",
       "sources": [
         "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md",
-        "docs/canon/BUSINESS_DEVELOPMENT_DIRECTION_2026-09-09.md"
+        "docs/canon/ADVISORY_ATLAS_MERIDIAN_CLOSEOUT_2026-09-08.md"
       ],
       "dossier": "docs/business-lines/ADVISORY.md",
       "state": "CURRENT_SOURCE_SYNTHESIS",
       "as_of": "2026-09-09",
-      "model_state": "SYNTHETIC_ASSUMPTIONS_SEPARATE_FROM_CANON"
+      "model_state": "SYNTHETIC_ASSUMPTIONS_SEPARATE_FROM_CANON",
+      "legal_book_status": "EXISTING_PARENT_MODEL_SCOPE; permanent legal form remains OPEN"
     }
   ]
 }

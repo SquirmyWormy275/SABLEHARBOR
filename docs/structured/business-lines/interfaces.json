@@ -32,7 +32,7 @@
       "door": "Business Lines",
       "scope": "atlas-meridian",
       "source": "docs/business-lines/ATLAS_MERIDIAN.md",
-      "owner": "Atlas product leadership / Simone Vale transition",
+      "owner": "Atlas Meridian product organization",
       "steward": "Business records steward with Alexandria stewardship",
       "access": "DISCOVERABLE_SUMMARY; source-level entitlement before detail",
       "authority": "Current dossier locates controlling sources; operational records remain owned by the business",
@@ -157,7 +157,7 @@
       "door": "Business Lines",
       "scope": "advisory",
       "source": "docs/business-lines/ADVISORY.md",
-      "owner": "Advisory accountable commercial leadership; permanent appointment open",
+      "owner": "President, Sable Harbor Advisory \u2014 individual OPEN",
       "steward": "Business records steward with Alexandria stewardship",
       "access": "DISCOVERABLE_SUMMARY; source-level entitlement before detail",
       "authority": "Current dossier locates controlling sources; operational records remain owned by the business",
@@ -411,6 +411,17 @@
       "frequency": "Planning cycle and exception",
       "procedure": "Constrain demand by qualified equipment, labor, route and capacity; uranium custody remains gated independently of ordinary inbound availability.",
       "evidence": "operating plan; service/production rows; qualification and capacity exception",
+      "state": "IMPLEMENTATION_DESIGN",
+      "operating_effectiveness": "NOT_ASSERTED"
+    },
+    {
+      "id": "LC-ADVISORY-VALUE",
+      "control_id": "SH-FIN-004",
+      "scope": "advisory",
+      "owner": "Independent Value Office",
+      "frequency": "Before substantive work and final variable-fee certification",
+      "procedure": "Approve and preserve baseline/attribution/payout curve separately from delivery; acceptance/review roles remain independent. Variable fee follows certified outcomes and contract cap. See ADV-VAL-01 through ADV-VAL-05.",
+      "evidence": "matter acceptance; versioned value schedule; certification; fee calculation; transfer record",
       "state": "IMPLEMENTATION_DESIGN",
       "operating_effectiveness": "NOT_ASSERTED"
     }

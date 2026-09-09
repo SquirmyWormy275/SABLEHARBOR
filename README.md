@@ -19,6 +19,10 @@ It is modeled as a company that would exist independently of any audit or benchm
 - **OPEN** — unresolved and not to be silently invented;
 - **SUPERSEDED** — preserved prior direction that no longer controls current canon.
 
+## Advisory and Atlas closeout
+
+The [accepted September 8 closeout](docs/canon/ADVISORY_ATLAS_MERIDIAN_CLOSEOUT_2026-09-08.md) establishes the three-practice Advisory common bench, independent matter/value governance, serving-J2 boundary and separate Atlas product organization. See the [Advisory source package](docs/advisory/README.md).
+
 ## Current business development
 
 The [seven business dossiers](docs/business-lines/README.md) connect operating lifecycles, finances, authority, evidence and remaining decisions. Use the [source crosswalk](docs/business-lines/CURRENT_SOURCE_CROSSWALK.md) to distinguish current canon from preserved financial releases and the [interface record](docs/business-lines/BUSINESS_FINANCE_AND_ALEXANDRIA_INTERFACES.md) for business/Finance access boundaries.

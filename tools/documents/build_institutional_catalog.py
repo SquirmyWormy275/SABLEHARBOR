@@ -22,6 +22,8 @@ def field(text: str, name: str, default: str = "") -> str:
 def category(path: str) -> str:
     if path == "docs/canon/INDUSTRIAL_PLANNING_SUCCESSOR_2026-09-06.md":
         return "industrial planning authority"
+    if path.startswith("docs/advisory/"):
+        return "Advisory professional and Atlas product record"
     if path.startswith("docs/business-lines/"):
         return "business-line operating and finance record"
     if path.startswith("docs/governance/board-records/"):
@@ -52,6 +54,8 @@ def inferred_owner(path: str) -> str:
         return "Repository owner"
     if path.startswith("industrial/"):
         return "Sable Harbor Industrial Holdings"
+    if path.startswith("docs/advisory/") or "ADVISORY" in path:
+        return "Advisory President / Atlas product organization"
     name = Path(path).stem
     if path == "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-06_CLOSEOUT.md":
         return "Repository owner"
