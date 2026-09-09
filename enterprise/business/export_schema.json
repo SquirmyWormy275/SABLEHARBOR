@@ -1,0 +1,2946 @@
+{
+  "advisory": {
+    "annual_statements": {
+      "columns": [
+        "scenario",
+        "entity",
+        "year",
+        "revenue_usd",
+        "expense_usd",
+        "net_income_usd",
+        "assets_usd",
+        "liabilities_usd",
+        "equity_usd",
+        "opening_cash_usd",
+        "ending_cash_usd",
+        "operating_cash_flow_usd",
+        "investing_cash_flow_usd",
+        "financing_cash_flow_usd",
+        "opening_or_noncash_cash_bridge_usd",
+        "fact_state",
+        "unit",
+        "view_type",
+        "available_at",
+        "created_on",
+        "record_origin",
+        "period_role"
+      ]
+    },
+    "monthly_statements": {
+      "columns": [
+        "scenario",
+        "entity",
+        "year",
+        "month",
+        "revenue_usd",
+        "expense_usd",
+        "net_income_usd",
+        "assets_usd",
+        "liabilities_usd",
+        "equity_usd",
+        "opening_cash_usd",
+        "ending_cash_usd",
+        "operating_cash_flow_usd",
+        "investing_cash_flow_usd",
+        "financing_cash_flow_usd",
+        "opening_or_noncash_cash_bridge_usd",
+        "fact_state",
+        "unit",
+        "view_type",
+        "available_at",
+        "created_on",
+        "record_origin",
+        "period_role"
+      ]
+    },
+    "trial_balance": {
+      "columns": [
+        "scenario",
+        "unit",
+        "year",
+        "month",
+        "account",
+        "account_type",
+        "signed_usd",
+        "view_type",
+        "available_at",
+        "created_on",
+        "record_origin",
+        "fact_state",
+        "period_role"
+      ]
+    },
+    "journal": {
+      "columns": [
+        "scenario",
+        "entity",
+        "year",
+        "month",
+        "journal_id",
+        "line_no",
+        "account",
+        "account_type",
+        "segment",
+        "unit",
+        "debit_usd",
+        "credit_usd",
+        "signed_usd",
+        "source_id",
+        "source_type",
+        "description",
+        "cash_flow",
+        "available_at",
+        "created_on",
+        "record_origin",
+        "effective_period_end",
+        "fact_state",
+        "period_role"
+      ]
+    },
+    "events": {
+      "columns": [
+        "event_id",
+        "scenario",
+        "period",
+        "month_index",
+        "unit",
+        "kind",
+        "source_id",
+        "available_at",
+        "fact_state",
+        "amount_usd",
+        "practice",
+        "matter_class",
+        "disposition",
+        "reason",
+        "originator",
+        "matter_principal",
+        "acceptance_principal",
+        "independent_reviewer",
+        "value_officer",
+        "baseline_sha256",
+        "baseline_source",
+        "target_fee_usd",
+        "committed_fee_usd",
+        "target_variable_usd",
+        "attribution",
+        "customer_id",
+        "due_date",
+        "performance_source",
+        "allowance_usd",
+        "invoice_id",
+        "engagement_id",
+        "hours",
+        "billing_basis",
+        "account",
+        "reviewer",
+        "committed_recognition_usd",
+        "payable_id",
+        "settlement_state",
+        "transfer_manifest",
+        "professional_plane_included",
+        "measured_cost_usd",
+        "certified_savings_usd",
+        "achievement",
+        "payout_factor",
+        "variable_fee_usd",
+        "measurement_state"
+      ]
+    },
+    "engagements": {
+      "columns": [
+        "engagement_id",
+        "customer_id",
+        "unit",
+        "start_month",
+        "fee_usd",
+        "delivery_hours",
+        "origin",
+        "milestones",
+        "rejection_milestone",
+        "rejection_delay_months",
+        "billing_basis",
+        "payment_due_months",
+        "atlas_fee_included",
+        "practice",
+        "matter_class",
+        "committed_fraction",
+        "acceptance_status",
+        "acceptance_reason",
+        "roles",
+        "measurement",
+        "transfer"
+      ]
+    },
+    "invoices": {
+      "columns": [
+        "invoice_id",
+        "scenario",
+        "unit",
+        "customer_id",
+        "source_id",
+        "issue_month",
+        "due_month",
+        "due_date",
+        "collection_month",
+        "amount_usd",
+        "remaining_usd",
+        "host_share"
+      ]
+    },
+    "payables": {
+      "columns": [
+        "payable_id",
+        "scenario",
+        "unit",
+        "source_id",
+        "accrual_month",
+        "due_month",
+        "due_date",
+        "amount_usd",
+        "remaining_usd"
+      ]
+    },
+    "capacity": {
+      "columns": [
+        "scenario",
+        "period",
+        "unit",
+        "capacity_hours",
+        "used_hours",
+        "remaining_hours"
+      ]
+    },
+    "receivable_aging": {
+      "columns": [
+        "scenario",
+        "period",
+        "unit",
+        "invoice_id",
+        "customer_id",
+        "due_date",
+        "months_past_due",
+        "outstanding_usd"
+      ]
+    },
+    "subledger_rollforward": {
+      "columns": [
+        "scenario",
+        "period",
+        "unit",
+        "gross_ar_usd",
+        "allowance_usd",
+        "vendor_ap_usd",
+        "deferred_revenue_usd",
+        "host_payable_usd",
+        "inventory_usd",
+        "gross_ppe_usd",
+        "accumulated_depreciation_usd"
+      ]
+    },
+    "value_certifications": {
+      "columns": [
+        "scenario",
+        "period",
+        "unit",
+        "engagement_id",
+        "matter_class",
+        "baseline_sha256",
+        "baseline_cost_usd",
+        "target_savings_usd",
+        "certified_savings_usd",
+        "achievement",
+        "target_fee_usd",
+        "committed_fee_usd",
+        "variable_fee_usd",
+        "total_fee_usd",
+        "value_officer",
+        "source_id"
+      ]
+    },
+    "matter_rollforward": {
+      "columns": [
+        "scenario",
+        "period",
+        "unit",
+        "engagement_id",
+        "practice",
+        "unperformed_committed_fee_usd",
+        "uncertified_variable_target_usd",
+        "transfer_accepted",
+        "value_certified",
+        "carry_obligation"
+      ]
+    },
+    "workforce_assignments": {
+      "columns": [
+        "scenario",
+        "period",
+        "month_index",
+        "position_id",
+        "person_id",
+        "home_group",
+        "unit",
+        "assignment_fte",
+        "loaded_cost_usd",
+        "delivery_capacity_hours"
+      ]
+    },
+    "workforce_positions": {
+      "columns": [
+        "position_id",
+        "person_id",
+        "home_group",
+        "home_unit",
+        "delivery_role",
+        "authorized",
+        "occupied",
+        "paid_fte",
+        "annual_loaded_usd",
+        "assignments",
+        "fact_state"
+      ]
+    },
+    "enterprise_funding": {
+      "columns": [
+        "scenario",
+        "entity",
+        "year",
+        "month",
+        "required_equity_usd",
+        "available_equity_usd",
+        "funding_gap_usd",
+        "member_annual_limit_usd",
+        "member_draws_year_to_date_usd",
+        "reserved_subsidiary_capacity_remaining_usd",
+        "unpaid_operating_obligations_usd",
+        "unpaid_capital_obligations_usd",
+        "unpaid_debt_obligations_usd",
+        "opening_unpaid_operating_obligations_usd",
+        "new_payment_deferral_usd",
+        "arrears_paid_usd",
+        "fact_state",
+        "feasibility",
+        "available_at",
+        "created_on",
+        "record_origin",
+        "period_role",
+        "opening_total_unpaid_obligations_usd"
+      ]
+    },
+    "scope_dispositions": {
+      "columns": [
+        "population",
+        "state",
+        "reason"
+      ]
+    },
+    "model_identity": {
+      "columns": [
+        "run_id",
+        "source_revision",
+        "business_input_sha256",
+        "unit",
+        "classification"
+      ]
+    },
+    "equity_bridge": {
+      "columns": [
+        "scenario",
+        "year",
+        "unit",
+        "opening_equity_usd",
+        "net_income_usd",
+        "capital_reporting_and_other_movement_usd",
+        "closing_equity_usd",
+        "classification"
+      ]
+    },
+    "intercompany_bridge": {
+      "columns": [
+        "scenario",
+        "entity",
+        "year",
+        "month",
+        "journal_id",
+        "line_no",
+        "account",
+        "account_type",
+        "segment",
+        "unit",
+        "debit_usd",
+        "credit_usd",
+        "signed_usd",
+        "source_id",
+        "source_type",
+        "description",
+        "cash_flow",
+        "available_at",
+        "created_on",
+        "record_origin",
+        "effective_period_end",
+        "fact_state",
+        "period_role"
+      ]
+    }
+  },
+  "american-resource-utility": {
+    "annual_statements": {
+      "columns": [
+        "scenario",
+        "entity",
+        "year",
+        "revenue_usd",
+        "expense_usd",
+        "net_income_usd",
+        "assets_usd",
+        "liabilities_usd",
+        "equity_usd",
+        "opening_cash_usd",
+        "ending_cash_usd",
+        "operating_cash_flow_usd",
+        "investing_cash_flow_usd",
+        "financing_cash_flow_usd",
+        "opening_or_noncash_cash_bridge_usd",
+        "fact_state",
+        "unit",
+        "view_type",
+        "available_at",
+        "created_on",
+        "record_origin",
+        "period_role"
+      ]
+    },
+    "monthly_statements": {
+      "columns": [
+        "scenario",
+        "entity",
+        "year",
+        "month",
+        "revenue_usd",
+        "expense_usd",
+        "net_income_usd",
+        "assets_usd",
+        "liabilities_usd",
+        "equity_usd",
+        "opening_cash_usd",
+        "ending_cash_usd",
+        "operating_cash_flow_usd",
+        "investing_cash_flow_usd",
+        "financing_cash_flow_usd",
+        "opening_or_noncash_cash_bridge_usd",
+        "fact_state",
+        "unit",
+        "view_type",
+        "available_at",
+        "created_on",
+        "record_origin",
+        "period_role"
+      ]
+    },
+    "trial_balance": {
+      "columns": [
+        "scenario",
+        "unit",
+        "year",
+        "month",
+        "account",
+        "account_type",
+        "signed_usd",
+        "view_type",
+        "available_at",
+        "created_on",
+        "record_origin",
+        "fact_state",
+        "period_role"
+      ]
+    },
+    "journal": {
+      "columns": [
+        "scenario",
+        "entity",
+        "year",
+        "month",
+        "journal_id",
+        "line_no",
+        "account",
+        "account_type",
+        "segment",
+        "unit",
+        "debit_usd",
+        "credit_usd",
+        "signed_usd",
+        "source_id",
+        "source_type",
+        "description",
+        "cash_flow",
+        "available_at",
+        "created_on",
+        "record_origin",
+        "effective_period_end",
+        "fact_state",
+        "period_role"
+      ]
+    },
+    "workforce_positions": {
+      "columns": [
+        "scope_state"
+      ]
+    },
+    "industrial_purchase_orders": {
+      "columns": [
+        "purchase_order_id",
+        "scenario",
+        "year",
+        "month",
+        "segment",
+        "source_id",
+        "vendor_id",
+        "fact_state",
+        "record_origin",
+        "available_at",
+        "ordered_on",
+        "description",
+        "quantity",
+        "unit",
+        "amount_usd",
+        "rate_state"
+      ]
+    },
+    "industrial_receipts": {
+      "columns": [
+        "receipt_id",
+        "purchase_order_id",
+        "scenario",
+        "year",
+        "month",
+        "segment",
+        "source_id",
+        "vendor_id",
+        "fact_state",
+        "record_origin",
+        "available_at",
+        "received_on",
+        "quantity",
+        "unit",
+        "accepted_amount_usd",
+        "receipt_kind"
+      ]
+    },
+    "industrial_supplier_invoices": {
+      "columns": [
+        "item_id",
+        "source_id",
+        "scenario",
+        "year",
+        "month",
+        "segment",
+        "category",
+        "description",
+        "quantity",
+        "unit",
+        "calibrated_unit_rate_usd",
+        "cost_index",
+        "variable_cost_usd",
+        "fixed_service_cost_usd",
+        "amount_usd",
+        "vendor_id",
+        "purchase_order_id",
+        "receipt_id",
+        "invoice_id",
+        "work_order_id",
+        "invoice_date",
+        "due_date",
+        "evidence_role",
+        "rate_state",
+        "fact_state",
+        "record_origin",
+        "available_at",
+        "three_way_match_state",
+        "payment_state",
+        "ledger_expense_usd",
+        "ledger_cash_settlement_usd",
+        "unpaid_at_forecast_end_usd"
+      ]
+    },
+    "industrial_work_orders": {
+      "columns": [
+        "work_order_id",
+        "scenario",
+        "year",
+        "month",
+        "segment",
+        "source_id",
+        "vendor_id",
+        "fact_state",
+        "record_origin",
+        "available_at",
+        "purchase_order_id",
+        "receipt_id",
+        "invoice_id",
+        "asset_scope",
+        "scheduled_date",
+        "planned_service_quantity",
+        "expense_usd",
+        "status"
+      ]
+    },
+    "industrial_sales_invoices": {
+      "columns": [
+        "scenario",
+        "entity",
+        "year",
+        "month",
+        "journal_id",
+        "event_id",
+        "source_id",
+        "fact_state",
+        "record_origin",
+        "available_at",
+        "invoice_id",
+        "counterparty",
+        "amount_usd",
+        "invoice_date",
+        "revenue_account",
+        "source_contract_or_service",
+        "evidence_role"
+      ]
+    },
+    "industrial_bank_reconciliations": {
+      "columns": [
+        "scenario",
+        "entity",
+        "year",
+        "month",
+        "opening_bank_cash_usd",
+        "cleared_receipts_usd",
+        "cleared_payments_usd",
+        "closing_bank_cash_usd",
+        "deposits_in_transit_usd",
+        "outstanding_payments_usd",
+        "adjusted_bank_cash_usd",
+        "ledger_cash_usd",
+        "difference_usd",
+        "treasury_scope",
+        "evidence_role",
+        "fact_state",
+        "record_origin",
+        "available_at"
+      ]
+    },
+    "industrial_document_journal_lineage": {
+      "columns": [
+        "scenario",
+        "entity",
+        "year",
+        "month",
+        "journal_id",
+        "event_id",
+        "source_id",
+        "fact_state",
+        "record_origin",
+        "available_at",
+        "account",
+        "signed_usd",
+        "support_id",
+        "support_role",
+        "input_path"
+      ]
+    },
+    "industrial_ledger_events": {
+      "columns": [
+        "scenario",
+        "entity",
+        "year",
+        "month",
+        "journal_id",
+        "event_id",
+        "source_id",
+        "fact_state",
+        "record_origin",
+        "available_at",
+        "description",
+        "source_type",
+        "counterparty",
+        "total_debits_usd",
+        "total_credits_usd",
+        "evidence_role"
+      ]
+    },
+    "industrial_payroll_batches": {
+      "columns": [
+        "scenario",
+        "entity",
+        "year",
+        "month",
+        "journal_id",
+        "event_id",
+        "source_id",
+        "fact_state",
+        "record_origin",
+        "available_at",
+        "payroll_batch_id",
+        "segment",
+        "gross_employer_cost_usd",
+        "cash_payment_usd",
+        "evidence_role",
+        "employee_source",
+        "unpaid_at_forecast_end_usd",
+        "planned_segment_fte"
+      ]
+    },
+    "industrial_payroll_role_details": {
+      "columns": [
+        "scenario",
+        "entity",
+        "year",
+        "month",
+        "source_id",
+        "journal_id",
+        "payroll_batch_id",
+        "segment",
+        "payroll_detail_id",
+        "census_employee_id",
+        "planned_position_pool_id",
+        "census_role",
+        "census_fte",
+        "modeled_role_capacity_fte",
+        "employer_cost_usd",
+        "allocated_settlement_usd",
+        "evidence_role",
+        "fact_state",
+        "record_origin",
+        "available_at"
+      ]
+    },
+    "industrial_service_manifests": {
+      "columns": [
+        "service_manifest_id",
+        "scenario",
+        "year",
+        "month",
+        "segment",
+        "invoice_id",
+        "source_id",
+        "journal_id",
+        "contract_id",
+        "customer_id",
+        "origin_destination",
+        "allocated_realized_units",
+        "unit",
+        "segment_realized_units",
+        "revenue_usd",
+        "allocation_basis",
+        "evidence_role",
+        "fact_state",
+        "record_origin",
+        "available_at"
+      ]
+    },
+    "industrial_procurement_monthly_costs": {
+      "columns": [
+        "scenario",
+        "year",
+        "month",
+        "segment",
+        "external_cost_usd"
+      ]
+    },
+    "industrial_bank_transactions": {
+      "columns": [
+        "scenario",
+        "entity",
+        "year",
+        "month",
+        "journal_id",
+        "event_id",
+        "source_id",
+        "fact_state",
+        "record_origin",
+        "available_at",
+        "payment_id",
+        "posting_date",
+        "clearing_date",
+        "bank_reference",
+        "signed_cash_usd",
+        "cash_flow",
+        "treasury_scope",
+        "evidence_role"
+      ]
+    },
+    "industrial_vendors": {
+      "columns": [
+        "vendor_id",
+        "name",
+        "fictional",
+        "evidence_role",
+        "fact_state",
+        "record_origin",
+        "available_at"
+      ]
+    },
+    "reference_customer_register": {
+      "columns": [
+        "customer_id",
+        "legal_name",
+        "fictional",
+        "fact_state",
+        "rationale",
+        "credit_rating",
+        "days_sales_outstanding",
+        "renewal_risk",
+        "annual_revenue_usd",
+        "concentration_pct",
+        "period_role",
+        "record_origin",
+        "as_of_cutoff",
+        "effective_period_end",
+        "available_at"
+      ]
+    },
+    "reference_contract_register": {
+      "columns": [
+        "contract_id",
+        "customer_id",
+        "segment",
+        "commodity",
+        "annual_units",
+        "unit",
+        "unit_price_usd",
+        "annual_reserved_capacity_accessorial_usd",
+        "term_start",
+        "term_end",
+        "renewal_date",
+        "price_escalator",
+        "minimum_commitment",
+        "origin_destination",
+        "cost_allocation_method",
+        "fact_state",
+        "annual_revenue_usd",
+        "analytical_allocated_opex_usd",
+        "analytical_margin_usd",
+        "period_role",
+        "record_origin",
+        "as_of_cutoff",
+        "effective_period_end",
+        "available_at"
+      ]
+    },
+    "reference_employee_census_payroll": {
+      "columns": [
+        "employee_id",
+        "name",
+        "segment",
+        "function",
+        "role",
+        "annual_salary_usd",
+        "fte",
+        "annual_employer_burden_pct",
+        "union",
+        "fictional",
+        "fact_state",
+        "rationale",
+        "annual_employer_burden_usd",
+        "annual_loaded_payroll_usd",
+        "period_role",
+        "record_origin",
+        "as_of_cutoff",
+        "effective_period_end",
+        "available_at"
+      ]
+    },
+    "reference_parts_fuel_materials_inventory": {
+      "columns": [
+        "period_id",
+        "year",
+        "month",
+        "inventory_class",
+        "quantity_unit",
+        "modeled_quantity",
+        "average_unit_cost_usd",
+        "gross_inventory_cost_usd",
+        "obsolescence_allowance_usd",
+        "net_inventory_usd",
+        "state",
+        "basis",
+        "period_role",
+        "record_origin",
+        "fact_state",
+        "as_of_cutoff",
+        "effective_period_end",
+        "available_at"
+      ]
+    },
+    "reference_aru_2026_fixed_assets": {
+      "columns": [
+        "month",
+        "sustaining_additions_usd",
+        "catchup_additions_usd",
+        "phase1_additions_usd",
+        "legacy_depreciation_usd",
+        "new_program_depreciation_usd",
+        "ppe_gross_usd",
+        "ppe_accumulated_depreciation_usd",
+        "period_role",
+        "record_origin",
+        "fact_state",
+        "as_of_cutoff",
+        "effective_period_end",
+        "available_at"
+      ]
+    },
+    "reference_aru_2026_debt_leases": {
+      "columns": [
+        "month",
+        "opening_term_usd",
+        "term_principal_usd",
+        "term_interest_usd",
+        "closing_term_usd",
+        "lease_principal_usd",
+        "lease_interest_usd",
+        "closing_lease_usd",
+        "debt_issue_amortization_usd",
+        "deferred_debt_issue_cost_usd",
+        "revolver_draw_usd",
+        "period_role",
+        "record_origin",
+        "fact_state",
+        "as_of_cutoff",
+        "effective_period_end",
+        "available_at"
+      ]
+    },
+    "reference_locomotives": {
+      "columns": [
+        "acquired",
+        "available",
+        "builder",
+        "built_year",
+        "catchup_usd",
+        "condition",
+        "continuous_tractive_effort_lb",
+        "emissions",
+        "fact_state",
+        "gross_weight_lb",
+        "horsepower",
+        "id",
+        "model",
+        "normal_service",
+        "ownership",
+        "provenance"
+      ]
+    },
+    "reference_railcars": {
+      "columns": [
+        "assignment",
+        "build_year",
+        "condition",
+        "fact_state",
+        "id",
+        "in_revenue_pool",
+        "inspection",
+        "ownership",
+        "provenance",
+        "type"
+      ]
+    },
+    "reference_road_equipment": {
+      "columns": [
+        "catchup_replacement_usd",
+        "facility_id",
+        "fact_state",
+        "id",
+        "kind",
+        "model",
+        "model_year",
+        "owner",
+        "payload_limit",
+        "payload_short_tons",
+        "provenance",
+        "qualification",
+        "status"
+      ]
+    },
+    "reference_handling_equipment": {
+      "columns": [
+        "capacity_short_tons",
+        "condition",
+        "facility_id",
+        "fact_state",
+        "id",
+        "kind",
+        "model_year",
+        "ownership",
+        "provenance"
+      ]
+    },
+    "reference_facilities": {
+      "columns": [
+        "acreage",
+        "annual_external_ton_capacity",
+        "assigned_fte",
+        "car_spots",
+        "case_status",
+        "condition",
+        "environmental_controls",
+        "fact_state",
+        "footprint_aspect_ratio",
+        "footprint_basis",
+        "id",
+        "lon_lat",
+        "name",
+        "opened",
+        "operating_hours",
+        "owner",
+        "pallet_slots",
+        "provenance",
+        "services",
+        "track_count"
+      ]
+    },
+    "reference_track_segments": {
+      "columns": [
+        "authority_method",
+        "capital_category",
+        "capital_record_ids",
+        "car_spots",
+        "condition",
+        "current_operating_restriction_mph",
+        "excluded_from_route_miles",
+        "facility_id",
+        "fact_state",
+        "id",
+        "in_service_date",
+        "inspection",
+        "length_miles",
+        "locomotive_and_clearance_allowance_ft",
+        "maximum_freight_mph",
+        "mp_end",
+        "mp_start",
+        "name",
+        "owner",
+        "provenance",
+        "rail_lb_per_yard",
+        "reference_car_length_ft",
+        "restriction",
+        "route_id",
+        "slow_order_release",
+        "slow_order_state",
+        "temporary_slow_order_mph",
+        "ties",
+        "track_class"
+      ]
+    },
+    "reference_structures": {
+      "columns": [
+        "catchup_usd",
+        "condition",
+        "constructed",
+        "design_allowance_gross_railcar_lb",
+        "fact_state",
+        "id",
+        "inspection_date",
+        "inspection_state",
+        "kind",
+        "lon_lat",
+        "material",
+        "milepost",
+        "owner",
+        "provenance",
+        "rating_state",
+        "reference_id",
+        "restriction",
+        "route_id",
+        "span_m",
+        "waterway"
+      ]
+    },
+    "reference_labor_agreements": {
+      "columns": [
+        "acquisition",
+        "amendable",
+        "benefits",
+        "covered_craft",
+        "crew",
+        "discipline",
+        "effective",
+        "fact_state",
+        "grievance",
+        "hours",
+        "id",
+        "provenance",
+        "represented_headcount",
+        "seniority",
+        "union"
+      ]
+    },
+    "reference_contract_facility_assignments": {
+      "columns": [
+        "annual_units_2025",
+        "contract_id",
+        "customer_id",
+        "facility_id",
+        "fact_state",
+        "id",
+        "provenance",
+        "route_id",
+        "segment",
+        "unit"
+      ]
+    },
+    "physical_reference_inventory": {
+      "columns": [
+        "table_name",
+        "source_path",
+        "source_sha256",
+        "row_count",
+        "scope"
+      ]
+    },
+    "enterprise_funding": {
+      "columns": [
+        "scenario",
+        "entity",
+        "year",
+        "month",
+        "required_equity_usd",
+        "available_equity_usd",
+        "funding_gap_usd",
+        "member_annual_limit_usd",
+        "member_draws_year_to_date_usd",
+        "reserved_subsidiary_capacity_remaining_usd",
+        "unpaid_operating_obligations_usd",
+        "unpaid_capital_obligations_usd",
+        "unpaid_debt_obligations_usd",
+        "opening_unpaid_operating_obligations_usd",
+        "new_payment_deferral_usd",
+        "arrears_paid_usd",
+        "fact_state",
+        "feasibility",
+        "available_at",
+        "created_on",
+        "record_origin",
+        "period_role",
+        "opening_total_unpaid_obligations_usd"
+      ]
+    },
+    "scope_dispositions": {
+      "columns": [
+        "population",
+        "state",
+        "reason"
+      ]
+    },
+    "model_identity": {
+      "columns": [
+        "run_id",
+        "source_revision",
+        "business_input_sha256",
+        "unit",
+        "classification"
+      ]
+    },
+    "equity_bridge": {
+      "columns": [
+        "scenario",
+        "year",
+        "unit",
+        "opening_equity_usd",
+        "net_income_usd",
+        "capital_reporting_and_other_movement_usd",
+        "closing_equity_usd",
+        "classification"
+      ]
+    },
+    "intercompany_bridge": {
+      "columns": [
+        "scenario",
+        "entity",
+        "year",
+        "month",
+        "journal_id",
+        "line_no",
+        "account",
+        "account_type",
+        "segment",
+        "unit",
+        "debit_usd",
+        "credit_usd",
+        "signed_usd",
+        "source_id",
+        "source_type",
+        "description",
+        "cash_flow",
+        "available_at",
+        "created_on",
+        "record_origin",
+        "effective_period_end",
+        "fact_state",
+        "period_role"
+      ]
+    }
+  },
+  "atlas-meridian": {
+    "annual_statements": {
+      "columns": [
+        "scenario",
+        "entity",
+        "year",
+        "revenue_usd",
+        "expense_usd",
+        "net_income_usd",
+        "assets_usd",
+        "liabilities_usd",
+        "equity_usd",
+        "opening_cash_usd",
+        "ending_cash_usd",
+        "operating_cash_flow_usd",
+        "investing_cash_flow_usd",
+        "financing_cash_flow_usd",
+        "opening_or_noncash_cash_bridge_usd",
+        "fact_state",
+        "unit",
+        "view_type",
+        "available_at",
+        "created_on",
+        "record_origin",
+        "period_role"
+      ]
+    },
+    "monthly_statements": {
+      "columns": [
+        "scenario",
+        "entity",
+        "year",
+        "month",
+        "revenue_usd",
+        "expense_usd",
+        "net_income_usd",
+        "assets_usd",
+        "liabilities_usd",
+        "equity_usd",
+        "opening_cash_usd",
+        "ending_cash_usd",
+        "operating_cash_flow_usd",
+        "investing_cash_flow_usd",
+        "financing_cash_flow_usd",
+        "opening_or_noncash_cash_bridge_usd",
+        "fact_state",
+        "unit",
+        "view_type",
+        "available_at",
+        "created_on",
+        "record_origin",
+        "period_role"
+      ]
+    },
+    "trial_balance": {
+      "columns": [
+        "scenario",
+        "unit",
+        "year",
+        "month",
+        "account",
+        "account_type",
+        "signed_usd",
+        "view_type",
+        "available_at",
+        "created_on",
+        "record_origin",
+        "fact_state",
+        "period_role"
+      ]
+    },
+    "journal": {
+      "columns": [
+        "scenario",
+        "entity",
+        "year",
+        "month",
+        "journal_id",
+        "line_no",
+        "account",
+        "account_type",
+        "segment",
+        "unit",
+        "debit_usd",
+        "credit_usd",
+        "signed_usd",
+        "source_id",
+        "source_type",
+        "description",
+        "cash_flow",
+        "available_at",
+        "created_on",
+        "record_origin",
+        "effective_period_end",
+        "fact_state",
+        "period_role"
+      ]
+    },
+    "events": {
+      "columns": [
+        "event_id",
+        "scenario",
+        "period",
+        "month_index",
+        "unit",
+        "kind",
+        "source_id",
+        "available_at",
+        "fact_state",
+        "amount_usd",
+        "customer_id",
+        "approved_hours",
+        "authority",
+        "due_date",
+        "performance_source",
+        "monthly_revenue_usd",
+        "annual_recurring_usd",
+        "seats",
+        "term",
+        "account",
+        "allowance_usd",
+        "invoice_id",
+        "payable_id",
+        "settlement_state",
+        "engagement_id",
+        "hours",
+        "billing_basis",
+        "fee_fraction",
+        "independent_atlas_fee",
+        "reason",
+        "renewal_term"
+      ]
+    },
+    "contracts": {
+      "columns": [
+        "contract_id",
+        "customer_id",
+        "unit",
+        "start_month",
+        "monthly_subscription_usd",
+        "deployment_fee_usd",
+        "compute_monthly_usd",
+        "seats",
+        "term_months",
+        "payment_due_months",
+        "origin",
+        "scenario_status",
+        "pricing_basis"
+      ]
+    },
+    "engagements": {
+      "columns": [
+        "engagement_id",
+        "customer_id",
+        "unit",
+        "start_month",
+        "fee_usd",
+        "delivery_hours",
+        "origin",
+        "milestones",
+        "rejection_milestone",
+        "rejection_delay_months",
+        "billing_basis",
+        "payment_due_months",
+        "atlas_fee_included",
+        "work_scope"
+      ]
+    },
+    "invoices": {
+      "columns": [
+        "invoice_id",
+        "scenario",
+        "unit",
+        "customer_id",
+        "source_id",
+        "issue_month",
+        "due_month",
+        "due_date",
+        "collection_month",
+        "amount_usd",
+        "remaining_usd",
+        "host_share"
+      ]
+    },
+    "payables": {
+      "columns": [
+        "payable_id",
+        "scenario",
+        "unit",
+        "source_id",
+        "accrual_month",
+        "due_month",
+        "due_date",
+        "amount_usd",
+        "remaining_usd"
+      ]
+    },
+    "commercial_metrics": {
+      "columns": [
+        "scenario",
+        "period",
+        "unit",
+        "active_customers",
+        "arr_usd",
+        "largest_customer_share",
+        "support_required_hours",
+        "support_capacity_hours",
+        "support_backlog_hours"
+      ]
+    },
+    "capacity": {
+      "columns": [
+        "scenario",
+        "period",
+        "unit",
+        "capacity_hours",
+        "used_hours",
+        "remaining_hours"
+      ]
+    },
+    "receivable_aging": {
+      "columns": [
+        "scenario",
+        "period",
+        "unit",
+        "invoice_id",
+        "customer_id",
+        "due_date",
+        "months_past_due",
+        "outstanding_usd"
+      ]
+    },
+    "subledger_rollforward": {
+      "columns": [
+        "scenario",
+        "period",
+        "unit",
+        "gross_ar_usd",
+        "allowance_usd",
+        "vendor_ap_usd",
+        "deferred_revenue_usd",
+        "host_payable_usd",
+        "inventory_usd",
+        "gross_ppe_usd",
+        "accumulated_depreciation_usd"
+      ]
+    },
+    "workforce_assignments": {
+      "columns": [
+        "scenario",
+        "period",
+        "month_index",
+        "position_id",
+        "person_id",
+        "home_group",
+        "unit",
+        "assignment_fte",
+        "loaded_cost_usd",
+        "delivery_capacity_hours"
+      ]
+    },
+    "workforce_positions": {
+      "columns": [
+        "position_id",
+        "person_id",
+        "home_group",
+        "home_unit",
+        "delivery_role",
+        "authorized",
+        "occupied",
+        "paid_fte",
+        "annual_loaded_usd",
+        "assignments",
+        "fact_state"
+      ]
+    },
+    "enterprise_funding": {
+      "columns": [
+        "scenario",
+        "entity",
+        "year",
+        "month",
+        "required_equity_usd",
+        "available_equity_usd",
+        "funding_gap_usd",
+        "member_annual_limit_usd",
+        "member_draws_year_to_date_usd",
+        "reserved_subsidiary_capacity_remaining_usd",
+        "unpaid_operating_obligations_usd",
+        "unpaid_capital_obligations_usd",
+        "unpaid_debt_obligations_usd",
+        "opening_unpaid_operating_obligations_usd",
+        "new_payment_deferral_usd",
+        "arrears_paid_usd",
+        "fact_state",
+        "feasibility",
+        "available_at",
+        "created_on",
+        "record_origin",
+        "period_role",
+        "opening_total_unpaid_obligations_usd"
+      ]
+    },
+    "scope_dispositions": {
+      "columns": [
+        "population",
+        "state",
+        "reason"
+      ]
+    },
+    "model_identity": {
+      "columns": [
+        "run_id",
+        "source_revision",
+        "business_input_sha256",
+        "unit",
+        "classification"
+      ]
+    },
+    "equity_bridge": {
+      "columns": [
+        "scenario",
+        "year",
+        "unit",
+        "opening_equity_usd",
+        "net_income_usd",
+        "capital_reporting_and_other_movement_usd",
+        "closing_equity_usd",
+        "classification"
+      ]
+    },
+    "intercompany_bridge": {
+      "columns": [
+        "scenario",
+        "entity",
+        "year",
+        "month",
+        "journal_id",
+        "line_no",
+        "account",
+        "account_type",
+        "segment",
+        "unit",
+        "debit_usd",
+        "credit_usd",
+        "signed_usd",
+        "source_id",
+        "source_type",
+        "description",
+        "cash_flow",
+        "available_at",
+        "created_on",
+        "record_origin",
+        "effective_period_end",
+        "fact_state",
+        "period_role"
+      ]
+    }
+  },
+  "foundry-field": {
+    "annual_statements": {
+      "columns": [
+        "scenario",
+        "entity",
+        "year",
+        "revenue_usd",
+        "expense_usd",
+        "net_income_usd",
+        "assets_usd",
+        "liabilities_usd",
+        "equity_usd",
+        "opening_cash_usd",
+        "ending_cash_usd",
+        "operating_cash_flow_usd",
+        "investing_cash_flow_usd",
+        "financing_cash_flow_usd",
+        "opening_or_noncash_cash_bridge_usd",
+        "fact_state",
+        "unit",
+        "view_type",
+        "available_at",
+        "created_on",
+        "record_origin",
+        "period_role"
+      ]
+    },
+    "monthly_statements": {
+      "columns": [
+        "scenario",
+        "entity",
+        "year",
+        "month",
+        "revenue_usd",
+        "expense_usd",
+        "net_income_usd",
+        "assets_usd",
+        "liabilities_usd",
+        "equity_usd",
+        "opening_cash_usd",
+        "ending_cash_usd",
+        "operating_cash_flow_usd",
+        "investing_cash_flow_usd",
+        "financing_cash_flow_usd",
+        "opening_or_noncash_cash_bridge_usd",
+        "fact_state",
+        "unit",
+        "view_type",
+        "available_at",
+        "created_on",
+        "record_origin",
+        "period_role"
+      ]
+    },
+    "trial_balance": {
+      "columns": [
+        "scenario",
+        "unit",
+        "year",
+        "month",
+        "account",
+        "account_type",
+        "signed_usd",
+        "view_type",
+        "available_at",
+        "created_on",
+        "record_origin",
+        "fact_state",
+        "period_role"
+      ]
+    },
+    "journal": {
+      "columns": [
+        "scenario",
+        "entity",
+        "year",
+        "month",
+        "journal_id",
+        "line_no",
+        "account",
+        "account_type",
+        "segment",
+        "unit",
+        "debit_usd",
+        "credit_usd",
+        "signed_usd",
+        "source_id",
+        "source_type",
+        "description",
+        "cash_flow",
+        "available_at",
+        "created_on",
+        "record_origin",
+        "effective_period_end",
+        "fact_state",
+        "period_role"
+      ]
+    },
+    "events": {
+      "columns": [
+        "event_id",
+        "scenario",
+        "period",
+        "month_index",
+        "unit",
+        "kind",
+        "source_id",
+        "available_at",
+        "fact_state",
+        "amount_usd",
+        "customer_id",
+        "approved_hours",
+        "authority",
+        "due_date",
+        "performance_source",
+        "monthly_revenue_usd",
+        "annual_recurring_usd",
+        "seats",
+        "term",
+        "account",
+        "allowance_usd",
+        "invoice_id",
+        "payable_id",
+        "settlement_state",
+        "from_unit",
+        "qualified",
+        "cost_usd",
+        "accumulated_usd",
+        "renewal_term"
+      ]
+    },
+    "contracts": {
+      "columns": [
+        "contract_id",
+        "customer_id",
+        "unit",
+        "start_month",
+        "monthly_subscription_usd",
+        "deployment_fee_usd",
+        "compute_monthly_usd",
+        "seats",
+        "term_months",
+        "payment_due_months",
+        "origin",
+        "scenario_status"
+      ]
+    },
+    "invoices": {
+      "columns": [
+        "invoice_id",
+        "scenario",
+        "unit",
+        "customer_id",
+        "source_id",
+        "issue_month",
+        "due_month",
+        "due_date",
+        "collection_month",
+        "amount_usd",
+        "remaining_usd",
+        "host_share"
+      ]
+    },
+    "payables": {
+      "columns": [
+        "payable_id",
+        "scenario",
+        "unit",
+        "source_id",
+        "accrual_month",
+        "due_month",
+        "due_date",
+        "amount_usd",
+        "remaining_usd"
+      ]
+    },
+    "commercial_metrics": {
+      "columns": [
+        "scenario",
+        "period",
+        "unit",
+        "active_customers",
+        "arr_usd",
+        "largest_customer_share",
+        "support_required_hours",
+        "support_capacity_hours",
+        "support_backlog_hours"
+      ]
+    },
+    "asset_rollforward": {
+      "columns": [
+        "scenario",
+        "period",
+        "asset_id",
+        "unit",
+        "original_site",
+        "cost_usd",
+        "accumulated_usd",
+        "net_book_usd"
+      ]
+    },
+    "receivable_aging": {
+      "columns": [
+        "scenario",
+        "period",
+        "unit",
+        "invoice_id",
+        "customer_id",
+        "due_date",
+        "months_past_due",
+        "outstanding_usd"
+      ]
+    },
+    "subledger_rollforward": {
+      "columns": [
+        "scenario",
+        "period",
+        "unit",
+        "gross_ar_usd",
+        "allowance_usd",
+        "vendor_ap_usd",
+        "deferred_revenue_usd",
+        "host_payable_usd",
+        "inventory_usd",
+        "gross_ppe_usd",
+        "accumulated_depreciation_usd"
+      ]
+    },
+    "workforce_assignments": {
+      "columns": [
+        "scenario",
+        "period",
+        "month_index",
+        "position_id",
+        "person_id",
+        "home_group",
+        "unit",
+        "assignment_fte",
+        "loaded_cost_usd",
+        "delivery_capacity_hours"
+      ]
+    },
+    "workforce_positions": {
+      "columns": [
+        "position_id",
+        "person_id",
+        "home_group",
+        "home_unit",
+        "delivery_role",
+        "authorized",
+        "occupied",
+        "paid_fte",
+        "annual_loaded_usd",
+        "assignments",
+        "fact_state"
+      ]
+    },
+    "enterprise_funding": {
+      "columns": [
+        "scenario",
+        "entity",
+        "year",
+        "month",
+        "required_equity_usd",
+        "available_equity_usd",
+        "funding_gap_usd",
+        "member_annual_limit_usd",
+        "member_draws_year_to_date_usd",
+        "reserved_subsidiary_capacity_remaining_usd",
+        "unpaid_operating_obligations_usd",
+        "unpaid_capital_obligations_usd",
+        "unpaid_debt_obligations_usd",
+        "opening_unpaid_operating_obligations_usd",
+        "new_payment_deferral_usd",
+        "arrears_paid_usd",
+        "fact_state",
+        "feasibility",
+        "available_at",
+        "created_on",
+        "record_origin",
+        "period_role",
+        "opening_total_unpaid_obligations_usd"
+      ]
+    },
+    "scope_dispositions": {
+      "columns": [
+        "population",
+        "state",
+        "reason"
+      ]
+    },
+    "model_identity": {
+      "columns": [
+        "run_id",
+        "source_revision",
+        "business_input_sha256",
+        "unit",
+        "classification"
+      ]
+    },
+    "equity_bridge": {
+      "columns": [
+        "scenario",
+        "year",
+        "unit",
+        "opening_equity_usd",
+        "net_income_usd",
+        "capital_reporting_and_other_movement_usd",
+        "closing_equity_usd",
+        "classification"
+      ]
+    },
+    "intercompany_bridge": {
+      "columns": [
+        "scenario",
+        "entity",
+        "year",
+        "month",
+        "journal_id",
+        "line_no",
+        "account",
+        "account_type",
+        "segment",
+        "unit",
+        "debit_usd",
+        "credit_usd",
+        "signed_usd",
+        "source_id",
+        "source_type",
+        "description",
+        "cash_flow",
+        "available_at",
+        "created_on",
+        "record_origin",
+        "effective_period_end",
+        "fact_state",
+        "period_role"
+      ]
+    }
+  },
+  "pale-sun": {
+    "annual_statements": {
+      "columns": [
+        "scenario",
+        "entity",
+        "year",
+        "revenue_usd",
+        "expense_usd",
+        "net_income_usd",
+        "assets_usd",
+        "liabilities_usd",
+        "equity_usd",
+        "opening_cash_usd",
+        "ending_cash_usd",
+        "operating_cash_flow_usd",
+        "investing_cash_flow_usd",
+        "financing_cash_flow_usd",
+        "opening_or_noncash_cash_bridge_usd",
+        "fact_state",
+        "unit",
+        "view_type",
+        "available_at",
+        "created_on",
+        "record_origin",
+        "period_role"
+      ]
+    },
+    "monthly_statements": {
+      "columns": [
+        "scenario",
+        "entity",
+        "year",
+        "month",
+        "revenue_usd",
+        "expense_usd",
+        "net_income_usd",
+        "assets_usd",
+        "liabilities_usd",
+        "equity_usd",
+        "opening_cash_usd",
+        "ending_cash_usd",
+        "operating_cash_flow_usd",
+        "investing_cash_flow_usd",
+        "financing_cash_flow_usd",
+        "opening_or_noncash_cash_bridge_usd",
+        "fact_state",
+        "unit",
+        "view_type",
+        "available_at",
+        "created_on",
+        "record_origin",
+        "period_role"
+      ]
+    },
+    "trial_balance": {
+      "columns": [
+        "scenario",
+        "unit",
+        "year",
+        "month",
+        "account",
+        "account_type",
+        "signed_usd",
+        "view_type",
+        "available_at",
+        "created_on",
+        "record_origin",
+        "fact_state",
+        "period_role"
+      ]
+    },
+    "journal": {
+      "columns": [
+        "scenario",
+        "entity",
+        "year",
+        "month",
+        "journal_id",
+        "line_no",
+        "account",
+        "account_type",
+        "segment",
+        "unit",
+        "debit_usd",
+        "credit_usd",
+        "signed_usd",
+        "source_id",
+        "source_type",
+        "description",
+        "cash_flow",
+        "available_at",
+        "created_on",
+        "record_origin",
+        "effective_period_end",
+        "fact_state",
+        "period_role"
+      ]
+    },
+    "workforce_positions": {
+      "columns": [
+        "scope_state"
+      ]
+    },
+    "industrial_sales_invoices": {
+      "columns": [
+        "scenario",
+        "entity",
+        "year",
+        "month",
+        "journal_id",
+        "event_id",
+        "source_id",
+        "fact_state",
+        "record_origin",
+        "available_at",
+        "invoice_id",
+        "counterparty",
+        "amount_usd",
+        "invoice_date",
+        "revenue_account",
+        "source_contract_or_service",
+        "evidence_role"
+      ]
+    },
+    "industrial_bank_reconciliations": {
+      "columns": [
+        "scenario",
+        "entity",
+        "year",
+        "month",
+        "opening_bank_cash_usd",
+        "cleared_receipts_usd",
+        "cleared_payments_usd",
+        "closing_bank_cash_usd",
+        "deposits_in_transit_usd",
+        "outstanding_payments_usd",
+        "adjusted_bank_cash_usd",
+        "ledger_cash_usd",
+        "difference_usd",
+        "treasury_scope",
+        "evidence_role",
+        "fact_state",
+        "record_origin",
+        "available_at"
+      ]
+    },
+    "industrial_document_journal_lineage": {
+      "columns": [
+        "scenario",
+        "entity",
+        "year",
+        "month",
+        "journal_id",
+        "event_id",
+        "source_id",
+        "fact_state",
+        "record_origin",
+        "available_at",
+        "account",
+        "signed_usd",
+        "support_id",
+        "support_role",
+        "input_path"
+      ]
+    },
+    "industrial_ledger_events": {
+      "columns": [
+        "scenario",
+        "entity",
+        "year",
+        "month",
+        "journal_id",
+        "event_id",
+        "source_id",
+        "fact_state",
+        "record_origin",
+        "available_at",
+        "description",
+        "source_type",
+        "counterparty",
+        "total_debits_usd",
+        "total_credits_usd",
+        "evidence_role"
+      ]
+    },
+    "industrial_bank_transactions": {
+      "columns": [
+        "scenario",
+        "entity",
+        "year",
+        "month",
+        "journal_id",
+        "event_id",
+        "source_id",
+        "fact_state",
+        "record_origin",
+        "available_at",
+        "payment_id",
+        "posting_date",
+        "clearing_date",
+        "bank_reference",
+        "signed_cash_usd",
+        "cash_flow",
+        "treasury_scope",
+        "evidence_role"
+      ]
+    },
+    "industrial_vendors": {
+      "columns": [
+        "scope_state"
+      ]
+    },
+    "reference_employee_census_2026": {
+      "columns": [
+        "employee_id",
+        "organization",
+        "function",
+        "title",
+        "home_location",
+        "status",
+        "record_origin",
+        "fact_state",
+        "epistemic_state",
+        "source_id"
+      ]
+    },
+    "reference_inventory_rollforward_2026": {
+      "columns": [
+        "month",
+        "opening_finished_u3o8_lb",
+        "production_u3o8_lb",
+        "sales_u3o8_lb",
+        "ending_finished_u3o8_lb",
+        "record_origin",
+        "fact_state",
+        "epistemic_state",
+        "source_id"
+      ]
+    },
+    "reference_uranium_contracts": {
+      "columns": [
+        "contract_id",
+        "buyer",
+        "origin",
+        "committed_lb",
+        "pricing_type",
+        "modeled_price_usd_lb",
+        "delivery_point",
+        "assignability",
+        "record_origin",
+        "fact_state",
+        "epistemic_state",
+        "source_id"
+      ]
+    },
+    "reference_monthly_production_2026": {
+      "columns": [
+        "month",
+        "period_role",
+        "ore_tons",
+        "head_grade_u3o8_pct",
+        "recovery_pct",
+        "contained_u3o8_lb",
+        "u3o8_produced_lb",
+        "u3o8_sold_lb",
+        "modeled_realized_price_usd_lb",
+        "revenue_usd",
+        "record_origin",
+        "fact_state",
+        "epistemic_state",
+        "source_id"
+      ]
+    },
+    "reference_custody_authority_matrix": {
+      "columns": [
+        "matrix_id",
+        "activity",
+        "current_authority",
+        "aru_bst_authority",
+        "required_evidence",
+        "status",
+        "record_origin",
+        "fact_state",
+        "epistemic_state",
+        "source_id"
+      ]
+    },
+    "reference_aru_red_wash_integration_gates": {
+      "columns": [
+        "gate_id",
+        "phase",
+        "earliest_month",
+        "latest_month",
+        "gate",
+        "decision_owner",
+        "status",
+        "blocks_service",
+        "record_origin",
+        "fact_state",
+        "epistemic_state",
+        "source_id"
+      ]
+    },
+    "reference_maintenance_backlog": {
+      "columns": [
+        "backlog_id",
+        "system_id",
+        "description",
+        "estimated_cost_usd",
+        "priority",
+        "seller_schedule_usd",
+        "status",
+        "record_origin",
+        "fact_state",
+        "epistemic_state",
+        "source_id"
+      ]
+    },
+    "reference_permit_register": {
+      "columns": [
+        "permit_id",
+        "permit",
+        "number",
+        "authority",
+        "legal_basis",
+        "status",
+        "record_origin",
+        "fact_state",
+        "epistemic_state",
+        "source_id"
+      ]
+    },
+    "reference_red_wash_closure_cashflow_calibration": {
+      "columns": [
+        "year",
+        "settlement_date",
+        "current_cost_usd",
+        "inflated_cash_settlement_usd",
+        "present_value_usd",
+        "scope",
+        "fact_state",
+        "method",
+        "period_role",
+        "record_origin",
+        "as_of_cutoff",
+        "effective_period_end",
+        "available_at"
+      ]
+    },
+    "physical_reference_inventory": {
+      "columns": [
+        "table_name",
+        "source_path",
+        "source_sha256",
+        "row_count",
+        "scope"
+      ]
+    },
+    "enterprise_funding": {
+      "columns": [
+        "scenario",
+        "entity",
+        "year",
+        "month",
+        "required_equity_usd",
+        "available_equity_usd",
+        "funding_gap_usd",
+        "member_annual_limit_usd",
+        "member_draws_year_to_date_usd",
+        "reserved_subsidiary_capacity_remaining_usd",
+        "unpaid_operating_obligations_usd",
+        "unpaid_capital_obligations_usd",
+        "unpaid_debt_obligations_usd",
+        "opening_unpaid_operating_obligations_usd",
+        "new_payment_deferral_usd",
+        "arrears_paid_usd",
+        "fact_state",
+        "feasibility",
+        "available_at",
+        "created_on",
+        "record_origin",
+        "period_role",
+        "opening_total_unpaid_obligations_usd"
+      ]
+    },
+    "scope_dispositions": {
+      "columns": [
+        "population",
+        "state",
+        "reason"
+      ]
+    },
+    "model_identity": {
+      "columns": [
+        "run_id",
+        "source_revision",
+        "business_input_sha256",
+        "unit",
+        "classification"
+      ]
+    },
+    "equity_bridge": {
+      "columns": [
+        "scenario",
+        "year",
+        "unit",
+        "opening_equity_usd",
+        "net_income_usd",
+        "capital_reporting_and_other_movement_usd",
+        "closing_equity_usd",
+        "classification"
+      ]
+    },
+    "intercompany_bridge": {
+      "columns": [
+        "scenario",
+        "entity",
+        "year",
+        "month",
+        "journal_id",
+        "line_no",
+        "account",
+        "account_type",
+        "segment",
+        "unit",
+        "debit_usd",
+        "credit_usd",
+        "signed_usd",
+        "source_id",
+        "source_type",
+        "description",
+        "cash_flow",
+        "available_at",
+        "created_on",
+        "record_origin",
+        "effective_period_end",
+        "fact_state",
+        "period_role"
+      ]
+    }
+  },
+  "project-cradle": {
+    "annual_statements": {
+      "columns": [
+        "scenario",
+        "entity",
+        "year",
+        "revenue_usd",
+        "expense_usd",
+        "net_income_usd",
+        "assets_usd",
+        "liabilities_usd",
+        "equity_usd",
+        "opening_cash_usd",
+        "ending_cash_usd",
+        "operating_cash_flow_usd",
+        "investing_cash_flow_usd",
+        "financing_cash_flow_usd",
+        "opening_or_noncash_cash_bridge_usd",
+        "fact_state",
+        "unit",
+        "view_type",
+        "available_at",
+        "created_on",
+        "record_origin",
+        "period_role"
+      ]
+    },
+    "monthly_statements": {
+      "columns": [
+        "scenario",
+        "entity",
+        "year",
+        "month",
+        "revenue_usd",
+        "expense_usd",
+        "net_income_usd",
+        "assets_usd",
+        "liabilities_usd",
+        "equity_usd",
+        "opening_cash_usd",
+        "ending_cash_usd",
+        "operating_cash_flow_usd",
+        "investing_cash_flow_usd",
+        "financing_cash_flow_usd",
+        "opening_or_noncash_cash_bridge_usd",
+        "fact_state",
+        "unit",
+        "view_type",
+        "available_at",
+        "created_on",
+        "record_origin",
+        "period_role"
+      ]
+    },
+    "trial_balance": {
+      "columns": [
+        "scenario",
+        "unit",
+        "year",
+        "month",
+        "account",
+        "account_type",
+        "signed_usd",
+        "view_type",
+        "available_at",
+        "created_on",
+        "record_origin",
+        "fact_state",
+        "period_role"
+      ]
+    },
+    "journal": {
+      "columns": [
+        "scenario",
+        "entity",
+        "year",
+        "month",
+        "journal_id",
+        "line_no",
+        "account",
+        "account_type",
+        "segment",
+        "unit",
+        "debit_usd",
+        "credit_usd",
+        "signed_usd",
+        "source_id",
+        "source_type",
+        "description",
+        "cash_flow",
+        "available_at",
+        "created_on",
+        "record_origin",
+        "effective_period_end",
+        "fact_state",
+        "period_role"
+      ]
+    },
+    "events": {
+      "columns": [
+        "event_id",
+        "scenario",
+        "period",
+        "month_index",
+        "unit",
+        "kind",
+        "source_id",
+        "available_at",
+        "fact_state",
+        "amount_usd",
+        "site",
+        "cost_center",
+        "stream",
+        "host",
+        "feed_unit",
+        "feed_quantity",
+        "contained_kg",
+        "recovered_kg",
+        "availability",
+        "bypass",
+        "custody",
+        "operating_authority",
+        "account",
+        "allowance_usd",
+        "payable_id",
+        "settlement_state",
+        "bedford_batch_id",
+        "payable_kg",
+        "sales_value_usd",
+        "customer_id",
+        "due_date",
+        "performance_source",
+        "invoice_id"
+      ]
+    },
+    "invoices": {
+      "columns": [
+        "invoice_id",
+        "scenario",
+        "unit",
+        "customer_id",
+        "source_id",
+        "issue_month",
+        "due_month",
+        "due_date",
+        "collection_month",
+        "amount_usd",
+        "remaining_usd",
+        "host_share"
+      ]
+    },
+    "payables": {
+      "columns": [
+        "payable_id",
+        "scenario",
+        "unit",
+        "source_id",
+        "accrual_month",
+        "due_month",
+        "due_date",
+        "amount_usd",
+        "remaining_usd"
+      ]
+    },
+    "recovery_lots": {
+      "columns": [
+        "lot_id",
+        "scenario",
+        "unit",
+        "stream",
+        "host",
+        "capture_month",
+        "source_id",
+        "bedford_batch_id",
+        "recovered_kg",
+        "payable_kg",
+        "cost_usd",
+        "impairment_usd",
+        "sale_value_usd",
+        "freight_usd",
+        "host_share",
+        "accept_month",
+        "status"
+      ]
+    },
+    "asset_rollforward": {
+      "columns": [
+        "scenario",
+        "period",
+        "asset_id",
+        "unit",
+        "original_site",
+        "cost_usd",
+        "accumulated_usd",
+        "net_book_usd"
+      ]
+    },
+    "inventory_rollforward": {
+      "columns": [
+        "scenario",
+        "period",
+        "unit",
+        "unsold_lots",
+        "unsold_kg",
+        "closing_cost_usd"
+      ]
+    },
+    "receivable_aging": {
+      "columns": [
+        "scenario",
+        "period",
+        "unit",
+        "invoice_id",
+        "customer_id",
+        "due_date",
+        "months_past_due",
+        "outstanding_usd"
+      ]
+    },
+    "subledger_rollforward": {
+      "columns": [
+        "scenario",
+        "period",
+        "unit",
+        "gross_ar_usd",
+        "allowance_usd",
+        "vendor_ap_usd",
+        "deferred_revenue_usd",
+        "host_payable_usd",
+        "inventory_usd",
+        "gross_ppe_usd",
+        "accumulated_depreciation_usd"
+      ]
+    },
+    "workforce_assignments": {
+      "columns": [
+        "scenario",
+        "period",
+        "month_index",
+        "position_id",
+        "person_id",
+        "home_group",
+        "unit",
+        "assignment_fte",
+        "loaded_cost_usd",
+        "delivery_capacity_hours"
+      ]
+    },
+    "workforce_positions": {
+      "columns": [
+        "position_id",
+        "person_id",
+        "home_group",
+        "home_unit",
+        "delivery_role",
+        "authorized",
+        "occupied",
+        "paid_fte",
+        "annual_loaded_usd",
+        "assignments",
+        "fact_state"
+      ]
+    },
+    "enterprise_funding": {
+      "columns": [
+        "scenario",
+        "entity",
+        "year",
+        "month",
+        "required_equity_usd",
+        "available_equity_usd",
+        "funding_gap_usd",
+        "member_annual_limit_usd",
+        "member_draws_year_to_date_usd",
+        "reserved_subsidiary_capacity_remaining_usd",
+        "unpaid_operating_obligations_usd",
+        "unpaid_capital_obligations_usd",
+        "unpaid_debt_obligations_usd",
+        "opening_unpaid_operating_obligations_usd",
+        "new_payment_deferral_usd",
+        "arrears_paid_usd",
+        "fact_state",
+        "feasibility",
+        "available_at",
+        "created_on",
+        "record_origin",
+        "period_role",
+        "opening_total_unpaid_obligations_usd"
+      ]
+    },
+    "scope_dispositions": {
+      "columns": [
+        "population",
+        "state",
+        "reason"
+      ]
+    },
+    "model_identity": {
+      "columns": [
+        "run_id",
+        "source_revision",
+        "business_input_sha256",
+        "unit",
+        "classification"
+      ]
+    },
+    "equity_bridge": {
+      "columns": [
+        "scenario",
+        "year",
+        "unit",
+        "opening_equity_usd",
+        "net_income_usd",
+        "capital_reporting_and_other_movement_usd",
+        "closing_equity_usd",
+        "classification"
+      ]
+    },
+    "intercompany_bridge": {
+      "columns": [
+        "scenario",
+        "entity",
+        "year",
+        "month",
+        "journal_id",
+        "line_no",
+        "account",
+        "account_type",
+        "segment",
+        "unit",
+        "debit_usd",
+        "credit_usd",
+        "signed_usd",
+        "source_id",
+        "source_type",
+        "description",
+        "cash_flow",
+        "available_at",
+        "created_on",
+        "record_origin",
+        "effective_period_end",
+        "fact_state",
+        "period_role"
+      ]
+    }
+  },
+  "willow": {
+    "annual_statements": {
+      "columns": [
+        "scenario",
+        "entity",
+        "year",
+        "revenue_usd",
+        "expense_usd",
+        "net_income_usd",
+        "assets_usd",
+        "liabilities_usd",
+        "equity_usd",
+        "opening_cash_usd",
+        "ending_cash_usd",
+        "operating_cash_flow_usd",
+        "investing_cash_flow_usd",
+        "financing_cash_flow_usd",
+        "opening_or_noncash_cash_bridge_usd",
+        "fact_state",
+        "unit",
+        "view_type",
+        "available_at",
+        "created_on",
+        "record_origin",
+        "period_role"
+      ]
+    },
+    "monthly_statements": {
+      "columns": [
+        "scenario",
+        "entity",
+        "year",
+        "month",
+        "revenue_usd",
+        "expense_usd",
+        "net_income_usd",
+        "assets_usd",
+        "liabilities_usd",
+        "equity_usd",
+        "opening_cash_usd",
+        "ending_cash_usd",
+        "operating_cash_flow_usd",
+        "investing_cash_flow_usd",
+        "financing_cash_flow_usd",
+        "opening_or_noncash_cash_bridge_usd",
+        "fact_state",
+        "unit",
+        "view_type",
+        "available_at",
+        "created_on",
+        "record_origin",
+        "period_role"
+      ]
+    },
+    "trial_balance": {
+      "columns": [
+        "scenario",
+        "unit",
+        "year",
+        "month",
+        "account",
+        "account_type",
+        "signed_usd",
+        "view_type",
+        "available_at",
+        "created_on",
+        "record_origin",
+        "fact_state",
+        "period_role"
+      ]
+    },
+    "journal": {
+      "columns": [
+        "scenario",
+        "entity",
+        "year",
+        "month",
+        "journal_id",
+        "line_no",
+        "account",
+        "account_type",
+        "segment",
+        "unit",
+        "debit_usd",
+        "credit_usd",
+        "signed_usd",
+        "source_id",
+        "source_type",
+        "description",
+        "cash_flow",
+        "available_at",
+        "created_on",
+        "record_origin",
+        "effective_period_end",
+        "fact_state",
+        "period_role"
+      ]
+    },
+    "events": {
+      "columns": [
+        "event_id",
+        "scenario",
+        "period",
+        "month_index",
+        "unit",
+        "kind",
+        "source_id",
+        "available_at",
+        "fact_state",
+        "amount_usd",
+        "account",
+        "site",
+        "cost_center",
+        "allowance_usd",
+        "payable_id",
+        "settlement_state",
+        "question",
+        "decision",
+        "receiver",
+        "qualified",
+        "direct_materials_usd",
+        "authorized_materials_budget_usd",
+        "maintenance_owner"
+      ]
+    },
+    "payables": {
+      "columns": [
+        "payable_id",
+        "scenario",
+        "unit",
+        "source_id",
+        "accrual_month",
+        "due_month",
+        "due_date",
+        "amount_usd",
+        "remaining_usd"
+      ]
+    },
+    "asset_rollforward": {
+      "columns": [
+        "scenario",
+        "period",
+        "asset_id",
+        "unit",
+        "original_site",
+        "cost_usd",
+        "accumulated_usd",
+        "net_book_usd"
+      ]
+    },
+    "subledger_rollforward": {
+      "columns": [
+        "scenario",
+        "period",
+        "unit",
+        "gross_ar_usd",
+        "allowance_usd",
+        "vendor_ap_usd",
+        "deferred_revenue_usd",
+        "host_payable_usd",
+        "inventory_usd",
+        "gross_ppe_usd",
+        "accumulated_depreciation_usd"
+      ]
+    },
+    "workforce_assignments": {
+      "columns": [
+        "scenario",
+        "period",
+        "month_index",
+        "position_id",
+        "person_id",
+        "home_group",
+        "unit",
+        "assignment_fte",
+        "loaded_cost_usd",
+        "delivery_capacity_hours"
+      ]
+    },
+    "workforce_positions": {
+      "columns": [
+        "position_id",
+        "person_id",
+        "home_group",
+        "home_unit",
+        "delivery_role",
+        "authorized",
+        "occupied",
+        "paid_fte",
+        "annual_loaded_usd",
+        "assignments",
+        "fact_state"
+      ]
+    },
+    "enterprise_funding": {
+      "columns": [
+        "scenario",
+        "entity",
+        "year",
+        "month",
+        "required_equity_usd",
+        "available_equity_usd",
+        "funding_gap_usd",
+        "member_annual_limit_usd",
+        "member_draws_year_to_date_usd",
+        "reserved_subsidiary_capacity_remaining_usd",
+        "unpaid_operating_obligations_usd",
+        "unpaid_capital_obligations_usd",
+        "unpaid_debt_obligations_usd",
+        "opening_unpaid_operating_obligations_usd",
+        "new_payment_deferral_usd",
+        "arrears_paid_usd",
+        "fact_state",
+        "feasibility",
+        "available_at",
+        "created_on",
+        "record_origin",
+        "period_role",
+        "opening_total_unpaid_obligations_usd"
+      ]
+    },
+    "scope_dispositions": {
+      "columns": [
+        "population",
+        "state",
+        "reason"
+      ]
+    },
+    "model_identity": {
+      "columns": [
+        "run_id",
+        "source_revision",
+        "business_input_sha256",
+        "unit",
+        "classification"
+      ]
+    },
+    "equity_bridge": {
+      "columns": [
+        "scenario",
+        "year",
+        "unit",
+        "opening_equity_usd",
+        "net_income_usd",
+        "capital_reporting_and_other_movement_usd",
+        "closing_equity_usd",
+        "classification"
+      ]
+    },
+    "intercompany_bridge": {
+      "columns": [
+        "scenario",
+        "entity",
+        "year",
+        "month",
+        "journal_id",
+        "line_no",
+        "account",
+        "account_type",
+        "segment",
+        "unit",
+        "debit_usd",
+        "credit_usd",
+        "signed_usd",
+        "source_id",
+        "source_type",
+        "description",
+        "cash_flow",
+        "available_at",
+        "created_on",
+        "record_origin",
+        "effective_period_end",
+        "fact_state",
+        "period_role"
+      ]
+    }
+  }
+}

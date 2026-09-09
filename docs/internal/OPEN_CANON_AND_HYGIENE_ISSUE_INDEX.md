@@ -11,7 +11,7 @@ Current authority remains in the accepted repository canon and dated addenda, th
 | Issue | Topic | Current state |
 |---:|---|---|
 | #18 | Remaining legal implementation mechanics | PARTIAL — industrial identities/ownership settled; parent tax and remaining mechanics OPEN |
-| #44 | Finance portal source boundaries | Content/authority/temporal contract prepared; runtime implementation remains with Alexandria cluster |
+| #44 | Finance portal source boundaries | CLOSED by PR #110; runtime implementation remains with Alexandria cluster |
 
 Resolved September 3: #17 Internal Audit operating model and #20 Orientation ranks/board eligibility are CLOSED by controlling canon.
 
@@ -26,7 +26,7 @@ Resolved September 3: #17 Internal Audit operating model and #20 Orientation ran
 | #24 | Retention and deletion rules | DEFERRED pending CCF/technology-control architecture |
 | #25 | Spatial, AR, and VR interaction direction | DIRECTION RESOLVED: future AR and VR integration planned; ordinary desktop fully usable; implementation details OPEN; integrated through merged PR #97 |
 | #34 | Daedalus runtime policy and leakage tests | DEFERRED implementation/canon boundary |
-| #38 | Business-line interface to Alexandria | Source/owner/evidence matrix now prepared; runtime and entitlement implementation remain scoped separately |
+| #38 | Business-line interface to Alexandria | CLOSED by PR #110; runtime and entitlement implementation remain scoped separately |
 
 The September 3 decision is to preserve Alexandria as an **access fabric** conceptually and avoid duplicating CCF/technology-policy design prematurely.
 
@@ -35,7 +35,7 @@ The September 3 decision is to preserve Alexandria as an **access fabric** conce
 | Issue | Topic | Current state |
 |---:|---|---|
 | #87 | Develop Sable Harbor Management System (SHMS) | CLOSED; ten-principle doctrine LOCKED; framework superseded |
-| #88 | Generate controlled publications and ingest canonical Sacramento HQ image | CLOSEOUT |
+| #88 | Recover exact canonical Sacramento HQ image | Publications completed in PR #110; source-image SHA remains required |
 
 SHMS development is complete under `docs/governance/SABLE_HARBOR_MANAGEMENT_SYSTEM.md`. Detailed failing-business intervention and organic new-business formation/incubation remain deliberately parked.
 
@@ -59,11 +59,11 @@ Issues #26 and #50 are already CLOSED; #50 is a duplicate of #26. Alexandria bou
 
 | Issue | Topic | Current state |
 |---:|---|---|
-| #33 | Controlled publication board-paper-trail reconciliation | OPEN |
+| #33 | Controlled publication board-paper-trail reconciliation | CLOSED by PR #110 |
 | #35 | Release artifact packaging decision | POLICY RESOLVED in September 6 delivery policy with explicit historical exceptions; integrated through merged PR #97 |
-| #37 | Generated catalog and SQLite lifecycle | OPEN |
+| #37 | Generated catalog and SQLite lifecycle | CLOSED by PR #110; tracked convenience-artifact lifecycle accepted |
 | #48 | Corporate-document index source/publication review | CLOSED by PR #83; subsequent current-state reconciliation recorded separately |
-| #88 | September 3 three-representation/publication closeout | OPEN |
+| #88 | Exact approved Sacramento HQ image | OPEN exact binary; doctrine/publications completed in PR #110 |
 
 ## Presentation, safety, and maintainer hygiene
 
@@ -78,7 +78,7 @@ Issues #42 and #53 are already CLOSED and therefore omitted from remaining-work 
 
 | Issue | Topic | Current state |
 |---:|---|---|
-| #12 | Standalone business-unit audit packages | OPEN implementation; not corporate-canon blocker |
+| #12 | Standalone business-unit audit packages | Implemented by business successor; final acceptance requires merged PR, seven-unit reconciliation and CI release |
 
 ## Closeout principle
 

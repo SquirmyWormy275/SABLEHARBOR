@@ -443,7 +443,7 @@ def core_plan(books, retained):
     return base, net_ppe
 
 
-def project_core_month(books, base, opening_ppe, year, month):
+def project_core_month(books, base, opening_ppe, year, month, *, sustaining_capital=None):
     config, scenario = books.policy["core"], books.policy["scenarios"][books.scenario]
     elapsed = year - 2026
     if year == 2027 and month == 1:
@@ -507,7 +507,7 @@ def project_core_month(books, base, opening_ppe, year, month):
             "CORE-PAYMENT",
             "Pay prior-month modeled operating invoices",
         )
-    capital = amount(D(config["annual_sustaining_capital_usd"]) / 12)
+    capital = amount(D(config["annual_sustaining_capital_usd"]) / 12 if sustaining_capital is None else sustaining_capital)
     books.post(
         "SHI",
         year,
@@ -774,7 +774,9 @@ def member_funding(books, year, month, subsidiary_cash, used, reserved, funding)
         )
         used["subsidiary"] += subsidiary_cash
     floor = D(policy["core"]["minimum_cash_usd"])
-    opening_arrears = -books.balances["SHI"].get("CORE_UNPAID", D(0))
+    deferral_accounts = policy["core"].get("payment_deferral_accounts", {"OPERATING": "CORE_UNPAID"})
+    opening_operating_arrears = -books.balances["SHI"].get("CORE_UNPAID", D(0))
+    opening_arrears = -sum(books.balances["SHI"].get(a, D(0)) for a in deferral_accounts.values())
     required = max(floor + opening_arrears - books.balances["SHI"]["1000"], D(0))
     core_available = max(limit - reserved - used["core"], D(0))
     received = min(required, core_available)
@@ -802,28 +804,40 @@ def member_funding(books, year, month, subsidiary_cash, used, reserved, funding)
             and r["cash_flow"] == "OPERATING"
             and amount(r["signed_usd"]) < 0
         )
-        if new_deferral > paid_operating:
+        if new_deferral > paid_operating and len(deferral_accounts) == 1:
             raise ValueError("Core funding gap exceeds identified deferrable operating payments")
-        books.post(
-            "SHI",
-            year,
-            month,
-            [("1000", new_deferral, "OPERATING"), ("CORE_UNPAID", -new_deferral)],
-            f"CORE-UNPAID-{year}-{month}",
-            "Reverse unfunded modeled operating payment; obligation remains unpaid",
-            "UNFUNDED_PAYMENT_DEFERRAL",
-        )
-    arrears = -books.balances["SHI"].get("CORE_UNPAID", D(0))
-    repayment = min(arrears, max(books.balances["SHI"]["1000"] - floor, D(0)))
-    if repayment:
-        books.post(
-            "SHI",
-            year,
-            month,
-            [("CORE_UNPAID", repayment), ("1000", -repayment, "OPERATING")],
-            f"CORE-ARREARS-PAID-{year}-{month}",
-            "Settle previously deferred operating payment from available cash",
-        )
+        remaining = new_deferral
+        for flow, account in deferral_accounts.items():
+            eligible = paid_operating if flow == "OPERATING" else -sum(
+                amount(r["signed_usd"]) for r in books.rows
+                if r["entity"] == "SHI" and r["year"] == year and r["month"] == month
+                and r["account"] == "1000" and r["cash_flow"] == flow
+                and amount(r["signed_usd"]) < 0
+                and (r["source_type"] == "BUSINESS_DRIVEN_FORECAST" or r["source_id"] == "CORE-PRINCIPAL")
+            )
+            deferred = min(remaining, eligible)
+            if deferred:
+                books.post("SHI", year, month,
+                           [("1000", deferred, flow), (account, -deferred)],
+                           f"CORE-UNPAID-{year}-{month}" if flow == "OPERATING" else f"BUSINESS-UNPAID-{flow}-{year}-{month}",
+                           "Reverse unfunded modeled operating payment; obligation remains unpaid" if flow == "OPERATING"
+                           else f"Unfunded {flow.lower()} cash request remains a separately classified obligation",
+                           "UNFUNDED_PAYMENT_DEFERRAL")
+                remaining -= deferred
+        if remaining:
+            raise ValueError("Funding gap exceeds all identified eligible payment requests")
+    total_repayment = D(0)
+    for flow, account in deferral_accounts.items():
+        arrears = -books.balances["SHI"].get(account, D(0))
+        repayment = min(arrears, max(books.balances["SHI"]["1000"] - floor, D(0)))
+        if repayment:
+            total_repayment += repayment
+            books.post("SHI", year, month, [(account, repayment), ("1000", -repayment, flow)],
+                       f"CORE-ARREARS-PAID-{year}-{month}" if flow == "OPERATING" else f"BUSINESS-ARREARS-PAID-{flow}-{year}-{month}",
+                       "Settle previously deferred operating payment from available cash" if flow == "OPERATING"
+                       else f"Settle deferred {flow.lower()} obligation from available cash")
+    repayment = total_repayment
+    arrears = -sum(books.balances["SHI"].get(a, D(0)) for a in deferral_accounts.values()) + repayment
     funding.append(
         {
             "scenario": books.scenario,
@@ -837,7 +851,11 @@ def member_funding(books, year, month, subsidiary_cash, used, reserved, funding)
             "member_draws_year_to_date_usd": money(used["core"] + used["subsidiary"]),
             "reserved_subsidiary_capacity_remaining_usd": money(reserved - used["subsidiary"]),
             "unpaid_operating_obligations_usd": money(-books.balances["SHI"].get("CORE_UNPAID", 0)),
-            "opening_unpaid_operating_obligations_usd": money(opening_arrears),
+            **({"opening_total_unpaid_obligations_usd": money(opening_arrears),
+                "unpaid_capital_obligations_usd": money(-books.balances["SHI"].get("BIZ_CAPITAL_UNPAID", 0)),
+                "unpaid_debt_obligations_usd": money(-books.balances["SHI"].get("BIZ_DEBT_UNPAID", 0))}
+               if len(deferral_accounts) > 1 else {}),
+            "opening_unpaid_operating_obligations_usd": money(opening_operating_arrears),
             "new_payment_deferral_usd": money(new_deferral),
             "arrears_paid_usd": money(repayment),
             "fact_state": "CONDITIONAL_FORECAST",
@@ -1006,7 +1024,7 @@ def unit_statements(books, extracted, year, month):
     return result
 
 
-def build(output=OUT, forecast_output=None, forecast_result=None, source=None, legacy_result=None):
+def build(output=OUT, forecast_output=None, forecast_result=None, source=None, legacy_result=None, core_provider=None):
     """Build the six-entity successor with explicit legacy selection and finite funding."""
     output = Path(output)
     policy = json.loads(SOURCE.read_text()) if source is None else source
@@ -1035,6 +1053,11 @@ def build(output=OUT, forecast_output=None, forecast_result=None, source=None, l
     financial_source = json.loads((ROOT / "industrial/source/finance.json").read_text())
     legal_policy = financial_source["legal_book_policy"]
     types = account_contract(snapshot["rows"], forecast_result["journal_rows"])
+    if core_provider is not None:
+        for account, kind in core_provider.account_types.items():
+            if account in types and types[account] != kind:
+                raise ValueError(f"Successor account classification conflict: {account}")
+            types[account] = kind
     all_journals, monthly, legal_rows, unit_rows, funding, bridge, cashflow_bridges = (
         [],
         [],
@@ -1099,6 +1122,11 @@ def build(output=OUT, forecast_output=None, forecast_result=None, source=None, l
                 if month:
                     if year == 2026:
                         import_core_month(books, core_groups, month)
+                    elif core_provider is not None:
+                        # Retain opening settlement, existing-asset depreciation and debt only.
+                        # The provider replaces all future operating envelopes and new capital.
+                        project_core_month(books, {}, core_ppe, year, month, sustaining_capital=0)
+                        core_provider.post_month(books, year, month)
                     else:
                         project_core_month(books, core_base, core_ppe, year, month)
                 targets = {}
@@ -1440,6 +1468,9 @@ def build(output=OUT, forecast_output=None, forecast_result=None, source=None, l
             )
         ).hexdigest(),
     }
+    if core_provider is not None:
+        identity["business_input_sha256"] = core_provider.input_hash
+        identity["core_replacement_scope"] = "2027-2031 operating envelopes and new sustaining capital"
     run_id = hashlib.sha256(canonical_bytes(identity)).hexdigest()
     summary = {
         "status": "PASS",

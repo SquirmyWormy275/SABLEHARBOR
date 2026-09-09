@@ -1,0 +1,50 @@
+[
+  {
+    "project_id": "WIL-VIBRATION",
+    "cost_center": "WIL-200",
+    "question": "Can revised sensing distinguish the tested vibration states?",
+    "monthly_materials_usd": 9000,
+    "gate_month": 9,
+    "decision": "TRANSFER",
+    "receiver": "foundry-field",
+    "qualified": true,
+    "maintenance_owner": "Receiving deployment owner",
+    "budget_usd": 125000
+  },
+  {
+    "project_id": "WIL-RF-FIELD",
+    "cost_center": "WIL-400",
+    "question": "Does the bench RF method survive the specified field qualification?",
+    "monthly_materials_usd": 7000,
+    "gate_month": 6,
+    "decision": "CHANGE",
+    "receiver": null,
+    "qualified": false,
+    "maintenance_owner": null,
+    "budget_usd": 100000
+  },
+  {
+    "project_id": "WIL-CHEMISTRY",
+    "cost_center": "WIL-300",
+    "question": "Which fouling assumptions fail in controlled AMD tests?",
+    "monthly_materials_usd": 18000,
+    "gate_month": 10,
+    "decision": "CONTINUE",
+    "receiver": "project-cradle",
+    "qualified": false,
+    "maintenance_owner": null,
+    "budget_usd": 250000
+  },
+  {
+    "project_id": "WIL-INTERFACE",
+    "cost_center": "WIL-600",
+    "question": "Does the prototype improve a defined operator task?",
+    "monthly_materials_usd": 4500,
+    "gate_month": 5,
+    "decision": "KILL",
+    "receiver": null,
+    "qualified": false,
+    "maintenance_owner": null,
+    "budget_usd": 60000
+  }
+]

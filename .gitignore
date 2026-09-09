@@ -32,3 +32,6 @@ workbooks/outputs/SHA256SUMS.txt
 workbooks/outputs/.sable-harbor-generated.json
 reports/*.xlsx
 releases/generated/
+
+/enterprise/generated/
+/enterprise/dist/

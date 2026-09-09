@@ -1,0 +1,139 @@
+{
+  "schema_version": "1.0.0",
+  "model_id": "SH-BUSINESS-DRIVEN-SUCCESSOR-001",
+  "version": "1.0.0",
+  "as_of": "2026-09-09",
+  "available_at": "2026-09-09T00:00:00Z",
+  "start_year": 2027,
+  "years": 5,
+  "fact_state": "CONDITIONAL_FORECAST",
+  "record_origin": "PUBLIC_SYNTHETIC_PLANNING_MODEL",
+  "assumption_boundary": "All commercial populations, rates, occupancy, process parameters and future dates are explicit synthetic assumptions; not measured history or executed agreements.",
+  "currency": "USD",
+  "day_convention": "Monthly accrual and settlement; due dates are month-end plus declared whole-month lags. No daily liquidity claim.",
+  "workforce": {
+    "foundry-field": {
+      "occupied": 160,
+      "authorized": 170,
+      "annual_loaded_usd": 145000
+    },
+    "atlas-meridian": {
+      "occupied": 36,
+      "authorized": 40,
+      "annual_loaded_usd": 175000
+    },
+    "advisory": {
+      "occupied": 32,
+      "authorized": 36,
+      "annual_loaded_usd": 155000
+    },
+    "willow": {
+      "occupied": 24,
+      "authorized": 24,
+      "annual_loaded_usd": 150000
+    },
+    "project-cradle": {
+      "occupied": 18,
+      "authorized": 20,
+      "annual_loaded_usd": 125000
+    },
+    "ess": {
+      "occupied": 48,
+      "authorized": 54,
+      "annual_loaded_usd": 140000
+    },
+    "internal-audit": {
+      "occupied": 8,
+      "authorized": 10,
+      "annual_loaded_usd": 150000
+    },
+    "j2": {
+      "occupied": 180,
+      "authorized": 237,
+      "annual_loaded_usd": 145000
+    }
+  },
+  "workforce_boundary": "2027 conditional occupied positions, not a restatement of 2026 actual payroll. J2 237 authorized billets and industrial 140/131 accepted populations remain separate from scenario occupancy. Borrowed assignments are fractions of one employed position.",
+  "hours_per_month": 160,
+  "delivery_utilization": "0.65",
+  "payroll_inflation": "0.03",
+  "annual_subscription_escalation": "0.04",
+  "support_hours_per_customer": 18,
+  "support_staff_fraction": "0.20",
+  "deployment_hours": 240,
+  "corporate_monthly_facility_usd": 95000,
+  "annual_ess_vendor_per_occupied_usd": 4500,
+  "expected_credit_loss_rate": "0.02",
+  "asset_policy": "Reusable owned equipment capitalized, straight-line from following month, no residual; research labor/experiments expensed. Existing legacy assets/debt retained by enterprise adapter.",
+  "host_policy": "Synthetic KGM share of accepted gross sales accrues at acceptance and is payable after modeled customer collection plus one month. Rate is not a locked contract term.",
+  "cases": {
+    "base": {
+      "price_factor": "1",
+      "cost_factor": "1",
+      "collection_delay_months": 1,
+      "acceptance_delay_months": 0,
+      "rework_factor": "1",
+      "mineral_availability": "0.88",
+      "mineral_recovery": "0.67",
+      "churn_modulus": 19,
+      "certified_achievement_factor": "0.95"
+    },
+    "downside": {
+      "price_factor": "0.90",
+      "cost_factor": "1.12",
+      "collection_delay_months": 3,
+      "acceptance_delay_months": 2,
+      "rework_factor": "1.45",
+      "mineral_availability": "0.68",
+      "mineral_recovery": "0.55",
+      "churn_modulus": 7,
+      "certified_achievement_factor": "0.35"
+    },
+    "expansion": {
+      "price_factor": "1.04",
+      "cost_factor": "1.04",
+      "collection_delay_months": 1,
+      "acceptance_delay_months": 0,
+      "rework_factor": "1.12",
+      "mineral_availability": "0.92",
+      "mineral_recovery": "0.70",
+      "churn_modulus": 29,
+      "certified_achievement_factor": "1.20"
+    }
+  },
+  "canonical_sources": [
+    "docs/canon/BUSINESS_DEVELOPMENT_DIRECTION_2026-09-09.md",
+    "docs/canon/CRADLE_CLOSEOUT_2026-09-06.md",
+    "docs/canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md",
+    "docs/finance/WILLOW_KLEIN_FINANCE_AND_CORPORATE_MODEL_2026-09-06.md",
+    "docs/organization/FOUNDRY_AND_FOUNDRY_FIELD.md",
+    "docs/j2/J2_ESTABLISHMENT.md",
+    "industrial/source/entities.json",
+    "industrial/planning/source/enterprise.json",
+    "docs/finance/CANON_SOURCE_LOCK.json",
+    "docs/structured/business-lines/register.json",
+    "docs/canon/ADVISORY_ATLAS_MERIDIAN_CLOSEOUT_2026-09-08.md",
+    "docs/advisory/MATTER_GOVERNANCE_AND_ECONOMICS.md",
+    "docs/advisory/TALENT_MOBILITY_AND_CARRY.md",
+    "docs/controls/ADVISORY_MATTER_CONTROLS_v1.0.md"
+  ],
+  "advisory_boundary": "Three practices, one common bench; dedicated Atlas team is product organization, not Advisory staffing reserve. No serving-J2 Advisory recruitment or application. Carry mechanics unawarded and not accrued.",
+  "value_payout_curve": [
+    [
+      "0.50",
+      "0.25"
+    ],
+    [
+      "0.75",
+      "0.60"
+    ],
+    [
+      "1",
+      "1"
+    ],
+    [
+      "1.25",
+      "1.5"
+    ]
+  ]
+}

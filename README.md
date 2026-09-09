@@ -27,6 +27,8 @@ The [accepted September 8 closeout](docs/canon/ADVISORY_ATLAS_MERIDIAN_CLOSEOUT_
 
 The [seven business dossiers](docs/business-lines/README.md) connect operating lifecycles, finances, authority, evidence and remaining decisions. Use the [source crosswalk](docs/business-lines/CURRENT_SOURCE_CROSSWALK.md) to distinguish current canon from preserved financial releases and the [interface record](docs/business-lines/BUSINESS_FINANCE_AND_ALEXANDRIA_INTERFACES.md) for business/Finance access boundaries.
 
+The [business-driven financial successor](enterprise/business/README.md) supplies causal 2027–2031 Core economics, preserved industrial integration and seven reconciled unit evidence packages. See the [release index](docs/releases/BUSINESS_FINANCE_RELEASES.md).
+
 ## Current canon
 
 The controlling September 2–7, 2026 layer begins with [`SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md`](docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md) and is extended by the [decision register](docs/canon/DECISION_REGISTER_v0.3.1.md), [September 3 decision-register addendum](docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-03.md), [corporate headquarters closeout](docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md), [September 5 Red Wash addendum](docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-05_RED_WASH.md), [Red Wash transaction and operating record](docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05.md), [September 6 canon closeout addendum](docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-06_CLOSEOUT.md), [v0.3 changelog](docs/canon/CANON_CHANGELOG_v0.3.md), [Red Wash closeout changelog](docs/canon/RED_WASH_CLOSEOUT_CHANGELOG_2026-09-05.md), and [board approval records](docs/governance/board-records/README.md).
