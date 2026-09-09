@@ -4,13 +4,15 @@
 **Scope:** Current unresolved canon, deliberately deferred work, and repository/publication closeout.  
 **Status:** Tracking index only; not a decision register.
 
-Current authority remains in the accepted repository canon and dated addenda, the controlled document index, and applicable canonical Markdown sources. The [September 6 closeout](../canon/DECISION_REGISTER_ADDENDUM_2026-09-06_CLOSEOUT.md) resolves Daniel's full name as Daniel Mercer and adopts the Semaphore, AR/VR, and packaging decisions below. The [September 9 Advisory Tier 1 addendum](../canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md) resolves the remaining Advisory operating-model, carry and Atlas commercial mechanics within its stated scope. A draft branch or chat approval alone is not closeout.
+Current authority remains in the accepted repository canon and dated addenda, the controlled document index, and applicable canonical Markdown sources. The [September 6 closeout](../canon/DECISION_REGISTER_ADDENDUM_2026-09-06_CLOSEOUT.md) resolves Daniel's full name as Daniel Mercer and adopts the Semaphore, AR/VR, and packaging decisions below. Merged PR #97 records repository integration; the linked GitHub issues record actual closure. A draft branch or chat approval alone is not closeout.
+
+The [September 9 Advisory Tier 1 addendum](../canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md), merged through PR #113, resolves the previously open Advisory operating-name/form direction, carry operating architecture, Education/J2HQ carry gates, matter-pricing policy and Atlas commercial product calibration. Older September 8 OPEN language remains historical and does not override the later addendum within its explicit supersession scope.
 
 ## Governance and legal canon
 
 | Issue | Topic | Current state |
 |---:|---|---|
-| #18 | Parent tax and external legal execution | PARTIAL — Advisory operating name/form/carry architecture resolved by PR #113; SHI tax elections, counsel/tax carry implementation, trademark clearance and transaction-specific future legal mechanics remain OPEN |
+| #18 | Remaining legal implementation mechanics | PARTIAL — industrial identities/ownership and Advisory operating architecture settled; SHI tax elections and external legal/tax/trademark execution remain OPEN |
 | #44 | Finance portal source boundaries | CLOSED by PR #110; runtime implementation remains with Alexandria cluster |
 
 Resolved September 3: #17 Internal Audit operating model and #20 Orientation ranks/board eligibility are CLOSED by controlling canon.
@@ -30,22 +32,6 @@ Resolved September 3: #17 Internal Audit operating model and #20 Orientation ran
 
 The September 3 decision is to preserve Alexandria as an **access fabric** conceptually and avoid duplicating CCF/technology-policy design prematurely.
 
-## Advisory and Atlas Meridian
-
-Merged PR #113 closes the prior Advisory operating-model gaps without pretending outside legal or professional sign-off has occurred.
-
-Resolved in `SH-ADV-ATL-DR-003`:
-
-- Sable Harbor Advisory operating/business-line name;
-- business-line legal-form direction under the existing Sable Harbor contracting entity;
-- dual management/professional hierarchy and matter-role architecture;
-- Education carry gate and negative J2HQ shortcut decision;
-- phantom-carry pool, hurdle, units, vesting, holdback and clawback design;
-- measurable-value bands, 60/40 default, payout curve and normal $150,000 matter minimum;
-- Atlas Core / Enterprise / Professional / Managed commercial architecture and institutional pricing calibration.
-
-Remaining external execution is tracked narrowly in #18. The individual Advisory President remains an appointment decision, not an unresolved operating-model dependency.
-
 ## September 3 corporate-headquarters continuation
 
 | Issue | Topic | Current state |
@@ -55,6 +41,30 @@ Remaining external execution is tracked narrowly in #18. The individual Advisory
 
 SHMS development is complete under `docs/governance/SABLE_HARBOR_MANAGEMENT_SYSTEM.md`. Detailed failing-business intervention and organic new-business formation/incubation remain deliberately parked.
 
+## Advisory / Atlas post-merge state
+
+PR #113 is the accepted September 9 Tier 1 operating-system integration. It does not retroactively rewrite historical September 8 source documents; instead, `SH-ADV-ATL-DR-003` supersedes their explicitly listed OPEN/mechanics items.
+
+Resolved operating-design items include:
+
+- `Sable Harbor Advisory` as the operating/business-line name;
+- Advisory remaining a business line of the existing controlling Sable Harbor contracting entity unless a later approved transaction changes that structure;
+- the dual professional/management hierarchy and Q1–Q4 quality model;
+- phantom carry architecture, pool/hurdle/units/vesting direction and Education/J2HQ eligibility decisions;
+- measurable-value pricing bands, 60/40 default, variable payout curve and normal minimum matter fee;
+- conflict/IP/transfer doctrine and end-to-end matter delivery standards;
+- Atlas Core / Enterprise / Professional / Managed product architecture, tenant licensing direction and current operating calibration;
+- Atlas Product versus Advisory professional-judgment boundary.
+
+Still not invented or falsely claimed complete:
+
+- individual President appointment;
+- real trademark clearance or registration;
+- counsel/tax conversion of carry design into executed participant instruments;
+- SHI tax elections and owner/entity tax consequences;
+- insurance/privacy/security/legal execution required for real commercialization;
+- transaction-specific future SPVs or entity changes.
+
 ## Pull-request disposition
 
 | PR | Topic | Current state |
@@ -62,7 +72,8 @@ SHMS development is complete under `docs/governance/SABLE_HARBOR_MANAGEMENT_SYST
 | #9 | Enterprise financial data platform v0.1 | MERGED; v0.1.0 release published; #12 retains broader standalone audit-package scope |
 | #10 | Enterprise/auditable business-line dossiers | CLOSED AS SUPERSEDED by later PR #13; branch retained pending branch-retirement capability |
 | #13 | Enterprise portal, dossiers, and repo hygiene | CLOSED as reconciled/superseded through merged PR #93; retained branch is provenance |
-| #113 | Advisory Tier 1 operating system + Atlas commercial product architecture | MERGED after all seven current CI workflows passed; operating/business design controlling through `SH-ADV-ATL-DR-003` |
+| #109 | Advisory / Atlas September 8 closeout | MERGED; intermediate accepted architecture, subsequently extended by PR #113 |
+| #113 | Advisory Tier 1 operating system and Atlas commercial architecture | MERGED; current Advisory/Atlas operating architecture |
 
 ## Repository operations
 
@@ -81,6 +92,8 @@ Issues #26 and #50 are already CLOSED; #50 is a duplicate of #26. Alexandria bou
 | #37 | Generated catalog and SQLite lifecycle | CLOSED by PR #110; tracked convenience-artifact lifecycle accepted |
 | #48 | Corporate-document index source/publication review | CLOSED by PR #83; subsequent current-state reconciliation recorded separately |
 | #88 | Exact approved Sacramento HQ image | OPEN exact binary; doctrine/publications completed in PR #110 |
+
+Publication-controlled sources and their generated representations are hash-coupled. A cleanup that changes one of those source files must regenerate the corresponding publication/catalog evidence; otherwise restore the source bytes and carry later state through a successor/addendum. Post-PR #113 cleanup follows that rule rather than bypassing validation.
 
 ## Presentation, safety, and maintainer hygiene
 
@@ -109,4 +122,4 @@ Historical OPEN language must not override later controlling canon. Resolved iss
 | #107 | Historical railway geometry and engineering | OPEN; accepted current topology preserved |
 | #108 | Semantic geographic census and temporal program | OPEN; accepted program closeout matrix controls scope |
 
-The [business-line dossiers](../business-lines/README.md), [Advisory operating package](../advisory/README.md) and [source crosswalk](../business-lines/CURRENT_SOURCE_CROSSWALK.md) provide the current operating/finance entry points.
+The [business-line dossiers](../business-lines/README.md) and [source crosswalk](../business-lines/CURRENT_SOURCE_CROSSWALK.md) provide the current operating/finance entry point.
