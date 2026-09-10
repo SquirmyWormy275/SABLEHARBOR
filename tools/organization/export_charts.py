@@ -24,7 +24,7 @@ def digest(path: Path) -> str:
 
 def card_fields(page, bounds, person):
     rect = fitz.Rect(bounds)
-    spans = [s for b in page.get_text('dict')['blocks'] if 'lines' in b
+    spans = [s for b in page.get_text('dict', flags=fitz.TEXTFLAGS_DICT & ~fitz.TEXT_PRESERVE_IMAGES)['blocks'] if 'lines' in b
              for line in b['lines'] for s in line['spans']
              if rect.contains(fitz.Rect(s['bbox']))]
     name = ' '.join(s['text'] for s in spans if s['font'].endswith('Medium') and s['size'] > 13)
