@@ -49,7 +49,7 @@ jobs:
           python-version: "3.12"
 
       - name: Install chart dependencies
-        run: python -m pip install -r tools/organization/requirements.txt pytest
+        run: python -m pip install -e ".[dev]" -r tools/organization/requirements.txt
 
       - name: Regenerate charts
         run: python scripts/build_organization_charts.py
