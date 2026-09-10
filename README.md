@@ -65,20 +65,12 @@ Historical branch names are provenance only; they are not current work instructi
 
 ## Organization at a glance
 
-The rendered organization package is reconciled through the September 5 Red Wash closeout and preserves the September 3 institutional architecture:
+The [company-wide chart suite](docs/organization/README.md) covers seven business lines, legal ownership, headquarters, J2, enterprise systems, facilities and all 45 current named people.
 
-- **Board / CEO** — enterprise authority;
-- **operating businesses** — end-to-end business authority inside enterprise boundaries;
-- **Enterprise Support Services (ESS)** — administrative umbrella for enterprise support functions, led administratively rather than as a super-executive command chain;
-- **J2** — distinct Judgment & Junction institution outside ESS;
-- **Internal Audit** — functionally independent to the Board Audit & Compliance Committee;
-- **professional practices** — horizontal standards/profession stewardship without dual operating authority.
-- **Pale Sun / Red Wash** — 12 business-layer FTE and 128 site FTE, with qualified external carriers authoritative throughout 2025;
-- **ARU / BS&T interface** — acquired January 7, 2026; limited ordinary-inbound service from July 7, with direct uranium custody still gated.
+[![Business lines](docs/organization/assets/current/business-lines.png)](docs/organization/charts/business-lines.md)
 
-[![Sable Harbor enterprise organization chart](docs/organization/assets/enterprise-organization-2026.svg)](docs/organization/README.md)
+[Board and Chief Executive](docs/organization/charts/people-board.md) · [Legal ownership](docs/organization/charts/industrial-ownership.md) · [Headquarters](docs/organization/charts/corporate-headquarters.md) · [Complete wording inventory](docs/organization/DISPLAY_INVENTORY.md)
 
-The organization renderer preserves unnamed roles as open and reproduces all nine charts from controlled sources.
 
 ## Pale Sun and Red Wash
 

@@ -22,3 +22,8 @@ Emberline's [approved historical identity](../canon/EMBERLINE_VISUAL_IDENTITY_20
 [Northstar Minerals, Inc.'s approved logo](../canon/NORTHSTAR_MINERALS_VISUAL_IDENTITY_2026-09-07.md) identifies the external Red Wash seller.
 
 Use the [seven current business dossiers](../business-lines/README.md) and [source crosswalk](../business-lines/CURRENT_SOURCE_CROSSWALK.md) for operating and financial context.
+
+
+## Current company organization
+
+[Company chart index](../organization/README.md) · [Complete displayed wording](../organization/DISPLAY_INVENTORY.md). Use these shared pages for current charts.

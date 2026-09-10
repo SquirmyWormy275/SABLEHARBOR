@@ -2,6 +2,7 @@
 """Deterministic human-facing repository hygiene checks."""
 import hashlib, json, re, subprocess, sys
 from pathlib import Path
+from organization_history import current_text
 R=Path(__file__).resolve().parents[1]; errors=[]
 def fail(msg): errors.append(msg)
 tracked=subprocess.run(['git','ls-files'],cwd=R,capture_output=True,text=True,check=True).stdout.splitlines()
@@ -11,6 +12,7 @@ historical_context = {}
 for manifest_path, key, path_key in [
     ('red_wash/history/v1.0.0/manifest.json', 'files', 'path'),
     ('docs/organization/history/v0.3.0/manifest.json', 'artifacts', 'preserved_path'),
+    ('docs/organization/history/v0.4.0/manifest.json', 'artifacts', 'preserved_path'),
 ]:
     manifest = R / manifest_path
     if not manifest.is_file():
@@ -59,7 +61,7 @@ for rel in tracked:
             target=link.split('#',1)[0].strip('<>')
             if not target or '://' in target or target.startswith(('mailto:','app://')): continue
             context = historical_context.get(rel, p)
-            if not (context.parent/target).resolve().exists(): fail(f'broken Markdown link {rel} -> {target}')
+            if not (p.parent/target).resolve().exists() and not (context.parent/target).resolve().exists(): fail(f'broken Markdown link {rel} -> {target}')
 allowed_history={
     'docs/governance/2021_2022_FINANCING_AND_INVESTOR_DIRECTOR_PROPOSAL.md',
     'docs/internal/CHAT_CANON_LEDGER_J2_ALEXANDRIA.md',
@@ -69,7 +71,7 @@ allowed_history={
 stale=['Northline Growth Partners','Ironcliff Industrial Partners','Leah Moravec','Owen Rourke','Dr. Nadia Serrano','Richard Halden']
 for rel in tracked:
     if not (R/rel).exists() or rel in allowed_history or rel in editorial_sources or not rel.endswith(('.md','.json','.yml','.yaml')): continue
-    text=(R/rel).read_text(errors='ignore')
+    text=current_text(R, rel, (R/rel).read_text(errors='ignore'))
     for term in stale:
         if term in text: fail(f'superseded current-facing name in {rel}: {term}')
 new_scope=['docs/j2','docs/governance/BOARD_AND_CAPITAL_GOVERNANCE.md','docs/governance/GOVERNANCE_CONSTITUTION.md','docs/controls/CCF_GOVERNANCE_J2_INTEGRATION_v0.1.md']

@@ -17,24 +17,7 @@ Gid Voss runs Willow from Pittsburgh. Rachel Sloane provides the Sacramento inst
 
 Willow's Pittsburgh-area physical center is **the Fort**, a roughly 10–20-acre working industrial research compound.
 
-```mermaid
-flowchart TB
-    SH["Sable Harbor"]
-    WIL["Project Willow / Willow Labs<br/>internal capability"]
-    SAC["Sacramento institutional seam<br/>Rachel Sloane"]
-    FORT["The Fort<br/>Pittsburgh-area compound"]
-    BIG["Big Shed<br/>main laboratory / research"]
-    SMALL["Small Shed<br/>administration + temporary lodging"]
-    WHITE["White Shed<br/>secure intake / storage / utilities"]
-    MUSEUM["The Museum<br/>yards + retained physical archaeology"]
-    SH --> WIL
-    WIL -.-> SAC
-    WIL --> FORT
-    FORT --> BIG
-    FORT --> SMALL
-    FORT --> WHITE
-    FORT --> MUSEUM
-```
+See the [Willow and Fort facilities chart](charts/willow-fort.md).
 
 ### Big Shed
 

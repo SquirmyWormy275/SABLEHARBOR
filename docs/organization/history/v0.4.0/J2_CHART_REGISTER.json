@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "1.0.0",
+  "canonicalDate": "2026-09-02",
+  "source": "docs/organization/J2_ORGANIZATION.md",
+  "charts": [
+    {
+      "id": "SH-ORG-J2-001",
+      "title": "J2 HIGH-LEVEL ORGANIZATION",
+      "svg": "docs/organization/assets/j2/j2-high-level.svg",
+      "png": "docs/organization/assets/j2/j2-high-level.png",
+      "canonicalDate": "2026-09-02",
+      "edgeSemantics": "dotted edges are doctrine/cross-cutting relationships, not reporting",
+      "svgSha256": "25adb8b494718341667c12efc1a194c6db82fc60d49291aef7efcda7034c567b",
+      "pngSha256": "2e3dc8a20b0451c34d34f5cb984b416276f3f47a8bfe1c7524d1c83f8ee21dff"
+    },
+    {
+      "id": "SH-ORG-J2-002",
+      "title": "J2 FUNCTIONAL LOOP",
+      "svg": "docs/organization/assets/j2/j2-loop.svg",
+      "png": "docs/organization/assets/j2/j2-loop.png",
+      "canonicalDate": "2026-09-02",
+      "edgeSemantics": "solid arrows are work-product flows, not reporting",
+      "svgSha256": "d73483afa9c6e9cc40602c4386646d75ea4a960b5e299a0c9f110377d110418f",
+      "pngSha256": "6efd8c569d71a9c84d90d6aabf3cb79f47c3a69012058f8db6531a6f96b63567"
+    },
+    {
+      "id": "SH-ORG-J2-003",
+      "title": "JAG FIVE-PERSON TEAM",
+      "svg": "docs/organization/assets/j2/jag-team.svg",
+      "png": "docs/organization/assets/j2/jag-team.png",
+      "canonicalDate": "2026-09-02",
+      "edgeSemantics": "connecting lines show team composition, not rank beyond the Team Lead role",
+      "svgSha256": "f918da52ce0a809777ff5f1b989e2abeed6b869a8ceb381f730f22dfd9fbe4b2",
+      "pngSha256": "7f32db69195c6908b0dad884e97148961a2930acdad9300ca9aeb6e1cf53b147"
+    },
+    {
+      "id": "SH-ORG-J2-004",
+      "title": "CONTACT / JUDGMENT INTERFACE",
+      "svg": "docs/organization/assets/j2/contact-judgment-interface.svg",
+      "png": "docs/organization/assets/j2/contact-judgment-interface.png",
+      "canonicalDate": "2026-09-02",
+      "edgeSemantics": "dotted lines direct collection/triage; solid line transfers evidence",
+      "svgSha256": "cf37b63534e876441f029a9de9676a5ff53d689db72aa24ffaa69109fe47e886",
+      "pngSha256": "e9a8ad8a73500b92a54c58821582f6aedf90fac3c45058edaac17c6fd27280bd"
+    },
+    {
+      "id": "SH-ORG-J2-005",
+      "title": "ORIENTATION / DECISION INTERFACE",
+      "svg": "docs/organization/assets/j2/orientation-decision-interface.svg",
+      "png": "docs/organization/assets/j2/orientation-decision-interface.png",
+      "canonicalDate": "2026-09-02",
+      "edgeSemantics": "dotted lines are professional assignments, never operating command",
+      "svgSha256": "f2c728476288276beb23ee82e388840ad300a7eb0f555d8b1f24d0809401b62d",
+      "pngSha256": "148826ed20671cae6fefb8b1f20f81beca39b16da308b66e88f870653fc8c408"
+    }
+  ]
+}

@@ -1,136 +1,1517 @@
 {
-  "schemaVersion": "0.4.0",
-  "registerVersion": "0.4.0",
-  "canonicalDate": "2026-08-31",
-  "canonReviewedThrough": "2026-09-05",
-  "status": "canon-derived-rendered-chart-package",
-  "industrialEffectiveDate": "2026-09-05",
-  "historicalArchive": "docs/organization/history/v0.3.0/manifest.json",
-  "controllingSources": [
-    "docs/canon/INDUSTRIAL_CLOSEOUT_2026-09-05.md",
-    "industrial/source/entities.json",
-    "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md",
-    "docs/canon/DECISION_REGISTER_v0.3.1.md",
-    "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-03.md",
-    "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-05_RED_WASH_R2.md",
-    "docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05_R2.md",
-    "red_wash/logistics/ARU_BST_INTERFACE_AND_DEPENDENCY_RECORD.md"
-  ],
-  "prohibitedInferences": [
-    "unstated direct-report relationship",
-    "unstated executive title",
-    "unstated legal-entity structure",
-    "unstated headcount",
-    "unstated ownership percentage",
-    "OPEN detail presented as settled",
-    "synthetic selected-case headcount presented as an external actual",
-    "ARU or BS&T uranium custody before every applicable gate passes"
-  ],
-  "redWashBridgeDecisionSource": {
-    "recordId": "SH-PS-RW-DR-001",
-    "path": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-05_RED_WASH_R2.md",
-    "decisionIds": [
-      "RW-017",
-      "RW-018",
-      "RW-019",
-      "RW-020",
-      "RW-021",
-      "RW-022",
-      "RW-023",
-      "RW-024",
-      "RW-025"
-    ]
-  },
+  "schemaVersion": "1.0.0",
+  "canonicalDate": "2026-09-09",
+  "registerVersion": "1.0.0",
+  "status": "source-backed-approved-chart-book",
+  "visualMaster": "docs/organization/assets/current/Sable-Harbor-Organization-Charts.pdf",
+  "visualMasterSha256": "c1589fbd0c0bfcb2a823cc4e582b580510f3d1408a933ddb09188aa217f62665",
+  "displaySource": "docs/organization/source/chartbook.json",
   "charts": [
     {
-      "id": "SH-ORG-001",
-      "title": "SABLE HARBOR \u2014 ENTERPRISE ORGANIZATION",
-      "page": "docs/organization/2026_OPERATING_TOPOLOGY.md",
-      "asset": "docs/organization/assets/enterprise-organization-2026.svg",
-      "purpose": "August 31 functional operating-line baseline; later headquarters institutions remain controlled by the September 3 closeout.",
-      "canonicalDate": "2026-09-05",
-      "canonReviewedThrough": "2026-09-05",
-      "relationshipSemantics": "functional authority and canon-locked operating relationships; not implicit HR reporting"
+      "id": "SH-ORG-BUSINESS-LINES",
+      "title": "Business lines",
+      "type": "entity",
+      "page": "docs/organization/charts/business-lines.md",
+      "assets": [
+        {
+          "path": "docs/organization/assets/current/business-lines.png",
+          "sha256": "8aa59663c62c51718c47820045a8df8a42b7deb8c325e44b536859992af94da5"
+        },
+        {
+          "path": "docs/organization/assets/current/business-lines.svg",
+          "sha256": "c94e026b2361116988094ab5e08eb159afdd4e324b82b0dfaea725db16f9e4e3"
+        }
+      ],
+      "node_ids": [
+        "SHI",
+        "foundry-field",
+        "willow",
+        "atlas-meridian",
+        "PS",
+        "project-cradle",
+        "ARU",
+        "advisory"
+      ],
+      "sources": [
+        "industrial/source/entities.json",
+        "docs/business-lines/FOUNDRY_FIELD.md",
+        "docs/canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md",
+        "docs/canon/ADVISORY_ATLAS_MERIDIAN_CLOSEOUT_2026-09-08.md",
+        "docs/canon/CRADLE_CLOSEOUT_2026-09-06.md"
+      ],
+      "edgeMeaning": "Business-line membership. Legal ownership is shown separately.",
+      "publicationPages": [
+        1
+      ],
+      "asset": "docs/organization/assets/current/business-lines.svg"
     },
     {
-      "id": "SH-ORG-002",
-      "title": "SABLE HARBOR \u2014 LEADERSHIP & AUTHORITY",
-      "page": "docs/organization/2026_LEADERSHIP_AND_AUTHORITY_MAP.md",
-      "asset": "docs/organization/assets/leadership-authority-2026.svg",
-      "purpose": "Named leadership and domain-authority map. Edges and placement do not create direct-report relationships.",
-      "canonicalDate": "2026-09-05",
-      "canonReviewedThrough": "2026-09-05",
-      "relationshipSemantics": "functional authority and canon-locked operating relationships; not implicit HR reporting"
+      "id": "SH-ORG-INDUSTRIAL-OWNERSHIP",
+      "title": "Industrial ownership",
+      "type": "entity",
+      "page": "docs/organization/charts/industrial-ownership.md",
+      "assets": [
+        {
+          "path": "docs/organization/assets/current/industrial-ownership.png",
+          "sha256": "4f3843cefc0287470806a34cad401f377ffbad09893eab861a9ff6771e020cf8"
+        },
+        {
+          "path": "docs/organization/assets/current/industrial-ownership.svg",
+          "sha256": "c716f28c591702efb785a3337d86d0e7067fd9d1d3b17a96c92c6f5ac7bf3a40"
+        }
+      ],
+      "node_ids": [
+        "SHI",
+        "SHIH",
+        "PS",
+        "ARU",
+        "RWH",
+        "BST"
+      ],
+      "sources": [
+        "industrial/source/entities.json"
+      ],
+      "edgeMeaning": "Each connector represents 100% equity ownership.",
+      "publicationPages": [
+        2
+      ],
+      "edges": [
+        {
+          "from": "SHI",
+          "to": "SHIH",
+          "relationship": "100% equity ownership"
+        },
+        {
+          "from": "SHIH",
+          "to": "PS",
+          "relationship": "100% equity ownership"
+        },
+        {
+          "from": "PS",
+          "to": "RWH",
+          "relationship": "100% equity ownership"
+        },
+        {
+          "from": "SHIH",
+          "to": "ARU",
+          "relationship": "100% equity ownership"
+        },
+        {
+          "from": "ARU",
+          "to": "BST",
+          "relationship": "100% equity ownership"
+        }
+      ],
+      "asset": "docs/organization/assets/current/industrial-ownership.svg"
     },
     {
-      "id": "SH-ORG-003",
-      "title": "FOUNDRY / FOUNDRY FIELD \u2014 ORGANIZATION",
-      "page": "docs/organization/FOUNDRY_FIELD_ORGANIZATION.md",
-      "asset": "docs/organization/assets/foundry-field-organization-2026.svg",
-      "purpose": "Product, technical authority, deployment counterweights and application families.",
-      "canonicalDate": "2026-08-31",
-      "canonReviewedThrough": "2026-09-05",
-      "relationshipSemantics": "functional authority and canon-locked operating relationships; not implicit HR reporting"
+      "id": "SH-ORG-PEOPLE-BOARD",
+      "title": "Board and Chief Executive",
+      "type": "people",
+      "page": "docs/organization/charts/people-board.md",
+      "assets": [
+        {
+          "path": "docs/organization/assets/current/people-board.png",
+          "sha256": "93f6a9619942fbaec8c2cac9d39d0e78f45f624afa54e6a97639b8cd547ffe29"
+        },
+        {
+          "path": "docs/organization/assets/current/people-board.svg",
+          "sha256": "8a282b73bbabd748d5cdd60b8b3889c5964ca1474e08858586ac1d4693d6e630"
+        }
+      ],
+      "node_ids": [
+        "P043",
+        "P044",
+        "P048",
+        "P047",
+        "P045",
+        "P046",
+        "P001-BOARD",
+        "P002-BOARD",
+        "P003",
+        "P001"
+      ],
+      "sources": [
+        "docs/governance/BOARD_AND_CAPITAL_GOVERNANCE_v1.0.1.md",
+        "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md"
+      ],
+      "edgeMeaning": "The Board collectively oversees the Chief Executive Officer. No individual director is shown as the CEO's separate manager.",
+      "publicationPages": [
+        3
+      ],
+      "asset": "docs/organization/assets/current/people-board.svg"
     },
     {
-      "id": "SH-ORG-004",
-      "title": "PROJECT WILLOW \u2014 ORGANIZATION",
-      "page": "docs/organization/WILLOW_ORGANIZATION.md",
-      "asset": "docs/organization/assets/willow-organization-2026.svg",
-      "purpose": "Pittsburgh laboratory, Sacramento institutional seam and operating qualification gate.",
-      "canonicalDate": "2026-08-31",
-      "canonReviewedThrough": "2026-09-05",
-      "relationshipSemantics": "functional authority and canon-locked operating relationships; not implicit HR reporting"
+      "id": "SH-ORG-ADVISORY",
+      "title": "Sable Harbor Advisory",
+      "type": "entity",
+      "page": "docs/organization/charts/advisory.md",
+      "assets": [
+        {
+          "path": "docs/organization/assets/current/advisory.png",
+          "sha256": "3022606da9667c2be2530bf98e4fc17810f05cef92343cfde839fd150d10d39b"
+        },
+        {
+          "path": "docs/organization/assets/current/advisory.svg",
+          "sha256": "df7ab380570b1bd806e5cb398b451e5faa6b4842e15ae3bd4adc607c2036f0f7"
+        }
+      ],
+      "node_ids": [
+        "advisory",
+        "adv-intelligence",
+        "adv-capability",
+        "adv-operations",
+        "adv-bench",
+        "adv-value"
+      ],
+      "sources": [
+        "docs/canon/ADVISORY_ATLAS_MERIDIAN_CLOSEOUT_2026-09-08.md",
+        "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md"
+      ],
+      "edgeMeaning": "Grouped membership; no reporting line or legal ownership is asserted.",
+      "publicationPages": [
+        4
+      ],
+      "asset": "docs/organization/assets/current/advisory.svg"
     },
     {
-      "id": "SH-ORG-005",
-      "title": "ATLAS MERIDIAN \u2014 BRIDGE ORGANIZATION",
-      "page": "docs/organization/ATLAS_MERIDIAN_BRIDGE_ORGANIZATION.md",
-      "asset": "docs/organization/assets/atlas-meridian-bridge-2026.svg",
-      "purpose": "Cross-functional transition organization for repeatability and controlled commercialization.",
-      "canonicalDate": "2026-08-31",
-      "canonReviewedThrough": "2026-09-05",
-      "relationshipSemantics": "functional authority and canon-locked operating relationships; not implicit HR reporting"
+      "id": "SH-ORG-ARU-FACILITIES",
+      "title": "ARU operating facilities",
+      "type": "entity",
+      "page": "docs/organization/charts/aru-facilities.md",
+      "assets": [
+        {
+          "path": "docs/organization/assets/current/aru-facilities.png",
+          "sha256": "b97a0bf85a5597e980e57c5d3079168848aa1392a5fd1fcdf620a0f8c032a10b"
+        },
+        {
+          "path": "docs/organization/assets/current/aru-facilities.svg",
+          "sha256": "fc7d27466302c3d2efccf25dcc7cb05cd40c6b6f98455c8fdf97736568029c37"
+        },
+        {
+          "path": "docs/organization/assets/current/aru-facilities-02.png",
+          "sha256": "2185bab9c4d4c137a7c43407eab2f1322853caeaf4847fba559ae96f68e7115d"
+        },
+        {
+          "path": "docs/organization/assets/current/aru-facilities-02.svg",
+          "sha256": "aded5b5664b579f398a25e83dcdfe496c57ae79a34cfa03f35526cf60c2ab7e5"
+        }
+      ],
+      "node_ids": [
+        "taylor-hub",
+        "FAC-TAY-TERMINAL",
+        "FAC-TAY-WAREHOUSE",
+        "FAC-TAY-TRUCK",
+        "FAC-ARU-OFFICE",
+        "FAC-RAW-TERMINAL",
+        "FAC-RAW-WAREHOUSE",
+        "FAC-RAW-TRUCK"
+      ],
+      "sources": [
+        "industrial/source/operations.json"
+      ],
+      "edgeMeaning": "Grouped membership; no reporting line or legal ownership is asserted.",
+      "publicationPages": [
+        5,
+        6
+      ],
+      "asset": "docs/organization/assets/current/aru-facilities.svg"
     },
     {
-      "id": "SH-ORG-006",
-      "title": "PALE SUN / RED WASH \u2014 ORGANIZATION",
-      "page": "docs/organization/PALE_SUN_RED_WASH_ORGANIZATION.md",
-      "asset": "docs/organization/assets/pale-sun-red-wash-organization-2026.svg",
-      "purpose": "Operating-business and mine-authority organization, approved 140-FTE case split, and qualified interfaces.",
-      "canonicalDate": "2026-09-05",
-      "canonReviewedThrough": "2026-09-05",
-      "relationshipSemantics": "functional authority and canon-locked operating relationships; not implicit HR reporting"
+      "id": "SH-ORG-ARU-SERVICES",
+      "title": "ARU businesses and services",
+      "type": "entity",
+      "page": "docs/organization/charts/aru-services.md",
+      "assets": [
+        {
+          "path": "docs/organization/assets/current/aru-services.png",
+          "sha256": "ee21c1493f6dcdce417a1b934a1e5cc7dd613d3656d6f2c9aa92c4ba2a930c06"
+        },
+        {
+          "path": "docs/organization/assets/current/aru-services.svg",
+          "sha256": "d7eda4c77ed7a11a8b64224452155d4ee26edb3068df797c47debc3c0abe89d3"
+        }
+      ],
+      "node_ids": [
+        "ARU",
+        "BST",
+        "aru-terminals",
+        "aru-trucking",
+        "aru-warehousing",
+        "aru-corporate"
+      ],
+      "sources": [
+        "industrial/source/entities.json",
+        "industrial/source/operations.json"
+      ],
+      "edgeMeaning": "Grouped membership; no reporting line or legal ownership is asserted.",
+      "publicationPages": [
+        7
+      ],
+      "asset": "docs/organization/assets/current/aru-services.svg"
     },
     {
-      "id": "SH-ORG-007",
-      "title": "PROJECT CRADLE \u2014 ORGANIZATION",
-      "page": "docs/organization/PROJECT_CRADLE_ORGANIZATION.md",
-      "asset": "docs/organization/assets/project-cradle-organization-2026.svg",
-      "purpose": "Founding team and the boundary among Cradle, its recovery intervention and the host operator.",
-      "canonicalDate": "2026-08-31",
-      "canonReviewedThrough": "2026-09-05",
-      "relationshipSemantics": "functional authority and canon-locked operating relationships; not implicit HR reporting"
+      "id": "SH-ORG-ATLAS-MERIDIAN",
+      "title": "Atlas Meridian",
+      "type": "entity",
+      "page": "docs/organization/charts/atlas-meridian.md",
+      "assets": [
+        {
+          "path": "docs/organization/assets/current/atlas-meridian.png",
+          "sha256": "bd3cb9e4a6a18dedcd194e7ec115b51bbe0c4c3d305da1c40967ac5064157b13"
+        },
+        {
+          "path": "docs/organization/assets/current/atlas-meridian.svg",
+          "sha256": "a5818d8002ce811c07970720d97d29186a0f727d2143d4b7c89ed8edee8f140a"
+        },
+        {
+          "path": "docs/organization/assets/current/atlas-meridian-02.png",
+          "sha256": "921d8ada5fe5c2b0ab4ccb9f153e0610ac2f229e973b5889ac4a6021e735d0b2"
+        },
+        {
+          "path": "docs/organization/assets/current/atlas-meridian-02.svg",
+          "sha256": "4ca818860dbb375667f8c53adbef1720c29b331d11c1a1195718b20257fc326d"
+        }
+      ],
+      "node_ids": [
+        "atlas-meridian",
+        "atlas-eng",
+        "atlas-pm",
+        "atlas-eval",
+        "atlas-security",
+        "atlas-transfer",
+        "atlas-client",
+        "atlas-professional"
+      ],
+      "sources": [
+        "docs/canon/ADVISORY_ATLAS_MERIDIAN_CLOSEOUT_2026-09-08.md",
+        "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md"
+      ],
+      "edgeMeaning": "Grouped membership; no reporting line or legal ownership is asserted.",
+      "publicationPages": [
+        8,
+        9
+      ],
+      "asset": "docs/organization/assets/current/atlas-meridian.svg"
     },
     {
-      "id": "SH-ORG-008",
-      "title": "ARU / BS&T \u2014 ORGANIZATION",
-      "page": "docs/organization/ARU_BST_ORGANIZATION.md",
-      "asset": "docs/organization/assets/aru-bst-organization-2026.svg",
-      "purpose": "Distinct acquired operator, named retained leadership, 131-FTE case and gated Red Wash interface.",
-      "canonicalDate": "2026-09-05",
-      "canonReviewedThrough": "2026-09-05",
-      "relationshipSemantics": "functional authority and canon-locked operating relationships; not implicit HR reporting"
+      "id": "SH-ORG-BST-NETWORK",
+      "title": "BS&T railway and facilities",
+      "type": "entity",
+      "page": "docs/organization/charts/bst-network.md",
+      "assets": [
+        {
+          "path": "docs/organization/assets/current/bst-network.png",
+          "sha256": "c1087233efb9bf976c64526c6bf191513d5a7d74cf0f030ce7cb57748a35d17c"
+        },
+        {
+          "path": "docs/organization/assets/current/bst-network.svg",
+          "sha256": "2cef27aa5d420f5bf566c0e30ed27a16d7f9715190775583d8246d30d5a264fb"
+        },
+        {
+          "path": "docs/organization/assets/current/bst-network-02.png",
+          "sha256": "a078d11d5d1f329c0b4e4a18f24f84a5a6cbf6776cdf45798e7ccf16a7ef118c"
+        },
+        {
+          "path": "docs/organization/assets/current/bst-network-02.svg",
+          "sha256": "895ae695aaced77757b5a1cc008d2bf82d3a96922255bd9e65469e8ace748070"
+        }
+      ],
+      "node_ids": [
+        "BST",
+        "BST-MAIN",
+        "BST-EAST",
+        "BST-MINERAL",
+        "FAC-WAM-INT",
+        "FAC-TAY-YARD",
+        "FAC-EAST-MATERIALS",
+        "FAC-MINERAL-TEAM"
+      ],
+      "sources": [
+        "industrial/source/entities.json",
+        "industrial/source/operations.json"
+      ],
+      "edgeMeaning": "Grouped membership; no reporting line or legal ownership is asserted.",
+      "publicationPages": [
+        10,
+        11
+      ],
+      "asset": "docs/organization/assets/current/bst-network.svg"
     },
     {
-      "id": "SH-ORG-009",
-      "title": "THE ORIGINAL EIGHT \u2014 FORMATION & STATUS",
-      "page": "docs/organization/ORIGINAL_EIGHT.md",
-      "asset": "docs/organization/assets/original-eight-formation-and-status.svg",
-      "purpose": "Three founders plus five early employees, Blackridge continuity and 2026 status.",
-      "canonicalDate": "2026-08-31",
-      "canonReviewedThrough": "2026-09-05",
-      "relationshipSemantics": "functional authority and canon-locked operating relationships; not implicit HR reporting"
+      "id": "SH-ORG-CORP-ALEXANDRIA",
+      "title": "Alexandria systems and publications",
+      "type": "entity",
+      "page": "docs/organization/charts/corporate-alexandria.md",
+      "assets": [
+        {
+          "path": "docs/organization/assets/current/corporate-alexandria.png",
+          "sha256": "133acea2f85068bec1a7767ec6456e2c597670e1fb35bd7a250bccc2d3a21a66"
+        },
+        {
+          "path": "docs/organization/assets/current/corporate-alexandria.svg",
+          "sha256": "347761ac3c187813a09d1317cfe90caa89cf20097b58e9612c2c13c855f8e439"
+        },
+        {
+          "path": "docs/organization/assets/current/corporate-alexandria-02.png",
+          "sha256": "ea4c525fdd779739cbfb6b7e0617d1467c595b570480599d5944b8cea86dfbf4"
+        },
+        {
+          "path": "docs/organization/assets/current/corporate-alexandria-02.svg",
+          "sha256": "324fcb264bbd940442419a3c873e2d578cde6f17ed91630c9f917f9d73a30930"
+        }
+      ],
+      "node_ids": [
+        "ALX",
+        "ALX-PIN",
+        "ALX-CAN",
+        "ALX-SEM",
+        "J2-EIB",
+        "ALX-DAE",
+        "ALX-WORK"
+      ],
+      "sources": [
+        "docs/j2/alexandria/ALEXANDRIA_CHARTER.md",
+        "docs/j2/alexandria/PINAKES_PORTAL_AND_UX.md",
+        "docs/j2/alexandria/CANON_INSTITUTIONAL_KNOWLEDGE.md",
+        "docs/j2/alexandria/SEMAPHORE_TRAFFIC_SYSTEM.md",
+        "docs/j2/EIB_AND_ENTERPRISE_QUESTIONS.md",
+        "docs/j2/alexandria/DAEDALUS_OPERATING_DOCTRINE.md",
+        "docs/j2/alexandria/DAEDALUS_PERSONAL_INSTANCE_AND_WORKSPACE.md"
+      ],
+      "edgeMeaning": "System and publication relationships; these cards are not legal entities or reporting departments.",
+      "publicationPages": [
+        12,
+        13
+      ],
+      "asset": "docs/organization/assets/current/corporate-alexandria.svg"
+    },
+    {
+      "id": "SH-ORG-CORP-BOARD-COMMITTEES",
+      "title": "Board committees",
+      "type": "entity",
+      "page": "docs/organization/charts/corporate-board-committees.md",
+      "assets": [
+        {
+          "path": "docs/organization/assets/current/corporate-board-committees.png",
+          "sha256": "43ab12c9a825e4164b9f2ea35026d0967f2915c3806679b729f83dbdd9858d50"
+        },
+        {
+          "path": "docs/organization/assets/current/corporate-board-committees.svg",
+          "sha256": "272a249d88ec3c7ef63b6ec8c9b28baf99fa2f821ced81e1e8f9310e7aa99c95"
+        },
+        {
+          "path": "docs/organization/assets/current/corporate-board-committees-02.png",
+          "sha256": "3a84ba0fe9aa955dde9f77fc7cb1d290fc45e68fc8db5d9872e15a805063a163"
+        },
+        {
+          "path": "docs/organization/assets/current/corporate-board-committees-02.svg",
+          "sha256": "008a93beea478be5f0b22667a9dae9bbe36ee45eccbd375156228f59ff786176"
+        }
+      ],
+      "node_ids": [
+        "CORP-BOARD",
+        "GOV-AUD",
+        "GOV-FIN",
+        "GOV-TECH",
+        "GOV-COMP",
+        "GOV-NOM",
+        "CORP-AUDIT"
+      ],
+      "sources": [
+        "docs/governance/BOARD_AND_CAPITAL_GOVERNANCE_v1.0.1.md",
+        "docs/governance/committees/AUDIT_AND_COMPLIANCE_COMMITTEE_CHARTER.md",
+        "docs/governance/committees/FINANCE_AND_INVESTMENT_COMMITTEE_CHARTER.md",
+        "docs/governance/committees/TECHNOLOGY_AND_OPERATIONS_COMMITTEE_CHARTER.md",
+        "docs/governance/committees/COMPENSATION_AND_HUMAN_CAPITAL_COMMITTEE_CHARTER.md",
+        "docs/governance/committees/GOVERNANCE_AND_NOMINATING_COMMITTEE_CHARTER.md",
+        "docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md",
+        "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md"
+      ],
+      "edgeMeaning": "Board committee membership and Internal Audit functional oversight.",
+      "publicationPages": [
+        14,
+        15
+      ],
+      "asset": "docs/organization/assets/current/corporate-board-committees.svg"
+    },
+    {
+      "id": "SH-ORG-CORP-CONTACT",
+      "title": "Contact collection disciplines",
+      "type": "entity",
+      "page": "docs/organization/charts/corporate-contact-disciplines.md",
+      "assets": [
+        {
+          "path": "docs/organization/assets/current/corporate-contact-disciplines.png",
+          "sha256": "03824fb9cac2eead36cb93ef10b53d2e94e81ed0349279d75d66b864b64c795f"
+        },
+        {
+          "path": "docs/organization/assets/current/corporate-contact-disciplines.svg",
+          "sha256": "db3e0bef063321dcbb43a89d4c5b5157056211a285d22e23dcff30eb64a67a52"
+        },
+        {
+          "path": "docs/organization/assets/current/corporate-contact-disciplines-02.png",
+          "sha256": "f041fcda66d1d22b900246b8176982b072399002fdc94d5fe7013028a990187c"
+        },
+        {
+          "path": "docs/organization/assets/current/corporate-contact-disciplines-02.svg",
+          "sha256": "d748a8b74823513c4d1742997dbcd941795a0464f57936b2340c1775bd865443"
+        }
+      ],
+      "node_ids": [
+        "J2-CONTACT",
+        "CONTACT-CAP-1",
+        "CONTACT-CAP-2",
+        "CONTACT-CAP-3",
+        "CONTACT-CAP-4",
+        "CONTACT-CAP-5",
+        "CONTACT-CAP-6",
+        "CONTACT-CAP-7"
+      ],
+      "sources": [
+        "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-03.md",
+        "docs/j2/CONTACT_COLLECTION_MANAGEMENT.md"
+      ],
+      "edgeMeaning": "Collection disciplines available to temporary mixed teams; not permanent departmental reporting lines.",
+      "publicationPages": [
+        16,
+        17
+      ],
+      "asset": "docs/organization/assets/current/corporate-contact-disciplines.svg"
+    },
+    {
+      "id": "SH-ORG-CORP-EDUCATION",
+      "title": "J2 Education programs",
+      "type": "entity",
+      "page": "docs/organization/charts/corporate-education-programs.md",
+      "assets": [
+        {
+          "path": "docs/organization/assets/current/corporate-education-programs.png",
+          "sha256": "54f483b0eaeb3b1d8bba4c19a868aecd0b91213d612163309662bdba1ea6ba30"
+        },
+        {
+          "path": "docs/organization/assets/current/corporate-education-programs.svg",
+          "sha256": "bce87f599f2f84d213017f850dd18a6c293111111266a69521c0fc690139198c"
+        }
+      ],
+      "node_ids": [
+        "J2-EDU",
+        "EDU-SH",
+        "EDU-EXEC",
+        "EDU-J2",
+        "EDU-ENT",
+        "EDU-EXER"
+      ],
+      "sources": [
+        "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-03.md",
+        "docs/j2/EDUCATION.md"
+      ],
+      "edgeMeaning": "J2 Education program families, not separate schools or departments.",
+      "publicationPages": [
+        18
+      ],
+      "asset": "docs/organization/assets/current/corporate-education-programs.svg"
+    },
+    {
+      "id": "SH-ORG-CORP-ESS",
+      "title": "Enterprise support services",
+      "type": "entity",
+      "page": "docs/organization/charts/corporate-enterprise-support.md",
+      "assets": [
+        {
+          "path": "docs/organization/assets/current/corporate-enterprise-support.png",
+          "sha256": "eeb07792931536c6b9af45da71c2cb6926cfb0582cdcd66826911a5eba6643d8"
+        },
+        {
+          "path": "docs/organization/assets/current/corporate-enterprise-support.svg",
+          "sha256": "1b5edd2a7136fe2fd871a3f79009359fa3f8b1c7294ad8acdc718753bb216aa0"
+        },
+        {
+          "path": "docs/organization/assets/current/corporate-enterprise-support-02.png",
+          "sha256": "f96af5b30ccf38af1cae394cb0cd41ede7aab8a8f26c8179b2d0f0af9d1fbf39"
+        },
+        {
+          "path": "docs/organization/assets/current/corporate-enterprise-support-02.svg",
+          "sha256": "dcdfec87f419782c56190c0b8573a918b2ea0ee446ec98e7d9dec5fece3f214f"
+        }
+      ],
+      "node_ids": [
+        "CORP-ESS",
+        "CORP-OGC",
+        "CORP-RISK",
+        "CORP-FIN",
+        "CORP-PC",
+        "CORP-IT",
+        "CORP-SEC",
+        "CORP-PROC",
+        "CORP-SAFE",
+        "CORP-QUAL",
+        "CORP-FAC",
+        "CORP-SECRETARY"
+      ],
+      "sources": [
+        "docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md",
+        "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
+        "docs/governance/PEOPLE_AND_CULTURE_DOCTRINE.md",
+        "docs/governance/ENTERPRISE_TECHNOLOGY_SERVICES_DOCTRINE.md"
+      ],
+      "edgeMeaning": "Administrative membership; Corporate Secretary is a constituent function of OGC.",
+      "publicationPages": [
+        19,
+        20
+      ],
+      "asset": "docs/organization/assets/current/corporate-enterprise-support.svg"
+    },
+    {
+      "id": "SH-ORG-CORP-HEADQUARTERS",
+      "title": "Corporate headquarters",
+      "type": "entity",
+      "page": "docs/organization/charts/corporate-headquarters.md",
+      "assets": [
+        {
+          "path": "docs/organization/assets/current/corporate-headquarters.png",
+          "sha256": "c4d41242813e9075e6dcc91cd23038bf803d94e8623cc68b494c8f1a1341257e"
+        },
+        {
+          "path": "docs/organization/assets/current/corporate-headquarters.svg",
+          "sha256": "4cb0ec7c9a66b7aee66b987480173a1625b93c10fbf0cd3e6955cfb13af6754e"
+        },
+        {
+          "path": "docs/organization/assets/current/corporate-headquarters-02.png",
+          "sha256": "14c0d87273f17f47d450526f25fbaf0c2d43a827b1f4e6b033ab897c3c9c148a"
+        },
+        {
+          "path": "docs/organization/assets/current/corporate-headquarters-02.svg",
+          "sha256": "97aae017ff7eeec556883bb99e7fdfad6de218a359ca5f762edd40d214b1f75d"
+        }
+      ],
+      "node_ids": [
+        "CORP-CENTER",
+        "CORP-BOARD",
+        "CORP-CEO",
+        "CORP-ESS",
+        "J2",
+        "GOV-AUD",
+        "CORP-AUDIT"
+      ],
+      "sources": [
+        "docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md",
+        "docs/governance/BOARD_AND_CAPITAL_GOVERNANCE_v1.0.1.md",
+        "docs/governance/ENTERPRISE_AUTHORITY_CAPITAL_AND_EXECUTIVE_RHYTHM.md",
+        "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
+        "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-03.md",
+        "docs/j2/J2_ESTABLISHMENT.md",
+        "docs/governance/committees/AUDIT_AND_COMPLIANCE_COMMITTEE_CHARTER.md"
+      ],
+      "edgeMeaning": "Corporate institutions, executive oversight, administrative reporting, and independent audit oversight.",
+      "publicationPages": [
+        21,
+        22
+      ],
+      "asset": "docs/organization/assets/current/corporate-headquarters.svg"
+    },
+    {
+      "id": "SH-ORG-CORP-J2",
+      "title": "J2 organization",
+      "type": "entity",
+      "page": "docs/organization/charts/corporate-j2.md",
+      "assets": [
+        {
+          "path": "docs/organization/assets/current/corporate-j2.png",
+          "sha256": "8d3672f6853c59480e54ad4421f83544a31d12eb90ca0e3569ed2d5255401ae6"
+        },
+        {
+          "path": "docs/organization/assets/current/corporate-j2.svg",
+          "sha256": "04f98bb03ed6896cfb394e915c52b07ad7793d816d430effaa1b8cc72fbfd4a6"
+        },
+        {
+          "path": "docs/organization/assets/current/corporate-j2-02.png",
+          "sha256": "33e4797b39c877d913637d8eebe596592df4617e3ab5dbafd78829afa94b1823"
+        },
+        {
+          "path": "docs/organization/assets/current/corporate-j2-02.svg",
+          "sha256": "dba7d29cf44b6a243ef10703d6e22a249f5568d5093c9a335b904527f32d89b8"
+        }
+      ],
+      "node_ids": [
+        "J2",
+        "J2-HQ",
+        "J2-CONTACT",
+        "J2-JUDGMENT",
+        "J2-ORIENTATION",
+        "J2-JAG",
+        "J2-EDU",
+        "J2-WATCH"
+      ],
+      "sources": [
+        "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-03.md",
+        "docs/j2/J2_ESTABLISHMENT.md",
+        "docs/j2/J2_HEADQUARTERS.md",
+        "docs/j2/CONTACT_COLLECTION_MANAGEMENT.md",
+        "docs/j2/JUDGMENT.md",
+        "docs/j2/ORIENTATION.md",
+        "docs/j2/ORIENTATION_OFFICER_PROFESSION.md",
+        "docs/j2/JUNCTION_ADVISORY_GROUP.md",
+        "docs/j2/EDUCATION.md"
+      ],
+      "edgeMeaning": "J2 institutional structure; Judgment Watch belongs to Judgment.",
+      "publicationPages": [
+        23,
+        24
+      ],
+      "asset": "docs/organization/assets/current/corporate-j2.svg"
+    },
+    {
+      "id": "SH-ORG-CORP-PINAKES",
+      "title": "Pinakes portals",
+      "type": "entity",
+      "page": "docs/organization/charts/corporate-pinakes-portals.md",
+      "assets": [
+        {
+          "path": "docs/organization/assets/current/corporate-pinakes-portals.png",
+          "sha256": "dfe680b1a0dc31c11ac9c1206a471138ec8153e6d69ccafaefb7bd8079f2cead"
+        },
+        {
+          "path": "docs/organization/assets/current/corporate-pinakes-portals.svg",
+          "sha256": "ccb6db5b35347f16ab10dce1e0e78803a8ac352907af89e69fb47f29eb8aac25"
+        },
+        {
+          "path": "docs/organization/assets/current/corporate-pinakes-portals-02.png",
+          "sha256": "70cc0a2b89a633b104642d96dbe92d6b2a41c51c0f9c87125acb4865f8c50d02"
+        },
+        {
+          "path": "docs/organization/assets/current/corporate-pinakes-portals-02.svg",
+          "sha256": "82db10e6d4ea64ee599b7330118dd6ecc7be09ad5b2906b5e4d71a8e484cf313"
+        }
+      ],
+      "node_ids": [
+        "ALX-PIN",
+        "PIN-EIB",
+        "PIN-FIN",
+        "PIN-JUD",
+        "PIN-JAG",
+        "PIN-SEM",
+        "PIN-CAN",
+        "PIN-BIZ",
+        "PIN-COL",
+        "PIN-EDU"
+      ],
+      "sources": [
+        "docs/j2/alexandria/PINAKES_PORTAL_AND_UX.md",
+        "docs/j2/structured/pinakes_portals.json"
+      ],
+      "edgeMeaning": "Nine catalog entry points into records; same-named functions are not duplicated organizational units.",
+      "publicationPages": [
+        25,
+        26
+      ],
+      "asset": "docs/organization/assets/current/corporate-pinakes-portals.svg"
+    },
+    {
+      "id": "SH-ORG-CORP-TECHNOLOGY",
+      "title": "Enterprise technology capabilities",
+      "type": "entity",
+      "page": "docs/organization/charts/corporate-technology-capabilities.md",
+      "assets": [
+        {
+          "path": "docs/organization/assets/current/corporate-technology-capabilities.png",
+          "sha256": "b8777db742a63fbc7b730d828bbdf888e8fb75e156c7393d9a436d6398c54059"
+        },
+        {
+          "path": "docs/organization/assets/current/corporate-technology-capabilities.svg",
+          "sha256": "bc447e26e27be895dcf8fb334400b1a8dde128b3536c0fbfe3ef39f729631537"
+        },
+        {
+          "path": "docs/organization/assets/current/corporate-technology-capabilities-02.png",
+          "sha256": "57dfcf12ba1e8b07f7f7825c9d32d7e228ac27e9dda58d373ffb930c49c0ee1d"
+        },
+        {
+          "path": "docs/organization/assets/current/corporate-technology-capabilities-02.svg",
+          "sha256": "3cf00c908f9b0ae231ea2c2a779d19bb9dde7206e7d64b77df49535526571315"
+        }
+      ],
+      "node_ids": [
+        "CORP-IT",
+        "IT-CAP-1",
+        "IT-CAP-2",
+        "IT-CAP-3",
+        "IT-CAP-4",
+        "IT-CAP-5",
+        "IT-CAP-6",
+        "IT-CAP-7"
+      ],
+      "sources": [
+        "docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md",
+        "docs/governance/ENTERPRISE_TECHNOLOGY_SERVICES_DOCTRINE.md"
+      ],
+      "edgeMeaning": "Enterprise Technology Services product families, not additional departments.",
+      "publicationPages": [
+        27,
+        28
+      ],
+      "asset": "docs/organization/assets/current/corporate-technology-capabilities.svg"
+    },
+    {
+      "id": "SH-ORG-FOUNDRY-FIELD",
+      "title": "Foundry and Foundry Field",
+      "type": "entity",
+      "page": "docs/organization/charts/foundry-field.md",
+      "assets": [
+        {
+          "path": "docs/organization/assets/current/foundry-field.png",
+          "sha256": "d068ace3c8040377a3e464cadab4ba5b73f2dd1bf0d6035bbd3f02046bef2716"
+        },
+        {
+          "path": "docs/organization/assets/current/foundry-field.svg",
+          "sha256": "1a12281eb4fcddd0cdd129e78f39e5403b3562bdfe2c486df17b6ab821d22ce8"
+        }
+      ],
+      "node_ids": [
+        "foundry",
+        "foundry-field",
+        "ff-operations",
+        "ff-maintenance",
+        "ff-reconciliation",
+        "ff-exceptions"
+      ],
+      "sources": [
+        "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md",
+        "docs/business-lines/FOUNDRY_FIELD.md"
+      ],
+      "edgeMeaning": "Grouped membership; no reporting line or legal ownership is asserted.",
+      "publicationPages": [
+        29
+      ],
+      "asset": "docs/organization/assets/current/foundry-field.svg"
+    },
+    {
+      "id": "SH-ORG-PALE-SUN-RED-WASH",
+      "title": "Pale Sun and Red Wash",
+      "type": "entity",
+      "page": "docs/organization/charts/pale-sun-red-wash.md",
+      "assets": [
+        {
+          "path": "docs/organization/assets/current/pale-sun-red-wash.png",
+          "sha256": "6511967e8d5a26f3654a35e785fd9de814bc15eb6b48829f7b739bea3209016a"
+        },
+        {
+          "path": "docs/organization/assets/current/pale-sun-red-wash.svg",
+          "sha256": "ab402384cdd045030e7e7a0f0cf320747b9955826ab52501273a6ea3d91e193c"
+        }
+      ],
+      "node_ids": [
+        "PS",
+        "RWH",
+        "red-wash-mine",
+        "FAC-RW-RECEIVING",
+        "red-wash-access"
+      ],
+      "sources": [
+        "industrial/source/entities.json",
+        "geospatial/sources/GOVERNING_CANON_ADDENDUM_2026-09-05.md",
+        "industrial/source/operations.json"
+      ],
+      "edgeMeaning": "Grouped membership; no reporting line or legal ownership is asserted.",
+      "publicationPages": [
+        30
+      ],
+      "asset": "docs/organization/assets/current/pale-sun-red-wash.svg"
+    },
+    {
+      "id": "SH-ORG-PEOPLE-ARU-LEADERSHIP",
+      "title": "American Resource Utility Leadership",
+      "type": "people",
+      "page": "docs/organization/charts/people-aru-leadership.md",
+      "assets": [
+        {
+          "path": "docs/organization/assets/current/people-aru-leadership.png",
+          "sha256": "c0c982cdc8d6d66320168aac68be75c565b620fb080c0e643437e438d38737b9"
+        },
+        {
+          "path": "docs/organization/assets/current/people-aru-leadership.svg",
+          "sha256": "f3863f902d50bcdb911e0f255d99a7c4d9426ce4cf0388056b7c5e67dcd0b8bd"
+        }
+      ],
+      "node_ids": [
+        "P029",
+        "P030",
+        "P031",
+        "P032",
+        "P033",
+        "P034"
+      ],
+      "sources": [
+        "industrial/corporate/LEADERSHIP_AND_AUTHORITY.md"
+      ],
+      "edgeMeaning": "Named role membership only; no person-to-person reporting relationship is inferred.",
+      "publicationPages": [
+        31
+      ],
+      "asset": "docs/organization/assets/current/people-aru-leadership.svg"
+    },
+    {
+      "id": "SH-ORG-PEOPLE-ARU-OPERATIONS",
+      "title": "American Resource Utility Operations",
+      "type": "people",
+      "page": "docs/organization/charts/people-aru-operations.md",
+      "assets": [
+        {
+          "path": "docs/organization/assets/current/people-aru-operations.png",
+          "sha256": "184a7c794918c046b64faa975fb38d4f679663b0256e3f23e868830f65858948"
+        },
+        {
+          "path": "docs/organization/assets/current/people-aru-operations.svg",
+          "sha256": "73db53902f7b5c714b5ce4b501be44db1221314fc64fe97806d78e4cca7c95d2"
+        }
+      ],
+      "node_ids": [
+        "P030",
+        "P040",
+        "P041",
+        "P042"
+      ],
+      "sources": [
+        "industrial/corporate/LEADERSHIP_AND_AUTHORITY.md"
+      ],
+      "edgeMeaning": "Named role membership only; no person-to-person reporting relationship is inferred.",
+      "publicationPages": [
+        32
+      ],
+      "asset": "docs/organization/assets/current/people-aru-operations.svg"
+    },
+    {
+      "id": "SH-ORG-PEOPLE-ATLAS-MERIDIAN",
+      "title": "Atlas Meridian Product Leadership",
+      "type": "people",
+      "page": "docs/organization/charts/people-atlas-meridian.md",
+      "assets": [
+        {
+          "path": "docs/organization/assets/current/people-atlas-meridian.png",
+          "sha256": "aa5fd34473e979ab712bce4688510b1f76776ff75f26a85350406a6a6fd6e522"
+        },
+        {
+          "path": "docs/organization/assets/current/people-atlas-meridian.svg",
+          "sha256": "49c0ffddcf68cb1278ba6f383cc689dde9d4d07a87e0ab70ed579d5078a5efb3"
+        }
+      ],
+      "node_ids": [
+        "P020"
+      ],
+      "sources": [
+        "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md",
+        "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md"
+      ],
+      "edgeMeaning": "Named role membership only; no person-to-person reporting relationship is inferred.",
+      "publicationPages": [
+        33
+      ],
+      "asset": "docs/organization/assets/current/people-atlas-meridian.svg"
+    },
+    {
+      "id": "SH-ORG-PEOPLE-BOARD-COMMITTEES",
+      "title": "Board Committees",
+      "type": "people",
+      "page": "docs/organization/charts/people-board-committees.md",
+      "assets": [
+        {
+          "path": "docs/organization/assets/current/people-board-committees.png",
+          "sha256": "60810e5eae7fe04def8cd55a2cc34cad3981ff07cf0e8f340de636b21d74c6dd"
+        },
+        {
+          "path": "docs/organization/assets/current/people-board-committees.svg",
+          "sha256": "951f3e9aa1a461a7340bbe2797f156606b9b1b99508665fa3101273d4d02fa90"
+        },
+        {
+          "path": "docs/organization/assets/current/people-board-committees-02.png",
+          "sha256": "4392071560da6381e7e305ec92a5be2908ca1bd62ebcfb5a05d5c72902bc055f"
+        },
+        {
+          "path": "docs/organization/assets/current/people-board-committees-02.svg",
+          "sha256": "3c16760b605aaf04d22a5ca5df602739bab5c0cd8e1f8a73e1f86bfbc35f6bfd"
+        },
+        {
+          "path": "docs/organization/assets/current/people-board-committees-03.png",
+          "sha256": "b93ce7a0d3458d680fd720e38dedd436b14922f611a839f70a5602664881d07f"
+        },
+        {
+          "path": "docs/organization/assets/current/people-board-committees-03.svg",
+          "sha256": "67159e31374abc2bcc089bcc27e2e37ff3e4607e7d18505cb72d05214970336c"
+        },
+        {
+          "path": "docs/organization/assets/current/people-board-committees-04.png",
+          "sha256": "475b2dda3b0159a5e7f264d50986ab6b4da533090faa715d2ba2d984af4fbbdd"
+        },
+        {
+          "path": "docs/organization/assets/current/people-board-committees-04.svg",
+          "sha256": "7ad02952c2621eab3a2510ade61ebeb2114742719d1f4ab93b1dfdc342cf29ca"
+        },
+        {
+          "path": "docs/organization/assets/current/people-board-committees-05.png",
+          "sha256": "44fe35056464435b55b45c25da838aaf065440c160a9232a397c22c8ef280c06"
+        },
+        {
+          "path": "docs/organization/assets/current/people-board-committees-05.svg",
+          "sha256": "778f51548a15f04b15988748d6d6fb619786eb730dc0308ea4608836bba2b961"
+        }
+      ],
+      "node_ids": [
+        "P044",
+        "P047",
+        "P043",
+        "P048",
+        "P046",
+        "P045",
+        "P001-BOARD",
+        "P002-BOARD",
+        "P003"
+      ],
+      "sources": [
+        "docs/governance/BOARD_AND_CAPITAL_GOVERNANCE_v1.0.1.md",
+        "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md"
+      ],
+      "edgeMeaning": "Membership of the five standing Board committees; each group identifies its documented Chair.",
+      "publicationPages": [
+        34,
+        35,
+        36,
+        37,
+        38
+      ],
+      "asset": "docs/organization/assets/current/people-board-committees.svg"
+    },
+    {
+      "id": "SH-ORG-PEOPLE-BST",
+      "title": "Blood, Sweat & Tears Railway",
+      "type": "people",
+      "page": "docs/organization/charts/people-bst.md",
+      "assets": [
+        {
+          "path": "docs/organization/assets/current/people-bst.png",
+          "sha256": "f64f9d8ea90628c79e3f15812e3561b8924aca595607787d1a82e3700b6fec56"
+        },
+        {
+          "path": "docs/organization/assets/current/people-bst.svg",
+          "sha256": "41429be9844542b74711b51bc845cf648d5e91fff5c05941a08c984cc817f48d"
+        }
+      ],
+      "node_ids": [
+        "P035",
+        "P036",
+        "P037",
+        "P038",
+        "P039"
+      ],
+      "sources": [
+        "industrial/corporate/LEADERSHIP_AND_AUTHORITY.md"
+      ],
+      "edgeMeaning": "Named role membership only; no person-to-person reporting relationship is inferred.",
+      "publicationPages": [
+        39
+      ],
+      "asset": "docs/organization/assets/current/people-bst.svg"
+    },
+    {
+      "id": "SH-ORG-PEOPLE-CRADLE",
+      "title": "Project Cradle Team",
+      "type": "people",
+      "page": "docs/organization/charts/people-cradle.md",
+      "assets": [
+        {
+          "path": "docs/organization/assets/current/people-cradle.png",
+          "sha256": "68182a9cc539850f6ce6c4e3ee343019422b58285f436e0ea35108e800e0fdbd"
+        },
+        {
+          "path": "docs/organization/assets/current/people-cradle.svg",
+          "sha256": "5b9f490ad65eda0cfbad30e2c5d31ab30fcca8e42055d8234cb52127335d3d8f"
+        }
+      ],
+      "node_ids": [
+        "P025",
+        "P026",
+        "P027",
+        "P028"
+      ],
+      "sources": [
+        "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md",
+        "docs/canon/CRADLE_CLOSEOUT_2026-09-06.md"
+      ],
+      "edgeMeaning": "Named role membership only; no person-to-person reporting relationship is inferred.",
+      "publicationPages": [
+        40
+      ],
+      "asset": "docs/organization/assets/current/people-cradle.svg"
+    },
+    {
+      "id": "SH-ORG-PEOPLE-ENTERPRISE",
+      "title": "Enterprise Leadership",
+      "type": "people",
+      "page": "docs/organization/charts/people-enterprise.md",
+      "assets": [
+        {
+          "path": "docs/organization/assets/current/people-enterprise.png",
+          "sha256": "26b09e681b95b69803081c268c05b47069c870d51eea187bc677d624466d9efb"
+        },
+        {
+          "path": "docs/organization/assets/current/people-enterprise.svg",
+          "sha256": "5c5d936aed6cafb25175b7a7b89095bc722d72162594f12d97f548646a5be209"
+        }
+      ],
+      "node_ids": [
+        "P001",
+        "P002",
+        "P004",
+        "P005",
+        "P006",
+        "P007",
+        "P011"
+      ],
+      "sources": [
+        "docs/governance/BOARD_AND_CAPITAL_GOVERNANCE_v1.0.1.md",
+        "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md"
+      ],
+      "edgeMeaning": "Named role membership only; no person-to-person reporting relationship is inferred.",
+      "publicationPages": [
+        41
+      ],
+      "asset": "docs/organization/assets/current/people-enterprise.svg"
+    },
+    {
+      "id": "SH-ORG-PEOPLE-FOUNDRY-FIELD",
+      "title": "Foundry and Customer Delivery",
+      "type": "people",
+      "page": "docs/organization/charts/people-foundry-field.md",
+      "assets": [
+        {
+          "path": "docs/organization/assets/current/people-foundry-field.png",
+          "sha256": "d3f22cc9e40b4adbead6b3db81ac85156face29ece4ef99b3102f072c0e1667a"
+        },
+        {
+          "path": "docs/organization/assets/current/people-foundry-field.svg",
+          "sha256": "0cc2bdd2fc4c8b02f592edab23fcdc45060a24618d5895356a591b7accffed9f"
+        }
+      ],
+      "node_ids": [
+        "P002",
+        "P004",
+        "P005",
+        "P006",
+        "P007",
+        "P017"
+      ],
+      "sources": [
+        "docs/governance/BOARD_AND_CAPITAL_GOVERNANCE_v1.0.1.md",
+        "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md",
+        "docs/canon/DECISION_REGISTER_v0.3.1.md"
+      ],
+      "edgeMeaning": "Named role membership only; no person-to-person reporting relationship is inferred.",
+      "publicationPages": [
+        42
+      ],
+      "asset": "docs/organization/assets/current/people-foundry-field.svg"
+    },
+    {
+      "id": "SH-ORG-PEOPLE-PALE-SUN-RED-WASH",
+      "title": "Pale Sun and Red Wash Leadership",
+      "type": "people",
+      "page": "docs/organization/charts/people-pale-sun-red-wash.md",
+      "assets": [
+        {
+          "path": "docs/organization/assets/current/people-pale-sun-red-wash.png",
+          "sha256": "ec6657455c208557864c02a8c27a4631570ef013a026d7be5ee00b3b6ba5c18e"
+        },
+        {
+          "path": "docs/organization/assets/current/people-pale-sun-red-wash.svg",
+          "sha256": "1fd6c4da64ad90d3e7e89da56618e94dcf8705cc8adf2b8e692def7086a03e28"
+        }
+      ],
+      "node_ids": [
+        "P021",
+        "P022",
+        "P023"
+      ],
+      "sources": [
+        "industrial/pale_sun/01_VILANDER_BIOGRAPHY.md",
+        "docs/canon/INDUSTRIAL_CLOSEOUT_2026-09-05.md",
+        "industrial/corporate/LEADERSHIP_AND_AUTHORITY.md"
+      ],
+      "edgeMeaning": "Named role membership only; no person-to-person reporting relationship is inferred.",
+      "publicationPages": [
+        43
+      ],
+      "asset": "docs/organization/assets/current/people-pale-sun-red-wash.svg"
+    },
+    {
+      "id": "SH-ORG-PEOPLE-WILLOW-LEADERSHIP",
+      "title": "Willow and Advanced Programs",
+      "type": "people",
+      "page": "docs/organization/charts/people-willow-leadership.md",
+      "assets": [
+        {
+          "path": "docs/organization/assets/current/people-willow-leadership.png",
+          "sha256": "e7b78f131d3075ef81950c2d921e578aa0edd606a85b78150b0edb4f2ee7d7be"
+        },
+        {
+          "path": "docs/organization/assets/current/people-willow-leadership.svg",
+          "sha256": "4bff2dd4eae30b7f42758d8a40d3b8c3bfee895d459b784de26afa1fb67381bf"
+        }
+      ],
+      "node_ids": [
+        "P010",
+        "P011"
+      ],
+      "sources": [
+        "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md",
+        "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md"
+      ],
+      "edgeMeaning": "Named role membership only; no person-to-person reporting relationship is inferred.",
+      "publicationPages": [
+        44
+      ],
+      "asset": "docs/organization/assets/current/people-willow-leadership.svg"
+    },
+    {
+      "id": "SH-ORG-PEOPLE-WILLOW-TEAM",
+      "title": "Willow Research Team",
+      "type": "people",
+      "page": "docs/organization/charts/people-willow-team.md",
+      "assets": [
+        {
+          "path": "docs/organization/assets/current/people-willow-team.png",
+          "sha256": "fa52aea6b3da42257085e57b8d01917526765b0aac649af52d916694d9bb70ae"
+        },
+        {
+          "path": "docs/organization/assets/current/people-willow-team.svg",
+          "sha256": "f18ab0690777ea545359da7f15d0b7fe9220cde8d03b11cde26c06a2ba8256cd"
+        }
+      ],
+      "node_ids": [
+        "P010",
+        "P012",
+        "P013",
+        "P014",
+        "P015",
+        "P016",
+        "P018",
+        "P019"
+      ],
+      "sources": [
+        "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md",
+        "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md",
+        "docs/canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md"
+      ],
+      "edgeMeaning": "Named role membership only; no person-to-person reporting relationship is inferred.",
+      "publicationPages": [
+        45
+      ],
+      "asset": "docs/organization/assets/current/people-willow-team.svg"
+    },
+    {
+      "id": "SH-ORG-PROJECT-CRADLE",
+      "title": "Project Cradle",
+      "type": "entity",
+      "page": "docs/organization/charts/project-cradle.md",
+      "assets": [
+        {
+          "path": "docs/organization/assets/current/project-cradle.png",
+          "sha256": "d8f2b3d98ad646e108d0e6646868f51dc69aa02b69105f6fef74129cfdbf2e14"
+        },
+        {
+          "path": "docs/organization/assets/current/project-cradle.svg",
+          "sha256": "16f82eea014d8f2cc04e566e8a6ac2072bddbb7deffdd50acf9bb32cbdd310a2"
+        }
+      ],
+      "node_ids": [
+        "project-cradle",
+        "bedford",
+        "stream17",
+        "demotte-gen1"
+      ],
+      "sources": [
+        "docs/canon/CRADLE_CLOSEOUT_2026-09-06.md"
+      ],
+      "edgeMeaning": "Grouped membership; no reporting line or legal ownership is asserted.",
+      "publicationPages": [
+        46
+      ],
+      "asset": "docs/organization/assets/current/project-cradle.svg"
+    },
+    {
+      "id": "SH-ORG-WILLOW-FORT",
+      "title": "Willow and the Fort",
+      "type": "entity",
+      "page": "docs/organization/charts/willow-fort.md",
+      "assets": [
+        {
+          "path": "docs/organization/assets/current/willow-fort.png",
+          "sha256": "7bc5e050b760160eabc4ab9271e937370e7634bd56d74c1c7abd58c9a2a9bfb6"
+        },
+        {
+          "path": "docs/organization/assets/current/willow-fort.svg",
+          "sha256": "6b03660b0f2ff093876d6155ecdc6a1df8b3b274d17d5ebcc5950eb0a73bac43"
+        }
+      ],
+      "node_ids": [
+        "willow",
+        "fort",
+        "fort-big",
+        "fort-small",
+        "fort-white",
+        "fort-museum"
+      ],
+      "sources": [
+        "docs/canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md"
+      ],
+      "edgeMeaning": "Grouped membership; no reporting line or legal ownership is asserted.",
+      "publicationPages": [
+        47
+      ],
+      "asset": "docs/organization/assets/current/willow-fort.svg"
+    },
+    {
+      "id": "SH-ORG-EXTERNAL-CRADLE-HOSTS",
+      "title": "Project Cradle — external hosts",
+      "type": "entity",
+      "page": "docs/organization/charts/external-cradle-hosts.md",
+      "assets": [
+        {
+          "path": "docs/organization/assets/current/external-cradle-hosts.png",
+          "sha256": "96d67078061f2cf2fcee44b4feaf79d5e3c9352e9092d8031cae5b79d0ec4c97"
+        },
+        {
+          "path": "docs/organization/assets/current/external-cradle-hosts.svg",
+          "sha256": "2a010bbd6acf1b5335db5bf198d03bd7c07604ae2c16652e7fa7b605a29a0745"
+        }
+      ],
+      "node_ids": [
+        "kgm",
+        "demotte"
+      ],
+      "sources": [
+        "docs/canon/CRADLE_CLOSEOUT_2026-09-06.md"
+      ],
+      "edgeMeaning": "Grouped membership; no reporting line or legal ownership is asserted.",
+      "publicationPages": [
+        48
+      ],
+      "asset": "docs/organization/assets/current/external-cradle-hosts.svg"
+    },
+    {
+      "id": "SH-ORG-EXTERNAL-INVESTORS",
+      "title": "External investors",
+      "type": "entity",
+      "page": "docs/organization/charts/external-investors.md",
+      "assets": [
+        {
+          "path": "docs/organization/assets/current/external-investors.png",
+          "sha256": "51e07ac3f447d1227d14990bf1ab1c4c81cd283f800c4091f5bed4b8b056be77"
+        },
+        {
+          "path": "docs/organization/assets/current/external-investors.svg",
+          "sha256": "9d0f621811aa679b276419ca147ea7c57c1f54f49fbce7863009ea6d25ff9106"
+        }
+      ],
+      "node_ids": [
+        "harrison-vale",
+        "wolf-ridge"
+      ],
+      "sources": [
+        "docs/governance/BOARD_AND_CAPITAL_GOVERNANCE_v1.0.1.md"
+      ],
+      "edgeMeaning": "Grouped membership; no reporting line or legal ownership is asserted.",
+      "publicationPages": [
+        49
+      ],
+      "asset": "docs/organization/assets/current/external-investors.svg"
+    },
+    {
+      "id": "SH-ORG-HISTORICAL-OPPORTUNITIES",
+      "title": "Historical opportunities",
+      "type": "historical",
+      "page": "docs/organization/charts/historical-opportunities.md",
+      "assets": [
+        {
+          "path": "docs/organization/assets/current/historical-opportunities.png",
+          "sha256": "3397304b8fa0c426a54c9dbaa03b5a06ad4f1e9c1e18a6825453956cac8a73cf"
+        },
+        {
+          "path": "docs/organization/assets/current/historical-opportunities.svg",
+          "sha256": "c17f7af0d20202e59d7f1a838a362fb828f9979c8d54409f3b903277612612fb"
+        }
+      ],
+      "node_ids": [
+        "cedar",
+        "juniper",
+        "mesa-lantern",
+        "salt-rim"
+      ],
+      "sources": [
+        "industrial/pale_sun/05_FALSE_START_CEDAR_JUNCTION.md",
+        "industrial/pale_sun/06_FALSE_START_JUNIPER_MESA.md",
+        "industrial/pale_sun/07_FALSE_START_SALT_RIM.md"
+      ],
+      "edgeMeaning": "Grouped membership; no reporting line or legal ownership is asserted.",
+      "publicationPages": [
+        50
+      ],
+      "asset": "docs/organization/assets/current/historical-opportunities.svg"
+    },
+    {
+      "id": "SH-ORG-PEOPLE-ORIGINAL-EIGHT",
+      "title": "The Original Eight",
+      "type": "historical",
+      "page": "docs/organization/charts/people-original-eight.md",
+      "assets": [
+        {
+          "path": "docs/organization/assets/current/people-original-eight.png",
+          "sha256": "5c200e10f9f016bc95a43fa97dbf48cc7a12feaef0ae5f740a5edcbe26adeda6"
+        },
+        {
+          "path": "docs/organization/assets/current/people-original-eight.svg",
+          "sha256": "66515bda6a91ec81dd63b874872ab438bbd744d25b991fe0544cb17f3dbb72b3"
+        }
+      ],
+      "node_ids": [
+        "P001",
+        "P002",
+        "P003",
+        "P004",
+        "P005",
+        "P006",
+        "P007",
+        "P008"
+      ],
+      "sources": [
+        "docs/governance/BOARD_AND_CAPITAL_GOVERNANCE_v1.0.1.md",
+        "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md"
+      ],
+      "edgeMeaning": "Historical founding-cohort membership, not current employee headcount or reporting authority.",
+      "publicationPages": [
+        51
+      ],
+      "asset": "docs/organization/assets/current/people-original-eight.svg"
+    },
+    {
+      "id": "SH-ORG-RESEARCH-ARTIFACTS",
+      "title": "Research artifacts",
+      "type": "historical",
+      "page": "docs/organization/charts/research-artifacts.md",
+      "assets": [
+        {
+          "path": "docs/organization/assets/current/research-artifacts.png",
+          "sha256": "c255871c92a085f6605e04615f0a1842172cc5bda85be307b02f58573ba73320"
+        },
+        {
+          "path": "docs/organization/assets/current/research-artifacts.svg",
+          "sha256": "2d89aa9a41bcea15647d2cb414ccb0799a9dffa31d322fbfede575b684349e17"
+        },
+        {
+          "path": "docs/organization/assets/current/research-artifacts-02.png",
+          "sha256": "27519b23beeea1267049937f5a6b59bcecd0f3479dec32e53752e3a8515c5bb9"
+        },
+        {
+          "path": "docs/organization/assets/current/research-artifacts-02.svg",
+          "sha256": "e4d66484950aabfa8c69f043af9efb9b78d1947ebedaea0f5a9338412d075279"
+        }
+      ],
+      "node_ids": [
+        "ned-kelly-1",
+        "ned-kelly-2",
+        "theseus",
+        "theseus-2",
+        "theseus-3",
+        "mara-logger",
+        "benji-rig"
+      ],
+      "sources": [
+        "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md"
+      ],
+      "edgeMeaning": "Grouped membership; no reporting line or legal ownership is asserted.",
+      "publicationPages": [
+        52,
+        53
+      ],
+      "asset": "docs/organization/assets/current/research-artifacts.svg"
+    },
+    {
+      "id": "SH-ORG-RESEARCH-HISTORY",
+      "title": "Research history",
+      "type": "historical",
+      "page": "docs/organization/charts/research-history.md",
+      "assets": [
+        {
+          "path": "docs/organization/assets/current/research-history.png",
+          "sha256": "7c74da609ca2702aab53b4d08761c0eb41848db741fc6d6833a852e008cd13f8"
+        },
+        {
+          "path": "docs/organization/assets/current/research-history.svg",
+          "sha256": "52e34d95854b4c7adcfe0c3e4ea763ed85da55c0c3051d428587aae0e67d9ffa"
+        },
+        {
+          "path": "docs/organization/assets/current/research-history-02.png",
+          "sha256": "4c1d71c7bbbc99939494b421dcd717fe130b8ff0bef47e96b0e977410592ce5f"
+        },
+        {
+          "path": "docs/organization/assets/current/research-history-02.svg",
+          "sha256": "5b595aa7c3f389c49dc51d29849b3311a271b42399355c47ff5fe16b08876ebf"
+        }
+      ],
+      "node_ids": [
+        "klein",
+        "klein-shop",
+        "emberline",
+        "janus",
+        "glasshouse",
+        "mule",
+        "lantern",
+        "wallaby",
+        "atlas-lineage",
+        "hound",
+        "ranger"
+      ],
+      "sources": [
+        "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md"
+      ],
+      "edgeMeaning": "Grouped membership; no reporting line or legal ownership is asserted.",
+      "publicationPages": [
+        54,
+        55
+      ],
+      "asset": "docs/organization/assets/current/research-history.svg"
+    },
+    {
+      "id": "SH-ORG-EXTERNAL-COUNTERPARTIES",
+      "title": "Business origins and former counterparties",
+      "type": "historical",
+      "page": "docs/organization/charts/external-counterparties.md",
+      "assets": [
+        {
+          "path": "docs/organization/assets/current/external-counterparties.png",
+          "sha256": "7ac61be778c8ac089bad471c5d782da2ce4f5b474f4292ca55665e288e48b99e"
+        },
+        {
+          "path": "docs/organization/assets/current/external-counterparties.svg",
+          "sha256": "1e3c52ff37e415721f1bb5a7b964b43cd220f0418e103b02479aa1131880979f"
+        }
+      ],
+      "node_ids": [
+        "NMI",
+        "qfc",
+        "argent-ridge",
+        "blackridge",
+        "balloon",
+        "bloodstone"
+      ],
+      "sources": [
+        "industrial/source/entities.json",
+        "docs/canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md",
+        "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md",
+        "industrial/corporate/LEGAL_STRUCTURE_AND_FORMATION.md"
+      ],
+      "edgeMeaning": "Grouped membership; no reporting line or legal ownership is asserted.",
+      "publicationPages": [
+        56
+      ],
+      "asset": "docs/organization/assets/current/external-counterparties.svg"
     }
   ]
 }

@@ -24,7 +24,7 @@ jobs:
       - run: uv run ruff format --check .
       - run: uv run ruff check .
       - run: uv run mypy src
-      - run: uv run pytest
+      - run: uv run --with-requirements tools/organization/requirements.txt pytest
       - run: echo "SHFIN_DATABASE_URL=sqlite:///var/ci-standard.db" >> "$GITHUB_ENV"
       - run: uv run alembic upgrade head
       - run: uv run shfin generate --profile standard --scenario base --seed 20260831

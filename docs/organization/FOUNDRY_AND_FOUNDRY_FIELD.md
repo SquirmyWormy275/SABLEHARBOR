@@ -8,53 +8,11 @@
 
 ## Product architecture
 
-```mermaid
-flowchart TB
-    SERVICES["2016–2018 services work<br/>mappings · reconciliations · integrations · decision-support tools"]
-    FOUNDRY["Foundry<br/>reusable relationship, meaning, integration, and workflow substrate<br/><b>begins in 2018</b>"]
-    FIELD["Foundry Field<br/>deployable operational product and service configuration<br/><b>formal commercial identity during 2020–2021</b>"]
-
-    subgraph APPLICATIONS["OPERATIONAL APPLICATION FAMILIES — NAMES PROVISIONAL, BEHAVIOR LOCKED"]
-        OPS["Operations<br/>production · haulage · plan variance · current state"]
-        MAINT["Maintenance<br/>work orders · equipment identity · downtime · operating consequence"]
-        RECON["Reconciliation<br/>geology · mine · plant · laboratory · inventory · finance boundaries"]
-        EXCEPT["Exceptions<br/>evidence or definitions requiring human attention"]
-    end
-
-    USERS["Operating users<br/>planners · superintendents · maintenance teams · metallurgists · managers"]
-
-    SERVICES -->|reusable machinery extracted from repeated work| FOUNDRY
-    FOUNDRY -->|commercial product built on the substrate| FIELD
-    FIELD --> OPS
-    FIELD --> MAINT
-    FIELD --> RECON
-    FIELD --> EXCEPT
-    FIELD -->|used by| USERS
-```
+See the [Foundry and Foundry Field chart](charts/foundry-field.md).
 
 ## Authority and contribution map
 
-```mermaid
-flowchart LR
-    PRIYA["Priya Raman<br/><b>owns product and technical substrate</b><br/>primary product and architectural force"]
-    MARCUS["Marcus Reed<br/><b>senior technical authority</b><br/>resolver; no sole-person knowledge dependency"]
-    ELENA["Elena Torres<br/><b>deployment reality and customer-operating translation</b>"]
-    CALEB["Caleb Hargrove<br/><b>field and operating translation</b>"]
-    NADIA["Nadia<br/><b>Foundry engineer</b><br/>uncertain identity and competing-observation support<br/>FDR-27 / the Cole Memo<br/><i>surname and formal title OPEN</i>"]
-
-    FOUNDRY["Foundry substrate"]
-    FIELD["Foundry Field"]
-    ATLAS["Atlas Meridian"]
-
-    PRIYA -->|product and architecture authority| FOUNDRY
-    MARCUS -.->|resolver lineage and documented technical contribution| FOUNDRY
-    NADIA -->|documented product contribution| FOUNDRY
-    ELENA -.->|deployment counterweight| FIELD
-    CALEB -.->|operating reality input| FIELD
-
-    FOUNDRY -->|underlies| FIELD
-    FOUNDRY -->|represents the terrain| ATLAS
-```
+See [named product and delivery personnel](charts/people-foundry-field.md). Group membership does not establish direct reporting.
 
 ## Locked distinctions
 

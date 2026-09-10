@@ -6,16 +6,30 @@ on:
       - README.md
       - docs/canon/**
       - docs/organization/**
-      - scripts/build_organization_charts.py
+      - scripts/*organization*.py
+      - tools/organization/**
+      - tests/unit/test_organization_generator.py
+      - industrial/source/**
+      - assets/brand/logos/**
+      - docs/business-lines/**
+      - docs/governance/**
+      - docs/j2/**
       - .github/workflows/validate-organization-charts.yml
   push:
     branches:
-      - docs/organization-maps-v0.1
+      - main
     paths:
       - README.md
       - docs/canon/**
       - docs/organization/**
-      - scripts/build_organization_charts.py
+      - scripts/*organization*.py
+      - tools/organization/**
+      - tests/unit/test_organization_generator.py
+      - industrial/source/**
+      - assets/brand/logos/**
+      - docs/business-lines/**
+      - docs/governance/**
+      - docs/j2/**
       - .github/workflows/validate-organization-charts.yml
   workflow_dispatch:
 
@@ -34,8 +48,19 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Regenerate and XML-validate charts
+      - name: Install chart dependencies
+        run: python -m pip install -e ".[dev]" -r tools/organization/requirements.txt
+
+      - name: Regenerate charts
         run: python scripts/build_organization_charts.py
 
+      - name: Validate complete chart coverage
+        run: python scripts/validate_organization_maps.py
+
+      - name: Verify chart behavior
+        run: python -m pytest tests/unit/test_organization_generator.py
+
       - name: Verify rendered files are current
-        run: git diff --exit-code -- README.md docs/organization
+        run: |
+          git diff --exit-code -- README.md docs/organization
+          test -z "$(git ls-files --others --exclude-standard docs/organization)"

@@ -9,6 +9,11 @@ from sable_harbor.exports.safety import scan_generated_artifacts
 FORBIDDEN = ("ghp_", "github_pat_", "sk-proj-", "BEGIN PRIVATE KEY")
 MAX_BYTES = 10 * 1024 * 1024
 ALLOWED_LARGE_PUBLIC_ARTIFACTS = {
+    # Owner-approved vector chart book; public synthetic enterprise organization.
+    Path("docs/organization/assets/current/Sable-Harbor-Organization-Charts.pdf"): (
+        12421998,
+        "c1589fbd0c0bfcb2a823cc4e582b580510f3d1408a933ddb09188aa217f62665",
+    ),
     # Reviewed rc4 GeoPackage; public reference data and fictional case geometry.
     Path("geospatial/master/sable_harbor_master_v0.1.gpkg"): (
         40 * 1024 * 1024,
