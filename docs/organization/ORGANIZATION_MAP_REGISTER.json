@@ -15,7 +15,7 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/business-lines.png",
-          "sha256": "680258c183fbf5d66b6863dcb4f1bea74d42956ad0c0bc9d2ea3f05ea33b03cb"
+          "sha256": "8aa59663c62c51718c47820045a8df8a42b7deb8c325e44b536859992af94da5"
         },
         {
           "path": "docs/organization/assets/current/business-lines.svg",
@@ -53,7 +53,7 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/industrial-ownership.png",
-          "sha256": "6ad4d04f8abcb581e251b49013b50455cb0c4fcf2303912feebad0e02e566dab"
+          "sha256": "4f3843cefc0287470806a34cad401f377ffbad09893eab861a9ff6771e020cf8"
         },
         {
           "path": "docs/organization/assets/current/industrial-ownership.svg",
@@ -112,7 +112,7 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/people-board.png",
-          "sha256": "ecbd587227267d860d799ab75da337ab8c55590b2c54f3aa08895b196ebcb218"
+          "sha256": "93f6a9619942fbaec8c2cac9d39d0e78f45f624afa54e6a97639b8cd547ffe29"
         },
         {
           "path": "docs/organization/assets/current/people-board.svg",
@@ -149,7 +149,7 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/advisory.png",
-          "sha256": "ea7b0553f978bb9323c5e42e2abf10cc20b500037588d805a07a895b422e2c55"
+          "sha256": "3022606da9667c2be2530bf98e4fc17810f05cef92343cfde839fd150d10d39b"
         },
         {
           "path": "docs/organization/assets/current/advisory.svg",
@@ -182,7 +182,7 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/aru-facilities.png",
-          "sha256": "3ed09643ad34480b79a8bd275993e499ef09729b97fb7fc9155922f41dfeb2f0"
+          "sha256": "b97a0bf85a5597e980e57c5d3079168848aa1392a5fd1fcdf620a0f8c032a10b"
         },
         {
           "path": "docs/organization/assets/current/aru-facilities.svg",
@@ -190,7 +190,7 @@
         },
         {
           "path": "docs/organization/assets/current/aru-facilities-02.png",
-          "sha256": "5517ff4de47e24263b4a1a6604072045a662bd208430fcdb1a370f5eadd8ad05"
+          "sha256": "2185bab9c4d4c137a7c43407eab2f1322853caeaf4847fba559ae96f68e7115d"
         },
         {
           "path": "docs/organization/assets/current/aru-facilities-02.svg",
@@ -225,7 +225,7 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/aru-services.png",
-          "sha256": "0b052041e8c0b42721f66fde3bccb01ea58aa9493994aa3a8af97642364dcf8a"
+          "sha256": "ee21c1493f6dcdce417a1b934a1e5cc7dd613d3656d6f2c9aa92c4ba2a930c06"
         },
         {
           "path": "docs/organization/assets/current/aru-services.svg",
@@ -258,7 +258,7 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/atlas-meridian.png",
-          "sha256": "0e0013f547e347bce65079056647564d0d3ca666a1e8725fd548b683ce3e8405"
+          "sha256": "bd3cb9e4a6a18dedcd194e7ec115b51bbe0c4c3d305da1c40967ac5064157b13"
         },
         {
           "path": "docs/organization/assets/current/atlas-meridian.svg",
@@ -266,7 +266,7 @@
         },
         {
           "path": "docs/organization/assets/current/atlas-meridian-02.png",
-          "sha256": "2528695b8a6d33f0c26a3cdad530146aa568d4c4cb091df5996f3ecb4727a19b"
+          "sha256": "921d8ada5fe5c2b0ab4ccb9f153e0610ac2f229e973b5889ac4a6021e735d0b2"
         },
         {
           "path": "docs/organization/assets/current/atlas-meridian-02.svg",
@@ -302,7 +302,7 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/bst-network.png",
-          "sha256": "296ce4733afff16ad68c0782cce3f0fe58badefe1f4c98d5d3aa9f6fa12af45a"
+          "sha256": "c1087233efb9bf976c64526c6bf191513d5a7d74cf0f030ce7cb57748a35d17c"
         },
         {
           "path": "docs/organization/assets/current/bst-network.svg",
@@ -310,7 +310,7 @@
         },
         {
           "path": "docs/organization/assets/current/bst-network-02.png",
-          "sha256": "e2025d58888f43168e0540ae5e2bec6e50a4c8cf1f81d43610ec4b02cbd66619"
+          "sha256": "a078d11d5d1f329c0b4e4a18f24f84a5a6cbf6776cdf45798e7ccf16a7ef118c"
         },
         {
           "path": "docs/organization/assets/current/bst-network-02.svg",
@@ -346,7 +346,7 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/corporate-alexandria.png",
-          "sha256": "0dc7f3da624b63a9138a32f35dff65075fd646d07612019549d33f66f791cf96"
+          "sha256": "133acea2f85068bec1a7767ec6456e2c597670e1fb35bd7a250bccc2d3a21a66"
         },
         {
           "path": "docs/organization/assets/current/corporate-alexandria.svg",
@@ -354,7 +354,7 @@
         },
         {
           "path": "docs/organization/assets/current/corporate-alexandria-02.png",
-          "sha256": "f5a245b318a982a90499a7fff87431197dbaefaa200a51ef696ecb66df1ea7ac"
+          "sha256": "ea4c525fdd779739cbfb6b7e0617d1467c595b570480599d5944b8cea86dfbf4"
         },
         {
           "path": "docs/organization/assets/current/corporate-alexandria-02.svg",
@@ -394,7 +394,7 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/corporate-board-committees.png",
-          "sha256": "c68129ee2f0c6aca8ca1f1d2a98841e31d0cfbb997b26e3c1f676d657e2954ca"
+          "sha256": "43ab12c9a825e4164b9f2ea35026d0967f2915c3806679b729f83dbdd9858d50"
         },
         {
           "path": "docs/organization/assets/current/corporate-board-committees.svg",
@@ -402,7 +402,7 @@
         },
         {
           "path": "docs/organization/assets/current/corporate-board-committees-02.png",
-          "sha256": "8cffcc3bbdc35aea47e87cbd941e21d7d60ecad799017fe96627934f7f7576bc"
+          "sha256": "3a84ba0fe9aa955dde9f77fc7cb1d290fc45e68fc8db5d9872e15a805063a163"
         },
         {
           "path": "docs/organization/assets/current/corporate-board-committees-02.svg",
@@ -443,7 +443,7 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/corporate-contact-disciplines.png",
-          "sha256": "69960d093545c500e481ff2b433d40b4805b6d27656f7212c51ad8551867a4d4"
+          "sha256": "03824fb9cac2eead36cb93ef10b53d2e94e81ed0349279d75d66b864b64c795f"
         },
         {
           "path": "docs/organization/assets/current/corporate-contact-disciplines.svg",
@@ -451,7 +451,7 @@
         },
         {
           "path": "docs/organization/assets/current/corporate-contact-disciplines-02.png",
-          "sha256": "d06dc61c5850ae3ebfe2916c38f4c59508668f55dcb04161a5220f75bb5fd4f8"
+          "sha256": "f041fcda66d1d22b900246b8176982b072399002fdc94d5fe7013028a990187c"
         },
         {
           "path": "docs/organization/assets/current/corporate-contact-disciplines-02.svg",
@@ -487,7 +487,7 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/corporate-education-programs.png",
-          "sha256": "97d6e0a362beeb21e88996b98384368c5623d261ac1b33eaa3246a29aeeb1d0c"
+          "sha256": "54f483b0eaeb3b1d8bba4c19a868aecd0b91213d612163309662bdba1ea6ba30"
         },
         {
           "path": "docs/organization/assets/current/corporate-education-programs.svg",
@@ -520,7 +520,7 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/corporate-enterprise-support.png",
-          "sha256": "a032cb14d5e85f91fd7ed2aa50d8cfe8bfbffd889b6ca615b14338637252889c"
+          "sha256": "eeb07792931536c6b9af45da71c2cb6926cfb0582cdcd66826911a5eba6643d8"
         },
         {
           "path": "docs/organization/assets/current/corporate-enterprise-support.svg",
@@ -528,7 +528,7 @@
         },
         {
           "path": "docs/organization/assets/current/corporate-enterprise-support-02.png",
-          "sha256": "b6a8cf46c82cd907788b98cd58e64c0601d7af0ef11eb88226468150b40ffaca"
+          "sha256": "f96af5b30ccf38af1cae394cb0cd41ede7aab8a8f26c8179b2d0f0af9d1fbf39"
         },
         {
           "path": "docs/organization/assets/current/corporate-enterprise-support-02.svg",
@@ -570,7 +570,7 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/corporate-headquarters.png",
-          "sha256": "8c88950262651ebf274d05abf579c66ca82f1d25d1035a259c05059e3a7a5b71"
+          "sha256": "c4d41242813e9075e6dcc91cd23038bf803d94e8623cc68b494c8f1a1341257e"
         },
         {
           "path": "docs/organization/assets/current/corporate-headquarters.svg",
@@ -578,7 +578,7 @@
         },
         {
           "path": "docs/organization/assets/current/corporate-headquarters-02.png",
-          "sha256": "177a7910d6ec5cd24c5422ab0781262e5ef4c00b11488af2d583d6071c260a5b"
+          "sha256": "14c0d87273f17f47d450526f25fbaf0c2d43a827b1f4e6b033ab897c3c9c148a"
         },
         {
           "path": "docs/organization/assets/current/corporate-headquarters-02.svg",
@@ -618,7 +618,7 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/corporate-j2.png",
-          "sha256": "c3d7d609498cbff25f84a5087f1ad982dc71bb172f49e18644ad7db6c29fa745"
+          "sha256": "8d3672f6853c59480e54ad4421f83544a31d12eb90ca0e3569ed2d5255401ae6"
         },
         {
           "path": "docs/organization/assets/current/corporate-j2.svg",
@@ -626,7 +626,7 @@
         },
         {
           "path": "docs/organization/assets/current/corporate-j2-02.png",
-          "sha256": "5767d522839b1a756952730874e156e59ad41b1a6e1c3119632adab69c2d46ea"
+          "sha256": "33e4797b39c877d913637d8eebe596592df4617e3ab5dbafd78829afa94b1823"
         },
         {
           "path": "docs/organization/assets/current/corporate-j2-02.svg",
@@ -669,7 +669,7 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/corporate-pinakes-portals.png",
-          "sha256": "a5974bb7aeb7cfdf360bc18e55fdf9dab072f73b2acb104527b67164b7a4ba64"
+          "sha256": "dfe680b1a0dc31c11ac9c1206a471138ec8153e6d69ccafaefb7bd8079f2cead"
         },
         {
           "path": "docs/organization/assets/current/corporate-pinakes-portals.svg",
@@ -677,7 +677,7 @@
         },
         {
           "path": "docs/organization/assets/current/corporate-pinakes-portals-02.png",
-          "sha256": "ef24a251a3c3caf7453bd52d2ff7d2ba4845c0dd6dafc2458e83345ec5841c82"
+          "sha256": "70cc0a2b89a633b104642d96dbe92d6b2a41c51c0f9c87125acb4865f8c50d02"
         },
         {
           "path": "docs/organization/assets/current/corporate-pinakes-portals-02.svg",
@@ -715,7 +715,7 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/corporate-technology-capabilities.png",
-          "sha256": "40f52593850fc4d51e635df360e9139f6c1bb0eef1c1d55d8536189e0733fcc6"
+          "sha256": "b8777db742a63fbc7b730d828bbdf888e8fb75e156c7393d9a436d6398c54059"
         },
         {
           "path": "docs/organization/assets/current/corporate-technology-capabilities.svg",
@@ -723,7 +723,7 @@
         },
         {
           "path": "docs/organization/assets/current/corporate-technology-capabilities-02.png",
-          "sha256": "9f7c7c932c18192d4f954a71d644d4d00b1c690d785af5201207dca3cd1f5cdf"
+          "sha256": "57dfcf12ba1e8b07f7f7825c9d32d7e228ac27e9dda58d373ffb930c49c0ee1d"
         },
         {
           "path": "docs/organization/assets/current/corporate-technology-capabilities-02.svg",
@@ -759,7 +759,7 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/foundry-field.png",
-          "sha256": "0d9bf89c88e41e038af8d2135ab6bddbc651534c37a73337dd3978af42b7f192"
+          "sha256": "d068ace3c8040377a3e464cadab4ba5b73f2dd1bf0d6035bbd3f02046bef2716"
         },
         {
           "path": "docs/organization/assets/current/foundry-field.svg",
@@ -792,7 +792,7 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/pale-sun-red-wash.png",
-          "sha256": "fa80ee3a23f94fbe24c582a3716d57e60609d27471ec27504e10b7d7d4e4c3fe"
+          "sha256": "6511967e8d5a26f3654a35e785fd9de814bc15eb6b48829f7b739bea3209016a"
         },
         {
           "path": "docs/organization/assets/current/pale-sun-red-wash.svg",
@@ -825,7 +825,7 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/people-aru-leadership.png",
-          "sha256": "61bd1083dded4d7953ef24bf9e27b0d4bf1a82002fd9c6f499619c44ee75ad4b"
+          "sha256": "c0c982cdc8d6d66320168aac68be75c565b620fb080c0e643437e438d38737b9"
         },
         {
           "path": "docs/organization/assets/current/people-aru-leadership.svg",
@@ -857,7 +857,7 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/people-aru-operations.png",
-          "sha256": "291d897990e4a3e2694a3b5b0293d0f84c6bd93f1bc0f0102f20720f6d25d21c"
+          "sha256": "184a7c794918c046b64faa975fb38d4f679663b0256e3f23e868830f65858948"
         },
         {
           "path": "docs/organization/assets/current/people-aru-operations.svg",
@@ -887,7 +887,7 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/people-atlas-meridian.png",
-          "sha256": "4c00409f6931775716365e0b6569d098f56382755f4de149b0416dbbd0e27c95"
+          "sha256": "aa5fd34473e979ab712bce4688510b1f76776ff75f26a85350406a6a6fd6e522"
         },
         {
           "path": "docs/organization/assets/current/people-atlas-meridian.svg",
@@ -915,7 +915,7 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/people-board-committees.png",
-          "sha256": "917d3a0bcc66ef453d58f5e76fc8ec8be28a1e5f13100c7a11239ae56170012a"
+          "sha256": "60810e5eae7fe04def8cd55a2cc34cad3981ff07cf0e8f340de636b21d74c6dd"
         },
         {
           "path": "docs/organization/assets/current/people-board-committees.svg",
@@ -923,7 +923,7 @@
         },
         {
           "path": "docs/organization/assets/current/people-board-committees-02.png",
-          "sha256": "d455301347cd62c3014f4da6d25ed255abc842707d036306ba3b17c64c52f5a5"
+          "sha256": "4392071560da6381e7e305ec92a5be2908ca1bd62ebcfb5a05d5c72902bc055f"
         },
         {
           "path": "docs/organization/assets/current/people-board-committees-02.svg",
@@ -931,7 +931,7 @@
         },
         {
           "path": "docs/organization/assets/current/people-board-committees-03.png",
-          "sha256": "5ccfde60befe14034dc0202acf3745f5a556c3960cea6a769b9b67398330bc1d"
+          "sha256": "b93ce7a0d3458d680fd720e38dedd436b14922f611a839f70a5602664881d07f"
         },
         {
           "path": "docs/organization/assets/current/people-board-committees-03.svg",
@@ -939,7 +939,7 @@
         },
         {
           "path": "docs/organization/assets/current/people-board-committees-04.png",
-          "sha256": "b3f736a65ade2bfd5744f2917882baa89129bb05136a2ba511f7641911bc6db8"
+          "sha256": "475b2dda3b0159a5e7f264d50986ab6b4da533090faa715d2ba2d984af4fbbdd"
         },
         {
           "path": "docs/organization/assets/current/people-board-committees-04.svg",
@@ -947,7 +947,7 @@
         },
         {
           "path": "docs/organization/assets/current/people-board-committees-05.png",
-          "sha256": "d8b7ed728a1fdf8fc6a601e6efab91112631bebb9b3540d6739267e63f162a3b"
+          "sha256": "44fe35056464435b55b45c25da838aaf065440c160a9232a397c22c8ef280c06"
         },
         {
           "path": "docs/organization/assets/current/people-board-committees-05.svg",
@@ -987,7 +987,7 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/people-bst.png",
-          "sha256": "74a8fc8322c99c227a3b742e75fb8374cc729909dd16456c25222f99a6f23240"
+          "sha256": "f64f9d8ea90628c79e3f15812e3561b8924aca595607787d1a82e3700b6fec56"
         },
         {
           "path": "docs/organization/assets/current/people-bst.svg",
@@ -1018,7 +1018,7 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/people-cradle.png",
-          "sha256": "6c7c116a6b3a2f3ac815d5bf35a6fe1c8054394a7ac53581c68e37a1368d3d7e"
+          "sha256": "68182a9cc539850f6ce6c4e3ee343019422b58285f436e0ea35108e800e0fdbd"
         },
         {
           "path": "docs/organization/assets/current/people-cradle.svg",
@@ -1049,7 +1049,7 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/people-enterprise.png",
-          "sha256": "4585fcfecb050897b0506b1ffc78651b169c269fdba69f3014d65973eb8128ef"
+          "sha256": "26b09e681b95b69803081c268c05b47069c870d51eea187bc677d624466d9efb"
         },
         {
           "path": "docs/organization/assets/current/people-enterprise.svg",
@@ -1083,7 +1083,7 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/people-foundry-field.png",
-          "sha256": "7139afca23e5253219b4f4122b777d10f426883e278ed7aa8375ef209f38b9ec"
+          "sha256": "d3f22cc9e40b4adbead6b3db81ac85156face29ece4ef99b3102f072c0e1667a"
         },
         {
           "path": "docs/organization/assets/current/people-foundry-field.svg",
@@ -1117,7 +1117,7 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/people-pale-sun-red-wash.png",
-          "sha256": "e37f44f3def5d8d6b0e4147e09062d95cbe04c6eb8840d20d403aa93f2a199da"
+          "sha256": "ec6657455c208557864c02a8c27a4631570ef013a026d7be5ee00b3b6ba5c18e"
         },
         {
           "path": "docs/organization/assets/current/people-pale-sun-red-wash.svg",
@@ -1148,7 +1148,7 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/people-willow-leadership.png",
-          "sha256": "ab936762f4941ca93a08518a0c6f93e84583a5705b15adc5d1e1211594676e8a"
+          "sha256": "e7b78f131d3075ef81950c2d921e578aa0edd606a85b78150b0edb4f2ee7d7be"
         },
         {
           "path": "docs/organization/assets/current/people-willow-leadership.svg",
@@ -1177,7 +1177,7 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/people-willow-team.png",
-          "sha256": "7eaafeba60229329881fc72e6f41586b5f4274e4beeefa3df77f4f3904684208"
+          "sha256": "fa52aea6b3da42257085e57b8d01917526765b0aac649af52d916694d9bb70ae"
         },
         {
           "path": "docs/organization/assets/current/people-willow-team.svg",
@@ -1213,7 +1213,7 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/project-cradle.png",
-          "sha256": "8f5b8cf60083e7fc8cc3f779dbc86e837e5487b10c6e49f6d512cb4e64b0d3d8"
+          "sha256": "d8f2b3d98ad646e108d0e6646868f51dc69aa02b69105f6fef74129cfdbf2e14"
         },
         {
           "path": "docs/organization/assets/current/project-cradle.svg",
@@ -1243,7 +1243,7 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/willow-fort.png",
-          "sha256": "36cb7d7855b1ce0b2bde91dff828af21e444d4a0dcb33cebfddad46c19ffe043"
+          "sha256": "7bc5e050b760160eabc4ab9271e937370e7634bd56d74c1c7abd58c9a2a9bfb6"
         },
         {
           "path": "docs/organization/assets/current/willow-fort.svg",
@@ -1275,7 +1275,7 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/external-cradle-hosts.png",
-          "sha256": "5d90972ee5e1e06cd92fdc4daa42504d4394f92fb60f89fa462635a2c178df69"
+          "sha256": "96d67078061f2cf2fcee44b4feaf79d5e3c9352e9092d8031cae5b79d0ec4c97"
         },
         {
           "path": "docs/organization/assets/current/external-cradle-hosts.svg",
@@ -1303,7 +1303,7 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/external-investors.png",
-          "sha256": "d9f90f9166363c6b5cffb653d40d134459e03908f25f773f67098025220441e0"
+          "sha256": "51e07ac3f447d1227d14990bf1ab1c4c81cd283f800c4091f5bed4b8b056be77"
         },
         {
           "path": "docs/organization/assets/current/external-investors.svg",
@@ -1331,7 +1331,7 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/historical-opportunities.png",
-          "sha256": "ffbbf50df888470b4db3751187617149ab65a3b26e3717053fc0d95929a75592"
+          "sha256": "3397304b8fa0c426a54c9dbaa03b5a06ad4f1e9c1e18a6825453956cac8a73cf"
         },
         {
           "path": "docs/organization/assets/current/historical-opportunities.svg",
@@ -1363,7 +1363,7 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/people-original-eight.png",
-          "sha256": "a1b6607801fe282eb7279f79b4b71d67ed347f4b22ac1c83fd5a4bae627b3544"
+          "sha256": "5c200e10f9f016bc95a43fa97dbf48cc7a12feaef0ae5f740a5edcbe26adeda6"
         },
         {
           "path": "docs/organization/assets/current/people-original-eight.svg",
@@ -1398,7 +1398,7 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/research-artifacts.png",
-          "sha256": "23de42f03f707b30ec58e5fd79f3e18d37410e3dd790dc99ce40249b19b92f5a"
+          "sha256": "c255871c92a085f6605e04615f0a1842172cc5bda85be307b02f58573ba73320"
         },
         {
           "path": "docs/organization/assets/current/research-artifacts.svg",
@@ -1406,7 +1406,7 @@
         },
         {
           "path": "docs/organization/assets/current/research-artifacts-02.png",
-          "sha256": "7fb1299d396f55ab015a8a19c96feb78a61e06cc9da4246d161b2f93ce996883"
+          "sha256": "27519b23beeea1267049937f5a6b59bcecd0f3479dec32e53752e3a8515c5bb9"
         },
         {
           "path": "docs/organization/assets/current/research-artifacts-02.svg",
@@ -1440,7 +1440,7 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/research-history.png",
-          "sha256": "cf74c8e8453201f4c6bfdba0212077aaa66befd5ee70a3511ec7cb40ae6ff813"
+          "sha256": "7c74da609ca2702aab53b4d08761c0eb41848db741fc6d6833a852e008cd13f8"
         },
         {
           "path": "docs/organization/assets/current/research-history.svg",
@@ -1448,7 +1448,7 @@
         },
         {
           "path": "docs/organization/assets/current/research-history-02.png",
-          "sha256": "60ad586c550da622352e61b5dec353b4b16d036d08d5bff27908e5bcce91e2ee"
+          "sha256": "4c1d71c7bbbc99939494b421dcd717fe130b8ff0bef47e96b0e977410592ce5f"
         },
         {
           "path": "docs/organization/assets/current/research-history-02.svg",
@@ -1486,7 +1486,7 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/external-counterparties.png",
-          "sha256": "2a71af4a6ae9da73d980fbe280c8dae08d262af5a9f11221a0e78d35c97210a6"
+          "sha256": "7ac61be778c8ac089bad471c5d782da2ce4f5b474f4292ca55665e288e48b99e"
         },
         {
           "path": "docs/organization/assets/current/external-counterparties.svg",
