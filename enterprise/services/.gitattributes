@@ -1,0 +1,3 @@
+# Python csv exports use CRLF. Preserve reproducible CSV bytes while retaining
+# ordinary whitespace checks and recognizing CR as a line terminator.
+generated/*.csv -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
