@@ -109,6 +109,9 @@ def export():
             item['publicationPages'].append(occurrence['page'])
             text += [f"![{chart['title']}](../assets/current/{png.name})", '',
                      f"[Vector artwork](../assets/current/{svg.name}) · [Complete chart book](../assets/current/{master.name})", '']
+        if chart.get('edges'):
+            text += [table(['Owner', 'Owned entity', 'Relationship'], [[nodes[e['from']]['name'], nodes[e['to']]['name'], e['relationship']] for e in chart['edges']]), '']
+            item['edges'] = chart['edges']
         for note in chart.get('notes', []):
             text += [note, '']
         headers = ['Name', 'Job title', 'Joined'] if person else ['Name', 'Location', 'Actual work']
@@ -116,7 +119,7 @@ def export():
                  '## Source qualifications', '']
         for node_id in chart['node_ids']:
             node = nodes[node_id]
-            details = list(node.get('notes', []))
+            details = [note.strip() for note in node.get('notes', []) if note.strip()]
             if person:
                 details += [f"Year basis: {node['year_basis']}", f"Title status: {node.get('title_state', 'Source supported')}"]
             if details:

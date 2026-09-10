@@ -8,22 +8,7 @@
 
 ## Founding team
 
-```mermaid
-flowchart TB
-    SH["SABLE HARBOR"]
-    CRADLE["PROJECT CRADLE<br/>REE recovery from host-created / host-managed process streams<br/><b>do not break the host system</b>"]
-
-    KENJI["Kenji Arakawa<br/><b>program / business lead</b><br/>extractive metallurgy<br/>“Where does the value die?”"]
-    TESSA["Tessa Quinn<br/><b>economic geology</b><br/>chemistry cannot negotiate with geology"]
-    LUIS["Luis Ortega<br/><b>process engineering and operating reality</b><br/>“Where does it go?”"]
-    MAEVE["Maeve Donnelly<br/><b>data engineering and material genealogy</b><br/>source → process → stream → product → disposition"]
-
-    SH -->|rare-earth recovery line| CRADLE
-    KENJI -->|leads| CRADLE
-    TESSA ---|founding-team role| CRADLE
-    LUIS ---|founding-team role| CRADLE
-    MAEVE ---|founding-team role| CRADLE
-```
+See the [Project Cradle people chart](charts/people-cradle.md). The operating-boundary diagram below is a process and custody reference.
 
 ## Current operating boundary
 

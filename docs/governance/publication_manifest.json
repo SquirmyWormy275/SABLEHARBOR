@@ -151,9 +151,10 @@
     {
       "source": "docs/j2/J2_OPERATING_MODEL.md",
       "publication": "docs/j2/publications/SH-J2-OPS-001_v1.0.0.pdf",
-      "sha256": "ca3e0ca747d44ef89819672167008e9e7ef19fae905797c3c352b37ef5290895",
-      "source_sha256": "4a67aa543068983fdbb1b8d8b7e9ce616aca8fc8a09c2e403125106e69b758a7",
-      "brand": "j2"
+      "sha256": "280e7a2056bf53473ce1e493b4918877f2484d53eaa17076897c1770ada6102c",
+      "source_sha256": "e8a0e7431ee3a8517ab89b24fc227fd9f718fd1a1d1f9ee0bfe1e7ede1901fed",
+      "brand": "j2",
+      "normalizer": "pypdf"
     },
     {
       "source": "docs/j2/CONTACT.md",

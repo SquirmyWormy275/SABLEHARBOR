@@ -2,6 +2,7 @@
 import hashlib, json, re, subprocess, sys
 import zipfile
 from pathlib import Path
+from organization_history import current_text
 
 R = Path(__file__).resolve().parents[1]
 errors = []
@@ -121,7 +122,7 @@ allowed_stale_context = {
     'docs/internal/CHAT_CANON_LEDGER_J2_ALEXANDRIA.md',
 }
 md_paths = [p for p in (R / 'docs').rglob('*.md') if str(p.relative_to(R)) not in allowed_stale_context]
-all_current = '\n'.join(p.read_text(errors='ignore') for p in md_paths)
+all_current = '\n'.join(current_text(R, str(p.relative_to(R)), p.read_text(errors='ignore')) for p in md_paths)
 for old in ['Northline Growth Partners', 'Ironcliff Industrial Partners', 'Leah Moravec', 'Owen Rourke', 'Dr. Nadia Serrano', 'Richard Halden']:
     need(old not in all_current, f'superseded name presented outside historical/fidelity artifact: {old}')
 need('Pharos is the' not in all_current and 'Pharos as the main portal' not in all_current, 'Pharos presented as current portal')
@@ -152,7 +153,7 @@ chartreg = R / 'docs/organization/J2_CHART_REGISTER.json'
 need(chartreg.is_file(), 'J2 chart register missing')
 if chartreg.is_file():
     charts = json.loads(chartreg.read_text())['charts']
-    need(len(charts) == 5, 'J2 chart register must contain exactly 5 charts')
+    need({c['id'] for c in charts} == {f'SH-ORG-J2-{n:03d}' for n in range(2, 6)}, 'J2 register must retain the four process/role/assignment diagrams')
     for c in charts:
         for key in ['svg', 'png']:
             p = R / c[key]
@@ -186,4 +187,4 @@ for md in list((R / 'docs/j2').rglob('*.md')) + list((R / 'docs/governance').rgl
 if errors:
     print('\n'.join('FAIL ' + e for e in errors))
     sys.exit(1)
-print('PASS governance/J2 validation: board records, chat canon ledger, authority boundaries, 9 directors, 5 committees, 9 Pinakes portals, 5 rendered charts, Daedalus boundaries, source/PDF hashes, US-Letter publications, links, supersession')
+print('PASS governance/J2 validation: board records, chat canon ledger, authority boundaries, 9 directors, 5 committees, 9 Pinakes portals, 4 process/role diagrams plus current organization charts, Daedalus boundaries, source/PDF hashes, US-Letter publications, links, supersession')

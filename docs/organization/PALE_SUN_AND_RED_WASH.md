@@ -10,7 +10,7 @@
 
 Pale Sun Inc. is the wholly owned Delaware subsidiary of Sable Harbor Industrial Holdings, Inc. It owns Wyoming Red Wash Mining, LLC from July 18, 2025. Evan Vilander is PS President from November 3, 2025; Mari Varela is PS COO and RWH CEO. Evan owns strategy, company-building, capital sponsorship and downstream/federal relationships. Mari owns mining operations and qualification of change. Cole retains site superintendent and temporary stop authority. Walt Sutter remains an external geological source.
 
-![Current Pale Sun and Red Wash chart](assets/pale-sun-red-wash-organization-2026.svg)
+![Current Pale Sun and Red Wash chart](assets/current/pale-sun-red-wash.png)
 
 ## People and authority
 

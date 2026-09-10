@@ -4,16 +4,6 @@
   "source": "docs/organization/J2_ORGANIZATION.md",
   "charts": [
     {
-      "id": "SH-ORG-J2-001",
-      "title": "J2 HIGH-LEVEL ORGANIZATION",
-      "svg": "docs/organization/assets/j2/j2-high-level.svg",
-      "png": "docs/organization/assets/j2/j2-high-level.png",
-      "canonicalDate": "2026-09-02",
-      "edgeSemantics": "dotted edges are doctrine/cross-cutting relationships, not reporting",
-      "svgSha256": "25adb8b494718341667c12efc1a194c6db82fc60d49291aef7efcda7034c567b",
-      "pngSha256": "2e3dc8a20b0451c34d34f5cb984b416276f3f47a8bfe1c7524d1c83f8ee21dff"
-    },
-    {
       "id": "SH-ORG-J2-002",
       "title": "J2 FUNCTIONAL LOOP",
       "svg": "docs/organization/assets/j2/j2-loop.svg",
@@ -48,10 +38,12 @@
       "title": "ORIENTATION / DECISION INTERFACE",
       "svg": "docs/organization/assets/j2/orientation-decision-interface.svg",
       "png": "docs/organization/assets/j2/orientation-decision-interface.png",
-      "canonicalDate": "2026-09-02",
+      "canonicalDate": "2026-09-03",
       "edgeSemantics": "dotted lines are professional assignments, never operating command",
-      "svgSha256": "f2c728476288276beb23ee82e388840ad300a7eb0f555d8b1f24d0809401b62d",
-      "pngSha256": "148826ed20671cae6fefb8b1f20f81beca39b16da308b66e88f870653fc8c408"
+      "svgSha256": "95647b9ed7ca35cbe9751f7a58c354f4a64823dc3cc53b0ad36436e5f7125e77",
+      "pngSha256": "1461ef1f62cacaa2905ca4c98d316e5536eae4c0e4e38970476f923dd7b972c5",
+      "qualification": "24 authorized Orientation billets; professional assignments do not establish operating command."
     }
-  ]
+  ],
+  "scope": "Retained process, role-template and professional-assignment diagrams; current organization uses SH-ORG-CORP-J2."
 }

@@ -10,24 +10,7 @@
 
 [The current ARU chart](ARU_BST_ORGANIZATION.md) establishes SHI → SHIH → ARU → BS&T and operators Nora Ashcombe and Seth Kettering. The acquired estate contributes real operating experience to Sable Harbor. That experience may later move into Advisory through ordinary talent mobility, but Advisory does not obtain operating authority over ARU or BS&T merely because it advises clients.
 
-```mermaid
-flowchart LR
-    ARU["ARU · Nora Ashcombe<br/>operating accountability"]
-    BST["BS&T · Seth Kettering<br/>railway operating authority"]
-    FIELD["Foundry Field<br/>flagship deployable operational product"]
-    ATLAS["Atlas Meridian<br/>Core · Enterprise · Professional · Managed<br/>product organization, not consulting bench"]
-    J2["J2<br/>internal intelligence institution<br/>no Advisory solicitation while serving"]
-    ADV["Sable Harbor Advisory<br/>business line · President role<br/>three practices · one common bench"]
-    CLIENT["External client<br/>owns/transitions accepted client capability"]
-
-    ARU -->|100% equity ownership| BST
-    ARU -.->|operating experience + eligible talent mobility| ADV
-    FIELD -.->|represented operational terrain / product deployment| ADV
-    ATLAS -.->|professional substrate + client plane| ADV
-    J2 -.->|former qualifying professionals only; employee-initiated after service| ADV
-    ADV -->|judgment · intervention · capability transfer| CLIENT
-    ATLAS -->|licensed client product| CLIENT
-```
+See [ARU services](charts/aru-services.md), [the BS&T network](charts/bst-network.md) and [Advisory](charts/advisory.md). Advisory practices share one professional bench; they are not separate staffing businesses.
 
 ## Advisory practices
 

@@ -1,176 +1,114 @@
 #!/usr/bin/env python3
-"""Validate Sable Harbor's canon-derived organization-map package.
-
-The script uses only the Python standard library. It checks package structure,
-chart metadata, register consistency, decision-ID references, and a small set
-of high-risk visual shortcuts that would blur locked canonical distinctions.
-"""
-
+"""Validate current chart copy, publication coverage, approved assets and history."""
 from __future__ import annotations
 
+import hashlib
 import json
-import re
 import sys
+import xml.etree.ElementTree as ET
 from pathlib import Path
 
+import fitz
+
 ROOT = Path(__file__).resolve().parents[1]
-ORG_DIR = ROOT / "docs" / "organization"
-REGISTER_PATH = ORG_DIR / "ORGANIZATION_MAP_REGISTER.json"
-DECISION_REGISTER_PATH = ROOT / "docs" / "canon" / "DECISION_REGISTER.md"
-
-REQUIRED_METADATA = (
-    "**Map ID:**",
-    "**Canonical date:**",
-    "**Map type:**",
-    "**Edge meaning:**",
-)
-
-FORBIDDEN_MERMAID_PHRASES = (
-    "Foundry / Foundry Field",
-    "Pale Sun / Red Wash",
-    "ARU / BS&T",
-    "reports to",
-    "Chief Executive Officer",
-    "Chief Technology Officer",
-    "Chief Financial Officer",
-)
-
-MERMAID_RE = re.compile(r"```mermaid\n(.*?)```", re.DOTALL)
-DECISION_ID_RE = re.compile(r"\|\s*([A-Z]{2,8}-\d{3})\s*\|")
+sys.path.insert(0, str(ROOT / 'tools/organization'))
+from export_charts import card_fields, display_fields
+from organization_history import current_text
 
 
-def fail(errors: list[str], message: str) -> None:
-    errors.append(message)
+def validate():
+    org = ROOT / 'docs/organization'
+    data = json.loads((org / 'source/chartbook.json').read_text())
+    register = json.loads((org / 'ORGANIZATION_MAP_REGISTER.json').read_text())
+    errors = []
+
+    def need(ok, message):
+        if not ok:
+            errors.append(message)
+
+    def sha(path):
+        return hashlib.sha256(path.read_bytes()).hexdigest()
+
+    nodes = {n['id']: n for n in data['nodes']}
+    need(len(nodes) == len(data['nodes']), 'Duplicate display IDs')
+    need(len({c['id'] for c in data['charts']}) == len(data['charts']), 'Duplicate chart IDs')
+    need(len({c['slug'] for c in data['charts']}) == len(data['charts']), 'Duplicate chart slugs')
+    need(register['canonicalDate'] == data['as_of'], 'Register date differs from source')
+    need(register['visualMasterSha256'] == data['visual_master_sha256'], 'Register master hash differs')
+    master = ROOT / data['visual_master']
+    need(sha(master) == data['visual_master_sha256'], 'Visual master checksum drift')
+    pdf = fitz.open(master)
+    need([c['id'] for c in register['charts']] == [c['id'] for c in data['charts']], 'Register/source coverage differs')
+    covered_pages, covered_nodes, expected_assets = [], set(), {master.name}
+    for node in data['nodes']:
+        need(node['type'] in ('entity', 'person'), f"Unknown card type: {node['id']}")
+        need(all(display_fields(node).values()), f"Empty display field: {node['id']}")
+        need(bool(node['sources']), f"Missing evidence: {node['id']}")
+        if node['type'] == 'person':
+            year = node['joined_year']
+            need(year is None or isinstance(year, int) and 1900 <= year <= int(data['as_of'][:4]), f"Invalid year: {node['id']}")
+            need(bool(node.get('year_basis')), f"Missing year basis: {node['id']}")
+        else:
+            need(len(node['description'].split()) <= 30, f"Description exceeds brief card contract: {node['id']}")
+        for evidence in node['sources']:
+            need((ROOT / evidence['path']).is_file(), f"Missing source: {evidence['path']}")
+        if node.get('logo'):
+            need(sha(ROOT / node['logo']) == node['logo_sha256'], f"Approved logo changed: {node['id']}")
+    for chart, registered in zip(data['charts'], register['charts']):
+        need(bool(chart['edge_meaning']), f"Missing relationship semantics: {chart['id']}")
+        need(chart['node_ids'] == registered['node_ids'], f"Card register mismatch: {chart['id']}")
+        seen = set()
+        for occurrence in chart['pages']:
+            number = occurrence['page']
+            covered_pages.append(number)
+            page = pdf[number - 1]
+            need(tuple(page.rect) == (0, 0, 1440, 1080), f'Wrong page size: {number}')
+            for card in occurrence['cards']:
+                node = nodes[card['node_id']]
+                seen.add(node['id'])
+                try:
+                    actual = card_fields(page, card['bounds'], node['type'] == 'person')
+                    need(actual == display_fields(node), f"Printed card/source mismatch: page {number}, {node['id']}")
+                except ValueError as exc:
+                    errors.append(str(exc))
+        need(seen == set(chart['node_ids']), f"Page/card coverage differs: {chart['id']}")
+        covered_nodes.update(seen)
+        for path in chart['sources']:
+            need((ROOT / path).is_file(), f'Missing chart source: {path}')
+        need((ROOT / registered['page']).is_file(), f"Missing chart page: {chart['slug']}")
+        need(f"charts/{chart['slug']}.md" in (org / 'README.md').read_text(), f"Unindexed chart: {chart['slug']}")
+        need(len(registered['assets']) == 2 * len(chart['pages']), f"Missing exports: {chart['slug']}")
+        for asset in registered['assets']:
+            path = ROOT / asset['path']
+            expected_assets.add(path.name)
+            need(path.is_file() and sha(path) == asset['sha256'], f"Asset hash drift: {asset['path']}")
+            if path.suffix == '.svg' and path.is_file():
+                xml = ET.parse(path).getroot()
+                need(xml.find('{http://www.w3.org/2000/svg}desc') is not None, f'Missing accessible copy: {path.name}')
+    need(sorted(covered_pages) == list(range(1, len(pdf) + 1)), 'Publication pages omitted or duplicated')
+    need(covered_nodes == set(nodes), 'Display inventory has omitted cards')
+    need({p.name for p in (org / 'assets/current').iterdir() if p.is_file()} == expected_assets, 'Unregistered current artwork')
+    need({p.stem for p in (org / 'charts').glob('*.md')} == {c['slug'] for c in data['charts']}, 'Unregistered chart page')
+    for version in ('v0.3.0', 'v0.4.0'):
+        archive = json.loads((org / f'history/{version}/manifest.json').read_text())
+        for entry in archive['artifacts']:
+            path = ROOT / entry['preserved_path']
+            need(path.is_file() and sha(path) == entry['sha256'], f"History changed: {entry['preserved_path']}")
+            if version == 'v0.4.0' and Path(entry['original_path']).suffix in ('.svg', '.png'):
+                need(not (ROOT / entry['original_path']).exists(), f"Retired asset restored: {entry['original_path']}")
+    current_text(ROOT, 'docs/organization/source/chartbook.json', '')
+    need(not (set(nodes) & {r['id'] for r in data['register_only']}), 'Excluded record displayed as current')
+    return errors
 
 
-def main() -> int:
-    errors: list[str] = []
-
-    if not REGISTER_PATH.exists():
-        fail(errors, f"missing register: {REGISTER_PATH.relative_to(ROOT)}")
-    else:
-        try:
-            register = json.loads(REGISTER_PATH.read_text(encoding="utf-8"))
-        except (OSError, json.JSONDecodeError) as exc:
-            fail(errors, f"cannot parse register: {exc}")
-            register = {}
-
-    decision_ids: set[str] = set()
-    if DECISION_REGISTER_PATH.exists():
-        decision_ids = set(
-            DECISION_ID_RE.findall(DECISION_REGISTER_PATH.read_text(encoding="utf-8"))
-        )
-    else:
-        fail(errors, f"missing decision register: {DECISION_REGISTER_PATH.relative_to(ROOT)}")
-
-    charts = register.get("charts", []) if isinstance(register, dict) else []
-    seen_ids: set[str] = set()
-    seen_paths: set[str] = set()
-
-    if register.get("canonicalDate") != "2026-08-31":
-        fail(errors, "register canonicalDate must be 2026-08-31")
-
-    for chart in charts:
-        chart_id = chart.get("id")
-        # v0.2 rendered-chart registers distinguish the narrative page from
-        # its SVG asset; earlier registers used a single path field.
-        rel_path = chart.get("path") or chart.get("page")
-
-        if not chart_id or not rel_path:
-            fail(errors, f"chart entry missing id or path: {chart!r}")
-            continue
-
-        if chart_id in seen_ids:
-            fail(errors, f"duplicate chart id: {chart_id}")
-        seen_ids.add(chart_id)
-
-        if rel_path in seen_paths:
-            fail(errors, f"duplicate chart path: {rel_path}")
-        seen_paths.add(rel_path)
-
-        path = ROOT / rel_path
-        if not path.exists():
-            fail(errors, f"{chart_id}: missing file {rel_path}")
-            continue
-
-        text = path.read_text(encoding="utf-8")
-
-        # Current rendered-chart registers carry metadata in JSON and point to
-        # both a narrative page and a separately generated SVG asset.
-        if chart.get("page") and chart.get("asset"):
-            asset = ROOT / chart["asset"]
-            if not asset.exists():
-                fail(errors, f"{chart_id}: missing asset {chart['asset']}")
-            for field in ("title", "purpose", "canonicalDate", "relationshipSemantics"):
-                if not chart.get(field):
-                    fail(errors, f"{chart_id}: missing register field {field}")
-            continue
-
-        if f"`{chart_id}`" not in text:
-            fail(errors, f"{chart_id}: file does not declare matching Map ID")
-
-        for marker in REQUIRED_METADATA:
-            if marker not in text:
-                fail(errors, f"{chart_id}: missing metadata marker {marker}")
-
-        blocks = MERMAID_RE.findall(text)
-        if not blocks:
-            fail(errors, f"{chart_id}: no Mermaid block found")
-
-        for block_index, block in enumerate(blocks, start=1):
-            for phrase in FORBIDDEN_MERMAID_PHRASES:
-                if phrase.lower() in block.lower():
-                    fail(
-                        errors,
-                        f"{chart_id} Mermaid block {block_index}: forbidden phrase {phrase!r}",
-                    )
-
-        for decision_id in chart.get("sourceDecisionIds", []):
-            if decision_ids and decision_id not in decision_ids:
-                fail(errors, f"{chart_id}: unknown decision ID {decision_id}")
-
-    expected_chart_ids = {f"SH-ORG-{number:03d}" for number in range(1, 10)}
-    if seen_ids != expected_chart_ids:
-        missing = sorted(expected_chart_ids - seen_ids)
-        extra = sorted(seen_ids - expected_chart_ids)
-        if missing:
-            fail(errors, f"register missing chart IDs: {', '.join(missing)}")
-        if extra:
-            fail(errors, f"register has unexpected chart IDs: {', '.join(extra)}")
-
-    readme = ORG_DIR / "README.md"
-    if readme.exists():
-        readme_text = readme.read_text(encoding="utf-8")
-        for rel_path in seen_paths:
-            name = Path(rel_path).name
-            if name not in readme_text:
-                fail(errors, f"organization README does not link {name}")
-
-        for artifact in register.get("supportingArtifacts", []):
-            rel_path = artifact.get("path") if isinstance(artifact, dict) else artifact
-            if not rel_path:
-                fail(errors, f"supporting artifact entry missing path: {artifact!r}")
-                continue
-            path = ROOT / rel_path
-            if not path.exists():
-                fail(errors, f"missing supporting artifact: {rel_path}")
-            if path != readme and Path(rel_path).name not in readme_text:
-                fail(errors, f"organization README does not link supporting artifact {Path(rel_path).name}")
-    else:
-        fail(errors, "missing docs/organization/README.md")
-
+def main():
+    errors = validate()
     if errors:
-        print("Organization-map validation FAILED:", file=sys.stderr)
-        for error in errors:
-            print(f"  - {error}", file=sys.stderr)
+        print('\n'.join('FAIL ' + e for e in errors), file=sys.stderr)
         return 1
-
-    print(
-        f"Organization-map validation passed: {len(charts)} charts, "
-        f"{len(decision_ids)} decision IDs available."
-    )
+    print('PASS organization charts: card copy, complete publication coverage, source paths, logos, assets and immutable history')
     return 0
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     raise SystemExit(main())

@@ -8,39 +8,7 @@
 
 ## Willow's two centers of gravity
 
-```mermaid
-flowchart TB
-    WILLOW["PROJECT WILLOW / WILLOW LABS<br/>bounded industrial experimentation<br/><b>Question → belief → experiment → observation → decision</b>"]
-
-    GID["Gid Voss<br/><b>runs Willow from Pittsburgh</b><br/>experimental and epistemic authority"]
-    SLOANE["Rachel Sloane<br/><b>Sacramento institutional seam</b><br/>budget · legal · security · product · executive translation<br/><i>not Gid's boss</i>"]
-
-    subgraph EARLY["PITTSBURGH CORE — DOCUMENTED 2021 TEAM"]
-        MARA["Mara Aquil<br/>embedded and field systems<br/>field reliability"]
-        THEO["Theo Bell<br/>applied mathematics<br/>proxy-signal discovery"]
-        BENJI["Benji Rao<br/>mechanical systems<br/>prototypes"]
-        JUN["Jun Park<br/>human-computer interaction<br/>operator-centered design"]
-        ELI["Eli — surname OPEN<br/>RF and communications"]
-        TWO["Approximately two additional early staff<br/><b>identities OPEN</b>"]
-    end
-
-    subgraph LATER["DOCUMENTED 2025 HIRES"]
-        OWEN["Owen Kessler<br/>junior research engineering<br/>joined August 2025"]
-        LAYLA["Layla Haddad<br/>evidence, rules, and accountable rails<br/>joined September 2025"]
-    end
-
-    GID -->|runs| WILLOW
-    SLOANE -.->|institutional connection and accountability| WILLOW
-
-    WILLOW --- MARA
-    WILLOW --- THEO
-    WILLOW --- BENJI
-    WILLOW --- JUN
-    WILLOW --- ELI
-    WILLOW --- TWO
-    WILLOW --- OWEN
-    WILLOW --- LAYLA
-```
+See [Willow leadership](charts/people-willow-leadership.md) and the [research team](charts/people-willow-team.md). Rachel Sloane’s institutional role does not make her Gid Voss’s supervisor.
 
 The membership lines show documented participation in Willow, not a direct-report hierarchy. The exact August 31, 2026 laboratory headcount, the identities of the remaining early staff, and formal titles other than locked role descriptions remain open.
 
@@ -84,33 +52,7 @@ The historical bridge remains part of Atlas's formation. The September 8/9 close
 
 ## Current Atlas Meridian organization boundary
 
-```mermaid
-flowchart LR
-    ATL["ATLAS MERIDIAN PRODUCT ORGANIZATION<br/>commercial product + professional platform"]
-    ENG["Product engineering<br/>runtime · workflows · integrations · reliability"]
-    PM["Product management + design<br/>requirements · UX · product boundaries"]
-    EVAL["AI / agent evaluation<br/>tests · safety · provenance · authority rails"]
-    SEC["Security / tenancy / entitlements<br/>client isolation · data controls"]
-    TRANSFER["Transfer + developer tooling<br/>client-owned derivatives · export · runbooks"]
-    SUCCESS["Product support / success<br/>implementation · release · enterprise support"]
-    ADV["SABLE HARBOR ADVISORY<br/>client-facing professional business<br/>three practices · one bench"]
-    CLIENT["CLIENT PLANE<br/>client data · matters · workflows · agents · transfer"]
-    PRO["SABLE HARBOR PROFESSIONAL PLANE<br/>protected methods · cross-matter learning · firm-only capabilities"]
-    FF["FOUNDRY FIELD<br/>flagship deployable operational product"]
-
-    ATL --- ENG
-    ATL --- PM
-    ATL --- EVAL
-    ATL --- SEC
-    ATL --- TRANSFER
-    ATL --- SUCCESS
-    ATL --> CLIENT
-    ATL --> PRO
-    ATL -.->|product substrate and matter system| ADV
-    FF -.->|represented operational terrain where licensed| ADV
-    ADV -->|professional intervention + client-safe transfer| CLIENT
-    PRO -.->|controlled firm-only capability| ADV
-```
+See [Atlas Meridian product organization](charts/atlas-meridian.md) and [named product leadership](charts/people-atlas-meridian.md).
 
 The nodes inside the Atlas product organization are capability groupings, not locked departments or headcount allocations. Exact reporting lines and staffing remain product implementation decisions unless separately canonized.
 

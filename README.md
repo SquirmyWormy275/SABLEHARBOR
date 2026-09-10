@@ -19,9 +19,13 @@ It is modeled as a company that would exist independently of any audit or benchm
 - **OPEN** — unresolved and not to be silently invented;
 - **SUPERSEDED** — preserved prior direction that no longer controls current canon.
 
-## Advisory and Atlas closeout
+## Advisory and Atlas
 
-The [accepted September 8 closeout](docs/canon/ADVISORY_ATLAS_MERIDIAN_CLOSEOUT_2026-09-08.md) establishes the three-practice Advisory common bench, independent matter/value governance, serving-J2 boundary and separate Atlas product organization. See the [Advisory source package](docs/advisory/README.md).
+The [September 8 closeout](docs/canon/ADVISORY_ATLAS_MERIDIAN_CLOSEOUT_2026-09-08.md) establishes the three-practice Advisory common bench, independent matter/value governance, serving-J2 boundary and separate Atlas product organization. The [September 9 Tier 1 addendum](docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md) completes the operating architecture: professional hierarchy, carry design, quality tiers, pricing policy, conflict/IP doctrine, matter delivery system and Atlas Meridian commercial product model. The integrated [Advisory Firm Manual](docs/advisory/SABLE_HARBOR_ADVISORY_FIRM_MANUAL_2026-09-09.md) is the executive operating artifact; detailed standards remain controlling where more specific.
+
+Atlas Meridian is a product organization and commercial/professional platform, not an Advisory staffing pool. Atlas Product owns platform engineering, roadmap, reliability and product support; Advisory owns professional judgment, matter outcomes, intervention and transfer. Foundry Field remains the flagship deployable operational product.
+
+See the [Advisory source package](docs/advisory/README.md).
 
 ## Current business development
 
@@ -31,7 +35,7 @@ The [business-driven financial successor](enterprise/business/README.md) supplie
 
 ## Current canon
 
-The controlling September 2–7, 2026 layer begins with [`SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md`](docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md) and is extended by the [decision register](docs/canon/DECISION_REGISTER_v0.3.1.md), [September 3 decision-register addendum](docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-03.md), [corporate headquarters closeout](docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md), [September 5 Red Wash addendum](docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-05_RED_WASH.md), [Red Wash transaction and operating record](docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05.md), [September 6 canon closeout addendum](docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-06_CLOSEOUT.md), [v0.3 changelog](docs/canon/CANON_CHANGELOG_v0.3.md), [Red Wash closeout changelog](docs/canon/RED_WASH_CLOSEOUT_CHANGELOG_2026-09-05.md), and [board approval records](docs/governance/board-records/README.md).
+The controlling September 2–9, 2026 layer begins with [`SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md`](docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md) and is extended by the [decision register](docs/canon/DECISION_REGISTER_v0.3.1.md), [September 3 decision-register addendum](docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-03.md), [corporate headquarters closeout](docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md), [September 5 Red Wash addendum](docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-05_RED_WASH.md), [Red Wash transaction and operating record](docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05.md), [September 6 canon closeout addendum](docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-06_CLOSEOUT.md), [September 8 Advisory/Atlas closeout](docs/canon/ADVISORY_ATLAS_MERIDIAN_CLOSEOUT_2026-09-08.md), [September 9 Advisory Tier 1 addendum](docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md), [v0.3 changelog](docs/canon/CANON_CHANGELOG_v0.3.md), [Red Wash closeout changelog](docs/canon/RED_WASH_CLOSEOUT_CHANGELOG_2026-09-05.md), and [board approval records](docs/governance/board-records/README.md).
 
 The September 6 addendum supersedes conflicting older statements within its stated scope; the [current board doctrine is v1.0.1](docs/governance/BOARD_AND_CAPITAL_GOVERNANCE_v1.0.1.md). The finance-pinned v0.3 lore, base decision register, and board v1.0.0 source retain their original bytes for reproducible historical finance builds. Their superseded surname statements do not override the accepted Daniel Mercer decision.
 
@@ -61,20 +65,12 @@ Historical branch names are provenance only; they are not current work instructi
 
 ## Organization at a glance
 
-The rendered organization package is reconciled through the September 5 Red Wash closeout and preserves the September 3 institutional architecture:
+The [company-wide chart suite](docs/organization/README.md) covers seven business lines, legal ownership, headquarters, J2, enterprise systems, facilities and all 45 current named people.
 
-- **Board / CEO** — enterprise authority;
-- **operating businesses** — end-to-end business authority inside enterprise boundaries;
-- **Enterprise Support Services (ESS)** — administrative umbrella for enterprise support functions, led administratively rather than as a super-executive command chain;
-- **J2** — distinct Judgment & Junction institution outside ESS;
-- **Internal Audit** — functionally independent to the Board Audit & Compliance Committee;
-- **professional practices** — horizontal standards/profession stewardship without dual operating authority.
-- **Pale Sun / Red Wash** — 12 business-layer FTE and 128 site FTE, with qualified external carriers authoritative throughout 2025;
-- **ARU / BS&T interface** — acquired January 7, 2026; limited ordinary-inbound service from July 7, with direct uranium custody still gated.
+[![Business lines](docs/organization/assets/current/business-lines.png)](docs/organization/charts/business-lines.md)
 
-[![Sable Harbor enterprise organization chart](docs/organization/assets/enterprise-organization-2026.svg)](docs/organization/README.md)
+[Board and Chief Executive](docs/organization/charts/people-board.md) · [Legal ownership](docs/organization/charts/industrial-ownership.md) · [Headquarters](docs/organization/charts/corporate-headquarters.md) · [Complete wording inventory](docs/organization/DISPLAY_INVENTORY.md)
 
-The organization renderer preserves unnamed roles as open and reproduces all nine charts from controlled sources.
 
 ## Pale Sun and Red Wash
 

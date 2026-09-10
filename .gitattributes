@@ -3,3 +3,6 @@
 docs/handoffs/industrial_r2/** -text whitespace=-blank-at-eol
 docs/organization/history/v0.3.0/** -text whitespace=-blank-at-eol
 red_wash/history/v1.0.0/** -text whitespace=-blank-at-eol
+
+# PDF publications are binary even with ASCII-encoded streams.
+*.pdf binary

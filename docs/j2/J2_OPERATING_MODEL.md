@@ -5,15 +5,7 @@
 
 ## High-level organization
 
-```mermaid
-flowchart TB
-  HQ[J2 Headquarters]
-  HQ -. doctrine / standards .-> C[Contact]
-  HQ -. doctrine / standards .-> J[Judgment]
-  HQ -. doctrine / standards .-> O[Orientation]
-  HQ -. cross-cutting arm .-> JAG[Junction Advisory Group]
-  HQ -. cross-cutting arm .-> EDU[Education]
-```
+See the [current J2 organization chart](../organization/charts/corporate-j2.md). The chart distinguishes institutional membership from the CEO reporting direction whose details remain open.
 
 ## Functional loop
 

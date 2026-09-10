@@ -1,0 +1,71 @@
+{
+  "source_commit": "7988f4740f39afa4a3db92e9efe1e0d737840d6d",
+  "status": "SUPERSEDED_VISUAL_HISTORY",
+  "artifacts": [
+    {
+      "original_path": "docs/organization/assets/enterprise-organization-2026.svg",
+      "preserved_path": "docs/organization/history/v0.4.0/assets/enterprise-organization-2026.svg",
+      "sha256": "d59bdddad5c78a062a5e34dc2a3d139ee912e80b260c9f06b1e5f7912bb5f0de"
+    },
+    {
+      "original_path": "docs/organization/assets/leadership-authority-2026.svg",
+      "preserved_path": "docs/organization/history/v0.4.0/assets/leadership-authority-2026.svg",
+      "sha256": "5e8a589a2744a26ff66d09961c45ed3ced6f4c47a4b55c1a20d900bd4fa3b0f8"
+    },
+    {
+      "original_path": "docs/organization/assets/foundry-field-organization-2026.svg",
+      "preserved_path": "docs/organization/history/v0.4.0/assets/foundry-field-organization-2026.svg",
+      "sha256": "f7a14d4ce9d9db367c21136596b3c1f472fc095089fca81c4a78d359d30677d7"
+    },
+    {
+      "original_path": "docs/organization/assets/willow-organization-2026.svg",
+      "preserved_path": "docs/organization/history/v0.4.0/assets/willow-organization-2026.svg",
+      "sha256": "7988ebc9b6560be5d32e271281fbd268d600a345cef4a9db20afee9525a475cc"
+    },
+    {
+      "original_path": "docs/organization/assets/atlas-meridian-bridge-2026.svg",
+      "preserved_path": "docs/organization/history/v0.4.0/assets/atlas-meridian-bridge-2026.svg",
+      "sha256": "fde4dba91842932b8ce6a0bb3828f374441700a7ea27f78b70e00edb62848824"
+    },
+    {
+      "original_path": "docs/organization/assets/pale-sun-red-wash-organization-2026.svg",
+      "preserved_path": "docs/organization/history/v0.4.0/assets/pale-sun-red-wash-organization-2026.svg",
+      "sha256": "846ad40000336222217361825819d584ef405c48f8deb127f25bde7c80a48047"
+    },
+    {
+      "original_path": "docs/organization/assets/project-cradle-organization-2026.svg",
+      "preserved_path": "docs/organization/history/v0.4.0/assets/project-cradle-organization-2026.svg",
+      "sha256": "d739bad9d34c83003cc377ae16498660f9385daef953674ca6af114b6ecc045e"
+    },
+    {
+      "original_path": "docs/organization/assets/aru-bst-organization-2026.svg",
+      "preserved_path": "docs/organization/history/v0.4.0/assets/aru-bst-organization-2026.svg",
+      "sha256": "e328e083c4c227379c6ab16b6368beff032f7fc09a9a0eeb7ace65b8860b9379"
+    },
+    {
+      "original_path": "docs/organization/assets/original-eight-formation-and-status.svg",
+      "preserved_path": "docs/organization/history/v0.4.0/assets/original-eight-formation-and-status.svg",
+      "sha256": "9ff531c83ae79008438fcd656ab2ccaa49952d0449135003112ebcf5dfc80cbb"
+    },
+    {
+      "original_path": "docs/organization/assets/j2/j2-high-level.svg",
+      "preserved_path": "docs/organization/history/v0.4.0/assets/j2/j2-high-level.svg",
+      "sha256": "25adb8b494718341667c12efc1a194c6db82fc60d49291aef7efcda7034c567b"
+    },
+    {
+      "original_path": "docs/organization/assets/j2/j2-high-level.png",
+      "preserved_path": "docs/organization/history/v0.4.0/assets/j2/j2-high-level.png",
+      "sha256": "2e3dc8a20b0451c34d34f5cb984b416276f3f47a8bfe1c7524d1c83f8ee21dff"
+    },
+    {
+      "original_path": "docs/organization/ORGANIZATION_MAP_REGISTER.json",
+      "preserved_path": "docs/organization/history/v0.4.0/ORGANIZATION_MAP_REGISTER.json",
+      "sha256": "09e0f2f52658eeca29b6f260ed88cd40b7dd5174c1abaee8d797b3055e6ad796"
+    },
+    {
+      "original_path": "docs/organization/J2_CHART_REGISTER.json",
+      "preserved_path": "docs/organization/history/v0.4.0/J2_CHART_REGISTER.json",
+      "sha256": "f468844d729743790885b116c6528522375960c5da3b2751ae3e58df40c9857d"
+    }
+  ]
+}

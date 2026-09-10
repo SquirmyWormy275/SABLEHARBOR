@@ -4216,7 +4216,34 @@
       "sources": [
         "industrial/source/entities.json"
       ],
-      "notes": []
+      "notes": [],
+      "edges": [
+        {
+          "from": "SHI",
+          "to": "SHIH",
+          "relationship": "100% equity ownership"
+        },
+        {
+          "from": "SHIH",
+          "to": "PS",
+          "relationship": "100% equity ownership"
+        },
+        {
+          "from": "PS",
+          "to": "RWH",
+          "relationship": "100% equity ownership"
+        },
+        {
+          "from": "SHIH",
+          "to": "ARU",
+          "relationship": "100% equity ownership"
+        },
+        {
+          "from": "ARU",
+          "to": "BST",
+          "relationship": "100% equity ownership"
+        }
+      ]
     },
     {
       "id": "SH-ORG-PEOPLE-BOARD",
@@ -4417,9 +4444,12 @@
         }
       ],
       "sources": [
-        "docs/canon/ADVISORY_ATLAS_MERIDIAN_CLOSEOUT_2026-09-08.md"
+        "docs/canon/ADVISORY_ATLAS_MERIDIAN_CLOSEOUT_2026-09-08.md",
+        "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md"
       ],
-      "notes": []
+      "notes": [
+        "The September 9 Tier 1 decision preserves Advisory as a business line of the existing contracting entity and Atlas as a separate product organization. Edition names, professional ranks and matter roles are listed in the supporting register; they do not create subsidiaries or named employees."
+      ]
     },
     {
       "id": "SH-ORG-ARU-FACILITIES",
@@ -4708,9 +4738,12 @@
         }
       ],
       "sources": [
-        "docs/canon/ADVISORY_ATLAS_MERIDIAN_CLOSEOUT_2026-09-08.md"
+        "docs/canon/ADVISORY_ATLAS_MERIDIAN_CLOSEOUT_2026-09-08.md",
+        "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md"
       ],
-      "notes": []
+      "notes": [
+        "The September 9 Tier 1 decision preserves Advisory as a business line of the existing contracting entity and Atlas as a separate product organization. Edition names, professional ranks and matter roles are listed in the supporting register; they do not create subsidiaries or named employees."
+      ]
     },
     {
       "id": "SH-ORG-BST-NETWORK",
@@ -13756,6 +13789,370 @@
       "sources": [
         {
           "path": "docs/j2/J2_ESTABLISHMENT.md"
+        }
+      ]
+    },
+    {
+      "id": "ATL-EDITION-1",
+      "name": "Atlas Meridian Core",
+      "status": "COMMERCIAL_CONFIGURATION",
+      "reason": "Accepted product edition/configuration; not a separate business unit, legal entity or named employee.",
+      "sources": [
+        {
+          "path": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md"
+        },
+        {
+          "path": "docs/advisory/ATLAS_MERIDIAN_COMMERCIAL_PRODUCT_STANDARD.md"
+        }
+      ]
+    },
+    {
+      "id": "ATL-EDITION-2",
+      "name": "Atlas Meridian Enterprise",
+      "status": "COMMERCIAL_CONFIGURATION",
+      "reason": "Accepted product edition/configuration; not a separate business unit, legal entity or named employee.",
+      "sources": [
+        {
+          "path": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md"
+        },
+        {
+          "path": "docs/advisory/ATLAS_MERIDIAN_COMMERCIAL_PRODUCT_STANDARD.md"
+        }
+      ]
+    },
+    {
+      "id": "ATL-EDITION-3",
+      "name": "Atlas Meridian Professional",
+      "status": "COMMERCIAL_CONFIGURATION",
+      "reason": "Accepted product edition/configuration; not a separate business unit, legal entity or named employee.",
+      "sources": [
+        {
+          "path": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md"
+        },
+        {
+          "path": "docs/advisory/ATLAS_MERIDIAN_COMMERCIAL_PRODUCT_STANDARD.md"
+        }
+      ]
+    },
+    {
+      "id": "ATL-EDITION-4",
+      "name": "Atlas Meridian Managed",
+      "status": "COMMERCIAL_CONFIGURATION",
+      "reason": "Accepted product edition/configuration; not a separate business unit, legal entity or named employee.",
+      "sources": [
+        {
+          "path": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md"
+        },
+        {
+          "path": "docs/advisory/ATLAS_MERIDIAN_COMMERCIAL_PRODUCT_STANDARD.md"
+        }
+      ]
+    },
+    {
+      "id": "ADV-ROLE-1",
+      "name": "President — Advisory",
+      "status": "ROLE_RANK_OR_FORUM",
+      "reason": "Accepted Advisory role, professional rank or governance forum. No named occupant is established; the common bench is not divided into staffing silos.",
+      "sources": [
+        {
+          "path": "docs/advisory/FIRM_GOVERNANCE_AND_PROFESSIONAL_HIERARCHY.md"
+        },
+        {
+          "path": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md"
+        }
+      ]
+    },
+    {
+      "id": "ADV-ROLE-2",
+      "name": "Managing Director — Advisory",
+      "status": "ROLE_RANK_OR_FORUM",
+      "reason": "Accepted Advisory role, professional rank or governance forum. No named occupant is established; the common bench is not divided into staffing silos.",
+      "sources": [
+        {
+          "path": "docs/advisory/FIRM_GOVERNANCE_AND_PROFESSIONAL_HIERARCHY.md"
+        },
+        {
+          "path": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md"
+        }
+      ]
+    },
+    {
+      "id": "ADV-ROLE-3",
+      "name": "Director — Advisory",
+      "status": "ROLE_RANK_OR_FORUM",
+      "reason": "Accepted Advisory role, professional rank or governance forum. No named occupant is established; the common bench is not divided into staffing silos.",
+      "sources": [
+        {
+          "path": "docs/advisory/FIRM_GOVERNANCE_AND_PROFESSIONAL_HIERARCHY.md"
+        },
+        {
+          "path": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md"
+        }
+      ]
+    },
+    {
+      "id": "ADV-ROLE-4",
+      "name": "Manager — Advisory",
+      "status": "ROLE_RANK_OR_FORUM",
+      "reason": "Accepted Advisory role, professional rank or governance forum. No named occupant is established; the common bench is not divided into staffing silos.",
+      "sources": [
+        {
+          "path": "docs/advisory/FIRM_GOVERNANCE_AND_PROFESSIONAL_HIERARCHY.md"
+        },
+        {
+          "path": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md"
+        }
+      ]
+    },
+    {
+      "id": "ADV-ROLE-5",
+      "name": "Distinguished Principal — Advisory",
+      "status": "ROLE_RANK_OR_FORUM",
+      "reason": "Accepted Advisory role, professional rank or governance forum. No named occupant is established; the common bench is not divided into staffing silos.",
+      "sources": [
+        {
+          "path": "docs/advisory/FIRM_GOVERNANCE_AND_PROFESSIONAL_HIERARCHY.md"
+        },
+        {
+          "path": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md"
+        }
+      ]
+    },
+    {
+      "id": "ADV-ROLE-6",
+      "name": "Senior Principal — Advisory",
+      "status": "ROLE_RANK_OR_FORUM",
+      "reason": "Accepted Advisory role, professional rank or governance forum. No named occupant is established; the common bench is not divided into staffing silos.",
+      "sources": [
+        {
+          "path": "docs/advisory/FIRM_GOVERNANCE_AND_PROFESSIONAL_HIERARCHY.md"
+        },
+        {
+          "path": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md"
+        }
+      ]
+    },
+    {
+      "id": "ADV-ROLE-7",
+      "name": "Principal — Advisory",
+      "status": "ROLE_RANK_OR_FORUM",
+      "reason": "Accepted Advisory role, professional rank or governance forum. No named occupant is established; the common bench is not divided into staffing silos.",
+      "sources": [
+        {
+          "path": "docs/advisory/FIRM_GOVERNANCE_AND_PROFESSIONAL_HIERARCHY.md"
+        },
+        {
+          "path": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md"
+        }
+      ]
+    },
+    {
+      "id": "ADV-ROLE-8",
+      "name": "Senior Professional — Advisory",
+      "status": "ROLE_RANK_OR_FORUM",
+      "reason": "Accepted Advisory role, professional rank or governance forum. No named occupant is established; the common bench is not divided into staffing silos.",
+      "sources": [
+        {
+          "path": "docs/advisory/FIRM_GOVERNANCE_AND_PROFESSIONAL_HIERARCHY.md"
+        },
+        {
+          "path": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md"
+        }
+      ]
+    },
+    {
+      "id": "ADV-ROLE-9",
+      "name": "Professional — Advisory",
+      "status": "ROLE_RANK_OR_FORUM",
+      "reason": "Accepted Advisory role, professional rank or governance forum. No named occupant is established; the common bench is not divided into staffing silos.",
+      "sources": [
+        {
+          "path": "docs/advisory/FIRM_GOVERNANCE_AND_PROFESSIONAL_HIERARCHY.md"
+        },
+        {
+          "path": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md"
+        }
+      ]
+    },
+    {
+      "id": "ADV-ROLE-10",
+      "name": "Associate Professional — Advisory",
+      "status": "ROLE_RANK_OR_FORUM",
+      "reason": "Accepted Advisory role, professional rank or governance forum. No named occupant is established; the common bench is not divided into staffing silos.",
+      "sources": [
+        {
+          "path": "docs/advisory/FIRM_GOVERNANCE_AND_PROFESSIONAL_HIERARCHY.md"
+        },
+        {
+          "path": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md"
+        }
+      ]
+    },
+    {
+      "id": "ADV-ROLE-11",
+      "name": "Practice Leader — Advisory",
+      "status": "ROLE_RANK_OR_FORUM",
+      "reason": "Accepted Advisory role, professional rank or governance forum. No named occupant is established; the common bench is not divided into staffing silos.",
+      "sources": [
+        {
+          "path": "docs/advisory/FIRM_GOVERNANCE_AND_PROFESSIONAL_HIERARCHY.md"
+        },
+        {
+          "path": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md"
+        }
+      ]
+    },
+    {
+      "id": "ADV-ROLE-12",
+      "name": "Relationship Principal — Advisory",
+      "status": "ROLE_RANK_OR_FORUM",
+      "reason": "Accepted Advisory role, professional rank or governance forum. No named occupant is established; the common bench is not divided into staffing silos.",
+      "sources": [
+        {
+          "path": "docs/advisory/FIRM_GOVERNANCE_AND_PROFESSIONAL_HIERARCHY.md"
+        },
+        {
+          "path": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md"
+        }
+      ]
+    },
+    {
+      "id": "ADV-ROLE-13",
+      "name": "Matter Principal — Advisory",
+      "status": "ROLE_RANK_OR_FORUM",
+      "reason": "Accepted Advisory role, professional rank or governance forum. No named occupant is established; the common bench is not divided into staffing silos.",
+      "sources": [
+        {
+          "path": "docs/advisory/FIRM_GOVERNANCE_AND_PROFESSIONAL_HIERARCHY.md"
+        },
+        {
+          "path": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md"
+        }
+      ]
+    },
+    {
+      "id": "ADV-ROLE-14",
+      "name": "Acceptance Principal — Advisory",
+      "status": "ROLE_RANK_OR_FORUM",
+      "reason": "Accepted Advisory role, professional rank or governance forum. No named occupant is established; the common bench is not divided into staffing silos.",
+      "sources": [
+        {
+          "path": "docs/advisory/FIRM_GOVERNANCE_AND_PROFESSIONAL_HIERARCHY.md"
+        },
+        {
+          "path": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md"
+        }
+      ]
+    },
+    {
+      "id": "ADV-ROLE-15",
+      "name": "Independent Reviewer — Advisory",
+      "status": "ROLE_RANK_OR_FORUM",
+      "reason": "Accepted Advisory role, professional rank or governance forum. No named occupant is established; the common bench is not divided into staffing silos.",
+      "sources": [
+        {
+          "path": "docs/advisory/FIRM_GOVERNANCE_AND_PROFESSIONAL_HIERARCHY.md"
+        },
+        {
+          "path": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md"
+        }
+      ]
+    },
+    {
+      "id": "ADV-ROLE-16",
+      "name": "Value Office Lead — Advisory",
+      "status": "ROLE_RANK_OR_FORUM",
+      "reason": "Accepted Advisory role, professional rank or governance forum. No named occupant is established; the common bench is not divided into staffing silos.",
+      "sources": [
+        {
+          "path": "docs/advisory/FIRM_GOVERNANCE_AND_PROFESSIONAL_HIERARCHY.md"
+        },
+        {
+          "path": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md"
+        }
+      ]
+    },
+    {
+      "id": "ADV-ROLE-17",
+      "name": "Transfer Owner — Advisory",
+      "status": "ROLE_RANK_OR_FORUM",
+      "reason": "Accepted Advisory role, professional rank or governance forum. No named occupant is established; the common bench is not divided into staffing silos.",
+      "sources": [
+        {
+          "path": "docs/advisory/FIRM_GOVERNANCE_AND_PROFESSIONAL_HIERARCHY.md"
+        },
+        {
+          "path": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md"
+        }
+      ]
+    },
+    {
+      "id": "ADV-ROLE-18",
+      "name": "Atlas Matter Steward — Advisory",
+      "status": "ROLE_RANK_OR_FORUM",
+      "reason": "Accepted Advisory role, professional rank or governance forum. No named occupant is established; the common bench is not divided into staffing silos.",
+      "sources": [
+        {
+          "path": "docs/advisory/FIRM_GOVERNANCE_AND_PROFESSIONAL_HIERARCHY.md"
+        },
+        {
+          "path": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md"
+        }
+      ]
+    },
+    {
+      "id": "ADV-ROLE-19",
+      "name": "Executive Operating Review — Advisory",
+      "status": "ROLE_RANK_OR_FORUM",
+      "reason": "Accepted Advisory role, professional rank or governance forum. No named occupant is established; the common bench is not divided into staffing silos.",
+      "sources": [
+        {
+          "path": "docs/advisory/FIRM_GOVERNANCE_AND_PROFESSIONAL_HIERARCHY.md"
+        },
+        {
+          "path": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md"
+        }
+      ]
+    },
+    {
+      "id": "ADV-ROLE-20",
+      "name": "Professional Quality Review — Advisory",
+      "status": "ROLE_RANK_OR_FORUM",
+      "reason": "Accepted Advisory role, professional rank or governance forum. No named occupant is established; the common bench is not divided into staffing silos.",
+      "sources": [
+        {
+          "path": "docs/advisory/FIRM_GOVERNANCE_AND_PROFESSIONAL_HIERARCHY.md"
+        },
+        {
+          "path": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md"
+        }
+      ]
+    },
+    {
+      "id": "ADV-ROLE-21",
+      "name": "Carry Allocation Review — Advisory",
+      "status": "ROLE_RANK_OR_FORUM",
+      "reason": "Accepted Advisory role, professional rank or governance forum. No named occupant is established; the common bench is not divided into staffing silos.",
+      "sources": [
+        {
+          "path": "docs/advisory/FIRM_GOVERNANCE_AND_PROFESSIONAL_HIERARCHY.md"
+        },
+        {
+          "path": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md"
+        }
+      ]
+    },
+    {
+      "id": "ADV-ROLE-22",
+      "name": "Reserved Matter Room — Advisory",
+      "status": "ROLE_RANK_OR_FORUM",
+      "reason": "Accepted Advisory role, professional rank or governance forum. No named occupant is established; the common bench is not divided into staffing silos.",
+      "sources": [
+        {
+          "path": "docs/advisory/FIRM_GOVERNANCE_AND_PROFESSIONAL_HIERARCHY.md"
+        },
+        {
+          "path": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md"
         }
       ]
     }
