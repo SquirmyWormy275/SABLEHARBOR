@@ -19,6 +19,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # Finance tests resolve immutable canon snapshots from Git history.
+          # Match finance-platform-ci.yml; a shallow checkout omits those inputs.
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
