@@ -2,6 +2,10 @@
 
 J2 is Sable Harbor's internal intelligence, judgment, orientation, education, and learning capability. It is not a legal entity or customer-facing business line.
 
+## Current leadership
+
+The [September 10 appointments](../canon/J2_LEADERSHIP_APPOINTMENTS_2026-09-10.md) establish six current leaders and company joining years. See the [people chart](../organization/charts/people-j2.md) and [structured roster](../structured/j2_leadership_2026-09-10.json). Remaining deputies, the Chief of Staff and exact appointment histories remain open.
+
 ## Controlled package
 
 - [Charter](J2_CHARTER.md)

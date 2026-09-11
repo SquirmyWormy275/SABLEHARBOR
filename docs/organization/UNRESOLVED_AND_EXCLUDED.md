@@ -41,10 +41,7 @@ These records are deliberately outside current people/entity cards. They include
 | ROLE-34 | Chief Information Security Officer | UNNAMED_ROLE | No named occupant and joining year established; excluded from people cards. |
 | ROLE-35 | Head of Internal Audit | UNNAMED_ROLE | No named occupant and joining year established; excluded from people cards. |
 | ROLE-36 | President of Sable Harbor Advisory | UNNAMED_ROLE | No named occupant and joining year established; excluded from people cards. |
-| ROLE-37 | Head of J2 | UNNAMED_ROLE | No named occupant and joining year established; excluded from people cards. |
-| ROLE-38 | Deputy Head of J2 | UNNAMED_ROLE | No named occupant and joining year established; excluded from people cards. |
 | ROLE-39 | Chief of Staff | UNNAMED_ROLE | No named occupant and joining year established; excluded from people cards. |
-| ROLE-40 | Head of Contact | UNNAMED_ROLE | No named occupant and joining year established; excluded from people cards. |
 | ROLE-41 | Deputy Head of Contact | UNNAMED_ROLE | No named occupant and joining year established; excluded from people cards. |
 | ROLE-42 | Collection Director | UNNAMED_ROLE | No named occupant and joining year established; excluded from people cards. |
 | ROLE-43 | Collection Manager | UNNAMED_ROLE | No named occupant and joining year established; excluded from people cards. |
@@ -53,16 +50,13 @@ These records are deliberately outside current people/entity cards. They include
 | ROLE-46 | Field / Technical Collector | UNNAMED_ROLE | No named occupant and joining year established; excluded from people cards. |
 | ROLE-47 | External-Source Collector | UNNAMED_ROLE | No named occupant and joining year established; excluded from people cards. |
 | ROLE-48 | Collection Methods Officer | UNNAMED_ROLE | No named occupant and joining year established; excluded from people cards. |
-| ROLE-49 | Head of Judgment | UNNAMED_ROLE | No named occupant and joining year established; excluded from people cards. |
 | ROLE-50 | Deputy Head of Judgment | UNNAMED_ROLE | No named occupant and joining year established; excluded from people cards. |
 | ROLE-51 | Senior Judgment Director | UNNAMED_ROLE | No named occupant and joining year established; excluded from people cards. |
 | ROLE-52 | Judgment Officer | UNNAMED_ROLE | No named occupant and joining year established; excluded from people cards. |
 | ROLE-53 | Judgment Watch Officer | UNNAMED_ROLE | No named occupant and joining year established; excluded from people cards. |
-| ROLE-54 | Head of Orientation | UNNAMED_ROLE | No named occupant and joining year established; excluded from people cards. |
 | ROLE-55 | Deputy Head of Orientation | UNNAMED_ROLE | No named occupant and joining year established; excluded from people cards. |
 | ROLE-56 | Senior Orientation Officer | UNNAMED_ROLE | No named occupant and joining year established; excluded from people cards. |
 | ROLE-57 | Orientation Officer | UNNAMED_ROLE | No named occupant and joining year established; excluded from people cards. |
-| ROLE-58 | Head of Education | UNNAMED_ROLE | No named occupant and joining year established; excluded from people cards. |
 | ROLE-59 | Education faculty and program staff | UNNAMED_ROLE | No named occupant and joining year established; excluded from people cards. |
 | ROLE-60 | JAG team members | UNNAMED_ROLE | No named occupant and joining year established; excluded from people cards. |
 | ROLE-61 | Commercial director | UNNAMED_ROLE | No named occupant and joining year established; excluded from people cards. |

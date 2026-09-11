@@ -1,6 +1,6 @@
 # Corporate headquarters
 
-**SH-ORG-CORP-HEADQUARTERS · 2026-09-09 · v1.0.0**
+**SH-ORG-CORP-HEADQUARTERS · 2026-09-10 · v1.1.0**
 
 Corporate institutions, executive oversight, administrative reporting, and independent audit oversight.
 

@@ -905,6 +905,14 @@
       "source_sha256": "6d08de8c18deef4c337dfaecdd24016c824f4fef7bba2308c97a95368926cd06",
       "brand": "corporate",
       "normalizer": "pypdf"
+    },
+    {
+      "source": "docs/canon/J2_LEADERSHIP_APPOINTMENTS_2026-09-10.md",
+      "publication": "docs/j2/publications/SH-J2-PPL-20260910_v1.0.0.pdf",
+      "sha256": "2c99221acdcdc5c0cca4a428eda4fe6d7ed8e9e0e80550e58ac49521e1b02a2d",
+      "source_sha256": "05ee1d4bbcad3ff2de9f623de0b57373acaaf611c0b161664a9f3e36b1066509",
+      "brand": "j2",
+      "normalizer": "pypdf"
     }
   ]
 }

@@ -393,6 +393,13 @@ def render_pdf(
     local_staging.replace(out)
 
 
+DOCS.append((
+    'docs/canon/J2_LEADERSHIP_APPOINTMENTS_2026-09-10.md',
+    'docs/j2/publications/SH-J2-PPL-20260910_v1.0.0.pdf',
+    'j2',
+))
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--normalizer", choices=("auto", "qpdf", "pypdf"), default="auto")

@@ -1,6 +1,6 @@
 # Complete chart wording
 
-202 display records. Repeated appearances of the same card are counted once. Person columns mean name, job title and joining year; entity columns mean name, location and actual work.
+208 display records. Repeated appearances of the same card are counted once. Person columns mean name, job title and joining year; entity columns mean name, location and actual work.
 
 | ID | Name | Location / job title | Actual work / joining year | Sources |
 | --- | --- | --- | --- | --- |
@@ -206,3 +206,9 @@
 | blackridge | Blackridge Mine | Nevada | Open-pit copper-and-gold mine operated by Argent Ridge Mining. | docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md |
 | balloon | Gid Voss’s balloon business | Location not recorded | Provides hot-air-balloon flights. | docs/canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md |
 | bloodstone | Bloodstone & Southern Railway | Wyoming | Carried freight before BS&T’s 1954 reorganization. | industrial/corporate/LEGAL_STRUCTURE_AND_FORMATION.md |
+| P063 | Jonathan Goldstryker | Head of J2 | Joined 2020 | docs/canon/J2_LEADERSHIP_APPOINTMENTS_2026-09-10.md; docs/j2/J2_HEADQUARTERS.md |
+| P064 | Amanda Chenahot | Deputy Head of J2 | Joined 2021 | docs/canon/J2_LEADERSHIP_APPOINTMENTS_2026-09-10.md; docs/j2/J2_HEADQUARTERS.md |
+| P065 | Mara Hammer | Head of Contact | Joined 2021 | docs/canon/J2_LEADERSHIP_APPOINTMENTS_2026-09-10.md; docs/j2/J2_ESTABLISHMENT.md |
+| P066 | Anika Trish | Head of Judgment | Joined 2021 | docs/canon/J2_LEADERSHIP_APPOINTMENTS_2026-09-10.md; docs/j2/J2_ESTABLISHMENT.md |
+| P067 | Grant Kohrs | Head of Orientation | Joined 2020 | docs/canon/J2_LEADERSHIP_APPOINTMENTS_2026-09-10.md; docs/j2/J2_ESTABLISHMENT.md |
+| P068 | Brett Calder | Head of Education | Joined 2021 | docs/canon/J2_LEADERSHIP_APPOINTMENTS_2026-09-10.md; docs/j2/EDUCATION.md |

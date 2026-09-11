@@ -21,7 +21,7 @@ Resolved September 3: #17 Internal Audit operating model and #20 Orientation ran
 
 | Issue | Topic | Current state |
 |---:|---|---|
-| #19 | J2 staffing and named leadership | PARTIAL — 237-billet establishment LOCKED; named individuals remain OPEN |
+| #19 | J2 staffing and named leadership | PARTIAL — 237-billet establishment unchanged; [six leadership appointments](../canon/J2_LEADERSHIP_APPOINTMENTS_2026-09-10.md) resolved; Chief of Staff, remaining deputies/billets and exact appointment histories remain OPEN |
 | #21 | Alexandria runtime technology stack | DEFERRED pending CCF/technology-control architecture |
 | #22 | Collection entitlement and raw-source access model | DEFERRED pending CCF/technology-control architecture |
 | #23 | Semaphore precedence vocabulary | DECISION RESOLVED in September 6 addendum: Routine / Priority / Immediate / Flash, urgency only; integrated through merged PR #97 |

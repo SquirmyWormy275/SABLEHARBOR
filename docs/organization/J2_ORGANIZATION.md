@@ -5,7 +5,7 @@
 
 ## Current organization
 
-Use the [current J2 chart](charts/corporate-j2.md).
+Use the [current institutional J2 chart](charts/corporate-j2.md) and [named leadership chart](charts/people-j2.md). The [September 10 decision](../canon/J2_LEADERSHIP_APPOINTMENTS_2026-09-10.md) supplies the six approved names and company joining years without changing the establishment or authority model.
 
 ## Process and role references
 

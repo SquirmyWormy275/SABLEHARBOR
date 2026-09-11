@@ -1,6 +1,6 @@
 # Project Cradle — external hosts
 
-**SH-ORG-EXTERNAL-CRADLE-HOSTS · 2026-09-09 · v1.0.0**
+**SH-ORG-EXTERNAL-CRADLE-HOSTS · 2026-09-10 · v1.1.0**
 
 Grouped membership; no reporting line or legal ownership is asserted.
 

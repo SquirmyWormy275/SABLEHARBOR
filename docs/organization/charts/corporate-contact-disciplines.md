@@ -1,6 +1,6 @@
 # Contact collection disciplines
 
-**SH-ORG-CORP-CONTACT · 2026-09-09 · v1.0.0**
+**SH-ORG-CORP-CONTACT · 2026-09-10 · v1.1.0**
 
 Collection disciplines available to temporary mixed teams; not permanent departmental reporting lines.
 

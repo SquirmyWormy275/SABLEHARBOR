@@ -1,6 +1,6 @@
 # Enterprise support services
 
-**SH-ORG-CORP-ESS · 2026-09-09 · v1.0.0**
+**SH-ORG-CORP-ESS · 2026-09-10 · v1.1.0**
 
 Administrative membership; Corporate Secretary is a constituent function of OGC.
 

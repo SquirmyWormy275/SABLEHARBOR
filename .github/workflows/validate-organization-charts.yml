@@ -6,9 +6,12 @@ on:
       - README.md
       - docs/canon/**
       - docs/organization/**
+      - docs/structured/j2_leadership_2026-09-10.json
       - scripts/*organization*.py
       - tools/organization/**
       - tests/unit/test_organization_generator.py
+      - tests/unit/test_j2_leadership.py
+      - tests/unit/test_j2_archive_boundary.py
       - industrial/source/**
       - assets/brand/logos/**
       - docs/business-lines/**
@@ -22,9 +25,12 @@ on:
       - README.md
       - docs/canon/**
       - docs/organization/**
+      - docs/structured/j2_leadership_2026-09-10.json
       - scripts/*organization*.py
       - tools/organization/**
       - tests/unit/test_organization_generator.py
+      - tests/unit/test_j2_leadership.py
+      - tests/unit/test_j2_archive_boundary.py
       - industrial/source/**
       - assets/brand/logos/**
       - docs/business-lines/**
@@ -58,7 +64,7 @@ jobs:
         run: python scripts/validate_organization_maps.py
 
       - name: Verify chart behavior
-        run: python -m pytest tests/unit/test_organization_generator.py
+        run: python -m pytest tests/unit/test_organization_generator.py tests/unit/test_j2_leadership.py tests/unit/test_j2_archive_boundary.py
 
       - name: Verify rendered files are current
         run: |

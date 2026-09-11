@@ -1,6 +1,6 @@
 # Pinakes portals
 
-**SH-ORG-CORP-PINAKES · 2026-09-09 · v1.0.0**
+**SH-ORG-CORP-PINAKES · 2026-09-10 · v1.1.0**
 
 Nine catalog entry points into records; same-named functions are not duplicated organizational units.
 
