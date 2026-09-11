@@ -1,0 +1,439 @@
+{
+  "status": "SUPERSEDED_PRE_R01_PROPOSAL",
+  "reason": "The approved R01 originals replace the incompatible six-building proposal. No retired ID is reassigned. Original bytes remain in Git history and the explicitly archived v0.1.0 PDF. Current R02 assets are listed only by the current manifest.",
+  "history_commit": "ae34fa9d7c262a695aefdf0e81ae8158d3cef634",
+  "replacement_register": "geospatial/registers/MAP_ID_REGISTER.json",
+  "retired_maps": [
+    {
+      "id": "SH-MAP-SAC-003",
+      "title": "Governance House stacking and program",
+      "site_id": "SH-SITE-0001",
+      "building_id": "SH-SITE-0001-B01",
+      "kind": "building",
+      "status": "MODELLED_NOT_AS_BUILT",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-003.svg",
+          "sha256": "90df5fcf43086727eed0b4f4a46f5338e8a85176af24c1d8d3c9e8436c8b934d"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-003.png",
+          "sha256": "d74d9c657f2cd41b9613a22a4d2ba24af2594c0ad711344abdd6d48e532c0bd6"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-003.pdf",
+          "sha256": "326cd3a45a2c605c7f37be9eed440f7b6208b9602d8642ab99881e726cdedb2c"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-SAC-004",
+      "title": "Governance House / Arrival and institutional work",
+      "site_id": "SH-SITE-0001",
+      "building_id": "SH-SITE-0001-B01",
+      "floor_id": "SH-SITE-0001-B01-L01",
+      "kind": "floor",
+      "status": "MODELLED_FITOUT_NOT_EXISTING",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-004.svg",
+          "sha256": "0318687fc53da4d27725ffbb44ad1530cbd243a6ad56e67428c27f5b84af40cf"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-004.png",
+          "sha256": "979286ecfe2a281734da8c5ab72bb11be235389ef98d02668114fcf90eebf065"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-004.pdf",
+          "sha256": "e7b6b18a0efb78fd2b3e9357c5c8d5ff26f0a54e8401726556e6468a6e87e1ca"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-SAC-005",
+      "title": "Governance House / Enterprise collaboration",
+      "site_id": "SH-SITE-0001",
+      "building_id": "SH-SITE-0001-B01",
+      "floor_id": "SH-SITE-0001-B01-L02",
+      "kind": "floor",
+      "status": "MODELLED_FITOUT_NOT_EXISTING",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-005.svg",
+          "sha256": "94c0a1e732f513e29fd8cfab408a158ddbb45048c06d09753bd667a0cc106f50"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-005.png",
+          "sha256": "4667b0ed90f706261c3181f093e1cf237dd50d9e5e6c12d1a6a8114e89b525d8"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-005.pdf",
+          "sha256": "95d5dfc8635e7ff5f5c838170d3188820d551954852f51a0e4b2f11618ed2589"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-SAC-006",
+      "title": "Enterprise Services stacking and program",
+      "site_id": "SH-SITE-0001",
+      "building_id": "SH-SITE-0001-B02",
+      "kind": "building",
+      "status": "MODELLED_NOT_AS_BUILT",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-006.svg",
+          "sha256": "b235ff92f0a5117c6811a7afce94c93fb1944a89735f613c32fff99f5dafb804"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-006.png",
+          "sha256": "f61facf5c23ec0e7c2c65272f600ff128e234c8abda54ca42dcb9912b858b7d8"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-006.pdf",
+          "sha256": "3d1ed88d1e68c219e7d9c029a59d45a2e430265c95997e55f3749f6b9207cdd3"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-SAC-007",
+      "title": "Enterprise Services / People and shared operations",
+      "site_id": "SH-SITE-0001",
+      "building_id": "SH-SITE-0001-B02",
+      "floor_id": "SH-SITE-0001-B02-L01",
+      "kind": "floor",
+      "status": "MODELLED_FITOUT_NOT_EXISTING",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-007.svg",
+          "sha256": "04774407d909c58fca5db025d1ea6c5f1056e45e2032c8cd409dc3b2038045e6"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-007.png",
+          "sha256": "75a80e0b2d3a7e35f414c23d67f11a47758e0b2f7b1bdf8df52ae2ac4ed50695"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-007.pdf",
+          "sha256": "0593fb0ac02769b60a6045e0a9285537e7dcb4c6dcc431b6952b671e8cf9a2af"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-SAC-008",
+      "title": "Enterprise Services / Technology and resilience",
+      "site_id": "SH-SITE-0001",
+      "building_id": "SH-SITE-0001-B02",
+      "floor_id": "SH-SITE-0001-B02-L02",
+      "kind": "floor",
+      "status": "MODELLED_FITOUT_NOT_EXISTING",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-008.svg",
+          "sha256": "5b9b285ff69d5ccaadd7c1dd37ddddf8661cdf1398537ccc525a7ece06b915a2"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-008.png",
+          "sha256": "8ef9f34db80e5a8b9d59c5c1067147134cfea6fa47cf5924f23c4c72961a2b8d"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-008.pdf",
+          "sha256": "7dbc74147502cc0ff0d3ac1cfd92ddf69c3817891fb08a679d6bcc025277b8e0"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-SAC-009",
+      "title": "Enterprise Services / Expansion shell",
+      "site_id": "SH-SITE-0001",
+      "building_id": "SH-SITE-0001-B02",
+      "floor_id": "SH-SITE-0001-B02-L03",
+      "kind": "floor",
+      "status": "FUTURE_SHELL",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-009.svg",
+          "sha256": "0f1cc317ba6058b4eeef2f031a2cd70eeb5529a45507ce7acaa8138c71f3d824"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-009.png",
+          "sha256": "fb0ff999c8d96e15ab1876f7cdd613f19f73f832c2d410658ffa02bc02679719"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-009.pdf",
+          "sha256": "15c22e6382f1a752d49b4051c10aa69d947d6f74e42bda5faded0d6d485c6af2"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-SAC-010",
+      "title": "J2 House stacking and program",
+      "site_id": "SH-SITE-0001",
+      "building_id": "SH-SITE-0001-B03",
+      "kind": "building",
+      "status": "MODELLED_NOT_AS_BUILT",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-010.svg",
+          "sha256": "fe6cfb5caf5da1f7a33c7269b6b40eea89dbef0b04107d0a7bff5bf9141e4c34"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-010.png",
+          "sha256": "a1860e92cbddbe269c1ccc57ef1f552d215c221d40bc33e50fc6c88db023ffa2"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-010.pdf",
+          "sha256": "01f9c13e1a4cec5acdc84900e54cc9d99fd5510880fd2d690ca2a76aa7b6ac04"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-SAC-011",
+      "title": "J2 House / Contact and field junction",
+      "site_id": "SH-SITE-0001",
+      "building_id": "SH-SITE-0001-B03",
+      "floor_id": "SH-SITE-0001-B03-L01",
+      "kind": "floor",
+      "status": "MODELLED_FITOUT_NOT_EXISTING",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-011.svg",
+          "sha256": "febb8f72bc466f839874cfda6ec627e26697ee9d13cc1f9ac27e17beab08805c"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-011.png",
+          "sha256": "a439f7cb16a525525fd688bcc3e3728b6f5ab3ed77b5cf45dd3c65266eb127d6"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-011.pdf",
+          "sha256": "dc905c9cab3101df3b5fda5816577b978cb54c06c2a4cfc333d9e1f6d929117b"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-SAC-012",
+      "title": "J2 House / Judgment and Orientation",
+      "site_id": "SH-SITE-0001",
+      "building_id": "SH-SITE-0001-B03",
+      "floor_id": "SH-SITE-0001-B03-L02",
+      "kind": "floor",
+      "status": "MODELLED_FITOUT_NOT_EXISTING",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-012.svg",
+          "sha256": "8935575d3c544ceb68945af23da39315256a2046cef4cfe412e728688bccbefb"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-012.png",
+          "sha256": "bd1330b2d0b910dfe8a553a20571a5c52fc7f74fbc613aed6fb3bbdb976aab37"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-012.pdf",
+          "sha256": "16a23cd0d52507db34e74d6a60e4d39d4b175c325f91dbd438a1110a3707e3f8"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-SAC-013",
+      "title": "J2 House / Institutional stewardship",
+      "site_id": "SH-SITE-0001",
+      "building_id": "SH-SITE-0001-B03",
+      "floor_id": "SH-SITE-0001-B03-L03",
+      "kind": "floor",
+      "status": "MODELLED_FITOUT_NOT_EXISTING",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-013.svg",
+          "sha256": "0954693077c66dc3a7c0ab52a58df9b9f292ee3a12bfd4df394904759a0ae796"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-013.png",
+          "sha256": "8f46551ff0416ba3a24e68c8bc8967606f6f07dda4e81e602bd09a8baab88c49"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-013.pdf",
+          "sha256": "3456e124dd3cfbaa31b28895a02ca0bcac74e62204805603a28ecdee1bba7535"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-SAC-014",
+      "title": "Education and Convening stacking and program",
+      "site_id": "SH-SITE-0001",
+      "building_id": "SH-SITE-0001-B04",
+      "kind": "building",
+      "status": "MODELLED_NOT_AS_BUILT",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-014.svg",
+          "sha256": "3aa0628fa81ff7bcfe6ab264f1a11a8f420d0ac792fd9ae1d4eb9d82bfb99127"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-014.png",
+          "sha256": "ad6210fede4e9d554af7cb3edfae479a27f768e47dacec0ba672432415ba06b3"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-014.pdf",
+          "sha256": "7ad9c57fe8f7b55586e38331c1185b89ca9b356aee1cae2c600c827ae89efa6a"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-SAC-015",
+      "title": "Education and Convening / Enterprise learning",
+      "site_id": "SH-SITE-0001",
+      "building_id": "SH-SITE-0001-B04",
+      "floor_id": "SH-SITE-0001-B04-L01",
+      "kind": "floor",
+      "status": "MODELLED_FITOUT_NOT_EXISTING",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-015.svg",
+          "sha256": "685afc7b843e0e9d41c68073d1be4fabd95c7c35fb631ca595b8e3fb49a9779c"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-015.png",
+          "sha256": "9eb7f5ad3051c7d2aa7a3968a50d86a617a73dc875e6e5efd0baaa5ec16a8a73"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-015.pdf",
+          "sha256": "bee0961797b09c8c66262d753e39dddde980a41270a185fd8e7cb2853e5bd819"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-SAC-016",
+      "title": "Education and Convening / Professional formation",
+      "site_id": "SH-SITE-0001",
+      "building_id": "SH-SITE-0001-B04",
+      "floor_id": "SH-SITE-0001-B04-L02",
+      "kind": "floor",
+      "status": "MODELLED_FITOUT_NOT_EXISTING",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-016.svg",
+          "sha256": "557e5f6e40f94050c0d65288deefc926f6f3474aff44c82e44872de0e27c117d"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-016.png",
+          "sha256": "9a1f16c4b9c130e24b649daa1c98449c8a6d33de9c2a329fff9ec463168a3774"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-016.pdf",
+          "sha256": "522940c8ad6998f633050a08b0691b399134c3e0735cc76d054b7409968d780c"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-SAC-017",
+      "title": "Residential House stacking and program",
+      "site_id": "SH-SITE-0001",
+      "building_id": "SH-SITE-0001-B05",
+      "kind": "building",
+      "status": "MODELLED_NOT_AS_BUILT",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-017.svg",
+          "sha256": "5a3f4cec45c65f9f79b98513f3527048e3be631f59a10949f54e3fd94b540f54"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-017.png",
+          "sha256": "0211f1b3191f4904a7c8342b9f08a6713e62523cf71f3a519778a94eaaff4767"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-017.pdf",
+          "sha256": "caf8863a8eae971c2aae4b88d0f76fe590ba58fc7fcfe7615adc929904b97c2b"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-SAC-018",
+      "title": "Residential House / Short-stay residence ground",
+      "site_id": "SH-SITE-0001",
+      "building_id": "SH-SITE-0001-B05",
+      "floor_id": "SH-SITE-0001-B05-L01",
+      "kind": "floor",
+      "status": "MODELLED_FITOUT_NOT_EXISTING",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-018.svg",
+          "sha256": "86e246dbf177130e4535d4317cc8fcc1457d6c06c4c68757406c92aac5b477e4"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-018.png",
+          "sha256": "53806ddc5f097a91dba278da3a179f937354f9629b03be953dff2075b654bae0"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-018.pdf",
+          "sha256": "6c87a7858f87107b947e0317567a6eb44d19f6e92c081c7cf612564aac3b6fc5"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-SAC-019",
+      "title": "Residential House / Short-stay residence upper",
+      "site_id": "SH-SITE-0001",
+      "building_id": "SH-SITE-0001-B05",
+      "floor_id": "SH-SITE-0001-B05-L02",
+      "kind": "floor",
+      "status": "MODELLED_FITOUT_NOT_EXISTING",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-019.svg",
+          "sha256": "3ee10a1cf503ffe2b830ca8ed15c04504a1acdbfd392ed766ec8087d9a3ed618"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-019.png",
+          "sha256": "d2d299b56ddc983a2119e447ce636828562a402379ffca6988cf0ffbdc89d56d"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-019.pdf",
+          "sha256": "a38fd6861b1e1ed4ea4ba9782791d5c7e5f3c493d97fbed55089a77dd8e9a7a5"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-SAC-020",
+      "title": "Campus Services stacking and program",
+      "site_id": "SH-SITE-0001",
+      "building_id": "SH-SITE-0001-B06",
+      "kind": "building",
+      "status": "MODELLED_NOT_AS_BUILT",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-020.svg",
+          "sha256": "77334cccb8f5f802ea5471c0e1d048a8876dcbff73e2a5ef6d36bc24bd16fbcc"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-020.png",
+          "sha256": "825e858d59b0341855e688fe95e817960086953df7364ab312fdf4f85f6dfcb7"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-020.pdf",
+          "sha256": "f6c0e452c35750d30b8ab2db0e78a966fe27258dcd6cb66ed6ee858731ba5717"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-SAC-021",
+      "title": "Campus Services / Service and local equipment",
+      "site_id": "SH-SITE-0001",
+      "building_id": "SH-SITE-0001-B06",
+      "floor_id": "SH-SITE-0001-B06-L01",
+      "kind": "floor",
+      "status": "MODELLED_FITOUT_NOT_EXISTING",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-021.svg",
+          "sha256": "c45395e94181e56e171cc3fc8fea269565b3abc6308a49f80ff5e94a10213c78"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-021.png",
+          "sha256": "a7b543aa4ac7ef76154e720271fe7bd47097da3200e1cbc5e804ddbf611f8152"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-021.pdf",
+          "sha256": "131ced8de4e9cce76d9166c145d8a7fbbaf0c1b9cc9c505e0b9c331b835a72a5"
+        }
+      }
+    }
+  ]
+}

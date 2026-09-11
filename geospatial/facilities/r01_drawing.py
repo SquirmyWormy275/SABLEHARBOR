@@ -399,7 +399,11 @@ def master(model, mid, out):
         )
     else:
         for b in model["buildings"]:
-            sheet.text(2483, y, b["id"].split("-")[-1] + " / " + b["name"][:33], 27, weight="bold")
+            labels = fit_lines(b["id"].split("-")[-1] + " / " + b["name"], 650, 27, True)
+            for line in labels:
+                sheet.text(2483, y, line, 27, weight="bold")
+                y += 35
+            y -= 35
             y = (
                 sheet.paragraph(
                     2483,
@@ -418,15 +422,19 @@ def master(model, mid, out):
             ),
             (
                 "DEPENDENCIES",
-                model.get(
-                    "floor_exemption",
-                    "Source geometry and actual access/tenure remain governed by the existing geographic register.",
-                ),
+                model.get("floor_exemption")
+                or "; ".join(model.get("dependencies", []))
+                or "Source geometry and actual access/tenure remain governed by the existing geographic register.",
             ),
         ]:
             sheet.text(2483, y, title, 28, weight="bold")
             y = sheet.paragraph(2483, y + 43, body, 40, 26) + 40
-        sheet.scale(158, 2088, k * FT, 100 if k * FT < 8 else 40)
+        sheet.scale(
+            158,
+            2088,
+            k * FT,
+            min([20, 40, 100, 200, 500, 1000, 2000], key=lambda length: abs(length * k * FT - 400)),
+        )
         sheet.text(
             900,
             2116,
@@ -634,7 +642,10 @@ def floor(model, b, f, mid, out):
                 "audit_independent": "sage",
                 "reserve": "neutral",
             }.get(room.get("access"), "neutral")
-        rect(r, FILLS[group], INK, 2.5)
+        if b.get("layout_style") == "industrial":
+            sheet.rect(px, py, rw * k, rh * k, FILLS[group], MUTED, 2, dash="9 6")
+        else:
+            rect(r, FILLS[group], INK, 2.5)
         available_w, available_h = rw * k, rh * k
         title = room.get("display_name", room["name"]).upper()
         count = sum(room.get(t, 0) for t in ["assigned_desks", "shared_desks", "touchdown_seats"])
@@ -664,6 +675,8 @@ def floor(model, b, f, mid, out):
             label = room["display_detail"]
         font = 28 if available_w > 250 else 23 if available_w > 145 else 18
         margin = 12 if available_h < 180 else 20
+        if not sac:
+            margin = 45
         while True:
             lines = fit_lines(title, available_w - 24, font, True)
             label_font = max(13, font - 4)
@@ -686,6 +699,8 @@ def floor(model, b, f, mid, out):
         fx, fy = px + margin, yy + 8
         fw, fh = available_w - 2 * margin, py + available_h - margin - fy
         if count:
+            if sac and letter == "B" and level == 1 and "reception" in room["name"].lower():
+                fw *= 0.45
             draw_workplaces(
                 sheet,
                 fx,
@@ -729,7 +744,10 @@ def floor(model, b, f, mid, out):
             )
         elif "kitchen" in room["name"].lower() and fh > 40:
             sheet.rect(fx + 10, fy + 15, fw - 20, 26, PAPER, MUTED, 1.5)
-            sheet.rect(fx + 10, fy + 41, 26, max(20, fh - 55), PAPER, MUTED, 1.5)
+            # Freestanding preparation counters leave the west dining-service doorway clear.
+            sheet.rect(
+                fx + fw * 0.32, fy + fh * 0.78, fw * 0.46, min(35, fh * 0.16), PAPER, MUTED, 1.5
+            )
             sheet.rect(
                 fx + fw * 0.32, fy + fh * 0.5, fw * 0.46, min(45, fh * 0.22), PAPER, MUTED, 1.5
             )
@@ -743,10 +761,44 @@ def floor(model, b, f, mid, out):
                 fill=MUTED,
                 anchor="middle",
             )
+    if b.get("layout_style") == "industrial":
+        bounds = sorted(
+            {
+                0,
+                d,
+                *(r["rect_m"][1] for r in f["rooms"]),
+                *(r["rect_m"][1] + r["rect_m"][3] for r in f["rooms"]),
+            }
+        )
+        for low, high in zip(bounds, bounds[1:]):
+            if high < d - 0.01 and not any(
+                r["rect_m"][1] < high - 0.001 and r["rect_m"][1] + r["rect_m"][3] > low + 0.001
+                for r in f["rooms"]
+            ):
+                px, py = xy(w / 2, (low + high) / 2)
+                sheet.text(
+                    px,
+                    py + 8,
+                    "SHARED CIRCULATION / SERVICE ACCESS",
+                    min(23, (high - low) * k * 0.4),
+                    fill=MUTED,
+                    anchor="middle",
+                )
+        top = max(r["rect_m"][1] + r["rect_m"][3] for r in f["rooms"])
+        if top < d - 0.01:
+            px, py = xy(w / 2, (top + d) / 2)
+            sheet.text(
+                px,
+                py + 8,
+                "CIRCULATION / WET AND SERVICE RESERVE · INTERNAL PARTITIONS UNRESOLVED",
+                min(23, w * k / 65),
+                fill=MUTED,
+                anchor="middle",
+            )
     # R01 exterior window strokes are diagrammatic openings, not a glazing specification.
     for room in f["rooms"]:
         x, y, rw, rh = room["rect_m"]
-        if room.get("kind") not in ["support"]:
+        if room.get("kind") not in ["support"] and b.get("layout_style") != "industrial":
             for edge in ([0] if abs(y) < 0.001 else []) + ([d] if abs(y + rh - d) < 0.001 else []):
                 for a, beta in [(0.08, 0.35), (0.55, 0.85)]:
                     sheet.line(*xy(x + rw * a, edge), *xy(x + rw * beta, edge), BLUE, 5)
@@ -764,6 +816,17 @@ def floor(model, b, f, mid, out):
                     "wall": "north" if north else "south",
                 }
             )
+    if not r01 and b.get("layout_style") != "industrial":
+        for xx, wall in [(6, "east"), (w - 6, "west")]:
+            doors.append({"x_m": xx, "y_m": d / 2, "width_m": 1.2, "wall": wall})
+        for xx in [3, w - 3]:
+            for yy, wall in [(d / 2 - 4.5, "north"), (d / 2 + 4.5, "south")]:
+                doors.append({"x_m": xx, "y_m": yy, "width_m": 1.1, "wall": wall})
+        if level == 1:
+            for xx, wall in [(0, "west"), (w, "east")]:
+                doors.append(
+                    {"x_m": xx, "y_m": d / 2, "width_m": 1.2, "wall": wall, "swing": "out"}
+                )
     for door in doors:
         wall = door.get("wall", door.get("edge", "south"))
         if "x_m" in door:
@@ -777,28 +840,28 @@ def floor(model, b, f, mid, out):
         if door.get("leaves") == 2 and wall in ["north", "south"]:
             sheet.line(px - dw / 2, py, px + dw / 2, py, PAPER, 8)
             leaf = dw / 2
-            sign = 1 if wall == "north" else -1
+            sign = (1 if wall == "north" else -1) * (-1 if door.get("swing") == "out" else 1)
             for side in [-1, 1]:
                 hinge = px + side * leaf
                 sheet.line(hinge, py, hinge, py + sign * leaf, MUTED, 1.5)
                 sheet.path(
-                    f"M{px},{py} A{leaf},{leaf} 0 0 {1 if sign * side > 0 else 0} {hinge},{py + sign * leaf}",
+                    f"M{px},{py} A{leaf},{leaf} 0 0 {1 if sign * side < 0 else 0} {hinge},{py + sign * leaf}",
                     stroke=MUTED,
                     width=1.5,
                 )
             continue
         if wall in ["north", "south"]:
             sheet.line(px - dw / 2, py, px + dw / 2, py, PAPER, 8)
-            sign = 1 if wall == "north" else -1
+            sign = (1 if wall == "north" else -1) * (-1 if door.get("swing") == "out" else 1)
             sheet.line(px - dw / 2, py, px - dw / 2, py + sign * dw, MUTED, 1.5)
             sheet.path(
-                f"M{px + dw / 2},{py} A{dw},{dw} 0 0 {1 if sign < 0 else 0} {px - dw / 2},{py + sign * dw}",
+                f"M{px + dw / 2},{py} A{dw},{dw} 0 0 {1 if sign > 0 else 0} {px - dw / 2},{py + sign * dw}",
                 stroke=MUTED,
                 width=1.5,
             )
         else:
             sheet.line(px, py - dw / 2, px, py + dw / 2, PAPER, 8)
-            sign = 1 if wall == "west" else -1
+            sign = (1 if wall == "west" else -1) * (-1 if door.get("swing") == "out" else 1)
             sheet.line(px, py - dw / 2, px + sign * dw, py - dw / 2, MUTED, 1.5)
             sheet.path(
                 f"M{px},{py + dw / 2} A{dw},{dw} 0 0 {0 if sign > 0 else 1} {px + sign * dw},{py - dw / 2}",
@@ -807,8 +870,11 @@ def floor(model, b, f, mid, out):
             )
     if b.get("layout_style") == "industrial":
         for opening in b.get("openings", []):
-            side = opening.get("side", opening.get("wall", "south"))
-            offset = opening.get("offset_m", w / 2 if side in ["north", "south"] else d / 2)
+            side = opening.get("side", opening.get("wall", opening.get("edge", "south")))
+            offset = opening.get(
+                "offset_m",
+                opening.get("position_m", w / 2 if side in ["north", "south"] else d / 2),
+            )
             width = opening.get("width_m", 1.2)
             if side in ["north", "south"]:
                 y = d if side == "north" else 0
@@ -823,10 +889,30 @@ def floor(model, b, f, mid, out):
     for i in range(ticks + 1):
         xx = x0 + i * w * k / ticks
         sheet.line(xx, 505, xx, y0 - 10, "#a2b0af", 1)
-        sheet.text(xx, 463, f"{wf * i / ticks:g}", 20, fill=MUTED, anchor="middle")
-    sheet.text(x0 + w * k / 2, 417, f"{wf:g}′ OVERALL", 27, weight="bold", anchor="middle")
+        sheet.text(xx, 463, f"{wf * i / ticks:.0f}", 20, fill=MUTED, anchor="middle")
+    sheet.text(x0 + w * k / 2, 417, f"{wf:.0f}′ OVERALL", 27, weight="bold", anchor="middle")
     sheet.line(x0 - 60, y0, x0 - 60, y0 + d * k, MUTED, 1.5)
-    sheet.text(x0 - 38, y0 + d * k / 2, f"{df:g}′", 22, fill=MUTED, anchor="end")
+    dimx, dimy = 53, y0 + d * k / 2
+    sheet.parts.append(
+        f'<text x="{dimx}" y="{dimy}" transform="rotate(-90 {dimx} {dimy})" text-anchor="middle" font-size="22" fill="{MUTED}">{df:.0f}′</text>'
+    )
+    if sac and level == 1:
+        entries = (
+            [(44, "CAMPUS ENTRY"), (138, "CATERING / SERVICE")]
+            if letter == "C"
+            else [
+                (
+                    84 if letter == "D" else 108,
+                    "RESIDENTIAL ENTRY" if letter == "D" else "CAMPUS ENTRY",
+                )
+            ]
+        )
+        for xf, label in entries:
+            px, py = xy(xf * FT, 0)
+            sheet.text(px, py + 40, label, 18, fill=MUTED, anchor="middle")
+    if sac and letter == "B" and level == 1:
+        px, py = xy(108 * FT, 25 * FT)
+        sheet.text(px, py - 8, "CONTROLLED", 15, fill=BLUE, anchor="middle")
     sheet.north()
 
     def total(key):
@@ -967,6 +1053,17 @@ def floor(model, b, f, mid, out):
                 "body": "Local concept geometry preserves current functions. Occupancy, construction, engineering and exact parcel evidence remain separately governed.",
             },
         ]
+    if b.get("layout_style") == "industrial":
+        notes = [
+            {
+                "title": "OPERATIONAL ZONES",
+                "body": "Dashed lines allocate work areas, not walls or installed equipment. Internal thresholds and engineered handling paths remain unresolved.",
+            },
+            {
+                "title": "PERIMETER ACCESS",
+                "body": "Sourced openings reserve personnel and handling interfaces. The service band remains inside the gross area; final fire, utility and accessibility design requires engineering.",
+            },
+        ]
     for i, n in enumerate(notes[:2]):
         if isinstance(n, str):
             n = {
@@ -1060,7 +1157,7 @@ def stacking(model, b, mid, out):
                 ]
             )
         ]
-        if not functions:
+        if not functions or not sac:
             functions = [r["name"] for r in f["rooms"] if r.get("kind") != "support"]
         description = " · ".join(dict.fromkeys(functions))
         lines = fit_lines(description, 2070, 26)

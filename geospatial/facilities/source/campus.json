@@ -1278,7 +1278,7 @@
           "geometry_status": "MODELLED_R02_EXTENSION",
           "reference_image": null,
           "design_notes": [
-            "24 Advisory shared desks +4 reception workplaces +12 visiting workplaces =40 fitted staff workplaces.",
+            "24 Advisory shared desks + 4 reception workplaces + 12 visiting workplaces =40 fitted staff workplaces.",
             "Corporate commons has 80 dining seats, supplied from the single production kitchen in C; no second production kitchen.",
             "Clients remain in reception/project rooms; access to staff studios and upper floors controlled."
           ],
@@ -2248,7 +2248,7 @@
           "design_notes": [
             "Shared project rooms support joint work. Atlas retains a dedicated product organization.",
             "Visitors check in on L01. J2 and the teaching/residential precinct have their own entrances.",
-            "R01 annotation160/36 staff belongs to a conditional scenario; fitted desks do not establish actual 2026 employment."
+            "R01 annotation 160/36 staff belongs to a conditional scenario; fitted desks do not establish actual 2026 employment."
           ],
           "staff_workplaces": 112,
           "access_drawing_basis": "Approved R01 visible door topology where available; dimensions are modelled reconstruction, not surveyed or code-approved openings. Upper-floor repetitions follow fixed cores and source circulation zones.",
@@ -3404,7 +3404,7 @@
           "geometry_status": "MODELLED_R02_EXTENSION",
           "reference_image": null,
           "design_notes": [
-            "48 workplaces:24 ESS professional services,8 corporate officers/executive operations,8 Audit and 8 Technology/Security/Resilience.",
+            "48 workplaces: 24 ESS professional services, 8 corporate officers/executive operations, 8 Audit and 8 Technology/Security/Resilience.",
             "Internal Audit has its own controlled entrance and Board accountability; it is not an ESS reporting unit.",
             "Private suites and professional areas require final partition, acoustic and access engineering."
           ],
@@ -5501,8 +5501,8 @@
           "geometry_status": "MODELLED_R02_EXTENSION",
           "reference_image": null,
           "design_notes": [
-            "30 Judgment desks include Head/Deputy;16 Orientation and 22 Headquarters desks complete68 fitted workplaces.",
-            "J2 building130 workplaces are not 237 authorized billets; Education35 remains included in 237, in C.",
+            "30 Judgment desks include Head/Deputy; 16 Orientation and 22 Headquarters desks complete 68 fitted workplaces.",
+            "J2 building 130 workplaces are not 237 authorized billets; Education 35 remains included in 237, in C.",
             "Six approved leaders retain their accepted roles and joining years; no new people or authorization is created."
           ],
           "staff_workplaces": 68,
@@ -5511,7 +5511,7 @@
             "Professional work",
             "One authorization"
           ],
-          "legend_text": "Blue: Judgment and Orientation / Sage: J2 HQ / Sand: controlled working rooms"
+          "legend_text": "Blue: Judgment, Orientation and J2 HQ / Sand: shared project rooms"
         }
       ],
       "gross_area_sqft": 44928,
@@ -6179,7 +6179,7 @@
           "design_notes": [
             "One production kitchen serves C and the corporate commons; 160 dining seats across the two buildings.",
             "Residential arrivals and teaching arrivals use separate doors. The residence is a short walk across its own court.",
-            "One shared production kitchen serves80 seats in C and 80 in corporate commons; hospitality workers are unallocated existing/support planning capacity, not new hires."
+            "One shared production kitchen serves 80 seats in C and 80 in corporate commons; hospitality workers are unallocated existing/support planning capacity, not new hires."
           ],
           "staff_workplaces": 4,
           "access_drawing_basis": "Approved R01 visible door topology where available; dimensions are modelled reconstruction, not surveyed or code-approved openings. Upper-floor repetitions follow fixed cores and source circulation zones.",
@@ -6780,8 +6780,8 @@
           "geometry_status": "MODELLED_R02_EXTENSION",
           "reference_image": null,
           "design_notes": [
-            "28 upstairs desks:12 faculty,8 design,6 learning operations and 2 visiting practitioner workplaces.",
-            "Upstairs simulations and breakout seats share the120 learner campus cap; they do not create additional cohorts.",
+            "28 upstairs desks: 12 faculty, 8 design, 6 learning operations and 2 visiting practitioner workplaces.",
+            "Upstairs simulations and breakout seats share the 120 learner campus cap; they do not create additional cohorts.",
             "Teaching support above the kitchen follows the same wet/service structure; no duplicate production kitchen."
           ],
           "staff_workplaces": 28,
@@ -6791,7 +6791,7 @@
             "One Education arm",
             "Teaching support"
           ],
-          "legend_text": "Blue: learning / Sage: shared dining and faculty / Sand: convening and reception"
+          "legend_text": "Blue: design and teaching / Sage: visiting work / Sand: faculty and meetings"
         }
       ],
       "gross_area_sqft": 30240,
@@ -6884,7 +6884,8 @@
             0.0,
             2.4384,
             7.9248
-          ]
+          ],
+          "display_name": "Linen"
         },
         {
           "name": "Wet riser / linen / services",
@@ -8092,8 +8093,8 @@
           "geometry_status": "MODELLED_R02_EXTENSION",
           "reference_image": null,
           "design_notes": [
-            "20 single rooms on this level:16 cohort and 4 faculty/visitor, total 60 rooms across three levels.",
-            "Resident learners are already inside the120 day-learner cap; night residency is a separate60-person scenario.",
+            "20 single rooms on this level: 16 cohort and 4 faculty/visitor, total 60 rooms across three levels.",
+            "Resident learners are already inside the 120 day-learner cap; night residency is a separate 60-person scenario.",
             "Room furniture is residential use, not fitted staff workplaces. Accessible room/wet-room layouts require final code design."
           ],
           "staff_workplaces": 0,
@@ -9255,8 +9256,8 @@
           "geometry_status": "MODELLED_R02_EXTENSION",
           "reference_image": null,
           "design_notes": [
-            "20 single rooms on this level:16 cohort and 4 faculty/visitor, total 60 rooms across three levels.",
-            "Resident learners are already inside the120 day-learner cap; night residency is a separate60-person scenario.",
+            "20 single rooms on this level: 16 cohort and 4 faculty/visitor, total 60 rooms across three levels.",
+            "Resident learners are already inside the 120 day-learner cap; night residency is a separate 60-person scenario.",
             "Room furniture is residential use, not fitted staff workplaces. Accessible room/wet-room layouts require final code design."
           ],
           "staff_workplaces": 0,
@@ -10418,8 +10419,8 @@
           "geometry_status": "MODELLED_R02_EXTENSION",
           "reference_image": null,
           "design_notes": [
-            "20 single rooms on this level:16 cohort and 4 faculty/visitor, total 60 rooms across three levels.",
-            "Resident learners are already inside the120 day-learner cap; night residency is a separate60-person scenario.",
+            "20 single rooms on this level: 16 cohort and 4 faculty/visitor, total 60 rooms across three levels.",
+            "Resident learners are already inside the 120 day-learner cap; night residency is a separate 60-person scenario.",
             "Room furniture is residential use, not fitted staff workplaces. Accessible room/wet-room layouts require final code design."
           ],
           "staff_workplaces": 0,
