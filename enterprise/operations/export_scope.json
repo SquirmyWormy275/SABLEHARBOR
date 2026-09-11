@@ -1,0 +1,3049 @@
+{
+  "annual_statements": {
+    "allowed_routes": [
+      [
+        "advisory",
+        "advisory"
+      ],
+      [
+        "american-resource-utility",
+        "american-resource-utility"
+      ],
+      [
+        "atlas-meridian",
+        "atlas-meridian"
+      ],
+      [
+        "corporate",
+        "corporate"
+      ],
+      [
+        "eliminations",
+        "eliminations"
+      ],
+      [
+        "foundry-field",
+        "foundry-field"
+      ],
+      [
+        "pale-sun",
+        "pale-sun"
+      ],
+      [
+        "project-cradle",
+        "project-cradle"
+      ],
+      [
+        "willow",
+        "willow"
+      ]
+    ],
+    "allowed_values": {
+      "entity": [
+        "advisory",
+        "american-resource-utility",
+        "atlas-meridian",
+        "corporate",
+        "eliminations",
+        "foundry-field",
+        "pale-sun",
+        "project-cradle",
+        "willow"
+      ],
+      "fact_state": [
+        "CONDITIONAL_FORECAST",
+        "SYNTHETIC_SUCCESSOR_RECONSTRUCTION"
+      ],
+      "record_origin": [
+        "PUBLIC_SYNTHETIC_PLANNING_MODEL"
+      ],
+      "scenario": [
+        "base",
+        "downside",
+        "expansion"
+      ],
+      "unit": [
+        "advisory",
+        "american-resource-utility",
+        "atlas-meridian",
+        "corporate",
+        "eliminations",
+        "foundry-field",
+        "pale-sun",
+        "project-cradle",
+        "willow"
+      ]
+    },
+    "routing_fields": [
+      "unit",
+      "entity"
+    ]
+  },
+  "asset_rollforward": {
+    "allowed_routes": [
+      [
+        "foundry-field"
+      ],
+      [
+        "project-cradle"
+      ],
+      [
+        "willow"
+      ]
+    ],
+    "allowed_values": {
+      "scenario": [
+        "base",
+        "downside",
+        "expansion"
+      ],
+      "unit": [
+        "foundry-field",
+        "project-cradle",
+        "willow"
+      ]
+    },
+    "routing_fields": [
+      "unit"
+    ]
+  },
+  "capacity": {
+    "allowed_routes": [
+      [
+        "advisory"
+      ],
+      [
+        "atlas-meridian"
+      ]
+    ],
+    "allowed_values": {
+      "scenario": [
+        "base",
+        "downside",
+        "expansion"
+      ],
+      "unit": [
+        "advisory",
+        "atlas-meridian"
+      ]
+    },
+    "routing_fields": [
+      "unit"
+    ]
+  },
+  "commercial_arr_bridge": {
+    "allowed_routes": [
+      [
+        "atlas-meridian"
+      ],
+      [
+        "foundry-field"
+      ]
+    ],
+    "allowed_values": {
+      "fact_state": [
+        "PUBLIC_SYNTHETIC_CONDITIONAL_FORECAST"
+      ],
+      "scenario": [
+        "base",
+        "downside",
+        "expansion"
+      ],
+      "unit": [
+        "atlas-meridian",
+        "foundry-field"
+      ]
+    },
+    "routing_fields": [
+      "unit"
+    ]
+  },
+  "commercial_capacity": {
+    "allowed_routes": [
+      [
+        "atlas-meridian"
+      ],
+      [
+        "foundry-field"
+      ]
+    ],
+    "allowed_values": {
+      "fact_state": [
+        "PUBLIC_SYNTHETIC_CONDITIONAL_FORECAST"
+      ],
+      "scenario": [
+        "base",
+        "downside",
+        "expansion"
+      ],
+      "unit": [
+        "atlas-meridian",
+        "foundry-field"
+      ]
+    },
+    "routing_fields": [
+      "unit"
+    ]
+  },
+  "commercial_changes": {
+    "allowed_routes": [
+      [
+        "atlas-meridian"
+      ],
+      [
+        "foundry-field"
+      ]
+    ],
+    "allowed_values": {
+      "fact_state": [
+        "PUBLIC_SYNTHETIC_CONDITIONAL_FORECAST"
+      ],
+      "scenario": [
+        "base",
+        "downside",
+        "expansion"
+      ],
+      "unit": [
+        "atlas-meridian",
+        "foundry-field"
+      ]
+    },
+    "routing_fields": [
+      "unit"
+    ]
+  },
+  "commercial_deferred_rollforward": {
+    "allowed_routes": [
+      [
+        "atlas-meridian"
+      ],
+      [
+        "foundry-field"
+      ]
+    ],
+    "allowed_values": {
+      "fact_state": [
+        "PUBLIC_SYNTHETIC_CONDITIONAL_FORECAST"
+      ],
+      "scenario": [
+        "base",
+        "downside",
+        "expansion"
+      ],
+      "unit": [
+        "atlas-meridian",
+        "foundry-field"
+      ]
+    },
+    "routing_fields": [
+      "unit"
+    ]
+  },
+  "commercial_metrics": {
+    "allowed_routes": [
+      [
+        "atlas-meridian"
+      ],
+      [
+        "foundry-field"
+      ]
+    ],
+    "allowed_values": {
+      "fact_state": [
+        "PUBLIC_SYNTHETIC_CONDITIONAL_FORECAST"
+      ],
+      "scenario": [
+        "base",
+        "downside",
+        "expansion"
+      ],
+      "unit": [
+        "atlas-meridian",
+        "foundry-field"
+      ]
+    },
+    "routing_fields": [
+      "unit"
+    ]
+  },
+  "commercial_pipeline": {
+    "allowed_routes": [
+      [
+        "atlas-meridian"
+      ],
+      [
+        "foundry-field"
+      ]
+    ],
+    "allowed_values": {
+      "fact_state": [
+        "PUBLIC_SYNTHETIC_CONDITIONAL_FORECAST"
+      ],
+      "scenario": [
+        "base",
+        "downside",
+        "expansion"
+      ],
+      "unit": [
+        "atlas-meridian",
+        "foundry-field"
+      ]
+    },
+    "routing_fields": [
+      "unit"
+    ]
+  },
+  "commercial_renewals": {
+    "allowed_routes": [
+      [
+        "atlas-meridian"
+      ],
+      [
+        "foundry-field"
+      ]
+    ],
+    "allowed_values": {
+      "fact_state": [
+        "PUBLIC_SYNTHETIC_CONDITIONAL_FORECAST"
+      ],
+      "scenario": [
+        "base",
+        "downside",
+        "expansion"
+      ],
+      "unit": [
+        "atlas-meridian",
+        "foundry-field"
+      ]
+    },
+    "routing_fields": [
+      "unit"
+    ]
+  },
+  "commercial_service_tickets": {
+    "allowed_routes": [
+      [
+        "atlas-meridian"
+      ],
+      [
+        "foundry-field"
+      ]
+    ],
+    "allowed_values": {
+      "fact_state": [
+        "PUBLIC_SYNTHETIC_CONDITIONAL_FORECAST"
+      ],
+      "scenario": [
+        "base",
+        "downside",
+        "expansion"
+      ],
+      "unit": [
+        "atlas-meridian",
+        "foundry-field"
+      ]
+    },
+    "routing_fields": [
+      "unit"
+    ]
+  },
+  "contract_versions": {
+    "allowed_routes": [
+      [
+        "atlas-meridian"
+      ],
+      [
+        "foundry-field"
+      ]
+    ],
+    "allowed_values": {
+      "fact_state": [
+        "PUBLIC_SYNTHETIC_CONDITIONAL_FORECAST"
+      ],
+      "scenario": [
+        "base",
+        "downside",
+        "expansion"
+      ],
+      "unit": [
+        "atlas-meridian",
+        "foundry-field"
+      ]
+    },
+    "routing_fields": [
+      "unit"
+    ]
+  },
+  "contracts": {
+    "allowed_routes": [
+      [
+        "atlas-meridian"
+      ],
+      [
+        "foundry-field"
+      ]
+    ],
+    "allowed_values": {
+      "unit": [
+        "atlas-meridian",
+        "foundry-field"
+      ]
+    },
+    "routing_fields": [
+      "unit"
+    ]
+  },
+  "control_actions": {
+    "allowed_routes": [
+      [
+        "advisory"
+      ]
+    ],
+    "allowed_values": {
+      "scenario": [
+        "base"
+      ],
+      "unit": [
+        "advisory"
+      ]
+    },
+    "routing_fields": [
+      "unit"
+    ]
+  },
+  "control_completeness": {
+    "allowed_routes": [
+      [
+        "advisory"
+      ],
+      [
+        "american-resource-utility"
+      ],
+      [
+        "atlas-meridian"
+      ],
+      [
+        "corporate"
+      ],
+      [
+        "foundry-field"
+      ],
+      [
+        "pale-sun"
+      ],
+      [
+        "project-cradle"
+      ],
+      [
+        "willow"
+      ]
+    ],
+    "allowed_values": {
+      "scenario": [
+        "base",
+        "downside",
+        "expansion"
+      ],
+      "unit": [
+        "advisory",
+        "american-resource-utility",
+        "atlas-meridian",
+        "corporate",
+        "foundry-field",
+        "pale-sun",
+        "project-cradle",
+        "willow"
+      ]
+    },
+    "routing_fields": [
+      "unit"
+    ]
+  },
+  "control_evidence": {
+    "allowed_routes": [
+      [
+        "advisory"
+      ],
+      [
+        "american-resource-utility"
+      ],
+      [
+        "atlas-meridian"
+      ],
+      [
+        "corporate"
+      ],
+      [
+        "foundry-field"
+      ],
+      [
+        "pale-sun"
+      ],
+      [
+        "project-cradle"
+      ],
+      [
+        "willow"
+      ]
+    ],
+    "allowed_values": {
+      "scenario": [
+        "base",
+        "downside",
+        "expansion"
+      ],
+      "unit": [
+        "advisory",
+        "american-resource-utility",
+        "atlas-meridian",
+        "corporate",
+        "foundry-field",
+        "pale-sun",
+        "project-cradle",
+        "willow"
+      ]
+    },
+    "routing_fields": [
+      "unit"
+    ]
+  },
+  "control_exceptions": {
+    "allowed_routes": [
+      [
+        "advisory"
+      ]
+    ],
+    "allowed_values": {
+      "scenario": [
+        "base"
+      ],
+      "unit": [
+        "advisory"
+      ]
+    },
+    "routing_fields": [
+      "unit"
+    ]
+  },
+  "control_occurrences": {
+    "allowed_routes": [
+      [
+        "advisory"
+      ],
+      [
+        "american-resource-utility"
+      ],
+      [
+        "atlas-meridian"
+      ],
+      [
+        "corporate"
+      ],
+      [
+        "foundry-field"
+      ],
+      [
+        "pale-sun"
+      ],
+      [
+        "project-cradle"
+      ],
+      [
+        "willow"
+      ]
+    ],
+    "allowed_values": {
+      "scenario": [
+        "base",
+        "downside",
+        "expansion"
+      ],
+      "unit": [
+        "advisory",
+        "american-resource-utility",
+        "atlas-meridian",
+        "corporate",
+        "foundry-field",
+        "pale-sun",
+        "project-cradle",
+        "willow"
+      ]
+    },
+    "routing_fields": [
+      "unit"
+    ]
+  },
+  "control_population": {
+    "allowed_routes": [
+      [
+        "advisory"
+      ],
+      [
+        "american-resource-utility"
+      ],
+      [
+        "atlas-meridian"
+      ],
+      [
+        "corporate"
+      ],
+      [
+        "foundry-field"
+      ],
+      [
+        "pale-sun"
+      ],
+      [
+        "project-cradle"
+      ],
+      [
+        "willow"
+      ]
+    ],
+    "allowed_values": {
+      "scenario": [
+        "base",
+        "downside",
+        "expansion"
+      ],
+      "unit": [
+        "advisory",
+        "american-resource-utility",
+        "atlas-meridian",
+        "corporate",
+        "foundry-field",
+        "pale-sun",
+        "project-cradle",
+        "willow"
+      ]
+    },
+    "routing_fields": [
+      "unit"
+    ]
+  },
+  "control_registry": {
+    "allowed_routes": [
+      [
+        "advisory"
+      ],
+      [
+        "american-resource-utility"
+      ],
+      [
+        "atlas-meridian"
+      ],
+      [
+        "corporate"
+      ],
+      [
+        "foundry-field"
+      ],
+      [
+        "pale-sun"
+      ],
+      [
+        "project-cradle"
+      ],
+      [
+        "willow"
+      ]
+    ],
+    "allowed_values": {
+      "unit": [
+        "advisory",
+        "american-resource-utility",
+        "atlas-meridian",
+        "corporate",
+        "foundry-field",
+        "pale-sun",
+        "project-cradle",
+        "willow"
+      ]
+    },
+    "routing_fields": [
+      "unit"
+    ]
+  },
+  "control_results": {
+    "allowed_routes": [
+      [
+        "advisory"
+      ],
+      [
+        "american-resource-utility"
+      ],
+      [
+        "atlas-meridian"
+      ],
+      [
+        "corporate"
+      ],
+      [
+        "foundry-field"
+      ],
+      [
+        "pale-sun"
+      ],
+      [
+        "project-cradle"
+      ],
+      [
+        "willow"
+      ]
+    ],
+    "allowed_values": {
+      "scenario": [
+        "base",
+        "downside",
+        "expansion"
+      ],
+      "unit": [
+        "advisory",
+        "american-resource-utility",
+        "atlas-meridian",
+        "corporate",
+        "foundry-field",
+        "pale-sun",
+        "project-cradle",
+        "willow"
+      ]
+    },
+    "routing_fields": [
+      "unit"
+    ]
+  },
+  "control_retests": {
+    "allowed_routes": [
+      [
+        "advisory"
+      ]
+    ],
+    "allowed_values": {
+      "scenario": [
+        "base"
+      ],
+      "unit": [
+        "advisory"
+      ]
+    },
+    "routing_fields": [
+      "unit"
+    ]
+  },
+  "credit_allowance": {
+    "allowed_routes": [
+      [
+        "advisory"
+      ],
+      [
+        "atlas-meridian"
+      ],
+      [
+        "foundry-field"
+      ],
+      [
+        "project-cradle"
+      ]
+    ],
+    "allowed_values": {
+      "scenario": [
+        "base",
+        "downside",
+        "expansion"
+      ],
+      "unit": [
+        "advisory",
+        "atlas-meridian",
+        "foundry-field",
+        "project-cradle"
+      ]
+    },
+    "routing_fields": [
+      "unit"
+    ]
+  },
+  "credit_history": {
+    "allowed_routes": [
+      [
+        "advisory"
+      ],
+      [
+        "atlas-meridian"
+      ],
+      [
+        "foundry-field"
+      ],
+      [
+        "project-cradle"
+      ]
+    ],
+    "allowed_values": {
+      "record_origin": [
+        "PUBLIC_SYNTHETIC_PLANNING_MODEL"
+      ],
+      "scenario": [
+        "base",
+        "downside",
+        "expansion"
+      ],
+      "unit": [
+        "advisory",
+        "atlas-meridian",
+        "foundry-field",
+        "project-cradle"
+      ]
+    },
+    "routing_fields": [
+      "unit"
+    ]
+  },
+  "credit_notes": {
+    "allowed_routes": [
+      [
+        "atlas-meridian"
+      ],
+      [
+        "foundry-field"
+      ]
+    ],
+    "allowed_values": {
+      "scenario": [
+        "base",
+        "downside",
+        "expansion"
+      ],
+      "unit": [
+        "atlas-meridian",
+        "foundry-field"
+      ]
+    },
+    "routing_fields": [
+      "unit"
+    ]
+  },
+  "engagements": {
+    "allowed_routes": [
+      [
+        "advisory"
+      ],
+      [
+        "atlas-meridian"
+      ]
+    ],
+    "allowed_values": {
+      "unit": [
+        "advisory",
+        "atlas-meridian"
+      ]
+    },
+    "routing_fields": [
+      "unit"
+    ]
+  },
+  "enterprise_funding": {
+    "allowed_routes": [
+      [
+        "ARU_GROUP"
+      ],
+      [
+        "RWH_PS"
+      ],
+      [
+        "SHI"
+      ]
+    ],
+    "allowed_values": {
+      "entity": [
+        "ARU_GROUP",
+        "RWH_PS",
+        "SHI"
+      ],
+      "fact_state": [
+        "CONDITIONAL_FORECAST"
+      ],
+      "record_origin": [
+        "PUBLIC_SYNTHETIC_PLANNING_MODEL"
+      ],
+      "scenario": [
+        "base",
+        "downside",
+        "expansion"
+      ],
+      "scope": [
+        "",
+        "INDUSTRIAL_SUBSIDIARY_CONDITIONAL_ENVELOPE"
+      ]
+    },
+    "routing_fields": [
+      "entity"
+    ]
+  },
+  "enterprise_journal": {
+    "allowed_routes": [
+      [
+        "advisory",
+        "SHI"
+      ],
+      [
+        "american-resource-utility",
+        "ARU"
+      ],
+      [
+        "american-resource-utility",
+        "BST"
+      ],
+      [
+        "atlas-meridian",
+        "SHI"
+      ],
+      [
+        "corporate",
+        "SHI"
+      ],
+      [
+        "corporate",
+        "SHIH"
+      ],
+      [
+        "eliminations",
+        "ELIM"
+      ],
+      [
+        "foundry-field",
+        "SHI"
+      ],
+      [
+        "pale-sun",
+        "PS"
+      ],
+      [
+        "pale-sun",
+        "RWH"
+      ],
+      [
+        "project-cradle",
+        "SHI"
+      ],
+      [
+        "willow",
+        "SHI"
+      ]
+    ],
+    "allowed_values": {
+      "entity": [
+        "ARU",
+        "BST",
+        "ELIM",
+        "PS",
+        "RWH",
+        "SHI",
+        "SHIH"
+      ],
+      "fact_state": [
+        "CONDITIONAL_FORECAST",
+        "SYNTHETIC_SUCCESSOR_RECONSTRUCTION"
+      ],
+      "record_origin": [
+        "PUBLIC_SYNTHETIC_PLANNING_MODEL"
+      ],
+      "scenario": [
+        "base",
+        "downside",
+        "expansion"
+      ],
+      "segment": [
+        "ADVISORY",
+        "ATLAS",
+        "CORE",
+        "CORPORATE",
+        "CRADLE",
+        "FOUNDRY_FIELD",
+        "WILLOW"
+      ],
+      "unit": [
+        "advisory",
+        "american-resource-utility",
+        "atlas-meridian",
+        "corporate",
+        "eliminations",
+        "foundry-field",
+        "pale-sun",
+        "project-cradle",
+        "willow"
+      ]
+    },
+    "routing_fields": [
+      "unit",
+      "entity"
+    ]
+  },
+  "events": {
+    "allowed_routes": [
+      [
+        "advisory"
+      ],
+      [
+        "atlas-meridian"
+      ],
+      [
+        "corporate"
+      ],
+      [
+        "foundry-field"
+      ],
+      [
+        "project-cradle"
+      ],
+      [
+        "willow"
+      ]
+    ],
+    "allowed_values": {
+      "fact_state": [
+        "CONDITIONAL_FORECAST"
+      ],
+      "scenario": [
+        "base",
+        "downside",
+        "expansion"
+      ],
+      "site": [
+        "",
+        "CRD-BEDFORD",
+        "CRD-DEMOTTE",
+        "CRD-KGM17",
+        "WIL-FORT-PGH"
+      ],
+      "unit": [
+        "advisory",
+        "atlas-meridian",
+        "corporate",
+        "foundry-field",
+        "project-cradle",
+        "willow"
+      ]
+    },
+    "routing_fields": [
+      "unit"
+    ]
+  },
+  "forecast_variance_contributions": {
+    "allowed_routes": [
+      [
+        "advisory"
+      ],
+      [
+        "atlas-meridian"
+      ],
+      [
+        "corporate"
+      ],
+      [
+        "foundry-field"
+      ],
+      [
+        "project-cradle"
+      ],
+      [
+        "willow"
+      ]
+    ],
+    "allowed_values": {
+      "scenario": [
+        "base",
+        "downside",
+        "expansion"
+      ],
+      "unit": [
+        "advisory",
+        "atlas-meridian",
+        "corporate",
+        "foundry-field",
+        "project-cradle",
+        "willow"
+      ]
+    },
+    "routing_fields": [
+      "unit"
+    ]
+  },
+  "forecast_vintage_metrics": {
+    "allowed_routes": [
+      [
+        "advisory"
+      ],
+      [
+        "atlas-meridian"
+      ],
+      [
+        "corporate"
+      ],
+      [
+        "foundry-field"
+      ],
+      [
+        "project-cradle"
+      ],
+      [
+        "willow"
+      ]
+    ],
+    "allowed_values": {
+      "scenario": [
+        "base",
+        "downside",
+        "expansion"
+      ],
+      "unit": [
+        "advisory",
+        "atlas-meridian",
+        "corporate",
+        "foundry-field",
+        "project-cradle",
+        "willow"
+      ]
+    },
+    "routing_fields": [
+      "unit"
+    ]
+  },
+  "forecast_vintage_register": {
+    "allowed_routes": [
+      []
+    ],
+    "allowed_values": {},
+    "routing_fields": []
+  },
+  "host_collection_settlements": {
+    "allowed_routes": [
+      [
+        "project-cradle"
+      ]
+    ],
+    "allowed_values": {
+      "scenario": [
+        "base",
+        "downside",
+        "expansion"
+      ],
+      "unit": [
+        "project-cradle"
+      ]
+    },
+    "routing_fields": [
+      "unit"
+    ]
+  },
+  "industrial_detail_reconciliation": {
+    "allowed_routes": [
+      [
+        "american-resource-utility"
+      ],
+      [
+        "pale-sun"
+      ]
+    ],
+    "allowed_values": {
+      "fact_state": [
+        "CONDITIONAL_FORECAST"
+      ],
+      "record_origin": [
+        "PUBLIC_SYNTHETIC_MODEL"
+      ],
+      "scenario": [
+        "base",
+        "downside",
+        "expansion"
+      ],
+      "segment": [
+        "ARU",
+        "BST",
+        "RWH",
+        "TERMINALS",
+        "TRUCKING",
+        "WAREHOUSE"
+      ],
+      "unit": [
+        "american-resource-utility",
+        "pale-sun"
+      ]
+    },
+    "routing_fields": [
+      "unit"
+    ]
+  },
+  "industrial_maintenance_jobs": {
+    "allowed_routes": [
+      [
+        "american-resource-utility"
+      ],
+      [
+        "pale-sun"
+      ]
+    ],
+    "allowed_values": {
+      "fact_state": [
+        "CONDITIONAL_FORECAST"
+      ],
+      "record_origin": [
+        "PUBLIC_SYNTHETIC_MODEL"
+      ],
+      "scenario": [
+        "base",
+        "downside",
+        "expansion"
+      ],
+      "segment": [
+        "ARU",
+        "BST",
+        "RWH",
+        "TERMINALS",
+        "TRUCKING",
+        "WAREHOUSE"
+      ],
+      "unit": [
+        "american-resource-utility",
+        "pale-sun"
+      ]
+    },
+    "routing_fields": [
+      "unit"
+    ]
+  },
+  "industrial_service_detail": {
+    "allowed_routes": [
+      [
+        "american-resource-utility"
+      ]
+    ],
+    "allowed_values": {
+      "fact_state": [
+        "CONDITIONAL_FORECAST"
+      ],
+      "record_origin": [
+        "PUBLIC_SYNTHETIC_MODEL"
+      ],
+      "scenario": [
+        "base",
+        "downside",
+        "expansion"
+      ],
+      "segment": [
+        "BST",
+        "TERMINALS",
+        "TRUCKING",
+        "WAREHOUSE"
+      ],
+      "unit": [
+        "american-resource-utility"
+      ]
+    },
+    "routing_fields": [
+      "unit"
+    ]
+  },
+  "industrial_shift_capacity": {
+    "allowed_routes": [
+      [
+        "american-resource-utility"
+      ]
+    ],
+    "allowed_values": {
+      "fact_state": [
+        "CONDITIONAL_FORECAST"
+      ],
+      "record_origin": [
+        "PUBLIC_SYNTHETIC_MODEL"
+      ],
+      "scenario": [
+        "base",
+        "downside",
+        "expansion"
+      ],
+      "scope": [
+        "OWNED_RESOURCE_POOL_DATED_PLANNING_CHECK"
+      ],
+      "segment": [
+        "BST",
+        "TERMINALS",
+        "TRUCKING",
+        "WAREHOUSE"
+      ],
+      "unit": [
+        "american-resource-utility"
+      ]
+    },
+    "routing_fields": [
+      "unit"
+    ]
+  },
+  "inventory_rollforward": {
+    "allowed_routes": [
+      [
+        "project-cradle"
+      ]
+    ],
+    "allowed_values": {
+      "scenario": [
+        "base",
+        "downside",
+        "expansion"
+      ],
+      "unit": [
+        "project-cradle"
+      ]
+    },
+    "routing_fields": [
+      "unit"
+    ]
+  },
+  "invoices": {
+    "allowed_routes": [
+      [
+        "advisory"
+      ],
+      [
+        "atlas-meridian"
+      ],
+      [
+        "foundry-field"
+      ],
+      [
+        "project-cradle"
+      ]
+    ],
+    "allowed_values": {
+      "scenario": [
+        "base",
+        "downside",
+        "expansion"
+      ],
+      "unit": [
+        "advisory",
+        "atlas-meridian",
+        "foundry-field",
+        "project-cradle"
+      ]
+    },
+    "routing_fields": [
+      "unit"
+    ]
+  },
+  "journal": {
+    "allowed_routes": [
+      [
+        "advisory",
+        "SHI"
+      ],
+      [
+        "atlas-meridian",
+        "SHI"
+      ],
+      [
+        "corporate",
+        "SHI"
+      ],
+      [
+        "foundry-field",
+        "SHI"
+      ],
+      [
+        "project-cradle",
+        "SHI"
+      ],
+      [
+        "willow",
+        "SHI"
+      ]
+    ],
+    "allowed_values": {
+      "entity": [
+        "SHI"
+      ],
+      "fact_state": [
+        "CONDITIONAL_FORECAST"
+      ],
+      "scenario": [
+        "base",
+        "downside",
+        "expansion"
+      ],
+      "segment": [
+        "ADVISORY",
+        "ATLAS",
+        "CORPORATE",
+        "CRADLE",
+        "FOUNDRY_FIELD",
+        "WILLOW"
+      ],
+      "unit": [
+        "advisory",
+        "atlas-meridian",
+        "corporate",
+        "foundry-field",
+        "project-cradle",
+        "willow"
+      ]
+    },
+    "routing_fields": [
+      "unit",
+      "entity"
+    ]
+  },
+  "legal_statements": {
+    "allowed_routes": [
+      [
+        "ARU"
+      ],
+      [
+        "BST"
+      ],
+      [
+        "CONSOLIDATED"
+      ],
+      [
+        "ELIM"
+      ],
+      [
+        "PS"
+      ],
+      [
+        "RWH"
+      ],
+      [
+        "SHI"
+      ],
+      [
+        "SHIH"
+      ]
+    ],
+    "allowed_values": {
+      "entity": [
+        "ARU",
+        "BST",
+        "CONSOLIDATED",
+        "ELIM",
+        "PS",
+        "RWH",
+        "SHI",
+        "SHIH"
+      ],
+      "fact_state": [
+        "CONDITIONAL_FORECAST",
+        "SYNTHETIC_SUCCESSOR_RECONSTRUCTION"
+      ],
+      "record_origin": [
+        "PUBLIC_SYNTHETIC_PLANNING_MODEL"
+      ],
+      "scenario": [
+        "base",
+        "downside",
+        "expansion"
+      ]
+    },
+    "routing_fields": [
+      "entity"
+    ]
+  },
+  "legal_trial_balance": {
+    "allowed_routes": [
+      [
+        "ARU"
+      ],
+      [
+        "BST"
+      ],
+      [
+        "ELIM"
+      ],
+      [
+        "PS"
+      ],
+      [
+        "RWH"
+      ],
+      [
+        "SHI"
+      ],
+      [
+        "SHIH"
+      ]
+    ],
+    "allowed_values": {
+      "entity": [
+        "ARU",
+        "BST",
+        "ELIM",
+        "PS",
+        "RWH",
+        "SHI",
+        "SHIH"
+      ],
+      "fact_state": [
+        "CONDITIONAL_FORECAST",
+        "SYNTHETIC_SUCCESSOR_RECONSTRUCTION"
+      ],
+      "record_origin": [
+        "PUBLIC_SYNTHETIC_PLANNING_MODEL"
+      ],
+      "scenario": [
+        "base",
+        "downside",
+        "expansion"
+      ]
+    },
+    "routing_fields": [
+      "entity"
+    ]
+  },
+  "management_cost_reconciliation": {
+    "allowed_routes": [
+      [
+        "corporate"
+      ]
+    ],
+    "allowed_values": {
+      "scenario": [
+        "base",
+        "downside",
+        "expansion"
+      ],
+      "unit": [
+        "corporate"
+      ]
+    },
+    "routing_fields": [
+      "unit"
+    ]
+  },
+  "matter_controls": {
+    "allowed_routes": [
+      [
+        "advisory"
+      ]
+    ],
+    "allowed_values": {
+      "fact_state": [
+        "PUBLIC_SYNTHETIC_CONDITIONAL_FORECAST"
+      ],
+      "scenario": [
+        "base",
+        "downside",
+        "expansion"
+      ],
+      "unit": [
+        "advisory"
+      ]
+    },
+    "routing_fields": [
+      "unit"
+    ]
+  },
+  "matter_determinations": {
+    "allowed_routes": [
+      [
+        "advisory"
+      ]
+    ],
+    "allowed_values": {
+      "fact_state": [
+        "PUBLIC_SYNTHETIC_CONDITIONAL_FORECAST"
+      ],
+      "scenario": [
+        "base",
+        "downside",
+        "expansion"
+      ],
+      "unit": [
+        "advisory"
+      ]
+    },
+    "routing_fields": [
+      "unit"
+    ]
+  },
+  "matter_gate_decisions": {
+    "allowed_routes": [
+      [
+        "advisory"
+      ]
+    ],
+    "allowed_values": {
+      "fact_state": [
+        "PUBLIC_SYNTHETIC_CONDITIONAL_FORECAST"
+      ],
+      "scenario": [
+        "base",
+        "downside",
+        "expansion"
+      ],
+      "unit": [
+        "advisory"
+      ]
+    },
+    "routing_fields": [
+      "unit"
+    ]
+  },
+  "matter_handover_evidence": {
+    "allowed_routes": [
+      [
+        "advisory"
+      ]
+    ],
+    "allowed_values": {
+      "fact_state": [
+        "PUBLIC_SYNTHETIC_CONDITIONAL_FORECAST"
+      ],
+      "scenario": [
+        "base",
+        "downside",
+        "expansion"
+      ],
+      "unit": [
+        "advisory"
+      ]
+    },
+    "routing_fields": [
+      "unit"
+    ]
+  },
+  "matter_rollforward": {
+    "allowed_routes": [
+      [
+        "advisory"
+      ]
+    ],
+    "allowed_values": {
+      "scenario": [
+        "base",
+        "downside",
+        "expansion"
+      ],
+      "unit": [
+        "advisory"
+      ]
+    },
+    "routing_fields": [
+      "unit"
+    ]
+  },
+  "monthly_statements": {
+    "allowed_routes": [
+      [
+        "advisory",
+        "advisory"
+      ],
+      [
+        "american-resource-utility",
+        "american-resource-utility"
+      ],
+      [
+        "atlas-meridian",
+        "atlas-meridian"
+      ],
+      [
+        "corporate",
+        "corporate"
+      ],
+      [
+        "eliminations",
+        "eliminations"
+      ],
+      [
+        "foundry-field",
+        "foundry-field"
+      ],
+      [
+        "pale-sun",
+        "pale-sun"
+      ],
+      [
+        "project-cradle",
+        "project-cradle"
+      ],
+      [
+        "willow",
+        "willow"
+      ]
+    ],
+    "allowed_values": {
+      "entity": [
+        "advisory",
+        "american-resource-utility",
+        "atlas-meridian",
+        "corporate",
+        "eliminations",
+        "foundry-field",
+        "pale-sun",
+        "project-cradle",
+        "willow"
+      ],
+      "fact_state": [
+        "CONDITIONAL_FORECAST",
+        "SYNTHETIC_SUCCESSOR_RECONSTRUCTION"
+      ],
+      "record_origin": [
+        "PUBLIC_SYNTHETIC_PLANNING_MODEL"
+      ],
+      "scenario": [
+        "base",
+        "downside",
+        "expansion"
+      ],
+      "unit": [
+        "advisory",
+        "american-resource-utility",
+        "atlas-meridian",
+        "corporate",
+        "eliminations",
+        "foundry-field",
+        "pale-sun",
+        "project-cradle",
+        "willow"
+      ]
+    },
+    "routing_fields": [
+      "unit",
+      "entity"
+    ]
+  },
+  "payables": {
+    "allowed_routes": [
+      [
+        "advisory"
+      ],
+      [
+        "atlas-meridian"
+      ],
+      [
+        "corporate"
+      ],
+      [
+        "foundry-field"
+      ],
+      [
+        "project-cradle"
+      ],
+      [
+        "willow"
+      ]
+    ],
+    "allowed_values": {
+      "scenario": [
+        "base",
+        "downside",
+        "expansion"
+      ],
+      "unit": [
+        "advisory",
+        "atlas-meridian",
+        "corporate",
+        "foundry-field",
+        "project-cradle",
+        "willow"
+      ]
+    },
+    "routing_fields": [
+      "unit"
+    ]
+  },
+  "receivable_aging": {
+    "allowed_routes": [
+      [
+        "advisory"
+      ],
+      [
+        "atlas-meridian"
+      ],
+      [
+        "foundry-field"
+      ],
+      [
+        "project-cradle"
+      ]
+    ],
+    "allowed_values": {
+      "scenario": [
+        "base",
+        "downside",
+        "expansion"
+      ],
+      "unit": [
+        "advisory",
+        "atlas-meridian",
+        "foundry-field",
+        "project-cradle"
+      ]
+    },
+    "routing_fields": [
+      "unit"
+    ]
+  },
+  "recovery_custody": {
+    "allowed_routes": [
+      [
+        "project-cradle"
+      ]
+    ],
+    "allowed_values": {
+      "fact_state": [
+        "CONDITIONAL_FORECAST"
+      ],
+      "record_origin": [
+        "PUBLIC_SYNTHETIC_MODEL"
+      ],
+      "scenario": [
+        "base",
+        "downside",
+        "expansion"
+      ],
+      "unit": [
+        "project-cradle"
+      ]
+    },
+    "routing_fields": [
+      "unit"
+    ]
+  },
+  "recovery_genealogy": {
+    "allowed_routes": [
+      [
+        "project-cradle"
+      ]
+    ],
+    "allowed_values": {
+      "fact_state": [
+        "CONDITIONAL_FORECAST"
+      ],
+      "record_origin": [
+        "PUBLIC_SYNTHETIC_MODEL"
+      ],
+      "scenario": [
+        "base",
+        "downside",
+        "expansion"
+      ],
+      "unit": [
+        "project-cradle"
+      ]
+    },
+    "routing_fields": [
+      "unit"
+    ]
+  },
+  "recovery_lots": {
+    "allowed_routes": [
+      [
+        "project-cradle"
+      ]
+    ],
+    "allowed_values": {
+      "scenario": [
+        "base",
+        "downside",
+        "expansion"
+      ],
+      "unit": [
+        "project-cradle"
+      ]
+    },
+    "routing_fields": [
+      "unit"
+    ]
+  },
+  "recovery_run_assays": {
+    "allowed_routes": [
+      [
+        "project-cradle"
+      ]
+    ],
+    "allowed_values": {
+      "fact_state": [
+        "CONDITIONAL_FORECAST"
+      ],
+      "record_origin": [
+        "PUBLIC_SYNTHETIC_MODEL"
+      ],
+      "scenario": [
+        "base",
+        "downside",
+        "expansion"
+      ],
+      "unit": [
+        "project-cradle"
+      ]
+    },
+    "routing_fields": [
+      "unit"
+    ]
+  },
+  "reference_american_resource_utility_physical_reference_inventory": {
+    "allowed_routes": [
+      [
+        "american-resource-utility"
+      ]
+    ],
+    "allowed_values": {
+      "reporting_unit": [
+        "american-resource-utility"
+      ],
+      "scope": [
+        "PRESERVED_PHYSICAL_OR_2025_2026_REFERENCE_NOT_ADDITIONAL_FORECAST_POSTING"
+      ]
+    },
+    "routing_fields": [
+      "reporting_unit"
+    ]
+  },
+  "reference_american_resource_utility_reference_aru_2026_debt_leases": {
+    "allowed_routes": [
+      [
+        "american-resource-utility"
+      ]
+    ],
+    "allowed_values": {
+      "fact_state": [
+        "LOCKED_DERIVED_IMPLEMENTATION"
+      ],
+      "record_origin": [
+        "PUBLIC_SYNTHETIC_DIEGETIC"
+      ],
+      "reporting_unit": [
+        "american-resource-utility"
+      ]
+    },
+    "routing_fields": [
+      "reporting_unit"
+    ]
+  },
+  "reference_american_resource_utility_reference_aru_2026_fixed_assets": {
+    "allowed_routes": [
+      [
+        "american-resource-utility"
+      ]
+    ],
+    "allowed_values": {
+      "fact_state": [
+        "LOCKED_DERIVED_IMPLEMENTATION"
+      ],
+      "record_origin": [
+        "PUBLIC_SYNTHETIC_DIEGETIC"
+      ],
+      "reporting_unit": [
+        "american-resource-utility"
+      ]
+    },
+    "routing_fields": [
+      "reporting_unit"
+    ]
+  },
+  "reference_american_resource_utility_reference_contract_facility_assignments": {
+    "allowed_routes": [
+      [
+        "billable_truck_dispatch",
+        "american-resource-utility"
+      ],
+      [
+        "handled_short_ton",
+        "american-resource-utility"
+      ],
+      [
+        "loaded_revenue_car",
+        "american-resource-utility"
+      ],
+      [
+        "reserved_pallet_month",
+        "american-resource-utility"
+      ]
+    ],
+    "allowed_values": {
+      "fact_state": [
+        "LOCKED_DERIVED_IMPLEMENTATION"
+      ],
+      "reporting_unit": [
+        "american-resource-utility"
+      ],
+      "segment": [
+        "BST",
+        "TERMINALS",
+        "TRUCKING",
+        "WAREHOUSE"
+      ],
+      "unit": [
+        "billable_truck_dispatch",
+        "handled_short_ton",
+        "loaded_revenue_car",
+        "reserved_pallet_month"
+      ]
+    },
+    "routing_fields": [
+      "unit",
+      "reporting_unit"
+    ]
+  },
+  "reference_american_resource_utility_reference_contract_register": {
+    "allowed_routes": [
+      [
+        "billable_truck_dispatch",
+        "american-resource-utility"
+      ],
+      [
+        "handled_short_ton",
+        "american-resource-utility"
+      ],
+      [
+        "loaded_revenue_car",
+        "american-resource-utility"
+      ],
+      [
+        "reserved_pallet_month",
+        "american-resource-utility"
+      ]
+    ],
+    "allowed_values": {
+      "fact_state": [
+        "LOCKED_DERIVED_IMPLEMENTATION"
+      ],
+      "record_origin": [
+        "PUBLIC_SYNTHETIC_DIEGETIC"
+      ],
+      "reporting_unit": [
+        "american-resource-utility"
+      ],
+      "segment": [
+        "BST",
+        "TERMINALS",
+        "TRUCKING",
+        "WAREHOUSE"
+      ],
+      "unit": [
+        "billable_truck_dispatch",
+        "handled_short_ton",
+        "loaded_revenue_car",
+        "reserved_pallet_month"
+      ]
+    },
+    "routing_fields": [
+      "unit",
+      "reporting_unit"
+    ]
+  },
+  "reference_american_resource_utility_reference_customer_register": {
+    "allowed_routes": [
+      [
+        "american-resource-utility"
+      ]
+    ],
+    "allowed_values": {
+      "fact_state": [
+        "LOCKED_DERIVED_IMPLEMENTATION"
+      ],
+      "record_origin": [
+        "PUBLIC_SYNTHETIC_DIEGETIC"
+      ],
+      "reporting_unit": [
+        "american-resource-utility"
+      ]
+    },
+    "routing_fields": [
+      "reporting_unit"
+    ]
+  },
+  "reference_american_resource_utility_reference_employee_census_payroll": {
+    "allowed_routes": [
+      [
+        "american-resource-utility"
+      ]
+    ],
+    "allowed_values": {
+      "fact_state": [
+        "LOCKED_DERIVED_IMPLEMENTATION"
+      ],
+      "record_origin": [
+        "PUBLIC_SYNTHETIC_DIEGETIC"
+      ],
+      "reporting_unit": [
+        "american-resource-utility"
+      ],
+      "segment": [
+        "ARU",
+        "BST",
+        "TERMINALS",
+        "TRUCKING",
+        "WAREHOUSE"
+      ]
+    },
+    "routing_fields": [
+      "reporting_unit"
+    ]
+  },
+  "reference_american_resource_utility_reference_facilities": {
+    "allowed_routes": [
+      [
+        "american-resource-utility"
+      ]
+    ],
+    "allowed_values": {
+      "fact_state": [
+        "LOCKED_DERIVED_IMPLEMENTATION"
+      ],
+      "reporting_unit": [
+        "american-resource-utility"
+      ]
+    },
+    "routing_fields": [
+      "reporting_unit"
+    ]
+  },
+  "reference_american_resource_utility_reference_handling_equipment": {
+    "allowed_routes": [
+      [
+        "american-resource-utility"
+      ]
+    ],
+    "allowed_values": {
+      "fact_state": [
+        "LOCKED_DERIVED_IMPLEMENTATION"
+      ],
+      "reporting_unit": [
+        "american-resource-utility"
+      ]
+    },
+    "routing_fields": [
+      "reporting_unit"
+    ]
+  },
+  "reference_american_resource_utility_reference_labor_agreements": {
+    "allowed_routes": [
+      [
+        "american-resource-utility"
+      ]
+    ],
+    "allowed_values": {
+      "fact_state": [
+        "LOCKED_DERIVED_IMPLEMENTATION"
+      ],
+      "reporting_unit": [
+        "american-resource-utility"
+      ]
+    },
+    "routing_fields": [
+      "reporting_unit"
+    ]
+  },
+  "reference_american_resource_utility_reference_locomotives": {
+    "allowed_routes": [
+      [
+        "american-resource-utility"
+      ]
+    ],
+    "allowed_values": {
+      "fact_state": [
+        "LOCKED_DERIVED_IMPLEMENTATION"
+      ],
+      "reporting_unit": [
+        "american-resource-utility"
+      ]
+    },
+    "routing_fields": [
+      "reporting_unit"
+    ]
+  },
+  "reference_american_resource_utility_reference_parts_fuel_materials_inventory": {
+    "allowed_routes": [
+      [
+        "american-resource-utility"
+      ]
+    ],
+    "allowed_values": {
+      "fact_state": [
+        "PROVISIONAL_ASSUMPTION"
+      ],
+      "record_origin": [
+        "PUBLIC_SYNTHETIC_DIEGETIC"
+      ],
+      "reporting_unit": [
+        "american-resource-utility"
+      ]
+    },
+    "routing_fields": [
+      "reporting_unit"
+    ]
+  },
+  "reference_american_resource_utility_reference_railcars": {
+    "allowed_routes": [
+      [
+        "american-resource-utility"
+      ]
+    ],
+    "allowed_values": {
+      "fact_state": [
+        "LOCKED_DERIVED_IMPLEMENTATION"
+      ],
+      "reporting_unit": [
+        "american-resource-utility"
+      ]
+    },
+    "routing_fields": [
+      "reporting_unit"
+    ]
+  },
+  "reference_american_resource_utility_reference_road_equipment": {
+    "allowed_routes": [
+      [
+        "american-resource-utility"
+      ]
+    ],
+    "allowed_values": {
+      "fact_state": [
+        "LOCKED_DERIVED_IMPLEMENTATION"
+      ],
+      "reporting_unit": [
+        "american-resource-utility"
+      ]
+    },
+    "routing_fields": [
+      "reporting_unit"
+    ]
+  },
+  "reference_american_resource_utility_reference_structures": {
+    "allowed_routes": [
+      [
+        "american-resource-utility"
+      ]
+    ],
+    "allowed_values": {
+      "fact_state": [
+        "LOCKED_DERIVED_IMPLEMENTATION"
+      ],
+      "reporting_unit": [
+        "american-resource-utility"
+      ]
+    },
+    "routing_fields": [
+      "reporting_unit"
+    ]
+  },
+  "reference_american_resource_utility_reference_track_segments": {
+    "allowed_routes": [
+      [
+        "american-resource-utility"
+      ]
+    ],
+    "allowed_values": {
+      "fact_state": [
+        "LOCKED_DERIVED_IMPLEMENTATION"
+      ],
+      "reporting_unit": [
+        "american-resource-utility"
+      ]
+    },
+    "routing_fields": [
+      "reporting_unit"
+    ]
+  },
+  "reference_pale_sun_physical_reference_inventory": {
+    "allowed_routes": [
+      [
+        "pale-sun"
+      ]
+    ],
+    "allowed_values": {
+      "reporting_unit": [
+        "pale-sun"
+      ],
+      "scope": [
+        "PRESERVED_PHYSICAL_OR_2025_2026_REFERENCE_NOT_ADDITIONAL_FORECAST_POSTING"
+      ]
+    },
+    "routing_fields": [
+      "reporting_unit"
+    ]
+  },
+  "reference_pale_sun_reference_aru_red_wash_integration_gates": {
+    "allowed_routes": [
+      [
+        "pale-sun"
+      ]
+    ],
+    "allowed_values": {
+      "fact_state": [
+        "MODEL_PROPOSED",
+        "SYNTHETIC_INSTANCE"
+      ],
+      "record_origin": [
+        "SYNTHETIC_COMPANY_PLAN"
+      ],
+      "reporting_unit": [
+        "pale-sun"
+      ]
+    },
+    "routing_fields": [
+      "reporting_unit"
+    ]
+  },
+  "reference_pale_sun_reference_custody_authority_matrix": {
+    "allowed_routes": [
+      [
+        "pale-sun"
+      ]
+    ],
+    "allowed_values": {
+      "fact_state": [
+        "LOCKED_CANON",
+        "OPEN_CANON"
+      ],
+      "record_origin": [
+        "SYNTHETIC_COMPANY_RECORD"
+      ],
+      "reporting_unit": [
+        "pale-sun"
+      ]
+    },
+    "routing_fields": [
+      "reporting_unit"
+    ]
+  },
+  "reference_pale_sun_reference_employee_census_2026": {
+    "allowed_routes": [
+      [
+        "pale-sun"
+      ]
+    ],
+    "allowed_values": {
+      "fact_state": [
+        "SYNTHETIC_INSTANCE"
+      ],
+      "record_origin": [
+        "PUBLIC_SYNTHETIC_DIEGETIC"
+      ],
+      "reporting_unit": [
+        "pale-sun"
+      ]
+    },
+    "routing_fields": [
+      "reporting_unit"
+    ]
+  },
+  "reference_pale_sun_reference_inventory_rollforward_2026": {
+    "allowed_routes": [
+      [
+        "pale-sun"
+      ]
+    ],
+    "allowed_values": {
+      "fact_state": [
+        "SYNTHETIC_INSTANCE"
+      ],
+      "record_origin": [
+        "PUBLIC_SYNTHETIC_DIEGETIC"
+      ],
+      "reporting_unit": [
+        "pale-sun"
+      ]
+    },
+    "routing_fields": [
+      "reporting_unit"
+    ]
+  },
+  "reference_pale_sun_reference_maintenance_backlog": {
+    "allowed_routes": [
+      [
+        "pale-sun"
+      ]
+    ],
+    "allowed_values": {
+      "fact_state": [
+        "SYNTHETIC_INSTANCE"
+      ],
+      "record_origin": [
+        "PUBLIC_SYNTHETIC_DIEGETIC"
+      ],
+      "reporting_unit": [
+        "pale-sun"
+      ]
+    },
+    "routing_fields": [
+      "reporting_unit"
+    ]
+  },
+  "reference_pale_sun_reference_monthly_production_2026": {
+    "allowed_routes": [
+      [
+        "pale-sun"
+      ]
+    ],
+    "allowed_values": {
+      "fact_state": [
+        "SYNTHETIC_INSTANCE"
+      ],
+      "record_origin": [
+        "PUBLIC_SYNTHETIC_DIEGETIC"
+      ],
+      "reporting_unit": [
+        "pale-sun"
+      ]
+    },
+    "routing_fields": [
+      "reporting_unit"
+    ]
+  },
+  "reference_pale_sun_reference_permit_register": {
+    "allowed_routes": [
+      [
+        "pale-sun"
+      ]
+    ],
+    "allowed_values": {
+      "fact_state": [
+        "SYNTHETIC_INSTANCE"
+      ],
+      "record_origin": [
+        "PUBLIC_SYNTHETIC_DIEGETIC"
+      ],
+      "reporting_unit": [
+        "pale-sun"
+      ]
+    },
+    "routing_fields": [
+      "reporting_unit"
+    ]
+  },
+  "reference_pale_sun_reference_red_wash_closure_cashflow_calibration": {
+    "allowed_routes": [
+      [
+        "pale-sun"
+      ]
+    ],
+    "allowed_values": {
+      "fact_state": [
+        "PROVISIONAL_ASSUMPTION"
+      ],
+      "record_origin": [
+        "PUBLIC_SYNTHETIC_DIEGETIC"
+      ],
+      "reporting_unit": [
+        "pale-sun"
+      ],
+      "scope": [
+        "Final sealing, mill demolition, tailings cover and surveillance transfer",
+        "Progressive reclamation, water management and inactive-cell closure"
+      ]
+    },
+    "routing_fields": [
+      "reporting_unit"
+    ]
+  },
+  "reference_pale_sun_reference_uranium_contracts": {
+    "allowed_routes": [
+      [
+        "pale-sun"
+      ]
+    ],
+    "allowed_values": {
+      "fact_state": [
+        "SCENARIO_INPUT"
+      ],
+      "record_origin": [
+        "PUBLIC_SYNTHETIC_DIEGETIC"
+      ],
+      "reporting_unit": [
+        "pale-sun"
+      ]
+    },
+    "routing_fields": [
+      "reporting_unit"
+    ]
+  },
+  "research_attempts": {
+    "allowed_routes": [
+      [
+        "willow"
+      ]
+    ],
+    "allowed_values": {
+      "fact_state": [
+        "CONDITIONAL_FORECAST"
+      ],
+      "record_origin": [
+        "PUBLIC_SYNTHETIC_MODEL"
+      ],
+      "scenario": [
+        "base",
+        "downside",
+        "expansion"
+      ],
+      "unit": [
+        "willow"
+      ]
+    },
+    "routing_fields": [
+      "unit"
+    ]
+  },
+  "research_awards": {
+    "allowed_routes": [
+      [
+        "willow"
+      ]
+    ],
+    "allowed_values": {
+      "fact_state": [
+        "CONDITIONAL_FORECAST"
+      ],
+      "record_origin": [
+        "PUBLIC_SYNTHETIC_MODEL"
+      ],
+      "scenario": [
+        "base",
+        "downside",
+        "expansion"
+      ],
+      "unit": [
+        "willow"
+      ]
+    },
+    "routing_fields": [
+      "unit"
+    ]
+  },
+  "research_gate_evidence": {
+    "allowed_routes": [
+      [
+        "willow"
+      ]
+    ],
+    "allowed_values": {
+      "fact_state": [
+        "CONDITIONAL_FORECAST"
+      ],
+      "record_origin": [
+        "PUBLIC_SYNTHETIC_MODEL"
+      ],
+      "scenario": [
+        "base",
+        "downside",
+        "expansion"
+      ],
+      "unit": [
+        "willow"
+      ]
+    },
+    "routing_fields": [
+      "unit"
+    ]
+  },
+  "research_phase_forecasts": {
+    "allowed_routes": [
+      [
+        "willow"
+      ]
+    ],
+    "allowed_values": {
+      "fact_state": [
+        "CONDITIONAL_FORECAST"
+      ],
+      "record_origin": [
+        "PUBLIC_SYNTHETIC_MODEL"
+      ],
+      "scenario": [
+        "base",
+        "downside",
+        "expansion"
+      ],
+      "unit": [
+        "willow"
+      ]
+    },
+    "routing_fields": [
+      "unit"
+    ]
+  },
+  "service_consumption_allocations": {
+    "allowed_routes": [
+      [
+        "advisory"
+      ],
+      [
+        "american-resource-utility"
+      ],
+      [
+        "atlas-meridian"
+      ],
+      [
+        "corporate"
+      ],
+      [
+        "foundry-field"
+      ],
+      [
+        "pale-sun"
+      ],
+      [
+        "project-cradle"
+      ],
+      [
+        "willow"
+      ]
+    ],
+    "allowed_values": {
+      "scenario": [
+        "base",
+        "downside",
+        "expansion"
+      ],
+      "unit": [
+        "advisory",
+        "american-resource-utility",
+        "atlas-meridian",
+        "corporate",
+        "foundry-field",
+        "pale-sun",
+        "project-cradle",
+        "willow"
+      ]
+    },
+    "routing_fields": [
+      "unit"
+    ]
+  },
+  "service_cost_pools": {
+    "allowed_routes": [
+      [
+        "corporate"
+      ]
+    ],
+    "allowed_values": {
+      "scenario": [
+        "base",
+        "downside",
+        "expansion"
+      ],
+      "unit": [
+        "corporate"
+      ]
+    },
+    "routing_fields": [
+      "unit"
+    ]
+  },
+  "service_incidents": {
+    "allowed_routes": [
+      [
+        "atlas-meridian"
+      ],
+      [
+        "foundry-field"
+      ]
+    ],
+    "allowed_values": {
+      "fact_state": [
+        "PUBLIC_SYNTHETIC_CONDITIONAL_FORECAST"
+      ],
+      "scenario": [
+        "base",
+        "downside",
+        "expansion"
+      ],
+      "unit": [
+        "atlas-meridian",
+        "foundry-field"
+      ]
+    },
+    "routing_fields": [
+      "unit"
+    ]
+  },
+  "subledger_rollforward": {
+    "allowed_routes": [
+      [
+        "advisory"
+      ],
+      [
+        "atlas-meridian"
+      ],
+      [
+        "corporate"
+      ],
+      [
+        "foundry-field"
+      ],
+      [
+        "project-cradle"
+      ],
+      [
+        "willow"
+      ]
+    ],
+    "allowed_values": {
+      "scenario": [
+        "base",
+        "downside",
+        "expansion"
+      ],
+      "unit": [
+        "advisory",
+        "atlas-meridian",
+        "corporate",
+        "foundry-field",
+        "project-cradle",
+        "willow"
+      ]
+    },
+    "routing_fields": [
+      "unit"
+    ]
+  },
+  "treasury_obligation_history": {
+    "allowed_routes": [
+      [
+        "advisory"
+      ],
+      [
+        "atlas-meridian"
+      ],
+      [
+        "corporate"
+      ],
+      [
+        "foundry-field"
+      ],
+      [
+        "project-cradle"
+      ],
+      [
+        "willow"
+      ]
+    ],
+    "allowed_values": {
+      "scenario": [
+        "base",
+        "downside",
+        "expansion"
+      ],
+      "unit": [
+        "advisory",
+        "atlas-meridian",
+        "corporate",
+        "foundry-field",
+        "project-cradle",
+        "willow"
+      ]
+    },
+    "routing_fields": [
+      "unit"
+    ]
+  },
+  "treasury_obligations": {
+    "allowed_routes": [
+      [
+        "advisory",
+        "SHI"
+      ],
+      [
+        "atlas-meridian",
+        "SHI"
+      ],
+      [
+        "corporate",
+        "SHI"
+      ],
+      [
+        "foundry-field",
+        "SHI"
+      ],
+      [
+        "project-cradle",
+        "SHI"
+      ],
+      [
+        "willow",
+        "SHI"
+      ]
+    ],
+    "allowed_values": {
+      "entity": [
+        "SHI"
+      ],
+      "scenario": [
+        "base",
+        "downside",
+        "expansion"
+      ],
+      "unit": [
+        "advisory",
+        "atlas-meridian",
+        "corporate",
+        "foundry-field",
+        "project-cradle",
+        "willow"
+      ]
+    },
+    "routing_fields": [
+      "unit",
+      "entity"
+    ]
+  },
+  "treasury_reconciliation": {
+    "allowed_routes": [
+      [
+        "corporate"
+      ]
+    ],
+    "allowed_values": {
+      "scenario": [
+        "base",
+        "downside",
+        "expansion"
+      ],
+      "unit": [
+        "corporate"
+      ]
+    },
+    "routing_fields": [
+      "unit"
+    ]
+  },
+  "unit_trial_balance": {
+    "allowed_routes": [
+      [
+        "advisory"
+      ],
+      [
+        "american-resource-utility"
+      ],
+      [
+        "atlas-meridian"
+      ],
+      [
+        "corporate"
+      ],
+      [
+        "eliminations"
+      ],
+      [
+        "foundry-field"
+      ],
+      [
+        "pale-sun"
+      ],
+      [
+        "project-cradle"
+      ],
+      [
+        "willow"
+      ]
+    ],
+    "allowed_values": {
+      "fact_state": [
+        "CONDITIONAL_FORECAST",
+        "SYNTHETIC_SUCCESSOR_RECONSTRUCTION"
+      ],
+      "record_origin": [
+        "PUBLIC_SYNTHETIC_PLANNING_MODEL"
+      ],
+      "scenario": [
+        "base",
+        "downside",
+        "expansion"
+      ],
+      "unit": [
+        "advisory",
+        "american-resource-utility",
+        "atlas-meridian",
+        "corporate",
+        "eliminations",
+        "foundry-field",
+        "pale-sun",
+        "project-cradle",
+        "willow"
+      ]
+    },
+    "routing_fields": [
+      "unit"
+    ]
+  },
+  "value_certifications": {
+    "allowed_routes": [
+      [
+        "advisory"
+      ]
+    ],
+    "allowed_values": {
+      "scenario": [
+        "base",
+        "downside",
+        "expansion"
+      ],
+      "unit": [
+        "advisory"
+      ]
+    },
+    "routing_fields": [
+      "unit"
+    ]
+  },
+  "workforce_assignments": {
+    "allowed_routes": [
+      [
+        "advisory"
+      ],
+      [
+        "atlas-meridian"
+      ],
+      [
+        "corporate"
+      ],
+      [
+        "foundry-field"
+      ],
+      [
+        "project-cradle"
+      ],
+      [
+        "willow"
+      ]
+    ],
+    "allowed_values": {
+      "scenario": [
+        "base",
+        "downside",
+        "expansion"
+      ],
+      "unit": [
+        "advisory",
+        "atlas-meridian",
+        "corporate",
+        "foundry-field",
+        "project-cradle",
+        "willow"
+      ]
+    },
+    "routing_fields": [
+      "unit"
+    ]
+  },
+  "workforce_changes": {
+    "allowed_routes": [
+      [
+        "advisory"
+      ],
+      [
+        "atlas-meridian"
+      ],
+      [
+        "corporate"
+      ],
+      [
+        "foundry-field"
+      ],
+      [
+        "project-cradle"
+      ],
+      [
+        "willow"
+      ]
+    ],
+    "allowed_values": {
+      "scenario": [
+        "base",
+        "downside",
+        "expansion"
+      ],
+      "unit": [
+        "advisory",
+        "atlas-meridian",
+        "corporate",
+        "foundry-field",
+        "project-cradle",
+        "willow"
+      ]
+    },
+    "routing_fields": [
+      "unit"
+    ]
+  },
+  "workforce_positions": {
+    "allowed_routes": [
+      [
+        "advisory"
+      ],
+      [
+        "atlas-meridian"
+      ],
+      [
+        "corporate"
+      ],
+      [
+        "foundry-field"
+      ],
+      [
+        "project-cradle"
+      ],
+      [
+        "willow"
+      ]
+    ],
+    "allowed_values": {
+      "fact_state": [
+        "CONDITIONAL_OCCUPANCY_NOT_2026_ACTUAL"
+      ],
+      "home_unit": [
+        "advisory",
+        "atlas-meridian",
+        "corporate",
+        "foundry-field",
+        "project-cradle",
+        "willow"
+      ]
+    },
+    "routing_fields": [
+      "home_unit"
+    ]
+  },
+  "workforce_positions_history": {
+    "allowed_routes": [
+      [
+        "advisory"
+      ],
+      [
+        "atlas-meridian"
+      ],
+      [
+        "corporate"
+      ],
+      [
+        "foundry-field"
+      ],
+      [
+        "project-cradle"
+      ],
+      [
+        "willow"
+      ]
+    ],
+    "allowed_values": {
+      "fact_state": [
+        "CONDITIONAL_FORECAST_NOT_ACTUAL_EMPLOYMENT"
+      ],
+      "scenario": [
+        "base",
+        "downside",
+        "expansion"
+      ],
+      "unit": [
+        "advisory",
+        "atlas-meridian",
+        "corporate",
+        "foundry-field",
+        "project-cradle",
+        "willow"
+      ]
+    },
+    "routing_fields": [
+      "unit"
+    ]
+  }
+}
+

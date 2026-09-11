@@ -1,0 +1,7 @@
+{
+  "content_id": "5e302a4ba1b5c7c5678f4e3ee599b7f72029c4d58271dd47c6d3992541226bb2",
+  "workbook_sha256": "6a5942cd6ac363fe496476e6923c6f805069bf60f063fec47044d1f62c24a905",
+  "classification": "PUBLIC_SYNTHETIC_SCENARIOS_NOT_OBSERVED_ACTUALS",
+  "authoring": "Artifact Tool",
+  "verification": "Full source-cell and formula-result verification is required on every release build."
+}

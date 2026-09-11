@@ -1,0 +1,27 @@
+{
+  "version": "1.0.0",
+  "fact_state": "PUBLIC_SYNTHETIC_CONDITIONAL_FORECAST",
+  "boundary": "Future modeled customer decisions and approvals; no executed agreement, production incident, actual entitlement or measured service-level claim.",
+  "service_capacity_fraction": "0.20",
+  "renewal_breach_threshold": 1,
+  "pipeline": [
+    {"contract_id": "FF-037", "outcomes": {"base": "WON", "downside": "WON", "expansion": "WON"}, "decision_months": {"base": 9, "downside": 10, "expansion": 8}, "decision_id": "SYN-PIPE-037"},
+    {"contract_id": "FF-038", "outcomes": {"base": "LOST", "downside": "LOST", "expansion": "WON"}, "decision_months": {"base": 8, "downside": 8, "expansion": 8}, "decision_id": "SYN-PIPE-038"},
+    {"contract_id": "ATL-LIC-012", "outcomes": {"base": "WON", "downside": "HELD", "expansion": "WON"}, "decision_months": {"base": 12, "downside": 12, "expansion": 12}, "decision_id": "SYN-PIPE-ATL-012"}
+  ],
+  "changes": [
+    {"change_id": "SYN-AMEND-001", "contract_id": "FF-001", "effective_month": 6, "kind": "EXPANSION", "monthly_delta_usd": "10000", "seat_delta": 10, "approval_id": "SYN-CUSTOMER-APPROVAL-001"},
+    {"change_id": "SYN-AMEND-002", "contract_id": "FF-002", "effective_month": 7, "kind": "PRICE", "monthly_delta_usd": "5000", "seat_delta": 0, "approval_id": "SYN-CUSTOMER-APPROVAL-002"},
+    {"change_id": "SYN-AMEND-003", "contract_id": "FF-003", "effective_month": 8, "kind": "CONTRACTION", "monthly_delta_usd": "-29000", "seat_delta": -28, "approval_id": "SYN-CUSTOMER-APPROVAL-003"},
+    {"change_id": "SYN-CANCEL-004", "contract_id": "FF-004", "effective_month": 9, "kind": "CANCELLATION", "monthly_delta_usd": "0", "seat_delta": 0, "approval_id": "SYN-CUSTOMER-APPROVAL-004"},
+    {"change_id": "SYN-AMEND-ATL-001", "contract_id": "ATL-LIC-001", "effective_month": 10, "kind": "EXPANSION", "monthly_delta_usd": "3500", "seat_delta": 5, "approval_id": "SYN-CUSTOMER-APPROVAL-ATL-001"},
+    {"change_id": "SYN-AMEND-037", "contract_id": "FF-037", "effective_month": 8, "kind": "EXPANSION", "monthly_delta_usd": "12000", "seat_delta": 12, "approval_id": "SYN-CUSTOMER-APPROVAL-037"},
+    {"change_id": "SYN-AMEND-038", "contract_id": "FF-038", "effective_month": 9, "kind": "EXPANSION", "monthly_delta_usd": "9000", "seat_delta": 9, "approval_id": "SYN-CUSTOMER-APPROVAL-038"},
+    {"change_id": "SYN-CANCEL-005", "contract_id": "FF-005", "effective_month": 14, "kind": "CANCELLATION", "monthly_delta_usd": "0", "seat_delta": 0, "approval_id": "SYN-CUSTOMER-APPROVAL-005"}
+  ],
+  "incidents": [
+    {"incident_id": "SYN-INC-FF-001", "contract_id": "FF-001", "start_month": 5, "required_hours": "5000", "service_credit_fraction": "0.20", "severity": "MAJOR"},
+    {"incident_id": "SYN-INC-FF-003", "contract_id": "FF-003", "start_month": 7, "required_hours": "3500", "service_credit_fraction": "0.10", "severity": "MAJOR"},
+    {"incident_id": "SYN-INC-ATL-001", "contract_id": "ATL-LIC-001", "start_month": 6, "required_hours": "900", "service_credit_fraction": "0.15", "severity": "MAJOR"}
+  ]
+}

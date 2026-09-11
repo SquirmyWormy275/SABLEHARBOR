@@ -1,0 +1,32 @@
+{
+  "classification": "PUBLIC_SYNTHETIC_CONDITIONAL_FORECAST",
+  "version": "1.0.0",
+  "scope": "Six selected Advisory matter histories; all other matters retain business-finance-v1 granularity",
+  "matters": [
+    {"engagement_id": "ADV-2027-01", "events": [
+      {"month": 1, "decision": "ACCEPT", "role": "acceptance_principal", "reason": "Scope, competence, rights, conflicts and economics independently accepted"}
+    ]},
+    {"engagement_id": "ADV-2027-02", "events": [
+      {"month": 1, "decision": "RIGHTS_MISSING", "role": "acceptance_principal", "reason": "Client authority over the proposed source has not been evidenced"},
+      {"month": 3, "decision": "RIGHTS_CLEARED", "role": "acceptance_principal", "reason": "Client-local source grant recorded; scope independently accepted"}
+    ]},
+    {"engagement_id": "ADV-2027-03", "events": [
+      {"month": 2, "decision": "ACCEPT", "role": "acceptance_principal", "reason": "Decision matter accepted on fixed-fee terms"},
+      {"month": 4, "decision": "REVIEW_FAILED", "role": "independent_reviewer", "reason": "Independent reviewer cannot reproduce the scoped conclusion; recognition held"},
+      {"month": 6, "decision": "REVIEW_CORRECTED", "role": "independent_reviewer", "reason": "Corrected client-local evidence independently re-performed; no additional fee"}
+    ]},
+    {"engagement_id": "ADV-2027-04", "events": [
+      {"month": 2, "decision": "ACCEPT", "role": "acceptance_principal", "reason": "Scope and operating dependencies independently accepted"},
+      {"month": 4, "decision": "STOP", "role": "matter_principal", "reason": "Client dependency failure requires stop-work and suspends acceptance"},
+      {"month": 7, "decision": "RESUME", "role": "acceptance_principal", "reason": "Client dependencies restored and independently accepted before resumption"}
+    ]},
+    {"engagement_id": "ADV-2027-05", "events": [
+      {"month": 3, "decision": "ACCEPT", "role": "acceptance_principal", "reason": "Client capability scope independently accepted"},
+      {"month": 5, "decision": "MATERIAL_CHANGE", "role": "matter_principal", "reason": "Changed client process invalidates original scope acceptance"},
+      {"month": 8, "decision": "REACCEPT", "role": "acceptance_principal", "reason": "Revised perimeter accepted with original fee ceiling and separate product rights"}
+    ]},
+    {"engagement_id": "ADV-2027-06", "events": [
+      {"month": 3, "decision": "DECLINE", "role": "acceptance_principal", "reason": "Client asks to predetermine a conclusion; engagement declined without billing"}
+    ]}
+  ]
+}
