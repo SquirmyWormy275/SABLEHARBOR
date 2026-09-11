@@ -39,7 +39,33 @@ def validate(design):
         if row["tier"] not in {"BOOTSTRAP", "PRODUCTION", "ALEXANDRIA", "DEVELOPMENT"}:
             raise ValueError("Unknown recovery tier")
         resolved.add(row["service_id"])
+    direction = design["enterprise_vendor_direction"]
+    bindings = {row["domain"]: row for row in direction["bindings"]}
+    approved = {
+        "IAM": "Okta",
+        "IGA": "IBM Security Verify",
+        "HR": "SAP SuccessFactors",
+        "UEM": "IBM MaaS360",
+        "EDR_EPP": "Palo Alto Networks Cortex XDR",
+        "NGFW": "Palo Alto Networks",
+        "ZTNA_SASE": "Palo Alto Networks Prisma Access",
+        "SIEM": "Palo Alto Networks Cortex",
+        "DLP": "Palo Alto Networks Enterprise DLP",
+        "CNAPP": "Palo Alto Networks Prisma Cloud",
+    }
+    if (
+        len(bindings) != len(direction["bindings"])
+        or set(bindings) != set(approved)
+        or any(not bindings[k]["product"].startswith(v) for k, v in approved.items())
+    ):
+        raise ValueError(
+            "Runtime vendor selection conflicts with accepted enterprise direction"
+        )
+    if direction["contracts_executed"] or direction["deployed"]:
+        raise ValueError("Vendor direction is not contract or deployment evidence")
     platform = design["platform"]
+    if next(p for p in platform if p["id"] == "IDENTITY")["product"] != "Okta":
+        raise ValueError("Enterprise identity must follow the accepted Okta decision")
     ids = {p["id"] for p in platform}
     if len(ids) != len(platform):
         raise ValueError("Duplicate platform component")

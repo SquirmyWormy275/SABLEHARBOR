@@ -234,3 +234,20 @@ class IntegrationTests(unittest.TestCase):
                 self.assertEqual(db.execute("pragma foreign_key_check").fetchall(), [])
             with self.assertRaises(ValueError):
                 database.build(path, result)
+
+
+def test_latest_enterprise_identity_direction_is_enforced():
+    data = model.load()
+    model.validate(data, model.ROOT)
+    identity = next(
+        p
+        for p in data["capital"]["implementation_assumptions"]["technical_design"][
+            "platform"
+        ]
+        if p["id"] == "IDENTITY"
+    )
+    identity["product"] = "Unapproved substitute"
+    import pytest
+
+    with pytest.raises(ValueError, match="Okta"):
+        model.validate(data)

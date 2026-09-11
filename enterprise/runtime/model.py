@@ -256,6 +256,17 @@ def validate(data, repository=None):
             (Path(repository) / "enterprise/services/source/services.json").read_text()
         )["services"]
         native_ids = {r[0] for r in native_services}
+        direction = data["capital"]["implementation_assumptions"]["technical_design"][
+            "enterprise_vendor_direction"
+        ]
+        if (
+            not (Path(repository) / direction["authority"]).is_file()
+            or not {r["service_id"] for r in direction["bindings"]} <= native_ids
+        ):
+            raise ValueError(
+                "Missing vendor authority or unknown vendor service binding"
+            )
+
         for service in data["capital"]["implementation_assumptions"][
             "technical_design"
         ]["recovery_services"]:

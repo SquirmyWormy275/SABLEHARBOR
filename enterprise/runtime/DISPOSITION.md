@@ -27,7 +27,7 @@ The controlling mandate remains the September 11 PR119 handover.
 | R119-19 | Source-driven room, rack and phase renderers | 12 SVG/PDF/PNG concept plates, inspected | Component-rated UPS/generator/cooling/feeder arithmetic and dimensioned enclosures implemented; licensed engineering gated |
 | R119-20 | Phase dependencies plus evidence-bearing temporal state engine | September cutoffs, shell/commission/operation tests | Future events are reference fixtures, not accepted history |
 | R119-21 | Thirteen explicit controlled-publication registrations | 13 PDFs, catalog JSON/SQLite and publication manifest | Final release index awaits package acceptance |
-| R119-22 | `readiness.json` field-level references with access limits | validated source/gate register in runtime export | Ten public references with field-level provenance; actual reports and supplier acceptance gated |
+| R119-22 | `readiness.json` field-level references with access limits | validated source/gate register in runtime export | Nine public references plus accepted enterprise vendor canon with field-level provenance; actual reports and supplier acceptance gated |
 | R119-23 | Separate SOC1 customer-ICFR and SOC2 scope | assurance PDF and provisional native-control mapping | Full authoritative criteria and practitioner scope absent |
 | R119-24 | Runtime, finance, security, temporal and integration tests | negative/mutation/funding/recovery/SQLite assertions | Source mutation exercises services, finance, geography, contract cover and catalog; archive tampering tests implemented |
 | R119-25 | Services/geo CI consume source; new runtime CI builds actual output | accepted-output digest, workbook reproduction, two financial builds | Exact candidate CI recorded separately |

@@ -2194,7 +2194,8 @@
                 "workforce_phases",
                 "asset_policy",
                 "ai_job_mix",
-                "recovery_services"
+                "recovery_services",
+                "enterprise_vendor_direction"
               ],
               "additionalProperties": false,
               "properties": {
@@ -3003,6 +3004,75 @@
                     ]
                   },
                   "uniqueItems": true
+                },
+                "enterprise_vendor_direction": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "authority",
+                    "authority_commit",
+                    "implementation_state",
+                    "contracts_executed",
+                    "deployed",
+                    "cost_treatment",
+                    "bindings"
+                  ],
+                  "properties": {
+                    "authority": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "authority_commit": {
+                      "type": "string",
+                      "pattern": "^[0-9a-f]{40}$"
+                    },
+                    "implementation_state": {
+                      "const": "DESIGN_PROCUREMENT_PENDING"
+                    },
+                    "contracts_executed": {
+                      "const": false
+                    },
+                    "deployed": {
+                      "const": false
+                    },
+                    "cost_treatment": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "bindings": {
+                      "type": "array",
+                      "minItems": 10,
+                      "uniqueItems": true,
+                      "items": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "domain",
+                          "product",
+                          "service_id",
+                          "authority_boundary"
+                        ],
+                        "properties": {
+                          "domain": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "product": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "service_id": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "authority_boundary": {
+                            "type": "string",
+                            "minLength": 1
+                          }
+                        }
+                      }
+                    }
+                  }
                 }
               }
             }

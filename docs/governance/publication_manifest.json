@@ -997,16 +997,16 @@
     {
       "source": "enterprise/runtime/docs/ARCHITECTURE_AND_RUNBOOKS.md",
       "publication": "enterprise/runtime/publications/SH-RT-ARCH-001_v1.0.0.pdf",
-      "sha256": "d93be0c61a491249ce1774aaf89eb689d0d63141138a5348e0c84afe68e2ff30",
-      "source_sha256": "caf860aa598c0110d75216a877e58aecccb338e1c5cb8955e2098a9febc91e82",
+      "sha256": "ab0aead4210844b9f661bcae7196f5b79d3d8e5e3ab375fe4fb769dd19b54efc",
+      "source_sha256": "202a5eb3e4e44695759a8c668a436a332d2d812472aa26efaf176b55b6fae908",
       "brand": "corporate",
       "normalizer": "pypdf"
     },
     {
       "source": "enterprise/runtime/docs/MODEL_RESULTS.md",
       "publication": "enterprise/runtime/publications/SH-RT-RESULTS-001_v1.0.0.pdf",
-      "sha256": "df03e7fdd1b182b7f8f6f69920134fac16bacf4d2858d6e18078721a3f8825f6",
-      "source_sha256": "9a8f7bad423804637ce3fe0e72047902754723895d9064499950d61e1848bd76",
+      "sha256": "b65415c4a205c06b100ded26be7856a12cb800a86bc855f8467d5a778481d3fe",
+      "source_sha256": "5c7d6ce8848f4111ee124062efb0ec1293c74ba8e9fcbf6283ee8f0bad89f992",
       "brand": "corporate",
       "normalizer": "pypdf"
     },

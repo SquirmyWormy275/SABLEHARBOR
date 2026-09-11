@@ -2225,16 +2225,13 @@
         },
         {
           "id": "IDENTITY",
-          "product": "Keycloak",
-          "version": "26.7.3",
-          "role": "Separate enterprise and recovery realms; policy context does not grant J2 rights",
+          "product": "Okta",
+          "version": "VENDOR_MANAGED_TENANT_RELEASE_PENDING_QUALIFICATION",
+          "role": "Enterprise identity; independent local break-glass credentials for recovery; no vendor grants J2 information authority",
           "owner": "TEAM-identity",
-          "source": "https://www.keycloak.org/downloads",
+          "source": "docs/controls/CCF_ENTERPRISE_SECURITY_VENDOR_DECISIONS_2026-09-11.md",
           "support_until": null,
-          "dependencies": [
-            "HOST",
-            "DATABASE"
-          ]
+          "dependencies": []
         }
       ],
       "image_admission": {
@@ -2469,7 +2466,77 @@
           "minimum_service": "Rebuildable development; signed release artifacts protected with production prerequisites",
           "performance_verified": false
         }
-      ]
+      ],
+      "enterprise_vendor_direction": {
+        "authority": "docs/controls/CCF_ENTERPRISE_SECURITY_VENDOR_DECISIONS_2026-09-11.md",
+        "authority_commit": "786fc9a5311a04dde92ee6dbb08ac3b77a380200",
+        "implementation_state": "DESIGN_PROCUREMENT_PENDING",
+        "contracts_executed": false,
+        "deployed": false,
+        "cost_treatment": "Existing gross software/support/security allowances are placeholders, not a quote or proof all selected products are funded; do not duplicate payroll or claim displaced-cost credits",
+        "bindings": [
+          {
+            "domain": "IAM",
+            "product": "Okta",
+            "service_id": "SVC-identity",
+            "authority_boundary": "Authentication is not information entitlement"
+          },
+          {
+            "domain": "IGA",
+            "product": "IBM Security Verify",
+            "service_id": "SVC-identity",
+            "authority_boundary": "Certifies approved rights; does not create Alexandria authority"
+          },
+          {
+            "domain": "HR",
+            "product": "SAP SuccessFactors",
+            "service_id": "SVC-hr-payroll",
+            "authority_boundary": "Lifecycle authority does not grant restricted rights"
+          },
+          {
+            "domain": "UEM",
+            "product": "IBM MaaS360",
+            "service_id": "SVC-endpoint",
+            "authority_boundary": "Device posture is an access condition, not entitlement"
+          },
+          {
+            "domain": "EDR_EPP",
+            "product": "Palo Alto Networks Cortex XDR",
+            "service_id": "SVC-edr",
+            "authority_boundary": "One integrated endpoint stack; scoped endpoint telemetry only"
+          },
+          {
+            "domain": "NGFW",
+            "product": "Palo Alto Networks",
+            "service_id": "SVC-connectivity",
+            "authority_boundary": "Qualified appliance classes and authorized rule changes"
+          },
+          {
+            "domain": "ZTNA_SASE",
+            "product": "Palo Alto Networks Prisma Access",
+            "service_id": "SVC-connectivity",
+            "authority_boundary": "Identity/device/purpose checks before remote access"
+          },
+          {
+            "domain": "SIEM",
+            "product": "Palo Alto Networks Cortex security-operations ecosystem; exact product mapping pending",
+            "service_id": "SVC-siem",
+            "authority_boundary": "Purpose-limited telemetry; no unrestricted protected payload collection"
+          },
+          {
+            "domain": "DLP",
+            "product": "Palo Alto Networks Enterprise DLP",
+            "service_id": "SVC-siem",
+            "authority_boundary": "Enforces owner/source restrictions; does not decide disclosure authority"
+          },
+          {
+            "domain": "CNAPP",
+            "product": "Palo Alto Networks Prisma Cloud",
+            "service_id": "SVC-compute",
+            "authority_boundary": "Only qualified workload modules; no implied deployed protection"
+          }
+        ]
+      }
     }
   }
 }

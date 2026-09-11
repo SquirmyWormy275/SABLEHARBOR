@@ -19,12 +19,13 @@ demand, utility design and funding. A 1 MW utility path and optional 2 MW route
 are design requirements, not energized capacity.
 
 ADR-02: select Ubuntu Server 24.04 LTS with maintained distribution KVM/libvirt
-and Podman, PostgreSQL 17.11, Ceph RGW Tentacle 20.2.4, and Keycloak 26.7.3.
+and Podman, PostgreSQL 17.11, Ceph RGW Tentacle 20.2.4, and the owner-selected Okta enterprise identity service.
 The source `technical_design.platform` records dependencies, public lifecycle
 references and upgrade planning dates. These are selected design versions;
 interoperability, signed images and equipment remain unqualified. Ceph's short
-remaining support horizon requires upgrade planning in December 2026. Rolling
-Keycloak releases receive monthly review. No production endpoint or credential is
+remaining support horizon requires upgrade planning in December 2026. The newly accepted enterprise vendor decision on main supersedes the earlier
+local Keycloak design candidate; no Keycloak deployment is selected. Vendor-managed
+Okta tenant configuration receives monthly review. No production endpoint or credential is
 provided: configuration uses `.example.invalid` names and external secret references.
 
 Separate transactional/temporal truth, immutable source objects and rebuildable
@@ -234,3 +235,24 @@ synthetic tests. The component asset sensitivity covers original Phase I only;
 subsequent module/refurbishment costs appear separately in the investment cash model,
 and require separate accepted asset cohorts before any real depreciation entry.
 Land never depreciates; no forecast date commissions plant.
+
+## Accepted enterprise vendor direction
+
+The September 11 [security and identity vendor decision](../../../docs/controls/CCF_ENTERPRISE_SECURITY_VENDOR_DECISIONS_2026-09-11.md)
+controls enterprise vendor selection. `technical_design.enterprise_vendor_direction`
+records the native service bindings: Okta IAM; IBM Security Verify IGA; SAP
+SuccessFactors HR authority; IBM MaaS360 UEM; Cortex XDR endpoint protection;
+Palo Alto NGFW, Prisma Access, Enterprise DLP and Prisma Cloud. The Cortex
+security-operations product mapping remains pending within the selected ecosystem.
+
+Joiner/mover/leaver events originate in approved HR records, IGA certifies owner-
+approved entitlements, and Okta authenticates scoped principals. Endpoint posture
+and network policy add conditions; neither grants Alexandria disclosure rights.
+Telemetry is filtered by tenant, purpose, retention and source restrictions before
+external delivery. Recovery retains offline signed instructions, local break-glass
+credentials, HSM custody and tested bootstrapping independent of the primary site
+and live enterprise SaaS availability. Actual integrations remain unqualified.
+
+These selections do not invent executed licenses or prices. Existing gross security,
+software and support allowances remain explicit placeholders; procurement must
+reconcile the complete selected product schedule to funding before acceptance.

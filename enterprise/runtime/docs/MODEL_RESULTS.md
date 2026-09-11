@@ -8,7 +8,7 @@
 **Authority:** September 11 runtime decisions; generated output does not create canon
 **Structured companion:** enterprise/services/source/runtime_sites_2026-09-11.json; enterprise/services/source/runtime_capital_plan_2026-09-11.json
 
-Source content SHA-256: `6f359aa710dd0ece6c253cea1c3312f81831b0be63782a6315269478e69c4771`. Regenerate with `python -m enterprise.runtime.report`. Do not edit calculated values in this derivative.
+Source content SHA-256: `805f7415d244641dc15ef3f66f34673ec41aeb842eccb975ff7ce7aa0069f471`. Regenerate with `python -m enterprise.runtime.report`. Do not edit calculated values in this derivative.
 
 ## Current design boundary
 

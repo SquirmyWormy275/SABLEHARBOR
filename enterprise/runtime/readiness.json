@@ -148,23 +148,6 @@
       "refresh_owner": "Platform"
     },
     {
-      "id": "RT-SRC-KEYCLOAK",
-      "publisher": "Keycloak project",
-      "title": "Downloads",
-      "url": "https://www.keycloak.org/downloads",
-      "retrieved_on": "2026-09-11",
-      "published_on": null,
-      "facility_scope": "Runtime design reference; no deployment qualification",
-      "claim": "26.7.3 selected from the current public release; rolling review required",
-      "field_references": [
-        "technical_design.platform.IDENTITY"
-      ],
-      "evidence_class": "PUBLIC_REFERENCE_NOT_ACCEPTED_EVIDENCE",
-      "conflicts": [],
-      "limitations": "Public specifications do not establish interoperability, procurement acceptance or operating effectiveness. Revalidate supported releases and site-specific limits before deployment.",
-      "refresh_owner": "Platform"
-    },
-    {
       "id": "RT-SRC-NVIDIA",
       "publisher": "NVIDIA",
       "title": "DGX SuperPOD H100 data center planning",
