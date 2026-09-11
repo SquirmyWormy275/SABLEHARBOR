@@ -25,16 +25,16 @@ This index defines the current SH-CCF v0.1 package and its internal dependencies
 10. `CCF_HISTORICAL_MATURITY_AND_EXCEPTION_MODEL_v0.1.md` — longitudinal 2016–2026 maturity states, exception taxonomy, issue severity and remediation lifecycle.
 11. `CCF_POLICY_AND_ARTIFACT_INVENTORY_v0.1.md` — governance documents, policies, standards, procedures, registers and naturally generated evidence artifacts implied by the CCF.
 12. `CCF_EXTERNAL_FRAMEWORK_MAPPING_PLAN_v0.1.md` — external authority/framework mapping architecture and preliminary source-family relevance map without false equivalence.
+13. `CCF_ENTERPRISE_SECURITY_VENDOR_DECISIONS_2026-09-11.md` — owner-approved enterprise vendor direction for IAM, IGA, HR lifecycle authority, UEM, EDR/EPP, NGFW, ZTNA/SASE, SIEM direction, DLP and cloud workload protection; also records Palo Alto Networks as the preferred enterprise security vendor where a direct fit exists and delegates routine control-engineering mechanics.
 
 ## Governance/world decisions supporting the CCF
 
-13. `../governance/2026_ENTITY_AND_BOARD_GOVERNANCE_DECISIONS.md` — selective subsidiary architecture, nine-seat unitary board, five committees, independent Chair and core board roles.
-14. `../governance/2026_BOARD_COMPOSITION_AND_FINANCING_MODEL.md` — board seat architecture and financing-history design principles.
-15. `../governance/2026_CAPITAL_AND_ASSURANCE_MODEL.md` — delegated-capital architecture and internal-assurance implementation envelope.
-16. `../governance/BOARD_AND_CAPITAL_GOVERNANCE.md` — accepted financing, nine directors, biographies, evolution, committee membership, and five committee charters.
-17. `../governance/GOVERNANCE_CONSTITUTION.md` — delegated authority, reserved matters, rapid adjudication, risk assumption, abstention, subsidiary autonomy, conflict integrity, and AAR doctrine.
-18. `../j2/README.md` — J2/Alexandria governance and intelligence system now consumed by the CCF.
-19. `CCF_ENTERPRISE_SECURITY_VENDOR_DECISIONS_2026-09-11.md` — owner-approved enterprise identity/security vendor direction: Okta, SAP SuccessFactors, IBM MaaS360, and a Palo Alto Networks-first security ecosystem; preserves IGA as an explicit unresolved vendor decision and delegates routine implementation mechanics.
+14. `../governance/2026_ENTITY_AND_BOARD_GOVERNANCE_DECISIONS.md` — selective subsidiary architecture, nine-seat unitary board, five committees, independent Chair and core board roles.
+15. `../governance/2026_BOARD_COMPOSITION_AND_FINANCING_MODEL.md` — board seat architecture and financing-history design principles.
+16. `../governance/2026_CAPITAL_AND_ASSURANCE_MODEL.md` — delegated-capital architecture and internal-assurance implementation envelope.
+17. `../governance/BOARD_AND_CAPITAL_GOVERNANCE.md` — accepted financing, nine directors, biographies, evolution, committee membership, and five committee charters.
+18. `../governance/GOVERNANCE_CONSTITUTION.md` — delegated authority, reserved matters, rapid adjudication, risk assumption, abstention, subsidiary autonomy, conflict integrity, and AAR doctrine.
+19. `../j2/README.md` — J2/Alexandria governance and intelligence system now consumed by the CCF.
 
 ## What v0.1 establishes
 
@@ -56,7 +56,7 @@ The package now establishes:
 - future SOC 1/SOC 2 and other framework mapping posture;
 - explicit non-equivalence and source-version rules;
 - business-line applicability for software, model, R&D, professional services, mine, rail/utility, recovery and acquired-company operations;
-- owner-approved enterprise identity/security vendor direction without conflating selection with deployment or operating effectiveness.
+- enterprise security/identity vendor direction sufficient to begin local implementation design without reopening routine control mechanics.
 
 ## Deliberately not treated as complete in v0.1
 
@@ -70,8 +70,7 @@ The following are next-phase work rather than missing foundation content:
 6. exact SOC 1 system/ICFR scope and SOC 2 system/service/Trust Services Category scope;
 7. machine-readable SQL/JSON/CSV population of the logical CCF schema;
 8. runtime implementation evidence for the accepted J2/Alexandria/Daedalus architecture;
-9. historical assurance-maturity choice: RESOLVED by the September 3 headquarters closeout and current Internal Audit/ESS doctrine (#17 closed); remaining local operating and testing evidence is still implementation work;
-10. final IGA vendor selection and the resulting local implementation records for the approved identity/security stack.
+9. historical assurance-maturity choice: RESOLVED by the September 3 headquarters closeout and current Internal Audit/ESS doctrine (#17 closed); remaining local operating and testing evidence is still implementation work.
 
 The September 9 [local implementation register](../structured/business-lines/interfaces.json) starts the scoped business/Finance evidence layer. It does not claim longitudinal operating effectiveness or completed external-framework mapping.
 
