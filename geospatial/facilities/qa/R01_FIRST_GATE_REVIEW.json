@@ -1,0 +1,111 @@
+{
+  "status": "FAIL_FIRST_SUCCESSOR_GATE",
+  "review_date": "2026-09-11",
+  "candidate": {
+    "path": "geospatial/facilities/qa/R01_FIRST_CANDIDATE.png",
+    "sha256": "ba807d995042b730f2aad57750202c168a487e18994906e4b76a13b2e2b7ae30",
+    "dimensions_px": [
+      3240,
+      2304
+    ]
+  },
+  "manual_comparisons": "All4 originals viewed at original resolution and paired6480x2304 side-by-side with candidate; master3240x2304 overlay reviewed.",
+  "findings": [
+    {
+      "id": "R01-G01",
+      "title": "Typography fallback",
+      "detail": "fc-match DejaVu Sans returns Liberation Sans. Title ink width1319 vs1585px; title height43 vs51px. Register deterministic matching fonts and retune title/wordmark sizing.",
+      "status": "open"
+    },
+    {
+      "id": "R01-G02",
+      "title": "Subtitle position",
+      "detail": "Current subtitle ink y321\u2013350 vs approved290\u2013318; move baseline up31px.",
+      "status": "open"
+    },
+    {
+      "id": "R01-G03",
+      "title": "Site palette",
+      "detail": "Sitefield/road overrides differ from measured#ebeee6/#cbcdc8; apply exact palette.",
+      "status": "open"
+    },
+    {
+      "id": "R01-G04",
+      "title": "Building accent strips",
+      "detail": "R01 blue/sage/gold left facade strips are absent; restore without changing footprint.",
+      "status": "open"
+    },
+    {
+      "id": "R01-G05",
+      "title": "South arrival and parking",
+      "detail": "Current continuous south parking strip crosses central primaryarrival. R01 has distinct west/eastblocks and gap; restore route, parkingcourt and dropoff labels and do not assert252 after altering counts without recount.",
+      "status": "open"
+    },
+    {
+      "id": "R01-G06",
+      "title": "Access composition",
+      "detail": "Current west lateral spur reaches siteboundary; original access remains perimeterconnected inside. Original northeast service connection and south dropoff/pedestrian branches missing. Preserve R01 topology or document intentional functional changes.",
+      "status": "open"
+    },
+    {
+      "id": "R01-G07",
+      "title": "Schedule hierarchy",
+      "detail": "Coordinated-program body changed from navy to muted and bodywrap differs materially due fallbackfont; restore original factual contrast.",
+      "status": "open"
+    },
+    {
+      "id": "R01-G08",
+      "title": "Trees and support geometry",
+      "detail": "Several treepositions shift into centralquad and original small Education service rectangle omitted; restore measured baseline or explicitly justify changed landscape/service design.",
+      "status": "open"
+    }
+  ],
+  "intentional_deviations": [
+    {
+      "change": "R01 toR02 revision markers",
+      "reason": "Required successor, never relabel original approval."
+    },
+    {
+      "change": "Program prose replaces obsolete0.9%comparison with explicit continuity",
+      "reason": "Appropriate successor narrative, preserving exact building/floor/area totals."
+    },
+    {
+      "change": "Independent editableSVG andPDF",
+      "reason": "Original approval onlyPNG; new derivatives required and independently reviewed."
+    }
+  ],
+  "passed_features": [
+    "Canvas proportion and paper color",
+    "Top/footer rules, statusblock position and schedulecolumn",
+    "Fourbuilding positions and dimensions broadly matchmaster",
+    "Northarrow and alternating scale",
+    "Explicit fictionalstudy status, separateworkplaces and residencecounts"
+  ],
+  "bulk_generation_authorized_by_gate": false,
+  "comparison_assets": [
+    {
+      "path": "geospatial/facilities/qa/R01_FIRST_CANDIDATE.png",
+      "sha256": "ba807d995042b730f2aad57750202c168a487e18994906e4b76a13b2e2b7ae30"
+    },
+    {
+      "path": "geospatial/facilities/qa/R01_FIRST_COMPARISON_01.png",
+      "sha256": "6239a1578e85d3b98725d04ce87e9be9171cddeb06f50fa5a4b7bd7d7ea8dee0"
+    },
+    {
+      "path": "geospatial/facilities/qa/R01_FIRST_COMPARISON_02.png",
+      "sha256": "09754b619794df12e1b597734a33cac674bab880edebf8175a503f7f4ba790c5"
+    },
+    {
+      "path": "geospatial/facilities/qa/R01_FIRST_COMPARISON_03.png",
+      "sha256": "47802fe99a2bab872df5640347b082e43bdb966e8240bfa94fc63699ccde69ff"
+    },
+    {
+      "path": "geospatial/facilities/qa/R01_FIRST_COMPARISON_04.png",
+      "sha256": "95eceba944fa3d44196581f8e037c62123377e466490a09a13c33372a6580f64"
+    },
+    {
+      "path": "geospatial/facilities/qa/R01_FIRST_MASTER_OVERLAY.png",
+      "sha256": "edde9bc4f6bc6cd0d1582a6b6450713e0de660cc9c295d7c4e2fbcd30fc76da6"
+    }
+  ]
+}
