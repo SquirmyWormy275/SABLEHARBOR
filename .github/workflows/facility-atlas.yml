@@ -16,10 +16,15 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: python -m pip install PyMuPDF Pillow pytest
+      - run: python -m pip install PyMuPDF Pillow pytest shapely
       - name: Coverage, population, geometry, capacity and publication links
         run: python geospatial/facilities/validate.py --check --require-atlas
       - name: Acceptance regression mutations
         run: python -m pytest -q geospatial/facilities/test_facilities.py geospatial/facilities/coverage/test_coverage.py geospatial/facilities/population/test_population.py
+      - name: Planning workbench freshness and regression tests
+        run: |
+          python geospatial/facilities/workbench/build.py build --check
+          python -m pytest -q geospatial/facilities/workbench
+          node geospatial/facilities/workbench/test_app.cjs
       - name: Generated checks leave committed source and manifests unchanged
         run: git diff --exit-code -- geospatial/facilities geospatial/maps/facilities

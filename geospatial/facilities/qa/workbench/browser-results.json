@@ -1,0 +1,60 @@
+{
+  "status": "PASS_OFFLINE_UI_REVIEW",
+  "html_sha256": "ab703d98a4f3acb4cdb00f0b23db4cf1fea7f97cdf2995cceb253651a83dcb16",
+  "source_sha256": {
+    "geospatial/facilities/workbench/app.js": "5b85a91d003d8f1ad485f633d5e0080d2480e64236dd9a2e19e5527c5b45f495",
+    "geospatial/facilities/workbench/template.html": "73b2b8caeee13163e094da9a2ff4d440be0b396cdd378f5991324500b824859a"
+  },
+  "browser": "Playwright with /usr/bin/chromium; file://",
+  "viewports": [
+    [
+      1440,
+      1000
+    ],
+    [
+      390,
+      844
+    ]
+  ],
+  "tabs": [
+    "scenario",
+    "readiness",
+    "evidence",
+    "impacts"
+  ],
+  "page_errors": [],
+  "horizontal_page_overflow": false,
+  "baseline": {
+    "sacramento_day": 504,
+    "known_all_sites_day": 566,
+    "unknown_floors": 1,
+    "day_trainees": 120,
+    "night_residents": 60
+  },
+  "interaction_tests": [
+    "scenario download/import roundtrip",
+    "Python evaluate exported draft WITHIN_KNOWN_MODEL",
+    "stale source hash import rejected",
+    "evidence export keys exactly submission template; PENDING only",
+    "source HTML payload literal text, no image element or execution",
+    "Atlas Planning workbench link opens offline workbench and 504-day baseline"
+  ],
+  "screenshots": {
+    "atlas-navigation.png": "580bdc0bd63ce402fc553b7ea906c38261bd7deacfb9176ab0619117a0bebb85",
+    "evidence-desktop.png": "55c7f60c7c0e866945daf7fafe9b8ffc5e869adfa33921d7f4dca3e64503704f",
+    "evidence-form.png": "3a88926b1e6820d3dcdc2c33be194e331641856c998e1ada2ad314597eacb224",
+    "evidence-mobile.png": "ba45e6741cce090f56710aa0f26d9cd2a276a8de7087b0b5acbd17f3140e6fe0",
+    "impacts-desktop.png": "cabda90ce86a68fefa57b0116263e838ffd587f182f2239c1f668abef845d163",
+    "impacts-expanded.png": "2bed18781afe514bd027ea0ef3efe4f49e8f57962b4f99b23c7d71dbe4271136",
+    "impacts-mobile.png": "6b1c01c9dde51d187cf2ad555eb69cdb0b89c8544607a23d31e316f26b598c6f",
+    "readiness-desktop.png": "c4d14c20eaf1b69b4fafd3c07f47d400b24396ffec275bf0c9b360c06f07fe09",
+    "readiness-expanded.png": "b48ebc490d5cacf05bf4b6ecac470de2bc619894590ef615de7579a4897064e0",
+    "readiness-mobile.png": "627d6377d622c26c45359045116dd3f02b906cf6665ac20a3e1f72535ab49de0",
+    "scenario-desktop.png": "c7fa4404445974d72e109fc6e95de3e040287eca291f6b6203da07748d659399",
+    "scenario-mobile.png": "b487bc506af3969f4a6cd338335b696e60e52d5aa177495ca77dd4e09364a41f",
+    "scenario-summary.png": "f580385ae10e8f94d986f4f887f891ee4877779351463a3d9d20fce2f9ddd3ac"
+  },
+  "reviewed_after_source_freeze": "09ef4f1",
+  "atlas_html_sha256": "95a7f1ee0ebe7fe80978668f3df24601724d12458ab36cb7a3ab97599da89861",
+  "rerun_boundary": "Actual browser rerun after 09ef4f1 freeze; all four desktop/mobile tabs recaptured. Ten screenshot byte streams unchanged; updated source-impact detail and evidence hash views reinspected, plus new atlas-navigation view."
+}
