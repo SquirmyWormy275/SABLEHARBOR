@@ -1,0 +1,2542 @@
+{
+  "as_of": "2026-09-11",
+  "state": "SYNTHETIC_PLANNING_NOT_BUDGET_OR_QUOTE",
+  "owned_site": {
+    "land_usd": 3000000,
+    "site_civil_security_usd": 1000000,
+    "shell_support_building_usd": 3500000,
+    "utility_fiber_backbone_usd": 1000000,
+    "initial_critical_plant_usd": 5000000,
+    "engineering_permitting_contingency_usd": 2000000,
+    "phase_1_total_usd": 15500000,
+    "range_total_usd_low": 10000000,
+    "range_total_usd_high": 20000000,
+    "production_it_hardware_included": false
+  },
+  "central_it_design_kw": {
+    "2027": {
+      "efficiency_edge": 75,
+      "base": 85,
+      "high_centralized": 120
+    },
+    "2031": {
+      "efficiency_edge": 115,
+      "base": 175,
+      "high_centralized": 355
+    },
+    "2036": {
+      "efficiency_edge": 175,
+      "base": 370,
+      "high_centralized": 1200
+    }
+  },
+  "construction_truth": {
+    "land_acquired": true,
+    "vertical_construction_started": false,
+    "shell_complete": false,
+    "critical_plant_ordered": false,
+    "critical_plant_commissioned": false,
+    "production_operating": false
+  },
+  "accounting_rules": [
+    "Do not treat planning envelope as spent.",
+    "Separate land, CIP, building, critical plant, IT hardware, colo OPEX and labor.",
+    "Do not book incentives before evidenced approval.",
+    "Do not double count existing facilities/vendor allowances without supported displacement.",
+    "Fractional workload FTE are allocations, not automatic new hires."
+  ],
+  "schema_version": "1.0.0",
+  "recorded_on": "2026-09-11",
+  "reference_cases_state": "INHERITED_SCENARIO_ENVELOPES_NOT_BENCHMARKS",
+  "implementation_assumptions": {
+    "origin": "DELEGATED_SYNTHETIC_DESIGN_NOT_MEASURED",
+    "drivers": {
+      "internal_users": 900,
+      "atlas_clients": 30,
+      "atlas_hosted_share": 0.5,
+      "atlas_users_per_client": 100,
+      "foundry_clients": 40,
+      "foundry_central_share": 0.25,
+      "foundry_users_per_client": 20,
+      "active_share": 0.2,
+      "requests_per_active_second": 0.1,
+      "cpu_seconds_per_request": 0.2,
+      "memory_gib_per_active": 0.25,
+      "fixed_cpu_cores": 64,
+      "fixed_memory_gib": 512,
+      "tasks_per_user_day": 12,
+      "tokens_per_task": 4000,
+      "peak_factor": 3,
+      "service_window_hours": 10,
+      "durable_tib": 150,
+      "daily_change_fraction": 0.02,
+      "retention_years": 7,
+      "annual_storage_growth": 0.2,
+      "model_parameters_billion": 70,
+      "weight_bits": 4,
+      "context_tokens": 16384,
+      "kv_gib_per_session": 4,
+      "concurrent_ai_share": 0.015,
+      "kv_reference_context_tokens": 16384,
+      "baseline_retention_years": 7,
+      "ingest_gib_per_day": 16,
+      "read_iops_per_active": 12,
+      "write_iops_per_active": 2,
+      "index_copy_fraction": 0.2
+    },
+    "hardware": {
+      "cpu_cores": 64,
+      "cpu_memory_gib": 512,
+      "cpu_peak_kw": 0.8,
+      "cpu_typical_kw": 0.45,
+      "cpu_u": 2,
+      "cpu_price": 24000,
+      "gpu_count": 8,
+      "gpu_memory_gib": 80,
+      "gpu_system_peak_kw": 8,
+      "gpu_system_typical_kw": 5,
+      "gpu_system_u": 8,
+      "gpu_system_price": 280000,
+      "assumed_tokens_per_second": 1600,
+      "storage_usable_tib": 100,
+      "storage_peak_kw": 0.8,
+      "storage_typical_kw": 0.5,
+      "storage_u": 4,
+      "storage_price": 40000,
+      "network_hsm_peak_kw": 2,
+      "network_hsm_typical_kw": 1.2,
+      "network_hsm_u": 12,
+      "network_hsm_price": 100000,
+      "rack_usable_u": 36,
+      "rack_max_kw": 12,
+      "utilization_ceiling": 0.7,
+      "throughput_state": "UNMEASURED_SYNTHETIC_RANGE",
+      "rack_max_weight_kg": 1200,
+      "cpu_weight_kg": 30,
+      "gpu_system_weight_kg": 150,
+      "storage_weight_kg": 50,
+      "network_hsm_weight_kg": 80,
+      "storage_iops_per_shelf": 40000,
+      "storage_ingest_gib_per_second": 2,
+      "assumed_tokens_per_second_low": 800,
+      "assumed_tokens_per_second_high": 2400
+    },
+    "scenarios": {
+      "base": {
+        "annual_user_growth": 0.18,
+        "demand_factor": 1,
+        "efficiency_gain": 0.08,
+        "construction_delay_months": 0
+      },
+      "slower_adoption": {
+        "annual_user_growth": 0.08,
+        "demand_factor": 0.6,
+        "efficiency_gain": 0.1,
+        "construction_delay_months": 0
+      },
+      "high_demand": {
+        "annual_user_growth": 0.3,
+        "demand_factor": 1.5,
+        "efficiency_gain": 0.04,
+        "construction_delay_months": 0
+      },
+      "delayed_build": {
+        "annual_user_growth": 0.18,
+        "demand_factor": 1,
+        "efficiency_gain": 0.08,
+        "construction_delay_months": 24
+      }
+    },
+    "commercial": {
+      "reno_rate_per_kw_month": 350,
+      "reno_billing": "COMMITTED_ASSUMPTION",
+      "reno_power_included": true,
+      "boise_billing": "MEASURED_PUBLIC_BASELINE",
+      "connectivity_per_site_month": 4000,
+      "remote_hands_per_site_month": 1000,
+      "software_support_year": 180000,
+      "backup_per_tib_month": 18,
+      "offline_per_tib_year": 45,
+      "annual_escalation": 0.03,
+      "owned_electricity_per_kwh": 0.12,
+      "owned_pue": 1.45,
+      "owned_maintenance_year": 300000,
+      "discount_rate": 0.1,
+      "terminal_sale_year": 2036,
+      "terminal_sale_value": 0,
+      "incentives": 0,
+      "evidenced_displacement": 0,
+      "hardware_refresh_years": 4,
+      "migration_overlap_months": 6,
+      "migration_cost": 450000,
+      "decommission_cost": 250000
+    },
+    "recovery": {
+      "cpu_share": 0.4,
+      "ai_share": 0.1,
+      "storage_share": 1,
+      "replication_gbps": 10,
+      "protocol_overhead_fraction": 0.2,
+      "compression_ratio": 1,
+      "catchup_hours": 8,
+      "prepositioned_data_required": true,
+      "performance_verified": false,
+      "tiers": [
+        {
+          "id": "BOOTSTRAP",
+          "rto_hours": 1,
+          "rpo_hours": 0,
+          "prerequisites": []
+        },
+        {
+          "id": "PRODUCTION",
+          "rto_hours": 4,
+          "rpo_hours": 0.25,
+          "prerequisites": [
+            "BOOTSTRAP"
+          ]
+        },
+        {
+          "id": "ALEXANDRIA",
+          "rto_hours": 8,
+          "rpo_hours": 1,
+          "prerequisites": [
+            "BOOTSTRAP"
+          ]
+        },
+        {
+          "id": "DEVELOPMENT",
+          "rto_hours": 24,
+          "rpo_hours": 24,
+          "prerequisites": [
+            "BOOTSTRAP",
+            "PRODUCTION"
+          ]
+        }
+      ],
+      "transport_outage_hours": 24
+    },
+    "workforce": {
+      "hours_per_week": 40,
+      "weeks_per_year": 52,
+      "productive_fraction": 0.75,
+      "verified_reusable_fte": 0,
+      "authorized_new_positions": 0,
+      "occupied_new_positions": 0,
+      "roles": [
+        {
+          "id": "RT-ROLE-PLATFORM",
+          "owner": "TEAM-platform",
+          "required_fte": 3,
+          "annual_loaded_cost": 180000,
+          "allocated_fraction": 1,
+          "location": "Sacramento hybrid; scheduled site travel",
+          "qualification": "Demonstrated role-specific engineering and recovery exercise; cross-trained alternate required",
+          "coverage": "BUSINESS_HOURS_AND_ON_CALL_NOT_CONTINUOUS_SEAT"
+        },
+        {
+          "id": "RT-ROLE-NETWORK",
+          "owner": "TEAM-network",
+          "required_fte": 2,
+          "annual_loaded_cost": 180000,
+          "allocated_fraction": 1,
+          "location": "Sacramento hybrid; scheduled site travel",
+          "qualification": "Demonstrated role-specific engineering and recovery exercise; cross-trained alternate required",
+          "coverage": "BUSINESS_HOURS_AND_ON_CALL_NOT_CONTINUOUS_SEAT"
+        },
+        {
+          "id": "RT-ROLE-STORAGE_DATABASE",
+          "owner": "TEAM-data",
+          "required_fte": 2,
+          "annual_loaded_cost": 180000,
+          "allocated_fraction": 1,
+          "location": "Sacramento hybrid; scheduled site travel",
+          "qualification": "Demonstrated role-specific engineering and recovery exercise; cross-trained alternate required",
+          "coverage": "BUSINESS_HOURS_AND_ON_CALL_NOT_CONTINUOUS_SEAT"
+        },
+        {
+          "id": "RT-ROLE-RELIABILITY_RECOVERY",
+          "owner": "TEAM-reliability",
+          "required_fte": 3,
+          "annual_loaded_cost": 185000,
+          "allocated_fraction": 1,
+          "location": "Sacramento hybrid; scheduled site travel",
+          "qualification": "Demonstrated role-specific engineering and recovery exercise; cross-trained alternate required",
+          "coverage": "BUSINESS_HOURS_AND_ON_CALL_NOT_CONTINUOUS_SEAT"
+        },
+        {
+          "id": "RT-ROLE-DEVELOPER_PLATFORM",
+          "owner": "TEAM-developer",
+          "required_fte": 2,
+          "annual_loaded_cost": 175000,
+          "allocated_fraction": 1,
+          "location": "Sacramento hybrid; scheduled site travel",
+          "qualification": "Demonstrated role-specific engineering and recovery exercise; cross-trained alternate required",
+          "coverage": "BUSINESS_HOURS_AND_ON_CALL_NOT_CONTINUOUS_SEAT"
+        },
+        {
+          "id": "RT-ROLE-IDENTITY_ENDPOINTS",
+          "owner": "TEAM-identity",
+          "required_fte": 2,
+          "annual_loaded_cost": 165000,
+          "allocated_fraction": 1,
+          "location": "Sacramento hybrid; scheduled site travel",
+          "qualification": "Demonstrated role-specific engineering and recovery exercise; cross-trained alternate required",
+          "coverage": "BUSINESS_HOURS_AND_ON_CALL_NOT_CONTINUOUS_SEAT"
+        },
+        {
+          "id": "RT-ROLE-SECURITY_OPERATIONS",
+          "owner": "TEAM-security",
+          "required_fte": 2,
+          "annual_loaded_cost": 185000,
+          "allocated_fraction": 1,
+          "location": "Sacramento hybrid; scheduled site travel",
+          "qualification": "Demonstrated role-specific engineering and recovery exercise; cross-trained alternate required",
+          "coverage": "BUSINESS_HOURS_AND_ON_CALL_NOT_CONTINUOUS_SEAT"
+        },
+        {
+          "id": "RT-ROLE-KEYS",
+          "owner": "TEAM-keys",
+          "required_fte": 1,
+          "annual_loaded_cost": 190000,
+          "allocated_fraction": 1,
+          "location": "Sacramento hybrid; scheduled site travel",
+          "qualification": "Demonstrated role-specific engineering and recovery exercise; cross-trained alternate required",
+          "coverage": "BUSINESS_HOURS_AND_ON_CALL_NOT_CONTINUOUS_SEAT"
+        },
+        {
+          "id": "RT-ROLE-AI_OPERATIONS",
+          "owner": "TEAM-ai",
+          "required_fte": 2,
+          "annual_loaded_cost": 195000,
+          "allocated_fraction": 1,
+          "location": "Sacramento hybrid; scheduled site travel",
+          "qualification": "Demonstrated role-specific engineering and recovery exercise; cross-trained alternate required",
+          "coverage": "BUSINESS_HOURS_AND_ON_CALL_NOT_CONTINUOUS_SEAT"
+        },
+        {
+          "id": "RT-ROLE-VENDOR_COORDINATION",
+          "owner": "TEAM-vendor",
+          "required_fte": 1,
+          "annual_loaded_cost": 145000,
+          "allocated_fraction": 1,
+          "location": "Sacramento hybrid; scheduled site travel",
+          "qualification": "Demonstrated role-specific engineering and recovery exercise; cross-trained alternate required",
+          "coverage": "BUSINESS_HOURS_AND_ON_CALL_NOT_CONTINUOUS_SEAT"
+        }
+      ]
+    },
+    "phases": [
+      {
+        "id": "RT-LAND",
+        "start": "2026-09-04",
+        "end": "2026-09-04",
+        "cost": 3000000,
+        "bucket": "land_usd",
+        "dependencies": [],
+        "authorization_state": "SYNTHETIC_ACQUIRED_SETTLEMENT_UNRESOLVED",
+        "actual_completion": "2026-09-04",
+        "recorded_on": "2026-09-11",
+        "evidence_origin": "SYNTHETIC_SCENARIO_EVENT",
+        "committed": 0,
+        "invoiced": 0,
+        "paid": 0
+      },
+      {
+        "id": "RT-STUDIES",
+        "start": "2026-09-05",
+        "end": "2026-10-31",
+        "cost": 200000,
+        "bucket": "engineering_permitting_contingency_usd",
+        "dependencies": [
+          "RT-LAND"
+        ],
+        "authorization_state": "AUTHORIZED_SCOPE_NO_INVOICE",
+        "actual_completion": null,
+        "recorded_on": "2026-09-11",
+        "evidence_origin": "FORECAST_NOT_EVIDENCE",
+        "committed": 0,
+        "invoiced": 0,
+        "paid": 0
+      },
+      {
+        "id": "RT-CONCEPT",
+        "start": "2026-09-15",
+        "end": "2026-12-15",
+        "cost": 300000,
+        "bucket": "engineering_permitting_contingency_usd",
+        "dependencies": [
+          "RT-LAND"
+        ],
+        "authorization_state": "AUTHORIZED_FUTURE_SCOPE",
+        "actual_completion": null,
+        "recorded_on": "2026-09-11",
+        "evidence_origin": "FORECAST_NOT_EVIDENCE",
+        "committed": 0,
+        "invoiced": 0,
+        "paid": 0
+      },
+      {
+        "id": "RT-DESIGN",
+        "start": "2026-11-01",
+        "end": "2027-03-31",
+        "cost": 700000,
+        "bucket": "engineering_permitting_contingency_usd",
+        "dependencies": [
+          "RT-STUDIES"
+        ],
+        "authorization_state": "FORECAST",
+        "actual_completion": null,
+        "recorded_on": "2026-09-11",
+        "evidence_origin": "FORECAST_NOT_EVIDENCE",
+        "committed": 0,
+        "invoiced": 0,
+        "paid": 0
+      },
+      {
+        "id": "RT-CIVIL",
+        "start": "2027-04-01",
+        "end": "2027-06-30",
+        "cost": 1000000,
+        "bucket": "site_civil_security_usd",
+        "dependencies": [
+          "RT-DESIGN"
+        ],
+        "authorization_state": "FORECAST",
+        "actual_completion": null,
+        "recorded_on": "2026-09-11",
+        "evidence_origin": "FORECAST_NOT_EVIDENCE",
+        "committed": 0,
+        "invoiced": 0,
+        "paid": 0
+      },
+      {
+        "id": "RT-SHELL",
+        "start": "2027-07-01",
+        "end": "2028-02-29",
+        "cost": 3500000,
+        "bucket": "shell_support_building_usd",
+        "dependencies": [
+          "RT-CIVIL"
+        ],
+        "authorization_state": "FORECAST",
+        "actual_completion": null,
+        "recorded_on": "2026-09-11",
+        "evidence_origin": "FORECAST_NOT_EVIDENCE",
+        "committed": 0,
+        "invoiced": 0,
+        "paid": 0
+      },
+      {
+        "id": "RT-UTILITY",
+        "start": "2027-07-01",
+        "end": "2028-02-29",
+        "cost": 1000000,
+        "bucket": "utility_fiber_backbone_usd",
+        "dependencies": [
+          "RT-CIVIL"
+        ],
+        "authorization_state": "FORECAST",
+        "actual_completion": null,
+        "recorded_on": "2026-09-11",
+        "evidence_origin": "FORECAST_NOT_EVIDENCE",
+        "committed": 0,
+        "invoiced": 0,
+        "paid": 0
+      },
+      {
+        "id": "RT-PLANT",
+        "start": "2028-01-01",
+        "end": "2028-09-30",
+        "cost": 5000000,
+        "bucket": "initial_critical_plant_usd",
+        "dependencies": [
+          "RT-CIVIL"
+        ],
+        "authorization_state": "CONDITIONAL_DEMAND_FUNDING",
+        "actual_completion": null,
+        "recorded_on": "2026-09-11",
+        "evidence_origin": "FORECAST_NOT_EVIDENCE",
+        "committed": 0,
+        "invoiced": 0,
+        "paid": 0
+      },
+      {
+        "id": "RT-COMMISSION",
+        "start": "2028-10-01",
+        "end": "2028-12-31",
+        "cost": 300000,
+        "bucket": "engineering_permitting_contingency_usd",
+        "dependencies": [
+          "RT-SHELL",
+          "RT-UTILITY",
+          "RT-PLANT"
+        ],
+        "authorization_state": "CONDITIONAL_ACCEPTANCE",
+        "actual_completion": null,
+        "recorded_on": "2026-09-11",
+        "evidence_origin": "FORECAST_NOT_EVIDENCE",
+        "committed": 0,
+        "invoiced": 0,
+        "paid": 0
+      },
+      {
+        "id": "RT-CONTINGENCY",
+        "start": "2026-09-11",
+        "end": "2028-12-31",
+        "cost": 500000,
+        "bucket": "engineering_permitting_contingency_usd",
+        "dependencies": [],
+        "authorization_state": "UNSPENT_RESERVE",
+        "actual_completion": null,
+        "recorded_on": "2026-09-11",
+        "evidence_origin": "FORECAST_NOT_EVIDENCE",
+        "committed": 0,
+        "invoiced": 0,
+        "paid": 0
+      }
+    ],
+    "control_implementations": [
+      {
+        "implementation_id": "SH-IAM-002-RUNTIME-RENO-COLO",
+        "control_id": "SH-IAM-002",
+        "objective_id": "SH-OBJ-IAM-001",
+        "risk_ids": [
+          "SH-RISK-TECH-001"
+        ],
+        "unit_or_boundary": "Enterprise runtime / RUNTIME-RENO-COLO",
+        "legal_entity": "SHI",
+        "process": "RT-OPS-03",
+        "system_or_location": "RUNTIME-RENO-COLO",
+        "implementation_owner_role": "Enterprise Technology Services",
+        "performer_role": "Authorized role in RT-OPS-03",
+        "challenge_role": "Risk & Compliance; independent Internal Audit evaluation",
+        "procedure_reference": "enterprise/runtime/docs/ARCHITECTURE_AND_RUNBOOKS.md#rt-ops-03",
+        "implementation_description": "Apply RT-OPS-03 within the customer-controlled estate; provider-inherited facility portions require separately accepted evidence.",
+        "inheritance_source": "Provider evidence not obtained",
+        "control_definition_status": "draft",
+        "implementation_state": "DESIGN_ONLY",
+        "design_assessment": "NOT_ASSESSED",
+        "operating_assessment": "NOT_ASSERTED",
+        "evidence_origin": "SYNTHETIC_REFERENCE",
+        "effective_date": "2026-09-11",
+        "evidence_sources": [
+          "Versioned procedure execution form",
+          "Complete source population and reconciliation"
+        ],
+        "population_definition": "All applicable occurrences in declared assessment period; empty is not effective",
+        "configuration_dependencies": [
+          "Verified identity and independent recovery",
+          "Accepted configuration and rights"
+        ],
+        "known_limitations": [
+          "No actual implementation or provider report accepted"
+        ],
+        "last_owner_review": null,
+        "next_review_due": "2026-12-11",
+        "frequency_or_trigger": "Event and quarterly review",
+        "nature": "HYBRID",
+        "exception_ids": [],
+        "remediation_ids": []
+      },
+      {
+        "implementation_id": "SH-IAM-004-RUNTIME-RENO-COLO",
+        "control_id": "SH-IAM-004",
+        "objective_id": "SH-OBJ-IAM-002",
+        "risk_ids": [
+          "SH-RISK-PEO-001"
+        ],
+        "unit_or_boundary": "Enterprise runtime / RUNTIME-RENO-COLO",
+        "legal_entity": "SHI",
+        "process": "RT-OPS-03",
+        "system_or_location": "RUNTIME-RENO-COLO",
+        "implementation_owner_role": "Enterprise Technology Services",
+        "performer_role": "Authorized role in RT-OPS-03",
+        "challenge_role": "Risk & Compliance; independent Internal Audit evaluation",
+        "procedure_reference": "enterprise/runtime/docs/ARCHITECTURE_AND_RUNBOOKS.md#rt-ops-03",
+        "implementation_description": "Apply RT-OPS-03 within the customer-controlled estate; provider-inherited facility portions require separately accepted evidence.",
+        "inheritance_source": "Provider evidence not obtained",
+        "control_definition_status": "draft",
+        "implementation_state": "DESIGN_ONLY",
+        "design_assessment": "NOT_ASSESSED",
+        "operating_assessment": "NOT_ASSERTED",
+        "evidence_origin": "SYNTHETIC_REFERENCE",
+        "effective_date": "2026-09-11",
+        "evidence_sources": [
+          "Versioned procedure execution form",
+          "Complete source population and reconciliation"
+        ],
+        "population_definition": "All applicable occurrences in declared assessment period; empty is not effective",
+        "configuration_dependencies": [
+          "Verified identity and independent recovery",
+          "Accepted configuration and rights"
+        ],
+        "known_limitations": [
+          "No actual implementation or provider report accepted"
+        ],
+        "last_owner_review": null,
+        "next_review_due": "2026-12-11",
+        "frequency_or_trigger": "Event and quarterly review",
+        "nature": "HYBRID",
+        "exception_ids": [],
+        "remediation_ids": []
+      },
+      {
+        "implementation_id": "SH-IAM-005-RUNTIME-RENO-COLO",
+        "control_id": "SH-IAM-005",
+        "objective_id": "SH-OBJ-IAM-003",
+        "risk_ids": [
+          "SH-RISK-TECH-001"
+        ],
+        "unit_or_boundary": "Enterprise runtime / RUNTIME-RENO-COLO",
+        "legal_entity": "SHI",
+        "process": "RT-OPS-03",
+        "system_or_location": "RUNTIME-RENO-COLO",
+        "implementation_owner_role": "Enterprise Technology Services",
+        "performer_role": "Authorized role in RT-OPS-03",
+        "challenge_role": "Risk & Compliance; independent Internal Audit evaluation",
+        "procedure_reference": "enterprise/runtime/docs/ARCHITECTURE_AND_RUNBOOKS.md#rt-ops-03",
+        "implementation_description": "Apply RT-OPS-03 within the customer-controlled estate; provider-inherited facility portions require separately accepted evidence.",
+        "inheritance_source": "Provider evidence not obtained",
+        "control_definition_status": "draft",
+        "implementation_state": "DESIGN_ONLY",
+        "design_assessment": "NOT_ASSESSED",
+        "operating_assessment": "NOT_ASSERTED",
+        "evidence_origin": "SYNTHETIC_REFERENCE",
+        "effective_date": "2026-09-11",
+        "evidence_sources": [
+          "Versioned procedure execution form",
+          "Complete source population and reconciliation"
+        ],
+        "population_definition": "All applicable occurrences in declared assessment period; empty is not effective",
+        "configuration_dependencies": [
+          "Verified identity and independent recovery",
+          "Accepted configuration and rights"
+        ],
+        "known_limitations": [
+          "No actual implementation or provider report accepted"
+        ],
+        "last_owner_review": null,
+        "next_review_due": "2026-12-11",
+        "frequency_or_trigger": "Event and quarterly review",
+        "nature": "HYBRID",
+        "exception_ids": [],
+        "remediation_ids": []
+      },
+      {
+        "implementation_id": "SH-IAM-007-RUNTIME-RENO-COLO",
+        "control_id": "SH-IAM-007",
+        "objective_id": "SH-OBJ-IAM-004",
+        "risk_ids": [
+          "SH-RISK-TECH-001"
+        ],
+        "unit_or_boundary": "Enterprise runtime / RUNTIME-RENO-COLO",
+        "legal_entity": "SHI",
+        "process": "RT-OPS-03",
+        "system_or_location": "RUNTIME-RENO-COLO",
+        "implementation_owner_role": "Enterprise Technology Services",
+        "performer_role": "Authorized role in RT-OPS-03",
+        "challenge_role": "Risk & Compliance; independent Internal Audit evaluation",
+        "procedure_reference": "enterprise/runtime/docs/ARCHITECTURE_AND_RUNBOOKS.md#rt-ops-03",
+        "implementation_description": "Apply RT-OPS-03 within the customer-controlled estate; provider-inherited facility portions require separately accepted evidence.",
+        "inheritance_source": "Provider evidence not obtained",
+        "control_definition_status": "draft",
+        "implementation_state": "DESIGN_ONLY",
+        "design_assessment": "NOT_ASSESSED",
+        "operating_assessment": "NOT_ASSERTED",
+        "evidence_origin": "SYNTHETIC_REFERENCE",
+        "effective_date": "2026-09-11",
+        "evidence_sources": [
+          "Versioned procedure execution form",
+          "Complete source population and reconciliation"
+        ],
+        "population_definition": "All applicable occurrences in declared assessment period; empty is not effective",
+        "configuration_dependencies": [
+          "Verified identity and independent recovery",
+          "Accepted configuration and rights"
+        ],
+        "known_limitations": [
+          "No actual implementation or provider report accepted"
+        ],
+        "last_owner_review": null,
+        "next_review_due": "2026-12-11",
+        "frequency_or_trigger": "Event and quarterly review",
+        "nature": "HYBRID",
+        "exception_ids": [],
+        "remediation_ids": []
+      },
+      {
+        "implementation_id": "SH-SEC-002-RUNTIME-RENO-COLO",
+        "control_id": "SH-SEC-002",
+        "objective_id": "SH-OBJ-SEC-003",
+        "risk_ids": [
+          "SH-RISK-TECH-004"
+        ],
+        "unit_or_boundary": "Enterprise runtime / RUNTIME-RENO-COLO",
+        "legal_entity": "SHI",
+        "process": "RT-OPS-04",
+        "system_or_location": "RUNTIME-RENO-COLO",
+        "implementation_owner_role": "Enterprise Technology Services",
+        "performer_role": "Authorized role in RT-OPS-04",
+        "challenge_role": "Risk & Compliance; independent Internal Audit evaluation",
+        "procedure_reference": "enterprise/runtime/docs/ARCHITECTURE_AND_RUNBOOKS.md#rt-ops-04",
+        "implementation_description": "Apply RT-OPS-04 within the customer-controlled estate; provider-inherited facility portions require separately accepted evidence.",
+        "inheritance_source": "Provider evidence not obtained",
+        "control_definition_status": "draft",
+        "implementation_state": "DESIGN_ONLY",
+        "design_assessment": "NOT_ASSESSED",
+        "operating_assessment": "NOT_ASSERTED",
+        "evidence_origin": "SYNTHETIC_REFERENCE",
+        "effective_date": "2026-09-11",
+        "evidence_sources": [
+          "Versioned procedure execution form",
+          "Complete source population and reconciliation"
+        ],
+        "population_definition": "All applicable occurrences in declared assessment period; empty is not effective",
+        "configuration_dependencies": [
+          "Verified identity and independent recovery",
+          "Accepted configuration and rights"
+        ],
+        "known_limitations": [
+          "No actual implementation or provider report accepted"
+        ],
+        "last_owner_review": null,
+        "next_review_due": "2026-12-11",
+        "frequency_or_trigger": "Event and quarterly review",
+        "nature": "HYBRID",
+        "exception_ids": [],
+        "remediation_ids": []
+      },
+      {
+        "implementation_id": "SH-DAT-003-RUNTIME-RENO-COLO",
+        "control_id": "SH-DAT-003",
+        "objective_id": "SH-OBJ-DAT-002",
+        "risk_ids": [
+          "SH-RISK-PRV-001"
+        ],
+        "unit_or_boundary": "Enterprise runtime / RUNTIME-RENO-COLO",
+        "legal_entity": "SHI",
+        "process": "RT-OPS-03",
+        "system_or_location": "RUNTIME-RENO-COLO",
+        "implementation_owner_role": "Enterprise Technology Services",
+        "performer_role": "Authorized role in RT-OPS-03",
+        "challenge_role": "Risk & Compliance; independent Internal Audit evaluation",
+        "procedure_reference": "enterprise/runtime/docs/ARCHITECTURE_AND_RUNBOOKS.md#rt-ops-03",
+        "implementation_description": "Apply RT-OPS-03 within the customer-controlled estate; provider-inherited facility portions require separately accepted evidence.",
+        "inheritance_source": "Provider evidence not obtained",
+        "control_definition_status": "draft",
+        "implementation_state": "DESIGN_ONLY",
+        "design_assessment": "NOT_ASSESSED",
+        "operating_assessment": "NOT_ASSERTED",
+        "evidence_origin": "SYNTHETIC_REFERENCE",
+        "effective_date": "2026-09-11",
+        "evidence_sources": [
+          "Versioned procedure execution form",
+          "Complete source population and reconciliation"
+        ],
+        "population_definition": "All applicable occurrences in declared assessment period; empty is not effective",
+        "configuration_dependencies": [
+          "Verified identity and independent recovery",
+          "Accepted configuration and rights"
+        ],
+        "known_limitations": [
+          "No actual implementation or provider report accepted"
+        ],
+        "last_owner_review": null,
+        "next_review_due": "2026-12-11",
+        "frequency_or_trigger": "Event and quarterly review",
+        "nature": "HYBRID",
+        "exception_ids": [],
+        "remediation_ids": []
+      },
+      {
+        "implementation_id": "SH-REC-002-RUNTIME-RENO-COLO",
+        "control_id": "SH-REC-002",
+        "objective_id": "SH-OBJ-REC-002",
+        "risk_ids": [
+          "SH-RISK-ASS-001"
+        ],
+        "unit_or_boundary": "Enterprise runtime / RUNTIME-RENO-COLO",
+        "legal_entity": "SHI",
+        "process": "RT-OPS-04",
+        "system_or_location": "RUNTIME-RENO-COLO",
+        "implementation_owner_role": "Enterprise Technology Services",
+        "performer_role": "Authorized role in RT-OPS-04",
+        "challenge_role": "Risk & Compliance; independent Internal Audit evaluation",
+        "procedure_reference": "enterprise/runtime/docs/ARCHITECTURE_AND_RUNBOOKS.md#rt-ops-04",
+        "implementation_description": "Apply RT-OPS-04 within the customer-controlled estate; provider-inherited facility portions require separately accepted evidence.",
+        "inheritance_source": "Provider evidence not obtained",
+        "control_definition_status": "draft",
+        "implementation_state": "DESIGN_ONLY",
+        "design_assessment": "NOT_ASSESSED",
+        "operating_assessment": "NOT_ASSERTED",
+        "evidence_origin": "SYNTHETIC_REFERENCE",
+        "effective_date": "2026-09-11",
+        "evidence_sources": [
+          "Versioned procedure execution form",
+          "Complete source population and reconciliation"
+        ],
+        "population_definition": "All applicable occurrences in declared assessment period; empty is not effective",
+        "configuration_dependencies": [
+          "Verified identity and independent recovery",
+          "Accepted configuration and rights"
+        ],
+        "known_limitations": [
+          "No actual implementation or provider report accepted"
+        ],
+        "last_owner_review": null,
+        "next_review_due": "2026-12-11",
+        "frequency_or_trigger": "Event and quarterly review",
+        "nature": "HYBRID",
+        "exception_ids": [],
+        "remediation_ids": []
+      },
+      {
+        "implementation_id": "SH-REC-004-RUNTIME-RENO-COLO",
+        "control_id": "SH-REC-004",
+        "objective_id": "SH-OBJ-REC-003",
+        "risk_ids": [
+          "SH-RISK-PRV-001"
+        ],
+        "unit_or_boundary": "Enterprise runtime / RUNTIME-RENO-COLO",
+        "legal_entity": "SHI",
+        "process": "RT-OPS-06",
+        "system_or_location": "RUNTIME-RENO-COLO",
+        "implementation_owner_role": "Enterprise Technology Services",
+        "performer_role": "Authorized role in RT-OPS-06",
+        "challenge_role": "Risk & Compliance; independent Internal Audit evaluation",
+        "procedure_reference": "enterprise/runtime/docs/ARCHITECTURE_AND_RUNBOOKS.md#rt-ops-06",
+        "implementation_description": "Apply RT-OPS-06 within the customer-controlled estate; provider-inherited facility portions require separately accepted evidence.",
+        "inheritance_source": "Provider evidence not obtained",
+        "control_definition_status": "draft",
+        "implementation_state": "DESIGN_ONLY",
+        "design_assessment": "NOT_ASSESSED",
+        "operating_assessment": "NOT_ASSERTED",
+        "evidence_origin": "SYNTHETIC_REFERENCE",
+        "effective_date": "2026-09-11",
+        "evidence_sources": [
+          "Versioned procedure execution form",
+          "Complete source population and reconciliation"
+        ],
+        "population_definition": "All applicable occurrences in declared assessment period; empty is not effective",
+        "configuration_dependencies": [
+          "Verified identity and independent recovery",
+          "Accepted configuration and rights"
+        ],
+        "known_limitations": [
+          "No actual implementation or provider report accepted"
+        ],
+        "last_owner_review": null,
+        "next_review_due": "2026-12-11",
+        "frequency_or_trigger": "Event and quarterly review",
+        "nature": "HYBRID",
+        "exception_ids": [],
+        "remediation_ids": []
+      },
+      {
+        "implementation_id": "SH-ENG-002-RUNTIME-RENO-COLO",
+        "control_id": "SH-ENG-002",
+        "objective_id": "SH-OBJ-ENG-002",
+        "risk_ids": [
+          "SH-RISK-TECH-002"
+        ],
+        "unit_or_boundary": "Enterprise runtime / RUNTIME-RENO-COLO",
+        "legal_entity": "SHI",
+        "process": "RT-OPS-02",
+        "system_or_location": "RUNTIME-RENO-COLO",
+        "implementation_owner_role": "Enterprise Technology Services",
+        "performer_role": "Authorized role in RT-OPS-02",
+        "challenge_role": "Risk & Compliance; independent Internal Audit evaluation",
+        "procedure_reference": "enterprise/runtime/docs/ARCHITECTURE_AND_RUNBOOKS.md#rt-ops-02",
+        "implementation_description": "Apply RT-OPS-02 within the customer-controlled estate; provider-inherited facility portions require separately accepted evidence.",
+        "inheritance_source": "Provider evidence not obtained",
+        "control_definition_status": "draft",
+        "implementation_state": "DESIGN_ONLY",
+        "design_assessment": "NOT_ASSESSED",
+        "operating_assessment": "NOT_ASSERTED",
+        "evidence_origin": "SYNTHETIC_REFERENCE",
+        "effective_date": "2026-09-11",
+        "evidence_sources": [
+          "Versioned procedure execution form",
+          "Complete source population and reconciliation"
+        ],
+        "population_definition": "All applicable occurrences in declared assessment period; empty is not effective",
+        "configuration_dependencies": [
+          "Verified identity and independent recovery",
+          "Accepted configuration and rights"
+        ],
+        "known_limitations": [
+          "No actual implementation or provider report accepted"
+        ],
+        "last_owner_review": null,
+        "next_review_due": "2026-12-11",
+        "frequency_or_trigger": "Event and quarterly review",
+        "nature": "HYBRID",
+        "exception_ids": [],
+        "remediation_ids": []
+      },
+      {
+        "implementation_id": "SH-CFG-001-RUNTIME-RENO-COLO",
+        "control_id": "SH-CFG-001",
+        "objective_id": "SH-OBJ-CFG-001",
+        "risk_ids": [
+          "SH-RISK-TECH-003"
+        ],
+        "unit_or_boundary": "Enterprise runtime / RUNTIME-RENO-COLO",
+        "legal_entity": "SHI",
+        "process": "RT-OPS-01",
+        "system_or_location": "RUNTIME-RENO-COLO",
+        "implementation_owner_role": "Enterprise Technology Services",
+        "performer_role": "Authorized role in RT-OPS-01",
+        "challenge_role": "Risk & Compliance; independent Internal Audit evaluation",
+        "procedure_reference": "enterprise/runtime/docs/ARCHITECTURE_AND_RUNBOOKS.md#rt-ops-01",
+        "implementation_description": "Apply RT-OPS-01 within the customer-controlled estate; provider-inherited facility portions require separately accepted evidence.",
+        "inheritance_source": "Provider evidence not obtained",
+        "control_definition_status": "draft",
+        "implementation_state": "DESIGN_ONLY",
+        "design_assessment": "NOT_ASSESSED",
+        "operating_assessment": "NOT_ASSERTED",
+        "evidence_origin": "SYNTHETIC_REFERENCE",
+        "effective_date": "2026-09-11",
+        "evidence_sources": [
+          "Versioned procedure execution form",
+          "Complete source population and reconciliation"
+        ],
+        "population_definition": "All applicable occurrences in declared assessment period; empty is not effective",
+        "configuration_dependencies": [
+          "Verified identity and independent recovery",
+          "Accepted configuration and rights"
+        ],
+        "known_limitations": [
+          "No actual implementation or provider report accepted"
+        ],
+        "last_owner_review": null,
+        "next_review_due": "2026-12-11",
+        "frequency_or_trigger": "Event and quarterly review",
+        "nature": "HYBRID",
+        "exception_ids": [],
+        "remediation_ids": []
+      },
+      {
+        "implementation_id": "SH-OPS-001-RUNTIME-RENO-COLO",
+        "control_id": "SH-OPS-001",
+        "objective_id": "SH-OBJ-OPS-001",
+        "risk_ids": [
+          "SH-RISK-TECH-003"
+        ],
+        "unit_or_boundary": "Enterprise runtime / RUNTIME-RENO-COLO",
+        "legal_entity": "SHI",
+        "process": "RT-OPS-04",
+        "system_or_location": "RUNTIME-RENO-COLO",
+        "implementation_owner_role": "Enterprise Technology Services",
+        "performer_role": "Authorized role in RT-OPS-04",
+        "challenge_role": "Risk & Compliance; independent Internal Audit evaluation",
+        "procedure_reference": "enterprise/runtime/docs/ARCHITECTURE_AND_RUNBOOKS.md#rt-ops-04",
+        "implementation_description": "Apply RT-OPS-04 within the customer-controlled estate; provider-inherited facility portions require separately accepted evidence.",
+        "inheritance_source": "Provider evidence not obtained",
+        "control_definition_status": "draft",
+        "implementation_state": "DESIGN_ONLY",
+        "design_assessment": "NOT_ASSESSED",
+        "operating_assessment": "NOT_ASSERTED",
+        "evidence_origin": "SYNTHETIC_REFERENCE",
+        "effective_date": "2026-09-11",
+        "evidence_sources": [
+          "Versioned procedure execution form",
+          "Complete source population and reconciliation"
+        ],
+        "population_definition": "All applicable occurrences in declared assessment period; empty is not effective",
+        "configuration_dependencies": [
+          "Verified identity and independent recovery",
+          "Accepted configuration and rights"
+        ],
+        "known_limitations": [
+          "No actual implementation or provider report accepted"
+        ],
+        "last_owner_review": null,
+        "next_review_due": "2026-12-11",
+        "frequency_or_trigger": "Event and quarterly review",
+        "nature": "HYBRID",
+        "exception_ids": [],
+        "remediation_ids": []
+      },
+      {
+        "implementation_id": "SH-BCM-003-RUNTIME-RENO-COLO",
+        "control_id": "SH-BCM-003",
+        "objective_id": "SH-OBJ-BCM-002",
+        "risk_ids": [
+          "SH-RISK-BCM-001"
+        ],
+        "unit_or_boundary": "Enterprise runtime / RUNTIME-RENO-COLO",
+        "legal_entity": "SHI",
+        "process": "RT-OPS-05",
+        "system_or_location": "RUNTIME-RENO-COLO",
+        "implementation_owner_role": "Enterprise Technology Services",
+        "performer_role": "Authorized role in RT-OPS-05",
+        "challenge_role": "Risk & Compliance; independent Internal Audit evaluation",
+        "procedure_reference": "enterprise/runtime/docs/ARCHITECTURE_AND_RUNBOOKS.md#rt-ops-05",
+        "implementation_description": "Apply RT-OPS-05 within the customer-controlled estate; provider-inherited facility portions require separately accepted evidence.",
+        "inheritance_source": "Provider evidence not obtained",
+        "control_definition_status": "draft",
+        "implementation_state": "DESIGN_ONLY",
+        "design_assessment": "NOT_ASSESSED",
+        "operating_assessment": "NOT_ASSERTED",
+        "evidence_origin": "SYNTHETIC_REFERENCE",
+        "effective_date": "2026-09-11",
+        "evidence_sources": [
+          "Versioned procedure execution form",
+          "Complete source population and reconciliation"
+        ],
+        "population_definition": "All applicable occurrences in declared assessment period; empty is not effective",
+        "configuration_dependencies": [
+          "Verified identity and independent recovery",
+          "Accepted configuration and rights"
+        ],
+        "known_limitations": [
+          "No actual implementation or provider report accepted"
+        ],
+        "last_owner_review": null,
+        "next_review_due": "2026-12-11",
+        "frequency_or_trigger": "Event and quarterly review",
+        "nature": "HYBRID",
+        "exception_ids": [],
+        "remediation_ids": []
+      },
+      {
+        "implementation_id": "SH-TPR-003-RUNTIME-RENO-COLO",
+        "control_id": "SH-TPR-003",
+        "objective_id": "SH-OBJ-TPR-002",
+        "risk_ids": [
+          "SH-RISK-TPR-001"
+        ],
+        "unit_or_boundary": "Enterprise runtime / RUNTIME-RENO-COLO",
+        "legal_entity": "SHI",
+        "process": "RT-OPS-06",
+        "system_or_location": "RUNTIME-RENO-COLO",
+        "implementation_owner_role": "Enterprise Technology Services",
+        "performer_role": "Authorized role in RT-OPS-06",
+        "challenge_role": "Risk & Compliance; independent Internal Audit evaluation",
+        "procedure_reference": "enterprise/runtime/docs/ARCHITECTURE_AND_RUNBOOKS.md#rt-ops-06",
+        "implementation_description": "Apply RT-OPS-06 within the customer-controlled estate; provider-inherited facility portions require separately accepted evidence.",
+        "inheritance_source": "Provider evidence not obtained",
+        "control_definition_status": "draft",
+        "implementation_state": "DESIGN_ONLY",
+        "design_assessment": "NOT_ASSESSED",
+        "operating_assessment": "NOT_ASSERTED",
+        "evidence_origin": "SYNTHETIC_REFERENCE",
+        "effective_date": "2026-09-11",
+        "evidence_sources": [
+          "Versioned procedure execution form",
+          "Complete source population and reconciliation"
+        ],
+        "population_definition": "All applicable occurrences in declared assessment period; empty is not effective",
+        "configuration_dependencies": [
+          "Verified identity and independent recovery",
+          "Accepted configuration and rights"
+        ],
+        "known_limitations": [
+          "No actual implementation or provider report accepted"
+        ],
+        "last_owner_review": null,
+        "next_review_due": "2026-12-11",
+        "frequency_or_trigger": "Event and quarterly review",
+        "nature": "HYBRID",
+        "exception_ids": [],
+        "remediation_ids": []
+      },
+      {
+        "implementation_id": "SH-IAM-002-RUNTIME-BOISE-DR",
+        "control_id": "SH-IAM-002",
+        "objective_id": "SH-OBJ-IAM-001",
+        "risk_ids": [
+          "SH-RISK-TECH-001"
+        ],
+        "unit_or_boundary": "Enterprise runtime / RUNTIME-BOISE-DR",
+        "legal_entity": "SHI",
+        "process": "RT-OPS-03",
+        "system_or_location": "RUNTIME-BOISE-DR",
+        "implementation_owner_role": "Enterprise Technology Services",
+        "performer_role": "Authorized role in RT-OPS-03",
+        "challenge_role": "Risk & Compliance; independent Internal Audit evaluation",
+        "procedure_reference": "enterprise/runtime/docs/ARCHITECTURE_AND_RUNBOOKS.md#rt-ops-03",
+        "implementation_description": "Apply RT-OPS-03 within the customer-controlled estate; provider-inherited facility portions require separately accepted evidence.",
+        "inheritance_source": "Provider evidence not obtained",
+        "control_definition_status": "draft",
+        "implementation_state": "DESIGN_ONLY",
+        "design_assessment": "NOT_ASSESSED",
+        "operating_assessment": "NOT_ASSERTED",
+        "evidence_origin": "SYNTHETIC_REFERENCE",
+        "effective_date": "2026-09-11",
+        "evidence_sources": [
+          "Versioned procedure execution form",
+          "Complete source population and reconciliation"
+        ],
+        "population_definition": "All applicable occurrences in declared assessment period; empty is not effective",
+        "configuration_dependencies": [
+          "Verified identity and independent recovery",
+          "Accepted configuration and rights"
+        ],
+        "known_limitations": [
+          "No actual implementation or provider report accepted"
+        ],
+        "last_owner_review": null,
+        "next_review_due": "2026-12-11",
+        "frequency_or_trigger": "Event and quarterly review",
+        "nature": "HYBRID",
+        "exception_ids": [],
+        "remediation_ids": []
+      },
+      {
+        "implementation_id": "SH-IAM-004-RUNTIME-BOISE-DR",
+        "control_id": "SH-IAM-004",
+        "objective_id": "SH-OBJ-IAM-002",
+        "risk_ids": [
+          "SH-RISK-PEO-001"
+        ],
+        "unit_or_boundary": "Enterprise runtime / RUNTIME-BOISE-DR",
+        "legal_entity": "SHI",
+        "process": "RT-OPS-03",
+        "system_or_location": "RUNTIME-BOISE-DR",
+        "implementation_owner_role": "Enterprise Technology Services",
+        "performer_role": "Authorized role in RT-OPS-03",
+        "challenge_role": "Risk & Compliance; independent Internal Audit evaluation",
+        "procedure_reference": "enterprise/runtime/docs/ARCHITECTURE_AND_RUNBOOKS.md#rt-ops-03",
+        "implementation_description": "Apply RT-OPS-03 within the customer-controlled estate; provider-inherited facility portions require separately accepted evidence.",
+        "inheritance_source": "Provider evidence not obtained",
+        "control_definition_status": "draft",
+        "implementation_state": "DESIGN_ONLY",
+        "design_assessment": "NOT_ASSESSED",
+        "operating_assessment": "NOT_ASSERTED",
+        "evidence_origin": "SYNTHETIC_REFERENCE",
+        "effective_date": "2026-09-11",
+        "evidence_sources": [
+          "Versioned procedure execution form",
+          "Complete source population and reconciliation"
+        ],
+        "population_definition": "All applicable occurrences in declared assessment period; empty is not effective",
+        "configuration_dependencies": [
+          "Verified identity and independent recovery",
+          "Accepted configuration and rights"
+        ],
+        "known_limitations": [
+          "No actual implementation or provider report accepted"
+        ],
+        "last_owner_review": null,
+        "next_review_due": "2026-12-11",
+        "frequency_or_trigger": "Event and quarterly review",
+        "nature": "HYBRID",
+        "exception_ids": [],
+        "remediation_ids": []
+      },
+      {
+        "implementation_id": "SH-IAM-005-RUNTIME-BOISE-DR",
+        "control_id": "SH-IAM-005",
+        "objective_id": "SH-OBJ-IAM-003",
+        "risk_ids": [
+          "SH-RISK-TECH-001"
+        ],
+        "unit_or_boundary": "Enterprise runtime / RUNTIME-BOISE-DR",
+        "legal_entity": "SHI",
+        "process": "RT-OPS-03",
+        "system_or_location": "RUNTIME-BOISE-DR",
+        "implementation_owner_role": "Enterprise Technology Services",
+        "performer_role": "Authorized role in RT-OPS-03",
+        "challenge_role": "Risk & Compliance; independent Internal Audit evaluation",
+        "procedure_reference": "enterprise/runtime/docs/ARCHITECTURE_AND_RUNBOOKS.md#rt-ops-03",
+        "implementation_description": "Apply RT-OPS-03 within the customer-controlled estate; provider-inherited facility portions require separately accepted evidence.",
+        "inheritance_source": "Provider evidence not obtained",
+        "control_definition_status": "draft",
+        "implementation_state": "DESIGN_ONLY",
+        "design_assessment": "NOT_ASSESSED",
+        "operating_assessment": "NOT_ASSERTED",
+        "evidence_origin": "SYNTHETIC_REFERENCE",
+        "effective_date": "2026-09-11",
+        "evidence_sources": [
+          "Versioned procedure execution form",
+          "Complete source population and reconciliation"
+        ],
+        "population_definition": "All applicable occurrences in declared assessment period; empty is not effective",
+        "configuration_dependencies": [
+          "Verified identity and independent recovery",
+          "Accepted configuration and rights"
+        ],
+        "known_limitations": [
+          "No actual implementation or provider report accepted"
+        ],
+        "last_owner_review": null,
+        "next_review_due": "2026-12-11",
+        "frequency_or_trigger": "Event and quarterly review",
+        "nature": "HYBRID",
+        "exception_ids": [],
+        "remediation_ids": []
+      },
+      {
+        "implementation_id": "SH-IAM-007-RUNTIME-BOISE-DR",
+        "control_id": "SH-IAM-007",
+        "objective_id": "SH-OBJ-IAM-004",
+        "risk_ids": [
+          "SH-RISK-TECH-001"
+        ],
+        "unit_or_boundary": "Enterprise runtime / RUNTIME-BOISE-DR",
+        "legal_entity": "SHI",
+        "process": "RT-OPS-03",
+        "system_or_location": "RUNTIME-BOISE-DR",
+        "implementation_owner_role": "Enterprise Technology Services",
+        "performer_role": "Authorized role in RT-OPS-03",
+        "challenge_role": "Risk & Compliance; independent Internal Audit evaluation",
+        "procedure_reference": "enterprise/runtime/docs/ARCHITECTURE_AND_RUNBOOKS.md#rt-ops-03",
+        "implementation_description": "Apply RT-OPS-03 within the customer-controlled estate; provider-inherited facility portions require separately accepted evidence.",
+        "inheritance_source": "Provider evidence not obtained",
+        "control_definition_status": "draft",
+        "implementation_state": "DESIGN_ONLY",
+        "design_assessment": "NOT_ASSESSED",
+        "operating_assessment": "NOT_ASSERTED",
+        "evidence_origin": "SYNTHETIC_REFERENCE",
+        "effective_date": "2026-09-11",
+        "evidence_sources": [
+          "Versioned procedure execution form",
+          "Complete source population and reconciliation"
+        ],
+        "population_definition": "All applicable occurrences in declared assessment period; empty is not effective",
+        "configuration_dependencies": [
+          "Verified identity and independent recovery",
+          "Accepted configuration and rights"
+        ],
+        "known_limitations": [
+          "No actual implementation or provider report accepted"
+        ],
+        "last_owner_review": null,
+        "next_review_due": "2026-12-11",
+        "frequency_or_trigger": "Event and quarterly review",
+        "nature": "HYBRID",
+        "exception_ids": [],
+        "remediation_ids": []
+      },
+      {
+        "implementation_id": "SH-SEC-002-RUNTIME-BOISE-DR",
+        "control_id": "SH-SEC-002",
+        "objective_id": "SH-OBJ-SEC-003",
+        "risk_ids": [
+          "SH-RISK-TECH-004"
+        ],
+        "unit_or_boundary": "Enterprise runtime / RUNTIME-BOISE-DR",
+        "legal_entity": "SHI",
+        "process": "RT-OPS-04",
+        "system_or_location": "RUNTIME-BOISE-DR",
+        "implementation_owner_role": "Enterprise Technology Services",
+        "performer_role": "Authorized role in RT-OPS-04",
+        "challenge_role": "Risk & Compliance; independent Internal Audit evaluation",
+        "procedure_reference": "enterprise/runtime/docs/ARCHITECTURE_AND_RUNBOOKS.md#rt-ops-04",
+        "implementation_description": "Apply RT-OPS-04 within the customer-controlled estate; provider-inherited facility portions require separately accepted evidence.",
+        "inheritance_source": "Provider evidence not obtained",
+        "control_definition_status": "draft",
+        "implementation_state": "DESIGN_ONLY",
+        "design_assessment": "NOT_ASSESSED",
+        "operating_assessment": "NOT_ASSERTED",
+        "evidence_origin": "SYNTHETIC_REFERENCE",
+        "effective_date": "2026-09-11",
+        "evidence_sources": [
+          "Versioned procedure execution form",
+          "Complete source population and reconciliation"
+        ],
+        "population_definition": "All applicable occurrences in declared assessment period; empty is not effective",
+        "configuration_dependencies": [
+          "Verified identity and independent recovery",
+          "Accepted configuration and rights"
+        ],
+        "known_limitations": [
+          "No actual implementation or provider report accepted"
+        ],
+        "last_owner_review": null,
+        "next_review_due": "2026-12-11",
+        "frequency_or_trigger": "Event and quarterly review",
+        "nature": "HYBRID",
+        "exception_ids": [],
+        "remediation_ids": []
+      },
+      {
+        "implementation_id": "SH-DAT-003-RUNTIME-BOISE-DR",
+        "control_id": "SH-DAT-003",
+        "objective_id": "SH-OBJ-DAT-002",
+        "risk_ids": [
+          "SH-RISK-PRV-001"
+        ],
+        "unit_or_boundary": "Enterprise runtime / RUNTIME-BOISE-DR",
+        "legal_entity": "SHI",
+        "process": "RT-OPS-03",
+        "system_or_location": "RUNTIME-BOISE-DR",
+        "implementation_owner_role": "Enterprise Technology Services",
+        "performer_role": "Authorized role in RT-OPS-03",
+        "challenge_role": "Risk & Compliance; independent Internal Audit evaluation",
+        "procedure_reference": "enterprise/runtime/docs/ARCHITECTURE_AND_RUNBOOKS.md#rt-ops-03",
+        "implementation_description": "Apply RT-OPS-03 within the customer-controlled estate; provider-inherited facility portions require separately accepted evidence.",
+        "inheritance_source": "Provider evidence not obtained",
+        "control_definition_status": "draft",
+        "implementation_state": "DESIGN_ONLY",
+        "design_assessment": "NOT_ASSESSED",
+        "operating_assessment": "NOT_ASSERTED",
+        "evidence_origin": "SYNTHETIC_REFERENCE",
+        "effective_date": "2026-09-11",
+        "evidence_sources": [
+          "Versioned procedure execution form",
+          "Complete source population and reconciliation"
+        ],
+        "population_definition": "All applicable occurrences in declared assessment period; empty is not effective",
+        "configuration_dependencies": [
+          "Verified identity and independent recovery",
+          "Accepted configuration and rights"
+        ],
+        "known_limitations": [
+          "No actual implementation or provider report accepted"
+        ],
+        "last_owner_review": null,
+        "next_review_due": "2026-12-11",
+        "frequency_or_trigger": "Event and quarterly review",
+        "nature": "HYBRID",
+        "exception_ids": [],
+        "remediation_ids": []
+      },
+      {
+        "implementation_id": "SH-REC-002-RUNTIME-BOISE-DR",
+        "control_id": "SH-REC-002",
+        "objective_id": "SH-OBJ-REC-002",
+        "risk_ids": [
+          "SH-RISK-ASS-001"
+        ],
+        "unit_or_boundary": "Enterprise runtime / RUNTIME-BOISE-DR",
+        "legal_entity": "SHI",
+        "process": "RT-OPS-04",
+        "system_or_location": "RUNTIME-BOISE-DR",
+        "implementation_owner_role": "Enterprise Technology Services",
+        "performer_role": "Authorized role in RT-OPS-04",
+        "challenge_role": "Risk & Compliance; independent Internal Audit evaluation",
+        "procedure_reference": "enterprise/runtime/docs/ARCHITECTURE_AND_RUNBOOKS.md#rt-ops-04",
+        "implementation_description": "Apply RT-OPS-04 within the customer-controlled estate; provider-inherited facility portions require separately accepted evidence.",
+        "inheritance_source": "Provider evidence not obtained",
+        "control_definition_status": "draft",
+        "implementation_state": "DESIGN_ONLY",
+        "design_assessment": "NOT_ASSESSED",
+        "operating_assessment": "NOT_ASSERTED",
+        "evidence_origin": "SYNTHETIC_REFERENCE",
+        "effective_date": "2026-09-11",
+        "evidence_sources": [
+          "Versioned procedure execution form",
+          "Complete source population and reconciliation"
+        ],
+        "population_definition": "All applicable occurrences in declared assessment period; empty is not effective",
+        "configuration_dependencies": [
+          "Verified identity and independent recovery",
+          "Accepted configuration and rights"
+        ],
+        "known_limitations": [
+          "No actual implementation or provider report accepted"
+        ],
+        "last_owner_review": null,
+        "next_review_due": "2026-12-11",
+        "frequency_or_trigger": "Event and quarterly review",
+        "nature": "HYBRID",
+        "exception_ids": [],
+        "remediation_ids": []
+      },
+      {
+        "implementation_id": "SH-REC-004-RUNTIME-BOISE-DR",
+        "control_id": "SH-REC-004",
+        "objective_id": "SH-OBJ-REC-003",
+        "risk_ids": [
+          "SH-RISK-PRV-001"
+        ],
+        "unit_or_boundary": "Enterprise runtime / RUNTIME-BOISE-DR",
+        "legal_entity": "SHI",
+        "process": "RT-OPS-06",
+        "system_or_location": "RUNTIME-BOISE-DR",
+        "implementation_owner_role": "Enterprise Technology Services",
+        "performer_role": "Authorized role in RT-OPS-06",
+        "challenge_role": "Risk & Compliance; independent Internal Audit evaluation",
+        "procedure_reference": "enterprise/runtime/docs/ARCHITECTURE_AND_RUNBOOKS.md#rt-ops-06",
+        "implementation_description": "Apply RT-OPS-06 within the customer-controlled estate; provider-inherited facility portions require separately accepted evidence.",
+        "inheritance_source": "Provider evidence not obtained",
+        "control_definition_status": "draft",
+        "implementation_state": "DESIGN_ONLY",
+        "design_assessment": "NOT_ASSESSED",
+        "operating_assessment": "NOT_ASSERTED",
+        "evidence_origin": "SYNTHETIC_REFERENCE",
+        "effective_date": "2026-09-11",
+        "evidence_sources": [
+          "Versioned procedure execution form",
+          "Complete source population and reconciliation"
+        ],
+        "population_definition": "All applicable occurrences in declared assessment period; empty is not effective",
+        "configuration_dependencies": [
+          "Verified identity and independent recovery",
+          "Accepted configuration and rights"
+        ],
+        "known_limitations": [
+          "No actual implementation or provider report accepted"
+        ],
+        "last_owner_review": null,
+        "next_review_due": "2026-12-11",
+        "frequency_or_trigger": "Event and quarterly review",
+        "nature": "HYBRID",
+        "exception_ids": [],
+        "remediation_ids": []
+      },
+      {
+        "implementation_id": "SH-ENG-002-RUNTIME-BOISE-DR",
+        "control_id": "SH-ENG-002",
+        "objective_id": "SH-OBJ-ENG-002",
+        "risk_ids": [
+          "SH-RISK-TECH-002"
+        ],
+        "unit_or_boundary": "Enterprise runtime / RUNTIME-BOISE-DR",
+        "legal_entity": "SHI",
+        "process": "RT-OPS-02",
+        "system_or_location": "RUNTIME-BOISE-DR",
+        "implementation_owner_role": "Enterprise Technology Services",
+        "performer_role": "Authorized role in RT-OPS-02",
+        "challenge_role": "Risk & Compliance; independent Internal Audit evaluation",
+        "procedure_reference": "enterprise/runtime/docs/ARCHITECTURE_AND_RUNBOOKS.md#rt-ops-02",
+        "implementation_description": "Apply RT-OPS-02 within the customer-controlled estate; provider-inherited facility portions require separately accepted evidence.",
+        "inheritance_source": "Provider evidence not obtained",
+        "control_definition_status": "draft",
+        "implementation_state": "DESIGN_ONLY",
+        "design_assessment": "NOT_ASSESSED",
+        "operating_assessment": "NOT_ASSERTED",
+        "evidence_origin": "SYNTHETIC_REFERENCE",
+        "effective_date": "2026-09-11",
+        "evidence_sources": [
+          "Versioned procedure execution form",
+          "Complete source population and reconciliation"
+        ],
+        "population_definition": "All applicable occurrences in declared assessment period; empty is not effective",
+        "configuration_dependencies": [
+          "Verified identity and independent recovery",
+          "Accepted configuration and rights"
+        ],
+        "known_limitations": [
+          "No actual implementation or provider report accepted"
+        ],
+        "last_owner_review": null,
+        "next_review_due": "2026-12-11",
+        "frequency_or_trigger": "Event and quarterly review",
+        "nature": "HYBRID",
+        "exception_ids": [],
+        "remediation_ids": []
+      },
+      {
+        "implementation_id": "SH-CFG-001-RUNTIME-BOISE-DR",
+        "control_id": "SH-CFG-001",
+        "objective_id": "SH-OBJ-CFG-001",
+        "risk_ids": [
+          "SH-RISK-TECH-003"
+        ],
+        "unit_or_boundary": "Enterprise runtime / RUNTIME-BOISE-DR",
+        "legal_entity": "SHI",
+        "process": "RT-OPS-01",
+        "system_or_location": "RUNTIME-BOISE-DR",
+        "implementation_owner_role": "Enterprise Technology Services",
+        "performer_role": "Authorized role in RT-OPS-01",
+        "challenge_role": "Risk & Compliance; independent Internal Audit evaluation",
+        "procedure_reference": "enterprise/runtime/docs/ARCHITECTURE_AND_RUNBOOKS.md#rt-ops-01",
+        "implementation_description": "Apply RT-OPS-01 within the customer-controlled estate; provider-inherited facility portions require separately accepted evidence.",
+        "inheritance_source": "Provider evidence not obtained",
+        "control_definition_status": "draft",
+        "implementation_state": "DESIGN_ONLY",
+        "design_assessment": "NOT_ASSESSED",
+        "operating_assessment": "NOT_ASSERTED",
+        "evidence_origin": "SYNTHETIC_REFERENCE",
+        "effective_date": "2026-09-11",
+        "evidence_sources": [
+          "Versioned procedure execution form",
+          "Complete source population and reconciliation"
+        ],
+        "population_definition": "All applicable occurrences in declared assessment period; empty is not effective",
+        "configuration_dependencies": [
+          "Verified identity and independent recovery",
+          "Accepted configuration and rights"
+        ],
+        "known_limitations": [
+          "No actual implementation or provider report accepted"
+        ],
+        "last_owner_review": null,
+        "next_review_due": "2026-12-11",
+        "frequency_or_trigger": "Event and quarterly review",
+        "nature": "HYBRID",
+        "exception_ids": [],
+        "remediation_ids": []
+      },
+      {
+        "implementation_id": "SH-OPS-001-RUNTIME-BOISE-DR",
+        "control_id": "SH-OPS-001",
+        "objective_id": "SH-OBJ-OPS-001",
+        "risk_ids": [
+          "SH-RISK-TECH-003"
+        ],
+        "unit_or_boundary": "Enterprise runtime / RUNTIME-BOISE-DR",
+        "legal_entity": "SHI",
+        "process": "RT-OPS-04",
+        "system_or_location": "RUNTIME-BOISE-DR",
+        "implementation_owner_role": "Enterprise Technology Services",
+        "performer_role": "Authorized role in RT-OPS-04",
+        "challenge_role": "Risk & Compliance; independent Internal Audit evaluation",
+        "procedure_reference": "enterprise/runtime/docs/ARCHITECTURE_AND_RUNBOOKS.md#rt-ops-04",
+        "implementation_description": "Apply RT-OPS-04 within the customer-controlled estate; provider-inherited facility portions require separately accepted evidence.",
+        "inheritance_source": "Provider evidence not obtained",
+        "control_definition_status": "draft",
+        "implementation_state": "DESIGN_ONLY",
+        "design_assessment": "NOT_ASSESSED",
+        "operating_assessment": "NOT_ASSERTED",
+        "evidence_origin": "SYNTHETIC_REFERENCE",
+        "effective_date": "2026-09-11",
+        "evidence_sources": [
+          "Versioned procedure execution form",
+          "Complete source population and reconciliation"
+        ],
+        "population_definition": "All applicable occurrences in declared assessment period; empty is not effective",
+        "configuration_dependencies": [
+          "Verified identity and independent recovery",
+          "Accepted configuration and rights"
+        ],
+        "known_limitations": [
+          "No actual implementation or provider report accepted"
+        ],
+        "last_owner_review": null,
+        "next_review_due": "2026-12-11",
+        "frequency_or_trigger": "Event and quarterly review",
+        "nature": "HYBRID",
+        "exception_ids": [],
+        "remediation_ids": []
+      },
+      {
+        "implementation_id": "SH-BCM-003-RUNTIME-BOISE-DR",
+        "control_id": "SH-BCM-003",
+        "objective_id": "SH-OBJ-BCM-002",
+        "risk_ids": [
+          "SH-RISK-BCM-001"
+        ],
+        "unit_or_boundary": "Enterprise runtime / RUNTIME-BOISE-DR",
+        "legal_entity": "SHI",
+        "process": "RT-OPS-05",
+        "system_or_location": "RUNTIME-BOISE-DR",
+        "implementation_owner_role": "Enterprise Technology Services",
+        "performer_role": "Authorized role in RT-OPS-05",
+        "challenge_role": "Risk & Compliance; independent Internal Audit evaluation",
+        "procedure_reference": "enterprise/runtime/docs/ARCHITECTURE_AND_RUNBOOKS.md#rt-ops-05",
+        "implementation_description": "Apply RT-OPS-05 within the customer-controlled estate; provider-inherited facility portions require separately accepted evidence.",
+        "inheritance_source": "Provider evidence not obtained",
+        "control_definition_status": "draft",
+        "implementation_state": "DESIGN_ONLY",
+        "design_assessment": "NOT_ASSESSED",
+        "operating_assessment": "NOT_ASSERTED",
+        "evidence_origin": "SYNTHETIC_REFERENCE",
+        "effective_date": "2026-09-11",
+        "evidence_sources": [
+          "Versioned procedure execution form",
+          "Complete source population and reconciliation"
+        ],
+        "population_definition": "All applicable occurrences in declared assessment period; empty is not effective",
+        "configuration_dependencies": [
+          "Verified identity and independent recovery",
+          "Accepted configuration and rights"
+        ],
+        "known_limitations": [
+          "No actual implementation or provider report accepted"
+        ],
+        "last_owner_review": null,
+        "next_review_due": "2026-12-11",
+        "frequency_or_trigger": "Event and quarterly review",
+        "nature": "HYBRID",
+        "exception_ids": [],
+        "remediation_ids": []
+      },
+      {
+        "implementation_id": "SH-TPR-003-RUNTIME-BOISE-DR",
+        "control_id": "SH-TPR-003",
+        "objective_id": "SH-OBJ-TPR-002",
+        "risk_ids": [
+          "SH-RISK-TPR-001"
+        ],
+        "unit_or_boundary": "Enterprise runtime / RUNTIME-BOISE-DR",
+        "legal_entity": "SHI",
+        "process": "RT-OPS-06",
+        "system_or_location": "RUNTIME-BOISE-DR",
+        "implementation_owner_role": "Enterprise Technology Services",
+        "performer_role": "Authorized role in RT-OPS-06",
+        "challenge_role": "Risk & Compliance; independent Internal Audit evaluation",
+        "procedure_reference": "enterprise/runtime/docs/ARCHITECTURE_AND_RUNBOOKS.md#rt-ops-06",
+        "implementation_description": "Apply RT-OPS-06 within the customer-controlled estate; provider-inherited facility portions require separately accepted evidence.",
+        "inheritance_source": "Provider evidence not obtained",
+        "control_definition_status": "draft",
+        "implementation_state": "DESIGN_ONLY",
+        "design_assessment": "NOT_ASSESSED",
+        "operating_assessment": "NOT_ASSERTED",
+        "evidence_origin": "SYNTHETIC_REFERENCE",
+        "effective_date": "2026-09-11",
+        "evidence_sources": [
+          "Versioned procedure execution form",
+          "Complete source population and reconciliation"
+        ],
+        "population_definition": "All applicable occurrences in declared assessment period; empty is not effective",
+        "configuration_dependencies": [
+          "Verified identity and independent recovery",
+          "Accepted configuration and rights"
+        ],
+        "known_limitations": [
+          "No actual implementation or provider report accepted"
+        ],
+        "last_owner_review": null,
+        "next_review_due": "2026-12-11",
+        "frequency_or_trigger": "Event and quarterly review",
+        "nature": "HYBRID",
+        "exception_ids": [],
+        "remediation_ids": []
+      },
+      {
+        "implementation_id": "SH-IAM-002-RUNTIME-NN-OWNED-DC",
+        "control_id": "SH-IAM-002",
+        "objective_id": "SH-OBJ-IAM-001",
+        "risk_ids": [
+          "SH-RISK-TECH-001"
+        ],
+        "unit_or_boundary": "Enterprise runtime / RUNTIME-NN-OWNED-DC",
+        "legal_entity": "SHI",
+        "process": "RT-OPS-03",
+        "system_or_location": "RUNTIME-NN-OWNED-DC",
+        "implementation_owner_role": "Enterprise Technology Services",
+        "performer_role": "Authorized role in RT-OPS-03",
+        "challenge_role": "Risk & Compliance; independent Internal Audit evaluation",
+        "procedure_reference": "enterprise/runtime/docs/ARCHITECTURE_AND_RUNBOOKS.md#rt-ops-03",
+        "implementation_description": "Apply RT-OPS-03 within the customer-controlled estate; provider-inherited facility portions require separately accepted evidence.",
+        "inheritance_source": null,
+        "control_definition_status": "draft",
+        "implementation_state": "DESIGN_ONLY",
+        "design_assessment": "NOT_ASSESSED",
+        "operating_assessment": "NOT_ASSERTED",
+        "evidence_origin": "SYNTHETIC_REFERENCE",
+        "effective_date": "2026-09-11",
+        "evidence_sources": [
+          "Versioned procedure execution form",
+          "Complete source population and reconciliation"
+        ],
+        "population_definition": "All applicable occurrences in declared assessment period; empty is not effective",
+        "configuration_dependencies": [
+          "Verified identity and independent recovery",
+          "Accepted configuration and rights"
+        ],
+        "known_limitations": [
+          "No actual implementation or provider report accepted"
+        ],
+        "last_owner_review": null,
+        "next_review_due": "2026-12-11",
+        "frequency_or_trigger": "Event and quarterly review",
+        "nature": "HYBRID",
+        "exception_ids": [],
+        "remediation_ids": []
+      },
+      {
+        "implementation_id": "SH-IAM-004-RUNTIME-NN-OWNED-DC",
+        "control_id": "SH-IAM-004",
+        "objective_id": "SH-OBJ-IAM-002",
+        "risk_ids": [
+          "SH-RISK-PEO-001"
+        ],
+        "unit_or_boundary": "Enterprise runtime / RUNTIME-NN-OWNED-DC",
+        "legal_entity": "SHI",
+        "process": "RT-OPS-03",
+        "system_or_location": "RUNTIME-NN-OWNED-DC",
+        "implementation_owner_role": "Enterprise Technology Services",
+        "performer_role": "Authorized role in RT-OPS-03",
+        "challenge_role": "Risk & Compliance; independent Internal Audit evaluation",
+        "procedure_reference": "enterprise/runtime/docs/ARCHITECTURE_AND_RUNBOOKS.md#rt-ops-03",
+        "implementation_description": "Apply RT-OPS-03 within the customer-controlled estate; provider-inherited facility portions require separately accepted evidence.",
+        "inheritance_source": null,
+        "control_definition_status": "draft",
+        "implementation_state": "DESIGN_ONLY",
+        "design_assessment": "NOT_ASSESSED",
+        "operating_assessment": "NOT_ASSERTED",
+        "evidence_origin": "SYNTHETIC_REFERENCE",
+        "effective_date": "2026-09-11",
+        "evidence_sources": [
+          "Versioned procedure execution form",
+          "Complete source population and reconciliation"
+        ],
+        "population_definition": "All applicable occurrences in declared assessment period; empty is not effective",
+        "configuration_dependencies": [
+          "Verified identity and independent recovery",
+          "Accepted configuration and rights"
+        ],
+        "known_limitations": [
+          "No actual implementation or provider report accepted"
+        ],
+        "last_owner_review": null,
+        "next_review_due": "2026-12-11",
+        "frequency_or_trigger": "Event and quarterly review",
+        "nature": "HYBRID",
+        "exception_ids": [],
+        "remediation_ids": []
+      },
+      {
+        "implementation_id": "SH-IAM-005-RUNTIME-NN-OWNED-DC",
+        "control_id": "SH-IAM-005",
+        "objective_id": "SH-OBJ-IAM-003",
+        "risk_ids": [
+          "SH-RISK-TECH-001"
+        ],
+        "unit_or_boundary": "Enterprise runtime / RUNTIME-NN-OWNED-DC",
+        "legal_entity": "SHI",
+        "process": "RT-OPS-03",
+        "system_or_location": "RUNTIME-NN-OWNED-DC",
+        "implementation_owner_role": "Enterprise Technology Services",
+        "performer_role": "Authorized role in RT-OPS-03",
+        "challenge_role": "Risk & Compliance; independent Internal Audit evaluation",
+        "procedure_reference": "enterprise/runtime/docs/ARCHITECTURE_AND_RUNBOOKS.md#rt-ops-03",
+        "implementation_description": "Apply RT-OPS-03 within the customer-controlled estate; provider-inherited facility portions require separately accepted evidence.",
+        "inheritance_source": null,
+        "control_definition_status": "draft",
+        "implementation_state": "DESIGN_ONLY",
+        "design_assessment": "NOT_ASSESSED",
+        "operating_assessment": "NOT_ASSERTED",
+        "evidence_origin": "SYNTHETIC_REFERENCE",
+        "effective_date": "2026-09-11",
+        "evidence_sources": [
+          "Versioned procedure execution form",
+          "Complete source population and reconciliation"
+        ],
+        "population_definition": "All applicable occurrences in declared assessment period; empty is not effective",
+        "configuration_dependencies": [
+          "Verified identity and independent recovery",
+          "Accepted configuration and rights"
+        ],
+        "known_limitations": [
+          "No actual implementation or provider report accepted"
+        ],
+        "last_owner_review": null,
+        "next_review_due": "2026-12-11",
+        "frequency_or_trigger": "Event and quarterly review",
+        "nature": "HYBRID",
+        "exception_ids": [],
+        "remediation_ids": []
+      },
+      {
+        "implementation_id": "SH-IAM-007-RUNTIME-NN-OWNED-DC",
+        "control_id": "SH-IAM-007",
+        "objective_id": "SH-OBJ-IAM-004",
+        "risk_ids": [
+          "SH-RISK-TECH-001"
+        ],
+        "unit_or_boundary": "Enterprise runtime / RUNTIME-NN-OWNED-DC",
+        "legal_entity": "SHI",
+        "process": "RT-OPS-03",
+        "system_or_location": "RUNTIME-NN-OWNED-DC",
+        "implementation_owner_role": "Enterprise Technology Services",
+        "performer_role": "Authorized role in RT-OPS-03",
+        "challenge_role": "Risk & Compliance; independent Internal Audit evaluation",
+        "procedure_reference": "enterprise/runtime/docs/ARCHITECTURE_AND_RUNBOOKS.md#rt-ops-03",
+        "implementation_description": "Apply RT-OPS-03 within the customer-controlled estate; provider-inherited facility portions require separately accepted evidence.",
+        "inheritance_source": null,
+        "control_definition_status": "draft",
+        "implementation_state": "DESIGN_ONLY",
+        "design_assessment": "NOT_ASSESSED",
+        "operating_assessment": "NOT_ASSERTED",
+        "evidence_origin": "SYNTHETIC_REFERENCE",
+        "effective_date": "2026-09-11",
+        "evidence_sources": [
+          "Versioned procedure execution form",
+          "Complete source population and reconciliation"
+        ],
+        "population_definition": "All applicable occurrences in declared assessment period; empty is not effective",
+        "configuration_dependencies": [
+          "Verified identity and independent recovery",
+          "Accepted configuration and rights"
+        ],
+        "known_limitations": [
+          "No actual implementation or provider report accepted"
+        ],
+        "last_owner_review": null,
+        "next_review_due": "2026-12-11",
+        "frequency_or_trigger": "Event and quarterly review",
+        "nature": "HYBRID",
+        "exception_ids": [],
+        "remediation_ids": []
+      },
+      {
+        "implementation_id": "SH-SEC-002-RUNTIME-NN-OWNED-DC",
+        "control_id": "SH-SEC-002",
+        "objective_id": "SH-OBJ-SEC-003",
+        "risk_ids": [
+          "SH-RISK-TECH-004"
+        ],
+        "unit_or_boundary": "Enterprise runtime / RUNTIME-NN-OWNED-DC",
+        "legal_entity": "SHI",
+        "process": "RT-OPS-04",
+        "system_or_location": "RUNTIME-NN-OWNED-DC",
+        "implementation_owner_role": "Enterprise Technology Services",
+        "performer_role": "Authorized role in RT-OPS-04",
+        "challenge_role": "Risk & Compliance; independent Internal Audit evaluation",
+        "procedure_reference": "enterprise/runtime/docs/ARCHITECTURE_AND_RUNBOOKS.md#rt-ops-04",
+        "implementation_description": "Apply RT-OPS-04 within the customer-controlled estate; provider-inherited facility portions require separately accepted evidence.",
+        "inheritance_source": null,
+        "control_definition_status": "draft",
+        "implementation_state": "DESIGN_ONLY",
+        "design_assessment": "NOT_ASSESSED",
+        "operating_assessment": "NOT_ASSERTED",
+        "evidence_origin": "SYNTHETIC_REFERENCE",
+        "effective_date": "2026-09-11",
+        "evidence_sources": [
+          "Versioned procedure execution form",
+          "Complete source population and reconciliation"
+        ],
+        "population_definition": "All applicable occurrences in declared assessment period; empty is not effective",
+        "configuration_dependencies": [
+          "Verified identity and independent recovery",
+          "Accepted configuration and rights"
+        ],
+        "known_limitations": [
+          "No actual implementation or provider report accepted"
+        ],
+        "last_owner_review": null,
+        "next_review_due": "2026-12-11",
+        "frequency_or_trigger": "Event and quarterly review",
+        "nature": "HYBRID",
+        "exception_ids": [],
+        "remediation_ids": []
+      },
+      {
+        "implementation_id": "SH-DAT-003-RUNTIME-NN-OWNED-DC",
+        "control_id": "SH-DAT-003",
+        "objective_id": "SH-OBJ-DAT-002",
+        "risk_ids": [
+          "SH-RISK-PRV-001"
+        ],
+        "unit_or_boundary": "Enterprise runtime / RUNTIME-NN-OWNED-DC",
+        "legal_entity": "SHI",
+        "process": "RT-OPS-03",
+        "system_or_location": "RUNTIME-NN-OWNED-DC",
+        "implementation_owner_role": "Enterprise Technology Services",
+        "performer_role": "Authorized role in RT-OPS-03",
+        "challenge_role": "Risk & Compliance; independent Internal Audit evaluation",
+        "procedure_reference": "enterprise/runtime/docs/ARCHITECTURE_AND_RUNBOOKS.md#rt-ops-03",
+        "implementation_description": "Apply RT-OPS-03 within the customer-controlled estate; provider-inherited facility portions require separately accepted evidence.",
+        "inheritance_source": null,
+        "control_definition_status": "draft",
+        "implementation_state": "DESIGN_ONLY",
+        "design_assessment": "NOT_ASSESSED",
+        "operating_assessment": "NOT_ASSERTED",
+        "evidence_origin": "SYNTHETIC_REFERENCE",
+        "effective_date": "2026-09-11",
+        "evidence_sources": [
+          "Versioned procedure execution form",
+          "Complete source population and reconciliation"
+        ],
+        "population_definition": "All applicable occurrences in declared assessment period; empty is not effective",
+        "configuration_dependencies": [
+          "Verified identity and independent recovery",
+          "Accepted configuration and rights"
+        ],
+        "known_limitations": [
+          "No actual implementation or provider report accepted"
+        ],
+        "last_owner_review": null,
+        "next_review_due": "2026-12-11",
+        "frequency_or_trigger": "Event and quarterly review",
+        "nature": "HYBRID",
+        "exception_ids": [],
+        "remediation_ids": []
+      },
+      {
+        "implementation_id": "SH-REC-002-RUNTIME-NN-OWNED-DC",
+        "control_id": "SH-REC-002",
+        "objective_id": "SH-OBJ-REC-002",
+        "risk_ids": [
+          "SH-RISK-ASS-001"
+        ],
+        "unit_or_boundary": "Enterprise runtime / RUNTIME-NN-OWNED-DC",
+        "legal_entity": "SHI",
+        "process": "RT-OPS-04",
+        "system_or_location": "RUNTIME-NN-OWNED-DC",
+        "implementation_owner_role": "Enterprise Technology Services",
+        "performer_role": "Authorized role in RT-OPS-04",
+        "challenge_role": "Risk & Compliance; independent Internal Audit evaluation",
+        "procedure_reference": "enterprise/runtime/docs/ARCHITECTURE_AND_RUNBOOKS.md#rt-ops-04",
+        "implementation_description": "Apply RT-OPS-04 within the customer-controlled estate; provider-inherited facility portions require separately accepted evidence.",
+        "inheritance_source": null,
+        "control_definition_status": "draft",
+        "implementation_state": "DESIGN_ONLY",
+        "design_assessment": "NOT_ASSESSED",
+        "operating_assessment": "NOT_ASSERTED",
+        "evidence_origin": "SYNTHETIC_REFERENCE",
+        "effective_date": "2026-09-11",
+        "evidence_sources": [
+          "Versioned procedure execution form",
+          "Complete source population and reconciliation"
+        ],
+        "population_definition": "All applicable occurrences in declared assessment period; empty is not effective",
+        "configuration_dependencies": [
+          "Verified identity and independent recovery",
+          "Accepted configuration and rights"
+        ],
+        "known_limitations": [
+          "No actual implementation or provider report accepted"
+        ],
+        "last_owner_review": null,
+        "next_review_due": "2026-12-11",
+        "frequency_or_trigger": "Event and quarterly review",
+        "nature": "HYBRID",
+        "exception_ids": [],
+        "remediation_ids": []
+      },
+      {
+        "implementation_id": "SH-REC-004-RUNTIME-NN-OWNED-DC",
+        "control_id": "SH-REC-004",
+        "objective_id": "SH-OBJ-REC-003",
+        "risk_ids": [
+          "SH-RISK-PRV-001"
+        ],
+        "unit_or_boundary": "Enterprise runtime / RUNTIME-NN-OWNED-DC",
+        "legal_entity": "SHI",
+        "process": "RT-OPS-06",
+        "system_or_location": "RUNTIME-NN-OWNED-DC",
+        "implementation_owner_role": "Enterprise Technology Services",
+        "performer_role": "Authorized role in RT-OPS-06",
+        "challenge_role": "Risk & Compliance; independent Internal Audit evaluation",
+        "procedure_reference": "enterprise/runtime/docs/ARCHITECTURE_AND_RUNBOOKS.md#rt-ops-06",
+        "implementation_description": "Apply RT-OPS-06 within the customer-controlled estate; provider-inherited facility portions require separately accepted evidence.",
+        "inheritance_source": null,
+        "control_definition_status": "draft",
+        "implementation_state": "DESIGN_ONLY",
+        "design_assessment": "NOT_ASSESSED",
+        "operating_assessment": "NOT_ASSERTED",
+        "evidence_origin": "SYNTHETIC_REFERENCE",
+        "effective_date": "2026-09-11",
+        "evidence_sources": [
+          "Versioned procedure execution form",
+          "Complete source population and reconciliation"
+        ],
+        "population_definition": "All applicable occurrences in declared assessment period; empty is not effective",
+        "configuration_dependencies": [
+          "Verified identity and independent recovery",
+          "Accepted configuration and rights"
+        ],
+        "known_limitations": [
+          "No actual implementation or provider report accepted"
+        ],
+        "last_owner_review": null,
+        "next_review_due": "2026-12-11",
+        "frequency_or_trigger": "Event and quarterly review",
+        "nature": "HYBRID",
+        "exception_ids": [],
+        "remediation_ids": []
+      },
+      {
+        "implementation_id": "SH-ENG-002-RUNTIME-NN-OWNED-DC",
+        "control_id": "SH-ENG-002",
+        "objective_id": "SH-OBJ-ENG-002",
+        "risk_ids": [
+          "SH-RISK-TECH-002"
+        ],
+        "unit_or_boundary": "Enterprise runtime / RUNTIME-NN-OWNED-DC",
+        "legal_entity": "SHI",
+        "process": "RT-OPS-02",
+        "system_or_location": "RUNTIME-NN-OWNED-DC",
+        "implementation_owner_role": "Enterprise Technology Services",
+        "performer_role": "Authorized role in RT-OPS-02",
+        "challenge_role": "Risk & Compliance; independent Internal Audit evaluation",
+        "procedure_reference": "enterprise/runtime/docs/ARCHITECTURE_AND_RUNBOOKS.md#rt-ops-02",
+        "implementation_description": "Apply RT-OPS-02 within the customer-controlled estate; provider-inherited facility portions require separately accepted evidence.",
+        "inheritance_source": null,
+        "control_definition_status": "draft",
+        "implementation_state": "DESIGN_ONLY",
+        "design_assessment": "NOT_ASSESSED",
+        "operating_assessment": "NOT_ASSERTED",
+        "evidence_origin": "SYNTHETIC_REFERENCE",
+        "effective_date": "2026-09-11",
+        "evidence_sources": [
+          "Versioned procedure execution form",
+          "Complete source population and reconciliation"
+        ],
+        "population_definition": "All applicable occurrences in declared assessment period; empty is not effective",
+        "configuration_dependencies": [
+          "Verified identity and independent recovery",
+          "Accepted configuration and rights"
+        ],
+        "known_limitations": [
+          "No actual implementation or provider report accepted"
+        ],
+        "last_owner_review": null,
+        "next_review_due": "2026-12-11",
+        "frequency_or_trigger": "Event and quarterly review",
+        "nature": "HYBRID",
+        "exception_ids": [],
+        "remediation_ids": []
+      },
+      {
+        "implementation_id": "SH-CFG-001-RUNTIME-NN-OWNED-DC",
+        "control_id": "SH-CFG-001",
+        "objective_id": "SH-OBJ-CFG-001",
+        "risk_ids": [
+          "SH-RISK-TECH-003"
+        ],
+        "unit_or_boundary": "Enterprise runtime / RUNTIME-NN-OWNED-DC",
+        "legal_entity": "SHI",
+        "process": "RT-OPS-01",
+        "system_or_location": "RUNTIME-NN-OWNED-DC",
+        "implementation_owner_role": "Enterprise Technology Services",
+        "performer_role": "Authorized role in RT-OPS-01",
+        "challenge_role": "Risk & Compliance; independent Internal Audit evaluation",
+        "procedure_reference": "enterprise/runtime/docs/ARCHITECTURE_AND_RUNBOOKS.md#rt-ops-01",
+        "implementation_description": "Apply RT-OPS-01 within the customer-controlled estate; provider-inherited facility portions require separately accepted evidence.",
+        "inheritance_source": null,
+        "control_definition_status": "draft",
+        "implementation_state": "DESIGN_ONLY",
+        "design_assessment": "NOT_ASSESSED",
+        "operating_assessment": "NOT_ASSERTED",
+        "evidence_origin": "SYNTHETIC_REFERENCE",
+        "effective_date": "2026-09-11",
+        "evidence_sources": [
+          "Versioned procedure execution form",
+          "Complete source population and reconciliation"
+        ],
+        "population_definition": "All applicable occurrences in declared assessment period; empty is not effective",
+        "configuration_dependencies": [
+          "Verified identity and independent recovery",
+          "Accepted configuration and rights"
+        ],
+        "known_limitations": [
+          "No actual implementation or provider report accepted"
+        ],
+        "last_owner_review": null,
+        "next_review_due": "2026-12-11",
+        "frequency_or_trigger": "Event and quarterly review",
+        "nature": "HYBRID",
+        "exception_ids": [],
+        "remediation_ids": []
+      },
+      {
+        "implementation_id": "SH-OPS-001-RUNTIME-NN-OWNED-DC",
+        "control_id": "SH-OPS-001",
+        "objective_id": "SH-OBJ-OPS-001",
+        "risk_ids": [
+          "SH-RISK-TECH-003"
+        ],
+        "unit_or_boundary": "Enterprise runtime / RUNTIME-NN-OWNED-DC",
+        "legal_entity": "SHI",
+        "process": "RT-OPS-04",
+        "system_or_location": "RUNTIME-NN-OWNED-DC",
+        "implementation_owner_role": "Enterprise Technology Services",
+        "performer_role": "Authorized role in RT-OPS-04",
+        "challenge_role": "Risk & Compliance; independent Internal Audit evaluation",
+        "procedure_reference": "enterprise/runtime/docs/ARCHITECTURE_AND_RUNBOOKS.md#rt-ops-04",
+        "implementation_description": "Apply RT-OPS-04 within the customer-controlled estate; provider-inherited facility portions require separately accepted evidence.",
+        "inheritance_source": null,
+        "control_definition_status": "draft",
+        "implementation_state": "DESIGN_ONLY",
+        "design_assessment": "NOT_ASSESSED",
+        "operating_assessment": "NOT_ASSERTED",
+        "evidence_origin": "SYNTHETIC_REFERENCE",
+        "effective_date": "2026-09-11",
+        "evidence_sources": [
+          "Versioned procedure execution form",
+          "Complete source population and reconciliation"
+        ],
+        "population_definition": "All applicable occurrences in declared assessment period; empty is not effective",
+        "configuration_dependencies": [
+          "Verified identity and independent recovery",
+          "Accepted configuration and rights"
+        ],
+        "known_limitations": [
+          "No actual implementation or provider report accepted"
+        ],
+        "last_owner_review": null,
+        "next_review_due": "2026-12-11",
+        "frequency_or_trigger": "Event and quarterly review",
+        "nature": "HYBRID",
+        "exception_ids": [],
+        "remediation_ids": []
+      },
+      {
+        "implementation_id": "SH-BCM-003-RUNTIME-NN-OWNED-DC",
+        "control_id": "SH-BCM-003",
+        "objective_id": "SH-OBJ-BCM-002",
+        "risk_ids": [
+          "SH-RISK-BCM-001"
+        ],
+        "unit_or_boundary": "Enterprise runtime / RUNTIME-NN-OWNED-DC",
+        "legal_entity": "SHI",
+        "process": "RT-OPS-05",
+        "system_or_location": "RUNTIME-NN-OWNED-DC",
+        "implementation_owner_role": "Enterprise Technology Services",
+        "performer_role": "Authorized role in RT-OPS-05",
+        "challenge_role": "Risk & Compliance; independent Internal Audit evaluation",
+        "procedure_reference": "enterprise/runtime/docs/ARCHITECTURE_AND_RUNBOOKS.md#rt-ops-05",
+        "implementation_description": "Apply RT-OPS-05 within the customer-controlled estate; provider-inherited facility portions require separately accepted evidence.",
+        "inheritance_source": null,
+        "control_definition_status": "draft",
+        "implementation_state": "DESIGN_ONLY",
+        "design_assessment": "NOT_ASSESSED",
+        "operating_assessment": "NOT_ASSERTED",
+        "evidence_origin": "SYNTHETIC_REFERENCE",
+        "effective_date": "2026-09-11",
+        "evidence_sources": [
+          "Versioned procedure execution form",
+          "Complete source population and reconciliation"
+        ],
+        "population_definition": "All applicable occurrences in declared assessment period; empty is not effective",
+        "configuration_dependencies": [
+          "Verified identity and independent recovery",
+          "Accepted configuration and rights"
+        ],
+        "known_limitations": [
+          "No actual implementation or provider report accepted"
+        ],
+        "last_owner_review": null,
+        "next_review_due": "2026-12-11",
+        "frequency_or_trigger": "Event and quarterly review",
+        "nature": "HYBRID",
+        "exception_ids": [],
+        "remediation_ids": []
+      },
+      {
+        "implementation_id": "SH-TPR-003-RUNTIME-NN-OWNED-DC",
+        "control_id": "SH-TPR-003",
+        "objective_id": "SH-OBJ-TPR-002",
+        "risk_ids": [
+          "SH-RISK-TPR-001"
+        ],
+        "unit_or_boundary": "Enterprise runtime / RUNTIME-NN-OWNED-DC",
+        "legal_entity": "SHI",
+        "process": "RT-OPS-06",
+        "system_or_location": "RUNTIME-NN-OWNED-DC",
+        "implementation_owner_role": "Enterprise Technology Services",
+        "performer_role": "Authorized role in RT-OPS-06",
+        "challenge_role": "Risk & Compliance; independent Internal Audit evaluation",
+        "procedure_reference": "enterprise/runtime/docs/ARCHITECTURE_AND_RUNBOOKS.md#rt-ops-06",
+        "implementation_description": "Apply RT-OPS-06 within the customer-controlled estate; provider-inherited facility portions require separately accepted evidence.",
+        "inheritance_source": null,
+        "control_definition_status": "draft",
+        "implementation_state": "DESIGN_ONLY",
+        "design_assessment": "NOT_ASSESSED",
+        "operating_assessment": "NOT_ASSERTED",
+        "evidence_origin": "SYNTHETIC_REFERENCE",
+        "effective_date": "2026-09-11",
+        "evidence_sources": [
+          "Versioned procedure execution form",
+          "Complete source population and reconciliation"
+        ],
+        "population_definition": "All applicable occurrences in declared assessment period; empty is not effective",
+        "configuration_dependencies": [
+          "Verified identity and independent recovery",
+          "Accepted configuration and rights"
+        ],
+        "known_limitations": [
+          "No actual implementation or provider report accepted"
+        ],
+        "last_owner_review": null,
+        "next_review_due": "2026-12-11",
+        "frequency_or_trigger": "Event and quarterly review",
+        "nature": "HYBRID",
+        "exception_ids": [],
+        "remediation_ids": []
+      }
+    ],
+    "rooms": [
+      {
+        "name": "Conventional hall",
+        "area_sf": 2400
+      },
+      {
+        "name": "AI hall",
+        "area_sf": 1800
+      },
+      {
+        "name": "Network A",
+        "area_sf": 300
+      },
+      {
+        "name": "Network B",
+        "area_sf": 300
+      },
+      {
+        "name": "Key room",
+        "area_sf": 250
+      },
+      {
+        "name": "NOC / incident",
+        "area_sf": 700
+      },
+      {
+        "name": "Receiving / quarantine",
+        "area_sf": 800
+      },
+      {
+        "name": "Spares / media",
+        "area_sf": 550
+      },
+      {
+        "name": "Electrical / UPS",
+        "area_sf": 1700
+      },
+      {
+        "name": "Mechanical / CDU",
+        "area_sf": 1200
+      },
+      {
+        "name": "Lobby / mantrap",
+        "area_sf": 350
+      },
+      {
+        "name": "Support / circulation",
+        "area_sf": 1650
+      }
+    ],
+    "technical_design": {
+      "origin": "DELEGATED_SYNTHETIC_DESIGN_NOT_ENGINEERING_APPROVAL",
+      "platform": [
+        {
+          "id": "HOST",
+          "product": "Ubuntu Server",
+          "version": "24.04 LTS",
+          "role": "Host OS; KVM/libvirt and Podman from maintained distribution archive",
+          "owner": "TEAM-platform",
+          "source": "https://ubuntu.com/security/esm",
+          "support_until": "2029-05-31",
+          "dependencies": []
+        },
+        {
+          "id": "DATABASE",
+          "product": "PostgreSQL",
+          "version": "17.11",
+          "role": "Authoritative transactions/temporal metadata; native FTS is rebuildable search",
+          "owner": "TEAM-data",
+          "source": "https://www.postgresql.org/support/versioning/",
+          "support_until": "2029-11-08",
+          "dependencies": [
+            "HOST"
+          ]
+        },
+        {
+          "id": "OBJECT",
+          "product": "Ceph RGW",
+          "version": "20.2.4 Tentacle",
+          "role": "Customer-controlled source objects and replica pools; independent vault administration",
+          "owner": "TEAM-data",
+          "source": "https://docs.ceph.com/en/latest/releases/",
+          "support_until": "2027-06-01",
+          "dependencies": [
+            "HOST"
+          ]
+        },
+        {
+          "id": "IDENTITY",
+          "product": "Okta",
+          "version": "VENDOR_MANAGED_TENANT_RELEASE_PENDING_QUALIFICATION",
+          "role": "Enterprise identity; independent local break-glass credentials for recovery; no vendor grants J2 information authority",
+          "owner": "TEAM-identity",
+          "source": "docs/controls/CCF_ENTERPRISE_SECURITY_VENDOR_DECISIONS_2026-09-11.md",
+          "support_until": null,
+          "dependencies": []
+        }
+      ],
+      "image_admission": {
+        "deployed": false,
+        "signed_digest": null,
+        "qualification": "BLOCKED_CONFIGURATION_TEST_NOT_PERFORMED",
+        "review_cadence_days": 30,
+        "upgrade_lead_days": 180,
+        "endpoints": [
+          "https://primary.example.invalid",
+          "https://recovery.example.invalid"
+        ],
+        "secret_policy": "External secret references only; no embedded credentials"
+      },
+      "hardware_reference": {
+        "name": "NVIDIA DGX H100 reference; not the capped synthetic baseline",
+        "source": "https://docs.nvidia.com/dgx-superpod/design-guides/dgx-superpod-data-center-design-h100/latest/planning.html",
+        "source_updated_on": "2025-11-19",
+        "retrieved_on": "2026-09-11",
+        "maximum_system_kw": 10.2,
+        "rack_u": 8,
+        "weight_kg": 130.45,
+        "cooling": "AIR",
+        "scope": "Reference sensitivity only; 8 kW budget class requires provider/OEM power-limit and throughput acceptance"
+      },
+      "electrical": {
+        "voltage_ll": 480,
+        "power_factor": 0.95,
+        "generator_power_factor": 0.8,
+        "service_kw": 1000,
+        "optional_path_kw": 2000,
+        "service_breaker_a": 1600,
+        "continuous_loading_fraction": 0.8,
+        "ups_module_kw": 350,
+        "ups_loss_fraction": 0.04,
+        "generator_unit_kw": 600,
+        "generator_breaker_a": 1200,
+        "cooling_module_thermal_kw": 150,
+        "cooling_design_cop": 3,
+        "rack_voltage_ll": 208,
+        "rack_feed_a": 63,
+        "rack_feed_count": 2,
+        "rack_feed_policy": "EACH_CARRIES_FULL_RACK_LOAD_NOT_ADDITIVE",
+        "initial": {
+          "usable_it_kw": 250,
+          "ups_modules_per_path": 1,
+          "ups_paths": 2,
+          "ups_feeder_a": 600,
+          "generator_count": 2,
+          "cooling_modules": 3,
+          "recharge_kw": 30,
+          "other_peak_kw": 20
+        },
+        "expanded": {
+          "usable_it_kw": 500,
+          "ups_modules_per_path": 2,
+          "ups_paths": 2,
+          "ups_feeder_a": 1200,
+          "generator_count": 3,
+          "cooling_modules": 5,
+          "recharge_kw": 60,
+          "other_peak_kw": 40
+        }
+      },
+      "enclosure": {
+        "cabinet_width_m": 0.6,
+        "cabinet_depth_m": 1.2,
+        "cabinet_pitch_m": 0.8,
+        "aisle_m": 1.2,
+        "maximum_racks_per_row": 6,
+        "inlet_target_c_low": 18,
+        "inlet_target_c_high": 24,
+        "coolant_loop": "No liquid connection assumed in air baseline; isolated CDU/facility loop and leak detection required for later liquid rows"
+      },
+      "workforce_phases": {
+        "colo_start": "2027-01-01",
+        "owned_start_assumption": "2029-01-01",
+        "construction_project_lead_fte": 0.5,
+        "construction_specialist_fte": 2,
+        "specialist_cost_basis": "Purchased design/commissioning capacity included in existing engineering phases, not additional payroll",
+        "sacramento_workstations_required": 16,
+        "site_roving_positions": 4,
+        "workstation_state": "REQUIREMENT_NOT_ASSIGNED",
+        "permanent_facilities_fte": 2,
+        "continuous_security_positions": 6
+      },
+      "asset_policy": {
+        "classification": "SYNTHETIC_FORECAST_POLICY_NOT_TAX_ADVICE",
+        "land_life_years": null,
+        "site_life_years": 15,
+        "shell_life_years": 30,
+        "utility_life_years": 20,
+        "plant_life_years": 15,
+        "it_life_years": 4,
+        "refundable_deposit_fraction": 0.1,
+        "invoice_retention_fraction": 0.05,
+        "unspent_contingency": 500000,
+        "incentive_credit": 0,
+        "tax_shield_credit": 0,
+        "plant_refurbishment_year": 2034,
+        "plant_refurbishment_cost": 500000,
+        "phase_two_expansion_cost": 3000000,
+        "phase_two_trigger_kw": 250,
+        "maximum_owned_kw": 500
+      },
+      "ai_job_mix": {
+        "profiles": [
+          {
+            "id": "INTERACTIVE",
+            "task_share": 0.7,
+            "relative_tokens": 0.5,
+            "input_fraction": 0.75,
+            "context_fraction": 1
+          },
+          {
+            "id": "AGENT_MULTI_STEP",
+            "task_share": 0.2,
+            "relative_tokens": 3,
+            "input_fraction": 0.6666666667,
+            "context_fraction": 1
+          },
+          {
+            "id": "EMBEDDING_RERANK",
+            "task_share": 0.1,
+            "relative_tokens": 0.5,
+            "input_fraction": 1,
+            "context_fraction": 0.5
+          }
+        ],
+        "ocr_pages_day": 5000,
+        "ocr_cpu_seconds_per_page": 2,
+        "background_preemptible_share": 0.05,
+        "evaluation_inputs": "Synthetic or explicitly entitled test populations only",
+        "shared_private_training_authorized": false,
+        "frontier_training_authorized": false
+      },
+      "recovery_services": [
+        {
+          "service_id": "SVC-keys",
+          "tier": "BOOTSTRAP",
+          "dependencies": [],
+          "minimum_service": "Independent HSM pair, sealed recovery material and off-primary custodians; acknowledge key changes only after recovery durability",
+          "performance_verified": false
+        },
+        {
+          "service_id": "SVC-connectivity",
+          "tier": "BOOTSTRAP",
+          "dependencies": [],
+          "minimum_service": "Offline signed DNS/time/routing bootstrap; independent transport credentials",
+          "performance_verified": false
+        },
+        {
+          "service_id": "SVC-identity",
+          "tier": "BOOTSTRAP",
+          "dependencies": [
+            "SVC-keys",
+            "SVC-connectivity"
+          ],
+          "minimum_service": "Independent recovery realm and break-glass roots; no primary-only identity dependency",
+          "performance_verified": false
+        },
+        {
+          "service_id": "SVC-observability",
+          "tier": "BOOTSTRAP",
+          "dependencies": [
+            "SVC-identity"
+          ],
+          "minimum_service": "Local protected incident log buffer before central collectors",
+          "performance_verified": false
+        },
+        {
+          "service_id": "SVC-compute",
+          "tier": "PRODUCTION",
+          "dependencies": [
+            "SVC-identity",
+            "SVC-observability"
+          ],
+          "minimum_service": "Prioritized transaction/database workloads",
+          "performance_verified": false
+        },
+        {
+          "service_id": "SVC-finance-systems",
+          "tier": "PRODUCTION",
+          "dependencies": [
+            "SVC-compute"
+          ],
+          "minimum_service": "Minimum finance transaction/reporting dependencies; ICFR relevance requires customer scope",
+          "performance_verified": false
+        },
+        {
+          "service_id": "SVC-atlas-product",
+          "tier": "PRODUCTION",
+          "dependencies": [
+            "SVC-compute"
+          ],
+          "minimum_service": "Prioritized centrally hosted client/professional planes; optional accelerators degraded",
+          "performance_verified": false
+        },
+        {
+          "service_id": "SVC-foundry-product",
+          "tier": "PRODUCTION",
+          "dependencies": [
+            "SVC-compute"
+          ],
+          "minimum_service": "Central control/support only; customer operating authority retained",
+          "performance_verified": false
+        },
+        {
+          "service_id": "SVC-institutional",
+          "tier": "ALEXANDRIA",
+          "dependencies": [
+            "SVC-compute"
+          ],
+          "minimum_service": "Canon authoritative records, minimum Pinakes/Semaphore discovery and source-rights enforcement; indexes rebuildable",
+          "performance_verified": false
+        },
+        {
+          "service_id": "SVC-private-ai",
+          "tier": "ALEXANDRIA",
+          "dependencies": [
+            "SVC-institutional"
+          ],
+          "minimum_service": "10% planning accelerator throughput; core institutional records do not wait for full AI restoration",
+          "performance_verified": false
+        },
+        {
+          "service_id": "SVC-developer",
+          "tier": "DEVELOPMENT",
+          "dependencies": [
+            "SVC-compute"
+          ],
+          "minimum_service": "Rebuildable development; signed release artifacts protected with production prerequisites",
+          "performance_verified": false
+        }
+      ],
+      "enterprise_vendor_direction": {
+        "authority": "docs/controls/CCF_ENTERPRISE_SECURITY_VENDOR_DECISIONS_2026-09-11.md",
+        "authority_commit": "786fc9a5311a04dde92ee6dbb08ac3b77a380200",
+        "implementation_state": "DESIGN_PROCUREMENT_PENDING",
+        "contracts_executed": false,
+        "deployed": false,
+        "cost_treatment": "Existing gross software/support/security allowances are placeholders, not a quote or proof all selected products are funded; do not duplicate payroll or claim displaced-cost credits",
+        "bindings": [
+          {
+            "domain": "IAM",
+            "product": "Okta",
+            "service_id": "SVC-identity",
+            "authority_boundary": "Authentication is not information entitlement"
+          },
+          {
+            "domain": "IGA",
+            "product": "IBM Security Verify",
+            "service_id": "SVC-identity",
+            "authority_boundary": "Certifies approved rights; does not create Alexandria authority"
+          },
+          {
+            "domain": "HR",
+            "product": "SAP SuccessFactors",
+            "service_id": "SVC-hr-payroll",
+            "authority_boundary": "Lifecycle authority does not grant restricted rights"
+          },
+          {
+            "domain": "UEM",
+            "product": "IBM MaaS360",
+            "service_id": "SVC-endpoint",
+            "authority_boundary": "Device posture is an access condition, not entitlement"
+          },
+          {
+            "domain": "EDR_EPP",
+            "product": "Palo Alto Networks Cortex XDR",
+            "service_id": "SVC-edr",
+            "authority_boundary": "One integrated endpoint stack; scoped endpoint telemetry only"
+          },
+          {
+            "domain": "NGFW",
+            "product": "Palo Alto Networks",
+            "service_id": "SVC-connectivity",
+            "authority_boundary": "Qualified appliance classes and authorized rule changes"
+          },
+          {
+            "domain": "ZTNA_SASE",
+            "product": "Palo Alto Networks Prisma Access",
+            "service_id": "SVC-connectivity",
+            "authority_boundary": "Identity/device/purpose checks before remote access"
+          },
+          {
+            "domain": "SIEM",
+            "product": "Palo Alto Networks Cortex security-operations ecosystem; exact product mapping pending",
+            "service_id": "SVC-siem",
+            "authority_boundary": "Purpose-limited telemetry; no unrestricted protected payload collection"
+          },
+          {
+            "domain": "DLP",
+            "product": "Palo Alto Networks Enterprise DLP",
+            "service_id": "SVC-siem",
+            "authority_boundary": "Enforces owner/source restrictions; does not decide disclosure authority"
+          },
+          {
+            "domain": "CNAPP",
+            "product": "Palo Alto Networks Prisma Cloud",
+            "service_id": "SVC-compute",
+            "authority_boundary": "Only qualified workload modules; no implied deployed protection"
+          }
+        ]
+      }
+    }
+  }
+}

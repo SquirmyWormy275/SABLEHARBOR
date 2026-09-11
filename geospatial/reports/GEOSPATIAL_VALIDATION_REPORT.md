@@ -2,7 +2,7 @@
 
 Framework validation: **PASS**. Initial program: **INCOMPLETE**.
 
-175 named-object records; 68 source records; 12401 features in 59 spatial layers; 11 map sheets.
+178 named-object records; 69 source records; 12402 features in 60 spatial layers; 11 map sheets.
 
 Checks: SQLite integrity and foreign keys; GeoPackage header, rowid keys and CRS; independent GDAL/Fiona geometry readback; all feature sources; source and map checksums; object/entity/decision links; dates; forbidden precision and ownership promotion; portable QGIS source paths.
 

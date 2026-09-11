@@ -1,7 +1,7 @@
 name: Geospatial canon and geometry
 on:
   pull_request:
-    paths: ['geospatial/**', 'industrial/source/**', 'industrial/tools/build_operations.py', '.github/workflows/geospatial-ci.yml']
+    paths: ['geospatial/**', 'enterprise/runtime/**', 'enterprise/services/source/runtime_*', 'industrial/source/**', 'industrial/tools/build_operations.py', '.github/workflows/geospatial-ci.yml']
   push:
     branches: [main]
     paths: ['geospatial/**', 'industrial/source/**']
@@ -22,6 +22,7 @@ jobs:
       - run: ruff check geospatial --config geospatial/pyproject.toml --force-exclude
       - run: ruff format geospatial --config geospatial/pyproject.toml --force-exclude --check
       - run: python geospatial/scripts/sync_industrial.py
+      - run: python geospatial/scripts/sync_runtime.py
       - run: python geospatial/scripts/build_geopackage.py --output /tmp/geo-rebuild.gpkg --database-only
       - run: python geospatial/scripts/validate_geospatial.py
       - run: python -m pytest geospatial/tests -q

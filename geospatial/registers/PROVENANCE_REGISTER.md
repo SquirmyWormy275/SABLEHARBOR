@@ -36,6 +36,7 @@
 | SRC-CURRENT-IND-CANON | INDUSTRIAL_CLOSEOUT_2026-09-05 | docs/canon/INDUSTRIAL_CLOSEOUT_2026-09-05.md | All rights reserved; user-authorized Sable Harbor project material |
 | SRC-CURRENT-IND-GEO | GEOGRAPHY_AND_ENGINEERING | industrial/operations/GEOGRAPHY_AND_ENGINEERING.md | All rights reserved; user-authorized Sable Harbor project material |
 | SRC-CURRENT-CURRENT-LORE | SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1 | docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md | All rights reserved; user-authorized Sable Harbor project material |
+| SRC-RUNTIME-20260911 | Runtime estate September 2026 | enterprise/services/source/runtime_sites_2026-09-11.json | Owner-authorized synthetic project material |
 | REF-US-STATES | us_states | https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/State_County/MapServer/0/query | U.S. federal government geographic data; public domain |
 | REF-WYOMING-COUNTIES | wyoming_counties | https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/State_County/MapServer/1/query | U.S. federal government geographic data; public domain |
 | REF-CONTEXT-PLACES | context_places | https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Current/MapServer/28/query | U.S. federal government geographic data; public domain |

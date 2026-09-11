@@ -208,3 +208,7 @@ The v0.3 lore, base decision register, original lineage and other finance-pinned
 - [Generated-records lifecycle](governance/GENERATED_RECORDS_LIFECYCLE.md)
 
 The current publication manifest includes the headquarters/ESS/People/IT/authority/SHMS/J2-establishment sources and the four 2021–2026 board approval records. The exact approved Sacramento HQ image remains an independently tracked asset-ingestion gap (#88); publication of its doctrine does not supply the missing binary.
+
+## Runtime estate design — PR119 pending acceptance
+
+[Runtime implementation index](../enterprise/runtime/README.md) links the source model, calculated results, contracts, architecture and assurance scope. Thirteen runtime controlled PDFs and the distinct seven-sheet successor workbook are indexed with the [runtime release record](releases/RUNTIME_ESTATE_RELEASES.md). The explicit controlled-publication mappings generate `enterprise/runtime/publications/SH-RT-*_v1.0.0.pdf`. These are synthetic design publications; no provider execution or operational acceptance is asserted.

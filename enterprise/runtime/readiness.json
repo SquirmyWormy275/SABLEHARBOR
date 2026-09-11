@@ -1,0 +1,300 @@
+{
+  "version": "1.0.0",
+  "as_of": "2026-09-11",
+  "sources": [
+    {
+      "id": "RT-SRC-SWITCH",
+      "publisher": "Switch",
+      "title": "Tahoe Reno campus",
+      "url": "https://www.switch.com/tahoe-reno/",
+      "retrieved_on": "2026-09-11",
+      "published_on": null,
+      "facility_scope": "Tahoe Reno",
+      "claim": "Provider and campus identity",
+      "field_references": [
+        "sites.RUNTIME-RENO-COLO.provider",
+        "sites.RUNTIME-RENO-COLO.facility"
+      ],
+      "evidence_class": "PUBLIC_REFERENCE_NOT_ACCEPTED_EVIDENCE",
+      "conflicts": [],
+      "limitations": "No assigned tenancy, contractual acceptance, licensed full-text interpretation or operational assurance established.",
+      "refresh_owner": "Procurement"
+    },
+    {
+      "id": "RT-SRC-ID-BOISE",
+      "publisher": "IDACORE",
+      "title": "Boise facility",
+      "url": "https://idacore.com/boise",
+      "retrieved_on": "2026-09-11",
+      "published_on": null,
+      "facility_scope": "Boise",
+      "claim": "Published address 2653 S Victory View Way, Boise ID 83709; assurance labels are marketing claims",
+      "field_references": [
+        "sites.RUNTIME-BOISE-DR.street_address"
+      ],
+      "evidence_class": "PUBLIC_REFERENCE_NOT_ACCEPTED_EVIDENCE",
+      "conflicts": [
+        "Legacy assurance wording is not a current report or certification"
+      ],
+      "limitations": "No assigned tenancy, contractual acceptance, licensed full-text interpretation or operational assurance established.",
+      "refresh_owner": "Security assurance"
+    },
+    {
+      "id": "RT-SRC-ID-PRICE",
+      "publisher": "IDACORE",
+      "title": "Colocation pricing",
+      "url": "https://idacore.com/pricing",
+      "retrieved_on": "2026-09-11",
+      "published_on": null,
+      "facility_scope": "Boise applicability requires order confirmation",
+      "claim": "Public $300/kW/month actual-draw price includes power; transport and other services require scope confirmation",
+      "field_references": [
+        "sites.RUNTIME-BOISE-DR.published_planning_price_usd_per_kw_month",
+        "sites.RUNTIME-BOISE-DR.published_power_included",
+        "sites.RUNTIME-BOISE-DR.published_standard_term_months"
+      ],
+      "evidence_class": "PUBLIC_REFERENCE_NOT_ACCEPTED_EVIDENCE",
+      "conflicts": [
+        "No-minimum marketing and standard 12-month FAQ term must be reconciled in the order"
+      ],
+      "limitations": "No assigned tenancy, contractual acceptance, licensed full-text interpretation or operational assurance established.",
+      "refresh_owner": "Procurement"
+    },
+    {
+      "id": "RT-SRC-AICPA-1",
+      "publisher": "AICPA & CIMA",
+      "title": "SOC 1 topic",
+      "url": "https://www.aicpa-cima.com/topic/audit-assurance/audit-and-assurance-greater-than-soc-1",
+      "retrieved_on": "2026-09-11",
+      "published_on": null,
+      "facility_scope": "Professional authority identity",
+      "claim": "SOC 1 addresses service organization controls relevant to user entities ICFR",
+      "field_references": [
+        "assurance.SOC1"
+      ],
+      "evidence_class": "PUBLIC_REFERENCE_NOT_ACCEPTED_EVIDENCE",
+      "conflicts": [],
+      "limitations": "No assigned tenancy, contractual acceptance, licensed full-text interpretation or operational assurance established.",
+      "refresh_owner": "Assurance liaison"
+    },
+    {
+      "id": "RT-SRC-AICPA-TSC",
+      "publisher": "AICPA & CIMA",
+      "title": "2017 Trust Services Criteria, revised points of focus 2022",
+      "url": "https://www.aicpa-cima.com/resources/download/2017-trust-services-criteria-with-revised-points-of-focus-2022",
+      "retrieved_on": "2026-09-11",
+      "published_on": null,
+      "facility_scope": "Criteria identity",
+      "claim": "Public identity only; full text access remains a scoping dependency",
+      "field_references": [
+        "assurance.SOC2"
+      ],
+      "evidence_class": "PUBLIC_REFERENCE_NOT_ACCEPTED_EVIDENCE",
+      "conflicts": [
+        "No paragraph-level claim validated from gated text"
+      ],
+      "limitations": "No assigned tenancy, contractual acceptance, licensed full-text interpretation or operational assurance established.",
+      "refresh_owner": "Assurance liaison"
+    },
+    {
+      "id": "RT-SRC-PG",
+      "publisher": "PostgreSQL Global Development Group",
+      "title": "Versioning policy",
+      "url": "https://www.postgresql.org/support/versioning/",
+      "retrieved_on": "2026-09-11",
+      "published_on": null,
+      "facility_scope": "Database support policy",
+      "claim": "PostgreSQL 17.11 selected; major 17 support through November 8 2029; maintenance versions require refresh before deployment",
+      "field_references": [
+        "technical_design.platform.DATABASE"
+      ],
+      "evidence_class": "PUBLIC_REFERENCE_NOT_ACCEPTED_EVIDENCE",
+      "conflicts": [],
+      "limitations": "No assigned tenancy, contractual acceptance, licensed full-text interpretation or operational assurance established.",
+      "refresh_owner": "Platform"
+    },
+    {
+      "id": "RT-SRC-UBUNTU",
+      "publisher": "Canonical",
+      "title": "Ubuntu security maintenance",
+      "url": "https://ubuntu.com/security/esm",
+      "retrieved_on": "2026-09-11",
+      "published_on": null,
+      "facility_scope": "Runtime design reference; no deployment qualification",
+      "claim": "Ubuntu 24.04 LTS standard security maintenance through May 2029; package coverage must be checked",
+      "field_references": [
+        "technical_design.platform.HOST"
+      ],
+      "evidence_class": "PUBLIC_REFERENCE_NOT_ACCEPTED_EVIDENCE",
+      "conflicts": [],
+      "limitations": "Public specifications do not establish interoperability, procurement acceptance or operating effectiveness. Revalidate supported releases and site-specific limits before deployment.",
+      "refresh_owner": "Platform"
+    },
+    {
+      "id": "RT-SRC-CEPH",
+      "publisher": "Ceph project",
+      "title": "Ceph releases",
+      "url": "https://docs.ceph.com/en/latest/releases/",
+      "retrieved_on": "2026-09-11",
+      "published_on": null,
+      "facility_scope": "Runtime design reference; no deployment qualification",
+      "claim": "Tentacle 20.2.4 released August 19 2026; estimated support end June 1 2027",
+      "field_references": [
+        "technical_design.platform.OBJECT"
+      ],
+      "evidence_class": "PUBLIC_REFERENCE_NOT_ACCEPTED_EVIDENCE",
+      "conflicts": [],
+      "limitations": "Public specifications do not establish interoperability, procurement acceptance or operating effectiveness. Revalidate supported releases and site-specific limits before deployment.",
+      "refresh_owner": "Platform"
+    },
+    {
+      "id": "RT-SRC-NVIDIA",
+      "publisher": "NVIDIA",
+      "title": "DGX SuperPOD H100 data center planning",
+      "url": "https://docs.nvidia.com/dgx-superpod/design-guides/dgx-superpod-data-center-design-h100/latest/planning.html",
+      "retrieved_on": "2026-09-11",
+      "published_on": "2025-11-19",
+      "facility_scope": "Runtime design reference; no deployment qualification",
+      "claim": "DGX H100 reference maximum 10.2 kW, 8U, 130.45 kg, air cooling; not an 8 kW qualified configuration",
+      "field_references": [
+        "technical_design.hardware_reference"
+      ],
+      "evidence_class": "PUBLIC_REFERENCE_NOT_ACCEPTED_EVIDENCE",
+      "conflicts": [],
+      "limitations": "Public specifications do not establish interoperability, procurement acceptance or operating effectiveness. Revalidate supported releases and site-specific limits before deployment.",
+      "refresh_owner": "Platform"
+    }
+  ],
+  "gates": [
+    {
+      "id": "RT-GATE-LEGAL-PARTY",
+      "owner": "Legal and Procurement",
+      "scope": "Both providers",
+      "state": "BLOCKED_EVIDENCE_NOT_OBTAINED",
+      "required_evidence": "Verified contracting entity and signatory authority; approved deviations and executed order",
+      "evidence_refs": [],
+      "operating_effectiveness": "NOT_ASSERTED",
+      "next_review": "BEFORE_AFFECTED_ACCEPTANCE"
+    },
+    {
+      "id": "RT-GATE-CAPACITY",
+      "owner": "Procurement and Technology",
+      "scope": "Both providers",
+      "state": "BLOCKED_EVIDENCE_NOT_OBTAINED",
+      "required_evidence": "Assigned cabinet/rack delivery, usable power and equipment/cooling acceptance",
+      "evidence_refs": [],
+      "operating_effectiveness": "NOT_ASSERTED",
+      "next_review": "BEFORE_AFFECTED_ACCEPTANCE"
+    },
+    {
+      "id": "RT-GATE-PRICE",
+      "owner": "Finance and Procurement",
+      "scope": "Both providers",
+      "state": "BLOCKED_EVIDENCE_NOT_OBTAINED",
+      "required_evidence": "Binding itemized rate, metering, minimum term, deposit, tax and exit schedules; lease/accounting assessment",
+      "evidence_refs": [],
+      "operating_effectiveness": "NOT_ASSERTED",
+      "next_review": "BEFORE_AFFECTED_ACCEPTANCE"
+    },
+    {
+      "id": "RT-GATE-PROVIDER-ASSURANCE",
+      "owner": "Security assurance",
+      "scope": "Both providers",
+      "state": "BLOCKED_EVIDENCE_NOT_OBTAINED",
+      "required_evidence": "Actual scoped reports, periods, exceptions, subservice treatment, CUECs, bridge changes and human assessment",
+      "evidence_refs": [],
+      "operating_effectiveness": "NOT_ASSERTED",
+      "next_review": "BEFORE_AFFECTED_ACCEPTANCE"
+    },
+    {
+      "id": "RT-GATE-DR-INDEPENDENCE",
+      "owner": "Reliability and Security",
+      "scope": "Boise plus protected copies",
+      "state": "BLOCKED_EVIDENCE_NOT_OBTAINED",
+      "required_evidence": "Route, identity, DNS, key, management and offline bootstrap verification independent of Reno",
+      "evidence_refs": [],
+      "operating_effectiveness": "NOT_ASSERTED",
+      "next_review": "BEFORE_AFFECTED_ACCEPTANCE"
+    },
+    {
+      "id": "RT-GATE-RECOVERY",
+      "owner": "Reliability and service owners",
+      "scope": "Service recovery tiers",
+      "state": "BLOCKED_EVIDENCE_NOT_OBTAINED",
+      "required_evidence": "Timed restore/failback with integrity, log cutoff, tombstones and minimum-service evidence",
+      "evidence_refs": [],
+      "operating_effectiveness": "NOT_ASSERTED",
+      "next_review": "BEFORE_AFFECTED_ACCEPTANCE"
+    },
+    {
+      "id": "RT-GATE-SETTLEMENT",
+      "owner": "Finance and Treasury",
+      "scope": "Owned land",
+      "state": "BLOCKED_EVIDENCE_NOT_OBTAINED",
+      "required_evidence": "Supported settlement and funding treatment for the $3M synthetic acquisition clearing",
+      "evidence_refs": [],
+      "operating_effectiveness": "NOT_ASSERTED",
+      "next_review": "BEFORE_AFFECTED_ACCEPTANCE"
+    },
+    {
+      "id": "RT-GATE-PHASE-FUNDING",
+      "owner": "Capital authority and Finance",
+      "scope": "Owned project",
+      "state": "BLOCKED_EVIDENCE_NOT_OBTAINED",
+      "required_evidence": "Authorized phases, finite funds, commitments and cancellation exposure before notices to proceed",
+      "evidence_refs": [],
+      "operating_effectiveness": "NOT_ASSERTED",
+      "next_review": "BEFORE_AFFECTED_ACCEPTANCE"
+    },
+    {
+      "id": "RT-GATE-SITE-ENGINEERING",
+      "owner": "Facilities",
+      "scope": "Owned site",
+      "state": "BLOCKED_EVIDENCE_NOT_OBTAINED",
+      "required_evidence": "Survey/geotech/environmental, utility will-serve, civil/fire/structural/electrical/cooling design and permits",
+      "evidence_refs": [],
+      "operating_effectiveness": "NOT_ASSERTED",
+      "next_review": "BEFORE_AFFECTED_ACCEPTANCE"
+    },
+    {
+      "id": "RT-GATE-PERSONNEL",
+      "owner": "People & Culture and Technology",
+      "scope": "Runtime workforce",
+      "state": "BLOCKED_EVIDENCE_NOT_OBTAINED",
+      "required_evidence": "Position authority, verified occupancy, qualifications, workstation allocation and qualified alternates",
+      "evidence_refs": [],
+      "operating_effectiveness": "NOT_ASSERTED",
+      "next_review": "BEFORE_AFFECTED_ACCEPTANCE"
+    },
+    {
+      "id": "RT-GATE-DEPLOYMENT",
+      "owner": "Technology and Security",
+      "scope": "Runtime software and hardware",
+      "state": "BLOCKED_EVIDENCE_NOT_OBTAINED",
+      "required_evidence": "Qualified product BOM, supported builds, signed images, benchmark/thermal and failover acceptance",
+      "evidence_refs": [],
+      "operating_effectiveness": "NOT_ASSERTED",
+      "next_review": "BEFORE_AFFECTED_ACCEPTANCE"
+    },
+    {
+      "id": "RT-GATE-COMMISSIONING",
+      "owner": "Facilities and service owners",
+      "scope": "Owned site",
+      "state": "BLOCKED_EVIDENCE_NOT_OBTAINED",
+      "required_evidence": "Accepted shell, plant installation, qualified commissioning and service acceptance events",
+      "evidence_refs": [],
+      "operating_effectiveness": "NOT_ASSERTED",
+      "next_review": "BEFORE_AFFECTED_ACCEPTANCE"
+    },
+    {
+      "id": "RT-GATE-AUDIT-SCOPE",
+      "owner": "Management and independent practitioner",
+      "scope": "SOC services",
+      "state": "BLOCKED_EVIDENCE_NOT_OBTAINED",
+      "required_evidence": "Accessible authoritative criteria, customer commitments, complete populations and independent scope/design assessment",
+      "evidence_refs": [],
+      "operating_effectiveness": "NOT_ASSERTED",
+      "next_review": "BEFORE_AFFECTED_ACCEPTANCE"
+    }
+  ]
+}

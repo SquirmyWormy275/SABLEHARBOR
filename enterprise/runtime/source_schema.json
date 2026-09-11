@@ -1,0 +1,3084 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sableharbor.invalid/schemas/runtime-source-1.0.0",
+  "title": "Explicit September 2026 runtime source scope",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "sites",
+    "capital"
+  ],
+  "properties": {
+    "sites": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "as_of",
+        "state_rule",
+        "sites",
+        "schema_version",
+        "repository_acceptance",
+        "recorded_on"
+      ],
+      "properties": {
+        "as_of": {
+          "type": "string",
+          "minLength": 1
+        },
+        "state_rule": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sites": {
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "id",
+                  "name",
+                  "geography",
+                  "status",
+                  "provider",
+                  "facility",
+                  "provider_selection_date",
+                  "contract_executed",
+                  "capacity_reserved",
+                  "initial_usable_it_kw_low",
+                  "initial_usable_it_kw_high",
+                  "required_expansion_kw",
+                  "operating",
+                  "evidence_boundary",
+                  "entity_id",
+                  "geospatial_entity_id",
+                  "facility_id",
+                  "geospatial_site_id",
+                  "planned_environment_ids",
+                  "dependency_id",
+                  "record_origin",
+                  "installed_capacity_kw",
+                  "provider_id",
+                  "contract_id",
+                  "contract_status",
+                  "provider_legal_name"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "name": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "geography": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "status": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "provider": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "facility": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "provider_selection_date": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "contract_executed": {
+                    "type": "boolean"
+                  },
+                  "capacity_reserved": {
+                    "type": "boolean"
+                  },
+                  "initial_usable_it_kw_low": {
+                    "type": "number",
+                    "minimum": 0
+                  },
+                  "initial_usable_it_kw_high": {
+                    "type": "number",
+                    "minimum": 0
+                  },
+                  "required_expansion_kw": {
+                    "type": "number",
+                    "minimum": 0
+                  },
+                  "operating": {
+                    "type": "boolean"
+                  },
+                  "evidence_boundary": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "entity_id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "geospatial_entity_id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "facility_id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "geospatial_site_id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "planned_environment_ids": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "uniqueItems": true
+                  },
+                  "dependency_id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "record_origin": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "installed_capacity_kw": {
+                    "type": "null"
+                  },
+                  "provider_id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "contract_id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "contract_status": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "provider_legal_name": {
+                    "type": "null"
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "id",
+                  "name",
+                  "geography",
+                  "status",
+                  "provider",
+                  "facility",
+                  "street_address",
+                  "provider_selection_date",
+                  "contract_executed",
+                  "capacity_reserved",
+                  "operating",
+                  "published_planning_price_usd_per_kw_month",
+                  "published_power_included",
+                  "published_standard_term_months",
+                  "evidence_boundary",
+                  "entity_id",
+                  "geospatial_entity_id",
+                  "facility_id",
+                  "geospatial_site_id",
+                  "planned_environment_ids",
+                  "dependency_id",
+                  "record_origin",
+                  "installed_capacity_kw",
+                  "provider_id",
+                  "contract_id",
+                  "contract_status",
+                  "provider_legal_name",
+                  "independence_required",
+                  "independence_verified",
+                  "independence_evidence",
+                  "initial_usable_it_kw_low",
+                  "initial_usable_it_kw_high"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "name": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "geography": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "status": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "provider": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "facility": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "street_address": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "provider_selection_date": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "contract_executed": {
+                    "type": "boolean"
+                  },
+                  "capacity_reserved": {
+                    "type": "boolean"
+                  },
+                  "operating": {
+                    "type": "boolean"
+                  },
+                  "published_planning_price_usd_per_kw_month": {
+                    "type": "number",
+                    "minimum": 0
+                  },
+                  "published_power_included": {
+                    "type": "boolean"
+                  },
+                  "published_standard_term_months": {
+                    "type": "number",
+                    "minimum": 0
+                  },
+                  "evidence_boundary": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "entity_id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "geospatial_entity_id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "facility_id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "geospatial_site_id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "planned_environment_ids": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "uniqueItems": true
+                  },
+                  "dependency_id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "record_origin": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "installed_capacity_kw": {
+                    "type": "null"
+                  },
+                  "provider_id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "contract_id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "contract_status": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "provider_legal_name": {
+                    "type": "null"
+                  },
+                  "independence_required": {
+                    "type": "boolean"
+                  },
+                  "independence_verified": {
+                    "type": "boolean"
+                  },
+                  "independence_evidence": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "uniqueItems": true
+                  },
+                  "initial_usable_it_kw_low": {
+                    "type": "number",
+                    "minimum": 0
+                  },
+                  "initial_usable_it_kw_high": {
+                    "type": "number",
+                    "minimum": 0
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "id",
+                  "name",
+                  "geography",
+                  "planning_lon_lat",
+                  "fictionality",
+                  "parcel_acres_planning",
+                  "real_apn",
+                  "planning_purchase_date",
+                  "planning_consideration_usd",
+                  "status",
+                  "vertical_construction_percent",
+                  "commissioned_it_kw",
+                  "commissioned_critical_kw",
+                  "planned_shell_sqft_low",
+                  "planned_shell_sqft_high",
+                  "planned_initial_critical_kw_low",
+                  "planned_initial_critical_kw_high",
+                  "planned_utility_path_kw",
+                  "preserve_expansion_path_kw",
+                  "operating",
+                  "entity_id",
+                  "geospatial_entity_id",
+                  "facility_id",
+                  "geospatial_site_id",
+                  "planned_environment_ids",
+                  "dependency_id",
+                  "record_origin",
+                  "installed_capacity_kw"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "name": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "geography": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "planning_lon_lat": {
+                    "type": "array",
+                    "prefixItems": [
+                      {
+                        "type": "number",
+                        "minimum": -180,
+                        "maximum": 180
+                      },
+                      {
+                        "type": "number",
+                        "minimum": -90,
+                        "maximum": 90
+                      }
+                    ],
+                    "minItems": 2,
+                    "maxItems": 2
+                  },
+                  "fictionality": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "parcel_acres_planning": {
+                    "type": "number",
+                    "minimum": 0
+                  },
+                  "real_apn": {
+                    "type": "null"
+                  },
+                  "planning_purchase_date": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "planning_consideration_usd": {
+                    "type": "number",
+                    "minimum": 0
+                  },
+                  "status": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "vertical_construction_percent": {
+                    "type": "number",
+                    "minimum": 0
+                  },
+                  "commissioned_it_kw": {
+                    "type": "number",
+                    "minimum": 0
+                  },
+                  "commissioned_critical_kw": {
+                    "type": "number",
+                    "minimum": 0
+                  },
+                  "planned_shell_sqft_low": {
+                    "type": "number",
+                    "minimum": 0
+                  },
+                  "planned_shell_sqft_high": {
+                    "type": "number",
+                    "minimum": 0
+                  },
+                  "planned_initial_critical_kw_low": {
+                    "type": "number",
+                    "minimum": 0
+                  },
+                  "planned_initial_critical_kw_high": {
+                    "type": "number",
+                    "minimum": 0
+                  },
+                  "planned_utility_path_kw": {
+                    "type": "number",
+                    "minimum": 0
+                  },
+                  "preserve_expansion_path_kw": {
+                    "type": "number",
+                    "minimum": 0
+                  },
+                  "operating": {
+                    "type": "boolean"
+                  },
+                  "entity_id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "geospatial_entity_id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "facility_id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "geospatial_site_id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "planned_environment_ids": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "uniqueItems": true
+                  },
+                  "dependency_id": {
+                    "type": "null"
+                  },
+                  "record_origin": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "installed_capacity_kw": {
+                    "type": "null"
+                  }
+                }
+              }
+            ]
+          },
+          "uniqueItems": true
+        },
+        "schema_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "repository_acceptance": {
+          "type": "string",
+          "minLength": 1
+        },
+        "recorded_on": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "capital": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "as_of",
+        "state",
+        "owned_site",
+        "central_it_design_kw",
+        "construction_truth",
+        "accounting_rules",
+        "schema_version",
+        "recorded_on",
+        "reference_cases_state",
+        "implementation_assumptions"
+      ],
+      "properties": {
+        "as_of": {
+          "type": "string",
+          "minLength": 1
+        },
+        "state": {
+          "type": "string",
+          "minLength": 1
+        },
+        "owned_site": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "land_usd",
+            "site_civil_security_usd",
+            "shell_support_building_usd",
+            "utility_fiber_backbone_usd",
+            "initial_critical_plant_usd",
+            "engineering_permitting_contingency_usd",
+            "phase_1_total_usd",
+            "range_total_usd_low",
+            "range_total_usd_high",
+            "production_it_hardware_included"
+          ],
+          "properties": {
+            "land_usd": {
+              "type": "number",
+              "minimum": 0
+            },
+            "site_civil_security_usd": {
+              "type": "number",
+              "minimum": 0
+            },
+            "shell_support_building_usd": {
+              "type": "number",
+              "minimum": 0
+            },
+            "utility_fiber_backbone_usd": {
+              "type": "number",
+              "minimum": 0
+            },
+            "initial_critical_plant_usd": {
+              "type": "number",
+              "minimum": 0
+            },
+            "engineering_permitting_contingency_usd": {
+              "type": "number",
+              "minimum": 0
+            },
+            "phase_1_total_usd": {
+              "type": "number",
+              "minimum": 0
+            },
+            "range_total_usd_low": {
+              "type": "number",
+              "minimum": 0
+            },
+            "range_total_usd_high": {
+              "type": "number",
+              "minimum": 0
+            },
+            "production_it_hardware_included": {
+              "type": "boolean"
+            }
+          }
+        },
+        "central_it_design_kw": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "2027",
+            "2031",
+            "2036"
+          ],
+          "properties": {
+            "2027": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "efficiency_edge",
+                "base",
+                "high_centralized"
+              ],
+              "properties": {
+                "efficiency_edge": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "base": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "high_centralized": {
+                  "type": "number",
+                  "minimum": 0
+                }
+              }
+            },
+            "2031": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "efficiency_edge",
+                "base",
+                "high_centralized"
+              ],
+              "properties": {
+                "efficiency_edge": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "base": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "high_centralized": {
+                  "type": "number",
+                  "minimum": 0
+                }
+              }
+            },
+            "2036": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "efficiency_edge",
+                "base",
+                "high_centralized"
+              ],
+              "properties": {
+                "efficiency_edge": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "base": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "high_centralized": {
+                  "type": "number",
+                  "minimum": 0
+                }
+              }
+            }
+          }
+        },
+        "construction_truth": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "land_acquired",
+            "vertical_construction_started",
+            "shell_complete",
+            "critical_plant_ordered",
+            "critical_plant_commissioned",
+            "production_operating"
+          ],
+          "properties": {
+            "land_acquired": {
+              "type": "boolean"
+            },
+            "vertical_construction_started": {
+              "type": "boolean"
+            },
+            "shell_complete": {
+              "type": "boolean"
+            },
+            "critical_plant_ordered": {
+              "type": "boolean"
+            },
+            "critical_plant_commissioned": {
+              "type": "boolean"
+            },
+            "production_operating": {
+              "type": "boolean"
+            }
+          }
+        },
+        "accounting_rules": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "schema_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "recorded_on": {
+          "type": "string",
+          "minLength": 1
+        },
+        "reference_cases_state": {
+          "type": "string",
+          "minLength": 1
+        },
+        "implementation_assumptions": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "origin",
+            "drivers",
+            "hardware",
+            "scenarios",
+            "commercial",
+            "recovery",
+            "workforce",
+            "phases",
+            "control_implementations",
+            "rooms",
+            "technical_design"
+          ],
+          "properties": {
+            "origin": {
+              "type": "string",
+              "minLength": 1
+            },
+            "drivers": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "internal_users",
+                "atlas_clients",
+                "atlas_hosted_share",
+                "atlas_users_per_client",
+                "foundry_clients",
+                "foundry_central_share",
+                "foundry_users_per_client",
+                "active_share",
+                "requests_per_active_second",
+                "cpu_seconds_per_request",
+                "memory_gib_per_active",
+                "fixed_cpu_cores",
+                "fixed_memory_gib",
+                "tasks_per_user_day",
+                "tokens_per_task",
+                "peak_factor",
+                "service_window_hours",
+                "durable_tib",
+                "daily_change_fraction",
+                "retention_years",
+                "annual_storage_growth",
+                "model_parameters_billion",
+                "weight_bits",
+                "context_tokens",
+                "kv_gib_per_session",
+                "concurrent_ai_share",
+                "kv_reference_context_tokens",
+                "baseline_retention_years",
+                "ingest_gib_per_day",
+                "read_iops_per_active",
+                "write_iops_per_active",
+                "index_copy_fraction"
+              ],
+              "properties": {
+                "internal_users": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "atlas_clients": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "atlas_hosted_share": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "atlas_users_per_client": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "foundry_clients": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "foundry_central_share": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "foundry_users_per_client": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "active_share": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "requests_per_active_second": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "cpu_seconds_per_request": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "memory_gib_per_active": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "fixed_cpu_cores": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "fixed_memory_gib": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "tasks_per_user_day": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "tokens_per_task": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "peak_factor": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "service_window_hours": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "durable_tib": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "daily_change_fraction": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "retention_years": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "annual_storage_growth": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "model_parameters_billion": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "weight_bits": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "context_tokens": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "kv_gib_per_session": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "concurrent_ai_share": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "kv_reference_context_tokens": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "baseline_retention_years": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "ingest_gib_per_day": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "read_iops_per_active": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "write_iops_per_active": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "index_copy_fraction": {
+                  "type": "number",
+                  "minimum": 0
+                }
+              }
+            },
+            "hardware": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "cpu_cores",
+                "cpu_memory_gib",
+                "cpu_peak_kw",
+                "cpu_typical_kw",
+                "cpu_u",
+                "cpu_price",
+                "gpu_count",
+                "gpu_memory_gib",
+                "gpu_system_peak_kw",
+                "gpu_system_typical_kw",
+                "gpu_system_u",
+                "gpu_system_price",
+                "assumed_tokens_per_second",
+                "storage_usable_tib",
+                "storage_peak_kw",
+                "storage_typical_kw",
+                "storage_u",
+                "storage_price",
+                "network_hsm_peak_kw",
+                "network_hsm_typical_kw",
+                "network_hsm_u",
+                "network_hsm_price",
+                "rack_usable_u",
+                "rack_max_kw",
+                "utilization_ceiling",
+                "throughput_state",
+                "rack_max_weight_kg",
+                "cpu_weight_kg",
+                "gpu_system_weight_kg",
+                "storage_weight_kg",
+                "network_hsm_weight_kg",
+                "storage_iops_per_shelf",
+                "storage_ingest_gib_per_second",
+                "assumed_tokens_per_second_low",
+                "assumed_tokens_per_second_high"
+              ],
+              "properties": {
+                "cpu_cores": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "cpu_memory_gib": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "cpu_peak_kw": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "cpu_typical_kw": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "cpu_u": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "cpu_price": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "gpu_count": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "gpu_memory_gib": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "gpu_system_peak_kw": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "gpu_system_typical_kw": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "gpu_system_u": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "gpu_system_price": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "assumed_tokens_per_second": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "storage_usable_tib": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "storage_peak_kw": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "storage_typical_kw": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "storage_u": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "storage_price": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "network_hsm_peak_kw": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "network_hsm_typical_kw": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "network_hsm_u": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "network_hsm_price": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "rack_usable_u": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "rack_max_kw": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "utilization_ceiling": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "throughput_state": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "rack_max_weight_kg": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "cpu_weight_kg": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "gpu_system_weight_kg": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "storage_weight_kg": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "network_hsm_weight_kg": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "storage_iops_per_shelf": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "storage_ingest_gib_per_second": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "assumed_tokens_per_second_low": {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                },
+                "assumed_tokens_per_second_high": {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                }
+              }
+            },
+            "scenarios": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "base",
+                "slower_adoption",
+                "high_demand",
+                "delayed_build"
+              ],
+              "properties": {
+                "base": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "annual_user_growth",
+                    "demand_factor",
+                    "efficiency_gain",
+                    "construction_delay_months"
+                  ],
+                  "properties": {
+                    "annual_user_growth": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "demand_factor": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "efficiency_gain": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "construction_delay_months": {
+                      "type": "number",
+                      "minimum": 0
+                    }
+                  }
+                },
+                "slower_adoption": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "annual_user_growth",
+                    "demand_factor",
+                    "efficiency_gain",
+                    "construction_delay_months"
+                  ],
+                  "properties": {
+                    "annual_user_growth": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "demand_factor": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "efficiency_gain": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "construction_delay_months": {
+                      "type": "number",
+                      "minimum": 0
+                    }
+                  }
+                },
+                "high_demand": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "annual_user_growth",
+                    "demand_factor",
+                    "efficiency_gain",
+                    "construction_delay_months"
+                  ],
+                  "properties": {
+                    "annual_user_growth": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "demand_factor": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "efficiency_gain": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "construction_delay_months": {
+                      "type": "number",
+                      "minimum": 0
+                    }
+                  }
+                },
+                "delayed_build": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "annual_user_growth",
+                    "demand_factor",
+                    "efficiency_gain",
+                    "construction_delay_months"
+                  ],
+                  "properties": {
+                    "annual_user_growth": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "demand_factor": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "efficiency_gain": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "construction_delay_months": {
+                      "type": "number",
+                      "minimum": 0
+                    }
+                  }
+                }
+              }
+            },
+            "commercial": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "reno_rate_per_kw_month",
+                "reno_billing",
+                "reno_power_included",
+                "boise_billing",
+                "connectivity_per_site_month",
+                "remote_hands_per_site_month",
+                "software_support_year",
+                "backup_per_tib_month",
+                "offline_per_tib_year",
+                "annual_escalation",
+                "owned_electricity_per_kwh",
+                "owned_pue",
+                "owned_maintenance_year",
+                "discount_rate",
+                "terminal_sale_year",
+                "terminal_sale_value",
+                "incentives",
+                "evidenced_displacement",
+                "hardware_refresh_years",
+                "migration_overlap_months",
+                "migration_cost",
+                "decommission_cost"
+              ],
+              "properties": {
+                "reno_rate_per_kw_month": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "reno_billing": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "reno_power_included": {
+                  "type": "boolean"
+                },
+                "boise_billing": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "connectivity_per_site_month": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "remote_hands_per_site_month": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "software_support_year": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "backup_per_tib_month": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "offline_per_tib_year": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "annual_escalation": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "owned_electricity_per_kwh": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "owned_pue": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "owned_maintenance_year": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "discount_rate": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "terminal_sale_year": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "terminal_sale_value": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "incentives": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "evidenced_displacement": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "hardware_refresh_years": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "migration_overlap_months": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "migration_cost": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "decommission_cost": {
+                  "type": "number",
+                  "minimum": 0
+                }
+              }
+            },
+            "recovery": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "cpu_share",
+                "ai_share",
+                "storage_share",
+                "replication_gbps",
+                "protocol_overhead_fraction",
+                "compression_ratio",
+                "catchup_hours",
+                "prepositioned_data_required",
+                "performance_verified",
+                "tiers",
+                "transport_outage_hours"
+              ],
+              "properties": {
+                "cpu_share": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "ai_share": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "storage_share": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "replication_gbps": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "protocol_overhead_fraction": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "compression_ratio": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "catchup_hours": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "prepositioned_data_required": {
+                  "type": "boolean"
+                },
+                "performance_verified": {
+                  "type": "boolean"
+                },
+                "tiers": {
+                  "type": "array",
+                  "items": {
+                    "anyOf": [
+                      {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "id",
+                          "rto_hours",
+                          "rpo_hours",
+                          "prerequisites"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "rto_hours": {
+                            "type": "number",
+                            "minimum": 0
+                          },
+                          "rpo_hours": {
+                            "type": "number",
+                            "minimum": 0
+                          },
+                          "prerequisites": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            },
+                            "uniqueItems": true
+                          }
+                        }
+                      },
+                      {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "id",
+                          "rto_hours",
+                          "rpo_hours",
+                          "prerequisites"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "rto_hours": {
+                            "type": "number",
+                            "minimum": 0
+                          },
+                          "rpo_hours": {
+                            "type": "number",
+                            "minimum": 0
+                          },
+                          "prerequisites": {
+                            "type": "array",
+                            "items": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "uniqueItems": true
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "uniqueItems": true
+                },
+                "transport_outage_hours": {
+                  "type": "number",
+                  "minimum": 0
+                }
+              }
+            },
+            "workforce": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "hours_per_week",
+                "weeks_per_year",
+                "productive_fraction",
+                "verified_reusable_fte",
+                "authorized_new_positions",
+                "occupied_new_positions",
+                "roles"
+              ],
+              "properties": {
+                "hours_per_week": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "weeks_per_year": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "productive_fraction": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "verified_reusable_fte": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "authorized_new_positions": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "occupied_new_positions": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "roles": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "id",
+                      "owner",
+                      "required_fte",
+                      "annual_loaded_cost",
+                      "allocated_fraction",
+                      "location",
+                      "qualification",
+                      "coverage"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "owner": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "required_fte": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "annual_loaded_cost": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "allocated_fraction": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "location": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "qualification": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "coverage": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    }
+                  },
+                  "uniqueItems": true
+                }
+              }
+            },
+            "phases": {
+              "type": "array",
+              "items": {
+                "anyOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "id",
+                      "start",
+                      "end",
+                      "cost",
+                      "bucket",
+                      "dependencies",
+                      "authorization_state",
+                      "actual_completion",
+                      "recorded_on",
+                      "evidence_origin",
+                      "committed",
+                      "invoiced",
+                      "paid"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "start": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "end": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "cost": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "bucket": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "dependencies": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "uniqueItems": true
+                      },
+                      "authorization_state": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "actual_completion": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "recorded_on": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "evidence_origin": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "committed": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "invoiced": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "paid": {
+                        "type": "number",
+                        "minimum": 0
+                      }
+                    }
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "id",
+                      "start",
+                      "end",
+                      "cost",
+                      "bucket",
+                      "dependencies",
+                      "authorization_state",
+                      "actual_completion",
+                      "recorded_on",
+                      "evidence_origin",
+                      "committed",
+                      "invoiced",
+                      "paid"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "start": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "end": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "cost": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "bucket": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "dependencies": {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "uniqueItems": true
+                      },
+                      "authorization_state": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "actual_completion": {
+                        "type": "null"
+                      },
+                      "recorded_on": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "evidence_origin": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "committed": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "invoiced": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "paid": {
+                        "type": "number",
+                        "minimum": 0
+                      }
+                    }
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "id",
+                      "start",
+                      "end",
+                      "cost",
+                      "bucket",
+                      "dependencies",
+                      "authorization_state",
+                      "actual_completion",
+                      "recorded_on",
+                      "evidence_origin",
+                      "committed",
+                      "invoiced",
+                      "paid"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "start": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "end": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "cost": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "bucket": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "dependencies": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "uniqueItems": true
+                      },
+                      "authorization_state": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "actual_completion": {
+                        "type": "null"
+                      },
+                      "recorded_on": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "evidence_origin": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "committed": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "invoiced": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "paid": {
+                        "type": "number",
+                        "minimum": 0
+                      }
+                    }
+                  }
+                ]
+              },
+              "uniqueItems": true
+            },
+            "control_implementations": {
+              "type": "array",
+              "items": {
+                "anyOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "implementation_id",
+                      "control_id",
+                      "objective_id",
+                      "risk_ids",
+                      "unit_or_boundary",
+                      "legal_entity",
+                      "process",
+                      "system_or_location",
+                      "implementation_owner_role",
+                      "performer_role",
+                      "challenge_role",
+                      "procedure_reference",
+                      "implementation_description",
+                      "inheritance_source",
+                      "control_definition_status",
+                      "implementation_state",
+                      "design_assessment",
+                      "operating_assessment",
+                      "evidence_origin",
+                      "effective_date",
+                      "evidence_sources",
+                      "population_definition",
+                      "configuration_dependencies",
+                      "known_limitations",
+                      "last_owner_review",
+                      "next_review_due",
+                      "frequency_or_trigger",
+                      "nature",
+                      "exception_ids",
+                      "remediation_ids"
+                    ],
+                    "properties": {
+                      "implementation_id": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "control_id": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "objective_id": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "risk_ids": {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "uniqueItems": true
+                      },
+                      "unit_or_boundary": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "legal_entity": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "process": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "system_or_location": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "implementation_owner_role": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "performer_role": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "challenge_role": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "procedure_reference": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "implementation_description": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "inheritance_source": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "control_definition_status": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "implementation_state": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "design_assessment": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "operating_assessment": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "evidence_origin": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "effective_date": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "evidence_sources": {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "uniqueItems": true
+                      },
+                      "population_definition": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "configuration_dependencies": {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "uniqueItems": true
+                      },
+                      "known_limitations": {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "uniqueItems": true
+                      },
+                      "last_owner_review": {
+                        "type": "null"
+                      },
+                      "next_review_due": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "frequency_or_trigger": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "nature": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "exception_ids": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "uniqueItems": true
+                      },
+                      "remediation_ids": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "uniqueItems": true
+                      }
+                    }
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "implementation_id",
+                      "control_id",
+                      "objective_id",
+                      "risk_ids",
+                      "unit_or_boundary",
+                      "legal_entity",
+                      "process",
+                      "system_or_location",
+                      "implementation_owner_role",
+                      "performer_role",
+                      "challenge_role",
+                      "procedure_reference",
+                      "implementation_description",
+                      "inheritance_source",
+                      "control_definition_status",
+                      "implementation_state",
+                      "design_assessment",
+                      "operating_assessment",
+                      "evidence_origin",
+                      "effective_date",
+                      "evidence_sources",
+                      "population_definition",
+                      "configuration_dependencies",
+                      "known_limitations",
+                      "last_owner_review",
+                      "next_review_due",
+                      "frequency_or_trigger",
+                      "nature",
+                      "exception_ids",
+                      "remediation_ids"
+                    ],
+                    "properties": {
+                      "implementation_id": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "control_id": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "objective_id": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "risk_ids": {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "uniqueItems": true
+                      },
+                      "unit_or_boundary": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "legal_entity": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "process": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "system_or_location": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "implementation_owner_role": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "performer_role": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "challenge_role": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "procedure_reference": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "implementation_description": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "inheritance_source": {
+                        "type": "null"
+                      },
+                      "control_definition_status": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "implementation_state": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "design_assessment": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "operating_assessment": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "evidence_origin": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "effective_date": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "evidence_sources": {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "uniqueItems": true
+                      },
+                      "population_definition": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "configuration_dependencies": {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "uniqueItems": true
+                      },
+                      "known_limitations": {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "uniqueItems": true
+                      },
+                      "last_owner_review": {
+                        "type": "null"
+                      },
+                      "next_review_due": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "frequency_or_trigger": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "nature": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "exception_ids": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "uniqueItems": true
+                      },
+                      "remediation_ids": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "uniqueItems": true
+                      }
+                    }
+                  }
+                ]
+              },
+              "uniqueItems": true
+            },
+            "rooms": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "name",
+                  "area_sf"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "area_sf": {
+                    "type": "number",
+                    "minimum": 0
+                  }
+                }
+              },
+              "uniqueItems": true
+            },
+            "technical_design": {
+              "type": "object",
+              "required": [
+                "origin",
+                "platform",
+                "image_admission",
+                "hardware_reference",
+                "electrical",
+                "enclosure",
+                "workforce_phases",
+                "asset_policy",
+                "ai_job_mix",
+                "recovery_services",
+                "enterprise_vendor_direction"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "origin": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "platform": {
+                  "type": "array",
+                  "items": {
+                    "anyOf": [
+                      {
+                        "type": "object",
+                        "required": [
+                          "id",
+                          "product",
+                          "version",
+                          "role",
+                          "owner",
+                          "source",
+                          "support_until",
+                          "dependencies"
+                        ],
+                        "additionalProperties": false,
+                        "properties": {
+                          "id": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "product": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "version": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "role": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "owner": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "source": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "support_until": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "dependencies": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            },
+                            "uniqueItems": true
+                          }
+                        }
+                      },
+                      {
+                        "type": "object",
+                        "required": [
+                          "id",
+                          "product",
+                          "version",
+                          "role",
+                          "owner",
+                          "source",
+                          "support_until",
+                          "dependencies"
+                        ],
+                        "additionalProperties": false,
+                        "properties": {
+                          "id": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "product": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "version": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "role": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "owner": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "source": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "support_until": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "dependencies": {
+                            "type": "array",
+                            "items": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "uniqueItems": true
+                          }
+                        }
+                      },
+                      {
+                        "type": "object",
+                        "required": [
+                          "id",
+                          "product",
+                          "version",
+                          "role",
+                          "owner",
+                          "source",
+                          "support_until",
+                          "dependencies"
+                        ],
+                        "additionalProperties": false,
+                        "properties": {
+                          "id": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "product": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "version": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "role": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "owner": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "source": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "support_until": {
+                            "type": "null"
+                          },
+                          "dependencies": {
+                            "type": "array",
+                            "items": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "uniqueItems": true
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "uniqueItems": true
+                },
+                "image_admission": {
+                  "type": "object",
+                  "required": [
+                    "deployed",
+                    "signed_digest",
+                    "qualification",
+                    "review_cadence_days",
+                    "upgrade_lead_days",
+                    "endpoints",
+                    "secret_policy"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "deployed": {
+                      "type": "boolean"
+                    },
+                    "signed_digest": {
+                      "type": "null"
+                    },
+                    "qualification": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "review_cadence_days": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "upgrade_lead_days": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "endpoints": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "uniqueItems": true
+                    },
+                    "secret_policy": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  }
+                },
+                "hardware_reference": {
+                  "type": "object",
+                  "required": [
+                    "name",
+                    "source",
+                    "source_updated_on",
+                    "retrieved_on",
+                    "maximum_system_kw",
+                    "rack_u",
+                    "weight_kg",
+                    "cooling",
+                    "scope"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "source": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "source_updated_on": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "retrieved_on": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "maximum_system_kw": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "rack_u": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "weight_kg": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "cooling": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "scope": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  }
+                },
+                "electrical": {
+                  "type": "object",
+                  "required": [
+                    "voltage_ll",
+                    "power_factor",
+                    "generator_power_factor",
+                    "service_kw",
+                    "optional_path_kw",
+                    "service_breaker_a",
+                    "continuous_loading_fraction",
+                    "ups_module_kw",
+                    "ups_loss_fraction",
+                    "generator_unit_kw",
+                    "generator_breaker_a",
+                    "cooling_module_thermal_kw",
+                    "cooling_design_cop",
+                    "rack_voltage_ll",
+                    "rack_feed_a",
+                    "rack_feed_count",
+                    "rack_feed_policy",
+                    "initial",
+                    "expanded"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "voltage_ll": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "power_factor": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "generator_power_factor": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "service_kw": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "optional_path_kw": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "service_breaker_a": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "continuous_loading_fraction": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "ups_module_kw": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "ups_loss_fraction": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "generator_unit_kw": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "generator_breaker_a": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "cooling_module_thermal_kw": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "cooling_design_cop": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "rack_voltage_ll": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "rack_feed_a": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "rack_feed_count": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "rack_feed_policy": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "initial": {
+                      "type": "object",
+                      "required": [
+                        "usable_it_kw",
+                        "ups_modules_per_path",
+                        "ups_paths",
+                        "ups_feeder_a",
+                        "generator_count",
+                        "cooling_modules",
+                        "recharge_kw",
+                        "other_peak_kw"
+                      ],
+                      "additionalProperties": false,
+                      "properties": {
+                        "usable_it_kw": {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        "ups_modules_per_path": {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        "ups_paths": {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        "ups_feeder_a": {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        "generator_count": {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        "cooling_modules": {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        "recharge_kw": {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        "other_peak_kw": {
+                          "type": "number",
+                          "minimum": 0
+                        }
+                      }
+                    },
+                    "expanded": {
+                      "type": "object",
+                      "required": [
+                        "usable_it_kw",
+                        "ups_modules_per_path",
+                        "ups_paths",
+                        "ups_feeder_a",
+                        "generator_count",
+                        "cooling_modules",
+                        "recharge_kw",
+                        "other_peak_kw"
+                      ],
+                      "additionalProperties": false,
+                      "properties": {
+                        "usable_it_kw": {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        "ups_modules_per_path": {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        "ups_paths": {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        "ups_feeder_a": {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        "generator_count": {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        "cooling_modules": {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        "recharge_kw": {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        "other_peak_kw": {
+                          "type": "number",
+                          "minimum": 0
+                        }
+                      }
+                    }
+                  }
+                },
+                "enclosure": {
+                  "type": "object",
+                  "required": [
+                    "cabinet_width_m",
+                    "cabinet_depth_m",
+                    "cabinet_pitch_m",
+                    "aisle_m",
+                    "maximum_racks_per_row",
+                    "inlet_target_c_low",
+                    "inlet_target_c_high",
+                    "coolant_loop"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "cabinet_width_m": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "cabinet_depth_m": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "cabinet_pitch_m": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "aisle_m": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "maximum_racks_per_row": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "inlet_target_c_low": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "inlet_target_c_high": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "coolant_loop": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  }
+                },
+                "workforce_phases": {
+                  "type": "object",
+                  "required": [
+                    "colo_start",
+                    "owned_start_assumption",
+                    "construction_project_lead_fte",
+                    "construction_specialist_fte",
+                    "specialist_cost_basis",
+                    "sacramento_workstations_required",
+                    "site_roving_positions",
+                    "workstation_state",
+                    "permanent_facilities_fte",
+                    "continuous_security_positions"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "colo_start": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "owned_start_assumption": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "construction_project_lead_fte": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "construction_specialist_fte": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "specialist_cost_basis": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "sacramento_workstations_required": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "site_roving_positions": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "workstation_state": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "permanent_facilities_fte": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "continuous_security_positions": {
+                      "type": "number",
+                      "minimum": 0
+                    }
+                  }
+                },
+                "asset_policy": {
+                  "type": "object",
+                  "required": [
+                    "classification",
+                    "land_life_years",
+                    "site_life_years",
+                    "shell_life_years",
+                    "utility_life_years",
+                    "plant_life_years",
+                    "it_life_years",
+                    "refundable_deposit_fraction",
+                    "invoice_retention_fraction",
+                    "unspent_contingency",
+                    "incentive_credit",
+                    "tax_shield_credit",
+                    "plant_refurbishment_year",
+                    "plant_refurbishment_cost",
+                    "phase_two_expansion_cost",
+                    "phase_two_trigger_kw",
+                    "maximum_owned_kw"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "classification": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "land_life_years": {
+                      "type": "null"
+                    },
+                    "site_life_years": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "shell_life_years": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "utility_life_years": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "plant_life_years": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "it_life_years": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "refundable_deposit_fraction": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "invoice_retention_fraction": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "unspent_contingency": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "incentive_credit": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "tax_shield_credit": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "plant_refurbishment_year": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "plant_refurbishment_cost": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "phase_two_expansion_cost": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "phase_two_trigger_kw": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "maximum_owned_kw": {
+                      "type": "number",
+                      "minimum": 0
+                    }
+                  }
+                },
+                "ai_job_mix": {
+                  "type": "object",
+                  "required": [
+                    "profiles",
+                    "ocr_pages_day",
+                    "ocr_cpu_seconds_per_page",
+                    "background_preemptible_share",
+                    "evaluation_inputs",
+                    "shared_private_training_authorized",
+                    "frontier_training_authorized"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "profiles": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "required": [
+                          "id",
+                          "task_share",
+                          "relative_tokens",
+                          "input_fraction",
+                          "context_fraction"
+                        ],
+                        "additionalProperties": false,
+                        "properties": {
+                          "id": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "task_share": {
+                            "type": "number",
+                            "minimum": 0
+                          },
+                          "relative_tokens": {
+                            "type": "number",
+                            "minimum": 0
+                          },
+                          "input_fraction": {
+                            "type": "number",
+                            "minimum": 0
+                          },
+                          "context_fraction": {
+                            "type": "number",
+                            "minimum": 0
+                          }
+                        }
+                      },
+                      "uniqueItems": true
+                    },
+                    "ocr_pages_day": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "ocr_cpu_seconds_per_page": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "background_preemptible_share": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "evaluation_inputs": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "shared_private_training_authorized": {
+                      "type": "boolean"
+                    },
+                    "frontier_training_authorized": {
+                      "type": "boolean"
+                    }
+                  }
+                },
+                "recovery_services": {
+                  "type": "array",
+                  "items": {
+                    "anyOf": [
+                      {
+                        "type": "object",
+                        "required": [
+                          "service_id",
+                          "tier",
+                          "dependencies",
+                          "minimum_service",
+                          "performance_verified"
+                        ],
+                        "additionalProperties": false,
+                        "properties": {
+                          "service_id": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "tier": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "dependencies": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            },
+                            "uniqueItems": true
+                          },
+                          "minimum_service": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "performance_verified": {
+                            "type": "boolean"
+                          }
+                        }
+                      },
+                      {
+                        "type": "object",
+                        "required": [
+                          "service_id",
+                          "tier",
+                          "dependencies",
+                          "minimum_service",
+                          "performance_verified"
+                        ],
+                        "additionalProperties": false,
+                        "properties": {
+                          "service_id": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "tier": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "dependencies": {
+                            "type": "array",
+                            "items": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "uniqueItems": true
+                          },
+                          "minimum_service": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "performance_verified": {
+                            "type": "boolean"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "uniqueItems": true
+                },
+                "enterprise_vendor_direction": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "authority",
+                    "authority_commit",
+                    "implementation_state",
+                    "contracts_executed",
+                    "deployed",
+                    "cost_treatment",
+                    "bindings"
+                  ],
+                  "properties": {
+                    "authority": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "authority_commit": {
+                      "type": "string",
+                      "pattern": "^[0-9a-f]{40}$"
+                    },
+                    "implementation_state": {
+                      "const": "DESIGN_PROCUREMENT_PENDING"
+                    },
+                    "contracts_executed": {
+                      "const": false
+                    },
+                    "deployed": {
+                      "const": false
+                    },
+                    "cost_treatment": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "bindings": {
+                      "type": "array",
+                      "minItems": 10,
+                      "uniqueItems": true,
+                      "items": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "domain",
+                          "product",
+                          "service_id",
+                          "authority_boundary"
+                        ],
+                        "properties": {
+                          "domain": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "product": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "service_id": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "authority_boundary": {
+                            "type": "string",
+                            "minLength": 1
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

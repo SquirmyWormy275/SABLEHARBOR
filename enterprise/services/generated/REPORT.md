@@ -2,7 +2,7 @@
 
 **State: synthetic planning assumptions; not approved budgets, vendor quotes or proven recovery.**
 
-57 services; 49 support components; 49 dependency requirements; 4 source-named external parties; six workload classes.
+57 services; 49 support components; 49 dependency requirements; 6 source-named external parties; six workload classes.
 
 | Alternative | Five-year cash | Capital | Cash operating cost | Closing net book | Year-one required FTE |
 |---|---:|---:|---:|---:|---:|
