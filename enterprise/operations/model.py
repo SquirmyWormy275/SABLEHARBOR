@@ -8,7 +8,7 @@ from pathlib import Path
 
 from enterprise.business.model import BusinessModel, fingerprint
 
-from . import commercial, credit, matters, research, workforce
+from . import advisory_policy, commercial, credit, matters, research, workforce
 
 
 class OperatingModel(
@@ -29,9 +29,18 @@ class OperatingModel(
             }
         )
         super().__init__(inputs)
+        self.policy = advisory_policy.effective_policy(
+            self.policy, self.operations_inputs["advisory_policy"]
+        )
         self.input_hash = fingerprint(
             {"business": self.inputs, "operations": self.operations_inputs}
         )
+
+    def outcomes(self):
+        first = len(self.tables["matter_rollforward"])
+        super().outcomes()
+        for row in self.tables["matter_rollforward"][first:]:
+            row["carry_obligation"] = advisory_policy.CARRY_STATUS
 
     def build(self):
         if self._built:
@@ -59,5 +68,6 @@ class OperatingModel(
             self.tables["invoices"].extend(self.invoices)
             self.tables["payables"].extend(self.payables)
             self.tables["recovery_lots"].extend(self.lots)
+        advisory_policy.validate(self)
         self._built = True
         return self

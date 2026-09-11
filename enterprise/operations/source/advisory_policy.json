@@ -1,0 +1,13 @@
+{
+  "policy_id": "SH-OPERATIONS-ADVISORY-POLICY-001",
+  "version": "1.0.0",
+  "effective_date": "2026-09-09",
+  "classification": "PUBLIC_SYNTHETIC_CONDITIONAL_FORECAST",
+  "canonical_sources": [
+    "docs/advisory/COMMERCIAL_CONTRACTING_AND_PRICING_STANDARD.md",
+    "docs/advisory/CARRY_PLAN_STANDARD.md",
+    "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md"
+  ],
+  "value_payout_curve": [["0.70", "0.25"], ["0.85", "0.60"], ["1.00", "1.00"], ["1.20", "1.25"]],
+  "carry_obligation": "NOT_AWARDED_OR_ACCRUED; plan direction LOCKED; individual awards and legal implementation remain gated"
+}

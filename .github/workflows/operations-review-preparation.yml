@@ -26,9 +26,10 @@ jobs:
         run: |
           mkdir -p /tmp/operating-review-source
           git archive --format=tar HEAD | gzip -n > /tmp/operating-review-source/source.tar.gz
+          git bundle create /tmp/operating-review-source/source.bundle HEAD
           git rev-parse HEAD > /tmp/operating-review-source/SOURCE_REVISION.txt
           cd /tmp/operating-review-source
-          sha256sum source.tar.gz > SHA256SUMS.txt
+          sha256sum source.tar.gz source.bundle > SHA256SUMS.txt
       - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
         with:
           name: operating-review-source
