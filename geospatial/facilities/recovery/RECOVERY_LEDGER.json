@@ -15098,7 +15098,9 @@
     "approved_source": "docs/structured/corporate_headquarters_closeout_2026-09-03.json",
     "downloads_rasters_hash_checked": 10,
     "approved_hash_match_found": false,
-    "treatment": "Truncated historical WebP remains retrievable by immutable commit URL; not copied into current visual assets and not represented as equivalent to approved PNG. Missing approved bytes do not prevent planning from accepted written physical doctrine."
+    "treatment": "Truncated historical WebP remains retrievable by immutable commit URL; not copied into current visual assets and not represented as equivalent to approved PNG. Missing approved bytes do not prevent planning from accepted written physical doctrine.",
+    "tracking_issue": 88,
+    "canonical_manifest": "assets/headquarters/CANONICAL_HEADQUARTERS_IMAGE_MANIFEST.md"
   },
   "workflow_artifacts_inspected": [
     {
@@ -15807,6 +15809,13 @@
       "state": "OPEN",
       "title": "OPEN CANON: remaining J2 leaders and appointment histories (six approved; staffing resolved)",
       "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/issues/19"
+    },
+    {
+      "body": "## Completed in merged PR #110\n\nThe September 3 headquarters, ESS, People & Culture, IT, authority/capital, SHMS and J2-establishment sources now have controlled PDFs and validated publication/catalog entries. Source, PDF and structured representations reconcile. Acceptance: [PR #110](https://github.com/SquirmyWormy275/SABLEHARBOR/pull/110), main commit aa6ce865ab08194a17db7fad59e8fce9eadd8b0c.\n\n## Remaining exact source asset\n\nRecover the approved September 3 Sacramento headquarters exterior render with SHA-256:\n\n`2bf5a1209b9c3ece435271f2fbf5a3c827bbbccf242ea4ee60535749ccee9d92`\n\nThe architecture/material/landscape direction remains accepted. A visually similar regenerated image cannot be labeled as this exact approved binary. Do not substitute the earlier collage or erroneous San Jose/Capitol renders.\n\n## Acceptance\n\nThe exact source image is present, hashed, indexed and connected to the headquarters record. Regenerate affected catalogs/publications and verify source pairing. This residual asset requirement is the only reason this publication closeout remains open.",
+      "number": 88,
+      "state": "OPEN",
+      "title": "CLOSEOUT: recover the exact approved Sacramento HQ image",
+      "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/issues/88"
     }
   ],
   "existing_geo_source_inventory": {

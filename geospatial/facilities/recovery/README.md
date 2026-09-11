@@ -16,7 +16,7 @@ Reviewed **58 remote work branches**, **44 PRs**, all issue metadata and **651 w
 
 The old HQ WebP is **truncated**: 15,009 actual bytes versus 190,242 declared by its RIFF header. SHA-256 is `97dd868fbebf55d0b0a6fce646f76e14d5fa56fe970ad39c804227e910a11b40`. Both the image viewer and Pillow failed to decode it. This is not the approved PNG hash `2bf5a1209b9c3ece435271f2fbf5a3c827bbbccf242ea4ee60535749ccee9d92`. Ten raster files under Downloads were hash-checked with no match. The broken derivative is not published as a current visual and no equivalence is claimed. The accepted written physical doctrine remains usable.
 
-[Historical WebP bytes](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/22a6299a11113e81846fd58d0273f56e508e7a4e/assets/headquarters/sable-harbor-hq-sacramento-canon-2026-09-03.webp). **SH-REC-HQ-IMAGE** next action: recover exact approved PNG from the original owner/source archive if an approved exterior image is needed. This does not block source-derived schematic plans.
+[Historical WebP bytes](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/22a6299a11113e81846fd58d0273f56e508e7a4e/assets/headquarters/sable-harbor-hq-sacramento-canon-2026-09-03.webp). **SH-REC-HQ-IMAGE**, tracked by existing [issue #88](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/88), next action: recover exact approved PNG from the original owner/source archive if an approved exterior image is needed. This does not block source-derived schematic plans.
 
 ## Branch disposition
 
