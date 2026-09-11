@@ -1,0 +1,3584 @@
+{
+  "schema_version": "1.0.0",
+  "assessment": "ARCHITECTURAL_CONCEPT_READINESS_NOT_CODE_CERTIFICATION",
+  "source_sha256": {
+    "geospatial/facilities/source/campus.json": "0efd4854069ff20acb4032e02b021afebcb955990f1d684b51428624e281d950",
+    "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
+    "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
+    "geospatial/facilities/RUNTIME_BRIDGE.json": "764b0fdb51475396c13d88a9ba365ac34b1a4f4a0f9608d5bf43fb09ccc2e946"
+  },
+  "checks": [
+    {
+      "id": "SH-READY:SH-FAC-FORT-BIG-L01:accessibility-evidence",
+      "scope": "SH-FAC-FORT-BIG-L01",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Lift and accessible-room labels are evidence inventory only; no complete step-free route, turning-space or accessible-facility assessment is encoded.",
+      "evidence": {
+        "source": "geospatial/facilities/source/research_campuses.json",
+        "site_id": "SH-SITE-0003",
+        "status": "PROPOSED_MODELLED_PROGRAM",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "floor_id": "SH-FAC-FORT-BIG-L01",
+        "lift_labels": [],
+        "accessible_room_labels": []
+      },
+      "next_action": "Provide coordinated step-free routes, levels, clearances and accessible facility details for qualified review."
+    },
+    {
+      "id": "SH-READY:SH-FAC-FORT-BIG-L01:door-circulation-access",
+      "scope": "SH-FAC-FORT-BIG-L01",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires explicit review, not an invented route.",
+      "evidence": {
+        "source": "geospatial/facilities/source/research_campuses.json",
+        "site_id": "SH-SITE-0003",
+        "status": "PROPOSED_MODELLED_PROGRAM",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "floor_id": "SH-FAC-FORT-BIG-L01",
+        "missing_doors": [
+          "SH-FAC-FORT-BIG-L01-R01",
+          "SH-FAC-FORT-BIG-L01-R02",
+          "SH-FAC-FORT-BIG-L01-R03",
+          "SH-FAC-FORT-BIG-L01-R04",
+          "SH-FAC-FORT-BIG-L01-R05",
+          "SH-FAC-FORT-BIG-L01-R06",
+          "SH-FAC-FORT-BIG-L01-R07"
+        ],
+        "invalid_doors": [],
+        "no_direct_circulation": []
+      },
+      "next_action": "Record missing routes and resolve invalid doors; review indirect access and full opening/swing clearances."
+    },
+    {
+      "id": "SH-READY:SH-FAC-FORT-BIG-L01:egress-engineering",
+      "scope": "SH-FAC-FORT-BIG-L01",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Concept stairs/exterior doors do not establish exit capacity, travel distance, protection, discharge or emergency operation.",
+      "evidence": {
+        "source": "geospatial/facilities/source/research_campuses.json",
+        "site_id": "SH-SITE-0003",
+        "status": "PROPOSED_MODELLED_PROGRAM",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "floor_id": "SH-FAC-FORT-BIG-L01",
+        "stair_labels": [],
+        "exterior_door_count": 0,
+        "planned_peak": 20,
+        "core_basis": "Two independent end exit/service bays; 3 m central circulation separates personnel from process rooms. Wet, ventilation and utility zones remain outside material handling. No classified process or hazardous inventory assumed."
+      },
+      "next_action": "Commission occupancy-specific egress and emergency-access review; no legal thresholds are applied here."
+    },
+    {
+      "id": "SH-READY:SH-FAC-FORT-BIG:fixed-core-stacking",
+      "scope": "SH-FAC-FORT-BIG",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "A building-level core template is inherited by every floor; explicit floor overrides must match. Implicit renderer cores are not source evidence.",
+      "evidence": {
+        "source": "geospatial/facilities/source/research_campuses.json",
+        "site_id": "SH-SITE-0003",
+        "status": "PROPOSED_MODELLED_PROGRAM",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "building_id": "SH-FAC-FORT-BIG",
+        "core_template": [],
+        "mismatched_floors": [],
+        "core_basis": "Two independent end exit/service bays; 3 m central circulation separates personnel from process rooms. Wet, ventilation and utility zones remain outside material handling. No classified process or hazardous inventory assumed."
+      },
+      "next_action": "Confirm structural, shaft and service continuity in engineering design."
+    },
+    {
+      "id": "SH-READY:SH-FAC-FORT-SMALL-L01:accessibility-evidence",
+      "scope": "SH-FAC-FORT-SMALL-L01",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Lift and accessible-room labels are evidence inventory only; no complete step-free route, turning-space or accessible-facility assessment is encoded.",
+      "evidence": {
+        "source": "geospatial/facilities/source/research_campuses.json",
+        "site_id": "SH-SITE-0003",
+        "status": "PROPOSED_MODELLED_PROGRAM",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "floor_id": "SH-FAC-FORT-SMALL-L01",
+        "lift_labels": [],
+        "accessible_room_labels": []
+      },
+      "next_action": "Provide coordinated step-free routes, levels, clearances and accessible facility details for qualified review."
+    },
+    {
+      "id": "SH-READY:SH-FAC-FORT-SMALL-L01:door-circulation-access",
+      "scope": "SH-FAC-FORT-SMALL-L01",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires explicit review, not an invented route.",
+      "evidence": {
+        "source": "geospatial/facilities/source/research_campuses.json",
+        "site_id": "SH-SITE-0003",
+        "status": "PROPOSED_MODELLED_PROGRAM",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "floor_id": "SH-FAC-FORT-SMALL-L01",
+        "missing_doors": [
+          "SH-FAC-FORT-SMALL-L01-R01",
+          "SH-FAC-FORT-SMALL-L01-R02",
+          "SH-FAC-FORT-SMALL-L01-R03",
+          "SH-FAC-FORT-SMALL-L01-R04"
+        ],
+        "invalid_doors": [],
+        "no_direct_circulation": []
+      },
+      "next_action": "Record missing routes and resolve invalid doors; review indirect access and full opening/swing clearances."
+    },
+    {
+      "id": "SH-READY:SH-FAC-FORT-SMALL-L01:egress-engineering",
+      "scope": "SH-FAC-FORT-SMALL-L01",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Concept stairs/exterior doors do not establish exit capacity, travel distance, protection, discharge or emergency operation.",
+      "evidence": {
+        "source": "geospatial/facilities/source/research_campuses.json",
+        "site_id": "SH-SITE-0003",
+        "status": "PROPOSED_MODELLED_PROGRAM",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "floor_id": "SH-FAC-FORT-SMALL-L01",
+        "stair_labels": [],
+        "exterior_door_count": 0,
+        "planned_peak": 8,
+        "core_basis": "Two independent end exit/service bays; 3 m central circulation separates personnel from process rooms. Wet, ventilation and utility zones remain outside material handling. No classified process or hazardous inventory assumed."
+      },
+      "next_action": "Commission occupancy-specific egress and emergency-access review; no legal thresholds are applied here."
+    },
+    {
+      "id": "SH-READY:SH-FAC-FORT-SMALL-L02:accessibility-evidence",
+      "scope": "SH-FAC-FORT-SMALL-L02",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Lift and accessible-room labels are evidence inventory only; no complete step-free route, turning-space or accessible-facility assessment is encoded.",
+      "evidence": {
+        "source": "geospatial/facilities/source/research_campuses.json",
+        "site_id": "SH-SITE-0003",
+        "status": "PROPOSED_MODELLED_PROGRAM",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "floor_id": "SH-FAC-FORT-SMALL-L02",
+        "lift_labels": [],
+        "accessible_room_labels": []
+      },
+      "next_action": "Provide coordinated step-free routes, levels, clearances and accessible facility details for qualified review."
+    },
+    {
+      "id": "SH-READY:SH-FAC-FORT-SMALL-L02:door-circulation-access",
+      "scope": "SH-FAC-FORT-SMALL-L02",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires explicit review, not an invented route.",
+      "evidence": {
+        "source": "geospatial/facilities/source/research_campuses.json",
+        "site_id": "SH-SITE-0003",
+        "status": "PROPOSED_MODELLED_PROGRAM",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "floor_id": "SH-FAC-FORT-SMALL-L02",
+        "missing_doors": [
+          "SH-FAC-FORT-SMALL-L02-R01A",
+          "SH-FAC-FORT-SMALL-L02-R01B",
+          "SH-FAC-FORT-SMALL-L02-R02A",
+          "SH-FAC-FORT-SMALL-L02-R02B",
+          "SH-FAC-FORT-SMALL-L02-R03A",
+          "SH-FAC-FORT-SMALL-L02-R03B",
+          "SH-FAC-FORT-SMALL-L02-R04",
+          "SH-FAC-FORT-SMALL-L02-R05"
+        ],
+        "invalid_doors": [],
+        "no_direct_circulation": []
+      },
+      "next_action": "Record missing routes and resolve invalid doors; review indirect access and full opening/swing clearances."
+    },
+    {
+      "id": "SH-READY:SH-FAC-FORT-SMALL-L02:egress-engineering",
+      "scope": "SH-FAC-FORT-SMALL-L02",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Concept stairs/exterior doors do not establish exit capacity, travel distance, protection, discharge or emergency operation.",
+      "evidence": {
+        "source": "geospatial/facilities/source/research_campuses.json",
+        "site_id": "SH-SITE-0003",
+        "status": "PROPOSED_MODELLED_PROGRAM",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "floor_id": "SH-FAC-FORT-SMALL-L02",
+        "stair_labels": [],
+        "exterior_door_count": 0,
+        "planned_peak": 6,
+        "core_basis": "Two independent end exit/service bays; 3 m central circulation separates personnel from process rooms. Wet, ventilation and utility zones remain outside material handling. No classified process or hazardous inventory assumed."
+      },
+      "next_action": "Commission occupancy-specific egress and emergency-access review; no legal thresholds are applied here."
+    },
+    {
+      "id": "SH-READY:SH-FAC-FORT-SMALL:fixed-core-stacking",
+      "scope": "SH-FAC-FORT-SMALL",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "A building-level core template is inherited by every floor; explicit floor overrides must match. Implicit renderer cores are not source evidence.",
+      "evidence": {
+        "source": "geospatial/facilities/source/research_campuses.json",
+        "site_id": "SH-SITE-0003",
+        "status": "PROPOSED_MODELLED_PROGRAM",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "building_id": "SH-FAC-FORT-SMALL",
+        "core_template": [],
+        "mismatched_floors": [],
+        "core_basis": "Two independent end exit/service bays; 3 m central circulation separates personnel from process rooms. Wet, ventilation and utility zones remain outside material handling. No classified process or hazardous inventory assumed."
+      },
+      "next_action": "Confirm structural, shaft and service continuity in engineering design."
+    },
+    {
+      "id": "SH-READY:SH-FAC-FORT-WHITE-L01:accessibility-evidence",
+      "scope": "SH-FAC-FORT-WHITE-L01",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Lift and accessible-room labels are evidence inventory only; no complete step-free route, turning-space or accessible-facility assessment is encoded.",
+      "evidence": {
+        "source": "geospatial/facilities/source/research_campuses.json",
+        "site_id": "SH-SITE-0003",
+        "status": "PROPOSED_MODELLED_PROGRAM",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "floor_id": "SH-FAC-FORT-WHITE-L01",
+        "lift_labels": [],
+        "accessible_room_labels": []
+      },
+      "next_action": "Provide coordinated step-free routes, levels, clearances and accessible facility details for qualified review."
+    },
+    {
+      "id": "SH-READY:SH-FAC-FORT-WHITE-L01:door-circulation-access",
+      "scope": "SH-FAC-FORT-WHITE-L01",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires explicit review, not an invented route.",
+      "evidence": {
+        "source": "geospatial/facilities/source/research_campuses.json",
+        "site_id": "SH-SITE-0003",
+        "status": "PROPOSED_MODELLED_PROGRAM",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "floor_id": "SH-FAC-FORT-WHITE-L01",
+        "missing_doors": [
+          "SH-FAC-FORT-WHITE-L01-R01",
+          "SH-FAC-FORT-WHITE-L01-R02",
+          "SH-FAC-FORT-WHITE-L01-R03",
+          "SH-FAC-FORT-WHITE-L01-R04"
+        ],
+        "invalid_doors": [],
+        "no_direct_circulation": []
+      },
+      "next_action": "Record missing routes and resolve invalid doors; review indirect access and full opening/swing clearances."
+    },
+    {
+      "id": "SH-READY:SH-FAC-FORT-WHITE-L01:egress-engineering",
+      "scope": "SH-FAC-FORT-WHITE-L01",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Concept stairs/exterior doors do not establish exit capacity, travel distance, protection, discharge or emergency operation.",
+      "evidence": {
+        "source": "geospatial/facilities/source/research_campuses.json",
+        "site_id": "SH-SITE-0003",
+        "status": "PROPOSED_MODELLED_PROGRAM",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "floor_id": "SH-FAC-FORT-WHITE-L01",
+        "stair_labels": [],
+        "exterior_door_count": 0,
+        "planned_peak": 4,
+        "core_basis": "Two independent end exit/service bays; 3 m central circulation separates personnel from process rooms. Wet, ventilation and utility zones remain outside material handling. No classified process or hazardous inventory assumed."
+      },
+      "next_action": "Commission occupancy-specific egress and emergency-access review; no legal thresholds are applied here."
+    },
+    {
+      "id": "SH-READY:SH-FAC-FORT-WHITE:fixed-core-stacking",
+      "scope": "SH-FAC-FORT-WHITE",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "A building-level core template is inherited by every floor; explicit floor overrides must match. Implicit renderer cores are not source evidence.",
+      "evidence": {
+        "source": "geospatial/facilities/source/research_campuses.json",
+        "site_id": "SH-SITE-0003",
+        "status": "PROPOSED_MODELLED_PROGRAM",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "building_id": "SH-FAC-FORT-WHITE",
+        "core_template": [],
+        "mismatched_floors": [],
+        "core_basis": "Two independent end exit/service bays; 3 m central circulation separates personnel from process rooms. Wet, ventilation and utility zones remain outside material handling. No classified process or hazardous inventory assumed."
+      },
+      "next_action": "Confirm structural, shaft and service continuity in engineering design."
+    },
+    {
+      "id": "SH-READY:SH-IND-FAC-ARU-OFFICE-B01-L01:accessibility-evidence",
+      "scope": "SH-IND-FAC-ARU-OFFICE-B01-L01",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Lift and accessible-room labels are evidence inventory only; no complete step-free route, turning-space or accessible-facility assessment is encoded.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-IND-FAC-ARU-OFFICE",
+        "status": "SYNTHETIC_OPERATING",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+        "floor_id": "SH-IND-FAC-ARU-OFFICE-B01-L01",
+        "lift_labels": [],
+        "accessible_room_labels": []
+      },
+      "next_action": "Provide coordinated step-free routes, levels, clearances and accessible facility details for qualified review."
+    },
+    {
+      "id": "SH-READY:SH-IND-FAC-ARU-OFFICE-B01-L01:door-circulation-access",
+      "scope": "SH-IND-FAC-ARU-OFFICE-B01-L01",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires explicit review, not an invented route.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-IND-FAC-ARU-OFFICE",
+        "status": "SYNTHETIC_OPERATING",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+        "floor_id": "SH-IND-FAC-ARU-OFFICE-B01-L01",
+        "missing_doors": [
+          "SH-IND-FAC-ARU-OFFICE-B01-L01-R01",
+          "SH-IND-FAC-ARU-OFFICE-B01-L01-R02",
+          "SH-IND-FAC-ARU-OFFICE-B01-L01-R03",
+          "SH-IND-FAC-ARU-OFFICE-B01-L01-R04",
+          "SH-IND-FAC-ARU-OFFICE-B01-L01-R05",
+          "SH-IND-FAC-ARU-OFFICE-B01-L01-R06"
+        ],
+        "invalid_doors": [],
+        "no_direct_circulation": []
+      },
+      "next_action": "Record missing routes and resolve invalid doors; review indirect access and full opening/swing clearances."
+    },
+    {
+      "id": "SH-READY:SH-IND-FAC-ARU-OFFICE-B01-L01:egress-engineering",
+      "scope": "SH-IND-FAC-ARU-OFFICE-B01-L01",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Concept stairs/exterior doors do not establish exit capacity, travel distance, protection, discharge or emergency operation.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-IND-FAC-ARU-OFFICE",
+        "status": "SYNTHETIC_OPERATING",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+        "floor_id": "SH-IND-FAC-ARU-OFFICE-B01-L01",
+        "stair_labels": [],
+        "exterior_door_count": 0,
+        "planned_peak": 14,
+        "core_basis": "Single level with direct perimeter exits; wet/service zone reserved in support band. No automatic office core. Floor level/accessibility and rated egress design unverified."
+      },
+      "next_action": "Commission occupancy-specific egress and emergency-access review; no legal thresholds are applied here."
+    },
+    {
+      "id": "SH-READY:SH-IND-FAC-ARU-OFFICE-B01:fixed-core-stacking",
+      "scope": "SH-IND-FAC-ARU-OFFICE-B01",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "A building-level core template is inherited by every floor; explicit floor overrides must match. Implicit renderer cores are not source evidence.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-IND-FAC-ARU-OFFICE",
+        "status": "SYNTHETIC_OPERATING",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+        "building_id": "SH-IND-FAC-ARU-OFFICE-B01",
+        "core_template": [],
+        "mismatched_floors": [],
+        "core_basis": "Single level with direct perimeter exits; wet/service zone reserved in support band. No automatic office core. Floor level/accessibility and rated egress design unverified."
+      },
+      "next_action": "Confirm structural, shaft and service continuity in engineering design."
+    },
+    {
+      "id": "SH-READY:SH-IND-FAC-ARU-OFFICE:adjacency-intent",
+      "scope": "SH-IND-FAC-ARU-OFFICE",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Presence of explicit functional adjacency/separation intent only; relationships are not inferred from proximity.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-IND-FAC-ARU-OFFICE",
+        "status": "SYNTHETIC_OPERATING",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+        "relationships": []
+      },
+      "next_action": "Record intended adjacency and separation relationships before assessing them."
+    },
+    {
+      "id": "SH-READY:SH-IND-FAC-ARU-OFFICE:building-separation",
+      "scope": "SH-IND-FAC-ARU-OFFICE",
+      "severity": "INFO",
+      "outcome": "PASS",
+      "basis": "Concept footprints must not overlap in a common local coordinate frame; no minimum separation distance is asserted.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-IND-FAC-ARU-OFFICE",
+        "status": "SYNTHETIC_OPERATING",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+        "overlapping_buildings": []
+      },
+      "next_action": "Engineering separation distances and fire exposure remain unassessed."
+    },
+    {
+      "id": "SH-READY:SH-IND-FAC-ARU-OFFICE:service-pedestrian-crossings",
+      "scope": "SH-IND-FAC-ARU-OFFICE",
+      "severity": "INFO",
+      "outcome": "PASS",
+      "basis": "Intersection of drawn route centre-lines is a coordination trigger; grade, widths, timing and controls are unknown.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-IND-FAC-ARU-OFFICE",
+        "status": "SYNTHETIC_OPERATING",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+        "crossing_routes": [],
+        "service_route": [
+          [
+            71.97200000000001,
+            0
+          ],
+          [
+            71.97200000000001,
+            25
+          ]
+        ]
+      },
+      "next_action": "Confirm swept paths, loading geometry and pedestrian controls; unrecorded routes are not assumed clear."
+    },
+    {
+      "id": "SH-READY:SH-IND-FAC-EAST-MATERIALS:adjacency-intent",
+      "scope": "SH-IND-FAC-EAST-MATERIALS",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Presence of explicit functional adjacency/separation intent only; relationships are not inferred from proximity.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-IND-FAC-EAST-MATERIALS",
+        "status": "SYNTHETIC_OPERATING",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+        "relationships": []
+      },
+      "next_action": "Record intended adjacency and separation relationships before assessing them."
+    },
+    {
+      "id": "SH-READY:SH-IND-FAC-EAST-MATERIALS:building-separation",
+      "scope": "SH-IND-FAC-EAST-MATERIALS",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Concept footprints must not overlap in a common local coordinate frame; no minimum separation distance is asserted.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-IND-FAC-EAST-MATERIALS",
+        "status": "SYNTHETIC_OPERATING",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+        "overlapping_buildings": []
+      },
+      "next_action": "Engineering separation distances and fire exposure remain unassessed."
+    },
+    {
+      "id": "SH-READY:SH-IND-FAC-EAST-MATERIALS:interior-readiness",
+      "scope": "SH-IND-FAC-EAST-MATERIALS",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "No owned/modelled interior geometry is supplied; external providers and unresolved sites are not fabricated.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-IND-FAC-EAST-MATERIALS",
+        "status": "SYNTHETIC_OPERATING",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+        "exemption": "Appointment-based team tracks and laydown established; no occupied building established."
+      },
+      "next_action": "Retain the context-only boundary until an authorized interior source exists."
+    },
+    {
+      "id": "SH-READY:SH-IND-FAC-EAST-MATERIALS:service-pedestrian-crossings",
+      "scope": "SH-IND-FAC-EAST-MATERIALS",
+      "severity": "INFO",
+      "outcome": "PASS",
+      "basis": "Intersection of drawn route centre-lines is a coordination trigger; grade, widths, timing and controls are unknown.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-IND-FAC-EAST-MATERIALS",
+        "status": "SYNTHETIC_OPERATING",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+        "crossing_routes": [],
+        "service_route": [
+          [
+            264.4424,
+            0
+          ],
+          [
+            264.4424,
+            25
+          ]
+        ]
+      },
+      "next_action": "Confirm swept paths, loading geometry and pedestrian controls; unrecorded routes are not assumed clear."
+    },
+    {
+      "id": "SH-READY:SH-IND-FAC-MINERAL-TEAM:adjacency-intent",
+      "scope": "SH-IND-FAC-MINERAL-TEAM",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Presence of explicit functional adjacency/separation intent only; relationships are not inferred from proximity.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-IND-FAC-MINERAL-TEAM",
+        "status": "SYNTHETIC_OPERATING",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+        "relationships": []
+      },
+      "next_action": "Record intended adjacency and separation relationships before assessing them."
+    },
+    {
+      "id": "SH-READY:SH-IND-FAC-MINERAL-TEAM:building-separation",
+      "scope": "SH-IND-FAC-MINERAL-TEAM",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Concept footprints must not overlap in a common local coordinate frame; no minimum separation distance is asserted.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-IND-FAC-MINERAL-TEAM",
+        "status": "SYNTHETIC_OPERATING",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+        "overlapping_buildings": []
+      },
+      "next_action": "Engineering separation distances and fire exposure remain unassessed."
+    },
+    {
+      "id": "SH-READY:SH-IND-FAC-MINERAL-TEAM:interior-readiness",
+      "scope": "SH-IND-FAC-MINERAL-TEAM",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "No owned/modelled interior geometry is supplied; external providers and unresolved sites are not fabricated.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-IND-FAC-MINERAL-TEAM",
+        "status": "SYNTHETIC_OPERATING",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+        "exemption": "Mineral transfer team tracks established; no occupied building or local trona mine established."
+      },
+      "next_action": "Retain the context-only boundary until an authorized interior source exists."
+    },
+    {
+      "id": "SH-READY:SH-IND-FAC-MINERAL-TEAM:service-pedestrian-crossings",
+      "scope": "SH-IND-FAC-MINERAL-TEAM",
+      "severity": "INFO",
+      "outcome": "PASS",
+      "basis": "Intersection of drawn route centre-lines is a coordination trigger; grade, widths, timing and controls are unknown.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-IND-FAC-MINERAL-TEAM",
+        "status": "SYNTHETIC_OPERATING",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+        "crossing_routes": [],
+        "service_route": [
+          [
+            292.35200000000003,
+            0
+          ],
+          [
+            292.35200000000003,
+            25
+          ]
+        ]
+      },
+      "next_action": "Confirm swept paths, loading geometry and pedestrian controls; unrecorded routes are not assumed clear."
+    },
+    {
+      "id": "SH-READY:SH-IND-FAC-RAW-TERMINAL:adjacency-intent",
+      "scope": "SH-IND-FAC-RAW-TERMINAL",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Presence of explicit functional adjacency/separation intent only; relationships are not inferred from proximity.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-IND-FAC-RAW-TERMINAL",
+        "status": "SYNTHETIC_OPERATING",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+        "relationships": []
+      },
+      "next_action": "Record intended adjacency and separation relationships before assessing them."
+    },
+    {
+      "id": "SH-READY:SH-IND-FAC-RAW-TERMINAL:building-separation",
+      "scope": "SH-IND-FAC-RAW-TERMINAL",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Concept footprints must not overlap in a common local coordinate frame; no minimum separation distance is asserted.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-IND-FAC-RAW-TERMINAL",
+        "status": "SYNTHETIC_OPERATING",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+        "overlapping_buildings": []
+      },
+      "next_action": "Engineering separation distances and fire exposure remain unassessed."
+    },
+    {
+      "id": "SH-READY:SH-IND-FAC-RAW-TERMINAL:interior-readiness",
+      "scope": "SH-IND-FAC-RAW-TERMINAL",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "No owned/modelled interior geometry is supplied; external providers and unresolved sites are not fabricated.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-IND-FAC-RAW-TERMINAL",
+        "status": "SYNTHETIC_OPERATING",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+        "exemption": "Truck-served terminal established; building geometry/count unknown. No BS&T track or invented rail connection."
+      },
+      "next_action": "Retain the context-only boundary until an authorized interior source exists."
+    },
+    {
+      "id": "SH-READY:SH-IND-FAC-RAW-TERMINAL:service-pedestrian-crossings",
+      "scope": "SH-IND-FAC-RAW-TERMINAL",
+      "severity": "INFO",
+      "outcome": "PASS",
+      "basis": "Intersection of drawn route centre-lines is a coordination trigger; grade, widths, timing and controls are unknown.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-IND-FAC-RAW-TERMINAL",
+        "status": "SYNTHETIC_OPERATING",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+        "crossing_routes": [],
+        "service_route": [
+          [
+            238.704,
+            0
+          ],
+          [
+            238.704,
+            25
+          ]
+        ]
+      },
+      "next_action": "Confirm swept paths, loading geometry and pedestrian controls; unrecorded routes are not assumed clear."
+    },
+    {
+      "id": "SH-READY:SH-IND-FAC-RAW-TRUCK:adjacency-intent",
+      "scope": "SH-IND-FAC-RAW-TRUCK",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Presence of explicit functional adjacency/separation intent only; relationships are not inferred from proximity.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-IND-FAC-RAW-TRUCK",
+        "status": "SYNTHETIC_OPERATING",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+        "relationships": []
+      },
+      "next_action": "Record intended adjacency and separation relationships before assessing them."
+    },
+    {
+      "id": "SH-READY:SH-IND-FAC-RAW-TRUCK:building-separation",
+      "scope": "SH-IND-FAC-RAW-TRUCK",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Concept footprints must not overlap in a common local coordinate frame; no minimum separation distance is asserted.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-IND-FAC-RAW-TRUCK",
+        "status": "SYNTHETIC_OPERATING",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+        "overlapping_buildings": []
+      },
+      "next_action": "Engineering separation distances and fire exposure remain unassessed."
+    },
+    {
+      "id": "SH-READY:SH-IND-FAC-RAW-TRUCK:interior-readiness",
+      "scope": "SH-IND-FAC-RAW-TRUCK",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "No owned/modelled interior geometry is supplied; external providers and unresolved sites are not fabricated.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-IND-FAC-RAW-TRUCK",
+        "status": "SYNTHETIC_OPERATING",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+        "exemption": "Heavy-haul staging established; no enclosed building supplied. Mechanic allocation does not establish an additional workshop building."
+      },
+      "next_action": "Retain the context-only boundary until an authorized interior source exists."
+    },
+    {
+      "id": "SH-READY:SH-IND-FAC-RAW-TRUCK:service-pedestrian-crossings",
+      "scope": "SH-IND-FAC-RAW-TRUCK",
+      "severity": "INFO",
+      "outcome": "PASS",
+      "basis": "Intersection of drawn route centre-lines is a coordination trigger; grade, widths, timing and controls are unknown.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-IND-FAC-RAW-TRUCK",
+        "status": "SYNTHETIC_OPERATING",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+        "crossing_routes": [],
+        "service_route": [
+          [
+            101.784,
+            0
+          ],
+          [
+            101.784,
+            25
+          ]
+        ]
+      },
+      "next_action": "Confirm swept paths, loading geometry and pedestrian controls; unrecorded routes are not assumed clear."
+    },
+    {
+      "id": "SH-READY:SH-IND-FAC-RAW-WAREHOUSE-B01-L01:accessibility-evidence",
+      "scope": "SH-IND-FAC-RAW-WAREHOUSE-B01-L01",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Lift and accessible-room labels are evidence inventory only; no complete step-free route, turning-space or accessible-facility assessment is encoded.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-IND-FAC-RAW-WAREHOUSE",
+        "status": "SYNTHETIC_OPERATING",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+        "floor_id": "SH-IND-FAC-RAW-WAREHOUSE-B01-L01",
+        "lift_labels": [],
+        "accessible_room_labels": []
+      },
+      "next_action": "Provide coordinated step-free routes, levels, clearances and accessible facility details for qualified review."
+    },
+    {
+      "id": "SH-READY:SH-IND-FAC-RAW-WAREHOUSE-B01-L01:door-circulation-access",
+      "scope": "SH-IND-FAC-RAW-WAREHOUSE-B01-L01",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires explicit review, not an invented route.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-IND-FAC-RAW-WAREHOUSE",
+        "status": "SYNTHETIC_OPERATING",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+        "floor_id": "SH-IND-FAC-RAW-WAREHOUSE-B01-L01",
+        "missing_doors": [
+          "SH-IND-FAC-RAW-WAREHOUSE-B01-L01-R01",
+          "SH-IND-FAC-RAW-WAREHOUSE-B01-L01-R02",
+          "SH-IND-FAC-RAW-WAREHOUSE-B01-L01-R03",
+          "SH-IND-FAC-RAW-WAREHOUSE-B01-L01-R04",
+          "SH-IND-FAC-RAW-WAREHOUSE-B01-L01-R05",
+          "SH-IND-FAC-RAW-WAREHOUSE-B01-L01-R06"
+        ],
+        "invalid_doors": [],
+        "no_direct_circulation": []
+      },
+      "next_action": "Record missing routes and resolve invalid doors; review indirect access and full opening/swing clearances."
+    },
+    {
+      "id": "SH-READY:SH-IND-FAC-RAW-WAREHOUSE-B01-L01:egress-engineering",
+      "scope": "SH-IND-FAC-RAW-WAREHOUSE-B01-L01",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Concept stairs/exterior doors do not establish exit capacity, travel distance, protection, discharge or emergency operation.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-IND-FAC-RAW-WAREHOUSE",
+        "status": "SYNTHETIC_OPERATING",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+        "floor_id": "SH-IND-FAC-RAW-WAREHOUSE-B01-L01",
+        "stair_labels": [],
+        "exterior_door_count": 0,
+        "planned_peak": 4,
+        "core_basis": "Single level with direct perimeter exits; wet/service zone reserved in support band. No automatic office core. Floor level/accessibility and rated egress design unverified."
+      },
+      "next_action": "Commission occupancy-specific egress and emergency-access review; no legal thresholds are applied here."
+    },
+    {
+      "id": "SH-READY:SH-IND-FAC-RAW-WAREHOUSE-B01:fixed-core-stacking",
+      "scope": "SH-IND-FAC-RAW-WAREHOUSE-B01",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "A building-level core template is inherited by every floor; explicit floor overrides must match. Implicit renderer cores are not source evidence.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-IND-FAC-RAW-WAREHOUSE",
+        "status": "SYNTHETIC_OPERATING",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+        "building_id": "SH-IND-FAC-RAW-WAREHOUSE-B01",
+        "core_template": [],
+        "mismatched_floors": [],
+        "core_basis": "Single level with direct perimeter exits; wet/service zone reserved in support band. No automatic office core. Floor level/accessibility and rated egress design unverified."
+      },
+      "next_action": "Confirm structural, shaft and service continuity in engineering design."
+    },
+    {
+      "id": "SH-READY:SH-IND-FAC-RAW-WAREHOUSE:adjacency-intent",
+      "scope": "SH-IND-FAC-RAW-WAREHOUSE",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Presence of explicit functional adjacency/separation intent only; relationships are not inferred from proximity.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-IND-FAC-RAW-WAREHOUSE",
+        "status": "SYNTHETIC_OPERATING",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+        "relationships": []
+      },
+      "next_action": "Record intended adjacency and separation relationships before assessing them."
+    },
+    {
+      "id": "SH-READY:SH-IND-FAC-RAW-WAREHOUSE:building-separation",
+      "scope": "SH-IND-FAC-RAW-WAREHOUSE",
+      "severity": "INFO",
+      "outcome": "PASS",
+      "basis": "Concept footprints must not overlap in a common local coordinate frame; no minimum separation distance is asserted.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-IND-FAC-RAW-WAREHOUSE",
+        "status": "SYNTHETIC_OPERATING",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+        "overlapping_buildings": []
+      },
+      "next_action": "Engineering separation distances and fire exposure remain unassessed."
+    },
+    {
+      "id": "SH-READY:SH-IND-FAC-RAW-WAREHOUSE:service-pedestrian-crossings",
+      "scope": "SH-IND-FAC-RAW-WAREHOUSE",
+      "severity": "INFO",
+      "outcome": "PASS",
+      "basis": "Intersection of drawn route centre-lines is a coordination trigger; grade, widths, timing and controls are unknown.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-IND-FAC-RAW-WAREHOUSE",
+        "status": "SYNTHETIC_OPERATING",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+        "crossing_routes": [],
+        "service_route": [
+          [
+            134.6472,
+            0
+          ],
+          [
+            134.6472,
+            25
+          ]
+        ]
+      },
+      "next_action": "Confirm swept paths, loading geometry and pedestrian controls; unrecorded routes are not assumed clear."
+    },
+    {
+      "id": "SH-READY:SH-IND-FAC-RW-RECEIVING:adjacency-intent",
+      "scope": "SH-IND-FAC-RW-RECEIVING",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Presence of explicit functional adjacency/separation intent only; relationships are not inferred from proximity.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-IND-FAC-RW-RECEIVING",
+        "status": "SYNTHETIC_IN_SERVICE_2026_07_07",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+        "relationships": []
+      },
+      "next_action": "Record intended adjacency and separation relationships before assessing them."
+    },
+    {
+      "id": "SH-READY:SH-IND-FAC-RW-RECEIVING:building-separation",
+      "scope": "SH-IND-FAC-RW-RECEIVING",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Concept footprints must not overlap in a common local coordinate frame; no minimum separation distance is asserted.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-IND-FAC-RW-RECEIVING",
+        "status": "SYNTHETIC_IN_SERVICE_2026_07_07",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+        "overlapping_buildings": []
+      },
+      "next_action": "Engineering separation distances and fire exposure remain unassessed."
+    },
+    {
+      "id": "SH-READY:SH-IND-FAC-RW-RECEIVING:interior-readiness",
+      "scope": "SH-IND-FAC-RW-RECEIVING",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "No owned/modelled interior geometry is supplied; external providers and unresolved sites are not fabricated.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-IND-FAC-RW-RECEIVING",
+        "status": "SYNTHETIC_IN_SERVICE_2026_07_07",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+        "exemption": "Receiving, acid/binder storage, scales and MRO functions established; equipment and occupied-building geometry unknown. Safety/engineering layer explicitly unresolved; no fabricated tanks or underground works."
+      },
+      "next_action": "Retain the context-only boundary until an authorized interior source exists."
+    },
+    {
+      "id": "SH-READY:SH-IND-FAC-RW-RECEIVING:service-pedestrian-crossings",
+      "scope": "SH-IND-FAC-RW-RECEIVING",
+      "severity": "INFO",
+      "outcome": "PASS",
+      "basis": "Intersection of drawn route centre-lines is a coordination trigger; grade, widths, timing and controls are unknown.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-IND-FAC-RW-RECEIVING",
+        "status": "SYNTHETIC_IN_SERVICE_2026_07_07",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+        "crossing_routes": [],
+        "service_route": [
+          [
+            190.42000000000002,
+            0
+          ],
+          [
+            190.42000000000002,
+            25
+          ]
+        ]
+      },
+      "next_action": "Confirm swept paths, loading geometry and pedestrian controls; unrecorded routes are not assumed clear."
+    },
+    {
+      "id": "SH-READY:SH-IND-FAC-TAY-TERMINAL:adjacency-intent",
+      "scope": "SH-IND-FAC-TAY-TERMINAL",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Presence of explicit functional adjacency/separation intent only; relationships are not inferred from proximity.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-IND-FAC-TAY-TERMINAL",
+        "status": "SYNTHETIC_OPERATING",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+        "relationships": []
+      },
+      "next_action": "Record intended adjacency and separation relationships before assessing them."
+    },
+    {
+      "id": "SH-READY:SH-IND-FAC-TAY-TERMINAL:building-separation",
+      "scope": "SH-IND-FAC-TAY-TERMINAL",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Concept footprints must not overlap in a common local coordinate frame; no minimum separation distance is asserted.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-IND-FAC-TAY-TERMINAL",
+        "status": "SYNTHETIC_OPERATING",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+        "overlapping_buildings": []
+      },
+      "next_action": "Engineering separation distances and fire exposure remain unassessed."
+    },
+    {
+      "id": "SH-READY:SH-IND-FAC-TAY-TERMINAL:interior-readiness",
+      "scope": "SH-IND-FAC-TAY-TERMINAL",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "No owned/modelled interior geometry is supplied; external providers and unresolved sites are not fabricated.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-IND-FAC-TAY-TERMINAL",
+        "status": "SYNTHETIC_OPERATING",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+        "exemption": "General and segregated liquid transload functions established, but no occupied building envelope supplied. Site handling zones are conceptual; no tank, pipe, containment sizing or installation inferred."
+      },
+      "next_action": "Retain the context-only boundary until an authorized interior source exists."
+    },
+    {
+      "id": "SH-READY:SH-IND-FAC-TAY-TERMINAL:service-pedestrian-crossings",
+      "scope": "SH-IND-FAC-TAY-TERMINAL",
+      "severity": "INFO",
+      "outcome": "PASS",
+      "basis": "Intersection of drawn route centre-lines is a coordination trigger; grade, widths, timing and controls are unknown.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-IND-FAC-TAY-TERMINAL",
+        "status": "SYNTHETIC_OPERATING",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+        "crossing_routes": [],
+        "service_route": [
+          [
+            345.16560000000004,
+            0
+          ],
+          [
+            345.16560000000004,
+            25
+          ]
+        ]
+      },
+      "next_action": "Confirm swept paths, loading geometry and pedestrian controls; unrecorded routes are not assumed clear."
+    },
+    {
+      "id": "SH-READY:SH-IND-FAC-TAY-TRUCK-B01-L01:accessibility-evidence",
+      "scope": "SH-IND-FAC-TAY-TRUCK-B01-L01",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Lift and accessible-room labels are evidence inventory only; no complete step-free route, turning-space or accessible-facility assessment is encoded.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-IND-FAC-TAY-TRUCK",
+        "status": "SYNTHETIC_OPERATING",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+        "floor_id": "SH-IND-FAC-TAY-TRUCK-B01-L01",
+        "lift_labels": [],
+        "accessible_room_labels": []
+      },
+      "next_action": "Provide coordinated step-free routes, levels, clearances and accessible facility details for qualified review."
+    },
+    {
+      "id": "SH-READY:SH-IND-FAC-TAY-TRUCK-B01-L01:door-circulation-access",
+      "scope": "SH-IND-FAC-TAY-TRUCK-B01-L01",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires explicit review, not an invented route.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-IND-FAC-TAY-TRUCK",
+        "status": "SYNTHETIC_OPERATING",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+        "floor_id": "SH-IND-FAC-TAY-TRUCK-B01-L01",
+        "missing_doors": [
+          "SH-IND-FAC-TAY-TRUCK-B01-L01-R01",
+          "SH-IND-FAC-TAY-TRUCK-B01-L01-R02",
+          "SH-IND-FAC-TAY-TRUCK-B01-L01-R03",
+          "SH-IND-FAC-TAY-TRUCK-B01-L01-R04"
+        ],
+        "invalid_doors": [],
+        "no_direct_circulation": []
+      },
+      "next_action": "Record missing routes and resolve invalid doors; review indirect access and full opening/swing clearances."
+    },
+    {
+      "id": "SH-READY:SH-IND-FAC-TAY-TRUCK-B01-L01:egress-engineering",
+      "scope": "SH-IND-FAC-TAY-TRUCK-B01-L01",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Concept stairs/exterior doors do not establish exit capacity, travel distance, protection, discharge or emergency operation.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-IND-FAC-TAY-TRUCK",
+        "status": "SYNTHETIC_OPERATING",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+        "floor_id": "SH-IND-FAC-TAY-TRUCK-B01-L01",
+        "stair_labels": [],
+        "exterior_door_count": 0,
+        "planned_peak": 8,
+        "core_basis": "Single level with direct perimeter exits; wet/service zone reserved in support band. No automatic office core. Floor level/accessibility and rated egress design unverified."
+      },
+      "next_action": "Commission occupancy-specific egress and emergency-access review; no legal thresholds are applied here."
+    },
+    {
+      "id": "SH-READY:SH-IND-FAC-TAY-TRUCK-B01:fixed-core-stacking",
+      "scope": "SH-IND-FAC-TAY-TRUCK-B01",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "A building-level core template is inherited by every floor; explicit floor overrides must match. Implicit renderer cores are not source evidence.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-IND-FAC-TAY-TRUCK",
+        "status": "SYNTHETIC_OPERATING",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+        "building_id": "SH-IND-FAC-TAY-TRUCK-B01",
+        "core_template": [],
+        "mismatched_floors": [],
+        "core_basis": "Single level with direct perimeter exits; wet/service zone reserved in support band. No automatic office core. Floor level/accessibility and rated egress design unverified."
+      },
+      "next_action": "Confirm structural, shaft and service continuity in engineering design."
+    },
+    {
+      "id": "SH-READY:SH-IND-FAC-TAY-TRUCK:adjacency-intent",
+      "scope": "SH-IND-FAC-TAY-TRUCK",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Presence of explicit functional adjacency/separation intent only; relationships are not inferred from proximity.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-IND-FAC-TAY-TRUCK",
+        "status": "SYNTHETIC_OPERATING",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+        "relationships": []
+      },
+      "next_action": "Record intended adjacency and separation relationships before assessing them."
+    },
+    {
+      "id": "SH-READY:SH-IND-FAC-TAY-TRUCK:building-separation",
+      "scope": "SH-IND-FAC-TAY-TRUCK",
+      "severity": "INFO",
+      "outcome": "PASS",
+      "basis": "Concept footprints must not overlap in a common local coordinate frame; no minimum separation distance is asserted.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-IND-FAC-TAY-TRUCK",
+        "status": "SYNTHETIC_OPERATING",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+        "overlapping_buildings": []
+      },
+      "next_action": "Engineering separation distances and fire exposure remain unassessed."
+    },
+    {
+      "id": "SH-READY:SH-IND-FAC-TAY-TRUCK:service-pedestrian-crossings",
+      "scope": "SH-IND-FAC-TAY-TRUCK",
+      "severity": "INFO",
+      "outcome": "PASS",
+      "basis": "Intersection of drawn route centre-lines is a coordination trigger; grade, widths, timing and controls are unknown.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-IND-FAC-TAY-TRUCK",
+        "status": "SYNTHETIC_OPERATING",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+        "crossing_routes": [],
+        "service_route": [
+          [
+            143.94400000000002,
+            0
+          ],
+          [
+            143.94400000000002,
+            25
+          ]
+        ]
+      },
+      "next_action": "Confirm swept paths, loading geometry and pedestrian controls; unrecorded routes are not assumed clear."
+    },
+    {
+      "id": "SH-READY:SH-IND-FAC-TAY-WAREHOUSE-B01-L01:accessibility-evidence",
+      "scope": "SH-IND-FAC-TAY-WAREHOUSE-B01-L01",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Lift and accessible-room labels are evidence inventory only; no complete step-free route, turning-space or accessible-facility assessment is encoded.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-IND-FAC-TAY-WAREHOUSE",
+        "status": "SYNTHETIC_OPERATING",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+        "floor_id": "SH-IND-FAC-TAY-WAREHOUSE-B01-L01",
+        "lift_labels": [],
+        "accessible_room_labels": []
+      },
+      "next_action": "Provide coordinated step-free routes, levels, clearances and accessible facility details for qualified review."
+    },
+    {
+      "id": "SH-READY:SH-IND-FAC-TAY-WAREHOUSE-B01-L01:door-circulation-access",
+      "scope": "SH-IND-FAC-TAY-WAREHOUSE-B01-L01",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires explicit review, not an invented route.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-IND-FAC-TAY-WAREHOUSE",
+        "status": "SYNTHETIC_OPERATING",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+        "floor_id": "SH-IND-FAC-TAY-WAREHOUSE-B01-L01",
+        "missing_doors": [
+          "SH-IND-FAC-TAY-WAREHOUSE-B01-L01-R01",
+          "SH-IND-FAC-TAY-WAREHOUSE-B01-L01-R02",
+          "SH-IND-FAC-TAY-WAREHOUSE-B01-L01-R03",
+          "SH-IND-FAC-TAY-WAREHOUSE-B01-L01-R04",
+          "SH-IND-FAC-TAY-WAREHOUSE-B01-L01-R05",
+          "SH-IND-FAC-TAY-WAREHOUSE-B01-L01-R06"
+        ],
+        "invalid_doors": [],
+        "no_direct_circulation": []
+      },
+      "next_action": "Record missing routes and resolve invalid doors; review indirect access and full opening/swing clearances."
+    },
+    {
+      "id": "SH-READY:SH-IND-FAC-TAY-WAREHOUSE-B01-L01:egress-engineering",
+      "scope": "SH-IND-FAC-TAY-WAREHOUSE-B01-L01",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Concept stairs/exterior doors do not establish exit capacity, travel distance, protection, discharge or emergency operation.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-IND-FAC-TAY-WAREHOUSE",
+        "status": "SYNTHETIC_OPERATING",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+        "floor_id": "SH-IND-FAC-TAY-WAREHOUSE-B01-L01",
+        "stair_labels": [],
+        "exterior_door_count": 0,
+        "planned_peak": 8,
+        "core_basis": "Single level with direct perimeter exits; wet/service zone reserved in support band. No automatic office core. Floor level/accessibility and rated egress design unverified."
+      },
+      "next_action": "Commission occupancy-specific egress and emergency-access review; no legal thresholds are applied here."
+    },
+    {
+      "id": "SH-READY:SH-IND-FAC-TAY-WAREHOUSE-B01:fixed-core-stacking",
+      "scope": "SH-IND-FAC-TAY-WAREHOUSE-B01",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "A building-level core template is inherited by every floor; explicit floor overrides must match. Implicit renderer cores are not source evidence.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-IND-FAC-TAY-WAREHOUSE",
+        "status": "SYNTHETIC_OPERATING",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+        "building_id": "SH-IND-FAC-TAY-WAREHOUSE-B01",
+        "core_template": [],
+        "mismatched_floors": [],
+        "core_basis": "Single level with direct perimeter exits; wet/service zone reserved in support band. No automatic office core. Floor level/accessibility and rated egress design unverified."
+      },
+      "next_action": "Confirm structural, shaft and service continuity in engineering design."
+    },
+    {
+      "id": "SH-READY:SH-IND-FAC-TAY-WAREHOUSE:adjacency-intent",
+      "scope": "SH-IND-FAC-TAY-WAREHOUSE",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Presence of explicit functional adjacency/separation intent only; relationships are not inferred from proximity.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-IND-FAC-TAY-WAREHOUSE",
+        "status": "SYNTHETIC_OPERATING",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+        "relationships": []
+      },
+      "next_action": "Record intended adjacency and separation relationships before assessing them."
+    },
+    {
+      "id": "SH-READY:SH-IND-FAC-TAY-WAREHOUSE:building-separation",
+      "scope": "SH-IND-FAC-TAY-WAREHOUSE",
+      "severity": "INFO",
+      "outcome": "PASS",
+      "basis": "Concept footprints must not overlap in a common local coordinate frame; no minimum separation distance is asserted.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-IND-FAC-TAY-WAREHOUSE",
+        "status": "SYNTHETIC_OPERATING",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+        "overlapping_buildings": []
+      },
+      "next_action": "Engineering separation distances and fire exposure remain unassessed."
+    },
+    {
+      "id": "SH-READY:SH-IND-FAC-TAY-WAREHOUSE:service-pedestrian-crossings",
+      "scope": "SH-IND-FAC-TAY-WAREHOUSE",
+      "severity": "INFO",
+      "outcome": "PASS",
+      "basis": "Intersection of drawn route centre-lines is a coordination trigger; grade, widths, timing and controls are unknown.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-IND-FAC-TAY-WAREHOUSE",
+        "status": "SYNTHETIC_OPERATING",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+        "crossing_routes": [],
+        "service_route": [
+          [
+            215.916,
+            0
+          ],
+          [
+            215.916,
+            25
+          ]
+        ]
+      },
+      "next_action": "Confirm swept paths, loading geometry and pedestrian controls; unrecorded routes are not assumed clear."
+    },
+    {
+      "id": "SH-READY:SH-IND-FAC-TAY-YARD-B01-L01:accessibility-evidence",
+      "scope": "SH-IND-FAC-TAY-YARD-B01-L01",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Lift and accessible-room labels are evidence inventory only; no complete step-free route, turning-space or accessible-facility assessment is encoded.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-IND-FAC-TAY-YARD",
+        "status": "SYNTHETIC_OPERATING",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+        "floor_id": "SH-IND-FAC-TAY-YARD-B01-L01",
+        "lift_labels": [],
+        "accessible_room_labels": []
+      },
+      "next_action": "Provide coordinated step-free routes, levels, clearances and accessible facility details for qualified review."
+    },
+    {
+      "id": "SH-READY:SH-IND-FAC-TAY-YARD-B01-L01:door-circulation-access",
+      "scope": "SH-IND-FAC-TAY-YARD-B01-L01",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires explicit review, not an invented route.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-IND-FAC-TAY-YARD",
+        "status": "SYNTHETIC_OPERATING",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+        "floor_id": "SH-IND-FAC-TAY-YARD-B01-L01",
+        "missing_doors": [
+          "SH-IND-FAC-TAY-YARD-B01-L01-R01",
+          "SH-IND-FAC-TAY-YARD-B01-L01-R02",
+          "SH-IND-FAC-TAY-YARD-B01-L01-R03"
+        ],
+        "invalid_doors": [],
+        "no_direct_circulation": []
+      },
+      "next_action": "Record missing routes and resolve invalid doors; review indirect access and full opening/swing clearances."
+    },
+    {
+      "id": "SH-READY:SH-IND-FAC-TAY-YARD-B01-L01:egress-engineering",
+      "scope": "SH-IND-FAC-TAY-YARD-B01-L01",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Concept stairs/exterior doors do not establish exit capacity, travel distance, protection, discharge or emergency operation.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-IND-FAC-TAY-YARD",
+        "status": "SYNTHETIC_OPERATING",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+        "floor_id": "SH-IND-FAC-TAY-YARD-B01-L01",
+        "stair_labels": [],
+        "exterior_door_count": 0,
+        "planned_peak": 10,
+        "core_basis": "Single level with direct perimeter exits; wet/service zone reserved in support band. No automatic office core. Floor level/accessibility and rated egress design unverified."
+      },
+      "next_action": "Commission occupancy-specific egress and emergency-access review; no legal thresholds are applied here."
+    },
+    {
+      "id": "SH-READY:SH-IND-FAC-TAY-YARD-B01:fixed-core-stacking",
+      "scope": "SH-IND-FAC-TAY-YARD-B01",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "A building-level core template is inherited by every floor; explicit floor overrides must match. Implicit renderer cores are not source evidence.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-IND-FAC-TAY-YARD",
+        "status": "SYNTHETIC_OPERATING",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+        "building_id": "SH-IND-FAC-TAY-YARD-B01",
+        "core_template": [],
+        "mismatched_floors": [],
+        "core_basis": "Single level with direct perimeter exits; wet/service zone reserved in support band. No automatic office core. Floor level/accessibility and rated egress design unverified."
+      },
+      "next_action": "Confirm structural, shaft and service continuity in engineering design."
+    },
+    {
+      "id": "SH-READY:SH-IND-FAC-TAY-YARD-B02-L01:accessibility-evidence",
+      "scope": "SH-IND-FAC-TAY-YARD-B02-L01",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Lift and accessible-room labels are evidence inventory only; no complete step-free route, turning-space or accessible-facility assessment is encoded.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-IND-FAC-TAY-YARD",
+        "status": "SYNTHETIC_OPERATING",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+        "floor_id": "SH-IND-FAC-TAY-YARD-B02-L01",
+        "lift_labels": [],
+        "accessible_room_labels": []
+      },
+      "next_action": "Provide coordinated step-free routes, levels, clearances and accessible facility details for qualified review."
+    },
+    {
+      "id": "SH-READY:SH-IND-FAC-TAY-YARD-B02-L01:door-circulation-access",
+      "scope": "SH-IND-FAC-TAY-YARD-B02-L01",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires explicit review, not an invented route.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-IND-FAC-TAY-YARD",
+        "status": "SYNTHETIC_OPERATING",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+        "floor_id": "SH-IND-FAC-TAY-YARD-B02-L01",
+        "missing_doors": [
+          "SH-IND-FAC-TAY-YARD-B02-L01-R01",
+          "SH-IND-FAC-TAY-YARD-B02-L01-R02",
+          "SH-IND-FAC-TAY-YARD-B02-L01-R03",
+          "SH-IND-FAC-TAY-YARD-B02-L01-R04",
+          "SH-IND-FAC-TAY-YARD-B02-L01-R05",
+          "SH-IND-FAC-TAY-YARD-B02-L01-R06"
+        ],
+        "invalid_doors": [],
+        "no_direct_circulation": []
+      },
+      "next_action": "Record missing routes and resolve invalid doors; review indirect access and full opening/swing clearances."
+    },
+    {
+      "id": "SH-READY:SH-IND-FAC-TAY-YARD-B02-L01:egress-engineering",
+      "scope": "SH-IND-FAC-TAY-YARD-B02-L01",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Concept stairs/exterior doors do not establish exit capacity, travel distance, protection, discharge or emergency operation.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-IND-FAC-TAY-YARD",
+        "status": "SYNTHETIC_OPERATING",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+        "floor_id": "SH-IND-FAC-TAY-YARD-B02-L01",
+        "stair_labels": [],
+        "exterior_door_count": 0,
+        "planned_peak": 20,
+        "core_basis": "Single level with direct perimeter exits; wet/service zone reserved in support band. No automatic office core. Floor level/accessibility and rated egress design unverified."
+      },
+      "next_action": "Commission occupancy-specific egress and emergency-access review; no legal thresholds are applied here."
+    },
+    {
+      "id": "SH-READY:SH-IND-FAC-TAY-YARD-B02:fixed-core-stacking",
+      "scope": "SH-IND-FAC-TAY-YARD-B02",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "A building-level core template is inherited by every floor; explicit floor overrides must match. Implicit renderer cores are not source evidence.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-IND-FAC-TAY-YARD",
+        "status": "SYNTHETIC_OPERATING",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+        "building_id": "SH-IND-FAC-TAY-YARD-B02",
+        "core_template": [],
+        "mismatched_floors": [],
+        "core_basis": "Single level with direct perimeter exits; wet/service zone reserved in support band. No automatic office core. Floor level/accessibility and rated egress design unverified."
+      },
+      "next_action": "Confirm structural, shaft and service continuity in engineering design."
+    },
+    {
+      "id": "SH-READY:SH-IND-FAC-TAY-YARD:adjacency-intent",
+      "scope": "SH-IND-FAC-TAY-YARD",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Presence of explicit functional adjacency/separation intent only; relationships are not inferred from proximity.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-IND-FAC-TAY-YARD",
+        "status": "SYNTHETIC_OPERATING",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+        "relationships": []
+      },
+      "next_action": "Record intended adjacency and separation relationships before assessing them."
+    },
+    {
+      "id": "SH-READY:SH-IND-FAC-TAY-YARD:building-separation",
+      "scope": "SH-IND-FAC-TAY-YARD",
+      "severity": "INFO",
+      "outcome": "PASS",
+      "basis": "Concept footprints must not overlap in a common local coordinate frame; no minimum separation distance is asserted.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-IND-FAC-TAY-YARD",
+        "status": "SYNTHETIC_OPERATING",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+        "overlapping_buildings": []
+      },
+      "next_action": "Engineering separation distances and fire exposure remain unassessed."
+    },
+    {
+      "id": "SH-READY:SH-IND-FAC-TAY-YARD:service-pedestrian-crossings",
+      "scope": "SH-IND-FAC-TAY-YARD",
+      "severity": "INFO",
+      "outcome": "PASS",
+      "basis": "Intersection of drawn route centre-lines is a coordination trigger; grade, widths, timing and controls are unknown.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-IND-FAC-TAY-YARD",
+        "status": "SYNTHETIC_OPERATING",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+        "crossing_routes": [],
+        "service_route": [
+          [
+            498.63680000000005,
+            0
+          ],
+          [
+            498.63680000000005,
+            25
+          ]
+        ]
+      },
+      "next_action": "Confirm swept paths, loading geometry and pedestrian controls; unrecorded routes are not assumed clear."
+    },
+    {
+      "id": "SH-READY:SH-IND-FAC-WAM-INT:adjacency-intent",
+      "scope": "SH-IND-FAC-WAM-INT",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Presence of explicit functional adjacency/separation intent only; relationships are not inferred from proximity.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-IND-FAC-WAM-INT",
+        "status": "SYNTHETIC_OPERATING",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+        "relationships": []
+      },
+      "next_action": "Record intended adjacency and separation relationships before assessing them."
+    },
+    {
+      "id": "SH-READY:SH-IND-FAC-WAM-INT:building-separation",
+      "scope": "SH-IND-FAC-WAM-INT",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Concept footprints must not overlap in a common local coordinate frame; no minimum separation distance is asserted.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-IND-FAC-WAM-INT",
+        "status": "SYNTHETIC_OPERATING",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+        "overlapping_buildings": []
+      },
+      "next_action": "Engineering separation distances and fire exposure remain unassessed."
+    },
+    {
+      "id": "SH-READY:SH-IND-FAC-WAM-INT:interior-readiness",
+      "scope": "SH-IND-FAC-WAM-INT",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "No owned/modelled interior geometry is supplied; external providers and unresolved sites are not fabricated.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-IND-FAC-WAM-INT",
+        "status": "SYNTHETIC_OPERATING",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+        "exemption": "Interchange tracks and protected transfer area established; no occupied building dimensions or count supported. Site/context plus track records suffice."
+      },
+      "next_action": "Retain the context-only boundary until an authorized interior source exists."
+    },
+    {
+      "id": "SH-READY:SH-IND-FAC-WAM-INT:service-pedestrian-crossings",
+      "scope": "SH-IND-FAC-WAM-INT",
+      "severity": "INFO",
+      "outcome": "PASS",
+      "basis": "Intersection of drawn route centre-lines is a coordination trigger; grade, widths, timing and controls are unknown.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-IND-FAC-WAM-INT",
+        "status": "SYNTHETIC_OPERATING",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+        "crossing_routes": [],
+        "service_route": [
+          [
+            373.9776,
+            0
+          ],
+          [
+            373.9776,
+            25
+          ]
+        ]
+      },
+      "next_action": "Confirm swept paths, loading geometry and pedestrian controls; unrecorded routes are not assumed clear."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0001-A-L01:accessibility-evidence",
+      "scope": "SH-SITE-0001-A-L01",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Lift and accessible-room labels are evidence inventory only; no complete step-free route, turning-space or accessible-facility assessment is encoded.",
+      "evidence": {
+        "source": "geospatial/facilities/source/campus.json",
+        "site_id": "SH-SITE-0001",
+        "status": "PROPOSED_MODELLED_PROGRAM_FROM_APPROVED_R01",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "floor_id": "SH-SITE-0001-A-L01",
+        "lift_labels": [
+          "Lift"
+        ],
+        "accessible_room_labels": []
+      },
+      "next_action": "Provide coordinated step-free routes, levels, clearances and accessible facility details for qualified review."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0001-A-L01:door-circulation-access",
+      "scope": "SH-SITE-0001-A-L01",
+      "severity": "WARNING",
+      "outcome": "REVIEW",
+      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires explicit review, not an invented route.",
+      "evidence": {
+        "source": "geospatial/facilities/source/campus.json",
+        "site_id": "SH-SITE-0001",
+        "status": "PROPOSED_MODELLED_PROGRAM_FROM_APPROVED_R01",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "floor_id": "SH-SITE-0001-A-L01",
+        "missing_doors": [],
+        "invalid_doors": [],
+        "no_direct_circulation": [
+          "SH-SITE-0001-A-L01-R01",
+          "SH-SITE-0001-A-L01-R02",
+          "SH-SITE-0001-A-L01-R03",
+          "SH-SITE-0001-A-L01-R04"
+        ]
+      },
+      "next_action": "Record missing routes and resolve invalid doors; review indirect access and full opening/swing clearances."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0001-A-L01:egress-engineering",
+      "scope": "SH-SITE-0001-A-L01",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Concept stairs/exterior doors do not establish exit capacity, travel distance, protection, discharge or emergency operation.",
+      "evidence": {
+        "source": "geospatial/facilities/source/campus.json",
+        "site_id": "SH-SITE-0001",
+        "status": "PROPOSED_MODELLED_PROGRAM_FROM_APPROVED_R01",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "floor_id": "SH-SITE-0001-A-L01",
+        "stair_labels": [
+          "ST-1",
+          "ST-2"
+        ],
+        "exterior_door_count": 2,
+        "planned_peak": 52,
+        "core_basis": "Explicit R01-based north-up core geometry; no automatic end-core overlay. All floor areas partition into rooms, fixed cores and circulation."
+      },
+      "next_action": "Commission occupancy-specific egress and emergency-access review; no legal thresholds are applied here."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0001-A-L02:accessibility-evidence",
+      "scope": "SH-SITE-0001-A-L02",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Lift and accessible-room labels are evidence inventory only; no complete step-free route, turning-space or accessible-facility assessment is encoded.",
+      "evidence": {
+        "source": "geospatial/facilities/source/campus.json",
+        "site_id": "SH-SITE-0001",
+        "status": "PROPOSED_MODELLED_PROGRAM_FROM_APPROVED_R01",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "floor_id": "SH-SITE-0001-A-L02",
+        "lift_labels": [
+          "Lift"
+        ],
+        "accessible_room_labels": []
+      },
+      "next_action": "Provide coordinated step-free routes, levels, clearances and accessible facility details for qualified review."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0001-A-L02:door-circulation-access",
+      "scope": "SH-SITE-0001-A-L02",
+      "severity": "WARNING",
+      "outcome": "REVIEW",
+      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires explicit review, not an invented route.",
+      "evidence": {
+        "source": "geospatial/facilities/source/campus.json",
+        "site_id": "SH-SITE-0001",
+        "status": "PROPOSED_MODELLED_PROGRAM_FROM_APPROVED_R01",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "floor_id": "SH-SITE-0001-A-L02",
+        "missing_doors": [],
+        "invalid_doors": [],
+        "no_direct_circulation": [
+          "SH-SITE-0001-A-L02-R01",
+          "SH-SITE-0001-A-L02-R02",
+          "SH-SITE-0001-A-L02-R03",
+          "SH-SITE-0001-A-L02-R04"
+        ]
+      },
+      "next_action": "Record missing routes and resolve invalid doors; review indirect access and full opening/swing clearances."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0001-A-L02:egress-engineering",
+      "scope": "SH-SITE-0001-A-L02",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Concept stairs/exterior doors do not establish exit capacity, travel distance, protection, discharge or emergency operation.",
+      "evidence": {
+        "source": "geospatial/facilities/source/campus.json",
+        "site_id": "SH-SITE-0001",
+        "status": "PROPOSED_MODELLED_PROGRAM_FROM_APPROVED_R01",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "floor_id": "SH-SITE-0001-A-L02",
+        "stair_labels": [
+          "ST-1",
+          "ST-2"
+        ],
+        "exterior_door_count": 0,
+        "planned_peak": 112,
+        "core_basis": "Explicit R01-based north-up core geometry; no automatic end-core overlay. All floor areas partition into rooms, fixed cores and circulation."
+      },
+      "next_action": "Commission occupancy-specific egress and emergency-access review; no legal thresholds are applied here."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0001-A-L03:accessibility-evidence",
+      "scope": "SH-SITE-0001-A-L03",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Lift and accessible-room labels are evidence inventory only; no complete step-free route, turning-space or accessible-facility assessment is encoded.",
+      "evidence": {
+        "source": "geospatial/facilities/source/campus.json",
+        "site_id": "SH-SITE-0001",
+        "status": "PROPOSED_MODELLED_PROGRAM_FROM_APPROVED_R01",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "floor_id": "SH-SITE-0001-A-L03",
+        "lift_labels": [
+          "Lift"
+        ],
+        "accessible_room_labels": []
+      },
+      "next_action": "Provide coordinated step-free routes, levels, clearances and accessible facility details for qualified review."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0001-A-L03:door-circulation-access",
+      "scope": "SH-SITE-0001-A-L03",
+      "severity": "WARNING",
+      "outcome": "REVIEW",
+      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires explicit review, not an invented route.",
+      "evidence": {
+        "source": "geospatial/facilities/source/campus.json",
+        "site_id": "SH-SITE-0001",
+        "status": "PROPOSED_MODELLED_PROGRAM_FROM_APPROVED_R01",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "floor_id": "SH-SITE-0001-A-L03",
+        "missing_doors": [],
+        "invalid_doors": [],
+        "no_direct_circulation": [
+          "SH-SITE-0001-A-L03-R01",
+          "SH-SITE-0001-A-L03-R02",
+          "SH-SITE-0001-A-L03-R03",
+          "SH-SITE-0001-A-L03-R04"
+        ]
+      },
+      "next_action": "Record missing routes and resolve invalid doors; review indirect access and full opening/swing clearances."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0001-A-L03:egress-engineering",
+      "scope": "SH-SITE-0001-A-L03",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Concept stairs/exterior doors do not establish exit capacity, travel distance, protection, discharge or emergency operation.",
+      "evidence": {
+        "source": "geospatial/facilities/source/campus.json",
+        "site_id": "SH-SITE-0001",
+        "status": "PROPOSED_MODELLED_PROGRAM_FROM_APPROVED_R01",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "floor_id": "SH-SITE-0001-A-L03",
+        "stair_labels": [
+          "ST-1",
+          "ST-2"
+        ],
+        "exterior_door_count": 0,
+        "planned_peak": 48,
+        "core_basis": "Explicit R01-based north-up core geometry; no automatic end-core overlay. All floor areas partition into rooms, fixed cores and circulation."
+      },
+      "next_action": "Commission occupancy-specific egress and emergency-access review; no legal thresholds are applied here."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0001-A:fixed-core-stacking",
+      "scope": "SH-SITE-0001-A",
+      "severity": "INFO",
+      "outcome": "PASS",
+      "basis": "A building-level core template is inherited by every floor; explicit floor overrides must match. Implicit renderer cores are not source evidence.",
+      "evidence": {
+        "source": "geospatial/facilities/source/campus.json",
+        "site_id": "SH-SITE-0001",
+        "status": "PROPOSED_MODELLED_PROGRAM_FROM_APPROVED_R01",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "building_id": "SH-SITE-0001-A",
+        "core_template": [
+          {
+            "name": "ST-1",
+            "type": "stair",
+            "rect_ft": [
+              0,
+              42,
+              18,
+              24
+            ],
+            "rect_m": [
+              0.0,
+              12.8016,
+              5.4864,
+              7.3152
+            ]
+          },
+          {
+            "name": "ST-2",
+            "type": "stair",
+            "rect_ft": [
+              198,
+              42,
+              18,
+              24
+            ],
+            "rect_m": [
+              60.3504,
+              12.8016,
+              5.4864,
+              7.3152
+            ]
+          },
+          {
+            "name": "Support / AV / print / store",
+            "type": "service",
+            "rect_ft": [
+              0,
+              0,
+              18,
+              42
+            ],
+            "rect_m": [
+              0.0,
+              0.0,
+              5.4864,
+              12.8016
+            ],
+            "display_name": "Support",
+            "display_detail": "AV / print / store"
+          },
+          {
+            "name": "Support / AV / print / store",
+            "type": "service",
+            "rect_ft": [
+              198,
+              0,
+              18,
+              42
+            ],
+            "rect_m": [
+              60.3504,
+              0.0,
+              5.4864,
+              12.8016
+            ],
+            "display_name": "Support",
+            "display_detail": "AV / print / store"
+          },
+          {
+            "name": "WC north",
+            "type": "wc",
+            "rect_ft": [
+              90,
+              24,
+              12,
+              24
+            ],
+            "rect_m": [
+              27.432,
+              7.3152,
+              3.6576,
+              7.3152
+            ],
+            "display_name": "WC"
+          },
+          {
+            "name": "WC south",
+            "type": "wc",
+            "rect_ft": [
+              90,
+              0,
+              12,
+              24
+            ],
+            "rect_m": [
+              27.432,
+              0.0,
+              3.6576,
+              7.3152
+            ],
+            "display_name": "WC"
+          },
+          {
+            "name": "Lift",
+            "type": "lift",
+            "rect_ft": [
+              114,
+              34,
+              12,
+              14
+            ],
+            "rect_m": [
+              34.7472,
+              10.3632,
+              3.6576,
+              4.2672
+            ]
+          },
+          {
+            "name": "Riser",
+            "type": "riser",
+            "rect_ft": [
+              114,
+              24,
+              12,
+              10
+            ],
+            "rect_m": [
+              34.7472,
+              7.3152,
+              3.6576,
+              3.048
+            ]
+          },
+          {
+            "name": "IT / AV / local edge",
+            "type": "service",
+            "rect_ft": [
+              114,
+              0,
+              12,
+              24
+            ],
+            "rect_m": [
+              34.7472,
+              0.0,
+              3.6576,
+              7.3152
+            ],
+            "display_name": "IT / AV"
+          }
+        ],
+        "mismatched_floors": [],
+        "core_basis": "Explicit R01-based north-up core geometry; no automatic end-core overlay. All floor areas partition into rooms, fixed cores and circulation."
+      },
+      "next_action": "Confirm structural, shaft and service continuity in engineering design."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0001-B-L01:accessibility-evidence",
+      "scope": "SH-SITE-0001-B-L01",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Lift and accessible-room labels are evidence inventory only; no complete step-free route, turning-space or accessible-facility assessment is encoded.",
+      "evidence": {
+        "source": "geospatial/facilities/source/campus.json",
+        "site_id": "SH-SITE-0001",
+        "status": "PROPOSED_MODELLED_PROGRAM_FROM_APPROVED_R01",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "floor_id": "SH-SITE-0001-B-L01",
+        "lift_labels": [
+          "Lift"
+        ],
+        "accessible_room_labels": []
+      },
+      "next_action": "Provide coordinated step-free routes, levels, clearances and accessible facility details for qualified review."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0001-B-L01:door-circulation-access",
+      "scope": "SH-SITE-0001-B-L01",
+      "severity": "WARNING",
+      "outcome": "REVIEW",
+      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires explicit review, not an invented route.",
+      "evidence": {
+        "source": "geospatial/facilities/source/campus.json",
+        "site_id": "SH-SITE-0001",
+        "status": "PROPOSED_MODELLED_PROGRAM_FROM_APPROVED_R01",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "floor_id": "SH-SITE-0001-B-L01",
+        "missing_doors": [],
+        "invalid_doors": [],
+        "no_direct_circulation": [
+          "SH-SITE-0001-B-L01-R05",
+          "SH-SITE-0001-B-L01-R06",
+          "SH-SITE-0001-B-L01-R09",
+          "SH-SITE-0001-B-L01-R10"
+        ]
+      },
+      "next_action": "Record missing routes and resolve invalid doors; review indirect access and full opening/swing clearances."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0001-B-L01:egress-engineering",
+      "scope": "SH-SITE-0001-B-L01",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Concept stairs/exterior doors do not establish exit capacity, travel distance, protection, discharge or emergency operation.",
+      "evidence": {
+        "source": "geospatial/facilities/source/campus.json",
+        "site_id": "SH-SITE-0001",
+        "status": "PROPOSED_MODELLED_PROGRAM_FROM_APPROVED_R01",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "floor_id": "SH-SITE-0001-B-L01",
+        "stair_labels": [
+          "ST-1",
+          "ST-2"
+        ],
+        "exterior_door_count": 3,
+        "planned_peak": 68,
+        "core_basis": "Explicit R01-based north-up core geometry; no automatic end-core overlay. All floor areas partition into rooms, fixed cores and circulation."
+      },
+      "next_action": "Commission occupancy-specific egress and emergency-access review; no legal thresholds are applied here."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0001-B-L02:accessibility-evidence",
+      "scope": "SH-SITE-0001-B-L02",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Lift and accessible-room labels are evidence inventory only; no complete step-free route, turning-space or accessible-facility assessment is encoded.",
+      "evidence": {
+        "source": "geospatial/facilities/source/campus.json",
+        "site_id": "SH-SITE-0001",
+        "status": "PROPOSED_MODELLED_PROGRAM_FROM_APPROVED_R01",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "floor_id": "SH-SITE-0001-B-L02",
+        "lift_labels": [
+          "Lift"
+        ],
+        "accessible_room_labels": []
+      },
+      "next_action": "Provide coordinated step-free routes, levels, clearances and accessible facility details for qualified review."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0001-B-L02:door-circulation-access",
+      "scope": "SH-SITE-0001-B-L02",
+      "severity": "WARNING",
+      "outcome": "REVIEW",
+      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires explicit review, not an invented route.",
+      "evidence": {
+        "source": "geospatial/facilities/source/campus.json",
+        "site_id": "SH-SITE-0001",
+        "status": "PROPOSED_MODELLED_PROGRAM_FROM_APPROVED_R01",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "floor_id": "SH-SITE-0001-B-L02",
+        "missing_doors": [],
+        "invalid_doors": [],
+        "no_direct_circulation": [
+          "SH-SITE-0001-B-L02-R05",
+          "SH-SITE-0001-B-L02-R06",
+          "SH-SITE-0001-B-L02-R09",
+          "SH-SITE-0001-B-L02-R10"
+        ]
+      },
+      "next_action": "Record missing routes and resolve invalid doors; review indirect access and full opening/swing clearances."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0001-B-L02:egress-engineering",
+      "scope": "SH-SITE-0001-B-L02",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Concept stairs/exterior doors do not establish exit capacity, travel distance, protection, discharge or emergency operation.",
+      "evidence": {
+        "source": "geospatial/facilities/source/campus.json",
+        "site_id": "SH-SITE-0001",
+        "status": "PROPOSED_MODELLED_PROGRAM_FROM_APPROVED_R01",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "floor_id": "SH-SITE-0001-B-L02",
+        "stair_labels": [
+          "ST-1",
+          "ST-2"
+        ],
+        "exterior_door_count": 0,
+        "planned_peak": 68,
+        "core_basis": "Explicit R01-based north-up core geometry; no automatic end-core overlay. All floor areas partition into rooms, fixed cores and circulation."
+      },
+      "next_action": "Commission occupancy-specific egress and emergency-access review; no legal thresholds are applied here."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0001-B:fixed-core-stacking",
+      "scope": "SH-SITE-0001-B",
+      "severity": "INFO",
+      "outcome": "PASS",
+      "basis": "A building-level core template is inherited by every floor; explicit floor overrides must match. Implicit renderer cores are not source evidence.",
+      "evidence": {
+        "source": "geospatial/facilities/source/campus.json",
+        "site_id": "SH-SITE-0001",
+        "status": "PROPOSED_MODELLED_PROGRAM_FROM_APPROVED_R01",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "building_id": "SH-SITE-0001-B",
+        "core_template": [
+          {
+            "name": "ST-1",
+            "type": "stair",
+            "rect_ft": [
+              0,
+              40,
+              18,
+              24
+            ],
+            "rect_m": [
+              0.0,
+              12.192,
+              5.4864,
+              7.3152
+            ]
+          },
+          {
+            "name": "ST-2",
+            "type": "stair",
+            "rect_ft": [
+              198,
+              40,
+              18,
+              24
+            ],
+            "rect_m": [
+              60.3504,
+              12.192,
+              5.4864,
+              7.3152
+            ]
+          },
+          {
+            "name": "Field lockers / kit",
+            "type": "service",
+            "rect_ft": [
+              0,
+              0,
+              18,
+              40
+            ],
+            "rect_m": [
+              0.0,
+              0.0,
+              5.4864,
+              12.192
+            ],
+            "display_name": "Field",
+            "display_detail": "lockers / kit"
+          },
+          {
+            "name": "Services / MEP / store",
+            "type": "service",
+            "rect_ft": [
+              198,
+              0,
+              18,
+              40
+            ],
+            "rect_m": [
+              60.3504,
+              0.0,
+              5.4864,
+              12.192
+            ],
+            "display_name": "Services",
+            "display_detail": "MEP / store"
+          },
+          {
+            "name": "WC",
+            "type": "wc",
+            "rect_ft": [
+              90,
+              22,
+              12,
+              24
+            ],
+            "rect_m": [
+              27.432,
+              6.7056,
+              3.6576,
+              7.3152
+            ]
+          },
+          {
+            "name": "Lift",
+            "type": "lift",
+            "rect_ft": [
+              114,
+              32,
+              12,
+              14
+            ],
+            "rect_m": [
+              34.7472,
+              9.7536,
+              3.6576,
+              4.2672
+            ]
+          },
+          {
+            "name": "Riser",
+            "type": "riser",
+            "rect_ft": [
+              114,
+              22,
+              12,
+              10
+            ],
+            "rect_m": [
+              34.7472,
+              6.7056,
+              3.6576,
+              3.048
+            ]
+          }
+        ],
+        "mismatched_floors": [],
+        "core_basis": "Explicit R01-based north-up core geometry; no automatic end-core overlay. All floor areas partition into rooms, fixed cores and circulation."
+      },
+      "next_action": "Confirm structural, shaft and service continuity in engineering design."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0001-C-L01:accessibility-evidence",
+      "scope": "SH-SITE-0001-C-L01",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Lift and accessible-room labels are evidence inventory only; no complete step-free route, turning-space or accessible-facility assessment is encoded.",
+      "evidence": {
+        "source": "geospatial/facilities/source/campus.json",
+        "site_id": "SH-SITE-0001",
+        "status": "PROPOSED_MODELLED_PROGRAM_FROM_APPROVED_R01",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "floor_id": "SH-SITE-0001-C-L01",
+        "lift_labels": [
+          "Lift"
+        ],
+        "accessible_room_labels": []
+      },
+      "next_action": "Provide coordinated step-free routes, levels, clearances and accessible facility details for qualified review."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0001-C-L01:door-circulation-access",
+      "scope": "SH-SITE-0001-C-L01",
+      "severity": "WARNING",
+      "outcome": "REVIEW",
+      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires explicit review, not an invented route.",
+      "evidence": {
+        "source": "geospatial/facilities/source/campus.json",
+        "site_id": "SH-SITE-0001",
+        "status": "PROPOSED_MODELLED_PROGRAM_FROM_APPROVED_R01",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "floor_id": "SH-SITE-0001-C-L01",
+        "missing_doors": [],
+        "invalid_doors": [],
+        "no_direct_circulation": [
+          "SH-SITE-0001-C-L01-R06"
+        ]
+      },
+      "next_action": "Record missing routes and resolve invalid doors; review indirect access and full opening/swing clearances."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0001-C-L01:egress-engineering",
+      "scope": "SH-SITE-0001-C-L01",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Concept stairs/exterior doors do not establish exit capacity, travel distance, protection, discharge or emergency operation.",
+      "evidence": {
+        "source": "geospatial/facilities/source/campus.json",
+        "site_id": "SH-SITE-0001",
+        "status": "PROPOSED_MODELLED_PROGRAM_FROM_APPROVED_R01",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "floor_id": "SH-SITE-0001-C-L01",
+        "stair_labels": [
+          "ST-1",
+          "ST-2"
+        ],
+        "exterior_door_count": 2,
+        "planned_peak": 128,
+        "core_basis": "Explicit R01-based north-up core geometry; no automatic end-core overlay. All floor areas partition into rooms, fixed cores and circulation."
+      },
+      "next_action": "Commission occupancy-specific egress and emergency-access review; no legal thresholds are applied here."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0001-C-L02:accessibility-evidence",
+      "scope": "SH-SITE-0001-C-L02",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Lift and accessible-room labels are evidence inventory only; no complete step-free route, turning-space or accessible-facility assessment is encoded.",
+      "evidence": {
+        "source": "geospatial/facilities/source/campus.json",
+        "site_id": "SH-SITE-0001",
+        "status": "PROPOSED_MODELLED_PROGRAM_FROM_APPROVED_R01",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "floor_id": "SH-SITE-0001-C-L02",
+        "lift_labels": [
+          "Lift"
+        ],
+        "accessible_room_labels": []
+      },
+      "next_action": "Provide coordinated step-free routes, levels, clearances and accessible facility details for qualified review."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0001-C-L02:door-circulation-access",
+      "scope": "SH-SITE-0001-C-L02",
+      "severity": "INFO",
+      "outcome": "PASS",
+      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires explicit review, not an invented route.",
+      "evidence": {
+        "source": "geospatial/facilities/source/campus.json",
+        "site_id": "SH-SITE-0001",
+        "status": "PROPOSED_MODELLED_PROGRAM_FROM_APPROVED_R01",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "floor_id": "SH-SITE-0001-C-L02",
+        "missing_doors": [],
+        "invalid_doors": [],
+        "no_direct_circulation": []
+      },
+      "next_action": "Record missing routes and resolve invalid doors; review indirect access and full opening/swing clearances."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0001-C-L02:egress-engineering",
+      "scope": "SH-SITE-0001-C-L02",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Concept stairs/exterior doors do not establish exit capacity, travel distance, protection, discharge or emergency operation.",
+      "evidence": {
+        "source": "geospatial/facilities/source/campus.json",
+        "site_id": "SH-SITE-0001",
+        "status": "PROPOSED_MODELLED_PROGRAM_FROM_APPROVED_R01",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "floor_id": "SH-SITE-0001-C-L02",
+        "stair_labels": [
+          "ST-1",
+          "ST-2"
+        ],
+        "exterior_door_count": 0,
+        "planned_peak": 28,
+        "core_basis": "Explicit R01-based north-up core geometry; no automatic end-core overlay. All floor areas partition into rooms, fixed cores and circulation."
+      },
+      "next_action": "Commission occupancy-specific egress and emergency-access review; no legal thresholds are applied here."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0001-C:fixed-core-stacking",
+      "scope": "SH-SITE-0001-C",
+      "severity": "INFO",
+      "outcome": "PASS",
+      "basis": "A building-level core template is inherited by every floor; explicit floor overrides must match. Implicit renderer cores are not source evidence.",
+      "evidence": {
+        "source": "geospatial/facilities/source/campus.json",
+        "site_id": "SH-SITE-0001",
+        "status": "PROPOSED_MODELLED_PROGRAM_FROM_APPROVED_R01",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "building_id": "SH-SITE-0001-C",
+        "core_template": [
+          {
+            "name": "WC",
+            "type": "wc",
+            "rect_ft": [
+              0,
+              66,
+              16,
+              24
+            ],
+            "rect_m": [
+              0.0,
+              20.1168,
+              4.8768,
+              7.3152
+            ]
+          },
+          {
+            "name": "Lift",
+            "type": "lift",
+            "rect_ft": [
+              0,
+              50,
+              16,
+              16
+            ],
+            "rect_m": [
+              0.0,
+              15.24,
+              4.8768,
+              4.8768
+            ]
+          },
+          {
+            "name": "Risers",
+            "type": "riser",
+            "rect_ft": [
+              160,
+              50,
+              8,
+              40
+            ],
+            "rect_m": [
+              48.768,
+              15.24,
+              2.4384,
+              12.192
+            ]
+          },
+          {
+            "name": "ST-1",
+            "type": "stair",
+            "rect_ft": [
+              0,
+              16,
+              16,
+              24
+            ],
+            "rect_m": [
+              0.0,
+              4.8768,
+              4.8768,
+              7.3152
+            ]
+          },
+          {
+            "name": "ST-2",
+            "type": "stair",
+            "rect_ft": [
+              152,
+              16,
+              16,
+              24
+            ],
+            "rect_m": [
+              46.3296,
+              4.8768,
+              4.8768,
+              7.3152
+            ]
+          },
+          {
+            "name": "Store",
+            "type": "service",
+            "rect_ft": [
+              0,
+              0,
+              16,
+              16
+            ],
+            "rect_m": [
+              0.0,
+              0.0,
+              4.8768,
+              4.8768
+            ]
+          },
+          {
+            "name": "Staff WC",
+            "type": "wc",
+            "rect_ft": [
+              152,
+              0,
+              16,
+              16
+            ],
+            "rect_m": [
+              46.3296,
+              0.0,
+              4.8768,
+              4.8768
+            ]
+          }
+        ],
+        "mismatched_floors": [],
+        "core_basis": "Explicit R01-based north-up core geometry; no automatic end-core overlay. All floor areas partition into rooms, fixed cores and circulation."
+      },
+      "next_action": "Confirm structural, shaft and service continuity in engineering design."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0001-D-L01:accessibility-evidence",
+      "scope": "SH-SITE-0001-D-L01",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Lift and accessible-room labels are evidence inventory only; no complete step-free route, turning-space or accessible-facility assessment is encoded.",
+      "evidence": {
+        "source": "geospatial/facilities/source/campus.json",
+        "site_id": "SH-SITE-0001",
+        "status": "PROPOSED_MODELLED_PROGRAM_FROM_APPROVED_R01",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "floor_id": "SH-SITE-0001-D-L01",
+        "lift_labels": [
+          "Lift / accessible lobby"
+        ],
+        "accessible_room_labels": []
+      },
+      "next_action": "Provide coordinated step-free routes, levels, clearances and accessible facility details for qualified review."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0001-D-L01:door-circulation-access",
+      "scope": "SH-SITE-0001-D-L01",
+      "severity": "INFO",
+      "outcome": "PASS",
+      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires explicit review, not an invented route.",
+      "evidence": {
+        "source": "geospatial/facilities/source/campus.json",
+        "site_id": "SH-SITE-0001",
+        "status": "PROPOSED_MODELLED_PROGRAM_FROM_APPROVED_R01",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "floor_id": "SH-SITE-0001-D-L01",
+        "missing_doors": [],
+        "invalid_doors": [],
+        "no_direct_circulation": []
+      },
+      "next_action": "Record missing routes and resolve invalid doors; review indirect access and full opening/swing clearances."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0001-D-L01:egress-engineering",
+      "scope": "SH-SITE-0001-D-L01",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Concept stairs/exterior doors do not establish exit capacity, travel distance, protection, discharge or emergency operation.",
+      "evidence": {
+        "source": "geospatial/facilities/source/campus.json",
+        "site_id": "SH-SITE-0001",
+        "status": "PROPOSED_MODELLED_PROGRAM_FROM_APPROVED_R01",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "floor_id": "SH-SITE-0001-D-L01",
+        "stair_labels": [
+          "ST-1",
+          "ST-2"
+        ],
+        "exterior_door_count": 2,
+        "planned_peak": 20,
+        "core_basis": "Explicit R01-based north-up core geometry; no automatic end-core overlay. All floor areas partition into rooms, fixed cores and circulation."
+      },
+      "next_action": "Commission occupancy-specific egress and emergency-access review; no legal thresholds are applied here."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0001-D-L02:accessibility-evidence",
+      "scope": "SH-SITE-0001-D-L02",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Lift and accessible-room labels are evidence inventory only; no complete step-free route, turning-space or accessible-facility assessment is encoded.",
+      "evidence": {
+        "source": "geospatial/facilities/source/campus.json",
+        "site_id": "SH-SITE-0001",
+        "status": "PROPOSED_MODELLED_PROGRAM_FROM_APPROVED_R01",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "floor_id": "SH-SITE-0001-D-L02",
+        "lift_labels": [
+          "Lift / accessible lobby"
+        ],
+        "accessible_room_labels": []
+      },
+      "next_action": "Provide coordinated step-free routes, levels, clearances and accessible facility details for qualified review."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0001-D-L02:door-circulation-access",
+      "scope": "SH-SITE-0001-D-L02",
+      "severity": "INFO",
+      "outcome": "PASS",
+      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires explicit review, not an invented route.",
+      "evidence": {
+        "source": "geospatial/facilities/source/campus.json",
+        "site_id": "SH-SITE-0001",
+        "status": "PROPOSED_MODELLED_PROGRAM_FROM_APPROVED_R01",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "floor_id": "SH-SITE-0001-D-L02",
+        "missing_doors": [],
+        "invalid_doors": [],
+        "no_direct_circulation": []
+      },
+      "next_action": "Record missing routes and resolve invalid doors; review indirect access and full opening/swing clearances."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0001-D-L02:egress-engineering",
+      "scope": "SH-SITE-0001-D-L02",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Concept stairs/exterior doors do not establish exit capacity, travel distance, protection, discharge or emergency operation.",
+      "evidence": {
+        "source": "geospatial/facilities/source/campus.json",
+        "site_id": "SH-SITE-0001",
+        "status": "PROPOSED_MODELLED_PROGRAM_FROM_APPROVED_R01",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "floor_id": "SH-SITE-0001-D-L02",
+        "stair_labels": [
+          "ST-1",
+          "ST-2"
+        ],
+        "exterior_door_count": 0,
+        "planned_peak": 20,
+        "core_basis": "Explicit R01-based north-up core geometry; no automatic end-core overlay. All floor areas partition into rooms, fixed cores and circulation."
+      },
+      "next_action": "Commission occupancy-specific egress and emergency-access review; no legal thresholds are applied here."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0001-D-L03:accessibility-evidence",
+      "scope": "SH-SITE-0001-D-L03",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Lift and accessible-room labels are evidence inventory only; no complete step-free route, turning-space or accessible-facility assessment is encoded.",
+      "evidence": {
+        "source": "geospatial/facilities/source/campus.json",
+        "site_id": "SH-SITE-0001",
+        "status": "PROPOSED_MODELLED_PROGRAM_FROM_APPROVED_R01",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "floor_id": "SH-SITE-0001-D-L03",
+        "lift_labels": [
+          "Lift / accessible lobby"
+        ],
+        "accessible_room_labels": []
+      },
+      "next_action": "Provide coordinated step-free routes, levels, clearances and accessible facility details for qualified review."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0001-D-L03:door-circulation-access",
+      "scope": "SH-SITE-0001-D-L03",
+      "severity": "INFO",
+      "outcome": "PASS",
+      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires explicit review, not an invented route.",
+      "evidence": {
+        "source": "geospatial/facilities/source/campus.json",
+        "site_id": "SH-SITE-0001",
+        "status": "PROPOSED_MODELLED_PROGRAM_FROM_APPROVED_R01",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "floor_id": "SH-SITE-0001-D-L03",
+        "missing_doors": [],
+        "invalid_doors": [],
+        "no_direct_circulation": []
+      },
+      "next_action": "Record missing routes and resolve invalid doors; review indirect access and full opening/swing clearances."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0001-D-L03:egress-engineering",
+      "scope": "SH-SITE-0001-D-L03",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Concept stairs/exterior doors do not establish exit capacity, travel distance, protection, discharge or emergency operation.",
+      "evidence": {
+        "source": "geospatial/facilities/source/campus.json",
+        "site_id": "SH-SITE-0001",
+        "status": "PROPOSED_MODELLED_PROGRAM_FROM_APPROVED_R01",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "floor_id": "SH-SITE-0001-D-L03",
+        "stair_labels": [
+          "ST-1",
+          "ST-2"
+        ],
+        "exterior_door_count": 0,
+        "planned_peak": 20,
+        "core_basis": "Explicit R01-based north-up core geometry; no automatic end-core overlay. All floor areas partition into rooms, fixed cores and circulation."
+      },
+      "next_action": "Commission occupancy-specific egress and emergency-access review; no legal thresholds are applied here."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0001-D:fixed-core-stacking",
+      "scope": "SH-SITE-0001-D",
+      "severity": "INFO",
+      "outcome": "PASS",
+      "basis": "A building-level core template is inherited by every floor; explicit floor overrides must match. Implicit renderer cores are not source evidence.",
+      "evidence": {
+        "source": "geospatial/facilities/source/campus.json",
+        "site_id": "SH-SITE-0001",
+        "status": "PROPOSED_MODELLED_PROGRAM_FROM_APPROVED_R01",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "building_id": "SH-SITE-0001-D",
+        "core_template": [
+          {
+            "name": "ST-1",
+            "type": "stair",
+            "rect_ft": [
+              0,
+              34,
+              20,
+              26
+            ],
+            "rect_m": [
+              0.0,
+              10.3632,
+              6.096,
+              7.9248
+            ]
+          },
+          {
+            "name": "ST-2",
+            "type": "stair",
+            "rect_ft": [
+              148,
+              34,
+              20,
+              26
+            ],
+            "rect_m": [
+              45.1104,
+              10.3632,
+              6.096,
+              7.9248
+            ]
+          },
+          {
+            "name": "Lift / accessible lobby",
+            "type": "lift",
+            "rect_ft": [
+              0,
+              0,
+              12,
+              26
+            ],
+            "rect_m": [
+              0.0,
+              0.0,
+              3.6576,
+              7.9248
+            ]
+          },
+          {
+            "name": "Linen / housekeeping",
+            "type": "service",
+            "rect_ft": [
+              12,
+              0,
+              8,
+              26
+            ],
+            "rect_m": [
+              3.6576,
+              0.0,
+              2.4384,
+              7.9248
+            ],
+            "display_name": "Linen"
+          },
+          {
+            "name": "Wet riser / linen / services",
+            "type": "service",
+            "rect_ft": [
+              148,
+              0,
+              20,
+              26
+            ],
+            "rect_m": [
+              45.1104,
+              0.0,
+              6.096,
+              7.9248
+            ]
+          }
+        ],
+        "mismatched_floors": [],
+        "core_basis": "Explicit R01-based north-up core geometry; no automatic end-core overlay. All floor areas partition into rooms, fixed cores and circulation."
+      },
+      "next_action": "Confirm structural, shaft and service continuity in engineering design."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0001:adjacency-intent",
+      "scope": "SH-SITE-0001",
+      "severity": "INFO",
+      "outcome": "PASS",
+      "basis": "Presence of explicit functional adjacency/separation intent only; relationships are not inferred from proximity.",
+      "evidence": {
+        "source": "geospatial/facilities/source/campus.json",
+        "site_id": "SH-SITE-0001",
+        "status": "PROPOSED_MODELLED_PROGRAM_FROM_APPROVED_R01",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "relationships": [
+          {
+            "a": "Corporate",
+            "b": "Education",
+            "relationship": "shared_hospitality_across_quad",
+            "reason": "One production kitchen in C serves C and A commons; catering via exterior service route."
+          },
+          {
+            "a": "J2",
+            "b": "Corporate",
+            "relationship": "separate_reception_and_institutional_boundary",
+            "reason": "J2 remains institutionally outside ESS; staff and visitors use controlled J2 threshold."
+          },
+          {
+            "a": "Education",
+            "b": "Residence",
+            "relationship": "quiet_residential_court",
+            "reason": "Separate educational and residential arrivals;48 resident trainees count inside 120 day learners."
+          },
+          {
+            "a": "Corporate",
+            "b": "J2",
+            "relationship": "central_quad_link",
+            "reason": "Coordination without making corporate or J2 premises a pass-through."
+          }
+        ]
+      },
+      "next_action": "Review declared relationships against operating and access workflows."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0001:building-separation",
+      "scope": "SH-SITE-0001",
+      "severity": "INFO",
+      "outcome": "PASS",
+      "basis": "Concept footprints must not overlap in a common local coordinate frame; no minimum separation distance is asserted.",
+      "evidence": {
+        "source": "geospatial/facilities/source/campus.json",
+        "site_id": "SH-SITE-0001",
+        "status": "PROPOSED_MODELLED_PROGRAM_FROM_APPROVED_R01",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "overlapping_buildings": []
+      },
+      "next_action": "Engineering separation distances and fire exposure remain unassessed."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0001:service-pedestrian-crossings",
+      "scope": "SH-SITE-0001",
+      "severity": "INFO",
+      "outcome": "PASS",
+      "basis": "Intersection of drawn route centre-lines is a coordination trigger; grade, widths, timing and controls are unknown.",
+      "evidence": {
+        "source": "geospatial/facilities/source/campus.json",
+        "site_id": "SH-SITE-0001",
+        "status": "PROPOSED_MODELLED_PROGRAM_FROM_APPROVED_R01",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "crossing_routes": [],
+        "service_route": [
+          [
+            242.9256,
+            48.1584
+          ],
+          [
+            198.7296,
+            48.1584
+          ],
+          [
+            184.7088,
+            51.816
+          ]
+        ]
+      },
+      "next_action": "Confirm swept paths, loading geometry and pedestrian controls; unrecorded routes are not assumed clear."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0003:adjacency-intent",
+      "scope": "SH-SITE-0003",
+      "severity": "INFO",
+      "outcome": "PASS",
+      "basis": "Presence of explicit functional adjacency/separation intent only; relationships are not inferred from proximity.",
+      "evidence": {
+        "source": "geospatial/facilities/source/research_campuses.json",
+        "site_id": "SH-SITE-0003",
+        "status": "PROPOSED_MODELLED_PROGRAM",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "relationships": [
+          {
+            "a": "The White Shed",
+            "b": "The Big Shed",
+            "relationship": "controlled_release",
+            "reason": "Equipment intake and quarantine precede research; a released transfer uses hardstand, not visitor reception."
+          },
+          {
+            "a": "The Small Shed",
+            "b": "The Big Shed",
+            "relationship": "pedestrian_link",
+            "reason": "Administration near research; guest circulation remains at the southern visitor edge."
+          },
+          {
+            "a": "The Museum",
+            "b": "Research hardstand",
+            "relationship": "outdoor_separation",
+            "reason": "Stored artifacts do not obstruct active trials, circulation or emergency access."
+          }
+        ]
+      },
+      "next_action": "Review declared relationships against operating and access workflows."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0003:building-separation",
+      "scope": "SH-SITE-0003",
+      "severity": "INFO",
+      "outcome": "PASS",
+      "basis": "Concept footprints must not overlap in a common local coordinate frame; no minimum separation distance is asserted.",
+      "evidence": {
+        "source": "geospatial/facilities/source/research_campuses.json",
+        "site_id": "SH-SITE-0003",
+        "status": "PROPOSED_MODELLED_PROGRAM",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "overlapping_buildings": []
+      },
+      "next_action": "Engineering separation distances and fire exposure remain unassessed."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0003:service-pedestrian-crossings",
+      "scope": "SH-SITE-0003",
+      "severity": "INFO",
+      "outcome": "PASS",
+      "basis": "Intersection of drawn route centre-lines is a coordination trigger; grade, widths, timing and controls are unknown.",
+      "evidence": {
+        "source": "geospatial/facilities/source/research_campuses.json",
+        "site_id": "SH-SITE-0003",
+        "status": "PROPOSED_MODELLED_PROGRAM",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "crossing_routes": [],
+        "service_route": [
+          [
+            250,
+            175
+          ],
+          [
+            220,
+            175
+          ],
+          [
+            220,
+            115
+          ],
+          [
+            188,
+            115
+          ],
+          [
+            188,
+            125
+          ]
+        ]
+      },
+      "next_action": "Confirm swept paths, loading geometry and pedestrian controls; unrecorded routes are not assumed clear."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0005-B01-L01:accessibility-evidence",
+      "scope": "SH-SITE-0005-B01-L01",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Lift and accessible-room labels are evidence inventory only; no complete step-free route, turning-space or accessible-facility assessment is encoded.",
+      "evidence": {
+        "source": "geospatial/facilities/source/research_campuses.json",
+        "site_id": "SH-SITE-0005",
+        "status": "PROPOSED_MODELLED_PROGRAM",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "floor_id": "SH-SITE-0005-B01-L01",
+        "lift_labels": [],
+        "accessible_room_labels": []
+      },
+      "next_action": "Provide coordinated step-free routes, levels, clearances and accessible facility details for qualified review."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0005-B01-L01:door-circulation-access",
+      "scope": "SH-SITE-0005-B01-L01",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires explicit review, not an invented route.",
+      "evidence": {
+        "source": "geospatial/facilities/source/research_campuses.json",
+        "site_id": "SH-SITE-0005",
+        "status": "PROPOSED_MODELLED_PROGRAM",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "floor_id": "SH-SITE-0005-B01-L01",
+        "missing_doors": [
+          "SH-SITE-0005-B01-L01-R01",
+          "SH-SITE-0005-B01-L01-R02",
+          "SH-SITE-0005-B01-L01-R03",
+          "SH-SITE-0005-B01-L01-R04"
+        ],
+        "invalid_doors": [],
+        "no_direct_circulation": []
+      },
+      "next_action": "Record missing routes and resolve invalid doors; review indirect access and full opening/swing clearances."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0005-B01-L01:egress-engineering",
+      "scope": "SH-SITE-0005-B01-L01",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Concept stairs/exterior doors do not establish exit capacity, travel distance, protection, discharge or emergency operation.",
+      "evidence": {
+        "source": "geospatial/facilities/source/research_campuses.json",
+        "site_id": "SH-SITE-0005",
+        "status": "PROPOSED_MODELLED_PROGRAM",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "floor_id": "SH-SITE-0005-B01-L01",
+        "stair_labels": [],
+        "exterior_door_count": 0,
+        "planned_peak": 12,
+        "core_basis": "Two independent end exit/service bays; 3 m central circulation separates personnel from process rooms. Wet, ventilation and utility zones remain outside material handling. No classified process or hazardous inventory assumed."
+      },
+      "next_action": "Commission occupancy-specific egress and emergency-access review; no legal thresholds are applied here."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0005-B01:fixed-core-stacking",
+      "scope": "SH-SITE-0005-B01",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "A building-level core template is inherited by every floor; explicit floor overrides must match. Implicit renderer cores are not source evidence.",
+      "evidence": {
+        "source": "geospatial/facilities/source/research_campuses.json",
+        "site_id": "SH-SITE-0005",
+        "status": "PROPOSED_MODELLED_PROGRAM",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "building_id": "SH-SITE-0005-B01",
+        "core_template": [],
+        "mismatched_floors": [],
+        "core_basis": "Two independent end exit/service bays; 3 m central circulation separates personnel from process rooms. Wet, ventilation and utility zones remain outside material handling. No classified process or hazardous inventory assumed."
+      },
+      "next_action": "Confirm structural, shaft and service continuity in engineering design."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0005-B02-L01:accessibility-evidence",
+      "scope": "SH-SITE-0005-B02-L01",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Lift and accessible-room labels are evidence inventory only; no complete step-free route, turning-space or accessible-facility assessment is encoded.",
+      "evidence": {
+        "source": "geospatial/facilities/source/research_campuses.json",
+        "site_id": "SH-SITE-0005",
+        "status": "PROPOSED_MODELLED_PROGRAM",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "floor_id": "SH-SITE-0005-B02-L01",
+        "lift_labels": [],
+        "accessible_room_labels": []
+      },
+      "next_action": "Provide coordinated step-free routes, levels, clearances and accessible facility details for qualified review."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0005-B02-L01:door-circulation-access",
+      "scope": "SH-SITE-0005-B02-L01",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires explicit review, not an invented route.",
+      "evidence": {
+        "source": "geospatial/facilities/source/research_campuses.json",
+        "site_id": "SH-SITE-0005",
+        "status": "PROPOSED_MODELLED_PROGRAM",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "floor_id": "SH-SITE-0005-B02-L01",
+        "missing_doors": [
+          "SH-SITE-0005-B02-L01-R01",
+          "SH-SITE-0005-B02-L01-R02",
+          "SH-SITE-0005-B02-L01-R03",
+          "SH-SITE-0005-B02-L01-R04"
+        ],
+        "invalid_doors": [],
+        "no_direct_circulation": []
+      },
+      "next_action": "Record missing routes and resolve invalid doors; review indirect access and full opening/swing clearances."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0005-B02-L01:egress-engineering",
+      "scope": "SH-SITE-0005-B02-L01",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Concept stairs/exterior doors do not establish exit capacity, travel distance, protection, discharge or emergency operation.",
+      "evidence": {
+        "source": "geospatial/facilities/source/research_campuses.json",
+        "site_id": "SH-SITE-0005",
+        "status": "PROPOSED_MODELLED_PROGRAM",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "floor_id": "SH-SITE-0005-B02-L01",
+        "stair_labels": [],
+        "exterior_door_count": 0,
+        "planned_peak": 6,
+        "core_basis": "Two independent end exit/service bays; 3 m central circulation separates personnel from process rooms. Wet, ventilation and utility zones remain outside material handling. No classified process or hazardous inventory assumed."
+      },
+      "next_action": "Commission occupancy-specific egress and emergency-access review; no legal thresholds are applied here."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0005-B02:fixed-core-stacking",
+      "scope": "SH-SITE-0005-B02",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "A building-level core template is inherited by every floor; explicit floor overrides must match. Implicit renderer cores are not source evidence.",
+      "evidence": {
+        "source": "geospatial/facilities/source/research_campuses.json",
+        "site_id": "SH-SITE-0005",
+        "status": "PROPOSED_MODELLED_PROGRAM",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "building_id": "SH-SITE-0005-B02",
+        "core_template": [],
+        "mismatched_floors": [],
+        "core_basis": "Two independent end exit/service bays; 3 m central circulation separates personnel from process rooms. Wet, ventilation and utility zones remain outside material handling. No classified process or hazardous inventory assumed."
+      },
+      "next_action": "Confirm structural, shaft and service continuity in engineering design."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0005-B03-L01:accessibility-evidence",
+      "scope": "SH-SITE-0005-B03-L01",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Lift and accessible-room labels are evidence inventory only; no complete step-free route, turning-space or accessible-facility assessment is encoded.",
+      "evidence": {
+        "source": "geospatial/facilities/source/research_campuses.json",
+        "site_id": "SH-SITE-0005",
+        "status": "PROPOSED_MODELLED_PROGRAM",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "floor_id": "SH-SITE-0005-B03-L01",
+        "lift_labels": [],
+        "accessible_room_labels": []
+      },
+      "next_action": "Provide coordinated step-free routes, levels, clearances and accessible facility details for qualified review."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0005-B03-L01:door-circulation-access",
+      "scope": "SH-SITE-0005-B03-L01",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires explicit review, not an invented route.",
+      "evidence": {
+        "source": "geospatial/facilities/source/research_campuses.json",
+        "site_id": "SH-SITE-0005",
+        "status": "PROPOSED_MODELLED_PROGRAM",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "floor_id": "SH-SITE-0005-B03-L01",
+        "missing_doors": [
+          "SH-SITE-0005-B03-L01-R01",
+          "SH-SITE-0005-B03-L01-R02",
+          "SH-SITE-0005-B03-L01-R03",
+          "SH-SITE-0005-B03-L01-R04"
+        ],
+        "invalid_doors": [],
+        "no_direct_circulation": []
+      },
+      "next_action": "Record missing routes and resolve invalid doors; review indirect access and full opening/swing clearances."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0005-B03-L01:egress-engineering",
+      "scope": "SH-SITE-0005-B03-L01",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Concept stairs/exterior doors do not establish exit capacity, travel distance, protection, discharge or emergency operation.",
+      "evidence": {
+        "source": "geospatial/facilities/source/research_campuses.json",
+        "site_id": "SH-SITE-0005",
+        "status": "PROPOSED_MODELLED_PROGRAM",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "floor_id": "SH-SITE-0005-B03-L01",
+        "stair_labels": [],
+        "exterior_door_count": 0,
+        "planned_peak": 6,
+        "core_basis": "Two independent end exit/service bays; 3 m central circulation separates personnel from process rooms. Wet, ventilation and utility zones remain outside material handling. No classified process or hazardous inventory assumed."
+      },
+      "next_action": "Commission occupancy-specific egress and emergency-access review; no legal thresholds are applied here."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0005-B03:fixed-core-stacking",
+      "scope": "SH-SITE-0005-B03",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "A building-level core template is inherited by every floor; explicit floor overrides must match. Implicit renderer cores are not source evidence.",
+      "evidence": {
+        "source": "geospatial/facilities/source/research_campuses.json",
+        "site_id": "SH-SITE-0005",
+        "status": "PROPOSED_MODELLED_PROGRAM",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "building_id": "SH-SITE-0005-B03",
+        "core_template": [],
+        "mismatched_floors": [],
+        "core_basis": "Two independent end exit/service bays; 3 m central circulation separates personnel from process rooms. Wet, ventilation and utility zones remain outside material handling. No classified process or hazardous inventory assumed."
+      },
+      "next_action": "Confirm structural, shaft and service continuity in engineering design."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0005-B04-L01:accessibility-evidence",
+      "scope": "SH-SITE-0005-B04-L01",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Lift and accessible-room labels are evidence inventory only; no complete step-free route, turning-space or accessible-facility assessment is encoded.",
+      "evidence": {
+        "source": "geospatial/facilities/source/research_campuses.json",
+        "site_id": "SH-SITE-0005",
+        "status": "PROPOSED_MODELLED_PROGRAM",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "floor_id": "SH-SITE-0005-B04-L01",
+        "lift_labels": [],
+        "accessible_room_labels": []
+      },
+      "next_action": "Provide coordinated step-free routes, levels, clearances and accessible facility details for qualified review."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0005-B04-L01:door-circulation-access",
+      "scope": "SH-SITE-0005-B04-L01",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires explicit review, not an invented route.",
+      "evidence": {
+        "source": "geospatial/facilities/source/research_campuses.json",
+        "site_id": "SH-SITE-0005",
+        "status": "PROPOSED_MODELLED_PROGRAM",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "floor_id": "SH-SITE-0005-B04-L01",
+        "missing_doors": [
+          "SH-SITE-0005-B04-L01-R01",
+          "SH-SITE-0005-B04-L01-R02",
+          "SH-SITE-0005-B04-L01-R03",
+          "SH-SITE-0005-B04-L01-R04"
+        ],
+        "invalid_doors": [],
+        "no_direct_circulation": []
+      },
+      "next_action": "Record missing routes and resolve invalid doors; review indirect access and full opening/swing clearances."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0005-B04-L01:egress-engineering",
+      "scope": "SH-SITE-0005-B04-L01",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Concept stairs/exterior doors do not establish exit capacity, travel distance, protection, discharge or emergency operation.",
+      "evidence": {
+        "source": "geospatial/facilities/source/research_campuses.json",
+        "site_id": "SH-SITE-0005",
+        "status": "PROPOSED_MODELLED_PROGRAM",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "floor_id": "SH-SITE-0005-B04-L01",
+        "stair_labels": [],
+        "exterior_door_count": 0,
+        "planned_peak": 4,
+        "core_basis": "Two independent end exit/service bays; 3 m central circulation separates personnel from process rooms. Wet, ventilation and utility zones remain outside material handling. No classified process or hazardous inventory assumed."
+      },
+      "next_action": "Commission occupancy-specific egress and emergency-access review; no legal thresholds are applied here."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0005-B04:fixed-core-stacking",
+      "scope": "SH-SITE-0005-B04",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "A building-level core template is inherited by every floor; explicit floor overrides must match. Implicit renderer cores are not source evidence.",
+      "evidence": {
+        "source": "geospatial/facilities/source/research_campuses.json",
+        "site_id": "SH-SITE-0005",
+        "status": "PROPOSED_MODELLED_PROGRAM",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "building_id": "SH-SITE-0005-B04",
+        "core_template": [],
+        "mismatched_floors": [],
+        "core_basis": "Two independent end exit/service bays; 3 m central circulation separates personnel from process rooms. Wet, ventilation and utility zones remain outside material handling. No classified process or hazardous inventory assumed."
+      },
+      "next_action": "Confirm structural, shaft and service continuity in engineering design."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0005:adjacency-intent",
+      "scope": "SH-SITE-0005",
+      "severity": "INFO",
+      "outcome": "PASS",
+      "basis": "Presence of explicit functional adjacency/separation intent only; relationships are not inferred from proximity.",
+      "evidence": {
+        "source": "geospatial/facilities/source/research_campuses.json",
+        "site_id": "SH-SITE-0005",
+        "status": "PROPOSED_MODELLED_PROGRAM",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "relationships": [
+          {
+            "a": "Material receipt and outbound logistics",
+            "b": "Intermediate upgrading and blending",
+            "relationship": "controlled_material_transfer",
+            "reason": "Held incoming lots stay separate from released product; genealogy verification gates movement."
+          },
+          {
+            "a": "Analytical and process development",
+            "b": "Intermediate upgrading and blending",
+            "relationship": "sample_handoff",
+            "reason": "Samples transfer under custody; visitors and laboratories do not become a delivery shortcut."
+          },
+          {
+            "a": "Field-unit assembly and refurbishment",
+            "b": "Material receipt and outbound logistics",
+            "relationship": "separate_return_path",
+            "reason": "Failed or fouled returns remain isolated from released product and clean assembly."
+          }
+        ]
+      },
+      "next_action": "Review declared relationships against operating and access workflows."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0005:building-separation",
+      "scope": "SH-SITE-0005",
+      "severity": "INFO",
+      "outcome": "PASS",
+      "basis": "Concept footprints must not overlap in a common local coordinate frame; no minimum separation distance is asserted.",
+      "evidence": {
+        "source": "geospatial/facilities/source/research_campuses.json",
+        "site_id": "SH-SITE-0005",
+        "status": "PROPOSED_MODELLED_PROGRAM",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "overlapping_buildings": []
+      },
+      "next_action": "Engineering separation distances and fire exposure remain unassessed."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0005:service-pedestrian-crossings",
+      "scope": "SH-SITE-0005",
+      "severity": "INFO",
+      "outcome": "PASS",
+      "basis": "Intersection of drawn route centre-lines is a coordination trigger; grade, widths, timing and controls are unknown.",
+      "evidence": {
+        "source": "geospatial/facilities/source/research_campuses.json",
+        "site_id": "SH-SITE-0005",
+        "status": "PROPOSED_MODELLED_PROGRAM",
+        "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+        "crossing_routes": [],
+        "service_route": [
+          [
+            250,
+            95
+          ],
+          [
+            200,
+            95
+          ],
+          [
+            185,
+            95
+          ],
+          [
+            185,
+            77
+          ],
+          [
+            176,
+            77
+          ]
+        ]
+      },
+      "next_action": "Confirm swept paths, loading geometry and pedestrian controls; unrecorded routes are not assumed clear."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0006:adjacency-intent",
+      "scope": "SH-SITE-0006",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Presence of explicit functional adjacency/separation intent only; relationships are not inferred from proximity.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-SITE-0006",
+        "status": "PRELIMINARY_ENGINEERING_PROPOSAL",
+        "geometry_status": "PRELIMINARY_ENGINEERING_PROPOSAL",
+        "relationships": []
+      },
+      "next_action": "Record intended adjacency and separation relationships before assessing them."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0006:building-separation",
+      "scope": "SH-SITE-0006",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Concept footprints must not overlap in a common local coordinate frame; no minimum separation distance is asserted.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-SITE-0006",
+        "status": "PRELIMINARY_ENGINEERING_PROPOSAL",
+        "geometry_status": "PRELIMINARY_ENGINEERING_PROPOSAL",
+        "overlapping_buildings": []
+      },
+      "next_action": "Engineering separation distances and fire exposure remain unassessed."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0006:interior-readiness",
+      "scope": "SH-SITE-0006",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "No owned/modelled interior geometry is supplied; external providers and unresolved sites are not fabricated.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-SITE-0006",
+        "status": "PRELIMINARY_ENGINEERING_PROPOSAL",
+        "geometry_status": "PRELIMINARY_ENGINEERING_PROPOSAL",
+        "exemption": "Occupied mine building inventory and technical geometry remain unresolved. Preserve mine operating anchor and receiving subsite; no unsupported floors, underground works or process equipment fabricated."
+      },
+      "next_action": "Retain the context-only boundary until an authorized interior source exists."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0006:service-pedestrian-crossings",
+      "scope": "SH-SITE-0006",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Intersection of drawn route centre-lines is a coordination trigger; grade, widths, timing and controls are unknown.",
+      "evidence": {
+        "source": "geospatial/facilities/source/industrial_facilities.json",
+        "site_id": "SH-SITE-0006",
+        "status": "PRELIMINARY_ENGINEERING_PROPOSAL",
+        "geometry_status": "PRELIMINARY_ENGINEERING_PROPOSAL",
+        "crossing_routes": [],
+        "service_route": []
+      },
+      "next_action": "Confirm swept paths, loading geometry and pedestrian controls; unrecorded routes are not assumed clear."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0028:adjacency-intent",
+      "scope": "SH-SITE-0028",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Presence of explicit functional adjacency/separation intent only; relationships are not inferred from proximity.",
+      "evidence": {
+        "source": "geospatial/facilities/RUNTIME_BRIDGE.json",
+        "site_id": "SH-SITE-0028",
+        "status": "PROVIDER_SELECTED_PROCUREMENT_PENDING",
+        "geometry_status": "PROVIDER_GEOMETRY_UNVERIFIED",
+        "relationships": []
+      },
+      "next_action": "Record intended adjacency and separation relationships before assessing them."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0028:building-separation",
+      "scope": "SH-SITE-0028",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Concept footprints must not overlap in a common local coordinate frame; no minimum separation distance is asserted.",
+      "evidence": {
+        "source": "geospatial/facilities/RUNTIME_BRIDGE.json",
+        "site_id": "SH-SITE-0028",
+        "status": "PROVIDER_SELECTED_PROCUREMENT_PENDING",
+        "geometry_status": "PROVIDER_GEOMETRY_UNVERIFIED",
+        "overlapping_buildings": []
+      },
+      "next_action": "Engineering separation distances and fire exposure remain unassessed."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0028:interior-readiness",
+      "scope": "SH-SITE-0028",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "No owned/modelled interior geometry is supplied; external providers and unresolved sites are not fabricated.",
+      "evidence": {
+        "source": "geospatial/facilities/RUNTIME_BRIDGE.json",
+        "site_id": "SH-SITE-0028",
+        "status": "PROVIDER_SELECTED_PROCUREMENT_PENDING",
+        "geometry_status": "PROVIDER_GEOMETRY_UNVERIFIED",
+        "exemption": "External selected provider. No occupied Sable Harbor building or assigned floor established. Reuse only topology and customer-enclosure/equipment concepts; do not invent provider interiors."
+      },
+      "next_action": "Retain the context-only boundary until an authorized interior source exists."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0028:service-pedestrian-crossings",
+      "scope": "SH-SITE-0028",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Intersection of drawn route centre-lines is a coordination trigger; grade, widths, timing and controls are unknown.",
+      "evidence": {
+        "source": "geospatial/facilities/RUNTIME_BRIDGE.json",
+        "site_id": "SH-SITE-0028",
+        "status": "PROVIDER_SELECTED_PROCUREMENT_PENDING",
+        "geometry_status": "PROVIDER_GEOMETRY_UNVERIFIED",
+        "crossing_routes": [],
+        "service_route": []
+      },
+      "next_action": "Confirm swept paths, loading geometry and pedestrian controls; unrecorded routes are not assumed clear."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0029:adjacency-intent",
+      "scope": "SH-SITE-0029",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Presence of explicit functional adjacency/separation intent only; relationships are not inferred from proximity.",
+      "evidence": {
+        "source": "geospatial/facilities/RUNTIME_BRIDGE.json",
+        "site_id": "SH-SITE-0029",
+        "status": "PROVIDER_SELECTED_PROCUREMENT_PENDING",
+        "geometry_status": "PROVIDER_GEOMETRY_UNVERIFIED",
+        "relationships": []
+      },
+      "next_action": "Record intended adjacency and separation relationships before assessing them."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0029:building-separation",
+      "scope": "SH-SITE-0029",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Concept footprints must not overlap in a common local coordinate frame; no minimum separation distance is asserted.",
+      "evidence": {
+        "source": "geospatial/facilities/RUNTIME_BRIDGE.json",
+        "site_id": "SH-SITE-0029",
+        "status": "PROVIDER_SELECTED_PROCUREMENT_PENDING",
+        "geometry_status": "PROVIDER_GEOMETRY_UNVERIFIED",
+        "overlapping_buildings": []
+      },
+      "next_action": "Engineering separation distances and fire exposure remain unassessed."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0029:interior-readiness",
+      "scope": "SH-SITE-0029",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "No owned/modelled interior geometry is supplied; external providers and unresolved sites are not fabricated.",
+      "evidence": {
+        "source": "geospatial/facilities/RUNTIME_BRIDGE.json",
+        "site_id": "SH-SITE-0029",
+        "status": "PROVIDER_SELECTED_PROCUREMENT_PENDING",
+        "geometry_status": "PROVIDER_GEOMETRY_UNVERIFIED",
+        "exemption": "External selected provider. No occupied Sable Harbor building or assigned floor established. Reuse only topology and customer-enclosure/equipment concepts; do not invent provider interiors."
+      },
+      "next_action": "Retain the context-only boundary until an authorized interior source exists."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0029:service-pedestrian-crossings",
+      "scope": "SH-SITE-0029",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Intersection of drawn route centre-lines is a coordination trigger; grade, widths, timing and controls are unknown.",
+      "evidence": {
+        "source": "geospatial/facilities/RUNTIME_BRIDGE.json",
+        "site_id": "SH-SITE-0029",
+        "status": "PROVIDER_SELECTED_PROCUREMENT_PENDING",
+        "geometry_status": "PROVIDER_GEOMETRY_UNVERIFIED",
+        "crossing_routes": [],
+        "service_route": []
+      },
+      "next_action": "Confirm swept paths, loading geometry and pedestrian controls; unrecorded routes are not assumed clear."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0030-B01-L01:accessibility-evidence",
+      "scope": "SH-SITE-0030-B01-L01",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Lift and accessible-room labels are evidence inventory only; no complete step-free route, turning-space or accessible-facility assessment is encoded.",
+      "evidence": {
+        "source": "geospatial/facilities/RUNTIME_BRIDGE.json",
+        "site_id": "SH-SITE-0030",
+        "status": "LAND_ACQUIRED_PRECONSTRUCTION",
+        "geometry_status": "SYNTHETIC_UNSURVEYED",
+        "floor_id": "SH-SITE-0030-B01-L01",
+        "lift_labels": [],
+        "accessible_room_labels": []
+      },
+      "next_action": "Provide coordinated step-free routes, levels, clearances and accessible facility details for qualified review."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0030-B01-L01:door-circulation-access",
+      "scope": "SH-SITE-0030-B01-L01",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires explicit review, not an invented route.",
+      "evidence": {
+        "source": "geospatial/facilities/RUNTIME_BRIDGE.json",
+        "site_id": "SH-SITE-0030",
+        "status": "LAND_ACQUIRED_PRECONSTRUCTION",
+        "geometry_status": "SYNTHETIC_UNSURVEYED",
+        "floor_id": "SH-SITE-0030-B01-L01",
+        "missing_doors": [
+          "SH-SITE-0030-B01-L01-R01",
+          "SH-SITE-0030-B01-L01-R02",
+          "SH-SITE-0030-B01-L01-R03",
+          "SH-SITE-0030-B01-L01-R04",
+          "SH-SITE-0030-B01-L01-R05",
+          "SH-SITE-0030-B01-L01-R06",
+          "SH-SITE-0030-B01-L01-R07",
+          "SH-SITE-0030-B01-L01-R08",
+          "SH-SITE-0030-B01-L01-R09",
+          "SH-SITE-0030-B01-L01-R10",
+          "SH-SITE-0030-B01-L01-R11"
+        ],
+        "invalid_doors": [],
+        "no_direct_circulation": []
+      },
+      "next_action": "Record missing routes and resolve invalid doors; review indirect access and full opening/swing clearances."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0030-B01-L01:egress-engineering",
+      "scope": "SH-SITE-0030-B01-L01",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Concept stairs/exterior doors do not establish exit capacity, travel distance, protection, discharge or emergency operation.",
+      "evidence": {
+        "source": "geospatial/facilities/RUNTIME_BRIDGE.json",
+        "site_id": "SH-SITE-0030",
+        "status": "LAND_ACQUIRED_PRECONSTRUCTION",
+        "geometry_status": "SYNTHETIC_UNSURVEYED",
+        "floor_id": "SH-SITE-0030-B01-L01",
+        "stair_labels": [],
+        "exterior_door_count": 0,
+        "planned_peak": null,
+        "core_basis": null
+      },
+      "next_action": "Commission occupancy-specific egress and emergency-access review; no legal thresholds are applied here."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0030-B01:fixed-core-stacking",
+      "scope": "SH-SITE-0030-B01",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "A building-level core template is inherited by every floor; explicit floor overrides must match. Implicit renderer cores are not source evidence.",
+      "evidence": {
+        "source": "geospatial/facilities/RUNTIME_BRIDGE.json",
+        "site_id": "SH-SITE-0030",
+        "status": "LAND_ACQUIRED_PRECONSTRUCTION",
+        "geometry_status": "SYNTHETIC_UNSURVEYED",
+        "building_id": "SH-SITE-0030-B01",
+        "core_template": [],
+        "mismatched_floors": [],
+        "core_basis": null
+      },
+      "next_action": "Confirm structural, shaft and service continuity in engineering design."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0030:adjacency-intent",
+      "scope": "SH-SITE-0030",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Presence of explicit functional adjacency/separation intent only; relationships are not inferred from proximity.",
+      "evidence": {
+        "source": "geospatial/facilities/RUNTIME_BRIDGE.json",
+        "site_id": "SH-SITE-0030",
+        "status": "LAND_ACQUIRED_PRECONSTRUCTION",
+        "geometry_status": "SYNTHETIC_UNSURVEYED",
+        "relationships": []
+      },
+      "next_action": "Record intended adjacency and separation relationships before assessing them."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0030:building-separation",
+      "scope": "SH-SITE-0030",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Concept footprints must not overlap in a common local coordinate frame; no minimum separation distance is asserted.",
+      "evidence": {
+        "source": "geospatial/facilities/RUNTIME_BRIDGE.json",
+        "site_id": "SH-SITE-0030",
+        "status": "LAND_ACQUIRED_PRECONSTRUCTION",
+        "geometry_status": "SYNTHETIC_UNSURVEYED",
+        "overlapping_buildings": []
+      },
+      "next_action": "Engineering separation distances and fire exposure remain unassessed."
+    },
+    {
+      "id": "SH-READY:SH-SITE-0030:service-pedestrian-crossings",
+      "scope": "SH-SITE-0030",
+      "severity": "INFO",
+      "outcome": "NOT_ASSESSED",
+      "basis": "Intersection of drawn route centre-lines is a coordination trigger; grade, widths, timing and controls are unknown.",
+      "evidence": {
+        "source": "geospatial/facilities/RUNTIME_BRIDGE.json",
+        "site_id": "SH-SITE-0030",
+        "status": "LAND_ACQUIRED_PRECONSTRUCTION",
+        "geometry_status": "SYNTHETIC_UNSURVEYED",
+        "crossing_routes": [],
+        "service_route": []
+      },
+      "next_action": "Confirm swept paths, loading geometry and pedestrian controls; unrecorded routes are not assumed clear."
+    }
+  ],
+  "summary": {
+    "check_count": 160,
+    "outcomes": {
+      "PASS": 34,
+      "REVIEW": 6,
+      "FAIL": 0,
+      "NOT_ASSESSED": 120
+    },
+    "status": "REVIEW_REQUIRED",
+    "engineering_certified": false
+  }
+}
