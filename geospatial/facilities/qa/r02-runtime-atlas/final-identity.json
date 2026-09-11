@@ -1,0 +1,518 @@
+{
+  "imports": [
+    {
+      "map_id": "SH-MAP-SAC-002",
+      "atlas_page": 8,
+      "pdf_sha256": "057a4946a140bf7c8f0d2f57a9d75def60d7f1f8217087f596c894433af5f165",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-SAC-023",
+      "atlas_page": 10,
+      "pdf_sha256": "f415973117f6c6465c6546e0cd264f4828a3bb4c9f496f38edba5bc9a58faaff",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-SAC-024",
+      "atlas_page": 11,
+      "pdf_sha256": "49c2b36fb5c641f2ac757c3fd84024d684d397123fcf9c393309617c314f00e7",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-SAC-025",
+      "atlas_page": 12,
+      "pdf_sha256": "d671a3fed9baa176e14558d4b44a31546033db44802b046ea73b57a349bc315b",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-SAC-026",
+      "atlas_page": 13,
+      "pdf_sha256": "b3cc8937e08a91cf069e09a49aea61ad90b8d85c41daeb41e983de26b2f6d9f6",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-SAC-027",
+      "atlas_page": 14,
+      "pdf_sha256": "5a0b8025b737b7e8d685e43b5da2bce6e2a31b1ebabc12aa7896b65a98d1a13b",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-SAC-028",
+      "atlas_page": 15,
+      "pdf_sha256": "fd3d1b670f2ec0c550aa77fc89bbb2b23553cb987da49c0f84eab6f3295b12d0",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-SAC-029",
+      "atlas_page": 16,
+      "pdf_sha256": "b0afaffcdc22283ebf9e07518d9d38740a1c3a462e88902c061aeb5c15c14e1f",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-SAC-030",
+      "atlas_page": 17,
+      "pdf_sha256": "4a7bb363f578d6883bfea3e55df94b8ae6b0b3d297ec10c1b99a7af273d36c3f",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-SAC-031",
+      "atlas_page": 18,
+      "pdf_sha256": "603e8e3971363ade926b5643029fd5c5286671a09d5ebe2561e017877822ee50",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-SAC-032",
+      "atlas_page": 19,
+      "pdf_sha256": "58c2f318cfeef610fa5421c81cf9ec380ec54ff772a36dae88495796e640097a",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-SAC-033",
+      "atlas_page": 20,
+      "pdf_sha256": "d980d96afdc08046503c47c72b560a112c625fda0150cc2b93e6782d03c78bdf",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-SAC-034",
+      "atlas_page": 21,
+      "pdf_sha256": "e1bb54639c9ed5f0512a3aaba9566ff1efb4a2454a59012a4e092ed36804e921",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-SAC-035",
+      "atlas_page": 22,
+      "pdf_sha256": "53297c075d2dc13d6e5e3fd017c10f8c4109e544bd64641b2f4e4faaa40f80a1",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-SAC-036",
+      "atlas_page": 23,
+      "pdf_sha256": "b618dd97470edd536be31819a39fa718c6a13a0dad42d5da40f6b7cfa4db113f",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-SAC-022",
+      "atlas_page": 9,
+      "pdf_sha256": "a4cd8bf04ebd1fc5872767aac78cc91d76d812671609fc67959a0b43ffbef7d9",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-ARU-020",
+      "atlas_page": 47,
+      "pdf_sha256": "76dd163b186c3fb7d52508e6366fc64b87e093823a44b0c05cc1c45786fafbd9",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-ARU-021",
+      "atlas_page": 42,
+      "pdf_sha256": "bd5f8ef9cded80b46a4baae121b9d8f80f44274d8cb5d28d08b0ef81847d8550",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-ARU-022",
+      "atlas_page": 43,
+      "pdf_sha256": "b55a4df7cbfb44f35d4d610d590d4d125429190d39dd1f8f05c9c68258727413",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-ARU-023",
+      "atlas_page": 44,
+      "pdf_sha256": "0abfa22edc3a4394db532cec84ff14d6213f09a242d36f8f3cfd1663eaef651c",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-ARU-024",
+      "atlas_page": 45,
+      "pdf_sha256": "6d8d1bff0302be7e5a46389c6bde74c43f35e202359c48e60c07b7f7870e4f9b",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-ARU-025",
+      "atlas_page": 46,
+      "pdf_sha256": "2f95016e456eb98b7011b467a7626f57202d177c3c8d743679d60e2bb181e1e9",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-ARU-026",
+      "atlas_page": 35,
+      "pdf_sha256": "8108b8d944b786b9d5e82fbf965c6da312c0d7bcc8aafd76990dd70c322a467e",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-ARU-027",
+      "atlas_page": 39,
+      "pdf_sha256": "77275f37a58d0160e35595a2f91f5a611f5127cb858e01ad8530b9e4717464e3",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-ARU-028",
+      "atlas_page": 40,
+      "pdf_sha256": "8ca6c33449708abf580e6c4577b18593fad90bdc7d89afde00354e57758a5c74",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-ARU-029",
+      "atlas_page": 41,
+      "pdf_sha256": "5a3cbcf566c66e0ef11d8f1708dee533dca63fb2dbb1e8dcbd4d18feb04f66a2",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-ARU-030",
+      "atlas_page": 36,
+      "pdf_sha256": "def45bdab7bdcf6bf0a959d2818b133e01ce4555b625dff0b6671193f8568ee3",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-ARU-031",
+      "atlas_page": 37,
+      "pdf_sha256": "ce61bfa73a43b0eea85e21d00746217f157d4f932475d7386373487812a89f19",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-ARU-032",
+      "atlas_page": 38,
+      "pdf_sha256": "e89282d44beb22fed4ccd6c47ce719fe0022c9837e91f9ad5d657c1d8784ec98",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-ARU-033",
+      "atlas_page": 27,
+      "pdf_sha256": "00a9f58e9c550e9cbe37af66c88aabfa443a2acb6f76decb6c4ba8bf84ebbbe7",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-ARU-034",
+      "atlas_page": 28,
+      "pdf_sha256": "249301b3e68f15761ea32ce0117aba3566d5b5b939626b3dd0b3184e99cecc4e",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-ARU-035",
+      "atlas_page": 29,
+      "pdf_sha256": "11d425fc49a9a0830375faedfed350983129c68b4a954ca97f987fb8be2529db",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-ARU-036",
+      "atlas_page": 31,
+      "pdf_sha256": "fd95917a0a3022a2578f409cd0d0acca6abb1ed226833fba94d4a0562dd97662",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-ARU-037",
+      "atlas_page": 32,
+      "pdf_sha256": "8990f72e52a1b22095f6653d76f982ee87c1e36511e6845a00af4965c012f541",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-ARU-038",
+      "atlas_page": 33,
+      "pdf_sha256": "7bbb537721be388b480ae99e95c6d8df2ceaf82344acbde43ddbd6215f135d86",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-ARU-039",
+      "atlas_page": 30,
+      "pdf_sha256": "5528268f3433601f4e982f452c9c4319e173a5c438fa0084b7d7d959ca5fc988",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-ARU-040",
+      "atlas_page": 24,
+      "pdf_sha256": "7d6e6c3a75bb6acf0b890af35b1ac0651ca9dce6a50390e27d6ee886c1f0a433",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-ARU-041",
+      "atlas_page": 25,
+      "pdf_sha256": "b6bdcf550ae71566e38f6a7796c486897aa5d2900334f3c2911174b2fd062654",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-ARU-042",
+      "atlas_page": 26,
+      "pdf_sha256": "f15a734272da44f3482afa30ebae2550b83615cd782a9dbad563762d94736e9e",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-RWM-020",
+      "atlas_page": 34,
+      "pdf_sha256": "1a66458170131a7c73fa558082877a4e021b54eba35e56f92b169b1147547579",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-RWM-021",
+      "atlas_page": 65,
+      "pdf_sha256": "8f0752dac7e13708e96c1b6b551aefe46dcc7ec4293f7047858735bca5ad77b4",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-WIL-020",
+      "atlas_page": 48,
+      "pdf_sha256": "e967ca723a3e48e412a2a9ff4b260e758871cdafc0d183312196e75f85f236db",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-WIL-021",
+      "atlas_page": 49,
+      "pdf_sha256": "870580ac7ef2167af6b194cdbd17856993a7442cd97aeaa4339123cdd4b4bc03",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-WIL-022",
+      "atlas_page": 50,
+      "pdf_sha256": "a80e48f936ad26eef10947b3622d116343645b3eb582a73ebdc38091074e0e23",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-WIL-023",
+      "atlas_page": 51,
+      "pdf_sha256": "3bb4d527897b9630b9589f3c7e8d39af94b36adae5fb2d36d427c47e31dfd9d7",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-WIL-024",
+      "atlas_page": 52,
+      "pdf_sha256": "13c912b6caa7d0727717cd2da1fdd8109c4c2dce48d93b1f9ebd3aa8c5e38e34",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-WIL-025",
+      "atlas_page": 53,
+      "pdf_sha256": "e6480e1930a32179de58793eb5a23e2fa9d53c116505e5c80a2c0386b863a0e2",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-WIL-026",
+      "atlas_page": 54,
+      "pdf_sha256": "c87e81e17a67baea2aaa136d7fca8e20ac5d510be96583a7018d1675ea6288ab",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-WIL-027",
+      "atlas_page": 55,
+      "pdf_sha256": "bbde4993ad22ddd7732c96b0dd9cd097fd2a1dc20ab18f9cada1e55be2e40a38",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-CRD-020",
+      "atlas_page": 56,
+      "pdf_sha256": "79b901b61101013111a86ac05cf172330f2cd0b08238d7f712a7da267fd93f4e",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-CRD-021",
+      "atlas_page": 57,
+      "pdf_sha256": "d91973f445bd75bfd159025c7921364bdc8a0bc80fa6d16bad14236b2536fe47",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-CRD-022",
+      "atlas_page": 58,
+      "pdf_sha256": "fc2b90c8a82d61aba0789580ce9a0adf5add31847f67d8c079374f364b3da72d",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-CRD-023",
+      "atlas_page": 59,
+      "pdf_sha256": "494e92dbe67c16f9aacbfbab3593ac211ffba1849c132aa8a96618d1fd18abe2",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-CRD-024",
+      "atlas_page": 60,
+      "pdf_sha256": "5b4b7be418756cd3a009e2cd282adf4ab972f8e4a5eb62cd8ce722355d6759b2",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-CRD-025",
+      "atlas_page": 61,
+      "pdf_sha256": "7e3f92584afffd5c2b0e58ae9c18629854cb849910ee73c91d11871f6cef686c",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-CRD-026",
+      "atlas_page": 62,
+      "pdf_sha256": "1fda4c2ec61e28941cb76a732f250c80b4fcff82c70f33a466acff7b4fd90031",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-CRD-027",
+      "atlas_page": 63,
+      "pdf_sha256": "b6b7a730b17ae735ec1349a637362316448784aec0ec51ce0682550231e001b0",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-CRD-028",
+      "atlas_page": 64,
+      "pdf_sha256": "429bfb0906edee9772e8aa636c5adc5dc221771d4abbc3fedd5ae8bb6ec948b3",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-RUN-001",
+      "atlas_page": 66,
+      "pdf_sha256": "0319ca62487da45982e2732a4427e357d3b13d3baa99ca42f11292ddc3641eb1",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-RUN-002",
+      "atlas_page": 70,
+      "pdf_sha256": "411d3cd599665e3db0c2a6359e4e81641fcceee31dde3f985501bb2bdf6c38e9",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-RUN-003",
+      "atlas_page": 71,
+      "pdf_sha256": "58d0abf98a1d1679adbdddd8e900df688a5d86fcbaea44ce91ecbe683fd0713d",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-RUN-004",
+      "atlas_page": 77,
+      "pdf_sha256": "49c9db9ba55114e6ae52372006b2e2cd35f39bcf1ad0fec44708d2b32b8ba724",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-RUN-005",
+      "atlas_page": 72,
+      "pdf_sha256": "4d1e60713189525067b5ac0442a2c21bf6eee2d287eff42c2fc85a6808899ad8",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-RUN-006",
+      "atlas_page": 74,
+      "pdf_sha256": "04a3ce9757218e3a6d2cc1b6711352ed7a0680ea8c91d1e44c281f0b40331c7e",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-RUN-007",
+      "atlas_page": 75,
+      "pdf_sha256": "7f2bd355e2fb7b78ffc0770819c469b0c2dd6ae98abdf68c70cb3afae3766119",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-RUN-008",
+      "atlas_page": 67,
+      "pdf_sha256": "df998c94c2daed001f73fc7533d06436659d3fef4e6bc8283b0ba4efc8b3a964",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-RUN-009",
+      "atlas_page": 69,
+      "pdf_sha256": "cf3cb936775fcdc9623340cbc5ee132949d5d7f1ca905e72e2460dbdf3d03b08",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-RUN-010",
+      "atlas_page": 76,
+      "pdf_sha256": "bcc8d8434632d414f80165ca16a0c79b76bde6e5c5f7ed676729f0e3ae8d56a0",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-RUN-011",
+      "atlas_page": 68,
+      "pdf_sha256": "a435a83a6762b444cf00fa14d80faac30a433dc100808659896badca38c732d2",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-RUN-012",
+      "atlas_page": 73,
+      "pdf_sha256": "fc1c827ac469cf7dd1be1ca75e38d83e8decaf6313a267fcf9b684a02d929718",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-ENT-001_locked-geographic-framework",
+      "atlas_page": 78,
+      "pdf_sha256": "f7e5cb4f3fb04d31182a10206246aaf4b2473e3745c949a19607906d347fbc34",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-ENT-002_corporate-geographic-census",
+      "atlas_page": 79,
+      "pdf_sha256": "5ba3177803f06df500627e1d6a98bba29c8332d5a551b77941af382746a2dcc8",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-RWM-001_red-wash-context",
+      "atlas_page": 80,
+      "pdf_sha256": "fb76d27036533c25531f94ada5169d6946ebb8b148385629eccc67a3b43f96fa",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-SAC-001_headquarters-context",
+      "atlas_page": 81,
+      "pdf_sha256": "fe11938b1a0d6bfd5c958e6d3c98518af1a6cf5df8d0015aa0aabaec03cd6cb1",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-WIL-001_fort-hazelwood-context",
+      "atlas_page": 82,
+      "pdf_sha256": "f5a1083b6416ee64787c36304c1bd09feda3a6ab1a6cb1d86365a9c7612713ad",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-CRD-001_bedford-fairmont-context",
+      "atlas_page": 83,
+      "pdf_sha256": "1afb2e0f54676ca8cb485afc498a90b0d02439441ef405aca1124156cc7af70c",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-BST-001_wamsutter-interchange-study",
+      "atlas_page": 84,
+      "pdf_sha256": "de3567b949a87bbb6b7bf0408a035e980302bcb6b974b904253068461bfee3ab",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-ENT-003_open-geographic-questions",
+      "atlas_page": 85,
+      "pdf_sha256": "6dfe1c1665075e5de96bcc99f973d9019d291215f4d7a39ef037d001fb172f17",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-RWM-002_red-wash-site-study",
+      "atlas_page": 86,
+      "pdf_sha256": "de48efb015a6eedc842a10aa7a5b166a89ce70c8b9cb0cf23e12110176b94fad",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-BST-001_bst-pre-acquisition-system",
+      "atlas_page": 87,
+      "pdf_sha256": "61d63984c01fa2b37052e4b82e03d8bb87020db510f79673e8c44de8e461428c",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    },
+    {
+      "map_id": "SH-MAP-BST-002_bst-engineering-alignment",
+      "atlas_page": 88,
+      "pdf_sha256": "856f00f66089276dcaf23df6665f57bfdf0dd3f06c55b6bcc53ba3a0e38f33f2",
+      "text_dimensions_rendered_pixels": "IDENTICAL"
+    }
+  ],
+  "originals": [
+    {
+      "filename": "01_Sacramento_Campus_Master_Draft.png",
+      "sha256": "23729f7e2b427e58820361363e4a47fbc6bbd3ce9774ef67932ecab7a50bfa47",
+      "atlas_page": 2,
+      "decoded_pixels": "IDENTICAL_3240x2304"
+    },
+    {
+      "filename": "02_Corporate_L02_Product_Draft.png",
+      "sha256": "09a3339ece443d6e7e8cd148cd8f207b56cd938a03efde4f4c5f8e9367dd6179",
+      "atlas_page": 3,
+      "decoded_pixels": "IDENTICAL_3240x2304"
+    },
+    {
+      "filename": "03_J2_L01_Contact_JAG_Draft.png",
+      "sha256": "17bf92029276f7794721129e58830344a9a3ee4341c858f2c928d53ad8b0fefb",
+      "atlas_page": 4,
+      "decoded_pixels": "IDENTICAL_3240x2304"
+    },
+    {
+      "filename": "04_Education_L01_Teaching_Draft.png",
+      "sha256": "d37ff987cf1036d32cf0fe07ca3b9a0578d7f359bd820fde2551cb268ed88361",
+      "atlas_page": 5,
+      "decoded_pixels": "IDENTICAL_3240x2304"
+    }
+  ],
+  "atlas_sha256": "e47c0515f986de3483dd097350e99d140d97da93fcbe7e22eb3be83506622b69",
+  "pages": 150
+}

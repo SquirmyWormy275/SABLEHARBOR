@@ -30,14 +30,14 @@
   ],
   "entrypoint": "geospatial/maps/index.html",
   "pdf": "geospatial/maps/SABLE_HARBOR_Facility_Atlas_v0.2.0.pdf",
-  "pdf_pages": 137,
+  "pdf_pages": 150,
   "source_sha256": {
-    "geospatial/facilities/coverage/COVERAGE_MATRIX.json": "0383d9ca7609d8cc999ccecb85a3b216137fa2f138785a43ac71d5c1ff7a25f9",
-    "geospatial/maps/facilities/MANIFEST.json": "070f598363c9c290a24126bb975b067b815f05f5f64d9dc0f969499d9c50d9eb",
+    "geospatial/facilities/coverage/COVERAGE_MATRIX.json": "a7243cf7f6b89d8dc8e7741c82680c4599e62dfe0bb157069f1bd5fdec336adf",
+    "geospatial/maps/facilities/MANIFEST.json": "773b554c383fe3bf4414fbd342b33f2153400c07e72879e216c4b39c04a0e6d6",
     "geospatial/facilities/source/campus.json": "0efd4854069ff20acb4032e02b021afebcb955990f1d684b51428624e281d950",
     "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
     "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
-    "geospatial/facilities/atlas.py": "5961534feb577e377d899f78065a48efe333e2dd3f2ff35082457f26e37dfa48",
+    "geospatial/facilities/atlas.py": "6dea28c9046c9f3b0a866cee85f0e6abb22278ccff3037438d782fc24a33c815",
     "docs/facilities/references/sacramento-hq/r01-approved/MANIFEST.json": "d0a9029fe40795eac1a63cd2b392df7084033509cba169c5bffec484f7ab57f7",
     "geospatial/facilities/fonts/DejaVuSans.ttf": "3fdf69cabf06049ea70a00b5919340e2ce1e6d02b0cc3c4b44fb6801bd1e0d22",
     "geospatial/facilities/fonts/DejaVuSans-Bold.ttf": "b184b89e3c1075f22f6b71575b6fc20d4972b3cfd3b23322ca6fd596dcaef167",
@@ -48,9 +48,18 @@
     "docs/facilities/references/sacramento-hq/r01-approved/CODEX_ADDENDUM_APPROVED_SACRAMENTO_VISUAL_BASELINE_R01.md": "8fc176378cc3717f2e4cac42c8d56851fa33ddfc916622913f3820d5c99331db",
     "docs/facilities/references/sacramento-hq/r01-approved/SABLE_HARBOR_Headcount_Campus_Building_Atlas_Closeout_HANDOVER_2026-09-11.md": "09db215f4129b3b52ec52ae5c15e850c4faf23da2c3395815325b10f79912a21",
     "docs/facilities/references/sacramento-hq/r01-approved/SABLE_HARBOR_Sacramento_HQ_Drafts_R01.zip": "eb10588f6cc6e214d8541b96b1bd044f52f0df85e384fc53a316b55b5d026fe0",
-    "docs/facilities/references/sacramento-hq/r01-approved/START_HERE_CODEX.md": "4659491cee148c2ecda0ea95ab3b1a15c02d7d429e8e9f0c431ec4309fe05988"
+    "docs/facilities/references/sacramento-hq/r01-approved/START_HERE_CODEX.md": "4659491cee148c2ecda0ea95ab3b1a15c02d7d429e8e9f0c431ec4309fe05988",
+    "geospatial/facilities/RUNTIME_BRIDGE.json": "764b0fdb51475396c13d88a9ba365ac34b1a4f4a0f9608d5bf43fb09ccc2e946",
+    "geospatial/facilities/runtime_bridge.py": "b5894f73df499f1c0c20da37a14e6aea1fc95a77c66a6ae1db50729e13b45802",
+    "enterprise/services/source/runtime_sites_2026-09-11.json": "fa216f629762503865fd9f1a3207e87691cd484cec9885bf25ce045b4525519c",
+    "enterprise/services/source/runtime_capital_plan_2026-09-11.json": "b70546497ea380ff99c00e2b4a3dcd498869d172c5e6696f05aaa709d93b5bbd",
+    "enterprise/runtime/visuals/manifest.json": "6d842ad71c4f90fdbab75281ae7bae9db4efaecef460b5ec6bcbca75322ddd67",
+    "enterprise/runtime/design.py": "0351b9528c1c7bc4150b182d6aab5ac14aea51f8b03b8089624e44b3eb7b889f",
+    "enterprise/runtime/render.py": "0c4483da5b80081abe0745dfb7b2139b5460ac0cf6aaba99eaf11972f9236929",
+    "geospatial/registers/MAP_ID_REGISTER.json": "fc0a35688847c9915968d6102983158289c7a0a381c6e322f100898048915132",
+    "geospatial/geojson/runtime_parcel.geojson": "671c7eadf7347864f9ccc9876606fb476e6e866587aea0cfc556436e7310d5f0"
   },
-  "legacy_context_manifest_sha256": "b0ab119ad8f470a47f0cd043fd2b5e5f2a6fd6b6a36cb882feffccde71809fa4",
+  "legacy_context_manifest_sha256": "eb209c43e33871487bd24cf7c67862703e7a317471d666428a86196384183d70",
   "nodes": [
     {
       "id": "atlas",
@@ -1555,6 +1564,294 @@
       "sha256": "429bfb0906edee9772e8aa636c5adc5dc221771d4abbc3fedd5ae8bb6ec948b3"
     },
     {
+      "id": "SH-MAP-RUN-001",
+      "kind": "map",
+      "title": "Three-site runtime topology",
+      "status": "SYNTHETIC_CONCEPT_NOT_AS_BUILT"
+    },
+    {
+      "id": "artifact:enterprise/runtime/visuals/01-topology.svg",
+      "kind": "artifact",
+      "path": "enterprise/runtime/visuals/01-topology.svg",
+      "sha256": "86b3de3a1982e7cd89c5e610e46a8bfd6cbd09762cac3bf9e77719053e408759"
+    },
+    {
+      "id": "artifact:enterprise/runtime/visuals/01-topology.png",
+      "kind": "artifact",
+      "path": "enterprise/runtime/visuals/01-topology.png",
+      "sha256": "6bd186b2260137a84534954d5eb21a09f81d670b63c884ea3e20fda1839307a0"
+    },
+    {
+      "id": "artifact:enterprise/runtime/visuals/01-topology.pdf",
+      "kind": "artifact",
+      "path": "enterprise/runtime/visuals/01-topology.pdf",
+      "sha256": "0319ca62487da45982e2732a4427e357d3b13d3baa99ca42f11292ddc3641eb1"
+    },
+    {
+      "id": "SH-MAP-RUN-002",
+      "kind": "map",
+      "title": "Northern Nevada / September current condition",
+      "status": "LAND_ACQUIRED_PRECONSTRUCTION"
+    },
+    {
+      "id": "artifact:enterprise/runtime/visuals/02-current-condition.svg",
+      "kind": "artifact",
+      "path": "enterprise/runtime/visuals/02-current-condition.svg",
+      "sha256": "3c96aedb1a3d49c839a03b2d25a9c9a4ccda7b4481080788e33ba88a646349a6"
+    },
+    {
+      "id": "artifact:enterprise/runtime/visuals/02-current-condition.png",
+      "kind": "artifact",
+      "path": "enterprise/runtime/visuals/02-current-condition.png",
+      "sha256": "ef25597e241725395f6b35fd34b2edff0ec3b58e0257da2e455f9cbb5fee7b86"
+    },
+    {
+      "id": "artifact:enterprise/runtime/visuals/02-current-condition.pdf",
+      "kind": "artifact",
+      "path": "enterprise/runtime/visuals/02-current-condition.pdf",
+      "sha256": "411d3cd599665e3db0c2a6359e4e81641fcceee31dde3f985501bb2bdf6c38e9"
+    },
+    {
+      "id": "SH-MAP-RUN-003",
+      "kind": "map",
+      "title": "Northern Nevada / proposed site relationships",
+      "status": "SYNTHETIC_CONCEPT_NOT_AS_BUILT"
+    },
+    {
+      "id": "artifact:enterprise/runtime/visuals/03-site-concept.svg",
+      "kind": "artifact",
+      "path": "enterprise/runtime/visuals/03-site-concept.svg",
+      "sha256": "26c0651e1f2f3cde0ae1a17c6d164ebb016b8c0ab712d25a05a841dc55fe1cf1"
+    },
+    {
+      "id": "artifact:enterprise/runtime/visuals/03-site-concept.png",
+      "kind": "artifact",
+      "path": "enterprise/runtime/visuals/03-site-concept.png",
+      "sha256": "1c626e0c3722ad44206a68d8fae517472ec07a66a10e79d51da086bfff7e0178"
+    },
+    {
+      "id": "artifact:enterprise/runtime/visuals/03-site-concept.pdf",
+      "kind": "artifact",
+      "path": "enterprise/runtime/visuals/03-site-concept.pdf",
+      "sha256": "58d0abf98a1d1679adbdddd8e900df688a5d86fcbaea44ce91ecbe683fd0713d"
+    },
+    {
+      "id": "SH-MAP-RUN-004",
+      "kind": "map",
+      "title": "Northern Nevada / proposed level 01",
+      "status": "SYNTHETIC_CONCEPT_NOT_AS_BUILT"
+    },
+    {
+      "id": "artifact:enterprise/runtime/visuals/04-space-block-plan.svg",
+      "kind": "artifact",
+      "path": "enterprise/runtime/visuals/04-space-block-plan.svg",
+      "sha256": "18c6a6e079213d08f4000b20139cb656256aae92f67f014922a85a52457b58eb"
+    },
+    {
+      "id": "artifact:enterprise/runtime/visuals/04-space-block-plan.png",
+      "kind": "artifact",
+      "path": "enterprise/runtime/visuals/04-space-block-plan.png",
+      "sha256": "c80b8fce71c1e923eabdc4c1937c0ab86d144e1ac0aea8d67142bc0b55bea1cc"
+    },
+    {
+      "id": "artifact:enterprise/runtime/visuals/04-space-block-plan.pdf",
+      "kind": "artifact",
+      "path": "enterprise/runtime/visuals/04-space-block-plan.pdf",
+      "sha256": "49c9db9ba55114e6ae52372006b2e2cd35f39bcf1ad0fec44708d2b32b8ba724"
+    },
+    {
+      "id": "SH-MAP-RUN-005",
+      "kind": "map",
+      "title": "Northern Nevada / utility and expansion requirements",
+      "status": "SYNTHETIC_CONCEPT_NOT_AS_BUILT"
+    },
+    {
+      "id": "artifact:enterprise/runtime/visuals/05-utility-zones.svg",
+      "kind": "artifact",
+      "path": "enterprise/runtime/visuals/05-utility-zones.svg",
+      "sha256": "7a90c6bbbb25b0da8c19257ff2dda6709be276ba3496e6a4238d41d51a30708b"
+    },
+    {
+      "id": "artifact:enterprise/runtime/visuals/05-utility-zones.png",
+      "kind": "artifact",
+      "path": "enterprise/runtime/visuals/05-utility-zones.png",
+      "sha256": "71ed11df4dbb99660389869c48a36f19e2bd7fdf7d3eeafca6e2335c78449480"
+    },
+    {
+      "id": "artifact:enterprise/runtime/visuals/05-utility-zones.pdf",
+      "kind": "artifact",
+      "path": "enterprise/runtime/visuals/05-utility-zones.pdf",
+      "sha256": "4d1e60713189525067b5ac0442a2c21bf6eee2d287eff42c2fc85a6808899ad8"
+    },
+    {
+      "id": "SH-MAP-RUN-006",
+      "kind": "map",
+      "title": "Northern Nevada / electrical concept",
+      "status": "SYNTHETIC_CONCEPT_NOT_AS_BUILT"
+    },
+    {
+      "id": "artifact:enterprise/runtime/visuals/06-electrical-concept.svg",
+      "kind": "artifact",
+      "path": "enterprise/runtime/visuals/06-electrical-concept.svg",
+      "sha256": "ca6e075a09b7dcacfe08bfd2bd8f8251c4d48ad657af038954c86724ab14357b"
+    },
+    {
+      "id": "artifact:enterprise/runtime/visuals/06-electrical-concept.png",
+      "kind": "artifact",
+      "path": "enterprise/runtime/visuals/06-electrical-concept.png",
+      "sha256": "8416922a381a325c25a4059cbe891086d5ffc79be6000ef05db0e32dbd9e7a36"
+    },
+    {
+      "id": "artifact:enterprise/runtime/visuals/06-electrical-concept.pdf",
+      "kind": "artifact",
+      "path": "enterprise/runtime/visuals/06-electrical-concept.pdf",
+      "sha256": "04a3ce9757218e3a6d2cc1b6711352ed7a0680ea8c91d1e44c281f0b40331c7e"
+    },
+    {
+      "id": "SH-MAP-RUN-007",
+      "kind": "map",
+      "title": "Northern Nevada / cooling concept",
+      "status": "SYNTHETIC_CONCEPT_NOT_AS_BUILT"
+    },
+    {
+      "id": "artifact:enterprise/runtime/visuals/07-cooling-concept.svg",
+      "kind": "artifact",
+      "path": "enterprise/runtime/visuals/07-cooling-concept.svg",
+      "sha256": "3ab6ba8f62d41bd40b636979a4dc19353ba5ba76cb26f564257c7f64affb20f8"
+    },
+    {
+      "id": "artifact:enterprise/runtime/visuals/07-cooling-concept.png",
+      "kind": "artifact",
+      "path": "enterprise/runtime/visuals/07-cooling-concept.png",
+      "sha256": "ebc4f6688335b0ba80d877cd80d929cb91051a9c506060641c93e05170a27708"
+    },
+    {
+      "id": "artifact:enterprise/runtime/visuals/07-cooling-concept.pdf",
+      "kind": "artifact",
+      "path": "enterprise/runtime/visuals/07-cooling-concept.pdf",
+      "sha256": "7f2bd355e2fb7b78ffc0770819c469b0c2dd6ae98abdf68c70cb3afae3766119"
+    },
+    {
+      "id": "SH-MAP-RUN-008",
+      "kind": "map",
+      "title": "Switch Reno / customer-enclosure requirement",
+      "status": "SYNTHETIC_CONCEPT_NOT_AS_BUILT"
+    },
+    {
+      "id": "artifact:enterprise/runtime/visuals/08-enclosure-reno.svg",
+      "kind": "artifact",
+      "path": "enterprise/runtime/visuals/08-enclosure-reno.svg",
+      "sha256": "6996fb704a9ebff46c7858876c6286d31c48a360c8531852c61acbd0c8bbbee2"
+    },
+    {
+      "id": "artifact:enterprise/runtime/visuals/08-enclosure-reno.png",
+      "kind": "artifact",
+      "path": "enterprise/runtime/visuals/08-enclosure-reno.png",
+      "sha256": "2b6b05efe35ef97c04b941ffdd6799fa9b064d2ab68ba955005e4dd25a0269e1"
+    },
+    {
+      "id": "artifact:enterprise/runtime/visuals/08-enclosure-reno.pdf",
+      "kind": "artifact",
+      "path": "enterprise/runtime/visuals/08-enclosure-reno.pdf",
+      "sha256": "df998c94c2daed001f73fc7533d06436659d3fef4e6bc8283b0ba4efc8b3a964"
+    },
+    {
+      "id": "SH-MAP-RUN-009",
+      "kind": "map",
+      "title": "IDACORE Boise / customer-enclosure requirement",
+      "status": "SYNTHETIC_CONCEPT_NOT_AS_BUILT"
+    },
+    {
+      "id": "artifact:enterprise/runtime/visuals/09-enclosure-boise.svg",
+      "kind": "artifact",
+      "path": "enterprise/runtime/visuals/09-enclosure-boise.svg",
+      "sha256": "3f535af0032f8987cfad55787ac82e6ff02eb5faa92f452890de3021bcf9771a"
+    },
+    {
+      "id": "artifact:enterprise/runtime/visuals/09-enclosure-boise.png",
+      "kind": "artifact",
+      "path": "enterprise/runtime/visuals/09-enclosure-boise.png",
+      "sha256": "8f88f61a2027e079c2e6da19e3f8e8c5ed226dbc6c2791564f1c43181fca7108"
+    },
+    {
+      "id": "artifact:enterprise/runtime/visuals/09-enclosure-boise.pdf",
+      "kind": "artifact",
+      "path": "enterprise/runtime/visuals/09-enclosure-boise.pdf",
+      "sha256": "cf3cb936775fcdc9623340cbc5ee132949d5d7f1ca905e72e2460dbdf3d03b08"
+    },
+    {
+      "id": "SH-MAP-RUN-010",
+      "kind": "map",
+      "title": "Runtime / configuration-class rack elevations",
+      "status": "SYNTHETIC_CONCEPT_NOT_AS_BUILT"
+    },
+    {
+      "id": "artifact:enterprise/runtime/visuals/10-rack-elevations.svg",
+      "kind": "artifact",
+      "path": "enterprise/runtime/visuals/10-rack-elevations.svg",
+      "sha256": "af75903730ec8f63a7b0fe4faf852cdb2382d6d635da79f1577684bc52096583"
+    },
+    {
+      "id": "artifact:enterprise/runtime/visuals/10-rack-elevations.png",
+      "kind": "artifact",
+      "path": "enterprise/runtime/visuals/10-rack-elevations.png",
+      "sha256": "df26429b798374ae356aac0cf44d6a51678820cbfcb9529db22b941ebbc157a1"
+    },
+    {
+      "id": "artifact:enterprise/runtime/visuals/10-rack-elevations.pdf",
+      "kind": "artifact",
+      "path": "enterprise/runtime/visuals/10-rack-elevations.pdf",
+      "sha256": "bcc8d8434632d414f80165ca16a0c79b76bde6e5c5f7ed676729f0e3ae8d56a0"
+    },
+    {
+      "id": "SH-MAP-RUN-011",
+      "kind": "map",
+      "title": "Runtime / logical and recovery boundaries",
+      "status": "SYNTHETIC_CONCEPT_NOT_AS_BUILT"
+    },
+    {
+      "id": "artifact:enterprise/runtime/visuals/11-logical-boundaries.svg",
+      "kind": "artifact",
+      "path": "enterprise/runtime/visuals/11-logical-boundaries.svg",
+      "sha256": "579f8c607ca83761a301fed7000db448923267d792b7d332bcf98b7fd5f70250"
+    },
+    {
+      "id": "artifact:enterprise/runtime/visuals/11-logical-boundaries.png",
+      "kind": "artifact",
+      "path": "enterprise/runtime/visuals/11-logical-boundaries.png",
+      "sha256": "2eab8973245cc9bd3a7869c7062d5dd74957abd8b268ea75f8dfa39f4606e503"
+    },
+    {
+      "id": "artifact:enterprise/runtime/visuals/11-logical-boundaries.pdf",
+      "kind": "artifact",
+      "path": "enterprise/runtime/visuals/11-logical-boundaries.pdf",
+      "sha256": "a435a83a6762b444cf00fa14d80faac30a433dc100808659896badca38c732d2"
+    },
+    {
+      "id": "SH-MAP-RUN-012",
+      "kind": "map",
+      "title": "Northern Nevada / conditional construction schedule",
+      "status": "SYNTHETIC_CONCEPT_NOT_AS_BUILT"
+    },
+    {
+      "id": "artifact:enterprise/runtime/visuals/12-construction-schedule.svg",
+      "kind": "artifact",
+      "path": "enterprise/runtime/visuals/12-construction-schedule.svg",
+      "sha256": "81471054db4ebc01ce31b45f0f91899588c91c1c97869f7830d464b061447232"
+    },
+    {
+      "id": "artifact:enterprise/runtime/visuals/12-construction-schedule.png",
+      "kind": "artifact",
+      "path": "enterprise/runtime/visuals/12-construction-schedule.png",
+      "sha256": "0231508fdb83c1ab7861117458adf9ca229a4b327068a76f2e3d77c5a6b09a04"
+    },
+    {
+      "id": "artifact:enterprise/runtime/visuals/12-construction-schedule.pdf",
+      "kind": "artifact",
+      "path": "enterprise/runtime/visuals/12-construction-schedule.pdf",
+      "sha256": "fc1c827ac469cf7dd1be1ca75e38d83e8decaf6313a267fcf9b684a02d929718"
+    },
+    {
       "id": "SH-MAP-ENT-001_locked-geographic-framework",
       "kind": "map",
       "title": "Locked geographic framework",
@@ -1708,13 +2005,13 @@
       "id": "artifact:geospatial/maps/SH-MAP-BST-001_wamsutter-interchange-study.pdf",
       "kind": "artifact",
       "path": "geospatial/maps/SH-MAP-BST-001_wamsutter-interchange-study.pdf",
-      "sha256": "994412336f42a66d3172f4e090bdde4911f3cbcf60294268d2f9fd469e27433e"
+      "sha256": "de3567b949a87bbb6b7bf0408a035e980302bcb6b974b904253068461bfee3ab"
     },
     {
       "id": "artifact:geospatial/maps/SH-MAP-BST-001_wamsutter-interchange-study.svg",
       "kind": "artifact",
       "path": "geospatial/maps/SH-MAP-BST-001_wamsutter-interchange-study.svg",
-      "sha256": "d44f3fc270ccfdfbea856dca1b27483281ea285e28e8483e20931b6a818a6d8d"
+      "sha256": "ea98274407277aca4777c2acbc94ad8640fdf88521073d583d440a994760b458"
     },
     {
       "id": "artifact:geospatial/maps/SH-MAP-BST-001_wamsutter-interchange-study.png",
@@ -1762,7 +2059,7 @@
       "id": "artifact:geospatial/maps/SH-MAP-RWM-002_red-wash-site-study.svg",
       "kind": "artifact",
       "path": "geospatial/maps/SH-MAP-RWM-002_red-wash-site-study.svg",
-      "sha256": "53271ee4260c72690ec87c6d60e8dd00dcac8523c12abeb1574f359bda3d9456"
+      "sha256": "f8d0bd44488849ab3c6b45b807e2aa2783c5e60d38b355d768f9df032e4c5920"
     },
     {
       "id": "artifact:geospatial/maps/SH-MAP-RWM-002_red-wash-site-study.png",
@@ -2190,6 +2487,44 @@
       "title": "Red Wash surface study envelope",
       "status": "PRELIMINARY_ENGINEERING_PROPOSAL",
       "source": "geospatial/facilities/source/industrial_facilities.json"
+    },
+    {
+      "id": "SH-SITE-0028",
+      "kind": "site",
+      "title": "Reno primary colocation",
+      "status": "PROVIDER_SELECTED_PROCUREMENT_PENDING",
+      "source": "geospatial/facilities/RUNTIME_BRIDGE.json"
+    },
+    {
+      "id": "source:geospatial/facilities/RUNTIME_BRIDGE.json",
+      "kind": "source",
+      "path": "geospatial/facilities/RUNTIME_BRIDGE.json"
+    },
+    {
+      "id": "SH-SITE-0029",
+      "kind": "site",
+      "title": "Boise independent recovery colocation",
+      "status": "PROVIDER_SELECTED_PROCUREMENT_PENDING",
+      "source": "geospatial/facilities/RUNTIME_BRIDGE.json"
+    },
+    {
+      "id": "SH-SITE-0030",
+      "kind": "site",
+      "title": "SABLE HARBOR Northern Nevada Data Center",
+      "status": "LAND_ACQUIRED_PRECONSTRUCTION",
+      "source": "geospatial/facilities/RUNTIME_BRIDGE.json"
+    },
+    {
+      "id": "SH-SITE-0030-B01",
+      "kind": "building",
+      "title": "Northern Nevada proposed data center",
+      "status": "PROPOSED_DESIGN_NOT_CONSTRUCTED"
+    },
+    {
+      "id": "SH-SITE-0030-B01-L01",
+      "kind": "floor",
+      "title": "Northern Nevada data center / proposed level 01",
+      "status": "PROPOSED_DESIGN_NOT_CONSTRUCTED"
     },
     {
       "id": "coverage:SH-SITE-0001",
@@ -3530,6 +3865,32 @@
       "title": "ARU formalization and wholly owned railroad under durable logistics parent",
       "status": "locked_derived_implementation",
       "classification": "distributed/nonphysical/reference"
+    },
+    {
+      "id": "coverage:SH-SITE-0028",
+      "kind": "coverage",
+      "title": "Reno primary colocation",
+      "status": "external",
+      "classification": "external context only"
+    },
+    {
+      "id": "source:enterprise/services/source/runtime_sites_2026-09-11.json",
+      "kind": "source",
+      "path": "enterprise/services/source/runtime_sites_2026-09-11.json"
+    },
+    {
+      "id": "coverage:SH-SITE-0029",
+      "kind": "coverage",
+      "title": "Boise independent recovery colocation",
+      "status": "external",
+      "classification": "external context only"
+    },
+    {
+      "id": "coverage:SH-SITE-0030",
+      "kind": "coverage",
+      "title": "SABLE HARBOR Northern Nevada Data Center",
+      "status": "land_acquired_preconstruction",
+      "classification": "operating site plan"
     },
     {
       "id": "coverage:ORG:SHI",
@@ -6572,27 +6933,6 @@
       "classification": "distributed/nonphysical/reference"
     },
     {
-      "id": "coverage:SERVICE:FAC-PRIMARY",
-      "kind": "coverage",
-      "title": "Primary colocation requirement",
-      "status": "unresolved",
-      "classification": "proposed/unresolved disposition"
-    },
-    {
-      "id": "coverage:SERVICE:FAC-RECOVERY",
-      "kind": "coverage",
-      "title": "Independent recovery facility requirement",
-      "status": "unresolved",
-      "classification": "proposed/unresolved disposition"
-    },
-    {
-      "id": "coverage:SERVICE:FAC-OWNED",
-      "kind": "coverage",
-      "title": "Future owned-facility alternative",
-      "status": "unresolved",
-      "classification": "proposed/unresolved disposition"
-    },
-    {
       "id": "coverage:SERVICE:ENV-PROD",
       "kind": "coverage",
       "title": "Primary production",
@@ -7448,6 +7788,150 @@
       "target": "artifact:geospatial/maps/SH-MAP-ENT-003_open-geographic-questions.svg"
     },
     {
+      "source": "SH-MAP-RUN-001",
+      "target": "artifact:enterprise/runtime/visuals/01-topology.pdf"
+    },
+    {
+      "source": "SH-MAP-RUN-001",
+      "target": "artifact:enterprise/runtime/visuals/01-topology.png"
+    },
+    {
+      "source": "SH-MAP-RUN-001",
+      "target": "artifact:enterprise/runtime/visuals/01-topology.svg"
+    },
+    {
+      "source": "SH-MAP-RUN-002",
+      "target": "artifact:enterprise/runtime/visuals/02-current-condition.pdf"
+    },
+    {
+      "source": "SH-MAP-RUN-002",
+      "target": "artifact:enterprise/runtime/visuals/02-current-condition.png"
+    },
+    {
+      "source": "SH-MAP-RUN-002",
+      "target": "artifact:enterprise/runtime/visuals/02-current-condition.svg"
+    },
+    {
+      "source": "SH-MAP-RUN-003",
+      "target": "artifact:enterprise/runtime/visuals/03-site-concept.pdf"
+    },
+    {
+      "source": "SH-MAP-RUN-003",
+      "target": "artifact:enterprise/runtime/visuals/03-site-concept.png"
+    },
+    {
+      "source": "SH-MAP-RUN-003",
+      "target": "artifact:enterprise/runtime/visuals/03-site-concept.svg"
+    },
+    {
+      "source": "SH-MAP-RUN-004",
+      "target": "artifact:enterprise/runtime/visuals/04-space-block-plan.pdf"
+    },
+    {
+      "source": "SH-MAP-RUN-004",
+      "target": "artifact:enterprise/runtime/visuals/04-space-block-plan.png"
+    },
+    {
+      "source": "SH-MAP-RUN-004",
+      "target": "artifact:enterprise/runtime/visuals/04-space-block-plan.svg"
+    },
+    {
+      "source": "SH-MAP-RUN-005",
+      "target": "artifact:enterprise/runtime/visuals/05-utility-zones.pdf"
+    },
+    {
+      "source": "SH-MAP-RUN-005",
+      "target": "artifact:enterprise/runtime/visuals/05-utility-zones.png"
+    },
+    {
+      "source": "SH-MAP-RUN-005",
+      "target": "artifact:enterprise/runtime/visuals/05-utility-zones.svg"
+    },
+    {
+      "source": "SH-MAP-RUN-006",
+      "target": "artifact:enterprise/runtime/visuals/06-electrical-concept.pdf"
+    },
+    {
+      "source": "SH-MAP-RUN-006",
+      "target": "artifact:enterprise/runtime/visuals/06-electrical-concept.png"
+    },
+    {
+      "source": "SH-MAP-RUN-006",
+      "target": "artifact:enterprise/runtime/visuals/06-electrical-concept.svg"
+    },
+    {
+      "source": "SH-MAP-RUN-007",
+      "target": "artifact:enterprise/runtime/visuals/07-cooling-concept.pdf"
+    },
+    {
+      "source": "SH-MAP-RUN-007",
+      "target": "artifact:enterprise/runtime/visuals/07-cooling-concept.png"
+    },
+    {
+      "source": "SH-MAP-RUN-007",
+      "target": "artifact:enterprise/runtime/visuals/07-cooling-concept.svg"
+    },
+    {
+      "source": "SH-MAP-RUN-008",
+      "target": "artifact:enterprise/runtime/visuals/08-enclosure-reno.pdf"
+    },
+    {
+      "source": "SH-MAP-RUN-008",
+      "target": "artifact:enterprise/runtime/visuals/08-enclosure-reno.png"
+    },
+    {
+      "source": "SH-MAP-RUN-008",
+      "target": "artifact:enterprise/runtime/visuals/08-enclosure-reno.svg"
+    },
+    {
+      "source": "SH-MAP-RUN-009",
+      "target": "artifact:enterprise/runtime/visuals/09-enclosure-boise.pdf"
+    },
+    {
+      "source": "SH-MAP-RUN-009",
+      "target": "artifact:enterprise/runtime/visuals/09-enclosure-boise.png"
+    },
+    {
+      "source": "SH-MAP-RUN-009",
+      "target": "artifact:enterprise/runtime/visuals/09-enclosure-boise.svg"
+    },
+    {
+      "source": "SH-MAP-RUN-010",
+      "target": "artifact:enterprise/runtime/visuals/10-rack-elevations.pdf"
+    },
+    {
+      "source": "SH-MAP-RUN-010",
+      "target": "artifact:enterprise/runtime/visuals/10-rack-elevations.png"
+    },
+    {
+      "source": "SH-MAP-RUN-010",
+      "target": "artifact:enterprise/runtime/visuals/10-rack-elevations.svg"
+    },
+    {
+      "source": "SH-MAP-RUN-011",
+      "target": "artifact:enterprise/runtime/visuals/11-logical-boundaries.pdf"
+    },
+    {
+      "source": "SH-MAP-RUN-011",
+      "target": "artifact:enterprise/runtime/visuals/11-logical-boundaries.png"
+    },
+    {
+      "source": "SH-MAP-RUN-011",
+      "target": "artifact:enterprise/runtime/visuals/11-logical-boundaries.svg"
+    },
+    {
+      "source": "SH-MAP-RUN-012",
+      "target": "artifact:enterprise/runtime/visuals/12-construction-schedule.pdf"
+    },
+    {
+      "source": "SH-MAP-RUN-012",
+      "target": "artifact:enterprise/runtime/visuals/12-construction-schedule.png"
+    },
+    {
+      "source": "SH-MAP-RUN-012",
+      "target": "artifact:enterprise/runtime/visuals/12-construction-schedule.svg"
+    },
+    {
       "source": "SH-MAP-RWM-001_red-wash-context",
       "target": "artifact:geospatial/maps/SH-MAP-RWM-001_red-wash-context.pdf"
     },
@@ -8052,6 +8536,114 @@
       "target": "source:geospatial/facilities/source/industrial_facilities.json"
     },
     {
+      "source": "SH-SITE-0028",
+      "target": "SH-MAP-RUN-001"
+    },
+    {
+      "source": "SH-SITE-0028",
+      "target": "SH-MAP-RUN-008"
+    },
+    {
+      "source": "SH-SITE-0028",
+      "target": "SH-MAP-RUN-010"
+    },
+    {
+      "source": "SH-SITE-0028",
+      "target": "SH-MAP-RUN-011"
+    },
+    {
+      "source": "SH-SITE-0028",
+      "target": "source:geospatial/facilities/RUNTIME_BRIDGE.json"
+    },
+    {
+      "source": "SH-SITE-0029",
+      "target": "SH-MAP-RUN-001"
+    },
+    {
+      "source": "SH-SITE-0029",
+      "target": "SH-MAP-RUN-009"
+    },
+    {
+      "source": "SH-SITE-0029",
+      "target": "SH-MAP-RUN-010"
+    },
+    {
+      "source": "SH-SITE-0029",
+      "target": "SH-MAP-RUN-011"
+    },
+    {
+      "source": "SH-SITE-0029",
+      "target": "source:geospatial/facilities/RUNTIME_BRIDGE.json"
+    },
+    {
+      "source": "SH-SITE-0030",
+      "target": "SH-MAP-RUN-001"
+    },
+    {
+      "source": "SH-SITE-0030",
+      "target": "SH-MAP-RUN-002"
+    },
+    {
+      "source": "SH-SITE-0030",
+      "target": "SH-MAP-RUN-003"
+    },
+    {
+      "source": "SH-SITE-0030",
+      "target": "SH-MAP-RUN-004"
+    },
+    {
+      "source": "SH-SITE-0030",
+      "target": "SH-MAP-RUN-005"
+    },
+    {
+      "source": "SH-SITE-0030",
+      "target": "SH-MAP-RUN-006"
+    },
+    {
+      "source": "SH-SITE-0030",
+      "target": "SH-MAP-RUN-007"
+    },
+    {
+      "source": "SH-SITE-0030",
+      "target": "SH-MAP-RUN-010"
+    },
+    {
+      "source": "SH-SITE-0030",
+      "target": "SH-MAP-RUN-011"
+    },
+    {
+      "source": "SH-SITE-0030",
+      "target": "SH-MAP-RUN-012"
+    },
+    {
+      "source": "SH-SITE-0030",
+      "target": "SH-SITE-0030-B01"
+    },
+    {
+      "source": "SH-SITE-0030",
+      "target": "source:geospatial/facilities/RUNTIME_BRIDGE.json"
+    },
+    {
+      "source": "SH-SITE-0030-B01",
+      "target": "SH-MAP-RUN-006"
+    },
+    {
+      "source": "SH-SITE-0030-B01",
+      "target": "SH-MAP-RUN-007"
+    },
+    {
+      "source": "SH-SITE-0030-B01",
+      "target": "SH-MAP-RUN-010"
+    },
+    {
+      "source": "SH-SITE-0030-B01",
+      "target": "SH-SITE-0030-B01-L01"
+    },
+    {
+      "source": "SH-SITE-0030-B01-L01",
+      "target": "SH-MAP-RUN-004"
+    },
+    {
       "source": "atlas",
       "target": "SH-FAC-REF-SAC-R01"
     },
@@ -8162,6 +8754,18 @@
     {
       "source": "atlas",
       "target": "SH-SITE-0006"
+    },
+    {
+      "source": "atlas",
+      "target": "SH-SITE-0028"
+    },
+    {
+      "source": "atlas",
+      "target": "SH-SITE-0029"
+    },
+    {
+      "source": "atlas",
+      "target": "SH-SITE-0030"
     },
     {
       "source": "atlas",
@@ -9677,18 +10281,6 @@
     },
     {
       "source": "atlas",
-      "target": "coverage:SERVICE:FAC-OWNED"
-    },
-    {
-      "source": "atlas",
-      "target": "coverage:SERVICE:FAC-PRIMARY"
-    },
-    {
-      "source": "atlas",
-      "target": "coverage:SERVICE:FAC-RECOVERY"
-    },
-    {
-      "source": "atlas",
       "target": "coverage:SERVICE:TEAM-advisory"
     },
     {
@@ -10514,6 +11106,18 @@
     {
       "source": "atlas",
       "target": "coverage:SH-SITE-0027"
+    },
+    {
+      "source": "atlas",
+      "target": "coverage:SH-SITE-0028"
+    },
+    {
+      "source": "atlas",
+      "target": "coverage:SH-SITE-0029"
+    },
+    {
+      "source": "atlas",
+      "target": "coverage:SH-SITE-0030"
     },
     {
       "source": "atlas",
@@ -12336,18 +12940,6 @@
       "target": "source:enterprise/services/source/components.json"
     },
     {
-      "source": "coverage:SERVICE:FAC-OWNED",
-      "target": "source:enterprise/services/source/components.json"
-    },
-    {
-      "source": "coverage:SERVICE:FAC-PRIMARY",
-      "target": "source:enterprise/services/source/components.json"
-    },
-    {
-      "source": "coverage:SERVICE:FAC-RECOVERY",
-      "target": "source:enterprise/services/source/components.json"
-    },
-    {
       "source": "coverage:SERVICE:TEAM-advisory",
       "target": "source:enterprise/services/source/components.json"
     },
@@ -13378,6 +13970,30 @@
     {
       "source": "coverage:SH-SITE-0027",
       "target": "source:docs/canon/CRADLE_CLOSEOUT_2026-09-06.md"
+    },
+    {
+      "source": "coverage:SH-SITE-0028",
+      "target": "SH-SITE-0028"
+    },
+    {
+      "source": "coverage:SH-SITE-0028",
+      "target": "source:enterprise/services/source/runtime_sites_2026-09-11.json"
+    },
+    {
+      "source": "coverage:SH-SITE-0029",
+      "target": "SH-SITE-0029"
+    },
+    {
+      "source": "coverage:SH-SITE-0029",
+      "target": "source:enterprise/services/source/runtime_sites_2026-09-11.json"
+    },
+    {
+      "source": "coverage:SH-SITE-0030",
+      "target": "SH-SITE-0030"
+    },
+    {
+      "source": "coverage:SH-SITE-0030",
+      "target": "source:enterprise/services/source/runtime_sites_2026-09-11.json"
     }
   ],
   "paths": [
@@ -13448,7 +14064,45 @@
     "docs/legal/PRELIMINARY_NAME_AND_MARK_SCREEN.md",
     "docs/organization/ARU_BST_AND_ADVISORY.md",
     "enterprise/business/source/assets.json",
+    "enterprise/runtime/visuals/01-topology.pdf",
+    "enterprise/runtime/visuals/01-topology.png",
+    "enterprise/runtime/visuals/01-topology.svg",
+    "enterprise/runtime/visuals/02-current-condition.pdf",
+    "enterprise/runtime/visuals/02-current-condition.png",
+    "enterprise/runtime/visuals/02-current-condition.svg",
+    "enterprise/runtime/visuals/03-site-concept.pdf",
+    "enterprise/runtime/visuals/03-site-concept.png",
+    "enterprise/runtime/visuals/03-site-concept.svg",
+    "enterprise/runtime/visuals/04-space-block-plan.pdf",
+    "enterprise/runtime/visuals/04-space-block-plan.png",
+    "enterprise/runtime/visuals/04-space-block-plan.svg",
+    "enterprise/runtime/visuals/05-utility-zones.pdf",
+    "enterprise/runtime/visuals/05-utility-zones.png",
+    "enterprise/runtime/visuals/05-utility-zones.svg",
+    "enterprise/runtime/visuals/06-electrical-concept.pdf",
+    "enterprise/runtime/visuals/06-electrical-concept.png",
+    "enterprise/runtime/visuals/06-electrical-concept.svg",
+    "enterprise/runtime/visuals/07-cooling-concept.pdf",
+    "enterprise/runtime/visuals/07-cooling-concept.png",
+    "enterprise/runtime/visuals/07-cooling-concept.svg",
+    "enterprise/runtime/visuals/08-enclosure-reno.pdf",
+    "enterprise/runtime/visuals/08-enclosure-reno.png",
+    "enterprise/runtime/visuals/08-enclosure-reno.svg",
+    "enterprise/runtime/visuals/09-enclosure-boise.pdf",
+    "enterprise/runtime/visuals/09-enclosure-boise.png",
+    "enterprise/runtime/visuals/09-enclosure-boise.svg",
+    "enterprise/runtime/visuals/10-rack-elevations.pdf",
+    "enterprise/runtime/visuals/10-rack-elevations.png",
+    "enterprise/runtime/visuals/10-rack-elevations.svg",
+    "enterprise/runtime/visuals/11-logical-boundaries.pdf",
+    "enterprise/runtime/visuals/11-logical-boundaries.png",
+    "enterprise/runtime/visuals/11-logical-boundaries.svg",
+    "enterprise/runtime/visuals/12-construction-schedule.pdf",
+    "enterprise/runtime/visuals/12-construction-schedule.png",
+    "enterprise/runtime/visuals/12-construction-schedule.svg",
     "enterprise/services/source/components.json",
+    "enterprise/services/source/runtime_sites_2026-09-11.json",
+    "geospatial/facilities/RUNTIME_BRIDGE.json",
     "geospatial/facilities/coverage/COVERAGE_MATRIX.json",
     "geospatial/facilities/fonts/DejaVuSans-Bold.ttf",
     "geospatial/facilities/fonts/DejaVuSans.ttf",
@@ -13867,7 +14521,7 @@
       "anchor": "record-SH-SITE-0016",
       "targets": [],
       "context_map_ids": [],
-      "disposition": "Location, dedicated footprint or implementation remains proposed/unresolved; labeled planning disposition preserves the record without claiming occupancy.",
+      "disposition": "Retained Alexandria hosting identity. Accepted runtime placement uses Reno primary, Boise recovery and the proposed owned Northern Nevada end state; no separate Alexandria building is established.",
       "status": "unresolved",
       "classification": "proposed/unresolved disposition",
       "geometry_precision": "UNLOCATED"
@@ -15522,6 +16176,42 @@
       "status": "locked_derived_implementation",
       "classification": "distributed/nonphysical/reference",
       "geometry_precision": "DERIVED_CASE_GEOMETRY"
+    },
+    {
+      "coverage_id": "SH-SITE-0028",
+      "anchor": "record-SH-SITE-0028",
+      "targets": [
+        "SH-SITE-0028"
+      ],
+      "context_map_ids": [],
+      "disposition": "Accepted selected external provider; context only. Contract, assigned building/cage, reserved capacity and operating acceptance remain unestablished.",
+      "status": "external",
+      "classification": "external context only",
+      "geometry_precision": "REGIONAL_CONSTRAINT"
+    },
+    {
+      "coverage_id": "SH-SITE-0029",
+      "anchor": "record-SH-SITE-0029",
+      "targets": [
+        "SH-SITE-0029"
+      ],
+      "context_map_ids": [],
+      "disposition": "Accepted selected external provider; context only. Contract, assigned building/cage, reserved capacity and operating acceptance remain unestablished.",
+      "status": "external",
+      "classification": "external context only",
+      "geometry_precision": "REGIONAL_CONSTRAINT"
+    },
+    {
+      "coverage_id": "SH-SITE-0030",
+      "anchor": "record-SH-SITE-0030",
+      "targets": [
+        "SH-SITE-0030"
+      ],
+      "context_map_ids": [],
+      "disposition": "Accepted synthetic acquired parcel, preconstruction. Site and proposed building/floor concept required; no completed shell or operating data center.",
+      "status": "land_acquired_preconstruction",
+      "classification": "operating site plan",
+      "geometry_precision": "PLANNING_PIN"
     },
     {
       "coverage_id": "ORG:SHI",
@@ -19524,36 +20214,6 @@
       "geometry_precision": "UNLOCATED"
     },
     {
-      "coverage_id": "SERVICE:FAC-PRIMARY",
-      "anchor": "record-SERVICE:FAC-PRIMARY",
-      "targets": [],
-      "context_map_ids": [],
-      "disposition": "Facility requirement only; provider/address/readiness unresolved. PR #119 remains pending and is not imported.",
-      "status": "unresolved",
-      "classification": "proposed/unresolved disposition",
-      "geometry_precision": "UNLOCATED"
-    },
-    {
-      "coverage_id": "SERVICE:FAC-RECOVERY",
-      "anchor": "record-SERVICE:FAC-RECOVERY",
-      "targets": [],
-      "context_map_ids": [],
-      "disposition": "Facility requirement only; provider/address/readiness unresolved. PR #119 remains pending and is not imported.",
-      "status": "unresolved",
-      "classification": "proposed/unresolved disposition",
-      "geometry_precision": "UNLOCATED"
-    },
-    {
-      "coverage_id": "SERVICE:FAC-OWNED",
-      "anchor": "record-SERVICE:FAC-OWNED",
-      "targets": [],
-      "context_map_ids": [],
-      "disposition": "Facility requirement only; provider/address/readiness unresolved. PR #119 remains pending and is not imported.",
-      "status": "unresolved",
-      "classification": "proposed/unresolved disposition",
-      "geometry_precision": "UNLOCATED"
-    },
-    {
       "coverage_id": "SERVICE:ENV-PROD",
       "anchor": "record-SERVICE:ENV-PROD",
       "targets": [],
@@ -19636,10 +20296,10 @@
   ],
   "counts": {
     "coverage_records": 586,
-    "sites": 16,
-    "buildings": 17,
-    "floors": 24,
-    "facility_maps": 58,
+    "sites": 19,
+    "buildings": 18,
+    "floors": 25,
+    "facility_maps": 70,
     "legacy_context_maps": 11
   }
 }
