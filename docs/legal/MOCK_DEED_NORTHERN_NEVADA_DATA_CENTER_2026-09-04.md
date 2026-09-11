@@ -2,15 +2,19 @@
 
 **SYNTHETIC PLANNING INSTRUMENT — NOT A REAL DEED, NOT RECORDED, NO REAL APN, NO CLAIM AGAINST REAL PROPERTY.**
 
-This document exists solely to keep the SABLE HARBOR fictional planning universe, GeoPackage, facilities records, finance model, and construction timeline internally consistent.
+This document exists solely to keep the SABLE HARBOR fictional planning universe, GeoPackage, facilities records, finance model, and construction timeline internally consistent. The runtime transaction remains a branch proposal pending acceptance of PR #119; the existing parent legal identity is already established in accepted canon.
 
 ## Planning conveyance
 
 **Effective planning date:** September 4, 2026
 
+**Record preparation / correction date:** September 11, 2026. The effective planning date is not a claim that this document existed on September 4.
+
 **Grantor:** TRIC Development Holdings — **fictional planning counterparty; not asserted to be a real entity or owner**.
 
-**Grantee:** Sable Harbor Industries, Inc. (`SH-ENT-001`).
+**Grantee:** **Sable Harbor, LLC**, the existing parent operating company (finance/entity key `SHI`; geospatial parent reference `SH-ENT-001`). `SHI` does not imply an Inc. suffix and does not identify a newly created data-center company.
+
+**Parent-identity authority:** [Industrial ownership and internal formation record](../../industrial/corporate/LEGAL_STRUCTURE_AND_FORMATION.md) and [controlled entity register](../../industrial/source/entities.json). The earlier wording “Sable Harbor Industries, Inc.” was an implementation error, not an approved rename, incorporation, subsidiary formation, or property transfer.
 
 **Planning consideration:** $3,000,000.
 
@@ -32,7 +36,7 @@ The planning conveyance is subject to: utility and carrier rights; access/fire r
 
 ## Status certification
 
-As of 2026-09-11: planning acquisition is complete; preconstruction is in progress; no vertical construction or operating data center exists on the planning site.
+As of 2026-09-11: planning acquisition is complete within the proposed fictional runtime record; preconstruction is in progress; no vertical construction or operating data center exists on the planning site. Payment, funding, transaction accounting, and approval-history reconciliation must be recorded separately; this document alone does not establish a cash disbursement or available financing.
 
 ## Record-control rule
 
