@@ -27,6 +27,9 @@ COUNTS = (
     "resident_beds",
 )
 STATUSES = {
+    "PROPOSED_MODELLED_PROGRAM_FROM_APPROVED_R01",
+    "MODELLED_R02_FROM_APPROVED_R01_NOT_AS_BUILT",
+    "MODELLED_R02_DESIGN_NOT_EXISTING",
     "PROPOSED_MODELLED_PROGRAM",
     "MODELLED_NOT_AS_BUILT",
     "MODELLED_FITOUT_NOT_EXISTING",
@@ -73,6 +76,270 @@ def overlap(a, b):
     )
 
 
+R01_REFERENCE_DIR = ROOT / "docs/facilities/references/sacramento-hq/r01-approved"
+R01_HASHES = {
+    "01_Sacramento_Campus_Master_Draft.png": "23729f7e2b427e58820361363e4a47fbc6bbd3ce9774ef67932ecab7a50bfa47",
+    "02_Corporate_L02_Product_Draft.png": "09a3339ece443d6e7e8cd148cd8f207b56cd938a03efde4f4c5f8e9367dd6179",
+    "03_J2_L01_Contact_JAG_Draft.png": "17bf92029276f7794721129e58830344a9a3ee4341c858f2c928d53ad8b0fefb",
+    "04_Education_L01_Teaching_Draft.png": "d37ff987cf1036d32cf0fe07ca3b9a0578d7f359bd820fde2551cb268ed88361",
+}
+R01_CORE_RECTS_FT = {
+    "A": [
+        [0, 42, 18, 24],
+        [198, 42, 18, 24],
+        [0, 0, 18, 42],
+        [198, 0, 18, 42],
+        [90, 0, 12, 24],
+        [90, 24, 12, 24],
+        [114, 34, 12, 14],
+        [114, 24, 12, 10],
+        [114, 0, 12, 24],
+    ],
+    "B": [
+        [0, 40, 18, 24],
+        [198, 40, 18, 24],
+        [0, 0, 18, 40],
+        [198, 0, 18, 40],
+        [90, 22, 12, 24],
+        [114, 32, 12, 14],
+        [114, 22, 12, 10],
+    ],
+    "C": [
+        [0, 66, 16, 24],
+        [0, 50, 16, 16],
+        [160, 50, 8, 40],
+        [0, 16, 16, 24],
+        [152, 16, 16, 24],
+        [0, 0, 16, 16],
+        [152, 0, 16, 16],
+    ],
+}
+
+
+def reference_bytes_errors(filename, content, record):
+    errors = []
+    expected = R01_HASHES[filename]
+    if hashlib.sha256(content).hexdigest() != expected or record.get("sha256") != expected:
+        errors.append("immutable R01 reference hash mismatch " + filename)
+    dimensions = (
+        list(__import__("struct").unpack(">II", content[16:24]))
+        if content[:8] == b"\x89PNG\r\n\x1a\n" and len(content) >= 24
+        else None
+    )
+    if dimensions != [3240, 2304] or record.get("dimensions_px") != [3240, 2304]:
+        errors.append("R01 reference dimensions mismatch " + filename)
+    if record.get("status") != "APPROVED_VISUAL_REFERENCE":
+        errors.append("R01 reference status mismatch " + filename)
+    return errors
+
+
+def validate_r01_references():
+    manifest_path = R01_REFERENCE_DIR / "MANIFEST.json"
+    if not manifest_path.is_file():
+        return ["missing approved R01 reference manifest"]
+    manifest = json.loads(manifest_path.read_text())
+    records = {r["filename"]: r for r in manifest["files"]}
+    errors = []
+    if (
+        manifest.get("status") != "APPROVED_VISUAL_REFERENCE"
+        or manifest.get("immutable") is not True
+    ):
+        errors.append("R01 reference manifest must preserve approved immutable status")
+    for filename in R01_HASHES:
+        p = R01_REFERENCE_DIR / filename
+        if not p.is_file() or filename not in records:
+            errors.append("missing approved R01 reference " + filename)
+        else:
+            errors.extend(reference_bytes_errors(filename, p.read_bytes(), records[filename]))
+    archive = R01_REFERENCE_DIR / "SABLE_HARBOR_Sacramento_HQ_Drafts_R01.zip"
+    if (
+        not archive.is_file()
+        or sha(archive) != "eb10588f6cc6e214d8541b96b1bd044f52f0df85e384fc53a316b55b5d026fe0"
+    ):
+        errors.append("immutable R01 recovered ZIP mismatch")
+    return errors
+
+
+def validate_r01(site):
+    """Check the recovered approval, not the superseded six-building implementation."""
+    errors = []
+
+    def check(ok, message):
+        if not ok:
+            errors.append("R01 " + message)
+
+    def close(a, b):
+        return numeric(a) and math.isclose(a, b, abs_tol=0.01)
+
+    def seats(floor, key):
+        return sum(r.get(key, 0) for r in floor.get("rooms", []))
+
+    def workplaces(floor):
+        return sum(seats(floor, k) for k in ["assigned_desks", "shared_desks", "touchdown_seats"])
+
+    by_letter = {
+        b.get("r01_letter", b.get("letter", b["id"].rsplit("-", 1)[-1])): b
+        for b in site.get("buildings", [])
+    }
+    check(
+        len(site.get("buildings", [])) == 4 and set(by_letter) == set("ABCD"),
+        "requires four distinct buildings A/B/C/D",
+    )
+    if set(by_letter) != set("ABCD"):
+        return errors
+    centers = {
+        letter: (b["rect_m"][0] + b["rect_m"][2] / 2, b["rect_m"][1] + b["rect_m"][3] / 2)
+        for letter, b in by_letter.items()
+    }
+    check(
+        centers["A"][0] < centers["C"][0]
+        and centers["B"][0] < centers["D"][0]
+        and centers["A"][1] < centers["B"][1]
+        and centers["C"][1] < centers["D"][1],
+        "approved southwest/northwest/southeast/northeast composition changed",
+    )
+    check(
+        all(close(a, b * 0.3048) for a, b in zip(site.get("envelope_m", []), [840, 600])),
+        "840 ×600 ft study envelope changed",
+    )
+    approved = {
+        "A": (3, 216, 108, 200),
+        "B": (2, 216, 104, 130),
+        "C": (2, 168, 90, 32),
+        "D": (3, None, None, 0),
+    }
+    all_floors = []
+    for letter, b in by_letter.items():
+        n, w, d, target = approved[letter]
+        floors = b.get("floors", [])
+        all_floors.extend(floors)
+        check(
+            b.get("layout_style") == "r01",
+            letter + " must use explicit R01 geometry, not automatic cores",
+        )
+        check(
+            len(floors) == n and {f["level"] for f in floors} == set(range(1, n + 1)),
+            letter + " required floor stack incomplete",
+        )
+        if w:
+            check(
+                close(b["rect_m"][2], w * 0.3048) and close(b["rect_m"][3], d * 0.3048),
+                letter + " approved floorplate changed",
+            )
+        else:
+            check(
+                close(b["rect_m"][2] * b["rect_m"][3], 10080 * 0.09290304),
+                "D floorplate must be10080 ft²",
+            )
+        check(
+            sum(workplaces(f) for f in floors) == target,
+            letter + " approved workplace total changed",
+        )
+        cores = b.get("core_zones", [])
+        check(bool(cores), letter + " missing explicit core stack")
+        core_ft = sorted(tuple(z.get("rect_ft", [])) for z in cores)
+        if letter in R01_CORE_RECTS_FT:
+            check(
+                core_ft == sorted(tuple(r) for r in R01_CORE_RECTS_FT[letter]),
+                letter + " approved core coordinates changed",
+            )
+        for f in floors:
+            if "core_zones" in f:
+                check(f["core_zones"] == cores, f["id"] + " core stack differs from building")
+            circulation = f.get("circulation_zones", [])
+            check(bool(circulation), f["id"] + " missing explicit circulation")
+            zones = f.get("rooms", []) + cores + circulation
+            area = 0
+            for z in zones:
+                rect = z.get("rect_m", [])
+                if len(rect) != 4 or not all(numeric(v) for v in rect):
+                    check(False, f["id"] + " invalid explicit zone")
+                    continue
+                x, y, zw, zh = rect
+                area += zw * zh
+                check(
+                    zw > 0
+                    and zh > 0
+                    and x + zw <= b["rect_m"][2] + 1e-6
+                    and y + zh <= b["rect_m"][3] + 1e-6,
+                    f["id"] + " zone outside footprint",
+                )
+                if "rect_ft" in z:
+                    check(
+                        len(z["rect_ft"]) == 4
+                        and all(close(v, ft * 0.3048) for v, ft in zip(rect, z["rect_ft"])),
+                        f["id"] + " feet/metres disagree",
+                    )
+            check(
+                close(area, f.get("gross_area_m2", -1)),
+                f["id"] + " explicit room/core/circulation partition incomplete",
+            )
+            for i, z in enumerate(zones):
+                for other in zones[i + 1 :]:
+                    if len(z.get("rect_m", [])) == 4 and len(other.get("rect_m", [])) == 4:
+                        check(
+                            not overlap(z["rect_m"], other["rect_m"]),
+                            f["id"] + " overlapping explicit room/core/circulation zones",
+                        )
+            for r in f.get("rooms", []):
+                check(numeric(r.get("dining_seats")), r["id"] + " missing distinct dining category")
+        levels = {f["level"]: f for f in floors}
+        if letter == "A" and 2 in levels:
+            check(workplaces(levels[2]) == 112, "A-Level02 must have112 workplaces")
+            for name, total in [("foundry", 80), ("atlas", 32)]:
+                check(
+                    sum(
+                        sum(
+                            r.get(k, 0)
+                            for k in ["assigned_desks", "shared_desks", "touchdown_seats"]
+                        )
+                        for r in levels[2]["rooms"]
+                        if name in r["name"].lower()
+                    )
+                    == total,
+                    "A-Level02 " + name + " allocation changed",
+                )
+        if letter == "B":
+            for level, total in [(1, 62), (2, 68)]:
+                if level in levels:
+                    check(
+                        workplaces(levels[level]) == total,
+                        "B-Level" + str(level) + " workplace allocation changed",
+                    )
+        if letter == "C":
+            for level, total in [(1, 4), (2, 28)]:
+                if level in levels:
+                    check(
+                        workplaces(levels[level]) == total,
+                        "C-Level" + str(level) + " workplace allocation changed",
+                    )
+            if 1 in levels:
+                check(
+                    seats(levels[1], "training_seats") == 168,
+                    "C teaching configurations must retain120hall +2×24classrooms",
+                )
+                check(
+                    seats(levels[1], "dining_seats") == 80, "C-Level01 must retain80 dining seats"
+                )
+        if letter == "D":
+            bedrooms = [r for f in floors for r in f["rooms"] if r.get("resident_beds", 0)]
+            check(
+                len(bedrooms) == 60 and all(r["resident_beds"] == 1 for r in bedrooms),
+                "D must have60 individual single-occupancy rooms",
+            )
+    check(len(all_floors) == 10, "must retain ten floors")
+    check(
+        close(sum(f["gross_area_m2"] for f in all_floors), 175392 * 0.09290304),
+        "175392 ft² campus area changed",
+    )
+    check(sum(workplaces(f) for f in all_floors) == 362, "362 fitted staff workplaces changed")
+    check(
+        sum(seats(f, "dining_seats") for f in all_floors) == 160,
+        "shared campus dining must remain160 seats",
+    )
+    return errors
+
+
 def validate_models(models, coverage_ids=None):
     errors = []
     ids = []
@@ -116,6 +383,8 @@ def validate_models(models, coverage_ids=None):
         if not isinstance(env, list) or len(env) != 2 or not all(numeric(n) and n > 0 for n in env):
             errors.append(f"{sid}: invalid site envelope")
             continue
+        if sid == "SH-SITE-0001":
+            errors.extend(validate_r01(site))
         buildings = site.get("buildings", [])
         if not buildings:
             check(
@@ -508,6 +777,7 @@ def main():
     models, sources = load_models()
     coverage = json.loads((BASE / "coverage/COVERAGE_MATRIX.json").read_text())
     errors = validate_models(models, {r["id"] for r in coverage["records"]})
+    errors.extend(validate_r01_references())
     for script, extra in [
         ("coverage/validate_coverage.py", []),
         ("population/build.py", ["--check"]),

@@ -146,5 +146,68 @@ class SpatialRegisterRegression(unittest.TestCase):
         self.assertEqual(self.program.register_errors(actual, expected), ["stale spatial register"])
 
 
+class ApprovedR01Regression(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        models, _ = validation.load_models()
+        cls.site = next(s for s in models if s["site_id"] == "SH-SITE-0001")
+        manifest = json.loads((validation.R01_REFERENCE_DIR / "MANIFEST.json").read_text())
+        cls.reference_record = next(
+            r for r in manifest["files"] if r["filename"] in validation.R01_HASHES
+        )
+        cls.reference_bytes = (
+            validation.R01_REFERENCE_DIR / cls.reference_record["filename"]
+        ).read_bytes()
+
+    def test_immutable_originals(self):
+        self.assertEqual(validation.validate_r01_references(), [])
+
+    def test_reference_bytes_cannot_be_replaced(self):
+        content = bytearray(self.reference_bytes)
+        content[-1] ^= 1
+        errors = validation.reference_bytes_errors(
+            self.reference_record["filename"], bytes(content), self.reference_record
+        )
+        self.assertTrue(any("reference hash mismatch" in e for e in errors))
+
+    def test_reference_dimensions_cannot_be_relabelled(self):
+        record = copy.deepcopy(self.reference_record)
+        record["dimensions_px"] = [3240, 2000]
+        errors = validation.reference_bytes_errors(record["filename"], self.reference_bytes, record)
+        self.assertTrue(any("dimensions mismatch" in e for e in errors))
+
+    def test_approved_program(self):
+        self.assertEqual(validation.validate_r01(self.site), [])
+
+    def test_all_ten_floors_required(self):
+        site = copy.deepcopy(self.site)
+        site["buildings"][0]["floors"].pop()
+        self.assertTrue(
+            any("required floor stack incomplete" in e for e in validation.validate_r01(site))
+        )
+
+    def test_explicit_core_cannot_move(self):
+        site = copy.deepcopy(self.site)
+        core = site["buildings"][0]["core_zones"][0]
+        core["rect_ft"][0] += 1
+        core["rect_m"][0] += 0.3048
+        self.assertTrue(
+            any("approved core coordinates changed" in e for e in validation.validate_r01(site))
+        )
+
+    def test_circulation_must_not_overlap_rooms(self):
+        site = copy.deepcopy(self.site)
+        floor = site["buildings"][0]["floors"][0]
+        floor["circulation_zones"][0]["rect_m"] = list(floor["rooms"][0]["rect_m"])
+        self.assertTrue(any("overlapping explicit" in e for e in validation.validate_r01(site)))
+
+    def test_workplaces_remain_approved_capacity(self):
+        site = copy.deepcopy(self.site)
+        site["buildings"][0]["floors"][0]["rooms"][0]["assigned_desks"] += 1
+        self.assertTrue(
+            any("362 fitted staff workplaces changed" in e for e in validation.validate_r01(site))
+        )
+
+
 if __name__ == "__main__":
     unittest.main()
