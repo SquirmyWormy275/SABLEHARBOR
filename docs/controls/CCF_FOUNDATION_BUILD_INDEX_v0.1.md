@@ -34,6 +34,7 @@ This index defines the current SH-CCF v0.1 package and its internal dependencies
 16. `../governance/BOARD_AND_CAPITAL_GOVERNANCE.md` — accepted financing, nine directors, biographies, evolution, committee membership, and five committee charters.
 17. `../governance/GOVERNANCE_CONSTITUTION.md` — delegated authority, reserved matters, rapid adjudication, risk assumption, abstention, subsidiary autonomy, conflict integrity, and AAR doctrine.
 18. `../j2/README.md` — J2/Alexandria governance and intelligence system now consumed by the CCF.
+19. `CCF_ENTERPRISE_SECURITY_VENDOR_DECISIONS_2026-09-11.md` — owner-approved enterprise identity/security vendor direction: Okta, SAP SuccessFactors, IBM MaaS360, and a Palo Alto Networks-first security ecosystem; preserves IGA as an explicit unresolved vendor decision and delegates routine implementation mechanics.
 
 ## What v0.1 establishes
 
@@ -54,7 +55,8 @@ The package now establishes:
 - evidence expectations and artifact lifecycle;
 - future SOC 1/SOC 2 and other framework mapping posture;
 - explicit non-equivalence and source-version rules;
-- business-line applicability for software, model, R&D, professional services, mine, rail/utility, recovery and acquired-company operations.
+- business-line applicability for software, model, R&D, professional services, mine, rail/utility, recovery and acquired-company operations;
+- owner-approved enterprise identity/security vendor direction without conflating selection with deployment or operating effectiveness.
 
 ## Deliberately not treated as complete in v0.1
 
@@ -68,7 +70,8 @@ The following are next-phase work rather than missing foundation content:
 6. exact SOC 1 system/ICFR scope and SOC 2 system/service/Trust Services Category scope;
 7. machine-readable SQL/JSON/CSV population of the logical CCF schema;
 8. runtime implementation evidence for the accepted J2/Alexandria/Daedalus architecture;
-9. historical assurance-maturity choice: RESOLVED by the September 3 headquarters closeout and current Internal Audit/ESS doctrine (#17 closed); remaining local operating and testing evidence is still implementation work.
+9. historical assurance-maturity choice: RESOLVED by the September 3 headquarters closeout and current Internal Audit/ESS doctrine (#17 closed); remaining local operating and testing evidence is still implementation work;
+10. final IGA vendor selection and the resulting local implementation records for the approved identity/security stack.
 
 The September 9 [local implementation register](../structured/business-lines/interfaces.json) starts the scoped business/Finance evidence layer. It does not claim longitudinal operating effectiveness or completed external-framework mapping.
 
