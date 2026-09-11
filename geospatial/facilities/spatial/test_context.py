@@ -142,3 +142,19 @@ def test_consumed_context_record_changes_semantic_hash(monkeypatch):
     after = module.build_context(ROOT)
     assert before["navigation_scope"]["sha256"] != after["navigation_scope"]["sha256"]
     assert before["sites"] != after["sites"]
+
+
+def test_wamsutter_region_is_not_assigned_to_other_industrial_anchors():
+    sites = {site["site_id"]: site for site in module.build_context(ROOT)["sites"]}
+    assert sites["SH-IND-FAC-WAM-INT"]["region_key"] == "wamsutter"
+    checked = []
+    for sid, site in sites.items():
+        if sid == "SH-SITE-0006" or (sid.startswith("SH-IND-") and sid != "SH-IND-FAC-WAM-INT"):
+            assert site["region_key"] is None, sid
+            assert site["reference_layers"] == [], sid
+            assert site["context_links"], sid
+            checked.append(sid)
+    assert "SH-SITE-0006" in checked
+    assert any("RECEIVING" in sid for sid in checked)
+    assert any("TAY-" in sid for sid in checked)
+    assert any("RAW-" in sid for sid in checked)

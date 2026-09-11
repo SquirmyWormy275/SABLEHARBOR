@@ -302,7 +302,7 @@ def build_context(root: Path) -> dict:
             else "fairmont"
             if sid == "SH-SITE-0005"
             else "wamsutter"
-            if sid.startswith("SH-IND-") or sid == "SH-SITE-0006"
+            if sid == "SH-IND-FAC-WAM-INT"
             else None
         )
         sites.append(
