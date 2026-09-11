@@ -1,0 +1,28 @@
+const assert = require('node:assert/strict');
+const {calculate, validateImport} = require('./app.js');
+const row = {id:'T',site_id:'S',building_id:'B',assigned_desks:4,shared_desks:8,touchdown_seats:2,assigned_workers:4,shared_workers:12,attendance_percent:50,sharing_ratio:2,touchdown_visitors:2,other_attendees:4};
+const campus={site_id:'S',training_floor_id:'T',trainee_peak:120,resident_capacity:60};
+const result=calculate([row],120,48,12,campus);
+assert.equal(result.floors[0].assigned_required,4);
+assert.equal(result.floors[0].shared_required,6);
+assert.equal(result.day_concurrent,134);
+assert.equal(result.night_residents,60);
+assert.equal(result.floor_shortfall,0);
+assert.equal(calculate([{...row,attendance_percent:100}],120,48,12,campus).floors[0].shared_required,12);
+assert.equal(calculate([{...row,assigned_desks:null}],0,0,0,campus).workplace_seats,null);
+for(const change of [{attendance_percent:101},{sharing_ratio:0},{shared_workers:-1},{assigned_workers:1.5},{other_attendees:Infinity},{touchdown_visitors:''}]) assert.throws(()=>calculate([{...row,...change}],0,0,0,campus));
+assert.throws(()=>calculate([row],1,2,0,campus));
+assert.throws(()=>calculate([row],120,48,12,{}));
+const data={source_sha256:{a:'abc'},floors:[row],campus};
+const draft={source_sha256:{a:'abc'},scenario_id:'example',horizon:2026,assumption:'test',floors:[row],campus:{trainees:120,resident_trainees:48,resident_other:12}};
+assert.deepEqual(validateImport(data,JSON.parse(JSON.stringify(draft))),draft);
+assert.throws(()=>validateImport(data,{...draft,source_sha256:{a:'changed'}}));
+assert.throws(()=>validateImport(data,{...draft,floors:[row,row]}));
+assert.throws(()=>validateImport(data,{...draft,floors:[]}));
+assert.throws(()=>validateImport(data,{...draft,horizon:2040}));
+assert.throws(()=>validateImport(data,{...draft,assumption:' '}));
+console.log('PASS: browser scenario arithmetic, null capacities, cohort separation, import roundtrip, source locks and invalid inputs');
+
+assert.equal(calculate([{...row,planned_peak:10}],0,0,0,campus).floors[0].peak_excess,4);
+assert.throws(()=>validateImport(data,{...draft,scenario_id:''}));
+assert.throws(()=>validateImport(data,{...draft,campus:{...draft.campus,trainees:'120'}}));

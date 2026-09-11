@@ -1,0 +1,9 @@
+# Offline workbench UI review
+
+The four tabs were exercised with Playwright and system Chromium over `file://`, at 1440 × 1000 desktop and 390 × 844 mobile sizes. Saved views include all tabs, expanded readiness/source details, scenario totals and the evidence form. No page errors or page-level horizontal overflow remain. The floor input table intentionally scrolls horizontally on narrow screens.
+
+Initial long source paths and evidence strings overflowed mobile width; wrapping and select/grid width constraints corrected both. Native labels, keyboard-operated tabs, focus outlines and responsive controls remain visible. Source strings use textContent; an adversarial HTML payload displayed literally without element creation or script execution.
+
+Baseline Sacramento attendance is 504 day, with a separate 120-person trainee cohort and 60 night residents. Across all facilities, the known day subtotal is 566 with one floor unknown; unknown runtime capacity is never changed to zero. Node tests cover reserved assigned desks, shared-demand maxima, day-peak constraints, invalid inputs and source-locked scenario import. Browser download/import roundtrip succeeded, and the exported baseline passed the Python scenario evaluator. A stale hash import was rejected. Evidence download matches the submission-template key set and remains PENDING without acceptance provenance.
+
+Exact reviewed HTML/source/screenshot hashes are in [browser-results.json](browser-results.json). Later source or data changes require rebuilding and reviewing affected surfaces; this report does not establish engineering readiness or accepted evidence claims. The example evidence screenshot demonstrates a draft form, not verified evidence or a proposed canon edit.
