@@ -1,0 +1,172 @@
+{
+  "status": "CORRECTIONS_REQUIRED_AFTER_TEN_FLOOR_REVIEW",
+  "reviewed": [
+    {
+      "id": "SH-MAP-SAC-024",
+      "pdf_pages": 1,
+      "svg_parse": "PASS",
+      "hashes": {
+        "png": "729a0fa73d780660c3908c2609d730f224813d104532a265b4a0ee23db08962c",
+        "svg": "8dbcc0d1da21921f81e6d0fb7a86572b9e10ea5f0157d9c5a537f517585d4bc8",
+        "pdf": "f2f2640b54a1dde8db758a65cdcd0b47130d21b65558c68a526763b22c8d04f4"
+      }
+    },
+    {
+      "id": "SH-MAP-SAC-025",
+      "pdf_pages": 1,
+      "svg_parse": "PASS",
+      "hashes": {
+        "png": "8dfee819c04bd271e54eb0cb6b205429f3ed8961a2ca6a5d9dd08e79f240853e",
+        "svg": "b3da2d7ed8d447c3ca60a0443845ba8326a088f84168e3256f018542109ff947",
+        "pdf": "65b297a310fa25feb50bad4ff1993b81b3d97c55a574464be06cf438c3d81123"
+      }
+    },
+    {
+      "id": "SH-MAP-SAC-026",
+      "pdf_pages": 1,
+      "svg_parse": "PASS",
+      "hashes": {
+        "png": "1d5344a52467b18f26c0f988e7b43fdd938f7818457f4d1618c31af4414ee200",
+        "svg": "aceba0d38ec26e3607748b7454fdf13a8ea11e027106c526bb0e4172f98c0b3e",
+        "pdf": "a1b8496a2ff9e16f321b18b5f080e5f0809ea59d1a5f33f6e0ce2da432c58921"
+      }
+    },
+    {
+      "id": "SH-MAP-SAC-028",
+      "pdf_pages": 1,
+      "svg_parse": "PASS",
+      "hashes": {
+        "png": "b3f8df518dfc91705448527cc13308e06495c88f0dbfd0d3a6c569a590188137",
+        "svg": "67ea660d359e3115b29e3672359a97ba3f0c97c2473e90dabd18da8bf3d081c7",
+        "pdf": "7e793c08edf3e1215dd0f417db3490a3169b3af3c2f55d20f7a0aa3878548425"
+      }
+    },
+    {
+      "id": "SH-MAP-SAC-029",
+      "pdf_pages": 1,
+      "svg_parse": "PASS",
+      "hashes": {
+        "png": "6ccd85b5c80bfaa4911621fd63f220239020bdd2dc77f6e23ed523e4c9e4007f",
+        "svg": "75f4fc1e397f2b818838fb58e6d016cc77c95cbfc68c11e8507d25c38a52e62f",
+        "pdf": "051e9078d6ea3a02b62f9c767c195de6d9f36ef87a50e9388c8123896860f87a"
+      }
+    },
+    {
+      "id": "SH-MAP-SAC-031",
+      "pdf_pages": 1,
+      "svg_parse": "PASS",
+      "hashes": {
+        "png": "b0aa71425fe8b6681be2589eaae1b0bd2e26a5a8c773a7399eab48d0343e28b2",
+        "svg": "095cc0360b31c6835f6f414ee8727416c59a5342d9fdb82f0e1f1beded246acd",
+        "pdf": "53a8df8af159a4c500956b0edad0e35a7772b7d4e81b2e38a4f4c6ca962fa8b0"
+      }
+    },
+    {
+      "id": "SH-MAP-SAC-032",
+      "pdf_pages": 1,
+      "svg_parse": "PASS",
+      "hashes": {
+        "png": "f6d938bf453f57c556e55af90cd60240f9dc86b568891cc6f3cebf08cab9d666",
+        "svg": "cfbbee1c5650db7d0709a380d7c381728c3147f2cb4cb804d452c43f9198d9ae",
+        "pdf": "65f5ceff73832dc640e930c31ccdcd47d58eac007b38d4d7b8700c1a0ce9c418"
+      }
+    },
+    {
+      "id": "SH-MAP-SAC-034",
+      "pdf_pages": 1,
+      "svg_parse": "PASS",
+      "hashes": {
+        "png": "93d33296a7862706c24b078dd4b4c2da3b609e4cbb9727e3656930a899a484f7",
+        "svg": "056bf0f2d27fadb2c5588d5fe6e1a8023200c55b1d185823f599020d32c22e6a",
+        "pdf": "54b9dce7ecf60123edbb060632a9ba68ba543a98ea68b795c59aa2cf7db88d08"
+      }
+    },
+    {
+      "id": "SH-MAP-SAC-035",
+      "pdf_pages": 1,
+      "svg_parse": "PASS",
+      "hashes": {
+        "png": "91ba5a4f9aad984b7dd5cd838720e78ba4be830536bf945873401ff6d529c490",
+        "svg": "ae9090e8fd37b347d330cbefa7baafd486c2bb686af8f15601931b90c2a19fa4",
+        "pdf": "1e8d6f0a422134e088791752d888f581823837f54fe382740ba4c07eb2e8439a"
+      }
+    },
+    {
+      "id": "SH-MAP-SAC-036",
+      "pdf_pages": 1,
+      "svg_parse": "PASS",
+      "hashes": {
+        "png": "aad869c3ea10a21bac33174e0c33736acb0c1b7a7a0e134635fd67a1286f83cd",
+        "svg": "43c0659170de1735e99858f1f8d2b7a32853fd0fb18ffdeda545574f75611a2f",
+        "pdf": "625bb9aaefd2f4130f56b2ffdc35635c0f767aed60abf8fe2da7d2dd21cda0cf"
+      }
+    }
+  ],
+  "method": "All ten PNGs viewed individually at 3240x2304; all ten independent PDFs rasterized with PyMuPDF and viewed individually at3240x2304; all ten SVG documents parsed. Three R01 successor floor PNGs compared against previously inspected immutable originals.",
+  "closed_initial_findings": [
+    "Source door topology and secondary visitor links",
+    "Office desks visible within offices",
+    "Project and case tables no longer collapsed",
+    "White focus/call/huddle/case rooms",
+    "Teaching tables free of workstation monitors",
+    "Five-by-two Foundry bench layout and four/four/two dining arrangement",
+    "JAG team labels and specific design-note headings"
+  ],
+  "residuals": [
+    {
+      "id": "R01-R11",
+      "sheets": [
+        "SH-MAP-SAC-031"
+      ],
+      "detail": "Kitchen west vertical counter crosses dining-service opening x124ft,y18ft. Restore separate counter furniture or clear opening."
+    },
+    {
+      "id": "R01-R12",
+      "sheets": [
+        "SH-MAP-SAC-028"
+      ],
+      "detail": "Reception desk/chairs directly abut primary entrance swing. Shift furniture west following original."
+    },
+    {
+      "id": "R01-R13",
+      "sheets": [
+        "SH-MAP-SAC-034",
+        "SH-MAP-SAC-035",
+        "SH-MAP-SAC-036"
+      ],
+      "detail": "Linen/housekeeping core text clips right boundary. Short display_name Linen and fitted detail."
+    },
+    {
+      "id": "R01-R14",
+      "sheets": [
+        "SH-MAP-SAC-029",
+        "SH-MAP-SAC-032"
+      ],
+      "detail": "Legend color labels mismatch actual HQ/faculty fills; align legend to model colors."
+    },
+    {
+      "id": "R01-R15",
+      "sheets": [
+        "SH-MAP-SAC-024",
+        "SH-MAP-SAC-026",
+        "SH-MAP-SAC-029",
+        "SH-MAP-SAC-032",
+        "SH-MAP-SAC-034",
+        "SH-MAP-SAC-035",
+        "SH-MAP-SAC-036"
+      ],
+      "detail": "Prose retains joined number/word tokens. Clean sentence spacing before final QA."
+    },
+    {
+      "id": "R01-R16",
+      "sheets": [
+        "SH-MAP-SAC-024",
+        "SH-MAP-SAC-028",
+        "SH-MAP-SAC-031",
+        "SH-MAP-SAC-034"
+      ],
+      "detail": "Ground entry annotations missing. A/B entry x108ft,y0; C public x44ft,y0 and catering x138ft,y0; D residence x84ft,y0. B controlled threshold caption at x108ft,y24."
+    }
+  ],
+  "clarification": "Ordinary inward door arc signs are correct for south-up source coordinates; do not invert globally. Exterior/hall outward egress needs explicit source intent if added. This is conceptual visual QA, not code certification."
+}
