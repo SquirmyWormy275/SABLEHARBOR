@@ -1,0 +1,43 @@
+name: J2 leadership source review
+on:
+  push:
+    branches: ['canon/j2-leadership-2026-09-10']
+    paths: ['.github/workflows/j2-leadership-source-review.yml']
+permissions:
+  contents: read
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Package review inputs
+        run: |
+          python - <<'PY'
+          import json, pathlib, shutil, subprocess
+          root = pathlib.Path.cwd()
+          out = root / '_j2_source_review'
+          out.mkdir()
+          files = subprocess.check_output(['git', 'ls-files', '-z']).decode().split('\0')
+          inventory = []
+          for name in filter(None, files):
+              p = root / name
+              if not p.is_file():
+                  continue
+              inventory.append({'path': name, 'size': p.stat().st_size})
+              text = p.suffix.lower() in {'.md', '.json', '.py', '.yml', '.yaml', '.toml', '.txt', '.csv', '.sql'}
+              scope = name.startswith(('docs/organization/', 'docs/structured/', 'docs/j2/', 'docs/internal/', 'tools/organization/', 'tools/documents/', 'scripts/', 'tests/', '.github/'))
+              special = name in {'README.md', 'MAINTAINERS.md', 'docs/CONTROLLED_DOCUMENT_INDEX.md', 'docs/organization/assets/current/Sable-Harbor-Organization-Charts.pdf', 'docs/canon/J2_LEADERSHIP_APPOINTMENTS_2026-09-10.md'}
+              font = name.startswith('tools/organization/') and p.suffix.lower() in {'.ttf', '.otf'}
+              if special or font or (scope and text and p.stat().st_size < 2000000):
+                  target = out / name
+                  target.parent.mkdir(parents=True, exist_ok=True)
+                  shutil.copyfile(p, target)
+          (out / 'repository_inventory.json').write_text(json.dumps(inventory, indent=2))
+          (out / 'source_commit.txt').write_text(subprocess.check_output(['git', 'rev-parse', 'HEAD']).decode())
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: j2-leadership-source-review
+          path: _j2_source_review/
+          include-hidden-files: true
+          retention-days: 2
