@@ -40,7 +40,7 @@ def build(check=False, render=False):
             and not p.name.startswith("test_")
         ):
             sources[str(p.relative_to(ROOT))] = sha(p)
-    for p in (ROOT / "geospatial/facilities/fonts").glob("*"):
+    for p in sorted((ROOT / "geospatial/facilities/fonts").glob("*")):
         if p.is_file():
             sources[str(p.relative_to(ROOT))] = sha(p)
     sources["geospatial/facilities/r01_drawing.py"] = sha(

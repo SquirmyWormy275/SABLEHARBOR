@@ -21,3 +21,5 @@ node geospatial/facilities/spatial/test_viewer.cjs
 ```
 
 Node checks cover local coordinate projection, depth, polygon picking and comparison import identity/geometry validation. Browser scripts capture fresh evidence; rerunning the browser script replaces the automated results and requires renewed manual review before a final QA claim. This report covers the interactive viewer, not the separate 86-sheet publication, engineering certification, repository CI or merge gates.
+
+[Recheck after the CI reproducibility correction](RECHECK.json) binds the current HTML. Scene data and viewer source are unchanged; source-hash ordering and the builder hash changed. All browser interactions and comparison import were rerun successfully.

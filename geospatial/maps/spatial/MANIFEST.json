@@ -53,7 +53,7 @@
     "geospatial/sources/site_reference/sacramento_export.json": "e077f01aff9005edd2bbfc774eb0e44ee7ead359bf62656b6e7aabbc7b11182b",
     "geospatial/sources/site_reference/sacramento_catalog.json": "9f66b2c65816dd3fc201bfda817dc9c6d5e24288931b173f6f8ddc31e076c36c",
     "geospatial/facilities/spatial/access.py": "aaffedd1bbb5fca0e98cbfe9b668add98e68697c09cdf46a5c4d1f7a67d68496",
-    "geospatial/facilities/spatial/build.py": "15d925c953fb3e22f2a98ee08d44257b0292a6aab004f2f4e3bf16240be81548",
+    "geospatial/facilities/spatial/build.py": "b5f37e15ce5ce2c14dddf781228ee673c7c6123b05654cb1bb1ca199ad99ba4e",
     "geospatial/facilities/spatial/compare.py": "d78c9fb49c5c4d41280b4df1ed4a261742f99e2c37356fc1a70a9e17822ab4a2",
     "geospatial/facilities/spatial/context.py": "1d24d09fef447b01e9904754bbb247865229b359d7124ea51885e0093881c836",
     "geospatial/facilities/spatial/context_sheet.py": "dfd493609fcd2112803c8a2c93198c11686af7ade80d373f521d08035b51488b",
@@ -63,8 +63,8 @@
     "geospatial/facilities/spatial/render.py": "aaeac658a824eaa97c0186db36f889db6b74ab611a7a562ed82ec7bb3da2d8c5",
     "geospatial/facilities/spatial/viewer.html": "63aaa6b1131f0759e87aa5a57a19d93e61a7effc3540a8bf9a602f583b8167a2",
     "geospatial/facilities/spatial/viewer.js": "2e4259c46137339bafb408004d91bb08f2f36f13f99db11a1b40bf07be9d0462",
-    "geospatial/facilities/fonts/DejaVuSans.ttf": "3fdf69cabf06049ea70a00b5919340e2ce1e6d02b0cc3c4b44fb6801bd1e0d22",
     "geospatial/facilities/fonts/DejaVuSans-Bold.ttf": "b184b89e3c1075f22f6b71575b6fc20d4972b3cfd3b23322ca6fd596dcaef167",
+    "geospatial/facilities/fonts/DejaVuSans.ttf": "3fdf69cabf06049ea70a00b5919340e2ce1e6d02b0cc3c4b44fb6801bd1e0d22",
     "geospatial/facilities/fonts/LICENSE_DEJAVU": "d75938dec098f06f0ac3c00853065d94f020be1c3c62ef1dc2975ba15b4d9b0e",
     "geospatial/facilities/fonts/fonts.conf": "ac35d022f7b75586581ecc81fee3aa1febdea71366fd00727c1f8eabb4217d2b",
     "geospatial/facilities/r01_drawing.py": "8c1eae0967aac597395b16351ba0d6b1077cc3a31dded3fe292389a655d24c35"
