@@ -511,6 +511,7 @@ def main():
     for script, extra in [
         ("coverage/validate_coverage.py", []),
         ("population/build.py", ["--check"]),
+        ("program.py", ["--check"]),
     ]:
         result = subprocess.run(
             [sys.executable, str(BASE / script), *extra], capture_output=True, text=True

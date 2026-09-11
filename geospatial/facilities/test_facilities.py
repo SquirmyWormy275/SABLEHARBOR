@@ -122,5 +122,29 @@ class AtlasGraphRegression(unittest.TestCase):
         )
 
 
+class SpatialRegisterRegression(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        program_spec = importlib.util.spec_from_file_location(
+            "facility_program", Path(__file__).with_name("program.py")
+        )
+        cls.program = importlib.util.module_from_spec(program_spec)
+        program_spec.loader.exec_module(cls.program)
+
+    def test_desks_cannot_drift_from_derived_register(self):
+        expected = {"floors": [{"id": "test-floor", "assigned_desks": 4}]}
+        actual = copy.deepcopy(expected)
+        actual["floors"][0]["assigned_desks"] = 5
+        self.assertEqual(self.program.register_errors(expected, expected), [])
+        self.assertEqual(self.program.register_errors(actual, expected), ["stale spatial register"])
+
+    def test_unknown_workforce_is_not_zero(self):
+        expected = {"sites": [{"id": "test-site", "workforce": {"authorized_positions": None}}]}
+        actual = copy.deepcopy(expected)
+        actual["sites"][0]["workforce"]["authorized_positions"] = 0
+        self.assertEqual(self.program.register_errors(expected, expected), [])
+        self.assertEqual(self.program.register_errors(actual, expected), ["stale spatial register"])
+
+
 if __name__ == "__main__":
     unittest.main()
