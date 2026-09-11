@@ -190,8 +190,8 @@
   "artifact_sha256": {
     "geospatial/maps/SABLE_HARBOR_Facility_Atlas_v0.1.0.pdf": "77f3f3b41f03f2065c493acf4a897b3eac704e24f07f40e68bdb6c38ad2d9a18",
     "geospatial/maps/index.html": "fa79cc2813cf194e80ac7f9c58bc4b46efa22c4141679a65fee887a153066d65",
-    "geospatial/maps/facilities/ATLAS_LINKS.json": "f0c53ff5ed38f00a7fab3288cc196c10720c3d057e4ea31ec763f2e861446227",
-    "geospatial/facilities/atlas.py": "d29658d29ff3dd58a280b154b4e24ccbd56adbd62aadcea083bd7488d7dc8a46"
+    "geospatial/maps/facilities/ATLAS_LINKS.json": "562fbc2d9f23c9e1fa39fdc44361e2e76fdc3eaadbd8f607ff42cc7396f3fec1",
+    "geospatial/facilities/atlas.py": "1ebedc81180d6fa117ca2ec404f4b8dd7e6dd71e4407648e6e25e4d0a3ddb0b8"
   },
   "retained_evidence_sha256": {
     "geospatial/facilities/qa/ATLAS_REVIEW.desktop.png": "225b3fbf4967ffca7429d11839bee1aa60ef1da11f04a0c32cf4c02bc4cd6ec9",
@@ -289,5 +289,6 @@
     },
     "out_of_bounds_words": 0
   },
-  "final_scope_boundary": "This PASS covers HTML atlas navigation/presentation and72 atlas-generated PDF text/index/disposition pages. Imported63 facility map sheets and11 prior geographic context sheets retain their separate visual QA/release status; this record is not an engineering approval."
+  "final_scope_boundary": "This PASS covers HTML atlas navigation/presentation and72 atlas-generated PDF text/index/disposition pages. Imported63 facility map sheets and11 prior geographic context sheets retain their separate visual QA/release status; this record is not an engineering approval.",
+  "formatting_revalidation": "Ruff-formatted atlas.py and regenerated source-checksum graph reviewed: final PDF and HTML remain byte-identical to visually reviewed artifacts. Updated generator/graph hashes only; no visual re-review required."
 }
