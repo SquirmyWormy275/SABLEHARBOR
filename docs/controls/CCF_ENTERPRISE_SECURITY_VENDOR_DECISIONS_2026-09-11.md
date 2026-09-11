@@ -2,7 +2,7 @@
 
 **Date:** September 11, 2026  
 **Decision state:** OWNER-APPROVED VENDOR DIRECTION  
-**Scope:** Enterprise identity, HR identity source, endpoint management, endpoint/security operations, network security, zero-trust/SASE, DLP, and cloud workload protection  
+**Scope:** Enterprise identity, IGA, HR identity source, endpoint management, endpoint/security operations, network security, zero-trust/SASE, DLP, and cloud workload protection  
 **Implementation state:** DESIGN / PROCUREMENT PENDING — this record does **not** assert executed contracts, licenses, deployment, operating effectiveness, or evidence populations
 
 ## Purpose
@@ -24,6 +24,7 @@ This is a vendor-selection and architectural-direction record. It is not evidenc
 | Domain | Selected vendor / platform | Decision status | Implementation note |
 |---|---|---|---|
 | Enterprise IAM / identity provider | **Okta** | LOCKED | Enterprise identity and authentication platform. Local implementation must integrate lifecycle, privileged-access, service-identity, break-glass, logging, and evidence requirements. |
+| Identity Governance & Administration (IGA) | **IBM Security Verify** | LOCKED | Enterprise IGA platform. Integrate governance/certification with Okta identity, SAP SuccessFactors lifecycle authority, SH-CCF evidence requirements, and Alexandria information-authority boundaries. |
 | Authoritative HR lifecycle source | **SAP SuccessFactors** | LOCKED | Authoritative source for workforce lifecycle events feeding IAM joiner/mover/leaver logic. HR authority does not by itself grant application or restricted-information entitlement. |
 | Unified endpoint management | **IBM MaaS360** | LOCKED | Enterprise endpoint/device management platform. Integrate device posture and compliance state into access/security decisions where appropriate. |
 | EDR / endpoint security | **Palo Alto Networks — Cortex XDR** | LOCKED | Selected endpoint detection/response platform; use the Palo Alto security ecosystem for correlation and response where practical. |
@@ -34,28 +35,20 @@ This is a vendor-selection and architectural-direction record. It is not evidenc
 | Data loss prevention | **Palo Alto Networks — integrated Enterprise DLP capability** | LOCKED | Apply through the Palo Alto ecosystem where technically applicable; local data-classification and Alexandria disclosure authority remain Sable Harbor policy decisions, not vendor decisions. |
 | Cloud workload / cloud-native protection | **Palo Alto Networks — Prisma Cloud** | LOCKED | Cloud workload/CNAPP direction. Exact modules follow actual workloads and deployment topology. |
 
-## Still open — not falsely approved
+## IGA implementation direction
 
-### Identity Governance & Administration (IGA)
+IBM Security Verify is the approved enterprise IGA vendor. Routine implementation design is delegated and should not be returned to the owner control-by-control.
 
-A dedicated IGA platform is still an owner-level vendor decision. The discussion considered:
+Implementation should integrate IBM Security Verify with:
 
-- SailPoint;
-- Saviynt;
-- IBM Security Verify.
-
-**No IGA vendor is recorded as approved in this decision memo.** The conversation did not contain an unambiguous affirmative selection after the IBM Security Verify discussion. Do not convert conversational ambiguity into canon.
-
-Evaluation should prioritize integration with:
-
-- Okta as the enterprise identity platform;
+- Okta as the enterprise identity and authentication platform;
 - SAP SuccessFactors as the authoritative workforce lifecycle source;
-- IBM MaaS360 for endpoint/device state where useful;
-- the Palo Alto Networks security stack for telemetry, policy context, investigation and response;
+- IBM MaaS360 for endpoint/device posture where useful and technically appropriate;
+- the Palo Alto Networks security stack for telemetry, policy context, investigation and response where useful;
 - Sable Harbor's native SH-CCF entitlement/evidence model;
 - Alexandria's separate information-authority doctrine.
 
-The eventual IGA choice should be returned to the owner as a concise vendor decision, not as a request to design certification workflows, evidence schemas, or individual controls.
+IBM Security Verify governance must not become the authority for Alexandria disclosure. It may enforce approved entitlements and certification workflows, but the underlying institutional information-authority rules remain Sable Harbor policy.
 
 ## Control-engineering delegation
 
@@ -63,6 +56,7 @@ The following implementation mechanics are delegated and **do not require indivi
 
 - joiner/mover/leaver workflow details;
 - identity and account correlation;
+- IGA certification campaign mechanics and standard cadence;
 - privileged-access workflow mechanics;
 - break-glass implementation;
 - service-account lifecycle;
@@ -92,6 +86,7 @@ Return to the owner only when implementation requires one of the following:
 The next SH-CCF implementation tranche should instantiate local records for the selected platforms and link them to existing common controls rather than creating vendor-named common controls. At minimum, the implementation layer should cover:
 
 - identity lifecycle and authentication;
+- identity governance, entitlement certification and access review;
 - access authorization and periodic certification;
 - privileged and service identities;
 - endpoint inventory, configuration, compliance and response;
