@@ -2,8 +2,8 @@
 
 This successor implements the operating detail behind the accepted business-finance
 release. Acceptance status and immutable release links are maintained in the
-[release record](../../releases/BUSINESS_OPERATIONS_RELEASES.md). The implementation
-and reviewed workbook are complete; clean-source release acceptance is pending.
+[release record](../../releases/BUSINESS_OPERATIONS_RELEASES.md). Publication is complete
+only after clean-main acceptance and verification of the immutable release assets.
 
 ## Coverage
 
@@ -35,15 +35,33 @@ contributions. Of 7,560 scheduled synthetic control exercises, 5,136 pass, 181 f
 and 2,243 are not run. These disclosed outcomes must not be relabeled as production
 control effectiveness.
 
-Seven business dossiers and the finance/interfaces/export documentation have been
-updated. Ten controlled PDFs were rendered and visually reviewed. The six-sheet
-Artifact Tool workbook was visually reviewed and independently checked against all
-source cells, formulas and cached results. Every clean release build repeats its
-content and formula verification.
+The successor contains its operating source, tests, guides, financial design, export
+specification and six-sheet Artifact Tool workbook. Previously accepted business
+dossiers and controlled PDFs remain intact; this repair does not claim to regenerate
+them. The workbook was refreshed against the integrated successor inputs, visually
+reviewed, and independently checked against every source cell, required formula and
+cached result. The year selector was exercised across 2026, 2027, 2028 and 2031.
+Every clean release build repeats content and formula verification.
 
 The release gate runs domain and inherited financial tests, complete CSV/SQLite
 scope checks, final artifact scanning, manifest verification and two complete builds
 whose distribution hashes must match. Earlier releases remain immutable.
+
+## September 11 integration repair
+
+PR #116 was reconciled onto current main without deleting or replacing accepted
+canon. Its Advisory pricing claim is now backed by a versioned executable overlay
+and 20 regression cases. The overlay applies the locked 70% threshold, interpolation
+points and 125% ceiling while respecting lower contractual caps. Original business
+source inputs, the predecessor model and the 2026 reconstruction remain unchanged.
+Carry plan direction remains locked; individual awards and professional execution
+are not asserted by the operating model.
+
+The reviewed workbook input identity is
+`5e302a4ba1b5c7c5678f4e3ee599b7f72029c4d58271dd47c6d3992541226bb2`.
+Its SHA-256 is recorded in `enterprise/operations/publications/review_manifest.json`.
+Temporary source-transfer and workbook-transport workflows are removed from the
+final change set; the release acceptance workflow retains its original gates.
 
 ## Decisions and limits retained
 

@@ -37,6 +37,7 @@ normal export. Scope permissions are never inferred dynamically by a release bui
 | Collections and Treasury | [Credit, receipts and cash obligations](docs/credit.md) |
 | Foundry Field / Atlas | [Customers, contracts, support and ARR](docs/commercial.md) |
 | Advisory | [Matter gates and client handovers](docs/matters.md) |
+| Advisory policy | [Tier 1 pricing and carry-status integration](docs/advisory-policy.md) |
 | Willow / Cradle / industrial | [Research, recovery, custody and service detail](docs/research.md) |
 | Workforce / management | [Staffing, service costs and forecast revisions](docs/management.md) |
 | Controls | [Scheduled evidence, exceptions and independent retests](docs/controls.md) |
@@ -45,12 +46,26 @@ See the [financial design](../../docs/finance/OPERATING_DEPTH_SUCCESSOR_2026-09-
 [export specification](../../docs/audit/OPERATING_DEPTH_EXPORT_SPECIFICATION.md)
 and [release record](../../docs/releases/BUSINESS_OPERATIONS_RELEASES.md).
 
+## Tier 1 compatibility
+
+The versioned `source/advisory_policy.json` overlay implements the locked September 9
+Advisory payout curve in the operating successor only. Lower contractual caps remain
+effective. `BusinessModel`, original business inputs and earlier release bytes are
+not rewritten. Operating carry disclosures distinguish locked plan direction from
+unawarded individual interests and uncompleted professional implementation.
+
+Twenty regression cases cover threshold/interpolation boundaries, caps, fixed
+Decision pricing, policy drift, input isolation, source identity and certification
+tampering. Every operating model build independently checks its certifications.
+
 ## Reviewed workbook
 
 `build_review.mjs` authors the six-sheet workbook using Artifact Tool and generated
 `review_inputs.json`. Use the supplied primary Node runtime and a temporary directory
 whose `node_modules` points to its installed runtime dependencies. Arguments are the
 input JSON, publication directory and preview directory. Visually inspect every sheet.
+Existing publications may also be refreshed through the Artifact Tool spreadsheet APIs.
+Lossless ZIP-container normalization must preserve every authored XML member.
 
 The XLSX and `review_manifest.json` are retained in `publications`. Portable CI
 regenerates the model and verifies every source cell, summary formula, cached result
