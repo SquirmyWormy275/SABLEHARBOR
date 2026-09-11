@@ -1,0 +1,1410 @@
+{
+  "revision": "0.1.0",
+  "base_commit": "786fc9a5311a04dde92ee6dbb08ac3b77a380200",
+  "source_sha256": {
+    "geospatial/facilities/source/campus.json": "6b918b435a95c816c481200732bcc85cd07ee7526debec9643f7c705b37c2592",
+    "geospatial/facilities/source/industrial_facilities.json": "2c71a93885099d4353b8f392284fb5d5947d4ad7a8e79440dfd354404a94435d",
+    "geospatial/facilities/source/research_campuses.json": "6350a1c4e168089c4fee2035397303f221ae7a5f38fe16d42bebefd264052688",
+    "geospatial/facilities/render.py": "3cce30211d737adad494ab842a539da6d32b17da3884081403efad47fc2642c4",
+    "geospatial/registers/MAP_ID_REGISTER.json": "690ebe85bb199d6e863c0d28d268c7cc155574fceed6b38c19520e2e55aee61c"
+  },
+  "generator_sha256": "3cce30211d737adad494ab842a539da6d32b17da3884081403efad47fc2642c4",
+  "maps": [
+    {
+      "id": "SH-MAP-SAC-002",
+      "title": "Sacramento headquarters campus master plan",
+      "site_id": "SH-SITE-0001",
+      "kind": "site",
+      "status": "PROPOSED_MODELLED_PROGRAM",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-002.svg",
+          "sha256": "8386fefa98e1ddb6ac2571d2eb3b3a8b9d87590e8e0718178a047981e20d774c"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-002.png",
+          "sha256": "0d9c98073448f36bec35c1e38db2f7336a3fa9c500dcdbd6310de6496bf23f94"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-002.pdf",
+          "sha256": "3fce388ac4fed4c92c4fa756dbf94b5573492990a72e850ddb5bc70f3986def4"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-SAC-003",
+      "title": "Governance House stacking and program",
+      "site_id": "SH-SITE-0001",
+      "building_id": "SH-SITE-0001-B01",
+      "kind": "building",
+      "status": "MODELLED_NOT_AS_BUILT",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-003.svg",
+          "sha256": "90df5fcf43086727eed0b4f4a46f5338e8a85176af24c1d8d3c9e8436c8b934d"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-003.png",
+          "sha256": "d74d9c657f2cd41b9613a22a4d2ba24af2594c0ad711344abdd6d48e532c0bd6"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-003.pdf",
+          "sha256": "43d571678f84d8bdfd35e70a659c8d595da4371dde60773b8a1f97f7ebbd7d52"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-SAC-004",
+      "title": "Governance House / Arrival and institutional work",
+      "site_id": "SH-SITE-0001",
+      "building_id": "SH-SITE-0001-B01",
+      "floor_id": "SH-SITE-0001-B01-L01",
+      "kind": "floor",
+      "status": "MODELLED_FITOUT_NOT_EXISTING",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-004.svg",
+          "sha256": "0318687fc53da4d27725ffbb44ad1530cbd243a6ad56e67428c27f5b84af40cf"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-004.png",
+          "sha256": "979286ecfe2a281734da8c5ab72bb11be235389ef98d02668114fcf90eebf065"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-004.pdf",
+          "sha256": "d6210ecbdf73e3ea1f23c4419b113df4f1a7867b3f194042aebd9f7645fd53ae"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-SAC-005",
+      "title": "Governance House / Enterprise collaboration",
+      "site_id": "SH-SITE-0001",
+      "building_id": "SH-SITE-0001-B01",
+      "floor_id": "SH-SITE-0001-B01-L02",
+      "kind": "floor",
+      "status": "MODELLED_FITOUT_NOT_EXISTING",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-005.svg",
+          "sha256": "94c0a1e732f513e29fd8cfab408a158ddbb45048c06d09753bd667a0cc106f50"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-005.png",
+          "sha256": "4667b0ed90f706261c3181f093e1cf237dd50d9e5e6c12d1a6a8114e89b525d8"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-005.pdf",
+          "sha256": "4badb1b014be3a3e5439944cc18bf50fc4489004d27308a82605d4df116834cc"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-SAC-006",
+      "title": "Enterprise Services stacking and program",
+      "site_id": "SH-SITE-0001",
+      "building_id": "SH-SITE-0001-B02",
+      "kind": "building",
+      "status": "MODELLED_NOT_AS_BUILT",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-006.svg",
+          "sha256": "b235ff92f0a5117c6811a7afce94c93fb1944a89735f613c32fff99f5dafb804"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-006.png",
+          "sha256": "f61facf5c23ec0e7c2c65272f600ff128e234c8abda54ca42dcb9912b858b7d8"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-006.pdf",
+          "sha256": "2e757e9a48d9bdd45704e51e3990e344fbb1141d62a88478b0635ef6ba5b771b"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-SAC-007",
+      "title": "Enterprise Services / People and shared operations",
+      "site_id": "SH-SITE-0001",
+      "building_id": "SH-SITE-0001-B02",
+      "floor_id": "SH-SITE-0001-B02-L01",
+      "kind": "floor",
+      "status": "MODELLED_FITOUT_NOT_EXISTING",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-007.svg",
+          "sha256": "04774407d909c58fca5db025d1ea6c5f1056e45e2032c8cd409dc3b2038045e6"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-007.png",
+          "sha256": "75a80e0b2d3a7e35f414c23d67f11a47758e0b2f7b1bdf8df52ae2ac4ed50695"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-007.pdf",
+          "sha256": "acf0411fcaf11f1304f81cc0a2ad7fa6e72ae75533e03fd97d44b4fed44f50da"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-SAC-008",
+      "title": "Enterprise Services / Technology and resilience",
+      "site_id": "SH-SITE-0001",
+      "building_id": "SH-SITE-0001-B02",
+      "floor_id": "SH-SITE-0001-B02-L02",
+      "kind": "floor",
+      "status": "MODELLED_FITOUT_NOT_EXISTING",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-008.svg",
+          "sha256": "5b9b285ff69d5ccaadd7c1dd37ddddf8661cdf1398537ccc525a7ece06b915a2"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-008.png",
+          "sha256": "8ef9f34db80e5a8b9d59c5c1067147134cfea6fa47cf5924f23c4c72961a2b8d"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-008.pdf",
+          "sha256": "ff788c2d401efbc7d46d1dcdba22d785ccb37dc115586042ae4596552836edbb"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-SAC-009",
+      "title": "Enterprise Services / Expansion shell",
+      "site_id": "SH-SITE-0001",
+      "building_id": "SH-SITE-0001-B02",
+      "floor_id": "SH-SITE-0001-B02-L03",
+      "kind": "floor",
+      "status": "FUTURE_SHELL",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-009.svg",
+          "sha256": "0f1cc317ba6058b4eeef2f031a2cd70eeb5529a45507ce7acaa8138c71f3d824"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-009.png",
+          "sha256": "fb0ff999c8d96e15ab1876f7cdd613f19f73f832c2d410658ffa02bc02679719"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-009.pdf",
+          "sha256": "a5d7a88272672743fa448e713f43182153280e2e9d48e1bdec43d8cac7f28ac5"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-SAC-010",
+      "title": "J2 House stacking and program",
+      "site_id": "SH-SITE-0001",
+      "building_id": "SH-SITE-0001-B03",
+      "kind": "building",
+      "status": "MODELLED_NOT_AS_BUILT",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-010.svg",
+          "sha256": "fe6cfb5caf5da1f7a33c7269b6b40eea89dbef0b04107d0a7bff5bf9141e4c34"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-010.png",
+          "sha256": "a1860e92cbddbe269c1ccc57ef1f552d215c221d40bc33e50fc6c88db023ffa2"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-010.pdf",
+          "sha256": "02af67e97bc9d22e13580a040db2776220f4fc0bdd2d0c4cc46a01756a72fc2d"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-SAC-011",
+      "title": "J2 House / Contact and field junction",
+      "site_id": "SH-SITE-0001",
+      "building_id": "SH-SITE-0001-B03",
+      "floor_id": "SH-SITE-0001-B03-L01",
+      "kind": "floor",
+      "status": "MODELLED_FITOUT_NOT_EXISTING",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-011.svg",
+          "sha256": "febb8f72bc466f839874cfda6ec627e26697ee9d13cc1f9ac27e17beab08805c"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-011.png",
+          "sha256": "a439f7cb16a525525fd688bcc3e3728b6f5ab3ed77b5cf45dd3c65266eb127d6"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-011.pdf",
+          "sha256": "ee6629683de222106309f44995c76bf2a785efd0a111d1bad7f1358384c8f49a"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-SAC-012",
+      "title": "J2 House / Judgment and Orientation",
+      "site_id": "SH-SITE-0001",
+      "building_id": "SH-SITE-0001-B03",
+      "floor_id": "SH-SITE-0001-B03-L02",
+      "kind": "floor",
+      "status": "MODELLED_FITOUT_NOT_EXISTING",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-012.svg",
+          "sha256": "8935575d3c544ceb68945af23da39315256a2046cef4cfe412e728688bccbefb"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-012.png",
+          "sha256": "bd1330b2d0b910dfe8a553a20571a5c52fc7f74fbc613aed6fb3bbdb976aab37"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-012.pdf",
+          "sha256": "c1d16aeb96fd429653ee4e7ff825e2c4cadbb8d689a06079c2128e449b6432a7"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-SAC-013",
+      "title": "J2 House / Institutional stewardship",
+      "site_id": "SH-SITE-0001",
+      "building_id": "SH-SITE-0001-B03",
+      "floor_id": "SH-SITE-0001-B03-L03",
+      "kind": "floor",
+      "status": "MODELLED_FITOUT_NOT_EXISTING",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-013.svg",
+          "sha256": "0954693077c66dc3a7c0ab52a58df9b9f292ee3a12bfd4df394904759a0ae796"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-013.png",
+          "sha256": "8f46551ff0416ba3a24e68c8bc8967606f6f07dda4e81e602bd09a8baab88c49"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-013.pdf",
+          "sha256": "ce21d395422f4057ec03825f299b5b22d44885e7a2eb682fbf84abec5b9ddd25"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-SAC-014",
+      "title": "Education and Convening stacking and program",
+      "site_id": "SH-SITE-0001",
+      "building_id": "SH-SITE-0001-B04",
+      "kind": "building",
+      "status": "MODELLED_NOT_AS_BUILT",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-014.svg",
+          "sha256": "3aa0628fa81ff7bcfe6ab264f1a11a8f420d0ac792fd9ae1d4eb9d82bfb99127"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-014.png",
+          "sha256": "ad6210fede4e9d554af7cb3edfae479a27f768e47dacec0ba672432415ba06b3"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-014.pdf",
+          "sha256": "5998afb7af934879b6bf2ceba1c36581af172f18032f75cca6c08cddb4719cc8"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-SAC-015",
+      "title": "Education and Convening / Enterprise learning",
+      "site_id": "SH-SITE-0001",
+      "building_id": "SH-SITE-0001-B04",
+      "floor_id": "SH-SITE-0001-B04-L01",
+      "kind": "floor",
+      "status": "MODELLED_FITOUT_NOT_EXISTING",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-015.svg",
+          "sha256": "685afc7b843e0e9d41c68073d1be4fabd95c7c35fb631ca595b8e3fb49a9779c"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-015.png",
+          "sha256": "9eb7f5ad3051c7d2aa7a3968a50d86a617a73dc875e6e5efd0baaa5ec16a8a73"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-015.pdf",
+          "sha256": "8df88070464f91afb6c31c03b70c4a774edb18401e5446d7a17d930ac71b3007"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-SAC-016",
+      "title": "Education and Convening / Professional formation",
+      "site_id": "SH-SITE-0001",
+      "building_id": "SH-SITE-0001-B04",
+      "floor_id": "SH-SITE-0001-B04-L02",
+      "kind": "floor",
+      "status": "MODELLED_FITOUT_NOT_EXISTING",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-016.svg",
+          "sha256": "557e5f6e40f94050c0d65288deefc926f6f3474aff44c82e44872de0e27c117d"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-016.png",
+          "sha256": "9a1f16c4b9c130e24b649daa1c98449c8a6d33de9c2a329fff9ec463168a3774"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-016.pdf",
+          "sha256": "abe9039820ae97ff7b0610ed02dfd983d73045662a7f0252ca731310c8b06a1e"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-SAC-017",
+      "title": "Residential House stacking and program",
+      "site_id": "SH-SITE-0001",
+      "building_id": "SH-SITE-0001-B05",
+      "kind": "building",
+      "status": "MODELLED_NOT_AS_BUILT",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-017.svg",
+          "sha256": "5a3f4cec45c65f9f79b98513f3527048e3be631f59a10949f54e3fd94b540f54"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-017.png",
+          "sha256": "0211f1b3191f4904a7c8342b9f08a6713e62523cf71f3a519778a94eaaff4767"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-017.pdf",
+          "sha256": "6fb388dd0efb90fe538412ce207bdd7dd331ef5bd22fb049bc5ad41464afc611"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-SAC-018",
+      "title": "Residential House / Short-stay residence ground",
+      "site_id": "SH-SITE-0001",
+      "building_id": "SH-SITE-0001-B05",
+      "floor_id": "SH-SITE-0001-B05-L01",
+      "kind": "floor",
+      "status": "MODELLED_FITOUT_NOT_EXISTING",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-018.svg",
+          "sha256": "86e246dbf177130e4535d4317cc8fcc1457d6c06c4c68757406c92aac5b477e4"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-018.png",
+          "sha256": "53806ddc5f097a91dba278da3a179f937354f9629b03be953dff2075b654bae0"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-018.pdf",
+          "sha256": "e9c1a883593c23ece61176572b49ee4a973751624b5acf9ff2fa9bc4eeaabe61"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-SAC-019",
+      "title": "Residential House / Short-stay residence upper",
+      "site_id": "SH-SITE-0001",
+      "building_id": "SH-SITE-0001-B05",
+      "floor_id": "SH-SITE-0001-B05-L02",
+      "kind": "floor",
+      "status": "MODELLED_FITOUT_NOT_EXISTING",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-019.svg",
+          "sha256": "3ee10a1cf503ffe2b830ca8ed15c04504a1acdbfd392ed766ec8087d9a3ed618"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-019.png",
+          "sha256": "d2d299b56ddc983a2119e447ce636828562a402379ffca6988cf0ffbdc89d56d"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-019.pdf",
+          "sha256": "4f4c3ef25cb2bd313994a4ea45b7a44e28b7b6451130e60df6d35c99e0ab3504"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-SAC-020",
+      "title": "Campus Services stacking and program",
+      "site_id": "SH-SITE-0001",
+      "building_id": "SH-SITE-0001-B06",
+      "kind": "building",
+      "status": "MODELLED_NOT_AS_BUILT",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-020.svg",
+          "sha256": "24d9f51ae3d86246f20b0178c0b97bd88a4e2fdf2cec1dc005f2cdba1e339585"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-020.png",
+          "sha256": "bb4af9c24758d964c8d0e7add5fd7bb3d098ac3ddab604d52f161571d05833e8"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-020.pdf",
+          "sha256": "531ba9219275f7d27f4fac3e731aadaaa350bdc80c87b53d2e8a8d548736d8e2"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-SAC-021",
+      "title": "Campus Services / Service and local equipment",
+      "site_id": "SH-SITE-0001",
+      "building_id": "SH-SITE-0001-B06",
+      "floor_id": "SH-SITE-0001-B06-L01",
+      "kind": "floor",
+      "status": "MODELLED_FITOUT_NOT_EXISTING",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-021.svg",
+          "sha256": "c45395e94181e56e171cc3fc8fea269565b3abc6308a49f80ff5e94a10213c78"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-021.png",
+          "sha256": "a7b543aa4ac7ef76154e720271fe7bd47097da3200e1cbc5e804ddbf611f8152"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-021.pdf",
+          "sha256": "bdf8748af02ebb57091d180393a7cec2ee20f3a70ebafbd748806e3e0f8b7460"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-SAC-022",
+      "title": "Sacramento status and capacity horizons",
+      "site_id": "SH-SITE-0001",
+      "kind": "phasing",
+      "status": "MODELLED_PROPOSAL",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-022.svg",
+          "sha256": "2180f91e050e16f7a2ff4266aed8c3b408b212334a074313d38a978f711975be"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-022.png",
+          "sha256": "79e638fc581a6e3098a83330ecdafaa95c5c0e7308b2cad8509518cd471c7e78"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-022.pdf",
+          "sha256": "6160ff418245c510057049a9062becfe4f67e1345b03be4b91d7ae2efae23e73"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-ARU-020",
+      "title": "Wamsutter interchange master plan",
+      "site_id": "SH-IND-FAC-WAM-INT",
+      "kind": "site",
+      "status": "SYNTHETIC_OPERATING",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-020.svg",
+          "sha256": "b58b3d6e398ad45d2be52d390cb88e8fc74863b12086dc6aae5d04bbcccf24e4"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-020.png",
+          "sha256": "2c6685fe7bbf310736bcd4222b5587bddae1af4c976c4b53c79be9aa96387e95"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-020.pdf",
+          "sha256": "a4b529b5d41f89f698e909b00acf0e745d2e72e08e8601db110125366f45112e"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-ARU-021",
+      "title": "Taylor Yard and Shops master plan",
+      "site_id": "SH-IND-FAC-TAY-YARD",
+      "kind": "site",
+      "status": "SYNTHETIC_OPERATING",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-021.svg",
+          "sha256": "806c99307b1131b3b003675267c958bf7f61a6dbaa73f1611f86c4846c7d5c5e"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-021.png",
+          "sha256": "2d6a9c375adbeedc58d54753dd4a78c2c9ca6d7823c53fdad9b971c5efc2b7f1"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-021.pdf",
+          "sha256": "57ef7bc574e13247ed5531e4bf5c86260a67fff365699de1af6348818c75e295"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-ARU-022",
+      "title": "Locomotive running-repair shop stacking and program",
+      "site_id": "SH-IND-FAC-TAY-YARD",
+      "building_id": "SH-IND-FAC-TAY-YARD-B01",
+      "kind": "building",
+      "status": "ILLUSTRATIVE_FITOUT_EXISTING_FUNCTION_NOT_AS_BUILT",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-022.svg",
+          "sha256": "860fd66de5915bf66e45ed7b7bf54ba9c563e5f4d0b92f82114f1aebafcaa996"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-022.png",
+          "sha256": "314f1934e7344b0789202f8509193250b31e766a7ad40d8a3498ed952bb522ad"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-022.pdf",
+          "sha256": "a2639e966872db4b866da79951060c09b326bba321223a933ac063953fff3d63"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-ARU-023",
+      "title": "Locomotive running-repair shop / Locomotive running-repair shop \u2014 ground level",
+      "site_id": "SH-IND-FAC-TAY-YARD",
+      "building_id": "SH-IND-FAC-TAY-YARD-B01",
+      "floor_id": "SH-IND-FAC-TAY-YARD-B01-L01",
+      "kind": "floor",
+      "status": "ILLUSTRATIVE_NOT_SURVEYED",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-023.svg",
+          "sha256": "947b5f7fd001cfc411a3e77934ccf853d7571b7eaccbff943863e7b22c70d687"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-023.png",
+          "sha256": "cff3a8c168d9ed146a64266ce932bc1b0cfbfa1e20398f75e6ea6f705c892c10"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-023.pdf",
+          "sha256": "fa85c96dbacbc2709139d916c460d8a3c597dc553b8a9e37d39854399cebd426"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-ARU-024",
+      "title": "Dispatch and crew house stacking and program",
+      "site_id": "SH-IND-FAC-TAY-YARD",
+      "building_id": "SH-IND-FAC-TAY-YARD-B02",
+      "kind": "building",
+      "status": "ILLUSTRATIVE_FITOUT_EXISTING_FUNCTION_NOT_AS_BUILT",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-024.svg",
+          "sha256": "e0dad674bcc3885c020335248179daf3883a59deaa96a1b0217bb90950b26ab7"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-024.png",
+          "sha256": "0ab1bd58ac2649275d13b2e95652882be4a97f4a09eba8d341d678e17658a751"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-024.pdf",
+          "sha256": "74afbd21edfa710a34cd0739cf642252446f01833dd6d8667cb31d2f4f7141cf"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-ARU-025",
+      "title": "Dispatch and crew house / Dispatch and crew house \u2014 ground level",
+      "site_id": "SH-IND-FAC-TAY-YARD",
+      "building_id": "SH-IND-FAC-TAY-YARD-B02",
+      "floor_id": "SH-IND-FAC-TAY-YARD-B02-L01",
+      "kind": "floor",
+      "status": "ILLUSTRATIVE_NOT_SURVEYED",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-025.svg",
+          "sha256": "32c1ce40eb9694665918a1d650631ecb962bf7e31c500cff22bcb4d28e503491"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-025.png",
+          "sha256": "6d462ccc1cded631bec48fa3397d745969e34bc47a3fd9db679744115d3a38e4"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-025.pdf",
+          "sha256": "c7ac204923a1a8e8f99d87bb29322162a093712563386a6fec0172d1ce04d65d"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-ARU-026",
+      "title": "Taylor Industrial Transload Complex master plan",
+      "site_id": "SH-IND-FAC-TAY-TERMINAL",
+      "kind": "site",
+      "status": "SYNTHETIC_OPERATING",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-026.svg",
+          "sha256": "3ae5381566bf0f42f8a79bd5c7a6e8ec4ae0893b423fa6034e319eddf98dc115"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-026.png",
+          "sha256": "1e6b2a8ee4e6e0db1cf9454f1290cff2e7cd875233a6e4adbe1540c27f005377"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-026.pdf",
+          "sha256": "7165b90f3757921c2efce8325b8f95d93644a9df429325e69bd23ab4ee464d8e"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-ARU-027",
+      "title": "Taylor warehouse master plan",
+      "site_id": "SH-IND-FAC-TAY-WAREHOUSE",
+      "kind": "site",
+      "status": "SYNTHETIC_OPERATING",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-027.svg",
+          "sha256": "28f848a7dafb290e5c25652cde1d19d6403cc5bdf6f6543f42239d3826fc70bd"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-027.png",
+          "sha256": "d5773ddf81fd054443c93f9bf4ee7278663eec1a3cf79b7495adc677d86b7310"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-027.pdf",
+          "sha256": "4787b944484e880043a1adc6a9e998295975ba9f6ee1ad6bf5644e36ae07b389"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-ARU-028",
+      "title": "Taylor warehouse stacking and program",
+      "site_id": "SH-IND-FAC-TAY-WAREHOUSE",
+      "building_id": "SH-IND-FAC-TAY-WAREHOUSE-B01",
+      "kind": "building",
+      "status": "ILLUSTRATIVE_FITOUT_EXISTING_FUNCTION_NOT_AS_BUILT",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-028.svg",
+          "sha256": "519c8795d31539ba093f47b034c073f7a827debf1d2f7920ab878c625131d6dd"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-028.png",
+          "sha256": "0afd094b1f10c958f8a7d15f9b3daf5aaeb3e9482ca8f0339d4629f338085d9a"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-028.pdf",
+          "sha256": "5fcc294e08e9b291e06f8705b8a41abfa4192d756f3e96db500985fd65012f31"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-ARU-029",
+      "title": "Taylor warehouse / Taylor warehouse \u2014 ground level",
+      "site_id": "SH-IND-FAC-TAY-WAREHOUSE",
+      "building_id": "SH-IND-FAC-TAY-WAREHOUSE-B01",
+      "floor_id": "SH-IND-FAC-TAY-WAREHOUSE-B01-L01",
+      "kind": "floor",
+      "status": "ILLUSTRATIVE_NOT_SURVEYED",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-029.svg",
+          "sha256": "851e8f30ef79a2f3d798f7641acd631cbdfb680d3e6963a4ca9941d89c55ca44"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-029.png",
+          "sha256": "7709ebd8da8880eeafc96acc76b7572c352e5e6c954d8e657a13b4de8a8a143d"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-029.pdf",
+          "sha256": "24dadc76f2e00fb3506aa62ddbc36817fc0cb971f24f1fbc185b248a45ce4d19"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-ARU-030",
+      "title": "Taylor trucking depot master plan",
+      "site_id": "SH-IND-FAC-TAY-TRUCK",
+      "kind": "site",
+      "status": "SYNTHETIC_OPERATING",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-030.svg",
+          "sha256": "e7ff2ce92c9b688a48b34ec03e2b4f3152eb61c1f5e56ee8e1ca996b9367f077"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-030.png",
+          "sha256": "006f5608ad20158fbc82da14f54487a382905a1d57bbbe910d08ae321b871e28"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-030.pdf",
+          "sha256": "c8c25fc9574ff14ccaee979853a9d621e21e1cd472f81d77ef70b8c42f82e100"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-ARU-031",
+      "title": "Inspection bays and dispatch stacking and program",
+      "site_id": "SH-IND-FAC-TAY-TRUCK",
+      "building_id": "SH-IND-FAC-TAY-TRUCK-B01",
+      "kind": "building",
+      "status": "ILLUSTRATIVE_FITOUT_EXISTING_FUNCTION_NOT_AS_BUILT",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-031.svg",
+          "sha256": "de8e5632fbb962142f95d314de6d0ad2dbc5a6218c33d89ed3a61dc4892b90d3"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-031.png",
+          "sha256": "15d47e0320f5367498ff5b0547a7b892703eea2c209a739d5f34a79af61b40f3"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-031.pdf",
+          "sha256": "910fa14850fb884ea6256137eed1921374f27bf8c6c3162471469e3218ff145e"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-ARU-032",
+      "title": "Inspection bays and dispatch / Inspection bays and dispatch \u2014 ground level",
+      "site_id": "SH-IND-FAC-TAY-TRUCK",
+      "building_id": "SH-IND-FAC-TAY-TRUCK-B01",
+      "floor_id": "SH-IND-FAC-TAY-TRUCK-B01-L01",
+      "kind": "floor",
+      "status": "ILLUSTRATIVE_NOT_SURVEYED",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-032.svg",
+          "sha256": "cd6962d2ceb0ba8d6147dcc671fac1a7211ee4bda61bf55e66997a89ceaf5511"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-032.png",
+          "sha256": "7700020a854f9ae96ac80f2c5411c1f74141fc2d6d2ede231d2b9fe72c973494"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-032.pdf",
+          "sha256": "04b9e721ec18d06dec32fd4294f0119b2d6ed64987877c9c19be29c59869e74f"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-ARU-033",
+      "title": "East Materials team track master plan",
+      "site_id": "SH-IND-FAC-EAST-MATERIALS",
+      "kind": "site",
+      "status": "SYNTHETIC_OPERATING",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-033.svg",
+          "sha256": "60e04a1b2cb0f5dc34cc017d4e0a8543c1ae1c38befaf7a68ca2e6ea57d8bac4"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-033.png",
+          "sha256": "ee7108fc47adf6c2ee00fa703b2aceb004bba57eb5f1d210503a86626e1d4995"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-033.pdf",
+          "sha256": "206210f7ecb45a516ca16bdd352963679e77fdf03341fe12cefa2d6d4ff5d80a"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-ARU-034",
+      "title": "Mineral Transfer team track master plan",
+      "site_id": "SH-IND-FAC-MINERAL-TEAM",
+      "kind": "site",
+      "status": "SYNTHETIC_OPERATING",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-034.svg",
+          "sha256": "80f4014d751cc627ff958b650c81b345b63627f8e7bdd1c328e47c7c258fdb05"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-034.png",
+          "sha256": "092a531f5a13431b8c29726bcecaf7ab31017d3fc2567f303010b4e35b9f9d19"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-034.pdf",
+          "sha256": "705c39c2eb72232e49df84e375275f767a59060feede6dabee50f1f84beb31f7"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-ARU-035",
+      "title": "Rawlins satellite terminal master plan",
+      "site_id": "SH-IND-FAC-RAW-TERMINAL",
+      "kind": "site",
+      "status": "SYNTHETIC_OPERATING",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-035.svg",
+          "sha256": "b73446adf01bbb73fc4aabf803ed3c2e209cc40f03641252b77d4566f9febd05"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-035.png",
+          "sha256": "f0d307e59ca2926563b48110796db90d4ca06195e9cc237aa5ff0b204611c1f2"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-035.pdf",
+          "sha256": "a58215923ebd620f28ab6148f33932d966d9239092aff83003e58066211b1a7d"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-ARU-036",
+      "title": "Rawlins warehouse master plan",
+      "site_id": "SH-IND-FAC-RAW-WAREHOUSE",
+      "kind": "site",
+      "status": "SYNTHETIC_OPERATING",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-036.svg",
+          "sha256": "a9f82992934bb72f0707233015dbc7a47af2d55522659e50f37ab7f6e4b91a3d"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-036.png",
+          "sha256": "302bf58418277de34d7e41201d2552ff5e9af9cbbfac64439efb9e11ab5051b8"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-036.pdf",
+          "sha256": "10bdc3819803691298a950ed2e27f9836807e83041e3735f5e96ea83651dc711"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-ARU-037",
+      "title": "Rawlins warehouse stacking and program",
+      "site_id": "SH-IND-FAC-RAW-WAREHOUSE",
+      "building_id": "SH-IND-FAC-RAW-WAREHOUSE-B01",
+      "kind": "building",
+      "status": "ILLUSTRATIVE_FITOUT_EXISTING_FUNCTION_NOT_AS_BUILT",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-037.svg",
+          "sha256": "fea43779bbb4e20ca95abae031b438fb8965c49d7e3f5d7d76f2f444a78122a4"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-037.png",
+          "sha256": "fb20aec9c49d878ded69c31229dae1b98555147af18f7e1d9c4399b5da338c3c"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-037.pdf",
+          "sha256": "b79c45f819988d3500ba12500a09feee219e1362ee6086b5529ae3d188d0bdff"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-ARU-038",
+      "title": "Rawlins warehouse / Rawlins warehouse \u2014 ground level",
+      "site_id": "SH-IND-FAC-RAW-WAREHOUSE",
+      "building_id": "SH-IND-FAC-RAW-WAREHOUSE-B01",
+      "floor_id": "SH-IND-FAC-RAW-WAREHOUSE-B01-L01",
+      "kind": "floor",
+      "status": "ILLUSTRATIVE_NOT_SURVEYED",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-038.svg",
+          "sha256": "740499ebc413d324c875d04338b7bc3d20301c310d037969d200500557615230"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-038.png",
+          "sha256": "c1700cf67b6f9e4288c463e5180cd949da450f0def46bc88637260cc371bcec1"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-038.pdf",
+          "sha256": "ef0170c56fd09789c73f8db18df20878f0c935756754237008929c31b470497b"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-ARU-039",
+      "title": "Rawlins trucking satellite master plan",
+      "site_id": "SH-IND-FAC-RAW-TRUCK",
+      "kind": "site",
+      "status": "SYNTHETIC_OPERATING",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-039.svg",
+          "sha256": "98c6cbdb4a2fe5411d0dfd0a04e783f446f36e994025d192384d81359b132e40"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-039.png",
+          "sha256": "c5ad28dd301620dc8c12f5ada40facdbdbf60bd41db13abfbc8d66765dec03cd"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-039.pdf",
+          "sha256": "a5eed73edf25d9fb206a3ce86b1063efc6457215be43afd73a265990e4411705"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-ARU-040",
+      "title": "Taylor ARU office master plan",
+      "site_id": "SH-IND-FAC-ARU-OFFICE",
+      "kind": "site",
+      "status": "SYNTHETIC_OPERATING",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-040.svg",
+          "sha256": "42c1db57178ad501594a27a273eceb2acf01be774d2b61f46c80f27b57ec14d8"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-040.png",
+          "sha256": "b676924f5cd654485e00e633aa0d439f654cc49fcc3bbf60ad658cc5fb4d3289"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-040.pdf",
+          "sha256": "b9aaf08ee1272405d69edbadcb0512a0eba060899f5465c3bf0247620e8b480c"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-ARU-041",
+      "title": "ARU operating office stacking and program",
+      "site_id": "SH-IND-FAC-ARU-OFFICE",
+      "building_id": "SH-IND-FAC-ARU-OFFICE-B01",
+      "kind": "building",
+      "status": "ILLUSTRATIVE_FITOUT_EXISTING_FUNCTION_NOT_AS_BUILT",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-041.svg",
+          "sha256": "515ed9ec7f5a3fe7939bc728dd5aa35ab16135dc39b7017e74f175f4d54d2b1f"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-041.png",
+          "sha256": "5e8ce17f3076f6c21ed1a0066c602a3199980c70a766450530b796474cef20d9"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-041.pdf",
+          "sha256": "eeb5601a9be458611c56d9205dabbd0ad87cd71ffcd0cd73ed38a3f050874b67"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-ARU-042",
+      "title": "ARU operating office / ARU operating office \u2014 ground level",
+      "site_id": "SH-IND-FAC-ARU-OFFICE",
+      "building_id": "SH-IND-FAC-ARU-OFFICE-B01",
+      "floor_id": "SH-IND-FAC-ARU-OFFICE-B01-L01",
+      "kind": "floor",
+      "status": "ILLUSTRATIVE_NOT_SURVEYED",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-042.svg",
+          "sha256": "e3d53b4a2a8d51ce39fd310a5d3c27c0fc36e24dfe3048d16a50f25f47bbb744"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-042.png",
+          "sha256": "a80684cbe2e114f803d4c43f3177a654e7c5422ee97e7cc3788ae6af47cc4a00"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-042.pdf",
+          "sha256": "da4f86326aadac6e2a178178218e1e3badad9a4e59b9610601bb7c9807af1e56"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-RWM-020",
+      "title": "Red Wash receiving and reagent storage master plan",
+      "site_id": "SH-IND-FAC-RW-RECEIVING",
+      "kind": "site",
+      "status": "SYNTHETIC_IN_SERVICE_2026_07_07",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-RWM-020.svg",
+          "sha256": "7f741f8f886cf479ecef72d512e9c068316dccc9bf80f0df65bf20bb24d0afb9"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-RWM-020.png",
+          "sha256": "ec47413c4bec6120d9df87e3f379629d335c21d1fe6f5c33c1a3f662f579f947"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-RWM-020.pdf",
+          "sha256": "b7f8a52fde7b3496ce14712edb87cc0c0eb9e64017d888cb150197a924740da2"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-RWM-021",
+      "title": "Red Wash surface study envelope master plan",
+      "site_id": "SH-SITE-0006",
+      "kind": "site",
+      "status": "PRELIMINARY_ENGINEERING_PROPOSAL",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-RWM-021.svg",
+          "sha256": "989712fe03024407367e91453d596c83379cb27577a203ba188bb8894b67de3f"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-RWM-021.png",
+          "sha256": "544a30f5985cab22af1fbedb104189ff6fc7f9f07a790e968527d9d19ca553a1"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-RWM-021.pdf",
+          "sha256": "563f0e2f78fc773897758e5b9eabf5ce358d199fe043c19976ca1d20e0c50739"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-WIL-020",
+      "title": "The Fort \u00b7 Willow research compound master plan",
+      "site_id": "SH-SITE-0003",
+      "kind": "site",
+      "status": "PROPOSED_MODELLED_PROGRAM",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-020.svg",
+          "sha256": "1eff538d6574c0cae750738c00ba727d7b769cb12ce50ad5295e27fab658e6f1"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-020.png",
+          "sha256": "a3a12640d610ec3cb28f1e184f5843f9322bca1eef84d4fde4e439f741d3dbfe"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-020.pdf",
+          "sha256": "04b468f1b3913a1a070e8ef582c11be7d6ef6d60bdcf87a4b87aa8df9c056533"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-WIL-021",
+      "title": "The Big Shed stacking and program",
+      "site_id": "SH-SITE-0003",
+      "building_id": "SH-FAC-FORT-BIG",
+      "kind": "building",
+      "status": "MODELLED_NOT_AS_BUILT",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-021.svg",
+          "sha256": "7bc2040727b86a7289a426b30ae3c5e7913ab2c0c7fdb8573520c20d4d3b5dd9"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-021.png",
+          "sha256": "99d0236443a4f54e7d83a3d0437bf70d74dfc4226824a8d286cc9880fadff4c0"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-021.pdf",
+          "sha256": "cfc7e5eada3baa0bc026a83194ede2ca8e316ccf227a06534bcfefbe856acd03"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-WIL-022",
+      "title": "The Big Shed / Research, integration and prototype work",
+      "site_id": "SH-SITE-0003",
+      "building_id": "SH-FAC-FORT-BIG",
+      "floor_id": "SH-FAC-FORT-BIG-L01",
+      "kind": "floor",
+      "status": "MODELLED_FITOUT_NOT_EXISTING",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-022.svg",
+          "sha256": "6cd668a0adb579c5469637ae40783a452f749921cfc89ee428737aa140f288bd"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-022.png",
+          "sha256": "183661dd1d2ab85bd6574ae0c7cc71ec7e25338f44ab5462c6bd81d7faeb685b"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-022.pdf",
+          "sha256": "31f504308e695979bdf9915c1844162f98d8e77e334b6386c2bb757ed051055a"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-WIL-023",
+      "title": "The Small Shed stacking and program",
+      "site_id": "SH-SITE-0003",
+      "building_id": "SH-FAC-FORT-SMALL",
+      "kind": "building",
+      "status": "MODELLED_NOT_AS_BUILT",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-023.svg",
+          "sha256": "b96dc3c688271ebad30daac14a67a36dc1d1cd50e2b8b9b596d97456574a5cf2"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-023.png",
+          "sha256": "3cd3b02a4034e21b55ef338ad22fc5e5f066638f15b3743fcad130ee7cd7085d"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-023.pdf",
+          "sha256": "b490abd91b886bd560b1d10c36d803704d863195aec9dc4cb995068d73f8a008"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-WIL-024",
+      "title": "The Small Shed / Administrative work and visiting staff arrival",
+      "site_id": "SH-SITE-0003",
+      "building_id": "SH-FAC-FORT-SMALL",
+      "floor_id": "SH-FAC-FORT-SMALL-L01",
+      "kind": "floor",
+      "status": "MODELLED_FITOUT_NOT_EXISTING",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-024.svg",
+          "sha256": "52d99c262e8de452cc9f6aa302f43fba12302b6ad31c801206c36853450ea2c3"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-024.png",
+          "sha256": "ffa46cb9beb4042a62064baece51c0c8505c9fb8a25d87e39b62b804011e04e5"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-024.pdf",
+          "sha256": "5a3f22605460c39c2107a86eece7b4d9a99b953d0b21a35215b615fc17d80de0"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-WIL-025",
+      "title": "The Small Shed / Six temporary guest rooms \u00b7 no permanent housing",
+      "site_id": "SH-SITE-0003",
+      "building_id": "SH-FAC-FORT-SMALL",
+      "floor_id": "SH-FAC-FORT-SMALL-L02",
+      "kind": "floor",
+      "status": "MODELLED_FITOUT_NOT_EXISTING",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-025.svg",
+          "sha256": "7590cd834d4741ae9e2ee6040a145b0cee8a0451954b3f86fdfe47e8ba48ab79"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-025.png",
+          "sha256": "f1c326b05668b4a5a0a635f350929c2a5111b1e8e765e3bc5b76a4cd486788e6"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-025.pdf",
+          "sha256": "c0ca374eb6960c329c0e633fb07f408e75ecb7bd686d97f786974b6f743a1ee9"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-WIL-026",
+      "title": "The White Shed stacking and program",
+      "site_id": "SH-SITE-0003",
+      "building_id": "SH-FAC-FORT-WHITE",
+      "kind": "building",
+      "status": "MODELLED_NOT_AS_BUILT",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-026.svg",
+          "sha256": "71a0d800eb7c838750c4d0118bdccc4c0a6c111c1942d827217bb6a645d58844"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-026.png",
+          "sha256": "36796498a1f1506aba20d4989a385b42ac8845734b10a25c56591fddcc9bc18d"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-026.pdf",
+          "sha256": "3b3dcbe77bbec4f9a3ac6bb706f7280ab9e117994f57188a351bac3e285e3e62"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-WIL-027",
+      "title": "The White Shed / Controlled intake, hold and equipment custody",
+      "site_id": "SH-SITE-0003",
+      "building_id": "SH-FAC-FORT-WHITE",
+      "floor_id": "SH-FAC-FORT-WHITE-L01",
+      "kind": "floor",
+      "status": "MODELLED_FITOUT_NOT_EXISTING",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-027.svg",
+          "sha256": "a94ea9acd8c92c84f3bcc4afdff3494a0813c0c59650a3439397fc730cae30b9"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-027.png",
+          "sha256": "d4f75a81340b31be2cb93262232c32859433ad58cdb0a420a629fd1cb6b4d623"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-027.pdf",
+          "sha256": "5bda15ebbcded27f1f0fd52698c0bc8be76e14c45d4a1d7be2b6158cb86465d2"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-CRD-020",
+      "title": "Bedford \u00b7 recovery development center master plan",
+      "site_id": "SH-SITE-0005",
+      "kind": "site",
+      "status": "PROPOSED_MODELLED_PROGRAM",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-020.svg",
+          "sha256": "b322311eb989655f8bd3acc1c6287a08ecc15dd78a331557ab32d2e0e4f72025"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-020.png",
+          "sha256": "9207e2680b1699acb4c2571765ac1d3510568743b92327a8f26e16e82497e0c8"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-020.pdf",
+          "sha256": "c904edf33ae26bc80794789a4cc0ee8f7eb08b0e2b31146e57da8a2b88f356fb"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-CRD-021",
+      "title": "Analytical and process development stacking and program",
+      "site_id": "SH-SITE-0005",
+      "building_id": "SH-SITE-0005-B01",
+      "kind": "building",
+      "status": "MODELLED_NOT_AS_BUILT",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-021.svg",
+          "sha256": "345fc249c5b7ca0773675ce096ed2749d9ca5baee881df947dd7edd2b3645723"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-021.png",
+          "sha256": "e0bcf1c21de5ef2d8860577afd7bb85f7b5ae0ffcf9e3fef10d93fcc1727e1e4"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-021.pdf",
+          "sha256": "443cf65b7ad3ab68f173992efc8441df75e57c766c1191c44f02fd598d24ff9a"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-CRD-022",
+      "title": "Analytical and process development / Analytical work and material genealogy",
+      "site_id": "SH-SITE-0005",
+      "building_id": "SH-SITE-0005-B01",
+      "floor_id": "SH-SITE-0005-B01-L01",
+      "kind": "floor",
+      "status": "MODELLED_FITOUT_NOT_EXISTING",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-022.svg",
+          "sha256": "65bc4e899bb49d464cd164bac61f4ff06c965c3ba09ce34ad7cc72d92df5b069"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-022.png",
+          "sha256": "05080881a2a0645d2de2baf5f3bdb9e75da47f4fa0d484c814457f0a2020b84e"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-022.pdf",
+          "sha256": "2631a6aca4d3d5b7b5aae568ac2624987a01038af2ddeac10567b6de74ec1c8c"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-CRD-023",
+      "title": "Field-unit assembly and refurbishment stacking and program",
+      "site_id": "SH-SITE-0005",
+      "building_id": "SH-SITE-0005-B02",
+      "kind": "building",
+      "status": "MODELLED_NOT_AS_BUILT",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-023.svg",
+          "sha256": "d6136132537ff45f3240f07fd72014b0a03a5f416f393cd21c2f0323c1ce71d5"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-023.png",
+          "sha256": "cf2709bc1876c08650c680547897061df7216b9cea70c0fd640048b30a8af795"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-023.pdf",
+          "sha256": "7d2beec277dc5371e77bcee472c48ce22f61b318614f7f234025991756f83e58"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-CRD-024",
+      "title": "Field-unit assembly and refurbishment / Assembly, maintenance and failure investigation",
+      "site_id": "SH-SITE-0005",
+      "building_id": "SH-SITE-0005-B02",
+      "floor_id": "SH-SITE-0005-B02-L01",
+      "kind": "floor",
+      "status": "MODELLED_FITOUT_NOT_EXISTING",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-024.svg",
+          "sha256": "9835f89a4d3e6231a71d46754b3c2d56d52dbe87740f238bdc39f1185bea9e6b"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-024.png",
+          "sha256": "25943409ffcbd58b9fae9f45dec3716eec16449e748a94ab7da343a6601bf5f2"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-024.pdf",
+          "sha256": "3c3a623af9b781cd21fa8ff51b315911acc78127c704c69ce32dfd7fef1ed7d6"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-CRD-025",
+      "title": "Intermediate upgrading and blending stacking and program",
+      "site_id": "SH-SITE-0005",
+      "building_id": "SH-SITE-0005-B03",
+      "kind": "building",
+      "status": "MODELLED_NOT_AS_BUILT",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-025.svg",
+          "sha256": "b0b2bffdd498e013842e5e76d0229cae0c5ab43cfc7292833bc6d2f1b83e3666"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-025.png",
+          "sha256": "56fe2ee3b263f30759ecd6c049607f1b64cdb11d39e8ede15f5600bf8e4431d7"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-025.pdf",
+          "sha256": "5553836415f9de6ade1b308f3d074961593582b45c1ed6baaf29b931c791f441"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-CRD-026",
+      "title": "Intermediate upgrading and blending / Bounded development and mixed-product upgrading",
+      "site_id": "SH-SITE-0005",
+      "building_id": "SH-SITE-0005-B03",
+      "floor_id": "SH-SITE-0005-B03-L01",
+      "kind": "floor",
+      "status": "MODELLED_FITOUT_NOT_EXISTING",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-026.svg",
+          "sha256": "ee5a6bca21de6c12a39ea8626ed08b16b675d064bb71a9ef21f41e1b56d4604b"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-026.png",
+          "sha256": "13788a2a6424eecc5eb83b025c9f38784e91f6e3aacd4e6f22f36985a85cebe2"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-026.pdf",
+          "sha256": "9c96b7ff1144ec46332e816fc0e1cf02234ca058b7d44e28e3257d9a1178718c"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-CRD-027",
+      "title": "Material receipt and outbound logistics stacking and program",
+      "site_id": "SH-SITE-0005",
+      "building_id": "SH-SITE-0005-B04",
+      "kind": "building",
+      "status": "MODELLED_NOT_AS_BUILT",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-027.svg",
+          "sha256": "62fc78b5193ab2b0225c17abcdcf351c0a895e429dd45bb60ee927fdb46f1e48"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-027.png",
+          "sha256": "500234ae4d7bf1ef3d15facc37f46e4809bfe1e8cb836c7d50152fd23065ed75"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-027.pdf",
+          "sha256": "facf1c8a10d4a1a9238a1ee13a2010d9b8f827b46f505e6751659cb10b629068"
+        }
+      }
+    },
+    {
+      "id": "SH-MAP-CRD-028",
+      "title": "Material receipt and outbound logistics / Segregated custody, release and dispatch",
+      "site_id": "SH-SITE-0005",
+      "building_id": "SH-SITE-0005-B04",
+      "floor_id": "SH-SITE-0005-B04-L01",
+      "kind": "floor",
+      "status": "MODELLED_FITOUT_NOT_EXISTING",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-028.svg",
+          "sha256": "d5c4a7f041be2786a926df18fbb125b420dc0898095e0a881e39e1d2cfebb617"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-028.png",
+          "sha256": "fff8f10c9a9d15da82c0530f29295725d25274abbe42552df1d90ba38197d612"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-028.pdf",
+          "sha256": "25f6d8d703b00e3f6f7f2dc0f9ded58ab8dd293574a0885c7b17668ece88c1d5"
+        }
+      }
+    }
+  ]
+}

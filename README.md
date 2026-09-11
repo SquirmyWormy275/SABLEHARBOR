@@ -1,5 +1,7 @@
 # SABLE HARBOR
 
+[Facility and floor-plan atlas](geospatial/facilities/README.md) · [Interactive index](geospatial/maps/index.html) · [Individual plans](geospatial/maps/facilities/ARTIFACT_INDEX.md)
+
 Sable Harbor is the canonical synthetic enterprise and reusable business-world sandbox for mining, natural resources, industrial systems, enterprise software, assurance, analytics, finance, governance, security, incident response, and professional training.
 
 **Industrial case:** the [Pale Sun / Red Wash / ARU / BS&T package](industrial/README.md) implements the selected corporate, transaction, operating and financial successor. Its [decision record](docs/canon/INDUSTRIAL_CLOSEOUT_2026-09-05.md) controls this scope; its retrospective case cutoff is September 5, 2026.

@@ -1014,6 +1014,11 @@ def main():
         writer.write(f)
     (OUT / "MAP_MANIFEST.json").write_text(json.dumps(MANIFEST, indent=2) + "\n")
     print(f"Rendered {len(MANIFEST)} map sheets in PDF/SVG/PNG plus the atlas.")
+    # Preserve the registered facility extension after geographic-only regeneration.
+    if (OUT / "facilities/MANIFEST.json").exists():
+        import runpy
+
+        runpy.run_path(str(BASE / "facilities/integrate_manifest.py"), run_name="__main__")
 
 
 if __name__ == "__main__":

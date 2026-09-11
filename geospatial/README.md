@@ -1,5 +1,7 @@
 # Sable Harbor geospatial framework
 
+[Facility drill-down atlas](maps/index.html) · [Campus and floor programme](facilities/README.md) · [Individual plans](maps/facilities/ARTIFACT_INDEX.md)
+
 **v0.1.0-rc4 — reconciled to accepted September 7 canon.** The integration closes the superseded Geo draft work; the full geographic engineering program remains incomplete.
 
 Open the [eleven-sheet atlas](maps/SABLE_HARBOR_Geographic_Framework_Atlas_v0.1.0-rc4.pdf), [GeoPackage](master/sable_harbor_master_v0.1.gpkg), [portable QGIS project](qgis/sable_harbor_master.qgz), or [closeout matrix](docs/PROGRAM_CLOSEOUT_MATRIX.md).
