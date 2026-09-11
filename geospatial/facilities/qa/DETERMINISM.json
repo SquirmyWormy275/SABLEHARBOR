@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "files_compared": 195,
+  "changed": [],
+  "scope": "Repeated complete facility generation in same Python/Cairo/font environment; different font/library stacks may differ."
+}

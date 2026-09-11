@@ -91,6 +91,7 @@ def pdf_text(value):
     """Base-14 PDF font punctuation equivalents; HTML retains exact Unicode."""
     return str(value).translate(str.maketrans({"—": " - ", "–": "-", "“": '"', "”": '"', "’": "'"}))
 
+
 def main():
     coverage = load(COVERAGE)
     current, prior = normal_maps()
@@ -393,7 +394,10 @@ def main():
             if not any(t[1] == "Coverage dispositions" for t in toc):
                 toc.append([1, "Coverage dispositions", p.number + 1])
         rc = p.insert_textbox(
-            fitz.Rect(30, y, 810, y + height), pdf_text("\n".join(lines)), fontsize=9, lineheight=1.2
+            fitz.Rect(30, y, 810, y + height),
+            pdf_text("\n".join(lines)),
+            fontsize=9,
+            lineheight=1.2,
         )
         assert rc >= 0, f"PDF coverage overflow {r['id']}"
         y += height + 7

@@ -131,7 +131,7 @@ def build():
         lines.append(f"| {s['id']} | {s['horizon']} | {s['people']} | {s['status']} |")
     lines += [
         "",
-        "The2026 design-event scenario has272 anonymous worker places,120 trainees and28 other visitors:420 people.46 resident trainees are already within the120 and move to residence overnight. Night50 comprises46 trainees and4 duty staff. These are design loads, not a finding of current attendance or approval of272 positions. Meeting/dining seats accommodate the same people across the day. The five-year shell option adds64 concurrent places; the ten-year reserved-wing option adds80. Those increments authorize no hiring or construction and need new fit-out/parking design before execution.",
+        "The 2026 design-event scenario has 272 anonymous worker places, 120 trainees and 28 other visitors: 420 people. 46 resident trainees are already within the 120 and move to residence overnight. Night 50 comprises 46 trainees and 4 duty staff. These are design loads, not a finding of current attendance or approval of 272 positions. Meeting/dining seats accommodate the same people across the day. The five-year shell option adds 64 concurrent places; the ten-year reserved-wing option adds 80. Those increments authorize no hiring or construction and need new fit-out/parking design before execution.",
         "",
         "## Area and seat schedule",
         "",
@@ -148,33 +148,29 @@ def build():
         "",
         "## Sacramento master and access",
         "",
-        "Governance and ESS share the public arrival edge. Internal Audit has a separate controlled suite with Board access. J2 occupies a separate building with a controlled entrance and no public through-route. Education/classrooms and residential approach use the pedestrian network. North delivery and the perimeter emergency loop separate receiving from ordinary arrival. Bicycles64 and parking200 are explicit assumptions:420×55% car mode /1.2 persons per vehicle≈193 spaces. Later horizons require a revised mobility scheme.",
+        "Governance and ESS share the public arrival edge. Internal Audit has a separate controlled suite with Board access. J2 occupies a separate building with a controlled entrance and no public through-route. Education/classrooms and residential approach use the pedestrian network. North delivery and the perimeter emergency loop separate receiving from ordinary arrival. Bicycles 64 and parking 200 are explicit assumptions: 420×55% car mode / 1.2 persons per vehicle ≈ 193 spaces. Later horizons require a revised mobility scheme.",
         "",
-        "The6m planning grid is schematic; final column/slab design, fire separation, corridor clearances, protected stairs, sanitary demand, accessible suites and lifts, mechanical zoning, flood/brownfield screening, utility diversity and stormwater discharge require coordinated engineering. Local plans are not transformed into geographic parcel polygons. Durable restrained modernism uses concrete/metal/stone, warm interior timber, shaded paths and a modest signature arrival monument.",
+        "The 6 m planning grid is schematic; final column/slab design, fire separation, corridor clearances, protected stairs, sanitary demand, accessible suites and lifts, mechanical zoning, flood/brownfield screening, utility diversity and stormwater discharge require coordinated engineering. Local plans are not transformed into geographic parcel polygons. Durable restrained modernism uses concrete/metal/stone, warm interior timber, shaded paths and a modest signature arrival monument.",
         "",
         "## Capital and facilities bridge",
         "",
-        f"Sacramento gross area {sac['gross_area_m2']:,.0f}m² includes {shell:,.0f}m² unfitted shell. Illustrative shell$2,500/m², fit-out$900/m² and site works$125/m² yield ${subtotal:,.0f} before25% contingency, or ${subtotal * 1.25:,.0f} excluding unknown land/offsite/abnormal/financing costs. These synthetic rates are comparison inputs, not researched market prices or an approved funding request.",
+        f"Sacramento gross area {sac['gross_area_m2']:,.0f} m² includes {shell:,.0f} m² unfitted shell. Illustrative shell $2,500/m², fit-out $900/m² and site works $125/m² yield ${subtotal:,.0f} before 25% contingency, or ${subtotal * 1.25:,.0f} excluding unknown land/offsite/abnormal/financing costs. These synthetic rates are comparison inputs, not researched market prices or an approved funding request.",
         "",
-        "The existing2027 conditional corporate facilities allowance of$1,140,000/year is retained and receives no automatic credit. Capital, depreciation, lease/operating expense and staffing are not interchangeable. This unfunded space scenario does not amend the finance model or claim that its recurring allowance pays for the campus. Procurement must reconcile actual tenure, lease versus build, lifecycle maintenance, rates and funded staffing before a financial successor adopts costs.",
+        "The existing 2027 conditional corporate facilities allowance of $1,140,000/year is retained and receives no automatic credit. Capital, depreciation, lease/operating expense and staffing are not interchangeable. This unfunded space scenario does not amend the finance model or claim that its recurring allowance pays for the campus. Procurement must reconcile actual tenure, lease versus build, lifecycle maintenance, rates and funded staffing before a financial successor adopts costs.",
         "",
         "## September state and phasing",
         "",
-        "| Phase | State as of11September2026 | Dependency |",
+        "| Phase | State as of 11 September 2026 | Dependency |",
         "|---|---|---|",
         "| District and institutional direction | Accepted canon | Preserve Sacramento / Railyards–River District |",
         "| Parcel / title / site studies | Unestablished | Supported siting, access, utilities and environmental review |",
         "| Master programme and concept floors | Modelled proposal | Integrated programme acceptance |",
         "| Shell, fit-out and commissioning | No completion asserted | Approved capital, coordinated engineering and execution evidence |",
-        "|2031 shell use /2036 reserve | Conditional capacity options | Demand and mobility review; no scheduled delivery dates |",
+        "| 2031 shell use / 2036 reserve | Conditional capacity options | Demand and mobility review; no scheduled delivery dates |",
         "",
-        "Sources, floor rollups and capacities are machine readable in[SPACE_REGISTER.json](SPACE_REGISTER.json). Existing industrial facility assigned FTE137 equals131 ARU/BS&T plus six receiving staff already within Red Wash128. No enterprise employee total is obtained by adding facility assignments.",
+        "Sources, floor rollups and capacities are machine readable in [SPACE_REGISTER.json](SPACE_REGISTER.json). Existing industrial facility assigned FTE 137 equals 131 ARU/BS&T plus six receiving staff already within Red Wash 128. No enterprise employee total is obtained by adding facility assignments.",
     ]
-    # Keep prose readable when joining number/unit boundaries in authored concise strings.
-    import re
-
     text = "\n".join(lines) + "\n"
-    text = re.sub(r"(?<=[A-Za-z])(?=\d)|(?<=\d)(?=[A-Za-z])", " ", text).replace("J 2", "J2")
     (BASE / "PROGRAM.md").write_text(text)
     print(f"{len(sites)} sites / {len(buildings)} buildings / {len(floors)} floors reconciled")
 

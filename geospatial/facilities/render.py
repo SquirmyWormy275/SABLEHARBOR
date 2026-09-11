@@ -99,7 +99,7 @@ class Sheet:
                 "modDate": "D:20260911000000Z",
             }
         )
-        doc.save(OUT / (name + ".pdf"), no_new_id=True, deflate=True)
+        doc.save(OUT / (name + ".pdf"), no_new_id=True, deflate=True, garbage=4)
         metadata["artifacts"] = {
             ext: {
                 "path": str((OUT / (name + "." + ext)).relative_to(ROOT)),
