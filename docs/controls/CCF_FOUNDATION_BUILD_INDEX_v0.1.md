@@ -19,7 +19,7 @@ This index defines the current SH-CCF v0.1 package and its internal dependencies
 
 5. `CCF_CONTROL_OBJECTIVES_v0.1.md` — control objectives across all 36 domains.
 6. `COMMON_CONTROL_CATALOG_v0.1.md` — initial enterprise common-control population with stable IDs, owner-role defaults, frequencies/triggers and natural evidence expectations.
-7. `CCF_ENTERPRISE_OBJECTIVES_AND_RISK_UNIVERSE_v0.1.md` — native enterprise objectives and risk families.
+7. [CCF enterprise objectives and risk universe](../governance/CCF_ENTERPRISE_OBJECTIVES_AND_RISK_UNIVERSE_v0.1.md) — native enterprise objectives and risk families.
 8. `CCF_RISK_CONTROL_TRACEABILITY_MATRIX_v0.1.md` — initial risk-to-control and objective traceability.
 9. `CCF_BUSINESS_LINE_APPLICABILITY_MATRIX_v0.1.md` — common-control inheritance and local-variation model across Corporate, Foundry Field, Atlas, Willow, Advisory, Pale Sun, Red Wash, Cradle, ARU and BS&T.
 10. `CCF_HISTORICAL_MATURITY_AND_EXCEPTION_MODEL_v0.1.md` — longitudinal 2016–2026 maturity states, exception taxonomy, issue severity and remediation lifecycle.
@@ -77,3 +77,7 @@ The September 9 [local implementation register](../structured/business-lines/int
 ## Build rule for the next phase
 
 The next phase should instantiate controls by boundary in dependency order, draft Wave-1 governance policies/charters, and build machine-readable registers. External audit procedures should not be written until actual control implementations and evidence populations exist.
+
+## September 11 executable preparation
+
+The [native CCF preparation package](../../enterprise/ccf/README.md) normalizes this foundation and the existing business/runtime designs, exposes unresolved fields and pending applicability, and executes synthetic finance, identity and recovery examples. Its derived register does not replace the canonical sources or establish operating effectiveness. See the [delivery record](../internal/development/CCF_PREPARATION_DELIVERY_2026-09-11.md) for scope and remaining work.

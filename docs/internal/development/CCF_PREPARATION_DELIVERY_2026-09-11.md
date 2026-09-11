@@ -1,0 +1,17 @@
+# CCF preparation delivery — September 11, 2026
+
+**State:** Implementation record; preparation proposals do not establish new corporate canon.
+
+The owner authorized the technical preparation recommended after the CCF repository audit: normalize and reconcile the register, then prepare complete finance, worker-to-identity and runtime-recovery examples. Material policy, authority, spending, permanent appointments, legal execution and external assurance commitments remain separate decisions. Existing vendor selection and IA independence are preserved. This tranche is based on accepted main after the facility-workbench PR #124 and audit PR #123.
+
+The controlling implementation is [enterprise/ccf](../../../enterprise/ccf/README.md), with strict schema, deterministic import, source references, versioned SQLite migration/history, relationship and temporal validation, policy/decision preparation sources and reproducible example execution. The original common catalog, financial release sources and runtime inputs remain controlling and unchanged. Only CCF navigation and a stale IA maturity statement are reconciled in existing foundation documentation.
+
+The build imports 166 controls, 124 control objectives, 16 enterprise objectives, 27 risks, 36 domains, 50 local implementation designs (49 existing and one proposed), 13 typed business/runtime boundaries, 57 services, 49 components, 49 dependencies and six counterparties. Applicability expands to 1,660 pending control/boundary reviews. Exact source role labels are normalized identifiers, not new billets or appointments.
+
+The importer discovered 15 controls without an explicit risk edge in the partial source matrix: the four Advisory, four Cradle, four Ethics, SH-PRD-002, SH-PRD-004 and SH-SEC-006 controls. The generated report lists these as review gaps. The preparation does not silently invent mappings or mark draft definitions effective.
+
+Each example preserves complete, substantive-failure and missing-evidence cases. A generic scoped workflow checks actor permissions and independence, extraction/population integrity, expiry/escalation, remediation and original-period retest. Positive software assertions remain synthetic and cannot establish production effectiveness. Restoring a missing original attachment can close that evidence finding; the separate substantive failed example remains failed.
+
+Validation covers native IDs and shorthand expansion, missing/unknown fields, invalid references, source drift, inheritance/review chronology, unsupported promotion, immutable/versioned database history, effective versus recorded dates, output tampering, exact original scope, unauthorized/self/expired review, wrong populations, identity lifecycle and recovery failure modes, and two clean package builds. The dedicated CCF CI workflow publishes the scoped build artifacts and checks source/PDF/catalog hygiene through the normal repository workflows. Final accepted PR/check evidence is available in the repository PR history; this source record does not predict acceptance before it occurs.
+
+This completes the authorized initial preparation and three reference examples, not the full CCF audit backlog. Remaining work includes richer control and local-risk content, approval/appointment integration, control-level applicability review, production connectors, enterprise policy/obligation populations, further business control adapters, longitudinal assessment and version-pinned external mappings. No owner answer is required to inspect or run the delivered preparation.

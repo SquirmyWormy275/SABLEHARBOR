@@ -1,0 +1,58 @@
+name: Native CCF preparation
+
+on:
+  pull_request:
+    paths:
+      - enterprise/ccf/**
+      - enterprise/operations/controls.py
+      - enterprise/runtime/**
+      - enterprise/services/source/**
+      - docs/controls/**
+      - docs/governance/CCF_*
+      - docs/structured/business-lines/interfaces.json
+      - docs/internal/development/CCF_*
+      - .github/workflows/ccf-preparation.yml
+      - pyproject.toml
+      - uv.lock
+  push:
+    branches: [main]
+    paths:
+      - enterprise/ccf/**
+      - enterprise/operations/controls.py
+      - enterprise/runtime/**
+      - enterprise/services/source/**
+      - docs/controls/**
+      - docs/governance/CCF_*
+      - docs/structured/business-lines/interfaces.json
+      - .github/workflows/ccf-preparation.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: '0.7.13'
+      - run: uv sync --frozen --all-extras
+      - name: Validate schema, workflow and historical queries
+        run: |
+          uv run ruff check --config 'include=["*.py"]' --select E4,E7,E9,F,I enterprise/ccf
+          uv run python -m pytest -q --import-mode=importlib enterprise/ccf/tests
+          uv run python -m enterprise.ccf validate
+      - name: Reproduce and independently verify two complete record packages
+        run: |
+          uv run python -m enterprise.ccf build --output "$RUNNER_TEMP/ccf-first"
+          uv run python -m enterprise.ccf build --output "$RUNNER_TEMP/ccf-second"
+          diff -qr "$RUNNER_TEMP/ccf-first" "$RUNNER_TEMP/ccf-second"
+          uv run python -m enterprise.ccf verify --output "$RUNNER_TEMP/ccf-first"
+          git diff --exit-code
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ccf-preparation-v0.1.0
+          path: ${{ runner.temp }}/ccf-first
+          if-no-files-found: error

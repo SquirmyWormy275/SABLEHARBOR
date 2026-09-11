@@ -1,0 +1,178 @@
+{
+  "schema_version": "0.1.0",
+  "status": "ENGINEERING_PREPARATION_NOT_NEW_CANON",
+  "implementations": [
+    {
+      "id": "SH-IAM-004-CORP-PREP-01",
+      "control_id": "SH-IAM-004",
+      "boundary_ids": [
+        "corporate"
+      ],
+      "owner": "Enterprise Technology Services",
+      "performer": "IAM operations",
+      "reviewer": "Independent access reviewer",
+      "process": "CCF-PREP-JML",
+      "procedure_reference": "enterprise/ccf/PROCEDURES.md#identity-lifecycle",
+      "description": "Reconcile SuccessFactors lifecycle events to Okta accounts and IBM Security Verify access-review evidence; disabled and expired identities must not retain access. Synthetic integration contract only.",
+      "evidence_sources": [
+        "HR lifecycle events",
+        "Account inventory",
+        "Entitlement inventory",
+        "Review decisions"
+      ],
+      "population_definition": "All scoped worker lifecycle events and linked accounts/entitlements in the declared period, including contractors and service identities where relevant."
+    }
+  ],
+  "policies": [
+    {
+      "id": "POLICY-GAP-GOV",
+      "title": "Governance and independence",
+      "state": "EXISTING_DOCTRINE",
+      "source": "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
+      "next_work": "Link authority and effective appointments; do not reopen IA independence."
+    },
+    {
+      "id": "POLICY-GAP-POL",
+      "title": "Control and exception governance",
+      "state": "PARTIAL_DOCTRINE",
+      "source": "docs/controls/CCF_HISTORICAL_MATURITY_AND_EXCEPTION_MODEL_v0.1.md",
+      "next_work": "Complete owner review, delegated approval and enterprise lifecycle populations."
+    },
+    {
+      "id": "POLICY-GAP-ERM",
+      "title": "Risk appetite and assessment",
+      "state": "PARTIAL_DOCTRINE",
+      "source": "docs/governance/ASSUMPTION_OF_RISK_DOCTRINE.md",
+      "next_work": "Populate boundary-specific risk assessments and approved tolerance decisions."
+    },
+    {
+      "id": "POLICY-GAP-ETH",
+      "title": "Conduct, conflicts and speak-up",
+      "state": "PARTIAL_DOCTRINE",
+      "source": "docs/governance/CONFLICT_INTEGRITY_AND_FOUNDER_AUTHORITY.md",
+      "next_work": "Complete enterprise conduct, distribution, attestation and case-handling procedures."
+    },
+    {
+      "id": "POLICY-GAP-PPL",
+      "title": "People and training",
+      "state": "PARTIAL_DOCTRINE",
+      "source": "docs/governance/PEOPLE_AND_CULTURE_DOCTRINE.md",
+      "next_work": "Connect worker lifecycle, qualifications and training populations to roles."
+    },
+    {
+      "id": "POLICY-GAP-IAM",
+      "title": "Identity and security",
+      "state": "IMPLEMENTATION_DIRECTION",
+      "source": "docs/controls/CCF_ENTERPRISE_SECURITY_VENDOR_DECISIONS_2026-09-11.md",
+      "next_work": "Implement approved vendor integration and evidence adapters; retain deployment gates."
+    },
+    {
+      "id": "POLICY-GAP-DAT",
+      "title": "Retention and information access",
+      "state": "OPEN_POLICY_BOUNDARY",
+      "source": "docs/j2/alexandria/INFORMATION_ACCESS_AND_DISCLOSURE.md",
+      "next_work": "Resolve record-class schedules and approved entitlement rules under issues 22 and 24."
+    },
+    {
+      "id": "POLICY-GAP-FIN",
+      "title": "Finance and close",
+      "state": "EXISTING_SCOPED_PROCEDURES",
+      "source": "docs/finance/ACCOUNTING_POLICIES.md",
+      "next_work": "Link source-specific approvals, close, procurement and Treasury populations."
+    },
+    {
+      "id": "POLICY-GAP-ADV",
+      "title": "Advisory quality and value",
+      "state": "EXISTING_SCOPED_PROCEDURES",
+      "source": "docs/advisory/QUALITY_RISK_AND_ETHICS_MANUAL.md",
+      "next_work": "Extend accepted matter controls to all scoped populations without inventing legal execution."
+    },
+    {
+      "id": "POLICY-GAP-OPS",
+      "title": "Runtime change and recovery",
+      "state": "DESIGN_ONLY",
+      "source": "enterprise/runtime/docs/ARCHITECTURE_AND_RUNBOOKS.md",
+      "next_work": "Collect actual configuration, recovery and provider evidence only after deployment."
+    },
+    {
+      "id": "POLICY-GAP-FLD",
+      "title": "Industrial safety and authority",
+      "state": "EXISTING_SCOPED_PROCEDURES",
+      "source": "industrial/operations/LABOR_SAFETY_AND_CONTROLS.md",
+      "next_work": "Normalize local qualifications, incidents, maintenance and corrective-action records."
+    },
+    {
+      "id": "POLICY-GAP-ASS",
+      "title": "Independent assessment",
+      "state": "PARTIAL_DOCTRINE",
+      "source": "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
+      "next_work": "Draft assessment plans after scope, implementation and source populations are established."
+    }
+  ],
+  "decisions": [
+    {
+      "id": "DEC-CCF-AUTH",
+      "title": "Material delegation thresholds",
+      "owner": "Board / Finance leadership",
+      "recommendation": "Keep unspecified monetary thresholds OPEN; apply existing reserved matters until a calibrated schedule is approved.",
+      "blocks": "Material authority assertions",
+      "can_proceed": "Register, role links and synthetic workflow examples",
+      "issue_ids": []
+    },
+    {
+      "id": "DEC-CCF-RISK",
+      "title": "Risk appetite and above-tolerance acceptance",
+      "owner": "Board / accountable risk authority",
+      "recommendation": "Draft boundary-specific tolerance proposals from scoped exposures; require explicit acceptance for material residual risk.",
+      "blocks": "Approved risk acceptance",
+      "can_proceed": "Risk family normalization and assessment templates",
+      "issue_ids": []
+    },
+    {
+      "id": "DEC-CCF-ACCESS",
+      "title": "Collection entitlement and retention",
+      "owner": "Information authority / Legal / Privacy",
+      "recommendation": "Preserve current bounded-disclosure doctrine; prepare record-class schedules and entitlement choices rather than asserting universal retention or access.",
+      "blocks": "Production information-policy claims",
+      "can_proceed": "Synthetic deny, expiry, hold and restore tests",
+      "issue_ids": [
+        22,
+        24,
+        34
+      ]
+    },
+    {
+      "id": "DEC-CCF-LEGAL",
+      "title": "Parent tax and executed instruments",
+      "owner": "Owner with qualified legal/tax advisers",
+      "recommendation": "Leave elections and executed carry/transaction instruments unresolved until accepted source records exist.",
+      "blocks": "Specific tax and execution conclusions",
+      "can_proceed": "Conditional scenarios and evidence requirements",
+      "issue_ids": [
+        18
+      ]
+    },
+    {
+      "id": "DEC-CCF-PEOPLE",
+      "title": "Remaining permanent appointments",
+      "owner": "Existing appointment authority",
+      "recommendation": "Keep stable roles with unknown occupants; do not infer vacancy from unnamed billets.",
+      "blocks": "Named historical performance",
+      "can_proceed": "Role-based designs and synthetic actors",
+      "issue_ids": [
+        19
+      ]
+    },
+    {
+      "id": "DEC-CCF-DEPLOY",
+      "title": "Deployment and external commitments",
+      "owner": "Accountable service / capital authority",
+      "recommendation": "Do not purchase, reserve capacity or choose an external report scope through CCF preparation.",
+      "blocks": "Actual operating and assurance claims",
+      "can_proceed": "Design records, provider responsibility templates and simulations",
+      "issue_ids": [
+        21
+      ]
+    }
+  ]
+}
