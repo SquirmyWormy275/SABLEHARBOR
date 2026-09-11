@@ -24,7 +24,7 @@ def integrate():
             {
                 "map_id": r["id"],
                 "title": r["title"],
-                "version": "0.1.0",
+                "version": facility["revision"],
                 "effective_date": "2026-09-11",
                 "world_state": "MODELLED_FACILITY_PROGRAM_NOT_OCCUPANCY",
                 "canon_status": r["status"],

@@ -60,102 +60,121 @@
     {
       "logical_id": "SH-SITE-0001::site",
       "map_id": "SH-MAP-SAC-002",
-      "status": "MODELLED_SUCCESSOR"
+      "status": "ACTIVE_R02_FROM_APPROVED_R01"
     },
     {
       "logical_id": "SH-SITE-0001-B01::building",
       "map_id": "SH-MAP-SAC-003",
-      "status": "MODELLED_SUCCESSOR"
+      "status": "SUPERSEDED_PRE_R01_PROPOSAL",
+      "supersession": "Four-building approved R01 composition; former geometry preserved in ae34fa9 history."
     },
     {
       "logical_id": "SH-SITE-0001-B01-L01",
       "map_id": "SH-MAP-SAC-004",
-      "status": "MODELLED_SUCCESSOR"
+      "status": "SUPERSEDED_PRE_R01_PROPOSAL",
+      "supersession": "Four-building approved R01 composition; former geometry preserved in ae34fa9 history."
     },
     {
       "logical_id": "SH-SITE-0001-B01-L02",
       "map_id": "SH-MAP-SAC-005",
-      "status": "MODELLED_SUCCESSOR"
+      "status": "SUPERSEDED_PRE_R01_PROPOSAL",
+      "supersession": "Four-building approved R01 composition; former geometry preserved in ae34fa9 history."
     },
     {
       "logical_id": "SH-SITE-0001-B02::building",
       "map_id": "SH-MAP-SAC-006",
-      "status": "MODELLED_SUCCESSOR"
+      "status": "SUPERSEDED_PRE_R01_PROPOSAL",
+      "supersession": "Four-building approved R01 composition; former geometry preserved in ae34fa9 history."
     },
     {
       "logical_id": "SH-SITE-0001-B02-L01",
       "map_id": "SH-MAP-SAC-007",
-      "status": "MODELLED_SUCCESSOR"
+      "status": "SUPERSEDED_PRE_R01_PROPOSAL",
+      "supersession": "Four-building approved R01 composition; former geometry preserved in ae34fa9 history."
     },
     {
       "logical_id": "SH-SITE-0001-B02-L02",
       "map_id": "SH-MAP-SAC-008",
-      "status": "MODELLED_SUCCESSOR"
+      "status": "SUPERSEDED_PRE_R01_PROPOSAL",
+      "supersession": "Four-building approved R01 composition; former geometry preserved in ae34fa9 history."
     },
     {
       "logical_id": "SH-SITE-0001-B02-L03",
       "map_id": "SH-MAP-SAC-009",
-      "status": "MODELLED_SUCCESSOR"
+      "status": "SUPERSEDED_PRE_R01_PROPOSAL",
+      "supersession": "Four-building approved R01 composition; former geometry preserved in ae34fa9 history."
     },
     {
       "logical_id": "SH-SITE-0001-B03::building",
       "map_id": "SH-MAP-SAC-010",
-      "status": "MODELLED_SUCCESSOR"
+      "status": "SUPERSEDED_PRE_R01_PROPOSAL",
+      "supersession": "Four-building approved R01 composition; former geometry preserved in ae34fa9 history."
     },
     {
       "logical_id": "SH-SITE-0001-B03-L01",
       "map_id": "SH-MAP-SAC-011",
-      "status": "MODELLED_SUCCESSOR"
+      "status": "SUPERSEDED_PRE_R01_PROPOSAL",
+      "supersession": "Four-building approved R01 composition; former geometry preserved in ae34fa9 history."
     },
     {
       "logical_id": "SH-SITE-0001-B03-L02",
       "map_id": "SH-MAP-SAC-012",
-      "status": "MODELLED_SUCCESSOR"
+      "status": "SUPERSEDED_PRE_R01_PROPOSAL",
+      "supersession": "Four-building approved R01 composition; former geometry preserved in ae34fa9 history."
     },
     {
       "logical_id": "SH-SITE-0001-B03-L03",
       "map_id": "SH-MAP-SAC-013",
-      "status": "MODELLED_SUCCESSOR"
+      "status": "SUPERSEDED_PRE_R01_PROPOSAL",
+      "supersession": "Four-building approved R01 composition; former geometry preserved in ae34fa9 history."
     },
     {
       "logical_id": "SH-SITE-0001-B04::building",
       "map_id": "SH-MAP-SAC-014",
-      "status": "MODELLED_SUCCESSOR"
+      "status": "SUPERSEDED_PRE_R01_PROPOSAL",
+      "supersession": "Four-building approved R01 composition; former geometry preserved in ae34fa9 history."
     },
     {
       "logical_id": "SH-SITE-0001-B04-L01",
       "map_id": "SH-MAP-SAC-015",
-      "status": "MODELLED_SUCCESSOR"
+      "status": "SUPERSEDED_PRE_R01_PROPOSAL",
+      "supersession": "Four-building approved R01 composition; former geometry preserved in ae34fa9 history."
     },
     {
       "logical_id": "SH-SITE-0001-B04-L02",
       "map_id": "SH-MAP-SAC-016",
-      "status": "MODELLED_SUCCESSOR"
+      "status": "SUPERSEDED_PRE_R01_PROPOSAL",
+      "supersession": "Four-building approved R01 composition; former geometry preserved in ae34fa9 history."
     },
     {
       "logical_id": "SH-SITE-0001-B05::building",
       "map_id": "SH-MAP-SAC-017",
-      "status": "MODELLED_SUCCESSOR"
+      "status": "SUPERSEDED_PRE_R01_PROPOSAL",
+      "supersession": "Four-building approved R01 composition; former geometry preserved in ae34fa9 history."
     },
     {
       "logical_id": "SH-SITE-0001-B05-L01",
       "map_id": "SH-MAP-SAC-018",
-      "status": "MODELLED_SUCCESSOR"
+      "status": "SUPERSEDED_PRE_R01_PROPOSAL",
+      "supersession": "Four-building approved R01 composition; former geometry preserved in ae34fa9 history."
     },
     {
       "logical_id": "SH-SITE-0001-B05-L02",
       "map_id": "SH-MAP-SAC-019",
-      "status": "MODELLED_SUCCESSOR"
+      "status": "SUPERSEDED_PRE_R01_PROPOSAL",
+      "supersession": "Four-building approved R01 composition; former geometry preserved in ae34fa9 history."
     },
     {
       "logical_id": "SH-SITE-0001-B06::building",
       "map_id": "SH-MAP-SAC-020",
-      "status": "MODELLED_SUCCESSOR"
+      "status": "SUPERSEDED_PRE_R01_PROPOSAL",
+      "supersession": "Four-building approved R01 composition; former geometry preserved in ae34fa9 history."
     },
     {
       "logical_id": "SH-SITE-0001-B06-L01",
       "map_id": "SH-MAP-SAC-021",
-      "status": "MODELLED_SUCCESSOR"
+      "status": "SUPERSEDED_PRE_R01_PROPOSAL",
+      "supersession": "Four-building approved R01 composition; former geometry preserved in ae34fa9 history."
     },
     {
       "logical_id": "SH-IND-FAC-WAM-INT::site",
@@ -370,7 +389,77 @@
     {
       "logical_id": "SH-SITE-0001::phasing",
       "map_id": "SH-MAP-SAC-022",
-      "status": "MODELLED_SUCCESSOR"
+      "status": "ACTIVE_R02_FROM_APPROVED_R01"
+    },
+    {
+      "logical_id": "SH-SITE-0001-A::building",
+      "map_id": "SH-MAP-SAC-023",
+      "status": "ACTIVE_R02_FROM_APPROVED_R01"
+    },
+    {
+      "logical_id": "SH-SITE-0001-A-L01",
+      "map_id": "SH-MAP-SAC-024",
+      "status": "ACTIVE_R02_FROM_APPROVED_R01"
+    },
+    {
+      "logical_id": "SH-SITE-0001-A-L02",
+      "map_id": "SH-MAP-SAC-025",
+      "status": "ACTIVE_R02_FROM_APPROVED_R01"
+    },
+    {
+      "logical_id": "SH-SITE-0001-A-L03",
+      "map_id": "SH-MAP-SAC-026",
+      "status": "ACTIVE_R02_FROM_APPROVED_R01"
+    },
+    {
+      "logical_id": "SH-SITE-0001-B::building",
+      "map_id": "SH-MAP-SAC-027",
+      "status": "ACTIVE_R02_FROM_APPROVED_R01"
+    },
+    {
+      "logical_id": "SH-SITE-0001-B-L01",
+      "map_id": "SH-MAP-SAC-028",
+      "status": "ACTIVE_R02_FROM_APPROVED_R01"
+    },
+    {
+      "logical_id": "SH-SITE-0001-B-L02",
+      "map_id": "SH-MAP-SAC-029",
+      "status": "ACTIVE_R02_FROM_APPROVED_R01"
+    },
+    {
+      "logical_id": "SH-SITE-0001-C::building",
+      "map_id": "SH-MAP-SAC-030",
+      "status": "ACTIVE_R02_FROM_APPROVED_R01"
+    },
+    {
+      "logical_id": "SH-SITE-0001-C-L01",
+      "map_id": "SH-MAP-SAC-031",
+      "status": "ACTIVE_R02_FROM_APPROVED_R01"
+    },
+    {
+      "logical_id": "SH-SITE-0001-C-L02",
+      "map_id": "SH-MAP-SAC-032",
+      "status": "ACTIVE_R02_FROM_APPROVED_R01"
+    },
+    {
+      "logical_id": "SH-SITE-0001-D::building",
+      "map_id": "SH-MAP-SAC-033",
+      "status": "ACTIVE_R02_FROM_APPROVED_R01"
+    },
+    {
+      "logical_id": "SH-SITE-0001-D-L01",
+      "map_id": "SH-MAP-SAC-034",
+      "status": "ACTIVE_R02_FROM_APPROVED_R01"
+    },
+    {
+      "logical_id": "SH-SITE-0001-D-L02",
+      "map_id": "SH-MAP-SAC-035",
+      "status": "ACTIVE_R02_FROM_APPROVED_R01"
+    },
+    {
+      "logical_id": "SH-SITE-0001-D-L03",
+      "map_id": "SH-MAP-SAC-036",
+      "status": "ACTIVE_R02_FROM_APPROVED_R01"
     }
   ]
 }
