@@ -78,6 +78,33 @@ def build():
         )
     industrial = read(paths["industrial"])["headcount_boundaries"]
     forecast = read(paths["forecast"])
+    runtime_source = read(paths["runtime"])
+    runtime_assumptions = runtime_source["implementation_assumptions"]
+    workforce = runtime_assumptions["workforce"]
+    phases = runtime_assumptions["technical_design"]["workforce_phases"]
+    runtime = {
+        "source": paths["runtime"],
+        "source_state": runtime_source["state"],
+        "status": "ACCEPTED_PROPOSED_REQUIREMENT_NOT_EMPLOYMENT_AUTHORIZATION",
+        "roles": copy.deepcopy(workforce["roles"]),
+        "proposed_technical_fte": sum(r["required_fte"] for r in workforce["roles"]),
+        "sacramento_workstations_required": phases["sacramento_workstations_required"],
+        "site_roving_positions": phases["site_roving_positions"],
+        "owned_conditional_facilities_fte": phases["permanent_facilities_fte"],
+        "owned_conditional_guard_positions": phases["continuous_security_positions"],
+        "phase_assumptions": copy.deepcopy(phases),
+        "authorized_new_positions": workforce["authorized_new_positions"],
+        "occupied_new_positions": workforce["occupied_new_positions"],
+        "verified_reusable_fte": workforce["verified_reusable_fte"],
+        "zero_scope": "Only incremental runtime positions and demonstrated reuse; not zero enterprise workforce or zero employees in existing ESS roles.",
+        "actual_runtime_employees": None,
+        "actual_runtime_concurrent_attendance": None,
+        "internal_users_compute_assumption": runtime_assumptions["drivers"]["internal_users"],
+        "compute_users_are_employee_census": False,
+        "enterprise_total_addition": None,
+        "overlap_rule": "Do not add proposed roles to 44 named employees, J2 237, conditional ESS 48/54 or legacy 7.1 service-workload FTE. Construction lead 0.5 is included capacity; specialist 2 is purchased project capacity, not extra payroll.",
+        "conditional_seat_allocation": copy.deepcopy(policy["runtime_seat_allocation"]),
+    }
     units = []
     for node in chart["nodes"] + chart["register_only"]:
         if node.get("type") == "person" or (
@@ -147,6 +174,7 @@ def build():
             "actual_occupied_billets": None,
             "groups": groups,
         },
+        "runtime": runtime,
         "industrial": {
             "status": "ACCEPTED_SELECTED_OPERATING_CASE_NOT_SITE_ATTENDANCE",
             "source": paths["industrial"],
@@ -275,6 +303,59 @@ def validate(data):
         == data["industrial"]["selected_population_total"],
         "industrial rollup",
     )
+    rt = data["runtime"]
+    source = read(rt["source"])["implementation_assumptions"]
+    phases = source["technical_design"]["workforce_phases"]
+    check(rt["roles"] == source["workforce"]["roles"], "runtime role source drift")
+    check(
+        sum(r["required_fte"] for r in rt["roles"]) == rt["proposed_technical_fte"],
+        "runtime technical rollup",
+    )
+    check(
+        rt["sacramento_workstations_required"] + rt["site_roving_positions"]
+        == rt["proposed_technical_fte"],
+        "runtime location rollup",
+    )
+    for field, key in [
+        ("sacramento_workstations_required", "sacramento_workstations_required"),
+        ("site_roving_positions", "site_roving_positions"),
+        ("owned_conditional_facilities_fte", "permanent_facilities_fte"),
+        ("owned_conditional_guard_positions", "continuous_security_positions"),
+    ]:
+        check(rt[field] == phases[key], f"runtime phase source {field}")
+    for key in ["authorized_new_positions", "occupied_new_positions", "verified_reusable_fte"]:
+        check(rt[key] == source["workforce"][key] == 0, f"runtime unsupported employment {key}")
+    check(
+        rt["actual_runtime_employees"] is None
+        and rt["actual_runtime_concurrent_attendance"] is None
+        and rt["enterprise_total_addition"] is None,
+        "runtime proposed workforce conflated with actual",
+    )
+    check(
+        rt["internal_users_compute_assumption"] == source["drivers"]["internal_users"]
+        and rt["compute_users_are_employee_census"] is False,
+        "runtime compute users conflated with census",
+    )
+    allocation = rt["conditional_seat_allocation"]
+    rooms = {
+        r["id"]: r
+        for b in read("geospatial/facilities/source/campus.json")["buildings"]
+        for f in b["floors"]
+        for r in f["rooms"]
+    }
+    allocation_ids = [a["room_id"] for a in allocation["allocations"]]
+    check(len(allocation_ids) == len(set(allocation_ids)), "runtime duplicated seat allocation")
+    check(
+        sum(a["workstations"] for a in allocation["allocations"])
+        == rt["sacramento_workstations_required"],
+        "runtime seat allocation rollup",
+    )
+    for a in allocation["allocations"]:
+        check(
+            a["room_id"] in rooms
+            and 0 <= a["workstations"] <= rooms[a["room_id"]].get(a["seat_category"], 0),
+            "runtime seat allocation exceeds existing capacity",
+        )
     for path, digest in data["source_revision"]["source_sha256"].items():
         check(
             (ROOT / path).exists()
@@ -304,6 +385,8 @@ def bridge(data):
         "| Pale Sun / Red Wash selected population | 140 | 12 platform + 128 site |",
         "| ARU / BS&T selected population | 131 | 73 nonrail/corporate + 58 railway |",
         "| 2027 conditional Core workforce | 506 / 591 | Occupied / authorized scenario, not 2026 actual |",
+        "| Runtime proposed technical requirement | 20 FTE | 16 Sacramento workplaces / four roving positions; not authorized hires |",
+        "| Runtime owned-operation conditional additions | 2 facilities / 6 guards | Separate future requirement, no current occupancy |",
         "| Actual 2026 company headcount / attendance / seats | Unknown | Not inferred by adding the above rows |",
         "",
         "The chart has 54 person displays for 52 unique identities: 51 current and Rachel Kim, a former employee. Daniel Mercer and Priya Raman each appear twice. Sixteen register-only identities remain external, historical, unconfirmed or superseded; they are not employees created by this bridge.",
@@ -315,6 +398,10 @@ def bridge(data):
         "An employee attending a classroom or meeting has moved activity; the employee is not counted again. Rotating teachers and shared support retain one home population. J2 Education is inside 237; ESS does not absorb J2 or Internal Audit. Technology service work-hour/FTE requirements do not establish approved hires or reusable employees.",
         "",
         "Legacy finance numbers (including 431 CoreCo, 126 mine and 132 ARU) are synthetic calibration and cannot replace the accepted industrial selected cases or establish an actual 2026 census. Industrial employees and named leaders overlap; adding 44 named people to 271 industrial workers would double count. Industrial selected populations are not evidence that everyone occupies one office or one shift.",
+        "",
+        "Runtime source: enterprise/services/source/runtime_capital_plan_2026-09-11.json. Its zero authorized_new_positions, occupied_new_positions and verified_reusable_fte apply only to incremental runtime hiring/reuse evidence. They do not mean ESS has no employees. The 900 internal users are a compute-sizing assumption, never a staff census. Proposed 20 technical FTE are not added to 44 named employees, J2 237, conditional ESS 48/54 or the legacy 7.1 service-workload FTE. The 0.5 construction lead is included technical capacity; two specialists are purchased project capacity, not additional payroll.",
+        "",
+        "Conditional seat allocation SH-FAC-RT-SEATS-001 reserves eight existing A-L03 Technology/Security/Resilience shared desks plus eight of twelve A-L01 visiting/touchdown desks for the sixteen future runtime workstations when authorized. This changes neither 362 campus workplaces nor named employees. It is allocation of physical seats, not a claim that existing employees can be reused; those eight touchdown seats cannot simultaneously accommodate unrelated visitors. Four roving positions have no invented assigned desk or host attendance. Owned-operation two facilities and six guard positions remain conditional; roster and concurrent occupancy are unestablished.",
         "",
         "| J2 group | Authorized | Named | Unnamed status | Proven vacancies |",
         "|---|---:|---:|---:|---|",

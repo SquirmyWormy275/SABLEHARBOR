@@ -3,7 +3,11 @@
   "record_id": "SH-FAC-POPULATION-001",
   "as_of": "2026-09-11",
   "status": "SOURCED_BRIDGE_WITH_LABELLED_PLANNING_ASSUMPTIONS",
-  "horizons": [2026, 2031, 2036],
+  "horizons": [
+    2026,
+    2031,
+    2036
+  ],
   "authority": "Imported accepted records retain their own status. This policy establishes accounting boundaries, not employment or appointment decisions.",
   "sources": {
     "chart": "docs/organization/source/chartbook.json",
@@ -12,15 +16,58 @@
     "industrial": "industrial/source/entities.json",
     "forecast": "enterprise/business/source/policy.json",
     "legacy_finance": "docs/finance/SABLE_HARBOR_CORPORATE_FUNDAMENTALS_AND_2026_OPERATING_MODEL_v0.1.md",
-    "services": "enterprise/services/source/components.json"
+    "services": "enterprise/services/source/components.json",
+    "runtime": "enterprise/services/source/runtime_capital_plan_2026-09-11.json",
+    "campus": "geospatial/facilities/source/campus.json"
   },
   "j2_billet_groups": [
-    {"id": "J2-CONTACT", "name": "Contact", "authorized_billets": 78, "named_person_ids": ["P065"]},
-    {"id": "J2-JUDGMENT", "name": "Judgment", "authorized_billets": 42, "named_person_ids": ["P066"]},
-    {"id": "J2-ORIENTATION", "name": "Orientation", "authorized_billets": 24, "named_person_ids": ["P067"]},
-    {"id": "J2-JAG", "name": "Junction Advisory Group", "authorized_billets": 30, "named_person_ids": []},
-    {"id": "J2-EDUCATION", "name": "Education", "authorized_billets": 35, "named_person_ids": ["P068"]},
-    {"id": "J2-HQ", "name": "J2 Headquarters", "authorized_billets": 28, "named_person_ids": ["P063", "P064"]}
+    {
+      "id": "J2-CONTACT",
+      "name": "Contact",
+      "authorized_billets": 78,
+      "named_person_ids": [
+        "P065"
+      ]
+    },
+    {
+      "id": "J2-JUDGMENT",
+      "name": "Judgment",
+      "authorized_billets": 42,
+      "named_person_ids": [
+        "P066"
+      ]
+    },
+    {
+      "id": "J2-ORIENTATION",
+      "name": "Orientation",
+      "authorized_billets": 24,
+      "named_person_ids": [
+        "P067"
+      ]
+    },
+    {
+      "id": "J2-JAG",
+      "name": "Junction Advisory Group",
+      "authorized_billets": 30,
+      "named_person_ids": []
+    },
+    {
+      "id": "J2-EDUCATION",
+      "name": "Education",
+      "authorized_billets": 35,
+      "named_person_ids": [
+        "P068"
+      ]
+    },
+    {
+      "id": "J2-HQ",
+      "name": "J2 Headquarters",
+      "authorized_billets": 28,
+      "named_person_ids": [
+        "P063",
+        "P064"
+      ]
+    }
   ],
   "measurement_rules": {
     "unknown": "null means not established; zero means evidenced absence or explicit model allocation of none",
@@ -46,5 +93,22 @@
     "current_remote_distributed_field_deployed": null,
     "future_authorized_positions_2031": null,
     "future_authorized_positions_2036": null
+  },
+  "runtime_seat_allocation": {
+    "id": "SH-FAC-RT-SEATS-001",
+    "status": "CONDITIONAL_PLANNING_ALLOCATION_NOT_OCCUPANCY",
+    "basis": "Capacity allocation within unchanged 362 campus workplaces when hiring and workplace assignment are authorized; not verified employee reuse. Eight visiting desks would then be unavailable for simultaneous unrelated visitors.",
+    "allocations": [
+      {
+        "room_id": "SH-SITE-0001-A-L03-R19",
+        "seat_category": "shared_desks",
+        "workstations": 8
+      },
+      {
+        "room_id": "SH-SITE-0001-A-L01-R16",
+        "seat_category": "touchdown_seats",
+        "workstations": 8
+      }
+    ]
   }
 }

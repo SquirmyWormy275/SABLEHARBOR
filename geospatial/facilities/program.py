@@ -1,6 +1,8 @@
 """Derive the spatial/attendance/financial planning bridge without changing payroll."""
 
 import argparse
+import copy
+import hashlib
 import json
 import math
 from pathlib import Path
@@ -208,6 +210,79 @@ def build(check=False):
         ],
         "meaning": "R01 floor labels repeat these conditional planning populations. They do not establish actual 2026 employees, daily campus attendance or assigned desks.",
     }
+    population = json.loads((BASE / "population/REGISTER.json").read_text())
+    report["runtime_workforce_requirement"] = population["runtime"]
+    report["runtime_conditional_seat_allocation"] = population["runtime"][
+        "conditional_seat_allocation"
+    ]
+    report["sources"].append("geospatial/facilities/population/REGISTER.json")
+    runtime_path = BASE / "RUNTIME_BRIDGE.json"
+    runtime_bridge = json.loads(runtime_path.read_text())
+    linked_sites = copy.deepcopy(runtime_bridge["sites"])
+    linked_buildings = []
+    linked_floors = []
+    for site in linked_sites:
+        site["id"] = site["site_id"]
+        site["population_measurements"] = copy.deepcopy(measurement_basis)
+        site["actual_occupants"] = None
+        for building in site.pop("buildings"):
+            building["site_id"] = site["id"]
+            building["population_measurements"] = copy.deepcopy(measurement_basis)
+            building["actual_occupants"] = None
+            building_floors = building.pop("floors")
+            building["floor_ids"] = [f["id"] for f in building_floors]
+            for floor in building_floors:
+                floor["building_id"] = building["id"]
+                floor["site_id"] = site["id"]
+                floor["population_measurements"] = copy.deepcopy(measurement_basis)
+                floor["actual_occupants"] = None
+                floor["planned_peak"] = None
+                floor.update({k: None for k in SEATS})
+                linked_floors.append(floor)
+            building.update({k: None for k in SEATS})
+            linked_buildings.append(building)
+        site.update({k: None for k in SEATS})
+    for original, linked in [
+        (sites, linked_sites),
+        (buildings, linked_buildings),
+        (floors, linked_floors),
+    ]:
+        ids = [r["id"] for r in original + linked]
+        if len(ids) != len(set(ids)):
+            raise ValueError("Runtime linked spatial identity duplicated")
+    report["linked_runtime_sites"] = linked_sites
+    report["linked_runtime_buildings"] = linked_buildings
+    report["linked_runtime_floors"] = linked_floors
+    report["linked_runtime_source"] = {
+        "path": str(runtime_path.relative_to(ROOT)),
+        "sha256": hashlib.sha256(runtime_path.read_bytes()).hexdigest(),
+        "source_sha256": runtime_bridge["source_sha256"],
+        "rule": "Linked accepted runtime design; separate source generator and uncertain seats. No duplicate architectural source or actual occupancy claim.",
+    }
+    report["combined_coverage_totals"] = {
+        "facility_source_packages": {
+            "sites": len(sites),
+            "buildings": len(buildings),
+            "floors": len(floors),
+        },
+        "linked_runtime_packages": {
+            "sites": len(linked_sites),
+            "buildings": len(linked_buildings),
+            "floors": len(linked_floors),
+        },
+        "combined": {
+            "sites": len(sites) + len(linked_sites),
+            "buildings": len(buildings) + len(linked_buildings),
+            "floors": len(floors) + len(linked_floors),
+        },
+        "runtime_design_gross_area_sqft": runtime_bridge["totals"]["gross_area_sqft"],
+        "runtime_external_provider_floor_exemptions": runtime_bridge["totals"][
+            "external_provider_exemptions"
+        ],
+        "combined_seats": None,
+        "seat_rule": "Known modelled capacities are retained; runtime fitted seats are unknown, so no complete combined seat total is asserted.",
+    }
+    report["sources"].append(str(runtime_path.relative_to(ROOT)))
     register_text = json.dumps(report, indent=2) + "\n"
     lines = [
         "# Headcount, occupancy and space program",
@@ -236,6 +311,16 @@ def build(check=False):
         "Corporate has 200 workplaces (40/112/48 by floor); J2 has 130 (62/68); Education has 32 (4/28). Corporate L02 preserves Foundry Field’s 80 workstations and Atlas Meridian’s 32. The R01 labels of 160 Foundry staff and 36 Atlas staff repeat the conditional 2027 workforce scenario in enterprise/business/source/policy.json; they do not prove actual 2026 payroll, Sacramento assignments or simultaneous attendance. Shared desks and distributed work explain why staffing scenarios and fitted seats differ, without asserting an unsupported attendance ratio.",
         "",
         "Education L01 has a 120-seat hall and two 24-seat classrooms. Upper-floor classrooms provide further alternative teaching arrangements. The same cohort moves among these spaces; the campus learner scenario remains 120. Meeting and dining capacities similarly accommodate people already counted. Dining is a separate category: 80 seats in Corporate and 80 in Education, served by one production kitchen in Education. Both 2031 and 2036 hold the same fitted capacity; no future positions, extra shell, wing or construction schedule is authorized.",
+        "",
+        "## Runtime workforce and conditional seat allocation",
+        "",
+        "Accepted runtime source enterprise/services/source/runtime_capital_plan_2026-09-11.json requires 20 proposed technical FTE: sixteen Sacramento workstations and four roving positions. Conditional owned operation adds two facilities and six guard positions. None is an authorized new hire or evidence of actual attendance. The zero new-position/reuse fields concern incremental runtime authorization and verified capacity only. The 900 internal users size computing demand; they are not employees counted by this bridge. Runtime requirements are not added to 44 named employees, J2 237, conditional ESS 48/54 or legacy 7.1 service-workload FTE.",
+        "",
+        "Conditional planning allocation SH-FAC-RT-SEATS-001 supplies the sixteen future workstations from eight A-L03-R19 Technology/Security/Resilience shared desks and eight of twelve A-L01-R16 visiting/touchdown desks when authorized. These are sixteen of the existing 362 workplaces, not additional desks or verified reuse of existing employees. The eight allocated touchdown desks would be unavailable to unrelated simultaneous visitors; the campus 504-person design envelope does not increase. Roving and owned-site populations have no inferred shift attendance or desk assignments. Source assumptions of 2027 colocation and 2029 owned operation remain gated proposals, not occupancy dates.",
+        "",
+        "The accepted runtime bridge adds three linked sites: selected Reno colocation (SH-SITE-0028), selected Boise recovery (SH-SITE-0029) and the synthetic Northern Nevada owned parcel (SH-SITE-0030). The two external providers have justified floor-plan exemptions; assigned cages and provider interiors remain unverified. The owned parcel has one proposed 12,000 sf building and one linked floor, still preconstruction and unoccupied. Its eleven room allocations plus circulation are retained from the runtime generator rather than redrawn here. Actual workforce, peak attendance and fitted seats remain unknown at every linked level and planning horizon.",
+        "",
+        "Coverage remains explicit: the facility source packages contain 16 sites / 17 buildings / 24 floors; runtime adds 3 / 1 / 1, giving combined coverage of 19 sites / 18 buildings / 25 floors. SPACE_REGISTER stores linked_runtime_sites, linked_runtime_buildings and linked_runtime_floors separately from the architectural arrays. Known architectural seats are not a complete combined-seat total because runtime seat evidence is absent. The runtime capital case remains in its authoritative finance model, separate from the unfunded Sacramento allowance below.",
         "",
         "## Area and seat schedule",
         "",

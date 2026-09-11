@@ -15,6 +15,8 @@ As of 2026-09-11; organization publication 1.1.0. Source file checksums are reco
 | Pale Sun / Red Wash selected population | 140 | 12 platform + 128 site |
 | ARU / BS&T selected population | 131 | 73 nonrail/corporate + 58 railway |
 | 2027 conditional Core workforce | 506 / 591 | Occupied / authorized scenario, not 2026 actual |
+| Runtime proposed technical requirement | 20 FTE | 16 Sacramento workplaces / four roving positions; not authorized hires |
+| Runtime owned-operation conditional additions | 2 facilities / 6 guards | Separate future requirement, no current occupancy |
 | Actual 2026 company headcount / attendance / seats | Unknown | Not inferred by adding the above rows |
 
 The chart has 54 person displays for 52 unique identities: 51 current and Rachel Kim, a former employee. Daniel Mercer and Priya Raman each appear twice. Sixteen register-only identities remain external, historical, unconfirmed or superseded; they are not employees created by this bridge.
@@ -26,6 +28,10 @@ Current need (2026), five-year capacity (2031) and ten-year capacity (2036) rema
 An employee attending a classroom or meeting has moved activity; the employee is not counted again. Rotating teachers and shared support retain one home population. J2 Education is inside 237; ESS does not absorb J2 or Internal Audit. Technology service work-hour/FTE requirements do not establish approved hires or reusable employees.
 
 Legacy finance numbers (including 431 CoreCo, 126 mine and 132 ARU) are synthetic calibration and cannot replace the accepted industrial selected cases or establish an actual 2026 census. Industrial employees and named leaders overlap; adding 44 named people to 271 industrial workers would double count. Industrial selected populations are not evidence that everyone occupies one office or one shift.
+
+Runtime source: enterprise/services/source/runtime_capital_plan_2026-09-11.json. Its zero authorized_new_positions, occupied_new_positions and verified_reusable_fte apply only to incremental runtime hiring/reuse evidence. They do not mean ESS has no employees. The 900 internal users are a compute-sizing assumption, never a staff census. Proposed 20 technical FTE are not added to 44 named employees, J2 237, conditional ESS 48/54 or the legacy 7.1 service-workload FTE. The 0.5 construction lead is included technical capacity; two specialists are purchased project capacity, not additional payroll.
+
+Conditional seat allocation SH-FAC-RT-SEATS-001 reserves eight existing A-L03 Technology/Security/Resilience shared desks plus eight of twelve A-L01 visiting/touchdown desks for the sixteen future runtime workstations when authorized. This changes neither 362 campus workplaces nor named employees. It is allocation of physical seats, not a claim that existing employees can be reused; those eight touchdown seats cannot simultaneously accommodate unrelated visitors. Four roving positions have no invented assigned desk or host attendance. Owned-operation two facilities and six guard positions remain conditional; roster and concurrent occupancy are unestablished.
 
 | J2 group | Authorized | Named | Unnamed status | Proven vacancies |
 |---|---:|---:|---:|---|

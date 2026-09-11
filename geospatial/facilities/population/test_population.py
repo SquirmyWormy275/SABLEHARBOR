@@ -72,3 +72,40 @@ def test_source_drift_is_rejected():
     path = next(iter(data["source_revision"]["source_sha256"]))
     data["source_revision"]["source_sha256"][path] = "0" * 64
     assert any("stale source" in e for e in MODULE.validate(data))
+
+
+def test_runtime_requirement_is_not_payroll():
+    data = MODULE.build()
+    rt = data["runtime"]
+    assert rt["proposed_technical_fte"] == 20
+    assert rt["sacramento_workstations_required"] == 16
+    assert rt["site_roving_positions"] == 4
+    assert rt["owned_conditional_facilities_fte"] == 2
+    assert rt["owned_conditional_guard_positions"] == 6
+    assert data["totals"]["current_named_employees"] == 44
+    rt["actual_runtime_employees"] = 20
+    assert "runtime proposed workforce conflated with actual" in MODULE.validate(data)
+
+
+def test_runtime_location_rollup_rejects_double_count():
+    data = MODULE.build()
+    data["runtime"]["site_roving_positions"] = 20
+    assert "runtime location rollup" in MODULE.validate(data)
+
+
+def test_runtime_compute_population_is_not_census():
+    data = MODULE.build()
+    data["runtime"]["compute_users_are_employee_census"] = True
+    assert "runtime compute users conflated with census" in MODULE.validate(data)
+
+
+def test_runtime_seat_allocation_cannot_invent_capacity():
+    data = MODULE.build()
+    data["runtime"]["conditional_seat_allocation"]["allocations"][1]["workstations"] = 16
+    assert "runtime seat allocation exceeds existing capacity" in MODULE.validate(data)
+
+
+def test_runtime_proposal_cannot_authorize_hires():
+    data = MODULE.build()
+    data["runtime"]["authorized_new_positions"] = 20
+    assert any("runtime unsupported employment" in e for e in MODULE.validate(data))

@@ -12,7 +12,9 @@
       "docs/structured/j2_leadership_2026-09-10.json": "c0efd4edf47ab7f5da4a0e3129cddc93af89035252b5a8ea16facd660b6cba54",
       "enterprise/business/source/policy.json": "60cf3dbb7401a798b427a34d9ce4ac807bab91fd6e289e88f041e70f2127ab90",
       "enterprise/services/source/components.json": "0d5e1fefa3e3286cae725a4b04241725fc2590dff4ccbdc7fde41a24740a0cd2",
-      "geospatial/facilities/population/policy.json": "fc46195947a78944a279813ffbc8f10254e2ac2b22cfefe71c45ca6985ee31fe",
+      "enterprise/services/source/runtime_capital_plan_2026-09-11.json": "b70546497ea380ff99c00e2b4a3dcd498869d172c5e6696f05aaa709d93b5bbd",
+      "geospatial/facilities/population/policy.json": "2264f25476be4957a71916941147b7d9acc6ab10b374153a0d2b86ba29c7185c",
+      "geospatial/facilities/source/campus.json": "0efd4854069ff20acb4032e02b021afebcb955990f1d684b51428624e281d950",
       "industrial/source/entities.json": "799a24baf3240d50c5d6a80ac0f9ddb9d023b7a36de058ec12546aac60caee29"
     }
   },
@@ -21355,6 +21357,157 @@
         "status": "LOCKED_AUTHORIZATION_NOT_OCCUPANCY"
       }
     ]
+  },
+  "runtime": {
+    "source": "enterprise/services/source/runtime_capital_plan_2026-09-11.json",
+    "source_state": "SYNTHETIC_PLANNING_NOT_BUDGET_OR_QUOTE",
+    "status": "ACCEPTED_PROPOSED_REQUIREMENT_NOT_EMPLOYMENT_AUTHORIZATION",
+    "roles": [
+      {
+        "id": "RT-ROLE-PLATFORM",
+        "owner": "TEAM-platform",
+        "required_fte": 3,
+        "annual_loaded_cost": 180000,
+        "allocated_fraction": 1,
+        "location": "Sacramento hybrid; scheduled site travel",
+        "qualification": "Demonstrated role-specific engineering and recovery exercise; cross-trained alternate required",
+        "coverage": "BUSINESS_HOURS_AND_ON_CALL_NOT_CONTINUOUS_SEAT"
+      },
+      {
+        "id": "RT-ROLE-NETWORK",
+        "owner": "TEAM-network",
+        "required_fte": 2,
+        "annual_loaded_cost": 180000,
+        "allocated_fraction": 1,
+        "location": "Sacramento hybrid; scheduled site travel",
+        "qualification": "Demonstrated role-specific engineering and recovery exercise; cross-trained alternate required",
+        "coverage": "BUSINESS_HOURS_AND_ON_CALL_NOT_CONTINUOUS_SEAT"
+      },
+      {
+        "id": "RT-ROLE-STORAGE_DATABASE",
+        "owner": "TEAM-data",
+        "required_fte": 2,
+        "annual_loaded_cost": 180000,
+        "allocated_fraction": 1,
+        "location": "Sacramento hybrid; scheduled site travel",
+        "qualification": "Demonstrated role-specific engineering and recovery exercise; cross-trained alternate required",
+        "coverage": "BUSINESS_HOURS_AND_ON_CALL_NOT_CONTINUOUS_SEAT"
+      },
+      {
+        "id": "RT-ROLE-RELIABILITY_RECOVERY",
+        "owner": "TEAM-reliability",
+        "required_fte": 3,
+        "annual_loaded_cost": 185000,
+        "allocated_fraction": 1,
+        "location": "Sacramento hybrid; scheduled site travel",
+        "qualification": "Demonstrated role-specific engineering and recovery exercise; cross-trained alternate required",
+        "coverage": "BUSINESS_HOURS_AND_ON_CALL_NOT_CONTINUOUS_SEAT"
+      },
+      {
+        "id": "RT-ROLE-DEVELOPER_PLATFORM",
+        "owner": "TEAM-developer",
+        "required_fte": 2,
+        "annual_loaded_cost": 175000,
+        "allocated_fraction": 1,
+        "location": "Sacramento hybrid; scheduled site travel",
+        "qualification": "Demonstrated role-specific engineering and recovery exercise; cross-trained alternate required",
+        "coverage": "BUSINESS_HOURS_AND_ON_CALL_NOT_CONTINUOUS_SEAT"
+      },
+      {
+        "id": "RT-ROLE-IDENTITY_ENDPOINTS",
+        "owner": "TEAM-identity",
+        "required_fte": 2,
+        "annual_loaded_cost": 165000,
+        "allocated_fraction": 1,
+        "location": "Sacramento hybrid; scheduled site travel",
+        "qualification": "Demonstrated role-specific engineering and recovery exercise; cross-trained alternate required",
+        "coverage": "BUSINESS_HOURS_AND_ON_CALL_NOT_CONTINUOUS_SEAT"
+      },
+      {
+        "id": "RT-ROLE-SECURITY_OPERATIONS",
+        "owner": "TEAM-security",
+        "required_fte": 2,
+        "annual_loaded_cost": 185000,
+        "allocated_fraction": 1,
+        "location": "Sacramento hybrid; scheduled site travel",
+        "qualification": "Demonstrated role-specific engineering and recovery exercise; cross-trained alternate required",
+        "coverage": "BUSINESS_HOURS_AND_ON_CALL_NOT_CONTINUOUS_SEAT"
+      },
+      {
+        "id": "RT-ROLE-KEYS",
+        "owner": "TEAM-keys",
+        "required_fte": 1,
+        "annual_loaded_cost": 190000,
+        "allocated_fraction": 1,
+        "location": "Sacramento hybrid; scheduled site travel",
+        "qualification": "Demonstrated role-specific engineering and recovery exercise; cross-trained alternate required",
+        "coverage": "BUSINESS_HOURS_AND_ON_CALL_NOT_CONTINUOUS_SEAT"
+      },
+      {
+        "id": "RT-ROLE-AI_OPERATIONS",
+        "owner": "TEAM-ai",
+        "required_fte": 2,
+        "annual_loaded_cost": 195000,
+        "allocated_fraction": 1,
+        "location": "Sacramento hybrid; scheduled site travel",
+        "qualification": "Demonstrated role-specific engineering and recovery exercise; cross-trained alternate required",
+        "coverage": "BUSINESS_HOURS_AND_ON_CALL_NOT_CONTINUOUS_SEAT"
+      },
+      {
+        "id": "RT-ROLE-VENDOR_COORDINATION",
+        "owner": "TEAM-vendor",
+        "required_fte": 1,
+        "annual_loaded_cost": 145000,
+        "allocated_fraction": 1,
+        "location": "Sacramento hybrid; scheduled site travel",
+        "qualification": "Demonstrated role-specific engineering and recovery exercise; cross-trained alternate required",
+        "coverage": "BUSINESS_HOURS_AND_ON_CALL_NOT_CONTINUOUS_SEAT"
+      }
+    ],
+    "proposed_technical_fte": 20,
+    "sacramento_workstations_required": 16,
+    "site_roving_positions": 4,
+    "owned_conditional_facilities_fte": 2,
+    "owned_conditional_guard_positions": 6,
+    "phase_assumptions": {
+      "colo_start": "2027-01-01",
+      "owned_start_assumption": "2029-01-01",
+      "construction_project_lead_fte": 0.5,
+      "construction_specialist_fte": 2,
+      "specialist_cost_basis": "Purchased design/commissioning capacity included in existing engineering phases, not additional payroll",
+      "sacramento_workstations_required": 16,
+      "site_roving_positions": 4,
+      "workstation_state": "REQUIREMENT_NOT_ASSIGNED",
+      "permanent_facilities_fte": 2,
+      "continuous_security_positions": 6
+    },
+    "authorized_new_positions": 0,
+    "occupied_new_positions": 0,
+    "verified_reusable_fte": 0,
+    "zero_scope": "Only incremental runtime positions and demonstrated reuse; not zero enterprise workforce or zero employees in existing ESS roles.",
+    "actual_runtime_employees": null,
+    "actual_runtime_concurrent_attendance": null,
+    "internal_users_compute_assumption": 900,
+    "compute_users_are_employee_census": false,
+    "enterprise_total_addition": null,
+    "overlap_rule": "Do not add proposed roles to 44 named employees, J2 237, conditional ESS 48/54 or legacy 7.1 service-workload FTE. Construction lead 0.5 is included capacity; specialist 2 is purchased project capacity, not extra payroll.",
+    "conditional_seat_allocation": {
+      "id": "SH-FAC-RT-SEATS-001",
+      "status": "CONDITIONAL_PLANNING_ALLOCATION_NOT_OCCUPANCY",
+      "basis": "Capacity allocation within unchanged 362 campus workplaces when hiring and workplace assignment are authorized; not verified employee reuse. Eight visiting desks would then be unavailable for simultaneous unrelated visitors.",
+      "allocations": [
+        {
+          "room_id": "SH-SITE-0001-A-L03-R19",
+          "seat_category": "shared_desks",
+          "workstations": 8
+        },
+        {
+          "room_id": "SH-SITE-0001-A-L01-R16",
+          "seat_category": "touchdown_seats",
+          "workstations": 8
+        }
+      ]
+    }
   },
   "industrial": {
     "status": "ACCEPTED_SELECTED_OPERATING_CASE_NOT_SITE_ATTENDANCE",
