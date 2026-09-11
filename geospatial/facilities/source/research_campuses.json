@@ -1,0 +1,1450 @@
+{
+  "schema_version": "1.0.0",
+  "revision": "0.1.0",
+  "sites": [
+    {
+      "schema_version": "1.0.0",
+      "revision": "0.1.0",
+      "as_of": "2026-09-11",
+      "authoritative_base": "786fc9a5311a04dde92ee6dbb08ac3b77a380200",
+      "status": "PROPOSED_MODELLED_PROGRAM",
+      "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+      "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+      "tenure": "UNESTABLISHED",
+      "occupancy_start": null,
+      "construction_start": null,
+      "construction_completion": null,
+      "site_id": "SH-SITE-0003",
+      "name": "The Fort \u00b7 Willow research compound",
+      "map_prefix": "SH-MAP-WIL",
+      "map_start": 20,
+      "envelope_m": [
+        250,
+        243
+      ],
+      "geometry_basis": "Illustrative local metric frame; x east/y north. Area selects a midpoint within accepted acreage range; no parcel, coordinate transform, acquisition or current building configuration claimed.",
+      "sources": [
+        "docs/canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md",
+        "geospatial/facilities/population/REGISTER.json"
+      ],
+      "assumptions": [
+        {
+          "id": "WIL-A01",
+          "statement": "24 anonymous workers +8 visitors is a conditional design attendance scenario, not observed September 2026 headcount. Up to six visitors sleep temporarily; those guests are a subset, not additional employees."
+        },
+        {
+          "id": "WIL-A02",
+          "statement": "All dimensions, bench capacities, room counts, six short-stay beds and floor configuration are intentionally modelled. Three named sheds and outdoor Museum derive from accepted Willow canon."
+        },
+        {
+          "id": "WIL-A03",
+          "statement": "Research safeguards depend on actual experiments: ventilation, containment, utility isolation and fire classification require project-specific review. No installed plant, lifting equipment or hazardous process is inferred."
+        }
+      ],
+      "site_zones": [
+        {
+          "name": "Visitor arrival and controlled gate",
+          "rect_m": [
+            25,
+            15,
+            55,
+            15
+          ],
+          "type": "public"
+        },
+        {
+          "name": "Parking \u00b7 30 spaces",
+          "rect_m": [
+            30,
+            75,
+            40,
+            30
+          ],
+          "type": "parking"
+        },
+        {
+          "name": "Clean pedestrian court",
+          "rect_m": [
+            85,
+            45,
+            65,
+            20
+          ],
+          "type": "landscape"
+        },
+        {
+          "name": "Research hardstand and staging",
+          "rect_m": [
+            85,
+            78,
+            75,
+            32
+          ],
+          "type": "public"
+        },
+        {
+          "name": "The Museum \u00b7 working outdoor collection",
+          "rect_m": [
+            30,
+            170,
+            65,
+            40
+          ],
+          "type": "reserve",
+          "object_id": "SH-FAC-FORT-MUSEUM"
+        },
+        {
+          "name": "Service yard and utilities",
+          "rect_m": [
+            165,
+            165,
+            50,
+            35
+          ],
+          "type": "public"
+        },
+        {
+          "name": "Gated expansion reserve",
+          "rect_m": [
+            110,
+            180,
+            40,
+            35
+          ],
+          "type": "reserve"
+        },
+        {
+          "name": "Stormwater buffer",
+          "rect_m": [
+            30,
+            220,
+            185,
+            10
+          ],
+          "type": "landscape"
+        }
+      ],
+      "access": {
+        "fire_service_loop_m": [
+          [
+            15,
+            15
+          ],
+          [
+            235,
+            15
+          ],
+          [
+            235,
+            228
+          ],
+          [
+            15,
+            228
+          ],
+          [
+            15,
+            15
+          ]
+        ],
+        "public_arrival_m": [
+          [
+            50,
+            0
+          ],
+          [
+            50,
+            40
+          ]
+        ],
+        "pedestrian_spine_m": [
+          [
+            72,
+            52
+          ],
+          [
+            77,
+            52
+          ],
+          [
+            77,
+            115
+          ],
+          [
+            110,
+            115
+          ],
+          [
+            110,
+            125
+          ]
+        ],
+        "service_arrival_m": [
+          [
+            250,
+            175
+          ],
+          [
+            220,
+            175
+          ],
+          [
+            220,
+            115
+          ],
+          [
+            188,
+            115
+          ],
+          [
+            188,
+            125
+          ]
+        ],
+        "j2_controlled_entry_m": [],
+        "bicycle_spaces": 12,
+        "parking_spaces": 30,
+        "parking_basis": "32-person planned peak \u00d785% car mode /1.1 occupants \u224825 cars;30 spaces allow accessible and service parking. No observed commuting survey."
+      },
+      "adjacency": [
+        {
+          "a": "The White Shed",
+          "b": "The Big Shed",
+          "relationship": "controlled_release",
+          "reason": "Equipment intake and quarantine precede research; a released transfer uses hardstand, not visitor reception."
+        },
+        {
+          "a": "The Small Shed",
+          "b": "The Big Shed",
+          "relationship": "pedestrian_link",
+          "reason": "Administration near research; guest circulation remains at the southern visitor edge."
+        },
+        {
+          "a": "The Museum",
+          "b": "Research hardstand",
+          "relationship": "outdoor_separation",
+          "reason": "Stored artifacts do not obstruct active trials, circulation or emergency access."
+        }
+      ],
+      "buildings": [
+        {
+          "id": "SH-FAC-FORT-BIG",
+          "name": "The Big Shed",
+          "rect_m": [
+            85,
+            125,
+            60,
+            30
+          ],
+          "status": "MODELLED_NOT_AS_BUILT",
+          "actual_occupancy": null,
+          "structure": "Concept steel frame on 6 m bay grid; industrial roof spans, lifting capacity, slab loading and foundations require engineering. No installed lifting plant asserted.",
+          "floor_height_m": 6,
+          "core_basis": "Two independent end exit/service bays; 3 m central circulation separates personnel from process rooms. Wet, ventilation and utility zones remain outside material handling. No classified process or hazardous inventory assumed.",
+          "floors": [
+            {
+              "id": "SH-FAC-FORT-BIG-L01",
+              "level": 1,
+              "name": "Research, integration and prototype work",
+              "status": "MODELLED_FITOUT_NOT_EXISTING",
+              "gross_area_m2": 1800,
+              "planned_peak": 20,
+              "actual_occupancy": null,
+              "rooms": [
+                {
+                  "id": "SH-FAC-FORT-BIG-L01-R01",
+                  "name": "Prototype fabrication and integration",
+                  "rect_m": [
+                    6,
+                    0,
+                    18,
+                    13.5
+                  ],
+                  "access": "restricted",
+                  "assigned_desks": 0,
+                  "shared_desks": 0,
+                  "touchdown_seats": 0,
+                  "training_seats": 0,
+                  "meeting_seats": 0,
+                  "resident_beds": 0,
+                  "special_use_capacity": 8,
+                  "basis": "WIL-A02"
+                },
+                {
+                  "id": "SH-FAC-FORT-BIG-L01-R02",
+                  "name": "Instrumented test hall",
+                  "rect_m": [
+                    24,
+                    0,
+                    18,
+                    13.5
+                  ],
+                  "access": "restricted",
+                  "assigned_desks": 0,
+                  "shared_desks": 0,
+                  "touchdown_seats": 0,
+                  "training_seats": 0,
+                  "meeting_seats": 0,
+                  "resident_beds": 0,
+                  "special_use_capacity": 6,
+                  "basis": "WIL-A02"
+                },
+                {
+                  "id": "SH-FAC-FORT-BIG-L01-R03",
+                  "name": "Controls and measurement benches",
+                  "rect_m": [
+                    42,
+                    0,
+                    12,
+                    13.5
+                  ],
+                  "access": "restricted",
+                  "assigned_desks": 4,
+                  "shared_desks": 0,
+                  "touchdown_seats": 0,
+                  "training_seats": 0,
+                  "meeting_seats": 0,
+                  "resident_beds": 0,
+                  "special_use_capacity": 4,
+                  "basis": "WIL-A02"
+                },
+                {
+                  "id": "SH-FAC-FORT-BIG-L01-R04",
+                  "name": "Instrumentation clean benches",
+                  "rect_m": [
+                    6,
+                    16.5,
+                    12,
+                    13.5
+                  ],
+                  "access": "restricted",
+                  "assigned_desks": 0,
+                  "shared_desks": 0,
+                  "touchdown_seats": 0,
+                  "training_seats": 0,
+                  "meeting_seats": 0,
+                  "resident_beds": 0,
+                  "special_use_capacity": 4,
+                  "basis": "WIL-A02"
+                },
+                {
+                  "id": "SH-FAC-FORT-BIG-L01-R05",
+                  "name": "RF and communications bench work",
+                  "rect_m": [
+                    18,
+                    16.5,
+                    12,
+                    13.5
+                  ],
+                  "access": "restricted",
+                  "assigned_desks": 0,
+                  "shared_desks": 0,
+                  "touchdown_seats": 0,
+                  "training_seats": 0,
+                  "meeting_seats": 0,
+                  "resident_beds": 0,
+                  "special_use_capacity": 4,
+                  "basis": "WIL-A02"
+                },
+                {
+                  "id": "SH-FAC-FORT-BIG-L01-R06",
+                  "name": "Research write-up and data review",
+                  "rect_m": [
+                    30,
+                    16.5,
+                    12,
+                    13.5
+                  ],
+                  "access": "staff",
+                  "assigned_desks": 8,
+                  "shared_desks": 0,
+                  "touchdown_seats": 0,
+                  "training_seats": 0,
+                  "meeting_seats": 0,
+                  "resident_beds": 0,
+                  "special_use_capacity": 0,
+                  "basis": "WIL-A02"
+                },
+                {
+                  "id": "SH-FAC-FORT-BIG-L01-R07",
+                  "name": "Experiment readiness and debrief",
+                  "rect_m": [
+                    42,
+                    16.5,
+                    12,
+                    13.5
+                  ],
+                  "access": "staff",
+                  "assigned_desks": 0,
+                  "shared_desks": 0,
+                  "touchdown_seats": 0,
+                  "training_seats": 0,
+                  "meeting_seats": 12,
+                  "resident_beds": 0,
+                  "special_use_capacity": 0,
+                  "basis": "WIL-A02"
+                }
+              ],
+              "net_assignable_area_m2": 1296.0,
+              "core_circulation_service_m2": 504.0
+            }
+          ]
+        },
+        {
+          "id": "SH-FAC-FORT-SMALL",
+          "name": "The Small Shed",
+          "rect_m": [
+            35,
+            40,
+            36,
+            24
+          ],
+          "status": "MODELLED_NOT_AS_BUILT",
+          "actual_occupancy": null,
+          "structure": "6 m planning grid; two protected end stairs, accessible lift and aligned wet/service cores; structure unengineered.",
+          "floor_height_m": 3.6,
+          "core_basis": "Two independent end exit/service bays; 3 m central circulation separates personnel from process rooms. Wet, ventilation and utility zones remain outside material handling. No classified process or hazardous inventory assumed.",
+          "floors": [
+            {
+              "id": "SH-FAC-FORT-SMALL-L01",
+              "level": 1,
+              "name": "Administrative work and visiting staff arrival",
+              "status": "MODELLED_FITOUT_NOT_EXISTING",
+              "gross_area_m2": 864,
+              "planned_peak": 8,
+              "actual_occupancy": null,
+              "rooms": [
+                {
+                  "id": "SH-FAC-FORT-SMALL-L01-R01",
+                  "name": "Visitor reception and project coordination",
+                  "rect_m": [
+                    6,
+                    0,
+                    12,
+                    10.5
+                  ],
+                  "access": "staff",
+                  "assigned_desks": 2,
+                  "shared_desks": 0,
+                  "touchdown_seats": 2,
+                  "training_seats": 0,
+                  "meeting_seats": 0,
+                  "resident_beds": 0,
+                  "special_use_capacity": 0,
+                  "basis": "WIL-A02"
+                },
+                {
+                  "id": "SH-FAC-FORT-SMALL-L01-R02",
+                  "name": "Laboratory administration",
+                  "rect_m": [
+                    18,
+                    0,
+                    12,
+                    10.5
+                  ],
+                  "access": "staff",
+                  "assigned_desks": 4,
+                  "shared_desks": 0,
+                  "touchdown_seats": 0,
+                  "training_seats": 0,
+                  "meeting_seats": 0,
+                  "resident_beds": 0,
+                  "special_use_capacity": 0,
+                  "basis": "WIL-A02"
+                },
+                {
+                  "id": "SH-FAC-FORT-SMALL-L01-R03",
+                  "name": "Working discussion and visitor briefing",
+                  "rect_m": [
+                    6,
+                    13.5,
+                    12,
+                    10.5
+                  ],
+                  "access": "staff",
+                  "assigned_desks": 0,
+                  "shared_desks": 0,
+                  "touchdown_seats": 0,
+                  "training_seats": 0,
+                  "meeting_seats": 10,
+                  "resident_beds": 0,
+                  "special_use_capacity": 0,
+                  "basis": "WIL-A02"
+                },
+                {
+                  "id": "SH-FAC-FORT-SMALL-L01-R04",
+                  "name": "Staff meal and break room",
+                  "rect_m": [
+                    18,
+                    13.5,
+                    12,
+                    10.5
+                  ],
+                  "access": "staff",
+                  "assigned_desks": 0,
+                  "shared_desks": 0,
+                  "touchdown_seats": 0,
+                  "training_seats": 0,
+                  "meeting_seats": 10,
+                  "resident_beds": 0,
+                  "special_use_capacity": 0,
+                  "basis": "WIL-A02"
+                }
+              ],
+              "net_assignable_area_m2": 504.0,
+              "core_circulation_service_m2": 360.0
+            },
+            {
+              "id": "SH-FAC-FORT-SMALL-L02",
+              "level": 2,
+              "name": "Six temporary guest rooms \u00b7 no permanent housing",
+              "status": "MODELLED_FITOUT_NOT_EXISTING",
+              "gross_area_m2": 864,
+              "planned_peak": 0,
+              "actual_occupancy": null,
+              "rooms": [
+                {
+                  "id": "SH-FAC-FORT-SMALL-L02-R01",
+                  "name": "Guest rooms 1\u20132",
+                  "rect_m": [
+                    6,
+                    0,
+                    8,
+                    10.5
+                  ],
+                  "access": "residential",
+                  "assigned_desks": 0,
+                  "shared_desks": 0,
+                  "touchdown_seats": 0,
+                  "training_seats": 0,
+                  "meeting_seats": 0,
+                  "resident_beds": 2,
+                  "special_use_capacity": 0,
+                  "basis": "WIL-A02"
+                },
+                {
+                  "id": "SH-FAC-FORT-SMALL-L02-R02",
+                  "name": "Guest rooms 3\u20134",
+                  "rect_m": [
+                    14,
+                    0,
+                    8,
+                    10.5
+                  ],
+                  "access": "residential",
+                  "assigned_desks": 0,
+                  "shared_desks": 0,
+                  "touchdown_seats": 0,
+                  "training_seats": 0,
+                  "meeting_seats": 0,
+                  "resident_beds": 2,
+                  "special_use_capacity": 0,
+                  "basis": "WIL-A02"
+                },
+                {
+                  "id": "SH-FAC-FORT-SMALL-L02-R03",
+                  "name": "Guest rooms 5\u20136",
+                  "rect_m": [
+                    22,
+                    0,
+                    8,
+                    10.5
+                  ],
+                  "access": "residential",
+                  "assigned_desks": 0,
+                  "shared_desks": 0,
+                  "touchdown_seats": 0,
+                  "training_seats": 0,
+                  "meeting_seats": 0,
+                  "resident_beds": 2,
+                  "special_use_capacity": 0,
+                  "basis": "WIL-A02"
+                },
+                {
+                  "id": "SH-FAC-FORT-SMALL-L02-R04",
+                  "name": "Guest lounge and quiet work",
+                  "rect_m": [
+                    6,
+                    13.5,
+                    12,
+                    10.5
+                  ],
+                  "access": "residential",
+                  "assigned_desks": 0,
+                  "shared_desks": 0,
+                  "touchdown_seats": 4,
+                  "training_seats": 0,
+                  "meeting_seats": 6,
+                  "resident_beds": 0,
+                  "special_use_capacity": 0,
+                  "basis": "WIL-A02"
+                },
+                {
+                  "id": "SH-FAC-FORT-SMALL-L02-R05",
+                  "name": "Linen, laundry and guest support",
+                  "rect_m": [
+                    18,
+                    13.5,
+                    12,
+                    10.5
+                  ],
+                  "access": "residential",
+                  "assigned_desks": 0,
+                  "shared_desks": 0,
+                  "touchdown_seats": 0,
+                  "training_seats": 0,
+                  "meeting_seats": 0,
+                  "resident_beds": 0,
+                  "special_use_capacity": 0,
+                  "basis": "WIL-A02"
+                }
+              ],
+              "net_assignable_area_m2": 504.0,
+              "core_circulation_service_m2": 360.0
+            }
+          ]
+        },
+        {
+          "id": "SH-FAC-FORT-WHITE",
+          "name": "The White Shed",
+          "rect_m": [
+            170,
+            125,
+            36,
+            24
+          ],
+          "status": "MODELLED_NOT_AS_BUILT",
+          "actual_occupancy": null,
+          "structure": "Concept steel frame on 6 m bay grid; industrial roof spans, lifting capacity, slab loading and foundations require engineering. No installed lifting plant asserted.",
+          "floor_height_m": 6,
+          "core_basis": "Two independent end exit/service bays; 3 m central circulation separates personnel from process rooms. Wet, ventilation and utility zones remain outside material handling. No classified process or hazardous inventory assumed.",
+          "floors": [
+            {
+              "id": "SH-FAC-FORT-WHITE-L01",
+              "level": 1,
+              "name": "Controlled intake, hold and equipment custody",
+              "status": "MODELLED_FITOUT_NOT_EXISTING",
+              "gross_area_m2": 864,
+              "planned_peak": 4,
+              "actual_occupancy": null,
+              "rooms": [
+                {
+                  "id": "SH-FAC-FORT-WHITE-L01-R01",
+                  "name": "Receiving inspection and identification",
+                  "rect_m": [
+                    6,
+                    0,
+                    12,
+                    10.5
+                  ],
+                  "access": "restricted",
+                  "assigned_desks": 0,
+                  "shared_desks": 0,
+                  "touchdown_seats": 0,
+                  "training_seats": 0,
+                  "meeting_seats": 0,
+                  "resident_beds": 0,
+                  "special_use_capacity": 4,
+                  "basis": "WIL-A02"
+                },
+                {
+                  "id": "SH-FAC-FORT-WHITE-L01-R02",
+                  "name": "Quarantine and release hold",
+                  "rect_m": [
+                    18,
+                    0,
+                    12,
+                    10.5
+                  ],
+                  "access": "restricted",
+                  "assigned_desks": 0,
+                  "shared_desks": 0,
+                  "touchdown_seats": 0,
+                  "training_seats": 0,
+                  "meeting_seats": 0,
+                  "resident_beds": 0,
+                  "special_use_capacity": 0,
+                  "basis": "WIL-A02"
+                },
+                {
+                  "id": "SH-FAC-FORT-WHITE-L01-R03",
+                  "name": "Controlled sample and equipment storage",
+                  "rect_m": [
+                    6,
+                    13.5,
+                    12,
+                    10.5
+                  ],
+                  "access": "restricted",
+                  "assigned_desks": 0,
+                  "shared_desks": 0,
+                  "touchdown_seats": 0,
+                  "training_seats": 0,
+                  "meeting_seats": 0,
+                  "resident_beds": 0,
+                  "special_use_capacity": 0,
+                  "basis": "WIL-A02"
+                },
+                {
+                  "id": "SH-FAC-FORT-WHITE-L01-R04",
+                  "name": "Field gear staging and dispatch",
+                  "rect_m": [
+                    18,
+                    13.5,
+                    12,
+                    10.5
+                  ],
+                  "access": "restricted",
+                  "assigned_desks": 2,
+                  "shared_desks": 0,
+                  "touchdown_seats": 0,
+                  "training_seats": 0,
+                  "meeting_seats": 0,
+                  "resident_beds": 0,
+                  "special_use_capacity": 4,
+                  "basis": "WIL-A02"
+                }
+              ],
+              "net_assignable_area_m2": 504.0,
+              "core_circulation_service_m2": 360.0
+            }
+          ]
+        }
+      ],
+      "actual_occupancy": null,
+      "conditional_workforce_reference": 24,
+      "planned_visitors": 8,
+      "attendance_scenarios": [
+        {
+          "id": "SH-MAP-WIL-2026-DESIGN",
+          "horizon": 2026,
+          "status": "PLANNING_NEED_NOT_OBSERVED",
+          "floor_populations": {
+            "SH-FAC-FORT-BIG-L01": 20,
+            "SH-FAC-FORT-SMALL-L01": 8,
+            "SH-FAC-FORT-SMALL-L02": 0,
+            "SH-FAC-FORT-WHITE-L01": 4
+          },
+          "people": 32,
+          "workers": 24,
+          "trainees": 0,
+          "other_visitors": 8,
+          "resident_trainees_subset": 0,
+          "temporary_resident_visitors_subset": 6,
+          "basis": "WIL-A01"
+        },
+        {
+          "id": "SH-MAP-WIL-2031-CAPACITY",
+          "horizon": 2031,
+          "status": "CONDITIONAL_PLANNING",
+          "people": 32,
+          "increment": 0,
+          "basis": "Retain current concept attendance until justified demand. Reserved land is not authorized staff, funded floor area or a construction promise."
+        },
+        {
+          "id": "SH-MAP-WIL-2036-CAPACITY",
+          "horizon": 2036,
+          "status": "CONDITIONAL_PLANNING",
+          "people": 32,
+          "increment": 0,
+          "basis": "Retain current concept attendance until justified demand. Reserved land is not authorized staff, funded floor area or a construction promise."
+        },
+        {
+          "id": "WIL-NIGHT-GUEST",
+          "horizon": 2026,
+          "status": "ALTERNATIVE_NIGHT_SCENARIO",
+          "people": 6,
+          "workers": 0,
+          "trainees": 0,
+          "other_visitors": 6,
+          "floor_populations": {
+            "SH-FAC-FORT-BIG-L01": 0,
+            "SH-FAC-FORT-SMALL-L01": 0,
+            "SH-FAC-FORT-SMALL-L02": 6,
+            "SH-FAC-FORT-WHITE-L01": 0
+          },
+          "basis": "WIL-A01; alternative to day scenario, never added to it."
+        }
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "revision": "0.1.0",
+      "as_of": "2026-09-11",
+      "authoritative_base": "786fc9a5311a04dde92ee6dbb08ac3b77a380200",
+      "status": "PROPOSED_MODELLED_PROGRAM",
+      "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+      "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+      "tenure": "UNESTABLISHED",
+      "occupancy_start": null,
+      "construction_start": null,
+      "construction_completion": null,
+      "site_id": "SH-SITE-0005",
+      "name": "Bedford \u00b7 recovery development center",
+      "map_prefix": "SH-MAP-CRD",
+      "map_start": 20,
+      "envelope_m": [
+        250,
+        283
+      ],
+      "geometry_basis": "Illustrative local metric frame; x east/y north. Area selects a midpoint within accepted acreage range; no parcel, coordinate transform, acquisition or current building configuration claimed.",
+      "sources": [
+        "docs/canon/CRADLE_CLOSEOUT_2026-09-06.md",
+        "geospatial/facilities/population/REGISTER.json"
+      ],
+      "assumptions": [
+        {
+          "id": "CRD-A01",
+          "statement": "18 anonymous workers +10 visiting operators/collaborators form a conditional planning peak, not current headcount. Distributed deployment rotations remain within this pool; Demotte/Kelly Gang hosts are not Bedford employees."
+        },
+        {
+          "id": "CRD-A02",
+          "statement": "Four modelled structures implement accepted Bedford functions; dimensions, capacities and one-level configurations are design assumptions. No equipment installation, chemical flowsheet, throughput or operating permit is asserted."
+        },
+        {
+          "id": "CRD-A03",
+          "statement": "Fairmont industrial-brownfield study context; exact parcel and inherited contamination, flood condition, utility capacity and freight access remain unknown. No barge, river berth or rail siding is introduced."
+        }
+      ],
+      "site_zones": [
+        {
+          "name": "Visitor arrival and controlled gate",
+          "rect_m": [
+            25,
+            15,
+            60,
+            15
+          ],
+          "type": "public"
+        },
+        {
+          "name": "Parking \u00b7 26 spaces",
+          "rect_m": [
+            95,
+            35,
+            35,
+            26
+          ],
+          "type": "parking"
+        },
+        {
+          "name": "Staff pedestrian court",
+          "rect_m": [
+            35,
+            84,
+            90,
+            22
+          ],
+          "type": "landscape"
+        },
+        {
+          "name": "Controlled material transfer yard",
+          "rect_m": [
+            105,
+            130,
+            25,
+            40
+          ],
+          "type": "public"
+        },
+        {
+          "name": "Service utilities and containment reserve",
+          "rect_m": [
+            180,
+            130,
+            35,
+            40
+          ],
+          "type": "reserve"
+        },
+        {
+          "name": "Gated deployment expansion reserve",
+          "rect_m": [
+            35,
+            195,
+            140,
+            45
+          ],
+          "type": "reserve"
+        },
+        {
+          "name": "Stormwater and brownfield buffer",
+          "rect_m": [
+            30,
+            250,
+            180,
+            18
+          ],
+          "type": "landscape"
+        }
+      ],
+      "access": {
+        "fire_service_loop_m": [
+          [
+            15,
+            15
+          ],
+          [
+            235,
+            15
+          ],
+          [
+            235,
+            268
+          ],
+          [
+            15,
+            268
+          ],
+          [
+            15,
+            15
+          ]
+        ],
+        "public_arrival_m": [
+          [
+            50,
+            0
+          ],
+          [
+            50,
+            45
+          ]
+        ],
+        "pedestrian_spine_m": [
+          [
+            72,
+            55
+          ],
+          [
+            90,
+            55
+          ],
+          [
+            90,
+            118
+          ],
+          [
+            60,
+            118
+          ],
+          [
+            60,
+            130
+          ]
+        ],
+        "service_arrival_m": [
+          [
+            250,
+            95
+          ],
+          [
+            200,
+            95
+          ],
+          [
+            185,
+            95
+          ],
+          [
+            185,
+            77
+          ],
+          [
+            176,
+            77
+          ]
+        ],
+        "j2_controlled_entry_m": [],
+        "bicycle_spaces": 10,
+        "parking_spaces": 26,
+        "parking_basis": "28-person planned peak \u00d785% car mode /1.1 occupants \u224822 cars;26 spaces retain accessible and service allowance. Delivery holding separate; no actual mode survey."
+      },
+      "adjacency": [
+        {
+          "a": "Material receipt and outbound logistics",
+          "b": "Intermediate upgrading and blending",
+          "relationship": "controlled_material_transfer",
+          "reason": "Held incoming lots stay separate from released product; genealogy verification gates movement."
+        },
+        {
+          "a": "Analytical and process development",
+          "b": "Intermediate upgrading and blending",
+          "relationship": "sample_handoff",
+          "reason": "Samples transfer under custody; visitors and laboratories do not become a delivery shortcut."
+        },
+        {
+          "a": "Field-unit assembly and refurbishment",
+          "b": "Material receipt and outbound logistics",
+          "relationship": "separate_return_path",
+          "reason": "Failed or fouled returns remain isolated from released product and clean assembly."
+        }
+      ],
+      "buildings": [
+        {
+          "id": "SH-SITE-0005-B01",
+          "name": "Analytical and process development",
+          "rect_m": [
+            35,
+            45,
+            36,
+            24
+          ],
+          "status": "MODELLED_NOT_AS_BUILT",
+          "actual_occupancy": null,
+          "structure": "Concept steel frame on 6 m bay grid; industrial roof spans, lifting capacity, slab loading and foundations require engineering. No installed lifting plant asserted.",
+          "floor_height_m": 6,
+          "core_basis": "Two independent end exit/service bays; 3 m central circulation separates personnel from process rooms. Wet, ventilation and utility zones remain outside material handling. No classified process or hazardous inventory assumed.",
+          "floors": [
+            {
+              "id": "SH-SITE-0005-B01-L01",
+              "level": 1,
+              "name": "Analytical work and material genealogy",
+              "status": "MODELLED_FITOUT_NOT_EXISTING",
+              "gross_area_m2": 864,
+              "planned_peak": 12,
+              "actual_occupancy": null,
+              "rooms": [
+                {
+                  "id": "SH-SITE-0005-B01-L01-R01",
+                  "name": "Sample preparation and chain of custody",
+                  "rect_m": [
+                    6,
+                    0,
+                    12,
+                    10.5
+                  ],
+                  "access": "restricted",
+                  "assigned_desks": 0,
+                  "shared_desks": 0,
+                  "touchdown_seats": 0,
+                  "training_seats": 0,
+                  "meeting_seats": 0,
+                  "resident_beds": 0,
+                  "special_use_capacity": 4,
+                  "basis": "CRD-A02"
+                },
+                {
+                  "id": "SH-SITE-0005-B01-L01-R02",
+                  "name": "Analytical and characterization benches",
+                  "rect_m": [
+                    18,
+                    0,
+                    12,
+                    10.5
+                  ],
+                  "access": "restricted",
+                  "assigned_desks": 0,
+                  "shared_desks": 0,
+                  "touchdown_seats": 0,
+                  "training_seats": 0,
+                  "meeting_seats": 0,
+                  "resident_beds": 0,
+                  "special_use_capacity": 6,
+                  "basis": "CRD-A02"
+                },
+                {
+                  "id": "SH-SITE-0005-B01-L01-R03",
+                  "name": "Process-development bench studies",
+                  "rect_m": [
+                    6,
+                    13.5,
+                    12,
+                    10.5
+                  ],
+                  "access": "restricted",
+                  "assigned_desks": 0,
+                  "shared_desks": 0,
+                  "touchdown_seats": 0,
+                  "training_seats": 0,
+                  "meeting_seats": 0,
+                  "resident_beds": 0,
+                  "special_use_capacity": 4,
+                  "basis": "CRD-A02"
+                },
+                {
+                  "id": "SH-SITE-0005-B01-L01-R04",
+                  "name": "Genealogy review and operator support",
+                  "rect_m": [
+                    18,
+                    13.5,
+                    12,
+                    10.5
+                  ],
+                  "access": "staff",
+                  "assigned_desks": 4,
+                  "shared_desks": 0,
+                  "touchdown_seats": 0,
+                  "training_seats": 0,
+                  "meeting_seats": 8,
+                  "resident_beds": 0,
+                  "special_use_capacity": 0,
+                  "basis": "CRD-A02"
+                }
+              ],
+              "net_assignable_area_m2": 504.0,
+              "core_circulation_service_m2": 360.0
+            }
+          ]
+        },
+        {
+          "id": "SH-SITE-0005-B02",
+          "name": "Field-unit assembly and refurbishment",
+          "rect_m": [
+            35,
+            130,
+            48,
+            30
+          ],
+          "status": "MODELLED_NOT_AS_BUILT",
+          "actual_occupancy": null,
+          "structure": "Concept steel frame on 6 m bay grid; industrial roof spans, lifting capacity, slab loading and foundations require engineering. No installed lifting plant asserted.",
+          "floor_height_m": 6,
+          "core_basis": "Two independent end exit/service bays; 3 m central circulation separates personnel from process rooms. Wet, ventilation and utility zones remain outside material handling. No classified process or hazardous inventory assumed.",
+          "floors": [
+            {
+              "id": "SH-SITE-0005-B02-L01",
+              "level": 1,
+              "name": "Assembly, maintenance and failure investigation",
+              "status": "MODELLED_FITOUT_NOT_EXISTING",
+              "gross_area_m2": 1440,
+              "planned_peak": 6,
+              "actual_occupancy": null,
+              "rooms": [
+                {
+                  "id": "SH-SITE-0005-B02-L01-R01",
+                  "name": "Field-unit assembly and integration",
+                  "rect_m": [
+                    6,
+                    0,
+                    18,
+                    13.5
+                  ],
+                  "access": "restricted",
+                  "assigned_desks": 0,
+                  "shared_desks": 0,
+                  "touchdown_seats": 0,
+                  "training_seats": 0,
+                  "meeting_seats": 0,
+                  "resident_beds": 0,
+                  "special_use_capacity": 6,
+                  "basis": "CRD-A02"
+                },
+                {
+                  "id": "SH-SITE-0005-B02-L01-R02",
+                  "name": "Returned-module isolation and inspection",
+                  "rect_m": [
+                    24,
+                    0,
+                    18,
+                    13.5
+                  ],
+                  "access": "restricted",
+                  "assigned_desks": 0,
+                  "shared_desks": 0,
+                  "touchdown_seats": 0,
+                  "training_seats": 0,
+                  "meeting_seats": 0,
+                  "resident_beds": 0,
+                  "special_use_capacity": 4,
+                  "basis": "CRD-A02"
+                },
+                {
+                  "id": "SH-SITE-0005-B02-L01-R03",
+                  "name": "Maintenance and refurbishment work",
+                  "rect_m": [
+                    6,
+                    16.5,
+                    18,
+                    13.5
+                  ],
+                  "access": "restricted",
+                  "assigned_desks": 0,
+                  "shared_desks": 0,
+                  "touchdown_seats": 0,
+                  "training_seats": 0,
+                  "meeting_seats": 0,
+                  "resident_beds": 0,
+                  "special_use_capacity": 4,
+                  "basis": "CRD-A02"
+                },
+                {
+                  "id": "SH-SITE-0005-B02-L01-R04",
+                  "name": "Failure review and deployment preparation",
+                  "rect_m": [
+                    24,
+                    16.5,
+                    18,
+                    13.5
+                  ],
+                  "access": "staff",
+                  "assigned_desks": 2,
+                  "shared_desks": 0,
+                  "touchdown_seats": 0,
+                  "training_seats": 8,
+                  "meeting_seats": 0,
+                  "resident_beds": 0,
+                  "special_use_capacity": 0,
+                  "basis": "CRD-A02"
+                }
+              ],
+              "net_assignable_area_m2": 972.0,
+              "core_circulation_service_m2": 468.0
+            }
+          ]
+        },
+        {
+          "id": "SH-SITE-0005-B03",
+          "name": "Intermediate upgrading and blending",
+          "rect_m": [
+            140,
+            130,
+            36,
+            24
+          ],
+          "status": "MODELLED_NOT_AS_BUILT",
+          "actual_occupancy": null,
+          "structure": "Concept steel frame on 6 m bay grid; industrial roof spans, lifting capacity, slab loading and foundations require engineering. No installed lifting plant asserted.",
+          "floor_height_m": 6,
+          "core_basis": "Two independent end exit/service bays; 3 m central circulation separates personnel from process rooms. Wet, ventilation and utility zones remain outside material handling. No classified process or hazardous inventory assumed.",
+          "floors": [
+            {
+              "id": "SH-SITE-0005-B03-L01",
+              "level": 1,
+              "name": "Bounded development and mixed-product upgrading",
+              "status": "MODELLED_FITOUT_NOT_EXISTING",
+              "gross_area_m2": 864,
+              "planned_peak": 6,
+              "actual_occupancy": null,
+              "rooms": [
+                {
+                  "id": "SH-SITE-0005-B03-L01-R01",
+                  "name": "Controlled intermediate preparation",
+                  "rect_m": [
+                    6,
+                    0,
+                    12,
+                    10.5
+                  ],
+                  "access": "restricted",
+                  "assigned_desks": 0,
+                  "shared_desks": 0,
+                  "touchdown_seats": 0,
+                  "training_seats": 0,
+                  "meeting_seats": 0,
+                  "resident_beds": 0,
+                  "special_use_capacity": 4,
+                  "basis": "CRD-A02"
+                },
+                {
+                  "id": "SH-SITE-0005-B03-L01-R02",
+                  "name": "Blending and upgrading work envelope",
+                  "rect_m": [
+                    18,
+                    0,
+                    12,
+                    10.5
+                  ],
+                  "access": "restricted",
+                  "assigned_desks": 0,
+                  "shared_desks": 0,
+                  "touchdown_seats": 0,
+                  "training_seats": 0,
+                  "meeting_seats": 0,
+                  "resident_beds": 0,
+                  "special_use_capacity": 4,
+                  "basis": "CRD-A02"
+                },
+                {
+                  "id": "SH-SITE-0005-B03-L01-R03",
+                  "name": "Batch verification and product sampling",
+                  "rect_m": [
+                    6,
+                    13.5,
+                    12,
+                    10.5
+                  ],
+                  "access": "restricted",
+                  "assigned_desks": 0,
+                  "shared_desks": 0,
+                  "touchdown_seats": 0,
+                  "training_seats": 0,
+                  "meeting_seats": 0,
+                  "resident_beds": 0,
+                  "special_use_capacity": 4,
+                  "basis": "CRD-A02"
+                },
+                {
+                  "id": "SH-SITE-0005-B03-L01-R04",
+                  "name": "Operating records and local supervision",
+                  "rect_m": [
+                    18,
+                    13.5,
+                    12,
+                    10.5
+                  ],
+                  "access": "staff",
+                  "assigned_desks": 2,
+                  "shared_desks": 0,
+                  "touchdown_seats": 0,
+                  "training_seats": 0,
+                  "meeting_seats": 0,
+                  "resident_beds": 0,
+                  "special_use_capacity": 0,
+                  "basis": "CRD-A02"
+                }
+              ],
+              "net_assignable_area_m2": 504.0,
+              "core_circulation_service_m2": 360.0
+            }
+          ]
+        },
+        {
+          "id": "SH-SITE-0005-B04",
+          "name": "Material receipt and outbound logistics",
+          "rect_m": [
+            140,
+            65,
+            36,
+            24
+          ],
+          "status": "MODELLED_NOT_AS_BUILT",
+          "actual_occupancy": null,
+          "structure": "Concept steel frame on 6 m bay grid; industrial roof spans, lifting capacity, slab loading and foundations require engineering. No installed lifting plant asserted.",
+          "floor_height_m": 6,
+          "core_basis": "Two independent end exit/service bays; 3 m central circulation separates personnel from process rooms. Wet, ventilation and utility zones remain outside material handling. No classified process or hazardous inventory assumed.",
+          "floors": [
+            {
+              "id": "SH-SITE-0005-B04-L01",
+              "level": 1,
+              "name": "Segregated custody, release and dispatch",
+              "status": "MODELLED_FITOUT_NOT_EXISTING",
+              "gross_area_m2": 864,
+              "planned_peak": 4,
+              "actual_occupancy": null,
+              "rooms": [
+                {
+                  "id": "SH-SITE-0005-B04-L01-R01",
+                  "name": "Receipt, identification and held lots",
+                  "rect_m": [
+                    6,
+                    0,
+                    12,
+                    10.5
+                  ],
+                  "access": "restricted",
+                  "assigned_desks": 0,
+                  "shared_desks": 0,
+                  "touchdown_seats": 0,
+                  "training_seats": 0,
+                  "meeting_seats": 0,
+                  "resident_beds": 0,
+                  "special_use_capacity": 4,
+                  "basis": "CRD-A02"
+                },
+                {
+                  "id": "SH-SITE-0005-B04-L01-R02",
+                  "name": "Controlled intermediate storage",
+                  "rect_m": [
+                    18,
+                    0,
+                    12,
+                    10.5
+                  ],
+                  "access": "restricted",
+                  "assigned_desks": 0,
+                  "shared_desks": 0,
+                  "touchdown_seats": 0,
+                  "training_seats": 0,
+                  "meeting_seats": 0,
+                  "resident_beds": 0,
+                  "special_use_capacity": 0,
+                  "basis": "CRD-A02"
+                },
+                {
+                  "id": "SH-SITE-0005-B04-L01-R03",
+                  "name": "Released product and outbound staging",
+                  "rect_m": [
+                    6,
+                    13.5,
+                    12,
+                    10.5
+                  ],
+                  "access": "restricted",
+                  "assigned_desks": 0,
+                  "shared_desks": 0,
+                  "touchdown_seats": 0,
+                  "training_seats": 0,
+                  "meeting_seats": 0,
+                  "resident_beds": 0,
+                  "special_use_capacity": 4,
+                  "basis": "CRD-A02"
+                },
+                {
+                  "id": "SH-SITE-0005-B04-L01-R04",
+                  "name": "Logistics and custody records",
+                  "rect_m": [
+                    18,
+                    13.5,
+                    12,
+                    10.5
+                  ],
+                  "access": "staff",
+                  "assigned_desks": 2,
+                  "shared_desks": 0,
+                  "touchdown_seats": 0,
+                  "training_seats": 0,
+                  "meeting_seats": 0,
+                  "resident_beds": 0,
+                  "special_use_capacity": 0,
+                  "basis": "CRD-A02"
+                }
+              ],
+              "net_assignable_area_m2": 504.0,
+              "core_circulation_service_m2": 360.0
+            }
+          ]
+        }
+      ],
+      "actual_occupancy": null,
+      "conditional_workforce_reference": 18,
+      "planned_visitors": 10,
+      "attendance_scenarios": [
+        {
+          "id": "SH-MAP-CRD-2026-DESIGN",
+          "horizon": 2026,
+          "status": "PLANNING_NEED_NOT_OBSERVED",
+          "floor_populations": {
+            "SH-SITE-0005-B01-L01": 12,
+            "SH-SITE-0005-B02-L01": 6,
+            "SH-SITE-0005-B03-L01": 6,
+            "SH-SITE-0005-B04-L01": 4
+          },
+          "people": 28,
+          "workers": 18,
+          "trainees": 0,
+          "other_visitors": 10,
+          "resident_trainees_subset": 0,
+          "temporary_resident_visitors_subset": 0,
+          "basis": "CRD-A01"
+        },
+        {
+          "id": "SH-MAP-CRD-2031-CAPACITY",
+          "horizon": 2031,
+          "status": "CONDITIONAL_PLANNING",
+          "people": 28,
+          "increment": 0,
+          "basis": "Retain current concept attendance until justified demand. Reserved land is not authorized staff, funded floor area or a construction promise."
+        },
+        {
+          "id": "SH-MAP-CRD-2036-CAPACITY",
+          "horizon": 2036,
+          "status": "CONDITIONAL_PLANNING",
+          "people": 28,
+          "increment": 0,
+          "basis": "Retain current concept attendance until justified demand. Reserved land is not authorized staff, funded floor area or a construction promise."
+        }
+      ]
+    }
+  ]
+}
