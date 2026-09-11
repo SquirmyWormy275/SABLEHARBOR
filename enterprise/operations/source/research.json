@@ -1,0 +1,23 @@
+{
+  "version": "1.0.0",
+  "classification": "PUBLIC_SYNTHETIC_CONDITIONAL_FORECAST",
+  "authority_boundary": "Scenario awards and laboratory acceptance are simulated. They grant no operating authority, new establishment, environmental permission or uranium custody.",
+  "follow_on_phases": [
+    {"phase_id": "WIL-RF-RETEST-2027", "project_id": "WIL-RF-FIELD", "start_month": 7, "gate_month": 10, "monthly_materials_usd": 8000, "materials_budget_usd": 65000, "first_attempt_offset": 1, "first_score": "0.61", "replicate_score": "0.94", "threshold": "0.90", "decision": "TRANSFER", "receiver": "foundry-field", "maintenance_owner": "Receiving deployment owner"},
+    {"phase_id": "WIL-CHEM-QUAL-2028", "project_id": "WIL-CHEMISTRY", "start_month": 13, "gate_month": 18, "monthly_materials_usd": 16000, "materials_budget_usd": 150000, "first_attempt_offset": 2, "first_score": "0.79", "replicate_score": "0.93", "threshold": "0.90", "decision": "TRANSFER", "receiver": "project-cradle", "maintenance_owner": "Cradle process maintenance owner"},
+    {"phase_id": "WIL-VIB-DRIFT-2028", "project_id": "WIL-VIBRATION", "start_month": 20, "gate_month": 24, "monthly_materials_usd": 7000, "materials_budget_usd": 65000, "first_attempt_offset": 1, "first_score": "0.82", "replicate_score": "0.96", "threshold": "0.92", "decision": "TRANSFER", "receiver": "foundry-field", "maintenance_owner": "Receiving deployment owner"},
+    {"phase_id": "WIL-CHEM-LIFE-2029", "project_id": "WIL-CHEMISTRY", "start_month": 27, "gate_month": 33, "monthly_materials_usd": 14000, "materials_budget_usd": 145000, "first_attempt_offset": 2, "first_score": "0.64", "replicate_score": "0.86", "threshold": "0.90", "decision": "STOP", "receiver": "", "maintenance_owner": ""},
+    {"phase_id": "WIL-RF-STABILITY-2030", "project_id": "WIL-RF-FIELD", "start_month": 38, "gate_month": 43, "monthly_materials_usd": 9000, "materials_budget_usd": 85000, "first_attempt_offset": 2, "first_score": "0.74", "replicate_score": "0.95", "threshold": "0.90", "decision": "TRANSFER", "receiver": "foundry-field", "maintenance_owner": "Receiving deployment owner"},
+    {"phase_id": "WIL-CHEM-REPLICATE-2031", "project_id": "WIL-CHEMISTRY", "start_month": 50, "gate_month": 56, "monthly_materials_usd": 13000, "materials_budget_usd": 145000, "first_attempt_offset": 2, "first_score": "0.70", "replicate_score": "0.93", "threshold": "0.90", "decision": "TRANSFER", "receiver": "project-cradle", "maintenance_owner": "Cradle process maintenance owner"}
+  ],
+  "assay": {"run_fractions": ["0.30", "0.35", "0.35"], "minimum_acceptance_score": "0.90", "normal_score": "0.97", "rejected_score": "0.72", "rejected_months": {"stream17": [8, 25, 44], "demotte": [12, 31, 50]}, "quarantine_disposition": "REJECTED_HELD_NO_SALE"},
+  "industrial": {
+    "allocation_boundary": "Dated demand allocations preserve monthly forecasts; they are not observed dispatches or proof of a feasible daily operating plan. Outside-provider service has separate capacity. No costs or revenue are reposted.",
+    "shift_hours": 8,
+    "maintenance_jobs_per_work_order": 2,
+    "maintenance_downtime_hours_per_job": "2",
+    "terminal_hours_per_ton": "0.003",
+    "warehouse_hours_per_pallet_month": "0.005",
+    "mine_maintenance_fraction_of_production_cost": "0.08"
+  }
+}

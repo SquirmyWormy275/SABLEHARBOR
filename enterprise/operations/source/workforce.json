@@ -1,0 +1,17 @@
+{
+  "version": "1.0.0",
+  "classification": "PUBLIC_SYNTHETIC_CONDITIONAL_2027_2031",
+  "boundary": "Effective-dated planning events within the existing 591 Core authorized positions. No change to the 2026 reconstruction, named employment records, industrial populations or J2 establishment. Paid leave carries payroll but no delivery capacity.",
+  "events": [
+    {"change_id": "WF-001", "month": 3, "action": "LEAVE", "position_id": "SYN-ADVISORY-010"},
+    {"change_id": "WF-002", "month": 5, "action": "RETURN", "position_id": "SYN-ADVISORY-010"},
+    {"change_id": "WF-003", "month": 7, "action": "JOIN", "position_id": "SYN-FOUNDRY-FIELD-161", "person_id": "SYN-PERSON-FF-NEW-001", "ramp_months": 3},
+    {"change_id": "WF-004", "month": 8, "action": "ASSIGNMENT_TRANSFER", "position_id": "SYN-WILLOW-003", "assignments": {"willow": "0.8", "advisory": "0.2"}},
+    {"change_id": "WF-005", "month": 9, "action": "EXIT", "position_id": "SYN-FOUNDRY-FIELD-005"},
+    {"change_id": "WF-006", "month": 10, "action": "JOIN", "position_id": "SYN-FOUNDRY-FIELD-005", "person_id": "SYN-PERSON-FF-REPLACEMENT-005", "ramp_months": 2},
+    {"change_id": "WF-007", "month": 9, "action": "JOIN", "position_id": "SYN-ATLAS-MERIDIAN-037", "person_id": "SYN-PERSON-ATLAS-NEW-037", "ramp_months": 3},
+    {"change_id": "WF-008", "month": 10, "action": "JOIN", "position_id": "SYN-PROJECT-CRADLE-019", "person_id": "SYN-PERSON-CRADLE-NEW-019", "ramp_months": 2},
+    {"change_id": "WF-009", "month": 12, "action": "JOIN", "position_id": "SYN-ESS-049", "person_id": "SYN-PERSON-ESS-NEW-049", "ramp_months": 2},
+    {"change_id": "WF-010", "month": 15, "action": "JOIN", "position_id": "SYN-INTERNAL-AUDIT-009", "person_id": "SYN-PERSON-IA-NEW-009", "ramp_months": 3}
+  ]
+}
