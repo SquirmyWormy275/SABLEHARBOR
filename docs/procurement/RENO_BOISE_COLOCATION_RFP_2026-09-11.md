@@ -1,5 +1,12 @@
 # Reno Primary / Boise Recovery Colocation Procurement and Negotiation Package
 
+**Document ID:** SH-RT-PROC-001
+**Version:** 1.0.0
+**Prepared:** 2026-09-11
+**Owner:** Enterprise Technology Services with Legal, Finance, Procurement and Facilities
+**Authority:** Owner-authorized PR119 runtime mandate, pending repository acceptance
+**Structured companion:** `enterprise/services/source/runtime_sites_2026-09-11.json`; `runtime_capital_plan_2026-09-11.json`
+
 **Provider selections are locked as of 2026-09-11:**
 
 - **Reno primary:** Switch TAHOE RENO — The Citadel Campus.

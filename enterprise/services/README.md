@@ -66,3 +66,7 @@ Capital cash, operating cash, depreciation, net book value, refresh and exit cos
 Read [operating assumptions and acceptance gates](docs/OPERATING_ASSUMPTIONS_AND_GATES.md) before interpreting targets or totals. Particularly important: the local hardware envelope is not a complete resilient OT design; N+1 CPU calculations do not prove storage/GPU redundancy, carrier independence or RTO/RPO; SaaS availability does not establish a customer-controlled recoverable runtime; and immutable online and offline backup controls require separate evidence.
 
 Authority remains with the [sourcing decision record](../../docs/canon/THIRD_PARTY_SERVICES_SOURCING_DECISIONS_2026-09-09.md), its [scope supplement](../../docs/canon/THIRD_PARTY_SERVICES_IMPLEMENTATION_SCOPE_2026-09-09.md), and accepted Technology/ESS/J2/business doctrine. PR acceptance is distinct from implementing or funding an operating estate.
+
+## September 11 runtime successor
+
+The optional versioned [runtime layer](../runtime/README.md) is loaded from the two `runtime_*_2026-09-11.json` inputs. It updates selected counterparties and planned placements, emits `runtime.json`, and joins the separate enterprise finance and geography successors. The older alternative-cost report remains a preserved comparison, not the owned-facility investment decision.

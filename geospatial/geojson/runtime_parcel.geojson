@@ -1,0 +1,64 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "RT-PARCEL-001",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -119.45598534185818,
+              39.54419430301175
+            ],
+            [
+              -119.45395935338497,
+              39.54423711960228
+            ],
+            [
+              -119.45401463537735,
+              39.54580568923304
+            ],
+            [
+              -119.45604066937953,
+              39.54576287027039
+            ],
+            [
+              -119.45598534185818,
+              39.54419430301175
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "feature_id": "RT-PARCEL-001",
+        "object_id": "SH-SITE-0030",
+        "canonical_name": "SABLE HARBOR Northern Nevada Data Center \u2014 acquired / preconstruction",
+        "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+        "real_world_relation": "SYNTHETIC_PLANNING_ENVELOPE",
+        "canon_status": "PROPOSED",
+        "geometry_status": "SYNTHETIC_UNSURVEYED",
+        "location_method": "ENGINEERED_FROM_CONSTRAINTS",
+        "precision_class": "PLANNING_PIN_WITH_SYNTHETIC_ENVELOPE",
+        "horizontal_accuracy_m": null,
+        "public_precision": "UNSURVEYED",
+        "source_id": "SRC-RUNTIME-20260911",
+        "decision_id": "GEO-RUNTIME-20260911",
+        "valid_from": "2026-09-04",
+        "valid_to": null,
+        "recorded_at": "2026-09-11T00:00:00Z",
+        "source_effective_date": "2026-09-04",
+        "world_state_date": "2026-09-11",
+        "owner_entity": "SH-ENT-001",
+        "rights_type": "SYNTHETIC_ACQUISITION_NOT_REAL_TITLE",
+        "geometry_area_acres": 7.500000000057032,
+        "engineering_status": "LAND_ACQUIRED_PRECONSTRUCTION",
+        "commissioned_it_kw": 0,
+        "shell_complete": false,
+        "construction_method": "EPSG:32611 square centered on owner anchor, scaled to WGS84 ellipsoidal 7.5 acres; no cadastral tracing",
+        "notes": "0% vertical construction; 0 kW commissioned. No real APN. Forecast completion never creates history."
+      }
+    }
+  ]
+}

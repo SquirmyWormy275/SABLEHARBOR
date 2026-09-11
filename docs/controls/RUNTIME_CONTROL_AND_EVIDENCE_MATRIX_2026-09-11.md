@@ -1,5 +1,12 @@
 # Runtime Control and Evidence Matrix — Reno / Boise / Northern Nevada
 
+**Document ID:** SH-RT-CONTROL-001
+**Version:** 1.0.0
+**Prepared:** 2026-09-11
+**Owner:** Enterprise Technology Services with Legal, Finance, Procurement and Facilities
+**Authority:** Owner-authorized PR119 runtime mandate, pending repository acceptance
+**Structured companion:** `enterprise/services/source/runtime_sites_2026-09-11.json`; `runtime_capital_plan_2026-09-11.json`
+
 **Purpose:** implementation specification for the Common Controls Framework. This file defines design/evidence requirements; it does not assert operating effectiveness.
 
 | Domain | Reno primary | Boise recovery | Owned Northern Nevada | Evidence / test |
@@ -29,7 +36,7 @@
 
 ## Control-state taxonomy
 
-Every implementation record must carry one of: `DESIGN_ONLY`, `IMPLEMENTATION_IN_PROGRESS`, `IMPLEMENTED_NOT_TESTED`, `TESTED_DESIGN_EFFECTIVE`, `OPERATING_TEST_IN_PROGRESS`, `OPERATING_EFFECTIVE`, `EXCEPTION`, or `NOT_APPLICABLE`. Synthetic tests may use `SYNTHETIC_TEST_ONLY` and may never satisfy `OPERATING_EFFECTIVE`.
+Track control-definition status (draft/approved/effective/suspended/retired), implementation state, design assessment, operating assessment, evidence origin and test period separately. Current runtime design uses `DRAFT`, `DESIGN_ONLY`, `NOT_ASSESSED`, `NOT_ASSERTED`, and `SYNTHETIC_REFERENCE` respectively. A synthetic test cannot promote production operating effectiveness.
 
 ## Evidence population integrity
 
@@ -37,8 +44,8 @@ For access logs, incidents, changes, maintenance, backups, alerts, and provider 
 
 ## Runtime-specific acceptance tests
 
-1. Pull power feed A under controlled test; protected load remains available.
-2. Pull power feed B under controlled test.
+1. Under a provider-approved qualified-person procedure, test loss of power feed A and record protected-load behavior. Tenant staff must not operate live facility switchgear.
+2. Repeat the provider-approved qualified-person procedure for feed B with rollback and safety controls.
 3. Demonstrate generator/UPS transfer evidence at provider/owned layer as applicable.
 4. Fail primary carrier and demonstrate alternate route.
 5. Recover keys without Reno identity/KMS dependency.

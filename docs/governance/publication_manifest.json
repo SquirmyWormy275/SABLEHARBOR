@@ -913,6 +913,102 @@
       "source_sha256": "05ee1d4bbcad3ff2de9f623de0b57373acaaf611c0b161664a9f3e36b1066509",
       "brand": "j2",
       "normalizer": "pypdf"
+    },
+    {
+      "source": "docs/canon/RUNTIME_HOSTING_AND_DATA_CENTER_DECISIONS_2026-09-11.md",
+      "publication": "enterprise/runtime/publications/SH-RT-DEC-001_v1.0.0.pdf",
+      "sha256": "6093fa2b34b6d1fad3c787696c2b4c9c57fb6fdd885f35c13c3069ad71ab50be",
+      "source_sha256": "fd309a9bdf596ea96498b7207b60ea3bea70a35d8c418371aa96c06d928bb17b",
+      "brand": "corporate",
+      "normalizer": "pypdf"
+    },
+    {
+      "source": "docs/canon/RUNTIME_RECONCILIATION_INDEX_2026-09-11.md",
+      "publication": "enterprise/runtime/publications/SH-RT-INDEX-001_v1.0.0.pdf",
+      "sha256": "0f4d7452c016cc06c1fb966d17e0b6f658b21c3fe328573b4f9a2ab731fe7685",
+      "source_sha256": "cecdb5ce3be7b447601c664d2089d0203d25dc8a9baac9937e9b6e27cabce8e0",
+      "brand": "corporate",
+      "normalizer": "pypdf"
+    },
+    {
+      "source": "docs/controls/RUNTIME_CONTROL_AND_EVIDENCE_MATRIX_2026-09-11.md",
+      "publication": "enterprise/runtime/publications/SH-RT-CONTROL-001_v1.0.0.pdf",
+      "sha256": "d376f25bd9e82c0ff7aae3a945883b71b32b6aad3c22fa18118ba9e9173ae918",
+      "source_sha256": "b8661434b6af1580017fb9351879bee7078073e09094827b797c32c3253cdf9f",
+      "brand": "corporate",
+      "normalizer": "pypdf"
+    },
+    {
+      "source": "docs/facilities/NORTHERN_NEVADA_DATA_CENTER_LAYOUT_PROGRAM_2026-09-11.md",
+      "publication": "enterprise/runtime/publications/SH-RT-LAYOUT-001_v1.0.0.pdf",
+      "sha256": "d8ef924655eb257ffb9c9b5312b9d8cfc8e2bde1caab3f1988cd9910425a9fff",
+      "source_sha256": "464fe80b9b84c0128d11725aa95d9fcf6569ccd61562024e6523815ffe2ce4a4",
+      "brand": "corporate",
+      "normalizer": "pypdf"
+    },
+    {
+      "source": "docs/facilities/NORTHERN_NEVADA_DATA_CENTER_MASTER_PLAN_2026-09-11.md",
+      "publication": "enterprise/runtime/publications/SH-RT-FACILITY-001_v1.0.0.pdf",
+      "sha256": "48d1270b6a80b68e0a1b6bf80c348573dcfb9c7636a5ce0886380958ac60b380",
+      "source_sha256": "d2019cb2bf8633a7fbfde5942d1e507eafb2971f0eda8a12918531edde2255d1",
+      "brand": "corporate",
+      "normalizer": "pypdf"
+    },
+    {
+      "source": "docs/finance/RUNTIME_INFRASTRUCTURE_FINANCE_RECONCILIATION_2026-09-11.md",
+      "publication": "enterprise/runtime/publications/SH-RT-FINANCE-001_v1.0.0.pdf",
+      "sha256": "db8c2e3d8cc8380a5e76393f1256fb89d73c55f7cf62bce272dc4d97769efb83",
+      "source_sha256": "20558ea7ecde58914b7ccd44dc866f56c754b5eabd053eff01b43e7684aa40c8",
+      "brand": "corporate",
+      "normalizer": "pypdf"
+    },
+    {
+      "source": "docs/legal/MOCK_DEED_NORTHERN_NEVADA_DATA_CENTER_2026-09-04.md",
+      "publication": "enterprise/runtime/publications/SH-RT-DEED-001_v1.0.0.pdf",
+      "sha256": "6a181983f31910c281ff5320b141048360291364c96b91aea851054c3f825400",
+      "source_sha256": "aa1717ac07ea2968d0ad877045d57b29ec0766dd852a79bd61553fa24eb97d79",
+      "brand": "corporate",
+      "normalizer": "pypdf"
+    },
+    {
+      "source": "docs/procurement/RENO_BOISE_COLOCATION_RFP_2026-09-11.md",
+      "publication": "enterprise/runtime/publications/SH-RT-PROC-001_v1.0.0.pdf",
+      "sha256": "fc7b81a2e3a1b48f2a8fd8e55dd2338c0d6073d38fbb8bcbc09e264a72f4601f",
+      "source_sha256": "8b3782cf3ac7eb1ec2e1abe40d5428debb92ad739b14ad23e26bf28f82bf06ed",
+      "brand": "corporate",
+      "normalizer": "pypdf"
+    },
+    {
+      "source": "docs/technology/COLOCATION_SLA_SECURITY_AND_AUDIT_REQUIREMENTS_2026-09-11.md",
+      "publication": "enterprise/runtime/publications/SH-RT-SLA-001_v1.0.0.pdf",
+      "sha256": "ade6ae394ddf697875c16bfaac7da6af650da001f2c2a17ada4174a007dcfa0b",
+      "source_sha256": "ea2dc9b97a3dfa9cc0b231f2b7b92dad68345de2cbeb74fab06dc767cf669552",
+      "brand": "corporate",
+      "normalizer": "pypdf"
+    },
+    {
+      "source": "enterprise/runtime/docs/CONTRACT_DOSSIER.md",
+      "publication": "enterprise/runtime/publications/SH-RT-CONTRACT-001_v1.0.0.pdf",
+      "sha256": "9268bc73dfde08fa756d5bace341ec9f4981723d31a02bad8c9c965dce165815",
+      "source_sha256": "7cd01050b17f9451ff5bd341573289440c74fb190c01253bdc8197a6599d2ad1",
+      "brand": "corporate",
+      "normalizer": "pypdf"
+    },
+    {
+      "source": "enterprise/runtime/docs/ARCHITECTURE_AND_RUNBOOKS.md",
+      "publication": "enterprise/runtime/publications/SH-RT-ARCH-001_v1.0.0.pdf",
+      "sha256": "e481b0834fb203b33227950c55657492a65ce68c4ac5dbe923abf5c5357bb618",
+      "source_sha256": "e29ec59dd38917c2138e9c5b43863fccd66fa75b9a5735f4cfb931d6fc0f443d",
+      "brand": "corporate",
+      "normalizer": "pypdf"
+    },
+    {
+      "source": "enterprise/runtime/docs/ASSURANCE_SCOPE.md",
+      "publication": "enterprise/runtime/publications/SH-RT-ASSURANCE-001_v1.0.0.pdf",
+      "sha256": "0ffb836fd7b0bd4c444a5a2831de0b1d1fed0b451d402890dffda6dc1d16fa1d",
+      "source_sha256": "4db7e0b179802891b1a632d08d280445350339cee7fbb70a89d059020e587994",
+      "brand": "corporate",
+      "normalizer": "pypdf"
     }
   ]
 }

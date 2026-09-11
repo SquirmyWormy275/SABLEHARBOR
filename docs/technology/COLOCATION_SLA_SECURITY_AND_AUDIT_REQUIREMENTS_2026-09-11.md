@@ -1,5 +1,12 @@
 # Colocation SLA, Security, Audit, and Contract Requirements
 
+**Document ID:** SH-RT-SLA-001
+**Version:** 1.0.0
+**Prepared:** 2026-09-11
+**Owner:** Enterprise Technology Services with Legal, Finance, Procurement and Facilities
+**Authority:** Owner-authorized PR119 runtime mandate, pending repository acceptance
+**Structured companion:** `enterprise/services/source/runtime_sites_2026-09-11.json`; `runtime_capital_plan_2026-09-11.json`
+
 **Applies to:** Reno primary colocation and Boise independent recovery colocation.
 **Status:** mandatory procurement and control baseline; not an executed vendor agreement.
 
@@ -22,7 +29,7 @@ The provider supplies facility services. Sable Harbor retains ownership and auth
 ## 3. Required Boise recovery service
 
 - Separate provider/control plane from Reno unless formally risk-accepted; different customer-admin credentials and independent emergency contacts.
-- 6–25 kW initial recovery footprint, expandable as recovery design grows; dual A/B power; independent network carriers; 100% durable protected data capacity required even where recovery compute is reduced.
+- 25 kW provisional initial recovery footprint, with 50/100 kW expansion sensitivities as recovery design grows; dual A/B power; independent network carriers; 100% durable protected data capacity required even where recovery compute is reduced.
 - Recovery keys, DNS, identity, artifacts, runbooks, and break-glass access must not require the Reno environment to function.
 - Replication routes must be documented end to end. A private circuit is not assumed diverse merely because it is sold by a different carrier.
 
@@ -81,3 +88,7 @@ Sable Harbor retains title to equipment and data. Provider must support orderly 
 ## 13. Procurement red lines
 
 Reject or escalate any offer that lacks: dual power; credible carrier diversity; customer-owned HSM/network support; audit evidence; defined incident notification; controlled provider access; expansion rights; equipment removal rights; material subcontractor transparency; or recovery/exit cooperation.
+
+## Implemented draft and calculations
+
+The substantive customer-proposed [contract dossier](../../enterprise/runtime/docs/CONTRACT_DOSSIER.md) defines order hierarchy, measurement, graduated credits and negotiation gaps. `enterprise/runtime/security.py` re-performs the proposed SLA calculations. Neither document asserts vendor acceptance.

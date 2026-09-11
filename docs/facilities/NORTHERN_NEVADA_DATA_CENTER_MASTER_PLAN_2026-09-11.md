@@ -1,5 +1,12 @@
 # SABLE HARBOR Northern Nevada Data Center — Master Plan
 
+**Document ID:** SH-RT-FACILITY-001
+**Version:** 1.0.0
+**Prepared:** 2026-09-11
+**Owner:** Enterprise Technology Services with Legal, Finance, Procurement and Facilities
+**Authority:** Owner-authorized PR119 runtime mandate, pending repository acceptance
+**Structured companion:** `enterprise/services/source/runtime_sites_2026-09-11.json`; `runtime_capital_plan_2026-09-11.json`
+
 **Planning pin:** 39.5450, -119.4550
 **Planning district:** Tahoe-Reno Industrial Center / USA Parkway industrial corridor, Storey County, Nevada
 **Reality state:** fictional Sable Harbor facility in real geography; no real parcel/APN claimed

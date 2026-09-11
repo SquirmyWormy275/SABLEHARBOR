@@ -8,7 +8,7 @@
     "canon_status": "CONFLICT_REVIEW",
     "source_package_version": "0.1.0-rc4",
     "source_commit": "d91a22c35c91b213204411421de88815f27d8e16",
-    "source_geopackage_sha256": "0a1489e6e4605373cf0d25dd6e25a020c8d922ee9ec6c052d9410ad4e2303f0f",
+    "source_geopackage_sha256": "dbad2c303e9b325a7e98da96c278f619c639ffe51e6514e39be9104c819f75d8",
     "projection": "EPSG:26910;26917;26913",
     "build_timestamp": "2026-09-07T16:00:00+00:00",
     "builder": "geospatial/scripts/render_maps.py",
@@ -42,7 +42,7 @@
     "canon_status": "CONSTRAINED_CENSUS",
     "source_package_version": "0.1.0-rc4",
     "source_commit": "d91a22c35c91b213204411421de88815f27d8e16",
-    "source_geopackage_sha256": "0a1489e6e4605373cf0d25dd6e25a020c8d922ee9ec6c052d9410ad4e2303f0f",
+    "source_geopackage_sha256": "dbad2c303e9b325a7e98da96c278f619c639ffe51e6514e39be9104c819f75d8",
     "projection": "EPSG:5070",
     "build_timestamp": "2026-09-07T16:00:00+00:00",
     "builder": "geospatial/scripts/render_maps.py",
@@ -77,7 +77,7 @@
     "canon_status": "CANON_ANCHOR_WITH_PROPOSED_SITE_GEOMETRY",
     "source_package_version": "0.1.0-rc4",
     "source_commit": "d91a22c35c91b213204411421de88815f27d8e16",
-    "source_geopackage_sha256": "0a1489e6e4605373cf0d25dd6e25a020c8d922ee9ec6c052d9410ad4e2303f0f",
+    "source_geopackage_sha256": "dbad2c303e9b325a7e98da96c278f619c639ffe51e6514e39be9104c819f75d8",
     "projection": "EPSG:26913",
     "build_timestamp": "2026-09-07T16:00:00+00:00",
     "builder": "geospatial/scripts/render_maps.py",
@@ -112,7 +112,7 @@
     "canon_status": "PROPOSED_SEARCH_AREA",
     "source_package_version": "0.1.0-rc4",
     "source_commit": "d91a22c35c91b213204411421de88815f27d8e16",
-    "source_geopackage_sha256": "0a1489e6e4605373cf0d25dd6e25a020c8d922ee9ec6c052d9410ad4e2303f0f",
+    "source_geopackage_sha256": "dbad2c303e9b325a7e98da96c278f619c639ffe51e6514e39be9104c819f75d8",
     "projection": "EPSG:26910",
     "build_timestamp": "2026-09-07T16:00:00+00:00",
     "builder": "geospatial/scripts/render_maps.py",
@@ -145,7 +145,7 @@
     "canon_status": "PROPOSED_SEARCH_AREA",
     "source_package_version": "0.1.0-rc4",
     "source_commit": "d91a22c35c91b213204411421de88815f27d8e16",
-    "source_geopackage_sha256": "0a1489e6e4605373cf0d25dd6e25a020c8d922ee9ec6c052d9410ad4e2303f0f",
+    "source_geopackage_sha256": "dbad2c303e9b325a7e98da96c278f619c639ffe51e6514e39be9104c819f75d8",
     "projection": "EPSG:26917",
     "build_timestamp": "2026-09-07T16:00:00+00:00",
     "builder": "geospatial/scripts/render_maps.py",
@@ -178,7 +178,7 @@
     "canon_status": "PROPOSED_SEARCH_AREA",
     "source_package_version": "0.1.0-rc4",
     "source_commit": "d91a22c35c91b213204411421de88815f27d8e16",
-    "source_geopackage_sha256": "0a1489e6e4605373cf0d25dd6e25a020c8d922ee9ec6c052d9410ad4e2303f0f",
+    "source_geopackage_sha256": "dbad2c303e9b325a7e98da96c278f619c639ffe51e6514e39be9104c819f75d8",
     "projection": "EPSG:26917",
     "build_timestamp": "2026-09-07T16:00:00+00:00",
     "builder": "geospatial/scripts/render_maps.py",
@@ -211,7 +211,7 @@
     "canon_status": "PROPOSED_SEARCH_AREA",
     "source_package_version": "0.1.0-rc4",
     "source_commit": "d91a22c35c91b213204411421de88815f27d8e16",
-    "source_geopackage_sha256": "0a1489e6e4605373cf0d25dd6e25a020c8d922ee9ec6c052d9410ad4e2303f0f",
+    "source_geopackage_sha256": "dbad2c303e9b325a7e98da96c278f619c639ffe51e6514e39be9104c819f75d8",
     "projection": "EPSG:26913",
     "build_timestamp": "2026-09-07T16:00:00+00:00",
     "builder": "geospatial/scripts/render_maps.py",
@@ -223,11 +223,11 @@
     "files": {
       "pdf": {
         "path": "SH-MAP-BST-001_wamsutter-interchange-study.pdf",
-        "sha256": "994412336f42a66d3172f4e090bdde4911f3cbcf60294268d2f9fd469e27433e"
+        "sha256": "de3567b949a87bbb6b7bf0408a035e980302bcb6b974b904253068461bfee3ab"
       },
       "svg": {
         "path": "SH-MAP-BST-001_wamsutter-interchange-study.svg",
-        "sha256": "d44f3fc270ccfdfbea856dca1b27483281ea285e28e8483e20931b6a818a6d8d"
+        "sha256": "ea98274407277aca4777c2acbc94ad8640fdf88521073d583d440a994760b458"
       },
       "png": {
         "path": "SH-MAP-BST-001_wamsutter-interchange-study.png",
@@ -244,7 +244,7 @@
     "canon_status": "CONFLICT_REVIEW",
     "source_package_version": "0.1.0-rc4",
     "source_commit": "d91a22c35c91b213204411421de88815f27d8e16",
-    "source_geopackage_sha256": "0a1489e6e4605373cf0d25dd6e25a020c8d922ee9ec6c052d9410ad4e2303f0f",
+    "source_geopackage_sha256": "dbad2c303e9b325a7e98da96c278f619c639ffe51e6514e39be9104c819f75d8",
     "projection": "EPSG:26913;26917",
     "build_timestamp": "2026-09-07T16:00:00+00:00",
     "builder": "geospatial/scripts/render_maps.py",
@@ -280,7 +280,7 @@
     "canon_status": "PROPOSED_SITE_GEOMETRY",
     "source_package_version": "0.1.0-rc4",
     "source_commit": "d91a22c35c91b213204411421de88815f27d8e16",
-    "source_geopackage_sha256": "0a1489e6e4605373cf0d25dd6e25a020c8d922ee9ec6c052d9410ad4e2303f0f",
+    "source_geopackage_sha256": "dbad2c303e9b325a7e98da96c278f619c639ffe51e6514e39be9104c819f75d8",
     "projection": "EPSG:26913",
     "build_timestamp": "2026-09-07T16:00:00+00:00",
     "builder": "geospatial/scripts/render_maps.py",
@@ -298,7 +298,7 @@
       },
       "svg": {
         "path": "SH-MAP-RWM-002_red-wash-site-study.svg",
-        "sha256": "53271ee4260c72690ec87c6d60e8dd00dcac8523c12abeb1574f359bda3d9456"
+        "sha256": "f8d0bd44488849ab3c6b45b807e2aa2783c5e60d38b355d768f9df032e4c5920"
       },
       "png": {
         "path": "SH-MAP-RWM-002_red-wash-site-study.png",
@@ -315,7 +315,7 @@
     "canon_status": "PRE_ACQUISITION_CASE_2026_01_06",
     "source_package_version": "0.1.0-rc4",
     "source_commit": "d91a22c35c91b213204411421de88815f27d8e16",
-    "source_geopackage_sha256": "0a1489e6e4605373cf0d25dd6e25a020c8d922ee9ec6c052d9410ad4e2303f0f",
+    "source_geopackage_sha256": "dbad2c303e9b325a7e98da96c278f619c639ffe51e6514e39be9104c819f75d8",
     "projection": "EPSG:26913",
     "build_timestamp": "2026-09-07T16:00:00+00:00",
     "builder": "geospatial/scripts/render_maps.py",
@@ -351,7 +351,7 @@
     "canon_status": "LOCKED_DERIVED_IMPLEMENTATION",
     "source_package_version": "0.1.0-rc4",
     "source_commit": "d91a22c35c91b213204411421de88815f27d8e16",
-    "source_geopackage_sha256": "0a1489e6e4605373cf0d25dd6e25a020c8d922ee9ec6c052d9410ad4e2303f0f",
+    "source_geopackage_sha256": "dbad2c303e9b325a7e98da96c278f619c639ffe51e6514e39be9104c819f75d8",
     "projection": "EPSG:26913",
     "build_timestamp": "2026-09-07T16:00:00+00:00",
     "builder": "geospatial/scripts/render_maps.py",

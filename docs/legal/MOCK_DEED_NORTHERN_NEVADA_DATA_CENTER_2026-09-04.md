@@ -1,5 +1,12 @@
 # MOCK DEED — SABLE HARBOR NORTHERN NEVADA DATA CENTER
 
+**Document ID:** SH-RT-DEED-001
+**Version:** 1.0.0
+**Prepared:** 2026-09-11
+**Owner:** Enterprise Technology Services with Legal, Finance, Procurement and Facilities
+**Authority:** Owner-authorized PR119 runtime mandate, pending repository acceptance
+**Structured companion:** `enterprise/services/source/runtime_sites_2026-09-11.json`; `runtime_capital_plan_2026-09-11.json`
+
 **SYNTHETIC PLANNING INSTRUMENT — NOT A REAL DEED, NOT RECORDED, NO REAL APN, NO CLAIM AGAINST REAL PROPERTY.**
 
 This document exists solely to keep the SABLE HARBOR fictional planning universe, GeoPackage, facilities records, finance model, and construction timeline internally consistent. The runtime transaction remains a branch proposal pending acceptance of PR #119; the existing parent legal identity is already established in accepted canon.

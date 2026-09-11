@@ -3853,6 +3853,72 @@
       "next_action": "Maintain industrial source identity; further precision requires supported source revision.",
       "notes": "Accepted synthetic case implementation; not survey, land title or regulatory qualification.",
       "decision_id": "GEO-D018"
+    },
+    {
+      "object_id": "SH-SITE-0028",
+      "canonical_name": "Reno primary colocation",
+      "object_type": "COMPUTE_INFRASTRUCTURE",
+      "entity_id": "SH-ENT-001",
+      "place": "Tahoe-Reno, Nevada",
+      "granularity": "REGIONAL_CONSTRAINT",
+      "census_status": "REGISTERED",
+      "canon_status": "PROPOSED",
+      "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+      "source_id": "SRC-RUNTIME-20260911",
+      "source_path": "enterprise/services/source/runtime_sites_2026-09-11.json",
+      "source_commit": null,
+      "source_locator": "RUNTIME-RENO-COLO",
+      "exact_source_wording": "PROVIDER_SELECTED_PROCUREMENT_PENDING",
+      "relevant_date": "2026-09-11",
+      "date_precision": "DAY",
+      "conflict_id": "",
+      "next_action": "Procurement/design acceptance and evidence gates",
+      "notes": "PROVIDER_SELECTED_PROCUREMENT_PENDING; provider facility reference is not Sable Harbor occupancy.",
+      "decision_id": "GEO-RUNTIME-20260911"
+    },
+    {
+      "object_id": "SH-SITE-0029",
+      "canonical_name": "Boise independent recovery colocation",
+      "object_type": "COMPUTE_INFRASTRUCTURE",
+      "entity_id": "SH-ENT-001",
+      "place": "Boise, Idaho",
+      "granularity": "REGIONAL_CONSTRAINT",
+      "census_status": "REGISTERED",
+      "canon_status": "PROPOSED",
+      "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+      "source_id": "SRC-RUNTIME-20260911",
+      "source_path": "enterprise/services/source/runtime_sites_2026-09-11.json",
+      "source_commit": null,
+      "source_locator": "RUNTIME-BOISE-DR",
+      "exact_source_wording": "PROVIDER_SELECTED_PROCUREMENT_PENDING",
+      "relevant_date": "2026-09-11",
+      "date_precision": "DAY",
+      "conflict_id": "",
+      "next_action": "Procurement/design acceptance and evidence gates",
+      "notes": "PROVIDER_SELECTED_PROCUREMENT_PENDING; provider facility reference is not Sable Harbor occupancy.",
+      "decision_id": "GEO-RUNTIME-20260911"
+    },
+    {
+      "object_id": "SH-SITE-0030",
+      "canonical_name": "SABLE HARBOR Northern Nevada Data Center",
+      "object_type": "COMPUTE_INFRASTRUCTURE",
+      "entity_id": "SH-ENT-001",
+      "place": "Tahoe-Reno Industrial Center / USA Parkway industrial district, Storey County, Nevada",
+      "granularity": "PLANNING_PIN",
+      "census_status": "REGISTERED",
+      "canon_status": "PROPOSED",
+      "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+      "source_id": "SRC-RUNTIME-20260911",
+      "source_path": "enterprise/services/source/runtime_sites_2026-09-11.json",
+      "source_commit": null,
+      "source_locator": "RUNTIME-NN-OWNED-DC",
+      "exact_source_wording": "LAND_ACQUIRED_PRECONSTRUCTION",
+      "relevant_date": "2026-09-04",
+      "date_precision": "DAY",
+      "conflict_id": "",
+      "next_action": "Procurement/design acceptance and evidence gates",
+      "notes": "LAND_ACQUIRED_PRECONSTRUCTION; provider facility reference is not Sable Harbor occupancy.",
+      "decision_id": "GEO-RUNTIME-20260911"
     }
   ],
   "entities": [
@@ -5414,6 +5480,22 @@
       "coverage": "Current canon within stated supersession scope",
       "source_quality": "CONTROLLING_CANON_OR_EXPLICIT_DERIVED_IMPLEMENTATION",
       "notes": "Preserved exact snapshot; implementation fact states remain qualified."
+    },
+    {
+      "source_id": "SRC-RUNTIME-20260911",
+      "title": "Runtime estate September 2026",
+      "publisher_or_author": "Sable Harbor synthetic archive",
+      "source_type": "STRUCTURED_OWNER_DECISION",
+      "publication_date": "2026-09-11",
+      "accessed_date": "2026-09-11",
+      "url_or_repo_path": "enterprise/services/source/runtime_sites_2026-09-11.json",
+      "repository_commit": null,
+      "file_sha256": "fa216f629762503865fd9f1a3207e87691cd484cec9885bf25ce045b4525519c",
+      "license": "Owner-authorized synthetic project material",
+      "citation": "enterprise/services/source/runtime_sites_2026-09-11.json",
+      "coverage": "Reno/Boise selected relationships and synthetic owned parcel",
+      "source_quality": "OWNER_AUTHORIZED_PENDING_MERGE",
+      "notes": "No tenancy, real property title, or operating effectiveness asserted."
     }
   ],
   "decisions": [
@@ -5845,6 +5927,25 @@
       "alternatives_considered": "Earlier PR94/PR96 inputs preserved with explicit supersession",
       "supersedes_decision_id": "GEO-D015",
       "notes": "Names and regional constraints do not establish survey, title, or statutory certification."
+    },
+    {
+      "decision_id": "GEO-RUNTIME-20260911",
+      "decision_date": "2026-09-11",
+      "decision_title": "Runtime selection and synthetic parcel integration",
+      "decision_type": "RUNTIME_SUCCESSOR",
+      "affected_object_ids": [
+        "SH-SITE-0028",
+        "SH-SITE-0029",
+        "SH-SITE-0030"
+      ],
+      "decision_status": "OWNER_AUTHORIZED_PENDING_MERGE",
+      "deciding_authority": "Owner PR119 mandate",
+      "source_conversation": "Repository handover",
+      "source_document": "enterprise/services/source/runtime_sites_2026-09-11.json",
+      "rationale": "Selected geography is distinct from occupancy and construction.",
+      "alternatives_considered": "Preserve existing Alexandria hosting concept ID.",
+      "supersedes_decision_id": null,
+      "notes": "Source-prepared September 11; effective land event September 4."
     }
   ],
   "relationships": [
@@ -6120,6 +6221,45 @@
       "source_id": "SRC-CURRENT-OPS",
       "decision_id": "GEO-D018",
       "notes": "Current modeled owner; original facility opening does not backdate ownership."
+    },
+    {
+      "relationship_id": "REL-RUNTIME-RENO-COLO",
+      "subject_id": "SH-SITE-0016",
+      "predicate": "PLANNED_HOSTING_AT",
+      "object_id": "SH-SITE-0028",
+      "valid_from": "2026-09-11",
+      "valid_to": null,
+      "date_text": "2026-09-11",
+      "canon_status": "PROPOSED",
+      "source_id": "SRC-RUNTIME-20260911",
+      "decision_id": "GEO-RUNTIME-20260911",
+      "notes": "No installed placement; owned migration requires accepted commissioning and recovery."
+    },
+    {
+      "relationship_id": "REL-RUNTIME-BOISE-DR",
+      "subject_id": "SH-SITE-0016",
+      "predicate": "PLANNED_RECOVERY_AT",
+      "object_id": "SH-SITE-0029",
+      "valid_from": "2026-09-11",
+      "valid_to": null,
+      "date_text": "2026-09-11",
+      "canon_status": "PROPOSED",
+      "source_id": "SRC-RUNTIME-20260911",
+      "decision_id": "GEO-RUNTIME-20260911",
+      "notes": "No installed placement; owned migration requires accepted commissioning and recovery."
+    },
+    {
+      "relationship_id": "REL-RUNTIME-NN-OWNED-DC",
+      "subject_id": "SH-SITE-0016",
+      "predicate": "PLANNED_HOSTING_AT",
+      "object_id": "SH-SITE-0030",
+      "valid_from": "2026-09-11",
+      "valid_to": null,
+      "date_text": "2026-09-11",
+      "canon_status": "PROPOSED",
+      "source_id": "SRC-RUNTIME-20260911",
+      "decision_id": "GEO-RUNTIME-20260911",
+      "notes": "No installed placement; owned migration requires accepted commissioning and recovery."
     }
   ],
   "conflicts": [
@@ -6388,7 +6528,8 @@
     "red_wash_anchor": "red_wash_anchor",
     "industrial_facilities": "industrial_facilities",
     "industrial_tracks": "industrial_tracks",
-    "taylor_hub": "taylor_hub"
+    "taylor_hub": "taylor_hub",
+    "runtime_parcel": "runtime_parcel"
   },
   "business_working_inputs": {
     "source_id": "SRC-ADDENDUM-20260905",

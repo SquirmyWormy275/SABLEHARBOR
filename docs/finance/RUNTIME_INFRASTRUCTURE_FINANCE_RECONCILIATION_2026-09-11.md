@@ -1,5 +1,12 @@
 # Runtime Infrastructure Finance and Headcount Reconciliation — 2026-09-11
 
+**Document ID:** SH-RT-FINANCE-001
+**Version:** 1.0.0
+**Prepared:** 2026-09-11
+**Owner:** Enterprise Technology Services with Legal, Finance, Procurement and Facilities
+**Authority:** Owner-authorized PR119 runtime mandate, pending repository acceptance
+**Structured companion:** `enterprise/services/source/runtime_sites_2026-09-11.json`; `runtime_capital_plan_2026-09-11.json`
+
 **State:** planning reconciliation; does not assert invoices, funded appropriations, occupied positions, executed contracts, or operating controls.
 
 ## Scope
@@ -31,8 +38,8 @@ Servers, GPUs, storage, network, HSMs, backup appliances, spares, and refresh re
 | Item | 2026-09-11 state | Planning treatment |
 |---|---|---|
 | Northern Nevada 7.5-acre planning parcel | acquired in fictional planning universe | $3.0M planning capital event |
-| Survey/geotech/environmental/title geometry | in progress/authorized | forecast/commitment; amount TBD |
-| Utility/fiber studies | in progress/authorized | forecast; amount TBD |
+| Survey/geotech/environmental/title geometry | in progress/authorized | authorized scope; $200,000 combined study forecast, no invoice |
+| Utility/fiber studies | in progress/authorized | included in the $200,000 study forecast; no invoice |
 | Reno colo contract | not executed | no vendor payable; maintain quote envelope |
 | Boise recovery contract | not executed | no vendor payable; maintain quote envelope |
 | Vertical construction | not started | zero construction completion/spend asserted |
@@ -64,7 +71,7 @@ The prior synthetic model's roughly 7.1 FTE direct Alexandria technical allocati
 ## Accounting controls
 
 - Land, building, site improvements, critical plant, IT hardware, software, colocation, maintenance, utilities, and labor use separate cost objects.
-- Capitalization/depreciation starts only when the applicable asset is placed in service under Finance policy; land is nondepreciable.
+- Eligible construction costs accumulate in CIP as incurred; transfer to the applicable in-service component and start depreciation only under the accepted readiness policy. Land is nondepreciable.
 - Construction in progress is distinct from operating property, plant, and equipment.
 - Supplier deposits and prepaid colo are not capital assets merely because paid upfront.
 - Incentives/abatements are not booked until eligibility and approval are evidenced.
@@ -74,3 +81,7 @@ The prior synthetic model's roughly 7.1 FTE direct Alexandria technical allocati
 ## Decision gates
 
 Finance must approve: land/planning-universe accounting treatment; predevelopment envelope; construction authorization; long-lead equipment authorization; production IT procurement; and migration. Each gate must show sources, quotes, contingency, cash timing, capitalization treatment, headcount effect, and sensitivity to delayed demand.
+
+## Executable development successor
+
+The original runtime capital source now contains explicit study/design/contingency phasing, workload drivers and role requirements consumed by `enterprise/runtime/planning.py`. Its balanced $3M land adjustment uses unresolved settlement clearing and claims no paid cash, loan or accepted vendor payable. Gross unfunded requests are separately exported. The `enterprise/runtime/build_finance.py` successor posts the land overlay and conditional 2027–2031 runtime requests through enterprise statements, preserves other 2026 journals and independently verifies the exact bridge. The seven-sheet runtime workbook includes consolidated enterprise rows. These remain development outputs pending clean-source reproduction and release acceptance.

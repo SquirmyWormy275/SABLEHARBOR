@@ -400,6 +400,23 @@ DOCS.append((
 ))
 
 
+# Explicit PR119 runtime publications; development handover is reference-only.
+DOCS.extend([
+    ('docs/canon/RUNTIME_HOSTING_AND_DATA_CENTER_DECISIONS_2026-09-11.md', 'enterprise/runtime/publications/SH-RT-DEC-001_v1.0.0.pdf', 'corporate'),
+    ('docs/canon/RUNTIME_RECONCILIATION_INDEX_2026-09-11.md', 'enterprise/runtime/publications/SH-RT-INDEX-001_v1.0.0.pdf', 'corporate'),
+    ('docs/controls/RUNTIME_CONTROL_AND_EVIDENCE_MATRIX_2026-09-11.md', 'enterprise/runtime/publications/SH-RT-CONTROL-001_v1.0.0.pdf', 'corporate'),
+    ('docs/facilities/NORTHERN_NEVADA_DATA_CENTER_LAYOUT_PROGRAM_2026-09-11.md', 'enterprise/runtime/publications/SH-RT-LAYOUT-001_v1.0.0.pdf', 'corporate'),
+    ('docs/facilities/NORTHERN_NEVADA_DATA_CENTER_MASTER_PLAN_2026-09-11.md', 'enterprise/runtime/publications/SH-RT-FACILITY-001_v1.0.0.pdf', 'corporate'),
+    ('docs/finance/RUNTIME_INFRASTRUCTURE_FINANCE_RECONCILIATION_2026-09-11.md', 'enterprise/runtime/publications/SH-RT-FINANCE-001_v1.0.0.pdf', 'corporate'),
+    ('docs/legal/MOCK_DEED_NORTHERN_NEVADA_DATA_CENTER_2026-09-04.md', 'enterprise/runtime/publications/SH-RT-DEED-001_v1.0.0.pdf', 'corporate'),
+    ('docs/procurement/RENO_BOISE_COLOCATION_RFP_2026-09-11.md', 'enterprise/runtime/publications/SH-RT-PROC-001_v1.0.0.pdf', 'corporate'),
+    ('docs/technology/COLOCATION_SLA_SECURITY_AND_AUDIT_REQUIREMENTS_2026-09-11.md', 'enterprise/runtime/publications/SH-RT-SLA-001_v1.0.0.pdf', 'corporate'),
+    ('enterprise/runtime/docs/CONTRACT_DOSSIER.md', 'enterprise/runtime/publications/SH-RT-CONTRACT-001_v1.0.0.pdf', 'corporate'),
+    ('enterprise/runtime/docs/ARCHITECTURE_AND_RUNBOOKS.md', 'enterprise/runtime/publications/SH-RT-ARCH-001_v1.0.0.pdf', 'corporate'),
+    ('enterprise/runtime/docs/ASSURANCE_SCOPE.md', 'enterprise/runtime/publications/SH-RT-ASSURANCE-001_v1.0.0.pdf', 'corporate'),
+])
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--normalizer", choices=("auto", "qpdf", "pypdf"), default="auto")

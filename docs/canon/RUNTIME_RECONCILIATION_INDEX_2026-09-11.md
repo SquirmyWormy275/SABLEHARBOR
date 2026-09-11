@@ -1,5 +1,12 @@
 # Runtime Reconciliation Index — 2026-09-11
 
+**Document ID:** SH-RT-INDEX-001
+**Version:** 1.0.0
+**Prepared:** 2026-09-11
+**Owner:** Enterprise Technology Services with Legal, Finance, Procurement and Facilities
+**Authority:** Owner-authorized PR119 runtime mandate, pending repository acceptance
+**Structured companion:** `enterprise/services/source/runtime_sites_2026-09-11.json`; `runtime_capital_plan_2026-09-11.json`
+
 This index reconciles older hosting/planning text against the September 11 runtime decisions. Later entries control where an older file merely preserves an open question that is now closed.
 
 ## Closed/superseded open items
@@ -32,7 +39,7 @@ The following remain open by design:
 
 ## Geospatial reconciliation
 
-`geospatial/sources/RUNTIME_INFRASTRUCTURE_GEO_ADDENDUM_2026-09-11.md` controls runtime map truth state. It must be ingested into generated GeoPackage/register outputs before those outputs may be described as reconciled. Until regeneration occurs, older generated maps/registers are stale with respect to this addendum.
+`geospatial/sources/RUNTIME_INFRASTRUCTURE_GEO_ADDENDUM_2026-09-11.md` controls runtime map truth state. `geospatial/scripts/sync_runtime.py` now consumes the structured runtime sites into the catalog, parcel GeoJSON and relationships. GeoPackage, registers, QGIS project and maps have been regenerated in the implementation branch; exact provider coordinates remain unverified.
 
 ## CCF reconciliation
 

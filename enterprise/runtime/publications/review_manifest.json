@@ -1,0 +1,18 @@
+{
+  "source_content_id": "b025486ae365b333d88972211db7349a3b9f24c9f4c19ed4af981f628e278480",
+  "runtime_source_sha256": "b701d4627ca0774c60dd818e628d348e0a38f11ca78c24e0d6badea2ddfaa943",
+  "enterprise_source_sha256": "99adca9e623ed1984276bcda00bbaa272f45891dc7002e81c8d4045dd3d91a8b",
+  "workbook_sha256": "006767e27abe269314f111e48183d2a03d7b1de1347a29809f0b1ac5f90e912d",
+  "tooling": "XlsxWriter distinct runtime successor; prior Artifact Tool workbook preserved",
+  "formula_checks": 150,
+  "sheets": [
+    "Summary",
+    "Capacity",
+    "Cash requests",
+    "Investment",
+    "Workforce",
+    "Phases",
+    "Enterprise"
+  ],
+  "visual_review_record": "../VISUAL_REVIEW.md"
+}

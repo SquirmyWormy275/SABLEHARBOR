@@ -8,7 +8,7 @@
       "geography": "Tahoe-Reno, Nevada",
       "status": "PROVIDER_SELECTED_PROCUREMENT_PENDING",
       "provider": "Switch",
-      "facility": "Switch TAHOE RENO — The Citadel Campus",
+      "facility": "Switch TAHOE RENO \u2014 The Citadel Campus",
       "provider_selection_date": "2026-09-11",
       "contract_executed": false,
       "capacity_reserved": false,
@@ -16,7 +16,23 @@
       "initial_usable_it_kw_high": 100,
       "required_expansion_kw": 250,
       "operating": false,
-      "evidence_boundary": "Selection is canon; provider public claims and proposed commercial terms are not operating evidence until contract and acceptance."
+      "evidence_boundary": "Selection is canon; provider public claims and proposed commercial terms are not operating evidence until contract and acceptance.",
+      "entity_id": "SHI",
+      "geospatial_entity_id": "SH-ENT-001",
+      "facility_id": "FAC-PRIMARY",
+      "geospatial_site_id": "SH-SITE-0028",
+      "planned_environment_ids": [
+        "ENV-PROD",
+        "ENV-RESTRICTED",
+        "ENV-DEV"
+      ],
+      "dependency_id": "DEP-colo-primary",
+      "record_origin": "OWNER_DECISION",
+      "installed_capacity_kw": null,
+      "provider_id": "CP-SWITCH",
+      "contract_id": "RT-SO-RENO",
+      "contract_status": "DRAFT",
+      "provider_legal_name": null
     },
     {
       "id": "RUNTIME-BOISE-DR",
@@ -30,17 +46,38 @@
       "contract_executed": false,
       "capacity_reserved": false,
       "operating": false,
-      "independent_from_primary": true,
       "published_planning_price_usd_per_kw_month": 300,
       "published_power_included": true,
       "published_standard_term_months": 12,
-      "evidence_boundary": "Published price/specifications are procurement baselines; contract, audit scope, technical configuration and recovery tests remain required evidence."
+      "evidence_boundary": "Published price/specifications are procurement baselines; contract, audit scope, technical configuration and recovery tests remain required evidence.",
+      "entity_id": "SHI",
+      "geospatial_entity_id": "SH-ENT-001",
+      "facility_id": "FAC-RECOVERY",
+      "geospatial_site_id": "SH-SITE-0029",
+      "planned_environment_ids": [
+        "ENV-RECOVERY"
+      ],
+      "dependency_id": "DEP-colo-recovery",
+      "record_origin": "OWNER_DECISION",
+      "installed_capacity_kw": null,
+      "provider_id": "CP-IDACORE",
+      "contract_id": "RT-SO-BOISE",
+      "contract_status": "DRAFT",
+      "provider_legal_name": null,
+      "independence_required": true,
+      "independence_verified": false,
+      "independence_evidence": [],
+      "initial_usable_it_kw_low": 25,
+      "initial_usable_it_kw_high": 25
     },
     {
       "id": "RUNTIME-NN-OWNED-DC",
       "name": "SABLE HARBOR Northern Nevada Data Center",
       "geography": "Tahoe-Reno Industrial Center / USA Parkway industrial district, Storey County, Nevada",
-      "planning_lon_lat": [-119.4550, 39.5450],
+      "planning_lon_lat": [
+        -119.455,
+        39.545
+      ],
       "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
       "parcel_acres_planning": 7.5,
       "real_apn": null,
@@ -56,7 +93,18 @@
       "planned_initial_critical_kw_high": 500,
       "planned_utility_path_kw": 1000,
       "preserve_expansion_path_kw": 2000,
-      "operating": false
+      "operating": false,
+      "entity_id": "SHI",
+      "geospatial_entity_id": "SH-ENT-001",
+      "facility_id": "FAC-OWNED",
+      "geospatial_site_id": "SH-SITE-0030",
+      "planned_environment_ids": [],
+      "dependency_id": null,
+      "record_origin": "OWNER_DECISION",
+      "installed_capacity_kw": null
     }
-  ]
+  ],
+  "schema_version": "1.0.0",
+  "repository_acceptance": "OWNER_AUTHORIZED_PENDING_MERGE",
+  "recorded_on": "2026-09-11"
 }
