@@ -4,6 +4,8 @@ Open the [drill-down atlas](../maps/index.html), [portable atlas PDF](../maps/SA
 
 The September 11, 2026 owner handover authorized recovery, an integrated Sacramento campus model, explicit population/space reconciliation, facility coverage, saved plans, atlas navigation and repository closeout. This implementation is a **modelled planning package**, not a claim of acquired property, construction, occupied floors or new personnel. Accepted canon continues to control institutional facts. [Maintainer authority](../../MAINTAINERS.md) and [delivery policy](../../docs/governance/REPOSITORY_DELIVERY_AND_PACKAGING_POLICY.md) apply.
 
+[Dated decision and closeout record](CLOSEOUT_2026-09-11.md) preserves the owner direction, acceptance scope, delivered totals and external dependencies.
+
 ## Authoritative inputs and derived records
 
 - [Population policy and evidence bridge](population/BRIDGE.md): 44 named employees and seven nonemployee directors; J2 237 billets, six named occupants, 231 unnamed-status billets, unknown vacancies. Enterprise actual population remains unknown.
