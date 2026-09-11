@@ -1,0 +1,1525 @@
+{
+  "status": "PASS",
+  "review_date": "2026-09-11",
+  "reviewer": "independent recovery and visual-QA agent",
+  "scope": "63 standalone facility sheets. Atlas HTML and combined PDF reviewed separately in ATLAS_REVIEW.json.",
+  "base_commit": "786fc9a5311a04dde92ee6dbb08ac3b77a380200",
+  "manifest_path": "geospatial/maps/facilities/MANIFEST.json",
+  "manifest_sha256": "e8681a47549ce0738ee16fc61cbe9e80feb5a894215635822ec124761ef4050c",
+  "source_sha256": {
+    "geospatial/facilities/source/campus.json": "41de327022a85cca9ba6509953e5fa83e0bf8dcbb59c6741848ad997a839cd26",
+    "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
+    "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
+    "geospatial/facilities/render.py": "bce0e329fa603b7cadceee40debfeb25397a9b1b9385863f318badf3bf090a24",
+    "geospatial/registers/MAP_ID_REGISTER.json": "690ebe85bb199d6e863c0d28d268c7cc155574fceed6b38c19520e2e55aee61c"
+  },
+  "generator_sha256": "bce0e329fa603b7cadceee40debfeb25397a9b1b9385863f318badf3bf090a24",
+  "sheet_count": 63,
+  "artifact_count": 189,
+  "counts": {
+    "site": 16,
+    "building": 19,
+    "floor": 27,
+    "phasing": 1
+  },
+  "method": [
+    "Every PDF page rendered through PyMuPDF at 1600x1000 and manually inspected individually.",
+    "All 63 SVG sources XML-parsed and CairoSVG rendered; RGB pixels exactly match saved PNG.",
+    "All 189 artifact hashes checked against manifest. Final PDF renders pixel-compared with individually inspected views, accounting for reproducibility-check PDF metadata changes.",
+    "All 19 changed visual sheets individually re-inspected after final corrections; unchanged 44 retained individually inspected source.",
+    "Six contact sheets index pages; individual readable full-page review is approval basis."
+  ],
+  "corrections_verified": [
+    "Sidebar/footer overflow and long stacking notes removed.",
+    "Room symbols and capacity labels separated; varied program widths and access legends.",
+    "Protected stairs, upper-floor exit treatment and single-storey exterior exits distinguished; B06 stacking prose corrected.",
+    "Sacramento 46 private rooms with 2 wider accessible suites and partial-width ensuite; Fort 6 temporary guest rooms.",
+    "Public/staff/restricted/audit classifications corrected; J2/Audit commentary scoped to Sacramento.",
+    "Master circulation connections and entrance markers; labelplates after routes and small-footprint IDs backed by dark plates.",
+    "Industrial perimeter access reservations without installed rail/plant claims; warehouse support labels shortened to fit.",
+    "CRD arrival label shortened and scale endpoints separated including RWM021.",
+    "September 2026 status and SAC022 phasing/capacity distinctions readable."
+  ],
+  "unresolved_visual_findings": [],
+  "limits": [
+    "Concept-plan publication and consistency QA; not surveyed geometry, occupancy evidence or coordinated structural/fire/accessibility engineering approval.",
+    "Unresolved engineering studies remain unresolved; review does not promote illustrative/proposed elements to built status."
+  ],
+  "artifacts": [
+    {
+      "id": "SH-MAP-SAC-002",
+      "kind": "site",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-002.svg",
+          "sha256": "fdd5d4b1a9caaffca15c65bcd8fe2e374a25dd88e118bd9770a2e97b1b4c89fb"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-002.png",
+          "sha256": "647c2f4aec6cd60a57ed56f4910fa3e75f33b41a11ff8afb4e97f8f833433ee8"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-002.pdf",
+          "sha256": "66e59fad2134ffe4cb98e355bd4697a5e444e0e69a732c551f2bf6e201d84ac0"
+        }
+      },
+      "hashes_valid": true,
+      "svg_png_pixels_match": true,
+      "pdf_pages": 1,
+      "manual_visual_review": "pass",
+      "pdf_pixels_match_manually_reviewed": true
+    },
+    {
+      "id": "SH-MAP-SAC-003",
+      "kind": "building",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-003.svg",
+          "sha256": "90df5fcf43086727eed0b4f4a46f5338e8a85176af24c1d8d3c9e8436c8b934d"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-003.png",
+          "sha256": "d74d9c657f2cd41b9613a22a4d2ba24af2594c0ad711344abdd6d48e532c0bd6"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-003.pdf",
+          "sha256": "326cd3a45a2c605c7f37be9eed440f7b6208b9602d8642ab99881e726cdedb2c"
+        }
+      },
+      "hashes_valid": true,
+      "svg_png_pixels_match": true,
+      "pdf_pages": 1,
+      "manual_visual_review": "pass",
+      "pdf_pixels_match_manually_reviewed": true
+    },
+    {
+      "id": "SH-MAP-SAC-004",
+      "kind": "floor",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-004.svg",
+          "sha256": "0318687fc53da4d27725ffbb44ad1530cbd243a6ad56e67428c27f5b84af40cf"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-004.png",
+          "sha256": "979286ecfe2a281734da8c5ab72bb11be235389ef98d02668114fcf90eebf065"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-004.pdf",
+          "sha256": "e7b6b18a0efb78fd2b3e9357c5c8d5ff26f0a54e8401726556e6468a6e87e1ca"
+        }
+      },
+      "hashes_valid": true,
+      "svg_png_pixels_match": true,
+      "pdf_pages": 1,
+      "manual_visual_review": "pass",
+      "pdf_pixels_match_manually_reviewed": true
+    },
+    {
+      "id": "SH-MAP-SAC-005",
+      "kind": "floor",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-005.svg",
+          "sha256": "94c0a1e732f513e29fd8cfab408a158ddbb45048c06d09753bd667a0cc106f50"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-005.png",
+          "sha256": "4667b0ed90f706261c3181f093e1cf237dd50d9e5e6c12d1a6a8114e89b525d8"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-005.pdf",
+          "sha256": "95d5dfc8635e7ff5f5c838170d3188820d551954852f51a0e4b2f11618ed2589"
+        }
+      },
+      "hashes_valid": true,
+      "svg_png_pixels_match": true,
+      "pdf_pages": 1,
+      "manual_visual_review": "pass",
+      "pdf_pixels_match_manually_reviewed": true
+    },
+    {
+      "id": "SH-MAP-SAC-006",
+      "kind": "building",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-006.svg",
+          "sha256": "b235ff92f0a5117c6811a7afce94c93fb1944a89735f613c32fff99f5dafb804"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-006.png",
+          "sha256": "f61facf5c23ec0e7c2c65272f600ff128e234c8abda54ca42dcb9912b858b7d8"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-006.pdf",
+          "sha256": "3d1ed88d1e68c219e7d9c029a59d45a2e430265c95997e55f3749f6b9207cdd3"
+        }
+      },
+      "hashes_valid": true,
+      "svg_png_pixels_match": true,
+      "pdf_pages": 1,
+      "manual_visual_review": "pass",
+      "pdf_pixels_match_manually_reviewed": true
+    },
+    {
+      "id": "SH-MAP-SAC-007",
+      "kind": "floor",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-007.svg",
+          "sha256": "04774407d909c58fca5db025d1ea6c5f1056e45e2032c8cd409dc3b2038045e6"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-007.png",
+          "sha256": "75a80e0b2d3a7e35f414c23d67f11a47758e0b2f7b1bdf8df52ae2ac4ed50695"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-007.pdf",
+          "sha256": "0593fb0ac02769b60a6045e0a9285537e7dcb4c6dcc431b6952b671e8cf9a2af"
+        }
+      },
+      "hashes_valid": true,
+      "svg_png_pixels_match": true,
+      "pdf_pages": 1,
+      "manual_visual_review": "pass",
+      "pdf_pixels_match_manually_reviewed": true
+    },
+    {
+      "id": "SH-MAP-SAC-008",
+      "kind": "floor",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-008.svg",
+          "sha256": "5b9b285ff69d5ccaadd7c1dd37ddddf8661cdf1398537ccc525a7ece06b915a2"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-008.png",
+          "sha256": "8ef9f34db80e5a8b9d59c5c1067147134cfea6fa47cf5924f23c4c72961a2b8d"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-008.pdf",
+          "sha256": "7dbc74147502cc0ff0d3ac1cfd92ddf69c3817891fb08a679d6bcc025277b8e0"
+        }
+      },
+      "hashes_valid": true,
+      "svg_png_pixels_match": true,
+      "pdf_pages": 1,
+      "manual_visual_review": "pass",
+      "pdf_pixels_match_manually_reviewed": true
+    },
+    {
+      "id": "SH-MAP-SAC-009",
+      "kind": "floor",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-009.svg",
+          "sha256": "0f1cc317ba6058b4eeef2f031a2cd70eeb5529a45507ce7acaa8138c71f3d824"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-009.png",
+          "sha256": "fb0ff999c8d96e15ab1876f7cdd613f19f73f832c2d410658ffa02bc02679719"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-009.pdf",
+          "sha256": "15c22e6382f1a752d49b4051c10aa69d947d6f74e42bda5faded0d6d485c6af2"
+        }
+      },
+      "hashes_valid": true,
+      "svg_png_pixels_match": true,
+      "pdf_pages": 1,
+      "manual_visual_review": "pass",
+      "pdf_pixels_match_manually_reviewed": true
+    },
+    {
+      "id": "SH-MAP-SAC-010",
+      "kind": "building",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-010.svg",
+          "sha256": "fe6cfb5caf5da1f7a33c7269b6b40eea89dbef0b04107d0a7bff5bf9141e4c34"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-010.png",
+          "sha256": "a1860e92cbddbe269c1ccc57ef1f552d215c221d40bc33e50fc6c88db023ffa2"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-010.pdf",
+          "sha256": "01f9c13e1a4cec5acdc84900e54cc9d99fd5510880fd2d690ca2a76aa7b6ac04"
+        }
+      },
+      "hashes_valid": true,
+      "svg_png_pixels_match": true,
+      "pdf_pages": 1,
+      "manual_visual_review": "pass",
+      "pdf_pixels_match_manually_reviewed": true
+    },
+    {
+      "id": "SH-MAP-SAC-011",
+      "kind": "floor",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-011.svg",
+          "sha256": "febb8f72bc466f839874cfda6ec627e26697ee9d13cc1f9ac27e17beab08805c"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-011.png",
+          "sha256": "a439f7cb16a525525fd688bcc3e3728b6f5ab3ed77b5cf45dd3c65266eb127d6"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-011.pdf",
+          "sha256": "dc905c9cab3101df3b5fda5816577b978cb54c06c2a4cfc333d9e1f6d929117b"
+        }
+      },
+      "hashes_valid": true,
+      "svg_png_pixels_match": true,
+      "pdf_pages": 1,
+      "manual_visual_review": "pass",
+      "pdf_pixels_match_manually_reviewed": true
+    },
+    {
+      "id": "SH-MAP-SAC-012",
+      "kind": "floor",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-012.svg",
+          "sha256": "8935575d3c544ceb68945af23da39315256a2046cef4cfe412e728688bccbefb"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-012.png",
+          "sha256": "bd1330b2d0b910dfe8a553a20571a5c52fc7f74fbc613aed6fb3bbdb976aab37"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-012.pdf",
+          "sha256": "16a23cd0d52507db34e74d6a60e4d39d4b175c325f91dbd438a1110a3707e3f8"
+        }
+      },
+      "hashes_valid": true,
+      "svg_png_pixels_match": true,
+      "pdf_pages": 1,
+      "manual_visual_review": "pass",
+      "pdf_pixels_match_manually_reviewed": true
+    },
+    {
+      "id": "SH-MAP-SAC-013",
+      "kind": "floor",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-013.svg",
+          "sha256": "0954693077c66dc3a7c0ab52a58df9b9f292ee3a12bfd4df394904759a0ae796"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-013.png",
+          "sha256": "8f46551ff0416ba3a24e68c8bc8967606f6f07dda4e81e602bd09a8baab88c49"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-013.pdf",
+          "sha256": "3456e124dd3cfbaa31b28895a02ca0bcac74e62204805603a28ecdee1bba7535"
+        }
+      },
+      "hashes_valid": true,
+      "svg_png_pixels_match": true,
+      "pdf_pages": 1,
+      "manual_visual_review": "pass",
+      "pdf_pixels_match_manually_reviewed": true
+    },
+    {
+      "id": "SH-MAP-SAC-014",
+      "kind": "building",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-014.svg",
+          "sha256": "3aa0628fa81ff7bcfe6ab264f1a11a8f420d0ac792fd9ae1d4eb9d82bfb99127"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-014.png",
+          "sha256": "ad6210fede4e9d554af7cb3edfae479a27f768e47dacec0ba672432415ba06b3"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-014.pdf",
+          "sha256": "7ad9c57fe8f7b55586e38331c1185b89ca9b356aee1cae2c600c827ae89efa6a"
+        }
+      },
+      "hashes_valid": true,
+      "svg_png_pixels_match": true,
+      "pdf_pages": 1,
+      "manual_visual_review": "pass",
+      "pdf_pixels_match_manually_reviewed": true
+    },
+    {
+      "id": "SH-MAP-SAC-015",
+      "kind": "floor",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-015.svg",
+          "sha256": "685afc7b843e0e9d41c68073d1be4fabd95c7c35fb631ca595b8e3fb49a9779c"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-015.png",
+          "sha256": "9eb7f5ad3051c7d2aa7a3968a50d86a617a73dc875e6e5efd0baaa5ec16a8a73"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-015.pdf",
+          "sha256": "bee0961797b09c8c66262d753e39dddde980a41270a185fd8e7cb2853e5bd819"
+        }
+      },
+      "hashes_valid": true,
+      "svg_png_pixels_match": true,
+      "pdf_pages": 1,
+      "manual_visual_review": "pass",
+      "pdf_pixels_match_manually_reviewed": true
+    },
+    {
+      "id": "SH-MAP-SAC-016",
+      "kind": "floor",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-016.svg",
+          "sha256": "557e5f6e40f94050c0d65288deefc926f6f3474aff44c82e44872de0e27c117d"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-016.png",
+          "sha256": "9a1f16c4b9c130e24b649daa1c98449c8a6d33de9c2a329fff9ec463168a3774"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-016.pdf",
+          "sha256": "522940c8ad6998f633050a08b0691b399134c3e0735cc76d054b7409968d780c"
+        }
+      },
+      "hashes_valid": true,
+      "svg_png_pixels_match": true,
+      "pdf_pages": 1,
+      "manual_visual_review": "pass",
+      "pdf_pixels_match_manually_reviewed": true
+    },
+    {
+      "id": "SH-MAP-SAC-017",
+      "kind": "building",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-017.svg",
+          "sha256": "5a3f4cec45c65f9f79b98513f3527048e3be631f59a10949f54e3fd94b540f54"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-017.png",
+          "sha256": "0211f1b3191f4904a7c8342b9f08a6713e62523cf71f3a519778a94eaaff4767"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-017.pdf",
+          "sha256": "caf8863a8eae971c2aae4b88d0f76fe590ba58fc7fcfe7615adc929904b97c2b"
+        }
+      },
+      "hashes_valid": true,
+      "svg_png_pixels_match": true,
+      "pdf_pages": 1,
+      "manual_visual_review": "pass",
+      "pdf_pixels_match_manually_reviewed": true
+    },
+    {
+      "id": "SH-MAP-SAC-018",
+      "kind": "floor",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-018.svg",
+          "sha256": "86e246dbf177130e4535d4317cc8fcc1457d6c06c4c68757406c92aac5b477e4"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-018.png",
+          "sha256": "53806ddc5f097a91dba278da3a179f937354f9629b03be953dff2075b654bae0"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-018.pdf",
+          "sha256": "6c87a7858f87107b947e0317567a6eb44d19f6e92c081c7cf612564aac3b6fc5"
+        }
+      },
+      "hashes_valid": true,
+      "svg_png_pixels_match": true,
+      "pdf_pages": 1,
+      "manual_visual_review": "pass",
+      "pdf_pixels_match_manually_reviewed": true
+    },
+    {
+      "id": "SH-MAP-SAC-019",
+      "kind": "floor",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-019.svg",
+          "sha256": "3ee10a1cf503ffe2b830ca8ed15c04504a1acdbfd392ed766ec8087d9a3ed618"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-019.png",
+          "sha256": "d2d299b56ddc983a2119e447ce636828562a402379ffca6988cf0ffbdc89d56d"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-019.pdf",
+          "sha256": "a38fd6861b1e1ed4ea4ba9782791d5c7e5f3c493d97fbed55089a77dd8e9a7a5"
+        }
+      },
+      "hashes_valid": true,
+      "svg_png_pixels_match": true,
+      "pdf_pages": 1,
+      "manual_visual_review": "pass",
+      "pdf_pixels_match_manually_reviewed": true
+    },
+    {
+      "id": "SH-MAP-SAC-020",
+      "kind": "building",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-020.svg",
+          "sha256": "77334cccb8f5f802ea5471c0e1d048a8876dcbff73e2a5ef6d36bc24bd16fbcc"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-020.png",
+          "sha256": "825e858d59b0341855e688fe95e817960086953df7364ab312fdf4f85f6dfcb7"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-020.pdf",
+          "sha256": "f6c0e452c35750d30b8ab2db0e78a966fe27258dcd6cb66ed6ee858731ba5717"
+        }
+      },
+      "hashes_valid": true,
+      "svg_png_pixels_match": true,
+      "pdf_pages": 1,
+      "manual_visual_review": "pass",
+      "pdf_pixels_match_manually_reviewed": true
+    },
+    {
+      "id": "SH-MAP-SAC-021",
+      "kind": "floor",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-021.svg",
+          "sha256": "c45395e94181e56e171cc3fc8fea269565b3abc6308a49f80ff5e94a10213c78"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-021.png",
+          "sha256": "a7b543aa4ac7ef76154e720271fe7bd47097da3200e1cbc5e804ddbf611f8152"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-021.pdf",
+          "sha256": "131ced8de4e9cce76d9166c145d8a7fbbaf0c1b9cc9c505e0b9c331b835a72a5"
+        }
+      },
+      "hashes_valid": true,
+      "svg_png_pixels_match": true,
+      "pdf_pages": 1,
+      "manual_visual_review": "pass",
+      "pdf_pixels_match_manually_reviewed": true
+    },
+    {
+      "id": "SH-MAP-SAC-022",
+      "kind": "phasing",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-022.svg",
+          "sha256": "2180f91e050e16f7a2ff4266aed8c3b408b212334a074313d38a978f711975be"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-022.png",
+          "sha256": "79e638fc581a6e3098a83330ecdafaa95c5c0e7308b2cad8509518cd471c7e78"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-022.pdf",
+          "sha256": "9ca14ba3e2e500aff2eab9787f06d22347e822a9066a486e9ef2819bdcda9593"
+        }
+      },
+      "hashes_valid": true,
+      "svg_png_pixels_match": true,
+      "pdf_pages": 1,
+      "manual_visual_review": "pass",
+      "pdf_pixels_match_manually_reviewed": true
+    },
+    {
+      "id": "SH-MAP-ARU-020",
+      "kind": "site",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-020.svg",
+          "sha256": "0812a86acabfdb8e166b10d4cde17fca63ebaa76f7797bcfc4c1648e1d6a65dc"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-020.png",
+          "sha256": "210c87abbb8b7540cc12607ec3b7d222ec86b34e2207f0454d3bb198bc52e663"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-020.pdf",
+          "sha256": "7242acc1b5c39d1e4ba8de7e14ef97099638fae561106f52747dfdb3828bcd26"
+        }
+      },
+      "hashes_valid": true,
+      "svg_png_pixels_match": true,
+      "pdf_pages": 1,
+      "manual_visual_review": "pass",
+      "pdf_pixels_match_manually_reviewed": true
+    },
+    {
+      "id": "SH-MAP-ARU-021",
+      "kind": "site",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-021.svg",
+          "sha256": "8d18e88d1eb4a59a437343489812d03d4b5ad9c8d7e4f256c3fec9a2bcdc07b0"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-021.png",
+          "sha256": "2058d57c5fe6af523401a42d61dedd217b3439e50e3f5c5143fd8c9b5affe3ff"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-021.pdf",
+          "sha256": "7aa4a382cb21cba5102966ef8f2ffaf272d7447e9ea0400dcb4ceb453678cbd4"
+        }
+      },
+      "hashes_valid": true,
+      "svg_png_pixels_match": true,
+      "pdf_pages": 1,
+      "manual_visual_review": "pass",
+      "pdf_pixels_match_manually_reviewed": true
+    },
+    {
+      "id": "SH-MAP-ARU-022",
+      "kind": "building",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-022.svg",
+          "sha256": "860fd66de5915bf66e45ed7b7bf54ba9c563e5f4d0b92f82114f1aebafcaa996"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-022.png",
+          "sha256": "314f1934e7344b0789202f8509193250b31e766a7ad40d8a3498ed952bb522ad"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-022.pdf",
+          "sha256": "a4386309bf0b61f9ceab0c8e67ff588c1537b307f80ccd1915757f1c396e56b8"
+        }
+      },
+      "hashes_valid": true,
+      "svg_png_pixels_match": true,
+      "pdf_pages": 1,
+      "manual_visual_review": "pass",
+      "pdf_pixels_match_manually_reviewed": true
+    },
+    {
+      "id": "SH-MAP-ARU-023",
+      "kind": "floor",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-023.svg",
+          "sha256": "947b5f7fd001cfc411a3e77934ccf853d7571b7eaccbff943863e7b22c70d687"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-023.png",
+          "sha256": "cff3a8c168d9ed146a64266ce932bc1b0cfbfa1e20398f75e6ea6f705c892c10"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-023.pdf",
+          "sha256": "2bf1c95d20eed4b21856296a5d1dec1e81c3d0dc5ebc3ea3d71cd61808f957a0"
+        }
+      },
+      "hashes_valid": true,
+      "svg_png_pixels_match": true,
+      "pdf_pages": 1,
+      "manual_visual_review": "pass",
+      "pdf_pixels_match_manually_reviewed": true
+    },
+    {
+      "id": "SH-MAP-ARU-024",
+      "kind": "building",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-024.svg",
+          "sha256": "e0dad674bcc3885c020335248179daf3883a59deaa96a1b0217bb90950b26ab7"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-024.png",
+          "sha256": "0ab1bd58ac2649275d13b2e95652882be4a97f4a09eba8d341d678e17658a751"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-024.pdf",
+          "sha256": "f76c306dc0fb7d2ddc29c0e22df877e09a8e3e5a4ac5308a75b8f6322112671b"
+        }
+      },
+      "hashes_valid": true,
+      "svg_png_pixels_match": true,
+      "pdf_pages": 1,
+      "manual_visual_review": "pass",
+      "pdf_pixels_match_manually_reviewed": true
+    },
+    {
+      "id": "SH-MAP-ARU-025",
+      "kind": "floor",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-025.svg",
+          "sha256": "32c1ce40eb9694665918a1d650631ecb962bf7e31c500cff22bcb4d28e503491"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-025.png",
+          "sha256": "6d462ccc1cded631bec48fa3397d745969e34bc47a3fd9db679744115d3a38e4"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-025.pdf",
+          "sha256": "4a7f2859faa69326e07246eae01a848ba347702d0247396c5e66095df4c4a2eb"
+        }
+      },
+      "hashes_valid": true,
+      "svg_png_pixels_match": true,
+      "pdf_pages": 1,
+      "manual_visual_review": "pass",
+      "pdf_pixels_match_manually_reviewed": true
+    },
+    {
+      "id": "SH-MAP-ARU-026",
+      "kind": "site",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-026.svg",
+          "sha256": "8cb063dadffaa8c6efef548a33fe10b8a4e0d6cb3b95666e2e6e2ca4c47132b4"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-026.png",
+          "sha256": "4efd11cc762660ad134fd066608fe88ae5a35d97890ff69ca25802db8c54bfd6"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-026.pdf",
+          "sha256": "201f2dbbd8ac92e918978ba3e7683128132550ff9280f84160e86bdf608ca081"
+        }
+      },
+      "hashes_valid": true,
+      "svg_png_pixels_match": true,
+      "pdf_pages": 1,
+      "manual_visual_review": "pass",
+      "pdf_pixels_match_manually_reviewed": true
+    },
+    {
+      "id": "SH-MAP-ARU-027",
+      "kind": "site",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-027.svg",
+          "sha256": "0402d4996cec2f9d97687875d0070fa6271fec601c5d896de3f673c4e151a5a4"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-027.png",
+          "sha256": "ff8ba27ad7ffbaa86c1bd0fa87c4028eeab7ebfbf2e718ef378ece6c1274421d"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-027.pdf",
+          "sha256": "708ab11e01d160e7056079c80898446e1d8edb89e4ab8915a9dbe83d08cb7eef"
+        }
+      },
+      "hashes_valid": true,
+      "svg_png_pixels_match": true,
+      "pdf_pages": 1,
+      "manual_visual_review": "pass",
+      "pdf_pixels_match_manually_reviewed": true
+    },
+    {
+      "id": "SH-MAP-ARU-028",
+      "kind": "building",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-028.svg",
+          "sha256": "519c8795d31539ba093f47b034c073f7a827debf1d2f7920ab878c625131d6dd"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-028.png",
+          "sha256": "0afd094b1f10c958f8a7d15f9b3daf5aaeb3e9482ca8f0339d4629f338085d9a"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-028.pdf",
+          "sha256": "dcda8ac1bb6b57454e00e97acd15aca26e10f3fea520d6d4ddfae83f3a0b7ce6"
+        }
+      },
+      "hashes_valid": true,
+      "svg_png_pixels_match": true,
+      "pdf_pages": 1,
+      "manual_visual_review": "pass",
+      "pdf_pixels_match_manually_reviewed": true
+    },
+    {
+      "id": "SH-MAP-ARU-029",
+      "kind": "floor",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-029.svg",
+          "sha256": "8a8602c19dcd6ba52765594402e1b66bf1c3523af4d55730fd5eb0fb82167061"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-029.png",
+          "sha256": "a5517286c033e7576a99abbde673dd83d97543ff6b2e77003c4d148a491b3ef4"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-029.pdf",
+          "sha256": "dab24f04838900433d2eb17ff4c0c2240bce9afce487444293df281529e8d100"
+        }
+      },
+      "hashes_valid": true,
+      "svg_png_pixels_match": true,
+      "pdf_pages": 1,
+      "manual_visual_review": "pass",
+      "pdf_pixels_match_manually_reviewed": true
+    },
+    {
+      "id": "SH-MAP-ARU-030",
+      "kind": "site",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-030.svg",
+          "sha256": "adab58c6480f8b5c4c21b31987898e323a0e9897757fa164756c1e862138a91c"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-030.png",
+          "sha256": "843dba447b59aa08092803ac5826cc23a7bd4e4315b8886cfe09023c6d97e484"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-030.pdf",
+          "sha256": "0c803c15a8d286736067cfe0a4a19b75d8cb5bbc54c3ebfbc0d15152e28c3cbf"
+        }
+      },
+      "hashes_valid": true,
+      "svg_png_pixels_match": true,
+      "pdf_pages": 1,
+      "manual_visual_review": "pass",
+      "pdf_pixels_match_manually_reviewed": true
+    },
+    {
+      "id": "SH-MAP-ARU-031",
+      "kind": "building",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-031.svg",
+          "sha256": "de8e5632fbb962142f95d314de6d0ad2dbc5a6218c33d89ed3a61dc4892b90d3"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-031.png",
+          "sha256": "15d47e0320f5367498ff5b0547a7b892703eea2c209a739d5f34a79af61b40f3"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-031.pdf",
+          "sha256": "4d4fd7ca564acd3ddbce09cc8962022b4549154614e98bd20ed6f11d07cb1a0f"
+        }
+      },
+      "hashes_valid": true,
+      "svg_png_pixels_match": true,
+      "pdf_pages": 1,
+      "manual_visual_review": "pass",
+      "pdf_pixels_match_manually_reviewed": true
+    },
+    {
+      "id": "SH-MAP-ARU-032",
+      "kind": "floor",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-032.svg",
+          "sha256": "cd6962d2ceb0ba8d6147dcc671fac1a7211ee4bda61bf55e66997a89ceaf5511"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-032.png",
+          "sha256": "7700020a854f9ae96ac80f2c5411c1f74141fc2d6d2ede231d2b9fe72c973494"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-032.pdf",
+          "sha256": "4e971da1585c005e1b6fae232ada097493c6515aa4c2a91ab6c36a73c6ed79f8"
+        }
+      },
+      "hashes_valid": true,
+      "svg_png_pixels_match": true,
+      "pdf_pages": 1,
+      "manual_visual_review": "pass",
+      "pdf_pixels_match_manually_reviewed": true
+    },
+    {
+      "id": "SH-MAP-ARU-033",
+      "kind": "site",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-033.svg",
+          "sha256": "88a160e8321d3702d70ab805b3ed8a9b5d435957daf3b578c028eb857fabe5e6"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-033.png",
+          "sha256": "aa607b4d5676f232ec3828831fc1a51b3f02576b7be1406133f0b46d7fa4c86b"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-033.pdf",
+          "sha256": "f161235f525c1a6081520793b20519852dd1daeda205ed999821f7be57abd139"
+        }
+      },
+      "hashes_valid": true,
+      "svg_png_pixels_match": true,
+      "pdf_pages": 1,
+      "manual_visual_review": "pass",
+      "pdf_pixels_match_manually_reviewed": true
+    },
+    {
+      "id": "SH-MAP-ARU-034",
+      "kind": "site",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-034.svg",
+          "sha256": "325cba63c18637b2a661e148241f2088f3008eb8587dc124f13698f7ad6ffca1"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-034.png",
+          "sha256": "2d5de80e920f53608a17fdc42fca061be87ccd701d0d63b1858e84148f390b88"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-034.pdf",
+          "sha256": "38221a87a649b052c65983f5ed26ec5d833b1401dc0ffd184b2531244603b79f"
+        }
+      },
+      "hashes_valid": true,
+      "svg_png_pixels_match": true,
+      "pdf_pages": 1,
+      "manual_visual_review": "pass",
+      "pdf_pixels_match_manually_reviewed": true
+    },
+    {
+      "id": "SH-MAP-ARU-035",
+      "kind": "site",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-035.svg",
+          "sha256": "1122f33a788987a3d493b16a3312524e9dae131945671ed30674a8c6c41d2bda"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-035.png",
+          "sha256": "5438dcddbd9dc22499ac082aed8c351110eea7fa2ca8945d44b3539191386c12"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-035.pdf",
+          "sha256": "8da0f747c433efc4035628ae447b89fc163f77252ebd3118a9d5520d063049b8"
+        }
+      },
+      "hashes_valid": true,
+      "svg_png_pixels_match": true,
+      "pdf_pages": 1,
+      "manual_visual_review": "pass",
+      "pdf_pixels_match_manually_reviewed": true
+    },
+    {
+      "id": "SH-MAP-ARU-036",
+      "kind": "site",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-036.svg",
+          "sha256": "b1297b4d7b11ad3539b082cce73249829a8710e03c0541baecd431fcc9bf96c9"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-036.png",
+          "sha256": "4a99e1afc315ec179790ae046f811d43d60a4481c6f65e3f7b22e59592e61107"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-036.pdf",
+          "sha256": "a404f49098c0d5b52d95a1a4c7c23bf5ab73ff32d22a037cf8922eb3eed2416b"
+        }
+      },
+      "hashes_valid": true,
+      "svg_png_pixels_match": true,
+      "pdf_pages": 1,
+      "manual_visual_review": "pass",
+      "pdf_pixels_match_manually_reviewed": true
+    },
+    {
+      "id": "SH-MAP-ARU-037",
+      "kind": "building",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-037.svg",
+          "sha256": "fea43779bbb4e20ca95abae031b438fb8965c49d7e3f5d7d76f2f444a78122a4"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-037.png",
+          "sha256": "fb20aec9c49d878ded69c31229dae1b98555147af18f7e1d9c4399b5da338c3c"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-037.pdf",
+          "sha256": "36ebf41d7df5fe1d79e3850ee63924ebc82371d16b1f5f38fc1e08cd56f76db2"
+        }
+      },
+      "hashes_valid": true,
+      "svg_png_pixels_match": true,
+      "pdf_pages": 1,
+      "manual_visual_review": "pass",
+      "pdf_pixels_match_manually_reviewed": true
+    },
+    {
+      "id": "SH-MAP-ARU-038",
+      "kind": "floor",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-038.svg",
+          "sha256": "bbe142d95b0305f0dd3f8f7983364f2b0f8c3f6b9e94fc2b994c9c1b86e13345"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-038.png",
+          "sha256": "7cbe0dcb332e6a890f8583f4fdbad1b094c2fcf62ca82e27bc045eb0c4e9f336"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-038.pdf",
+          "sha256": "cc7bfb4f42ecb0ec3cc4a11d263e39d98d6a554bd030ab288935dba10f8c0346"
+        }
+      },
+      "hashes_valid": true,
+      "svg_png_pixels_match": true,
+      "pdf_pages": 1,
+      "manual_visual_review": "pass",
+      "pdf_pixels_match_manually_reviewed": true
+    },
+    {
+      "id": "SH-MAP-ARU-039",
+      "kind": "site",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-039.svg",
+          "sha256": "aaec32929aa0b163f07bf582a486fefc24ddcc6427297fadee5bd7586542b748"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-039.png",
+          "sha256": "10c9e6e25bf7f6b947b7a54580a5aeb627eae48db628f42d7e4390b716ddbb72"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-039.pdf",
+          "sha256": "61818c852f50a93e9c9c0b87f3f95a00469cc895db1d8e9666e1dd620668d13f"
+        }
+      },
+      "hashes_valid": true,
+      "svg_png_pixels_match": true,
+      "pdf_pages": 1,
+      "manual_visual_review": "pass",
+      "pdf_pixels_match_manually_reviewed": true
+    },
+    {
+      "id": "SH-MAP-ARU-040",
+      "kind": "site",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-040.svg",
+          "sha256": "be12ae291c2619eec8c8b3b13e209d8ea3bfd4584edf7c49daacccd98b3bd744"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-040.png",
+          "sha256": "63615a951d59275622b7c477ef789ec11b782536bf9ee3c8ea8d0419bdb4c03f"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-040.pdf",
+          "sha256": "2bbe9d2dc26cb337699e0a4def149111862faf20c286a22cee7fbf9d43b0c793"
+        }
+      },
+      "hashes_valid": true,
+      "svg_png_pixels_match": true,
+      "pdf_pages": 1,
+      "manual_visual_review": "pass",
+      "pdf_pixels_match_manually_reviewed": true
+    },
+    {
+      "id": "SH-MAP-ARU-041",
+      "kind": "building",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-041.svg",
+          "sha256": "515ed9ec7f5a3fe7939bc728dd5aa35ab16135dc39b7017e74f175f4d54d2b1f"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-041.png",
+          "sha256": "5e8ce17f3076f6c21ed1a0066c602a3199980c70a766450530b796474cef20d9"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-041.pdf",
+          "sha256": "ed482318dc64429e64887ec3acffe971021d8afc67d626ea1cd1c2df8542ee80"
+        }
+      },
+      "hashes_valid": true,
+      "svg_png_pixels_match": true,
+      "pdf_pages": 1,
+      "manual_visual_review": "pass",
+      "pdf_pixels_match_manually_reviewed": true
+    },
+    {
+      "id": "SH-MAP-ARU-042",
+      "kind": "floor",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-042.svg",
+          "sha256": "e3d53b4a2a8d51ce39fd310a5d3c27c0fc36e24dfe3048d16a50f25f47bbb744"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-042.png",
+          "sha256": "a80684cbe2e114f803d4c43f3177a654e7c5422ee97e7cc3788ae6af47cc4a00"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-042.pdf",
+          "sha256": "6ccca1061585707f4d48b81fec41ce2486c65ea1e8b5aa69d546566cf51752c2"
+        }
+      },
+      "hashes_valid": true,
+      "svg_png_pixels_match": true,
+      "pdf_pages": 1,
+      "manual_visual_review": "pass",
+      "pdf_pixels_match_manually_reviewed": true
+    },
+    {
+      "id": "SH-MAP-RWM-020",
+      "kind": "site",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-RWM-020.svg",
+          "sha256": "dd52e5ad41ed9964c05461765958ce515f0f08b60d409d517611fb0464762795"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-RWM-020.png",
+          "sha256": "cdcfd80ee7cb714c222deb6c5ee4c4e7c3e8b02ac363c88a04414e2f0ebb9454"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-RWM-020.pdf",
+          "sha256": "988ba3f34a90612e9455ccb73d67a656d2c6f954747f43f0226a229dd7ceccbc"
+        }
+      },
+      "hashes_valid": true,
+      "svg_png_pixels_match": true,
+      "pdf_pages": 1,
+      "manual_visual_review": "pass",
+      "pdf_pixels_match_manually_reviewed": true
+    },
+    {
+      "id": "SH-MAP-RWM-021",
+      "kind": "site",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-RWM-021.svg",
+          "sha256": "9e2b566d52cb3141b57ea226f567e2ee9666d73d2b5a6e629dea8edb3d4d38d2"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-RWM-021.png",
+          "sha256": "ff4e0d2b54845c38c2d4aa68347934ef4a9f91e102bcbdbf0cae52fcea4257e5"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-RWM-021.pdf",
+          "sha256": "e2e89afdefaf05bdb005a7c40a0b80d8fb26e9916e50df1340c7373c81c68cec"
+        }
+      },
+      "hashes_valid": true,
+      "svg_png_pixels_match": true,
+      "pdf_pages": 1,
+      "manual_visual_review": "pass",
+      "pdf_pixels_match_manually_reviewed": true
+    },
+    {
+      "id": "SH-MAP-WIL-020",
+      "kind": "site",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-020.svg",
+          "sha256": "2e21db5055a9de3e0d5845d0e4c201a222165a2e5d05576257f1b58ca2ab2881"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-020.png",
+          "sha256": "f95934f78d53fb06c796197955593d75a8e14042ea21353402439d13b09f86f7"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-020.pdf",
+          "sha256": "725a00e0b071469bb1ec8280f7af09168ff8e1bc12dce2460e60092fcb9e3a97"
+        }
+      },
+      "hashes_valid": true,
+      "svg_png_pixels_match": true,
+      "pdf_pages": 1,
+      "manual_visual_review": "pass",
+      "pdf_pixels_match_manually_reviewed": true
+    },
+    {
+      "id": "SH-MAP-WIL-021",
+      "kind": "building",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-021.svg",
+          "sha256": "7bc2040727b86a7289a426b30ae3c5e7913ab2c0c7fdb8573520c20d4d3b5dd9"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-021.png",
+          "sha256": "99d0236443a4f54e7d83a3d0437bf70d74dfc4226824a8d286cc9880fadff4c0"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-021.pdf",
+          "sha256": "285bfdabc99628015dd1f0bc252408f6ac219f1c6503009de3d8629258ed1fb6"
+        }
+      },
+      "hashes_valid": true,
+      "svg_png_pixels_match": true,
+      "pdf_pages": 1,
+      "manual_visual_review": "pass",
+      "pdf_pixels_match_manually_reviewed": true
+    },
+    {
+      "id": "SH-MAP-WIL-022",
+      "kind": "floor",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-022.svg",
+          "sha256": "6cd668a0adb579c5469637ae40783a452f749921cfc89ee428737aa140f288bd"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-022.png",
+          "sha256": "183661dd1d2ab85bd6574ae0c7cc71ec7e25338f44ab5462c6bd81d7faeb685b"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-022.pdf",
+          "sha256": "e8bf1b11638604b4134f9d818be782bb1e12fb5a169d34704c814a6d8564952b"
+        }
+      },
+      "hashes_valid": true,
+      "svg_png_pixels_match": true,
+      "pdf_pages": 1,
+      "manual_visual_review": "pass",
+      "pdf_pixels_match_manually_reviewed": true
+    },
+    {
+      "id": "SH-MAP-WIL-023",
+      "kind": "building",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-023.svg",
+          "sha256": "b96dc3c688271ebad30daac14a67a36dc1d1cd50e2b8b9b596d97456574a5cf2"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-023.png",
+          "sha256": "3cd3b02a4034e21b55ef338ad22fc5e5f066638f15b3743fcad130ee7cd7085d"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-023.pdf",
+          "sha256": "56353152e4a51a9662363e5dbf5080fc99726bb64be30111829f21b8516f26f9"
+        }
+      },
+      "hashes_valid": true,
+      "svg_png_pixels_match": true,
+      "pdf_pages": 1,
+      "manual_visual_review": "pass",
+      "pdf_pixels_match_manually_reviewed": true
+    },
+    {
+      "id": "SH-MAP-WIL-024",
+      "kind": "floor",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-024.svg",
+          "sha256": "52d99c262e8de452cc9f6aa302f43fba12302b6ad31c801206c36853450ea2c3"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-024.png",
+          "sha256": "ffa46cb9beb4042a62064baece51c0c8505c9fb8a25d87e39b62b804011e04e5"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-024.pdf",
+          "sha256": "d5c43cf0e2b211168e2ab39c468322d9b1c24c9dbac091d27b83337b52cb667e"
+        }
+      },
+      "hashes_valid": true,
+      "svg_png_pixels_match": true,
+      "pdf_pages": 1,
+      "manual_visual_review": "pass",
+      "pdf_pixels_match_manually_reviewed": true
+    },
+    {
+      "id": "SH-MAP-WIL-025",
+      "kind": "floor",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-025.svg",
+          "sha256": "7590cd834d4741ae9e2ee6040a145b0cee8a0451954b3f86fdfe47e8ba48ab79"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-025.png",
+          "sha256": "f1c326b05668b4a5a0a635f350929c2a5111b1e8e765e3bc5b76a4cd486788e6"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-025.pdf",
+          "sha256": "927fc882bedee55bf576adb117207d6c5f0f0f212dfec6c36aa1666795366dec"
+        }
+      },
+      "hashes_valid": true,
+      "svg_png_pixels_match": true,
+      "pdf_pages": 1,
+      "manual_visual_review": "pass",
+      "pdf_pixels_match_manually_reviewed": true
+    },
+    {
+      "id": "SH-MAP-WIL-026",
+      "kind": "building",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-026.svg",
+          "sha256": "71a0d800eb7c838750c4d0118bdccc4c0a6c111c1942d827217bb6a645d58844"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-026.png",
+          "sha256": "36796498a1f1506aba20d4989a385b42ac8845734b10a25c56591fddcc9bc18d"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-026.pdf",
+          "sha256": "4674a18daa49a6612cefcf072ef00e7a55d9f4c1b0326a793207085a451c7dbf"
+        }
+      },
+      "hashes_valid": true,
+      "svg_png_pixels_match": true,
+      "pdf_pages": 1,
+      "manual_visual_review": "pass",
+      "pdf_pixels_match_manually_reviewed": true
+    },
+    {
+      "id": "SH-MAP-WIL-027",
+      "kind": "floor",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-027.svg",
+          "sha256": "a94ea9acd8c92c84f3bcc4afdff3494a0813c0c59650a3439397fc730cae30b9"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-027.png",
+          "sha256": "d4f75a81340b31be2cb93262232c32859433ad58cdb0a420a629fd1cb6b4d623"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-027.pdf",
+          "sha256": "eb01da1b89891f299a4942478c2c925999f317a4090dc7bddae4b0233dff5a62"
+        }
+      },
+      "hashes_valid": true,
+      "svg_png_pixels_match": true,
+      "pdf_pages": 1,
+      "manual_visual_review": "pass",
+      "pdf_pixels_match_manually_reviewed": true
+    },
+    {
+      "id": "SH-MAP-CRD-020",
+      "kind": "site",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-020.svg",
+          "sha256": "b6bffe5f0c69fbbce82eec579cfcb3a55a551db95e69ec6b61b7701102c87b8a"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-020.png",
+          "sha256": "e5f8a6027a698a66348fb00ba256c35c22f3bb85375396d71035ff99ab664fda"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-020.pdf",
+          "sha256": "382421e3d864294382d7d87c743d98b643780c586ca6409879ce39268c01fd5a"
+        }
+      },
+      "hashes_valid": true,
+      "svg_png_pixels_match": true,
+      "pdf_pages": 1,
+      "manual_visual_review": "pass",
+      "pdf_pixels_match_manually_reviewed": true
+    },
+    {
+      "id": "SH-MAP-CRD-021",
+      "kind": "building",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-021.svg",
+          "sha256": "345fc249c5b7ca0773675ce096ed2749d9ca5baee881df947dd7edd2b3645723"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-021.png",
+          "sha256": "e0bcf1c21de5ef2d8860577afd7bb85f7b5ae0ffcf9e3fef10d93fcc1727e1e4"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-021.pdf",
+          "sha256": "3ce3e227bb39aaefa161cf6db9dffe0fcf9acbbec72875912501df4d6dea6661"
+        }
+      },
+      "hashes_valid": true,
+      "svg_png_pixels_match": true,
+      "pdf_pages": 1,
+      "manual_visual_review": "pass",
+      "pdf_pixels_match_manually_reviewed": true
+    },
+    {
+      "id": "SH-MAP-CRD-022",
+      "kind": "floor",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-022.svg",
+          "sha256": "65bc4e899bb49d464cd164bac61f4ff06c965c3ba09ce34ad7cc72d92df5b069"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-022.png",
+          "sha256": "05080881a2a0645d2de2baf5f3bdb9e75da47f4fa0d484c814457f0a2020b84e"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-022.pdf",
+          "sha256": "f8d198b425905ecf480dc4fd3d1ed6f1cfb1b087fb80a65ac8e0fd33a417a7dd"
+        }
+      },
+      "hashes_valid": true,
+      "svg_png_pixels_match": true,
+      "pdf_pages": 1,
+      "manual_visual_review": "pass",
+      "pdf_pixels_match_manually_reviewed": true
+    },
+    {
+      "id": "SH-MAP-CRD-023",
+      "kind": "building",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-023.svg",
+          "sha256": "d6136132537ff45f3240f07fd72014b0a03a5f416f393cd21c2f0323c1ce71d5"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-023.png",
+          "sha256": "cf2709bc1876c08650c680547897061df7216b9cea70c0fd640048b30a8af795"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-023.pdf",
+          "sha256": "5fde03c4f17649b631a54d69ffc18d4dec5795a23a42efd4ccebbe2be009466f"
+        }
+      },
+      "hashes_valid": true,
+      "svg_png_pixels_match": true,
+      "pdf_pages": 1,
+      "manual_visual_review": "pass",
+      "pdf_pixels_match_manually_reviewed": true
+    },
+    {
+      "id": "SH-MAP-CRD-024",
+      "kind": "floor",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-024.svg",
+          "sha256": "9835f89a4d3e6231a71d46754b3c2d56d52dbe87740f238bdc39f1185bea9e6b"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-024.png",
+          "sha256": "25943409ffcbd58b9fae9f45dec3716eec16449e748a94ab7da343a6601bf5f2"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-024.pdf",
+          "sha256": "90df5163634f6e878c88aafd7aade61cf2aca522957e73ade3fc2cdacd81be53"
+        }
+      },
+      "hashes_valid": true,
+      "svg_png_pixels_match": true,
+      "pdf_pages": 1,
+      "manual_visual_review": "pass",
+      "pdf_pixels_match_manually_reviewed": true
+    },
+    {
+      "id": "SH-MAP-CRD-025",
+      "kind": "building",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-025.svg",
+          "sha256": "b0b2bffdd498e013842e5e76d0229cae0c5ab43cfc7292833bc6d2f1b83e3666"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-025.png",
+          "sha256": "56fe2ee3b263f30759ecd6c049607f1b64cdb11d39e8ede15f5600bf8e4431d7"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-025.pdf",
+          "sha256": "c94bc356dfefbaadcec0e396404d8f9c92871d9eae20b5def643d06f903d9079"
+        }
+      },
+      "hashes_valid": true,
+      "svg_png_pixels_match": true,
+      "pdf_pages": 1,
+      "manual_visual_review": "pass",
+      "pdf_pixels_match_manually_reviewed": true
+    },
+    {
+      "id": "SH-MAP-CRD-026",
+      "kind": "floor",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-026.svg",
+          "sha256": "ee5a6bca21de6c12a39ea8626ed08b16b675d064bb71a9ef21f41e1b56d4604b"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-026.png",
+          "sha256": "13788a2a6424eecc5eb83b025c9f38784e91f6e3aacd4e6f22f36985a85cebe2"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-026.pdf",
+          "sha256": "036c5201c2ebb171e1502de5ec66cd897559063ac52642f6b4180cf02855e77d"
+        }
+      },
+      "hashes_valid": true,
+      "svg_png_pixels_match": true,
+      "pdf_pages": 1,
+      "manual_visual_review": "pass",
+      "pdf_pixels_match_manually_reviewed": true
+    },
+    {
+      "id": "SH-MAP-CRD-027",
+      "kind": "building",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-027.svg",
+          "sha256": "62fc78b5193ab2b0225c17abcdcf351c0a895e429dd45bb60ee927fdb46f1e48"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-027.png",
+          "sha256": "500234ae4d7bf1ef3d15facc37f46e4809bfe1e8cb836c7d50152fd23065ed75"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-027.pdf",
+          "sha256": "61c4e6304ad6ac5904bfa6fe63f45cfb3860370dc8b44a777972cb1a17de9be7"
+        }
+      },
+      "hashes_valid": true,
+      "svg_png_pixels_match": true,
+      "pdf_pages": 1,
+      "manual_visual_review": "pass",
+      "pdf_pixels_match_manually_reviewed": true
+    },
+    {
+      "id": "SH-MAP-CRD-028",
+      "kind": "floor",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-028.svg",
+          "sha256": "d5c4a7f041be2786a926df18fbb125b420dc0898095e0a881e39e1d2cfebb617"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-028.png",
+          "sha256": "fff8f10c9a9d15da82c0530f29295725d25274abbe42552df1d90ba38197d612"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-028.pdf",
+          "sha256": "647f372f75057e550980d0e58b5bb8d62fecb0415724440931e5d764d6da4130"
+        }
+      },
+      "hashes_valid": true,
+      "svg_png_pixels_match": true,
+      "pdf_pages": 1,
+      "manual_visual_review": "pass",
+      "pdf_pixels_match_manually_reviewed": true
+    }
+  ],
+  "contact_sheets": [
+    {
+      "path": "geospatial/facilities/qa/FINAL_CONTACT_01.png",
+      "sha256": "fecdd28e9a4236fef076171f07f371f2a92d639fc03733ee3a059ca7d9fb7c27"
+    },
+    {
+      "path": "geospatial/facilities/qa/FINAL_CONTACT_02.png",
+      "sha256": "074df93ad0ce8a0c0e479c80bd04083cae53a05d0a152589531b6afa233724b7"
+    },
+    {
+      "path": "geospatial/facilities/qa/FINAL_CONTACT_03.png",
+      "sha256": "10b2184c78db8838ba465ac95bf29001331d4e2b29d4d2cc68413ca2f61a8203"
+    },
+    {
+      "path": "geospatial/facilities/qa/FINAL_CONTACT_04.png",
+      "sha256": "979a0e095cf4e7bfbbb27809186cb3575ca80d1bba0cfa3ef7bd5ddf9a3fc54d"
+    },
+    {
+      "path": "geospatial/facilities/qa/FINAL_CONTACT_05.png",
+      "sha256": "63e9e284f5ad1b6f99e4c5e0a154814416b9684e3d7fdd017eb03edd4f0115ab"
+    },
+    {
+      "path": "geospatial/facilities/qa/FINAL_CONTACT_06.png",
+      "sha256": "ec46ec115c1db2c03a1b76289e6d5532a17b47a2987f6bfcc3e872ad38279dd5"
+    }
+  ]
+}
