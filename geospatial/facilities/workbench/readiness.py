@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import hashlib
+import importlib.util
 import json
 from collections import Counter
 from pathlib import Path
@@ -59,6 +60,16 @@ def build_readiness(root: Path) -> dict:
     if runtime.exists():
         paths.append(runtime)
     checks, source_hashes = [], {}
+    access_routes = {}
+    policy = root / "geospatial/facilities/spatial/ACCESS_POLICY.json"
+    if policy.exists():
+        module_path = Path(__file__).resolve().parents[1] / "spatial/access.py"
+        spec = importlib.util.spec_from_file_location("facility_access_review", module_path)
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        access = module.build_access(root)
+        access_routes = {r["room_id"]: r for r in access["routes"]}
+        source_hashes.update(access["source_sha256"])
 
     def emit(scope, rule, outcome, basis, evidence, next_action):
         checks.append(
@@ -207,26 +218,42 @@ def build_readiness(root: Path) -> dict:
                             for z in corridors
                         ):
                             disconnected.append(rid)
+                    reviewed = [access_routes[rid] for rid in disconnected if rid in access_routes]
+                    unresolved = [
+                        rid
+                        for rid in disconnected
+                        if rid not in access_routes or access_routes[rid]["outcome"] != "PASS"
+                    ]
+                    failed_routes = [
+                        r["id"]
+                        for r in access_routes.values()
+                        if r["floor_id"] == fid and r["outcome"] != "PASS"
+                    ]
                     outcome = (
                         "FAIL"
-                        if invalid
+                        if invalid or failed_routes
                         else "NOT_ASSESSED"
                         if not corridors or not rooms
                         else "REVIEW"
-                        if missing or disconnected
+                        if missing or unresolved
                         else "PASS"
                     )
                     emit(
                         fid,
                         "door-circulation-access",
                         outcome,
-                        "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires explicit review, not an invented route.",
+                        "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires source-locked, geometrically verified and operationally scoped ACCESS_POLICY routes.",
                         {
                             **base,
                             "floor_id": fid,
                             "missing_doors": missing,
                             "invalid_doors": invalid,
                             "no_direct_circulation": disconnected,
+                            "validated_indirect_routes": [
+                                r["id"] for r in reviewed if r["outcome"] == "PASS"
+                            ],
+                            "unresolved_indirect_access": unresolved,
+                            "failed_access_routes": failed_routes,
                         },
                         "Record missing routes and resolve invalid doors; review indirect access and full opening/swing clearances.",
                     )

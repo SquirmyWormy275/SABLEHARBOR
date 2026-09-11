@@ -1,0 +1,198 @@
+{
+  "schema_version": "1.0.0",
+  "status": "MODELLED_OPERATIONAL_ACCESS_REVIEW",
+  "authority": "Owner-authorized spatial-quality tool scope; planning assumptions, not current occupancy or code approval. Approved R01 geometry remains immutable reference.",
+  "source": "geospatial/facilities/source/campus.json",
+  "permitted_intermediate_use": "Only these individually reviewed attached-room relationships; never infer permission from matching access labels alone.",
+  "routes": [
+    {
+      "id": "SH-ACCESS:SH-SITE-0001-A-L01-R01",
+      "floor_id": "SH-SITE-0001-A-L01",
+      "room_id": "SH-SITE-0001-A-L01-R01",
+      "via_room_id": "SH-SITE-0001-A-L01-R13",
+      "classification": "staff",
+      "operational_assumption": "Attached focus/call rooms reached through Advisory common bench by its authorized users; reserve an unobstructed internal route in the shared working area.",
+      "geometry_security_sha256": "7ab5eee779f324bdba3bf8f354461639331d5829e51254c95a72436873ad35e3"
+    },
+    {
+      "id": "SH-ACCESS:SH-SITE-0001-A-L01-R02",
+      "floor_id": "SH-SITE-0001-A-L01",
+      "room_id": "SH-SITE-0001-A-L01-R02",
+      "via_room_id": "SH-SITE-0001-A-L01-R13",
+      "classification": "staff",
+      "operational_assumption": "Attached focus/call rooms reached through Advisory common bench by its authorized users; reserve an unobstructed internal route in the shared working area.",
+      "geometry_security_sha256": "2a52ab0aab1803f8c5ad3c93b03d51d5e43e653018199d6a047a5a40a0201d68"
+    },
+    {
+      "id": "SH-ACCESS:SH-SITE-0001-A-L01-R03",
+      "floor_id": "SH-SITE-0001-A-L01",
+      "room_id": "SH-SITE-0001-A-L01-R03",
+      "via_room_id": "SH-SITE-0001-A-L01-R14",
+      "classification": "staff",
+      "operational_assumption": "Attached focus/call rooms reached through Corporate commons / 80 dining seats by its authorized users; reserve an unobstructed internal route in the shared working area.",
+      "geometry_security_sha256": "80e7aa6e447de0c56fb7ff7f7922e8026c2eb2f1805c98e14bd7c90f00f35dda"
+    },
+    {
+      "id": "SH-ACCESS:SH-SITE-0001-A-L01-R04",
+      "floor_id": "SH-SITE-0001-A-L01",
+      "room_id": "SH-SITE-0001-A-L01-R04",
+      "via_room_id": "SH-SITE-0001-A-L01-R14",
+      "classification": "staff",
+      "operational_assumption": "Attached focus/call rooms reached through Corporate commons / 80 dining seats by its authorized users; reserve an unobstructed internal route in the shared working area.",
+      "geometry_security_sha256": "800f41a6ee76dd19b708319990d6b90523934c3fc1655bb09df11dec6675b82a"
+    },
+    {
+      "id": "SH-ACCESS:SH-SITE-0001-A-L02-R01",
+      "floor_id": "SH-SITE-0001-A-L02",
+      "room_id": "SH-SITE-0001-A-L02-R01",
+      "via_room_id": "SH-SITE-0001-A-L02-R13",
+      "classification": "staff",
+      "operational_assumption": "Attached focus/call rooms reached through Foundry Field west studio by its authorized users; reserve an unobstructed internal route in the shared working area.",
+      "geometry_security_sha256": "bd7c14c808f23eb8ee835a40bd40ea960c3f03efdea8916bfa936be3b39ac005"
+    },
+    {
+      "id": "SH-ACCESS:SH-SITE-0001-A-L02-R02",
+      "floor_id": "SH-SITE-0001-A-L02",
+      "room_id": "SH-SITE-0001-A-L02-R02",
+      "via_room_id": "SH-SITE-0001-A-L02-R13",
+      "classification": "staff",
+      "operational_assumption": "Attached focus/call rooms reached through Foundry Field west studio by its authorized users; reserve an unobstructed internal route in the shared working area.",
+      "geometry_security_sha256": "d9bb0a576c39be196132a16032d974870655ef72847a026a5d636127092588f0"
+    },
+    {
+      "id": "SH-ACCESS:SH-SITE-0001-A-L02-R03",
+      "floor_id": "SH-SITE-0001-A-L02",
+      "room_id": "SH-SITE-0001-A-L02-R03",
+      "via_room_id": "SH-SITE-0001-A-L02-R15",
+      "classification": "staff",
+      "operational_assumption": "Attached focus/call rooms reached through Atlas Meridian product development by its authorized users; reserve an unobstructed internal route in the shared working area.",
+      "geometry_security_sha256": "c77330d35adadfd3aeb2b9b1fcb7233ceb4f24a84a29a2d9f03ff4324516d037"
+    },
+    {
+      "id": "SH-ACCESS:SH-SITE-0001-A-L02-R04",
+      "floor_id": "SH-SITE-0001-A-L02",
+      "room_id": "SH-SITE-0001-A-L02-R04",
+      "via_room_id": "SH-SITE-0001-A-L02-R15",
+      "classification": "staff",
+      "operational_assumption": "Attached focus/call rooms reached through Atlas Meridian product development by its authorized users; reserve an unobstructed internal route in the shared working area.",
+      "geometry_security_sha256": "13e62336595c9309a8ee846114cb664e99d5f93f8199437852e103bfb6c88d90"
+    },
+    {
+      "id": "SH-ACCESS:SH-SITE-0001-A-L03-R01",
+      "floor_id": "SH-SITE-0001-A-L03",
+      "room_id": "SH-SITE-0001-A-L03-R01",
+      "via_room_id": "SH-SITE-0001-A-L03-R13",
+      "classification": "staff",
+      "operational_assumption": "Attached focus/call rooms are for users authorized in Finance; confidential suite is not a public or general staff passage.",
+      "geometry_security_sha256": "632abbca767366c90ed472c88833366d8f2f28c48dca1501c2bd27bf74b1c7ae"
+    },
+    {
+      "id": "SH-ACCESS:SH-SITE-0001-A-L03-R02",
+      "floor_id": "SH-SITE-0001-A-L03",
+      "room_id": "SH-SITE-0001-A-L03-R02",
+      "via_room_id": "SH-SITE-0001-A-L03-R13",
+      "classification": "staff",
+      "operational_assumption": "Attached focus/call rooms are for users authorized in Finance; confidential suite is not a public or general staff passage.",
+      "geometry_security_sha256": "5f2bf528fcf29514197e2fecceb75e2272cc195ba82172cf24af7ffcea80bfd0"
+    },
+    {
+      "id": "SH-ACCESS:SH-SITE-0001-A-L03-R03",
+      "floor_id": "SH-SITE-0001-A-L03",
+      "room_id": "SH-SITE-0001-A-L03-R03",
+      "via_room_id": "SH-SITE-0001-A-L03-R19",
+      "classification": "staff",
+      "operational_assumption": "Attached focus/call rooms are for users authorized in Technology / Security / Resilience; confidential suite is not a public or general staff passage.",
+      "geometry_security_sha256": "6dcc3d7090c5b53acfc61894f8e55cf64d66d19c1a7eb46c64046d3fa7fc388a"
+    },
+    {
+      "id": "SH-ACCESS:SH-SITE-0001-A-L03-R04",
+      "floor_id": "SH-SITE-0001-A-L03",
+      "room_id": "SH-SITE-0001-A-L03-R04",
+      "via_room_id": "SH-SITE-0001-A-L03-R19",
+      "classification": "staff",
+      "operational_assumption": "Attached focus/call rooms are for users authorized in Technology / Security / Resilience; confidential suite is not a public or general staff passage.",
+      "geometry_security_sha256": "d208000f8a727294f0b4585ff16fc8f0e0b1aa2e1e86efe3396322903691769d"
+    },
+    {
+      "id": "SH-ACCESS:SH-SITE-0001-B-L01-R05",
+      "floor_id": "SH-SITE-0001-B-L01",
+      "room_id": "SH-SITE-0001-B-L01-R05",
+      "via_room_id": "SH-SITE-0001-B-L01-R07",
+      "classification": "J2",
+      "operational_assumption": "J2-authorized personnel within the same controlled working suite; staff-tagged support rooms do not grant ordinary staff access.",
+      "geometry_security_sha256": "0f6d65dd5c7163c06c4d5b73cd3b886a26e822d87dc5aaeb200ef1bd61539700"
+    },
+    {
+      "id": "SH-ACCESS:SH-SITE-0001-B-L01-R06",
+      "floor_id": "SH-SITE-0001-B-L01",
+      "room_id": "SH-SITE-0001-B-L01-R06",
+      "via_room_id": "SH-SITE-0001-B-L01-R07",
+      "classification": "J2",
+      "operational_assumption": "J2-authorized personnel within the same controlled working suite; staff-tagged support rooms do not grant ordinary staff access.",
+      "geometry_security_sha256": "5b2fc58e2efaa206de0d46204a19a91e12682cfabdacbb026f2c1f63accfd5a5"
+    },
+    {
+      "id": "SH-ACCESS:SH-SITE-0001-B-L01-R09",
+      "floor_id": "SH-SITE-0001-B-L01",
+      "room_id": "SH-SITE-0001-B-L01-R09",
+      "via_room_id": "SH-SITE-0001-B-L01-R08",
+      "classification": "J2",
+      "operational_assumption": "J2-authorized personnel within the same controlled working suite; staff-tagged support rooms do not grant ordinary staff access.",
+      "geometry_security_sha256": "5aacac58daf45a8000f6983050fcb389bb6c8a8c5ebc5a7e1c1d0b74675fe2af"
+    },
+    {
+      "id": "SH-ACCESS:SH-SITE-0001-B-L01-R10",
+      "floor_id": "SH-SITE-0001-B-L01",
+      "room_id": "SH-SITE-0001-B-L01-R10",
+      "via_room_id": "SH-SITE-0001-B-L01-R08",
+      "classification": "J2",
+      "operational_assumption": "J2-authorized personnel within the same controlled working suite; staff-tagged support rooms do not grant ordinary staff access.",
+      "geometry_security_sha256": "763cefe3433d4d0639c821ef1f404322ccf1ba21f19ee5a9555e4e47573a7dfd"
+    },
+    {
+      "id": "SH-ACCESS:SH-SITE-0001-B-L02-R05",
+      "floor_id": "SH-SITE-0001-B-L02",
+      "room_id": "SH-SITE-0001-B-L02-R05",
+      "via_room_id": "SH-SITE-0001-B-L02-R07",
+      "classification": "J2",
+      "operational_assumption": "J2-authorized personnel within the same controlled working suite; staff-tagged support rooms do not grant ordinary staff access.",
+      "geometry_security_sha256": "69cde38f72664d7afad5478e3fa3af455d66513855bff050b25945686d8562a4"
+    },
+    {
+      "id": "SH-ACCESS:SH-SITE-0001-B-L02-R06",
+      "floor_id": "SH-SITE-0001-B-L02",
+      "room_id": "SH-SITE-0001-B-L02-R06",
+      "via_room_id": "SH-SITE-0001-B-L02-R07",
+      "classification": "J2",
+      "operational_assumption": "J2-authorized personnel within the same controlled working suite; staff-tagged support rooms do not grant ordinary staff access.",
+      "geometry_security_sha256": "fd2a8f53c61d5d3bf3a6078e0d067069c91a026d0c3432019a2db076b6a03804"
+    },
+    {
+      "id": "SH-ACCESS:SH-SITE-0001-B-L02-R09",
+      "floor_id": "SH-SITE-0001-B-L02",
+      "room_id": "SH-SITE-0001-B-L02-R09",
+      "via_room_id": "SH-SITE-0001-B-L02-R08",
+      "classification": "J2",
+      "operational_assumption": "J2-authorized personnel within the same controlled working suite; staff-tagged support rooms do not grant ordinary staff access.",
+      "geometry_security_sha256": "c12ea33e041606b4b36ff14c603183b949738675c7c7c19beb2ad13dc35dfb5d"
+    },
+    {
+      "id": "SH-ACCESS:SH-SITE-0001-B-L02-R10",
+      "floor_id": "SH-SITE-0001-B-L02",
+      "room_id": "SH-SITE-0001-B-L02-R10",
+      "via_room_id": "SH-SITE-0001-B-L02-R08",
+      "classification": "J2",
+      "operational_assumption": "J2-authorized personnel within the same controlled working suite; staff-tagged support rooms do not grant ordinary staff access.",
+      "geometry_security_sha256": "22dab993ffe6c18f1749c604bd99e02ad4c11c1e86d93c94d3c4dd2b99cdc13e"
+    },
+    {
+      "id": "SH-ACCESS:SH-SITE-0001-C-L01-R06",
+      "floor_id": "SH-SITE-0001-C-L01",
+      "room_id": "SH-SITE-0001-C-L01-R06",
+      "via_room_id": "SH-SITE-0001-C-L01-R05",
+      "classification": "service",
+      "operational_assumption": "Kitchen staff service connection through dining; coordinate service movements with occupied dining and control kitchen entry against public access.",
+      "geometry_security_sha256": "2835277706ec2a12fa82aa494708441c2790ebc6bc7128f00faf24555cbf5b59"
+    }
+  ]
+}
