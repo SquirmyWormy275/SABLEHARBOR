@@ -361,6 +361,70 @@ class Links(HTMLParser):
                 self.links.append(a[k])
 
 
+def validate_graph(data, models, coverage_records):
+    """The hierarchy must be complete and reachable, not merely free of bad edges."""
+    errors = []
+    nodes = {n["id"]: n for n in data.get("nodes", [])}
+    edges = {(e["source"], e["target"]) for e in data.get("edges", [])}
+    adjacency = {}
+    for a, b in edges:
+        adjacency.setdefault(a, set()).add(b)
+    seen = set()
+    pending = ["atlas"]
+    while pending:
+        current = pending.pop()
+        if current in seen:
+            continue
+        seen.add(current)
+        pending.extend(adjacency.get(current, ()))
+    expected = {"atlas"}
+    for site in models:
+        expected.add(site["site_id"])
+        for building in site["buildings"]:
+            expected.add(building["id"])
+            if (site["site_id"], building["id"]) not in edges:
+                errors.append("missing site/building atlas edge " + building["id"])
+            for floor in building["floors"]:
+                expected.add(floor["id"])
+                if (building["id"], floor["id"]) not in edges:
+                    errors.append("missing building/floor atlas edge " + floor["id"])
+                maps = [
+                    node
+                    for node in adjacency.get(floor["id"], ())
+                    if nodes.get(node, {}).get("kind") == "map"
+                ]
+                if not maps:
+                    errors.append("floor lacks saved-map atlas edge " + floor["id"])
+                for mid in maps:
+                    formats = {
+                        Path(nodes.get(a, {}).get("path", "")).suffix
+                        for a in adjacency.get(mid, ())
+                    }
+                    if not {".svg", ".png", ".pdf"} <= formats:
+                        errors.append("floor atlas lacks independent formats " + floor["id"])
+    expected.update("coverage:" + r["id"] for r in coverage_records)
+    if expected - nodes.keys():
+        errors.append("missing expected atlas nodes " + str(sorted(expected - nodes.keys())))
+    if expected - seen:
+        errors.append("unreachable atlas nodes " + str(sorted(expected - seen)))
+    listed = [r["coverage_id"] for r in data.get("coverage", [])]
+    if len(listed) != len(set(listed)) or set(listed) != {r["id"] for r in coverage_records}:
+        errors.append("atlas coverage census mismatch")
+    locks = data.get("source_sha256", {})
+    required = {
+        "geospatial/facilities/coverage/COVERAGE_MATRIX.json",
+        "geospatial/maps/facilities/MANIFEST.json",
+        "geospatial/facilities/atlas.py",
+    }
+    required.update(str(p.relative_to(ROOT)) for p in (BASE / "source").glob("*.json"))
+    if not required <= locks.keys():
+        errors.append("atlas missing required source hashes")
+    for path, digest in locks.items():
+        if not (ROOT / path).is_file() or sha(ROOT / path) != digest:
+            errors.append("stale atlas source " + path)
+    return errors
+
+
 def validate_atlas(required=False):
     errors = []
     index = ROOT / "geospatial/maps/index.html"
@@ -413,6 +477,21 @@ def validate_atlas(required=False):
                 errors.append("missing atlas graph path " + path)
         if not nodes:
             errors.append("atlas graph has no nodes")
+        models, _ = load_models()
+        coverage = json.loads((BASE / "coverage/COVERAGE_MATRIX.json").read_text())
+        errors.extend(validate_graph(data, models, coverage["records"]))
+        if data.get("pdf") and (ROOT / data["pdf"]).is_file():
+            import fitz
+
+            with fitz.open(ROOT / data["pdf"]) as doc:
+                if len(doc) != data.get("pdf_pages"):
+                    errors.append("portable atlas page-count mismatch")
+                for page in doc:
+                    for link in page.get_links():
+                        if link.get("kind") == fitz.LINK_GOTO and not 0 <= link.get(
+                            "page", -1
+                        ) < len(doc):
+                            errors.append("broken internal portable-PDF destination")
     return errors
 
 

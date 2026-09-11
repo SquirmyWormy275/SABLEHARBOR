@@ -2,6 +2,7 @@
 
 import copy
 import importlib.util
+import json
 from pathlib import Path
 import unittest
 
@@ -75,6 +76,49 @@ class FacilityRegression(unittest.TestCase):
         models[0]["buildings"][0]["floors"][0]["planned_peak"] = 0
         self.assertTrue(
             any("exceeds floor planned peak" in e for e in validation.validate_models(models))
+        )
+
+
+class AtlasGraphRegression(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.models, _ = validation.load_models()
+        cls.graph = json.loads(
+            (validation.ROOT / "geospatial/maps/facilities/ATLAS_LINKS.json").read_text()
+        )
+        cls.coverage = json.loads((validation.BASE / "coverage/COVERAGE_MATRIX.json").read_text())[
+            "records"
+        ]
+
+    def test_current_graph(self):
+        self.assertEqual(validation.validate_graph(self.graph, self.models, self.coverage), [])
+
+    def test_floor_disconnected(self):
+        graph = copy.deepcopy(self.graph)
+        floor = self.models[0]["buildings"][0]["floors"][0]["id"]
+        graph["edges"] = [e for e in graph["edges"] if e["target"] != floor]
+        errors = validation.validate_graph(graph, self.models, self.coverage)
+        self.assertTrue(any("unreachable atlas nodes" in e for e in errors))
+        self.assertTrue(any("missing building/floor" in e for e in errors))
+
+    def test_source_stale(self):
+        graph = copy.deepcopy(self.graph)
+        graph["source_sha256"]["geospatial/facilities/source/campus.json"] = "0" * 64
+        self.assertTrue(
+            any(
+                "stale atlas source" in e
+                for e in validation.validate_graph(graph, self.models, self.coverage)
+            )
+        )
+
+    def test_census_omitted(self):
+        graph = copy.deepcopy(self.graph)
+        graph["coverage"].pop()
+        self.assertTrue(
+            any(
+                "census mismatch" in e
+                for e in validation.validate_graph(graph, self.models, self.coverage)
+            )
         )
 
 
