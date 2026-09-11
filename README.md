@@ -31,6 +31,8 @@ See the [Advisory source package](docs/advisory/README.md).
 
 ## Current business development
 
+The [September 11 CCF prebuild audit](docs/internal/development/CCF_PREBUILD_REPOSITORY_AUDIT_2026-09-11.md) inventories accepted controls and implementations, identifies remaining development, and proposes a dependency-ordered build. It is an assessment and backlog, not new canon or an effectiveness conclusion.
+
 The [seven business dossiers](docs/business-lines/README.md) connect operating lifecycles, finances, authority, evidence and remaining decisions. Use the [source crosswalk](docs/business-lines/CURRENT_SOURCE_CROSSWALK.md) to distinguish current canon from preserved financial releases and the [interface record](docs/business-lines/BUSINESS_FINANCE_AND_ALEXANDRIA_INTERFACES.md) for business/Finance access boundaries.
 
 The [business-driven financial successor](enterprise/business/README.md) supplies causal 2027–2031 Core economics, preserved industrial integration and seven reconciled unit evidence packages. See the [release index](docs/releases/BUSINESS_FINANCE_RELEASES.md).
