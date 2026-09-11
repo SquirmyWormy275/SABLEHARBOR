@@ -1,0 +1,3099 @@
+{
+  "schema_version": "1.0.0",
+  "revision": "0.1.0",
+  "as_of": "2026-09-11",
+  "authoritative_base": "786fc9a5311a04dde92ee6dbb08ac3b77a380200",
+  "site_id": "SH-SITE-0001",
+  "name": "Sacramento headquarters campus",
+  "status": "PROPOSED_MODELLED_PROGRAM",
+  "geometry_status": "ILLUSTRATIVE_LOCAL_FRAME_NOT_PARCEL",
+  "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+  "tenure": "UNESTABLISHED",
+  "occupancy_start": null,
+  "construction_start": null,
+  "construction_completion": null,
+  "geometry_basis": "Local metric design frame: x east, y north; no geographic transform or cadastral claim. 240 \u00d7 200 m illustrative envelope within approved 8\u201315 acre range.",
+  "envelope_m": [
+    240,
+    200
+  ],
+  "sources": [
+    "docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md",
+    "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
+    "docs/j2/J2_ESTABLISHMENT.md",
+    "docs/j2/J2_HEADQUARTERS.md",
+    "docs/j2/EDUCATION.md",
+    "docs/canon/THIRD_PARTY_SERVICES_SOURCING_DECISIONS_2026-09-09.md",
+    "docs/controls/CCF_ENTERPRISE_SECURITY_VENDOR_DECISIONS_2026-09-11.md"
+  ],
+  "assumptions": [
+    {
+      "id": "SAC-A01",
+      "statement": "Education and 46 short-stay rooms are modelled within the integrated Sacramento campus for this planning option; existing Education location and actual occupancy remain unestablished."
+    },
+    {
+      "id": "SAC-A02",
+      "statement": "All room counts, dimensions, seats and attendance below are design assumptions; no current employee count, appropriation, construction or commissioning is inferred."
+    },
+    {
+      "id": "SAC-A03",
+      "statement": "Two protected stairs per occupied multi-storey block, a lift and stacked wet/service cores are concept requirements; detailed fire, structure, accessibility and MEP engineering are unverified."
+    },
+    {
+      "id": "SAC-A04",
+      "statement": "All modelled staff are anonymous attendance places, not appointments. Visitors, trainee residents and meeting occupants move between rooms; seat sums are not a campus population."
+    },
+    {
+      "id": "SAC-A05",
+      "statement": "Campus hosts local edge/communications only. Primary production and Alexandria compute use third-party colocation direction; PR119 provider and owned-facility detail remains a separate pending workline."
+    }
+  ],
+  "site_zones": [
+    {
+      "name": "Arrival forecourt",
+      "rect_m": [
+        22,
+        12,
+        110,
+        10
+      ],
+      "type": "public"
+    },
+    {
+      "name": "Central pedestrian court",
+      "rect_m": [
+        85,
+        73,
+        60,
+        60
+      ],
+      "type": "landscape"
+    },
+    {
+      "name": "South parking \u00b7 120 spaces",
+      "rect_m": [
+        156,
+        24,
+        68,
+        60
+      ],
+      "type": "parking"
+    },
+    {
+      "name": "West parking \u00b7 80 spaces",
+      "rect_m": [
+        22,
+        145,
+        60,
+        40
+      ],
+      "type": "parking"
+    },
+    {
+      "name": "Stormwater landscape",
+      "rect_m": [
+        148,
+        145,
+        16,
+        38
+      ],
+      "type": "landscape"
+    },
+    {
+      "name": "Ten-year expansion reserve",
+      "rect_m": [
+        22,
+        66,
+        54,
+        24
+      ],
+      "type": "reserve"
+    }
+  ],
+  "access": {
+    "fire_service_loop_m": [
+      [
+        10,
+        10
+      ],
+      [
+        230,
+        10
+      ],
+      [
+        230,
+        190
+      ],
+      [
+        10,
+        190
+      ],
+      [
+        10,
+        10
+      ]
+    ],
+    "public_arrival_m": [
+      [
+        120,
+        0
+      ],
+      [
+        120,
+        16
+      ],
+      [
+        46,
+        16
+      ],
+      [
+        46,
+        26
+      ]
+    ],
+    "pedestrian_spine_m": [
+      [
+        82,
+        20
+      ],
+      [
+        82,
+        135
+      ],
+      [
+        114,
+        135
+      ],
+      [
+        114,
+        150
+      ]
+    ],
+    "service_arrival_m": [
+      [
+        210,
+        200
+      ],
+      [
+        210,
+        185
+      ],
+      [
+        189,
+        185
+      ],
+      [
+        189,
+        178
+      ]
+    ],
+    "j2_controlled_entry_m": [
+      [
+        155,
+        90
+      ],
+      [
+        155,
+        112
+      ],
+      [
+        160,
+        112
+      ]
+    ],
+    "bicycle_spaces": 64,
+    "parking_spaces": 200,
+    "parking_basis": "Illustrative 420-person education-event campus peak \u00d755% car arrival /1.2 persons per vehicle \u2248193; 200 spaces reserved. 20% shuttle,15% transit,10% cycle/walk. Availability and mode shares unverified.",
+    "pedestrian_branches_m": [
+      [
+        [
+          82,
+          38
+        ],
+        [
+          94,
+          38
+        ]
+      ],
+      [
+        [
+          82,
+          115
+        ],
+        [
+          76,
+          115
+        ]
+      ],
+      [
+        [
+          82,
+          38
+        ],
+        [
+          70,
+          38
+        ]
+      ],
+      [
+        [
+          114,
+          135
+        ],
+        [
+          155,
+          135
+        ],
+        [
+          155,
+          112
+        ],
+        [
+          160,
+          112
+        ]
+      ],
+      [
+        [
+          114,
+          135
+        ],
+        [
+          85,
+          135
+        ],
+        [
+          85,
+          162
+        ],
+        [
+          90,
+          162
+        ]
+      ],
+      [
+        [
+          155,
+          135
+        ],
+        [
+          155,
+          169
+        ],
+        [
+          174,
+          169
+        ]
+      ]
+    ]
+  },
+  "adjacency": [
+    {
+      "a": "Governance House",
+      "b": "Enterprise Services",
+      "relationship": "near",
+      "reason": "CEO/Board access to substantive corporate officers; Audit separately controlled."
+    },
+    {
+      "a": "J2 House",
+      "b": "Enterprise Services",
+      "relationship": "separate_controlled_buildings",
+      "reason": "J2 outside ESS; no pass-through into restricted J2."
+    },
+    {
+      "a": "Education and Convening",
+      "b": "Residential House",
+      "relationship": "pedestrian_link",
+      "reason": "Residential learners can reach classes without crossing delivery yard."
+    },
+    {
+      "a": "Education and Convening",
+      "b": "J2 House",
+      "relationship": "controlled_handoff",
+      "reason": "Shared teaching does not grant J2 access."
+    },
+    {
+      "a": "Campus Services",
+      "b": "J2 House",
+      "relationship": "service_edge",
+      "reason": "After-hours and equipment access separated from visitors."
+    }
+  ],
+  "buildings": [
+    {
+      "id": "SH-SITE-0001-B01",
+      "name": "Governance House",
+      "rect_m": [
+        22,
+        26,
+        48,
+        24
+      ],
+      "status": "MODELLED_NOT_AS_BUILT",
+      "structure": "6 m planning grid; slab/column sizes not engineered",
+      "floor_height_m": 4.2,
+      "core_basis": "6 m end service bays; 3 m central corridor; protected stairs and lift stack unchanged",
+      "floors": [
+        {
+          "id": "SH-SITE-0001-B01-L01",
+          "level": 1,
+          "name": "Arrival and institutional work",
+          "status": "MODELLED_FITOUT_NOT_EXISTING",
+          "gross_area_m2": 1152,
+          "rooms": [
+            {
+              "id": "SH-SITE-0001-B01-L01-R01",
+              "name": "Reception and visitor waiting",
+              "rect_m": [
+                6,
+                0,
+                8,
+                10.5
+              ],
+              "access": "public",
+              "assigned_desks": 0,
+              "shared_desks": 4,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 0,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B01-L01-R02",
+              "name": "Board and committee room",
+              "rect_m": [
+                14,
+                0,
+                12,
+                10.5
+              ],
+              "access": "staff",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 20,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B01-L01-R03",
+              "name": "Executive issue room",
+              "rect_m": [
+                26,
+                0,
+                8,
+                10.5
+              ],
+              "access": "staff",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 12,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B01-L01-R04",
+              "name": "Independent Audit suite",
+              "rect_m": [
+                34,
+                0,
+                8,
+                10.5
+              ],
+              "access": "audit_independent",
+              "assigned_desks": 8,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 6,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B01-L01-R05",
+              "name": "Corporate Secretary records",
+              "rect_m": [
+                6,
+                13.5,
+                8,
+                10.5
+              ],
+              "access": "staff",
+              "assigned_desks": 0,
+              "shared_desks": 4,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 4,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B01-L01-R06",
+              "name": "CEO working office",
+              "rect_m": [
+                14,
+                13.5,
+                4,
+                10.5
+              ],
+              "access": "staff",
+              "assigned_desks": 1,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 4,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B01-L01-R07",
+              "name": "Executive support and travel",
+              "rect_m": [
+                18,
+                13.5,
+                8,
+                10.5
+              ],
+              "access": "staff",
+              "assigned_desks": 0,
+              "shared_desks": 5,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 4,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B01-L01-R08",
+              "name": "Visiting business leaders",
+              "rect_m": [
+                26,
+                13.5,
+                16,
+                10.5
+              ],
+              "access": "staff",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 8,
+              "training_seats": 0,
+              "meeting_seats": 8,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            }
+          ],
+          "net_assignable_area_m2": 756.0,
+          "core_circulation_service_m2": 396.0,
+          "planned_peak": 35
+        },
+        {
+          "id": "SH-SITE-0001-B01-L02",
+          "level": 2,
+          "name": "Enterprise collaboration",
+          "status": "MODELLED_FITOUT_NOT_EXISTING",
+          "gross_area_m2": 1152,
+          "rooms": [
+            {
+              "id": "SH-SITE-0001-B01-L02-R01",
+              "name": "Cross-business project studio",
+              "rect_m": [
+                6,
+                0,
+                12,
+                10.5
+              ],
+              "access": "staff",
+              "assigned_desks": 0,
+              "shared_desks": 12,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 8,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B01-L02-R02",
+              "name": "Professional practice room",
+              "rect_m": [
+                18,
+                0,
+                10,
+                10.5
+              ],
+              "access": "staff",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 20,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B01-L02-R03",
+              "name": "Legal consultation",
+              "rect_m": [
+                28,
+                0,
+                8,
+                10.5
+              ],
+              "access": "staff",
+              "assigned_desks": 0,
+              "shared_desks": 6,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 6,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B01-L02-R04",
+              "name": "Private interviews",
+              "rect_m": [
+                36,
+                0,
+                6,
+                10.5
+              ],
+              "access": "staff",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 8,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B01-L02-R05",
+              "name": "Finance capital review",
+              "rect_m": [
+                6,
+                13.5,
+                8,
+                10.5
+              ],
+              "access": "staff",
+              "assigned_desks": 0,
+              "shared_desks": 8,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 8,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B01-L02-R06",
+              "name": "Research collaboration",
+              "rect_m": [
+                14,
+                13.5,
+                10,
+                10.5
+              ],
+              "access": "staff",
+              "assigned_desks": 0,
+              "shared_desks": 8,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 8,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B01-L02-R07",
+              "name": "Quiet work library",
+              "rect_m": [
+                24,
+                13.5,
+                10,
+                10.5
+              ],
+              "access": "staff",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 16,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B01-L02-R08",
+              "name": "Shared visiting work",
+              "rect_m": [
+                34,
+                13.5,
+                8,
+                10.5
+              ],
+              "access": "staff",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 12,
+              "training_seats": 0,
+              "meeting_seats": 8,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            }
+          ],
+          "net_assignable_area_m2": 756.0,
+          "core_circulation_service_m2": 396.0,
+          "planned_peak": 20
+        }
+      ]
+    },
+    {
+      "id": "SH-SITE-0001-B02",
+      "name": "Enterprise Services",
+      "rect_m": [
+        94,
+        26,
+        54,
+        24
+      ],
+      "status": "MODELLED_NOT_AS_BUILT",
+      "structure": "6 m planning grid; slab/column sizes not engineered",
+      "floor_height_m": 4.2,
+      "core_basis": "6 m end service bays; 3 m central corridor; protected stairs and lift stack unchanged",
+      "floors": [
+        {
+          "id": "SH-SITE-0001-B02-L01",
+          "level": 1,
+          "name": "People and shared operations",
+          "status": "MODELLED_FITOUT_NOT_EXISTING",
+          "gross_area_m2": 1296,
+          "rooms": [
+            {
+              "id": "SH-SITE-0001-B02-L01-R01",
+              "name": "People and Culture",
+              "rect_m": [
+                6,
+                0,
+                12,
+                10.5
+              ],
+              "access": "staff",
+              "assigned_desks": 0,
+              "shared_desks": 12,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 4,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B02-L01-R02",
+              "name": "Employee support",
+              "rect_m": [
+                18,
+                0,
+                6,
+                10.5
+              ],
+              "access": "staff",
+              "assigned_desks": 0,
+              "shared_desks": 6,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 6,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B02-L01-R03",
+              "name": "Procurement and vendors",
+              "rect_m": [
+                24,
+                0,
+                10,
+                10.5
+              ],
+              "access": "staff",
+              "assigned_desks": 0,
+              "shared_desks": 8,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 4,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B02-L01-R04",
+              "name": "Workplace coordination",
+              "rect_m": [
+                34,
+                0,
+                14,
+                10.5
+              ],
+              "access": "staff",
+              "assigned_desks": 0,
+              "shared_desks": 6,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 4,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B02-L01-R05",
+              "name": "Finance operations",
+              "rect_m": [
+                6,
+                13.5,
+                14,
+                10.5
+              ],
+              "access": "staff",
+              "assigned_desks": 0,
+              "shared_desks": 16,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 4,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B02-L01-R06",
+              "name": "Treasury and reporting",
+              "rect_m": [
+                20,
+                13.5,
+                8,
+                10.5
+              ],
+              "access": "staff",
+              "assigned_desks": 0,
+              "shared_desks": 8,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 6,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B02-L01-R07",
+              "name": "Risk and Compliance",
+              "rect_m": [
+                28,
+                13.5,
+                10,
+                10.5
+              ],
+              "access": "staff",
+              "assigned_desks": 0,
+              "shared_desks": 10,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 6,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B02-L01-R08",
+              "name": "Legal working suite",
+              "rect_m": [
+                38,
+                13.5,
+                10,
+                10.5
+              ],
+              "access": "staff",
+              "assigned_desks": 0,
+              "shared_desks": 8,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 6,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            }
+          ],
+          "net_assignable_area_m2": 882.0,
+          "core_circulation_service_m2": 414.0,
+          "planned_peak": 46
+        },
+        {
+          "id": "SH-SITE-0001-B02-L02",
+          "level": 2,
+          "name": "Technology and resilience",
+          "status": "MODELLED_FITOUT_NOT_EXISTING",
+          "gross_area_m2": 1296,
+          "rooms": [
+            {
+              "id": "SH-SITE-0001-B02-L02-R01",
+              "name": "Employee technology",
+              "rect_m": [
+                6,
+                0,
+                10,
+                10.5
+              ],
+              "access": "staff",
+              "assigned_desks": 0,
+              "shared_desks": 10,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 4,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B02-L02-R02",
+              "name": "Platform engineering",
+              "rect_m": [
+                16,
+                0,
+                14,
+                10.5
+              ],
+              "access": "staff",
+              "assigned_desks": 0,
+              "shared_desks": 12,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 4,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B02-L02-R03",
+              "name": "Network operations",
+              "rect_m": [
+                30,
+                0,
+                10,
+                10.5
+              ],
+              "access": "staff",
+              "assigned_desks": 0,
+              "shared_desks": 8,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 4,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B02-L02-R04",
+              "name": "Incident coordination",
+              "rect_m": [
+                40,
+                0,
+                8,
+                10.5
+              ],
+              "access": "staff",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 16,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B02-L02-R05",
+              "name": "Security engineering",
+              "rect_m": [
+                6,
+                13.5,
+                10,
+                10.5
+              ],
+              "access": "staff",
+              "assigned_desks": 0,
+              "shared_desks": 10,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 4,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B02-L02-R06",
+              "name": "Controlled communications",
+              "rect_m": [
+                16,
+                13.5,
+                8,
+                10.5
+              ],
+              "access": "staff",
+              "assigned_desks": 0,
+              "shared_desks": 4,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 4,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B02-L02-R07",
+              "name": "Developer enablement",
+              "rect_m": [
+                24,
+                13.5,
+                14,
+                10.5
+              ],
+              "access": "staff",
+              "assigned_desks": 0,
+              "shared_desks": 12,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 4,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B02-L02-R08",
+              "name": "Service reliability",
+              "rect_m": [
+                38,
+                13.5,
+                10,
+                10.5
+              ],
+              "access": "staff",
+              "assigned_desks": 0,
+              "shared_desks": 8,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 4,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            }
+          ],
+          "net_assignable_area_m2": 882.0,
+          "core_circulation_service_m2": 414.0,
+          "planned_peak": 32
+        },
+        {
+          "id": "SH-SITE-0001-B02-L03",
+          "level": 3,
+          "name": "Expansion shell",
+          "status": "FUTURE_SHELL",
+          "gross_area_m2": 1296,
+          "rooms": [
+            {
+              "id": "SH-SITE-0001-B02-L03-R01",
+              "name": "Reserved workplace",
+              "rect_m": [
+                6,
+                0,
+                10.5,
+                10.5
+              ],
+              "access": "staff",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 0,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B02-L03-R02",
+              "name": "Reserved workplace",
+              "rect_m": [
+                16.5,
+                0,
+                10.5,
+                10.5
+              ],
+              "access": "staff",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 0,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B02-L03-R03",
+              "name": "Reserved workplace",
+              "rect_m": [
+                27.0,
+                0,
+                10.5,
+                10.5
+              ],
+              "access": "staff",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 0,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B02-L03-R04",
+              "name": "Reserved workplace",
+              "rect_m": [
+                37.5,
+                0,
+                10.5,
+                10.5
+              ],
+              "access": "staff",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 0,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B02-L03-R05",
+              "name": "Reserved workplace",
+              "rect_m": [
+                6,
+                13.5,
+                10.5,
+                10.5
+              ],
+              "access": "staff",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 0,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B02-L03-R06",
+              "name": "Reserved workplace",
+              "rect_m": [
+                16.5,
+                13.5,
+                10.5,
+                10.5
+              ],
+              "access": "staff",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 0,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B02-L03-R07",
+              "name": "Reserved workplace",
+              "rect_m": [
+                27.0,
+                13.5,
+                10.5,
+                10.5
+              ],
+              "access": "staff",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 0,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B02-L03-R08",
+              "name": "Reserved workplace",
+              "rect_m": [
+                37.5,
+                13.5,
+                10.5,
+                10.5
+              ],
+              "access": "staff",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 0,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            }
+          ],
+          "net_assignable_area_m2": 882.0,
+          "core_circulation_service_m2": 414.0,
+          "planned_peak": 0
+        }
+      ]
+    },
+    {
+      "id": "SH-SITE-0001-B03",
+      "name": "J2 House",
+      "rect_m": [
+        160,
+        100,
+        54,
+        24
+      ],
+      "status": "MODELLED_NOT_AS_BUILT",
+      "structure": "6 m planning grid; slab/column sizes not engineered",
+      "floor_height_m": 4.2,
+      "core_basis": "6 m end service bays; 3 m central corridor; protected stairs and lift stack unchanged",
+      "floors": [
+        {
+          "id": "SH-SITE-0001-B03-L01",
+          "level": 1,
+          "name": "Contact and field junction",
+          "status": "MODELLED_FITOUT_NOT_EXISTING",
+          "gross_area_m2": 1296,
+          "rooms": [
+            {
+              "id": "SH-SITE-0001-B03-L01-R01",
+              "name": "Contact bench",
+              "rect_m": [
+                6,
+                0,
+                12,
+                10.5
+              ],
+              "access": "restricted",
+              "assigned_desks": 0,
+              "shared_desks": 18,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 4,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B03-L01-R02",
+              "name": "Collection planning",
+              "rect_m": [
+                18,
+                0,
+                10,
+                10.5
+              ],
+              "access": "restricted",
+              "assigned_desks": 0,
+              "shared_desks": 12,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 6,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B03-L01-R03",
+              "name": "Field equipment preparation",
+              "rect_m": [
+                28,
+                0,
+                8,
+                10.5
+              ],
+              "access": "restricted",
+              "assigned_desks": 0,
+              "shared_desks": 8,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 0,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B03-L01-R04",
+              "name": "JAG team room",
+              "rect_m": [
+                36,
+                0,
+                12,
+                10.5
+              ],
+              "access": "restricted",
+              "assigned_desks": 0,
+              "shared_desks": 15,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 6,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B03-L01-R05",
+              "name": "Human Contact interviews",
+              "rect_m": [
+                6,
+                13.5,
+                8,
+                10.5
+              ],
+              "access": "restricted",
+              "assigned_desks": 0,
+              "shared_desks": 8,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 8,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B03-L01-R06",
+              "name": "Digital collection",
+              "rect_m": [
+                14,
+                13.5,
+                14,
+                10.5
+              ],
+              "access": "restricted",
+              "assigned_desks": 0,
+              "shared_desks": 16,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 4,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B03-L01-R07",
+              "name": "External source work",
+              "rect_m": [
+                28,
+                13.5,
+                8,
+                10.5
+              ],
+              "access": "restricted",
+              "assigned_desks": 0,
+              "shared_desks": 10,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 4,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B03-L01-R08",
+              "name": "JAG handoff",
+              "rect_m": [
+                36,
+                13.5,
+                12,
+                10.5
+              ],
+              "access": "restricted",
+              "assigned_desks": 0,
+              "shared_desks": 15,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 6,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            }
+          ],
+          "net_assignable_area_m2": 882.0,
+          "core_circulation_service_m2": 414.0,
+          "planned_peak": 64
+        },
+        {
+          "id": "SH-SITE-0001-B03-L02",
+          "level": 2,
+          "name": "Judgment and Orientation",
+          "status": "MODELLED_FITOUT_NOT_EXISTING",
+          "gross_area_m2": 1296,
+          "rooms": [
+            {
+              "id": "SH-SITE-0001-B03-L02-R01",
+              "name": "Judgment Officers",
+              "rect_m": [
+                6,
+                0,
+                12,
+                10.5
+              ],
+              "access": "restricted",
+              "assigned_desks": 0,
+              "shared_desks": 18,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 4,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B03-L02-R02",
+              "name": "Judgment Officers",
+              "rect_m": [
+                18,
+                0,
+                12,
+                10.5
+              ],
+              "access": "restricted",
+              "assigned_desks": 0,
+              "shared_desks": 18,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 4,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B03-L02-R03",
+              "name": "Judgment Watch",
+              "rect_m": [
+                30,
+                0,
+                6,
+                10.5
+              ],
+              "access": "restricted",
+              "assigned_desks": 0,
+              "shared_desks": 6,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 0,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B03-L02-R04",
+              "name": "Evidence review",
+              "rect_m": [
+                36,
+                0,
+                12,
+                10.5
+              ],
+              "access": "restricted",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 12,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B03-L02-R05",
+              "name": "Orientation Officers",
+              "rect_m": [
+                6,
+                13.5,
+                10,
+                10.5
+              ],
+              "access": "restricted",
+              "assigned_desks": 0,
+              "shared_desks": 12,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 4,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B03-L02-R06",
+              "name": "Orientation synthesis",
+              "rect_m": [
+                16,
+                13.5,
+                10,
+                10.5
+              ],
+              "access": "restricted",
+              "assigned_desks": 0,
+              "shared_desks": 12,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 4,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B03-L02-R07",
+              "name": "Restricted library",
+              "rect_m": [
+                26,
+                13.5,
+                12,
+                10.5
+              ],
+              "access": "restricted",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 16,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B03-L02-R08",
+              "name": "Quiet judgment work",
+              "rect_m": [
+                38,
+                13.5,
+                10,
+                10.5
+              ],
+              "access": "restricted",
+              "assigned_desks": 0,
+              "shared_desks": 8,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 4,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            }
+          ],
+          "net_assignable_area_m2": 882.0,
+          "core_circulation_service_m2": 414.0,
+          "planned_peak": 48
+        },
+        {
+          "id": "SH-SITE-0001-B03-L03",
+          "level": 3,
+          "name": "Institutional stewardship",
+          "status": "MODELLED_FITOUT_NOT_EXISTING",
+          "gross_area_m2": 1296,
+          "rooms": [
+            {
+              "id": "SH-SITE-0001-B03-L03-R01",
+              "name": "J2 leadership",
+              "rect_m": [
+                6,
+                0,
+                6,
+                10.5
+              ],
+              "access": "restricted",
+              "assigned_desks": 3,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 6,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B03-L03-R02",
+              "name": "Cross-arm coordination",
+              "rect_m": [
+                12,
+                0,
+                8,
+                10.5
+              ],
+              "access": "restricted",
+              "assigned_desks": 0,
+              "shared_desks": 5,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 8,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B03-L03-R03",
+              "name": "Professional services",
+              "rect_m": [
+                20,
+                0,
+                14,
+                10.5
+              ],
+              "access": "restricted",
+              "assigned_desks": 0,
+              "shared_desks": 5,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 4,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B03-L03-R04",
+              "name": "Travel and field support",
+              "rect_m": [
+                34,
+                0,
+                14,
+                10.5
+              ],
+              "access": "restricted",
+              "assigned_desks": 0,
+              "shared_desks": 5,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 4,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B03-L03-R05",
+              "name": "Knowledge stewardship",
+              "rect_m": [
+                6,
+                13.5,
+                12,
+                10.5
+              ],
+              "access": "restricted",
+              "assigned_desks": 0,
+              "shared_desks": 4,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 4,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B03-L03-R06",
+              "name": "Education liaison",
+              "rect_m": [
+                18,
+                13.5,
+                8,
+                10.5
+              ],
+              "access": "restricted",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 8,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B03-L03-R07",
+              "name": "Security and access",
+              "rect_m": [
+                26,
+                13.5,
+                8,
+                10.5
+              ],
+              "access": "restricted",
+              "assigned_desks": 0,
+              "shared_desks": 3,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 4,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B03-L03-R08",
+              "name": "Workplace support",
+              "rect_m": [
+                34,
+                13.5,
+                14,
+                10.5
+              ],
+              "access": "restricted",
+              "assigned_desks": 0,
+              "shared_desks": 3,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 4,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            }
+          ],
+          "net_assignable_area_m2": 882.0,
+          "core_circulation_service_m2": 414.0,
+          "planned_peak": 20
+        }
+      ]
+    },
+    {
+      "id": "SH-SITE-0001-B04",
+      "name": "Education and Convening",
+      "rect_m": [
+        22,
+        100,
+        54,
+        30
+      ],
+      "status": "MODELLED_NOT_AS_BUILT",
+      "structure": "6 m planning grid; slab/column sizes not engineered",
+      "floor_height_m": 4.2,
+      "core_basis": "6 m end service bays; 3 m central corridor; protected stairs and lift stack unchanged",
+      "floors": [
+        {
+          "id": "SH-SITE-0001-B04-L01",
+          "level": 1,
+          "name": "Enterprise learning",
+          "status": "MODELLED_FITOUT_NOT_EXISTING",
+          "gross_area_m2": 1620,
+          "rooms": [
+            {
+              "id": "SH-SITE-0001-B04-L01-R01",
+              "name": "Case classroom A",
+              "rect_m": [
+                6,
+                0,
+                14,
+                13.5
+              ],
+              "access": "public",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 30,
+              "meeting_seats": 0,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B04-L01-R02",
+              "name": "Case classroom B",
+              "rect_m": [
+                20,
+                0,
+                14,
+                13.5
+              ],
+              "access": "public",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 30,
+              "meeting_seats": 0,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B04-L01-R03",
+              "name": "Simulation boardroom",
+              "rect_m": [
+                34,
+                0,
+                10,
+                13.5
+              ],
+              "access": "public",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 20,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B04-L01-R04",
+              "name": "Exercise control",
+              "rect_m": [
+                44,
+                0,
+                4,
+                13.5
+              ],
+              "access": "staff",
+              "assigned_desks": 0,
+              "shared_desks": 4,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 0,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B04-L01-R05",
+              "name": "Dining and commons",
+              "rect_m": [
+                6,
+                16.5,
+                18,
+                13.5
+              ],
+              "access": "public",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 60,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B04-L01-R06",
+              "name": "Teaching kitchen and service",
+              "rect_m": [
+                24,
+                16.5,
+                10,
+                13.5
+              ],
+              "access": "staff",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 0,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B04-L01-R07",
+              "name": "Registrar and reception",
+              "rect_m": [
+                34,
+                16.5,
+                6,
+                13.5
+              ],
+              "access": "staff",
+              "assigned_desks": 0,
+              "shared_desks": 4,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 0,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B04-L01-R08",
+              "name": "Visiting faculty",
+              "rect_m": [
+                40,
+                16.5,
+                8,
+                13.5
+              ],
+              "access": "staff",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 8,
+              "training_seats": 0,
+              "meeting_seats": 8,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            }
+          ],
+          "net_assignable_area_m2": 1134.0,
+          "core_circulation_service_m2": 486.0,
+          "planned_peak": 76
+        },
+        {
+          "id": "SH-SITE-0001-B04-L02",
+          "level": 2,
+          "name": "Professional formation",
+          "status": "MODELLED_FITOUT_NOT_EXISTING",
+          "gross_area_m2": 1620,
+          "rooms": [
+            {
+              "id": "SH-SITE-0001-B04-L02-R01",
+              "name": "Formation classroom C",
+              "rect_m": [
+                6,
+                0,
+                14,
+                13.5
+              ],
+              "access": "public",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 30,
+              "meeting_seats": 0,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B04-L02-R02",
+              "name": "Formation classroom D",
+              "rect_m": [
+                20,
+                0,
+                14,
+                13.5
+              ],
+              "access": "public",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 30,
+              "meeting_seats": 0,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B04-L02-R03",
+              "name": "Interview simulation",
+              "rect_m": [
+                34,
+                0,
+                6,
+                13.5
+              ],
+              "access": "public",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 8,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B04-L02-R04",
+              "name": "Exercise preparation",
+              "rect_m": [
+                40,
+                0,
+                8,
+                13.5
+              ],
+              "access": "staff",
+              "assigned_desks": 0,
+              "shared_desks": 4,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 0,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B04-L02-R05",
+              "name": "Permanent faculty",
+              "rect_m": [
+                6,
+                16.5,
+                14,
+                13.5
+              ],
+              "access": "staff",
+              "assigned_desks": 0,
+              "shared_desks": 12,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 4,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B04-L02-R06",
+              "name": "Case and curriculum design",
+              "rect_m": [
+                20,
+                16.5,
+                12,
+                13.5
+              ],
+              "access": "staff",
+              "assigned_desks": 0,
+              "shared_desks": 8,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 4,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B04-L02-R07",
+              "name": "Learning operations",
+              "rect_m": [
+                32,
+                16.5,
+                8,
+                13.5
+              ],
+              "access": "staff",
+              "assigned_desks": 0,
+              "shared_desks": 4,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 4,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B04-L02-R08",
+              "name": "Study and consultation",
+              "rect_m": [
+                40,
+                16.5,
+                8,
+                13.5
+              ],
+              "access": "public",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 16,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            }
+          ],
+          "net_assignable_area_m2": 1134.0,
+          "core_circulation_service_m2": 486.0,
+          "planned_peak": 70
+        }
+      ]
+    },
+    {
+      "id": "SH-SITE-0001-B05",
+      "name": "Residential House",
+      "rect_m": [
+        90,
+        150,
+        48,
+        24
+      ],
+      "status": "MODELLED_NOT_AS_BUILT",
+      "structure": "6 m planning grid; slab/column sizes not engineered",
+      "floor_height_m": 4.2,
+      "core_basis": "6 m end service bays; 3 m central corridor; protected stairs and lift stack unchanged",
+      "floors": [
+        {
+          "id": "SH-SITE-0001-B05-L01",
+          "level": 1,
+          "name": "Short-stay residence ground",
+          "status": "MODELLED_FITOUT_NOT_EXISTING",
+          "gross_area_m2": 1152,
+          "rooms": [
+            {
+              "id": "SH-SITE-0001-B05-L01-R01",
+              "name": "Accessible suite",
+              "rect_m": [
+                6,
+                0,
+                6,
+                10.5
+              ],
+              "access": "residential",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 0,
+              "resident_beds": 1,
+              "basis": "SAC-A02; single short-stay room including ensuite zone; detailed accessibility design unverified",
+              "accessible_design_intent": true
+            },
+            {
+              "id": "SH-SITE-0001-B05-L01-R03",
+              "name": "Room 03",
+              "rect_m": [
+                12,
+                0,
+                3,
+                10.5
+              ],
+              "access": "residential",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 0,
+              "resident_beds": 1,
+              "basis": "SAC-A02; single short-stay room including ensuite zone; detailed accessibility design unverified"
+            },
+            {
+              "id": "SH-SITE-0001-B05-L01-R04",
+              "name": "Room 04",
+              "rect_m": [
+                15,
+                0,
+                3,
+                10.5
+              ],
+              "access": "residential",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 0,
+              "resident_beds": 1,
+              "basis": "SAC-A02; single short-stay room including ensuite zone; detailed accessibility design unverified"
+            },
+            {
+              "id": "SH-SITE-0001-B05-L01-R05",
+              "name": "Room 05",
+              "rect_m": [
+                18,
+                0,
+                3,
+                10.5
+              ],
+              "access": "residential",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 0,
+              "resident_beds": 1,
+              "basis": "SAC-A02; single short-stay room including ensuite zone; detailed accessibility design unverified"
+            },
+            {
+              "id": "SH-SITE-0001-B05-L01-R06",
+              "name": "Room 06",
+              "rect_m": [
+                21,
+                0,
+                3,
+                10.5
+              ],
+              "access": "residential",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 0,
+              "resident_beds": 1,
+              "basis": "SAC-A02; single short-stay room including ensuite zone; detailed accessibility design unverified"
+            },
+            {
+              "id": "SH-SITE-0001-B05-L01-R07",
+              "name": "Room 07",
+              "rect_m": [
+                24,
+                0,
+                3,
+                10.5
+              ],
+              "access": "residential",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 0,
+              "resident_beds": 1,
+              "basis": "SAC-A02; single short-stay room including ensuite zone; detailed accessibility design unverified"
+            },
+            {
+              "id": "SH-SITE-0001-B05-L01-R08",
+              "name": "Room 08",
+              "rect_m": [
+                27,
+                0,
+                3,
+                10.5
+              ],
+              "access": "residential",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 0,
+              "resident_beds": 1,
+              "basis": "SAC-A02; single short-stay room including ensuite zone; detailed accessibility design unverified"
+            },
+            {
+              "id": "SH-SITE-0001-B05-L01-R09",
+              "name": "Room 09",
+              "rect_m": [
+                30,
+                0,
+                3,
+                10.5
+              ],
+              "access": "residential",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 0,
+              "resident_beds": 1,
+              "basis": "SAC-A02; single short-stay room including ensuite zone; detailed accessibility design unverified"
+            },
+            {
+              "id": "SH-SITE-0001-B05-L01-R10",
+              "name": "Room 10",
+              "rect_m": [
+                33,
+                0,
+                3,
+                10.5
+              ],
+              "access": "residential",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 0,
+              "resident_beds": 1,
+              "basis": "SAC-A02; single short-stay room including ensuite zone; detailed accessibility design unverified"
+            },
+            {
+              "id": "SH-SITE-0001-B05-L01-R11",
+              "name": "Room 11",
+              "rect_m": [
+                36,
+                0,
+                3,
+                10.5
+              ],
+              "access": "residential",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 0,
+              "resident_beds": 1,
+              "basis": "SAC-A02; single short-stay room including ensuite zone; detailed accessibility design unverified"
+            },
+            {
+              "id": "SH-SITE-0001-B05-L01-R12",
+              "name": "Room 12",
+              "rect_m": [
+                39,
+                0,
+                3,
+                10.5
+              ],
+              "access": "residential",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 0,
+              "resident_beds": 1,
+              "basis": "SAC-A02; single short-stay room including ensuite zone; detailed accessibility design unverified"
+            },
+            {
+              "id": "SH-SITE-0001-B05-L01-R13",
+              "name": "Room 13",
+              "rect_m": [
+                6,
+                13.5,
+                3,
+                10.5
+              ],
+              "access": "residential",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 0,
+              "resident_beds": 1,
+              "basis": "SAC-A02; single short-stay room including ensuite zone; detailed accessibility design unverified"
+            },
+            {
+              "id": "SH-SITE-0001-B05-L01-R14",
+              "name": "Room 14",
+              "rect_m": [
+                9,
+                13.5,
+                3,
+                10.5
+              ],
+              "access": "residential",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 0,
+              "resident_beds": 1,
+              "basis": "SAC-A02; single short-stay room including ensuite zone; detailed accessibility design unverified"
+            },
+            {
+              "id": "SH-SITE-0001-B05-L01-R15",
+              "name": "Room 15",
+              "rect_m": [
+                12,
+                13.5,
+                3,
+                10.5
+              ],
+              "access": "residential",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 0,
+              "resident_beds": 1,
+              "basis": "SAC-A02; single short-stay room including ensuite zone; detailed accessibility design unverified"
+            },
+            {
+              "id": "SH-SITE-0001-B05-L01-R16",
+              "name": "Room 16",
+              "rect_m": [
+                15,
+                13.5,
+                3,
+                10.5
+              ],
+              "access": "residential",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 0,
+              "resident_beds": 1,
+              "basis": "SAC-A02; single short-stay room including ensuite zone; detailed accessibility design unverified"
+            },
+            {
+              "id": "SH-SITE-0001-B05-L01-R17",
+              "name": "Room 17",
+              "rect_m": [
+                18,
+                13.5,
+                3,
+                10.5
+              ],
+              "access": "residential",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 0,
+              "resident_beds": 1,
+              "basis": "SAC-A02; single short-stay room including ensuite zone; detailed accessibility design unverified"
+            },
+            {
+              "id": "SH-SITE-0001-B05-L01-R18",
+              "name": "Room 18",
+              "rect_m": [
+                21,
+                13.5,
+                3,
+                10.5
+              ],
+              "access": "residential",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 0,
+              "resident_beds": 1,
+              "basis": "SAC-A02; single short-stay room including ensuite zone; detailed accessibility design unverified"
+            },
+            {
+              "id": "SH-SITE-0001-B05-L01-R19",
+              "name": "Room 19",
+              "rect_m": [
+                24,
+                13.5,
+                3,
+                10.5
+              ],
+              "access": "residential",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 0,
+              "resident_beds": 1,
+              "basis": "SAC-A02; single short-stay room including ensuite zone; detailed accessibility design unverified"
+            },
+            {
+              "id": "SH-SITE-0001-B05-L01-R20",
+              "name": "Room 20",
+              "rect_m": [
+                27,
+                13.5,
+                3,
+                10.5
+              ],
+              "access": "residential",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 0,
+              "resident_beds": 1,
+              "basis": "SAC-A02; single short-stay room including ensuite zone; detailed accessibility design unverified"
+            },
+            {
+              "id": "SH-SITE-0001-B05-L01-R21",
+              "name": "Room 21",
+              "rect_m": [
+                30,
+                13.5,
+                3,
+                10.5
+              ],
+              "access": "residential",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 0,
+              "resident_beds": 1,
+              "basis": "SAC-A02; single short-stay room including ensuite zone; detailed accessibility design unverified"
+            },
+            {
+              "id": "SH-SITE-0001-B05-L01-R22",
+              "name": "Room 22",
+              "rect_m": [
+                33,
+                13.5,
+                3,
+                10.5
+              ],
+              "access": "residential",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 0,
+              "resident_beds": 1,
+              "basis": "SAC-A02; single short-stay room including ensuite zone; detailed accessibility design unverified"
+            },
+            {
+              "id": "SH-SITE-0001-B05-L01-R23",
+              "name": "Room 23",
+              "rect_m": [
+                36,
+                13.5,
+                3,
+                10.5
+              ],
+              "access": "residential",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 0,
+              "resident_beds": 1,
+              "basis": "SAC-A02; single short-stay room including ensuite zone; detailed accessibility design unverified"
+            },
+            {
+              "id": "SH-SITE-0001-B05-L01-R24",
+              "name": "Room 24",
+              "rect_m": [
+                39,
+                13.5,
+                3,
+                10.5
+              ],
+              "access": "residential",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 0,
+              "resident_beds": 1,
+              "basis": "SAC-A02; single short-stay room including ensuite zone; detailed accessibility design unverified"
+            }
+          ],
+          "net_assignable_area_m2": 756.0,
+          "core_circulation_service_m2": 396.0,
+          "planned_peak": 23,
+          "core_basis": "Two end cores: protected stairs, lift, wet risers, resident support, linen and laundry."
+        },
+        {
+          "id": "SH-SITE-0001-B05-L02",
+          "level": 2,
+          "name": "Short-stay residence upper",
+          "status": "MODELLED_FITOUT_NOT_EXISTING",
+          "gross_area_m2": 1152,
+          "rooms": [
+            {
+              "id": "SH-SITE-0001-B05-L02-R01",
+              "name": "Accessible suite",
+              "rect_m": [
+                6,
+                0,
+                6,
+                10.5
+              ],
+              "access": "residential",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 0,
+              "resident_beds": 1,
+              "basis": "SAC-A02; single short-stay room including ensuite zone; detailed accessibility design unverified",
+              "accessible_design_intent": true
+            },
+            {
+              "id": "SH-SITE-0001-B05-L02-R03",
+              "name": "Room 27",
+              "rect_m": [
+                12,
+                0,
+                3,
+                10.5
+              ],
+              "access": "residential",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 0,
+              "resident_beds": 1,
+              "basis": "SAC-A02; single short-stay room including ensuite zone; detailed accessibility design unverified"
+            },
+            {
+              "id": "SH-SITE-0001-B05-L02-R04",
+              "name": "Room 28",
+              "rect_m": [
+                15,
+                0,
+                3,
+                10.5
+              ],
+              "access": "residential",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 0,
+              "resident_beds": 1,
+              "basis": "SAC-A02; single short-stay room including ensuite zone; detailed accessibility design unverified"
+            },
+            {
+              "id": "SH-SITE-0001-B05-L02-R05",
+              "name": "Room 29",
+              "rect_m": [
+                18,
+                0,
+                3,
+                10.5
+              ],
+              "access": "residential",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 0,
+              "resident_beds": 1,
+              "basis": "SAC-A02; single short-stay room including ensuite zone; detailed accessibility design unverified"
+            },
+            {
+              "id": "SH-SITE-0001-B05-L02-R06",
+              "name": "Room 30",
+              "rect_m": [
+                21,
+                0,
+                3,
+                10.5
+              ],
+              "access": "residential",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 0,
+              "resident_beds": 1,
+              "basis": "SAC-A02; single short-stay room including ensuite zone; detailed accessibility design unverified"
+            },
+            {
+              "id": "SH-SITE-0001-B05-L02-R07",
+              "name": "Room 31",
+              "rect_m": [
+                24,
+                0,
+                3,
+                10.5
+              ],
+              "access": "residential",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 0,
+              "resident_beds": 1,
+              "basis": "SAC-A02; single short-stay room including ensuite zone; detailed accessibility design unverified"
+            },
+            {
+              "id": "SH-SITE-0001-B05-L02-R08",
+              "name": "Room 32",
+              "rect_m": [
+                27,
+                0,
+                3,
+                10.5
+              ],
+              "access": "residential",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 0,
+              "resident_beds": 1,
+              "basis": "SAC-A02; single short-stay room including ensuite zone; detailed accessibility design unverified"
+            },
+            {
+              "id": "SH-SITE-0001-B05-L02-R09",
+              "name": "Room 33",
+              "rect_m": [
+                30,
+                0,
+                3,
+                10.5
+              ],
+              "access": "residential",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 0,
+              "resident_beds": 1,
+              "basis": "SAC-A02; single short-stay room including ensuite zone; detailed accessibility design unverified"
+            },
+            {
+              "id": "SH-SITE-0001-B05-L02-R10",
+              "name": "Room 34",
+              "rect_m": [
+                33,
+                0,
+                3,
+                10.5
+              ],
+              "access": "residential",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 0,
+              "resident_beds": 1,
+              "basis": "SAC-A02; single short-stay room including ensuite zone; detailed accessibility design unverified"
+            },
+            {
+              "id": "SH-SITE-0001-B05-L02-R11",
+              "name": "Room 35",
+              "rect_m": [
+                36,
+                0,
+                3,
+                10.5
+              ],
+              "access": "residential",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 0,
+              "resident_beds": 1,
+              "basis": "SAC-A02; single short-stay room including ensuite zone; detailed accessibility design unverified"
+            },
+            {
+              "id": "SH-SITE-0001-B05-L02-R12",
+              "name": "Room 36",
+              "rect_m": [
+                39,
+                0,
+                3,
+                10.5
+              ],
+              "access": "residential",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 0,
+              "resident_beds": 1,
+              "basis": "SAC-A02; single short-stay room including ensuite zone; detailed accessibility design unverified"
+            },
+            {
+              "id": "SH-SITE-0001-B05-L02-R13",
+              "name": "Room 37",
+              "rect_m": [
+                6,
+                13.5,
+                3,
+                10.5
+              ],
+              "access": "residential",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 0,
+              "resident_beds": 1,
+              "basis": "SAC-A02; single short-stay room including ensuite zone; detailed accessibility design unverified"
+            },
+            {
+              "id": "SH-SITE-0001-B05-L02-R14",
+              "name": "Room 38",
+              "rect_m": [
+                9,
+                13.5,
+                3,
+                10.5
+              ],
+              "access": "residential",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 0,
+              "resident_beds": 1,
+              "basis": "SAC-A02; single short-stay room including ensuite zone; detailed accessibility design unverified"
+            },
+            {
+              "id": "SH-SITE-0001-B05-L02-R15",
+              "name": "Room 39",
+              "rect_m": [
+                12,
+                13.5,
+                3,
+                10.5
+              ],
+              "access": "residential",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 0,
+              "resident_beds": 1,
+              "basis": "SAC-A02; single short-stay room including ensuite zone; detailed accessibility design unverified"
+            },
+            {
+              "id": "SH-SITE-0001-B05-L02-R16",
+              "name": "Room 40",
+              "rect_m": [
+                15,
+                13.5,
+                3,
+                10.5
+              ],
+              "access": "residential",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 0,
+              "resident_beds": 1,
+              "basis": "SAC-A02; single short-stay room including ensuite zone; detailed accessibility design unverified"
+            },
+            {
+              "id": "SH-SITE-0001-B05-L02-R17",
+              "name": "Room 41",
+              "rect_m": [
+                18,
+                13.5,
+                3,
+                10.5
+              ],
+              "access": "residential",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 0,
+              "resident_beds": 1,
+              "basis": "SAC-A02; single short-stay room including ensuite zone; detailed accessibility design unverified"
+            },
+            {
+              "id": "SH-SITE-0001-B05-L02-R18",
+              "name": "Room 42",
+              "rect_m": [
+                21,
+                13.5,
+                3,
+                10.5
+              ],
+              "access": "residential",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 0,
+              "resident_beds": 1,
+              "basis": "SAC-A02; single short-stay room including ensuite zone; detailed accessibility design unverified"
+            },
+            {
+              "id": "SH-SITE-0001-B05-L02-R19",
+              "name": "Room 43",
+              "rect_m": [
+                24,
+                13.5,
+                3,
+                10.5
+              ],
+              "access": "residential",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 0,
+              "resident_beds": 1,
+              "basis": "SAC-A02; single short-stay room including ensuite zone; detailed accessibility design unverified"
+            },
+            {
+              "id": "SH-SITE-0001-B05-L02-R20",
+              "name": "Room 44",
+              "rect_m": [
+                27,
+                13.5,
+                3,
+                10.5
+              ],
+              "access": "residential",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 0,
+              "resident_beds": 1,
+              "basis": "SAC-A02; single short-stay room including ensuite zone; detailed accessibility design unverified"
+            },
+            {
+              "id": "SH-SITE-0001-B05-L02-R21",
+              "name": "Room 45",
+              "rect_m": [
+                30,
+                13.5,
+                3,
+                10.5
+              ],
+              "access": "residential",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 0,
+              "resident_beds": 1,
+              "basis": "SAC-A02; single short-stay room including ensuite zone; detailed accessibility design unverified"
+            },
+            {
+              "id": "SH-SITE-0001-B05-L02-R22",
+              "name": "Room 46",
+              "rect_m": [
+                33,
+                13.5,
+                3,
+                10.5
+              ],
+              "access": "residential",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 0,
+              "resident_beds": 1,
+              "basis": "SAC-A02; single short-stay room including ensuite zone; detailed accessibility design unverified"
+            },
+            {
+              "id": "SH-SITE-0001-B05-L02-R23",
+              "name": "Room 47",
+              "rect_m": [
+                36,
+                13.5,
+                3,
+                10.5
+              ],
+              "access": "residential",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 0,
+              "resident_beds": 1,
+              "basis": "SAC-A02; single short-stay room including ensuite zone; detailed accessibility design unverified"
+            },
+            {
+              "id": "SH-SITE-0001-B05-L02-R24",
+              "name": "Room 48",
+              "rect_m": [
+                39,
+                13.5,
+                3,
+                10.5
+              ],
+              "access": "residential",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 0,
+              "resident_beds": 1,
+              "basis": "SAC-A02; single short-stay room including ensuite zone; detailed accessibility design unverified"
+            }
+          ],
+          "net_assignable_area_m2": 756.0,
+          "core_circulation_service_m2": 396.0,
+          "planned_peak": 23,
+          "core_basis": "Two end cores: protected stairs, lift, wet risers, resident support, linen and laundry."
+        }
+      ]
+    },
+    {
+      "id": "SH-SITE-0001-B06",
+      "name": "Campus Services",
+      "rect_m": [
+        174,
+        160,
+        30,
+        18
+      ],
+      "status": "MODELLED_NOT_AS_BUILT",
+      "structure": "6 m planning grid; slab/column sizes not engineered",
+      "floor_height_m": 4.2,
+      "core_basis": "6 m end service bays; 3 m central corridor; protected stairs and lift stack unchanged",
+      "floors": [
+        {
+          "id": "SH-SITE-0001-B06-L01",
+          "level": 1,
+          "name": "Service and local equipment",
+          "status": "MODELLED_FITOUT_NOT_EXISTING",
+          "gross_area_m2": 540,
+          "rooms": [
+            {
+              "id": "SH-SITE-0001-B06-L01-R01",
+              "name": "Receiving and inspection",
+              "rect_m": [
+                6,
+                0,
+                6,
+                7.5
+              ],
+              "access": "staff",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 0,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B06-L01-R02",
+              "name": "Stores and maintenance",
+              "rect_m": [
+                12,
+                0,
+                4,
+                7.5
+              ],
+              "access": "staff",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 0,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B06-L01-R03",
+              "name": "Facilities workroom",
+              "rect_m": [
+                16,
+                0,
+                4,
+                7.5
+              ],
+              "access": "staff",
+              "assigned_desks": 0,
+              "shared_desks": 4,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 0,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B06-L01-R04",
+              "name": "Staff welfare",
+              "rect_m": [
+                20,
+                0,
+                4,
+                7.5
+              ],
+              "access": "staff",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 8,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B06-L01-R05",
+              "name": "Local edge equipment",
+              "rect_m": [
+                6,
+                10.5,
+                4,
+                7.5
+              ],
+              "access": "staff",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 0,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B06-L01-R06",
+              "name": "Electrical and utilities",
+              "rect_m": [
+                10,
+                10.5,
+                6,
+                7.5
+              ],
+              "access": "staff",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 0,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B06-L01-R07",
+              "name": "Security duty office",
+              "rect_m": [
+                16,
+                10.5,
+                4,
+                7.5
+              ],
+              "access": "staff",
+              "assigned_desks": 0,
+              "shared_desks": 4,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 0,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            },
+            {
+              "id": "SH-SITE-0001-B06-L01-R08",
+              "name": "Cleaning and waste staging",
+              "rect_m": [
+                20,
+                10.5,
+                4,
+                7.5
+              ],
+              "access": "staff",
+              "assigned_desks": 0,
+              "shared_desks": 0,
+              "touchdown_seats": 0,
+              "training_seats": 0,
+              "meeting_seats": 0,
+              "resident_beds": 0,
+              "basis": "SAC-A02"
+            }
+          ],
+          "net_assignable_area_m2": 270.0,
+          "core_circulation_service_m2": 270.0,
+          "planned_peak": 9
+        }
+      ]
+    }
+  ],
+  "attendance_scenarios": [
+    {
+      "id": "SAC-2026-DESIGN-EVENT",
+      "horizon": 2026,
+      "status": "PLANNING_NEED_NOT_OBSERVED",
+      "floor_populations": {
+        "SH-SITE-0001-B01-L01": 35,
+        "SH-SITE-0001-B01-L02": 20,
+        "SH-SITE-0001-B02-L01": 46,
+        "SH-SITE-0001-B02-L02": 32,
+        "SH-SITE-0001-B02-L03": 0,
+        "SH-SITE-0001-B03-L01": 64,
+        "SH-SITE-0001-B03-L02": 48,
+        "SH-SITE-0001-B03-L03": 20,
+        "SH-SITE-0001-B04-L01": 76,
+        "SH-SITE-0001-B04-L02": 70,
+        "SH-SITE-0001-B05-L01": 0,
+        "SH-SITE-0001-B05-L02": 0,
+        "SH-SITE-0001-B06-L01": 9
+      },
+      "people": 420,
+      "workers": 272,
+      "trainees": 120,
+      "other_visitors": 28,
+      "resident_trainees_subset": 46,
+      "basis": "SAC-A02; cohort scheduling keeps resident trainees inside the 120, not an additional 48."
+    },
+    {
+      "id": "SAC-2026-DESIGN-NIGHT",
+      "horizon": 2026,
+      "status": "PLANNING_NEED_NOT_OBSERVED",
+      "floor_populations": {
+        "SH-SITE-0001-B01-L01": 0,
+        "SH-SITE-0001-B01-L02": 0,
+        "SH-SITE-0001-B02-L01": 0,
+        "SH-SITE-0001-B02-L02": 0,
+        "SH-SITE-0001-B02-L03": 0,
+        "SH-SITE-0001-B03-L01": 0,
+        "SH-SITE-0001-B03-L02": 0,
+        "SH-SITE-0001-B03-L03": 0,
+        "SH-SITE-0001-B04-L01": 0,
+        "SH-SITE-0001-B04-L02": 0,
+        "SH-SITE-0001-B05-L01": 23,
+        "SH-SITE-0001-B05-L02": 23,
+        "SH-SITE-0001-B06-L01": 4
+      },
+      "people": 50,
+      "workers": 4,
+      "trainees": 46,
+      "other_visitors": 0,
+      "resident_trainees_subset": 46,
+      "basis": "SAC-A02; 46 resident trainees are the same cohort as the event, not additional employees."
+    },
+    {
+      "id": "SAC-2031-CAPACITY",
+      "horizon": 2031,
+      "status": "CONDITIONAL_PLANNING",
+      "people": 484,
+      "increment": 64,
+      "basis": "2026 design-event plus 64 concurrent places in ESS shell; no hiring authorization."
+    },
+    {
+      "id": "SAC-2036-CAPACITY",
+      "horizon": 2036,
+      "status": "CONDITIONAL_PLANNING",
+      "people": 564,
+      "increment": 80,
+      "basis": "2031 capacity plus 80 concurrent places in gated expansion reserve; design and parking recheck required."
+    }
+  ],
+  "phases": [
+    {
+      "id": "SAC-P01",
+      "name": "Institutional direction",
+      "state": "ACCEPTED_CANON",
+      "date": "2026-09-03",
+      "dependency": "Sacramento, ESS/J2 separation, enduring campus doctrine"
+    },
+    {
+      "id": "SAC-P02",
+      "name": "Parcel and enabling studies",
+      "state": "UNESTABLISHED",
+      "date": null,
+      "dependency": "Title/tenure, utilities, transport, flood and brownfield evidence"
+    },
+    {
+      "id": "SAC-P03",
+      "name": "Integrated concept program",
+      "state": "MODELLED_PROPOSAL",
+      "date": "2026-09-11",
+      "dependency": "Source and plan reconciliation; no completed structures asserted"
+    },
+    {
+      "id": "SAC-P04",
+      "name": "Shell, fit-out and commissioning",
+      "state": "NOT_ESTABLISHED",
+      "date": null,
+      "dependency": "Approved capital and coordinated technical design; actual execution evidence"
+    },
+    {
+      "id": "SAC-P05",
+      "name": "Five- and ten-year capacity options",
+      "state": "CONDITIONAL_PLANNING",
+      "date": null,
+      "dependency": "2031 shell +64;2036 reserve +80; no construction schedule promised"
+    }
+  ]
+}
