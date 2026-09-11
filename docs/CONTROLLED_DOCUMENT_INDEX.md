@@ -1,6 +1,7 @@
 # SABLE HARBOR CONTROLLED DOCUMENT INDEX
 
 [Facility programme, individual campus/building/floor plans and atlas](../geospatial/facilities/README.md) — modelled September 2026 planning package, with source and status boundaries.
+Facility delivery: [controlled release, source commit and checksums](releases/FACILITY_ATLAS_RELEASES.md).
 
 **Index version:** 1.0.18 | **As of:** September 7, 2026
 

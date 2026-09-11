@@ -90,3 +90,7 @@ Ahead/behind counts compare commits to the fixed base, not patch equivalence. A 
 ## Local and workflow recovery
 
 The SABLE organization v0.2 ZIP contains the old chart suite and generator; current PR117/118 replaces it. Industrial v1/v2 downloads are public release derivatives already represented by accepted industrial source. The remaining SABLE handoff files and brand ZIP are historical provenance, not new property or floor geometry. No unrelated project content was imported. Artifact ZIPs were read in temporary storage and are not duplicated in Git.
+
+## Final concurrent-work refresh
+
+Before final merge, origin/main remains `786fc9a5311a04dde92ee6dbb08ac3b77a380200`. PR #119 is still OPEN, now at `c35ecadedb4381515a6b478445a6f061397f9629`, advanced from the initial `743bc6a` snapshot by runtime calculations, construction/reference design, release packaging and accepted-vendor reconciliation. Its changed-path/commit history and current runtime disposition were reviewed. These remain pending runtime sources; no new runtime site, staff pool, floor or provider selection is imported into this facility baseline. PR #120 is already controlling main. The only new branch in this workline is the authorized facility closeout branch / PR #121.

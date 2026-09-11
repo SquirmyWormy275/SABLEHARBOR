@@ -1,5 +1,7 @@
 # Facility programme and atlas
 
+[Controlled release and checksums](../../docs/releases/FACILITY_ATLAS_RELEASES.md).
+
 Open the [drill-down atlas](../maps/index.html), [portable atlas PDF](../maps/SABLE_HARBOR_Facility_Atlas_v0.1.0.pdf), or [individual artifact index](../maps/facilities/ARTIFACT_INDEX.md). Download the repository to open HTML locally; GitHub displays HTML source rather than serving the interface. The Markdown index provides direct repository links.
 
 The September 11, 2026 owner handover authorized recovery, an integrated Sacramento campus model, explicit population/space reconciliation, facility coverage, saved plans, atlas navigation and repository closeout. This implementation is a **modelled planning package**, not a claim of acquired property, construction, occupied floors or new personnel. Accepted canon continues to control institutional facts. [Maintainer authority](../../MAINTAINERS.md) and [delivery policy](../../docs/governance/REPOSITORY_DELIVERY_AND_PACKAGING_POLICY.md) apply.
