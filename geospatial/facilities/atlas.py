@@ -87,6 +87,10 @@ def context_ids(site_id, prior):
     return [m["id"] for m in prior if any(m["id"].startswith(p) for p in choices)]
 
 
+def pdf_text(value):
+    """Base-14 PDF font punctuation equivalents; HTML retains exact Unicode."""
+    return str(value).translate(str.maketrans({"—": " - ", "–": "-", "“": '"', "”": '"', "’": "'"}))
+
 def main():
     coverage = load(COVERAGE)
     current, prior = normal_maps()
@@ -321,7 +325,7 @@ def main():
     def page(title):
         p = doc.new_page(width=842, height=595)
         p.draw_rect(fitz.Rect(0, 0, 842, 68), color=None, fill=(0.08, 0.14, 0.16))
-        p.insert_text((30, 43), title, fontsize=18, color=(1, 1, 1))
+        p.insert_text((30, 43), pdf_text(title), fontsize=18, color=(1, 1, 1))
         return p
 
     p = page("SABLE HARBOR | Facility atlas")
@@ -337,7 +341,7 @@ def main():
         for i, (s, _) in enumerate(sites[start : start + 17]):
             y = 95 + i * 27
             label = s["site_id"] + " | " + s["name"]
-            p.insert_text((30, y), label[:115], fontsize=10)
+            p.insert_text((30, y), pdf_text(label[:115]), fontsize=10)
             index_links.append((p.number, fitz.Rect(28, y - 12, 814, y + 5), s["site_id"]))
     destinations = {}
 
@@ -389,7 +393,7 @@ def main():
             if not any(t[1] == "Coverage dispositions" for t in toc):
                 toc.append([1, "Coverage dispositions", p.number + 1])
         rc = p.insert_textbox(
-            fitz.Rect(30, y, 810, y + height), "\n".join(lines), fontsize=9, lineheight=1.2
+            fitz.Rect(30, y, 810, y + height), pdf_text("\n".join(lines)), fontsize=9, lineheight=1.2
         )
         assert rc >= 0, f"PDF coverage overflow {r['id']}"
         y += height + 7
