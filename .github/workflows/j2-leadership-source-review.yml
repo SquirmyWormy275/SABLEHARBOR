@@ -1,43 +1,65 @@
-name: J2 leadership source review
+name: J2 leadership integration
 on:
   push:
     branches: ['canon/j2-leadership-2026-09-10']
-    paths: ['.github/workflows/j2-leadership-source-review.yml']
+    paths:
+      - '.github/workflows/j2-leadership-source-review.yml'
+      - 'tools/organization/apply_j2_leadership.py'
 permissions:
-  contents: read
+  contents: write
+concurrency:
+  group: j2-leadership-integration
+  cancel-in-progress: false
 jobs:
-  review:
+  integrate:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
-      - name: Package review inputs
-        run: |
-          python - <<'PY'
-          import json, pathlib, shutil, subprocess
-          root = pathlib.Path.cwd()
-          out = root / '_j2_source_review'
-          out.mkdir()
-          files = subprocess.check_output(['git', 'ls-files', '-z']).decode().split('\0')
-          inventory = []
-          for name in filter(None, files):
-              p = root / name
-              if not p.is_file():
-                  continue
-              inventory.append({'path': name, 'size': p.stat().st_size})
-              text = p.suffix.lower() in {'.md', '.json', '.py', '.yml', '.yaml', '.toml', '.txt', '.csv', '.sql'}
-              scope = name.startswith(('docs/organization/', 'docs/structured/', 'docs/j2/', 'docs/internal/', 'tools/organization/', 'tools/documents/', 'scripts/', 'tests/', '.github/'))
-              special = name in {'README.md', 'MAINTAINERS.md', 'docs/CONTROLLED_DOCUMENT_INDEX.md', 'docs/organization/assets/current/Sable-Harbor-Organization-Charts.pdf', 'docs/canon/J2_LEADERSHIP_APPOINTMENTS_2026-09-10.md'}
-              font = name.startswith('tools/organization/') and p.suffix.lower() in {'.ttf', '.otf'}
-              if special or font or (scope and text and p.stat().st_size < 2000000):
-                  target = out / name
-                  target.parent.mkdir(parents=True, exist_ok=True)
-                  shutil.copyfile(p, target)
-          (out / 'repository_inventory.json').write_text(json.dumps(inventory, indent=2))
-          (out / 'source_commit.txt').write_text(subprocess.check_output(['git', 'rev-parse', 'HEAD']).decode())
-          PY
-      - uses: actions/upload-artifact@v4
         with:
-          name: j2-leadership-source-review
-          path: _j2_source_review/
-          include-hidden-files: true
+          ref: canon/j2-leadership-2026-09-10
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install existing test and chart dependencies
+        run: |
+          python -m pip install -e '.[dev]' -r tools/organization/requirements.txt -r tools/documents/requirements.txt 'fonttools>=4.50,<5'
+      - name: Apply approved source and visual migration
+        run: |
+          python tools/organization/apply_j2_leadership.py
+          python scripts/build_organization_charts.py
+      - name: Validate source, doctrine and publication boundaries
+        run: |
+          python scripts/validate_organization_maps.py
+          python scripts/validate_governance_j2.py
+          python scripts/validate_institutional_catalog.py
+          python scripts/validate_repository_hygiene.py
+          python scripts/validate_business_records.py
+          git diff --check
+      - name: Run tests
+        run: python -m pytest -q
+      - name: Commit only validated integration files to this branch
+        run: |
+          git diff --exit-code -- docs/organization/history docs/finance industrial finance_platform blackridge red_wash
+          git add -- README.md docs/CONTROLLED_DOCUMENT_INDEX.md docs/j2/README.md docs/j2/structured/leadership.json docs/organization tools/organization/export_charts.py tests/unit/test_organization_generator.py docs/internal/validation/J2_LEADERSHIP_2026-09-10.json
+          git diff --cached --check
+          if ! git diff --cached --quiet; then
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git commit -m 'Integrate six approved J2 leaders and verified chart publication'
+            git push origin HEAD:canon/j2-leadership-2026-09-10
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: j2-leadership-validation
+          path: |
+            docs/organization/assets/current/people-j2-leadership.png
+            docs/organization/assets/current/people-j2-leadership.svg
+            docs/organization/assets/current/Sable-Harbor-Organization-Charts.pdf
+            docs/organization/PEOPLE_REGISTER.md
+            docs/organization/charts/people-j2-leadership.md
+            docs/j2/structured/leadership.json
+            docs/internal/validation/J2_LEADERSHIP_2026-09-10.json
           retention-days: 2
+          if-no-files-found: warn
