@@ -100,7 +100,7 @@ def build(check=False, render=False):
         + "</div></body>",
     )
     buf = io.StringIO()
-    writer = csv.DictWriter(buf, fieldnames=list(model["room_schedule"][0]))
+    writer = csv.DictWriter(buf, fieldnames=list(model["room_schedule"][0]), lineterminator="\n")
     writer.writeheader()
     writer.writerows(model["room_schedule"])
     outputs = {
@@ -178,6 +178,10 @@ def validate_package(data, manifest):
             p = ROOT / a["path"]
             if not p.exists() or sha(p) != a["sha256"]:
                 raise ValueError("Missing/stale artifact " + str(p))
+    if manifest.get("portable_pdf"):
+        a = manifest["portable_pdf"]
+        if sha(ROOT / a["path"]) != a["sha256"]:
+            raise ValueError("Stale portable spatial PDF")
     for r in data["access"]["routes"]:
         if r["floor_id"] + "::access" not in keys:
             raise ValueError("Missing access overlay")

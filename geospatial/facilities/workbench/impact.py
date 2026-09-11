@@ -114,6 +114,24 @@ def dependency_graph(root):
             runtime_outputs + ["enterprise/runtime/visuals/manifest.json"],
             "python -m enterprise.runtime.render (review accepted release lineage first)",
         )
+    spatial_manifest = root / "geospatial/maps/spatial/MANIFEST.json"
+    if spatial_manifest.is_file():
+        spatial = json.loads(spatial_manifest.read_text())
+        spatial_outputs = [a["path"] for m in spatial["maps"] for a in m["artifacts"].values()]
+        spatial_outputs += [
+            "geospatial/maps/spatial.html",
+            "geospatial/maps/spatial/MANIFEST.json",
+            "geospatial/maps/spatial/README.md",
+        ]
+        for source in spatial["source_sha256"]:
+            connect(
+                source, spatial_outputs, "python geospatial/facilities/spatial/build.py --render"
+            )
+        connect(
+            "geospatial/maps/spatial/MANIFEST.json",
+            ["geospatial/maps/MAP_MANIFEST.json"],
+            "python geospatial/facilities/integrate_manifest.py",
+        )
     workbench_outputs = [
         facilities + "workbench/BASELINE.json",
         facilities + "workbench/READINESS.json",

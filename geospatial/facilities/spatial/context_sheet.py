@@ -26,7 +26,7 @@ def render_context(root, context, identifier):
     ]
     _, _, w, h = region["extent_local_m"]
     scale = min(2090 / w, 1550 / h)
-    ox, oy = 160, 2040
+    ox, oy = 160 + (2090 - w * scale) / 2, 2040
     colors = {
         "street": "#b2b7b3",
         "rail": "#525c62",
@@ -69,6 +69,45 @@ def render_context(root, context, identifier):
         for f in region["features"]:
             if f["category"] == cat:
                 draw(f["geometry"], cat)
+    from shapely.geometry import shape
+    from shapely.ops import unary_union
+    from r01_drawing import PAPER
+
+    labels = []
+    for name in [
+        "Sacramento River",
+        "American River",
+        "Richards Blvd",
+        "Bercut Dr",
+        "Jibboom St",
+        "Garden Hwy",
+        "I St",
+        "N 12th St",
+    ]:
+        features = [shape(f["geometry"]) for f in region["features"] if f["name"] == name]
+        if not features:
+            continue
+        center = unary_union(features).centroid
+        x, y = point([center.x, center.y])
+        width = len(name) * 13 + 16
+        x = min(max(ox + 12, x), ox + w * scale - width - 12)
+        for _ in range(12):
+            if not any(
+                abs(y - yy) < 32 and x < xx + ww and x + width > xx for xx, yy, ww in labels
+            ):
+                break
+            y -= 34
+        sheet.rect(x - 5, y - 23, width, 30, PAPER, "none")
+        sheet.text(x, y, name, 23, weight="bold")
+        labels.append((x, y, width))
+    samples = [f for f in region["features"] if f["category"] == "terrain"]
+    for f in samples[::10]:
+        x, y = point(f["geometry"]["coordinates"])
+        if not ox + 60 < x < ox + w * scale - 70 or not oy - h * scale + 60 < y < oy - 40:
+            continue
+        value = f["source_properties"]["elevation_m"]
+        sheet.rect(x + 8, y - 24, 100, 30, PAPER, "none")
+        sheet.text(x + 12, y, f"{value:.1f} m", 22, fill=colors["terrain"])
     sheet.rect(ox, oy - h * scale, w * scale, h * scale, "none", MUTED, 2)
     sheet.north(2370, 520)
     for i, (cat, label) in enumerate(
@@ -113,7 +152,7 @@ def render_context(root, context, identifier):
         size=25,
         weight="bold",
     )
-    x, y = 180, 2090
+    x, y = ox + 20, 2090
     sheet.line(x, y, x + 500 * scale, y, INK, 5)
     sheet.text(x, y - 15, "500 m", 24)
     return sheet.save(

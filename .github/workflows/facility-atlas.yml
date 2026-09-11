@@ -13,10 +13,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: python -m pip install PyMuPDF Pillow pytest shapely
+      - run: python -m pip install PyMuPDF Pillow pytest shapely pyproj cairosvg
       - name: Coverage, population, geometry, capacity and publication links
         run: python geospatial/facilities/validate.py --check --require-atlas
       - name: Acceptance regression mutations
@@ -26,5 +28,10 @@ jobs:
           python geospatial/facilities/workbench/build.py build --check
           python -m pytest -q geospatial/facilities/workbench
           node geospatial/facilities/workbench/test_app.cjs
+      - name: Spatial model, artifact freshness and coordination regression tests
+        run: |
+          python geospatial/facilities/spatial/build.py --check
+          python -m pytest -q geospatial/facilities/spatial
+          node geospatial/facilities/spatial/test_viewer.cjs
       - name: Generated checks leave committed source and manifests unchanged
         run: git diff --exit-code -- geospatial/facilities geospatial/maps/facilities

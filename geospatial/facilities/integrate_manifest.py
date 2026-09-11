@@ -15,6 +15,7 @@ def integrate():
         for r in json.loads(path.read_text())
         if r.get("builder") != "geospatial/facilities/render.py"
         and r.get("facility_integration") != "accepted_runtime_bridge"
+        and r.get("facility_integration") != "spatial_quality_addendum"
     ]
     facility = json.loads((maps / "facilities/MANIFEST.json").read_text())
     context_hash = hashlib.sha256(
@@ -74,6 +75,42 @@ def integrate():
                     "floor_id": r.get("floor_id"),
                     "files": {
                         ext: {"path": str(Path("../..") / a["path"]), "sha256": a["sha256"]}
+                        for ext, a in r["artifacts"].items()
+                    },
+                }
+            )
+    spatial_path = maps / "spatial/MANIFEST.json"
+    if spatial_path.is_file():
+        spatial = json.loads(spatial_path.read_text())
+        for r in spatial["maps"]:
+            base.append(
+                {
+                    "map_id": r.get("map_id", r["id"]),
+                    "title": r["title"],
+                    "version": "spatial-1.0.0",
+                    "effective_date": "2026-09-11",
+                    "world_state": "REAL_REFERENCE"
+                    if r["kind"] == "enhanced-context"
+                    else "MODELLED_ARCHITECTURAL_STUDY_NOT_AS_BUILT",
+                    "canon_status": r.get("status", "MODELLED_SPATIAL_ADDENDUM"),
+                    "source_commit": "ff5cd67",
+                    "source_geopackage_sha256": context_hash,
+                    "projection": "EPSG:26910"
+                    if r["kind"] == "enhanced-context"
+                    else "LOCAL_METRIC_CONCEPT_NO_GEOGRAPHIC_TRANSFORM",
+                    "build_timestamp": "2026-09-11T00:00:00+00:00",
+                    "builder": "geospatial/facilities/spatial/build.py",
+                    "facility_integration": "spatial_quality_addendum",
+                    "review_status": "SEE_HASH_BOUND_SPATIAL_QA",
+                    "source_sha256": spatial["source_sha256"],
+                    "site_id": r["site_id"],
+                    "building_id": r.get("building_id"),
+                    "floor_id": r.get("floor_id"),
+                    "files": {
+                        ext: {
+                            "path": str(Path(a["path"]).relative_to("geospatial/maps")),
+                            "sha256": a["sha256"],
+                        }
                         for ext, a in r["artifacts"].items()
                     },
                 }

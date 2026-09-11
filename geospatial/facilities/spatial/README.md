@@ -1,5 +1,7 @@
 # Spatial architectural addendum v1.0.0
 
+[Versioned release and checksums](../../../docs/releases/FACILITY_SPATIAL_RELEASES.md).
+
 Open the [offline spatial review](../../maps/spatial.html), [individual architectural sheets](../../maps/spatial/README.md), or [enterprise atlas](../../maps/index.html). Download the repository or release and open HTML locally; GitHub shows HTML source. The existing atlas and workbench remain the navigation entry points.
 
 This owner-authorized extension preserves accepted R01/R02 geometry and adds coordinated architectural studies. It does not establish construction, occupancy, engineering approval or a geographic location for the fictional Sacramento campus. The accepted base is `ff5cd67ff980790413f7bfbf0829b47d20d266a3`; [architectural assumptions](ARCHITECTURAL_ASSUMPTIONS.json) explicitly identify the new slab, parapet, façade and runtime-height proposals.

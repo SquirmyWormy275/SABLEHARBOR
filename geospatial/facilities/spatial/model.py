@@ -160,6 +160,7 @@ def build_model(root=ROOT):
                                     "meeting_seats",
                                     "dining_seats",
                                     "resident_beds",
+                                    "special_use_capacity",
                                 )
                             },
                             "source": path,

@@ -88,7 +88,7 @@ The [Red Wash package](red_wash/README.md) retains the standalone mine compariso
 
 ## Headquarters
 
-Sable Harbor headquarters is in **Sacramento, California**. The canonical physical direction is a beautiful, formidable long-duration research/industrial campus rather than a conventional glass tower or gaudy corporate palace. The [recovered approved R01 campus and floor references](docs/facilities/references/sacramento-hq/r01-approved/README.md) control the R02 four-building, ten-floor planning successor. The separate September 3 exterior image remains a distinct recovery item; it does not make the approved R01 plans unavailable. The integrated atlas also reuses the three runtime sites accepted through PR #119 at `b83e4be2182a5e4143808a3dab5f8d929a133caf`; see the [runtime bridge](geospatial/facilities/RUNTIME_BRIDGE.json). Combined coverage is 19 location packages, 18 buildings, 25 floors and 70 facility/runtime plates, plus eleven preserved rc4 maps. Final integration QA, CI, merge and release evidence remain pending.
+Sable Harbor headquarters is in **Sacramento, California**. The canonical physical direction is a beautiful, formidable long-duration research/industrial campus rather than a conventional glass tower or gaudy corporate palace. The [recovered approved R01 campus and floor references](docs/facilities/references/sacramento-hq/r01-approved/README.md) control the R02 four-building, ten-floor planning successor. The separate September 3 exterior image remains a distinct recovery item; it does not make the approved R01 plans unavailable. The integrated atlas also reuses the three runtime sites accepted through PR #119 at `b83e4be2182a5e4143808a3dab5f8d929a133caf`; see the [runtime bridge](geospatial/facilities/RUNTIME_BRIDGE.json). Combined coverage is 19 location packages, 18 buildings, 25 floors and 70 facility/runtime plates, plus eleven preserved rc4 maps. The accepted atlas and workbench releases preserve their own validation and delivery records.
 
 ## Blackridge status
 
@@ -129,3 +129,5 @@ No open-source license is granted. Repository visibility does not grant permissi
 The [reconciled Geo package](geospatial/README.md) combines current enterprise canon with the accepted industrial geography. Open the [atlas](geospatial/maps/SABLE_HARBOR_Geographic_Framework_Atlas_v0.1.0-rc4.pdf), [QGIS project](geospatial/qgis/sable_harbor_master.qgz), and [remaining-work matrix](geospatial/docs/PROGRAM_CLOSEOUT_MATRIX.md). Source and geometry status govern each representation.
 
 [Facility planning workbench](geospatial/maps/workbench.html) · [Scenario, readiness and evidence guide](geospatial/facilities/workbench/README.md).
+
+[Spatial review: 3D buildings, sections, elevations, roofs and revision comparison](geospatial/facilities/spatial/README.md).

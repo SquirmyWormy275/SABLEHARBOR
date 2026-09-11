@@ -40,3 +40,5 @@ python -m pytest -q geospatial/facilities/test_facilities.py geospatial/faciliti
 ```
 
 The pre-R01 six-building implementation and its release/QA evidence are superseded. They do not certify R02. Read the [initial](qa/SACRAMENTO_INITIAL_REVIEW.md) and [second-pass](qa/SECOND_PASS_REVIEW.md) visual findings as dated review history, not current acceptance. Final R02 QA and repository-validation evidence must identify the exact reviewed hashes before acceptance. New distributable bundles belong in GitHub Releases; individual controlled plans and useful review evidence are deliberately retained in Git.
+
+[Spatial architectural addendum](spatial/README.md): offline 3D, coordinated sections/elevations/roofs, room schedules, reviewed access routes and visual comparison, extending the existing maps without replacing prior releases.
