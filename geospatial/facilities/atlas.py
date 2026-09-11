@@ -17,8 +17,15 @@ ROOT = Path(__file__).resolve().parents[2]
 MAPS = ROOT / "geospatial/maps"
 FAC = MAPS / "facilities"
 HTML = MAPS / "index.html"
-PDF = MAPS / "SABLE_HARBOR_Facility_Atlas_v0.1.0.pdf"
+PDF = MAPS / "SABLE_HARBOR_Facility_Atlas_v0.2.0.pdf"
 COVERAGE = ROOT / "geospatial/facilities/coverage/COVERAGE_MATRIX.json"
+REFERENCES = ROOT / "docs/facilities/references/sacramento-hq/r01-approved"
+FONTS = ROOT / "geospatial/facilities/fonts"
+FONT_FILES = [FONTS / "DejaVuSans.ttf", FONTS / "DejaVuSans-Bold.ttf"]
+PRIOR_PDF = MAPS / "SABLE_HARBOR_Facility_Atlas_v0.1.0.pdf"
+PAPER = (247 / 255, 246 / 255, 241 / 255)
+INK = (34 / 255, 55 / 255, 64 / 255)
+MUTED = (98 / 255, 118 / 255, 126 / 255)
 
 
 def load(p):
@@ -88,12 +95,21 @@ def context_ids(site_id, prior):
 
 
 def pdf_text(value):
-    """Base-14 PDF font punctuation equivalents; HTML retains exact Unicode."""
-    return str(value).translate(str.maketrans({"—": " - ", "–": "-", "“": '"', "”": '"', "’": "'"}))
+    """Embedded DejaVu supports the approved typography without ASCII fallback."""
+    return str(value)
 
 
 def main():
     coverage = load(COVERAGE)
+    reference_manifest = load(REFERENCES / "MANIFEST.json")
+    references = [r for r in reference_manifest["files"] if r["filename"].endswith(".png")]
+    assert len(references) == 4, "R01 consists of exactly four original approved PNGs"
+    for reference in reference_manifest["files"]:
+        assert digest(REFERENCES / reference["filename"]) == reference["sha256"], (
+            "R01 original changed"
+        )
+    for font in FONT_FILES:
+        assert font.is_file(), f"Missing approved font asset {font}"
     current, prior = normal_maps()
     allmaps = current + prior
     source_files = sorted((ROOT / "geospatial/facilities/source").glob("*.json"))
@@ -120,6 +136,40 @@ def main():
     node("atlas", "enterprise", path=rel(HTML))
     node("portable-atlas", "publication", path=rel(PDF))
     edge("atlas", "portable-atlas")
+    node(
+        "SH-FAC-REF-SAC-R01",
+        "reference_family",
+        title="Original approved Sacramento R01",
+        status="APPROVED_VISUAL_REFERENCE",
+    )
+    edge("atlas", "SH-FAC-REF-SAC-R01")
+    for reference in reference_manifest["files"]:
+        reference_id = "SH-FAC-REF-SAC-R01:" + reference["filename"]
+        node(
+            reference_id,
+            "approved_reference"
+            if reference["filename"].endswith(".png")
+            else "reference_provenance",
+            path=rel(REFERENCES / reference["filename"]),
+            sha256=reference["sha256"],
+            status=reference["status"],
+        )
+        edge("SH-FAC-REF-SAC-R01", reference_id)
+    node(
+        "SH-FAC-REF-SAC-R01:manifest", "reference_manifest", path=rel(REFERENCES / "MANIFEST.json")
+    )
+    edge("SH-FAC-REF-SAC-R01", "SH-FAC-REF-SAC-R01:manifest")
+    if PRIOR_PDF.is_file():
+        node(
+            "superseded-atlas-v0.1.0",
+            "historical_publication",
+            path=rel(PRIOR_PDF),
+            status="SUPERSEDED_PRE_R01_PROPOSAL_NOT_APPROVED",
+        )
+        edge("atlas", "superseded-atlas-v0.1.0")
+    for font in FONT_FILES:
+        node("font:" + font.name, "font_source", path=rel(font), sha256=digest(font))
+        edge("atlas", "font:" + font.name)
     for label, path in [
         ("artifact-index", FAC / "ARTIFACT_INDEX.md"),
         ("link-graph", FAC / "ATLAS_LINKS.json"),
@@ -223,10 +273,10 @@ def main():
 
     out = [
         '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Sable Harbor facility atlas</title><style>',
-        "body{margin:0;background:#f1f2f2;color:#20282b;font:16px/1.5 system-ui,sans-serif}header{background:#152329;color:#fff;padding:36px max(24px,calc((100% - 1200px)/2))}main{max-width:1200px;margin:auto;padding:24px}h1,h2,h3,h4{line-height:1.25}a{color:#225d72}header a{color:#cae5ed}.meta{font-size:13px;overflow-wrap:anywhere;color:#59676b}details,article.record{background:white;border:1px solid #cbd2d4;border-radius:4px;padding:16px;margin:14px 0}summary{font-weight:650;cursor:pointer}img{width:100%;height:auto;display:block}.map{padding:12px;background:#f8f9f9;margin:12px 0}.tag{display:inline-block;font-size:12px;background:#e4e9eb;padding:3px 8px;margin:4px}.historical{border-left:5px solid #897565}.external{border-left:5px solid #6277a1}.unresolved,.proposed{border-left:5px solid #a57e37}input,select{font:inherit;padding:10px;border:1px solid #89999e;max-width:100%}.filters{display:flex;gap:12px;flex-wrap:wrap}nav ul{columns:2;padding-left:22px}@media(max-width:700px){nav ul{columns:1}main{padding:12px}}[hidden]{display:none!important}</style></head><body>",
-        '<header id="top"><h1>SABLE HARBOR<br>Facility atlas</h1><p>September 2026 · Source-based context and clearly labelled concept plans</p><p><a href="'
+        "@font-face{font-family:SH;src:url('../facilities/fonts/DejaVuSans.ttf')}@font-face{font-family:SH;src:url('../facilities/fonts/DejaVuSans-Bold.ttf');font-weight:700}body{margin:0;background:#f7f6f1;color:#223740;font:16px/1.6 SH,sans-serif}header,main{max-width:1500px;margin:auto;padding:30px 36px}header{padding-bottom:20px}header .brand{font-size:20px;letter-spacing:.28em;font-weight:700;border-bottom:1px solid #223740;padding-bottom:22px}.brand span{float:right;letter-spacing:.02em;font-size:12px;font-weight:400}h1,h2,h3,h4{line-height:1.25}h1{font-size:42px;text-transform:uppercase;letter-spacing:.035em}h2{text-transform:uppercase;font-size:23px;margin-top:30px}h3{font-size:20px}h4{font-size:18px}a{color:#3d7186;text-underline-offset:3px}.meta{font-size:13px;overflow-wrap:anywhere;color:#62767e}details,article.record{border:0;border-top:1px solid #aab5b5;padding:22px 0;margin:18px 0}details details{margin-left:24px}summary{font-weight:700;cursor:pointer;font-size:20px}img{width:100%;height:auto;display:block}.map{padding:16px 0;margin:18px 0;border-bottom:1px solid #d7ddd9}.reference{padding:16px 0;max-width:1150px}.historical{border-left:3px solid #799487;padding-left:16px!important}.external{border-left:3px solid #49778b;padding-left:16px!important}.unresolved,.proposed{border-left:3px solid #ac9052;padding-left:16px!important}code{font-size:12px;overflow-wrap:anywhere}input,select{font:inherit;padding:10px;border:1px solid #8c9da1;background:#f7f6f1;max-width:100%}.filters{display:flex;gap:12px;flex-wrap:wrap}nav{border-top:1px solid #223740;border-bottom:1px solid #223740;padding:12px 0}nav ul{columns:2;padding-left:22px}@media(max-width:700px){nav ul{columns:1}header,main{padding:20px}.brand span{float:none;display:block;margin-top:14px}h1{font-size:30px}details details{margin-left:12px}}[hidden]{display:none!important}</style></head><body>",
+        '<header id="top"><div class="brand">SABLE HARBOR<span>SACRAMENTO / INSTITUTIONAL CAMPUS</span></div><h1>Enterprise facility atlas</h1><p class="meta">COORDINATED DESIGN STUDY · 11 SEPTEMBER 2026 · R02 SUCCESSOR TO THE APPROVED R01 VISUAL BASELINE</p><p><a href="'
         + esc(PDF.name)
-        + '">Portable PDF atlas</a> · <a href="facilities/ARTIFACT_INDEX.md">Complete artifact index</a> · <a href="facilities/ATLAS_LINKS.json">Link graph</a></p></header><main>',
+        + '">Portable PDF atlas v0.2.0</a> · <a href="facilities/ARTIFACT_INDEX.md">Complete artifact index</a> · <a href="facilities/ATLAS_LINKS.json">Link graph</a> · <a href="#approved-r01">Original approved R01 sheets</a></p></header><main>',
         "<p>Follow a location to its site plan, buildings and separately saved floor images. Existing geographic context remains rc4; concept layouts do not establish ownership, construction completion or actual occupancy. Historical, external and unresolved records retain explicit dispositions without invented map pins.</p>",
         f"<p>{len(sites)} modelled site packages · {len(building_lookup)} buildings · {sum(len(b[1]['floors']) for b in building_lookup.values())} floors · {len(coverage['records'])} coverage dispositions</p>",
         "<nav><h2>Locations and sites</h2><ul>",
@@ -235,6 +285,29 @@ def main():
     out += [
         '</ul><p><a href="#contexts">Geographic context</a> · <a href="#coverage">All coverage records</a></p></nav>'
     ]
+    out.append(
+        '<details id="approved-r01"><summary>Original approved Sacramento R01 references</summary><p>Exactly four owner-approved PNGs, recovered intact. Approval records the visual system and campus composition. These originals are immutable; this R02 HTML/PDF atlas and its generated plans are derivatives, not original approved R01 artifacts.</p>'
+    )
+    for reference in references:
+        path = rel(REFERENCES / reference["filename"])
+        out.append(
+            f'<article class="reference" id="ref-{esc(reference["filename"])}"><h3>{esc(reference["filename"])}</h3><p><a href="{href(path)}">Open original 3240 × 2304 PNG</a></p><p class="meta">APPROVED VISUAL REFERENCE · 11 SEPTEMBER 2026<br>SHA-256 <code>{reference["sha256"]}</code><br>{esc(reference["approval_source"])}</p><a href="{href(path)}"><img loading="lazy" src="{href(path)}" alt="Immutable approved R01 reference: {esc(reference["filename"])}"></a></article>'
+        )
+    out.append(
+        '<p><a href="'
+        + href(rel(REFERENCES / "SABLE_HARBOR_Sacramento_HQ_Drafts_R01.zip"))
+        + '">Original recovered four-image ZIP</a> · <a href="'
+        + href(rel(REFERENCES / "MANIFEST.json"))
+        + '">Reference manifest and provenance</a> · <a href="'
+        + href(rel(REFERENCES / "CODEX_ADDENDUM_APPROVED_SACRAMENTO_VISUAL_BASELINE_R01.md"))
+        + '">Controlling approval addendum</a></p></details>'
+    )
+    if PRIOR_PDF.is_file():
+        out.append(
+            '<details class="historical" id="superseded-atlas"><summary>Superseded pre-R01 proposal v0.1.0</summary><p>The earlier six-building implementation was superseded when the four original approved references were recovered. It is retained as development history, not the current campus or an approved R01 artifact. Its draft release was withheld and never published.</p><p><a href="'
+            + href(rel(PRIOR_PDF))
+            + '">Archived pre-R01 proposal PDF</a></p></details>'
+        )
     for s, p in sites:
         sid = s["site_id"]
         out.append(
@@ -324,26 +397,100 @@ def main():
     index_links = []
 
     def page(title):
-        p = doc.new_page(width=842, height=595)
-        p.draw_rect(fitz.Rect(0, 0, 842, 68), color=None, fill=(0.08, 0.14, 0.16))
-        p.insert_text((30, 43), pdf_text(title), fontsize=18, color=(1, 1, 1))
+        p = doc.new_page(width=1080, height=768)
+        p.draw_rect(p.rect, color=None, fill=PAPER)
+        p.insert_font(fontname="SHRegular", fontfile=str(FONT_FILES[0]))
+        p.insert_font(fontname="SHBold", fontfile=str(FONT_FILES[1]))
+        p.insert_text(
+            (36, 35), "S A B L E   H A R B O R", fontsize=13, fontname="SHBold", color=INK
+        )
+        p.insert_text(
+            (751, 34),
+            "SACRAMENTO / INSTITUTIONAL CAMPUS",
+            fontsize=8,
+            fontname="SHRegular",
+            color=INK,
+        )
+        p.draw_line((36, 50), (1044, 50), color=INK, width=0.65)
+        rc = p.insert_textbox(
+            fitz.Rect(36, 66, 1044, 111),
+            pdf_text(title.upper()),
+            fontname="SHBold",
+            fontsize=23,
+            color=INK,
+        )
+        assert rc >= 0, "PDF title overflow: " + title
+        p.draw_line((36, 728), (1044, 728), color=INK, width=0.65)
+        p.insert_text(
+            (36, 747),
+            "COORDINATED DESIGN STUDY · 11 SEPTEMBER 2026",
+            fontname="SHRegular",
+            fontsize=8,
+            color=MUTED,
+        )
+        p.insert_text((844, 747), "FACILITY ATLAS / R02", fontname="SHBold", fontsize=9, color=INK)
         return p
 
-    p = page("SABLE HARBOR | Facility atlas")
-    toc.append([1, "Facility atlas", 1])
-    p.insert_textbox(
-        fitz.Rect(30, 95, 810, 230),
-        "September 2026 | Concept layouts and source dispositions\n\nIndividual site, building and floor drawings remain saved independently.\nPlan status is explicit: no construction, ownership or actual occupancy is inferred.\nUse bookmarks or the linked site index. Geographic context rc4 remains preserved.",
-        fontsize=13,
+    p = page("Enterprise facility atlas")
+    toc.append([1, "Facility atlas / R02", 1])
+    intro = "September 2026 · R02 successor to the approved R01 visual baseline\n\nFollow a location to its site, building and independently saved floor drawings.\n\nFour original approved R01 PNGs are embedded unchanged on their own pages. This portable PDF is a derivative publication; it is not an original approved R01 artifact.\n\nConcept layouts do not establish acquisition, construction completion or actual occupancy. Original rc4 geographic context remains preserved."
+    rc = p.insert_textbox(
+        fitz.Rect(36, 145, 725, 425),
+        intro,
+        fontname="SHRegular",
+        fontsize=15,
+        color=INK,
+        lineheight=1.5,
     )
+    assert rc >= 0, "PDF introduction overflow"
+    p.insert_text(
+        (36, 487),
+        f"{len(sites)} SITE PACKAGES   /   {len(building_lookup)} BUILDINGS   /   {sum(len(b[1]['floors']) for b in building_lookup.values())} FLOORS",
+        fontname="SHBold",
+        fontsize=16,
+        color=INK,
+    )
+    p.insert_text(
+        (36, 530),
+        "Use the PDF bookmarks or the linked site index to drill down.",
+        fontname="SHRegular",
+        fontsize=12,
+        color=MUTED,
+    )
+    p.insert_text((36, 576), "Original R01 references →", fontname="SHBold", fontsize=12, color=INK)
+    for reference in references:
+        p = doc.new_page(width=1080, height=768)
+        p.draw_rect(p.rect, color=None, fill=PAPER)
+        p.insert_font(fontname="SHRegular", fontfile=str(FONT_FILES[0]))
+        p.insert_image(
+            fitz.Rect(36, 8, 1044, 724),
+            stream=(REFERENCES / reference["filename"]).read_bytes(),
+            keep_proportion=True,
+        )
+        caption = (
+            "Original approved PNG embedded unchanged · PDF derivative, not original approved R01 · "
+            + reference["filename"]
+        )
+        rc = p.insert_textbox(
+            fitz.Rect(36, 735, 1044, 762), caption, fontname="SHRegular", fontsize=8, color=INK
+        )
+        assert rc >= 0, "R01 original caption overflow"
+        toc.append([1, "Approved R01 original | " + reference["filename"], p.number + 1])
     for start in range(0, len(sites), 17):
         p = page("Location / site index")
         toc.append([1, "Site index" + (" continued" if start else ""), p.number + 1])
         for i, (s, _) in enumerate(sites[start : start + 17]):
-            y = 95 + i * 27
-            label = s["site_id"] + " | " + s["name"]
-            p.insert_text((30, y), pdf_text(label[:115]), fontsize=10)
-            index_links.append((p.number, fitz.Rect(28, y - 12, 814, y + 5), s["site_id"]))
+            y = 142 + i * 30
+            label = s["site_id"] + "  /  " + s["name"]
+            rc = p.insert_textbox(
+                fitz.Rect(36, y - 14, 1044, y + 12),
+                pdf_text(label),
+                fontname="SHRegular",
+                fontsize=11,
+                color=INK,
+            )
+            assert rc >= 0, "Site index label overflow"
+            index_links.append((p.number, fitz.Rect(34, y - 14, 1046, y + 12), s["site_id"]))
     destinations = {}
 
     def append_map(m, level, label=None):
@@ -366,7 +513,11 @@ def main():
             destinations[sid] = p.number
             toc.append([1, s["name"], p.number + 1])
             p.insert_textbox(
-                fitz.Rect(30, 95, 810, 520), s.get("floor_exemption", s["status"]), fontsize=12
+                fitz.Rect(36, 135, 1044, 690),
+                s.get("floor_exemption", s["status"]),
+                fontsize=12,
+                fontname="SHRegular",
+                color=INK,
             )
         for b in s["buildings"]:
             bm = [m for m in current if m.get("building_id") == b["id"] and not m.get("floor_id")]
@@ -385,30 +536,33 @@ def main():
     y = 0
     for r in coverage["records"]:
         lines = textwrap.wrap(
-            r["id"] + " | " + r["name"] + " | " + r["status"], width=120
-        ) + textwrap.wrap(r["reason"], width=140)
-        height = 14 + 12 * len(lines)
-        if p is None or y + height > 565:
+            r["id"] + " | " + r["name"] + " | " + r["status"], width=138
+        ) + textwrap.wrap(r["reason"], width=158)
+        height = 16 + 14 * len(lines)
+        if p is None or y + height > 706:
             p = page("Coverage dispositions")
-            y = 92
+            y = 126
             if not any(t[1] == "Coverage dispositions" for t in toc):
                 toc.append([1, "Coverage dispositions", p.number + 1])
         rc = p.insert_textbox(
-            fitz.Rect(30, y, 810, y + height),
+            fitz.Rect(36, y, 1044, y + height),
             pdf_text("\n".join(lines)),
-            fontsize=9,
+            fontsize=10,
+            fontname="SHRegular",
+            color=INK,
             lineheight=1.2,
         )
         assert rc >= 0, f"PDF coverage overflow {r['id']}"
         y += height + 7
+    doc[0].insert_link({"kind": fitz.LINK_GOTO, "from": fitz.Rect(34, 559, 310, 585), "page": 1})
     for pn, rect, sid in index_links:
         doc[pn].insert_link({"kind": fitz.LINK_GOTO, "from": rect, "page": destinations[sid]})
     doc.set_toc(toc)
     doc.set_metadata(
         {
-            "title": "Sable Harbor Facility Atlas v0.1.0",
+            "title": "Sable Harbor Facility Atlas v0.2.0 / R02",
             "author": "Sable Harbor",
-            "subject": "September 2026 sourced geography and labelled concept facilities",
+            "subject": "R02 successor to approved R01; September 2026 sourced geography and labelled concept facilities",
             "creator": "geospatial/facilities/atlas.py",
             "producer": "PyMuPDF deterministic build",
         }
@@ -416,10 +570,29 @@ def main():
     doc.save(PDF, garbage=4, deflate=True, no_new_id=True)
     pdf_pages = len(doc)
     doc.close()
-    dependencies = [COVERAGE, FAC / "MANIFEST.json", *source_files, Path(__file__)]
+    dependencies = [
+        COVERAGE,
+        FAC / "MANIFEST.json",
+        *source_files,
+        Path(__file__),
+        REFERENCES / "MANIFEST.json",
+        *FONT_FILES,
+        *[REFERENCES / r["filename"] for r in reference_manifest["files"]],
+    ]
     # Hash only preserved rc4 records so adding this successor to MAP_MANIFEST is not cyclic.
     graph = {
         "schema_version": "1.0.0",
+        "revision": "0.2.0",
+        "visual_revision": "R02_DERIVED_FROM_APPROVED_R01",
+        "approved_reference_pages": [
+            {
+                "filename": r["filename"],
+                "page": i + 2,
+                "sha256": r["sha256"],
+                "status": "ORIGINAL_PNG_EMBEDDED_UNCHANGED_PDF_IS_DERIVATIVE",
+            }
+            for i, r in enumerate(references)
+        ],
         "entrypoint": rel(HTML),
         "pdf": rel(PDF),
         "pdf_pages": pdf_pages,
@@ -444,7 +617,7 @@ def main():
         assert e["source"] in nodes and e["target"] in nodes, e
     (FAC / "ATLAS_LINKS.json").write_text(json.dumps(graph, indent=2) + "\n")
     md = [
-        "# Facility atlas artifact index",
+        "# Facility atlas artifact index · R02 / v0.2.0",
         "",
         "[Open HTML atlas](../index.html) · [Portable bookmarked PDF](../"
         + PDF.name
@@ -461,6 +634,35 @@ def main():
             for fmt, a in m["artifacts"].items()
         )
         md.append(f"| {m['id']} | {m['title'].replace('|', '/')} | {m['status']} | {links_md} |")
+    md += [
+        "",
+        "## Original approved Sacramento R01 references",
+        "",
+        "These four immutable PNGs and the recovered ZIP are approved source artifacts. This R02 PDF, HTML atlas and new plan derivatives are not original approved R01 artifacts.",
+        "",
+        "| Original | SHA-256 | Approval |",
+        "|---|---|---|",
+    ]
+    for reference in references:
+        md.append(
+            f"| [{reference['filename']}]({os.path.relpath(REFERENCES / reference['filename'], FAC)}) | `{reference['sha256']}` | 2026-09-11; APPROVED_VISUAL_REFERENCE |"
+        )
+    md += [
+        "",
+        "[Original recovered ZIP]("
+        + os.path.relpath(REFERENCES / "SABLE_HARBOR_Sacramento_HQ_Drafts_R01.zip", FAC)
+        + ") · [Reference manifest/provenance]("
+        + os.path.relpath(REFERENCES / "MANIFEST.json", FAC)
+        + ")",
+        "",
+    ]
+    if PRIOR_PDF.is_file():
+        md += [
+            "[Archived pre-R01 proposal v0.1.0](../"
+            + PRIOR_PDF.name
+            + ") — SUPERSEDED; earlier six-building implementation, not current or approved R01. Its draft release was withheld and never published.",
+            "",
+        ]
     md += [
         "",
         "Full coverage/exemptions: [coverage matrix](../../facilities/coverage/COVERAGE_MATRIX.md). Population evidence: [bridge](../../facilities/population/BRIDGE.md).",
