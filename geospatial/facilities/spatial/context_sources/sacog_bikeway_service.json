@@ -1,0 +1,871 @@
+{
+ "currentVersion": 11.5,
+ "cimVersion": "3.5.0",
+ "id": 0,
+ "name": "Existing Bikeway",
+ "type": "Feature Layer",
+ "parentLayer": null,
+ "defaultVisibility": true,
+ "minScale": 0,
+ "maxScale": 0,
+ "canScaleSymbols": false,
+ "geometryType": "esriGeometryPolyline",
+ "description": "Existing Regional BikewaysUpdated annually, though major projects will be added as they are opened, if needed.The Regional bikeways. The existing bikeway layer is a comprehensive layer of bikeways built and administered by local agencies throughout the region. This data reflects an integrated regional bikeway network. On-street facilities are aligned to the Regional Centerline; off-street facilities have been added from jurisdiction submissions or digitized using imagery.Line segments represent transportation facilities for pedestrian and/or bicycle use. The \"class\" field signifies level of use in the design.Class 1 designates a hard-surface multi-use trail suitable for bicycle and foot traffic. It is separate from facilities for motor vehicle traffic and meets CalTrans standards for width, signage, and surface.Class 2 designates an on-street lane for bicycles only. Lanes have striping and other markings to separate them from motor vehicle traffic. There are versions of class 2 lanes that are separated from traffic with painted areas for added security and visibility for riders.Class 3 designates an on-street route for bicycles only. Routes are marked by signage only; cyclists are expected to ride with the flow of traffic.Class 4 designates a buffered bike lane. Buffered bike lanes have have striping and other markings to designate them for bicycle traffic, but also by some form of upright buffer to separate them from motor vehicle traffic. Possible buffers include curbs, planters, parked cars, and pylons. A bike lane separated by paint only is a class 2, not a class 4.Updates will occur on a rolling basis as we review plans and learn about new bike/",
+ "copyrightText": "SACOG and SACOG regional Jurisdisctions",
+ "editFieldsInfo": {
+  "creationDateField": "created_date",
+  "creatorField": "created_user",
+  "editDateField": "last_edited_date",
+  "editorField": "last_edited_user"
+ },
+ "ownershipBasedAccessControlForFeatures": null,
+ "syncCanReturnChanges": true,
+ "relationships": [],
+ "isDataVersioned": true,
+ "isDataArchived": false,
+ "infoInEstimates": [
+  "extent"
+ ],
+ "isDataBranchVersioned": false,
+ "isDataReplicaTracked": false,
+ "isCoGoEnabled": false,
+ "supportsRollbackOnFailureParameter": false,
+ "archivingInfo": {
+  "supportsQueryWithHistoricMoment": false,
+  "startArchivingMoment": -1
+ },
+ "supportsStatistics": true,
+ "supportsExceedsLimitStatistics": true,
+ "supportsAdvancedQueries": true,
+ "supportsValidateSQL": true,
+ "supportsCoordinatesQuantization": true,
+ "supportsQuantizationEditMode": true,
+ "supportsCalculate": true,
+ "supportsASyncCalculate": true,
+ "supportsDurableUrlForSyncModelNone": false,
+ "supportsDatumTransformation": true,
+ "advancedQueryCapabilities": {
+  "supportsPagination": true,
+  "supportsQueryWithDistance": true,
+  "supportsReturningQueryExtent": true,
+  "supportsStatistics": true,
+  "supportsPercentileStatistics": true,
+  "supportsHavingClause": true,
+  "supportsOrderBy": true,
+  "supportsDistinct": true,
+  "supportsCountDistinct": true,
+  "supportsAdvancedQueryRelated": true,
+  "supportsQueryRelatedPagination": true,
+  "supportsCurrentUserQueries": true,
+  "supportsFullTextSearch": true,
+  "fullTextSearchCapabilities": {
+   "supportsSearchOperator": true,
+   "supportsOperator": false,
+   "supportsSqlExpressionInFullText": true
+  },
+  "fullTextSearchableFields": [],
+  "supportsQueryWithResultType": true,
+  "supportsReturningGeometryCentroid": false,
+  "supportsReturningGeometryEnvelope": true,
+  "supportsSqlExpression": true,
+  "supportsQueryWithDatumTransformation": true,
+  "supportsLod": false,
+  "supportsQueryWithLodSR": false,
+  "supportsQueryAnalytic": true,
+  "supportsTrueCurve": true,
+  "supportedCurveTypes": [
+   "esriGeometryCircularArc",
+   "esriGeometryEllipticArc",
+   "esriGeometryBezier3Curve"
+  ],
+  "supportsQueryWithCacheHint": false
+ },
+ "advancedQueryAnalyticCapabilities": {
+  "supportsLinearRegression": true,
+  "supportsAsync": true,
+  "supportsPercentileAnalytic": true
+ },
+ "advancedEditingCapabilities": {
+  "supportedSqlFormatsInCalculate": [
+   "standard"
+  ],
+  "supportsAsyncApplyEdits": true,
+  "supportsApplyEditsbyUploadID": true,
+  "supportedApplyEditsUploadIDFormats": "JSON,PBF"
+ },
+ "hasGeometryProperties": true,
+ "geometryProperties": {
+  "shapeLengthFieldName": "Shape__Length",
+  "units": "esriFeet"
+ },
+ "hasMetadata": true,
+ "extent": {
+  "xmin": 6556804.252499998,
+  "ymin": 1847796.7618750036,
+  "xmax": 7146081.553124994,
+  "ymax": 2294652.4775000066,
+  "spatialReference": {
+   "wkid": 102642,
+   "latestWkid": 2226,
+   "xyTolerance": 0.003280833333333333,
+   "zTolerance": 0.001,
+   "mTolerance": 0.001,
+   "falseX": -115211800,
+   "falseY": -93821500,
+   "xyUnits": 3048.0060960121928,
+   "falseZ": 0,
+   "zUnits": 1,
+   "falseM": 0,
+   "mUnits": 1
+  }
+ },
+ "spatialReference": {
+  "wkid": 102642,
+  "latestWkid": 2226,
+  "xyTolerance": 0.003280833333333333,
+  "zTolerance": 0.001,
+  "mTolerance": 0.001,
+  "falseX": -115211800,
+  "falseY": -93821500,
+  "xyUnits": 3048.0060960121928,
+  "falseZ": 0,
+  "zUnits": 1,
+  "falseM": 0,
+  "mUnits": 1
+ },
+ "sourceSpatialReference": {
+  "wkid": 102642,
+  "latestWkid": 2226,
+  "xyTolerance": 0.02,
+  "zTolerance": 0.001,
+  "mTolerance": 2,
+  "falseX": -115211800,
+  "falseY": -93821500,
+  "xyUnits": 1600,
+  "falseZ": 0,
+  "zUnits": 1,
+  "falseM": 0,
+  "mUnits": 1
+ },
+ "drawingInfo": {
+  "renderer": {
+   "type": "uniqueValue",
+   "field1": "BIKE_CLASS",
+   "uniqueValueGroups": [
+    {
+     "heading": "Bikeway Class",
+     "classes": [
+      {
+       "label": "Class 1",
+       "description": "Class 1",
+       "symbol": {
+        "type": "esriSLS",
+        "style": "esriSLSSolid",
+        "color": [
+         85,
+         255,
+         0,
+         255
+        ],
+        "width": 1.5
+       },
+       "values": [
+        [
+         "1"
+        ]
+       ]
+      },
+      {
+       "label": "Class 2",
+       "description": "Class 2",
+       "symbol": {
+        "type": "esriSLS",
+        "style": "esriSLSSolid",
+        "color": [
+         255,
+         170,
+         0,
+         255
+        ],
+        "width": 1.25
+       },
+       "values": [
+        [
+         "2"
+        ]
+       ]
+      },
+      {
+       "label": "Class 3",
+       "description": "Class 3",
+       "symbol": {
+        "type": "esriSLS",
+        "style": "esriSLSSolid",
+        "color": [
+         230,
+         0,
+         0,
+         255
+        ],
+        "width": 1.25
+       },
+       "values": [
+        [
+         "3"
+        ]
+       ]
+      },
+      {
+       "label": "Class 4",
+       "description": "Class 4",
+       "symbol": {
+        "type": "esriSLS",
+        "style": "esriSLSSolid",
+        "color": [
+         197,
+         0,
+         255,
+         255
+        ],
+        "width": 1
+       },
+       "values": [
+        [
+         "4"
+        ]
+       ]
+      }
+     ]
+    }
+   ],
+   "uniqueValueInfos": [
+    {
+     "symbol": {
+      "type": "esriSLS",
+      "style": "esriSLSSolid",
+      "color": [
+       85,
+       255,
+       0,
+       255
+      ],
+      "width": 1.5
+     },
+     "value": "1",
+     "label": "Class 1"
+    },
+    {
+     "symbol": {
+      "type": "esriSLS",
+      "style": "esriSLSSolid",
+      "color": [
+       255,
+       170,
+       0,
+       255
+      ],
+      "width": 1.25
+     },
+     "value": "2",
+     "label": "Class 2"
+    },
+    {
+     "symbol": {
+      "type": "esriSLS",
+      "style": "esriSLSSolid",
+      "color": [
+       230,
+       0,
+       0,
+       255
+      ],
+      "width": 1.25
+     },
+     "value": "3",
+     "label": "Class 3"
+    },
+    {
+     "symbol": {
+      "type": "esriSLS",
+      "style": "esriSLSSolid",
+      "color": [
+       197,
+       0,
+       255,
+       255
+      ],
+      "width": 1
+     },
+     "value": "4",
+     "label": "Class 4"
+    }
+   ],
+   "fieldDelimiter": ",",
+   "authoringInfo": {
+    "colorRamp": {
+     "type": "multipart",
+     "colorRamps": [
+      {
+       "type": "algorithmic",
+       "algorithm": "esriCIELabAlgorithm",
+       "fromColor": [
+        221,
+        182,
+        252,
+        255
+       ],
+       "toColor": [
+        221,
+        182,
+        252,
+        255
+       ]
+      },
+      {
+       "type": "algorithmic",
+       "algorithm": "esriCIELabAlgorithm",
+       "fromColor": [
+        191,
+        252,
+        182,
+        255
+       ],
+       "toColor": [
+        191,
+        252,
+        182,
+        255
+       ]
+      },
+      {
+       "type": "algorithmic",
+       "algorithm": "esriCIELabAlgorithm",
+       "fromColor": [
+        252,
+        218,
+        204,
+        255
+       ],
+       "toColor": [
+        252,
+        218,
+        204,
+        255
+       ]
+      },
+      {
+       "type": "algorithmic",
+       "algorithm": "esriCIELabAlgorithm",
+       "fromColor": [
+        182,
+        242,
+        252,
+        255
+       ],
+       "toColor": [
+        182,
+        242,
+        252,
+        255
+       ]
+      },
+      {
+       "type": "algorithmic",
+       "algorithm": "esriCIELabAlgorithm",
+       "fromColor": [
+        252,
+        252,
+        204,
+        255
+       ],
+       "toColor": [
+        252,
+        252,
+        204,
+        255
+       ]
+      },
+      {
+       "type": "algorithmic",
+       "algorithm": "esriCIELabAlgorithm",
+       "fromColor": [
+        202,
+        212,
+        252,
+        255
+       ],
+       "toColor": [
+        202,
+        212,
+        252,
+        255
+       ]
+      },
+      {
+       "type": "algorithmic",
+       "algorithm": "esriCIELabAlgorithm",
+       "fromColor": [
+        252,
+        197,
+        227,
+        255
+       ],
+       "toColor": [
+        252,
+        197,
+        227,
+        255
+       ]
+      },
+      {
+       "type": "algorithmic",
+       "algorithm": "esriCIELabAlgorithm",
+       "fromColor": [
+        189,
+        252,
+        224,
+        255
+       ],
+       "toColor": [
+        189,
+        252,
+        224,
+        255
+       ]
+      },
+      {
+       "type": "algorithmic",
+       "algorithm": "esriCIELabAlgorithm",
+       "fromColor": [
+        179,
+        185,
+        252,
+        255
+       ],
+       "toColor": [
+        179,
+        185,
+        252,
+        255
+       ]
+      },
+      {
+       "type": "algorithmic",
+       "algorithm": "esriCIELabAlgorithm",
+       "fromColor": [
+        235,
+        252,
+        179,
+        255
+       ],
+       "toColor": [
+        235,
+        252,
+        179,
+        255
+       ]
+      },
+      {
+       "type": "algorithmic",
+       "algorithm": "esriCIELabAlgorithm",
+       "fromColor": [
+        212,
+        235,
+        252,
+        255
+       ],
+       "toColor": [
+        212,
+        235,
+        252,
+        255
+       ]
+      },
+      {
+       "type": "algorithmic",
+       "algorithm": "esriCIELabAlgorithm",
+       "fromColor": [
+        221,
+        252,
+        212,
+        255
+       ],
+       "toColor": [
+        221,
+        252,
+        212,
+        255
+       ]
+      },
+      {
+       "type": "algorithmic",
+       "algorithm": "esriCIELabAlgorithm",
+       "fromColor": [
+        246,
+        215,
+        252,
+        255
+       ],
+       "toColor": [
+        246,
+        215,
+        252,
+        255
+       ]
+      }
+     ]
+    }
+   }
+  },
+  "scaleSymbols": true,
+  "transparency": 0,
+  "labelingInfo": null
+ },
+ "hasM": false,
+ "hasZ": false,
+ "allowGeometryUpdates": true,
+ "allowTrueCurvesUpdates": true,
+ "onlyAllowTrueCurveUpdatesByTrueCurveClients": true,
+ "hasAttachments": false,
+ "supportsApplyEditsWithGlobalIds": false,
+ "htmlPopupType": "esriServerHTMLPopupTypeAsHTMLText",
+ "objectIdField": "OBJECTID",
+ "globalIdField": "GlobalID",
+ "displayField": "FULLSTREET",
+ "typeIdField": "BIKE_CLASS",
+ "subtypeField": "",
+ "fields": [
+  {
+   "name": "OBJECTID",
+   "type": "esriFieldTypeOID",
+   "alias": "OBJECTID",
+   "domain": null,
+   "editable": false,
+   "nullable": false,
+   "defaultValue": null,
+   "modelName": "OBJECTID"
+  },
+  {
+   "name": "FULLSTREET",
+   "type": "esriFieldTypeString",
+   "alias": "FULLSTREET",
+   "domain": null,
+   "editable": true,
+   "nullable": true,
+   "length": 50,
+   "defaultValue": null,
+   "modelName": "FULLSTREET"
+  },
+  {
+   "name": "BIKE_CLASS",
+   "type": "esriFieldTypeSmallInteger",
+   "alias": "BIKE_CLASS",
+   "domain": null,
+   "editable": true,
+   "nullable": true,
+   "defaultValue": null,
+   "modelName": "BIKE_CLASS"
+  },
+  {
+   "name": "Shape__Length",
+   "type": "esriFieldTypeDouble",
+   "alias": "Shape.STLength()",
+   "domain": null,
+   "editable": false,
+   "nullable": true,
+   "defaultValue": null,
+   "modelName": "Shape.STLength()",
+   "required": true
+  },
+  {
+   "name": "Juris",
+   "type": "esriFieldTypeString",
+   "alias": "Juris",
+   "domain": null,
+   "editable": true,
+   "nullable": true,
+   "length": 100,
+   "defaultValue": null,
+   "modelName": "Juris"
+  },
+  {
+   "name": "Bikeway",
+   "type": "esriFieldTypeString",
+   "alias": "Bikeway",
+   "domain": null,
+   "editable": true,
+   "nullable": true,
+   "length": 100,
+   "defaultValue": null,
+   "modelName": "Bikeway"
+  },
+  {
+   "name": "County",
+   "type": "esriFieldTypeString",
+   "alias": "County",
+   "domain": null,
+   "editable": true,
+   "nullable": true,
+   "length": 50,
+   "defaultValue": null,
+   "modelName": "County"
+  },
+  {
+   "name": "Miles",
+   "type": "esriFieldTypeDouble",
+   "alias": "Miles",
+   "domain": null,
+   "editable": true,
+   "nullable": true,
+   "defaultValue": null,
+   "modelName": "Miles"
+  },
+  {
+   "name": "CL_TYPE",
+   "type": "esriFieldTypeString",
+   "alias": "CL_TYPE",
+   "domain": null,
+   "editable": true,
+   "nullable": true,
+   "length": 50,
+   "defaultValue": null,
+   "modelName": "CL_TYPE"
+  },
+  {
+   "name": "Name",
+   "type": "esriFieldTypeString",
+   "alias": "Name",
+   "domain": null,
+   "editable": true,
+   "nullable": true,
+   "length": 255,
+   "defaultValue": null,
+   "modelName": "Name"
+  },
+  {
+   "name": "GlobalID",
+   "type": "esriFieldTypeGlobalID",
+   "alias": "GlobalID",
+   "domain": null,
+   "editable": false,
+   "nullable": false,
+   "length": 38,
+   "defaultValue": null,
+   "modelName": "GlobalID"
+  },
+  {
+   "name": "created_user",
+   "type": "esriFieldTypeString",
+   "alias": "created_user",
+   "domain": null,
+   "editable": false,
+   "nullable": true,
+   "length": 255,
+   "defaultValue": null,
+   "modelName": "created_user"
+  },
+  {
+   "name": "created_date",
+   "type": "esriFieldTypeDate",
+   "alias": "created_date",
+   "domain": null,
+   "editable": false,
+   "nullable": true,
+   "length": 8,
+   "defaultValue": null,
+   "modelName": "created_date"
+  },
+  {
+   "name": "last_edited_user",
+   "type": "esriFieldTypeString",
+   "alias": "last_edited_user",
+   "domain": null,
+   "editable": false,
+   "nullable": true,
+   "length": 255,
+   "defaultValue": null,
+   "modelName": "last_edited_user"
+  },
+  {
+   "name": "last_edited_date",
+   "type": "esriFieldTypeDate",
+   "alias": "last_edited_date",
+   "domain": null,
+   "editable": false,
+   "nullable": true,
+   "length": 8,
+   "defaultValue": null,
+   "modelName": "last_edited_date"
+  }
+ ],
+ "geometryField": {
+  "name": "Shape",
+  "type": "esriFieldTypeGeometry",
+  "alias": "Shape",
+  "domain": null,
+  "editable": true,
+  "nullable": true,
+  "defaultValue": null,
+  "modelName": "Shape"
+ },
+ "indexes": [
+  {
+   "name": "R457_pk",
+   "isAscending": true,
+   "isUnique": true,
+   "description": "",
+   "fields": "OBJECTID"
+  },
+  {
+   "name": "UUID_457",
+   "isAscending": true,
+   "isUnique": true,
+   "description": "",
+   "fields": "GlobalID"
+  },
+  {
+   "name": "UUID_OID_457",
+   "isAscending": true,
+   "isUnique": true,
+   "description": "",
+   "fields": "GlobalID,OBJECTID"
+  },
+  {
+   "name": "S439_idx",
+   "isAscending": true,
+   "isUnique": true,
+   "description": "",
+   "fields": "Shape"
+  }
+ ],
+ "datesInUnknownTimezone": false,
+ "dateFieldsTimeReference": {
+  "timeZone": "UTC",
+  "timeZoneIANA": "Etc/UTC",
+  "respectsDaylightSaving": false
+ },
+ "preferredTimeReference": null,
+ "types": [
+  {
+   "id": 1,
+   "name": "Class 1",
+   "domains": {},
+   "templates": [
+    {
+     "name": "Class 1",
+     "description": "",
+     "prototype": {
+      "attributes": {
+       "FULLSTREET": null,
+       "Name": null,
+       "BIKE_CLASS": 1,
+       "CL_TYPE": null,
+       "Juris": null,
+       "Bikeway": null,
+       "County": null,
+       "Miles": null
+      }
+     },
+     "drawingTool": "esriFeatureEditToolLine"
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "name": "Class 2",
+   "domains": {},
+   "templates": [
+    {
+     "name": "Class 2",
+     "description": "",
+     "prototype": {
+      "attributes": {
+       "FULLSTREET": null,
+       "Name": null,
+       "BIKE_CLASS": 2,
+       "CL_TYPE": null,
+       "Juris": null,
+       "Bikeway": null,
+       "County": null,
+       "Miles": null
+      }
+     },
+     "drawingTool": "esriFeatureEditToolLine"
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "name": "Class 3",
+   "domains": {},
+   "templates": [
+    {
+     "name": "Class 3",
+     "description": "",
+     "prototype": {
+      "attributes": {
+       "FULLSTREET": null,
+       "Name": null,
+       "BIKE_CLASS": 3,
+       "CL_TYPE": null,
+       "Juris": null,
+       "Bikeway": null,
+       "County": null,
+       "Miles": null
+      }
+     },
+     "drawingTool": "esriFeatureEditToolLine"
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "name": "Class 4",
+   "domains": {},
+   "templates": [
+    {
+     "name": "Class 4",
+     "description": "",
+     "prototype": {
+      "attributes": {
+       "FULLSTREET": null,
+       "Name": null,
+       "BIKE_CLASS": 4,
+       "CL_TYPE": null,
+       "Juris": null,
+       "Bikeway": null,
+       "County": null,
+       "Miles": null
+      }
+     },
+     "drawingTool": "esriFeatureEditToolLine"
+    }
+   ]
+  }
+ ],
+ "templates": [],
+ "maxRecordCount": 2000,
+ "supportedQueryFormats": "JSON, geoJSON, PBF",
+ "supportedExportFormats": "sqlite,filegdb,shapefile,csv,geojson",
+ "capabilities": "Query,Extract",
+ "useStandardizedQueries": true,
+ "bigIntegerRestrictedTo53Bits": true,
+ "supportedSpatialRelationships": [
+  "esriSpatialRelIntersects",
+  "esriSpatialRelContains",
+  "esriSpatialRelCrosses",
+  "esriSpatialRelEnvelopeIntersects",
+  "esriSpatialRelIndexIntersects",
+  "esriSpatialRelOverlaps",
+  "esriSpatialRelTouches",
+  "esriSpatialRelWithin",
+  "esriSpatialRelRelation"
+ ],
+ "supportsAppend": true,
+ "supportedAppendFormats": "FILEGDB,PBF",
+ "standardMaxRecordCount": 8000,
+ "tileMaxRecordCount": 4000,
+ "standardMaxRecordCountNoGeometry": 32000,
+ "maxRecordCountFactor": 1,
+ "serviceItemId": "067cc83bfccb40279bbbb375d9f8d378"
+}
