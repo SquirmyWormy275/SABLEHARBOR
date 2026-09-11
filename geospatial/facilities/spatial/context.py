@@ -68,6 +68,54 @@ def project_region(root: Path, region: dict, sources: list[dict]) -> dict:
     }
 
 
+def navigation_scope(graph: dict, maps: dict) -> dict:
+    """Hash consumed navigation semantics, excluding downstream spatial derivatives."""
+    coverage = {row["coverage_id"]: row for row in graph["coverage"]}
+    nodes = []
+    referenced = set()
+    for node in graph["nodes"]:
+        if node.get("kind") != "site":
+            continue
+        sid = node["id"]
+        record = coverage.get(sid, {})
+        context_ids = record.get("context_map_ids", [])
+        referenced.update(context_ids)
+        nodes.append(
+            {
+                "id": sid,
+                "name": node.get("name", node.get("title", sid)),
+                "status": record.get("status", "SEE_ACCEPTED_RUNTIME_SOURCE"),
+                "context_map_ids": context_ids,
+            }
+        )
+    entries = []
+    for mid in sorted(referenced):
+        row = maps[mid]
+        entries.append(
+            {
+                "map_id": mid,
+                "title": row["title"],
+                "layers": row.get("layers", []),
+                "files": {
+                    fmt: {"path": v["path"], "sha256": v["sha256"]}
+                    for fmt, v in row["files"].items()
+                },
+            }
+        )
+    payload = {"site_nodes": nodes, "referenced_context_maps": entries}
+    return {
+        "paths": [
+            "geospatial/maps/facilities/ATLAS_LINKS.json",
+            "geospatial/maps/MAP_MANIFEST.json",
+        ],
+        "sha256": hashlib.sha256(
+            json.dumps(payload, sort_keys=True, separators=(",", ":"), allow_nan=False).encode()
+        ).hexdigest(),
+        "scope": "Only consumed site IDs/names/status/context-map IDs and referenced context map titles/layers/files. Unrelated graph edges, generated spatial map records and full-file hashes are excluded to avoid a dependency cycle.",
+        "payload": payload,
+    }
+
+
 def build_context(root: Path) -> dict:
     root = root.resolve()
     config_path = root / BASE / "CONTEXT_SOURCES.json"
@@ -224,8 +272,7 @@ def build_context(root: Path) -> dict:
     coverage = {r["coverage_id"]: r for r in graph["coverage"]}
     map_path = root / "geospatial/maps/MAP_MANIFEST.json"
     maps = {r["map_id"]: r for r in json.loads(map_path.read_text())}
-    source_hashes[str(graph_path.relative_to(root))] = sha(graph_path)
-    source_hashes[str(map_path.relative_to(root))] = sha(map_path)
+    navigation = navigation_scope(graph, maps)
     sites = []
     for node in graph["nodes"]:
         if node.get("kind") != "site":
@@ -277,6 +324,7 @@ def build_context(root: Path) -> dict:
         "revision": config["revision"],
         "boundary": config["boundary"],
         "source_sha256": source_hashes,
+        "navigation_scope": navigation,
         "master_layers_checked_readonly": sorted(available_layers),
         "regions": regions,
         "sites": sites,

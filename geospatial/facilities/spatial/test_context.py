@@ -100,3 +100,45 @@ def test_invalid_reference_geometry_rejected(tmp_path):
             {"crs": "EPSG:26910", "extent_wgs84": [-121.51, 38.58, -121.48, 38.61]},
             [{"path": "bad.json", "id": "BAD", "category": "water"}],
         )
+
+
+def test_unused_spatial_manifest_record_does_not_change_context(monkeypatch):
+    original = Path.read_text
+    before = module.build_context(ROOT)
+
+    def altered(path, *args, **kwargs):
+        text = original(path, *args, **kwargs)
+        if path == ROOT / "geospatial/maps/MAP_MANIFEST.json":
+            data = json.loads(text)
+            data.append(
+                {
+                    "map_id": "SH-MAP-SPATIAL-UNUSED",
+                    "source_sha256": "changed-dependent-context-hash",
+                }
+            )
+            return json.dumps(data)
+        return text
+
+    monkeypatch.setattr(Path, "read_text", altered)
+    assert module.build_context(ROOT) == before
+    assert "geospatial/maps/MAP_MANIFEST.json" not in before["source_sha256"]
+    assert "geospatial/maps/facilities/ATLAS_LINKS.json" not in before["source_sha256"]
+
+
+def test_consumed_context_record_changes_semantic_hash(monkeypatch):
+    original = Path.read_text
+    before = module.build_context(ROOT)
+    consumed = before["navigation_scope"]["payload"]["referenced_context_maps"][0]["map_id"]
+
+    def altered(path, *args, **kwargs):
+        text = original(path, *args, **kwargs)
+        if path == ROOT / "geospatial/maps/MAP_MANIFEST.json":
+            data = json.loads(text)
+            next(row for row in data if row["map_id"] == consumed)["title"] += " changed"
+            return json.dumps(data)
+        return text
+
+    monkeypatch.setattr(Path, "read_text", altered)
+    after = module.build_context(ROOT)
+    assert before["navigation_scope"]["sha256"] != after["navigation_scope"]["sha256"]
+    assert before["sites"] != after["sites"]
