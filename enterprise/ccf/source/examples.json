@@ -1,0 +1,631 @@
+{
+  "schema_version": "0.1.0",
+  "classification": "PUBLIC_SYNTHETIC_EXERCISE",
+  "actors": [
+    {
+      "id": "SYN-PREPARER",
+      "permissions": [
+        "prepare"
+      ],
+      "boundaries": [
+        "advisory",
+        "corporate",
+        "RUNTIME-RENO-COLO"
+      ],
+      "effective_from": "2027-01-01",
+      "effective_to": null
+    },
+    {
+      "id": "SYN-REVIEWER",
+      "permissions": [
+        "review",
+        "approve"
+      ],
+      "boundaries": [
+        "advisory",
+        "corporate",
+        "RUNTIME-RENO-COLO"
+      ],
+      "effective_from": "2027-01-01",
+      "effective_to": null
+    }
+  ],
+  "cases": [
+    {
+      "id": "SYN-CCF-FINANCE",
+      "kind": "finance",
+      "boundary_id": "advisory",
+      "implementation_id": "LC-REVENUE",
+      "period_start": "2027-03-01",
+      "period_end": "2027-03-31",
+      "scenario": "ccf-preparation",
+      "origin": "PUBLIC_SYNTHETIC_EXERCISE",
+      "expected_ids": {
+        "events": [
+          "SYN-ACCEPT",
+          "SYN-INVOICE"
+        ],
+        "journal": [
+          "SYN-J-AR",
+          "SYN-J-REV"
+        ],
+        "subledger_rollforward": [
+          "SYN-AR-CLOSE"
+        ]
+      },
+      "tables": {
+        "events": [
+          {
+            "effective_on": "2027-03-31",
+            "scenario": "ccf-preparation",
+            "id": "SYN-ACCEPT",
+            "boundary_id": "advisory",
+            "event_id": "SYN-ACCEPT",
+            "kind": "OUTCOME_ACCEPTED"
+          },
+          {
+            "effective_on": "2027-03-31",
+            "scenario": "ccf-preparation",
+            "id": "SYN-INVOICE",
+            "boundary_id": "advisory",
+            "event_id": "SYN-INVOICE",
+            "kind": "INVOICE",
+            "performance_source": "SYN-ACCEPT",
+            "amount_usd": "100"
+          }
+        ],
+        "journal": [
+          {
+            "effective_on": "2027-03-31",
+            "scenario": "ccf-preparation",
+            "id": "SYN-J-AR",
+            "boundary_id": "advisory",
+            "journal_id": "SYN-J",
+            "source_id": "SYN-INVOICE",
+            "account": "BIZ_AR",
+            "signed_usd": "100"
+          },
+          {
+            "effective_on": "2027-03-31",
+            "scenario": "ccf-preparation",
+            "id": "SYN-J-REV",
+            "boundary_id": "advisory",
+            "journal_id": "SYN-J",
+            "source_id": "SYN-INVOICE",
+            "account": "BIZ_REVENUE",
+            "signed_usd": "-100"
+          }
+        ],
+        "subledger_rollforward": [
+          {
+            "effective_on": "2027-03-31",
+            "scenario": "ccf-preparation",
+            "id": "SYN-AR-CLOSE",
+            "boundary_id": "advisory",
+            "gross_ar_usd": "100",
+            "deferred_revenue_usd": "0"
+          }
+        ]
+      },
+      "negative_tables": {
+        "events": [
+          {
+            "effective_on": "2027-03-31",
+            "scenario": "ccf-preparation",
+            "id": "SYN-ACCEPT",
+            "boundary_id": "advisory",
+            "event_id": "SYN-ACCEPT",
+            "kind": "OUTCOME_ACCEPTED"
+          },
+          {
+            "effective_on": "2027-03-31",
+            "scenario": "ccf-preparation",
+            "id": "SYN-INVOICE",
+            "boundary_id": "advisory",
+            "event_id": "SYN-INVOICE",
+            "kind": "INVOICE",
+            "performance_source": "SYN-ACCEPT",
+            "amount_usd": "100"
+          }
+        ],
+        "journal": [
+          {
+            "effective_on": "2027-03-31",
+            "scenario": "ccf-preparation",
+            "id": "SYN-J-AR",
+            "boundary_id": "advisory",
+            "journal_id": "SYN-J",
+            "source_id": "SYN-INVOICE",
+            "account": "BIZ_AR",
+            "signed_usd": "101"
+          },
+          {
+            "effective_on": "2027-03-31",
+            "scenario": "ccf-preparation",
+            "id": "SYN-J-REV",
+            "boundary_id": "advisory",
+            "journal_id": "SYN-J",
+            "source_id": "SYN-INVOICE",
+            "account": "BIZ_REVENUE",
+            "signed_usd": "-100"
+          }
+        ],
+        "subledger_rollforward": [
+          {
+            "effective_on": "2027-03-31",
+            "scenario": "ccf-preparation",
+            "id": "SYN-AR-CLOSE",
+            "boundary_id": "advisory",
+            "gross_ar_usd": "100",
+            "deferred_revenue_usd": "0"
+          }
+        ]
+      },
+      "withheld_table": "journal"
+    },
+    {
+      "id": "SYN-CCF-IDENTITY",
+      "kind": "identity",
+      "boundary_id": "corporate",
+      "implementation_id": "SH-IAM-004-CORP-PREP-01",
+      "period_start": "2027-03-01",
+      "period_end": "2027-03-31",
+      "scenario": "ccf-preparation",
+      "origin": "PUBLIC_SYNTHETIC_EXERCISE",
+      "expected_ids": {
+        "hr": [
+          "SYN-HR-END",
+          "SYN-HR-MOVE",
+          "SYN-HR-CONTRACT"
+        ],
+        "accounts": [
+          "SYN-ACCOUNT-END",
+          "SYN-ACCOUNT-MOVE",
+          "SYN-ACCOUNT-CONTRACT"
+        ],
+        "entitlements": [
+          "SYN-GRANT-END",
+          "SYN-GRANT-MOVE",
+          "SYN-GRANT-CONTRACT"
+        ]
+      },
+      "tables": {
+        "hr": [
+          {
+            "effective_on": "2027-03-31",
+            "scenario": "ccf-preparation",
+            "id": "SYN-HR-END",
+            "boundary_id": "corporate",
+            "worker_id": "SYN-WORKER-END",
+            "event": "terminate",
+            "contract_end": null,
+            "approved": true,
+            "approved_entitlements": [],
+            "disable_due_at": "2027-03-31T13:00:00+00:00"
+          },
+          {
+            "effective_on": "2027-03-31",
+            "scenario": "ccf-preparation",
+            "id": "SYN-HR-MOVE",
+            "boundary_id": "corporate",
+            "worker_id": "SYN-WORKER-MOVE",
+            "event": "move",
+            "contract_end": null,
+            "approved": true,
+            "approved_entitlements": [
+              "ROLE-NEW"
+            ],
+            "disable_due_at": "2027-03-31T13:00:00+00:00"
+          },
+          {
+            "effective_on": "2027-03-31",
+            "scenario": "ccf-preparation",
+            "id": "SYN-HR-CONTRACT",
+            "boundary_id": "corporate",
+            "worker_id": "SYN-WORKER-CONTRACT",
+            "event": "contract_expiry",
+            "contract_end": "2027-03-31",
+            "approved": true,
+            "approved_entitlements": [],
+            "disable_due_at": "2027-03-31T13:00:00+00:00"
+          }
+        ],
+        "accounts": [
+          {
+            "effective_on": "2027-03-31",
+            "scenario": "ccf-preparation",
+            "id": "SYN-ACCOUNT-END",
+            "boundary_id": "corporate",
+            "worker_id": "SYN-WORKER-END",
+            "enabled": false,
+            "changed_at": "2027-03-31T12:15:00+00:00"
+          },
+          {
+            "effective_on": "2027-03-31",
+            "scenario": "ccf-preparation",
+            "id": "SYN-ACCOUNT-MOVE",
+            "boundary_id": "corporate",
+            "worker_id": "SYN-WORKER-MOVE",
+            "enabled": true,
+            "changed_at": "2027-03-31T12:15:00+00:00"
+          },
+          {
+            "effective_on": "2027-03-31",
+            "scenario": "ccf-preparation",
+            "id": "SYN-ACCOUNT-CONTRACT",
+            "boundary_id": "corporate",
+            "worker_id": "SYN-WORKER-CONTRACT",
+            "enabled": false,
+            "changed_at": "2027-03-31T12:15:00+00:00"
+          }
+        ],
+        "entitlements": [
+          {
+            "effective_on": "2027-03-31",
+            "scenario": "ccf-preparation",
+            "id": "SYN-GRANT-END",
+            "boundary_id": "corporate",
+            "account_id": "SYN-ACCOUNT-END",
+            "entitlement": "ROLE-OLD",
+            "active": false
+          },
+          {
+            "effective_on": "2027-03-31",
+            "scenario": "ccf-preparation",
+            "id": "SYN-GRANT-MOVE",
+            "boundary_id": "corporate",
+            "account_id": "SYN-ACCOUNT-MOVE",
+            "entitlement": "ROLE-NEW",
+            "active": true
+          },
+          {
+            "effective_on": "2027-03-31",
+            "scenario": "ccf-preparation",
+            "id": "SYN-GRANT-CONTRACT",
+            "boundary_id": "corporate",
+            "account_id": "SYN-ACCOUNT-CONTRACT",
+            "entitlement": "ROLE-TEMP",
+            "active": false
+          }
+        ]
+      },
+      "negative_tables": {
+        "hr": [
+          {
+            "effective_on": "2027-03-31",
+            "scenario": "ccf-preparation",
+            "id": "SYN-HR-END",
+            "boundary_id": "corporate",
+            "worker_id": "SYN-WORKER-END",
+            "event": "terminate",
+            "contract_end": null,
+            "approved": true,
+            "approved_entitlements": [],
+            "disable_due_at": "2027-03-31T13:00:00+00:00"
+          },
+          {
+            "effective_on": "2027-03-31",
+            "scenario": "ccf-preparation",
+            "id": "SYN-HR-MOVE",
+            "boundary_id": "corporate",
+            "worker_id": "SYN-WORKER-MOVE",
+            "event": "move",
+            "contract_end": null,
+            "approved": true,
+            "approved_entitlements": [
+              "ROLE-NEW"
+            ],
+            "disable_due_at": "2027-03-31T13:00:00+00:00"
+          },
+          {
+            "effective_on": "2027-03-31",
+            "scenario": "ccf-preparation",
+            "id": "SYN-HR-CONTRACT",
+            "boundary_id": "corporate",
+            "worker_id": "SYN-WORKER-CONTRACT",
+            "event": "contract_expiry",
+            "contract_end": "2027-03-31",
+            "approved": true,
+            "approved_entitlements": [],
+            "disable_due_at": "2027-03-31T13:00:00+00:00"
+          }
+        ],
+        "accounts": [
+          {
+            "effective_on": "2027-03-31",
+            "scenario": "ccf-preparation",
+            "id": "SYN-ACCOUNT-END",
+            "boundary_id": "corporate",
+            "worker_id": "SYN-WORKER-END",
+            "enabled": true,
+            "changed_at": "2027-03-31T12:15:00+00:00"
+          },
+          {
+            "effective_on": "2027-03-31",
+            "scenario": "ccf-preparation",
+            "id": "SYN-ACCOUNT-MOVE",
+            "boundary_id": "corporate",
+            "worker_id": "SYN-WORKER-MOVE",
+            "enabled": true,
+            "changed_at": "2027-03-31T12:15:00+00:00"
+          },
+          {
+            "effective_on": "2027-03-31",
+            "scenario": "ccf-preparation",
+            "id": "SYN-ACCOUNT-CONTRACT",
+            "boundary_id": "corporate",
+            "worker_id": "SYN-WORKER-CONTRACT",
+            "enabled": false,
+            "changed_at": "2027-03-31T12:15:00+00:00"
+          }
+        ],
+        "entitlements": [
+          {
+            "effective_on": "2027-03-31",
+            "scenario": "ccf-preparation",
+            "id": "SYN-GRANT-END",
+            "boundary_id": "corporate",
+            "account_id": "SYN-ACCOUNT-END",
+            "entitlement": "ROLE-OLD",
+            "active": false
+          },
+          {
+            "effective_on": "2027-03-31",
+            "scenario": "ccf-preparation",
+            "id": "SYN-GRANT-MOVE",
+            "boundary_id": "corporate",
+            "account_id": "SYN-ACCOUNT-MOVE",
+            "entitlement": "ROLE-OLD",
+            "active": true
+          },
+          {
+            "effective_on": "2027-03-31",
+            "scenario": "ccf-preparation",
+            "id": "SYN-GRANT-CONTRACT",
+            "boundary_id": "corporate",
+            "account_id": "SYN-ACCOUNT-CONTRACT",
+            "entitlement": "ROLE-TEMP",
+            "active": false
+          }
+        ]
+      },
+      "withheld_table": "accounts"
+    },
+    {
+      "id": "SYN-CCF-RECOVERY",
+      "kind": "recovery",
+      "boundary_id": "RUNTIME-RENO-COLO",
+      "implementation_id": "SH-BCM-003-RUNTIME-RENO-COLO",
+      "period_start": "2027-03-01",
+      "period_end": "2027-03-31",
+      "scenario": "ccf-preparation",
+      "origin": "PUBLIC_SYNTHETIC_EXERCISE",
+      "expected_ids": {
+        "services": [
+          "SYN-SERVICE-DIRECTORY",
+          "SYN-SERVICE-FINANCE"
+        ],
+        "backups": [
+          "SYN-BACKUP-DIRECTORY",
+          "SYN-BACKUP-FINANCE"
+        ],
+        "restores": [
+          "SYN-RESTORE-DIRECTORY",
+          "SYN-RESTORE-FINANCE"
+        ]
+      },
+      "tables": {
+        "services": [
+          {
+            "effective_on": "2027-03-31",
+            "scenario": "ccf-preparation",
+            "id": "SYN-SERVICE-DIRECTORY",
+            "boundary_id": "RUNTIME-RENO-COLO",
+            "dependency_ids": [],
+            "rto_seconds": 120,
+            "rpo_seconds": 60,
+            "tombstones": [
+              "deleted"
+            ]
+          },
+          {
+            "effective_on": "2027-03-31",
+            "scenario": "ccf-preparation",
+            "id": "SYN-SERVICE-FINANCE",
+            "boundary_id": "RUNTIME-RENO-COLO",
+            "dependency_ids": [
+              "SYN-SERVICE-DIRECTORY"
+            ],
+            "rto_seconds": 120,
+            "rpo_seconds": 60,
+            "tombstones": [
+              "deleted"
+            ]
+          }
+        ],
+        "backups": [
+          {
+            "effective_on": "2027-03-31",
+            "scenario": "ccf-preparation",
+            "id": "SYN-BACKUP-DIRECTORY",
+            "boundary_id": "RUNTIME-RENO-COLO",
+            "service_id": "SYN-SERVICE-DIRECTORY",
+            "records": {
+              "current": {
+                "payload": "Public synthetic content"
+              },
+              "deleted": {
+                "payload": "Suppressed synthetic content"
+              },
+              "held": {
+                "payload": "Held synthetic content",
+                "restore_suppressed": true
+              }
+            },
+            "artifact_sha256": "f15f6718a0ab94a4ef48ac52bfd384a947e4120b632f407bdd25c17ca1c7e879"
+          },
+          {
+            "effective_on": "2027-03-31",
+            "scenario": "ccf-preparation",
+            "id": "SYN-BACKUP-FINANCE",
+            "boundary_id": "RUNTIME-RENO-COLO",
+            "service_id": "SYN-SERVICE-FINANCE",
+            "records": {
+              "current": {
+                "payload": "Public synthetic content"
+              },
+              "deleted": {
+                "payload": "Suppressed synthetic content"
+              },
+              "held": {
+                "payload": "Held synthetic content",
+                "restore_suppressed": true
+              }
+            },
+            "artifact_sha256": "f15f6718a0ab94a4ef48ac52bfd384a947e4120b632f407bdd25c17ca1c7e879"
+          }
+        ],
+        "restores": [
+          {
+            "effective_on": "2027-03-31",
+            "scenario": "ccf-preparation",
+            "id": "SYN-RESTORE-DIRECTORY",
+            "boundary_id": "RUNTIME-RENO-COLO",
+            "service_id": "SYN-SERVICE-DIRECTORY",
+            "records": {
+              "current": {
+                "payload": "Public synthetic content"
+              }
+            },
+            "started_at": "2027-03-31T12:00:00+00:00",
+            "completed_at": "2027-03-31T12:01:00+00:00",
+            "recovery_point_at": "2027-03-31T11:59:30+00:00"
+          },
+          {
+            "effective_on": "2027-03-31",
+            "scenario": "ccf-preparation",
+            "id": "SYN-RESTORE-FINANCE",
+            "boundary_id": "RUNTIME-RENO-COLO",
+            "service_id": "SYN-SERVICE-FINANCE",
+            "records": {
+              "current": {
+                "payload": "Public synthetic content"
+              }
+            },
+            "started_at": "2027-03-31T12:02:00+00:00",
+            "completed_at": "2027-03-31T12:03:00+00:00",
+            "recovery_point_at": "2027-03-31T12:01:30+00:00"
+          }
+        ]
+      },
+      "negative_tables": {
+        "services": [
+          {
+            "effective_on": "2027-03-31",
+            "scenario": "ccf-preparation",
+            "id": "SYN-SERVICE-DIRECTORY",
+            "boundary_id": "RUNTIME-RENO-COLO",
+            "dependency_ids": [],
+            "rto_seconds": 120,
+            "rpo_seconds": 60,
+            "tombstones": [
+              "deleted"
+            ]
+          },
+          {
+            "effective_on": "2027-03-31",
+            "scenario": "ccf-preparation",
+            "id": "SYN-SERVICE-FINANCE",
+            "boundary_id": "RUNTIME-RENO-COLO",
+            "dependency_ids": [
+              "SYN-SERVICE-DIRECTORY"
+            ],
+            "rto_seconds": 120,
+            "rpo_seconds": 60,
+            "tombstones": [
+              "deleted"
+            ]
+          }
+        ],
+        "backups": [
+          {
+            "effective_on": "2027-03-31",
+            "scenario": "ccf-preparation",
+            "id": "SYN-BACKUP-DIRECTORY",
+            "boundary_id": "RUNTIME-RENO-COLO",
+            "service_id": "SYN-SERVICE-DIRECTORY",
+            "records": {
+              "current": {
+                "payload": "Public synthetic content"
+              },
+              "deleted": {
+                "payload": "Suppressed synthetic content"
+              },
+              "held": {
+                "payload": "Held synthetic content",
+                "restore_suppressed": true
+              }
+            },
+            "artifact_sha256": "f15f6718a0ab94a4ef48ac52bfd384a947e4120b632f407bdd25c17ca1c7e879"
+          },
+          {
+            "effective_on": "2027-03-31",
+            "scenario": "ccf-preparation",
+            "id": "SYN-BACKUP-FINANCE",
+            "boundary_id": "RUNTIME-RENO-COLO",
+            "service_id": "SYN-SERVICE-FINANCE",
+            "records": {
+              "current": {
+                "payload": "Public synthetic content"
+              },
+              "deleted": {
+                "payload": "Suppressed synthetic content"
+              },
+              "held": {
+                "payload": "Held synthetic content",
+                "restore_suppressed": true
+              }
+            },
+            "artifact_sha256": "f15f6718a0ab94a4ef48ac52bfd384a947e4120b632f407bdd25c17ca1c7e879"
+          }
+        ],
+        "restores": [
+          {
+            "effective_on": "2027-03-31",
+            "scenario": "ccf-preparation",
+            "id": "SYN-RESTORE-DIRECTORY",
+            "boundary_id": "RUNTIME-RENO-COLO",
+            "service_id": "SYN-SERVICE-DIRECTORY",
+            "records": {
+              "current": {
+                "payload": "Public synthetic content"
+              },
+              "deleted": {
+                "payload": "Suppressed synthetic content"
+              }
+            },
+            "started_at": "2027-03-31T12:00:00+00:00",
+            "completed_at": "2027-03-31T12:01:00+00:00",
+            "recovery_point_at": "2027-03-31T11:59:30+00:00"
+          },
+          {
+            "effective_on": "2027-03-31",
+            "scenario": "ccf-preparation",
+            "id": "SYN-RESTORE-FINANCE",
+            "boundary_id": "RUNTIME-RENO-COLO",
+            "service_id": "SYN-SERVICE-FINANCE",
+            "records": {
+              "current": {
+                "payload": "Public synthetic content"
+              }
+            },
+            "started_at": "2027-03-31T12:02:00+00:00",
+            "completed_at": "2027-03-31T12:03:00+00:00",
+            "recovery_point_at": "2027-03-31T12:01:30+00:00"
+          }
+        ]
+      },
+      "withheld_table": "restores"
+    }
+  ]
+}

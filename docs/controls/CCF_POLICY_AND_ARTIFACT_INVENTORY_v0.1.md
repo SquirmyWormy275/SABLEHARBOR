@@ -211,7 +211,7 @@ The CCF should ultimately produce or reference structured operational artifacts 
 ## Drafting priority
 
 ### Wave 1 — governance/control environment
-Board governance instrument, governance constitution, five committee charters, and Assumption of Risk form are materialized in `docs/governance/`. ERM policy, code of conduct, broader policy governance, detailed numeric delegation matrix, control governance/exception standard, subsidiary governance implementation, and internal-assurance charter/maturity decision remain future or OPEN as applicable.
+Board governance instrument, governance constitution, five committee charters, and Assumption of Risk form are materialized in `docs/governance/`. ERM policy, code of conduct, broader policy governance, detailed numeric delegation matrix, control governance/exception standard, and subsidiary governance implementation remain future or OPEN as applicable. Internal-assurance independence and maturity direction are resolved by the September 3 closeout and current [ESS/Internal Audit doctrine](../governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md); detailed charter materialization and assessment procedures should follow that accepted direction.
 
 ### Wave 2 — people/security/technology
 Employee handbook; onboarding/offboarding; training; IAM; information security; vulnerability; logging; SDLC/change; data governance/privacy/records; incident; BCM; third-party risk.
