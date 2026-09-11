@@ -1,0 +1,189 @@
+{
+  "status": "PASS_TEN_SACRAMENTO_FLOOR_VISUAL_QA",
+  "date": "2026-09-11",
+  "scope": "Ten current R02 Sacramento floors and their thirty SVG/PNG/PDF assets only; master, stack, phasing, other facilities and atlas have separate reviews. Not an assertion of engineering/code approval or actual occupancy.",
+  "artifacts": [
+    {
+      "id": "SH-MAP-SAC-024",
+      "hashes": {
+        "svg": "245fd69ffc0bf97484b2200c81ecd817196925a6411d50bbc173b33b6e2fe36f",
+        "png": "0f8dae48f757472a17d4579aa280ae9c0b9d784f3c3e4b322aa4d7f435e42540",
+        "pdf": "49c2b36fb5c641f2ac757c3fd84024d684d397123fcf9c393309617c314f00e7"
+      },
+      "svg_png_pixel_identity": true,
+      "pdf_pages": 1,
+      "pdf_png_mean_absolute_channel_difference": 2.84686,
+      "manual_png_inspection": "PASS",
+      "manual_pdf_raster_inspection": "PASS"
+    },
+    {
+      "id": "SH-MAP-SAC-025",
+      "hashes": {
+        "svg": "4b675cc3be82b87a36021ea5e08edb8759e5a1af685eb293a4261dd53daacc77",
+        "png": "c6863d96214a12aeb8c7950ede1850a7fe33b2342eddfb7b1467671f57e570af",
+        "pdf": "d671a3fed9baa176e14558d4b44a31546033db44802b046ea73b57a349bc315b"
+      },
+      "svg_png_pixel_identity": true,
+      "pdf_pages": 1,
+      "pdf_png_mean_absolute_channel_difference": 2.84134,
+      "manual_png_inspection": "PASS",
+      "manual_pdf_raster_inspection": "PASS"
+    },
+    {
+      "id": "SH-MAP-SAC-026",
+      "hashes": {
+        "svg": "997c734e694e5252044e20b5fc19d70990bf068f1d28b0557f11252728f011e8",
+        "png": "c80c53ea7cf1441d452a8142eef6bf9ed3a227498d1558e6cbfc77639e52dc35",
+        "pdf": "b3cc8937e08a91cf069e09a49aea61ad90b8d85c41daeb41e983de26b2f6d9f6"
+      },
+      "svg_png_pixel_identity": true,
+      "pdf_pages": 1,
+      "pdf_png_mean_absolute_channel_difference": 3.19567,
+      "manual_png_inspection": "PASS",
+      "manual_pdf_raster_inspection": "PASS"
+    },
+    {
+      "id": "SH-MAP-SAC-028",
+      "hashes": {
+        "svg": "934f04dd35c2a570cbca2df9402b32e6ab63bb0240ff949f456c83c49cab66fd",
+        "png": "f96bb317671a3aab08e1f4c613ab2572eb92dc8d0d42a420cc922d925c543c50",
+        "pdf": "fd3d1b670f2ec0c550aa77fc89bbb2b23553cb987da49c0f84eab6f3295b12d0"
+      },
+      "svg_png_pixel_identity": true,
+      "pdf_pages": 1,
+      "pdf_png_mean_absolute_channel_difference": 2.83829,
+      "manual_png_inspection": "PASS",
+      "manual_pdf_raster_inspection": "PASS"
+    },
+    {
+      "id": "SH-MAP-SAC-029",
+      "hashes": {
+        "svg": "b62d125420513a3f25a6bcffbe63de4c4ad3a9a1afdb0408281eedcd384315c6",
+        "png": "da0e29a7569bf1c2a71d2a5bcdc7eba2a421d37952a381a4385430993a2c9fd4",
+        "pdf": "b0afaffcdc22283ebf9e07518d9d38740a1c3a462e88902c061aeb5c15c14e1f"
+      },
+      "svg_png_pixel_identity": true,
+      "pdf_pages": 1,
+      "pdf_png_mean_absolute_channel_difference": 3.02549,
+      "manual_png_inspection": "PASS",
+      "manual_pdf_raster_inspection": "PASS"
+    },
+    {
+      "id": "SH-MAP-SAC-031",
+      "hashes": {
+        "svg": "5503033ecf3b70621a5b3c6dee2df47141a2280278da8d9cd19d325bf1e15240",
+        "png": "aae8d08aeb0cc2ddd37e889a6480f1a43ea0d390944d32c2a096817800589ded",
+        "pdf": "603e8e3971363ade926b5643029fd5c5286671a09d5ebe2561e017877822ee50"
+      },
+      "svg_png_pixel_identity": true,
+      "pdf_pages": 1,
+      "pdf_png_mean_absolute_channel_difference": 2.92613,
+      "manual_png_inspection": "PASS",
+      "manual_pdf_raster_inspection": "PASS"
+    },
+    {
+      "id": "SH-MAP-SAC-032",
+      "hashes": {
+        "svg": "2c9709211e4ee9985bf4b5a2a56fa9e54251afb1334b1cc477053dbc44895932",
+        "png": "c3ce810d6aa59aa2439aa4d1d1c0c2d84ed0863b7bcb8746124fb82c114eb258",
+        "pdf": "58c2f318cfeef610fa5421c81cf9ec380ec54ff772a36dae88495796e640097a"
+      },
+      "svg_png_pixel_identity": true,
+      "pdf_pages": 1,
+      "pdf_png_mean_absolute_channel_difference": 2.88762,
+      "manual_png_inspection": "PASS",
+      "manual_pdf_raster_inspection": "PASS"
+    },
+    {
+      "id": "SH-MAP-SAC-034",
+      "hashes": {
+        "svg": "dceb5843e921de8c8b570fafc4523b2349e2da8dd76a97f09e2ac2886230fee5",
+        "png": "9c6e1ddcf798154ff8433984d07171cb13028d68c77ff177d88f2548b7c51638",
+        "pdf": "e1bb54639c9ed5f0512a3aaba9566ff1efb4a2454a59012a4e092ed36804e921"
+      },
+      "svg_png_pixel_identity": true,
+      "pdf_pages": 1,
+      "pdf_png_mean_absolute_channel_difference": 3.02998,
+      "manual_png_inspection": "PASS",
+      "manual_pdf_raster_inspection": "PASS"
+    },
+    {
+      "id": "SH-MAP-SAC-035",
+      "hashes": {
+        "svg": "60b8ffc9e86a753acafb2bf3c3749331f5290321afd37888e6b71daca4264f61",
+        "png": "c4441fb7bac976dd4702135a5ddaa3ea689d96553613b45081a9fbe9ea20ec3e",
+        "pdf": "53297c075d2dc13d6e5e3fd017c10f8c4109e544bd64641b2f4e4faaa40f80a1"
+      },
+      "svg_png_pixel_identity": true,
+      "pdf_pages": 1,
+      "pdf_png_mean_absolute_channel_difference": 3.01833,
+      "manual_png_inspection": "PASS",
+      "manual_pdf_raster_inspection": "PASS"
+    },
+    {
+      "id": "SH-MAP-SAC-036",
+      "hashes": {
+        "svg": "fd35da7a7c94feeac3e75f5879dd07055a7e1fb873e505f45aac34f627e4b4ac",
+        "png": "b2943644254187dae22a7a1ef31b919f10d001e6fe3b511d89a7177f2e813169",
+        "pdf": "b618dd97470edd536be31819a39fa718c6a13a0dad42d5da40f6b7cfa4db113f"
+      },
+      "svg_png_pixel_identity": true,
+      "pdf_pages": 1,
+      "pdf_png_mean_absolute_channel_difference": 3.03001,
+      "manual_png_inspection": "PASS",
+      "manual_pdf_raster_inspection": "PASS"
+    }
+  ],
+  "source_at_review": {
+    "path": "geospatial/facilities/source/campus.json",
+    "sha256": "0efd4854069ff20acb4032e02b021afebcb955990f1d684b51428624e281d950"
+  },
+  "method": [
+    "All ten final PNGs individually inspected at native3240x2304. Changed text-only panels reinspected after final cleanup.",
+    "All ten SVG sources independently rasterized using committed font configuration; every pixel equals saved PNG.",
+    "All ten one-page PDFs independently rasterized with PyMuPDF at3240x2304 and manually inspected. Raster antialiasing differs from Cairo PNG; no content or layout divergence observed.",
+    "Three approved-reference floor successors compared with immutable originals at native resolution; saved final side-by-side comparisons.",
+    "Source access checks confirm155 primary room doors on room boundary and represented in floor door arrays."
+  ],
+  "comparisons": [
+    {
+      "path": "geospatial/facilities/qa/R01_FLOOR_FINAL_025_COMPARISON.png",
+      "sha256": "338cf761b24c8741d11462b6e6a2d4a0ce57a40645f994554f2dbb364144d34f"
+    },
+    {
+      "path": "geospatial/facilities/qa/R01_FLOOR_FINAL_028_COMPARISON.png",
+      "sha256": "ce4f8f4a36da8caaa8d287582f99f058fc110064ee42a82a522b3249917044ab"
+    },
+    {
+      "path": "geospatial/facilities/qa/R01_FLOOR_FINAL_031_COMPARISON.png",
+      "sha256": "730edd63869371e863404d8239ff7698d2a184a432c94c9f9f776863484d38b4"
+    }
+  ],
+  "corrections_confirmed": [
+    "Font fallback, palette and original four-building master addressed by separate first-master gate.",
+    "Properly sized meeting/workplace furniture, compact room labels, white focus/huddle/case spaces, original Foundry bench grouping and dining table grouping.",
+    "Interview rooms reached from visitor corridor and reception; controlled staff threshold labeled; project rooms open to their lobby.",
+    "Kitchen counters clear service doorway; reception desk shifted west clear of primary entry; paired hall doors and exterior stair openings restored.",
+    "Residence lift/lobby and linen both access corridor without crossing bedrooms; combined core area unchanged; linen label no longer clipped.",
+    "Legends agree with room fills; joined prose tokens cleaned; entry/catering/residence annotations appear; door arcs have correct hinge centers."
+  ],
+  "intentional_derivative_differences": [
+    "R02 markers, stable IDs and explicit scenario/actual-occupancy explanations are additions required for traceability.",
+    "Native original font metadata is unavailable; bundled DejaVu and small measured tracking/position differences preserve hierarchy.",
+    "Furniture symbols retain correct count and work type with minor size and chair arrangement differences; this is an editable reconstruction, not pixel-identical republishing.",
+    "Unillustrated R01 floors are explicitly modelled extensions of approved footprint/stack. Residence60 single rooms are new per-floor derivatives of the approved program.",
+    "Calls/support spaces retain labeled program envelopes with unresolved detailed fit-out; no equipment installation inferred."
+  ],
+  "totals": {
+    "buildings": 4,
+    "floors": 10,
+    "gross_sqft": 175392,
+    "fitted_workplaces": 362,
+    "residence_rooms": 60
+  },
+  "remaining_visual_defects": [],
+  "commands": [
+    ".venv/bin/python geospatial/facilities/qa/R01_verify_floor_artifacts.py",
+    ".venv/bin/ruff check geospatial/facilities/qa/R01_verify_floor_artifacts.py geospatial/facilities/qa/R01_build_comparison.py"
+  ]
+}
