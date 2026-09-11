@@ -30,7 +30,7 @@ jobs:
         run: |
           python tools/organization/adopt_j2_leadership_20260910.py --apply
           python scripts/build_organization_charts.py
-          python tools/documents/build_controlled_publications.py
+          python tools/documents/build_controlled_publications.py --normalizer pypdf
           python tools/documents/build_institutional_catalog.py
           git diff --check
       - name: Validate names, prior artwork, catalog, authority and repository boundaries
