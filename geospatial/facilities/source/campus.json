@@ -3014,7 +3014,7 @@
       "trainees": 120,
       "other_visitors": 28,
       "resident_trainees_subset": 46,
-      "basis": "SAC-A02; cohort scheduling keeps resident trainees inside the 120, not an additional 48."
+      "basis": "SAC-A02; cohort scheduling keeps resident trainees inside the 120, not an additional resident cohort."
     },
     {
       "id": "SAC-2026-DESIGN-NIGHT",

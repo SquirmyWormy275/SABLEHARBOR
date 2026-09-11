@@ -47,3 +47,7 @@ Local checks use the repository `.venv` Python 3.12.14. These are local results,
 Raw historical failure logs are retained so a reviewer can distinguish observed defects, corrected defects, prerequisites and local environment limits. Only repository-generated public synthetic data and test diagnostics are included.
 
 The root financial/runtime source paths (`tests`, `src`, `pyproject.toml`, `config`, `db`, `enterprise`, `industrial`, `red_wash`) have no differences between the original full-suite test revision and `e44b3e3`. The retained [empty drift log](repo-validation/root-tested-source-drift.log) records that check. Root tests were not redundantly rerun after unrelated atlas edits; final affected geometry, facility and governance/publication gates were rerun.
+
+## Final spatial-register acceptance addition
+
+The final audit adds `program.py --check` to the read-only acceptance chain. It recomputes both SPACE_REGISTER.json and PROGRAM.md, rejecting stale area/seat/population derivatives. All site, building and floor rows explicitly distinguish unknown observed workforce categories and future proposed positions from modelled seats and attendance. Two additional mutation tests reject desk corruption and unknown authorized positions silently changed to zero; the final focused suite has **31 passing tests**. Source geometry, area/seat totals and all 189 plan artifact bytes remain unchanged. Final PR-head CI includes this addition.

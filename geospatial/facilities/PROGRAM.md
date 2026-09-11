@@ -2,6 +2,8 @@
 
 Architectural planning capacities; no actual enterprise census or payroll restatement. Site floor maxima are not additive when cohorts move.
 
+Every site, building and floor explicitly records unknown actual named assignments, authorized/unnamed/vacant positions, remote/distributed/field/deployed staff, residents, visitors/customers/trainees, shift/cohort peaks and proposed positions at 2026/2031/2036 horizons. These nulls preserve missing workforce evidence; the separate design scenarios and seat capacities do not fill them with assumed employees.
+
 [Population evidence](population/BRIDGE.md) separates 44 named employees, seven nonemployee directors, J2’s237 authorized billets and conditional financial populations. 231 J2 billets lack named occupants; that is not231 proven vacancies.
 
 The [source program](source/campus.json) is the authority for this planning option. Geometry and capacities are assumptions under SAC-A01–05. Education co-location and residence are modelled here; SH-SITE-0014 remains the unresolved record for actual Education location. All acquisition, construction, commissioning and occupancy dates are null.

@@ -1,5 +1,6 @@
 """Derive the spatial/attendance/financial planning bridge without changing payroll."""
 
+import argparse
 import json
 from pathlib import Path
 
@@ -15,7 +16,11 @@ SEATS = [
 ]
 
 
-def build():
+def register_errors(actual, expected):
+    return [] if actual == expected else ["stale spatial register"]
+
+
+def build(check=False):
     sources = []
     sites = []
     buildings = []
@@ -101,6 +106,29 @@ def build():
     economics["base_allowance_usd"] = subtotal
     economics["contingency_usd"] = subtotal * 0.25
     economics["total_excluding_unknowns_usd"] = subtotal * 1.25
+    measurement_basis = {
+        "source": "geospatial/facilities/population/policy.json /planning_basis",
+        "status": "ACTUAL_SPATIAL_ASSIGNMENTS_NOT_ESTABLISHED",
+        "meaning": "Organizational people and billet totals are not evidence of assignment to these concept spaces. Null is unknown; physical capacity is recorded separately.",
+        "current_named_employees_assigned": None,
+        "authorized_positions_assigned": None,
+        "vacant_authorized_positions": None,
+        "unnamed_authorized_positions": None,
+        "remote_staff": None,
+        "distributed_staff": None,
+        "field_staff": None,
+        "deployed_staff": None,
+        "resident_occupants": None,
+        "visitors": None,
+        "customers": None,
+        "trainees": None,
+        "cohort_peak": None,
+        "shift_population": None,
+        "observed_maximum_concurrent_attendance": None,
+        "proposed_future_positions_by_horizon": {"2026": None, "2031": None, "2036": None},
+    }
+    for row in sites + buildings + floors:
+        row["population_measurements"] = measurement_basis.copy()
     report = {
         "revision": "0.1.0",
         "sources": sorted(set(sources)),
@@ -112,11 +140,13 @@ def build():
         "sacramento_scenarios": m["attendance_scenarios"],
         "sacramento_economics": economics,
     }
-    (BASE / "SPACE_REGISTER.json").write_text(json.dumps(report, indent=2) + "\n")
+    register_text = json.dumps(report, indent=2) + "\n"
     lines = [
         "# Headcount, occupancy and space program",
         "",
         report["scope"],
+        "",
+        "Every site, building and floor explicitly records unknown actual named assignments, authorized/unnamed/vacant positions, remote/distributed/field/deployed staff, residents, visitors/customers/trainees, shift/cohort peaks and proposed positions at 2026/2031/2036 horizons. These nulls preserve missing workforce evidence; the separate design scenarios and seat capacities do not fill them with assumed employees.",
         "",
         "[Population evidence](population/BRIDGE.md) separates 44 named employees, seven nonemployee directors, J2’s237 authorized billets and conditional financial populations. 231 J2 billets lack named occupants; that is not231 proven vacancies.",
         "",
@@ -171,9 +201,19 @@ def build():
         "Sources, floor rollups and capacities are machine readable in [SPACE_REGISTER.json](SPACE_REGISTER.json). Existing industrial facility assigned FTE 137 equals 131 ARU/BS&T plus six receiving staff already within Red Wash 128. No enterprise employee total is obtained by adding facility assignments.",
     ]
     text = "\n".join(lines) + "\n"
-    (BASE / "PROGRAM.md").write_text(text)
+    if check:
+        errors = register_errors(json.loads((BASE / "SPACE_REGISTER.json").read_text()), report)
+        if (BASE / "PROGRAM.md").read_text() != text:
+            errors.append("stale human-readable space program")
+        if errors:
+            raise SystemExit("\n".join(errors))
+    else:
+        (BASE / "SPACE_REGISTER.json").write_text(register_text)
+        (BASE / "PROGRAM.md").write_text(text)
     print(f"{len(sites)} sites / {len(buildings)} buildings / {len(floors)} floors reconciled")
 
 
 if __name__ == "__main__":
-    build()
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--check", action="store_true")
+    build(check=parser.parse_args().check)

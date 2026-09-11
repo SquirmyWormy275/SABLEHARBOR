@@ -24,7 +24,32 @@
       "touchdown_seats": 28,
       "training_seats": 120,
       "meeting_seats": 484,
-      "resident_beds": 46
+      "resident_beds": 46,
+      "population_measurements": {
+        "source": "geospatial/facilities/population/policy.json /planning_basis",
+        "status": "ACTUAL_SPATIAL_ASSIGNMENTS_NOT_ESTABLISHED",
+        "meaning": "Organizational people and billet totals are not evidence of assignment to these concept spaces. Null is unknown; physical capacity is recorded separately.",
+        "current_named_employees_assigned": null,
+        "authorized_positions_assigned": null,
+        "vacant_authorized_positions": null,
+        "unnamed_authorized_positions": null,
+        "remote_staff": null,
+        "distributed_staff": null,
+        "field_staff": null,
+        "deployed_staff": null,
+        "resident_occupants": null,
+        "visitors": null,
+        "customers": null,
+        "trainees": null,
+        "cohort_peak": null,
+        "shift_population": null,
+        "observed_maximum_concurrent_attendance": null,
+        "proposed_future_positions_by_horizon": {
+          "2026": null,
+          "2031": null,
+          "2036": null
+        }
+      }
     },
     {
       "id": "SH-IND-FAC-WAM-INT",
@@ -42,7 +67,32 @@
       "touchdown_seats": 0,
       "training_seats": 0,
       "meeting_seats": 0,
-      "resident_beds": 0
+      "resident_beds": 0,
+      "population_measurements": {
+        "source": "geospatial/facilities/population/policy.json /planning_basis",
+        "status": "ACTUAL_SPATIAL_ASSIGNMENTS_NOT_ESTABLISHED",
+        "meaning": "Organizational people and billet totals are not evidence of assignment to these concept spaces. Null is unknown; physical capacity is recorded separately.",
+        "current_named_employees_assigned": null,
+        "authorized_positions_assigned": null,
+        "vacant_authorized_positions": null,
+        "unnamed_authorized_positions": null,
+        "remote_staff": null,
+        "distributed_staff": null,
+        "field_staff": null,
+        "deployed_staff": null,
+        "resident_occupants": null,
+        "visitors": null,
+        "customers": null,
+        "trainees": null,
+        "cohort_peak": null,
+        "shift_population": null,
+        "observed_maximum_concurrent_attendance": null,
+        "proposed_future_positions_by_horizon": {
+          "2026": null,
+          "2031": null,
+          "2036": null
+        }
+      }
     },
     {
       "id": "SH-IND-FAC-TAY-YARD",
@@ -60,7 +110,32 @@
       "touchdown_seats": 0,
       "training_seats": 0,
       "meeting_seats": 28,
-      "resident_beds": 0
+      "resident_beds": 0,
+      "population_measurements": {
+        "source": "geospatial/facilities/population/policy.json /planning_basis",
+        "status": "ACTUAL_SPATIAL_ASSIGNMENTS_NOT_ESTABLISHED",
+        "meaning": "Organizational people and billet totals are not evidence of assignment to these concept spaces. Null is unknown; physical capacity is recorded separately.",
+        "current_named_employees_assigned": null,
+        "authorized_positions_assigned": null,
+        "vacant_authorized_positions": null,
+        "unnamed_authorized_positions": null,
+        "remote_staff": null,
+        "distributed_staff": null,
+        "field_staff": null,
+        "deployed_staff": null,
+        "resident_occupants": null,
+        "visitors": null,
+        "customers": null,
+        "trainees": null,
+        "cohort_peak": null,
+        "shift_population": null,
+        "observed_maximum_concurrent_attendance": null,
+        "proposed_future_positions_by_horizon": {
+          "2026": null,
+          "2031": null,
+          "2036": null
+        }
+      }
     },
     {
       "id": "SH-IND-FAC-TAY-TERMINAL",
@@ -78,7 +153,32 @@
       "touchdown_seats": 0,
       "training_seats": 0,
       "meeting_seats": 0,
-      "resident_beds": 0
+      "resident_beds": 0,
+      "population_measurements": {
+        "source": "geospatial/facilities/population/policy.json /planning_basis",
+        "status": "ACTUAL_SPATIAL_ASSIGNMENTS_NOT_ESTABLISHED",
+        "meaning": "Organizational people and billet totals are not evidence of assignment to these concept spaces. Null is unknown; physical capacity is recorded separately.",
+        "current_named_employees_assigned": null,
+        "authorized_positions_assigned": null,
+        "vacant_authorized_positions": null,
+        "unnamed_authorized_positions": null,
+        "remote_staff": null,
+        "distributed_staff": null,
+        "field_staff": null,
+        "deployed_staff": null,
+        "resident_occupants": null,
+        "visitors": null,
+        "customers": null,
+        "trainees": null,
+        "cohort_peak": null,
+        "shift_population": null,
+        "observed_maximum_concurrent_attendance": null,
+        "proposed_future_positions_by_horizon": {
+          "2026": null,
+          "2031": null,
+          "2036": null
+        }
+      }
     },
     {
       "id": "SH-IND-FAC-TAY-WAREHOUSE",
@@ -96,7 +196,32 @@
       "touchdown_seats": 0,
       "training_seats": 0,
       "meeting_seats": 4,
-      "resident_beds": 0
+      "resident_beds": 0,
+      "population_measurements": {
+        "source": "geospatial/facilities/population/policy.json /planning_basis",
+        "status": "ACTUAL_SPATIAL_ASSIGNMENTS_NOT_ESTABLISHED",
+        "meaning": "Organizational people and billet totals are not evidence of assignment to these concept spaces. Null is unknown; physical capacity is recorded separately.",
+        "current_named_employees_assigned": null,
+        "authorized_positions_assigned": null,
+        "vacant_authorized_positions": null,
+        "unnamed_authorized_positions": null,
+        "remote_staff": null,
+        "distributed_staff": null,
+        "field_staff": null,
+        "deployed_staff": null,
+        "resident_occupants": null,
+        "visitors": null,
+        "customers": null,
+        "trainees": null,
+        "cohort_peak": null,
+        "shift_population": null,
+        "observed_maximum_concurrent_attendance": null,
+        "proposed_future_positions_by_horizon": {
+          "2026": null,
+          "2031": null,
+          "2036": null
+        }
+      }
     },
     {
       "id": "SH-IND-FAC-TAY-TRUCK",
@@ -114,7 +239,32 @@
       "touchdown_seats": 0,
       "training_seats": 0,
       "meeting_seats": 6,
-      "resident_beds": 0
+      "resident_beds": 0,
+      "population_measurements": {
+        "source": "geospatial/facilities/population/policy.json /planning_basis",
+        "status": "ACTUAL_SPATIAL_ASSIGNMENTS_NOT_ESTABLISHED",
+        "meaning": "Organizational people and billet totals are not evidence of assignment to these concept spaces. Null is unknown; physical capacity is recorded separately.",
+        "current_named_employees_assigned": null,
+        "authorized_positions_assigned": null,
+        "vacant_authorized_positions": null,
+        "unnamed_authorized_positions": null,
+        "remote_staff": null,
+        "distributed_staff": null,
+        "field_staff": null,
+        "deployed_staff": null,
+        "resident_occupants": null,
+        "visitors": null,
+        "customers": null,
+        "trainees": null,
+        "cohort_peak": null,
+        "shift_population": null,
+        "observed_maximum_concurrent_attendance": null,
+        "proposed_future_positions_by_horizon": {
+          "2026": null,
+          "2031": null,
+          "2036": null
+        }
+      }
     },
     {
       "id": "SH-IND-FAC-EAST-MATERIALS",
@@ -132,7 +282,32 @@
       "touchdown_seats": 0,
       "training_seats": 0,
       "meeting_seats": 0,
-      "resident_beds": 0
+      "resident_beds": 0,
+      "population_measurements": {
+        "source": "geospatial/facilities/population/policy.json /planning_basis",
+        "status": "ACTUAL_SPATIAL_ASSIGNMENTS_NOT_ESTABLISHED",
+        "meaning": "Organizational people and billet totals are not evidence of assignment to these concept spaces. Null is unknown; physical capacity is recorded separately.",
+        "current_named_employees_assigned": null,
+        "authorized_positions_assigned": null,
+        "vacant_authorized_positions": null,
+        "unnamed_authorized_positions": null,
+        "remote_staff": null,
+        "distributed_staff": null,
+        "field_staff": null,
+        "deployed_staff": null,
+        "resident_occupants": null,
+        "visitors": null,
+        "customers": null,
+        "trainees": null,
+        "cohort_peak": null,
+        "shift_population": null,
+        "observed_maximum_concurrent_attendance": null,
+        "proposed_future_positions_by_horizon": {
+          "2026": null,
+          "2031": null,
+          "2036": null
+        }
+      }
     },
     {
       "id": "SH-IND-FAC-MINERAL-TEAM",
@@ -150,7 +325,32 @@
       "touchdown_seats": 0,
       "training_seats": 0,
       "meeting_seats": 0,
-      "resident_beds": 0
+      "resident_beds": 0,
+      "population_measurements": {
+        "source": "geospatial/facilities/population/policy.json /planning_basis",
+        "status": "ACTUAL_SPATIAL_ASSIGNMENTS_NOT_ESTABLISHED",
+        "meaning": "Organizational people and billet totals are not evidence of assignment to these concept spaces. Null is unknown; physical capacity is recorded separately.",
+        "current_named_employees_assigned": null,
+        "authorized_positions_assigned": null,
+        "vacant_authorized_positions": null,
+        "unnamed_authorized_positions": null,
+        "remote_staff": null,
+        "distributed_staff": null,
+        "field_staff": null,
+        "deployed_staff": null,
+        "resident_occupants": null,
+        "visitors": null,
+        "customers": null,
+        "trainees": null,
+        "cohort_peak": null,
+        "shift_population": null,
+        "observed_maximum_concurrent_attendance": null,
+        "proposed_future_positions_by_horizon": {
+          "2026": null,
+          "2031": null,
+          "2036": null
+        }
+      }
     },
     {
       "id": "SH-IND-FAC-RAW-TERMINAL",
@@ -168,7 +368,32 @@
       "touchdown_seats": 0,
       "training_seats": 0,
       "meeting_seats": 0,
-      "resident_beds": 0
+      "resident_beds": 0,
+      "population_measurements": {
+        "source": "geospatial/facilities/population/policy.json /planning_basis",
+        "status": "ACTUAL_SPATIAL_ASSIGNMENTS_NOT_ESTABLISHED",
+        "meaning": "Organizational people and billet totals are not evidence of assignment to these concept spaces. Null is unknown; physical capacity is recorded separately.",
+        "current_named_employees_assigned": null,
+        "authorized_positions_assigned": null,
+        "vacant_authorized_positions": null,
+        "unnamed_authorized_positions": null,
+        "remote_staff": null,
+        "distributed_staff": null,
+        "field_staff": null,
+        "deployed_staff": null,
+        "resident_occupants": null,
+        "visitors": null,
+        "customers": null,
+        "trainees": null,
+        "cohort_peak": null,
+        "shift_population": null,
+        "observed_maximum_concurrent_attendance": null,
+        "proposed_future_positions_by_horizon": {
+          "2026": null,
+          "2031": null,
+          "2036": null
+        }
+      }
     },
     {
       "id": "SH-IND-FAC-RAW-WAREHOUSE",
@@ -186,7 +411,32 @@
       "touchdown_seats": 0,
       "training_seats": 0,
       "meeting_seats": 2,
-      "resident_beds": 0
+      "resident_beds": 0,
+      "population_measurements": {
+        "source": "geospatial/facilities/population/policy.json /planning_basis",
+        "status": "ACTUAL_SPATIAL_ASSIGNMENTS_NOT_ESTABLISHED",
+        "meaning": "Organizational people and billet totals are not evidence of assignment to these concept spaces. Null is unknown; physical capacity is recorded separately.",
+        "current_named_employees_assigned": null,
+        "authorized_positions_assigned": null,
+        "vacant_authorized_positions": null,
+        "unnamed_authorized_positions": null,
+        "remote_staff": null,
+        "distributed_staff": null,
+        "field_staff": null,
+        "deployed_staff": null,
+        "resident_occupants": null,
+        "visitors": null,
+        "customers": null,
+        "trainees": null,
+        "cohort_peak": null,
+        "shift_population": null,
+        "observed_maximum_concurrent_attendance": null,
+        "proposed_future_positions_by_horizon": {
+          "2026": null,
+          "2031": null,
+          "2036": null
+        }
+      }
     },
     {
       "id": "SH-IND-FAC-RAW-TRUCK",
@@ -204,7 +454,32 @@
       "touchdown_seats": 0,
       "training_seats": 0,
       "meeting_seats": 0,
-      "resident_beds": 0
+      "resident_beds": 0,
+      "population_measurements": {
+        "source": "geospatial/facilities/population/policy.json /planning_basis",
+        "status": "ACTUAL_SPATIAL_ASSIGNMENTS_NOT_ESTABLISHED",
+        "meaning": "Organizational people and billet totals are not evidence of assignment to these concept spaces. Null is unknown; physical capacity is recorded separately.",
+        "current_named_employees_assigned": null,
+        "authorized_positions_assigned": null,
+        "vacant_authorized_positions": null,
+        "unnamed_authorized_positions": null,
+        "remote_staff": null,
+        "distributed_staff": null,
+        "field_staff": null,
+        "deployed_staff": null,
+        "resident_occupants": null,
+        "visitors": null,
+        "customers": null,
+        "trainees": null,
+        "cohort_peak": null,
+        "shift_population": null,
+        "observed_maximum_concurrent_attendance": null,
+        "proposed_future_positions_by_horizon": {
+          "2026": null,
+          "2031": null,
+          "2036": null
+        }
+      }
     },
     {
       "id": "SH-IND-FAC-ARU-OFFICE",
@@ -222,7 +497,32 @@
       "touchdown_seats": 0,
       "training_seats": 0,
       "meeting_seats": 10,
-      "resident_beds": 0
+      "resident_beds": 0,
+      "population_measurements": {
+        "source": "geospatial/facilities/population/policy.json /planning_basis",
+        "status": "ACTUAL_SPATIAL_ASSIGNMENTS_NOT_ESTABLISHED",
+        "meaning": "Organizational people and billet totals are not evidence of assignment to these concept spaces. Null is unknown; physical capacity is recorded separately.",
+        "current_named_employees_assigned": null,
+        "authorized_positions_assigned": null,
+        "vacant_authorized_positions": null,
+        "unnamed_authorized_positions": null,
+        "remote_staff": null,
+        "distributed_staff": null,
+        "field_staff": null,
+        "deployed_staff": null,
+        "resident_occupants": null,
+        "visitors": null,
+        "customers": null,
+        "trainees": null,
+        "cohort_peak": null,
+        "shift_population": null,
+        "observed_maximum_concurrent_attendance": null,
+        "proposed_future_positions_by_horizon": {
+          "2026": null,
+          "2031": null,
+          "2036": null
+        }
+      }
     },
     {
       "id": "SH-IND-FAC-RW-RECEIVING",
@@ -240,7 +540,32 @@
       "touchdown_seats": 0,
       "training_seats": 0,
       "meeting_seats": 0,
-      "resident_beds": 0
+      "resident_beds": 0,
+      "population_measurements": {
+        "source": "geospatial/facilities/population/policy.json /planning_basis",
+        "status": "ACTUAL_SPATIAL_ASSIGNMENTS_NOT_ESTABLISHED",
+        "meaning": "Organizational people and billet totals are not evidence of assignment to these concept spaces. Null is unknown; physical capacity is recorded separately.",
+        "current_named_employees_assigned": null,
+        "authorized_positions_assigned": null,
+        "vacant_authorized_positions": null,
+        "unnamed_authorized_positions": null,
+        "remote_staff": null,
+        "distributed_staff": null,
+        "field_staff": null,
+        "deployed_staff": null,
+        "resident_occupants": null,
+        "visitors": null,
+        "customers": null,
+        "trainees": null,
+        "cohort_peak": null,
+        "shift_population": null,
+        "observed_maximum_concurrent_attendance": null,
+        "proposed_future_positions_by_horizon": {
+          "2026": null,
+          "2031": null,
+          "2036": null
+        }
+      }
     },
     {
       "id": "SH-SITE-0006",
@@ -258,7 +583,32 @@
       "touchdown_seats": 0,
       "training_seats": 0,
       "meeting_seats": 0,
-      "resident_beds": 0
+      "resident_beds": 0,
+      "population_measurements": {
+        "source": "geospatial/facilities/population/policy.json /planning_basis",
+        "status": "ACTUAL_SPATIAL_ASSIGNMENTS_NOT_ESTABLISHED",
+        "meaning": "Organizational people and billet totals are not evidence of assignment to these concept spaces. Null is unknown; physical capacity is recorded separately.",
+        "current_named_employees_assigned": null,
+        "authorized_positions_assigned": null,
+        "vacant_authorized_positions": null,
+        "unnamed_authorized_positions": null,
+        "remote_staff": null,
+        "distributed_staff": null,
+        "field_staff": null,
+        "deployed_staff": null,
+        "resident_occupants": null,
+        "visitors": null,
+        "customers": null,
+        "trainees": null,
+        "cohort_peak": null,
+        "shift_population": null,
+        "observed_maximum_concurrent_attendance": null,
+        "proposed_future_positions_by_horizon": {
+          "2026": null,
+          "2031": null,
+          "2036": null
+        }
+      }
     },
     {
       "id": "SH-SITE-0003",
@@ -276,7 +626,32 @@
       "touchdown_seats": 6,
       "training_seats": 0,
       "meeting_seats": 38,
-      "resident_beds": 6
+      "resident_beds": 6,
+      "population_measurements": {
+        "source": "geospatial/facilities/population/policy.json /planning_basis",
+        "status": "ACTUAL_SPATIAL_ASSIGNMENTS_NOT_ESTABLISHED",
+        "meaning": "Organizational people and billet totals are not evidence of assignment to these concept spaces. Null is unknown; physical capacity is recorded separately.",
+        "current_named_employees_assigned": null,
+        "authorized_positions_assigned": null,
+        "vacant_authorized_positions": null,
+        "unnamed_authorized_positions": null,
+        "remote_staff": null,
+        "distributed_staff": null,
+        "field_staff": null,
+        "deployed_staff": null,
+        "resident_occupants": null,
+        "visitors": null,
+        "customers": null,
+        "trainees": null,
+        "cohort_peak": null,
+        "shift_population": null,
+        "observed_maximum_concurrent_attendance": null,
+        "proposed_future_positions_by_horizon": {
+          "2026": null,
+          "2031": null,
+          "2036": null
+        }
+      }
     },
     {
       "id": "SH-SITE-0005",
@@ -294,7 +669,32 @@
       "touchdown_seats": 0,
       "training_seats": 8,
       "meeting_seats": 8,
-      "resident_beds": 0
+      "resident_beds": 0,
+      "population_measurements": {
+        "source": "geospatial/facilities/population/policy.json /planning_basis",
+        "status": "ACTUAL_SPATIAL_ASSIGNMENTS_NOT_ESTABLISHED",
+        "meaning": "Organizational people and billet totals are not evidence of assignment to these concept spaces. Null is unknown; physical capacity is recorded separately.",
+        "current_named_employees_assigned": null,
+        "authorized_positions_assigned": null,
+        "vacant_authorized_positions": null,
+        "unnamed_authorized_positions": null,
+        "remote_staff": null,
+        "distributed_staff": null,
+        "field_staff": null,
+        "deployed_staff": null,
+        "resident_occupants": null,
+        "visitors": null,
+        "customers": null,
+        "trainees": null,
+        "cohort_peak": null,
+        "shift_population": null,
+        "observed_maximum_concurrent_attendance": null,
+        "proposed_future_positions_by_horizon": {
+          "2026": null,
+          "2031": null,
+          "2036": null
+        }
+      }
     }
   ],
   "buildings": [
@@ -315,7 +715,32 @@
       "touchdown_seats": 20,
       "training_seats": 0,
       "meeting_seats": 140,
-      "resident_beds": 0
+      "resident_beds": 0,
+      "population_measurements": {
+        "source": "geospatial/facilities/population/policy.json /planning_basis",
+        "status": "ACTUAL_SPATIAL_ASSIGNMENTS_NOT_ESTABLISHED",
+        "meaning": "Organizational people and billet totals are not evidence of assignment to these concept spaces. Null is unknown; physical capacity is recorded separately.",
+        "current_named_employees_assigned": null,
+        "authorized_positions_assigned": null,
+        "vacant_authorized_positions": null,
+        "unnamed_authorized_positions": null,
+        "remote_staff": null,
+        "distributed_staff": null,
+        "field_staff": null,
+        "deployed_staff": null,
+        "resident_occupants": null,
+        "visitors": null,
+        "customers": null,
+        "trainees": null,
+        "cohort_peak": null,
+        "shift_population": null,
+        "observed_maximum_concurrent_attendance": null,
+        "proposed_future_positions_by_horizon": {
+          "2026": null,
+          "2031": null,
+          "2036": null
+        }
+      }
     },
     {
       "id": "SH-SITE-0001-B02",
@@ -335,7 +760,32 @@
       "touchdown_seats": 0,
       "training_seats": 0,
       "meeting_seats": 84,
-      "resident_beds": 0
+      "resident_beds": 0,
+      "population_measurements": {
+        "source": "geospatial/facilities/population/policy.json /planning_basis",
+        "status": "ACTUAL_SPATIAL_ASSIGNMENTS_NOT_ESTABLISHED",
+        "meaning": "Organizational people and billet totals are not evidence of assignment to these concept spaces. Null is unknown; physical capacity is recorded separately.",
+        "current_named_employees_assigned": null,
+        "authorized_positions_assigned": null,
+        "vacant_authorized_positions": null,
+        "unnamed_authorized_positions": null,
+        "remote_staff": null,
+        "distributed_staff": null,
+        "field_staff": null,
+        "deployed_staff": null,
+        "resident_occupants": null,
+        "visitors": null,
+        "customers": null,
+        "trainees": null,
+        "cohort_peak": null,
+        "shift_population": null,
+        "observed_maximum_concurrent_attendance": null,
+        "proposed_future_positions_by_horizon": {
+          "2026": null,
+          "2031": null,
+          "2036": null
+        }
+      }
     },
     {
       "id": "SH-SITE-0001-B03",
@@ -355,7 +805,32 @@
       "touchdown_seats": 0,
       "training_seats": 0,
       "meeting_seats": 128,
-      "resident_beds": 0
+      "resident_beds": 0,
+      "population_measurements": {
+        "source": "geospatial/facilities/population/policy.json /planning_basis",
+        "status": "ACTUAL_SPATIAL_ASSIGNMENTS_NOT_ESTABLISHED",
+        "meaning": "Organizational people and billet totals are not evidence of assignment to these concept spaces. Null is unknown; physical capacity is recorded separately.",
+        "current_named_employees_assigned": null,
+        "authorized_positions_assigned": null,
+        "vacant_authorized_positions": null,
+        "unnamed_authorized_positions": null,
+        "remote_staff": null,
+        "distributed_staff": null,
+        "field_staff": null,
+        "deployed_staff": null,
+        "resident_occupants": null,
+        "visitors": null,
+        "customers": null,
+        "trainees": null,
+        "cohort_peak": null,
+        "shift_population": null,
+        "observed_maximum_concurrent_attendance": null,
+        "proposed_future_positions_by_horizon": {
+          "2026": null,
+          "2031": null,
+          "2036": null
+        }
+      }
     },
     {
       "id": "SH-SITE-0001-B04",
@@ -374,7 +849,32 @@
       "touchdown_seats": 8,
       "training_seats": 120,
       "meeting_seats": 124,
-      "resident_beds": 0
+      "resident_beds": 0,
+      "population_measurements": {
+        "source": "geospatial/facilities/population/policy.json /planning_basis",
+        "status": "ACTUAL_SPATIAL_ASSIGNMENTS_NOT_ESTABLISHED",
+        "meaning": "Organizational people and billet totals are not evidence of assignment to these concept spaces. Null is unknown; physical capacity is recorded separately.",
+        "current_named_employees_assigned": null,
+        "authorized_positions_assigned": null,
+        "vacant_authorized_positions": null,
+        "unnamed_authorized_positions": null,
+        "remote_staff": null,
+        "distributed_staff": null,
+        "field_staff": null,
+        "deployed_staff": null,
+        "resident_occupants": null,
+        "visitors": null,
+        "customers": null,
+        "trainees": null,
+        "cohort_peak": null,
+        "shift_population": null,
+        "observed_maximum_concurrent_attendance": null,
+        "proposed_future_positions_by_horizon": {
+          "2026": null,
+          "2031": null,
+          "2036": null
+        }
+      }
     },
     {
       "id": "SH-SITE-0001-B05",
@@ -393,7 +893,32 @@
       "touchdown_seats": 0,
       "training_seats": 0,
       "meeting_seats": 0,
-      "resident_beds": 46
+      "resident_beds": 46,
+      "population_measurements": {
+        "source": "geospatial/facilities/population/policy.json /planning_basis",
+        "status": "ACTUAL_SPATIAL_ASSIGNMENTS_NOT_ESTABLISHED",
+        "meaning": "Organizational people and billet totals are not evidence of assignment to these concept spaces. Null is unknown; physical capacity is recorded separately.",
+        "current_named_employees_assigned": null,
+        "authorized_positions_assigned": null,
+        "vacant_authorized_positions": null,
+        "unnamed_authorized_positions": null,
+        "remote_staff": null,
+        "distributed_staff": null,
+        "field_staff": null,
+        "deployed_staff": null,
+        "resident_occupants": null,
+        "visitors": null,
+        "customers": null,
+        "trainees": null,
+        "cohort_peak": null,
+        "shift_population": null,
+        "observed_maximum_concurrent_attendance": null,
+        "proposed_future_positions_by_horizon": {
+          "2026": null,
+          "2031": null,
+          "2036": null
+        }
+      }
     },
     {
       "id": "SH-SITE-0001-B06",
@@ -411,7 +936,32 @@
       "touchdown_seats": 0,
       "training_seats": 0,
       "meeting_seats": 8,
-      "resident_beds": 0
+      "resident_beds": 0,
+      "population_measurements": {
+        "source": "geospatial/facilities/population/policy.json /planning_basis",
+        "status": "ACTUAL_SPATIAL_ASSIGNMENTS_NOT_ESTABLISHED",
+        "meaning": "Organizational people and billet totals are not evidence of assignment to these concept spaces. Null is unknown; physical capacity is recorded separately.",
+        "current_named_employees_assigned": null,
+        "authorized_positions_assigned": null,
+        "vacant_authorized_positions": null,
+        "unnamed_authorized_positions": null,
+        "remote_staff": null,
+        "distributed_staff": null,
+        "field_staff": null,
+        "deployed_staff": null,
+        "resident_occupants": null,
+        "visitors": null,
+        "customers": null,
+        "trainees": null,
+        "cohort_peak": null,
+        "shift_population": null,
+        "observed_maximum_concurrent_attendance": null,
+        "proposed_future_positions_by_horizon": {
+          "2026": null,
+          "2031": null,
+          "2036": null
+        }
+      }
     },
     {
       "id": "SH-IND-FAC-TAY-YARD-B01",
@@ -429,7 +979,32 @@
       "touchdown_seats": 0,
       "training_seats": 0,
       "meeting_seats": 4,
-      "resident_beds": 0
+      "resident_beds": 0,
+      "population_measurements": {
+        "source": "geospatial/facilities/population/policy.json /planning_basis",
+        "status": "ACTUAL_SPATIAL_ASSIGNMENTS_NOT_ESTABLISHED",
+        "meaning": "Organizational people and billet totals are not evidence of assignment to these concept spaces. Null is unknown; physical capacity is recorded separately.",
+        "current_named_employees_assigned": null,
+        "authorized_positions_assigned": null,
+        "vacant_authorized_positions": null,
+        "unnamed_authorized_positions": null,
+        "remote_staff": null,
+        "distributed_staff": null,
+        "field_staff": null,
+        "deployed_staff": null,
+        "resident_occupants": null,
+        "visitors": null,
+        "customers": null,
+        "trainees": null,
+        "cohort_peak": null,
+        "shift_population": null,
+        "observed_maximum_concurrent_attendance": null,
+        "proposed_future_positions_by_horizon": {
+          "2026": null,
+          "2031": null,
+          "2036": null
+        }
+      }
     },
     {
       "id": "SH-IND-FAC-TAY-YARD-B02",
@@ -447,7 +1022,32 @@
       "touchdown_seats": 0,
       "training_seats": 0,
       "meeting_seats": 24,
-      "resident_beds": 0
+      "resident_beds": 0,
+      "population_measurements": {
+        "source": "geospatial/facilities/population/policy.json /planning_basis",
+        "status": "ACTUAL_SPATIAL_ASSIGNMENTS_NOT_ESTABLISHED",
+        "meaning": "Organizational people and billet totals are not evidence of assignment to these concept spaces. Null is unknown; physical capacity is recorded separately.",
+        "current_named_employees_assigned": null,
+        "authorized_positions_assigned": null,
+        "vacant_authorized_positions": null,
+        "unnamed_authorized_positions": null,
+        "remote_staff": null,
+        "distributed_staff": null,
+        "field_staff": null,
+        "deployed_staff": null,
+        "resident_occupants": null,
+        "visitors": null,
+        "customers": null,
+        "trainees": null,
+        "cohort_peak": null,
+        "shift_population": null,
+        "observed_maximum_concurrent_attendance": null,
+        "proposed_future_positions_by_horizon": {
+          "2026": null,
+          "2031": null,
+          "2036": null
+        }
+      }
     },
     {
       "id": "SH-IND-FAC-TAY-WAREHOUSE-B01",
@@ -465,7 +1065,32 @@
       "touchdown_seats": 0,
       "training_seats": 0,
       "meeting_seats": 4,
-      "resident_beds": 0
+      "resident_beds": 0,
+      "population_measurements": {
+        "source": "geospatial/facilities/population/policy.json /planning_basis",
+        "status": "ACTUAL_SPATIAL_ASSIGNMENTS_NOT_ESTABLISHED",
+        "meaning": "Organizational people and billet totals are not evidence of assignment to these concept spaces. Null is unknown; physical capacity is recorded separately.",
+        "current_named_employees_assigned": null,
+        "authorized_positions_assigned": null,
+        "vacant_authorized_positions": null,
+        "unnamed_authorized_positions": null,
+        "remote_staff": null,
+        "distributed_staff": null,
+        "field_staff": null,
+        "deployed_staff": null,
+        "resident_occupants": null,
+        "visitors": null,
+        "customers": null,
+        "trainees": null,
+        "cohort_peak": null,
+        "shift_population": null,
+        "observed_maximum_concurrent_attendance": null,
+        "proposed_future_positions_by_horizon": {
+          "2026": null,
+          "2031": null,
+          "2036": null
+        }
+      }
     },
     {
       "id": "SH-IND-FAC-TAY-TRUCK-B01",
@@ -483,7 +1108,32 @@
       "touchdown_seats": 0,
       "training_seats": 0,
       "meeting_seats": 6,
-      "resident_beds": 0
+      "resident_beds": 0,
+      "population_measurements": {
+        "source": "geospatial/facilities/population/policy.json /planning_basis",
+        "status": "ACTUAL_SPATIAL_ASSIGNMENTS_NOT_ESTABLISHED",
+        "meaning": "Organizational people and billet totals are not evidence of assignment to these concept spaces. Null is unknown; physical capacity is recorded separately.",
+        "current_named_employees_assigned": null,
+        "authorized_positions_assigned": null,
+        "vacant_authorized_positions": null,
+        "unnamed_authorized_positions": null,
+        "remote_staff": null,
+        "distributed_staff": null,
+        "field_staff": null,
+        "deployed_staff": null,
+        "resident_occupants": null,
+        "visitors": null,
+        "customers": null,
+        "trainees": null,
+        "cohort_peak": null,
+        "shift_population": null,
+        "observed_maximum_concurrent_attendance": null,
+        "proposed_future_positions_by_horizon": {
+          "2026": null,
+          "2031": null,
+          "2036": null
+        }
+      }
     },
     {
       "id": "SH-IND-FAC-RAW-WAREHOUSE-B01",
@@ -501,7 +1151,32 @@
       "touchdown_seats": 0,
       "training_seats": 0,
       "meeting_seats": 2,
-      "resident_beds": 0
+      "resident_beds": 0,
+      "population_measurements": {
+        "source": "geospatial/facilities/population/policy.json /planning_basis",
+        "status": "ACTUAL_SPATIAL_ASSIGNMENTS_NOT_ESTABLISHED",
+        "meaning": "Organizational people and billet totals are not evidence of assignment to these concept spaces. Null is unknown; physical capacity is recorded separately.",
+        "current_named_employees_assigned": null,
+        "authorized_positions_assigned": null,
+        "vacant_authorized_positions": null,
+        "unnamed_authorized_positions": null,
+        "remote_staff": null,
+        "distributed_staff": null,
+        "field_staff": null,
+        "deployed_staff": null,
+        "resident_occupants": null,
+        "visitors": null,
+        "customers": null,
+        "trainees": null,
+        "cohort_peak": null,
+        "shift_population": null,
+        "observed_maximum_concurrent_attendance": null,
+        "proposed_future_positions_by_horizon": {
+          "2026": null,
+          "2031": null,
+          "2036": null
+        }
+      }
     },
     {
       "id": "SH-IND-FAC-ARU-OFFICE-B01",
@@ -519,7 +1194,32 @@
       "touchdown_seats": 0,
       "training_seats": 0,
       "meeting_seats": 10,
-      "resident_beds": 0
+      "resident_beds": 0,
+      "population_measurements": {
+        "source": "geospatial/facilities/population/policy.json /planning_basis",
+        "status": "ACTUAL_SPATIAL_ASSIGNMENTS_NOT_ESTABLISHED",
+        "meaning": "Organizational people and billet totals are not evidence of assignment to these concept spaces. Null is unknown; physical capacity is recorded separately.",
+        "current_named_employees_assigned": null,
+        "authorized_positions_assigned": null,
+        "vacant_authorized_positions": null,
+        "unnamed_authorized_positions": null,
+        "remote_staff": null,
+        "distributed_staff": null,
+        "field_staff": null,
+        "deployed_staff": null,
+        "resident_occupants": null,
+        "visitors": null,
+        "customers": null,
+        "trainees": null,
+        "cohort_peak": null,
+        "shift_population": null,
+        "observed_maximum_concurrent_attendance": null,
+        "proposed_future_positions_by_horizon": {
+          "2026": null,
+          "2031": null,
+          "2036": null
+        }
+      }
     },
     {
       "id": "SH-FAC-FORT-BIG",
@@ -537,7 +1237,32 @@
       "touchdown_seats": 0,
       "training_seats": 0,
       "meeting_seats": 12,
-      "resident_beds": 0
+      "resident_beds": 0,
+      "population_measurements": {
+        "source": "geospatial/facilities/population/policy.json /planning_basis",
+        "status": "ACTUAL_SPATIAL_ASSIGNMENTS_NOT_ESTABLISHED",
+        "meaning": "Organizational people and billet totals are not evidence of assignment to these concept spaces. Null is unknown; physical capacity is recorded separately.",
+        "current_named_employees_assigned": null,
+        "authorized_positions_assigned": null,
+        "vacant_authorized_positions": null,
+        "unnamed_authorized_positions": null,
+        "remote_staff": null,
+        "distributed_staff": null,
+        "field_staff": null,
+        "deployed_staff": null,
+        "resident_occupants": null,
+        "visitors": null,
+        "customers": null,
+        "trainees": null,
+        "cohort_peak": null,
+        "shift_population": null,
+        "observed_maximum_concurrent_attendance": null,
+        "proposed_future_positions_by_horizon": {
+          "2026": null,
+          "2031": null,
+          "2036": null
+        }
+      }
     },
     {
       "id": "SH-FAC-FORT-SMALL",
@@ -556,7 +1281,32 @@
       "touchdown_seats": 6,
       "training_seats": 0,
       "meeting_seats": 26,
-      "resident_beds": 6
+      "resident_beds": 6,
+      "population_measurements": {
+        "source": "geospatial/facilities/population/policy.json /planning_basis",
+        "status": "ACTUAL_SPATIAL_ASSIGNMENTS_NOT_ESTABLISHED",
+        "meaning": "Organizational people and billet totals are not evidence of assignment to these concept spaces. Null is unknown; physical capacity is recorded separately.",
+        "current_named_employees_assigned": null,
+        "authorized_positions_assigned": null,
+        "vacant_authorized_positions": null,
+        "unnamed_authorized_positions": null,
+        "remote_staff": null,
+        "distributed_staff": null,
+        "field_staff": null,
+        "deployed_staff": null,
+        "resident_occupants": null,
+        "visitors": null,
+        "customers": null,
+        "trainees": null,
+        "cohort_peak": null,
+        "shift_population": null,
+        "observed_maximum_concurrent_attendance": null,
+        "proposed_future_positions_by_horizon": {
+          "2026": null,
+          "2031": null,
+          "2036": null
+        }
+      }
     },
     {
       "id": "SH-FAC-FORT-WHITE",
@@ -574,7 +1324,32 @@
       "touchdown_seats": 0,
       "training_seats": 0,
       "meeting_seats": 0,
-      "resident_beds": 0
+      "resident_beds": 0,
+      "population_measurements": {
+        "source": "geospatial/facilities/population/policy.json /planning_basis",
+        "status": "ACTUAL_SPATIAL_ASSIGNMENTS_NOT_ESTABLISHED",
+        "meaning": "Organizational people and billet totals are not evidence of assignment to these concept spaces. Null is unknown; physical capacity is recorded separately.",
+        "current_named_employees_assigned": null,
+        "authorized_positions_assigned": null,
+        "vacant_authorized_positions": null,
+        "unnamed_authorized_positions": null,
+        "remote_staff": null,
+        "distributed_staff": null,
+        "field_staff": null,
+        "deployed_staff": null,
+        "resident_occupants": null,
+        "visitors": null,
+        "customers": null,
+        "trainees": null,
+        "cohort_peak": null,
+        "shift_population": null,
+        "observed_maximum_concurrent_attendance": null,
+        "proposed_future_positions_by_horizon": {
+          "2026": null,
+          "2031": null,
+          "2036": null
+        }
+      }
     },
     {
       "id": "SH-SITE-0005-B01",
@@ -592,7 +1367,32 @@
       "touchdown_seats": 0,
       "training_seats": 0,
       "meeting_seats": 8,
-      "resident_beds": 0
+      "resident_beds": 0,
+      "population_measurements": {
+        "source": "geospatial/facilities/population/policy.json /planning_basis",
+        "status": "ACTUAL_SPATIAL_ASSIGNMENTS_NOT_ESTABLISHED",
+        "meaning": "Organizational people and billet totals are not evidence of assignment to these concept spaces. Null is unknown; physical capacity is recorded separately.",
+        "current_named_employees_assigned": null,
+        "authorized_positions_assigned": null,
+        "vacant_authorized_positions": null,
+        "unnamed_authorized_positions": null,
+        "remote_staff": null,
+        "distributed_staff": null,
+        "field_staff": null,
+        "deployed_staff": null,
+        "resident_occupants": null,
+        "visitors": null,
+        "customers": null,
+        "trainees": null,
+        "cohort_peak": null,
+        "shift_population": null,
+        "observed_maximum_concurrent_attendance": null,
+        "proposed_future_positions_by_horizon": {
+          "2026": null,
+          "2031": null,
+          "2036": null
+        }
+      }
     },
     {
       "id": "SH-SITE-0005-B02",
@@ -610,7 +1410,32 @@
       "touchdown_seats": 0,
       "training_seats": 8,
       "meeting_seats": 0,
-      "resident_beds": 0
+      "resident_beds": 0,
+      "population_measurements": {
+        "source": "geospatial/facilities/population/policy.json /planning_basis",
+        "status": "ACTUAL_SPATIAL_ASSIGNMENTS_NOT_ESTABLISHED",
+        "meaning": "Organizational people and billet totals are not evidence of assignment to these concept spaces. Null is unknown; physical capacity is recorded separately.",
+        "current_named_employees_assigned": null,
+        "authorized_positions_assigned": null,
+        "vacant_authorized_positions": null,
+        "unnamed_authorized_positions": null,
+        "remote_staff": null,
+        "distributed_staff": null,
+        "field_staff": null,
+        "deployed_staff": null,
+        "resident_occupants": null,
+        "visitors": null,
+        "customers": null,
+        "trainees": null,
+        "cohort_peak": null,
+        "shift_population": null,
+        "observed_maximum_concurrent_attendance": null,
+        "proposed_future_positions_by_horizon": {
+          "2026": null,
+          "2031": null,
+          "2036": null
+        }
+      }
     },
     {
       "id": "SH-SITE-0005-B03",
@@ -628,7 +1453,32 @@
       "touchdown_seats": 0,
       "training_seats": 0,
       "meeting_seats": 0,
-      "resident_beds": 0
+      "resident_beds": 0,
+      "population_measurements": {
+        "source": "geospatial/facilities/population/policy.json /planning_basis",
+        "status": "ACTUAL_SPATIAL_ASSIGNMENTS_NOT_ESTABLISHED",
+        "meaning": "Organizational people and billet totals are not evidence of assignment to these concept spaces. Null is unknown; physical capacity is recorded separately.",
+        "current_named_employees_assigned": null,
+        "authorized_positions_assigned": null,
+        "vacant_authorized_positions": null,
+        "unnamed_authorized_positions": null,
+        "remote_staff": null,
+        "distributed_staff": null,
+        "field_staff": null,
+        "deployed_staff": null,
+        "resident_occupants": null,
+        "visitors": null,
+        "customers": null,
+        "trainees": null,
+        "cohort_peak": null,
+        "shift_population": null,
+        "observed_maximum_concurrent_attendance": null,
+        "proposed_future_positions_by_horizon": {
+          "2026": null,
+          "2031": null,
+          "2036": null
+        }
+      }
     },
     {
       "id": "SH-SITE-0005-B04",
@@ -646,7 +1496,32 @@
       "touchdown_seats": 0,
       "training_seats": 0,
       "meeting_seats": 0,
-      "resident_beds": 0
+      "resident_beds": 0,
+      "population_measurements": {
+        "source": "geospatial/facilities/population/policy.json /planning_basis",
+        "status": "ACTUAL_SPATIAL_ASSIGNMENTS_NOT_ESTABLISHED",
+        "meaning": "Organizational people and billet totals are not evidence of assignment to these concept spaces. Null is unknown; physical capacity is recorded separately.",
+        "current_named_employees_assigned": null,
+        "authorized_positions_assigned": null,
+        "vacant_authorized_positions": null,
+        "unnamed_authorized_positions": null,
+        "remote_staff": null,
+        "distributed_staff": null,
+        "field_staff": null,
+        "deployed_staff": null,
+        "resident_occupants": null,
+        "visitors": null,
+        "customers": null,
+        "trainees": null,
+        "cohort_peak": null,
+        "shift_population": null,
+        "observed_maximum_concurrent_attendance": null,
+        "proposed_future_positions_by_horizon": {
+          "2026": null,
+          "2031": null,
+          "2036": null
+        }
+      }
     }
   ],
   "floors": [
@@ -665,7 +1540,32 @@
       "touchdown_seats": 8,
       "training_seats": 0,
       "meeting_seats": 58,
-      "resident_beds": 0
+      "resident_beds": 0,
+      "population_measurements": {
+        "source": "geospatial/facilities/population/policy.json /planning_basis",
+        "status": "ACTUAL_SPATIAL_ASSIGNMENTS_NOT_ESTABLISHED",
+        "meaning": "Organizational people and billet totals are not evidence of assignment to these concept spaces. Null is unknown; physical capacity is recorded separately.",
+        "current_named_employees_assigned": null,
+        "authorized_positions_assigned": null,
+        "vacant_authorized_positions": null,
+        "unnamed_authorized_positions": null,
+        "remote_staff": null,
+        "distributed_staff": null,
+        "field_staff": null,
+        "deployed_staff": null,
+        "resident_occupants": null,
+        "visitors": null,
+        "customers": null,
+        "trainees": null,
+        "cohort_peak": null,
+        "shift_population": null,
+        "observed_maximum_concurrent_attendance": null,
+        "proposed_future_positions_by_horizon": {
+          "2026": null,
+          "2031": null,
+          "2036": null
+        }
+      }
     },
     {
       "id": "SH-SITE-0001-B01-L02",
@@ -682,7 +1582,32 @@
       "touchdown_seats": 12,
       "training_seats": 0,
       "meeting_seats": 82,
-      "resident_beds": 0
+      "resident_beds": 0,
+      "population_measurements": {
+        "source": "geospatial/facilities/population/policy.json /planning_basis",
+        "status": "ACTUAL_SPATIAL_ASSIGNMENTS_NOT_ESTABLISHED",
+        "meaning": "Organizational people and billet totals are not evidence of assignment to these concept spaces. Null is unknown; physical capacity is recorded separately.",
+        "current_named_employees_assigned": null,
+        "authorized_positions_assigned": null,
+        "vacant_authorized_positions": null,
+        "unnamed_authorized_positions": null,
+        "remote_staff": null,
+        "distributed_staff": null,
+        "field_staff": null,
+        "deployed_staff": null,
+        "resident_occupants": null,
+        "visitors": null,
+        "customers": null,
+        "trainees": null,
+        "cohort_peak": null,
+        "shift_population": null,
+        "observed_maximum_concurrent_attendance": null,
+        "proposed_future_positions_by_horizon": {
+          "2026": null,
+          "2031": null,
+          "2036": null
+        }
+      }
     },
     {
       "id": "SH-SITE-0001-B02-L01",
@@ -699,7 +1624,32 @@
       "touchdown_seats": 0,
       "training_seats": 0,
       "meeting_seats": 40,
-      "resident_beds": 0
+      "resident_beds": 0,
+      "population_measurements": {
+        "source": "geospatial/facilities/population/policy.json /planning_basis",
+        "status": "ACTUAL_SPATIAL_ASSIGNMENTS_NOT_ESTABLISHED",
+        "meaning": "Organizational people and billet totals are not evidence of assignment to these concept spaces. Null is unknown; physical capacity is recorded separately.",
+        "current_named_employees_assigned": null,
+        "authorized_positions_assigned": null,
+        "vacant_authorized_positions": null,
+        "unnamed_authorized_positions": null,
+        "remote_staff": null,
+        "distributed_staff": null,
+        "field_staff": null,
+        "deployed_staff": null,
+        "resident_occupants": null,
+        "visitors": null,
+        "customers": null,
+        "trainees": null,
+        "cohort_peak": null,
+        "shift_population": null,
+        "observed_maximum_concurrent_attendance": null,
+        "proposed_future_positions_by_horizon": {
+          "2026": null,
+          "2031": null,
+          "2036": null
+        }
+      }
     },
     {
       "id": "SH-SITE-0001-B02-L02",
@@ -716,7 +1666,32 @@
       "touchdown_seats": 0,
       "training_seats": 0,
       "meeting_seats": 44,
-      "resident_beds": 0
+      "resident_beds": 0,
+      "population_measurements": {
+        "source": "geospatial/facilities/population/policy.json /planning_basis",
+        "status": "ACTUAL_SPATIAL_ASSIGNMENTS_NOT_ESTABLISHED",
+        "meaning": "Organizational people and billet totals are not evidence of assignment to these concept spaces. Null is unknown; physical capacity is recorded separately.",
+        "current_named_employees_assigned": null,
+        "authorized_positions_assigned": null,
+        "vacant_authorized_positions": null,
+        "unnamed_authorized_positions": null,
+        "remote_staff": null,
+        "distributed_staff": null,
+        "field_staff": null,
+        "deployed_staff": null,
+        "resident_occupants": null,
+        "visitors": null,
+        "customers": null,
+        "trainees": null,
+        "cohort_peak": null,
+        "shift_population": null,
+        "observed_maximum_concurrent_attendance": null,
+        "proposed_future_positions_by_horizon": {
+          "2026": null,
+          "2031": null,
+          "2036": null
+        }
+      }
     },
     {
       "id": "SH-SITE-0001-B02-L03",
@@ -733,7 +1708,32 @@
       "touchdown_seats": 0,
       "training_seats": 0,
       "meeting_seats": 0,
-      "resident_beds": 0
+      "resident_beds": 0,
+      "population_measurements": {
+        "source": "geospatial/facilities/population/policy.json /planning_basis",
+        "status": "ACTUAL_SPATIAL_ASSIGNMENTS_NOT_ESTABLISHED",
+        "meaning": "Organizational people and billet totals are not evidence of assignment to these concept spaces. Null is unknown; physical capacity is recorded separately.",
+        "current_named_employees_assigned": null,
+        "authorized_positions_assigned": null,
+        "vacant_authorized_positions": null,
+        "unnamed_authorized_positions": null,
+        "remote_staff": null,
+        "distributed_staff": null,
+        "field_staff": null,
+        "deployed_staff": null,
+        "resident_occupants": null,
+        "visitors": null,
+        "customers": null,
+        "trainees": null,
+        "cohort_peak": null,
+        "shift_population": null,
+        "observed_maximum_concurrent_attendance": null,
+        "proposed_future_positions_by_horizon": {
+          "2026": null,
+          "2031": null,
+          "2036": null
+        }
+      }
     },
     {
       "id": "SH-SITE-0001-B03-L01",
@@ -750,7 +1750,32 @@
       "touchdown_seats": 0,
       "training_seats": 0,
       "meeting_seats": 38,
-      "resident_beds": 0
+      "resident_beds": 0,
+      "population_measurements": {
+        "source": "geospatial/facilities/population/policy.json /planning_basis",
+        "status": "ACTUAL_SPATIAL_ASSIGNMENTS_NOT_ESTABLISHED",
+        "meaning": "Organizational people and billet totals are not evidence of assignment to these concept spaces. Null is unknown; physical capacity is recorded separately.",
+        "current_named_employees_assigned": null,
+        "authorized_positions_assigned": null,
+        "vacant_authorized_positions": null,
+        "unnamed_authorized_positions": null,
+        "remote_staff": null,
+        "distributed_staff": null,
+        "field_staff": null,
+        "deployed_staff": null,
+        "resident_occupants": null,
+        "visitors": null,
+        "customers": null,
+        "trainees": null,
+        "cohort_peak": null,
+        "shift_population": null,
+        "observed_maximum_concurrent_attendance": null,
+        "proposed_future_positions_by_horizon": {
+          "2026": null,
+          "2031": null,
+          "2036": null
+        }
+      }
     },
     {
       "id": "SH-SITE-0001-B03-L02",
@@ -767,7 +1792,32 @@
       "touchdown_seats": 0,
       "training_seats": 0,
       "meeting_seats": 48,
-      "resident_beds": 0
+      "resident_beds": 0,
+      "population_measurements": {
+        "source": "geospatial/facilities/population/policy.json /planning_basis",
+        "status": "ACTUAL_SPATIAL_ASSIGNMENTS_NOT_ESTABLISHED",
+        "meaning": "Organizational people and billet totals are not evidence of assignment to these concept spaces. Null is unknown; physical capacity is recorded separately.",
+        "current_named_employees_assigned": null,
+        "authorized_positions_assigned": null,
+        "vacant_authorized_positions": null,
+        "unnamed_authorized_positions": null,
+        "remote_staff": null,
+        "distributed_staff": null,
+        "field_staff": null,
+        "deployed_staff": null,
+        "resident_occupants": null,
+        "visitors": null,
+        "customers": null,
+        "trainees": null,
+        "cohort_peak": null,
+        "shift_population": null,
+        "observed_maximum_concurrent_attendance": null,
+        "proposed_future_positions_by_horizon": {
+          "2026": null,
+          "2031": null,
+          "2036": null
+        }
+      }
     },
     {
       "id": "SH-SITE-0001-B03-L03",
@@ -784,7 +1834,32 @@
       "touchdown_seats": 0,
       "training_seats": 0,
       "meeting_seats": 42,
-      "resident_beds": 0
+      "resident_beds": 0,
+      "population_measurements": {
+        "source": "geospatial/facilities/population/policy.json /planning_basis",
+        "status": "ACTUAL_SPATIAL_ASSIGNMENTS_NOT_ESTABLISHED",
+        "meaning": "Organizational people and billet totals are not evidence of assignment to these concept spaces. Null is unknown; physical capacity is recorded separately.",
+        "current_named_employees_assigned": null,
+        "authorized_positions_assigned": null,
+        "vacant_authorized_positions": null,
+        "unnamed_authorized_positions": null,
+        "remote_staff": null,
+        "distributed_staff": null,
+        "field_staff": null,
+        "deployed_staff": null,
+        "resident_occupants": null,
+        "visitors": null,
+        "customers": null,
+        "trainees": null,
+        "cohort_peak": null,
+        "shift_population": null,
+        "observed_maximum_concurrent_attendance": null,
+        "proposed_future_positions_by_horizon": {
+          "2026": null,
+          "2031": null,
+          "2036": null
+        }
+      }
     },
     {
       "id": "SH-SITE-0001-B04-L01",
@@ -801,7 +1876,32 @@
       "touchdown_seats": 8,
       "training_seats": 60,
       "meeting_seats": 88,
-      "resident_beds": 0
+      "resident_beds": 0,
+      "population_measurements": {
+        "source": "geospatial/facilities/population/policy.json /planning_basis",
+        "status": "ACTUAL_SPATIAL_ASSIGNMENTS_NOT_ESTABLISHED",
+        "meaning": "Organizational people and billet totals are not evidence of assignment to these concept spaces. Null is unknown; physical capacity is recorded separately.",
+        "current_named_employees_assigned": null,
+        "authorized_positions_assigned": null,
+        "vacant_authorized_positions": null,
+        "unnamed_authorized_positions": null,
+        "remote_staff": null,
+        "distributed_staff": null,
+        "field_staff": null,
+        "deployed_staff": null,
+        "resident_occupants": null,
+        "visitors": null,
+        "customers": null,
+        "trainees": null,
+        "cohort_peak": null,
+        "shift_population": null,
+        "observed_maximum_concurrent_attendance": null,
+        "proposed_future_positions_by_horizon": {
+          "2026": null,
+          "2031": null,
+          "2036": null
+        }
+      }
     },
     {
       "id": "SH-SITE-0001-B04-L02",
@@ -818,7 +1918,32 @@
       "touchdown_seats": 0,
       "training_seats": 60,
       "meeting_seats": 36,
-      "resident_beds": 0
+      "resident_beds": 0,
+      "population_measurements": {
+        "source": "geospatial/facilities/population/policy.json /planning_basis",
+        "status": "ACTUAL_SPATIAL_ASSIGNMENTS_NOT_ESTABLISHED",
+        "meaning": "Organizational people and billet totals are not evidence of assignment to these concept spaces. Null is unknown; physical capacity is recorded separately.",
+        "current_named_employees_assigned": null,
+        "authorized_positions_assigned": null,
+        "vacant_authorized_positions": null,
+        "unnamed_authorized_positions": null,
+        "remote_staff": null,
+        "distributed_staff": null,
+        "field_staff": null,
+        "deployed_staff": null,
+        "resident_occupants": null,
+        "visitors": null,
+        "customers": null,
+        "trainees": null,
+        "cohort_peak": null,
+        "shift_population": null,
+        "observed_maximum_concurrent_attendance": null,
+        "proposed_future_positions_by_horizon": {
+          "2026": null,
+          "2031": null,
+          "2036": null
+        }
+      }
     },
     {
       "id": "SH-SITE-0001-B05-L01",
@@ -835,7 +1960,32 @@
       "touchdown_seats": 0,
       "training_seats": 0,
       "meeting_seats": 0,
-      "resident_beds": 23
+      "resident_beds": 23,
+      "population_measurements": {
+        "source": "geospatial/facilities/population/policy.json /planning_basis",
+        "status": "ACTUAL_SPATIAL_ASSIGNMENTS_NOT_ESTABLISHED",
+        "meaning": "Organizational people and billet totals are not evidence of assignment to these concept spaces. Null is unknown; physical capacity is recorded separately.",
+        "current_named_employees_assigned": null,
+        "authorized_positions_assigned": null,
+        "vacant_authorized_positions": null,
+        "unnamed_authorized_positions": null,
+        "remote_staff": null,
+        "distributed_staff": null,
+        "field_staff": null,
+        "deployed_staff": null,
+        "resident_occupants": null,
+        "visitors": null,
+        "customers": null,
+        "trainees": null,
+        "cohort_peak": null,
+        "shift_population": null,
+        "observed_maximum_concurrent_attendance": null,
+        "proposed_future_positions_by_horizon": {
+          "2026": null,
+          "2031": null,
+          "2036": null
+        }
+      }
     },
     {
       "id": "SH-SITE-0001-B05-L02",
@@ -852,7 +2002,32 @@
       "touchdown_seats": 0,
       "training_seats": 0,
       "meeting_seats": 0,
-      "resident_beds": 23
+      "resident_beds": 23,
+      "population_measurements": {
+        "source": "geospatial/facilities/population/policy.json /planning_basis",
+        "status": "ACTUAL_SPATIAL_ASSIGNMENTS_NOT_ESTABLISHED",
+        "meaning": "Organizational people and billet totals are not evidence of assignment to these concept spaces. Null is unknown; physical capacity is recorded separately.",
+        "current_named_employees_assigned": null,
+        "authorized_positions_assigned": null,
+        "vacant_authorized_positions": null,
+        "unnamed_authorized_positions": null,
+        "remote_staff": null,
+        "distributed_staff": null,
+        "field_staff": null,
+        "deployed_staff": null,
+        "resident_occupants": null,
+        "visitors": null,
+        "customers": null,
+        "trainees": null,
+        "cohort_peak": null,
+        "shift_population": null,
+        "observed_maximum_concurrent_attendance": null,
+        "proposed_future_positions_by_horizon": {
+          "2026": null,
+          "2031": null,
+          "2036": null
+        }
+      }
     },
     {
       "id": "SH-SITE-0001-B06-L01",
@@ -869,7 +2044,32 @@
       "touchdown_seats": 0,
       "training_seats": 0,
       "meeting_seats": 8,
-      "resident_beds": 0
+      "resident_beds": 0,
+      "population_measurements": {
+        "source": "geospatial/facilities/population/policy.json /planning_basis",
+        "status": "ACTUAL_SPATIAL_ASSIGNMENTS_NOT_ESTABLISHED",
+        "meaning": "Organizational people and billet totals are not evidence of assignment to these concept spaces. Null is unknown; physical capacity is recorded separately.",
+        "current_named_employees_assigned": null,
+        "authorized_positions_assigned": null,
+        "vacant_authorized_positions": null,
+        "unnamed_authorized_positions": null,
+        "remote_staff": null,
+        "distributed_staff": null,
+        "field_staff": null,
+        "deployed_staff": null,
+        "resident_occupants": null,
+        "visitors": null,
+        "customers": null,
+        "trainees": null,
+        "cohort_peak": null,
+        "shift_population": null,
+        "observed_maximum_concurrent_attendance": null,
+        "proposed_future_positions_by_horizon": {
+          "2026": null,
+          "2031": null,
+          "2036": null
+        }
+      }
     },
     {
       "id": "SH-IND-FAC-TAY-YARD-B01-L01",
@@ -886,7 +2086,32 @@
       "touchdown_seats": 0,
       "training_seats": 0,
       "meeting_seats": 4,
-      "resident_beds": 0
+      "resident_beds": 0,
+      "population_measurements": {
+        "source": "geospatial/facilities/population/policy.json /planning_basis",
+        "status": "ACTUAL_SPATIAL_ASSIGNMENTS_NOT_ESTABLISHED",
+        "meaning": "Organizational people and billet totals are not evidence of assignment to these concept spaces. Null is unknown; physical capacity is recorded separately.",
+        "current_named_employees_assigned": null,
+        "authorized_positions_assigned": null,
+        "vacant_authorized_positions": null,
+        "unnamed_authorized_positions": null,
+        "remote_staff": null,
+        "distributed_staff": null,
+        "field_staff": null,
+        "deployed_staff": null,
+        "resident_occupants": null,
+        "visitors": null,
+        "customers": null,
+        "trainees": null,
+        "cohort_peak": null,
+        "shift_population": null,
+        "observed_maximum_concurrent_attendance": null,
+        "proposed_future_positions_by_horizon": {
+          "2026": null,
+          "2031": null,
+          "2036": null
+        }
+      }
     },
     {
       "id": "SH-IND-FAC-TAY-YARD-B02-L01",
@@ -903,7 +2128,32 @@
       "touchdown_seats": 0,
       "training_seats": 0,
       "meeting_seats": 24,
-      "resident_beds": 0
+      "resident_beds": 0,
+      "population_measurements": {
+        "source": "geospatial/facilities/population/policy.json /planning_basis",
+        "status": "ACTUAL_SPATIAL_ASSIGNMENTS_NOT_ESTABLISHED",
+        "meaning": "Organizational people and billet totals are not evidence of assignment to these concept spaces. Null is unknown; physical capacity is recorded separately.",
+        "current_named_employees_assigned": null,
+        "authorized_positions_assigned": null,
+        "vacant_authorized_positions": null,
+        "unnamed_authorized_positions": null,
+        "remote_staff": null,
+        "distributed_staff": null,
+        "field_staff": null,
+        "deployed_staff": null,
+        "resident_occupants": null,
+        "visitors": null,
+        "customers": null,
+        "trainees": null,
+        "cohort_peak": null,
+        "shift_population": null,
+        "observed_maximum_concurrent_attendance": null,
+        "proposed_future_positions_by_horizon": {
+          "2026": null,
+          "2031": null,
+          "2036": null
+        }
+      }
     },
     {
       "id": "SH-IND-FAC-TAY-WAREHOUSE-B01-L01",
@@ -920,7 +2170,32 @@
       "touchdown_seats": 0,
       "training_seats": 0,
       "meeting_seats": 4,
-      "resident_beds": 0
+      "resident_beds": 0,
+      "population_measurements": {
+        "source": "geospatial/facilities/population/policy.json /planning_basis",
+        "status": "ACTUAL_SPATIAL_ASSIGNMENTS_NOT_ESTABLISHED",
+        "meaning": "Organizational people and billet totals are not evidence of assignment to these concept spaces. Null is unknown; physical capacity is recorded separately.",
+        "current_named_employees_assigned": null,
+        "authorized_positions_assigned": null,
+        "vacant_authorized_positions": null,
+        "unnamed_authorized_positions": null,
+        "remote_staff": null,
+        "distributed_staff": null,
+        "field_staff": null,
+        "deployed_staff": null,
+        "resident_occupants": null,
+        "visitors": null,
+        "customers": null,
+        "trainees": null,
+        "cohort_peak": null,
+        "shift_population": null,
+        "observed_maximum_concurrent_attendance": null,
+        "proposed_future_positions_by_horizon": {
+          "2026": null,
+          "2031": null,
+          "2036": null
+        }
+      }
     },
     {
       "id": "SH-IND-FAC-TAY-TRUCK-B01-L01",
@@ -937,7 +2212,32 @@
       "touchdown_seats": 0,
       "training_seats": 0,
       "meeting_seats": 6,
-      "resident_beds": 0
+      "resident_beds": 0,
+      "population_measurements": {
+        "source": "geospatial/facilities/population/policy.json /planning_basis",
+        "status": "ACTUAL_SPATIAL_ASSIGNMENTS_NOT_ESTABLISHED",
+        "meaning": "Organizational people and billet totals are not evidence of assignment to these concept spaces. Null is unknown; physical capacity is recorded separately.",
+        "current_named_employees_assigned": null,
+        "authorized_positions_assigned": null,
+        "vacant_authorized_positions": null,
+        "unnamed_authorized_positions": null,
+        "remote_staff": null,
+        "distributed_staff": null,
+        "field_staff": null,
+        "deployed_staff": null,
+        "resident_occupants": null,
+        "visitors": null,
+        "customers": null,
+        "trainees": null,
+        "cohort_peak": null,
+        "shift_population": null,
+        "observed_maximum_concurrent_attendance": null,
+        "proposed_future_positions_by_horizon": {
+          "2026": null,
+          "2031": null,
+          "2036": null
+        }
+      }
     },
     {
       "id": "SH-IND-FAC-RAW-WAREHOUSE-B01-L01",
@@ -954,7 +2254,32 @@
       "touchdown_seats": 0,
       "training_seats": 0,
       "meeting_seats": 2,
-      "resident_beds": 0
+      "resident_beds": 0,
+      "population_measurements": {
+        "source": "geospatial/facilities/population/policy.json /planning_basis",
+        "status": "ACTUAL_SPATIAL_ASSIGNMENTS_NOT_ESTABLISHED",
+        "meaning": "Organizational people and billet totals are not evidence of assignment to these concept spaces. Null is unknown; physical capacity is recorded separately.",
+        "current_named_employees_assigned": null,
+        "authorized_positions_assigned": null,
+        "vacant_authorized_positions": null,
+        "unnamed_authorized_positions": null,
+        "remote_staff": null,
+        "distributed_staff": null,
+        "field_staff": null,
+        "deployed_staff": null,
+        "resident_occupants": null,
+        "visitors": null,
+        "customers": null,
+        "trainees": null,
+        "cohort_peak": null,
+        "shift_population": null,
+        "observed_maximum_concurrent_attendance": null,
+        "proposed_future_positions_by_horizon": {
+          "2026": null,
+          "2031": null,
+          "2036": null
+        }
+      }
     },
     {
       "id": "SH-IND-FAC-ARU-OFFICE-B01-L01",
@@ -971,7 +2296,32 @@
       "touchdown_seats": 0,
       "training_seats": 0,
       "meeting_seats": 10,
-      "resident_beds": 0
+      "resident_beds": 0,
+      "population_measurements": {
+        "source": "geospatial/facilities/population/policy.json /planning_basis",
+        "status": "ACTUAL_SPATIAL_ASSIGNMENTS_NOT_ESTABLISHED",
+        "meaning": "Organizational people and billet totals are not evidence of assignment to these concept spaces. Null is unknown; physical capacity is recorded separately.",
+        "current_named_employees_assigned": null,
+        "authorized_positions_assigned": null,
+        "vacant_authorized_positions": null,
+        "unnamed_authorized_positions": null,
+        "remote_staff": null,
+        "distributed_staff": null,
+        "field_staff": null,
+        "deployed_staff": null,
+        "resident_occupants": null,
+        "visitors": null,
+        "customers": null,
+        "trainees": null,
+        "cohort_peak": null,
+        "shift_population": null,
+        "observed_maximum_concurrent_attendance": null,
+        "proposed_future_positions_by_horizon": {
+          "2026": null,
+          "2031": null,
+          "2036": null
+        }
+      }
     },
     {
       "id": "SH-FAC-FORT-BIG-L01",
@@ -988,7 +2338,32 @@
       "touchdown_seats": 0,
       "training_seats": 0,
       "meeting_seats": 12,
-      "resident_beds": 0
+      "resident_beds": 0,
+      "population_measurements": {
+        "source": "geospatial/facilities/population/policy.json /planning_basis",
+        "status": "ACTUAL_SPATIAL_ASSIGNMENTS_NOT_ESTABLISHED",
+        "meaning": "Organizational people and billet totals are not evidence of assignment to these concept spaces. Null is unknown; physical capacity is recorded separately.",
+        "current_named_employees_assigned": null,
+        "authorized_positions_assigned": null,
+        "vacant_authorized_positions": null,
+        "unnamed_authorized_positions": null,
+        "remote_staff": null,
+        "distributed_staff": null,
+        "field_staff": null,
+        "deployed_staff": null,
+        "resident_occupants": null,
+        "visitors": null,
+        "customers": null,
+        "trainees": null,
+        "cohort_peak": null,
+        "shift_population": null,
+        "observed_maximum_concurrent_attendance": null,
+        "proposed_future_positions_by_horizon": {
+          "2026": null,
+          "2031": null,
+          "2036": null
+        }
+      }
     },
     {
       "id": "SH-FAC-FORT-SMALL-L01",
@@ -1005,7 +2380,32 @@
       "touchdown_seats": 2,
       "training_seats": 0,
       "meeting_seats": 20,
-      "resident_beds": 0
+      "resident_beds": 0,
+      "population_measurements": {
+        "source": "geospatial/facilities/population/policy.json /planning_basis",
+        "status": "ACTUAL_SPATIAL_ASSIGNMENTS_NOT_ESTABLISHED",
+        "meaning": "Organizational people and billet totals are not evidence of assignment to these concept spaces. Null is unknown; physical capacity is recorded separately.",
+        "current_named_employees_assigned": null,
+        "authorized_positions_assigned": null,
+        "vacant_authorized_positions": null,
+        "unnamed_authorized_positions": null,
+        "remote_staff": null,
+        "distributed_staff": null,
+        "field_staff": null,
+        "deployed_staff": null,
+        "resident_occupants": null,
+        "visitors": null,
+        "customers": null,
+        "trainees": null,
+        "cohort_peak": null,
+        "shift_population": null,
+        "observed_maximum_concurrent_attendance": null,
+        "proposed_future_positions_by_horizon": {
+          "2026": null,
+          "2031": null,
+          "2036": null
+        }
+      }
     },
     {
       "id": "SH-FAC-FORT-SMALL-L02",
@@ -1022,7 +2422,32 @@
       "touchdown_seats": 4,
       "training_seats": 0,
       "meeting_seats": 6,
-      "resident_beds": 6
+      "resident_beds": 6,
+      "population_measurements": {
+        "source": "geospatial/facilities/population/policy.json /planning_basis",
+        "status": "ACTUAL_SPATIAL_ASSIGNMENTS_NOT_ESTABLISHED",
+        "meaning": "Organizational people and billet totals are not evidence of assignment to these concept spaces. Null is unknown; physical capacity is recorded separately.",
+        "current_named_employees_assigned": null,
+        "authorized_positions_assigned": null,
+        "vacant_authorized_positions": null,
+        "unnamed_authorized_positions": null,
+        "remote_staff": null,
+        "distributed_staff": null,
+        "field_staff": null,
+        "deployed_staff": null,
+        "resident_occupants": null,
+        "visitors": null,
+        "customers": null,
+        "trainees": null,
+        "cohort_peak": null,
+        "shift_population": null,
+        "observed_maximum_concurrent_attendance": null,
+        "proposed_future_positions_by_horizon": {
+          "2026": null,
+          "2031": null,
+          "2036": null
+        }
+      }
     },
     {
       "id": "SH-FAC-FORT-WHITE-L01",
@@ -1039,7 +2464,32 @@
       "touchdown_seats": 0,
       "training_seats": 0,
       "meeting_seats": 0,
-      "resident_beds": 0
+      "resident_beds": 0,
+      "population_measurements": {
+        "source": "geospatial/facilities/population/policy.json /planning_basis",
+        "status": "ACTUAL_SPATIAL_ASSIGNMENTS_NOT_ESTABLISHED",
+        "meaning": "Organizational people and billet totals are not evidence of assignment to these concept spaces. Null is unknown; physical capacity is recorded separately.",
+        "current_named_employees_assigned": null,
+        "authorized_positions_assigned": null,
+        "vacant_authorized_positions": null,
+        "unnamed_authorized_positions": null,
+        "remote_staff": null,
+        "distributed_staff": null,
+        "field_staff": null,
+        "deployed_staff": null,
+        "resident_occupants": null,
+        "visitors": null,
+        "customers": null,
+        "trainees": null,
+        "cohort_peak": null,
+        "shift_population": null,
+        "observed_maximum_concurrent_attendance": null,
+        "proposed_future_positions_by_horizon": {
+          "2026": null,
+          "2031": null,
+          "2036": null
+        }
+      }
     },
     {
       "id": "SH-SITE-0005-B01-L01",
@@ -1056,7 +2506,32 @@
       "touchdown_seats": 0,
       "training_seats": 0,
       "meeting_seats": 8,
-      "resident_beds": 0
+      "resident_beds": 0,
+      "population_measurements": {
+        "source": "geospatial/facilities/population/policy.json /planning_basis",
+        "status": "ACTUAL_SPATIAL_ASSIGNMENTS_NOT_ESTABLISHED",
+        "meaning": "Organizational people and billet totals are not evidence of assignment to these concept spaces. Null is unknown; physical capacity is recorded separately.",
+        "current_named_employees_assigned": null,
+        "authorized_positions_assigned": null,
+        "vacant_authorized_positions": null,
+        "unnamed_authorized_positions": null,
+        "remote_staff": null,
+        "distributed_staff": null,
+        "field_staff": null,
+        "deployed_staff": null,
+        "resident_occupants": null,
+        "visitors": null,
+        "customers": null,
+        "trainees": null,
+        "cohort_peak": null,
+        "shift_population": null,
+        "observed_maximum_concurrent_attendance": null,
+        "proposed_future_positions_by_horizon": {
+          "2026": null,
+          "2031": null,
+          "2036": null
+        }
+      }
     },
     {
       "id": "SH-SITE-0005-B02-L01",
@@ -1073,7 +2548,32 @@
       "touchdown_seats": 0,
       "training_seats": 8,
       "meeting_seats": 0,
-      "resident_beds": 0
+      "resident_beds": 0,
+      "population_measurements": {
+        "source": "geospatial/facilities/population/policy.json /planning_basis",
+        "status": "ACTUAL_SPATIAL_ASSIGNMENTS_NOT_ESTABLISHED",
+        "meaning": "Organizational people and billet totals are not evidence of assignment to these concept spaces. Null is unknown; physical capacity is recorded separately.",
+        "current_named_employees_assigned": null,
+        "authorized_positions_assigned": null,
+        "vacant_authorized_positions": null,
+        "unnamed_authorized_positions": null,
+        "remote_staff": null,
+        "distributed_staff": null,
+        "field_staff": null,
+        "deployed_staff": null,
+        "resident_occupants": null,
+        "visitors": null,
+        "customers": null,
+        "trainees": null,
+        "cohort_peak": null,
+        "shift_population": null,
+        "observed_maximum_concurrent_attendance": null,
+        "proposed_future_positions_by_horizon": {
+          "2026": null,
+          "2031": null,
+          "2036": null
+        }
+      }
     },
     {
       "id": "SH-SITE-0005-B03-L01",
@@ -1090,7 +2590,32 @@
       "touchdown_seats": 0,
       "training_seats": 0,
       "meeting_seats": 0,
-      "resident_beds": 0
+      "resident_beds": 0,
+      "population_measurements": {
+        "source": "geospatial/facilities/population/policy.json /planning_basis",
+        "status": "ACTUAL_SPATIAL_ASSIGNMENTS_NOT_ESTABLISHED",
+        "meaning": "Organizational people and billet totals are not evidence of assignment to these concept spaces. Null is unknown; physical capacity is recorded separately.",
+        "current_named_employees_assigned": null,
+        "authorized_positions_assigned": null,
+        "vacant_authorized_positions": null,
+        "unnamed_authorized_positions": null,
+        "remote_staff": null,
+        "distributed_staff": null,
+        "field_staff": null,
+        "deployed_staff": null,
+        "resident_occupants": null,
+        "visitors": null,
+        "customers": null,
+        "trainees": null,
+        "cohort_peak": null,
+        "shift_population": null,
+        "observed_maximum_concurrent_attendance": null,
+        "proposed_future_positions_by_horizon": {
+          "2026": null,
+          "2031": null,
+          "2036": null
+        }
+      }
     },
     {
       "id": "SH-SITE-0005-B04-L01",
@@ -1107,7 +2632,32 @@
       "touchdown_seats": 0,
       "training_seats": 0,
       "meeting_seats": 0,
-      "resident_beds": 0
+      "resident_beds": 0,
+      "population_measurements": {
+        "source": "geospatial/facilities/population/policy.json /planning_basis",
+        "status": "ACTUAL_SPATIAL_ASSIGNMENTS_NOT_ESTABLISHED",
+        "meaning": "Organizational people and billet totals are not evidence of assignment to these concept spaces. Null is unknown; physical capacity is recorded separately.",
+        "current_named_employees_assigned": null,
+        "authorized_positions_assigned": null,
+        "vacant_authorized_positions": null,
+        "unnamed_authorized_positions": null,
+        "remote_staff": null,
+        "distributed_staff": null,
+        "field_staff": null,
+        "deployed_staff": null,
+        "resident_occupants": null,
+        "visitors": null,
+        "customers": null,
+        "trainees": null,
+        "cohort_peak": null,
+        "shift_population": null,
+        "observed_maximum_concurrent_attendance": null,
+        "proposed_future_positions_by_horizon": {
+          "2026": null,
+          "2031": null,
+          "2036": null
+        }
+      }
     }
   ],
   "sacramento_scenarios": [
@@ -1135,7 +2685,7 @@
       "trainees": 120,
       "other_visitors": 28,
       "resident_trainees_subset": 46,
-      "basis": "SAC-A02; cohort scheduling keeps resident trainees inside the 120, not an additional 48."
+      "basis": "SAC-A02; cohort scheduling keeps resident trainees inside the 120, not an additional resident cohort."
     },
     {
       "id": "SAC-2026-DESIGN-NIGHT",

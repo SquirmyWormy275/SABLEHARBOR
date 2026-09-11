@@ -5,8 +5,8 @@
   "pdf_pages": 146,
   "source_sha256": {
     "geospatial/facilities/coverage/COVERAGE_MATRIX.json": "0383d9ca7609d8cc999ccecb85a3b216137fa2f138785a43ac71d5c1ff7a25f9",
-    "geospatial/maps/facilities/MANIFEST.json": "e8681a47549ce0738ee16fc61cbe9e80feb5a894215635822ec124761ef4050c",
-    "geospatial/facilities/source/campus.json": "41de327022a85cca9ba6509953e5fa83e0bf8dcbb59c6741848ad997a839cd26",
+    "geospatial/maps/facilities/MANIFEST.json": "80cf2cc6fbe30ed1e9c0a6165e59cd6bb90a0c450b36e8271dd66e3520e5e07a",
+    "geospatial/facilities/source/campus.json": "17cd8647d3c2883ba5d70d236cd4f69eec6ff36d08282baa69734c28fa7f1e6b",
     "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
     "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
     "geospatial/facilities/atlas.py": "1ebedc81180d6fa117ca2ec404f4b8dd7e6dd71e4407648e6e25e4d0a3ddb0b8"

@@ -39,6 +39,20 @@ def main():
                     excluded.append(member.name)
                     continue
                 data = source.extractfile(member).read()
+                origin = "committed_source"
+                if member.name == "docs/releases/FACILITY_ATLAS_RELEASES.md":
+                    origin = "generated_offline_release_navigation"
+                    data = (
+                        "# Facility atlas release navigation\n\n"
+                        f"Packaged source snapshot: `{revision}`.\n\n"
+                        "Use [the embedded manifest](../../FACILITY_PACKAGE_MANIFEST.json) "
+                        "for every included file hash. The enclosing archive checksum and accepted "
+                        "release record are [published with the release]"
+                        "(https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/facility-atlas-v0.1.0).\n\n"
+                        "This generated navigation page avoids embedding a circular archive checksum "
+                        "or stale draft-release metadata. The committed source record remains retrievable "
+                        f"at [its exact revision](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/{revision}/docs/releases/FACILITY_ATLAS_RELEASES.md).\n"
+                    ).encode()
                 info = zipfile.ZipInfo(member.name, (2026, 9, 11, 0, 0, 0))
                 info.compress_type = zipfile.ZIP_DEFLATED
                 info.external_attr = 0o100644 << 16
@@ -46,6 +60,7 @@ def main():
                 records.append(
                     {
                         "path": member.name,
+                        "origin": origin,
                         "bytes": len(data),
                         "sha256": hashlib.sha256(data).hexdigest(),
                     }
