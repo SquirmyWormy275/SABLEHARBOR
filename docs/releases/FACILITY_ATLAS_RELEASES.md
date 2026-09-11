@@ -1,23 +1,38 @@
 # Facility atlas controlled releases
 
-## v0.1.0 — September 11, 2026
+## v0.2.0 / R02 — pending acceptance
 
-Acceptance: [PR #121](https://github.com/SquirmyWormy275/SABLEHARBOR/pull/121). Release publication follows successful final-head CI and PR merge. The GitHub release's published state and tag identify actual delivery; this pre-merge index alone is not a publication claim.
+Acceptance vehicle: [PR #121](https://github.com/SquirmyWormy275/SABLEHARBOR/pull/121). Final R02 visual QA, deterministic regeneration, final-head CI, merge and release publication remain pending. This index does not claim a published delivery.
 
-- [Release `facility-atlas-v0.1.0`](https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/facility-atlas-v0.1.0).
-- [Package](https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/facility-atlas-v0.1.0/SABLE_HARBOR_Facility_Atlas_v0.1.0.zip): **148,862,665 bytes**, SHA-256 `8fb51b8b42eb09b3446977d1c6dc1c4f8faf13dc5887b49bb4a2dc1b26110168`.
-- [File manifest](https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/facility-atlas-v0.1.0/SABLE_HARBOR_Facility_Atlas_v0.1.0.manifest.json) and [checksum](https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/facility-atlas-v0.1.0/SABLE_HARBOR_Facility_Atlas_v0.1.0.sha256).
-- Exact packaged source commit: `dcb827cf296ee5a2e1eb31874d7997c320b1aa6b`; authoritative canon base `786fc9a5311a04dde92ee6dbb08ac3b77a380200`. Later release-index or closeout-evidence commits do not change packaged source identity.
-- Contents: 1,842 files plus an embedded package manifest. One file is generated offline release navigation, replacing the source release index to avoid a circular archive checksum; the other 1,841 files retain exact committed bytes. The complete public source context is included deliberately so atlas provenance links work offline. Historical source statuses remain unchanged. Two preserved historical ZIP packages are excluded from redistribution; their original Git bytes remain intact.
-- Start at `geospatial/maps/index.html`, or use the portable 146-page PDF and individual map index. Contains 63 facility sheets in three independent formats, 16 site packages, 19 building plans and 27 floors, alongside preserved rc4 context.
-- Boundaries: concept layouts and assumed capacity, not established property, hiring, construction, actual occupancy or operating effectiveness. The [dated closeout](../../geospatial/facilities/CLOSEOUT_2026-09-11.md) and per-record coverage dispositions preserve unknown facts.
+The successor preserves the [approved R01 references](../facilities/references/sacramento-hq/r01-approved/README.md), ingested in `ebe7e9e`, and replaces the pre-recovery six-building Sacramento design. Its source program has four Sacramento buildings, ten floors, 175,392 sf gross, 362 workplaces and 60 single rooms. The complete facility inventory is 16 sites, 17 buildings, 24 floors and 58 sheets in 174 independent SVG/PNG/PDF assets, alongside the unchanged eleven rc4 context records. Actual personnel, occupancy, property and construction boundaries remain explicit.
 
-Build from the exact committed snapshot using:
+| Required release evidence | Current state |
+|---|---|
+| Version/tag | `facility-atlas-v0.2.0` reserved for the successor |
+| Package | `SABLE_HARBOR_Facility_Atlas_v0.2.0.zip`; final bytes and SHA-256 pending |
+| File manifest and checksum | Same basename with `.manifest.json` and `.sha256`; pending final build |
+| Exact packaged source commit | Pending final validated committed snapshot |
+| Canon base | `786fc9a5311a04dde92ee6dbb08ac3b77a380200`; approved R01 ingestion `ebe7e9e` adds visual authority |
+| PDF pages, bookmarks and link totals | Pending final atlas manifest |
+| QA / CI / merge | Pending exact final-head evidence |
+| Published download and retrieval verification | Pending gated publication; no delivery asserted |
+
+Build only from the final committed snapshot:
 
 ```sh
 python geospatial/facilities/package_release.py \
-  --revision dcb827cf296ee5a2e1eb31874d7997c320b1aa6b \
-  --output /tmp/SABLE_HARBOR_Facility_Atlas_v0.1.0.zip
+  --revision <FINAL_VALIDATED_COMMIT> \
+  --output /tmp/SABLE_HARBOR_Facility_Atlas_v0.2.0.zip
 ```
 
-The builder validates ZIP integrity and every embedded file checksum. Archive member timestamps, ordering and permissions are fixed. Release download bytes must match the recorded checksum before delivery is asserted. Corrections require a successor version; no published asset is silently replaced.
+The builder validates ZIP integrity and every embedded checksum, with fixed member timestamps, ordering and permissions. It includes the public repository source context so provenance links resolve offline. One release-navigation file is generated to avoid a circular archive checksum. Historical source statuses retain their original scope.
+
+The two historical distribution ZIPs remain excluded. The immutable owner-supplied approved source archive, `docs/facilities/references/sacramento-hq/r01-approved/SABLE_HARBOR_Sacramento_HQ_Drafts_R01.zip`, is an explicit inclusion exception: SHA-256 `eb10588f6cc6e214d8541b96b1bd044f52f0df85e384fc53a316b55b5d026fe0`. The builder rejects changed or missing reference bytes. This is preserved source artwork, not a duplicate generated delivery ZIP. The original PNGs, handover, addendum and reference manifest are also included unchanged.
+
+Start at `geospatial/maps/index.html`, the separate `geospatial/maps/SABLE_HARBOR_Facility_Atlas_v0.2.0.pdf`, or the individual artifact index. The [closeout record](../../geospatial/facilities/CLOSEOUT_2026-09-11.md) tracks remaining evidence. Publication requires retrievable download bytes matching the final checksum; published identities must never be silently overwritten.
+
+## v0.1.0 — superseded unpublished draft
+
+The pre-R01 draft was **not published**. Its earlier package and QA evidence are historical build records, not accepted delivery or current campus authority. Do not use its six-building plans, capacities, atlas totals or checks as R02 acceptance evidence. The reserved draft tag/name is superseded by v0.2.0.
+
+For archaeology only: source commit `dcb827cf296ee5a2e1eb31874d7997c320b1aa6b`; draft ZIP size 148,862,665 bytes; SHA-256 `8fb51b8b42eb09b3446977d1c6dc1c4f8faf13dc5887b49bb4a2dc1b26110168`. Its 63-sheet/189-asset, 19-building/27-floor inventory predates recovery of approved R01. These recorded draft bytes are not linked as a published release. The existing published finance releases and rc4 geographic atlas are unaffected.

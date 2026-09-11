@@ -1,7 +1,8 @@
 """Build a portable, checksummed facility delivery from one committed repository snapshot.
 
 The complete public source context is included deliberately so offline atlas provenance
-links resolve. Preserved historical ZIP packages are excluded from redistribution.
+links resolve. Historical distribution ZIPs are excluded; the immutable approved R01
+source ZIP is included as an explicit source-artifact exception.
 """
 
 import argparse
@@ -14,6 +15,8 @@ import tarfile
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[2]
+R01_SOURCE_ARCHIVE = "docs/facilities/references/sacramento-hq/r01-approved/SABLE_HARBOR_Sacramento_HQ_Drafts_R01.zip"
+R01_SOURCE_SHA256 = "eb10588f6cc6e214d8541b96b1bd044f52f0df85e384fc53a316b55b5d026fe0"
 
 
 def main():
@@ -35,11 +38,18 @@ def main():
             for member in sorted(source.getmembers(), key=lambda entry: entry.name):
                 if not member.isfile():
                     continue
-                if member.name.lower().endswith((".zip", ".tar", ".tar.gz")):
+                if (
+                    member.name.lower().endswith((".zip", ".tar", ".tar.gz"))
+                    and member.name != R01_SOURCE_ARCHIVE
+                ):
                     excluded.append(member.name)
                     continue
                 data = source.extractfile(member).read()
                 origin = "committed_source"
+                if member.name == R01_SOURCE_ARCHIVE:
+                    if hashlib.sha256(data).hexdigest() != R01_SOURCE_SHA256:
+                        raise ValueError("Approved R01 source archive bytes changed")
+                    origin = "immutable_approved_source_archive_exception"
                 if member.name == "docs/releases/FACILITY_ATLAS_RELEASES.md":
                     origin = "generated_offline_release_navigation"
                     data = (
@@ -47,8 +57,8 @@ def main():
                         f"Packaged source snapshot: `{revision}`.\n\n"
                         "Use [the embedded manifest](../../FACILITY_PACKAGE_MANIFEST.json) "
                         "for every included file hash. The enclosing archive checksum and accepted "
-                        "release record are [published with the release]"
-                        "(https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/facility-atlas-v0.1.0).\n\n"
+                        "release record belong with the [versioned release]"
+                        "(https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/facility-atlas-v0.2.0).\n\n"
                         "This generated navigation page avoids embedding a circular archive checksum "
                         "or stale draft-release metadata. The committed source record remains retrievable "
                         f"at [its exact revision](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/{revision}/docs/releases/FACILITY_ATLAS_RELEASES.md).\n"
@@ -65,13 +75,21 @@ def main():
                         "sha256": hashlib.sha256(data).hexdigest(),
                     }
                 )
+            if not any(r["path"] == R01_SOURCE_ARCHIVE for r in records):
+                raise ValueError("R02 delivery requires the immutable approved R01 source archive")
             manifest = {
-                "package": "SABLE_HARBOR_Facility_Atlas_v0.1.0",
+                "package": "SABLE_HARBOR_Facility_Atlas_v0.2.0",
                 "source_commit": revision,
                 "canon_base": "786fc9a5311a04dde92ee6dbb08ac3b77a380200",
                 "entry_point": "geospatial/maps/index.html",
                 "scope": "Facility plans with complete public repository source context for offline provenance and reproduction. Included historical sources retain their original status, not current branding authority.",
                 "excluded_historical_archives": excluded,
+                "included_source_archive_exception": {
+                    "path": R01_SOURCE_ARCHIVE,
+                    "sha256": R01_SOURCE_SHA256,
+                    "authority": "Corrected owner handover; approved source-artifact exception recorded in docs/facilities/references/sacramento-hq/r01-approved/README.md",
+                    "meaning": "Immutable original reference ZIP, not a generated distributable bundle or an R02 derivative",
+                },
                 "files": records,
             }
             payload = (json.dumps(manifest, indent=2) + "\n").encode()

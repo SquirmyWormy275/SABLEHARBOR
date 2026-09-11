@@ -4,6 +4,10 @@ Authoritative base: `786fc9a5311a04dde92ee6dbb08ac3b77a380200`. Review: Septembe
 
 Reviewed **58 remote work branches**, **44 PRs**, all issue metadata and **651 workflow artifacts**. Nine relevant artifact families were downloaded and their members inspected. No independent campus/building/floor package was found in those archives. The local stash is empty. [Machine-readable evidence](RECOVERY_LEDGER.json) includes every candidate commit, changed path, current/candidate blob comparison, PR state, local package members and inspected artifact members. [Workflow metadata](WORKFLOW_ARTIFACT_INVENTORY.json) preserves the complete API inventory.
 
+## Approved R01 package recovered after initial archaeology
+
+The corrected owner-supplied package was ingested in `ebe7e9e`: [four original PNGs, the immutable original ZIP, handover and visual addendum](../../../docs/facilities/references/sacramento-hq/r01-approved/README.md). Their manifest records exact hashes and dimensions. **Disposition: reuse as controlling Sacramento composition and visual reference.** The subsequent R02 source replaces the pre-recovery six-building design with four buildings and ten floors; vectors, PDFs and atlas pages are labelled derivatives. This recovery supersedes any claim that approved campus/floor visual references are unavailable. The separate September 3 exterior-image failure below remains a distinct historical source gap.
+
 ## Material recovery decisions
 
 - Reuse the accepted rc4 geographic framework. PR105 explicitly reconciles PR94/96; old builders, sources and archived outputs remain traceable through `geospatial/history/PR_SOURCE_INVENTORY.json`. Bedford replaces the old Kanawha map; the rejected mine connector remains historical.

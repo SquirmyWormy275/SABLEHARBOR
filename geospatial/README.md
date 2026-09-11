@@ -1,6 +1,8 @@
 # Sable Harbor geospatial framework
 
-[Facility drill-down atlas](maps/index.html) · [Campus and floor programme](facilities/README.md) · [Individual plans](maps/facilities/ARTIFACT_INDEX.md)
+[R02 facility drill-down atlas](maps/index.html) · [Campus and floor programme](facilities/README.md) · [Individual plans](maps/facilities/ARTIFACT_INDEX.md)
+
+Facility successor v0.2.0 preserves the approved R01 Sacramento four-building/ten-floor baseline and adds 58 facility sheets across 16 site packages; final R02 QA and release gates remain pending. The geographic rc4 source bytes and status boundaries remain intact.
 
 **v0.1.0-rc4 — reconciled to accepted September 7 canon.** The integration closes the superseded Geo draft work; the full geographic engineering program remains incomplete.
 

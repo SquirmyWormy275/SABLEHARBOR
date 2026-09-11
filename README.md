@@ -86,7 +86,7 @@ The [Red Wash package](red_wash/README.md) retains the standalone mine compariso
 
 ## Headquarters
 
-Sable Harbor headquarters is in **Sacramento, California**. The canonical physical direction is a beautiful, formidable long-duration research/industrial campus rather than a conventional glass tower or gaudy corporate palace. The approved September 3 exterior reference is identified in the headquarters closeout and structured register; repository ingestion of the binary image and controlled publication package is tracked as closeout work.
+Sable Harbor headquarters is in **Sacramento, California**. The canonical physical direction is a beautiful, formidable long-duration research/industrial campus rather than a conventional glass tower or gaudy corporate palace. The [recovered approved R01 campus and floor references](docs/facilities/references/sacramento-hq/r01-approved/README.md) control the R02 four-building, ten-floor planning successor. The separate September 3 exterior image remains a distinct recovery item; it does not make the approved R01 plans unavailable. R02 final QA and release acceptance remain pending.
 
 ## Blackridge status
 
