@@ -12,6 +12,7 @@ import os
 from pathlib import Path
 import textwrap
 import fitz
+from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[2]
 MAPS = ROOT / "geospatial/maps"
@@ -261,10 +262,14 @@ def main():
         )
 
     def card(m, preview=True):
+        size = ""
+        if preview and "png" in m["artifacts"]:
+            with Image.open(ROOT / m["artifacts"]["png"]["path"]) as im:
+                size = f' width="{im.width}" height="{im.height}"'
         return (
             f'<article class="map" id="map-{esc(m["id"])}"><h4>{esc(m["title"])}</h4><p class="meta">{esc(m["id"])} · {esc(m["status"])}</p><p>{links(m)}</p>'
             + (
-                f'<a href="{href(m["artifacts"]["png"]["path"])}"><img loading="lazy" src="{href(m["artifacts"]["png"]["path"])}" alt="{esc(m["title"])}"></a>'
+                f'<a href="{href(m["artifacts"]["png"]["path"])}"><img loading="lazy"{size} src="{href(m["artifacts"]["png"]["path"])}" alt="{esc(m["title"])}"></a>'
                 if preview and "png" in m["artifacts"]
                 else ""
             )
@@ -291,7 +296,7 @@ def main():
     for reference in references:
         path = rel(REFERENCES / reference["filename"])
         out.append(
-            f'<article class="reference" id="ref-{esc(reference["filename"])}"><h3>{esc(reference["filename"])}</h3><p><a href="{href(path)}">Open original 3240 × 2304 PNG</a></p><p class="meta">APPROVED VISUAL REFERENCE · 11 SEPTEMBER 2026<br>SHA-256 <code>{reference["sha256"]}</code><br>{esc(reference["approval_source"])}</p><a href="{href(path)}"><img loading="lazy" src="{href(path)}" alt="Immutable approved R01 reference: {esc(reference["filename"])}"></a></article>'
+            f'<article class="reference" id="ref-{esc(reference["filename"])}"><h3>{esc(reference["filename"])}</h3><p><a href="{href(path)}">Open original 3240 × 2304 PNG</a></p><p class="meta">APPROVED VISUAL REFERENCE · 11 SEPTEMBER 2026<br>SHA-256 <code>{reference["sha256"]}</code><br>{esc(reference["approval_source"])}</p><a href="{href(path)}"><img loading="lazy" width="3240" height="2304" src="{href(path)}" alt="Immutable approved R01 reference: {esc(reference["filename"])}"></a></article>'
         )
     out.append(
         '<p><a href="'
@@ -388,7 +393,7 @@ def main():
             + "</p></article>"
         )
     out.append(
-        '</section></main><script>const rows=[...document.querySelectorAll(".record")];function filter(){const q=document.querySelector("#query").value.toLowerCase(),c=document.querySelector("#class").value;let n=0;rows.forEach(r=>{r.hidden=!(r.textContent.toLowerCase().includes(q)&&(!c||r.dataset.class===c));if(!r.hidden)n++});document.querySelector("#shown").textContent=n+" records shown"}document.querySelector("#query").addEventListener("input",filter);document.querySelector("#class").addEventListener("change",filter);function reveal(){let e=document.getElementById(decodeURIComponent(location.hash.slice(1)));while(e){if(e.tagName==="DETAILS")e.open=true;e=e.parentElement}}window.addEventListener("hashchange",reveal);filter();reveal();</script></body></html>'
+        '</section></main><script>const rows=[...document.querySelectorAll(".record")];function filter(){const q=document.querySelector("#query").value.toLowerCase(),c=document.querySelector("#class").value;let n=0;rows.forEach(r=>{r.hidden=!(r.textContent.toLowerCase().includes(q)&&(!c||r.dataset.class===c));if(!r.hidden)n++});document.querySelector("#shown").textContent=n+" records shown"}document.querySelector("#query").addEventListener("input",filter);document.querySelector("#class").addEventListener("change",filter);function reveal(){const target=document.getElementById(decodeURIComponent(location.hash.slice(1)));let e=target;while(e){if(e.tagName==="DETAILS")e.open=true;e=e.parentElement}if(target)requestAnimationFrame(()=>target.scrollIntoView({block:"start"}))}window.addEventListener("hashchange",reveal);filter();reveal();</script></body></html>'
     )
     HTML.write_text("\n".join(out) + "\n")
     # PDF index is linked to imported independently saved maps, never rasterized pages.
