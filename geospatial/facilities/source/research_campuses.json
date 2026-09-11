@@ -500,16 +500,16 @@
               "name": "Six temporary guest rooms \u00b7 no permanent housing",
               "status": "MODELLED_FITOUT_NOT_EXISTING",
               "gross_area_m2": 864,
-              "planned_peak": 0,
+              "planned_peak": 6,
               "actual_occupancy": null,
               "rooms": [
                 {
-                  "id": "SH-FAC-FORT-SMALL-L02-R01",
-                  "name": "Guest rooms 1\u20132",
+                  "id": "SH-FAC-FORT-SMALL-L02-R01A",
+                  "name": "Guest room 1",
                   "rect_m": [
-                    6,
+                    6.0,
                     0,
-                    8,
+                    4.0,
                     10.5
                   ],
                   "access": "residential",
@@ -518,17 +518,19 @@
                   "touchdown_seats": 0,
                   "training_seats": 0,
                   "meeting_seats": 0,
-                  "resident_beds": 2,
+                  "resident_beds": 1,
                   "special_use_capacity": 0,
-                  "basis": "WIL-A02"
+                  "basis": "WIL-A02",
+                  "supersedes_grouped_room_id": "SH-FAC-FORT-SMALL-L02-R01",
+                  "accessibility_basis": "4 m wide single-room planning envelope; direct step-free access from 3 m corridor. Door clearances, turning space and shared accessible bathroom configuration in wet core require detailed design."
                 },
                 {
-                  "id": "SH-FAC-FORT-SMALL-L02-R02",
-                  "name": "Guest rooms 3\u20134",
+                  "id": "SH-FAC-FORT-SMALL-L02-R01B",
+                  "name": "Guest room 2",
                   "rect_m": [
-                    14,
+                    10.0,
                     0,
-                    8,
+                    4.0,
                     10.5
                   ],
                   "access": "residential",
@@ -537,17 +539,19 @@
                   "touchdown_seats": 0,
                   "training_seats": 0,
                   "meeting_seats": 0,
-                  "resident_beds": 2,
+                  "resident_beds": 1,
                   "special_use_capacity": 0,
-                  "basis": "WIL-A02"
+                  "basis": "WIL-A02",
+                  "supersedes_grouped_room_id": "SH-FAC-FORT-SMALL-L02-R01",
+                  "accessibility_basis": "4 m wide single-room planning envelope; direct step-free access from 3 m corridor. Door clearances, turning space and shared accessible bathroom configuration in wet core require detailed design."
                 },
                 {
-                  "id": "SH-FAC-FORT-SMALL-L02-R03",
-                  "name": "Guest rooms 5\u20136",
+                  "id": "SH-FAC-FORT-SMALL-L02-R02A",
+                  "name": "Guest room 3",
                   "rect_m": [
-                    22,
+                    14.0,
                     0,
-                    8,
+                    4.0,
                     10.5
                   ],
                   "access": "residential",
@@ -556,9 +560,74 @@
                   "touchdown_seats": 0,
                   "training_seats": 0,
                   "meeting_seats": 0,
-                  "resident_beds": 2,
+                  "resident_beds": 1,
                   "special_use_capacity": 0,
-                  "basis": "WIL-A02"
+                  "basis": "WIL-A02",
+                  "supersedes_grouped_room_id": "SH-FAC-FORT-SMALL-L02-R02",
+                  "accessibility_basis": "4 m wide single-room planning envelope; direct step-free access from 3 m corridor. Door clearances, turning space and shared accessible bathroom configuration in wet core require detailed design."
+                },
+                {
+                  "id": "SH-FAC-FORT-SMALL-L02-R02B",
+                  "name": "Guest room 4",
+                  "rect_m": [
+                    18.0,
+                    0,
+                    4.0,
+                    10.5
+                  ],
+                  "access": "residential",
+                  "assigned_desks": 0,
+                  "shared_desks": 0,
+                  "touchdown_seats": 0,
+                  "training_seats": 0,
+                  "meeting_seats": 0,
+                  "resident_beds": 1,
+                  "special_use_capacity": 0,
+                  "basis": "WIL-A02",
+                  "supersedes_grouped_room_id": "SH-FAC-FORT-SMALL-L02-R02",
+                  "accessibility_basis": "4 m wide single-room planning envelope; direct step-free access from 3 m corridor. Door clearances, turning space and shared accessible bathroom configuration in wet core require detailed design."
+                },
+                {
+                  "id": "SH-FAC-FORT-SMALL-L02-R03A",
+                  "name": "Guest room 5",
+                  "rect_m": [
+                    22.0,
+                    0,
+                    4.0,
+                    10.5
+                  ],
+                  "access": "residential",
+                  "assigned_desks": 0,
+                  "shared_desks": 0,
+                  "touchdown_seats": 0,
+                  "training_seats": 0,
+                  "meeting_seats": 0,
+                  "resident_beds": 1,
+                  "special_use_capacity": 0,
+                  "basis": "WIL-A02",
+                  "supersedes_grouped_room_id": "SH-FAC-FORT-SMALL-L02-R03",
+                  "accessibility_basis": "4 m wide single-room planning envelope; direct step-free access from 3 m corridor. Door clearances, turning space and shared accessible bathroom configuration in wet core require detailed design."
+                },
+                {
+                  "id": "SH-FAC-FORT-SMALL-L02-R03B",
+                  "name": "Guest room 6",
+                  "rect_m": [
+                    26.0,
+                    0,
+                    4.0,
+                    10.5
+                  ],
+                  "access": "residential",
+                  "assigned_desks": 0,
+                  "shared_desks": 0,
+                  "touchdown_seats": 0,
+                  "training_seats": 0,
+                  "meeting_seats": 0,
+                  "resident_beds": 1,
+                  "special_use_capacity": 0,
+                  "basis": "WIL-A02",
+                  "supersedes_grouped_room_id": "SH-FAC-FORT-SMALL-L02-R03",
+                  "accessibility_basis": "4 m wide single-room planning envelope; direct step-free access from 3 m corridor. Door clearances, turning space and shared accessible bathroom configuration in wet core require detailed design."
                 },
                 {
                   "id": "SH-FAC-FORT-SMALL-L02-R04",
@@ -600,7 +669,8 @@
                 }
               ],
               "net_assignable_area_m2": 504.0,
-              "core_circulation_service_m2": 360.0
+              "core_circulation_service_m2": 360.0,
+              "egress_concept": "Every guest room opens independently to the same 3 m clear central corridor, which connects protected end stairs in both directions. No room exits through another room. West accessible lift provides the concept step-free route; the two end wet/service cores remain aligned with Level 1."
             }
           ]
         },
