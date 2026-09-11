@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "SH-FAC-POPULATION-001",
+  "as_of": "2026-09-11",
+  "status": "SOURCED_BRIDGE_WITH_LABELLED_PLANNING_ASSUMPTIONS",
+  "horizons": [2026, 2031, 2036],
+  "authority": "Imported accepted records retain their own status. This policy establishes accounting boundaries, not employment or appointment decisions.",
+  "sources": {
+    "chart": "docs/organization/source/chartbook.json",
+    "leadership": "docs/structured/j2_leadership_2026-09-10.json",
+    "establishment": "docs/j2/J2_ESTABLISHMENT.md",
+    "industrial": "industrial/source/entities.json",
+    "forecast": "enterprise/business/source/policy.json",
+    "legacy_finance": "docs/finance/SABLE_HARBOR_CORPORATE_FUNDAMENTALS_AND_2026_OPERATING_MODEL_v0.1.md",
+    "services": "enterprise/services/source/components.json"
+  },
+  "j2_billet_groups": [
+    {"id": "J2-CONTACT", "name": "Contact", "authorized_billets": 78, "named_person_ids": ["P065"]},
+    {"id": "J2-JUDGMENT", "name": "Judgment", "authorized_billets": 42, "named_person_ids": ["P066"]},
+    {"id": "J2-ORIENTATION", "name": "Orientation", "authorized_billets": 24, "named_person_ids": ["P067"]},
+    {"id": "J2-JAG", "name": "Junction Advisory Group", "authorized_billets": 30, "named_person_ids": []},
+    {"id": "J2-EDUCATION", "name": "Education", "authorized_billets": 35, "named_person_ids": ["P068"]},
+    {"id": "J2-HQ", "name": "J2 Headquarters", "authorized_billets": 28, "named_person_ids": ["P063", "P064"]}
+  ],
+  "measurement_rules": {
+    "unknown": "null means not established; zero means evidenced absence or explicit model allocation of none",
+    "named_population": "Deduplicate by person_id across every chart; named population is a source coverage count, not a payroll census.",
+    "roles": "Unnamed offices and role-family counts overlap establishments; never add role-register counts to J2 or enterprise totals.",
+    "employment": "Former, external, unconfirmed and superseded identities are excluded from current totals. Nonemployee directors remain a separate visitor demand category.",
+    "workforce": "Known industrial population and named employees overlap. Never add 44 named employees to the 271 industrial population or 237 J2 billets.",
+    "attendance": "Assigned workforce, residents, cohort peaks, shifts and maximum simultaneous attendance require explicit schedules; no authorization-to-desk equivalence.",
+    "seats": "Meeting/training/resident capacities are activity capacities, not additional people. Peak scenario must allocate one person once across simultaneous activities.",
+    "forecast": "2027 conditional workforce is retained separately; not actual 2026 payroll, and not an automatic 2031 or 2036 forecast.",
+    "support": "ESS services requirement FTE and Education rotating practitioners are allocations of existing or explicitly proposed pools, not extra employees. Internal Audit and J2 remain outside ESS."
+  },
+  "planning_basis": {
+    "id": "SH-FAC-ASSUMPTION-POP-001",
+    "status": "ILLUSTRATIVE_CAPACITY_PLANNING_ONLY",
+    "description": "Campus designer may test full J2 authorization of 237 as a capacity envelope, with Education 35 and HQ support 28 inside that total. Core 2027 506 occupied / 591 authorized is a conditional comparison only; distributed businesses and industrial staff must not all be placed in Sacramento. 2031/2036 staffing growth is unresolved until explicitly modelled in the campus source.",
+    "current_company_employees": null,
+    "current_sacramento_assigned": null,
+    "current_sacramento_daily_attendance": null,
+    "current_sacramento_resident_occupants": null,
+    "current_sacramento_shift_population": null,
+    "current_sacramento_peak_visitors_customers_trainees": null,
+    "current_remote_distributed_field_deployed": null,
+    "future_authorized_positions_2031": null,
+    "future_authorized_positions_2036": null
+  }
+}
