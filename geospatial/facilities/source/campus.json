@@ -13,7 +13,7 @@
   "occupancy_start": null,
   "construction_start": null,
   "construction_completion": null,
-  "geometry_basis": "840\u00d7600 ft fictional study envelope, x east/y north. R01 measured composition retained. Feet converted exactly with 1 ft=0.3048 m; no parcel selection, survey transform, ownership or completion claim.",
+  "geometry_basis": "840×600 ft fictional study envelope, x east/y north. R01 measured composition retained. Feet converted exactly with 1 ft=0.3048 m; no parcel selection, survey transform, ownership or completion claim.",
   "envelope_ft": [
     840,
     600
@@ -135,7 +135,9 @@
             0.0,
             5.4864,
             12.8016
-          ]
+          ],
+          "display_name": "Support",
+          "display_detail": "AV / print / store"
         },
         {
           "name": "Support / AV / print / store",
@@ -151,7 +153,9 @@
             0.0,
             5.4864,
             12.8016
-          ]
+          ],
+          "display_name": "Support",
+          "display_detail": "AV / print / store"
         },
         {
           "name": "WC north",
@@ -167,7 +171,8 @@
             7.3152,
             3.6576,
             7.3152
-          ]
+          ],
+          "display_name": "WC"
         },
         {
           "name": "WC south",
@@ -183,7 +188,8 @@
             0.0,
             3.6576,
             7.3152
-          ]
+          ],
+          "display_name": "WC"
         },
         {
           "name": "Lift",
@@ -231,7 +237,8 @@
             0.0,
             3.6576,
             7.3152
-          ]
+          ],
+          "display_name": "IT / AV"
         }
       ],
       "floors": [
@@ -264,7 +271,7 @@
                 7.3152
               ],
               "kind": "meeting",
-              "color_group": "neutral",
+              "color_group": "white",
               "access": "staff",
               "assigned_desks": 0,
               "shared_desks": 0,
@@ -285,7 +292,8 @@
                 "width_m": 0.9144,
                 "wall": "east",
                 "swing": "in"
-              }
+              },
+              "display_name": "Focus"
             },
             {
               "name": "Calls west",
@@ -302,7 +310,7 @@
                 5.4864
               ],
               "kind": "support",
-              "color_group": "neutral",
+              "color_group": "white",
               "access": "staff",
               "assigned_desks": 0,
               "shared_desks": 0,
@@ -323,7 +331,8 @@
                 "width_m": 0.9144,
                 "wall": "east",
                 "swing": "in"
-              }
+              },
+              "display_name": "Calls"
             },
             {
               "name": "Focus east",
@@ -340,7 +349,7 @@
                 7.3152
               ],
               "kind": "meeting",
-              "color_group": "neutral",
+              "color_group": "white",
               "access": "staff",
               "assigned_desks": 0,
               "shared_desks": 0,
@@ -361,7 +370,8 @@
                 "width_m": 0.9144,
                 "wall": "west",
                 "swing": "in"
-              }
+              },
+              "display_name": "Focus"
             },
             {
               "name": "Calls east",
@@ -378,7 +388,7 @@
                 5.4864
               ],
               "kind": "support",
-              "color_group": "neutral",
+              "color_group": "white",
               "access": "staff",
               "assigned_desks": 0,
               "shared_desks": 0,
@@ -399,7 +409,8 @@
                 "width_m": 0.9144,
                 "wall": "west",
                 "swing": "in"
-              }
+              },
+              "display_name": "Calls"
             },
             {
               "name": "Huddle 1",
@@ -416,7 +427,7 @@
                 7.3152
               ],
               "kind": "meeting",
-              "color_group": "neutral",
+              "color_group": "white",
               "access": "staff",
               "assigned_desks": 0,
               "shared_desks": 0,
@@ -437,7 +448,8 @@
                 "width_m": 0.9144,
                 "wall": "east",
                 "swing": "in"
-              }
+              },
+              "display_name": "Huddle"
             },
             {
               "name": "Huddle 2",
@@ -454,7 +466,7 @@
                 7.3152
               ],
               "kind": "meeting",
-              "color_group": "neutral",
+              "color_group": "white",
               "access": "staff",
               "assigned_desks": 0,
               "shared_desks": 0,
@@ -467,15 +479,16 @@
               "basis": "SAC-R02-A01; R01 source where identified, remaining floors labelled design extension",
               "id": "SH-SITE-0001-A-L01-R06",
               "door": {
-                "x_ft": 96.0,
-                "y_ft": 60,
+                "x_ft": 102,
+                "y_ft": 72,
                 "width_ft": 3,
-                "x_m": 29.2608,
-                "y_m": 18.288,
+                "x_m": 31.0896,
+                "y_m": 21.9456,
                 "width_m": 0.9144,
-                "wall": "south",
+                "wall": "east",
                 "swing": "in"
-              }
+              },
+              "display_name": "Huddle"
             },
             {
               "name": "Huddle 3",
@@ -492,7 +505,7 @@
                 7.3152
               ],
               "kind": "meeting",
-              "color_group": "neutral",
+              "color_group": "white",
               "access": "staff",
               "assigned_desks": 0,
               "shared_desks": 0,
@@ -513,7 +526,8 @@
                 "width_m": 0.9144,
                 "wall": "west",
                 "swing": "in"
-              }
+              },
+              "display_name": "Huddle"
             },
             {
               "name": "Huddle 4",
@@ -530,7 +544,7 @@
                 7.3152
               ],
               "kind": "meeting",
-              "color_group": "neutral",
+              "color_group": "white",
               "access": "staff",
               "assigned_desks": 0,
               "shared_desks": 0,
@@ -543,15 +557,16 @@
               "basis": "SAC-R02-A01; R01 source where identified, remaining floors labelled design extension",
               "id": "SH-SITE-0001-A-L01-R08",
               "door": {
-                "x_ft": 120.0,
-                "y_ft": 60,
+                "x_ft": 114,
+                "y_ft": 72,
                 "width_ft": 3,
-                "x_m": 36.576,
-                "y_m": 18.288,
+                "x_m": 34.7472,
+                "y_m": 21.9456,
                 "width_m": 0.9144,
-                "wall": "south",
+                "wall": "west",
                 "swing": "in"
-              }
+              },
+              "display_name": "Huddle"
             },
             {
               "name": "Shared project room 1",
@@ -581,15 +596,16 @@
               "basis": "SAC-R02-A01; R01 source where identified, remaining floors labelled design extension",
               "id": "SH-SITE-0001-A-L01-R09",
               "door": {
-                "x_ft": 150.0,
-                "y_ft": 48,
+                "x_ft": 140,
+                "y_ft": 28,
                 "width_ft": 3,
-                "x_m": 45.72,
-                "y_m": 14.6304,
+                "x_m": 42.672,
+                "y_m": 8.5344,
                 "width_m": 0.9144,
-                "wall": "north",
+                "wall": "south",
                 "swing": "in"
-              }
+              },
+              "display_name": "Project room"
             },
             {
               "name": "Shared project room 2",
@@ -619,15 +635,16 @@
               "basis": "SAC-R02-A01; R01 source where identified, remaining floors labelled design extension",
               "id": "SH-SITE-0001-A-L01-R10",
               "door": {
-                "x_ft": 182.0,
-                "y_ft": 48,
+                "x_ft": 172,
+                "y_ft": 28,
                 "width_ft": 3,
-                "x_m": 55.4736,
-                "y_m": 14.6304,
+                "x_m": 52.4256,
+                "y_m": 8.5344,
                 "width_m": 0.9144,
-                "wall": "north",
+                "wall": "south",
                 "swing": "in"
-              }
+              },
+              "display_name": "Project room"
             },
             {
               "name": "Shared project room 3",
@@ -657,15 +674,16 @@
               "basis": "SAC-R02-A01; R01 source where identified, remaining floors labelled design extension",
               "id": "SH-SITE-0001-A-L01-R11",
               "door": {
-                "x_ft": 134,
-                "y_ft": 10.0,
+                "x_ft": 140,
+                "y_ft": 20,
                 "width_ft": 3,
-                "x_m": 40.8432,
-                "y_m": 3.048,
+                "x_m": 42.672,
+                "y_m": 6.096,
                 "width_m": 0.9144,
-                "wall": "west",
+                "wall": "north",
                 "swing": "in"
-              }
+              },
+              "display_name": "Project room"
             },
             {
               "name": "Shared project room 4",
@@ -695,15 +713,16 @@
               "basis": "SAC-R02-A01; R01 source where identified, remaining floors labelled design extension",
               "id": "SH-SITE-0001-A-L01-R12",
               "door": {
-                "x_ft": 182.0,
+                "x_ft": 172,
                 "y_ft": 20,
                 "width_ft": 3,
-                "x_m": 55.4736,
+                "x_m": 52.4256,
                 "y_m": 6.096,
                 "width_m": 0.9144,
                 "wall": "north",
                 "swing": "in"
-              }
+              },
+              "display_name": "Project room"
             },
             {
               "name": "Advisory common bench",
@@ -953,17 +972,6 @@
               "room_id": "SH-SITE-0001-A-L01-R05"
             },
             {
-              "x_ft": 96.0,
-              "y_ft": 60,
-              "width_ft": 3,
-              "x_m": 29.2608,
-              "y_m": 18.288,
-              "width_m": 0.9144,
-              "wall": "south",
-              "swing": "in",
-              "room_id": "SH-SITE-0001-A-L01-R06"
-            },
-            {
               "x_ft": 114,
               "y_ft": 96.0,
               "width_ft": 3,
@@ -973,61 +981,6 @@
               "wall": "west",
               "swing": "in",
               "room_id": "SH-SITE-0001-A-L01-R07"
-            },
-            {
-              "x_ft": 120.0,
-              "y_ft": 60,
-              "width_ft": 3,
-              "x_m": 36.576,
-              "y_m": 18.288,
-              "width_m": 0.9144,
-              "wall": "south",
-              "swing": "in",
-              "room_id": "SH-SITE-0001-A-L01-R08"
-            },
-            {
-              "x_ft": 150.0,
-              "y_ft": 48,
-              "width_ft": 3,
-              "x_m": 45.72,
-              "y_m": 14.6304,
-              "width_m": 0.9144,
-              "wall": "north",
-              "swing": "in",
-              "room_id": "SH-SITE-0001-A-L01-R09"
-            },
-            {
-              "x_ft": 182.0,
-              "y_ft": 48,
-              "width_ft": 3,
-              "x_m": 55.4736,
-              "y_m": 14.6304,
-              "width_m": 0.9144,
-              "wall": "north",
-              "swing": "in",
-              "room_id": "SH-SITE-0001-A-L01-R10"
-            },
-            {
-              "x_ft": 134,
-              "y_ft": 10.0,
-              "width_ft": 3,
-              "x_m": 40.8432,
-              "y_m": 3.048,
-              "width_m": 0.9144,
-              "wall": "west",
-              "swing": "in",
-              "room_id": "SH-SITE-0001-A-L01-R11"
-            },
-            {
-              "x_ft": 182.0,
-              "y_ft": 20,
-              "width_ft": 3,
-              "x_m": 55.4736,
-              "y_m": 6.096,
-              "width_m": 0.9144,
-              "wall": "north",
-              "swing": "in",
-              "room_id": "SH-SITE-0001-A-L01-R12"
             },
             {
               "x_ft": 54.0,
@@ -1162,13 +1115,13 @@
               "core_name": "Support / AV / print / store"
             },
             {
-              "x_ft": 96.0,
-              "y_ft": 48,
+              "x_ft": 102,
+              "y_ft": 36,
               "width_ft": 3,
-              "x_m": 29.2608,
-              "y_m": 14.6304,
+              "x_m": 31.0896,
+              "y_m": 10.9728,
               "width_m": 0.9144,
-              "wall": "north",
+              "wall": "east",
               "swing": "in",
               "core_name": "WC north"
             },
@@ -1184,13 +1137,13 @@
               "core_name": "WC south"
             },
             {
-              "x_ft": 120.0,
-              "y_ft": 48,
+              "x_ft": 114,
+              "y_ft": 40,
               "width_ft": 3,
-              "x_m": 36.576,
-              "y_m": 14.6304,
+              "x_m": 34.7472,
+              "y_m": 12.192,
               "width_m": 0.9144,
-              "wall": "north",
+              "wall": "west",
               "swing": "in",
               "core_name": "Lift"
             },
@@ -1224,7 +1177,100 @@
               "y_m": 0.0,
               "width_m": 1.8288,
               "wall": "south",
-              "swing": "in"
+              "swing": "in",
+              "leaves": 2
+            },
+            {
+              "x_ft": 102,
+              "y_ft": 72,
+              "width_ft": 3,
+              "x_m": 31.0896,
+              "y_m": 21.9456,
+              "width_m": 0.9144,
+              "wall": "east",
+              "swing": "in",
+              "room_id": "SH-SITE-0001-A-L01-R06"
+            },
+            {
+              "x_ft": 114,
+              "y_ft": 72,
+              "width_ft": 3,
+              "x_m": 34.7472,
+              "y_m": 21.9456,
+              "width_m": 0.9144,
+              "wall": "west",
+              "swing": "in",
+              "room_id": "SH-SITE-0001-A-L01-R08"
+            },
+            {
+              "x_ft": 140,
+              "y_ft": 28,
+              "width_ft": 3,
+              "x_m": 42.672,
+              "y_m": 8.5344,
+              "width_m": 0.9144,
+              "wall": "south",
+              "swing": "in",
+              "room_id": "SH-SITE-0001-A-L01-R09"
+            },
+            {
+              "x_ft": 172,
+              "y_ft": 28,
+              "width_ft": 3,
+              "x_m": 52.4256,
+              "y_m": 8.5344,
+              "width_m": 0.9144,
+              "wall": "south",
+              "swing": "in",
+              "room_id": "SH-SITE-0001-A-L01-R10"
+            },
+            {
+              "x_ft": 140,
+              "y_ft": 20,
+              "width_ft": 3,
+              "x_m": 42.672,
+              "y_m": 6.096,
+              "width_m": 0.9144,
+              "wall": "north",
+              "swing": "in",
+              "room_id": "SH-SITE-0001-A-L01-R11"
+            },
+            {
+              "x_ft": 172,
+              "y_ft": 20,
+              "width_ft": 3,
+              "x_m": 52.4256,
+              "y_m": 6.096,
+              "width_m": 0.9144,
+              "wall": "north",
+              "swing": "in",
+              "room_id": "SH-SITE-0001-A-L01-R12"
+            },
+            {
+              "x_ft": 0,
+              "y_ft": 54,
+              "width_ft": 3,
+              "x_m": 0.0,
+              "y_m": 16.4592,
+              "width_m": 0.9144,
+              "wall": "west",
+              "swing": "in",
+              "exterior": true,
+              "core_name": "ST-1",
+              "basis": "R02 extension of paired ground-floor stair discharge concept"
+            },
+            {
+              "x_ft": 216,
+              "y_ft": 54,
+              "width_ft": 3,
+              "x_m": 65.8368,
+              "y_m": 16.4592,
+              "width_m": 0.9144,
+              "wall": "east",
+              "swing": "in",
+              "exterior": true,
+              "core_name": "ST-2",
+              "basis": "R02 extension of paired ground-floor stair discharge concept"
             }
           ],
           "actual_floor_count": null,
@@ -1236,7 +1282,13 @@
             "Corporate commons has 80 dining seats, supplied from the single production kitchen in C; no second production kitchen.",
             "Clients remain in reception/project rooms; access to staff studios and upper floors controlled."
           ],
-          "staff_workplaces": 40
+          "staff_workplaces": 40,
+          "access_drawing_basis": "Approved R01 visible door topology where available; dimensions are modelled reconstruction, not surveyed or code-approved openings. Upper-floor repetitions follow fixed cores and source circulation zones.",
+          "legend_text": "Blue: staff work / Sage: shared or independent program / Sand: visitor and project rooms",
+          "design_note_headings": [
+            "Shared campus",
+            "Controlled access"
+          ]
         },
         {
           "id": "SH-SITE-0001-A-L02",
@@ -1267,7 +1319,7 @@
                 7.3152
               ],
               "kind": "meeting",
-              "color_group": "neutral",
+              "color_group": "white",
               "access": "staff",
               "assigned_desks": 0,
               "shared_desks": 0,
@@ -1288,7 +1340,8 @@
                 "width_m": 0.9144,
                 "wall": "east",
                 "swing": "in"
-              }
+              },
+              "display_name": "Focus"
             },
             {
               "name": "Calls west",
@@ -1305,7 +1358,7 @@
                 5.4864
               ],
               "kind": "support",
-              "color_group": "neutral",
+              "color_group": "white",
               "access": "staff",
               "assigned_desks": 0,
               "shared_desks": 0,
@@ -1326,7 +1379,8 @@
                 "width_m": 0.9144,
                 "wall": "east",
                 "swing": "in"
-              }
+              },
+              "display_name": "Calls"
             },
             {
               "name": "Focus east",
@@ -1343,7 +1397,7 @@
                 7.3152
               ],
               "kind": "meeting",
-              "color_group": "neutral",
+              "color_group": "white",
               "access": "staff",
               "assigned_desks": 0,
               "shared_desks": 0,
@@ -1364,7 +1418,8 @@
                 "width_m": 0.9144,
                 "wall": "west",
                 "swing": "in"
-              }
+              },
+              "display_name": "Focus"
             },
             {
               "name": "Calls east",
@@ -1381,7 +1436,7 @@
                 5.4864
               ],
               "kind": "support",
-              "color_group": "neutral",
+              "color_group": "white",
               "access": "staff",
               "assigned_desks": 0,
               "shared_desks": 0,
@@ -1402,7 +1457,8 @@
                 "width_m": 0.9144,
                 "wall": "west",
                 "swing": "in"
-              }
+              },
+              "display_name": "Calls"
             },
             {
               "name": "Huddle 1",
@@ -1419,7 +1475,7 @@
                 7.3152
               ],
               "kind": "meeting",
-              "color_group": "neutral",
+              "color_group": "white",
               "access": "staff",
               "assigned_desks": 0,
               "shared_desks": 0,
@@ -1440,7 +1496,8 @@
                 "width_m": 0.9144,
                 "wall": "east",
                 "swing": "in"
-              }
+              },
+              "display_name": "Huddle"
             },
             {
               "name": "Huddle 2",
@@ -1457,7 +1514,7 @@
                 7.3152
               ],
               "kind": "meeting",
-              "color_group": "neutral",
+              "color_group": "white",
               "access": "staff",
               "assigned_desks": 0,
               "shared_desks": 0,
@@ -1470,15 +1527,16 @@
               "basis": "SAC-R02-A01; R01 source where identified, remaining floors labelled design extension",
               "id": "SH-SITE-0001-A-L02-R06",
               "door": {
-                "x_ft": 96.0,
-                "y_ft": 60,
+                "x_ft": 102,
+                "y_ft": 72,
                 "width_ft": 3,
-                "x_m": 29.2608,
-                "y_m": 18.288,
+                "x_m": 31.0896,
+                "y_m": 21.9456,
                 "width_m": 0.9144,
-                "wall": "south",
+                "wall": "east",
                 "swing": "in"
-              }
+              },
+              "display_name": "Huddle"
             },
             {
               "name": "Huddle 3",
@@ -1495,7 +1553,7 @@
                 7.3152
               ],
               "kind": "meeting",
-              "color_group": "neutral",
+              "color_group": "white",
               "access": "staff",
               "assigned_desks": 0,
               "shared_desks": 0,
@@ -1516,7 +1574,8 @@
                 "width_m": 0.9144,
                 "wall": "west",
                 "swing": "in"
-              }
+              },
+              "display_name": "Huddle"
             },
             {
               "name": "Huddle 4",
@@ -1533,7 +1592,7 @@
                 7.3152
               ],
               "kind": "meeting",
-              "color_group": "neutral",
+              "color_group": "white",
               "access": "staff",
               "assigned_desks": 0,
               "shared_desks": 0,
@@ -1546,15 +1605,16 @@
               "basis": "SAC-R02-A01; R01 source where identified, remaining floors labelled design extension",
               "id": "SH-SITE-0001-A-L02-R08",
               "door": {
-                "x_ft": 120.0,
-                "y_ft": 60,
+                "x_ft": 114,
+                "y_ft": 72,
                 "width_ft": 3,
-                "x_m": 36.576,
-                "y_m": 18.288,
+                "x_m": 34.7472,
+                "y_m": 21.9456,
                 "width_m": 0.9144,
-                "wall": "south",
+                "wall": "west",
                 "swing": "in"
-              }
+              },
+              "display_name": "Huddle"
             },
             {
               "name": "Shared project room 1",
@@ -1584,15 +1644,16 @@
               "basis": "SAC-R02-A01; R01 source where identified, remaining floors labelled design extension",
               "id": "SH-SITE-0001-A-L02-R09",
               "door": {
-                "x_ft": 150.0,
-                "y_ft": 48,
+                "x_ft": 140,
+                "y_ft": 28,
                 "width_ft": 3,
-                "x_m": 45.72,
-                "y_m": 14.6304,
+                "x_m": 42.672,
+                "y_m": 8.5344,
                 "width_m": 0.9144,
-                "wall": "north",
+                "wall": "south",
                 "swing": "in"
-              }
+              },
+              "display_name": "Project room"
             },
             {
               "name": "Shared project room 2",
@@ -1622,15 +1683,16 @@
               "basis": "SAC-R02-A01; R01 source where identified, remaining floors labelled design extension",
               "id": "SH-SITE-0001-A-L02-R10",
               "door": {
-                "x_ft": 182.0,
-                "y_ft": 48,
+                "x_ft": 172,
+                "y_ft": 28,
                 "width_ft": 3,
-                "x_m": 55.4736,
-                "y_m": 14.6304,
+                "x_m": 52.4256,
+                "y_m": 8.5344,
                 "width_m": 0.9144,
-                "wall": "north",
+                "wall": "south",
                 "swing": "in"
-              }
+              },
+              "display_name": "Project room"
             },
             {
               "name": "Shared project room 3",
@@ -1660,15 +1722,16 @@
               "basis": "SAC-R02-A01; R01 source where identified, remaining floors labelled design extension",
               "id": "SH-SITE-0001-A-L02-R11",
               "door": {
-                "x_ft": 134,
-                "y_ft": 10.0,
+                "x_ft": 140,
+                "y_ft": 20,
                 "width_ft": 3,
-                "x_m": 40.8432,
-                "y_m": 3.048,
+                "x_m": 42.672,
+                "y_m": 6.096,
                 "width_m": 0.9144,
-                "wall": "west",
+                "wall": "north",
                 "swing": "in"
-              }
+              },
+              "display_name": "Project room"
             },
             {
               "name": "Shared project room 4",
@@ -1698,15 +1761,16 @@
               "basis": "SAC-R02-A01; R01 source where identified, remaining floors labelled design extension",
               "id": "SH-SITE-0001-A-L02-R12",
               "door": {
-                "x_ft": 182.0,
+                "x_ft": 172,
                 "y_ft": 20,
                 "width_ft": 3,
-                "x_m": 55.4736,
+                "x_m": 52.4256,
                 "y_m": 6.096,
                 "width_m": 0.9144,
                 "wall": "north",
                 "swing": "in"
-              }
+              },
+              "display_name": "Project room"
             },
             {
               "name": "Foundry Field west studio",
@@ -1744,7 +1808,9 @@
                 "width_m": 0.9144,
                 "wall": "south",
                 "swing": "in"
-              }
+              },
+              "display_name": "Foundry Field",
+              "display_detail": "West studio / 40 workstations"
             },
             {
               "name": "Foundry Field south studio",
@@ -1782,7 +1848,9 @@
                 "width_m": 0.9144,
                 "wall": "north",
                 "swing": "in"
-              }
+              },
+              "display_name": "Foundry Field",
+              "display_detail": "South studio / 40 workstations"
             },
             {
               "name": "Atlas Meridian product development",
@@ -1820,7 +1888,9 @@
                 "width_m": 0.9144,
                 "wall": "south",
                 "swing": "in"
-              }
+              },
+              "display_name": "Atlas Meridian",
+              "display_detail": "Product development / 32 workstations"
             }
           ],
           "circulation_zones": [
@@ -1918,17 +1988,6 @@
               "room_id": "SH-SITE-0001-A-L02-R05"
             },
             {
-              "x_ft": 96.0,
-              "y_ft": 60,
-              "width_ft": 3,
-              "x_m": 29.2608,
-              "y_m": 18.288,
-              "width_m": 0.9144,
-              "wall": "south",
-              "swing": "in",
-              "room_id": "SH-SITE-0001-A-L02-R06"
-            },
-            {
               "x_ft": 114,
               "y_ft": 96.0,
               "width_ft": 3,
@@ -1938,61 +1997,6 @@
               "wall": "west",
               "swing": "in",
               "room_id": "SH-SITE-0001-A-L02-R07"
-            },
-            {
-              "x_ft": 120.0,
-              "y_ft": 60,
-              "width_ft": 3,
-              "x_m": 36.576,
-              "y_m": 18.288,
-              "width_m": 0.9144,
-              "wall": "south",
-              "swing": "in",
-              "room_id": "SH-SITE-0001-A-L02-R08"
-            },
-            {
-              "x_ft": 150.0,
-              "y_ft": 48,
-              "width_ft": 3,
-              "x_m": 45.72,
-              "y_m": 14.6304,
-              "width_m": 0.9144,
-              "wall": "north",
-              "swing": "in",
-              "room_id": "SH-SITE-0001-A-L02-R09"
-            },
-            {
-              "x_ft": 182.0,
-              "y_ft": 48,
-              "width_ft": 3,
-              "x_m": 55.4736,
-              "y_m": 14.6304,
-              "width_m": 0.9144,
-              "wall": "north",
-              "swing": "in",
-              "room_id": "SH-SITE-0001-A-L02-R10"
-            },
-            {
-              "x_ft": 134,
-              "y_ft": 10.0,
-              "width_ft": 3,
-              "x_m": 40.8432,
-              "y_m": 3.048,
-              "width_m": 0.9144,
-              "wall": "west",
-              "swing": "in",
-              "room_id": "SH-SITE-0001-A-L02-R11"
-            },
-            {
-              "x_ft": 182.0,
-              "y_ft": 20,
-              "width_ft": 3,
-              "x_m": 55.4736,
-              "y_m": 6.096,
-              "width_m": 0.9144,
-              "wall": "north",
-              "swing": "in",
-              "room_id": "SH-SITE-0001-A-L02-R12"
             },
             {
               "x_ft": 54.0,
@@ -2116,13 +2120,13 @@
               "core_name": "Support / AV / print / store"
             },
             {
-              "x_ft": 96.0,
-              "y_ft": 48,
+              "x_ft": 102,
+              "y_ft": 36,
               "width_ft": 3,
-              "x_m": 29.2608,
-              "y_m": 14.6304,
+              "x_m": 31.0896,
+              "y_m": 10.9728,
               "width_m": 0.9144,
-              "wall": "north",
+              "wall": "east",
               "swing": "in",
               "core_name": "WC north"
             },
@@ -2138,13 +2142,13 @@
               "core_name": "WC south"
             },
             {
-              "x_ft": 120.0,
-              "y_ft": 48,
+              "x_ft": 114,
+              "y_ft": 40,
               "width_ft": 3,
-              "x_m": 36.576,
-              "y_m": 14.6304,
+              "x_m": 34.7472,
+              "y_m": 12.192,
               "width_m": 0.9144,
-              "wall": "north",
+              "wall": "west",
               "swing": "in",
               "core_name": "Lift"
             },
@@ -2169,6 +2173,72 @@
               "wall": "west",
               "swing": "in",
               "core_name": "IT / AV / local edge"
+            },
+            {
+              "x_ft": 102,
+              "y_ft": 72,
+              "width_ft": 3,
+              "x_m": 31.0896,
+              "y_m": 21.9456,
+              "width_m": 0.9144,
+              "wall": "east",
+              "swing": "in",
+              "room_id": "SH-SITE-0001-A-L02-R06"
+            },
+            {
+              "x_ft": 114,
+              "y_ft": 72,
+              "width_ft": 3,
+              "x_m": 34.7472,
+              "y_m": 21.9456,
+              "width_m": 0.9144,
+              "wall": "west",
+              "swing": "in",
+              "room_id": "SH-SITE-0001-A-L02-R08"
+            },
+            {
+              "x_ft": 140,
+              "y_ft": 28,
+              "width_ft": 3,
+              "x_m": 42.672,
+              "y_m": 8.5344,
+              "width_m": 0.9144,
+              "wall": "south",
+              "swing": "in",
+              "room_id": "SH-SITE-0001-A-L02-R09"
+            },
+            {
+              "x_ft": 172,
+              "y_ft": 28,
+              "width_ft": 3,
+              "x_m": 52.4256,
+              "y_m": 8.5344,
+              "width_m": 0.9144,
+              "wall": "south",
+              "swing": "in",
+              "room_id": "SH-SITE-0001-A-L02-R10"
+            },
+            {
+              "x_ft": 140,
+              "y_ft": 20,
+              "width_ft": 3,
+              "x_m": 42.672,
+              "y_m": 6.096,
+              "width_m": 0.9144,
+              "wall": "north",
+              "swing": "in",
+              "room_id": "SH-SITE-0001-A-L02-R11"
+            },
+            {
+              "x_ft": 172,
+              "y_ft": 20,
+              "width_ft": 3,
+              "x_m": 52.4256,
+              "y_m": 6.096,
+              "width_m": 0.9144,
+              "wall": "north",
+              "swing": "in",
+              "room_id": "SH-SITE-0001-A-L02-R12"
             }
           ],
           "actual_floor_count": null,
@@ -2176,11 +2246,17 @@
           "geometry_status": "CONCEPT_FROM_APPROVED_R01",
           "reference_image": "docs/facilities/references/sacramento-hq/r01-approved/02_Corporate_L02_Product_Draft.png",
           "design_notes": [
-            "80 Foundry Field workstations and 32 Atlas Meridian workstations are separate product organizations.",
-            "Four8-seat project rooms are shared activity capacity; staff move from desks rather than being counted twice.",
+            "Shared project rooms support joint work. Atlas retains a dedicated product organization.",
+            "Visitors check in on L01. J2 and the teaching/residential precinct have their own entrances.",
             "R01 annotation160/36 staff belongs to a conditional scenario; fitted desks do not establish actual 2026 employment."
           ],
-          "staff_workplaces": 112
+          "staff_workplaces": 112,
+          "access_drawing_basis": "Approved R01 visible door topology where available; dimensions are modelled reconstruction, not surveyed or code-approved openings. Upper-floor repetitions follow fixed cores and source circulation zones.",
+          "legend_text": "Blue: Foundry Field / Sage: Atlas Meridian / Sand: shared project rooms",
+          "design_note_headings": [
+            "Team boundaries",
+            "Campus connection"
+          ]
         },
         {
           "id": "SH-SITE-0001-A-L03",
@@ -2211,7 +2287,7 @@
                 7.3152
               ],
               "kind": "meeting",
-              "color_group": "neutral",
+              "color_group": "white",
               "access": "staff",
               "assigned_desks": 0,
               "shared_desks": 0,
@@ -2232,7 +2308,8 @@
                 "width_m": 0.9144,
                 "wall": "east",
                 "swing": "in"
-              }
+              },
+              "display_name": "Focus"
             },
             {
               "name": "Calls west",
@@ -2249,7 +2326,7 @@
                 5.4864
               ],
               "kind": "support",
-              "color_group": "neutral",
+              "color_group": "white",
               "access": "staff",
               "assigned_desks": 0,
               "shared_desks": 0,
@@ -2270,7 +2347,8 @@
                 "width_m": 0.9144,
                 "wall": "east",
                 "swing": "in"
-              }
+              },
+              "display_name": "Calls"
             },
             {
               "name": "Focus east",
@@ -2287,7 +2365,7 @@
                 7.3152
               ],
               "kind": "meeting",
-              "color_group": "neutral",
+              "color_group": "white",
               "access": "staff",
               "assigned_desks": 0,
               "shared_desks": 0,
@@ -2308,7 +2386,8 @@
                 "width_m": 0.9144,
                 "wall": "west",
                 "swing": "in"
-              }
+              },
+              "display_name": "Focus"
             },
             {
               "name": "Calls east",
@@ -2325,7 +2404,7 @@
                 5.4864
               ],
               "kind": "support",
-              "color_group": "neutral",
+              "color_group": "white",
               "access": "staff",
               "assigned_desks": 0,
               "shared_desks": 0,
@@ -2346,7 +2425,8 @@
                 "width_m": 0.9144,
                 "wall": "west",
                 "swing": "in"
-              }
+              },
+              "display_name": "Calls"
             },
             {
               "name": "Huddle 1",
@@ -2363,7 +2443,7 @@
                 7.3152
               ],
               "kind": "meeting",
-              "color_group": "neutral",
+              "color_group": "white",
               "access": "staff",
               "assigned_desks": 0,
               "shared_desks": 0,
@@ -2384,7 +2464,8 @@
                 "width_m": 0.9144,
                 "wall": "east",
                 "swing": "in"
-              }
+              },
+              "display_name": "Huddle"
             },
             {
               "name": "Huddle 2",
@@ -2401,7 +2482,7 @@
                 7.3152
               ],
               "kind": "meeting",
-              "color_group": "neutral",
+              "color_group": "white",
               "access": "staff",
               "assigned_desks": 0,
               "shared_desks": 0,
@@ -2414,15 +2495,16 @@
               "basis": "SAC-R02-A01; R01 source where identified, remaining floors labelled design extension",
               "id": "SH-SITE-0001-A-L03-R06",
               "door": {
-                "x_ft": 96.0,
-                "y_ft": 60,
+                "x_ft": 102,
+                "y_ft": 72,
                 "width_ft": 3,
-                "x_m": 29.2608,
-                "y_m": 18.288,
+                "x_m": 31.0896,
+                "y_m": 21.9456,
                 "width_m": 0.9144,
-                "wall": "south",
+                "wall": "east",
                 "swing": "in"
-              }
+              },
+              "display_name": "Huddle"
             },
             {
               "name": "Huddle 3",
@@ -2439,7 +2521,7 @@
                 7.3152
               ],
               "kind": "meeting",
-              "color_group": "neutral",
+              "color_group": "white",
               "access": "staff",
               "assigned_desks": 0,
               "shared_desks": 0,
@@ -2460,7 +2542,8 @@
                 "width_m": 0.9144,
                 "wall": "west",
                 "swing": "in"
-              }
+              },
+              "display_name": "Huddle"
             },
             {
               "name": "Huddle 4",
@@ -2477,7 +2560,7 @@
                 7.3152
               ],
               "kind": "meeting",
-              "color_group": "neutral",
+              "color_group": "white",
               "access": "staff",
               "assigned_desks": 0,
               "shared_desks": 0,
@@ -2490,15 +2573,16 @@
               "basis": "SAC-R02-A01; R01 source where identified, remaining floors labelled design extension",
               "id": "SH-SITE-0001-A-L03-R08",
               "door": {
-                "x_ft": 120.0,
-                "y_ft": 60,
+                "x_ft": 114,
+                "y_ft": 72,
                 "width_ft": 3,
-                "x_m": 36.576,
-                "y_m": 18.288,
+                "x_m": 34.7472,
+                "y_m": 21.9456,
                 "width_m": 0.9144,
-                "wall": "south",
+                "wall": "west",
                 "swing": "in"
-              }
+              },
+              "display_name": "Huddle"
             },
             {
               "name": "Shared project room 1",
@@ -2528,15 +2612,16 @@
               "basis": "SAC-R02-A01; R01 source where identified, remaining floors labelled design extension",
               "id": "SH-SITE-0001-A-L03-R09",
               "door": {
-                "x_ft": 150.0,
-                "y_ft": 48,
+                "x_ft": 140,
+                "y_ft": 28,
                 "width_ft": 3,
-                "x_m": 45.72,
-                "y_m": 14.6304,
+                "x_m": 42.672,
+                "y_m": 8.5344,
                 "width_m": 0.9144,
-                "wall": "north",
+                "wall": "south",
                 "swing": "in"
-              }
+              },
+              "display_name": "Project room"
             },
             {
               "name": "Shared project room 2",
@@ -2566,15 +2651,16 @@
               "basis": "SAC-R02-A01; R01 source where identified, remaining floors labelled design extension",
               "id": "SH-SITE-0001-A-L03-R10",
               "door": {
-                "x_ft": 182.0,
-                "y_ft": 48,
+                "x_ft": 172,
+                "y_ft": 28,
                 "width_ft": 3,
-                "x_m": 55.4736,
-                "y_m": 14.6304,
+                "x_m": 52.4256,
+                "y_m": 8.5344,
                 "width_m": 0.9144,
-                "wall": "north",
+                "wall": "south",
                 "swing": "in"
-              }
+              },
+              "display_name": "Project room"
             },
             {
               "name": "Shared project room 3",
@@ -2604,15 +2690,16 @@
               "basis": "SAC-R02-A01; R01 source where identified, remaining floors labelled design extension",
               "id": "SH-SITE-0001-A-L03-R11",
               "door": {
-                "x_ft": 134,
-                "y_ft": 10.0,
+                "x_ft": 140,
+                "y_ft": 20,
                 "width_ft": 3,
-                "x_m": 40.8432,
-                "y_m": 3.048,
+                "x_m": 42.672,
+                "y_m": 6.096,
                 "width_m": 0.9144,
-                "wall": "west",
+                "wall": "north",
                 "swing": "in"
-              }
+              },
+              "display_name": "Project room"
             },
             {
               "name": "Shared project room 4",
@@ -2642,15 +2729,16 @@
               "basis": "SAC-R02-A01; R01 source where identified, remaining floors labelled design extension",
               "id": "SH-SITE-0001-A-L03-R12",
               "door": {
-                "x_ft": 182.0,
+                "x_ft": 172,
                 "y_ft": 20,
                 "width_ft": 3,
-                "x_m": 55.4736,
+                "x_m": 52.4256,
                 "y_m": 6.096,
                 "width_m": 0.9144,
                 "wall": "north",
                 "swing": "in"
-              }
+              },
+              "display_name": "Project room"
             },
             {
               "name": "Finance",
@@ -3014,17 +3102,6 @@
               "room_id": "SH-SITE-0001-A-L03-R05"
             },
             {
-              "x_ft": 96.0,
-              "y_ft": 60,
-              "width_ft": 3,
-              "x_m": 29.2608,
-              "y_m": 18.288,
-              "width_m": 0.9144,
-              "wall": "south",
-              "swing": "in",
-              "room_id": "SH-SITE-0001-A-L03-R06"
-            },
-            {
               "x_ft": 114,
               "y_ft": 96.0,
               "width_ft": 3,
@@ -3034,61 +3111,6 @@
               "wall": "west",
               "swing": "in",
               "room_id": "SH-SITE-0001-A-L03-R07"
-            },
-            {
-              "x_ft": 120.0,
-              "y_ft": 60,
-              "width_ft": 3,
-              "x_m": 36.576,
-              "y_m": 18.288,
-              "width_m": 0.9144,
-              "wall": "south",
-              "swing": "in",
-              "room_id": "SH-SITE-0001-A-L03-R08"
-            },
-            {
-              "x_ft": 150.0,
-              "y_ft": 48,
-              "width_ft": 3,
-              "x_m": 45.72,
-              "y_m": 14.6304,
-              "width_m": 0.9144,
-              "wall": "north",
-              "swing": "in",
-              "room_id": "SH-SITE-0001-A-L03-R09"
-            },
-            {
-              "x_ft": 182.0,
-              "y_ft": 48,
-              "width_ft": 3,
-              "x_m": 55.4736,
-              "y_m": 14.6304,
-              "width_m": 0.9144,
-              "wall": "north",
-              "swing": "in",
-              "room_id": "SH-SITE-0001-A-L03-R10"
-            },
-            {
-              "x_ft": 134,
-              "y_ft": 10.0,
-              "width_ft": 3,
-              "x_m": 40.8432,
-              "y_m": 3.048,
-              "width_m": 0.9144,
-              "wall": "west",
-              "swing": "in",
-              "room_id": "SH-SITE-0001-A-L03-R11"
-            },
-            {
-              "x_ft": 182.0,
-              "y_ft": 20,
-              "width_ft": 3,
-              "x_m": 55.4736,
-              "y_m": 6.096,
-              "width_m": 0.9144,
-              "wall": "north",
-              "swing": "in",
-              "room_id": "SH-SITE-0001-A-L03-R12"
             },
             {
               "x_ft": 27.0,
@@ -3256,13 +3278,13 @@
               "core_name": "Support / AV / print / store"
             },
             {
-              "x_ft": 96.0,
-              "y_ft": 48,
+              "x_ft": 102,
+              "y_ft": 36,
               "width_ft": 3,
-              "x_m": 29.2608,
-              "y_m": 14.6304,
+              "x_m": 31.0896,
+              "y_m": 10.9728,
               "width_m": 0.9144,
-              "wall": "north",
+              "wall": "east",
               "swing": "in",
               "core_name": "WC north"
             },
@@ -3278,13 +3300,13 @@
               "core_name": "WC south"
             },
             {
-              "x_ft": 120.0,
-              "y_ft": 48,
+              "x_ft": 114,
+              "y_ft": 40,
               "width_ft": 3,
-              "x_m": 36.576,
-              "y_m": 14.6304,
+              "x_m": 34.7472,
+              "y_m": 12.192,
               "width_m": 0.9144,
-              "wall": "north",
+              "wall": "west",
               "swing": "in",
               "core_name": "Lift"
             },
@@ -3309,6 +3331,72 @@
               "wall": "west",
               "swing": "in",
               "core_name": "IT / AV / local edge"
+            },
+            {
+              "x_ft": 102,
+              "y_ft": 72,
+              "width_ft": 3,
+              "x_m": 31.0896,
+              "y_m": 21.9456,
+              "width_m": 0.9144,
+              "wall": "east",
+              "swing": "in",
+              "room_id": "SH-SITE-0001-A-L03-R06"
+            },
+            {
+              "x_ft": 114,
+              "y_ft": 72,
+              "width_ft": 3,
+              "x_m": 34.7472,
+              "y_m": 21.9456,
+              "width_m": 0.9144,
+              "wall": "west",
+              "swing": "in",
+              "room_id": "SH-SITE-0001-A-L03-R08"
+            },
+            {
+              "x_ft": 140,
+              "y_ft": 28,
+              "width_ft": 3,
+              "x_m": 42.672,
+              "y_m": 8.5344,
+              "width_m": 0.9144,
+              "wall": "south",
+              "swing": "in",
+              "room_id": "SH-SITE-0001-A-L03-R09"
+            },
+            {
+              "x_ft": 172,
+              "y_ft": 28,
+              "width_ft": 3,
+              "x_m": 52.4256,
+              "y_m": 8.5344,
+              "width_m": 0.9144,
+              "wall": "south",
+              "swing": "in",
+              "room_id": "SH-SITE-0001-A-L03-R10"
+            },
+            {
+              "x_ft": 140,
+              "y_ft": 20,
+              "width_ft": 3,
+              "x_m": 42.672,
+              "y_m": 6.096,
+              "width_m": 0.9144,
+              "wall": "north",
+              "swing": "in",
+              "room_id": "SH-SITE-0001-A-L03-R11"
+            },
+            {
+              "x_ft": 172,
+              "y_ft": 20,
+              "width_ft": 3,
+              "x_m": 52.4256,
+              "y_m": 6.096,
+              "width_m": 0.9144,
+              "wall": "north",
+              "swing": "in",
+              "room_id": "SH-SITE-0001-A-L03-R12"
             }
           ],
           "actual_floor_count": null,
@@ -3320,7 +3408,13 @@
             "Internal Audit has its own controlled entrance and Board accountability; it is not an ESS reporting unit.",
             "Private suites and professional areas require final partition, acoustic and access engineering."
           ],
-          "staff_workplaces": 48
+          "staff_workplaces": 48,
+          "access_drawing_basis": "Approved R01 visible door topology where available; dimensions are modelled reconstruction, not surveyed or code-approved openings. Upper-floor repetitions follow fixed cores and source circulation zones.",
+          "legend_text": "Blue: staff work / Sage: shared or independent program / Sand: visitor and project rooms",
+          "design_note_headings": [
+            "Shared campus",
+            "Controlled access"
+          ]
         }
       ],
       "gross_area_sqft": 69984,
@@ -3397,7 +3491,9 @@
             0.0,
             5.4864,
             12.192
-          ]
+          ],
+          "display_name": "Field",
+          "display_detail": "lockers / kit"
         },
         {
           "name": "Services / MEP / store",
@@ -3413,7 +3509,9 @@
             0.0,
             5.4864,
             12.192
-          ]
+          ],
+          "display_name": "Services",
+          "display_detail": "MEP / store"
         },
         {
           "name": "WC",
@@ -3494,7 +3592,7 @@
                 7.0104
               ],
               "kind": "meeting",
-              "color_group": "neutral",
+              "color_group": "white",
               "access": "restricted",
               "assigned_desks": 0,
               "shared_desks": 0,
@@ -3515,7 +3613,8 @@
                 "width_m": 0.9144,
                 "wall": "east",
                 "swing": "in"
-              }
+              },
+              "display_name": "Case"
             },
             {
               "name": "Case room 2",
@@ -3532,7 +3631,7 @@
                 7.0104
               ],
               "kind": "meeting",
-              "color_group": "neutral",
+              "color_group": "white",
               "access": "restricted",
               "assigned_desks": 0,
               "shared_desks": 0,
@@ -3545,15 +3644,16 @@
               "basis": "SAC-R02-A01; R01 source where identified, remaining floors labelled design extension",
               "id": "SH-SITE-0001-B-L01-R02",
               "door": {
-                "x_ft": 96.0,
-                "y_ft": 58,
+                "x_ft": 102,
+                "y_ft": 69.5,
                 "width_ft": 3,
-                "x_m": 29.2608,
-                "y_m": 17.6784,
+                "x_m": 31.0896,
+                "y_m": 21.1836,
                 "width_m": 0.9144,
-                "wall": "south",
+                "wall": "east",
                 "swing": "in"
-              }
+              },
+              "display_name": "Case"
             },
             {
               "name": "Case room 3",
@@ -3570,7 +3670,7 @@
                 7.0104
               ],
               "kind": "meeting",
-              "color_group": "neutral",
+              "color_group": "white",
               "access": "restricted",
               "assigned_desks": 0,
               "shared_desks": 0,
@@ -3591,7 +3691,8 @@
                 "width_m": 0.9144,
                 "wall": "west",
                 "swing": "in"
-              }
+              },
+              "display_name": "Case"
             },
             {
               "name": "Case room 4",
@@ -3608,7 +3709,7 @@
                 7.0104
               ],
               "kind": "meeting",
-              "color_group": "neutral",
+              "color_group": "white",
               "access": "restricted",
               "assigned_desks": 0,
               "shared_desks": 0,
@@ -3621,15 +3722,16 @@
               "basis": "SAC-R02-A01; R01 source where identified, remaining floors labelled design extension",
               "id": "SH-SITE-0001-B-L01-R04",
               "door": {
-                "x_ft": 120.0,
-                "y_ft": 58,
+                "x_ft": 114,
+                "y_ft": 69.5,
                 "width_ft": 3,
-                "x_m": 36.576,
-                "y_m": 17.6784,
+                "x_m": 34.7472,
+                "y_m": 21.1836,
                 "width_m": 0.9144,
-                "wall": "south",
+                "wall": "west",
                 "swing": "in"
-              }
+              },
+              "display_name": "Case"
             },
             {
               "name": "Head of Contact / Mara Hammer",
@@ -3667,7 +3769,9 @@
                 "width_m": 0.9144,
                 "wall": "east",
                 "swing": "in"
-              }
+              },
+              "display_name": "Head",
+              "display_detail": "Mara Hammer"
             },
             {
               "name": "Deputy Head of Contact",
@@ -3705,7 +3809,9 @@
                 "width_m": 0.9144,
                 "wall": "east",
                 "swing": "in"
-              }
+              },
+              "display_name": "Deputy",
+              "display_detail": "Contact"
             },
             {
               "name": "Contact west studio",
@@ -3743,7 +3849,9 @@
                 "width_m": 0.9144,
                 "wall": "south",
                 "swing": "in"
-              }
+              },
+              "display_name": "Contact",
+              "display_detail": "West studio / 22 workstations"
             },
             {
               "name": "Contact east studio",
@@ -3781,7 +3889,9 @@
                 "width_m": 0.9144,
                 "wall": "south",
                 "swing": "in"
-              }
+              },
+              "display_name": "Contact",
+              "display_detail": "East studio / 24 workstations"
             },
             {
               "name": "Methods room",
@@ -3798,7 +3908,7 @@
                 6.096
               ],
               "kind": "meeting",
-              "color_group": "neutral",
+              "color_group": "white",
               "access": "restricted",
               "assigned_desks": 0,
               "shared_desks": 0,
@@ -3819,7 +3929,8 @@
                 "width_m": 0.9144,
                 "wall": "west",
                 "swing": "in"
-              }
+              },
+              "display_name": "Methods"
             },
             {
               "name": "Kit preparation / store",
@@ -3857,7 +3968,9 @@
                 "width_m": 0.9144,
                 "wall": "west",
                 "swing": "in"
-              }
+              },
+              "display_name": "Kit",
+              "display_detail": "prep / store"
             },
             {
               "name": "Junction Advisory Group",
@@ -3895,7 +4008,16 @@
                 "width_m": 0.9144,
                 "wall": "north",
                 "swing": "in"
-              }
+              },
+              "display_detail": "12 touchdown desks / six returning teams",
+              "furniture_group_labels": [
+                "Team 1",
+                "Team 2",
+                "Team 3",
+                "Team 4",
+                "Team 5",
+                "Team 6"
+              ]
             },
             {
               "name": "J2 reception / headquarters support",
@@ -3932,8 +4054,11 @@
                 "y_m": 6.7056,
                 "width_m": 0.9144,
                 "wall": "north",
-                "swing": "in"
-              }
+                "swing": "in",
+                "access_control": "staff threshold"
+              },
+              "display_name": "Reception",
+              "display_detail": "2 HQ support desks"
             },
             {
               "name": "Interview01",
@@ -3963,15 +4088,16 @@
               "basis": "SAC-R02-A01; R01 source where identified, remaining floors labelled design extension",
               "id": "SH-SITE-0001-B-L01-R13",
               "door": {
-                "x_ft": 144.0,
-                "y_ft": 46,
+                "x_ft": 142,
+                "y_ft": 22,
                 "width_ft": 3,
-                "x_m": 43.8912,
-                "y_m": 14.0208,
+                "x_m": 43.2816,
+                "y_m": 6.7056,
                 "width_m": 0.9144,
-                "wall": "north",
+                "wall": "south",
                 "swing": "in"
-              }
+              },
+              "display_name": "Interview 01"
             },
             {
               "name": "Interview02",
@@ -4001,15 +4127,16 @@
               "basis": "SAC-R02-A01; R01 source where identified, remaining floors labelled design extension",
               "id": "SH-SITE-0001-B-L01-R14",
               "door": {
-                "x_ft": 180.0,
-                "y_ft": 46,
+                "x_ft": 178,
+                "y_ft": 22,
                 "width_ft": 3,
-                "x_m": 54.864,
-                "y_m": 14.0208,
+                "x_m": 54.2544,
+                "y_m": 6.7056,
                 "width_m": 0.9144,
-                "wall": "north",
+                "wall": "south",
                 "swing": "in"
-              }
+              },
+              "display_name": "Interview 02"
             },
             {
               "name": "Visitor waiting",
@@ -4039,10 +4166,10 @@
               "basis": "SAC-R02-A01; R01 source where identified, remaining floors labelled design extension",
               "id": "SH-SITE-0001-B-L01-R15",
               "door": {
-                "x_ft": 162.0,
+                "x_ft": 144,
                 "y_ft": 14,
                 "width_ft": 3,
-                "x_m": 49.3776,
+                "x_m": 43.8912,
                 "y_m": 4.2672,
                 "width_m": 0.9144,
                 "wall": "north",
@@ -4129,17 +4256,6 @@
               "room_id": "SH-SITE-0001-B-L01-R01"
             },
             {
-              "x_ft": 96.0,
-              "y_ft": 58,
-              "width_ft": 3,
-              "x_m": 29.2608,
-              "y_m": 17.6784,
-              "width_m": 0.9144,
-              "wall": "south",
-              "swing": "in",
-              "room_id": "SH-SITE-0001-B-L01-R02"
-            },
-            {
               "x_ft": 114,
               "y_ft": 92.5,
               "width_ft": 3,
@@ -4149,17 +4265,6 @@
               "wall": "west",
               "swing": "in",
               "room_id": "SH-SITE-0001-B-L01-R03"
-            },
-            {
-              "x_ft": 120.0,
-              "y_ft": 58,
-              "width_ft": 3,
-              "x_m": 36.576,
-              "y_m": 17.6784,
-              "width_m": 0.9144,
-              "wall": "south",
-              "swing": "in",
-              "room_id": "SH-SITE-0001-B-L01-R04"
             },
             {
               "x_ft": 54.0,
@@ -4203,40 +4308,8 @@
               "width_m": 0.9144,
               "wall": "north",
               "swing": "in",
-              "room_id": "SH-SITE-0001-B-L01-R12"
-            },
-            {
-              "x_ft": 144.0,
-              "y_ft": 46,
-              "width_ft": 3,
-              "x_m": 43.8912,
-              "y_m": 14.0208,
-              "width_m": 0.9144,
-              "wall": "north",
-              "swing": "in",
-              "room_id": "SH-SITE-0001-B-L01-R13"
-            },
-            {
-              "x_ft": 180.0,
-              "y_ft": 46,
-              "width_ft": 3,
-              "x_m": 54.864,
-              "y_m": 14.0208,
-              "width_m": 0.9144,
-              "wall": "north",
-              "swing": "in",
-              "room_id": "SH-SITE-0001-B-L01-R14"
-            },
-            {
-              "x_ft": 162.0,
-              "y_ft": 14,
-              "width_ft": 3,
-              "x_m": 49.3776,
-              "y_m": 4.2672,
-              "width_m": 0.9144,
-              "wall": "north",
-              "swing": "in",
-              "room_id": "SH-SITE-0001-B-L01-R15"
+              "room_id": "SH-SITE-0001-B-L01-R12",
+              "access_control": "staff threshold"
             },
             {
               "x_ft": 18,
@@ -4327,24 +4400,24 @@
               "core_name": "Services / MEP / store"
             },
             {
-              "x_ft": 96.0,
-              "y_ft": 46,
+              "x_ft": 102,
+              "y_ft": 34,
               "width_ft": 3,
-              "x_m": 29.2608,
-              "y_m": 14.0208,
+              "x_m": 31.0896,
+              "y_m": 10.3632,
               "width_m": 0.9144,
-              "wall": "north",
+              "wall": "east",
               "swing": "in",
               "core_name": "WC"
             },
             {
-              "x_ft": 120.0,
-              "y_ft": 46,
+              "x_ft": 114,
+              "y_ft": 38,
               "width_ft": 3,
-              "x_m": 36.576,
-              "y_m": 14.0208,
+              "x_m": 34.7472,
+              "y_m": 11.5824,
               "width_m": 0.9144,
-              "wall": "north",
+              "wall": "west",
               "swing": "in",
               "core_name": "Lift"
             },
@@ -4367,7 +4440,8 @@
               "y_m": 0.0,
               "width_m": 1.8288,
               "wall": "south",
-              "swing": "in"
+              "swing": "in",
+              "leaves": 2
             },
             {
               "x_ft": 108,
@@ -4378,6 +4452,113 @@
               "width_m": 1.2192,
               "wall": "north",
               "swing": "in"
+            },
+            {
+              "x_ft": 102,
+              "y_ft": 69.5,
+              "width_ft": 3,
+              "x_m": 31.0896,
+              "y_m": 21.1836,
+              "width_m": 0.9144,
+              "wall": "east",
+              "swing": "in",
+              "room_id": "SH-SITE-0001-B-L01-R02"
+            },
+            {
+              "x_ft": 114,
+              "y_ft": 69.5,
+              "width_ft": 3,
+              "x_m": 34.7472,
+              "y_m": 21.1836,
+              "width_m": 0.9144,
+              "wall": "west",
+              "swing": "in",
+              "room_id": "SH-SITE-0001-B-L01-R04"
+            },
+            {
+              "x_ft": 126,
+              "y_ft": 18,
+              "width_ft": 3,
+              "x_m": 38.4048,
+              "y_m": 5.4864,
+              "width_m": 0.9144,
+              "wall": "east",
+              "swing": "in",
+              "room_id": "SH-SITE-0001-B-L01-R12",
+              "role": "visitor corridor connection",
+              "access_control": "reception supervised"
+            },
+            {
+              "x_ft": 142,
+              "y_ft": 22,
+              "width_ft": 3,
+              "x_m": 43.2816,
+              "y_m": 6.7056,
+              "width_m": 0.9144,
+              "wall": "south",
+              "swing": "in",
+              "room_id": "SH-SITE-0001-B-L01-R13"
+            },
+            {
+              "x_ft": 178,
+              "y_ft": 22,
+              "width_ft": 3,
+              "x_m": 54.2544,
+              "y_m": 6.7056,
+              "width_m": 0.9144,
+              "wall": "south",
+              "swing": "in",
+              "room_id": "SH-SITE-0001-B-L01-R14"
+            },
+            {
+              "x_ft": 144,
+              "y_ft": 14,
+              "width_ft": 3,
+              "x_m": 43.8912,
+              "y_m": 4.2672,
+              "width_m": 0.9144,
+              "wall": "north",
+              "swing": "in",
+              "room_id": "SH-SITE-0001-B-L01-R15"
+            },
+            {
+              "x_ft": 0,
+              "y_ft": 52,
+              "width_ft": 3,
+              "x_m": 0.0,
+              "y_m": 15.8496,
+              "width_m": 0.9144,
+              "wall": "west",
+              "swing": "in",
+              "exterior": true,
+              "core_name": "ST-1",
+              "basis": "R01 B-L01 west stair discharge"
+            },
+            {
+              "x_ft": 216,
+              "y_ft": 52,
+              "width_ft": 3,
+              "x_m": 65.8368,
+              "y_m": 15.8496,
+              "width_m": 0.9144,
+              "wall": "east",
+              "swing": "in",
+              "exterior": true,
+              "core_name": "ST-2",
+              "basis": "R01 B-L01 east stair discharge"
+            },
+            {
+              "x_ft": 216,
+              "y_ft": 28,
+              "width_ft": 3,
+              "x_m": 65.8368,
+              "y_m": 8.5344,
+              "width_m": 0.9144,
+              "wall": "east",
+              "swing": "in",
+              "exterior": true,
+              "core_name": "Services / MEP / store",
+              "basis": "R01 B-L01 service entry"
             }
           ],
           "actual_floor_count": null,
@@ -4385,11 +4566,17 @@
           "geometry_status": "CONCEPT_FROM_APPROVED_R01",
           "reference_image": "docs/facilities/references/sacramento-hq/r01-approved/03_J2_L01_Contact_JAG_Draft.png",
           "design_notes": [
-            "48 Contact workplaces include Head and Deputy;12 JAG touchdown desks serve six five-person teams.",
-            "Two headquarters reception/support workplaces are inside J2 HQ allocation, not additional billets.",
-            "Visitor route runs reception \u2192 waiting/interview corridor; controlled central threshold precedes staff circulation."
+            "Reception and interview rooms sit before the staff boundary. Visitors do not cross a Contact studio.",
+            "J2 has its own building and reception. Education is nearby; ESS and Internal Audit remain separate.",
+            "Visitor route runs reception → waiting/interview corridor; controlled central threshold precedes staff circulation."
           ],
-          "staff_workplaces": 62
+          "staff_workplaces": 62,
+          "access_drawing_basis": "Approved R01 visible door topology where available; dimensions are modelled reconstruction, not surveyed or code-approved openings. Upper-floor repetitions follow fixed cores and source circulation zones.",
+          "design_note_headings": [
+            "Visitor path",
+            "Institutional separation"
+          ],
+          "legend_text": "Blue: Contact / Sage: JAG / Sand: reception and visitor rooms"
         },
         {
           "id": "SH-SITE-0001-B-L02",
@@ -4420,7 +4607,7 @@
                 7.0104
               ],
               "kind": "meeting",
-              "color_group": "neutral",
+              "color_group": "white",
               "access": "restricted",
               "assigned_desks": 0,
               "shared_desks": 0,
@@ -4441,7 +4628,8 @@
                 "width_m": 0.9144,
                 "wall": "east",
                 "swing": "in"
-              }
+              },
+              "display_name": "Case"
             },
             {
               "name": "Case room 2",
@@ -4458,7 +4646,7 @@
                 7.0104
               ],
               "kind": "meeting",
-              "color_group": "neutral",
+              "color_group": "white",
               "access": "restricted",
               "assigned_desks": 0,
               "shared_desks": 0,
@@ -4471,15 +4659,16 @@
               "basis": "SAC-R02-A01; R01 source where identified, remaining floors labelled design extension",
               "id": "SH-SITE-0001-B-L02-R02",
               "door": {
-                "x_ft": 96.0,
-                "y_ft": 58,
+                "x_ft": 102,
+                "y_ft": 69.5,
                 "width_ft": 3,
-                "x_m": 29.2608,
-                "y_m": 17.6784,
+                "x_m": 31.0896,
+                "y_m": 21.1836,
                 "width_m": 0.9144,
-                "wall": "south",
+                "wall": "east",
                 "swing": "in"
-              }
+              },
+              "display_name": "Case"
             },
             {
               "name": "Case room 3",
@@ -4496,7 +4685,7 @@
                 7.0104
               ],
               "kind": "meeting",
-              "color_group": "neutral",
+              "color_group": "white",
               "access": "restricted",
               "assigned_desks": 0,
               "shared_desks": 0,
@@ -4517,7 +4706,8 @@
                 "width_m": 0.9144,
                 "wall": "west",
                 "swing": "in"
-              }
+              },
+              "display_name": "Case"
             },
             {
               "name": "Case room 4",
@@ -4534,7 +4724,7 @@
                 7.0104
               ],
               "kind": "meeting",
-              "color_group": "neutral",
+              "color_group": "white",
               "access": "restricted",
               "assigned_desks": 0,
               "shared_desks": 0,
@@ -4547,15 +4737,16 @@
               "basis": "SAC-R02-A01; R01 source where identified, remaining floors labelled design extension",
               "id": "SH-SITE-0001-B-L02-R04",
               "door": {
-                "x_ft": 120.0,
-                "y_ft": 58,
+                "x_ft": 114,
+                "y_ft": 69.5,
                 "width_ft": 3,
-                "x_m": 36.576,
-                "y_m": 17.6784,
+                "x_m": 34.7472,
+                "y_m": 21.1836,
                 "width_m": 0.9144,
-                "wall": "south",
+                "wall": "west",
                 "swing": "in"
-              }
+              },
+              "display_name": "Case"
             },
             {
               "name": "Head of Judgment / Anika Trish",
@@ -4593,7 +4784,9 @@
                 "width_m": 0.9144,
                 "wall": "east",
                 "swing": "in"
-              }
+              },
+              "display_name": "Head",
+              "display_detail": "Anika Trish"
             },
             {
               "name": "Deputy Head of Judgment",
@@ -4631,7 +4824,9 @@
                 "width_m": 0.9144,
                 "wall": "east",
                 "swing": "in"
-              }
+              },
+              "display_name": "Deputy",
+              "display_detail": "Judgment"
             },
             {
               "name": "Judgment studio",
@@ -4858,7 +5053,8 @@
                 "y_m": 6.7056,
                 "width_m": 0.9144,
                 "wall": "north",
-                "swing": "in"
+                "swing": "in",
+                "access_control": "staff threshold"
               }
             },
             {
@@ -4889,13 +5085,13 @@
               "basis": "SAC-R02-A01; R01 source where identified, remaining floors labelled design extension",
               "id": "SH-SITE-0001-B-L02-R13",
               "door": {
-                "x_ft": 144.0,
-                "y_ft": 46,
+                "x_ft": 142,
+                "y_ft": 22,
                 "width_ft": 3,
-                "x_m": 43.8912,
-                "y_m": 14.0208,
+                "x_m": 43.2816,
+                "y_m": 6.7056,
                 "width_m": 0.9144,
-                "wall": "north",
+                "wall": "south",
                 "swing": "in"
               }
             },
@@ -4927,13 +5123,13 @@
               "basis": "SAC-R02-A01; R01 source where identified, remaining floors labelled design extension",
               "id": "SH-SITE-0001-B-L02-R14",
               "door": {
-                "x_ft": 180.0,
-                "y_ft": 46,
+                "x_ft": 178,
+                "y_ft": 22,
                 "width_ft": 3,
-                "x_m": 54.864,
-                "y_m": 14.0208,
+                "x_m": 54.2544,
+                "y_m": 6.7056,
                 "width_m": 0.9144,
-                "wall": "north",
+                "wall": "south",
                 "swing": "in"
               }
             },
@@ -4965,10 +5161,10 @@
               "basis": "SAC-R02-A01; R01 source where identified, remaining floors labelled design extension",
               "id": "SH-SITE-0001-B-L02-R15",
               "door": {
-                "x_ft": 162.0,
+                "x_ft": 144,
                 "y_ft": 14,
                 "width_ft": 3,
-                "x_m": 49.3776,
+                "x_m": 43.8912,
                 "y_m": 4.2672,
                 "width_m": 0.9144,
                 "wall": "north",
@@ -5010,7 +5206,7 @@
               ]
             },
             {
-              "name": "Reception access control",
+              "name": "HQ access control",
               "type": "circulation",
               "rect_ft": [
                 102,
@@ -5026,7 +5222,7 @@
               ]
             },
             {
-              "name": "Interview visitor corridor",
+              "name": "Leadership working corridor",
               "type": "circulation",
               "rect_ft": [
                 126,
@@ -5055,17 +5251,6 @@
               "room_id": "SH-SITE-0001-B-L02-R01"
             },
             {
-              "x_ft": 96.0,
-              "y_ft": 58,
-              "width_ft": 3,
-              "x_m": 29.2608,
-              "y_m": 17.6784,
-              "width_m": 0.9144,
-              "wall": "south",
-              "swing": "in",
-              "room_id": "SH-SITE-0001-B-L02-R02"
-            },
-            {
               "x_ft": 114,
               "y_ft": 92.5,
               "width_ft": 3,
@@ -5075,17 +5260,6 @@
               "wall": "west",
               "swing": "in",
               "room_id": "SH-SITE-0001-B-L02-R03"
-            },
-            {
-              "x_ft": 120.0,
-              "y_ft": 58,
-              "width_ft": 3,
-              "x_m": 36.576,
-              "y_m": 17.6784,
-              "width_m": 0.9144,
-              "wall": "south",
-              "swing": "in",
-              "room_id": "SH-SITE-0001-B-L02-R04"
             },
             {
               "x_ft": 54.0,
@@ -5129,40 +5303,8 @@
               "width_m": 0.9144,
               "wall": "north",
               "swing": "in",
-              "room_id": "SH-SITE-0001-B-L02-R12"
-            },
-            {
-              "x_ft": 144.0,
-              "y_ft": 46,
-              "width_ft": 3,
-              "x_m": 43.8912,
-              "y_m": 14.0208,
-              "width_m": 0.9144,
-              "wall": "north",
-              "swing": "in",
-              "room_id": "SH-SITE-0001-B-L02-R13"
-            },
-            {
-              "x_ft": 180.0,
-              "y_ft": 46,
-              "width_ft": 3,
-              "x_m": 54.864,
-              "y_m": 14.0208,
-              "width_m": 0.9144,
-              "wall": "north",
-              "swing": "in",
-              "room_id": "SH-SITE-0001-B-L02-R14"
-            },
-            {
-              "x_ft": 162.0,
-              "y_ft": 14,
-              "width_ft": 3,
-              "x_m": 49.3776,
-              "y_m": 4.2672,
-              "width_m": 0.9144,
-              "wall": "north",
-              "swing": "in",
-              "room_id": "SH-SITE-0001-B-L02-R15"
+              "room_id": "SH-SITE-0001-B-L02-R12",
+              "access_control": "staff threshold"
             },
             {
               "x_ft": 18,
@@ -5253,24 +5395,24 @@
               "core_name": "Services / MEP / store"
             },
             {
-              "x_ft": 96.0,
-              "y_ft": 46,
+              "x_ft": 102,
+              "y_ft": 34,
               "width_ft": 3,
-              "x_m": 29.2608,
-              "y_m": 14.0208,
+              "x_m": 31.0896,
+              "y_m": 10.3632,
               "width_m": 0.9144,
-              "wall": "north",
+              "wall": "east",
               "swing": "in",
               "core_name": "WC"
             },
             {
-              "x_ft": 120.0,
-              "y_ft": 46,
+              "x_ft": 114,
+              "y_ft": 38,
               "width_ft": 3,
-              "x_m": 36.576,
-              "y_m": 14.0208,
+              "x_m": 34.7472,
+              "y_m": 11.5824,
               "width_m": 0.9144,
-              "wall": "north",
+              "wall": "west",
               "swing": "in",
               "core_name": "Lift"
             },
@@ -5284,6 +5426,74 @@
               "wall": "west",
               "swing": "in",
               "core_name": "Riser"
+            },
+            {
+              "x_ft": 102,
+              "y_ft": 69.5,
+              "width_ft": 3,
+              "x_m": 31.0896,
+              "y_m": 21.1836,
+              "width_m": 0.9144,
+              "wall": "east",
+              "swing": "in",
+              "room_id": "SH-SITE-0001-B-L02-R02"
+            },
+            {
+              "x_ft": 114,
+              "y_ft": 69.5,
+              "width_ft": 3,
+              "x_m": 34.7472,
+              "y_m": 21.1836,
+              "width_m": 0.9144,
+              "wall": "west",
+              "swing": "in",
+              "room_id": "SH-SITE-0001-B-L02-R04"
+            },
+            {
+              "x_ft": 126,
+              "y_ft": 18,
+              "width_ft": 3,
+              "x_m": 38.4048,
+              "y_m": 5.4864,
+              "width_m": 0.9144,
+              "wall": "east",
+              "swing": "in",
+              "room_id": "SH-SITE-0001-B-L02-R12",
+              "role": "visitor corridor connection",
+              "access_control": "reception supervised"
+            },
+            {
+              "x_ft": 142,
+              "y_ft": 22,
+              "width_ft": 3,
+              "x_m": 43.2816,
+              "y_m": 6.7056,
+              "width_m": 0.9144,
+              "wall": "south",
+              "swing": "in",
+              "room_id": "SH-SITE-0001-B-L02-R13"
+            },
+            {
+              "x_ft": 178,
+              "y_ft": 22,
+              "width_ft": 3,
+              "x_m": 54.2544,
+              "y_m": 6.7056,
+              "width_m": 0.9144,
+              "wall": "south",
+              "swing": "in",
+              "room_id": "SH-SITE-0001-B-L02-R14"
+            },
+            {
+              "x_ft": 144,
+              "y_ft": 14,
+              "width_ft": 3,
+              "x_m": 43.8912,
+              "y_m": 4.2672,
+              "width_m": 0.9144,
+              "wall": "north",
+              "swing": "in",
+              "room_id": "SH-SITE-0001-B-L02-R15"
             }
           ],
           "actual_floor_count": null,
@@ -5295,7 +5505,13 @@
             "J2 building130 workplaces are not 237 authorized billets; Education35 remains included in 237, in C.",
             "Six approved leaders retain their accepted roles and joining years; no new people or authorization is created."
           ],
-          "staff_workplaces": 68
+          "staff_workplaces": 68,
+          "access_drawing_basis": "Approved R01 visible door topology where available; dimensions are modelled reconstruction, not surveyed or code-approved openings. Upper-floor repetitions follow fixed cores and source circulation zones.",
+          "design_note_headings": [
+            "Professional work",
+            "One authorization"
+          ],
+          "legend_text": "Blue: Judgment and Orientation / Sage: J2 HQ / Sand: controlled working rooms"
         }
       ],
       "gross_area_sqft": 44928,
@@ -5482,15 +5698,18 @@
               "basis": "SAC-R02-A01; R01 source where identified, remaining floors labelled design extension",
               "id": "SH-SITE-0001-C-L01-R01",
               "door": {
-                "x_ft": 60.0,
+                "x_ft": 30,
                 "y_ft": 50,
-                "width_ft": 3,
-                "x_m": 18.288,
+                "width_ft": 6,
+                "x_m": 9.144,
                 "y_m": 15.24,
-                "width_m": 0.9144,
+                "width_m": 1.8288,
                 "wall": "south",
-                "swing": "in"
-              }
+                "swing": "in",
+                "leaves": 2,
+                "role": "hall west doors"
+              },
+              "display_detail": "120 flexible seats / flat floor"
             },
             {
               "name": "Classroom01",
@@ -5528,7 +5747,8 @@
                 "width_m": 0.9144,
                 "wall": "south",
                 "swing": "in"
-              }
+              },
+              "display_name": "Classroom 01"
             },
             {
               "name": "Classroom02",
@@ -5566,7 +5786,8 @@
                 "width_m": 0.9144,
                 "wall": "south",
                 "swing": "in"
-              }
+              },
+              "display_name": "Classroom 02"
             },
             {
               "name": "Education reception",
@@ -5596,15 +5817,17 @@
               "basis": "SAC-R02-A01; R01 source where identified, remaining floors labelled design extension",
               "id": "SH-SITE-0001-C-L01-R04",
               "door": {
-                "x_ft": 44.0,
+                "x_ft": 44,
                 "y_ft": 40,
-                "width_ft": 3,
+                "width_ft": 6,
                 "x_m": 13.4112,
                 "y_m": 12.192,
-                "width_m": 0.9144,
+                "width_m": 1.8288,
                 "wall": "north",
-                "swing": "in"
-              }
+                "swing": "in",
+                "leaves": 2
+              },
+              "display_detail": "4 program / registrar desks"
             },
             {
               "name": "Campus dining",
@@ -5634,15 +5857,17 @@
               "basis": "SAC-R02-A01; R01 source where identified, remaining floors labelled design extension",
               "id": "SH-SITE-0001-C-L01-R05",
               "door": {
-                "x_ft": 98.0,
+                "x_ft": 98,
                 "y_ft": 40,
-                "width_ft": 3,
+                "width_ft": 6,
                 "x_m": 29.8704,
                 "y_m": 12.192,
-                "width_m": 0.9144,
+                "width_m": 1.8288,
                 "wall": "north",
-                "swing": "in"
-              }
+                "swing": "in",
+                "leaves": 2
+              },
+              "display_name": "Campus dining / 80 seats"
             },
             {
               "name": "Shared production kitchen",
@@ -5672,15 +5897,18 @@
               "basis": "SAC-R02-A01; R01 source where identified, remaining floors labelled design extension",
               "id": "SH-SITE-0001-C-L01-R06",
               "door": {
-                "x_ft": 138.0,
-                "y_ft": 40,
+                "x_ft": 124,
+                "y_ft": 18,
                 "width_ft": 3,
-                "x_m": 42.0624,
-                "y_m": 12.192,
+                "x_m": 37.7952,
+                "y_m": 5.4864,
                 "width_m": 0.9144,
-                "wall": "north",
-                "swing": "in"
-              }
+                "wall": "west",
+                "swing": "in",
+                "role": "dining service connection"
+              },
+              "display_name": "Kitchen",
+              "display_detail": "Shared campus production"
             }
           ],
           "circulation_zones": [
@@ -5735,17 +5963,6 @@
           ],
           "doors": [
             {
-              "x_ft": 60.0,
-              "y_ft": 50,
-              "width_ft": 3,
-              "x_m": 18.288,
-              "y_m": 15.24,
-              "width_m": 0.9144,
-              "wall": "south",
-              "swing": "in",
-              "room_id": "SH-SITE-0001-C-L01-R01"
-            },
-            {
               "x_ft": 110.0,
               "y_ft": 50,
               "width_ft": 3,
@@ -5768,39 +5985,6 @@
               "room_id": "SH-SITE-0001-C-L01-R03"
             },
             {
-              "x_ft": 44.0,
-              "y_ft": 40,
-              "width_ft": 3,
-              "x_m": 13.4112,
-              "y_m": 12.192,
-              "width_m": 0.9144,
-              "wall": "north",
-              "swing": "in",
-              "room_id": "SH-SITE-0001-C-L01-R04"
-            },
-            {
-              "x_ft": 98.0,
-              "y_ft": 40,
-              "width_ft": 3,
-              "x_m": 29.8704,
-              "y_m": 12.192,
-              "width_m": 0.9144,
-              "wall": "north",
-              "swing": "in",
-              "room_id": "SH-SITE-0001-C-L01-R05"
-            },
-            {
-              "x_ft": 138.0,
-              "y_ft": 40,
-              "width_ft": 3,
-              "x_m": 42.0624,
-              "y_m": 12.192,
-              "width_m": 0.9144,
-              "wall": "north",
-              "swing": "in",
-              "room_id": "SH-SITE-0001-C-L01-R06"
-            },
-            {
               "x_ft": 16,
               "y_ft": 78.0,
               "width_ft": 3,
@@ -5812,24 +5996,24 @@
               "core_name": "WC"
             },
             {
-              "x_ft": 8.0,
-              "y_ft": 50,
+              "x_ft": 16,
+              "y_ft": 56,
               "width_ft": 3,
-              "x_m": 2.4384,
-              "y_m": 15.24,
+              "x_m": 4.8768,
+              "y_m": 17.0688,
               "width_m": 0.9144,
-              "wall": "south",
+              "wall": "east",
               "swing": "in",
               "core_name": "Lift"
             },
             {
-              "x_ft": 164.0,
-              "y_ft": 50,
+              "x_ft": 160,
+              "y_ft": 58,
               "width_ft": 3,
-              "x_m": 49.9872,
-              "y_m": 15.24,
+              "x_m": 48.768,
+              "y_m": 17.6784,
               "width_m": 0.9144,
-              "wall": "south",
+              "wall": "west",
               "swing": "in",
               "core_name": "Risers"
             },
@@ -5885,7 +6069,8 @@
               "y_m": 0.0,
               "width_m": 1.8288,
               "wall": "south",
-              "swing": "in"
+              "swing": "in",
+              "leaves": 2
             },
             {
               "x_ft": 138,
@@ -5895,7 +6080,96 @@
               "y_m": 0.0,
               "width_m": 1.8288,
               "wall": "south",
-              "swing": "in"
+              "swing": "in",
+              "leaves": 2
+            },
+            {
+              "x_ft": 30,
+              "y_ft": 50,
+              "width_ft": 6,
+              "x_m": 9.144,
+              "y_m": 15.24,
+              "width_m": 1.8288,
+              "wall": "south",
+              "swing": "in",
+              "leaves": 2,
+              "role": "hall west doors",
+              "room_id": "SH-SITE-0001-C-L01-R01"
+            },
+            {
+              "x_ft": 84,
+              "y_ft": 50,
+              "width_ft": 6,
+              "x_m": 25.6032,
+              "y_m": 15.24,
+              "width_m": 1.8288,
+              "wall": "south",
+              "swing": "in",
+              "room_id": "SH-SITE-0001-C-L01-R01",
+              "leaves": 2,
+              "role": "hall east doors"
+            },
+            {
+              "x_ft": 44,
+              "y_ft": 40,
+              "width_ft": 6,
+              "x_m": 13.4112,
+              "y_m": 12.192,
+              "width_m": 1.8288,
+              "wall": "north",
+              "swing": "in",
+              "leaves": 2,
+              "room_id": "SH-SITE-0001-C-L01-R04"
+            },
+            {
+              "x_ft": 98,
+              "y_ft": 40,
+              "width_ft": 6,
+              "x_m": 29.8704,
+              "y_m": 12.192,
+              "width_m": 1.8288,
+              "wall": "north",
+              "swing": "in",
+              "leaves": 2,
+              "room_id": "SH-SITE-0001-C-L01-R05"
+            },
+            {
+              "x_ft": 124,
+              "y_ft": 18,
+              "width_ft": 3,
+              "x_m": 37.7952,
+              "y_m": 5.4864,
+              "width_m": 0.9144,
+              "wall": "west",
+              "swing": "in",
+              "role": "dining service connection",
+              "room_id": "SH-SITE-0001-C-L01-R06"
+            },
+            {
+              "x_ft": 0,
+              "y_ft": 28,
+              "width_ft": 3,
+              "x_m": 0.0,
+              "y_m": 8.5344,
+              "width_m": 0.9144,
+              "wall": "west",
+              "swing": "in",
+              "exterior": true,
+              "core_name": "ST-1",
+              "basis": "R01 C-L01 west stair discharge"
+            },
+            {
+              "x_ft": 168,
+              "y_ft": 28,
+              "width_ft": 3,
+              "x_m": 51.2064,
+              "y_m": 8.5344,
+              "width_m": 0.9144,
+              "wall": "east",
+              "swing": "in",
+              "exterior": true,
+              "core_name": "ST-2",
+              "basis": "R01 C-L01 east stair discharge"
             }
           ],
           "actual_floor_count": null,
@@ -5903,11 +6177,18 @@
           "geometry_status": "CONCEPT_FROM_APPROVED_R01",
           "reference_image": "docs/facilities/references/sacramento-hq/r01-approved/04_Education_L01_Teaching_Draft.png",
           "design_notes": [
-            "120 hall seats and two24-seat classrooms support alternative teaching configurations; day learner cap remains120.",
-            "Four program/registrar workplaces here and 28 faculty/design workplaces above =32 fitted desks for 35 authorized Education billets within 237 J2.",
+            "One production kitchen serves C and the corporate commons; 160 dining seats across the two buildings.",
+            "Residential arrivals and teaching arrivals use separate doors. The residence is a short walk across its own court.",
             "One shared production kitchen serves80 seats in C and 80 in corporate commons; hospitality workers are unallocated existing/support planning capacity, not new hires."
           ],
-          "staff_workplaces": 4
+          "staff_workplaces": 4,
+          "access_drawing_basis": "Approved R01 visible door topology where available; dimensions are modelled reconstruction, not surveyed or code-approved openings. Upper-floor repetitions follow fixed cores and source circulation zones.",
+          "dimension_tick_ft": 28,
+          "design_note_headings": [
+            "Shared hospitality",
+            "Quiet residential edge"
+          ],
+          "legend_text": "Blue: learning / Sage: shared dining and faculty / Sand: convening and reception"
         },
         {
           "id": "SH-SITE-0001-C-L02",
@@ -6428,24 +6709,24 @@
               "core_name": "WC"
             },
             {
-              "x_ft": 8.0,
-              "y_ft": 50,
+              "x_ft": 16,
+              "y_ft": 56,
               "width_ft": 3,
-              "x_m": 2.4384,
-              "y_m": 15.24,
+              "x_m": 4.8768,
+              "y_m": 17.0688,
               "width_m": 0.9144,
-              "wall": "south",
+              "wall": "east",
               "swing": "in",
               "core_name": "Lift"
             },
             {
-              "x_ft": 164.0,
-              "y_ft": 50,
+              "x_ft": 160,
+              "y_ft": 58,
               "width_ft": 3,
-              "x_m": 49.9872,
-              "y_m": 15.24,
+              "x_m": 48.768,
+              "y_m": 17.6784,
               "width_m": 0.9144,
-              "wall": "south",
+              "wall": "west",
               "swing": "in",
               "core_name": "Risers"
             },
@@ -6503,7 +6784,14 @@
             "Upstairs simulations and breakout seats share the120 learner campus cap; they do not create additional cohorts.",
             "Teaching support above the kitchen follows the same wet/service structure; no duplicate production kitchen."
           ],
-          "staff_workplaces": 28
+          "staff_workplaces": 28,
+          "access_drawing_basis": "Approved R01 visible door topology where available; dimensions are modelled reconstruction, not surveyed or code-approved openings. Upper-floor repetitions follow fixed cores and source circulation zones.",
+          "dimension_tick_ft": 28,
+          "design_note_headings": [
+            "One Education arm",
+            "Teaching support"
+          ],
+          "legend_text": "Blue: learning / Sage: shared dining and faculty / Sand: convening and reception"
         }
       ],
       "gross_area_sqft": 30240,
@@ -6572,30 +6860,30 @@
           "rect_ft": [
             0,
             0,
-            20,
-            18
+            12,
+            26
           ],
           "rect_m": [
             0.0,
             0.0,
-            6.096,
-            5.4864
+            3.6576,
+            7.9248
           ]
         },
         {
           "name": "Linen / housekeeping",
           "type": "service",
           "rect_ft": [
+            12,
             0,
-            18,
-            20,
-            8
+            8,
+            26
           ],
           "rect_m": [
+            3.6576,
             0.0,
-            5.4864,
-            6.096,
-            2.4384
+            2.4384,
+            7.9248
           ]
         },
         {
@@ -7729,21 +8017,21 @@
               "core_name": "ST-2"
             },
             {
-              "x_ft": 20,
-              "y_ft": 9.0,
+              "x_ft": 6,
+              "y_ft": 26,
               "width_ft": 3,
-              "x_m": 6.096,
-              "y_m": 2.7432,
+              "x_m": 1.8288,
+              "y_m": 7.9248,
               "width_m": 0.9144,
-              "wall": "east",
+              "wall": "north",
               "swing": "in",
               "core_name": "Lift / accessible lobby"
             },
             {
-              "x_ft": 10.0,
+              "x_ft": 16,
               "y_ft": 26,
               "width_ft": 3,
-              "x_m": 3.048,
+              "x_m": 4.8768,
               "y_m": 7.9248,
               "width_m": 0.9144,
               "wall": "north",
@@ -7769,7 +8057,34 @@
               "y_m": 0.0,
               "width_m": 1.8288,
               "wall": "south",
-              "swing": "in"
+              "swing": "in",
+              "leaves": 2
+            },
+            {
+              "x_ft": 0,
+              "y_ft": 46,
+              "width_ft": 3,
+              "x_m": 0.0,
+              "y_m": 14.0208,
+              "width_m": 0.9144,
+              "wall": "west",
+              "swing": "in",
+              "exterior": true,
+              "core_name": "ST-1",
+              "basis": "R02 modelled direct ground-floor discharge; engineering unresolved"
+            },
+            {
+              "x_ft": 168,
+              "y_ft": 46,
+              "width_ft": 3,
+              "x_m": 51.2064,
+              "y_m": 14.0208,
+              "width_m": 0.9144,
+              "wall": "east",
+              "swing": "in",
+              "exterior": true,
+              "core_name": "ST-2",
+              "basis": "R02 modelled direct ground-floor discharge; engineering unresolved"
             }
           ],
           "actual_floor_count": null,
@@ -7781,7 +8096,13 @@
             "Resident learners are already inside the120 day-learner cap; night residency is a separate60-person scenario.",
             "Room furniture is residential use, not fitted staff workplaces. Accessible room/wet-room layouts require final code design."
           ],
-          "staff_workplaces": 0
+          "staff_workplaces": 0,
+          "access_drawing_basis": "Approved R01 visible door topology where available; dimensions are modelled reconstruction, not surveyed or code-approved openings. Upper-floor repetitions follow fixed cores and source circulation zones.",
+          "design_note_headings": [
+            "Residential use",
+            "One cohort"
+          ],
+          "legend_text": "Sage: single residential rooms / Neutral: circulation and shared support"
         },
         {
           "id": "SH-SITE-0001-D-L02",
@@ -8896,21 +9217,21 @@
               "core_name": "ST-2"
             },
             {
-              "x_ft": 20,
-              "y_ft": 9.0,
+              "x_ft": 6,
+              "y_ft": 26,
               "width_ft": 3,
-              "x_m": 6.096,
-              "y_m": 2.7432,
+              "x_m": 1.8288,
+              "y_m": 7.9248,
               "width_m": 0.9144,
-              "wall": "east",
+              "wall": "north",
               "swing": "in",
               "core_name": "Lift / accessible lobby"
             },
             {
-              "x_ft": 10.0,
+              "x_ft": 16,
               "y_ft": 26,
               "width_ft": 3,
-              "x_m": 3.048,
+              "x_m": 4.8768,
               "y_m": 7.9248,
               "width_m": 0.9144,
               "wall": "north",
@@ -8938,7 +9259,13 @@
             "Resident learners are already inside the120 day-learner cap; night residency is a separate60-person scenario.",
             "Room furniture is residential use, not fitted staff workplaces. Accessible room/wet-room layouts require final code design."
           ],
-          "staff_workplaces": 0
+          "staff_workplaces": 0,
+          "access_drawing_basis": "Approved R01 visible door topology where available; dimensions are modelled reconstruction, not surveyed or code-approved openings. Upper-floor repetitions follow fixed cores and source circulation zones.",
+          "design_note_headings": [
+            "Residential use",
+            "One cohort"
+          ],
+          "legend_text": "Sage: single residential rooms / Neutral: circulation and shared support"
         },
         {
           "id": "SH-SITE-0001-D-L03",
@@ -10053,21 +10380,21 @@
               "core_name": "ST-2"
             },
             {
-              "x_ft": 20,
-              "y_ft": 9.0,
+              "x_ft": 6,
+              "y_ft": 26,
               "width_ft": 3,
-              "x_m": 6.096,
-              "y_m": 2.7432,
+              "x_m": 1.8288,
+              "y_m": 7.9248,
               "width_m": 0.9144,
-              "wall": "east",
+              "wall": "north",
               "swing": "in",
               "core_name": "Lift / accessible lobby"
             },
             {
-              "x_ft": 10.0,
+              "x_ft": 16,
               "y_ft": 26,
               "width_ft": 3,
-              "x_m": 3.048,
+              "x_m": 4.8768,
               "y_m": 7.9248,
               "width_m": 0.9144,
               "wall": "north",
@@ -10095,11 +10422,18 @@
             "Resident learners are already inside the120 day-learner cap; night residency is a separate60-person scenario.",
             "Room furniture is residential use, not fitted staff workplaces. Accessible room/wet-room layouts require final code design."
           ],
-          "staff_workplaces": 0
+          "staff_workplaces": 0,
+          "access_drawing_basis": "Approved R01 visible door topology where available; dimensions are modelled reconstruction, not surveyed or code-approved openings. Upper-floor repetitions follow fixed cores and source circulation zones.",
+          "design_note_headings": [
+            "Residential use",
+            "One cohort"
+          ],
+          "legend_text": "Sage: single residential rooms / Neutral: circulation and shared support"
         }
       ],
       "gross_area_sqft": 30240,
-      "staff_workplaces": 0
+      "staff_workplaces": 0,
+      "core_access_basis": "R02 planning correction: west core repartitioned into 12ft-wide lift/lobby and 8ft-wide linen zone, both opening north to residential corridor. Same 520sqft combined core area; no room, building footprint or capacity changes. Avoids access through a bedroom; final accessibility/shaft engineering remains open."
     }
   ],
   "site_zones": [
@@ -10307,7 +10641,7 @@
       "id": "SAC-P-E",
       "rect_ft": [
         704,
-        184,
+        182,
         60,
         270
       ],
@@ -10319,11 +10653,11 @@
       "rect_ft": [
         168,
         62,
-        225,
+        224,
         60
       ],
-      "drawn_bays": 50,
-      "layout": "25bays each side / central aisle"
+      "drawn_bays": 46,
+      "layout": "23 bays each side / central aisle"
     },
     {
       "id": "SAC-P-SE",
@@ -10333,8 +10667,8 @@
         135,
         60
       ],
-      "drawn_bays": 30,
-      "layout": "15bays each side / central aisle"
+      "drawn_bays": 34,
+      "layout": "17 bays each side / central aisle"
     }
   ],
   "access": {
@@ -10620,5 +10954,294 @@
       "state": "CONDITIONAL_HOLD_FLAT_CAPACITY",
       "dependency": "Both planning horizons retain 362 fitted workplaces and 60 rooms. Future workforce growth and additional floor capacity are unknown; no future construction is implied."
     }
-  ]
+  ],
+  "site_drawing": {
+    "basis": "R01 master PNG pixel-measured access and landscape geometry, local feet; not surveyed civil geometry.",
+    "roads_ft": [
+      [
+        30,
+        498,
+        126,
+        24
+      ],
+      [
+        636,
+        470,
+        174,
+        20
+      ],
+      [
+        30,
+        80,
+        138,
+        24
+      ],
+      [
+        564,
+        80,
+        246,
+        24
+      ],
+      [
+        84,
+        104,
+        24,
+        62
+      ]
+    ],
+    "walks_ft": [
+      [
+        397,
+        0,
+        46,
+        128
+      ],
+      [
+        402,
+        128,
+        26,
+        386
+      ],
+      [
+        130,
+        314,
+        534,
+        20
+      ],
+      [
+        248,
+        128,
+        16,
+        348
+      ],
+      [
+        248,
+        128,
+        274,
+        14
+      ],
+      [
+        543,
+        260,
+        18,
+        146
+      ],
+      [
+        504,
+        128,
+        16,
+        42
+      ]
+    ],
+    "service_apron_ft": [
+      602,
+      148,
+      50,
+      23
+    ],
+    "parking_blocks": [
+      {
+        "rect_ft": [
+          66,
+          166,
+          60,
+          288
+        ],
+        "columns": 32,
+        "vertical": true
+      },
+      {
+        "rect_ft": [
+          704,
+          182,
+          60,
+          270
+        ],
+        "columns": 30,
+        "vertical": true
+      },
+      {
+        "rect_ft": [
+          156,
+          480,
+          216,
+          60
+        ],
+        "columns": 24,
+        "vertical": false
+      },
+      {
+        "rect_ft": [
+          168,
+          62,
+          224,
+          60
+        ],
+        "columns": 23,
+        "vertical": false
+      },
+      {
+        "rect_ft": [
+          429,
+          62,
+          135,
+          60
+        ],
+        "columns": 17,
+        "vertical": false
+      }
+    ],
+    "courts": [
+      {
+        "rect_ft": [
+          130,
+          340,
+          246,
+          24
+        ],
+        "name": "J2 RECEPTION COURT",
+        "color_group": "blue"
+      },
+      {
+        "rect_ft": [
+          462,
+          350,
+          180,
+          40
+        ],
+        "name": "RESIDENTIAL COURT",
+        "color_group": "sage"
+      },
+      {
+        "rect_ft": [
+          290,
+          274,
+          210,
+          34
+        ],
+        "name": "CENTRAL QUAD",
+        "color_group": "sage"
+      },
+      {
+        "rect_ft": [
+          576,
+          102,
+          108,
+          18
+        ],
+        "name": "BIKES / ACCESS",
+        "color_group": "neutral"
+      }
+    ],
+    "trees_ft": [
+      [
+        380,
+        172
+      ],
+      [
+        380,
+        228
+      ],
+      [
+        380,
+        340
+      ],
+      [
+        380,
+        374
+      ],
+      [
+        380,
+        408
+      ],
+      [
+        380,
+        442
+      ],
+      [
+        380,
+        470
+      ],
+      [
+        448,
+        172
+      ],
+      [
+        448,
+        228
+      ],
+      [
+        448,
+        340
+      ],
+      [
+        448,
+        374
+      ],
+      [
+        448,
+        408
+      ],
+      [
+        448,
+        442
+      ],
+      [
+        448,
+        470
+      ],
+      [
+        440,
+        522
+      ],
+      [
+        472,
+        522
+      ],
+      [
+        504,
+        522
+      ],
+      [
+        536,
+        522
+      ],
+      [
+        568,
+        522
+      ],
+      [
+        600,
+        522
+      ],
+      [
+        632,
+        522
+      ],
+      [
+        150,
+        296
+      ],
+      [
+        182,
+        296
+      ],
+      [
+        214,
+        296
+      ],
+      [
+        566,
+        296
+      ],
+      [
+        598,
+        296
+      ],
+      [
+        630,
+        296
+      ]
+    ]
+  }
 }
