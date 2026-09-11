@@ -80,7 +80,8 @@ def main():
             manifest = {
                 "package": "SABLE_HARBOR_Facility_Atlas_v0.2.0",
                 "source_commit": revision,
-                "canon_base": "786fc9a5311a04dde92ee6dbb08ac3b77a380200",
+                "canon_base": "b83e4be2182a5e4143808a3dab5f8d929a133caf",
+                "initial_facility_base": "786fc9a5311a04dde92ee6dbb08ac3b77a380200",
                 "entry_point": "geospatial/maps/index.html",
                 "scope": "Facility plans with complete public repository source context for offline provenance and reproduction. Included historical sources retain their original status, not current branding authority.",
                 "excluded_historical_archives": excluded,

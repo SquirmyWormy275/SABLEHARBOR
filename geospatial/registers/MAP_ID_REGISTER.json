@@ -460,6 +460,78 @@
       "logical_id": "SH-SITE-0001-D-L03",
       "map_id": "SH-MAP-SAC-036",
       "status": "ACTIVE_R02_FROM_APPROVED_R01"
+    },
+    {
+      "logical_id": "runtime::01-topology",
+      "map_id": "SH-MAP-RUN-001",
+      "status": "LINKED_ACCEPTED_RUNTIME_PUBLICATION",
+      "source_manifest": "enterprise/runtime/visuals/manifest.json"
+    },
+    {
+      "logical_id": "runtime::02-current-condition",
+      "map_id": "SH-MAP-RUN-002",
+      "status": "LINKED_ACCEPTED_RUNTIME_PUBLICATION",
+      "source_manifest": "enterprise/runtime/visuals/manifest.json"
+    },
+    {
+      "logical_id": "runtime::03-site-concept",
+      "map_id": "SH-MAP-RUN-003",
+      "status": "LINKED_ACCEPTED_RUNTIME_PUBLICATION",
+      "source_manifest": "enterprise/runtime/visuals/manifest.json"
+    },
+    {
+      "logical_id": "runtime::04-space-block-plan",
+      "map_id": "SH-MAP-RUN-004",
+      "status": "LINKED_ACCEPTED_RUNTIME_PUBLICATION",
+      "source_manifest": "enterprise/runtime/visuals/manifest.json"
+    },
+    {
+      "logical_id": "runtime::05-utility-zones",
+      "map_id": "SH-MAP-RUN-005",
+      "status": "LINKED_ACCEPTED_RUNTIME_PUBLICATION",
+      "source_manifest": "enterprise/runtime/visuals/manifest.json"
+    },
+    {
+      "logical_id": "runtime::06-electrical-concept",
+      "map_id": "SH-MAP-RUN-006",
+      "status": "LINKED_ACCEPTED_RUNTIME_PUBLICATION",
+      "source_manifest": "enterprise/runtime/visuals/manifest.json"
+    },
+    {
+      "logical_id": "runtime::07-cooling-concept",
+      "map_id": "SH-MAP-RUN-007",
+      "status": "LINKED_ACCEPTED_RUNTIME_PUBLICATION",
+      "source_manifest": "enterprise/runtime/visuals/manifest.json"
+    },
+    {
+      "logical_id": "runtime::08-enclosure-reno",
+      "map_id": "SH-MAP-RUN-008",
+      "status": "LINKED_ACCEPTED_RUNTIME_PUBLICATION",
+      "source_manifest": "enterprise/runtime/visuals/manifest.json"
+    },
+    {
+      "logical_id": "runtime::09-enclosure-boise",
+      "map_id": "SH-MAP-RUN-009",
+      "status": "LINKED_ACCEPTED_RUNTIME_PUBLICATION",
+      "source_manifest": "enterprise/runtime/visuals/manifest.json"
+    },
+    {
+      "logical_id": "runtime::10-rack-elevations",
+      "map_id": "SH-MAP-RUN-010",
+      "status": "LINKED_ACCEPTED_RUNTIME_PUBLICATION",
+      "source_manifest": "enterprise/runtime/visuals/manifest.json"
+    },
+    {
+      "logical_id": "runtime::11-logical-boundaries",
+      "map_id": "SH-MAP-RUN-011",
+      "status": "LINKED_ACCEPTED_RUNTIME_PUBLICATION",
+      "source_manifest": "enterprise/runtime/visuals/manifest.json"
+    },
+    {
+      "logical_id": "runtime::12-construction-schedule",
+      "map_id": "SH-MAP-RUN-012",
+      "status": "LINKED_ACCEPTED_RUNTIME_PUBLICATION",
+      "source_manifest": "enterprise/runtime/visuals/manifest.json"
     }
   ]
 }

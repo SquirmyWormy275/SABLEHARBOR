@@ -1,10 +1,10 @@
 name: Facility program and atlas
 on:
   pull_request:
-    paths: ['geospatial/**', 'industrial/source/**', 'docs/organization/source/**', 'enterprise/services/source/**', '.github/workflows/facility-atlas.yml']
+    paths: ['geospatial/**', 'industrial/source/**', 'docs/organization/source/**', 'enterprise/services/source/**', 'enterprise/runtime/**', 'docs/facilities/references/**', '.github/workflows/facility-atlas.yml']
   push:
     branches: [main]
-    paths: ['geospatial/**', 'industrial/source/**', 'docs/organization/source/**', 'enterprise/services/source/**']
+    paths: ['geospatial/**', 'industrial/source/**', 'docs/organization/source/**', 'enterprise/services/source/**', 'enterprise/runtime/**', 'docs/facilities/references/**']
   workflow_dispatch:
 permissions:
   contents: read

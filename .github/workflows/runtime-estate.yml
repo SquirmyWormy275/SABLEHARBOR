@@ -3,6 +3,7 @@ on:
   pull_request:
     paths:
       - enterprise/runtime/**
+      - geospatial/facilities/**
       - enterprise/services/**
       - enterprise/operations/**
       - enterprise/business/**

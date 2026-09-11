@@ -70,6 +70,7 @@ def build(only=None, output=None):
         "design_revision": "R02",
         "approved_visual_reference": "SH-FAC-REF-SAC-R01",
         "base_commit": models[0]["authoritative_base"],
+        "current_main_compatibility": "b83e4be2182a5e4143808a3dab5f8d929a133caf",
         "source_sha256": {str(p.relative_to(ROOT)): sha(p) for p in dependencies if p.is_file()},
         "generator_sha256": sha(Path(__file__)),
         "maps": records,

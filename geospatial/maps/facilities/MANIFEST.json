@@ -3,13 +3,14 @@
   "design_revision": "R02",
   "approved_visual_reference": "SH-FAC-REF-SAC-R01",
   "base_commit": "786fc9a5311a04dde92ee6dbb08ac3b77a380200",
+  "current_main_compatibility": "b83e4be2182a5e4143808a3dab5f8d929a133caf",
   "source_sha256": {
     "geospatial/facilities/source/campus.json": "0efd4854069ff20acb4032e02b021afebcb955990f1d684b51428624e281d950",
     "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
     "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
-    "geospatial/facilities/render.py": "540f0ca32c57238908e8b215c89f4927ed77648375bc113c6d4b224e3ba14c6b",
+    "geospatial/facilities/render.py": "db36d07d2d0cebe6fda152b63dbaee486e77378613563b726dfa37b2367eb90d",
     "geospatial/facilities/r01_drawing.py": "8c1eae0967aac597395b16351ba0d6b1077cc3a31dded3fe292389a655d24c35",
-    "geospatial/registers/MAP_ID_REGISTER.json": "9844ab4a9b55939ab916ff0ec23698665ca47e366a38dde72ec1e68e755de1ba",
+    "geospatial/registers/MAP_ID_REGISTER.json": "fc0a35688847c9915968d6102983158289c7a0a381c6e322f100898048915132",
     "geospatial/facilities/fonts/DejaVuSans-Bold.ttf": "b184b89e3c1075f22f6b71575b6fc20d4972b3cfd3b23322ca6fd596dcaef167",
     "geospatial/facilities/fonts/DejaVuSans.ttf": "3fdf69cabf06049ea70a00b5919340e2ce1e6d02b0cc3c4b44fb6801bd1e0d22",
     "geospatial/facilities/fonts/LICENSE_DEJAVU": "d75938dec098f06f0ac3c00853065d94f020be1c3c62ef1dc2975ba15b4d9b0e",
@@ -20,7 +21,7 @@
     "docs/facilities/references/sacramento-hq/r01-approved/03_J2_L01_Contact_JAG_Draft.png": "17bf92029276f7794721129e58830344a9a3ee4341c858f2c928d53ad8b0fefb",
     "docs/facilities/references/sacramento-hq/r01-approved/04_Education_L01_Teaching_Draft.png": "d37ff987cf1036d32cf0fe07ca3b9a0578d7f359bd820fde2551cb268ed88361"
   },
-  "generator_sha256": "540f0ca32c57238908e8b215c89f4927ed77648375bc113c6d4b224e3ba14c6b",
+  "generator_sha256": "db36d07d2d0cebe6fda152b63dbaee486e77378613563b726dfa37b2367eb90d",
   "maps": [
     {
       "id": "SH-MAP-SAC-002",
