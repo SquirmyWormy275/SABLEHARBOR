@@ -498,7 +498,8 @@
     "Added source-derived road/river labels and selected metric DEM samples",
     "Fixed circular atlas/manifest source dependency with scoped semantic navigation hashes",
     "Restricted Wamsutter inset to its actual interchange; retained other accepted context maps",
-    "Sorted context disposition keys and checked distinct Python hash seeds to eliminate JSON byte-order drift"
+    "Sorted context disposition keys and checked distinct Python hash seeds to eliminate JSON byte-order drift",
+    "Wrapped long text in the parent atlas to eliminate 15px horizontal overflow at 390px width"
   ],
   "local_checks": {
     "focused_facility_spatial_workbench": "154 tests passed",
@@ -680,5 +681,6 @@
     "branch_merge": "e961e14caba38222a198d6646ea28fc5a81d762b",
     "result": "No conflicts; spatial and workbench freshness, facility validation and repository hygiene pass."
   },
-  "viewer_sha256": "bebbeb59dda70dc558a9281dd55d5106874b45086cbd42f3ec9240ded5844176"
+  "viewer_sha256": "bebbeb59dda70dc558a9281dd55d5106874b45086cbd42f3ec9240ded5844176",
+  "parent_html_review": "Eight desktop/mobile atlas/workbench/readiness/impact screenshots inspected; text readable, no page overflow or JS errors; tables retain intentional internal scrolling."
 }

@@ -28,7 +28,7 @@
     "enterprise/services/source/runtime_capital_plan_2026-09-11.json": "b70546497ea380ff99c00e2b4a3dcd498869d172c5e6696f05aaa709d93b5bbd",
     "enterprise/services/source/runtime_sites_2026-09-11.json": "fa216f629762503865fd9f1a3207e87691cd484cec9885bf25ce045b4525519c",
     "geospatial/facilities/RUNTIME_BRIDGE.json": "136491785df28eb6db3ce4f5737c71d1629d08bb8da7879f44d768a76a93e06b",
-    "geospatial/facilities/atlas.py": "445834a7a82eee89795bdc06198f9ecadf705b57bb6eeba8ce31f4de19d74443",
+    "geospatial/facilities/atlas.py": "9ce3544934062f607ae07d61236d4660ad898f49ffc635f89375ab843e4b5688",
     "geospatial/facilities/coverage/COVERAGE_MATRIX.json": "a7243cf7f6b89d8dc8e7741c82680c4599e62dfe0bb157069f1bd5fdec336adf",
     "geospatial/facilities/fonts/DejaVuSans-Bold.ttf": "b184b89e3c1075f22f6b71575b6fc20d4972b3cfd3b23322ca6fd596dcaef167",
     "geospatial/facilities/fonts/DejaVuSans.ttf": "3fdf69cabf06049ea70a00b5919340e2ce1e6d02b0cc3c4b44fb6801bd1e0d22",
@@ -312,12 +312,12 @@
     "industrial/source/operations.json": "e7488b55c1c963d102db66e7a7b6f1373a3d68a9f94b8f99b164092245713a3b"
   },
   "outputs": {
-    "geospatial/facilities/workbench/BASELINE.json": "1b1ba0ea1109c5597ade4e28ca8691322625e3b3ec0cdc7ef7e702ed6cfb0a29",
-    "geospatial/facilities/workbench/DEPENDENCIES.json": "b0ff89144d56ab766802cd3829a0ef57189929d9ede745a128b7ff0824579fcb",
+    "geospatial/facilities/workbench/BASELINE.json": "69e6553a765336f71cdc91e375e5e87afcca8691f9ce0e135bc4f4cb9f657fde",
+    "geospatial/facilities/workbench/DEPENDENCIES.json": "5bacde6694c163287c59540aff2eed95318c99531b39ab0a26c7976e9e0057a8",
     "geospatial/facilities/workbench/READINESS.json": "1dff5909a2c2e0ac1b242b7fd7efabbe8e5277828f9e017b8d1118649fc6824c",
     "geospatial/facilities/workbench/EVIDENCE_QUEUE.json": "88120648906c103df912682164c1963446383346b052bf315d98cdedadc83763",
-    "geospatial/facilities/workbench/BASELINE_SCENARIO.json": "c5325c4b1ba692860fc44a25e896140d96ea2c87de67ef63d8616ae53e5e5df1",
+    "geospatial/facilities/workbench/BASELINE_SCENARIO.json": "17123faaa8d99e4525d7b8e46f56634e5c7f974e6f62e73f83d5a8f95e3f6a43",
     "geospatial/facilities/workbench/BASELINE_RESULT.json": "c5c9170099870e0c2307084941ac3c967218537e2d23be730136ad09c67618a3",
-    "geospatial/maps/workbench.html": "b536924ffb415db3982f6593bb61c1c74df5ae6da1760edea43c4f8937641f9c"
+    "geospatial/maps/workbench.html": "07a3c2554a2851275dfb7c6c250022b6ccc76cf74fd77796a73ee1647b5e773e"
   }
 }

@@ -27,7 +27,7 @@
     "enterprise/services/source/runtime_capital_plan_2026-09-11.json": "b70546497ea380ff99c00e2b4a3dcd498869d172c5e6696f05aaa709d93b5bbd",
     "enterprise/services/source/runtime_sites_2026-09-11.json": "fa216f629762503865fd9f1a3207e87691cd484cec9885bf25ce045b4525519c",
     "geospatial/facilities/RUNTIME_BRIDGE.json": "136491785df28eb6db3ce4f5737c71d1629d08bb8da7879f44d768a76a93e06b",
-    "geospatial/facilities/atlas.py": "445834a7a82eee89795bdc06198f9ecadf705b57bb6eeba8ce31f4de19d74443",
+    "geospatial/facilities/atlas.py": "9ce3544934062f607ae07d61236d4660ad898f49ffc635f89375ab843e4b5688",
     "geospatial/facilities/coverage/COVERAGE_MATRIX.json": "a7243cf7f6b89d8dc8e7741c82680c4599e62dfe0bb157069f1bd5fdec336adf",
     "geospatial/facilities/fonts/DejaVuSans-Bold.ttf": "b184b89e3c1075f22f6b71575b6fc20d4972b3cfd3b23322ca6fd596dcaef167",
     "geospatial/facilities/fonts/DejaVuSans.ttf": "3fdf69cabf06049ea70a00b5919340e2ce1e6d02b0cc3c4b44fb6801bd1e0d22",
