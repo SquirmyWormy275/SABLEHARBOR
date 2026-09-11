@@ -1,0 +1,9 @@
+{
+  "original_sha256": "9728b8de56a1401d910e7d459c27e99a0c206dab21bb318919ce59443636f116",
+  "rebuilt_sha256": "90bd39fa8c4b38a444fd347b8fce7a4c815243697efd6edfabc3bd61b694cee6",
+  "sql_dump_equal": true,
+  "original_dump_lines": 970,
+  "rebuilt_dump_lines": 970,
+  "original_size": 2097152,
+  "rebuilt_size": 2097152
+}

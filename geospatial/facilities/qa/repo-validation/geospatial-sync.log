@@ -1,0 +1,12 @@
+{
+  "source_commit": "d91a22c35c91b213204411421de88815f27d8e16",
+  "selected_candidate": "TAYLOR-A",
+  "network_route_miles": 40.000000000000135,
+  "road_miles": 9.00000000000137,
+  "facilities": 12,
+  "track_register_segments": 31,
+  "structures": 26,
+  "history_events": 10,
+  "old_pr96_candidate": "TAYLOR-C_SUPERSEDED",
+  "preserves_source_geometries": true
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "name": "business-finance-build",
+    "command": [
+      "/home/kingoftheeast/Projects/SABLEHARBOR-campus/.venv/bin/python",
+      "-m",
+      "enterprise.business.build"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 149.28
+  },
+  {
+    "name": "business-operations-build",
+    "command": [
+      "/home/kingoftheeast/Projects/SABLEHARBOR-campus/.venv/bin/python",
+      "-m",
+      "enterprise.operations.build"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 273.07
+  }
+]

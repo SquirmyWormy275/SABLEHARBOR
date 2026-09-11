@@ -1,0 +1,17 @@
+{
+  "root-pytest": {
+    "passed": 166,
+    "skipped": 3,
+    "failed": 0
+  },
+  "geospatial-pytest": {
+    "passed": 20,
+    "skipped": 0,
+    "failed": 0
+  },
+  "business-operations-tests": {
+    "passed": 295,
+    "skipped": 0,
+    "failed": 0
+  }
+}

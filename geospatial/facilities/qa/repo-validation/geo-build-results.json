@@ -1,0 +1,37 @@
+[
+  {
+    "name": "geospatial-sync",
+    "command": [
+      "/home/kingoftheeast/Projects/SABLEHARBOR-campus/.venv/bin/python",
+      "geospatial/scripts/sync_industrial.py"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 0.27
+  },
+  {
+    "name": "geopackage-build",
+    "command": [
+      "/home/kingoftheeast/Projects/SABLEHARBOR-campus/.venv/bin/python",
+      "geospatial/scripts/build_geopackage.py",
+      "--output",
+      "/tmp/sable-facility-validation.gpkg",
+      "--database-only"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 2.83
+  },
+  {
+    "name": "geo-source-drift",
+    "command": [
+      "git",
+      "diff",
+      "--exit-code",
+      "--",
+      "geospatial/sources/catalog.json",
+      "geospatial/geojson",
+      "geospatial/qgis"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 0.55
+  }
+]

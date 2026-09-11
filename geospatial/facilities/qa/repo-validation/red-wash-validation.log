@@ -1,0 +1,11 @@
+{
+  "checks_passed": 514,
+  "checks_total": 514,
+  "derived_financials": {
+    "free_cash_flow_usd": -7477521,
+    "net_income_usd": 902095,
+    "operating_cash_flow_usd": 1522479
+  },
+  "failures": [],
+  "status": "PASS"
+}

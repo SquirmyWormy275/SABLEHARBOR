@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "/tmp/sable-facility-validation/industrial/tools/validate_industrial_case.py", line 176, in <module>
+    main()
+  File "/tmp/sable-facility-validation/industrial/tools/validate_industrial_case.py", line 172, in main
+    print(json.dumps(validate(generate=args.generate), indent=2))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/sable-facility-validation/industrial/tools/validate_industrial_case.py", line 34, in validate
+    journal = rows(FIN / f"{name}_journal.csv")
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/sable-facility-validation/industrial/tools/validate_industrial_case.py", line 19, in rows
+    with path.open(newline="") as stream:
+         ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kingoftheeast/.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/sable-facility-validation/industrial/generated/finance/aru_2025_journal.csv'

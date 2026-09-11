@@ -1,0 +1,34 @@
+Building physical industrial anchors and business events
+Executing the preserved legacy source once for both comparison and successor
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+INFO  [alembic.runtime.migration] Running upgrade  -> 0004, Frozen explicit enterprise schema baseline through revision 0004.
+INFO  [alembic.runtime.migration] Running upgrade 0004 -> 0005, Tie generated journals and scenario values to an explicit generation run.
+INFO  [alembic.runtime.migration] Running upgrade 0005 -> 0006, Add common-actual run scope and run-aware scenario-value uniqueness.
+INFO  [alembic.runtime.migration] Running upgrade 0006 -> 0007, Add generation-run ownership to scenario-dependent operational facts.
+INFO  [alembic.runtime.migration] Running upgrade 0007 -> 0008, Persist reproducible generation build and actual-dataset identity.
+INFO  [alembic.runtime.migration] Running upgrade 0008 -> 0009, Persist content-addressed generation input and build identity.
+INFO  [alembic.runtime.migration] Running upgrade 0009 -> 0010, Scope generated natural keys to their owning generation run.
+INFO  [alembic.runtime.migration] Running upgrade 0010 -> 0011, Enforce generation ownership, lifecycle, and same-run relationships.
+INFO  [alembic.runtime.migration] Running upgrade 0011 -> 0012, Add run-scoped accounting period close state.
+INFO  [alembic.runtime.migration] Running upgrade 0012 -> 0013, Widen scenario-value period codes for explicit cutoff markers.
+INFO  [alembic.runtime.migration] Running upgrade 0013 -> 0014, Add explicit run-owned debt repayments.
+INFO  [alembic.runtime.migration] Running upgrade 0014 -> 0015, Enforce ledger integrity and freeze completed-run evidence.
+Replacing Core forecast operations; retaining existing assets, debt and legal consolidation
+Exporting seven allowlisted unit databases and audit workbooks
+{
+  "status": "PASS",
+  "business_events": 48424,
+  "enterprise_lines": 112486,
+  "units": [
+    "foundry-field",
+    "atlas-meridian",
+    "advisory",
+    "willow",
+    "project-cradle",
+    "pale-sun",
+    "american-resource-utility"
+  ],
+  "source_revision": "775d65788b25012e3c50f475920b82f0055dc28e",
+  "archive": "enterprise/dist/v1.0.0/sable-harbor-business-finance-v1.0.0.zip"
+}

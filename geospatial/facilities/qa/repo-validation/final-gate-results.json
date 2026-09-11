@@ -1,0 +1,124 @@
+{
+  "tested_commit": "e44b3e3b0f5f2572118fedf185a26fee6c87fb67",
+  "results": [
+    {
+      "name": "final-governance",
+      "command": [
+        "/home/kingoftheeast/Projects/SABLEHARBOR-campus/.venv/bin/python",
+        "scripts/validate_governance_j2.py"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 2.47
+    },
+    {
+      "name": "final-catalog",
+      "command": [
+        "/home/kingoftheeast/Projects/SABLEHARBOR-campus/.venv/bin/python",
+        "scripts/validate_institutional_catalog.py"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 0.03
+    },
+    {
+      "name": "final-organization",
+      "command": [
+        "/home/kingoftheeast/Projects/SABLEHARBOR-campus/.venv/bin/python",
+        "scripts/validate_organization_maps.py"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 0.49
+    },
+    {
+      "name": "final-hygiene",
+      "command": [
+        "/home/kingoftheeast/Projects/SABLEHARBOR-campus/.venv/bin/python",
+        "scripts/validate_repository_hygiene.py"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 0.22
+    },
+    {
+      "name": "final-facility-acceptance",
+      "command": [
+        "/home/kingoftheeast/Projects/SABLEHARBOR-campus/.venv/bin/python",
+        "geospatial/facilities/validate.py",
+        "--check",
+        "--require-atlas"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 2.96
+    },
+    {
+      "name": "final-facility-tests",
+      "command": [
+        "/home/kingoftheeast/Projects/SABLEHARBOR-campus/.venv/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "geospatial/facilities/test_facilities.py",
+        "geospatial/facilities/coverage/test_coverage.py",
+        "geospatial/facilities/population/test_population.py"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 0.53
+    },
+    {
+      "name": "final-geospatial-validation",
+      "command": [
+        "/home/kingoftheeast/Projects/SABLEHARBOR-campus/.venv/bin/python",
+        "geospatial/scripts/validate_geospatial.py"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.93
+    },
+    {
+      "name": "final-geospatial-tests",
+      "command": [
+        "/home/kingoftheeast/Projects/SABLEHARBOR-campus/.venv/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "geospatial/tests"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 12.07
+    },
+    {
+      "name": "final-ruff-check",
+      "command": [
+        "/home/kingoftheeast/Projects/SABLEHARBOR-campus/.venv/bin/ruff",
+        "check",
+        "geospatial",
+        "--config",
+        "geospatial/pyproject.toml",
+        "--force-exclude"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 0.02
+    },
+    {
+      "name": "final-ruff-format",
+      "command": [
+        "/home/kingoftheeast/Projects/SABLEHARBOR-campus/.venv/bin/ruff",
+        "format",
+        "geospatial",
+        "--config",
+        "geospatial/pyproject.toml",
+        "--force-exclude",
+        "--check"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 0.01
+    },
+    {
+      "name": "final-diff-check",
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 0.03
+    }
+  ]
+}

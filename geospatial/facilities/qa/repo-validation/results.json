@@ -1,0 +1,184 @@
+{
+  "tested_commit": "3480665b2d317b3de74e455158f58ed46d09da70",
+  "isolated_worktree": "/tmp/sable-facility-validation",
+  "results": [
+    {
+      "name": "governance-j2",
+      "command": [
+        "/home/kingoftheeast/Projects/SABLEHARBOR-campus/.venv/bin/python",
+        "scripts/validate_governance_j2.py"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 2.55
+    },
+    {
+      "name": "institutional-catalog",
+      "command": [
+        "/home/kingoftheeast/Projects/SABLEHARBOR-campus/.venv/bin/python",
+        "scripts/validate_institutional_catalog.py"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 0.04
+    },
+    {
+      "name": "organization-maps",
+      "command": [
+        "/home/kingoftheeast/Projects/SABLEHARBOR-campus/.venv/bin/python",
+        "scripts/validate_organization_maps.py"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 0.52
+    },
+    {
+      "name": "repository-hygiene",
+      "command": [
+        "/home/kingoftheeast/Projects/SABLEHARBOR-campus/.venv/bin/python",
+        "scripts/validate_repository_hygiene.py"
+      ],
+      "exit_code": 1,
+      "duration_seconds": 0.22
+    },
+    {
+      "name": "business-records",
+      "command": [
+        "/home/kingoftheeast/Projects/SABLEHARBOR-campus/.venv/bin/python",
+        "scripts/validate_business_records.py"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 0.02
+    },
+    {
+      "name": "root-pytest",
+      "command": [
+        "/home/kingoftheeast/Projects/SABLEHARBOR-campus/.venv/bin/python",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 217.39
+    },
+    {
+      "name": "geospatial-pytest",
+      "command": [
+        "/home/kingoftheeast/Projects/SABLEHARBOR-campus/.venv/bin/python",
+        "-m",
+        "pytest",
+        "geospatial/tests",
+        "-q"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 11.82
+    },
+    {
+      "name": "geospatial-validator",
+      "command": [
+        "/home/kingoftheeast/Projects/SABLEHARBOR-campus/.venv/bin/python",
+        "geospatial/scripts/validate_geospatial.py"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 3.59
+    },
+    {
+      "name": "qgis-native",
+      "command": [
+        "/usr/bin/python3",
+        "geospatial/scripts/validate_qgis.py"
+      ],
+      "exit_code": 1,
+      "duration_seconds": 0.05
+    },
+    {
+      "name": "service-tests",
+      "command": [
+        "/home/kingoftheeast/Projects/SABLEHARBOR-campus/.venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "enterprise/services/tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 0.5
+    },
+    {
+      "name": "service-validation",
+      "command": [
+        "/home/kingoftheeast/Projects/SABLEHARBOR-campus/.venv/bin/python",
+        "-m",
+        "enterprise.services.model",
+        "validate",
+        "--repository-root",
+        "."
+      ],
+      "exit_code": 0,
+      "duration_seconds": 0.04
+    },
+    {
+      "name": "business-operations-tests",
+      "command": [
+        "/home/kingoftheeast/Projects/SABLEHARBOR-campus/.venv/bin/python",
+        "-m",
+        "pytest",
+        "enterprise/operations/tests",
+        "enterprise/business/tests",
+        "industrial/planning/tests",
+        "-q"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 81.01
+    },
+    {
+      "name": "industrial-tests",
+      "command": [
+        "/home/kingoftheeast/Projects/SABLEHARBOR-campus/.venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "industrial/tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 1.19
+    },
+    {
+      "name": "red-wash-tests",
+      "command": [
+        "/home/kingoftheeast/Projects/SABLEHARBOR-campus/.venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "red_wash/tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 1.1
+    },
+    {
+      "name": "red-wash-validation",
+      "command": [
+        "/home/kingoftheeast/Projects/SABLEHARBOR-campus/.venv/bin/python",
+        "red_wash/tools/validate_red_wash_record.py"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 0.09
+    },
+    {
+      "name": "facility-tests",
+      "command": [
+        "/home/kingoftheeast/Projects/SABLEHARBOR-campus/.venv/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "geospatial/facilities/test_facilities.py",
+        "geospatial/facilities/coverage/test_coverage.py",
+        "geospatial/facilities/population/test_population.py"
+      ],
+      "exit_code": 1,
+      "duration_seconds": 0.52
+    }
+  ]
+}

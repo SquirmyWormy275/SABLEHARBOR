@@ -1,0 +1,33 @@
+[
+  {
+    "name": "industrial-validation",
+    "command": [
+      "/home/kingoftheeast/Projects/SABLEHARBOR-campus/.venv/bin/python",
+      "industrial/tools/validate_industrial_case.py"
+    ],
+    "exit_code": 1
+  },
+  {
+    "name": "service-build",
+    "command": [
+      "/home/kingoftheeast/Projects/SABLEHARBOR-campus/.venv/bin/python",
+      "-m",
+      "enterprise.services.model",
+      "build",
+      "--repository-root",
+      ".",
+      "--output",
+      "/tmp/sable-services-validation",
+      "--database"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "service-byte-check-comparison.csv",
+    "exit_code": 0
+  },
+  {
+    "name": "service-byte-check-REPORT.md",
+    "exit_code": 0
+  }
+]

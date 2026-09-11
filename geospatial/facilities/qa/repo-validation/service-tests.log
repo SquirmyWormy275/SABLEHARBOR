@@ -1,0 +1,48 @@
+test_annual_effort_increases_with_demand (test_services.ServiceModelTests.test_annual_effort_increases_with_demand) ... ok
+test_asset_roll_forward (test_services.ServiceModelTests.test_asset_roll_forward) ... ok
+test_boolean_not_number (test_services.ServiceModelTests.test_boolean_not_number) ... ok
+test_capacity_covers_one_cpu_node_failure (test_services.ServiceModelTests.test_capacity_covers_one_cpu_node_failure) ... ok
+test_capex_not_double_counted (test_services.ServiceModelTests.test_capex_not_double_counted) ... ok
+test_continuous_seat_includes_relief (test_services.ServiceModelTests.test_continuous_seat_includes_relief) ... ok
+test_database_links_and_no_silent_overwrite (test_services.ServiceModelTests.test_database_links_and_no_silent_overwrite) ... ok
+test_depreciation_begins_next_month (test_services.ServiceModelTests.test_depreciation_begins_next_month) ... ok
+test_duplicate_service_rejected (test_services.ServiceModelTests.test_duplicate_service_rejected) ... ok
+test_education_and_recruiting_existing_owners (test_services.ServiceModelTests.test_education_and_recruiting_existing_owners) ... ok
+test_hardware_refresh_month49 (test_services.ServiceModelTests.test_hardware_refresh_month49) ... ok
+test_higher_prices_raise_cost (test_services.ServiceModelTests.test_higher_prices_raise_cost) ... ok
+test_historical_transition_not_current_provider (test_services.ServiceModelTests.test_historical_transition_not_current_provider) ... ok
+test_incomplete_allocation_rejected (test_services.ServiceModelTests.test_incomplete_allocation_rejected) ... ok
+test_internal_audit_cannot_own_operations (test_services.ServiceModelTests.test_internal_audit_cannot_own_operations) ... ok
+test_invalid_headroom (test_services.ServiceModelTests.test_invalid_headroom) ... ok
+test_invalid_price (test_services.ServiceModelTests.test_invalid_price) ... ok
+test_invalid_recovery_fraction (test_services.ServiceModelTests.test_invalid_recovery_fraction) ... ok
+test_invalid_sensitivity (test_services.ServiceModelTests.test_invalid_sensitivity) ... ok
+test_manifest_is_reproducible (test_services.ServiceModelTests.test_manifest_is_reproducible) ... ok
+test_missing_dependency_reverse_link (test_services.ServiceModelTests.test_missing_dependency_reverse_link) ... ok
+test_missing_workload_rejected (test_services.ServiceModelTests.test_missing_workload_rejected) ... ok
+test_nan_rejected (test_services.ServiceModelTests.test_nan_rejected) ... ok
+test_negative_credit_rejected (test_services.ServiceModelTests.test_negative_credit_rejected) ... ok
+test_no_arbitrary_forecast_offset (test_services.ServiceModelTests.test_no_arbitrary_forecast_offset) ... ok
+test_no_deployment_claim (test_services.ServiceModelTests.test_no_deployment_claim) ... ok
+test_no_invented_supplier_selection (test_services.ServiceModelTests.test_no_invented_supplier_selection) ... ok
+test_no_owned_plant_in_colo_alternative (test_services.ServiceModelTests.test_no_owned_plant_in_colo_alternative) ... ok
+test_orphan_component_rejected (test_services.ServiceModelTests.test_orphan_component_rejected) ... ok
+test_plant_scales_above_nameplate (test_services.ServiceModelTests.test_plant_scales_above_nameplate) ... ok
+test_recovery_not_double_counted_in_backup (test_services.ServiceModelTests.test_recovery_not_double_counted_in_backup) ... ok
+test_recovery_not_promoted (test_services.ServiceModelTests.test_recovery_not_promoted) ... ok
+test_recovery_storage_not_reduced_with_cpu (test_services.ServiceModelTests.test_recovery_storage_not_reduced_with_cpu) ... ok
+test_repository_validation_does_not_silently_skip_missing_sources (test_services.ServiceModelTests.test_repository_validation_does_not_silently_skip_missing_sources) ... ok
+test_restricted_owned_in_every_alternative (test_services.ServiceModelTests.test_restricted_owned_in_every_alternative) ... ok
+test_scope (test_services.ServiceModelTests.test_scope) ... ok
+test_shared_staff_cost_allocations_reconcile (test_services.ServiceModelTests.test_shared_staff_cost_allocations_reconcile) ... ok
+test_transition_has_complete_calendar (test_services.ServiceModelTests.test_transition_has_complete_calendar) ... ok
+test_transition_overlap_rejected (test_services.ServiceModelTests.test_transition_overlap_rejected) ... ok
+test_transition_refreshes_midyear_assets (test_services.ServiceModelTests.test_transition_refreshes_midyear_assets) ... ok
+test_unknown_owner_rejected (test_services.ServiceModelTests.test_unknown_owner_rejected) ... ok
+test_unknown_provider_rejected (test_services.ServiceModelTests.test_unknown_provider_rejected) ... ok
+test_vendor_credit_cannot_exceed_allowance (test_services.ServiceModelTests.test_vendor_credit_cannot_exceed_allowance) ... ok
+
+----------------------------------------------------------------------
+Ran 43 tests in 0.444s
+
+OK
