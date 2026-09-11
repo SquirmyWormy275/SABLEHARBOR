@@ -8,14 +8,14 @@ The successor preserves the [approved R01 references](../facilities/references/s
 
 | Required release evidence | Current state |
 |---|---|
-| Version/tag | `facility-atlas-v0.2.0` reserved for the successor |
-| Package | `SABLE_HARBOR_Facility_Atlas_v0.2.0.zip`; final bytes and SHA-256 pending |
-| File manifest and checksum | Same basename with `.manifest.json` and `.sha256`; pending final build |
-| Exact packaged source commit | Pending final validated committed snapshot |
+| Version/tag | [`facility-atlas-v0.2.0`](https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/facility-atlas-v0.2.0) |
+| Package | `SABLE_HARBOR_Facility_Atlas_v0.2.0.zip`; 200,065,596 bytes; SHA-256 `756a280203c5b388c7d9abfc86a5ce8219903fb7545325e90fb14266ee322209` |
+| File manifest and checksum | Same basename with `.manifest.json` and `.sha256`; 2,094 payload files, every hash verified |
+| Exact packaged source commit | `7328cf91da6d457abd8147eac3ed1fb3e840db08`; subsequent release-index edits do not alter packaged source or generated assets |
 | Canon bases | Initial `786fc9a5311a04dde92ee6dbb08ac3b77a380200`; R01 ingestion `ebe7e9e`; accepted runtime main `b83e4be2182a5e4143808a3dab5f8d929a133caf`, integrated through `5d7e5a0` |
 | PDF pages, bookmarks and link totals | 150 pages; 1,067 graph nodes and 1,750 validated edges |
-| QA / CI / merge | Pending exact final-head evidence |
-| Published download and retrieval verification | Pending gated publication; no delivery asserted |
+| QA / CI / merge | Local gates and visual QA PASS; final PR-head CI and merge are recorded by PR #121 |
+| Published download and retrieval verification | Publication follows green PR-head gates and merge; retrieval must match the exact ZIP hash above |
 
 Build only from the final committed snapshot:
 
