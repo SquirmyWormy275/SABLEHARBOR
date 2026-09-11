@@ -1,0 +1,1430 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SH CCF normalized preparation snapshot v0.1.0",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "classification",
+    "source_manifest",
+    "records"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "0.1.0"
+    },
+    "classification": {
+      "const": "PUBLIC_SYNTHETIC_PREPARATION"
+    },
+    "source_manifest": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "string",
+        "pattern": "^[a-f0-9]{64}$"
+      }
+    },
+    "records": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "kind",
+          "id",
+          "version",
+          "effective_from",
+          "effective_to",
+          "recorded_on",
+          "status",
+          "origin",
+          "source_refs",
+          "unresolved_fields",
+          "data"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "kind": {
+            "enum": [
+              "domain",
+              "boundary",
+              "enterprise_objective",
+              "objective",
+              "risk",
+              "role",
+              "control",
+              "applicability",
+              "implementation",
+              "policy_gap",
+              "decision",
+              "component",
+              "provider",
+              "dependency",
+              "service"
+            ]
+          },
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "version": {
+            "type": "string",
+            "pattern": "^\\d+\\.\\d+\\.\\d+$"
+          },
+          "effective_from": {
+            "type": "string",
+            "format": "date"
+          },
+          "effective_to": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date"
+          },
+          "recorded_on": {
+            "type": "string",
+            "format": "date"
+          },
+          "status": {
+            "enum": [
+              "draft",
+              "approved",
+              "effective",
+              "suspended",
+              "retired"
+            ]
+          },
+          "origin": {
+            "const": "DERIVED_PREPARATION"
+          },
+          "source_refs": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "string"
+            }
+          },
+          "unresolved_fields": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "type": "string"
+            }
+          },
+          "data": {
+            "type": "object"
+          }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "kind": {
+                  "const": "domain"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "required": [
+                    "title",
+                    "scope"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "title": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "scope": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "kind": {
+                  "const": "boundary"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "required": [
+                    "title",
+                    "type",
+                    "parent_id",
+                    "legal_entity_id"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "title": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "type": {
+                      "enum": [
+                        "business_boundary",
+                        "runtime_site"
+                      ]
+                    },
+                    "parent_id": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "legal_entity_id": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "kind": {
+                  "const": "enterprise_objective"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "required": [
+                    "statement"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "statement": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "kind": {
+                  "const": "objective"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "required": [
+                    "domain_id",
+                    "statement",
+                    "business_basis",
+                    "risk_ids",
+                    "owner_role_id",
+                    "applicability"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "domain_id": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "statement": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "business_basis": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "risk_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "uniqueItems": true
+                    },
+                    "owner_role_id": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "applicability": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "kind": {
+                  "const": "risk"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "required": [
+                    "title",
+                    "category",
+                    "statement",
+                    "control_ids",
+                    "enterprise_objective_ids",
+                    "cause",
+                    "event",
+                    "impact",
+                    "owner_role_id",
+                    "challenge_role_id",
+                    "applicability",
+                    "inherent_likelihood",
+                    "inherent_impact",
+                    "residual_likelihood",
+                    "residual_impact",
+                    "tolerance",
+                    "velocity",
+                    "kris"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "title": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "category": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "statement": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "control_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "uniqueItems": true
+                    },
+                    "enterprise_objective_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "uniqueItems": true
+                    },
+                    "cause": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "event": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "impact": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "owner_role_id": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "challenge_role_id": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "applicability": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "inherent_likelihood": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "inherent_impact": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "residual_likelihood": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "residual_impact": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "tolerance": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "velocity": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "kris": {
+                      "type": [
+                        "object",
+                        "array",
+                        "null"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "kind": {
+                  "const": "role"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "required": [
+                    "title",
+                    "appointment_ids",
+                    "authority_state"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "title": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "appointment_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "uniqueItems": true
+                    },
+                    "authority_state": {
+                      "enum": [
+                        "SOURCE_ROLE_LABEL_ONLY"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "kind": {
+                  "const": "control"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "required": [
+                    "title",
+                    "statement",
+                    "domain_id",
+                    "objective_ids",
+                    "risk_ids",
+                    "enterprise_objective_ids",
+                    "owner_role_id",
+                    "performer_role_id",
+                    "challenge_role_id",
+                    "frequency_or_trigger",
+                    "evidence_expectation",
+                    "business_rationale",
+                    "applicability_rule",
+                    "control_nature",
+                    "control_function",
+                    "key_control",
+                    "financial_reporting_relevance",
+                    "customer_service_relevance",
+                    "security_privacy_relevance",
+                    "operational_safety_relevance",
+                    "failure_modes",
+                    "exception_process",
+                    "upstream_control_ids",
+                    "secondary_domain_ids",
+                    "framework_mapping_ids"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "title": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "statement": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "domain_id": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "objective_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "uniqueItems": true
+                    },
+                    "risk_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "uniqueItems": true
+                    },
+                    "enterprise_objective_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "uniqueItems": true
+                    },
+                    "owner_role_id": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "performer_role_id": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "challenge_role_id": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "frequency_or_trigger": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "evidence_expectation": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "business_rationale": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "applicability_rule": {
+                      "type": "object",
+                      "required": [
+                        "basis",
+                        "control_level_approval"
+                      ],
+                      "additionalProperties": false,
+                      "properties": {
+                        "basis": {
+                          "const": "DOMAIN_MATRIX"
+                        },
+                        "control_level_approval": {
+                          "const": "PENDING"
+                        }
+                      }
+                    },
+                    "control_nature": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "control_function": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "key_control": {
+                      "type": [
+                        "object",
+                        "array",
+                        "null"
+                      ]
+                    },
+                    "financial_reporting_relevance": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "customer_service_relevance": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "security_privacy_relevance": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "operational_safety_relevance": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "failure_modes": {
+                      "type": [
+                        "object",
+                        "array",
+                        "null"
+                      ]
+                    },
+                    "exception_process": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "upstream_control_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "uniqueItems": true
+                    },
+                    "secondary_domain_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "uniqueItems": true
+                    },
+                    "framework_mapping_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "uniqueItems": true,
+                      "maxItems": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "kind": {
+                  "const": "applicability"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "required": [
+                    "control_id",
+                    "boundary_id",
+                    "design_disposition",
+                    "decision_state",
+                    "rationale",
+                    "approver_role_id",
+                    "review_due"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "control_id": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "boundary_id": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "design_disposition": {
+                      "enum": [
+                        "C",
+                        "I",
+                        "L",
+                        "S",
+                        "N/A"
+                      ]
+                    },
+                    "decision_state": {
+                      "enum": [
+                        "PENDING_LOCAL_REVIEW"
+                      ]
+                    },
+                    "rationale": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "approver_role_id": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "review_due": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "format": "date"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "kind": {
+                  "const": "implementation"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "required": [
+                    "control_id",
+                    "boundary_ids",
+                    "owner_role_id",
+                    "performer_role_id",
+                    "challenge_role_id",
+                    "process",
+                    "procedure_reference",
+                    "description",
+                    "implementation_state",
+                    "design_assessment",
+                    "operating_assessment",
+                    "evidence_origin",
+                    "evidence_sources",
+                    "population_definition",
+                    "last_owner_review",
+                    "next_review_due",
+                    "inherits_from_id",
+                    "local_variation_reason",
+                    "exception_ids",
+                    "remediation_ids",
+                    "configuration_dependencies",
+                    "known_limitations"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "control_id": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "boundary_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "uniqueItems": true
+                    },
+                    "owner_role_id": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "performer_role_id": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "challenge_role_id": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "process": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "procedure_reference": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "description": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "implementation_state": {
+                      "enum": [
+                        "DESIGN_ONLY"
+                      ]
+                    },
+                    "design_assessment": {
+                      "enum": [
+                        "NOT_ASSESSED"
+                      ]
+                    },
+                    "operating_assessment": {
+                      "enum": [
+                        "NOT_ASSERTED"
+                      ]
+                    },
+                    "evidence_origin": {
+                      "enum": [
+                        "SYNTHETIC_REFERENCE"
+                      ]
+                    },
+                    "evidence_sources": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "uniqueItems": true
+                    },
+                    "population_definition": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "last_owner_review": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "format": "date"
+                    },
+                    "next_review_due": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "format": "date"
+                    },
+                    "inherits_from_id": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "local_variation_reason": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "exception_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "uniqueItems": true,
+                      "maxItems": 0
+                    },
+                    "remediation_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "uniqueItems": true,
+                      "maxItems": 0
+                    },
+                    "configuration_dependencies": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "uniqueItems": true
+                    },
+                    "known_limitations": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "uniqueItems": true
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "kind": {
+                  "const": "policy_gap"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "required": [
+                    "title",
+                    "state",
+                    "source",
+                    "next_work"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "title": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "state": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "source": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "next_work": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "kind": {
+                  "const": "decision"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "required": [
+                    "title",
+                    "owner",
+                    "recommendation",
+                    "blocks",
+                    "can_proceed",
+                    "issue_ids"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "title": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "owner": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "recommendation": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "blocks": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "can_proceed": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "issue_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "integer",
+                        "minimum": 1
+                      },
+                      "uniqueItems": true
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "kind": {
+                  "const": "component"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "required": [
+                    "title",
+                    "component_type",
+                    "owner_role_id",
+                    "planned_boundary_id",
+                    "deployment_state"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "title": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "component_type": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "owner_role_id": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "planned_boundary_id": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "deployment_state": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "kind": {
+                  "const": "provider"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "required": [
+                    "title",
+                    "provider_kind",
+                    "contract_state",
+                    "scope"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "title": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "provider_kind": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "contract_state": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "scope": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "kind": {
+                  "const": "dependency"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "required": [
+                    "title",
+                    "owner_role_id",
+                    "provider_id",
+                    "scope",
+                    "lifecycle_state"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "title": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "owner_role_id": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "provider_id": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "scope": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "lifecycle_state": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "kind": {
+                  "const": "service"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "required": [
+                    "title",
+                    "work",
+                    "owner_component_id",
+                    "component_ids",
+                    "dependency_ids",
+                    "control_ids",
+                    "recipients",
+                    "sourcing",
+                    "delivery_state"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "title": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "work": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "owner_component_id": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "component_ids": {
+                      "type": "array",
+                      "uniqueItems": true,
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    },
+                    "dependency_ids": {
+                      "type": "array",
+                      "uniqueItems": true,
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    },
+                    "control_ids": {
+                      "type": "array",
+                      "uniqueItems": true,
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    },
+                    "recipients": {
+                      "type": "array",
+                      "uniqueItems": true,
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    },
+                    "sourcing": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "delivery_state": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}
