@@ -14,7 +14,7 @@ The corrected owner-supplied package was ingested in `ebe7e9e`: [four original P
 - Use current organization revision from PR117/118. The stale org branch has prior SVG derivatives, not missing facility plans.
 - Preserve the old HQ proposal as evidence, through its immutable commit links. Its 250–350 routine-campus range is a historical planning proposal, not approved staffing. Its doctrinal successors on main control.
 - The old financial reconstruction explicitly labels its 47,000/5,000 people and 1.2–2.5m ft² HQ cases diagnostic and NOT CANON. They are not imported.
-- PR119 remains OPEN and separate. Its Reno/Boise/owned-data-center assets are pending dependency evidence. PR120 is MERGED at the authoritative base and its accepted security direction applies.
+- Current acceptance update: PR119 merged at `b83e4be2182a5e4143808a3dab5f8d929a133caf` on 2026-09-11 at 21:13:54 UTC. Its accepted runtime sources now control the three runtime dispositions. Initial OPEN snapshots below remain historical evidence. PR120 was already accepted at the original base.
 
 ## Exterior source failure
 
@@ -98,3 +98,13 @@ The SABLE organization v0.2 ZIP contains the old chart suite and generator; curr
 ## Final concurrent-work refresh
 
 Before final merge, origin/main remains `786fc9a5311a04dde92ee6dbb08ac3b77a380200`. PR #119 is still OPEN, now at `c35ecadedb4381515a6b478445a6f061397f9629`, advanced from the initial `743bc6a` snapshot by runtime calculations, construction/reference design, release packaging and accepted-vendor reconciliation. Its changed-path/commit history and current runtime disposition were reviewed. These remain pending runtime sources; no new runtime site, staff pool, floor or provider selection is imported into this facility baseline. PR #120 is already controlling main. The only new branch in this workline is the authorized facility closeout branch / PR #121.
+
+## Runtime acceptance successor — 2026-09-11
+
+[PR #119](https://github.com/SquirmyWormy275/SABLEHARBOR/pull/119) is now **MERGED**, merge/current-main SHA `b83e4be2182a5e4143808a3dab5f8d929a133caf`, accepted head `45e145614407c933739ff7143275268b55f11b4c`. The closeout branch integrated that main through `5d7e5a0`. Verified with `gh pr view 119 --json state,mergedAt,mergeCommit,url,headRefOid` and `git rev-parse origin/main`.
+
+The current disposition of **SH-REC-054 is reuse**. Earlier table and refresh text describe the pre-merge inspection, not a surviving provider-selection blocker. The machine-readable ledger preserves those snapshots and records the new acceptance separately in `acceptance_updates`.
+
+Accepted source pair: [runtime sites](../../../enterprise/services/source/runtime_sites_2026-09-11.json) and [runtime capital plan](../../../enterprise/services/source/runtime_capital_plan_2026-09-11.json), governed by [runtime decisions](../../../docs/canon/RUNTIME_HOSTING_AND_DATA_CENTER_DECISIONS_2026-09-11.md). Coverage consumes the site metadata directly and maps the runtime and FAC aliases to `SH-SITE-0028` (selected Switch Reno), `SH-SITE-0029` (selected IDACORE Boise), and `SH-SITE-0030` (synthetic acquired Northern Nevada parcel, preconstruction). Provider contracts, reserved capacity and operation remain unestablished; accepted selection does not establish a customer cage or architectural floor. The owned building/floor are proposed design assets, with zero vertical construction and commissioned capacity. Existing Alexandria hosting identity remains `SH-SITE-0016` with explicit placement links.
+
+The [current coverage matrix](../coverage/COVERAGE_MATRIX.json) derives counts from sources: 178 catalog objects, 49 services components, three runtime records, 896 total census appearances and 586 unique coverage dispositions. These are census records, not 586 properties. Ten focused coverage tests pass, including new runtime alias and truth-state rejection cases.

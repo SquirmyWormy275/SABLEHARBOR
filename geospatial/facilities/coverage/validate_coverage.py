@@ -2,7 +2,7 @@
 """Fail orphan census entries, missing dispositions, stale derivatives and ID reuse."""
 
 import json
-from build_coverage import build, OUT
+from build_coverage import build, OUT, RUNTIME, COMP, read
 
 
 def validate(d):
@@ -40,6 +40,28 @@ def validate(d):
             errors.append(x["id"] + " building omitted floors")
         if x["actual_floor_count"] is not None or x["actual_occupancy"] is not None:
             errors.append(x["id"] + " unsupported actual measurement")
+    by_id = {x["id"]: x for x in records}
+    appearances = {
+        (x["source_path"], x["section"], x["source_id"]): x["coverage_id"] for x in d["census"]
+    }
+    for site in read(RUNTIME)["sites"]:
+        target = site["geospatial_site_id"]
+        record = by_id.get(target, {})
+        for path, section, ident in [
+            (RUNTIME, "sites", site["id"]),
+            (COMP, "components", site["facility_id"]),
+        ]:
+            if appearances.get((path, section, ident)) != target:
+                errors.append("runtime alias missing or divergent: " + ident)
+        if record.get("runtime_state") != site["status"]:
+            errors.append("runtime state mismatch: " + target)
+        if site.get("provider"):
+            if record.get("class") != 5 or "floor_plans" in record.get("required_artifacts", []):
+                errors.append("provider context boundary violated: " + target)
+        elif "floor_plans" not in record.get("required_artifacts", []) or not record.get(
+            "planned_floor_ids"
+        ):
+            errors.append("owned runtime concept floors missing: " + target)
     return errors
 
 

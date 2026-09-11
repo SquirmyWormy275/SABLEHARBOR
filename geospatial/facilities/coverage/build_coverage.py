@@ -18,6 +18,8 @@ CAT = "geospatial/sources/catalog.json"
 CHART = "docs/organization/source/chartbook.json"
 OPS = "industrial/source/operations.json"
 COMP = "enterprise/services/source/components.json"
+RUNTIME = "enterprise/services/source/runtime_sites_2026-09-11.json"
+ACCEPTED_MAIN = "b83e4be2182a5e4143808a3dab5f8d929a133caf"
 CLASSES = {
     1: "campus master plan",
     2: "operating site plan",
@@ -90,6 +92,16 @@ PARENTS = {
 
 def classification(x):
     i, t, _s = x["object_id"], x["object_type"], x["census_status"]
+    if i in ["SH-SITE-0028", "SH-SITE-0029"]:
+        return (
+            5,
+            "Accepted selected external provider; context only. Contract, assigned building/cage, reserved capacity and operating acceptance remain unestablished.",
+        )
+    if i == "SH-SITE-0030":
+        return (
+            2,
+            "Accepted synthetic acquired parcel, preconstruction. Site and proposed building/floor concept required; no completed shell or operating data center.",
+        )
     if i in BUILDINGS:
         return (
             3,
@@ -162,6 +174,10 @@ def classification(x):
 
 def build():
     records = {}
+    runtime_sites = read(RUNTIME)["sites"]
+    for site in runtime_sites:
+        ALIASES[site["id"]] = site["geospatial_site_id"]
+        ALIASES[site["facility_id"]] = site["geospatial_site_id"]
     census = []
     inputs = {}
 
@@ -223,6 +239,30 @@ def build():
             "actual_occupancy": None,
         }
         bind(CAT, "objects", i, i)
+    for site in runtime_sites:
+        target = site["geospatial_site_id"]
+        record = records[target]
+        record["runtime_state"] = site["status"]
+        record["runtime_source"] = site
+        record["status"] = "external" if site.get("provider") else "land_acquired_preconstruction"
+        record["tenure"] = (
+            "Selected external provider; no executed contract or capacity reservation"
+            if site.get("provider")
+            else "Accepted fictional planning-universe acquisition, 2026-09-04; no real APN or real-world title claim"
+        )
+        record["provenance"].append({"path": RUNTIME, "locator": "sites/" + site["id"]})
+        if not site.get("provider"):
+            record["planned_building_ids"] = [target + "-B01"]
+            record["planned_floor_ids"] = [target + "-B01-L01"]
+            record["required_artifacts"] += ["building_program", "floor_plans"]
+        bind(RUNTIME, "sites", site["id"], target)
+    # Alexandria is a workload-hosting identity, not a fourth runtime property.
+    records["SH-SITE-0016"]["runtime_placement_site_ids"] = [
+        site["geospatial_site_id"] for site in runtime_sites
+    ]
+    records["SH-SITE-0016"]["reason"] = (
+        "Retained Alexandria hosting identity. Accepted runtime placement uses Reno primary, Boise recovery and the proposed owned Northern Nevada end state; no separate Alexandria building is established."
+    )
     for x in read(OPS)["facilities"] + read(OPS)["structures"]:
         ALIASES[x["id"]] = "SH-IND-" + x["id"]
     for i in records:
@@ -336,7 +376,7 @@ def build():
             target,
             x["name"],
             8 if x["type"] == "facility" else 6,
-            "Facility requirement only; provider/address/readiness unresolved. PR #119 remains pending and is not imported."
+            "Facility requirement without a separately accepted runtime placement; no extra property or installed capacity inferred."
             if x["type"] == "facility"
             else "Shared team or workload environment is not another property or headcount pool.",
             [{"path": COMP, "locator": "components/" + i}],
@@ -369,17 +409,21 @@ def build():
         "docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md",
         "docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05_R2.md",
         "docs/canon/THIRD_PARTY_SERVICES_SOURCING_DECISIONS_2026-09-09.md",
+        "docs/canon/RUNTIME_HOSTING_AND_DATA_CENTER_DECISIONS_2026-09-11.md",
+        "geospatial/sources/RUNTIME_INFRASTRUCTURE_GEO_ADDENDUM_2026-09-11.md",
     ]:
         source(p)
     return {
         "schema_version": "1.0.0",
-        "source_main_sha": "786fc9a5311a04dde92ee6dbb08ac3b77a380200",
+        "source_main_sha": ACCEPTED_MAIN,
         "as_of": "2026-09-11",
         "boundary": "Coverage records are not distinct site counts. Aliases map repeated census appearances to the same record. Concept design does not establish occupied floors, tenure or dates.",
         "class_definitions": CLASSES,
         "input_sha256": inputs,
         "counts": {
             "catalog_objects": len(read(CAT)["objects"]),
+            "service_components": len(read(COMP)["components"]),
+            "runtime_sites": len(runtime_sites),
             "census_appearances": len(census),
             "coverage_records": len(records),
             "classes": dict(
@@ -403,7 +447,7 @@ def main():
         + d["source_main_sha"]
         + ". Build command: `python geospatial/facilities/coverage/build_coverage.py`.",
         "",
-        "The 175 geographic catalog objects remain authoritative geographic IDs. `ORG:`, `SERVICE:` and `GEOMETRY:` keys are census-disposition keys, not newly allocated site IDs. All newly designed building IDs must be allocated by the facility program.",
+        f"The {d['counts']['catalog_objects']} geographic catalog objects remain authoritative geographic IDs. `ORG:`, `SERVICE:` and `GEOMETRY:` keys are census-disposition keys, not newly allocated site IDs. All newly designed building IDs must be allocated by the facility program.",
         "# Counts",
         "",
         json.dumps(d["counts"], sort_keys=True),
@@ -424,7 +468,7 @@ def main():
         "",
         "Machine-readable appearances, source hashes, aliases, statuses, tenure and unknown temporal/occupancy fields are in [COVERAGE_MATRIX.json](COVERAGE_MATRIX.json). A class 8 disposition is a placeholder requirement, not permission to drop its atlas record. Class 3 requires concept floors even when measured floor counts remain unknown. Class 4 exempts outdoor, rail and civil assets from architectural floors; the existing network and structure representations remain authoritative.",
         "",
-        "Foundry, Atlas Meridian and Advisory lack dedicated accepted physical footprints (SH-SITE-0017–0019). Their organizational cards are class 6 and their physical-footprint question remains class 8; this avoids multiplying business functions into sites. J2 Education (SH-SITE-0014) remains a separate unresolved residential-campus record even where the Sacramento model includes day education. Alexandria and provider requirements remain unlocated pending accepted implementation. Wallaby is historical/killed under the September 6 Cradle closeout despite the earlier catalog OPEN label. Bedford is Fairmont, not the superseded Belle study area.",
+        "Foundry, Atlas Meridian and Advisory lack dedicated accepted physical footprints (SH-SITE-0017–0019). Their organizational cards are class 6 and their physical-footprint question remains class 8; this avoids multiplying business functions into sites. J2 Education (SH-SITE-0014) remains a separate unresolved residential-campus record even where the Sacramento model includes day education. Alexandria retains its existing hosting identity with explicit runtime placement links. Accepted runtime decisions select Switch Reno and IDACORE Boise; provider contracts and assigned cages remain unestablished. Northern Nevada is an acquired synthetic parcel in preconstruction with a separately proposed building/floor concept. Wallaby is historical/killed under the September 6 Cradle closeout despite the earlier catalog OPEN label. Bedford is Fairmont, not the superseded Belle study area.",
     ]
     (OUT / "COVERAGE_MATRIX.md").write_text("\n".join(lines) + "\n")
     print(json.dumps(d["counts"], indent=2))

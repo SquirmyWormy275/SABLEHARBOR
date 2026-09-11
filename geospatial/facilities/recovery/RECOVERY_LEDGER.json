@@ -14454,7 +14454,10 @@
           "main_blob": "6785af48765e2dd1ef7c523022cc6296f3680301",
           "comparison": "changed_on_main"
         }
-      ]
+      ],
+      "current_disposition": "reuse",
+      "current_disposition_evidence": "acceptance_updates/0",
+      "historical_disposition_retained": true
     },
     {
       "ref": "origin/shms/locked-principles",
@@ -15822,5 +15825,28 @@
     "path": "geospatial/history/PR_SOURCE_INVENTORY.json",
     "entries": 227,
     "treatment": "Retained immutable source/blob links for PR94/96; does not require duplicating historical archives."
-  }
+  },
+  "acceptance_updates": [
+    {
+      "recorded_on": "2026-09-11",
+      "authoritative_main_sha": "b83e4be2182a5e4143808a3dab5f8d929a133caf",
+      "local_integration_commit": "5d7e5a0",
+      "pull_request": 119,
+      "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/pull/119",
+      "state": "MERGED",
+      "merged_at": "2026-09-11T21:13:54Z",
+      "head_sha": "45e145614407c933739ff7143275268b55f11b4c",
+      "disposition": "reuse",
+      "historical_boundary": "Initial branch and PR snapshots below remain historical evidence. Their pending classifications do not describe current accepted main.",
+      "sources": [
+        "docs/canon/RUNTIME_HOSTING_AND_DATA_CENTER_DECISIONS_2026-09-11.md",
+        "enterprise/services/source/runtime_sites_2026-09-11.json",
+        "enterprise/services/source/runtime_capital_plan_2026-09-11.json",
+        "geospatial/sources/RUNTIME_INFRASTRUCTURE_GEO_ADDENDUM_2026-09-11.md",
+        "geospatial/sources/catalog.json"
+      ],
+      "integration": "Runtime/site/FAC aliases converge on SH-SITE-0028, SH-SITE-0029 and SH-SITE-0030. Provider selection is accepted; contract and operation remain false. Owned site is fictional acquired land in preconstruction; only proposed building/floor design is permitted.",
+      "verification_command": "gh pr view 119 --json state,mergedAt,mergeCommit,url,headRefOid; git rev-parse origin/main"
+    }
+  ]
 }

@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "source_main_sha": "786fc9a5311a04dde92ee6dbb08ac3b77a380200",
+  "source_main_sha": "b83e4be2182a5e4143808a3dab5f8d929a133caf",
   "as_of": "2026-09-11",
   "boundary": "Coverage records are not distinct site counts. Aliases map repeated census appearances to the same record. Concept design does not establish occupied floors, tenure or dates.",
   "class_definitions": {
@@ -14,7 +14,8 @@
     "8": "proposed/unresolved disposition"
   },
   "input_sha256": {
-    "geospatial/sources/catalog.json": "fe1c43a23aab01ec82c85406edee98bb7efa8e3050e004745585ff03e46a2215",
+    "geospatial/sources/catalog.json": "3e713190703248811ab7ba397ddbeac55a4b9e11399b41ee81badd0d4b0a5bf0",
+    "enterprise/services/source/runtime_sites_2026-09-11.json": "fa216f629762503865fd9f1a3207e87691cd484cec9885bf25ce045b4525519c",
     "docs/organization/source/chartbook.json": "6471a6362517f97574c775b73b94ac48d6060d81cee605eb661811425ed75866",
     "industrial/source/operations.json": "e7488b55c1c963d102db66e7a7b6f1373a3d68a9f94b8f99b164092245713a3b",
     "industrial/source/entities.json": "799a24baf3240d50c5d6a80ac0f9ddb9d023b7a36de058ec12546aac60caee29",
@@ -33,6 +34,7 @@
     "geospatial/geojson/red_wash_anchor.geojson": "3f9a0c4f4ada6077d163bd16c01d69a98a0adee23d6a9974d8560eea405c4025",
     "geospatial/geojson/reference_place_labels.geojson": "558624b8095190e516f88e79a3c1f83a969fafab9946b7ef679817de74a88529",
     "geospatial/geojson/roads.geojson": "25a36216d753721fdcfd5dd1d53482965beca14ad7c2bb3aca5762ce0548d5ab",
+    "geospatial/geojson/runtime_parcel.geojson": "671c7eadf7347864f9ccc9876606fb476e6e866587aea0cfc556436e7310d5f0",
     "geospatial/geojson/sites.geojson": "f772547de713cf5ab9d4a3f64db11ae053a446dbf69d88f2c913f3b2554e9b15",
     "geospatial/geojson/source_claim_points.geojson": "8fef00546b68e003a9ce76528351c982c1e4f03ffc7c66870cede540c8f5b641",
     "geospatial/geojson/taylor_hub.geojson": "6f9559575b5f3cf187968fdebc2c659d06824130c1df2a898ca6c1d15fbe7184",
@@ -40,21 +42,25 @@
     "docs/canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md": "3289ad8ce5d20d767b38f1ad3ed804feeb80300c59d7e96653bfe68f1eaa24b6",
     "docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md": "25e484d7fbc2c83a37f0e7ae7fe20ff741cde176bd0c2ba7be742fa7fb3e2624",
     "docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05_R2.md": "89eae89e18db1d3cf3ab4f7bf7f54fa57efabb84c57127717b731572048d563b",
-    "docs/canon/THIRD_PARTY_SERVICES_SOURCING_DECISIONS_2026-09-09.md": "53dc3c69be68cd66fe9fdd30048f8229416fd6bd6660272dfeae20f802f986d4"
+    "docs/canon/THIRD_PARTY_SERVICES_SOURCING_DECISIONS_2026-09-09.md": "53dc3c69be68cd66fe9fdd30048f8229416fd6bd6660272dfeae20f802f986d4",
+    "docs/canon/RUNTIME_HOSTING_AND_DATA_CENTER_DECISIONS_2026-09-11.md": "fd309a9bdf596ea96498b7207b60ea3bea70a35d8c418371aa96c06d928bb17b",
+    "geospatial/sources/RUNTIME_INFRASTRUCTURE_GEO_ADDENDUM_2026-09-11.md": "8f3fa8784ac215f61fdc16670b5d627458da337a2234630faf853b99bbdb2b15"
   },
   "counts": {
-    "catalog_objects": 175,
-    "census_appearances": 889,
+    "catalog_objects": 178,
+    "service_components": 49,
+    "runtime_sites": 3,
+    "census_appearances": 896,
     "coverage_records": 586,
     "classes": {
       "1": 2,
-      "2": 15,
+      "2": 16,
       "3": 6,
       "4": 62,
-      "5": 17,
+      "5": 19,
       "6": 437,
       "7": 5,
-      "8": 42
+      "8": 39
     }
   },
   "records": [
@@ -581,7 +587,7 @@
       "class": 8,
       "classification": "proposed/unresolved disposition",
       "parent_id": null,
-      "reason": "Location, dedicated footprint or implementation remains proposed/unresolved; labeled planning disposition preserves the record without claiming occupancy.",
+      "reason": "Retained Alexandria hosting identity. Accepted runtime placement uses Reno primary, Boise recovery and the proposed owned Northern Nevada end state; no separate Alexandria building is established.",
       "source_type": "COMPUTE_INFRASTRUCTURE",
       "canon_status": "UNKNOWN",
       "status": "unresolved",
@@ -607,7 +613,12 @@
       ],
       "package_required": true,
       "actual_floor_count": null,
-      "actual_occupancy": null
+      "actual_occupancy": null,
+      "runtime_placement_site_ids": [
+        "SH-SITE-0028",
+        "SH-SITE-0029",
+        "SH-SITE-0030"
+      ]
     },
     {
       "id": "SH-SITE-0017",
@@ -6230,6 +6241,233 @@
       "package_required": false,
       "actual_floor_count": null,
       "actual_occupancy": null
+    },
+    {
+      "id": "SH-SITE-0028",
+      "name": "Reno primary colocation",
+      "class": 5,
+      "classification": "external context only",
+      "parent_id": null,
+      "reason": "Accepted selected external provider; context only. Contract, assigned building/cage, reserved capacity and operating acceptance remain unestablished.",
+      "source_type": "COMPUTE_INFRASTRUCTURE",
+      "canon_status": "PROPOSED",
+      "status": "external",
+      "tenure": "Selected external provider; no executed contract or capacity reservation",
+      "occupancy_start": null,
+      "occupancy_end": null,
+      "relevant_date": "2026-09-11",
+      "date_precision": "DAY",
+      "precision": "REGIONAL_CONSTRAINT",
+      "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+      "provenance": [
+        {
+          "path": "enterprise/services/source/runtime_sites_2026-09-11.json",
+          "locator": "RUNTIME-RENO-COLO",
+          "source_id": "SRC-RUNTIME-20260911"
+        },
+        {
+          "path": "enterprise/services/source/runtime_sites_2026-09-11.json",
+          "locator": "sites/RUNTIME-RENO-COLO"
+        }
+      ],
+      "detail_issue": "#106",
+      "geometry_issue": "#106",
+      "required_artifacts": [
+        "context",
+        "disposition"
+      ],
+      "package_required": true,
+      "actual_floor_count": null,
+      "actual_occupancy": null,
+      "runtime_state": "PROVIDER_SELECTED_PROCUREMENT_PENDING",
+      "runtime_source": {
+        "id": "RUNTIME-RENO-COLO",
+        "name": "Reno primary colocation",
+        "geography": "Tahoe-Reno, Nevada",
+        "status": "PROVIDER_SELECTED_PROCUREMENT_PENDING",
+        "provider": "Switch",
+        "facility": "Switch TAHOE RENO \u2014 The Citadel Campus",
+        "provider_selection_date": "2026-09-11",
+        "contract_executed": false,
+        "capacity_reserved": false,
+        "initial_usable_it_kw_low": 75,
+        "initial_usable_it_kw_high": 100,
+        "required_expansion_kw": 250,
+        "operating": false,
+        "evidence_boundary": "Selection is canon; provider public claims and proposed commercial terms are not operating evidence until contract and acceptance.",
+        "entity_id": "SHI",
+        "geospatial_entity_id": "SH-ENT-001",
+        "facility_id": "FAC-PRIMARY",
+        "geospatial_site_id": "SH-SITE-0028",
+        "planned_environment_ids": [
+          "ENV-PROD",
+          "ENV-RESTRICTED",
+          "ENV-DEV"
+        ],
+        "dependency_id": "DEP-colo-primary",
+        "record_origin": "OWNER_DECISION",
+        "installed_capacity_kw": null,
+        "provider_id": "CP-SWITCH",
+        "contract_id": "RT-SO-RENO",
+        "contract_status": "DRAFT",
+        "provider_legal_name": null
+      }
+    },
+    {
+      "id": "SH-SITE-0029",
+      "name": "Boise independent recovery colocation",
+      "class": 5,
+      "classification": "external context only",
+      "parent_id": null,
+      "reason": "Accepted selected external provider; context only. Contract, assigned building/cage, reserved capacity and operating acceptance remain unestablished.",
+      "source_type": "COMPUTE_INFRASTRUCTURE",
+      "canon_status": "PROPOSED",
+      "status": "external",
+      "tenure": "Selected external provider; no executed contract or capacity reservation",
+      "occupancy_start": null,
+      "occupancy_end": null,
+      "relevant_date": "2026-09-11",
+      "date_precision": "DAY",
+      "precision": "REGIONAL_CONSTRAINT",
+      "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+      "provenance": [
+        {
+          "path": "enterprise/services/source/runtime_sites_2026-09-11.json",
+          "locator": "RUNTIME-BOISE-DR",
+          "source_id": "SRC-RUNTIME-20260911"
+        },
+        {
+          "path": "enterprise/services/source/runtime_sites_2026-09-11.json",
+          "locator": "sites/RUNTIME-BOISE-DR"
+        }
+      ],
+      "detail_issue": "#106",
+      "geometry_issue": "#106",
+      "required_artifacts": [
+        "context",
+        "disposition"
+      ],
+      "package_required": true,
+      "actual_floor_count": null,
+      "actual_occupancy": null,
+      "runtime_state": "PROVIDER_SELECTED_PROCUREMENT_PENDING",
+      "runtime_source": {
+        "id": "RUNTIME-BOISE-DR",
+        "name": "Boise independent recovery colocation",
+        "geography": "Boise, Idaho",
+        "status": "PROVIDER_SELECTED_PROCUREMENT_PENDING",
+        "provider": "IDACORE",
+        "facility": "IDACORE Boise",
+        "street_address": "2653 S Victory View Way, Boise, Idaho 83709",
+        "provider_selection_date": "2026-09-11",
+        "contract_executed": false,
+        "capacity_reserved": false,
+        "operating": false,
+        "published_planning_price_usd_per_kw_month": 300,
+        "published_power_included": true,
+        "published_standard_term_months": 12,
+        "evidence_boundary": "Published price/specifications are procurement baselines; contract, audit scope, technical configuration and recovery tests remain required evidence.",
+        "entity_id": "SHI",
+        "geospatial_entity_id": "SH-ENT-001",
+        "facility_id": "FAC-RECOVERY",
+        "geospatial_site_id": "SH-SITE-0029",
+        "planned_environment_ids": [
+          "ENV-RECOVERY"
+        ],
+        "dependency_id": "DEP-colo-recovery",
+        "record_origin": "OWNER_DECISION",
+        "installed_capacity_kw": null,
+        "provider_id": "CP-IDACORE",
+        "contract_id": "RT-SO-BOISE",
+        "contract_status": "DRAFT",
+        "provider_legal_name": null,
+        "independence_required": true,
+        "independence_verified": false,
+        "independence_evidence": [],
+        "initial_usable_it_kw_low": 25,
+        "initial_usable_it_kw_high": 25
+      }
+    },
+    {
+      "id": "SH-SITE-0030",
+      "name": "SABLE HARBOR Northern Nevada Data Center",
+      "class": 2,
+      "classification": "operating site plan",
+      "parent_id": null,
+      "reason": "Accepted synthetic acquired parcel, preconstruction. Site and proposed building/floor concept required; no completed shell or operating data center.",
+      "source_type": "COMPUTE_INFRASTRUCTURE",
+      "canon_status": "PROPOSED",
+      "status": "land_acquired_preconstruction",
+      "tenure": "Accepted fictional planning-universe acquisition, 2026-09-04; no real APN or real-world title claim",
+      "occupancy_start": null,
+      "occupancy_end": null,
+      "relevant_date": "2026-09-04",
+      "date_precision": "DAY",
+      "precision": "PLANNING_PIN",
+      "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+      "provenance": [
+        {
+          "path": "enterprise/services/source/runtime_sites_2026-09-11.json",
+          "locator": "RUNTIME-NN-OWNED-DC",
+          "source_id": "SRC-RUNTIME-20260911"
+        },
+        {
+          "path": "enterprise/services/source/runtime_sites_2026-09-11.json",
+          "locator": "sites/RUNTIME-NN-OWNED-DC"
+        }
+      ],
+      "detail_issue": "#107",
+      "geometry_issue": "#106",
+      "required_artifacts": [
+        "context",
+        "site",
+        "program",
+        "building_program",
+        "floor_plans"
+      ],
+      "package_required": true,
+      "actual_floor_count": null,
+      "actual_occupancy": null,
+      "runtime_state": "LAND_ACQUIRED_PRECONSTRUCTION",
+      "runtime_source": {
+        "id": "RUNTIME-NN-OWNED-DC",
+        "name": "SABLE HARBOR Northern Nevada Data Center",
+        "geography": "Tahoe-Reno Industrial Center / USA Parkway industrial district, Storey County, Nevada",
+        "planning_lon_lat": [
+          -119.455,
+          39.545
+        ],
+        "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+        "parcel_acres_planning": 7.5,
+        "real_apn": null,
+        "planning_purchase_date": "2026-09-04",
+        "planning_consideration_usd": 3000000,
+        "status": "LAND_ACQUIRED_PRECONSTRUCTION",
+        "vertical_construction_percent": 0,
+        "commissioned_it_kw": 0,
+        "commissioned_critical_kw": 0,
+        "planned_shell_sqft_low": 10000,
+        "planned_shell_sqft_high": 15000,
+        "planned_initial_critical_kw_low": 250,
+        "planned_initial_critical_kw_high": 500,
+        "planned_utility_path_kw": 1000,
+        "preserve_expansion_path_kw": 2000,
+        "operating": false,
+        "entity_id": "SHI",
+        "geospatial_entity_id": "SH-ENT-001",
+        "facility_id": "FAC-OWNED",
+        "geospatial_site_id": "SH-SITE-0030",
+        "planned_environment_ids": [],
+        "dependency_id": null,
+        "record_origin": "OWNER_DECISION",
+        "installed_capacity_kw": null
+      },
+      "planned_building_ids": [
+        "SH-SITE-0030-B01"
+      ],
+      "planned_floor_ids": [
+        "SH-SITE-0030-B01-L01"
+      ]
     },
     {
       "id": "ORG:SHI",
@@ -19343,105 +19581,6 @@
       "actual_occupancy": null
     },
     {
-      "id": "SERVICE:FAC-PRIMARY",
-      "name": "Primary colocation requirement",
-      "class": 8,
-      "classification": "proposed/unresolved disposition",
-      "parent_id": null,
-      "reason": "Facility requirement only; provider/address/readiness unresolved. PR #119 remains pending and is not imported.",
-      "source_type": "SUPPLEMENTAL_CENSUS",
-      "canon_status": "SOURCE_RECORD_ONLY",
-      "status": "unresolved",
-      "tenure": "unknown",
-      "occupancy_start": null,
-      "occupancy_end": null,
-      "relevant_date": null,
-      "date_precision": "UNKNOWN",
-      "precision": "UNLOCATED",
-      "fictionality": "SYNTHETIC_ENTERPRISE_RECORD",
-      "provenance": [
-        {
-          "path": "enterprise/services/source/components.json",
-          "locator": "components/FAC-PRIMARY"
-        }
-      ],
-      "detail_issue": "#107",
-      "geometry_issue": "#106",
-      "required_artifacts": [
-        "context",
-        "disposition"
-      ],
-      "package_required": true,
-      "actual_floor_count": null,
-      "actual_occupancy": null
-    },
-    {
-      "id": "SERVICE:FAC-RECOVERY",
-      "name": "Independent recovery facility requirement",
-      "class": 8,
-      "classification": "proposed/unresolved disposition",
-      "parent_id": null,
-      "reason": "Facility requirement only; provider/address/readiness unresolved. PR #119 remains pending and is not imported.",
-      "source_type": "SUPPLEMENTAL_CENSUS",
-      "canon_status": "SOURCE_RECORD_ONLY",
-      "status": "unresolved",
-      "tenure": "unknown",
-      "occupancy_start": null,
-      "occupancy_end": null,
-      "relevant_date": null,
-      "date_precision": "UNKNOWN",
-      "precision": "UNLOCATED",
-      "fictionality": "SYNTHETIC_ENTERPRISE_RECORD",
-      "provenance": [
-        {
-          "path": "enterprise/services/source/components.json",
-          "locator": "components/FAC-RECOVERY"
-        }
-      ],
-      "detail_issue": "#107",
-      "geometry_issue": "#106",
-      "required_artifacts": [
-        "context",
-        "disposition"
-      ],
-      "package_required": true,
-      "actual_floor_count": null,
-      "actual_occupancy": null
-    },
-    {
-      "id": "SERVICE:FAC-OWNED",
-      "name": "Future owned-facility alternative",
-      "class": 8,
-      "classification": "proposed/unresolved disposition",
-      "parent_id": null,
-      "reason": "Facility requirement only; provider/address/readiness unresolved. PR #119 remains pending and is not imported.",
-      "source_type": "SUPPLEMENTAL_CENSUS",
-      "canon_status": "SOURCE_RECORD_ONLY",
-      "status": "unresolved",
-      "tenure": "unknown",
-      "occupancy_start": null,
-      "occupancy_end": null,
-      "relevant_date": null,
-      "date_precision": "UNKNOWN",
-      "precision": "UNLOCATED",
-      "fictionality": "SYNTHETIC_ENTERPRISE_RECORD",
-      "provenance": [
-        {
-          "path": "enterprise/services/source/components.json",
-          "locator": "components/FAC-OWNED"
-        }
-      ],
-      "detail_issue": "#107",
-      "geometry_issue": "#106",
-      "required_artifacts": [
-        "context",
-        "disposition"
-      ],
-      "package_required": true,
-      "actual_floor_count": null,
-      "actual_occupancy": null
-    },
-    {
       "id": "SERVICE:ENV-PROD",
       "name": "Primary production",
       "class": 6,
@@ -20748,6 +20887,42 @@
       "section": "objects",
       "source_id": "SH-IND-HIST-1991",
       "coverage_id": "SH-IND-HIST-1991"
+    },
+    {
+      "source_path": "geospatial/sources/catalog.json",
+      "section": "objects",
+      "source_id": "SH-SITE-0028",
+      "coverage_id": "SH-SITE-0028"
+    },
+    {
+      "source_path": "geospatial/sources/catalog.json",
+      "section": "objects",
+      "source_id": "SH-SITE-0029",
+      "coverage_id": "SH-SITE-0029"
+    },
+    {
+      "source_path": "geospatial/sources/catalog.json",
+      "section": "objects",
+      "source_id": "SH-SITE-0030",
+      "coverage_id": "SH-SITE-0030"
+    },
+    {
+      "source_path": "enterprise/services/source/runtime_sites_2026-09-11.json",
+      "section": "sites",
+      "source_id": "RUNTIME-RENO-COLO",
+      "coverage_id": "SH-SITE-0028"
+    },
+    {
+      "source_path": "enterprise/services/source/runtime_sites_2026-09-11.json",
+      "section": "sites",
+      "source_id": "RUNTIME-BOISE-DR",
+      "coverage_id": "SH-SITE-0029"
+    },
+    {
+      "source_path": "enterprise/services/source/runtime_sites_2026-09-11.json",
+      "section": "sites",
+      "source_id": "RUNTIME-NN-OWNED-DC",
+      "coverage_id": "SH-SITE-0030"
     },
     {
       "source_path": "docs/organization/source/chartbook.json",
@@ -24305,19 +24480,19 @@
       "source_path": "enterprise/services/source/components.json",
       "section": "components",
       "source_id": "FAC-PRIMARY",
-      "coverage_id": "SERVICE:FAC-PRIMARY"
+      "coverage_id": "SH-SITE-0028"
     },
     {
       "source_path": "enterprise/services/source/components.json",
       "section": "components",
       "source_id": "FAC-RECOVERY",
-      "coverage_id": "SERVICE:FAC-RECOVERY"
+      "coverage_id": "SH-SITE-0029"
     },
     {
       "source_path": "enterprise/services/source/components.json",
       "section": "components",
       "source_id": "FAC-OWNED",
-      "coverage_id": "SERVICE:FAC-OWNED"
+      "coverage_id": "SH-SITE-0030"
     },
     {
       "source_path": "enterprise/services/source/components.json",
@@ -25008,6 +25183,12 @@
       "section": "features",
       "source_id": "IND-ROAD-RW-01",
       "coverage_id": "SH-RAIL-0002"
+    },
+    {
+      "source_path": "geospatial/geojson/runtime_parcel.geojson",
+      "section": "features",
+      "source_id": "RT-PARCEL-001",
+      "coverage_id": "SH-SITE-0030"
     },
     {
       "source_path": "geospatial/geojson/sites.geojson",

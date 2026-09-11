@@ -2,12 +2,12 @@
 
 Coverage records are not distinct site counts. Aliases map repeated census appearances to the same record. Concept design does not establish occupied floors, tenure or dates.
 
-Source: current main 786fc9a5311a04dde92ee6dbb08ac3b77a380200. Build command: `python geospatial/facilities/coverage/build_coverage.py`.
+Source: current main b83e4be2182a5e4143808a3dab5f8d929a133caf. Build command: `python geospatial/facilities/coverage/build_coverage.py`.
 
-The 175 geographic catalog objects remain authoritative geographic IDs. `ORG:`, `SERVICE:` and `GEOMETRY:` keys are census-disposition keys, not newly allocated site IDs. All newly designed building IDs must be allocated by the facility program.
+The 178 geographic catalog objects remain authoritative geographic IDs. `ORG:`, `SERVICE:` and `GEOMETRY:` keys are census-disposition keys, not newly allocated site IDs. All newly designed building IDs must be allocated by the facility program.
 # Counts
 
-{"catalog_objects": 175, "census_appearances": 889, "classes": {"1": 2, "2": 15, "3": 6, "4": 62, "5": 17, "6": 437, "7": 5, "8": 42}, "coverage_records": 586}
+{"catalog_objects": 178, "census_appearances": 896, "classes": {"1": 2, "2": 16, "3": 6, "4": 62, "5": 19, "6": 437, "7": 5, "8": 39}, "coverage_records": 586, "runtime_sites": 3, "service_components": 49}
 
 # Required design queue
 
@@ -28,7 +28,7 @@ The 175 geographic catalog objects remain authoritative geographic IDs. `ORG:`, 
 | SH-SITE-0013 | Tucson provisional engineering office | context, disposition | Location, dedicated footprint or implementation remains proposed/unresolved; labeled planning disposition preserves the record without claiming occupancy. |
 | SH-SITE-0014 | J2 Education residential campus and conference center | context, disposition | Location, dedicated footprint or implementation remains proposed/unresolved; labeled planning disposition preserves the record without claiming occupancy. |
 | SH-SITE-0015 | J2 headquarters physical accommodation | context, disposition | Location, dedicated footprint or implementation remains proposed/unresolved; labeled planning disposition preserves the record without claiming occupancy. |
-| SH-SITE-0016 | Alexandria physical hosting | context, disposition | Location, dedicated footprint or implementation remains proposed/unresolved; labeled planning disposition preserves the record without claiming occupancy. |
+| SH-SITE-0016 | Alexandria physical hosting | context, disposition | Retained Alexandria hosting identity. Accepted runtime placement uses Reno primary, Boise recovery and the proposed owned Northern Nevada end state; no separate Alexandria building is established. |
 | SH-SITE-0017 | Foundry/Foundry Field dedicated footprint | context, disposition | Location, dedicated footprint or implementation remains proposed/unresolved; labeled planning disposition preserves the record without claiming occupancy. |
 | SH-SITE-0018 | Atlas Meridian dedicated footprint | context, disposition | Location, dedicated footprint or implementation remains proposed/unresolved; labeled planning disposition preserves the record without claiming occupancy. |
 | SH-SITE-0019 | Advisory project hubs/offices | context, disposition | Location, dedicated footprint or implementation remains proposed/unresolved; labeled planning disposition preserves the record without claiming occupancy. |
@@ -82,6 +82,9 @@ The 175 geographic catalog objects remain authoritative geographic IDs. `ORG:`, 
 | SH-IND-FAC-RAW-TRUCK | Rawlins trucking satellite | context, site, program | Operating site/envelope requires context and site program; buildings must be separately modelled where program supports them. |
 | SH-IND-FAC-ARU-OFFICE | Taylor ARU office | context, site, building_program, floor_plans | Established building function; prepare intentionally modelled concept floor plan. Actual floor count, measured area and occupancy remain unknown. |
 | SH-IND-FAC-RW-RECEIVING | Red Wash receiving and reagent storage | context, site, program | Operating site/envelope requires context and site program; buildings must be separately modelled where program supports them. |
+| SH-SITE-0028 | Reno primary colocation | context, disposition | Accepted selected external provider; context only. Contract, assigned building/cage, reserved capacity and operating acceptance remain unestablished. |
+| SH-SITE-0029 | Boise independent recovery colocation | context, disposition | Accepted selected external provider; context only. Contract, assigned building/cage, reserved capacity and operating acceptance remain unestablished. |
+| SH-SITE-0030 | SABLE HARBOR Northern Nevada Data Center | context, site, program, building_program, floor_plans | Accepted synthetic acquired parcel, preconstruction. Site and proposed building/floor concept required; no completed shell or operating data center. |
 | ORG:kgm | Kelly Gang Mining | context, disposition | External organization or personal business; no enterprise-controlled building authorized. Context-only organization record does not assert a physical address. |
 | ORG:demotte | Demotte Reclamation Services | context, disposition | External organization or personal business; no enterprise-controlled building authorized. Context-only organization record does not assert a physical address. |
 | ORG:harrison-vale | Harrison Vale Partners | context, disposition | External organization or personal business; no enterprise-controlled building authorized. Context-only organization record does not assert a physical address. |
@@ -97,12 +100,9 @@ The 175 geographic catalog objects remain authoritative geographic IDs. `ORG:`, 
 | ORG:FORT-TEST-RIG | FORT-TEST-RIG | context, disposition | Forecast equipment asset is not evidence of September 2026 installation; no occupied architectural floor is established. |
 | ORG:FORT-ANALYTICAL | FORT-ANALYTICAL | context, disposition | Forecast equipment asset is not evidence of September 2026 installation; no occupied architectural floor is established. |
 | ORG:BEDFORD-MODULE | BEDFORD-MODULE | context, disposition | Forecast equipment asset is not evidence of September 2026 installation; no occupied architectural floor is established. |
-| SERVICE:FAC-PRIMARY | Primary colocation requirement | context, disposition | Facility requirement only; provider/address/readiness unresolved. PR #119 remains pending and is not imported. |
-| SERVICE:FAC-RECOVERY | Independent recovery facility requirement | context, disposition | Facility requirement only; provider/address/readiness unresolved. PR #119 remains pending and is not imported. |
-| SERVICE:FAC-OWNED | Future owned-facility alternative | context, disposition | Facility requirement only; provider/address/readiness unresolved. PR #119 remains pending and is not imported. |
 
 # Complete census
 
 Machine-readable appearances, source hashes, aliases, statuses, tenure and unknown temporal/occupancy fields are in [COVERAGE_MATRIX.json](COVERAGE_MATRIX.json). A class 8 disposition is a placeholder requirement, not permission to drop its atlas record. Class 3 requires concept floors even when measured floor counts remain unknown. Class 4 exempts outdoor, rail and civil assets from architectural floors; the existing network and structure representations remain authoritative.
 
-Foundry, Atlas Meridian and Advisory lack dedicated accepted physical footprints (SH-SITE-0017–0019). Their organizational cards are class 6 and their physical-footprint question remains class 8; this avoids multiplying business functions into sites. J2 Education (SH-SITE-0014) remains a separate unresolved residential-campus record even where the Sacramento model includes day education. Alexandria and provider requirements remain unlocated pending accepted implementation. Wallaby is historical/killed under the September 6 Cradle closeout despite the earlier catalog OPEN label. Bedford is Fairmont, not the superseded Belle study area.
+Foundry, Atlas Meridian and Advisory lack dedicated accepted physical footprints (SH-SITE-0017–0019). Their organizational cards are class 6 and their physical-footprint question remains class 8; this avoids multiplying business functions into sites. J2 Education (SH-SITE-0014) remains a separate unresolved residential-campus record even where the Sacramento model includes day education. Alexandria retains its existing hosting identity with explicit runtime placement links. Accepted runtime decisions select Switch Reno and IDACORE Boise; provider contracts and assigned cages remain unestablished. Northern Nevada is an acquired synthetic parcel in preconstruction with a separately proposed building/floor concept. Wallaby is historical/killed under the September 6 Cradle closeout despite the earlier catalog OPEN label. Bedford is Fairmont, not the superseded Belle study area.
