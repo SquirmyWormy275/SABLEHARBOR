@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "errors": [],
+  "counts": {
+    "catalog_objects": 175,
+    "census_appearances": 889,
+    "coverage_records": 586,
+    "classes": {
+      "1": 2,
+      "2": 15,
+      "3": 6,
+      "4": 62,
+      "5": 17,
+      "6": 437,
+      "7": 5,
+      "8": 42
+    }
+  }
+}
