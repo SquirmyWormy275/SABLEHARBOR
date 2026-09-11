@@ -1,7 +1,8 @@
 # Runtime estate implementation
 
-Version 1.0.0 development package for PR #119. **Owner-authorized, pending merge;
-synthetic design, not an operating estate.** The September 11 source pair under
+Version 1.0.0 was accepted through [PR #119](https://github.com/SquirmyWormy275/SABLEHARBOR/pull/119)
+and published as [runtime-estate-v1.0.0](https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/runtime-estate-v1.0.0).
+**Accepted synthetic design; not an operating estate.** The September 11 source pair under
 `enterprise/services/source/runtime_*.json` controls this layer. The six legacy
 service inputs retain their original comparison scope and source locks.
 
@@ -27,6 +28,10 @@ Geographic IDs SH-SITE-0028/0029/0030 identify the new facilities; SH-SITE-0016 
 the Alexandria hosting concept. Provider coordinates remain unverified regional
 constraints. The owned parcel is a 7.5-acre synthetic metric envelope, independently
 checked on the WGS84 ellipsoid.
+
+The [release record](../../docs/releases/RUNTIME_ESTATE_RELEASES.md) pins the accepted
+source and merge commits, checksums, CI and reproduction evidence. Later documentation
+and facility-atlas integration do not change the immutable v1.0.0 snapshot.
 
 ## Source and output contract
 

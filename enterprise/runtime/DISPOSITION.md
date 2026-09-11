@@ -1,6 +1,7 @@
 # PR119 implementation disposition
 
-Prepared 2026-09-11. Owner-authorized branch work, pending repository acceptance.
+Prepared 2026-09-11; acceptance closeout recorded after merge and public-release verification.
+PR119 was accepted as a repository design/implementation release.
 This record describes executed implementation, not actual provider or facility operation.
 The controlling mandate remains the September 11 PR119 handover.
 
@@ -9,7 +10,7 @@ The controlling mandate remains the September 11 PR119 handover.
 | R119-01 | Original runtime pair; services loader and runtime model | services `runtime.json`; required-field deletion and loader mutation tests | None for source consumption |
 | R119-02 | Explicit FAC/ENV/runtime/geo crosswalk | services components and runtime SQLite; ID tests | Actual placements unaccepted |
 | R119-03 | Selected provider IDs and draft agreement IDs | counterparty/dependency export; service tests | Legal contracting parties unverified |
-| R119-04 | `sync_runtime.py` reads original site source | catalog, parcel, GeoPackage, QGIS/registers; geodesic/idempotence tests | Native QGIS evidence must match candidate |
+| R119-04 | `sync_runtime.py` reads original site source | catalog, parcel, GeoPackage, QGIS/registers; geodesic/idempotence tests | Accepted candidate passed [native QGIS validation](https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/runtime-estate-v1.0.0/QGIS_VALIDATION.json); actual placement remains unaccepted |
 | R119-05 | Selected states preserved in sync output | geographic census/site register | No tenancy claimed |
 | R119-06 | SHI joined to industrial entity source | deed and validation reject parent substitution | None for identity |
 | R119-07 | Runtime adjustment adapter integrated in enterprise builder | balanced journals and exact statement bridge | Accepted-event transaction reference covers commitment, deposit, invoice, retention, payment, cancellation and in-service transfer; actual transactions absent |
@@ -26,11 +27,11 @@ The controlling mandate remains the September 11 PR119 handover.
 | R119-18 | Separate gross cash and common-scope investment views | terminal timing, no-power-double-charge, four scenarios | Conditional second module/refurbishment and terminal cash modeled; component sensitivity explicitly Phase I only |
 | R119-19 | Source-driven room, rack and phase renderers | 12 SVG/PDF/PNG concept plates, inspected | Component-rated UPS/generator/cooling/feeder arithmetic and dimensioned enclosures implemented; licensed engineering gated |
 | R119-20 | Phase dependencies plus evidence-bearing temporal state engine | September cutoffs, shell/commission/operation tests | Future events are reference fixtures, not accepted history |
-| R119-21 | Thirteen explicit controlled-publication registrations | 13 PDFs, catalog JSON/SQLite and publication manifest | Final release index awaits package acceptance |
+| R119-21 | Thirteen explicit controlled-publication registrations | 13 PDFs, catalog JSON/SQLite and publication manifest | Published v1.0.0 is indexed in the [release record](../../docs/releases/RUNTIME_ESTATE_RELEASES.md) |
 | R119-22 | `readiness.json` field-level references with access limits | validated source/gate register in runtime export | Nine public references plus accepted enterprise vendor canon with field-level provenance; actual reports and supplier acceptance gated |
 | R119-23 | Separate SOC1 customer-ICFR and SOC2 scope | assurance PDF and provisional native-control mapping | Full authoritative criteria and practitioner scope absent |
 | R119-24 | Runtime, finance, security, temporal and integration tests | negative/mutation/funding/recovery/SQLite assertions | Source mutation exercises services, finance, geography, contract cover and catalog; archive tampering tests implemented |
-| R119-25 | Services/geo CI consume source; new runtime CI builds actual output | accepted-output digest, workbook reproduction, two financial builds | Exact candidate CI recorded separately |
+| R119-25 | Services/geo CI consume source; new runtime CI builds actual output | accepted-output digest, workbook reproduction, two financial builds | All 11 candidate workflows passed; [final check record](https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/runtime-estate-v1.0.0/FINAL_CHECKS.json) |
 | R119-26 | Dated reconciliation index and runtime navigation | current branch scope distinguished from pinned history | Runtime reconciliation and release navigation identify current successor and preserved history |
 | R119-27 | Boundary policies, six runbooks, executable authorization/deletion | security tests including live held-record denial | OS, database, object storage, identity and lifecycle/configuration schema selected; deployment qualification gated |
 | R119-28 | Explicit uncontracted/uninstalled/uncommissioned state | world-state tests reject forecast promotion | September actual operating history remains unknown |
@@ -44,11 +45,16 @@ component asset schedule is a Phase-I acceptance sensitivity; later investment
 module/refurbishment cash does not become an actual depreciable asset without a
 separate accepted cohort. No synthetic test establishes operating effectiveness.
 
-Final repository acceptance requires clean source reproduction, actual candidate
-CI, publication review and an immutable indexed release. Keep PR119 draft while
-those checks run. The separate external gates in [`readiness.json`](readiness.json)
-remain open after a successful design release. They do not authorize fabricated
-contracts, funding, personnel, construction or assurance evidence.
+Repository acceptance is complete: PR119 merged as `b83e4be2182a5e4143808a3dab5f8d929a133caf`
+from checked candidate `45e145614407c933739ff7143275268b55f11b4c`. The merged tree
+matched the candidate. Clean reproduction, candidate CI and visual review passed,
+and the [immutable release](https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/runtime-estate-v1.0.0) is published.
+All nine workflows triggered on the merge commit also passed. Public retrieval
+verified the external checksums and all 1,693 embedded manifest members.
+
+The separate external gates in [`readiness.json`](readiness.json) remain open.
+Repository acceptance does not establish contracts, funding, personnel, construction
+or operating assurance evidence.
 
 The distinct runtime workbook uses local XlsxWriter because Artifact Tool was not
 available and its public package returned 404; the owner authorized choosing the
