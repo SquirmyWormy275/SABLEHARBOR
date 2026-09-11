@@ -1,0 +1,127 @@
+{
+  "source_commit": "09ef4f1",
+  "commands": [
+    {
+      "name": "focused-tests",
+      "command": [
+        "/home/kingoftheeast/Projects/SABLEHARBOR-campus/.venv/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "geospatial/facilities/workbench",
+        "geospatial/facilities/test_facilities.py",
+        "geospatial/facilities/coverage/test_coverage.py",
+        "geospatial/facilities/population/test_population.py"
+      ],
+      "exit_code": 0,
+      "seconds": 1.14
+    },
+    {
+      "name": "browser-math",
+      "command": [
+        "node",
+        "geospatial/facilities/workbench/test_app.cjs"
+      ],
+      "exit_code": 0,
+      "seconds": 0.02
+    },
+    {
+      "name": "workbench-freshness",
+      "command": [
+        "/home/kingoftheeast/Projects/SABLEHARBOR-campus/.venv/bin/python",
+        "geospatial/facilities/workbench/build.py",
+        "build",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.23
+    },
+    {
+      "name": "facility-validator",
+      "command": [
+        "/home/kingoftheeast/Projects/SABLEHARBOR-campus/.venv/bin/python",
+        "geospatial/facilities/validate.py",
+        "--check",
+        "--require-atlas"
+      ],
+      "exit_code": 0,
+      "seconds": 3.62
+    },
+    {
+      "name": "governance",
+      "command": [
+        "/home/kingoftheeast/Projects/SABLEHARBOR-campus/.venv/bin/python",
+        "scripts/validate_governance_j2.py"
+      ],
+      "exit_code": 0,
+      "seconds": 2.2
+    },
+    {
+      "name": "catalog",
+      "command": [
+        "/home/kingoftheeast/Projects/SABLEHARBOR-campus/.venv/bin/python",
+        "scripts/validate_institutional_catalog.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.03
+    },
+    {
+      "name": "organization",
+      "command": [
+        "/home/kingoftheeast/Projects/SABLEHARBOR-campus/.venv/bin/python",
+        "scripts/validate_organization_maps.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.43
+    },
+    {
+      "name": "hygiene",
+      "command": [
+        "/home/kingoftheeast/Projects/SABLEHARBOR-campus/.venv/bin/python",
+        "scripts/validate_repository_hygiene.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.23
+    },
+    {
+      "name": "ruff",
+      "command": [
+        "/home/kingoftheeast/Projects/SABLEHARBOR-campus/.venv/bin/ruff",
+        "check",
+        "geospatial",
+        "--config",
+        "geospatial/pyproject.toml",
+        "--force-exclude"
+      ],
+      "exit_code": 0,
+      "seconds": 0.02
+    }
+  ],
+  "determinism": {
+    "outputs": {
+      "geospatial/facilities/workbench/BASELINE.json": "ec8d1116032b75231c526fa6ec68ee6e643afec7ada3b3125c36fcd58187918a",
+      "geospatial/facilities/workbench/DEPENDENCIES.json": "f4eeb66106bb3313e843b19fd43222656fb56c71c947b4f6a87a5e720a2770bc",
+      "geospatial/facilities/workbench/READINESS.json": "c6be2516335da6bf0194f98667954456fb72cf309a5aa19ad52263455a1d04b4",
+      "geospatial/facilities/workbench/EVIDENCE_QUEUE.json": "88120648906c103df912682164c1963446383346b052bf315d98cdedadc83763",
+      "geospatial/facilities/workbench/BASELINE_SCENARIO.json": "0093321ab0d53588e5049094752c6af928d3a1d8412e855311f99cb106354112",
+      "geospatial/facilities/workbench/BASELINE_RESULT.json": "c5c9170099870e0c2307084941ac3c967218537e2d23be730136ad09c67618a3",
+      "geospatial/maps/workbench.html": "ab703d98a4f3acb4cdb00f0b23db4cf1fea7f97cdf2995cceb253651a83dcb16",
+      "geospatial/facilities/workbench/MANIFEST.json": "c8504ae8a421934a94fd4d7fb07af20bc0d4cbfbb9c2cae8c0f3eb97eb0422c3"
+    },
+    "runs": [
+      {
+        "run": 1,
+        "equal": true
+      },
+      {
+        "run": 2,
+        "equal": true
+      }
+    ]
+  },
+  "existing_atlas_identity": {
+    "geospatial/maps/index.html": false,
+    "geospatial/maps/SABLE_HARBOR_Facility_Atlas_v0.2.0.pdf": true,
+    "geospatial/maps/facilities/ARTIFACT_INDEX.md": true
+  }
+}
