@@ -1,0 +1,36 @@
+{
+  "as_of": "2026-09-11",
+  "state": "SYNTHETIC_PLANNING_NOT_BUDGET_OR_QUOTE",
+  "owned_site": {
+    "land_usd": 3000000,
+    "site_civil_security_usd": 1000000,
+    "shell_support_building_usd": 3500000,
+    "utility_fiber_backbone_usd": 1000000,
+    "initial_critical_plant_usd": 5000000,
+    "engineering_permitting_contingency_usd": 2000000,
+    "phase_1_total_usd": 15500000,
+    "range_total_usd_low": 10000000,
+    "range_total_usd_high": 20000000,
+    "production_it_hardware_included": false
+  },
+  "central_it_design_kw": {
+    "2027": {"efficiency_edge": 75, "base": 85, "high_centralized": 120},
+    "2031": {"efficiency_edge": 115, "base": 175, "high_centralized": 355},
+    "2036": {"efficiency_edge": 175, "base": 370, "high_centralized": 1200}
+  },
+  "construction_truth": {
+    "land_acquired": true,
+    "vertical_construction_started": false,
+    "shell_complete": false,
+    "critical_plant_ordered": false,
+    "critical_plant_commissioned": false,
+    "production_operating": false
+  },
+  "accounting_rules": [
+    "Do not treat planning envelope as spent.",
+    "Separate land, CIP, building, critical plant, IT hardware, colo OPEX and labor.",
+    "Do not book incentives before evidenced approval.",
+    "Do not double count existing facilities/vendor allowances without supported displacement.",
+    "Fractional workload FTE are allocations, not automatic new hires."
+  ]
+}
