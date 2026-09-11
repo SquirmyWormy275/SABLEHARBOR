@@ -21,7 +21,7 @@ Existing [clean-test results](repo-validation/r02-current-main/clean-test-result
 
 The subsequent [separate domain results](repo-validation/r02-current-main/domain-test-results.json) at that source revision all passed: enterprise operations/business/industrial planning; runtime/services; industrial (39 tests); Red Wash (27 tests); geospatial (23 tests). Separate processes preserve each repository suite's module namespace. These source-bound results do not claim that later changes were tested at that earlier revision.
 
-The [Sacramento ten-floor review](R01_TEN_FLOOR_FINAL_REVIEW.md), [master/stack review](R02_MASTER_STACK_FINAL_REVIEW.json), [non-Sacramento review](R02_NON_SAC_FINAL_REVIEW.md), and [R02 atlas review](R02_ATLAS_VISUAL_QA.md) retain their exact artifact scopes and hashes. The original 58-sheet subpackage and twelve reused runtime plates require final integrated artifact/link checks; local repository validator passes alone do not establish visual acceptance.
+The [Sacramento ten-floor review](R01_TEN_FLOOR_FINAL_REVIEW.md), [master/stack review](R02_MASTER_STACK_FINAL_REVIEW.json), [non-Sacramento review](R02_NON_SAC_FINAL_REVIEW.md), and [R02 atlas review](R02_ATLAS_VISUAL_QA.md) retain their exact artifact scopes and hashes. The [final integrated review](R02_RUNTIME_ATLAS_QA.md) passes all 81 map imports and the 150-page atlas. [Two full generator rebuilds](R02_DETERMINISM.md) reproduce all 222 checked outputs byte for byte. The final focused suite passes 56 tests and the full facility validator passes 19 sites / 18 buildings / 25 floors.
 
 ## Clean finance and publication builds
 
@@ -31,9 +31,9 @@ The [publication build results](repo-validation/r02-current-main/publication-bui
 
 ## Remaining final acceptance evidence
 
-- Financial source compatibility after the tested `237778d` snapshot: verify any subsequent relevant changes before final acceptance. The clean runtime-finance builds above passed.
+- Financial source compatibility: `git diff 237778d 9fb1e3a -- enterprise/runtime enterprise/services enterprise/operations enterprise/business industrial/planning src tests tools/documents` is empty. Subsequent changes are facility integration, QA and documentation; clean financial results remain applicable.
 - Final distributable package checksums and retrieval: pending final source snapshot and release evidence. Controlled publication regeneration at `237778d` passed as recorded above.
-- Final integrated facility/runtime/atlas verification and deterministic rebuild: pending exact final artifact hashes.
+- Final integrated facility/runtime/atlas verification: PASS; exact output hashes are bound by the current manifests and R02 determinism report.
 - Native QGIS: no native-reader success is asserted by this batch; required native-QGIS CI evidence remains pending.
 - Required final-head GitHub CI, review, merge SHA/current main and publication: pending actual remote results.
 
