@@ -175,3 +175,15 @@ def test_context_bytes_stable_across_python_hash_seeds():
         for seed in (1, 9)
     ]
     assert results[0] == results[1]
+
+
+def test_projection_serialization_removes_subnanometre_platform_noise():
+    assert module.metric_coordinates(
+        [1383.8287156956503, 942.787939500995]
+    ) == module.metric_coordinates([1383.8287156957667, 942.7879395008786])
+    assert abs(module.metric_coordinates(1383.8287156956503) - 1383.8287156956503) <= 0.0005
+    raw = {
+        "type": "GeometryCollection",
+        "geometries": [{"type": "Point", "coordinates": [1383.8287156956503, 2]}],
+    }
+    assert module.metric_geometry(raw)["geometries"][0]["coordinates"] == [1383.829, 2]

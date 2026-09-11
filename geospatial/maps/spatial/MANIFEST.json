@@ -55,7 +55,7 @@
     "geospatial/facilities/spatial/access.py": "aaffedd1bbb5fca0e98cbfe9b668add98e68697c09cdf46a5c4d1f7a67d68496",
     "geospatial/facilities/spatial/build.py": "b5f37e15ce5ce2c14dddf781228ee673c7c6123b05654cb1bb1ca199ad99ba4e",
     "geospatial/facilities/spatial/compare.py": "d78c9fb49c5c4d41280b4df1ed4a261742f99e2c37356fc1a70a9e17822ab4a2",
-    "geospatial/facilities/spatial/context.py": "1d24d09fef447b01e9904754bbb247865229b359d7124ea51885e0093881c836",
+    "geospatial/facilities/spatial/context.py": "b2cc586f3813daefbeadea75f54700af3991cc86a5a6204882014368ec635295",
     "geospatial/facilities/spatial/context_sheet.py": "dfd493609fcd2112803c8a2c93198c11686af7ade80d373f521d08035b51488b",
     "geospatial/facilities/spatial/model.py": "5fb726629683853daa382bdf9628a5391fccc49b6585af0f8691f28f99d9b3bf",
     "geospatial/facilities/spatial/package_release.py": "af31c67b077516ec5986a751e3b959beb0f13164ad2b3af2fdd570dc78c3ad65",
@@ -2378,15 +2378,15 @@
       "artifacts": {
         "svg": {
           "path": "geospatial/maps/spatial/SH-MAP-SAC-065_enhanced-context.svg",
-          "sha256": "ab7e661d7e03d900adb82c8cc8f34f93807e8df264ca8f36454532b6bea8a7ba"
+          "sha256": "31cfbfd6599056dafad3b30b7c5fa8d3086d91af9d8bec9409deca513d954832"
         },
         "png": {
           "path": "geospatial/maps/spatial/SH-MAP-SAC-065_enhanced-context.png",
-          "sha256": "a610e709362241f4c6c928ab9804dfa495bd2839829ae10d9ab40a633cd40d59"
+          "sha256": "898bc6ebd4b596b8df2c1c6caf3d10144a7864ac6ecd40ff61f9743aa86880aa"
         },
         "pdf": {
           "path": "geospatial/maps/spatial/SH-MAP-SAC-065_enhanced-context.pdf",
-          "sha256": "1de52e6b7ed56a24962416736417ea4720a855f80d6f022f5e15c76c9cf27402"
+          "sha256": "8f1e42d6c1e477aff7323481fb4873c82369f0cb02ceb01ad87376be7a295506"
         }
       }
     }
@@ -2394,7 +2394,7 @@
   "sheet_count": 86,
   "portable_pdf": {
     "path": "geospatial/maps/SABLE_HARBOR_Spatial_Addendum_v1.0.0.pdf",
-    "sha256": "a1f35cc72c2dbcc87ce00dd927ea73712355069d9cd00ccb58f089cb5f7a8ded"
+    "sha256": "d1fc7896f7ab644e3660e94d6ee4dfbd42d076edfe4342cf5521324c3702f79d"
   },
   "status": "MODELLED_SPATIAL_ADDENDUM_WITH_SEPARATE_REAL_CONTEXT"
 }

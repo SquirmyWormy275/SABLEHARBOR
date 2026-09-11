@@ -116,6 +116,27 @@ def navigation_scope(graph: dict, maps: dict) -> dict:
     }
 
 
+def metric_coordinates(value):
+    """Serialize derived projected metres to 1 mm, not machine-dependent sub-nanometres.
+
+    This precision controls reproducibility; it does not assert survey accuracy.
+    Original geographic snapshots and source properties are never rounded here.
+    """
+    if isinstance(value, (tuple, list)):
+        return [metric_coordinates(v) for v in value]
+    if isinstance(value, (float, int)):
+        return round(value, 3)
+    return value
+
+
+def metric_geometry(geometry):
+    if "coordinates" in geometry:
+        geometry["coordinates"] = metric_coordinates(geometry["coordinates"])
+    for child in geometry.get("geometries", []):
+        metric_geometry(child)
+    return geometry
+
+
 def build_context(root: Path) -> dict:
     root = root.resolve()
     config_path = root / BASE / "CONTEXT_SOURCES.json"
@@ -320,6 +341,15 @@ def build_context(root: Path) -> dict:
                 "unsupported_layers": config["unsupported_layers"],
             }
         )
+    for region in regions.values():
+        region["origin_projected_m"] = metric_coordinates(region["origin_projected_m"])
+        region["extent_local_m"] = metric_coordinates(region["extent_local_m"])
+        region["derived_metric_serialization_m"] = 0.001
+        region["precision_caveat"] = (
+            "Millimetre serialization removes platform floating-point noise; source accuracy remains unestablished and is not millimetre survey precision."
+        )
+        for feature in region["features"]:
+            metric_geometry(feature["geometry"])
     return {
         "revision": config["revision"],
         "boundary": config["boundary"],

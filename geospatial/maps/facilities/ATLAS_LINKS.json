@@ -58,7 +58,7 @@
     "enterprise/runtime/render.py": "0c4483da5b80081abe0745dfb7b2139b5460ac0cf6aaba99eaf11972f9236929",
     "geospatial/registers/MAP_ID_REGISTER.json": "02fb9b537a178afad68b969fa52a14066821f635db4cabb954d724336554f35d",
     "geospatial/geojson/runtime_parcel.geojson": "671c7eadf7347864f9ccc9876606fb476e6e866587aea0cfc556436e7310d5f0",
-    "geospatial/maps/spatial/MANIFEST.json": "08832d8cee47ff56d68e872266c6f00f9c6d546e2a7f35a31290824513c8f82e"
+    "geospatial/maps/spatial/MANIFEST.json": "9b3bc41c160264a95baa46e6c2c0dd458b73a267365e8270f81d1f7cf1374def"
   },
   "legacy_context_manifest_sha256": "eb209c43e33871487bd24cf7c67862703e7a317471d666428a86196384183d70",
   "nodes": [
@@ -7008,7 +7008,7 @@
       "id": "spatial-pdf",
       "kind": "publication",
       "path": "geospatial/maps/SABLE_HARBOR_Spatial_Addendum_v1.0.0.pdf",
-      "sha256": "a1f35cc72c2dbcc87ce00dd927ea73712355069d9cd00ccb58f089cb5f7a8ded"
+      "sha256": "d1fc7896f7ab644e3660e94d6ee4dfbd42d076edfe4342cf5521324c3702f79d"
     },
     {
       "id": "SH-MAP-SAC-037_sections",
@@ -9060,19 +9060,19 @@
       "id": "SH-MAP-SAC-065_enhanced-context:svg",
       "kind": "artifact",
       "path": "geospatial/maps/spatial/SH-MAP-SAC-065_enhanced-context.svg",
-      "sha256": "ab7e661d7e03d900adb82c8cc8f34f93807e8df264ca8f36454532b6bea8a7ba"
+      "sha256": "31cfbfd6599056dafad3b30b7c5fa8d3086d91af9d8bec9409deca513d954832"
     },
     {
       "id": "SH-MAP-SAC-065_enhanced-context:png",
       "kind": "artifact",
       "path": "geospatial/maps/spatial/SH-MAP-SAC-065_enhanced-context.png",
-      "sha256": "a610e709362241f4c6c928ab9804dfa495bd2839829ae10d9ab40a633cd40d59"
+      "sha256": "898bc6ebd4b596b8df2c1c6caf3d10144a7864ac6ecd40ff61f9743aa86880aa"
     },
     {
       "id": "SH-MAP-SAC-065_enhanced-context:pdf",
       "kind": "artifact",
       "path": "geospatial/maps/spatial/SH-MAP-SAC-065_enhanced-context.pdf",
-      "sha256": "1de52e6b7ed56a24962416736417ea4720a855f80d6f022f5e15c76c9cf27402"
+      "sha256": "8f1e42d6c1e477aff7323481fb4873c82369f0cb02ceb01ad87376be7a295506"
     }
   ],
   "edges": [

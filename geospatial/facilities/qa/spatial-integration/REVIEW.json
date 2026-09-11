@@ -258,9 +258,9 @@
     "geospatial/maps/spatial/SH-MAP-RUN-016_schedule.svg": "af24a79532b90fb082fc7f52107bc5fc326fa0f5a67f96d1f2060979d61e6dd1",
     "geospatial/maps/spatial/SH-MAP-RUN-016_schedule.png": "e8f9684c01be26e156d5baf0fd2a60b7202478b9ffc4e626a4d75015a1b5ce34",
     "geospatial/maps/spatial/SH-MAP-RUN-016_schedule.pdf": "402d020d4f0ba3d000cab8c44e44e82d7975b61b4dc3afed323acaffc6c305a3",
-    "geospatial/maps/spatial/SH-MAP-SAC-065_enhanced-context.svg": "ab7e661d7e03d900adb82c8cc8f34f93807e8df264ca8f36454532b6bea8a7ba",
-    "geospatial/maps/spatial/SH-MAP-SAC-065_enhanced-context.png": "a610e709362241f4c6c928ab9804dfa495bd2839829ae10d9ab40a633cd40d59",
-    "geospatial/maps/spatial/SH-MAP-SAC-065_enhanced-context.pdf": "1de52e6b7ed56a24962416736417ea4720a855f80d6f022f5e15c76c9cf27402"
+    "geospatial/maps/spatial/SH-MAP-SAC-065_enhanced-context.svg": "31cfbfd6599056dafad3b30b7c5fa8d3086d91af9d8bec9409deca513d954832",
+    "geospatial/maps/spatial/SH-MAP-SAC-065_enhanced-context.png": "898bc6ebd4b596b8df2c1c6caf3d10144a7864ac6ecd40ff61f9743aa86880aa",
+    "geospatial/maps/spatial/SH-MAP-SAC-065_enhanced-context.pdf": "8f1e42d6c1e477aff7323481fb4873c82369f0cb02ceb01ad87376be7a295506"
   },
   "prior_publications_byte_identical": {
     "geospatial/maps/facilities/SH-MAP-SAC-002.svg": "3eb7d41e254a50929937176b0edb3763fbffccc210a288c1f624692ad2a940ec",
@@ -480,18 +480,19 @@
     "artifacts": {
       "svg": {
         "path": "geospatial/maps/spatial/SH-MAP-SAC-065_enhanced-context.svg",
-        "sha256": "ab7e661d7e03d900adb82c8cc8f34f93807e8df264ca8f36454532b6bea8a7ba"
+        "sha256": "31cfbfd6599056dafad3b30b7c5fa8d3086d91af9d8bec9409deca513d954832"
       },
       "png": {
         "path": "geospatial/maps/spatial/SH-MAP-SAC-065_enhanced-context.png",
-        "sha256": "a610e709362241f4c6c928ab9804dfa495bd2839829ae10d9ab40a633cd40d59"
+        "sha256": "898bc6ebd4b596b8df2c1c6caf3d10144a7864ac6ecd40ff61f9743aa86880aa"
       },
       "pdf": {
         "path": "geospatial/maps/spatial/SH-MAP-SAC-065_enhanced-context.pdf",
-        "sha256": "1de52e6b7ed56a24962416736417ea4720a855f80d6f022f5e15c76c9cf27402"
+        "sha256": "8f1e42d6c1e477aff7323481fb4873c82369f0cb02ceb01ad87376be7a295506"
       }
     },
-    "method": "Original full-page PNG inspected; centered geographic frame, source-derived road and river labels, elevation sample annotations, readable north/scale/legend/status; PDF text bounds checked. Geographic campus placement remains absent."
+    "method": "Original full-page PNG inspected; centered geographic frame, source-derived road and river labels, elevation sample annotations, readable north/scale/legend/status; PDF text bounds checked. Geographic campus placement remains absent.",
+    "precision_recheck": "Final metric-serialized context PNG inspected after regeneration. Identical graphic content and correct labels/legend; context SVG/PNG/PDF and combined PDF regenerated. All255 architectural assets unchanged. Final258asset repeat is byte-identical."
   },
   "corrections": [
     "Centered regional map instead of large blank side area",
@@ -502,7 +503,7 @@
     "Wrapped long text in the parent atlas to eliminate 15px horizontal overflow at 390px width"
   ],
   "local_checks": {
-    "focused_facility_spatial_workbench": "154 tests passed",
+    "focused_facility_spatial_workbench": "155 tests passed",
     "spatial_freshness": "PASS",
     "facility_atlas_validation": "PASS",
     "pdf_text_bounds": "86 individual pages, no overflow",
@@ -681,7 +682,21 @@
     "branch_merge": "e961e14caba38222a198d6646ea28fc5a81d762b",
     "result": "No conflicts; spatial and workbench freshness, facility validation and repository hygiene pass."
   },
-  "viewer_sha256": "23c7969e0c2253f5159c556bd55d3812ae9605a997e93b01388d4b8996370413",
+  "viewer_sha256": "a5079e3b2d02be924a1f3a954da89149e2e7fc5de5dd8c87e36c0f3c8585238d",
   "parent_html_review": "Eight desktop/mobile atlas/workbench/readiness/impact screenshots inspected; text readable, no page overflow or JS errors; tables retain intentional internal scrolling.",
-  "ci_reproducibility_correction": "First CI installed pyproj3.8.0 instead of repository3.7.2; pinned3.7.2. Clean worktree exposed unsorted font input ordering; sorted enumeration. No plan geometry/pixels changed."
+  "ci_reproducibility_correction": "First CI installed pyproj3.8.0 instead of repository3.7.2; pinned3.7.2. Clean worktree exposed unsorted font input ordering; sorted enumeration. No plan geometry/pixels changed.",
+  "native_float_ci_diagnosis": {
+    "run": "34659804099",
+    "example_committed_m": 1383.8287156956503,
+    "example_ci_m": 1383.8287156957667,
+    "proj": "9.5.1",
+    "geos": "3.13.1",
+    "resolution": "Derived projected values serialized to0.001m; source snapshots and accuracyclaims unchanged; strict freshness retained."
+  },
+  "final_clean_root_suite": {
+    "source_commit": "0a35d797d5213c00e3a44223320c8840d87a5ee8",
+    "passed": 166,
+    "skipped": 3,
+    "result": "PASS"
+  }
 }

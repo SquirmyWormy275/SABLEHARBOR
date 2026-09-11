@@ -22,3 +22,5 @@ All 19 facility/runtime locations remain represented. Fort uses Hazelwood contex
 ```
 
 Rendering and allocated map IDs belong to the integrating generator. Rebuilds consume pinned local bytes without network access and fail on stale source hashes, incomplete path responses, invalid geometry or nonfinite elevation samples.
+
+Derived projected coordinates are serialized to 0.001 m for cross-platform reproducibility. CI identified approximately 0.0000000001 m native floating-point differences under identical PROJ/GEOS versions. This numeric serialization is not a claim of millimetre survey accuracy; original snapshots and source properties remain unchanged.
