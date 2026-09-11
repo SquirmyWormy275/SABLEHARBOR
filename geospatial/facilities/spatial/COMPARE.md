@@ -15,6 +15,6 @@ Current architectural assumptions are explicitly applied to both normalizations 
   --output /tmp/revision.json --output-dir /tmp/revision-overlays
 ```
 
-CLI export paths must be outside the repository and new files are opened exclusively. No canon, source geometry or accepted artifact is mutated. Overlays use red dashed outlines for before and blue solid outlines for after in a common local frame; the accompanying JSON carries non-geometric changes and links. A floor with only a name/capacity/access edit can have coincident outlines—this correctly shows unchanged geometry. There are no rendered overlays when no floors are affected. The UI may consume these same arrays directly instead of duplicating comparison logic.
+CLI export paths must be outside the repository and new files are opened exclusively. No canon, source geometry or accepted artifact is mutated. Overlays use red dashed outlines for before and blue solid outlines for after in a common local frame; the accompanying JSON carries non-geometric changes and links. A floor with only a name/capacity/access edit can have coincident outlines—this correctly shows unchanged geometry. There are no rendered overlays when no floors are affected. The offline viewer imports this JSON directly in its Revision comparison tab; Reset restores the committed comparison. Imported results remain a review and never mutate the model.
 
 Tests exercise unchanged geometry, movement, access/capacity/status/name edits, heights, floor addition/removal, bad IDs, map impact and exact Git baseline provenance.

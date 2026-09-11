@@ -123,6 +123,18 @@ def dependency_graph(root):
             "geospatial/maps/spatial/MANIFEST.json",
             "geospatial/maps/spatial/README.md",
         ]
+        spatial_outputs += [
+            facilities + "spatial/" + name
+            for name in [
+                "MODEL.json",
+                "ACCESS.json",
+                "CONTEXT.json",
+                "COMPARISON.json",
+                "ROOM_SCHEDULE.csv",
+            ]
+        ]
+        if spatial.get("portable_pdf"):
+            spatial_outputs.append(spatial["portable_pdf"]["path"])
         for source in spatial["source_sha256"]:
             connect(
                 source, spatial_outputs, "python geospatial/facilities/spatial/build.py --render"

@@ -39,3 +39,14 @@ def test_campus_change_reaches_all_publications():
     assert "geospatial/maps/SABLE_HARBOR_Facility_Atlas_v0.2.0.pdf" in r["affected_artifacts"]
     assert "geospatial/maps/workbench.html" in r["affected_artifacts"]
     assert "geospatial/facilities/population/REGISTER.json" in r["affected_artifacts"]
+
+
+def test_campus_change_reaches_spatial_addendum():
+    root = Path(__file__).resolve().parents[3]
+    result = m.impact(m.dependency_graph(root), ["geospatial/facilities/source/campus.json"])
+    assert "geospatial/maps/spatial.html" in result["affected_artifacts"]
+    assert (
+        "geospatial/maps/SABLE_HARBOR_Spatial_Addendum_v1.0.0.pdf" in result["affected_artifacts"]
+    )
+    assert "geospatial/facilities/spatial/ROOM_SCHEDULE.csv" in result["affected_artifacts"]
+    assert "geospatial/maps/MAP_MANIFEST.json" in result["affected_artifacts"]

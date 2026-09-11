@@ -12,6 +12,8 @@ Select a location or building, drag to orbit, pan and zoom, then peel or explode
 
 The geographic-context tab uses committed, hashed official references. Sacramento includes 868 street, 53 rail, eight water, 145 transit-stop, 81 terrain-sample and 76 shared-use-path features. Layer dates and limitations remain visible. The USGS samples are elevations, not surveyed contours. SacRT feed stops are not proof of service on a particular day. No real-world transform places the local campus inside this reference map. [Context methods and provenance](CONTEXT.md).
 
+Import the JSON emitted by the comparison command into the comparison tab to review a candidate. Reset returns to the committed baseline; imported results never change the model.
+
 The comparison tab reports changes by stable site, building, floor and room ID, with affected map links and overlaid room geometry. The default accepted-base comparison has no changed floor geometry. New vertical-study assumptions are identified separately. [Comparison commands and limits](COMPARE.md).
 
 [Access review](ACCESS_REVIEW.md) verifies 21 indirect room routes across six floors with explicit suite, J2 and service-user restrictions. It resolves six concept coordination findings without changing the approved rooms. Forty readiness checks pass; 120 engineering checks remain unassessed. These paths are not an egress or accessibility certification.

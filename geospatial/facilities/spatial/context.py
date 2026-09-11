@@ -149,7 +149,7 @@ def build_context(root: Path) -> dict:
         regions[key]["layer_dispositions"] = {
             **{
                 category: "SUPPORTED_COMMITTED_REFERENCE"
-                for category in {s["category"] for s in sources}
+                for category in sorted({s["category"] for s in sources})
             },
             **{
                 k: {"status": "UNSUPPORTED_NO_GEOMETRY", "reason": v}

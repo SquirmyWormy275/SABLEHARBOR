@@ -158,3 +158,20 @@ def test_wamsutter_region_is_not_assigned_to_other_industrial_anchors():
     assert any("RECEIVING" in sid for sid in checked)
     assert any("TAY-" in sid for sid in checked)
     assert any("RAW-" in sid for sid in checked)
+
+
+def test_context_bytes_stable_across_python_hash_seeds():
+    import os
+    import subprocess
+    import sys
+
+    script = "import sys,json;from pathlib import Path;sys.path.insert(0,'geospatial/facilities/spatial');from context import build_context;print(json.dumps(build_context(Path.cwd())))"
+    results = [
+        subprocess.check_output(
+            [sys.executable, "-c", script],
+            cwd=ROOT,
+            env={**os.environ, "PYTHONHASHSEED": str(seed)},
+        )
+        for seed in (1, 9)
+    ]
+    assert results[0] == results[1]
