@@ -20,6 +20,7 @@ FAC = MAPS / "facilities"
 HTML = MAPS / "index.html"
 PDF = MAPS / "SABLE_HARBOR_Facility_Atlas_v0.2.0.pdf"
 COVERAGE = ROOT / "geospatial/facilities/coverage/COVERAGE_MATRIX.json"
+RUNTIME = ROOT / "geospatial/facilities/RUNTIME_BRIDGE.json"
 REFERENCES = ROOT / "docs/facilities/references/sacramento-hq/r01-approved"
 FONTS = ROOT / "geospatial/facilities/fonts"
 FONT_FILES = [FONTS / "DejaVuSans.ttf", FONTS / "DejaVuSans-Bold.ttf"]
@@ -51,6 +52,8 @@ def href(path):
 
 def normal_maps():
     current = load(FAC / "MANIFEST.json")["maps"]
+    if RUNTIME.is_file():
+        current = current + load(RUNTIME)["maps"]
     # The main manifest may include this successor after integration; deduplicate it.
     current_ids = {m["id"] for m in current}
     prior = []
@@ -119,6 +122,8 @@ def main():
         source = load(p)
         for s in source.get("sites", [source] if "site_id" in source else []):
             sites.append((s, p))
+    if RUNTIME.is_file():
+        sites.extend((s, RUNTIME) for s in load(RUNTIME)["sites"])
     sites.sort(key=lambda pair: (pair[0]["site_id"] != "SH-SITE-0001", pair[0]["site_id"]))
     nodes = {}
     edges = set()
@@ -343,7 +348,7 @@ def main():
             )
             for f in b["floors"]:
                 out.append(
-                    f'<section id="{esc(f["id"])}"><h3>{esc(f["name"])}</h3><p class="meta">{esc(f["id"])} · {f["gross_area_m2"]:,.1f} m² gross · {f["planned_peak"]} planned peak · {esc(f["status"])}</p>'
+                    f'<section id="{esc(f["id"])}"><h3>{esc(f["name"])}</h3><p class="meta">{esc(f["id"])} · {f["gross_area_m2"]:,.1f} m² gross · {esc(f["planned_peak"])} planned peak · {esc(f["status"])}</p>'
                 )
                 out.extend(card(m) for m in current if m.get("floor_id") == f["id"])
                 out.append("</section>")
@@ -584,6 +589,9 @@ def main():
         *FONT_FILES,
         *[REFERENCES / r["filename"] for r in reference_manifest["files"]],
     ]
+    if RUNTIME.is_file():
+        dependencies.append(RUNTIME)
+        dependencies.extend(ROOT / path for path in load(RUNTIME)["source_sha256"])
     # Hash only preserved rc4 records so adding this successor to MAP_MANIFEST is not cyclic.
     graph = {
         "schema_version": "1.0.0",

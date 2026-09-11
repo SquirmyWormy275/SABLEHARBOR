@@ -83,6 +83,7 @@ class AtlasGraphRegression(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.models, _ = validation.load_models()
+        cls.models += validation.runtime_models()
         cls.graph = json.loads(
             (validation.ROOT / "geospatial/maps/facilities/ATLAS_LINKS.json").read_text()
         )
@@ -255,3 +256,42 @@ class VisualArtifactRegression(unittest.TestCase):
             page.insert_font(fontname="SH", fontfile=str(validation.BASE / "fonts/DejaVuSans.ttf"))
             page.insert_text((10, 30), "SABLE HARBOR", fontname="SH")
             self.assertEqual(validation.pdf_page_errors(page, r02=True), [])
+
+
+class RuntimeBridgeRegression(unittest.TestCase):
+    def test_provider_cannot_gain_invented_building(self):
+        data = {
+            "sites": [{"site_id": "SH-SITE-0028", "buildings": [{"id": "invented", "floors": []}]}]
+        }
+        self.assertTrue(
+            any(
+                "provider context" in e
+                for e in validation.validate_runtime(data, {"SH-SITE-0028"}, False)
+            )
+        )
+
+    def test_missing_runtime_floor_artifact_is_rejected(self):
+        data = {
+            "sites": [
+                {
+                    "site_id": "SH-SITE-0030",
+                    "buildings": [
+                        {"id": "SH-SITE-0030-B01", "floors": [{"id": "SH-SITE-0030-B01-L01"}]}
+                    ],
+                }
+            ]
+        }
+        self.assertTrue(
+            any(
+                "floor artifact" in e
+                for e in validation.validate_runtime(data, {"SH-SITE-0030"}, False)
+            )
+        )
+
+    def test_runtime_source_digest_is_checked(self):
+        data = {"source_sha256": {"geospatial/facilities/atlas.py": "0" * 64}}
+        self.assertTrue(
+            any(
+                "stale runtime source" in e for e in validation.validate_runtime(data, set(), False)
+            )
+        )

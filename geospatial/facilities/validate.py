@@ -18,6 +18,7 @@ from urllib.parse import unquote, urlsplit
 ROOT = Path(__file__).resolve().parents[2]
 BASE = ROOT / "geospatial/facilities"
 MANIFEST = ROOT / "geospatial/maps/facilities/MANIFEST.json"
+RUNTIME = BASE / "RUNTIME_BRIDGE.json"
 COUNTS = (
     "assigned_desks",
     "shared_desks",
@@ -674,6 +675,77 @@ class Links(HTMLParser):
                 self.links.append(a[k])
 
 
+def runtime_models():
+    return json.loads(RUNTIME.read_text())["sites"] if RUNTIME.is_file() else []
+
+
+def validate_runtime(data, coverage_ids, artifacts=True):
+    """Accepted runtime drawings retain their own dimensions and provider boundaries."""
+    errors = []
+    sites = data.get("sites", [])
+    ids = [s["site_id"] for s in sites]
+    if set(ids) != {"SH-SITE-0028", "SH-SITE-0029", "SH-SITE-0030"} or len(ids) != 3:
+        errors.append("runtime site census mismatch")
+    maps = data.get("maps", [])
+    mids = [m["id"] for m in maps]
+    if len(mids) != 12 or len(set(mids)) != len(mids):
+        errors.append("runtime map census mismatch")
+    expected_floors = set()
+    for site in sites:
+        sid = site["site_id"]
+        if sid not in coverage_ids:
+            errors.append("runtime site lacks coverage disposition " + sid)
+        for field in ["status", "geometry_status", "tenure"]:
+            if not site.get(field):
+                errors.append("runtime site missing " + field + " " + sid)
+        if sid in {"SH-SITE-0028", "SH-SITE-0029"}:
+            if site.get("buildings") or not site.get("floor_exemption"):
+                errors.append("provider context must retain explicit floor exemption " + sid)
+        for building in site.get("buildings", []):
+            if not building.get("floors"):
+                errors.append("runtime building lacks required floor " + building["id"])
+            expected_floors.update(f["id"] for f in building.get("floors", []))
+    floor_maps = Counter(m.get("floor_id") for m in maps if m.get("kind") == "floor")
+    if set(floor_maps) != expected_floors or any(n != 1 for n in floor_maps.values()):
+        errors.append("runtime missing/duplicate floor artifact")
+    for m in maps:
+        if not m.get("status") or m.get("site_id") not in ids:
+            errors.append("runtime map lacks status/site " + m["id"])
+        arts = m.get("artifacts", {})
+        if set(arts) != {"svg", "png", "pdf"}:
+            errors.append("runtime artifact formats incomplete " + m["id"])
+        for ext, artifact in arts.items():
+            path = ROOT / artifact["path"]
+            if not path.is_file() or sha(path) != artifact.get("sha256"):
+                errors.append("runtime artifact stale/missing " + artifact["path"])
+            elif artifacts:
+                try:
+                    if ext == "svg":
+                        ET.parse(path)
+                    elif ext == "png":
+                        from PIL import Image
+
+                        with Image.open(path) as image:
+                            image.verify()
+                    elif ext == "pdf":
+                        import fitz
+
+                        with fitz.open(path) as doc:
+                            if not len(doc):
+                                raise ValueError("empty PDF")
+                            for page in doc:
+                                errors.extend(str(path) + ": " + e for e in pdf_page_errors(page))
+                except Exception as exc:
+                    errors.append("runtime artifact parse failure " + str(exc))
+    locks = data.get("source_sha256", {})
+    if not locks:
+        errors.append("runtime missing accepted source provenance")
+    for path, digest in locks.items():
+        if not (ROOT / path).is_file() or sha(ROOT / path) != digest:
+            errors.append("stale runtime source " + path)
+    return errors
+
+
 def validate_graph(data, models, coverage_records):
     """The hierarchy must be complete and reachable, not merely free of bad edges."""
     errors = []
@@ -730,6 +802,9 @@ def validate_graph(data, models, coverage_records):
         "geospatial/facilities/atlas.py",
     }
     required.update(str(p.relative_to(ROOT)) for p in (BASE / "source").glob("*.json"))
+    if RUNTIME.is_file():
+        required.add(str(RUNTIME.relative_to(ROOT)))
+        required.update(json.loads(RUNTIME.read_text())["source_sha256"])
     if not required <= locks.keys():
         errors.append("atlas missing required source hashes")
     for path, digest in locks.items():
@@ -792,7 +867,7 @@ def validate_atlas(required=False):
             errors.append("atlas graph has no nodes")
         models, _ = load_models()
         coverage = json.loads((BASE / "coverage/COVERAGE_MATRIX.json").read_text())
-        errors.extend(validate_graph(data, models, coverage["records"]))
+        errors.extend(validate_graph(data, models + runtime_models(), coverage["records"]))
         if data.get("pdf") and (ROOT / data["pdf"]).is_file():
             import fitz
 
@@ -822,6 +897,14 @@ def main():
     coverage = json.loads((BASE / "coverage/COVERAGE_MATRIX.json").read_text())
     errors = validate_models(models, {r["id"] for r in coverage["records"]})
     errors.extend(validate_r01_references())
+    if RUNTIME.is_file():
+        errors.extend(
+            validate_runtime(
+                json.loads(RUNTIME.read_text()),
+                {r["id"] for r in coverage["records"]},
+                not args.source_only,
+            )
+        )
     for script, extra in [
         ("coverage/validate_coverage.py", []),
         ("population/build.py", ["--check"]),
