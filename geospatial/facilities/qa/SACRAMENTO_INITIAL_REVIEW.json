@@ -598,6 +598,14 @@
       "observation": "No separate campus context/phasing sheet yet; master notes give capacity years but no structured temporal schedule visualization, loading-yard/utility/pedestrian legend incomplete.",
       "required_followup": "Finish context/status/phasing presentation from structured data and integrate index/atlas/manifests before closeout.",
       "status": "OPEN_AT_REVIEWED_SNAPSHOT"
+    },
+    {
+      "id": "SAC-QA-011",
+      "category": "access_classification",
+      "scope": "B01 reception; B04 teaching staff/control; B05 lounge",
+      "observation": "Initial Education room defaults expose faculty, exercise control, case/curriculum and learning operations as public. Governance reception/waiting is staff; residential lounge is staff. These classifications do not yet express intended public/checkpoint/back-of-house boundaries.",
+      "required_followup": "Separate public waiting from staff checkpoint; classify Education operational areas as staff/controlled and resident commons as residential; display consistent legend.",
+      "status": "OPEN_AT_REVIEWED_SNAPSHOT"
     }
   ],
   "recheck_rule": "Main is editing source/renderer concurrently. Later bytes may already address findings; only a new hash-bound visual review can mark them resolved. This draft cannot be cited as final visual QA."
