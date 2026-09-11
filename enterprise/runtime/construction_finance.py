@@ -93,7 +93,7 @@ class ProjectLedger:
         elif kind == "IN_SERVICE":
             if (
                 event["asset_class"] == "LAND"
-                or not event["life_years"]
+                or type(event["life_years"]) is not int
                 or event["life_years"] <= 0
                 or amount > b["cip"]
             ):

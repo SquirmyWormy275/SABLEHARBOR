@@ -80,6 +80,16 @@ class ConstructionFinanceTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             self.post("IN_SERVICE", 1000, asset_class="LAND")
 
+    def test_boolean_and_fractional_useful_lives_are_rejected(self):
+        self.post("AUTHORIZE", 1000)
+        self.post("COMMIT", 1000)
+        self.post("INVOICE", 1000)
+        for life in (True, False, 1.5, "15"):
+            with self.subTest(life=life), self.assertRaises(ValueError):
+                self.post("IN_SERVICE", 1000, life_years=life)
+        self.assertEqual(self.ledger.balances["cip"], 1000)
+        self.assertIsNone(self.ledger.in_service)
+
     def test_budget_scope_and_asset_forecast(self):
         data = model.load()
         rows = phase_reconciliation(data)
