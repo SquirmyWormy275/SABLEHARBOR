@@ -755,6 +755,9 @@ def snapshot_rows(result, anchor_rows, scenario, types):
 
 def member_funding(books, year, month, subsidiary_cash, used, reserved, funding):
     policy = books.policy
+    extra_deferrable = policy['core'].get('additional_deferrable_source_types', [])
+    if not set(extra_deferrable) <= {'RUNTIME_CONDITIONAL_FORECAST_REQUEST'}:
+        raise ValueError('Unsupported additional deferrable payment source')
     limit = D(
         policy["core"]["member_equity_2026_limit_usd"]
         if year == 2026
@@ -813,7 +816,7 @@ def member_funding(books, year, month, subsidiary_cash, used, reserved, funding)
                 if r["entity"] == "SHI" and r["year"] == year and r["month"] == month
                 and r["account"] == "1000" and r["cash_flow"] == flow
                 and amount(r["signed_usd"]) < 0
-                and (r["source_type"] == "BUSINESS_DRIVEN_FORECAST" or r["source_id"] == "CORE-PRINCIPAL")
+                and (r["source_type"] in {'BUSINESS_DRIVEN_FORECAST', *extra_deferrable} or r["source_id"] == "CORE-PRINCIPAL")
             )
             deferred = min(remaining, eligible)
             if deferred:
@@ -1024,7 +1027,7 @@ def unit_statements(books, extracted, year, month):
     return result
 
 
-def build(output=OUT, forecast_output=None, forecast_result=None, source=None, legacy_result=None, core_provider=None):
+def build(output=OUT, forecast_output=None, forecast_result=None, source=None, legacy_result=None, core_provider=None, adjustment_provider=None):
     """Build the six-entity successor with explicit legacy selection and finite funding."""
     output = Path(output)
     policy = json.loads(SOURCE.read_text()) if source is None else source
@@ -1057,6 +1060,11 @@ def build(output=OUT, forecast_output=None, forecast_result=None, source=None, l
         for account, kind in core_provider.account_types.items():
             if account in types and types[account] != kind:
                 raise ValueError(f"Successor account classification conflict: {account}")
+            types[account] = kind
+    if adjustment_provider is not None:
+        for account, kind in adjustment_provider.account_types.items():
+            if account in types and types[account] != kind:
+                raise ValueError(f'Adjustment account classification conflict: {account}')
             types[account] = kind
     all_journals, monthly, legal_rows, unit_rows, funding, bridge, cashflow_bridges = (
         [],
@@ -1129,6 +1137,8 @@ def build(output=OUT, forecast_output=None, forecast_result=None, source=None, l
                         core_provider.post_month(books, year, month)
                     else:
                         project_core_month(books, core_base, core_ppe, year, month)
+                    if adjustment_provider is not None:
+                        adjustment_provider.post_month(books, year, month)
                 targets = {}
                 initial_targets = {}
                 ps_fee = D(0)
@@ -1471,6 +1481,9 @@ def build(output=OUT, forecast_output=None, forecast_result=None, source=None, l
     if core_provider is not None:
         identity["business_input_sha256"] = core_provider.input_hash
         identity["core_replacement_scope"] = "2027-2031 operating envelopes and new sustaining capital"
+    if adjustment_provider is not None:
+        identity['adjustment_input_sha256'] = adjustment_provider.input_hash
+        identity['adjustment_scope'] = 'Separately versioned runtime land reconciliation and conditional runtime cash requests'
     run_id = hashlib.sha256(canonical_bytes(identity)).hexdigest()
     summary = {
         "status": "PASS",

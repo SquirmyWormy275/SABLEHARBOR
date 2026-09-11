@@ -69,6 +69,11 @@ def load(source: Path | None = None) -> dict[str, Any]:
     for row in data['workloads']['workloads']:
         for key, value in data['workloads']['record_defaults'].items():
             row.setdefault(key, copy.deepcopy(value))
+    from enterprise.runtime import model as runtime_model
+    runtime = runtime_model.load(service_source=source)
+    if runtime is not None:
+        data['runtime'] = runtime
+        runtime_model.apply_services(data, runtime)
     return data
 
 
@@ -80,6 +85,9 @@ def unique(rows: list[dict], key: str = 'id') -> dict[str, dict]:
 
 
 def validate(data: dict, repository: Path | None = None) -> dict:
+    if 'runtime' in data:
+        from enterprise.runtime import model as runtime_model
+        runtime_model.validate(data['runtime'], repository)
     for name in FILES:
         if data[name].get('schema_version') != '1.0.0':
             raise ValueError(f'Unsupported schema in {name}')
@@ -455,6 +463,9 @@ def build(data: dict, output: Path, repository: Path | None = None, database: bo
     write_json(output/'capacity.json',capacities)
     write_json(output/'financial_bridge.json',financial_bridge(data,repository))
     write_json(output/'validation.json',validation)
+    if 'runtime' in data:
+        from enterprise.runtime import model as runtime_model
+        write_json(output/'runtime.json', runtime_model.export(data['runtime']))
     if sensitivity:
         rows=[]
         for demand in data['economics']['sensitivity']['demand_factors']:

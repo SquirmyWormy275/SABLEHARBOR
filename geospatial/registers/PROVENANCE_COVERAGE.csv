@@ -174,3 +174,6 @@ SH-IND-HIST-1968,SRC-CURRENT-OPS,industrial/source/operations.json,/history/6,GE
 SH-IND-HIST-1972,SRC-CURRENT-OPS,industrial/source/operations.json,/history/7,GEO-D018,ENGINEERED
 SH-IND-HIST-1986,SRC-CURRENT-OPS,industrial/source/operations.json,/history/8,GEO-D018,ENGINEERED
 SH-IND-HIST-1991,SRC-CURRENT-OPS,industrial/source/operations.json,/history/9,GEO-D018,ENGINEERED
+SH-SITE-0028,SRC-RUNTIME-20260911,enterprise/services/source/runtime_sites_2026-09-11.json,RUNTIME-RENO-COLO,GEO-RUNTIME-20260911,PROPOSED
+SH-SITE-0029,SRC-RUNTIME-20260911,enterprise/services/source/runtime_sites_2026-09-11.json,RUNTIME-BOISE-DR,GEO-RUNTIME-20260911,PROPOSED
+SH-SITE-0030,SRC-RUNTIME-20260911,enterprise/services/source/runtime_sites_2026-09-11.json,RUNTIME-NN-OWNED-DC,GEO-RUNTIME-20260911,PROPOSED

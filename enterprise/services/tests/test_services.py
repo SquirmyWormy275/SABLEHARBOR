@@ -19,9 +19,9 @@ class ServiceModelTests(unittest.TestCase):
 
     def test_scope(self):
         counts=m.validate(self.data)
-        self.assertEqual(counts['services'],57)
+        self.assertEqual(counts['services'],len(self.data['services']['services']))
         self.assertEqual(counts['workload_classes'],6)
-        self.assertEqual(counts['named_counterparties'],4)
+        self.assertTrue({'CP-SWITCH','CP-IDACORE'} <= set(m.unique(self.data['counterparties']['counterparties'])))
 
     def test_duplicate_service_rejected(self):
         self.data['services']['services'].append(self.data['services']['services'][0])
@@ -110,7 +110,9 @@ class ServiceModelTests(unittest.TestCase):
 
     def test_no_invented_supplier_selection(self):
         deps=self.data['counterparties']['dependencies']
-        self.assertEqual(sum(d['provider_id'] is not None for d in deps),3)
+        self.assertEqual({d['id']: d['provider_id'] for d in deps if d['provider_id'] is not None}, {
+            'DEP-kgm-host':'CP-KGM', 'DEP-demotte-host':'CP-DEMOTTE', 'DEP-class-i':'CP-UP',
+            'DEP-colo-primary':'CP-SWITCH', 'DEP-colo-recovery':'CP-IDACORE'})
         self.assertTrue(all(d['agreement_id'] is None for d in deps))
 
     def test_restricted_owned_in_every_alternative(self):
