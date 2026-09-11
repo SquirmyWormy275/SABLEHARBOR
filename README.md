@@ -125,3 +125,5 @@ No open-source license is granted. Repository visibility does not grant permissi
 ## Geographic framework
 
 The [reconciled Geo package](geospatial/README.md) combines current enterprise canon with the accepted industrial geography. Open the [atlas](geospatial/maps/SABLE_HARBOR_Geographic_Framework_Atlas_v0.1.0-rc4.pdf), [QGIS project](geospatial/qgis/sable_harbor_master.qgz), and [remaining-work matrix](geospatial/docs/PROGRAM_CLOSEOUT_MATRIX.md). Source and geometry status govern each representation.
+
+[Facility planning workbench](geospatial/maps/workbench.html) · [Scenario, readiness and evidence guide](geospatial/facilities/workbench/README.md).

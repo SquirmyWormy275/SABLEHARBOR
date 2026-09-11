@@ -119,6 +119,9 @@ def dependency_graph(root):
         facilities + "workbench/READINESS.json",
         facilities + "workbench/EVIDENCE_QUEUE.json",
         facilities + "workbench/DEPENDENCIES.json",
+        facilities + "workbench/BASELINE_SCENARIO.json",
+        facilities + "workbench/BASELINE_RESULT.json",
+        facilities + "workbench/MANIFEST.json",
         "geospatial/maps/workbench.html",
     ]
     for source in list(hashes) + [

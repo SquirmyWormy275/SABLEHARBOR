@@ -98,16 +98,15 @@ def evaluate(data, scenario):
                 "reason": "Fitted capacity or scenario demand unestablished; unknown is not zero.",
             }
         else:
-            fraction = row["attendance_percent"] / 100
             shared = max(
                 math.ceil(row["shared_workers"] / row["sharing_ratio"]),
-                math.ceil(row["shared_workers"] * fraction),
+                math.ceil(row["shared_workers"] * row["attendance_percent"] / 100),
             )
             assigned = row["assigned_workers"]
             learners = campus["trainees"] if row["id"] == data["campus"]["training_floor_id"] else 0
             day = (
-                math.ceil(assigned * fraction)
-                + math.ceil(row["shared_workers"] * fraction)
+                math.ceil(assigned * row["attendance_percent"] / 100)
+                + math.ceil(row["shared_workers"] * row["attendance_percent"] / 100)
                 + row["touchdown_visitors"]
                 + row["other_attendees"]
                 + learners
