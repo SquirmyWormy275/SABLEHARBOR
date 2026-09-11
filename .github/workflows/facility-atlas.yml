@@ -33,5 +33,34 @@ jobs:
           python geospatial/facilities/spatial/build.py --check
           python -m pytest -q geospatial/facilities/spatial
           node geospatial/facilities/spatial/test_viewer.cjs
+      - name: Diagnose context drift without rewriting generated outputs
+        if: failure()
+        run: |
+          python - <<'PYTHON'
+          import importlib.util, json
+          from pathlib import Path
+          path = Path("geospatial/facilities/spatial/context.py")
+          spec = importlib.util.spec_from_file_location("diagnostic_context", path)
+          module = importlib.util.module_from_spec(spec)
+          spec.loader.exec_module(module)
+          before = json.loads(Path("geospatial/facilities/spatial/CONTEXT.json").read_text())
+          after = json.loads(json.dumps(module.build_context(Path.cwd())))
+          differences = []
+          def compare(a, b, path=""):
+              if len(differences) >= 20 or a == b:
+                  return
+              if isinstance(a, dict) and isinstance(b, dict):
+                  for key in sorted(set(a) | set(b)):
+                      compare(a.get(key), b.get(key), path + "/" + key)
+              elif isinstance(a, list) and isinstance(b, list) and len(a) == len(b):
+                  for index, (x, y) in enumerate(zip(a, b)):
+                      compare(x, y, path + "/" + str(index))
+              else:
+                  differences.append({"path": path, "committed": a, "rebuilt": b})
+          compare(before, after)
+          print(json.dumps(differences, indent=2))
+          import pyproj, shapely
+          print("PROJ", pyproj.proj_version_str, "GEOS", shapely.geos_version_string)
+          PYTHON
       - name: Generated checks leave committed source and manifests unchanged
         run: git diff --exit-code -- geospatial/facilities geospatial/maps/facilities
