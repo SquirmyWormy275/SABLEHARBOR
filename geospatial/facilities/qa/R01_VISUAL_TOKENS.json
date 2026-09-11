@@ -749,8 +749,9 @@
     }
   },
   "successor_gate": {
-    "state": "PENDING_FIRST_SUCCESSOR",
+    "state": "PASS_FIRST_MASTER_ONLY",
     "required_comparisons": "First successor side-by-side with each of all four originals at full resolution; master overlay; record deviations before bulk floors.",
-    "prior_63_sheet_QA_applies": false
+    "prior_63_sheet_QA_applies": false,
+    "evidence": "R01_FIRST_GATE_REVIEW.json"
   }
 }

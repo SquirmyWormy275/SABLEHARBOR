@@ -2,7 +2,7 @@
 
 All four immutable approved PNGs were inspected at their original 3240 × 2304 resolution, and the complete handover and controlling visual addendum were read. [R01_VISUAL_TOKENS.json](R01_VISUAL_TOKENS.json) records exact source hashes, pixel colors, geometry measurements, and explicitly approximate typography. Font identification is a visual estimate; it is not recovered source metadata.
 
-The former 63-sheet visual approval does **not** apply to R02 or establish fidelity to these recovered originals. The first successor is pending review. Bulk floor generation must wait for the first-successor comparison required by the addendum.
+The former 63-sheet visual approval does **not** apply to R02 or establish fidelity to these recovered originals. The fifth first-master candidate passed the required comparison; see [hash-bound gate](R01_FIRST_GATE_REVIEW.json). Bulk generation may proceed. This is not a pass for unreviewed floor sheets.
 
 Review the first successor next to **each of all four originals at full resolution**, with a master-plan overlay and a durable side-by-side artifact. Check:
 

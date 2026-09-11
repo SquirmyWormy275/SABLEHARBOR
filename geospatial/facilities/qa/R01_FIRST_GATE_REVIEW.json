@@ -1,63 +1,72 @@
 {
-  "status": "FAIL_FIRST_SUCCESSOR_GATE",
+  "status": "PASS_FIRST_SUCCESSOR_GATE",
   "review_date": "2026-09-11",
   "candidate": {
     "path": "geospatial/facilities/qa/R01_FIRST_CANDIDATE.png",
-    "sha256": "ba807d995042b730f2aad57750202c168a487e18994906e4b76a13b2e2b7ae30",
+    "sha256": "41ef84b50a665e34b89deff2a39ad2635eb3cb0308d3cc9ff29e46d25fcf8f8b",
     "dimensions_px": [
       3240,
       2304
-    ]
+    ],
+    "iteration": 5
   },
-  "manual_comparisons": "All4 originals viewed at original resolution and paired6480x2304 side-by-side with candidate; master3240x2304 overlay reviewed.",
+  "manual_comparisons": "All four immutable originals viewed at original 3240x2304 resolution; final candidate paired with each in 6480x2304 side-by-side comparisons. Master 50% overlay reviewed. Candidate PNG and independently rasterized one-page PDF reviewed at 3240x2304; SVG source parsed and inspected as the rendered vector source.",
   "findings": [
     {
       "id": "R01-G01",
       "title": "Typography fallback",
       "detail": "fc-match DejaVu Sans returns Liberation Sans. Title ink width1319 vs1585px; title height43 vs51px. Register deterministic matching fonts and retune title/wordmark sizing.",
-      "status": "open"
+      "status": "corrected",
+      "correction": "Bundled DejaVu regular/bold and task-local font configuration remove Liberation fallback. Title bbox [112,203,1691,254] vs original [112,203,1696,253]."
     },
     {
       "id": "R01-G02",
       "title": "Subtitle position",
       "detail": "Current subtitle ink y321\u2013350 vs approved290\u2013318; move baseline up31px.",
-      "status": "open"
+      "status": "corrected",
+      "correction": "Subtitle restored to ink bbox [111,290,1357,318], original [111,290,1375,318]."
     },
     {
       "id": "R01-G03",
       "title": "Site palette",
       "detail": "Sitefield/road overrides differ from measured#ebeee6/#cbcdc8; apply exact palette.",
-      "status": "open"
+      "status": "corrected",
+      "correction": "Exact measured site field, road, paving and parking RGB values restored."
     },
     {
       "id": "R01-G04",
       "title": "Building accent strips",
       "detail": "R01 blue/sage/gold left facade strips are absent; restore without changing footprint.",
-      "status": "open"
+      "status": "corrected",
+      "correction": "Blue, sage and gold 21px facade strips restored."
     },
     {
       "id": "R01-G05",
       "title": "South arrival and parking",
       "detail": "Current continuous south parking strip crosses central primaryarrival. R01 has distinct west/eastblocks and gap; restore route, parkingcourt and dropoff labels and do not assert252 after altering counts without recount.",
-      "status": "open"
+      "status": "corrected",
+      "correction": "South parking split into 23/17-column two-sided blocks with clear central arrival; labels restored and total 252 retained."
     },
     {
       "id": "R01-G06",
       "title": "Access composition",
       "detail": "Current west lateral spur reaches siteboundary; original access remains perimeterconnected inside. Original northeast service connection and south dropoff/pedestrian branches missing. Preserve R01 topology or document intentional functional changes.",
-      "status": "open"
+      "status": "corrected",
+      "correction": "Northwest, northeast and south road connections restored inside boundary; west parking aisle connected. Education public entry campus x512ft matches floor x44ft and path x504..520 meets bridge ending x522. Separate northern residence path and east service apron retained."
     },
     {
       "id": "R01-G07",
       "title": "Schedule hierarchy",
       "detail": "Coordinated-program body changed from navy to muted and bodywrap differs materially due fallbackfont; restore original factual contrast.",
-      "status": "open"
+      "status": "corrected",
+      "correction": "Program body restored to navy; matching bundled font restores hierarchy."
     },
     {
       "id": "R01-G08",
       "title": "Trees and support geometry",
       "detail": "Several treepositions shift into centralquad and original small Education service rectangle omitted; restore measured baseline or explicitly justify changed landscape/service design.",
-      "status": "open"
+      "status": "corrected",
+      "correction": "Two trees inside central quad removed; Education service apron restored. Minor tree-symbol simplification remains explicitly recorded."
     }
   ],
   "intentional_deviations": [
@@ -72,40 +81,81 @@
     {
       "change": "Independent editableSVG andPDF",
       "reason": "Original approval onlyPNG; new derivatives required and independently reviewed."
+    },
+    {
+      "change": "Stable site/map ID caption at lower right",
+      "reason": "Required traceability, subordinate 18px annotation clear of footer."
+    },
+    {
+      "change": "Slight font tracking, glyph rasterization and line-wrap differences",
+      "reason": "Original font source is unavailable. Actual DejaVu is bundled; measured title width differs 5px and subtitle width 18px, with matching baselines and readable hierarchy."
+    },
+    {
+      "change": "Simplified tree circles and regularized planting positions",
+      "reason": "Retains restrained planting zones and clear quad; does not assert engineered landscape design."
+    },
+    {
+      "change": "South parking split uses 23 and 17 columns rather than inferred original segmentation",
+      "reason": "Preserves 80 south bays and 252 total while leaving the approved central arrival open; accessible conversion remains unresolved."
+    },
+    {
+      "change": "Some internal building-label positions and schedule wrapping vary by a few pixels",
+      "reason": "Clear typographic hierarchy and exact building positions, program and floor totals retained; no content clipping or obstruction observed."
     }
   ],
   "passed_features": [
-    "Canvas proportion and paper color",
-    "Top/footer rules, statusblock position and schedulecolumn",
-    "Fourbuilding positions and dimensions broadly matchmaster",
-    "Northarrow and alternating scale",
-    "Explicit fictionalstudy status, separateworkplaces and residencecounts"
+    "3240x2304 paper canvas, exact measured palette, margins and header/footer rules",
+    "Four-building composition, dimensions, accent strips, courts and connected arrival/access paths",
+    "Matching typography hierarchy; no observed label clipping or overlap",
+    "175392 gross sqft, ten floors, 362 fitted workplaces, 60 residence rooms and 252 drawn parking bays distinct",
+    "Fictional study envelope and conceptual September 2026 successor status explicit",
+    "Independent SVG source, PNG and PDF render successfully"
   ],
-  "bulk_generation_authorized_by_gate": false,
+  "bulk_generation_authorized_by_gate": true,
   "comparison_assets": [
     {
+      "path": "geospatial/facilities/qa/R01_FIRST_CANDIDATE.pdf",
+      "sha256": "057a4946a140bf7c8f0d2f57a9d75def60d7f1f8217087f596c894433af5f165"
+    },
+    {
       "path": "geospatial/facilities/qa/R01_FIRST_CANDIDATE.png",
-      "sha256": "ba807d995042b730f2aad57750202c168a487e18994906e4b76a13b2e2b7ae30"
+      "sha256": "41ef84b50a665e34b89deff2a39ad2635eb3cb0308d3cc9ff29e46d25fcf8f8b"
+    },
+    {
+      "path": "geospatial/facilities/qa/R01_FIRST_CANDIDATE.svg",
+      "sha256": "3eb7d41e254a50929937176b0edb3763fbffccc210a288c1f624692ad2a940ec"
     },
     {
       "path": "geospatial/facilities/qa/R01_FIRST_COMPARISON_01.png",
-      "sha256": "6239a1578e85d3b98725d04ce87e9be9171cddeb06f50fa5a4b7bd7d7ea8dee0"
+      "sha256": "1992777ca2d450725ba243cd9d1590e38e846b622ca7bd0d3346a72d89ba1d06"
     },
     {
       "path": "geospatial/facilities/qa/R01_FIRST_COMPARISON_02.png",
-      "sha256": "09754b619794df12e1b597734a33cac674bab880edebf8175a503f7f4ba790c5"
+      "sha256": "3d1f839994d5a5cb6d6d52692c3fd84fd769c182a1e1e65924566e05a8abf713"
     },
     {
       "path": "geospatial/facilities/qa/R01_FIRST_COMPARISON_03.png",
-      "sha256": "47802fe99a2bab872df5640347b082e43bdb966e8240bfa94fc63699ccde69ff"
+      "sha256": "5e16bdec24a57e4725df158365e53a90d79ea7fe74a794b0a848ebba5a7e190a"
     },
     {
       "path": "geospatial/facilities/qa/R01_FIRST_COMPARISON_04.png",
-      "sha256": "95eceba944fa3d44196581f8e037c62123377e466490a09a13c33372a6580f64"
+      "sha256": "ec3483cbf6be8c26bfd6314603410443a43b52ce8c82ee951fa00bf4cab8ab57"
     },
     {
       "path": "geospatial/facilities/qa/R01_FIRST_MASTER_OVERLAY.png",
-      "sha256": "edde9bc4f6bc6cd0d1582a6b6450713e0de660cc9c295d7c4e2fbcd30fc76da6"
+      "sha256": "4a4f205db89bfb36d553e0f209f3deeda46d3f1d79e32f54a18dfd8a05e9c97e"
+    }
+  ],
+  "scope": "Master SH-MAP-SAC-002 only. This gate permits generation of subsequent sheets; those sheets require separate visual and numerical QA. Prior 63-sheet QA does not apply to R02.",
+  "initial_failure_evidence_commit": "51d92e1",
+  "build_inputs_at_review": [
+    {
+      "path": "geospatial/facilities/r01_drawing.py",
+      "sha256": "0062efa9a321484466033c26d6cd491985936a730451171b59b783a8c970a53f"
+    },
+    {
+      "path": "geospatial/facilities/source/campus.json",
+      "sha256": "6294f892b9961d3c087f44556163c29a72e39252a03e0d5c6e85c306d58a0a88"
     }
   ]
 }
