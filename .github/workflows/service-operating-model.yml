@@ -1,0 +1,56 @@
+name: Service operating model
+
+on:
+  pull_request:
+    paths:
+      - enterprise/services/**
+      - enterprise/README.md
+      - enterprise/business/source/**
+      - docs/canon/THIRD_PARTY_SERVICES*
+      - docs/internal/development/THIRD_PARTY_SERVICES*
+      - .github/workflows/service-operating-model.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # Finance tests resolve immutable canon snapshots from Git history.
+          # Match finance-platform-ci.yml; a shallow checkout omits those inputs.
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Targeted service tests
+        run: python -m unittest discover -s enterprise/services/tests -v
+      - name: Verify sources and generate the operating model
+        run: |
+          python -m enterprise.services.model validate --repository-root .
+          python -m enterprise.services.model build --repository-root . --output "$RUNNER_TEMP/sable-services" --database
+          diff -u enterprise/services/generated/comparison.csv "$RUNNER_TEMP/sable-services/comparison.csv"
+          diff -u enterprise/services/generated/REPORT.md "$RUNNER_TEMP/sable-services/REPORT.md"
+          git diff --check
+      - name: Install repository test dependencies
+        run: |
+          python -m pip install -e '.[dev]' -r tools/documents/requirements.txt -r tools/organization/requirements.txt
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils texlive-latex-base texlive-latex-extra texlive-fonts-recommended
+      - name: Repository checks
+        run: |
+          python scripts/validate_governance_j2.py
+          python scripts/validate_institutional_catalog.py
+          python scripts/validate_organization_maps.py
+          python scripts/validate_repository_hygiene.py
+          python scripts/validate_business_records.py
+          python -m pytest -q
+      - name: Upload model run outputs
+        uses: actions/upload-artifact@v4
+        with:
+          name: service-operating-model
+          path: ${{ runner.temp }}/sable-services
+          if-no-files-found: error
