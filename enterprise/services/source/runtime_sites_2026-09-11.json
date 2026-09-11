@@ -1,28 +1,40 @@
 {
   "as_of": "2026-09-11",
-  "state_rule": "planned, contracted, construction, commissioned and operating states are distinct",
+  "state_rule": "provider selection, procurement, contract, construction, commissioned and operating states are distinct",
   "sites": [
     {
       "id": "RUNTIME-RENO-COLO",
       "name": "Reno primary colocation",
-      "geography": "Reno/Tahoe-Reno, Nevada",
-      "status": "PLANNED_PROCUREMENT",
-      "provider": null,
-      "lead_candidate": "Switch Tahoe-Reno",
+      "geography": "Tahoe-Reno, Nevada",
+      "status": "PROVIDER_SELECTED_PROCUREMENT_PENDING",
+      "provider": "Switch",
+      "facility": "Switch TAHOE RENO — The Citadel Campus",
+      "provider_selection_date": "2026-09-11",
+      "contract_executed": false,
+      "capacity_reserved": false,
       "initial_usable_it_kw_low": 75,
       "initial_usable_it_kw_high": 100,
       "required_expansion_kw": 250,
-      "operating": false
+      "operating": false,
+      "evidence_boundary": "Selection is canon; provider public claims and proposed commercial terms are not operating evidence until contract and acceptance."
     },
     {
       "id": "RUNTIME-BOISE-DR",
       "name": "Boise independent recovery colocation",
       "geography": "Boise, Idaho",
-      "status": "PLANNED_PROCUREMENT",
-      "provider": null,
-      "lead_candidate": "IDACORE Boise",
+      "status": "PROVIDER_SELECTED_PROCUREMENT_PENDING",
+      "provider": "IDACORE",
+      "facility": "IDACORE Boise",
+      "street_address": "2653 S Victory View Way, Boise, Idaho 83709",
+      "provider_selection_date": "2026-09-11",
+      "contract_executed": false,
+      "capacity_reserved": false,
       "operating": false,
-      "independent_from_primary": true
+      "independent_from_primary": true,
+      "published_planning_price_usd_per_kw_month": 300,
+      "published_power_included": true,
+      "published_standard_term_months": 12,
+      "evidence_boundary": "Published price/specifications are procurement baselines; contract, audit scope, technical configuration and recovery tests remain required evidence."
     },
     {
       "id": "RUNTIME-NN-OWNED-DC",
