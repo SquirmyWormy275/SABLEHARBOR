@@ -938,6 +938,7 @@ def main():
         errors.extend(validate_atlas(args.require_atlas))
     if errors:
         raise SystemExit("\n".join(errors))
+    models = models + runtime_models()
     print(
         f"PASS facilities: {len(models)} sites, {sum(len(s['buildings']) for s in models)} buildings, {sum(len(b['floors']) for s in models for b in s['buildings'])} floors; source, coverage, population"
         + ("" if args.source_only else ", independent artifacts and atlas")
