@@ -1,6 +1,6 @@
-# Atlas visual review — interim
+# Atlas visual review — final reviewed build
 
-Scope is the atlas HTML and atlas-generated PDF title, index and disposition appendix. The independently generated maps have a separate reviewer. This record does not claim final approval of imported plans or final build bytes.
+Scope is the atlas HTML and atlas-generated PDF title, index and disposition appendix. The independently generated maps have a separate reviewer. This record passes the final atlas surfaces identified by exact hashes in the JSON companion; it does not replace the separate imported-plan review.
 
 All **72 initial text/index pages** were rasterized at 108 dpi and inspected at original resolution through eighteen 2 × 2 contact sheets. Each source page was rendered at 1,263 × 893 pixels. Reviewed initial pages were 1–2 and 76–145. No clipping, overflowing paragraphs or overlapping text was found. The source descriptions remain legible with consistent margins and hierarchy.
 
@@ -10,6 +10,6 @@ Chromium rendered the repository-local HTML through `file://` at desktop 1,440 �
 
 Retained evidence: [desktop](ATLAS_REVIEW.desktop.png), [floor drill-down](ATLAS_REVIEW.floor.png), [mobile search](ATLAS_REVIEW.mobile.png). The headless CLI's first fragment screenshots were blank compositor frames; CDP navigation and `Page.captureScreenshot` resolved the capture problem and confirmed actual behavior.
 
-The current integrated build has 146 PDF pages, including 63 facility maps and 11 preserved context maps, 77 bookmarks and 16 internal site-index links. The initial HTML link audit validated 1,114 anchors and file references; the shared validator must rerun after final integration. Exact intermediate artifact hashes and inspected pages are recorded in [ATLAS_REVIEW.json](ATLAS_REVIEW.json).
+The current integrated build has 146 PDF pages, including 63 facility maps and 11 preserved context maps, 77 bookmarks and 16 internal site-index links. The final HTML link audit validated 1,119 anchors and file references, and all 27 floor nodes are reachable from the atlas root. All 72 atlas-generated PDF pages were checked for out-of-page text; none was found. Exact final artifact hashes and per-page text hashes are recorded in [ATLAS_REVIEW.json](ATLAS_REVIEW.json).
 
-Final acceptance remains pending the final main-agent rebuild and separate map QA. Any change to the reviewed HTML, atlas generator, disposition text or PDF index requires a targeted recheck and new recorded hashes. An imported plan-only change is reviewed by the map owner; atlas assembly and links must still validate.
+Final targeted reinspection covered pages 1, 2, 77, 97, 115, 140 and 146 after the main renderer/atlas pipeline completed. The corrected typography, index, appendix wrapping, floor hash navigation and mobile filter remained readable and functional. Retained final PDF evidence: [index and first dispositions](ATLAS_REVIEW.final-index.png), [later dispositions and final page](ATLAS_REVIEW.final-dispositions.png). No unresolved atlas presentation defect remains. Any future change requires a targeted recheck and updated hashes; imported map approval remains separately scoped.
