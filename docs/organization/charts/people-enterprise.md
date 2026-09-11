@@ -1,6 +1,6 @@
 # Enterprise Leadership
 
-**SH-ORG-PEOPLE-ENTERPRISE · 2026-09-09 · v1.0.0**
+**SH-ORG-PEOPLE-ENTERPRISE · 2026-09-10 · v1.1.0**
 
 Named role membership only; no person-to-person reporting relationship is inferred.
 
@@ -21,6 +21,7 @@ Joining years refer to the company. Unrecorded years remain explicit.
 | Dr. Maya Okafor | Scientific Reviewer | Year not recorded |
 | Caleb Hargrove | Head of Field Operations | Year not recorded |
 | Rachel Sloane | Director of Advanced Programs | Year not recorded |
+| Jonathan Goldstryker | Head of J2 | Joined 2020 |
 
 ## Source qualifications
 
@@ -31,8 +32,10 @@ Joining years refer to the company. Unrecorded years remain explicit.
 - **Dr. Maya Okafor:** Formal title and exact hire year remain OPEN. Original Eight formed through 2016–2017. Do not turn a functional role into an approved appointment. Maya is active in the 2017 incident; this is not an explicit hire date. Year basis: not recorded Title status: PROPOSED_PLAIN_TITLE
 - **Caleb Hargrove:** Formal title and exact hire year remain OPEN. Original Eight formed through 2016–2017. Do not turn a functional role into an approved appointment. A 2016 customer incident names this person; this establishes presence by 2016, not an explicit hire record. Year basis: not recorded Title status: PROPOSED_PLAIN_TITLE
 - **Rachel Sloane:** Source says Director of Advanced Programs or equivalent: title not finally locked. After-2022 role is not evidence of hire year. Not Gid’s manager. Year basis: not recorded Title status: PROPOSED_PLAIN_TITLE
+- **Jonathan Goldstryker:** Exact appointment and commission dates are not established by the company joining year. Year basis: Sable Harbor employment; owner-approved year Title status: SOURCE_SUPPORTED
 
 ## Sources
 
 - [docs/governance/BOARD_AND_CAPITAL_GOVERNANCE_v1.0.1.md](../../../docs/governance/BOARD_AND_CAPITAL_GOVERNANCE_v1.0.1.md)
 - [docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md](../../../docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md)
+- [docs/canon/J2_LEADERSHIP_APPOINTMENTS_2026-09-10.md](../../../docs/canon/J2_LEADERSHIP_APPOINTMENTS_2026-09-10.md)

@@ -25,6 +25,15 @@ The earlier controlling layers remain indexed in the [September 3 decision-regis
 
 This successor resolves the industrial legal structure, full ARU/BS&T case, mine geography and interface model. Earlier limited-bridge records and original maps remain historical. The case's September 5 retrospective cutoff does not import September 6 editorial decisions as earlier company knowledge.
 
+## September 10 J2 named leadership
+
+- [Controlling appointment decision](canon/J2_LEADERSHIP_APPOINTMENTS_2026-09-10.md)
+- [Structured people and role register](structured/j2_leadership_2026-09-10.json)
+- [Current leadership chart](organization/charts/people-j2.md)
+- [Controlled appointment publication](j2/publications/SH-J2-PPL-20260910_v1.0.0.pdf)
+
+Company joining years do not establish office appointment or commission dates. Six names fill existing roles; the 237-billet establishment and financial releases are unchanged. Issue #19 retains the residual personnel scope.
+
 ## September 6 canon and delivery closeout
 
 - [Decision-register addendum](canon/DECISION_REGISTER_ADDENDUM_2026-09-06_CLOSEOUT.md) and [controlled publication](governance/publications/SH-CANON-CLOSEOUT-20260906-001_v1.0.0.pdf)

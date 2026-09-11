@@ -20,6 +20,8 @@ def field(text: str, name: str, default: str = "") -> str:
 
 
 def category(path: str) -> str:
+    if path == "docs/canon/J2_LEADERSHIP_APPOINTMENTS_2026-09-10.md":
+        return "J2 leadership decision"
     if path == "docs/canon/INDUSTRIAL_PLANNING_SUCCESSOR_2026-09-06.md":
         return "industrial planning authority"
     if path.startswith("docs/advisory/"):

@@ -1,0 +1,17 @@
+{
+  "version": "1.0.0",
+  "source_commit": "57cfa1b1c483ccf1f8b15d82c4cbdadbeef8063e",
+  "status": "SUPERSEDED_PRESERVED_PUBLICATION",
+  "artifacts": [
+    {
+      "original_path": "docs/organization/assets/current/Sable-Harbor-Organization-Charts.pdf",
+      "preserved_path": "docs/organization/history/v1.0.0/Sable-Harbor-Organization-Charts.pdf",
+      "sha256": "c1589fbd0c0bfcb2a823cc4e582b580510f3d1408a933ddb09188aa217f62665"
+    },
+    {
+      "original_path": "docs/organization/source/chartbook.json",
+      "preserved_path": "docs/organization/history/v1.0.0/chartbook.json",
+      "sha256": "3439249c509ff9c37e4035e88a158b364268fb62be1f9e570649473790f1d77e"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 # Board committees
 
-**SH-ORG-CORP-BOARD-COMMITTEES · 2026-09-09 · v1.0.0**
+**SH-ORG-CORP-BOARD-COMMITTEES · 2026-09-10 · v1.1.0**
 
 Board committee membership and Internal Audit functional oversight.
 

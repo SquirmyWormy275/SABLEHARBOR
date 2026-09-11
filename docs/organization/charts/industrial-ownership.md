@@ -1,6 +1,6 @@
 # Industrial ownership
 
-**SH-ORG-INDUSTRIAL-OWNERSHIP · 2026-09-09 · v1.0.0**
+**SH-ORG-INDUSTRIAL-OWNERSHIP · 2026-09-10 · v1.1.0**
 
 Each connector represents 100% equity ownership.
 

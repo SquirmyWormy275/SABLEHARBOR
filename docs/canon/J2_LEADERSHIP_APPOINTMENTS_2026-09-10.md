@@ -1,9 +1,9 @@
 # J2 leadership appointments — September 10, 2026
 
-**Document ID:** `SH-J2-PPL-20260910`  
-**Version:** 1.0.0  
-**Decision date:** September 10, 2026  
-**State:** OWNER-APPROVED; controlling LOCKED canon upon acceptance into main  
+**Document ID:** `SH-J2-PPL-20260910`
+**Version:** 1.0.0
+**Decision date:** September 10, 2026
+**State:** LOCKED
 **Scope:** Six current named J2 leaders and their Sable Harbor joining years. No establishment, authority, compensation or financial-model changes.
 
 ## Approved roster

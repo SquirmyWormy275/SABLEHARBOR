@@ -1,6 +1,6 @@
 # Willow Research Team
 
-**SH-ORG-PEOPLE-WILLOW-TEAM · 2026-09-09 · v1.0.0**
+**SH-ORG-PEOPLE-WILLOW-TEAM · 2026-09-10 · v1.1.0**
 
 Named role membership only; no person-to-person reporting relationship is inferred.
 

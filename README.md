@@ -67,7 +67,7 @@ Historical branch names are provenance only; they are not current work instructi
 
 ## Organization at a glance
 
-The [company-wide chart suite](docs/organization/README.md) covers seven business lines, legal ownership, headquarters, J2, enterprise systems, facilities and all 45 current named people.
+The [company-wide chart suite](docs/organization/README.md) covers seven business lines, legal ownership, headquarters, J2, enterprise systems, facilities and all 51 current named people.
 
 [![Business lines](docs/organization/assets/current/business-lines.png)](docs/organization/charts/business-lines.md)
 

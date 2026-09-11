@@ -1,6 +1,6 @@
 # Sable Harbor organization charts
 
-**39 chart families · 56 pages · Revision 1.0.0 · September 9, 2026**
+**40 chart families · 57 pages · Revision 1.1.0 · September 10, 2026**
 
 [![Business lines](assets/current/business-lines.png)](charts/business-lines.md)
 
@@ -38,6 +38,7 @@ Business and asset cards show name, location and actual work. People cards show 
 | [Blood, Sweat & Tears Railway](charts/people-bst.md) | people |
 | [Project Cradle Team](charts/people-cradle.md) | people |
 | [Enterprise Leadership](charts/people-enterprise.md) | people |
+| [J2 Leadership](charts/people-j2.md) | people |
 | [Foundry and Customer Delivery](charts/people-foundry-field.md) | people |
 | [Pale Sun and Red Wash Leadership](charts/people-pale-sun-red-wash.md) | people |
 | [Willow and Advanced Programs](charts/people-willow-leadership.md) | people |

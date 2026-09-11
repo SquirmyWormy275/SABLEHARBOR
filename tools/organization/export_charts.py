@@ -142,7 +142,7 @@ def export():
     for node in data['nodes']:
         fields = list(display_fields(node).values())
         rows.append([node['id'], *fields, '; '.join(s['path'] for s in node['sources'])])
-    (ORG / 'DISPLAY_INVENTORY.md').write_text('# Complete chart wording\n\n202 display records. Repeated appearances of the same card are counted once. Person columns mean name, job title and joining year; entity columns mean name, location and actual work.\n\n'
+    (ORG / 'DISPLAY_INVENTORY.md').write_text(f'# Complete chart wording\n\n{len(data["nodes"])} display records. Repeated appearances of the same card are counted once. Person columns mean name, job title and joining year; entity columns mean name, location and actual work.\n\n'
         + table(['ID', 'Name', 'Location / job title', 'Actual work / joining year', 'Sources'], rows) + '\n')
     excluded = [[r['id'], r['name'], r['status'], r['reason']] for r in data['register_only']]
     (ORG / 'UNRESOLVED_AND_EXCLUDED.md').write_text('# Unresolved and excluded records\n\nThese records are deliberately outside current people/entity cards. They include unnamed roles, historical or external people, superseded identities, detailed assets and commercial configurations. Names marked superseded must not return as current personnel.\n\n'

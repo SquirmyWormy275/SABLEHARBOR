@@ -1,6 +1,6 @@
 # Enterprise technology capabilities
 
-**SH-ORG-CORP-TECHNOLOGY · 2026-09-09 · v1.0.0**
+**SH-ORG-CORP-TECHNOLOGY · 2026-09-10 · v1.1.0**
 
 Enterprise Technology Services product families, not additional departments.
 

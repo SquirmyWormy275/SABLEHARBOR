@@ -84,11 +84,11 @@ def test_company_coverage_logos_and_board_capacity():
     data = source()
     nodes = {n["id"]: n for n in data["nodes"]}
     charts = {c["slug"]: c for c in data["charts"]}
-    assert len(data["charts"]) == 39
-    assert sum(len(c["pages"]) for c in data["charts"]) == 56
-    assert len(nodes) == 202
+    assert len(data["charts"]) == 40
+    assert sum(len(c["pages"]) for c in data["charts"]) == 57
+    assert len(nodes) == 208
     people = [n for n in nodes.values() if n["type"] == "person"]
-    assert len({n["person_id"] for n in people if n["status"].startswith("current_")}) == 45
+    assert len({n["person_id"] for n in people if n["status"].startswith("current_")}) == 51
     assert sum(n["joined_year"] is None for n in people if n["status"].startswith("current_")) == 18
     assert set(charts["business-lines"]["node_ids"]) == {
         "SHI",

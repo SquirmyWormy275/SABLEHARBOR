@@ -1,0 +1,363 @@
+{
+  "record_id": "SH-J2-PPL-20260910",
+  "version": "1.0.0",
+  "decision_date": "2026-09-10",
+  "canonical_source": "docs/canon/J2_LEADERSHIP_APPOINTMENTS_2026-09-10.md",
+  "approval_authority": "repository_owner_explicit_conversation_approvals",
+  "repository_promotion": "ON_ACCEPTED_MERGE_OF_PR_118_TO_MAIN",
+  "base_reviewed": "57cfa1b1c483ccf1f8b15d82c4cbdadbeef8063e",
+  "establishment_billets_unchanged": 237,
+  "incremental_billets_authorized": 0,
+  "incremental_payroll_authorized": false,
+  "people": [
+    {
+      "person_id": "P063",
+      "role_id": "ROLE-37",
+      "name": "Jonathan Goldstryker",
+      "title": "Head of J2",
+      "unit": "J2 Headquarters",
+      "joined_year": 2020,
+      "joining_year_basis": "Sable Harbor employment; owner-approved year",
+      "appointment_date": null,
+      "commission_date": null,
+      "biography": null,
+      "status": "current_employee",
+      "state_on_accepted_merge": "LOCKED",
+      "sources": [
+        {
+          "path": "docs/canon/J2_LEADERSHIP_APPOINTMENTS_2026-09-10.md",
+          "section": "Approved roster",
+          "evidence": "| Jonathan Goldstryker | Head of J2 | 2020 |"
+        },
+        {
+          "path": "docs/j2/J2_HEADQUARTERS.md",
+          "line": 18,
+          "evidence": "- Head of J2"
+        }
+      ]
+    },
+    {
+      "person_id": "P064",
+      "role_id": "ROLE-38",
+      "name": "Amanda Chenahot",
+      "title": "Deputy Head of J2",
+      "unit": "J2 Headquarters",
+      "joined_year": 2021,
+      "joining_year_basis": "Sable Harbor employment; owner-approved year",
+      "appointment_date": null,
+      "commission_date": null,
+      "biography": null,
+      "status": "current_employee",
+      "state_on_accepted_merge": "LOCKED",
+      "sources": [
+        {
+          "path": "docs/canon/J2_LEADERSHIP_APPOINTMENTS_2026-09-10.md",
+          "section": "Approved roster",
+          "evidence": "| Amanda Chenahot | Deputy Head of J2 | 2021 |"
+        },
+        {
+          "path": "docs/j2/J2_HEADQUARTERS.md",
+          "line": 19,
+          "evidence": "- Deputy Head of J2"
+        }
+      ]
+    },
+    {
+      "person_id": "P065",
+      "role_id": "ROLE-40",
+      "name": "Mara Hammer",
+      "title": "Head of Contact",
+      "unit": "Contact",
+      "joined_year": 2021,
+      "joining_year_basis": "Sable Harbor employment; owner-approved year",
+      "appointment_date": null,
+      "commission_date": null,
+      "biography": null,
+      "status": "current_employee",
+      "state_on_accepted_merge": "LOCKED",
+      "sources": [
+        {
+          "path": "docs/canon/J2_LEADERSHIP_APPOINTMENTS_2026-09-10.md",
+          "section": "Approved roster",
+          "evidence": "| Mara Hammer | Head of Contact | 2021 |"
+        },
+        {
+          "path": "docs/j2/J2_ESTABLISHMENT.md",
+          "line": 12,
+          "evidence": "| Contact | 78 | 1 Head, 1 Deputy, 6 Collection Directors, 8 Collection Managers, 20 Human Contact Officers, 16 Digital/Data Collectors, 14 Field/Technical Collectors, 10 External-Source Collectors, 2 Collection Methods Officers |"
+        }
+      ]
+    },
+    {
+      "person_id": "P066",
+      "role_id": "ROLE-49",
+      "name": "Anika Trish",
+      "title": "Head of Judgment",
+      "unit": "Judgment",
+      "joined_year": 2021,
+      "joining_year_basis": "Sable Harbor employment; owner-approved year",
+      "appointment_date": null,
+      "commission_date": null,
+      "biography": null,
+      "status": "current_employee",
+      "state_on_accepted_merge": "LOCKED",
+      "sources": [
+        {
+          "path": "docs/canon/J2_LEADERSHIP_APPOINTMENTS_2026-09-10.md",
+          "section": "Approved roster",
+          "evidence": "| Anika Trish | Head of Judgment | 2021 |"
+        },
+        {
+          "path": "docs/j2/J2_ESTABLISHMENT.md",
+          "line": 13,
+          "evidence": "| Judgment | 42 | 1 Head, 1 Deputy, 6 Senior Judgment Directors, 28 Judgment Officers, 6 Judgment Watch Officers |"
+        }
+      ]
+    },
+    {
+      "person_id": "P067",
+      "role_id": "ROLE-54",
+      "name": "Grant Kohrs",
+      "title": "Head of Orientation",
+      "unit": "Orientation",
+      "joined_year": 2020,
+      "joining_year_basis": "Sable Harbor employment; owner-approved year",
+      "appointment_date": null,
+      "commission_date": null,
+      "biography": null,
+      "status": "current_employee",
+      "state_on_accepted_merge": "LOCKED",
+      "sources": [
+        {
+          "path": "docs/canon/J2_LEADERSHIP_APPOINTMENTS_2026-09-10.md",
+          "section": "Approved roster",
+          "evidence": "| Grant Kohrs | Head of Orientation | 2020 |"
+        },
+        {
+          "path": "docs/j2/J2_ESTABLISHMENT.md",
+          "line": 14,
+          "evidence": "| Orientation | 24 | 1 Head, 1 Deputy, 4 Senior Orientation Officers, 18 Orientation Officers |"
+        }
+      ]
+    },
+    {
+      "person_id": "P068",
+      "role_id": "ROLE-58",
+      "name": "Brett Calder",
+      "title": "Head of Education",
+      "unit": "J2 Education",
+      "joined_year": 2021,
+      "joining_year_basis": "Sable Harbor employment; owner-approved year",
+      "appointment_date": null,
+      "commission_date": null,
+      "biography": null,
+      "status": "current_employee",
+      "state_on_accepted_merge": "LOCKED",
+      "sources": [
+        {
+          "path": "docs/canon/J2_LEADERSHIP_APPOINTMENTS_2026-09-10.md",
+          "section": "Approved roster",
+          "evidence": "| Brett Calder | Head of Education | 2021 |"
+        },
+        {
+          "path": "docs/j2/EDUCATION.md",
+          "line": 47,
+          "evidence": "The permanent Education establishment is approximately **35 billets**. The permanent core includes the Head of Education, deputy leadership, senior faculty, instructors, exercise and case designers, program/registrar staff, learning operations, and campus/program support."
+        }
+      ]
+    }
+  ],
+  "resolved_role_records": [
+    {
+      "id": "ROLE-37",
+      "name": "Head of J2",
+      "status": "UNNAMED_ROLE",
+      "reason": "No named occupant and joining year established; excluded from people cards.",
+      "sources": [
+        {
+          "path": "docs/j2/J2_HEADQUARTERS.md",
+          "line": 18,
+          "evidence": "- Head of J2"
+        }
+      ],
+      "detail": {
+        "title": "Head of J2",
+        "unit": "J2 Headquarters",
+        "count": 1,
+        "name": null,
+        "joined_year": null,
+        "state": "SOURCE_SUPPORTED_OFFICE_OR_PROFESSION",
+        "display_scope": "role_register_only_until_named",
+        "sources": [
+          {
+            "path": "docs/j2/J2_HEADQUARTERS.md",
+            "line": 18,
+            "evidence": "- Head of J2"
+          }
+        ],
+        "earlier_title_options": [
+          "Chief Judgment & Junction Officer; corporate title remains open/evolvable"
+        ]
+      }
+    },
+    {
+      "id": "ROLE-38",
+      "name": "Deputy Head of J2",
+      "status": "UNNAMED_ROLE",
+      "reason": "No named occupant and joining year established; excluded from people cards.",
+      "sources": [
+        {
+          "path": "docs/j2/J2_HEADQUARTERS.md",
+          "line": 19,
+          "evidence": "- Deputy Head of J2"
+        }
+      ],
+      "detail": {
+        "title": "Deputy Head of J2",
+        "unit": "J2 Headquarters",
+        "count": 1,
+        "name": null,
+        "joined_year": null,
+        "state": "SOURCE_SUPPORTED_OFFICE_OR_PROFESSION",
+        "display_scope": "role_register_only_until_named",
+        "sources": [
+          {
+            "path": "docs/j2/J2_HEADQUARTERS.md",
+            "line": 19,
+            "evidence": "- Deputy Head of J2"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ROLE-40",
+      "name": "Head of Contact",
+      "status": "UNNAMED_ROLE",
+      "reason": "No named occupant and joining year established; excluded from people cards.",
+      "sources": [
+        {
+          "path": "docs/j2/J2_ESTABLISHMENT.md",
+          "line": 12,
+          "evidence": "| Contact | 78 | 1 Head, 1 Deputy, 6 Collection Directors, 8 Collection Managers, 20 Human Contact Officers, 16 Digital/Data Collectors, 14 Field/Technical Collectors, 10 External-Source Collectors, 2 Collection Methods Officers |"
+        }
+      ],
+      "detail": {
+        "title": "Head of Contact",
+        "unit": "Contact",
+        "count": 1,
+        "name": null,
+        "joined_year": null,
+        "state": "SOURCE_SUPPORTED_OFFICE_OR_PROFESSION",
+        "display_scope": "role_register_only_until_named",
+        "sources": [
+          {
+            "path": "docs/j2/J2_ESTABLISHMENT.md",
+            "line": 12,
+            "evidence": "| Contact | 78 | 1 Head, 1 Deputy, 6 Collection Directors, 8 Collection Managers, 20 Human Contact Officers, 16 Digital/Data Collectors, 14 Field/Technical Collectors, 10 External-Source Collectors, 2 Collection Methods Officers |"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ROLE-49",
+      "name": "Head of Judgment",
+      "status": "UNNAMED_ROLE",
+      "reason": "No named occupant and joining year established; excluded from people cards.",
+      "sources": [
+        {
+          "path": "docs/j2/J2_ESTABLISHMENT.md",
+          "line": 13,
+          "evidence": "| Judgment | 42 | 1 Head, 1 Deputy, 6 Senior Judgment Directors, 28 Judgment Officers, 6 Judgment Watch Officers |"
+        }
+      ],
+      "detail": {
+        "title": "Head of Judgment",
+        "unit": "Judgment",
+        "count": 1,
+        "name": null,
+        "joined_year": null,
+        "state": "SOURCE_SUPPORTED_OFFICE_OR_PROFESSION",
+        "display_scope": "role_register_only_until_named",
+        "sources": [
+          {
+            "path": "docs/j2/J2_ESTABLISHMENT.md",
+            "line": 13,
+            "evidence": "| Judgment | 42 | 1 Head, 1 Deputy, 6 Senior Judgment Directors, 28 Judgment Officers, 6 Judgment Watch Officers |"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ROLE-54",
+      "name": "Head of Orientation",
+      "status": "UNNAMED_ROLE",
+      "reason": "No named occupant and joining year established; excluded from people cards.",
+      "sources": [
+        {
+          "path": "docs/j2/J2_ESTABLISHMENT.md",
+          "line": 14,
+          "evidence": "| Orientation | 24 | 1 Head, 1 Deputy, 4 Senior Orientation Officers, 18 Orientation Officers |"
+        }
+      ],
+      "detail": {
+        "title": "Head of Orientation",
+        "unit": "Orientation",
+        "count": 1,
+        "name": null,
+        "joined_year": null,
+        "state": "SOURCE_SUPPORTED_OFFICE_OR_PROFESSION",
+        "display_scope": "role_register_only_until_named",
+        "sources": [
+          {
+            "path": "docs/j2/J2_ESTABLISHMENT.md",
+            "line": 14,
+            "evidence": "| Orientation | 24 | 1 Head, 1 Deputy, 4 Senior Orientation Officers, 18 Orientation Officers |"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ROLE-58",
+      "name": "Head of Education",
+      "status": "UNNAMED_ROLE",
+      "reason": "No named occupant and joining year established; excluded from people cards.",
+      "sources": [
+        {
+          "path": "docs/j2/EDUCATION.md",
+          "line": 47,
+          "evidence": "The permanent Education establishment is approximately **35 billets**. The permanent core includes the Head of Education, deputy leadership, senior faculty, instructors, exercise and case designers, program/registrar staff, learning operations, and campus/program support."
+        }
+      ],
+      "detail": {
+        "title": "Head of Education",
+        "unit": "J2 Education",
+        "count": 1,
+        "name": null,
+        "joined_year": null,
+        "state": "SOURCE_SUPPORTED_OFFICE_OR_PROFESSION",
+        "display_scope": "role_register_only_until_named",
+        "sources": [
+          {
+            "path": "docs/j2/EDUCATION.md",
+            "line": 47,
+            "evidence": "The permanent Education establishment is approximately **35 billets**. The permanent core includes the Head of Education, deputy leadership, senior faculty, instructors, exercise and case designers, program/registrar staff, learning operations, and campus/program support."
+          }
+        ]
+      }
+    }
+  ],
+  "remaining_open_role_ids": [
+    "ROLE-39",
+    "ROLE-41",
+    "ROLE-50",
+    "ROLE-55"
+  ],
+  "remaining_open": [
+    "Chief of Staff",
+    "Deputy Head of Contact",
+    "Deputy Head of Judgment",
+    "Deputy Head of Orientation",
+    "Other unnamed professional and administrative billets",
+    "Exact appointment histories and personal biographies"
+  ]
+}

@@ -1,6 +1,6 @@
 # Board and Chief Executive
 
-**SH-ORG-PEOPLE-BOARD · 2026-09-09 · v1.0.0**
+**SH-ORG-PEOPLE-BOARD · 2026-09-10 · v1.1.0**
 
 The Board collectively oversees the Chief Executive Officer. No individual director is shown as the CEO's separate manager.
 
