@@ -1,0 +1,126 @@
+{
+  "head_at_start": "d02920ce7684ed8f92c22eec87a05519d59316e7",
+  "context": "Live worktree read-only checks; concurrent source evolution requires final acceptance recheck",
+  "results": [
+    {
+      "name": "current-governance",
+      "command": [
+        "/home/kingoftheeast/Projects/SABLEHARBOR-campus/.venv/bin/python",
+        "scripts/validate_governance_j2.py"
+      ],
+      "exit_code": 0,
+      "seconds": 2.45,
+      "log": "current-governance.log"
+    },
+    {
+      "name": "current-catalog",
+      "command": [
+        "/home/kingoftheeast/Projects/SABLEHARBOR-campus/.venv/bin/python",
+        "scripts/validate_institutional_catalog.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.03,
+      "log": "current-catalog.log"
+    },
+    {
+      "name": "current-organization",
+      "command": [
+        "/home/kingoftheeast/Projects/SABLEHARBOR-campus/.venv/bin/python",
+        "scripts/validate_organization_maps.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5,
+      "log": "current-organization.log"
+    },
+    {
+      "name": "current-hygiene",
+      "command": [
+        "/home/kingoftheeast/Projects/SABLEHARBOR-campus/.venv/bin/python",
+        "scripts/validate_repository_hygiene.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.27,
+      "log": "current-hygiene.log"
+    },
+    {
+      "name": "current-business-records",
+      "command": [
+        "/home/kingoftheeast/Projects/SABLEHARBOR-campus/.venv/bin/python",
+        "scripts/validate_business_records.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.02,
+      "log": "current-business-records.log"
+    },
+    {
+      "name": "current-geospatial",
+      "command": [
+        "/home/kingoftheeast/Projects/SABLEHARBOR-campus/.venv/bin/python",
+        "-c",
+        "import sys,json;sys.path.insert(0,\"geospatial/scripts\");from validate_geospatial import validate;r=validate(write=False);print(json.dumps(r,indent=2));raise SystemExit(0 if r[\"validation_status\"]==\"PASS\" else 1)"
+      ],
+      "exit_code": 0,
+      "seconds": 5.09,
+      "log": "current-geospatial.log"
+    },
+    {
+      "name": "current-ruff",
+      "command": [
+        "/home/kingoftheeast/Projects/SABLEHARBOR-campus/.venv/bin/ruff",
+        "check",
+        "geospatial",
+        "--config",
+        "geospatial/pyproject.toml",
+        "--force-exclude"
+      ],
+      "exit_code": 0,
+      "seconds": 0.02,
+      "log": "current-ruff.log"
+    },
+    {
+      "name": "current-format",
+      "command": [
+        "/home/kingoftheeast/Projects/SABLEHARBOR-campus/.venv/bin/ruff",
+        "format",
+        "geospatial",
+        "--config",
+        "geospatial/pyproject.toml",
+        "--force-exclude",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.02,
+      "log": "current-format.log"
+    },
+    {
+      "name": "current-json",
+      "command": [
+        "/home/kingoftheeast/Projects/SABLEHARBOR-campus/.venv/bin/python",
+        "-c",
+        "import json,subprocess,pathlib;paths=[pathlib.Path(p) for p in subprocess.check_output([\"git\",\"ls-files\"],text=True).splitlines() if p.endswith((\".json\",\".geojson\"))];[json.loads(p.read_text()) for p in paths];print(\"PASS:\",len(paths),\"tracked JSON/GeoJSON files parse\")"
+      ],
+      "exit_code": 0,
+      "seconds": 0.27,
+      "log": "current-json.log"
+    },
+    {
+      "name": "current-services-schema",
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "enterprise.services.model",
+        "validate",
+        "--repository-root",
+        "."
+      ],
+      "exit_code": 0,
+      "log": "current-services-schema.log"
+    },
+    {
+      "name": "current-runtime-schema",
+      "command": "enterprise.runtime.model.validate({name: json.loads((ROOT/path).read_text()) for name,path in FILES.items()})",
+      "exit_code": 0,
+      "log": "current-runtime-schema.log"
+    }
+  ]
+}

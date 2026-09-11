@@ -1,4 +1,6 @@
-# Repository validation evidence
+# Historical pre-R01 repository validation evidence
+
+**Historical scope only:** this report predates the recovered four-building R01 campus and accepted runtime-main integration. Its results do not certify current R02 artifacts. Use [R02 current-main validation](R02_CURRENT_MAIN_VALIDATION.md) for current source-bound results and outstanding final gates. Original results below are preserved unchanged.
 
 Local checks use the repository `.venv` Python 3.12.14. These are local results, **not GitHub CI or merge-gate claims**. Initial read-only checks ran in detached temporary checkout `3480665b2d317b3de74e455158f58ed46d09da70`; publication and industrial builds ran separately at `775d657`. All build output remained in temporary worktrees, apart from the deliberately retained logs below. The integration checkout continued developing independently; final committed-source acceptance also ran from clean checkout `e44b3e3`, as recorded in [final gate results](repo-validation/final-gate-results.json).
 

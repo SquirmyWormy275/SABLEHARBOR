@@ -1,0 +1,37 @@
+Building runtime successor from retained operations and industrial sources
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+INFO  [alembic.runtime.migration] Running upgrade  -> 0004, Frozen explicit enterprise schema baseline through revision 0004.
+INFO  [alembic.runtime.migration] Running upgrade 0004 -> 0005, Tie generated journals and scenario values to an explicit generation run.
+INFO  [alembic.runtime.migration] Running upgrade 0005 -> 0006, Add common-actual run scope and run-aware scenario-value uniqueness.
+INFO  [alembic.runtime.migration] Running upgrade 0006 -> 0007, Add generation-run ownership to scenario-dependent operational facts.
+INFO  [alembic.runtime.migration] Running upgrade 0007 -> 0008, Persist reproducible generation build and actual-dataset identity.
+INFO  [alembic.runtime.migration] Running upgrade 0008 -> 0009, Persist content-addressed generation input and build identity.
+INFO  [alembic.runtime.migration] Running upgrade 0009 -> 0010, Scope generated natural keys to their owning generation run.
+INFO  [alembic.runtime.migration] Running upgrade 0010 -> 0011, Enforce generation ownership, lifecycle, and same-run relationships.
+INFO  [alembic.runtime.migration] Running upgrade 0011 -> 0012, Add run-scoped accounting period close state.
+INFO  [alembic.runtime.migration] Running upgrade 0012 -> 0013, Widen scenario-value period codes for explicit cutoff markers.
+INFO  [alembic.runtime.migration] Running upgrade 0013 -> 0014, Add explicit run-owned debt repayments.
+INFO  [alembic.runtime.migration] Running upgrade 0014 -> 0015, Enforce ledger integrity and freeze completed-run evidence.
+{
+  "source_revision": "237778db5156ab301804e565397312e96dbcb7a8",
+  "runtime_source_sha256": "805f7415d244641dc15ef3f66f34673ec41aeb842eccb975ff7ce7aa0069f471",
+  "dirty_development_build": false,
+  "classification": "SYNTHETIC_SUCCESSOR_NOT_REAL_PAYMENTS",
+  "land": {
+    "scenarios": [
+      "base",
+      "downside",
+      "expansion"
+    ],
+    "balanced_land_adjustment": "3000000.0000",
+    "cash_paid": "0.0000",
+    "settlement": "UNRESOLVED_NOT_VENDOR_FINANCING"
+  },
+  "limitations": [
+    "Settlement clearing is unresolved, not vendor financing.",
+    "Future expenses and IT acceptance are conditional scenarios, not actual occupied employees or operations.",
+    "Construction remains CIP; no building/plant in-service event is fabricated.",
+    "Runtime delayed-build sensitivity is separate from the three consolidated enterprise scenarios."
+  ]
+}

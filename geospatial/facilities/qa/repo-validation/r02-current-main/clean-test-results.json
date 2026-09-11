@@ -1,0 +1,38 @@
+{
+  "source_commit": "237778db5156ab301804e565397312e96dbcb7a8",
+  "clean_checkout": "/tmp/sable-r02-main-validation-237778d",
+  "results": [
+    {
+      "name": "root-tests",
+      "command": [
+        "/home/kingoftheeast/Projects/SABLEHARBOR-campus/.venv/bin/python",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "exit_code": 0,
+      "seconds": 194.21,
+      "log": "facilities/qa/repo-validation/r02-current-main/root-tests.log"
+    },
+    {
+      "name": "enterprise-industrial-runtime-tests",
+      "command": [
+        "/home/kingoftheeast/Projects/SABLEHARBOR-campus/.venv/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "enterprise/operations/tests",
+        "enterprise/business/tests",
+        "industrial/planning/tests",
+        "enterprise/runtime/tests",
+        "enterprise/services/tests",
+        "industrial/tests",
+        "red_wash/tests",
+        "geospatial/tests"
+      ],
+      "exit_code": 2,
+      "seconds": 0.66,
+      "log": "facilities/qa/repo-validation/r02-current-main/enterprise-industrial-runtime-tests.log"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "services": 57,
+  "components": 49,
+  "dependencies": 49,
+  "named_counterparties": 6,
+  "workload_classes": 6,
+  "repository_sources_checked": [
+    "docs/canon/THIRD_PARTY_SERVICES_SOURCING_DECISIONS_2026-09-09.md",
+    "docs/internal/development/THIRD_PARTY_SERVICES_RECONCILIATION_2026-09-09.md",
+    "docs/internal/development/THIRD_PARTY_SERVICES_ASSESSMENT_2026-09-09.md",
+    "docs/internal/development/THIRD_PARTY_SERVICES_BUILD_PLAN_2026-09-09.md",
+    "docs/governance/ENTERPRISE_TECHNOLOGY_SERVICES_DOCTRINE.md",
+    "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
+    "docs/j2/EDUCATION.md",
+    "docs/controls/COMMON_CONTROL_CATALOG_v0.1.md",
+    "docs/structured/business-lines/register.json",
+    "enterprise/business/source/policy.json",
+    "enterprise/business/source/assets.json",
+    "enterprise/business/source/contracts.json",
+    "geospatial/registers/SITE_REGISTER.csv",
+    "docs/canon/THIRD_PARTY_SERVICES_IMPLEMENTATION_SCOPE_2026-09-09.md"
+  ]
+}
