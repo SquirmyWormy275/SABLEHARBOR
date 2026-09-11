@@ -213,6 +213,8 @@ def main():
             if m.get("site_id") == sid:
                 parent = m.get("floor_id") or m.get("building_id") or sid
                 edge(parent, m["id"])
+            if sid in m.get("related_site_ids", []):
+                edge(sid, m["id"])
     coverage_links = []
     for r in coverage["records"]:
         cid = "coverage:" + r["id"]
@@ -329,6 +331,17 @@ def main():
                 "<p>Context: "
                 + " · ".join(
                     f'<a href="#map-{esc(mid)}">{esc(map_by_id[mid]["title"])}</a>' for mid in ctx
+                )
+                + "</p>"
+            )
+        related = [
+            m for m in current if sid in m.get("related_site_ids", []) and m.get("site_id") != sid
+        ]
+        if related:
+            out.append(
+                "<p>Shared runtime context: "
+                + " · ".join(
+                    f'<a href="#map-{esc(m["id"])}">{esc(m["title"])}</a>' for m in related
                 )
                 + "</p>"
             )
@@ -533,6 +546,8 @@ def main():
             bm = [m for m in current if m.get("building_id") == b["id"] and not m.get("floor_id")]
             if bm:
                 append_map(bm[0], 2, b["name"])
+                for extra_map in bm[1:]:
+                    append_map(extra_map, 3)
             else:
                 toc.append([2, b["name"], len(doc) + 1])
             for f in b["floors"]:

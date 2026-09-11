@@ -701,6 +701,14 @@ def validate_runtime(data, coverage_ids, artifacts=True):
         if sid in {"SH-SITE-0028", "SH-SITE-0029"}:
             if site.get("buildings") or not site.get("floor_exemption"):
                 errors.append("provider context must retain explicit floor exemption " + sid)
+        if sid == "SH-SITE-0030":
+            buildings = site.get("buildings", [])
+            if (
+                len(buildings) != 1
+                or buildings[0].get("id") != "SH-SITE-0030-B01"
+                or [f["id"] for f in buildings[0].get("floors", [])] != ["SH-SITE-0030-B01-L01"]
+            ):
+                errors.append("runtime owned building/floor census mismatch")
         for building in site.get("buildings", []):
             if not building.get("floors"):
                 errors.append("runtime building lacks required floor " + building["id"])
@@ -787,6 +795,13 @@ def validate_graph(data, models, coverage_records):
                     }
                     if not {".svg", ".png", ".pdf"} <= formats:
                         errors.append("floor atlas lacks independent formats " + floor["id"])
+    if RUNTIME.is_file():
+        for runtime_map in json.loads(RUNTIME.read_text())["maps"]:
+            mid = runtime_map["id"]
+            expected.add(mid)
+            for site_id in runtime_map.get("related_site_ids", []):
+                if (site_id, mid) not in edges:
+                    errors.append("missing shared runtime context edge " + site_id + "/" + mid)
     expected.update("coverage:" + r["id"] for r in coverage_records)
     if expected - nodes.keys():
         errors.append("missing expected atlas nodes " + str(sorted(expected - nodes.keys())))
