@@ -1,0 +1,53 @@
+name: Operating review preparation (not release acceptance)
+
+on:
+  pull_request:
+    paths:
+      - enterprise/operations/**
+      - .github/workflows/operations-review-preparation.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: operating-review-preparation-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          fetch-depth: 0
+      - name: Snapshot tracked sources for independent review
+        run: |
+          mkdir -p /tmp/operating-review-source
+          git archive --format=tar HEAD | gzip -n > /tmp/operating-review-source/source.tar.gz
+          git rev-parse HEAD > /tmp/operating-review-source/SOURCE_REVISION.txt
+          cd /tmp/operating-review-source
+          sha256sum source.tar.gz > SHA256SUMS.txt
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: operating-review-source
+          path: /tmp/operating-review-source/
+          retention-days: 7
+          if-no-files-found: error
+      - uses: astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d
+        with:
+          version: "0.12.4"
+          python-version: "3.12"
+      - run: uv sync --frozen --all-extras
+      - name: Prepare candidate inputs without release clearance
+        run: uv run python -m enterprise.operations.build --allow-working-tree --prepare-review --skip-package
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: operating-review-candidate-inputs
+          path: |
+            enterprise/generated/operations-v1/review_inputs.json
+            enterprise/generated/operations-v1/identity.json
+            enterprise/generated/operations-v1/validation.json
+          retention-days: 7
+          if-no-files-found: error
