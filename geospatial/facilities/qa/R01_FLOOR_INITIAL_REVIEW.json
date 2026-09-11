@@ -102,5 +102,16 @@
     "Approved floor gross areas and main desk/capacity headlines retained",
     "Actual occupancy distinguished from scenario workplaces and J2 authorized billets"
   ],
-  "review_notes": "Original approved PNGs remain unchanged. Current rendered planning peaks112/68/128 are not compared as employee census. Source door coordinates require correction where public/staff access contradicts original."
+  "review_notes": "Original approved PNGs remain unchanged. Current rendered planning peaks112/68/128 are not compared as employee census. Source door coordinates require correction where public/staff access contradicts original.",
+  "source_correction": {
+    "commit": "d112a40",
+    "state": "SOURCE_CORRECTED_PENDING_RENDER_REVIEW",
+    "primary_room_doors_checked": 155,
+    "checks": [
+      "Every primary door lies on its room boundary",
+      "Every primary room.door matches a floor.doors entry",
+      "All room geometries and capacities, building footprints, floor gross areas and peaks preserved"
+    ],
+    "scope": "Source access topology, concise display fields and design-note/legend sources; renderer furniture corrections remain parent-owned. Residence core repartition is explicit modelled planning correction preserving combined520sqft."
+  }
 }
