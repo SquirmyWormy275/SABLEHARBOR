@@ -532,6 +532,436 @@
       "map_id": "SH-MAP-RUN-012",
       "status": "LINKED_ACCEPTED_RUNTIME_PUBLICATION",
       "source_manifest": "enterprise/runtime/visuals/manifest.json"
+    },
+    {
+      "logical_id": "SH-SITE-0001-A::sections",
+      "map_id": "SH-MAP-SAC-037_sections",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-SITE-0001-A::elevations",
+      "map_id": "SH-MAP-SAC-038_elevations",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-SITE-0001-A::roof",
+      "map_id": "SH-MAP-SAC-039_roof",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-SITE-0001-A-L01::schedule",
+      "map_id": "SH-MAP-SAC-040_schedule",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-SITE-0001-A-L01::access",
+      "map_id": "SH-MAP-SAC-041_access",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-SITE-0001-A-L02::schedule",
+      "map_id": "SH-MAP-SAC-042_schedule",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-SITE-0001-A-L02::access",
+      "map_id": "SH-MAP-SAC-043_access",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-SITE-0001-A-L03::schedule",
+      "map_id": "SH-MAP-SAC-044_schedule",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-SITE-0001-A-L03::access",
+      "map_id": "SH-MAP-SAC-045_access",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-SITE-0001-B::sections",
+      "map_id": "SH-MAP-SAC-046_sections",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-SITE-0001-B::elevations",
+      "map_id": "SH-MAP-SAC-047_elevations",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-SITE-0001-B::roof",
+      "map_id": "SH-MAP-SAC-048_roof",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-SITE-0001-B-L01::schedule",
+      "map_id": "SH-MAP-SAC-049_schedule",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-SITE-0001-B-L01::access",
+      "map_id": "SH-MAP-SAC-050_access",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-SITE-0001-B-L02::schedule",
+      "map_id": "SH-MAP-SAC-051_schedule",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-SITE-0001-B-L02::access",
+      "map_id": "SH-MAP-SAC-052_access",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-SITE-0001-C::sections",
+      "map_id": "SH-MAP-SAC-053_sections",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-SITE-0001-C::elevations",
+      "map_id": "SH-MAP-SAC-054_elevations",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-SITE-0001-C::roof",
+      "map_id": "SH-MAP-SAC-055_roof",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-SITE-0001-C-L01::schedule",
+      "map_id": "SH-MAP-SAC-056_schedule",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-SITE-0001-C-L01::access",
+      "map_id": "SH-MAP-SAC-057_access",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-SITE-0001-C-L02::schedule",
+      "map_id": "SH-MAP-SAC-058_schedule",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-SITE-0001-D::sections",
+      "map_id": "SH-MAP-SAC-059_sections",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-SITE-0001-D::elevations",
+      "map_id": "SH-MAP-SAC-060_elevations",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-SITE-0001-D::roof",
+      "map_id": "SH-MAP-SAC-061_roof",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-SITE-0001-D-L01::schedule",
+      "map_id": "SH-MAP-SAC-062_schedule",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-SITE-0001-D-L02::schedule",
+      "map_id": "SH-MAP-SAC-063_schedule",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-SITE-0001-D-L03::schedule",
+      "map_id": "SH-MAP-SAC-064_schedule",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-SITE-0001::enhanced-context",
+      "map_id": "SH-MAP-SAC-065_enhanced-context",
+      "status": "REAL_REFERENCE_CONTEXT"
+    },
+    {
+      "logical_id": "SH-IND-FAC-TAY-YARD-B01::sections",
+      "map_id": "SH-MAP-ARU-043_sections",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-IND-FAC-TAY-YARD-B01::elevations",
+      "map_id": "SH-MAP-ARU-044_elevations",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-IND-FAC-TAY-YARD-B01::roof",
+      "map_id": "SH-MAP-ARU-045_roof",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-IND-FAC-TAY-YARD-B01-L01::schedule",
+      "map_id": "SH-MAP-ARU-046_schedule",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-IND-FAC-TAY-YARD-B02::sections",
+      "map_id": "SH-MAP-ARU-047_sections",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-IND-FAC-TAY-YARD-B02::elevations",
+      "map_id": "SH-MAP-ARU-048_elevations",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-IND-FAC-TAY-YARD-B02::roof",
+      "map_id": "SH-MAP-ARU-049_roof",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-IND-FAC-TAY-YARD-B02-L01::schedule",
+      "map_id": "SH-MAP-ARU-050_schedule",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-IND-FAC-TAY-WAREHOUSE-B01::sections",
+      "map_id": "SH-MAP-ARU-051_sections",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-IND-FAC-TAY-WAREHOUSE-B01::elevations",
+      "map_id": "SH-MAP-ARU-052_elevations",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-IND-FAC-TAY-WAREHOUSE-B01::roof",
+      "map_id": "SH-MAP-ARU-053_roof",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-IND-FAC-TAY-WAREHOUSE-B01-L01::schedule",
+      "map_id": "SH-MAP-ARU-054_schedule",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-IND-FAC-TAY-TRUCK-B01::sections",
+      "map_id": "SH-MAP-ARU-055_sections",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-IND-FAC-TAY-TRUCK-B01::elevations",
+      "map_id": "SH-MAP-ARU-056_elevations",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-IND-FAC-TAY-TRUCK-B01::roof",
+      "map_id": "SH-MAP-ARU-057_roof",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-IND-FAC-TAY-TRUCK-B01-L01::schedule",
+      "map_id": "SH-MAP-ARU-058_schedule",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-IND-FAC-RAW-WAREHOUSE-B01::sections",
+      "map_id": "SH-MAP-ARU-059_sections",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-IND-FAC-RAW-WAREHOUSE-B01::elevations",
+      "map_id": "SH-MAP-ARU-060_elevations",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-IND-FAC-RAW-WAREHOUSE-B01::roof",
+      "map_id": "SH-MAP-ARU-061_roof",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-IND-FAC-RAW-WAREHOUSE-B01-L01::schedule",
+      "map_id": "SH-MAP-ARU-062_schedule",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-IND-FAC-ARU-OFFICE-B01::sections",
+      "map_id": "SH-MAP-ARU-063_sections",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-IND-FAC-ARU-OFFICE-B01::elevations",
+      "map_id": "SH-MAP-ARU-064_elevations",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-IND-FAC-ARU-OFFICE-B01::roof",
+      "map_id": "SH-MAP-ARU-065_roof",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-IND-FAC-ARU-OFFICE-B01-L01::schedule",
+      "map_id": "SH-MAP-ARU-066_schedule",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-FAC-FORT-BIG::sections",
+      "map_id": "SH-MAP-WIL-028_sections",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-FAC-FORT-BIG::elevations",
+      "map_id": "SH-MAP-WIL-029_elevations",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-FAC-FORT-BIG::roof",
+      "map_id": "SH-MAP-WIL-030_roof",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-FAC-FORT-BIG-L01::schedule",
+      "map_id": "SH-MAP-WIL-031_schedule",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-FAC-FORT-SMALL::sections",
+      "map_id": "SH-MAP-WIL-032_sections",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-FAC-FORT-SMALL::elevations",
+      "map_id": "SH-MAP-WIL-033_elevations",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-FAC-FORT-SMALL::roof",
+      "map_id": "SH-MAP-WIL-034_roof",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-FAC-FORT-SMALL-L01::schedule",
+      "map_id": "SH-MAP-WIL-035_schedule",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-FAC-FORT-SMALL-L02::schedule",
+      "map_id": "SH-MAP-WIL-036_schedule",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-FAC-FORT-WHITE::sections",
+      "map_id": "SH-MAP-WIL-037_sections",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-FAC-FORT-WHITE::elevations",
+      "map_id": "SH-MAP-WIL-038_elevations",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-FAC-FORT-WHITE::roof",
+      "map_id": "SH-MAP-WIL-039_roof",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-FAC-FORT-WHITE-L01::schedule",
+      "map_id": "SH-MAP-WIL-040_schedule",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-SITE-0005-B01::sections",
+      "map_id": "SH-MAP-CRD-029_sections",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-SITE-0005-B01::elevations",
+      "map_id": "SH-MAP-CRD-030_elevations",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-SITE-0005-B01::roof",
+      "map_id": "SH-MAP-CRD-031_roof",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-SITE-0005-B01-L01::schedule",
+      "map_id": "SH-MAP-CRD-032_schedule",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-SITE-0005-B02::sections",
+      "map_id": "SH-MAP-CRD-033_sections",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-SITE-0005-B02::elevations",
+      "map_id": "SH-MAP-CRD-034_elevations",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-SITE-0005-B02::roof",
+      "map_id": "SH-MAP-CRD-035_roof",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-SITE-0005-B02-L01::schedule",
+      "map_id": "SH-MAP-CRD-036_schedule",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-SITE-0005-B03::sections",
+      "map_id": "SH-MAP-CRD-037_sections",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-SITE-0005-B03::elevations",
+      "map_id": "SH-MAP-CRD-038_elevations",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-SITE-0005-B03::roof",
+      "map_id": "SH-MAP-CRD-039_roof",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-SITE-0005-B03-L01::schedule",
+      "map_id": "SH-MAP-CRD-040_schedule",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-SITE-0005-B04::sections",
+      "map_id": "SH-MAP-CRD-041_sections",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-SITE-0005-B04::elevations",
+      "map_id": "SH-MAP-CRD-042_elevations",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-SITE-0005-B04::roof",
+      "map_id": "SH-MAP-CRD-043_roof",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-SITE-0005-B04-L01::schedule",
+      "map_id": "SH-MAP-CRD-044_schedule",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-SITE-0030-B01::sections",
+      "map_id": "SH-MAP-RUN-013_sections",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-SITE-0030-B01::elevations",
+      "map_id": "SH-MAP-RUN-014_elevations",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-SITE-0030-B01::roof",
+      "map_id": "SH-MAP-RUN-015_roof",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
+    },
+    {
+      "logical_id": "SH-SITE-0030-B01-L01::schedule",
+      "map_id": "SH-MAP-RUN-016_schedule",
+      "status": "MODELLED_SPATIAL_ADDENDUM"
     }
   ]
 }

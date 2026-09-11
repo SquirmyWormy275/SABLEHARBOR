@@ -1,0 +1,32 @@
+{
+  "revision": "1.0.0",
+  "record_id": "SH-SPATIAL-ASSUMPTIONS-001",
+  "status": "MODELLED_ARCHITECTURAL_STUDY_NOT_ENGINEERED",
+  "authority": "Owner-authorized spatial-quality extension after PR124; accepted plan geometry remains authoritative. These assumptions define derivatives, not actual construction.",
+  "source_base": "ff5cd67ff980790413f7bfbf0829b47d20d266a3",
+  "coordinate_frame": "metres; x east, y north, z up; site-local models have no geographic transform",
+  "slab_thickness_m": 0.3,
+  "parapet_height_m": 0.8,
+  "facade_target_bay_m": 6.0,
+  "facade_glazing_sill_m": 1.0,
+  "facade_glazing_head_clearance_m": 0.7,
+  "materials": {
+    "institutional": {
+      "wall": "#a9aca7",
+      "glass": "#67818b",
+      "roof": "#626d70",
+      "description": "Restrained light precast/stone-toned concept envelope with recessed glazing; material specification unselected."
+    },
+    "industrial": {
+      "wall": "#879397",
+      "glass": "#657e88",
+      "roof": "#59666b",
+      "description": "Durable metal/concrete-toned concept envelope; structural bays and installed plant unengineered."
+    }
+  },
+  "runtime_owned_floor_height_m": 6.0,
+  "runtime_owned_height_basis": "SP-HEIGHT-RUN-001: six-metre visual study only; accepted runtime source does not establish building height.",
+  "roof_basis": "Flat roof/slab/parapet study only. Falls, drainage, waterproofing, loading, safe access and plant are unengineered. No rooftop equipment is asserted.",
+  "fenestration_basis": "Rhythm derived from footprint and source floor levels; proposed openings avoid explicit perimeter cores. It is not recovered facade geometry.",
+  "partition_basis": "Only explicit Sacramento room partitions are shown as architectural rooms. Other room rectangles are program zones; unknown walls, cores and equipment are not extruded as installed construction."
+}
