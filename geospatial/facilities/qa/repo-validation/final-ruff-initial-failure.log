@@ -1,0 +1,17 @@
+unformatted: File would be reformatted
+   --> geospatial/facilities/atlas.py:94:1
+    |
+93  |
+94  +
+95  | def main():
+--------------------------------------------------------------------------------
+396 |         rc = p.insert_textbox(
+    -             fitz.Rect(30, y, 810, y + height), pdf_text("\n".join(lines)), fontsize=9, lineheight=1.2
+397 +             fitz.Rect(30, y, 810, y + height),
+398 +             pdf_text("\n".join(lines)),
+399 +             fontsize=9,
+400 +             lineheight=1.2,
+401 |         )
+    |
+
+1 file would be reformatted, 61 files already formatted

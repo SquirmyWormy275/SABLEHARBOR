@@ -1,0 +1,115 @@
+unformatted: File would be reformatted
+  --> geospatial/facilities/qa/R01_build_comparison.py:2:1
+   |
+1  | """Build full-resolution analytical comparison surfaces; never edit R01 references."""
+2  +
+3  | from pathlib import Path
+--------------------------------------------------------------------------------
+7  | ROOT = Path(__file__).resolve().parents[3]
+   - REF = ROOT / 'docs/facilities/references/sacramento-hq/r01-approved'
+8  + REF = ROOT / "docs/facilities/references/sacramento-hq/r01-approved"
+9  | OUT = Path(__file__).resolve().parent
+10 | parser = argparse.ArgumentParser()
+   - parser.add_argument('successor')
+11 + parser.add_argument("successor")
+12 | args = parser.parse_args()
+   - new = Image.open(args.successor).convert('RGB')
+13 + new = Image.open(args.successor).convert("RGB")
+14 | assert new.size == (3240, 2304)
+   - for i, ref in enumerate(sorted(REF.glob('*.png')), 1):
+   -     original = Image.open(ref).convert('RGB')
+   -     side = Image.new('RGB', (6480, 2304), 'white')
+15 + for i, ref in enumerate(sorted(REF.glob("*.png")), 1):
+16 +     original = Image.open(ref).convert("RGB")
+17 +     side = Image.new("RGB", (6480, 2304), "white")
+18 |     side.paste(original, (0, 0))
+19 |     side.paste(new, (3240, 0))
+   -     side.save(OUT / f'R01_FIRST_COMPARISON_{i:02d}.png')
+20 +     side.save(OUT / f"R01_FIRST_COMPARISON_{i:02d}.png")
+21 |     if i == 1:
+   -         Image.blend(original, new, 0.5).save(OUT / 'R01_FIRST_MASTER_OVERLAY.png')
+22 +         Image.blend(original, new, 0.5).save(OUT / "R01_FIRST_MASTER_OVERLAY.png")
+   |
+
+unformatted: File would be reformatted
+  --> geospatial/facilities/qa/R01_verify_floor_artifacts.py:2:1
+   |
+1  | """Render independent QA copies; never modify authoritative map artifacts."""
+2  +
+3  | import hashlib
+--------------------------------------------------------------------------------
+10 | ROOT = Path(__file__).resolve().parents[3]
+   - os.environ['FONTCONFIG_FILE'] = str(ROOT / 'geospatial/facilities/fonts/fonts.conf')
+11 + os.environ["FONTCONFIG_FILE"] = str(ROOT / "geospatial/facilities/fonts/fonts.conf")
+12 | import cairosvg
+--------------------------------------------------------------------------------
+16 |
+   - OUTPUT = Path('/tmp/sable-r02-final-floor-qa')
+17 + OUTPUT = Path("/tmp/sable-r02-final-floor-qa")
+18 | OUTPUT.mkdir(exist_ok=True)
+19 | results = []
+20 | for number in [24, 25, 26, 28, 29, 31, 32, 34, 35, 36]:
+   -     identifier = f'SH-MAP-SAC-{number:03}'
+   -     base = ROOT / 'geospatial/maps/facilities'
+   -     paths = {ext: base / f'{identifier}.{ext}' for ext in ['svg', 'png', 'pdf']}
+   -     ET.parse(paths['svg'])
+   -     expected = np.array(Image.open(paths['png']).convert('RGB'))
+   -     rendered = cairosvg.svg2png(url=str(paths['svg']))
+   -     actual = np.array(Image.open(io.BytesIO(rendered)).convert('RGB'))
+21 +     identifier = f"SH-MAP-SAC-{number:03}"
+22 +     base = ROOT / "geospatial/maps/facilities"
+23 +     paths = {ext: base / f"{identifier}.{ext}" for ext in ["svg", "png", "pdf"]}
+24 +     ET.parse(paths["svg"])
+25 +     expected = np.array(Image.open(paths["png"]).convert("RGB"))
+26 +     rendered = cairosvg.svg2png(url=str(paths["svg"]))
+27 +     actual = np.array(Image.open(io.BytesIO(rendered)).convert("RGB"))
+28 |     assert expected.shape == actual.shape == (2304, 3240, 3)
+   -     assert np.array_equal(expected, actual), identifier + ' SVG/PNG pixels differ'
+   -     pdf = fitz.open(paths['pdf'])
+29 +     assert np.array_equal(expected, actual), identifier + " SVG/PNG pixels differ"
+30 +     pdf = fitz.open(paths["pdf"])
+31 |     assert len(pdf) == 1
+32 |     page = pdf[0]
+33 |     pix = page.get_pixmap(matrix=fitz.Matrix(3240 / page.rect.width, 2304 / page.rect.height))
+   -     pix.save(OUTPUT / f'{identifier}.png')
+34 +     pix.save(OUTPUT / f"{identifier}.png")
+35 |     pdf_array = np.frombuffer(pix.samples, dtype=np.uint8).reshape(2304, 3240, 3)
+36 |     delta = np.abs(expected.astype(np.int16) - pdf_array.astype(np.int16))
+   -     results.append({
+   -         'id': identifier,
+   -         'hashes': {ext: hashlib.sha256(path.read_bytes()).hexdigest() for ext, path in paths.items()},
+   -         'svg_png_pixel_identity': True,
+   -         'pdf_pages': 1,
+   -         'pdf_png_mean_absolute_channel_difference': round(float(delta.mean()), 5),
+   -         'pdf_raster_path': str(OUTPUT / f'{identifier}.png'),
+   -     })
+   - (OUTPUT / 'checks.json').write_text(json.dumps(results, indent=2) + '\n')
+   - print(json.dumps({'floors': len(results), 'svg_png_pixel_identity': 'PASS', 'pdf_render': 'PASS', 'max_pdf_channel_mae': max(r['pdf_png_mean_absolute_channel_difference'] for r in results)}))
+37 +     results.append(
+38 +         {
+39 +             "id": identifier,
+40 +             "hashes": {
+41 +                 ext: hashlib.sha256(path.read_bytes()).hexdigest() for ext, path in paths.items()
+42 +             },
+43 +             "svg_png_pixel_identity": True,
+44 +             "pdf_pages": 1,
+45 +             "pdf_png_mean_absolute_channel_difference": round(float(delta.mean()), 5),
+46 +             "pdf_raster_path": str(OUTPUT / f"{identifier}.png"),
+47 +         }
+48 +     )
+49 + (OUTPUT / "checks.json").write_text(json.dumps(results, indent=2) + "\n")
+50 + print(
+51 +     json.dumps(
+52 +         {
+53 +             "floors": len(results),
+54 +             "svg_png_pixel_identity": "PASS",
+55 +             "pdf_render": "PASS",
+56 +             "max_pdf_channel_mae": max(
+57 +                 r["pdf_png_mean_absolute_channel_difference"] for r in results
+58 +             ),
+59 +         }
+60 +     )
+61 + )
+   |
+
+2 files would be reformatted, 73 files already formatted

@@ -1,0 +1,25 @@
+name: Facility program and atlas
+on:
+  pull_request:
+    paths: ['geospatial/**', 'industrial/source/**', 'docs/organization/source/**', 'enterprise/services/source/**', 'enterprise/runtime/**', 'docs/facilities/references/**', '.github/workflows/facility-atlas.yml']
+  push:
+    branches: [main]
+    paths: ['geospatial/**', 'industrial/source/**', 'docs/organization/source/**', 'enterprise/services/source/**', 'enterprise/runtime/**', 'docs/facilities/references/**']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install PyMuPDF Pillow pytest
+      - name: Coverage, population, geometry, capacity and publication links
+        run: python geospatial/facilities/validate.py --check --require-atlas
+      - name: Acceptance regression mutations
+        run: python -m pytest -q geospatial/facilities/test_facilities.py geospatial/facilities/coverage/test_coverage.py geospatial/facilities/population/test_population.py
+      - name: Generated checks leave committed source and manifests unchanged
+        run: git diff --exit-code -- geospatial/facilities geospatial/maps/facilities

@@ -1,0 +1,792 @@
+{
+  "status": "SECOND_PASS_INTERIM_FINDINGS_NOT_FINAL_ACCEPTANCE",
+  "date": "2026-09-11",
+  "method": "All62 sheets independently PDF-rendered and individually visually inspected at1600\u00d71000. SVG/PNG equality checked for unchanged reviewed snapshots. Exact per-artifact hashes fix evidence despite concurrent regeneration.",
+  "counts": {
+    "sacramento": 20,
+    "research": 17,
+    "industrial": 25,
+    "total_sheets": 62
+  },
+  "reviewed_manifest_sources": {
+    "geospatial/facilities/source/campus.json": "c87023de378df86625e1714ac9755da3bb92d271235c1965583882856cafdbac",
+    "geospatial/facilities/source/industrial_facilities.json": "0f6c2f174b1470db63dd5b415d445b14c38c6d8cae81be738a5399769821b817",
+    "geospatial/facilities/source/research_campuses.json": "edcf091212a11ace32ee57594dc367d6f18a0b6e60cf964595aa4861cc9b9e9d"
+  },
+  "reviewed_generator_sha256": "2c55405f870d25e555dd22c0d7ea653c26d118c4112fc9b0705a154f0ad78596",
+  "sheets": [
+    {
+      "id": "SH-MAP-SAC-002",
+      "artifacts": {
+        "pdf": "a2179543d2b13930d3866619a168256468ba8b2be04a18f9fa619b21cf69dc8c",
+        "svg": "398a418cbcd194a795bfc79c6eeb5db97d76d65fe3549f0536dd2db1b0dc4ebe",
+        "png": "39eb8784c3399026b391435ca3dd8bad27aeb5a02f566f33e6d37a34a08f80fa"
+      },
+      "pdf_pages": 1,
+      "svg_raster_matches_png": true,
+      "svg_xml_parse": "{http://www.w3.org/2000/svg}svg",
+      "reviewed_snapshot_still_current_at_report": false,
+      "manual_pdf_review": "INDIVIDUALLY_INSPECTED_1600x1000"
+    },
+    {
+      "id": "SH-MAP-SAC-003",
+      "artifacts": {
+        "pdf": "eaa261ba47c2ed1519c9f3513ccb18874b31ad90a2bb54907afd76f4ea2c6c6e",
+        "svg": "5bf08519c69c13afe95d29fcad3e35a730e0f2560c339f9ccde33582b6c3c560",
+        "png": "b06ed189fd677d1f5ff7de00090b0e92d821338c74484746750102fb7beda463"
+      },
+      "pdf_pages": 1,
+      "svg_raster_matches_png": true,
+      "svg_xml_parse": "{http://www.w3.org/2000/svg}svg",
+      "reviewed_snapshot_still_current_at_report": false,
+      "manual_pdf_review": "INDIVIDUALLY_INSPECTED_1600x1000"
+    },
+    {
+      "id": "SH-MAP-SAC-004",
+      "artifacts": {
+        "pdf": "9fe192d17660358ddb656df8941224778b5e88e52f651907953c85c12e35f4cc",
+        "svg": "c9cf2b19e6104c67e2e60aa444b064669adf8c52b89a8f8111fede8c0d657371",
+        "png": "b58863b49710310d5bca30175cb8a5671b7c23e32efc73338ab56e5481739489"
+      },
+      "pdf_pages": 1,
+      "svg_raster_matches_png": true,
+      "svg_xml_parse": "{http://www.w3.org/2000/svg}svg",
+      "reviewed_snapshot_still_current_at_report": true,
+      "svg_parsed": "{http://www.w3.org/2000/svg}svg",
+      "manual_pdf_review": "INDIVIDUALLY_INSPECTED_1600x1000"
+    },
+    {
+      "id": "SH-MAP-SAC-005",
+      "artifacts": {
+        "pdf": "17c0ee093048b2143061e715ad0c04580f7f53fa5250f255bddf3dd213ba9160",
+        "svg": "997f1e11cf5869bede0fbf9e6b8e63be6754442fb4b36658f716d40f0b976af5",
+        "png": "b6ae1f4caf2eb31aa8dc8c1edc90ecdaf868298eefcc2eaddc55c75db3636c51"
+      },
+      "pdf_pages": 1,
+      "svg_raster_matches_png": true,
+      "svg_xml_parse": "{http://www.w3.org/2000/svg}svg",
+      "reviewed_snapshot_still_current_at_report": false,
+      "manual_pdf_review": "INDIVIDUALLY_INSPECTED_1600x1000"
+    },
+    {
+      "id": "SH-MAP-SAC-006",
+      "artifacts": {
+        "pdf": "0cbc0b8fe44935ebd6c7db9475f0b6315e05d56e369d6b23888143cbe6e03d53",
+        "svg": "b98c597ae7a74e2f837e64b4ae9508145e9cf1a1a40e56d07ed6bf0cc9bb4e27",
+        "png": "1b86341b4d9cb931103fb4911540a70905dccc17c69b1d95c370b87ef3fa208e"
+      },
+      "pdf_pages": 1,
+      "svg_raster_matches_png": true,
+      "svg_xml_parse": "{http://www.w3.org/2000/svg}svg",
+      "reviewed_snapshot_still_current_at_report": false,
+      "manual_pdf_review": "INDIVIDUALLY_INSPECTED_1600x1000"
+    },
+    {
+      "id": "SH-MAP-SAC-007",
+      "artifacts": {
+        "pdf": "72db4615bb737463342fda7a7dbd006780bc8d2d06fd6b4779582c9678b47a8b",
+        "svg": "89921df78a441529cb8685bd6912d9ab547ae857060d590a752dd77f1d37a045",
+        "png": "dca61a05b924182f565a5809ee37e8b227937a4c22b1e1e8e41b0c909c1d71a5"
+      },
+      "pdf_pages": 1,
+      "svg_raster_matches_png": true,
+      "svg_xml_parse": "{http://www.w3.org/2000/svg}svg",
+      "reviewed_snapshot_still_current_at_report": true,
+      "svg_parsed": "{http://www.w3.org/2000/svg}svg",
+      "manual_pdf_review": "INDIVIDUALLY_INSPECTED_1600x1000"
+    },
+    {
+      "id": "SH-MAP-SAC-008",
+      "artifacts": {
+        "pdf": "361231a97e990ebd39de511e255154dd991fc8f0b622e625a91d62c59d5898da",
+        "svg": "fb3abbde326a82b8b003106efd9e7062855b4078f11acce415154ce5b372013d",
+        "png": "d9258590bcfcfbab66fd7a784c167a866d5da7dfd8223a817ba9be5124919025"
+      },
+      "pdf_pages": 1,
+      "svg_raster_matches_png": true,
+      "svg_xml_parse": "{http://www.w3.org/2000/svg}svg",
+      "reviewed_snapshot_still_current_at_report": false,
+      "manual_pdf_review": "INDIVIDUALLY_INSPECTED_1600x1000"
+    },
+    {
+      "id": "SH-MAP-SAC-009",
+      "artifacts": {
+        "pdf": "2dd69d4e0b498c047e4f937e77a65a0169fe24f03b47b4e54bcc312d97cfc252",
+        "svg": "a7c1850772b1720561aeed8df4906a23cbdb873ffdcd92f63ad668114b6c8f4a",
+        "png": "3377c7a7b1ebb8486f2a3dbc844cc97999e412ccf5e7ed28ad662155857b5dfe"
+      },
+      "pdf_pages": 1,
+      "svg_raster_matches_png": true,
+      "svg_xml_parse": "{http://www.w3.org/2000/svg}svg",
+      "reviewed_snapshot_still_current_at_report": false,
+      "manual_pdf_review": "INDIVIDUALLY_INSPECTED_1600x1000"
+    },
+    {
+      "id": "SH-MAP-SAC-010",
+      "artifacts": {
+        "pdf": "f5e7ecac35b4943c0d07aa2f285ff6de9abe8aa989d4c11b106ca2a0788d00eb",
+        "svg": "d90f3c161728c218354378e98d7ce66c8fddfc9b0bc0d62549704a22204af18d",
+        "png": "b817669787dde4fa0fc05c64499ceec13e46b848dcf1af766bbc6842c66babd7"
+      },
+      "pdf_pages": 1,
+      "svg_raster_matches_png": true,
+      "svg_xml_parse": "{http://www.w3.org/2000/svg}svg",
+      "reviewed_snapshot_still_current_at_report": false,
+      "manual_pdf_review": "INDIVIDUALLY_INSPECTED_1600x1000"
+    },
+    {
+      "id": "SH-MAP-SAC-011",
+      "artifacts": {
+        "pdf": "3a9f28a2cadab8efa2b5556961136d5852cd76c0ad89e62880c5d714017d9356",
+        "svg": "85a0a9b20a4dc4ef2fc97a9da0cc779b04139fef68b8760b751d2e8f5648be08",
+        "png": "a708854c635bf9d5a12e2f5d208633ad57ed8ffc0d125bccc1fb378bba3e7396"
+      },
+      "pdf_pages": 1,
+      "svg_raster_matches_png": true,
+      "svg_xml_parse": "{http://www.w3.org/2000/svg}svg",
+      "reviewed_snapshot_still_current_at_report": true,
+      "svg_parsed": "{http://www.w3.org/2000/svg}svg",
+      "manual_pdf_review": "INDIVIDUALLY_INSPECTED_1600x1000"
+    },
+    {
+      "id": "SH-MAP-SAC-012",
+      "artifacts": {
+        "pdf": "513952f4a0141728089aea5ddc92dff8f2e4f1d64eca6ff225a1eb3a0d3e2ee8",
+        "svg": "765c8f872ab5706abd76c5207d45c322a529c20f110aefaad462ebf14e04ca3c",
+        "png": "548c1c49a204f0fd8f5a6d0435d98f84bd9fdb2cebfa896a314100af0f30a1e5"
+      },
+      "pdf_pages": 1,
+      "svg_raster_matches_png": true,
+      "svg_xml_parse": "{http://www.w3.org/2000/svg}svg",
+      "reviewed_snapshot_still_current_at_report": false,
+      "manual_pdf_review": "INDIVIDUALLY_INSPECTED_1600x1000"
+    },
+    {
+      "id": "SH-MAP-SAC-013",
+      "artifacts": {
+        "pdf": "017ca936d86e75c4c05e778d6406a6b7c3ab6ddd0eb48f1b3f0c7adc7e7d7fc2",
+        "svg": "96134e44c9694603aad268671323d8ed2da87de2b23e00010df5131d55e535ab",
+        "png": "46a9969532101e662f15afaa2c96dce69c4c0107f99cbe0897be772923110a97"
+      },
+      "pdf_pages": 1,
+      "svg_raster_matches_png": true,
+      "svg_xml_parse": "{http://www.w3.org/2000/svg}svg",
+      "reviewed_snapshot_still_current_at_report": false,
+      "manual_pdf_review": "INDIVIDUALLY_INSPECTED_1600x1000"
+    },
+    {
+      "id": "SH-MAP-SAC-014",
+      "artifacts": {
+        "pdf": "f24e379bdd819ef372a07877598f6e82effa5d1e426755ea30e8cea7d2d3ce31",
+        "svg": "005a8c693f6eb1ab9a41e1ac865e44e1433f5249c3da47e665dc8763c0d16416",
+        "png": "37391832aa89b7ca476421a08a5a98e0aa4751093eb47d0f4bff1acdb5b2f378"
+      },
+      "pdf_pages": 1,
+      "svg_raster_matches_png": true,
+      "svg_xml_parse": "{http://www.w3.org/2000/svg}svg",
+      "reviewed_snapshot_still_current_at_report": false,
+      "manual_pdf_review": "INDIVIDUALLY_INSPECTED_1600x1000"
+    },
+    {
+      "id": "SH-MAP-SAC-015",
+      "artifacts": {
+        "pdf": "a136f6f35a5ec802a343615bbf6302cf78e9a4b0ec5066a0ac33a558b865d180",
+        "svg": "69d38a8b888b6ffbc8ad22af476ba829a9711bcdeeef4d666b9b827510a1f307",
+        "png": "2f722f072fcd0318358015de0393fcdfea8ca3f9442ec0b48aa3e4f6ad7dc6ca"
+      },
+      "pdf_pages": 1,
+      "svg_raster_matches_png": true,
+      "svg_xml_parse": "{http://www.w3.org/2000/svg}svg",
+      "reviewed_snapshot_still_current_at_report": true,
+      "svg_parsed": "{http://www.w3.org/2000/svg}svg",
+      "manual_pdf_review": "INDIVIDUALLY_INSPECTED_1600x1000"
+    },
+    {
+      "id": "SH-MAP-SAC-016",
+      "artifacts": {
+        "pdf": "41b6aac41a6df9e577eb4aca46c5f382cf1ecd7c4edbc9b041ed91e58a795763",
+        "svg": "9144de06013b00dd08e7b034d455407367e33216757a826d00a7c6f02a1c0ab5",
+        "png": "bdd1ddd45471cf0d07931405c359ae47d757876a4a7fdae99f5f1dd769d22155"
+      },
+      "pdf_pages": 1,
+      "svg_raster_matches_png": true,
+      "svg_xml_parse": "{http://www.w3.org/2000/svg}svg",
+      "reviewed_snapshot_still_current_at_report": false,
+      "manual_pdf_review": "INDIVIDUALLY_INSPECTED_1600x1000"
+    },
+    {
+      "id": "SH-MAP-SAC-017",
+      "artifacts": {
+        "pdf": "3590b4008c3984f07d699dd4a0a0c4460357f660fdcde7fa15cb867121342b5f",
+        "svg": "011d0d7155f6f1c59c8511b41b638f1ceef093b2019d1a1eb93a53e10763df6d",
+        "png": "35360cc679a81008f5b8158bf2c2e1d01d2fdc7490730d44fd950b45cf9e7eff"
+      },
+      "pdf_pages": 1,
+      "svg_raster_matches_png": true,
+      "svg_xml_parse": "{http://www.w3.org/2000/svg}svg",
+      "reviewed_snapshot_still_current_at_report": false,
+      "manual_pdf_review": "INDIVIDUALLY_INSPECTED_1600x1000"
+    },
+    {
+      "id": "SH-MAP-SAC-018",
+      "artifacts": {
+        "pdf": "642e970dfa2995d746429341786e78366ce15e849a93314bca98dff2b5d97615",
+        "svg": "289a3a316a60549b45de14e8a038f7683d10887af9d7de90708da38b7889e138",
+        "png": "60746e540da18d4d471d527437b4e9561a296df0217b2c23c7ab143f9945ffd7"
+      },
+      "pdf_pages": 1,
+      "svg_raster_matches_png": true,
+      "svg_xml_parse": "{http://www.w3.org/2000/svg}svg",
+      "reviewed_snapshot_still_current_at_report": false,
+      "manual_pdf_review": "INDIVIDUALLY_INSPECTED_1600x1000"
+    },
+    {
+      "id": "SH-MAP-SAC-019",
+      "artifacts": {
+        "pdf": "3039ef6206f281cc2d15c45efa9112856308bf606d0496b9befec8540e013dbd",
+        "svg": "5b2814e7fdd6fd6eb667bf9cdd20d058b206d83fed304ecb2fccd456fd124ee2",
+        "png": "f26ba7bbe750ba8c17259ee2d600230eb084e2587ae68931723a30c8e43c5789"
+      },
+      "pdf_pages": 1,
+      "svg_raster_matches_png": true,
+      "svg_xml_parse": "{http://www.w3.org/2000/svg}svg",
+      "reviewed_snapshot_still_current_at_report": false,
+      "manual_pdf_review": "INDIVIDUALLY_INSPECTED_1600x1000"
+    },
+    {
+      "id": "SH-MAP-SAC-020",
+      "artifacts": {
+        "pdf": "a84ae36e1c53584c4755361769230bfbf0a973f230b11eaa4adce5331f9cfad7",
+        "svg": "4a9ca02b9add38fa41c9913b3c148a7a6d9fbfc123f2fe08b1f4cc2ca7dfc8d5",
+        "png": "0facd10363b71816e828945eb38b3ebfde84a248fefe0f1aae689935346d7778"
+      },
+      "pdf_pages": 1,
+      "svg_raster_matches_png": true,
+      "svg_xml_parse": "{http://www.w3.org/2000/svg}svg",
+      "reviewed_snapshot_still_current_at_report": false,
+      "manual_pdf_review": "INDIVIDUALLY_INSPECTED_1600x1000"
+    },
+    {
+      "id": "SH-MAP-SAC-021",
+      "artifacts": {
+        "pdf": "28db62971afd63196bd23b4a3e713ec0c813a8fc5678188c3b6a23e98d596581",
+        "svg": "d3e27f88ca50580125bf61848259b426501f7e5ac10f808dd80b61410133592e",
+        "png": "86d24d331bd73181f9229c6b482516ae276bab0b373740697881c21606e6a58b"
+      },
+      "pdf_pages": 1,
+      "svg_raster_matches_png": true,
+      "svg_xml_parse": "{http://www.w3.org/2000/svg}svg",
+      "reviewed_snapshot_still_current_at_report": false,
+      "manual_pdf_review": "INDIVIDUALLY_INSPECTED_1600x1000"
+    },
+    {
+      "id": "SH-MAP-WIL-020",
+      "artifacts": {
+        "pdf": "83027f818b487c3e7ce135bb473f38b3ad1fcb73890f9805486f1d208734de41",
+        "svg": "9afc786beb03475b52c94460a429c3ce4a14bab61c68ef7f2c8fd975c00654bc",
+        "png": "e662f10939cd65c3b3cb8aebb7b738780015b7aad82c651972a2bfb5ee546151"
+      },
+      "reviewed_snapshot_still_current_at_report": false,
+      "manual_pdf_review": "INDIVIDUALLY_INSPECTED_1600x1000"
+    },
+    {
+      "id": "SH-MAP-WIL-021",
+      "artifacts": {
+        "pdf": "0be7bfeac70a66cdbd534727d46192c05dda92cb9f6d1c819b4c60b36204dd67",
+        "svg": "2fabc11fcc7a7d353b212e2782d967d9960496a49b0305b3d81b8d7b68b46055",
+        "png": "965571bac8f6cca40723dbc94009502fe03af89bbc2ebb12e4607f8bc1648e82"
+      },
+      "reviewed_snapshot_still_current_at_report": false,
+      "manual_pdf_review": "INDIVIDUALLY_INSPECTED_1600x1000"
+    },
+    {
+      "id": "SH-MAP-WIL-022",
+      "artifacts": {
+        "pdf": "95cf55aca21581531f07054987897e1b4071493fcbb47bc897f85a6ce1c44f8f",
+        "svg": "054e07cd058e4014adfd48903ee36b0a6046b9c1757ddeacdb5d2f384ca37988",
+        "png": "ee36600870b8fe70985f82df9ffa1f5f4b10386ffc8fa8e1fda8de1c3f92ee1c"
+      },
+      "reviewed_snapshot_still_current_at_report": true,
+      "svg_raster_matches_png": true,
+      "svg_parsed": "{http://www.w3.org/2000/svg}svg",
+      "manual_pdf_review": "INDIVIDUALLY_INSPECTED_1600x1000"
+    },
+    {
+      "id": "SH-MAP-WIL-023",
+      "artifacts": {
+        "pdf": "ce57dcb066f5534b679a9090858925d30ee91b1595c48329cd4883480a33ff22",
+        "svg": "a36be86cc42667e65479ea9681c81946eba1c55f032e55bddd181bee41c1ed46",
+        "png": "d679432d21f7cc8b72cb78cda8527f1b151d5799da21bedbd56285355b2d64c9"
+      },
+      "reviewed_snapshot_still_current_at_report": false,
+      "manual_pdf_review": "INDIVIDUALLY_INSPECTED_1600x1000"
+    },
+    {
+      "id": "SH-MAP-WIL-024",
+      "artifacts": {
+        "pdf": "07c05fecca8646db16fa257fab4bc901cc4d2197e4da6b3b201d79e6dcd00283",
+        "svg": "6cf8a8b202174f71bce3e4a0d725213fefbf950ed3bb39f70f847c812640f254",
+        "png": "586148a4e21db135c34b9da4113684686b906db39e95115d6c576fed7120571a"
+      },
+      "reviewed_snapshot_still_current_at_report": true,
+      "svg_raster_matches_png": true,
+      "svg_parsed": "{http://www.w3.org/2000/svg}svg",
+      "manual_pdf_review": "INDIVIDUALLY_INSPECTED_1600x1000"
+    },
+    {
+      "id": "SH-MAP-WIL-025",
+      "artifacts": {
+        "pdf": "3575de1b651491082672838459ee684a13c18a95f4746130d8a12cd21ee66070",
+        "svg": "a871bd5af9f6d3d5b2bf4259cdbfd9fd4368a526291f76b1ac3ab4af1a0193cc",
+        "png": "d74b84f693a8f1c1a9967c9b09b925eda5b43fe85e36c471e9b02a39b0ca9b37"
+      },
+      "reviewed_snapshot_still_current_at_report": true,
+      "svg_raster_matches_png": true,
+      "svg_parsed": "{http://www.w3.org/2000/svg}svg",
+      "manual_pdf_review": "INDIVIDUALLY_INSPECTED_1600x1000"
+    },
+    {
+      "id": "SH-MAP-WIL-026",
+      "artifacts": {
+        "pdf": "d770ed48ec48974288af551302b0fd098c4393177cd581939179d57ba9a8f07b",
+        "svg": "d96ca77584d226529a528c5176138278577e9a5ac339edbcee217b85145bc5f6",
+        "png": "694a6e7df4d09c19536651687e78f44eae6caf84640ba8dc62cae4f15c530fcf"
+      },
+      "reviewed_snapshot_still_current_at_report": false,
+      "manual_pdf_review": "INDIVIDUALLY_INSPECTED_1600x1000"
+    },
+    {
+      "id": "SH-MAP-WIL-027",
+      "artifacts": {
+        "pdf": "e0b9ecb464d486779da58ee4173bc3eb35d5f23d606379695c42c509fe5226ff",
+        "svg": "adc675a4aa6684638e918344ec483166ba2ca878b55e3db65a81a94d89415ba6",
+        "png": "a5cd5e2ddad40fc36a2e72f5476c81e252230dcd3af67178811392b3704c343c"
+      },
+      "reviewed_snapshot_still_current_at_report": true,
+      "svg_raster_matches_png": true,
+      "svg_parsed": "{http://www.w3.org/2000/svg}svg",
+      "manual_pdf_review": "INDIVIDUALLY_INSPECTED_1600x1000"
+    },
+    {
+      "id": "SH-MAP-CRD-020",
+      "artifacts": {
+        "pdf": "b91d1d01689e5cf45b1677b9bce19a546e266e9f6495b6159c3f87b16d132933",
+        "svg": "1b5e58329bb4c9e92e99839f77102dec5089034d03e9bf0ca8218ca519cb7db9",
+        "png": "2f71fb2e7e3d82a1713c4932929ca3e9e04d77c16c640a37317374f494f329cc"
+      },
+      "reviewed_snapshot_still_current_at_report": false,
+      "manual_pdf_review": "INDIVIDUALLY_INSPECTED_1600x1000"
+    },
+    {
+      "id": "SH-MAP-CRD-021",
+      "artifacts": {
+        "pdf": "6a03b323c5937ffe13790cbcf45c66bd4338dd2998d5944c3c31a2321f570d7c",
+        "svg": "cc73bb1d8e0a31892f0b2003c54e413e2f14d43228a744e85d9f8da72b974525",
+        "png": "51a4ced8e12d6b9ef5c6cb7c44d752e47c9e4a3a6ed03919713860411a1310ac"
+      },
+      "reviewed_snapshot_still_current_at_report": false,
+      "manual_pdf_review": "INDIVIDUALLY_INSPECTED_1600x1000"
+    },
+    {
+      "id": "SH-MAP-CRD-022",
+      "artifacts": {
+        "pdf": "2a8ce4da9a670ee20f3e0b2f62baf632bd10b6326125212b6ae07c98757c8050",
+        "svg": "24bcadedde468eeb35558db908b549b0ef39a27a73752e55fbdea284a25cbe7b",
+        "png": "b946e1082051a9db71e7b43d767860bc3bf2f58095f84f0de319bf53f7b9df97"
+      },
+      "reviewed_snapshot_still_current_at_report": true,
+      "svg_raster_matches_png": true,
+      "svg_parsed": "{http://www.w3.org/2000/svg}svg",
+      "manual_pdf_review": "INDIVIDUALLY_INSPECTED_1600x1000"
+    },
+    {
+      "id": "SH-MAP-CRD-023",
+      "artifacts": {
+        "pdf": "c5fc3bbcc83911c1d0ee499bb79d0ac71a48a9070cc9a200df2bea0a7a545aeb",
+        "svg": "705375e4bab39a82ba92330cca67610d3bb66f4eaaae3c959a8c5297fec2f87a",
+        "png": "194a4e59f78e2e99d42e7f2d5f0d970f6d577634b4d5d9f14fff5fd41353e0d8"
+      },
+      "reviewed_snapshot_still_current_at_report": false,
+      "manual_pdf_review": "INDIVIDUALLY_INSPECTED_1600x1000"
+    },
+    {
+      "id": "SH-MAP-CRD-024",
+      "artifacts": {
+        "pdf": "0748df75fc2b8046bbb1bde7d85561f55e5f31160f4f1e6963821763f4028901",
+        "svg": "2cee4991409147e0fb0ed3c57e8874d4c03139ddeba07fb8ba5e57cb0fc90c6e",
+        "png": "ce31e8f26bba3ccb7c3f0ab4271167f8e555246ac5ef864f4526ab2fbc4277d2"
+      },
+      "reviewed_snapshot_still_current_at_report": true,
+      "svg_raster_matches_png": true,
+      "svg_parsed": "{http://www.w3.org/2000/svg}svg",
+      "manual_pdf_review": "INDIVIDUALLY_INSPECTED_1600x1000"
+    },
+    {
+      "id": "SH-MAP-CRD-025",
+      "artifacts": {
+        "pdf": "80f92a81f635525d778d579cc9d34eb38e73e4e76e7fd95ab7b342291468497c",
+        "svg": "7a860e851076edbfe336d979db3dede51f4bc003997dd1f78b5f91edc85507f8",
+        "png": "a4e19242f38e089dfa3812f43718919042a8f40ae2e0bcf2373e41c9e75eea8e"
+      },
+      "reviewed_snapshot_still_current_at_report": false,
+      "manual_pdf_review": "INDIVIDUALLY_INSPECTED_1600x1000"
+    },
+    {
+      "id": "SH-MAP-CRD-026",
+      "artifacts": {
+        "pdf": "bbdb43506f7ecb4d39b1d5ae1c5d7229ff5931385d80a37dc98c83173df14313",
+        "svg": "a4200fa47e162c858ddedff01f5cd8167cea3d536da60c480fec60ae79b4c216",
+        "png": "a870fabb0d67fc41708d4010b9ed7b40361cbfec320d091c75cbd1a939ea2d2d"
+      },
+      "reviewed_snapshot_still_current_at_report": true,
+      "svg_raster_matches_png": true,
+      "svg_parsed": "{http://www.w3.org/2000/svg}svg",
+      "manual_pdf_review": "INDIVIDUALLY_INSPECTED_1600x1000"
+    },
+    {
+      "id": "SH-MAP-CRD-027",
+      "artifacts": {
+        "pdf": "77826a3ff0e355586a2d2ff7beffc49ee6136f1ad7309e9f63e5ab8e1a70ebc8",
+        "svg": "d5ff14303a16b70ecbee45d0eb712425f70947dc3f6c43ff3af0b0106abbc5c4",
+        "png": "4af649d0edc2f380cfaa120d5b246445fbab92ea8cde951aa099c721f04a4659"
+      },
+      "reviewed_snapshot_still_current_at_report": false,
+      "manual_pdf_review": "INDIVIDUALLY_INSPECTED_1600x1000"
+    },
+    {
+      "id": "SH-MAP-CRD-028",
+      "artifacts": {
+        "pdf": "e7f64bcaa029631b37e6ecd08a1f66c3c1a183a7ef4398b0d0d3630a44f27730",
+        "svg": "2fcf2d6aca59337a9b9ff21642287b15d8876cdf34479319ff7305e853793922",
+        "png": "376ca99891eca3eadfe2f0b2f12c06da9298e89f90c203f1b5e70df599463e22"
+      },
+      "reviewed_snapshot_still_current_at_report": true,
+      "svg_raster_matches_png": true,
+      "svg_parsed": "{http://www.w3.org/2000/svg}svg",
+      "manual_pdf_review": "INDIVIDUALLY_INSPECTED_1600x1000"
+    },
+    {
+      "id": "SH-MAP-ARU-020",
+      "artifacts": {
+        "pdf": "aff11aa598682c3ec3e6c6671ce31e0c8896d4f1864083c5c7bee7bf04c80d21",
+        "svg": "6950031ac7c7466fb085343ec876cb5fcd884f70aaea970248ae455f8c6413ac",
+        "png": "3573dde6193bd624973d806ecfa53394ca78986b157b42f84318d1a182cb8f14"
+      },
+      "reviewed_snapshot_still_current_at_report": false,
+      "manual_pdf_review": "INDIVIDUALLY_INSPECTED_1600x1000"
+    },
+    {
+      "id": "SH-MAP-ARU-021",
+      "artifacts": {
+        "pdf": "bc36d9539d0e6006c5cf7869583fb8bcaf19e7cd5731a297d8f658d1cc278d27",
+        "svg": "b4441a2f1cb1f63271e2d97d997878e5e3667d9d3f0e044deaa62edb517ac518",
+        "png": "0cf4c258b8b89bce5c4bcf33e2e8b6a4c67bf9693e77dff9e7967e3fba64941f"
+      },
+      "reviewed_snapshot_still_current_at_report": false,
+      "manual_pdf_review": "INDIVIDUALLY_INSPECTED_1600x1000"
+    },
+    {
+      "id": "SH-MAP-ARU-022",
+      "artifacts": {
+        "pdf": "856f46297bd8e62bd4736e0122c9c7fbdc32f8c13c58b26b2457c3e7ff7a93c5",
+        "svg": "6cb586ded48c14ee9308d408588f703674ed84e93aac9eece7d489c253ec6157",
+        "png": "f3ca80b2f36d89cdbeb3b42693701e3f14b3a3cef56e59624aa725f5fc6b56ea"
+      },
+      "reviewed_snapshot_still_current_at_report": false,
+      "manual_pdf_review": "INDIVIDUALLY_INSPECTED_1600x1000"
+    },
+    {
+      "id": "SH-MAP-ARU-023",
+      "artifacts": {
+        "pdf": "9dc90bc5cecca975fc8e9f9b0026d35e16c1084b469c09791119b0c5b5920dd2",
+        "svg": "7d2c5e3b0ddb92767ce8495147574c74fe249aeba7938c7f3757eb8795da3e2a",
+        "png": "d5a2845ff17b07a3e5cafbccbca340ad15be165371bced2801326dd66ea35bdd"
+      },
+      "reviewed_snapshot_still_current_at_report": true,
+      "svg_raster_matches_png": true,
+      "svg_parsed": "{http://www.w3.org/2000/svg}svg",
+      "manual_pdf_review": "INDIVIDUALLY_INSPECTED_1600x1000"
+    },
+    {
+      "id": "SH-MAP-ARU-024",
+      "artifacts": {
+        "pdf": "a6e63109fdcd6cd85ff57de86e831d0c4a23cb05e5f6f6da8b6fa4ea7d5d8225",
+        "svg": "ae6b654e55506b0c2d5583342bf2ceba0c3da6e0934a4de923c3aba01007bf42",
+        "png": "fd20341a5a738567a262fe75e6ba1d403fb1529122b6d4c8793389fd39f5f98c"
+      },
+      "reviewed_snapshot_still_current_at_report": false,
+      "manual_pdf_review": "INDIVIDUALLY_INSPECTED_1600x1000"
+    },
+    {
+      "id": "SH-MAP-ARU-025",
+      "artifacts": {
+        "pdf": "fc1963da3990839723154fadf7622629f75800d821b65ae3ab7d2d1307cfd3f5",
+        "svg": "d4728c8589aac214c4914a9d2c2afab6811d807d44da551cf0188e1a33ab37b0",
+        "png": "b4de8a917023ba4b6b24e55d1e924ff9ea532b2a5dc6a491aa19f5155df3d439"
+      },
+      "reviewed_snapshot_still_current_at_report": true,
+      "svg_raster_matches_png": true,
+      "svg_parsed": "{http://www.w3.org/2000/svg}svg",
+      "manual_pdf_review": "INDIVIDUALLY_INSPECTED_1600x1000"
+    },
+    {
+      "id": "SH-MAP-ARU-026",
+      "artifacts": {
+        "pdf": "859354106e7ada32126cd81b47de42daeb4912242e07cd8642ff81e76c042235",
+        "svg": "1d249984ec4f849c7c5c7b9b971f3842e65a1a3c890d8ef4ea7cbc93909de3af",
+        "png": "ea232638b83a2a0d259971af7a9baa58bd345fa5516f3542b342c8b71b7daa91"
+      },
+      "reviewed_snapshot_still_current_at_report": false,
+      "manual_pdf_review": "INDIVIDUALLY_INSPECTED_1600x1000"
+    },
+    {
+      "id": "SH-MAP-ARU-027",
+      "artifacts": {
+        "pdf": "a192826b0cad9512af62abddcb38195a81808d6d2583ae2a1712dedbe04ba446",
+        "svg": "a955ea004b5cb17a533ab7902ec5410ae07134e7ea791fd503513e880362fc68",
+        "png": "10abd210339a21bc57066d59bc5315d270315b6930448784f60cec5fbefcf0d0"
+      },
+      "reviewed_snapshot_still_current_at_report": false,
+      "manual_pdf_review": "INDIVIDUALLY_INSPECTED_1600x1000"
+    },
+    {
+      "id": "SH-MAP-ARU-028",
+      "artifacts": {
+        "pdf": "344d5ea18309398115474f291a764c60ddfebb9562cd20a66da5285c11d54a96",
+        "svg": "04f3ca777a31970779f29c3a188816ba3bfce789055028fa3a1f85b9bbf099ea",
+        "png": "cb8d511740e6faeadddd3964ac2ec2b346eb7f2cf3621289ff675d9f272fa0aa"
+      },
+      "reviewed_snapshot_still_current_at_report": false,
+      "manual_pdf_review": "INDIVIDUALLY_INSPECTED_1600x1000"
+    },
+    {
+      "id": "SH-MAP-ARU-029",
+      "artifacts": {
+        "pdf": "69acf1b2feab2abe6e27ee44587d5f2c906742d7a7426dfd4f60cf8b41a1d933",
+        "svg": "c9c16bc50f219fd6e8e05c6f6386111d41f283865d5b31b010d062227ad0917d",
+        "png": "43e8398cbb53afd137bd5ad13bd136f9eca57dc10b6d61ce74a61fff4e64b949"
+      },
+      "reviewed_snapshot_still_current_at_report": true,
+      "svg_raster_matches_png": true,
+      "svg_parsed": "{http://www.w3.org/2000/svg}svg",
+      "manual_pdf_review": "INDIVIDUALLY_INSPECTED_1600x1000"
+    },
+    {
+      "id": "SH-MAP-ARU-030",
+      "artifacts": {
+        "pdf": "6c69e0431dc1ff93a10b243a14d6345b8eb571e0d1402e0cbdfc016e3dcb55c9",
+        "svg": "3d349239dff02d5986d140f780c60398660f66cf090856fdaf334c5a3974e446",
+        "png": "ce3c45752386107085029e4eec7bc0f6b96cb4f2767d16e48d1ab610f4a02a33"
+      },
+      "reviewed_snapshot_still_current_at_report": false,
+      "manual_pdf_review": "INDIVIDUALLY_INSPECTED_1600x1000"
+    },
+    {
+      "id": "SH-MAP-ARU-031",
+      "artifacts": {
+        "pdf": "683947f5563a302818417cb1a6f9323189d54a1e6f6303dba10788e02e30e86b",
+        "svg": "e7f10032e127bc881ca7de867b55a98488d9569f310ea5db23953178ef4606c4",
+        "png": "2b91ef75cdc94a7c1da0a231bf8a05195e314ee2b437f259417cf4a7e59f15b3"
+      },
+      "reviewed_snapshot_still_current_at_report": false,
+      "manual_pdf_review": "INDIVIDUALLY_INSPECTED_1600x1000"
+    },
+    {
+      "id": "SH-MAP-ARU-032",
+      "artifacts": {
+        "pdf": "a7487a04910758e9eb8523896ebb2438f8440664d00549e94779a0ebd5bafba3",
+        "svg": "dc0352461d7ca92a7d56fe2dae77fc5841e67290ac38cffd0f815d7b59813a2a",
+        "png": "6910444b84211f59a986636f2d837911663abf011ce0008299f8f3ab477bc9a1"
+      },
+      "reviewed_snapshot_still_current_at_report": false,
+      "manual_pdf_review": "INDIVIDUALLY_INSPECTED_1600x1000"
+    },
+    {
+      "id": "SH-MAP-ARU-033",
+      "artifacts": {
+        "pdf": "0560275815ec44ece86c318d3a2f3df7eac27f15ef0f4f54e8dabecb6569345b",
+        "svg": "5f52e49335fb8c970322dc28dee4154e655332d760b4b742b9e382d0e7c5a7e6",
+        "png": "092cc3f5863a74d71efd2b37ff4db5b032c2c7b3a4a11581043bb2c5c8c55e9c"
+      },
+      "reviewed_snapshot_still_current_at_report": false,
+      "manual_pdf_review": "INDIVIDUALLY_INSPECTED_1600x1000"
+    },
+    {
+      "id": "SH-MAP-ARU-034",
+      "artifacts": {
+        "pdf": "680e297e9ec28c629810e5e07c52f9182d25b17c46c0bf83d3311ac3e96d2e2f",
+        "svg": "2df92070da26b952555a5f86309f7c4bb002f936c9d2e4f8d30a885997de4e2c",
+        "png": "6f5210b145f9380af862ed9b6869e41e1700dcc780dd9bc9c9f89d946baeeef3"
+      },
+      "reviewed_snapshot_still_current_at_report": false,
+      "manual_pdf_review": "INDIVIDUALLY_INSPECTED_1600x1000"
+    },
+    {
+      "id": "SH-MAP-ARU-035",
+      "artifacts": {
+        "pdf": "e0c1bab1b8d09a3ae2d29e18141d9a68548edd525c858763f0439d40f6f27507",
+        "svg": "414d5e4b26b8ca234b97f079838f12aa0f811eea7af06a54ccc3cd1945985b5e",
+        "png": "ce2d76cbf31c2f7e971be7ef783aca9a8599da62d7b109b935e13b617351cf6e"
+      },
+      "reviewed_snapshot_still_current_at_report": false,
+      "manual_pdf_review": "INDIVIDUALLY_INSPECTED_1600x1000"
+    },
+    {
+      "id": "SH-MAP-ARU-036",
+      "artifacts": {
+        "pdf": "928cfa9de0f36bbf7d874d2e2d704da6b43a85d1a301274f5a2aba554715cbf5",
+        "svg": "d825955cea4f7dc8a726651b4b3a7838360ed827b2033260a1c2f9850c414dc2",
+        "png": "a56eccf146a7b159ac348c77accd6253ca2920611c9f6092fc8d1645d283240e"
+      },
+      "reviewed_snapshot_still_current_at_report": false,
+      "manual_pdf_review": "INDIVIDUALLY_INSPECTED_1600x1000"
+    },
+    {
+      "id": "SH-MAP-ARU-037",
+      "artifacts": {
+        "pdf": "7ae2ab23bb3437d5324bee557cec94aa0ab23dd827ba484db69ff91ce6261353",
+        "svg": "9d8c2cbece52187fc0c042667cb7a9214a8ab5f3d11f1b62ad7d18b02d9ecc85",
+        "png": "0202a0b6fe66e8da96204a54dd634eab4bfec314695273d4645111ea17a44f17"
+      },
+      "reviewed_snapshot_still_current_at_report": false,
+      "manual_pdf_review": "INDIVIDUALLY_INSPECTED_1600x1000"
+    },
+    {
+      "id": "SH-MAP-ARU-038",
+      "artifacts": {
+        "pdf": "f3405b3070c3e6f7f4c5f41a4f0a23f0eec79ea4881143134f669a4b2a8f2d8d",
+        "svg": "cff1a3e4f77240b9e55c0550708b438ff892f61ec492172042b5023418b501aa",
+        "png": "d05a492daca85547569f81c54a67ceaa99b2e4a6f7b10b894cfdc83ac04a1618"
+      },
+      "reviewed_snapshot_still_current_at_report": false,
+      "manual_pdf_review": "INDIVIDUALLY_INSPECTED_1600x1000"
+    },
+    {
+      "id": "SH-MAP-ARU-039",
+      "artifacts": {
+        "pdf": "5581454b6fc23f52d0e6609f162b8aefc1a922916a9d0db370337ddb2ffef736",
+        "svg": "f33331f0f722ff2abd98120d1b5f984ddda264384d988e7721f370f24b8f4720",
+        "png": "c1d6c3253199b1292e98fda6081e437b60856fe51efefa7d4d754c551dc59ca9"
+      },
+      "reviewed_snapshot_still_current_at_report": false,
+      "manual_pdf_review": "INDIVIDUALLY_INSPECTED_1600x1000"
+    },
+    {
+      "id": "SH-MAP-ARU-040",
+      "artifacts": {
+        "pdf": "a22b8d1c1ba86ffcc43135813ce4475d933c1d30c5f505cfe893253690357852",
+        "svg": "2a0ff402efae2d839a1ef308baf42efbc4a838217081b5b6e9ffc10a2cab3147",
+        "png": "6b7d57b6ef7c930fb433dff9d6caf11ebb27b5aa5dcc649fb8bd48fd32c2b2fe"
+      },
+      "reviewed_snapshot_still_current_at_report": false,
+      "manual_pdf_review": "INDIVIDUALLY_INSPECTED_1600x1000"
+    },
+    {
+      "id": "SH-MAP-ARU-041",
+      "artifacts": {
+        "pdf": "1a8413a14a2a119edd628578b81117018739ebfd6171ae98547dd81f6953b702",
+        "svg": "2e055f81417e53a7eeee3ff212d20eb228631b19efe0e867f2a853902c169939",
+        "png": "228f66b8576e50fd0ff5c20980b668815abaa79724d7ed9165e146d4435ff881"
+      },
+      "reviewed_snapshot_still_current_at_report": false,
+      "manual_pdf_review": "INDIVIDUALLY_INSPECTED_1600x1000"
+    },
+    {
+      "id": "SH-MAP-ARU-042",
+      "artifacts": {
+        "pdf": "6c7b81e85a1b7ea408e50a92702f4fb5d9a1108f2a568a42334f0c7ae53850bb",
+        "svg": "8f9f65cc72514cb8fd1e726fc1a66f7bc687005d3eeff5b077343eed92bba45c",
+        "png": "c7c614ef1411a3c62e03eda88526dd86bd099cdd35a0afc9533b66264bb40319"
+      },
+      "reviewed_snapshot_still_current_at_report": false,
+      "manual_pdf_review": "INDIVIDUALLY_INSPECTED_1600x1000"
+    },
+    {
+      "id": "SH-MAP-RWM-020",
+      "artifacts": {
+        "pdf": "58f28bb73425018411dddd449ca41daab2fa499156de3e8850d9aba9053ce9cd",
+        "svg": "78d540ac2216e45f7a873ac2b4c9c266f57c9c65dcb92675ace795d181c4f4ad",
+        "png": "de81498327253ba69d06efbd2bcd4bc7f37f00338ead47d2edde903dce51e0ec"
+      },
+      "reviewed_snapshot_still_current_at_report": false,
+      "manual_pdf_review": "INDIVIDUALLY_INSPECTED_1600x1000"
+    },
+    {
+      "id": "SH-MAP-RWM-021",
+      "artifacts": {
+        "pdf": "e509cb41c636502a5c7dea4b728a37ed8e279d1dd854ee0270f6970332955856",
+        "svg": "dbf8349d31073df0c408af632151df5985780ab271a45f75f258ae47f92214d7",
+        "png": "6e7e5efacaa77efbd70cb73ebb849a557910ee926b8bae5369d9381ad2244eaa"
+      },
+      "reviewed_snapshot_still_current_at_report": false,
+      "manual_pdf_review": "INDIVIDUALLY_INSPECTED_1600x1000"
+    }
+  ],
+  "resolved_initial_observations": [
+    "Floor sidebar overflow resolved on second Sacramento renders.",
+    "Room widths varied; CEO reduced from94.5 to42m\u00b2; classrooms show layout symbols.",
+    "Future shell no longer shows fitted partitions.",
+    "Residential maximum24 per floor replaces zero event allocation label; structured day/night scenarios distinguish420 day and52 night at this snapshot.",
+    "Access legend and pedestrian connections added; Education staff areas and visitor waiting distinguished.",
+    "Corridor-to-core door gaps now drawn."
+  ],
+  "remaining_findings": [
+    {
+      "id": "FAC-QA-201",
+      "scope": "SAC002, WIL020, CRD020",
+      "observation": "Arrival/stormwater labels remain obscured by paths. CRD020 building text spills outside footprints; ARU021 has the same small-footprint overflow.",
+      "followup": "Draw only short building IDs in footprint and provide keyed schedule; place zone labels after path rendering.",
+      "status": "OPEN_AT_REVIEWED_HASHES"
+    },
+    {
+      "id": "FAC-QA-202",
+      "scope": "SAC005/008/009/012/013/016/019; WIL025",
+      "observation": "Upper levels depict exterior slab-edge exit openings. Ground site arrival coordinates do not consistently match depicted building doors.",
+      "followup": "Keep protected stair entry at upper levels, ground discharge only on level1; align or explicitly diagram site arrival to ground entrance.",
+      "status": "OPEN_AT_REVIEWED_HASHES"
+    },
+    {
+      "id": "FAC-QA-203",
+      "scope": "SAC018/019; WIL025",
+      "observation": "Sacramento top-row ensuite boxes span bedroom entrance at corridor; the new48-room layout removes commons/linen spaces. Small Shed still has three two-bed rectangles rather than six private rooms.",
+      "followup": "Move wet pod to outer edge or leave entry passage, identify accessible planning room and support zones; subdivide six Fort bedrooms.",
+      "status": "OPEN_AT_REVIEWED_HASHES"
+    },
+    {
+      "id": "FAC-QA-204",
+      "scope": "SAC020/021",
+      "observation": "Single-level Services now uses Entry/exit but text still claims lift and protected stairs.",
+      "followup": "Update one-storey core_basis and conditional corridor/stacking wording.",
+      "status": "OPEN_AT_REVIEWED_HASHES"
+    },
+    {
+      "id": "FAC-QA-205",
+      "scope": "WIL021/026; CRD021/023/025/027; ARU028/037",
+      "observation": "Long stacking-note sidebar reaches or crosses footer rule.",
+      "followup": "Condense or fit notes in available rectangle; test actual text bounds.",
+      "status": "OPEN_AT_REVIEWED_HASHES"
+    },
+    {
+      "id": "FAC-QA-206",
+      "scope": "ARU023/025/029/032/038/042",
+      "observation": "Industrial exterior perimeters are solid. Drive-through inspection has no vehicle opening; locomotive repair has no marked vehicle/rail-interface reservation.",
+      "followup": "Add independent industrial entrance/exit markers and labelled unengineered handling interfaces; do not fabricate connected track.",
+      "status": "OPEN_AT_REVIEWED_HASHES"
+    },
+    {
+      "id": "FAC-QA-207",
+      "scope": "ARU029/038",
+      "observation": "Percentage split labels1171/418m\u00b2 Staff welfare and975/348m\u00b2 customer desk as literal rooms for very small shift populations.",
+      "followup": "If these are broad support allowances, identify them as reserves and distinguish actual smaller staff facilities; keep process/rack design unresolved.",
+      "status": "OPEN_AT_REVIEWED_HASHES"
+    },
+    {
+      "id": "FAC-QA-208",
+      "scope": "Other-site floor ACCESS; industrial footer",
+      "observation": "Renderer originally keyed J2/Audit access text only by B03/B01 suffix; industrial footer says stacked cores though none exist.",
+      "followup": "Scope Sacramento special text by site ID and choose industrial-specific floor caption. Main reports generic access fix underway.",
+      "status": "OPEN_AT_REVIEWED_HASHES"
+    }
+  ],
+  "acceptance_note": "Main is correcting findings. These interim snapshots are not a final visual pass; later corrections require new inspection/hash evidence."
+}

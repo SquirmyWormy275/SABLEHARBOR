@@ -1,0 +1,80 @@
+#!/usr/bin/env python3
+"""Fail orphan census entries, missing dispositions, stale derivatives and ID reuse."""
+
+import json
+from build_coverage import build, OUT, RUNTIME, COMP, read
+
+
+def validate(d):
+    errors = []
+    records = d["records"]
+    ids = [x["id"] for x in records]
+    if len(ids) != len(set(ids)):
+        errors.append("duplicate coverage IDs")
+    seen = set()
+    for x in d["census"]:
+        key = (x["source_path"], x["section"], x["source_id"])
+        if key in seen:
+            errors.append("duplicate census appearance " + str(key))
+        seen.add(key)
+        if x["coverage_id"] not in ids:
+            errors.append("orphan " + str(key))
+    for x in records:
+        for k in [
+            "class",
+            "reason",
+            "provenance",
+            "precision",
+            "fictionality",
+            "status",
+            "tenure",
+            "required_artifacts",
+        ]:
+            if not x.get(k):
+                errors.append(x["id"] + " missing " + k)
+        if x["class"] not in range(1, 9):
+            errors.append(x["id"] + " invalid class")
+        if x["parent_id"] and x["parent_id"] not in ids:
+            errors.append(x["id"] + " orphan parent")
+        if x["class"] == 3 and "floor_plans" not in x["required_artifacts"]:
+            errors.append(x["id"] + " building omitted floors")
+        if x["actual_floor_count"] is not None or x["actual_occupancy"] is not None:
+            errors.append(x["id"] + " unsupported actual measurement")
+    by_id = {x["id"]: x for x in records}
+    appearances = {
+        (x["source_path"], x["section"], x["source_id"]): x["coverage_id"] for x in d["census"]
+    }
+    for site in read(RUNTIME)["sites"]:
+        target = site["geospatial_site_id"]
+        record = by_id.get(target, {})
+        for path, section, ident in [
+            (RUNTIME, "sites", site["id"]),
+            (COMP, "components", site["facility_id"]),
+        ]:
+            if appearances.get((path, section, ident)) != target:
+                errors.append("runtime alias missing or divergent: " + ident)
+        if record.get("runtime_state") != site["status"]:
+            errors.append("runtime state mismatch: " + target)
+        if site.get("provider"):
+            if record.get("class") != 5 or "floor_plans" in record.get("required_artifacts", []):
+                errors.append("provider context boundary violated: " + target)
+        elif "floor_plans" not in record.get("required_artifacts", []) or not record.get(
+            "planned_floor_ids"
+        ):
+            errors.append("owned runtime concept floors missing: " + target)
+    return errors
+
+
+if __name__ == "__main__":
+    d = json.loads((OUT / "COVERAGE_MATRIX.json").read_text())
+    errors = validate(d)
+    if d != json.loads(json.dumps(build())):
+        errors.append("stale coverage: regenerate from current sources")
+    (OUT / "VALIDATION_REPORT.json").write_text(
+        json.dumps({"passed": not errors, "errors": errors, "counts": d["counts"]}, indent=2) + "\n"
+    )
+    if errors:
+        raise SystemExit("\n".join(errors))
+    print(
+        "PASS coverage: complete upstream census, unique IDs, dispositions, required floor queue, source hashes and deterministic regeneration"
+    )

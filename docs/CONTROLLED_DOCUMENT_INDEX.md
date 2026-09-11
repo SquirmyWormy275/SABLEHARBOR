@@ -1,5 +1,8 @@
 # SABLE HARBOR CONTROLLED DOCUMENT INDEX
 
+[Facility programme, individual campus/building/floor plans and atlas](../geospatial/facilities/README.md) — R02 / v0.2.0 modelled September 2026 planning successor; approved R01 references preserved, accepted runtime sites integrated; combined 19 locations, 18 buildings, 25 floors and 70 plates plus eleven rc4 maps. Final integration QA and release gates pending.
+Facility delivery: [controlled release, source commit and checksums](releases/FACILITY_ATLAS_RELEASES.md).
+
 **Index version:** 1.0.18 | **As of:** September 7, 2026
 
 ## Authority order
@@ -209,6 +212,8 @@ The v0.3 lore, base decision register, original lineage and other finance-pinned
 
 The current publication manifest includes the headquarters/ESS/People/IT/authority/SHMS/J2-establishment sources and the four 2021–2026 board approval records. The exact approved Sacramento HQ image remains an independently tracked asset-ingestion gap (#88); publication of its doctrine does not supply the missing binary.
 
-## Runtime estate design — PR119 pending acceptance
+## Runtime estate design — accepted PR #119
+
+PR #119 merged at `b83e4be2182a5e4143808a3dab5f8d929a133caf`; preparation-time pending labels in original sources remain historical provenance. The [facility runtime bridge](../geospatial/facilities/RUNTIME_BRIDGE.json) integrates the three accepted sites and reuses the twelve runtime plates. Selected Switch Reno and IDACORE Boise remain procurement targets without executed contracts; the synthetic owned Northern Nevada parcel is acquired and in preconstruction.
 
 [Runtime implementation index](../enterprise/runtime/README.md) links the source model, calculated results, contracts, architecture and assurance scope. Thirteen runtime controlled PDFs and the distinct seven-sheet successor workbook are indexed with the [runtime release record](releases/RUNTIME_ESTATE_RELEASES.md). The explicit controlled-publication mappings generate `enterprise/runtime/publications/SH-RT-*_v1.0.0.pdf`. These are synthetic design publications; no provider execution or operational acceptance is asserted.

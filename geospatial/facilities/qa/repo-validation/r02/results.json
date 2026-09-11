@@ -1,0 +1,131 @@
+{
+  "source_commit": "922e82cf6475531c6d7451b6a357eb932852ac49",
+  "status": "FAIL",
+  "results": [
+    {
+      "name": "governance",
+      "command": [
+        "/home/kingoftheeast/Projects/SABLEHARBOR-campus/.venv/bin/python",
+        "scripts/validate_governance_j2.py"
+      ],
+      "exit_code": 0,
+      "seconds": 2.17,
+      "log": "geospatial/facilities/qa/repo-validation/r02/governance.log"
+    },
+    {
+      "name": "catalog",
+      "command": [
+        "/home/kingoftheeast/Projects/SABLEHARBOR-campus/.venv/bin/python",
+        "scripts/validate_institutional_catalog.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.03,
+      "log": "geospatial/facilities/qa/repo-validation/r02/catalog.log"
+    },
+    {
+      "name": "organization",
+      "command": [
+        "/home/kingoftheeast/Projects/SABLEHARBOR-campus/.venv/bin/python",
+        "scripts/validate_organization_maps.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.46,
+      "log": "geospatial/facilities/qa/repo-validation/r02/organization.log"
+    },
+    {
+      "name": "business-records",
+      "command": [
+        "/home/kingoftheeast/Projects/SABLEHARBOR-campus/.venv/bin/python",
+        "scripts/validate_business_records.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.02,
+      "log": "geospatial/facilities/qa/repo-validation/r02/business-records.log"
+    },
+    {
+      "name": "hygiene",
+      "command": [
+        "/home/kingoftheeast/Projects/SABLEHARBOR-campus/.venv/bin/python",
+        "scripts/validate_repository_hygiene.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.23,
+      "log": "geospatial/facilities/qa/repo-validation/r02/hygiene.log"
+    },
+    {
+      "name": "geospatial",
+      "command": [
+        "/home/kingoftheeast/Projects/SABLEHARBOR-campus/.venv/bin/python",
+        "geospatial/scripts/validate_geospatial.py"
+      ],
+      "exit_code": 0,
+      "seconds": 4.59,
+      "log": "geospatial/facilities/qa/repo-validation/r02/geospatial.log"
+    },
+    {
+      "name": "geo-tests",
+      "command": [
+        "/home/kingoftheeast/Projects/SABLEHARBOR-campus/.venv/bin/python",
+        "-m",
+        "pytest",
+        "geospatial/tests",
+        "-q"
+      ],
+      "exit_code": 0,
+      "seconds": 11.72,
+      "log": "geospatial/facilities/qa/repo-validation/r02/geo-tests.log"
+    },
+    {
+      "name": "services",
+      "command": [
+        "/home/kingoftheeast/Projects/SABLEHARBOR-campus/.venv/bin/python",
+        "-m",
+        "enterprise.services.model",
+        "validate",
+        "--repository-root",
+        "."
+      ],
+      "exit_code": 0,
+      "seconds": 0.03,
+      "log": "geospatial/facilities/qa/repo-validation/r02/services.log"
+    },
+    {
+      "name": "facility-tests",
+      "command": [
+        "/home/kingoftheeast/Projects/SABLEHARBOR-campus/.venv/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "geospatial/facilities/test_facilities.py",
+        "geospatial/facilities/coverage/test_coverage.py",
+        "geospatial/facilities/population/test_population.py"
+      ],
+      "exit_code": 1,
+      "seconds": 0.65,
+      "log": "geospatial/facilities/qa/repo-validation/r02/facility-tests.log"
+    },
+    {
+      "name": "ruff",
+      "command": [
+        "/home/kingoftheeast/Projects/SABLEHARBOR-campus/.venv/bin/ruff",
+        "check",
+        "geospatial/"
+      ],
+      "exit_code": 1,
+      "seconds": 0.02,
+      "log": "geospatial/facilities/qa/repo-validation/r02/ruff.log"
+    },
+    {
+      "name": "format",
+      "command": [
+        "/home/kingoftheeast/Projects/SABLEHARBOR-campus/.venv/bin/ruff",
+        "format",
+        "--check",
+        "geospatial/"
+      ],
+      "exit_code": 1,
+      "seconds": 0.02,
+      "log": "geospatial/facilities/qa/repo-validation/r02/format.log"
+    }
+  ]
+}

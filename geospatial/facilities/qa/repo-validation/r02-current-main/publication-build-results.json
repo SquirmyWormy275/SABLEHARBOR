@@ -1,0 +1,38 @@
+{
+  "source_commit": "237778d",
+  "results": [
+    {
+      "name": "controlled-publications",
+      "command": [
+        "python",
+        "tools/documents/build_controlled_publications.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.04
+    },
+    {
+      "name": "institutional-catalog-rebuild",
+      "command": [
+        "python",
+        "tools/documents/build_institutional_catalog.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.05
+    },
+    {
+      "name": "industrial-generate-validation",
+      "command": [
+        "python",
+        "industrial/tools/validate_industrial_case.py",
+        "--generate"
+      ],
+      "exit_code": 0,
+      "seconds": 0.81
+    },
+    {
+      "name": "catalog-logical-reproduction",
+      "sql_dump_equal": true,
+      "sha256": "8a847460c2cf32830a79f3fa25f868bb7abb609330ab562a5c4dc2080b82adc3"
+    }
+  ]
+}

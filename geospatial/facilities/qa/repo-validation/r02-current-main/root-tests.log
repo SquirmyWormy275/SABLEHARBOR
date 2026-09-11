@@ -1,0 +1,9 @@
+...........................................ss...s....................... [ 42%]
+........................................................................ [ 85%]
+.........................                                                [100%]
+=============================== warnings summary ===============================
+tests/integration/test_stage1_run_identity.py::test_period_close_evidence_is_immutable_in_orm_and_database
+  /home/kingoftheeast/Projects/SABLEHARBOR-campus/.venv/lib/python3.12/site-packages/sqlalchemy/engine/default.py:952: DeprecationWarning: The default datetime adapter is deprecated as of Python 3.12; see the sqlite3 documentation for suggested replacement recipes
+    cursor.execute(statement, parameters)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html

@@ -1,0 +1,3422 @@
+{
+  "schema_version": "1.0.0",
+  "revision": "0.1.0",
+  "as_of": "2026-09-11",
+  "status": "ILLUSTRATIVE_BUILDING_PLANS_OVER_ACCEPTED_SYNTHETIC_SITE_CASE",
+  "source_sha256": {
+    "industrial/source/operations.json": "e7488b55c1c963d102db66e7a7b6f1373a3d68a9f94b8f99b164092245713a3b",
+    "industrial/source/entities.json": "799a24baf3240d50c5d6a80ac0f9ddb9d023b7a36de058ec12546aac60caee29",
+    "geospatial/geojson/industrial_facilities.geojson": "d2aa49d58441878d6169f7ed20d50b59fbc28f9087c62b930f97d039de52438d",
+    "geospatial/geojson/industrial_tracks.geojson": "af649904a98d9f196f1d42f3ea1b7551a5354b16937285b88eae60f89774f684",
+    "geospatial/geojson/sites.geojson": "f772547de713cf5ab9d4a3f64db11ae053a446dbf69d88f2c913f3b2554e9b15"
+  },
+  "sources": [
+    "industrial/source/operations.json",
+    "industrial/source/entities.json",
+    "geospatial/geojson/industrial_facilities.geojson",
+    "geospatial/geojson/industrial_tracks.geojson",
+    "geospatial/geojson/sites.geojson"
+  ],
+  "sites": [
+    {
+      "site_id": "SH-IND-FAC-WAM-INT",
+      "source_facility_id": "FAC-WAM-INT",
+      "name": "Wamsutter interchange",
+      "map_prefix": "SH-MAP-ARU",
+      "map_start": 20,
+      "revision": "0.1.0",
+      "as_of": "2026-09-11",
+      "status": "SYNTHETIC_OPERATING",
+      "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+      "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+      "tenure": "Blood, Sweat & Tears Railway Company \u2014 accepted synthetic owner, not real title evidence",
+      "occupancy_start": null,
+      "source_opened": "1968-10-14",
+      "construction_start": null,
+      "construction_completion": null,
+      "envelope_m": [
+        467.472,
+        155.824
+      ],
+      "geometry_basis": "Local east/north diagram using source acreage and aspect ratio; no survey transform. Original georeferenced polygon is retained by reference, never replaced. Proposed building placements are illustrative, not surveyed.",
+      "geographic_envelope": {
+        "source": "geospatial/geojson/industrial_facilities.geojson",
+        "object_id": "SH-IND-FAC-WAM-INT",
+        "geometry_status": "LOCKED_DERIVED_IMPLEMENTATION",
+        "precision_class": "CASE_ENGINEERING_NOT_SURVEY",
+        "valid_from": null,
+        "valid_to": null
+      },
+      "sources": [
+        "industrial/source/operations.json",
+        "industrial/source/entities.json",
+        "geospatial/geojson/industrial_facilities.geojson",
+        "geospatial/geojson/industrial_tracks.geojson"
+      ],
+      "assumptions": [
+        {
+          "id": "IND-A01",
+          "statement": "Single-storey building/floor, rooms, dimensions, circulation, seats and simultaneous attendance are illustrative planning assumptions unless explicitly marked as source dimensions. They do not establish acquisition, as-built layout, occupancy or new employees."
+        }
+      ],
+      "accepted_capacity": {
+        "acreage": 18,
+        "assigned_fte": 6,
+        "track_count": 3,
+        "car_spots": 60,
+        "pallet_slots": 0,
+        "annual_external_ton_capacity": 0,
+        "services": "Three20car tracks; each accommodates16car roadtrain plus pairedlocomotives; synthetic UP interchange agreement",
+        "operating_hours": "five-day service; dispatch/oncall exceptions; mine continuous receiving by appointment",
+        "environmental_controls": "segregated drainage, spillkits, stormwater inspection, protected storage and recorded custody"
+      },
+      "population": {
+        "assigned_fte": 6,
+        "source": "industrial/source/operations.json#/facilities/FAC-WAM-INT",
+        "named_current_employees": null,
+        "authorized_positions": null,
+        "vacant_positions": null,
+        "resident_occupants": null,
+        "actual_shift_attendance": null,
+        "visitors_peak": null,
+        "planning_horizons": [
+          {
+            "year": 2026,
+            "additional_positions": null,
+            "basis": "No growth or hiring decision"
+          },
+          {
+            "year": 2031,
+            "additional_positions": null,
+            "basis": "No growth or hiring decision"
+          },
+          {
+            "year": 2036,
+            "additional_positions": null,
+            "basis": "No growth or hiring decision"
+          }
+        ],
+        "rollup_boundary": "Red Wash receiving six are already inside128 mine site employees; otherwise assigned FTE allocate ARU/BS&T131 once."
+      },
+      "track_ids": [
+        "YARD-FAC-WAM-INT-receipt",
+        "YARD-FAC-WAM-INT-release",
+        "YARD-FAC-WAM-INT-hold"
+      ],
+      "track_geometry_source": "geospatial/geojson/industrial_tracks.geojson",
+      "track_drawing_rule": "Context view renders existing referenced track geometry only. Local functional zones are not track alignments. Rawlins and Red Wash have no BS&T rails.",
+      "site_zones": [
+        {
+          "name": "Rail transfer / material handling context",
+          "rect_m": [
+            20,
+            30,
+            427.472,
+            95.82400000000001
+          ],
+          "type": "industrial"
+        }
+      ],
+      "access": {
+        "fire_service_loop_m": [
+          [
+            8,
+            8
+          ],
+          [
+            459.472,
+            8
+          ],
+          [
+            459.472,
+            147.824
+          ],
+          [
+            8,
+            147.824
+          ],
+          [
+            8,
+            8
+          ]
+        ],
+        "public_arrival_m": [
+          [
+            116.868,
+            0
+          ],
+          [
+            116.868,
+            15
+          ]
+        ],
+        "service_arrival_m": [
+          [
+            373.9776,
+            0
+          ],
+          [
+            373.9776,
+            25
+          ]
+        ],
+        "bicycle_spaces": null,
+        "parking_spaces": null,
+        "basis": "Illustrative access reservation, no approved road or road/rail crossings; accepted tracks require operator-controlled separation."
+      },
+      "buildings": [],
+      "dependencies": [
+        "Original industrial source geometry and engineering constraints control.",
+        "Pedestrian routes segregated from rail movements, truck reversing and handling.",
+        "No expansion beyond source operating capacity; utilities/fire/containment design unresolved."
+      ],
+      "floor_exemption": "Interchange tracks and protected transfer area established; no occupied building dimensions or count supported. Site/context plus track records suffice.",
+      "technical_layer_status": "UNRESOLVED: source operations describe function/capacity, not installed equipment or occupied-building plan",
+      "attendance_scenarios": [
+        {
+          "id": "SH-IND-FAC-WAM-INT-2026-CONCEPT",
+          "horizon": 2026,
+          "status": "ILLUSTRATIVE_NOT_SHIFT_CENSUS",
+          "people": null,
+          "floor_populations": {},
+          "basis": "Simultaneous indoor design load only; field/driver/outdoor staff are not automatically inside. Not an enterprise rollup scenario."
+        }
+      ]
+    },
+    {
+      "site_id": "SH-IND-FAC-TAY-YARD",
+      "source_facility_id": "FAC-TAY-YARD",
+      "name": "Taylor Yard and Shops",
+      "map_prefix": "SH-MAP-ARU",
+      "map_start": 30,
+      "revision": "0.1.0",
+      "as_of": "2026-09-11",
+      "status": "SYNTHETIC_OPERATING",
+      "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+      "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+      "tenure": "Blood, Sweat & Tears Railway Company \u2014 accepted synthetic owner, not real title evidence",
+      "occupancy_start": null,
+      "source_opened": "1968-10-14",
+      "construction_start": null,
+      "construction_completion": null,
+      "envelope_m": [
+        623.296,
+        207.765
+      ],
+      "geometry_basis": "Local east/north diagram using source acreage and aspect ratio; no survey transform. Original georeferenced polygon is retained by reference, never replaced. Proposed building placements are illustrative, not surveyed.",
+      "geographic_envelope": {
+        "source": "geospatial/geojson/industrial_facilities.geojson",
+        "object_id": "SH-IND-FAC-TAY-YARD",
+        "geometry_status": "LOCKED_DERIVED_IMPLEMENTATION",
+        "precision_class": "CASE_ENGINEERING_NOT_SURVEY",
+        "valid_from": null,
+        "valid_to": null
+      },
+      "sources": [
+        "industrial/source/operations.json",
+        "industrial/source/entities.json",
+        "geospatial/geojson/industrial_facilities.geojson",
+        "geospatial/geojson/industrial_tracks.geojson"
+      ],
+      "assumptions": [
+        {
+          "id": "IND-A01",
+          "statement": "Single-storey building/floor, rooms, dimensions, circulation, seats and simultaneous attendance are illustrative planning assumptions unless explicitly marked as source dimensions. They do not establish acquisition, as-built layout, occupancy or new employees."
+        }
+      ],
+      "accepted_capacity": {
+        "acreage": 32,
+        "assigned_fte": 46,
+        "track_count": 7,
+        "car_spots": 100,
+        "pallet_slots": 0,
+        "annual_external_ton_capacity": 0,
+        "services": "classification, locomotive shop, fuelpoint, dispatch and crew facilities",
+        "operating_hours": "five-day service; dispatch/oncall exceptions; mine continuous receiving by appointment",
+        "environmental_controls": "segregated drainage, spillkits, stormwater inspection, protected storage and recorded custody"
+      },
+      "population": {
+        "assigned_fte": 46,
+        "source": "industrial/source/operations.json#/facilities/FAC-TAY-YARD",
+        "named_current_employees": null,
+        "authorized_positions": null,
+        "vacant_positions": null,
+        "resident_occupants": null,
+        "actual_shift_attendance": null,
+        "visitors_peak": null,
+        "planning_horizons": [
+          {
+            "year": 2026,
+            "additional_positions": null,
+            "basis": "No growth or hiring decision"
+          },
+          {
+            "year": 2031,
+            "additional_positions": null,
+            "basis": "No growth or hiring decision"
+          },
+          {
+            "year": 2036,
+            "additional_positions": null,
+            "basis": "No growth or hiring decision"
+          }
+        ],
+        "rollup_boundary": "Red Wash receiving six are already inside128 mine site employees; otherwise assigned FTE allocate ARU/BS&T131 once."
+      },
+      "track_ids": [
+        "YARD-FAC-TAY-YARD-arrival",
+        "YARD-FAC-TAY-YARD-departure",
+        "YARD-FAC-TAY-YARD-classification1",
+        "YARD-FAC-TAY-YARD-classification2",
+        "YARD-FAC-TAY-YARD-shop",
+        "YARD-FAC-TAY-YARD-fuel",
+        "YARD-FAC-TAY-YARD-storage"
+      ],
+      "track_geometry_source": "geospatial/geojson/industrial_tracks.geojson",
+      "track_drawing_rule": "Context view renders existing referenced track geometry only. Local functional zones are not track alignments. Rawlins and Red Wash have no BS&T rails.",
+      "site_zones": [
+        {
+          "name": "Track estate \u2014 geometry in context view",
+          "rect_m": [
+            20,
+            100,
+            583.296,
+            87.76499999999999
+          ],
+          "type": "industrial"
+        }
+      ],
+      "access": {
+        "fire_service_loop_m": [
+          [
+            8,
+            8
+          ],
+          [
+            615.296,
+            8
+          ],
+          [
+            615.296,
+            199.765
+          ],
+          [
+            8,
+            199.765
+          ],
+          [
+            8,
+            8
+          ]
+        ],
+        "public_arrival_m": [
+          [
+            155.824,
+            0
+          ],
+          [
+            155.824,
+            15
+          ]
+        ],
+        "service_arrival_m": [
+          [
+            498.63680000000005,
+            0
+          ],
+          [
+            498.63680000000005,
+            25
+          ]
+        ],
+        "bicycle_spaces": null,
+        "parking_spaces": null,
+        "basis": "Illustrative access reservation, no approved road or road/rail crossings; accepted tracks require operator-controlled separation."
+      },
+      "buildings": [
+        {
+          "id": "SH-IND-FAC-TAY-YARD-B01",
+          "name": "Locomotive running-repair shop",
+          "rect_m": [
+            35,
+            40,
+            60,
+            24
+          ],
+          "status": "ILLUSTRATIVE_FITOUT_EXISTING_FUNCTION_NOT_AS_BUILT",
+          "floor_height_m": 7,
+          "actual_floor_count": null,
+          "modelled_floor_count": 1,
+          "plan_style": "industrial_open_plan",
+          "structure": "Concept structural bay scheme; loads, spans, height and fire system subject to engineering. No construction approval.",
+          "core_basis": "Single level with direct perimeter exits; wet/service zone reserved in support band. No automatic office core. Floor level/accessibility and rated egress design unverified.",
+          "sources": [
+            "industrial/source/operations.json",
+            "industrial/source/entities.json",
+            "geospatial/geojson/industrial_facilities.geojson",
+            "geospatial/geojson/industrial_tracks.geojson"
+          ],
+          "floors": [
+            {
+              "id": "SH-IND-FAC-TAY-YARD-B01-L01",
+              "level": 1,
+              "name": "Locomotive running-repair shop \u2014 ground level",
+              "status": "ILLUSTRATIVE_NOT_SURVEYED",
+              "gross_area_m2": 1440,
+              "net_assignable_area_m2": 1260,
+              "core_circulation_service_m2": 180,
+              "planned_peak": 10,
+              "rooms": [
+                {
+                  "id": "SH-IND-FAC-TAY-YARD-B01-L01-R01",
+                  "name": "Running repair / inspection hall",
+                  "rect_m": [
+                    0,
+                    0,
+                    48,
+                    21
+                  ],
+                  "access": "industrial",
+                  "assigned_desks": 0,
+                  "shared_desks": 0,
+                  "touchdown_seats": 0,
+                  "training_seats": 0,
+                  "meeting_seats": 0,
+                  "resident_beds": 0,
+                  "special_use_concurrent_capacity": 8,
+                  "basis": "IND-A01: illustrative room/attendance assumption; no new workforce authorization"
+                },
+                {
+                  "id": "SH-IND-FAC-TAY-YARD-B01-L01-R02",
+                  "name": "Parts and controlled stores",
+                  "rect_m": [
+                    48,
+                    0,
+                    12,
+                    12
+                  ],
+                  "access": "staff",
+                  "assigned_desks": 0,
+                  "shared_desks": 0,
+                  "touchdown_seats": 0,
+                  "training_seats": 0,
+                  "meeting_seats": 0,
+                  "resident_beds": 0,
+                  "special_use_concurrent_capacity": 1,
+                  "basis": "IND-A01: illustrative room/attendance assumption; no new workforce authorization"
+                },
+                {
+                  "id": "SH-IND-FAC-TAY-YARD-B01-L01-R03",
+                  "name": "Workshop support and welfare",
+                  "rect_m": [
+                    48,
+                    12,
+                    12,
+                    9
+                  ],
+                  "access": "staff",
+                  "assigned_desks": 1,
+                  "shared_desks": 0,
+                  "touchdown_seats": 0,
+                  "training_seats": 0,
+                  "meeting_seats": 4,
+                  "resident_beds": 0,
+                  "special_use_concurrent_capacity": 0,
+                  "basis": "IND-A01: illustrative room/attendance assumption; no new workforce authorization"
+                }
+              ],
+              "egress_concept": "Opposed perimeter exits with clear personnel paths separated from handling/vehicle zones. Detailed exit distances and protective separation unverified.",
+              "doors": [
+                {
+                  "edge": "south",
+                  "position_fraction": 0.1,
+                  "purpose": "pedestrian_exit"
+                },
+                {
+                  "edge": "north",
+                  "position_fraction": 0.9,
+                  "purpose": "pedestrian_exit"
+                }
+              ]
+            }
+          ],
+          "layout_style": "industrial",
+          "openings": [
+            {
+              "edge": "west",
+              "position_m": 12.0,
+              "width_m": 1.5,
+              "purpose": "Personnel exit; conceptual"
+            },
+            {
+              "edge": "east",
+              "position_m": 12.0,
+              "width_m": 1.5,
+              "purpose": "Personnel exit; conceptual"
+            },
+            {
+              "edge": "south",
+              "position_m": 30.0,
+              "width_m": 4.5,
+              "purpose": "Handling/vehicle interface reservation; no installed rail claimed"
+            }
+          ]
+        },
+        {
+          "id": "SH-IND-FAC-TAY-YARD-B02",
+          "name": "Dispatch and crew house",
+          "rect_m": [
+            115,
+            40,
+            36,
+            18
+          ],
+          "status": "ILLUSTRATIVE_FITOUT_EXISTING_FUNCTION_NOT_AS_BUILT",
+          "floor_height_m": 4.2,
+          "actual_floor_count": null,
+          "modelled_floor_count": 1,
+          "plan_style": "industrial_open_plan",
+          "structure": "Concept structural bay scheme; loads, spans, height and fire system subject to engineering. No construction approval.",
+          "core_basis": "Single level with direct perimeter exits; wet/service zone reserved in support band. No automatic office core. Floor level/accessibility and rated egress design unverified.",
+          "sources": [
+            "industrial/source/operations.json",
+            "industrial/source/entities.json",
+            "geospatial/geojson/industrial_facilities.geojson",
+            "geospatial/geojson/industrial_tracks.geojson"
+          ],
+          "floors": [
+            {
+              "id": "SH-IND-FAC-TAY-YARD-B02-L01",
+              "level": 1,
+              "name": "Dispatch and crew house \u2014 ground level",
+              "status": "ILLUSTRATIVE_NOT_SURVEYED",
+              "gross_area_m2": 648,
+              "net_assignable_area_m2": 576,
+              "core_circulation_service_m2": 72,
+              "planned_peak": 20,
+              "rooms": [
+                {
+                  "id": "SH-IND-FAC-TAY-YARD-B02-L01-R01",
+                  "name": "Dispatch and controlled communications",
+                  "rect_m": [
+                    0,
+                    0,
+                    12,
+                    8
+                  ],
+                  "access": "restricted",
+                  "assigned_desks": 3,
+                  "shared_desks": 0,
+                  "touchdown_seats": 0,
+                  "training_seats": 0,
+                  "meeting_seats": 0,
+                  "resident_beds": 0,
+                  "special_use_concurrent_capacity": 0,
+                  "basis": "IND-A01: illustrative room/attendance assumption; no new workforce authorization"
+                },
+                {
+                  "id": "SH-IND-FAC-TAY-YARD-B02-L01-R02",
+                  "name": "Crew briefing and sign-on",
+                  "rect_m": [
+                    12,
+                    0,
+                    12,
+                    8
+                  ],
+                  "access": "staff",
+                  "assigned_desks": 0,
+                  "shared_desks": 0,
+                  "touchdown_seats": 0,
+                  "training_seats": 0,
+                  "meeting_seats": 12,
+                  "resident_beds": 0,
+                  "special_use_concurrent_capacity": 0,
+                  "basis": "IND-A01: illustrative room/attendance assumption; no new workforce authorization"
+                },
+                {
+                  "id": "SH-IND-FAC-TAY-YARD-B02-L01-R03",
+                  "name": "Operating supervision",
+                  "rect_m": [
+                    24,
+                    0,
+                    12,
+                    8
+                  ],
+                  "access": "staff",
+                  "assigned_desks": 2,
+                  "shared_desks": 0,
+                  "touchdown_seats": 0,
+                  "training_seats": 0,
+                  "meeting_seats": 0,
+                  "resident_beds": 0,
+                  "special_use_concurrent_capacity": 0,
+                  "basis": "IND-A01: illustrative room/attendance assumption; no new workforce authorization"
+                },
+                {
+                  "id": "SH-IND-FAC-TAY-YARD-B02-L01-R04",
+                  "name": "Crew welfare and lockers",
+                  "rect_m": [
+                    0,
+                    10,
+                    18,
+                    8
+                  ],
+                  "access": "staff",
+                  "assigned_desks": 0,
+                  "shared_desks": 0,
+                  "touchdown_seats": 0,
+                  "training_seats": 0,
+                  "meeting_seats": 12,
+                  "resident_beds": 0,
+                  "special_use_concurrent_capacity": 0,
+                  "basis": "IND-A01: illustrative room/attendance assumption; no new workforce authorization"
+                },
+                {
+                  "id": "SH-IND-FAC-TAY-YARD-B02-L01-R05",
+                  "name": "Qualification / records work",
+                  "rect_m": [
+                    18,
+                    10,
+                    12,
+                    8
+                  ],
+                  "access": "staff",
+                  "assigned_desks": 0,
+                  "shared_desks": 3,
+                  "touchdown_seats": 0,
+                  "training_seats": 0,
+                  "meeting_seats": 0,
+                  "resident_beds": 0,
+                  "special_use_concurrent_capacity": 0,
+                  "basis": "IND-A01: illustrative room/attendance assumption; no new workforce authorization"
+                },
+                {
+                  "id": "SH-IND-FAC-TAY-YARD-B02-L01-R06",
+                  "name": "Wet and service reserve",
+                  "rect_m": [
+                    30,
+                    10,
+                    6,
+                    8
+                  ],
+                  "access": "service",
+                  "assigned_desks": 0,
+                  "shared_desks": 0,
+                  "touchdown_seats": 0,
+                  "training_seats": 0,
+                  "meeting_seats": 0,
+                  "resident_beds": 0,
+                  "special_use_concurrent_capacity": 0,
+                  "basis": "IND-A01: illustrative room/attendance assumption; no new workforce authorization"
+                }
+              ],
+              "egress_concept": "Opposed perimeter exits with clear personnel paths separated from handling/vehicle zones. Detailed exit distances and protective separation unverified.",
+              "doors": [
+                {
+                  "edge": "south",
+                  "position_fraction": 0.1,
+                  "purpose": "pedestrian_exit"
+                },
+                {
+                  "edge": "north",
+                  "position_fraction": 0.9,
+                  "purpose": "pedestrian_exit"
+                }
+              ]
+            }
+          ],
+          "layout_style": "industrial",
+          "openings": [
+            {
+              "edge": "west",
+              "position_m": 9.0,
+              "width_m": 1.5,
+              "purpose": "Personnel exit; conceptual"
+            },
+            {
+              "edge": "east",
+              "position_m": 9.0,
+              "width_m": 1.5,
+              "purpose": "Personnel exit; conceptual"
+            },
+            {
+              "edge": "south",
+              "position_m": 18.0,
+              "width_m": 4.5,
+              "purpose": "Handling/vehicle interface reservation; no installed rail claimed"
+            }
+          ]
+        }
+      ],
+      "dependencies": [
+        "Original industrial source geometry and engineering constraints control.",
+        "Pedestrian routes segregated from rail movements, truck reversing and handling.",
+        "No expansion beyond source operating capacity; utilities/fire/containment design unresolved.",
+        "Shop track linkage references YARD-FAC-TAY-YARD-shop; concept building placement must be reconciled with that track before design acceptance. No fresh rail lines are drawn.",
+        "Heavy locomotive overhaul stays outsourced; running-repair hall does not imply full rebuild capacity."
+      ],
+      "floor_exemption": null,
+      "attendance_scenarios": [
+        {
+          "id": "SH-IND-FAC-TAY-YARD-2026-CONCEPT",
+          "horizon": 2026,
+          "status": "ILLUSTRATIVE_NOT_SHIFT_CENSUS",
+          "people": 30,
+          "floor_populations": {
+            "SH-IND-FAC-TAY-YARD-B01-L01": 10,
+            "SH-IND-FAC-TAY-YARD-B02-L01": 20
+          },
+          "basis": "Simultaneous indoor design load only; field/driver/outdoor staff are not automatically inside. Not an enterprise rollup scenario."
+        }
+      ]
+    },
+    {
+      "site_id": "SH-IND-FAC-TAY-TERMINAL",
+      "source_facility_id": "FAC-TAY-TERMINAL",
+      "name": "Taylor Industrial Transload Complex",
+      "map_prefix": "SH-MAP-ARU",
+      "map_start": 40,
+      "revision": "0.1.0",
+      "as_of": "2026-09-11",
+      "status": "SYNTHETIC_OPERATING",
+      "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+      "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+      "tenure": "American Resource Utility, Inc. \u2014 accepted synthetic owner, not real title evidence",
+      "occupancy_start": null,
+      "source_opened": "1972-05-08",
+      "construction_start": null,
+      "construction_completion": null,
+      "envelope_m": [
+        431.457,
+        431.457
+      ],
+      "geometry_basis": "Local east/north diagram using source acreage and aspect ratio; no survey transform. Original georeferenced polygon is retained by reference, never replaced. Proposed building placements are illustrative, not surveyed.",
+      "geographic_envelope": {
+        "source": "geospatial/geojson/industrial_facilities.geojson",
+        "object_id": "SH-IND-FAC-TAY-TERMINAL",
+        "geometry_status": "LOCKED_DERIVED_IMPLEMENTATION",
+        "precision_class": "CASE_ENGINEERING_NOT_SURVEY",
+        "valid_from": null,
+        "valid_to": null
+      },
+      "sources": [
+        "industrial/source/operations.json",
+        "industrial/source/entities.json",
+        "geospatial/geojson/industrial_facilities.geojson",
+        "geospatial/geojson/industrial_tracks.geojson"
+      ],
+      "assumptions": [
+        {
+          "id": "IND-A01",
+          "statement": "Single-storey building/floor, rooms, dimensions, circulation, seats and simultaneous attendance are illustrative planning assumptions unless explicitly marked as source dimensions. They do not establish acquisition, as-built layout, occupancy or new employees."
+        }
+      ],
+      "accepted_capacity": {
+        "acreage": 46,
+        "assigned_fte": 19,
+        "track_count": 5,
+        "car_spots": 50,
+        "pallet_slots": 0,
+        "annual_external_ton_capacity": 210000,
+        "services": "existing general transload and Phase1 two10car tracks plus sixcar liquidtrack; acids segregated from general cargo",
+        "operating_hours": "Mon\u2013Fri06:00\u201322:00 plus contracted exception service",
+        "environmental_controls": "segregated drainage, spillkits, stormwater inspection, protected storage and recorded custody"
+      },
+      "population": {
+        "assigned_fte": 19,
+        "source": "industrial/source/operations.json#/facilities/FAC-TAY-TERMINAL",
+        "named_current_employees": null,
+        "authorized_positions": null,
+        "vacant_positions": null,
+        "resident_occupants": null,
+        "actual_shift_attendance": null,
+        "visitors_peak": null,
+        "planning_horizons": [
+          {
+            "year": 2026,
+            "additional_positions": null,
+            "basis": "No growth or hiring decision"
+          },
+          {
+            "year": 2031,
+            "additional_positions": null,
+            "basis": "No growth or hiring decision"
+          },
+          {
+            "year": 2036,
+            "additional_positions": null,
+            "basis": "No growth or hiring decision"
+          }
+        ],
+        "rollup_boundary": "Red Wash receiving six are already inside128 mine site employees; otherwise assigned FTE allocate ARU/BS&T131 once."
+      },
+      "track_ids": [
+        "YARD-FAC-TAY-TERMINAL-legacygeneral",
+        "YARD-FAC-TAY-TERMINAL-legacyteam",
+        "YARD-FAC-TAY-TERMINAL-phase1generalA",
+        "YARD-FAC-TAY-TERMINAL-phase1generalB",
+        "YARD-FAC-TAY-TERMINAL-phase1liquid"
+      ],
+      "track_geometry_source": "geospatial/geojson/industrial_tracks.geojson",
+      "track_drawing_rule": "Context view renders existing referenced track geometry only. Local functional zones are not track alignments. Rawlins and Red Wash have no BS&T rails.",
+      "site_zones": [
+        {
+          "name": "General transfer / segregated liquid handling",
+          "rect_m": [
+            20,
+            30,
+            391.457,
+            371.457
+          ],
+          "type": "industrial"
+        }
+      ],
+      "access": {
+        "fire_service_loop_m": [
+          [
+            8,
+            8
+          ],
+          [
+            423.457,
+            8
+          ],
+          [
+            423.457,
+            423.457
+          ],
+          [
+            8,
+            423.457
+          ],
+          [
+            8,
+            8
+          ]
+        ],
+        "public_arrival_m": [
+          [
+            107.86425,
+            0
+          ],
+          [
+            107.86425,
+            15
+          ]
+        ],
+        "service_arrival_m": [
+          [
+            345.16560000000004,
+            0
+          ],
+          [
+            345.16560000000004,
+            25
+          ]
+        ],
+        "bicycle_spaces": null,
+        "parking_spaces": null,
+        "basis": "Illustrative access reservation, no approved road or road/rail crossings; accepted tracks require operator-controlled separation."
+      },
+      "buildings": [],
+      "dependencies": [
+        "Original industrial source geometry and engineering constraints control.",
+        "Pedestrian routes segregated from rail movements, truck reversing and handling.",
+        "No expansion beyond source operating capacity; utilities/fire/containment design unresolved."
+      ],
+      "floor_exemption": "General and segregated liquid transload functions established, but no occupied building envelope supplied. Site handling zones are conceptual; no tank, pipe, containment sizing or installation inferred.",
+      "technical_layer_status": "UNRESOLVED: source operations describe function/capacity, not installed equipment or occupied-building plan",
+      "attendance_scenarios": [
+        {
+          "id": "SH-IND-FAC-TAY-TERMINAL-2026-CONCEPT",
+          "horizon": 2026,
+          "status": "ILLUSTRATIVE_NOT_SHIFT_CENSUS",
+          "people": null,
+          "floor_populations": {},
+          "basis": "Simultaneous indoor design load only; field/driver/outdoor staff are not automatically inside. Not an enterprise rollup scenario."
+        }
+      ]
+    },
+    {
+      "site_id": "SH-IND-FAC-TAY-WAREHOUSE",
+      "source_facility_id": "FAC-TAY-WAREHOUSE",
+      "name": "Taylor warehouse",
+      "map_prefix": "SH-MAP-ARU",
+      "map_start": 50,
+      "revision": "0.1.0",
+      "as_of": "2026-09-11",
+      "status": "SYNTHETIC_OPERATING",
+      "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+      "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+      "tenure": "American Resource Utility, Inc. \u2014 accepted synthetic owner, not real title evidence",
+      "occupancy_start": null,
+      "source_opened": "1974-06-03",
+      "construction_start": null,
+      "construction_completion": null,
+      "envelope_m": [
+        269.895,
+        269.895
+      ],
+      "geometry_basis": "Local east/north diagram using source acreage and aspect ratio; no survey transform. Original georeferenced polygon is retained by reference, never replaced. Proposed building placements are illustrative, not surveyed.",
+      "geographic_envelope": {
+        "source": "geospatial/geojson/industrial_facilities.geojson",
+        "object_id": "SH-IND-FAC-TAY-WAREHOUSE",
+        "geometry_status": "LOCKED_DERIVED_IMPLEMENTATION",
+        "precision_class": "CASE_ENGINEERING_NOT_SURVEY",
+        "valid_from": null,
+        "valid_to": null
+      },
+      "sources": [
+        "industrial/source/operations.json",
+        "industrial/source/entities.json",
+        "geospatial/geojson/industrial_facilities.geojson",
+        "geospatial/geojson/industrial_tracks.geojson"
+      ],
+      "assumptions": [
+        {
+          "id": "IND-A01",
+          "statement": "Single-storey building/floor, rooms, dimensions, circulation, seats and simultaneous attendance are illustrative planning assumptions unless explicitly marked as source dimensions. They do not establish acquisition, as-built layout, occupancy or new employees."
+        }
+      ],
+      "accepted_capacity": {
+        "acreage": 18,
+        "assigned_fte": 8,
+        "track_count": 1,
+        "car_spots": 8,
+        "pallet_slots": 11000,
+        "annual_external_ton_capacity": 0,
+        "services": "210000sf reserved palletcapacity; three handling shifts; rail/truck interface",
+        "operating_hours": "Mon\u2013Fri06:00\u201322:00 plus contracted exception service",
+        "environmental_controls": "segregated drainage, spillkits, stormwater inspection, protected storage and recorded custody"
+      },
+      "population": {
+        "assigned_fte": 8,
+        "source": "industrial/source/operations.json#/facilities/FAC-TAY-WAREHOUSE",
+        "named_current_employees": null,
+        "authorized_positions": null,
+        "vacant_positions": null,
+        "resident_occupants": null,
+        "actual_shift_attendance": null,
+        "visitors_peak": null,
+        "planning_horizons": [
+          {
+            "year": 2026,
+            "additional_positions": null,
+            "basis": "No growth or hiring decision"
+          },
+          {
+            "year": 2031,
+            "additional_positions": null,
+            "basis": "No growth or hiring decision"
+          },
+          {
+            "year": 2036,
+            "additional_positions": null,
+            "basis": "No growth or hiring decision"
+          }
+        ],
+        "rollup_boundary": "Red Wash receiving six are already inside128 mine site employees; otherwise assigned FTE allocate ARU/BS&T131 once."
+      },
+      "track_ids": [
+        "YARD-FAC-TAY-WAREHOUSE-warehouse"
+      ],
+      "track_geometry_source": "geospatial/geojson/industrial_tracks.geojson",
+      "track_drawing_rule": "Context view renders existing referenced track geometry only. Local functional zones are not track alignments. Rawlins and Red Wash have no BS&T rails.",
+      "site_zones": [
+        {
+          "name": "Truck apron and staged deliveries",
+          "rect_m": [
+            20,
+            10,
+            192.88,
+            30
+          ],
+          "type": "service"
+        },
+        {
+          "name": "Protected service / fire access",
+          "rect_m": [
+            20,
+            156.68,
+            192.88,
+            20
+          ],
+          "type": "service"
+        }
+      ],
+      "access": {
+        "fire_service_loop_m": [
+          [
+            8,
+            8
+          ],
+          [
+            261.895,
+            8
+          ],
+          [
+            261.895,
+            261.895
+          ],
+          [
+            8,
+            261.895
+          ],
+          [
+            8,
+            8
+          ]
+        ],
+        "public_arrival_m": [
+          [
+            67.47375,
+            0
+          ],
+          [
+            67.47375,
+            15
+          ]
+        ],
+        "service_arrival_m": [
+          [
+            215.916,
+            0
+          ],
+          [
+            215.916,
+            25
+          ]
+        ],
+        "bicycle_spaces": null,
+        "parking_spaces": null,
+        "basis": "Illustrative access reservation, no approved road or road/rail crossings; accepted tracks require operator-controlled separation."
+      },
+      "buildings": [
+        {
+          "id": "SH-IND-FAC-TAY-WAREHOUSE-B01",
+          "name": "Taylor warehouse",
+          "rect_m": [
+            25,
+            45,
+            182.88,
+            106.68
+          ],
+          "status": "ILLUSTRATIVE_FITOUT_EXISTING_FUNCTION_NOT_AS_BUILT",
+          "floor_height_m": 10,
+          "actual_floor_count": null,
+          "modelled_floor_count": 1,
+          "plan_style": "industrial_open_plan",
+          "structure": "Illustrative multi-bay warehouse roof/column grid; racking height, aisle/rack geometry and fire strategy unresolved, not drawn as installed equipment.",
+          "core_basis": "Single level with direct perimeter exits; wet/service zone reserved in support band. No automatic office core. Floor level/accessibility and rated egress design unverified.",
+          "sources": [
+            "industrial/source/operations.json",
+            "industrial/source/entities.json",
+            "geospatial/geojson/industrial_facilities.geojson",
+            "geospatial/geojson/industrial_tracks.geojson"
+          ],
+          "floors": [
+            {
+              "id": "SH-IND-FAC-TAY-WAREHOUSE-B01-L01",
+              "level": 1,
+              "name": "Taylor warehouse \u2014 ground level",
+              "status": "ILLUSTRATIVE_NOT_SURVEYED",
+              "gross_area_m2": 19509.6384,
+              "net_assignable_area_m2": 17558.67456,
+              "core_circulation_service_m2": 1950.96384,
+              "planned_peak": 8,
+              "rooms": [
+                {
+                  "id": "SH-IND-FAC-TAY-WAREHOUSE-B01-L01-R01",
+                  "name": "Pallet storage zone",
+                  "rect_m": [
+                    0,
+                    26.67,
+                    146.304,
+                    69.34200000000001
+                  ],
+                  "access": "industrial",
+                  "assigned_desks": 0,
+                  "shared_desks": 0,
+                  "touchdown_seats": 0,
+                  "training_seats": 0,
+                  "meeting_seats": 0,
+                  "resident_beds": 0,
+                  "special_use_concurrent_capacity": 5,
+                  "basis": "IND-A01: illustrative room/attendance assumption; no new workforce authorization"
+                },
+                {
+                  "id": "SH-IND-FAC-TAY-WAREHOUSE-B01-L01-R02",
+                  "name": "Receiving and quarantine",
+                  "rect_m": [
+                    0,
+                    0,
+                    73.152,
+                    26.67
+                  ],
+                  "access": "industrial",
+                  "assigned_desks": 0,
+                  "shared_desks": 0,
+                  "touchdown_seats": 0,
+                  "training_seats": 0,
+                  "meeting_seats": 0,
+                  "resident_beds": 0,
+                  "special_use_concurrent_capacity": 2,
+                  "basis": "IND-A01: illustrative room/attendance assumption; no new workforce authorization"
+                },
+                {
+                  "id": "SH-IND-FAC-TAY-WAREHOUSE-B01-L01-R03",
+                  "name": "Order assembly and dispatch",
+                  "rect_m": [
+                    73.152,
+                    0,
+                    73.152,
+                    26.67
+                  ],
+                  "access": "industrial",
+                  "assigned_desks": 0,
+                  "shared_desks": 0,
+                  "touchdown_seats": 0,
+                  "training_seats": 0,
+                  "meeting_seats": 0,
+                  "resident_beds": 0,
+                  "special_use_concurrent_capacity": 2,
+                  "basis": "IND-A01: illustrative room/attendance assumption; no new workforce authorization"
+                },
+                {
+                  "id": "SH-IND-FAC-TAY-WAREHOUSE-B01-L01-R04",
+                  "name": "Customer support",
+                  "rect_m": [
+                    146.304,
+                    0,
+                    36.576,
+                    26.67
+                  ],
+                  "access": "staff",
+                  "assigned_desks": 2,
+                  "shared_desks": 0,
+                  "touchdown_seats": 0,
+                  "training_seats": 0,
+                  "meeting_seats": 0,
+                  "resident_beds": 0,
+                  "special_use_concurrent_capacity": 0,
+                  "basis": "IND-A01: illustrative room/attendance assumption; no new workforce authorization"
+                },
+                {
+                  "id": "SH-IND-FAC-TAY-WAREHOUSE-B01-L01-R05",
+                  "name": "Welfare reserve",
+                  "rect_m": [
+                    146.304,
+                    26.67,
+                    36.576,
+                    32.004
+                  ],
+                  "access": "staff",
+                  "assigned_desks": 0,
+                  "shared_desks": 0,
+                  "touchdown_seats": 0,
+                  "training_seats": 0,
+                  "meeting_seats": 4,
+                  "resident_beds": 0,
+                  "special_use_concurrent_capacity": 0,
+                  "basis": "IND-A01: illustrative room/attendance assumption; no new workforce authorization"
+                },
+                {
+                  "id": "SH-IND-FAC-TAY-WAREHOUSE-B01-L01-R06",
+                  "name": "Protected MHE service reserve",
+                  "rect_m": [
+                    146.304,
+                    58.67400000000001,
+                    36.576,
+                    37.338
+                  ],
+                  "access": "industrial",
+                  "assigned_desks": 0,
+                  "shared_desks": 0,
+                  "touchdown_seats": 0,
+                  "training_seats": 0,
+                  "meeting_seats": 0,
+                  "resident_beds": 0,
+                  "special_use_concurrent_capacity": 1,
+                  "basis": "IND-A01: illustrative room/attendance assumption; no new workforce authorization"
+                }
+              ],
+              "egress_concept": "Opposed perimeter exits with clear personnel paths separated from handling/vehicle zones. Detailed exit distances and protective separation unverified.",
+              "doors": [
+                {
+                  "edge": "south",
+                  "position_fraction": 0.1,
+                  "purpose": "pedestrian_exit"
+                },
+                {
+                  "edge": "north",
+                  "position_fraction": 0.9,
+                  "purpose": "pedestrian_exit"
+                }
+              ]
+            }
+          ],
+          "source_area_sqft": 210000,
+          "area_basis": "Accepted gross floor area in operations.services; single-storey footprint aspect and internal zones illustrative. 1 square foot =0.09290304m2.",
+          "layout_style": "industrial",
+          "openings": [
+            {
+              "edge": "west",
+              "position_m": 53.34,
+              "width_m": 1.5,
+              "purpose": "Personnel exit; conceptual"
+            },
+            {
+              "edge": "east",
+              "position_m": 53.34,
+              "width_m": 1.5,
+              "purpose": "Personnel exit; conceptual"
+            },
+            {
+              "edge": "south",
+              "position_m": 91.44,
+              "width_m": 4.5,
+              "purpose": "Handling/vehicle interface reservation; no installed rail claimed"
+            }
+          ]
+        }
+      ],
+      "dependencies": [
+        "Original industrial source geometry and engineering constraints control.",
+        "Pedestrian routes segregated from rail movements, truck reversing and handling.",
+        "No expansion beyond source operating capacity; utilities/fire/containment design unresolved."
+      ],
+      "floor_exemption": null,
+      "attendance_scenarios": [
+        {
+          "id": "SH-IND-FAC-TAY-WAREHOUSE-2026-CONCEPT",
+          "horizon": 2026,
+          "status": "ILLUSTRATIVE_NOT_SHIFT_CENSUS",
+          "people": 8,
+          "floor_populations": {
+            "SH-IND-FAC-TAY-WAREHOUSE-B01-L01": 8
+          },
+          "basis": "Simultaneous indoor design load only; field/driver/outdoor staff are not automatically inside. Not an enterprise rollup scenario."
+        }
+      ]
+    },
+    {
+      "site_id": "SH-IND-FAC-TAY-TRUCK",
+      "source_facility_id": "FAC-TAY-TRUCK",
+      "name": "Taylor trucking depot",
+      "map_prefix": "SH-MAP-ARU",
+      "map_start": 60,
+      "revision": "0.1.0",
+      "as_of": "2026-09-11",
+      "status": "SYNTHETIC_OPERATING",
+      "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+      "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+      "tenure": "American Resource Utility, Inc. \u2014 accepted synthetic owner, not real title evidence",
+      "occupancy_start": null,
+      "source_opened": "1989-10-02",
+      "construction_start": null,
+      "construction_completion": null,
+      "envelope_m": [
+        179.93,
+        179.93
+      ],
+      "geometry_basis": "Local east/north diagram using source acreage and aspect ratio; no survey transform. Original georeferenced polygon is retained by reference, never replaced. Proposed building placements are illustrative, not surveyed.",
+      "geographic_envelope": {
+        "source": "geospatial/geojson/industrial_facilities.geojson",
+        "object_id": "SH-IND-FAC-TAY-TRUCK",
+        "geometry_status": "LOCKED_DERIVED_IMPLEMENTATION",
+        "precision_class": "CASE_ENGINEERING_NOT_SURVEY",
+        "valid_from": null,
+        "valid_to": null
+      },
+      "sources": [
+        "industrial/source/operations.json",
+        "industrial/source/entities.json",
+        "geospatial/geojson/industrial_facilities.geojson",
+        "geospatial/geojson/industrial_tracks.geojson"
+      ],
+      "assumptions": [
+        {
+          "id": "IND-A01",
+          "statement": "Single-storey building/floor, rooms, dimensions, circulation, seats and simultaneous attendance are illustrative planning assumptions unless explicitly marked as source dimensions. They do not establish acquisition, as-built layout, occupancy or new employees."
+        }
+      ],
+      "accepted_capacity": {
+        "acreage": 8,
+        "assigned_fte": 20,
+        "track_count": 0,
+        "car_spots": 0,
+        "pallet_slots": 0,
+        "annual_external_ton_capacity": 0,
+        "services": "tractor/trailer parking, inspection bays and dispatch",
+        "operating_hours": "Mon\u2013Fri06:00\u201322:00 plus contracted exception service",
+        "environmental_controls": "segregated drainage, spillkits, stormwater inspection, protected storage and recorded custody"
+      },
+      "population": {
+        "assigned_fte": 20,
+        "source": "industrial/source/operations.json#/facilities/FAC-TAY-TRUCK",
+        "named_current_employees": null,
+        "authorized_positions": null,
+        "vacant_positions": null,
+        "resident_occupants": null,
+        "actual_shift_attendance": null,
+        "visitors_peak": null,
+        "planning_horizons": [
+          {
+            "year": 2026,
+            "additional_positions": null,
+            "basis": "No growth or hiring decision"
+          },
+          {
+            "year": 2031,
+            "additional_positions": null,
+            "basis": "No growth or hiring decision"
+          },
+          {
+            "year": 2036,
+            "additional_positions": null,
+            "basis": "No growth or hiring decision"
+          }
+        ],
+        "rollup_boundary": "Red Wash receiving six are already inside128 mine site employees; otherwise assigned FTE allocate ARU/BS&T131 once."
+      },
+      "track_ids": [],
+      "track_geometry_source": "geospatial/geojson/industrial_tracks.geojson",
+      "track_drawing_rule": "Context view renders existing referenced track geometry only. Local functional zones are not track alignments. Rawlins and Red Wash have no BS&T rails.",
+      "site_zones": [
+        {
+          "name": "Tractor / trailer staging",
+          "rect_m": [
+            80,
+            30,
+            79.93,
+            119.93
+          ],
+          "type": "service"
+        },
+        {
+          "name": "Separated vehicle approach",
+          "rect_m": [
+            20,
+            10,
+            55,
+            25
+          ],
+          "type": "service"
+        }
+      ],
+      "access": {
+        "fire_service_loop_m": [
+          [
+            8,
+            8
+          ],
+          [
+            171.93,
+            8
+          ],
+          [
+            171.93,
+            171.93
+          ],
+          [
+            8,
+            171.93
+          ],
+          [
+            8,
+            8
+          ]
+        ],
+        "public_arrival_m": [
+          [
+            44.9825,
+            0
+          ],
+          [
+            44.9825,
+            15
+          ]
+        ],
+        "service_arrival_m": [
+          [
+            143.94400000000002,
+            0
+          ],
+          [
+            143.94400000000002,
+            25
+          ]
+        ],
+        "bicycle_spaces": null,
+        "parking_spaces": null,
+        "basis": "Illustrative access reservation, no approved road or road/rail crossings; accepted tracks require operator-controlled separation."
+      },
+      "buildings": [
+        {
+          "id": "SH-IND-FAC-TAY-TRUCK-B01",
+          "name": "Inspection bays and dispatch",
+          "rect_m": [
+            25,
+            45,
+            42,
+            24
+          ],
+          "status": "ILLUSTRATIVE_FITOUT_EXISTING_FUNCTION_NOT_AS_BUILT",
+          "floor_height_m": 6,
+          "actual_floor_count": null,
+          "modelled_floor_count": 1,
+          "plan_style": "industrial_open_plan",
+          "structure": "Concept structural bay scheme; loads, spans, height and fire system subject to engineering. No construction approval.",
+          "core_basis": "Single level with direct perimeter exits; wet/service zone reserved in support band. No automatic office core. Floor level/accessibility and rated egress design unverified.",
+          "sources": [
+            "industrial/source/operations.json",
+            "industrial/source/entities.json",
+            "geospatial/geojson/industrial_facilities.geojson",
+            "geospatial/geojson/industrial_tracks.geojson"
+          ],
+          "floors": [
+            {
+              "id": "SH-IND-FAC-TAY-TRUCK-B01-L01",
+              "level": 1,
+              "name": "Inspection bays and dispatch \u2014 ground level",
+              "status": "ILLUSTRATIVE_NOT_SURVEYED",
+              "gross_area_m2": 1008,
+              "net_assignable_area_m2": 882,
+              "core_circulation_service_m2": 126,
+              "planned_peak": 8,
+              "rooms": [
+                {
+                  "id": "SH-IND-FAC-TAY-TRUCK-B01-L01-R01",
+                  "name": "Drive-through inspection reserve",
+                  "rect_m": [
+                    0,
+                    0,
+                    30,
+                    21
+                  ],
+                  "access": "industrial",
+                  "assigned_desks": 0,
+                  "shared_desks": 0,
+                  "touchdown_seats": 0,
+                  "training_seats": 0,
+                  "meeting_seats": 0,
+                  "resident_beds": 0,
+                  "special_use_concurrent_capacity": 2,
+                  "basis": "IND-A01: illustrative room/attendance assumption; no new workforce authorization"
+                },
+                {
+                  "id": "SH-IND-FAC-TAY-TRUCK-B01-L01-R02",
+                  "name": "Dispatch and driver check-in",
+                  "rect_m": [
+                    30,
+                    0,
+                    12,
+                    9
+                  ],
+                  "access": "staff",
+                  "assigned_desks": 2,
+                  "shared_desks": 0,
+                  "touchdown_seats": 0,
+                  "training_seats": 0,
+                  "meeting_seats": 0,
+                  "resident_beds": 0,
+                  "special_use_concurrent_capacity": 0,
+                  "basis": "IND-A01: illustrative room/attendance assumption; no new workforce authorization"
+                },
+                {
+                  "id": "SH-IND-FAC-TAY-TRUCK-B01-L01-R03",
+                  "name": "Driver welfare",
+                  "rect_m": [
+                    30,
+                    9,
+                    12,
+                    6
+                  ],
+                  "access": "staff",
+                  "assigned_desks": 0,
+                  "shared_desks": 0,
+                  "touchdown_seats": 0,
+                  "training_seats": 0,
+                  "meeting_seats": 6,
+                  "resident_beds": 0,
+                  "special_use_concurrent_capacity": 0,
+                  "basis": "IND-A01: illustrative room/attendance assumption; no new workforce authorization"
+                },
+                {
+                  "id": "SH-IND-FAC-TAY-TRUCK-B01-L01-R04",
+                  "name": "Parts and mechanic work",
+                  "rect_m": [
+                    30,
+                    15,
+                    12,
+                    6
+                  ],
+                  "access": "industrial",
+                  "assigned_desks": 0,
+                  "shared_desks": 0,
+                  "touchdown_seats": 0,
+                  "training_seats": 0,
+                  "meeting_seats": 0,
+                  "resident_beds": 0,
+                  "special_use_concurrent_capacity": 1,
+                  "basis": "IND-A01: illustrative room/attendance assumption; no new workforce authorization"
+                }
+              ],
+              "egress_concept": "Opposed perimeter exits with clear personnel paths separated from handling/vehicle zones. Detailed exit distances and protective separation unverified.",
+              "doors": [
+                {
+                  "edge": "south",
+                  "position_fraction": 0.1,
+                  "purpose": "pedestrian_exit"
+                },
+                {
+                  "edge": "north",
+                  "position_fraction": 0.9,
+                  "purpose": "pedestrian_exit"
+                }
+              ]
+            }
+          ],
+          "layout_style": "industrial",
+          "openings": [
+            {
+              "edge": "west",
+              "position_m": 12.0,
+              "width_m": 1.5,
+              "purpose": "Personnel exit; conceptual"
+            },
+            {
+              "edge": "east",
+              "position_m": 12.0,
+              "width_m": 1.5,
+              "purpose": "Personnel exit; conceptual"
+            },
+            {
+              "edge": "south",
+              "position_m": 21.0,
+              "width_m": 4.5,
+              "purpose": "Handling/vehicle interface reservation; no installed rail claimed"
+            }
+          ]
+        }
+      ],
+      "dependencies": [
+        "Original industrial source geometry and engineering constraints control.",
+        "Pedestrian routes segregated from rail movements, truck reversing and handling.",
+        "No expansion beyond source operating capacity; utilities/fire/containment design unresolved."
+      ],
+      "floor_exemption": null,
+      "attendance_scenarios": [
+        {
+          "id": "SH-IND-FAC-TAY-TRUCK-2026-CONCEPT",
+          "horizon": 2026,
+          "status": "ILLUSTRATIVE_NOT_SHIFT_CENSUS",
+          "people": 8,
+          "floor_populations": {
+            "SH-IND-FAC-TAY-TRUCK-B01-L01": 8
+          },
+          "basis": "Simultaneous indoor design load only; field/driver/outdoor staff are not automatically inside. Not an enterprise rollup scenario."
+        }
+      ]
+    },
+    {
+      "site_id": "SH-IND-FAC-EAST-MATERIALS",
+      "source_facility_id": "FAC-EAST-MATERIALS",
+      "name": "East Materials team track",
+      "map_prefix": "SH-MAP-ARU",
+      "map_start": 70,
+      "revision": "0.1.0",
+      "as_of": "2026-09-11",
+      "status": "SYNTHETIC_OPERATING",
+      "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+      "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+      "tenure": "Blood, Sweat & Tears Railway Company \u2014 accepted synthetic owner, not real title evidence",
+      "occupancy_start": null,
+      "source_opened": "1972-05-08",
+      "construction_start": null,
+      "construction_completion": null,
+      "envelope_m": [
+        330.553,
+        110.184
+      ],
+      "geometry_basis": "Local east/north diagram using source acreage and aspect ratio; no survey transform. Original georeferenced polygon is retained by reference, never replaced. Proposed building placements are illustrative, not surveyed.",
+      "geographic_envelope": {
+        "source": "geospatial/geojson/industrial_facilities.geojson",
+        "object_id": "SH-IND-FAC-EAST-MATERIALS",
+        "geometry_status": "LOCKED_DERIVED_IMPLEMENTATION",
+        "precision_class": "CASE_ENGINEERING_NOT_SURVEY",
+        "valid_from": null,
+        "valid_to": null
+      },
+      "sources": [
+        "industrial/source/operations.json",
+        "industrial/source/entities.json",
+        "geospatial/geojson/industrial_facilities.geojson",
+        "geospatial/geojson/industrial_tracks.geojson"
+      ],
+      "assumptions": [
+        {
+          "id": "IND-A01",
+          "statement": "Single-storey building/floor, rooms, dimensions, circulation, seats and simultaneous attendance are illustrative planning assumptions unless explicitly marked as source dimensions. They do not establish acquisition, as-built layout, occupancy or new employees."
+        }
+      ],
+      "accepted_capacity": {
+        "acreage": 9,
+        "assigned_fte": 3,
+        "track_count": 2,
+        "car_spots": 20,
+        "pallet_slots": 0,
+        "annual_external_ton_capacity": 0,
+        "services": "pipe, scrap, aggregates; customer sidings operate by appointment",
+        "operating_hours": "five-day service; dispatch/oncall exceptions; mine continuous receiving by appointment",
+        "environmental_controls": "segregated drainage, spillkits, stormwater inspection, protected storage and recorded custody"
+      },
+      "population": {
+        "assigned_fte": 3,
+        "source": "industrial/source/operations.json#/facilities/FAC-EAST-MATERIALS",
+        "named_current_employees": null,
+        "authorized_positions": null,
+        "vacant_positions": null,
+        "resident_occupants": null,
+        "actual_shift_attendance": null,
+        "visitors_peak": null,
+        "planning_horizons": [
+          {
+            "year": 2026,
+            "additional_positions": null,
+            "basis": "No growth or hiring decision"
+          },
+          {
+            "year": 2031,
+            "additional_positions": null,
+            "basis": "No growth or hiring decision"
+          },
+          {
+            "year": 2036,
+            "additional_positions": null,
+            "basis": "No growth or hiring decision"
+          }
+        ],
+        "rollup_boundary": "Red Wash receiving six are already inside128 mine site employees; otherwise assigned FTE allocate ARU/BS&T131 once."
+      },
+      "track_ids": [
+        "YARD-FAC-EAST-MATERIALS-materials1",
+        "YARD-FAC-EAST-MATERIALS-materials2"
+      ],
+      "track_geometry_source": "geospatial/geojson/industrial_tracks.geojson",
+      "track_drawing_rule": "Context view renders existing referenced track geometry only. Local functional zones are not track alignments. Rawlins and Red Wash have no BS&T rails.",
+      "site_zones": [
+        {
+          "name": "Rail transfer / material handling context",
+          "rect_m": [
+            20,
+            30,
+            290.553,
+            50.184
+          ],
+          "type": "industrial"
+        }
+      ],
+      "access": {
+        "fire_service_loop_m": [
+          [
+            8,
+            8
+          ],
+          [
+            322.553,
+            8
+          ],
+          [
+            322.553,
+            102.184
+          ],
+          [
+            8,
+            102.184
+          ],
+          [
+            8,
+            8
+          ]
+        ],
+        "public_arrival_m": [
+          [
+            82.63825,
+            0
+          ],
+          [
+            82.63825,
+            15
+          ]
+        ],
+        "service_arrival_m": [
+          [
+            264.4424,
+            0
+          ],
+          [
+            264.4424,
+            25
+          ]
+        ],
+        "bicycle_spaces": null,
+        "parking_spaces": null,
+        "basis": "Illustrative access reservation, no approved road or road/rail crossings; accepted tracks require operator-controlled separation."
+      },
+      "buildings": [],
+      "dependencies": [
+        "Original industrial source geometry and engineering constraints control.",
+        "Pedestrian routes segregated from rail movements, truck reversing and handling.",
+        "No expansion beyond source operating capacity; utilities/fire/containment design unresolved."
+      ],
+      "floor_exemption": "Appointment-based team tracks and laydown established; no occupied building established.",
+      "technical_layer_status": "UNRESOLVED: source operations describe function/capacity, not installed equipment or occupied-building plan",
+      "attendance_scenarios": [
+        {
+          "id": "SH-IND-FAC-EAST-MATERIALS-2026-CONCEPT",
+          "horizon": 2026,
+          "status": "ILLUSTRATIVE_NOT_SHIFT_CENSUS",
+          "people": null,
+          "floor_populations": {},
+          "basis": "Simultaneous indoor design load only; field/driver/outdoor staff are not automatically inside. Not an enterprise rollup scenario."
+        }
+      ]
+    },
+    {
+      "site_id": "SH-IND-FAC-MINERAL-TEAM",
+      "source_facility_id": "FAC-MINERAL-TEAM",
+      "name": "Mineral Transfer team track",
+      "map_prefix": "SH-MAP-ARU",
+      "map_start": 80,
+      "revision": "0.1.0",
+      "as_of": "2026-09-11",
+      "status": "SYNTHETIC_OPERATING",
+      "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+      "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+      "tenure": "Blood, Sweat & Tears Railway Company \u2014 accepted synthetic owner, not real title evidence",
+      "occupancy_start": null,
+      "source_opened": "1986-09-19",
+      "construction_start": null,
+      "construction_completion": null,
+      "envelope_m": [
+        365.44,
+        121.813
+      ],
+      "geometry_basis": "Local east/north diagram using source acreage and aspect ratio; no survey transform. Original georeferenced polygon is retained by reference, never replaced. Proposed building placements are illustrative, not surveyed.",
+      "geographic_envelope": {
+        "source": "geospatial/geojson/industrial_facilities.geojson",
+        "object_id": "SH-IND-FAC-MINERAL-TEAM",
+        "geometry_status": "LOCKED_DERIVED_IMPLEMENTATION",
+        "precision_class": "CASE_ENGINEERING_NOT_SURVEY",
+        "valid_from": null,
+        "valid_to": null
+      },
+      "sources": [
+        "industrial/source/operations.json",
+        "industrial/source/entities.json",
+        "geospatial/geojson/industrial_facilities.geojson",
+        "geospatial/geojson/industrial_tracks.geojson"
+      ],
+      "assumptions": [
+        {
+          "id": "IND-A01",
+          "statement": "Single-storey building/floor, rooms, dimensions, circulation, seats and simultaneous attendance are illustrative planning assumptions unless explicitly marked as source dimensions. They do not establish acquisition, as-built layout, occupancy or new employees."
+        }
+      ],
+      "accepted_capacity": {
+        "acreage": 11,
+        "assigned_fte": 3,
+        "track_count": 2,
+        "car_spots": 18,
+        "pallet_slots": 0,
+        "annual_external_ton_capacity": 0,
+        "services": "inbound and outbound minerals transfer; sodaash is customer throughput, not a claim of a local trona mine",
+        "operating_hours": "five-day service; dispatch/oncall exceptions; mine continuous receiving by appointment",
+        "environmental_controls": "segregated drainage, spillkits, stormwater inspection, protected storage and recorded custody"
+      },
+      "population": {
+        "assigned_fte": 3,
+        "source": "industrial/source/operations.json#/facilities/FAC-MINERAL-TEAM",
+        "named_current_employees": null,
+        "authorized_positions": null,
+        "vacant_positions": null,
+        "resident_occupants": null,
+        "actual_shift_attendance": null,
+        "visitors_peak": null,
+        "planning_horizons": [
+          {
+            "year": 2026,
+            "additional_positions": null,
+            "basis": "No growth or hiring decision"
+          },
+          {
+            "year": 2031,
+            "additional_positions": null,
+            "basis": "No growth or hiring decision"
+          },
+          {
+            "year": 2036,
+            "additional_positions": null,
+            "basis": "No growth or hiring decision"
+          }
+        ],
+        "rollup_boundary": "Red Wash receiving six are already inside128 mine site employees; otherwise assigned FTE allocate ARU/BS&T131 once."
+      },
+      "track_ids": [
+        "YARD-FAC-MINERAL-TEAM-mineral1",
+        "YARD-FAC-MINERAL-TEAM-mineral2"
+      ],
+      "track_geometry_source": "geospatial/geojson/industrial_tracks.geojson",
+      "track_drawing_rule": "Context view renders existing referenced track geometry only. Local functional zones are not track alignments. Rawlins and Red Wash have no BS&T rails.",
+      "site_zones": [
+        {
+          "name": "Rail transfer / material handling context",
+          "rect_m": [
+            20,
+            30,
+            325.44,
+            61.813
+          ],
+          "type": "industrial"
+        }
+      ],
+      "access": {
+        "fire_service_loop_m": [
+          [
+            8,
+            8
+          ],
+          [
+            357.44,
+            8
+          ],
+          [
+            357.44,
+            113.813
+          ],
+          [
+            8,
+            113.813
+          ],
+          [
+            8,
+            8
+          ]
+        ],
+        "public_arrival_m": [
+          [
+            91.36,
+            0
+          ],
+          [
+            91.36,
+            15
+          ]
+        ],
+        "service_arrival_m": [
+          [
+            292.35200000000003,
+            0
+          ],
+          [
+            292.35200000000003,
+            25
+          ]
+        ],
+        "bicycle_spaces": null,
+        "parking_spaces": null,
+        "basis": "Illustrative access reservation, no approved road or road/rail crossings; accepted tracks require operator-controlled separation."
+      },
+      "buildings": [],
+      "dependencies": [
+        "Original industrial source geometry and engineering constraints control.",
+        "Pedestrian routes segregated from rail movements, truck reversing and handling.",
+        "No expansion beyond source operating capacity; utilities/fire/containment design unresolved."
+      ],
+      "floor_exemption": "Mineral transfer team tracks established; no occupied building or local trona mine established.",
+      "technical_layer_status": "UNRESOLVED: source operations describe function/capacity, not installed equipment or occupied-building plan",
+      "attendance_scenarios": [
+        {
+          "id": "SH-IND-FAC-MINERAL-TEAM-2026-CONCEPT",
+          "horizon": 2026,
+          "status": "ILLUSTRATIVE_NOT_SHIFT_CENSUS",
+          "people": null,
+          "floor_populations": {},
+          "basis": "Simultaneous indoor design load only; field/driver/outdoor staff are not automatically inside. Not an enterprise rollup scenario."
+        }
+      ]
+    },
+    {
+      "site_id": "SH-IND-FAC-RAW-TERMINAL",
+      "source_facility_id": "FAC-RAW-TERMINAL",
+      "name": "Rawlins satellite terminal",
+      "map_prefix": "SH-MAP-ARU",
+      "map_start": 90,
+      "revision": "0.1.0",
+      "as_of": "2026-09-11",
+      "status": "SYNTHETIC_OPERATING",
+      "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+      "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+      "tenure": "American Resource Utility, Inc. \u2014 accepted synthetic owner, not real title evidence",
+      "occupancy_start": null,
+      "source_opened": "1978-09-12",
+      "construction_start": null,
+      "construction_completion": null,
+      "envelope_m": [
+        298.38,
+        298.38
+      ],
+      "geometry_basis": "Local east/north diagram using source acreage and aspect ratio; no survey transform. Original georeferenced polygon is retained by reference, never replaced. Proposed building placements are illustrative, not surveyed.",
+      "geographic_envelope": {
+        "source": "geospatial/geojson/industrial_facilities.geojson",
+        "object_id": "SH-IND-FAC-RAW-TERMINAL",
+        "geometry_status": "LOCKED_DERIVED_IMPLEMENTATION",
+        "precision_class": "CASE_ENGINEERING_NOT_SURVEY",
+        "valid_from": null,
+        "valid_to": null
+      },
+      "sources": [
+        "industrial/source/operations.json",
+        "industrial/source/entities.json",
+        "geospatial/geojson/industrial_facilities.geojson",
+        "geospatial/geojson/industrial_tracks.geojson"
+      ],
+      "assumptions": [
+        {
+          "id": "IND-A01",
+          "statement": "Single-storey building/floor, rooms, dimensions, circulation, seats and simultaneous attendance are illustrative planning assumptions unless explicitly marked as source dimensions. They do not establish acquisition, as-built layout, occupancy or new employees."
+        }
+      ],
+      "accepted_capacity": {
+        "acreage": 22,
+        "assigned_fte": 8,
+        "track_count": 0,
+        "car_spots": 0,
+        "pallet_slots": 0,
+        "annual_external_ton_capacity": 90000,
+        "services": "off-BS&T truck-served terminal; external railcar material arrives through qualified third-party transload",
+        "operating_hours": "Mon\u2013Fri06:00\u201322:00 plus contracted exception service",
+        "environmental_controls": "segregated drainage, spillkits, stormwater inspection, protected storage and recorded custody"
+      },
+      "population": {
+        "assigned_fte": 8,
+        "source": "industrial/source/operations.json#/facilities/FAC-RAW-TERMINAL",
+        "named_current_employees": null,
+        "authorized_positions": null,
+        "vacant_positions": null,
+        "resident_occupants": null,
+        "actual_shift_attendance": null,
+        "visitors_peak": null,
+        "planning_horizons": [
+          {
+            "year": 2026,
+            "additional_positions": null,
+            "basis": "No growth or hiring decision"
+          },
+          {
+            "year": 2031,
+            "additional_positions": null,
+            "basis": "No growth or hiring decision"
+          },
+          {
+            "year": 2036,
+            "additional_positions": null,
+            "basis": "No growth or hiring decision"
+          }
+        ],
+        "rollup_boundary": "Red Wash receiving six are already inside128 mine site employees; otherwise assigned FTE allocate ARU/BS&T131 once."
+      },
+      "track_ids": [],
+      "track_geometry_source": "geospatial/geojson/industrial_tracks.geojson",
+      "track_drawing_rule": "Context view renders existing referenced track geometry only. Local functional zones are not track alignments. Rawlins and Red Wash have no BS&T rails.",
+      "site_zones": [
+        {
+          "name": "Truck-served materials handling",
+          "rect_m": [
+            20,
+            30,
+            258.38,
+            238.38
+          ],
+          "type": "industrial"
+        }
+      ],
+      "access": {
+        "fire_service_loop_m": [
+          [
+            8,
+            8
+          ],
+          [
+            290.38,
+            8
+          ],
+          [
+            290.38,
+            290.38
+          ],
+          [
+            8,
+            290.38
+          ],
+          [
+            8,
+            8
+          ]
+        ],
+        "public_arrival_m": [
+          [
+            74.595,
+            0
+          ],
+          [
+            74.595,
+            15
+          ]
+        ],
+        "service_arrival_m": [
+          [
+            238.704,
+            0
+          ],
+          [
+            238.704,
+            25
+          ]
+        ],
+        "bicycle_spaces": null,
+        "parking_spaces": null,
+        "basis": "Illustrative access reservation, no approved road or road/rail crossings; accepted tracks require operator-controlled separation."
+      },
+      "buildings": [],
+      "dependencies": [
+        "Original industrial source geometry and engineering constraints control.",
+        "Pedestrian routes segregated from rail movements, truck reversing and handling.",
+        "No expansion beyond source operating capacity; utilities/fire/containment design unresolved."
+      ],
+      "floor_exemption": "Truck-served terminal established; building geometry/count unknown. No BS&T track or invented rail connection.",
+      "technical_layer_status": "UNRESOLVED: source operations describe function/capacity, not installed equipment or occupied-building plan",
+      "attendance_scenarios": [
+        {
+          "id": "SH-IND-FAC-RAW-TERMINAL-2026-CONCEPT",
+          "horizon": 2026,
+          "status": "ILLUSTRATIVE_NOT_SHIFT_CENSUS",
+          "people": null,
+          "floor_populations": {},
+          "basis": "Simultaneous indoor design load only; field/driver/outdoor staff are not automatically inside. Not an enterprise rollup scenario."
+        }
+      ]
+    },
+    {
+      "site_id": "SH-IND-FAC-RAW-WAREHOUSE",
+      "source_facility_id": "FAC-RAW-WAREHOUSE",
+      "name": "Rawlins warehouse",
+      "map_prefix": "SH-MAP-ARU",
+      "map_start": 100,
+      "revision": "0.1.0",
+      "as_of": "2026-09-11",
+      "status": "SYNTHETIC_OPERATING",
+      "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+      "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+      "tenure": "American Resource Utility, Inc. \u2014 accepted synthetic owner, not real title evidence",
+      "occupancy_start": null,
+      "source_opened": "1980-04-07",
+      "construction_start": null,
+      "construction_completion": null,
+      "envelope_m": [
+        168.309,
+        168.309
+      ],
+      "geometry_basis": "Local east/north diagram using source acreage and aspect ratio; no survey transform. Original georeferenced polygon is retained by reference, never replaced. Proposed building placements are illustrative, not surveyed.",
+      "geographic_envelope": {
+        "source": "geospatial/geojson/industrial_facilities.geojson",
+        "object_id": "SH-IND-FAC-RAW-WAREHOUSE",
+        "geometry_status": "LOCKED_DERIVED_IMPLEMENTATION",
+        "precision_class": "CASE_ENGINEERING_NOT_SURVEY",
+        "valid_from": null,
+        "valid_to": null
+      },
+      "sources": [
+        "industrial/source/operations.json",
+        "industrial/source/entities.json",
+        "geospatial/geojson/industrial_facilities.geojson",
+        "geospatial/geojson/industrial_tracks.geojson"
+      ],
+      "assumptions": [
+        {
+          "id": "IND-A01",
+          "statement": "Single-storey building/floor, rooms, dimensions, circulation, seats and simultaneous attendance are illustrative planning assumptions unless explicitly marked as source dimensions. They do not establish acquisition, as-built layout, occupancy or new employees."
+        }
+      ],
+      "accepted_capacity": {
+        "acreage": 7,
+        "assigned_fte": 4,
+        "track_count": 0,
+        "car_spots": 0,
+        "pallet_slots": 4000,
+        "annual_external_ton_capacity": 0,
+        "services": "75000sf satellite contract storage and orderpick",
+        "operating_hours": "Mon\u2013Fri06:00\u201322:00 plus contracted exception service",
+        "environmental_controls": "segregated drainage, spillkits, stormwater inspection, protected storage and recorded custody"
+      },
+      "population": {
+        "assigned_fte": 4,
+        "source": "industrial/source/operations.json#/facilities/FAC-RAW-WAREHOUSE",
+        "named_current_employees": null,
+        "authorized_positions": null,
+        "vacant_positions": null,
+        "resident_occupants": null,
+        "actual_shift_attendance": null,
+        "visitors_peak": null,
+        "planning_horizons": [
+          {
+            "year": 2026,
+            "additional_positions": null,
+            "basis": "No growth or hiring decision"
+          },
+          {
+            "year": 2031,
+            "additional_positions": null,
+            "basis": "No growth or hiring decision"
+          },
+          {
+            "year": 2036,
+            "additional_positions": null,
+            "basis": "No growth or hiring decision"
+          }
+        ],
+        "rollup_boundary": "Red Wash receiving six are already inside128 mine site employees; otherwise assigned FTE allocate ARU/BS&T131 once."
+      },
+      "track_ids": [],
+      "track_geometry_source": "geospatial/geojson/industrial_tracks.geojson",
+      "track_drawing_rule": "Context view renders existing referenced track geometry only. Local functional zones are not track alignments. Rawlins and Red Wash have no BS&T rails.",
+      "site_zones": [
+        {
+          "name": "Truck apron and staged deliveries",
+          "rect_m": [
+            20,
+            10,
+            101.44,
+            30
+          ],
+          "type": "service"
+        },
+        {
+          "name": "Protected service / fire access",
+          "rect_m": [
+            20,
+            126.2,
+            101.44,
+            20
+          ],
+          "type": "service"
+        }
+      ],
+      "access": {
+        "fire_service_loop_m": [
+          [
+            8,
+            8
+          ],
+          [
+            160.309,
+            8
+          ],
+          [
+            160.309,
+            160.309
+          ],
+          [
+            8,
+            160.309
+          ],
+          [
+            8,
+            8
+          ]
+        ],
+        "public_arrival_m": [
+          [
+            42.07725,
+            0
+          ],
+          [
+            42.07725,
+            15
+          ]
+        ],
+        "service_arrival_m": [
+          [
+            134.6472,
+            0
+          ],
+          [
+            134.6472,
+            25
+          ]
+        ],
+        "bicycle_spaces": null,
+        "parking_spaces": null,
+        "basis": "Illustrative access reservation, no approved road or road/rail crossings; accepted tracks require operator-controlled separation."
+      },
+      "buildings": [
+        {
+          "id": "SH-IND-FAC-RAW-WAREHOUSE-B01",
+          "name": "Rawlins warehouse",
+          "rect_m": [
+            25,
+            45,
+            91.44,
+            76.2
+          ],
+          "status": "ILLUSTRATIVE_FITOUT_EXISTING_FUNCTION_NOT_AS_BUILT",
+          "floor_height_m": 10,
+          "actual_floor_count": null,
+          "modelled_floor_count": 1,
+          "plan_style": "industrial_open_plan",
+          "structure": "Illustrative multi-bay warehouse roof/column grid; racking height, aisle/rack geometry and fire strategy unresolved, not drawn as installed equipment.",
+          "core_basis": "Single level with direct perimeter exits; wet/service zone reserved in support band. No automatic office core. Floor level/accessibility and rated egress design unverified.",
+          "sources": [
+            "industrial/source/operations.json",
+            "industrial/source/entities.json",
+            "geospatial/geojson/industrial_facilities.geojson",
+            "geospatial/geojson/industrial_tracks.geojson"
+          ],
+          "floors": [
+            {
+              "id": "SH-IND-FAC-RAW-WAREHOUSE-B01-L01",
+              "level": 1,
+              "name": "Rawlins warehouse \u2014 ground level",
+              "status": "ILLUSTRATIVE_NOT_SURVEYED",
+              "gross_area_m2": 6967.728,
+              "net_assignable_area_m2": 6270.9552,
+              "core_circulation_service_m2": 696.7728,
+              "planned_peak": 4,
+              "rooms": [
+                {
+                  "id": "SH-IND-FAC-RAW-WAREHOUSE-B01-L01-R01",
+                  "name": "Pallet storage zone",
+                  "rect_m": [
+                    0,
+                    19.05,
+                    73.152,
+                    49.53
+                  ],
+                  "access": "industrial",
+                  "assigned_desks": 0,
+                  "shared_desks": 0,
+                  "touchdown_seats": 0,
+                  "training_seats": 0,
+                  "meeting_seats": 0,
+                  "resident_beds": 0,
+                  "special_use_concurrent_capacity": 2,
+                  "basis": "IND-A01: illustrative room/attendance assumption; no new workforce authorization"
+                },
+                {
+                  "id": "SH-IND-FAC-RAW-WAREHOUSE-B01-L01-R02",
+                  "name": "Receiving and quarantine",
+                  "rect_m": [
+                    0,
+                    0,
+                    36.576,
+                    19.05
+                  ],
+                  "access": "industrial",
+                  "assigned_desks": 0,
+                  "shared_desks": 0,
+                  "touchdown_seats": 0,
+                  "training_seats": 0,
+                  "meeting_seats": 0,
+                  "resident_beds": 0,
+                  "special_use_concurrent_capacity": 2,
+                  "basis": "IND-A01: illustrative room/attendance assumption; no new workforce authorization"
+                },
+                {
+                  "id": "SH-IND-FAC-RAW-WAREHOUSE-B01-L01-R03",
+                  "name": "Order assembly and dispatch",
+                  "rect_m": [
+                    36.576,
+                    0,
+                    36.576,
+                    19.05
+                  ],
+                  "access": "industrial",
+                  "assigned_desks": 0,
+                  "shared_desks": 0,
+                  "touchdown_seats": 0,
+                  "training_seats": 0,
+                  "meeting_seats": 0,
+                  "resident_beds": 0,
+                  "special_use_concurrent_capacity": 2,
+                  "basis": "IND-A01: illustrative room/attendance assumption; no new workforce authorization"
+                },
+                {
+                  "id": "SH-IND-FAC-RAW-WAREHOUSE-B01-L01-R04",
+                  "name": "Customer support",
+                  "rect_m": [
+                    73.152,
+                    0,
+                    18.288,
+                    19.05
+                  ],
+                  "access": "staff",
+                  "assigned_desks": 1,
+                  "shared_desks": 0,
+                  "touchdown_seats": 0,
+                  "training_seats": 0,
+                  "meeting_seats": 0,
+                  "resident_beds": 0,
+                  "special_use_concurrent_capacity": 0,
+                  "basis": "IND-A01: illustrative room/attendance assumption; no new workforce authorization"
+                },
+                {
+                  "id": "SH-IND-FAC-RAW-WAREHOUSE-B01-L01-R05",
+                  "name": "Welfare reserve",
+                  "rect_m": [
+                    73.152,
+                    19.05,
+                    18.288,
+                    22.86
+                  ],
+                  "access": "staff",
+                  "assigned_desks": 0,
+                  "shared_desks": 0,
+                  "touchdown_seats": 0,
+                  "training_seats": 0,
+                  "meeting_seats": 2,
+                  "resident_beds": 0,
+                  "special_use_concurrent_capacity": 0,
+                  "basis": "IND-A01: illustrative room/attendance assumption; no new workforce authorization"
+                },
+                {
+                  "id": "SH-IND-FAC-RAW-WAREHOUSE-B01-L01-R06",
+                  "name": "Protected MHE service reserve",
+                  "rect_m": [
+                    73.152,
+                    41.910000000000004,
+                    18.288,
+                    26.669999999999998
+                  ],
+                  "access": "industrial",
+                  "assigned_desks": 0,
+                  "shared_desks": 0,
+                  "touchdown_seats": 0,
+                  "training_seats": 0,
+                  "meeting_seats": 0,
+                  "resident_beds": 0,
+                  "special_use_concurrent_capacity": 1,
+                  "basis": "IND-A01: illustrative room/attendance assumption; no new workforce authorization"
+                }
+              ],
+              "egress_concept": "Opposed perimeter exits with clear personnel paths separated from handling/vehicle zones. Detailed exit distances and protective separation unverified.",
+              "doors": [
+                {
+                  "edge": "south",
+                  "position_fraction": 0.1,
+                  "purpose": "pedestrian_exit"
+                },
+                {
+                  "edge": "north",
+                  "position_fraction": 0.9,
+                  "purpose": "pedestrian_exit"
+                }
+              ]
+            }
+          ],
+          "source_area_sqft": 75000,
+          "area_basis": "Accepted gross floor area in operations.services; single-storey footprint aspect and internal zones illustrative. 1 square foot =0.09290304m2.",
+          "layout_style": "industrial",
+          "openings": [
+            {
+              "edge": "west",
+              "position_m": 38.1,
+              "width_m": 1.5,
+              "purpose": "Personnel exit; conceptual"
+            },
+            {
+              "edge": "east",
+              "position_m": 38.1,
+              "width_m": 1.5,
+              "purpose": "Personnel exit; conceptual"
+            },
+            {
+              "edge": "south",
+              "position_m": 45.72,
+              "width_m": 4.5,
+              "purpose": "Handling/vehicle interface reservation; no installed rail claimed"
+            }
+          ]
+        }
+      ],
+      "dependencies": [
+        "Original industrial source geometry and engineering constraints control.",
+        "Pedestrian routes segregated from rail movements, truck reversing and handling.",
+        "No expansion beyond source operating capacity; utilities/fire/containment design unresolved."
+      ],
+      "floor_exemption": null,
+      "attendance_scenarios": [
+        {
+          "id": "SH-IND-FAC-RAW-WAREHOUSE-2026-CONCEPT",
+          "horizon": 2026,
+          "status": "ILLUSTRATIVE_NOT_SHIFT_CENSUS",
+          "people": 4,
+          "floor_populations": {
+            "SH-IND-FAC-RAW-WAREHOUSE-B01-L01": 4
+          },
+          "basis": "Simultaneous indoor design load only; field/driver/outdoor staff are not automatically inside. Not an enterprise rollup scenario."
+        }
+      ]
+    },
+    {
+      "site_id": "SH-IND-FAC-RAW-TRUCK",
+      "source_facility_id": "FAC-RAW-TRUCK",
+      "name": "Rawlins trucking satellite",
+      "map_prefix": "SH-MAP-ARU",
+      "map_start": 110,
+      "revision": "0.1.0",
+      "as_of": "2026-09-11",
+      "status": "SYNTHETIC_OPERATING",
+      "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+      "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+      "tenure": "American Resource Utility, Inc. \u2014 accepted synthetic owner, not real title evidence",
+      "occupancy_start": null,
+      "source_opened": "1989-10-02",
+      "construction_start": null,
+      "construction_completion": null,
+      "envelope_m": [
+        127.23,
+        127.23
+      ],
+      "geometry_basis": "Local east/north diagram using source acreage and aspect ratio; no survey transform. Original georeferenced polygon is retained by reference, never replaced. Proposed building placements are illustrative, not surveyed.",
+      "geographic_envelope": {
+        "source": "geospatial/geojson/industrial_facilities.geojson",
+        "object_id": "SH-IND-FAC-RAW-TRUCK",
+        "geometry_status": "LOCKED_DERIVED_IMPLEMENTATION",
+        "precision_class": "CASE_ENGINEERING_NOT_SURVEY",
+        "valid_from": null,
+        "valid_to": null
+      },
+      "sources": [
+        "industrial/source/operations.json",
+        "industrial/source/entities.json",
+        "geospatial/geojson/industrial_facilities.geojson",
+        "geospatial/geojson/industrial_tracks.geojson"
+      ],
+      "assumptions": [
+        {
+          "id": "IND-A01",
+          "statement": "Single-storey building/floor, rooms, dimensions, circulation, seats and simultaneous attendance are illustrative planning assumptions unless explicitly marked as source dimensions. They do not establish acquisition, as-built layout, occupancy or new employees."
+        }
+      ],
+      "accepted_capacity": {
+        "acreage": 4,
+        "assigned_fte": 4,
+        "track_count": 0,
+        "car_spots": 0,
+        "pallet_slots": 0,
+        "annual_external_ton_capacity": 0,
+        "services": "external heavyhaul staging",
+        "operating_hours": "Mon\u2013Fri06:00\u201322:00 plus contracted exception service",
+        "environmental_controls": "segregated drainage, spillkits, stormwater inspection, protected storage and recorded custody"
+      },
+      "population": {
+        "assigned_fte": 4,
+        "source": "industrial/source/operations.json#/facilities/FAC-RAW-TRUCK",
+        "named_current_employees": null,
+        "authorized_positions": null,
+        "vacant_positions": null,
+        "resident_occupants": null,
+        "actual_shift_attendance": null,
+        "visitors_peak": null,
+        "planning_horizons": [
+          {
+            "year": 2026,
+            "additional_positions": null,
+            "basis": "No growth or hiring decision"
+          },
+          {
+            "year": 2031,
+            "additional_positions": null,
+            "basis": "No growth or hiring decision"
+          },
+          {
+            "year": 2036,
+            "additional_positions": null,
+            "basis": "No growth or hiring decision"
+          }
+        ],
+        "rollup_boundary": "Red Wash receiving six are already inside128 mine site employees; otherwise assigned FTE allocate ARU/BS&T131 once."
+      },
+      "track_ids": [],
+      "track_geometry_source": "geospatial/geojson/industrial_tracks.geojson",
+      "track_drawing_rule": "Context view renders existing referenced track geometry only. Local functional zones are not track alignments. Rawlins and Red Wash have no BS&T rails.",
+      "site_zones": [
+        {
+          "name": "External heavy-haul staging",
+          "rect_m": [
+            20,
+            30,
+            87.23,
+            67.23
+          ],
+          "type": "industrial"
+        }
+      ],
+      "access": {
+        "fire_service_loop_m": [
+          [
+            8,
+            8
+          ],
+          [
+            119.23,
+            8
+          ],
+          [
+            119.23,
+            119.23
+          ],
+          [
+            8,
+            119.23
+          ],
+          [
+            8,
+            8
+          ]
+        ],
+        "public_arrival_m": [
+          [
+            31.8075,
+            0
+          ],
+          [
+            31.8075,
+            15
+          ]
+        ],
+        "service_arrival_m": [
+          [
+            101.784,
+            0
+          ],
+          [
+            101.784,
+            25
+          ]
+        ],
+        "bicycle_spaces": null,
+        "parking_spaces": null,
+        "basis": "Illustrative access reservation, no approved road or road/rail crossings; accepted tracks require operator-controlled separation."
+      },
+      "buildings": [],
+      "dependencies": [
+        "Original industrial source geometry and engineering constraints control.",
+        "Pedestrian routes segregated from rail movements, truck reversing and handling.",
+        "No expansion beyond source operating capacity; utilities/fire/containment design unresolved."
+      ],
+      "floor_exemption": "Heavy-haul staging established; no enclosed building supplied. Mechanic allocation does not establish an additional workshop building.",
+      "technical_layer_status": "UNRESOLVED: source operations describe function/capacity, not installed equipment or occupied-building plan",
+      "attendance_scenarios": [
+        {
+          "id": "SH-IND-FAC-RAW-TRUCK-2026-CONCEPT",
+          "horizon": 2026,
+          "status": "ILLUSTRATIVE_NOT_SHIFT_CENSUS",
+          "people": null,
+          "floor_populations": {},
+          "basis": "Simultaneous indoor design load only; field/driver/outdoor staff are not automatically inside. Not an enterprise rollup scenario."
+        }
+      ]
+    },
+    {
+      "site_id": "SH-IND-FAC-ARU-OFFICE",
+      "source_facility_id": "FAC-ARU-OFFICE",
+      "name": "Taylor ARU office",
+      "map_prefix": "SH-MAP-ARU",
+      "map_start": 120,
+      "revision": "0.1.0",
+      "as_of": "2026-09-11",
+      "status": "SYNTHETIC_OPERATING",
+      "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+      "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+      "tenure": "American Resource Utility, Inc. \u2014 accepted synthetic owner, not real title evidence",
+      "occupancy_start": null,
+      "source_opened": "1991-01-02",
+      "construction_start": null,
+      "construction_completion": null,
+      "envelope_m": [
+        89.965,
+        89.965
+      ],
+      "geometry_basis": "Local east/north diagram using source acreage and aspect ratio; no survey transform. Original georeferenced polygon is retained by reference, never replaced. Proposed building placements are illustrative, not surveyed.",
+      "geographic_envelope": {
+        "source": "geospatial/geojson/industrial_facilities.geojson",
+        "object_id": "SH-IND-FAC-ARU-OFFICE",
+        "geometry_status": "LOCKED_DERIVED_IMPLEMENTATION",
+        "precision_class": "CASE_ENGINEERING_NOT_SURVEY",
+        "valid_from": null,
+        "valid_to": null
+      },
+      "sources": [
+        "industrial/source/operations.json",
+        "industrial/source/entities.json",
+        "geospatial/geojson/industrial_facilities.geojson",
+        "geospatial/geojson/industrial_tracks.geojson"
+      ],
+      "assumptions": [
+        {
+          "id": "IND-A01",
+          "statement": "Single-storey building/floor, rooms, dimensions, circulation, seats and simultaneous attendance are illustrative planning assumptions unless explicitly marked as source dimensions. They do not establish acquisition, as-built layout, occupancy or new employees."
+        }
+      ],
+      "accepted_capacity": {
+        "acreage": 2,
+        "assigned_fte": 10,
+        "track_count": 0,
+        "car_spots": 0,
+        "pallet_slots": 0,
+        "annual_external_ton_capacity": 0,
+        "services": "corporate shared services and customerdesk",
+        "operating_hours": "Mon\u2013Fri06:00\u201322:00 plus contracted exception service",
+        "environmental_controls": "segregated drainage, spillkits, stormwater inspection, protected storage and recorded custody"
+      },
+      "population": {
+        "assigned_fte": 10,
+        "source": "industrial/source/operations.json#/facilities/FAC-ARU-OFFICE",
+        "named_current_employees": null,
+        "authorized_positions": null,
+        "vacant_positions": null,
+        "resident_occupants": null,
+        "actual_shift_attendance": null,
+        "visitors_peak": null,
+        "planning_horizons": [
+          {
+            "year": 2026,
+            "additional_positions": null,
+            "basis": "No growth or hiring decision"
+          },
+          {
+            "year": 2031,
+            "additional_positions": null,
+            "basis": "No growth or hiring decision"
+          },
+          {
+            "year": 2036,
+            "additional_positions": null,
+            "basis": "No growth or hiring decision"
+          }
+        ],
+        "rollup_boundary": "Red Wash receiving six are already inside128 mine site employees; otherwise assigned FTE allocate ARU/BS&T131 once."
+      },
+      "track_ids": [],
+      "track_geometry_source": "geospatial/geojson/industrial_tracks.geojson",
+      "track_drawing_rule": "Context view renders existing referenced track geometry only. Local functional zones are not track alignments. Rawlins and Red Wash have no BS&T rails.",
+      "site_zones": [
+        {
+          "name": "Visitor arrival and access",
+          "rect_m": [
+            12,
+            10,
+            65,
+            15
+          ],
+          "type": "public"
+        },
+        {
+          "name": "Parking / accessible drop-off reserve",
+          "rect_m": [
+            12,
+            57,
+            65,
+            20
+          ],
+          "type": "parking"
+        }
+      ],
+      "access": {
+        "fire_service_loop_m": [
+          [
+            8,
+            8
+          ],
+          [
+            81.965,
+            8
+          ],
+          [
+            81.965,
+            81.965
+          ],
+          [
+            8,
+            81.965
+          ],
+          [
+            8,
+            8
+          ]
+        ],
+        "public_arrival_m": [
+          [
+            22.49125,
+            0
+          ],
+          [
+            22.49125,
+            15
+          ]
+        ],
+        "service_arrival_m": [
+          [
+            71.97200000000001,
+            0
+          ],
+          [
+            71.97200000000001,
+            25
+          ]
+        ],
+        "bicycle_spaces": null,
+        "parking_spaces": null,
+        "basis": "Illustrative access reservation, no approved road or road/rail crossings; accepted tracks require operator-controlled separation."
+      },
+      "buildings": [
+        {
+          "id": "SH-IND-FAC-ARU-OFFICE-B01",
+          "name": "ARU operating office",
+          "rect_m": [
+            20,
+            30,
+            36,
+            18
+          ],
+          "status": "ILLUSTRATIVE_FITOUT_EXISTING_FUNCTION_NOT_AS_BUILT",
+          "floor_height_m": 4.2,
+          "actual_floor_count": null,
+          "modelled_floor_count": 1,
+          "plan_style": "industrial_open_plan",
+          "structure": "Concept structural bay scheme; loads, spans, height and fire system subject to engineering. No construction approval.",
+          "core_basis": "Single level with direct perimeter exits; wet/service zone reserved in support band. No automatic office core. Floor level/accessibility and rated egress design unverified.",
+          "sources": [
+            "industrial/source/operations.json",
+            "industrial/source/entities.json",
+            "geospatial/geojson/industrial_facilities.geojson",
+            "geospatial/geojson/industrial_tracks.geojson"
+          ],
+          "floors": [
+            {
+              "id": "SH-IND-FAC-ARU-OFFICE-B01-L01",
+              "level": 1,
+              "name": "ARU operating office \u2014 ground level",
+              "status": "ILLUSTRATIVE_NOT_SURVEYED",
+              "gross_area_m2": 648,
+              "net_assignable_area_m2": 576,
+              "core_circulation_service_m2": 72,
+              "planned_peak": 14,
+              "rooms": [
+                {
+                  "id": "SH-IND-FAC-ARU-OFFICE-B01-L01-R01",
+                  "name": "Customer and operations desk",
+                  "rect_m": [
+                    0,
+                    0,
+                    12,
+                    8
+                  ],
+                  "access": "staff",
+                  "assigned_desks": 4,
+                  "shared_desks": 0,
+                  "touchdown_seats": 0,
+                  "training_seats": 0,
+                  "meeting_seats": 0,
+                  "resident_beds": 0,
+                  "special_use_concurrent_capacity": 0,
+                  "basis": "IND-A01: illustrative room/attendance assumption; no new workforce authorization"
+                },
+                {
+                  "id": "SH-IND-FAC-ARU-OFFICE-B01-L01-R02",
+                  "name": "Finance and administration",
+                  "rect_m": [
+                    12,
+                    0,
+                    12,
+                    8
+                  ],
+                  "access": "staff",
+                  "assigned_desks": 4,
+                  "shared_desks": 0,
+                  "touchdown_seats": 0,
+                  "training_seats": 0,
+                  "meeting_seats": 0,
+                  "resident_beds": 0,
+                  "special_use_concurrent_capacity": 0,
+                  "basis": "IND-A01: illustrative room/attendance assumption; no new workforce authorization"
+                },
+                {
+                  "id": "SH-IND-FAC-ARU-OFFICE-B01-L01-R03",
+                  "name": "Operating leadership",
+                  "rect_m": [
+                    24,
+                    0,
+                    12,
+                    8
+                  ],
+                  "access": "staff",
+                  "assigned_desks": 2,
+                  "shared_desks": 0,
+                  "touchdown_seats": 0,
+                  "training_seats": 0,
+                  "meeting_seats": 0,
+                  "resident_beds": 0,
+                  "special_use_concurrent_capacity": 0,
+                  "basis": "IND-A01: illustrative room/attendance assumption; no new workforce authorization"
+                },
+                {
+                  "id": "SH-IND-FAC-ARU-OFFICE-B01-L01-R04",
+                  "name": "Customer / team meeting",
+                  "rect_m": [
+                    0,
+                    10,
+                    18,
+                    8
+                  ],
+                  "access": "staff",
+                  "assigned_desks": 0,
+                  "shared_desks": 0,
+                  "touchdown_seats": 0,
+                  "training_seats": 0,
+                  "meeting_seats": 10,
+                  "resident_beds": 0,
+                  "special_use_concurrent_capacity": 0,
+                  "basis": "IND-A01: illustrative room/attendance assumption; no new workforce authorization"
+                },
+                {
+                  "id": "SH-IND-FAC-ARU-OFFICE-B01-L01-R05",
+                  "name": "Records and quiet work",
+                  "rect_m": [
+                    18,
+                    10,
+                    12,
+                    8
+                  ],
+                  "access": "staff",
+                  "assigned_desks": 0,
+                  "shared_desks": 2,
+                  "touchdown_seats": 0,
+                  "training_seats": 0,
+                  "meeting_seats": 0,
+                  "resident_beds": 0,
+                  "special_use_concurrent_capacity": 0,
+                  "basis": "IND-A01: illustrative room/attendance assumption; no new workforce authorization"
+                },
+                {
+                  "id": "SH-IND-FAC-ARU-OFFICE-B01-L01-R06",
+                  "name": "Wet and service reserve",
+                  "rect_m": [
+                    30,
+                    10,
+                    6,
+                    8
+                  ],
+                  "access": "service",
+                  "assigned_desks": 0,
+                  "shared_desks": 0,
+                  "touchdown_seats": 0,
+                  "training_seats": 0,
+                  "meeting_seats": 0,
+                  "resident_beds": 0,
+                  "special_use_concurrent_capacity": 0,
+                  "basis": "IND-A01: illustrative room/attendance assumption; no new workforce authorization"
+                }
+              ],
+              "egress_concept": "Opposed perimeter exits with clear personnel paths separated from handling/vehicle zones. Detailed exit distances and protective separation unverified.",
+              "doors": [
+                {
+                  "edge": "south",
+                  "position_fraction": 0.1,
+                  "purpose": "pedestrian_exit"
+                },
+                {
+                  "edge": "north",
+                  "position_fraction": 0.9,
+                  "purpose": "pedestrian_exit"
+                }
+              ]
+            }
+          ],
+          "layout_style": "industrial",
+          "openings": [
+            {
+              "edge": "west",
+              "position_m": 9.0,
+              "width_m": 1.5,
+              "purpose": "Personnel exit; conceptual"
+            },
+            {
+              "edge": "east",
+              "position_m": 9.0,
+              "width_m": 1.5,
+              "purpose": "Personnel exit; conceptual"
+            },
+            {
+              "edge": "south",
+              "position_m": 18.0,
+              "width_m": 4.5,
+              "purpose": "Handling/vehicle interface reservation; no installed rail claimed"
+            }
+          ]
+        }
+      ],
+      "dependencies": [
+        "Original industrial source geometry and engineering constraints control.",
+        "Pedestrian routes segregated from rail movements, truck reversing and handling.",
+        "No expansion beyond source operating capacity; utilities/fire/containment design unresolved."
+      ],
+      "floor_exemption": null,
+      "attendance_scenarios": [
+        {
+          "id": "SH-IND-FAC-ARU-OFFICE-2026-CONCEPT",
+          "horizon": 2026,
+          "status": "ILLUSTRATIVE_NOT_SHIFT_CENSUS",
+          "people": 14,
+          "floor_populations": {
+            "SH-IND-FAC-ARU-OFFICE-B01-L01": 14
+          },
+          "basis": "Simultaneous indoor design load only; field/driver/outdoor staff are not automatically inside. Not an enterprise rollup scenario."
+        }
+      ]
+    },
+    {
+      "site_id": "SH-IND-FAC-RW-RECEIVING",
+      "source_facility_id": "FAC-RW-RECEIVING",
+      "name": "Red Wash receiving and reagent storage",
+      "map_prefix": "SH-MAP-RWM",
+      "map_start": 130,
+      "revision": "0.1.0",
+      "as_of": "2026-09-11",
+      "status": "SYNTHETIC_IN_SERVICE_2026_07_07",
+      "geometry_status": "ILLUSTRATIVE_LOCAL_PROGRAM_OVER_ACCEPTED_SYNTHETIC_ENVELOPE",
+      "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+      "tenure": "Red Wash Mining, LLC \u2014 accepted synthetic owner, not real title evidence",
+      "occupancy_start": null,
+      "source_opened": "2026-07-07",
+      "construction_start": null,
+      "construction_completion": null,
+      "envelope_m": [
+        238.025,
+        238.025
+      ],
+      "geometry_basis": "Local east/north diagram using source acreage and aspect ratio; no survey transform. Original georeferenced polygon is retained by reference, never replaced. Proposed building placements are illustrative, not surveyed.",
+      "geographic_envelope": {
+        "source": "geospatial/geojson/industrial_facilities.geojson",
+        "object_id": "SH-IND-FAC-RW-RECEIVING",
+        "geometry_status": "LOCKED_DERIVED_IMPLEMENTATION",
+        "precision_class": "CASE_ENGINEERING_NOT_SURVEY",
+        "valid_from": null,
+        "valid_to": null
+      },
+      "sources": [
+        "industrial/source/operations.json",
+        "industrial/source/entities.json",
+        "geospatial/geojson/industrial_facilities.geojson",
+        "geospatial/geojson/industrial_tracks.geojson"
+      ],
+      "assumptions": [
+        {
+          "id": "IND-A01",
+          "statement": "Single-storey building/floor, rooms, dimensions, circulation, seats and simultaneous attendance are illustrative planning assumptions unless explicitly marked as source dimensions. They do not establish acquisition, as-built layout, occupancy or new employees."
+        }
+      ],
+      "accepted_capacity": {
+        "acreage": 14,
+        "assigned_fte": 6,
+        "track_count": 0,
+        "car_spots": 0,
+        "pallet_slots": 0,
+        "annual_external_ton_capacity": 0,
+        "services": "truck only; receiving, acid/binderstorage, scales, MRO and steel; workers are within128siteFTE",
+        "operating_hours": "five-day service; dispatch/oncall exceptions; mine continuous receiving by appointment",
+        "environmental_controls": "segregated drainage, spillkits, stormwater inspection, protected storage and recorded custody"
+      },
+      "population": {
+        "assigned_fte": 6,
+        "source": "industrial/source/operations.json#/facilities/FAC-RW-RECEIVING",
+        "named_current_employees": null,
+        "authorized_positions": null,
+        "vacant_positions": null,
+        "resident_occupants": null,
+        "actual_shift_attendance": null,
+        "visitors_peak": null,
+        "planning_horizons": [
+          {
+            "year": 2026,
+            "additional_positions": null,
+            "basis": "No growth or hiring decision"
+          },
+          {
+            "year": 2031,
+            "additional_positions": null,
+            "basis": "No growth or hiring decision"
+          },
+          {
+            "year": 2036,
+            "additional_positions": null,
+            "basis": "No growth or hiring decision"
+          }
+        ],
+        "rollup_boundary": "Red Wash receiving six are already inside128 mine site employees; otherwise assigned FTE allocate ARU/BS&T131 once."
+      },
+      "track_ids": [],
+      "track_geometry_source": "geospatial/geojson/industrial_tracks.geojson",
+      "track_drawing_rule": "Context view renders existing referenced track geometry only. Local functional zones are not track alignments. Rawlins and Red Wash have no BS&T rails.",
+      "site_zones": [
+        {
+          "name": "Truck receiving / segregated chemical storage",
+          "rect_m": [
+            20,
+            30,
+            198.025,
+            178.025
+          ],
+          "type": "industrial"
+        }
+      ],
+      "access": {
+        "fire_service_loop_m": [
+          [
+            8,
+            8
+          ],
+          [
+            230.025,
+            8
+          ],
+          [
+            230.025,
+            230.025
+          ],
+          [
+            8,
+            230.025
+          ],
+          [
+            8,
+            8
+          ]
+        ],
+        "public_arrival_m": [
+          [
+            59.50625,
+            0
+          ],
+          [
+            59.50625,
+            15
+          ]
+        ],
+        "service_arrival_m": [
+          [
+            190.42000000000002,
+            0
+          ],
+          [
+            190.42000000000002,
+            25
+          ]
+        ],
+        "bicycle_spaces": null,
+        "parking_spaces": null,
+        "basis": "Illustrative access reservation, no approved road or road/rail crossings; accepted tracks require operator-controlled separation."
+      },
+      "buildings": [],
+      "dependencies": [
+        "Original industrial source geometry and engineering constraints control.",
+        "Pedestrian routes segregated from rail movements, truck reversing and handling.",
+        "No expansion beyond source operating capacity; utilities/fire/containment design unresolved."
+      ],
+      "floor_exemption": "Receiving, acid/binder storage, scales and MRO functions established; equipment and occupied-building geometry unknown. Safety/engineering layer explicitly unresolved; no fabricated tanks or underground works.",
+      "technical_layer_status": "UNRESOLVED: source operations describe function/capacity, not installed equipment or occupied-building plan",
+      "attendance_scenarios": [
+        {
+          "id": "SH-IND-FAC-RW-RECEIVING-2026-CONCEPT",
+          "horizon": 2026,
+          "status": "ILLUSTRATIVE_NOT_SHIFT_CENSUS",
+          "people": null,
+          "floor_populations": {},
+          "basis": "Simultaneous indoor design load only; field/driver/outdoor staff are not automatically inside. Not an enterprise rollup scenario."
+        }
+      ]
+    },
+    {
+      "site_id": "SH-SITE-0006",
+      "name": "Red Wash surface study envelope",
+      "map_prefix": "SH-MAP-RWM",
+      "map_start": 20,
+      "revision": "0.1.0",
+      "as_of": "2026-09-11",
+      "status": "PRELIMINARY_ENGINEERING_PROPOSAL",
+      "geometry_status": "PRELIMINARY_ENGINEERING_PROPOSAL",
+      "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+      "tenure": "UNESTABLISHED_FOR_STUDY_ENVELOPE",
+      "occupancy_start": null,
+      "construction_start": null,
+      "construction_completion": null,
+      "envelope_m": [
+        1000,
+        800
+      ],
+      "geometry_basis": "Accepted1000x800m study envelope local conceptual representation; full original polygon remains in sites.geojson. Source anchor -108.18,42.22 is retained; not a title or disturbance claim.",
+      "geographic_envelope": {
+        "source": "geospatial/geojson/sites.geojson",
+        "object_id": "SH-SITE-0006",
+        "geometry_status": "PRELIMINARY_ENGINEERING_PROPOSAL",
+        "precision_class": "PRELIMINARY_DESIGN",
+        "valid_from": null,
+        "valid_to": null
+      },
+      "sources": [
+        "geospatial/geojson/sites.geojson",
+        "industrial/source/operations.json",
+        "industrial/source/entities.json",
+        "docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05_R2.md"
+      ],
+      "assumptions": [
+        {
+          "id": "RW-A01",
+          "statement": "Overall surface envelope remains a preliminary proposal. No underground layout, treatment plant, tank layout, tailings, disturbed acreage or additional mine rail connection is drawn."
+        }
+      ],
+      "site_zones": [
+        {
+          "name": "Surface technical layer unresolved",
+          "rect_m": [
+            30,
+            30,
+            940,
+            740
+          ],
+          "type": "reserve"
+        }
+      ],
+      "access": {
+        "basis": "Truck-only last mile. Existing engineered road geometry remains in original network; no new alignment shown."
+      },
+      "buildings": [],
+      "related_site_ids": [
+        "SH-IND-FAC-RW-RECEIVING"
+      ],
+      "population": {
+        "selected_site_fte": 128,
+        "platform_fte_excluded": 12,
+        "receiving_fte_subset": 6,
+        "actual_shift_attendance": null,
+        "named_current_employees": null,
+        "source": "industrial/source/entities.json#/headcount_boundaries",
+        "planning_shift_scenario": {
+          "status": "ILLUSTRATIVE_NOT_OBSERVED",
+          "on_site_workers": 48,
+          "visitors_contractors": 4,
+          "concurrent_total": 52,
+          "basis": "Capacity stress-test only;48 of128 site employees hypothetically concurrent plus4 nonemployee visitors. Not a roster, installed capacity or statutory egress calculation."
+        }
+      },
+      "floor_exemption": "Occupied mine building inventory and technical geometry remain unresolved. Preserve mine operating anchor and receiving subsite; no unsupported floors, underground works or process equipment fabricated.",
+      "dependencies": [
+        "Red Wash rejected mine rail spur remains excluded.",
+        "Receiving6 remain inside site128; platform12 separate.",
+        "Detailed engineering / physical building inventory required before any mine floor plan becomes supportable."
+      ],
+      "attendance_scenarios": []
+    }
+  ],
+  "network_structures": [
+    {
+      "source_id": "BR-01",
+      "route_id": "BST-MAIN",
+      "kind": "rail_bridge",
+      "source": "industrial/source/operations.json#/structures/BR-01",
+      "disposition": "CONTEXT_AND_EXISTING_ENGINEERING_RECORD_ONLY",
+      "reason": "Bridge, culvert or external overbridge is not an occupied building. Original position, span/material, condition, inspection and synthetic rating remain controlling; no floor plan or new engineered structure is inferred."
+    },
+    {
+      "source_id": "BR-02",
+      "route_id": "BST-MAIN",
+      "kind": "rail_bridge",
+      "source": "industrial/source/operations.json#/structures/BR-02",
+      "disposition": "CONTEXT_AND_EXISTING_ENGINEERING_RECORD_ONLY",
+      "reason": "Bridge, culvert or external overbridge is not an occupied building. Original position, span/material, condition, inspection and synthetic rating remain controlling; no floor plan or new engineered structure is inferred."
+    },
+    {
+      "source_id": "BR-03",
+      "route_id": "BST-MAIN",
+      "kind": "rail_bridge",
+      "source": "industrial/source/operations.json#/structures/BR-03",
+      "disposition": "CONTEXT_AND_EXISTING_ENGINEERING_RECORD_ONLY",
+      "reason": "Bridge, culvert or external overbridge is not an occupied building. Original position, span/material, condition, inspection and synthetic rating remain controlling; no floor plan or new engineered structure is inferred."
+    },
+    {
+      "source_id": "BR-04",
+      "route_id": "BST-EAST",
+      "kind": "rail_bridge",
+      "source": "industrial/source/operations.json#/structures/BR-04",
+      "disposition": "CONTEXT_AND_EXISTING_ENGINEERING_RECORD_ONLY",
+      "reason": "Bridge, culvert or external overbridge is not an occupied building. Original position, span/material, condition, inspection and synthetic rating remain controlling; no floor plan or new engineered structure is inferred."
+    },
+    {
+      "source_id": "CUL-01",
+      "route_id": "BST-MAIN",
+      "kind": "culvert",
+      "source": "industrial/source/operations.json#/structures/CUL-01",
+      "disposition": "CONTEXT_AND_EXISTING_ENGINEERING_RECORD_ONLY",
+      "reason": "Bridge, culvert or external overbridge is not an occupied building. Original position, span/material, condition, inspection and synthetic rating remain controlling; no floor plan or new engineered structure is inferred."
+    },
+    {
+      "source_id": "CUL-02",
+      "route_id": "BST-MAIN",
+      "kind": "culvert",
+      "source": "industrial/source/operations.json#/structures/CUL-02",
+      "disposition": "CONTEXT_AND_EXISTING_ENGINEERING_RECORD_ONLY",
+      "reason": "Bridge, culvert or external overbridge is not an occupied building. Original position, span/material, condition, inspection and synthetic rating remain controlling; no floor plan or new engineered structure is inferred."
+    },
+    {
+      "source_id": "CUL-03",
+      "route_id": "BST-MAIN",
+      "kind": "culvert",
+      "source": "industrial/source/operations.json#/structures/CUL-03",
+      "disposition": "CONTEXT_AND_EXISTING_ENGINEERING_RECORD_ONLY",
+      "reason": "Bridge, culvert or external overbridge is not an occupied building. Original position, span/material, condition, inspection and synthetic rating remain controlling; no floor plan or new engineered structure is inferred."
+    },
+    {
+      "source_id": "CUL-04",
+      "route_id": "BST-MAIN",
+      "kind": "culvert",
+      "source": "industrial/source/operations.json#/structures/CUL-04",
+      "disposition": "CONTEXT_AND_EXISTING_ENGINEERING_RECORD_ONLY",
+      "reason": "Bridge, culvert or external overbridge is not an occupied building. Original position, span/material, condition, inspection and synthetic rating remain controlling; no floor plan or new engineered structure is inferred."
+    },
+    {
+      "source_id": "CUL-05",
+      "route_id": "BST-MAIN",
+      "kind": "culvert",
+      "source": "industrial/source/operations.json#/structures/CUL-05",
+      "disposition": "CONTEXT_AND_EXISTING_ENGINEERING_RECORD_ONLY",
+      "reason": "Bridge, culvert or external overbridge is not an occupied building. Original position, span/material, condition, inspection and synthetic rating remain controlling; no floor plan or new engineered structure is inferred."
+    },
+    {
+      "source_id": "CUL-06",
+      "route_id": "BST-MAIN",
+      "kind": "culvert",
+      "source": "industrial/source/operations.json#/structures/CUL-06",
+      "disposition": "CONTEXT_AND_EXISTING_ENGINEERING_RECORD_ONLY",
+      "reason": "Bridge, culvert or external overbridge is not an occupied building. Original position, span/material, condition, inspection and synthetic rating remain controlling; no floor plan or new engineered structure is inferred."
+    },
+    {
+      "source_id": "CUL-07",
+      "route_id": "BST-MAIN",
+      "kind": "culvert",
+      "source": "industrial/source/operations.json#/structures/CUL-07",
+      "disposition": "CONTEXT_AND_EXISTING_ENGINEERING_RECORD_ONLY",
+      "reason": "Bridge, culvert or external overbridge is not an occupied building. Original position, span/material, condition, inspection and synthetic rating remain controlling; no floor plan or new engineered structure is inferred."
+    },
+    {
+      "source_id": "CUL-08",
+      "route_id": "BST-MAIN",
+      "kind": "culvert",
+      "source": "industrial/source/operations.json#/structures/CUL-08",
+      "disposition": "CONTEXT_AND_EXISTING_ENGINEERING_RECORD_ONLY",
+      "reason": "Bridge, culvert or external overbridge is not an occupied building. Original position, span/material, condition, inspection and synthetic rating remain controlling; no floor plan or new engineered structure is inferred."
+    },
+    {
+      "source_id": "CUL-09",
+      "route_id": "BST-MAIN",
+      "kind": "culvert",
+      "source": "industrial/source/operations.json#/structures/CUL-09",
+      "disposition": "CONTEXT_AND_EXISTING_ENGINEERING_RECORD_ONLY",
+      "reason": "Bridge, culvert or external overbridge is not an occupied building. Original position, span/material, condition, inspection and synthetic rating remain controlling; no floor plan or new engineered structure is inferred."
+    },
+    {
+      "source_id": "CUL-10",
+      "route_id": "BST-MAIN",
+      "kind": "culvert",
+      "source": "industrial/source/operations.json#/structures/CUL-10",
+      "disposition": "CONTEXT_AND_EXISTING_ENGINEERING_RECORD_ONLY",
+      "reason": "Bridge, culvert or external overbridge is not an occupied building. Original position, span/material, condition, inspection and synthetic rating remain controlling; no floor plan or new engineered structure is inferred."
+    },
+    {
+      "source_id": "CUL-11",
+      "route_id": "BST-MAIN",
+      "kind": "culvert",
+      "source": "industrial/source/operations.json#/structures/CUL-11",
+      "disposition": "CONTEXT_AND_EXISTING_ENGINEERING_RECORD_ONLY",
+      "reason": "Bridge, culvert or external overbridge is not an occupied building. Original position, span/material, condition, inspection and synthetic rating remain controlling; no floor plan or new engineered structure is inferred."
+    },
+    {
+      "source_id": "CUL-12",
+      "route_id": "BST-MAIN",
+      "kind": "culvert",
+      "source": "industrial/source/operations.json#/structures/CUL-12",
+      "disposition": "CONTEXT_AND_EXISTING_ENGINEERING_RECORD_ONLY",
+      "reason": "Bridge, culvert or external overbridge is not an occupied building. Original position, span/material, condition, inspection and synthetic rating remain controlling; no floor plan or new engineered structure is inferred."
+    },
+    {
+      "source_id": "CUL-13",
+      "route_id": "BST-MAIN",
+      "kind": "culvert",
+      "source": "industrial/source/operations.json#/structures/CUL-13",
+      "disposition": "CONTEXT_AND_EXISTING_ENGINEERING_RECORD_ONLY",
+      "reason": "Bridge, culvert or external overbridge is not an occupied building. Original position, span/material, condition, inspection and synthetic rating remain controlling; no floor plan or new engineered structure is inferred."
+    },
+    {
+      "source_id": "CUL-14",
+      "route_id": "BST-MAIN",
+      "kind": "culvert",
+      "source": "industrial/source/operations.json#/structures/CUL-14",
+      "disposition": "CONTEXT_AND_EXISTING_ENGINEERING_RECORD_ONLY",
+      "reason": "Bridge, culvert or external overbridge is not an occupied building. Original position, span/material, condition, inspection and synthetic rating remain controlling; no floor plan or new engineered structure is inferred."
+    },
+    {
+      "source_id": "CUL-15",
+      "route_id": "BST-MAIN",
+      "kind": "culvert",
+      "source": "industrial/source/operations.json#/structures/CUL-15",
+      "disposition": "CONTEXT_AND_EXISTING_ENGINEERING_RECORD_ONLY",
+      "reason": "Bridge, culvert or external overbridge is not an occupied building. Original position, span/material, condition, inspection and synthetic rating remain controlling; no floor plan or new engineered structure is inferred."
+    },
+    {
+      "source_id": "CUL-16",
+      "route_id": "BST-MAIN",
+      "kind": "culvert",
+      "source": "industrial/source/operations.json#/structures/CUL-16",
+      "disposition": "CONTEXT_AND_EXISTING_ENGINEERING_RECORD_ONLY",
+      "reason": "Bridge, culvert or external overbridge is not an occupied building. Original position, span/material, condition, inspection and synthetic rating remain controlling; no floor plan or new engineered structure is inferred."
+    },
+    {
+      "source_id": "CUL-17",
+      "route_id": "BST-EAST",
+      "kind": "culvert",
+      "source": "industrial/source/operations.json#/structures/CUL-17",
+      "disposition": "CONTEXT_AND_EXISTING_ENGINEERING_RECORD_ONLY",
+      "reason": "Bridge, culvert or external overbridge is not an occupied building. Original position, span/material, condition, inspection and synthetic rating remain controlling; no floor plan or new engineered structure is inferred."
+    },
+    {
+      "source_id": "CUL-18",
+      "route_id": "BST-EAST",
+      "kind": "culvert",
+      "source": "industrial/source/operations.json#/structures/CUL-18",
+      "disposition": "CONTEXT_AND_EXISTING_ENGINEERING_RECORD_ONLY",
+      "reason": "Bridge, culvert or external overbridge is not an occupied building. Original position, span/material, condition, inspection and synthetic rating remain controlling; no floor plan or new engineered structure is inferred."
+    },
+    {
+      "source_id": "CUL-19",
+      "route_id": "BST-MINERAL",
+      "kind": "culvert",
+      "source": "industrial/source/operations.json#/structures/CUL-19",
+      "disposition": "CONTEXT_AND_EXISTING_ENGINEERING_RECORD_ONLY",
+      "reason": "Bridge, culvert or external overbridge is not an occupied building. Original position, span/material, condition, inspection and synthetic rating remain controlling; no floor plan or new engineered structure is inferred."
+    },
+    {
+      "source_id": "CUL-20",
+      "route_id": "BST-MINERAL",
+      "kind": "culvert",
+      "source": "industrial/source/operations.json#/structures/CUL-20",
+      "disposition": "CONTEXT_AND_EXISTING_ENGINEERING_RECORD_ONLY",
+      "reason": "Bridge, culvert or external overbridge is not an occupied building. Original position, span/material, condition, inspection and synthetic rating remain controlling; no floor plan or new engineered structure is inferred."
+    },
+    {
+      "source_id": "HWY-I80-1",
+      "route_id": "BST-MAIN",
+      "kind": "third_party_highway_overbridge",
+      "source": "industrial/source/operations.json#/structures/HWY-I80-1",
+      "disposition": "CONTEXT_AND_EXISTING_ENGINEERING_RECORD_ONLY",
+      "reason": "Bridge, culvert or external overbridge is not an occupied building. Original position, span/material, condition, inspection and synthetic rating remain controlling; no floor plan or new engineered structure is inferred."
+    },
+    {
+      "source_id": "HWY-I80-2",
+      "route_id": "BST-MAIN",
+      "kind": "third_party_highway_overbridge",
+      "source": "industrial/source/operations.json#/structures/HWY-I80-2",
+      "disposition": "CONTEXT_AND_EXISTING_ENGINEERING_RECORD_ONLY",
+      "reason": "Bridge, culvert or external overbridge is not an occupied building. Original position, span/material, condition, inspection and synthetic rating remain controlling; no floor plan or new engineered structure is inferred."
+    }
+  ],
+  "route_segment_references": [
+    {
+      "source_id": "TRK-BST-MAIN-0",
+      "route_id": "BST-MAIN",
+      "source": "industrial/source/operations.json#/track_segments/TRK-BST-MAIN-0",
+      "geometry_source": "geospatial/geojson/industrial_tracks.geojson",
+      "disposition": "PRESERVE_ACCEPTED_TRACK_GEOMETRY_CONTEXT_ONLY"
+    },
+    {
+      "source_id": "TRK-BST-MAIN-4",
+      "route_id": "BST-MAIN",
+      "source": "industrial/source/operations.json#/track_segments/TRK-BST-MAIN-4",
+      "geometry_source": "geospatial/geojson/industrial_tracks.geojson",
+      "disposition": "PRESERVE_ACCEPTED_TRACK_GEOMETRY_CONTEXT_ONLY"
+    },
+    {
+      "source_id": "TRK-BST-MAIN-10",
+      "route_id": "BST-MAIN",
+      "source": "industrial/source/operations.json#/track_segments/TRK-BST-MAIN-10",
+      "geometry_source": "geospatial/geojson/industrial_tracks.geojson",
+      "disposition": "PRESERVE_ACCEPTED_TRACK_GEOMETRY_CONTEXT_ONLY"
+    },
+    {
+      "source_id": "TRK-BST-MAIN-15",
+      "route_id": "BST-MAIN",
+      "source": "industrial/source/operations.json#/track_segments/TRK-BST-MAIN-15",
+      "geometry_source": "geospatial/geojson/industrial_tracks.geojson",
+      "disposition": "PRESERVE_ACCEPTED_TRACK_GEOMETRY_CONTEXT_ONLY"
+    },
+    {
+      "source_id": "TRK-BST-MAIN-22",
+      "route_id": "BST-MAIN",
+      "source": "industrial/source/operations.json#/track_segments/TRK-BST-MAIN-22",
+      "geometry_source": "geospatial/geojson/industrial_tracks.geojson",
+      "disposition": "PRESERVE_ACCEPTED_TRACK_GEOMETRY_CONTEXT_ONLY"
+    },
+    {
+      "source_id": "TRK-BST-MAIN-26",
+      "route_id": "BST-MAIN",
+      "source": "industrial/source/operations.json#/track_segments/TRK-BST-MAIN-26",
+      "geometry_source": "geospatial/geojson/industrial_tracks.geojson",
+      "disposition": "PRESERVE_ACCEPTED_TRACK_GEOMETRY_CONTEXT_ONLY"
+    },
+    {
+      "source_id": "TRK-BST-MAIN-30",
+      "route_id": "BST-MAIN",
+      "source": "industrial/source/operations.json#/track_segments/TRK-BST-MAIN-30",
+      "geometry_source": "geospatial/geojson/industrial_tracks.geojson",
+      "disposition": "PRESERVE_ACCEPTED_TRACK_GEOMETRY_CONTEXT_ONLY"
+    },
+    {
+      "source_id": "TRK-BST-EAST-0",
+      "route_id": "BST-EAST",
+      "source": "industrial/source/operations.json#/track_segments/TRK-BST-EAST-0",
+      "geometry_source": "geospatial/geojson/industrial_tracks.geojson",
+      "disposition": "PRESERVE_ACCEPTED_TRACK_GEOMETRY_CONTEXT_ONLY"
+    },
+    {
+      "source_id": "TRK-BST-EAST-2",
+      "route_id": "BST-EAST",
+      "source": "industrial/source/operations.json#/track_segments/TRK-BST-EAST-2",
+      "geometry_source": "geospatial/geojson/industrial_tracks.geojson",
+      "disposition": "PRESERVE_ACCEPTED_TRACK_GEOMETRY_CONTEXT_ONLY"
+    },
+    {
+      "source_id": "TRK-BST-MINERAL-0",
+      "route_id": "BST-MINERAL",
+      "source": "industrial/source/operations.json#/track_segments/TRK-BST-MINERAL-0",
+      "geometry_source": "geospatial/geojson/industrial_tracks.geojson",
+      "disposition": "PRESERVE_ACCEPTED_TRACK_GEOMETRY_CONTEXT_ONLY"
+    },
+    {
+      "source_id": "TRK-BST-MINERAL-1.25",
+      "route_id": "BST-MINERAL",
+      "source": "industrial/source/operations.json#/track_segments/TRK-BST-MINERAL-1.25",
+      "geometry_source": "geospatial/geojson/industrial_tracks.geojson",
+      "disposition": "PRESERVE_ACCEPTED_TRACK_GEOMETRY_CONTEXT_ONLY"
+    }
+  ]
+}

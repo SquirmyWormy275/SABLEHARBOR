@@ -1,0 +1,20 @@
+
+==================================== ERRORS ====================================
+________ ERROR collecting enterprise/runtime/tests/test_integration.py _________
+import file mismatch:
+imported module 'test_integration' has this __file__ attribute:
+  /tmp/sable-r02-main-validation-237778d/enterprise/operations/tests/test_integration.py
+which is not the same as the test file we want to collect:
+  /tmp/sable-r02-main-validation-237778d/enterprise/runtime/tests/test_integration.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules
+______________ ERROR collecting industrial/tests/test_package.py _______________
+import file mismatch:
+imported module 'test_package' has this __file__ attribute:
+  /tmp/sable-r02-main-validation-237778d/industrial/planning/tests/test_package.py
+which is not the same as the test file we want to collect:
+  /tmp/sable-r02-main-validation-237778d/industrial/tests/test_package.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules
+=========================== short test summary info ============================
+ERROR enterprise/runtime/tests/test_integration.py
+ERROR industrial/tests/test_package.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 2 errors during collection !!!!!!!!!!!!!!!!!!!!

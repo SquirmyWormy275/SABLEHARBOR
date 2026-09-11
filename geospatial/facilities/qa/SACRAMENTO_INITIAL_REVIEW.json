@@ -1,0 +1,612 @@
+{
+  "status": "DRAFT_REVIEW_FINDINGS_OPEN_NOT_FINAL_PASS",
+  "review_date": "2026-09-11",
+  "scope": "Initial 20 Sacramento sheets / 60 SVG PNG PDF artifacts before concurrent remediation. Exact render hashes below fix evidence to reviewed bytes.",
+  "method": [
+    "Rendered every one-page PDF through fitz at 1600\u00d71000 and visually inspected all 20 individually with view_image.",
+    "Parsed every SVG as XML; independently rasterized every SVG through CairoSVG and verified exact pixel equality with saved PNG (20/20).",
+    "Decoded all saved PNGs; dimensions 1600\u00d71000.",
+    "Reviewed source areas, building stacks, attendance scenarios and population BRIDGE.md for conceptual consistency."
+  ],
+  "source_hash_from_reviewed_manifest": "583b82100ff69bf4437f0631127d862c840868e503cd250a3516e4f3b8edb6c2",
+  "generator_hash_from_reviewed_manifest": "dc2ac8ae8cf2abbeb11302596a388d827ad64c7d7c87223d52c7968d328d3383",
+  "sheets": [
+    {
+      "id": "SH-MAP-SAC-002",
+      "artifacts": {
+        "pdf": "9d0e7cb31fe32bc85e69a09ee4bc3633bad9c3cc4b74354ab7ddd1ae18fafee2",
+        "svg": "5ffb245ae3f800d0a070590f670e100a872c44e1e042e990abb143bc54b89e39",
+        "png": "aba1429e446b4b8744ca7d4d4a39607dbefb2553f13b92c40e0d1d3415c81070"
+      },
+      "pdf_pages": 1,
+      "page_rect": [
+        0.0,
+        0.0,
+        1200.0,
+        750.0
+      ],
+      "text_beyond_footer": [],
+      "svg_xml_parse": "{http://www.w3.org/2000/svg}svg",
+      "png_decoded_size": [
+        1600,
+        1000
+      ],
+      "svg_raster_matches_png": true,
+      "manual_pdf_visual_review": "REVIEWED_1600x1000_FINDINGS_OPEN",
+      "snapshot_still_current": true
+    },
+    {
+      "id": "SH-MAP-SAC-003",
+      "artifacts": {
+        "pdf": "eaa261ba47c2ed1519c9f3513ccb18874b31ad90a2bb54907afd76f4ea2c6c6e",
+        "svg": "5bf08519c69c13afe95d29fcad3e35a730e0f2560c339f9ccde33582b6c3c560",
+        "png": "b06ed189fd677d1f5ff7de00090b0e92d821338c74484746750102fb7beda463"
+      },
+      "pdf_pages": 1,
+      "page_rect": [
+        0.0,
+        0.0,
+        1200.0,
+        750.0
+      ],
+      "text_beyond_footer": [],
+      "svg_xml_parse": "{http://www.w3.org/2000/svg}svg",
+      "png_decoded_size": [
+        1600,
+        1000
+      ],
+      "svg_raster_matches_png": true,
+      "manual_pdf_visual_review": "REVIEWED_1600x1000_FINDINGS_OPEN",
+      "snapshot_still_current": true
+    },
+    {
+      "id": "SH-MAP-SAC-004",
+      "artifacts": {
+        "pdf": "fbd5a4995b930fa3236c8cca2cfdd2fdc72786e11cca543c59d584143d14592e",
+        "svg": "bfd0e4f4a6f2724ead241aa35e13783188745c76ba648cc77fd2f2a342c2d640",
+        "png": "8d073417c6f0a12dedac2d5abe48d51d55b1ef715f02af1951a7035d1c2c0222"
+      },
+      "pdf_pages": 1,
+      "page_rect": [
+        0.0,
+        0.0,
+        1200.0,
+        750.0
+      ],
+      "text_beyond_footer": [
+        "Concept fit-out for the\nintegrated campus option; not\nevidence that this floor\ncurrently exists."
+      ],
+      "svg_xml_parse": "{http://www.w3.org/2000/svg}svg",
+      "png_decoded_size": [
+        1600,
+        1000
+      ],
+      "svg_raster_matches_png": true,
+      "manual_pdf_visual_review": "REVIEWED_1600x1000_FINDINGS_OPEN",
+      "snapshot_still_current": true
+    },
+    {
+      "id": "SH-MAP-SAC-005",
+      "artifacts": {
+        "pdf": "fb1b83d9ab0935b4aa78923e6df2c695d4b1848f959512c1560cf66d6a4c1ccd",
+        "svg": "02e1ca99623726fa54dee5e8a9e78f2c499ba142823bd676ffa89255f9950c24",
+        "png": "8c65b5f47bb0d89ddc91b9c04c0722b6ea9c72ef1765bc18c89575cc66409289"
+      },
+      "pdf_pages": 1,
+      "page_rect": [
+        0.0,
+        0.0,
+        1200.0,
+        750.0
+      ],
+      "text_beyond_footer": [
+        "Concept fit-out for the\nintegrated campus option; not\nevidence that this floor\ncurrently exists."
+      ],
+      "svg_xml_parse": "{http://www.w3.org/2000/svg}svg",
+      "png_decoded_size": [
+        1600,
+        1000
+      ],
+      "svg_raster_matches_png": true,
+      "manual_pdf_visual_review": "REVIEWED_1600x1000_FINDINGS_OPEN",
+      "snapshot_still_current": true
+    },
+    {
+      "id": "SH-MAP-SAC-006",
+      "artifacts": {
+        "pdf": "0cbc0b8fe44935ebd6c7db9475f0b6315e05d56e369d6b23888143cbe6e03d53",
+        "svg": "b98c597ae7a74e2f837e64b4ae9508145e9cf1a1a40e56d07ed6bf0cc9bb4e27",
+        "png": "1b86341b4d9cb931103fb4911540a70905dccc17c69b1d95c370b87ef3fa208e"
+      },
+      "pdf_pages": 1,
+      "page_rect": [
+        0.0,
+        0.0,
+        1200.0,
+        750.0
+      ],
+      "text_beyond_footer": [],
+      "svg_xml_parse": "{http://www.w3.org/2000/svg}svg",
+      "png_decoded_size": [
+        1600,
+        1000
+      ],
+      "svg_raster_matches_png": true,
+      "manual_pdf_visual_review": "REVIEWED_1600x1000_FINDINGS_OPEN",
+      "snapshot_still_current": true
+    },
+    {
+      "id": "SH-MAP-SAC-007",
+      "artifacts": {
+        "pdf": "881d2e08d0ff0921063f9e7fb86d17bae205007f6f84ac3b20a2c7f74afa6c28",
+        "svg": "e60ec095d23db7356811d9cea443e403fcc8512e774e536d9f4aa5351932b3d2",
+        "png": "b9ca320ddc62ab2b3edefb64f161c6a7b225848c1b76ea048839bf81a51e5792"
+      },
+      "pdf_pages": 1,
+      "page_rect": [
+        0.0,
+        0.0,
+        1200.0,
+        750.0
+      ],
+      "text_beyond_footer": [
+        "Concept fit-out for the\nintegrated campus option; not\nevidence that this floor\ncurrently exists."
+      ],
+      "svg_xml_parse": "{http://www.w3.org/2000/svg}svg",
+      "png_decoded_size": [
+        1600,
+        1000
+      ],
+      "svg_raster_matches_png": true,
+      "manual_pdf_visual_review": "REVIEWED_1600x1000_FINDINGS_OPEN",
+      "snapshot_still_current": true
+    },
+    {
+      "id": "SH-MAP-SAC-008",
+      "artifacts": {
+        "pdf": "91ac6fface73c332b27355a869419b809ecea3b27f3dadd2d872972c94aeb717",
+        "svg": "c7cefa42f1c14c20fa90276fae0d35b1c20351469d941469e1258910dbb94fb3",
+        "png": "8727207504afe5c983a356cc7fb6c8c69251b3adf600a31b4eee2bd55970dccc"
+      },
+      "pdf_pages": 1,
+      "page_rect": [
+        0.0,
+        0.0,
+        1200.0,
+        750.0
+      ],
+      "text_beyond_footer": [
+        "Concept fit-out for the\nintegrated campus option; not\nevidence that this floor\ncurrently exists."
+      ],
+      "svg_xml_parse": "{http://www.w3.org/2000/svg}svg",
+      "png_decoded_size": [
+        1600,
+        1000
+      ],
+      "svg_raster_matches_png": true,
+      "manual_pdf_visual_review": "REVIEWED_1600x1000_FINDINGS_OPEN",
+      "snapshot_still_current": true
+    },
+    {
+      "id": "SH-MAP-SAC-009",
+      "artifacts": {
+        "pdf": "88ae1d9dc4fac20d4a849d8a3e1bc3652a50d19b084903daed67f05c19bb9f42",
+        "svg": "3465b7d96a6c932e1c777b23b2adf3d66858243787a8ad28ad4a4a2eb6f2af03",
+        "png": "45aa1a7ccf68f2e5b6d400d7bd0e8da9d75c2b7e65200d5c094d7e2fcfd96f4b"
+      },
+      "pdf_pages": 1,
+      "page_rect": [
+        0.0,
+        0.0,
+        1200.0,
+        750.0
+      ],
+      "text_beyond_footer": [
+        "No construction, lease,\nownership, occupancy date or\ncompletion is inferred. Future\nshell means no occupied capacity\nin this scenario."
+      ],
+      "svg_xml_parse": "{http://www.w3.org/2000/svg}svg",
+      "png_decoded_size": [
+        1600,
+        1000
+      ],
+      "svg_raster_matches_png": true,
+      "manual_pdf_visual_review": "REVIEWED_1600x1000_FINDINGS_OPEN",
+      "snapshot_still_current": true
+    },
+    {
+      "id": "SH-MAP-SAC-010",
+      "artifacts": {
+        "pdf": "f5e7ecac35b4943c0d07aa2f285ff6de9abe8aa989d4c11b106ca2a0788d00eb",
+        "svg": "d90f3c161728c218354378e98d7ce66c8fddfc9b0bc0d62549704a22204af18d",
+        "png": "b817669787dde4fa0fc05c64499ceec13e46b848dcf1af766bbc6842c66babd7"
+      },
+      "pdf_pages": 1,
+      "page_rect": [
+        0.0,
+        0.0,
+        1200.0,
+        750.0
+      ],
+      "text_beyond_footer": [],
+      "svg_xml_parse": "{http://www.w3.org/2000/svg}svg",
+      "png_decoded_size": [
+        1600,
+        1000
+      ],
+      "svg_raster_matches_png": true,
+      "manual_pdf_visual_review": "REVIEWED_1600x1000_FINDINGS_OPEN",
+      "snapshot_still_current": true
+    },
+    {
+      "id": "SH-MAP-SAC-011",
+      "artifacts": {
+        "pdf": "e42219a1eb0d6ce3450c2b6b35468d2e3d04b16807357503127dc662f4786fbc",
+        "svg": "a09e54cde5c9749f7dc2dfce6655085a818369984b8ccbf61bf2b6e602b52c69",
+        "png": "9206f0d14adf3e694f9f19605c0f07b1a47173fe63151ecced76adcf24bd9ecb"
+      },
+      "pdf_pages": 1,
+      "page_rect": [
+        0.0,
+        0.0,
+        1200.0,
+        750.0
+      ],
+      "text_beyond_footer": [
+        "Concept fit-out for the\nintegrated campus option; not\nevidence that this floor\ncurrently exists."
+      ],
+      "svg_xml_parse": "{http://www.w3.org/2000/svg}svg",
+      "png_decoded_size": [
+        1600,
+        1000
+      ],
+      "svg_raster_matches_png": true,
+      "manual_pdf_visual_review": "REVIEWED_1600x1000_FINDINGS_OPEN",
+      "snapshot_still_current": true
+    },
+    {
+      "id": "SH-MAP-SAC-012",
+      "artifacts": {
+        "pdf": "3e1e3c0f45cc07eb9bef30c720c88f76db0e018cbadebc264d9c1b608d15cbb5",
+        "svg": "93c25de151881cfaf8f827567db2abfd83445f1b601e156b212ab1ee08309890",
+        "png": "a92fcb34c20a1f6acfe851fa3081748abbc680c2e80249257385d70b072f72f2"
+      },
+      "pdf_pages": 1,
+      "page_rect": [
+        0.0,
+        0.0,
+        1200.0,
+        750.0
+      ],
+      "text_beyond_footer": [
+        "Concept fit-out for the\nintegrated campus option; not\nevidence that this floor\ncurrently exists."
+      ],
+      "svg_xml_parse": "{http://www.w3.org/2000/svg}svg",
+      "png_decoded_size": [
+        1600,
+        1000
+      ],
+      "svg_raster_matches_png": true,
+      "manual_pdf_visual_review": "REVIEWED_1600x1000_FINDINGS_OPEN",
+      "snapshot_still_current": true
+    },
+    {
+      "id": "SH-MAP-SAC-013",
+      "artifacts": {
+        "pdf": "153bd8f2b95aaf5cc30b5dddb99d9070358969777b4b6250fa76add5fc88ab87",
+        "svg": "3e74aff76e3b2c38914dc33245dd6c2bdf1c17c893409a8248240104a11fe319",
+        "png": "d3f0d4e98b99b4b98ea58b3272c448d59b0caefdd7373ab7b7dd6114b40b21f4"
+      },
+      "pdf_pages": 1,
+      "page_rect": [
+        0.0,
+        0.0,
+        1200.0,
+        750.0
+      ],
+      "text_beyond_footer": [
+        "Concept fit-out for the\nintegrated campus option; not\nevidence that this floor\ncurrently exists."
+      ],
+      "svg_xml_parse": "{http://www.w3.org/2000/svg}svg",
+      "png_decoded_size": [
+        1600,
+        1000
+      ],
+      "svg_raster_matches_png": true,
+      "manual_pdf_visual_review": "REVIEWED_1600x1000_FINDINGS_OPEN",
+      "snapshot_still_current": true
+    },
+    {
+      "id": "SH-MAP-SAC-014",
+      "artifacts": {
+        "pdf": "f24e379bdd819ef372a07877598f6e82effa5d1e426755ea30e8cea7d2d3ce31",
+        "svg": "005a8c693f6eb1ab9a41e1ac865e44e1433f5249c3da47e665dc8763c0d16416",
+        "png": "37391832aa89b7ca476421a08a5a98e0aa4751093eb47d0f4bff1acdb5b2f378"
+      },
+      "pdf_pages": 1,
+      "page_rect": [
+        0.0,
+        0.0,
+        1200.0,
+        750.0
+      ],
+      "text_beyond_footer": [],
+      "svg_xml_parse": "{http://www.w3.org/2000/svg}svg",
+      "png_decoded_size": [
+        1600,
+        1000
+      ],
+      "svg_raster_matches_png": true,
+      "manual_pdf_visual_review": "REVIEWED_1600x1000_FINDINGS_OPEN",
+      "snapshot_still_current": true
+    },
+    {
+      "id": "SH-MAP-SAC-015",
+      "artifacts": {
+        "pdf": "73856838ef74ed49ed385d1ce8bc6a622f03c55d881d397a7baab3ceecb929f2",
+        "svg": "47a9dca4b1f0c5669e61b811c273e0d720707043e40f96919ce238fe9fdc54a9",
+        "png": "fbf15a4225e276790517329207084d2c8902027ea27a5630e4650edc34a2426b"
+      },
+      "pdf_pages": 1,
+      "page_rect": [
+        0.0,
+        0.0,
+        1200.0,
+        750.0
+      ],
+      "text_beyond_footer": [
+        "Concept fit-out for the\nintegrated campus option; not\nevidence that this floor\ncurrently exists."
+      ],
+      "svg_xml_parse": "{http://www.w3.org/2000/svg}svg",
+      "png_decoded_size": [
+        1600,
+        1000
+      ],
+      "svg_raster_matches_png": true,
+      "manual_pdf_visual_review": "REVIEWED_1600x1000_FINDINGS_OPEN",
+      "snapshot_still_current": true
+    },
+    {
+      "id": "SH-MAP-SAC-016",
+      "artifacts": {
+        "pdf": "4d0e64120cd43828cfad0779e4dbcdae5620d5578c4768c2cf78f0d387825c4d",
+        "svg": "126984360954ee5bbf8cbc875adacbe0def6c46ca4e6e7377b025f4b45dd601a",
+        "png": "a00d525b0c8b78ca49fc07a4357e7d8dda6e35917afa7f854ebb31caca0b604d"
+      },
+      "pdf_pages": 1,
+      "page_rect": [
+        0.0,
+        0.0,
+        1200.0,
+        750.0
+      ],
+      "text_beyond_footer": [
+        "Concept fit-out for the\nintegrated campus option; not\nevidence that this floor\ncurrently exists."
+      ],
+      "svg_xml_parse": "{http://www.w3.org/2000/svg}svg",
+      "png_decoded_size": [
+        1600,
+        1000
+      ],
+      "svg_raster_matches_png": true,
+      "manual_pdf_visual_review": "REVIEWED_1600x1000_FINDINGS_OPEN",
+      "snapshot_still_current": true
+    },
+    {
+      "id": "SH-MAP-SAC-017",
+      "artifacts": {
+        "pdf": "6252ba1bd29fa70ec653938e97be324f1101fd3454be19ba94968aa438e00b4e",
+        "svg": "c99915004c5eb519021293a0616153a71eebb516f6b2041edab9f51a6825c04b",
+        "png": "980026f411277ce4bc24e52c09ad2f612bb515d4e8750ad1e927ce5d007e3ba4"
+      },
+      "pdf_pages": 1,
+      "page_rect": [
+        0.0,
+        0.0,
+        1200.0,
+        750.0
+      ],
+      "text_beyond_footer": [],
+      "svg_xml_parse": "{http://www.w3.org/2000/svg}svg",
+      "png_decoded_size": [
+        1600,
+        1000
+      ],
+      "svg_raster_matches_png": true,
+      "manual_pdf_visual_review": "REVIEWED_1600x1000_FINDINGS_OPEN",
+      "snapshot_still_current": true
+    },
+    {
+      "id": "SH-MAP-SAC-018",
+      "artifacts": {
+        "pdf": "da75f1737e57418da3bcac0c6453bfc58a837f4d3744047437cefb7b6db2f046",
+        "svg": "5a4a41715e24352ea8044ef3f1e2e614381af40be4ef7aef9fd1b3dd7efe6850",
+        "png": "49df66606c8988b09e53c5e1ec73e6c68498ddccb930ad4a5ab2f2719f3f94b1"
+      },
+      "pdf_pages": 1,
+      "page_rect": [
+        0.0,
+        0.0,
+        1200.0,
+        750.0
+      ],
+      "text_beyond_footer": [
+        "Concept fit-out for the\nintegrated campus option; not\nevidence that this floor\ncurrently exists."
+      ],
+      "svg_xml_parse": "{http://www.w3.org/2000/svg}svg",
+      "png_decoded_size": [
+        1600,
+        1000
+      ],
+      "svg_raster_matches_png": true,
+      "manual_pdf_visual_review": "REVIEWED_1600x1000_FINDINGS_OPEN",
+      "snapshot_still_current": true
+    },
+    {
+      "id": "SH-MAP-SAC-019",
+      "artifacts": {
+        "pdf": "7ec04a6bfb7f89fa9bf778f69e350e614ad35416298de879996cc858fbd59929",
+        "svg": "b599e10e9e0f747218fd3fce5960f8d9826d3f5afa2419234e27a712944de108",
+        "png": "a9ff95b0ab1cad251fa1a0420929d4c1476332714f3cb957bdcfeb7399d7a598"
+      },
+      "pdf_pages": 1,
+      "page_rect": [
+        0.0,
+        0.0,
+        1200.0,
+        750.0
+      ],
+      "text_beyond_footer": [
+        "Concept fit-out for the\nintegrated campus option; not\nevidence that this floor\ncurrently exists."
+      ],
+      "svg_xml_parse": "{http://www.w3.org/2000/svg}svg",
+      "png_decoded_size": [
+        1600,
+        1000
+      ],
+      "svg_raster_matches_png": true,
+      "manual_pdf_visual_review": "REVIEWED_1600x1000_FINDINGS_OPEN",
+      "snapshot_still_current": true
+    },
+    {
+      "id": "SH-MAP-SAC-020",
+      "artifacts": {
+        "pdf": "a84ae36e1c53584c4755361769230bfbf0a973f230b11eaa4adce5331f9cfad7",
+        "svg": "4a9ca02b9add38fa41c9913b3c148a7a6d9fbfc123f2fe08b1f4cc2ca7dfc8d5",
+        "png": "0facd10363b71816e828945eb38b3ebfde84a248fefe0f1aae689935346d7778"
+      },
+      "pdf_pages": 1,
+      "page_rect": [
+        0.0,
+        0.0,
+        1200.0,
+        750.0
+      ],
+      "text_beyond_footer": [],
+      "svg_xml_parse": "{http://www.w3.org/2000/svg}svg",
+      "png_decoded_size": [
+        1600,
+        1000
+      ],
+      "svg_raster_matches_png": true,
+      "manual_pdf_visual_review": "REVIEWED_1600x1000_FINDINGS_OPEN",
+      "snapshot_still_current": true
+    },
+    {
+      "id": "SH-MAP-SAC-021",
+      "artifacts": {
+        "pdf": "3f7e30b144893d03d0c8d87d794974a17bdc49cdaf9689e81d64d6e534d2df4d",
+        "svg": "4b06ef92ff81594b4013a0b80e1b047bcece07edb308663cffbd7f87b104a6dc",
+        "png": "88184ddc751dce62dce1967ff03979956a0debf4052bfcf3f8c26ef7c138a355"
+      },
+      "pdf_pages": 1,
+      "page_rect": [
+        0.0,
+        0.0,
+        1200.0,
+        750.0
+      ],
+      "text_beyond_footer": [
+        "Concept fit-out for the\nintegrated campus option; not\nevidence that this floor\ncurrently exists."
+      ],
+      "svg_xml_parse": "{http://www.w3.org/2000/svg}svg",
+      "png_decoded_size": [
+        1600,
+        1000
+      ],
+      "svg_raster_matches_png": true,
+      "manual_pdf_visual_review": "REVIEWED_1600x1000_FINDINGS_OPEN",
+      "snapshot_still_current": true
+    }
+  ],
+  "findings": [
+    {
+      "id": "SAC-QA-001",
+      "category": "layout",
+      "scope": "SH-MAP-SAC-004/005/007/008/009/011/012/013/015/016/018/019/021",
+      "observation": "Floor sidebar STATUS extends across footer boundary; worst case ESS future shell reaches near bottom source line.",
+      "required_followup": "Condense notes or increase usable sidebar width; assert text bounds above footer.",
+      "status": "OPEN_AT_REVIEWED_SNAPSHOT"
+    },
+    {
+      "id": "SAC-QA-002",
+      "category": "layout",
+      "scope": "SH-MAP-SAC-002",
+      "observation": "Stormwater rectangle occludes Central pedestrian court label; arrival polyline obscures public forecourt label.",
+      "required_followup": "Separate polygons/labels or place label on unobstructed portion; render labels after paths.",
+      "status": "OPEN_AT_REVIEWED_SNAPSHOT"
+    },
+    {
+      "id": "SAC-QA-003",
+      "category": "access",
+      "scope": "SH-MAP-SAC-002",
+      "observation": "Pedestrian spine does not branch to Governance/ESS/Education; controlled J2 entry ends without connection to campus route. Fire service loop lacks named access legend and widths.",
+      "required_followup": "Add connected pedestrian paths, controlled handoff and fire/service route legend and concept widths, with turn/approval limitations.",
+      "status": "OPEN_AT_REVIEWED_SNAPSHOT"
+    },
+    {
+      "id": "SAC-QA-004",
+      "category": "access",
+      "scope": "All 13 floor sheets",
+      "observation": "Central corridor abuts solid stair-core boundaries. No corridor-to-core door openings or ground-floor external entrances/exits depicted.",
+      "required_followup": "Show actual schematic door gaps and continuous egress paths to protected stairs/external discharge, tied to site entrances.",
+      "status": "OPEN_AT_REVIEWED_SNAPSHOT"
+    },
+    {
+      "id": "SAC-QA-005",
+      "category": "residential",
+      "scope": "SH-MAP-SAC-017/018/019",
+      "observation": "Residential floors show planned peak zero although each has 24 beds. Zero describes education-event room allocation, not residential maximum concurrency.",
+      "required_followup": "Separate event attendance allocation from maximum/nighttime residential occupancy; never sum floor maxima across disjoint scenarios as campus population.",
+      "status": "OPEN_AT_REVIEWED_SNAPSHOT"
+    },
+    {
+      "id": "SAC-QA-006",
+      "category": "residential",
+      "scope": "SH-MAP-SAC-018/019",
+      "observation": "Six undivided 4-bed rectangles per floor are labeled guest rooms 01\u201324 etc; individual private rooms, doors and bathroom provision absent.",
+      "required_followup": "Subdivide guest suites into individually accessed sleeping rooms and shared/private wet provision; identify accessible planning rooms and support space.",
+      "status": "OPEN_AT_REVIEWED_SNAPSHOT"
+    },
+    {
+      "id": "SAC-QA-007",
+      "category": "program",
+      "scope": "SH-MAP-SAC-020/021",
+      "observation": "Single-storey Campus Services carries two large stairs and a lift; half its 540m\u00b2 gross is generic core/service. Receiving/equipment loading access not depicted.",
+      "required_followup": "Use a one-storey service-specific access/core arrangement and direct receiving/service doors.",
+      "status": "OPEN_AT_REVIEWED_SNAPSHOT"
+    },
+    {
+      "id": "SAC-QA-008",
+      "category": "program",
+      "scope": "All office/training floors",
+      "observation": "Identical eight-bay layouts under-specify actual work: 94.5m\u00b2 CEO office, identical 20-seat Board bay, and 110.25m\u00b2 three-desk J2 areas. Classroom/meeting capacity has no corresponding furniture symbols; private interview suites remain undivided.",
+      "required_followup": "Use varied room/suite areas and meaningful subdivisions; show classroom/meeting layout and rounded area assumptions. Retain explicit schematic status.",
+      "status": "OPEN_AT_REVIEWED_SNAPSHOT"
+    },
+    {
+      "id": "SAC-QA-009",
+      "category": "data",
+      "scope": "geospatial/facilities/source/campus.json + population REGISTER",
+      "observation": "Initial model has numeric campus horizons but no per-floor 2031/2036 bridge in visible plans; workers/J2 attendance and allocated desks are not tied by stable function IDs in original sheet source.",
+      "required_followup": "Join campus function/capacity/attendance assumptions into authoritative population bridge, distinguish actual unknowns and forecast seats/positions, and reconcile across horizons.",
+      "status": "OPEN_AT_REVIEWED_SNAPSHOT"
+    },
+    {
+      "id": "SAC-QA-010",
+      "category": "coverage",
+      "scope": "Initial 20-sheet package",
+      "observation": "No separate campus context/phasing sheet yet; master notes give capacity years but no structured temporal schedule visualization, loading-yard/utility/pedestrian legend incomplete.",
+      "required_followup": "Finish context/status/phasing presentation from structured data and integrate index/atlas/manifests before closeout.",
+      "status": "OPEN_AT_REVIEWED_SNAPSHOT"
+    },
+    {
+      "id": "SAC-QA-011",
+      "category": "access_classification",
+      "scope": "B01 reception; B04 teaching staff/control; B05 lounge",
+      "observation": "Initial Education room defaults expose faculty, exercise control, case/curriculum and learning operations as public. Governance reception/waiting is staff; residential lounge is staff. These classifications do not yet express intended public/checkpoint/back-of-house boundaries.",
+      "required_followup": "Separate public waiting from staff checkpoint; classify Education operational areas as staff/controlled and resident commons as residential; display consistent legend.",
+      "status": "OPEN_AT_REVIEWED_SNAPSHOT"
+    }
+  ],
+  "recheck_rule": "Main is editing source/renderer concurrently. Later bytes may already address findings; only a new hash-bound visual review can mark them resolved. This draft cannot be cited as final visual QA."
+}

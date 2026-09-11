@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/tmp/sable-facility-validation/geospatial/scripts/validate_qgis.py", line 13, in <module>
+    from qgis.core import QgsApplication, QgsProject, Qgis
+ModuleNotFoundError: No module named 'qgis'

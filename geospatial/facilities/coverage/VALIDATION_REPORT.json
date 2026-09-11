@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "errors": [],
+  "counts": {
+    "catalog_objects": 178,
+    "service_components": 49,
+    "runtime_sites": 3,
+    "census_appearances": 896,
+    "coverage_records": 586,
+    "classes": {
+      "1": 2,
+      "2": 16,
+      "3": 6,
+      "4": 62,
+      "5": 19,
+      "6": 437,
+      "7": 5,
+      "8": 39
+    }
+  }
+}

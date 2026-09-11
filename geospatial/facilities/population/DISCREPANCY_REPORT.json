@@ -1,0 +1,25 @@
+{
+  "record_id": "SH-FAC-POPULATION-001",
+  "status": "PASS",
+  "errors": [],
+  "totals": {
+    "person_display_records": 54,
+    "unique_display_people": 52,
+    "current_named_employees": 44,
+    "current_named_nonemployee_directors": 7,
+    "current_named_people": 51,
+    "former_display_people": 1,
+    "excluded_register_people": 16,
+    "actual_company_headcount": null,
+    "actual_company_peak_attendance": null,
+    "actual_company_seats": null
+  },
+  "checks": [
+    "identity deduplication",
+    "J2 horizontal and vertical rollups",
+    "industrial hierarchy",
+    "conditional forecast isolation",
+    "source checksums",
+    "unknown actual measures preserved"
+  ]
+}

@@ -1,0 +1,416 @@
+{
+  "query": "floor.?plan|building|campus|facility|warehouse|working base|colocation|historical.*office",
+  "scope": "Current canon, structured records, business-line/J2/governance sources, enterprise, industrial/source and geographic source catalog; preserved canon_snapshot excluded to avoid duplicate former canon.",
+  "files": [
+    {
+      "path": "docs/business-lines/AMERICAN_RESOURCE_UTILITY.md",
+      "sha256": "d5145fa26378aed21edbe97b6b632a76a75dd301a076db32fd089f41be3a2d12"
+    },
+    {
+      "path": "docs/business-lines/PROJECT_CRADLE.md",
+      "sha256": "7bc25bd32bb5e0bdf81dc01bb341ca5a488801f5348a829a0fffc835ea8b8fca"
+    },
+    {
+      "path": "docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md",
+      "sha256": "25e484d7fbc2c83a37f0e7ae7fe20ff741cde176bd0c2ba7be742fa7fb3e2624"
+    },
+    {
+      "path": "docs/canon/CRADLE_CLOSEOUT_2026-09-06.md",
+      "sha256": "b49eaf96f1582f11886e9543b1543013f47acc99aa5533082d73717ab523e8aa"
+    },
+    {
+      "path": "docs/canon/DECISION_REGISTER.md",
+      "sha256": "070dc6e6dad18b8e4c18fa530366b9fc8a396986371aee8a0e16ba732e6e1de4"
+    },
+    {
+      "path": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-03.md",
+      "sha256": "9fd150d5b6ae1517fe3db17ddcf834d802bdd3908662806c319e18b9b4ce5877"
+    },
+    {
+      "path": "docs/canon/DECISION_REGISTER_v0.3.1.md",
+      "sha256": "e229636cdeef0d357fb0caa91b269a843f37ecf2cdd2140e67ffeedbe023c380"
+    },
+    {
+      "path": "docs/canon/INDUSTRIAL_CLOSEOUT_2026-09-05.md",
+      "sha256": "0b21f22c2a8ffe55fa4e43898834ddc38389e42efe2e9c11ff48c7418dad8be7"
+    },
+    {
+      "path": "docs/canon/INDUSTRIAL_PLANNING_SUCCESSOR_2026-09-06.md",
+      "sha256": "7426f5b49ee3a41077382e199ea876f152b0baff79ced1d40cd3cf31516213e3"
+    },
+    {
+      "path": "docs/canon/J2_LEADERSHIP_APPOINTMENTS_2026-09-10.md",
+      "sha256": "05ee1d4bbcad3ff2de9f623de0b57373acaaf611c0b161664a9f3e36b1066509"
+    },
+    {
+      "path": "docs/canon/QUALITY_FOREST_COMMUNICATIONS_VISUAL_IDENTITY_2026-09-07.md",
+      "sha256": "c92a701b65be7c728bddac5c55ab10e0a4aef11e64a5026c60b519109323f3b0"
+    },
+    {
+      "path": "docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05.md",
+      "sha256": "6e90bdb9280a562e80e04561af45fabf1856a18b55ea48541f292a42711171d5"
+    },
+    {
+      "path": "docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05_R2.md",
+      "sha256": "89eae89e18db1d3cf3ab4f7bf7f54fa57efabb84c57127717b731572048d563b"
+    },
+    {
+      "path": "docs/canon/SABLE_HARBOR_CANONICAL_ARCHITECTURE_HANDOVER.md",
+      "sha256": "ef0fe5602ab41f1de0a0c29146476dbb406cb56e28407652f7d00f357e3fc636"
+    },
+    {
+      "path": "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.2.md",
+      "sha256": "db29a8398a29b53e2d6e803e6e49528bdd2a0d9bc4197e34cc28fa194780c5f6"
+    },
+    {
+      "path": "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md",
+      "sha256": "5bc15670b1d7c3c98d754329a0fad44bd4a82ea7db977bfa064b5db80062b2f7"
+    },
+    {
+      "path": "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md",
+      "sha256": "e1b0d123eed483f91240362f335d62210ea67da49b27b21bced7264e36c711cc"
+    },
+    {
+      "path": "docs/canon/THIRD_PARTY_SERVICES_SOURCING_DECISIONS_2026-09-09.md",
+      "sha256": "53dc3c69be68cd66fe9fdd30048f8229416fd6bd6660272dfeae20f802f986d4"
+    },
+    {
+      "path": "docs/canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md",
+      "sha256": "3289ad8ce5d20d767b38f1ad3ed804feeb80300c59d7e96653bfe68f1eaa24b6"
+    },
+    {
+      "path": "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
+      "sha256": "40b45496c66d6e7e5eb5dcd118c3ba37feb710744760c3617acbddcd899e466f"
+    },
+    {
+      "path": "docs/j2/EDUCATION.md",
+      "sha256": "a86400a7174c3b9de3834eba66d4ff218a502e646233ddb6bf3736a9bd33cc8e"
+    },
+    {
+      "path": "docs/j2/JUNCTION_ADVISORY_GROUP.md",
+      "sha256": "c38f697044871d7be274eb2947f89b04f19c2221d045d551b97d06c237107921"
+    },
+    {
+      "path": "docs/structured/j2_leadership_2026-09-10.json",
+      "sha256": "c0efd4edf47ab7f5da4a0e3129cddc93af89035252b5a8ea16facd660b6cba54"
+    },
+    {
+      "path": "enterprise/business/export_schema.json",
+      "sha256": "6cf476082b264273060187d84b97f06227cb849075c139465b955176c9323782"
+    },
+    {
+      "path": "enterprise/business/source/policy.json",
+      "sha256": "60cf3dbb7401a798b427a34d9ce4ac807bab91fd6e289e88f041e70f2127ab90"
+    },
+    {
+      "path": "enterprise/operations/docs/management.md",
+      "sha256": "dde57353a66314163d791dc872c6299a754e2533884c039a14c72a4c5a954145"
+    },
+    {
+      "path": "enterprise/operations/docs/research.md",
+      "sha256": "f6a7af1361ad4bfc6a0c0a9c4c6c51182db3d66b7782eafa1ab9089b0e6f47d2"
+    },
+    {
+      "path": "enterprise/operations/export_schema.json",
+      "sha256": "38209cbe5318e759eac4e0967865c5dcb2ec291a6403986729fd81404a04d1ff"
+    },
+    {
+      "path": "enterprise/operations/export_scope.json",
+      "sha256": "d4ab2050fd745ce565382b206eb8141047878c21df84bcbbb4128fc4e5bd5618"
+    },
+    {
+      "path": "enterprise/operations/source/management.json",
+      "sha256": "742ebf7aea082eeb07ac84c5ce603955a703fb6137c7c81682d77b5b2538d6b1"
+    },
+    {
+      "path": "enterprise/operations/source/research.json",
+      "sha256": "e7c50fa75ba0bc3821e5ccd0a86d9acd3344d8e7cd4d71a6ec57488823147612"
+    },
+    {
+      "path": "enterprise/services/README.md",
+      "sha256": "8f29e445c3ca88b073cf6433dbe470ac3b55e74e1992331e0b7ee217829c8e76"
+    },
+    {
+      "path": "enterprise/services/docs/OPERATING_ASSUMPTIONS_AND_GATES.md",
+      "sha256": "824917b0321e6e571adcf747a87cc8709989c07c5731bbff44fc059598547ac6"
+    },
+    {
+      "path": "enterprise/services/generated/REPORT.md",
+      "sha256": "6c1a9bfc89f5e091831a71ad2cfd5587a287fff8c92b7bbdd77d1ad1284305b8"
+    },
+    {
+      "path": "enterprise/services/source/components.json",
+      "sha256": "0d5e1fefa3e3286cae725a4b04241725fc2590dff4ccbdc7fde41a24740a0cd2"
+    },
+    {
+      "path": "enterprise/services/source/counterparties.json",
+      "sha256": "e2fb83a1a66075dc5a0efd46f642496b1e995b83f66f263accabfe8b5fa37a6a"
+    },
+    {
+      "path": "enterprise/services/source/economics.json",
+      "sha256": "2e92a787d3183fa645834530eef8c42e4bf6e5d1eb871d47008abb9c35731e2a"
+    },
+    {
+      "path": "enterprise/services/source/provenance.json",
+      "sha256": "bc7a3cbb35b977998ad1ab6dc9bd9e06e1ab14d20042bc2a88591c87fa334c82"
+    },
+    {
+      "path": "geospatial/sources/ARU_BST_BRANCH_BASELINE.json",
+      "sha256": "a4b80e7776b0f3c0bae1283ac7fc176e937c59220b8b853706586247140a652a"
+    },
+    {
+      "path": "geospatial/sources/GOVERNING_CANON_ADDENDUM_2026-09-05.md",
+      "sha256": "5ec4448308e0e19fdf11dc5307b24380b19e6ab51482e11bd41883aff703f150"
+    },
+    {
+      "path": "geospatial/sources/MASTER_EXECUTION_MANDATE.md",
+      "sha256": "d49a4f30625aae0220b6d252c9f75c4e746099273c5a2dee2800caf934a1f991"
+    },
+    {
+      "path": "geospatial/sources/catalog.json",
+      "sha256": "fe1c43a23aab01ec82c85406edee98bb7efa8e3050e004745585ff03e46a2215"
+    },
+    {
+      "path": "industrial/source/finance.json",
+      "sha256": "0d4461abfcdb138da36db503ff0cfea7c47ea7fd7109494126514225fd43e38c"
+    },
+    {
+      "path": "industrial/source/operations.json",
+      "sha256": "e7488b55c1c963d102db66e7a7b6f1373a3d68a9f94b8f99b164092245713a3b"
+    },
+    {
+      "path": "industrial/source/participant_catalog.json",
+      "sha256": "573ab9ffb50aebdea15c182760458d33385f6798f13590aeb89eaef93566f2d9"
+    }
+  ],
+  "disposition": "Catalog is geographic identity authority. Organization and service censuses expose nonphysical and unlocated requirements. Additional controlling source review corrected Wallaby killed-project history and preserves Fairmont Bedford. Existing catalog retains external host and derivative image details; no unsupported new site identity allocated.",
+  "whole_repository_search": {
+    "query": "floor.?plan|building|campus|facility|warehouse|working base|colocation|historical.*office",
+    "glob": "*.md, *.json, *.csv, *.py; facility workline derivatives excluded",
+    "matched_file_count": 221,
+    "paths": [
+      "README.md",
+      "assets/headquarters/CANONICAL_HEADQUARTERS_IMAGE_MANIFEST.md",
+      "blackridge/config/acceptance/BLACKRIDGE_CLOSEOUT_ACCEPTANCE_REGISTER_v1.0.json",
+      "blackridge/data/public/manifests/DATA_MANIFEST.json",
+      "blackridge/docs/data_dictionary/BLACKRIDGE_DATA_DICTIONARY.md",
+      "blackridge/docs/governance/BLACKRIDGE_ULTIMATE_SANDBOX_CLOSEOUT_MASTER_PLAN_v1.0.md",
+      "blackridge/reports/DATA_PROFILE.json",
+      "blackridge/reports/DATA_PROFILE.md",
+      "blackridge/reports/VALIDATION_REPORT.json",
+      "blackridge/reports/final_validation_stdout.json",
+      "blackridge/reports/row_count_manifest.json",
+      "blackridge/schemas/exports/blackridge_data_dictionary_v0.1.0.csv",
+      "blackridge/src/blackridge/cli.py",
+      "db/migrations/versions/0004_frozen_explicit_baseline.py",
+      "db/migrations/versions/0007_generated_fact_ownership.py",
+      "db/migrations/versions/0010_run_scoped_natural_keys.py",
+      "db/migrations/versions/0011_generation_integrity_constraints.py",
+      "db/migrations/versions/0015_financial_integrity.py",
+      "docs/advisory/ATLAS_MERIDIAN_COMMERCIAL_PRODUCT_STANDARD.md",
+      "docs/advisory/OPERATING_MODEL.md",
+      "docs/business-lines/AMERICAN_RESOURCE_UTILITY.md",
+      "docs/business-lines/PROJECT_CRADLE.md",
+      "docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md",
+      "docs/canon/CRADLE_CLOSEOUT_2026-09-06.md",
+      "docs/canon/DECISION_REGISTER.md",
+      "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-03.md",
+      "docs/canon/DECISION_REGISTER_v0.3.1.md",
+      "docs/canon/INDUSTRIAL_CLOSEOUT_2026-09-05.md",
+      "docs/canon/INDUSTRIAL_PLANNING_SUCCESSOR_2026-09-06.md",
+      "docs/canon/J2_LEADERSHIP_APPOINTMENTS_2026-09-10.md",
+      "docs/canon/QUALITY_FOREST_COMMUNICATIONS_VISUAL_IDENTITY_2026-09-07.md",
+      "docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05.md",
+      "docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05_R2.md",
+      "docs/canon/SABLE_HARBOR_CANONICAL_ARCHITECTURE_HANDOVER.md",
+      "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.2.md",
+      "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md",
+      "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md",
+      "docs/canon/THIRD_PARTY_SERVICES_SOURCING_DECISIONS_2026-09-09.md",
+      "docs/canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md",
+      "docs/controls/CCF_CONTROL_RECORD_SCHEMA_v0.1.md",
+      "docs/finance/LEGACY_OPERATING_MODEL_RECONCILIATION.md",
+      "docs/finance/OVERNIGHT_RUN_STATE.md",
+      "docs/finance/QUANTITATIVE_BASELINE_RECONCILIATION.md",
+      "docs/finance/WILLOW_KLEIN_FINANCE_AND_CORPORATE_MODEL_2026-09-06.md",
+      "docs/finance/WORKLOG.md",
+      "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
+      "docs/handoffs/BLACKRIDGE_COMPLETE_ONE_FILE_CODEX_EXECUTION_PACKAGE_v1.1.0.md",
+      "docs/handoffs/industrial_r2/SABLE_HARBOR_ARU_RED_WASH_PALE_SUN_CODEX_HANDOFF_FULL_STATE.md",
+      "docs/handoffs/industrial_r2/source_reconciliation/ARU_BST_RECONCILIATION_REPORT_2026-09-05.md",
+      "docs/handoffs/industrial_r2/source_reconciliation/ARU_BST_RECONCILIATION_REPORT_v1.0.md",
+      "docs/internal/COVERAGE_AUDIT_PHASE2.md",
+      "docs/internal/chat_canon_ledger_j2_alexandria.json",
+      "docs/internal/development/BUSINESS_FINANCE_DELIVERY_2026-09-09.md",
+      "docs/internal/development/REPOSITORY_DEVELOPMENT_REVIEW_2026-09-09.md",
+      "docs/internal/development/THIRD_PARTY_SERVICES_ASSESSMENT_2026-09-09.md",
+      "docs/internal/development/THIRD_PARTY_SERVICES_BUILD_PLAN_2026-09-09.md",
+      "docs/internal/development/THIRD_PARTY_SERVICES_RECONCILIATION_2026-09-09.md",
+      "docs/internal/institutional_catalog.json",
+      "docs/internal/validation/J2_LEADERSHIP_2026-09-10.md",
+      "docs/j2/EDUCATION.md",
+      "docs/j2/JUNCTION_ADVISORY_GROUP.md",
+      "docs/legal/PRELIMINARY_NAME_AND_MARK_SCREEN.md",
+      "docs/organization/CANON_TRACEABILITY_MATRIX.md",
+      "docs/organization/DISPLAY_INVENTORY.md",
+      "docs/organization/ORGANIZATION_MAP_REGISTER.json",
+      "docs/organization/PALE_SUN_AND_RED_WASH.md",
+      "docs/organization/UNRESOLVED_AND_EXCLUDED.md",
+      "docs/organization/WILLOW_KLEIN_CORPORATE_RECORD.md",
+      "docs/organization/charts/aru-facilities.md",
+      "docs/organization/charts/aru-services.md",
+      "docs/organization/charts/business-lines.md",
+      "docs/organization/charts/corporate-education-programs.md",
+      "docs/organization/charts/corporate-headquarters.md",
+      "docs/organization/charts/corporate-j2.md",
+      "docs/organization/charts/industrial-ownership.md",
+      "docs/organization/charts/people-aru-operations.md",
+      "docs/organization/charts/research-history.md",
+      "docs/organization/history/v0.3.0/CANON_TRACEABILITY_MATRIX.md",
+      "docs/organization/history/v1.0.0/chartbook.json",
+      "docs/organization/source/chartbook.json",
+      "docs/structured/j2_leadership_2026-09-10.json",
+      "enterprise/business/build.py",
+      "enterprise/business/export_schema.json",
+      "enterprise/business/exports.py",
+      "enterprise/business/model.py",
+      "enterprise/business/source/policy.json",
+      "enterprise/operations/build.py",
+      "enterprise/operations/docs/management.md",
+      "enterprise/operations/docs/research.md",
+      "enterprise/operations/export_schema.json",
+      "enterprise/operations/export_scope.json",
+      "enterprise/operations/research.py",
+      "enterprise/operations/source/management.json",
+      "enterprise/operations/source/research.json",
+      "enterprise/operations/workforce.py",
+      "enterprise/services/README.md",
+      "enterprise/services/docs/OPERATING_ASSUMPTIONS_AND_GATES.md",
+      "enterprise/services/generated/REPORT.md",
+      "enterprise/services/generated/comparison.csv",
+      "enterprise/services/model.py",
+      "enterprise/services/source/components.json",
+      "enterprise/services/source/counterparties.json",
+      "enterprise/services/source/economics.json",
+      "enterprise/services/source/provenance.json",
+      "enterprise/services/tests/test_services.py",
+      "geospatial/BUILD_OUTPUT_EXPECTATIONS.json",
+      "geospatial/docs/CARTOGRAPHIC_STANDARD.md",
+      "geospatial/docs/DATA_MODEL.md",
+      "geospatial/docs/NEXT_CHAT_HANDOFF.md",
+      "geospatial/docs/OPERATING_MODEL_RECONCILIATION_20260906.md",
+      "geospatial/docs/PROGRAM_CLOSEOUT_MATRIX.md",
+      "geospatial/docs/SITE_SELECTION_EVIDENCE.md",
+      "geospatial/docs/TEMPORAL_MODEL.md",
+      "geospatial/history/PR_SOURCE_INVENTORY.json",
+      "geospatial/history/rc3/docs__CANON_CONFLICT_EVIDENCE.md",
+      "geospatial/history/rc3/docs__CARTOGRAPHIC_STANDARD.md",
+      "geospatial/history/rc3/docs__DATA_MODEL.md",
+      "geospatial/history/rc3/docs__DEFINITION_OF_DONE.md",
+      "geospatial/history/rc3/docs__NEXT_CHAT_HANDOFF.md",
+      "geospatial/history/rc3/docs__OPERATING_MODEL_RECONCILIATION_20260906.md",
+      "geospatial/history/rc3/docs__PROVENANCE_AND_REPRODUCIBILITY.md",
+      "geospatial/history/rc3/docs__SITE_SELECTION_EVIDENCE.md",
+      "geospatial/history/rc3/docs__TEMPORAL_MODEL.md",
+      "geospatial/history/rc3/registers__GEOGRAPHIC_CONFLICTS.md",
+      "geospatial/history/rc3/registers__GEOGRAPHIC_DECISION_REGISTER_v0.1.md",
+      "geospatial/history/rc3/registers__OPEN_GEOGRAPHIC_QUESTIONS_v0.1.md",
+      "geospatial/history/rc3/reports__OPEN_CONFLICTS.md",
+      "geospatial/history/rc3/sources__catalog.json",
+      "geospatial/registers/DISCOVERY_STATEMENTS.csv",
+      "geospatial/registers/GEOGRAPHIC_CENSUS_v0.1.csv",
+      "geospatial/registers/GEOGRAPHIC_DECISION_REGISTER_v0.1.md",
+      "geospatial/registers/OPEN_GEOGRAPHIC_QUESTIONS_v0.1.md",
+      "geospatial/registers/PROVENANCE_COVERAGE.csv",
+      "geospatial/registers/SITE_REGISTER.csv",
+      "geospatial/releases/MANIFEST_rc3.json",
+      "geospatial/releases/RELEASE_NOTES_rc4.md",
+      "geospatial/reports/OPEN_CONFLICTS.md",
+      "geospatial/reports/VISUAL_QA.md",
+      "geospatial/scripts/build_geopackage.py",
+      "geospatial/scripts/census.py",
+      "geospatial/scripts/package_release.py",
+      "geospatial/scripts/render_maps.py",
+      "geospatial/scripts/sync_industrial.py",
+      "geospatial/scripts/validate_reconciliation.py",
+      "geospatial/sources/ARU_BST_BRANCH_BASELINE.json",
+      "geospatial/sources/GOVERNING_CANON_ADDENDUM_2026-09-05.md",
+      "geospatial/sources/MASTER_EXECUTION_MANDATE.md",
+      "geospatial/sources/canon_snapshot/docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md",
+      "geospatial/sources/canon_snapshot/docs/canon/CRADLE_CLOSEOUT_2026-09-06.md",
+      "geospatial/sources/canon_snapshot/docs/canon/DECISION_REGISTER.md",
+      "geospatial/sources/canon_snapshot/docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-03.md",
+      "geospatial/sources/canon_snapshot/docs/canon/INDUSTRIAL_CLOSEOUT_2026-09-05.md",
+      "geospatial/sources/canon_snapshot/docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05.md",
+      "geospatial/sources/canon_snapshot/docs/canon/SABLE_HARBOR_CANONICAL_ARCHITECTURE_HANDOVER.md",
+      "geospatial/sources/canon_snapshot/docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md",
+      "geospatial/sources/canon_snapshot/docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md",
+      "geospatial/sources/canon_snapshot/docs/canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md",
+      "geospatial/sources/canon_snapshot/docs/j2/EDUCATION.md",
+      "geospatial/sources/canon_snapshot/docs/legal/PRELIMINARY_NAME_AND_MARK_SCREEN.md",
+      "geospatial/sources/canon_snapshot/industrial/operations/GEOGRAPHY_AND_ENGINEERING.md",
+      "geospatial/sources/canon_snapshot/industrial/source/operations.json",
+      "geospatial/sources/catalog.json",
+      "industrial/corporate/LEADERSHIP_AND_AUTHORITY.md",
+      "industrial/corporate/LEGAL_STRUCTURE_AND_FORMATION.md",
+      "industrial/finance/DRIVERS_AND_COST_SUPPORT.md",
+      "industrial/finance/TRANSACTION_ACCOUNTING.md",
+      "industrial/operations/GEOGRAPHY_AND_ENGINEERING.md",
+      "industrial/operations/LABOR_SAFETY_AND_CONTROLS.md",
+      "industrial/operations/OPERATING_AND_SERVICE_PLAN.md",
+      "industrial/operations/RATE_AND_CAPITAL_MEMORANDUM.md",
+      "industrial/operations/README.md",
+      "industrial/pale_sun/01_VILANDER_BIOGRAPHY.md",
+      "industrial/pale_sun/04_ALEXANDRIA_AND_ESCALATION_RECORD.md",
+      "industrial/pale_sun/05_FALSE_START_CEDAR_JUNCTION.md",
+      "industrial/pale_sun/08_FOUNDING_AND_APPOINTMENT.md",
+      "industrial/pale_sun/10_FEDERAL_AND_DOWNSTREAM_BRIEF.md",
+      "industrial/planning/README.md",
+      "industrial/planning/build.py",
+      "industrial/planning/docs/CAPITAL_INVESTMENT_REVIEW.md",
+      "industrial/planning/docs/OPERATING_SCENARIOS.md",
+      "industrial/planning/docs/TRANSACTION_EVIDENCE.md",
+      "industrial/planning/forecast.py",
+      "industrial/planning/operating_model.py",
+      "industrial/planning/source/capital_options.json",
+      "industrial/planning/source/forecast.json",
+      "industrial/planning/source/operating_plan.json",
+      "industrial/planning/source/participant_catalog.json",
+      "industrial/planning/source/preservation.json",
+      "industrial/planning/source/transaction_policy.json",
+      "industrial/planning/tests/test_transactions.py",
+      "industrial/source/finance.json",
+      "industrial/source/operations.json",
+      "industrial/source/participant_catalog.json",
+      "industrial/tests/test_operations.py",
+      "industrial/tools/build_financials.py",
+      "industrial/tools/build_operations.py",
+      "industrial/transaction/03_ARU_DILIGENCE_MEMORANDUM.md",
+      "red_wash/README.md",
+      "red_wash/RED_WASH_CASEBOOK.md",
+      "red_wash/TRANSACTION_OPERATING_RECORD.md",
+      "red_wash/agreements/TRANSACTION_AND_COMMERCIAL_INSTRUMENTS.md",
+      "red_wash/docs/03_MINE_PLAN_AND_OPERATING_SYSTEM.md",
+      "red_wash/docs/04_PROCESSING_METALLURGY_AND_PRODUCT.md",
+      "red_wash/history/v1.0.0/documents/RED_WASH_CASEBOOK.md",
+      "red_wash/history/v1.0.0/documents/TRANSACTION_OPERATING_RECORD.md",
+      "red_wash/history/v1.0.0/documents/agreements/TRANSACTION_AND_COMMERCIAL_INSTRUMENTS.md",
+      "red_wash/history/v1.0.0/documents/docs/03_MINE_PLAN_AND_OPERATING_SYSTEM.md",
+      "red_wash/history/v1.0.0/documents/docs/04_PROCESSING_METALLURGY_AND_PRODUCT.md",
+      "red_wash/history/v1.0.0/documents/regulatory/REGULATORY_PERMIT_AND_ENVIRONMENTAL_FILE.md",
+      "red_wash/history/v1.0.0/source/aru_bst_bridge.json",
+      "red_wash/history/v1.0.0/source/core_operating_data.json",
+      "red_wash/logistics/ARU_BST_INTERFACE_AND_DEPENDENCY_RECORD.md",
+      "red_wash/regulatory/REGULATORY_PERMIT_AND_ENVIRONMENTAL_FILE.md",
+      "red_wash/source/aru_bst_bridge.json",
+      "red_wash/source/core_operating_data.json",
+      "red_wash/tools/build_red_wash_package.py",
+      "src/sable_harbor/accounting/validation.py",
+      "src/sable_harbor/operations/flows.py",
+      "src/sable_harbor/operations/models.py",
+      "src/sable_harbor/workbooks/suite.py",
+      "tests/reconciliation/test_statements_consolidation.py"
+    ],
+    "boundary": "Search includes historical, generated and third-party research matches. Search matches are discovery evidence, not promoted canon; current source censuses determine coverage."
+  }
+}

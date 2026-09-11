@@ -1,0 +1,117 @@
+{
+  "status": "FAIL_INITIAL_THREE_FLOOR_REVIEW",
+  "date": "2026-09-11",
+  "scope": "Three successors of approved floor images only; reviewed PNG originals individually at 3240x2304. No floor pass granted. Master gate remains separate.",
+  "artifacts": [
+    {
+      "map_id": "SH-MAP-SAC-025",
+      "reviewed_png_sha256": "4ffb98eeaa385a208fdedb7b005e5a2337cbc36950bc9dd6ba41781d1c40bed5",
+      "reference": "docs/facilities/references/sacramento-hq/r01-approved/02_Corporate_L02_Product_Draft.png",
+      "comparison": "geospatial/facilities/qa/R01_FLOOR_INITIAL_025_COMPARISON.png",
+      "comparison_sha256": "168849058765e00c51b59b6c30fc6ec9453888490483718758e9d2c5caff7d15"
+    },
+    {
+      "map_id": "SH-MAP-SAC-028",
+      "reviewed_png_sha256": "214a6d39d914897e85dae27c4b72929a25608cd2ef793e7b3c79f51fa086b663",
+      "reference": "docs/facilities/references/sacramento-hq/r01-approved/03_J2_L01_Contact_JAG_Draft.png",
+      "comparison": "geospatial/facilities/qa/R01_FLOOR_INITIAL_028_COMPARISON.png",
+      "comparison_sha256": "3d5504a8d4a510554c12ac4e0ef6e435222035afba1a631381baa3a819eaa685"
+    },
+    {
+      "map_id": "SH-MAP-SAC-031",
+      "reviewed_png_sha256": "a3c742bf0196fc52ee6a6d4ddc85974224abced1642c23eb041e3c0825dcfd06",
+      "reference": "docs/facilities/references/sacramento-hq/r01-approved/04_Education_L01_Teaching_Draft.png",
+      "comparison": "geospatial/facilities/qa/R01_FLOOR_INITIAL_031_COMPARISON.png",
+      "comparison_sha256": "f4513aec07c59fcbe8d4d88de0a4a879aff1329adad1b7a84c0d8a76ac955e33"
+    }
+  ],
+  "findings": [
+    {
+      "id": "R01-F01",
+      "sheets": "025/028",
+      "observation": "Meeting furniture collapses to lines in project/case/method rooms; tiny chair symbols.",
+      "correction": "Reserve furniture space independently of multiline labels; use original short headings and properly scaled rectangular tables.",
+      "status": "open"
+    },
+    {
+      "id": "R01-F02",
+      "sheets": "028",
+      "observation": "Head office desk not visible; Deputy desk appears inside ST-1; reception desk overlaps exterior south wall.",
+      "correction": "Render one-desk offices and two-desk reception within room bounds after fitting label blocks.",
+      "status": "open"
+    },
+    {
+      "id": "R01-F03",
+      "sheets": "025/028",
+      "observation": "Kit preparation/store and Support/AV/print/store labels cross narrow room boundaries.",
+      "correction": "Use short display headings with wrapped secondary descriptions and measured text bounds.",
+      "status": "open"
+    },
+    {
+      "id": "R01-F04",
+      "sheets": "028",
+      "observation": "Interview doors face staff circulation; visitor corridor lacks interview and reception connections visible in R01.",
+      "correction": "Restore southern interview doors, reception east opening and controlled reception north threshold.",
+      "status": "open"
+    },
+    {
+      "id": "R01-F05",
+      "sheets": "025",
+      "observation": "Upper project-room doors face staff corridor, leaving their labeled project lobby separated.",
+      "correction": "Restore room doors onto southern project lobby as original.",
+      "status": "open"
+    },
+    {
+      "id": "R01-F06",
+      "sheets": "028/031",
+      "observation": "Ground-floor exterior stair exits absent; C hall single central door replaces two separated double doors.",
+      "correction": "Restore original external stair openings and hall double-door locations with sourced widths.",
+      "status": "open"
+    },
+    {
+      "id": "R01-F07",
+      "sheets": "031",
+      "observation": "Kitchen blank; classroom tables use workstation monitors; reception loses waiting furniture.",
+      "correction": "Restore three kitchen counters, learning-table symbols and original reception furniture concept.",
+      "status": "open"
+    },
+    {
+      "id": "R01-F08",
+      "sheets": "025/031",
+      "observation": "Foundry benches use 4+4+2 groups instead of original 5x2; dining changes original 4+4+2 rectangular tables to 5x2 nearly-square tables.",
+      "correction": "Retain original balanced furniture arrangements and readable physical proportions.",
+      "status": "open"
+    },
+    {
+      "id": "R01-F09",
+      "sheets": "025/028/031",
+      "observation": "Specific design-note titles, business-specific legends, campus-entry/catering labels, JAG team labels and access marker lost.",
+      "correction": "Restore concise original functional captions while retaining correct successor status and occupancy explanation.",
+      "status": "open"
+    },
+    {
+      "id": "R01-F10",
+      "sheets": "025/028/031",
+      "observation": "Line/annotation fidelity: thinner external walls, no stair longitudinal line, horizontal depth dimensions; C ruler21ft vs approved28ft.",
+      "correction": "Match measured original drawing grammar. White focus/huddle rooms should remain white rather than grey.",
+      "status": "open"
+    }
+  ],
+  "passed": [
+    "Institutional paper/palette/header/footer and main drawing/sidebar hierarchy",
+    "Approved floor gross areas and main desk/capacity headlines retained",
+    "Actual occupancy distinguished from scenario workplaces and J2 authorized billets"
+  ],
+  "review_notes": "Original approved PNGs remain unchanged. Current rendered planning peaks112/68/128 are not compared as employee census. Source door coordinates require correction where public/staff access contradicts original.",
+  "source_correction": {
+    "commit": "d112a40",
+    "state": "SOURCE_CORRECTED_PENDING_RENDER_REVIEW",
+    "primary_room_doors_checked": 155,
+    "checks": [
+      "Every primary door lies on its room boundary",
+      "Every primary room.door matches a floor.doors entry",
+      "All room geometries and capacities, building footprints, floor gross areas and peaks preserved"
+    ],
+    "scope": "Source access topology, concise display fields and design-note/legend sources; renderer furniture corrections remain parent-owned. Residence core repartition is explicit modelled planning correction preserving combined520sqft."
+  }
+}

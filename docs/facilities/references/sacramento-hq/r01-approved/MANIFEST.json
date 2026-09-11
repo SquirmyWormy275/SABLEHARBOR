@@ -1,0 +1,282 @@
+{
+  "id": "SH-FAC-REF-SAC-R01",
+  "status": "APPROVED_VISUAL_REFERENCE",
+  "immutable": true,
+  "source_package": "SABLE_HARBOR_CODEX_CAMPUS_ATLAS_CLOSEOUT_R01.zip",
+  "source_package_sha256": "db0e5655b2f63fa17ce53ff4551310f8faad2145475e6356b2f51a75091194a7",
+  "authority": "Supplied addendum controls visual system and Sacramento composition; approval does not establish acquisition, construction or occupancy. Successor PDFs/atlas are not original approved R01 artifacts.",
+  "files": [
+    {
+      "filename": "01_Sacramento_Campus_Master_Draft.png",
+      "sha256": "23729f7e2b427e58820361363e4a47fbc6bbd3ce9774ef67932ecab7a50bfa47",
+      "bytes": 466117,
+      "status": "APPROVED_VISUAL_REFERENCE",
+      "approval_date": "2026-09-11",
+      "approval_source": "User-supplied corrected closeout package; Recover Office Work Status conversation, presentation approximately17:09UTC, approval approximately17:12UTC",
+      "successor_artifacts": [
+        {
+          "map_id": "SH-MAP-SAC-002",
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-002.svg",
+          "revision": "R02",
+          "relationship": "Derived planning/vector successor; not an original approved R01 artifact"
+        },
+        {
+          "map_id": "SH-MAP-SAC-022",
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-022.svg",
+          "revision": "R02",
+          "relationship": "Derived planning/vector successor; not an original approved R01 artifact"
+        },
+        {
+          "map_id": "SH-MAP-SAC-023",
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-023.svg",
+          "revision": "R02",
+          "relationship": "Derived planning/vector successor; not an original approved R01 artifact"
+        },
+        {
+          "map_id": "SH-MAP-SAC-024",
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-024.svg",
+          "revision": "R02",
+          "relationship": "Derived planning/vector successor; not an original approved R01 artifact"
+        },
+        {
+          "map_id": "SH-MAP-SAC-025",
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-025.svg",
+          "revision": "R02",
+          "relationship": "Derived planning/vector successor; not an original approved R01 artifact"
+        },
+        {
+          "map_id": "SH-MAP-SAC-026",
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-026.svg",
+          "revision": "R02",
+          "relationship": "Derived planning/vector successor; not an original approved R01 artifact"
+        },
+        {
+          "map_id": "SH-MAP-SAC-027",
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-027.svg",
+          "revision": "R02",
+          "relationship": "Derived planning/vector successor; not an original approved R01 artifact"
+        },
+        {
+          "map_id": "SH-MAP-SAC-028",
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-028.svg",
+          "revision": "R02",
+          "relationship": "Derived planning/vector successor; not an original approved R01 artifact"
+        },
+        {
+          "map_id": "SH-MAP-SAC-029",
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-029.svg",
+          "revision": "R02",
+          "relationship": "Derived planning/vector successor; not an original approved R01 artifact"
+        },
+        {
+          "map_id": "SH-MAP-SAC-030",
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-030.svg",
+          "revision": "R02",
+          "relationship": "Derived planning/vector successor; not an original approved R01 artifact"
+        },
+        {
+          "map_id": "SH-MAP-SAC-031",
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-031.svg",
+          "revision": "R02",
+          "relationship": "Derived planning/vector successor; not an original approved R01 artifact"
+        },
+        {
+          "map_id": "SH-MAP-SAC-032",
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-032.svg",
+          "revision": "R02",
+          "relationship": "Derived planning/vector successor; not an original approved R01 artifact"
+        },
+        {
+          "map_id": "SH-MAP-SAC-033",
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-033.svg",
+          "revision": "R02",
+          "relationship": "Derived planning/vector successor; not an original approved R01 artifact"
+        },
+        {
+          "map_id": "SH-MAP-SAC-034",
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-034.svg",
+          "revision": "R02",
+          "relationship": "Derived planning/vector successor; not an original approved R01 artifact"
+        },
+        {
+          "map_id": "SH-MAP-SAC-035",
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-035.svg",
+          "revision": "R02",
+          "relationship": "Derived planning/vector successor; not an original approved R01 artifact"
+        },
+        {
+          "map_id": "SH-MAP-SAC-036",
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-036.svg",
+          "revision": "R02",
+          "relationship": "Derived planning/vector successor; not an original approved R01 artifact"
+        }
+      ],
+      "dimensions_px": [
+        3240,
+        2304
+      ]
+    },
+    {
+      "filename": "02_Corporate_L02_Product_Draft.png",
+      "sha256": "09a3339ece443d6e7e8cd148cd8f207b56cd938a03efde4f4c5f8e9367dd6179",
+      "bytes": 470667,
+      "status": "APPROVED_VISUAL_REFERENCE",
+      "approval_date": "2026-09-11",
+      "approval_source": "User-supplied corrected closeout package; Recover Office Work Status conversation, presentation approximately17:09UTC, approval approximately17:12UTC",
+      "successor_artifacts": [
+        {
+          "map_id": "SH-MAP-SAC-023",
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-023.svg",
+          "revision": "R02",
+          "relationship": "Derived planning/vector successor; not an original approved R01 artifact"
+        },
+        {
+          "map_id": "SH-MAP-SAC-024",
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-024.svg",
+          "revision": "R02",
+          "relationship": "Derived planning/vector successor; not an original approved R01 artifact"
+        },
+        {
+          "map_id": "SH-MAP-SAC-025",
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-025.svg",
+          "revision": "R02",
+          "relationship": "Derived planning/vector successor; not an original approved R01 artifact"
+        },
+        {
+          "map_id": "SH-MAP-SAC-026",
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-026.svg",
+          "revision": "R02",
+          "relationship": "Derived planning/vector successor; not an original approved R01 artifact"
+        }
+      ],
+      "dimensions_px": [
+        3240,
+        2304
+      ]
+    },
+    {
+      "filename": "03_J2_L01_Contact_JAG_Draft.png",
+      "sha256": "17bf92029276f7794721129e58830344a9a3ee4341c858f2c928d53ad8b0fefb",
+      "bytes": 479716,
+      "status": "APPROVED_VISUAL_REFERENCE",
+      "approval_date": "2026-09-11",
+      "approval_source": "User-supplied corrected closeout package; Recover Office Work Status conversation, presentation approximately17:09UTC, approval approximately17:12UTC",
+      "successor_artifacts": [
+        {
+          "map_id": "SH-MAP-SAC-027",
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-027.svg",
+          "revision": "R02",
+          "relationship": "Derived planning/vector successor; not an original approved R01 artifact"
+        },
+        {
+          "map_id": "SH-MAP-SAC-028",
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-028.svg",
+          "revision": "R02",
+          "relationship": "Derived planning/vector successor; not an original approved R01 artifact"
+        },
+        {
+          "map_id": "SH-MAP-SAC-029",
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-029.svg",
+          "revision": "R02",
+          "relationship": "Derived planning/vector successor; not an original approved R01 artifact"
+        }
+      ],
+      "dimensions_px": [
+        3240,
+        2304
+      ]
+    },
+    {
+      "filename": "04_Education_L01_Teaching_Draft.png",
+      "sha256": "d37ff987cf1036d32cf0fe07ca3b9a0578d7f359bd820fde2551cb268ed88361",
+      "bytes": 448627,
+      "status": "APPROVED_VISUAL_REFERENCE",
+      "approval_date": "2026-09-11",
+      "approval_source": "User-supplied corrected closeout package; Recover Office Work Status conversation, presentation approximately17:09UTC, approval approximately17:12UTC",
+      "successor_artifacts": [
+        {
+          "map_id": "SH-MAP-SAC-030",
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-030.svg",
+          "revision": "R02",
+          "relationship": "Derived planning/vector successor; not an original approved R01 artifact"
+        },
+        {
+          "map_id": "SH-MAP-SAC-031",
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-031.svg",
+          "revision": "R02",
+          "relationship": "Derived planning/vector successor; not an original approved R01 artifact"
+        },
+        {
+          "map_id": "SH-MAP-SAC-032",
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-032.svg",
+          "revision": "R02",
+          "relationship": "Derived planning/vector successor; not an original approved R01 artifact"
+        },
+        {
+          "map_id": "SH-MAP-SAC-033",
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-033.svg",
+          "revision": "R02",
+          "relationship": "Derived planning/vector successor; not an original approved R01 artifact"
+        },
+        {
+          "map_id": "SH-MAP-SAC-034",
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-034.svg",
+          "revision": "R02",
+          "relationship": "Derived planning/vector successor; not an original approved R01 artifact"
+        },
+        {
+          "map_id": "SH-MAP-SAC-035",
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-035.svg",
+          "revision": "R02",
+          "relationship": "Derived planning/vector successor; not an original approved R01 artifact"
+        },
+        {
+          "map_id": "SH-MAP-SAC-036",
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-036.svg",
+          "revision": "R02",
+          "relationship": "Derived planning/vector successor; not an original approved R01 artifact"
+        }
+      ],
+      "dimensions_px": [
+        3240,
+        2304
+      ]
+    },
+    {
+      "filename": "CODEX_ADDENDUM_APPROVED_SACRAMENTO_VISUAL_BASELINE_R01.md",
+      "sha256": "8fc176378cc3717f2e4cac42c8d56851fa33ddfc916622913f3820d5c99331db",
+      "bytes": 13325,
+      "status": "CONTROLLING_EXECUTION_ADDENDUM",
+      "approval_date": "2026-09-11",
+      "approval_source": "User-supplied corrected closeout package; Recover Office Work Status conversation, presentation approximately17:09UTC, approval approximately17:12UTC",
+      "successor_artifacts": []
+    },
+    {
+      "filename": "SABLE_HARBOR_Headcount_Campus_Building_Atlas_Closeout_HANDOVER_2026-09-11.md",
+      "sha256": "09db215f4129b3b52ec52ae5c15e850c4faf23da2c3395815325b10f79912a21",
+      "bytes": 28834,
+      "status": "CONTROLLING_EXECUTION_ADDENDUM",
+      "approval_date": "2026-09-11",
+      "approval_source": "User-supplied corrected closeout package; Recover Office Work Status conversation, presentation approximately17:09UTC, approval approximately17:12UTC",
+      "successor_artifacts": []
+    },
+    {
+      "filename": "SABLE_HARBOR_Sacramento_HQ_Drafts_R01.zip",
+      "sha256": "eb10588f6cc6e214d8541b96b1bd044f52f0df85e384fc53a316b55b5d026fe0",
+      "bytes": 1760395,
+      "status": "APPROVED_VISUAL_REFERENCE",
+      "approval_date": "2026-09-11",
+      "approval_source": "User-supplied corrected closeout package; Recover Office Work Status conversation, presentation approximately17:09UTC, approval approximately17:12UTC",
+      "successor_artifacts": []
+    },
+    {
+      "filename": "START_HERE_CODEX.md",
+      "sha256": "4659491cee148c2ecda0ea95ab3b1a15c02d7d429e8e9f0c431ec4309fe05988",
+      "bytes": 1149,
+      "status": "CONTROLLING_EXECUTION_ADDENDUM",
+      "approval_date": "2026-09-11",
+      "approval_source": "User-supplied corrected closeout package; Recover Office Work Status conversation, presentation approximately17:09UTC, approval approximately17:12UTC",
+      "successor_artifacts": []
+    }
+  ]
+}

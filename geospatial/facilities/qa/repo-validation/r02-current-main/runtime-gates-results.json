@@ -1,0 +1,80 @@
+{
+  "source_commit": "237778d",
+  "results": [
+    {
+      "name": "runtime-model",
+      "command": [
+        "python",
+        "-m",
+        "enterprise.runtime.model",
+        "build",
+        "--output",
+        "/tmp/sable-r02-runtime-registers",
+        "--database"
+      ],
+      "exit_code": 0,
+      "seconds": 0.22
+    },
+    {
+      "name": "runtime-report",
+      "command": [
+        "python",
+        "-m",
+        "enterprise.runtime.report",
+        "--verify"
+      ],
+      "exit_code": 0,
+      "seconds": 0.13
+    },
+    {
+      "name": "runtime-verify",
+      "command": [
+        "python",
+        "-m",
+        "enterprise.runtime.verify",
+        "--runtime-output",
+        "/tmp/sable-r02-runtime-registers/runtime.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.13
+    },
+    {
+      "name": "runtime-finance-first",
+      "command": [
+        "python",
+        "-m",
+        "enterprise.runtime.build_finance"
+      ],
+      "exit_code": 0,
+      "seconds": 25.6
+    },
+    {
+      "name": "runtime-workbook",
+      "command": [
+        "python",
+        "-m",
+        "enterprise.runtime.workbook",
+        "--output",
+        "enterprise/runtime/publications",
+        "--verify"
+      ],
+      "exit_code": 0,
+      "seconds": 0.28
+    },
+    {
+      "name": "runtime-finance-repeat",
+      "command": [
+        "python",
+        "-m",
+        "enterprise.runtime.build_finance"
+      ],
+      "exit_code": 0,
+      "seconds": 26.45
+    },
+    {
+      "name": "runtime-finance-determinism",
+      "equal": true,
+      "sha256": "858b80a03fd08772caebf51a8df33fe29d51657df9d4ef31e4ff034b7950c24c"
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+FF.FFFFFF................                                                [100%]
+=================================== FAILURES ===================================
+_______________________ FacilityRegression.test_bad_area _______________________
+
+self = <test_facilities.FacilityRegression testMethod=test_bad_area>
+
+    def test_bad_area(self):
+        models = self.mutant()
+>       models[0]["buildings"][0]["floors"][0]["gross_area_m2"] += 1
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       IndexError: list index out of range
+
+geospatial/facilities/test_facilities.py:41: IndexError
+____________________ FacilityRegression.test_bad_population ____________________
+
+self = <test_facilities.FacilityRegression testMethod=test_bad_population>
+
+    def test_bad_population(self):
+        models = self.mutant()
+>       models[0]["attendance_scenarios"][0]["people"] += 1
+E       TypeError: unsupported operand type(s) for +=: 'NoneType' and 'int'
+
+geospatial/facilities/test_facilities.py:46: TypeError
+___________________ FacilityRegression.test_duplicate_floor ____________________
+
+self = <test_facilities.FacilityRegression testMethod=test_duplicate_floor>
+
+    def test_duplicate_floor(self):
+        models = self.mutant()
+>       floors = models[0]["buildings"][0]["floors"]
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       IndexError: list index out of range
+
+geospatial/facilities/test_facilities.py:35: IndexError
+_________________ FacilityRegression.test_floor_peak_exceeded __________________
+
+self = <test_facilities.FacilityRegression testMethod=test_floor_peak_exceeded>
+
+    def test_floor_peak_exceeded(self):
+        models = self.mutant()
+>       models[0]["buildings"][0]["floors"][0]["planned_peak"] = 0
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       IndexError: list index out of range
+
+geospatial/facilities/test_facilities.py:75: IndexError
+____________________ FacilityRegression.test_invalid_status ____________________
+
+self = <test_facilities.FacilityRegression testMethod=test_invalid_status>
+
+    def test_invalid_status(self):
+        models = self.mutant()
+>       models[0]["buildings"][0]["floors"][0]["status"] = "COMPLETE_TRUST_ME"
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       IndexError: list index out of range
+
+geospatial/facilities/test_facilities.py:51: IndexError
+______________ FacilityRegression.test_missing_capacity_category _______________
+
+self = <test_facilities.FacilityRegression testMethod=test_missing_capacity_category>
+
+    def test_missing_capacity_category(self):
+        models = self.mutant()
+>       del models[0]["buildings"][0]["floors"][0]["rooms"][0]["training_seats"]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       IndexError: list index out of range
+
+geospatial/facilities/test_facilities.py:70: IndexError
+____________________ FacilityRegression.test_missing_floor _____________________
+
+self = <test_facilities.FacilityRegression testMethod=test_missing_floor>
+
+    def test_missing_floor(self):
+        models = self.mutant()
+>       models[0]["buildings"][0]["floors"] = []
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       IndexError: list index out of range
+
+geospatial/facilities/test_facilities.py:28: IndexError
+__________________ FacilityRegression.test_overlapping_rooms ___________________
+
+self = <test_facilities.FacilityRegression testMethod=test_overlapping_rooms>
+
+    def test_overlapping_rooms(self):
+        models = self.mutant()
+>       rooms = models[0]["buildings"][0]["floors"][0]["rooms"]
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       IndexError: list index out of range
+
+geospatial/facilities/test_facilities.py:64: IndexError
+=========================== short test summary info ============================
+FAILED geospatial/facilities/test_facilities.py::FacilityRegression::test_bad_area
+FAILED geospatial/facilities/test_facilities.py::FacilityRegression::test_bad_population
+FAILED geospatial/facilities/test_facilities.py::FacilityRegression::test_duplicate_floor
+FAILED geospatial/facilities/test_facilities.py::FacilityRegression::test_floor_peak_exceeded
+FAILED geospatial/facilities/test_facilities.py::FacilityRegression::test_invalid_status
+FAILED geospatial/facilities/test_facilities.py::FacilityRegression::test_missing_capacity_category
+FAILED geospatial/facilities/test_facilities.py::FacilityRegression::test_missing_floor
+FAILED geospatial/facilities/test_facilities.py::FacilityRegression::test_overlapping_rooms

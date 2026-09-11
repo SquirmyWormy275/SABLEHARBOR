@@ -1,0 +1,14 @@
+FAIL broken Markdown link geospatial/facilities/RESEARCH_CAMPUSES.md -> ../../../docs/canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md
+FAIL broken Markdown link geospatial/facilities/RESEARCH_CAMPUSES.md -> ../../../docs/canon/CRADLE_CLOSEOUT_2026-09-06.md
+FAIL superseded current-facing name in geospatial/facilities/coverage/COVERAGE_MATRIX.json: Northline Growth Partners
+FAIL superseded current-facing name in geospatial/facilities/coverage/COVERAGE_MATRIX.json: Ironcliff Industrial Partners
+FAIL superseded current-facing name in geospatial/facilities/coverage/COVERAGE_MATRIX.json: Leah Moravec
+FAIL superseded current-facing name in geospatial/facilities/coverage/COVERAGE_MATRIX.json: Owen Rourke
+FAIL superseded current-facing name in geospatial/facilities/coverage/COVERAGE_MATRIX.json: Dr. Nadia Serrano
+FAIL superseded current-facing name in geospatial/facilities/coverage/COVERAGE_MATRIX.json: Richard Halden
+FAIL superseded current-facing name in geospatial/facilities/population/REGISTER.json: Northline Growth Partners
+FAIL superseded current-facing name in geospatial/facilities/population/REGISTER.json: Ironcliff Industrial Partners
+FAIL superseded current-facing name in geospatial/facilities/population/REGISTER.json: Leah Moravec
+FAIL superseded current-facing name in geospatial/facilities/population/REGISTER.json: Owen Rourke
+FAIL superseded current-facing name in geospatial/facilities/population/REGISTER.json: Dr. Nadia Serrano
+FAIL superseded current-facing name in geospatial/facilities/population/REGISTER.json: Richard Halden

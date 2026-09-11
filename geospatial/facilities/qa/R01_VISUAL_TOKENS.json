@@ -1,0 +1,757 @@
+{
+  "status": "MEASURED_APPROVED_REFERENCE_NOT_SUCCESSOR_APPROVAL",
+  "date": "2026-09-11",
+  "authority": "docs/facilities/references/sacramento-hq/r01-approved/CODEX_ADDENDUM_APPROVED_SACRAMENTO_VISUAL_BASELINE_R01.md",
+  "measurement_method": "Exact RGB samples and dominant pixel counts from immutable originals. Bboxes are pixel coordinates with top-left origin, inferred nominal alignment within antialiasing tolerance. Font identities/sizes are visual approximations, not recovered source metadata.",
+  "references": [
+    {
+      "path": "docs/facilities/references/sacramento-hq/r01-approved/01_Sacramento_Campus_Master_Draft.png",
+      "sha256": "23729f7e2b427e58820361363e4a47fbc6bbd3ce9774ef67932ecab7a50bfa47",
+      "dimensions_px": [
+        3240,
+        2304
+      ],
+      "manual_original_resolution_inspection": true,
+      "dominant_pixel_colors": [
+        {
+          "rgb": [
+            247,
+            246,
+            241
+          ],
+          "hex": "#f7f6f1",
+          "pixel_count": 3510441
+        },
+        {
+          "rgb": [
+            235,
+            238,
+            230
+          ],
+          "hex": "#ebeee6",
+          "pixel_count": 1546484
+        },
+        {
+          "rgb": [
+            203,
+            205,
+            200
+          ],
+          "hex": "#cbcdc8",
+          "pixel_count": 641596
+        },
+        {
+          "rgb": [
+            222,
+            224,
+            218
+          ],
+          "hex": "#dee0da",
+          "pixel_count": 472289
+        },
+        {
+          "rgb": [
+            255,
+            255,
+            255
+          ],
+          "hex": "#ffffff",
+          "pixel_count": 470834
+        },
+        {
+          "rgb": [
+            221,
+            220,
+            213
+          ],
+          "hex": "#dddcd5",
+          "pixel_count": 223932
+        },
+        {
+          "rgb": [
+            34,
+            55,
+            64
+          ],
+          "hex": "#223740",
+          "pixel_count": 131619
+        },
+        {
+          "rgb": [
+            225,
+            231,
+            218
+          ],
+          "hex": "#e1e7da",
+          "pixel_count": 99448
+        },
+        {
+          "rgb": [
+            224,
+            229,
+            223
+          ],
+          "hex": "#e0e5df",
+          "pixel_count": 40422
+        },
+        {
+          "rgb": [
+            63,
+            112,
+            136
+          ],
+          "hex": "#3f7088",
+          "pixel_count": 31625
+        },
+        {
+          "rgb": [
+            211,
+            222,
+            206
+          ],
+          "hex": "#d3dece",
+          "pixel_count": 21954
+        },
+        {
+          "rgb": [
+            104,
+            123,
+            128
+          ],
+          "hex": "#687b80",
+          "pixel_count": 20943
+        }
+      ]
+    },
+    {
+      "path": "docs/facilities/references/sacramento-hq/r01-approved/02_Corporate_L02_Product_Draft.png",
+      "sha256": "09a3339ece443d6e7e8cd148cd8f207b56cd938a03efde4f4c5f8e9367dd6179",
+      "dimensions_px": [
+        3240,
+        2304
+      ],
+      "manual_original_resolution_inspection": true,
+      "dominant_pixel_colors": [
+        {
+          "rgb": [
+            247,
+            246,
+            241
+          ],
+          "hex": "#f7f6f1",
+          "pixel_count": 4925300
+        },
+        {
+          "rgb": [
+            231,
+            233,
+            229
+          ],
+          "hex": "#e7e9e5",
+          "pixel_count": 734406
+        },
+        {
+          "rgb": [
+            227,
+            237,
+            240
+          ],
+          "hex": "#e3edf0",
+          "pixel_count": 533738
+        },
+        {
+          "rgb": [
+            255,
+            255,
+            255
+          ],
+          "hex": "#ffffff",
+          "pixel_count": 329638
+        },
+        {
+          "rgb": [
+            229,
+            236,
+            229
+          ],
+          "hex": "#e5ece5",
+          "pixel_count": 281154
+        },
+        {
+          "rgb": [
+            240,
+            234,
+            221
+          ],
+          "hex": "#f0eadd",
+          "pixel_count": 199520
+        },
+        {
+          "rgb": [
+            34,
+            55,
+            64
+          ],
+          "hex": "#223740",
+          "pixel_count": 158775
+        },
+        {
+          "rgb": [
+            104,
+            123,
+            128
+          ],
+          "hex": "#687b80",
+          "pixel_count": 42042
+        },
+        {
+          "rgb": [
+            63,
+            112,
+            136
+          ],
+          "hex": "#3f7088",
+          "pixel_count": 15768
+        },
+        {
+          "rgb": [
+            220,
+            222,
+            218
+          ],
+          "hex": "#dcdeda",
+          "pixel_count": 12996
+        },
+        {
+          "rgb": [
+            229,
+            230,
+            226
+          ],
+          "hex": "#e5e6e2",
+          "pixel_count": 12012
+        },
+        {
+          "rgb": [
+            36,
+            57,
+            66
+          ],
+          "hex": "#243942",
+          "pixel_count": 10511
+        }
+      ]
+    },
+    {
+      "path": "docs/facilities/references/sacramento-hq/r01-approved/03_J2_L01_Contact_JAG_Draft.png",
+      "sha256": "17bf92029276f7794721129e58830344a9a3ee4341c858f2c928d53ad8b0fefb",
+      "dimensions_px": [
+        3240,
+        2304
+      ],
+      "manual_original_resolution_inspection": true,
+      "dominant_pixel_colors": [
+        {
+          "rgb": [
+            247,
+            246,
+            241
+          ],
+          "hex": "#f7f6f1",
+          "pixel_count": 4977764
+        },
+        {
+          "rgb": [
+            227,
+            237,
+            240
+          ],
+          "hex": "#e3edf0",
+          "pixel_count": 632698
+        },
+        {
+          "rgb": [
+            231,
+            233,
+            229
+          ],
+          "hex": "#e7e9e5",
+          "pixel_count": 589025
+        },
+        {
+          "rgb": [
+            240,
+            234,
+            221
+          ],
+          "hex": "#f0eadd",
+          "pixel_count": 368073
+        },
+        {
+          "rgb": [
+            229,
+            236,
+            229
+          ],
+          "hex": "#e5ece5",
+          "pixel_count": 296335
+        },
+        {
+          "rgb": [
+            255,
+            255,
+            255
+          ],
+          "hex": "#ffffff",
+          "pixel_count": 186489
+        },
+        {
+          "rgb": [
+            34,
+            55,
+            64
+          ],
+          "hex": "#223740",
+          "pixel_count": 148569
+        },
+        {
+          "rgb": [
+            104,
+            123,
+            128
+          ],
+          "hex": "#687b80",
+          "pixel_count": 37908
+        },
+        {
+          "rgb": [
+            63,
+            112,
+            136
+          ],
+          "hex": "#3f7088",
+          "pixel_count": 15994
+        },
+        {
+          "rgb": [
+            220,
+            222,
+            218
+          ],
+          "hex": "#dcdeda",
+          "pixel_count": 12727
+        },
+        {
+          "rgb": [
+            36,
+            57,
+            66
+          ],
+          "hex": "#243942",
+          "pixel_count": 8875
+        },
+        {
+          "rgb": [
+            60,
+            78,
+            86
+          ],
+          "hex": "#3c4e56",
+          "pixel_count": 8613
+        }
+      ]
+    },
+    {
+      "path": "docs/facilities/references/sacramento-hq/r01-approved/04_Education_L01_Teaching_Draft.png",
+      "sha256": "d37ff987cf1036d32cf0fe07ca3b9a0578d7f359bd820fde2551cb268ed88361",
+      "dimensions_px": [
+        3240,
+        2304
+      ],
+      "manual_original_resolution_inspection": true,
+      "dominant_pixel_colors": [
+        {
+          "rgb": [
+            247,
+            246,
+            241
+          ],
+          "hex": "#f7f6f1",
+          "pixel_count": 4962120
+        },
+        {
+          "rgb": [
+            231,
+            233,
+            229
+          ],
+          "hex": "#e7e9e5",
+          "pixel_count": 826640
+        },
+        {
+          "rgb": [
+            240,
+            234,
+            221
+          ],
+          "hex": "#f0eadd",
+          "pixel_count": 665807
+        },
+        {
+          "rgb": [
+            227,
+            237,
+            240
+          ],
+          "hex": "#e3edf0",
+          "pixel_count": 274499
+        },
+        {
+          "rgb": [
+            229,
+            236,
+            229
+          ],
+          "hex": "#e5ece5",
+          "pixel_count": 216842
+        },
+        {
+          "rgb": [
+            34,
+            55,
+            64
+          ],
+          "hex": "#223740",
+          "pixel_count": 153583
+        },
+        {
+          "rgb": [
+            104,
+            123,
+            128
+          ],
+          "hex": "#687b80",
+          "pixel_count": 51063
+        },
+        {
+          "rgb": [
+            255,
+            255,
+            255
+          ],
+          "hex": "#ffffff",
+          "pixel_count": 35843
+        },
+        {
+          "rgb": [
+            221,
+            220,
+            213
+          ],
+          "hex": "#dddcd5",
+          "pixel_count": 33660
+        },
+        {
+          "rgb": [
+            229,
+            230,
+            226
+          ],
+          "hex": "#e5e6e2",
+          "pixel_count": 21937
+        },
+        {
+          "rgb": [
+            63,
+            112,
+            136
+          ],
+          "hex": "#3f7088",
+          "pixel_count": 13777
+        },
+        {
+          "rgb": [
+            220,
+            222,
+            218
+          ],
+          "hex": "#dcdeda",
+          "pixel_count": 13072
+        }
+      ]
+    }
+  ],
+  "canvas": {
+    "width": 3240,
+    "height": 2304,
+    "ratio": 1.40625,
+    "background": [
+      247,
+      246,
+      241
+    ],
+    "left_margin_px": 107,
+    "right_rule_edge_px": 3133,
+    "header_rule_rows_px": [
+      148,
+      149,
+      150
+    ],
+    "footer_rule_row_px": 2146
+  },
+  "palette": {
+    "paper": {
+      "rgb": [
+        247,
+        246,
+        241
+      ],
+      "hex": "#f7f6f1"
+    },
+    "ink": {
+      "rgb": [
+        34,
+        55,
+        64
+      ],
+      "hex": "#223740"
+    },
+    "annotation": {
+      "rgb": [
+        104,
+        123,
+        128
+      ],
+      "hex": "#687b80"
+    },
+    "blue_accent": {
+      "rgb": [
+        63,
+        112,
+        136
+      ],
+      "hex": "#3f7088"
+    },
+    "sage_accent": {
+      "rgb": [
+        114,
+        144,
+        133
+      ],
+      "hex": "#729085"
+    },
+    "gold_accent": {
+      "rgb": [
+        164,
+        138,
+        84
+      ],
+      "hex": "#a48a54"
+    },
+    "blue_fill": {
+      "rgb": [
+        227,
+        237,
+        240
+      ],
+      "hex": "#e3edf0"
+    },
+    "sage_fill": {
+      "rgb": [
+        229,
+        236,
+        229
+      ],
+      "hex": "#e5ece5"
+    },
+    "sand_fill": {
+      "rgb": [
+        240,
+        234,
+        221
+      ],
+      "hex": "#f0eadd"
+    },
+    "service_fill": {
+      "rgb": [
+        231,
+        233,
+        229
+      ],
+      "hex": "#e7e9e5"
+    },
+    "site_field": {
+      "rgb": [
+        235,
+        238,
+        230
+      ],
+      "hex": "#ebeee6"
+    },
+    "site_road": {
+      "rgb": [
+        203,
+        205,
+        200
+      ],
+      "hex": "#cbcdc8"
+    },
+    "site_paving": {
+      "rgb": [
+        221,
+        220,
+        213
+      ],
+      "hex": "#dddcd5"
+    },
+    "parking_fill": {
+      "rgb": [
+        222,
+        224,
+        218
+      ],
+      "hex": "#dee0da"
+    },
+    "white": {
+      "rgb": [
+        255,
+        255,
+        255
+      ],
+      "hex": "#ffffff"
+    }
+  },
+  "geometry": {
+    "wordmark_ink_bbox": [
+      111,
+      78,
+      600,
+      107
+    ],
+    "upper_right_identifier_ink_bbox": [
+      2575,
+      81,
+      3129,
+      102
+    ],
+    "master_title_ink_bbox": [
+      112,
+      203,
+      1696,
+      253
+    ],
+    "status_dark_block_bbox": [
+      2646,
+      203,
+      3132,
+      265
+    ],
+    "master_site_outer_bbox": [
+      120,
+      427,
+      2404,
+      2059
+    ],
+    "right_schedule_x_range": [
+      2484,
+      3133
+    ],
+    "right_schedule_top_rule_y_approx": 396,
+    "master_schedule_heading_ink_bbox": [
+      2486,
+      433,
+      2819,
+      454
+    ],
+    "floor_A_outer_bbox_approx": [
+      132,
+      576,
+      2310,
+      1665
+    ],
+    "floor_B_outer_bbox_approx": [
+      132,
+      593,
+      2310,
+      1642
+    ],
+    "floor_C_outer_bbox_approx": [
+      153,
+      577,
+      2285,
+      1720
+    ],
+    "floor_notes_top_y_approx": 1804,
+    "master_scale_y_approx": 2094,
+    "floor_scale_y_approx": 2054,
+    "footer_sheet_id_ink_bbox_master": [
+      2947,
+      2184,
+      3126,
+      2216
+    ]
+  },
+  "typography": {
+    "family_approx": "DejaVu Sans, ordinary and bold; verify by overlay, not family name alone",
+    "wordmark": "Uppercase tracked letters; ink height30px, approximate42px bold font; no solid header banner",
+    "title": "Uppercase bold; ink height51px, approximate68\u201370px font",
+    "functional_subtitle": "Muted annotation color, approximately31px regular",
+    "schedule_section_heading": "Uppercase bold, approximately30\u201332px",
+    "schedule_body": "Approximately27\u201330px regular; short factual blocks with generous leading",
+    "large_schedule_metrics": "Approximately62\u201368px bold with muted units below",
+    "room_titles": "Uppercase bold about26\u201329px, support labels20\u201322px",
+    "room_details": "Muted approximately22px; labels separated from furniture",
+    "numbered_notes": "Two columns, blue number, navy bold short heading, muted wrapped explanation",
+    "footer": "Muted\u224822\u201324px; large right-aligned sheet number\u224846px bold"
+  },
+  "linework": {
+    "header_rule_px": 3,
+    "footer_rule_px": 2,
+    "site_outline_px": 3,
+    "floor_exterior_wall_px_approx": 6,
+    "interior_partition_px_approx": 3,
+    "dimension_furniture_lines_px_approx": [
+      1,
+      2
+    ],
+    "dimension_system": "Overall top width and left depth, subdivided ruler ticks above floorplate, units feet",
+    "north_arrow": "Solid navy slim two-leg arrow, N above, beside drawing upper-right",
+    "scale_bar": "Alternating solid navy/offwhite outlined rectangles, 0/mid/end values below, FEET to right"
+  },
+  "furniture_and_access": {
+    "workstations": "Thin muted outlines, white desk worktops grouped into benches; small chair squares and paired short monitor marks; actual symbols reflect capacity.",
+    "meeting": "Rectangular central table with separate chair squares; labeled seat count above",
+    "hall": "120 small seats in aligned blocks with center aisle and shallow platform",
+    "doors": "Wall break, leaf line and quarter-circle swing; doubled where appropriate",
+    "stairs": "Parallel thin treads in dedicated cores, longitudinal directional line; ST-1/ST-2 labels",
+    "fixed_service": "Aligned stairs/lift/riser/WC/support shafts across stack; grey fill subordinate to work program",
+    "boundary": "Visitors before reception-controlled staff boundary; no walking through studios"
+  },
+  "campus_composition": {
+    "envelope_ft": [
+      840,
+      600
+    ],
+    "buildings": [
+      "A Corporate southwest",
+      "B J2 northwest",
+      "C Education southeast",
+      "D Residence northeast"
+    ],
+    "site_character": "Perimeter staff parking and access roads, central quad, separate J2 and residential courts, south primary arrival; repeated circular trees restrained",
+    "baseline_totals": {
+      "buildings": 4,
+      "floors": 10,
+      "gross_sqft": 175392,
+      "fitted_staff_workplaces": 362,
+      "residential_rooms": 60,
+      "drawn_parking_bays_before_conversion": 252
+    }
+  },
+  "successor_gate": {
+    "state": "PASS_FIRST_MASTER_ONLY",
+    "required_comparisons": "First successor side-by-side with each of all four originals at full resolution; master overlay; record deviations before bulk floors.",
+    "prior_63_sheet_QA_applies": false,
+    "evidence": "R01_FIRST_GATE_REVIEW.json"
+  }
+}

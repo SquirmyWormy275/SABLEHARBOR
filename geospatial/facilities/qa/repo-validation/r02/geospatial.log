@@ -1,0 +1,16 @@
+{
+  "validation_status": "PASS",
+  "errors": [],
+  "source_commit": "d91a22c35c91b213204411421de88815f27d8e16",
+  "package_sha256": "0a1489e6e4605373cf0d25dd6e25a020c8d922ee9ec6c052d9410ad4e2303f0f",
+  "object_count": 175,
+  "source_count": 68,
+  "spatial_layer_count": 59,
+  "feature_count": 12401,
+  "map_sheets": 69,
+  "rail_engineering_status": "ACCEPTED_CASE_NETWORK_RECONCILED_ENGINEERING_LIMITS_RETAINED",
+  "exact_site_selection_status": "RED_WASH_LOCKED_TAYLOR_A_CASE_SITED_OTHER_PARCELS_UNFINISHED",
+  "qgis_status": "NATIVE_QGIS_CHECK_RECORDED_SEPARATELY",
+  "program_complete": false,
+  "scope_note": "A passing framework build does not settle source conflicts, select exact sites, establish a railway, or complete the 49-section program."
+}

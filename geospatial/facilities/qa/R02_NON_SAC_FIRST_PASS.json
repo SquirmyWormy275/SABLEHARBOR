@@ -1,0 +1,1250 @@
+{
+  "revision": "R02-first-pass",
+  "status": "CORRECTIONS_REQUIRED_NOT_FINAL_ACCEPTANCE",
+  "scope": "All42 non-Sacramento sheets from first58-sheet R02 manifest; excludes SH-SITE-0001. Renderer has since changed; these are historical first-pass artifact references, not current acceptance.",
+  "method": "Each individual PDF rasterized at1600px width and manually inspected, plus seven contact sheets. Manifest SVG/PNG/PDF hashes recorded. Initial independent SVG raster check omitted repository font config, so its pixel mismatch is an environment difference and is not interpreted as an output defect; repeat with pinned fontconfig for final QA.",
+  "records": [
+    {
+      "id": "SH-MAP-ARU-020",
+      "title": "Wamsutter interchange / master site plan",
+      "kind": "site",
+      "site_id": "SH-IND-FAC-WAM-INT",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-020.svg",
+          "sha256": "84dfa202d8dac8e74dff8ffdd7ba5b96108a89e3da4893c61bf2497fa9d97350"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-020.png",
+          "sha256": "1bd94c937819716713cf115a6acc2d086705622e50f748e5d22be56ebb5afc53"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-020.pdf",
+          "sha256": "1ca8649f77eb3dcce5e53a41b06fc286f122a1510b5ad5bbbcbe42c026bd389a"
+        }
+      },
+      "png_size": [
+        3240,
+        2304
+      ],
+      "svg_png_exact_pixel_match": null,
+      "pdf_pages": 1,
+      "pdf_text_outside_page": [],
+      "manual_pdf_review": "INSPECTED_1600_PIXEL_WIDTH_FIRST_PASS",
+      "review_image_sha256": "238b99b50cb8d4a92a1f198225c40b78c8d0f58b6317b4165d5ce51f376226a8"
+    },
+    {
+      "id": "SH-MAP-ARU-021",
+      "title": "Taylor Yard and Shops / master site plan",
+      "kind": "site",
+      "site_id": "SH-IND-FAC-TAY-YARD",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-021.svg",
+          "sha256": "c4a680db135b5a8fff81d60b9e4cbe7ac20bfd5fdaba7e0818456139a8b1cbc9"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-021.png",
+          "sha256": "7f08586130e30465e396ead403039ef126717898cc8c976acce7bc8ab65955c1"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-021.pdf",
+          "sha256": "eea3a6196eb728da28c29d7a55c7deed109e005cbd9446b52ab6dce0180724b8"
+        }
+      },
+      "png_size": [
+        3240,
+        2304
+      ],
+      "svg_png_exact_pixel_match": null,
+      "pdf_pages": 1,
+      "pdf_text_outside_page": [],
+      "manual_pdf_review": "INSPECTED_1600_PIXEL_WIDTH_FIRST_PASS",
+      "review_image_sha256": "5f3c37ea009f8191696ca62781e548d074ea8195cdad1d859a7df12f39fd8b3a"
+    },
+    {
+      "id": "SH-MAP-ARU-022",
+      "title": "Locomotive running-repair shop / building program",
+      "kind": "building",
+      "site_id": "SH-IND-FAC-TAY-YARD",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-022.svg",
+          "sha256": "8b13792fa913e52c90e5417207eddc00a1addb56c8fe8f069fa70197bd25ac34"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-022.png",
+          "sha256": "c3a2c4d33a429d2923710ab0abbb6931b828a1ad88d2047630324bbbfa697988"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-022.pdf",
+          "sha256": "74e89b9531beda5a207d72838ea0d56c7baf4ca706ff69cdfdfe94521c988936"
+        }
+      },
+      "png_size": [
+        3240,
+        2304
+      ],
+      "svg_png_exact_pixel_match": null,
+      "pdf_pages": 1,
+      "pdf_text_outside_page": [],
+      "manual_pdf_review": "INSPECTED_1600_PIXEL_WIDTH_FIRST_PASS",
+      "review_image_sha256": "5c8c1626c515418b1cafbeb9f7bf9c830403509d9b9a3d57bb7c6b2d345daf7d"
+    },
+    {
+      "id": "SH-MAP-ARU-023",
+      "title": "Locomotive running-repair shop / Locomotive running-repair shop \u2014 ground level",
+      "kind": "floor",
+      "site_id": "SH-IND-FAC-TAY-YARD",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-023.svg",
+          "sha256": "81d61fcb77149da9f505bab3c3ee1dbff0d623a091079309ea68660dd6ab8285"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-023.png",
+          "sha256": "caa4fea8e5acce4b16fa603dfe7a666da903a2960164010e5391004899eaf221"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-023.pdf",
+          "sha256": "9bd9fdac65b73cf92054342778f83b767c49ab511522fa9a781a9b6878136413"
+        }
+      },
+      "png_size": [
+        3240,
+        2304
+      ],
+      "svg_png_exact_pixel_match": null,
+      "pdf_pages": 1,
+      "pdf_text_outside_page": [
+        "78.7402\u2032"
+      ],
+      "manual_pdf_review": "INSPECTED_1600_PIXEL_WIDTH_FIRST_PASS",
+      "review_image_sha256": "432d929425fcb7193235aa72e2a6f5095cecd290b2fab752803a3ee0ffbd1d93"
+    },
+    {
+      "id": "SH-MAP-ARU-024",
+      "title": "Dispatch and crew house / building program",
+      "kind": "building",
+      "site_id": "SH-IND-FAC-TAY-YARD",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-024.svg",
+          "sha256": "15421451cf2a783b4726c6cbe2054a52528d87227682cdc7eccd457de9155189"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-024.png",
+          "sha256": "e91ed235c74c79b811c2b39626cb466bad031279f4f4fe1d8a723ae9333c0f87"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-024.pdf",
+          "sha256": "fd21c33e472c84ddf7a7f53c4ca66779fcf39f7f5425d8c9ad4fef6c8a351d09"
+        }
+      },
+      "png_size": [
+        3240,
+        2304
+      ],
+      "svg_png_exact_pixel_match": null,
+      "pdf_pages": 1,
+      "pdf_text_outside_page": [],
+      "manual_pdf_review": "INSPECTED_1600_PIXEL_WIDTH_FIRST_PASS",
+      "review_image_sha256": "90562837075f979fe3d7c42b732a900d39f6bf525cb02b2949284a584511be68"
+    },
+    {
+      "id": "SH-MAP-ARU-025",
+      "title": "Dispatch and crew house / Dispatch and crew house \u2014 ground level",
+      "kind": "floor",
+      "site_id": "SH-IND-FAC-TAY-YARD",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-025.svg",
+          "sha256": "cc11bdd31422fd53b2f24e02145f9924c961e04a17864f1c22f750b41b920930"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-025.png",
+          "sha256": "c2b938be1cbe046d213e95f0fcd9dfa0170662b8d0ebee1850da0b07dcc84a1d"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-025.pdf",
+          "sha256": "8d19209e512219a3c291fc0ce0c22659c017b5f5816b6f13c75dc0c70bd9ec80"
+        }
+      },
+      "png_size": [
+        3240,
+        2304
+      ],
+      "svg_png_exact_pixel_match": null,
+      "pdf_pages": 1,
+      "pdf_text_outside_page": [
+        "59.0551\u2032"
+      ],
+      "manual_pdf_review": "INSPECTED_1600_PIXEL_WIDTH_FIRST_PASS",
+      "review_image_sha256": "e8ee06e650c97cdfc4a0e2b8d0e152fb4e8f418e33464b57bc434528097813c0"
+    },
+    {
+      "id": "SH-MAP-ARU-026",
+      "title": "Taylor Industrial Transload Complex / master site plan",
+      "kind": "site",
+      "site_id": "SH-IND-FAC-TAY-TERMINAL",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-026.svg",
+          "sha256": "6f8b96aefcb7edb63917d4c6a40c2f8bc2f517223db21c45beee0c781ab61f8c"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-026.png",
+          "sha256": "ed1e6e750dfa912353db973979b789eaff5628e778139acd07369368619cfee7"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-026.pdf",
+          "sha256": "c949e225b0dfa5561f5942a378489e0261cff84fb4e62b7a421358d9a28c0b4d"
+        }
+      },
+      "png_size": [
+        3240,
+        2304
+      ],
+      "svg_png_exact_pixel_match": null,
+      "pdf_pages": 1,
+      "pdf_text_outside_page": [],
+      "manual_pdf_review": "INSPECTED_1600_PIXEL_WIDTH_FIRST_PASS",
+      "review_image_sha256": "c3ac897e61ab27bae38fed68d781e3d1e439826793255aaf606215e27b031eaa"
+    },
+    {
+      "id": "SH-MAP-ARU-027",
+      "title": "Taylor warehouse / master site plan",
+      "kind": "site",
+      "site_id": "SH-IND-FAC-TAY-WAREHOUSE",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-027.svg",
+          "sha256": "39d43022cda7b797df8fe50a95542dd50584a54396a5880a203e4082951f61ae"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-027.png",
+          "sha256": "ccf1f70d14bd6ba40b1f62cbd2a6efee536ad201e4b6f5d5c752022efe5105ac"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-027.pdf",
+          "sha256": "a077ed32c8eab99058fab52024b6a0d722095f3c2d6ca3ee237cdfb7f616815b"
+        }
+      },
+      "png_size": [
+        3240,
+        2304
+      ],
+      "svg_png_exact_pixel_match": null,
+      "pdf_pages": 1,
+      "pdf_text_outside_page": [],
+      "manual_pdf_review": "INSPECTED_1600_PIXEL_WIDTH_FIRST_PASS",
+      "review_image_sha256": "ab7f66d70e39f707bd015c390c8549174df2db0d031b8097dd2c28cfcb9a7cd4"
+    },
+    {
+      "id": "SH-MAP-ARU-028",
+      "title": "Taylor warehouse / building program",
+      "kind": "building",
+      "site_id": "SH-IND-FAC-TAY-WAREHOUSE",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-028.svg",
+          "sha256": "821815de3046c8d3f6ce4526608a49fd29597a30ed829298a11a60ceaf83806e"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-028.png",
+          "sha256": "94c0a38f66ef9f2df50ddc6d7b221b33217bab3f1dda92b9edeb50f03230df6f"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-028.pdf",
+          "sha256": "28072430028f1b610cf4e8f725fd4821875056bdd87ffe60a0990bfdf207812a"
+        }
+      },
+      "png_size": [
+        3240,
+        2304
+      ],
+      "svg_png_exact_pixel_match": null,
+      "pdf_pages": 1,
+      "pdf_text_outside_page": [],
+      "manual_pdf_review": "INSPECTED_1600_PIXEL_WIDTH_FIRST_PASS",
+      "review_image_sha256": "946e62ffbb4ee7c4dc3534b269f45e0b76cb9de16eff23b04dcca1dde8949efb"
+    },
+    {
+      "id": "SH-MAP-ARU-029",
+      "title": "Taylor warehouse / Taylor warehouse \u2014 ground level",
+      "kind": "floor",
+      "site_id": "SH-IND-FAC-TAY-WAREHOUSE",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-029.svg",
+          "sha256": "fcccb60ee0c7408f9a8e0da60e7f7f9d39fb27512e7b1b37cf88521f31b2c5ee"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-029.png",
+          "sha256": "c6e4e4d39f14dcc6c7242f1ccccc5e19f6061c9bfb26f52ec9767fb034268873"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-029.pdf",
+          "sha256": "d98499253400d13636f4c31670180a20c7395d9db348d70eb19caa3540e86d5a"
+        }
+      },
+      "png_size": [
+        3240,
+        2304
+      ],
+      "svg_png_exact_pixel_match": null,
+      "pdf_pages": 1,
+      "pdf_text_outside_page": [],
+      "manual_pdf_review": "INSPECTED_1600_PIXEL_WIDTH_FIRST_PASS",
+      "review_image_sha256": "6aa9ff9ee424909cb02b2f0ef1108dacb306ad1747ebab3776a936ff266e871b"
+    },
+    {
+      "id": "SH-MAP-ARU-030",
+      "title": "Taylor trucking depot / master site plan",
+      "kind": "site",
+      "site_id": "SH-IND-FAC-TAY-TRUCK",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-030.svg",
+          "sha256": "061be45fa4b7013d8eae0efae8efa8949c4293eed69fa2746a3e2b96431a8297"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-030.png",
+          "sha256": "f9d8f0a58555004d22213a1c2f224f7e3c76b25a7b3f6547020519ce152d541b"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-030.pdf",
+          "sha256": "e570eadd4e686845adfdd5ab6c9c3f42da3b11fc27e5c477aed210cd56f40126"
+        }
+      },
+      "png_size": [
+        3240,
+        2304
+      ],
+      "svg_png_exact_pixel_match": null,
+      "pdf_pages": 1,
+      "pdf_text_outside_page": [],
+      "manual_pdf_review": "INSPECTED_1600_PIXEL_WIDTH_FIRST_PASS",
+      "review_image_sha256": "5785ef44a8a96b4b31c8a7a30b36d9901cb5e63617cefd7eb7c09d06590e56f0"
+    },
+    {
+      "id": "SH-MAP-ARU-031",
+      "title": "Inspection bays and dispatch / building program",
+      "kind": "building",
+      "site_id": "SH-IND-FAC-TAY-TRUCK",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-031.svg",
+          "sha256": "d51139c93f5dd8914e960a5123dc03ffee640701863850cac77891b76eba2fbf"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-031.png",
+          "sha256": "9b50d92826fde015065629eff48187e82f0a1636cb7946763656c16aef6cc918"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-031.pdf",
+          "sha256": "2dff2dd998e426d6a1814b3995341817305a49067fdb2f36172df359ea177a5c"
+        }
+      },
+      "png_size": [
+        3240,
+        2304
+      ],
+      "svg_png_exact_pixel_match": null,
+      "pdf_pages": 1,
+      "pdf_text_outside_page": [],
+      "manual_pdf_review": "INSPECTED_1600_PIXEL_WIDTH_FIRST_PASS",
+      "review_image_sha256": "58f0981e3dbe0ea8f12eb235f9b76188ecebfcc51541a7a96c7e780aee07a372"
+    },
+    {
+      "id": "SH-MAP-ARU-032",
+      "title": "Inspection bays and dispatch / Inspection bays and dispatch \u2014 ground level",
+      "kind": "floor",
+      "site_id": "SH-IND-FAC-TAY-TRUCK",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-032.svg",
+          "sha256": "5e3b47ea57a975d4e717fad2624dff831da2b6c62d2e075afa1dc6a1858bd7b1"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-032.png",
+          "sha256": "eec659d21ea6b1f4a672a97029f4ab04bda278ab0747d464c7778e8976dca55b"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-032.pdf",
+          "sha256": "674db4217d91ab492341e88e6a68d7213bade69a2304cb734190a2eea3319dba"
+        }
+      },
+      "png_size": [
+        3240,
+        2304
+      ],
+      "svg_png_exact_pixel_match": null,
+      "pdf_pages": 1,
+      "pdf_text_outside_page": [
+        "78.7402\u2032"
+      ],
+      "manual_pdf_review": "INSPECTED_1600_PIXEL_WIDTH_FIRST_PASS",
+      "review_image_sha256": "ed3eb24a47d24df213b1914e49c48129c37ed2367242d1162b79e6f5042971cb"
+    },
+    {
+      "id": "SH-MAP-ARU-033",
+      "title": "East Materials team track / master site plan",
+      "kind": "site",
+      "site_id": "SH-IND-FAC-EAST-MATERIALS",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-033.svg",
+          "sha256": "9abe3de4bd912244bf5cc9bb5e62692add6e3a47b024c369ef58ee1daa2e67cb"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-033.png",
+          "sha256": "73af22c1e67772e65298c2a059f15130faefec7bb2da0fc80366c5d76762b708"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-033.pdf",
+          "sha256": "6f3217054acea62af81bea9d959115e9b5914269cb0bddad4e98773a6ea3593c"
+        }
+      },
+      "png_size": [
+        3240,
+        2304
+      ],
+      "svg_png_exact_pixel_match": null,
+      "pdf_pages": 1,
+      "pdf_text_outside_page": [],
+      "manual_pdf_review": "INSPECTED_1600_PIXEL_WIDTH_FIRST_PASS",
+      "review_image_sha256": "e94044df837ddc76265f85b84515d8e8d77c118887333117266babebe62a1631"
+    },
+    {
+      "id": "SH-MAP-ARU-034",
+      "title": "Mineral Transfer team track / master site plan",
+      "kind": "site",
+      "site_id": "SH-IND-FAC-MINERAL-TEAM",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-034.svg",
+          "sha256": "60b3d76b14084b422252c6a31c41d0ebda07bafbdd5ab35b352ed0291167e252"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-034.png",
+          "sha256": "9c764a589cc95253ab1a16970a8de3c31e325274efe5e41cd0cef6568900f39f"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-034.pdf",
+          "sha256": "8583f78f07c380a25f3d76d968dbbfaf625a7f52e2f627257e228f514837ec6c"
+        }
+      },
+      "png_size": [
+        3240,
+        2304
+      ],
+      "svg_png_exact_pixel_match": null,
+      "pdf_pages": 1,
+      "pdf_text_outside_page": [],
+      "manual_pdf_review": "INSPECTED_1600_PIXEL_WIDTH_FIRST_PASS",
+      "review_image_sha256": "694d4b874743c58a2e2f985528e721602a337e930b316f0f3d50d45f420e24c9"
+    },
+    {
+      "id": "SH-MAP-ARU-035",
+      "title": "Rawlins satellite terminal / master site plan",
+      "kind": "site",
+      "site_id": "SH-IND-FAC-RAW-TERMINAL",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-035.svg",
+          "sha256": "d7597bccca4bcdd15a9dd625e05033f01babadc829fc6ce6ef462a8485063907"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-035.png",
+          "sha256": "54c42bde7b00070f6e0108d896c70d96a177ed1abc7a8cfd20c34638fc91bca7"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-035.pdf",
+          "sha256": "b948f2e24cf66fdaa7725db17236638e87235558b58c2736e06dd763457d2040"
+        }
+      },
+      "png_size": [
+        3240,
+        2304
+      ],
+      "svg_png_exact_pixel_match": null,
+      "pdf_pages": 1,
+      "pdf_text_outside_page": [],
+      "manual_pdf_review": "INSPECTED_1600_PIXEL_WIDTH_FIRST_PASS",
+      "review_image_sha256": "9597047c12ef2db26313d82736c2991424f55cb5c83027a921c4351b60db543c"
+    },
+    {
+      "id": "SH-MAP-ARU-036",
+      "title": "Rawlins warehouse / master site plan",
+      "kind": "site",
+      "site_id": "SH-IND-FAC-RAW-WAREHOUSE",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-036.svg",
+          "sha256": "8d8773a4b12a23be0c0971db1735a00a54a1e82b7f299b718bed9edd3c92ce39"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-036.png",
+          "sha256": "406376353d9350736e0847a55a3a40f45b6b23f581b2b28595c5b743bfca3228"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-036.pdf",
+          "sha256": "ee4c5b4f88b5ef9b0992a917ce7b8f634efb3184c00ffe9d3f93ac14626af79e"
+        }
+      },
+      "png_size": [
+        3240,
+        2304
+      ],
+      "svg_png_exact_pixel_match": null,
+      "pdf_pages": 1,
+      "pdf_text_outside_page": [],
+      "manual_pdf_review": "INSPECTED_1600_PIXEL_WIDTH_FIRST_PASS",
+      "review_image_sha256": "5515df5438833a112841b8ca1c89ebfab4736c767931c440b7be47be36c5a479"
+    },
+    {
+      "id": "SH-MAP-ARU-037",
+      "title": "Rawlins warehouse / building program",
+      "kind": "building",
+      "site_id": "SH-IND-FAC-RAW-WAREHOUSE",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-037.svg",
+          "sha256": "54c91837b232a3b57881c83ce1c9fe9ba466aeef77adda7acc2988e0fd782a95"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-037.png",
+          "sha256": "84bbe23a96e8c171fa888463e7691043f8a8f78c0eb500e2efecefe589761736"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-037.pdf",
+          "sha256": "807f85b27b27c004be805e03132bae04bec572a4d4219660335785e6e493422f"
+        }
+      },
+      "png_size": [
+        3240,
+        2304
+      ],
+      "svg_png_exact_pixel_match": null,
+      "pdf_pages": 1,
+      "pdf_text_outside_page": [],
+      "manual_pdf_review": "INSPECTED_1600_PIXEL_WIDTH_FIRST_PASS",
+      "review_image_sha256": "22f57c7a884ab986aa71b5d6bc8dd07dc7eb4f156c5ca81d6cc672b1a501b1df"
+    },
+    {
+      "id": "SH-MAP-ARU-038",
+      "title": "Rawlins warehouse / Rawlins warehouse \u2014 ground level",
+      "kind": "floor",
+      "site_id": "SH-IND-FAC-RAW-WAREHOUSE",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-038.svg",
+          "sha256": "6093421e5ff0042454e679d4cbd3e7babf8d95e306f288591e731feee1e3c746"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-038.png",
+          "sha256": "7337ae6b9b04b0b4de22d0e930a5fff0884c39a476e4581c0bdbd62c5c440c02"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-038.pdf",
+          "sha256": "ae8e3119007f6e475518cc6906e52b90830d60da7924cbc80fe4fb80a04ca452"
+        }
+      },
+      "png_size": [
+        3240,
+        2304
+      ],
+      "svg_png_exact_pixel_match": null,
+      "pdf_pages": 1,
+      "pdf_text_outside_page": [],
+      "manual_pdf_review": "INSPECTED_1600_PIXEL_WIDTH_FIRST_PASS",
+      "review_image_sha256": "f1c768efbee1b61c5c5b0b797d40b104c22b488a18a510d0800485fd89614d33"
+    },
+    {
+      "id": "SH-MAP-ARU-039",
+      "title": "Rawlins trucking satellite / master site plan",
+      "kind": "site",
+      "site_id": "SH-IND-FAC-RAW-TRUCK",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-039.svg",
+          "sha256": "148d03e7a592440667e66cfb2428add3b7d909a06474bb1787cb19543fd4a266"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-039.png",
+          "sha256": "0e6cf5562d762cc46161f78d96400a6cd440871133a06016d54b63e11ba981b7"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-039.pdf",
+          "sha256": "5528268f3433601f4e982f452c9c4319e173a5c438fa0084b7d7d959ca5fc988"
+        }
+      },
+      "png_size": [
+        3240,
+        2304
+      ],
+      "svg_png_exact_pixel_match": null,
+      "pdf_pages": 1,
+      "pdf_text_outside_page": [],
+      "manual_pdf_review": "INSPECTED_1600_PIXEL_WIDTH_FIRST_PASS",
+      "review_image_sha256": "f8a09bb01965e6e2f677223d2497bede0a08cb2deccb90c7ee5df019efe066ea"
+    },
+    {
+      "id": "SH-MAP-ARU-040",
+      "title": "Taylor ARU office / master site plan",
+      "kind": "site",
+      "site_id": "SH-IND-FAC-ARU-OFFICE",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-040.svg",
+          "sha256": "269d07beb41cc66901805465309c7f53d4e70b6f298b060976418bbdb18ecad2"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-040.png",
+          "sha256": "e0b7f036d4df81e619327114355dc8ef2021c993b2294fdec6ed04b11228d87b"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-040.pdf",
+          "sha256": "a81ceaf3e1b5d8dc1d2cd30fb1c75a14bd9a8493033d73d70de3b386560924e8"
+        }
+      },
+      "png_size": [
+        3240,
+        2304
+      ],
+      "svg_png_exact_pixel_match": null,
+      "pdf_pages": 1,
+      "pdf_text_outside_page": [],
+      "manual_pdf_review": "INSPECTED_1600_PIXEL_WIDTH_FIRST_PASS",
+      "review_image_sha256": "705a14fff933644f69a67874603851868d218f8208c5f009ffad325b782220c1"
+    },
+    {
+      "id": "SH-MAP-ARU-041",
+      "title": "ARU operating office / building program",
+      "kind": "building",
+      "site_id": "SH-IND-FAC-ARU-OFFICE",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-041.svg",
+          "sha256": "81121f996cdee1ec84f2dc94a3242fcdceefd0631371312a82b7499fe89141ae"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-041.png",
+          "sha256": "a912af13321291946fffe1ef1b38d713e40c66614193676dec025bd495b4f648"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-041.pdf",
+          "sha256": "99695d261a122d814ed5d915cdcf74e4775fda6c675d9158b884272c35e2d287"
+        }
+      },
+      "png_size": [
+        3240,
+        2304
+      ],
+      "svg_png_exact_pixel_match": null,
+      "pdf_pages": 1,
+      "pdf_text_outside_page": [],
+      "manual_pdf_review": "INSPECTED_1600_PIXEL_WIDTH_FIRST_PASS",
+      "review_image_sha256": "0ff166e37c425c43a584bcff94239149b7f48073d3804eba30dc91094f80f738"
+    },
+    {
+      "id": "SH-MAP-ARU-042",
+      "title": "ARU operating office / ARU operating office \u2014 ground level",
+      "kind": "floor",
+      "site_id": "SH-IND-FAC-ARU-OFFICE",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-042.svg",
+          "sha256": "21c9c1971b3ecc7432db84ffda9aa1cd50b2127ef54002ddc4fec66c50b121af"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-042.png",
+          "sha256": "cc990aa1218a4f601279f63591b36f6c9ca6dbec137a4d2fccc68ba1a370bd79"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-ARU-042.pdf",
+          "sha256": "4cc7a21d2d06cec75092bbd1598a38ccbec0609a1ec231e5440b4f799c9b48c2"
+        }
+      },
+      "png_size": [
+        3240,
+        2304
+      ],
+      "svg_png_exact_pixel_match": null,
+      "pdf_pages": 1,
+      "pdf_text_outside_page": [
+        "59.0551\u2032"
+      ],
+      "manual_pdf_review": "INSPECTED_1600_PIXEL_WIDTH_FIRST_PASS",
+      "review_image_sha256": "d30cf438c3d69769e1f7a2fd653cef2cbd957a9a73ce9e6ba307cb3d03b2f660"
+    },
+    {
+      "id": "SH-MAP-RWM-020",
+      "title": "Red Wash receiving and reagent storage / master site plan",
+      "kind": "site",
+      "site_id": "SH-IND-FAC-RW-RECEIVING",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-RWM-020.svg",
+          "sha256": "c8711533a05d500479eb1d3896844898cf889841f12e1ef38608741a1faccf04"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-RWM-020.png",
+          "sha256": "d0bfffac56e9be7ea7168c14996fdd3c6f6712575b58c537f87b0b645063d521"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-RWM-020.pdf",
+          "sha256": "eb1a8a48257204b7655d71f27a584ffe6c7535bb31a493da79d3e7e6c77b3acb"
+        }
+      },
+      "png_size": [
+        3240,
+        2304
+      ],
+      "svg_png_exact_pixel_match": null,
+      "pdf_pages": 1,
+      "pdf_text_outside_page": [],
+      "manual_pdf_review": "INSPECTED_1600_PIXEL_WIDTH_FIRST_PASS",
+      "review_image_sha256": "57e787118e7683b700cadf4398c3c395f6075c2175e2b385652724e414bed222"
+    },
+    {
+      "id": "SH-MAP-RWM-021",
+      "title": "Red Wash surface study envelope / master site plan",
+      "kind": "site",
+      "site_id": "SH-SITE-0006",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-RWM-021.svg",
+          "sha256": "e5f377e8f0d56dc69fa1999e93e24760a086e30cc37d23cbea8c3f6d8ef333e5"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-RWM-021.png",
+          "sha256": "73760480ec5da3ba47aeedc801a482e0aef8f401ede9ff37e2ba5d7ecb83b384"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-RWM-021.pdf",
+          "sha256": "e86ebcc24aa6664aba574e8594380a8439b42b1dc0f415e35b04024eee73dae0"
+        }
+      },
+      "png_size": [
+        3240,
+        2304
+      ],
+      "svg_png_exact_pixel_match": null,
+      "pdf_pages": 1,
+      "pdf_text_outside_page": [],
+      "manual_pdf_review": "INSPECTED_1600_PIXEL_WIDTH_FIRST_PASS",
+      "review_image_sha256": "72061a0a3aac019825a7ed559b72d2ce55890ea5fd3a09aa9f65068d7db782e2"
+    },
+    {
+      "id": "SH-MAP-WIL-020",
+      "title": "The Fort \u00b7 Willow research compound / master site plan",
+      "kind": "site",
+      "site_id": "SH-SITE-0003",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-020.svg",
+          "sha256": "8bb175987a57994c1ae25e86e75e9b4a068cb20e7cde98f897aca9ecb9f22ab5"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-020.png",
+          "sha256": "b1f3557f7de6d696b2f122d57bddb4b4921d273b0653d8cdb7a9eb4173af1a5f"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-020.pdf",
+          "sha256": "525d88a45ebab43cfb383e28fc3a8f2daea312f5485acedcc8f324a68a9ee302"
+        }
+      },
+      "png_size": [
+        3240,
+        2304
+      ],
+      "svg_png_exact_pixel_match": null,
+      "pdf_pages": 1,
+      "pdf_text_outside_page": [],
+      "manual_pdf_review": "INSPECTED_1600_PIXEL_WIDTH_FIRST_PASS",
+      "review_image_sha256": "61a7b092b1b3482e7db9dfdf71b0213c7643fd550096a4ad753f44a329ac3a96"
+    },
+    {
+      "id": "SH-MAP-WIL-021",
+      "title": "The Big Shed / building program",
+      "kind": "building",
+      "site_id": "SH-SITE-0003",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-021.svg",
+          "sha256": "6f7831c41e3fa58bce712535e2aefd7d37a70386b6d3e541b7c72a9cdf169528"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-021.png",
+          "sha256": "af7bc532de46f87534c78f122299e3ea62d0149a38da67ead679bafdce83fe38"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-021.pdf",
+          "sha256": "f7c2340aa31376804877db9398608149f51690bf95e76bc4bdff7aed3ac68eac"
+        }
+      },
+      "png_size": [
+        3240,
+        2304
+      ],
+      "svg_png_exact_pixel_match": null,
+      "pdf_pages": 1,
+      "pdf_text_outside_page": [],
+      "manual_pdf_review": "INSPECTED_1600_PIXEL_WIDTH_FIRST_PASS",
+      "review_image_sha256": "a458dd40fcf778a4829ccdde3765e07db8688f397672b477d276821b78119237"
+    },
+    {
+      "id": "SH-MAP-WIL-022",
+      "title": "The Big Shed / Research, integration and prototype work",
+      "kind": "floor",
+      "site_id": "SH-SITE-0003",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-022.svg",
+          "sha256": "667d380a5ab010be5ba1de3fdc79d9dc04601ed013d49272fd7641bf3a94a77e"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-022.png",
+          "sha256": "5ff74a560a2ca5f298146b3dc59f83f0499e63d1d40ca7e18e50e124cd358364"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-022.pdf",
+          "sha256": "e41485787fcbfa788d711be9a6ab573d82b73f38c490fdb6ea62a719541d706a"
+        }
+      },
+      "png_size": [
+        3240,
+        2304
+      ],
+      "svg_png_exact_pixel_match": null,
+      "pdf_pages": 1,
+      "pdf_text_outside_page": [
+        "98.4252\u2032"
+      ],
+      "manual_pdf_review": "INSPECTED_1600_PIXEL_WIDTH_FIRST_PASS",
+      "review_image_sha256": "4e3f907c20db8fc15341d072298a1a7a861b3585264a0f82a31bab66dee578f9"
+    },
+    {
+      "id": "SH-MAP-WIL-023",
+      "title": "The Small Shed / building program",
+      "kind": "building",
+      "site_id": "SH-SITE-0003",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-023.svg",
+          "sha256": "baa174b129787940a9e8b1f34551cd213201a7971cf765183e58827ed24c6755"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-023.png",
+          "sha256": "bc970e48ac442b51eb6b6644c665d41f9dd564271bed5948cd6a409d225c9063"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-023.pdf",
+          "sha256": "4ec817095af5f833eb292ef8158611892315a102137ad5f59c597db0b4216da4"
+        }
+      },
+      "png_size": [
+        3240,
+        2304
+      ],
+      "svg_png_exact_pixel_match": null,
+      "pdf_pages": 1,
+      "pdf_text_outside_page": [],
+      "manual_pdf_review": "INSPECTED_1600_PIXEL_WIDTH_FIRST_PASS",
+      "review_image_sha256": "f57a731a46c3848e7b8af1163363fe21ca2eb2deef511ec42c91f7126d694f37"
+    },
+    {
+      "id": "SH-MAP-WIL-024",
+      "title": "The Small Shed / Administrative work and visiting staff arrival",
+      "kind": "floor",
+      "site_id": "SH-SITE-0003",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-024.svg",
+          "sha256": "3119d88cf443ef82ba27549a8a57dd7bf80acd9e406a9ff651bad1364ee70164"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-024.png",
+          "sha256": "5dcd4b9684f0f44289578329460dd99568ab683ac26c346373455b7413278faa"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-024.pdf",
+          "sha256": "5761576ebbeb5c20d6dd1a7d7fa918c564d7a91c809d525ae78ccbaef5312bbe"
+        }
+      },
+      "png_size": [
+        3240,
+        2304
+      ],
+      "svg_png_exact_pixel_match": null,
+      "pdf_pages": 1,
+      "pdf_text_outside_page": [
+        "78.7402\u2032"
+      ],
+      "manual_pdf_review": "INSPECTED_1600_PIXEL_WIDTH_FIRST_PASS",
+      "review_image_sha256": "9bb9e9d663a473abae63b3993b647237572064d47a29ce096e9a8884f3e6e899"
+    },
+    {
+      "id": "SH-MAP-WIL-025",
+      "title": "The Small Shed / Six temporary guest rooms \u00b7 no permanent housing",
+      "kind": "floor",
+      "site_id": "SH-SITE-0003",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-025.svg",
+          "sha256": "2f7acd7c203c0ca6b4f86aa2730bb7f06f89ed0b1a5fc12036c32af9228eb84c"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-025.png",
+          "sha256": "257a60e57dd8b6357d08994768f8472ec3fa3ad7637a18af8847c3021c971a1f"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-025.pdf",
+          "sha256": "a3f1e84ab2b0bd5d705fba7aa0b3770c8871b99fe6f05f4d94ccf3e2aa0ad0a4"
+        }
+      },
+      "png_size": [
+        3240,
+        2304
+      ],
+      "svg_png_exact_pixel_match": null,
+      "pdf_pages": 1,
+      "pdf_text_outside_page": [
+        "78.7402\u2032"
+      ],
+      "manual_pdf_review": "INSPECTED_1600_PIXEL_WIDTH_FIRST_PASS",
+      "review_image_sha256": "95cbbd8dec5f8c2ec0acf8d8c2719277735741aa0a885f25fe16f3c9f2972e13"
+    },
+    {
+      "id": "SH-MAP-WIL-026",
+      "title": "The White Shed / building program",
+      "kind": "building",
+      "site_id": "SH-SITE-0003",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-026.svg",
+          "sha256": "6a89d7e24382ecb3cf37432a9516c094dbb9069a314f29f865fa05d76058d8f5"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-026.png",
+          "sha256": "f2679605b9c6602bf8a4138ee4e40c1139623d08f3e8830c643f0e1b8c2f5668"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-026.pdf",
+          "sha256": "3918d6b0d8239435ead40f90428cd32d15e3b366a1cae5e9fead5cf477c1454f"
+        }
+      },
+      "png_size": [
+        3240,
+        2304
+      ],
+      "svg_png_exact_pixel_match": null,
+      "pdf_pages": 1,
+      "pdf_text_outside_page": [],
+      "manual_pdf_review": "INSPECTED_1600_PIXEL_WIDTH_FIRST_PASS",
+      "review_image_sha256": "e090643c43b59107f740e800cb1d5f5e32050c70a84e374a4821d3defdb078dc"
+    },
+    {
+      "id": "SH-MAP-WIL-027",
+      "title": "The White Shed / Controlled intake, hold and equipment custody",
+      "kind": "floor",
+      "site_id": "SH-SITE-0003",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-027.svg",
+          "sha256": "1d7d863330b5ce6f9265ca0c78a379f945207b7c053c6ddd264e38d8b803051e"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-027.png",
+          "sha256": "3e40d428fb5aac68884f66f50f683577c5e561ce96e1404a0bd850b6233c8371"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-WIL-027.pdf",
+          "sha256": "59f3d67bb6aa54e79a1f7a300d4c0d73461214ab2958665141510af03dba32b8"
+        }
+      },
+      "png_size": [
+        3240,
+        2304
+      ],
+      "svg_png_exact_pixel_match": null,
+      "pdf_pages": 1,
+      "pdf_text_outside_page": [
+        "78.7402\u2032"
+      ],
+      "manual_pdf_review": "INSPECTED_1600_PIXEL_WIDTH_FIRST_PASS",
+      "review_image_sha256": "955571c12d9205725440a580037c41081c8f09c87de590c4ec872d656227b365"
+    },
+    {
+      "id": "SH-MAP-CRD-020",
+      "title": "Bedford \u00b7 recovery development center / master site plan",
+      "kind": "site",
+      "site_id": "SH-SITE-0005",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-020.svg",
+          "sha256": "77a0d2f94720ca1eb232774bff57fdffc3e35f7f0a3024576c1d8d20aa7a41f0"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-020.png",
+          "sha256": "c1e924fe440acae1a602b0f8f95b6ef5533c97126db53829aa3d83ba94bbd970"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-020.pdf",
+          "sha256": "854eb6f9d4d9222ded10e0fe8bbb900bf8d833a7672b06180ff18a2ada7844a3"
+        }
+      },
+      "png_size": [
+        3240,
+        2304
+      ],
+      "svg_png_exact_pixel_match": null,
+      "pdf_pages": 1,
+      "pdf_text_outside_page": [],
+      "manual_pdf_review": "INSPECTED_1600_PIXEL_WIDTH_FIRST_PASS",
+      "review_image_sha256": "8fde8637750dd0d6eedcc38aa7281cf848e62c7f11d87a9695935b41f356a00a"
+    },
+    {
+      "id": "SH-MAP-CRD-021",
+      "title": "Analytical and process development / building program",
+      "kind": "building",
+      "site_id": "SH-SITE-0005",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-021.svg",
+          "sha256": "638f388954bd03a2e5f8c0ed65828965c1ad2d48738f8acf92dc1cc3de9e473f"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-021.png",
+          "sha256": "0e0fe83d66dd9d46356b37502fc8b7803714f25c12b8fd512764d84d7004c3dc"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-021.pdf",
+          "sha256": "76ef880fffa35a7eeae68d10b3ad2de17e2ceb65950a985ce74203608a8a3c56"
+        }
+      },
+      "png_size": [
+        3240,
+        2304
+      ],
+      "svg_png_exact_pixel_match": null,
+      "pdf_pages": 1,
+      "pdf_text_outside_page": [],
+      "manual_pdf_review": "INSPECTED_1600_PIXEL_WIDTH_FIRST_PASS",
+      "review_image_sha256": "788073c0cef9fa37c4ac1709ba69ee800c44cda1c2f2b508572cd1e310b9cd93"
+    },
+    {
+      "id": "SH-MAP-CRD-022",
+      "title": "Analytical and process development / Analytical work and material genealogy",
+      "kind": "floor",
+      "site_id": "SH-SITE-0005",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-022.svg",
+          "sha256": "e2f0a4305002ccd5b0beb446f047ea5a75cf2669afc0f1608d6e2cb084728e31"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-022.png",
+          "sha256": "96165943ea895f9338d2cf9daefd3ac40ee599ccc2a9d2938a2626037815b059"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-022.pdf",
+          "sha256": "2c4bfdabcf04e89552536dec16f0c030e0f99863efe834e011ab2f3a0508a54f"
+        }
+      },
+      "png_size": [
+        3240,
+        2304
+      ],
+      "svg_png_exact_pixel_match": null,
+      "pdf_pages": 1,
+      "pdf_text_outside_page": [
+        "78.7402\u2032"
+      ],
+      "manual_pdf_review": "INSPECTED_1600_PIXEL_WIDTH_FIRST_PASS",
+      "review_image_sha256": "de7b5f45941c62458856fa6514572d2a43c29c6349af1de26ea1e5b7a613e24d"
+    },
+    {
+      "id": "SH-MAP-CRD-023",
+      "title": "Field-unit assembly and refurbishment / building program",
+      "kind": "building",
+      "site_id": "SH-SITE-0005",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-023.svg",
+          "sha256": "5b8d4d9de836350f7b0074987075cf921929eabbed5e0c901383cff44141f3a2"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-023.png",
+          "sha256": "0d93071711ebc71dff0387b660de9c093bad567848810194dce2a35927806390"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-023.pdf",
+          "sha256": "500e5388ee26fc7763213dd595e6dd152bfe9a202ab8cba648dcdd2e496e006a"
+        }
+      },
+      "png_size": [
+        3240,
+        2304
+      ],
+      "svg_png_exact_pixel_match": null,
+      "pdf_pages": 1,
+      "pdf_text_outside_page": [],
+      "manual_pdf_review": "INSPECTED_1600_PIXEL_WIDTH_FIRST_PASS",
+      "review_image_sha256": "45b893934e16812c838b74c694b0b870f10ef594da020aec9b301ed121909cc7"
+    },
+    {
+      "id": "SH-MAP-CRD-024",
+      "title": "Field-unit assembly and refurbishment / Assembly, maintenance and failure investigation",
+      "kind": "floor",
+      "site_id": "SH-SITE-0005",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-024.svg",
+          "sha256": "9aa72380135c88ea0a990e10593c2d109cae2320fee6312adc92532c51c79b64"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-024.png",
+          "sha256": "061f7518ccadfb72c6ddc8b6d9e10622feb783a7ec60fc16551eb65c0d83e27d"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-024.pdf",
+          "sha256": "d29a3ca996d92b407a6fc50de3b3cba32c6374f2de8c3e7364cc2671bad3d089"
+        }
+      },
+      "png_size": [
+        3240,
+        2304
+      ],
+      "svg_png_exact_pixel_match": null,
+      "pdf_pages": 1,
+      "pdf_text_outside_page": [
+        "98.4252\u2032"
+      ],
+      "manual_pdf_review": "INSPECTED_1600_PIXEL_WIDTH_FIRST_PASS",
+      "review_image_sha256": "d7ce9965707c4791773b47ffcc4944f0c9d3b2b7092c36999f417ba5592b62f9"
+    },
+    {
+      "id": "SH-MAP-CRD-025",
+      "title": "Intermediate upgrading and blending / building program",
+      "kind": "building",
+      "site_id": "SH-SITE-0005",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-025.svg",
+          "sha256": "5e4f8c92054353f5e5eb52d78ee1477576db94567e907f7dca8a53c48b845c28"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-025.png",
+          "sha256": "b5d7f665828c91504b9ec9d92e1d8a227c88162e556fd0ee7e4d56fe7300b197"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-025.pdf",
+          "sha256": "40524672da3a116208b1273cf54e3740d65aad38d362dd4c26994a6b42b04b23"
+        }
+      },
+      "png_size": [
+        3240,
+        2304
+      ],
+      "svg_png_exact_pixel_match": null,
+      "pdf_pages": 1,
+      "pdf_text_outside_page": [],
+      "manual_pdf_review": "INSPECTED_1600_PIXEL_WIDTH_FIRST_PASS",
+      "review_image_sha256": "db1cc79c528811a53adc837fbff0a8ae71e6c96bc1caa3a10a31a97e0c82b2c3"
+    },
+    {
+      "id": "SH-MAP-CRD-026",
+      "title": "Intermediate upgrading and blending / Bounded development and mixed-product upgrading",
+      "kind": "floor",
+      "site_id": "SH-SITE-0005",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-026.svg",
+          "sha256": "26cb99161d06383f5f8a050fb3c53088fa7f011091a5f8645e260a930934482e"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-026.png",
+          "sha256": "8a4ff205dae8f71c173c0039fd17bab235c20e1c7c919b34f587aaaa9feb60b3"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-026.pdf",
+          "sha256": "d48f5bb8bb1ba2c5c1d885bc00712ab04f15181b1e65c6c02ff85992bf74ab5e"
+        }
+      },
+      "png_size": [
+        3240,
+        2304
+      ],
+      "svg_png_exact_pixel_match": null,
+      "pdf_pages": 1,
+      "pdf_text_outside_page": [
+        "78.7402\u2032"
+      ],
+      "manual_pdf_review": "INSPECTED_1600_PIXEL_WIDTH_FIRST_PASS",
+      "review_image_sha256": "10f77da49d5aaf6c6015c258e5c67d59ca6951b2e058afa7adf246040b2db84a"
+    },
+    {
+      "id": "SH-MAP-CRD-027",
+      "title": "Material receipt and outbound logistics / building program",
+      "kind": "building",
+      "site_id": "SH-SITE-0005",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-027.svg",
+          "sha256": "1cb7c6624f148ef76987dfbbb7748fb98077a6a8266f7237bf23753be8c72ea8"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-027.png",
+          "sha256": "c95b0350791bf134a827d88726327eacda565227c066202624057b1738fa99f5"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-027.pdf",
+          "sha256": "c2f82c0d989dd8b1c38c37bdcbd061c3a8801909743ba40eae2d74fb67a89574"
+        }
+      },
+      "png_size": [
+        3240,
+        2304
+      ],
+      "svg_png_exact_pixel_match": null,
+      "pdf_pages": 1,
+      "pdf_text_outside_page": [],
+      "manual_pdf_review": "INSPECTED_1600_PIXEL_WIDTH_FIRST_PASS",
+      "review_image_sha256": "35a4cd0b84a401b2fe9b15ae2b46cfc93ee515bbb77312bf326e705975222bcb"
+    },
+    {
+      "id": "SH-MAP-CRD-028",
+      "title": "Material receipt and outbound logistics / Segregated custody, release and dispatch",
+      "kind": "floor",
+      "site_id": "SH-SITE-0005",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-028.svg",
+          "sha256": "61936c6cf316d57e1e00a4904fae40d0331e43996743c63f19e83b825bb8c966"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-028.png",
+          "sha256": "dfc43362da4161e1701ae4c64a340bf678f30a0495975993b4a3b3e3414f1c97"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-CRD-028.pdf",
+          "sha256": "dc91016216065fc67f6c8ca872bef49cfac00a808d4c2c1acaf20d0062e2fb1c"
+        }
+      },
+      "png_size": [
+        3240,
+        2304
+      ],
+      "svg_png_exact_pixel_match": null,
+      "pdf_pages": 1,
+      "pdf_text_outside_page": [
+        "78.7402\u2032"
+      ],
+      "manual_pdf_review": "INSPECTED_1600_PIXEL_WIDTH_FIRST_PASS",
+      "review_image_sha256": "567a6cbda4dd4880e9cc5adaf3efebf75f4d93db09b8438865fc370b2ccb6ceb"
+    }
+  ]
+}

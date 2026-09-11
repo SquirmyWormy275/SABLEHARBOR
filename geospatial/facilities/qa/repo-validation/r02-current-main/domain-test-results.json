@@ -1,0 +1,78 @@
+{
+  "source_commit": "237778d",
+  "scope": "Separate test processes preserve repository module namespaces; initial combined collection collided on duplicate test module basenames.",
+  "results": [
+    {
+      "name": "business-operations-tests",
+      "command": [
+        "/home/kingoftheeast/Projects/SABLEHARBOR-campus/.venv/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "enterprise/operations/tests",
+        "enterprise/business/tests",
+        "industrial/planning/tests"
+      ],
+      "exit_code": 0,
+      "seconds": 77.26,
+      "log": "business-operations-tests.log"
+    },
+    {
+      "name": "runtime-service-tests",
+      "command": [
+        "/home/kingoftheeast/Projects/SABLEHARBOR-campus/.venv/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "enterprise/runtime/tests",
+        "enterprise/services/tests"
+      ],
+      "exit_code": 0,
+      "seconds": 16.09,
+      "log": "runtime-service-tests.log"
+    },
+    {
+      "name": "industrial-tests",
+      "command": [
+        "/home/kingoftheeast/Projects/SABLEHARBOR-campus/.venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "industrial/tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "seconds": 1.03,
+      "log": "industrial-tests.log"
+    },
+    {
+      "name": "redwash-tests",
+      "command": [
+        "/home/kingoftheeast/Projects/SABLEHARBOR-campus/.venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "red_wash/tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "seconds": 0.98,
+      "log": "redwash-tests.log"
+    },
+    {
+      "name": "geospatial-tests",
+      "command": [
+        "/home/kingoftheeast/Projects/SABLEHARBOR-campus/.venv/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "geospatial/tests"
+      ],
+      "exit_code": 0,
+      "seconds": 13.22,
+      "log": "geospatial-tests.log"
+    }
+  ]
+}
