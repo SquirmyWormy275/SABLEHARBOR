@@ -2828,7 +2828,7 @@
       "status": "MODELLED_NOT_AS_BUILT",
       "structure": "6 m planning grid; slab/column sizes not engineered",
       "floor_height_m": 4.2,
-      "core_basis": "6 m end service bays; 3 m central corridor; protected stairs and lift stack unchanged",
+      "core_basis": "Single storey: two exterior exit routes, level accessible entry, end wet/service rooms; no stair or lift.",
       "floors": [
         {
           "id": "SH-SITE-0001-B06-L01",

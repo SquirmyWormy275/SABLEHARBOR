@@ -1084,7 +1084,7 @@
                 },
                 {
                   "id": "SH-IND-FAC-TAY-WAREHOUSE-B01-L01-R04",
-                  "name": "Inventory / customer desk / support reserve",
+                  "name": "Customer support",
                   "rect_m": [
                     146.304,
                     0,
@@ -1103,7 +1103,7 @@
                 },
                 {
                   "id": "SH-IND-FAC-TAY-WAREHOUSE-B01-L01-R05",
-                  "name": "Staff welfare and first aid / support reserve",
+                  "name": "Welfare reserve",
                   "rect_m": [
                     146.304,
                     26.67,
@@ -2253,7 +2253,7 @@
                 },
                 {
                   "id": "SH-IND-FAC-RAW-WAREHOUSE-B01-L01-R04",
-                  "name": "Inventory / customer desk / support reserve",
+                  "name": "Customer support",
                   "rect_m": [
                     73.152,
                     0,
@@ -2272,7 +2272,7 @@
                 },
                 {
                   "id": "SH-IND-FAC-RAW-WAREHOUSE-B01-L01-R05",
-                  "name": "Staff welfare and first aid / support reserve",
+                  "name": "Welfare reserve",
                   "rect_m": [
                     73.152,
                     19.05,

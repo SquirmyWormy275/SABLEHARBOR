@@ -43,7 +43,7 @@
       ],
       "site_zones": [
         {
-          "name": "Visitor arrival and controlled gate",
+          "name": "Arrival / gate",
           "rect_m": [
             25,
             15,
@@ -878,7 +878,7 @@
       ],
       "site_zones": [
         {
-          "name": "Visitor arrival and controlled gate",
+          "name": "Arrival / gate",
           "rect_m": [
             25,
             15,

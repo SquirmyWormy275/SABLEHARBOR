@@ -175,6 +175,7 @@ def campus_sheet(model, number=2):
         rect(b["rect_m"], INK)
         x, y, w, h = b["rect_m"]
         px, py = xy(x + 2, y + h - 5)
+        s.rect(px - 2, py - 15, max(35, len(b["id"].split("-")[-1]) * 10), 20, INK, "none")
         s.text(px, py, b["id"].split("-")[-1], 15, fill="white", weight="bold")
         if w * k > 140 and h * k > 65:
             for j, line in enumerate(textwrap.wrap(b["name"], max(10, int(w * k / 8)))[:2]):
@@ -186,7 +187,7 @@ def campus_sheet(model, number=2):
     s.text(845, 244, "N", 18, anchor="middle")
     s.line(75, 862, 75 + 50 * k, 862, INK, 4)
     s.text(75, 883, "0", 13)
-    s.text(75 + 50 * k, 883, "50 m", 13, anchor="end")
+    s.text(81 + 50 * k, 883, "50 m", 13)
     y = 265
     blocks = [
         (

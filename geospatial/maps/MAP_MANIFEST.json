@@ -393,10 +393,10 @@
     "review_status": "SEE_HASH_BOUND_FACILITY_QA",
     "source_scope": "GeoPackage is geographic context only. Facility source geometries remain illustrative local frames; no parcel geometry inserted.",
     "source_sha256": {
-      "geospatial/facilities/source/campus.json": "6b918b435a95c816c481200732bcc85cd07ee7526debec9643f7c705b37c2592",
-      "geospatial/facilities/source/industrial_facilities.json": "2c71a93885099d4353b8f392284fb5d5947d4ad7a8e79440dfd354404a94435d",
-      "geospatial/facilities/source/research_campuses.json": "6350a1c4e168089c4fee2035397303f221ae7a5f38fe16d42bebefd264052688",
-      "geospatial/facilities/render.py": "3cce30211d737adad494ab842a539da6d32b17da3884081403efad47fc2642c4",
+      "geospatial/facilities/source/campus.json": "41de327022a85cca9ba6509953e5fa83e0bf8dcbb59c6741848ad997a839cd26",
+      "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
+      "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
+      "geospatial/facilities/render.py": "8d921a67fd8b757edd1f5a10a6bd4f882350a92b8d945f6dc7e67303a6cb305e",
       "geospatial/registers/MAP_ID_REGISTER.json": "690ebe85bb199d6e863c0d28d268c7cc155574fceed6b38c19520e2e55aee61c"
     },
     "site_id": "SH-SITE-0001",
@@ -405,15 +405,15 @@
     "files": {
       "svg": {
         "path": "facilities/SH-MAP-SAC-002.svg",
-        "sha256": "8386fefa98e1ddb6ac2571d2eb3b3a8b9d87590e8e0718178a047981e20d774c"
+        "sha256": "fdd5d4b1a9caaffca15c65bcd8fe2e374a25dd88e118bd9770a2e97b1b4c89fb"
       },
       "png": {
         "path": "facilities/SH-MAP-SAC-002.png",
-        "sha256": "0d9c98073448f36bec35c1e38db2f7336a3fa9c500dcdbd6310de6496bf23f94"
+        "sha256": "647c2f4aec6cd60a57ed56f4910fa3e75f33b41a11ff8afb4e97f8f833433ee8"
       },
       "pdf": {
         "path": "facilities/SH-MAP-SAC-002.pdf",
-        "sha256": "3fce388ac4fed4c92c4fa756dbf94b5573492990a72e850ddb5bc70f3986def4"
+        "sha256": "0c6028fe98a24dce088e5aae89fbb964ebcf156cd7218d9769a5a570b40b3aa6"
       }
     }
   },
@@ -432,10 +432,10 @@
     "review_status": "SEE_HASH_BOUND_FACILITY_QA",
     "source_scope": "GeoPackage is geographic context only. Facility source geometries remain illustrative local frames; no parcel geometry inserted.",
     "source_sha256": {
-      "geospatial/facilities/source/campus.json": "6b918b435a95c816c481200732bcc85cd07ee7526debec9643f7c705b37c2592",
-      "geospatial/facilities/source/industrial_facilities.json": "2c71a93885099d4353b8f392284fb5d5947d4ad7a8e79440dfd354404a94435d",
-      "geospatial/facilities/source/research_campuses.json": "6350a1c4e168089c4fee2035397303f221ae7a5f38fe16d42bebefd264052688",
-      "geospatial/facilities/render.py": "3cce30211d737adad494ab842a539da6d32b17da3884081403efad47fc2642c4",
+      "geospatial/facilities/source/campus.json": "41de327022a85cca9ba6509953e5fa83e0bf8dcbb59c6741848ad997a839cd26",
+      "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
+      "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
+      "geospatial/facilities/render.py": "8d921a67fd8b757edd1f5a10a6bd4f882350a92b8d945f6dc7e67303a6cb305e",
       "geospatial/registers/MAP_ID_REGISTER.json": "690ebe85bb199d6e863c0d28d268c7cc155574fceed6b38c19520e2e55aee61c"
     },
     "site_id": "SH-SITE-0001",
@@ -471,10 +471,10 @@
     "review_status": "SEE_HASH_BOUND_FACILITY_QA",
     "source_scope": "GeoPackage is geographic context only. Facility source geometries remain illustrative local frames; no parcel geometry inserted.",
     "source_sha256": {
-      "geospatial/facilities/source/campus.json": "6b918b435a95c816c481200732bcc85cd07ee7526debec9643f7c705b37c2592",
-      "geospatial/facilities/source/industrial_facilities.json": "2c71a93885099d4353b8f392284fb5d5947d4ad7a8e79440dfd354404a94435d",
-      "geospatial/facilities/source/research_campuses.json": "6350a1c4e168089c4fee2035397303f221ae7a5f38fe16d42bebefd264052688",
-      "geospatial/facilities/render.py": "3cce30211d737adad494ab842a539da6d32b17da3884081403efad47fc2642c4",
+      "geospatial/facilities/source/campus.json": "41de327022a85cca9ba6509953e5fa83e0bf8dcbb59c6741848ad997a839cd26",
+      "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
+      "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
+      "geospatial/facilities/render.py": "8d921a67fd8b757edd1f5a10a6bd4f882350a92b8d945f6dc7e67303a6cb305e",
       "geospatial/registers/MAP_ID_REGISTER.json": "690ebe85bb199d6e863c0d28d268c7cc155574fceed6b38c19520e2e55aee61c"
     },
     "site_id": "SH-SITE-0001",
@@ -510,10 +510,10 @@
     "review_status": "SEE_HASH_BOUND_FACILITY_QA",
     "source_scope": "GeoPackage is geographic context only. Facility source geometries remain illustrative local frames; no parcel geometry inserted.",
     "source_sha256": {
-      "geospatial/facilities/source/campus.json": "6b918b435a95c816c481200732bcc85cd07ee7526debec9643f7c705b37c2592",
-      "geospatial/facilities/source/industrial_facilities.json": "2c71a93885099d4353b8f392284fb5d5947d4ad7a8e79440dfd354404a94435d",
-      "geospatial/facilities/source/research_campuses.json": "6350a1c4e168089c4fee2035397303f221ae7a5f38fe16d42bebefd264052688",
-      "geospatial/facilities/render.py": "3cce30211d737adad494ab842a539da6d32b17da3884081403efad47fc2642c4",
+      "geospatial/facilities/source/campus.json": "41de327022a85cca9ba6509953e5fa83e0bf8dcbb59c6741848ad997a839cd26",
+      "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
+      "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
+      "geospatial/facilities/render.py": "8d921a67fd8b757edd1f5a10a6bd4f882350a92b8d945f6dc7e67303a6cb305e",
       "geospatial/registers/MAP_ID_REGISTER.json": "690ebe85bb199d6e863c0d28d268c7cc155574fceed6b38c19520e2e55aee61c"
     },
     "site_id": "SH-SITE-0001",
@@ -549,10 +549,10 @@
     "review_status": "SEE_HASH_BOUND_FACILITY_QA",
     "source_scope": "GeoPackage is geographic context only. Facility source geometries remain illustrative local frames; no parcel geometry inserted.",
     "source_sha256": {
-      "geospatial/facilities/source/campus.json": "6b918b435a95c816c481200732bcc85cd07ee7526debec9643f7c705b37c2592",
-      "geospatial/facilities/source/industrial_facilities.json": "2c71a93885099d4353b8f392284fb5d5947d4ad7a8e79440dfd354404a94435d",
-      "geospatial/facilities/source/research_campuses.json": "6350a1c4e168089c4fee2035397303f221ae7a5f38fe16d42bebefd264052688",
-      "geospatial/facilities/render.py": "3cce30211d737adad494ab842a539da6d32b17da3884081403efad47fc2642c4",
+      "geospatial/facilities/source/campus.json": "41de327022a85cca9ba6509953e5fa83e0bf8dcbb59c6741848ad997a839cd26",
+      "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
+      "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
+      "geospatial/facilities/render.py": "8d921a67fd8b757edd1f5a10a6bd4f882350a92b8d945f6dc7e67303a6cb305e",
       "geospatial/registers/MAP_ID_REGISTER.json": "690ebe85bb199d6e863c0d28d268c7cc155574fceed6b38c19520e2e55aee61c"
     },
     "site_id": "SH-SITE-0001",
@@ -588,10 +588,10 @@
     "review_status": "SEE_HASH_BOUND_FACILITY_QA",
     "source_scope": "GeoPackage is geographic context only. Facility source geometries remain illustrative local frames; no parcel geometry inserted.",
     "source_sha256": {
-      "geospatial/facilities/source/campus.json": "6b918b435a95c816c481200732bcc85cd07ee7526debec9643f7c705b37c2592",
-      "geospatial/facilities/source/industrial_facilities.json": "2c71a93885099d4353b8f392284fb5d5947d4ad7a8e79440dfd354404a94435d",
-      "geospatial/facilities/source/research_campuses.json": "6350a1c4e168089c4fee2035397303f221ae7a5f38fe16d42bebefd264052688",
-      "geospatial/facilities/render.py": "3cce30211d737adad494ab842a539da6d32b17da3884081403efad47fc2642c4",
+      "geospatial/facilities/source/campus.json": "41de327022a85cca9ba6509953e5fa83e0bf8dcbb59c6741848ad997a839cd26",
+      "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
+      "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
+      "geospatial/facilities/render.py": "8d921a67fd8b757edd1f5a10a6bd4f882350a92b8d945f6dc7e67303a6cb305e",
       "geospatial/registers/MAP_ID_REGISTER.json": "690ebe85bb199d6e863c0d28d268c7cc155574fceed6b38c19520e2e55aee61c"
     },
     "site_id": "SH-SITE-0001",
@@ -627,10 +627,10 @@
     "review_status": "SEE_HASH_BOUND_FACILITY_QA",
     "source_scope": "GeoPackage is geographic context only. Facility source geometries remain illustrative local frames; no parcel geometry inserted.",
     "source_sha256": {
-      "geospatial/facilities/source/campus.json": "6b918b435a95c816c481200732bcc85cd07ee7526debec9643f7c705b37c2592",
-      "geospatial/facilities/source/industrial_facilities.json": "2c71a93885099d4353b8f392284fb5d5947d4ad7a8e79440dfd354404a94435d",
-      "geospatial/facilities/source/research_campuses.json": "6350a1c4e168089c4fee2035397303f221ae7a5f38fe16d42bebefd264052688",
-      "geospatial/facilities/render.py": "3cce30211d737adad494ab842a539da6d32b17da3884081403efad47fc2642c4",
+      "geospatial/facilities/source/campus.json": "41de327022a85cca9ba6509953e5fa83e0bf8dcbb59c6741848ad997a839cd26",
+      "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
+      "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
+      "geospatial/facilities/render.py": "8d921a67fd8b757edd1f5a10a6bd4f882350a92b8d945f6dc7e67303a6cb305e",
       "geospatial/registers/MAP_ID_REGISTER.json": "690ebe85bb199d6e863c0d28d268c7cc155574fceed6b38c19520e2e55aee61c"
     },
     "site_id": "SH-SITE-0001",
@@ -666,10 +666,10 @@
     "review_status": "SEE_HASH_BOUND_FACILITY_QA",
     "source_scope": "GeoPackage is geographic context only. Facility source geometries remain illustrative local frames; no parcel geometry inserted.",
     "source_sha256": {
-      "geospatial/facilities/source/campus.json": "6b918b435a95c816c481200732bcc85cd07ee7526debec9643f7c705b37c2592",
-      "geospatial/facilities/source/industrial_facilities.json": "2c71a93885099d4353b8f392284fb5d5947d4ad7a8e79440dfd354404a94435d",
-      "geospatial/facilities/source/research_campuses.json": "6350a1c4e168089c4fee2035397303f221ae7a5f38fe16d42bebefd264052688",
-      "geospatial/facilities/render.py": "3cce30211d737adad494ab842a539da6d32b17da3884081403efad47fc2642c4",
+      "geospatial/facilities/source/campus.json": "41de327022a85cca9ba6509953e5fa83e0bf8dcbb59c6741848ad997a839cd26",
+      "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
+      "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
+      "geospatial/facilities/render.py": "8d921a67fd8b757edd1f5a10a6bd4f882350a92b8d945f6dc7e67303a6cb305e",
       "geospatial/registers/MAP_ID_REGISTER.json": "690ebe85bb199d6e863c0d28d268c7cc155574fceed6b38c19520e2e55aee61c"
     },
     "site_id": "SH-SITE-0001",
@@ -705,10 +705,10 @@
     "review_status": "SEE_HASH_BOUND_FACILITY_QA",
     "source_scope": "GeoPackage is geographic context only. Facility source geometries remain illustrative local frames; no parcel geometry inserted.",
     "source_sha256": {
-      "geospatial/facilities/source/campus.json": "6b918b435a95c816c481200732bcc85cd07ee7526debec9643f7c705b37c2592",
-      "geospatial/facilities/source/industrial_facilities.json": "2c71a93885099d4353b8f392284fb5d5947d4ad7a8e79440dfd354404a94435d",
-      "geospatial/facilities/source/research_campuses.json": "6350a1c4e168089c4fee2035397303f221ae7a5f38fe16d42bebefd264052688",
-      "geospatial/facilities/render.py": "3cce30211d737adad494ab842a539da6d32b17da3884081403efad47fc2642c4",
+      "geospatial/facilities/source/campus.json": "41de327022a85cca9ba6509953e5fa83e0bf8dcbb59c6741848ad997a839cd26",
+      "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
+      "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
+      "geospatial/facilities/render.py": "8d921a67fd8b757edd1f5a10a6bd4f882350a92b8d945f6dc7e67303a6cb305e",
       "geospatial/registers/MAP_ID_REGISTER.json": "690ebe85bb199d6e863c0d28d268c7cc155574fceed6b38c19520e2e55aee61c"
     },
     "site_id": "SH-SITE-0001",
@@ -744,10 +744,10 @@
     "review_status": "SEE_HASH_BOUND_FACILITY_QA",
     "source_scope": "GeoPackage is geographic context only. Facility source geometries remain illustrative local frames; no parcel geometry inserted.",
     "source_sha256": {
-      "geospatial/facilities/source/campus.json": "6b918b435a95c816c481200732bcc85cd07ee7526debec9643f7c705b37c2592",
-      "geospatial/facilities/source/industrial_facilities.json": "2c71a93885099d4353b8f392284fb5d5947d4ad7a8e79440dfd354404a94435d",
-      "geospatial/facilities/source/research_campuses.json": "6350a1c4e168089c4fee2035397303f221ae7a5f38fe16d42bebefd264052688",
-      "geospatial/facilities/render.py": "3cce30211d737adad494ab842a539da6d32b17da3884081403efad47fc2642c4",
+      "geospatial/facilities/source/campus.json": "41de327022a85cca9ba6509953e5fa83e0bf8dcbb59c6741848ad997a839cd26",
+      "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
+      "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
+      "geospatial/facilities/render.py": "8d921a67fd8b757edd1f5a10a6bd4f882350a92b8d945f6dc7e67303a6cb305e",
       "geospatial/registers/MAP_ID_REGISTER.json": "690ebe85bb199d6e863c0d28d268c7cc155574fceed6b38c19520e2e55aee61c"
     },
     "site_id": "SH-SITE-0001",
@@ -783,10 +783,10 @@
     "review_status": "SEE_HASH_BOUND_FACILITY_QA",
     "source_scope": "GeoPackage is geographic context only. Facility source geometries remain illustrative local frames; no parcel geometry inserted.",
     "source_sha256": {
-      "geospatial/facilities/source/campus.json": "6b918b435a95c816c481200732bcc85cd07ee7526debec9643f7c705b37c2592",
-      "geospatial/facilities/source/industrial_facilities.json": "2c71a93885099d4353b8f392284fb5d5947d4ad7a8e79440dfd354404a94435d",
-      "geospatial/facilities/source/research_campuses.json": "6350a1c4e168089c4fee2035397303f221ae7a5f38fe16d42bebefd264052688",
-      "geospatial/facilities/render.py": "3cce30211d737adad494ab842a539da6d32b17da3884081403efad47fc2642c4",
+      "geospatial/facilities/source/campus.json": "41de327022a85cca9ba6509953e5fa83e0bf8dcbb59c6741848ad997a839cd26",
+      "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
+      "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
+      "geospatial/facilities/render.py": "8d921a67fd8b757edd1f5a10a6bd4f882350a92b8d945f6dc7e67303a6cb305e",
       "geospatial/registers/MAP_ID_REGISTER.json": "690ebe85bb199d6e863c0d28d268c7cc155574fceed6b38c19520e2e55aee61c"
     },
     "site_id": "SH-SITE-0001",
@@ -822,10 +822,10 @@
     "review_status": "SEE_HASH_BOUND_FACILITY_QA",
     "source_scope": "GeoPackage is geographic context only. Facility source geometries remain illustrative local frames; no parcel geometry inserted.",
     "source_sha256": {
-      "geospatial/facilities/source/campus.json": "6b918b435a95c816c481200732bcc85cd07ee7526debec9643f7c705b37c2592",
-      "geospatial/facilities/source/industrial_facilities.json": "2c71a93885099d4353b8f392284fb5d5947d4ad7a8e79440dfd354404a94435d",
-      "geospatial/facilities/source/research_campuses.json": "6350a1c4e168089c4fee2035397303f221ae7a5f38fe16d42bebefd264052688",
-      "geospatial/facilities/render.py": "3cce30211d737adad494ab842a539da6d32b17da3884081403efad47fc2642c4",
+      "geospatial/facilities/source/campus.json": "41de327022a85cca9ba6509953e5fa83e0bf8dcbb59c6741848ad997a839cd26",
+      "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
+      "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
+      "geospatial/facilities/render.py": "8d921a67fd8b757edd1f5a10a6bd4f882350a92b8d945f6dc7e67303a6cb305e",
       "geospatial/registers/MAP_ID_REGISTER.json": "690ebe85bb199d6e863c0d28d268c7cc155574fceed6b38c19520e2e55aee61c"
     },
     "site_id": "SH-SITE-0001",
@@ -861,10 +861,10 @@
     "review_status": "SEE_HASH_BOUND_FACILITY_QA",
     "source_scope": "GeoPackage is geographic context only. Facility source geometries remain illustrative local frames; no parcel geometry inserted.",
     "source_sha256": {
-      "geospatial/facilities/source/campus.json": "6b918b435a95c816c481200732bcc85cd07ee7526debec9643f7c705b37c2592",
-      "geospatial/facilities/source/industrial_facilities.json": "2c71a93885099d4353b8f392284fb5d5947d4ad7a8e79440dfd354404a94435d",
-      "geospatial/facilities/source/research_campuses.json": "6350a1c4e168089c4fee2035397303f221ae7a5f38fe16d42bebefd264052688",
-      "geospatial/facilities/render.py": "3cce30211d737adad494ab842a539da6d32b17da3884081403efad47fc2642c4",
+      "geospatial/facilities/source/campus.json": "41de327022a85cca9ba6509953e5fa83e0bf8dcbb59c6741848ad997a839cd26",
+      "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
+      "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
+      "geospatial/facilities/render.py": "8d921a67fd8b757edd1f5a10a6bd4f882350a92b8d945f6dc7e67303a6cb305e",
       "geospatial/registers/MAP_ID_REGISTER.json": "690ebe85bb199d6e863c0d28d268c7cc155574fceed6b38c19520e2e55aee61c"
     },
     "site_id": "SH-SITE-0001",
@@ -900,10 +900,10 @@
     "review_status": "SEE_HASH_BOUND_FACILITY_QA",
     "source_scope": "GeoPackage is geographic context only. Facility source geometries remain illustrative local frames; no parcel geometry inserted.",
     "source_sha256": {
-      "geospatial/facilities/source/campus.json": "6b918b435a95c816c481200732bcc85cd07ee7526debec9643f7c705b37c2592",
-      "geospatial/facilities/source/industrial_facilities.json": "2c71a93885099d4353b8f392284fb5d5947d4ad7a8e79440dfd354404a94435d",
-      "geospatial/facilities/source/research_campuses.json": "6350a1c4e168089c4fee2035397303f221ae7a5f38fe16d42bebefd264052688",
-      "geospatial/facilities/render.py": "3cce30211d737adad494ab842a539da6d32b17da3884081403efad47fc2642c4",
+      "geospatial/facilities/source/campus.json": "41de327022a85cca9ba6509953e5fa83e0bf8dcbb59c6741848ad997a839cd26",
+      "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
+      "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
+      "geospatial/facilities/render.py": "8d921a67fd8b757edd1f5a10a6bd4f882350a92b8d945f6dc7e67303a6cb305e",
       "geospatial/registers/MAP_ID_REGISTER.json": "690ebe85bb199d6e863c0d28d268c7cc155574fceed6b38c19520e2e55aee61c"
     },
     "site_id": "SH-SITE-0001",
@@ -939,10 +939,10 @@
     "review_status": "SEE_HASH_BOUND_FACILITY_QA",
     "source_scope": "GeoPackage is geographic context only. Facility source geometries remain illustrative local frames; no parcel geometry inserted.",
     "source_sha256": {
-      "geospatial/facilities/source/campus.json": "6b918b435a95c816c481200732bcc85cd07ee7526debec9643f7c705b37c2592",
-      "geospatial/facilities/source/industrial_facilities.json": "2c71a93885099d4353b8f392284fb5d5947d4ad7a8e79440dfd354404a94435d",
-      "geospatial/facilities/source/research_campuses.json": "6350a1c4e168089c4fee2035397303f221ae7a5f38fe16d42bebefd264052688",
-      "geospatial/facilities/render.py": "3cce30211d737adad494ab842a539da6d32b17da3884081403efad47fc2642c4",
+      "geospatial/facilities/source/campus.json": "41de327022a85cca9ba6509953e5fa83e0bf8dcbb59c6741848ad997a839cd26",
+      "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
+      "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
+      "geospatial/facilities/render.py": "8d921a67fd8b757edd1f5a10a6bd4f882350a92b8d945f6dc7e67303a6cb305e",
       "geospatial/registers/MAP_ID_REGISTER.json": "690ebe85bb199d6e863c0d28d268c7cc155574fceed6b38c19520e2e55aee61c"
     },
     "site_id": "SH-SITE-0001",
@@ -978,10 +978,10 @@
     "review_status": "SEE_HASH_BOUND_FACILITY_QA",
     "source_scope": "GeoPackage is geographic context only. Facility source geometries remain illustrative local frames; no parcel geometry inserted.",
     "source_sha256": {
-      "geospatial/facilities/source/campus.json": "6b918b435a95c816c481200732bcc85cd07ee7526debec9643f7c705b37c2592",
-      "geospatial/facilities/source/industrial_facilities.json": "2c71a93885099d4353b8f392284fb5d5947d4ad7a8e79440dfd354404a94435d",
-      "geospatial/facilities/source/research_campuses.json": "6350a1c4e168089c4fee2035397303f221ae7a5f38fe16d42bebefd264052688",
-      "geospatial/facilities/render.py": "3cce30211d737adad494ab842a539da6d32b17da3884081403efad47fc2642c4",
+      "geospatial/facilities/source/campus.json": "41de327022a85cca9ba6509953e5fa83e0bf8dcbb59c6741848ad997a839cd26",
+      "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
+      "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
+      "geospatial/facilities/render.py": "8d921a67fd8b757edd1f5a10a6bd4f882350a92b8d945f6dc7e67303a6cb305e",
       "geospatial/registers/MAP_ID_REGISTER.json": "690ebe85bb199d6e863c0d28d268c7cc155574fceed6b38c19520e2e55aee61c"
     },
     "site_id": "SH-SITE-0001",
@@ -1017,10 +1017,10 @@
     "review_status": "SEE_HASH_BOUND_FACILITY_QA",
     "source_scope": "GeoPackage is geographic context only. Facility source geometries remain illustrative local frames; no parcel geometry inserted.",
     "source_sha256": {
-      "geospatial/facilities/source/campus.json": "6b918b435a95c816c481200732bcc85cd07ee7526debec9643f7c705b37c2592",
-      "geospatial/facilities/source/industrial_facilities.json": "2c71a93885099d4353b8f392284fb5d5947d4ad7a8e79440dfd354404a94435d",
-      "geospatial/facilities/source/research_campuses.json": "6350a1c4e168089c4fee2035397303f221ae7a5f38fe16d42bebefd264052688",
-      "geospatial/facilities/render.py": "3cce30211d737adad494ab842a539da6d32b17da3884081403efad47fc2642c4",
+      "geospatial/facilities/source/campus.json": "41de327022a85cca9ba6509953e5fa83e0bf8dcbb59c6741848ad997a839cd26",
+      "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
+      "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
+      "geospatial/facilities/render.py": "8d921a67fd8b757edd1f5a10a6bd4f882350a92b8d945f6dc7e67303a6cb305e",
       "geospatial/registers/MAP_ID_REGISTER.json": "690ebe85bb199d6e863c0d28d268c7cc155574fceed6b38c19520e2e55aee61c"
     },
     "site_id": "SH-SITE-0001",
@@ -1056,10 +1056,10 @@
     "review_status": "SEE_HASH_BOUND_FACILITY_QA",
     "source_scope": "GeoPackage is geographic context only. Facility source geometries remain illustrative local frames; no parcel geometry inserted.",
     "source_sha256": {
-      "geospatial/facilities/source/campus.json": "6b918b435a95c816c481200732bcc85cd07ee7526debec9643f7c705b37c2592",
-      "geospatial/facilities/source/industrial_facilities.json": "2c71a93885099d4353b8f392284fb5d5947d4ad7a8e79440dfd354404a94435d",
-      "geospatial/facilities/source/research_campuses.json": "6350a1c4e168089c4fee2035397303f221ae7a5f38fe16d42bebefd264052688",
-      "geospatial/facilities/render.py": "3cce30211d737adad494ab842a539da6d32b17da3884081403efad47fc2642c4",
+      "geospatial/facilities/source/campus.json": "41de327022a85cca9ba6509953e5fa83e0bf8dcbb59c6741848ad997a839cd26",
+      "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
+      "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
+      "geospatial/facilities/render.py": "8d921a67fd8b757edd1f5a10a6bd4f882350a92b8d945f6dc7e67303a6cb305e",
       "geospatial/registers/MAP_ID_REGISTER.json": "690ebe85bb199d6e863c0d28d268c7cc155574fceed6b38c19520e2e55aee61c"
     },
     "site_id": "SH-SITE-0001",
@@ -1095,10 +1095,10 @@
     "review_status": "SEE_HASH_BOUND_FACILITY_QA",
     "source_scope": "GeoPackage is geographic context only. Facility source geometries remain illustrative local frames; no parcel geometry inserted.",
     "source_sha256": {
-      "geospatial/facilities/source/campus.json": "6b918b435a95c816c481200732bcc85cd07ee7526debec9643f7c705b37c2592",
-      "geospatial/facilities/source/industrial_facilities.json": "2c71a93885099d4353b8f392284fb5d5947d4ad7a8e79440dfd354404a94435d",
-      "geospatial/facilities/source/research_campuses.json": "6350a1c4e168089c4fee2035397303f221ae7a5f38fe16d42bebefd264052688",
-      "geospatial/facilities/render.py": "3cce30211d737adad494ab842a539da6d32b17da3884081403efad47fc2642c4",
+      "geospatial/facilities/source/campus.json": "41de327022a85cca9ba6509953e5fa83e0bf8dcbb59c6741848ad997a839cd26",
+      "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
+      "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
+      "geospatial/facilities/render.py": "8d921a67fd8b757edd1f5a10a6bd4f882350a92b8d945f6dc7e67303a6cb305e",
       "geospatial/registers/MAP_ID_REGISTER.json": "690ebe85bb199d6e863c0d28d268c7cc155574fceed6b38c19520e2e55aee61c"
     },
     "site_id": "SH-SITE-0001",
@@ -1107,15 +1107,15 @@
     "files": {
       "svg": {
         "path": "facilities/SH-MAP-SAC-020.svg",
-        "sha256": "24d9f51ae3d86246f20b0178c0b97bd88a4e2fdf2cec1dc005f2cdba1e339585"
+        "sha256": "77334cccb8f5f802ea5471c0e1d048a8876dcbff73e2a5ef6d36bc24bd16fbcc"
       },
       "png": {
         "path": "facilities/SH-MAP-SAC-020.png",
-        "sha256": "bb4af9c24758d964c8d0e7add5fd7bb3d098ac3ddab604d52f161571d05833e8"
+        "sha256": "825e858d59b0341855e688fe95e817960086953df7364ab312fdf4f85f6dfcb7"
       },
       "pdf": {
         "path": "facilities/SH-MAP-SAC-020.pdf",
-        "sha256": "531ba9219275f7d27f4fac3e731aadaaa350bdc80c87b53d2e8a8d548736d8e2"
+        "sha256": "655c7b1e421379f806507fda3f9585d31a55c8523d8d60af00d096c10ba4cf00"
       }
     }
   },
@@ -1134,10 +1134,10 @@
     "review_status": "SEE_HASH_BOUND_FACILITY_QA",
     "source_scope": "GeoPackage is geographic context only. Facility source geometries remain illustrative local frames; no parcel geometry inserted.",
     "source_sha256": {
-      "geospatial/facilities/source/campus.json": "6b918b435a95c816c481200732bcc85cd07ee7526debec9643f7c705b37c2592",
-      "geospatial/facilities/source/industrial_facilities.json": "2c71a93885099d4353b8f392284fb5d5947d4ad7a8e79440dfd354404a94435d",
-      "geospatial/facilities/source/research_campuses.json": "6350a1c4e168089c4fee2035397303f221ae7a5f38fe16d42bebefd264052688",
-      "geospatial/facilities/render.py": "3cce30211d737adad494ab842a539da6d32b17da3884081403efad47fc2642c4",
+      "geospatial/facilities/source/campus.json": "41de327022a85cca9ba6509953e5fa83e0bf8dcbb59c6741848ad997a839cd26",
+      "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
+      "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
+      "geospatial/facilities/render.py": "8d921a67fd8b757edd1f5a10a6bd4f882350a92b8d945f6dc7e67303a6cb305e",
       "geospatial/registers/MAP_ID_REGISTER.json": "690ebe85bb199d6e863c0d28d268c7cc155574fceed6b38c19520e2e55aee61c"
     },
     "site_id": "SH-SITE-0001",
@@ -1154,7 +1154,7 @@
       },
       "pdf": {
         "path": "facilities/SH-MAP-SAC-021.pdf",
-        "sha256": "bdf8748af02ebb57091d180393a7cec2ee20f3a70ebafbd748806e3e0f8b7460"
+        "sha256": "3e67b862e7d10a210523576889bcad0044f74e1f0aa426ec2e433730655336d6"
       }
     }
   },
@@ -1173,10 +1173,10 @@
     "review_status": "SEE_HASH_BOUND_FACILITY_QA",
     "source_scope": "GeoPackage is geographic context only. Facility source geometries remain illustrative local frames; no parcel geometry inserted.",
     "source_sha256": {
-      "geospatial/facilities/source/campus.json": "6b918b435a95c816c481200732bcc85cd07ee7526debec9643f7c705b37c2592",
-      "geospatial/facilities/source/industrial_facilities.json": "2c71a93885099d4353b8f392284fb5d5947d4ad7a8e79440dfd354404a94435d",
-      "geospatial/facilities/source/research_campuses.json": "6350a1c4e168089c4fee2035397303f221ae7a5f38fe16d42bebefd264052688",
-      "geospatial/facilities/render.py": "3cce30211d737adad494ab842a539da6d32b17da3884081403efad47fc2642c4",
+      "geospatial/facilities/source/campus.json": "41de327022a85cca9ba6509953e5fa83e0bf8dcbb59c6741848ad997a839cd26",
+      "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
+      "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
+      "geospatial/facilities/render.py": "8d921a67fd8b757edd1f5a10a6bd4f882350a92b8d945f6dc7e67303a6cb305e",
       "geospatial/registers/MAP_ID_REGISTER.json": "690ebe85bb199d6e863c0d28d268c7cc155574fceed6b38c19520e2e55aee61c"
     },
     "site_id": "SH-SITE-0001",
@@ -1193,7 +1193,7 @@
       },
       "pdf": {
         "path": "facilities/SH-MAP-SAC-022.pdf",
-        "sha256": "6160ff418245c510057049a9062becfe4f67e1345b03be4b91d7ae2efae23e73"
+        "sha256": "81e74af7bb7a2a04d8990c2efa57227351b6fa628ba5c7e0d4f67285fb7993fc"
       }
     }
   },
@@ -1212,10 +1212,10 @@
     "review_status": "SEE_HASH_BOUND_FACILITY_QA",
     "source_scope": "GeoPackage is geographic context only. Facility source geometries remain illustrative local frames; no parcel geometry inserted.",
     "source_sha256": {
-      "geospatial/facilities/source/campus.json": "6b918b435a95c816c481200732bcc85cd07ee7526debec9643f7c705b37c2592",
-      "geospatial/facilities/source/industrial_facilities.json": "2c71a93885099d4353b8f392284fb5d5947d4ad7a8e79440dfd354404a94435d",
-      "geospatial/facilities/source/research_campuses.json": "6350a1c4e168089c4fee2035397303f221ae7a5f38fe16d42bebefd264052688",
-      "geospatial/facilities/render.py": "3cce30211d737adad494ab842a539da6d32b17da3884081403efad47fc2642c4",
+      "geospatial/facilities/source/campus.json": "41de327022a85cca9ba6509953e5fa83e0bf8dcbb59c6741848ad997a839cd26",
+      "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
+      "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
+      "geospatial/facilities/render.py": "8d921a67fd8b757edd1f5a10a6bd4f882350a92b8d945f6dc7e67303a6cb305e",
       "geospatial/registers/MAP_ID_REGISTER.json": "690ebe85bb199d6e863c0d28d268c7cc155574fceed6b38c19520e2e55aee61c"
     },
     "site_id": "SH-IND-FAC-WAM-INT",
@@ -1224,15 +1224,15 @@
     "files": {
       "svg": {
         "path": "facilities/SH-MAP-ARU-020.svg",
-        "sha256": "b58b3d6e398ad45d2be52d390cb88e8fc74863b12086dc6aae5d04bbcccf24e4"
+        "sha256": "0812a86acabfdb8e166b10d4cde17fca63ebaa76f7797bcfc4c1648e1d6a65dc"
       },
       "png": {
         "path": "facilities/SH-MAP-ARU-020.png",
-        "sha256": "2c6685fe7bbf310736bcd4222b5587bddae1af4c976c4b53c79be9aa96387e95"
+        "sha256": "210c87abbb8b7540cc12607ec3b7d222ec86b34e2207f0454d3bb198bc52e663"
       },
       "pdf": {
         "path": "facilities/SH-MAP-ARU-020.pdf",
-        "sha256": "a4b529b5d41f89f698e909b00acf0e745d2e72e08e8601db110125366f45112e"
+        "sha256": "3900732f00c7f4ebee7f691398cc23315e1b86a633a3f53cac0ad9dacfabecf4"
       }
     }
   },
@@ -1251,10 +1251,10 @@
     "review_status": "SEE_HASH_BOUND_FACILITY_QA",
     "source_scope": "GeoPackage is geographic context only. Facility source geometries remain illustrative local frames; no parcel geometry inserted.",
     "source_sha256": {
-      "geospatial/facilities/source/campus.json": "6b918b435a95c816c481200732bcc85cd07ee7526debec9643f7c705b37c2592",
-      "geospatial/facilities/source/industrial_facilities.json": "2c71a93885099d4353b8f392284fb5d5947d4ad7a8e79440dfd354404a94435d",
-      "geospatial/facilities/source/research_campuses.json": "6350a1c4e168089c4fee2035397303f221ae7a5f38fe16d42bebefd264052688",
-      "geospatial/facilities/render.py": "3cce30211d737adad494ab842a539da6d32b17da3884081403efad47fc2642c4",
+      "geospatial/facilities/source/campus.json": "41de327022a85cca9ba6509953e5fa83e0bf8dcbb59c6741848ad997a839cd26",
+      "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
+      "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
+      "geospatial/facilities/render.py": "8d921a67fd8b757edd1f5a10a6bd4f882350a92b8d945f6dc7e67303a6cb305e",
       "geospatial/registers/MAP_ID_REGISTER.json": "690ebe85bb199d6e863c0d28d268c7cc155574fceed6b38c19520e2e55aee61c"
     },
     "site_id": "SH-IND-FAC-TAY-YARD",
@@ -1263,15 +1263,15 @@
     "files": {
       "svg": {
         "path": "facilities/SH-MAP-ARU-021.svg",
-        "sha256": "806c99307b1131b3b003675267c958bf7f61a6dbaa73f1611f86c4846c7d5c5e"
+        "sha256": "8d18e88d1eb4a59a437343489812d03d4b5ad9c8d7e4f256c3fec9a2bcdc07b0"
       },
       "png": {
         "path": "facilities/SH-MAP-ARU-021.png",
-        "sha256": "2d6a9c375adbeedc58d54753dd4a78c2c9ca6d7823c53fdad9b971c5efc2b7f1"
+        "sha256": "2058d57c5fe6af523401a42d61dedd217b3439e50e3f5c5143fd8c9b5affe3ff"
       },
       "pdf": {
         "path": "facilities/SH-MAP-ARU-021.pdf",
-        "sha256": "57ef7bc574e13247ed5531e4bf5c86260a67fff365699de1af6348818c75e295"
+        "sha256": "3dbb06a521726d21a8d4e729203be8da5ca87d22c1544beb458a4f9b7f3ce8fe"
       }
     }
   },
@@ -1290,10 +1290,10 @@
     "review_status": "SEE_HASH_BOUND_FACILITY_QA",
     "source_scope": "GeoPackage is geographic context only. Facility source geometries remain illustrative local frames; no parcel geometry inserted.",
     "source_sha256": {
-      "geospatial/facilities/source/campus.json": "6b918b435a95c816c481200732bcc85cd07ee7526debec9643f7c705b37c2592",
-      "geospatial/facilities/source/industrial_facilities.json": "2c71a93885099d4353b8f392284fb5d5947d4ad7a8e79440dfd354404a94435d",
-      "geospatial/facilities/source/research_campuses.json": "6350a1c4e168089c4fee2035397303f221ae7a5f38fe16d42bebefd264052688",
-      "geospatial/facilities/render.py": "3cce30211d737adad494ab842a539da6d32b17da3884081403efad47fc2642c4",
+      "geospatial/facilities/source/campus.json": "41de327022a85cca9ba6509953e5fa83e0bf8dcbb59c6741848ad997a839cd26",
+      "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
+      "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
+      "geospatial/facilities/render.py": "8d921a67fd8b757edd1f5a10a6bd4f882350a92b8d945f6dc7e67303a6cb305e",
       "geospatial/registers/MAP_ID_REGISTER.json": "690ebe85bb199d6e863c0d28d268c7cc155574fceed6b38c19520e2e55aee61c"
     },
     "site_id": "SH-IND-FAC-TAY-YARD",
@@ -1310,7 +1310,7 @@
       },
       "pdf": {
         "path": "facilities/SH-MAP-ARU-022.pdf",
-        "sha256": "a2639e966872db4b866da79951060c09b326bba321223a933ac063953fff3d63"
+        "sha256": "a436e7acccc7d58ec829f6b3cb04d5db58a2661368fc2f34086f9c59be1a4bc8"
       }
     }
   },
@@ -1329,10 +1329,10 @@
     "review_status": "SEE_HASH_BOUND_FACILITY_QA",
     "source_scope": "GeoPackage is geographic context only. Facility source geometries remain illustrative local frames; no parcel geometry inserted.",
     "source_sha256": {
-      "geospatial/facilities/source/campus.json": "6b918b435a95c816c481200732bcc85cd07ee7526debec9643f7c705b37c2592",
-      "geospatial/facilities/source/industrial_facilities.json": "2c71a93885099d4353b8f392284fb5d5947d4ad7a8e79440dfd354404a94435d",
-      "geospatial/facilities/source/research_campuses.json": "6350a1c4e168089c4fee2035397303f221ae7a5f38fe16d42bebefd264052688",
-      "geospatial/facilities/render.py": "3cce30211d737adad494ab842a539da6d32b17da3884081403efad47fc2642c4",
+      "geospatial/facilities/source/campus.json": "41de327022a85cca9ba6509953e5fa83e0bf8dcbb59c6741848ad997a839cd26",
+      "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
+      "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
+      "geospatial/facilities/render.py": "8d921a67fd8b757edd1f5a10a6bd4f882350a92b8d945f6dc7e67303a6cb305e",
       "geospatial/registers/MAP_ID_REGISTER.json": "690ebe85bb199d6e863c0d28d268c7cc155574fceed6b38c19520e2e55aee61c"
     },
     "site_id": "SH-IND-FAC-TAY-YARD",
@@ -1349,7 +1349,7 @@
       },
       "pdf": {
         "path": "facilities/SH-MAP-ARU-023.pdf",
-        "sha256": "fa85c96dbacbc2709139d916c460d8a3c597dc553b8a9e37d39854399cebd426"
+        "sha256": "450c86af56bc281f1a75bb3021e3a57eb41e5bf68febe41fb5f1c7dfc463259e"
       }
     }
   },
@@ -1368,10 +1368,10 @@
     "review_status": "SEE_HASH_BOUND_FACILITY_QA",
     "source_scope": "GeoPackage is geographic context only. Facility source geometries remain illustrative local frames; no parcel geometry inserted.",
     "source_sha256": {
-      "geospatial/facilities/source/campus.json": "6b918b435a95c816c481200732bcc85cd07ee7526debec9643f7c705b37c2592",
-      "geospatial/facilities/source/industrial_facilities.json": "2c71a93885099d4353b8f392284fb5d5947d4ad7a8e79440dfd354404a94435d",
-      "geospatial/facilities/source/research_campuses.json": "6350a1c4e168089c4fee2035397303f221ae7a5f38fe16d42bebefd264052688",
-      "geospatial/facilities/render.py": "3cce30211d737adad494ab842a539da6d32b17da3884081403efad47fc2642c4",
+      "geospatial/facilities/source/campus.json": "41de327022a85cca9ba6509953e5fa83e0bf8dcbb59c6741848ad997a839cd26",
+      "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
+      "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
+      "geospatial/facilities/render.py": "8d921a67fd8b757edd1f5a10a6bd4f882350a92b8d945f6dc7e67303a6cb305e",
       "geospatial/registers/MAP_ID_REGISTER.json": "690ebe85bb199d6e863c0d28d268c7cc155574fceed6b38c19520e2e55aee61c"
     },
     "site_id": "SH-IND-FAC-TAY-YARD",
@@ -1388,7 +1388,7 @@
       },
       "pdf": {
         "path": "facilities/SH-MAP-ARU-024.pdf",
-        "sha256": "74afbd21edfa710a34cd0739cf642252446f01833dd6d8667cb31d2f4f7141cf"
+        "sha256": "636b54012efbdd300595f2693bd4b290014e87e5a7c0502095768b1a45d35479"
       }
     }
   },
@@ -1407,10 +1407,10 @@
     "review_status": "SEE_HASH_BOUND_FACILITY_QA",
     "source_scope": "GeoPackage is geographic context only. Facility source geometries remain illustrative local frames; no parcel geometry inserted.",
     "source_sha256": {
-      "geospatial/facilities/source/campus.json": "6b918b435a95c816c481200732bcc85cd07ee7526debec9643f7c705b37c2592",
-      "geospatial/facilities/source/industrial_facilities.json": "2c71a93885099d4353b8f392284fb5d5947d4ad7a8e79440dfd354404a94435d",
-      "geospatial/facilities/source/research_campuses.json": "6350a1c4e168089c4fee2035397303f221ae7a5f38fe16d42bebefd264052688",
-      "geospatial/facilities/render.py": "3cce30211d737adad494ab842a539da6d32b17da3884081403efad47fc2642c4",
+      "geospatial/facilities/source/campus.json": "41de327022a85cca9ba6509953e5fa83e0bf8dcbb59c6741848ad997a839cd26",
+      "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
+      "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
+      "geospatial/facilities/render.py": "8d921a67fd8b757edd1f5a10a6bd4f882350a92b8d945f6dc7e67303a6cb305e",
       "geospatial/registers/MAP_ID_REGISTER.json": "690ebe85bb199d6e863c0d28d268c7cc155574fceed6b38c19520e2e55aee61c"
     },
     "site_id": "SH-IND-FAC-TAY-YARD",
@@ -1427,7 +1427,7 @@
       },
       "pdf": {
         "path": "facilities/SH-MAP-ARU-025.pdf",
-        "sha256": "c7ac204923a1a8e8f99d87bb29322162a093712563386a6fec0172d1ce04d65d"
+        "sha256": "185f3f74188e28b6f87d342840bb078c7f9f06f7368c42b28fca60843db8c6f9"
       }
     }
   },
@@ -1446,10 +1446,10 @@
     "review_status": "SEE_HASH_BOUND_FACILITY_QA",
     "source_scope": "GeoPackage is geographic context only. Facility source geometries remain illustrative local frames; no parcel geometry inserted.",
     "source_sha256": {
-      "geospatial/facilities/source/campus.json": "6b918b435a95c816c481200732bcc85cd07ee7526debec9643f7c705b37c2592",
-      "geospatial/facilities/source/industrial_facilities.json": "2c71a93885099d4353b8f392284fb5d5947d4ad7a8e79440dfd354404a94435d",
-      "geospatial/facilities/source/research_campuses.json": "6350a1c4e168089c4fee2035397303f221ae7a5f38fe16d42bebefd264052688",
-      "geospatial/facilities/render.py": "3cce30211d737adad494ab842a539da6d32b17da3884081403efad47fc2642c4",
+      "geospatial/facilities/source/campus.json": "41de327022a85cca9ba6509953e5fa83e0bf8dcbb59c6741848ad997a839cd26",
+      "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
+      "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
+      "geospatial/facilities/render.py": "8d921a67fd8b757edd1f5a10a6bd4f882350a92b8d945f6dc7e67303a6cb305e",
       "geospatial/registers/MAP_ID_REGISTER.json": "690ebe85bb199d6e863c0d28d268c7cc155574fceed6b38c19520e2e55aee61c"
     },
     "site_id": "SH-IND-FAC-TAY-TERMINAL",
@@ -1458,15 +1458,15 @@
     "files": {
       "svg": {
         "path": "facilities/SH-MAP-ARU-026.svg",
-        "sha256": "3ae5381566bf0f42f8a79bd5c7a6e8ec4ae0893b423fa6034e319eddf98dc115"
+        "sha256": "8cb063dadffaa8c6efef548a33fe10b8a4e0d6cb3b95666e2e6e2ca4c47132b4"
       },
       "png": {
         "path": "facilities/SH-MAP-ARU-026.png",
-        "sha256": "1e6b2a8ee4e6e0db1cf9454f1290cff2e7cd875233a6e4adbe1540c27f005377"
+        "sha256": "4efd11cc762660ad134fd066608fe88ae5a35d97890ff69ca25802db8c54bfd6"
       },
       "pdf": {
         "path": "facilities/SH-MAP-ARU-026.pdf",
-        "sha256": "7165b90f3757921c2efce8325b8f95d93644a9df429325e69bd23ab4ee464d8e"
+        "sha256": "eaa23176638bfac73eb14d0b78c192ede92661d7fe957465276edad73bf94cc5"
       }
     }
   },
@@ -1485,10 +1485,10 @@
     "review_status": "SEE_HASH_BOUND_FACILITY_QA",
     "source_scope": "GeoPackage is geographic context only. Facility source geometries remain illustrative local frames; no parcel geometry inserted.",
     "source_sha256": {
-      "geospatial/facilities/source/campus.json": "6b918b435a95c816c481200732bcc85cd07ee7526debec9643f7c705b37c2592",
-      "geospatial/facilities/source/industrial_facilities.json": "2c71a93885099d4353b8f392284fb5d5947d4ad7a8e79440dfd354404a94435d",
-      "geospatial/facilities/source/research_campuses.json": "6350a1c4e168089c4fee2035397303f221ae7a5f38fe16d42bebefd264052688",
-      "geospatial/facilities/render.py": "3cce30211d737adad494ab842a539da6d32b17da3884081403efad47fc2642c4",
+      "geospatial/facilities/source/campus.json": "41de327022a85cca9ba6509953e5fa83e0bf8dcbb59c6741848ad997a839cd26",
+      "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
+      "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
+      "geospatial/facilities/render.py": "8d921a67fd8b757edd1f5a10a6bd4f882350a92b8d945f6dc7e67303a6cb305e",
       "geospatial/registers/MAP_ID_REGISTER.json": "690ebe85bb199d6e863c0d28d268c7cc155574fceed6b38c19520e2e55aee61c"
     },
     "site_id": "SH-IND-FAC-TAY-WAREHOUSE",
@@ -1497,15 +1497,15 @@
     "files": {
       "svg": {
         "path": "facilities/SH-MAP-ARU-027.svg",
-        "sha256": "28f848a7dafb290e5c25652cde1d19d6403cc5bdf6f6543f42239d3826fc70bd"
+        "sha256": "0402d4996cec2f9d97687875d0070fa6271fec601c5d896de3f673c4e151a5a4"
       },
       "png": {
         "path": "facilities/SH-MAP-ARU-027.png",
-        "sha256": "d5773ddf81fd054443c93f9bf4ee7278663eec1a3cf79b7495adc677d86b7310"
+        "sha256": "ff8ba27ad7ffbaa86c1bd0fa87c4028eeab7ebfbf2e718ef378ece6c1274421d"
       },
       "pdf": {
         "path": "facilities/SH-MAP-ARU-027.pdf",
-        "sha256": "4787b944484e880043a1adc6a9e998295975ba9f6ee1ad6bf5644e36ae07b389"
+        "sha256": "d4d366ca3c455794625d4f593f3325f5609b30c205c0e3c8f4210c6c70d136da"
       }
     }
   },
@@ -1524,10 +1524,10 @@
     "review_status": "SEE_HASH_BOUND_FACILITY_QA",
     "source_scope": "GeoPackage is geographic context only. Facility source geometries remain illustrative local frames; no parcel geometry inserted.",
     "source_sha256": {
-      "geospatial/facilities/source/campus.json": "6b918b435a95c816c481200732bcc85cd07ee7526debec9643f7c705b37c2592",
-      "geospatial/facilities/source/industrial_facilities.json": "2c71a93885099d4353b8f392284fb5d5947d4ad7a8e79440dfd354404a94435d",
-      "geospatial/facilities/source/research_campuses.json": "6350a1c4e168089c4fee2035397303f221ae7a5f38fe16d42bebefd264052688",
-      "geospatial/facilities/render.py": "3cce30211d737adad494ab842a539da6d32b17da3884081403efad47fc2642c4",
+      "geospatial/facilities/source/campus.json": "41de327022a85cca9ba6509953e5fa83e0bf8dcbb59c6741848ad997a839cd26",
+      "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
+      "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
+      "geospatial/facilities/render.py": "8d921a67fd8b757edd1f5a10a6bd4f882350a92b8d945f6dc7e67303a6cb305e",
       "geospatial/registers/MAP_ID_REGISTER.json": "690ebe85bb199d6e863c0d28d268c7cc155574fceed6b38c19520e2e55aee61c"
     },
     "site_id": "SH-IND-FAC-TAY-WAREHOUSE",
@@ -1544,7 +1544,7 @@
       },
       "pdf": {
         "path": "facilities/SH-MAP-ARU-028.pdf",
-        "sha256": "5fcc294e08e9b291e06f8705b8a41abfa4192d756f3e96db500985fd65012f31"
+        "sha256": "3d7d32e4c084d052bc4ad9a889a40d4999b470e1d60ccf36bb488e94c55bf5b2"
       }
     }
   },
@@ -1563,10 +1563,10 @@
     "review_status": "SEE_HASH_BOUND_FACILITY_QA",
     "source_scope": "GeoPackage is geographic context only. Facility source geometries remain illustrative local frames; no parcel geometry inserted.",
     "source_sha256": {
-      "geospatial/facilities/source/campus.json": "6b918b435a95c816c481200732bcc85cd07ee7526debec9643f7c705b37c2592",
-      "geospatial/facilities/source/industrial_facilities.json": "2c71a93885099d4353b8f392284fb5d5947d4ad7a8e79440dfd354404a94435d",
-      "geospatial/facilities/source/research_campuses.json": "6350a1c4e168089c4fee2035397303f221ae7a5f38fe16d42bebefd264052688",
-      "geospatial/facilities/render.py": "3cce30211d737adad494ab842a539da6d32b17da3884081403efad47fc2642c4",
+      "geospatial/facilities/source/campus.json": "41de327022a85cca9ba6509953e5fa83e0bf8dcbb59c6741848ad997a839cd26",
+      "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
+      "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
+      "geospatial/facilities/render.py": "8d921a67fd8b757edd1f5a10a6bd4f882350a92b8d945f6dc7e67303a6cb305e",
       "geospatial/registers/MAP_ID_REGISTER.json": "690ebe85bb199d6e863c0d28d268c7cc155574fceed6b38c19520e2e55aee61c"
     },
     "site_id": "SH-IND-FAC-TAY-WAREHOUSE",
@@ -1575,15 +1575,15 @@
     "files": {
       "svg": {
         "path": "facilities/SH-MAP-ARU-029.svg",
-        "sha256": "851e8f30ef79a2f3d798f7641acd631cbdfb680d3e6963a4ca9941d89c55ca44"
+        "sha256": "8a8602c19dcd6ba52765594402e1b66bf1c3523af4d55730fd5eb0fb82167061"
       },
       "png": {
         "path": "facilities/SH-MAP-ARU-029.png",
-        "sha256": "7709ebd8da8880eeafc96acc76b7572c352e5e6c954d8e657a13b4de8a8a143d"
+        "sha256": "a5517286c033e7576a99abbde673dd83d97543ff6b2e77003c4d148a491b3ef4"
       },
       "pdf": {
         "path": "facilities/SH-MAP-ARU-029.pdf",
-        "sha256": "24dadc76f2e00fb3506aa62ddbc36817fc0cb971f24f1fbc185b248a45ce4d19"
+        "sha256": "ac67054f4dd014023d415cb7819fc034c03f05f9b4e6b440da3d796626ae15dc"
       }
     }
   },
@@ -1602,10 +1602,10 @@
     "review_status": "SEE_HASH_BOUND_FACILITY_QA",
     "source_scope": "GeoPackage is geographic context only. Facility source geometries remain illustrative local frames; no parcel geometry inserted.",
     "source_sha256": {
-      "geospatial/facilities/source/campus.json": "6b918b435a95c816c481200732bcc85cd07ee7526debec9643f7c705b37c2592",
-      "geospatial/facilities/source/industrial_facilities.json": "2c71a93885099d4353b8f392284fb5d5947d4ad7a8e79440dfd354404a94435d",
-      "geospatial/facilities/source/research_campuses.json": "6350a1c4e168089c4fee2035397303f221ae7a5f38fe16d42bebefd264052688",
-      "geospatial/facilities/render.py": "3cce30211d737adad494ab842a539da6d32b17da3884081403efad47fc2642c4",
+      "geospatial/facilities/source/campus.json": "41de327022a85cca9ba6509953e5fa83e0bf8dcbb59c6741848ad997a839cd26",
+      "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
+      "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
+      "geospatial/facilities/render.py": "8d921a67fd8b757edd1f5a10a6bd4f882350a92b8d945f6dc7e67303a6cb305e",
       "geospatial/registers/MAP_ID_REGISTER.json": "690ebe85bb199d6e863c0d28d268c7cc155574fceed6b38c19520e2e55aee61c"
     },
     "site_id": "SH-IND-FAC-TAY-TRUCK",
@@ -1614,15 +1614,15 @@
     "files": {
       "svg": {
         "path": "facilities/SH-MAP-ARU-030.svg",
-        "sha256": "e7ff2ce92c9b688a48b34ec03e2b4f3152eb61c1f5e56ee8e1ca996b9367f077"
+        "sha256": "adab58c6480f8b5c4c21b31987898e323a0e9897757fa164756c1e862138a91c"
       },
       "png": {
         "path": "facilities/SH-MAP-ARU-030.png",
-        "sha256": "006f5608ad20158fbc82da14f54487a382905a1d57bbbe910d08ae321b871e28"
+        "sha256": "843dba447b59aa08092803ac5826cc23a7bd4e4315b8886cfe09023c6d97e484"
       },
       "pdf": {
         "path": "facilities/SH-MAP-ARU-030.pdf",
-        "sha256": "c8c25fc9574ff14ccaee979853a9d621e21e1cd472f81d77ef70b8c42f82e100"
+        "sha256": "403d4c9366311bb0ab1ae84368e77bbcaae2206306e7c8cfd18f52b18c9c678f"
       }
     }
   },
@@ -1641,10 +1641,10 @@
     "review_status": "SEE_HASH_BOUND_FACILITY_QA",
     "source_scope": "GeoPackage is geographic context only. Facility source geometries remain illustrative local frames; no parcel geometry inserted.",
     "source_sha256": {
-      "geospatial/facilities/source/campus.json": "6b918b435a95c816c481200732bcc85cd07ee7526debec9643f7c705b37c2592",
-      "geospatial/facilities/source/industrial_facilities.json": "2c71a93885099d4353b8f392284fb5d5947d4ad7a8e79440dfd354404a94435d",
-      "geospatial/facilities/source/research_campuses.json": "6350a1c4e168089c4fee2035397303f221ae7a5f38fe16d42bebefd264052688",
-      "geospatial/facilities/render.py": "3cce30211d737adad494ab842a539da6d32b17da3884081403efad47fc2642c4",
+      "geospatial/facilities/source/campus.json": "41de327022a85cca9ba6509953e5fa83e0bf8dcbb59c6741848ad997a839cd26",
+      "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
+      "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
+      "geospatial/facilities/render.py": "8d921a67fd8b757edd1f5a10a6bd4f882350a92b8d945f6dc7e67303a6cb305e",
       "geospatial/registers/MAP_ID_REGISTER.json": "690ebe85bb199d6e863c0d28d268c7cc155574fceed6b38c19520e2e55aee61c"
     },
     "site_id": "SH-IND-FAC-TAY-TRUCK",
@@ -1680,10 +1680,10 @@
     "review_status": "SEE_HASH_BOUND_FACILITY_QA",
     "source_scope": "GeoPackage is geographic context only. Facility source geometries remain illustrative local frames; no parcel geometry inserted.",
     "source_sha256": {
-      "geospatial/facilities/source/campus.json": "6b918b435a95c816c481200732bcc85cd07ee7526debec9643f7c705b37c2592",
-      "geospatial/facilities/source/industrial_facilities.json": "2c71a93885099d4353b8f392284fb5d5947d4ad7a8e79440dfd354404a94435d",
-      "geospatial/facilities/source/research_campuses.json": "6350a1c4e168089c4fee2035397303f221ae7a5f38fe16d42bebefd264052688",
-      "geospatial/facilities/render.py": "3cce30211d737adad494ab842a539da6d32b17da3884081403efad47fc2642c4",
+      "geospatial/facilities/source/campus.json": "41de327022a85cca9ba6509953e5fa83e0bf8dcbb59c6741848ad997a839cd26",
+      "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
+      "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
+      "geospatial/facilities/render.py": "8d921a67fd8b757edd1f5a10a6bd4f882350a92b8d945f6dc7e67303a6cb305e",
       "geospatial/registers/MAP_ID_REGISTER.json": "690ebe85bb199d6e863c0d28d268c7cc155574fceed6b38c19520e2e55aee61c"
     },
     "site_id": "SH-IND-FAC-TAY-TRUCK",
@@ -1719,10 +1719,10 @@
     "review_status": "SEE_HASH_BOUND_FACILITY_QA",
     "source_scope": "GeoPackage is geographic context only. Facility source geometries remain illustrative local frames; no parcel geometry inserted.",
     "source_sha256": {
-      "geospatial/facilities/source/campus.json": "6b918b435a95c816c481200732bcc85cd07ee7526debec9643f7c705b37c2592",
-      "geospatial/facilities/source/industrial_facilities.json": "2c71a93885099d4353b8f392284fb5d5947d4ad7a8e79440dfd354404a94435d",
-      "geospatial/facilities/source/research_campuses.json": "6350a1c4e168089c4fee2035397303f221ae7a5f38fe16d42bebefd264052688",
-      "geospatial/facilities/render.py": "3cce30211d737adad494ab842a539da6d32b17da3884081403efad47fc2642c4",
+      "geospatial/facilities/source/campus.json": "41de327022a85cca9ba6509953e5fa83e0bf8dcbb59c6741848ad997a839cd26",
+      "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
+      "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
+      "geospatial/facilities/render.py": "8d921a67fd8b757edd1f5a10a6bd4f882350a92b8d945f6dc7e67303a6cb305e",
       "geospatial/registers/MAP_ID_REGISTER.json": "690ebe85bb199d6e863c0d28d268c7cc155574fceed6b38c19520e2e55aee61c"
     },
     "site_id": "SH-IND-FAC-EAST-MATERIALS",
@@ -1731,15 +1731,15 @@
     "files": {
       "svg": {
         "path": "facilities/SH-MAP-ARU-033.svg",
-        "sha256": "60e04a1b2cb0f5dc34cc017d4e0a8543c1ae1c38befaf7a68ca2e6ea57d8bac4"
+        "sha256": "88a160e8321d3702d70ab805b3ed8a9b5d435957daf3b578c028eb857fabe5e6"
       },
       "png": {
         "path": "facilities/SH-MAP-ARU-033.png",
-        "sha256": "ee7108fc47adf6c2ee00fa703b2aceb004bba57eb5f1d210503a86626e1d4995"
+        "sha256": "aa607b4d5676f232ec3828831fc1a51b3f02576b7be1406133f0b46d7fa4c86b"
       },
       "pdf": {
         "path": "facilities/SH-MAP-ARU-033.pdf",
-        "sha256": "206210f7ecb45a516ca16bdd352963679e77fdf03341fe12cefa2d6d4ff5d80a"
+        "sha256": "e5df413a6b9c902f309ee6c77b3d892b91f75eae0ff0b905059a04e70d48411c"
       }
     }
   },
@@ -1758,10 +1758,10 @@
     "review_status": "SEE_HASH_BOUND_FACILITY_QA",
     "source_scope": "GeoPackage is geographic context only. Facility source geometries remain illustrative local frames; no parcel geometry inserted.",
     "source_sha256": {
-      "geospatial/facilities/source/campus.json": "6b918b435a95c816c481200732bcc85cd07ee7526debec9643f7c705b37c2592",
-      "geospatial/facilities/source/industrial_facilities.json": "2c71a93885099d4353b8f392284fb5d5947d4ad7a8e79440dfd354404a94435d",
-      "geospatial/facilities/source/research_campuses.json": "6350a1c4e168089c4fee2035397303f221ae7a5f38fe16d42bebefd264052688",
-      "geospatial/facilities/render.py": "3cce30211d737adad494ab842a539da6d32b17da3884081403efad47fc2642c4",
+      "geospatial/facilities/source/campus.json": "41de327022a85cca9ba6509953e5fa83e0bf8dcbb59c6741848ad997a839cd26",
+      "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
+      "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
+      "geospatial/facilities/render.py": "8d921a67fd8b757edd1f5a10a6bd4f882350a92b8d945f6dc7e67303a6cb305e",
       "geospatial/registers/MAP_ID_REGISTER.json": "690ebe85bb199d6e863c0d28d268c7cc155574fceed6b38c19520e2e55aee61c"
     },
     "site_id": "SH-IND-FAC-MINERAL-TEAM",
@@ -1770,15 +1770,15 @@
     "files": {
       "svg": {
         "path": "facilities/SH-MAP-ARU-034.svg",
-        "sha256": "80f4014d751cc627ff958b650c81b345b63627f8e7bdd1c328e47c7c258fdb05"
+        "sha256": "325cba63c18637b2a661e148241f2088f3008eb8587dc124f13698f7ad6ffca1"
       },
       "png": {
         "path": "facilities/SH-MAP-ARU-034.png",
-        "sha256": "092a531f5a13431b8c29726bcecaf7ab31017d3fc2567f303010b4e35b9f9d19"
+        "sha256": "2d5de80e920f53608a17fdc42fca061be87ccd701d0d63b1858e84148f390b88"
       },
       "pdf": {
         "path": "facilities/SH-MAP-ARU-034.pdf",
-        "sha256": "705c39c2eb72232e49df84e375275f767a59060feede6dabee50f1f84beb31f7"
+        "sha256": "bab3bd5adfe35c81677440893b17fc87fef94412e3426686c8059e398295252d"
       }
     }
   },
@@ -1797,10 +1797,10 @@
     "review_status": "SEE_HASH_BOUND_FACILITY_QA",
     "source_scope": "GeoPackage is geographic context only. Facility source geometries remain illustrative local frames; no parcel geometry inserted.",
     "source_sha256": {
-      "geospatial/facilities/source/campus.json": "6b918b435a95c816c481200732bcc85cd07ee7526debec9643f7c705b37c2592",
-      "geospatial/facilities/source/industrial_facilities.json": "2c71a93885099d4353b8f392284fb5d5947d4ad7a8e79440dfd354404a94435d",
-      "geospatial/facilities/source/research_campuses.json": "6350a1c4e168089c4fee2035397303f221ae7a5f38fe16d42bebefd264052688",
-      "geospatial/facilities/render.py": "3cce30211d737adad494ab842a539da6d32b17da3884081403efad47fc2642c4",
+      "geospatial/facilities/source/campus.json": "41de327022a85cca9ba6509953e5fa83e0bf8dcbb59c6741848ad997a839cd26",
+      "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
+      "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
+      "geospatial/facilities/render.py": "8d921a67fd8b757edd1f5a10a6bd4f882350a92b8d945f6dc7e67303a6cb305e",
       "geospatial/registers/MAP_ID_REGISTER.json": "690ebe85bb199d6e863c0d28d268c7cc155574fceed6b38c19520e2e55aee61c"
     },
     "site_id": "SH-IND-FAC-RAW-TERMINAL",
@@ -1809,15 +1809,15 @@
     "files": {
       "svg": {
         "path": "facilities/SH-MAP-ARU-035.svg",
-        "sha256": "b73446adf01bbb73fc4aabf803ed3c2e209cc40f03641252b77d4566f9febd05"
+        "sha256": "1122f33a788987a3d493b16a3312524e9dae131945671ed30674a8c6c41d2bda"
       },
       "png": {
         "path": "facilities/SH-MAP-ARU-035.png",
-        "sha256": "f0d307e59ca2926563b48110796db90d4ca06195e9cc237aa5ff0b204611c1f2"
+        "sha256": "5438dcddbd9dc22499ac082aed8c351110eea7fa2ca8945d44b3539191386c12"
       },
       "pdf": {
         "path": "facilities/SH-MAP-ARU-035.pdf",
-        "sha256": "a58215923ebd620f28ab6148f33932d966d9239092aff83003e58066211b1a7d"
+        "sha256": "4829c786445e0c13a2f3fe4cbff617e26ddb66e4a5a9dc4ad9f104440a2f67b3"
       }
     }
   },
@@ -1836,10 +1836,10 @@
     "review_status": "SEE_HASH_BOUND_FACILITY_QA",
     "source_scope": "GeoPackage is geographic context only. Facility source geometries remain illustrative local frames; no parcel geometry inserted.",
     "source_sha256": {
-      "geospatial/facilities/source/campus.json": "6b918b435a95c816c481200732bcc85cd07ee7526debec9643f7c705b37c2592",
-      "geospatial/facilities/source/industrial_facilities.json": "2c71a93885099d4353b8f392284fb5d5947d4ad7a8e79440dfd354404a94435d",
-      "geospatial/facilities/source/research_campuses.json": "6350a1c4e168089c4fee2035397303f221ae7a5f38fe16d42bebefd264052688",
-      "geospatial/facilities/render.py": "3cce30211d737adad494ab842a539da6d32b17da3884081403efad47fc2642c4",
+      "geospatial/facilities/source/campus.json": "41de327022a85cca9ba6509953e5fa83e0bf8dcbb59c6741848ad997a839cd26",
+      "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
+      "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
+      "geospatial/facilities/render.py": "8d921a67fd8b757edd1f5a10a6bd4f882350a92b8d945f6dc7e67303a6cb305e",
       "geospatial/registers/MAP_ID_REGISTER.json": "690ebe85bb199d6e863c0d28d268c7cc155574fceed6b38c19520e2e55aee61c"
     },
     "site_id": "SH-IND-FAC-RAW-WAREHOUSE",
@@ -1848,15 +1848,15 @@
     "files": {
       "svg": {
         "path": "facilities/SH-MAP-ARU-036.svg",
-        "sha256": "a9f82992934bb72f0707233015dbc7a47af2d55522659e50f37ab7f6e4b91a3d"
+        "sha256": "b1297b4d7b11ad3539b082cce73249829a8710e03c0541baecd431fcc9bf96c9"
       },
       "png": {
         "path": "facilities/SH-MAP-ARU-036.png",
-        "sha256": "302bf58418277de34d7e41201d2552ff5e9af9cbbfac64439efb9e11ab5051b8"
+        "sha256": "4a99e1afc315ec179790ae046f811d43d60a4481c6f65e3f7b22e59592e61107"
       },
       "pdf": {
         "path": "facilities/SH-MAP-ARU-036.pdf",
-        "sha256": "10bdc3819803691298a950ed2e27f9836807e83041e3735f5e96ea83651dc711"
+        "sha256": "1566f4803a514c0106442c4e41edbe682084ff359a45949d99f22c0eec36b506"
       }
     }
   },
@@ -1875,10 +1875,10 @@
     "review_status": "SEE_HASH_BOUND_FACILITY_QA",
     "source_scope": "GeoPackage is geographic context only. Facility source geometries remain illustrative local frames; no parcel geometry inserted.",
     "source_sha256": {
-      "geospatial/facilities/source/campus.json": "6b918b435a95c816c481200732bcc85cd07ee7526debec9643f7c705b37c2592",
-      "geospatial/facilities/source/industrial_facilities.json": "2c71a93885099d4353b8f392284fb5d5947d4ad7a8e79440dfd354404a94435d",
-      "geospatial/facilities/source/research_campuses.json": "6350a1c4e168089c4fee2035397303f221ae7a5f38fe16d42bebefd264052688",
-      "geospatial/facilities/render.py": "3cce30211d737adad494ab842a539da6d32b17da3884081403efad47fc2642c4",
+      "geospatial/facilities/source/campus.json": "41de327022a85cca9ba6509953e5fa83e0bf8dcbb59c6741848ad997a839cd26",
+      "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
+      "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
+      "geospatial/facilities/render.py": "8d921a67fd8b757edd1f5a10a6bd4f882350a92b8d945f6dc7e67303a6cb305e",
       "geospatial/registers/MAP_ID_REGISTER.json": "690ebe85bb199d6e863c0d28d268c7cc155574fceed6b38c19520e2e55aee61c"
     },
     "site_id": "SH-IND-FAC-RAW-WAREHOUSE",
@@ -1914,10 +1914,10 @@
     "review_status": "SEE_HASH_BOUND_FACILITY_QA",
     "source_scope": "GeoPackage is geographic context only. Facility source geometries remain illustrative local frames; no parcel geometry inserted.",
     "source_sha256": {
-      "geospatial/facilities/source/campus.json": "6b918b435a95c816c481200732bcc85cd07ee7526debec9643f7c705b37c2592",
-      "geospatial/facilities/source/industrial_facilities.json": "2c71a93885099d4353b8f392284fb5d5947d4ad7a8e79440dfd354404a94435d",
-      "geospatial/facilities/source/research_campuses.json": "6350a1c4e168089c4fee2035397303f221ae7a5f38fe16d42bebefd264052688",
-      "geospatial/facilities/render.py": "3cce30211d737adad494ab842a539da6d32b17da3884081403efad47fc2642c4",
+      "geospatial/facilities/source/campus.json": "41de327022a85cca9ba6509953e5fa83e0bf8dcbb59c6741848ad997a839cd26",
+      "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
+      "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
+      "geospatial/facilities/render.py": "8d921a67fd8b757edd1f5a10a6bd4f882350a92b8d945f6dc7e67303a6cb305e",
       "geospatial/registers/MAP_ID_REGISTER.json": "690ebe85bb199d6e863c0d28d268c7cc155574fceed6b38c19520e2e55aee61c"
     },
     "site_id": "SH-IND-FAC-RAW-WAREHOUSE",
@@ -1926,15 +1926,15 @@
     "files": {
       "svg": {
         "path": "facilities/SH-MAP-ARU-038.svg",
-        "sha256": "740499ebc413d324c875d04338b7bc3d20301c310d037969d200500557615230"
+        "sha256": "bbe142d95b0305f0dd3f8f7983364f2b0f8c3f6b9e94fc2b994c9c1b86e13345"
       },
       "png": {
         "path": "facilities/SH-MAP-ARU-038.png",
-        "sha256": "c1700cf67b6f9e4288c463e5180cd949da450f0def46bc88637260cc371bcec1"
+        "sha256": "7cbe0dcb332e6a890f8583f4fdbad1b094c2fcf62ca82e27bc045eb0c4e9f336"
       },
       "pdf": {
         "path": "facilities/SH-MAP-ARU-038.pdf",
-        "sha256": "ef0170c56fd09789c73f8db18df20878f0c935756754237008929c31b470497b"
+        "sha256": "aa105ecad0dde0c5558e46a8f7b4a2c98c488b25df6fb74ebbad078eb6564ddd"
       }
     }
   },
@@ -1953,10 +1953,10 @@
     "review_status": "SEE_HASH_BOUND_FACILITY_QA",
     "source_scope": "GeoPackage is geographic context only. Facility source geometries remain illustrative local frames; no parcel geometry inserted.",
     "source_sha256": {
-      "geospatial/facilities/source/campus.json": "6b918b435a95c816c481200732bcc85cd07ee7526debec9643f7c705b37c2592",
-      "geospatial/facilities/source/industrial_facilities.json": "2c71a93885099d4353b8f392284fb5d5947d4ad7a8e79440dfd354404a94435d",
-      "geospatial/facilities/source/research_campuses.json": "6350a1c4e168089c4fee2035397303f221ae7a5f38fe16d42bebefd264052688",
-      "geospatial/facilities/render.py": "3cce30211d737adad494ab842a539da6d32b17da3884081403efad47fc2642c4",
+      "geospatial/facilities/source/campus.json": "41de327022a85cca9ba6509953e5fa83e0bf8dcbb59c6741848ad997a839cd26",
+      "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
+      "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
+      "geospatial/facilities/render.py": "8d921a67fd8b757edd1f5a10a6bd4f882350a92b8d945f6dc7e67303a6cb305e",
       "geospatial/registers/MAP_ID_REGISTER.json": "690ebe85bb199d6e863c0d28d268c7cc155574fceed6b38c19520e2e55aee61c"
     },
     "site_id": "SH-IND-FAC-RAW-TRUCK",
@@ -1965,15 +1965,15 @@
     "files": {
       "svg": {
         "path": "facilities/SH-MAP-ARU-039.svg",
-        "sha256": "98c6cbdb4a2fe5411d0dfd0a04e783f446f36e994025d192384d81359b132e40"
+        "sha256": "aaec32929aa0b163f07bf582a486fefc24ddcc6427297fadee5bd7586542b748"
       },
       "png": {
         "path": "facilities/SH-MAP-ARU-039.png",
-        "sha256": "c5ad28dd301620dc8c12f5ada40facdbdbf60bd41db13abfbc8d66765dec03cd"
+        "sha256": "10c9e6e25bf7f6b947b7a54580a5aeb627eae48db628f42d7e4390b716ddbb72"
       },
       "pdf": {
         "path": "facilities/SH-MAP-ARU-039.pdf",
-        "sha256": "a5eed73edf25d9fb206a3ce86b1063efc6457215be43afd73a265990e4411705"
+        "sha256": "592bad1bfb22441a6652c8a0b62c9de91eba1054d17a8a0a04638a60b4b7ab51"
       }
     }
   },
@@ -1992,10 +1992,10 @@
     "review_status": "SEE_HASH_BOUND_FACILITY_QA",
     "source_scope": "GeoPackage is geographic context only. Facility source geometries remain illustrative local frames; no parcel geometry inserted.",
     "source_sha256": {
-      "geospatial/facilities/source/campus.json": "6b918b435a95c816c481200732bcc85cd07ee7526debec9643f7c705b37c2592",
-      "geospatial/facilities/source/industrial_facilities.json": "2c71a93885099d4353b8f392284fb5d5947d4ad7a8e79440dfd354404a94435d",
-      "geospatial/facilities/source/research_campuses.json": "6350a1c4e168089c4fee2035397303f221ae7a5f38fe16d42bebefd264052688",
-      "geospatial/facilities/render.py": "3cce30211d737adad494ab842a539da6d32b17da3884081403efad47fc2642c4",
+      "geospatial/facilities/source/campus.json": "41de327022a85cca9ba6509953e5fa83e0bf8dcbb59c6741848ad997a839cd26",
+      "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
+      "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
+      "geospatial/facilities/render.py": "8d921a67fd8b757edd1f5a10a6bd4f882350a92b8d945f6dc7e67303a6cb305e",
       "geospatial/registers/MAP_ID_REGISTER.json": "690ebe85bb199d6e863c0d28d268c7cc155574fceed6b38c19520e2e55aee61c"
     },
     "site_id": "SH-IND-FAC-ARU-OFFICE",
@@ -2004,15 +2004,15 @@
     "files": {
       "svg": {
         "path": "facilities/SH-MAP-ARU-040.svg",
-        "sha256": "42c1db57178ad501594a27a273eceb2acf01be774d2b61f46c80f27b57ec14d8"
+        "sha256": "be12ae291c2619eec8c8b3b13e209d8ea3bfd4584edf7c49daacccd98b3bd744"
       },
       "png": {
         "path": "facilities/SH-MAP-ARU-040.png",
-        "sha256": "b676924f5cd654485e00e633aa0d439f654cc49fcc3bbf60ad658cc5fb4d3289"
+        "sha256": "63615a951d59275622b7c477ef789ec11b782536bf9ee3c8ea8d0419bdb4c03f"
       },
       "pdf": {
         "path": "facilities/SH-MAP-ARU-040.pdf",
-        "sha256": "b9aaf08ee1272405d69edbadcb0512a0eba060899f5465c3bf0247620e8b480c"
+        "sha256": "cc8041b413b74d6f0550c25a6eb6cc9b70c41e2c50ea69d016ff25d896f077e7"
       }
     }
   },
@@ -2031,10 +2031,10 @@
     "review_status": "SEE_HASH_BOUND_FACILITY_QA",
     "source_scope": "GeoPackage is geographic context only. Facility source geometries remain illustrative local frames; no parcel geometry inserted.",
     "source_sha256": {
-      "geospatial/facilities/source/campus.json": "6b918b435a95c816c481200732bcc85cd07ee7526debec9643f7c705b37c2592",
-      "geospatial/facilities/source/industrial_facilities.json": "2c71a93885099d4353b8f392284fb5d5947d4ad7a8e79440dfd354404a94435d",
-      "geospatial/facilities/source/research_campuses.json": "6350a1c4e168089c4fee2035397303f221ae7a5f38fe16d42bebefd264052688",
-      "geospatial/facilities/render.py": "3cce30211d737adad494ab842a539da6d32b17da3884081403efad47fc2642c4",
+      "geospatial/facilities/source/campus.json": "41de327022a85cca9ba6509953e5fa83e0bf8dcbb59c6741848ad997a839cd26",
+      "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
+      "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
+      "geospatial/facilities/render.py": "8d921a67fd8b757edd1f5a10a6bd4f882350a92b8d945f6dc7e67303a6cb305e",
       "geospatial/registers/MAP_ID_REGISTER.json": "690ebe85bb199d6e863c0d28d268c7cc155574fceed6b38c19520e2e55aee61c"
     },
     "site_id": "SH-IND-FAC-ARU-OFFICE",
@@ -2070,10 +2070,10 @@
     "review_status": "SEE_HASH_BOUND_FACILITY_QA",
     "source_scope": "GeoPackage is geographic context only. Facility source geometries remain illustrative local frames; no parcel geometry inserted.",
     "source_sha256": {
-      "geospatial/facilities/source/campus.json": "6b918b435a95c816c481200732bcc85cd07ee7526debec9643f7c705b37c2592",
-      "geospatial/facilities/source/industrial_facilities.json": "2c71a93885099d4353b8f392284fb5d5947d4ad7a8e79440dfd354404a94435d",
-      "geospatial/facilities/source/research_campuses.json": "6350a1c4e168089c4fee2035397303f221ae7a5f38fe16d42bebefd264052688",
-      "geospatial/facilities/render.py": "3cce30211d737adad494ab842a539da6d32b17da3884081403efad47fc2642c4",
+      "geospatial/facilities/source/campus.json": "41de327022a85cca9ba6509953e5fa83e0bf8dcbb59c6741848ad997a839cd26",
+      "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
+      "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
+      "geospatial/facilities/render.py": "8d921a67fd8b757edd1f5a10a6bd4f882350a92b8d945f6dc7e67303a6cb305e",
       "geospatial/registers/MAP_ID_REGISTER.json": "690ebe85bb199d6e863c0d28d268c7cc155574fceed6b38c19520e2e55aee61c"
     },
     "site_id": "SH-IND-FAC-ARU-OFFICE",
@@ -2090,7 +2090,7 @@
       },
       "pdf": {
         "path": "facilities/SH-MAP-ARU-042.pdf",
-        "sha256": "da4f86326aadac6e2a178178218e1e3badad9a4e59b9610601bb7c9807af1e56"
+        "sha256": "e758dc72155956e249a7c9ec21f996b109ceb8ed2df8adc910ffb76ceecfcfc1"
       }
     }
   },
@@ -2109,10 +2109,10 @@
     "review_status": "SEE_HASH_BOUND_FACILITY_QA",
     "source_scope": "GeoPackage is geographic context only. Facility source geometries remain illustrative local frames; no parcel geometry inserted.",
     "source_sha256": {
-      "geospatial/facilities/source/campus.json": "6b918b435a95c816c481200732bcc85cd07ee7526debec9643f7c705b37c2592",
-      "geospatial/facilities/source/industrial_facilities.json": "2c71a93885099d4353b8f392284fb5d5947d4ad7a8e79440dfd354404a94435d",
-      "geospatial/facilities/source/research_campuses.json": "6350a1c4e168089c4fee2035397303f221ae7a5f38fe16d42bebefd264052688",
-      "geospatial/facilities/render.py": "3cce30211d737adad494ab842a539da6d32b17da3884081403efad47fc2642c4",
+      "geospatial/facilities/source/campus.json": "41de327022a85cca9ba6509953e5fa83e0bf8dcbb59c6741848ad997a839cd26",
+      "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
+      "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
+      "geospatial/facilities/render.py": "8d921a67fd8b757edd1f5a10a6bd4f882350a92b8d945f6dc7e67303a6cb305e",
       "geospatial/registers/MAP_ID_REGISTER.json": "690ebe85bb199d6e863c0d28d268c7cc155574fceed6b38c19520e2e55aee61c"
     },
     "site_id": "SH-IND-FAC-RW-RECEIVING",
@@ -2121,15 +2121,15 @@
     "files": {
       "svg": {
         "path": "facilities/SH-MAP-RWM-020.svg",
-        "sha256": "7f741f8f886cf479ecef72d512e9c068316dccc9bf80f0df65bf20bb24d0afb9"
+        "sha256": "dd52e5ad41ed9964c05461765958ce515f0f08b60d409d517611fb0464762795"
       },
       "png": {
         "path": "facilities/SH-MAP-RWM-020.png",
-        "sha256": "ec47413c4bec6120d9df87e3f379629d335c21d1fe6f5c33c1a3f662f579f947"
+        "sha256": "cdcfd80ee7cb714c222deb6c5ee4c4e7c3e8b02ac363c88a04414e2f0ebb9454"
       },
       "pdf": {
         "path": "facilities/SH-MAP-RWM-020.pdf",
-        "sha256": "b7f8a52fde7b3496ce14712edb87cc0c0eb9e64017d888cb150197a924740da2"
+        "sha256": "8f582fd150a69bfbcc5ae96c264ff015d02671ae8eb6001b7155464168e6485b"
       }
     }
   },
@@ -2148,10 +2148,10 @@
     "review_status": "SEE_HASH_BOUND_FACILITY_QA",
     "source_scope": "GeoPackage is geographic context only. Facility source geometries remain illustrative local frames; no parcel geometry inserted.",
     "source_sha256": {
-      "geospatial/facilities/source/campus.json": "6b918b435a95c816c481200732bcc85cd07ee7526debec9643f7c705b37c2592",
-      "geospatial/facilities/source/industrial_facilities.json": "2c71a93885099d4353b8f392284fb5d5947d4ad7a8e79440dfd354404a94435d",
-      "geospatial/facilities/source/research_campuses.json": "6350a1c4e168089c4fee2035397303f221ae7a5f38fe16d42bebefd264052688",
-      "geospatial/facilities/render.py": "3cce30211d737adad494ab842a539da6d32b17da3884081403efad47fc2642c4",
+      "geospatial/facilities/source/campus.json": "41de327022a85cca9ba6509953e5fa83e0bf8dcbb59c6741848ad997a839cd26",
+      "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
+      "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
+      "geospatial/facilities/render.py": "8d921a67fd8b757edd1f5a10a6bd4f882350a92b8d945f6dc7e67303a6cb305e",
       "geospatial/registers/MAP_ID_REGISTER.json": "690ebe85bb199d6e863c0d28d268c7cc155574fceed6b38c19520e2e55aee61c"
     },
     "site_id": "SH-SITE-0006",
@@ -2160,15 +2160,15 @@
     "files": {
       "svg": {
         "path": "facilities/SH-MAP-RWM-021.svg",
-        "sha256": "989712fe03024407367e91453d596c83379cb27577a203ba188bb8894b67de3f"
+        "sha256": "9e2b566d52cb3141b57ea226f567e2ee9666d73d2b5a6e629dea8edb3d4d38d2"
       },
       "png": {
         "path": "facilities/SH-MAP-RWM-021.png",
-        "sha256": "544a30f5985cab22af1fbedb104189ff6fc7f9f07a790e968527d9d19ca553a1"
+        "sha256": "ff4e0d2b54845c38c2d4aa68347934ef4a9f91e102bcbdbf0cae52fcea4257e5"
       },
       "pdf": {
         "path": "facilities/SH-MAP-RWM-021.pdf",
-        "sha256": "563f0e2f78fc773897758e5b9eabf5ce358d199fe043c19976ca1d20e0c50739"
+        "sha256": "06576ca48f0aac0bfd596a85110d04ce96247a202f6269d60a3465bb91109b4d"
       }
     }
   },
@@ -2187,10 +2187,10 @@
     "review_status": "SEE_HASH_BOUND_FACILITY_QA",
     "source_scope": "GeoPackage is geographic context only. Facility source geometries remain illustrative local frames; no parcel geometry inserted.",
     "source_sha256": {
-      "geospatial/facilities/source/campus.json": "6b918b435a95c816c481200732bcc85cd07ee7526debec9643f7c705b37c2592",
-      "geospatial/facilities/source/industrial_facilities.json": "2c71a93885099d4353b8f392284fb5d5947d4ad7a8e79440dfd354404a94435d",
-      "geospatial/facilities/source/research_campuses.json": "6350a1c4e168089c4fee2035397303f221ae7a5f38fe16d42bebefd264052688",
-      "geospatial/facilities/render.py": "3cce30211d737adad494ab842a539da6d32b17da3884081403efad47fc2642c4",
+      "geospatial/facilities/source/campus.json": "41de327022a85cca9ba6509953e5fa83e0bf8dcbb59c6741848ad997a839cd26",
+      "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
+      "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
+      "geospatial/facilities/render.py": "8d921a67fd8b757edd1f5a10a6bd4f882350a92b8d945f6dc7e67303a6cb305e",
       "geospatial/registers/MAP_ID_REGISTER.json": "690ebe85bb199d6e863c0d28d268c7cc155574fceed6b38c19520e2e55aee61c"
     },
     "site_id": "SH-SITE-0003",
@@ -2199,15 +2199,15 @@
     "files": {
       "svg": {
         "path": "facilities/SH-MAP-WIL-020.svg",
-        "sha256": "1eff538d6574c0cae750738c00ba727d7b769cb12ce50ad5295e27fab658e6f1"
+        "sha256": "2e21db5055a9de3e0d5845d0e4c201a222165a2e5d05576257f1b58ca2ab2881"
       },
       "png": {
         "path": "facilities/SH-MAP-WIL-020.png",
-        "sha256": "a3a12640d610ec3cb28f1e184f5843f9322bca1eef84d4fde4e439f741d3dbfe"
+        "sha256": "f95934f78d53fb06c796197955593d75a8e14042ea21353402439d13b09f86f7"
       },
       "pdf": {
         "path": "facilities/SH-MAP-WIL-020.pdf",
-        "sha256": "04b468f1b3913a1a070e8ef582c11be7d6ef6d60bdcf87a4b87aa8df9c056533"
+        "sha256": "86689f792c6c9bd10844819fb871393a7dc52ec8b80ae8926614acefb4352afd"
       }
     }
   },
@@ -2226,10 +2226,10 @@
     "review_status": "SEE_HASH_BOUND_FACILITY_QA",
     "source_scope": "GeoPackage is geographic context only. Facility source geometries remain illustrative local frames; no parcel geometry inserted.",
     "source_sha256": {
-      "geospatial/facilities/source/campus.json": "6b918b435a95c816c481200732bcc85cd07ee7526debec9643f7c705b37c2592",
-      "geospatial/facilities/source/industrial_facilities.json": "2c71a93885099d4353b8f392284fb5d5947d4ad7a8e79440dfd354404a94435d",
-      "geospatial/facilities/source/research_campuses.json": "6350a1c4e168089c4fee2035397303f221ae7a5f38fe16d42bebefd264052688",
-      "geospatial/facilities/render.py": "3cce30211d737adad494ab842a539da6d32b17da3884081403efad47fc2642c4",
+      "geospatial/facilities/source/campus.json": "41de327022a85cca9ba6509953e5fa83e0bf8dcbb59c6741848ad997a839cd26",
+      "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
+      "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
+      "geospatial/facilities/render.py": "8d921a67fd8b757edd1f5a10a6bd4f882350a92b8d945f6dc7e67303a6cb305e",
       "geospatial/registers/MAP_ID_REGISTER.json": "690ebe85bb199d6e863c0d28d268c7cc155574fceed6b38c19520e2e55aee61c"
     },
     "site_id": "SH-SITE-0003",
@@ -2246,7 +2246,7 @@
       },
       "pdf": {
         "path": "facilities/SH-MAP-WIL-021.pdf",
-        "sha256": "cfc7e5eada3baa0bc026a83194ede2ca8e316ccf227a06534bcfefbe856acd03"
+        "sha256": "69d8500dfb209e452cf511e2787429c3dcd8708cc3a6d2ca46f0c0d1adc50572"
       }
     }
   },
@@ -2265,10 +2265,10 @@
     "review_status": "SEE_HASH_BOUND_FACILITY_QA",
     "source_scope": "GeoPackage is geographic context only. Facility source geometries remain illustrative local frames; no parcel geometry inserted.",
     "source_sha256": {
-      "geospatial/facilities/source/campus.json": "6b918b435a95c816c481200732bcc85cd07ee7526debec9643f7c705b37c2592",
-      "geospatial/facilities/source/industrial_facilities.json": "2c71a93885099d4353b8f392284fb5d5947d4ad7a8e79440dfd354404a94435d",
-      "geospatial/facilities/source/research_campuses.json": "6350a1c4e168089c4fee2035397303f221ae7a5f38fe16d42bebefd264052688",
-      "geospatial/facilities/render.py": "3cce30211d737adad494ab842a539da6d32b17da3884081403efad47fc2642c4",
+      "geospatial/facilities/source/campus.json": "41de327022a85cca9ba6509953e5fa83e0bf8dcbb59c6741848ad997a839cd26",
+      "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
+      "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
+      "geospatial/facilities/render.py": "8d921a67fd8b757edd1f5a10a6bd4f882350a92b8d945f6dc7e67303a6cb305e",
       "geospatial/registers/MAP_ID_REGISTER.json": "690ebe85bb199d6e863c0d28d268c7cc155574fceed6b38c19520e2e55aee61c"
     },
     "site_id": "SH-SITE-0003",
@@ -2285,7 +2285,7 @@
       },
       "pdf": {
         "path": "facilities/SH-MAP-WIL-022.pdf",
-        "sha256": "31f504308e695979bdf9915c1844162f98d8e77e334b6386c2bb757ed051055a"
+        "sha256": "8e8c2306cf9657aa7a1e0ed961e9aa8e1b69c04e0bdcce8d2d58ed9ed024a266"
       }
     }
   },
@@ -2304,10 +2304,10 @@
     "review_status": "SEE_HASH_BOUND_FACILITY_QA",
     "source_scope": "GeoPackage is geographic context only. Facility source geometries remain illustrative local frames; no parcel geometry inserted.",
     "source_sha256": {
-      "geospatial/facilities/source/campus.json": "6b918b435a95c816c481200732bcc85cd07ee7526debec9643f7c705b37c2592",
-      "geospatial/facilities/source/industrial_facilities.json": "2c71a93885099d4353b8f392284fb5d5947d4ad7a8e79440dfd354404a94435d",
-      "geospatial/facilities/source/research_campuses.json": "6350a1c4e168089c4fee2035397303f221ae7a5f38fe16d42bebefd264052688",
-      "geospatial/facilities/render.py": "3cce30211d737adad494ab842a539da6d32b17da3884081403efad47fc2642c4",
+      "geospatial/facilities/source/campus.json": "41de327022a85cca9ba6509953e5fa83e0bf8dcbb59c6741848ad997a839cd26",
+      "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
+      "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
+      "geospatial/facilities/render.py": "8d921a67fd8b757edd1f5a10a6bd4f882350a92b8d945f6dc7e67303a6cb305e",
       "geospatial/registers/MAP_ID_REGISTER.json": "690ebe85bb199d6e863c0d28d268c7cc155574fceed6b38c19520e2e55aee61c"
     },
     "site_id": "SH-SITE-0003",
@@ -2324,7 +2324,7 @@
       },
       "pdf": {
         "path": "facilities/SH-MAP-WIL-023.pdf",
-        "sha256": "b490abd91b886bd560b1d10c36d803704d863195aec9dc4cb995068d73f8a008"
+        "sha256": "ef167183fed8063d38ab49782d92a7ca0d4afc6c4d5bd0b6e8cec0aee889ab5c"
       }
     }
   },
@@ -2343,10 +2343,10 @@
     "review_status": "SEE_HASH_BOUND_FACILITY_QA",
     "source_scope": "GeoPackage is geographic context only. Facility source geometries remain illustrative local frames; no parcel geometry inserted.",
     "source_sha256": {
-      "geospatial/facilities/source/campus.json": "6b918b435a95c816c481200732bcc85cd07ee7526debec9643f7c705b37c2592",
-      "geospatial/facilities/source/industrial_facilities.json": "2c71a93885099d4353b8f392284fb5d5947d4ad7a8e79440dfd354404a94435d",
-      "geospatial/facilities/source/research_campuses.json": "6350a1c4e168089c4fee2035397303f221ae7a5f38fe16d42bebefd264052688",
-      "geospatial/facilities/render.py": "3cce30211d737adad494ab842a539da6d32b17da3884081403efad47fc2642c4",
+      "geospatial/facilities/source/campus.json": "41de327022a85cca9ba6509953e5fa83e0bf8dcbb59c6741848ad997a839cd26",
+      "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
+      "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
+      "geospatial/facilities/render.py": "8d921a67fd8b757edd1f5a10a6bd4f882350a92b8d945f6dc7e67303a6cb305e",
       "geospatial/registers/MAP_ID_REGISTER.json": "690ebe85bb199d6e863c0d28d268c7cc155574fceed6b38c19520e2e55aee61c"
     },
     "site_id": "SH-SITE-0003",
@@ -2363,7 +2363,7 @@
       },
       "pdf": {
         "path": "facilities/SH-MAP-WIL-024.pdf",
-        "sha256": "5a3f22605460c39c2107a86eece7b4d9a99b953d0b21a35215b615fc17d80de0"
+        "sha256": "5132dd99b2e47e566b92d85dc8841e9b4f774cd9c01b2b5bb8d2fd3dcfac8fbd"
       }
     }
   },
@@ -2382,10 +2382,10 @@
     "review_status": "SEE_HASH_BOUND_FACILITY_QA",
     "source_scope": "GeoPackage is geographic context only. Facility source geometries remain illustrative local frames; no parcel geometry inserted.",
     "source_sha256": {
-      "geospatial/facilities/source/campus.json": "6b918b435a95c816c481200732bcc85cd07ee7526debec9643f7c705b37c2592",
-      "geospatial/facilities/source/industrial_facilities.json": "2c71a93885099d4353b8f392284fb5d5947d4ad7a8e79440dfd354404a94435d",
-      "geospatial/facilities/source/research_campuses.json": "6350a1c4e168089c4fee2035397303f221ae7a5f38fe16d42bebefd264052688",
-      "geospatial/facilities/render.py": "3cce30211d737adad494ab842a539da6d32b17da3884081403efad47fc2642c4",
+      "geospatial/facilities/source/campus.json": "41de327022a85cca9ba6509953e5fa83e0bf8dcbb59c6741848ad997a839cd26",
+      "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
+      "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
+      "geospatial/facilities/render.py": "8d921a67fd8b757edd1f5a10a6bd4f882350a92b8d945f6dc7e67303a6cb305e",
       "geospatial/registers/MAP_ID_REGISTER.json": "690ebe85bb199d6e863c0d28d268c7cc155574fceed6b38c19520e2e55aee61c"
     },
     "site_id": "SH-SITE-0003",
@@ -2402,7 +2402,7 @@
       },
       "pdf": {
         "path": "facilities/SH-MAP-WIL-025.pdf",
-        "sha256": "c0ca374eb6960c329c0e633fb07f408e75ecb7bd686d97f786974b6f743a1ee9"
+        "sha256": "0a47da3e772fb8bdaa65872bf7abf48cecdec16a006a323f6d20b12b49a32c86"
       }
     }
   },
@@ -2421,10 +2421,10 @@
     "review_status": "SEE_HASH_BOUND_FACILITY_QA",
     "source_scope": "GeoPackage is geographic context only. Facility source geometries remain illustrative local frames; no parcel geometry inserted.",
     "source_sha256": {
-      "geospatial/facilities/source/campus.json": "6b918b435a95c816c481200732bcc85cd07ee7526debec9643f7c705b37c2592",
-      "geospatial/facilities/source/industrial_facilities.json": "2c71a93885099d4353b8f392284fb5d5947d4ad7a8e79440dfd354404a94435d",
-      "geospatial/facilities/source/research_campuses.json": "6350a1c4e168089c4fee2035397303f221ae7a5f38fe16d42bebefd264052688",
-      "geospatial/facilities/render.py": "3cce30211d737adad494ab842a539da6d32b17da3884081403efad47fc2642c4",
+      "geospatial/facilities/source/campus.json": "41de327022a85cca9ba6509953e5fa83e0bf8dcbb59c6741848ad997a839cd26",
+      "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
+      "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
+      "geospatial/facilities/render.py": "8d921a67fd8b757edd1f5a10a6bd4f882350a92b8d945f6dc7e67303a6cb305e",
       "geospatial/registers/MAP_ID_REGISTER.json": "690ebe85bb199d6e863c0d28d268c7cc155574fceed6b38c19520e2e55aee61c"
     },
     "site_id": "SH-SITE-0003",
@@ -2441,7 +2441,7 @@
       },
       "pdf": {
         "path": "facilities/SH-MAP-WIL-026.pdf",
-        "sha256": "3b3dcbe77bbec4f9a3ac6bb706f7280ab9e117994f57188a351bac3e285e3e62"
+        "sha256": "829ca4e85d3c48d9913098f76caa5b6245b8fcd89f062634645fc07755aafa7c"
       }
     }
   },
@@ -2460,10 +2460,10 @@
     "review_status": "SEE_HASH_BOUND_FACILITY_QA",
     "source_scope": "GeoPackage is geographic context only. Facility source geometries remain illustrative local frames; no parcel geometry inserted.",
     "source_sha256": {
-      "geospatial/facilities/source/campus.json": "6b918b435a95c816c481200732bcc85cd07ee7526debec9643f7c705b37c2592",
-      "geospatial/facilities/source/industrial_facilities.json": "2c71a93885099d4353b8f392284fb5d5947d4ad7a8e79440dfd354404a94435d",
-      "geospatial/facilities/source/research_campuses.json": "6350a1c4e168089c4fee2035397303f221ae7a5f38fe16d42bebefd264052688",
-      "geospatial/facilities/render.py": "3cce30211d737adad494ab842a539da6d32b17da3884081403efad47fc2642c4",
+      "geospatial/facilities/source/campus.json": "41de327022a85cca9ba6509953e5fa83e0bf8dcbb59c6741848ad997a839cd26",
+      "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
+      "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
+      "geospatial/facilities/render.py": "8d921a67fd8b757edd1f5a10a6bd4f882350a92b8d945f6dc7e67303a6cb305e",
       "geospatial/registers/MAP_ID_REGISTER.json": "690ebe85bb199d6e863c0d28d268c7cc155574fceed6b38c19520e2e55aee61c"
     },
     "site_id": "SH-SITE-0003",
@@ -2480,7 +2480,7 @@
       },
       "pdf": {
         "path": "facilities/SH-MAP-WIL-027.pdf",
-        "sha256": "5bda15ebbcded27f1f0fd52698c0bc8be76e14c45d4a1d7be2b6158cb86465d2"
+        "sha256": "8b3f331703236be62c5dfb4dd8744ea838bfd1db137fff7542c3cc61d18de2d0"
       }
     }
   },
@@ -2499,10 +2499,10 @@
     "review_status": "SEE_HASH_BOUND_FACILITY_QA",
     "source_scope": "GeoPackage is geographic context only. Facility source geometries remain illustrative local frames; no parcel geometry inserted.",
     "source_sha256": {
-      "geospatial/facilities/source/campus.json": "6b918b435a95c816c481200732bcc85cd07ee7526debec9643f7c705b37c2592",
-      "geospatial/facilities/source/industrial_facilities.json": "2c71a93885099d4353b8f392284fb5d5947d4ad7a8e79440dfd354404a94435d",
-      "geospatial/facilities/source/research_campuses.json": "6350a1c4e168089c4fee2035397303f221ae7a5f38fe16d42bebefd264052688",
-      "geospatial/facilities/render.py": "3cce30211d737adad494ab842a539da6d32b17da3884081403efad47fc2642c4",
+      "geospatial/facilities/source/campus.json": "41de327022a85cca9ba6509953e5fa83e0bf8dcbb59c6741848ad997a839cd26",
+      "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
+      "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
+      "geospatial/facilities/render.py": "8d921a67fd8b757edd1f5a10a6bd4f882350a92b8d945f6dc7e67303a6cb305e",
       "geospatial/registers/MAP_ID_REGISTER.json": "690ebe85bb199d6e863c0d28d268c7cc155574fceed6b38c19520e2e55aee61c"
     },
     "site_id": "SH-SITE-0005",
@@ -2511,15 +2511,15 @@
     "files": {
       "svg": {
         "path": "facilities/SH-MAP-CRD-020.svg",
-        "sha256": "b322311eb989655f8bd3acc1c6287a08ecc15dd78a331557ab32d2e0e4f72025"
+        "sha256": "b6bffe5f0c69fbbce82eec579cfcb3a55a551db95e69ec6b61b7701102c87b8a"
       },
       "png": {
         "path": "facilities/SH-MAP-CRD-020.png",
-        "sha256": "9207e2680b1699acb4c2571765ac1d3510568743b92327a8f26e16e82497e0c8"
+        "sha256": "e5f8a6027a698a66348fb00ba256c35c22f3bb85375396d71035ff99ab664fda"
       },
       "pdf": {
         "path": "facilities/SH-MAP-CRD-020.pdf",
-        "sha256": "c904edf33ae26bc80794789a4cc0ee8f7eb08b0e2b31146e57da8a2b88f356fb"
+        "sha256": "19064e4b5c719a3a19d539767c3be98be2f86fe96396fc6b90de0fef3314f4ee"
       }
     }
   },
@@ -2538,10 +2538,10 @@
     "review_status": "SEE_HASH_BOUND_FACILITY_QA",
     "source_scope": "GeoPackage is geographic context only. Facility source geometries remain illustrative local frames; no parcel geometry inserted.",
     "source_sha256": {
-      "geospatial/facilities/source/campus.json": "6b918b435a95c816c481200732bcc85cd07ee7526debec9643f7c705b37c2592",
-      "geospatial/facilities/source/industrial_facilities.json": "2c71a93885099d4353b8f392284fb5d5947d4ad7a8e79440dfd354404a94435d",
-      "geospatial/facilities/source/research_campuses.json": "6350a1c4e168089c4fee2035397303f221ae7a5f38fe16d42bebefd264052688",
-      "geospatial/facilities/render.py": "3cce30211d737adad494ab842a539da6d32b17da3884081403efad47fc2642c4",
+      "geospatial/facilities/source/campus.json": "41de327022a85cca9ba6509953e5fa83e0bf8dcbb59c6741848ad997a839cd26",
+      "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
+      "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
+      "geospatial/facilities/render.py": "8d921a67fd8b757edd1f5a10a6bd4f882350a92b8d945f6dc7e67303a6cb305e",
       "geospatial/registers/MAP_ID_REGISTER.json": "690ebe85bb199d6e863c0d28d268c7cc155574fceed6b38c19520e2e55aee61c"
     },
     "site_id": "SH-SITE-0005",
@@ -2577,10 +2577,10 @@
     "review_status": "SEE_HASH_BOUND_FACILITY_QA",
     "source_scope": "GeoPackage is geographic context only. Facility source geometries remain illustrative local frames; no parcel geometry inserted.",
     "source_sha256": {
-      "geospatial/facilities/source/campus.json": "6b918b435a95c816c481200732bcc85cd07ee7526debec9643f7c705b37c2592",
-      "geospatial/facilities/source/industrial_facilities.json": "2c71a93885099d4353b8f392284fb5d5947d4ad7a8e79440dfd354404a94435d",
-      "geospatial/facilities/source/research_campuses.json": "6350a1c4e168089c4fee2035397303f221ae7a5f38fe16d42bebefd264052688",
-      "geospatial/facilities/render.py": "3cce30211d737adad494ab842a539da6d32b17da3884081403efad47fc2642c4",
+      "geospatial/facilities/source/campus.json": "41de327022a85cca9ba6509953e5fa83e0bf8dcbb59c6741848ad997a839cd26",
+      "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
+      "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
+      "geospatial/facilities/render.py": "8d921a67fd8b757edd1f5a10a6bd4f882350a92b8d945f6dc7e67303a6cb305e",
       "geospatial/registers/MAP_ID_REGISTER.json": "690ebe85bb199d6e863c0d28d268c7cc155574fceed6b38c19520e2e55aee61c"
     },
     "site_id": "SH-SITE-0005",
@@ -2616,10 +2616,10 @@
     "review_status": "SEE_HASH_BOUND_FACILITY_QA",
     "source_scope": "GeoPackage is geographic context only. Facility source geometries remain illustrative local frames; no parcel geometry inserted.",
     "source_sha256": {
-      "geospatial/facilities/source/campus.json": "6b918b435a95c816c481200732bcc85cd07ee7526debec9643f7c705b37c2592",
-      "geospatial/facilities/source/industrial_facilities.json": "2c71a93885099d4353b8f392284fb5d5947d4ad7a8e79440dfd354404a94435d",
-      "geospatial/facilities/source/research_campuses.json": "6350a1c4e168089c4fee2035397303f221ae7a5f38fe16d42bebefd264052688",
-      "geospatial/facilities/render.py": "3cce30211d737adad494ab842a539da6d32b17da3884081403efad47fc2642c4",
+      "geospatial/facilities/source/campus.json": "41de327022a85cca9ba6509953e5fa83e0bf8dcbb59c6741848ad997a839cd26",
+      "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
+      "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
+      "geospatial/facilities/render.py": "8d921a67fd8b757edd1f5a10a6bd4f882350a92b8d945f6dc7e67303a6cb305e",
       "geospatial/registers/MAP_ID_REGISTER.json": "690ebe85bb199d6e863c0d28d268c7cc155574fceed6b38c19520e2e55aee61c"
     },
     "site_id": "SH-SITE-0005",
@@ -2655,10 +2655,10 @@
     "review_status": "SEE_HASH_BOUND_FACILITY_QA",
     "source_scope": "GeoPackage is geographic context only. Facility source geometries remain illustrative local frames; no parcel geometry inserted.",
     "source_sha256": {
-      "geospatial/facilities/source/campus.json": "6b918b435a95c816c481200732bcc85cd07ee7526debec9643f7c705b37c2592",
-      "geospatial/facilities/source/industrial_facilities.json": "2c71a93885099d4353b8f392284fb5d5947d4ad7a8e79440dfd354404a94435d",
-      "geospatial/facilities/source/research_campuses.json": "6350a1c4e168089c4fee2035397303f221ae7a5f38fe16d42bebefd264052688",
-      "geospatial/facilities/render.py": "3cce30211d737adad494ab842a539da6d32b17da3884081403efad47fc2642c4",
+      "geospatial/facilities/source/campus.json": "41de327022a85cca9ba6509953e5fa83e0bf8dcbb59c6741848ad997a839cd26",
+      "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
+      "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
+      "geospatial/facilities/render.py": "8d921a67fd8b757edd1f5a10a6bd4f882350a92b8d945f6dc7e67303a6cb305e",
       "geospatial/registers/MAP_ID_REGISTER.json": "690ebe85bb199d6e863c0d28d268c7cc155574fceed6b38c19520e2e55aee61c"
     },
     "site_id": "SH-SITE-0005",
@@ -2694,10 +2694,10 @@
     "review_status": "SEE_HASH_BOUND_FACILITY_QA",
     "source_scope": "GeoPackage is geographic context only. Facility source geometries remain illustrative local frames; no parcel geometry inserted.",
     "source_sha256": {
-      "geospatial/facilities/source/campus.json": "6b918b435a95c816c481200732bcc85cd07ee7526debec9643f7c705b37c2592",
-      "geospatial/facilities/source/industrial_facilities.json": "2c71a93885099d4353b8f392284fb5d5947d4ad7a8e79440dfd354404a94435d",
-      "geospatial/facilities/source/research_campuses.json": "6350a1c4e168089c4fee2035397303f221ae7a5f38fe16d42bebefd264052688",
-      "geospatial/facilities/render.py": "3cce30211d737adad494ab842a539da6d32b17da3884081403efad47fc2642c4",
+      "geospatial/facilities/source/campus.json": "41de327022a85cca9ba6509953e5fa83e0bf8dcbb59c6741848ad997a839cd26",
+      "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
+      "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
+      "geospatial/facilities/render.py": "8d921a67fd8b757edd1f5a10a6bd4f882350a92b8d945f6dc7e67303a6cb305e",
       "geospatial/registers/MAP_ID_REGISTER.json": "690ebe85bb199d6e863c0d28d268c7cc155574fceed6b38c19520e2e55aee61c"
     },
     "site_id": "SH-SITE-0005",
@@ -2733,10 +2733,10 @@
     "review_status": "SEE_HASH_BOUND_FACILITY_QA",
     "source_scope": "GeoPackage is geographic context only. Facility source geometries remain illustrative local frames; no parcel geometry inserted.",
     "source_sha256": {
-      "geospatial/facilities/source/campus.json": "6b918b435a95c816c481200732bcc85cd07ee7526debec9643f7c705b37c2592",
-      "geospatial/facilities/source/industrial_facilities.json": "2c71a93885099d4353b8f392284fb5d5947d4ad7a8e79440dfd354404a94435d",
-      "geospatial/facilities/source/research_campuses.json": "6350a1c4e168089c4fee2035397303f221ae7a5f38fe16d42bebefd264052688",
-      "geospatial/facilities/render.py": "3cce30211d737adad494ab842a539da6d32b17da3884081403efad47fc2642c4",
+      "geospatial/facilities/source/campus.json": "41de327022a85cca9ba6509953e5fa83e0bf8dcbb59c6741848ad997a839cd26",
+      "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
+      "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
+      "geospatial/facilities/render.py": "8d921a67fd8b757edd1f5a10a6bd4f882350a92b8d945f6dc7e67303a6cb305e",
       "geospatial/registers/MAP_ID_REGISTER.json": "690ebe85bb199d6e863c0d28d268c7cc155574fceed6b38c19520e2e55aee61c"
     },
     "site_id": "SH-SITE-0005",
@@ -2772,10 +2772,10 @@
     "review_status": "SEE_HASH_BOUND_FACILITY_QA",
     "source_scope": "GeoPackage is geographic context only. Facility source geometries remain illustrative local frames; no parcel geometry inserted.",
     "source_sha256": {
-      "geospatial/facilities/source/campus.json": "6b918b435a95c816c481200732bcc85cd07ee7526debec9643f7c705b37c2592",
-      "geospatial/facilities/source/industrial_facilities.json": "2c71a93885099d4353b8f392284fb5d5947d4ad7a8e79440dfd354404a94435d",
-      "geospatial/facilities/source/research_campuses.json": "6350a1c4e168089c4fee2035397303f221ae7a5f38fe16d42bebefd264052688",
-      "geospatial/facilities/render.py": "3cce30211d737adad494ab842a539da6d32b17da3884081403efad47fc2642c4",
+      "geospatial/facilities/source/campus.json": "41de327022a85cca9ba6509953e5fa83e0bf8dcbb59c6741848ad997a839cd26",
+      "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
+      "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
+      "geospatial/facilities/render.py": "8d921a67fd8b757edd1f5a10a6bd4f882350a92b8d945f6dc7e67303a6cb305e",
       "geospatial/registers/MAP_ID_REGISTER.json": "690ebe85bb199d6e863c0d28d268c7cc155574fceed6b38c19520e2e55aee61c"
     },
     "site_id": "SH-SITE-0005",
@@ -2811,10 +2811,10 @@
     "review_status": "SEE_HASH_BOUND_FACILITY_QA",
     "source_scope": "GeoPackage is geographic context only. Facility source geometries remain illustrative local frames; no parcel geometry inserted.",
     "source_sha256": {
-      "geospatial/facilities/source/campus.json": "6b918b435a95c816c481200732bcc85cd07ee7526debec9643f7c705b37c2592",
-      "geospatial/facilities/source/industrial_facilities.json": "2c71a93885099d4353b8f392284fb5d5947d4ad7a8e79440dfd354404a94435d",
-      "geospatial/facilities/source/research_campuses.json": "6350a1c4e168089c4fee2035397303f221ae7a5f38fe16d42bebefd264052688",
-      "geospatial/facilities/render.py": "3cce30211d737adad494ab842a539da6d32b17da3884081403efad47fc2642c4",
+      "geospatial/facilities/source/campus.json": "41de327022a85cca9ba6509953e5fa83e0bf8dcbb59c6741848ad997a839cd26",
+      "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
+      "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
+      "geospatial/facilities/render.py": "8d921a67fd8b757edd1f5a10a6bd4f882350a92b8d945f6dc7e67303a6cb305e",
       "geospatial/registers/MAP_ID_REGISTER.json": "690ebe85bb199d6e863c0d28d268c7cc155574fceed6b38c19520e2e55aee61c"
     },
     "site_id": "SH-SITE-0005",
