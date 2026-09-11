@@ -1,0 +1,133 @@
+{
+  "status": "PASS",
+  "scope": "Six Sacramento master, building stack and status sheets; ten floors reviewed independently in R01_TEN_FLOOR_FINAL_REVIEW.",
+  "source_commit": "cfa1d5b940ce372eccb3ead982c25ca47a2ee328",
+  "method": "Main agent inspected all six saved PNGs at original resolution and all six independently rasterized PDF pages at3240x2304. Pinned-font SVG renders are pixel-identical to PNGs. Crosschecked master composition against first-gate R01 evidence, stable IDs, floor stack areas/capacities and explicit status.",
+  "corrected_findings": [
+    "Full level identifiers added to stack rows",
+    "Primary program descriptions retained without mid-word truncation",
+    "R01 master connections and Education entrance aligned in first-gate review"
+  ],
+  "sheets": [
+    {
+      "map_id": "SH-MAP-SAC-002",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-002.svg",
+          "sha256": "3eb7d41e254a50929937176b0edb3763fbffccc210a288c1f624692ad2a940ec"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-002.png",
+          "sha256": "41ef84b50a665e34b89deff2a39ad2635eb3cb0308d3cc9ff29e46d25fcf8f8b"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-002.pdf",
+          "sha256": "057a4946a140bf7c8f0d2f57a9d75def60d7f1f8217087f596c894433af5f165"
+        }
+      },
+      "svg_png_pixel_identity": true,
+      "pdf_render": "PASS",
+      "manual_review": "PASS"
+    },
+    {
+      "map_id": "SH-MAP-SAC-023",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-023.svg",
+          "sha256": "34868a1f8d45598ab1145600a2b1bf52f20b4a3124ef1191ca3e6da9c17a0342"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-023.png",
+          "sha256": "8a4c6992be424a913e782bc447203c00cf050fc69b2d4560f805b8cf3e539e4f"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-023.pdf",
+          "sha256": "f415973117f6c6465c6546e0cd264f4828a3bb4c9f496f38edba5bc9a58faaff"
+        }
+      },
+      "svg_png_pixel_identity": true,
+      "pdf_render": "PASS",
+      "manual_review": "PASS"
+    },
+    {
+      "map_id": "SH-MAP-SAC-027",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-027.svg",
+          "sha256": "0453c98cbe206cd715820955184048e8953bc324418d0ba5246ff19fb4899ee9"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-027.png",
+          "sha256": "e5088e5695615a0f06fe2b631e13b76f47b5f2b19f904b65de7c9e661c1424ad"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-027.pdf",
+          "sha256": "5a0b8025b737b7e8d685e43b5da2bce6e2a31b1ebabc12aa7896b65a98d1a13b"
+        }
+      },
+      "svg_png_pixel_identity": true,
+      "pdf_render": "PASS",
+      "manual_review": "PASS"
+    },
+    {
+      "map_id": "SH-MAP-SAC-030",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-030.svg",
+          "sha256": "bda876294555784130f5a6f2b7332a0b5de4bfd732098d14c662e685f7465d36"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-030.png",
+          "sha256": "dea29919ab009d9ecc96a6caf7be6466a2ee55464e6955ed9f3b8a6f0b31e3fe"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-030.pdf",
+          "sha256": "4a7bb363f578d6883bfea3e55df94b8ae6b0b3d297ec10c1b99a7af273d36c3f"
+        }
+      },
+      "svg_png_pixel_identity": true,
+      "pdf_render": "PASS",
+      "manual_review": "PASS"
+    },
+    {
+      "map_id": "SH-MAP-SAC-033",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-033.svg",
+          "sha256": "1be72a3c06301cc7bdef8b6cbab6c3e31416730564eebde482c25e7c9cc41583"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-033.png",
+          "sha256": "aa8f9ad1108263e632203445888fc7aca2223916f56733c7b52120f5a5244882"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-033.pdf",
+          "sha256": "d980d96afdc08046503c47c72b560a112c625fda0150cc2b93e6782d03c78bdf"
+        }
+      },
+      "svg_png_pixel_identity": true,
+      "pdf_render": "PASS",
+      "manual_review": "PASS"
+    },
+    {
+      "map_id": "SH-MAP-SAC-022",
+      "artifacts": {
+        "svg": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-022.svg",
+          "sha256": "8737abcc6d2db55655b9de35185992421db17c8d54b7b00ad1b2fbde99403d8a"
+        },
+        "png": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-022.png",
+          "sha256": "0ccc2c5162ec9f890b76863c3d780946163548f42cdffa276c5d306ce0ecf938"
+        },
+        "pdf": {
+          "path": "geospatial/maps/facilities/SH-MAP-SAC-022.pdf",
+          "sha256": "a4cd8bf04ebd1fc5872767aac78cc91d76d812671609fc67959a0b43ffbef7d9"
+        }
+      },
+      "svg_png_pixel_identity": true,
+      "pdf_render": "PASS",
+      "manual_review": "PASS"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+...........F...............................                              [100%]
+=================================== FAILURES ===================================
+___________________ AtlasGraphRegression.test_current_graph ____________________
+
+self = <test_facilities.AtlasGraphRegression testMethod=test_current_graph>
+
+    def test_current_graph(self):
+>       self.assertEqual(validation.validate_graph(self.graph, self.models, self.coverage), [])
+E       AssertionError: Lists differ: ['stale atlas source geospatial/maps/facil[79 chars]son'] != []
+E       
+E       First list contains 2 additional elements.
+E       First extra element 0:
+E       'stale atlas source geospatial/maps/facilities/MANIFEST.json'
+E       
+E       + []
+E       - ['stale atlas source geospatial/maps/facilities/MANIFEST.json',
+E       -  'stale atlas source geospatial/facilities/source/campus.json']
+
+geospatial/facilities/test_facilities.py:94: AssertionError
+=========================== short test summary info ============================
+FAILED geospatial/facilities/test_facilities.py::AtlasGraphRegression::test_current_graph

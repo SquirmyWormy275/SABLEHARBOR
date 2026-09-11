@@ -1,0 +1,48 @@
+E402 Module level import not at top of file
+  --> geospatial/facilities/qa/R01_verify_floor_artifacts.py:11:1
+   |
+ 9 | ROOT = Path(__file__).resolve().parents[3]
+10 | os.environ['FONTCONFIG_FILE'] = str(ROOT / 'geospatial/facilities/fonts/fonts.conf')
+11 | import cairosvg
+   | ^^^^^^^^^^^^^^^
+12 | import fitz
+13 | import numpy as np
+   |
+help: Move module level imports to top of file
+
+E402 Module level import not at top of file
+  --> geospatial/facilities/qa/R01_verify_floor_artifacts.py:12:1
+   |
+10 | os.environ['FONTCONFIG_FILE'] = str(ROOT / 'geospatial/facilities/fonts/fonts.conf')
+11 | import cairosvg
+12 | import fitz
+   | ^^^^^^^^^^^
+13 | import numpy as np
+14 | from PIL import Image
+   |
+help: Move module level imports to top of file
+
+E402 Module level import not at top of file
+  --> geospatial/facilities/qa/R01_verify_floor_artifacts.py:13:1
+   |
+11 | import cairosvg
+12 | import fitz
+13 | import numpy as np
+   | ^^^^^^^^^^^^^^^^^^
+14 | from PIL import Image
+   |
+help: Move module level imports to top of file
+
+E402 Module level import not at top of file
+  --> geospatial/facilities/qa/R01_verify_floor_artifacts.py:14:1
+   |
+12 | import fitz
+13 | import numpy as np
+14 | from PIL import Image
+   | ^^^^^^^^^^^^^^^^^^^^^
+15 |
+16 | OUTPUT = Path('/tmp/sable-r02-final-floor-qa')
+   |
+help: Move module level imports to top of file
+
+Found 4 errors.
