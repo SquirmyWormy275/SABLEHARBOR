@@ -1,0 +1,50 @@
+{
+  "as_of": "2026-09-11",
+  "state_rule": "planned, contracted, construction, commissioned and operating states are distinct",
+  "sites": [
+    {
+      "id": "RUNTIME-RENO-COLO",
+      "name": "Reno primary colocation",
+      "geography": "Reno/Tahoe-Reno, Nevada",
+      "status": "PLANNED_PROCUREMENT",
+      "provider": null,
+      "lead_candidate": "Switch Tahoe-Reno",
+      "initial_usable_it_kw_low": 75,
+      "initial_usable_it_kw_high": 100,
+      "required_expansion_kw": 250,
+      "operating": false
+    },
+    {
+      "id": "RUNTIME-BOISE-DR",
+      "name": "Boise independent recovery colocation",
+      "geography": "Boise, Idaho",
+      "status": "PLANNED_PROCUREMENT",
+      "provider": null,
+      "lead_candidate": "IDACORE Boise",
+      "operating": false,
+      "independent_from_primary": true
+    },
+    {
+      "id": "RUNTIME-NN-OWNED-DC",
+      "name": "SABLE HARBOR Northern Nevada Data Center",
+      "geography": "Tahoe-Reno Industrial Center / USA Parkway industrial district, Storey County, Nevada",
+      "planning_lon_lat": [-119.4550, 39.5450],
+      "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+      "parcel_acres_planning": 7.5,
+      "real_apn": null,
+      "planning_purchase_date": "2026-09-04",
+      "planning_consideration_usd": 3000000,
+      "status": "LAND_ACQUIRED_PRECONSTRUCTION",
+      "vertical_construction_percent": 0,
+      "commissioned_it_kw": 0,
+      "commissioned_critical_kw": 0,
+      "planned_shell_sqft_low": 10000,
+      "planned_shell_sqft_high": 15000,
+      "planned_initial_critical_kw_low": 250,
+      "planned_initial_critical_kw_high": 500,
+      "planned_utility_path_kw": 1000,
+      "preserve_expansion_path_kw": 2000,
+      "operating": false
+    }
+  ]
+}
