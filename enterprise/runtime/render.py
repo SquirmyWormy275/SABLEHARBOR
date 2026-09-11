@@ -3,6 +3,7 @@
 import argparse
 import hashlib
 import json
+import math
 from pathlib import Path
 import matplotlib
 
@@ -71,7 +72,10 @@ def build(output):
             )
             fig.savefig(path, **kw)
             if ext == "svg":
-                path.write_text("\n".join(line.rstrip() for line in path.read_text().splitlines())+"\n")
+                path.write_text(
+                    "\n".join(line.rstrip() for line in path.read_text().splitlines())
+                    + "\n"
+                )
             paths.append(path)
         plt.close(fig)
 
@@ -82,6 +86,11 @@ def build(output):
         )
 
     def topology(ax):
+        sizes = {
+            r["site"]: r
+            for r in result["capacity"]
+            if r["scenario"] == "base" and r["year"] == 2027
+        }
         ax.set(xlim=(0, 100), ylim=(0, 70))
         ax.axis("off")
         box(
@@ -90,7 +99,7 @@ def build(output):
             38,
             29,
             23,
-            "Switch Tahoe Reno\nSelected transitional primary\nNo contract / reservation\n96.4 kW base design peak",
+            f"Switch Tahoe Reno\nSelected transitional primary\nNo contract / reservation\n{sizes['RENO']['peak_kw']} kW base design peak",
         )
         box(
             ax,
@@ -98,7 +107,7 @@ def build(output):
             38,
             31,
             23,
-            "IDACORE Boise\nSelected recovery\nIndependent bootstrap required\n23.6 kW base design peak",
+            f"IDACORE Boise\nSelected recovery\nIndependent bootstrap required\n{sizes['BOISE']['peak_kw']} kW base design peak",
         )
         box(
             ax,
@@ -132,7 +141,10 @@ def build(output):
         ax.set_xlabel("Concept metres")
         ax.set_ylabel("Concept metres")
         side = (
-            data["sites"]["sites"][2]["parcel_acres_planning"] * 4046.8564224
+            next(s for s in data["sites"]["sites"] if s["id"] == "RUNTIME-NN-OWNED-DC")[
+                "parcel_acres_planning"
+            ]
+            * 4046.8564224
         ) ** 0.5
         ax.add_patch(
             Rectangle(
@@ -183,82 +195,68 @@ def build(output):
         # 1,650 sf: two 5-ft perimeter aisles and a 6.5-ft controlled spine, each 100 ft long.
         height = 100
         left_width = 5200 / height
-        right_width = 5150 / height
         ax.add_patch(
             Rectangle((0, 0), 120, 100, facecolor="#fff3d6", edgecolor=NAVY, lw=2)
         )
-        lookup = {r["name"]: r for r in rooms}
-        banks = [
-            (
-                5,
-                left_width,
-                [
-                    "Conventional hall",
-                    "Electrical / UPS",
-                    "Receiving / quarantine",
-                    "Network A",
-                ],
-            ),
-            (
-                11.5 + left_width,
-                right_width,
-                [
-                    "AI hall",
-                    "Mechanical / CDU",
-                    "NOC / incident",
-                    "Key room",
-                    "Spares / media",
-                    "Lobby / mantrap",
-                    "Network B",
-                ],
-            ),
-        ]
-        for x, width, names in banks:
-            y = 100
-            for name in names:
-                room = lookup[name]
-                room_height = room["area_sf"] / width
-                y -= room_height
-                ax.add_patch(
-                    Rectangle(
-                        (x, y),
-                        width,
-                        room_height,
-                        facecolor=PALE,
-                        edgecolor=TEAL,
-                        lw=1.2,
-                    )
+        from .design import floor_rooms
+
+        for room in floor_rooms(a):
+            x, y, width, room_height = (room[k] for k in ("x", "y", "width", "height"))
+            name = room["name"]
+            ax.add_patch(
+                Rectangle(
+                    (x, y), width, room_height, facecolor=PALE, edgecolor=TEAL, lw=1.2
                 )
-                ax.text(
-                    x + width / 2,
-                    y + room_height / 2,
-                    room["name"] + " — " + str(room["area_sf"]) + " sf",
-                    ha="center",
-                    va="center",
-                    fontsize=8,
+            )
+            label = name.replace(" / ", " /\n") + f"\n{room['area_sf']} sf"
+            ax.text(
+                x + width / 2,
+                y + room_height / 2,
+                label,
+                ha="center",
+                va="center",
+                fontsize=7,
+            )
+            if name in {"Lobby / mantrap", "Receiving / quarantine"}:
+                ax.plot(
+                    [x + width / 2 - 1.5, x + width / 2 + 1.5], [y, y], color=GOLD, lw=4
                 )
-                edge = x + width if x == 5 else x
+                edge = x + width if x < 60 else x
                 ax.plot(
                     [edge, edge],
                     [y + room_height / 2 - 1.5, y + room_height / 2 + 1.5],
-                    color="#bb3344" if room["name"] == "Key room" else GOLD,
+                    color=GOLD,
                     lw=4,
                 )
-                if room["name"] in {
-                    "Electrical / UPS",
-                    "Mechanical / CDU",
-                    "Receiving / quarantine",
-                    "Lobby / mantrap",
-                    "Conventional hall",
-                    "AI hall",
-                }:
-                    outer = x if x == 5 else x + width
-                    ax.plot(
-                        [outer, outer],
-                        [y + room_height / 2 - 1.5, y + room_height / 2 + 1.5],
-                        color=GOLD,
-                        lw=4,
-                    )
+            elif name in {"Network A", "Network B", "Spares / media"}:
+                edge = x if name == "Network A" else x + width
+                ax.plot(
+                    [edge, edge],
+                    [y + room_height / 2 - 1.5, y + room_height / 2 + 1.5],
+                    color=GOLD,
+                    lw=4,
+                )
+            else:
+                edge = x + width if x < 60 else x
+                ax.plot(
+                    [edge, edge],
+                    [y + room_height / 2 - 1.5, y + room_height / 2 + 1.5],
+                    color="#bb3344" if name == "Key room" else GOLD,
+                    lw=4,
+                )
+            if name in {
+                "Conventional hall",
+                "AI hall",
+                "Electrical / UPS",
+                "Mechanical / CDU",
+            }:
+                edge = x if x < 60 else x + width
+                ax.plot(
+                    [edge, edge],
+                    [y + room_height / 2 - 1.5, y + room_height / 2 + 1.5],
+                    color=GOLD,
+                    lw=4,
+                )
         ax.text(
             2.5,
             50,
@@ -326,35 +324,173 @@ def build(output):
             ],
         ),
     )
+
+    def electrical(ax):
+        e = a["technical_design"]["electrical"]
+        stage = e["initial"]
+        calc = result["technical_design"]["engineering"][0]
+        ax.set(xlim=(0, 100), ylim=(0, 90))
+        ax.axis("off")
+        box(
+            ax,
+            35,
+            74,
+            30,
+            12,
+            f"Shared utility service: {e['service_kw']} kW\n{e['voltage_ll']} V / {e['service_breaker_a']} A concept",
+        )
+        box(
+            ax,
+            2,
+            70,
+            27,
+            16,
+            f"{stage['generator_count']} x {e['generator_unit_kw']} kW gensets\nN+1 capacity {calc['generation_n1_kw']} kW\nEmergency distribution",
+        )
+        box(
+            ax,
+            70,
+            70,
+            28,
+            16,
+            f"Peak facility input\n{calc['peak_facility_input_kw']} kW\nIncludes cooling / recharge",
+        )
+        for x, label in [(12, "A"), (60, "B")]:
+            box(
+                ax,
+                x,
+                46,
+                28,
+                15,
+                f"ATS / UPS path {label}\n{stage['ups_modules_per_path']} x {e['ups_module_kw']} kW\n{stage['ups_feeder_a']} A feeder",
+            )
+            box(
+                ax,
+                x,
+                22,
+                28,
+                15,
+                f"Customer rack PDU {label}\n{e['rack_voltage_ll']} V / {e['rack_feed_a']} A\nFull rack on either feed",
+            )
+            ax.annotate(
+                "",
+                xy=(x + 14, 61),
+                xytext=(50, 74),
+                arrowprops=dict(arrowstyle="->", color=GOLD, lw=2),
+            )
+            ax.annotate(
+                "",
+                xy=(x + 14, 37),
+                xytext=(x + 14, 46),
+                arrowprops=dict(arrowstyle="->", color=TEAL, lw=2),
+            )
+            ax.annotate(
+                "",
+                xy=(50, 12),
+                xytext=(x + 14, 22),
+                arrowprops=dict(arrowstyle="->", color=TEAL, lw=2),
+            )
+        ax.annotate(
+            "",
+            xy=(26, 61),
+            xytext=(15, 70),
+            arrowprops=dict(arrowstyle="->", color=GOLD, linestyle="--"),
+        )
+        ax.annotate(
+            "",
+            xy=(74, 61),
+            xytext=(15, 70),
+            arrowprops=dict(arrowstyle="->", color=GOLD, linestyle="--"),
+        )
+        box(
+            ax,
+            32,
+            1,
+            36,
+            12,
+            f"{stage['usable_it_kw']} kW usable IT module\nA/B redundancy is not twice the load",
+        )
+
     plate(
         "06-electrical-concept",
-        "Electrical functional single-line concept",
-        lambda ax: chain(
-            ax,
-            [
-                "Utility / switchgear\nCapacity not reserved",
-                "UPS / generator topology\nQualified engineer design required",
-                "A and B PDUs\nRedundant delivery",
-                "One failed component\nMaintain accepted IT load",
-                "Customer IT equipment\nNo double-counted A/B power",
-                "Acceptance\nProvider-approved safe tests\nNo tenant switchgear operation",
-            ],
-        ),
+        "Owned plant: rated electrical concept",
+        electrical,
+        "Concept sizing, not a protection/arc-flash study or installation instruction. Shared utility dependency remains. Qualified design and commissioning required.",
     )
+
+    def cooling(ax):
+        e = a["technical_design"]["electrical"]
+        stage = e["initial"]
+        calc = result["technical_design"]["engineering"][0]
+        ax.set(xlim=(0, 100), ylim=(0, 75))
+        ax.axis("off")
+        box(
+            ax,
+            2,
+            49,
+            29,
+            21,
+            f"Heat rejection yard\n{stage['cooling_modules']} x {e['cooling_module_thermal_kw']} kW thermal\nN+1: {calc['cooling_n1_thermal_kw']} kW",
+        )
+        box(
+            ax,
+            37,
+            49,
+            27,
+            21,
+            "Dual pumping / isolation\nSupply and return headers\nLeak / flow / temperature alarms",
+        )
+        box(
+            ax,
+            70,
+            49,
+            28,
+            21,
+            f"Contained air rows\nIT + UPS heat: {calc['heat_rejection_kw']} kW\n18–24 C inlet design target",
+        )
+        for x in (31, 64):
+            ax.annotate(
+                "",
+                xy=(x + 6, 61),
+                xytext=(x, 61),
+                arrowprops=dict(arrowstyle="->", color=TEAL, lw=2),
+            )
+            ax.annotate(
+                "",
+                xy=(x, 56),
+                xytext=(x + 6, 56),
+                arrowprops=dict(arrowstyle="->", color=GOLD, lw=2),
+            )
+        box(
+            ax,
+            2,
+            8,
+            29,
+            23,
+            f"Peak cooling electrical input\n{calc['cooling_input_kw']} kW at COP {e['cooling_design_cop']}\nAnnual PUE is a different boundary",
+        )
+        box(
+            ax,
+            37,
+            8,
+            27,
+            23,
+            "Future liquid row only\nIsolated CDU / facility loop\nNo direct supplier loop connection",
+        )
+        box(
+            ax,
+            70,
+            8,
+            28,
+            23,
+            "Expanded 500 kW stage\n5 x 150 kW thermal modules\nN+1 = 600 kW; 520 kW heat",
+        )
+
     plate(
         "07-cooling-concept",
-        "Cooling and AI-row boundaries",
-        lambda ax: chain(
-            ax,
-            [
-                "Facility heat rejection\nProvider/owned layer",
-                "CDU / isolated loop\nCompatibility and leak controls",
-                "AI row\nEquipment-specific inlet limits",
-                "Conventional air rows\nContainment / measured inlets",
-                "Service corridor\nProtected maintenance boundary",
-                "Environmental monitoring\nLoss-of-redundancy incidents",
-            ],
-        ),
+        "Owned plant: air baseline and future liquid path",
+        cooling,
+        "Source-rated concept. Actual altitude, equipment inlet range, coolant compatibility, hydraulics and heat rejection require qualified acceptance.",
     )
     for site_id, name, num in [
         ("RENO", "Switch customer-enclosure requirement", 8),
@@ -367,32 +503,55 @@ def build(output):
         )
 
         def enclosure(ax, size=size):
-            ax.set(xlim=(0, 100), ylim=(0, 70))
-            ax.axis("off")
-            for n in range(size["racks"]):
-                x = 2 + (n % 6) * 16
-                y = 40 - (n // 6) * 27
-                box(
-                    ax,
-                    x,
-                    y,
-                    13,
-                    19,
-                    f"Rack {n + 1}\n{size['rack_placements'][n]['u']} U\n{size['rack_placements'][n]['peak_kw']:.1f} kW",
+            e = a["technical_design"]["enclosure"]
+            per_row = min(size["racks"], e["maximum_racks_per_row"])
+            rows = math.ceil(size["racks"] / per_row)
+            aisle = e["aisle_m"]
+            depth = e["cabinet_depth_m"]
+            pitch = e["cabinet_pitch_m"]
+            width = per_row * pitch + 2 * aisle
+            height = rows * depth + (rows + 1) * aisle
+            ax.set(xlim=(0, width), ylim=(0, height), aspect="equal")
+            ax.set_xlabel("Concept metres")
+            ax.set_ylabel("Concept metres")
+            ax.add_patch(
+                Rectangle(
+                    (0, 0), width, height, facecolor="#fff3d6", edgecolor=TEAL, lw=2
+                )
+            )
+            for n, rack in enumerate(size["rack_placements"]):
+                x = aisle + (n % per_row) * pitch
+                y = aisle + (n // per_row) * (depth + aisle)
+                ax.add_patch(
+                    Rectangle(
+                        (x, y),
+                        e["cabinet_width_m"],
+                        depth,
+                        facecolor=PALE,
+                        edgecolor=TEAL,
+                    )
+                )
+                ax.text(
+                    x + e["cabinet_width_m"] / 2,
+                    y + depth / 2,
+                    f"R{n + 1}\n{rack['u']}U\n{rack['peak_kw']:.2f}kW",
+                    ha="center",
+                    va="center",
+                    fontsize=6,
                 )
             ax.text(
-                50,
-                65,
-                f"Aggregate: {size['rack_u']} U / {size['peak_kw']} kW peak / {size['racks']} racks",
-                ha="center",
-                weight="bold",
-            )
-            ax.text(
-                50,
-                3,
-                "Controlled aisle, separate A/B and management paths; final rack placement unaccepted",
+                width / 2,
+                height - aisle / 2,
+                f"{size['racks']} cabinets; {size['peak_kw']} kW peak; {aisle} m clear-aisle concept",
                 ha="center",
                 fontsize=9,
+            )
+            ax.text(
+                width / 2,
+                aisle / 2,
+                "Separate controlled access, A/B feeds and management paths",
+                ha="center",
+                fontsize=8,
             )
 
         plate(f"{num:02}-enclosure-{site_id.lower()}", name, enclosure)

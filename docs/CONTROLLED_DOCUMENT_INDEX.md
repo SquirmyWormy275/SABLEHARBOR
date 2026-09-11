@@ -211,4 +211,4 @@ The current publication manifest includes the headquarters/ESS/People/IT/authori
 
 ## Runtime estate design — PR119 pending acceptance
 
-[Runtime implementation index](../enterprise/runtime/README.md) links the source model, contracts, architecture and assurance scope. The explicit controlled-publication mappings generate `enterprise/runtime/publications/SH-RT-*_v1.0.0.pdf`. These are synthetic design publications; no provider execution or operational acceptance is asserted.
+[Runtime implementation index](../enterprise/runtime/README.md) links the source model, calculated results, contracts, architecture and assurance scope. Thirteen runtime controlled PDFs and the distinct seven-sheet successor workbook are indexed with the [runtime release record](releases/RUNTIME_ESTATE_RELEASES.md). The explicit controlled-publication mappings generate `enterprise/runtime/publications/SH-RT-*_v1.0.0.pdf`. These are synthetic design publications; no provider execution or operational acceptance is asserted.

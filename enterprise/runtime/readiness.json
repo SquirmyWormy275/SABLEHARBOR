@@ -104,13 +104,81 @@
       "retrieved_on": "2026-09-11",
       "published_on": null,
       "facility_scope": "Database support policy",
-      "claim": "Major versions receive five years support; deployment must remain on supported maintenance builds",
+      "claim": "PostgreSQL 17.11 selected; major 17 support through November 8 2029; maintenance versions require refresh before deployment",
       "field_references": [
-        "architecture.database"
+        "technical_design.platform.DATABASE"
       ],
       "evidence_class": "PUBLIC_REFERENCE_NOT_ACCEPTED_EVIDENCE",
       "conflicts": [],
       "limitations": "No assigned tenancy, contractual acceptance, licensed full-text interpretation or operational assurance established.",
+      "refresh_owner": "Platform"
+    },
+    {
+      "id": "RT-SRC-UBUNTU",
+      "publisher": "Canonical",
+      "title": "Ubuntu security maintenance",
+      "url": "https://ubuntu.com/security/esm",
+      "retrieved_on": "2026-09-11",
+      "published_on": null,
+      "facility_scope": "Runtime design reference; no deployment qualification",
+      "claim": "Ubuntu 24.04 LTS standard security maintenance through May 2029; package coverage must be checked",
+      "field_references": [
+        "technical_design.platform.HOST"
+      ],
+      "evidence_class": "PUBLIC_REFERENCE_NOT_ACCEPTED_EVIDENCE",
+      "conflicts": [],
+      "limitations": "Public specifications do not establish interoperability, procurement acceptance or operating effectiveness. Revalidate supported releases and site-specific limits before deployment.",
+      "refresh_owner": "Platform"
+    },
+    {
+      "id": "RT-SRC-CEPH",
+      "publisher": "Ceph project",
+      "title": "Ceph releases",
+      "url": "https://docs.ceph.com/en/latest/releases/",
+      "retrieved_on": "2026-09-11",
+      "published_on": null,
+      "facility_scope": "Runtime design reference; no deployment qualification",
+      "claim": "Tentacle 20.2.4 released August 19 2026; estimated support end June 1 2027",
+      "field_references": [
+        "technical_design.platform.OBJECT"
+      ],
+      "evidence_class": "PUBLIC_REFERENCE_NOT_ACCEPTED_EVIDENCE",
+      "conflicts": [],
+      "limitations": "Public specifications do not establish interoperability, procurement acceptance or operating effectiveness. Revalidate supported releases and site-specific limits before deployment.",
+      "refresh_owner": "Platform"
+    },
+    {
+      "id": "RT-SRC-KEYCLOAK",
+      "publisher": "Keycloak project",
+      "title": "Downloads",
+      "url": "https://www.keycloak.org/downloads",
+      "retrieved_on": "2026-09-11",
+      "published_on": null,
+      "facility_scope": "Runtime design reference; no deployment qualification",
+      "claim": "26.7.3 selected from the current public release; rolling review required",
+      "field_references": [
+        "technical_design.platform.IDENTITY"
+      ],
+      "evidence_class": "PUBLIC_REFERENCE_NOT_ACCEPTED_EVIDENCE",
+      "conflicts": [],
+      "limitations": "Public specifications do not establish interoperability, procurement acceptance or operating effectiveness. Revalidate supported releases and site-specific limits before deployment.",
+      "refresh_owner": "Platform"
+    },
+    {
+      "id": "RT-SRC-NVIDIA",
+      "publisher": "NVIDIA",
+      "title": "DGX SuperPOD H100 data center planning",
+      "url": "https://docs.nvidia.com/dgx-superpod/design-guides/dgx-superpod-data-center-design-h100/latest/planning.html",
+      "retrieved_on": "2026-09-11",
+      "published_on": "2025-11-19",
+      "facility_scope": "Runtime design reference; no deployment qualification",
+      "claim": "DGX H100 reference maximum 10.2 kW, 8U, 130.45 kg, air cooling; not an 8 kW qualified configuration",
+      "field_references": [
+        "technical_design.hardware_reference"
+      ],
+      "evidence_class": "PUBLIC_REFERENCE_NOT_ACCEPTED_EVIDENCE",
+      "conflicts": [],
+      "limitations": "Public specifications do not establish interoperability, procurement acceptance or operating effectiveness. Revalidate supported releases and site-specific limits before deployment.",
       "refresh_owner": "Platform"
     }
   ],

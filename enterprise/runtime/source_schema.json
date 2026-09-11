@@ -741,7 +741,8 @@
             "workforce",
             "phases",
             "control_implementations",
-            "rooms"
+            "rooms",
+            "technical_design"
           ],
           "properties": {
             "origin": {
@@ -779,7 +780,11 @@
                 "kv_gib_per_session",
                 "concurrent_ai_share",
                 "kv_reference_context_tokens",
-                "baseline_retention_years"
+                "baseline_retention_years",
+                "ingest_gib_per_day",
+                "read_iops_per_active",
+                "write_iops_per_active",
+                "index_copy_fraction"
               ],
               "properties": {
                 "internal_users": {
@@ -893,6 +898,22 @@
                 "baseline_retention_years": {
                   "type": "number",
                   "minimum": 0
+                },
+                "ingest_gib_per_day": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "read_iops_per_active": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "write_iops_per_active": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "index_copy_fraction": {
+                  "type": "number",
+                  "minimum": 0
                 }
               }
             },
@@ -912,7 +933,7 @@
                 "gpu_system_typical_kw",
                 "gpu_system_u",
                 "gpu_system_price",
-                "accepted_tokens_per_second",
+                "assumed_tokens_per_second",
                 "storage_usable_tib",
                 "storage_peak_kw",
                 "storage_typical_kw",
@@ -930,7 +951,11 @@
                 "cpu_weight_kg",
                 "gpu_system_weight_kg",
                 "storage_weight_kg",
-                "network_hsm_weight_kg"
+                "network_hsm_weight_kg",
+                "storage_iops_per_shelf",
+                "storage_ingest_gib_per_second",
+                "assumed_tokens_per_second_low",
+                "assumed_tokens_per_second_high"
               ],
               "properties": {
                 "cpu_cores": {
@@ -981,7 +1006,7 @@
                   "type": "number",
                   "minimum": 0
                 },
-                "accepted_tokens_per_second": {
+                "assumed_tokens_per_second": {
                   "type": "number",
                   "minimum": 0
                 },
@@ -1056,6 +1081,22 @@
                 "network_hsm_weight_kg": {
                   "type": "number",
                   "minimum": 0
+                },
+                "storage_iops_per_shelf": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "storage_ingest_gib_per_second": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "assumed_tokens_per_second_low": {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                },
+                "assumed_tokens_per_second_high": {
+                  "type": "number",
+                  "exclusiveMinimum": 0
                 }
               }
             },
@@ -1313,7 +1354,8 @@
                 "catchup_hours",
                 "prepositioned_data_required",
                 "performance_verified",
-                "tiers"
+                "tiers",
+                "transport_outage_hours"
               ],
               "properties": {
                 "cpu_share": {
@@ -1420,6 +1462,10 @@
                     ]
                   },
                   "uniqueItems": true
+                },
+                "transport_outage_hours": {
+                  "type": "number",
+                  "minimum": 0
                 }
               }
             },
@@ -2135,6 +2181,830 @@
                 }
               },
               "uniqueItems": true
+            },
+            "technical_design": {
+              "type": "object",
+              "required": [
+                "origin",
+                "platform",
+                "image_admission",
+                "hardware_reference",
+                "electrical",
+                "enclosure",
+                "workforce_phases",
+                "asset_policy",
+                "ai_job_mix",
+                "recovery_services"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "origin": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "platform": {
+                  "type": "array",
+                  "items": {
+                    "anyOf": [
+                      {
+                        "type": "object",
+                        "required": [
+                          "id",
+                          "product",
+                          "version",
+                          "role",
+                          "owner",
+                          "source",
+                          "support_until",
+                          "dependencies"
+                        ],
+                        "additionalProperties": false,
+                        "properties": {
+                          "id": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "product": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "version": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "role": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "owner": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "source": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "support_until": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "dependencies": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            },
+                            "uniqueItems": true
+                          }
+                        }
+                      },
+                      {
+                        "type": "object",
+                        "required": [
+                          "id",
+                          "product",
+                          "version",
+                          "role",
+                          "owner",
+                          "source",
+                          "support_until",
+                          "dependencies"
+                        ],
+                        "additionalProperties": false,
+                        "properties": {
+                          "id": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "product": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "version": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "role": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "owner": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "source": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "support_until": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "dependencies": {
+                            "type": "array",
+                            "items": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "uniqueItems": true
+                          }
+                        }
+                      },
+                      {
+                        "type": "object",
+                        "required": [
+                          "id",
+                          "product",
+                          "version",
+                          "role",
+                          "owner",
+                          "source",
+                          "support_until",
+                          "dependencies"
+                        ],
+                        "additionalProperties": false,
+                        "properties": {
+                          "id": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "product": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "version": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "role": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "owner": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "source": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "support_until": {
+                            "type": "null"
+                          },
+                          "dependencies": {
+                            "type": "array",
+                            "items": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "uniqueItems": true
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "uniqueItems": true
+                },
+                "image_admission": {
+                  "type": "object",
+                  "required": [
+                    "deployed",
+                    "signed_digest",
+                    "qualification",
+                    "review_cadence_days",
+                    "upgrade_lead_days",
+                    "endpoints",
+                    "secret_policy"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "deployed": {
+                      "type": "boolean"
+                    },
+                    "signed_digest": {
+                      "type": "null"
+                    },
+                    "qualification": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "review_cadence_days": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "upgrade_lead_days": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "endpoints": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "uniqueItems": true
+                    },
+                    "secret_policy": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  }
+                },
+                "hardware_reference": {
+                  "type": "object",
+                  "required": [
+                    "name",
+                    "source",
+                    "source_updated_on",
+                    "retrieved_on",
+                    "maximum_system_kw",
+                    "rack_u",
+                    "weight_kg",
+                    "cooling",
+                    "scope"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "source": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "source_updated_on": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "retrieved_on": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "maximum_system_kw": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "rack_u": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "weight_kg": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "cooling": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "scope": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  }
+                },
+                "electrical": {
+                  "type": "object",
+                  "required": [
+                    "voltage_ll",
+                    "power_factor",
+                    "generator_power_factor",
+                    "service_kw",
+                    "optional_path_kw",
+                    "service_breaker_a",
+                    "continuous_loading_fraction",
+                    "ups_module_kw",
+                    "ups_loss_fraction",
+                    "generator_unit_kw",
+                    "generator_breaker_a",
+                    "cooling_module_thermal_kw",
+                    "cooling_design_cop",
+                    "rack_voltage_ll",
+                    "rack_feed_a",
+                    "rack_feed_count",
+                    "rack_feed_policy",
+                    "initial",
+                    "expanded"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "voltage_ll": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "power_factor": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "generator_power_factor": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "service_kw": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "optional_path_kw": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "service_breaker_a": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "continuous_loading_fraction": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "ups_module_kw": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "ups_loss_fraction": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "generator_unit_kw": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "generator_breaker_a": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "cooling_module_thermal_kw": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "cooling_design_cop": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "rack_voltage_ll": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "rack_feed_a": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "rack_feed_count": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "rack_feed_policy": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "initial": {
+                      "type": "object",
+                      "required": [
+                        "usable_it_kw",
+                        "ups_modules_per_path",
+                        "ups_paths",
+                        "ups_feeder_a",
+                        "generator_count",
+                        "cooling_modules",
+                        "recharge_kw",
+                        "other_peak_kw"
+                      ],
+                      "additionalProperties": false,
+                      "properties": {
+                        "usable_it_kw": {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        "ups_modules_per_path": {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        "ups_paths": {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        "ups_feeder_a": {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        "generator_count": {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        "cooling_modules": {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        "recharge_kw": {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        "other_peak_kw": {
+                          "type": "number",
+                          "minimum": 0
+                        }
+                      }
+                    },
+                    "expanded": {
+                      "type": "object",
+                      "required": [
+                        "usable_it_kw",
+                        "ups_modules_per_path",
+                        "ups_paths",
+                        "ups_feeder_a",
+                        "generator_count",
+                        "cooling_modules",
+                        "recharge_kw",
+                        "other_peak_kw"
+                      ],
+                      "additionalProperties": false,
+                      "properties": {
+                        "usable_it_kw": {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        "ups_modules_per_path": {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        "ups_paths": {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        "ups_feeder_a": {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        "generator_count": {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        "cooling_modules": {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        "recharge_kw": {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        "other_peak_kw": {
+                          "type": "number",
+                          "minimum": 0
+                        }
+                      }
+                    }
+                  }
+                },
+                "enclosure": {
+                  "type": "object",
+                  "required": [
+                    "cabinet_width_m",
+                    "cabinet_depth_m",
+                    "cabinet_pitch_m",
+                    "aisle_m",
+                    "maximum_racks_per_row",
+                    "inlet_target_c_low",
+                    "inlet_target_c_high",
+                    "coolant_loop"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "cabinet_width_m": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "cabinet_depth_m": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "cabinet_pitch_m": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "aisle_m": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "maximum_racks_per_row": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "inlet_target_c_low": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "inlet_target_c_high": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "coolant_loop": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  }
+                },
+                "workforce_phases": {
+                  "type": "object",
+                  "required": [
+                    "colo_start",
+                    "owned_start_assumption",
+                    "construction_project_lead_fte",
+                    "construction_specialist_fte",
+                    "specialist_cost_basis",
+                    "sacramento_workstations_required",
+                    "site_roving_positions",
+                    "workstation_state",
+                    "permanent_facilities_fte",
+                    "continuous_security_positions"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "colo_start": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "owned_start_assumption": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "construction_project_lead_fte": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "construction_specialist_fte": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "specialist_cost_basis": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "sacramento_workstations_required": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "site_roving_positions": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "workstation_state": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "permanent_facilities_fte": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "continuous_security_positions": {
+                      "type": "number",
+                      "minimum": 0
+                    }
+                  }
+                },
+                "asset_policy": {
+                  "type": "object",
+                  "required": [
+                    "classification",
+                    "land_life_years",
+                    "site_life_years",
+                    "shell_life_years",
+                    "utility_life_years",
+                    "plant_life_years",
+                    "it_life_years",
+                    "refundable_deposit_fraction",
+                    "invoice_retention_fraction",
+                    "unspent_contingency",
+                    "incentive_credit",
+                    "tax_shield_credit",
+                    "plant_refurbishment_year",
+                    "plant_refurbishment_cost",
+                    "phase_two_expansion_cost",
+                    "phase_two_trigger_kw",
+                    "maximum_owned_kw"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "classification": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "land_life_years": {
+                      "type": "null"
+                    },
+                    "site_life_years": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "shell_life_years": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "utility_life_years": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "plant_life_years": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "it_life_years": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "refundable_deposit_fraction": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "invoice_retention_fraction": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "unspent_contingency": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "incentive_credit": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "tax_shield_credit": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "plant_refurbishment_year": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "plant_refurbishment_cost": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "phase_two_expansion_cost": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "phase_two_trigger_kw": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "maximum_owned_kw": {
+                      "type": "number",
+                      "minimum": 0
+                    }
+                  }
+                },
+                "ai_job_mix": {
+                  "type": "object",
+                  "required": [
+                    "profiles",
+                    "ocr_pages_day",
+                    "ocr_cpu_seconds_per_page",
+                    "background_preemptible_share",
+                    "evaluation_inputs",
+                    "shared_private_training_authorized",
+                    "frontier_training_authorized"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "profiles": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "required": [
+                          "id",
+                          "task_share",
+                          "relative_tokens",
+                          "input_fraction",
+                          "context_fraction"
+                        ],
+                        "additionalProperties": false,
+                        "properties": {
+                          "id": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "task_share": {
+                            "type": "number",
+                            "minimum": 0
+                          },
+                          "relative_tokens": {
+                            "type": "number",
+                            "minimum": 0
+                          },
+                          "input_fraction": {
+                            "type": "number",
+                            "minimum": 0
+                          },
+                          "context_fraction": {
+                            "type": "number",
+                            "minimum": 0
+                          }
+                        }
+                      },
+                      "uniqueItems": true
+                    },
+                    "ocr_pages_day": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "ocr_cpu_seconds_per_page": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "background_preemptible_share": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "evaluation_inputs": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "shared_private_training_authorized": {
+                      "type": "boolean"
+                    },
+                    "frontier_training_authorized": {
+                      "type": "boolean"
+                    }
+                  }
+                },
+                "recovery_services": {
+                  "type": "array",
+                  "items": {
+                    "anyOf": [
+                      {
+                        "type": "object",
+                        "required": [
+                          "service_id",
+                          "tier",
+                          "dependencies",
+                          "minimum_service",
+                          "performance_verified"
+                        ],
+                        "additionalProperties": false,
+                        "properties": {
+                          "service_id": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "tier": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "dependencies": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            },
+                            "uniqueItems": true
+                          },
+                          "minimum_service": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "performance_verified": {
+                            "type": "boolean"
+                          }
+                        }
+                      },
+                      {
+                        "type": "object",
+                        "required": [
+                          "service_id",
+                          "tier",
+                          "dependencies",
+                          "minimum_service",
+                          "performance_verified"
+                        ],
+                        "additionalProperties": false,
+                        "properties": {
+                          "service_id": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "tier": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "dependencies": {
+                            "type": "array",
+                            "items": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "uniqueItems": true
+                          },
+                          "minimum_service": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "performance_verified": {
+                            "type": "boolean"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "uniqueItems": true
+                }
+              }
             }
           }
         }

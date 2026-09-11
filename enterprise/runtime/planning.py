@@ -27,6 +27,7 @@ def validate(a, buckets):
         "phases",
         "control_implementations",
         "rooms",
+        "technical_design",
     }
     if set(a) != required:
         raise ValueError("Unknown or missing runtime implementation section")
@@ -44,6 +45,27 @@ def validate(a, buckets):
         for key, value in a[group].items():
             if isinstance(value, (int, float)) and not isinstance(value, bool):
                 number(value)
+    for scenario in a["scenarios"].values():
+        if (
+            type(scenario["construction_delay_months"]) is not int
+            or scenario["construction_delay_months"] < 0
+        ):
+            raise ValueError("Construction delay requires whole nonnegative months")
+    for key in (
+        "gpu_count",
+        "cpu_cores",
+        "cpu_u",
+        "gpu_system_u",
+        "storage_u",
+        "rack_usable_u",
+    ):
+        if type(a["hardware"][key]) is not int or a["hardware"][key] <= 0:
+            raise ValueError("Hardware counts and rack units must be positive integers")
+    if (
+        type(a["commercial"]["hardware_refresh_years"]) is not int
+        or a["commercial"]["hardware_refresh_years"] <= 0
+    ):
+        raise ValueError("Hardware refresh interval must be whole positive years")
     for key in (
         "active_share",
         "atlas_hosted_share",
@@ -53,16 +75,28 @@ def validate(a, buckets):
     ):
         if not 0 <= number(a["drivers"][key]) <= 1:
             raise ValueError(f"Invalid driver fraction: {key}")
+    for key in (
+        "service_window_hours",
+        "baseline_retention_years",
+        "kv_reference_context_tokens",
+    ):
+        if number(a["drivers"][key]) <= 0:
+            raise ValueError("Invalid workload divisor")
+    for key in ("catchup_hours", "replication_gbps", "compression_ratio"):
+        if number(a["recovery"][key]) <= 0:
+            raise ValueError("Invalid recovery divisor")
     h = a["hardware"]
     for key in (
         "cpu_cores",
         "cpu_memory_gib",
         "gpu_count",
         "gpu_memory_gib",
-        "accepted_tokens_per_second",
+        "assumed_tokens_per_second",
         "storage_usable_tib",
         "rack_usable_u",
         "rack_max_kw",
+        "storage_iops_per_shelf",
+        "storage_ingest_gib_per_second",
     ):
         if number(h[key]) <= 0:
             raise ValueError(f"Invalid hardware divisor: {key}")
@@ -121,6 +155,23 @@ def validate(a, buckets):
             raise ValueError("Duplicate local control implementation")
         ids.add(c["implementation_id"])
         if (
+            c["control_definition_status"] != "draft"
+            or c["implementation_state"] != "DESIGN_ONLY"
+            or c["design_assessment"] != "NOT_ASSESSED"
+        ):
+            raise ValueError(
+                "September design record cannot promote unassessed implementation"
+            )
+        if (
+            c["legal_entity"] != "SHI"
+            or c["system_or_location"]
+            not in {"RUNTIME-RENO-COLO", "RUNTIME-BOISE-DR", "RUNTIME-NN-OWNED-DC"}
+            or not c["risk_ids"]
+        ):
+            raise ValueError("Invalid control scope or missing risk relationship")
+        date.fromisoformat(c["effective_date"])
+        date.fromisoformat(c["next_review_due"])
+        if (
             c["operating_assessment"] != "NOT_ASSERTED"
             or c["evidence_origin"] != "SYNTHETIC_REFERENCE"
         ):
@@ -132,6 +183,9 @@ def validate(a, buckets):
             or not c["evidence_sources"]
         ):
             raise ValueError("Invalid control ownership or evidence requirement")
+    from .design import validate as validate_design
+
+    validate_design(a["technical_design"])
     if sum(number(r["area_sf"]) for r in a["rooms"]) != 12000:
         raise ValueError("Room program does not reconcile to 12,000 sf")
 
@@ -163,6 +217,28 @@ def capacity(a, year, scenario, recovery=False):
         * d["peak_factor"]
         / (d["service_window_hours"] * 3600)
     )
+    mix = a["technical_design"]["ai_job_mix"]
+    tokens_s *= sum(p["task_share"] * p["relative_tokens"] for p in mix["profiles"])
+    cores += (
+        mix["ocr_pages_day"]
+        * mix["ocr_cpu_seconds_per_page"]
+        / (d["service_window_hours"] * 3600)
+    )
+    ai_classes = [
+        dict(
+            id=p["id"],
+            tokens_per_second=round(
+                tokens_s
+                * p["task_share"]
+                * p["relative_tokens"]
+                / sum(q["task_share"] * q["relative_tokens"] for q in mix["profiles"]),
+                2,
+            ),
+            input_fraction=p["input_fraction"],
+            context_tokens=math.ceil(d["context_tokens"] * p["context_fraction"]),
+        )
+        for p in mix["profiles"]
+    ]
     sessions = math.ceil(users * d["concurrent_ai_share"])
     storage = (
         d["durable_tib"]
@@ -171,13 +247,24 @@ def capacity(a, year, scenario, recovery=False):
         * (1 + d["annual_storage_growth"]) ** elapsed
         * s["demand_factor"]
     )
+    ingest_retained = (
+        d["ingest_gib_per_day"] * 365 * d["retention_years"] / 1024 * factor
+    )
+    storage = max(storage, ingest_retained)
+    iops = active * (d["read_iops_per_active"] + d["write_iops_per_active"])
+    ingest_rate = d["ingest_gib_per_day"] * factor / (d["service_window_hours"] * 3600)
     if recovery:
+        iops *= r["cpu_share"]
         cores *= r["cpu_share"]
         ram *= r["cpu_share"]
         tokens_s *= r["ai_share"]
         sessions = math.ceil(sessions * r["ai_share"])
         storage *= r["storage_share"]
-    throughput = h["accepted_tokens_per_second"] * (1 + s["efficiency_gain"]) ** elapsed
+        for profile in ai_classes:
+            profile["tokens_per_second"] = round(
+                profile["tokens_per_second"] * r["ai_share"], 2
+            )
+    throughput = h["assumed_tokens_per_second"] * (1 + s["efficiency_gain"]) ** elapsed
     model_gib = d["model_parameters_billion"] * 1e9 * d["weight_bits"] / 8 / 2**30
     memory_per_system = h["gpu_count"] * h["gpu_memory_gib"]
     if model_gib >= memory_per_system:
@@ -193,6 +280,7 @@ def capacity(a, year, scenario, recovery=False):
                 sessions
                 * d["kv_gib_per_session"]
                 * d["context_tokens"]
+                * sum(p["task_share"] * p["context_fraction"] for p in mix["profiles"])
                 / d["kv_reference_context_tokens"]
                 / (memory_per_system - model_gib)
             ),
@@ -200,7 +288,14 @@ def capacity(a, year, scenario, recovery=False):
         + 1
     )
     # Each shelf is an independently protected copy; two copies plus one failure spare.
-    shelves = math.ceil(storage / h["storage_usable_tib"]) * 2 + 1
+    copy_shelves = math.ceil(
+        max(
+            storage * (1 + d["index_copy_fraction"]) / h["storage_usable_tib"],
+            iops / h["storage_iops_per_shelf"] / ceiling,
+            ingest_rate / h["storage_ingest_gib_per_second"] / ceiling,
+        )
+    )
+    shelves = copy_shelves * 2 + 1
     peak = (
         cpu * h["cpu_peak_kw"]
         + gpu * h["gpu_system_peak_kw"]
@@ -224,7 +319,6 @@ def capacity(a, year, scenario, recovery=False):
         ("CPU", cpu, "cpu"),
         ("GPU", gpu, "gpu_system"),
         ("STORAGE", shelves, "storage"),
-        ("NETWORK_HSM", 1, "network_hsm"),
     ]:
         for n in range(count):
             weight_key = (
@@ -240,8 +334,29 @@ def capacity(a, year, scenario, recovery=False):
                     u=h[prefix + "_u"],
                     peak_kw=h[prefix + "_peak_kw"],
                     weight_kg=weight,
+                    separation_group=kind
+                    if kind in {"CPU", "GPU"}
+                    else f"STORAGE-SLICE-{n % copy_shelves}"
+                    if n < copy_shelves * 2
+                    else "SPARE",
                 )
             )
+    # Eight appliances in four redundant pairs, within the existing aggregate allowance.
+    # Pair members occupy different racks; production and management remain separate.
+    for kind, units_each in [("EDGE", 2), ("SWITCH", 1), ("HSM", 1), ("OOB", 2)]:
+        for n in range(2):
+            items.append(
+                dict(
+                    id=f"{kind}-{n + 1}",
+                    kind=kind,
+                    u=units_each,
+                    peak_kw=h["network_hsm_peak_kw"] / 8,
+                    weight_kg=h["network_hsm_weight_kg"] / 8,
+                    separation_group=kind,
+                )
+            )
+    if sum(i["u"] for i in items) != units:
+        raise ValueError("Network appliance class U must reconcile to bundle allowance")
     placements = pack_racks(items, h)
     weight = sum(i["weight_kg"] for i in items)
     racks = len(placements)
@@ -260,6 +375,7 @@ def capacity(a, year, scenario, recovery=False):
         * (1 + r["protocol_overhead_fraction"])
         / r["compression_ratio"]
     )
+    catchup = replication * (1 + r["transport_outage_hours"] / r["catchup_hours"])
     full_restore_hours = (
         storage
         * 2**40
@@ -275,6 +391,7 @@ def capacity(a, year, scenario, recovery=False):
         cores=round(cores, 2),
         memory_gib=round(ram, 2),
         tokens_per_second=round(tokens_s, 2),
+        ai_workload_classes=ai_classes,
         cpu_hosts=cpu,
         gpu_systems=gpu,
         storage_shelves=shelves,
@@ -287,8 +404,12 @@ def capacity(a, year, scenario, recovery=False):
         typical_synthetic_kw=round(typical, 3),
         equipment_cost=cost,
         replication_required_gbps=round(replication, 4),
+        catchup_required_gbps=round(catchup, 4),
+        required_iops=round(iops, 2),
+        ingest_gib_per_second=round(ingest_rate, 6),
+        rebuildable_index_tib=round(storage * d["index_copy_fraction"], 2),
         full_network_restore_hours=round(full_restore_hours, 2),
-        network_sufficient=replication <= r["replication_gbps"],
+        network_sufficient=catchup <= r["replication_gbps"],
         performance_verified=False,
         sizing_state="SYNTHETIC_CONFIGURATION_CLASS_NOT_BENCHMARK",
         minimum_service_scope="Basic institutional records and prioritized transactions; accelerator throughput degraded"
@@ -313,6 +434,10 @@ def pack_racks(items, hardware):
                 r
                 for r in racks
                 if all(r[k] + item[k] <= limit for k, limit in limits.items())
+                and not any(
+                    i.get("separation_group") == item.get("separation_group")
+                    for i in r["equipment"]
+                )
             ),
             None,
         )
@@ -411,6 +536,9 @@ def finance(data):
     a = data["capital"]["implementation_assumptions"]
     c = a["commercial"]
     annual, monthly = [], []
+    boise_site = next(
+        s for s in data["sites"]["sites"] if s["id"] == "RUNTIME-BOISE-DR"
+    )
     for scenario in a["scenarios"]:
         phases = phase_cash(a, scenario)
         previous_hardware = 0
@@ -444,9 +572,7 @@ def finance(data):
                 colo_charge(
                     dr["typical_synthetic_kw"],
                     dr["peak_kw"],
-                    data["sites"]["sites"][1][
-                        "published_planning_price_usd_per_kw_month"
-                    ],
+                    boise_site["published_planning_price_usd_per_kw_month"],
                     "MEASURED",
                 )
                 * 12
@@ -541,9 +667,19 @@ def investment(data):
     c = a["commercial"]
     rows = []
     requirements = finance(data)["annual"]
+    asset_policy = a["technical_design"]["asset_policy"]
     for scenario in a["scenarios"]:
         migration_year = (
             2029 + a["scenarios"][scenario]["construction_delay_months"] // 12
+        )
+        expansion_year = next(
+            (
+                year
+                for year in range(migration_year, 2037)
+                if capacity(a, year, scenario)["peak_kw"]
+                > asset_policy["phase_two_trigger_kw"]
+            ),
+            None,
         )
         for req in (r for r in requirements if r["scenario"] == scenario):
             year = req["year"]
@@ -574,6 +710,22 @@ def investment(data):
                 workforce(a, True)["annual_gross_payroll"]
                 - workforce(a)["annual_gross_payroll"]
             )
+            owned_running *= D(str((1 + c["annual_escalation"]) ** max(0, year - 2027)))
+            owned_capacity = (
+                asset_policy["maximum_owned_kw"]
+                if expansion_year and year >= expansion_year
+                else asset_policy["phase_two_trigger_kw"]
+            )
+            facility_additions = (
+                D(asset_policy["phase_two_expansion_cost"])
+                if year == expansion_year
+                else D(0)
+            )
+            if (
+                year == asset_policy["plant_refurbishment_year"]
+                and year >= migration_year
+            ):
+                facility_additions += D(asset_policy["plant_refurbishment_cost"])
             # Commissioning/migration is an explicit hypothetical acceptance, never world-state.
             owned_opex = (
                 common - reno + owned_running if year >= migration_year else common
@@ -583,7 +735,7 @@ def investment(data):
                     reno * D(c["migration_overlap_months"]) / 12 + c["migration_cost"]
                 )
             colo_cash = hardware + common + (3000000 if year == 2026 else 0)
-            owned_cash = hardware + owned_opex + phases
+            owned_cash = hardware + owned_opex + phases + facility_additions
             terminal = D(req["terminal_cash"])
             if year == 2036:
                 owned_cash += c["decommission_cost"]
@@ -604,8 +756,12 @@ def investment(data):
                         )
                     ),
                     migration_assumption=migration_year,
+                    conditional_plant_additions=str(facility_additions),
+                    owned_capacity_kw=owned_capacity,
+                    owned_capacity_sufficient=year < migration_year
+                    or size["peak_kw"] <= owned_capacity,
                     state="HYPOTHETICAL_ACCEPTANCE_NOT_CONSTRUCTION_HISTORY",
-                    limitation="Tax benefits zero; no residual credit before terminal period; critical-plant replacement beyond horizon separately unpriced.",
+                    limitation="Tax benefits zero; terminal cash only at realization. Rows above owned capacity are infeasible, not ownership recommendations. Additional modules and refurbishment require separate funding and acceptance.",
                 )
             )
     return rows

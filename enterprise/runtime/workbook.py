@@ -75,6 +75,9 @@ def build(output):
                     "owned_cash_after_sale",
                     "incremental_discounted_cost",
                     "migration_assumption",
+                    "conditional_plant_additions",
+                    "owned_capacity_kw",
+                    "owned_capacity_sufficient",
                 ]
             }
             for r in result["investment_comparison"]
@@ -302,7 +305,7 @@ def build(output):
                     - float(row["liabilities_usd"])
                     - float(row["equity_usd"])
                 )
-            formula = "=ROUND("+formula[1:]+",2)"
+            formula = "=ROUND(" + formula[1:] + ",2)"
             expected = round(expected, 2)
             sheet.write_formula(n, len(fields), formula, number, expected)
             checks.append((name, n + 1, len(fields) + 1, formula, expected))

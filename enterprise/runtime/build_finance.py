@@ -136,6 +136,14 @@ def build(allow_working_tree=False):
     rows = enterprise.read_csv(OUT / "enterprise/enterprise_journal.csv")
     check = verify_land_adjustment(rows)
     bridge = replacement_bridge(predecessor, successor)
+    from .construction_finance import phase_reconciliation, asset_forecast
+
+    enterprise.write_csv(
+        OUT / "construction_budget_bridge.csv", phase_reconciliation(source)
+    )
+    enterprise.write_csv(
+        OUT / "owned_asset_acceptance_sensitivity.csv", asset_forecast(source)
+    )
     enterprise.write_csv(OUT / "runtime_statement_bridge.csv", bridge)
     # The accepted historical journals must survive byte-for-field outside adjustment identity dates.
     before = enterprise.read_csv(OUT / "predecessor/enterprise_journal.csv")

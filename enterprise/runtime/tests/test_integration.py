@@ -136,6 +136,77 @@ class IntegrationTests(unittest.TestCase):
         self.assertIn("payload", resource)
         self.assertEqual(authorize(resource, principal, "read", "2026-09-11"), "DENY")
 
+    def test_rack_failure_keeps_required_cpu_and_replica_pairs(self):
+        size = planning.capacity(self.a, 2027, "base")
+        all_items = [i for rack in size["rack_placements"] for i in rack["equipment"]]
+        for rack in size["rack_placements"]:
+            lost = {i["id"] for i in rack["equipment"]}
+            surviving = [i for i in all_items if i["id"] not in lost]
+            self.assertGreaterEqual(
+                sum(i["kind"] == "CPU" for i in surviving), size["cpu_hosts"] - 1
+            )
+            self.assertGreaterEqual(
+                sum(i["kind"] == "GPU" for i in surviving), size["gpu_systems"] - 1
+            )
+            for kind in ("EDGE", "SWITCH", "HSM", "OOB"):
+                self.assertGreaterEqual(sum(i["kind"] == kind for i in surviving), 1)
+            slices = {
+                i["separation_group"]
+                for i in all_items
+                if i["kind"] == "STORAGE" and i["separation_group"] != "SPARE"
+            }
+            self.assertTrue(slices <= {i["separation_group"] for i in surviving})
+
+    def test_iops_ingest_and_catchup_are_enforced(self):
+        before = planning.capacity(self.a, 2027, "base")
+        self.a["drivers"]["read_iops_per_active"] *= 1000
+        self.assertGreater(
+            planning.capacity(self.a, 2027, "base")["storage_shelves"],
+            before["storage_shelves"],
+        )
+        self.a["drivers"]["ingest_gib_per_day"] *= 1000
+        self.assertGreater(
+            planning.capacity(self.a, 2027, "base")["durable_tib"],
+            before["durable_tib"],
+        )
+        self.a["recovery"]["transport_outage_hours"] = 1000
+        self.assertFalse(
+            planning.capacity(self.a, 2027, "base", True)["network_sufficient"]
+        )
+
+    def test_component_ratings_and_reference_maximum_are_not_tdp(self):
+        from enterprise.runtime import design
+
+        rows = design.export(self.a)
+        self.assertTrue(
+            all(r["design_arithmetic_sufficient"] for r in rows["engineering"])
+        )
+        self.assertTrue(
+            all(
+                not r["envelope_sufficient"]
+                for r in rows["hardware_reference_sensitivity"]
+            )
+        )
+        self.a["technical_design"]["electrical"]["initial"]["cooling_modules"] = 2
+        with self.assertRaises(ValueError):
+            model.validate(self.data)
+
+    def test_workforce_phases_count_project_lead_once(self):
+        from enterprise.runtime.design import workforce_phases
+
+        rows = workforce_phases(self.a)
+        self.assertEqual(rows[0]["required_technical_fte"], 20)
+        self.assertEqual(
+            rows[0]["annual_gross_payroll"],
+            planning.workforce(self.a)["annual_gross_payroll"],
+        )
+        self.assertEqual(rows[1]["additional_guard_fte"], 6)
+        self.a["technical_design"]["workforce_phases"][
+            "construction_project_lead_fte"
+        ] = 2
+        with self.assertRaises(ValueError):
+            workforce_phases(self.a)
+
     def test_explicit_database_scope_and_source_identity(self):
         with tempfile.TemporaryDirectory() as tmp:
             path = Path(tmp) / "runtime.sqlite3"

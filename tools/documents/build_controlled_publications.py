@@ -413,6 +413,7 @@ DOCS.extend([
     ('docs/technology/COLOCATION_SLA_SECURITY_AND_AUDIT_REQUIREMENTS_2026-09-11.md', 'enterprise/runtime/publications/SH-RT-SLA-001_v1.0.0.pdf', 'corporate'),
     ('enterprise/runtime/docs/CONTRACT_DOSSIER.md', 'enterprise/runtime/publications/SH-RT-CONTRACT-001_v1.0.0.pdf', 'corporate'),
     ('enterprise/runtime/docs/ARCHITECTURE_AND_RUNBOOKS.md', 'enterprise/runtime/publications/SH-RT-ARCH-001_v1.0.0.pdf', 'corporate'),
+    ('enterprise/runtime/docs/MODEL_RESULTS.md', 'enterprise/runtime/publications/SH-RT-RESULTS-001_v1.0.0.pdf', 'corporate'),
     ('enterprise/runtime/docs/ASSURANCE_SCOPE.md', 'enterprise/runtime/publications/SH-RT-ASSURANCE-001_v1.0.0.pdf', 'corporate'),
 ])
 

@@ -252,6 +252,17 @@ def validate(data, repository=None):
         for site in rows:
             if not set(site["planned_environment_ids"]) <= known_components:
                 raise ValueError("Unknown logical environment")
+        native_services = json.loads(
+            (Path(repository) / "enterprise/services/source/services.json").read_text()
+        )["services"]
+        native_ids = {r[0] for r in native_services}
+        for service in data["capital"]["implementation_assumptions"][
+            "technical_design"
+        ]["recovery_services"]:
+            if service["service_id"] not in native_ids:
+                raise ValueError(
+                    "Recovery service must reference the existing service catalog"
+                )
         import re
 
         control_text = (
@@ -350,7 +361,7 @@ def apply_services(data, runtime):
 
 def export(data):
     validate(data)
-    from . import planning, temporal, readiness
+    from . import planning, temporal, readiness, design, construction_finance
 
     assumptions = data["capital"]["implementation_assumptions"]
     return {
@@ -366,6 +377,7 @@ def export(data):
         "contract_covers": [
             {
                 "contract_id": s["contract_id"],
+                "site_name": s["name"],
                 "customer_entity": s["entity_id"],
                 "provider_brand": s["provider"],
                 "facility": s["facility"],
@@ -381,12 +393,16 @@ def export(data):
             for year in (2027, 2031, 2036)
             for recovery in (False, True)
         ],
+        "technical_design": design.export(assumptions),
         "workforce": {
             "colo": planning.workforce(assumptions),
             "owned": planning.workforce(assumptions, True),
         },
         "finance": planning.finance(data),
         "investment_comparison": planning.investment(data),
+        "construction_finance_bridge": construction_finance.phase_reconciliation(data),
+        "commercial_cash_cases": construction_finance.commercial_cash_cases(data),
+        "owned_asset_acceptance_sensitivity": construction_finance.asset_forecast(data),
         "source_sha256": hashlib.sha256(
             json.dumps(data, sort_keys=True).encode()
         ).hexdigest(),

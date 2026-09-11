@@ -28,6 +28,7 @@ jobs:
       - run: uv sync --frozen --all-extras
       - run: uv run python -m pytest enterprise/runtime/tests enterprise/services/tests
       - run: uv run python -m enterprise.runtime.model build --output /tmp/runtime-registers --database
+      - run: uv run python -m enterprise.runtime.report --verify
       - run: uv run python -m enterprise.runtime.verify --runtime-output /tmp/runtime-registers/runtime.json
       - run: uv run python -m enterprise.runtime.build_finance
       - run: uv run python -m enterprise.runtime.workbook --output enterprise/runtime/publications --verify

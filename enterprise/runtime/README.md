@@ -50,11 +50,12 @@ one continuous security seat. Qualified alternates and a roster still gate opera
 
 ## Design records
 
+- [Calculated capacity, engineering, finance and recovery register](docs/MODEL_RESULTS.md)
 - [Contract baseline and schedules](docs/CONTRACT_DOSSIER.md)
 - [Runtime architecture and operational procedures](docs/ARCHITECTURE_AND_RUNBOOKS.md)
 - [Assurance scope and evidence boundary](docs/ASSURANCE_SCOPE.md)
 
-The controlled publications, integrated posting bridge and concept drawings are implemented. See `DISPOSITION.md` for the handover finding-by-finding scope and acceptance evidence; `readiness.json` contains the separately blocked external evidence gates. Exact product qualification and detailed construction/accounting execution remain explicitly bounded design work.
+The controlled publications, integrated posting bridge and concept drawings are implemented. See `DISPOSITION.md` for the handover finding-by-finding scope and acceptance evidence; `readiness.json` contains the separately blocked external evidence gates. Selected platform versions, component-rated concepts and construction accounting reference cases remain synthetic design; actual qualification and execution are typed readiness gates.
 
 ## Query and review
 

@@ -18,17 +18,18 @@ planned critical module is 250 kW, with a second 250 kW module conditional on
 demand, utility design and funding. A 1 MW utility path and optional 2 MW route
 are design requirements, not energized capacity.
 
-ADR-02: use a small supported platform foundation: Linux/KVM hosts for separate
-trust domains; containerized application processes inside those domains; PostgreSQL
-for transactions and temporal metadata; customer-controlled object storage for
-immutable source artifacts and backups; rebuildable search indexes; a dedicated
-identity/PAM service and HSM-backed keys. Do not introduce a second authoritative
-transaction store or let search indexes become the source of truth. PostgreSQL's
-[published version policy](https://www.postgresql.org/support/versioning/) provides
-a five-year major-version support model. Major 17 is the provisional database
-baseline; supported point releases, exact OS/orchestrator/object-store versions
-and signed images require a qualified bill of materials before deployment. The
-model is deliberately not represented as a tested product integration.
+ADR-02: select Ubuntu Server 24.04 LTS with maintained distribution KVM/libvirt
+and Podman, PostgreSQL 17.11, Ceph RGW Tentacle 20.2.4, and Keycloak 26.7.3.
+The source `technical_design.platform` records dependencies, public lifecycle
+references and upgrade planning dates. These are selected design versions;
+interoperability, signed images and equipment remain unqualified. Ceph's short
+remaining support horizon requires upgrade planning in December 2026. Rolling
+Keycloak releases receive monthly review. No production endpoint or credential is
+provided: configuration uses `.example.invalid` names and external secret references.
+
+Separate transactional/temporal truth, immutable source objects and rebuildable
+search indexes. Customer keys and privileged identity remain outside provider
+administration. The selected software does not establish deployed service.
 
 ADR-03: separate enterprise shared services, Alexandria restricted records, Atlas
 professional services, Atlas client tenants, Foundry central support/control,
@@ -41,7 +42,7 @@ management is isolated from application and provider networks.
 ADR-04: workload-driven sizing replaces the inherited 75/85/120 and later kW
 envelopes as an executable design sensitivity. Inputs include client hosting
 share, active users, requests, CPU-seconds, memory, tokens/task, peak windows,
-model weight/KV memory, accepted throughput assumptions, storage growth and
+model weight/KV memory, assumed throughput bounds, storage growth and
 protection copies. Throughput and equipment costs remain synthetic configuration
 classes. No benchmark, probability or supplier quote is implied. One host/system
 spare per class and a 70% utilization ceiling are separate resilience and operating
@@ -52,7 +53,11 @@ ADR-05: the 2027 base case estimates Reno 96.4 kW peak, Boise 23.6 kW peak, with
 typical synthetic draw 60.05/14.6 kW. Boise carries all 150 TiB durable data and
 reduced compute/accelerator throughput. Search and basic records do not require
 full Reno AI throughput. The inherited 25 kW envelope is adequate only for that
-configuration-class arithmetic; later base demand needs expansion. A 10 Gbps
+configuration-class arithmetic; later base demand needs expansion. At the sourced
+DGX H100 10.2 kW maximum, the same base requirement reaches Reno 120.6 kW and
+Boise 28 kW, exceeding both initial envelopes. The 8 kW class therefore needs a
+qualified capped configuration and benchmark, or a revised power order. The
+800–2400 tokens/second sensitivities are unmeasured, not confidence bounds. A 10 Gbps
 network cannot restore all 150 TiB within eight hours. Pre-positioned validated
 copies, transaction logs, independent keys and bootstrap are mandatory prerequisites.
 
@@ -205,3 +210,27 @@ times, prerequisites, source population, exact configuration/hash, expected and
 observed results, exceptions, rollback, retained artifact locations, reviewer and
 next action. Empty or synthetic evidence stays explicitly classified. Management
 owns execution and remediation; Internal Audit does not operate these controls.
+
+## Engineering, workload and personnel companions
+
+[Calculated design register](MODEL_RESULTS.md) is regenerated from the controlling
+source. It includes storage ingest/IOPS constraints, interactive/agent/embedding
+workloads, recovery order for native services, hardware power uncertainty and
+component-rated utility/UPS/generation/cooling arithmetic. Drawings remain concepts;
+qualified review must establish protection coordination, altitude/temperature limits,
+connector compatibility, fire/egress and actual failure behavior before installation.
+
+Twenty required technical FTE reconcile to sixteen Sacramento workstation requirements
+and four roving site allocations. The 0.5 FTE construction lead is allocated within
+vendor coordination; two specialist contractor equivalents are included in existing
+design and commissioning budgets. Conditional owned operation adds two facilities
+and six guard positions. No new person is authorized or occupied by this forecast.
+IAM must supply a qualified alternate to the key custodian for dual-control work;
+verified qualifications, productive capacity and rosters gate actual operation.
+
+The construction transaction reference distinguishes commitment, deposit, invoice,
+retention, payment and accepted in-service transfer. Its accepted-event fixtures are
+synthetic tests. The component asset sensitivity covers original Phase I only;
+subsequent module/refurbishment costs appear separately in the investment cash model,
+and require separate accepted asset cohorts before any real depreciation entry.
+Land never depreciates; no forecast date commissions plant.

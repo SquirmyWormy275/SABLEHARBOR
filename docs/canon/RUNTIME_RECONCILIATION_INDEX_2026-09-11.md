@@ -44,3 +44,18 @@ The following remain open by design:
 ## CCF reconciliation
 
 `docs/controls/RUNTIME_CONTROL_AND_EVIDENCE_MATRIX_2026-09-11.md` and the colocation SLA/security package define design requirements only. They do not assert provider controls, Sable Harbor controls, construction, recovery, or SOC readiness are operating effectively.
+
+## Executable successor and publication navigation
+
+The [runtime implementation](../../enterprise/runtime/README.md) consumes the original
+structured pair. Its [calculated register](../../enterprise/runtime/docs/MODEL_RESULTS.md)
+controls source-derived quantities, including workload and maximum-power sensitivities.
+The older scenario workbooks retain historical assumptions and do not establish
+benchmarked demand or the current investment case. The initial owned engineering
+module is 250 kW; a second module raises the selected design to 500 kW conditionally.
+Higher historical envelopes require a new engineering and funding decision.
+
+The [runtime release record](../releases/RUNTIME_ESTATE_RELEASES.md) identifies the
+separately versioned successor, original-to-successor statement bridge and durable
+package convention. Earlier business/operations release views remain historical
+versions, with their original source locks and financial scope intact.
