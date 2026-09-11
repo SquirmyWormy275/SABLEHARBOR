@@ -147,3 +147,50 @@ def test_accepted_canon_binding_and_pending_branch_rejection(intake):
     assert not e.validate_submission(root, r)
     r["proposed_changes"][0]["after"] = 4
     assert e.validate_submission(root, r)  # Decision binds exact claim, not ID alone.
+
+
+def test_nonphysical_records_do_not_request_buildings(intake):
+    root, _ = intake
+    path = root / e.COVERAGE
+    matrix = json.loads(path.read_text())
+    matrix["records"][0].update(
+        {
+            "class": 6,
+            "classification": "distributed/nonphysical/reference",
+            "tenure": "unknown",
+            "precision": "UNLOCATED",
+        }
+    )
+    path.write_text(json.dumps(matrix))
+    item = e.build_evidence_queue(root)["records"][0]
+    assert item["unresolved_fields"] == []
+    assert set(item["field_applicability"].values()) == {"NOT_APPLICABLE"}
+    assert item["scope_id"] == "SH-SITE-TEST"
+    assert item["provenance"] and item["disposition"]
+
+
+@pytest.mark.parametrize("value", [-1, float("inf"), float("nan"), True, "3", 3.5, [], {}])
+def test_workforce_counts_are_finite_nonnegative_integers(intake, value):
+    root, r = intake
+    r["claim_type"] = "workforce"
+    r["proposed_changes"][0].update(field="current_named_employees", after=value)
+    assert e.validate_submission(root, r)
+
+
+@pytest.mark.parametrize(
+    "field,value,claim",
+    [
+        (None, 1, "occupancy"),
+        ("occupancy_start", "20260911", "occupancy"),
+        ("tenure", False, "tenure"),
+        ("precision", "ACTUAL", "parcel"),
+        ("fictionality", "PROVEN", "parcel"),
+        ("geometry", "not geometry", "parcel"),
+        ("geometry", {"type": "Polygon", "coordinates": []}, "parcel"),
+    ],
+)
+def test_explicit_change_field_types(intake, field, value, claim):
+    root, r = intake
+    r["claim_type"] = claim
+    r["proposed_changes"][0].update(field=field, after=value)
+    assert e.validate_submission(root, r)

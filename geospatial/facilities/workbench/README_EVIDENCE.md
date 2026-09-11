@@ -1,6 +1,6 @@
 # Evidence intake and review candidates
 
-`evidence.py` builds an evidence queue from stable coverage IDs and provenance. Missing values stay unknown. A queue item is not a demand for a new building or a claim that evidence exists. Templates contain no invented evidence.
+`evidence.py` builds an evidence queue from stable coverage IDs and provenance. Missing values stay unknown. A queue item is not a demand for a new building or a claim that evidence exists. Templates contain no invented evidence. Class 6 distributed/nonphysical/reference records retain addressable IDs, reasons and provenance, but physical occupancy, floor, tenure and supported-geometry fields are `NOT_APPLICABLE`, with an empty unresolved-field list. They are not missing-building requests.
 
 ```sh
 python geospatial/facilities/workbench/evidence.py queue

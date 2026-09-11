@@ -10,6 +10,8 @@ from pathlib import Path
 import re
 import subprocess
 
+from shapely.errors import GEOSException
+
 COVERAGE = "geospatial/facilities/coverage/COVERAGE_MATRIX.json"
 CLAIM_FIELDS = {
     "parcel": {"geometry", "precision", "fictionality", "status"},
@@ -101,6 +103,23 @@ def build_evidence_queue(root: Path) -> dict:
             missing.append("supported_geometry")
         if "unknown" in row.get("tenure", "").lower():
             missing.append("tenure")
+        physical_fields = (
+            "occupancy_start",
+            "occupancy_end",
+            "actual_occupancy",
+            "actual_floor_count",
+            "tenure",
+            "supported_geometry",
+        )
+        nonphysical = (
+            row.get("class") == 6
+            or row.get("classification") == "distributed/nonphysical/reference"
+        )
+        applicability = {
+            k: "NOT_APPLICABLE" if nonphysical else "APPLICABLE" for k in physical_fields
+        }
+        if nonphysical:
+            missing = []
         records.append(
             {
                 "scope_id": row["id"],
@@ -108,6 +127,7 @@ def build_evidence_queue(root: Path) -> dict:
                 "status": row["status"],
                 "classification": row["classification"],
                 "unresolved_fields": missing,
+                "field_applicability": applicability,
                 "disposition": row["reason"],
                 "provenance": row["provenance"],
                 "issues": [row[k] for k in ("geometry_issue", "detail_issue") if row.get(k)],
@@ -250,6 +270,9 @@ def validate_submission(root: Path, record: dict) -> list[str]:
                 }:
                     errors.append("invalid proposed change fields")
                     continue
+                if not isinstance(change["scope_id"], str) or not isinstance(change["field"], str):
+                    errors.append("change scope and field must be strings")
+                    continue
                 if change["scope_id"] not in ids or change["field"] not in CLAIM_FIELDS.get(
                     claim, set()
                 ):
@@ -261,7 +284,12 @@ def validate_submission(root: Path, record: dict) -> list[str]:
                 if change["before"] != rows.get(change["scope_id"], {}).get(change["field"]):
                     errors.append("change before value differs from baseline")
                 if change["field"].endswith(("_start", "_end")) and change["after"] is not None:
-                    date.fromisoformat(change["after"])
+                    if not isinstance(change["after"], str) or not re.fullmatch(
+                        r"\d{4}-\d{2}-\d{2}", change["after"]
+                    ):
+                        errors.append("change date must be ISO YYYY-MM-DD")
+                    else:
+                        date.fromisoformat(change["after"])
                 if change["field"] in {
                     "actual_occupancy",
                     "actual_floor_count",
@@ -272,6 +300,36 @@ def validate_submission(root: Path, record: dict) -> list[str]:
                     "maximum_concurrent_attendance",
                 } and (type(change["after"]) is not int or change["after"] < 0):
                     errors.append("population/count must be a nonnegative integer")
+                field, value = change["field"], change["after"]
+                if field in {"tenure", "engineering_reference", "status"} and (
+                    not isinstance(value, str) or not value.strip()
+                ):
+                    errors.append("text change must be a nonempty string")
+                if field == "precision" and value not in PRECISIONS:
+                    errors.append("invalid proposed precision")
+                if field == "fictionality" and value not in FICTIONALITIES:
+                    errors.append("invalid proposed fictionality")
+                if field == "geometry":
+                    if (
+                        not isinstance(value, dict)
+                        or value.get("type")
+                        not in {
+                            "Point",
+                            "MultiPoint",
+                            "LineString",
+                            "MultiLineString",
+                            "Polygon",
+                            "MultiPolygon",
+                        }
+                        or "coordinates" not in value
+                    ):
+                        errors.append("geometry must be explicit GeoJSON geometry")
+                    else:
+                        from shapely.geometry import shape
+
+                        geometry = shape(value)
+                        if geometry.is_empty or not geometry.is_valid:
+                            errors.append("invalid or empty proposed geometry")
                 if change["field"] == "status" and not accepted_decision(root, record):
                     errors.append("unsupported status promotion: accepted decision required")
             if len(pairs) != len(set(pairs)):
@@ -295,7 +353,7 @@ def validate_submission(root: Path, record: dict) -> list[str]:
         ):
             errors.append("planning assumptions cannot be promoted as source evidence")
         canonical_hash(record)
-    except (OSError, ValueError, TypeError, KeyError) as exc:
+    except (OSError, ValueError, TypeError, KeyError, IndexError, GEOSException) as exc:
         errors.append(f"invalid or unavailable evidence: {exc}")
     return errors
 
