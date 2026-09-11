@@ -11,7 +11,7 @@ Dimensions select practical concept bays inside accepted acreage ranges. Large a
 
 ## The Fort
 
-The [accepted Willow closeout](../../../docs/canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md) establishes the three named sheds and outdoor Museum.
+The [accepted Willow closeout](../../docs/canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md) establishes the three named sheds and outdoor Museum.
 
 The Big Shed is a 60 × 30 m single-level research building with varied fabrication, test, instrumentation, RF and integration workspaces. Its 20-person day allocation includes movement between benches, write-up desks and experiment debriefing. The Small Shed places reception and administration at the southern visitor edge. Its 36 × 24 m footprint carries administration below and six temporary guest rooms above. The lodging is a modest visiting-staff component; it is neither permanent housing nor an extra resident workforce. The White Shed's 36 × 24 m single floor segregates intake, quarantine, secure storage and field-gear staging. Equipment reaches the research floor only after controlled release.
 
@@ -21,7 +21,7 @@ The day scenario places 20 people in Big, eight in Small's administration and fo
 
 ## Bedford
 
-The [Cradle closeout](../../../docs/canon/CRADLE_CLOSEOUT_2026-09-06.md) places Bedford in Fairmont on a fictional 15–20 acre redeveloped industrial brownfield. It supersedes Belle/Kanawha as Bedford's intended geography. Bedford remains separate from the Demotte host installation and Kelly Gang Mining's Stream 17 host. No host treatment assets, mine liabilities or host employees move into this site model.
+The [Cradle closeout](../../docs/canon/CRADLE_CLOSEOUT_2026-09-06.md) places Bedford in Fairmont on a fictional 15–20 acre redeveloped industrial brownfield. It supersedes Belle/Kanawha as Bedford's intended geography. Bedford remains separate from the Demotte host installation and Kelly Gang Mining's Stream 17 host. No host treatment assets, mine liabilities or host employees move into this site model.
 
 Four proposed structures separate analytical/process development; field-unit assembly and refurbishment; intermediate upgrading/blending; and material receipt/outbound logistics. The assembly/refurbishment hall is 48 × 30 m; the other structures are 36 × 24 m. All have one modelled level. Their functions follow accepted canon while their building identities and geometry are explicit implementation assumptions. No new installed chemical process, rail siding, river berth or commercial individual-REE separation operation is created.
 

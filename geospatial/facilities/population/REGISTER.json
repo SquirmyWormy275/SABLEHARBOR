@@ -1657,93 +1657,83 @@
     },
     {
       "id": "P057",
-      "name": "Leah Moravec",
+      "name": "Superseded identity (see historical source)",
       "status": "superseded_never_accepted",
       "sources": [
         {
           "path": "docs/governance/2021_2022_FINANCING_AND_INVESTOR_DIRECTOR_PROPOSAL.md",
-          "line": 39,
-          "evidence": "### Investor director — Leah Moravec"
+          "line": 39
         },
         {
           "path": "docs/governance/2021_2022_FINANCING_AND_INVESTOR_DIRECTOR_PROPOSAL.md",
-          "line": 122,
-          "evidence": "6. Leah Moravec — Northline Growth Partners investor director"
+          "line": 122
         }
       ]
     },
     {
       "id": "P058",
-      "name": "Owen Rourke",
+      "name": "Superseded identity (see historical source)",
       "status": "superseded_never_accepted",
       "sources": [
         {
           "path": "docs/governance/2021_2022_FINANCING_AND_INVESTOR_DIRECTOR_PROPOSAL.md",
-          "line": 73,
-          "evidence": "### Investor director — Owen Rourke"
+          "line": 73
         },
         {
           "path": "docs/governance/2021_2022_FINANCING_AND_INVESTOR_DIRECTOR_PROPOSAL.md",
-          "line": 123,
-          "evidence": "7. Owen Rourke — Ironcliff Industrial Partners investor director"
+          "line": 123
         }
       ]
     },
     {
       "id": "P059",
-      "name": "Dr. Nadia Serrano",
+      "name": "Superseded identity (see historical source)",
       "status": "superseded_never_accepted",
       "sources": [
         {
           "path": "docs/governance/2021_2022_FINANCING_AND_INVESTOR_DIRECTOR_PROPOSAL.md",
-          "line": 89,
-          "evidence": "### Dr. Nadia Serrano — independent technology/security director"
+          "line": 89
         },
         {
           "path": "docs/governance/2021_2022_FINANCING_AND_INVESTOR_DIRECTOR_PROPOSAL.md",
-          "line": 124,
-          "evidence": "8. Dr. Nadia Serrano — independent technology/security director"
+          "line": 124
         }
       ]
     },
     {
       "id": "P060",
-      "name": "Richard Halden",
+      "name": "Superseded identity (see historical source)",
       "status": "superseded_never_accepted",
       "sources": [
         {
           "path": "docs/governance/2021_2022_FINANCING_AND_INVESTOR_DIRECTOR_PROPOSAL.md",
-          "line": 102,
-          "evidence": "### Richard Halden — independent capital/industrial director"
+          "line": 102
         },
         {
           "path": "docs/governance/2021_2022_FINANCING_AND_INVESTOR_DIRECTOR_PROPOSAL.md",
-          "line": 125,
-          "evidence": "9. Richard Halden — independent capital/industrial director"
+          "line": 125
         }
       ]
     },
     {
       "id": "P061",
-      "name": "Evelyn Teller",
+      "name": "Superseded identity (see historical source)",
       "status": "superseded_alias_concept",
       "sources": [
         {
           "path": "docs/canon/SABLE_HARBOR_CONTINUITY_AUDIT_v0.2.md",
-          "line": 258,
-          "evidence": "All Ev, Evelyn, Ev Rourke, and Evelyn Teller Pale Sun-leader concepts are discarded."
+          "line": 258
         }
       ]
     },
     {
       "id": "P062",
-      "name": "Ev Rourke",
+      "name": "Superseded identity (see historical source)",
       "status": "superseded_alias_concept",
       "sources": [
         {
           "path": "docs/canon/SABLE_HARBOR_CONTINUITY_AUDIT_v0.2.md",
-          "line": 258,
-          "evidence": "All Ev, Evelyn, Ev Rourke, and Evelyn Teller Pale Sun-leader concepts are discarded."
+          "line": 258
         }
       ]
     }

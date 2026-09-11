@@ -12720,14 +12720,14 @@
     },
     {
       "id": "ORG:P057",
-      "name": "Leah Moravec",
+      "name": "Superseded identity (see historical source)",
       "class": 6,
       "classification": "distributed/nonphysical/reference",
       "parent_id": null,
-      "reason": "Person, function, organization, role, equipment or scope record does not itself establish a distinct building. Shared workplace assignment is handled by the population bridge.",
+      "reason": "Superseded identity retained by source ID and locator; never accepted as a current occupant or physical property.",
       "source_type": "SUPPLEMENTAL_CENSUS",
       "canon_status": "SOURCE_RECORD_ONLY",
-      "status": "nonphysical",
+      "status": "superseded_never_accepted",
       "tenure": "unknown",
       "occupancy_start": null,
       "occupancy_end": null,
@@ -12738,13 +12738,11 @@
       "provenance": [
         {
           "path": "docs/governance/2021_2022_FINANCING_AND_INVESTOR_DIRECTOR_PROPOSAL.md",
-          "line": 39,
-          "evidence": "### Investor director \u2014 Leah Moravec"
+          "line": 39
         },
         {
           "path": "docs/governance/2021_2022_FINANCING_AND_INVESTOR_DIRECTOR_PROPOSAL.md",
-          "line": 122,
-          "evidence": "6. Leah Moravec \u2014 Northline Growth Partners investor director"
+          "line": 122
         }
       ],
       "detail_issue": null,
@@ -12758,14 +12756,14 @@
     },
     {
       "id": "ORG:P058",
-      "name": "Owen Rourke",
+      "name": "Superseded identity (see historical source)",
       "class": 6,
       "classification": "distributed/nonphysical/reference",
       "parent_id": null,
-      "reason": "Person, function, organization, role, equipment or scope record does not itself establish a distinct building. Shared workplace assignment is handled by the population bridge.",
+      "reason": "Superseded identity retained by source ID and locator; never accepted as a current occupant or physical property.",
       "source_type": "SUPPLEMENTAL_CENSUS",
       "canon_status": "SOURCE_RECORD_ONLY",
-      "status": "nonphysical",
+      "status": "superseded_never_accepted",
       "tenure": "unknown",
       "occupancy_start": null,
       "occupancy_end": null,
@@ -12776,13 +12774,11 @@
       "provenance": [
         {
           "path": "docs/governance/2021_2022_FINANCING_AND_INVESTOR_DIRECTOR_PROPOSAL.md",
-          "line": 73,
-          "evidence": "### Investor director \u2014 Owen Rourke"
+          "line": 73
         },
         {
           "path": "docs/governance/2021_2022_FINANCING_AND_INVESTOR_DIRECTOR_PROPOSAL.md",
-          "line": 123,
-          "evidence": "7. Owen Rourke \u2014 Ironcliff Industrial Partners investor director"
+          "line": 123
         }
       ],
       "detail_issue": null,
@@ -12796,14 +12792,14 @@
     },
     {
       "id": "ORG:P059",
-      "name": "Dr. Nadia Serrano",
+      "name": "Superseded identity (see historical source)",
       "class": 6,
       "classification": "distributed/nonphysical/reference",
       "parent_id": null,
-      "reason": "Person, function, organization, role, equipment or scope record does not itself establish a distinct building. Shared workplace assignment is handled by the population bridge.",
+      "reason": "Superseded identity retained by source ID and locator; never accepted as a current occupant or physical property.",
       "source_type": "SUPPLEMENTAL_CENSUS",
       "canon_status": "SOURCE_RECORD_ONLY",
-      "status": "nonphysical",
+      "status": "superseded_never_accepted",
       "tenure": "unknown",
       "occupancy_start": null,
       "occupancy_end": null,
@@ -12814,13 +12810,11 @@
       "provenance": [
         {
           "path": "docs/governance/2021_2022_FINANCING_AND_INVESTOR_DIRECTOR_PROPOSAL.md",
-          "line": 89,
-          "evidence": "### Dr. Nadia Serrano \u2014 independent technology/security director"
+          "line": 89
         },
         {
           "path": "docs/governance/2021_2022_FINANCING_AND_INVESTOR_DIRECTOR_PROPOSAL.md",
-          "line": 124,
-          "evidence": "8. Dr. Nadia Serrano \u2014 independent technology/security director"
+          "line": 124
         }
       ],
       "detail_issue": null,
@@ -12834,14 +12828,14 @@
     },
     {
       "id": "ORG:P060",
-      "name": "Richard Halden",
+      "name": "Superseded identity (see historical source)",
       "class": 6,
       "classification": "distributed/nonphysical/reference",
       "parent_id": null,
-      "reason": "Person, function, organization, role, equipment or scope record does not itself establish a distinct building. Shared workplace assignment is handled by the population bridge.",
+      "reason": "Superseded identity retained by source ID and locator; never accepted as a current occupant or physical property.",
       "source_type": "SUPPLEMENTAL_CENSUS",
       "canon_status": "SOURCE_RECORD_ONLY",
-      "status": "nonphysical",
+      "status": "superseded_never_accepted",
       "tenure": "unknown",
       "occupancy_start": null,
       "occupancy_end": null,
@@ -12852,13 +12846,11 @@
       "provenance": [
         {
           "path": "docs/governance/2021_2022_FINANCING_AND_INVESTOR_DIRECTOR_PROPOSAL.md",
-          "line": 102,
-          "evidence": "### Richard Halden \u2014 independent capital/industrial director"
+          "line": 102
         },
         {
           "path": "docs/governance/2021_2022_FINANCING_AND_INVESTOR_DIRECTOR_PROPOSAL.md",
-          "line": 125,
-          "evidence": "9. Richard Halden \u2014 independent capital/industrial director"
+          "line": 125
         }
       ],
       "detail_issue": null,
@@ -12872,14 +12864,14 @@
     },
     {
       "id": "ORG:P061",
-      "name": "Evelyn Teller",
+      "name": "Superseded identity (see historical source)",
       "class": 6,
       "classification": "distributed/nonphysical/reference",
       "parent_id": null,
-      "reason": "Person, function, organization, role, equipment or scope record does not itself establish a distinct building. Shared workplace assignment is handled by the population bridge.",
+      "reason": "Superseded identity retained by source ID and locator; never accepted as a current occupant or physical property.",
       "source_type": "SUPPLEMENTAL_CENSUS",
       "canon_status": "SOURCE_RECORD_ONLY",
-      "status": "nonphysical",
+      "status": "superseded_alias_concept",
       "tenure": "unknown",
       "occupancy_start": null,
       "occupancy_end": null,
@@ -12890,8 +12882,7 @@
       "provenance": [
         {
           "path": "docs/canon/SABLE_HARBOR_CONTINUITY_AUDIT_v0.2.md",
-          "line": 258,
-          "evidence": "All Ev, Evelyn, Ev Rourke, and Evelyn Teller Pale Sun-leader concepts are discarded."
+          "line": 258
         }
       ],
       "detail_issue": null,
@@ -12905,14 +12896,14 @@
     },
     {
       "id": "ORG:P062",
-      "name": "Ev Rourke",
+      "name": "Superseded identity (see historical source)",
       "class": 6,
       "classification": "distributed/nonphysical/reference",
       "parent_id": null,
-      "reason": "Person, function, organization, role, equipment or scope record does not itself establish a distinct building. Shared workplace assignment is handled by the population bridge.",
+      "reason": "Superseded identity retained by source ID and locator; never accepted as a current occupant or physical property.",
       "source_type": "SUPPLEMENTAL_CENSUS",
       "canon_status": "SOURCE_RECORD_ONLY",
-      "status": "nonphysical",
+      "status": "superseded_alias_concept",
       "tenure": "unknown",
       "occupancy_start": null,
       "occupancy_end": null,
@@ -12923,8 +12914,7 @@
       "provenance": [
         {
           "path": "docs/canon/SABLE_HARBOR_CONTINUITY_AUDIT_v0.2.md",
-          "line": 258,
-          "evidence": "All Ev, Evelyn, Ev Rourke, and Evelyn Teller Pale Sun-leader concepts are discarded."
+          "line": 258
         }
       ],
       "detail_issue": null,
