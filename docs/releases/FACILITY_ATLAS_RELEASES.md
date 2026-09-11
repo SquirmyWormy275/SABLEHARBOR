@@ -2,9 +2,9 @@
 
 ## v0.2.0 / R02 — pending acceptance
 
-Acceptance vehicle: [PR #121](https://github.com/SquirmyWormy275/SABLEHARBOR/pull/121). Final R02 visual QA, deterministic regeneration, final-head CI, merge and release publication remain pending. This index does not claim a published delivery.
+Acceptance vehicle: [PR #121](https://github.com/SquirmyWormy275/SABLEHARBOR/pull/121). Scoped R02 facility visual QA is recorded; final runtime/atlas integration QA, deterministic regeneration, final-head CI, merge and release publication remain pending. This index does not claim a published delivery.
 
-The successor preserves the [approved R01 references](../facilities/references/sacramento-hq/r01-approved/README.md), ingested in `ebe7e9e`, and replaces the pre-recovery six-building Sacramento design. Its source program has four Sacramento buildings, ten floors, 175,392 sf gross, 362 workplaces and 60 single rooms. The complete facility inventory is 16 sites, 17 buildings, 24 floors and 58 sheets in 174 independent SVG/PNG/PDF assets, alongside the unchanged eleven rc4 context records. Actual personnel, occupancy, property and construction boundaries remain explicit.
+The successor preserves the [approved R01 references](../facilities/references/sacramento-hq/r01-approved/README.md), ingested in `ebe7e9e`, and replaces the pre-recovery six-building Sacramento design. Its source program has four Sacramento buildings, ten floors, 175,392 sf gross, 362 workplaces and 60 single rooms. The original facility subpackage is 16 sites, 17 buildings, 24 floors and 58 sheets in 174 independent SVG/PNG/PDF assets. The [accepted runtime bridge](../../geospatial/facilities/RUNTIME_BRIDGE.json) reuses twelve plates and adds three sites, one proposed owned building and one floor. Combined inventory is 19 location packages, 18 buildings, 25 floors and 70 plates in 210 SVG/PNG/PDF assets, alongside eleven preserved rc4 context records (81 maps total). Actual personnel, occupancy, property and construction boundaries remain explicit.
 
 | Required release evidence | Current state |
 |---|---|
@@ -12,7 +12,7 @@ The successor preserves the [approved R01 references](../facilities/references/s
 | Package | `SABLE_HARBOR_Facility_Atlas_v0.2.0.zip`; final bytes and SHA-256 pending |
 | File manifest and checksum | Same basename with `.manifest.json` and `.sha256`; pending final build |
 | Exact packaged source commit | Pending final validated committed snapshot |
-| Canon base | `786fc9a5311a04dde92ee6dbb08ac3b77a380200`; approved R01 ingestion `ebe7e9e` adds visual authority |
+| Canon bases | Initial `786fc9a5311a04dde92ee6dbb08ac3b77a380200`; R01 ingestion `ebe7e9e`; accepted runtime main `b83e4be2182a5e4143808a3dab5f8d929a133caf`, integrated through `5d7e5a0` |
 | PDF pages, bookmarks and link totals | Pending final atlas manifest |
 | QA / CI / merge | Pending exact final-head evidence |
 | Published download and retrieval verification | Pending gated publication; no delivery asserted |

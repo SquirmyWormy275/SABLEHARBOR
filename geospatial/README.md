@@ -2,7 +2,7 @@
 
 [R02 facility drill-down atlas](maps/index.html) · [Campus and floor programme](facilities/README.md) · [Individual plans](maps/facilities/ARTIFACT_INDEX.md)
 
-Facility successor v0.2.0 preserves the approved R01 Sacramento four-building/ten-floor baseline and adds 58 facility sheets across 16 site packages; final R02 QA and release gates remain pending. The geographic rc4 source bytes and status boundaries remain intact.
+Facility successor v0.2.0 preserves the approved R01 Sacramento four-building/ten-floor baseline. Its original facility subpackage contains 58 sheets across 16 sites; the [accepted runtime bridge](facilities/RUNTIME_BRIDGE.json) reuses twelve existing runtime plates and adds three location packages, one proposed building and one floor. Combined totals are 19 locations, 18 buildings, 25 floors and 70 facility/runtime plates in 210 SVG/PNG/PDF assets, plus eleven preserved rc4 map records: 81 maps. Accepted runtime main is `b83e4be2182a5e4143808a3dab5f8d929a133caf`; final integration QA, CI and release gates remain pending.
 
 **v0.1.0-rc4 — reconciled to accepted September 7 canon.** The integration closes the superseded Geo draft work; the full geographic engineering program remains incomplete.
 
@@ -18,6 +18,8 @@ The enterprise Geo package is a combined view. `sources/catalog.json` governs it
 - Red Wash: 42.22 N, 108.18 W, Sweetwater County. Taylor: accepted candidate A at 42.12 N, 108.10 W. BS&T: 33.3485 mainline + 4.0000 East Materials + 2.6515 Mineral Transfer = 40.0000 route-miles. Truck-only mine access: nine modeled miles; no mine spur.
 - The industrial case supplies 12 facilities, 31 track-register segments, 26 structures and ten history events. The 1898/1954 physical alignments remain unlocated; current geometry is not backdated into those epochs. All 2025 Red Wash transport remains external-carrier. Uranium custody remains OPEN_GATED.
 - Legal mapping follows SHI → SHIH → Pale Sun → Red Wash and SHIH → ARU → BS&T. Northstar Minerals, Inc. remains external.
+
+The [accepted runtime decisions](../docs/canon/RUNTIME_HOSTING_AND_DATA_CENTER_DECISIONS_2026-09-11.md) select Switch Reno primary and IDACORE Boise recovery. Contracts and operation remain unestablished. Northern Nevada is an acquired fictional planning parcel in preconstruction; proposed building drawings do not depict a completed shell.
 
 ## Rebuild and check
 

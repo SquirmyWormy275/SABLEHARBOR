@@ -86,7 +86,7 @@ The [Red Wash package](red_wash/README.md) retains the standalone mine compariso
 
 ## Headquarters
 
-Sable Harbor headquarters is in **Sacramento, California**. The canonical physical direction is a beautiful, formidable long-duration research/industrial campus rather than a conventional glass tower or gaudy corporate palace. The [recovered approved R01 campus and floor references](docs/facilities/references/sacramento-hq/r01-approved/README.md) control the R02 four-building, ten-floor planning successor. The separate September 3 exterior image remains a distinct recovery item; it does not make the approved R01 plans unavailable. R02 final QA and release acceptance remain pending.
+Sable Harbor headquarters is in **Sacramento, California**. The canonical physical direction is a beautiful, formidable long-duration research/industrial campus rather than a conventional glass tower or gaudy corporate palace. The [recovered approved R01 campus and floor references](docs/facilities/references/sacramento-hq/r01-approved/README.md) control the R02 four-building, ten-floor planning successor. The separate September 3 exterior image remains a distinct recovery item; it does not make the approved R01 plans unavailable. The integrated atlas also reuses the three runtime sites accepted through PR #119 at `b83e4be2182a5e4143808a3dab5f8d929a133caf`; see the [runtime bridge](geospatial/facilities/RUNTIME_BRIDGE.json). Combined coverage is 19 location packages, 18 buildings, 25 floors and 70 facility/runtime plates, plus eleven preserved rc4 maps. Final integration QA, CI, merge and release evidence remain pending.
 
 ## Blackridge status
 
