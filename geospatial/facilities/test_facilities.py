@@ -211,3 +211,47 @@ class ApprovedR01Regression(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class VisualArtifactRegression(unittest.TestCase):
+    def test_missing_font_lock_is_rejected(self):
+        dependencies = [
+            validation.BASE / "render.py",
+            validation.BASE / "r01_drawing.py",
+            validation.ROOT / "geospatial/registers/MAP_ID_REGISTER.json",
+            validation.R01_REFERENCE_DIR / "MANIFEST.json",
+            *[validation.R01_REFERENCE_DIR / n for n in validation.R01_HASHES],
+            *sorted((validation.BASE / "fonts").glob("*")),
+        ]
+        locks = {str(p.relative_to(validation.ROOT)): validation.sha(p) for p in dependencies}
+        self.assertEqual(validation.r02_dependency_errors(locks), [])
+        del locks["geospatial/facilities/fonts/DejaVuSans.ttf"]
+        self.assertTrue(any("DejaVuSans.ttf" in e for e in validation.r02_dependency_errors(locks)))
+
+    def test_text_outside_page_is_rejected(self):
+        import fitz
+
+        with fitz.open() as doc:
+            page = doc.new_page(width=1080, height=768)
+            page.insert_text((10, 5), "Clipped title", fontsize=20)
+            self.assertIn("text overflows page", validation.pdf_page_errors(page))
+
+    def test_wrong_page_shape_and_fallback_font_are_rejected(self):
+        import fitz
+
+        with fitz.open() as doc:
+            page = doc.new_page(width=1000, height=1000)
+            page.insert_text((10, 30), "Fallback Helvetica")
+            errors = validation.pdf_page_errors(page, r02=True)
+            self.assertTrue(any("proportions" in e for e in errors))
+            self.assertTrue(any("fallback font" in e for e in errors))
+            self.assertTrue(any("not embedded" in e for e in errors))
+
+    def test_embedded_dejavu_and_approved_shape_pass(self):
+        import fitz
+
+        with fitz.open() as doc:
+            page = doc.new_page(width=1080, height=768)
+            page.insert_font(fontname="SH", fontfile=str(validation.BASE / "fonts/DejaVuSans.ttf"))
+            page.insert_text((10, 30), "SABLE HARBOR", fontname="SH")
+            self.assertEqual(validation.pdf_page_errors(page, r02=True), [])

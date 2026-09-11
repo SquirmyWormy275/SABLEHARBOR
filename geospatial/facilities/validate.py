@@ -540,6 +540,44 @@ def validate_models(models, coverage_ids=None):
     return errors
 
 
+def r02_dependency_errors(locks):
+    required = [
+        BASE / "render.py",
+        BASE / "r01_drawing.py",
+        ROOT / "geospatial/registers/MAP_ID_REGISTER.json",
+        R01_REFERENCE_DIR / "MANIFEST.json",
+        *[R01_REFERENCE_DIR / name for name in R01_HASHES],
+        *sorted((BASE / "fonts").glob("*")),
+    ]
+    return [
+        "missing R02 dependency lock " + str(p.relative_to(ROOT))
+        for p in required
+        if p.is_file() and str(p.relative_to(ROOT)) not in locks
+    ]
+
+
+def pdf_page_errors(page, r02=False):
+    """Validate physical page geometry and actual embedded PDF text resources."""
+    import fitz
+
+    errors = []
+    if r02:
+        if not math.isclose(page.rect.width / page.rect.height, 3240 / 2304, abs_tol=1e-6):
+            errors.append("R02 PDF page proportions differ from approved reference")
+        fonts = page.get_fonts()
+        if not fonts or any("DejaVuSans" not in f[3].replace(" ", "") for f in fonts):
+            errors.append("R02 PDF uses missing/fallback font")
+        for font in fonts:
+            if not page.parent.extract_font(font[0])[3]:
+                errors.append("R02 PDF font is not embedded")
+    for block in page.get_text("dict")["blocks"]:
+        for line in block.get("lines", []):
+            for span in line["spans"]:
+                if not (page.rect + (-1, -1, 1, 1)).contains(fitz.Rect(span["bbox"])):
+                    errors.append("text overflows page")
+    return errors
+
+
 def validate_artifacts(models, sources, manifest, render=True):
     errors = []
     maps = manifest.get("maps", [])
@@ -549,6 +587,9 @@ def validate_artifacts(models, sources, manifest, render=True):
     locks = manifest.get("input_sha256", manifest.get("source_sha256", {}))
     if isinstance(locks, str):
         locks = {"geospatial/facilities/source/campus.json": locks}
+    if manifest.get("design_revision") != "R02":
+        errors.append("missing/current R02 design revision")
+    errors.extend(r02_dependency_errors(locks))
     for p in sources:
         rel = str(p.relative_to(ROOT))
         if locks.get(rel) != sha(p):
@@ -570,6 +611,8 @@ def validate_artifacts(models, sources, manifest, render=True):
         if n != 1:
             errors.append("duplicate floor map " + str(fid))
     for m in maps:
+        if m.get("revision") != "R02":
+            errors.append(m["id"] + ": missing/current R02 map revision")
         if not m.get("status"):
             errors.append(m["id"] + ": missing status")
         if m.get("kind") == "floor" and m.get("floor_id") in expected:
@@ -589,11 +632,15 @@ def validate_artifacts(models, sources, manifest, render=True):
                 continue
             try:
                 if ext == "svg":
-                    ET.parse(p)
+                    svg = ET.parse(p).getroot()
+                    if m.get("revision") == "R02" and svg.get("viewBox") != "0 0 3240 2304":
+                        errors.append(str(p) + ": R02 SVG page dimensions differ")
                 elif ext == "png":
                     from PIL import Image
 
                     with Image.open(p) as im:
+                        if m.get("revision") == "R02" and im.size != (3240, 2304):
+                            errors.append(str(p) + ": R02 PNG page dimensions differ")
                         im.verify()
                 elif ext == "pdf":
                     import fitz
@@ -603,13 +650,10 @@ def validate_artifacts(models, sources, manifest, render=True):
                             raise ValueError("empty PDF")
                         for page in doc:
                             page.get_pixmap(matrix=fitz.Matrix(0.15, 0.15))
-                            for block in page.get_text("dict")["blocks"]:
-                                for line in block.get("lines", []):
-                                    for span in line["spans"]:
-                                        if not (page.rect + (-1, -1, 1, 1)).contains(
-                                            fitz.Rect(span["bbox"])
-                                        ):
-                                            errors.append(str(p) + ": text overflows page")
+                            errors.extend(
+                                str(p) + ": " + e
+                                for e in pdf_page_errors(page, m.get("revision") == "R02")
+                            )
             except Exception as exc:
                 errors.append(str(p) + ": render/parse failure " + str(exc))
     return errors
