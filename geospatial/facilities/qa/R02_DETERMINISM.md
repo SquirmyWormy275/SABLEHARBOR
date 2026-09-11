@@ -1,0 +1,5 @@
+# R02 complete facility build determinism
+
+PASS at source commit `d02920ce7684ed8f92c22eec87a05519d59316e7`. Two complete ordered builds regenerated runtime bridge, population bridge, space programme, all 58 R02 sheets, central map manifest and atlas. Both passes matched the committed baseline byte for byte across **222 outputs**, including **210 independent map assets** (174 generated R02 assets and 36 linked accepted-runtime originals). No source drift occurred. Accepted runtime visuals were linked and verified unchanged; their renderer was not invoked.
+
+Commands, per-pass output hashes, source hashes, environment and exact test output are recorded in [R02_DETERMINISM.json](R02_DETERMINISM.json). The focused facility/coverage/population test suite and `validate.py --check --require-atlas` passed after both builds. This evidence applies to the integrated 19-site, 18-building, 25-floor package and 150-page atlas, including all 81 geographic/facility/runtime map records. Library/font environment changes may alter output bytes; reproducibility here is established within the recorded environment.
