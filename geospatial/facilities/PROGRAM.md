@@ -2,69 +2,75 @@
 
 Architectural planning capacities; no actual enterprise census or payroll restatement. Site floor maxima are not additive when cohorts move.
 
-Every site, building and floor explicitly records unknown actual named assignments, authorized/unnamed/vacant positions, remote/distributed/field/deployed staff, residents, visitors/customers/trainees, shift/cohort peaks and proposed positions at 2026/2031/2036 horizons. These nulls preserve missing workforce evidence; the separate design scenarios and seat capacities do not fill them with assumed employees.
+Every site, building and floor explicitly records unknown actual named assignments, authorized/unnamed/vacant positions, remote/distributed/field/deployed staff, residents, visitors/customers/trainees, shift/cohort peaks and proposed positions at 2026/2031/2036 horizons. Null means evidence is missing. Design capacity does not fill these fields with assumed employees.
 
-[Population evidence](population/BRIDGE.md) separates 44 named employees, seven nonemployee directors, J2’s237 authorized billets and conditional financial populations. 231 J2 billets lack named occupants; that is not231 proven vacancies.
+[Population evidence](population/BRIDGE.md) separates 44 named employees, seven nonemployee directors and J2’s 237 authorized billets. The 231 J2 billets without named occupants are not proven vacancies. Education’s 35 billets and headquarters’ 28 are inside the 237. JAG remains six five-person teams; its twelve touchdown desks do not reduce its authorization to twelve people.
 
-The [source program](source/campus.json) is the authority for this planning option. Geometry and capacities are assumptions under SAC-A01–05. Education co-location and residence are modelled here; SH-SITE-0014 remains the unresolved record for actual Education location. All acquisition, construction, commissioning and occupancy dates are null.
+The [R02 source](source/campus.json) preserves the [approved R01 visual baseline](../../docs/facilities/references/sacramento-hq/r01-approved/START_HERE_CODEX.md). Four buildings and ten floors provide 362 fitted workplaces and 60 single rooms within the 840 × 600 ft study envelope. Seven floor layouts extend the three approved reference floors. These are modelled designs, not as-built or occupied premises. SH-SITE-0014 retains the unresolved actual Education location; co-location here is a design assumption. Tenure and construction/occupancy dates remain unestablished.
 
-## Sacramento scenario reconciliation
+## Sacramento attendance and capacity
 
-| Scenario | Horizon | Concurrent people | Meaning |
+| Scenario | Horizon | Concurrent people | Status |
 |---|---:|---:|---|
-| SAC-2026-DESIGN-EVENT | 2026 | 420 | PLANNING_NEED_NOT_OBSERVED |
-| SAC-2026-DESIGN-NIGHT | 2026 | 50 | PLANNING_NEED_NOT_OBSERVED |
-| SAC-2031-CAPACITY | 2031 | 484 | CONDITIONAL_PLANNING |
-| SAC-2036-CAPACITY | 2036 | 564 | CONDITIONAL_PLANNING |
+| SAC-R02-2026-DAY-EVENT | 2026 | 504 | PLANNING_NEED_NOT_OBSERVED |
+| SAC-R02-2026-NIGHT | 2026 | 60 | PLANNING_CAPACITY_NOT_OBSERVED |
+| SAC-R02-2031-CAPACITY | 2031 | 504 | CONDITIONAL_HOLD_FLAT_CAPACITY |
+| SAC-R02-2036-CAPACITY | 2036 | 504 | CONDITIONAL_HOLD_FLAT_CAPACITY |
 
-The 2026 design-event scenario has 272 anonymous worker places, 120 trainees and 28 other visitors: 420 people. 46 resident trainees are already within the 120 and move to residence overnight. Night 50 comprises 46 trainees and 4 duty staff. These are design loads, not a finding of current attendance or approval of 272 positions. Meeting/dining seats accommodate the same people across the day. The five-year shell option adds 64 concurrent places; the ten-year reserved-wing option adds 80. Those increments authorize no hiring or construction and need new fit-out/parking design before execution.
+The 2026 day scenario contains 362 workplace users, four shared hospitality attendees, 120 learners and 18 visitors: 504 people. This is a design load, not observed attendance or hiring authorization. Forty-eight resident learners are already inside the 120. The separate night scenario provides 48 cohort rooms and twelve faculty/visitor rooms, one resident per room. Day and night populations are not added together.
+
+Corporate has 200 workplaces (40/112/48 by floor); J2 has 130 (62/68); Education has 32 (4/28). Corporate L02 preserves Foundry Field’s 80 workstations and Atlas Meridian’s 32. The R01 labels of 160 Foundry staff and 36 Atlas staff repeat the conditional 2027 workforce scenario in enterprise/business/source/policy.json; they do not prove actual 2026 payroll, Sacramento assignments or simultaneous attendance. Shared desks and distributed work explain why staffing scenarios and fitted seats differ, without asserting an unsupported attendance ratio.
+
+Education L01 has a 120-seat hall and two 24-seat classrooms. Upper-floor classrooms provide further alternative teaching arrangements. The same cohort moves among these spaces; the campus learner scenario remains 120. Meeting and dining capacities similarly accommodate people already counted. Dining is a separate category: 80 seats in Corporate and 80 in Education, served by one production kitchen in Education. Both 2031 and 2036 hold the same fitted capacity; no future positions, extra shell, wing or construction schedule is authorized.
 
 ## Area and seat schedule
 
-| Building | Floors | Gross m² | Assignable m² | Core/service m² | Work seats¹ | Training | Meeting | Beds |
-|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Governance House | 2 | 2,304.0 | 1,512.0 | 792.0 | 76 | 0 | 140 | 0 |
-| Enterprise Services | 3 | 3,888.0 | 2,646.0 | 1,242.0 | 138 | 0 | 84 | 0 |
-| J2 House | 3 | 3,888.0 | 2,646.0 | 1,242.0 | 204 | 0 | 128 | 0 |
-| Education and Convening | 2 | 3,240.0 | 2,268.0 | 972.0 | 44 | 120 | 124 | 0 |
-| Residential House | 2 | 2,304.0 | 1,512.0 | 792.0 | 0 | 0 | 0 | 46 |
-| Campus Services | 1 | 540.0 | 270.0 | 270.0 | 8 | 0 | 8 | 0 |
-| Locomotive running-repair shop | 1 | 1,440.0 | 1,260.0 | 180.0 | 1 | 0 | 4 | 0 |
-| Dispatch and crew house | 1 | 648.0 | 576.0 | 72.0 | 8 | 0 | 24 | 0 |
-| Taylor warehouse | 1 | 19,509.6 | 17,558.7 | 1,951.0 | 2 | 0 | 4 | 0 |
-| Inspection bays and dispatch | 1 | 1,008.0 | 882.0 | 126.0 | 2 | 0 | 6 | 0 |
-| Rawlins warehouse | 1 | 6,967.7 | 6,271.0 | 696.8 | 1 | 0 | 2 | 0 |
-| ARU operating office | 1 | 648.0 | 576.0 | 72.0 | 12 | 0 | 10 | 0 |
-| The Big Shed | 1 | 1,800.0 | 1,296.0 | 504.0 | 12 | 0 | 12 | 0 |
-| The Small Shed | 2 | 1,728.0 | 1,008.0 | 720.0 | 12 | 0 | 26 | 6 |
-| The White Shed | 1 | 864.0 | 504.0 | 360.0 | 2 | 0 | 0 | 0 |
-| Analytical and process development | 1 | 864.0 | 504.0 | 360.0 | 4 | 0 | 8 | 0 |
-| Field-unit assembly and refurbishment | 1 | 1,440.0 | 972.0 | 468.0 | 2 | 8 | 0 | 0 |
-| Intermediate upgrading and blending | 1 | 864.0 | 504.0 | 360.0 | 2 | 0 | 0 | 0 |
-| Material receipt and outbound logistics | 1 | 864.0 | 504.0 | 360.0 | 2 | 0 | 0 | 0 |
+| Building | Floors | Gross m² | Assignable m² | Core/service m² | Workplaces¹ | Training | Meeting | Dining | Beds |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| Corporate (SH-SITE-0001-A) | 3 | 6,501.7 | 4,345.6 | 2,156.1 | 200 | 0 | 168 | 80 | 0 |
+| J2 (SH-SITE-0001-B) | 2 | 4,173.9 | 2,974.4 | 1,199.6 | 130 | 0 | 64 | 0 | 0 |
+| Education (SH-SITE-0001-C) | 2 | 2,809.4 | 1,962.1 | 847.3 | 32 | 216 | 24 | 80 | 0 |
+| Residence (SH-SITE-0001-D) | 3 | 2,809.4 | 1,797.1 | 1,012.3 | 0 | 0 | 0 | 0 | 60 |
+| Locomotive running-repair shop (SH-IND-FAC-TAY-YARD-B01) | 1 | 1,440.0 | 1,260.0 | 180.0 | 1 | 0 | 4 | 0 | 0 |
+| Dispatch and crew house (SH-IND-FAC-TAY-YARD-B02) | 1 | 648.0 | 576.0 | 72.0 | 8 | 0 | 24 | 0 | 0 |
+| Taylor warehouse (SH-IND-FAC-TAY-WAREHOUSE-B01) | 1 | 19,509.6 | 17,558.7 | 1,951.0 | 2 | 0 | 4 | 0 | 0 |
+| Inspection bays and dispatch (SH-IND-FAC-TAY-TRUCK-B01) | 1 | 1,008.0 | 882.0 | 126.0 | 2 | 0 | 6 | 0 | 0 |
+| Rawlins warehouse (SH-IND-FAC-RAW-WAREHOUSE-B01) | 1 | 6,967.7 | 6,271.0 | 696.8 | 1 | 0 | 2 | 0 | 0 |
+| ARU operating office (SH-IND-FAC-ARU-OFFICE-B01) | 1 | 648.0 | 576.0 | 72.0 | 12 | 0 | 10 | 0 | 0 |
+| The Big Shed (SH-FAC-FORT-BIG) | 1 | 1,800.0 | 1,296.0 | 504.0 | 12 | 0 | 12 | 0 | 0 |
+| The Small Shed (SH-FAC-FORT-SMALL) | 2 | 1,728.0 | 1,008.0 | 720.0 | 12 | 0 | 26 | 0 | 6 |
+| The White Shed (SH-FAC-FORT-WHITE) | 1 | 864.0 | 504.0 | 360.0 | 2 | 0 | 0 | 0 | 0 |
+| Analytical and process development (SH-SITE-0005-B01) | 1 | 864.0 | 504.0 | 360.0 | 4 | 0 | 8 | 0 | 0 |
+| Field-unit assembly and refurbishment (SH-SITE-0005-B02) | 1 | 1,440.0 | 972.0 | 468.0 | 2 | 8 | 0 | 0 | 0 |
+| Intermediate upgrading and blending (SH-SITE-0005-B03) | 1 | 864.0 | 504.0 | 360.0 | 2 | 0 | 0 | 0 | 0 |
+| Material receipt and outbound logistics (SH-SITE-0005-B04) | 1 | 864.0 | 504.0 | 360.0 | 2 | 0 | 0 | 0 | 0 |
 
-¹ Assigned, shared/hot and touchdown desks remain separate in SPACE_REGISTER.json. No desk type is an employee count. Room rectangles determine assignable area; the difference from footprint×levels determines circulation/core/service area. Exact arithmetic describes the model, not measurement precision. Room-level service areas are included in assignable room totals where the programme allocates them explicitly; common end cores/circulation are additional.
+Sacramento totals: 4 buildings, 10 floors, 175,392 sf (16,294.4 m²), 362 workplaces and 60 beds in 60 single rooms.
 
-## Sacramento master and access
+¹ Assigned, shared/hot and touchdown desks remain separate in SPACE_REGISTER.json. No desk type is an employee count. Room rectangles determine assignable area, including explicitly programmed support rooms. Fixed cores and circulation are separately partitioned from rooms and remain stacked across each building. Exact arithmetic checks the model; it does not claim surveyed or construction precision. Floor peak capacities are not summed into an enterprise workforce census.
 
-Governance and ESS share the public arrival edge. Internal Audit has a separate controlled suite with Board access. J2 occupies a separate building with a controlled entrance and no public through-route. Education/classrooms and residential approach use the pedestrian network. North delivery and the perimeter emergency loop separate receiving from ordinary arrival. Bicycles 64 and parking 200 are explicit assumptions: 420×55% car mode / 1.2 persons per vehicle ≈ 193 spaces. Later horizons require a revised mobility scheme.
+## Master, access and technical boundaries
 
-The 6 m planning grid is schematic; final column/slab design, fire separation, corridor clearances, protected stairs, sanitary demand, accessible suites and lifts, mechanical zoning, flood/brownfield screening, utility diversity and stormwater discharge require coordinated engineering. Local plans are not transformed into geographic parcel polygons. Durable restrained modernism uses concrete/metal/stone, warm interior timber, shaded paths and a modest signature arrival monument.
+Corporate houses officers, ESS services, Advisory, product organizations and a separately controlled Internal Audit suite. Audit remains accountable to the Board boundary. J2 occupies its own controlled building outside ESS, with reception and interview access separated from restricted work. Education and residence use the shared pedestrian network with distinct teaching and quiet residential arrivals. The coordinated R01 master controls footprints, access, courts, parking and the perimeter emergency/service loop. Local edge/communications rooms do not constitute a primary production data center.
+
+Parking records 252 drawn bays before accessible-bay conversion. Bicycle capacity, mode shares, event overflow and demand remain unresolved; no unsupported 200-space supply/demand balance is claimed. The 840 × 600 ft local frame is not a surveyed parcel. Structural member sizes, accessible and protected egress, sanitary provision, mechanical loads, fire access turning, utility connections, flood/brownfield and stormwater engineering remain technical dependencies.
 
 ## Capital and facilities bridge
 
-Sacramento gross area 16,164 m² includes 1,296 m² unfitted shell. Illustrative shell $2,500/m², fit-out $900/m² and site works $125/m² yield $59,791,200 before 25% contingency, or $74,739,000 excluding unknown land/offsite/abnormal/financing costs. These synthetic rates are comparison inputs, not researched market prices or an approved funding request.
+Gross area 16,294.4 m² includes 0.0 m² explicitly designated unfitted shell, derived from floor status. All ten R02 floors are conceptually programmed, with no construction completion claim. Synthetic shell allowance $2,500/m², fit-out $900/m² and site works $125/m² produce $61,254,021 before 25% contingency and $76,567,527 including contingency. Land, abnormal ground, offsite utilities, financing and tax remain unknown and excluded. These rates are illustrative comparison inputs, not researched market prices, quotes, valuation or funding approval.
 
-The existing 2027 conditional corporate facilities allowance of $1,140,000/year is retained and receives no automatic credit. Capital, depreciation, lease/operating expense and staffing are not interchangeable. This unfunded space scenario does not amend the finance model or claim that its recurring allowance pays for the campus. Procurement must reconcile actual tenure, lease versus build, lifecycle maintenance, rates and funded staffing before a financial successor adopts costs.
+The existing 2027 conditional corporate facilities allowance of $1,140,000/year is preserved from enterprise/business/source/policy.json and receives no automatic credit. Capital, depreciation, recurring facilities expense and payroll are distinct. This comparison does not alter the finance model or claim its allowance funds construction. A successor financial decision requires supported tenure, procurement, engineering, lifecycle costs and staffing evidence.
 
 ## September state and phasing
 
-| Phase | State as of 11 September 2026 | Dependency |
-|---|---|---|
-| District and institutional direction | Accepted canon | Preserve Sacramento / Railyards–River District |
-| Parcel / title / site studies | Unestablished | Supported siting, access, utilities and environmental review |
-| Master programme and concept floors | Modelled proposal | Integrated programme acceptance |
-| Shell, fit-out and commissioning | No completion asserted | Approved capital, coordinated engineering and execution evidence |
-| 2031 shell use / 2036 reserve | Conditional capacity options | Demand and mobility review; no scheduled delivery dates |
+| Phase | Evidence date | State | Dependency |
+|---|---|---|---|
+| R01 visual baseline | 2026-09-11 | APPROVED_VISUAL_REFERENCE | Four buildings, ten floors, 362 workplaces and 60 single rooms. Approval records a planning design, not land tenure or construction. |
+| R02 source and floor extensions | 2026-09-11 | MODELLED_DESIGN_EXTENSION | Retain the approved master and three reference floors. Seven other floors are explicitly modelled design extensions with fixed stacked cores. |
+| Parcel and engineering | Unestablished | UNESTABLISHED | Supported parcel, tenure, utilities, accessibility, transport demand and civil/structural/fire engineering remain unresolved. |
+| Procurement, construction and occupancy | Unestablished | UNESTABLISHED | No procurement, permit, construction, fit-out or occupancy date is asserted. Execution requires supported decisions and technical approvals. |
+| 2031 and 2036 capacity review | Unestablished | CONDITIONAL_HOLD_FLAT_CAPACITY | Both planning horizons retain 362 fitted workplaces and 60 rooms. Future workforce growth and additional floor capacity are unknown; no future construction is implied. |
 
-Sources, floor rollups and capacities are machine readable in [SPACE_REGISTER.json](SPACE_REGISTER.json). Existing industrial facility assigned FTE 137 equals 131 ARU/BS&T plus six receiving staff already within Red Wash 128. No enterprise employee total is obtained by adding facility assignments.
+Sources, category definitions, floor rollups, capacities, scenarios and assumptions are machine readable in [SPACE_REGISTER.json](SPACE_REGISTER.json). Existing industrial facility assigned FTE 137 equals 131 ARU/BS&T plus six receiving staff already within Red Wash’s 128. Facility assignments do not form an additive enterprise employee total.
+
+Regenerate with `.venv/bin/python geospatial/facilities/program.py`; verify exact derived content with the same command plus `--check`. The generator rejects conflicting source totals, floor area sums and scenario rollups; the facilities validator also checks geometry, coverage and category distinctions.

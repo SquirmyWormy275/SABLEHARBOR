@@ -2,6 +2,7 @@
 
 import argparse
 import json
+import math
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -13,6 +14,7 @@ SEATS = [
     "training_seats",
     "meeting_seats",
     "resident_beds",
+    "dining_seats",
 ]
 
 
@@ -51,6 +53,8 @@ def build(check=False):
                     "name": b["name"],
                     "floor_ids": [],
                     "actual_occupants": None,
+                    "status": b["status"],
+                    "source": str(p.relative_to(ROOT)),
                     "gross_area_m2": 0,
                     "net_assignable_area_m2": 0,
                     "core_circulation_service_m2": 0,
@@ -60,6 +64,7 @@ def build(check=False):
                     row = {
                         "id": f["id"],
                         "building_id": b["id"],
+                        "source": str(p.relative_to(ROOT)),
                         "site_id": m["site_id"],
                         "status": f["status"],
                         "gross_area_m2": f["gross_area_m2"],
@@ -96,7 +101,18 @@ def build(check=False):
         "existing_allowance_source": "enterprise/business/source/policy.json /corporate_monthly_facility_usd ×12; 2027 conditional",
         "existing_allowance_credit": None,
     }
-    shell = m["buildings"][1]["floors"][2]["gross_area_m2"]
+    shell = sum(
+        f["gross_area_m2"]
+        for b in m["buildings"]
+        for f in b["floors"]
+        if "UNFITTED_SHELL" in f["status"]
+    )
+    economics["unfitted_shell_area_m2"] = shell
+    finance_policy = json.loads((ROOT / "enterprise/business/source/policy.json").read_text())
+    economics["annual_facilities_allowance_existing_conditional"] = (
+        finance_policy["corporate_monthly_facility_usd"] * 12
+    )
+    sources.append("enterprise/business/source/policy.json")
     economics["initial_fitted_area_m2"] = sac["gross_area_m2"] - shell
     subtotal = (
         sac["gross_area_m2"] * 2500
@@ -130,7 +146,7 @@ def build(check=False):
     for row in sites + buildings + floors:
         row["population_measurements"] = measurement_basis.copy()
     report = {
-        "revision": "0.1.0",
+        "revision": "0.2.0",
         "sources": sorted(set(sources)),
         "population_source": "geospatial/facilities/population/REGISTER.json",
         "scope": "Architectural planning capacities; no actual enterprise census or payroll restatement. Site floor maxima are not additive when cohorts move.",
@@ -140,65 +156,128 @@ def build(check=False):
         "sacramento_scenarios": m["attendance_scenarios"],
         "sacramento_economics": economics,
     }
+    sac_buildings = [b for b in buildings if b["site_id"] == m["site_id"]]
+    sac_floors = [f for f in floors if f["site_id"] == m["site_id"]]
+    totals = {
+        "buildings": len(sac_buildings),
+        "floors": len(sac_floors),
+        "gross_area_sqft": sum(f["gross_area_sqft"] for b in m["buildings"] for f in b["floors"]),
+        "fitted_staff_workplaces": sum(sac[k] for k in SEATS[:3]),
+        "single_rooms": sum(
+            r.get("single_room", False)
+            for b in m["buildings"]
+            for f in b["floors"]
+            for r in f["rooms"]
+        ),
+        "campus_dining_seats": sac["dining_seats"],
+        "resident_beds": sac["resident_beds"],
+    }
+    for key, value in totals.items():
+        if key in m["program_totals"] and value != m["program_totals"][key]:
+            raise ValueError(f"Campus source rollup mismatch: {key}")
+    for f in floors:
+        if not math.isclose(
+            f["gross_area_m2"],
+            f["net_assignable_area_m2"] + f["core_circulation_service_m2"],
+            abs_tol=0.01,
+        ):
+            raise ValueError(f"Floor area does not reconcile: {f['id']}")
+    for scenario in m["attendance_scenarios"]:
+        if (
+            "floor_populations" in scenario
+            and sum(scenario["floor_populations"].values()) != scenario["people"]
+        ):
+            raise ValueError(f"Scenario floor attendance mismatch: {scenario['id']}")
+        if (
+            "workers" in scenario
+            and sum(scenario[k] for k in ("workers", "trainees", "other_visitors"))
+            != scenario["people"]
+        ):
+            raise ValueError(f"Scenario person category mismatch: {scenario['id']}")
+    report["sacramento_totals"] = totals
+    report["sacramento_phases"] = m["phases"]
+    report["sacramento_reference_sha256"] = m["approved_reference_sha256"]
+    report["sacramento_assumptions"] = m["assumptions"]
+    report["sacramento_conditional_workforce_comparison"] = {
+        "status": finance_policy["fact_state"],
+        "horizon": finance_policy["start_year"],
+        "source": "enterprise/business/source/policy.json /workforce",
+        "foundry_field_occupied_scenario": finance_policy["workforce"]["foundry-field"]["occupied"],
+        "atlas_meridian_occupied_scenario": finance_policy["workforce"]["atlas-meridian"][
+            "occupied"
+        ],
+        "meaning": "R01 floor labels repeat these conditional planning populations. They do not establish actual 2026 employees, daily campus attendance or assigned desks.",
+    }
     register_text = json.dumps(report, indent=2) + "\n"
     lines = [
         "# Headcount, occupancy and space program",
         "",
         report["scope"],
         "",
-        "Every site, building and floor explicitly records unknown actual named assignments, authorized/unnamed/vacant positions, remote/distributed/field/deployed staff, residents, visitors/customers/trainees, shift/cohort peaks and proposed positions at 2026/2031/2036 horizons. These nulls preserve missing workforce evidence; the separate design scenarios and seat capacities do not fill them with assumed employees.",
+        "Every site, building and floor explicitly records unknown actual named assignments, authorized/unnamed/vacant positions, remote/distributed/field/deployed staff, residents, visitors/customers/trainees, shift/cohort peaks and proposed positions at 2026/2031/2036 horizons. Null means evidence is missing. Design capacity does not fill these fields with assumed employees.",
         "",
-        "[Population evidence](population/BRIDGE.md) separates 44 named employees, seven nonemployee directors, J2’s237 authorized billets and conditional financial populations. 231 J2 billets lack named occupants; that is not231 proven vacancies.",
+        "[Population evidence](population/BRIDGE.md) separates 44 named employees, seven nonemployee directors and J2’s 237 authorized billets. The 231 J2 billets without named occupants are not proven vacancies. Education’s 35 billets and headquarters’ 28 are inside the 237. JAG remains six five-person teams; its twelve touchdown desks do not reduce its authorization to twelve people.",
         "",
-        "The [source program](source/campus.json) is the authority for this planning option. Geometry and capacities are assumptions under SAC-A01–05. Education co-location and residence are modelled here; SH-SITE-0014 remains the unresolved record for actual Education location. All acquisition, construction, commissioning and occupancy dates are null.",
+        "The [R02 source](source/campus.json) preserves the [approved R01 visual baseline](../../docs/facilities/references/sacramento-hq/r01-approved/START_HERE_CODEX.md). Four buildings and ten floors provide 362 fitted workplaces and 60 single rooms within the 840 × 600 ft study envelope. Seven floor layouts extend the three approved reference floors. These are modelled designs, not as-built or occupied premises. SH-SITE-0014 retains the unresolved actual Education location; co-location here is a design assumption. Tenure and construction/occupancy dates remain unestablished.",
         "",
-        "## Sacramento scenario reconciliation",
+        "## Sacramento attendance and capacity",
         "",
-        "| Scenario | Horizon | Concurrent people | Meaning |",
+        "| Scenario | Horizon | Concurrent people | Status |",
         "|---|---:|---:|---|",
     ]
-    for s in m["attendance_scenarios"]:
-        lines.append(f"| {s['id']} | {s['horizon']} | {s['people']} | {s['status']} |")
-    lines += [
-        "",
-        "The 2026 design-event scenario has 272 anonymous worker places, 120 trainees and 28 other visitors: 420 people. 46 resident trainees are already within the 120 and move to residence overnight. Night 50 comprises 46 trainees and 4 duty staff. These are design loads, not a finding of current attendance or approval of 272 positions. Meeting/dining seats accommodate the same people across the day. The five-year shell option adds 64 concurrent places; the ten-year reserved-wing option adds 80. Those increments authorize no hiring or construction and need new fit-out/parking design before execution.",
-        "",
-        "## Area and seat schedule",
-        "",
-        "| Building | Floors | Gross m² | Assignable m² | Core/service m² | Work seats¹ | Training | Meeting | Beds |",
-        "|---|---:|---:|---:|---:|---:|---:|---:|---:|",
-    ]
-    for b in buildings:
+    for scenario in m["attendance_scenarios"]:
         lines.append(
-            f"| {b['name']} | {len(b['floor_ids'])} | {b['gross_area_m2']:,.1f} | {b['net_assignable_area_m2']:,.1f} | {b['core_circulation_service_m2']:,.1f} | {sum(b[k] for k in SEATS[:3])} | {b['training_seats']} | {b['meeting_seats']} | {b['resident_beds']} |"
+            f"| {scenario['id']} | {scenario['horizon']} | {scenario['people']} | {scenario['status']} |"
         )
     lines += [
         "",
-        "¹ Assigned, shared/hot and touchdown desks remain separate in SPACE_REGISTER.json. No desk type is an employee count. Room rectangles determine assignable area; the difference from footprint×levels determines circulation/core/service area. Exact arithmetic describes the model, not measurement precision. Room-level service areas are included in assignable room totals where the programme allocates them explicitly; common end cores/circulation are additional.",
+        "The 2026 day scenario contains 362 workplace users, four shared hospitality attendees, 120 learners and 18 visitors: 504 people. This is a design load, not observed attendance or hiring authorization. Forty-eight resident learners are already inside the 120. The separate night scenario provides 48 cohort rooms and twelve faculty/visitor rooms, one resident per room. Day and night populations are not added together.",
         "",
-        "## Sacramento master and access",
+        "Corporate has 200 workplaces (40/112/48 by floor); J2 has 130 (62/68); Education has 32 (4/28). Corporate L02 preserves Foundry Field’s 80 workstations and Atlas Meridian’s 32. The R01 labels of 160 Foundry staff and 36 Atlas staff repeat the conditional 2027 workforce scenario in enterprise/business/source/policy.json; they do not prove actual 2026 payroll, Sacramento assignments or simultaneous attendance. Shared desks and distributed work explain why staffing scenarios and fitted seats differ, without asserting an unsupported attendance ratio.",
         "",
-        "Governance and ESS share the public arrival edge. Internal Audit has a separate controlled suite with Board access. J2 occupies a separate building with a controlled entrance and no public through-route. Education/classrooms and residential approach use the pedestrian network. North delivery and the perimeter emergency loop separate receiving from ordinary arrival. Bicycles 64 and parking 200 are explicit assumptions: 420×55% car mode / 1.2 persons per vehicle ≈ 193 spaces. Later horizons require a revised mobility scheme.",
+        "Education L01 has a 120-seat hall and two 24-seat classrooms. Upper-floor classrooms provide further alternative teaching arrangements. The same cohort moves among these spaces; the campus learner scenario remains 120. Meeting and dining capacities similarly accommodate people already counted. Dining is a separate category: 80 seats in Corporate and 80 in Education, served by one production kitchen in Education. Both 2031 and 2036 hold the same fitted capacity; no future positions, extra shell, wing or construction schedule is authorized.",
         "",
-        "The 6 m planning grid is schematic; final column/slab design, fire separation, corridor clearances, protected stairs, sanitary demand, accessible suites and lifts, mechanical zoning, flood/brownfield screening, utility diversity and stormwater discharge require coordinated engineering. Local plans are not transformed into geographic parcel polygons. Durable restrained modernism uses concrete/metal/stone, warm interior timber, shaded paths and a modest signature arrival monument.",
+        "## Area and seat schedule",
+        "",
+        "| Building | Floors | Gross m² | Assignable m² | Core/service m² | Workplaces¹ | Training | Meeting | Dining | Beds |",
+        "|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|",
+    ]
+    for b in buildings:
+        lines.append(
+            f"| {b['name']} ({b['id']}) | {len(b['floor_ids'])} | {b['gross_area_m2']:,.1f} | {b['net_assignable_area_m2']:,.1f} | {b['core_circulation_service_m2']:,.1f} | {sum(b[k] for k in SEATS[:3])} | {b['training_seats']} | {b['meeting_seats']} | {b['dining_seats']} | {b['resident_beds']} |"
+        )
+    lines += [
+        "",
+        f"Sacramento totals: {totals['buildings']} buildings, {totals['floors']} floors, {totals['gross_area_sqft']:,.0f} sf ({sac['gross_area_m2']:,.1f} m²), {totals['fitted_staff_workplaces']} workplaces and {totals['resident_beds']} beds in {totals['single_rooms']} single rooms.",
+        "",
+        "¹ Assigned, shared/hot and touchdown desks remain separate in SPACE_REGISTER.json. No desk type is an employee count. Room rectangles determine assignable area, including explicitly programmed support rooms. Fixed cores and circulation are separately partitioned from rooms and remain stacked across each building. Exact arithmetic checks the model; it does not claim surveyed or construction precision. Floor peak capacities are not summed into an enterprise workforce census.",
+        "",
+        "## Master, access and technical boundaries",
+        "",
+        "Corporate houses officers, ESS services, Advisory, product organizations and a separately controlled Internal Audit suite. Audit remains accountable to the Board boundary. J2 occupies its own controlled building outside ESS, with reception and interview access separated from restricted work. Education and residence use the shared pedestrian network with distinct teaching and quiet residential arrivals. The coordinated R01 master controls footprints, access, courts, parking and the perimeter emergency/service loop. Local edge/communications rooms do not constitute a primary production data center.",
+        "",
+        f"Parking records {m['access']['parking_spaces']} drawn bays before accessible-bay conversion. Bicycle capacity, mode shares, event overflow and demand remain unresolved; no unsupported 200-space supply/demand balance is claimed. The 840 × 600 ft local frame is not a surveyed parcel. Structural member sizes, accessible and protected egress, sanitary provision, mechanical loads, fire access turning, utility connections, flood/brownfield and stormwater engineering remain technical dependencies.",
         "",
         "## Capital and facilities bridge",
         "",
-        f"Sacramento gross area {sac['gross_area_m2']:,.0f} m² includes {shell:,.0f} m² unfitted shell. Illustrative shell $2,500/m², fit-out $900/m² and site works $125/m² yield ${subtotal:,.0f} before 25% contingency, or ${subtotal * 1.25:,.0f} excluding unknown land/offsite/abnormal/financing costs. These synthetic rates are comparison inputs, not researched market prices or an approved funding request.",
+        f"Gross area {sac['gross_area_m2']:,.1f} m² includes {shell:,.1f} m² explicitly designated unfitted shell, derived from floor status. All ten R02 floors are conceptually programmed, with no construction completion claim. Synthetic shell allowance $2,500/m², fit-out $900/m² and site works $125/m² produce ${subtotal:,.0f} before 25% contingency and ${subtotal * 1.25:,.0f} including contingency. Land, abnormal ground, offsite utilities, financing and tax remain unknown and excluded. These rates are illustrative comparison inputs, not researched market prices, quotes, valuation or funding approval.",
         "",
-        "The existing 2027 conditional corporate facilities allowance of $1,140,000/year is retained and receives no automatic credit. Capital, depreciation, lease/operating expense and staffing are not interchangeable. This unfunded space scenario does not amend the finance model or claim that its recurring allowance pays for the campus. Procurement must reconcile actual tenure, lease versus build, lifecycle maintenance, rates and funded staffing before a financial successor adopts costs.",
+        f"The existing {finance_policy['start_year']} conditional corporate facilities allowance of ${economics['annual_facilities_allowance_existing_conditional']:,.0f}/year is preserved from enterprise/business/source/policy.json and receives no automatic credit. Capital, depreciation, recurring facilities expense and payroll are distinct. This comparison does not alter the finance model or claim its allowance funds construction. A successor financial decision requires supported tenure, procurement, engineering, lifecycle costs and staffing evidence.",
         "",
         "## September state and phasing",
         "",
-        "| Phase | State as of 11 September 2026 | Dependency |",
-        "|---|---|---|",
-        "| District and institutional direction | Accepted canon | Preserve Sacramento / Railyards–River District |",
-        "| Parcel / title / site studies | Unestablished | Supported siting, access, utilities and environmental review |",
-        "| Master programme and concept floors | Modelled proposal | Integrated programme acceptance |",
-        "| Shell, fit-out and commissioning | No completion asserted | Approved capital, coordinated engineering and execution evidence |",
-        "| 2031 shell use / 2036 reserve | Conditional capacity options | Demand and mobility review; no scheduled delivery dates |",
+        "| Phase | Evidence date | State | Dependency |",
+        "|---|---|---|---|",
+    ]
+    for phase in m["phases"]:
+        lines.append(
+            f"| {phase['name']} | {phase['date'] or 'Unestablished'} | {phase['state']} | {phase['dependency']} |"
+        )
+    lines += [
         "",
-        "Sources, floor rollups and capacities are machine readable in [SPACE_REGISTER.json](SPACE_REGISTER.json). Existing industrial facility assigned FTE 137 equals 131 ARU/BS&T plus six receiving staff already within Red Wash 128. No enterprise employee total is obtained by adding facility assignments.",
+        "Sources, category definitions, floor rollups, capacities, scenarios and assumptions are machine readable in [SPACE_REGISTER.json](SPACE_REGISTER.json). Existing industrial facility assigned FTE 137 equals 131 ARU/BS&T plus six receiving staff already within Red Wash’s 128. Facility assignments do not form an additive enterprise employee total.",
+        "",
+        "Regenerate with `.venv/bin/python geospatial/facilities/program.py`; verify exact derived content with the same command plus `--check`. The generator rejects conflicting source totals, floor area sums and scenario rollups; the facilities validator also checks geometry, coverage and category distinctions.",
     ]
     text = "\n".join(lines) + "\n"
     if check:
