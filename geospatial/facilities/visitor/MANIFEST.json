@@ -1,0 +1,81 @@
+{
+  "title": "Visiting the campus",
+  "site_id": "SH-SITE-0001",
+  "status": "DRAFT_FOR_OWNER_VISUAL_REVIEW",
+  "map_id": null,
+  "production_allocation": "PENDING_VISUAL_ACCEPTANCE",
+  "revision": "V01",
+  "visual_reference": "SH-FAC-REF-SAC-R01",
+  "artifacts": {
+    "svg": {
+      "path": "geospatial/facilities/visitor/artifacts/visitor-map-v01.svg",
+      "sha256": "4dbb44febeb1f213563c9cbd76c9f8f8f06eaf11f938311bc4b1822db3b99413"
+    },
+    "png": {
+      "path": "geospatial/facilities/visitor/artifacts/visitor-map-v01.png",
+      "sha256": "1eac1763c4c1c5f32a6435fdd6eddda1624bf4e752f24ae9b4e91521301e1841"
+    },
+    "pdf": {
+      "path": "geospatial/facilities/visitor/artifacts/visitor-map-v01.pdf",
+      "sha256": "ceb0d60e6331c7086bd02ff1cb869417245e8c8560d8dd540e76c2007c06a4da"
+    }
+  },
+  "sources": {
+    "geospatial/facilities/visitor/SOURCE.json": "c64dc545c062a64102b2a447a07a0432045dc9c7317595ff0225fd24ba35dda3",
+    "geospatial/facilities/visitor/build.py": "ec31c7df8a093ff404f0fa4bcd8fd15c95167a11174fdb95eb756bcc3a3fcd46",
+    "geospatial/facilities/r01_drawing.py": "8c1eae0967aac597395b16351ba0d6b1077cc3a31dded3fe292389a655d24c35",
+    "geospatial/facilities/source/campus.json": "0efd4854069ff20acb4032e02b021afebcb955990f1d684b51428624e281d950",
+    "geospatial/facilities/fonts/DejaVuSans-Bold.ttf": "b184b89e3c1075f22f6b71575b6fc20d4972b3cfd3b23322ca6fd596dcaef167",
+    "geospatial/facilities/fonts/DejaVuSans.ttf": "3fdf69cabf06049ea70a00b5919340e2ce1e6d02b0cc3c4b44fb6801bd1e0d22",
+    "geospatial/facilities/fonts/LICENSE_DEJAVU": "d75938dec098f06f0ac3c00853065d94f020be1c3c62ef1dc2975ba15b4d9b0e",
+    "geospatial/facilities/fonts/fonts.conf": "ac35d022f7b75586581ecc81fee3aa1febdea71366fd00727c1f8eabb4217d2b",
+    "docs/facilities/references/sacramento-hq/r01-approved/01_Sacramento_Campus_Master_Draft.png": "23729f7e2b427e58820361363e4a47fbc6bbd3ce9774ef67932ecab7a50bfa47"
+  },
+  "review_surface": {
+    "path": "geospatial/facilities/visitor/review.html",
+    "sha256": "9dce9d4182a2ffdcf3a2b8e7b98a068872305aa064ed6f5e172558464cea6009"
+  },
+  "entrances": [
+    {
+      "building_id": "SH-SITE-0001-A",
+      "source_access_key": "public_arrival_m",
+      "entry_ft": [
+        256.0,
+        152.0
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-B",
+      "source_access_key": "j2_controlled_entry_m",
+      "entry_ft": [
+        256.0,
+        369.99999999999994
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-C",
+      "source_access_key": "education_entry_m",
+      "entry_ft": [
+        512.0,
+        170.0
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-D",
+      "source_access_key": "residential_arrival_m",
+      "entry_ft": [
+        551.9999999999999,
+        406.0
+      ]
+    }
+  ],
+  "geometry_changes": [],
+  "intentional_changes_from_r01": [
+    "Visitor wording replaces floor, desk and area metrics.",
+    "Existing arrival path to Corporate reception is highlighted; it is not a new surveyed route.",
+    "Parking areas remain in place but individual bay markings are omitted from this visitor overview.",
+    "Buildings, courts, paths, roads and landscape remain in the accepted local geometry.",
+    "No invented street address, visitor parking allocation, accessible-route certification or opening hours.",
+    "This draft has no allocated production SH-MAP ID and is excluded from the published atlas until accepted."
+  ]
+}
