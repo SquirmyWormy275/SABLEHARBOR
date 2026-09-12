@@ -343,6 +343,8 @@ def extension_work(c, a, native):
                     acceptance="No compliance conclusion until applicable objectives, source context, implemented design and scoped evidence are independently reviewed.",
                     operating_fact_needed="Actual AI use case, lifecycle role, affected people and impact/risk criteria"
                     if r.framework_id == "ISO42001"
+                    else "Actual cloud-service scope, customer/provider responsibilities and C5 assessment period"
+                    if r.framework_id == "C5"
                     else "Actual ISMS scope, interested parties, risk criteria and treatment decisions",
                     review=None,
                 )
