@@ -2,7 +2,7 @@
 
 [Wiki home](../Home.md) · [All business dossiers](../../business-lines/README.md) · [Company charts](../../organization/README.md)
 
-<img src="../../../assets/brand/logos/willow__mark.png" alt="Approved Willow logo" width="280">
+<img src="../../../assets/brand/logos/willow__reverse-horizontal.png" alt="Approved Willow logo" width="360">
 
 Willow builds and tests industrial prototypes, sensors, software and experimental processes at the Pittsburgh-area Fort. Its outputs include experiments, failed-test records, prototypes and qualified transfers to operating owners.
 

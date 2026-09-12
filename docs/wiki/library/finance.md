@@ -107,6 +107,7 @@ Generated file inventory. Includes current and historical records; open the sour
 
 - [Branch and Pull Request Register](../../audit/BRANCH_AND_PR_REGISTER.md) — MD
 - [Repository Hygiene Backlog](../../audit/HYGIENE_BACKLOG.md) — MD
+- [Outstanding issue review — September 12, 2026](../../audit/ISSUE_CLOSEOUT_2026-09-12.md) — MD
 - [Operating-depth evidence export specification](../../audit/OPERATING_DEPTH_EXPORT_SPECIFICATION.md) — MD
 - [Current business-unit evidence export contract](../../audit/UNIT_EXPORT_SPECIFICATION.md) — MD · [formatted PDF](../../finance/publications/SH-AUDIT-UNIT-EXPORT-001_v1.0.0.pdf)
 
