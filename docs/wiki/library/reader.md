@@ -13,7 +13,29 @@ Generated file inventory. Includes current and historical records; open the sour
 
 ## `docs/reader/overnight`
 
+- [Overnight accounting, legal and reader delivery](../../reader/overnight/RESULTS.md) — MD
 - [Overnight reader and evidence work](../../reader/overnight/START.md) — MD
+
+## `docs/reader/reconciliation`
+
+- [CONTRIBUTING.md counterpart dispositions](../../reader/reconciliation/CONTRIBUTINGmd-records.md) — MD
+- [LICENSE.md counterpart dispositions](../../reader/reconciliation/LICENSEmd-records.md) — MD
+- [Document counterpart reconciliation](../../reader/reconciliation/README.md) — MD
+- [RED_WASH.md counterpart dispositions](../../reader/reconciliation/RED_WASHmd-records.md) — MD
+- [Operating-release counterpart follow-up](../../reader/reconciliation/RELEASE_FOLLOW_UP.md) — MD
+- [SECURITY.md counterpart dispositions](../../reader/reconciliation/SECURITYmd-records.md) — MD
+- [assets counterpart dispositions](../../reader/reconciliation/assets-records.md) — MD
+- [blackridge counterpart dispositions](../../reader/reconciliation/blackridge-records.md) — MD
+- [docs counterpart dispositions](../../reader/reconciliation/docs-records.md) — MD
+- [enterprise counterpart dispositions](../../reader/reconciliation/enterprise-records.md) — MD
+- [geospatial counterpart dispositions](../../reader/reconciliation/geospatial-records.md) — MD
+- [.github counterpart dispositions](../../reader/reconciliation/github-records.md) — MD
+- [red_wash counterpart dispositions](../../reader/reconciliation/red_wash-records.md) — MD
+
+## `docs/reader/transactions`
+
+- [Transaction and legal records](../../reader/transactions/README.md) — MD
+- [Legal record reconciliation](../../reader/transactions/RECONCILIATION.md) — MD
 
 ## `docs/wiki`
 
@@ -28,6 +50,7 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Project Cradle](../businesses/Cradle.md) — MD
 - [Foundry Field](../businesses/Foundry-Field.md) — MD
 - [Pale Sun / Red Wash](../businesses/Pale-Sun-Red-Wash.md) — MD
+- [Current businesses](../businesses/README.md) — MD
 - [Willow](../businesses/Willow.md) — MD
 
 ## `docs/wiki/departments`
@@ -56,3 +79,16 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Safety and environmental governance](../departments/safety-environment.md) — MD
 - [Enterprise security capability](../departments/security.md) — MD
 - [Enterprise Technology Services](../departments/technology.md) — MD
+
+## `docs/wiki/subjects`
+
+- [Blackridge — separate case universe](../subjects/Blackridge.md) — MD
+- [Continuity and crisis responsibilities](../subjects/Continuity.md) — MD
+- [Other external and personal relationships](../subjects/External-Counterparties.md) — MD
+- [Cradle's external hosts](../subjects/External-Hosts.md) — MD
+- [Abandoned acquisition opportunities](../subjects/Historical-Opportunities.md) — MD
+- [Company history and The Crossing](../subjects/History.md) — MD
+- [Founders, early colleagues and later people](../subjects/People.md) — MD
+- [Glasshouse, Wallaby and failed experiments](../subjects/Project-History.md) — MD
+- [History, counterparts and cross-cutting subjects](../subjects/README.md) — MD
+- [Klein, Emberline and Willow](../subjects/Research-History.md) — MD

@@ -29,3 +29,5 @@ The shared chart retains its original scope; it is not a new reporting chart for
 Internal Audit is separate from Finance, OGC, Risk & Compliance, Technology and J2. ESS administrative support cannot condition its communications to the committee.
 
 [Department and institution directory](README.md) · [Wiki home](../Home.md)
+
+[Continuity and crisis responsibilities across the existing institutions](../subjects/Continuity.md).

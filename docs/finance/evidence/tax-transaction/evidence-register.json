@@ -1,0 +1,50 @@
+{
+  "extracted_database": {
+    "path": "docs/finance/evidence/tax-transaction/evidence.sqlite3",
+    "sha256": "7b109cc960a52ea46fae1287ea29c778ad98f0ce9f9bcf1059a1531469ab323b"
+  },
+  "markdown": "docs/finance/evidence/tax-transaction/README.md",
+  "native_database": {
+    "release_member": "enterprise.sqlite3",
+    "sha256": "8142909e88629e227a29ce77d8560d64a3ee60bd11bd19d6c089376fe146bb3d"
+  },
+  "package_id": "SH-FIN-TAX-TRANSACTION",
+  "reconciliation": "docs/finance/evidence/tax-transaction/RECONCILIATION.json",
+  "schema_version": 1,
+  "scope": {
+    "period_end": "2026-12",
+    "period_start": "2026-01",
+    "release": "business-operations-v1.0.0",
+    "release_sha256": "b8e81572d829fec7209d1d18eb15bac21e52b37714211aee005b5f1a68ab5817",
+    "scenario": "base",
+    "source_revision": "57cfa1b1c483ccf1f8b15d82c4cbdadbeef8063e"
+  },
+  "sources": [
+    {
+      "full_release_row_count": 3,
+      "native_table": null,
+      "path": "docs/finance/evidence/tax-transaction/source/acquisition_cashflow_bridge.csv",
+      "predicate": "base scenario where supplied; 2026 by year/period/month index; shared static inputs retained; terminal master snapshots explicitly identified in README",
+      "release_member": "enterprise/acquisition_cashflow_bridge.csv",
+      "release_member_sha256": "38c97d266e27cc721e0bca64eb135ba8edf33cbdc1584bc34a1704cecc94ae7b",
+      "row_count": 1,
+      "selection_role": "SCOPED_OPERATING_POPULATION",
+      "sha256": "3058362e23b9c4448bba01db664d8fc31774e032a49adb5bc0c4a5c62cc826d6"
+    },
+    {
+      "full_release_row_count": 1296,
+      "native_table": null,
+      "path": "docs/finance/evidence/tax-transaction/source/enterprise_tax_allocation_bridge.csv",
+      "predicate": "base scenario where supplied; 2026 by year/period/month index; shared static inputs retained; terminal master snapshots explicitly identified in README",
+      "release_member": "enterprise/enterprise_tax_allocation_bridge.csv",
+      "release_member_sha256": "00b85a3b2964232abb334628f96e158195fd0eebe18cc2c912b27426da43fd11",
+      "row_count": 72,
+      "selection_role": "SCOPED_OPERATING_POPULATION",
+      "sha256": "6b2174fe67ae580a8f2fc8d138ab07df96af69920d2467f8a5ce86a3f2840f35"
+    }
+  ],
+  "status": "SOURCE_RECONCILED_VISUAL_REVIEW_PENDING",
+  "supplemental_record": "docs/finance/evidence/tax-transaction/CURRENT_SOURCE_BRIDGE.json",
+  "title": "Transaction cash and conditional tax support",
+  "visual_manifest": null
+}

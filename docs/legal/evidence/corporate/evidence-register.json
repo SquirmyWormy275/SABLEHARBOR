@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "package_id": "SH-LEGAL-CORPORATE-001",
+  "title": "Corporate, capital and workforce records",
+  "status": "SOURCE_BOUND_READER_DERIVATIVES",
+  "scope": {
+    "source_revision": "8898d2d0310a60bdf0e4753036790c6eda1388cd",
+    "review_date": "2026-09-12"
+  },
+  "sources": [
+    {
+      "path": "docs/advisory/CARRY_PLAN_STANDARD.md",
+      "sha256": "c8b64ecd570a2402233bd6067eea0e274e267c8f1aa90d9153de4b3a4865de45"
+    },
+    {
+      "path": "docs/governance/BOARD_AND_CAPITAL_GOVERNANCE_v1.0.1.md",
+      "sha256": "dc1e2e3ea6e7ea8d364eae87bd890a8c79a5a577a7554ed371cda3810ea945a8"
+    },
+    {
+      "path": "docs/governance/PEOPLE_AND_CULTURE_DOCTRINE.md",
+      "sha256": "9e8c8b6b3b3ce8500553adfc0e35e94956a8251d395fd8d39355f3d84c1dc5ee"
+    },
+    {
+      "path": "docs/governance/RESERVED_MATTERS_AND_SUBSIDIARY_AUTONOMY.md",
+      "sha256": "323a9611891d41dafa6eb00ed891ba4b0917a4b2329fd29e52bd730cc92d3313"
+    },
+    {
+      "path": "docs/governance/board-records/2021-06-18_harrison-vale-growth-financing-minutes.md",
+      "sha256": "b994512c64f86abe0d649f95d4ea3d3e00fd0c2c22af0ed56b62bd7ed41fae97"
+    },
+    {
+      "path": "docs/governance/board-records/2022-10-28_wolf-ridge-industrial-financing-minutes.md",
+      "sha256": "ec3625726d23588816c073afb4bd76cce51085a195833c6089faea3c3efed1a4"
+    },
+    {
+      "path": "docs/reader/transactions/dossier_source.json",
+      "sha256": "b91505c08404cc27d66067d90b6fe5005b27441aff083663fdc74ed2f5b8201c"
+    },
+    {
+      "path": "industrial/corporate/LEGAL_STRUCTURE_AND_FORMATION.md",
+      "sha256": "5a10f112b015d5dfa7ca3b500108718015a41369182092cabc44dfb224119fbc"
+    },
+    {
+      "path": "industrial/source/entities.json",
+      "sha256": "799a24baf3240d50c5d6a80ac0f9ddb9d023b7a36de058ec12546aac60caee29"
+    },
+    {
+      "path": "industrial/source/finance.json",
+      "sha256": "0d4461abfcdb138da36db503ff0cfea7c47ea7fd7109494126514225fd43e38c"
+    },
+    {
+      "path": "industrial/transaction/06_ARU_TRANSITION_AND_RETENTION.md",
+      "sha256": "3e3653f95a286d71aa513410603dd0c78684db0ad94e2460708c434a6fc4aec0"
+    }
+  ],
+  "markdown": "docs/legal/evidence/corporate/README.md",
+  "reconciliation": "docs/reader/transactions/RECONCILIATION.md",
+  "visual_manifest": null,
+  "database": "docs/reader/transactions/legal-records.sqlite3",
+  "dossiers": [
+    {
+      "id": "SH-LEGAL-READ-ENTITY-001",
+      "title": "Legal entities and separate books",
+      "status": "ACCEPTED SYNTHETIC INTERNAL FORMATION RECORD",
+      "markdown": "docs/legal/evidence/corporate/SH-LEGAL-READ-ENTITY-001.md",
+      "markdown_sha256": "8045eb7bbd66aa9363f0e30ad478f804bb9a5d0d6c939e388042f9094c5197c1",
+      "native_keys": [
+        "SH-IND-ENT-001",
+        "SHI",
+        "SHIH",
+        "PS",
+        "RWH",
+        "ARU",
+        "BST"
+      ],
+      "pdf_disposition": "NEW_DESIGN_AWAITING_EXACT_REVIEW"
+    },
+    {
+      "id": "SH-LEGAL-READ-CAPITAL-001",
+      "title": "Financing approvals and capital boundaries",
+      "status": "LOCKED IN-UNIVERSE BOARD RECORDS",
+      "markdown": "docs/legal/evidence/corporate/SH-LEGAL-READ-CAPITAL-001.md",
+      "markdown_sha256": "87126488fa1d762861cc1446d91b3e9c0d6145317f2ff363ce843939f549c321",
+      "native_keys": [
+        "SH-BRD-MIN-2021-06-18",
+        "SH-BRD-MIN-2022-10-28",
+        "SH-GOV-BOARD-001"
+      ],
+      "pdf_disposition": "NEW_DESIGN_AWAITING_EXACT_REVIEW"
+    },
+    {
+      "id": "SH-LEGAL-READ-HR-001",
+      "title": "ARU transition and retention obligations",
+      "status": "SYNTHETIC RECONSTRUCTED SERVICE/EMPLOYMENT TERMS",
+      "markdown": "docs/legal/evidence/corporate/SH-LEGAL-READ-HR-001.md",
+      "markdown_sha256": "e78a7f799e03ed65f628d9b573f72fe0f7b0d4d00f0219f7b50a68ef28258167",
+      "native_keys": [
+        "SH-IND-ARU-HR-001",
+        "ARU",
+        "employee_census_payroll",
+        "seller_cap_table"
+      ],
+      "pdf_disposition": "NEW_DESIGN_AWAITING_EXACT_REVIEW"
+    },
+    {
+      "id": "SH-LEGAL-READ-CARRY-001",
+      "title": "Advisory carry and workforce instrument boundaries",
+      "status": "LOCKED DIRECTION; counsel implementation outstanding",
+      "markdown": "docs/legal/evidence/corporate/SH-LEGAL-READ-CARRY-001.md",
+      "markdown_sha256": "b2ad7f023eee8ebdc20eb435c7db902f12ff8747b1c54fd321c04fd345f0877d",
+      "native_keys": [
+        "SH-ADV-005",
+        "SH-PNC-001",
+        "advisory",
+        "SHI"
+      ],
+      "pdf_disposition": "NEW_DESIGN_AWAITING_EXACT_REVIEW"
+    }
+  ]
+}

@@ -1,0 +1,629 @@
+{
+  "record_id": "SH-READER-RELEASE-FOLLOW-UP-2026-09-12",
+  "baseline_revision": "8898d2d0310a60bdf0e4753036790c6eda1388cd",
+  "archive": "sable-harbor-business-operations-v1.0.0.zip",
+  "archive_sha256": "b8e81572d829fec7209d1d18eb15bac21e52b37714211aee005b5f1a68ab5817",
+  "archive_member_count": 566,
+  "release_source_revision": "57cfa1b1c483ccf1f8b15d82c4cbdadbeef8063e",
+  "manifest_search_inventory": [
+    {
+      "member": "client_packages/client-handovers/base/ADV-2027-01/manifest.json",
+      "sha256": "f73f5d19f03623aa6561dd9c0b9aae961b0a2fe07900e8349c62c7c1c1f62e9e"
+    },
+    {
+      "member": "client_packages/client-handovers/base/ADV-2027-02/manifest.json",
+      "sha256": "ad4f863e0881f4580a8df325f632cf5e6a95966583c4703db0ef8ec163d243c6"
+    },
+    {
+      "member": "client_packages/client-handovers/base/ADV-2027-03/manifest.json",
+      "sha256": "77b40798fb8e3debf01f1ea867e805c55fabf8f3a39a1fe036ec6b3ad60ef9d4"
+    },
+    {
+      "member": "client_packages/client-handovers/base/ADV-2027-04/manifest.json",
+      "sha256": "fe70289e00d449f6d941e2db0e6533927494e973292dfe7f7480b4128c27fbe6"
+    },
+    {
+      "member": "client_packages/client-handovers/base/ADV-2027-05/manifest.json",
+      "sha256": "49af9d7dee2ced043e21ab73d09cb0583082d34f7767dbe99e04dee18a909a7f"
+    },
+    {
+      "member": "client_packages/client-handovers/downside/ADV-2027-01/manifest.json",
+      "sha256": "6fd0f553b0891824c5b480cef48087389cbc18e9776d713e256c6a751af7b273"
+    },
+    {
+      "member": "client_packages/client-handovers/downside/ADV-2027-02/manifest.json",
+      "sha256": "3212afda250b51e1adb62f9c790b23848fe4bae8ec1f214133b8e96cc72814a8"
+    },
+    {
+      "member": "client_packages/client-handovers/downside/ADV-2027-03/manifest.json",
+      "sha256": "6bd0e0ff746f894746739382569f4ae5b929aeceda538dbe1cce7e88dbc9377d"
+    },
+    {
+      "member": "client_packages/client-handovers/downside/ADV-2027-04/manifest.json",
+      "sha256": "e5d3ef3484d04fb24aa7810d1f146ca5585331390e4da74cfb39ebedad585d04"
+    },
+    {
+      "member": "client_packages/client-handovers/downside/ADV-2027-05/manifest.json",
+      "sha256": "284c11b65b4dc14d931012fd2ad7222fc268c6769d86c8d414d8492f26afea92"
+    },
+    {
+      "member": "client_packages/client-handovers/expansion/ADV-2027-01/manifest.json",
+      "sha256": "eaccbeb6433c9f37fb87709395ab6841783725c36b2b414ea49c3cbdb53d90e4"
+    },
+    {
+      "member": "client_packages/client-handovers/expansion/ADV-2027-02/manifest.json",
+      "sha256": "611497953012e12c3e21e2844e0c91fae4a6b33fe6e58db18c214770194af519"
+    },
+    {
+      "member": "client_packages/client-handovers/expansion/ADV-2027-03/manifest.json",
+      "sha256": "fd57c908a2a8fd7062cc18000cc0baf22f71099238e160759d440fc95f1bf58d"
+    },
+    {
+      "member": "client_packages/client-handovers/expansion/ADV-2027-04/manifest.json",
+      "sha256": "8873fe9404a0e2e1e87882643ff90d851a69265450903301fb2da3337eed87e6"
+    },
+    {
+      "member": "client_packages/client-handovers/expansion/ADV-2027-05/manifest.json",
+      "sha256": "cfcae5c2fdf533554b0d11d49a21cdc577c73f2d3e8243e5cf77a563c6584d8b"
+    },
+    {
+      "member": "industrial/forecast/manifest.json",
+      "sha256": "3fad5c70056f1fdb6b7b841414d8c2c4a00fac217042c5763120c3807d4dae67"
+    },
+    {
+      "member": "industrial/operations/manifest.json",
+      "sha256": "2b4ce4e47be61975fae3d1e602bdb700d07282c84274044d8294826c3255b876"
+    },
+    {
+      "member": "manifest.json",
+      "sha256": "7db52ce166d56e066b980c00ffa6bdc4024bf27e169fcf21585d29d6a52ef87a"
+    },
+    {
+      "member": "review_manifest.json",
+      "sha256": "8526cfecf79909ebe603adb5f821941f0de5f04e6d31e50db1ced09221c12e1e"
+    },
+    {
+      "member": "units/advisory/manifest.json",
+      "sha256": "538718e6b9031990b6ccad49a0675259485256ff413f1e447b28d328f34303aa"
+    },
+    {
+      "member": "units/american-resource-utility/manifest.json",
+      "sha256": "f8863c1825d9085f4c23061920d96c7cc3d8c53522b5084f60d319be9e17537f"
+    },
+    {
+      "member": "units/atlas-meridian/manifest.json",
+      "sha256": "5378d8e03ab310d4cebcac9a0d8c3fe1db1533b8bf3e965dc42d924c124b3ebf"
+    },
+    {
+      "member": "units/foundry-field/manifest.json",
+      "sha256": "8db443ac0fbaa75eb7395892bf627f1435f4ab87e394cd598f0373dd2467e7da"
+    },
+    {
+      "member": "units/pale-sun/manifest.json",
+      "sha256": "3a54a714f71e192be97db20d7de8d4d027fe6a794a74d074e8aba1c8bd614913"
+    },
+    {
+      "member": "units/project-cradle/manifest.json",
+      "sha256": "621a0e9deea81a04cf28ebb3d580036b03497cf20307f8aa277116a3f34cc61e"
+    },
+    {
+      "member": "units/willow/manifest.json",
+      "sha256": "97add65d5e78c459a7b47a42200633a8dc4d60cd890ab20284a603f28e23c920"
+    }
+  ],
+  "candidate_records": [
+    {
+      "source": "docs/advisory/CARRY_PLAN_STANDARD.md",
+      "source_sha256": "c8b64ecd570a2402233bd6067eea0e274e267c8f1aa90d9153de4b3a4865de45",
+      "candidate_manifest_members": [
+        "manifest.json",
+        "units/advisory/manifest.json",
+        "units/american-resource-utility/manifest.json",
+        "units/atlas-meridian/manifest.json",
+        "units/foundry-field/manifest.json",
+        "units/pale-sun/manifest.json",
+        "units/project-cradle/manifest.json",
+        "units/willow/manifest.json"
+      ],
+      "release_input_sha256": "c8b64ecd570a2402233bd6067eea0e274e267c8f1aa90d9153de4b3a4865de45",
+      "disposition": "CANDIDATE_REFERENCE_ONLY_NO_DOCUMENT_PAIRING"
+    },
+    {
+      "source": "docs/advisory/COMMERCIAL_CONTRACTING_AND_PRICING_STANDARD.md",
+      "source_sha256": "d205a6b5d1a254ed30fc35c395f0f3ea3372a449d0537fea7c7bb18583cb8275",
+      "candidate_manifest_members": [
+        "manifest.json",
+        "units/advisory/manifest.json",
+        "units/american-resource-utility/manifest.json",
+        "units/atlas-meridian/manifest.json",
+        "units/foundry-field/manifest.json",
+        "units/pale-sun/manifest.json",
+        "units/project-cradle/manifest.json",
+        "units/willow/manifest.json"
+      ],
+      "release_input_sha256": "d205a6b5d1a254ed30fc35c395f0f3ea3372a449d0537fea7c7bb18583cb8275",
+      "disposition": "CANDIDATE_REFERENCE_ONLY_NO_DOCUMENT_PAIRING"
+    },
+    {
+      "source": "docs/canon/CANON_CHANGELOG_v0.3.md",
+      "source_sha256": "b12cd87a48ee6a7859a2e05fc79406df2591326ccd104c97b1eaccf46c98d921",
+      "candidate_manifest_members": [
+        "manifest.json",
+        "units/advisory/manifest.json",
+        "units/american-resource-utility/manifest.json",
+        "units/atlas-meridian/manifest.json",
+        "units/foundry-field/manifest.json",
+        "units/pale-sun/manifest.json",
+        "units/project-cradle/manifest.json",
+        "units/willow/manifest.json"
+      ],
+      "release_input_sha256": "b12cd87a48ee6a7859a2e05fc79406df2591326ccd104c97b1eaccf46c98d921",
+      "disposition": "CANDIDATE_REFERENCE_ONLY_NO_DOCUMENT_PAIRING"
+    },
+    {
+      "source": "docs/canon/CRADLE_CLOSEOUT_2026-09-06.md",
+      "source_sha256": "b49eaf96f1582f11886e9543b1543013f47acc99aa5533082d73717ab523e8aa",
+      "candidate_manifest_members": [
+        "manifest.json",
+        "units/advisory/manifest.json",
+        "units/american-resource-utility/manifest.json",
+        "units/atlas-meridian/manifest.json",
+        "units/foundry-field/manifest.json",
+        "units/pale-sun/manifest.json",
+        "units/project-cradle/manifest.json",
+        "units/willow/manifest.json"
+      ],
+      "release_input_sha256": "b49eaf96f1582f11886e9543b1543013f47acc99aa5533082d73717ab523e8aa",
+      "disposition": "CANDIDATE_REFERENCE_ONLY_NO_DOCUMENT_PAIRING"
+    },
+    {
+      "source": "docs/canon/DECISION_REGISTER.md",
+      "source_sha256": "070dc6e6dad18b8e4c18fa530366b9fc8a396986371aee8a0e16ba732e6e1de4",
+      "candidate_manifest_members": [
+        "manifest.json",
+        "units/advisory/manifest.json",
+        "units/american-resource-utility/manifest.json",
+        "units/atlas-meridian/manifest.json",
+        "units/foundry-field/manifest.json",
+        "units/pale-sun/manifest.json",
+        "units/project-cradle/manifest.json",
+        "units/willow/manifest.json"
+      ],
+      "release_input_sha256": "070dc6e6dad18b8e4c18fa530366b9fc8a396986371aee8a0e16ba732e6e1de4",
+      "disposition": "CANDIDATE_REFERENCE_ONLY_NO_DOCUMENT_PAIRING"
+    },
+    {
+      "source": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-03.md",
+      "source_sha256": "9fd150d5b6ae1517fe3db17ddcf834d802bdd3908662806c319e18b9b4ce5877",
+      "candidate_manifest_members": [
+        "manifest.json",
+        "units/advisory/manifest.json",
+        "units/american-resource-utility/manifest.json",
+        "units/atlas-meridian/manifest.json",
+        "units/foundry-field/manifest.json",
+        "units/pale-sun/manifest.json",
+        "units/project-cradle/manifest.json",
+        "units/willow/manifest.json"
+      ],
+      "release_input_sha256": "9fd150d5b6ae1517fe3db17ddcf834d802bdd3908662806c319e18b9b4ce5877",
+      "disposition": "CANDIDATE_REFERENCE_ONLY_NO_DOCUMENT_PAIRING"
+    },
+    {
+      "source": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md",
+      "source_sha256": "9e5c2c9849f903ac945d2f1668aa2703e2d95a0de7cca94ad4a330731d3cf7a5",
+      "candidate_manifest_members": [
+        "manifest.json",
+        "units/advisory/manifest.json",
+        "units/american-resource-utility/manifest.json",
+        "units/atlas-meridian/manifest.json",
+        "units/foundry-field/manifest.json",
+        "units/pale-sun/manifest.json",
+        "units/project-cradle/manifest.json",
+        "units/willow/manifest.json"
+      ],
+      "release_input_sha256": "9e5c2c9849f903ac945d2f1668aa2703e2d95a0de7cca94ad4a330731d3cf7a5",
+      "disposition": "CANDIDATE_REFERENCE_ONLY_NO_DOCUMENT_PAIRING"
+    },
+    {
+      "source": "docs/canon/SABLE_HARBOR_CANONICAL_ARCHITECTURE_HANDOVER.md",
+      "source_sha256": "ef0fe5602ab41f1de0a0c29146476dbb406cb56e28407652f7d00f357e3fc636",
+      "candidate_manifest_members": [
+        "manifest.json",
+        "units/advisory/manifest.json",
+        "units/american-resource-utility/manifest.json",
+        "units/atlas-meridian/manifest.json",
+        "units/foundry-field/manifest.json",
+        "units/pale-sun/manifest.json",
+        "units/project-cradle/manifest.json",
+        "units/willow/manifest.json"
+      ],
+      "release_input_sha256": "ef0fe5602ab41f1de0a0c29146476dbb406cb56e28407652f7d00f357e3fc636",
+      "disposition": "CANDIDATE_REFERENCE_ONLY_NO_DOCUMENT_PAIRING"
+    },
+    {
+      "source": "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md",
+      "source_sha256": "e1b0d123eed483f91240362f335d62210ea67da49b27b21bced7264e36c711cc",
+      "candidate_manifest_members": [
+        "manifest.json",
+        "units/advisory/manifest.json",
+        "units/american-resource-utility/manifest.json",
+        "units/atlas-meridian/manifest.json",
+        "units/foundry-field/manifest.json",
+        "units/pale-sun/manifest.json",
+        "units/project-cradle/manifest.json",
+        "units/willow/manifest.json"
+      ],
+      "release_input_sha256": "e1b0d123eed483f91240362f335d62210ea67da49b27b21bced7264e36c711cc",
+      "disposition": "CANDIDATE_REFERENCE_ONLY_NO_DOCUMENT_PAIRING"
+    },
+    {
+      "source": "docs/canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md",
+      "source_sha256": "3289ad8ce5d20d767b38f1ad3ed804feeb80300c59d7e96653bfe68f1eaa24b6",
+      "candidate_manifest_members": [
+        "manifest.json",
+        "units/advisory/manifest.json",
+        "units/american-resource-utility/manifest.json",
+        "units/atlas-meridian/manifest.json",
+        "units/foundry-field/manifest.json",
+        "units/pale-sun/manifest.json",
+        "units/project-cradle/manifest.json",
+        "units/willow/manifest.json"
+      ],
+      "release_input_sha256": "3289ad8ce5d20d767b38f1ad3ed804feeb80300c59d7e96653bfe68f1eaa24b6",
+      "disposition": "CANDIDATE_REFERENCE_ONLY_NO_DOCUMENT_PAIRING"
+    },
+    {
+      "source": "docs/finance/KNOWN_LIMITATIONS.md",
+      "source_sha256": "a79899b96bc43972ad270843e119fa0b0e0d1ae77ce89a8504480098cea9676b",
+      "candidate_manifest_members": [
+        "manifest.json",
+        "units/advisory/manifest.json",
+        "units/american-resource-utility/manifest.json",
+        "units/atlas-meridian/manifest.json",
+        "units/foundry-field/manifest.json",
+        "units/pale-sun/manifest.json",
+        "units/project-cradle/manifest.json",
+        "units/willow/manifest.json"
+      ],
+      "release_input_sha256": "a79899b96bc43972ad270843e119fa0b0e0d1ae77ce89a8504480098cea9676b",
+      "disposition": "CANDIDATE_REFERENCE_ONLY_NO_DOCUMENT_PAIRING"
+    },
+    {
+      "source": "docs/finance/WILLOW_KLEIN_FINANCE_AND_CORPORATE_MODEL_2026-09-06.md",
+      "source_sha256": "71b047329712ae501848a57ef3559a80501004cb128c43978c6abbb2b49ae491",
+      "candidate_manifest_members": [
+        "manifest.json",
+        "units/advisory/manifest.json",
+        "units/american-resource-utility/manifest.json",
+        "units/atlas-meridian/manifest.json",
+        "units/foundry-field/manifest.json",
+        "units/pale-sun/manifest.json",
+        "units/project-cradle/manifest.json",
+        "units/willow/manifest.json"
+      ],
+      "release_input_sha256": "71b047329712ae501848a57ef3559a80501004cb128c43978c6abbb2b49ae491",
+      "disposition": "CANDIDATE_REFERENCE_ONLY_NO_DOCUMENT_PAIRING"
+    },
+    {
+      "source": "docs/governance/2026_ENTITY_AND_BOARD_GOVERNANCE_DECISIONS.md",
+      "source_sha256": "ae8001b487a7196a697022de965f79e58c447e922e65383ad6446eaf4e763800",
+      "candidate_manifest_members": [
+        "manifest.json",
+        "units/advisory/manifest.json",
+        "units/american-resource-utility/manifest.json",
+        "units/atlas-meridian/manifest.json",
+        "units/foundry-field/manifest.json",
+        "units/pale-sun/manifest.json",
+        "units/project-cradle/manifest.json",
+        "units/willow/manifest.json"
+      ],
+      "release_input_sha256": "ae8001b487a7196a697022de965f79e58c447e922e65383ad6446eaf4e763800",
+      "disposition": "CANDIDATE_REFERENCE_ONLY_NO_DOCUMENT_PAIRING"
+    },
+    {
+      "source": "docs/governance/BOARD_AND_CAPITAL_GOVERNANCE.md",
+      "source_sha256": "20249592680765fcfcfce057e9c62557b9694e6694adc84c63211cad3b76d933",
+      "candidate_manifest_members": [
+        "manifest.json",
+        "units/advisory/manifest.json",
+        "units/american-resource-utility/manifest.json",
+        "units/atlas-meridian/manifest.json",
+        "units/foundry-field/manifest.json",
+        "units/pale-sun/manifest.json",
+        "units/project-cradle/manifest.json",
+        "units/willow/manifest.json"
+      ],
+      "release_input_sha256": "20249592680765fcfcfce057e9c62557b9694e6694adc84c63211cad3b76d933",
+      "disposition": "CANDIDATE_REFERENCE_ONLY_NO_DOCUMENT_PAIRING"
+    },
+    {
+      "source": "docs/organization/DECISION_RIGHTS_AND_OPERATING_GATES.md",
+      "source_sha256": "590b398c3c44b872a52b932a1aec64bf4b7ac372aba5bab556458e4e18296d41",
+      "candidate_manifest_members": [
+        "manifest.json",
+        "units/advisory/manifest.json",
+        "units/american-resource-utility/manifest.json",
+        "units/atlas-meridian/manifest.json",
+        "units/foundry-field/manifest.json",
+        "units/pale-sun/manifest.json",
+        "units/project-cradle/manifest.json",
+        "units/willow/manifest.json"
+      ],
+      "release_input_sha256": "590b398c3c44b872a52b932a1aec64bf4b7ac372aba5bab556458e4e18296d41",
+      "disposition": "CANDIDATE_REFERENCE_ONLY_NO_DOCUMENT_PAIRING"
+    },
+    {
+      "source": "docs/organization/FOUNDRY_AND_FOUNDRY_FIELD.md",
+      "source_sha256": "c4074ceb4680427772dd097aa729e7ade5338e2a5dcd893de4a0a40aef36a12d",
+      "candidate_manifest_members": [
+        "manifest.json",
+        "units/advisory/manifest.json",
+        "units/american-resource-utility/manifest.json",
+        "units/atlas-meridian/manifest.json",
+        "units/foundry-field/manifest.json",
+        "units/pale-sun/manifest.json",
+        "units/project-cradle/manifest.json",
+        "units/willow/manifest.json"
+      ],
+      "release_input_sha256": "c4074ceb4680427772dd097aa729e7ade5338e2a5dcd893de4a0a40aef36a12d",
+      "disposition": "CANDIDATE_REFERENCE_ONLY_NO_DOCUMENT_PAIRING"
+    },
+    {
+      "source": "docs/organization/LEGAL_AND_REPORTING_STRUCTURE_STATUS.md",
+      "source_sha256": "282c7f09785ac2466d2ac5158db7635012a028ae8b665cfa284d577857516a99",
+      "candidate_manifest_members": [
+        "manifest.json",
+        "units/advisory/manifest.json",
+        "units/american-resource-utility/manifest.json",
+        "units/atlas-meridian/manifest.json",
+        "units/foundry-field/manifest.json",
+        "units/pale-sun/manifest.json",
+        "units/project-cradle/manifest.json",
+        "units/willow/manifest.json"
+      ],
+      "release_input_sha256": "282c7f09785ac2466d2ac5158db7635012a028ae8b665cfa284d577857516a99",
+      "disposition": "CANDIDATE_REFERENCE_ONLY_NO_DOCUMENT_PAIRING"
+    },
+    {
+      "source": "docs/organization/ORGANIZATIONAL_LINEAGE_2015_2026.md",
+      "source_sha256": "386f20b1af36fb97f61a00edf1520704b80afd2e106fd2cde1d63473d541863f",
+      "candidate_manifest_members": [
+        "manifest.json",
+        "units/advisory/manifest.json",
+        "units/american-resource-utility/manifest.json",
+        "units/atlas-meridian/manifest.json",
+        "units/foundry-field/manifest.json",
+        "units/pale-sun/manifest.json",
+        "units/project-cradle/manifest.json",
+        "units/willow/manifest.json"
+      ],
+      "release_input_sha256": "386f20b1af36fb97f61a00edf1520704b80afd2e106fd2cde1d63473d541863f",
+      "disposition": "CANDIDATE_REFERENCE_ONLY_NO_DOCUMENT_PAIRING"
+    },
+    {
+      "source": "docs/organization/history/v0.3.0/LEGAL_AND_REPORTING_STRUCTURE_STATUS.md",
+      "source_sha256": "282c7f09785ac2466d2ac5158db7635012a028ae8b665cfa284d577857516a99",
+      "candidate_manifest_members": [
+        "manifest.json",
+        "units/advisory/manifest.json",
+        "units/american-resource-utility/manifest.json",
+        "units/atlas-meridian/manifest.json",
+        "units/foundry-field/manifest.json",
+        "units/pale-sun/manifest.json",
+        "units/project-cradle/manifest.json",
+        "units/willow/manifest.json"
+      ],
+      "release_input_sha256": null,
+      "disposition": "CANDIDATE_REFERENCE_ONLY_NO_DOCUMENT_PAIRING"
+    },
+    {
+      "source": "enterprise/operations/docs/advisory-policy.md",
+      "source_sha256": "11b227e208c61a1f518b5d29db3cbeba28b0191e93ea7ea5255a2f873a621cde",
+      "candidate_manifest_members": [
+        "manifest.json",
+        "units/advisory/manifest.json",
+        "units/american-resource-utility/manifest.json",
+        "units/atlas-meridian/manifest.json",
+        "units/foundry-field/manifest.json",
+        "units/pale-sun/manifest.json",
+        "units/project-cradle/manifest.json",
+        "units/willow/manifest.json"
+      ],
+      "release_input_sha256": "11b227e208c61a1f518b5d29db3cbeba28b0191e93ea7ea5255a2f873a621cde",
+      "disposition": "CANDIDATE_REFERENCE_ONLY_NO_DOCUMENT_PAIRING"
+    },
+    {
+      "source": "enterprise/operations/docs/commercial.md",
+      "source_sha256": "ef896e84c66e03eff7adecb3e3f6b7c082b28e618f4183ec37fc7568f2b45416",
+      "candidate_manifest_members": [
+        "manifest.json",
+        "units/advisory/manifest.json",
+        "units/american-resource-utility/manifest.json",
+        "units/atlas-meridian/manifest.json",
+        "units/foundry-field/manifest.json",
+        "units/pale-sun/manifest.json",
+        "units/project-cradle/manifest.json",
+        "units/willow/manifest.json"
+      ],
+      "release_input_sha256": "ef896e84c66e03eff7adecb3e3f6b7c082b28e618f4183ec37fc7568f2b45416",
+      "disposition": "CANDIDATE_REFERENCE_ONLY_NO_DOCUMENT_PAIRING"
+    },
+    {
+      "source": "enterprise/operations/docs/controls.md",
+      "source_sha256": "6181b48cb4e63a9598a3370ed610ee40366d287aefc74a167931f00e4f902ee8",
+      "candidate_manifest_members": [
+        "manifest.json",
+        "units/advisory/manifest.json",
+        "units/american-resource-utility/manifest.json",
+        "units/atlas-meridian/manifest.json",
+        "units/foundry-field/manifest.json",
+        "units/pale-sun/manifest.json",
+        "units/project-cradle/manifest.json",
+        "units/willow/manifest.json"
+      ],
+      "release_input_sha256": "6181b48cb4e63a9598a3370ed610ee40366d287aefc74a167931f00e4f902ee8",
+      "disposition": "CANDIDATE_REFERENCE_ONLY_NO_DOCUMENT_PAIRING"
+    },
+    {
+      "source": "enterprise/operations/docs/credit.md",
+      "source_sha256": "409103fc098d56b060001db09a7c7d0321ce8ac633ea130e6cd3e17a1d319b00",
+      "candidate_manifest_members": [
+        "manifest.json",
+        "units/advisory/manifest.json",
+        "units/american-resource-utility/manifest.json",
+        "units/atlas-meridian/manifest.json",
+        "units/foundry-field/manifest.json",
+        "units/pale-sun/manifest.json",
+        "units/project-cradle/manifest.json",
+        "units/willow/manifest.json"
+      ],
+      "release_input_sha256": "409103fc098d56b060001db09a7c7d0321ce8ac633ea130e6cd3e17a1d319b00",
+      "disposition": "CANDIDATE_REFERENCE_ONLY_NO_DOCUMENT_PAIRING"
+    },
+    {
+      "source": "enterprise/operations/docs/management.md",
+      "source_sha256": "dde57353a66314163d791dc872c6299a754e2533884c039a14c72a4c5a954145",
+      "candidate_manifest_members": [
+        "manifest.json",
+        "units/advisory/manifest.json",
+        "units/american-resource-utility/manifest.json",
+        "units/atlas-meridian/manifest.json",
+        "units/foundry-field/manifest.json",
+        "units/pale-sun/manifest.json",
+        "units/project-cradle/manifest.json",
+        "units/willow/manifest.json"
+      ],
+      "release_input_sha256": "dde57353a66314163d791dc872c6299a754e2533884c039a14c72a4c5a954145",
+      "disposition": "CANDIDATE_REFERENCE_ONLY_NO_DOCUMENT_PAIRING"
+    },
+    {
+      "source": "enterprise/operations/docs/matters.md",
+      "source_sha256": "bd4602b653dd2839cc5cccc1d2c04db1db69362285633655cc24b52ce8cc2176",
+      "candidate_manifest_members": [
+        "manifest.json",
+        "units/advisory/manifest.json",
+        "units/american-resource-utility/manifest.json",
+        "units/atlas-meridian/manifest.json",
+        "units/foundry-field/manifest.json",
+        "units/pale-sun/manifest.json",
+        "units/project-cradle/manifest.json",
+        "units/willow/manifest.json"
+      ],
+      "release_input_sha256": "bd4602b653dd2839cc5cccc1d2c04db1db69362285633655cc24b52ce8cc2176",
+      "disposition": "CANDIDATE_REFERENCE_ONLY_NO_DOCUMENT_PAIRING"
+    },
+    {
+      "source": "enterprise/operations/docs/research.md",
+      "source_sha256": "f6a7af1361ad4bfc6a0c0a9c4c6c51182db3d66b7782eafa1ab9089b0e6f47d2",
+      "candidate_manifest_members": [
+        "manifest.json",
+        "units/advisory/manifest.json",
+        "units/american-resource-utility/manifest.json",
+        "units/atlas-meridian/manifest.json",
+        "units/foundry-field/manifest.json",
+        "units/pale-sun/manifest.json",
+        "units/project-cradle/manifest.json",
+        "units/willow/manifest.json"
+      ],
+      "release_input_sha256": "f6a7af1361ad4bfc6a0c0a9c4c6c51182db3d66b7782eafa1ab9089b0e6f47d2",
+      "disposition": "CANDIDATE_REFERENCE_ONLY_NO_DOCUMENT_PAIRING"
+    },
+    {
+      "source": "geospatial/sources/canon_snapshot/docs/canon/CRADLE_CLOSEOUT_2026-09-06.md",
+      "source_sha256": "b49eaf96f1582f11886e9543b1543013f47acc99aa5533082d73717ab523e8aa",
+      "candidate_manifest_members": [
+        "manifest.json",
+        "units/advisory/manifest.json",
+        "units/american-resource-utility/manifest.json",
+        "units/atlas-meridian/manifest.json",
+        "units/foundry-field/manifest.json",
+        "units/pale-sun/manifest.json",
+        "units/project-cradle/manifest.json",
+        "units/willow/manifest.json"
+      ],
+      "release_input_sha256": null,
+      "disposition": "CANDIDATE_REFERENCE_ONLY_NO_DOCUMENT_PAIRING"
+    },
+    {
+      "source": "geospatial/sources/canon_snapshot/docs/canon/DECISION_REGISTER.md",
+      "source_sha256": "070dc6e6dad18b8e4c18fa530366b9fc8a396986371aee8a0e16ba732e6e1de4",
+      "candidate_manifest_members": [
+        "manifest.json",
+        "units/advisory/manifest.json",
+        "units/american-resource-utility/manifest.json",
+        "units/atlas-meridian/manifest.json",
+        "units/foundry-field/manifest.json",
+        "units/pale-sun/manifest.json",
+        "units/project-cradle/manifest.json",
+        "units/willow/manifest.json"
+      ],
+      "release_input_sha256": null,
+      "disposition": "CANDIDATE_REFERENCE_ONLY_NO_DOCUMENT_PAIRING"
+    },
+    {
+      "source": "geospatial/sources/canon_snapshot/docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-03.md",
+      "source_sha256": "9fd150d5b6ae1517fe3db17ddcf834d802bdd3908662806c319e18b9b4ce5877",
+      "candidate_manifest_members": [
+        "manifest.json",
+        "units/advisory/manifest.json",
+        "units/american-resource-utility/manifest.json",
+        "units/atlas-meridian/manifest.json",
+        "units/foundry-field/manifest.json",
+        "units/pale-sun/manifest.json",
+        "units/project-cradle/manifest.json",
+        "units/willow/manifest.json"
+      ],
+      "release_input_sha256": null,
+      "disposition": "CANDIDATE_REFERENCE_ONLY_NO_DOCUMENT_PAIRING"
+    },
+    {
+      "source": "geospatial/sources/canon_snapshot/docs/canon/SABLE_HARBOR_CANONICAL_ARCHITECTURE_HANDOVER.md",
+      "source_sha256": "ef0fe5602ab41f1de0a0c29146476dbb406cb56e28407652f7d00f357e3fc636",
+      "candidate_manifest_members": [
+        "manifest.json",
+        "units/advisory/manifest.json",
+        "units/american-resource-utility/manifest.json",
+        "units/atlas-meridian/manifest.json",
+        "units/foundry-field/manifest.json",
+        "units/pale-sun/manifest.json",
+        "units/project-cradle/manifest.json",
+        "units/willow/manifest.json"
+      ],
+      "release_input_sha256": null,
+      "disposition": "CANDIDATE_REFERENCE_ONLY_NO_DOCUMENT_PAIRING"
+    },
+    {
+      "source": "geospatial/sources/canon_snapshot/docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md",
+      "source_sha256": "e1b0d123eed483f91240362f335d62210ea67da49b27b21bced7264e36c711cc",
+      "candidate_manifest_members": [
+        "manifest.json",
+        "units/advisory/manifest.json",
+        "units/american-resource-utility/manifest.json",
+        "units/atlas-meridian/manifest.json",
+        "units/foundry-field/manifest.json",
+        "units/pale-sun/manifest.json",
+        "units/project-cradle/manifest.json",
+        "units/willow/manifest.json"
+      ],
+      "release_input_sha256": null,
+      "disposition": "CANDIDATE_REFERENCE_ONLY_NO_DOCUMENT_PAIRING"
+    },
+    {
+      "source": "geospatial/sources/canon_snapshot/docs/canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md",
+      "source_sha256": "3289ad8ce5d20d767b38f1ad3ed804feeb80300c59d7e96653bfe68f1eaa24b6",
+      "candidate_manifest_members": [
+        "manifest.json",
+        "units/advisory/manifest.json",
+        "units/american-resource-utility/manifest.json",
+        "units/atlas-meridian/manifest.json",
+        "units/foundry-field/manifest.json",
+        "units/pale-sun/manifest.json",
+        "units/project-cradle/manifest.json",
+        "units/willow/manifest.json"
+      ],
+      "release_input_sha256": null,
+      "disposition": "CANDIDATE_REFERENCE_ONLY_NO_DOCUMENT_PAIRING"
+    }
+  ],
+  "review_result": "Source-input and artifact inventories do not explicitly map these Markdown records to equivalent PDF/XLSX publications. No baseline disposition changed."
+}

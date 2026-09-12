@@ -1,7 +1,7 @@
 {
   "id": "SH-READER-OVERNIGHT-001",
   "base_sha": "44e42d37782986fd353e89c1eb2e1f896cdf2918",
-  "status": "PREPARED_NOT_SCHEDULED",
+  "status": "DESIGN_REVIEW_PENDING",
   "max_parallel_agents": 3,
   "integration_owner": "main agent",
   "decision_defaults": {
@@ -88,9 +88,10 @@
       "write_scope": [
         "docs/reader/reconciliation/"
       ],
-      "state": "READY",
+      "state": "COMPLETE",
       "acceptance": "Inventory every existing format-review row. Give explicit manifest or release-member evidence for verified counterparts; retain unresolved dispositions. Do not generate bulk PDFs.",
-      "gate": "existing_authority"
+      "gate": "existing_authority",
+      "evidence": "docs/reader/reconciliation/records.json: all 448 pinned rows, explicit verified/unresolved dispositions; release-member follow-up; PR #142."
     },
     {
       "id": "FIN-02",
@@ -105,9 +106,10 @@
       "write_scope": [
         "docs/finance/evidence/coverage/"
       ],
-      "state": "READY",
+      "state": "COMPLETE",
       "acceptance": "Inventory every applicable accounting family in pinned current/successor releases: billing, receipts, credits, revenue, procurement/payables, Treasury, workforce costs, inventory, fixed assets, debt, close, consolidation and tax-support boundaries. Record period/scenario/entity/unit scope, all native populations, MD/PDF/XLSX/database coverage and supported/absent/exempt/proposed dispositions. Do not combine successive releases as extra transactions.",
-      "gate": "existing_authority"
+      "gate": "existing_authority",
+      "evidence": "docs/finance/evidence/coverage/RELEASE_INVENTORY.json and SCOPE.json: complete release inventory and selected family coverage; PR #142."
     },
     {
       "id": "WIKI-01",
@@ -125,9 +127,10 @@
         "docs/wiki/departments/",
         "docs/wiki/subjects/"
       ],
-      "state": "READY",
+      "state": "COMPLETE",
       "acceptance": "One source-linked route for every accepted business/department and explicit historical/external subject disposition. Reuse original artwork; never invent separate logos or departments.",
-      "gate": "existing_authority"
+      "gate": "existing_authority",
+      "evidence": "docs/reader/WIKI_COVERAGE.json: 7 business, 23 department and 9 subject pages; all seven queued subjects resolved; PR #142."
     },
     {
       "id": "FIN-03",
@@ -144,9 +147,10 @@
       "write_scope": [
         "docs/finance/evidence/customer/"
       ],
-      "state": "READY_SOURCE_ONLY",
+      "state": "SOURCE_COMPLETE_REVIEW_PENDING",
       "acceptance": "For each applicable selected release/unit population, link contracts and versions, invoices, receipts, credits, collection/write-off histories, source events and journals; reconcile AR and deferred revenue. Deliver readable MD and draft PDF/XLSX with database lineage. Preserve complete scoped populations and missing-original disclosures; new visual files require exact review.",
-      "gate": "exact_visual_acceptance"
+      "gate": "exact_visual_acceptance",
+      "evidence": "docs/finance/evidence/customer/evidence-register.json; source delivery PR #142; exact draft files held on review/overnight-human-evidence-2026-09-12. No design acceptance claimed."
     },
     {
       "id": "FIN-04",
@@ -162,9 +166,10 @@
       "write_scope": [
         "docs/finance/evidence/treasury/"
       ],
-      "state": "READY_SOURCE_ONLY",
+      "state": "SOURCE_COMPLETE_REVIEW_PENDING",
       "acceptance": "Join existing purchase orders, receipts, vendor bills, match/approval records and payment events where supplied; reconcile payable exposure and requested/funded/unpaid Treasury obligations by period. Deliver MD plus draft human schedules/documents and database links. Mark unsupported supplier/bank/daily-cash evidence explicitly; do not invent executed bank documents or alter released amounts.",
-      "gate": "existing_authority"
+      "gate": "existing_authority",
+      "evidence": "docs/finance/evidence/treasury/evidence-register.json; source delivery PR #142; exact draft files held on review/overnight-human-evidence-2026-09-12. No design acceptance claimed."
     },
     {
       "id": "FIN-05",
@@ -180,9 +185,10 @@
       "write_scope": [
         "docs/finance/evidence/close/"
       ],
-      "state": "READY_SOURCE_ONLY",
+      "state": "SOURCE_COMPLETE_REVIEW_PENDING",
       "acceptance": "For each scoped entity/unit and period reconcile source subledgers, journals, trial balances, statements, allowance/close evidence and legal-entity eliminations. Deliver source-bound MD, draft XLSX, database lineage and discrepancy reports, with no balancing plugs, double counting or historical release changes. New workbooks require exact review.",
-      "gate": "existing_authority"
+      "gate": "existing_authority",
+      "evidence": "docs/finance/evidence/close/evidence-register.json; source delivery PR #142; exact draft files held on review/overnight-human-evidence-2026-09-12. No design acceptance claimed."
     },
     {
       "id": "LEGAL-01",
@@ -197,9 +203,10 @@
       "write_scope": [
         "docs/reader/transactions/"
       ],
-      "state": "READY",
+      "state": "COMPLETE",
       "acceptance": "Inventory applicable formation/governance/capital records, customer/vendor/service contracts, workforce terms, acquisition/bill-of-sale instruments, leases/host rights, ownership/title/security interests and tax-support documents. Map each to existing sources, human formats, accounting effects and missing/proposed/exempt states. Prior legal data-room categories do not prove an instrument exists.",
-      "gate": "existing_authority"
+      "gate": "existing_authority",
+      "evidence": "docs/reader/transactions/evidence-register.json: 56 documents, 493 sections, 35 existing PDFs, 17 specific gaps; PR #142."
     },
     {
       "id": "FIN-06",
@@ -234,9 +241,10 @@
       "write_scope": [
         "docs/finance/evidence/supporting-schedules/"
       ],
-      "state": "READY_SOURCE_ONLY",
+      "state": "SOURCE_COMPLETE_REVIEW_PENDING",
       "acceptance": "Reconcile supported workforce/payroll cost populations, inventory quantities/valuation, asset additions/depreciation, debt draws/repayments/interest and related journal IDs. Deliver complete scoped schedules with MD, draft XLSX and database links. No invented employee payments, reserves, asset ownership or covenant thresholds.",
-      "gate": "existing_authority"
+      "gate": "existing_authority",
+      "evidence": "docs/finance/evidence/supporting-schedules/evidence-register.json; source delivery PR #142; exact draft files held on review/overnight-human-evidence-2026-09-12. No design acceptance claimed."
     },
     {
       "id": "FIN-08",
@@ -254,9 +262,10 @@
       "write_scope": [
         "docs/finance/evidence/tax-transaction/"
       ],
-      "state": "READY_SOURCE_ONLY",
+      "state": "SOURCE_COMPLETE_REVIEW_PENDING",
       "acceptance": "Trace accepted consideration, opening balances, acquisition allocations and tax assumptions to current source records and financial effects; reconcile existing modeled amounts. Prepare readable support and proposed missing-case inputs separately. No new election, tax conclusion, executed filing or valuation opinion is inferred from a model.",
-      "gate": "existing_authority"
+      "gate": "existing_authority",
+      "evidence": "docs/finance/evidence/tax-transaction/evidence-register.json; source delivery PR #142; exact draft files held on review/overnight-human-evidence-2026-09-12. No design acceptance claimed."
     },
     {
       "id": "LEGAL-02",
@@ -274,9 +283,10 @@
       "write_scope": [
         "docs/legal/evidence/commercial/"
       ],
-      "state": "READY_SOURCE_ONLY",
+      "state": "SOURCE_COMPLETE_REVIEW_PENDING",
       "acceptance": "For supported terms, prepare source-linked contract/SLA/order/amendment and approval reading packages, including term, price, service, renewal and obligation-to-accounting links. Retain actual source execution status. Missing clauses may be separately proposed for review, never presented as negotiated or signed. Deliver MD and draft letterhead PDF where appropriate plus database identity.",
-      "gate": "existing_authority"
+      "gate": "existing_authority",
+      "evidence": "docs/legal/evidence/commercial/evidence-register.json; source delivery PR #142; exact draft PDFs/HTML held on review/overnight-human-evidence-2026-09-12."
     },
     {
       "id": "LEGAL-03",
@@ -293,9 +303,10 @@
       "write_scope": [
         "docs/legal/evidence/corporate/"
       ],
-      "state": "READY_SOURCE_ONLY",
+      "state": "SOURCE_COMPLETE_REVIEW_PENDING",
       "acceptance": "Recover and connect existing entity/authority, board approval, capitalization, financing, compensation/incentive and contractor/employment instruments. Distinguish reporting units from legal entities and policies from executed agreements. Provide readable document packages and identity/accounting cross-references; record absent formations, grants, signatures or appointments explicitly.",
-      "gate": "existing_authority"
+      "gate": "existing_authority",
+      "evidence": "docs/legal/evidence/corporate/evidence-register.json; source delivery PR #142; exact draft PDFs/HTML held on review/overnight-human-evidence-2026-09-12."
     },
     {
       "id": "LEGAL-04",
@@ -313,9 +324,10 @@
       "write_scope": [
         "docs/legal/evidence/assets-rights/"
       ],
-      "state": "READY_SOURCE_ONLY",
+      "state": "SOURCE_COMPLETE_REVIEW_PENDING",
       "acceptance": "Connect supported purchase/bill-of-sale terms, closing conditions, consideration, title/host/custody/lease rights and asset schedules to accounting and geographic records. Prepare MD and draft formatted instruments/schedules from supported facts. Unavailable ownership, permitting, execution or tenure stays explicit; never promote external hosts or modelled parcels into owned assets.",
-      "gate": "existing_authority"
+      "gate": "existing_authority",
+      "evidence": "docs/legal/evidence/assets-rights/evidence-register.json; source delivery PR #142; exact draft PDFs/HTML held on review/overnight-human-evidence-2026-09-12."
     },
     {
       "id": "LEGAL-05",
@@ -332,9 +344,10 @@
       "write_scope": [
         "docs/legal/evidence/proposals/"
       ],
-      "state": "READY_SOURCE_ONLY",
+      "state": "COMPLETE",
       "acceptance": "Consolidate remaining legal-party, billing, tax and document-term gaps into bounded field-level proposals for review. Reuse draft PR #138 rather than duplicating it. Show sourced values, proposed additions, affected records and acceptance state; isolate any financial assumption change for explicit approval. No signatures, operational remittance endpoints, or false legal execution.",
-      "gate": "exact_visual_acceptance"
+      "gate": "exact_visual_acceptance",
+      "evidence": "docs/legal/evidence/proposals/decision-register.json: nine field-level dispositions; PR #138 retained without new values or adoption; PR #142."
     },
     {
       "id": "QA-01",
@@ -360,14 +373,30 @@
         "docs/reader/overnight/QUEUE.json",
         "docs/reader/overnight/START.md"
       ],
-      "state": "READY",
+      "state": "SOURCE_COMPLETE_REVIEW_PENDING",
       "acceptance": "Main agent exclusively regenerates shared catalog/links and reconciles financial, legal and reader coverage. For every scoped record require MD, applicable PDF/XLSX and native database linkage or a supported exemption/missing/proposal disposition. Run accounting rollups, source/period/ID checks, manifest/link integrity and required CI; inspect every changed page/sheet. Merge nonvisual batches after gates; hold new designs and proposed canon for review. Do not mark a family complete merely because it has an index or example.",
-      "gate": "existing_authority"
+      "gate": "existing_authority",
+      "evidence": "Source, ledger, link, publication and preservation checks recorded in RESULTS.md; PR #142 supplies final CI/merge evidence. Saved visual packages remain in exact-file owner review."
     }
   ],
   "scope_update": {
     "date": "2026-09-12",
     "owner_instruction": "Can you roll up the accounting and legal intp that too?",
     "interpretation": "Include accounting and legal-document completion in the prepared overnight run; this update does not start execution."
+  },
+  "execution": {
+    "started_date": "2026-09-12",
+    "owner_instruction": "ok. let er rip",
+    "base_sha": "8898d2d0310a60bdf0e4753036790c6eda1388cd",
+    "integration_branch": "execute/overnight-evidence-2026-09-12",
+    "workers": {
+      "finance": "execute/overnight-finance-2026-09-12",
+      "legal": "execute/overnight-legal-2026-09-12",
+      "reader": "execute/overnight-reader-2026-09-12"
+    },
+    "visual_release_boundary": "New designs and proposed facts remain in review; source-backed nonvisual work may merge after gates.",
+    "compatibility_base_sha": "035304bf8860e9bc393ae73382a3e60501a23757",
+    "source_pr": 142,
+    "source_delivery": "Source changes are delivered through PR #142; its GitHub merge record supplies repository acceptance."
   }
 }

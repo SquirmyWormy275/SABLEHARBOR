@@ -1,0 +1,455 @@
+{
+  "columns": [
+    "period",
+    "unit",
+    "asset_id",
+    "cost_usd",
+    "accumulated_usd",
+    "net_book_usd"
+  ],
+  "limitations": "Position IDs are synthetic planning records, not new named employees or actual 2026 headcount. Loaded costs are employer costs, not net pay. Validate costs against PAYROLL_REQUEST journals before Cradle capitalizes direct labor into inventory; net BIZ_PAYROLL expense is not gross payroll. Core and industrial schedules are separate source systems. Stock quantities are retained in their original units. No payroll remittance, independent valuation, reserve certification, new ownership or covenant threshold is created.",
+  "rows": [
+    {
+      "accumulated_usd": "0.0000",
+      "asset_id": "FORT-TEST-RIG",
+      "cost_usd": "240000.0000",
+      "net_book_usd": "240000.0000",
+      "period": "2027-01-31",
+      "unit": "willow"
+    },
+    {
+      "accumulated_usd": "0.0000",
+      "asset_id": "STREAM17-MODULE",
+      "cost_usd": "320000.0000",
+      "net_book_usd": "320000.0000",
+      "period": "2027-01-31",
+      "unit": "project-cradle"
+    },
+    {
+      "accumulated_usd": "4000.0000",
+      "asset_id": "FORT-TEST-RIG",
+      "cost_usd": "240000.0000",
+      "net_book_usd": "236000.0000",
+      "period": "2027-02-28",
+      "unit": "willow"
+    },
+    {
+      "accumulated_usd": "0.0000",
+      "asset_id": "FORT-ANALYTICAL",
+      "cost_usd": "180000.0000",
+      "net_book_usd": "180000.0000",
+      "period": "2027-02-28",
+      "unit": "willow"
+    },
+    {
+      "accumulated_usd": "0.0000",
+      "asset_id": "BEDFORD-MODULE",
+      "cost_usd": "650000.0000",
+      "net_book_usd": "650000.0000",
+      "period": "2027-02-28",
+      "unit": "project-cradle"
+    },
+    {
+      "accumulated_usd": "5333.3333",
+      "asset_id": "STREAM17-MODULE",
+      "cost_usd": "320000.0000",
+      "net_book_usd": "314666.6667",
+      "period": "2027-02-28",
+      "unit": "project-cradle"
+    },
+    {
+      "accumulated_usd": "8000.0000",
+      "asset_id": "FORT-TEST-RIG",
+      "cost_usd": "240000.0000",
+      "net_book_usd": "232000.0000",
+      "period": "2027-03-31",
+      "unit": "willow"
+    },
+    {
+      "accumulated_usd": "3000.0000",
+      "asset_id": "FORT-ANALYTICAL",
+      "cost_usd": "180000.0000",
+      "net_book_usd": "177000.0000",
+      "period": "2027-03-31",
+      "unit": "willow"
+    },
+    {
+      "accumulated_usd": "7738.0952",
+      "asset_id": "BEDFORD-MODULE",
+      "cost_usd": "650000.0000",
+      "net_book_usd": "642261.9048",
+      "period": "2027-03-31",
+      "unit": "project-cradle"
+    },
+    {
+      "accumulated_usd": "10666.6666",
+      "asset_id": "STREAM17-MODULE",
+      "cost_usd": "320000.0000",
+      "net_book_usd": "309333.3334",
+      "period": "2027-03-31",
+      "unit": "project-cradle"
+    },
+    {
+      "accumulated_usd": "12000.0000",
+      "asset_id": "FORT-TEST-RIG",
+      "cost_usd": "240000.0000",
+      "net_book_usd": "228000.0000",
+      "period": "2027-04-30",
+      "unit": "willow"
+    },
+    {
+      "accumulated_usd": "6000.0000",
+      "asset_id": "FORT-ANALYTICAL",
+      "cost_usd": "180000.0000",
+      "net_book_usd": "174000.0000",
+      "period": "2027-04-30",
+      "unit": "willow"
+    },
+    {
+      "accumulated_usd": "15476.1904",
+      "asset_id": "BEDFORD-MODULE",
+      "cost_usd": "650000.0000",
+      "net_book_usd": "634523.8096",
+      "period": "2027-04-30",
+      "unit": "project-cradle"
+    },
+    {
+      "accumulated_usd": "15999.9999",
+      "asset_id": "STREAM17-MODULE",
+      "cost_usd": "320000.0000",
+      "net_book_usd": "304000.0001",
+      "period": "2027-04-30",
+      "unit": "project-cradle"
+    },
+    {
+      "accumulated_usd": "16000.0000",
+      "asset_id": "FORT-TEST-RIG",
+      "cost_usd": "240000.0000",
+      "net_book_usd": "224000.0000",
+      "period": "2027-05-31",
+      "unit": "willow"
+    },
+    {
+      "accumulated_usd": "9000.0000",
+      "asset_id": "FORT-ANALYTICAL",
+      "cost_usd": "180000.0000",
+      "net_book_usd": "171000.0000",
+      "period": "2027-05-31",
+      "unit": "willow"
+    },
+    {
+      "accumulated_usd": "23214.2856",
+      "asset_id": "BEDFORD-MODULE",
+      "cost_usd": "650000.0000",
+      "net_book_usd": "626785.7144",
+      "period": "2027-05-31",
+      "unit": "project-cradle"
+    },
+    {
+      "accumulated_usd": "21333.3332",
+      "asset_id": "STREAM17-MODULE",
+      "cost_usd": "320000.0000",
+      "net_book_usd": "298666.6668",
+      "period": "2027-05-31",
+      "unit": "project-cradle"
+    },
+    {
+      "accumulated_usd": "0.0000",
+      "asset_id": "DEMOTTE-GEN2",
+      "cost_usd": "210000.0000",
+      "net_book_usd": "210000.0000",
+      "period": "2027-05-31",
+      "unit": "project-cradle"
+    },
+    {
+      "accumulated_usd": "20000.0000",
+      "asset_id": "FORT-TEST-RIG",
+      "cost_usd": "240000.0000",
+      "net_book_usd": "220000.0000",
+      "period": "2027-06-30",
+      "unit": "willow"
+    },
+    {
+      "accumulated_usd": "12000.0000",
+      "asset_id": "FORT-ANALYTICAL",
+      "cost_usd": "180000.0000",
+      "net_book_usd": "168000.0000",
+      "period": "2027-06-30",
+      "unit": "willow"
+    },
+    {
+      "accumulated_usd": "30952.3808",
+      "asset_id": "BEDFORD-MODULE",
+      "cost_usd": "650000.0000",
+      "net_book_usd": "619047.6192",
+      "period": "2027-06-30",
+      "unit": "project-cradle"
+    },
+    {
+      "accumulated_usd": "26666.6665",
+      "asset_id": "STREAM17-MODULE",
+      "cost_usd": "320000.0000",
+      "net_book_usd": "293333.3335",
+      "period": "2027-06-30",
+      "unit": "project-cradle"
+    },
+    {
+      "accumulated_usd": "3500.0000",
+      "asset_id": "DEMOTTE-GEN2",
+      "cost_usd": "210000.0000",
+      "net_book_usd": "206500.0000",
+      "period": "2027-06-30",
+      "unit": "project-cradle"
+    },
+    {
+      "accumulated_usd": "24000.0000",
+      "asset_id": "FORT-TEST-RIG",
+      "cost_usd": "240000.0000",
+      "net_book_usd": "216000.0000",
+      "period": "2027-07-31",
+      "unit": "willow"
+    },
+    {
+      "accumulated_usd": "15000.0000",
+      "asset_id": "FORT-ANALYTICAL",
+      "cost_usd": "180000.0000",
+      "net_book_usd": "165000.0000",
+      "period": "2027-07-31",
+      "unit": "willow"
+    },
+    {
+      "accumulated_usd": "38690.4760",
+      "asset_id": "BEDFORD-MODULE",
+      "cost_usd": "650000.0000",
+      "net_book_usd": "611309.5240",
+      "period": "2027-07-31",
+      "unit": "project-cradle"
+    },
+    {
+      "accumulated_usd": "31999.9998",
+      "asset_id": "STREAM17-MODULE",
+      "cost_usd": "320000.0000",
+      "net_book_usd": "288000.0002",
+      "period": "2027-07-31",
+      "unit": "project-cradle"
+    },
+    {
+      "accumulated_usd": "7000.0000",
+      "asset_id": "DEMOTTE-GEN2",
+      "cost_usd": "210000.0000",
+      "net_book_usd": "203000.0000",
+      "period": "2027-07-31",
+      "unit": "project-cradle"
+    },
+    {
+      "accumulated_usd": "28000.0000",
+      "asset_id": "FORT-TEST-RIG",
+      "cost_usd": "240000.0000",
+      "net_book_usd": "212000.0000",
+      "period": "2027-08-31",
+      "unit": "willow"
+    },
+    {
+      "accumulated_usd": "18000.0000",
+      "asset_id": "FORT-ANALYTICAL",
+      "cost_usd": "180000.0000",
+      "net_book_usd": "162000.0000",
+      "period": "2027-08-31",
+      "unit": "willow"
+    },
+    {
+      "accumulated_usd": "46428.5712",
+      "asset_id": "BEDFORD-MODULE",
+      "cost_usd": "650000.0000",
+      "net_book_usd": "603571.4288",
+      "period": "2027-08-31",
+      "unit": "project-cradle"
+    },
+    {
+      "accumulated_usd": "37333.3331",
+      "asset_id": "STREAM17-MODULE",
+      "cost_usd": "320000.0000",
+      "net_book_usd": "282666.6669",
+      "period": "2027-08-31",
+      "unit": "project-cradle"
+    },
+    {
+      "accumulated_usd": "10500.0000",
+      "asset_id": "DEMOTTE-GEN2",
+      "cost_usd": "210000.0000",
+      "net_book_usd": "199500.0000",
+      "period": "2027-08-31",
+      "unit": "project-cradle"
+    },
+    {
+      "accumulated_usd": "32000.0000",
+      "asset_id": "FORT-TEST-RIG",
+      "cost_usd": "240000.0000",
+      "net_book_usd": "208000.0000",
+      "period": "2027-09-30",
+      "unit": "willow"
+    },
+    {
+      "accumulated_usd": "21000.0000",
+      "asset_id": "FORT-ANALYTICAL",
+      "cost_usd": "180000.0000",
+      "net_book_usd": "159000.0000",
+      "period": "2027-09-30",
+      "unit": "willow"
+    },
+    {
+      "accumulated_usd": "54166.6664",
+      "asset_id": "BEDFORD-MODULE",
+      "cost_usd": "650000.0000",
+      "net_book_usd": "595833.3336",
+      "period": "2027-09-30",
+      "unit": "project-cradle"
+    },
+    {
+      "accumulated_usd": "42666.6664",
+      "asset_id": "STREAM17-MODULE",
+      "cost_usd": "320000.0000",
+      "net_book_usd": "277333.3336",
+      "period": "2027-09-30",
+      "unit": "project-cradle"
+    },
+    {
+      "accumulated_usd": "14000.0000",
+      "asset_id": "DEMOTTE-GEN2",
+      "cost_usd": "210000.0000",
+      "net_book_usd": "196000.0000",
+      "period": "2027-09-30",
+      "unit": "project-cradle"
+    },
+    {
+      "accumulated_usd": "36000.0000",
+      "asset_id": "FORT-TEST-RIG",
+      "cost_usd": "240000.0000",
+      "net_book_usd": "204000.0000",
+      "period": "2027-10-31",
+      "unit": "foundry-field"
+    },
+    {
+      "accumulated_usd": "24000.0000",
+      "asset_id": "FORT-ANALYTICAL",
+      "cost_usd": "180000.0000",
+      "net_book_usd": "156000.0000",
+      "period": "2027-10-31",
+      "unit": "willow"
+    },
+    {
+      "accumulated_usd": "61904.7616",
+      "asset_id": "BEDFORD-MODULE",
+      "cost_usd": "650000.0000",
+      "net_book_usd": "588095.2384",
+      "period": "2027-10-31",
+      "unit": "project-cradle"
+    },
+    {
+      "accumulated_usd": "47999.9997",
+      "asset_id": "STREAM17-MODULE",
+      "cost_usd": "320000.0000",
+      "net_book_usd": "272000.0003",
+      "period": "2027-10-31",
+      "unit": "project-cradle"
+    },
+    {
+      "accumulated_usd": "17500.0000",
+      "asset_id": "DEMOTTE-GEN2",
+      "cost_usd": "210000.0000",
+      "net_book_usd": "192500.0000",
+      "period": "2027-10-31",
+      "unit": "project-cradle"
+    },
+    {
+      "accumulated_usd": "40000.0000",
+      "asset_id": "FORT-TEST-RIG",
+      "cost_usd": "240000.0000",
+      "net_book_usd": "200000.0000",
+      "period": "2027-11-30",
+      "unit": "foundry-field"
+    },
+    {
+      "accumulated_usd": "27000.0000",
+      "asset_id": "FORT-ANALYTICAL",
+      "cost_usd": "180000.0000",
+      "net_book_usd": "153000.0000",
+      "period": "2027-11-30",
+      "unit": "willow"
+    },
+    {
+      "accumulated_usd": "69642.8568",
+      "asset_id": "BEDFORD-MODULE",
+      "cost_usd": "650000.0000",
+      "net_book_usd": "580357.1432",
+      "period": "2027-11-30",
+      "unit": "project-cradle"
+    },
+    {
+      "accumulated_usd": "53333.3330",
+      "asset_id": "STREAM17-MODULE",
+      "cost_usd": "320000.0000",
+      "net_book_usd": "266666.6670",
+      "period": "2027-11-30",
+      "unit": "project-cradle"
+    },
+    {
+      "accumulated_usd": "21000.0000",
+      "asset_id": "DEMOTTE-GEN2",
+      "cost_usd": "210000.0000",
+      "net_book_usd": "189000.0000",
+      "period": "2027-11-30",
+      "unit": "project-cradle"
+    },
+    {
+      "accumulated_usd": "44000.0000",
+      "asset_id": "FORT-TEST-RIG",
+      "cost_usd": "240000.0000",
+      "net_book_usd": "196000.0000",
+      "period": "2027-12-31",
+      "unit": "foundry-field"
+    },
+    {
+      "accumulated_usd": "30000.0000",
+      "asset_id": "FORT-ANALYTICAL",
+      "cost_usd": "180000.0000",
+      "net_book_usd": "150000.0000",
+      "period": "2027-12-31",
+      "unit": "willow"
+    },
+    {
+      "accumulated_usd": "77380.9520",
+      "asset_id": "BEDFORD-MODULE",
+      "cost_usd": "650000.0000",
+      "net_book_usd": "572619.0480",
+      "period": "2027-12-31",
+      "unit": "project-cradle"
+    },
+    {
+      "accumulated_usd": "58666.6663",
+      "asset_id": "STREAM17-MODULE",
+      "cost_usd": "320000.0000",
+      "net_book_usd": "261333.3337",
+      "period": "2027-12-31",
+      "unit": "project-cradle"
+    },
+    {
+      "accumulated_usd": "24500.0000",
+      "asset_id": "DEMOTTE-GEN2",
+      "cost_usd": "210000.0000",
+      "net_book_usd": "185500.0000",
+      "period": "2027-12-31",
+      "unit": "project-cradle"
+    }
+  ],
+  "scope": {
+    "period_end": "2027-12",
+    "period_start": "2027-01",
+    "release": "business-operations-v1.0.0",
+    "release_sha256": "b8e81572d829fec7209d1d18eb15bac21e52b37714211aee005b5f1a68ab5817",
+    "scenario": "base",
+    "source_revision": "57cfa1b1c483ccf1f8b15d82c4cbdadbeef8063e"
+  },
+  "source_table": "asset_rollforward",
+  "title": "Workforce, inventory, fixed assets and debt"
+}

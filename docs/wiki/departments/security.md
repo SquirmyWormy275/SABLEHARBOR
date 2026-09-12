@@ -29,3 +29,5 @@ The shared chart retains its original scope; it is not a new reporting chart for
 “Enterprise Security” is the current chart’s capability label; it does not establish a newly named department. System monitoring is not generalized employee surveillance.
 
 [Department and institution directory](README.md) · [Wiki home](../Home.md)
+
+[Continuity and crisis responsibilities across the existing institutions](../subjects/Continuity.md).

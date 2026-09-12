@@ -56,3 +56,5 @@ Use the [complete facility artifact index](../../../geospatial/maps/facilities/A
 ## Limits to keep visible
 
 No Red Wash rail spur is authorized. Ordinary inbound logistics availability does not qualify uranium custody. Conditional funding is not committed cash, and modelled facilities are not as-built drawings.
+
+[Abandoned acquisition files](../subjects/Historical-Opportunities.md) · [Northstar seller boundary](../subjects/External-Counterparties.md)

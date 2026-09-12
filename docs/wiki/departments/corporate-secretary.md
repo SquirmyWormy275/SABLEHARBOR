@@ -29,3 +29,5 @@ The shared chart retains its original scope; it is not a new reporting chart for
 This is a constituent function of OGC. Continuity/crisis coordination is a standing duty, not a separate resilience organization.
 
 [Department and institution directory](README.md) · [Wiki home](../Home.md)
+
+[Continuity and crisis responsibilities across the existing institutions](../subjects/Continuity.md).

@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "status": "MISSING_FIELD_RECONCILIATION_NO_NEW_FACTS",
+  "billing_proposal_reference": {
+    "proposal_id": "SH-FIN-BILL-PROP-001",
+    "version": "0.1.0",
+    "status": "UNACCEPTED_REFERENCE_ONLY",
+    "pull_request": "https://github.com/SquirmyWormy275/SABLEHARBOR/pull/138",
+    "commit": "e4995ba",
+    "path": "docs/finance/evidence/billing-proposal/proposal.json",
+    "sha256": "23d8d6080ad296468d6b649eda55593d49c33cde0e6b038343ce11e4973e23f8",
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/e4995ba/docs/finance/evidence/billing-proposal/proposal.json",
+    "acceptance": {
+      "state": "NOT_ACCEPTED",
+      "required": "Owner review naming proposal version and SHA-256, with accepted/rejected field IDs; dated repository acceptance record through reviewed PR. Legal/tax unresolved treatments remain explicit unless separately resolved.",
+      "record": null,
+      "source_overwrite_permitted": false,
+      "amount_change_permitted": false,
+      "visual_design_approval_implied": false
+    }
+  },
+  "fields": [
+    {
+      "id": "LEGAL-FIELD-001",
+      "field": "invoice.customer.legal_name",
+      "sourced_value": null,
+      "proposed_value": null,
+      "recommended_disposition": "No new value proposed; retain native customer ID and the unaccepted BILL-DEC-001 route.",
+      "source": "docs/finance/evidence/SH-FIN-HUMAN-001/source.json",
+      "decision_route": "BILL-DEC-001",
+      "acceptance_state": "NO_NEW_VALUE_ADOPTED",
+      "next_action": "Exact owner adoption of a separately specified fictional legal party, if wanted."
+    },
+    {
+      "id": "LEGAL-FIELD-002",
+      "field": "invoice.issuer.legal_name",
+      "sourced_value": "SHI entity register maps to Sable Harbor, LLC; the invoice source separately carries SHI accounting linkage.",
+      "proposed_value": null,
+      "recommended_disposition": "Do not claim a new entity or reopen its established legal name. Keep proposal BILL-DEC-002 about instrument-level issuer presentation/assignment, not parent identity.",
+      "source": "industrial/source/entities.json",
+      "decision_route": "BILL-DEC-002",
+      "acceptance_state": "NO_NEW_VALUE_ADOPTED",
+      "next_action": "Resolve exact invoice issuer-field adoption without changing the legal entity register."
+    },
+    {
+      "id": "LEGAL-FIELD-003",
+      "field": "invoice.tax_treatment",
+      "sourced_value": null,
+      "proposed_value": null,
+      "recommended_disposition": "Retain explicit absence; no zero/exemption/tax-ID or amount change.",
+      "source": "docs/finance/evidence/SH-FIN-HUMAN-001/source.json",
+      "decision_route": "BILL-DEC-003",
+      "acceptance_state": "NO_NEW_VALUE_ADOPTED",
+      "next_action": "Any tax-bearing scenario needs a separate source-bound assumption and financial impact review."
+    },
+    {
+      "id": "LEGAL-FIELD-004",
+      "field": "runtime.provider_legal_name",
+      "sourced_value": null,
+      "proposed_value": null,
+      "recommended_disposition": "Keep Switch/IDACORE as selected brands; legal contracting entities remain null.",
+      "source": "enterprise/services/source/runtime_sites_2026-09-11.json",
+      "decision_route": "LEGAL-GAP-COLO",
+      "acceptance_state": "NO_NEW_VALUE_ADOPTED",
+      "next_action": "Procurement/Legal verify exact party before negotiated order execution."
+    },
+    {
+      "id": "LEGAL-FIELD-005",
+      "field": "aru.form8023.submission_confirmation",
+      "sourced_value": null,
+      "proposed_value": null,
+      "recommended_disposition": "Retain filing-ready status and conditional model; do not fill a filing number or acceptance date.",
+      "source": "industrial/transaction/05_ARU_CLOSING_AND_TAX_DELIVERY.md",
+      "decision_route": "LEGAL-GAP-TAX-FILING",
+      "acceptance_state": "NO_NEW_VALUE_ADOPTED",
+      "next_action": "Source a submission/status record; no invented government artifact."
+    },
+    {
+      "id": "LEGAL-FIELD-006",
+      "field": "cradle.host_participation_percent",
+      "sourced_value": null,
+      "proposed_value": null,
+      "recommended_disposition": "No permanent canon percentage proposed. Use chosen quantitative model assumptions in their own scenario only.",
+      "source": "docs/canon/CRADLE_CLOSEOUT_2026-09-06.md",
+      "decision_route": "LEGAL-GAP-HOST-RIGHTS",
+      "acceptance_state": "NO_NEW_VALUE_ADOPTED",
+      "next_action": "Obtain scoped contract terms if an executed host agreement exercise is required."
+    },
+    {
+      "id": "LEGAL-FIELD-007",
+      "field": "campus.lease_execution_date",
+      "sourced_value": null,
+      "proposed_value": null,
+      "recommended_disposition": "Retain per-site tenure gap, rather than assign the plan-render date as occupancy or lease date.",
+      "source": "geospatial/facilities/README.md",
+      "decision_route": "LEGAL-GAP-TENURE",
+      "acceptance_state": "NO_NEW_VALUE_ADOPTED",
+      "next_action": "Accepted site-specific tenure source with effective date and precision."
+    },
+    {
+      "id": "LEGAL-FIELD-008",
+      "field": "advisory.carry.individual_grant",
+      "sourced_value": null,
+      "proposed_value": null,
+      "recommended_disposition": "No recipient or grant proposed. Current professional plan direction is not an allocation.",
+      "source": "docs/advisory/CARRY_PLAN_STANDARD.md",
+      "decision_route": "LEGAL-GAP-CARRY",
+      "acceptance_state": "NO_NEW_VALUE_ADOPTED",
+      "next_action": "Completed former-J2 eligibility, individual grant authority and counsel instrument; no serving-person preview."
+    },
+    {
+      "id": "LEGAL-FIELD-009",
+      "field": "northern_nevada.land.settlement",
+      "sourced_value": "Accepted fictional $3M acquisition with unresolved settlement clearing.",
+      "proposed_value": null,
+      "recommended_disposition": "Preserve the acquisition. Do not invent cash, lender or payable settlement to fill the posting counterpart.",
+      "source": "docs/finance/RUNTIME_INFRASTRUCTURE_FINANCE_RECONCILIATION_2026-09-11.md",
+      "decision_route": "LEGAL-GAP-LAND",
+      "acceptance_state": "NO_NEW_VALUE_ADOPTED",
+      "next_action": "Source settlement/funding evidence independently of planning ownership."
+    }
+  ]
+}

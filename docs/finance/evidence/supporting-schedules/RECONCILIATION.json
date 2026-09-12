@@ -1,0 +1,29 @@
+{
+  "checks": [
+    {
+      "check": "Core asset cost less accumulated depreciation",
+      "maximum_absolute_difference": "0.0000",
+      "status": "PASS",
+      "tested_rows": 54
+    },
+    {
+      "check": "Management allocation reconciliation",
+      "maximum_absolute_difference": "0.0000",
+      "status": "PASS",
+      "tested_rows": 12
+    },
+    {
+      "check": "Industrial term principal rollforward",
+      "maximum_absolute_difference": "0",
+      "status": "PASS",
+      "tested_rows": 12
+    },
+    {
+      "check": "Industrial replacement debt rollforward",
+      "maximum_absolute_difference": "0",
+      "status": "PASS",
+      "tested_rows": 12
+    }
+  ],
+  "status": "PASS"
+}

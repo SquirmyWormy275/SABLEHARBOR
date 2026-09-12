@@ -6,6 +6,12 @@ For a ready-to-read example, open the [accepted Foundry Field evidence memo and 
 
 All company financial records in these exercises are synthetic. The operating release retains a 2026 calibration and provides conditional 2027–2031 scenarios. It does not contain observed company results, audited statements, actual bank confirmations or executed customer agreements. Read the [operating model's boundaries](../../enterprise/operations/README.md) before interpreting results. Use one release, scenario, reporting unit and period consistently; do not combine successive versions as additional transactions.
 
+## Scoped working papers
+
+The [accounting evidence directory](evidence/coverage/README.md) now provides complete selected base-2027 populations for customer activity, Treasury/payables, close and supporting schedules, plus a separate 2026 acquisition/tax bridge. Open its Markdown guides, CSV schedules and SQLite extracts directly. Each package states its period, release, filters, native IDs and reconciliation results. Other scenarios and future years remain available through the original release. New formatted PDF/workbook designs require exact-file review.
+
+For source terms and approvals, use the [legal instrument directory](../reader/transactions/README.md). It connects 56 source documents and 13 reading records to existing publications and missing-record dispositions.
+
 ## Get the evidence
 
 1. Open the [business operations v1.0.0 release](https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/business-operations-v1.0.0), download `sable-harbor-business-operations-v1.0.0.zip`, and extract it into a new folder.
@@ -94,4 +100,4 @@ Reconcile one contract's physical quantities and pricing; explain payroll versus
 | Daily liquidity, bank confirmation and complete employee payment testing | Unsupported at that level | Current Treasury evidence is monthly and attributed; independent bank/individual payment evidence is absent |
 | Complete M&A diligence or valuation | Partial industrial transaction case | The data-room index is a readiness architecture, not a complete room; full supporting instruments and broader valuation work are not asserted |
 
-A source-bound Foundry Field evidence memo and reconciliation workbook are available for review in [draft PR #134](https://github.com/SquirmyWormy275/SABLEHARBOR/pull/134). This is a separately reviewed derivative of one invoice population, not a customer-facing invoice original or an accepted replacement release. The [finance evidence completion handoff](../handoffs/FINANCE_HUMAN_EVIDENCE_COMPLETION.md) defines the bounded successor work. Financial platform history and its [known limitations](KNOWN_LIMITATIONS.md) remain separately interpretable; later operating depth does not retroactively complete every earlier profile.
+The source-bound Foundry Field evidence memo and reconciliation workbook were accepted as exact files and merged in [PR #134](https://github.com/SquirmyWormy275/SABLEHARBOR/pull/134). Open the [accepted packet](evidence/SH-FIN-HUMAN-001/README.md). It remains a derivative of one invoice population, not a customer-facing invoice original or a replacement release. The [finance evidence completion handoff](../handoffs/FINANCE_HUMAN_EVIDENCE_COMPLETION.md) defines the bounded successor work. Financial platform history and its [known limitations](KNOWN_LIMITATIONS.md) remain separately interpretable; later operating depth does not retroactively complete every earlier profile.

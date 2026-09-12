@@ -52,3 +52,5 @@ Use the [complete facility artifact index](../../../geospatial/maps/facilities/A
 ## Limits to keep visible
 
 The 24-person working calibration is a model population, not an established employee census. Parcel tenure, actual occupancy dates and measured floor areas remain unresolved. Plan drawings do not prove construction.
+
+[Klein, Emberline and the Willow transition](../subjects/Research-History.md) · [Failed research projects](../subjects/Project-History.md)

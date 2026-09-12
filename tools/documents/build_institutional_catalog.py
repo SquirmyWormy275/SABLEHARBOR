@@ -153,7 +153,11 @@ def main() -> None:
       source_id TEXT NOT NULL REFERENCES institutional_object(id),
       relation_type TEXT NOT NULL, target_reference TEXT NOT NULL,
       PRIMARY KEY(source_id, relation_type, target_reference));
-    CREATE VIRTUAL TABLE institutional_search USING fts5(id UNINDEXED, title, owner, category, body);
+    CREATE VIEW institutional_search_content AS
+      SELECT rowid, id, title, owner, category, search_text AS body FROM institutional_object;
+    CREATE VIRTUAL TABLE institutional_search USING fts5(
+      id UNINDEXED, title, owner, category, body,
+      content='institutional_search_content', content_rowid='rowid');
     """)
     for obj in objects:
         db.execute("INSERT INTO institutional_object VALUES (?,?,?,?,?,?,?,?,?,?,?)", (
@@ -180,6 +184,12 @@ def main() -> None:
     })
     coverage = reader.populate(ROOT, db, manifest["artifacts"], file_paths=file_paths)
     print(f"Reader library: {coverage}")
+    package_spec = importlib.util.spec_from_file_location(
+        "institutional_evidence_packages", Path(__file__).with_name("evidence_packages.py")
+    )
+    packages = importlib.util.module_from_spec(package_spec)
+    package_spec.loader.exec_module(packages)
+    print(f"Evidence packages: {packages.populate(ROOT, db)}")
     # Compact generated search indexes without dropping any records or search content.
     for table in ("institutional_search", "reader_search"):
         db.execute(f"INSERT INTO {table}({table}) VALUES('optimize')")

@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "package_id": "SH-LEGAL-COMMERCIAL-001",
+  "title": "Commercial contracts and service obligations",
+  "status": "SOURCE_BOUND_READER_DERIVATIVES",
+  "scope": {
+    "source_revision": "8898d2d0310a60bdf0e4753036790c6eda1388cd",
+    "review_date": "2026-09-12"
+  },
+  "sources": [
+    {
+      "path": "docs/advisory/ATLAS_MERIDIAN_COMMERCIAL_PRODUCT_STANDARD.md",
+      "sha256": "5c852557be8c42cec41f50be2d01b850027a61ad613c98672f075e15453769d4"
+    },
+    {
+      "path": "docs/advisory/COMMERCIAL_CONTRACTING_AND_PRICING_STANDARD.md",
+      "sha256": "d205a6b5d1a254ed30fc35c395f0f3ea3372a449d0537fea7c7bb18583cb8275"
+    },
+    {
+      "path": "docs/advisory/IP_DATA_AND_METHOD_TRANSFER_STANDARD.md",
+      "sha256": "e6f58bec6caeaa1eb693962bd4a021d40b4bec5319c49f0e4e59c3212f04ad91"
+    },
+    {
+      "path": "docs/advisory/LEGAL_AND_CONTRACTING_TERM_SHEET.md",
+      "sha256": "b0e842b631713579f2890efb846de642b100a576282ba88dea9880fb671428f7"
+    },
+    {
+      "path": "docs/canon/RUNTIME_HOSTING_AND_DATA_CENTER_DECISIONS_2026-09-11.md",
+      "sha256": "fd309a9bdf596ea96498b7207b60ea3bea70a35d8c418371aa96c06d928bb17b"
+    },
+    {
+      "path": "docs/reader/transactions/dossier_source.json",
+      "sha256": "b91505c08404cc27d66067d90b6fe5005b27441aff083663fdc74ed2f5b8201c"
+    },
+    {
+      "path": "enterprise/operations/docs/commercial.md",
+      "sha256": "ef896e84c66e03eff7adecb3e3f6b7c082b28e618f4183ec37fc7568f2b45416"
+    },
+    {
+      "path": "enterprise/runtime/docs/CONTRACT_DOSSIER.md",
+      "sha256": "7cd01050b17f9451ff5bd341573289440c74fb190c01253bdc8197a6599d2ad1"
+    },
+    {
+      "path": "enterprise/services/source/runtime_sites_2026-09-11.json",
+      "sha256": "fa216f629762503865fd9f1a3207e87691cd484cec9885bf25ce045b4525519c"
+    },
+    {
+      "path": "industrial/source/finance.json",
+      "sha256": "0d4461abfcdb138da36db503ff0cfea7c47ea7fd7109494126514225fd43e38c"
+    },
+    {
+      "path": "industrial/source/operations.json",
+      "sha256": "e7488b55c1c963d102db66e7a7b6f1373a3d68a9f94b8f99b164092245713a3b"
+    },
+    {
+      "path": "industrial/transaction/08_INTERCOMPANY_LOGISTICS_AGREEMENT.md",
+      "sha256": "23153dc86a3e9ea9fd501bce6bdf3c8478dbdf3ab79fa5e8abc84ca8bbb771fc"
+    }
+  ],
+  "markdown": "docs/legal/evidence/commercial/README.md",
+  "reconciliation": "docs/reader/transactions/RECONCILIATION.md",
+  "visual_manifest": null,
+  "database": "docs/reader/transactions/legal-records.sqlite3",
+  "dossiers": [
+    {
+      "id": "SH-LEGAL-READ-IC-001",
+      "title": "Taylor–Red Wash service terms",
+      "status": "SYNTHETIC_RECONSTRUCTED; uranium custody OPEN_GATED",
+      "markdown": "docs/legal/evidence/commercial/SH-LEGAL-READ-IC-001.md",
+      "markdown_sha256": "0c01857e258a272a48460b199f8ab24ce2be1d67ef5a49efbaac92bc4efc0db9",
+      "native_keys": [
+        "SH-IND-IC-001",
+        "ARU",
+        "BST",
+        "RWH",
+        "intercompany_invoices_2026",
+        "intercompany_eliminations"
+      ],
+      "pdf_disposition": "NEW_DESIGN_AWAITING_EXACT_REVIEW"
+    },
+    {
+      "id": "SH-LEGAL-READ-ADV-001",
+      "title": "Advisory engagement and outcome terms",
+      "status": "LOCKED DIRECTION; contract architecture, not executed client agreement",
+      "markdown": "docs/legal/evidence/commercial/SH-LEGAL-READ-ADV-001.md",
+      "markdown_sha256": "1ebd5d814ac051e05bad0d76e69f4e042420a05edb53866f338847b349277c35",
+      "native_keys": [
+        "SH-ADV-014",
+        "SH-ADV-009",
+        "SH-ADV-007",
+        "SHI",
+        "advisory"
+      ],
+      "pdf_disposition": "NEW_DESIGN_AWAITING_EXACT_REVIEW"
+    },
+    {
+      "id": "SH-LEGAL-READ-ATL-001",
+      "title": "Atlas licensing and amendment evidence",
+      "status": "LOCKED DIRECTION plus conditional commercial scenarios",
+      "markdown": "docs/legal/evidence/commercial/SH-LEGAL-READ-ATL-001.md",
+      "markdown_sha256": "606865e20d8d8e2e6a4dceb12ad6b26e8bf6a8d54e9c8e0a11a69c64c37e2a91",
+      "native_keys": [
+        "SH-ATL-017",
+        "atlas-meridian",
+        "contract_versions",
+        "commercial_changes",
+        "commercial_deferred_rollforward"
+      ],
+      "pdf_disposition": "NEW_DESIGN_AWAITING_EXACT_REVIEW"
+    },
+    {
+      "id": "SH-LEGAL-READ-COLO-001",
+      "title": "Colocation orders and SLA review",
+      "status": "CUSTOMER-PROPOSED DRAFT; unsigned",
+      "markdown": "docs/legal/evidence/commercial/SH-LEGAL-READ-COLO-001.md",
+      "markdown_sha256": "ff9113d646f1396e8045736a3bd4e916fc84c2936c87174519065c4224b0b412",
+      "native_keys": [
+        "SH-RT-CONTRACT-001",
+        "RT-MSA-001",
+        "RT-SO-RENO",
+        "RT-SO-BOISE",
+        "RUNTIME-RENO-COLO",
+        "RUNTIME-BOISE-DR"
+      ],
+      "pdf_disposition": "NEW_DESIGN_AWAITING_EXACT_REVIEW"
+    }
+  ]
+}
