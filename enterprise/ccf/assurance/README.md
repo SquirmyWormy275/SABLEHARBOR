@@ -131,3 +131,16 @@ uv run python -m enterprise.ccf.assurance.iso verify \
 Use either ISO target alone or add `--target C5`. Omitting targets selects both ISO frameworks. The SOC 2/HIPAA baseline always remains visible. The package includes an explorer, original implementation plan, delta-action records and unresolved Statement of Applicability rows. The inventory distinguishes 30 ISMS clauses/93 reference controls and 32 AIMS clauses/38 reference controls; normative Annex B guidance, document context and the climate amendment remain explicit review work. Additional native candidates do not mean additional controls are conclusively necessary or sufficient.
 
 Originals and full OCR text remain outside Git and generated exports. The 42001 scan's watermark interferes with OCR; Annex A identifiers were visually checked, but exact wording and complete semantics remain unreviewed. All source/mapping/applicability reviews and actual operating evidence remain absent. Atlas is the read-only reference guide; these adapters and generated designs belong to SABLEHARBOR.
+
+### Control library and coverage review preparation
+
+The completion adapter combines the 64 baseline procedures with 22 authored extension procedures and 11 proposed technical measures. It emits one review workpaper per selected inventoried attribute, retaining source, requirement, mapping and design digests. Routing counts are not accepted coverage; missing routes include assessment/context work as well as control design questions. Source semantics, actual applicability and independent acceptance remain pending.
+
+```sh
+uv run python -m enterprise.ccf.assurance.completion build \
+  --source-root /path/to/content-addressed-originals --output /new/review-packet
+uv run python -m enterprise.ccf.assurance.completion verify \
+  --source-root /path/to/content-addressed-originals --output /existing/review-packet
+```
+
+This preparation packet selects both ISO frameworks and C5 over the SOC 2/HIPAA reference baseline to expose the full current design workload. Use the ISO adapter for selectable individual-framework deltas. Neither adapter changes native controls or records approvals. The completion packet includes proposed tests, required operating inputs, additional measures and a consolidated decision worksheet. Baseline tests provide a procedure-specific evidence walkthrough; exact source-level acceptance criteria still need substantive review. Verification checks original source hashes and regenerates all members, detecting even resealed edits. Original documents and generated packets remain local; Atlas is read-only.

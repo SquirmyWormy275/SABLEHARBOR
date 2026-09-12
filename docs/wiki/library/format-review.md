@@ -6,8 +6,8 @@ Generated reconciliation queue, not an assertion that every unpaired record lack
 
 | State | Records |
 |---|---:|
-| COUNTERPART_REVIEW_REQUIRED | 440 |
-| READER_OR_MAINTENANCE_PAGE | 96 |
+| COUNTERPART_REVIEW_REQUIRED | 442 |
+| READER_OR_MAINTENANCE_PAGE | 97 |
 | VERIFIED_DOCUMENT_PAIR | 131 |
 
 ## Records requiring counterpart reconciliation
@@ -209,6 +209,7 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Initial CCF assurance scope and source proposal](../../internal/development/CCF_ASSURANCE_SCOPE_PROPOSAL_2026-09-11.md) — Corporate document-format reconciliation
 - [CCF baseline design and workflow delivery](../../internal/development/CCF_BASELINE_DESIGN_DELIVERY_2026-09-11.md) — Corporate document-format reconciliation
 - [CCF preparation compared with Compliance Atlas](../../internal/development/CCF_COMPLIANCE_ATLAS_COMPARISON_2026-09-11.md) — Corporate document-format reconciliation
+- [CCF control library and coverage review preparation](../../internal/development/CCF_CONTROL_LIBRARY_REVIEW_DELIVERY_2026-09-12.md) — Corporate document-format reconciliation
 - [ISO extension planning delivery](../../internal/development/CCF_ISO_EXTENSION_DELIVERY_2026-09-11.md) — Corporate document-format reconciliation
 - [CCF prebuild repository audit — September 11, 2026](../../internal/development/CCF_PREBUILD_REPOSITORY_AUDIT_2026-09-11.md) — Corporate document-format reconciliation
 - [CCF preparation delivery — September 11, 2026](../../internal/development/CCF_PREPARATION_DELIVERY_2026-09-11.md) — Corporate document-format reconciliation
@@ -318,6 +319,7 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Industrial case releases](../../releases/INDUSTRIAL_CASE_RELEASES.md) — Corporate document-format reconciliation
 - [Runtime estate releases](../../releases/RUNTIME_ESTATE_RELEASES.md) — Corporate document-format reconciliation
 - [CCF preparation procedures](../../../enterprise/ccf/PROCEDURES.md) — Corporate document-format reconciliation
+- [Operating decisions needed to complete the CCF](../../../enterprise/ccf/assurance/completion_data/DECISIONS.md) — Corporate document-format reconciliation
 - [Reference service description workpaper](../../../enterprise/ccf/assurance/design_data/SERVICE_DESCRIPTION.md) — Corporate document-format reconciliation
 - [ISO extension implementation plan](../../../enterprise/ccf/assurance/iso_data/IMPLEMENTATION_PLAN.md) — Corporate document-format reconciliation
 - [Tier 1 Advisory policy integration](../../../enterprise/operations/docs/advisory-policy.md) — SH-FIN-HUMAN-001
