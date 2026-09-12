@@ -1,0 +1,56 @@
+{
+  "site_id": "SH-SITE-0001",
+  "revision": "V03",
+  "status": "DRAFT_FOR_OWNER_VISUAL_REVIEW",
+  "geometry_source": "geospatial/facilities/source/campus.json",
+  "reference": "docs/facilities/references/sacramento-hq/r01-approved/01_Sacramento_Campus_Master_Draft.png",
+  "reference_sha256": "23729f7e2b427e58820361363e4a47fbc6bbd3ce9774ef67932ecab7a50bfa47",
+  "title": "Campus visitor guide",
+  "subtitle": "Sacramento headquarters  /  Visitor map",
+  "building_labels": {
+    "A": {
+      "name": "CORPORATE",
+      "map_note": "Reception",
+      "description": "Corporate and client visits",
+      "color": "blue",
+      "entry_key": "public_arrival_m"
+    },
+    "B": {
+      "name": "J2",
+      "map_note": "Separate reception",
+      "description": "J2 appointments; separate reception",
+      "color": "blue",
+      "entry_key": "j2_controlled_entry_m"
+    },
+    "C": {
+      "name": "EDUCATION",
+      "map_note": "Education reception",
+      "description": "Courses, convening and campus dining",
+      "color": "sand",
+      "entry_key": "education_entry_m"
+    },
+    "D": {
+      "name": "RESIDENCE",
+      "map_note": "Residential entry",
+      "description": "Residential rooms for cohorts and visitors",
+      "color": "sage",
+      "entry_key": "residential_arrival_m"
+    }
+  },
+  "highlight_route": "public_arrival_m",
+  "arrival_note": "Corporate reception is in Building A. Follow the marked path from the south arrival.",
+  "parking_note": "Visitor parking and step-free access remain to be confirmed.",
+  "scope_note": "Fictional campus study. No actual parcel or operating visitor access is established.",
+  "intentional_changes_from_r01": [
+    "Same campus footprints, tree centers, courts, paths, parking and entrances.",
+    "Warm ivory building fill, limestone-toned paths and deeper olive landscape palette are graphic treatments, not specifications.",
+    "Tree symbols have deterministic varied canopies; shadows are diagrammatic depth cues, not a solar study.",
+    "Title-case labels and a lighter headline soften the typographic hierarchy.",
+    "V01 and V02 sources, review pages and artifacts remain unchanged."
+  ],
+  "review_feedback": {
+    "source": "Owner feedback in Codex",
+    "quote": "Better. But still feels sterile",
+    "disposition": "Retain V02 clarity; add warmth through landscape symbols, depth and warmer surface tones. Preserve both earlier drafts."
+  }
+}
