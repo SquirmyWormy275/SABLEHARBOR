@@ -1,0 +1,78 @@
+name: Wiki publication
+on:
+  pull_request:
+    paths:
+      - docs/wiki/**
+      - tools/wiki/**
+      - tests/wiki/**
+      - .github/workflows/publish-wiki.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: wiki-publication-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  validate-wiki-export:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r tools/wiki/requirements.txt
+      - run: python -m unittest discover -s tests/wiki
+      - name: Export and validate local link targets
+        run: python tools/wiki/export.py --revision "$(git rev-parse HEAD)" --output "$RUNNER_TEMP/wiki-export"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: wiki-export
+          path: ${{ runner.temp }}/wiki-export
+          if-no-files-found: error
+  publish:
+    if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main'
+    needs: validate-wiki-export
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r tools/wiki/requirements.txt
+      - name: Authenticate and clone initialized Wiki
+        env:
+          GH_TOKEN: ${{ secrets.WIKI_TOKEN }}
+        run: |
+          if [ -z "$GH_TOKEN" ]; then
+            echo '::error::Set WIKI_TOKEN to a credential with write access to this Wiki, then rerun.'
+            exit 1
+          fi
+          gh auth setup-git
+          git clone "https://github.com/${GITHUB_REPOSITORY}.wiki.git" "$RUNNER_TEMP/wiki"
+      - name: Publish accepted main snapshot and verify remote bytes
+        env:
+          GH_TOKEN: ${{ secrets.WIKI_TOKEN }}
+        run: |
+          python tools/wiki/export.py --revision "$(git rev-parse HEAD)" --output "$RUNNER_TEMP/wiki-export" --sync-to "$RUNNER_TEMP/wiki"
+          cd "$RUNNER_TEMP/wiki"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add --all
+          if ! git diff --cached --quiet; then
+            git commit -m "Publish accepted Sable Harbor snapshot ${GITHUB_SHA}"
+            git push origin HEAD
+          fi
+          git clone "https://github.com/${GITHUB_REPOSITORY}.wiki.git" "$RUNNER_TEMP/wiki-verified"
+          python - <<'PY'
+          import hashlib, json, os
+          from pathlib import Path
+          root = Path(os.environ['RUNNER_TEMP'])
+          expected = json.loads((root / 'wiki-export/sable-harbor-wiki-manifest.json').read_text())
+          actual = json.loads((root / 'wiki-verified/sable-harbor-wiki-manifest.json').read_text())
+          assert expected == actual, 'Published manifest differs'
+          for name, digest in expected['files'].items():
+              assert hashlib.sha256((root / 'wiki-verified' / name).read_bytes()).hexdigest() == digest, name
+          print(f"Verified {len(expected['files'])} published page hashes")
+          PY
