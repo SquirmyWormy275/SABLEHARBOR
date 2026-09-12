@@ -151,6 +151,32 @@ def evidence_records(root: Path) -> list[tuple]:
     return records
 
 
+def counterpart_records(root: Path) -> dict:
+    """Apply a dated audit only to unchanged sources and verified artifact bytes."""
+    path = root / "docs/reader/reconciliation/records.json"
+    if not path.is_file():
+        return {}
+    result = {}
+    for record in json.loads(path.read_text())["records"]:
+        source = record["source"]
+        target = (root / source).resolve()
+        if not target.is_relative_to(root.resolve()) or not target.is_file():
+            raise ValueError("Missing/unsafe counterpart source: " + source)
+        if source in result:
+            raise ValueError("Duplicate counterpart source: " + source)
+        if hashlib.sha256(target.read_bytes()).hexdigest() != record["source_sha256"]:
+            continue  # Current edits require a new review, not the historical disposition.
+        for evidence in record["verified_evidence"]:
+            for artifact in evidence["artifacts"]:
+                target = (root / artifact["path"]).resolve()
+                if not target.is_relative_to(root.resolve()) or not target.is_file():
+                    raise ValueError("Missing/unsafe counterpart artifact: " + artifact["path"])
+                if hashlib.sha256(target.read_bytes()).hexdigest() != artifact["sha256"]:
+                    raise ValueError("Stale counterpart artifact: " + artifact["path"])
+        result[source] = record
+    return result
+
+
 def populate(
     root: Path, db: sqlite3.Connection, artifacts: list[dict],
     *, file_paths: list[str] | None = None,
@@ -167,6 +193,9 @@ def populate(
         source_path TEXT PRIMARY KEY REFERENCES reader_file(path),
         review_state TEXT NOT NULL, rationale TEXT NOT NULL,
         review_queue TEXT NOT NULL);
+      CREATE TABLE reader_counterpart_audit (
+        source_path TEXT PRIMARY KEY REFERENCES reader_file(path),
+        disposition TEXT NOT NULL, evidence_json TEXT NOT NULL);
       CREATE TABLE reader_evidence_link (
         document_id TEXT PRIMARY KEY, status TEXT NOT NULL, invoice_id TEXT NOT NULL,
         scenario TEXT NOT NULL, reporting_unit TEXT NOT NULL, release_tag TEXT NOT NULL,
@@ -216,6 +245,10 @@ def populate(
         )
         paired[source] = publication
     review_rows = []
+    audited = counterpart_records(root)
+    for path, record in audited.items():
+        db.execute("INSERT INTO reader_counterpart_audit VALUES (?,?,?)",
+                   (path, record["disposition"], json.dumps(record, sort_keys=True)))
     for path, heading, extension, collection, _, _ in rows:
         if extension != "md":
             continue
@@ -242,6 +275,9 @@ def populate(
                 if collection == "finance"
                 else "Corporate document-format reconciliation"
             )
+        if path not in paired and path in audited:
+            record = audited[path]
+            state, reason, queue = record["disposition"], record["rationale"], record["next_action"]
         db.execute(
             "INSERT INTO reader_format_review VALUES (?,?,?,?)", (path, state, reason, queue)
         )
@@ -309,6 +345,14 @@ def populate(
             label = heading.replace("[", "\\[").replace("]", "\\]")
             review_lines.append(f"- [{label}]({link(path, review_page)}) — {queue}")
     review_lines.append("")
+    if audited:
+        review_lines.extend([
+            "## Dated counterpart dispositions", "",
+            "The [complete dated audit](../../reader/reconciliation/README.md) records verified "
+            "artifacts, maintenance exemptions and unresolved document counterparts. Its dispositions "
+            "are applied only while each source hash matches; changed sources return to review. "
+            "The database table `reader_counterpart_audit` retains the exact evidence for each applied row.", "",
+        ])
     (root / review_page).write_text("\n".join(review_lines))
     lines = [
         "# Document library",
@@ -339,6 +383,8 @@ def populate(
             "`reader_file` within the [institutional database](../internal/institutional_catalog.sqlite3). "
             "`reader_publication_pair` records verified source/PDF links; `reader_search` supports text search. "
             "`reader_evidence_link` separately connects validated evidence packets to their native accounting IDs and MD/PDF/XLSX files without declaring publication approval. These are discovery tables. Native accounting and operating databases retain their transaction records.",
+            "`reader_evidence_package` preserves accounting/legal package registers and review states; "
+            "`reader_counterpart_audit` records applicable dated counterpart evidence.",
             "",
             "The [format-review queue](library/format-review.md) lists every unpaired non-navigation Markdown record for reconciliation. "
             "Unpaired documents have not been certified against the new three-form requirement. "

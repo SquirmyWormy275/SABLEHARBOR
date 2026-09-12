@@ -153,7 +153,11 @@ def main() -> None:
       source_id TEXT NOT NULL REFERENCES institutional_object(id),
       relation_type TEXT NOT NULL, target_reference TEXT NOT NULL,
       PRIMARY KEY(source_id, relation_type, target_reference));
-    CREATE VIRTUAL TABLE institutional_search USING fts5(id UNINDEXED, title, owner, category, body);
+    CREATE VIEW institutional_search_content AS
+      SELECT rowid, id, title, owner, category, search_text AS body FROM institutional_object;
+    CREATE VIRTUAL TABLE institutional_search USING fts5(
+      id UNINDEXED, title, owner, category, body,
+      content='institutional_search_content', content_rowid='rowid');
     """)
     for obj in objects:
         db.execute("INSERT INTO institutional_object VALUES (?,?,?,?,?,?,?,?,?,?,?)", (

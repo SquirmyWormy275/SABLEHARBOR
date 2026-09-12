@@ -62,3 +62,12 @@ Native transaction tables remain in the pinned release databases. Discovery reco
 those populations; they do not replace the ledger or turn proposed documents into executed
 instruments. Run `python scripts/validate_reader_navigation.py --check-regeneration` to check
 source hashes, database contents and reader links after rebuilding.
+
+Dated counterpart reviews are applied only to unchanged source hashes. Verified artifact
+hashes must also match; a changed publication fails the build. Historical audit evidence
+remains in its dated register when current source edits return a document to review.
+
+The institutional full-text index uses an external-content view over existing object rows.
+This avoids storing the same controlled-document text twice while preserving the public
+search columns and full-text query behavior. Catalog regeneration and search tests verify
+logical content; SQLite byte layout can change when the schema changes.

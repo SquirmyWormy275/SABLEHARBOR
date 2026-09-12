@@ -111,3 +111,40 @@ class EvidenceLinkTests(unittest.TestCase):
                     (dest / "manifest.json").write_text(json.dumps(manifest))
                 with self.assertRaises(ValueError):
                     library.evidence_records(root)
+
+
+class CounterpartAuditTests(unittest.TestCase):
+    def test_changed_source_returns_to_review_and_changed_artifact_fails(self):
+        import hashlib
+        import json
+
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            audit = root / "docs/reader/reconciliation"
+            audit.mkdir(parents=True)
+            source = root / "source.md"
+            source.write_text("# Source")
+            artifact = root / "artifact.pdf"
+            artifact.write_bytes(b"approved original")
+            record = {
+                "source": "source.md",
+                "source_sha256": hashlib.sha256(source.read_bytes()).hexdigest(),
+                "verified_evidence": [
+                    {
+                        "artifacts": [
+                            {
+                                "path": "artifact.pdf",
+                                "sha256": hashlib.sha256(artifact.read_bytes()).hexdigest(),
+                            }
+                        ]
+                    }
+                ],
+            }
+            (audit / "records.json").write_text(json.dumps({"records": [record]}))
+            self.assertIn("source.md", library.counterpart_records(root))
+            source.write_text("# Changed source")
+            self.assertEqual(library.counterpart_records(root), {})
+            source.write_text("# Source")
+            artifact.write_bytes(b"unreviewed replacement")
+            with self.assertRaisesRegex(ValueError, "Stale counterpart artifact"):
+                library.counterpart_records(root)

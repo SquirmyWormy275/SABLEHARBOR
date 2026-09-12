@@ -26,6 +26,7 @@ TABLES = (
     "reader_search",
     "reader_evidence_link",
     "reader_evidence_package",
+    "reader_counterpart_audit",
 )
 
 
