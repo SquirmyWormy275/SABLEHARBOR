@@ -6,9 +6,14 @@ Generated file inventory. Includes current and historical records; open the sour
 
 ## `docs/reader`
 
+- [Reader and evidence continuation](../../reader/CONTINUATION.md) — MD
 - [Reader experience implementation record](../../reader/READER_DELIVERY.md) — MD
 - [Sources, formats, and reading the archive](../../reader/SOURCES_AND_FORMATS.md) — MD
 - [Using the Sable Harbor universe](../../reader/USE_CASES.md) — MD
+
+## `docs/reader/overnight`
+
+- [Overnight reader and evidence work](../../reader/overnight/START.md) — MD
 
 ## `docs/wiki`
 

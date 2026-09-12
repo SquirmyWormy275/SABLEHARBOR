@@ -9,6 +9,7 @@ Internal Audit independently evaluates governance, controls and operations. It c
 
 ## Read and use the records
 
+- [Assessment workpapers and evidence requests](../../../enterprise/ccf/assurance/README.md) — Follow requirement, implementation, period, population, procedure and independent review; generated plans are not performed tests.
 - [Independence doctrine](../../../docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md) — Read the protected reporting and communication boundaries.
 - [Audit & Compliance Committee charter](../../../docs/governance/committees/AUDIT_AND_COMPLIANCE_COMMITTEE_CHARTER.md) — Functional accountability and oversight.
 - [Committee reader edition](../../../docs/governance/publications/SH-GOV-COM-AUDIT-001_v1.0.0.pdf) — Controlled PDF.

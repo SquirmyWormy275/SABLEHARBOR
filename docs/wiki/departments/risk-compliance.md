@@ -9,6 +9,8 @@ Risk & Compliance maintains enterprise risk visibility, coordinates policy and c
 
 ## Read and use the records
 
+- [Assessment and framework delta workbench](../../../enterprise/ccf/assurance/README.md) — Build local Excel/HTML workpapers, evidence requests and a scoped comparison; distinguish fictional demonstrations from the unresolved reference assessment.
+- [Reference source inventory](../../../enterprise/ccf/assurance/reference_data/README.md) — Inspect source fingerprints and the SOC, HIPAA and C5 review boundaries.
 - [ESS independence doctrine](../../../docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md) — Separates management challenge from independent audit.
 - [CCF foundation](../../../docs/controls/COMMON_CONTROLS_FRAMEWORK_FOUNDATION_v0.1.md) — Read the framework’s scope and foundation.
 - [Common control catalog](../../../docs/controls/COMMON_CONTROL_CATALOG_v0.1.md) — Browse control statements.

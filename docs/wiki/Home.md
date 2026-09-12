@@ -8,6 +8,19 @@ Sable Harbor develops industrial software, operates resource businesses, and pro
 
 [Choose an exercise](../reader/USE_CASES.md) · [Accounting practice](../finance/READER_EXERCISES.md) · [Complete document library](Library.md) · [Source and format guide](../reader/SOURCES_AND_FORMATS.md)
 
+## Find records for a task
+
+| I want to… | Open first | Then inspect |
+|---|---|---|
+| Reconcile an invoice, revenue balance or cash shortfall | [Accounting exercises](../finance/READER_EXERCISES.md) | Named workbook sheets and evidence files for one release, unit and period. |
+| Test a control and follow an exception | [CCF example procedures](../../enterprise/ccf/PROCEDURES.md) | The evidence population, original result, waiver and independent re-performance. |
+| Prepare a SOC-oriented evidence request or framework comparison | [Assessment workbench](../../enterprise/ccf/assurance/README.md) | Local Excel/HTML workpapers, source inventory and unresolved review tasks; these are preparation records, not an assurance opinion. |
+| Review a purchase or an operating investment | [Industrial case guide](../../industrial/CASE_GUIDE.md) | Transaction instruments, operating constraints and the selected scenario's financial schedules. |
+| Understand who decides and who reviews | [Department directory](departments/README.md) | Existing organization charts, authority documents and dated Board records. |
+| Visit or inspect the campus concept | [Selected V08 visitor map](../../geospatial/facilities/visitor/v08/artifacts/visitor-map-v08.png) | [PDF](../../geospatial/facilities/visitor/v08/artifacts/visitor-map-v08.pdf) for a visitor overview; [facility index](../../geospatial/maps/facilities/ARTIFACT_INDEX.md) for individual site, building and floor plans. |
+
+For additional exercises and expected deliverables, use the [full use-case guide](../reader/USE_CASES.md). For files by subject or format, use the [document library](Library.md).
+
 ## Businesses
 
 | Business | What it does |
@@ -54,3 +67,5 @@ Directory groupings aid navigation; they do not create departments or reporting 
 Markdown opens directly in GitHub. PDFs provide formatted documents. Download Excel workbooks to inspect schedules and calculations. Complete release packages contain additional operating records, databases and, where supplied, offline browsers; follow the [download guide](../reader/USE_CASES.md#downloads-and-tools).
 
 The [library](Library.md) indexes the underlying files without moving them or creating duplicate source documents. It includes history; current subject pages and each source's status explain what controls. Some figures are conditional scenarios or reconstructions, not observed history. The [source guide](../reader/SOURCES_AND_FORMATS.md) explains these distinctions and the three-form document requirement.
+
+[Wiki coverage and remaining subject queue](../reader/WIKI_COVERAGE.json) records the reviewed pages and source-backed subjects still served by indexes.

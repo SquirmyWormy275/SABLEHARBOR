@@ -9,6 +9,7 @@ on:
       - docs/finance/READER_EXERCISES.md
       - docs/handoffs/FINANCE_HUMAN_EVIDENCE_COMPLETION.md
       - scripts/validate_reader_navigation.py
+      - scripts/validate_reader_workqueue.py
       - docs/canon/**
       - docs/governance/**
       - docs/j2/**
@@ -46,6 +47,7 @@ jobs:
         run: |
           python -m pip install -r tools/documents/requirements.txt -r tools/organization/requirements.txt
           python -m unittest discover -s tests/publications
+      - run: python scripts/validate_reader_workqueue.py
       - run: python scripts/validate_governance_j2.py
       - run: python scripts/validate_institutional_catalog.py
       - name: Reconcile reader library
