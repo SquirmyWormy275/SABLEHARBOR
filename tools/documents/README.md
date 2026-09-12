@@ -79,3 +79,8 @@ exports. Original Markdown and its checksum remain available through `reader_fil
 Counterpart audit rows omit the duplicated source excerpt from database JSON; the complete
 dated register and searchable source retain it. No evidence disposition or artifact hash is
 removed. These storage choices keep the generated catalog within the repository file limit.
+
+`reader_evidence_artifact` links saved review files to their package, source reference, exact
+hash and domain manifest. Its explicit draft status does not confer approval. Finance
+workbooks can point to a source register covering several tables; legal PDFs point to their
+specific Markdown record. Domain manifests also validate the render source and approved logo.
