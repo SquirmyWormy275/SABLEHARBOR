@@ -273,3 +273,57 @@ def test_competing_case_pass_does_not_hide_same_period_failure(running):
     summary = list(store.report(db, tokens["DEMO-REVIEWER"])["period_results"].values())
     assert len(summary) == 1 and summary[0]["result"] == "FAIL"
     assert set(summary[0]["case_ids"]) == {"GOOD", "BAD"}
+
+
+def test_scope_permissions_restrict_mutations_and_reports(tmp_path, plans, monkeypatch):
+    plans = copy.deepcopy(plans)
+    other = copy.deepcopy(plans["COLLECT:SH-IAM-004:B"])
+    other.update(id="OTHER-PLAN", boundary_id="OTHER-BOUNDARY")
+    plans[other["id"]] = other
+    people = ex.principals(["B"])
+    people.append(
+        dict(
+            id="OTHER-PREPARER",
+            permissions=["prepare"],
+            boundaries=["OTHER-BOUNDARY"],
+            valid_from=people[0]["valid_from"],
+            expires_at=people[0]["expires_at"],
+        )
+    )
+    tokens = store.initialize(tmp_path / "scoped.sqlite3", plans, people)
+    db = store.connect(tmp_path / "scoped.sqlite3")
+    monkeypatch.setattr(store, "now", lambda: ex.AT)
+    payload = dict(plan_id=other["id"], scope=ex.scope())
+    try:
+        with pytest.raises(ValueError, match="permission"):
+            store.command(db, tokens["DEMO-PREPARER"], "OTHER", "create", payload, 0)
+        store.command(db, tokens["OTHER-PREPARER"], "OTHER", "create", payload, 0)
+        assert not store.report(db, tokens["DEMO-REVIEWER"])["cases"]
+        assert set(store.report(db, tokens["OTHER-PREPARER"])["cases"]) == {"OTHER"}
+    finally:
+        db.close()
+
+
+def test_same_period_success_cannot_be_used_as_prospective_closure(running):
+    db, tokens, _, _ = running
+    for failed, case in [(False, "PASSING"), (True, "FAILED")]:
+        p, rows = prepared(running, failed, case)
+        intake_and_review(running, p, rows, case=case)
+    store.command(
+        db,
+        tokens["DEMO-PREPARER"],
+        "FAILED",
+        "remediate",
+        dict(change_reference="CHANGE", action="Prospective correction", due_at=ex.EXPIRY),
+        4,
+    )
+    with pytest.raises(ValueError, match="prospective case"):
+        store.command(
+            db,
+            tokens["DEMO-REVIEWER"],
+            "FAILED",
+            "close_prospectively",
+            dict(validation_case_id="PASSING", rationale="Attempt to reuse same-period result"),
+            5,
+        )
+    assert store.replay(db)["FAILED"]["historical_failure"]
