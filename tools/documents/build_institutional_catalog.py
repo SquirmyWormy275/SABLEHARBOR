@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import hashlib
+import importlib.util
 import json
 import re
 import sqlite3
@@ -165,9 +166,19 @@ def main() -> None:
             for value in values:
                 db.execute("INSERT OR IGNORE INTO relationship VALUES (?,?,?)", (obj["id"], relation_type, value))
     db.execute("CREATE VIEW current_institutional_object AS SELECT * FROM institutional_object WHERE upper(status) NOT LIKE 'SUPERSEDED%'")
-    from reader_library import populate
-
-    coverage = populate(ROOT, db, manifest["artifacts"])
+    # Resolve the sibling consistently for CLI use and imported catalog builders.
+    spec = importlib.util.spec_from_file_location(
+        "institutional_reader_library", Path(__file__).with_name("reader_library.py")
+    )
+    reader = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(reader)
+    # Isolated publication fixtures/release roots have no Git index. In that case
+    # discover only explicitly manifested files, never arbitrary untracked files.
+    file_paths = None if (ROOT / ".git").exists() else sorted({
+        artifact[key] for artifact in manifest["artifacts"]
+        for key in ("source", "publication")
+    })
+    coverage = reader.populate(ROOT, db, manifest["artifacts"], file_paths=file_paths)
     print(f"Reader library: {coverage}")
     # Compact generated search indexes without dropping any records or search content.
     for table in ("institutional_search", "reader_search"):
