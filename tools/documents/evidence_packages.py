@@ -39,7 +39,8 @@ def records(root: Path) -> list[tuple]:
                 target(data["visual_manifest"])
             output.append((identity, data["title"], data["status"], data["markdown"],
                            str(path.relative_to(root)), hashlib.sha256(path.read_bytes()).hexdigest(),
-                           json.dumps(data, sort_keys=True)))
+                           json.dumps(data, sort_keys=True, ensure_ascii=False,
+                                      separators=(",", ":"))))
     return sorted(output)
 
 
