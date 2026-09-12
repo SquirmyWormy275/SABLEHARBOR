@@ -23,6 +23,8 @@ on:
       - tests/publications/**
       - tests/unit/test_controlled_publication_catalog.py
       - docs/internal/**
+      - docs/finance/evidence/**
+      - scripts/validate_finance_evidence_acceptance.py
       - docs/structured/**
       - docs/business-lines/**
       - scripts/validate_business_records.py
@@ -50,6 +52,7 @@ jobs:
       - run: python scripts/validate_reader_workqueue.py
       - run: python scripts/validate_governance_j2.py
       - run: python scripts/validate_institutional_catalog.py
+      - run: python scripts/validate_finance_evidence_acceptance.py
       - name: Reconcile reader library
         run: |
           python scripts/validate_reader_navigation.py --check-regeneration

@@ -152,6 +152,17 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Willow / Klein finance and corporate model](../../finance/WILLOW_KLEIN_FINANCE_AND_CORPORATE_MODEL_2026-09-06.md) — MD
 - [Worklog](../../finance/WORKLOG.md) — MD
 
+## `docs/finance/evidence/SH-FIN-HUMAN-001`
+
+- [Foundry Field: invoice evidence](../../finance/evidence/SH-FIN-HUMAN-001/PACKET.md) — MD
+- [Foundry Field invoice evidence — accepted packet](../../finance/evidence/SH-FIN-HUMAN-001/README.md) — MD
+- [packet](../../finance/evidence/SH-FIN-HUMAN-001/packet.pdf) — PDF
+- [reconciliation](../../finance/evidence/SH-FIN-HUMAN-001/reconciliation.xlsx) — XLSX
+
+## `docs/finance/evidence/SH-FIN-HUMAN-001/qa`
+
+- [Draft visual and numerical review](../../finance/evidence/SH-FIN-HUMAN-001/qa/REVIEW.md) — MD
+
 ## `docs/finance/publications`
 
 - [Current business-unit evidence export contract — SH-AUDIT-UNIT-EXPORT-001_v1.0.0](../../finance/publications/SH-AUDIT-UNIT-EXPORT-001_v1.0.0.pdf) — PDF

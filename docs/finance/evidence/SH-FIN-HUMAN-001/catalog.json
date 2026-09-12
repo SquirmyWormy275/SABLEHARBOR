@@ -1,0 +1,27 @@
+{
+  "artifacts": {
+    "PACKET.md": "1b7828cb0a69551ef5ff14fad874bdc6222f697679e4163933d3a6f85f27f60c",
+    "build.py": "5947b8c5fb2d82699bd4f3632351a0f978b70b5798458359a3b15437e0906c7f",
+    "packet.pdf": "1914d0043f1ef3344873d10d35ed016f4cbfd28091459e8dbb2d4b8fee45a5b7",
+    "reconciliation.xlsx": "7077ec3ae8e796a6f94759fe19624ab51a11ac45b7ce538a0c447b4c9c384214",
+    "source.json": "c4833cfc6f28db6cd3edcae761b0e2d8f463a20de79f1d6fd5b0c517f8f829b7"
+  },
+  "catalog_integration": "reader_evidence_link in institutional_catalog.sqlite3; draft discovery only",
+  "document_id": "SH-FIN-HUMAN-001",
+  "effective_period": "2027-01 through 2027-10",
+  "fact_state": "PUBLIC_SYNTHETIC_CONDITIONAL_FORECAST",
+  "invoice_id": "INV-base-FF-003-TERM-0",
+  "native_database": "business-operations-v1.0.0/units/foundry-field/evidence.sqlite3",
+  "native_source_ids": [
+    "base-01-INVOICE-INV-base-FF-003-TERM-0",
+    "base-02-COLLECTION-INV-base-FF-003-TERM-0",
+    "base-06-CREDIT_WRITEOFF-INV-base-FF-003-TERM-0",
+    "base-07-CREDIT_NOTE-SYN-INC-FF-003-INV-base-FF-003-TERM-0",
+    "base-08-CREDIT_NOTE-SYN-AMEND-003-INV-base-FF-003-TERM-0",
+    "base-10-CREDIT_RECOVERY-INV-base-FF-003-TERM-0"
+  ],
+  "scenario": "base",
+  "source_revision": "57cfa1b1c483ccf1f8b15d82c4cbdadbeef8063e",
+  "status": "DRAFT_FOR_USER_REVIEW",
+  "unit": "foundry-field"
+}

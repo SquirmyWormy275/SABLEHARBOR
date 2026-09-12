@@ -1,12 +1,14 @@
 {
   "id": "SH-READER-OVERNIGHT-001",
-  "base_sha": "57b01df637838581f1cee5f3b5f633f6cd70c4d0",
+  "base_sha": "62048c2153977acf2bc52d8e1f54aa6ebb9b57d8",
   "status": "PREPARED_NOT_SCHEDULED",
   "max_parallel_agents": 3,
   "integration_owner": "main agent",
   "decision_defaults": {
-    "merge": "Existing authorization permits nonvisual work after required gates; new designs stay in review.",
-    "priority": "Accounting evidence first unless owner steers otherwise."
+    "merge": "Owner confirmed nonvisual merge after green gates; future designs stay in exact-file review.",
+    "scope": "All three content lanes authorized: accounting; transaction/legal; business/department.",
+    "billing": "Separate proposed fictional billing dataset authorized for review only; no edits to booked amounts or existing source facts.",
+    "authority": "docs/canon/READER_OVERNIGHT_SCOPE_2026-09-11.md"
   },
   "frozen": [
     {
@@ -20,6 +22,14 @@
     {
       "path": "docs/organization/source/chartbook.json",
       "sha256": "6471a6362517f97574c775b73b94ac48d6060d81cee605eb661811425ed75866"
+    },
+    {
+      "path": "docs/finance/evidence/SH-FIN-HUMAN-001/packet.pdf",
+      "sha256": "1914d0043f1ef3344873d10d35ed016f4cbfd28091459e8dbb2d4b8fee45a5b7"
+    },
+    {
+      "path": "docs/finance/evidence/SH-FIN-HUMAN-001/reconciliation.xlsx",
+      "sha256": "7077ec3ae8e796a6f94759fe19624ab51a11ac45b7ce538a0c447b4c9c384214"
     }
   ],
   "jobs": [
@@ -42,9 +52,10 @@
         "docs/wiki/Home.md",
         "docs/wiki/README.md"
       ],
-      "state": "CURRENT_REVIEW",
+      "state": "COMPLETE",
       "acceptance": "Validated routes to accepted sources, downloads and explicit evidence limits.",
-      "gate": "existing_authority"
+      "gate": "existing_authority",
+      "evidence": "PR135 merged at62048c2153977acf2bc52d8e1f54aa6ebb9b57d8"
     },
     {
       "id": "FIN-01",
@@ -58,8 +69,8 @@
       "write_scope": [
         "docs/finance/evidence/SH-FIN-HUMAN-001/"
       ],
-      "state": "CURRENT_REVIEW",
-      "acceptance": "Exact source extraction, balanced movements/journals, MD/PDF/XLSX and every page/sheet reviewed; retain draft until owner accepts exact files.",
+      "state": "ACCEPTED_PENDING_MAIN_INTEGRATION",
+      "acceptance": "Exact corrected packet accepted at efce3a74b5c029e4010abd93934b7686b3751ba4; frozen ACCEPTANCE.json binds every reviewed artifact. PR134 integrates after green gates.",
       "gate": "exact_visual_acceptance"
     },
     {
@@ -132,8 +143,8 @@
       "write_scope": [
         "docs/finance/evidence/customer/"
       ],
-      "state": "WAITING_REVIEW",
-      "acceptance": "Complete selected contract/invoice population and deferred-revenue rollforward, formula checks, source IDs and independent per-document files; hold new outputs in review.",
+      "state": "READY_SOURCE_ONLY",
+      "acceptance": "After FIN-02, prepare complete selected contract/invoice population and deferred-revenue rollforward with formula/source checks. FIN-01 is accepted, but every new design/output remains in exact-file review.",
       "gate": "exact_visual_acceptance"
     },
     {
@@ -188,6 +199,24 @@
       "state": "READY",
       "acceptance": "Distinguish actual repository instruments, released schedules and absent support. Link consideration/approvals/quantities to existing records; no synthetic signatures or invented legal terms.",
       "gate": "existing_authority"
+    },
+    {
+      "id": "FIN-06",
+      "lane": "finance",
+      "title": "Propose fictional billing fields for owner review",
+      "depends_on": [
+        "FIN-02"
+      ],
+      "inputs": [
+        "docs/canon/READER_OVERNIGHT_SCOPE_2026-09-11.md",
+        "docs/finance/evidence/SH-FIN-HUMAN-001/source.json"
+      ],
+      "write_scope": [
+        "docs/finance/evidence/billing-proposal/"
+      ],
+      "state": "READY_SOURCE_ONLY",
+      "acceptance": "Separate explicitly PROPOSED_FOR_REVIEW scenario dataset for absent issuer/customer billing fields, with each proposed field distinguished from sourced facts. Preserve booked amounts, original records and legal canon. No operational payment instructions, signatures or visual adoption; require exact owner review before use.",
+      "gate": "exact_visual_acceptance"
     },
     {
       "id": "QA-01",

@@ -6,8 +6,8 @@ Generated reconciliation queue, not an assertion that every unpaired record lack
 
 | State | Records |
 |---|---:|
-| COUNTERPART_REVIEW_REQUIRED | 444 |
-| READER_OR_MAINTENANCE_PAGE | 98 |
+| COUNTERPART_REVIEW_REQUIRED | 448 |
+| READER_OR_MAINTENANCE_PAGE | 99 |
 | VERIFIED_DOCUMENT_PAIR | 131 |
 
 ## Records requiring counterpart reconciliation
@@ -93,12 +93,14 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [SABLE HARBOR — DECISION REGISTER](../../canon/DECISION_REGISTER_v0.3.1.md) — Corporate document-format reconciliation
 - [Demotte Reclamation Services — name and visual identity](../../canon/DEMOTTE_RECLAMATION_NAME_AND_IDENTITY_2026-09-07.md) — Corporate document-format reconciliation
 - [Emberline — approved visual identity](../../canon/EMBERLINE_VISUAL_IDENTITY_2026-09-07.md) — Corporate document-format reconciliation
+- [Foundry Field evidence packet: exact-file acceptance](../../canon/FINANCE_HUMAN_EVIDENCE_001_ACCEPTANCE_2026-09-11.md) — Corporate document-format reconciliation
 - [Industrial closeout — corporate, Pale Sun, Red Wash and ARU](../../canon/INDUSTRIAL_CLOSEOUT_2026-09-05.md) — Corporate document-format reconciliation
 - [Kelly Gang Mining — approved visual identity](../../canon/KELLY_GANG_MINING_VISUAL_IDENTITY_2026-09-07.md) — Corporate document-format reconciliation
 - [Klein — name and historical identity](../../canon/KLEIN_NAME_AND_IDENTITY_2026-09-07.md) — Corporate document-format reconciliation
 - [Northstar Minerals, Inc. — approved visual identity](../../canon/NORTHSTAR_MINERALS_VISUAL_IDENTITY_2026-09-07.md) — Corporate document-format reconciliation
 - [Organization chart design and cleanup](../../canon/ORG_CHART_DESIGN_AND_CLEANUP_2026-09-09.md) — Corporate document-format reconciliation
 - [Quality Forest Communications — approved visual identity](../../canon/QUALITY_FOREST_COMMUNICATIONS_VISUAL_IDENTITY_2026-09-07.md) — Corporate document-format reconciliation
+- [Reader overnight scope and review boundaries](../../canon/READER_OVERNIGHT_SCOPE_2026-09-11.md) — Corporate document-format reconciliation
 - [Red Wash Closeout Changelog](../../canon/RED_WASH_CLOSEOUT_CHANGELOG_2026-09-05.md) — Corporate document-format reconciliation
 - [Red Wash Transaction and Operating Record](../../canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05.md) — Corporate document-format reconciliation
 - [SABLE HARBOR — CANONICAL ARCHITECTURE HANDOVER](../../canon/SABLE_HARBOR_CANONICAL_ARCHITECTURE_HANDOVER.md) — Corporate document-format reconciliation
@@ -168,6 +170,8 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Superseded filename](../../finance/WILLOW_EVALON_FINANCE_AND_CORPORATE_MODEL_2026-09-06.md) — SH-FIN-HUMAN-001
 - [Willow / Klein finance and corporate model](../../finance/WILLOW_KLEIN_FINANCE_AND_CORPORATE_MODEL_2026-09-06.md) — SH-FIN-HUMAN-001
 - [Worklog](../../finance/WORKLOG.md) — SH-FIN-HUMAN-001
+- [Foundry Field: invoice evidence](../../finance/evidence/SH-FIN-HUMAN-001/PACKET.md) — SH-FIN-HUMAN-001
+- [Draft visual and numerical review](../../finance/evidence/SH-FIN-HUMAN-001/qa/REVIEW.md) — SH-FIN-HUMAN-001
 - [SABLE HARBOR — SUPERSEDED 2021–2022 FINANCING & INVESTOR-DIRECTOR PROPOSAL](../../governance/2021_2022_FINANCING_AND_INVESTOR_DIRECTOR_PROPOSAL.md) — Corporate document-format reconciliation
 - [SABLE HARBOR — 2026 BOARD COMPOSITION AND FINANCING MODEL](../../governance/2026_BOARD_COMPOSITION_AND_FINANCING_MODEL.md) — Corporate document-format reconciliation
 - [SABLE HARBOR — CAPITAL DELEGATION AND INDEPENDENT ASSURANCE MODEL](../../governance/2026_CAPITAL_AND_ASSURANCE_MODEL.md) — Corporate document-format reconciliation
