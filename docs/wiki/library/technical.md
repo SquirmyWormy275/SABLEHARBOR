@@ -131,3 +131,7 @@ Generated file inventory. Includes current and historical records; open the sour
 ## `tools/documents`
 
 - [Controlled-publication builds](../../../tools/documents/README.md) — MD
+
+## `tools/wiki`
+
+- [Wiki publication](../../../tools/wiki/README.md) — MD

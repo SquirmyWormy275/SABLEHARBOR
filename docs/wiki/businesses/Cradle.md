@@ -2,7 +2,7 @@
 
 [Wiki home](../Home.md) · [All business dossiers](../../business-lines/README.md) · [Company charts](../../organization/README.md)
 
-<img src="../../../assets/brand/logos/project-cradle__mark.png" alt="Approved Project Cradle logo" width="280">
+<img src="../../../assets/brand/logos/project-cradle__reverse-horizontal.png" alt="Approved Project Cradle logo" width="360">
 
 Cradle recovers rare-earth materials from designated industrial side streams and mine water for specialist downstream sale. Its work connects external host deployments with the separate Bedford development, refurbishment, analytical and upgrading facility.
 
