@@ -328,7 +328,7 @@ FAMILIES = {
         },
         "schedule": "asset_rollforward",
         "columns": ["period", "unit", "asset_id", "cost_usd", "accumulated_usd", "net_book_usd"],
-        "limits": "Position IDs are synthetic planning records, not new named employees or actual 2026 headcount. Loaded costs are employer costs, not net pay. Core and industrial schedules are separate source systems. Stock quantities are retained in their original units. No payroll remittance, independent valuation, reserve certification, new ownership or covenant threshold is created.",
+        "limits": "Position IDs are synthetic planning records, not new named employees or actual 2026 headcount. Loaded costs are employer costs, not net pay. Validate costs against PAYROLL_REQUEST journals before Cradle capitalizes direct labor into inventory; net BIZ_PAYROLL expense is not gross payroll. Core and industrial schedules are separate source systems. Stock quantities are retained in their original units. No payroll remittance, independent valuation, reserve certification, new ownership or covenant threshold is created.",
     },
     "tax-transaction": {
         "title": "Transaction cash and conditional tax support",

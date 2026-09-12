@@ -144,7 +144,11 @@ def render():
             for n, r in enumerate(rs, 4):
                 for col, key in enumerate(cols):
                     v = r.get(key, "")
-                    if key.endswith("_usd") and v != "":
+                    if (
+                        key.endswith("_usd")
+                        and v != ""
+                        and len(m.D(v).normalize().as_tuple().digits) <= 15
+                    ):
                         w.write_number(n, col, float(v), money)
                     else:
                         w.write_string(n, col, v, body)
@@ -359,6 +363,14 @@ def render():
                 "artifacts": artifacts,
                 "source_register_sha256": sha(folder / "evidence-register.json"),
                 "renderer_sha256": sha(Path(__file__)),
+                "source_dependencies": {
+                    str(p.relative_to(ROOT)): sha(p)
+                    for p in [
+                        Path(__file__).with_name("build.py"),
+                        ROOT / "tools/documents/build_controlled_publications.py",
+                        ROOT / "assets/brand/logos/sable-harbor__primary-horizontal.svg",
+                    ]
+                },
             },
         )
         print(family, len(maprows) + 2, "sheets", len(renders), "renders")

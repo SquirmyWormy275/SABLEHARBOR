@@ -1,5 +1,6 @@
 """Validate finance evidence extracts, population identity and accounting equations."""
 
+import collections
 import importlib.util
 import json
 import sqlite3
@@ -57,6 +58,30 @@ def validate(base=BASE):
     ), "credit_history.source_id absent from events.event_id or close journal.source_id"
     assert all(r["event_id"] in posted for r in customer["events"] if r.get("invoice_id")), (
         "Invoice events.event_id absent from close journal.source_id"
+    )
+    assignments = m.rows(
+        (base / "supporting-schedules/source/workforce_assignments.csv").read_bytes()
+    )
+    allocation = collections.defaultdict(m.D)
+    costs = collections.defaultdict(m.D)
+    for row in assignments:
+        allocation[row["person_id"], row["period"]] += m.num(row, "assignment_fte")
+        costs[row["unit"], row["period"]] += m.num(row, "loaded_cost_usd")
+    assert all(value == 1 for value in allocation.values()), (
+        "Workforce person/month assignment fractions do not sum to one"
+    )
+    payroll_requests = {
+        row["event_id"] for row in customer["events"] if row["kind"] == "PAYROLL_REQUEST"
+    }
+    posted_payroll = collections.defaultdict(m.D)
+    for row in journals:
+        if row["account"] == "BIZ_PAYROLL" and row["source_id"] in payroll_requests:
+            posted_payroll[row["unit"], row["period"]] += m.num(row, "signed_usd")
+    assert set(costs) == set(posted_payroll), (
+        "Workforce and payroll journal unit/period populations differ"
+    )
+    assert all(abs(value - posted_payroll[key]) <= m.D(".02") for key, value in costs.items()), (
+        "Assigned employer costs differ from payroll journal"
     )
     bridge = json.loads((base / "tax-transaction/CURRENT_SOURCE_BRIDGE.json").read_text())
     for relative, digest in bridge["source_hashes"].items():
