@@ -285,10 +285,10 @@ def main():
 
     out = [
         '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Sable Harbor facility atlas</title><style>',
-        "@font-face{font-family:SH;src:url('../facilities/fonts/DejaVuSans.ttf')}@font-face{font-family:SH;src:url('../facilities/fonts/DejaVuSans-Bold.ttf');font-weight:700}body{margin:0;background:#f7f6f1;color:#223740;font:16px/1.6 SH,sans-serif}header,main{max-width:1500px;margin:auto;padding:30px 36px}header{padding-bottom:20px}header .brand{font-size:20px;letter-spacing:.28em;font-weight:700;border-bottom:1px solid #223740;padding-bottom:22px}.brand span{float:right;letter-spacing:.02em;font-size:12px;font-weight:400}h1,h2,h3,h4{line-height:1.25}h1{font-size:42px;text-transform:uppercase;letter-spacing:.035em}h2{text-transform:uppercase;font-size:23px;margin-top:30px}h3{font-size:20px}h4{font-size:18px}a{color:#3d7186;text-underline-offset:3px}.meta{font-size:13px;overflow-wrap:anywhere;color:#62767e}details,article.record{border:0;border-top:1px solid #aab5b5;padding:22px 0;margin:18px 0}details details{margin-left:24px}summary{font-weight:700;cursor:pointer;font-size:20px}img{width:100%;height:auto;display:block}.map{padding:16px 0;margin:18px 0;border-bottom:1px solid #d7ddd9}.reference{padding:16px 0;max-width:1150px}.historical{border-left:3px solid #799487;padding-left:16px!important}.external{border-left:3px solid #49778b;padding-left:16px!important}.unresolved,.proposed{border-left:3px solid #ac9052;padding-left:16px!important}code{font-size:12px;overflow-wrap:anywhere}input,select{font:inherit;padding:10px;border:1px solid #8c9da1;background:#f7f6f1;max-width:100%}.filters{display:flex;gap:12px;flex-wrap:wrap}nav{border-top:1px solid #223740;border-bottom:1px solid #223740;padding:12px 0}nav ul{columns:2;padding-left:22px}@media(max-width:700px){nav ul{columns:1}header,main{padding:20px}.brand span{float:none;display:block;margin-top:14px}h1{font-size:30px}details details{margin-left:12px}}[hidden]{display:none!important}</style></head><body>",
+        "@font-face{font-family:SH;src:url('../facilities/fonts/DejaVuSans.ttf')}@font-face{font-family:SH;src:url('../facilities/fonts/DejaVuSans-Bold.ttf');font-weight:700}body{overflow-wrap:anywhere;margin:0;background:#f7f6f1;color:#223740;font:16px/1.6 SH,sans-serif}header,main{max-width:1500px;margin:auto;padding:30px 36px}header{padding-bottom:20px}header .brand{font-size:20px;letter-spacing:.28em;font-weight:700;border-bottom:1px solid #223740;padding-bottom:22px}.brand span{float:right;letter-spacing:.02em;font-size:12px;font-weight:400}h1,h2,h3,h4{line-height:1.25}h1{font-size:42px;text-transform:uppercase;letter-spacing:.035em}h2{text-transform:uppercase;font-size:23px;margin-top:30px}h3{font-size:20px}h4{font-size:18px}a{color:#3d7186;text-underline-offset:3px}.meta{font-size:13px;overflow-wrap:anywhere;color:#62767e}details,article.record{border:0;border-top:1px solid #aab5b5;padding:22px 0;margin:18px 0}details details{margin-left:24px}summary{font-weight:700;cursor:pointer;font-size:20px}img{width:100%;height:auto;display:block}.map{padding:16px 0;margin:18px 0;border-bottom:1px solid #d7ddd9}.reference{padding:16px 0;max-width:1150px}.historical{border-left:3px solid #799487;padding-left:16px!important}.external{border-left:3px solid #49778b;padding-left:16px!important}.unresolved,.proposed{border-left:3px solid #ac9052;padding-left:16px!important}code{font-size:12px;overflow-wrap:anywhere}input,select{font:inherit;padding:10px;border:1px solid #8c9da1;background:#f7f6f1;max-width:100%}.filters{display:flex;gap:12px;flex-wrap:wrap}nav{border-top:1px solid #223740;border-bottom:1px solid #223740;padding:12px 0}nav ul{columns:2;padding-left:22px}@media(max-width:700px){nav ul{columns:1}header,main{padding:20px}.brand span{float:none;display:block;margin-top:14px}h1{font-size:30px}details details{margin-left:12px}}[hidden]{display:none!important}</style></head><body>",
         '<header id="top"><div class="brand">SABLE HARBOR<span>SACRAMENTO / INSTITUTIONAL CAMPUS</span></div><h1>Enterprise facility atlas</h1><p class="meta">COORDINATED DESIGN STUDY · 11 SEPTEMBER 2026 · R02 SUCCESSOR TO THE APPROVED R01 VISUAL BASELINE</p><p><a href="'
         + esc(PDF.name)
-        + '">Portable PDF atlas v0.2.0</a> · <a href="facilities/ARTIFACT_INDEX.md">Complete artifact index</a> · <a href="workbench.html">Planning workbench</a> · <a href="facilities/ATLAS_LINKS.json">Link graph</a> · <a href="#approved-r01">Original approved R01 sheets</a></p></header><main>',
+        + '">Portable PDF atlas v0.2.0</a> · <a href="facilities/ARTIFACT_INDEX.md">Complete artifact index</a> · <a href="workbench.html">Planning workbench</a> · <a href="spatial.html">3D spatial review</a> · <a href="spatial/README.md">Architectural sheets</a> · <a href="facilities/ATLAS_LINKS.json">Link graph</a> · <a href="#approved-r01">Original approved R01 sheets</a></p></header><main>',
         "<p>Follow a location to its site plan, buildings and separately saved floor images. Existing geographic context remains rc4; concept layouts do not establish ownership, construction completion or actual occupancy. Historical, external and unresolved records retain explicit dispositions without invented map pins.</p>",
         f"<p>{len(sites)} modelled site packages · {len(building_lookup)} buildings · {sum(len(b[1]['floors']) for b in building_lookup.values())} floors · {len(coverage['records'])} coverage dispositions</p>",
         "<nav><h2>Locations and sites</h2><ul>",
@@ -353,6 +353,9 @@ def main():
         for b in s["buildings"]:
             out.append(
                 f'<details id="{esc(b["id"])}"><summary>{esc(b["name"])} · {len(b["floors"])} modelled floors</summary><p class="meta">{esc(b["id"])} · {esc(b["status"])}</p>'
+            )
+            out.append(
+                f'<p><a href="spatial.html#{esc(b["id"])}">Explore building in 3D, sections, elevations and roof</a></p>'
             )
             out.extend(
                 card(m, False)
@@ -607,6 +610,27 @@ def main():
     if RUNTIME.is_file():
         dependencies.append(RUNTIME)
         dependencies.extend(ROOT / path for path in load(RUNTIME)["source_sha256"])
+    spatial_manifest = MAPS / "spatial/MANIFEST.json"
+    if spatial_manifest.is_file():
+        spatial = load(spatial_manifest)
+        dependencies.append(spatial_manifest)
+        node("spatial-review", "index", path="geospatial/maps/spatial.html")
+        edge("atlas", "spatial-review")
+        node("spatial-index", "index", path="geospatial/maps/spatial/README.md")
+        edge("spatial-review", "spatial-index")
+        if spatial.get("portable_pdf"):
+            node("spatial-pdf", "publication", **spatial["portable_pdf"])
+            edge("spatial-review", "spatial-pdf")
+        for m in spatial["maps"]:
+            mid = m.get("map_id", m["id"])
+            node(mid, "map", title=m["title"], status=m.get("status", "MODELLED"))
+            parent = m.get("floor_id") or m.get("building_id") or m["site_id"]
+            edge(parent, mid)
+            edge("spatial-index", mid)
+            for fmt, a in m["artifacts"].items():
+                aid = mid + ":" + fmt
+                node(aid, "artifact", **a)
+                edge(mid, aid)
     # Hash only preserved rc4 records so adding this successor to MAP_MANIFEST is not cyclic.
     graph = {
         "schema_version": "1.0.0",

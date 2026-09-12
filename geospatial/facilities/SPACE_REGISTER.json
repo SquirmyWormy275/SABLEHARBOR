@@ -3581,7 +3581,7 @@
   ],
   "linked_runtime_source": {
     "path": "geospatial/facilities/RUNTIME_BRIDGE.json",
-    "sha256": "764b0fdb51475396c13d88a9ba365ac34b1a4f4a0f9608d5bf43fb09ccc2e946",
+    "sha256": "136491785df28eb6db3ce4f5737c71d1629d08bb8da7879f44d768a76a93e06b",
     "source_sha256": {
       "geospatial/facilities/runtime_bridge.py": "b5894f73df499f1c0c20da37a14e6aea1fc95a77c66a6ae1db50729e13b45802",
       "enterprise/services/source/runtime_sites_2026-09-11.json": "fa216f629762503865fd9f1a3207e87691cd484cec9885bf25ce045b4525519c",
@@ -3589,7 +3589,7 @@
       "enterprise/runtime/visuals/manifest.json": "6d842ad71c4f90fdbab75281ae7bae9db4efaecef460b5ec6bcbca75322ddd67",
       "enterprise/runtime/design.py": "0351b9528c1c7bc4150b182d6aab5ac14aea51f8b03b8089624e44b3eb7b889f",
       "enterprise/runtime/render.py": "0c4483da5b80081abe0745dfb7b2139b5460ac0cf6aaba99eaf11972f9236929",
-      "geospatial/registers/MAP_ID_REGISTER.json": "fc0a35688847c9915968d6102983158289c7a0a381c6e322f100898048915132",
+      "geospatial/registers/MAP_ID_REGISTER.json": "02fb9b537a178afad68b969fa52a14066821f635db4cabb954d724336554f35d",
       "geospatial/geojson/runtime_parcel.geojson": "671c7eadf7347864f9ccc9876606fb476e6e866587aea0cfc556436e7310d5f0"
     },
     "rule": "Linked accepted runtime design; separate source generator and uncertain seats. No duplicate architectural source or actual occupancy claim."

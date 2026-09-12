@@ -1,0 +1,2480 @@
+{
+  "schema_version": "1.0.0",
+  "source_sha256": {
+    "geospatial/facilities/spatial/ACCESS_POLICY.json": "bb1a62da4ae388077ab841263cc01f8a2ff21b26eb6afc6165d7c6e2f75f70c0",
+    "geospatial/facilities/source/campus.json": "0efd4854069ff20acb4032e02b021afebcb955990f1d684b51428624e281d950"
+  },
+  "routes": [
+    {
+      "id": "SH-ACCESS:SH-SITE-0001-A-L01-R01",
+      "floor_id": "SH-SITE-0001-A-L01",
+      "room_id": "SH-SITE-0001-A-L01-R01",
+      "via_room_id": "SH-SITE-0001-A-L01-R13",
+      "classification": "staff",
+      "operational_assumption": "Attached focus/call rooms reached through Advisory common bench by its authorized users; reserve an unobstructed internal route in the shared working area.",
+      "geometry_security_sha256": "7ab5eee779f324bdba3bf8f354461639331d5829e51254c95a72436873ad35e3",
+      "site_id": "SH-SITE-0001",
+      "outcome": "PASS",
+      "errors": [],
+      "waypoints_m": [
+        [
+          2.7432,
+          29.2608
+        ],
+        [
+          5.4864,
+          29.2608
+        ],
+        [
+          16.4592,
+          18.288
+        ],
+        [
+          32.9184,
+          16.4592
+        ]
+      ],
+      "room_ids": [
+        "SH-SITE-0001-A-L01-R01",
+        "SH-SITE-0001-A-L01-R13"
+      ],
+      "door_ids": [
+        "SH-SITE-0001-A-L01-R01:door",
+        "SH-SITE-0001-A-L01-R13:door"
+      ],
+      "segments": [
+        {
+          "index": 0,
+          "from_m": [
+            2.7432,
+            29.2608
+          ],
+          "to_m": [
+            5.4864,
+            29.2608
+          ],
+          "containing_rect_m": [
+            0.0,
+            25.6032,
+            5.4864,
+            7.3152
+          ],
+          "verified": true,
+          "basis": "Straight segment contained in convex source rectangle; furniture and clear width unassessed"
+        },
+        {
+          "index": 1,
+          "from_m": [
+            5.4864,
+            29.2608
+          ],
+          "to_m": [
+            16.4592,
+            18.288
+          ],
+          "containing_rect_m": [
+            5.4864,
+            18.288,
+            21.9456,
+            14.6304
+          ],
+          "verified": true,
+          "basis": "Straight segment contained in convex source rectangle; furniture and clear width unassessed"
+        },
+        {
+          "index": 2,
+          "from_m": [
+            16.4592,
+            18.288
+          ],
+          "to_m": [
+            32.9184,
+            16.4592
+          ],
+          "containing_rect_m": [
+            5.4864,
+            14.6304,
+            54.864,
+            3.6576
+          ],
+          "verified": true,
+          "basis": "Straight segment contained in convex source rectangle; furniture and clear width unassessed"
+        }
+      ],
+      "coordinate_frame": "floor_local_metres",
+      "egress_certified": false,
+      "corridor_name": "12 ft shared circulation"
+    },
+    {
+      "id": "SH-ACCESS:SH-SITE-0001-A-L01-R02",
+      "floor_id": "SH-SITE-0001-A-L01",
+      "room_id": "SH-SITE-0001-A-L01-R02",
+      "via_room_id": "SH-SITE-0001-A-L01-R13",
+      "classification": "staff",
+      "operational_assumption": "Attached focus/call rooms reached through Advisory common bench by its authorized users; reserve an unobstructed internal route in the shared working area.",
+      "geometry_security_sha256": "2a52ab0aab1803f8c5ad3c93b03d51d5e43e653018199d6a047a5a40a0201d68",
+      "site_id": "SH-SITE-0001",
+      "outcome": "PASS",
+      "errors": [],
+      "waypoints_m": [
+        [
+          2.7432,
+          22.86
+        ],
+        [
+          5.4864,
+          22.86
+        ],
+        [
+          16.4592,
+          18.288
+        ],
+        [
+          32.9184,
+          16.4592
+        ]
+      ],
+      "room_ids": [
+        "SH-SITE-0001-A-L01-R02",
+        "SH-SITE-0001-A-L01-R13"
+      ],
+      "door_ids": [
+        "SH-SITE-0001-A-L01-R02:door",
+        "SH-SITE-0001-A-L01-R13:door"
+      ],
+      "segments": [
+        {
+          "index": 0,
+          "from_m": [
+            2.7432,
+            22.86
+          ],
+          "to_m": [
+            5.4864,
+            22.86
+          ],
+          "containing_rect_m": [
+            0.0,
+            20.1168,
+            5.4864,
+            5.4864
+          ],
+          "verified": true,
+          "basis": "Straight segment contained in convex source rectangle; furniture and clear width unassessed"
+        },
+        {
+          "index": 1,
+          "from_m": [
+            5.4864,
+            22.86
+          ],
+          "to_m": [
+            16.4592,
+            18.288
+          ],
+          "containing_rect_m": [
+            5.4864,
+            18.288,
+            21.9456,
+            14.6304
+          ],
+          "verified": true,
+          "basis": "Straight segment contained in convex source rectangle; furniture and clear width unassessed"
+        },
+        {
+          "index": 2,
+          "from_m": [
+            16.4592,
+            18.288
+          ],
+          "to_m": [
+            32.9184,
+            16.4592
+          ],
+          "containing_rect_m": [
+            5.4864,
+            14.6304,
+            54.864,
+            3.6576
+          ],
+          "verified": true,
+          "basis": "Straight segment contained in convex source rectangle; furniture and clear width unassessed"
+        }
+      ],
+      "coordinate_frame": "floor_local_metres",
+      "egress_certified": false,
+      "corridor_name": "12 ft shared circulation"
+    },
+    {
+      "id": "SH-ACCESS:SH-SITE-0001-A-L01-R03",
+      "floor_id": "SH-SITE-0001-A-L01",
+      "room_id": "SH-SITE-0001-A-L01-R03",
+      "via_room_id": "SH-SITE-0001-A-L01-R14",
+      "classification": "staff",
+      "operational_assumption": "Attached focus/call rooms reached through Corporate commons / 80 dining seats by its authorized users; reserve an unobstructed internal route in the shared working area.",
+      "geometry_security_sha256": "80e7aa6e447de0c56fb7ff7f7922e8026c2eb2f1805c98e14bd7c90f00f35dda",
+      "site_id": "SH-SITE-0001",
+      "outcome": "PASS",
+      "errors": [],
+      "waypoints_m": [
+        [
+          63.0936,
+          29.2608
+        ],
+        [
+          60.3504,
+          29.2608
+        ],
+        [
+          49.3776,
+          18.288
+        ],
+        [
+          32.9184,
+          16.4592
+        ]
+      ],
+      "room_ids": [
+        "SH-SITE-0001-A-L01-R03",
+        "SH-SITE-0001-A-L01-R14"
+      ],
+      "door_ids": [
+        "SH-SITE-0001-A-L01-R03:door",
+        "SH-SITE-0001-A-L01-R14:door"
+      ],
+      "segments": [
+        {
+          "index": 0,
+          "from_m": [
+            63.0936,
+            29.2608
+          ],
+          "to_m": [
+            60.3504,
+            29.2608
+          ],
+          "containing_rect_m": [
+            60.3504,
+            25.6032,
+            5.4864,
+            7.3152
+          ],
+          "verified": true,
+          "basis": "Straight segment contained in convex source rectangle; furniture and clear width unassessed"
+        },
+        {
+          "index": 1,
+          "from_m": [
+            60.3504,
+            29.2608
+          ],
+          "to_m": [
+            49.3776,
+            18.288
+          ],
+          "containing_rect_m": [
+            38.4048,
+            18.288,
+            21.9456,
+            14.6304
+          ],
+          "verified": true,
+          "basis": "Straight segment contained in convex source rectangle; furniture and clear width unassessed"
+        },
+        {
+          "index": 2,
+          "from_m": [
+            49.3776,
+            18.288
+          ],
+          "to_m": [
+            32.9184,
+            16.4592
+          ],
+          "containing_rect_m": [
+            5.4864,
+            14.6304,
+            54.864,
+            3.6576
+          ],
+          "verified": true,
+          "basis": "Straight segment contained in convex source rectangle; furniture and clear width unassessed"
+        }
+      ],
+      "coordinate_frame": "floor_local_metres",
+      "egress_certified": false,
+      "corridor_name": "12 ft shared circulation"
+    },
+    {
+      "id": "SH-ACCESS:SH-SITE-0001-A-L01-R04",
+      "floor_id": "SH-SITE-0001-A-L01",
+      "room_id": "SH-SITE-0001-A-L01-R04",
+      "via_room_id": "SH-SITE-0001-A-L01-R14",
+      "classification": "staff",
+      "operational_assumption": "Attached focus/call rooms reached through Corporate commons / 80 dining seats by its authorized users; reserve an unobstructed internal route in the shared working area.",
+      "geometry_security_sha256": "800f41a6ee76dd19b708319990d6b90523934c3fc1655bb09df11dec6675b82a",
+      "site_id": "SH-SITE-0001",
+      "outcome": "PASS",
+      "errors": [],
+      "waypoints_m": [
+        [
+          63.0936,
+          22.86
+        ],
+        [
+          60.3504,
+          22.86
+        ],
+        [
+          49.3776,
+          18.288
+        ],
+        [
+          32.9184,
+          16.4592
+        ]
+      ],
+      "room_ids": [
+        "SH-SITE-0001-A-L01-R04",
+        "SH-SITE-0001-A-L01-R14"
+      ],
+      "door_ids": [
+        "SH-SITE-0001-A-L01-R04:door",
+        "SH-SITE-0001-A-L01-R14:door"
+      ],
+      "segments": [
+        {
+          "index": 0,
+          "from_m": [
+            63.0936,
+            22.86
+          ],
+          "to_m": [
+            60.3504,
+            22.86
+          ],
+          "containing_rect_m": [
+            60.3504,
+            20.1168,
+            5.4864,
+            5.4864
+          ],
+          "verified": true,
+          "basis": "Straight segment contained in convex source rectangle; furniture and clear width unassessed"
+        },
+        {
+          "index": 1,
+          "from_m": [
+            60.3504,
+            22.86
+          ],
+          "to_m": [
+            49.3776,
+            18.288
+          ],
+          "containing_rect_m": [
+            38.4048,
+            18.288,
+            21.9456,
+            14.6304
+          ],
+          "verified": true,
+          "basis": "Straight segment contained in convex source rectangle; furniture and clear width unassessed"
+        },
+        {
+          "index": 2,
+          "from_m": [
+            49.3776,
+            18.288
+          ],
+          "to_m": [
+            32.9184,
+            16.4592
+          ],
+          "containing_rect_m": [
+            5.4864,
+            14.6304,
+            54.864,
+            3.6576
+          ],
+          "verified": true,
+          "basis": "Straight segment contained in convex source rectangle; furniture and clear width unassessed"
+        }
+      ],
+      "coordinate_frame": "floor_local_metres",
+      "egress_certified": false,
+      "corridor_name": "12 ft shared circulation"
+    },
+    {
+      "id": "SH-ACCESS:SH-SITE-0001-A-L02-R01",
+      "floor_id": "SH-SITE-0001-A-L02",
+      "room_id": "SH-SITE-0001-A-L02-R01",
+      "via_room_id": "SH-SITE-0001-A-L02-R13",
+      "classification": "staff",
+      "operational_assumption": "Attached focus/call rooms reached through Foundry Field west studio by its authorized users; reserve an unobstructed internal route in the shared working area.",
+      "geometry_security_sha256": "bd7c14c808f23eb8ee835a40bd40ea960c3f03efdea8916bfa936be3b39ac005",
+      "site_id": "SH-SITE-0001",
+      "outcome": "PASS",
+      "errors": [],
+      "waypoints_m": [
+        [
+          2.7432,
+          29.2608
+        ],
+        [
+          5.4864,
+          29.2608
+        ],
+        [
+          16.4592,
+          18.288
+        ],
+        [
+          32.9184,
+          16.4592
+        ]
+      ],
+      "room_ids": [
+        "SH-SITE-0001-A-L02-R01",
+        "SH-SITE-0001-A-L02-R13"
+      ],
+      "door_ids": [
+        "SH-SITE-0001-A-L02-R01:door",
+        "SH-SITE-0001-A-L02-R13:door"
+      ],
+      "segments": [
+        {
+          "index": 0,
+          "from_m": [
+            2.7432,
+            29.2608
+          ],
+          "to_m": [
+            5.4864,
+            29.2608
+          ],
+          "containing_rect_m": [
+            0.0,
+            25.6032,
+            5.4864,
+            7.3152
+          ],
+          "verified": true,
+          "basis": "Straight segment contained in convex source rectangle; furniture and clear width unassessed"
+        },
+        {
+          "index": 1,
+          "from_m": [
+            5.4864,
+            29.2608
+          ],
+          "to_m": [
+            16.4592,
+            18.288
+          ],
+          "containing_rect_m": [
+            5.4864,
+            18.288,
+            21.9456,
+            14.6304
+          ],
+          "verified": true,
+          "basis": "Straight segment contained in convex source rectangle; furniture and clear width unassessed"
+        },
+        {
+          "index": 2,
+          "from_m": [
+            16.4592,
+            18.288
+          ],
+          "to_m": [
+            32.9184,
+            16.4592
+          ],
+          "containing_rect_m": [
+            5.4864,
+            14.6304,
+            54.864,
+            3.6576
+          ],
+          "verified": true,
+          "basis": "Straight segment contained in convex source rectangle; furniture and clear width unassessed"
+        }
+      ],
+      "coordinate_frame": "floor_local_metres",
+      "egress_certified": false,
+      "corridor_name": "12 ft shared circulation"
+    },
+    {
+      "id": "SH-ACCESS:SH-SITE-0001-A-L02-R02",
+      "floor_id": "SH-SITE-0001-A-L02",
+      "room_id": "SH-SITE-0001-A-L02-R02",
+      "via_room_id": "SH-SITE-0001-A-L02-R13",
+      "classification": "staff",
+      "operational_assumption": "Attached focus/call rooms reached through Foundry Field west studio by its authorized users; reserve an unobstructed internal route in the shared working area.",
+      "geometry_security_sha256": "d9bb0a576c39be196132a16032d974870655ef72847a026a5d636127092588f0",
+      "site_id": "SH-SITE-0001",
+      "outcome": "PASS",
+      "errors": [],
+      "waypoints_m": [
+        [
+          2.7432,
+          22.86
+        ],
+        [
+          5.4864,
+          22.86
+        ],
+        [
+          16.4592,
+          18.288
+        ],
+        [
+          32.9184,
+          16.4592
+        ]
+      ],
+      "room_ids": [
+        "SH-SITE-0001-A-L02-R02",
+        "SH-SITE-0001-A-L02-R13"
+      ],
+      "door_ids": [
+        "SH-SITE-0001-A-L02-R02:door",
+        "SH-SITE-0001-A-L02-R13:door"
+      ],
+      "segments": [
+        {
+          "index": 0,
+          "from_m": [
+            2.7432,
+            22.86
+          ],
+          "to_m": [
+            5.4864,
+            22.86
+          ],
+          "containing_rect_m": [
+            0.0,
+            20.1168,
+            5.4864,
+            5.4864
+          ],
+          "verified": true,
+          "basis": "Straight segment contained in convex source rectangle; furniture and clear width unassessed"
+        },
+        {
+          "index": 1,
+          "from_m": [
+            5.4864,
+            22.86
+          ],
+          "to_m": [
+            16.4592,
+            18.288
+          ],
+          "containing_rect_m": [
+            5.4864,
+            18.288,
+            21.9456,
+            14.6304
+          ],
+          "verified": true,
+          "basis": "Straight segment contained in convex source rectangle; furniture and clear width unassessed"
+        },
+        {
+          "index": 2,
+          "from_m": [
+            16.4592,
+            18.288
+          ],
+          "to_m": [
+            32.9184,
+            16.4592
+          ],
+          "containing_rect_m": [
+            5.4864,
+            14.6304,
+            54.864,
+            3.6576
+          ],
+          "verified": true,
+          "basis": "Straight segment contained in convex source rectangle; furniture and clear width unassessed"
+        }
+      ],
+      "coordinate_frame": "floor_local_metres",
+      "egress_certified": false,
+      "corridor_name": "12 ft shared circulation"
+    },
+    {
+      "id": "SH-ACCESS:SH-SITE-0001-A-L02-R03",
+      "floor_id": "SH-SITE-0001-A-L02",
+      "room_id": "SH-SITE-0001-A-L02-R03",
+      "via_room_id": "SH-SITE-0001-A-L02-R15",
+      "classification": "staff",
+      "operational_assumption": "Attached focus/call rooms reached through Atlas Meridian product development by its authorized users; reserve an unobstructed internal route in the shared working area.",
+      "geometry_security_sha256": "c77330d35adadfd3aeb2b9b1fcb7233ceb4f24a84a29a2d9f03ff4324516d037",
+      "site_id": "SH-SITE-0001",
+      "outcome": "PASS",
+      "errors": [],
+      "waypoints_m": [
+        [
+          63.0936,
+          29.2608
+        ],
+        [
+          60.3504,
+          29.2608
+        ],
+        [
+          49.3776,
+          18.288
+        ],
+        [
+          32.9184,
+          16.4592
+        ]
+      ],
+      "room_ids": [
+        "SH-SITE-0001-A-L02-R03",
+        "SH-SITE-0001-A-L02-R15"
+      ],
+      "door_ids": [
+        "SH-SITE-0001-A-L02-R03:door",
+        "SH-SITE-0001-A-L02-R15:door"
+      ],
+      "segments": [
+        {
+          "index": 0,
+          "from_m": [
+            63.0936,
+            29.2608
+          ],
+          "to_m": [
+            60.3504,
+            29.2608
+          ],
+          "containing_rect_m": [
+            60.3504,
+            25.6032,
+            5.4864,
+            7.3152
+          ],
+          "verified": true,
+          "basis": "Straight segment contained in convex source rectangle; furniture and clear width unassessed"
+        },
+        {
+          "index": 1,
+          "from_m": [
+            60.3504,
+            29.2608
+          ],
+          "to_m": [
+            49.3776,
+            18.288
+          ],
+          "containing_rect_m": [
+            38.4048,
+            18.288,
+            21.9456,
+            14.6304
+          ],
+          "verified": true,
+          "basis": "Straight segment contained in convex source rectangle; furniture and clear width unassessed"
+        },
+        {
+          "index": 2,
+          "from_m": [
+            49.3776,
+            18.288
+          ],
+          "to_m": [
+            32.9184,
+            16.4592
+          ],
+          "containing_rect_m": [
+            5.4864,
+            14.6304,
+            54.864,
+            3.6576
+          ],
+          "verified": true,
+          "basis": "Straight segment contained in convex source rectangle; furniture and clear width unassessed"
+        }
+      ],
+      "coordinate_frame": "floor_local_metres",
+      "egress_certified": false,
+      "corridor_name": "12 ft shared circulation"
+    },
+    {
+      "id": "SH-ACCESS:SH-SITE-0001-A-L02-R04",
+      "floor_id": "SH-SITE-0001-A-L02",
+      "room_id": "SH-SITE-0001-A-L02-R04",
+      "via_room_id": "SH-SITE-0001-A-L02-R15",
+      "classification": "staff",
+      "operational_assumption": "Attached focus/call rooms reached through Atlas Meridian product development by its authorized users; reserve an unobstructed internal route in the shared working area.",
+      "geometry_security_sha256": "13e62336595c9309a8ee846114cb664e99d5f93f8199437852e103bfb6c88d90",
+      "site_id": "SH-SITE-0001",
+      "outcome": "PASS",
+      "errors": [],
+      "waypoints_m": [
+        [
+          63.0936,
+          22.86
+        ],
+        [
+          60.3504,
+          22.86
+        ],
+        [
+          49.3776,
+          18.288
+        ],
+        [
+          32.9184,
+          16.4592
+        ]
+      ],
+      "room_ids": [
+        "SH-SITE-0001-A-L02-R04",
+        "SH-SITE-0001-A-L02-R15"
+      ],
+      "door_ids": [
+        "SH-SITE-0001-A-L02-R04:door",
+        "SH-SITE-0001-A-L02-R15:door"
+      ],
+      "segments": [
+        {
+          "index": 0,
+          "from_m": [
+            63.0936,
+            22.86
+          ],
+          "to_m": [
+            60.3504,
+            22.86
+          ],
+          "containing_rect_m": [
+            60.3504,
+            20.1168,
+            5.4864,
+            5.4864
+          ],
+          "verified": true,
+          "basis": "Straight segment contained in convex source rectangle; furniture and clear width unassessed"
+        },
+        {
+          "index": 1,
+          "from_m": [
+            60.3504,
+            22.86
+          ],
+          "to_m": [
+            49.3776,
+            18.288
+          ],
+          "containing_rect_m": [
+            38.4048,
+            18.288,
+            21.9456,
+            14.6304
+          ],
+          "verified": true,
+          "basis": "Straight segment contained in convex source rectangle; furniture and clear width unassessed"
+        },
+        {
+          "index": 2,
+          "from_m": [
+            49.3776,
+            18.288
+          ],
+          "to_m": [
+            32.9184,
+            16.4592
+          ],
+          "containing_rect_m": [
+            5.4864,
+            14.6304,
+            54.864,
+            3.6576
+          ],
+          "verified": true,
+          "basis": "Straight segment contained in convex source rectangle; furniture and clear width unassessed"
+        }
+      ],
+      "coordinate_frame": "floor_local_metres",
+      "egress_certified": false,
+      "corridor_name": "12 ft shared circulation"
+    },
+    {
+      "id": "SH-ACCESS:SH-SITE-0001-A-L03-R01",
+      "floor_id": "SH-SITE-0001-A-L03",
+      "room_id": "SH-SITE-0001-A-L03-R01",
+      "via_room_id": "SH-SITE-0001-A-L03-R13",
+      "classification": "staff",
+      "operational_assumption": "Attached focus/call rooms are for users authorized in Finance; confidential suite is not a public or general staff passage.",
+      "geometry_security_sha256": "632abbca767366c90ed472c88833366d8f2f28c48dca1501c2bd27bf74b1c7ae",
+      "site_id": "SH-SITE-0001",
+      "outcome": "PASS",
+      "errors": [],
+      "waypoints_m": [
+        [
+          2.7432,
+          29.2608
+        ],
+        [
+          5.4864,
+          29.2608
+        ],
+        [
+          8.2296,
+          18.288
+        ],
+        [
+          32.9184,
+          16.4592
+        ]
+      ],
+      "room_ids": [
+        "SH-SITE-0001-A-L03-R01",
+        "SH-SITE-0001-A-L03-R13"
+      ],
+      "door_ids": [
+        "SH-SITE-0001-A-L03-R01:door",
+        "SH-SITE-0001-A-L03-R13:door"
+      ],
+      "segments": [
+        {
+          "index": 0,
+          "from_m": [
+            2.7432,
+            29.2608
+          ],
+          "to_m": [
+            5.4864,
+            29.2608
+          ],
+          "containing_rect_m": [
+            0.0,
+            25.6032,
+            5.4864,
+            7.3152
+          ],
+          "verified": true,
+          "basis": "Straight segment contained in convex source rectangle; furniture and clear width unassessed"
+        },
+        {
+          "index": 1,
+          "from_m": [
+            5.4864,
+            29.2608
+          ],
+          "to_m": [
+            8.2296,
+            18.288
+          ],
+          "containing_rect_m": [
+            5.4864,
+            18.288,
+            5.4864,
+            14.6304
+          ],
+          "verified": true,
+          "basis": "Straight segment contained in convex source rectangle; furniture and clear width unassessed"
+        },
+        {
+          "index": 2,
+          "from_m": [
+            8.2296,
+            18.288
+          ],
+          "to_m": [
+            32.9184,
+            16.4592
+          ],
+          "containing_rect_m": [
+            5.4864,
+            14.6304,
+            54.864,
+            3.6576
+          ],
+          "verified": true,
+          "basis": "Straight segment contained in convex source rectangle; furniture and clear width unassessed"
+        }
+      ],
+      "coordinate_frame": "floor_local_metres",
+      "egress_certified": false,
+      "corridor_name": "12 ft shared circulation"
+    },
+    {
+      "id": "SH-ACCESS:SH-SITE-0001-A-L03-R02",
+      "floor_id": "SH-SITE-0001-A-L03",
+      "room_id": "SH-SITE-0001-A-L03-R02",
+      "via_room_id": "SH-SITE-0001-A-L03-R13",
+      "classification": "staff",
+      "operational_assumption": "Attached focus/call rooms are for users authorized in Finance; confidential suite is not a public or general staff passage.",
+      "geometry_security_sha256": "5f2bf528fcf29514197e2fecceb75e2272cc195ba82172cf24af7ffcea80bfd0",
+      "site_id": "SH-SITE-0001",
+      "outcome": "PASS",
+      "errors": [],
+      "waypoints_m": [
+        [
+          2.7432,
+          22.86
+        ],
+        [
+          5.4864,
+          22.86
+        ],
+        [
+          8.2296,
+          18.288
+        ],
+        [
+          32.9184,
+          16.4592
+        ]
+      ],
+      "room_ids": [
+        "SH-SITE-0001-A-L03-R02",
+        "SH-SITE-0001-A-L03-R13"
+      ],
+      "door_ids": [
+        "SH-SITE-0001-A-L03-R02:door",
+        "SH-SITE-0001-A-L03-R13:door"
+      ],
+      "segments": [
+        {
+          "index": 0,
+          "from_m": [
+            2.7432,
+            22.86
+          ],
+          "to_m": [
+            5.4864,
+            22.86
+          ],
+          "containing_rect_m": [
+            0.0,
+            20.1168,
+            5.4864,
+            5.4864
+          ],
+          "verified": true,
+          "basis": "Straight segment contained in convex source rectangle; furniture and clear width unassessed"
+        },
+        {
+          "index": 1,
+          "from_m": [
+            5.4864,
+            22.86
+          ],
+          "to_m": [
+            8.2296,
+            18.288
+          ],
+          "containing_rect_m": [
+            5.4864,
+            18.288,
+            5.4864,
+            14.6304
+          ],
+          "verified": true,
+          "basis": "Straight segment contained in convex source rectangle; furniture and clear width unassessed"
+        },
+        {
+          "index": 2,
+          "from_m": [
+            8.2296,
+            18.288
+          ],
+          "to_m": [
+            32.9184,
+            16.4592
+          ],
+          "containing_rect_m": [
+            5.4864,
+            14.6304,
+            54.864,
+            3.6576
+          ],
+          "verified": true,
+          "basis": "Straight segment contained in convex source rectangle; furniture and clear width unassessed"
+        }
+      ],
+      "coordinate_frame": "floor_local_metres",
+      "egress_certified": false,
+      "corridor_name": "12 ft shared circulation"
+    },
+    {
+      "id": "SH-ACCESS:SH-SITE-0001-A-L03-R03",
+      "floor_id": "SH-SITE-0001-A-L03",
+      "room_id": "SH-SITE-0001-A-L03-R03",
+      "via_room_id": "SH-SITE-0001-A-L03-R19",
+      "classification": "staff",
+      "operational_assumption": "Attached focus/call rooms are for users authorized in Technology / Security / Resilience; confidential suite is not a public or general staff passage.",
+      "geometry_security_sha256": "6dcc3d7090c5b53acfc61894f8e55cf64d66d19c1a7eb46c64046d3fa7fc388a",
+      "site_id": "SH-SITE-0001",
+      "outcome": "PASS",
+      "errors": [],
+      "waypoints_m": [
+        [
+          63.0936,
+          29.2608
+        ],
+        [
+          60.3504,
+          29.2608
+        ],
+        [
+          54.864,
+          18.288
+        ],
+        [
+          32.9184,
+          16.4592
+        ]
+      ],
+      "room_ids": [
+        "SH-SITE-0001-A-L03-R03",
+        "SH-SITE-0001-A-L03-R19"
+      ],
+      "door_ids": [
+        "SH-SITE-0001-A-L03-R03:door",
+        "SH-SITE-0001-A-L03-R19:door"
+      ],
+      "segments": [
+        {
+          "index": 0,
+          "from_m": [
+            63.0936,
+            29.2608
+          ],
+          "to_m": [
+            60.3504,
+            29.2608
+          ],
+          "containing_rect_m": [
+            60.3504,
+            25.6032,
+            5.4864,
+            7.3152
+          ],
+          "verified": true,
+          "basis": "Straight segment contained in convex source rectangle; furniture and clear width unassessed"
+        },
+        {
+          "index": 1,
+          "from_m": [
+            60.3504,
+            29.2608
+          ],
+          "to_m": [
+            54.864,
+            18.288
+          ],
+          "containing_rect_m": [
+            49.3776,
+            18.288,
+            10.9728,
+            14.6304
+          ],
+          "verified": true,
+          "basis": "Straight segment contained in convex source rectangle; furniture and clear width unassessed"
+        },
+        {
+          "index": 2,
+          "from_m": [
+            54.864,
+            18.288
+          ],
+          "to_m": [
+            32.9184,
+            16.4592
+          ],
+          "containing_rect_m": [
+            5.4864,
+            14.6304,
+            54.864,
+            3.6576
+          ],
+          "verified": true,
+          "basis": "Straight segment contained in convex source rectangle; furniture and clear width unassessed"
+        }
+      ],
+      "coordinate_frame": "floor_local_metres",
+      "egress_certified": false,
+      "corridor_name": "12 ft shared circulation"
+    },
+    {
+      "id": "SH-ACCESS:SH-SITE-0001-A-L03-R04",
+      "floor_id": "SH-SITE-0001-A-L03",
+      "room_id": "SH-SITE-0001-A-L03-R04",
+      "via_room_id": "SH-SITE-0001-A-L03-R19",
+      "classification": "staff",
+      "operational_assumption": "Attached focus/call rooms are for users authorized in Technology / Security / Resilience; confidential suite is not a public or general staff passage.",
+      "geometry_security_sha256": "d208000f8a727294f0b4585ff16fc8f0e0b1aa2e1e86efe3396322903691769d",
+      "site_id": "SH-SITE-0001",
+      "outcome": "PASS",
+      "errors": [],
+      "waypoints_m": [
+        [
+          63.0936,
+          22.86
+        ],
+        [
+          60.3504,
+          22.86
+        ],
+        [
+          54.864,
+          18.288
+        ],
+        [
+          32.9184,
+          16.4592
+        ]
+      ],
+      "room_ids": [
+        "SH-SITE-0001-A-L03-R04",
+        "SH-SITE-0001-A-L03-R19"
+      ],
+      "door_ids": [
+        "SH-SITE-0001-A-L03-R04:door",
+        "SH-SITE-0001-A-L03-R19:door"
+      ],
+      "segments": [
+        {
+          "index": 0,
+          "from_m": [
+            63.0936,
+            22.86
+          ],
+          "to_m": [
+            60.3504,
+            22.86
+          ],
+          "containing_rect_m": [
+            60.3504,
+            20.1168,
+            5.4864,
+            5.4864
+          ],
+          "verified": true,
+          "basis": "Straight segment contained in convex source rectangle; furniture and clear width unassessed"
+        },
+        {
+          "index": 1,
+          "from_m": [
+            60.3504,
+            22.86
+          ],
+          "to_m": [
+            54.864,
+            18.288
+          ],
+          "containing_rect_m": [
+            49.3776,
+            18.288,
+            10.9728,
+            14.6304
+          ],
+          "verified": true,
+          "basis": "Straight segment contained in convex source rectangle; furniture and clear width unassessed"
+        },
+        {
+          "index": 2,
+          "from_m": [
+            54.864,
+            18.288
+          ],
+          "to_m": [
+            32.9184,
+            16.4592
+          ],
+          "containing_rect_m": [
+            5.4864,
+            14.6304,
+            54.864,
+            3.6576
+          ],
+          "verified": true,
+          "basis": "Straight segment contained in convex source rectangle; furniture and clear width unassessed"
+        }
+      ],
+      "coordinate_frame": "floor_local_metres",
+      "egress_certified": false,
+      "corridor_name": "12 ft shared circulation"
+    },
+    {
+      "id": "SH-ACCESS:SH-SITE-0001-B-L01-R05",
+      "floor_id": "SH-SITE-0001-B-L01",
+      "room_id": "SH-SITE-0001-B-L01-R05",
+      "via_room_id": "SH-SITE-0001-B-L01-R07",
+      "classification": "J2",
+      "operational_assumption": "J2-authorized personnel within the same controlled working suite; staff-tagged support rooms do not grant ordinary staff access.",
+      "geometry_security_sha256": "0f6d65dd5c7163c06c4d5b73cd3b886a26e822d87dc5aaeb200ef1bd61539700",
+      "site_id": "SH-SITE-0001",
+      "outcome": "PASS",
+      "errors": [],
+      "waypoints_m": [
+        [
+          2.7432,
+          28.651200000000003
+        ],
+        [
+          5.4864,
+          28.6512
+        ],
+        [
+          16.4592,
+          17.6784
+        ],
+        [
+          32.9184,
+          15.849599999999999
+        ]
+      ],
+      "room_ids": [
+        "SH-SITE-0001-B-L01-R05",
+        "SH-SITE-0001-B-L01-R07"
+      ],
+      "door_ids": [
+        "SH-SITE-0001-B-L01-R05:door",
+        "SH-SITE-0001-B-L01-R07:door"
+      ],
+      "segments": [
+        {
+          "index": 0,
+          "from_m": [
+            2.7432,
+            28.651200000000003
+          ],
+          "to_m": [
+            5.4864,
+            28.6512
+          ],
+          "containing_rect_m": [
+            0.0,
+            25.6032,
+            5.4864,
+            6.096
+          ],
+          "verified": true,
+          "basis": "Straight segment contained in convex source rectangle; furniture and clear width unassessed"
+        },
+        {
+          "index": 1,
+          "from_m": [
+            5.4864,
+            28.6512
+          ],
+          "to_m": [
+            16.4592,
+            17.6784
+          ],
+          "containing_rect_m": [
+            5.4864,
+            17.6784,
+            21.9456,
+            14.0208
+          ],
+          "verified": true,
+          "basis": "Straight segment contained in convex source rectangle; furniture and clear width unassessed"
+        },
+        {
+          "index": 2,
+          "from_m": [
+            16.4592,
+            17.6784
+          ],
+          "to_m": [
+            32.9184,
+            15.849599999999999
+          ],
+          "containing_rect_m": [
+            5.4864,
+            14.0208,
+            54.864,
+            3.6576
+          ],
+          "verified": true,
+          "basis": "Straight segment contained in convex source rectangle; furniture and clear width unassessed"
+        }
+      ],
+      "coordinate_frame": "floor_local_metres",
+      "egress_certified": false,
+      "corridor_name": "Staff circulation"
+    },
+    {
+      "id": "SH-ACCESS:SH-SITE-0001-B-L01-R06",
+      "floor_id": "SH-SITE-0001-B-L01",
+      "room_id": "SH-SITE-0001-B-L01-R06",
+      "via_room_id": "SH-SITE-0001-B-L01-R07",
+      "classification": "J2",
+      "operational_assumption": "J2-authorized personnel within the same controlled working suite; staff-tagged support rooms do not grant ordinary staff access.",
+      "geometry_security_sha256": "5b2fc58e2efaa206de0d46204a19a91e12682cfabdacbb026f2c1f63accfd5a5",
+      "site_id": "SH-SITE-0001",
+      "outcome": "PASS",
+      "errors": [],
+      "waypoints_m": [
+        [
+          2.7432,
+          22.5552
+        ],
+        [
+          5.4864,
+          22.5552
+        ],
+        [
+          16.4592,
+          17.6784
+        ],
+        [
+          32.9184,
+          15.849599999999999
+        ]
+      ],
+      "room_ids": [
+        "SH-SITE-0001-B-L01-R06",
+        "SH-SITE-0001-B-L01-R07"
+      ],
+      "door_ids": [
+        "SH-SITE-0001-B-L01-R06:door",
+        "SH-SITE-0001-B-L01-R07:door"
+      ],
+      "segments": [
+        {
+          "index": 0,
+          "from_m": [
+            2.7432,
+            22.5552
+          ],
+          "to_m": [
+            5.4864,
+            22.5552
+          ],
+          "containing_rect_m": [
+            0.0,
+            19.5072,
+            5.4864,
+            6.096
+          ],
+          "verified": true,
+          "basis": "Straight segment contained in convex source rectangle; furniture and clear width unassessed"
+        },
+        {
+          "index": 1,
+          "from_m": [
+            5.4864,
+            22.5552
+          ],
+          "to_m": [
+            16.4592,
+            17.6784
+          ],
+          "containing_rect_m": [
+            5.4864,
+            17.6784,
+            21.9456,
+            14.0208
+          ],
+          "verified": true,
+          "basis": "Straight segment contained in convex source rectangle; furniture and clear width unassessed"
+        },
+        {
+          "index": 2,
+          "from_m": [
+            16.4592,
+            17.6784
+          ],
+          "to_m": [
+            32.9184,
+            15.849599999999999
+          ],
+          "containing_rect_m": [
+            5.4864,
+            14.0208,
+            54.864,
+            3.6576
+          ],
+          "verified": true,
+          "basis": "Straight segment contained in convex source rectangle; furniture and clear width unassessed"
+        }
+      ],
+      "coordinate_frame": "floor_local_metres",
+      "egress_certified": false,
+      "corridor_name": "Staff circulation"
+    },
+    {
+      "id": "SH-ACCESS:SH-SITE-0001-B-L01-R09",
+      "floor_id": "SH-SITE-0001-B-L01",
+      "room_id": "SH-SITE-0001-B-L01-R09",
+      "via_room_id": "SH-SITE-0001-B-L01-R08",
+      "classification": "J2",
+      "operational_assumption": "J2-authorized personnel within the same controlled working suite; staff-tagged support rooms do not grant ordinary staff access.",
+      "geometry_security_sha256": "5aacac58daf45a8000f6983050fcb389bb6c8a8c5ebc5a7e1c1d0b74675fe2af",
+      "site_id": "SH-SITE-0001",
+      "outcome": "PASS",
+      "errors": [],
+      "waypoints_m": [
+        [
+          63.0936,
+          28.651200000000003
+        ],
+        [
+          60.3504,
+          28.6512
+        ],
+        [
+          49.3776,
+          17.6784
+        ],
+        [
+          32.9184,
+          15.849599999999999
+        ]
+      ],
+      "room_ids": [
+        "SH-SITE-0001-B-L01-R09",
+        "SH-SITE-0001-B-L01-R08"
+      ],
+      "door_ids": [
+        "SH-SITE-0001-B-L01-R09:door",
+        "SH-SITE-0001-B-L01-R08:door"
+      ],
+      "segments": [
+        {
+          "index": 0,
+          "from_m": [
+            63.0936,
+            28.651200000000003
+          ],
+          "to_m": [
+            60.3504,
+            28.6512
+          ],
+          "containing_rect_m": [
+            60.3504,
+            25.6032,
+            5.4864,
+            6.096
+          ],
+          "verified": true,
+          "basis": "Straight segment contained in convex source rectangle; furniture and clear width unassessed"
+        },
+        {
+          "index": 1,
+          "from_m": [
+            60.3504,
+            28.6512
+          ],
+          "to_m": [
+            49.3776,
+            17.6784
+          ],
+          "containing_rect_m": [
+            38.4048,
+            17.6784,
+            21.9456,
+            14.0208
+          ],
+          "verified": true,
+          "basis": "Straight segment contained in convex source rectangle; furniture and clear width unassessed"
+        },
+        {
+          "index": 2,
+          "from_m": [
+            49.3776,
+            17.6784
+          ],
+          "to_m": [
+            32.9184,
+            15.849599999999999
+          ],
+          "containing_rect_m": [
+            5.4864,
+            14.0208,
+            54.864,
+            3.6576
+          ],
+          "verified": true,
+          "basis": "Straight segment contained in convex source rectangle; furniture and clear width unassessed"
+        }
+      ],
+      "coordinate_frame": "floor_local_metres",
+      "egress_certified": false,
+      "corridor_name": "Staff circulation"
+    },
+    {
+      "id": "SH-ACCESS:SH-SITE-0001-B-L01-R10",
+      "floor_id": "SH-SITE-0001-B-L01",
+      "room_id": "SH-SITE-0001-B-L01-R10",
+      "via_room_id": "SH-SITE-0001-B-L01-R08",
+      "classification": "J2",
+      "operational_assumption": "J2-authorized personnel within the same controlled working suite; staff-tagged support rooms do not grant ordinary staff access.",
+      "geometry_security_sha256": "763cefe3433d4d0639c821ef1f404322ccf1ba21f19ee5a9555e4e47573a7dfd",
+      "site_id": "SH-SITE-0001",
+      "outcome": "PASS",
+      "errors": [],
+      "waypoints_m": [
+        [
+          63.0936,
+          22.5552
+        ],
+        [
+          60.3504,
+          22.5552
+        ],
+        [
+          49.3776,
+          17.6784
+        ],
+        [
+          32.9184,
+          15.849599999999999
+        ]
+      ],
+      "room_ids": [
+        "SH-SITE-0001-B-L01-R10",
+        "SH-SITE-0001-B-L01-R08"
+      ],
+      "door_ids": [
+        "SH-SITE-0001-B-L01-R10:door",
+        "SH-SITE-0001-B-L01-R08:door"
+      ],
+      "segments": [
+        {
+          "index": 0,
+          "from_m": [
+            63.0936,
+            22.5552
+          ],
+          "to_m": [
+            60.3504,
+            22.5552
+          ],
+          "containing_rect_m": [
+            60.3504,
+            19.5072,
+            5.4864,
+            6.096
+          ],
+          "verified": true,
+          "basis": "Straight segment contained in convex source rectangle; furniture and clear width unassessed"
+        },
+        {
+          "index": 1,
+          "from_m": [
+            60.3504,
+            22.5552
+          ],
+          "to_m": [
+            49.3776,
+            17.6784
+          ],
+          "containing_rect_m": [
+            38.4048,
+            17.6784,
+            21.9456,
+            14.0208
+          ],
+          "verified": true,
+          "basis": "Straight segment contained in convex source rectangle; furniture and clear width unassessed"
+        },
+        {
+          "index": 2,
+          "from_m": [
+            49.3776,
+            17.6784
+          ],
+          "to_m": [
+            32.9184,
+            15.849599999999999
+          ],
+          "containing_rect_m": [
+            5.4864,
+            14.0208,
+            54.864,
+            3.6576
+          ],
+          "verified": true,
+          "basis": "Straight segment contained in convex source rectangle; furniture and clear width unassessed"
+        }
+      ],
+      "coordinate_frame": "floor_local_metres",
+      "egress_certified": false,
+      "corridor_name": "Staff circulation"
+    },
+    {
+      "id": "SH-ACCESS:SH-SITE-0001-B-L02-R05",
+      "floor_id": "SH-SITE-0001-B-L02",
+      "room_id": "SH-SITE-0001-B-L02-R05",
+      "via_room_id": "SH-SITE-0001-B-L02-R07",
+      "classification": "J2",
+      "operational_assumption": "J2-authorized personnel within the same controlled working suite; staff-tagged support rooms do not grant ordinary staff access.",
+      "geometry_security_sha256": "69cde38f72664d7afad5478e3fa3af455d66513855bff050b25945686d8562a4",
+      "site_id": "SH-SITE-0001",
+      "outcome": "PASS",
+      "errors": [],
+      "waypoints_m": [
+        [
+          2.7432,
+          28.651200000000003
+        ],
+        [
+          5.4864,
+          28.6512
+        ],
+        [
+          16.4592,
+          17.6784
+        ],
+        [
+          32.9184,
+          15.849599999999999
+        ]
+      ],
+      "room_ids": [
+        "SH-SITE-0001-B-L02-R05",
+        "SH-SITE-0001-B-L02-R07"
+      ],
+      "door_ids": [
+        "SH-SITE-0001-B-L02-R05:door",
+        "SH-SITE-0001-B-L02-R07:door"
+      ],
+      "segments": [
+        {
+          "index": 0,
+          "from_m": [
+            2.7432,
+            28.651200000000003
+          ],
+          "to_m": [
+            5.4864,
+            28.6512
+          ],
+          "containing_rect_m": [
+            0.0,
+            25.6032,
+            5.4864,
+            6.096
+          ],
+          "verified": true,
+          "basis": "Straight segment contained in convex source rectangle; furniture and clear width unassessed"
+        },
+        {
+          "index": 1,
+          "from_m": [
+            5.4864,
+            28.6512
+          ],
+          "to_m": [
+            16.4592,
+            17.6784
+          ],
+          "containing_rect_m": [
+            5.4864,
+            17.6784,
+            21.9456,
+            14.0208
+          ],
+          "verified": true,
+          "basis": "Straight segment contained in convex source rectangle; furniture and clear width unassessed"
+        },
+        {
+          "index": 2,
+          "from_m": [
+            16.4592,
+            17.6784
+          ],
+          "to_m": [
+            32.9184,
+            15.849599999999999
+          ],
+          "containing_rect_m": [
+            5.4864,
+            14.0208,
+            54.864,
+            3.6576
+          ],
+          "verified": true,
+          "basis": "Straight segment contained in convex source rectangle; furniture and clear width unassessed"
+        }
+      ],
+      "coordinate_frame": "floor_local_metres",
+      "egress_certified": false,
+      "corridor_name": "Staff circulation"
+    },
+    {
+      "id": "SH-ACCESS:SH-SITE-0001-B-L02-R06",
+      "floor_id": "SH-SITE-0001-B-L02",
+      "room_id": "SH-SITE-0001-B-L02-R06",
+      "via_room_id": "SH-SITE-0001-B-L02-R07",
+      "classification": "J2",
+      "operational_assumption": "J2-authorized personnel within the same controlled working suite; staff-tagged support rooms do not grant ordinary staff access.",
+      "geometry_security_sha256": "fd2a8f53c61d5d3bf3a6078e0d067069c91a026d0c3432019a2db076b6a03804",
+      "site_id": "SH-SITE-0001",
+      "outcome": "PASS",
+      "errors": [],
+      "waypoints_m": [
+        [
+          2.7432,
+          22.5552
+        ],
+        [
+          5.4864,
+          22.5552
+        ],
+        [
+          16.4592,
+          17.6784
+        ],
+        [
+          32.9184,
+          15.849599999999999
+        ]
+      ],
+      "room_ids": [
+        "SH-SITE-0001-B-L02-R06",
+        "SH-SITE-0001-B-L02-R07"
+      ],
+      "door_ids": [
+        "SH-SITE-0001-B-L02-R06:door",
+        "SH-SITE-0001-B-L02-R07:door"
+      ],
+      "segments": [
+        {
+          "index": 0,
+          "from_m": [
+            2.7432,
+            22.5552
+          ],
+          "to_m": [
+            5.4864,
+            22.5552
+          ],
+          "containing_rect_m": [
+            0.0,
+            19.5072,
+            5.4864,
+            6.096
+          ],
+          "verified": true,
+          "basis": "Straight segment contained in convex source rectangle; furniture and clear width unassessed"
+        },
+        {
+          "index": 1,
+          "from_m": [
+            5.4864,
+            22.5552
+          ],
+          "to_m": [
+            16.4592,
+            17.6784
+          ],
+          "containing_rect_m": [
+            5.4864,
+            17.6784,
+            21.9456,
+            14.0208
+          ],
+          "verified": true,
+          "basis": "Straight segment contained in convex source rectangle; furniture and clear width unassessed"
+        },
+        {
+          "index": 2,
+          "from_m": [
+            16.4592,
+            17.6784
+          ],
+          "to_m": [
+            32.9184,
+            15.849599999999999
+          ],
+          "containing_rect_m": [
+            5.4864,
+            14.0208,
+            54.864,
+            3.6576
+          ],
+          "verified": true,
+          "basis": "Straight segment contained in convex source rectangle; furniture and clear width unassessed"
+        }
+      ],
+      "coordinate_frame": "floor_local_metres",
+      "egress_certified": false,
+      "corridor_name": "Staff circulation"
+    },
+    {
+      "id": "SH-ACCESS:SH-SITE-0001-B-L02-R09",
+      "floor_id": "SH-SITE-0001-B-L02",
+      "room_id": "SH-SITE-0001-B-L02-R09",
+      "via_room_id": "SH-SITE-0001-B-L02-R08",
+      "classification": "J2",
+      "operational_assumption": "J2-authorized personnel within the same controlled working suite; staff-tagged support rooms do not grant ordinary staff access.",
+      "geometry_security_sha256": "c12ea33e041606b4b36ff14c603183b949738675c7c7c19beb2ad13dc35dfb5d",
+      "site_id": "SH-SITE-0001",
+      "outcome": "PASS",
+      "errors": [],
+      "waypoints_m": [
+        [
+          63.0936,
+          28.651200000000003
+        ],
+        [
+          60.3504,
+          28.6512
+        ],
+        [
+          49.3776,
+          17.6784
+        ],
+        [
+          32.9184,
+          15.849599999999999
+        ]
+      ],
+      "room_ids": [
+        "SH-SITE-0001-B-L02-R09",
+        "SH-SITE-0001-B-L02-R08"
+      ],
+      "door_ids": [
+        "SH-SITE-0001-B-L02-R09:door",
+        "SH-SITE-0001-B-L02-R08:door"
+      ],
+      "segments": [
+        {
+          "index": 0,
+          "from_m": [
+            63.0936,
+            28.651200000000003
+          ],
+          "to_m": [
+            60.3504,
+            28.6512
+          ],
+          "containing_rect_m": [
+            60.3504,
+            25.6032,
+            5.4864,
+            6.096
+          ],
+          "verified": true,
+          "basis": "Straight segment contained in convex source rectangle; furniture and clear width unassessed"
+        },
+        {
+          "index": 1,
+          "from_m": [
+            60.3504,
+            28.6512
+          ],
+          "to_m": [
+            49.3776,
+            17.6784
+          ],
+          "containing_rect_m": [
+            38.4048,
+            17.6784,
+            21.9456,
+            14.0208
+          ],
+          "verified": true,
+          "basis": "Straight segment contained in convex source rectangle; furniture and clear width unassessed"
+        },
+        {
+          "index": 2,
+          "from_m": [
+            49.3776,
+            17.6784
+          ],
+          "to_m": [
+            32.9184,
+            15.849599999999999
+          ],
+          "containing_rect_m": [
+            5.4864,
+            14.0208,
+            54.864,
+            3.6576
+          ],
+          "verified": true,
+          "basis": "Straight segment contained in convex source rectangle; furniture and clear width unassessed"
+        }
+      ],
+      "coordinate_frame": "floor_local_metres",
+      "egress_certified": false,
+      "corridor_name": "Staff circulation"
+    },
+    {
+      "id": "SH-ACCESS:SH-SITE-0001-B-L02-R10",
+      "floor_id": "SH-SITE-0001-B-L02",
+      "room_id": "SH-SITE-0001-B-L02-R10",
+      "via_room_id": "SH-SITE-0001-B-L02-R08",
+      "classification": "J2",
+      "operational_assumption": "J2-authorized personnel within the same controlled working suite; staff-tagged support rooms do not grant ordinary staff access.",
+      "geometry_security_sha256": "22dab993ffe6c18f1749c604bd99e02ad4c11c1e86d93c94d3c4dd2b99cdc13e",
+      "site_id": "SH-SITE-0001",
+      "outcome": "PASS",
+      "errors": [],
+      "waypoints_m": [
+        [
+          63.0936,
+          22.5552
+        ],
+        [
+          60.3504,
+          22.5552
+        ],
+        [
+          49.3776,
+          17.6784
+        ],
+        [
+          32.9184,
+          15.849599999999999
+        ]
+      ],
+      "room_ids": [
+        "SH-SITE-0001-B-L02-R10",
+        "SH-SITE-0001-B-L02-R08"
+      ],
+      "door_ids": [
+        "SH-SITE-0001-B-L02-R10:door",
+        "SH-SITE-0001-B-L02-R08:door"
+      ],
+      "segments": [
+        {
+          "index": 0,
+          "from_m": [
+            63.0936,
+            22.5552
+          ],
+          "to_m": [
+            60.3504,
+            22.5552
+          ],
+          "containing_rect_m": [
+            60.3504,
+            19.5072,
+            5.4864,
+            6.096
+          ],
+          "verified": true,
+          "basis": "Straight segment contained in convex source rectangle; furniture and clear width unassessed"
+        },
+        {
+          "index": 1,
+          "from_m": [
+            60.3504,
+            22.5552
+          ],
+          "to_m": [
+            49.3776,
+            17.6784
+          ],
+          "containing_rect_m": [
+            38.4048,
+            17.6784,
+            21.9456,
+            14.0208
+          ],
+          "verified": true,
+          "basis": "Straight segment contained in convex source rectangle; furniture and clear width unassessed"
+        },
+        {
+          "index": 2,
+          "from_m": [
+            49.3776,
+            17.6784
+          ],
+          "to_m": [
+            32.9184,
+            15.849599999999999
+          ],
+          "containing_rect_m": [
+            5.4864,
+            14.0208,
+            54.864,
+            3.6576
+          ],
+          "verified": true,
+          "basis": "Straight segment contained in convex source rectangle; furniture and clear width unassessed"
+        }
+      ],
+      "coordinate_frame": "floor_local_metres",
+      "egress_certified": false,
+      "corridor_name": "Staff circulation"
+    },
+    {
+      "id": "SH-ACCESS:SH-SITE-0001-C-L01-R06",
+      "floor_id": "SH-SITE-0001-C-L01",
+      "room_id": "SH-SITE-0001-C-L01-R06",
+      "via_room_id": "SH-SITE-0001-C-L01-R05",
+      "classification": "service",
+      "operational_assumption": "Kitchen staff service connection through dining; coordinate service movements with occupied dining and control kitchen entry against public access.",
+      "geometry_security_sha256": "2835277706ec2a12fa82aa494708441c2790ebc6bc7128f00faf24555cbf5b59",
+      "site_id": "SH-SITE-0001",
+      "outcome": "PASS",
+      "errors": [],
+      "waypoints_m": [
+        [
+          42.062400000000004,
+          6.096
+        ],
+        [
+          37.7952,
+          5.4864
+        ],
+        [
+          29.8704,
+          12.192
+        ],
+        [
+          25.6032,
+          13.716000000000001
+        ]
+      ],
+      "room_ids": [
+        "SH-SITE-0001-C-L01-R06",
+        "SH-SITE-0001-C-L01-R05"
+      ],
+      "door_ids": [
+        "SH-SITE-0001-C-L01-R06:door",
+        "SH-SITE-0001-C-L01-R05:door"
+      ],
+      "segments": [
+        {
+          "index": 0,
+          "from_m": [
+            42.062400000000004,
+            6.096
+          ],
+          "to_m": [
+            37.7952,
+            5.4864
+          ],
+          "containing_rect_m": [
+            37.7952,
+            0.0,
+            8.5344,
+            12.192
+          ],
+          "verified": true,
+          "basis": "Straight segment contained in convex source rectangle; furniture and clear width unassessed"
+        },
+        {
+          "index": 1,
+          "from_m": [
+            37.7952,
+            5.4864
+          ],
+          "to_m": [
+            29.8704,
+            12.192
+          ],
+          "containing_rect_m": [
+            21.9456,
+            0.0,
+            15.8496,
+            12.192
+          ],
+          "verified": true,
+          "basis": "Straight segment contained in convex source rectangle; furniture and clear width unassessed"
+        },
+        {
+          "index": 2,
+          "from_m": [
+            29.8704,
+            12.192
+          ],
+          "to_m": [
+            25.6032,
+            13.716000000000001
+          ],
+          "containing_rect_m": [
+            0.0,
+            12.192,
+            51.2064,
+            3.048
+          ],
+          "verified": true,
+          "basis": "Straight segment contained in convex source rectangle; furniture and clear width unassessed"
+        }
+      ],
+      "coordinate_frame": "floor_local_metres",
+      "egress_certified": false,
+      "corridor_name": "10 ft shared teaching circulation"
+    }
+  ],
+  "campus_routes": [
+    {
+      "id": "SH-ACCESS:SH-SITE-0001:public_arrival_m",
+      "site_id": "SH-SITE-0001",
+      "classification": "public",
+      "coordinate_frame": "site_local_metres",
+      "waypoints_m": [
+        [
+          128.016,
+          0.0
+        ],
+        [
+          128.016,
+          40.2336
+        ],
+        [
+          78.0288,
+          40.2336
+        ],
+        [
+          78.0288,
+          46.3296
+        ]
+      ],
+      "outcome": "PASS",
+      "segments": [
+        {
+          "from_m": [
+            128.016,
+            0.0
+          ],
+          "to_m": [
+            128.016,
+            40.2336
+          ],
+          "verified": true
+        },
+        {
+          "from_m": [
+            128.016,
+            40.2336
+          ],
+          "to_m": [
+            78.0288,
+            40.2336
+          ],
+          "verified": true
+        },
+        {
+          "from_m": [
+            78.0288,
+            40.2336
+          ],
+          "to_m": [
+            78.0288,
+            46.3296
+          ],
+          "verified": true
+        }
+      ],
+      "basis": "Source centre-line within modelled envelope; width, grades, barriers and crossing operations not assessed",
+      "egress_certified": false
+    },
+    {
+      "id": "SH-ACCESS:SH-SITE-0001:education_entry_m",
+      "site_id": "SH-SITE-0001",
+      "classification": "public",
+      "coordinate_frame": "site_local_metres",
+      "waypoints_m": [
+        [
+          128.016,
+          40.2336
+        ],
+        [
+          156.0576,
+          40.2336
+        ],
+        [
+          156.0576,
+          51.816
+        ]
+      ],
+      "outcome": "PASS",
+      "segments": [
+        {
+          "from_m": [
+            128.016,
+            40.2336
+          ],
+          "to_m": [
+            156.0576,
+            40.2336
+          ],
+          "verified": true
+        },
+        {
+          "from_m": [
+            156.0576,
+            40.2336
+          ],
+          "to_m": [
+            156.0576,
+            51.816
+          ],
+          "verified": true
+        }
+      ],
+      "basis": "Source centre-line within modelled envelope; width, grades, barriers and crossing operations not assessed",
+      "egress_certified": false
+    },
+    {
+      "id": "SH-ACCESS:SH-SITE-0001:pedestrian_spine_m",
+      "site_id": "SH-SITE-0001",
+      "classification": "staff",
+      "coordinate_frame": "site_local_metres",
+      "waypoints_m": [
+        [
+          126.492,
+          40.2336
+        ],
+        [
+          126.492,
+          156.972
+        ]
+      ],
+      "outcome": "PASS",
+      "segments": [
+        {
+          "from_m": [
+            126.492,
+            40.2336
+          ],
+          "to_m": [
+            126.492,
+            156.972
+          ],
+          "verified": true
+        }
+      ],
+      "basis": "Source centre-line within modelled envelope; width, grades, barriers and crossing operations not assessed",
+      "egress_certified": false
+    },
+    {
+      "id": "SH-ACCESS:SH-SITE-0001:east_west_walk_m",
+      "site_id": "SH-SITE-0001",
+      "classification": "staff",
+      "coordinate_frame": "site_local_metres",
+      "waypoints_m": [
+        [
+          38.4048,
+          98.7552
+        ],
+        [
+          202.3872,
+          98.7552
+        ]
+      ],
+      "outcome": "PASS",
+      "segments": [
+        {
+          "from_m": [
+            38.4048,
+            98.7552
+          ],
+          "to_m": [
+            202.3872,
+            98.7552
+          ],
+          "verified": true
+        }
+      ],
+      "basis": "Source centre-line within modelled envelope; width, grades, barriers and crossing operations not assessed",
+      "egress_certified": false
+    },
+    {
+      "id": "SH-ACCESS:SH-SITE-0001:j2_controlled_entry_m",
+      "site_id": "SH-SITE-0001",
+      "classification": "J2",
+      "coordinate_frame": "site_local_metres",
+      "waypoints_m": [
+        [
+          78.0288,
+          98.7552
+        ],
+        [
+          78.0288,
+          112.776
+        ]
+      ],
+      "outcome": "PASS",
+      "segments": [
+        {
+          "from_m": [
+            78.0288,
+            98.7552
+          ],
+          "to_m": [
+            78.0288,
+            112.776
+          ],
+          "verified": true
+        }
+      ],
+      "basis": "Source centre-line within modelled envelope; width, grades, barriers and crossing operations not assessed",
+      "egress_certified": false
+    },
+    {
+      "id": "SH-ACCESS:SH-SITE-0001:residential_arrival_m",
+      "site_id": "SH-SITE-0001",
+      "classification": "residential",
+      "coordinate_frame": "site_local_metres",
+      "waypoints_m": [
+        [
+          168.2496,
+          98.7552
+        ],
+        [
+          168.2496,
+          123.7488
+        ]
+      ],
+      "outcome": "PASS",
+      "segments": [
+        {
+          "from_m": [
+            168.2496,
+            98.7552
+          ],
+          "to_m": [
+            168.2496,
+            123.7488
+          ],
+          "verified": true
+        }
+      ],
+      "basis": "Source centre-line within modelled envelope; width, grades, barriers and crossing operations not assessed",
+      "egress_certified": false
+    },
+    {
+      "id": "SH-ACCESS:SH-SITE-0001:service_arrival_m",
+      "site_id": "SH-SITE-0001",
+      "classification": "service",
+      "coordinate_frame": "site_local_metres",
+      "waypoints_m": [
+        [
+          242.9256,
+          48.1584
+        ],
+        [
+          198.7296,
+          48.1584
+        ],
+        [
+          184.7088,
+          51.816
+        ]
+      ],
+      "outcome": "PASS",
+      "segments": [
+        {
+          "from_m": [
+            242.9256,
+            48.1584
+          ],
+          "to_m": [
+            198.7296,
+            48.1584
+          ],
+          "verified": true
+        },
+        {
+          "from_m": [
+            198.7296,
+            48.1584
+          ],
+          "to_m": [
+            184.7088,
+            51.816
+          ],
+          "verified": true
+        }
+      ],
+      "basis": "Source centre-line within modelled envelope; width, grades, barriers and crossing operations not assessed",
+      "egress_certified": false
+    },
+    {
+      "id": "SH-ACCESS:SH-SITE-0001:fire_service_loop_m",
+      "site_id": "SH-SITE-0001",
+      "classification": "service",
+      "coordinate_frame": "site_local_metres",
+      "waypoints_m": [
+        [
+          13.1064,
+          13.1064
+        ],
+        [
+          242.9256,
+          13.1064
+        ],
+        [
+          242.9256,
+          169.7736
+        ],
+        [
+          13.1064,
+          169.7736
+        ],
+        [
+          13.1064,
+          13.1064
+        ]
+      ],
+      "outcome": "PASS",
+      "segments": [
+        {
+          "from_m": [
+            13.1064,
+            13.1064
+          ],
+          "to_m": [
+            242.9256,
+            13.1064
+          ],
+          "verified": true
+        },
+        {
+          "from_m": [
+            242.9256,
+            13.1064
+          ],
+          "to_m": [
+            242.9256,
+            169.7736
+          ],
+          "verified": true
+        },
+        {
+          "from_m": [
+            242.9256,
+            169.7736
+          ],
+          "to_m": [
+            13.1064,
+            169.7736
+          ],
+          "verified": true
+        },
+        {
+          "from_m": [
+            13.1064,
+            169.7736
+          ],
+          "to_m": [
+            13.1064,
+            13.1064
+          ],
+          "verified": true
+        }
+      ],
+      "basis": "Source centre-line within modelled envelope; width, grades, barriers and crossing operations not assessed",
+      "egress_certified": false
+    }
+  ],
+  "summary": {
+    "reviewed_rooms": 21,
+    "reviewed_floors": 6,
+    "verified_routes": 21,
+    "failures": 0,
+    "status": "PASS",
+    "engineering_certified": false
+  }
+}

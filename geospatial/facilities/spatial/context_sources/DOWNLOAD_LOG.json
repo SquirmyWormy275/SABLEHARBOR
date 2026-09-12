@@ -1,0 +1,76 @@
+[
+  {
+    "path": "geospatial/facilities/spatial/context_sources/sacrt_gtfs.zip",
+    "request_url": "https://apps.sacrt.com/gtfs/srtd/google_transit.zip",
+    "http_status": 200,
+    "headers": {
+      "Content-Type": "application/x-zip-compressed",
+      "Last-Modified": "Thu, 16 Jul 2026 20:41:06 GMT",
+      "Accept-Ranges": "bytes",
+      "ETag": "\"2e46c66c6315dd1:0\"",
+      "Server": "Microsoft-IIS/10.0",
+      "X-Powered-By": "ASP.NET",
+      "Date": "Fri, 11 Sep 2026 23:20:47 GMT",
+      "Connection": "close",
+      "Content-Length": "2653599"
+    },
+    "sha256": "0cba904551cea8cfd134e02bf1421b72df2237b94f4e31eb8a5049e21e093a33",
+    "snapshot_date": "2026-09-11",
+    "error": null
+  },
+  {
+    "path": "geospatial/facilities/spatial/context_sources/sacrt_license.html",
+    "request_url": "https://www.sacrt.com/transit-data-portal/",
+    "snapshot_date": "2026-09-11",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "path": "geospatial/facilities/spatial/context_sources/usgs_elevation_service.json",
+    "request_url": "https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer?f=pjson",
+    "http_status": 200,
+    "headers": {
+      "Content-Type": "text/plain;charset=UTF-8",
+      "Transfer-Encoding": "chunked",
+      "Connection": "close",
+      "Date": "Fri, 11 Sep 2026 23:20:47 GMT",
+      "X-XSS-Protection": "1; mode=block",
+      "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+      "Server": "nginx",
+      "Cache-Control": "max-age=0,must-revalidate",
+      "ETag": "W/\"4364c3c4\"",
+      "Access-Control-Allow-Origin": "*",
+      "X-Frame-Options": "SAMEORIGIN",
+      "X-Content-Type-Options": "nosniff",
+      "Vary": "Accept-Encoding",
+      "X-Cache": "Miss from cloudfront",
+      "Via": "1.1 8613f77d46dfca83de5d13b6b163ab6e.cloudfront.net (CloudFront)",
+      "X-Amz-Cf-Pop": "SFO5-P3",
+      "X-Amz-Cf-Id": "qmucZRO0RNOBA4lzO4LSthr8N2h8NYwz-4L3q_UQHTNIEpd0nzkE6w=="
+    },
+    "sha256": "a300a739a6e47627d1cd6921fca368004d88a8ac62d6d32c64571c669e4349bb",
+    "snapshot_date": "2026-09-11",
+    "error": null
+  },
+  {
+    "path": "geospatial/facilities/spatial/context_sources/sacog_bikeway_service.json",
+    "request_url": "https://services.sacog.org/hosting/rest/services/Transportation/Existing_Bikeway/FeatureServer/0?f=pjson",
+    "http_status": 200,
+    "headers": {
+      "Cache-Control": "must-revalidate,max-age=0,public",
+      "Transfer-Encoding": "chunked",
+      "Content-Type": "text/plain; charset=UTF-8",
+      "ETag": "\"79d2193c4eb2272c5726a95c8f157a567be2aff106782e7e0d3e7dfecca8763b\"",
+      "Vary": "Origin",
+      "Server": "Microsoft-IIS/10.0",
+      "Content-Security-Policy": "script-src 'self';",
+      "X-Content-Type-Options": "nosniff",
+      "Set-Cookie": "AGS_ROLES=sym-gcm|1|IWTS3qrKUoFP933ZPq0r5Q==|xoJKosCUQm-h16dBAD72O7VU8S_vAaoPdZImgvRI; Max-Age=60; Expires=Fri, 11 Sep 2026 23:21:47 GMT; Path=/hosting/rest; HttpOnly; SameSite=Lax",
+      "X-Powered-By": "ASP.NET",
+      "Date": "Fri, 11 Sep 2026 23:20:47 GMT",
+      "Connection": "close"
+    },
+    "sha256": "bcb61ee40e3f267a56170fce91f841f32294affd096cfa992ef8bb847941a691",
+    "snapshot_date": "2026-09-11",
+    "error": null
+  }
+]

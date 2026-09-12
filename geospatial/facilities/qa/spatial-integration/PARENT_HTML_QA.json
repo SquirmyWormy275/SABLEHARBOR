@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "errors": [],
+  "source_sha256": {
+    "geospatial/maps/index.html": "97deeb4349779a0f08465cbc5651d1a79788a8955e54664af5ad57205d028b6f",
+    "geospatial/maps/workbench.html": "07a3c2554a2851275dfb7c6c250022b6ccc76cf74fd77796a73ee1647b5e773e"
+  },
+  "screenshots": {
+    "/home/kingoftheeast/Projects/SABLEHARBOR-campus/geospatial/facilities/qa/spatial-integration/index-1440.png": "4c699ff4ba3f43e9527e4d7654a3daa5dfc91b755902cbb77d3303efd99a30aa",
+    "/home/kingoftheeast/Projects/SABLEHARBOR-campus/geospatial/facilities/qa/spatial-integration/workbench-1440.png": "985105eb3bf6ad061c828d520379fd035aadee2e1bc3ab4c63b5db56e838c706",
+    "/home/kingoftheeast/Projects/SABLEHARBOR-campus/geospatial/facilities/qa/spatial-integration/readiness-1440.png": "9bd46e14580941f12a9871deac39a4965fa3eaf452f5ee783c598d18bcaa301b",
+    "/home/kingoftheeast/Projects/SABLEHARBOR-campus/geospatial/facilities/qa/spatial-integration/impacts-1440.png": "c28958242ecaf96fb7a9ec474088cc1ce7008220f6eb92f6d1e424e74569362a",
+    "/home/kingoftheeast/Projects/SABLEHARBOR-campus/geospatial/facilities/qa/spatial-integration/index-390.png": "7d435a829a043478286bec334c2e81c657158ae2264f94672026529294bc74f2",
+    "/home/kingoftheeast/Projects/SABLEHARBOR-campus/geospatial/facilities/qa/spatial-integration/workbench-390.png": "b31f24194b2c29aa30d07574fbd0a0dd93345ad4448de87a2000ec7280465bb6",
+    "/home/kingoftheeast/Projects/SABLEHARBOR-campus/geospatial/facilities/qa/spatial-integration/readiness-390.png": "9d3e36f8e3fce0f4165d4c3a7b2721f19c3db73c7adb447d017dd61ab6842cd2",
+    "/home/kingoftheeast/Projects/SABLEHARBOR-campus/geospatial/facilities/qa/spatial-integration/impacts-390.png": "094aeb86f959bf462efec2405762dcb378a5d00af1fef74fc3cb48cae8455356"
+  }
+}

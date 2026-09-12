@@ -1,0 +1,5 @@
+{
+  "request_url": "https://services.sacog.org/hosting/rest/services/Transportation/Existing_Bikeway/FeatureServer/0/query?where=1%3D1&geometry=-121.515%2C38.575%2C-121.47%2C38.62&geometryType=esriGeometryEnvelope&inSR=4326&outSR=4326&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID%2CFULLSTREET%2CBIKE_CLASS%2CName%2CJuris&returnGeometry=true&f=json",
+  "response_sha256": "9a5a69c83efd68e4eca57c05e90a02a9b62344fb4bf2c1fd3c13a5b42a4e1b71",
+  "snapshot_date": "2026-09-11"
+}

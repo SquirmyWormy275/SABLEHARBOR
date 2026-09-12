@@ -45,3 +45,5 @@ The census command is `python geospatial/scripts/census.py --ref <accepted-canon
 ## Facility planning workbench
 
 [Open the offline workbench](maps/workbench.html) for capacity scenarios, source-change impacts, architectural readiness and controlled evidence intake. [Methods and commands](facilities/workbench/README.md).
+
+[Spatial review and architectural addendum](facilities/spatial/README.md) adds coordinated building views and official Sacramento reference layers to the existing atlas.

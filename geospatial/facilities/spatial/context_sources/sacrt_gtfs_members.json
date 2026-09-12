@@ -1,0 +1,39 @@
+{
+  "archive_sha256": "0cba904551cea8cfd134e02bf1421b72df2237b94f4e31eb8a5049e21e093a33",
+  "request_url": "https://apps.sacrt.com/gtfs/srtd/google_transit.zip",
+  "snapshot_date": "2026-09-11",
+  "preserved_members": [
+    {
+      "archive_member": "stops.txt",
+      "saved_path": "sacrt_stops.txt",
+      "sha256": "0393341c6edb2892e02e34cd1804737d651e9220e1164d0f0204a5d08de133a0"
+    },
+    {
+      "archive_member": "routes.txt",
+      "saved_path": "sacrt_routes.txt",
+      "sha256": "d73e3e9035505f213d66e1b3b3de82dc7891dce95b90ef128d45aceb2840fadd"
+    },
+    {
+      "archive_member": "calendar.txt",
+      "saved_path": "sacrt_calendar.txt",
+      "sha256": "af74aa4d20139361ef2f3c3508decb7044a07d67eb868c04d3fe034764f02d88"
+    },
+    {
+      "archive_member": "calendar_dates.txt",
+      "saved_path": "sacrt_calendar_dates.txt",
+      "sha256": "04d81a9d43a7b143be12c14dbca7d6388253ed71bb817354096d693d8a9b6203"
+    },
+    {
+      "archive_member": "feed_info.txt",
+      "saved_path": "sacrt_feed_info.txt",
+      "sha256": "66afe7ccbabca3b6b9ce834a38e0634cf5a2ada08ecbcdbaeb3a8cab41271733"
+    },
+    {
+      "archive_member": "agency.txt",
+      "saved_path": "sacrt_agency.txt",
+      "sha256": "fca209eebd5b2d865d996b3c5032f258383eeca74ec5cb3682ae90079ff89c17"
+    }
+  ],
+  "license_url": "https://www.sacrt.com/transit-data-portal/",
+  "license": "SacRT grants limited revocable use/reproduction/redistribution subject to portal terms; no trademarks used; data as-is. Portal viewed with web browser; direct archival HTTP403 recorded."
+}

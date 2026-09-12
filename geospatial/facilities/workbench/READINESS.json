@@ -2,10 +2,11 @@
   "schema_version": "1.0.0",
   "assessment": "ARCHITECTURAL_CONCEPT_READINESS_NOT_CODE_CERTIFICATION",
   "source_sha256": {
+    "geospatial/facilities/spatial/ACCESS_POLICY.json": "bb1a62da4ae388077ab841263cc01f8a2ff21b26eb6afc6165d7c6e2f75f70c0",
     "geospatial/facilities/source/campus.json": "0efd4854069ff20acb4032e02b021afebcb955990f1d684b51428624e281d950",
     "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
     "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
-    "geospatial/facilities/RUNTIME_BRIDGE.json": "764b0fdb51475396c13d88a9ba365ac34b1a4f4a0f9608d5bf43fb09ccc2e946"
+    "geospatial/facilities/RUNTIME_BRIDGE.json": "136491785df28eb6db3ce4f5737c71d1629d08bb8da7879f44d768a76a93e06b"
   },
   "checks": [
     {
@@ -30,7 +31,7 @@
       "scope": "SH-FAC-FORT-BIG-L01",
       "severity": "INFO",
       "outcome": "NOT_ASSESSED",
-      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires explicit review, not an invented route.",
+      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires source-locked, geometrically verified and operationally scoped ACCESS_POLICY routes.",
       "evidence": {
         "source": "geospatial/facilities/source/research_campuses.json",
         "site_id": "SH-SITE-0003",
@@ -47,7 +48,10 @@
           "SH-FAC-FORT-BIG-L01-R07"
         ],
         "invalid_doors": [],
-        "no_direct_circulation": []
+        "no_direct_circulation": [],
+        "validated_indirect_routes": [],
+        "unresolved_indirect_access": [],
+        "failed_access_routes": []
       },
       "next_action": "Record missing routes and resolve invalid doors; review indirect access and full opening/swing clearances."
     },
@@ -110,7 +114,7 @@
       "scope": "SH-FAC-FORT-SMALL-L01",
       "severity": "INFO",
       "outcome": "NOT_ASSESSED",
-      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires explicit review, not an invented route.",
+      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires source-locked, geometrically verified and operationally scoped ACCESS_POLICY routes.",
       "evidence": {
         "source": "geospatial/facilities/source/research_campuses.json",
         "site_id": "SH-SITE-0003",
@@ -124,7 +128,10 @@
           "SH-FAC-FORT-SMALL-L01-R04"
         ],
         "invalid_doors": [],
-        "no_direct_circulation": []
+        "no_direct_circulation": [],
+        "validated_indirect_routes": [],
+        "unresolved_indirect_access": [],
+        "failed_access_routes": []
       },
       "next_action": "Record missing routes and resolve invalid doors; review indirect access and full opening/swing clearances."
     },
@@ -169,7 +176,7 @@
       "scope": "SH-FAC-FORT-SMALL-L02",
       "severity": "INFO",
       "outcome": "NOT_ASSESSED",
-      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires explicit review, not an invented route.",
+      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires source-locked, geometrically verified and operationally scoped ACCESS_POLICY routes.",
       "evidence": {
         "source": "geospatial/facilities/source/research_campuses.json",
         "site_id": "SH-SITE-0003",
@@ -187,7 +194,10 @@
           "SH-FAC-FORT-SMALL-L02-R05"
         ],
         "invalid_doors": [],
-        "no_direct_circulation": []
+        "no_direct_circulation": [],
+        "validated_indirect_routes": [],
+        "unresolved_indirect_access": [],
+        "failed_access_routes": []
       },
       "next_action": "Record missing routes and resolve invalid doors; review indirect access and full opening/swing clearances."
     },
@@ -250,7 +260,7 @@
       "scope": "SH-FAC-FORT-WHITE-L01",
       "severity": "INFO",
       "outcome": "NOT_ASSESSED",
-      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires explicit review, not an invented route.",
+      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires source-locked, geometrically verified and operationally scoped ACCESS_POLICY routes.",
       "evidence": {
         "source": "geospatial/facilities/source/research_campuses.json",
         "site_id": "SH-SITE-0003",
@@ -264,7 +274,10 @@
           "SH-FAC-FORT-WHITE-L01-R04"
         ],
         "invalid_doors": [],
-        "no_direct_circulation": []
+        "no_direct_circulation": [],
+        "validated_indirect_routes": [],
+        "unresolved_indirect_access": [],
+        "failed_access_routes": []
       },
       "next_action": "Record missing routes and resolve invalid doors; review indirect access and full opening/swing clearances."
     },
@@ -327,7 +340,7 @@
       "scope": "SH-IND-FAC-ARU-OFFICE-B01-L01",
       "severity": "INFO",
       "outcome": "NOT_ASSESSED",
-      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires explicit review, not an invented route.",
+      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires source-locked, geometrically verified and operationally scoped ACCESS_POLICY routes.",
       "evidence": {
         "source": "geospatial/facilities/source/industrial_facilities.json",
         "site_id": "SH-IND-FAC-ARU-OFFICE",
@@ -343,7 +356,10 @@
           "SH-IND-FAC-ARU-OFFICE-B01-L01-R06"
         ],
         "invalid_doors": [],
-        "no_direct_circulation": []
+        "no_direct_circulation": [],
+        "validated_indirect_routes": [],
+        "unresolved_indirect_access": [],
+        "failed_access_routes": []
       },
       "next_action": "Record missing routes and resolve invalid doors; review indirect access and full opening/swing clearances."
     },
@@ -741,7 +757,7 @@
       "scope": "SH-IND-FAC-RAW-WAREHOUSE-B01-L01",
       "severity": "INFO",
       "outcome": "NOT_ASSESSED",
-      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires explicit review, not an invented route.",
+      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires source-locked, geometrically verified and operationally scoped ACCESS_POLICY routes.",
       "evidence": {
         "source": "geospatial/facilities/source/industrial_facilities.json",
         "site_id": "SH-IND-FAC-RAW-WAREHOUSE",
@@ -757,7 +773,10 @@
           "SH-IND-FAC-RAW-WAREHOUSE-B01-L01-R06"
         ],
         "invalid_doors": [],
-        "no_direct_circulation": []
+        "no_direct_circulation": [],
+        "validated_indirect_routes": [],
+        "unresolved_indirect_access": [],
+        "failed_access_routes": []
       },
       "next_action": "Record missing routes and resolve invalid doors; review indirect access and full opening/swing clearances."
     },
@@ -1015,7 +1034,7 @@
       "scope": "SH-IND-FAC-TAY-TRUCK-B01-L01",
       "severity": "INFO",
       "outcome": "NOT_ASSESSED",
-      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires explicit review, not an invented route.",
+      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires source-locked, geometrically verified and operationally scoped ACCESS_POLICY routes.",
       "evidence": {
         "source": "geospatial/facilities/source/industrial_facilities.json",
         "site_id": "SH-IND-FAC-TAY-TRUCK",
@@ -1029,7 +1048,10 @@
           "SH-IND-FAC-TAY-TRUCK-B01-L01-R04"
         ],
         "invalid_doors": [],
-        "no_direct_circulation": []
+        "no_direct_circulation": [],
+        "validated_indirect_routes": [],
+        "unresolved_indirect_access": [],
+        "failed_access_routes": []
       },
       "next_action": "Record missing routes and resolve invalid doors; review indirect access and full opening/swing clearances."
     },
@@ -1147,7 +1169,7 @@
       "scope": "SH-IND-FAC-TAY-WAREHOUSE-B01-L01",
       "severity": "INFO",
       "outcome": "NOT_ASSESSED",
-      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires explicit review, not an invented route.",
+      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires source-locked, geometrically verified and operationally scoped ACCESS_POLICY routes.",
       "evidence": {
         "source": "geospatial/facilities/source/industrial_facilities.json",
         "site_id": "SH-IND-FAC-TAY-WAREHOUSE",
@@ -1163,7 +1185,10 @@
           "SH-IND-FAC-TAY-WAREHOUSE-B01-L01-R06"
         ],
         "invalid_doors": [],
-        "no_direct_circulation": []
+        "no_direct_circulation": [],
+        "validated_indirect_routes": [],
+        "unresolved_indirect_access": [],
+        "failed_access_routes": []
       },
       "next_action": "Record missing routes and resolve invalid doors; review indirect access and full opening/swing clearances."
     },
@@ -1281,7 +1306,7 @@
       "scope": "SH-IND-FAC-TAY-YARD-B01-L01",
       "severity": "INFO",
       "outcome": "NOT_ASSESSED",
-      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires explicit review, not an invented route.",
+      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires source-locked, geometrically verified and operationally scoped ACCESS_POLICY routes.",
       "evidence": {
         "source": "geospatial/facilities/source/industrial_facilities.json",
         "site_id": "SH-IND-FAC-TAY-YARD",
@@ -1294,7 +1319,10 @@
           "SH-IND-FAC-TAY-YARD-B01-L01-R03"
         ],
         "invalid_doors": [],
-        "no_direct_circulation": []
+        "no_direct_circulation": [],
+        "validated_indirect_routes": [],
+        "unresolved_indirect_access": [],
+        "failed_access_routes": []
       },
       "next_action": "Record missing routes and resolve invalid doors; review indirect access and full opening/swing clearances."
     },
@@ -1357,7 +1385,7 @@
       "scope": "SH-IND-FAC-TAY-YARD-B02-L01",
       "severity": "INFO",
       "outcome": "NOT_ASSESSED",
-      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires explicit review, not an invented route.",
+      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires source-locked, geometrically verified and operationally scoped ACCESS_POLICY routes.",
       "evidence": {
         "source": "geospatial/facilities/source/industrial_facilities.json",
         "site_id": "SH-IND-FAC-TAY-YARD",
@@ -1373,7 +1401,10 @@
           "SH-IND-FAC-TAY-YARD-B02-L01-R06"
         ],
         "invalid_doors": [],
-        "no_direct_circulation": []
+        "no_direct_circulation": [],
+        "validated_indirect_routes": [],
+        "unresolved_indirect_access": [],
+        "failed_access_routes": []
       },
       "next_action": "Record missing routes and resolve invalid doors; review indirect access and full opening/swing clearances."
     },
@@ -1561,9 +1592,9 @@
     {
       "id": "SH-READY:SH-SITE-0001-A-L01:door-circulation-access",
       "scope": "SH-SITE-0001-A-L01",
-      "severity": "WARNING",
-      "outcome": "REVIEW",
-      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires explicit review, not an invented route.",
+      "severity": "INFO",
+      "outcome": "PASS",
+      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires source-locked, geometrically verified and operationally scoped ACCESS_POLICY routes.",
       "evidence": {
         "source": "geospatial/facilities/source/campus.json",
         "site_id": "SH-SITE-0001",
@@ -1577,7 +1608,15 @@
           "SH-SITE-0001-A-L01-R02",
           "SH-SITE-0001-A-L01-R03",
           "SH-SITE-0001-A-L01-R04"
-        ]
+        ],
+        "validated_indirect_routes": [
+          "SH-ACCESS:SH-SITE-0001-A-L01-R01",
+          "SH-ACCESS:SH-SITE-0001-A-L01-R02",
+          "SH-ACCESS:SH-SITE-0001-A-L01-R03",
+          "SH-ACCESS:SH-SITE-0001-A-L01-R04"
+        ],
+        "unresolved_indirect_access": [],
+        "failed_access_routes": []
       },
       "next_action": "Record missing routes and resolve invalid doors; review indirect access and full opening/swing clearances."
     },
@@ -1625,9 +1664,9 @@
     {
       "id": "SH-READY:SH-SITE-0001-A-L02:door-circulation-access",
       "scope": "SH-SITE-0001-A-L02",
-      "severity": "WARNING",
-      "outcome": "REVIEW",
-      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires explicit review, not an invented route.",
+      "severity": "INFO",
+      "outcome": "PASS",
+      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires source-locked, geometrically verified and operationally scoped ACCESS_POLICY routes.",
       "evidence": {
         "source": "geospatial/facilities/source/campus.json",
         "site_id": "SH-SITE-0001",
@@ -1641,7 +1680,15 @@
           "SH-SITE-0001-A-L02-R02",
           "SH-SITE-0001-A-L02-R03",
           "SH-SITE-0001-A-L02-R04"
-        ]
+        ],
+        "validated_indirect_routes": [
+          "SH-ACCESS:SH-SITE-0001-A-L02-R01",
+          "SH-ACCESS:SH-SITE-0001-A-L02-R02",
+          "SH-ACCESS:SH-SITE-0001-A-L02-R03",
+          "SH-ACCESS:SH-SITE-0001-A-L02-R04"
+        ],
+        "unresolved_indirect_access": [],
+        "failed_access_routes": []
       },
       "next_action": "Record missing routes and resolve invalid doors; review indirect access and full opening/swing clearances."
     },
@@ -1689,9 +1736,9 @@
     {
       "id": "SH-READY:SH-SITE-0001-A-L03:door-circulation-access",
       "scope": "SH-SITE-0001-A-L03",
-      "severity": "WARNING",
-      "outcome": "REVIEW",
-      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires explicit review, not an invented route.",
+      "severity": "INFO",
+      "outcome": "PASS",
+      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires source-locked, geometrically verified and operationally scoped ACCESS_POLICY routes.",
       "evidence": {
         "source": "geospatial/facilities/source/campus.json",
         "site_id": "SH-SITE-0001",
@@ -1705,7 +1752,15 @@
           "SH-SITE-0001-A-L03-R02",
           "SH-SITE-0001-A-L03-R03",
           "SH-SITE-0001-A-L03-R04"
-        ]
+        ],
+        "validated_indirect_routes": [
+          "SH-ACCESS:SH-SITE-0001-A-L03-R01",
+          "SH-ACCESS:SH-SITE-0001-A-L03-R02",
+          "SH-ACCESS:SH-SITE-0001-A-L03-R03",
+          "SH-ACCESS:SH-SITE-0001-A-L03-R04"
+        ],
+        "unresolved_indirect_access": [],
+        "failed_access_routes": []
       },
       "next_action": "Record missing routes and resolve invalid doors; review indirect access and full opening/swing clearances."
     },
@@ -1923,9 +1978,9 @@
     {
       "id": "SH-READY:SH-SITE-0001-B-L01:door-circulation-access",
       "scope": "SH-SITE-0001-B-L01",
-      "severity": "WARNING",
-      "outcome": "REVIEW",
-      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires explicit review, not an invented route.",
+      "severity": "INFO",
+      "outcome": "PASS",
+      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires source-locked, geometrically verified and operationally scoped ACCESS_POLICY routes.",
       "evidence": {
         "source": "geospatial/facilities/source/campus.json",
         "site_id": "SH-SITE-0001",
@@ -1939,7 +1994,15 @@
           "SH-SITE-0001-B-L01-R06",
           "SH-SITE-0001-B-L01-R09",
           "SH-SITE-0001-B-L01-R10"
-        ]
+        ],
+        "validated_indirect_routes": [
+          "SH-ACCESS:SH-SITE-0001-B-L01-R05",
+          "SH-ACCESS:SH-SITE-0001-B-L01-R06",
+          "SH-ACCESS:SH-SITE-0001-B-L01-R09",
+          "SH-ACCESS:SH-SITE-0001-B-L01-R10"
+        ],
+        "unresolved_indirect_access": [],
+        "failed_access_routes": []
       },
       "next_action": "Record missing routes and resolve invalid doors; review indirect access and full opening/swing clearances."
     },
@@ -1987,9 +2050,9 @@
     {
       "id": "SH-READY:SH-SITE-0001-B-L02:door-circulation-access",
       "scope": "SH-SITE-0001-B-L02",
-      "severity": "WARNING",
-      "outcome": "REVIEW",
-      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires explicit review, not an invented route.",
+      "severity": "INFO",
+      "outcome": "PASS",
+      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires source-locked, geometrically verified and operationally scoped ACCESS_POLICY routes.",
       "evidence": {
         "source": "geospatial/facilities/source/campus.json",
         "site_id": "SH-SITE-0001",
@@ -2003,7 +2066,15 @@
           "SH-SITE-0001-B-L02-R06",
           "SH-SITE-0001-B-L02-R09",
           "SH-SITE-0001-B-L02-R10"
-        ]
+        ],
+        "validated_indirect_routes": [
+          "SH-ACCESS:SH-SITE-0001-B-L02-R05",
+          "SH-ACCESS:SH-SITE-0001-B-L02-R06",
+          "SH-ACCESS:SH-SITE-0001-B-L02-R09",
+          "SH-ACCESS:SH-SITE-0001-B-L02-R10"
+        ],
+        "unresolved_indirect_access": [],
+        "failed_access_routes": []
       },
       "next_action": "Record missing routes and resolve invalid doors; review indirect access and full opening/swing clearances."
     },
@@ -2186,9 +2257,9 @@
     {
       "id": "SH-READY:SH-SITE-0001-C-L01:door-circulation-access",
       "scope": "SH-SITE-0001-C-L01",
-      "severity": "WARNING",
-      "outcome": "REVIEW",
-      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires explicit review, not an invented route.",
+      "severity": "INFO",
+      "outcome": "PASS",
+      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires source-locked, geometrically verified and operationally scoped ACCESS_POLICY routes.",
       "evidence": {
         "source": "geospatial/facilities/source/campus.json",
         "site_id": "SH-SITE-0001",
@@ -2199,7 +2270,12 @@
         "invalid_doors": [],
         "no_direct_circulation": [
           "SH-SITE-0001-C-L01-R06"
-        ]
+        ],
+        "validated_indirect_routes": [
+          "SH-ACCESS:SH-SITE-0001-C-L01-R06"
+        ],
+        "unresolved_indirect_access": [],
+        "failed_access_routes": []
       },
       "next_action": "Record missing routes and resolve invalid doors; review indirect access and full opening/swing clearances."
     },
@@ -2249,7 +2325,7 @@
       "scope": "SH-SITE-0001-C-L02",
       "severity": "INFO",
       "outcome": "PASS",
-      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires explicit review, not an invented route.",
+      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires source-locked, geometrically verified and operationally scoped ACCESS_POLICY routes.",
       "evidence": {
         "source": "geospatial/facilities/source/campus.json",
         "site_id": "SH-SITE-0001",
@@ -2258,7 +2334,10 @@
         "floor_id": "SH-SITE-0001-C-L02",
         "missing_doors": [],
         "invalid_doors": [],
-        "no_direct_circulation": []
+        "no_direct_circulation": [],
+        "validated_indirect_routes": [],
+        "unresolved_indirect_access": [],
+        "failed_access_routes": []
       },
       "next_action": "Record missing routes and resolve invalid doors; review indirect access and full opening/swing clearances."
     },
@@ -2439,7 +2518,7 @@
       "scope": "SH-SITE-0001-D-L01",
       "severity": "INFO",
       "outcome": "PASS",
-      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires explicit review, not an invented route.",
+      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires source-locked, geometrically verified and operationally scoped ACCESS_POLICY routes.",
       "evidence": {
         "source": "geospatial/facilities/source/campus.json",
         "site_id": "SH-SITE-0001",
@@ -2448,7 +2527,10 @@
         "floor_id": "SH-SITE-0001-D-L01",
         "missing_doors": [],
         "invalid_doors": [],
-        "no_direct_circulation": []
+        "no_direct_circulation": [],
+        "validated_indirect_routes": [],
+        "unresolved_indirect_access": [],
+        "failed_access_routes": []
       },
       "next_action": "Record missing routes and resolve invalid doors; review indirect access and full opening/swing clearances."
     },
@@ -2498,7 +2580,7 @@
       "scope": "SH-SITE-0001-D-L02",
       "severity": "INFO",
       "outcome": "PASS",
-      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires explicit review, not an invented route.",
+      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires source-locked, geometrically verified and operationally scoped ACCESS_POLICY routes.",
       "evidence": {
         "source": "geospatial/facilities/source/campus.json",
         "site_id": "SH-SITE-0001",
@@ -2507,7 +2589,10 @@
         "floor_id": "SH-SITE-0001-D-L02",
         "missing_doors": [],
         "invalid_doors": [],
-        "no_direct_circulation": []
+        "no_direct_circulation": [],
+        "validated_indirect_routes": [],
+        "unresolved_indirect_access": [],
+        "failed_access_routes": []
       },
       "next_action": "Record missing routes and resolve invalid doors; review indirect access and full opening/swing clearances."
     },
@@ -2557,7 +2642,7 @@
       "scope": "SH-SITE-0001-D-L03",
       "severity": "INFO",
       "outcome": "PASS",
-      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires explicit review, not an invented route.",
+      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires source-locked, geometrically verified and operationally scoped ACCESS_POLICY routes.",
       "evidence": {
         "source": "geospatial/facilities/source/campus.json",
         "site_id": "SH-SITE-0001",
@@ -2566,7 +2651,10 @@
         "floor_id": "SH-SITE-0001-D-L03",
         "missing_doors": [],
         "invalid_doors": [],
-        "no_direct_circulation": []
+        "no_direct_circulation": [],
+        "validated_indirect_routes": [],
+        "unresolved_indirect_access": [],
+        "failed_access_routes": []
       },
       "next_action": "Record missing routes and resolve invalid doors; review indirect access and full opening/swing clearances."
     },
@@ -2884,7 +2972,7 @@
       "scope": "SH-SITE-0005-B01-L01",
       "severity": "INFO",
       "outcome": "NOT_ASSESSED",
-      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires explicit review, not an invented route.",
+      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires source-locked, geometrically verified and operationally scoped ACCESS_POLICY routes.",
       "evidence": {
         "source": "geospatial/facilities/source/research_campuses.json",
         "site_id": "SH-SITE-0005",
@@ -2898,7 +2986,10 @@
           "SH-SITE-0005-B01-L01-R04"
         ],
         "invalid_doors": [],
-        "no_direct_circulation": []
+        "no_direct_circulation": [],
+        "validated_indirect_routes": [],
+        "unresolved_indirect_access": [],
+        "failed_access_routes": []
       },
       "next_action": "Record missing routes and resolve invalid doors; review indirect access and full opening/swing clearances."
     },
@@ -2961,7 +3052,7 @@
       "scope": "SH-SITE-0005-B02-L01",
       "severity": "INFO",
       "outcome": "NOT_ASSESSED",
-      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires explicit review, not an invented route.",
+      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires source-locked, geometrically verified and operationally scoped ACCESS_POLICY routes.",
       "evidence": {
         "source": "geospatial/facilities/source/research_campuses.json",
         "site_id": "SH-SITE-0005",
@@ -2975,7 +3066,10 @@
           "SH-SITE-0005-B02-L01-R04"
         ],
         "invalid_doors": [],
-        "no_direct_circulation": []
+        "no_direct_circulation": [],
+        "validated_indirect_routes": [],
+        "unresolved_indirect_access": [],
+        "failed_access_routes": []
       },
       "next_action": "Record missing routes and resolve invalid doors; review indirect access and full opening/swing clearances."
     },
@@ -3038,7 +3132,7 @@
       "scope": "SH-SITE-0005-B03-L01",
       "severity": "INFO",
       "outcome": "NOT_ASSESSED",
-      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires explicit review, not an invented route.",
+      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires source-locked, geometrically verified and operationally scoped ACCESS_POLICY routes.",
       "evidence": {
         "source": "geospatial/facilities/source/research_campuses.json",
         "site_id": "SH-SITE-0005",
@@ -3052,7 +3146,10 @@
           "SH-SITE-0005-B03-L01-R04"
         ],
         "invalid_doors": [],
-        "no_direct_circulation": []
+        "no_direct_circulation": [],
+        "validated_indirect_routes": [],
+        "unresolved_indirect_access": [],
+        "failed_access_routes": []
       },
       "next_action": "Record missing routes and resolve invalid doors; review indirect access and full opening/swing clearances."
     },
@@ -3115,7 +3212,7 @@
       "scope": "SH-SITE-0005-B04-L01",
       "severity": "INFO",
       "outcome": "NOT_ASSESSED",
-      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires explicit review, not an invented route.",
+      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires source-locked, geometrically verified and operationally scoped ACCESS_POLICY routes.",
       "evidence": {
         "source": "geospatial/facilities/source/research_campuses.json",
         "site_id": "SH-SITE-0005",
@@ -3129,7 +3226,10 @@
           "SH-SITE-0005-B04-L01-R04"
         ],
         "invalid_doors": [],
-        "no_direct_circulation": []
+        "no_direct_circulation": [],
+        "validated_indirect_routes": [],
+        "unresolved_indirect_access": [],
+        "failed_access_routes": []
       },
       "next_action": "Record missing routes and resolve invalid doors; review indirect access and full opening/swing clearances."
     },
@@ -3461,7 +3561,7 @@
       "scope": "SH-SITE-0030-B01-L01",
       "severity": "INFO",
       "outcome": "NOT_ASSESSED",
-      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires explicit review, not an invented route.",
+      "basis": "Positive-width room door anchors must lie on their room boundary and a recorded circulation boundary. Indirect room-to-room access requires source-locked, geometrically verified and operationally scoped ACCESS_POLICY routes.",
       "evidence": {
         "source": "geospatial/facilities/RUNTIME_BRIDGE.json",
         "site_id": "SH-SITE-0030",
@@ -3482,7 +3582,10 @@
           "SH-SITE-0030-B01-L01-R11"
         ],
         "invalid_doors": [],
-        "no_direct_circulation": []
+        "no_direct_circulation": [],
+        "validated_indirect_routes": [],
+        "unresolved_indirect_access": [],
+        "failed_access_routes": []
       },
       "next_action": "Record missing routes and resolve invalid doors; review indirect access and full opening/swing clearances."
     },
@@ -3573,12 +3676,12 @@
   "summary": {
     "check_count": 160,
     "outcomes": {
-      "PASS": 34,
-      "REVIEW": 6,
+      "PASS": 40,
+      "REVIEW": 0,
       "FAIL": 0,
       "NOT_ASSESSED": 120
     },
-    "status": "REVIEW_REQUIRED",
+    "status": "PARTIAL_EVIDENCE",
     "engineering_certified": false
   }
 }

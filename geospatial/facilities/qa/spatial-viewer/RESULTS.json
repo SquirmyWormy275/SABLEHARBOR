@@ -1,0 +1,180 @@
+{
+  "status": "PASS_BROWSER_AND_VISUAL_REVIEW",
+  "html_sha256": "bebbeb59dda70dc558a9281dd55d5106874b45086cbd42f3ec9240ded5844176",
+  "site_checks": [
+    {
+      "site": "SH-SITE-0001",
+      "buildings": 4,
+      "empty_message": false
+    },
+    {
+      "site": "SH-IND-FAC-WAM-INT",
+      "buildings": 0,
+      "empty_message": true
+    },
+    {
+      "site": "SH-IND-FAC-TAY-YARD",
+      "buildings": 2,
+      "empty_message": false
+    },
+    {
+      "site": "SH-IND-FAC-TAY-TERMINAL",
+      "buildings": 0,
+      "empty_message": true
+    },
+    {
+      "site": "SH-IND-FAC-TAY-WAREHOUSE",
+      "buildings": 1,
+      "empty_message": false
+    },
+    {
+      "site": "SH-IND-FAC-TAY-TRUCK",
+      "buildings": 1,
+      "empty_message": false
+    },
+    {
+      "site": "SH-IND-FAC-EAST-MATERIALS",
+      "buildings": 0,
+      "empty_message": true
+    },
+    {
+      "site": "SH-IND-FAC-MINERAL-TEAM",
+      "buildings": 0,
+      "empty_message": true
+    },
+    {
+      "site": "SH-IND-FAC-RAW-TERMINAL",
+      "buildings": 0,
+      "empty_message": true
+    },
+    {
+      "site": "SH-IND-FAC-RAW-WAREHOUSE",
+      "buildings": 1,
+      "empty_message": false
+    },
+    {
+      "site": "SH-IND-FAC-RAW-TRUCK",
+      "buildings": 0,
+      "empty_message": true
+    },
+    {
+      "site": "SH-IND-FAC-ARU-OFFICE",
+      "buildings": 1,
+      "empty_message": false
+    },
+    {
+      "site": "SH-IND-FAC-RW-RECEIVING",
+      "buildings": 0,
+      "empty_message": true
+    },
+    {
+      "site": "SH-SITE-0006",
+      "buildings": 0,
+      "empty_message": true
+    },
+    {
+      "site": "SH-SITE-0003",
+      "buildings": 3,
+      "empty_message": false
+    },
+    {
+      "site": "SH-SITE-0005",
+      "buildings": 4,
+      "empty_message": false
+    },
+    {
+      "site": "SH-SITE-0028",
+      "buildings": 0,
+      "empty_message": true
+    },
+    {
+      "site": "SH-SITE-0029",
+      "buildings": 0,
+      "empty_message": true
+    },
+    {
+      "site": "SH-SITE-0030",
+      "buildings": 1,
+      "empty_message": false
+    }
+  ],
+  "page_errors": [],
+  "checks": [
+    "19site selections",
+    "18building selections and 3detail links each",
+    "floor hash navigation",
+    "keyboard room selection",
+    "canvas room picking",
+    "orbit changedpixels",
+    "floorpeel/explode",
+    "desktop/mobile tabs no pageoverflow",
+    "comparison JSON import, reset and invalid import rejection",
+    "right-drag pan and top-plan control",
+    "Sacramento projected context SVG; other regions retain existing context links"
+  ],
+  "source_hashes": {
+    "geospatial/facilities/spatial/viewer.js": "2e4259c46137339bafb408004d91bb08f2f36f13f99db11a1b40bf07be9d0462",
+    "geospatial/facilities/spatial/viewer.html": "63aaa6b1131f0759e87aa5a57a19d93e61a7effc3540a8bf9a602f583b8167a2",
+    "geospatial/facilities/spatial/MODEL.json": "2d7803649e95754e7dd8990264a2f829f9f876884a7f4cbd36f6660f777b9170",
+    "geospatial/facilities/spatial/CONTEXT.json": "46b2c16733e902e37afe955fa5044bc6ef10aaf4e705376dfa5ea9c31dadd0a1"
+  },
+  "screenshot_hashes": {
+    "BUILDINGS_01.png": "d4ce4b773532643c2f54481fa4cb263cb40cce87bff7ef307e91ea0109c46a05",
+    "BUILDINGS_02.png": "a433197b57ad9934ec0837becabb4cd6db826c28cf475cb0e0424a23ee5b7b92",
+    "BUILDINGS_03.png": "4dd349d2d509c713825dfc6b081d889a05fe9a02cd54d6fa426f17c972dfd010",
+    "BUILDINGS_04.png": "fb6c0c863e9601e3d6489215efb198be44a893738df50a5015ecd700a7af9a4b",
+    "BUILDINGS_05.png": "79a64fce81f234fcc517d4be04f2fb345020704739e99b5f52e2469847328659",
+    "SH-FAC-FORT-BIG-building.png": "d69d8bdc9a1878f265b7b55671488ccc2a6680a4316e3faec52ace4e330c6d31",
+    "SH-FAC-FORT-SMALL-building.png": "0e3d0e8775c497331b9a390199baf68f8b5b7f99a69ae26c2c922ff5aa3348eb",
+    "SH-FAC-FORT-WHITE-building.png": "1c202c1edda8522195c8b99df95604b0fdde9dfa0dacc08f75289c91c309f53f",
+    "SH-IND-FAC-ARU-OFFICE-B01-building.png": "6ba2bdc6e92964ea966503d1a12dbbd67c2fe9f6042f586bb62083b45b3961d7",
+    "SH-IND-FAC-ARU-OFFICE-site.png": "7d36d7235f180f5d25f7b7652154a075061692939a0926b1498dfd97743b9771",
+    "SH-IND-FAC-EAST-MATERIALS-site.png": "81789cb230ed05bc9dc766b6b79d560e2bb7441dd5dd4a9a26c3e0932b5e1efd",
+    "SH-IND-FAC-MINERAL-TEAM-site.png": "7a56173c94a6459bad409733d7554a8156ea7fed30b2d2102f4338ddd503d3ad",
+    "SH-IND-FAC-RAW-TERMINAL-site.png": "d384dec00af351ee6a433dddf086a52550ae3ab74a07ad71fb0f0e01091eb1d7",
+    "SH-IND-FAC-RAW-TRUCK-site.png": "44a66fbca187254f291c613a3a757df62cf70da0d4a475c42c8813924ba26771",
+    "SH-IND-FAC-RAW-WAREHOUSE-B01-building.png": "a0de0dd15bcf104a1ebe970448d10a45439f5c3ec953a243c70de3e2d00d1c4f",
+    "SH-IND-FAC-RAW-WAREHOUSE-site.png": "b654a1c16f433e780db31ba2e9cd393c1139eb7cc460f102d7d24ba7b9b8962c",
+    "SH-IND-FAC-RW-RECEIVING-site.png": "c8d126335174b0f84d525541e17a70cb6f6c8f8de32ca558afaae116d6156493",
+    "SH-IND-FAC-TAY-TERMINAL-site.png": "447245c551729854b2861f44b5f442848049df22aa7634f6281d706d76d284c5",
+    "SH-IND-FAC-TAY-TRUCK-B01-building.png": "47f5ffec9fe2da6caafc3cdb085eba036aa2b6a9482fb74ff559792526670cd2",
+    "SH-IND-FAC-TAY-TRUCK-site.png": "fe9a6a6baa9b8b7225ac9c432bee4ccfc38a8710a9bb613a8f178ab13f2579cd",
+    "SH-IND-FAC-TAY-WAREHOUSE-B01-building.png": "4658104e8aefd79f853027313ad2ff5f1ba063699bc202d9a4b15a9458cdfe54",
+    "SH-IND-FAC-TAY-WAREHOUSE-site.png": "a0d7a61743abcd7e920b4e1fd0258f05e1e8daf9c62d883becdb2dba8323a354",
+    "SH-IND-FAC-TAY-YARD-B01-building.png": "655efef235be1222e0a9417a428a1b0ee48c713dbb608718150816bde71745f1",
+    "SH-IND-FAC-TAY-YARD-B02-building.png": "4bf8718f610a7c0cc0ddd7a2ffbe680235a23435cc49e299225b4cc220796438",
+    "SH-IND-FAC-TAY-YARD-site.png": "4ed7e21609da7a5735c930cacf6ddf9f015ffed7bce9603d8c6b7f35884d849a",
+    "SH-IND-FAC-WAM-INT-site.png": "933524e2e252fcd5a8aae38c152c9f6f2b88d6ed0842a8b9274e6adce6f0e71b",
+    "SH-SITE-0001-A-building.png": "2a77e0eb544b6517b7c13818d7bc756a1d8ef70f2d7226efbaee23f7023960ca",
+    "SH-SITE-0001-B-building.png": "85c65c6c240477f7d2696f849a1d9f608b219e47ded0e5f179f9424065deaf59",
+    "SH-SITE-0001-C-building.png": "a371a7f6a9c4f0aeef0b29a56b161fee1df6b529e8af73af69c3a6466d22d5e8",
+    "SH-SITE-0001-D-building.png": "29c5c79b2130a564d62a3b25bc1f8b1758e913d53968b143b885bfc04ea947b7",
+    "SH-SITE-0001-site.png": "0d7beed274b24080dd91504298f60d1f47fe287a9bd6722ea982195c21ff3d79",
+    "SH-SITE-0003-site.png": "e0f72abd713db16fa29054315701d7c71659df0881019c9db905e70f599eb94c",
+    "SH-SITE-0005-B01-building.png": "f2f192f9e6c55702fde87f8a13dc9aac8745fb43803d0729ab4f2e261f765aae",
+    "SH-SITE-0005-B02-building.png": "724ea056192c508ab8f23496551947f7e07173cfe9731b3329cfabc7e7331657",
+    "SH-SITE-0005-B03-building.png": "1c202c1edda8522195c8b99df95604b0fdde9dfa0dacc08f75289c91c309f53f",
+    "SH-SITE-0005-B04-building.png": "1c202c1edda8522195c8b99df95604b0fdde9dfa0dacc08f75289c91c309f53f",
+    "SH-SITE-0005-site.png": "de435f1cf37805cdc71886da4850c908438d0831257e874461dc34220da153c8",
+    "SH-SITE-0006-site.png": "586fa95da7cba15979eb898e8f456b2c29ce57cccc090a13ee484909a8cf45ce",
+    "SH-SITE-0028-site.png": "3c191271d0896cdd6ca940bbcd5e7e2dd2d6eed92203cf1ae831d037a335823e",
+    "SH-SITE-0029-site.png": "3c191271d0896cdd6ca940bbcd5e7e2dd2d6eed92203cf1ae831d037a335823e",
+    "SH-SITE-0030-B01-building.png": "248c681f45abc7c0dcca510f4ccec21273e3eb7893b3f06161755155647e1fa2",
+    "SH-SITE-0030-site.png": "eee7cf17afee4b0b789773774224f2a95ae43f7ff5ed65ff9f9f03fbb6c13b6e",
+    "SITES_01.png": "cba3070f9e617d285b3f58ea2bcaa7b50b9b11c56d35e91b12600f486783cf04",
+    "SITES_02.png": "e95ea78df08d926b52d0ded9af742c6ac19e86db2c3f6d7b3632259578d107f1",
+    "SITES_03.png": "e389e06ddc6438704688a521c10fe9b48a8e878bf2526c45d62e703426a811de",
+    "SITES_04.png": "334f00970df2fb3c91dbb2b3161255498059ac8c8766b593888ff985fa041f7d",
+    "SITES_05.png": "d6d45153df68e67535415f4519868cb4031e7484e875ec22ab8133a6629d6cda",
+    "comparison-desktop.png": "f574e78fd0ddcaa1a3fe863eb44d11a333adcf120a6c0edeb884a234a66aa2c4",
+    "comparison-mobile.png": "da29057474f9d14d319b5104fbdc18bf1e74d7c1ccf38cf3721ccd2f26c26cb0",
+    "comparison-overlay-fixture.png": "65a9657cf26b5ec12d9bd4bc198fef9786bca3066b32eab9424b2f89a6bfe398",
+    "context-desktop.png": "99eeb396f02c573e7138f8c7bcc34562ad2927f2d142823c88afb276dafd0397",
+    "context-mobile.png": "0007f82000fd8b356aa86a60b29133a6ae2f24b8e4719ddb27f1bc3abb23940e",
+    "context-sacramento.png": "541a9b73fe0806625a7bdb758710d7cd21904f9ead71f9ed0202373c45f0a57d",
+    "exploded-desktop.png": "f1350f719b3b298d32350fe6b78583b34edeb58179bce46fcd799cef08b5a215",
+    "model-mobile.png": "b164c623d01c2e41d66520de093c4ae559df2803973430cdfe38ebeae8a55af8",
+    "room-picking-desktop.png": "0d93ac3a720cb382ad8ff2c88c227cd041d1e73aa04744a8f80e580d3bd4c882"
+  },
+  "manual_review": "All 19 site and 18 building captures inspected through ten readable contact sheets; desktop/mobile tabs, room picking, exploded view and explicit QA-only imported overlay inspected separately."
+}

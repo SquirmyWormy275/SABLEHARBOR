@@ -1,0 +1,118 @@
+{
+  "status": "PASS_BROWSER_INTERACTION",
+  "html_sha256": "23c7969e0c2253f5159c556bd55d3812ae9605a997e93b01388d4b8996370413",
+  "site_checks": [
+    {
+      "site": "SH-SITE-0001",
+      "buildings": 4,
+      "empty_message": false
+    },
+    {
+      "site": "SH-IND-FAC-WAM-INT",
+      "buildings": 0,
+      "empty_message": true
+    },
+    {
+      "site": "SH-IND-FAC-TAY-YARD",
+      "buildings": 2,
+      "empty_message": false
+    },
+    {
+      "site": "SH-IND-FAC-TAY-TERMINAL",
+      "buildings": 0,
+      "empty_message": true
+    },
+    {
+      "site": "SH-IND-FAC-TAY-WAREHOUSE",
+      "buildings": 1,
+      "empty_message": false
+    },
+    {
+      "site": "SH-IND-FAC-TAY-TRUCK",
+      "buildings": 1,
+      "empty_message": false
+    },
+    {
+      "site": "SH-IND-FAC-EAST-MATERIALS",
+      "buildings": 0,
+      "empty_message": true
+    },
+    {
+      "site": "SH-IND-FAC-MINERAL-TEAM",
+      "buildings": 0,
+      "empty_message": true
+    },
+    {
+      "site": "SH-IND-FAC-RAW-TERMINAL",
+      "buildings": 0,
+      "empty_message": true
+    },
+    {
+      "site": "SH-IND-FAC-RAW-WAREHOUSE",
+      "buildings": 1,
+      "empty_message": false
+    },
+    {
+      "site": "SH-IND-FAC-RAW-TRUCK",
+      "buildings": 0,
+      "empty_message": true
+    },
+    {
+      "site": "SH-IND-FAC-ARU-OFFICE",
+      "buildings": 1,
+      "empty_message": false
+    },
+    {
+      "site": "SH-IND-FAC-RW-RECEIVING",
+      "buildings": 0,
+      "empty_message": true
+    },
+    {
+      "site": "SH-SITE-0006",
+      "buildings": 0,
+      "empty_message": true
+    },
+    {
+      "site": "SH-SITE-0003",
+      "buildings": 3,
+      "empty_message": false
+    },
+    {
+      "site": "SH-SITE-0005",
+      "buildings": 4,
+      "empty_message": false
+    },
+    {
+      "site": "SH-SITE-0028",
+      "buildings": 0,
+      "empty_message": true
+    },
+    {
+      "site": "SH-SITE-0029",
+      "buildings": 0,
+      "empty_message": true
+    },
+    {
+      "site": "SH-SITE-0030",
+      "buildings": 1,
+      "empty_message": false
+    }
+  ],
+  "page_errors": [],
+  "checks": [
+    "19site selections",
+    "18building selections and 3detail links each",
+    "floor hash navigation",
+    "keyboard room selection",
+    "canvas room picking",
+    "orbit changedpixels",
+    "floorpeel/explode",
+    "desktop/mobile tabs no pageoverflow"
+  ],
+  "metadata_only_change": "Input hash ordering/build-code hash changed; parsed scene/context/comparison/maps data and HTML/JS shell equal the reviewed source after excluding source_sha256. Browser and import tests rerun successfully.",
+  "prior_review_html_sha256": "bebbeb59dda70dc558a9281dd55d5106874b45086cbd42f3ec9240ded5844176",
+  "metric_precision_successor": {
+    "html_sha256": "a5079e3b2d02be924a1f3a954da89149e2e7fc5de5dd8c87e36c0f3c8585238d",
+    "scope": "Only derived context coordinates normalized to0.001m. Scene geometry, code, controls and sourceproperties unchanged. Final regional graphic visually reviewed in spatial-integration evidence."
+  }
+}

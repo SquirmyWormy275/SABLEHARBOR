@@ -1,0 +1,208 @@
+{
+  "schema_version": "1.0.0",
+  "state": "COMPARISON_NOT_CANON",
+  "comparisons": [
+    {
+      "site_id": "SH-IND-FAC-ARU-OFFICE",
+      "title": "Taylor ARU office",
+      "before_revision": "ff5cd67ff980790413f7bfbf0829b47d20d266a3",
+      "after_revision": "1.0.0",
+      "changes": [],
+      "overlays": []
+    },
+    {
+      "site_id": "SH-IND-FAC-EAST-MATERIALS",
+      "title": "East Materials team track",
+      "before_revision": "ff5cd67ff980790413f7bfbf0829b47d20d266a3",
+      "after_revision": "1.0.0",
+      "changes": [],
+      "overlays": []
+    },
+    {
+      "site_id": "SH-IND-FAC-MINERAL-TEAM",
+      "title": "Mineral Transfer team track",
+      "before_revision": "ff5cd67ff980790413f7bfbf0829b47d20d266a3",
+      "after_revision": "1.0.0",
+      "changes": [],
+      "overlays": []
+    },
+    {
+      "site_id": "SH-IND-FAC-RAW-TERMINAL",
+      "title": "Rawlins satellite terminal",
+      "before_revision": "ff5cd67ff980790413f7bfbf0829b47d20d266a3",
+      "after_revision": "1.0.0",
+      "changes": [],
+      "overlays": []
+    },
+    {
+      "site_id": "SH-IND-FAC-RAW-TRUCK",
+      "title": "Rawlins trucking satellite",
+      "before_revision": "ff5cd67ff980790413f7bfbf0829b47d20d266a3",
+      "after_revision": "1.0.0",
+      "changes": [],
+      "overlays": []
+    },
+    {
+      "site_id": "SH-IND-FAC-RAW-WAREHOUSE",
+      "title": "Rawlins warehouse",
+      "before_revision": "ff5cd67ff980790413f7bfbf0829b47d20d266a3",
+      "after_revision": "1.0.0",
+      "changes": [],
+      "overlays": []
+    },
+    {
+      "site_id": "SH-IND-FAC-RW-RECEIVING",
+      "title": "Red Wash receiving and reagent storage",
+      "before_revision": "ff5cd67ff980790413f7bfbf0829b47d20d266a3",
+      "after_revision": "1.0.0",
+      "changes": [],
+      "overlays": []
+    },
+    {
+      "site_id": "SH-IND-FAC-TAY-TERMINAL",
+      "title": "Taylor Industrial Transload Complex",
+      "before_revision": "ff5cd67ff980790413f7bfbf0829b47d20d266a3",
+      "after_revision": "1.0.0",
+      "changes": [],
+      "overlays": []
+    },
+    {
+      "site_id": "SH-IND-FAC-TAY-TRUCK",
+      "title": "Taylor trucking depot",
+      "before_revision": "ff5cd67ff980790413f7bfbf0829b47d20d266a3",
+      "after_revision": "1.0.0",
+      "changes": [],
+      "overlays": []
+    },
+    {
+      "site_id": "SH-IND-FAC-TAY-WAREHOUSE",
+      "title": "Taylor warehouse",
+      "before_revision": "ff5cd67ff980790413f7bfbf0829b47d20d266a3",
+      "after_revision": "1.0.0",
+      "changes": [],
+      "overlays": []
+    },
+    {
+      "site_id": "SH-IND-FAC-TAY-YARD",
+      "title": "Taylor Yard and Shops",
+      "before_revision": "ff5cd67ff980790413f7bfbf0829b47d20d266a3",
+      "after_revision": "1.0.0",
+      "changes": [],
+      "overlays": []
+    },
+    {
+      "site_id": "SH-IND-FAC-WAM-INT",
+      "title": "Wamsutter interchange",
+      "before_revision": "ff5cd67ff980790413f7bfbf0829b47d20d266a3",
+      "after_revision": "1.0.0",
+      "changes": [],
+      "overlays": []
+    },
+    {
+      "site_id": "SH-SITE-0001",
+      "title": "Sacramento headquarters campus",
+      "before_revision": "ff5cd67ff980790413f7bfbf0829b47d20d266a3",
+      "after_revision": "1.0.0",
+      "changes": [],
+      "overlays": []
+    },
+    {
+      "site_id": "SH-SITE-0003",
+      "title": "The Fort · Willow research compound",
+      "before_revision": "ff5cd67ff980790413f7bfbf0829b47d20d266a3",
+      "after_revision": "1.0.0",
+      "changes": [],
+      "overlays": []
+    },
+    {
+      "site_id": "SH-SITE-0005",
+      "title": "Bedford · recovery development center",
+      "before_revision": "ff5cd67ff980790413f7bfbf0829b47d20d266a3",
+      "after_revision": "1.0.0",
+      "changes": [],
+      "overlays": []
+    },
+    {
+      "site_id": "SH-SITE-0006",
+      "title": "Red Wash surface study envelope",
+      "before_revision": "ff5cd67ff980790413f7bfbf0829b47d20d266a3",
+      "after_revision": "1.0.0",
+      "changes": [],
+      "overlays": []
+    },
+    {
+      "site_id": "SH-SITE-0028",
+      "title": "Reno primary colocation",
+      "before_revision": "ff5cd67ff980790413f7bfbf0829b47d20d266a3",
+      "after_revision": "1.0.0",
+      "changes": [],
+      "overlays": []
+    },
+    {
+      "site_id": "SH-SITE-0029",
+      "title": "Boise independent recovery colocation",
+      "before_revision": "ff5cd67ff980790413f7bfbf0829b47d20d266a3",
+      "after_revision": "1.0.0",
+      "changes": [],
+      "overlays": []
+    },
+    {
+      "site_id": "SH-SITE-0030",
+      "title": "SABLE HARBOR Northern Nevada Data Center",
+      "before_revision": "ff5cd67ff980790413f7bfbf0829b47d20d266a3",
+      "after_revision": "1.0.0",
+      "changes": [],
+      "overlays": []
+    }
+  ],
+  "summary": {
+    "sites": 19,
+    "changed_sites": 0,
+    "changes": 0,
+    "affected_floors": 0
+  },
+  "source_sha256": {
+    "before": {
+      "geospatial/facilities/source/campus.json": "0efd4854069ff20acb4032e02b021afebcb955990f1d684b51428624e281d950",
+      "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
+      "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
+      "geospatial/facilities/RUNTIME_BRIDGE.json": "764b0fdb51475396c13d88a9ba365ac34b1a4f4a0f9608d5bf43fb09ccc2e946",
+      "geospatial/registers/MAP_ID_REGISTER.json": "fc0a35688847c9915968d6102983158289c7a0a381c6e322f100898048915132",
+      "geospatial/facilities/spatial/ARCHITECTURAL_ASSUMPTIONS.json": "0a3ab9f141451ce04dd9ff346d98fc90c5add989fd8bf4e090370bf1f1a7bcdf"
+    },
+    "after": {
+      "geospatial/facilities/source/campus.json": "0efd4854069ff20acb4032e02b021afebcb955990f1d684b51428624e281d950",
+      "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
+      "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
+      "geospatial/facilities/RUNTIME_BRIDGE.json": "136491785df28eb6db3ce4f5737c71d1629d08bb8da7879f44d768a76a93e06b",
+      "geospatial/registers/MAP_ID_REGISTER.json": "02fb9b537a178afad68b969fa52a14066821f635db4cabb954d724336554f35d",
+      "geospatial/facilities/spatial/ARCHITECTURAL_ASSUMPTIONS.json": "0a3ab9f141451ce04dd9ff346d98fc90c5add989fd8bf4e090370bf1f1a7bcdf"
+    }
+  },
+  "baseline_evidence": {
+    "accepted_commit": "ff5cd67ff980790413f7bfbf0829b47d20d266a3",
+    "git_blob_sha256": {
+      "geospatial/facilities/RUNTIME_BRIDGE.json": "764b0fdb51475396c13d88a9ba365ac34b1a4f4a0f9608d5bf43fb09ccc2e946",
+      "geospatial/facilities/source/campus.json": "0efd4854069ff20acb4032e02b021afebcb955990f1d684b51428624e281d950",
+      "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
+      "geospatial/facilities/source/research_campuses.json": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
+      "geospatial/maps/facilities/MANIFEST.json": "773b554c383fe3bf4414fbd342b33f2153400c07e72879e216c4b39c04a0e6d6",
+      "geospatial/registers/MAP_ID_REGISTER.json": "fc0a35688847c9915968d6102983158289c7a0a381c6e322f100898048915132"
+    },
+    "byte_identical_paths": [
+      "geospatial/facilities/source/campus.json",
+      "geospatial/facilities/source/industrial_facilities.json",
+      "geospatial/facilities/source/research_campuses.json"
+    ],
+    "normalization": "Baseline source files actually read with git show into an isolated temporary tree. Current normalization assumptions applied to both models for comparable geometry; these are not historical approvals.",
+    "baseline_floor_geometry_equal": true
+  },
+  "informational": [
+    {
+      "kind": "NEW_ARCHITECTURAL_ASSUMPTIONS",
+      "source": "geospatial/facilities/spatial/ARCHITECTURAL_ASSUMPTIONS.json",
+      "sha256": "0a3ab9f141451ce04dd9ff346d98fc90c5add989fd8bf4e090370bf1f1a7bcdf",
+      "meaning": "Vertical/material/roof assumptions are new spatial study inputs, not accepted ff5cd67 floor geometry or evidence of construction. Identical assumptions normalize both comparison sides; no historical height approval is claimed."
+    }
+  ]
+}
