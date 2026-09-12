@@ -144,3 +144,16 @@ uv run python -m enterprise.ccf.assurance.completion verify \
 ```
 
 This preparation packet selects both ISO frameworks and C5 over the SOC 2/HIPAA reference baseline to expose the full current design workload. Use the ISO adapter for selectable individual-framework deltas. Neither adapter changes native controls or records approvals. The completion packet includes proposed tests, required operating inputs, additional measures and a consolidated decision worksheet. Baseline tests provide a procedure-specific evidence walkthrough; exact source-level acceptance criteria still need substantive review. Verification checks original source hashes and regenerates all members, detecting even resealed edits. Original documents and generated packets remain local; Atlas is read-only.
+
+### Substantive source comparison
+
+```sh
+uv run python -m enterprise.ccf.assurance.substantive build \
+  --source-root /path/to/content-addressed-originals --output /new/source-review
+uv run python -m enterprise.ccf.assurance.substantive verify \
+  --source-root /path/to/content-addressed-originals --output /existing/source-review
+```
+
+This adapter adds 50 targeted source-comparison findings with corrective procedures and tests, 193 ISO objective condition checks, comparisons across all 17 C5 domains, and a source-reconciled register of all 22 HIPAA addressable specifications. Its per-requirement review-depth ledger distinguishes targeted findings, objective/domain comparisons, prior baseline section analysis and remaining source-context work. None of these levels establishes independent acceptance or exhaustive paragraph coverage. C5 guidance links and corresponding customer responsibilities are fingerprinted separately from its 623 basic/sharpened/additional-complement provider criteria.
+
+The persisted author bindings pin the reviewed catalogue and draft designs. Builds reject stale findings after source, requirement, procedure or analysis changes; do not refresh those bindings without reconsidering the findings. The generated review includes the earlier draft library, corrective designs, tests, source navigation details and a concrete owner/reviewer decision packet. The adapter does not approve mappings or mutate native controls, implementations or evidence. Source originals and generated work remain local; Atlas is read-only.

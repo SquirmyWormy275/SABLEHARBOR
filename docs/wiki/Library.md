@@ -9,16 +9,16 @@ Use the subject pages for a guided introduction. Use this complete file inventor
 | [Businesses and professional practice](library/business.md) | 62 |
 | [People, governance and departments](library/people.md) | 228 |
 | [Finance, transactions and operating cases](library/finance.md) | 184 |
-| [Controls, services and runtime](library/controls.md) | 62 |
+| [Controls, services and runtime](library/controls.md) | 64 |
 | [Geography and facilities](library/places.md) | 300 |
 | [Identity and collateral](library/identity.md) | 15 |
 | [Canon, history and decisions](library/history.md) | 39 |
 | [Reader guides and subject pages](library/reader.md) | 38 |
-| [Implementation, source guides and delivery evidence](library/technical.md) | 81 |
+| [Implementation, source guides and delivery evidence](library/technical.md) | 82 |
 
 ## Format coverage
 
-The inventory contains 670 Markdown files, 336 PDFs and 3 Excel workbooks. The existing publication manifest verifies 131 Markdown/PDF pairs.
+The inventory contains 673 Markdown files, 336 PDFs and 3 Excel workbooks. The existing publication manifest verifies 131 Markdown/PDF pairs.
 
 Every inventoried file has a path, title, format, collection, size and SHA-256 in `reader_file` within the [institutional database](../internal/institutional_catalog.sqlite3). `reader_publication_pair` records verified source/PDF links; `reader_search` supports text search. These are discovery tables. Native accounting and operating databases retain their transaction records.
 
