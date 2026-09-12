@@ -2,7 +2,7 @@
 
 <img src="../../../assets/brand/logos/sable-harbor__primary-horizontal.png" alt="Sable Harbor approved identity" width="360">
 
-**Canon state:** LOCKED institutional scope; implementation detail varies by linked record.  
+**Canon state:** LOCKED institutional scope; implementation detail varies by linked record.<br>
 **Last substantive review:** September 11, 2026. This page is secondary navigation; the linked source records control.
 
 ESS coordinates shared administration, service budgets, staffing support and facilities for the enterprise support functions. Its administrative umbrella preserves the substantive authority of the CFO, General Counsel, technology leader and other professional officers.

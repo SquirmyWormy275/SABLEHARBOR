@@ -2,7 +2,7 @@
 
 <img src="../../../assets/brand/logos/j2__primary-horizontal.png" alt="J2 approved identity" width="240">
 
-**Canon state:** LOCKED DIRECTION doctrine; LOCKED establishment and current leadership.  
+**Canon state:** LOCKED DIRECTION doctrine; LOCKED establishment and current leadership.<br>
 **Last substantive review:** September 11, 2026. This page is secondary navigation; the linked source records control.
 
 Orientation maintains enterprise questions, the Enterprise Intelligence Brief and the company’s recorded current understanding. Officers brief decision-makers on findings, assumptions, uncertainty and dissent without owning the decision.

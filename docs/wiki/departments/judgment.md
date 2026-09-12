@@ -2,7 +2,7 @@
 
 <img src="../../../assets/brand/logos/j2__primary-horizontal.png" alt="J2 approved identity" width="240">
 
-**Canon state:** LOCKED DIRECTION doctrine; LOCKED establishment and current leadership.  
+**Canon state:** LOCKED DIRECTION doctrine; LOCKED establishment and current leadership.<br>
 **Last substantive review:** September 11, 2026. This page is secondary navigation; the linked source records control.
 
 Judgment Officers investigate defined company problems, test explanations against evidence and maintain living Problem Books. Judgment Watch screens and connects incoming material without taking ownership of resulting cases.

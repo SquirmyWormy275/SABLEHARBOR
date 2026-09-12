@@ -2,7 +2,7 @@
 
 <img src="../../../assets/brand/logos/j2__primary-horizontal.png" alt="J2 approved identity" width="240">
 
-**Canon state:** LOCKED institutional scope; implementation detail varies by linked record.  
+**Canon state:** LOCKED institutional scope; implementation detail varies by linked record.<br>
 **Last substantive review:** September 11, 2026. This page is secondary navigation; the linked source records control.
 
 Education designs and teaches enterprise and professional courses, cases and exercises, and supports conferences. Subject owners retain responsibility for law, safety, controls and technical content; Education owns instructional design.

@@ -1,8 +1,8 @@
 # Finance and accounting: human evidence completion handoff
 
-**Workline:** `SH-FIN-HUMAN-001`  
-**Prepared:** September 11, 2026  
-**Status:** implementation handoff; remaining work below is not represented as complete  
+**Workline:** `SH-FIN-HUMAN-001`<br>
+**Prepared:** September 11, 2026<br>
+**Status:** implementation handoff; remaining work below is not represented as complete<br>
 **Scope:** make existing synthetic accounting evidence usable by people reading documents and spreadsheets, while preserving financial models, release history and canon distinctions.
 
 ## Assignment and boundaries

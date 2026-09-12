@@ -2,7 +2,7 @@
 
 <img src="../../../assets/brand/logos/j2__primary-horizontal.png" alt="J2 approved identity" width="240">
 
-**Canon state:** LOCKED DIRECTION institutional environment; runtime design has separate accepted scope.  
+**Canon state:** LOCKED DIRECTION institutional environment; runtime design has separate accepted scope.<br>
 **Last substantive review:** September 11, 2026. This page is secondary navigation; the linked source records control.
 
 Alexandria preserves institutional records and their history and connects questions, evidence, judgments and decisions. Pinakes is the human catalog/portal; Daedalus assists the user within human-authorship and authority boundaries.

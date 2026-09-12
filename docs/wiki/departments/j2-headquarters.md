@@ -2,7 +2,7 @@
 
 <img src="../../../assets/brand/logos/j2__primary-horizontal.png" alt="J2 approved identity" width="240">
 
-**Canon state:** LOCKED institutional scope; implementation detail varies by linked record.  
+**Canon state:** LOCKED institutional scope; implementation detail varies by linked record.<br>
 **Last substantive review:** September 11, 2026. This page is secondary navigation; the linked source records control.
 
 J2 Headquarters coordinates professional standards, intelligence priorities, staffing and administrative support. The Head of J2 reports administratively to the CEO with protected Board access.

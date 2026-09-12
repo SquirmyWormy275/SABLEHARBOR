@@ -2,7 +2,7 @@
 
 <img src="../../../assets/brand/logos/j2__primary-horizontal.png" alt="J2 approved identity" width="240">
 
-**Canon state:** LOCKED DIRECTION field doctrine; LOCKED establishment.  
+**Canon state:** LOCKED DIRECTION field doctrine; LOCKED establishment.<br>
 **Last substantive review:** September 11, 2026. This page is secondary navigation; the linked source records control.
 
 JAG sends rotating teams into operating businesses to observe work, collect evidence, test improvements and transfer lessons. Each five-person team combines a team lead, data scientist, technical systems advisor, operational advisor and human systems advisor.

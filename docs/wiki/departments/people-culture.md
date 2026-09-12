@@ -2,7 +2,7 @@
 
 <img src="../../../assets/brand/logos/sable-harbor__primary-horizontal.png" alt="Sable Harbor approved identity" width="360">
 
-**Canon state:** LOCKED institutional scope; implementation detail varies by linked record.  
+**Canon state:** LOCKED institutional scope; implementation detail varies by linked record.<br>
 **Last substantive review:** September 11, 2026. This page is secondary navigation; the linked source records control.
 
 People & Culture handles recruiting, compensation and benefits, employee relations, records, mobility and career development. It administers required learning while subject owners retain their requirements and J2 Education owns teaching practice.
