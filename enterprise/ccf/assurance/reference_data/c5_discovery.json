@@ -12,6 +12,19 @@
       "review": null,
       "rights_note": "BSI 2026, CC BY-ND 4.0. Unmodified source retained separately; only identifiers and original review instructions appear in this discovery catalog.",
       "url": "https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/CloudComputing/ComplianceControlsCatalogue/2026/C5_2026.pdf?__blob=publicationFile&v=6"
+    },
+    {
+      "access": "AVAILABLE",
+      "content_sha256": "ab906417ae2a4f210b0f23b0edaafd77cb20bc944af1aeeccfd8257eab59727a",
+      "edition": "C5:2026 machine-readable English YAML, version 1.0.1",
+      "effective_from": null,
+      "effective_to": null,
+      "id": "SOURCE-C5-MACHINE",
+      "publisher": "BSI",
+      "retrieved_on": "2026-09-11",
+      "review": null,
+      "rights_note": "BSI 2026, CC BY-ND 4.0. Unmodified source retained separately; only identifiers and original review instructions appear in this discovery catalog.",
+      "url": "https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/CloudComputing/ComplianceControlsCatalogue/2026/C5_machine_readable.zip?__blob=publicationFile&v=4"
     }
   ],
   "frameworks": [
@@ -617,17 +630,47 @@
         "C5:SSO-07.02B",
         "C5:SSO-08.01B",
         "C5:SSO-08.02B",
-        "C5:SSO-08.03B"
+        "C5:SSO-08.03B",
+        "C5:AM-07.01AS",
+        "C5:AM-10.01AS",
+        "C5:COM-02.01AS",
+        "C5:COS-04.01AS",
+        "C5:CRY-04.01AS",
+        "C5:HR-03.02AS",
+        "C5:IAM-03.03AS",
+        "C5:IAM-07.03AS",
+        "C5:IAM-07.04AS",
+        "C5:IAM-07.06AS",
+        "C5:IAM-08.02AS",
+        "C5:IAM-08.03AS",
+        "C5:OIS-01.01AS",
+        "C5:OIS-08.01AS",
+        "C5:OPS-05.02AS",
+        "C5:OPS-06.01AS",
+        "C5:OPS-22.01AS",
+        "C5:OPS-22.02AS",
+        "C5:OPS-22.03AS",
+        "C5:OPS-25.01AS",
+        "C5:OPS-25.02AS",
+        "C5:OPS-26.05AS",
+        "C5:OPS-27.03AS",
+        "C5:PS-02.01AS",
+        "C5:PS-02.02AS",
+        "C5:PSS-12.01AS",
+        "C5:PSS-12.02AS",
+        "C5:SSO-03.01AS",
+        "C5:SSO-07.01AS"
       ],
       "id": "C5",
       "inventory_complete": false,
       "inventory_review": null,
-      "limitation": "594 mechanically extracted standalone subcriterion IDs across 168 parent IDs and 17 domains, plus preparation gates. Not independently reviewed for full section/assessment-context completeness; no accepted mappings.",
+      "limitation": "623 publisher YAML/PDF-reconciled child identifiers: 462 basic, 29 sharpened and 132 complementary; plus two internal assessment/context gates. Parent context, six general conditions and assessment chapters still require semantic decomposition and independent review.",
       "required_categories": [
         "BASIC"
       ],
       "source_ids": [
-        "SOURCE-C5"
+        "SOURCE-C5",
+        "SOURCE-C5-MACHINE"
       ],
       "title": "BSI C5"
     }
@@ -11360,6 +11403,528 @@
       "review": null,
       "source_id": "SOURCE-C5",
       "summary": "C5 source-discovery identifier; interpret exact source and scoped control support before acceptance"
+    },
+    {
+      "attributes": [
+        {
+          "evidence_expectation": "Original C5 source, contextual interpretation and independently reviewed mapping/test workpaper",
+          "id": "SOURCE_REVIEW",
+          "kind": "ASSESSMENT",
+          "objective": "Review the source subcriterion and its context against scoped native implementations",
+          "specification": "UNRESOLVED"
+        }
+      ],
+      "category": "ADDITIONAL",
+      "framework_id": "C5",
+      "id": "C5:AM-07.01AS",
+      "locator": "AM-07.01AS",
+      "review": null,
+      "source_id": "SOURCE-C5",
+      "summary": "Source review required for sharpened C5 subcriterion AM-07.01AS"
+    },
+    {
+      "attributes": [
+        {
+          "evidence_expectation": "Original C5 source, contextual interpretation and independently reviewed mapping/test workpaper",
+          "id": "SOURCE_REVIEW",
+          "kind": "ASSESSMENT",
+          "objective": "Review the source subcriterion and its context against scoped native implementations",
+          "specification": "UNRESOLVED"
+        }
+      ],
+      "category": "ADDITIONAL",
+      "framework_id": "C5",
+      "id": "C5:AM-10.01AS",
+      "locator": "AM-10.01AS",
+      "review": null,
+      "source_id": "SOURCE-C5",
+      "summary": "Source review required for sharpened C5 subcriterion AM-10.01AS"
+    },
+    {
+      "attributes": [
+        {
+          "evidence_expectation": "Original C5 source, contextual interpretation and independently reviewed mapping/test workpaper",
+          "id": "SOURCE_REVIEW",
+          "kind": "ASSESSMENT",
+          "objective": "Review the source subcriterion and its context against scoped native implementations",
+          "specification": "UNRESOLVED"
+        }
+      ],
+      "category": "ADDITIONAL",
+      "framework_id": "C5",
+      "id": "C5:COM-02.01AS",
+      "locator": "COM-02.01AS",
+      "review": null,
+      "source_id": "SOURCE-C5",
+      "summary": "Source review required for sharpened C5 subcriterion COM-02.01AS"
+    },
+    {
+      "attributes": [
+        {
+          "evidence_expectation": "Original C5 source, contextual interpretation and independently reviewed mapping/test workpaper",
+          "id": "SOURCE_REVIEW",
+          "kind": "ASSESSMENT",
+          "objective": "Review the source subcriterion and its context against scoped native implementations",
+          "specification": "UNRESOLVED"
+        }
+      ],
+      "category": "ADDITIONAL",
+      "framework_id": "C5",
+      "id": "C5:COS-04.01AS",
+      "locator": "COS-04.01AS",
+      "review": null,
+      "source_id": "SOURCE-C5",
+      "summary": "Source review required for sharpened C5 subcriterion COS-04.01AS"
+    },
+    {
+      "attributes": [
+        {
+          "evidence_expectation": "Original C5 source, contextual interpretation and independently reviewed mapping/test workpaper",
+          "id": "SOURCE_REVIEW",
+          "kind": "ASSESSMENT",
+          "objective": "Review the source subcriterion and its context against scoped native implementations",
+          "specification": "UNRESOLVED"
+        }
+      ],
+      "category": "ADDITIONAL",
+      "framework_id": "C5",
+      "id": "C5:CRY-04.01AS",
+      "locator": "CRY-04.01AS",
+      "review": null,
+      "source_id": "SOURCE-C5",
+      "summary": "Source review required for sharpened C5 subcriterion CRY-04.01AS"
+    },
+    {
+      "attributes": [
+        {
+          "evidence_expectation": "Original C5 source, contextual interpretation and independently reviewed mapping/test workpaper",
+          "id": "SOURCE_REVIEW",
+          "kind": "ASSESSMENT",
+          "objective": "Review the source subcriterion and its context against scoped native implementations",
+          "specification": "UNRESOLVED"
+        }
+      ],
+      "category": "ADDITIONAL",
+      "framework_id": "C5",
+      "id": "C5:HR-03.02AS",
+      "locator": "HR-03.02AS",
+      "review": null,
+      "source_id": "SOURCE-C5",
+      "summary": "Source review required for sharpened C5 subcriterion HR-03.02AS"
+    },
+    {
+      "attributes": [
+        {
+          "evidence_expectation": "Original C5 source, contextual interpretation and independently reviewed mapping/test workpaper",
+          "id": "SOURCE_REVIEW",
+          "kind": "ASSESSMENT",
+          "objective": "Review the source subcriterion and its context against scoped native implementations",
+          "specification": "UNRESOLVED"
+        }
+      ],
+      "category": "ADDITIONAL",
+      "framework_id": "C5",
+      "id": "C5:IAM-03.03AS",
+      "locator": "IAM-03.03AS",
+      "review": null,
+      "source_id": "SOURCE-C5",
+      "summary": "Source review required for sharpened C5 subcriterion IAM-03.03AS"
+    },
+    {
+      "attributes": [
+        {
+          "evidence_expectation": "Original C5 source, contextual interpretation and independently reviewed mapping/test workpaper",
+          "id": "SOURCE_REVIEW",
+          "kind": "ASSESSMENT",
+          "objective": "Review the source subcriterion and its context against scoped native implementations",
+          "specification": "UNRESOLVED"
+        }
+      ],
+      "category": "ADDITIONAL",
+      "framework_id": "C5",
+      "id": "C5:IAM-07.03AS",
+      "locator": "IAM-07.03AS",
+      "review": null,
+      "source_id": "SOURCE-C5",
+      "summary": "Source review required for sharpened C5 subcriterion IAM-07.03AS"
+    },
+    {
+      "attributes": [
+        {
+          "evidence_expectation": "Original C5 source, contextual interpretation and independently reviewed mapping/test workpaper",
+          "id": "SOURCE_REVIEW",
+          "kind": "ASSESSMENT",
+          "objective": "Review the source subcriterion and its context against scoped native implementations",
+          "specification": "UNRESOLVED"
+        }
+      ],
+      "category": "ADDITIONAL",
+      "framework_id": "C5",
+      "id": "C5:IAM-07.04AS",
+      "locator": "IAM-07.04AS",
+      "review": null,
+      "source_id": "SOURCE-C5",
+      "summary": "Source review required for sharpened C5 subcriterion IAM-07.04AS"
+    },
+    {
+      "attributes": [
+        {
+          "evidence_expectation": "Original C5 source, contextual interpretation and independently reviewed mapping/test workpaper",
+          "id": "SOURCE_REVIEW",
+          "kind": "ASSESSMENT",
+          "objective": "Review the source subcriterion and its context against scoped native implementations",
+          "specification": "UNRESOLVED"
+        }
+      ],
+      "category": "ADDITIONAL",
+      "framework_id": "C5",
+      "id": "C5:IAM-07.06AS",
+      "locator": "IAM-07.06AS",
+      "review": null,
+      "source_id": "SOURCE-C5",
+      "summary": "Source review required for sharpened C5 subcriterion IAM-07.06AS"
+    },
+    {
+      "attributes": [
+        {
+          "evidence_expectation": "Original C5 source, contextual interpretation and independently reviewed mapping/test workpaper",
+          "id": "SOURCE_REVIEW",
+          "kind": "ASSESSMENT",
+          "objective": "Review the source subcriterion and its context against scoped native implementations",
+          "specification": "UNRESOLVED"
+        }
+      ],
+      "category": "ADDITIONAL",
+      "framework_id": "C5",
+      "id": "C5:IAM-08.02AS",
+      "locator": "IAM-08.02AS",
+      "review": null,
+      "source_id": "SOURCE-C5",
+      "summary": "Source review required for sharpened C5 subcriterion IAM-08.02AS"
+    },
+    {
+      "attributes": [
+        {
+          "evidence_expectation": "Original C5 source, contextual interpretation and independently reviewed mapping/test workpaper",
+          "id": "SOURCE_REVIEW",
+          "kind": "ASSESSMENT",
+          "objective": "Review the source subcriterion and its context against scoped native implementations",
+          "specification": "UNRESOLVED"
+        }
+      ],
+      "category": "ADDITIONAL",
+      "framework_id": "C5",
+      "id": "C5:IAM-08.03AS",
+      "locator": "IAM-08.03AS",
+      "review": null,
+      "source_id": "SOURCE-C5",
+      "summary": "Source review required for sharpened C5 subcriterion IAM-08.03AS"
+    },
+    {
+      "attributes": [
+        {
+          "evidence_expectation": "Original C5 source, contextual interpretation and independently reviewed mapping/test workpaper",
+          "id": "SOURCE_REVIEW",
+          "kind": "ASSESSMENT",
+          "objective": "Review the source subcriterion and its context against scoped native implementations",
+          "specification": "UNRESOLVED"
+        }
+      ],
+      "category": "ADDITIONAL",
+      "framework_id": "C5",
+      "id": "C5:OIS-01.01AS",
+      "locator": "OIS-01.01AS",
+      "review": null,
+      "source_id": "SOURCE-C5",
+      "summary": "Source review required for sharpened C5 subcriterion OIS-01.01AS"
+    },
+    {
+      "attributes": [
+        {
+          "evidence_expectation": "Original C5 source, contextual interpretation and independently reviewed mapping/test workpaper",
+          "id": "SOURCE_REVIEW",
+          "kind": "ASSESSMENT",
+          "objective": "Review the source subcriterion and its context against scoped native implementations",
+          "specification": "UNRESOLVED"
+        }
+      ],
+      "category": "ADDITIONAL",
+      "framework_id": "C5",
+      "id": "C5:OIS-08.01AS",
+      "locator": "OIS-08.01AS",
+      "review": null,
+      "source_id": "SOURCE-C5",
+      "summary": "Source review required for sharpened C5 subcriterion OIS-08.01AS"
+    },
+    {
+      "attributes": [
+        {
+          "evidence_expectation": "Original C5 source, contextual interpretation and independently reviewed mapping/test workpaper",
+          "id": "SOURCE_REVIEW",
+          "kind": "ASSESSMENT",
+          "objective": "Review the source subcriterion and its context against scoped native implementations",
+          "specification": "UNRESOLVED"
+        }
+      ],
+      "category": "ADDITIONAL",
+      "framework_id": "C5",
+      "id": "C5:OPS-05.02AS",
+      "locator": "OPS-05.02AS",
+      "review": null,
+      "source_id": "SOURCE-C5",
+      "summary": "Source review required for sharpened C5 subcriterion OPS-05.02AS"
+    },
+    {
+      "attributes": [
+        {
+          "evidence_expectation": "Original C5 source, contextual interpretation and independently reviewed mapping/test workpaper",
+          "id": "SOURCE_REVIEW",
+          "kind": "ASSESSMENT",
+          "objective": "Review the source subcriterion and its context against scoped native implementations",
+          "specification": "UNRESOLVED"
+        }
+      ],
+      "category": "ADDITIONAL",
+      "framework_id": "C5",
+      "id": "C5:OPS-06.01AS",
+      "locator": "OPS-06.01AS",
+      "review": null,
+      "source_id": "SOURCE-C5",
+      "summary": "Source review required for sharpened C5 subcriterion OPS-06.01AS"
+    },
+    {
+      "attributes": [
+        {
+          "evidence_expectation": "Original C5 source, contextual interpretation and independently reviewed mapping/test workpaper",
+          "id": "SOURCE_REVIEW",
+          "kind": "ASSESSMENT",
+          "objective": "Review the source subcriterion and its context against scoped native implementations",
+          "specification": "UNRESOLVED"
+        }
+      ],
+      "category": "ADDITIONAL",
+      "framework_id": "C5",
+      "id": "C5:OPS-22.01AS",
+      "locator": "OPS-22.01AS",
+      "review": null,
+      "source_id": "SOURCE-C5",
+      "summary": "Source review required for sharpened C5 subcriterion OPS-22.01AS"
+    },
+    {
+      "attributes": [
+        {
+          "evidence_expectation": "Original C5 source, contextual interpretation and independently reviewed mapping/test workpaper",
+          "id": "SOURCE_REVIEW",
+          "kind": "ASSESSMENT",
+          "objective": "Review the source subcriterion and its context against scoped native implementations",
+          "specification": "UNRESOLVED"
+        }
+      ],
+      "category": "ADDITIONAL",
+      "framework_id": "C5",
+      "id": "C5:OPS-22.02AS",
+      "locator": "OPS-22.02AS",
+      "review": null,
+      "source_id": "SOURCE-C5",
+      "summary": "Source review required for sharpened C5 subcriterion OPS-22.02AS"
+    },
+    {
+      "attributes": [
+        {
+          "evidence_expectation": "Original C5 source, contextual interpretation and independently reviewed mapping/test workpaper",
+          "id": "SOURCE_REVIEW",
+          "kind": "ASSESSMENT",
+          "objective": "Review the source subcriterion and its context against scoped native implementations",
+          "specification": "UNRESOLVED"
+        }
+      ],
+      "category": "ADDITIONAL",
+      "framework_id": "C5",
+      "id": "C5:OPS-22.03AS",
+      "locator": "OPS-22.03AS",
+      "review": null,
+      "source_id": "SOURCE-C5",
+      "summary": "Source review required for sharpened C5 subcriterion OPS-22.03AS"
+    },
+    {
+      "attributes": [
+        {
+          "evidence_expectation": "Original C5 source, contextual interpretation and independently reviewed mapping/test workpaper",
+          "id": "SOURCE_REVIEW",
+          "kind": "ASSESSMENT",
+          "objective": "Review the source subcriterion and its context against scoped native implementations",
+          "specification": "UNRESOLVED"
+        }
+      ],
+      "category": "ADDITIONAL",
+      "framework_id": "C5",
+      "id": "C5:OPS-25.01AS",
+      "locator": "OPS-25.01AS",
+      "review": null,
+      "source_id": "SOURCE-C5",
+      "summary": "Source review required for sharpened C5 subcriterion OPS-25.01AS"
+    },
+    {
+      "attributes": [
+        {
+          "evidence_expectation": "Original C5 source, contextual interpretation and independently reviewed mapping/test workpaper",
+          "id": "SOURCE_REVIEW",
+          "kind": "ASSESSMENT",
+          "objective": "Review the source subcriterion and its context against scoped native implementations",
+          "specification": "UNRESOLVED"
+        }
+      ],
+      "category": "ADDITIONAL",
+      "framework_id": "C5",
+      "id": "C5:OPS-25.02AS",
+      "locator": "OPS-25.02AS",
+      "review": null,
+      "source_id": "SOURCE-C5",
+      "summary": "Source review required for sharpened C5 subcriterion OPS-25.02AS"
+    },
+    {
+      "attributes": [
+        {
+          "evidence_expectation": "Original C5 source, contextual interpretation and independently reviewed mapping/test workpaper",
+          "id": "SOURCE_REVIEW",
+          "kind": "ASSESSMENT",
+          "objective": "Review the source subcriterion and its context against scoped native implementations",
+          "specification": "UNRESOLVED"
+        }
+      ],
+      "category": "ADDITIONAL",
+      "framework_id": "C5",
+      "id": "C5:OPS-26.05AS",
+      "locator": "OPS-26.05AS",
+      "review": null,
+      "source_id": "SOURCE-C5",
+      "summary": "Source review required for sharpened C5 subcriterion OPS-26.05AS"
+    },
+    {
+      "attributes": [
+        {
+          "evidence_expectation": "Original C5 source, contextual interpretation and independently reviewed mapping/test workpaper",
+          "id": "SOURCE_REVIEW",
+          "kind": "ASSESSMENT",
+          "objective": "Review the source subcriterion and its context against scoped native implementations",
+          "specification": "UNRESOLVED"
+        }
+      ],
+      "category": "ADDITIONAL",
+      "framework_id": "C5",
+      "id": "C5:OPS-27.03AS",
+      "locator": "OPS-27.03AS",
+      "review": null,
+      "source_id": "SOURCE-C5",
+      "summary": "Source review required for sharpened C5 subcriterion OPS-27.03AS"
+    },
+    {
+      "attributes": [
+        {
+          "evidence_expectation": "Original C5 source, contextual interpretation and independently reviewed mapping/test workpaper",
+          "id": "SOURCE_REVIEW",
+          "kind": "ASSESSMENT",
+          "objective": "Review the source subcriterion and its context against scoped native implementations",
+          "specification": "UNRESOLVED"
+        }
+      ],
+      "category": "ADDITIONAL",
+      "framework_id": "C5",
+      "id": "C5:PS-02.01AS",
+      "locator": "PS-02.01AS",
+      "review": null,
+      "source_id": "SOURCE-C5",
+      "summary": "Source review required for sharpened C5 subcriterion PS-02.01AS"
+    },
+    {
+      "attributes": [
+        {
+          "evidence_expectation": "Original C5 source, contextual interpretation and independently reviewed mapping/test workpaper",
+          "id": "SOURCE_REVIEW",
+          "kind": "ASSESSMENT",
+          "objective": "Review the source subcriterion and its context against scoped native implementations",
+          "specification": "UNRESOLVED"
+        }
+      ],
+      "category": "ADDITIONAL",
+      "framework_id": "C5",
+      "id": "C5:PS-02.02AS",
+      "locator": "PS-02.02AS",
+      "review": null,
+      "source_id": "SOURCE-C5",
+      "summary": "Source review required for sharpened C5 subcriterion PS-02.02AS"
+    },
+    {
+      "attributes": [
+        {
+          "evidence_expectation": "Original C5 source, contextual interpretation and independently reviewed mapping/test workpaper",
+          "id": "SOURCE_REVIEW",
+          "kind": "ASSESSMENT",
+          "objective": "Review the source subcriterion and its context against scoped native implementations",
+          "specification": "UNRESOLVED"
+        }
+      ],
+      "category": "ADDITIONAL",
+      "framework_id": "C5",
+      "id": "C5:PSS-12.01AS",
+      "locator": "PSS-12.01AS",
+      "review": null,
+      "source_id": "SOURCE-C5",
+      "summary": "Source review required for sharpened C5 subcriterion PSS-12.01AS"
+    },
+    {
+      "attributes": [
+        {
+          "evidence_expectation": "Original C5 source, contextual interpretation and independently reviewed mapping/test workpaper",
+          "id": "SOURCE_REVIEW",
+          "kind": "ASSESSMENT",
+          "objective": "Review the source subcriterion and its context against scoped native implementations",
+          "specification": "UNRESOLVED"
+        }
+      ],
+      "category": "ADDITIONAL",
+      "framework_id": "C5",
+      "id": "C5:PSS-12.02AS",
+      "locator": "PSS-12.02AS",
+      "review": null,
+      "source_id": "SOURCE-C5",
+      "summary": "Source review required for sharpened C5 subcriterion PSS-12.02AS"
+    },
+    {
+      "attributes": [
+        {
+          "evidence_expectation": "Original C5 source, contextual interpretation and independently reviewed mapping/test workpaper",
+          "id": "SOURCE_REVIEW",
+          "kind": "ASSESSMENT",
+          "objective": "Review the source subcriterion and its context against scoped native implementations",
+          "specification": "UNRESOLVED"
+        }
+      ],
+      "category": "ADDITIONAL",
+      "framework_id": "C5",
+      "id": "C5:SSO-03.01AS",
+      "locator": "SSO-03.01AS",
+      "review": null,
+      "source_id": "SOURCE-C5",
+      "summary": "Source review required for sharpened C5 subcriterion SSO-03.01AS"
+    },
+    {
+      "attributes": [
+        {
+          "evidence_expectation": "Original C5 source, contextual interpretation and independently reviewed mapping/test workpaper",
+          "id": "SOURCE_REVIEW",
+          "kind": "ASSESSMENT",
+          "objective": "Review the source subcriterion and its context against scoped native implementations",
+          "specification": "UNRESOLVED"
+        }
+      ],
+      "category": "ADDITIONAL",
+      "framework_id": "C5",
+      "id": "C5:SSO-07.01AS",
+      "locator": "SSO-07.01AS",
+      "review": null,
+      "source_id": "SOURCE-C5",
+      "summary": "Source review required for sharpened C5 subcriterion SSO-07.01AS"
     }
   ]
 }
