@@ -61,7 +61,15 @@ def render():
             }
         )
         body = book.add_format(
-            {"font_name": "Arial", "font_size": 10, "text_wrap": True, "valign": "top"}
+            {
+                "font_name": "Arial",
+                "font_size": 10,
+                "text_wrap": True,
+                "valign": "vcenter",
+                "indent": 1,
+                "bottom": 1,
+                "bottom_color": "#D9D9D9",
+            }
         )
         head = book.add_format(
             {
@@ -70,6 +78,8 @@ def render():
                 "bold": True,
                 "bg_color": "#101214",
                 "font_color": "#FFFFFF",
+                "valign": "vcenter",
+                "indent": 1,
                 "text_wrap": True,
             }
         )
@@ -78,7 +88,10 @@ def render():
                 "font_name": "Arial",
                 "font_size": 10,
                 "num_format": "#,##0.00;[Red](#,##0.00)",
-                "valign": "top",
+                "valign": "vcenter",
+                "indent": 1,
+                "bottom": 1,
+                "bottom_color": "#D9D9D9",
             }
         )
         title = book.add_format({"font_name": "Arial", "font_size": 18, "bold": True})
@@ -106,7 +119,7 @@ def render():
                 body,
             )
             w.set_row(1, 30)
-            w.write_row(3, 0, labels, head)
+            w.write_row(3, 0, [label.replace("_", " ") for label in labels], head)
             w.set_row(3, 42)
             w.freeze_panes(4, 2)
             w.repeat_rows(0, 3)
@@ -135,7 +148,7 @@ def render():
                         w.write_number(n, col, float(v), money)
                     else:
                         w.write_string(n, col, v, body)
-                w.set_row(n, 32)
+                w.set_row(n, 46)
             if rs:
                 w.autofilter(3, 0, len(rs) + 3, len(cols) - 1)
             w.print_area(0, 0, min(15, len(rs) + 3), min(6, len(cols) - 1))
