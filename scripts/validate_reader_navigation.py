@@ -24,6 +24,7 @@ TABLES = (
     "reader_publication_pair",
     "reader_format_review",
     "reader_search",
+    "reader_evidence_link",
 )
 
 
@@ -32,7 +33,7 @@ def logical_content(db):
 
 
 def main(check_regeneration=False) -> None:
-    from reader_library import inputs
+    from reader_library import inputs, evidence_records
 
     pages = [
         ROOT / "README.md",
@@ -92,6 +93,13 @@ def main(check_regeneration=False) -> None:
         != db.execute("SELECT count(*) FROM institutional_object").fetchone()[0]
     ):
         failures.append("Controlled pair coverage differs from institutional catalog")
+    try:
+        expected_evidence = sorted(evidence_records(ROOT))
+        actual_evidence = sorted(db.execute("SELECT * FROM reader_evidence_link").fetchall())
+        if expected_evidence != actual_evidence:
+            failures.append("Evidence database links differ from validated packet catalogs")
+    except (ValueError, KeyError) as error:
+        failures.append(str(error))
     before = logical_content(db) if check_regeneration else None
     db.close()
     if failures:

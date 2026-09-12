@@ -8,7 +8,7 @@ Continue the existing reader/evidence work from a refreshed main. Read [the stru
 
 The owner authorized README/wiki usability, existing finance evidence completion, and preparation for a substantial overnight run on September 11 (Pacific). Existing authorization allows isolated branches, commits, pushes, PRs and merges after required gates. New PDF/workbook designs still require exact-file visual review. Pending questions do not become approvals through elapsed time.
 
-Default order is accounting evidence, then transaction access and subject completeness. A priority answer changes the order, not the source/visual gates. If the owner instead requests all work remain in PRs, record that in the queue before continuing. No spending, new hosting, new financial engine or background scheduler is included.
+The owner confirmed all three content lanes: accounting evidence, transaction/legal access, and business/department completeness. Nonvisual work may merge after required gates; future designs remain in exact-file review. The owner also authorized a separate proposed fictional billing dataset for review only; it must not change booked amounts or established legal canon. [The dated authorization](../../canon/READER_OVERNIGHT_SCOPE_2026-09-11.md) records these decisions. No spending, new hosting, new financial engine or background scheduler is included.
 
 ## Start or resume
 
@@ -30,12 +30,12 @@ The validator checks the job graph, existing inputs, permitted relative paths an
 
 Use up to three worker lanes and one main integrator. Give each lane an isolated worktree if it needs to commit or rebase. Never let separate workers stage the same index or regenerate the shared catalog concurrently.
 
-- **Finance:** recover the existing draft first; inspect source populations and prepare accounting evidence in the reserved evidence directories. No new monetary assumptions or signed/bank-document imitation.
+- **Finance:** recover the existing draft first; inspect source populations and prepare accounting evidence in the reserved evidence directories. No changes to existing monetary records or signed/bank-document imitation. FIN-06 may propose separate fictional billing fields for review only.
 - **Reader reconciliation:** match the full counterpart-review population to explicit current or immutable-release manifests. A similarly named PDF or a catalog row is not proof of equivalence.
 - **Wiki/transactions:** close source-backed subject access gaps and index actual transaction/operating records. Do not invent missing institutions, logos or corporate history.
 - **Main agent:** owns README integration, shared schemas/catalog/generators, cross-lane reconciliation, source/visual review, PR descriptions and merges.
 
-Serialise jobs within each lane. The queue includes source-only tasks that can proceed while visual acceptance is pending. FIN-03 cannot start from an unaccepted FIN-01 design. New visual outputs from any lane remain review artifacts regardless of a ready source task.
+Serialise jobs within each lane. The queue includes source-only tasks that can proceed while visual acceptance is pending. FIN-01 is exact-file accepted; FIN-03 source work may proceed when FIN-02 is complete. FIN-01 acceptance does not approve FIN-03 or FIN-06 designs. New visual outputs from any lane remain review artifacts regardless of a ready source task.
 
 ## Completion discipline
 

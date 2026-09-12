@@ -2,6 +2,8 @@
 
 This guide is for a person opening the Sable Harbor archive in a browser and a spreadsheet application. No AI assistant, SQL query or text parser is required for the exercises below. Source code and databases remain available for deeper verification.
 
+For a ready-to-read example, open the [accepted Foundry Field evidence memo and workbook](evidence/SH-FIN-HUMAN-001/README.md). It follows one invoice through collection, writeoff, credits and recovery; it is reconstructed evidence, not an original invoice.
+
 All company financial records in these exercises are synthetic. The operating release retains a 2026 calibration and provides conditional 2027–2031 scenarios. It does not contain observed company results, audited statements, actual bank confirmations or executed customer agreements. Read the [operating model's boundaries](../../enterprise/operations/README.md) before interpreting results. Use one release, scenario, reporting unit and period consistently; do not combine successive versions as additional transactions.
 
 ## Get the evidence

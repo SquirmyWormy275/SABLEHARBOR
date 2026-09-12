@@ -6,6 +6,7 @@ Never infer approval or a source/publication relationship from a filename.
 from __future__ import annotations
 
 import hashlib
+import json
 import os
 import sqlite3
 import subprocess
@@ -89,6 +90,66 @@ def title(path: Path) -> str:
     return path.stem.replace("_", " ").replace("|", " / ")
 
 
+def evidence_acceptance(root: Path, directory: Path, draft_status: str) -> str:
+    """Acceptance is a separate dated record; never rewrite reviewed draft bytes."""
+    path = directory / "ACCEPTANCE.json"
+    if not path.exists():
+        return draft_status
+    accepted = json.loads(path.read_text())
+    if accepted["status"] != "OWNER_ACCEPTED_EXACT_PACKET":
+        raise ValueError("Unknown evidence acceptance state")
+    if not (root / accepted["controlling_record"]).is_file():
+        raise ValueError("Missing evidence acceptance canon")
+    for relative, digest in accepted["artifacts"].items():
+        target = (root / relative).resolve()
+        if not target.is_relative_to(directory.resolve()) or not target.is_file():
+            raise ValueError("Accepted evidence path missing or unsafe")
+        if hashlib.sha256(target.read_bytes()).hexdigest() != digest:
+            raise ValueError("Accepted evidence bytes changed: " + relative)
+    return accepted["status"]
+
+
+def evidence_records(root: Path) -> list[tuple]:
+    """Validate declared draft evidence without promoting it to a controlled publication."""
+    records = []
+    base = root / "docs/finance/evidence"
+    for path in sorted(base.glob("*/catalog.json")):
+        catalog = json.loads(path.read_text())
+        source = json.loads((path.parent / "source.json").read_text())
+        manifest = json.loads((path.parent / "manifest.json").read_text())
+        if catalog["document_id"] != source["packet_id"] or catalog["status"] != "DRAFT_FOR_USER_REVIEW":
+            raise ValueError("Evidence identity or draft status mismatch")
+        if manifest["status"] != "DRAFT_NOT_APPROVED":
+            raise ValueError("Evidence manifest is not an unapproved draft")
+        if manifest["release_sha256"] != source["release_sha256"]:
+            raise ValueError("Evidence release mismatch")
+        for name, digest in catalog["artifacts"].items():
+            target = (path.parent / name).resolve()
+            if not target.is_relative_to(path.parent.resolve()) or not target.is_file():
+                raise ValueError("Evidence artifact missing or unsafe")
+            if hashlib.sha256(target.read_bytes()).hexdigest() != digest:
+                raise ValueError("Evidence artifact hash mismatch: " + name)
+        if manifest["files"].get("catalog.json") != hashlib.sha256(path.read_bytes()).hexdigest():
+            raise ValueError("Evidence catalog hash mismatch")
+        invoice = source["rows"]["invoices"]
+        if len(invoice) != 1 or any(invoice[0][key] != catalog[key] for key in ("invoice_id", "scenario", "unit")):
+            raise ValueError("Evidence invoice or scope mismatch")
+        if catalog["source_revision"] != source["release_source_revision"]:
+            raise ValueError("Evidence revision mismatch")
+        native = source["release"] + "/" + source["members"]["native_database"]["member"]
+        if catalog["native_database"] != native:
+            raise ValueError("Evidence native database link mismatch")
+        for rows in source["rows"].values():
+            if any(row.get("scenario", catalog["scenario"]) != catalog["scenario"] or row["unit"] != catalog["unit"] for row in rows):
+                raise ValueError("Evidence source population scope mismatch")
+        if catalog["native_source_ids"] != [row["event_id"] for row in source["rows"]["events"]]:
+            raise ValueError("Evidence accounting event links mismatch")
+        relatives = [str((path.parent / name).relative_to(root)) for name in ("PACKET.md", "packet.pdf", "reconciliation.xlsx")]
+        hashes = [catalog["artifacts"][name] for name in ("PACKET.md", "packet.pdf", "reconciliation.xlsx")]
+        records.append((catalog["document_id"], evidence_acceptance(root, path.parent, catalog["status"]), catalog["invoice_id"], catalog["scenario"], catalog["unit"], source["release"], source["release_source_revision"], source["release_sha256"], catalog["native_database"], json.dumps(source["members"], sort_keys=True), json.dumps(catalog["native_source_ids"]), *relatives, *hashes, str(path.relative_to(root))))
+    return records
+
+
 def populate(
     root: Path, db: sqlite3.Connection, artifacts: list[dict],
     *, file_paths: list[str] | None = None,
@@ -105,6 +166,16 @@ def populate(
         source_path TEXT PRIMARY KEY REFERENCES reader_file(path),
         review_state TEXT NOT NULL, rationale TEXT NOT NULL,
         review_queue TEXT NOT NULL);
+      CREATE TABLE reader_evidence_link (
+        document_id TEXT PRIMARY KEY, status TEXT NOT NULL, invoice_id TEXT NOT NULL,
+        scenario TEXT NOT NULL, reporting_unit TEXT NOT NULL, release_tag TEXT NOT NULL,
+        source_revision TEXT NOT NULL, release_sha256 TEXT NOT NULL,
+        native_database TEXT NOT NULL, member_provenance_json TEXT NOT NULL,
+        source_ids_json TEXT NOT NULL, markdown_path TEXT NOT NULL REFERENCES reader_file(path),
+        pdf_path TEXT NOT NULL REFERENCES reader_file(path),
+        xlsx_path TEXT NOT NULL REFERENCES reader_file(path),
+        markdown_sha256 TEXT NOT NULL, pdf_sha256 TEXT NOT NULL, xlsx_sha256 TEXT NOT NULL,
+        catalog_path TEXT NOT NULL);
       CREATE VIRTUAL TABLE reader_search USING fts5(path UNINDEXED, title, body);
     """)
     rows = []
@@ -128,6 +199,11 @@ def populate(
         body = data.decode(errors="replace") if row[2] == "md" else row[1]
         db.execute("INSERT INTO reader_search VALUES (?,?,?)", (relative, row[1], body))
     paths = {r[0] for r in rows}
+    evidence = evidence_records(root)
+    for record in evidence:
+        if any(path not in paths for path in record[11:14]):
+            raise ValueError("Evidence artifact is not in tracked reader inventory")
+        db.execute("INSERT INTO reader_evidence_link VALUES (" + ",".join("?" for _ in record) + ")", record)
     paired = {}
     for artifact in artifacts:
         source, publication = artifact["source"], artifact["publication"]
@@ -261,7 +337,7 @@ def populate(
             "Every inventoried file has a path, title, format, collection, size and SHA-256 in "
             "`reader_file` within the [institutional database](../internal/institutional_catalog.sqlite3). "
             "`reader_publication_pair` records verified source/PDF links; `reader_search` supports text search. "
-            "These are discovery tables. Native accounting and operating databases retain their transaction records.",
+            "`reader_evidence_link` separately connects validated evidence packets to their native accounting IDs and MD/PDF/XLSX files without declaring publication approval. These are discovery tables. Native accounting and operating databases retain their transaction records.",
             "",
             "The [format-review queue](library/format-review.md) lists every unpaired non-navigation Markdown record for reconciliation. "
             "Unpaired documents have not been certified against the new three-form requirement. "
