@@ -1,0 +1,2663 @@
+[
+  {
+    "framework_id": "ISO27001",
+    "locator": "4.1",
+    "category": "ISMS",
+    "objective": "Identify relevant internal and external context",
+    "control_ids": [
+      "SH-ERM-001"
+    ],
+    "pdf_pages": [
+      7
+    ],
+    "kind": "ASSESSMENT"
+  },
+  {
+    "framework_id": "ISO42001",
+    "locator": "4.1",
+    "category": "AIMS",
+    "objective": "Identify relevant internal and external context",
+    "control_ids": [
+      "SH-ERM-001"
+    ],
+    "pdf_pages": [
+      13
+    ],
+    "kind": "ASSESSMENT"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "4.2",
+    "category": "ISMS",
+    "objective": "Determine interested-party requirements to address",
+    "control_ids": [
+      "SH-LEG-001"
+    ],
+    "pdf_pages": [
+      7
+    ],
+    "kind": "ASSESSMENT"
+  },
+  {
+    "framework_id": "ISO42001",
+    "locator": "4.2",
+    "category": "AIMS",
+    "objective": "Determine interested-party requirements to address",
+    "control_ids": [
+      "SH-LEG-001"
+    ],
+    "pdf_pages": [
+      14
+    ],
+    "kind": "ASSESSMENT"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "4.3",
+    "category": "ISMS",
+    "objective": "Define management-system scope and interfaces",
+    "control_ids": [
+      "SH-POL-004"
+    ],
+    "pdf_pages": [
+      8
+    ],
+    "kind": "DOCUMENT"
+  },
+  {
+    "framework_id": "ISO42001",
+    "locator": "4.3",
+    "category": "AIMS",
+    "objective": "Define management-system scope and interfaces",
+    "control_ids": [
+      "SH-POL-004"
+    ],
+    "pdf_pages": [
+      14
+    ],
+    "kind": "DOCUMENT"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "4.4",
+    "category": "ISMS",
+    "objective": "Establish and maintain the management system",
+    "control_ids": [
+      "SH-POL-002"
+    ],
+    "pdf_pages": [
+      8
+    ],
+    "kind": "ASSESSMENT"
+  },
+  {
+    "framework_id": "ISO42001",
+    "locator": "4.4",
+    "category": "AIMS",
+    "objective": "Establish and maintain the management system",
+    "control_ids": [
+      "SH-POL-002"
+    ],
+    "pdf_pages": [
+      14
+    ],
+    "kind": "ASSESSMENT"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "5.1",
+    "category": "ISMS",
+    "objective": "Demonstrate accountable leadership and integration",
+    "control_ids": [
+      "SH-GOV-001"
+    ],
+    "pdf_pages": [
+      8
+    ],
+    "kind": "ASSESSMENT"
+  },
+  {
+    "framework_id": "ISO42001",
+    "locator": "5.1",
+    "category": "AIMS",
+    "objective": "Demonstrate accountable leadership and integration",
+    "control_ids": [
+      "SH-GOV-001"
+    ],
+    "pdf_pages": [
+      15
+    ],
+    "kind": "ASSESSMENT"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "5.2",
+    "category": "ISMS",
+    "objective": "Approve and communicate the governing policy",
+    "control_ids": [
+      "SH-POL-001"
+    ],
+    "pdf_pages": [
+      9
+    ],
+    "kind": "DOCUMENT"
+  },
+  {
+    "framework_id": "ISO42001",
+    "locator": "5.2",
+    "category": "AIMS",
+    "objective": "Approve and communicate the governing policy",
+    "control_ids": [
+      "SH-POL-001"
+    ],
+    "pdf_pages": [
+      15
+    ],
+    "kind": "DOCUMENT"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "5.3",
+    "category": "ISMS",
+    "objective": "Allocate system responsibilities and authority",
+    "control_ids": [
+      "SH-GOV-003"
+    ],
+    "pdf_pages": [
+      9
+    ],
+    "kind": "ASSESSMENT"
+  },
+  {
+    "framework_id": "ISO42001",
+    "locator": "5.3",
+    "category": "AIMS",
+    "objective": "Allocate system responsibilities and authority",
+    "control_ids": [
+      "SH-GOV-003"
+    ],
+    "pdf_pages": [
+      16
+    ],
+    "kind": "ASSESSMENT"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "6.1.1",
+    "category": "ISMS",
+    "objective": "Plan responses to risks and opportunities",
+    "control_ids": [
+      "SH-ERM-001"
+    ],
+    "pdf_pages": [
+      9
+    ],
+    "kind": "ASSESSMENT"
+  },
+  {
+    "framework_id": "ISO42001",
+    "locator": "6.1.1",
+    "category": "AIMS",
+    "objective": "Plan responses to risks and opportunities",
+    "control_ids": [
+      "SH-ERM-001"
+    ],
+    "pdf_pages": [
+      16
+    ],
+    "kind": "ASSESSMENT"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "6.1.2",
+    "category": "ISMS",
+    "objective": "Define repeatable assessment criteria and evaluate risks",
+    "control_ids": [
+      "SH-ERM-001"
+    ],
+    "pdf_pages": [
+      10
+    ],
+    "kind": "ASSESSMENT"
+  },
+  {
+    "framework_id": "ISO42001",
+    "locator": "6.1.2",
+    "category": "AIMS",
+    "objective": "Define repeatable assessment criteria and evaluate risks",
+    "control_ids": [
+      "SH-ERM-001"
+    ],
+    "pdf_pages": [
+      17
+    ],
+    "kind": "ASSESSMENT"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "6.1.3",
+    "category": "ISMS",
+    "objective": "Select treatment and justify control inclusion and exclusion",
+    "control_ids": [
+      "SH-ERM-003"
+    ],
+    "pdf_pages": [
+      10
+    ],
+    "kind": "DOCUMENT"
+  },
+  {
+    "framework_id": "ISO42001",
+    "locator": "6.1.3",
+    "category": "AIMS",
+    "objective": "Select treatment and justify control inclusion and exclusion",
+    "control_ids": [
+      "SH-ERM-003"
+    ],
+    "pdf_pages": [
+      17
+    ],
+    "kind": "DOCUMENT"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "6.2",
+    "category": "ISMS",
+    "objective": "Set measurable objectives and delivery plans",
+    "control_ids": [
+      "SH-ERM-002"
+    ],
+    "pdf_pages": [
+      11
+    ],
+    "kind": "ASSESSMENT"
+  },
+  {
+    "framework_id": "ISO42001",
+    "locator": "6.2",
+    "category": "AIMS",
+    "objective": "Set measurable objectives and delivery plans",
+    "control_ids": [
+      "SH-ERM-002"
+    ],
+    "pdf_pages": [
+      18
+    ],
+    "kind": "ASSESSMENT"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "6.3",
+    "category": "ISMS",
+    "objective": "Plan management-system changes",
+    "control_ids": [
+      "SH-ENG-001"
+    ],
+    "pdf_pages": [
+      11
+    ],
+    "kind": "ASSESSMENT"
+  },
+  {
+    "framework_id": "ISO42001",
+    "locator": "6.3",
+    "category": "AIMS",
+    "objective": "Plan management-system changes",
+    "control_ids": [
+      "SH-ENG-001"
+    ],
+    "pdf_pages": [
+      19
+    ],
+    "kind": "ASSESSMENT"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "7.1",
+    "category": "ISMS",
+    "objective": "Provide the resources needed for the system",
+    "control_ids": [
+      "SH-PPL-005"
+    ],
+    "pdf_pages": [
+      12
+    ],
+    "kind": "ASSESSMENT"
+  },
+  {
+    "framework_id": "ISO42001",
+    "locator": "7.1",
+    "category": "AIMS",
+    "objective": "Provide the resources needed for the system",
+    "control_ids": [
+      "SH-PPL-005"
+    ],
+    "pdf_pages": [
+      19
+    ],
+    "kind": "ASSESSMENT"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "7.2",
+    "category": "ISMS",
+    "objective": "Establish and demonstrate role competence",
+    "control_ids": [
+      "SH-TRN-003"
+    ],
+    "pdf_pages": [
+      12
+    ],
+    "kind": "ASSESSMENT"
+  },
+  {
+    "framework_id": "ISO42001",
+    "locator": "7.2",
+    "category": "AIMS",
+    "objective": "Establish and demonstrate role competence",
+    "control_ids": [
+      "SH-TRN-003"
+    ],
+    "pdf_pages": [
+      19
+    ],
+    "kind": "ASSESSMENT"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "7.3",
+    "category": "ISMS",
+    "objective": "Build awareness of policy duties and consequences",
+    "control_ids": [
+      "SH-TRN-001"
+    ],
+    "pdf_pages": [
+      12
+    ],
+    "kind": "ASSESSMENT"
+  },
+  {
+    "framework_id": "ISO42001",
+    "locator": "7.3",
+    "category": "AIMS",
+    "objective": "Build awareness of policy duties and consequences",
+    "control_ids": [
+      "SH-TRN-001"
+    ],
+    "pdf_pages": [
+      20
+    ],
+    "kind": "ASSESSMENT"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "7.4",
+    "category": "ISMS",
+    "objective": "Plan relevant internal and external communications",
+    "control_ids": [
+      "SH-PRD-003"
+    ],
+    "pdf_pages": [
+      12
+    ],
+    "kind": "ASSESSMENT"
+  },
+  {
+    "framework_id": "ISO42001",
+    "locator": "7.4",
+    "category": "AIMS",
+    "objective": "Plan relevant internal and external communications",
+    "control_ids": [
+      "SH-PRD-003"
+    ],
+    "pdf_pages": [
+      20
+    ],
+    "kind": "ASSESSMENT"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "7.5.1",
+    "category": "ISMS",
+    "objective": "Identify required management-system documentation",
+    "control_ids": [
+      "SH-POL-001"
+    ],
+    "pdf_pages": [
+      12
+    ],
+    "kind": "DOCUMENT"
+  },
+  {
+    "framework_id": "ISO42001",
+    "locator": "7.5.1",
+    "category": "AIMS",
+    "objective": "Identify required management-system documentation",
+    "control_ids": [
+      "SH-POL-001"
+    ],
+    "pdf_pages": [
+      20
+    ],
+    "kind": "DOCUMENT"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "7.5.2",
+    "category": "ISMS",
+    "objective": "Control document creation and revision",
+    "control_ids": [
+      "SH-POL-001"
+    ],
+    "pdf_pages": [
+      13
+    ],
+    "kind": "DOCUMENT"
+  },
+  {
+    "framework_id": "ISO42001",
+    "locator": "7.5.2",
+    "category": "AIMS",
+    "objective": "Control document creation and revision",
+    "control_ids": [
+      "SH-POL-001"
+    ],
+    "pdf_pages": [
+      20
+    ],
+    "kind": "DOCUMENT"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "7.5.3",
+    "category": "ISMS",
+    "objective": "Protect and govern documented information",
+    "control_ids": [
+      "SH-REC-001"
+    ],
+    "pdf_pages": [
+      13
+    ],
+    "kind": "DOCUMENT"
+  },
+  {
+    "framework_id": "ISO42001",
+    "locator": "7.5.3",
+    "category": "AIMS",
+    "objective": "Protect and govern documented information",
+    "control_ids": [
+      "SH-REC-001"
+    ],
+    "pdf_pages": [
+      21
+    ],
+    "kind": "DOCUMENT"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "8.1",
+    "category": "ISMS",
+    "objective": "Operate controlled processes and manage change",
+    "control_ids": [
+      "SH-OPS-004"
+    ],
+    "pdf_pages": [
+      13
+    ],
+    "kind": "ASSESSMENT"
+  },
+  {
+    "framework_id": "ISO42001",
+    "locator": "8.1",
+    "category": "AIMS",
+    "objective": "Operate controlled processes and manage change",
+    "control_ids": [
+      "SH-OPS-004"
+    ],
+    "pdf_pages": [
+      21
+    ],
+    "kind": "ASSESSMENT"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "8.2",
+    "category": "ISMS",
+    "objective": "Perform planned and change-triggered risk assessments",
+    "control_ids": [
+      "SH-ERM-001"
+    ],
+    "pdf_pages": [
+      14
+    ],
+    "kind": "ASSESSMENT"
+  },
+  {
+    "framework_id": "ISO42001",
+    "locator": "8.2",
+    "category": "AIMS",
+    "objective": "Perform planned and change-triggered risk assessments",
+    "control_ids": [
+      "SH-ERM-001"
+    ],
+    "pdf_pages": [
+      21
+    ],
+    "kind": "ASSESSMENT"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "8.3",
+    "category": "ISMS",
+    "objective": "Execute risk treatment and retain results",
+    "control_ids": [
+      "SH-ERM-003"
+    ],
+    "pdf_pages": [
+      14
+    ],
+    "kind": "ASSESSMENT"
+  },
+  {
+    "framework_id": "ISO42001",
+    "locator": "8.3",
+    "category": "AIMS",
+    "objective": "Execute risk treatment and retain results",
+    "control_ids": [
+      "SH-ERM-003"
+    ],
+    "pdf_pages": [
+      22
+    ],
+    "kind": "ASSESSMENT"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "9.1",
+    "category": "ISMS",
+    "objective": "Evaluate system performance using defined measures",
+    "control_ids": [
+      "SH-ASS-002"
+    ],
+    "pdf_pages": [
+      14
+    ],
+    "kind": "ASSESSMENT"
+  },
+  {
+    "framework_id": "ISO42001",
+    "locator": "9.1",
+    "category": "AIMS",
+    "objective": "Evaluate system performance using defined measures",
+    "control_ids": [
+      "SH-ASS-002"
+    ],
+    "pdf_pages": [
+      22
+    ],
+    "kind": "ASSESSMENT"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "9.2.1",
+    "category": "ISMS",
+    "objective": "Evaluate conformity and effectiveness through internal audit",
+    "control_ids": [
+      "SH-ASS-003"
+    ],
+    "pdf_pages": [
+      14
+    ],
+    "kind": "ASSESSMENT"
+  },
+  {
+    "framework_id": "ISO42001",
+    "locator": "9.2.1",
+    "category": "AIMS",
+    "objective": "Evaluate conformity and effectiveness through internal audit",
+    "control_ids": [
+      "SH-ASS-003"
+    ],
+    "pdf_pages": [
+      22
+    ],
+    "kind": "ASSESSMENT"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "9.2.2",
+    "category": "ISMS",
+    "objective": "Manage a risk-based independent audit programme",
+    "control_ids": [
+      "SH-ASS-003"
+    ],
+    "pdf_pages": [
+      15
+    ],
+    "kind": "ASSESSMENT"
+  },
+  {
+    "framework_id": "ISO42001",
+    "locator": "9.2.2",
+    "category": "AIMS",
+    "objective": "Manage a risk-based independent audit programme",
+    "control_ids": [
+      "SH-ASS-003"
+    ],
+    "pdf_pages": [
+      22
+    ],
+    "kind": "ASSESSMENT"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "9.3.1",
+    "category": "ISMS",
+    "objective": "Conduct management review at planned intervals",
+    "control_ids": [
+      "SH-GOV-002"
+    ],
+    "pdf_pages": [
+      15
+    ],
+    "kind": "ASSESSMENT"
+  },
+  {
+    "framework_id": "ISO42001",
+    "locator": "9.3.1",
+    "category": "AIMS",
+    "objective": "Conduct management review at planned intervals",
+    "control_ids": [
+      "SH-GOV-002"
+    ],
+    "pdf_pages": [
+      23
+    ],
+    "kind": "ASSESSMENT"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "9.3.2",
+    "category": "ISMS",
+    "objective": "Assemble required management-review inputs",
+    "control_ids": [
+      "SH-ASS-001"
+    ],
+    "pdf_pages": [
+      15
+    ],
+    "kind": "ASSESSMENT"
+  },
+  {
+    "framework_id": "ISO42001",
+    "locator": "9.3.2",
+    "category": "AIMS",
+    "objective": "Assemble required management-review inputs",
+    "control_ids": [
+      "SH-ASS-001"
+    ],
+    "pdf_pages": [
+      23
+    ],
+    "kind": "ASSESSMENT"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "9.3.3",
+    "category": "ISMS",
+    "objective": "Record management-review decisions and changes",
+    "control_ids": [
+      "SH-GOV-005"
+    ],
+    "pdf_pages": [
+      15
+    ],
+    "kind": "ASSESSMENT"
+  },
+  {
+    "framework_id": "ISO42001",
+    "locator": "9.3.3",
+    "category": "AIMS",
+    "objective": "Record management-review decisions and changes",
+    "control_ids": [
+      "SH-GOV-005"
+    ],
+    "pdf_pages": [
+      23
+    ],
+    "kind": "ASSESSMENT"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "10.1",
+    "category": "ISMS",
+    "objective": "Improve management-system suitability and effectiveness",
+    "control_ids": [
+      "SH-ASS-005"
+    ],
+    "pdf_pages": [
+      16
+    ],
+    "kind": "ASSESSMENT"
+  },
+  {
+    "framework_id": "ISO42001",
+    "locator": "10.1",
+    "category": "AIMS",
+    "objective": "Improve management-system suitability and effectiveness",
+    "control_ids": [
+      "SH-ASS-005"
+    ],
+    "pdf_pages": [
+      23
+    ],
+    "kind": "ASSESSMENT"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "10.2",
+    "category": "ISMS",
+    "objective": "Correct nonconformities and address their causes",
+    "control_ids": [
+      "SH-ASS-005"
+    ],
+    "pdf_pages": [
+      16
+    ],
+    "kind": "ASSESSMENT"
+  },
+  {
+    "framework_id": "ISO42001",
+    "locator": "10.2",
+    "category": "AIMS",
+    "objective": "Correct nonconformities and address their causes",
+    "control_ids": [
+      "SH-ASS-005"
+    ],
+    "pdf_pages": [
+      24
+    ],
+    "kind": "ASSESSMENT"
+  },
+  {
+    "framework_id": "ISO42001",
+    "locator": "6.1.4",
+    "category": "AIMS",
+    "objective": "Define assessment of AI impacts on people and society",
+    "control_ids": [
+      "SH-AIM-002"
+    ],
+    "pdf_pages": [
+      18
+    ],
+    "kind": "ASSESSMENT"
+  },
+  {
+    "framework_id": "ISO42001",
+    "locator": "8.4",
+    "category": "AIMS",
+    "objective": "Execute and retain AI system impact assessments",
+    "control_ids": [
+      "SH-AIM-002"
+    ],
+    "pdf_pages": [
+      22
+    ],
+    "kind": "ASSESSMENT"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.5.1",
+    "category": "ANNEX_A",
+    "objective": "Maintain security policy direction",
+    "control_ids": [
+      "SH-POL-001"
+    ],
+    "pdf_pages": [
+      17
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.5.2",
+    "category": "ANNEX_A",
+    "objective": "Assign security accountability",
+    "control_ids": [
+      "SH-GOV-003"
+    ],
+    "pdf_pages": [
+      17
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.5.3",
+    "category": "ANNEX_A",
+    "objective": "Separate incompatible responsibilities",
+    "control_ids": [
+      "SH-IAM-002"
+    ],
+    "pdf_pages": [
+      17
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.5.4",
+    "category": "ANNEX_A",
+    "objective": "Ensure management enforces security duties",
+    "control_ids": [
+      "SH-ASS-001"
+    ],
+    "pdf_pages": [
+      17
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.5.5",
+    "category": "ANNEX_A",
+    "objective": "Maintain relevant authority contacts",
+    "control_ids": [
+      "SH-LEG-001"
+    ],
+    "pdf_pages": [
+      17
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.5.6",
+    "category": "ANNEX_A",
+    "objective": "Maintain specialist security information channels",
+    "control_ids": [
+      "SH-SEC-003"
+    ],
+    "pdf_pages": [
+      17
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.5.7",
+    "category": "ANNEX_A",
+    "objective": "Analyze actionable threat information",
+    "control_ids": [
+      "SH-SEC-003"
+    ],
+    "pdf_pages": [
+      17
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.5.8",
+    "category": "ANNEX_A",
+    "objective": "Include security in project governance",
+    "control_ids": [
+      "SH-ENG-001"
+    ],
+    "pdf_pages": [
+      17
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.5.9",
+    "category": "ANNEX_A",
+    "objective": "Inventory information and associated assets",
+    "control_ids": [
+      "SH-CFG-001"
+    ],
+    "pdf_pages": [
+      17
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.5.10",
+    "category": "ANNEX_A",
+    "objective": "Specify permitted asset and information use",
+    "control_ids": [
+      "SH-POL-001"
+    ],
+    "pdf_pages": [
+      17
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.5.11",
+    "category": "ANNEX_A",
+    "objective": "Recover assets when relationships change or end",
+    "control_ids": [
+      "SH-IAM-004"
+    ],
+    "pdf_pages": [
+      17
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.5.12",
+    "category": "ANNEX_A",
+    "objective": "Classify information by protection needs",
+    "control_ids": [
+      "SH-DAT-001"
+    ],
+    "pdf_pages": [
+      18
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.5.13",
+    "category": "ANNEX_A",
+    "objective": "Apply labels that communicate classification",
+    "control_ids": [
+      "SH-DAT-001"
+    ],
+    "pdf_pages": [
+      18
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.5.14",
+    "category": "ANNEX_A",
+    "objective": "Govern internal and external information transfers",
+    "control_ids": [
+      "SH-DAT-002"
+    ],
+    "pdf_pages": [
+      18
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.5.15",
+    "category": "ANNEX_A",
+    "objective": "Define authorization rules for resources",
+    "control_ids": [
+      "SH-IAM-002"
+    ],
+    "pdf_pages": [
+      18
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.5.16",
+    "category": "ANNEX_A",
+    "objective": "Manage identity throughout its lifecycle",
+    "control_ids": [
+      "SH-IAM-001"
+    ],
+    "pdf_pages": [
+      18
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.5.17",
+    "category": "ANNEX_A",
+    "objective": "Protect authentication secrets and their lifecycle",
+    "control_ids": [
+      "SH-CFG-004"
+    ],
+    "pdf_pages": [
+      18
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.5.18",
+    "category": "ANNEX_A",
+    "objective": "Authorize review and remove entitlements",
+    "control_ids": [
+      "SH-IAM-007"
+    ],
+    "pdf_pages": [
+      18
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.5.19",
+    "category": "ANNEX_A",
+    "objective": "Manage security exposure from suppliers",
+    "control_ids": [
+      "SH-TPR-001"
+    ],
+    "pdf_pages": [
+      18
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.5.20",
+    "category": "ANNEX_A",
+    "objective": "Specify supplier security commitments",
+    "control_ids": [
+      "SH-TPR-003"
+    ],
+    "pdf_pages": [
+      18
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.5.21",
+    "category": "ANNEX_A",
+    "objective": "Address technology supply-chain security",
+    "control_ids": [
+      "SH-TPR-002"
+    ],
+    "pdf_pages": [
+      18
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.5.22",
+    "category": "ANNEX_A",
+    "objective": "Monitor changes in supplier services and security",
+    "control_ids": [
+      "SH-TPR-004"
+    ],
+    "pdf_pages": [
+      18
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.5.23",
+    "category": "ANNEX_A",
+    "objective": "Govern cloud acquisition use and exit",
+    "control_ids": [
+      "SH-TPR-005"
+    ],
+    "pdf_pages": [
+      18
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.5.24",
+    "category": "ANNEX_A",
+    "objective": "Prepare accountable incident handling",
+    "control_ids": [
+      "SH-INC-001"
+    ],
+    "pdf_pages": [
+      18
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.5.25",
+    "category": "ANNEX_A",
+    "objective": "Classify security events and decide response",
+    "control_ids": [
+      "SH-SEC-006"
+    ],
+    "pdf_pages": [
+      19
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.5.26",
+    "category": "ANNEX_A",
+    "objective": "Execute security incident response",
+    "control_ids": [
+      "SH-INC-001"
+    ],
+    "pdf_pages": [
+      19
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.5.27",
+    "category": "ANNEX_A",
+    "objective": "Improve from security incidents",
+    "control_ids": [
+      "SH-INC-003"
+    ],
+    "pdf_pages": [
+      19
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.5.28",
+    "category": "ANNEX_A",
+    "objective": "Preserve usable incident evidence",
+    "control_ids": [
+      "SH-REC-002"
+    ],
+    "pdf_pages": [
+      19
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.5.29",
+    "category": "ANNEX_A",
+    "objective": "Maintain security during disruption",
+    "control_ids": [
+      "SH-BCM-004"
+    ],
+    "pdf_pages": [
+      19
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.5.30",
+    "category": "ANNEX_A",
+    "objective": "Prepare technology recovery for business needs",
+    "control_ids": [
+      "SH-BCM-001"
+    ],
+    "pdf_pages": [
+      19
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.5.31",
+    "category": "ANNEX_A",
+    "objective": "Identify binding security obligations",
+    "control_ids": [
+      "SH-LEG-001"
+    ],
+    "pdf_pages": [
+      19
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.5.32",
+    "category": "ANNEX_A",
+    "objective": "Protect intellectual property and usage rights",
+    "control_ids": [
+      "SH-DAT-005"
+    ],
+    "pdf_pages": [
+      19
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.5.33",
+    "category": "ANNEX_A",
+    "objective": "Protect records through their lifecycle",
+    "control_ids": [
+      "SH-REC-004"
+    ],
+    "pdf_pages": [
+      19
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.5.34",
+    "category": "ANNEX_A",
+    "objective": "Protect personal information under applicable duties",
+    "control_ids": [
+      "SH-DAT-002"
+    ],
+    "pdf_pages": [
+      19
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.5.35",
+    "category": "ANNEX_A",
+    "objective": "Independently evaluate security arrangements",
+    "control_ids": [
+      "SH-ASS-003"
+    ],
+    "pdf_pages": [
+      19
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.5.36",
+    "category": "ANNEX_A",
+    "objective": "Monitor conformance with security requirements",
+    "control_ids": [
+      "SH-ASS-002"
+    ],
+    "pdf_pages": [
+      19
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.5.37",
+    "category": "ANNEX_A",
+    "objective": "Maintain usable operating procedures",
+    "control_ids": [
+      "SH-OPS-004"
+    ],
+    "pdf_pages": [
+      19
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.6.1",
+    "category": "ANNEX_A",
+    "objective": "Perform appropriate personnel screening",
+    "control_ids": [
+      "SH-PPL-002"
+    ],
+    "pdf_pages": [
+      20
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.6.2",
+    "category": "ANNEX_A",
+    "objective": "Establish personnel security obligations",
+    "control_ids": [
+      "SH-PPL-001"
+    ],
+    "pdf_pages": [
+      20
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.6.3",
+    "category": "ANNEX_A",
+    "objective": "Develop role-appropriate security competence",
+    "control_ids": [
+      "SH-TRN-001"
+    ],
+    "pdf_pages": [
+      20
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.6.4",
+    "category": "ANNEX_A",
+    "objective": "Apply a documented disciplinary process",
+    "control_ids": [
+      "SH-ETH-001"
+    ],
+    "pdf_pages": [
+      20
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.6.5",
+    "category": "ANNEX_A",
+    "objective": "Retain relevant duties after role changes or departure",
+    "control_ids": [
+      "SH-PPL-003"
+    ],
+    "pdf_pages": [
+      20
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.6.6",
+    "category": "ANNEX_A",
+    "objective": "Establish and review confidentiality commitments",
+    "control_ids": [
+      "SH-LEG-002"
+    ],
+    "pdf_pages": [
+      20
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.6.7",
+    "category": "ANNEX_A",
+    "objective": "Protect remote working arrangements",
+    "control_ids": [
+      "SH-SEC-005"
+    ],
+    "pdf_pages": [
+      20
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.6.8",
+    "category": "ANNEX_A",
+    "objective": "Enable timely workforce security reporting",
+    "control_ids": [
+      "SH-INC-001"
+    ],
+    "pdf_pages": [
+      20
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.7.1",
+    "category": "ANNEX_A",
+    "objective": "Define protected physical zones",
+    "control_ids": [
+      "SH-SEC-001"
+    ],
+    "pdf_pages": [
+      20
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.7.2",
+    "category": "ANNEX_A",
+    "objective": "Authorize and control physical entry",
+    "control_ids": [
+      "SH-IAM-002"
+    ],
+    "pdf_pages": [
+      20
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.7.3",
+    "category": "ANNEX_A",
+    "objective": "Protect occupied facilities and rooms",
+    "control_ids": [
+      "SH-SEC-001"
+    ],
+    "pdf_pages": [
+      20
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.7.4",
+    "category": "ANNEX_A",
+    "objective": "Monitor unauthorized physical access",
+    "control_ids": [
+      "SH-SEC-002"
+    ],
+    "pdf_pages": [
+      20
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.7.5",
+    "category": "ANNEX_A",
+    "objective": "Mitigate physical and environmental threats",
+    "control_ids": [
+      "SH-BCM-001"
+    ],
+    "pdf_pages": [
+      21
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.7.6",
+    "category": "ANNEX_A",
+    "objective": "Govern work inside protected areas",
+    "control_ids": [
+      "SH-POL-004"
+    ],
+    "pdf_pages": [
+      21
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.7.7",
+    "category": "ANNEX_A",
+    "objective": "Protect unattended papers and displays",
+    "control_ids": [
+      "SH-SEC-005"
+    ],
+    "pdf_pages": [
+      21
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.7.8",
+    "category": "ANNEX_A",
+    "objective": "Protect equipment against location risks",
+    "control_ids": [
+      "SH-CFG-001"
+    ],
+    "pdf_pages": [
+      21
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.7.9",
+    "category": "ANNEX_A",
+    "objective": "Protect assets used away from controlled premises",
+    "control_ids": [
+      "SH-SEC-005"
+    ],
+    "pdf_pages": [
+      21
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.7.10",
+    "category": "ANNEX_A",
+    "objective": "Control storage-media handling and custody",
+    "control_ids": [
+      "SH-REC-004"
+    ],
+    "pdf_pages": [
+      21
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.7.11",
+    "category": "ANNEX_A",
+    "objective": "Protect continuity of supporting utilities",
+    "control_ids": [
+      "SH-BCM-001"
+    ],
+    "pdf_pages": [
+      21
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.7.12",
+    "category": "ANNEX_A",
+    "objective": "Protect power and communications cabling",
+    "control_ids": [
+      "SH-SEC-001"
+    ],
+    "pdf_pages": [
+      21
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.7.13",
+    "category": "ANNEX_A",
+    "objective": "Maintain equipment securely",
+    "control_ids": [
+      "SH-CFG-003"
+    ],
+    "pdf_pages": [
+      21
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.7.14",
+    "category": "ANNEX_A",
+    "objective": "Verify sanitization before disposal or reuse",
+    "control_ids": [
+      "SH-REC-004"
+    ],
+    "pdf_pages": [
+      21
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.8.1",
+    "category": "ANNEX_A",
+    "objective": "Secure user endpoint devices",
+    "control_ids": [
+      "SH-SEC-005"
+    ],
+    "pdf_pages": [
+      21
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.8.2",
+    "category": "ANNEX_A",
+    "objective": "Restrict and govern administrative privileges",
+    "control_ids": [
+      "SH-IAM-005"
+    ],
+    "pdf_pages": [
+      21
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.8.3",
+    "category": "ANNEX_A",
+    "objective": "Enforce information-access restrictions",
+    "control_ids": [
+      "SH-IAM-002"
+    ],
+    "pdf_pages": [
+      21
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.8.4",
+    "category": "ANNEX_A",
+    "objective": "Restrict source-code access",
+    "control_ids": [
+      "SH-ENG-002"
+    ],
+    "pdf_pages": [
+      21
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.8.5",
+    "category": "ANNEX_A",
+    "objective": "Specify effective authentication mechanisms",
+    "control_ids": [
+      "SH-SEC-001"
+    ],
+    "pdf_pages": [
+      22
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.8.6",
+    "category": "ANNEX_A",
+    "objective": "Monitor and plan sufficient processing capacity",
+    "control_ids": [
+      "SH-OPS-002"
+    ],
+    "pdf_pages": [
+      22
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.8.7",
+    "category": "ANNEX_A",
+    "objective": "Prevent detect and respond to malicious software",
+    "control_ids": [
+      "SH-SEC-005"
+    ],
+    "pdf_pages": [
+      22
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.8.8",
+    "category": "ANNEX_A",
+    "objective": "Identify prioritize and remediate vulnerabilities",
+    "control_ids": [
+      "SH-SEC-004"
+    ],
+    "pdf_pages": [
+      22
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.8.9",
+    "category": "ANNEX_A",
+    "objective": "Control intended configurations and drift",
+    "control_ids": [
+      "SH-CFG-002"
+    ],
+    "pdf_pages": [
+      22
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.8.10",
+    "category": "ANNEX_A",
+    "objective": "Remove information when no longer required",
+    "control_ids": [
+      "SH-REC-004"
+    ],
+    "pdf_pages": [
+      22
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.8.11",
+    "category": "ANNEX_A",
+    "objective": "Limit exposure through appropriate data masking",
+    "control_ids": [
+      "SH-DAT-002"
+    ],
+    "pdf_pages": [
+      22
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.8.12",
+    "category": "ANNEX_A",
+    "objective": "Detect and prevent unauthorized data leakage",
+    "control_ids": [
+      "SH-SEC-005"
+    ],
+    "pdf_pages": [
+      22
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.8.13",
+    "category": "ANNEX_A",
+    "objective": "Maintain recoverable information backups",
+    "control_ids": [
+      "SH-BCM-002"
+    ],
+    "pdf_pages": [
+      22
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.8.14",
+    "category": "ANNEX_A",
+    "objective": "Provide processing resilience and redundancy",
+    "control_ids": [
+      "SH-BCM-004"
+    ],
+    "pdf_pages": [
+      22
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.8.15",
+    "category": "ANNEX_A",
+    "objective": "Record and protect relevant system events",
+    "control_ids": [
+      "SH-SEC-002"
+    ],
+    "pdf_pages": [
+      22
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.8.16",
+    "category": "ANNEX_A",
+    "objective": "Monitor anomalous behavior and investigate it",
+    "control_ids": [
+      "SH-SEC-002"
+    ],
+    "pdf_pages": [
+      22
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.8.17",
+    "category": "ANNEX_A",
+    "objective": "Maintain consistent system time",
+    "control_ids": [
+      "SH-REC-002"
+    ],
+    "pdf_pages": [
+      22
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.8.18",
+    "category": "ANNEX_A",
+    "objective": "Restrict powerful system utility tools",
+    "control_ids": [
+      "SH-IAM-005"
+    ],
+    "pdf_pages": [
+      23
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.8.19",
+    "category": "ANNEX_A",
+    "objective": "Govern software installation on operational systems",
+    "control_ids": [
+      "SH-ENG-004"
+    ],
+    "pdf_pages": [
+      23
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.8.20",
+    "category": "ANNEX_A",
+    "objective": "Protect network infrastructure and traffic",
+    "control_ids": [
+      "SH-SEC-005"
+    ],
+    "pdf_pages": [
+      23
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.8.21",
+    "category": "ANNEX_A",
+    "objective": "Specify and monitor network-service protections",
+    "control_ids": [
+      "SH-TPR-003"
+    ],
+    "pdf_pages": [
+      23
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.8.22",
+    "category": "ANNEX_A",
+    "objective": "Separate network trust groups",
+    "control_ids": [
+      "SH-SEC-001"
+    ],
+    "pdf_pages": [
+      23
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.8.23",
+    "category": "ANNEX_A",
+    "objective": "Constrain access to harmful web content",
+    "control_ids": [
+      "SH-SEC-005"
+    ],
+    "pdf_pages": [
+      23
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.8.24",
+    "category": "ANNEX_A",
+    "objective": "Govern cryptography and cryptographic keys",
+    "control_ids": [
+      "SH-CFG-004"
+    ],
+    "pdf_pages": [
+      23
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.8.25",
+    "category": "ANNEX_A",
+    "objective": "Embed security throughout development",
+    "control_ids": [
+      "SH-ENG-001"
+    ],
+    "pdf_pages": [
+      23
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.8.26",
+    "category": "ANNEX_A",
+    "objective": "Define application security requirements",
+    "control_ids": [
+      "SH-ENG-001"
+    ],
+    "pdf_pages": [
+      23
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.8.27",
+    "category": "ANNEX_A",
+    "objective": "Apply secure architecture and engineering principles",
+    "control_ids": [
+      "SH-SEC-001"
+    ],
+    "pdf_pages": [
+      23
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.8.28",
+    "category": "ANNEX_A",
+    "objective": "Apply secure implementation practices",
+    "control_ids": [
+      "SH-ENG-002"
+    ],
+    "pdf_pages": [
+      23
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.8.29",
+    "category": "ANNEX_A",
+    "objective": "Perform development and acceptance security testing",
+    "control_ids": [
+      "SH-ENG-003"
+    ],
+    "pdf_pages": [
+      23
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.8.30",
+    "category": "ANNEX_A",
+    "objective": "Oversee externally performed development",
+    "control_ids": [
+      "SH-TPR-004"
+    ],
+    "pdf_pages": [
+      23
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.8.31",
+    "category": "ANNEX_A",
+    "objective": "Separate development test and production environments",
+    "control_ids": [
+      "SH-ENG-004"
+    ],
+    "pdf_pages": [
+      23
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.8.32",
+    "category": "ANNEX_A",
+    "objective": "Authorize and trace system changes",
+    "control_ids": [
+      "SH-ENG-001"
+    ],
+    "pdf_pages": [
+      23
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.8.33",
+    "category": "ANNEX_A",
+    "objective": "Protect information used for testing",
+    "control_ids": [
+      "SH-DAT-002"
+    ],
+    "pdf_pages": [
+      23
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO27001",
+    "locator": "A.8.34",
+    "category": "ANNEX_A",
+    "objective": "Protect operating systems during assurance testing",
+    "control_ids": [
+      "SH-ASS-004"
+    ],
+    "pdf_pages": [
+      24
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO42001",
+    "locator": "A.2.2",
+    "category": "ANNEX_A",
+    "objective": "Set policy for AI development and use",
+    "control_ids": [
+      "SH-POL-001"
+    ],
+    "pdf_pages": [
+      25
+    ],
+    "guidance_locator": "B.2.2",
+    "guidance_pdf_pages": [
+      29
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO42001",
+    "locator": "A.2.3",
+    "category": "ANNEX_A",
+    "objective": "Align AI policy with related policies",
+    "control_ids": [
+      "SH-POL-001"
+    ],
+    "pdf_pages": [
+      25
+    ],
+    "guidance_locator": "B.2.3",
+    "guidance_pdf_pages": [
+      30
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO42001",
+    "locator": "A.2.4",
+    "category": "ANNEX_A",
+    "objective": "Review AI policy suitability",
+    "control_ids": [
+      "SH-POL-001"
+    ],
+    "pdf_pages": [
+      25
+    ],
+    "guidance_locator": "B.2.4",
+    "guidance_pdf_pages": [
+      30
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO42001",
+    "locator": "A.3.2",
+    "category": "ANNEX_A",
+    "objective": "Assign AI responsibilities and authority",
+    "control_ids": [
+      "SH-GOV-003"
+    ],
+    "pdf_pages": [
+      25
+    ],
+    "guidance_locator": "B.3.2",
+    "guidance_pdf_pages": [
+      30
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO42001",
+    "locator": "A.3.3",
+    "category": "ANNEX_A",
+    "objective": "Provide channels for AI concerns",
+    "control_ids": [
+      "SH-ETH-003"
+    ],
+    "pdf_pages": [
+      25
+    ],
+    "guidance_locator": "B.3.3",
+    "guidance_pdf_pages": [
+      31
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO42001",
+    "locator": "A.4.2",
+    "category": "ANNEX_A",
+    "objective": "Document resources needed across AI activities",
+    "control_ids": [
+      "SH-AIM-001"
+    ],
+    "pdf_pages": [
+      25
+    ],
+    "guidance_locator": "B.4.2",
+    "guidance_pdf_pages": [
+      32
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO42001",
+    "locator": "A.4.3",
+    "category": "ANNEX_A",
+    "objective": "Describe AI data resources",
+    "control_ids": [
+      "SH-AIM-003"
+    ],
+    "pdf_pages": [
+      25
+    ],
+    "guidance_locator": "B.4.3",
+    "guidance_pdf_pages": [
+      32
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO42001",
+    "locator": "A.4.4",
+    "category": "ANNEX_A",
+    "objective": "Describe AI tooling resources",
+    "control_ids": [
+      "SH-AIM-003"
+    ],
+    "pdf_pages": [
+      25
+    ],
+    "guidance_locator": "B.4.4",
+    "guidance_pdf_pages": [
+      33
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO42001",
+    "locator": "A.4.5",
+    "category": "ANNEX_A",
+    "objective": "Describe AI compute and infrastructure resources",
+    "control_ids": [
+      "SH-CFG-001"
+    ],
+    "pdf_pages": [
+      26
+    ],
+    "guidance_locator": "B.4.5",
+    "guidance_pdf_pages": [
+      33
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO42001",
+    "locator": "A.4.6",
+    "category": "ANNEX_A",
+    "objective": "Identify AI personnel and competence needs",
+    "control_ids": [
+      "SH-TRN-003"
+    ],
+    "pdf_pages": [
+      26
+    ],
+    "guidance_locator": "B.4.6",
+    "guidance_pdf_pages": [
+      34
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO42001",
+    "locator": "A.5.2",
+    "category": "ANNEX_A",
+    "objective": "Establish AI impact-assessment processes",
+    "control_ids": [
+      "SH-AIM-002"
+    ],
+    "pdf_pages": [
+      26
+    ],
+    "guidance_locator": "B.5.2",
+    "guidance_pdf_pages": [
+      34
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO42001",
+    "locator": "A.5.3",
+    "category": "ANNEX_A",
+    "objective": "Retain AI impact-assessment results",
+    "control_ids": [
+      "SH-REC-001"
+    ],
+    "pdf_pages": [
+      26
+    ],
+    "guidance_locator": "B.5.3",
+    "guidance_pdf_pages": [
+      36
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO42001",
+    "locator": "A.5.4",
+    "category": "ANNEX_A",
+    "objective": "Assess AI effects on people and groups",
+    "control_ids": [
+      "SH-AIM-002"
+    ],
+    "pdf_pages": [
+      26
+    ],
+    "guidance_locator": "B.5.4",
+    "guidance_pdf_pages": [
+      36
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO42001",
+    "locator": "A.5.5",
+    "category": "ANNEX_A",
+    "objective": "Assess wider societal effects of AI",
+    "control_ids": [
+      "SH-AIM-002"
+    ],
+    "pdf_pages": [
+      26
+    ],
+    "guidance_locator": "B.5.5",
+    "guidance_pdf_pages": [
+      37
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO42001",
+    "locator": "A.6.1.2",
+    "category": "ANNEX_A",
+    "objective": "Set responsible AI development objectives",
+    "control_ids": [
+      "SH-ERM-002"
+    ],
+    "pdf_pages": [
+      26
+    ],
+    "guidance_locator": "B.6.1.2",
+    "guidance_pdf_pages": [
+      38
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO42001",
+    "locator": "A.6.1.3",
+    "category": "ANNEX_A",
+    "objective": "Define responsible AI design and development processes",
+    "control_ids": [
+      "SH-ENG-001"
+    ],
+    "pdf_pages": [
+      26
+    ],
+    "guidance_locator": "B.6.1.3",
+    "guidance_pdf_pages": [
+      38
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO42001",
+    "locator": "A.6.2.2",
+    "category": "ANNEX_A",
+    "objective": "Specify AI system requirements",
+    "control_ids": [
+      "SH-ENG-001"
+    ],
+    "pdf_pages": [
+      26
+    ],
+    "guidance_locator": "B.6.2.2",
+    "guidance_pdf_pages": [
+      39
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO42001",
+    "locator": "A.6.2.3",
+    "category": "ANNEX_A",
+    "objective": "Document AI design and development decisions",
+    "control_ids": [
+      "SH-AIM-001"
+    ],
+    "pdf_pages": [
+      26
+    ],
+    "guidance_locator": "B.6.2.3",
+    "guidance_pdf_pages": [
+      40
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO42001",
+    "locator": "A.6.2.4",
+    "category": "ANNEX_A",
+    "objective": "Verify and validate AI against acceptance criteria",
+    "control_ids": [
+      "SH-AIM-002"
+    ],
+    "pdf_pages": [
+      26
+    ],
+    "guidance_locator": "B.6.2.4",
+    "guidance_pdf_pages": [
+      40
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO42001",
+    "locator": "A.6.2.5",
+    "category": "ANNEX_A",
+    "objective": "Control AI deployment readiness and release",
+    "control_ids": [
+      "SH-ENG-004"
+    ],
+    "pdf_pages": [
+      26
+    ],
+    "guidance_locator": "B.6.2.5",
+    "guidance_pdf_pages": [
+      41
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO42001",
+    "locator": "A.6.2.6",
+    "category": "ANNEX_A",
+    "objective": "Monitor and maintain operating AI systems",
+    "control_ids": [
+      "SH-AIM-004"
+    ],
+    "pdf_pages": [
+      27
+    ],
+    "guidance_locator": "B.6.2.6",
+    "guidance_pdf_pages": [
+      41
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO42001",
+    "locator": "A.6.2.7",
+    "category": "ANNEX_A",
+    "objective": "Provide audience-appropriate AI technical documentation",
+    "control_ids": [
+      "SH-AIM-001"
+    ],
+    "pdf_pages": [
+      27
+    ],
+    "guidance_locator": "B.6.2.7",
+    "guidance_pdf_pages": [
+      43
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO42001",
+    "locator": "A.6.2.8",
+    "category": "ANNEX_A",
+    "objective": "Record relevant AI lifecycle and operation events",
+    "control_ids": [
+      "SH-REC-001"
+    ],
+    "pdf_pages": [
+      27
+    ],
+    "guidance_locator": "B.6.2.8",
+    "guidance_pdf_pages": [
+      44
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO42001",
+    "locator": "A.7.2",
+    "category": "ANNEX_A",
+    "objective": "Govern data used to develop and improve AI",
+    "control_ids": [
+      "SH-AIM-003"
+    ],
+    "pdf_pages": [
+      27
+    ],
+    "guidance_locator": "B.7.2",
+    "guidance_pdf_pages": [
+      45
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO42001",
+    "locator": "A.7.3",
+    "category": "ANNEX_A",
+    "objective": "Document AI data acquisition and selection",
+    "control_ids": [
+      "SH-DAT-005"
+    ],
+    "pdf_pages": [
+      27
+    ],
+    "guidance_locator": "B.7.3",
+    "guidance_pdf_pages": [
+      45
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO42001",
+    "locator": "A.7.4",
+    "category": "ANNEX_A",
+    "objective": "Define and assess AI data quality",
+    "control_ids": [
+      "SH-DAT-004"
+    ],
+    "pdf_pages": [
+      27
+    ],
+    "guidance_locator": "B.7.4",
+    "guidance_pdf_pages": [
+      46
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO42001",
+    "locator": "A.7.5",
+    "category": "ANNEX_A",
+    "objective": "Record AI data origins and lineage",
+    "control_ids": [
+      "SH-AIM-003"
+    ],
+    "pdf_pages": [
+      27
+    ],
+    "guidance_locator": "B.7.5",
+    "guidance_pdf_pages": [
+      46
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO42001",
+    "locator": "A.7.6",
+    "category": "ANNEX_A",
+    "objective": "Control AI data preparation and transformations",
+    "control_ids": [
+      "SH-FND-003"
+    ],
+    "pdf_pages": [
+      27
+    ],
+    "guidance_locator": "B.7.6",
+    "guidance_pdf_pages": [
+      46
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO42001",
+    "locator": "A.8.2",
+    "category": "ANNEX_A",
+    "objective": "Provide AI users with needed system information",
+    "control_ids": [
+      "SH-PRD-002"
+    ],
+    "pdf_pages": [
+      27
+    ],
+    "guidance_locator": "B.8.2",
+    "guidance_pdf_pages": [
+      47
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO42001",
+    "locator": "A.8.3",
+    "category": "ANNEX_A",
+    "objective": "Enable external reports of AI adverse effects",
+    "control_ids": [
+      "SH-PRD-004"
+    ],
+    "pdf_pages": [
+      27
+    ],
+    "guidance_locator": "B.8.3",
+    "guidance_pdf_pages": [
+      48
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO42001",
+    "locator": "A.8.4",
+    "category": "ANNEX_A",
+    "objective": "Plan AI incident communication to users",
+    "control_ids": [
+      "SH-INC-001"
+    ],
+    "pdf_pages": [
+      27
+    ],
+    "guidance_locator": "B.8.4",
+    "guidance_pdf_pages": [
+      48
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO42001",
+    "locator": "A.8.5",
+    "category": "ANNEX_A",
+    "objective": "Meet relevant AI information-reporting duties",
+    "control_ids": [
+      "SH-LEG-001"
+    ],
+    "pdf_pages": [
+      27
+    ],
+    "guidance_locator": "B.8.5",
+    "guidance_pdf_pages": [
+      48
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO42001",
+    "locator": "A.9.2",
+    "category": "ANNEX_A",
+    "objective": "Define processes for responsible AI use",
+    "control_ids": [
+      "SH-AIM-005"
+    ],
+    "pdf_pages": [
+      27
+    ],
+    "guidance_locator": "B.9.2",
+    "guidance_pdf_pages": [
+      49
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO42001",
+    "locator": "A.9.3",
+    "category": "ANNEX_A",
+    "objective": "Set objectives for responsible AI use",
+    "control_ids": [
+      "SH-ERM-002"
+    ],
+    "pdf_pages": [
+      27
+    ],
+    "guidance_locator": "B.9.3",
+    "guidance_pdf_pages": [
+      50
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO42001",
+    "locator": "A.9.4",
+    "category": "ANNEX_A",
+    "objective": "Keep AI use within its intended purpose",
+    "control_ids": [
+      "SH-AIM-005"
+    ],
+    "pdf_pages": [
+      28
+    ],
+    "guidance_locator": "B.9.4",
+    "guidance_pdf_pages": [
+      51
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO42001",
+    "locator": "A.10.2",
+    "category": "ANNEX_A",
+    "objective": "Allocate AI lifecycle responsibilities across parties",
+    "control_ids": [
+      "SH-TPR-003"
+    ],
+    "pdf_pages": [
+      28
+    ],
+    "guidance_locator": "B.10.2",
+    "guidance_pdf_pages": [
+      51
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO42001",
+    "locator": "A.10.3",
+    "category": "ANNEX_A",
+    "objective": "Align AI supplier services with responsible practices",
+    "control_ids": [
+      "SH-TPR-002"
+    ],
+    "pdf_pages": [
+      28
+    ],
+    "guidance_locator": "B.10.3",
+    "guidance_pdf_pages": [
+      52
+    ],
+    "kind": "CONTROL"
+  },
+  {
+    "framework_id": "ISO42001",
+    "locator": "A.10.4",
+    "category": "ANNEX_A",
+    "objective": "Consider customer needs in responsible AI practices",
+    "control_ids": [
+      "SH-PRD-002"
+    ],
+    "pdf_pages": [
+      28
+    ],
+    "guidance_locator": "B.10.4",
+    "guidance_pdf_pages": [
+      52
+    ],
+    "kind": "CONTROL"
+  }
+]
