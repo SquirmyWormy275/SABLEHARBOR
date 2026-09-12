@@ -144,7 +144,9 @@ def transition(db, states, config, case_id, action, actor, at, payload):
         nonempty(case_id)
         p = config["plans"][payload["plan_id"]]
         principal(db, actor, "prepare", p["boundary_id"], at)
-        scope = payload["scope"]
+        scope = copy.deepcopy(payload["scope"])
+        for field in ("period_start", "period_end"):
+            scope[field] = instant(scope[field]).isoformat()
         if scope["origin"] not in {"SYNTHETIC", "OPERATOR_SUPPLIED"}:
             raise ValueError("Explicit evidence origin required")
         if instant(scope["period_start"]) > instant(scope["period_end"]):

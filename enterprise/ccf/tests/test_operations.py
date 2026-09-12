@@ -327,3 +327,17 @@ def test_same_period_success_cannot_be_used_as_prospective_closure(running):
             5,
         )
     assert store.replay(db)["FAILED"]["historical_failure"]
+
+
+def test_equivalent_timezone_periods_share_failure_summary(running):
+    db, tokens, plans, _ = running
+    p, rows = prepared(running, True, "FAILED")
+    intake_and_review(running, p, rows, case="FAILED")
+    altered = ex.scope()
+    altered.update(period_start="2026-09-08T17:00:00-07:00", period_end="2026-09-09T16:59:59-07:00")
+    store.command(
+        db, tokens["DEMO-PREPARER"], "ALTERNATE", "create", dict(plan_id=p["id"], scope=altered), 0
+    )
+    summaries = list(store.report(db, tokens["DEMO-REVIEWER"])["period_results"].values())
+    assert len(summaries) == 1 and summaries[0]["result"] == "FAIL"
+    assert set(summaries[0]["case_ids"]) == {"FAILED", "ALTERNATE"}
