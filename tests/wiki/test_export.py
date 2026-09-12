@@ -4,7 +4,9 @@ import tempfile
 import unittest
 from pathlib import Path
 
-SPEC = importlib.util.spec_from_file_location("wiki_export", Path(__file__).resolve().parents[2] / "tools/wiki/export.py")
+SPEC = importlib.util.spec_from_file_location(
+    "wiki_export", Path(__file__).resolve().parents[2] / "tools/wiki/export.py"
+)
 MODULE = importlib.util.module_from_spec(SPEC)
 try:
     SPEC.loader.exec_module(MODULE)
@@ -31,7 +33,7 @@ class WikiExportTests(unittest.TestCase):
         other = self.home.parent / "businesses/One.md"
         other.parent.mkdir()
         other.write_text("# One\n")
-        self.home.write_text('''# Home
+        self.home.write_text("""# Home
 [One](businesses/One.md#history)
 [Source](../../source%20file.md?raw=1#detail)
 [![Logo](../../asset.png)](../../source%20file.md)
@@ -46,7 +48,7 @@ class WikiExportTests(unittest.TestCase):
 ```md
 [Code](missing.md)
 ```
-''')
+""")
         output = self.base / "output"
         MODULE.Exporter(self.root, SHA).build(output)
         result = (output / "Home.md").read_text()
@@ -69,8 +71,10 @@ class WikiExportTests(unittest.TestCase):
     def test_determinism_and_source_checkout_protection(self):
         for name in ("one", "two"):
             MODULE.Exporter(self.root, SHA).build(self.base / name)
-        self.assertEqual((self.base / "one" / MODULE.MANIFEST).read_bytes(),
-                         (self.base / "two" / MODULE.MANIFEST).read_bytes())
+        self.assertEqual(
+            (self.base / "one" / MODULE.MANIFEST).read_bytes(),
+            (self.base / "two" / MODULE.MANIFEST).read_bytes(),
+        )
         with self.assertRaises(ValueError):
             MODULE.Exporter(self.root, SHA).build(self.root / "output")
         with self.assertRaises(ValueError):

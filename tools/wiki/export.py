@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Export accepted wiki Markdown without modifying sources or copying asset bytes."""
+
 from __future__ import annotations
 
 import argparse
@@ -19,9 +20,9 @@ MARKDOWN = MarkdownIt("commonmark", {"html": True}).enable("table")
 # Repository Markdown uses inline destinations or reference definitions. Unsupported
 # syntax is rejected by parsing the result and checking for unresolved local links.
 INLINE = re.compile(r'(\]\()(<[^>\n]+>|[^\s()]+)(?=\s*(?:["\'][^\n]*["\']\s*)?\))')
-REFERENCE = re.compile(r'^( {0,3}\[[^\]\n]+\]:\s*)(<[^>\n]+>|\S+)', re.M)
+REFERENCE = re.compile(r"^( {0,3}\[[^\]\n]+\]:\s*)(<[^>\n]+>|\S+)", re.M)
 ATTRIBUTE = re.compile(r'\b(href|src)\s*=\s*(["\'])(.*?)\2', re.I)
-CODE = re.compile(r'(^ {0,3}(`{3,}|~{3,})[^\n]*\n[\s\S]*?^ {0,3}\2\s*$|`+[^`\n]*`+)', re.M)
+CODE = re.compile(r"(^ {0,3}(`{3,}|~{3,})[^\n]*\n[\s\S]*?^ {0,3}\2\s*$|`+[^`\n]*`+)", re.M)
 
 
 class Exporter:
@@ -32,8 +33,9 @@ class Exporter:
         self.revision = revision
         self.wiki = self.root / "docs/wiki"
         self.pages = sorted(self.wiki.rglob("*.md"))
-        self.names = {p: "--".join(p.relative_to(self.wiki).with_suffix("").parts)
-                      for p in self.pages}
+        self.names = {
+            p: "--".join(p.relative_to(self.wiki).with_suffix("").parts) for p in self.pages
+        }
         if len({name.casefold() for name in self.names.values()}) != len(self.names):
             raise ValueError("Wiki page names collide after flattening")
         if self.wiki / "Home.md" not in self.names:
@@ -80,11 +82,14 @@ class Exporter:
         def prose(value):
             value = INLINE.sub(destination, value)
             value = REFERENCE.sub(destination, value)
-            return ATTRIBUTE.sub(lambda m: f'{m[1]}={m[2]}{self.target(source, m[3], m[1].lower() == "src")}{m[2]}', value)
+            return ATTRIBUTE.sub(
+                lambda m: f"{m[1]}={m[2]}{self.target(source, m[3], m[1].lower() == 'src')}{m[2]}",
+                value,
+            )
 
         chunks, offset = [], 0
         for match in CODE.finditer(original):
-            chunks.extend((prose(original[offset:match.start()]), match[0]))
+            chunks.extend((prose(original[offset : match.start()]), match[0]))
             offset = match.end()
         chunks.append(prose(original[offset:]))
         result = "".join(chunks)
@@ -106,8 +111,11 @@ class Exporter:
         # Validate everything before writing any publication files.
         content = {self.names[p] + ".md": self.rewrite(p) for p in self.pages}
         sidebar = ["# Sable Harbor", "", "[Home](Home)", "[Library](Library)", ""]
-        sidebar.extend(f"- [{p.stem}]({self.names[p]})"
-                       for p in self.pages if p.parent.name == "businesses" and p.stem != "README")
+        sidebar.extend(
+            f"- [{p.stem}]({self.names[p]})"
+            for p in self.pages
+            if p.parent.name == "businesses" and p.stem != "README"
+        )
         content["_Sidebar.md"] = "\n".join(sidebar) + "\n"
         output.mkdir(parents=True, exist_ok=True)
         files = {}
@@ -115,9 +123,13 @@ class Exporter:
             payload = text.encode()
             (output / name).write_bytes(payload)
             files[name] = hashlib.sha256(payload).hexdigest()
-        manifest = {"repository": REPOSITORY, "source_revision": self.revision,
-                    "source_directory": "docs/wiki", "converted_links": self.links,
-                    "files": files}
+        manifest = {
+            "repository": REPOSITORY,
+            "source_revision": self.revision,
+            "source_directory": "docs/wiki",
+            "converted_links": self.links,
+            "files": files,
+        }
         (output / MANIFEST).write_text(json.dumps(manifest, indent=2) + "\n")
         return manifest
 
