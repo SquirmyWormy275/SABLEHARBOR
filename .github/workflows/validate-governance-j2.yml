@@ -56,6 +56,12 @@ jobs:
       - run: python scripts/validate_finance_evidence_acceptance.py
       - name: Validate accounting and legal source packages
         run: |
+          python - <<'PY'
+          import json, re, subprocess
+          revision = json.load(open('docs/reader/reconciliation/records.json'))['base_revision']
+          assert re.fullmatch(r'[0-9a-f]{40}', revision)
+          subprocess.run(['git', 'fetch', '--no-tags', '--depth=1', 'origin', revision], check=True)
+          PY
           python docs/finance/evidence/coverage/validate.py
           python docs/reader/transactions/validate.py
           python docs/reader/reconciliation/build.py --check
