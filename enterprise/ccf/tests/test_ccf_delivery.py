@@ -43,3 +43,55 @@ def test_delivery_hash_verification_rejects_modified_member(tmp_path):
     (p / "member.json").write_text('{"claimed": "PASS"}')
     with pytest.raises(ValueError, match="hash mismatch"):
         delivery.verify(p)
+
+
+@pytest.mark.parametrize("member", ["plans", "counts", "coverage", "rehearsal"])
+def test_delivery_reperformance_rejects_resealed_inconsistency(
+    tmp_path, monkeypatch, plans, member
+):  # noqa: F811
+    import copy
+
+    selected = copy.deepcopy(plans)
+    for p in selected.values():
+        p.update(
+            is_baseline_control=True,
+            selected_frameworks=["SOC2", "HIPAA", "C5"],
+            extension_targets=["C5"],
+        )
+    reference = tmp_path / "reference"
+    reference.mkdir()
+    (reference / "ASSESSMENT_RUN.json").write_text(
+        json.dumps(dict(source_dependencies=[], variant_comparisons={}))
+    )
+    monkeypatch.setattr(delivery.assessment_run, "verify", lambda *a: None)
+    monkeypatch.setattr(delivery, "compile_registry", lambda: {})
+    monkeypatch.setattr(
+        delivery.selection, "plans", lambda reference, targets: copy.deepcopy(selected)
+    )
+    bundle = tmp_path / "bundle"
+    delivery.build(reference, tmp_path, bundle, targets=["C5"])
+    assert delivery.verify(bundle)["verified"]
+    if member == "coverage":
+        p = bundle / "CONTROL_COVERAGE.csv"
+        p.write_text(p.read_text().replace("NOT_ASSERTED", "ACCEPTED", 1))
+    else:
+        relative = {
+            "plans": "control-exercise/TEST_PLANS.json",
+            "counts": "DELIVERY_RESULT.json",
+            "rehearsal": "integrated-rehearsal/INTEGRATION_RESULT.json",
+        }[member]
+        p = bundle / relative
+        data = json.loads(p.read_text())
+        if member == "plans":
+            next(iter(data.values()))["selected_frameworks"] = ["SOC2", "HIPAA"]
+        elif member == "counts":
+            data["selected_controls"] += 1
+        else:
+            data["initial_outcome_retained"] = "PASS"
+        p.write_text(json.dumps(data))
+    manifest = bundle / "DELIVERY_MANIFEST.json"
+    data = json.loads(manifest.read_text())
+    data["files"][str(p.relative_to(bundle))] = hashlib.sha256(p.read_bytes()).hexdigest()
+    manifest.write_text(json.dumps(data))
+    with pytest.raises(ValueError, match="differ"):
+        delivery.verify(bundle)

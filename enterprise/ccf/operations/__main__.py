@@ -9,7 +9,7 @@ from pathlib import Path
 from enterprise.ccf.assurance import assessment_run
 from enterprise.ccf.registry import compile_registry
 
-from . import store, testing
+from . import selection, store
 
 
 def private_write(path, text):
@@ -68,6 +68,10 @@ def main():
     demo.add_argument("--reference", required=True)
     demo.add_argument("--source-root", required=True)
     demo.add_argument("--output", required=True)
+    for child in (init, demo):
+        child.add_argument(
+            "--framework", action="append", choices=sorted(selection.VARIANTS), default=[]
+        )
     args = parser.parse_args()
     try:
         if args.command in {"init", "demo"}:
@@ -76,7 +80,7 @@ def main():
                 raise ValueError("Output must be a new directory")
             assessment_run.verify(args.reference, compile_registry(), args.source_root)
             reference = json.loads((Path(args.reference) / "ASSESSMENT_RUN.json").read_text())
-            plans = testing.plans(reference)
+            plans = selection.plans(reference, args.framework)
             if args.command == "demo":
                 from .examples import build
 

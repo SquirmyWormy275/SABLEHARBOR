@@ -19,7 +19,7 @@ Agents work on separate files. Root owns shared store interfaces, dependency loc
 2. Implement the three parallel streams and adversarial tests.
 3. Integrate verified identities with current, scoped local authority; retain host-controlled event times and optimistic revisions.
 4. Acquire source records through configured connectors. Retain raw hashes, extraction details, complete pages and source counts. Independent reviewers register the distinct source population; collection never fabricates this approval.
-5. Create a scoped case with actual facts or an explicitly synthetic fixture. Reconcile the population before automated and manual testing.
+5. Select optional frameworks with repeatable `--framework ISO27001`, `--framework ISO42001` and `--framework C5` arguments. The selected union becomes executable manual duties in the retained plans, with shared controls/actions deduplicated and unmapped assessment prerequisites kept explicit. Create a scoped case with actual facts or an explicitly synthetic fixture. Reconcile the population before automated and manual testing.
 6. Independently review results, retain findings, record remediation and validate correction. A competing or historical failure cannot be erased by a passing retest or different timestamp spelling.
 7. Generate the scoped assessment handoff and unresolved-input register. Framework source/mapping acceptance remains a separate qualified decision.
 8. Exercise the integrated system with signed fixture identities and controlled source endpoints, migrate prior history only when verified reproduction is identical, run regression and repository checks, and merge the concrete result.
@@ -33,3 +33,7 @@ Live activation requires concrete values and authority for the identity issuer/a
 ## Reviewable final package
 
 The final closeout will link the implementation PR, verified integration report, history-migration receipt, expanded test-contract inventory, private assessment handoff and operational input register. Each unmet gate must identify the precise missing input and the activity it blocks. Preparation records remain explicit about synthetic origins and unresolved assurance acceptance.
+
+## Implemented selection and verification
+
+The default baseline contains 70 controls and 210 boundary plans. Selecting all three extensions produces 86 controls and 258 plans, preserving the baseline and adding only selected candidate duties. Twenty-four controls have bounded automated assertions; all controls retain mandatory human tests. The private delivery exercises 49 synthetic cases, signed HTTP authorization, scheduled collection, independent review and verified migration of prior history. Delivery verification replays retained events and regenerates the selected plans and assessment handoff. Actual deployment and qualified assurance acceptance remain the explicit operational gates above.

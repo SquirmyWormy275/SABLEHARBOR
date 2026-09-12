@@ -101,6 +101,7 @@ uv run --extra ccf-service python -m enterprise.ccf.operations.delivery build \
   --source-root /authorized/source-documents \
   --legacy-store /private/pr146/workflow.sqlite3 \
   --legacy-revision 52c37a1415c3d4702375f79c5de59a1861a9b62b \
+  --framework ISO27001 --framework ISO42001 --framework C5 \
   --output /new/private/integrated-ccf
 uv run --extra ccf-service python -m enterprise.ccf.operations.delivery verify --output /new/private/integrated-ccf
 ```
@@ -108,3 +109,5 @@ uv run --extra ccf-service python -m enterprise.ccf.operations.delivery verify -
 Omit both legacy arguments when there is no prior store. Migration loads the exact prior evaluator from the explicitly selected trusted local Git revision, verifies the original snapshot, and accepts a private copy only if the current evaluator reproduces identical history. It retains permissions and revoked credentials without overwriting the original. Stop the old writer before real cutover; later appends are not included. A replay difference requires reviewed migration work, not automatic acceptance.
 
 `START_HERE.md` links control coverage, framework deltas, source dependencies, the signed API rehearsal, and the actual inputs required for live activation. `ASSESSMENT_HANDOFF.json` remains preparation until actual operating evidence and qualified source/mapping reviews support the strict assurance-engine input contract. No source availability, local test result or migration receipt establishes external coverage by itself.
+
+The repeatable `--framework` option also works with `operations init` and `operations demo`. Omit it for the SOC 2/HIPAA baseline (70 controls, 210 boundary plans); select any subset of `ISO27001`, `ISO42001` and `C5` to add their candidate duties. Selecting all three yields 86 distinct controls and 258 boundary plans, with 24 bounded automated adapters and mandatory human tests. Shared duties are deduplicated by action ID with only selected requirement links retained. Unrouted assessment prerequisites stay explicit global review items; they never become invented control mappings. Selection is retained in the immutable store configuration and re-performed during delivery verification. Qualified acceptance remains unresolved.

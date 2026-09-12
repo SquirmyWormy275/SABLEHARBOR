@@ -11,7 +11,7 @@ from unittest.mock import patch
 from enterprise.ccf.assurance import assessment_run
 from enterprise.ccf.registry import compile_registry, digest
 
-from . import examples, migration, rehearsal, store, testing
+from . import examples, migration, rehearsal, selection, store
 
 GATES = [
     dict(
@@ -77,6 +77,8 @@ def handoff(reference, plans, report):
                 control_id=p["control_id"],
                 boundary_id=p["boundary_id"],
                 adapter=p["adapter"] or "MANUAL",
+                is_baseline_control=p.get("is_baseline_control", True),
+                selected_requirement_ids=p.get("selected_requirement_ids", []),
                 mandatory_manual_criteria=len(p["criteria"]),
                 exercise_periods=len(related),
                 synthetic_failures=sum(g["result"] == "FAIL" for g in related),
@@ -89,6 +91,16 @@ def handoff(reference, plans, report):
         status="ASSESSMENT_PREPARATION_NOT_EXTERNAL_ASSURANCE",
         reference_digest=digest(reference),
         rows=rows,
+        selected_frameworks=next(iter(plans.values())).get(
+            "selected_frameworks", ["SOC2", "HIPAA"]
+        ),
+        assessment_prerequisites=list(
+            {
+                a["id"]: dict(a, status="UNRESOLVED")
+                for p in plans.values()
+                for a in p.get("assessment_prerequisites", [])
+            }.values()
+        ),
         source_dependencies=reference["source_dependencies"],
         framework_deltas=reference["variant_comparisons"],
         required_live_inputs=[
@@ -104,7 +116,9 @@ def write(path, value):
     path.chmod(0o600)
 
 
-def build(reference_path, source_root, output, legacy_store=None, legacy_revision=None):
+def build(
+    reference_path, source_root, output, legacy_store=None, legacy_revision=None, targets=None
+):
     output = Path(output)
     if output.exists() or output.is_symlink():
         raise ValueError("Delivery requires a new private directory")
@@ -112,7 +126,7 @@ def build(reference_path, source_root, output, legacy_store=None, legacy_revisio
         raise ValueError("History migration requires both store and trusted legacy revision")
     assessment_run.verify(reference_path, compile_registry(), source_root)
     reference = json.loads((Path(reference_path) / "ASSESSMENT_RUN.json").read_text())
-    plans = testing.plans(reference)
+    plans = selection.plans(reference, targets if targets is not None else [])
     output.parent.mkdir(parents=True, exist_ok=True)
     with tempfile.TemporaryDirectory(prefix=".ccf-delivery-", dir=output.parent) as tmp:
         staged = Path(tmp) / "bundle"
@@ -156,7 +170,7 @@ def build(reference_path, source_root, output, legacy_store=None, legacy_revisio
         (staged / "START_HERE.md").write_text(
             "# Integrated CCF delivery\n\n"
             "[Assessment handoff](ASSESSMENT_HANDOFF.json) · [Control coverage](CONTROL_COVERAGE.csv) · [Live inputs](ACTIVATION_INPUTS.md) · [Source dependencies](SOURCE_DEPENDENCIES.json) · [Signed API rehearsal](integrated-rehearsal/INTEGRATION_RESULT.json) · [Control exercise](control-exercise/START_HERE.md)\n\n"
-            f"{len(plans)} plans cover {summary['baseline_controls']} baseline controls across the three approved reference boundaries. {summary['automated_controls']} controls have bounded automated assertions alongside mandatory human tests; the remaining {summary['manual_only_controls']} use manual tests. {summary['cases']} synthetic cases exercise substantive failures, retests and prospective correction.\n\n"
+            f"{len(plans)} plans cover {summary['baseline_controls']} baseline controls and {summary['extension_controls']} selected extension controls across the three approved reference boundaries. {summary['automated_controls']} controls have bounded automated assertions alongside mandatory human tests; the remaining {summary['manual_only_controls']} use manual tests. {summary['cases']} synthetic cases exercise substantive failures, retests and prospective correction.\n\n"
             "The integrated rehearsal uses real loopback HTTP requests, signed fixture identities, independently supplied population records, scheduled collection, missing-manual-test findings and independent correction review. It does not connect to an actual identity provider or source account.\n\n"
             "| Selection | Additional candidate controls | Additional work items |\n|---|---:|---:|\n"
             + delta_rows
@@ -170,6 +184,8 @@ def build(reference_path, source_root, output, legacy_store=None, legacy_revisio
         )
         stats = dict(
             plans=len(plans),
+            selected_frameworks=packet["selected_frameworks"],
+            selected_controls=summary["selected_controls"],
             automated_controls=summary["automated_controls"],
             manual_only_controls=summary["manual_only_controls"],
             synthetic_cases=summary["cases"],
@@ -221,11 +237,66 @@ def verify(output):
     try:
         with patch.object(store, "now", return_value=reported["as_of"]):
             reproduced = store.report_as(db, "DEMO-REVIEWER")
+        retained_plans = store.configuration(db)["plans"]
+        targets = next(iter(retained_plans.values())).get("extension_targets", [])
+        expected_plans = selection.plans(reference, targets)
+        if retained_plans != expected_plans:
+            raise ValueError("Retained plans differ from selected reference duties")
         if reproduced != reported:
             raise ValueError("Control report differs from retained history")
     finally:
         db.close()
-    expected = handoff(reference, testing.plans(reference), reproduced)
+    if expected_plans != json.loads((output / "control-exercise/TEST_PLANS.json").read_text()):
+        raise ValueError("Exported plans differ from retained selected duties")
+    integration = json.loads((output / "integrated-rehearsal/INTEGRATION_RESULT.json").read_text())
+    db = store.connect(output / "integrated-rehearsal/workflow.sqlite3")
+    try:
+        if store.configuration(db)["plans"] != expected_plans:
+            raise ValueError("Rehearsal uses different framework plans")
+        with patch.object(store, "now", return_value=integration["report"]["as_of"]):
+            if store.report_as(db, "DEMO-REVIEWER") != integration["report"]:
+                raise ValueError("Rehearsal report differs from retained history")
+        states = list(store.replay(db).values())
+        if (
+            len(states) != 1
+            or states[0]["state"] != integration["final_state"]
+            or states[0]["original_outcome"] != integration["initial_outcome_retained"]
+        ):
+            raise ValueError("Rehearsal closure differs from retained history")
+    finally:
+        db.close()
+    controls = {p["control_id"] for p in expected_plans.values()}
+    baseline = {p["control_id"] for p in expected_plans.values() if p["is_baseline_control"]}
+    automated = {p["control_id"] for p in expected_plans.values() if p["adapter"]}
+    counts = dict(
+        plans=len(expected_plans),
+        selected_controls=len(controls),
+        baseline_controls=len(baseline),
+        extension_controls=len(controls - baseline),
+        automated_controls=len(automated),
+        manual_only_controls=len(controls - automated),
+        cases=len(reproduced["cases"]),
+    )
+    summary = json.loads((output / "control-exercise/EXERCISE_RESULTS.json").read_text())
+    if any(summary[k] != v for k, v in counts.items()):
+        raise ValueError("Exercise counts differ from retained plans and history")
+    result = json.loads((output / "DELIVERY_RESULT.json").read_text())
+    declared = dict(
+        plans=counts["plans"],
+        selected_controls=counts["selected_controls"],
+        automated_controls=counts["automated_controls"],
+        manual_only_controls=counts["manual_only_controls"],
+        synthetic_cases=counts["cases"],
+        selected_frameworks=next(iter(expected_plans.values()))["selected_frameworks"],
+        actual_coverage="NOT_ASSERTED",
+    )
+    if any(result[k] != v for k, v in declared.items()):
+        raise ValueError("Delivery counts or scope differ from retained plans")
+    expected = handoff(reference, expected_plans, reproduced)
+    with (output / "CONTROL_COVERAGE.csv").open(newline="") as stream:
+        coverage = list(csv.DictReader(stream))
+    if coverage != [{k: str(v) for k, v in r.items()} for r in expected["rows"]]:
+        raise ValueError("Coverage export differs from re-performance")
     if expected != json.loads((output / "ASSESSMENT_HANDOFF.json").read_text()):
         raise ValueError("Assessment handoff differs from re-performance")
     return dict(
@@ -242,6 +313,9 @@ def main():
     parser.add_argument("--source-root")
     parser.add_argument("--legacy-store")
     parser.add_argument("--legacy-revision")
+    parser.add_argument(
+        "--framework", action="append", choices=sorted(selection.VARIANTS), default=[]
+    )
     args = parser.parse_args()
     try:
         if args.command == "build":
@@ -253,6 +327,7 @@ def main():
                 args.output,
                 args.legacy_store,
                 args.legacy_revision,
+                args.framework,
             )
         else:
             result = verify(args.output)

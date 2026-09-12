@@ -472,7 +472,13 @@ def build(output, plans):
         db.close()
     summary = dict(
         plans=len(plans),
-        baseline_controls=len({p["control_id"] for p in plans.values()}),
+        baseline_controls=len(
+            {p["control_id"] for p in plans.values() if p.get("is_baseline_control", True)}
+        ),
+        selected_controls=len({p["control_id"] for p in plans.values()}),
+        extension_controls=len(
+            {p["control_id"] for p in plans.values() if not p.get("is_baseline_control", True)}
+        ),
         automated_controls=len(testing.ADAPTERS),
         manual_only_controls=len({p["control_id"] for p in plans.values()}) - len(testing.ADAPTERS),
         cases=len(report["cases"]),
@@ -497,10 +503,10 @@ def build(output, plans):
     start.write_text(
         "# Baseline evidence intake and workflow\n\n"
         "[Test plans](TEST_PLANS.json) · [Exercise results](EXERCISE_RESULTS.json) · [Assessment history](ASSESSMENT_REPORT.json)\n\n"
-        f"{summary['plans']} plans cover {summary['baseline_controls']} baseline controls and all three reference boundaries. {summary['automated_controls']} controls have bounded automated assertions alongside mandatory human tests; {summary['manual_only_controls']} use manual tests. These assertions do not establish complete control or framework coverage.\n\n"
+        f"{summary['plans']} plans cover {summary['baseline_controls']} baseline controls plus {summary['extension_controls']} selected extension controls and all three reference boundaries. {summary['automated_controls']} controls have bounded automated assertions alongside mandatory human tests; {summary['manual_only_controls']} use manual tests. These assertions do not establish complete control or framework coverage.\n\n"
         f"The retained local database contains {len(outcomes)} positive/negative cases and one prospective validation. It records independently registered populations, raw exports, manual observations, computed assertions, assignments, independent reviews and remediation history. A passing same-period retest leaves the original failure intact; prospective closure links a later independently passed case.\n\n"
-        "Every case and credential is explicitly synthetic. No live connection, appointment, deployed service, actual evidence or external assurance is asserted. The local workflow authenticates random credentials with scoped, expiring grants; an administrator with filesystem/database access remains trusted. A trusted local operator controls this store. Isolated multi-user deployment still needs a service boundary and enterprise identity integration.\n\n"
-        "For actual intake, initialize a separate private store, configure authorized subjects, create an OPERATOR_SUPPLIED case with explicit service/period/criteria authority, and independently register its source population. Export records as the documented JSON envelope. Source-specific vendor APIs and enterprise identity-provider integration remain external integration work.\n"
+        "Every case and credential is explicitly synthetic. No live connection, appointment, deployed service, actual evidence or external assurance is asserted. The local workflow authenticates random credentials with scoped, expiring grants; an administrator with filesystem/database access remains trusted. A trusted local operator controls this store. The signed service boundary and deployment templates are supplied in the operations package; actual deployment and provider configuration remain required.\n\n"
+        "For actual intake, initialize a separate private store, configure authorized subjects, create an OPERATOR_SUPPLIED case with explicit service/period/criteria authority, and independently register its source population. Export records as the documented JSON envelope. Configure the supplied connectors and signed API against authorized provider endpoints and verified field translations before actual use.\n"
     )
     start.chmod(0o600)
     return summary
