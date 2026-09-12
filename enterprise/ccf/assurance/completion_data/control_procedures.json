@@ -1,0 +1,399 @@
+[
+  {
+    "control_id": "SH-AIM-001",
+    "proposed_system_of_record": "AI system and use-case register",
+    "procedure": "At onboarding and material change, reconcile procurement, development and deployed-service inventories to AI systems and analytical methods. Record purpose, lifecycle role, owner, version, data/model dependencies, affected groups, permitted uses and retirement state. Investigate unregistered systems before authorizing use.",
+    "evidence_outputs": [
+      "Reconciliation",
+      "System register",
+      "Use boundaries",
+      "Unregistered-system findings"
+    ],
+    "reviewer_role_description": "Qualified reviewer independent of preparation and operation",
+    "test_procedure": "Trace independently selected deployments and supplier purchases into the register, then trace registered systems back to exact versions and dependency records. Investigate omissions and stale lifecycle states.",
+    "operating_inputs_needed": [
+      "Actual AI systems and uses",
+      "Lifecycle roles",
+      "Affected groups"
+    ]
+  },
+  {
+    "control_id": "SH-AIM-002",
+    "proposed_system_of_record": "Impact assessment and independent validation register",
+    "procedure": "Before high-consequence use and material change, assess impacts on individuals, groups and society, foreseeable misuse and uncertainty; link impacts to risk treatment. Define acceptance criteria for the intended use before testing. Independently challenge data, performance, limitations and proposed safeguards. Record unresolved issues and release restrictions; schedule reassessment from risk and change triggers.",
+    "evidence_outputs": [
+      "Impact assessment",
+      "Version-bound validation results",
+      "Risk treatment links",
+      "Release restrictions"
+    ],
+    "reviewer_role_description": "Qualified reviewer independent of preparation and operation",
+    "test_procedure": "Reperform selected acceptance measures against the exact system/data versions. Trace identified impacts and failed measures into treatment or release restrictions; check independence and whether material changes triggered reassessment.",
+    "operating_inputs_needed": [
+      "Impact and risk criteria",
+      "Intended uses and populations",
+      "Authorized release and residual-risk authority"
+    ]
+  },
+  {
+    "control_id": "SH-AIM-003",
+    "proposed_system_of_record": "AI dependency and lineage register",
+    "procedure": "For each material change, version datasets, external models, prompts and tools; identify origin, restrictions, quality criteria and preparation steps. Review rights and security before use. Separate training and evaluation data and investigate leakage or contamination. Bind approved dependencies to the released system version.",
+    "evidence_outputs": [
+      "Dependency manifest",
+      "Rights/security reviews",
+      "Quality checks",
+      "Training/evaluation split checks"
+    ],
+    "reviewer_role_description": "Qualified reviewer independent of preparation and operation",
+    "test_procedure": "Trace a released version to immutable dependencies, applicable rights decisions and preparation records. Challenge missing provenance and cross-partition contamination; verify rejected inputs were excluded.",
+    "operating_inputs_needed": [
+      "Datasets and dependencies",
+      "Quality criteria",
+      "Approved dependency stores"
+    ]
+  },
+  {
+    "control_id": "SH-AIM-004",
+    "proposed_system_of_record": "AI monitoring and incident register",
+    "procedure": "Define measures for performance, drift, harmful outcomes, overrides and feedback from the use-case risk assessment. Monitor at the approved cadence; triage threshold breaches, supplier changes and user reports. Apply stop or restriction conditions, investigate and independently validate corrective changes while retaining failed history.",
+    "evidence_outputs": [
+      "Versioned monitoring criteria",
+      "Monitoring population",
+      "Breach tickets",
+      "Restriction and retest records"
+    ],
+    "reviewer_role_description": "Qualified reviewer independent of preparation and operation",
+    "test_procedure": "Reconcile production versions and operating periods to monitoring records. Reperform a breach classification and trace alerts, overrides and adverse feedback through escalation and validated correction.",
+    "operating_inputs_needed": [
+      "Risk-based thresholds and cadence",
+      "Monitoring access",
+      "Stop authority"
+    ]
+  },
+  {
+    "control_id": "SH-AIM-005",
+    "proposed_system_of_record": "AI decision authority and workflow register",
+    "procedure": "At design and review, identify decisions supported or executed by AI, authorized human decision makers, prohibited uses, override rights and stop conditions. Implement workflow permissions and escalation. Train assigned operators and review bypass attempts and overrides after change.",
+    "evidence_outputs": [
+      "Decision authority matrix",
+      "Workflow configuration",
+      "Training records",
+      "Override logs"
+    ],
+    "reviewer_role_description": "Qualified reviewer independent of preparation and operation",
+    "test_procedure": "Attempt a prohibited or unauthorized decision in an approved test environment; confirm the block or human approval gate. Trace overrides to authorized decisions and check that operators can stop the workflow.",
+    "operating_inputs_needed": [
+      "Decision classes",
+      "Authorized operators",
+      "Prohibited uses"
+    ]
+  },
+  {
+    "control_id": "SH-ASS-003",
+    "proposed_system_of_record": "Independent audit programme",
+    "procedure": "Maintain a risk-based programme covering the selected management systems, services and sites. Define criteria, scope, methods and independence before each engagement. Provide access and direct escalation, retain tested populations and findings, report results to accountable management, and verify corrective actions without substituting owner certification for audit work.",
+    "evidence_outputs": [
+      "Audit programme",
+      "Independence assessment",
+      "Workpapers",
+      "Reports and corrective-action verification"
+    ],
+    "reviewer_role_description": "Qualified reviewer independent of preparation and operation",
+    "test_procedure": "Reconcile planned engagements to completed work or authorized deferrals; inspect scope exclusions, reviewer conflicts, evidence access and reporting. Trace findings to independent closure testing.",
+    "operating_inputs_needed": [
+      "Audit criteria and scope",
+      "Qualified independent reviewers",
+      "Reporting authority"
+    ]
+  },
+  {
+    "control_id": "SH-CFG-003",
+    "proposed_system_of_record": "Patch and support lifecycle register",
+    "procedure": "Monthly, reconcile discovered assets and software versions to vendor support and patch status. Assign remediation from approved risk targets; schedule testing, deployment and recovery. Verify installed versions after change. Escalate overdue or unsupported assets and time-limit any authorized exception.",
+    "evidence_outputs": [
+      "Asset reconciliation",
+      "Support status",
+      "Patch changes",
+      "Post-change verification",
+      "Expiring exceptions"
+    ],
+    "reviewer_role_description": "Qualified reviewer independent of preparation and operation",
+    "test_procedure": "Select assets from discovery, including unsupported systems; reproduce support and patch status and aging. Trace due remediation to verified versions or a valid bounded exception, preserving overdue failures.",
+    "operating_inputs_needed": [
+      "Asset population",
+      "Support sources",
+      "Risk targets and maintenance windows"
+    ]
+  },
+  {
+    "control_id": "SH-CFG-004",
+    "proposed_system_of_record": "Secret and certificate metadata inventory",
+    "procedure": "Continuously reconcile credential, key and certificate metadata to named custody and approved storage. Monitor expiry and rotation; restrict retrieval and audit access. Revoke on compromise or departure and validate dependent-service recovery after rotation. Preserve evidence without copying secret values.",
+    "evidence_outputs": [
+      "Metadata inventory",
+      "Storage/access configuration",
+      "Expiry alerts",
+      "Rotation and revocation records"
+    ],
+    "reviewer_role_description": "Qualified reviewer independent of preparation and operation",
+    "test_procedure": "Select inventory and discovered credentials in both directions; inspect custody and expiry. In an approved test environment, verify rotation failure handling, revocation and dependent-service recovery without extracting secrets.",
+    "operating_inputs_needed": [
+      "Approved secret stores",
+      "Owners and service dependencies",
+      "Rotation and recovery criteria"
+    ]
+  },
+  {
+    "control_id": "SH-DAT-005",
+    "proposed_system_of_record": "Data rights decision register",
+    "procedure": "Before training, sharing or reuse, identify origin, controller/licensor, permitted purposes, restrictions, expiry and downstream terms. Compare the intended use and recipients with the governing rights; obtain competent review of uncertainty. Block unapproved use and reassess material purpose or source changes.",
+    "evidence_outputs": [
+      "Rights matrix",
+      "Purpose-specific review",
+      "Restrictions",
+      "Blocked-use records"
+    ],
+    "reviewer_role_description": "Qualified reviewer independent of preparation and operation",
+    "test_procedure": "Trace selected data uses to the exact agreement/version and approved purpose; check recipient and retention restrictions. Verify expired or rejected permissions prevent the proposed reuse.",
+    "operating_inputs_needed": [
+      "Actual data sources",
+      "Agreements and permissions",
+      "Intended uses and recipients"
+    ]
+  },
+  {
+    "control_id": "SH-ETH-003",
+    "proposed_system_of_record": "Restricted concern and investigation register",
+    "procedure": "Provide accessible reporting channels for workforce and AI-related concerns. Independently triage conflicts, urgency and potential retaliation; restrict access and preserve evidence. Assign investigators, document findings and remedies, communicate appropriately and monitor retaliation or repeat issues after closure.",
+    "evidence_outputs": [
+      "Channel tests",
+      "Triage and conflict records",
+      "Investigation files",
+      "Remedy and retaliation follow-up"
+    ],
+    "reviewer_role_description": "Qualified reviewer independent of preparation and operation",
+    "test_procedure": "Test channel accessibility without exposing real complainants. Inspect authorized samples for independent triage, access controls, disposition and follow-up; reconcile unresolved reports to escalation.",
+    "operating_inputs_needed": [
+      "Reporting channels",
+      "Investigator appointments",
+      "Response criteria"
+    ]
+  },
+  {
+    "control_id": "SH-FND-003",
+    "proposed_system_of_record": "Transformation version and reconciliation register",
+    "procedure": "For every material transformation, version source/target definitions and executable logic; review changes separately from authorship. Test reconciliations, invalid inputs, edge cases and data lineage before release. Bind approved logic to executed runs and retain errors and rollback records.",
+    "evidence_outputs": [
+      "Reviewed changes",
+      "Transformation tests",
+      "Run manifests",
+      "Source-target reconciliations"
+    ],
+    "reviewer_role_description": "Qualified reviewer independent of preparation and operation",
+    "test_procedure": "Reperform a selected transformation from pinned inputs and code; reconcile outputs and rejected records. Verify deployed logic matches the reviewed version and unauthorized changes are detected.",
+    "operating_inputs_needed": [
+      "Actual pipelines",
+      "Reconciliation tolerances",
+      "Release authority"
+    ]
+  },
+  {
+    "control_id": "SH-GOV-002",
+    "proposed_system_of_record": "Governance and management-review calendar",
+    "procedure": "Schedule board/committee oversight and management-system reviews with accountable participants and required information packages. For each selected management system, prepare changes in context, objectives, performance, audit results, incidents, treatment and resource needs. Track missing inputs and deferred reviews. Identify management review separately from routine board attendance.",
+    "evidence_outputs": [
+      "Approved calendar",
+      "Review input checklist",
+      "Information packages",
+      "Deferred-review actions"
+    ],
+    "reviewer_role_description": "Qualified reviewer independent of preparation and operation",
+    "test_procedure": "Reconcile scheduled reviews to records and verify required inputs were available and considered. Inspect a deferred review and a significant performance issue for escalation and follow-up.",
+    "operating_inputs_needed": [
+      "Review participants and authority",
+      "Management systems in scope",
+      "Review frequency"
+    ]
+  },
+  {
+    "control_id": "SH-GOV-005",
+    "proposed_system_of_record": "Decision and action register",
+    "procedure": "At each governing or management-review meeting, record decisions, rationale, responsible parties, resources and due dates. Track improvements and changes to the management system alongside material board actions. Validate completion against evidence and escalate overdue commitments; preserve superseded decisions.",
+    "evidence_outputs": [
+      "Minutes",
+      "Action register",
+      "Resource decisions",
+      "Closure evidence"
+    ],
+    "reviewer_role_description": "Qualified reviewer independent of preparation and operation",
+    "test_procedure": "Trace selected review outputs and board decisions to accountable actions and evidence of completion. Reconcile overdue items and verify closure did not erase unresolved commitments.",
+    "operating_inputs_needed": [
+      "Authorized decision makers",
+      "Action ownership",
+      "Escalation criteria"
+    ]
+  },
+  {
+    "control_id": "SH-OPS-002",
+    "proposed_system_of_record": "Service capacity and performance register",
+    "procedure": "Continuously monitor availability, latency, errors, backlog and dependencies; review trends weekly against approved service and recovery needs. Include peak demand and recovery-site capacity. Forecast exhaustion, assign capacity action and validate improvements or escalate missed thresholds.",
+    "evidence_outputs": [
+      "Service metrics",
+      "Capacity forecast",
+      "Threshold breach records",
+      "Load/recovery tests"
+    ],
+    "reviewer_role_description": "Qualified reviewer independent of preparation and operation",
+    "test_procedure": "Reconcile critical services and dependencies to monitored measures. Reperform a peak/recovery-capacity calculation and trace breaches to effective action, including missing monitoring periods.",
+    "operating_inputs_needed": [
+      "Actual loads and dependencies",
+      "Service objectives",
+      "Approved thresholds"
+    ]
+  },
+  {
+    "control_id": "SH-OPS-004",
+    "proposed_system_of_record": "Controlled operational runbook library",
+    "procedure": "Inventory critical recurring manual activities; document prerequisites, authority, ordered steps, safety checks, records, failure handling and recovery. Review annually and after material change. Have a competent alternate execute a controlled walkthrough and resolve ambiguous or unperformable steps.",
+    "evidence_outputs": [
+      "Runbook inventory",
+      "Versioned instructions",
+      "Alternate-operator walkthrough",
+      "Corrections"
+    ],
+    "reviewer_role_description": "Qualified reviewer independent of preparation and operation",
+    "test_procedure": "Reconcile recurring activities to current instructions; observe a selected alternate-operator walkthrough and a failure path. Verify changes reached operators and obsolete versions are withdrawn.",
+    "operating_inputs_needed": [
+      "Actual recurring activities",
+      "Competent operators",
+      "Approved test conditions"
+    ]
+  },
+  {
+    "control_id": "SH-PPL-001",
+    "proposed_system_of_record": "Workforce engagement register",
+    "procedure": "Before engagement, approve the requisition, role, manager and terms; include confidentiality, security and appropriate AI-use responsibilities. Obtain acknowledgment before granting relevant access. Reconcile contractor and employee onboarding to the approved engagement and required training.",
+    "evidence_outputs": [
+      "Approved engagement",
+      "Acknowledged obligations",
+      "Onboarding reconciliation",
+      "Training links"
+    ],
+    "reviewer_role_description": "Qualified reviewer independent of preparation and operation",
+    "test_procedure": "Select starters independently from payroll/vendor and identity populations. Verify approved terms, acknowledgment and access prerequisites preceded use; investigate unrecorded contractors.",
+    "operating_inputs_needed": [
+      "Actual workforce population",
+      "Engagement terms",
+      "Access prerequisites"
+    ]
+  },
+  {
+    "control_id": "SH-PPL-003",
+    "proposed_system_of_record": "Workforce change and exit workflow",
+    "procedure": "Record role, manager, location and status changes promptly; send dated events to access, asset and responsibility owners. On transfer or exit, reconcile permissions and returned assets, transfer duties and communicate continuing obligations. Escalate missing acknowledgments and unfinished dependent actions.",
+    "evidence_outputs": [
+      "Dated change events",
+      "Access and asset reconciliation",
+      "Duty transfer",
+      "Continuing-obligation notices"
+    ],
+    "reviewer_role_description": "Qualified reviewer independent of preparation and operation",
+    "test_procedure": "Reconcile selected HR changes to identity and asset populations; inspect completion timestamps, unresolved assets and residual access. Verify successor responsibilities and continuing obligations are recorded.",
+    "operating_inputs_needed": [
+      "HR events",
+      "Asset and identity inventories",
+      "Completion targets"
+    ]
+  },
+  {
+    "control_id": "SH-PPL-005",
+    "proposed_system_of_record": "Critical-role competence and capacity review",
+    "procedure": "Semiannually, identify critical skills, workload, vacancies and single-person dependencies for service and management-system duties. Assess competence against assigned work, define deputies and training, test handover coverage and escalate unresolved capacity risks.",
+    "evidence_outputs": [
+      "Competence matrix",
+      "Workload review",
+      "Succession and training actions",
+      "Handover exercise"
+    ],
+    "reviewer_role_description": "Qualified reviewer independent of preparation and operation",
+    "test_procedure": "Trace critical duties to competent primary and alternate coverage; inspect evidence that training and handovers address identified deficiencies. Investigate duties assigned to unavailable or unqualified personnel.",
+    "operating_inputs_needed": [
+      "Actual appointments",
+      "Competence criteria",
+      "Workload and resourcing constraints"
+    ]
+  },
+  {
+    "control_id": "SH-PRD-002",
+    "proposed_system_of_record": "Customer and AI-use commitment register",
+    "procedure": "At contract and service change, record approved commitments, intended use, limitations and responsibility splits. Assign delivery ownership and communicate audience-appropriate operating information, support and reporting routes. Review nonstandard promises before acceptance and reconcile them to deliverable capability.",
+    "evidence_outputs": [
+      "Approved commitments",
+      "Responsibility matrix",
+      "User information",
+      "Nonstandard-term reviews"
+    ],
+    "reviewer_role_description": "Qualified reviewer independent of preparation and operation",
+    "test_procedure": "Trace selected agreements and published product information to approved commitments and actual delivery owners. Investigate unsupported promises or omitted use limitations.",
+    "operating_inputs_needed": [
+      "Actual agreements",
+      "Product capabilities",
+      "Approved user information"
+    ]
+  },
+  {
+    "control_id": "SH-PRD-003",
+    "proposed_system_of_record": "Customer-impacting change register",
+    "procedure": "Before material change, assess affected users, AI purposes and dependencies, limitations and contractual notice duties. Approve the change and communication plan; issue accurate notices to affected parties and retain delivery evidence. Reassess significant unplanned changes and failures.",
+    "evidence_outputs": [
+      "Impact assessment",
+      "Approved change and notices",
+      "Recipient reconciliation",
+      "Delivery records"
+    ],
+    "reviewer_role_description": "Qualified reviewer independent of preparation and operation",
+    "test_procedure": "Select releases from deployment records; check affected-customer analysis, required notice timing and recipient completeness. Inspect changes affecting AI limitations or responsibility splits.",
+    "operating_inputs_needed": [
+      "Actual customers and commitments",
+      "Change population",
+      "Notice duties"
+    ]
+  },
+  {
+    "control_id": "SH-PRD-004",
+    "proposed_system_of_record": "Customer issue and adverse-impact register",
+    "procedure": "Provide external reporting routes for service problems and AI adverse impacts. Triage severity, affected users and escalation duties; link repeat issues to engineering and risk/impact reassessment. Communicate appropriate responses and verify corrective changes before closure.",
+    "evidence_outputs": [
+      "Issue population",
+      "Triage records",
+      "Linked corrective work",
+      "Response and verification records"
+    ],
+    "reviewer_role_description": "Qualified reviewer independent of preparation and operation",
+    "test_procedure": "Reconcile support channels to cases; inspect high-impact and repeated reports for timely escalation and risk linkage. Trace closure to validated changes and retained failure history.",
+    "operating_inputs_needed": [
+      "Support channels",
+      "Severity and response criteria",
+      "External reporting responsibilities"
+    ]
+  },
+  {
+    "control_id": "SH-SEC-004",
+    "proposed_system_of_record": "Vulnerability remediation register",
+    "procedure": "Continuously ingest findings and reconcile affected assets; prioritize using approved exposure and severity criteria. Track due dates, fix ownership and mitigation; review aging monthly. Independently verify remediation and escalate overdue exposure or expiring risk acceptance without resetting the original discovery date.",
+    "evidence_outputs": [
+      "Finding and asset reconciliation",
+      "Aging report",
+      "Fix verification",
+      "Escalations and exceptions"
+    ],
+    "reviewer_role_description": "Qualified reviewer independent of preparation and operation",
+    "test_procedure": "Recompute ages and targets from original findings; reperform verification on selected fixes. Inspect overdue and accepted exposure for authority, compensating measures and expiry, including reopened findings.",
+    "operating_inputs_needed": [
+      "Asset and vulnerability populations",
+      "Risk-based targets",
+      "Exception authority"
+    ]
+  }
+]

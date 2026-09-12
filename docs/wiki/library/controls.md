@@ -32,6 +32,11 @@ Generated file inventory. Includes current and historical records; open the sour
 
 - [CCF assessment and framework delta workbench](../../../enterprise/ccf/assurance/README.md) — MD
 
+## `enterprise/ccf/assurance/completion_data`
+
+- [Operating decisions needed to complete the CCF](../../../enterprise/ccf/assurance/completion_data/DECISIONS.md) — MD
+- [Control-library completion authoring](../../../enterprise/ccf/assurance/completion_data/README.md) — MD
+
 ## `enterprise/ccf/assurance/design_data`
 
 - [Baseline design authoring records](../../../enterprise/ccf/assurance/design_data/README.md) — MD

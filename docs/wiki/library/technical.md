@@ -79,6 +79,7 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Initial CCF assurance scope and source proposal](../../internal/development/CCF_ASSURANCE_SCOPE_PROPOSAL_2026-09-11.md) — MD
 - [CCF baseline design and workflow delivery](../../internal/development/CCF_BASELINE_DESIGN_DELIVERY_2026-09-11.md) — MD
 - [CCF preparation compared with Compliance Atlas](../../internal/development/CCF_COMPLIANCE_ATLAS_COMPARISON_2026-09-11.md) — MD
+- [CCF control library and coverage review preparation](../../internal/development/CCF_CONTROL_LIBRARY_REVIEW_DELIVERY_2026-09-12.md) — MD
 - [ISO extension planning delivery](../../internal/development/CCF_ISO_EXTENSION_DELIVERY_2026-09-11.md) — MD
 - [CCF prebuild repository audit — September 11, 2026](../../internal/development/CCF_PREBUILD_REPOSITORY_AUDIT_2026-09-11.md) — MD
 - [CCF preparation delivery — September 11, 2026](../../internal/development/CCF_PREPARATION_DELIVERY_2026-09-11.md) — MD
