@@ -39,6 +39,17 @@ def validate(root: Path, data: dict) -> None:
 
     for job in jobs:
         visit(job["id"])
+        if job["state"] not in {
+            "READY", "READY_SOURCE_ONLY", "IN_PROGRESS", "COMPLETE",
+            "AWAITING_REVIEW", "SOURCE_COMPLETE_REVIEW_PENDING", "BLOCKED_EXTERNAL",
+        }:
+            raise ValueError(f"Invalid job state: {job['id']}")
+        if job["state"] in {
+            "COMPLETE", "AWAITING_REVIEW", "SOURCE_COMPLETE_REVIEW_PENDING", "BLOCKED_EXTERNAL",
+        } and not job.get("evidence"):
+            raise ValueError(f"Missing outcome evidence: {job['id']}")
+        if job["state"] == "BLOCKED_EXTERNAL" and not job.get("next_action"):
+            raise ValueError(f"Missing external next action: {job['id']}")
         if job["gate"] not in {"existing_authority", "exact_visual_acceptance"}:
             raise ValueError(f"Invalid gate: {job['id']}")
         if not job["acceptance"] or not job["write_scope"]:
@@ -61,6 +72,8 @@ def validate(root: Path, data: dict) -> None:
         path = relative(record["path"])
         if hashlib.sha256(path.read_bytes()).hexdigest() != record["sha256"]:
             raise ValueError(f"Frozen asset changed: {record['path']}")
+    if data["status"] == "COMPLETE" and any(job["state"] != "COMPLETE" for job in jobs):
+        raise ValueError("Queue claims completion with unfinished jobs")
 
 
 def validate_coverage(root: Path) -> None:

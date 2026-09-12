@@ -21,6 +21,21 @@ class WorkqueueTests(unittest.TestCase):
     def test_current_queue(self):
         queue_module.validate(ROOT, self.data)
 
+    def test_rejects_unsupported_completion_and_external_blockers(self):
+        for change in ("queue", "evidence", "external", "state"):
+            with self.subTest(change=change):
+                data = copy.deepcopy(self.data)
+                if change == "queue":
+                    data["status"] = "COMPLETE"
+                elif change == "evidence":
+                    data["jobs"][0].pop("evidence", None)
+                elif change == "external":
+                    data["jobs"][0]["state"] = "BLOCKED_EXTERNAL"
+                else:
+                    data["jobs"][0]["state"] = "ASSUMED_COMPLETE"
+                with self.assertRaises(ValueError):
+                    queue_module.validate(ROOT, data)
+
     def test_rejects_cycle_unknown_and_duplicate(self):
         for change in ("cycle", "unknown", "duplicate"):
             with self.subTest(change=change):

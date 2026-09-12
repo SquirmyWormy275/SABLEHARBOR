@@ -1,6 +1,8 @@
 # Overnight reader and evidence work
 
-**Workline:** SH-READER-OVERNIGHT-001 · **State:** prepared; not a scheduled/background job.
+**Workline:** SH-READER-OVERNIGHT-001 · **State:** executing in the active session from September 12, 2026; not a scheduled/background job.
+
+The owner started execution with “ok. let er rip”. The structured queue records the source revision, isolated branches and current job states. A running state is not completion evidence.
 
 Continue the existing reader/evidence work from a refreshed main. Read [the structured queue](QUEUE.json), [maintainer rules](../../../MAINTAINERS.md), [format boundaries](../SOURCES_AND_FORMATS.md) and [finance handoff](../../handoffs/FINANCE_HUMAN_EVIDENCE_COMPLETION.md) before assigning work. Earlier finance overnight logs describe historical runs; this queue does not resume their stale commands.
 

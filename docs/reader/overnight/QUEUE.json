@@ -1,7 +1,7 @@
 {
   "id": "SH-READER-OVERNIGHT-001",
   "base_sha": "44e42d37782986fd353e89c1eb2e1f896cdf2918",
-  "status": "PREPARED_NOT_SCHEDULED",
+  "status": "RUNNING_IN_ACTIVE_SESSION",
   "max_parallel_agents": 3,
   "integration_owner": "main agent",
   "decision_defaults": {
@@ -88,7 +88,7 @@
       "write_scope": [
         "docs/reader/reconciliation/"
       ],
-      "state": "READY",
+      "state": "IN_PROGRESS",
       "acceptance": "Inventory every existing format-review row. Give explicit manifest or release-member evidence for verified counterparts; retain unresolved dispositions. Do not generate bulk PDFs.",
       "gate": "existing_authority"
     },
@@ -105,7 +105,7 @@
       "write_scope": [
         "docs/finance/evidence/coverage/"
       ],
-      "state": "READY",
+      "state": "IN_PROGRESS",
       "acceptance": "Inventory every applicable accounting family in pinned current/successor releases: billing, receipts, credits, revenue, procurement/payables, Treasury, workforce costs, inventory, fixed assets, debt, close, consolidation and tax-support boundaries. Record period/scenario/entity/unit scope, all native populations, MD/PDF/XLSX/database coverage and supported/absent/exempt/proposed dispositions. Do not combine successive releases as extra transactions.",
       "gate": "existing_authority"
     },
@@ -125,7 +125,7 @@
         "docs/wiki/departments/",
         "docs/wiki/subjects/"
       ],
-      "state": "READY",
+      "state": "IN_PROGRESS",
       "acceptance": "One source-linked route for every accepted business/department and explicit historical/external subject disposition. Reuse original artwork; never invent separate logos or departments.",
       "gate": "existing_authority"
     },
@@ -197,7 +197,7 @@
       "write_scope": [
         "docs/reader/transactions/"
       ],
-      "state": "READY",
+      "state": "IN_PROGRESS",
       "acceptance": "Inventory applicable formation/governance/capital records, customer/vendor/service contracts, workforce terms, acquisition/bill-of-sale instruments, leases/host rights, ownership/title/security interests and tax-support documents. Map each to existing sources, human formats, accounting effects and missing/proposed/exempt states. Prior legal data-room categories do not prove an instrument exists.",
       "gate": "existing_authority"
     },
@@ -360,7 +360,7 @@
         "docs/reader/overnight/QUEUE.json",
         "docs/reader/overnight/START.md"
       ],
-      "state": "READY",
+      "state": "IN_PROGRESS",
       "acceptance": "Main agent exclusively regenerates shared catalog/links and reconciles financial, legal and reader coverage. For every scoped record require MD, applicable PDF/XLSX and native database linkage or a supported exemption/missing/proposal disposition. Run accounting rollups, source/period/ID checks, manifest/link integrity and required CI; inspect every changed page/sheet. Merge nonvisual batches after gates; hold new designs and proposed canon for review. Do not mark a family complete merely because it has an index or example.",
       "gate": "existing_authority"
     }
@@ -369,5 +369,17 @@
     "date": "2026-09-12",
     "owner_instruction": "Can you roll up the accounting and legal intp that too?",
     "interpretation": "Include accounting and legal-document completion in the prepared overnight run; this update does not start execution."
+  },
+  "execution": {
+    "started_date": "2026-09-12",
+    "owner_instruction": "ok. let er rip",
+    "base_sha": "8898d2d0310a60bdf0e4753036790c6eda1388cd",
+    "integration_branch": "execute/overnight-evidence-2026-09-12",
+    "workers": {
+      "finance": "execute/overnight-finance-2026-09-12",
+      "legal": "execute/overnight-legal-2026-09-12",
+      "reader": "execute/overnight-reader-2026-09-12"
+    },
+    "visual_release_boundary": "New designs and proposed facts remain in review; source-backed nonvisual work may merge after gates."
   }
 }
