@@ -37,3 +37,5 @@ The final closeout will link the implementation PR, verified integration report,
 ## Implemented selection and verification
 
 The default baseline contains 70 controls and 210 boundary plans. Selecting all three extensions produces 86 controls and 258 plans, preserving the baseline and adding only selected candidate duties. Twenty-four controls have bounded automated assertions; all controls retain mandatory human tests. The private delivery exercises 49 synthetic cases, signed HTTP authorization, scheduled collection, independent review and verified migration of prior history. Delivery verification replays retained events and regenerates the selected plans and assessment handoff. Actual deployment and qualified assurance acceptance remain the explicit operational gates above.
+
+For an owner who has not selected an identity tenant or host, the [concrete pilot design](CCF_PILOT_SYSTEM_DESIGN_2026-09-12.md) supplies a local Keycloak, private API and GitHub acquisition path. It turns missing technical choices into testable defaults while retaining actual operating appointments and production rollout as explicit decisions.

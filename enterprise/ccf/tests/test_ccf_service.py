@@ -222,7 +222,7 @@ def test_size_and_malformed_input_rejected(signing, plans, tmp_path):
         assert request(app, token(), "/v1/command", {}, **headers)[0].startswith("400")
 
 
-@pytest.mark.parametrize("missing", ["iss", "sub", "aud", "exp", "iat", "nbf", "token_use"])
+@pytest.mark.parametrize("missing", ["iss", "sub", "aud", "exp", "iat", "token_use"])
 def test_required_signed_claims_cannot_be_omitted(signing, missing):
     config, key, token = signing
     claims = jwt.decode(token()[7:], options={"verify_signature": False})
@@ -414,3 +414,22 @@ def test_production_gunicorn_trusts_only_explicit_local_https_scheme(signing, pl
         except subprocess.TimeoutExpired:
             process.kill()
             process.wait(timeout=5)
+
+
+@pytest.mark.parametrize("nbf", [None, 0])
+def test_standard_keycloak_optional_nbf_accepted(signing, nbf):
+    config, key, token = signing
+    claims = jwt.decode(token()[7:], options={"verify_signature": False})
+    if nbf is None:
+        del claims["nbf"]
+    else:
+        claims["nbf"] = nbf
+    encoded = jwt.encode(claims, key, algorithm="RS256", headers={"kid": "fixture"})
+    assert Identity(config).authenticate("Bearer " + encoded) == "DEMO-PREPARER"
+
+
+@pytest.mark.parametrize("nbf", [True, "0", None, 9999999999])
+def test_present_nbf_must_be_an_integer_and_not_in_future(signing, nbf):
+    config, _, token = signing
+    with pytest.raises(AuthenticationError):
+        Identity(config).authenticate(token(nbf=nbf))
