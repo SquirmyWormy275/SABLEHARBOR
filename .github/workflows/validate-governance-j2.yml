@@ -54,6 +54,11 @@ jobs:
       - run: python scripts/validate_governance_j2.py
       - run: python scripts/validate_institutional_catalog.py
       - run: python scripts/validate_finance_evidence_acceptance.py
+      - name: Validate accounting and legal source packages
+        run: |
+          python docs/finance/evidence/coverage/validate.py
+          python docs/reader/transactions/validate.py
+          python docs/reader/reconciliation/build.py --check
       - name: Reconcile reader library
         run: |
           python scripts/validate_reader_navigation.py --check-regeneration

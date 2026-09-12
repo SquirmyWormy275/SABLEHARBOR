@@ -71,3 +71,11 @@ The institutional full-text index uses an external-content view over existing ob
 This avoids storing the same controlled-document text twice while preserving the public
 search columns and full-text query behavior. Catalog regeneration and search tests verify
 logical content; SQLite byte layout can change when the schema changes.
+
+Reader full-text search likewise uses an external-content view. Controlled Markdown reuses
+its institutional normalized search text (including title/path); other files retain their
+complete search body in `reader_text`. Search bodies are discovery text, not byte-exact source
+exports. Original Markdown and its checksum remain available through `reader_file`.
+Counterpart audit rows omit the duplicated source excerpt from database JSON; the complete
+dated register and searchable source retain it. No evidence disposition or artifact hash is
+removed. These storage choices keep the generated catalog within the repository file limit.

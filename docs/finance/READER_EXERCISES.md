@@ -6,6 +6,12 @@ For a ready-to-read example, open the [accepted Foundry Field evidence memo and 
 
 All company financial records in these exercises are synthetic. The operating release retains a 2026 calibration and provides conditional 2027–2031 scenarios. It does not contain observed company results, audited statements, actual bank confirmations or executed customer agreements. Read the [operating model's boundaries](../../enterprise/operations/README.md) before interpreting results. Use one release, scenario, reporting unit and period consistently; do not combine successive versions as additional transactions.
 
+## Scoped working papers
+
+The [accounting evidence directory](evidence/coverage/README.md) now provides complete selected base-2027 populations for customer activity, Treasury/payables, close and supporting schedules, plus a separate 2026 acquisition/tax bridge. Open its Markdown guides, CSV schedules and SQLite extracts directly. Each package states its period, release, filters, native IDs and reconciliation results. Other scenarios and future years remain available through the original release. New formatted PDF/workbook designs require exact-file review.
+
+For source terms and approvals, use the [legal instrument directory](../reader/transactions/README.md). It connects 56 source documents and 13 reading records to existing publications and missing-record dispositions.
+
 ## Get the evidence
 
 1. Open the [business operations v1.0.0 release](https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/business-operations-v1.0.0), download `sable-harbor-business-operations-v1.0.0.zip`, and extract it into a new folder.

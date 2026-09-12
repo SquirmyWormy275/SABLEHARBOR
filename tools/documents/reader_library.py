@@ -206,8 +206,22 @@ def populate(
         xlsx_path TEXT NOT NULL REFERENCES reader_file(path),
         markdown_sha256 TEXT NOT NULL, pdf_sha256 TEXT NOT NULL, xlsx_sha256 TEXT NOT NULL,
         catalog_path TEXT NOT NULL);
-      CREATE VIRTUAL TABLE reader_search USING fts5(path UNINDEXED, title, body);
+      CREATE TABLE reader_text (path TEXT PRIMARY KEY REFERENCES reader_file(path), body TEXT NOT NULL);
     """)
+    has_institutional = db.execute(
+        "SELECT 1 FROM sqlite_master WHERE name='institutional_object'"
+    ).fetchone()
+    if has_institutional:
+        db.execute("""CREATE VIEW reader_search_content AS
+          SELECT f.rowid, f.path, f.title, coalesce(i.search_text, t.body) AS body
+          FROM reader_file f LEFT JOIN institutional_object i ON i.source_path=f.path
+          LEFT JOIN reader_text t ON t.path=f.path""")
+    else:
+        db.execute("""CREATE VIEW reader_search_content AS
+          SELECT f.rowid, f.path, f.title, t.body FROM reader_file f
+          JOIN reader_text t ON t.path=f.path""")
+    db.execute("""CREATE VIRTUAL TABLE reader_search USING fts5(
+        path UNINDEXED, title, body, content='reader_search_content', content_rowid='rowid')""")
     rows = []
     publication_sources = {a["publication"]: a["source"] for a in artifacts}
     for relative in inputs(root) if file_paths is None else file_paths:
@@ -227,6 +241,13 @@ def populate(
         rows.append(row)
         db.execute("INSERT INTO reader_file VALUES (?,?,?,?,?,?)", row)
         body = data.decode(errors="replace") if row[2] == "md" else row[1]
+        controlled = db.execute(
+            "SELECT search_text FROM institutional_object WHERE source_path=?", (relative,)
+        ).fetchone() if has_institutional else None
+        if controlled:
+            body = controlled[0]
+        else:
+            db.execute("INSERT INTO reader_text VALUES (?,?)", (relative, body))
         db.execute("INSERT INTO reader_search VALUES (?,?,?)", (relative, row[1], body))
     paths = {r[0] for r in rows}
     evidence = evidence_records(root)
@@ -247,8 +268,9 @@ def populate(
     review_rows = []
     audited = counterpart_records(root)
     for path, record in audited.items():
+        evidence = {key: value for key, value in record.items() if key != "source_state_excerpt"}
         db.execute("INSERT INTO reader_counterpart_audit VALUES (?,?,?)",
-                   (path, record["disposition"], json.dumps(record, sort_keys=True)))
+                   (path, record["disposition"], json.dumps(evidence, sort_keys=True)))
     for path, heading, extension, collection, _, _ in rows:
         if extension != "md":
             continue
