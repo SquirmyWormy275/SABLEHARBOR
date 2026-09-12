@@ -1,0 +1,50 @@
+[
+  {
+    "path": "qa/packet-1.png",
+    "page": 1,
+    "source": "packet",
+    "sha256": "59da56273d53939dc4ba2a8fefca6b2ce1b6230b4511bad38b3cb53a08657978"
+  },
+  {
+    "path": "qa/packet-2.png",
+    "page": 2,
+    "source": "packet",
+    "sha256": "a36fbff68f4d127fa9da3bbab1842c8a6d0d5578eb1c04ae609d8e76602b4f4c"
+  },
+  {
+    "path": "qa/workbook-1.png",
+    "page": 1,
+    "source": "workbook",
+    "sha256": "98eeafbbf74ce46783eee4581319b940562d556b56099883c3599811417e1a71"
+  },
+  {
+    "path": "qa/workbook-2.png",
+    "page": 2,
+    "source": "workbook",
+    "sha256": "5db0dad2a848dd0458b53fedd3ee45a7ad7f911dbe7f8117d1b0ac3827e51a19"
+  },
+  {
+    "path": "qa/workbook-3.png",
+    "page": 3,
+    "source": "workbook",
+    "sha256": "eecb6c12ca5920e70bd7bf513f9bd0da80890cc4b7cad0d34ea16ba42ee31a0e"
+  },
+  {
+    "path": "qa/workbook-4.png",
+    "page": 4,
+    "source": "workbook",
+    "sha256": "830be3b8dc7f4e0f9c13201ff1c96f28e4c447f82fe80f20b97ba81f889d687f"
+  },
+  {
+    "path": "qa/workbook-5.png",
+    "page": 5,
+    "source": "workbook",
+    "sha256": "7e3b8f693d669182cb594ce67f2acaba3de9fd76190691262049628c0a76d7c8"
+  },
+  {
+    "path": "qa/reference-1.png",
+    "page": 1,
+    "source": "reference",
+    "sha256": "a05a27600f3aaca1ac21f4648d4e4cf59083499263dddca4ae7c5f933726c336"
+  }
+]
