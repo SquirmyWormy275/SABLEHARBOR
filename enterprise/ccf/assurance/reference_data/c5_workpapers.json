@@ -1,0 +1,95 @@
+[
+  {
+    "locator": "BCM-02.01B",
+    "control_id": "SH-BCM-001",
+    "attributes": [
+      "Risk scenarios",
+      "Critical service inventory",
+      "Resource and supplier dependencies",
+      "Threat analysis",
+      "Outage and degradation impacts",
+      "Maximum tolerable disruption",
+      "Restoration priorities",
+      "Recovery time targets",
+      "Acceptable data loss by data class",
+      "Recovery resources"
+    ],
+    "pdf_pages": [
+      197,
+      198
+    ]
+  },
+  {
+    "locator": "BCM-02.02B",
+    "control_id": "SH-BCM-001",
+    "attributes": [
+      "Annual and material-change BIA review"
+    ],
+    "pdf_pages": [
+      198
+    ]
+  },
+  {
+    "locator": "BCM-04.01B",
+    "control_id": "SH-BCM-004",
+    "attributes": [
+      "Annual and material-change continuity testing",
+      "Affected customer and third-party participation"
+    ],
+    "pdf_pages": [
+      199,
+      200
+    ]
+  },
+  {
+    "locator": "BCM-04.02B",
+    "control_id": "SH-BCM-004",
+    "attributes": [
+      "Documented tests and plan improvements"
+    ],
+    "pdf_pages": [
+      199
+    ]
+  },
+  {
+    "locator": "BCM-04.01AC",
+    "control_id": "SH-BCM-004",
+    "attributes": [
+      "Exercises informed by previous security incidents"
+    ],
+    "pdf_pages": [
+      199,
+      200
+    ]
+  },
+  {
+    "locator": "BCM-04.02AC",
+    "control_id": "SH-TPR-003",
+    "attributes": [
+      "Advance customer notice of disruptive exercises"
+    ],
+    "pdf_pages": [
+      200
+    ]
+  },
+  {
+    "locator": "BCM-04.03AC",
+    "control_id": "SH-TPR-003",
+    "attributes": [
+      "Customer impact assessment and contact details"
+    ],
+    "pdf_pages": [
+      200
+    ]
+  },
+  {
+    "locator": "BCM-04.04AC",
+    "control_id": "SH-INC-001",
+    "attributes": [
+      "Post-exercise notification-plan review"
+    ],
+    "pdf_pages": [
+      200
+    ]
+  }
+]

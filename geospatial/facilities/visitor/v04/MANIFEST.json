@@ -1,0 +1,139 @@
+{
+  "title": "Campus visitor guide",
+  "site_id": "SH-SITE-0001",
+  "status": "DRAFT_FOR_OWNER_VISUAL_REVIEW",
+  "map_id": null,
+  "production_allocation": "PENDING_VISUAL_ACCEPTANCE",
+  "revision": "V04",
+  "visual_reference": "SH-FAC-REF-SAC-R01",
+  "artifacts": {
+    "svg": {
+      "path": "geospatial/facilities/visitor/v04/artifacts/visitor-map-v04.svg",
+      "sha256": "38fd96896c852905260d1e537962ef8cf977379743c2f3d7767b8c6646af77a4"
+    },
+    "png": {
+      "path": "geospatial/facilities/visitor/v04/artifacts/visitor-map-v04.png",
+      "sha256": "65f6be908278d58249836407f6285403be8beb44c4297b17c43c6ad6574e39bf"
+    },
+    "pdf": {
+      "path": "geospatial/facilities/visitor/v04/artifacts/visitor-map-v04.pdf",
+      "sha256": "c29c53942eaed65ec9798d3edc88ff594108bcff7bcbedd37efb5f9f5b85baef"
+    }
+  },
+  "review_surface": {
+    "path": "geospatial/facilities/visitor/v04/review.html",
+    "sha256": "581fa00693566d4ebc3224bbcd75a21b2c590d76956066fdb29f7ce30207cd87"
+  },
+  "building_masses": [
+    {
+      "building_id": "SH-SITE-0001-A",
+      "ground_rect_ft": [
+        148,
+        152,
+        216,
+        108
+      ],
+      "modelled_floors": 3,
+      "height_ft": 41.338582677165356,
+      "roof_offset_ft": 14.468503937007874,
+      "roof_east_offset_ft": 18.60236220472441
+    },
+    {
+      "building_id": "SH-SITE-0001-B",
+      "ground_rect_ft": [
+        148,
+        370,
+        216,
+        104
+      ],
+      "modelled_floors": 2,
+      "height_ft": 27.559055118110237,
+      "roof_offset_ft": 9.645669291338582,
+      "roof_east_offset_ft": 12.401574803149607
+    },
+    {
+      "building_id": "SH-SITE-0001-C",
+      "ground_rect_ft": [
+        468,
+        170,
+        168,
+        90
+      ],
+      "modelled_floors": 2,
+      "height_ft": 27.559055118110237,
+      "roof_offset_ft": 9.645669291338582,
+      "roof_east_offset_ft": 12.401574803149607
+    },
+    {
+      "building_id": "SH-SITE-0001-D",
+      "ground_rect_ft": [
+        468,
+        406,
+        168,
+        60
+      ],
+      "modelled_floors": 3,
+      "height_ft": 32.48031496062991,
+      "roof_offset_ft": 11.368110236220469,
+      "roof_east_offset_ft": 14.616141732283461
+    }
+  ],
+  "geometry_changes": [],
+  "entrances": [
+    {
+      "building_id": "SH-SITE-0001-A",
+      "source_access_key": "public_arrival_m",
+      "entry_ft": [
+        256.0,
+        152.0
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-B",
+      "source_access_key": "j2_controlled_entry_m",
+      "entry_ft": [
+        256.0,
+        369.99999999999994
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-C",
+      "source_access_key": "education_entry_m",
+      "entry_ft": [
+        512.0,
+        170.0
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-D",
+      "source_access_key": "residential_arrival_m",
+      "entry_ft": [
+        551.9999999999999,
+        406.0
+      ]
+    }
+  ],
+  "sources": {
+    "geospatial/facilities/visitor/v04/SOURCE.json": "64bf9eaba27ce747546c362b77e8e56ee35912d5cd5cedab69e5edad733dc50a",
+    "geospatial/facilities/visitor/v04/build.py": "aafc407c2132f5c8958ca8c722dfc0acd5f6e1f82961b98d2a911b05fdb7ce28",
+    "geospatial/facilities/r01_drawing.py": "8c1eae0967aac597395b16351ba0d6b1077cc3a31dded3fe292389a655d24c35",
+    "geospatial/facilities/source/campus.json": "0efd4854069ff20acb4032e02b021afebcb955990f1d684b51428624e281d950",
+    "geospatial/facilities/fonts/DejaVuSans-Bold.ttf": "b184b89e3c1075f22f6b71575b6fc20d4972b3cfd3b23322ca6fd596dcaef167",
+    "geospatial/facilities/fonts/DejaVuSans.ttf": "3fdf69cabf06049ea70a00b5919340e2ce1e6d02b0cc3c4b44fb6801bd1e0d22",
+    "geospatial/facilities/fonts/LICENSE_DEJAVU": "d75938dec098f06f0ac3c00853065d94f020be1c3c62ef1dc2975ba15b4d9b0e",
+    "geospatial/facilities/fonts/fonts.conf": "ac35d022f7b75586581ecc81fee3aa1febdea71366fd00727c1f8eabb4217d2b",
+    "docs/facilities/references/sacramento-hq/r01-approved/01_Sacramento_Campus_Master_Draft.png": "23729f7e2b427e58820361363e4a47fbc6bbd3ce9774ef67932ecab7a50bfa47",
+    "docs/facilities/references/sacramento-hq/r01-approved/02_Corporate_L02_Product_Draft.png": "09a3339ece443d6e7e8cd148cd8f207b56cd938a03efde4f4c5f8e9367dd6179",
+    "docs/facilities/references/sacramento-hq/r01-approved/03_J2_L01_Contact_JAG_Draft.png": "17bf92029276f7794721129e58830344a9a3ee4341c858f2c928d53ad8b0fefb",
+    "docs/facilities/references/sacramento-hq/r01-approved/04_Education_L01_Teaching_Draft.png": "d37ff987cf1036d32cf0fe07ca3b9a0578d7f359bd820fde2551cb268ed88361"
+  },
+  "intentional_changes": [
+    "V02 wording and palette retained.",
+    "Buildings shown as diagrammatic oblique masses: footprint and total height come from the campus model.",
+    "Roof offset uses a fixed projection coefficient, not a shadow or new footprint. No facade/window designs are asserted.",
+    "Remove the double-border card treatment and place names with simple letter identifiers.",
+    "Reduce road and landscape contrast to emphasize buildings, entrances and route.",
+    "V01, V02 and V03 remain unchanged.",
+    "Ground-plane scale applies to paths and footprints; building heights are diagrammatically projected. Roof equipment and facade design are not depicted."
+  ]
+}

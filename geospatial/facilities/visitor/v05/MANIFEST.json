@@ -1,0 +1,1206 @@
+{
+  "title": "Campus visitor guide",
+  "site_id": "SH-SITE-0001",
+  "status": "DRAFT_FOR_OWNER_VISUAL_REVIEW",
+  "map_id": null,
+  "production_allocation": "PENDING_VISUAL_ACCEPTANCE",
+  "revision": "V05",
+  "visual_reference": "SH-FAC-REF-SAC-R01",
+  "artifacts": {
+    "svg": {
+      "path": "geospatial/facilities/visitor/v05/artifacts/visitor-map-v05.svg",
+      "sha256": "1fea1621b226c338875cf5b2ce8c24923339c4cd08e60ef671df21cab60ab075"
+    },
+    "png": {
+      "path": "geospatial/facilities/visitor/v05/artifacts/visitor-map-v05.png",
+      "sha256": "31a16e77c6a0a566ee22ce2f8f7f4fe655ab83d384363b49cf32ad974ea29de3"
+    },
+    "pdf": {
+      "path": "geospatial/facilities/visitor/v05/artifacts/visitor-map-v05.pdf",
+      "sha256": "05435f0a05962ebbc2dacee73b3a892202006f0d703123623c5d63e855342a4a"
+    }
+  },
+  "geometry_changes": [],
+  "entrances": [
+    {
+      "building_id": "SH-SITE-0001-D",
+      "entry_ft": [
+        551.9999999999999,
+        406.0
+      ],
+      "source_access_key": "residential_arrival_m"
+    },
+    {
+      "building_id": "SH-SITE-0001-B",
+      "entry_ft": [
+        256.0,
+        369.99999999999994
+      ],
+      "source_access_key": "j2_controlled_entry_m"
+    },
+    {
+      "building_id": "SH-SITE-0001-C",
+      "entry_ft": [
+        512.0,
+        170.0
+      ],
+      "source_access_key": "education_entry_m"
+    },
+    {
+      "building_id": "SH-SITE-0001-A",
+      "entry_ft": [
+        256.0,
+        152.0
+      ],
+      "source_access_key": "public_arrival_m"
+    }
+  ],
+  "building_masses": [
+    {
+      "building_id": "SH-SITE-0001-D",
+      "ground_rect_ft": [
+        468,
+        406,
+        168,
+        60
+      ],
+      "height_m": 9.899999999999999,
+      "parapet_m": 0.8,
+      "modelled_floors": 3
+    },
+    {
+      "building_id": "SH-SITE-0001-B",
+      "ground_rect_ft": [
+        148,
+        370,
+        216,
+        104
+      ],
+      "height_m": 8.4,
+      "parapet_m": 0.8,
+      "modelled_floors": 2
+    },
+    {
+      "building_id": "SH-SITE-0001-C",
+      "ground_rect_ft": [
+        468,
+        170,
+        168,
+        90
+      ],
+      "height_m": 8.4,
+      "parapet_m": 0.8,
+      "modelled_floors": 2
+    },
+    {
+      "building_id": "SH-SITE-0001-A",
+      "ground_rect_ft": [
+        148,
+        152,
+        216,
+        108
+      ],
+      "height_m": 12.600000000000001,
+      "parapet_m": 0.8,
+      "modelled_floors": 3
+    }
+  ],
+  "facade_openings": [
+    {
+      "building_id": "SH-SITE-0001-D",
+      "floor_id": "SH-SITE-0001-D-L01",
+      "edge": "south",
+      "span_m": [
+        6.5999360000000005,
+        10.468864
+      ],
+      "z_m": [
+        1.0,
+        2.5999999999999996
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-D",
+      "floor_id": "SH-SITE-0001-D-L01",
+      "edge": "south",
+      "span_m": [
+        12.289536000000002,
+        16.158464000000002
+      ],
+      "z_m": [
+        1.0,
+        2.5999999999999996
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-D",
+      "floor_id": "SH-SITE-0001-D-L01",
+      "edge": "south",
+      "span_m": [
+        17.979136,
+        21.848064
+      ],
+      "z_m": [
+        1.0,
+        2.5999999999999996
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-D",
+      "floor_id": "SH-SITE-0001-D-L01",
+      "edge": "south",
+      "span_m": [
+        23.668736000000003,
+        27.537664000000003
+      ],
+      "z_m": [
+        1.0,
+        2.5999999999999996
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-D",
+      "floor_id": "SH-SITE-0001-D-L01",
+      "edge": "south",
+      "span_m": [
+        29.358336,
+        33.227264000000005
+      ],
+      "z_m": [
+        1.0,
+        2.5999999999999996
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-D",
+      "floor_id": "SH-SITE-0001-D-L01",
+      "edge": "south",
+      "span_m": [
+        35.047936,
+        38.916864000000004
+      ],
+      "z_m": [
+        1.0,
+        2.5999999999999996
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-D",
+      "floor_id": "SH-SITE-0001-D-L01",
+      "edge": "south",
+      "span_m": [
+        40.737536000000006,
+        44.606464
+      ],
+      "z_m": [
+        1.0,
+        2.5999999999999996
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-D",
+      "floor_id": "SH-SITE-0001-D-L02",
+      "edge": "south",
+      "span_m": [
+        6.5999360000000005,
+        10.468864
+      ],
+      "z_m": [
+        4.3,
+        5.8999999999999995
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-D",
+      "floor_id": "SH-SITE-0001-D-L02",
+      "edge": "south",
+      "span_m": [
+        12.289536000000002,
+        16.158464000000002
+      ],
+      "z_m": [
+        4.3,
+        5.8999999999999995
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-D",
+      "floor_id": "SH-SITE-0001-D-L02",
+      "edge": "south",
+      "span_m": [
+        17.979136,
+        21.848064
+      ],
+      "z_m": [
+        4.3,
+        5.8999999999999995
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-D",
+      "floor_id": "SH-SITE-0001-D-L02",
+      "edge": "south",
+      "span_m": [
+        23.668736000000003,
+        27.537664000000003
+      ],
+      "z_m": [
+        4.3,
+        5.8999999999999995
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-D",
+      "floor_id": "SH-SITE-0001-D-L02",
+      "edge": "south",
+      "span_m": [
+        29.358336,
+        33.227264000000005
+      ],
+      "z_m": [
+        4.3,
+        5.8999999999999995
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-D",
+      "floor_id": "SH-SITE-0001-D-L02",
+      "edge": "south",
+      "span_m": [
+        35.047936,
+        38.916864000000004
+      ],
+      "z_m": [
+        4.3,
+        5.8999999999999995
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-D",
+      "floor_id": "SH-SITE-0001-D-L02",
+      "edge": "south",
+      "span_m": [
+        40.737536000000006,
+        44.606464
+      ],
+      "z_m": [
+        4.3,
+        5.8999999999999995
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-D",
+      "floor_id": "SH-SITE-0001-D-L03",
+      "edge": "south",
+      "span_m": [
+        6.5999360000000005,
+        10.468864
+      ],
+      "z_m": [
+        7.6,
+        9.2
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-D",
+      "floor_id": "SH-SITE-0001-D-L03",
+      "edge": "south",
+      "span_m": [
+        12.289536000000002,
+        16.158464000000002
+      ],
+      "z_m": [
+        7.6,
+        9.2
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-D",
+      "floor_id": "SH-SITE-0001-D-L03",
+      "edge": "south",
+      "span_m": [
+        17.979136,
+        21.848064
+      ],
+      "z_m": [
+        7.6,
+        9.2
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-D",
+      "floor_id": "SH-SITE-0001-D-L03",
+      "edge": "south",
+      "span_m": [
+        23.668736000000003,
+        27.537664000000003
+      ],
+      "z_m": [
+        7.6,
+        9.2
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-D",
+      "floor_id": "SH-SITE-0001-D-L03",
+      "edge": "south",
+      "span_m": [
+        29.358336,
+        33.227264000000005
+      ],
+      "z_m": [
+        7.6,
+        9.2
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-D",
+      "floor_id": "SH-SITE-0001-D-L03",
+      "edge": "south",
+      "span_m": [
+        35.047936,
+        38.916864000000004
+      ],
+      "z_m": [
+        7.6,
+        9.2
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-D",
+      "floor_id": "SH-SITE-0001-D-L03",
+      "edge": "south",
+      "span_m": [
+        40.737536000000006,
+        44.606464
+      ],
+      "z_m": [
+        7.6,
+        9.2
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-B",
+      "floor_id": "SH-SITE-0001-B-L01",
+      "edge": "south",
+      "span_m": [
+        6.942789818181818,
+        11.01270109090909
+      ],
+      "z_m": [
+        1.0,
+        3.5
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-B",
+      "floor_id": "SH-SITE-0001-B-L01",
+      "edge": "south",
+      "span_m": [
+        12.927953454545456,
+        16.997864727272727
+      ],
+      "z_m": [
+        1.0,
+        3.5
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-B",
+      "floor_id": "SH-SITE-0001-B-L01",
+      "edge": "south",
+      "span_m": [
+        18.913117090909093,
+        22.983028363636365
+      ],
+      "z_m": [
+        1.0,
+        3.5
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-B",
+      "floor_id": "SH-SITE-0001-B-L01",
+      "edge": "south",
+      "span_m": [
+        24.898280727272727,
+        28.968192
+      ],
+      "z_m": [
+        1.0,
+        3.5
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-B",
+      "floor_id": "SH-SITE-0001-B-L01",
+      "edge": "south",
+      "span_m": [
+        30.883444363636364,
+        34.95335563636364
+      ],
+      "z_m": [
+        1.0,
+        3.5
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-B",
+      "floor_id": "SH-SITE-0001-B-L01",
+      "edge": "south",
+      "span_m": [
+        36.868608,
+        40.93851927272727
+      ],
+      "z_m": [
+        1.0,
+        3.5
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-B",
+      "floor_id": "SH-SITE-0001-B-L01",
+      "edge": "south",
+      "span_m": [
+        42.85377163636364,
+        46.92368290909091
+      ],
+      "z_m": [
+        1.0,
+        3.5
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-B",
+      "floor_id": "SH-SITE-0001-B-L01",
+      "edge": "south",
+      "span_m": [
+        48.83893527272728,
+        52.908846545454544
+      ],
+      "z_m": [
+        1.0,
+        3.5
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-B",
+      "floor_id": "SH-SITE-0001-B-L01",
+      "edge": "south",
+      "span_m": [
+        54.824098909090914,
+        58.89401018181818
+      ],
+      "z_m": [
+        1.0,
+        3.5
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-B",
+      "floor_id": "SH-SITE-0001-B-L02",
+      "edge": "south",
+      "span_m": [
+        6.942789818181818,
+        11.01270109090909
+      ],
+      "z_m": [
+        5.2,
+        7.7
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-B",
+      "floor_id": "SH-SITE-0001-B-L02",
+      "edge": "south",
+      "span_m": [
+        12.927953454545456,
+        16.997864727272727
+      ],
+      "z_m": [
+        5.2,
+        7.7
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-B",
+      "floor_id": "SH-SITE-0001-B-L02",
+      "edge": "south",
+      "span_m": [
+        18.913117090909093,
+        22.983028363636365
+      ],
+      "z_m": [
+        5.2,
+        7.7
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-B",
+      "floor_id": "SH-SITE-0001-B-L02",
+      "edge": "south",
+      "span_m": [
+        24.898280727272727,
+        28.968192
+      ],
+      "z_m": [
+        5.2,
+        7.7
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-B",
+      "floor_id": "SH-SITE-0001-B-L02",
+      "edge": "south",
+      "span_m": [
+        30.883444363636364,
+        34.95335563636364
+      ],
+      "z_m": [
+        5.2,
+        7.7
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-B",
+      "floor_id": "SH-SITE-0001-B-L02",
+      "edge": "south",
+      "span_m": [
+        36.868608,
+        40.93851927272727
+      ],
+      "z_m": [
+        5.2,
+        7.7
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-B",
+      "floor_id": "SH-SITE-0001-B-L02",
+      "edge": "south",
+      "span_m": [
+        42.85377163636364,
+        46.92368290909091
+      ],
+      "z_m": [
+        5.2,
+        7.7
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-B",
+      "floor_id": "SH-SITE-0001-B-L02",
+      "edge": "south",
+      "span_m": [
+        48.83893527272728,
+        52.908846545454544
+      ],
+      "z_m": [
+        5.2,
+        7.7
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-B",
+      "floor_id": "SH-SITE-0001-B-L02",
+      "edge": "south",
+      "span_m": [
+        54.824098909090914,
+        58.89401018181818
+      ],
+      "z_m": [
+        5.2,
+        7.7
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-B",
+      "floor_id": "SH-SITE-0001-B-L01",
+      "edge": "west",
+      "span_m": [
+        20.0338944,
+        24.3449856
+      ],
+      "z_m": [
+        1.0,
+        3.5
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-B",
+      "floor_id": "SH-SITE-0001-B-L01",
+      "edge": "west",
+      "span_m": [
+        26.373734400000004,
+        30.684825600000003
+      ],
+      "z_m": [
+        1.0,
+        3.5
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-B",
+      "floor_id": "SH-SITE-0001-B-L02",
+      "edge": "west",
+      "span_m": [
+        20.0338944,
+        24.3449856
+      ],
+      "z_m": [
+        5.2,
+        7.7
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-B",
+      "floor_id": "SH-SITE-0001-B-L02",
+      "edge": "west",
+      "span_m": [
+        26.373734400000004,
+        30.684825600000003
+      ],
+      "z_m": [
+        5.2,
+        7.7
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-C",
+      "floor_id": "SH-SITE-0001-C-L01",
+      "edge": "south",
+      "span_m": [
+        6.5999360000000005,
+        10.468864
+      ],
+      "z_m": [
+        1.0,
+        3.5
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-C",
+      "floor_id": "SH-SITE-0001-C-L01",
+      "edge": "south",
+      "span_m": [
+        12.289536000000002,
+        16.158464000000002
+      ],
+      "z_m": [
+        1.0,
+        3.5
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-C",
+      "floor_id": "SH-SITE-0001-C-L01",
+      "edge": "south",
+      "span_m": [
+        17.979136,
+        21.848064
+      ],
+      "z_m": [
+        1.0,
+        3.5
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-C",
+      "floor_id": "SH-SITE-0001-C-L01",
+      "edge": "south",
+      "span_m": [
+        23.668736000000003,
+        27.537664000000003
+      ],
+      "z_m": [
+        1.0,
+        3.5
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-C",
+      "floor_id": "SH-SITE-0001-C-L01",
+      "edge": "south",
+      "span_m": [
+        29.358336,
+        33.227264000000005
+      ],
+      "z_m": [
+        1.0,
+        3.5
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-C",
+      "floor_id": "SH-SITE-0001-C-L01",
+      "edge": "south",
+      "span_m": [
+        35.047936,
+        38.916864000000004
+      ],
+      "z_m": [
+        1.0,
+        3.5
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-C",
+      "floor_id": "SH-SITE-0001-C-L01",
+      "edge": "south",
+      "span_m": [
+        40.737536000000006,
+        44.606464
+      ],
+      "z_m": [
+        1.0,
+        3.5
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-C",
+      "floor_id": "SH-SITE-0001-C-L02",
+      "edge": "south",
+      "span_m": [
+        6.5999360000000005,
+        10.468864
+      ],
+      "z_m": [
+        5.2,
+        7.7
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-C",
+      "floor_id": "SH-SITE-0001-C-L02",
+      "edge": "south",
+      "span_m": [
+        12.289536000000002,
+        16.158464000000002
+      ],
+      "z_m": [
+        5.2,
+        7.7
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-C",
+      "floor_id": "SH-SITE-0001-C-L02",
+      "edge": "south",
+      "span_m": [
+        17.979136,
+        21.848064
+      ],
+      "z_m": [
+        5.2,
+        7.7
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-C",
+      "floor_id": "SH-SITE-0001-C-L02",
+      "edge": "south",
+      "span_m": [
+        23.668736000000003,
+        27.537664000000003
+      ],
+      "z_m": [
+        5.2,
+        7.7
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-C",
+      "floor_id": "SH-SITE-0001-C-L02",
+      "edge": "south",
+      "span_m": [
+        29.358336,
+        33.227264000000005
+      ],
+      "z_m": [
+        5.2,
+        7.7
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-C",
+      "floor_id": "SH-SITE-0001-C-L02",
+      "edge": "south",
+      "span_m": [
+        35.047936,
+        38.916864000000004
+      ],
+      "z_m": [
+        5.2,
+        7.7
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-C",
+      "floor_id": "SH-SITE-0001-C-L02",
+      "edge": "south",
+      "span_m": [
+        40.737536000000006,
+        44.606464
+      ],
+      "z_m": [
+        5.2,
+        7.7
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-A",
+      "floor_id": "SH-SITE-0001-A-L01",
+      "edge": "south",
+      "span_m": [
+        6.942789818181818,
+        11.01270109090909
+      ],
+      "z_m": [
+        1.0,
+        3.5
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-A",
+      "floor_id": "SH-SITE-0001-A-L01",
+      "edge": "south",
+      "span_m": [
+        12.927953454545456,
+        16.997864727272727
+      ],
+      "z_m": [
+        1.0,
+        3.5
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-A",
+      "floor_id": "SH-SITE-0001-A-L01",
+      "edge": "south",
+      "span_m": [
+        18.913117090909093,
+        22.983028363636365
+      ],
+      "z_m": [
+        1.0,
+        3.5
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-A",
+      "floor_id": "SH-SITE-0001-A-L01",
+      "edge": "south",
+      "span_m": [
+        42.85377163636364,
+        46.92368290909091
+      ],
+      "z_m": [
+        1.0,
+        3.5
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-A",
+      "floor_id": "SH-SITE-0001-A-L01",
+      "edge": "south",
+      "span_m": [
+        48.83893527272728,
+        52.908846545454544
+      ],
+      "z_m": [
+        1.0,
+        3.5
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-A",
+      "floor_id": "SH-SITE-0001-A-L01",
+      "edge": "south",
+      "span_m": [
+        54.824098909090914,
+        58.89401018181818
+      ],
+      "z_m": [
+        1.0,
+        3.5
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-A",
+      "floor_id": "SH-SITE-0001-A-L02",
+      "edge": "south",
+      "span_m": [
+        6.942789818181818,
+        11.01270109090909
+      ],
+      "z_m": [
+        5.2,
+        7.7
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-A",
+      "floor_id": "SH-SITE-0001-A-L02",
+      "edge": "south",
+      "span_m": [
+        12.927953454545456,
+        16.997864727272727
+      ],
+      "z_m": [
+        5.2,
+        7.7
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-A",
+      "floor_id": "SH-SITE-0001-A-L02",
+      "edge": "south",
+      "span_m": [
+        18.913117090909093,
+        22.983028363636365
+      ],
+      "z_m": [
+        5.2,
+        7.7
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-A",
+      "floor_id": "SH-SITE-0001-A-L02",
+      "edge": "south",
+      "span_m": [
+        42.85377163636364,
+        46.92368290909091
+      ],
+      "z_m": [
+        5.2,
+        7.7
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-A",
+      "floor_id": "SH-SITE-0001-A-L02",
+      "edge": "south",
+      "span_m": [
+        48.83893527272728,
+        52.908846545454544
+      ],
+      "z_m": [
+        5.2,
+        7.7
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-A",
+      "floor_id": "SH-SITE-0001-A-L02",
+      "edge": "south",
+      "span_m": [
+        54.824098909090914,
+        58.89401018181818
+      ],
+      "z_m": [
+        5.2,
+        7.7
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-A",
+      "floor_id": "SH-SITE-0001-A-L03",
+      "edge": "south",
+      "span_m": [
+        6.942789818181818,
+        11.01270109090909
+      ],
+      "z_m": [
+        9.4,
+        11.900000000000002
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-A",
+      "floor_id": "SH-SITE-0001-A-L03",
+      "edge": "south",
+      "span_m": [
+        12.927953454545456,
+        16.997864727272727
+      ],
+      "z_m": [
+        9.4,
+        11.900000000000002
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-A",
+      "floor_id": "SH-SITE-0001-A-L03",
+      "edge": "south",
+      "span_m": [
+        18.913117090909093,
+        22.983028363636365
+      ],
+      "z_m": [
+        9.4,
+        11.900000000000002
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-A",
+      "floor_id": "SH-SITE-0001-A-L03",
+      "edge": "south",
+      "span_m": [
+        42.85377163636364,
+        46.92368290909091
+      ],
+      "z_m": [
+        9.4,
+        11.900000000000002
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-A",
+      "floor_id": "SH-SITE-0001-A-L03",
+      "edge": "south",
+      "span_m": [
+        48.83893527272728,
+        52.908846545454544
+      ],
+      "z_m": [
+        9.4,
+        11.900000000000002
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-A",
+      "floor_id": "SH-SITE-0001-A-L03",
+      "edge": "south",
+      "span_m": [
+        54.824098909090914,
+        58.89401018181818
+      ],
+      "z_m": [
+        9.4,
+        11.900000000000002
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-A",
+      "floor_id": "SH-SITE-0001-A-L01",
+      "edge": "west",
+      "span_m": [
+        20.8044288,
+        25.281331199999997
+      ],
+      "z_m": [
+        1.0,
+        3.5
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-A",
+      "floor_id": "SH-SITE-0001-A-L01",
+      "edge": "west",
+      "span_m": [
+        27.388108799999998,
+        31.865011199999994
+      ],
+      "z_m": [
+        1.0,
+        3.5
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-A",
+      "floor_id": "SH-SITE-0001-A-L02",
+      "edge": "west",
+      "span_m": [
+        20.8044288,
+        25.281331199999997
+      ],
+      "z_m": [
+        5.2,
+        7.7
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-A",
+      "floor_id": "SH-SITE-0001-A-L02",
+      "edge": "west",
+      "span_m": [
+        27.388108799999998,
+        31.865011199999994
+      ],
+      "z_m": [
+        5.2,
+        7.7
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-A",
+      "floor_id": "SH-SITE-0001-A-L03",
+      "edge": "west",
+      "span_m": [
+        20.8044288,
+        25.281331199999997
+      ],
+      "z_m": [
+        9.4,
+        11.900000000000002
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-A",
+      "floor_id": "SH-SITE-0001-A-L03",
+      "edge": "west",
+      "span_m": [
+        27.388108799999998,
+        31.865011199999994
+      ],
+      "z_m": [
+        9.4,
+        11.900000000000002
+      ]
+    }
+  ],
+  "projection": {
+    "east": [
+      2.45,
+      -0.48
+    ],
+    "north": [
+      -1.05,
+      -1.35
+    ],
+    "up": [
+      0,
+      -2.4
+    ],
+    "origin": [
+      1620,
+      1020
+    ],
+    "center_ft": [
+      420,
+      300
+    ],
+    "status": "Parallel projection; scale varies with direction; use existing orthographic plans for measurement."
+  },
+  "sources": {
+    "geospatial/facilities/visitor/v05/SOURCE.json": "c3714f49db99536a0851d6c14d12c4367920437206a0237bf08bd058f0f1e4e9",
+    "geospatial/facilities/visitor/v05/build.py": "4566fd71f35b3f40686f47a802b07d0766da277b840ea3ba839a4e3e119b609f",
+    "geospatial/facilities/r01_drawing.py": "8c1eae0967aac597395b16351ba0d6b1077cc3a31dded3fe292389a655d24c35",
+    "geospatial/facilities/source/campus.json": "0efd4854069ff20acb4032e02b021afebcb955990f1d684b51428624e281d950",
+    "geospatial/facilities/spatial/MODEL.json": "2d7803649e95754e7dd8990264a2f829f9f876884a7f4cbd36f6660f777b9170",
+    "geospatial/facilities/spatial/ARCHITECTURAL_ASSUMPTIONS.json": "0a3ab9f141451ce04dd9ff346d98fc90c5add989fd8bf4e090370bf1f1a7bcdf",
+    "geospatial/facilities/fonts/DejaVuSans-Bold.ttf": "b184b89e3c1075f22f6b71575b6fc20d4972b3cfd3b23322ca6fd596dcaef167",
+    "geospatial/facilities/fonts/DejaVuSans.ttf": "3fdf69cabf06049ea70a00b5919340e2ce1e6d02b0cc3c4b44fb6801bd1e0d22",
+    "geospatial/facilities/fonts/LICENSE_DEJAVU": "d75938dec098f06f0ac3c00853065d94f020be1c3c62ef1dc2975ba15b4d9b0e",
+    "geospatial/facilities/fonts/fonts.conf": "ac35d022f7b75586581ecc81fee3aa1febdea71366fd00727c1f8eabb4217d2b",
+    "docs/facilities/references/sacramento-hq/r01-approved/01_Sacramento_Campus_Master_Draft.png": "23729f7e2b427e58820361363e4a47fbc6bbd3ce9774ef67932ecab7a50bfa47",
+    "docs/facilities/references/sacramento-hq/r01-approved/02_Corporate_L02_Product_Draft.png": "09a3339ece443d6e7e8cd148cd8f207b56cd938a03efde4f4c5f8e9367dd6179",
+    "docs/facilities/references/sacramento-hq/r01-approved/03_J2_L01_Contact_JAG_Draft.png": "17bf92029276f7794721129e58830344a9a3ee4341c858f2c928d53ad8b0fefb",
+    "docs/facilities/references/sacramento-hq/r01-approved/04_Education_L01_Teaching_Draft.png": "d37ff987cf1036d32cf0fe07ca3b9a0578d7f359bd820fde2551cb268ed88361"
+  },
+  "review_surface": {
+    "path": "geospatial/facilities/visitor/v05/review.html",
+    "sha256": "81ae20725df1810c8db2515fb3cdf647296cee6bcb8d8bb34c57da77fb71fe5a"
+  }
+}

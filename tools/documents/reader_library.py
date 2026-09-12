@@ -131,7 +131,10 @@ def evidence_records(root: Path) -> list[tuple]:
     return records
 
 
-def populate(root: Path, db: sqlite3.Connection, artifacts: list[dict]) -> dict:
+def populate(
+    root: Path, db: sqlite3.Connection, artifacts: list[dict],
+    *, file_paths: list[str] | None = None,
+) -> dict:
     db.executescript("""
       CREATE TABLE reader_file (
         path TEXT PRIMARY KEY, title TEXT NOT NULL, format TEXT NOT NULL,
@@ -158,7 +161,7 @@ def populate(root: Path, db: sqlite3.Connection, artifacts: list[dict]) -> dict:
     """)
     rows = []
     publication_sources = {a["publication"]: a["source"] for a in artifacts}
-    for relative in inputs(root):
+    for relative in inputs(root) if file_paths is None else file_paths:
         path = root / relative
         data = path.read_bytes()
         heading = title(path)
