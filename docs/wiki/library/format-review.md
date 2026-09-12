@@ -6,12 +6,12 @@ Generated reconciliation queue, not an assertion that every unpaired record lack
 
 | State | Records |
 |---|---:|
-| COUNTERPART_REVIEW_REQUIRED | 18 |
+| COUNTERPART_REVIEW_REQUIRED | 19 |
 | HISTORICAL_COUNTERPART_UNRESOLVED | 57 |
 | NAVIGATION_ALIAS_NO_PUBLICATION | 3 |
 | READER_MAINTENANCE_NO_LETTERHEAD | 114 |
-| READER_OR_MAINTENANCE_PAGE | 139 |
-| UNRESOLVED_DOCUMENT_COUNTERPART | 228 |
+| READER_OR_MAINTENANCE_PAGE | 140 |
+| UNRESOLVED_DOCUMENT_COUNTERPART | 227 |
 | VERIFIED_ACCEPTED_EVIDENCE_PACKET | 1 |
 | VERIFIED_CHART_PUBLICATION | 40 |
 | VERIFIED_DOCUMENT_PAIR | 131 |
@@ -39,6 +39,7 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Advisory carry and workforce instrument boundaries](../../legal/evidence/corporate/SH-LEGAL-READ-CARRY-001.md) — SH-FIN-HUMAN-001
 - [Legal entities and separate books](../../legal/evidence/corporate/SH-LEGAL-READ-ENTITY-001.md) — SH-FIN-HUMAN-001
 - [ARU transition and retention obligations](../../legal/evidence/corporate/SH-LEGAL-READ-HR-001.md) — SH-FIN-HUMAN-001
+- [Geo canon reconciliation and program closeout matrix](../../../geospatial/docs/PROGRAM_CLOSEOUT_MATRIX.md) — Corporate document-format reconciliation
 
 ## Dated counterpart dispositions
 
