@@ -15,10 +15,28 @@ ADAPTERS = {
     "SH-INC-001": "incident_escalation",
     "SH-SEC-003": "vulnerability",
     "SH-TRN-002": "training",
+    "SH-IAM-001": "identity_creation",
+    "SH-IAM-002": "access_grant",
+    "SH-IAM-003": "mover_access",
+    "SH-IAM-005": "privilege_expiry",
+    "SH-IAM-006": "service_account",
+    "SH-ENG-002": "revision_review",
+    "SH-ENG-003": "release_tests",
+    "SH-ENG-004": "deployment_artifact",
+    "SH-CFG-001": "asset_inventory",
+    "SH-REC-004": "disposal",
+    "SH-POL-003": "exception_validity",
+    "SH-GOV-003": "delegated_decision",
+    "SH-ETH-001": "conduct_acknowledgment",
+    "SH-SEC-002": "log_coverage",
+    "SH-ASS-005": "corrective_retest",
+    "SH-PRD-003": "change_notice",
 }
 
 
 def instant(value):
+    if not isinstance(value, str):
+        raise ValueError("Timestamp text required")
     parsed = datetime.fromisoformat(value)
     if parsed.tzinfo is None:
         raise ValueError("Timestamp requires a time zone")
@@ -84,7 +102,7 @@ def boolean(value):
 def identifiers(value):
     if (
         not isinstance(value, list)
-        or not all(isinstance(x, str) and x for x in value)
+        or not all(isinstance(x, str) and x.strip() for x in value)
         or len(value) != len(set(value))
     ):
         raise ValueError("Expected unique identifier list")
@@ -99,6 +117,17 @@ def sha(value):
     ):
         raise ValueError("Expected SHA256")
     return value
+
+
+def sequence(d, *fields):
+    """All timestamps are timezone-aware; equality is permitted for atomic events."""
+    times = [instant(d[k]) for k in fields]
+    return times == sorted(times)
+
+
+def population_match(expected, actual):
+    required, observed = identifiers(expected), identifiers(actual)
+    return bool(required) and required == observed
 
 
 def automated(adapter, row):
@@ -120,7 +149,9 @@ def automated(adapter, row):
             "valid_decision": d["decision"] in {"RETAIN", "REMOVE"},
             "decision_enforced": boolean(d["active"]) == (d["decision"] == "RETAIN"),
             "removal_timely": d["decision"] != "REMOVE"
-            or instant(d["removed_at"]) <= instant(d["removal_due_at"]),
+            or instant(d["reviewed_at"])
+            <= instant(d["removed_at"])
+            <= instant(d["removal_due_at"]),
         }
     elif adapter == "backup_job":
         checks = {
@@ -175,6 +206,172 @@ def automated(adapter, row):
             <= instant(d["due_at"]),
             "assessment_passed": boolean(d["assessment_passed"]),
         }
+    elif adapter == "identity_creation":
+        checks = {
+            "approved_request": nonempty(d["approved_request_id"])
+            == nonempty(d["creation_request_id"]),
+            "sponsor": nonempty(d["sponsor_id"]) != nonempty(d["identity_id"]),
+            "identity_proofed": boolean(d["identity_proofed"]),
+            "authorized_window": sequence(d, "approved_at", "start_at", "created_at", "end_at"),
+        }
+    elif adapter == "access_grant":
+        checks = {
+            "exact_approved_rights": population_match(
+                d["approved_right_ids"], d["actual_right_ids"]
+            ),
+            "owner_approved": nonempty(d["approver_id"]) == nonempty(d["resource_owner_id"]),
+            "independent": nonempty(d["approver_id"]) != nonempty(d["requester_id"]),
+            "no_conflicts": not identifiers(d["conflicting_right_ids"]),
+            "authorized_window": sequence(d, "approved_at", "granted_at", "expires_at"),
+        }
+    elif adapter == "mover_access":
+        old = identifiers(d["old_right_ids"])
+        new = identifiers(d["approved_new_right_ids"])
+        actual = identifiers(d["actual_right_ids"])
+        checks = {
+            "exact_new_rights": actual == new,
+            "obsolete_removed": not ((old - new) & actual),
+            "timely_change": sequence(d, "approved_at", "effective_at", "reconciled_at", "due_at"),
+        }
+    elif adapter == "privilege_expiry":
+        checks = {
+            "separate_identity": nonempty(d["privileged_identity_id"])
+            != nonempty(d["ordinary_identity_id"]),
+            "limited_duration": sequence(
+                d, "approved_at", "activated_at", "revoked_at", "expires_at"
+            ),
+            "inactive": not boolean(d["active"]),
+            "sessions_retained": bool(identifiers(d["session_record_ids"])),
+            "independent_review": nonempty(d["reviewer_id"]) != nonempty(d["operator_id"]),
+            "review_after_use": sequence(d, "revoked_at", "reviewed_at", "review_due_at"),
+        }
+    elif adapter == "service_account":
+        checks = {
+            "owner_assigned": bool(nonempty(d["owner_id"])),
+            "workload_assigned": bool(nonempty(d["workload_id"])),
+            "exact_approved_rights": population_match(
+                d["approved_right_ids"], d["actual_right_ids"]
+            ),
+            "rotation_current": sequence(d, "rotated_at", "observed_at", "rotation_due_at"),
+            "review_current": sequence(d, "reviewed_at", "observed_at", "review_due_at"),
+        }
+    elif adapter == "revision_review":
+        checks = {
+            "exact_revision": sha(d["reviewed_revision_sha256"])
+            == sha(d["merged_revision_sha256"]),
+            "independent": nonempty(d["reviewer_id"]) != nonempty(d["author_id"]),
+            "approved": d["decision"] == "APPROVE",
+            "protected_branch": boolean(d["protected_branch"]),
+            "review_before_merge": sequence(d, "proposed_at", "reviewed_at", "merged_at"),
+        }
+    elif adapter == "release_tests":
+        checks = {
+            "complete_mandatory_population": population_match(
+                d["required_test_ids"], d["executed_test_ids"]
+            ),
+            "all_mandatory_passed": identifiers(d["required_test_ids"])
+            <= identifiers(d["passed_test_ids"]),
+            "no_failed_mandatory": not (
+                identifiers(d["required_test_ids"]) & identifiers(d["failed_test_ids"])
+            ),
+            "consistent_results": not (
+                identifiers(d["passed_test_ids"]) & identifiers(d["failed_test_ids"])
+            ),
+            "results_belong_to_execution": (
+                identifiers(d["passed_test_ids"]) | identifiers(d["failed_test_ids"])
+            )
+            == identifiers(d["executed_test_ids"]),
+            "exact_artifact": sha(d["tested_sha256"]) == sha(d["released_sha256"]),
+            "before_release": sequence(d, "built_at", "tested_at", "released_at"),
+        }
+    elif adapter == "deployment_artifact":
+        checks = {
+            "exact_artifact": sha(d["approved_sha256"])
+            == sha(d["pipeline_sha256"])
+            == sha(d["runtime_sha256"]),
+            "authorized_deployer": nonempty(d["deployment_identity_id"])
+            in identifiers(d["authorized_identity_ids"]),
+            "environment": nonempty(d["approved_environment"]) == nonempty(d["actual_environment"]),
+            "rollback_reference": bool(nonempty(d["rollback_reference"])),
+            "chronology": sequence(d, "approved_at", "deployed_at", "observed_at"),
+        }
+    elif adapter == "asset_inventory":
+        checks = {
+            "discovery_reconciles": population_match(
+                d["discovered_asset_ids"], d["registered_asset_ids"]
+            ),
+            "ownership_complete": population_match(d["registered_asset_ids"], d["owned_asset_ids"]),
+            "current_reconciliation": sequence(d, "discovered_at", "reconciled_at", "due_at"),
+        }
+    elif adapter == "disposal":
+        checks = {
+            "no_hold": not boolean(d["legal_hold"]),
+            "authorized": nonempty(d["approver_id"]) in identifiers(d["authorized_approver_ids"]),
+            "retention_elapsed": sequence(d, "retention_ends_at", "disposed_at"),
+            "authorized_before_execution": sequence(d, "approved_at", "disposed_at"),
+            "active_copies_deleted": population_match(d["active_copy_ids"], d["deleted_copy_ids"]),
+            "backup_lifecycle_recorded": bool(nonempty(d["backup_lifecycle_reference"])),
+            "certificate": bool(nonempty(d["destruction_certificate_id"])),
+        }
+    elif adapter == "exception_validity":
+        checks = {
+            "specific_requirement": bool(nonempty(d["requirement_id"])),
+            "authorized": nonempty(d["approver_id"]) in identifiers(d["authorized_approver_ids"]),
+            "unexpired": sequence(d, "approved_at", "effective_at", "observed_at")
+            and instant(d["observed_at"]) < instant(d["expires_at"]),
+            "compensation_recorded": bool(nonempty(d["compensating_measure_id"])),
+            "compensation_observed": boolean(d["compensation_operating"]),
+        }
+    elif adapter == "delegated_decision":
+        checks = {
+            "authorized_actor": nonempty(d["approver_id"]) == nonempty(d["delegate_id"]),
+            "matter_in_scope": nonempty(d["matter_id"]) in identifiers(d["permitted_matter_ids"]),
+            "within_limit": numeric(d["decision_amount"]) <= numeric(d["delegated_limit"]),
+            "same_currency": nonempty(d["decision_currency"]) == nonempty(d["limit_currency"]),
+            "unexpired": sequence(d, "delegation_starts_at", "decided_at")
+            and instant(d["decided_at"]) < instant(d["delegation_expires_at"]),
+            "not_revoked": not boolean(d["revoked"]),
+        }
+    elif adapter == "conduct_acknowledgment":
+        checks = {
+            "exact_version": nonempty(d["required_version"]) == nonempty(d["acknowledged_version"]),
+            "correct_recipient": nonempty(d["required_recipient_id"])
+            == nonempty(d["acknowledger_id"]),
+            "timely": sequence(d, "distributed_at", "acknowledged_at", "due_at"),
+        }
+    elif adapter == "log_coverage":
+        checks = {
+            "required_sources_reporting": bool(identifiers(d["required_source_ids"]))
+            and identifiers(d["required_source_ids"]) <= identifiers(d["reporting_source_ids"]),
+            "ingestion_gap": numeric(d["max_observed_gap_seconds"])
+            <= numeric(d["approved_gap_seconds"]),
+            "clock_skew": numeric(d["max_observed_skew_seconds"])
+            <= numeric(d["approved_skew_seconds"]),
+            "measured_window": instant(d["window_start"])
+            < instant(d["window_end"])
+            <= instant(d["measured_at"]),
+        }
+    elif adapter == "corrective_retest":
+        checks = {
+            "assigned": bool(nonempty(d["owner_id"])),
+            "independent_retest": nonempty(d["retester_id"]) != nonempty(d["implementer_id"]),
+            "timely_retest": sequence(d, "opened_at", "fixed_at", "retested_at", "due_at"),
+            "retest_passed": boolean(d["retest_passed"]),
+            "original_failure_retained": sha(d["original_failure_sha256"])
+            == sha(d["retained_failure_sha256"]),
+        }
+    elif adapter == "change_notice":
+        checks = {
+            "all_required_recipients": bool(identifiers(d["required_recipient_ids"]))
+            and identifiers(d["required_recipient_ids"])
+            <= identifiers(d["delivered_recipient_ids"]),
+            "exact_notice": sha(d["approved_notice_sha256"]) == sha(d["delivered_notice_sha256"]),
+            "approved_and_timely": sequence(d, "approved_at", "delivered_at", "notice_due_at"),
+            "required_lead_time": (
+                instant(d["change_at"]) - instant(d["delivered_at"])
+            ).total_seconds()
+            >= numeric(d["required_lead_seconds"]),
+        }
     else:
         raise ValueError("Unsupported automated adapter")
     return checks
@@ -188,6 +385,9 @@ def evaluate(plan, scope, population, submission, at):
     if not isinstance(records, list):
         raise ValueError("Export must contain a JSON array")
     start, end = instant(scope["period_start"]), instant(scope["period_end"])
+    if start > end:
+        raise ValueError("Assessment period is reversed")
+    expected_ids = identifiers(population["expected_ids"])
     now = instant(at)
     captured, expires = instant(submission["captured_at"]), instant(submission["expires_at"])
     if not end <= captured <= now < expires:
@@ -203,7 +403,7 @@ def evaluate(plan, scope, population, submission, at):
             reasons.append("Mixed evidence origins")
         if r["boundary_id"] != plan["boundary_id"] or not start <= instant(r["occurred_at"]) <= end:
             reasons.append("Wrong boundary or period")
-    if len(set(ids)) != len(ids) or set(ids) != set(population["expected_ids"]):
+    if len(set(ids)) != len(ids) or set(ids) != expected_ids:
         reasons.append("Population does not reconcile to independently registered IDs")
     if reasons:
         return dict(
@@ -216,8 +416,8 @@ def evaluate(plan, scope, population, submission, at):
         )
     if plan["adapter"]:
         applicable = [r for r in records if r["kind"] == plan["adapter"]]
-        if not applicable:
-            reasons.append("No structured records for the declared automated adapter")
+        if len(applicable) != len(records) or not applicable:
+            reasons.append("Every population record must use the declared automated adapter")
         for r in applicable:
             try:
                 assertions = automated(plan["adapter"], r)
