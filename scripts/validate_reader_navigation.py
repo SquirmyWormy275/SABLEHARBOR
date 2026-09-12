@@ -28,6 +28,7 @@ TABLES = (
     "reader_evidence_package",
     "reader_counterpart_audit",
     "reader_text",
+    "reader_evidence_artifact",
 )
 
 
@@ -38,6 +39,7 @@ def logical_content(db):
 def main(check_regeneration=False) -> None:
     from reader_library import inputs, evidence_records
     from evidence_packages import records as package_records
+    from evidence_packages import artifact_records
 
     pages = [
         ROOT / "README.md",
@@ -106,6 +108,8 @@ def main(check_regeneration=False) -> None:
             failures.append("Evidence database links differ from validated packet catalogs")
         if package_records(ROOT) != sorted(db.execute("SELECT * FROM reader_evidence_package").fetchall()):
             failures.append("Evidence package database differs from source registers")
+        if artifact_records(ROOT) != sorted(db.execute("SELECT * FROM reader_evidence_artifact").fetchall()):
+            failures.append("Review artifact database differs from verified manifests")
     except (ValueError, KeyError) as error:
         failures.append(str(error))
     before = logical_content(db) if check_regeneration else None
