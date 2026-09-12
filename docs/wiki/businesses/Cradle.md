@@ -52,3 +52,5 @@ Use the [complete facility artifact index](../../../geospatial/maps/facilities/A
 ## Limits to keep visible
 
 The host retains its primary operation and stop/bypass authority. Chemistry, prices, host-share percentages and commissioning ramps in finance are synthetic scenario assumptions; they do not grant operating permission.
+
+[Kelly Gang Mining and Demotte host interfaces](../subjects/External-Hosts.md) · [Wallaby history](../subjects/Project-History.md)

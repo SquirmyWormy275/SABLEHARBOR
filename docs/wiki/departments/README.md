@@ -31,3 +31,5 @@ Pages below describe institutions, offices, capabilities and systems as identifi
 - [Alexandria institutional environment](alexandria.md)
 
 [Current organization charts](../../organization/README.md) · [ESS and independence doctrine](../../governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md) · [Wiki home](../Home.md)
+
+[History and cross-cutting subject directory](../subjects/README.md) · [Continuity responsibilities](../subjects/Continuity.md)

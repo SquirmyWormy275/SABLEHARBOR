@@ -30,3 +30,5 @@ The shared chart retains its original scope; it is not a new reporting chart for
 Facilities/workplace services is an accepted capability label. Proposed campus geometry, seat capacity and floor plans do not prove property ownership, occupation or completed construction.
 
 [Department and institution directory](README.md) · [Wiki home](../Home.md)
+
+[Continuity and crisis responsibilities across the existing institutions](../subjects/Continuity.md).
