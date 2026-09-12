@@ -128,7 +128,9 @@ The CCF deliberately keeps separate fields for financial-reporting relevance, cu
 
 ## Next mapping population
 
-Exact mappings should be populated in controlled waves:
+**September 11 owner direction:** Support internal management, external assessment and customer assurance together, with SOC 2 + HIPAA as the initial coverage baseline and selectable ISO/IEC 27001, ISO/IEC 42001 and BSI C5 deltas. The [accepted product direction](../internal/development/CCF_ASSURANCE_DIRECTION_2026-09-11.md) defines scoped delta outputs and acceptance cases. HIPAA is an explicit baseline target; legal applicability remains role/data-flow dependent. This updates implementation priority without changing the exact-mapping quality gates above.
+
+The earlier sequence below is retained as historical planning context; SOC 2/HIPAA baseline assessment and mapping work now leads, followed by the selected extension frameworks. Other source families remain supported backlog:
 
 1. COSO + SOC 2 TSC at the control-objective level;
 2. NIST CSF 2.0 / SP 800-53 + ISO 27001/27002 for security/data/technology controls;

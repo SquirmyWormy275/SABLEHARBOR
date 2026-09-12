@@ -56,3 +56,22 @@ jobs:
           name: ccf-preparation-v0.1.0
           path: ${{ runner.temp }}/ccf-first
           if-no-files-found: error
+      - name: Reproduce scoped assessment workbench and source-access queue
+        run: |
+          uv run python -m enterprise.ccf.assurance demo --output "$RUNNER_TEMP/assurance-first"
+          uv run python -m enterprise.ccf.assurance demo --output "$RUNNER_TEMP/assurance-second"
+          diff -qr "$RUNNER_TEMP/assurance-first" "$RUNNER_TEMP/assurance-second"
+          uv run python -m enterprise.ccf.assurance verify --output "$RUNNER_TEMP/assurance-first"
+          uv run python -m enterprise.ccf.assurance starter --output "$RUNNER_TEMP/assurance-starter"
+          uv run python -m enterprise.ccf.assurance verify --output "$RUNNER_TEMP/assurance-starter"
+          git diff --exit-code
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ccf-assurance-synthetic-v0.2.0
+          path: ${{ runner.temp }}/assurance-first
+          if-no-files-found: error
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ccf-assurance-source-queue-v0.2.0
+          path: ${{ runner.temp }}/assurance-starter
+          if-no-files-found: error
