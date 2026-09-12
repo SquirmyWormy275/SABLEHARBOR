@@ -235,8 +235,8 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [J2 leadership public-scan closeout](../../internal/validation/J2_LEADERSHIP_PUBLIC_SCAN_CLOSEOUT_2026-09-10.md) — Corporate document-format reconciliation
 - [Klein rename and artwork — validation and delivery record](../../internal/validation/KLEIN_RENAME_2026-09-07.md) — Corporate document-format reconciliation
 - [Post-Merge Main Validation — 2026-09-03](../../internal/validation/POST_MERGE_MAIN_VALIDATION_2026-09-03.md) — Corporate document-format reconciliation
-- [SABLE HARBOR ADVISORY — OPERATING NAME AND EXTERNAL CLEARANCE STATUS](../../legal/ADVISORY_NAME_AND_EXTERNAL_CLEARANCE_STATUS_2026-09-09.md) — Corporate document-format reconciliation
-- [Preliminary Name and Mark Screen](../../legal/PRELIMINARY_NAME_AND_MARK_SCREEN.md) — Corporate document-format reconciliation
+- [SABLE HARBOR ADVISORY — OPERATING NAME AND EXTERNAL CLEARANCE STATUS](../../legal/ADVISORY_NAME_AND_EXTERNAL_CLEARANCE_STATUS_2026-09-09.md) — SH-FIN-HUMAN-001
+- [Preliminary Name and Mark Screen](../../legal/PRELIMINARY_NAME_AND_MARK_SCREEN.md) — SH-FIN-HUMAN-001
 - [Leadership and authority](../../organization/2026_LEADERSHIP_AND_AUTHORITY_MAP.md) — Corporate document-format reconciliation
 - [Company organization](../../organization/2026_OPERATING_TOPOLOGY.md) — Corporate document-format reconciliation
 - [ARU, BS&T AND THE ADVISORY INTERFACE](../../organization/ARU_BST_AND_ADVISORY.md) — Corporate document-format reconciliation

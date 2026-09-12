@@ -180,6 +180,12 @@ def main() -> None:
     })
     coverage = reader.populate(ROOT, db, manifest["artifacts"], file_paths=file_paths)
     print(f"Reader library: {coverage}")
+    package_spec = importlib.util.spec_from_file_location(
+        "institutional_evidence_packages", Path(__file__).with_name("evidence_packages.py")
+    )
+    packages = importlib.util.module_from_spec(package_spec)
+    package_spec.loader.exec_module(packages)
+    print(f"Evidence packages: {packages.populate(ROOT, db)}")
     # Compact generated search indexes without dropping any records or search content.
     for table in ("institutional_search", "reader_search"):
         db.execute(f"INSERT INTO {table}({table}) VALUES('optimize')")

@@ -41,6 +41,7 @@ def group(path: str) -> str:
     if path.startswith(
         (
             "docs/finance/",
+            "docs/legal/",
             "docs/audit/",
             "industrial/",
             "red_wash/",

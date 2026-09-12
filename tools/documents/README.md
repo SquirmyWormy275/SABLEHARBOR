@@ -43,3 +43,22 @@ current version. Never hand-edit the PDF, catalog, or checksum to conceal source
 Before merge, render changed PDFs for visual inspection and follow the remaining checks in
 `MAINTAINERS.md`. September 6 compatibility and canon evidence is recorded in
 `docs/internal/validation/CANON_CLOSEOUT_2026-09-06.md`.
+
+## Accounting and legal evidence discovery
+
+The institutional SQLite catalog also exposes `reader_evidence_package`. Each row preserves
+its package ID, review state, Markdown entry, source-register path/hash and complete provenance
+JSON. The builder reads explicit `evidence-register.json` files under the accounting and legal
+evidence directories, verifies source hashes, and rejects duplicate identities or unsafe paths.
+A source-only package can have `visual_manifest: null`; it does not imply an accepted PDF or
+workbook. The separately accepted Foundry Field packet retains its original schema and hashes.
+
+```sql
+SELECT package_id, title, status, markdown_path, register_path
+FROM reader_evidence_package ORDER BY package_id;
+```
+
+Native transaction tables remain in the pinned release databases. Discovery records link to
+those populations; they do not replace the ledger or turn proposed documents into executed
+instruments. Run `python scripts/validate_reader_navigation.py --check-regeneration` to check
+source hashes, database contents and reader links after rebuilding.

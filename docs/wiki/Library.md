@@ -8,13 +8,13 @@ Use the subject pages for a guided introduction. Use this complete file inventor
 |---|---:|
 | [Businesses and professional practice](library/business.md) | 62 |
 | [People, governance and departments](library/people.md) | 228 |
-| [Finance, transactions and operating cases](library/finance.md) | 189 |
+| [Finance, transactions and operating cases](library/finance.md) | 192 |
 | [Controls, services and runtime](library/controls.md) | 64 |
 | [Geography and facilities](library/places.md) | 300 |
 | [Identity and collateral](library/identity.md) | 15 |
 | [Canon, history and decisions](library/history.md) | 41 |
 | [Reader guides and subject pages](library/reader.md) | 38 |
-| [Implementation, source guides and delivery evidence](library/technical.md) | 82 |
+| [Implementation, source guides and delivery evidence](library/technical.md) | 79 |
 
 ## Format coverage
 
