@@ -12,7 +12,7 @@ from pathlib import Path
 def records(root: Path) -> list[tuple]:
     output = []
     seen = set()
-    for base in ("docs/finance/evidence", "docs/legal/evidence", "docs/reader/transactions"):
+    for base in ("docs/finance/evidence", "docs/legal/evidence", "docs/legal/full-text", "docs/reader/transactions"):
         for path in sorted((root / base).rglob("evidence-register.json")):
             data = json.loads(path.read_text())
             identity = data["package_id"]
@@ -48,7 +48,7 @@ def artifact_records(root: Path) -> list[tuple]:
     output = []
     for package in records(root):
         directory = (root / package[4]).parent
-        for manifest in (directory / "draft/manifest.json", directory / "visual-manifest.json"):
+        for manifest in (directory / "draft/manifest.json", directory / "visual-manifest.json", directory / "render-manifest.json"):
             if not manifest.exists():
                 continue
             data = json.loads(manifest.read_text())
@@ -67,7 +67,12 @@ def artifact_records(root: Path) -> list[tuple]:
                 output.append((package[0], relative, Path(relative).suffix.lstrip("."),
                                data["status"], source, digest, str(manifest.relative_to(root))))
 
-            if isinstance(data["artifacts"], dict):
+            if manifest.name == "render-manifest.json":
+                for artifact in data["artifacts"]:
+                    verify(artifact["source"], artifact["source_sha256"])
+                    for key in ("pdf", "html"):
+                        append(artifact[key], artifact[key + "_sha256"], artifact["source"])
+            elif isinstance(data["artifacts"], dict):
                 if data["source_register_sha256"] != package[5]:
                     raise ValueError("Review source register changed: " + package[4])
                 if "renderer_sha256" in data:

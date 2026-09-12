@@ -9,6 +9,7 @@ OGC provides legal advice and manages corporate legal affairs. Corporate Secreta
 
 ## Read and use the records
 
+- [Complete legal source editions](../../legal/full-text/README.md) — Read all 56 selected records in full, with PDF, editable HTML, original Markdown and database access. New publication designs await exact-file review.
 - [Headquarters closeout](../../../docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md) — Section 3 establishes legal advice and Corporate Secretary responsibilities.
 - [ESS independence doctrine](../../../docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md) — General Counsel standing with the CEO and Board.
 - [Reserved matters and subsidiary autonomy](../../../docs/governance/RESERVED_MATTERS_AND_SUBSIDIARY_AUTONOMY.md) — Find matters requiring enterprise approval.

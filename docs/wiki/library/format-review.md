@@ -6,11 +6,11 @@ Generated reconciliation queue, not an assertion that every unpaired record lack
 
 | State | Records |
 |---|---:|
-| COUNTERPART_REVIEW_REQUIRED | 22 |
+| COUNTERPART_REVIEW_REQUIRED | 25 |
 | HISTORICAL_COUNTERPART_UNRESOLVED | 57 |
 | NAVIGATION_ALIAS_NO_PUBLICATION | 3 |
 | READER_MAINTENANCE_NO_LETTERHEAD | 114 |
-| READER_OR_MAINTENANCE_PAGE | 138 |
+| READER_OR_MAINTENANCE_PAGE | 140 |
 | UNRESOLVED_DOCUMENT_COUNTERPART | 229 |
 | VERIFIED_ACCEPTED_EVIDENCE_PACKET | 1 |
 | VERIFIED_CHART_PUBLICATION | 40 |
@@ -43,6 +43,9 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Advisory carry and workforce instrument boundaries](../../legal/evidence/corporate/SH-LEGAL-READ-CARRY-001.md) — SH-FIN-HUMAN-001
 - [Legal entities and separate books](../../legal/evidence/corporate/SH-LEGAL-READ-ENTITY-001.md) — SH-FIN-HUMAN-001
 - [ARU transition and retention obligations](../../legal/evidence/corporate/SH-LEGAL-READ-HR-001.md) — SH-FIN-HUMAN-001
+- [Complete legal source publication — delivery record](../../legal/full-text/CLOSEOUT.md) — SH-FIN-HUMAN-001
+- [Full-length legal source audit](../../legal/full-text/SOURCE_AUDIT.md) — SH-FIN-HUMAN-001
+- [Commercial and accounting-tax visual review](../../legal/full-text/qa/commercial-tax/REVIEW.md) — SH-FIN-HUMAN-001
 
 ## Dated counterpart dispositions
 

@@ -1,0 +1,2289 @@
+{
+  "status": "IMPLEMENTATION_QA_PASS_OWNER_REVIEW_PENDING",
+  "render_manifest_sha256": "73a0ed9501c3b5e9f605bf5b1c1b8f96b74cb37570431e50b62f221a45677b58",
+  "counts": {
+    "documents": 56,
+    "pdf_pages": 200,
+    "html_viewports": 112
+  },
+  "reports": [
+    {
+      "path": "docs/legal/full-text/qa/render/REVIEW.json",
+      "sha256": "6180c70a64f06d4b01e1d86e085ba85b643693aef8a472e2a17e755a1068e0bd"
+    },
+    {
+      "path": "docs/legal/full-text/qa/commercial-tax/PAGE_REVIEW.json",
+      "sha256": "84184f049fe3c48ac29dd1fa967da38a2e432527e8ac8db1b1e35cb9a0c8f59c"
+    },
+    {
+      "path": "docs/legal/full-text/qa/corporate-workforce/report.json",
+      "sha256": "0c4d6623b2782078c2479c60a353e2f08cb33af283f5217debdbd4f49795e4d3"
+    }
+  ],
+  "records": [
+    {
+      "id": "SH-IND-RW-TXN-001",
+      "pdf_sha256": "7b58c7fed46556ebfe9258ca01414494a353672015e9fab1b1d986ef991708b5",
+      "html_sha256": "05729462e9d09c1d6730be5ff07e222df0e37a6b7666dddf27ba5871c43d7ef3",
+      "surfaces": [
+        {
+          "image": "docs/legal/full-text/qa/render/SH-IND-RW-TXN-001-page-01.png",
+          "sha256": "1544cb537259ada734cf1260747faf8e1f2e5d382d9293738f3aff5d9acc0cf8",
+          "page": 1,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/render/SH-IND-RW-TXN-001-page-02.png",
+          "sha256": "65fec88935c7864fbd269f2df7026380a99c6b2179c8cbd137a22ed2932bf5cb",
+          "page": 2,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/render/SH-IND-RW-TXN-001-html-1280.png",
+          "sha256": "2d6695120de9a64ee0a082ecbaf9d85c9bef10787fe5a70cdb4784ededdb518b",
+          "page": null,
+          "width": 1280
+        },
+        {
+          "image": "docs/legal/full-text/qa/render/SH-IND-RW-TXN-001-html-390.png",
+          "sha256": "b2a8b5fa0dc33111d79568300209fa664e80338f6c973d72abf8abf3392c8ec4",
+          "page": null,
+          "width": 390
+        }
+      ]
+    },
+    {
+      "id": "SH-IND-ARU-LOI-001",
+      "pdf_sha256": "53f2ea6210e1672d7fac21ae689e18334058ca4b1ad389a564e77d0764c10b99",
+      "html_sha256": "baf8e654816a74b49d6c32ab4e5cd8c2e2b01ee0ccdd6e2eb67d24826e6f656c",
+      "surfaces": [
+        {
+          "image": "docs/legal/full-text/qa/render/SH-IND-ARU-LOI-001-page-01.png",
+          "sha256": "18bec7e14c965e2683eb26e8367cddfcc62dbcf3bd48a704737532e04a0dc9c6",
+          "page": 1,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/render/SH-IND-ARU-LOI-001-page-02.png",
+          "sha256": "ce39bcce03060a1377c773d53e2f87ba7c096a47eb2e8880a7f7c653f658ef7d",
+          "page": 2,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/render/SH-IND-ARU-LOI-001-html-1280.png",
+          "sha256": "5e8fd278d324f32eefe43d082777eb5771bf755f4168752ba15cefeb224ae30f",
+          "page": null,
+          "width": 1280
+        },
+        {
+          "image": "docs/legal/full-text/qa/render/SH-IND-ARU-LOI-001-html-390.png",
+          "sha256": "0e486b7adc2d25083fb52747c3c1a75e2808f129cfbad2d10974a76ff5c520a8",
+          "page": null,
+          "width": 390
+        }
+      ]
+    },
+    {
+      "id": "SH-IND-ARU-DD-001",
+      "pdf_sha256": "2f3138cbf0a160d6eb0d30a06b2389e7009e9ff6f42caa7244c2974adfde8f3f",
+      "html_sha256": "c8d3142859b4eadd08a5ea7123f22009b50a4e72916994c25f0307c918449a34",
+      "surfaces": [
+        {
+          "image": "docs/legal/full-text/qa/render/SH-IND-ARU-DD-001-page-01.png",
+          "sha256": "91a087591830c93df4f0955ee73367e3ba7c3695de33ed7c7d2008bcaf8f35d7",
+          "page": 1,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/render/SH-IND-ARU-DD-001-page-02.png",
+          "sha256": "586fa0166daa5e0057755f0f0cabf209e2e09c405fe5075906becde11bc5f3f3",
+          "page": 2,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/render/SH-IND-ARU-DD-001-page-03.png",
+          "sha256": "90d60dbdbd52534de0ebe74585ba113a7e2dac72de087b0842d870c3e21758cb",
+          "page": 3,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/render/SH-IND-ARU-DD-001-html-1280.png",
+          "sha256": "f1c3361a6917bf7b6f701692e4da48c2a18012a09b835aa41c38a3dd1a6db950",
+          "page": null,
+          "width": 1280
+        },
+        {
+          "image": "docs/legal/full-text/qa/render/SH-IND-ARU-DD-001-html-390.png",
+          "sha256": "e2d5c6ea77a853f7596dbb5285a7a30dc073ee19484649e03334ab605f350b16",
+          "page": null,
+          "width": 390
+        }
+      ]
+    },
+    {
+      "id": "SH-IND-ARU-SPA-001",
+      "pdf_sha256": "52d89a9277c9256f3e372d963b5e69d4528cc25bab6856e199c90c24bc40afcd",
+      "html_sha256": "3b4b48b4717673465da04e713ff9dfac8936b82e275447040c970afe906d7ece",
+      "surfaces": [
+        {
+          "image": "docs/legal/full-text/qa/render/SH-IND-ARU-SPA-001-page-01.png",
+          "sha256": "d98d9579a6a159b4e66bfd64018b182764a917ec7e4a8d28a07b229ce6404b37",
+          "page": 1,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/render/SH-IND-ARU-SPA-001-page-02.png",
+          "sha256": "e1fdebacfaf5a2b4ef2efb06260fd37c059e1b370a8f1feb0df5504b82364185",
+          "page": 2,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/render/SH-IND-ARU-SPA-001-html-1280.png",
+          "sha256": "9eb11c3c296d1ecbe00973563abedac29f873ca57c0eb00dec0b85fe3b05df3d",
+          "page": null,
+          "width": 1280
+        },
+        {
+          "image": "docs/legal/full-text/qa/render/SH-IND-ARU-SPA-001-html-390.png",
+          "sha256": "ec30c32fa008356acfa7b8600289790b742c5322f606ab0ab6562dfe72a1459c",
+          "page": null,
+          "width": 390
+        }
+      ]
+    },
+    {
+      "id": "SH-IND-ARU-CLOSE-001",
+      "pdf_sha256": "ec357cecda12dae00f2fd2faf93119e9d73b7cf8a559e9728db96505dc3b4845",
+      "html_sha256": "deb631e6beb4b167dcf98733b5f6c038a8d8ca7bc1d6b4aef6bde3ada1549088",
+      "surfaces": [
+        {
+          "image": "docs/legal/full-text/qa/render/SH-IND-ARU-CLOSE-001-page-01.png",
+          "sha256": "4eb53f21971012971f67d328156ad5ffb4f6dc70b1d819d27a2745748be926d7",
+          "page": 1,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/render/SH-IND-ARU-CLOSE-001-page-02.png",
+          "sha256": "e3c2a7b2eb76bedfc168daa332bfdfc622894e07bd9bd4b823ddabe084769831",
+          "page": 2,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/render/SH-IND-ARU-CLOSE-001-page-03.png",
+          "sha256": "d5b44ef6fa19ebd90480c52f2ca09a637c3f46720689d3639fb39506a806581a",
+          "page": 3,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/render/SH-IND-ARU-CLOSE-001-html-1280.png",
+          "sha256": "408428287d96cbe4fddf3174fae7f61e3a8e977c578a709ff7693a67fb6e6f28",
+          "page": null,
+          "width": 1280
+        },
+        {
+          "image": "docs/legal/full-text/qa/render/SH-IND-ARU-CLOSE-001-html-390.png",
+          "sha256": "cf5aaad6f9aa8e9907743d026cb5a3e91f20e6b0fce04541e7f3053da6a54ff9",
+          "page": null,
+          "width": 390
+        }
+      ]
+    },
+    {
+      "id": "LEGAL-SOURCE-16BD06943F32",
+      "pdf_sha256": "5ddf4b3f540a1d4dcc2e040846cedb76d74732b97c7b79ce59cac4cb917e5594",
+      "html_sha256": "2c9d76ef2114833a9813a760b31bc64c7ca27b32a72de66af6bbd3c49276f859",
+      "surfaces": [
+        {
+          "image": "docs/legal/full-text/qa/render/LEGAL-SOURCE-16BD06943F32-page-01.png",
+          "sha256": "3cb4d25232b321f393e37ca7eb4ce8444953913e82a39224f826e6836d385158",
+          "page": 1,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/render/LEGAL-SOURCE-16BD06943F32-page-02.png",
+          "sha256": "be7c2cb002339e9214683c8d2e91e07426c1d45733a2c707d3b87be618c2a77b",
+          "page": 2,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/render/LEGAL-SOURCE-16BD06943F32-page-03.png",
+          "sha256": "08062f052e94cfa6e6500ca6dfacd639a9defe3f93d069aeb14f8032f5a393d0",
+          "page": 3,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/render/LEGAL-SOURCE-16BD06943F32-page-04.png",
+          "sha256": "36736c410de4f29567518ac0248661607fb90d0073cb7ca7128a655cd94643be",
+          "page": 4,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/render/LEGAL-SOURCE-16BD06943F32-page-05.png",
+          "sha256": "434594e2f9a92bf1017406768e135bc6b11dcf2f4086684af42b27e8cd80ea7e",
+          "page": 5,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/render/LEGAL-SOURCE-16BD06943F32-html-1280.png",
+          "sha256": "5c179d102eb4c1748fd171e58bfea12708280009da4da8b42a50e35a6fbb00dd",
+          "page": null,
+          "width": 1280
+        },
+        {
+          "image": "docs/legal/full-text/qa/render/LEGAL-SOURCE-16BD06943F32-html-390.png",
+          "sha256": "e9c7a550399496232f998f5b20c6b5aa6ffc397c0ced690b2eb7ad93f6e2b8ec",
+          "page": null,
+          "width": 390
+        }
+      ]
+    },
+    {
+      "id": "SH-IND-DR-001",
+      "pdf_sha256": "941000830565527f5e1cd64e6e9dfe659da905e3b0e3a7f3b702d7144125efc9",
+      "html_sha256": "857d4044257a9c75d0808059d8f864ddfb0b1286c6a794031378d53b5d699481",
+      "surfaces": [
+        {
+          "image": "docs/legal/full-text/qa/render/SH-IND-DR-001-page-01.png",
+          "sha256": "e2bf7b6731088da4990e67579812538f73566f25d54e52ef9d1677c3d7c13c0f",
+          "page": 1,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/render/SH-IND-DR-001-page-02.png",
+          "sha256": "42529f3816896d1f851ce0ce711839f4d94f614504eba8f87a10408a9fcd416c",
+          "page": 2,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/render/SH-IND-DR-001-page-03.png",
+          "sha256": "77555e574b36c25285c040828477a2ca8f8eef7dbe642167005240046e24abfa",
+          "page": 3,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/render/SH-IND-DR-001-page-04.png",
+          "sha256": "3ff6aaad62d74d6d02a858346e3e0aadd766d5fd66eef9919fcf81a355d7b974",
+          "page": 4,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/render/SH-IND-DR-001-page-05.png",
+          "sha256": "b11744b4ef42e6d1acf3a97afd8ebe80d4681023951deca0f15079da0312ed7b",
+          "page": 5,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/render/SH-IND-DR-001-html-1280.png",
+          "sha256": "b63142828e5631487cc6d15133f2cb0faa0e30146181ca9b0a216c0e9a8b8801",
+          "page": null,
+          "width": 1280
+        },
+        {
+          "image": "docs/legal/full-text/qa/render/SH-IND-DR-001-html-390.png",
+          "sha256": "7084dd2e41c15ccdbe9218d3c85fc7054a6f1448dd1f86d957cd88c80b14b8e6",
+          "page": null,
+          "width": 390
+        }
+      ]
+    },
+    {
+      "id": "SH-PS-RW-TOR-001",
+      "pdf_sha256": "3a9cddaa1bec2594e651cc26565391229dc70ebe5546fb7903a788de745f2655",
+      "html_sha256": "967998229d622558c12b09f975885df2659740dbb8dccd10e210f5da80d10114",
+      "surfaces": [
+        {
+          "image": "docs/legal/full-text/qa/render/SH-PS-RW-TOR-001-page-01.png",
+          "sha256": "118d77cae53dd2c9e1226a6f1345a4b598a5a3b637cc319a0c9ef19459f7e6ef",
+          "page": 1,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/render/SH-PS-RW-TOR-001-page-02.png",
+          "sha256": "13daba79f4066fa1824461ec9cca7c01b0fbf9ff2ade9d26141490439016909f",
+          "page": 2,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/render/SH-PS-RW-TOR-001-page-03.png",
+          "sha256": "094807143b2a4af1740bb5cf7ef57b2bee4dfdda6019727c0b0caf8b73eb78f7",
+          "page": 3,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/render/SH-PS-RW-TOR-001-page-04.png",
+          "sha256": "a0f8a5f2f84f195fbea5a8e88585666a0bc80e03b49e79337514dc5d8d76aa41",
+          "page": 4,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/render/SH-PS-RW-TOR-001-page-05.png",
+          "sha256": "a1f1c31da4e4456efe9ea6d12e3f449cc75e9c18415b06eb3d48aed5737bd2b6",
+          "page": 5,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/render/SH-PS-RW-TOR-001-page-06.png",
+          "sha256": "bdc51e3cc910b68089f28cc0dbbab3ff2bf44493b0a4927e89223d3fc9797549",
+          "page": 6,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/render/SH-PS-RW-TOR-001-page-07.png",
+          "sha256": "42e7796afbf314dffe2a788b23c942138902dc261a2cc7c1eb251d9f5d87fbce",
+          "page": 7,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/render/SH-PS-RW-TOR-001-html-1280.png",
+          "sha256": "fa92e9ea8bd3d148e8b1e47ef6c0bcf169be6e4fae611e5484a7e21613ac66a0",
+          "page": null,
+          "width": 1280
+        },
+        {
+          "image": "docs/legal/full-text/qa/render/SH-PS-RW-TOR-001-html-390.png",
+          "sha256": "b1ec3f1ecae1a3257733d2727acc2280971e36b710a36ab0deda796202a5fe33",
+          "page": null,
+          "width": 390
+        }
+      ]
+    },
+    {
+      "id": "SH-CRD-CLOSEOUT-20260906",
+      "pdf_sha256": "8c462186bbcad9665a1f66b7c4cfdbb8e3a129c6d437166bea0695318a342ad3",
+      "html_sha256": "1b8174497dd51baa0c6b4c43afd2474574cb05b53f4ab48eb70c03caf9728ca8",
+      "surfaces": [
+        {
+          "image": "docs/legal/full-text/qa/render/SH-CRD-CLOSEOUT-20260906-page-01.png",
+          "sha256": "8429b9ca426c380ebc54c5e739c43e7aa3c484263193920b4311453610a928f6",
+          "page": 1,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/render/SH-CRD-CLOSEOUT-20260906-page-02.png",
+          "sha256": "657c462a9101e8dc941c4dc5eee0ad5ca63156dc2089958cde64c70863d4007f",
+          "page": 2,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/render/SH-CRD-CLOSEOUT-20260906-page-03.png",
+          "sha256": "695dc19fd352959375c8ee2d02ceb8c0679e3488638ae53e3e689a37463edf5a",
+          "page": 3,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/render/SH-CRD-CLOSEOUT-20260906-page-04.png",
+          "sha256": "a6d1f30177e5a1553245917ef9a488dc15aa43e9cc740784a6b83efa6e164219",
+          "page": 4,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/render/SH-CRD-CLOSEOUT-20260906-page-05.png",
+          "sha256": "d5b16aea15f9a273d60034cb07ead0d534d4e4c51f8383bf964fade4fa3fd5f5",
+          "page": 5,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/render/SH-CRD-CLOSEOUT-20260906-page-06.png",
+          "sha256": "c94c914ad4394d488d2ed344f7936dee61d600e0bb81482bd74144c61579063a",
+          "page": 6,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/render/SH-CRD-CLOSEOUT-20260906-page-07.png",
+          "sha256": "b4a26fd5cc345d409a118b38006c276bc883c0116453453ca4d5023081413f71",
+          "page": 7,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/render/SH-CRD-CLOSEOUT-20260906-html-1280.png",
+          "sha256": "b5636fd58fe12fd7a578ecabca2974d3eef832f8ddc2260932ccf72288bfb567",
+          "page": null,
+          "width": 1280
+        },
+        {
+          "image": "docs/legal/full-text/qa/render/SH-CRD-CLOSEOUT-20260906-html-390.png",
+          "sha256": "2424086157104455d0cd201ba704cdac7d7562b4d8c8ed788762fd1fb4ac6eca",
+          "page": null,
+          "width": 390
+        }
+      ]
+    },
+    {
+      "id": "SH-CANON-WIL-KLEIN-20260906-001",
+      "pdf_sha256": "67b7bc4e081da0ead831f385c926fa7f9b9015fa8a94ce44911e6e8f31802aef",
+      "html_sha256": "a60c23532c01c2f757e8700c207a96946a067f9ba2178187eb8ec051b981e848",
+      "surfaces": [
+        {
+          "image": "docs/legal/full-text/qa/render/SH-CANON-WIL-KLEIN-20260906-001-page-01.png",
+          "sha256": "43f65ad9145563584b1c3b70ac62b120851c0375836b51b11a7945c1acd1b167",
+          "page": 1,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/render/SH-CANON-WIL-KLEIN-20260906-001-page-02.png",
+          "sha256": "f072119bd29c11b160f5131a47a861e1465c207a52e4d7fc68e42a1dc8ab7033",
+          "page": 2,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/render/SH-CANON-WIL-KLEIN-20260906-001-page-03.png",
+          "sha256": "600726e0a3f0ae244fbdf97c93586999e570ffd65151a1078700075ad33c8bdd",
+          "page": 3,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/render/SH-CANON-WIL-KLEIN-20260906-001-page-04.png",
+          "sha256": "44eb4bdb3c9607df8ad8a20cf7e027ec6364e15c1f618d331db80b42c81048c0",
+          "page": 4,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/render/SH-CANON-WIL-KLEIN-20260906-001-page-05.png",
+          "sha256": "fc4f92cec9cf146221756a94845931856ee779d2b9c7a504133c921f68671792",
+          "page": 5,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/render/SH-CANON-WIL-KLEIN-20260906-001-html-1280.png",
+          "sha256": "2c3eb5914ebf41cdfcc13bc5078e649d9f00aa5291a17d6b768c0155b1e39cce",
+          "page": null,
+          "width": 1280
+        },
+        {
+          "image": "docs/legal/full-text/qa/render/SH-CANON-WIL-KLEIN-20260906-001-html-390.png",
+          "sha256": "b8c710e3d21ba5e529663ab1e28f8a65b9a0cd3b6406fa071227ee277b51ecfb",
+          "page": null,
+          "width": 390
+        }
+      ]
+    },
+    {
+      "id": "SH-RT-DEED-001",
+      "pdf_sha256": "5d618a620817894a1c9dccdeee6136593a4934890ba69e73592eb97b71c62ef6",
+      "html_sha256": "d55e892c7b8048c7c835cb7a8d67094ede02deea89ff18b004d09a805bb428db",
+      "surfaces": [
+        {
+          "image": "docs/legal/full-text/qa/render/SH-RT-DEED-001-page-01.png",
+          "sha256": "6ed3366111c739050b4439c3fedf0ee5e9622858009d76f2f1e1866b73c204ba",
+          "page": 1,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/render/SH-RT-DEED-001-page-02.png",
+          "sha256": "a589b1b1bac5abfdb65933f94b5bb8d3626113e12190aa159f82f9d56f1d58c8",
+          "page": 2,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/render/SH-RT-DEED-001-html-1280.png",
+          "sha256": "bd1ce1c2966f9a1e9191b5d71663e546a0f4420466008699b91120d9ebe3391d",
+          "page": null,
+          "width": 1280
+        },
+        {
+          "image": "docs/legal/full-text/qa/render/SH-RT-DEED-001-html-390.png",
+          "sha256": "62efc1dba03f68020ac076187014c2ccc541be39b5daa5b8a1c3c24695bceaee",
+          "page": null,
+          "width": 390
+        }
+      ]
+    },
+    {
+      "id": "SH-RT-DEC-001",
+      "pdf_sha256": "0e3ad815e65931905c326d5a567293436d1e7dccb77e60b2513eecc304cee563",
+      "html_sha256": "6a56e358fce74d29fef132a3886efb652d50887da904b01a4b8d519fd35620f3",
+      "surfaces": [
+        {
+          "image": "docs/legal/full-text/qa/render/SH-RT-DEC-001-page-01.png",
+          "sha256": "e5290dc375d411378e66c963da5bb2bb2e833b9232bedb3636fe87447a82d462",
+          "page": 1,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/render/SH-RT-DEC-001-page-02.png",
+          "sha256": "7b8459635910dc0ecde1c938549e3ed355138cf4ef4043182444790a6c5ecc4a",
+          "page": 2,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/render/SH-RT-DEC-001-page-03.png",
+          "sha256": "ab5c0de871271a72f409ae2afa7b0a1292baf5cad23d64c4d0f1338359c7aaa4",
+          "page": 3,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/render/SH-RT-DEC-001-html-1280.png",
+          "sha256": "8d6b9ceabe57aa768b78a26514d8793d62299abf3c1c9959c0476dba028cc9ce",
+          "page": null,
+          "width": 1280
+        },
+        {
+          "image": "docs/legal/full-text/qa/render/SH-RT-DEC-001-html-390.png",
+          "sha256": "045228250d636c8593e7895643185d982b7f6b1392acd708aec60e4c6c0017c8",
+          "page": null,
+          "width": 390
+        }
+      ]
+    },
+    {
+      "id": "LEGAL-SOURCE-920F33E127C0",
+      "pdf_sha256": "7c158fd35f8b93b8cd3b2d1a3f98a6508c578e32179e9b04529250208f7767ff",
+      "html_sha256": "6f683ba2d69cf67a06229a653a42a715ad1410be674290604bd68915cbb9968a",
+      "surfaces": [
+        {
+          "image": "docs/legal/full-text/qa/render/LEGAL-SOURCE-920F33E127C0-page-01.png",
+          "sha256": "984c2a44d1e3b489e2591eb9586d0540ed3733e37084a4c0a9192cc639141fc1",
+          "page": 1,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/render/LEGAL-SOURCE-920F33E127C0-page-02.png",
+          "sha256": "e2a4e509f260ff0201a14b31d60c1708f4bef577864f15e97373e0a3d393631d",
+          "page": 2,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/render/LEGAL-SOURCE-920F33E127C0-page-03.png",
+          "sha256": "e6f11d23454d58da285ebec5b071fd3ef204341ecee1b166cc3f06023d656dc2",
+          "page": 3,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/render/LEGAL-SOURCE-920F33E127C0-html-1280.png",
+          "sha256": "34c2cb74756f9f56a63d70273ae60de0bb2181c1ac47ef8881ffe3c0411b100f",
+          "page": null,
+          "width": 1280
+        },
+        {
+          "image": "docs/legal/full-text/qa/render/LEGAL-SOURCE-920F33E127C0-html-390.png",
+          "sha256": "9fa92c8585781e1b6d7d0c9fc510f9b9c3dfcb21a128e3b6870ce74af59e4cdb",
+          "page": null,
+          "width": 390
+        }
+      ]
+    },
+    {
+      "id": "LEGAL-SOURCE-A709ECAC08C4",
+      "pdf_sha256": "2a6aca2e9eccf2d063ba112cd8572cb5c89b9981d6863d9150f642d8aeac1c46",
+      "html_sha256": "eace372c964764f864dd60b029a550f4c54933dc1b93683ae6ee64e448c2643f",
+      "surfaces": [
+        {
+          "image": "docs/legal/full-text/qa/render/LEGAL-SOURCE-A709ECAC08C4-page-01.png",
+          "sha256": "3c26397f1f68a2d70615ecdfc0b02e307096ccf211957e9b57760b328bce3532",
+          "page": 1,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/render/LEGAL-SOURCE-A709ECAC08C4-page-02.png",
+          "sha256": "9bff1830706dbf3f61e14ac71a0301093c72e3a21b39c6afcfbdcf44676b7323",
+          "page": 2,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/render/LEGAL-SOURCE-A709ECAC08C4-page-03.png",
+          "sha256": "0b38e486e58755cf5b9dc2f6ad8e57962aae30486b54ee5aafeb980976b375e8",
+          "page": 3,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/render/LEGAL-SOURCE-A709ECAC08C4-html-1280.png",
+          "sha256": "a1b94d33787f9e759e482c25243e78bfb416cd3e437acd6ec14211560d269c1e",
+          "page": null,
+          "width": 1280
+        },
+        {
+          "image": "docs/legal/full-text/qa/render/LEGAL-SOURCE-A709ECAC08C4-html-390.png",
+          "sha256": "c6820720a32f82eb26175122043db7656f98a6a5ab3809de0b2e5fc7eb7f84ba",
+          "page": null,
+          "width": 390
+        }
+      ]
+    },
+    {
+      "id": "LEGAL-SOURCE-273909FD1A3E",
+      "pdf_sha256": "7b09dffca97c7933df7d2dee5f405fb925fab1f7d229433d500019023bb6fa54",
+      "html_sha256": "ecd16359e1e9e9fe9060e16051d455ca4490bfd5239b5065313caba681850ae3",
+      "surfaces": [
+        {
+          "image": "docs/legal/full-text/qa/render/LEGAL-SOURCE-273909FD1A3E-page-01.png",
+          "sha256": "413086f21ba90114ffba9656c7b5fd85745ce2a04904a67f76fe6cf8d9552e38",
+          "page": 1,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/render/LEGAL-SOURCE-273909FD1A3E-page-02.png",
+          "sha256": "f56b62419c120e14aaf8b11a0f5578b452eb30a5da2c6dea9daceb08ef716305",
+          "page": 2,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/render/LEGAL-SOURCE-273909FD1A3E-page-03.png",
+          "sha256": "7e3ef2452c38b410e4aa820ecfadf4dd4906437bdcb725f8fea1cebf8c5ccb38",
+          "page": 3,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/render/LEGAL-SOURCE-273909FD1A3E-html-1280.png",
+          "sha256": "247be7be3a9c33d8ee772e642759e2773f5bc1a6c6638584783dd252cf12b9a8",
+          "page": null,
+          "width": 1280
+        },
+        {
+          "image": "docs/legal/full-text/qa/render/LEGAL-SOURCE-273909FD1A3E-html-390.png",
+          "sha256": "cd3183bf0ffb5cf9b8a0d992078c84c0d13b62d6012bffd651423f678ab1f6fd",
+          "page": null,
+          "width": 390
+        }
+      ]
+    },
+    {
+      "id": "SH-IND-IC-001",
+      "pdf_sha256": "261934d6015a6cf259753f0c931df1ee7135ccdee111468b3471c56f971290a1",
+      "html_sha256": "d2e53e953a1bc3bd93dc12eb7342d933906fc59ec7e88a5dbbd3b838ca6622d9",
+      "surfaces": [
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-IND-IC-001-page-01.png",
+          "sha256": "5d4e000ecf6c2c7c5f015d149fe87d5e66398635a0e175746da5ba26bbdd61ec",
+          "page": 1,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-IND-IC-001-page-02.png",
+          "sha256": "dd000d81a4c6f2e123945d02c3ed0a11ab554b5abd52d09ea57fa0faa8ac3835",
+          "page": 2,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-IND-IC-001-page-03.png",
+          "sha256": "4d730aa15cedaeba586cc706888067dae0b8ba30bf18987740e350441e77b0c6",
+          "page": 3,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-IND-IC-001-page-04.png",
+          "sha256": "ecab5fc5aee093297bebf09f18b932112203fb8b514462856303d674613e54fb",
+          "page": 4,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-IND-IC-001-page-05.png",
+          "sha256": "c0de0f511ab2c452f4ebf56285a1b63119b9205713b697fa4f9c2e56067e2a66",
+          "page": 5,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-IND-IC-001-html-1280.png",
+          "sha256": "04c549b4ede5ea14545a973975aef3b536177604dcd206d7ccc0a62e382f3c94",
+          "page": null,
+          "width": 1280
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-IND-IC-001-html-390.png",
+          "sha256": "eef971fdce07a1cc56517b0eabd13cec2d1b07729e9117e8ecd6ebd52ed4aac8",
+          "page": null,
+          "width": 390
+        }
+      ]
+    },
+    {
+      "id": "SH-IND-IC-PRC-001",
+      "pdf_sha256": "ac7ec9cb9c7dff5ad558988b46455d0501148fbd42807b1b9f3179d955427ca3",
+      "html_sha256": "f8735f5173de7a8a586dbcbcc294159dbd497e6e7fbcadb810e22b9cd8056f1a",
+      "surfaces": [
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-IND-IC-PRC-001-page-01.png",
+          "sha256": "37a93a435b245fe6a3ce8442fd4e39d9ec7ae2e1674b5a278907b1eb150b5d41",
+          "page": 1,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-IND-IC-PRC-001-page-02.png",
+          "sha256": "9962b144165db4e25442b0e5fbd6e5911aef3c68cbf02086403c152d70b852c8",
+          "page": 2,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-IND-IC-PRC-001-page-03.png",
+          "sha256": "1baa95cc3f8199269e7971e2a75ad1e87a6633818de7c4a71c8b6de7c2c85e21",
+          "page": 3,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-IND-IC-PRC-001-html-1280.png",
+          "sha256": "6d1fd6260f9dc73354393e4e9d95fe15c5ca13aab384d726d6b2b2ac7a6c059f",
+          "page": null,
+          "width": 1280
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-IND-IC-PRC-001-html-390.png",
+          "sha256": "3a9eb2f112dd90c3d3d66b2472cfa0539b6d4a7ff3392b2960cc6298e51dbaa7",
+          "page": null,
+          "width": 390
+        }
+      ]
+    },
+    {
+      "id": "SH-ADV-014",
+      "pdf_sha256": "310e49c913e8b50fdf1cec146c8fd72099faacb7e756be1a6de14aa6d6a14558",
+      "html_sha256": "74faaa281b29bbb576a38bc6ab4922531847ccba80fd385c742181985030164f",
+      "surfaces": [
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ADV-014-page-01.png",
+          "sha256": "12f75ec61a7f995c88c98b38da93b93af6aa857723e035a45d19b714de7ccc1b",
+          "page": 1,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ADV-014-page-02.png",
+          "sha256": "18a3e82de90b1e9623c984f5cf246b25d34730910728aa6eaf434e4e3013ea03",
+          "page": 2,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ADV-014-page-03.png",
+          "sha256": "b0a331cfe739f13a45b3b6222b8a61175c45b229ba83648c77846a1f5663a75e",
+          "page": 3,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ADV-014-page-04.png",
+          "sha256": "253d75b6db3b5aeb65b3a66def00797f83f58b1703e0ee891b46fad8e6adf1d5",
+          "page": 4,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ADV-014-page-05.png",
+          "sha256": "3f85ac9b410a94899a89830051f163e6cb3b27935b4283f55c77567c6ae49c6e",
+          "page": 5,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ADV-014-page-06.png",
+          "sha256": "01570eb5b5299b6951f835edf313c94bf062dd45692f17e28bf7de5a65826105",
+          "page": 6,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ADV-014-page-07.png",
+          "sha256": "c9a552f5dd52268937fdc998d78ffead04dad6afe8b44c25a3b282781a399af1",
+          "page": 7,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ADV-014-html-1280.png",
+          "sha256": "fb119313ded42f5fbad2a5fda840636c6fb9f935bd9e04b757b834296e8effc7",
+          "page": null,
+          "width": 1280
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ADV-014-html-390.png",
+          "sha256": "ab28656c50cdce60ea019151833c0d10f3d5dc9797cfce26b34fa2f8376f23d3",
+          "page": null,
+          "width": 390
+        }
+      ]
+    },
+    {
+      "id": "SH-ADV-009",
+      "pdf_sha256": "d15658fb27032e42cb22b10aa2a15bd38ef1ba046cfb91262750c4647cdb4c92",
+      "html_sha256": "7bbf2db1d2cd157b40eb71327d15faf3a5f82bf59eb9a78492ce0c41f5edf23e",
+      "surfaces": [
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ADV-009-page-01.png",
+          "sha256": "2fed288ebeb3bae50ceb236d73134ce3203164753e7b447a47befe349fd473d5",
+          "page": 1,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ADV-009-page-02.png",
+          "sha256": "5aaae5faf7b3c64f62d19e815f940f073571f0bcd149adb181d7298c6a1d7b31",
+          "page": 2,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ADV-009-page-03.png",
+          "sha256": "61e22b5a3942013ef82d240f6c3b8476fc10a204387528081baeedd9dfea90d1",
+          "page": 3,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ADV-009-page-04.png",
+          "sha256": "ec0de975a254ef0e484b640807126aa9df89d311ffce0707cb907b4512570ccb",
+          "page": 4,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ADV-009-page-05.png",
+          "sha256": "8a1cfc922292730fbb0f538e878495cad1c168e74e9b3745d5540ab6a491c196",
+          "page": 5,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ADV-009-page-06.png",
+          "sha256": "e83f90d82f3e8a42b732976251782fed4fda71a638cd4c07e954cac5b29e6e64",
+          "page": 6,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ADV-009-html-1280.png",
+          "sha256": "0f2e80c95140f194e4177f3719d45b2ba26df8158a309977e4403d88f35d3f2e",
+          "page": null,
+          "width": 1280
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ADV-009-html-390.png",
+          "sha256": "6292d1902aa1175b3ae6347377c8e1fa9da67aba3fc1b1448bc17255f3c497c1",
+          "page": null,
+          "width": 390
+        }
+      ]
+    },
+    {
+      "id": "SH-ADV-007",
+      "pdf_sha256": "abff8652d19befb841725ca177f335f01737885eb8bf80c2ccd8ff4858a7b941",
+      "html_sha256": "9b87d5c9be07986b78e54763db6591761218b5077411c69db1f43207d6304583",
+      "surfaces": [
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ADV-007-page-01.png",
+          "sha256": "efdf7c5d786759ef4caf35f62da06e4328f31bd92db40204fa8695bf070adac9",
+          "page": 1,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ADV-007-page-02.png",
+          "sha256": "5eab27cbc37d771807e589d059b57ebf89c17e0dfff59683b0a07890a77bec92",
+          "page": 2,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ADV-007-page-03.png",
+          "sha256": "79317b5a115566c7574ffd1fce19d502ba7fbe7f79b054a735793dc7632581c4",
+          "page": 3,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ADV-007-page-04.png",
+          "sha256": "b2e5b2e49b54352a571186d9338bbd7b926df880182da2577137a70c5b421d09",
+          "page": 4,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ADV-007-page-05.png",
+          "sha256": "75a3e671cd537a782e06f05d5e88656405561135b426d5d67fce1aa4c065a24b",
+          "page": 5,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ADV-007-page-06.png",
+          "sha256": "4118c6de098024fa6707de2259b7b7a032b890b416717d4279135ba6bcb4d69a",
+          "page": 6,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ADV-007-html-1280.png",
+          "sha256": "54fb535b8a17cb3458f03f20b8e06a80fff59d8ea3b6b218780689bab22f51b5",
+          "page": null,
+          "width": 1280
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ADV-007-html-390.png",
+          "sha256": "f9afac5a896cb214ad5947132bf83781e38c43d8a5e8f9436bd3065324ac9d7f",
+          "page": null,
+          "width": 390
+        }
+      ]
+    },
+    {
+      "id": "SH-ADV-017",
+      "pdf_sha256": "2223fb49db89ee4db37a7bfd740eff84ca48359e50e988cb802329733b761573",
+      "html_sha256": "c5bf3be4d09a17e6b611c6e6163f33ce127264c6f9e43e5f3b9d1b7ed25952be",
+      "surfaces": [
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ADV-017-page-01.png",
+          "sha256": "0e582d9f1cf77666adb1dfcc40f18f2b156aeaf84b0ead0df78db7cf285aea94",
+          "page": 1,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ADV-017-page-02.png",
+          "sha256": "29b1852c642da9ad900d3d75521a0e782b8b0e7448980a03820c6f4f7036a12b",
+          "page": 2,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ADV-017-page-03.png",
+          "sha256": "9d42b309b5971b54a2a1adbf751e8dc7837c2c25123dc4fc9db92eed1447837a",
+          "page": 3,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ADV-017-page-04.png",
+          "sha256": "d4190b918afa8b9966d8b6aadf968e350a29bbae60e780af582acb3a2cae0efe",
+          "page": 4,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ADV-017-html-1280.png",
+          "sha256": "04e0f6f18b69e18657e2a7ecb71127e91df79ddab55b86e13773522f56b0345f",
+          "page": null,
+          "width": 1280
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ADV-017-html-390.png",
+          "sha256": "57ee257f6109741e3f10a445e190893194491a9970c177b241360dd1a491bcaf",
+          "page": null,
+          "width": 390
+        }
+      ]
+    },
+    {
+      "id": "SH-ATL-017",
+      "pdf_sha256": "e998053ebfd97562f2c25a39c15b3de46f50480a29176a41f5414bd42019e45e",
+      "html_sha256": "77dcf8c2d877e4eed0845ec2311e4e8f64289234e0765fe79dc83f914fe9e33b",
+      "surfaces": [
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ATL-017-page-01.png",
+          "sha256": "58f8e91b8fea55cce37f9a3a1e546a42c0a95b8112a1b933e36f3cd4455393af",
+          "page": 1,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ATL-017-page-02.png",
+          "sha256": "15f10f882a4f3ef79dc1847e7340001777a88d265ef3abbc099398798d763dd4",
+          "page": 2,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ATL-017-page-03.png",
+          "sha256": "160eb609ef29aa1ee7a0bd2d641e0ca95d99bf2a854e73531765cc59176a8d79",
+          "page": 3,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ATL-017-page-04.png",
+          "sha256": "c0f505860a1450f04ab8a3bc1adccbf31adead7db7d83116cee4fb6c42b3d12b",
+          "page": 4,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ATL-017-page-05.png",
+          "sha256": "b8d12bb3c3a572f8583bd26e8f71975a50cc71c471cbd9e7bab0503a5670e4a3",
+          "page": 5,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ATL-017-page-06.png",
+          "sha256": "c6f447da5130dd55eb69cd4c8ddcd04754d364c64edf66b88b21af8d378d50cc",
+          "page": 6,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ATL-017-page-07.png",
+          "sha256": "5513a84db681621ee61c171cd55ec208e1a5a2746255949816c286bb7e5d361c",
+          "page": 7,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ATL-017-page-08.png",
+          "sha256": "fa3d85912b579e04ea24f4b24adbc6a1cc21c86743871fd1b3a962d9d4a520c8",
+          "page": 8,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ATL-017-html-1280.png",
+          "sha256": "d84cae98b349a73591a3351ee1a3f30c5d46a3a54027381a51002bd9ff4ad53c",
+          "page": null,
+          "width": 1280
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ATL-017-html-390.png",
+          "sha256": "54f2cef613ebe5f6615dc6c6754129e0d9aba4dd8f2a273b02aa3c6cf99c2f85",
+          "page": null,
+          "width": 390
+        }
+      ]
+    },
+    {
+      "id": "SH-RT-CONTRACT-001",
+      "pdf_sha256": "710f0c058b4a1b99f6243663be0440b11d76471c647a592cd79d039ae78d4953",
+      "html_sha256": "0ccc1b6b80c13f37ae4c9b96816a50466c9cf1a80a5a6d91e457b74925fbc2b0",
+      "surfaces": [
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-RT-CONTRACT-001-page-01.png",
+          "sha256": "cfaa6b3b7be8fa73771a0724adc77a27cafa34d753b9dcda32223f28b050a631",
+          "page": 1,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-RT-CONTRACT-001-page-02.png",
+          "sha256": "a5841401f80bd9fe7243de045f50a60859f2f11e785f396a913a9039852d5271",
+          "page": 2,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-RT-CONTRACT-001-page-03.png",
+          "sha256": "3153ecb8ce9b3f0c807810a5d16d99e5c8fb2eda2743d01511bb483708582f07",
+          "page": 3,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-RT-CONTRACT-001-page-04.png",
+          "sha256": "30d7087b9e6e052e9b2af2bd240db306dc325fa4419557f01ae06563e400b755",
+          "page": 4,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-RT-CONTRACT-001-page-05.png",
+          "sha256": "0fdfa41fdafacc2411bede0c7f0fdd00ec5e92825048349ad54c811afc4081a0",
+          "page": 5,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-RT-CONTRACT-001-html-1280.png",
+          "sha256": "784eec4de20f501c8943117e3e32a0ecd9b0bb957e7e89009ee30bea482cbad0",
+          "page": null,
+          "width": 1280
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-RT-CONTRACT-001-html-390.png",
+          "sha256": "902016d930b5ceb8871d97a3dfade8c37cc5f2060de5a1a0da00a2bfed0b4f31",
+          "page": null,
+          "width": 390
+        }
+      ]
+    },
+    {
+      "id": "LEGAL-SOURCE-F1F0AD5F06DC",
+      "pdf_sha256": "5c04797b8ca54a0fb47378119b757ad6df470c3f156c741732ead340abade5e6",
+      "html_sha256": "27dca55f917086a5d80c66b2519f0a68d4c1cdec865d576d43c0f48dfa7a715b",
+      "surfaces": [
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/LEGAL-SOURCE-F1F0AD5F06DC-page-01.png",
+          "sha256": "010e66e9fcb28dc45052e4e1f0938b8d6d7697a5041f8bde14e840a8abdc70c8",
+          "page": 1,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/LEGAL-SOURCE-F1F0AD5F06DC-page-02.png",
+          "sha256": "3feb04060ca0e905e4ec4b36fa0e3b57a0f57d25557058cb747c560cacf757ed",
+          "page": 2,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/LEGAL-SOURCE-F1F0AD5F06DC-page-03.png",
+          "sha256": "0c9dc55fb94998618536c4622ff3d0437dde278d06f24218dc72f37efdf9ada2",
+          "page": 3,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/LEGAL-SOURCE-F1F0AD5F06DC-html-1280.png",
+          "sha256": "f05432b04567d1244dbbd72b05a63a1884958fb20272b3b196353e8b70965c0a",
+          "page": null,
+          "width": 1280
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/LEGAL-SOURCE-F1F0AD5F06DC-html-390.png",
+          "sha256": "40b030db00138244a2fe5d1a0ffa2ac645d1d70cb5934c9b391a3c4376a0c86f",
+          "page": null,
+          "width": 390
+        }
+      ]
+    },
+    {
+      "id": "LEGAL-SOURCE-7FFDC6FBB585",
+      "pdf_sha256": "4429d441c6effed7d681ae58c1602d2576e193614998353356e307305d184cbf",
+      "html_sha256": "ff755517aa5b8accb94f8cc3a7e045e8b640342b30a82ae4c52c5425168f2446",
+      "surfaces": [
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/LEGAL-SOURCE-7FFDC6FBB585-page-01.png",
+          "sha256": "7d1674f5d824bd165036509c3c0abb6986ac437d268b0339ab1fb9dc2553d6c1",
+          "page": 1,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/LEGAL-SOURCE-7FFDC6FBB585-page-02.png",
+          "sha256": "b110086d05764c68f9e3f5b594aff1481476d3bee2790de0b7fbdeffcda94bc2",
+          "page": 2,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/LEGAL-SOURCE-7FFDC6FBB585-page-03.png",
+          "sha256": "5e193e289c3dd5082f1f9567ee699dc62cf2e48d7ce8ce201abb7f9995eccde8",
+          "page": 3,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/LEGAL-SOURCE-7FFDC6FBB585-page-04.png",
+          "sha256": "fff9c9a3a483c32febae80462531d5ae1d38dfb3970772fe867932a075be1525",
+          "page": 4,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/LEGAL-SOURCE-7FFDC6FBB585-html-1280.png",
+          "sha256": "e4a86b4439449540073aff48ca0d5f2d046b56f609d34e801b7e2287039a3eb9",
+          "page": null,
+          "width": 1280
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/LEGAL-SOURCE-7FFDC6FBB585-html-390.png",
+          "sha256": "4f0752e55e6e0237fbaafbd125ed0ad603ba06be36e5d865a6aebdaed6fa842a",
+          "page": null,
+          "width": 390
+        }
+      ]
+    },
+    {
+      "id": "SH-IND-ARU-TAX-001",
+      "pdf_sha256": "f07389aef44b9690eff400c8d932cb779b42888bf49497f9e7fe8dc36fba5879",
+      "html_sha256": "8a3f369004413b63c84bed99b8394a5b13d9e02ae569bc300349276b40284f23",
+      "surfaces": [
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-IND-ARU-TAX-001-page-01.png",
+          "sha256": "cdd7c3446a3a1ac853aa77e23284dcabd4e4edcdec2c77d82726acfe4b42004b",
+          "page": 1,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-IND-ARU-TAX-001-page-02.png",
+          "sha256": "4c3c924843005957f887dff819f510621ab075e7f9e2de92d7763699637ecd26",
+          "page": 2,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-IND-ARU-TAX-001-page-03.png",
+          "sha256": "e793bdcb405e18178e4fe60db746d14934a8f4b36a59b64f79b53a419f2b3604",
+          "page": 3,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-IND-ARU-TAX-001-page-04.png",
+          "sha256": "6ef015212917b6a4b55d20db311d2b7f17e6155507b3a7d0b5ae2ab322b90de8",
+          "page": 4,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-IND-ARU-TAX-001-html-1280.png",
+          "sha256": "f52c228c0ff3bf6394f82b4c5e5a70cd6db3f6363b84b1a29b5662ebc255afcc",
+          "page": null,
+          "width": 1280
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-IND-ARU-TAX-001-html-390.png",
+          "sha256": "f5787c6af2cec2b891f53b97cc2e1854da813babf58ded6a0211df7cde46ce6b",
+          "page": null,
+          "width": 390
+        }
+      ]
+    },
+    {
+      "id": "SH-IND-FIN-TXN-001",
+      "pdf_sha256": "1d0ac761d46bd330d9ccb2bcb2ab48ff028ea88f826fe379267b336155a98689",
+      "html_sha256": "8aae56c73d70686e598a5bc29b9da47a83e44658ef050746d86b4eaafb166b54",
+      "surfaces": [
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-IND-FIN-TXN-001-page-01.png",
+          "sha256": "26aa37ab8e9562a51a649a453f2b78fe15b27d4e8c80218aaf294825a92cbb92",
+          "page": 1,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-IND-FIN-TXN-001-page-02.png",
+          "sha256": "74fbeabccd3dd10c7b2939a1fdee298a9ff621189c155f17a7a6ec1c55688c6f",
+          "page": 2,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-IND-FIN-TXN-001-page-03.png",
+          "sha256": "a236893342413c521b9fc07f8d5ef687c7aa535f549a769eeba31b9defd9861f",
+          "page": 3,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-IND-FIN-TXN-001-page-04.png",
+          "sha256": "0bf1210b9ffcc1405a390434c6cbd4639e463292242d786079d9eddee52a116c",
+          "page": 4,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-IND-FIN-TXN-001-page-05.png",
+          "sha256": "772b4fe8f684a23418c7fa6934c3490a8a90a2701d84e8b0e0ccfe2f432326ab",
+          "page": 5,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-IND-FIN-TXN-001-html-1280.png",
+          "sha256": "d34d8285da1c2bce5c04f59b67064d5cab9b9c9c7d10923057418917d26a36f6",
+          "page": null,
+          "width": 1280
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-IND-FIN-TXN-001-html-390.png",
+          "sha256": "f547ed1359517220a64e4e099e578c8087368561316eb4e2b56f84301f5a5c8a",
+          "page": null,
+          "width": 390
+        }
+      ]
+    },
+    {
+      "id": "SH-IND-FIN-DRV-001",
+      "pdf_sha256": "5f959c4bd5c00531d9f4f9549d17df4a1be9a62c12c827dad740b8ea6d22abb7",
+      "html_sha256": "1b61940bccdb0f2d8ad13cdf7dd05334cf419182befd21223a06a5a43f7f4354",
+      "surfaces": [
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-IND-FIN-DRV-001-page-01.png",
+          "sha256": "9926d312e405e88d82783c1109b7ed5e74099a509ce10d5621a15eac57392a54",
+          "page": 1,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-IND-FIN-DRV-001-page-02.png",
+          "sha256": "a0f7c1f13a452d8803e426d1e98db8facbb16296dd2920f6af774d4856ac7b17",
+          "page": 2,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-IND-FIN-DRV-001-page-03.png",
+          "sha256": "4a0211c8eca98c9a413c75ed6651ae06022c956d31c38723524e5fabdd4ffaa1",
+          "page": 3,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-IND-FIN-DRV-001-page-04.png",
+          "sha256": "159e20658fc284717008e55e3cd146574c2c33a2b5e7c8eedefc10faf56a5e71",
+          "page": 4,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-IND-FIN-DRV-001-html-1280.png",
+          "sha256": "b461816932e35808858a45a4f03705f82e11c490be35ab43639a20ed48666efd",
+          "page": null,
+          "width": 1280
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-IND-FIN-DRV-001-html-390.png",
+          "sha256": "a0328d548b420998cb8295f7d5c6952f87c29f4a15bfb1b56f75b4818a9ae845",
+          "page": null,
+          "width": 390
+        }
+      ]
+    },
+    {
+      "id": "LEGAL-SOURCE-FCEBAA48286F",
+      "pdf_sha256": "42264ebd126e08961b452384537a627ccfce239d3e882a7a1840af7240c6d015",
+      "html_sha256": "9c47fc0c1a6131d1ef874a6d5494c2f8e2c4d41116b28b124cc48899fbae088b",
+      "surfaces": [
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/LEGAL-SOURCE-FCEBAA48286F-page-01.png",
+          "sha256": "3d07876ba316d14e041774d522c52410c5ee3aeccc6b9d79db89cb7c79763563",
+          "page": 1,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/LEGAL-SOURCE-FCEBAA48286F-html-1280.png",
+          "sha256": "52d4d3a5f9d4e6dcf27dfc22c9617f705c476e5c956510d4ff8ebe494e9afd1a",
+          "page": null,
+          "width": 1280
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/LEGAL-SOURCE-FCEBAA48286F-html-390.png",
+          "sha256": "c9fa6439fe3c54c5d661c476dfa687239e42c8a1d7ff518af1034778409cac20",
+          "page": null,
+          "width": 390
+        }
+      ]
+    },
+    {
+      "id": "SH-RT-FINANCE-001",
+      "pdf_sha256": "188696dd87d4f52209e5011593b12d10916d4d77b47a8e1c3e4a63d634cc4b2b",
+      "html_sha256": "a6e5ccd5a7f0dfe09c7212f7de6af89a68ce5d68fe1e4e3b9f34990d140ea6e9",
+      "surfaces": [
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-RT-FINANCE-001-page-01.png",
+          "sha256": "d8238557ff3e9485f361e3c42f4d29dc1c45f15f89f0b7e939d8d9043929accd",
+          "page": 1,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-RT-FINANCE-001-page-02.png",
+          "sha256": "5c2af37b5fd1edc8e3989a31894d2784afa3b8a776b4d6da252555f33bfdd013",
+          "page": 2,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-RT-FINANCE-001-page-03.png",
+          "sha256": "7628f8c98ea5b89f16b08a8c85a8b04f33c357dd4cb1c8df5952cb39c49224a0",
+          "page": 3,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-RT-FINANCE-001-page-04.png",
+          "sha256": "d2d9159fab24f328b0e4b661a6aba2363d6caa8ca4e10f130e65d70c8d6d3625",
+          "page": 4,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-RT-FINANCE-001-html-1280.png",
+          "sha256": "d4607378d32daf7106a8ebc8176d6f7079ad21b9427ee941fe890e1e34c1dd86",
+          "page": null,
+          "width": 1280
+        },
+        {
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-RT-FINANCE-001-html-390.png",
+          "sha256": "9487e405a6ac1766f5c3724ec81aa23e2ea17cf37a7b12a00dcbddeb6e95b241",
+          "page": null,
+          "width": 390
+        }
+      ]
+    },
+    {
+      "id": "SH-IND-COR-001",
+      "pdf_sha256": "013b79a6302710d9d225ab11adf8045376649958790c0579045da4e0807e6360",
+      "html_sha256": "e86677ca60dece15752dcdb382ca063c2ee31160e3292e137437adaa848a1a2e",
+      "surfaces": [
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-IND-COR-001-p01.png",
+          "sha256": "3ad7d48b33e0ca45d54d7813c6a4d62f452022d94c7bd9348060394e5a46b8c9",
+          "page": 1,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-IND-COR-001-p02.png",
+          "sha256": "1c4ebaa10fc47517f2f0456385d2bd005cf675497e045925fbf548ee2dc7f771",
+          "page": 2,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-IND-COR-001-p03.png",
+          "sha256": "e6643361c831e9835ac75a27e41946ed00ce786a8db86312461c6e945b80458f",
+          "page": 3,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-IND-COR-001-p04.png",
+          "sha256": "9ba3f0cf477e4baf5165e7a32ef1db2a0e33b7e9b2600746c8010021be52baea",
+          "page": 4,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-IND-COR-001-desktop.png",
+          "sha256": "f745c2ca91da2f6dc9e52d857d4cbb6239e227d1df4c48dd84f677ea8ad1d17e",
+          "page": null,
+          "width": 1280
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-IND-COR-001-mobile.png",
+          "sha256": "6992a62745ff442c9872de93012d3dd7289bfc855d25cbd73725ead06228883a",
+          "page": null,
+          "width": 390
+        }
+      ]
+    },
+    {
+      "id": "SH-IND-HR-001",
+      "pdf_sha256": "262cd36fc71d558fce7b191421213f79d63ced5f073e7f966e5eb00e8eb94ee8",
+      "html_sha256": "b5a7180669dc0df02f98f0e7063ee44828953b170b5bc0b9df653ad39bc9814a",
+      "surfaces": [
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-IND-HR-001-p01.png",
+          "sha256": "cdd2c5353cfeb7d0948a10a66b51372a4e03394f185c14d326d2833a32625087",
+          "page": 1,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-IND-HR-001-p02.png",
+          "sha256": "6e1a05ef011a25af1eccd80152e467cf8fe9aeebe9e7cd443e169476ea9b88e0",
+          "page": 2,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-IND-HR-001-p03.png",
+          "sha256": "c73907da5cdbd253db9b702a2f247201fbfdff86b5d62cb561dfa4a07e6cbb8a",
+          "page": 3,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-IND-HR-001-p04.png",
+          "sha256": "f0e36ec95e60e83a4d0c3aee050e7d0c22620a5036de16048182496e238136fb",
+          "page": 4,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-IND-HR-001-desktop.png",
+          "sha256": "ebf3f6f33628296874c3be7a99c76e92c72234ea380e2b9706f9433420e1d5db",
+          "page": null,
+          "width": 1280
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-IND-HR-001-mobile.png",
+          "sha256": "a0e262c0b3c3603ebeab5bce50809bc1d7e9f16a77b86f22fe6fce6de4a6f45a",
+          "page": null,
+          "width": 390
+        }
+      ]
+    },
+    {
+      "id": "SH-GOV-BOARD-001",
+      "pdf_sha256": "edf4efe05adb8d7d604f3fdfe9aad117facd050c32a202d68b27993f85f26f1d",
+      "html_sha256": "0db7734fa3c10b1f454fc66b1e004234373ca60e4a3ea108794123a2589d65f3",
+      "surfaces": [
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-BOARD-001-p01.png",
+          "sha256": "1d5bae5363d9c3b58c0b883b127143ac4be781670a7169212a276f7a11e889f7",
+          "page": 1,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-BOARD-001-p02.png",
+          "sha256": "37d44242f9c18b4a26a3fcce8e885cfed2b5a778c5a7aa17726956d0c1cb74a0",
+          "page": 2,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-BOARD-001-p03.png",
+          "sha256": "abe661582a2ccf31d76dd406dfcf31601b58f6f3fa2e9a0fcd0c5d8d1320dad3",
+          "page": 3,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-BOARD-001-p04.png",
+          "sha256": "675ceb8893c87d9ac573a0569405dfee3d526f4a4e4cffe052ac432b95b21bf7",
+          "page": 4,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-BOARD-001-desktop.png",
+          "sha256": "173ae5f7188d721d0d525f648ad14ea61b3e7d928bbea1e49356c13aab2278ab",
+          "page": null,
+          "width": 1280
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-BOARD-001-mobile.png",
+          "sha256": "00649f6a9c8b1388cd50b7158fdac773f328b103844559e0b54b6f5e644ccd14",
+          "page": null,
+          "width": 390
+        }
+      ]
+    },
+    {
+      "id": "SH-GOV-AUTH-001",
+      "pdf_sha256": "657afd043ef815eca79d51a5535c159a9247d11de8e0cc38ad16a8ae5c8ad335",
+      "html_sha256": "c6286fbee39e4f51684bed059106e0a354b6beb91a76b55966fac4675abc1b26",
+      "surfaces": [
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-AUTH-001-p01.png",
+          "sha256": "427fae1f67a4bee7acc55dd5a48b38fb6de0e22b76bdfa0a4d050870dbe7aa17",
+          "page": 1,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-AUTH-001-p02.png",
+          "sha256": "e21190081f96252ca3cb99a4769f600972dacc2f09b4ae95709d834dd9c4a6e5",
+          "page": 2,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-AUTH-001-desktop.png",
+          "sha256": "30ac5665bf1518a28fef71884f0a835bafa53aff63f9c185e00929f7895fd8d5",
+          "page": null,
+          "width": 1280
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-AUTH-001-mobile.png",
+          "sha256": "78dba24bc48c9ba24a0cd31f79e9f5c116d06b53987fb73caa913b40778c7ad2",
+          "page": null,
+          "width": 390
+        }
+      ]
+    },
+    {
+      "id": "SH-GOV-ESS-001",
+      "pdf_sha256": "1747fd235defbd819d2208d6e5bd86ac9638ab992fb9b696233e4b96307b60b5",
+      "html_sha256": "b72acb085d31e4e85a6d8acb4ded5ce36b16b6ec6d534382fd366746e28bc57f",
+      "surfaces": [
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-ESS-001-p01.png",
+          "sha256": "cb7eb156b7b8aca33ccef17675685f7c885e25f9117b467b063ae3ce0ce0b3d4",
+          "page": 1,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-ESS-001-p02.png",
+          "sha256": "6332083ae0a856f4cebf0efd6ff076b93c4e575398c594e769a32cba619e2d8c",
+          "page": 2,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-ESS-001-p03.png",
+          "sha256": "710a4e100f0b3067fab891f129fd8526eaa51ff9b6e8c09aa43eca914e2f3e53",
+          "page": 3,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-ESS-001-desktop.png",
+          "sha256": "58b90fe251e16677185d6495d10ce26e3f3eb1c33d045348a705cc736666cf5e",
+          "page": null,
+          "width": 1280
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-ESS-001-mobile.png",
+          "sha256": "9c07043bd02a7eee4ad483ab2b6a8bddbee3c79e2559b3ae866612e10a829e82",
+          "page": null,
+          "width": 390
+        }
+      ]
+    },
+    {
+      "id": "SH-CORP-HQ-20260903",
+      "pdf_sha256": "447bc160c379309c73d818a71cec11fb60af5383daae6c7b409acaf6507bd77f",
+      "html_sha256": "0930761b2ee96f6630b16695c13dc5e6f1431dc8fc60c46917b32256bea41108",
+      "surfaces": [
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-CORP-HQ-20260903-p01.png",
+          "sha256": "1fa0fac0b00c1288e03765b5259d978440cd0cd4dbfb53ed03d17d31c1b69189",
+          "page": 1,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-CORP-HQ-20260903-p02.png",
+          "sha256": "082d969878e15d4ef63416f24d4efd99ec0834ae16995292049fa11e3803626a",
+          "page": 2,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-CORP-HQ-20260903-p03.png",
+          "sha256": "ffcbb0ac0b928be6eb3a5b424da1b892ffe9f6ac032416ee204b7347f71ddb95",
+          "page": 3,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-CORP-HQ-20260903-p04.png",
+          "sha256": "63027cd5d210fb0886075d033f93b02a78ceb26d21375523975d72e54b79c6a7",
+          "page": 4,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-CORP-HQ-20260903-p05.png",
+          "sha256": "8193a27f95128145c6d91df44fe6bca7d7d5cd0c2ef4440851073b4c0a41af63",
+          "page": 5,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-CORP-HQ-20260903-p06.png",
+          "sha256": "e100e79a4ef2a5b3507905fead9933354a39ef604d293f31a5593254bb0b4bde",
+          "page": 6,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-CORP-HQ-20260903-p07.png",
+          "sha256": "d8beac931b104080e4cab52d0db3de1a0f7984b219862e4ee949a134d6f8e920",
+          "page": 7,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-CORP-HQ-20260903-p08.png",
+          "sha256": "944777f6ae6c63140e5468dc42f61157ad6a22eefeb2dece549ecf19d0d51036",
+          "page": 8,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-CORP-HQ-20260903-p09.png",
+          "sha256": "920f7636bfb1461a57b4c6b5d734bf9b88be9a3a689967182ea39d2f412d0de4",
+          "page": 9,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-CORP-HQ-20260903-p10.png",
+          "sha256": "6de522bd9c7c5d9b7f626e4a09e43574d45bcfb2f80895a3678e3a369a5ca387",
+          "page": 10,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-CORP-HQ-20260903-p11.png",
+          "sha256": "5c49a257c230b1724c071d93bb46443260ea20b371f4aed993ff09c96a786ad1",
+          "page": 11,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-CORP-HQ-20260903-p12.png",
+          "sha256": "b3f147613b1b8807f259a872e8bec2e90a4e319bce4ae7717fad1372649ba19d",
+          "page": 12,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-CORP-HQ-20260903-desktop.png",
+          "sha256": "d9e2fc745266fc7f65e2e323707e8065849d75e971b71819fbe088558f389b73",
+          "page": null,
+          "width": 1280
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-CORP-HQ-20260903-mobile.png",
+          "sha256": "f81baf31fea86091007eb3f04102ed020b95889781a8d92547a36f3f934f2e73",
+          "page": null,
+          "width": 390
+        }
+      ]
+    },
+    {
+      "id": "SH-J2-PPL-20260910",
+      "pdf_sha256": "f558b9bb030e5eb604e31dbb59ec1297eedbecd1b1d39ee824a669e3b8d1b325",
+      "html_sha256": "5883038af8be4ffff4ba36bbc698db152a07ba1bc41eb1702dffbbd60e32b8d4",
+      "surfaces": [
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-J2-PPL-20260910-p01.png",
+          "sha256": "e28b364b62e47dc96e8eeb462c3887915801b17f80e2cf53bc429c6d573df7b2",
+          "page": 1,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-J2-PPL-20260910-p02.png",
+          "sha256": "b6e8d4c71e6f4e70f4785d74854be74bffc388b5e888b6ffdbe176cb5fa61cd2",
+          "page": 2,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-J2-PPL-20260910-p03.png",
+          "sha256": "851ef374dfe05a46fe3b72eaf3ac3e453358f7071f44f325cfce358806c4034a",
+          "page": 3,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-J2-PPL-20260910-desktop.png",
+          "sha256": "121b656e276cc16dea756ab012289a63c411eb24c6c177c1f66f674dd82ee6d9",
+          "page": null,
+          "width": 1280
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-J2-PPL-20260910-mobile.png",
+          "sha256": "bd2986c5d9b009eec114675a8c628f2ff06813104f3552d3213912baca4aab19",
+          "page": null,
+          "width": 390
+        }
+      ]
+    },
+    {
+      "id": "SH-LEGAL-ADV-001",
+      "pdf_sha256": "36730f71c7275ccf1c1abb499577fc0acd7460064f0f1a9495246ee1dc32bec0",
+      "html_sha256": "6e31aead3ed1cac306ac53b63eff968a9bb2500b4dfecb98c927647ec7d7a1c1",
+      "surfaces": [
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-LEGAL-ADV-001-p01.png",
+          "sha256": "08e20e2b77baf217787a1acfeba8b3149b5f299a0a8869f9b71a0b62f5143180",
+          "page": 1,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-LEGAL-ADV-001-p02.png",
+          "sha256": "5ece5e8c9ca419ed052ab7f220a06183a7191a25f83dae2b6ad43453125a0807",
+          "page": 2,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-LEGAL-ADV-001-desktop.png",
+          "sha256": "1d2cd81e008504aafa095a2fa38639fa2df517d88be51e30c6144ddb1104514c",
+          "page": null,
+          "width": 1280
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-LEGAL-ADV-001-mobile.png",
+          "sha256": "6e0e805093a260a46494b17fb6ac5ba52c2456f6748a824c4cb47fba595ee651",
+          "page": null,
+          "width": 390
+        }
+      ]
+    },
+    {
+      "id": "SH-BRD-MIN-2021-06-18",
+      "pdf_sha256": "6731f485c0810d334e0defb04ff54bee7690172415a4fb682c61059d34a91a85",
+      "html_sha256": "5dd77eb6f50e92f199baacf4d7958a04e075ad7024e760acff843896cc6f1a7a",
+      "surfaces": [
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-BRD-MIN-2021-06-18-p01.png",
+          "sha256": "7337f518be7e5cd96c2d79f2b7ee60f5402f7b42e39aa8137582993dea2c2395",
+          "page": 1,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-BRD-MIN-2021-06-18-p02.png",
+          "sha256": "5d89dd4423a5a1c32431e4b420ee7c6e6b84df936bc1ec8c12c4b7aef72396e5",
+          "page": 2,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-BRD-MIN-2021-06-18-desktop.png",
+          "sha256": "339afbb3f2d7966017745b33f856e79838aec91c1f26f76c7990b567d99f92f5",
+          "page": null,
+          "width": 1280
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-BRD-MIN-2021-06-18-mobile.png",
+          "sha256": "0eb35c7d5be3d82877961b85fb884b0f5fb495790ea61cee3deaa80eb891ea9f",
+          "page": null,
+          "width": 390
+        }
+      ]
+    },
+    {
+      "id": "SH-BRD-MIN-2022-10-28",
+      "pdf_sha256": "70fc9633b353edaef253f582f0189e76b68fff800487ce4ffa2565a4708e5c62",
+      "html_sha256": "81a46b3bd15f98965834a9f2ca78d598b19210db346f7ad3ea1dff3a55bc0806",
+      "surfaces": [
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-BRD-MIN-2022-10-28-p01.png",
+          "sha256": "1d63f337da69e098129051b04ed742c74ed54449fc9b0d7888796d81d1a19720",
+          "page": 1,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-BRD-MIN-2022-10-28-p02.png",
+          "sha256": "60b39f4e2d14dc8cf7ff01bfc2db7f2e5669dcdb097bdcba3784b6dc3dbaf058",
+          "page": 2,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-BRD-MIN-2022-10-28-desktop.png",
+          "sha256": "19e46d2d1b338e5c259f018837ccfd7580166980c03a22b6a34dbad8b0429339",
+          "page": null,
+          "width": 1280
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-BRD-MIN-2022-10-28-mobile.png",
+          "sha256": "1cfc232351ccffda18f55bdf60d457e77e0de70e6d7cf55e51d96d47f8092c9e",
+          "page": null,
+          "width": 390
+        }
+      ]
+    },
+    {
+      "id": "SH-BRD-MIN-2024-02-15",
+      "pdf_sha256": "7165c5ef2613b61eaeedbe34b4e6607448433b9c52fab7582207dbd3a1475cb2",
+      "html_sha256": "67f1390bbb17ed4304078857a4e36e4a8a9878475ae3f6444ce4cd19a56dd064",
+      "surfaces": [
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-BRD-MIN-2024-02-15-p01.png",
+          "sha256": "3089ed3764068e7db36ff3edd43ad72ed507b40d986ff0704360faf310fdc701",
+          "page": 1,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-BRD-MIN-2024-02-15-p02.png",
+          "sha256": "c6f9d205c69ed5f7fcaf3f921a5f9134a277c5e0e148c93ee2cb1847b5d2cbc7",
+          "page": 2,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-BRD-MIN-2024-02-15-desktop.png",
+          "sha256": "dc9d031dfe812d21567a363f65c13054036c068998ab4978189fb16114d717f5",
+          "page": null,
+          "width": 1280
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-BRD-MIN-2024-02-15-mobile.png",
+          "sha256": "675fab06d5d38c58c0aab9816329324b559e074a511d59977c8bce3c37b4db79",
+          "page": null,
+          "width": 390
+        }
+      ]
+    },
+    {
+      "id": "SH-BRD-CONSENT-2026-09-02",
+      "pdf_sha256": "69729d07ada3c840fdfd543e0af3fe80df7599da78346eac6aeb881c6b872bad",
+      "html_sha256": "2f385035542fc9a593f22f51ce9ba488cd7f0fdb78bba631bb9d1c80e37956f3",
+      "surfaces": [
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-BRD-CONSENT-2026-09-02-p01.png",
+          "sha256": "3e6ae5a7d57897052c5af70d61c4a83cb00920b1fc499038e0f70ed7d5c0a8ca",
+          "page": 1,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-BRD-CONSENT-2026-09-02-p02.png",
+          "sha256": "2387e1402d228c487a14ff65a174c93b0a2ca12caab91f99c32c3534bfe669f2",
+          "page": 2,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-BRD-CONSENT-2026-09-02-p03.png",
+          "sha256": "34381b2d056450ea864062244d4b61f8e0dbd3daf1e3735af96ffbe8737acac6",
+          "page": 3,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-BRD-CONSENT-2026-09-02-desktop.png",
+          "sha256": "c3d33f461266ae13b6512d081d42d07b3b7dfdea26f38d6fe144ca290c6e7a6e",
+          "page": null,
+          "width": 1280
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-BRD-CONSENT-2026-09-02-mobile.png",
+          "sha256": "ab959180cf3152018d71f124116564db349e3521ce1753c6fe83f693a8061cf7",
+          "page": null,
+          "width": 390
+        }
+      ]
+    },
+    {
+      "id": "LEGAL-SOURCE-801955F60F74",
+      "pdf_sha256": "fea17b6e0b2df404b0e168d7528f38411f32a63d6e237eb83a325286d33ee8dc",
+      "html_sha256": "a2c563faa82aa901d7b6726ef0be882075f21d33ef09d66b943826b8a187e825",
+      "surfaces": [
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/LEGAL-SOURCE-801955F60F74-p01.png",
+          "sha256": "d0b084152b010ba57a598531424606c11749bfd558bde6d784e97e5decf10e7f",
+          "page": 1,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/LEGAL-SOURCE-801955F60F74-desktop.png",
+          "sha256": "dd2b051875caf0ca439abb4f71fd591fc80912e08614a5d4cee91c15ea1bbb1a",
+          "page": null,
+          "width": 1280
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/LEGAL-SOURCE-801955F60F74-mobile.png",
+          "sha256": "86d1a9f5bcfafc056290c3c067a233f1f2aa3ff42d192bb5f084c1e6e3b7ca64",
+          "page": null,
+          "width": 390
+        }
+      ]
+    },
+    {
+      "id": "LEGAL-SOURCE-46256BC2255E",
+      "pdf_sha256": "244088a7f1fe1283a07249aeecf9027fa4d52d9714050b2ee5257a5ecec04ae5",
+      "html_sha256": "136d13c46d5b7ecc46214208b42e602e1626282cbee7abc9de63d32aabe89ace",
+      "surfaces": [
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/LEGAL-SOURCE-46256BC2255E-p01.png",
+          "sha256": "07680a2d823575a81370d6c277377f0ae611814d41b1bff88112d85c0989c300",
+          "page": 1,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/LEGAL-SOURCE-46256BC2255E-p02.png",
+          "sha256": "b24bf4d53fa418ec7d6dbee50b1f80085d4a5af7af9a87150c7847645e49d837",
+          "page": 2,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/LEGAL-SOURCE-46256BC2255E-desktop.png",
+          "sha256": "428b47f5de6222beaca1f720fb86c17cd04e2ee2cdba7e7876192c9cc67ab169",
+          "page": null,
+          "width": 1280
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/LEGAL-SOURCE-46256BC2255E-mobile.png",
+          "sha256": "1bc747dc8ec5b42c1933d48c930f1dea627f70f706c60b82812443231660762d",
+          "page": null,
+          "width": 390
+        }
+      ]
+    },
+    {
+      "id": "LEGAL-SOURCE-508081AAD2B2",
+      "pdf_sha256": "b8cc9e434ba8e21b2ecc926a7949319e07949e6a34ce0ec07f46387c180d3962",
+      "html_sha256": "ae5138ca5b0be9c1563430e425c1e8c8c5e6f2be77fcb44ffc8120cd2f5e829d",
+      "surfaces": [
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/LEGAL-SOURCE-508081AAD2B2-p01.png",
+          "sha256": "7cf7962b761ecbfc7e3ff440bbc0116970ec070a43af91992c96dec746ef2230",
+          "page": 1,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/LEGAL-SOURCE-508081AAD2B2-p02.png",
+          "sha256": "7d8175ab148d41cf5bd8dde190ffff8f2b956075d6ff0cfac026f11e07088654",
+          "page": 2,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/LEGAL-SOURCE-508081AAD2B2-desktop.png",
+          "sha256": "cda9a03a91b3b08c9fd08fce6ffd533a255a446c383aa4fe5d7248502bb5f849",
+          "page": null,
+          "width": 1280
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/LEGAL-SOURCE-508081AAD2B2-mobile.png",
+          "sha256": "fa3f878fd8eeb3db32044565abc3a0aaa1e9feda414bffdeeb9bf13bb771ec56",
+          "page": null,
+          "width": 390
+        }
+      ]
+    },
+    {
+      "id": "LEGAL-SOURCE-9E57D6909035",
+      "pdf_sha256": "8b2cc2fb19132b7cb00d40555ca1f53810f51eaa4d0041d7c3ec2ef6bf1a05e2",
+      "html_sha256": "dde282d24be80d08a2de139db2137347b5247e7b833610918ad86341649a80fc",
+      "surfaces": [
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/LEGAL-SOURCE-9E57D6909035-p01.png",
+          "sha256": "90cb902b121ed8caf96472e5ccbb35325fc2f6afc965a8b3d757d3680705f481",
+          "page": 1,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/LEGAL-SOURCE-9E57D6909035-desktop.png",
+          "sha256": "a7f55891d05d80a4b77081fa69e22c78c1004bb34492c2cd68479432a5b20cc1",
+          "page": null,
+          "width": 1280
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/LEGAL-SOURCE-9E57D6909035-mobile.png",
+          "sha256": "0785312e6746239214f8f7ed7bfceb3b472e7fce87db43febb5c6ae51e21ba2e",
+          "page": null,
+          "width": 390
+        }
+      ]
+    },
+    {
+      "id": "SH-GOV-COM-AUDIT-001",
+      "pdf_sha256": "ea50873e651a57a56216af7e87a0763ae87c68cc48e260aa9ed43263da6b18e7",
+      "html_sha256": "ea3e7d74b261a229db299beddb6c41c0c49fe27c4d317a95d62ec78f68e4506b",
+      "surfaces": [
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-COM-AUDIT-001-p01.png",
+          "sha256": "0ceb075da59cc86fc805f3213b21b6e55e85aeafc78a631f0e839bd0bfb96fd2",
+          "page": 1,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-COM-AUDIT-001-desktop.png",
+          "sha256": "a08c59e7ff3b8e3464633028e04ec5c86c54fa7f971ae84c505d6aa81d356151",
+          "page": null,
+          "width": 1280
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-COM-AUDIT-001-mobile.png",
+          "sha256": "8a29427a3be7a93c3fd0166390e459e2727e5dad7f330b11b393786170dacf08",
+          "page": null,
+          "width": 390
+        }
+      ]
+    },
+    {
+      "id": "SH-GOV-COM-COMP-001",
+      "pdf_sha256": "b7a5a4aae4c2377053ecf4bb4875b35679baa7f83f33afea3f47bdbdc16bf53f",
+      "html_sha256": "ebfac5b8b7a9b86c90d355d0132ad572c20dc319946f5bf438661a0a48b06759",
+      "surfaces": [
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-COM-COMP-001-p01.png",
+          "sha256": "9088804675c2889065864fed4286bfefb6fde068d9376ec4148f827141dcda77",
+          "page": 1,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-COM-COMP-001-desktop.png",
+          "sha256": "b808a875bfe0bf0d0ce3edef6884dbfec48c5d23f5abda772f18ed40046dcea7",
+          "page": null,
+          "width": 1280
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-COM-COMP-001-mobile.png",
+          "sha256": "8b3b86b38ad33f7826b841eaa602ffa713b39e15c04aa61c7602c276d237b670",
+          "page": null,
+          "width": 390
+        }
+      ]
+    },
+    {
+      "id": "SH-GOV-COM-FIN-001",
+      "pdf_sha256": "de665fd714b32a128683736998de3b4f80f3da8387117b91c9a23f28c3c3ba03",
+      "html_sha256": "4cbd306f17bfccdb7fc6a0512abe2d25c1f39a77f10fe048ed172be2fd5962bd",
+      "surfaces": [
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-COM-FIN-001-p01.png",
+          "sha256": "922021c9b5a4e680005d0d7fab13fe882abcf8ac7468dc3fe69928271f16e793",
+          "page": 1,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-COM-FIN-001-desktop.png",
+          "sha256": "45dc6d191c5bdf8e66d0dfe980834c1e93faa2d6990eff4ce87958e7afd44db1",
+          "page": null,
+          "width": 1280
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-COM-FIN-001-mobile.png",
+          "sha256": "a68a72ae1e9148ddcdf703cfb7634be82b64b142e48e732114370e8a14c95dc2",
+          "page": null,
+          "width": 390
+        }
+      ]
+    },
+    {
+      "id": "SH-GOV-COM-GOVNOM-001",
+      "pdf_sha256": "c4bf172a1804744d472cbcab8d3073de371b08939d5bed782c74f482db196e20",
+      "html_sha256": "1c82bba0ffa8400bfd83bfd292fdd992a784dbc0289cfe7491f72a6388c391a0",
+      "surfaces": [
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-COM-GOVNOM-001-p01.png",
+          "sha256": "6a13bdbcba2a1167bb99fea9687da64799e6ed065d6c13b845a6ebcfe74a32c1",
+          "page": 1,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-COM-GOVNOM-001-desktop.png",
+          "sha256": "fee5013bc7f2696aebf7d6a1048cc40daa3d914b363c8960894aab8ade13d11d",
+          "page": null,
+          "width": 1280
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-COM-GOVNOM-001-mobile.png",
+          "sha256": "ce18bd322d51e686838e9ffd5a79eddf47c3fa17f92327f88366ed71ad3646ee",
+          "page": null,
+          "width": 390
+        }
+      ]
+    },
+    {
+      "id": "SH-GOV-COM-TECHOPS-001",
+      "pdf_sha256": "dd30939853f17a929f1ce25c991dd779ae1c554d357fb139830d599818404481",
+      "html_sha256": "634c31024e44e64227eb51de590cbdeb1e4de7e4ea0ce5b0a6c936b540f9589e",
+      "surfaces": [
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-COM-TECHOPS-001-p01.png",
+          "sha256": "10e803f93857094cd938ce0e6d5f671c1d24d90f61006f76b66f6ad083f52c1b",
+          "page": 1,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-COM-TECHOPS-001-desktop.png",
+          "sha256": "17ee1d44adc5b5d29a7db2d717ccad6378d6bef9b30b5a5eb3c21efb1a7a8d26",
+          "page": null,
+          "width": 1280
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-COM-TECHOPS-001-mobile.png",
+          "sha256": "33576e33a45b109c67d3379e4d93503e1490861dc99512fd3fae972b413c121a",
+          "page": null,
+          "width": 390
+        }
+      ]
+    },
+    {
+      "id": "SH-IND-ARU-HR-001",
+      "pdf_sha256": "c16c9aff6b96b7c4aa3439b91bd6f487b20709fa64504a5ffa0897213a3c531f",
+      "html_sha256": "09cdec3e079149f1a1b8af237fe6ca80ad2619c9ebca8e360a644ec78fd5413b",
+      "surfaces": [
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-IND-ARU-HR-001-p01.png",
+          "sha256": "2dc26d5122133bc75aeea26e3993075f6d124fa504c0ded989f523c5f810e491",
+          "page": 1,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-IND-ARU-HR-001-p02.png",
+          "sha256": "7509ff21fa62634e1329f790ed208aa28d823363b7b7c12218113140b7490f5f",
+          "page": 2,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-IND-ARU-HR-001-desktop.png",
+          "sha256": "82b1dbdbf6f331cd09a51e47308d14637cb43d449a65ca92ccf1a35e1d186b2d",
+          "page": null,
+          "width": 1280
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-IND-ARU-HR-001-mobile.png",
+          "sha256": "d22321039ec1f2a63f6d3500e7fa45ff3aa42f20f61f31af6d2ae1024d6c4047",
+          "page": null,
+          "width": 390
+        }
+      ]
+    },
+    {
+      "id": "SH-PNC-001",
+      "pdf_sha256": "e2b53bd90bd351b5ef4ee8cde881111c52bfd88177a5423cacbe97c63b568274",
+      "html_sha256": "7d64036f6f68c16dd24564ebea76d51b3e1c6877e0fed4882e0ea405d1fb1a58",
+      "surfaces": [
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-PNC-001-p01.png",
+          "sha256": "5eec2ca24f8e3bfe539fb94712078ac427e2088082d87049a676c48f04351881",
+          "page": 1,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-PNC-001-p02.png",
+          "sha256": "097e3c871a8a9f288186592199ba3a62d86635b2104c8cb20c0a00996c68d4c2",
+          "page": 2,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-PNC-001-p03.png",
+          "sha256": "3035eff3c876896c392d3d3780d0d2befdeaf5bde70b6c0318c4a7ba02f55189",
+          "page": 3,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-PNC-001-p04.png",
+          "sha256": "aa49bf4cc62cf359b92d3d9941fec39337dd35c279842f52ff06abfe0bd693ad",
+          "page": 4,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-PNC-001-desktop.png",
+          "sha256": "bde53ec44ed0fc09716a42842e072969ca9710b294ca5fe7ff47ccf9631db79c",
+          "page": null,
+          "width": 1280
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-PNC-001-mobile.png",
+          "sha256": "03db4eb61b107565a54f30eb21b1abad0ecfd96a9c493871f108aff6a1421103",
+          "page": null,
+          "width": 390
+        }
+      ]
+    },
+    {
+      "id": "SH-ADV-005",
+      "pdf_sha256": "9f748469346a36baf877b5f005ca831526225fbd24aab49ceda85a69cfabc92a",
+      "html_sha256": "0a61d1824f97629f98a68d3f8ff5a3d725af974da4ee6dcc956fa3693677bb4d",
+      "surfaces": [
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-ADV-005-p01.png",
+          "sha256": "822d37f8211dcc23eb5648e5aa7ee6ed2d34158817fbe1f0d3b672a926a643ec",
+          "page": 1,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-ADV-005-p02.png",
+          "sha256": "fe95b9e8b6aca0b145eb3fa8482f770cb09956ce82fbcfdb57d6e4a158a94141",
+          "page": 2,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-ADV-005-p03.png",
+          "sha256": "f4086aec0be09e8fd622f013a89cc9753d6b0fb5bedb349f4e652080c439465b",
+          "page": 3,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-ADV-005-p04.png",
+          "sha256": "f5907acc083eb3d373514c67c2deacb30013076405017872ce4130f1713cccfb",
+          "page": 4,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-ADV-005-p05.png",
+          "sha256": "69a6cbcb4d2d291a4a8c6d60c1d688fba9e5f06c20c0626e3c1920ddf15d213f",
+          "page": 5,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-ADV-005-p06.png",
+          "sha256": "7a3aa442d1ffa490bd1ef8b837b1d6ab874db8a324585a3d3f619d58d3cfdfc5",
+          "page": 6,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-ADV-005-desktop.png",
+          "sha256": "7abe9aff5f2e7fbc513ecbbb017b7a59ea88e2292eca3d1f7f05c30369e44d41",
+          "page": null,
+          "width": 1280
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-ADV-005-mobile.png",
+          "sha256": "d482c2d04482c567a09bcffec0ef6b3fa71001b59db583e6db807fdb91b97f3c",
+          "page": null,
+          "width": 390
+        }
+      ]
+    },
+    {
+      "id": "SH-ADV-003",
+      "pdf_sha256": "37e7d2e3a8cd866601e4af878dccdab599a11fa29b146bd9c497f348f5694ee4",
+      "html_sha256": "908b46559bc704040ea42b24bce3a97c1a464eda3f1609087b3fde160d2faca7",
+      "surfaces": [
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-ADV-003-p01.png",
+          "sha256": "e8d6346a7b79f64c91b7525e8af42f4cd6f124996804f4efda15f584e876c8bb",
+          "page": 1,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-ADV-003-p02.png",
+          "sha256": "01a303a7f161b78f590c705817239f939b9656c664170de7e73f229ae340e0c3",
+          "page": 2,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-ADV-003-p03.png",
+          "sha256": "ff27ce8c917d4bbbbf7e0d2864583bce76db9324cb80aa3a1054efdef4b29cd3",
+          "page": 3,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-ADV-003-p04.png",
+          "sha256": "86efc94664264c32fb112fe17e30dcfbda3e6e45aa39cf5bf605a52fb2dfd0ff",
+          "page": 4,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-ADV-003-p05.png",
+          "sha256": "34797e340d5e69672bfa48f544581232e58f2c0acb048b29f3b38c40a23984a1",
+          "page": 5,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-ADV-003-p06.png",
+          "sha256": "a035941b85c36a88e27dd1e16f2aa0c8dd5b12f34ee4a58c888e142c9f4dd6fd",
+          "page": 6,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-ADV-003-p07.png",
+          "sha256": "e7f6beee2fcf2db4c2bcafb4aa621ea0aea8f408c2eec2fb8b4bfe5d8232456c",
+          "page": 7,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-ADV-003-desktop.png",
+          "sha256": "11dc828da1fbe846cfacb27531f536dec751d54df70fda35c59a993db2ff11bd",
+          "page": null,
+          "width": 1280
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-ADV-003-mobile.png",
+          "sha256": "21ea0837d09e712bf51bcd9f6c6b26c777d2ce6336346fb5834158268bed00a7",
+          "page": null,
+          "width": 390
+        }
+      ]
+    },
+    {
+      "id": "SH-IND-SAF-001",
+      "pdf_sha256": "6fff991ea34e97d1bd8c5991bd1831bcb2fdb7b3aae0eb7c99810d3f6c665a74",
+      "html_sha256": "78e7f11ac02d57d54e9ffe884d0303b6af0e3c80cc52cba0522096d0a975770e",
+      "surfaces": [
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-IND-SAF-001-p01.png",
+          "sha256": "2c6719fb47c8e9ec227a133c6288390d844952f198fdea27273f9189539927de",
+          "page": 1,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-IND-SAF-001-p02.png",
+          "sha256": "bf1457a45a6dabe20632ffd779185bbba1746bf7924e18fee391d006e166c247",
+          "page": 2,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-IND-SAF-001-p03.png",
+          "sha256": "98c1647d03efea489668cae593ea1d73705efe2e04b987cd883cea699e4916eb",
+          "page": 3,
+          "width": null
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-IND-SAF-001-desktop.png",
+          "sha256": "baf5c8e366405dc026958e563ab9c30ce4522abd74007834f9cced05823247ee",
+          "page": null,
+          "width": 1280
+        },
+        {
+          "image": "docs/legal/full-text/qa/corporate-workforce/SH-IND-SAF-001-mobile.png",
+          "sha256": "8ede1aa720d82eba3bb55cbe1582fbb405c304890a1e5d85ba1616f4269b8841",
+          "page": null,
+          "width": 390
+        }
+      ]
+    }
+  ]
+}

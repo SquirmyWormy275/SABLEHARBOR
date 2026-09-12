@@ -110,7 +110,73 @@ Download the workbooks to inspect every column and row. Worksheet previews show 
 | 07 aru_acquisition_opening_tri | 16 | [Open](../../finance/evidence/tax-transaction/draft/qa/workbook-08.png) |
 | Checks | — | [Open](../../finance/evidence/tax-transaction/draft/qa/workbook-09.png) |
 
-## Legal reading records
+## Complete legal source editions
+
+These full-length editions replace the abbreviated dossiers as the primary legal reading deliverable. Every selected source is reproduced in full; a source that is itself a summary or proposal retains that status.
+
+[Full source inventory, provenance and validation](../../legal/full-text/README.md) · [Searchable local browser index](../../legal/full-text/index.html)
+
+| Complete source record | PDF | Pages | Editable HTML |
+|---|---|---:|---|
+| SH-IND-RW-TXN-001 | [Read full document](../../legal/full-text/editions/SH-IND-RW-TXN-001.pdf) | 2 | [Open locally](../../legal/full-text/editions/SH-IND-RW-TXN-001.html) |
+| SH-IND-ARU-LOI-001 | [Read full document](../../legal/full-text/editions/SH-IND-ARU-LOI-001.pdf) | 2 | [Open locally](../../legal/full-text/editions/SH-IND-ARU-LOI-001.html) |
+| SH-IND-ARU-DD-001 | [Read full document](../../legal/full-text/editions/SH-IND-ARU-DD-001.pdf) | 3 | [Open locally](../../legal/full-text/editions/SH-IND-ARU-DD-001.html) |
+| SH-IND-ARU-SPA-001 | [Read full document](../../legal/full-text/editions/SH-IND-ARU-SPA-001.pdf) | 2 | [Open locally](../../legal/full-text/editions/SH-IND-ARU-SPA-001.html) |
+| SH-IND-ARU-CLOSE-001 | [Read full document](../../legal/full-text/editions/SH-IND-ARU-CLOSE-001.pdf) | 3 | [Open locally](../../legal/full-text/editions/SH-IND-ARU-CLOSE-001.html) |
+| LEGAL-SOURCE-16BD06943F32 | [Read full document](../../legal/full-text/editions/LEGAL-SOURCE-16BD06943F32.pdf) | 5 | [Open locally](../../legal/full-text/editions/LEGAL-SOURCE-16BD06943F32.html) |
+| SH-IND-DR-001 | [Read full document](../../legal/full-text/editions/SH-IND-DR-001.pdf) | 5 | [Open locally](../../legal/full-text/editions/SH-IND-DR-001.html) |
+| SH-PS-RW-TOR-001 | [Read full document](../../legal/full-text/editions/SH-PS-RW-TOR-001.pdf) | 7 | [Open locally](../../legal/full-text/editions/SH-PS-RW-TOR-001.html) |
+| SH-IND-IC-001 | [Read full document](../../legal/full-text/editions/SH-IND-IC-001.pdf) | 5 | [Open locally](../../legal/full-text/editions/SH-IND-IC-001.html) |
+| SH-IND-IC-PRC-001 | [Read full document](../../legal/full-text/editions/SH-IND-IC-PRC-001.pdf) | 3 | [Open locally](../../legal/full-text/editions/SH-IND-IC-PRC-001.html) |
+| SH-ADV-014 | [Read full document](../../legal/full-text/editions/SH-ADV-014.pdf) | 7 | [Open locally](../../legal/full-text/editions/SH-ADV-014.html) |
+| SH-ADV-009 | [Read full document](../../legal/full-text/editions/SH-ADV-009.pdf) | 6 | [Open locally](../../legal/full-text/editions/SH-ADV-009.html) |
+| SH-ADV-007 | [Read full document](../../legal/full-text/editions/SH-ADV-007.pdf) | 6 | [Open locally](../../legal/full-text/editions/SH-ADV-007.html) |
+| SH-ADV-017 | [Read full document](../../legal/full-text/editions/SH-ADV-017.pdf) | 4 | [Open locally](../../legal/full-text/editions/SH-ADV-017.html) |
+| SH-ATL-017 | [Read full document](../../legal/full-text/editions/SH-ATL-017.pdf) | 8 | [Open locally](../../legal/full-text/editions/SH-ATL-017.html) |
+| SH-RT-CONTRACT-001 | [Read full document](../../legal/full-text/editions/SH-RT-CONTRACT-001.pdf) | 5 | [Open locally](../../legal/full-text/editions/SH-RT-CONTRACT-001.html) |
+| LEGAL-SOURCE-F1F0AD5F06DC | [Read full document](../../legal/full-text/editions/LEGAL-SOURCE-F1F0AD5F06DC.pdf) | 3 | [Open locally](../../legal/full-text/editions/LEGAL-SOURCE-F1F0AD5F06DC.html) |
+| LEGAL-SOURCE-7FFDC6FBB585 | [Read full document](../../legal/full-text/editions/LEGAL-SOURCE-7FFDC6FBB585.pdf) | 4 | [Open locally](../../legal/full-text/editions/LEGAL-SOURCE-7FFDC6FBB585.html) |
+| SH-IND-COR-001 | [Read full document](../../legal/full-text/editions/SH-IND-COR-001.pdf) | 4 | [Open locally](../../legal/full-text/editions/SH-IND-COR-001.html) |
+| SH-IND-HR-001 | [Read full document](../../legal/full-text/editions/SH-IND-HR-001.pdf) | 4 | [Open locally](../../legal/full-text/editions/SH-IND-HR-001.html) |
+| SH-GOV-BOARD-001 | [Read full document](../../legal/full-text/editions/SH-GOV-BOARD-001.pdf) | 4 | [Open locally](../../legal/full-text/editions/SH-GOV-BOARD-001.html) |
+| SH-GOV-AUTH-001 | [Read full document](../../legal/full-text/editions/SH-GOV-AUTH-001.pdf) | 2 | [Open locally](../../legal/full-text/editions/SH-GOV-AUTH-001.html) |
+| SH-GOV-ESS-001 | [Read full document](../../legal/full-text/editions/SH-GOV-ESS-001.pdf) | 3 | [Open locally](../../legal/full-text/editions/SH-GOV-ESS-001.html) |
+| SH-CORP-HQ-20260903 | [Read full document](../../legal/full-text/editions/SH-CORP-HQ-20260903.pdf) | 12 | [Open locally](../../legal/full-text/editions/SH-CORP-HQ-20260903.html) |
+| SH-J2-PPL-20260910 | [Read full document](../../legal/full-text/editions/SH-J2-PPL-20260910.pdf) | 3 | [Open locally](../../legal/full-text/editions/SH-J2-PPL-20260910.html) |
+| SH-LEGAL-ADV-001 | [Read full document](../../legal/full-text/editions/SH-LEGAL-ADV-001.pdf) | 2 | [Open locally](../../legal/full-text/editions/SH-LEGAL-ADV-001.html) |
+| SH-BRD-MIN-2021-06-18 | [Read full document](../../legal/full-text/editions/SH-BRD-MIN-2021-06-18.pdf) | 2 | [Open locally](../../legal/full-text/editions/SH-BRD-MIN-2021-06-18.html) |
+| SH-BRD-MIN-2022-10-28 | [Read full document](../../legal/full-text/editions/SH-BRD-MIN-2022-10-28.pdf) | 2 | [Open locally](../../legal/full-text/editions/SH-BRD-MIN-2022-10-28.html) |
+| SH-BRD-MIN-2024-02-15 | [Read full document](../../legal/full-text/editions/SH-BRD-MIN-2024-02-15.pdf) | 2 | [Open locally](../../legal/full-text/editions/SH-BRD-MIN-2024-02-15.html) |
+| SH-BRD-CONSENT-2026-09-02 | [Read full document](../../legal/full-text/editions/SH-BRD-CONSENT-2026-09-02.pdf) | 3 | [Open locally](../../legal/full-text/editions/SH-BRD-CONSENT-2026-09-02.html) |
+| LEGAL-SOURCE-801955F60F74 | [Read full document](../../legal/full-text/editions/LEGAL-SOURCE-801955F60F74.pdf) | 1 | [Open locally](../../legal/full-text/editions/LEGAL-SOURCE-801955F60F74.html) |
+| LEGAL-SOURCE-46256BC2255E | [Read full document](../../legal/full-text/editions/LEGAL-SOURCE-46256BC2255E.pdf) | 2 | [Open locally](../../legal/full-text/editions/LEGAL-SOURCE-46256BC2255E.html) |
+| LEGAL-SOURCE-508081AAD2B2 | [Read full document](../../legal/full-text/editions/LEGAL-SOURCE-508081AAD2B2.pdf) | 2 | [Open locally](../../legal/full-text/editions/LEGAL-SOURCE-508081AAD2B2.html) |
+| LEGAL-SOURCE-9E57D6909035 | [Read full document](../../legal/full-text/editions/LEGAL-SOURCE-9E57D6909035.pdf) | 1 | [Open locally](../../legal/full-text/editions/LEGAL-SOURCE-9E57D6909035.html) |
+| SH-GOV-COM-AUDIT-001 | [Read full document](../../legal/full-text/editions/SH-GOV-COM-AUDIT-001.pdf) | 1 | [Open locally](../../legal/full-text/editions/SH-GOV-COM-AUDIT-001.html) |
+| SH-GOV-COM-COMP-001 | [Read full document](../../legal/full-text/editions/SH-GOV-COM-COMP-001.pdf) | 1 | [Open locally](../../legal/full-text/editions/SH-GOV-COM-COMP-001.html) |
+| SH-GOV-COM-FIN-001 | [Read full document](../../legal/full-text/editions/SH-GOV-COM-FIN-001.pdf) | 1 | [Open locally](../../legal/full-text/editions/SH-GOV-COM-FIN-001.html) |
+| SH-GOV-COM-GOVNOM-001 | [Read full document](../../legal/full-text/editions/SH-GOV-COM-GOVNOM-001.pdf) | 1 | [Open locally](../../legal/full-text/editions/SH-GOV-COM-GOVNOM-001.html) |
+| SH-GOV-COM-TECHOPS-001 | [Read full document](../../legal/full-text/editions/SH-GOV-COM-TECHOPS-001.pdf) | 1 | [Open locally](../../legal/full-text/editions/SH-GOV-COM-TECHOPS-001.html) |
+| SH-IND-ARU-HR-001 | [Read full document](../../legal/full-text/editions/SH-IND-ARU-HR-001.pdf) | 2 | [Open locally](../../legal/full-text/editions/SH-IND-ARU-HR-001.html) |
+| SH-PNC-001 | [Read full document](../../legal/full-text/editions/SH-PNC-001.pdf) | 4 | [Open locally](../../legal/full-text/editions/SH-PNC-001.html) |
+| SH-ADV-005 | [Read full document](../../legal/full-text/editions/SH-ADV-005.pdf) | 6 | [Open locally](../../legal/full-text/editions/SH-ADV-005.html) |
+| SH-ADV-003 | [Read full document](../../legal/full-text/editions/SH-ADV-003.pdf) | 7 | [Open locally](../../legal/full-text/editions/SH-ADV-003.html) |
+| SH-IND-SAF-001 | [Read full document](../../legal/full-text/editions/SH-IND-SAF-001.pdf) | 3 | [Open locally](../../legal/full-text/editions/SH-IND-SAF-001.html) |
+| SH-CRD-CLOSEOUT-20260906 | [Read full document](../../legal/full-text/editions/SH-CRD-CLOSEOUT-20260906.pdf) | 7 | [Open locally](../../legal/full-text/editions/SH-CRD-CLOSEOUT-20260906.html) |
+| SH-CANON-WIL-KLEIN-20260906-001 | [Read full document](../../legal/full-text/editions/SH-CANON-WIL-KLEIN-20260906-001.pdf) | 5 | [Open locally](../../legal/full-text/editions/SH-CANON-WIL-KLEIN-20260906-001.html) |
+| SH-RT-DEED-001 | [Read full document](../../legal/full-text/editions/SH-RT-DEED-001.pdf) | 2 | [Open locally](../../legal/full-text/editions/SH-RT-DEED-001.html) |
+| SH-RT-DEC-001 | [Read full document](../../legal/full-text/editions/SH-RT-DEC-001.pdf) | 3 | [Open locally](../../legal/full-text/editions/SH-RT-DEC-001.html) |
+| LEGAL-SOURCE-920F33E127C0 | [Read full document](../../legal/full-text/editions/LEGAL-SOURCE-920F33E127C0.pdf) | 3 | [Open locally](../../legal/full-text/editions/LEGAL-SOURCE-920F33E127C0.html) |
+| LEGAL-SOURCE-A709ECAC08C4 | [Read full document](../../legal/full-text/editions/LEGAL-SOURCE-A709ECAC08C4.pdf) | 3 | [Open locally](../../legal/full-text/editions/LEGAL-SOURCE-A709ECAC08C4.html) |
+| LEGAL-SOURCE-273909FD1A3E | [Read full document](../../legal/full-text/editions/LEGAL-SOURCE-273909FD1A3E.pdf) | 3 | [Open locally](../../legal/full-text/editions/LEGAL-SOURCE-273909FD1A3E.html) |
+| SH-IND-ARU-TAX-001 | [Read full document](../../legal/full-text/editions/SH-IND-ARU-TAX-001.pdf) | 4 | [Open locally](../../legal/full-text/editions/SH-IND-ARU-TAX-001.html) |
+| SH-IND-FIN-TXN-001 | [Read full document](../../legal/full-text/editions/SH-IND-FIN-TXN-001.pdf) | 5 | [Open locally](../../legal/full-text/editions/SH-IND-FIN-TXN-001.html) |
+| SH-IND-FIN-DRV-001 | [Read full document](../../legal/full-text/editions/SH-IND-FIN-DRV-001.pdf) | 4 | [Open locally](../../legal/full-text/editions/SH-IND-FIN-DRV-001.html) |
+| LEGAL-SOURCE-FCEBAA48286F | [Read full document](../../legal/full-text/editions/LEGAL-SOURCE-FCEBAA48286F.pdf) | 1 | [Open locally](../../legal/full-text/editions/LEGAL-SOURCE-FCEBAA48286F.html) |
+| SH-RT-FINANCE-001 | [Read full document](../../legal/full-text/editions/SH-RT-FINANCE-001.pdf) | 4 | [Open locally](../../legal/full-text/editions/SH-RT-FINANCE-001.html) |
+## Earlier abbreviated reading aids
+
+These 13 summaries are retained for comparison. They do not constitute full legal-document delivery.
 
 | Record | PDF | Editable HTML |
 |---|---|---|
@@ -133,3 +199,5 @@ Download the workbooks to inspect every column and row. Worksheet previews show 
 [Accounting contact sheets and browser index](../../finance/evidence/coverage/draft-review/index.html) · [Accounting QA record](../../finance/evidence/coverage/draft-review/QA.json) · [Legal page review](../../legal/evidence/assets-rights/drafts/qa/REVIEW.md)
 
 GitHub previews Markdown and images. Download/open HTML locally from the checkout; GitHub file preview does not execute it. Approval must name the exact files or manifest version; a source merge does not accept these designs.
+
+[Full-length legal delivery and validation](../../legal/full-text/CLOSEOUT.md) · [Every full-length page and HTML review record](../../legal/full-text/QA_MANIFEST.json)
