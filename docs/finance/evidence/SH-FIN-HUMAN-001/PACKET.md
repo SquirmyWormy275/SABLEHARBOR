@@ -56,4 +56,4 @@ No customer address, tax specification, payment instructions, signed contract, b
 
 Source: `business-operations-v1.0.0`, published September 11, 2026. Source revision: `57cfa1b1c483ccf1f8b15d82c4cbdadbeef8063e`. Invoice-specific extracts come from `units/foundry-field/` in that release. The package manifest records the verified archive SHA-256, source-member hashes and derivative hashes. The native reporting database is the release's `units/foundry-field/evidence.sqlite3`.
 
-This draft requires review of these exact files before adoption. It changes no financial source, journal, approved artwork or prior release. Its package-local catalog record awaits integration with the repository catalog.
+This draft requires review of these exact files before adoption. It changes no financial source, journal, approved artwork or prior release. Its catalog record links this draft to the existing institutional database through reader_evidence_link; discovery does not constitute approval.

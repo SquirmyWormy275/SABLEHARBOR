@@ -7,7 +7,7 @@ Open [the local review page](review.html) in a browser for the retained corporat
 The packet follows invoice `INV-base-FF-003-TERM-0`, base scenario, from January billing to October 2027 recovery. It contains one invoice, one contract, two first-term contract versions, five movements, two credit notes, six source events and twelve journal lines. No source amounts, financial models or approved artwork were changed.
 
 - [Complete selected rows and source-member hashes](source.json)
-- [Accounting-ID and human-artifact catalog record](catalog.json) — pending global catalog integration by the main workline
+- [Accounting-ID and human-artifact catalog record](catalog.json) — linked in the existing institutional database through `reader_evidence_link`, retaining draft status
 - [Draft artifact manifest](manifest.json)
 - [Visual review and limitations](qa/REVIEW.md)
 

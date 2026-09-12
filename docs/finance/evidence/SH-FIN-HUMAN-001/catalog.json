@@ -1,12 +1,12 @@
 {
   "artifacts": {
-    "PACKET.md": "9e4cf08fa11da8bfa6aea2fc941d777f1c71e6cf328823d3c70aec4c03870b60",
-    "build.py": "c8af6f7f0e4bbb8fa7b38a539bbc9e39a44772bd37a7add39c315c40916bcc83",
-    "packet.pdf": "e3cfc81735d5fa9e99846ae5f4bbde22b056aa960b4573833129c9f2429c5892",
+    "PACKET.md": "1b7828cb0a69551ef5ff14fad874bdc6222f697679e4163933d3a6f85f27f60c",
+    "build.py": "383361c4edeae6d1c777ee83486f13ffd2b63a45f699ffc2880c567b5cc686f9",
+    "packet.pdf": "00d0a7f3b831e26982dcbaf965c280f6df2a33e6bc1568bac027f65e475d9244",
     "reconciliation.xlsx": "7077ec3ae8e796a6f94759fe19624ab51a11ac45b7ce538a0c447b4c9c384214",
     "source.json": "c4833cfc6f28db6cd3edcae761b0e2d8f463a20de79f1d6fd5b0c517f8f829b7"
   },
-  "catalog_integration": "PENDING_PARENT_REVIEW; no global catalog changes in this branch",
+  "catalog_integration": "reader_evidence_link in institutional_catalog.sqlite3; draft discovery only",
   "document_id": "SH-FIN-HUMAN-001",
   "effective_period": "2027-01 through 2027-10",
   "fact_state": "PUBLIC_SYNTHETIC_CONDITIONAL_FORECAST",

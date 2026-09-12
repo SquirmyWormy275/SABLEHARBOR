@@ -71,3 +71,34 @@ class ReaderLibraryTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+class EvidenceLinkTests(unittest.TestCase):
+    def test_packet_discovery_preserves_draft_and_paths(self):
+        records = library.evidence_records(ROOT)
+        selected = next(row for row in records if row[0] == 'SH-FIN-HUMAN-001')
+        self.assertEqual(selected[1], 'DRAFT_FOR_USER_REVIEW')
+        self.assertEqual(selected[2], 'INV-base-FF-003-TERM-0')
+        self.assertEqual(selected[3:5], ('base', 'foundry-field'))
+        self.assertTrue(selected[11].endswith('/PACKET.md'))
+        self.assertTrue(selected[12].endswith('/packet.pdf'))
+        self.assertTrue(selected[13].endswith('/reconciliation.xlsx'))
+
+    def test_changed_evidence_and_broken_link_rejected(self):
+        import shutil
+        import json
+        source = ROOT / 'docs/finance/evidence/SH-FIN-HUMAN-001'
+        for change in ('bytes', 'missing', 'scope'):
+            with self.subTest(change=change), tempfile.TemporaryDirectory() as temporary:
+                root = Path(temporary)
+                dest = root / 'docs/finance/evidence/SH-FIN-HUMAN-001'
+                shutil.copytree(source, dest)
+                if change == 'bytes':
+                    (dest / 'packet.pdf').write_bytes(b'changed')
+                elif change == 'missing':
+                    (dest / 'reconciliation.xlsx').unlink()
+                else:
+                    catalog = json.loads((dest / 'catalog.json').read_text())
+                    catalog['scenario'] = 'downside'
+                    (dest / 'catalog.json').write_text(json.dumps(catalog))
+                with self.assertRaises(ValueError):
+                    library.evidence_records(root)

@@ -24,6 +24,8 @@ Rendered the two packet pages and all five workbook sheets using the actual PDF 
 - Increased footer clearance after the initial print export clipped the footer.
 - Explicitly wrapped the collected-total column header to separate it from the native-ID heading.
 
+- Following parent review, replaced the inherited "Controlled publication" footer with "Draft reconstruction" in the scoped renderer and updated the database-discovery sentence. No other packet layout/content changed in that correction.
+
 The corporate reference is a retained blank stationery layout, while the draft uses the repository's existing controlled-publication body style. The comparison labels that difference; it does not imply a new letterhead was previously approved. Logos, their geometry and approved source bytes are unchanged.
 
 ## Validation evidence
@@ -36,4 +38,4 @@ Fresh extraction from the verified released archive exactly matched committed `s
 
 ## Remaining limits
 
-User acceptance and repository catalog integration are pending. The packet is invoice-specific, excluding pooled allowance and contract-wide revenue recognition. It provides no signed agreement, bank statement, tax specification, payment instructions or independently confirmed receipt. Closed ledger AR is zero; the derived $971,500 written-off claim is not recognized as an asset by this packet. Separate SOC/CCF implementation is untouched.
+User acceptance is pending. Draft discovery is integrated through `reader_evidence_link` in the existing institutional database. The packet is invoice-specific, excluding pooled allowance and contract-wide revenue recognition. It provides no signed agreement, bank statement, tax specification, payment instructions or independently confirmed receipt. Closed ledger AR is zero; the derived $971,500 written-off claim is not recognized as an asset by this packet. Separate SOC/CCF implementation is untouched.
