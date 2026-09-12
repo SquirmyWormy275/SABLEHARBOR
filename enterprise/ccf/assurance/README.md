@@ -194,3 +194,7 @@ The comparison rejects lost baseline duties, changed baseline procedures, duplic
 `SOURCE_DEPENDENCIES.json` retains unresolved ISO normative/context references, HIPAA current-law reconciliation and C5 parent/customer/method review. BSI Standard 200-4 (German, 2023) was acquired from BSI on September 12, 2026; only identity/provenance was checked. Its content needs qualified review. Licensed originals and populated deliverables stay in private SABLEHARBOR holdings; Atlas remains a reference guide.
 
 Verification checks file hashes and rebuilds the entire bundle from source inputs, so editing results and resealing the manifest does not establish acceptance. Operational use still needs actual entity/service and PHI facts, appointments, commitments, source populations, an assessment period and independent review.
+
+## Baseline evidence intake and durable workflow
+
+The [local evidence workflow](../operations/README.md) imports the verified 210-row reference checklist into control-specific test plans. Eight controls have bounded automated assertions alongside mandatory manual observations; the remaining baseline controls retain manual tests. Authenticated local commands register independent populations, retain raw JSON exports, enforce scoped review separation and preserve findings through retests and prospective closure. The private SQLite history replays on reopen and report. These mechanics do not establish framework acceptance, live vendor integrations or a deployed multi-user service.
