@@ -6,8 +6,8 @@ Generated reconciliation queue, not an assertion that every unpaired record lack
 
 | State | Records |
 |---|---:|
-| COUNTERPART_REVIEW_REQUIRED | 446 |
-| READER_OR_MAINTENANCE_PAGE | 98 |
+| COUNTERPART_REVIEW_REQUIRED | 448 |
+| READER_OR_MAINTENANCE_PAGE | 99 |
 | VERIFIED_DOCUMENT_PAIR | 131 |
 
 ## Records requiring counterpart reconciliation
@@ -219,6 +219,7 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [CCF preparation delivery — September 11, 2026](../../internal/development/CCF_PREPARATION_DELIVERY_2026-09-11.md) — Corporate document-format reconciliation
 - [Approved reference assessment preparation](../../internal/development/CCF_REFERENCE_ASSESSMENT_DELIVERY_2026-09-11.md) — Corporate document-format reconciliation
 - [CCF publisher-source search follow-up](../../internal/development/CCF_SOURCE_SEARCH_FOLLOWUP_2026-09-11.md) — Corporate document-format reconciliation
+- [CCF substantive source comparison delivery](../../internal/development/CCF_SUBSTANTIVE_SOURCE_REVIEW_2026-09-12.md) — Corporate document-format reconciliation
 - [PR #119 — Runtime Estate Completion Handover](../../internal/development/PR119_RUNTIME_ESTATE_COMPLETION_HANDOVER_2026-09-11.md) — Corporate document-format reconciliation
 - [Sable Harbor — business-line development review](../../internal/development/REPOSITORY_DEVELOPMENT_REVIEW_2026-09-09.md) — Corporate document-format reconciliation
 - [Third-party services and internal operations — assessment for discussion](../../internal/development/THIRD_PARTY_SERVICES_ASSESSMENT_2026-09-09.md) — Corporate document-format reconciliation
@@ -326,6 +327,7 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Operating decisions needed to complete the CCF](../../../enterprise/ccf/assurance/completion_data/DECISIONS.md) — Corporate document-format reconciliation
 - [Reference service description workpaper](../../../enterprise/ccf/assurance/design_data/SERVICE_DESCRIPTION.md) — Corporate document-format reconciliation
 - [ISO extension implementation plan](../../../enterprise/ccf/assurance/iso_data/IMPLEMENTATION_PLAN.md) — Corporate document-format reconciliation
+- [Review basis, findings and remaining decisions](../../../enterprise/ccf/assurance/review_data/REVIEW_NOTES.md) — Corporate document-format reconciliation
 - [Tier 1 Advisory policy integration](../../../enterprise/operations/docs/advisory-policy.md) — SH-FIN-HUMAN-001
 - [Commercial operations and contract economics](../../../enterprise/operations/docs/commercial.md) — SH-FIN-HUMAN-001
 - [Synthetic control execution and evidence](../../../enterprise/operations/docs/controls.md) — SH-FIN-HUMAN-001
