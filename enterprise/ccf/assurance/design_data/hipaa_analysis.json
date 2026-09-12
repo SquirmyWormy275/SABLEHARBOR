@@ -1,0 +1,512 @@
+[
+  {
+    "locator": "160.101",
+    "proposed_role_treatment": "CONTEXT",
+    "design_analysis": "Identify statutory authority and the administrative-simplification context; retain as interpretive context rather than a separate operating safeguard."
+  },
+  {
+    "locator": "160.102",
+    "proposed_role_treatment": "ROLE_GATE",
+    "design_analysis": "Determine whether the actual legal entity and function are covered; assess business-associate duties under the applicable subparts."
+  },
+  {
+    "locator": "160.103",
+    "proposed_role_treatment": "ROLE_GATE",
+    "design_analysis": "Resolve covered entity, business associate, subcontractor, workforce and PHI definitions against actual functions; a vendor label alone does not establish status."
+  },
+  {
+    "locator": "160.104",
+    "proposed_role_treatment": "CHANGE_CONTEXT",
+    "design_analysis": "Monitor changes to standards and specifications; do not treat modification mechanics as a deployed control."
+  },
+  {
+    "locator": "160.105",
+    "proposed_role_treatment": "DATE_CONTEXT",
+    "design_analysis": "Determine applicable transition dates for new or modified requirements from the actual rule and entity facts."
+  },
+  {
+    "locator": "160.201",
+    "proposed_role_treatment": "CONTEXT",
+    "design_analysis": "Retain statutory preemption authority for legal analysis of competing obligations."
+  },
+  {
+    "locator": "160.202",
+    "proposed_role_treatment": "LEGAL_CONFLICT",
+    "design_analysis": "Apply the defined tests for contrary and more-stringent law before resolving state/federal conflicts."
+  },
+  {
+    "locator": "160.203",
+    "proposed_role_treatment": "LEGAL_CONFLICT",
+    "design_analysis": "Assess preemption exceptions and more-protective state law using actual data, jurisdictions and service roles; do not assume HIPAA is the only applicable privacy law."
+  },
+  {
+    "locator": "160.204",
+    "proposed_role_treatment": "CONDITIONAL_PROCESS",
+    "design_analysis": "If an exception determination is sought, legal owns the submission, factual basis and correspondence."
+  },
+  {
+    "locator": "160.205",
+    "proposed_role_treatment": "CONDITIONAL_PROCESS",
+    "design_analysis": "Track the duration and changing factual basis of any exception determination before relying on it."
+  },
+  {
+    "locator": "160.300",
+    "proposed_role_treatment": "ENFORCEMENT_CONTEXT",
+    "design_analysis": "Identify scope of compliance and investigation provisions for the regulated entity."
+  },
+  {
+    "locator": "160.302",
+    "proposed_role_treatment": "RESERVED",
+    "design_analysis": "Retain the reserved section in the inventory; propose no substantive control obligation."
+  },
+  {
+    "locator": "160.304",
+    "proposed_role_treatment": "ENFORCEMENT_CONTEXT",
+    "design_analysis": "Support cooperation and compliance assistance without treating assistance as an assurance opinion."
+  },
+  {
+    "locator": "160.306",
+    "proposed_role_treatment": "CONDITIONAL_PROCESS",
+    "design_analysis": "Route regulatory complaints to legal; preserve complaint facts, dates and protected reporting channels."
+  },
+  {
+    "locator": "160.308",
+    "proposed_role_treatment": "CONDITIONAL_PROCESS",
+    "design_analysis": "On a compliance review, preserve relevant records and coordinate truthful responses through legal."
+  },
+  {
+    "locator": "160.310",
+    "proposed_role_treatment": "DIRECT_CANDIDATE",
+    "design_analysis": "Maintain required records and cooperation/access capability for HHS investigations; bind response scope and custodians to the actual request."
+  },
+  {
+    "locator": "160.312",
+    "proposed_role_treatment": "CONDITIONAL_PROCESS",
+    "design_analysis": "Track investigation findings, resolution terms and enforcement communications through legal."
+  },
+  {
+    "locator": "160.314",
+    "proposed_role_treatment": "CONDITIONAL_PROCESS",
+    "design_analysis": "Validate subpoenas and inquiries, preserve responsive evidence and track response obligations."
+  },
+  {
+    "locator": "160.316",
+    "proposed_role_treatment": "DIRECT_CANDIDATE",
+    "design_analysis": "Prohibit intimidation and retaliation for protected participation; separate investigation access from personnel decisions and preserve complaint handling evidence."
+  },
+  {
+    "locator": "160.400",
+    "proposed_role_treatment": "ENFORCEMENT_CONTEXT",
+    "design_analysis": "Record applicability of civil-money-penalty provisions; this is enforcement context, not a recurring technical test."
+  },
+  {
+    "locator": "160.401",
+    "proposed_role_treatment": "ENFORCEMENT_CONTEXT",
+    "design_analysis": "Apply penalty-subpart definitions when analyzing exposure and defenses."
+  },
+  {
+    "locator": "160.402",
+    "proposed_role_treatment": "ENFORCEMENT_CONTEXT",
+    "design_analysis": "Analyze potential violations and agency relationships from actual facts; vendor outsourcing does not remove all regulated-entity exposure."
+  },
+  {
+    "locator": "160.404",
+    "proposed_role_treatment": "ENFORCEMENT_CONTEXT",
+    "design_analysis": "Verify current penalty amounts from applicable primary inflation-adjustment sources if exposure modeling becomes necessary; do not hard-code a stale amount."
+  },
+  {
+    "locator": "160.406",
+    "proposed_role_treatment": "ENFORCEMENT_CONTEXT",
+    "design_analysis": "Preserve timing and occurrence evidence needed to analyze repeated violations."
+  },
+  {
+    "locator": "160.408",
+    "proposed_role_treatment": "ENFORCEMENT_CONTEXT",
+    "design_analysis": "Preserve harm, history, financial and other relevant facts for penalty-factor analysis."
+  },
+  {
+    "locator": "160.410",
+    "proposed_role_treatment": "CONDITIONAL_PROCESS",
+    "design_analysis": "Evaluate affirmative defenses and correction timing using evidence; remediation does not automatically establish a defense."
+  },
+  {
+    "locator": "160.412",
+    "proposed_role_treatment": "CONDITIONAL_PROCESS",
+    "design_analysis": "Legal evaluates waiver conditions and records any request and disposition."
+  },
+  {
+    "locator": "160.414",
+    "proposed_role_treatment": "CONDITIONAL_PROCESS",
+    "design_analysis": "Legal tracks limitations periods from actual facts and applicable authority."
+  },
+  {
+    "locator": "160.416",
+    "proposed_role_treatment": "CONDITIONAL_PROCESS",
+    "design_analysis": "Route settlement authority and proposed terms through authorized legal/governance approval."
+  },
+  {
+    "locator": "160.418",
+    "proposed_role_treatment": "ENFORCEMENT_CONTEXT",
+    "design_analysis": "Consider other available legal consequences separately from civil money penalties."
+  },
+  {
+    "locator": "160.420",
+    "proposed_role_treatment": "CONDITIONAL_PROCESS",
+    "design_analysis": "Log receipt of a proposed determination and immediately docket response/hearing deadlines."
+  },
+  {
+    "locator": "160.422",
+    "proposed_role_treatment": "CONDITIONAL_PROCESS",
+    "design_analysis": "Track consequences of failing to request a hearing; preserve proof of timely filing."
+  },
+  {
+    "locator": "160.424",
+    "proposed_role_treatment": "CONDITIONAL_PROCESS",
+    "design_analysis": "Coordinate any penalty collection through legal and finance with authorized settlement/payment records."
+  },
+  {
+    "locator": "160.426",
+    "proposed_role_treatment": "CONDITIONAL_PROCESS",
+    "design_analysis": "Assess regulator public/agency notification consequences and prepare accurate authorized communications."
+  },
+  {
+    "locator": "160.500",
+    "proposed_role_treatment": "ENFORCEMENT_CONTEXT",
+    "design_analysis": "Retain hearing-procedure scope for a triggered enforcement matter."
+  },
+  {
+    "locator": "160.502",
+    "proposed_role_treatment": "ENFORCEMENT_CONTEXT",
+    "design_analysis": "Apply hearing-subpart definitions to the case record."
+  },
+  {
+    "locator": "160.504",
+    "proposed_role_treatment": "CONDITIONAL_PROCESS",
+    "design_analysis": "Docket any request for an ALJ hearing and preserve filing/service evidence."
+  },
+  {
+    "locator": "160.506",
+    "proposed_role_treatment": "CONDITIONAL_PROCESS",
+    "design_analysis": "Record party rights, authorized representation and case participation decisions."
+  },
+  {
+    "locator": "160.508",
+    "proposed_role_treatment": "CONDITIONAL_PROCESS",
+    "design_analysis": "Track ALJ orders and comply with lawful procedural directions."
+  },
+  {
+    "locator": "160.510",
+    "proposed_role_treatment": "CONDITIONAL_PROCESS",
+    "design_analysis": "Control case communications to avoid prohibited ex parte contacts."
+  },
+  {
+    "locator": "160.512",
+    "proposed_role_treatment": "CONDITIONAL_PROCESS",
+    "design_analysis": "Prepare authorized representatives and preserve prehearing orders and commitments."
+  },
+  {
+    "locator": "160.514",
+    "proposed_role_treatment": "CONDITIONAL_PROCESS",
+    "design_analysis": "Use authorized settlement review and retain final agreement and implementation duties."
+  },
+  {
+    "locator": "160.516",
+    "proposed_role_treatment": "CONDITIONAL_PROCESS",
+    "design_analysis": "Preserve discoverable material, validate requests and record production scope, holds and objections."
+  },
+  {
+    "locator": "160.518",
+    "proposed_role_treatment": "CONDITIONAL_PROCESS",
+    "design_analysis": "Docket required witness/exhibit exchange and preserve versioned submissions."
+  },
+  {
+    "locator": "160.520",
+    "proposed_role_treatment": "CONDITIONAL_PROCESS",
+    "design_analysis": "Validate attendance subpoenas and coordinate witness compliance through legal."
+  },
+  {
+    "locator": "160.522",
+    "proposed_role_treatment": "CONDITIONAL_PROCESS",
+    "design_analysis": "Track applicable witness fees and authorized payments if a hearing occurs."
+  },
+  {
+    "locator": "160.524",
+    "proposed_role_treatment": "CONDITIONAL_PROCESS",
+    "design_analysis": "Validate filing form, service method and proof for each case submission."
+  },
+  {
+    "locator": "160.526",
+    "proposed_role_treatment": "CONDITIONAL_PROCESS",
+    "design_analysis": "Compute case deadlines using the applicable time rule and independently check the docket."
+  },
+  {
+    "locator": "160.528",
+    "proposed_role_treatment": "CONDITIONAL_PROCESS",
+    "design_analysis": "Route motions and responses through counsel; preserve filed versions and service."
+  },
+  {
+    "locator": "160.530",
+    "proposed_role_treatment": "CONDITIONAL_PROCESS",
+    "design_analysis": "Track procedural compliance and any sanctions; escalate missed orders and deadlines."
+  },
+  {
+    "locator": "160.532",
+    "proposed_role_treatment": "CONDITIONAL_PROCESS",
+    "design_analysis": "Assess preclusion effects of prior determinations using the actual case record."
+  },
+  {
+    "locator": "160.534",
+    "proposed_role_treatment": "CONDITIONAL_PROCESS",
+    "design_analysis": "Prepare and preserve hearing proceedings through authorized representation."
+  },
+  {
+    "locator": "160.536",
+    "proposed_role_treatment": "ENFORCEMENT_CONTEXT",
+    "design_analysis": "Assess regulator statistical sampling in an enforcement matter; do not reuse it as an assurance sample-size rule."
+  },
+  {
+    "locator": "160.538",
+    "proposed_role_treatment": "CONDITIONAL_PROCESS",
+    "design_analysis": "Prepare witnesses and preserve authorized testimony handling and required attendance."
+  },
+  {
+    "locator": "160.540",
+    "proposed_role_treatment": "CONDITIONAL_PROCESS",
+    "design_analysis": "Maintain evidence provenance and address admissibility under the hearing rules."
+  },
+  {
+    "locator": "160.542",
+    "proposed_role_treatment": "CONDITIONAL_PROCESS",
+    "design_analysis": "Reconcile the official hearing record and preserve authorized copies and corrections."
+  },
+  {
+    "locator": "160.544",
+    "proposed_role_treatment": "CONDITIONAL_PROCESS",
+    "design_analysis": "Docket and submit authorized post-hearing briefs with filing evidence."
+  },
+  {
+    "locator": "160.546",
+    "proposed_role_treatment": "CONDITIONAL_PROCESS",
+    "design_analysis": "Record the ALJ decision, consequences and next deadlines."
+  },
+  {
+    "locator": "160.548",
+    "proposed_role_treatment": "CONDITIONAL_PROCESS",
+    "design_analysis": "Evaluate appeal rights and deadlines; retain authorization and filings."
+  },
+  {
+    "locator": "160.550",
+    "proposed_role_treatment": "CONDITIONAL_PROCESS",
+    "design_analysis": "Track any requested or granted stay and its effect before relying on it."
+  },
+  {
+    "locator": "160.552",
+    "proposed_role_treatment": "ENFORCEMENT_CONTEXT",
+    "design_analysis": "Counsel assesses procedural error under the applicable standard; do not infer that a control failure is harmless."
+  },
+  {
+    "locator": "164.102",
+    "proposed_role_treatment": "CONTEXT",
+    "design_analysis": "Retain statutory basis for the security/privacy requirements."
+  },
+  {
+    "locator": "164.103",
+    "proposed_role_treatment": "ROLE_GATE",
+    "design_analysis": "Apply organizational and workforce definitions to the actual contracting and operating entities."
+  },
+  {
+    "locator": "164.104",
+    "proposed_role_treatment": "ROLE_GATE",
+    "design_analysis": "Confirm applicability using actual covered-entity/associate functions; reference approval alone is not entity classification."
+  },
+  {
+    "locator": "164.105",
+    "proposed_role_treatment": "CONDITIONAL_ORGANIZATION",
+    "design_analysis": "Assess hybrid/affiliated entity arrangements only if facts support them; the reference scope does not create a designation or combined entity."
+  },
+  {
+    "locator": "164.106",
+    "proposed_role_treatment": "CONTEXT",
+    "design_analysis": "Read Part 164 together with applicable general provisions and other parts."
+  },
+  {
+    "locator": "164.302",
+    "proposed_role_treatment": "DIRECT_CANDIDATE",
+    "design_analysis": "For the proposed associate/subcontractor role handling ePHI, design Security Rule safeguards for actual created, received, maintained or transmitted information."
+  },
+  {
+    "locator": "164.304",
+    "proposed_role_treatment": "CONTEXT",
+    "design_analysis": "Apply security definitions to systems, media, access and incidents before choosing safeguards."
+  },
+  {
+    "locator": "164.306",
+    "proposed_role_treatment": "DIRECT_CANDIDATE",
+    "design_analysis": "Document risk-based safeguard selection, continuing review and every addressable determination; addressable does not mean optional and equivalent alternatives need documented analysis."
+  },
+  {
+    "locator": "164.308",
+    "proposed_role_treatment": "DIRECT_CANDIDATE",
+    "design_analysis": "Implement risk analysis/management, accountable security responsibility, sanctions, activity review, workforce/access management, awareness, incident response, contingency, evaluation and associate arrangements; preserve required/addressable distinctions."
+  },
+  {
+    "locator": "164.310",
+    "proposed_role_treatment": "DIRECT_CANDIDATE",
+    "design_analysis": "Design facility access, workstation use/security and device/media handling for corporate administration and both sites; obtain provider evidence and document local duties and addressable analysis."
+  },
+  {
+    "locator": "164.312",
+    "proposed_role_treatment": "DIRECT_CANDIDATE",
+    "design_analysis": "Specify access control, audit, integrity, identity authentication and transmission safeguards; document encryption/decryption and automatic-logoff addressable decisions and emergency access."
+  },
+  {
+    "locator": "164.314",
+    "proposed_role_treatment": "DIRECT_CANDIDATE",
+    "design_analysis": "Flow required security duties, reporting and subcontractor safeguards through associate agreements; analyze any special organizational arrangements separately."
+  },
+  {
+    "locator": "164.316",
+    "proposed_role_treatment": "DIRECT_CANDIDATE",
+    "design_analysis": "Maintain written security policies and required documentation, retain it for six years from creation or last effective date as applicable, make it available and update it after relevant changes."
+  },
+  {
+    "locator": "164.318",
+    "proposed_role_treatment": "DATE_CONTEXT",
+    "design_analysis": "Retain historical initial compliance dates; they do not grant a new implementation grace period for this service."
+  },
+  {
+    "locator": "164.400",
+    "proposed_role_treatment": "ROLE_GATE",
+    "design_analysis": "Determine breach-subpart scope from unsecured PHI and the regulated relationship."
+  },
+  {
+    "locator": "164.402",
+    "proposed_role_treatment": "DIRECT_CANDIDATE",
+    "design_analysis": "Assess whether an impermissible use/disclosure is a breach, considering exceptions and the documented four-factor compromise assessment; establish unsecured-PHI status before applying notice duties."
+  },
+  {
+    "locator": "164.404",
+    "proposed_role_treatment": "CUSTOMER_DUTY_SUPPORT",
+    "design_analysis": "Individual notice is a covered-entity duty; support facts and any expressly delegated delivery without replacing the associate's upstream duty."
+  },
+  {
+    "locator": "164.406",
+    "proposed_role_treatment": "CUSTOMER_DUTY_SUPPORT",
+    "design_analysis": "Media notice depends on the covered entity's affected population and jurisdiction; support analysis and delegated execution only under defined authority."
+  },
+  {
+    "locator": "164.408",
+    "proposed_role_treatment": "CUSTOMER_DUTY_SUPPORT",
+    "design_analysis": "Support the covered entity's reporting to HHS and accurate affected-person facts; do not automatically assign its notification role to the associate."
+  },
+  {
+    "locator": "164.410",
+    "proposed_role_treatment": "DIRECT_CANDIDATE",
+    "design_analysis": "Notify the upstream entity without unreasonable delay and no later than 60 calendar days after discovery, subject to lawful delay; honor shorter contract terms and provide available affected-person/details information with follow-up."
+  },
+  {
+    "locator": "164.412",
+    "proposed_role_treatment": "CONDITIONAL_DELAY",
+    "design_analysis": "Record authorized law-enforcement delay, its basis and duration; oral requests require documentation and the specified limited delay unless written documentation follows."
+  },
+  {
+    "locator": "164.414",
+    "proposed_role_treatment": "DIRECT_CANDIDATE",
+    "design_analysis": "Preserve proof supporting notices or a no-notice determination and apply the administrative provisions cross-referenced by the rule."
+  },
+  {
+    "locator": "164.500",
+    "proposed_role_treatment": "ROLE_GATE",
+    "design_analysis": "Identify direct associate requirements and any delegated covered-entity functions; Privacy Rule obligations are not identical for every actor."
+  },
+  {
+    "locator": "164.501",
+    "proposed_role_treatment": "CONTEXT",
+    "design_analysis": "Resolve designated-record-set and purpose definitions from actual data/services; definitions influence access support and permitted use."
+  },
+  {
+    "locator": "164.502",
+    "proposed_role_treatment": "DIRECT_CANDIDATE",
+    "design_analysis": "Restrict associate uses/disclosures to law and agreement; analyze minimum-necessary exceptions, required disclosures, subcontractor assurances and affected judicial-status provisions."
+  },
+  {
+    "locator": "164.504",
+    "proposed_role_treatment": "DIRECT_CANDIDATE",
+    "design_analysis": "Build an agreement matrix for permitted uses, safeguards, reporting, subcontractors, rights support, regulator access and return/destruction; address known material violations and delegated functions."
+  },
+  {
+    "locator": "164.506",
+    "proposed_role_treatment": "CONDITIONAL_PERMISSION",
+    "design_analysis": "Treatment/payment/operations permissions are not blanket authority for an associate; verify the upstream function, agreement and applicable limits before use/disclosure."
+  },
+  {
+    "locator": "164.508",
+    "proposed_role_treatment": "CONDITIONAL_AUTHORIZATION",
+    "design_analysis": "Where an authorization is required, validate its scope, required elements, expiry/revocation and proposed use; route decisions through privacy/legal and the upstream agreement."
+  },
+  {
+    "locator": "164.509",
+    "proposed_role_treatment": "JUDICIAL_STATUS_HOLD",
+    "design_analysis": "Printed attestation provisions are affected by the court vacatur described by HHS; do not activate an attestation workflow solely because this section appears in the XML."
+  },
+  {
+    "locator": "164.510",
+    "proposed_role_treatment": "CUSTOMER_DUTY_SUPPORT",
+    "design_analysis": "Agreement/objection opportunities concern specific covered-entity disclosures; support only an authorized applicable workflow and record its conditions."
+  },
+  {
+    "locator": "164.512",
+    "proposed_role_treatment": "CONDITIONAL_PERMISSION",
+    "design_analysis": "Evaluate each permitted disclosure condition and actual legal demand; permission is not always an obligation and does not authorize every associate disclosure."
+  },
+  {
+    "locator": "164.514",
+    "proposed_role_treatment": "CONDITIONAL_PERMISSION",
+    "design_analysis": "Validate de-identification method, limited-data-set agreement or minimum-necessary implementation as relevant; removing obvious identifiers alone is not sufficient."
+  },
+  {
+    "locator": "164.520",
+    "proposed_role_treatment": "CUSTOMER_DUTY_SUPPORT",
+    "design_analysis": "Determine whether notice duties attach to the actual actor or delegated function; segregate vacated paragraphs from remaining notice amendments and confirm operative requirements."
+  },
+  {
+    "locator": "164.522",
+    "proposed_role_treatment": "CUSTOMER_DUTY_SUPPORT",
+    "design_analysis": "Route restriction/confidential-communication requests to the responsible covered entity and implement accepted restrictions within the contracted workflow."
+  },
+  {
+    "locator": "164.524",
+    "proposed_role_treatment": "CUSTOMER_DUTY_SUPPORT",
+    "design_analysis": "Identify the designated record set and support timely upstream access with secure identity checks and traceable delivery; contract turnaround must allow the covered entity to meet its duty."
+  },
+  {
+    "locator": "164.526",
+    "proposed_role_treatment": "CUSTOMER_DUTY_SUPPORT",
+    "design_analysis": "Support accepted amendments with retained history and downstream updates; legal/covered-entity authority resolves denials and disputed records."
+  },
+  {
+    "locator": "164.528",
+    "proposed_role_treatment": "CUSTOMER_DUTY_SUPPORT",
+    "design_analysis": "Keep information needed for applicable disclosure accounting and its exceptions; reconcile disclosures across subcontractors where required by the agreement."
+  },
+  {
+    "locator": "164.530",
+    "proposed_role_treatment": "MIXED_ADMINISTRATIVE",
+    "design_analysis": "Analyze covered-entity administrative duties, express associate requirements, delegated functions and breach-rule cross-references; maintain complaint, sanctions, mitigation, nonretaliation and documentation workflows as applicable."
+  },
+  {
+    "locator": "164.532",
+    "proposed_role_treatment": "TRANSITION_CONTEXT",
+    "design_analysis": "Assess legacy authorizations/arrangements only if actual historical facts invoke transition provisions; do not use them as a new-service exemption."
+  },
+  {
+    "locator": "164.534",
+    "proposed_role_treatment": "DATE_CONTEXT",
+    "design_analysis": "Retain historical privacy compliance dates; verify later amendments separately."
+  },
+  {
+    "locator": "164.535",
+    "proposed_role_treatment": "JUDICIAL_STATUS_CONTEXT",
+    "design_analysis": "Retain severability context without inferring which printed provisions remain operative; reconcile the actual judgment and subsequent authoritative status."
+  }
+]

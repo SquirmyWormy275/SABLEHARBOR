@@ -94,7 +94,7 @@ def test_workpaper_coverage_and_control_bindings(native):
 def test_c5_candidates_do_not_become_coverage(native):
     c, a = reference.reference_inputs(native)
     assert [s.framework_id for s in a.scope.targets] == ["C5"]
-    assert len([r for r in c.requirements if r.framework_id == "C5"]) == 596
+    assert len([r for r in c.requirements if r.framework_id == "C5"]) == 625
     assert len({m.requirement_id for m in c.mappings if m.requirement_id.startswith("C5:")}) == 8
     assert not any(r.framework_id in {"ISO27001", "ISO42001"} for r in a.scope.targets)
     papers = reference.workpapers(c, a, native)
@@ -110,7 +110,7 @@ def test_c5_candidates_do_not_become_coverage(native):
     row = next(r for r in report["rows"] if r["requirement_id"] == "C5:BCM-02.01B")
     assert "SH-BCM-001" in row["candidate_reuse_from_baseline"]
     assert row["status"] == "UNRESOLVED"
-    assert plan(c, a, native)["summary"] == {"UNRESOLVED": 2235}
+    assert plan(c, a, native)["summary"] == {"UNRESOLVED": 2322}
 
 
 @pytest.fixture

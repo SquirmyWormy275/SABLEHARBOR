@@ -1,0 +1,3323 @@
+{
+  "source_sha256": "ab906417ae2a4f210b0f23b0edaafd77cb20bc944af1aeeccfd8257eab59727a",
+  "pdf_sha256": "b48f7ccdd6844b2a0bb5055edf5ce109dfb186b1680c49a52c5b92cb16537163",
+  "atlas_revision": "96bda5ef06a1e8b3469704c55b71ff2aae05e830",
+  "parents": [
+    "AM-01",
+    "AM-02",
+    "AM-03",
+    "AM-04",
+    "AM-05",
+    "AM-06",
+    "AM-07",
+    "AM-08",
+    "AM-09",
+    "AM-10",
+    "AM-11",
+    "AM-12",
+    "BCM-01",
+    "BCM-02",
+    "BCM-03",
+    "BCM-04",
+    "COM-01",
+    "COM-02",
+    "COM-03",
+    "COM-04",
+    "COS-01",
+    "COS-02",
+    "COS-03",
+    "COS-04",
+    "COS-05",
+    "COS-06",
+    "COS-07",
+    "COS-08",
+    "CRY-01",
+    "CRY-02",
+    "CRY-03",
+    "CRY-04",
+    "CRY-05",
+    "CRY-06",
+    "CRY-07",
+    "CRY-08",
+    "CRY-09",
+    "CRY-10",
+    "CRY-11",
+    "CRY-12",
+    "CRY-13",
+    "CRY-14",
+    "CRY-15",
+    "CRY-16",
+    "CRY-17",
+    "CRY-18",
+    "CRY-19",
+    "DEV-01",
+    "DEV-02",
+    "DEV-03",
+    "DEV-04",
+    "DEV-05",
+    "DEV-06",
+    "DEV-07",
+    "DEV-08",
+    "DEV-09",
+    "DEV-10",
+    "DEV-11",
+    "DEV-12",
+    "DEV-13",
+    "DEV-14",
+    "DEV-15",
+    "HR-01",
+    "HR-02",
+    "HR-03",
+    "HR-04",
+    "HR-05",
+    "HR-06",
+    "HR-07",
+    "HR-08",
+    "IAM-01",
+    "IAM-02",
+    "IAM-03",
+    "IAM-04",
+    "IAM-05",
+    "IAM-06",
+    "IAM-07",
+    "IAM-08",
+    "IAM-09",
+    "INQ-01",
+    "INQ-02",
+    "INQ-03",
+    "INQ-04",
+    "OIS-01",
+    "OIS-02",
+    "OIS-03",
+    "OIS-04",
+    "OIS-05",
+    "OIS-06",
+    "OIS-07",
+    "OIS-08",
+    "OIS-09",
+    "OIS-10",
+    "OPS-01",
+    "OPS-02",
+    "OPS-03",
+    "OPS-04",
+    "OPS-05",
+    "OPS-06",
+    "OPS-07",
+    "OPS-08",
+    "OPS-09",
+    "OPS-10",
+    "OPS-11",
+    "OPS-12",
+    "OPS-13",
+    "OPS-14",
+    "OPS-15",
+    "OPS-16",
+    "OPS-17",
+    "OPS-18",
+    "OPS-19",
+    "OPS-20",
+    "OPS-21",
+    "OPS-22",
+    "OPS-23",
+    "OPS-24",
+    "OPS-25",
+    "OPS-26",
+    "OPS-27",
+    "OPS-28",
+    "OPS-29",
+    "OPS-30",
+    "OPS-31",
+    "OPS-32",
+    "OPS-33",
+    "OPS-34",
+    "OPS-35",
+    "PI-01",
+    "PI-02",
+    "PI-03",
+    "PS-01",
+    "PS-02",
+    "PS-03",
+    "PS-04",
+    "PS-05",
+    "PS-06",
+    "PS-07",
+    "PS-08",
+    "PSS-01",
+    "PSS-02",
+    "PSS-03",
+    "PSS-04",
+    "PSS-05",
+    "PSS-06",
+    "PSS-07",
+    "PSS-08",
+    "PSS-09",
+    "PSS-10",
+    "PSS-11",
+    "PSS-12",
+    "SIM-01",
+    "SIM-02",
+    "SIM-03",
+    "SIM-04",
+    "SIM-05",
+    "SIM-06",
+    "SP-01",
+    "SP-02",
+    "SP-03",
+    "SSO-01",
+    "SSO-02",
+    "SSO-03",
+    "SSO-04",
+    "SSO-05",
+    "SSO-06",
+    "SSO-07",
+    "SSO-08"
+  ],
+  "children": {
+    "AM-01.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/AM.yml",
+      "text_sha256": "6d2214d81e3ec98c23929af0bd31ddbb3f07800427c19c5e6e64dff4aad63c61"
+    },
+    "AM-01.01AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/AM.yml",
+      "text_sha256": "1885b81950488c8d0a434a5b76cd83b4452f0b6c96985279fda0e71e7d24ac3a"
+    },
+    "AM-01.02AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/AM.yml",
+      "text_sha256": "b89fa141bcba8b6db302db86898f9a113696ba2423fab97ba098458140928fd7"
+    },
+    "AM-02.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/AM.yml",
+      "text_sha256": "5cd7b5bcbb771dafbb17e9d71c4f80b9035580baf425cb8b5791fb33e1a3e928"
+    },
+    "AM-02.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/AM.yml",
+      "text_sha256": "2c4fe5786c85b71992ff69cd5694091b606e2a6bd446fd6d58f525915cd83b08"
+    },
+    "AM-02.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/AM.yml",
+      "text_sha256": "cbfbc185c598ec874aa7124f19f4a9001ab608b10b7121f6a5fce1a8717a01c1"
+    },
+    "AM-02.04B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/AM.yml",
+      "text_sha256": "c9f8a1dc6388a6bdb8a3bf48af5152f4767816b5674db71b963172b5f32da7a3"
+    },
+    "AM-02.05B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/AM.yml",
+      "text_sha256": "205e78ad2e00459a6f1e718ae33e2a796b4feb11a4aee7ffdcad3d6bb3435330"
+    },
+    "AM-03.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/AM.yml",
+      "text_sha256": "73c34f95513a46dfc58b061173729121822154b3a0c476ff34ee96e1fc96524f"
+    },
+    "AM-04.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/AM.yml",
+      "text_sha256": "6acf44056e4497bfb9c365ce82285abd50273978b482365f5c07b8379a4bfa5f"
+    },
+    "AM-04.01AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/AM.yml",
+      "text_sha256": "75b02c0531462ef057a3c6f015583e7da1bb6a6567722bb569f5b9d0703f5b60"
+    },
+    "AM-05.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/AM.yml",
+      "text_sha256": "44ed8af3971cee8c33638241d7384efa8d40fbefd3e62c46526c508d3a1c4df1"
+    },
+    "AM-05.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/AM.yml",
+      "text_sha256": "05af8f1ed45c705bdeba8f9dc2bfd6abbec4230e03afec1166f6ab04e7015212"
+    },
+    "AM-06.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/AM.yml",
+      "text_sha256": "d1c6a9375c5c92e16077addbd9fc94b281292327102b42d0c10a4cc6b79659e6"
+    },
+    "AM-06.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/AM.yml",
+      "text_sha256": "1416eac0b8d4ddb83dd4193b95be12a16379fe92fe68644a13de1ba2f0d3bd55"
+    },
+    "AM-07.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/AM.yml",
+      "text_sha256": "08362b6abeed0ca79d9661fd851c87729e10fca489415715defd7aee0a118eff"
+    },
+    "AM-07.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/AM.yml",
+      "text_sha256": "9ffa556a3bf84fe81ff0207acabf331802c3168cb58dcffa705cfebdfcf460d7"
+    },
+    "AM-07.01AS": {
+      "kind": "additional_sharpen",
+      "member": "C5_2026_Machine-Readable_en/AM.yml",
+      "text_sha256": "b2f863dd8f4b3a14d09cc65290728908fa9d1a3440013b7cfae3bbfd49e4ca23"
+    },
+    "AM-07.01AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/AM.yml",
+      "text_sha256": "053ca4030a8581229d31c7e8bc61aaac4bedb5d6f1ce70d8fe79edb430bc3fc0"
+    },
+    "AM-08.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/AM.yml",
+      "text_sha256": "438623c20f3a9809cf20fbc428aca55e41601d49cafdadb2413859e59193f8e3"
+    },
+    "AM-08.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/AM.yml",
+      "text_sha256": "c3fc1106e19fa00f8be610b63d695648ad90928ffc830247391d5e5b2f7fcc70"
+    },
+    "AM-08.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/AM.yml",
+      "text_sha256": "af07adebb08c5351cd9da0bb4a810e1486a5b3354dec29315b7b18d2c8892e42"
+    },
+    "AM-09.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/AM.yml",
+      "text_sha256": "b503eea18ac9048d75fdf77baaf4dcac4ddace7d7c8e6036cc3e53cf38fa1d46"
+    },
+    "AM-09.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/AM.yml",
+      "text_sha256": "07271ba2a45e47df7243543a928f86b45c5aaaa39859f1c0c5aa4e94c55b92cf"
+    },
+    "AM-09.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/AM.yml",
+      "text_sha256": "f20b38caf57ceaa5255d26e96632852b58298a0131b52d2025f528b89ef668a9"
+    },
+    "AM-09.04B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/AM.yml",
+      "text_sha256": "5adf736fe4a5ea42a4f44aaf31dcb4dce443b3d73ba7a9e6736992393f2d4a80"
+    },
+    "AM-09.01AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/AM.yml",
+      "text_sha256": "8cf7f379485961a3113a30dcc2953435e6cef3e1e8250c0291053c87f30543a5"
+    },
+    "AM-09.02AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/AM.yml",
+      "text_sha256": "cc5240803180023a011816962fa894175bd304aa6f508a41796a38b92da23bb2"
+    },
+    "AM-09.03AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/AM.yml",
+      "text_sha256": "0123e3e80a00032b2586cdc77773e3ce78f3946fbd9ed774e1fd52d74a33eb92"
+    },
+    "AM-09.04AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/AM.yml",
+      "text_sha256": "a52f652ced80e29d2f33af221c0ca55c9ca6a02e4bbaef3765466c7204a4eef7"
+    },
+    "AM-10.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/AM.yml",
+      "text_sha256": "dc1a92c8be65a06f8ef567bb4b24180a960152b4fae77aad916d65c3800fc500"
+    },
+    "AM-10.01AS": {
+      "kind": "additional_sharpen",
+      "member": "C5_2026_Machine-Readable_en/AM.yml",
+      "text_sha256": "33ca3f698d729ab44707fda6b11829305ce909e6a25dd06d85a7378da5da6fb8"
+    },
+    "AM-11.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/AM.yml",
+      "text_sha256": "2caa3477eb8efda8c0c72fb804f9b4d91fb9110e0b2340c22841de91bdebc7ba"
+    },
+    "AM-11.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/AM.yml",
+      "text_sha256": "209de7266bb6d3b5b2b4e5e2d428ca0b4d6475346018dfb314064200208dbb92"
+    },
+    "AM-11.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/AM.yml",
+      "text_sha256": "7dd411c1dbd6c498704f1f95e8d2fd164085420c8652d3b05f1782b62ac01281"
+    },
+    "AM-12.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/AM.yml",
+      "text_sha256": "f085c580a8b08039385b3d1d5e0e33a32b353ef4827e378ae97c32a7b95643c6"
+    },
+    "AM-12.01AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/AM.yml",
+      "text_sha256": "17f3d9bda1794ac329da52b399db91664ee21aeaf794a09bc3cf5dd31e1ceab8"
+    },
+    "BCM-01.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/BCM.yml",
+      "text_sha256": "9162dd8a961bba6541a4db0159223236a9e112fa1e5ffe80d6f400aaefdb8154"
+    },
+    "BCM-01.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/BCM.yml",
+      "text_sha256": "ba45fd159608f15da0941fe2a00a91c98a81ac66c667f208ec1456369556ed7a"
+    },
+    "BCM-01.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/BCM.yml",
+      "text_sha256": "f4644b5cb3e4161fbf90e03dd7a9b2d4f82d4784b414f9cb486bedb0d9239136"
+    },
+    "BCM-01.04B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/BCM.yml",
+      "text_sha256": "70a30abb78e3dfea9ba60dd75647eeb6f453b5b17f48cc84b8d199669f0f870e"
+    },
+    "BCM-02.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/BCM.yml",
+      "text_sha256": "ee6c9d60c692155240c08adc9fb4a4d186eb3566d333807d3a514f7855be4862"
+    },
+    "BCM-02.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/BCM.yml",
+      "text_sha256": "3a4eed739ed1294ac25c5380aa78c9bdcbf256dbe2e73d519b282d328d719133"
+    },
+    "BCM-03.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/BCM.yml",
+      "text_sha256": "43945e9baed9b24d9bb3bbf224be19b3078ab1b63c68440bd62b30e8ebc66b90"
+    },
+    "BCM-03.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/BCM.yml",
+      "text_sha256": "c48b11d04a57a1d614cf27ed6037b2b2a5a0b6f581a4af9eb93b22e3450d70c4"
+    },
+    "BCM-04.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/BCM.yml",
+      "text_sha256": "1e5f7936cf2fa19f2c38aa7d24752f2e25a54f5fae1c9ab05be87549952a4c45"
+    },
+    "BCM-04.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/BCM.yml",
+      "text_sha256": "68235cc3214112c1f2ccde37489c81aece4d0c90775425c169b0ed98f86d1040"
+    },
+    "BCM-04.01AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/BCM.yml",
+      "text_sha256": "b07bcc3043ea031fc63e7d41bba38f60825974e0a9f6a7dab478a7cd43988f37"
+    },
+    "BCM-04.02AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/BCM.yml",
+      "text_sha256": "a80e184b6768c5ed2a6065c2cbc1dbe53df711a9d938f775ccc47a042062b8ce"
+    },
+    "BCM-04.03AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/BCM.yml",
+      "text_sha256": "f9a6fe5d5dc1ecc5c48123d981b67d451410ca4f545a1bc513677cb59fd2f2cc"
+    },
+    "BCM-04.04AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/BCM.yml",
+      "text_sha256": "475e0a6367cc85f356b4e5f750d8deaa378c14cf54a6e2ca3e9c1bbcde2f4c40"
+    },
+    "COM-01.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/COM.yml",
+      "text_sha256": "dce5e2b4dc436a7400459009757fab69c0a945e8af5e2bfc6aedf00c1244ff57"
+    },
+    "COM-01.01AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/COM.yml",
+      "text_sha256": "15fa54c0bda43f579708b70395d1113d4518ac3dc3c3558f5a51423b8dea6fb9"
+    },
+    "COM-02.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/COM.yml",
+      "text_sha256": "0a029041596fadc93373e89b144ab3554af70b4da87a12b0d76c9947a2aaa9b7"
+    },
+    "COM-02.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/COM.yml",
+      "text_sha256": "4c5e5b5cb8675f28454a9c62b5544772a5de38d5e68fdae5853ca9d21d0218f0"
+    },
+    "COM-02.01AS": {
+      "kind": "additional_sharpen",
+      "member": "C5_2026_Machine-Readable_en/COM.yml",
+      "text_sha256": "9cffb0417b86a9e1de270a162592f5c17cd24dd1862f018d0f5702a560d682db"
+    },
+    "COM-02.01AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/COM.yml",
+      "text_sha256": "5844582121101b70a78beb6bb7c4ec04374312709afea3454dc0821cafab8911"
+    },
+    "COM-03.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/COM.yml",
+      "text_sha256": "acb31c870bba0e58b7ee0bb770e0478f5d72e4ec11e0f22d3443f1f3e29efed9"
+    },
+    "COM-03.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/COM.yml",
+      "text_sha256": "bc70f696a808d6282be56fad817586db8e9c27d1fc58d599ec78c96b12fb7f1e"
+    },
+    "COM-03.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/COM.yml",
+      "text_sha256": "b6bd2f61574e65cfb0ea72120f95c7f161a13ce0dd5f6647f518f514adff6867"
+    },
+    "COM-03.01AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/COM.yml",
+      "text_sha256": "9330e4003c154a3271d121e25db64721a5d713bc6a5152963f6297ce13a30441"
+    },
+    "COM-03.02AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/COM.yml",
+      "text_sha256": "f2b03633eeecc55b698b147eab5ed22da4a28f5e6e49142995854c6567ab6079"
+    },
+    "COM-03.03AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/COM.yml",
+      "text_sha256": "e2ef80f7bb335b2775352a794198d1c50728629c2fd2181caae0e6e29828d361"
+    },
+    "COM-04.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/COM.yml",
+      "text_sha256": "c1a44825b0fde25de137d2b6788b834e6083ec41c6cb9943e12a38598438a656"
+    },
+    "COM-04.01AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/COM.yml",
+      "text_sha256": "7a34e0a84efb48db31f7f97aaf3f891d1c4a5f9831212661783b5696681a0b4b"
+    },
+    "COM-04.02AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/COM.yml",
+      "text_sha256": "cf510cad0232bcf5bc2973a92ced6f84bb3d50864a12fcdb9483d92a03ccb277"
+    },
+    "COS-01.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/COS.yml",
+      "text_sha256": "99ffdea3b54748c078e4be2fa66d829720c0cbfd696b3c6c894cae0c5015c898"
+    },
+    "COS-01.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/COS.yml",
+      "text_sha256": "4382be54d5596b4baaa024af082236ad903f10a040aeecec9bdf47c15a333a1c"
+    },
+    "COS-01.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/COS.yml",
+      "text_sha256": "e306360599cd6d3e087cb5a53e47c836b13333a8246ee7d290bbb8406767ec2a"
+    },
+    "COS-01.01AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/COS.yml",
+      "text_sha256": "f57fece8c21a43d21ca71266acf43928e4601f7e9eed99ded9e5d3d94306a440"
+    },
+    "COS-02.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/COS.yml",
+      "text_sha256": "fc6296f17ca2032227a763008471e01629710165c6c454b2a0e92234df0008fc"
+    },
+    "COS-03.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/COS.yml",
+      "text_sha256": "7e78a0e0ea14b7cfbbdfeb44c64b937a499036030b1b8ec06ea78101cfbd7572"
+    },
+    "COS-03.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/COS.yml",
+      "text_sha256": "761cf4c7ba366892846020a6e13407a5929f380f70242c6b87139be34eb2562f"
+    },
+    "COS-03.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/COS.yml",
+      "text_sha256": "fcdf6885ce9c44bf9580ceb18fc17670ac65d8ec9522c4f5d3f7a4b4c4a02222"
+    },
+    "COS-03.04B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/COS.yml",
+      "text_sha256": "3d62a0e6634f65880bd333b5988babbad86f2212f1bce9edf0c886f88e7e138a"
+    },
+    "COS-03.05B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/COS.yml",
+      "text_sha256": "80d42371122921eb4186a66f29a81c4ea029cc70b6f589dada65cd7f54980720"
+    },
+    "COS-04.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/COS.yml",
+      "text_sha256": "e247931fe681e596897a9b8d4412711cb82136e9877bab77960b8c7b98b83924"
+    },
+    "COS-04.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/COS.yml",
+      "text_sha256": "04b81476229027d188411d4afd41ae4b9df6a163b67bee08c10acac0e0189ca0"
+    },
+    "COS-04.01AS": {
+      "kind": "additional_sharpen",
+      "member": "C5_2026_Machine-Readable_en/COS.yml",
+      "text_sha256": "bc530eff6e684f23a7a70ce633f1995cdb049a58ae1e0b2b4e1f88b9930675e8"
+    },
+    "COS-05.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/COS.yml",
+      "text_sha256": "6fa9909b21481923accf0677dc2c7c68645cde9ba34de53a5d1a97205a7bfd6b"
+    },
+    "COS-05.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/COS.yml",
+      "text_sha256": "8bdf65e0b40753d91b18daea97083b10e024cffb25dcb32881cabf92d1f377f4"
+    },
+    "COS-05.01AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/COS.yml",
+      "text_sha256": "180be237f9b0b433b0f78c5207acb874459ec40361bcb7b5befb747e5f8c89de"
+    },
+    "COS-06.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/COS.yml",
+      "text_sha256": "4236cb2ee821b9a143b6ac7ea273288be3a2d7b979a6ce2e2df0952fefb78914"
+    },
+    "COS-06.01AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/COS.yml",
+      "text_sha256": "e1c47d6f68d61000c08e33327834b7016033a317f751d8e2b1ef44d747cc9b75"
+    },
+    "COS-07.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/COS.yml",
+      "text_sha256": "05ed629d6e284424f01b4ee13fd0e9d1d45cc30c9709a87db63ceed67a98bfce"
+    },
+    "COS-07.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/COS.yml",
+      "text_sha256": "85313b62ac675f43320e89a052e2937dedaa930a8407cfdfd9d27944c1ea65d7"
+    },
+    "COS-07.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/COS.yml",
+      "text_sha256": "6155d7ce5d625ee738f1dbf7ef82c084becd4fb10c6864f9a27f243aa08f5816"
+    },
+    "COS-07.04B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/COS.yml",
+      "text_sha256": "b7319bfd2930d282f056a7f231def5e7e96fb566e25805cb47c5895332362fed"
+    },
+    "COS-08.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/COS.yml",
+      "text_sha256": "5068062950909b1c7141eada668e27c1747df65347b089101efa66dfe085616a"
+    },
+    "COS-08.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/COS.yml",
+      "text_sha256": "8a6f4267c4271325257800176a6021769883a4fe16f9a799fd7eb31a154805a7"
+    },
+    "CRY-01.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/CRY.yml",
+      "text_sha256": "b787c3b7a134c67510061f4a930512d6a341d772919f4a1f3761727c3fd00de8"
+    },
+    "CRY-01.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/CRY.yml",
+      "text_sha256": "81ad2c086ec6bd3e762cf740f63dfbedb87097649ad1162c247e8884dfd851f3"
+    },
+    "CRY-01.01AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/CRY.yml",
+      "text_sha256": "60dd4d8bbae6a8be75a6310b4e51d606d7a7188475b36b2e4237c0b686415981"
+    },
+    "CRY-01.02AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/CRY.yml",
+      "text_sha256": "a80193779991f6cea81e5fd3d8146248584b7106e1ddd7162b8b8ea1e00b8d11"
+    },
+    "CRY-01.03AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/CRY.yml",
+      "text_sha256": "175e6fe7509c4311ca592e2567f9fc4f516861ac9b48cead4486bb856a338f45"
+    },
+    "CRY-02.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/CRY.yml",
+      "text_sha256": "39cb6e6a162988a4adb2c32f8cd41e8d560742236e875a831d40275ae9e2089a"
+    },
+    "CRY-02.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/CRY.yml",
+      "text_sha256": "ebfa24e960dbf8c9a1ed9b9c39311d97cb38f57a2a3c29a2942dc4637dd44feb"
+    },
+    "CRY-02.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/CRY.yml",
+      "text_sha256": "c643ffa51cd6663618d8ce450fce0a0848a09f682aa97edaff0e13f7c2a01371"
+    },
+    "CRY-03.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/CRY.yml",
+      "text_sha256": "72e7cef22da1c3978cf7b48c0668355dc8a4ab8a255b06efd1f53b480e7de993"
+    },
+    "CRY-03.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/CRY.yml",
+      "text_sha256": "0e5fb618d5242b32b6d5819f7fd4bc264f4dcd5beb3df183dae099057494ca93"
+    },
+    "CRY-04.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/CRY.yml",
+      "text_sha256": "5f54aa4619191c2ca3c352f35eace15efd2f50ce47ca1674d46ec314ff51b824"
+    },
+    "CRY-04.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/CRY.yml",
+      "text_sha256": "319a116fd388b8b240ddfff770de2db75e150a11b83e2824ddf1a0eb20500eb6"
+    },
+    "CRY-04.01AS": {
+      "kind": "additional_sharpen",
+      "member": "C5_2026_Machine-Readable_en/CRY.yml",
+      "text_sha256": "1e6c75afd78ab63ba87ad52b2e5f450344eba7c14afbba239ef14baf570410fa"
+    },
+    "CRY-05.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/CRY.yml",
+      "text_sha256": "af5c004bbeaaa322243ef83c7b7174c6e58e126cd655afec67e655d21aa10de3"
+    },
+    "CRY-05.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/CRY.yml",
+      "text_sha256": "cd811a4dd3fbc0840ad44db36763dda2729395a50f1a2767327a0b8defd4ae49"
+    },
+    "CRY-05.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/CRY.yml",
+      "text_sha256": "07f3f7e6d77d38100cbc568b8d7ca8d3e0ad499c1b86ee5d68b6c5476eceba32"
+    },
+    "CRY-05.04B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/CRY.yml",
+      "text_sha256": "1345a748383c35942b84680ac1ba4ca0a5805964fe4c5431bb92ab2da7c72c0b"
+    },
+    "CRY-05.05B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/CRY.yml",
+      "text_sha256": "4d834430a6a31900f78e5f164104e5fcf64f5ad2adb3e9d835d3ccb0929c8298"
+    },
+    "CRY-05.01AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/CRY.yml",
+      "text_sha256": "a46bdd0b662269c119d325c59b549fa67c2bbbac27c62fe3cc185691b0547320"
+    },
+    "CRY-06.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/CRY.yml",
+      "text_sha256": "6c5e0c771029428ef17fc8501fc704fcebb0dde97fe179bd2249bb6e5d496c79"
+    },
+    "CRY-07.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/CRY.yml",
+      "text_sha256": "168e3a7847bbc069d08e2647d7b38189542e37508463cbe55e2c9a67f5548fa9"
+    },
+    "CRY-08.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/CRY.yml",
+      "text_sha256": "38898e4ed63607d6d4cb3afe59ac09a867a55894146245f46c7990789f6056b0"
+    },
+    "CRY-09.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/CRY.yml",
+      "text_sha256": "c748e2b738f27a6d90d72b93d69d35c8b764aabfbc8fcf7afcbb653c2e0f0047"
+    },
+    "CRY-09.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/CRY.yml",
+      "text_sha256": "a82ce0b4322c1a30b90019cc6788e9859a88b74554b470c73b0e36e5ff3b6e3d"
+    },
+    "CRY-10.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/CRY.yml",
+      "text_sha256": "2601e51e06fb1e235082672dc94820e5ac6b24f2058fe715af6c26b6aa0a13f9"
+    },
+    "CRY-10.01AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/CRY.yml",
+      "text_sha256": "3058e812e26273fb01740c0402f78980750b36ebb37b825178ed8b7b6bf4cd53"
+    },
+    "CRY-11.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/CRY.yml",
+      "text_sha256": "26be77b2557a161738bfe2ad03b1aa7e249e90aad5d08a0c154015edc6d23618"
+    },
+    "CRY-12.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/CRY.yml",
+      "text_sha256": "32ea4dfa6ad5db5ccb59a716db5b79e10b627b4fe7823573529caa71beea6bdc"
+    },
+    "CRY-13.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/CRY.yml",
+      "text_sha256": "03e2ed876e0dd68877aa4e19e22647873a793c67f6126fced0ac20685e62ee0c"
+    },
+    "CRY-13.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/CRY.yml",
+      "text_sha256": "40cce96799345340894a148845d2f672a1984b4d1ad5e9d75f4f7d20960f564c"
+    },
+    "CRY-14.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/CRY.yml",
+      "text_sha256": "56fc32f8b77002281906c6297884b193a39d493a26bfa82d51a332d20abb4c42"
+    },
+    "CRY-15.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/CRY.yml",
+      "text_sha256": "e510868d539e167f969ac5aeecd9634489191c93e8148dfdbd4da5bf5ba9bf36"
+    },
+    "CRY-16.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/CRY.yml",
+      "text_sha256": "21159d2648b1add3c580d71728bf8d34e037e665d5e670c5c8aac62589d94a4b"
+    },
+    "CRY-16.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/CRY.yml",
+      "text_sha256": "47faaa84960f8fde2decd5d8ec53dd3c735eb38b37cb82ae309b3c5b3f2327d8"
+    },
+    "CRY-17.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/CRY.yml",
+      "text_sha256": "47285cfc1f2634e89699bd816d2651033176a4db8c645bce9b1fd106cc420f1d"
+    },
+    "CRY-17.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/CRY.yml",
+      "text_sha256": "7f9a2c962fd7107e86d420d71591dc5579256dfb65c6994518d747ccd769b729"
+    },
+    "CRY-18.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/CRY.yml",
+      "text_sha256": "bcd066a927c51dc34ebed6c85dad386c198fa04ad686bb8a31a9a9d9c40993f3"
+    },
+    "CRY-19.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/CRY.yml",
+      "text_sha256": "73532e0d9ab80ba4339d8bc018e2ccb5aadc1e63845632ff3294ecf15520a861"
+    },
+    "DEV-01.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/DEV.yml",
+      "text_sha256": "f46d5ca9b347f3e2db8780023e918bdc6b73d529844f3142bc1d44ae60f42f73"
+    },
+    "DEV-01.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/DEV.yml",
+      "text_sha256": "4d92c086051386039878e25b13db892fdd8d75cc5681af3f98a2869e8b87b82c"
+    },
+    "DEV-01.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/DEV.yml",
+      "text_sha256": "8d8010210f09179d065d668a0ca7c39a93c3afb840bfe7977a875aeb04c0a385"
+    },
+    "DEV-01.01AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/DEV.yml",
+      "text_sha256": "e1c0dcb9340fdd931df94723e331c79b8800c1278f2e40967bb2c38126eedbd7"
+    },
+    "DEV-02.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/DEV.yml",
+      "text_sha256": "f02708a65bbcddb0e6668664253112371279cbc0fc2b452c9f4d8c0d190417a4"
+    },
+    "DEV-02.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/DEV.yml",
+      "text_sha256": "ece860965ae1871a29e8ada7ff6330ec3368600746db8cf17b9d3f2a5d704ba7"
+    },
+    "DEV-02.01AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/DEV.yml",
+      "text_sha256": "94eeba54d69dd9104a5f6499c54d3a059e817137e035354f7d1aa2eedeffa824"
+    },
+    "DEV-02.02AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/DEV.yml",
+      "text_sha256": "2c6592002a882bb09ffa7b9c642a6c723ca8e9877a6a639b70b455d477a06329"
+    },
+    "DEV-03.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/DEV.yml",
+      "text_sha256": "86eca776da6aba0b1442b75919e97f85183921585ceb012a4c3bc8b82751dc1b"
+    },
+    "DEV-04.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/DEV.yml",
+      "text_sha256": "42583a421f2423250e1284aa0e98b1ca65ba8e69818cef1e0ff6c62b03e54386"
+    },
+    "DEV-04.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/DEV.yml",
+      "text_sha256": "e08f8861e193f80ca2c0cb4092fb962b456b33dc1a801d5693d59d1d64a72ae9"
+    },
+    "DEV-05.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/DEV.yml",
+      "text_sha256": "c74e926d85208bff3016761ca078c204fd8fe529e4961fde83479520e13e52a8"
+    },
+    "DEV-06.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/DEV.yml",
+      "text_sha256": "7e628d6a839ec31752406bc4ffc868181dc38935c0a626b61ee41bd2c803243c"
+    },
+    "DEV-06.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/DEV.yml",
+      "text_sha256": "3ef0791e559b43582d6cae3321637b6c02ed890cb31f455d44c3c636e6f25fa0"
+    },
+    "DEV-06.01AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/DEV.yml",
+      "text_sha256": "f216b34e03e23850c2c7c7d96c480592dbcf1abe3ee2f1dff6bdb7cbf2a1e7df"
+    },
+    "DEV-07.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/DEV.yml",
+      "text_sha256": "0a429d270372b871ac75093bffad6b483dde8dd9a5ee19245856b453c5453e57"
+    },
+    "DEV-07.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/DEV.yml",
+      "text_sha256": "71e5ebdf32b3e944dd2480a39fe03290357234268cafbcbf1ca63aeead9fa98e"
+    },
+    "DEV-07.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/DEV.yml",
+      "text_sha256": "de720d96580318435d18af753acd3ddcc3996fb9506612c781a31a2ceb0bfce9"
+    },
+    "DEV-07.04B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/DEV.yml",
+      "text_sha256": "c9d610bce2768365ed067aaadf8bc1d45664a4f9b807645e6f4bae554f114c2e"
+    },
+    "DEV-07.05B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/DEV.yml",
+      "text_sha256": "e594ef29456787b40ad437cac50d396e913511e87310e71e8351d56d96529b17"
+    },
+    "DEV-07.01AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/DEV.yml",
+      "text_sha256": "50d4c84d05903cd1880463b33378cd8133329a0d27b8ab6c90033e8234106064"
+    },
+    "DEV-08.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/DEV.yml",
+      "text_sha256": "db3cb45164079d2ac681b6143e9ea3ea5a1d7f29263dbb14cdd549583de204e2"
+    },
+    "DEV-08.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/DEV.yml",
+      "text_sha256": "25daa12091dcab6b5bf847d12f47187232bf1b919afc314c40d834ee95e542b7"
+    },
+    "DEV-08.01AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/DEV.yml",
+      "text_sha256": "ea9312860b1a5446f8d09ad9503b27a4cce113fa8831b0851412aa0534d2cd8f"
+    },
+    "DEV-09.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/DEV.yml",
+      "text_sha256": "720a3bb4fca08c021beacbc015049d8a9da036d4d1c4219b86c24762f0833418"
+    },
+    "DEV-09.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/DEV.yml",
+      "text_sha256": "4b03ce7a6d777214b91298768f8e4d89f5c2bd7e393c1806f4aac1bbf4226a86"
+    },
+    "DEV-09.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/DEV.yml",
+      "text_sha256": "4ee93de2a90ab47f452e48efb8d4cd3072417486e26fac089e96b24a927c0ea2"
+    },
+    "DEV-09.01AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/DEV.yml",
+      "text_sha256": "2164c8ee6a095fcde430f3dd51635b502fdad16262606b20dfeda8762c69d3cc"
+    },
+    "DEV-09.02AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/DEV.yml",
+      "text_sha256": "bb26a8878326d07437c61b7a1aa3c2f4a2e688f81410ca24fb0e67963f59a1dc"
+    },
+    "DEV-10.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/DEV.yml",
+      "text_sha256": "2308e792c5f2bedd418e1f4fa7d1499d06ff2993957111aa397d812dc3a2cc8e"
+    },
+    "DEV-10.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/DEV.yml",
+      "text_sha256": "5fdc343d7b7008960d141c42ca27e674810503424dcb01bb9538f730f1a8a205"
+    },
+    "DEV-10.01AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/DEV.yml",
+      "text_sha256": "4438cd403c106bbbc18e128dc9a0439c516ae573d62dd1c559090519a642d445"
+    },
+    "DEV-11.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/DEV.yml",
+      "text_sha256": "b7b4fdff2becbe75166a400ef882f9a571c27b5368bd429572193d5c516c80e0"
+    },
+    "DEV-12.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/DEV.yml",
+      "text_sha256": "2fc3be1ef8bd1694ac72a3fc86052afd6249445628a8e908d563f7f5cf1275e5"
+    },
+    "DEV-12.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/DEV.yml",
+      "text_sha256": "bb174ba01bc3075d749c17720c861bd9777715a83530a553ae7b2e3c43d172dc"
+    },
+    "DEV-13.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/DEV.yml",
+      "text_sha256": "ddf9055df37bccc5d630097c46e8f34d473675b3b9ff98c43dd331f45b02745d"
+    },
+    "DEV-13.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/DEV.yml",
+      "text_sha256": "7d3b90d9ce91baa84d6f9d6b46703bfaf7c117f995bc77bfb711376bde13346d"
+    },
+    "DEV-14.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/DEV.yml",
+      "text_sha256": "6e6d0cca35cd5a530bf6078b66bf2229c4bde97e4ac07f34f5fb8efd4862b8f4"
+    },
+    "DEV-14.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/DEV.yml",
+      "text_sha256": "971a49786cac64d7348e20eab5566c104eac2aef01e214eb1cca279c37df5cdc"
+    },
+    "DEV-14.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/DEV.yml",
+      "text_sha256": "79cff175bfa3e58e840c1d5ac04fb6a10bda91c397e5cbc12b2a25cb5695e9c2"
+    },
+    "DEV-14.01AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/DEV.yml",
+      "text_sha256": "e5d61b281e0648808178530f4e3b727e53fffc95e0f29599db320ce396b5bf77"
+    },
+    "DEV-15.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/DEV.yml",
+      "text_sha256": "90fe2553866063e6e3a5e20c98d04011b6db93b312e203585a6ea761a9902967"
+    },
+    "HR-01.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/HR.yml",
+      "text_sha256": "3a215f02500062d22cbbe88007e656c76873b82928ca55a00a504c24cf70dceb"
+    },
+    "HR-01.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/HR.yml",
+      "text_sha256": "89635763ce5ed41ca0dc452b526591bb012e10bc3bd2844c82b0d016e7101984"
+    },
+    "HR-01.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/HR.yml",
+      "text_sha256": "95e45bec1ebf9f6550797583ae1ebeb613e28196488ad4e61c575ec02aefcd18"
+    },
+    "HR-01.04B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/HR.yml",
+      "text_sha256": "fdaa8dbb1a5ea60265966036a9458a2e95f35773a98b3561edd6469eaad9f2c2"
+    },
+    "HR-01.05B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/HR.yml",
+      "text_sha256": "fa90fd91f352fc8b414c9fe9ae6223b46271ff76ae2e2d425b112c8d61f8f8a5"
+    },
+    "HR-01.06B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/HR.yml",
+      "text_sha256": "38abed9db08ac2f01b0d0e255ca13ef557a56c65c404bb722abf39bb2ee125bf"
+    },
+    "HR-01.01AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/HR.yml",
+      "text_sha256": "d542c1b4c132dbd4964c3730123451dbd6c7fb78e122e2900a9f6d96237194b7"
+    },
+    "HR-02.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/HR.yml",
+      "text_sha256": "aaaefdeb873010c9eb860701c90bd0357d58f0932c56ed8efcf2205cbef7c8c3"
+    },
+    "HR-02.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/HR.yml",
+      "text_sha256": "750322c65cddf4dd86140adee7bb22bab06d8d75a0ba8bedbfb71e2e86f7aa2d"
+    },
+    "HR-02.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/HR.yml",
+      "text_sha256": "eff86fd6236ceccc5d8b6aaad7e7c1cf50031600afad04c5d35a14282207cb59"
+    },
+    "HR-02.04B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/HR.yml",
+      "text_sha256": "9d012798fc4215391c29acf9a046b2c67af156f2ebb1b8fe689c40a40fc26401"
+    },
+    "HR-02.05B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/HR.yml",
+      "text_sha256": "0d442aeaf3ff41043195952d5852db889b926369059dd1f25fc8c8fd0ac09f7c"
+    },
+    "HR-03.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/HR.yml",
+      "text_sha256": "b59a0b481805a308acb1fa178c8e77a6a8d5089d93fd1f8250ef012c83a69022"
+    },
+    "HR-03.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/HR.yml",
+      "text_sha256": "de68c7cbbbdd65b2ffe033f47969d46b373ce95ebfa59c3f8299bae5e656cb98"
+    },
+    "HR-03.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/HR.yml",
+      "text_sha256": "7ece92511efdaf4b456ada8c4177fa78c619c20218a6c5f013dd299632a1ba37"
+    },
+    "HR-03.04B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/HR.yml",
+      "text_sha256": "77497b151f094bf35987c70ccfa41e279f5796b92d0e6a74ccca1c31b33ce973"
+    },
+    "HR-03.02AS": {
+      "kind": "additional_sharpen",
+      "member": "C5_2026_Machine-Readable_en/HR.yml",
+      "text_sha256": "eb9b967581a13397fc4e8a7691237652fbc6c5116fc58c1742a3eb5a801d3918"
+    },
+    "HR-03.01AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/HR.yml",
+      "text_sha256": "2ee21ce6ffc631eaf069ba3b0828dc740e0c098d7a3099840a6d7e98754ecbfa"
+    },
+    "HR-03.02AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/HR.yml",
+      "text_sha256": "25591a3d23e0a5785ad80e31cd9bfc7a5c8bcb1c7517a45766a59a76fc467737"
+    },
+    "HR-03.03AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/HR.yml",
+      "text_sha256": "16fb79af527db7befe342b86b5569ab4a17f3577ed6e05ca1838b3f70a6715d2"
+    },
+    "HR-03.04AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/HR.yml",
+      "text_sha256": "cd55f990a41a8a6da1e1f082bf171b03f52de6b517be95ef158f08764125eecf"
+    },
+    "HR-03.05AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/HR.yml",
+      "text_sha256": "6305f2d4d581b18a147d14722fc201a22dec456f340a7ed637f29773273cd8ae"
+    },
+    "HR-04.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/HR.yml",
+      "text_sha256": "b4ddda6720d22ad93d1203931e58522404d1fd4fae32f53dd686e29a797f94d3"
+    },
+    "HR-04.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/HR.yml",
+      "text_sha256": "b83af9eab837f07532d59ab54ba1b27e261673dfbfee55ad85e477d329511d99"
+    },
+    "HR-04.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/HR.yml",
+      "text_sha256": "b166c0d3ad395e8ed5d4d9bbdd353083f32d85fc82748ad48eb520310c6f61de"
+    },
+    "HR-04.04B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/HR.yml",
+      "text_sha256": "c5ff117415b15eee772bdff0723a4223170d3008799a4e5d99ea65b616497333"
+    },
+    "HR-05.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/HR.yml",
+      "text_sha256": "b17fd1ca6140fa843ddbba5ea3abd658103ba320469754401040aee5282d4981"
+    },
+    "HR-06.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/HR.yml",
+      "text_sha256": "8f49a8e109773beb899b235e956a9b968517c5b4966ca3b7efa64fad4f83374d"
+    },
+    "HR-06.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/HR.yml",
+      "text_sha256": "15acd2dff3a43bf4e84b4090316f535de8545f3758db6617e76331ee43d8c92c"
+    },
+    "HR-06.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/HR.yml",
+      "text_sha256": "590085edd71e26280c9562467445c68d29ae20a106a4233aebb2bb52952de9f0"
+    },
+    "HR-06.04B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/HR.yml",
+      "text_sha256": "54ff9dfed9172306e8b30abd33eac740d9552bfec0d3ceb08c7dbe77b12fe38d"
+    },
+    "HR-06.05B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/HR.yml",
+      "text_sha256": "31b47b4debfb273a3bb8ae3624174095a72b3973c28abca85501863964df773a"
+    },
+    "HR-06.06B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/HR.yml",
+      "text_sha256": "703f4e715a515c3196f236438b1e1f5510aa9cf7ba4777f5e9f51d4affb72267"
+    },
+    "HR-07.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/HR.yml",
+      "text_sha256": "d171b6de1fe80b0360f73fb894af0b36b5a1a2a7fc0958f3b4951f7e663e57d3"
+    },
+    "HR-08.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/HR.yml",
+      "text_sha256": "f5194053d16686c6530e3e138f541fb4ba55781697c70e5663150cad3af2ad5b"
+    },
+    "IAM-01.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/IAM.yml",
+      "text_sha256": "910da88793f9a0537a6b047f78774abd7afd7a662e5fbccac65acc5f994b9786"
+    },
+    "IAM-01.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/IAM.yml",
+      "text_sha256": "0f64e59727cd60c7875cfd759a5fb4920c36c3928714489a710c03d75b12dc5b"
+    },
+    "IAM-01.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/IAM.yml",
+      "text_sha256": "e3d4c88ae6eabce6332240a2687689206dbf485a31e92bc40ae229b593bf3bf0"
+    },
+    "IAM-01.01AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/IAM.yml",
+      "text_sha256": "8b6913b8ffa4b383b5261f52568fc74b1c866e505f620ae704e0b4913be18b42"
+    },
+    "IAM-02.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/IAM.yml",
+      "text_sha256": "071566c3bcbee6aaa60de809767034d9e007f483024f3346b1dbdcaa926a2976"
+    },
+    "IAM-02.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/IAM.yml",
+      "text_sha256": "1236848328680e25826a2778e512492f27fe714aea75c8857d3e6173d90cbfbe"
+    },
+    "IAM-02.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/IAM.yml",
+      "text_sha256": "93f92db2759a9027de830c889af551d89e29cee16c178584d20df50b242b24a9"
+    },
+    "IAM-03.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/IAM.yml",
+      "text_sha256": "2dbc82c91abcc4002f860551e6a5fc0047b102ba5bfbae1b95f0ebf5ee13dc70"
+    },
+    "IAM-03.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/IAM.yml",
+      "text_sha256": "3cc038cce71fb4288126049d5131599b162846c2c6b3cdc7ed9720cef4a1c910"
+    },
+    "IAM-03.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/IAM.yml",
+      "text_sha256": "52e577c292581d2b7bf429461bddbbd7d07147b5d9d36024a26afba32f615efa"
+    },
+    "IAM-03.04B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/IAM.yml",
+      "text_sha256": "770e2348cdbd9a814dd56985d41125a2aace7d877b7119b287b601a6d287e90c"
+    },
+    "IAM-03.03AS": {
+      "kind": "additional_sharpen",
+      "member": "C5_2026_Machine-Readable_en/IAM.yml",
+      "text_sha256": "7c60669041eaf4dab8b5bc36ea8f5db2d9ff0543bfec754fec6ab1ecc310e7fa"
+    },
+    "IAM-03.01AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/IAM.yml",
+      "text_sha256": "ffe12d3764093393dff87396eda4e6c9c3f540324cc79aa0fa9c9f2640445fda"
+    },
+    "IAM-03.02AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/IAM.yml",
+      "text_sha256": "e5bfe82c5e34433ac94bfa5c65c5cfb9e17e5e883f7c8c248538adc54fe091e2"
+    },
+    "IAM-03.03AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/IAM.yml",
+      "text_sha256": "90e670702697511ef14b96c1bbc5955f7531eb0e5a7a873262ca1e7c9007991f"
+    },
+    "IAM-04.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/IAM.yml",
+      "text_sha256": "f3d3c88a28e66b8cc347d57a33bb35cb81b9633799dd18e093b5d4381f855864"
+    },
+    "IAM-04.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/IAM.yml",
+      "text_sha256": "db0e858acaf07af5e560473bd9bf7ab9bf4fc25e4007e6ef9eb91aceea4983c4"
+    },
+    "IAM-04.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/IAM.yml",
+      "text_sha256": "dc4c79a120a5ef67facde7cecd572e235e73914a8212d7c5fab6088a211cb0c7"
+    },
+    "IAM-04.04B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/IAM.yml",
+      "text_sha256": "5c6719008c5d879588877b8875107df282e0c69ca59c2c267c6bbd79675159d3"
+    },
+    "IAM-04.05B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/IAM.yml",
+      "text_sha256": "a0e6a9df9767d97482d6e23b48163a5aba07e8fc1a8334005a6d66b472842064"
+    },
+    "IAM-05.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/IAM.yml",
+      "text_sha256": "bf8371ba5ed3ebae39de94a007b42510ab3b7c0ac6e6c36711494e01d8038b23"
+    },
+    "IAM-05.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/IAM.yml",
+      "text_sha256": "fd4b50216e4dbc5b740cce7f476392701b93d89b963d101373cafd514d7c2538"
+    },
+    "IAM-05.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/IAM.yml",
+      "text_sha256": "cef7b44a547ed49112698dfd9a7d778dd7e220eb707ca76c21d2b29481127dbe"
+    },
+    "IAM-05.04B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/IAM.yml",
+      "text_sha256": "c791ca480b620ec1e05ccf876102e925c6103bd6c6c11a68647078c41b2274f9"
+    },
+    "IAM-05.05B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/IAM.yml",
+      "text_sha256": "27ade4fc37eec3de04ac1a447e1555d37a8e94bc8b2bdddfc38284da14b3f5c5"
+    },
+    "IAM-05.01AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/IAM.yml",
+      "text_sha256": "cf5792e5432bb23e82f7e7044a8331301104f03860bbd1d44da22de9d6c8f280"
+    },
+    "IAM-06.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/IAM.yml",
+      "text_sha256": "e36c931749c36bd9d3f2caf7bdd675f5609c835ce43e4fc8b1a8fc69aa179780"
+    },
+    "IAM-06.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/IAM.yml",
+      "text_sha256": "abecc958b7c0d9242a9f7ed7a01151cef94816caf8b2703b70eb1085d04ebb74"
+    },
+    "IAM-06.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/IAM.yml",
+      "text_sha256": "280f97df07c31d6d8ddbca94d4d8b9e677cb6e8bb475779144cd4c2966ee8ccb"
+    },
+    "IAM-06.04B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/IAM.yml",
+      "text_sha256": "d2eced676e2bd11870bac57b533b2927a883ed05293b949d0833434d4c27a7e3"
+    },
+    "IAM-06.05B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/IAM.yml",
+      "text_sha256": "283c3dfbae103c63c2ade4e745d7d9a06acc9c3a1dbeb2a0e018ef327ab0829e"
+    },
+    "IAM-06.06B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/IAM.yml",
+      "text_sha256": "05e065f39691972bd3fdf5e92b4a80d27843eff5aa13bad94f8a1c748e6a06ea"
+    },
+    "IAM-06.07B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/IAM.yml",
+      "text_sha256": "69e42c5447ea34289a12d05ff6b661cecc1899d5711ae19168e2a5c6d25b190e"
+    },
+    "IAM-06.08B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/IAM.yml",
+      "text_sha256": "5e4d66bf4d6a303961cd19b8f8197d763302e3465ca4f22fc82abb9404d8c6ef"
+    },
+    "IAM-06.09B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/IAM.yml",
+      "text_sha256": "71622d8cc3be0376c1cff65f635c9f531f7d56741dfc28092183f74d7558519e"
+    },
+    "IAM-06.01AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/IAM.yml",
+      "text_sha256": "14b24d0b6a06e19787baefebb5d1f967334b0f2e441b310fd827c1229d909037"
+    },
+    "IAM-06.02AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/IAM.yml",
+      "text_sha256": "186aedf75b9957fb5f0bb7e0d92536d2d1bb9b3721bac2b6931c2dcb20bb79ab"
+    },
+    "IAM-06.03AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/IAM.yml",
+      "text_sha256": "80a432335cb3249d44baa1ebea5e9a98ac47d22c5d9f69a1019873566482bbc9"
+    },
+    "IAM-06.04AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/IAM.yml",
+      "text_sha256": "cf687e07a479ca101000262a394c468ec58e6246554d57bce38eac93d2696df1"
+    },
+    "IAM-07.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/IAM.yml",
+      "text_sha256": "c8bff9fc48191e0a7642844a089490b54fa8152eb84258a73d92caab77c22ac4"
+    },
+    "IAM-07.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/IAM.yml",
+      "text_sha256": "7b835daf913c18355f7132e811c52a15dd0b8376e7bb0ff5b9813af948df1a86"
+    },
+    "IAM-07.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/IAM.yml",
+      "text_sha256": "d7e7dd922e36de744d1f9b91c4f6c2e66f91bd4bda5dfc1019ef0f184583976f"
+    },
+    "IAM-07.04B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/IAM.yml",
+      "text_sha256": "60b1450c8cde9446527005711be12f73429a831b66c5fd63f98a8a13e40f7690"
+    },
+    "IAM-07.05B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/IAM.yml",
+      "text_sha256": "5e65f003de1606831ee956a8c72a77cc531585ed555349d139f6f198e47ba39e"
+    },
+    "IAM-07.06B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/IAM.yml",
+      "text_sha256": "a3809f6657e8f9e0ab009ed3c58392c7a23dacc1dd8053ce85f26394c28a195a"
+    },
+    "IAM-07.03AS": {
+      "kind": "additional_sharpen",
+      "member": "C5_2026_Machine-Readable_en/IAM.yml",
+      "text_sha256": "cc00e2413f7cf5c1fccb16ad2d3417993ab63abfd0c44bfeaeda8ddbf95cdfda"
+    },
+    "IAM-07.04AS": {
+      "kind": "additional_sharpen",
+      "member": "C5_2026_Machine-Readable_en/IAM.yml",
+      "text_sha256": "169c07214d5aeb499e92022a1c90a23b92ac89003ba1964145fce20ef460cb34"
+    },
+    "IAM-07.06AS": {
+      "kind": "additional_sharpen",
+      "member": "C5_2026_Machine-Readable_en/IAM.yml",
+      "text_sha256": "1c69047fe8e1f3c19eb5be318f383fdc913856049491245a5bc5f22664991d7e"
+    },
+    "IAM-07.01AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/IAM.yml",
+      "text_sha256": "46a55e6bed60957e1acd4d91387a328a2e04701741dd33455b77f5330267fe3b"
+    },
+    "IAM-07.02AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/IAM.yml",
+      "text_sha256": "bf072540eb0e125baf80b363a6063aad61e7819a6c495fb8e4c9d0dbcd6e164b"
+    },
+    "IAM-07.03AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/IAM.yml",
+      "text_sha256": "367ac0ce02b2c2347d17f4913293cad52f89141f0b2b256c64cad616c3975207"
+    },
+    "IAM-07.04AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/IAM.yml",
+      "text_sha256": "74a230df7aba0a4f775aba161bad81d9ec89586aa070df6c879a44c54f6cc28f"
+    },
+    "IAM-08.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/IAM.yml",
+      "text_sha256": "0647c804d29d1a2b52d9ff7b19c70369fd2871d95724f58bb4ad8b1608ac92ad"
+    },
+    "IAM-08.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/IAM.yml",
+      "text_sha256": "7ec8248cc3d42db74ee1335e10ca46a4ae61c208f735f7ba8530f68ea198169e"
+    },
+    "IAM-08.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/IAM.yml",
+      "text_sha256": "77a309eb9b01c29aa2deb39bca7dd45ffe04ad7f25d2729b185ee814e87bf559"
+    },
+    "IAM-08.04B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/IAM.yml",
+      "text_sha256": "ac9bb30b827fdb73bd205796f321b99c12601a80785da8569b821cc47af866eb"
+    },
+    "IAM-08.05B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/IAM.yml",
+      "text_sha256": "bb21d0865ec12e9e23fa5495d4e2e6cd3038019b922b5c618273715d542509b6"
+    },
+    "IAM-08.06B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/IAM.yml",
+      "text_sha256": "ddc9aff60ee2bbec5b02d8f73800bf8c0853d369b7df8ff202a38bb4e6e123c0"
+    },
+    "IAM-08.07B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/IAM.yml",
+      "text_sha256": "400898098ed0ada5e64ccfeed0265298e63529c6d93638a5166410c978cb13e0"
+    },
+    "IAM-08.02AS": {
+      "kind": "additional_sharpen",
+      "member": "C5_2026_Machine-Readable_en/IAM.yml",
+      "text_sha256": "b9ef5591b7cdfb4289f20fe6b7a428b72cd6890626e9a66c709f90edcc2a37b2"
+    },
+    "IAM-08.03AS": {
+      "kind": "additional_sharpen",
+      "member": "C5_2026_Machine-Readable_en/IAM.yml",
+      "text_sha256": "772a275bea237933d5bcc3a692c16892fa7662a93d1c4f683171a7dd55372c80"
+    },
+    "IAM-09.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/IAM.yml",
+      "text_sha256": "4013b7bb6a008a148772b9f970e885f4948dac51b80e5c633d2bd044026e0b95"
+    },
+    "IAM-09.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/IAM.yml",
+      "text_sha256": "0ab3615e9063592a6f01698c1a922155e53208b34179094a4292eef5f18aca37"
+    },
+    "IAM-09.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/IAM.yml",
+      "text_sha256": "230a282a9ae9d111a250a850919b2e7165d8938849eff8753542e622f5533ff7"
+    },
+    "IAM-09.04B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/IAM.yml",
+      "text_sha256": "f89c1e3e042a5ab261973c18c86974d96f1c8cd3651a258de417ec495c427576"
+    },
+    "IAM-09.05B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/IAM.yml",
+      "text_sha256": "2b658b6cdb13a36100023f3f554194ac49994b0a46297959b63196e0779e0d8d"
+    },
+    "IAM-09.06B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/IAM.yml",
+      "text_sha256": "a7a15224cfe7c307ad0ff1624a551b7c5b5f51d401deb7689efa6dfac71b5562"
+    },
+    "IAM-09.07B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/IAM.yml",
+      "text_sha256": "6f89a0147152fe61c3424d631466802cf9c9b607f278fcbd6c9837d1b8a69c69"
+    },
+    "IAM-09.01AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/IAM.yml",
+      "text_sha256": "d538b947bfc9ecbff7fa244661ec3783608f9086f1cce8bf65b376a9f000d96f"
+    },
+    "INQ-01.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/INQ.yml",
+      "text_sha256": "6a79c266b61d4feabb83949c85205ff598cdc0019152727c1480569ea899d9bc"
+    },
+    "INQ-01.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/INQ.yml",
+      "text_sha256": "97340a451a23f1773fd04e1156c9a76ac3c7b09c4b0f37e17bbf7a388022d928"
+    },
+    "INQ-02.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/INQ.yml",
+      "text_sha256": "113cb5bf39a1d23569b1d58fb1757f0dd90d00e3176dab59cec4732a4d9cb45e"
+    },
+    "INQ-03.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/INQ.yml",
+      "text_sha256": "8575948e7179b7b2eb3573d6b1e872b0a06aa943d2a3bca4c0eecc56fb3d8b2d"
+    },
+    "INQ-03.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/INQ.yml",
+      "text_sha256": "84a3a59a504e6d1297c7f834bfc9015c1391399578b81399b47fd802c8dc6d64"
+    },
+    "INQ-03.01AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/INQ.yml",
+      "text_sha256": "a4f363dfa28d9e52dcac3ff75a75e776a02b17724c111c021f3f049001b43310"
+    },
+    "INQ-03.02AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/INQ.yml",
+      "text_sha256": "ab047624b35afaa48663e64205912d7cd61916d4dc2fee36154146d65d05e53a"
+    },
+    "INQ-04.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/INQ.yml",
+      "text_sha256": "21bc1a28cdde988ab4faa708e83285fbd18d4e03bb852a90314f75028231c444"
+    },
+    "INQ-04.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/INQ.yml",
+      "text_sha256": "5d5689af62e428a08beb4723a72799007f8246bb311f7630818ad8f91243a92d"
+    },
+    "INQ-04.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/INQ.yml",
+      "text_sha256": "cd466ac3d3cd93d07a688474821c5aa6965219a5f79c34a2bbe60b723c8a5e96"
+    },
+    "OIS-01.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OIS.yml",
+      "text_sha256": "31a44450254e40a63085d1001226dbae9ffae92a95558e75b862261d454bda74"
+    },
+    "OIS-01.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OIS.yml",
+      "text_sha256": "8f74964df236d8e83565fea2de4dca4101fcdab7ea6445c134d0476860f43da0"
+    },
+    "OIS-01.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OIS.yml",
+      "text_sha256": "0f5efd70df72a20cc2a7eed46c4d862dfc7298ffd1abcfec25fa78f415e67273"
+    },
+    "OIS-01.01AS": {
+      "kind": "additional_sharpen",
+      "member": "C5_2026_Machine-Readable_en/OIS.yml",
+      "text_sha256": "9e32df399a71191fbd651be71a0c000e76b1723c371f47d1a764444a561d1591"
+    },
+    "OIS-01.01AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/OIS.yml",
+      "text_sha256": "2cecdefabdb00acbaeacc05381c114df83b449fd93e884095fdd6d0001cf7d93"
+    },
+    "OIS-02.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OIS.yml",
+      "text_sha256": "f465d07e564a2df430ae1879e5d85a078a6693c444dedb40683990c261f0f561"
+    },
+    "OIS-02.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OIS.yml",
+      "text_sha256": "2d28a276a85a94d887bd283a109486dd9a9bee187fa525f18bcf2804850fede4"
+    },
+    "OIS-02.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OIS.yml",
+      "text_sha256": "7bb4cbf5d1d47f82df5c0b71dd4a3a7f6f364db6a2330dff082867b262a0ad18"
+    },
+    "OIS-03.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OIS.yml",
+      "text_sha256": "235bd8fd080e1d6a893ae220e578ffef2ebe5eab27cd1e2044465c4ab48255e9"
+    },
+    "OIS-03.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OIS.yml",
+      "text_sha256": "fcb133cf026cf6105558e638501383f97e522f614ebe0593272df5a15a1b21da"
+    },
+    "OIS-03.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OIS.yml",
+      "text_sha256": "e423751f68a2077c559c27bb94be6078d16cca19a7d8feffcd901acffc65e324"
+    },
+    "OIS-03.04B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OIS.yml",
+      "text_sha256": "dc323700993656de5e4a0fd80557715f936ead73e3f9b29ed93c2d032f482289"
+    },
+    "OIS-03.05B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OIS.yml",
+      "text_sha256": "43ac90bbc8547076798cddccb96e6a5bb5a3c26d3a7261a74c2e70a5f540ff8b"
+    },
+    "OIS-04.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OIS.yml",
+      "text_sha256": "422ecb54c459c657d490dd9a5192e133c82969effe02e58568831590a1211a29"
+    },
+    "OIS-04.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OIS.yml",
+      "text_sha256": "a38b98eb4dbc0132a017ddaf50cb984de04b4624789792f60ab267b372a6aa45"
+    },
+    "OIS-04.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OIS.yml",
+      "text_sha256": "15d566df3dfc6bb07d5d8b58df964494bffde73f7defba5677f9c483e55578f3"
+    },
+    "OIS-04.04B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OIS.yml",
+      "text_sha256": "5156cbab6ea2ec168d04b76352208c82cd5a7dbc4a0fab74cd037385ec0ef0c1"
+    },
+    "OIS-04.01AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/OIS.yml",
+      "text_sha256": "c03b84f0046e73f02edb5f0f64bbd2e72ba7cee041fe4235eab46fb0c7116941"
+    },
+    "OIS-04.02AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/OIS.yml",
+      "text_sha256": "25591a3d23e0a5785ad80e31cd9bfc7a5c8bcb1c7517a45766a59a76fc467737"
+    },
+    "OIS-05.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OIS.yml",
+      "text_sha256": "c5497b80327cf6f93f7db9fef923f7d9bd801c98702295bdcba04502c1697fb0"
+    },
+    "OIS-05.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OIS.yml",
+      "text_sha256": "54fe5260e4e3e9980dffcb4d0f8509d6202a93554b4dbeefb2803cfecb555d16"
+    },
+    "OIS-05.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OIS.yml",
+      "text_sha256": "9fc5db162cd40ce2f528825df1d75b3e5ce85860f3736015c864f5f93891c631"
+    },
+    "OIS-06.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OIS.yml",
+      "text_sha256": "4e62ff7c6d0bb40e778f60d40b454ce01059de8fd3182f55865164804da22fd9"
+    },
+    "OIS-07.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OIS.yml",
+      "text_sha256": "c0384f04c0d6346149f13912d738830e93cf6582de71f597bf7656c267bb8dc8"
+    },
+    "OIS-08.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OIS.yml",
+      "text_sha256": "5ce705fc7a4e3506f8c933ac80eaa597b0b9bd67745e048963f5c20cbdde4c03"
+    },
+    "OIS-08.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OIS.yml",
+      "text_sha256": "3eb5051245fc9ecbac93dc4405aacc95212a132a3da13a63fc472c09f64459bb"
+    },
+    "OIS-08.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OIS.yml",
+      "text_sha256": "2430839f9bf0cab708f268ddc58574bcc7129e9d203b6011cacae127fb2a8f7f"
+    },
+    "OIS-08.04B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OIS.yml",
+      "text_sha256": "f0029992edd905be37ebe33b98f6fd1443ca11305a297021bb0e9353477dfdff"
+    },
+    "OIS-08.05B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OIS.yml",
+      "text_sha256": "3d0a80d882c4836232508f02e7298297b62dabba67a2d78a97a6a9b552f1e803"
+    },
+    "OIS-08.06B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OIS.yml",
+      "text_sha256": "563be59b49c4802960900544f60fc53c186a571666e0f12d3dc2b5bb5679279a"
+    },
+    "OIS-08.01AS": {
+      "kind": "additional_sharpen",
+      "member": "C5_2026_Machine-Readable_en/OIS.yml",
+      "text_sha256": "025965794d7e2410c1c45e01d8c2f4e4477c18d4369d72134703b1e9734e8181"
+    },
+    "OIS-08.01AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/OIS.yml",
+      "text_sha256": "43b176fb2c6050351f862b7310aea99894ac40f218904e5c23180bba9597dedf"
+    },
+    "OIS-08.02AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/OIS.yml",
+      "text_sha256": "20aa5dbf22af70252aa51c857d9dec9e07a2d1c81ef482b01078c04141ed45b5"
+    },
+    "OIS-09.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OIS.yml",
+      "text_sha256": "f3d8d76dcf6d69f63f82c5b09636c57d45f0262e9c89c42de7a41c649a852c7d"
+    },
+    "OIS-09.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OIS.yml",
+      "text_sha256": "830d9f2127ad01cf1b759386a042a5cd593487e636d8e02006cdbd2aba9ce8d7"
+    },
+    "OIS-09.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OIS.yml",
+      "text_sha256": "b538e5bfd3b00de8df42bd1a04cc7e08c3b53db15d4fc58262d8cc01a90edf72"
+    },
+    "OIS-09.04B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OIS.yml",
+      "text_sha256": "29fbe6b8c17c56ec15f4da5e9f95d906bc0a288f1ba67e9cce7ab9e0dda805f1"
+    },
+    "OIS-09.05B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OIS.yml",
+      "text_sha256": "ad5b36a1a49b4e4a5ff0da5b7ced16e92c5b3dc4e2e06716cba79f1d0ced3fb0"
+    },
+    "OIS-09.06B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OIS.yml",
+      "text_sha256": "65f976426160d1a6f11e16d8780b2e0438bbbe6597a7bb9bd2bd569ad8c23cc3"
+    },
+    "OIS-09.07B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OIS.yml",
+      "text_sha256": "928a4ceb80e1c71a591f9307561ddbe044d08355e9bcdc85f446e30b638099ce"
+    },
+    "OIS-10.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OIS.yml",
+      "text_sha256": "9f6af5c83ad052ce2849dfa5c6ad01fcdc9b63a884d768d19babbf46099ff67a"
+    },
+    "OPS-01.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "44deaed9598c10322ea3a9e3954a0bbc15597dec58166056bbbf7f24408a1703"
+    },
+    "OPS-01.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "0718d0072c99ab8f2c31c41fa990551f877ad987ec490e086c7c195d2499b859"
+    },
+    "OPS-01.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "208cd3952bfc23d1218753b778967dd46507345edc9035ce475e5152ab101417"
+    },
+    "OPS-01.01AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "dcb33608c31b9fcfca8f6c0150b0aa2d1281f907a2a0e0c917e3ab4d723da8af"
+    },
+    "OPS-02.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "927d499c7b67f187ad434dc653e3e14636f1ee1a49954f82b7c2ad951789a269"
+    },
+    "OPS-02.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "a30fd7dc08a1d7a29b23acf37ba7e2248979f31bd189d51b1e2d80e78d44a8db"
+    },
+    "OPS-02.01AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "c91f38c474812b6a725a1b4354152250ca86657c16399b6a30d0f022e2771034"
+    },
+    "OPS-03.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "d7ff56de8fa6de8fc4cd0fa9d95a5a8b6b7345591065dc91a8719fb66cb701a2"
+    },
+    "OPS-03.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "af772cff3c6a41467186784fefc94420cb20073c36915613722b3b8ac0e254e7"
+    },
+    "OPS-04.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "a61cc567c2c615ba7e2f77f530730a8e95a1e7ee8ac74ebc5e90ed7acd1db736"
+    },
+    "OPS-05.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "351d285d1375b35b6dd3eaff0610ba08f96ded0f36595acb16b9a20dca10136a"
+    },
+    "OPS-05.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "2caedefe0e04bba551dc89fcab757b0495c8a3ae73b971113810f4a36f0f8128"
+    },
+    "OPS-05.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "03394780f1f8df0d81790a6626c6e011adc3c75ddc5fca5cd89679baeb37edd8"
+    },
+    "OPS-05.02AS": {
+      "kind": "additional_sharpen",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "adb1b3f3c5ebfb4000088404278b175ca8e21b25df5893b18a952d7c1488e73d"
+    },
+    "OPS-05.01AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "aa1ba397a3612785c9c7515397c17a181ff9c56f64dfe9059d8d3f110ef4c26d"
+    },
+    "OPS-05.02AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "52fa2e2f0ad62941f1e19561607443bf3382e8ba80add142351dca8245e7bbcc"
+    },
+    "OPS-05.03AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "0f5fff4e090f6bb082fc30d16e6190d06a6d7d75f60b31d65d7380258562042b"
+    },
+    "OPS-06.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "44ffc562595dd4f0f054c99d1c7b9f13a289a172eb098ba67dd3fb4f0d2ee4e7"
+    },
+    "OPS-06.01AS": {
+      "kind": "additional_sharpen",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "521f98da372a5af4704e139718282ac0db9367bad0adc5adc198dcf393e0b10e"
+    },
+    "OPS-07.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "e3cede23d6eefd44d37ab95349d8e9478c16aed6ed31cac0e9ae03d891690eeb"
+    },
+    "OPS-07.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "61781a1bb728d2a33decdca9d9d672482cf544d680457c642f60213f32582510"
+    },
+    "OPS-07.01AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "55537819127c6bd0b7b340f61a83bff3c13d18936fd64f85164bbf0e36b587ce"
+    },
+    "OPS-08.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "51412d6af4287d9a9e55f0ec3390f0e1f5800d357e5a1195d494a35c031f7f3e"
+    },
+    "OPS-08.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "2cd5b9727d2845a67bd9d22f012afb8f2dbef3e28e89ebce0a58891f32554067"
+    },
+    "OPS-08.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "06e2e15a1fc734a550471a3bcffd97bd6fc8066ad62321ac120d1ed448d41ae3"
+    },
+    "OPS-08.04B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "2bdc6d052572f33f6960609d6584a17eae6e551e27794784def648cbd6e00cda"
+    },
+    "OPS-08.05B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "9c2898c44780962525d5a06b6e754856ba1700bd8b9505e4de8351c5e41da93d"
+    },
+    "OPS-08.01AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "a807098399faf5c3cacd6b1c95882e6804dd7fffc5e1d72ff32484602d80d4a5"
+    },
+    "OPS-08.02AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "d9226652adb31da3cb0a62be79846d2f828caec8228f903f453bfe7211991ff4"
+    },
+    "OPS-09.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "abeea9a106f6033b347111c33bd9df52ddb2ccfb18f3deee30babb2506715169"
+    },
+    "OPS-09.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "d2f0be9faf08ff6e708bcb5328946ea7cc608fa43e48ded34528dbce4d905550"
+    },
+    "OPS-09.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "12d2c5ab59e4975fb12497d5a40d79972b9474c986b940d44a3fdf6f8ca7d30b"
+    },
+    "OPS-09.04B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "efe83465879e55845fabf7c9c99316d28ec0b2992cdbcf8db5daf7b6a2a00f2a"
+    },
+    "OPS-09.05B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "fc327625f51dca72acb2d3f0fbe92d37c334f81939f6440b51701138190b33a0"
+    },
+    "OPS-10.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "6c1751281d8b9e6b35f273317378ed798000d5a99d73ff83f719ef6590b46df9"
+    },
+    "OPS-11.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "52697cc24ec44a5c55357fb5cac214733b298125e7421ea0eb6607b480171154"
+    },
+    "OPS-11.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "028a3d48fcae8ea0cb5e9634ec59daefe2ec149bbfbd66b9dfc28dd47a24d1b7"
+    },
+    "OPS-11.01AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "f5b5979d57fb8e53831865cba1b269e06b18dd7f932f4e7aeb213dbea177593d"
+    },
+    "OPS-11.02AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "c26fe6d869bb0d3430ed50918045154d177101f2df8945dce8b3da4fe1e232b5"
+    },
+    "OPS-12.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "6e45b0476eb0c60d3be2240187409dd6b8ba9dca4196b0d75db5146f9a494f48"
+    },
+    "OPS-13.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "a234b4e69cdff76b5c2f3f12848aafa5766228390f09bd94910215aa544748bc"
+    },
+    "OPS-13.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "870355f97728ba827e8dba55dd78313d8ecfa6018bba20b95ab1c68b544d1823"
+    },
+    "OPS-13.01AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "6ec7e2487400c5f131faec5ec12ffc30f3cd952171ecf8b7a546b9c14873441f"
+    },
+    "OPS-13.02AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "90e670702697511ef14b96c1bbc5955f7531eb0e5a7a873262ca1e7c9007991f"
+    },
+    "OPS-13.03AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "4cac6f8356f2e732ad348e037db341fa2b607ea23b651cfd8dff76a507958ef2"
+    },
+    "OPS-14.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "6178ada0ad5b3cdc7d6f29b8734ccea1b3cead372f1897135bd67917bda08787"
+    },
+    "OPS-14.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "1db7e191c48acf2991c643fb1a911bc0a6647fa30d2669fb39acce3cc76d9b70"
+    },
+    "OPS-14.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "d76eabb28048d23b5d187fcde5a9f40d50c013073922e909788ce32c03ae9de7"
+    },
+    "OPS-15.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "e1955e82ed3bc4be3bef01c90e10d938e22bc23a6027c3dadd222d13e5dc9771"
+    },
+    "OPS-15.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "7b8932a6916544ec42de1cf69090402aaa072918501e2a1ec280f958661a2dbf"
+    },
+    "OPS-15.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "2ea1ad50180c26f9310012870bd686df4809fd97aab0f33e84db9c01505c1b98"
+    },
+    "OPS-15.01AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "dc3ea4ff4dbcca6e4b79ceaff4222fc8af44f1821a67b9b077bf872f74e8e508"
+    },
+    "OPS-15.02AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "0c62fba7d1c4e97f9444759105611ea635977753fbf02ac608ffbdde0ade7b6a"
+    },
+    "OPS-16.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "7423f4e3ab1d4cf38846a8700fe60894fc967917cc7e118c5f0a178a1fe3afae"
+    },
+    "OPS-16.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "8002e7f5f6eef92120cabe1732aa53bda1568b56d64aa69b6caf01afed750917"
+    },
+    "OPS-17.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "c63e941325f72dbc086fe636582542aa3b41212f71413b1ffc266be46e8e27d7"
+    },
+    "OPS-17.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "dd3442ea58a030165a95710214141bce8385bd1b533ac67ac1ee979833be4550"
+    },
+    "OPS-17.01AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "66667a395a1c52d65da87be4021afc57e8a2f3e62bfd58b5c9f6b7c50292f69f"
+    },
+    "OPS-17.02AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "41f43b1ab836fe5583f4f5ba68b7f7e88c25b3b4b81495fe08e5858c3b7684ee"
+    },
+    "OPS-18.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "df0b2de87aa9826cfeee335ba1d25c8e58b42ec79d91e3ee83fce0754df295bd"
+    },
+    "OPS-18.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "75be219c253f8a59c77a61c7fa96ed829fe2ded29f39331cb8e348f36a2181cb"
+    },
+    "OPS-18.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "e733389a268e2f051f23faada84e4e6fd2c16b93a866313570a2c41d34a02f37"
+    },
+    "OPS-18.04B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "249293dd01711f4e6f2ee111f582e2e1be7084b80fb7b2c35a5d951b21f9bc57"
+    },
+    "OPS-18.05B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "65e2eb8467ad095630e8a6ef6f0a10b35708a4b643d407a176e8c012f0433c3a"
+    },
+    "OPS-19.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "e706df307935c761ed9c5f964bfac65b90e3b3ec09cb5aa9025f7090f48d9d32"
+    },
+    "OPS-20.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "5e38d5310843ea9028ca714e7d433660ed18bd2643550359900acb9f311703ad"
+    },
+    "OPS-21.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "66d40b26cba5b09c2542c1846a0aabe917011b9f3892fca1a90a61d8e76535a5"
+    },
+    "OPS-22.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "a60acf196a1c3207c09e7a6c8f27546d327ccd3009b840bebde5cacafac86b40"
+    },
+    "OPS-22.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "95a6fdd5bc0281ac5656d09a21afdb7decdbcf8d081e0b242e1a2444a6522d71"
+    },
+    "OPS-22.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "5c30e35942d9f59af4f2c7d76c5a95f5c31c3042aeaf6835e08a232b1e454400"
+    },
+    "OPS-22.04B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "0026083039361d2af54755d35cfc9191507a98c4a375c1421bc10c1e4c809a57"
+    },
+    "OPS-22.05B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "615e5377d4eb9da4a2a8092f4482dcb8e45fcf9a7763a9aace4952bf58e9dc34"
+    },
+    "OPS-22.06B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "99244e17e022f477994673406ef67fd0e84c4ca562a91d5e37f132dd7aa1a922"
+    },
+    "OPS-22.07B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "8ae68955f0583f2d46f25efe20986d9f740f6ec050c7e73d1aa9db4950c3fb2c"
+    },
+    "OPS-22.08B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "5e7eac76eedffef4f9e4d5cb25b89ecccf4ba8fa80d09425a75a1702052e5acc"
+    },
+    "OPS-22.01AS": {
+      "kind": "additional_sharpen",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "25912e752d8df8dcf18d0641a115c856279c91f9161e70a27099cea7f8557544"
+    },
+    "OPS-22.02AS": {
+      "kind": "additional_sharpen",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "26e15ece04d3ad7560fa61779cfe50f555e68e84fd7b7dc1571530a975c7624d"
+    },
+    "OPS-22.03AS": {
+      "kind": "additional_sharpen",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "c2bb5c178a4da38aa9b4bba2c8321c32b98e1e08f7106c2947021720d15fa045"
+    },
+    "OPS-22.01AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "9fb99cc35d86b5bd3e1a8cc82731f304278183937df7c07a837e904a6fd4c5dc"
+    },
+    "OPS-22.02AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "1c91a1d89014de0ac673693c612d6216776cd34223ff8cc014085ec2db6e42c2"
+    },
+    "OPS-22.03AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "216abb0d552659318304553d7da0310464e60d0c6c909c925e481291ffea59d3"
+    },
+    "OPS-22.04AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "26b902514a5658f18ecfd617a3460841b615d79e290cd969ccb1f36fe10fa3ea"
+    },
+    "OPS-22.05AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "b8d0379c516f86e16982e78dd8960c3e65847bb7b8696d5991d2c5c855dbe150"
+    },
+    "OPS-23.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "ccd55143e1a6a0b24bb483ead5586bc691422c1587d82d8cdebbadf452588a2f"
+    },
+    "OPS-23.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "dd51104296ad4805563748ed3904396b64adf273134794fa61409585c621a9db"
+    },
+    "OPS-24.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "46033c1f3637bf9e3b0574b2e6714829f5850598169b3230a8d979861d5d17ce"
+    },
+    "OPS-24.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "ac6571ccd0af69865eab215aa8ed3bd7e06449929c242aa48acdee0dd0a454c1"
+    },
+    "OPS-24.01AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "0c588ca55c3845ddcd655e71ae95ed91b463f7a7bb5eb7d1b9e5d282029efce4"
+    },
+    "OPS-25.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "f09ab0fd9af11969a667fc27b6b823bb1bec9f381b566b0b7d7a4cc8c9840a06"
+    },
+    "OPS-25.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "1bd69e208df2affd1e374bbf2ec377a991f80efbbbb56ddd74e0525d22be3434"
+    },
+    "OPS-25.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "6bb1dc4ec0d682a6203fad51d45e9997872fd34fa3514390d498115ddf15da77"
+    },
+    "OPS-25.04B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "ea93e2df9f2b1648bb6d8217e061181e0427bf1009e81ef59dcb622aa9bd494e"
+    },
+    "OPS-25.01AS": {
+      "kind": "additional_sharpen",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "f326ae92036864c994d790060b4f353ea6d690326bff2014bb3eb826d66ded20"
+    },
+    "OPS-25.02AS": {
+      "kind": "additional_sharpen",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "755bc0272962f83500c3c6d0bc3a679c3f837e5cf102277aff49b530a7d2dcd3"
+    },
+    "OPS-25.01AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "407718a0e9f610758523d2954b97a6bcde722f93ca095cea7e9b2f52d9394aa3"
+    },
+    "OPS-26.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "4be00f22a82acfe5b4d2daae88f67b759bffbb333f502b7e0ab2016c3a2eda1b"
+    },
+    "OPS-26.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "a6b1ac0d5a5aa5ec4642578d73c0050fd83d2836de8c769d4125763918ecd159"
+    },
+    "OPS-26.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "7574aa26391c8150e5aab4d534a3a4d83eba388c7d0621e19e9f16e84be0e60a"
+    },
+    "OPS-26.04B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "6600451e30107d1511bdec0afe9a7f7ceea5b93ca226135d8c289d791420d6ef"
+    },
+    "OPS-26.05B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "65538f3641800f6e96b1cc1b60615ff8098479532aab5da719f24c2c2954444b"
+    },
+    "OPS-26.06B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "3e72d12ec6009a9ccaae24206b190df25885e0ccf7409099bd13d5dcb9bdd5d2"
+    },
+    "OPS-26.05AS": {
+      "kind": "additional_sharpen",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "88a1b2bdbfe77682235d5a54942058ed281b3fd9fef819d8be672909981da9f8"
+    },
+    "OPS-27.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "8a2281b7e6dfc2dcccad348ca4dfd0ea8bb8138eb358e8580eaec897e7230e6b"
+    },
+    "OPS-27.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "b5ba4d49a2574c9263cd2911b742cbc34f3d30f95e2a64b5da9e66c562c16315"
+    },
+    "OPS-27.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "5ae66ba7a4368c0732418011fe9275238abb186ea53c706073ae0a60caff6c01"
+    },
+    "OPS-27.04B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "bbfaa40fb2733019991520de32e176467791d3272c2bf8deecf537f48807671e"
+    },
+    "OPS-27.03AS": {
+      "kind": "additional_sharpen",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "1c8b29538d2c8b916ac726bec8c556a06e460591c508a6a09ae4fcf764026e09"
+    },
+    "OPS-28.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "c50d7b0df2fcda218ff1fede32113e3fbc5bb9d6bc9c08f215dbbf6dc8f97f19"
+    },
+    "OPS-29.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "03d4c31f774bd97b01ed6b8652b90e0c4c28552df84ac22cd1dd6ab373f8e2c5"
+    },
+    "OPS-30.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "37c7c6997f67cb37f8df3df1cbe7a7359881cce3760f8fd893a1334e3df18e6f"
+    },
+    "OPS-31.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "550c6cda0b3305467e782c2ede0d2788d66c81484a522a6d390b1f9f73ec6f93"
+    },
+    "OPS-31.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "59ab8ce110bdac0480facfb1ded30c2fc31f79aab3508a25c73c5f53ee3867b9"
+    },
+    "OPS-31.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "e5376efbdba69bff3c036053067e2c523a0cd72868a5af9d2e6a661d053cb190"
+    },
+    "OPS-32.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "3f1f3facd8263b1e7eea2b6589b9e15351540b52585f0e21714aa89c7ebb4ff9"
+    },
+    "OPS-32.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "4ef300fd0186ebb90d262c2db9131f176b7845f7645859e2a69b7f1d89508562"
+    },
+    "OPS-32.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "1ddba80745e739c66085682e0dfaa835b59261e96331982629b9f074ec5a63b7"
+    },
+    "OPS-32.01AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "f6ddb296ed936b23deb356d5c6bd3d0ae1321d7286757127d69a073b3c40f4d7"
+    },
+    "OPS-33.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "f91e3212bb4d060c443ec15da45a475086b969ba1383d29a0d1f8479667ef05d"
+    },
+    "OPS-33.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "8453108e0b97ff1348087d89be1f61b7d10ac76e4b6ade9212b2246dd5e4dd2b"
+    },
+    "OPS-33.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "76a723233d4cc966fe7a41d506b44a8b80be3e0ae802df4f3bfa883eaed6a7e5"
+    },
+    "OPS-33.01AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "b94b5bc32593a0245d5135278fb330cb962bf9fa3039fcf6e88bb0dcd8ce386e"
+    },
+    "OPS-33.02AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "ccf766e36e6e6ecb1f32f21993e3436a0ca04731c91a57034679d4b87ba0c0d1"
+    },
+    "OPS-34.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "19db32b4fac66ea19c52d3383408555be729be8de0efe99f4d89d3610901aa6c"
+    },
+    "OPS-34.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "a70445a93ce69534228f5f3d1b5f4dc7f1adeb3e8ec83b0547a94af6c85f00f2"
+    },
+    "OPS-34.01AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "1ea91ae8a4901fbcfdf1712ea1438739dce68d5a7fe1c95b9fc6e0e5f4ec843d"
+    },
+    "OPS-35.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/OPS.yml",
+      "text_sha256": "986843a0ffd2984478e65e16f17323916dbb80b1de6c1c656f1c951d1782c073"
+    },
+    "PI-01.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PI.yml",
+      "text_sha256": "355413cacc4350fa5827c267c194d7f0a529bc2511ccf555382fcaf83469d654"
+    },
+    "PI-01.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PI.yml",
+      "text_sha256": "f4869c6b7949bd1b2d1e7d3fffcc301fa9e7594eed93ba8d7c4cc0ddd518fa1e"
+    },
+    "PI-01.01AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/PI.yml",
+      "text_sha256": "dfa81d0f7defccff06e6a909d5dfe0be8d2f59a67d02e68ca6a464dd6d3326f7"
+    },
+    "PI-01.02AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/PI.yml",
+      "text_sha256": "c1c7a4ad2e9d162e64ec976a297b42b0b436c85294c665eac78f8311ce58389d"
+    },
+    "PI-01.03AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/PI.yml",
+      "text_sha256": "97c152e7d6b5e8caf18c68e0e65e10154739800972e4e3577d22f5786a6edc6f"
+    },
+    "PI-02.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PI.yml",
+      "text_sha256": "6c72be1cf55ef11adb9ada2ebd6767e8871676571fac815aebc1975858049f35"
+    },
+    "PI-02.01AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/PI.yml",
+      "text_sha256": "84e8e44f31d64f0cce8b283e3de8924ac0a26d60a3e39286a21faebc02514a23"
+    },
+    "PI-02.02AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/PI.yml",
+      "text_sha256": "5fd6a1953cc248c7453b953d2d77e9f18936a83ee19cfb2e6f44f244760f8e85"
+    },
+    "PI-03.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PI.yml",
+      "text_sha256": "ffba4be12ba72627f768c02ac80e66def84ecede74230a6bc19cc58ae9fef257"
+    },
+    "PI-03.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PI.yml",
+      "text_sha256": "f5ead4c0681b2f230ff34c55eb2dfa2a91678392706ff667dd3b71b9fef5e5a3"
+    },
+    "PI-03.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PI.yml",
+      "text_sha256": "decda7396cb3f885889c9694e6c822e1e7d4dd82398e190d9e633e056cea16c5"
+    },
+    "PS-01.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PS.yml",
+      "text_sha256": "f68bd61818cf4bd21baaf0d6a6c3ba2096a568f739d5d95181111ce43fbf3be7"
+    },
+    "PS-01.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PS.yml",
+      "text_sha256": "f0cc2a4a6f98026e991d3dd123d3de47bfedd35bec4142f7dc820a60eb646683"
+    },
+    "PS-01.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PS.yml",
+      "text_sha256": "32c0061048082274057aee66bef7d727de8f0d090590ceab7b553955a7020a3d"
+    },
+    "PS-01.04B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PS.yml",
+      "text_sha256": "89f57ebcf06019bcdf78e14b75714a43a83d326a21c10e1d1dac25516c34fe78"
+    },
+    "PS-01.05B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PS.yml",
+      "text_sha256": "51ebd6069198f41a191f3e98e47b86a5f03826aa0b9e4cb2354d92518c9838d8"
+    },
+    "PS-01.06B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PS.yml",
+      "text_sha256": "fb8f8d2fc77db0a25cc26e92ea1a8b4ee56335bb59d1c35fbef20906fbdf94dd"
+    },
+    "PS-01.01AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/PS.yml",
+      "text_sha256": "9ab4a29182ddbfba807159a6cb7423eed68ac8e37642e0aec070a0aca6736a4a"
+    },
+    "PS-01.02AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/PS.yml",
+      "text_sha256": "f5a1de9fc50f631d0de4214ba4006ebf8b00b9f6454beae43d1dae6ddad03fb9"
+    },
+    "PS-01.03AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/PS.yml",
+      "text_sha256": "77042fb6435232f4066b906202951e83815003509bd580a5688ad28983e9ac0b"
+    },
+    "PS-01.04AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/PS.yml",
+      "text_sha256": "b87288f5bd25aeac91b54f4baa697507c64a765631bf108eae2875af63850017"
+    },
+    "PS-01.05AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/PS.yml",
+      "text_sha256": "23332cdfbed83bde70ac4b8f253591cf4544a13b458396b9346681da444ff68b"
+    },
+    "PS-02.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PS.yml",
+      "text_sha256": "943b6af38c76a23e50ca58a3030be8a767bfe8b047f7a92b1db049803c06649a"
+    },
+    "PS-02.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PS.yml",
+      "text_sha256": "f2a8fe15110008be1e364a03338dac601f1a71f3358fcfb8e60823fbc14aa8d4"
+    },
+    "PS-02.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PS.yml",
+      "text_sha256": "b53833c6f5542f12e59163bc0e26d0f5efa26044c7ae10384aa3bd549f6418f5"
+    },
+    "PS-02.01AS": {
+      "kind": "additional_sharpen",
+      "member": "C5_2026_Machine-Readable_en/PS.yml",
+      "text_sha256": "5a7bdf5285e7eb8d0c923ded995e64d3f039ab3ba8fa2409d9e944bf43a7e043"
+    },
+    "PS-02.02AS": {
+      "kind": "additional_sharpen",
+      "member": "C5_2026_Machine-Readable_en/PS.yml",
+      "text_sha256": "b0c06124860a5598247574a4ed9ba5617b3f84fe570011e22bfe3e8c789d4d25"
+    },
+    "PS-03.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PS.yml",
+      "text_sha256": "f7a3edcd6c6fc2d4013e06a01c8538018619bbd541ee203c53892e6eebc7c385"
+    },
+    "PS-03.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PS.yml",
+      "text_sha256": "1ea3e73083950b2c3f98215f5a3ca3b9992663eb25280f9ae2fc9ba408690981"
+    },
+    "PS-03.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PS.yml",
+      "text_sha256": "8135c3085c4c1790ff9a917f76f31546b953169a291929baefea6fc8d27fb402"
+    },
+    "PS-03.04B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PS.yml",
+      "text_sha256": "8a0c1d3f7a4d898f0d09d88a7423ac5943708b798e22814b6360e1b1df97a839"
+    },
+    "PS-03.05B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PS.yml",
+      "text_sha256": "cdc36923825f65eb4bf5babdf338a79ab20b7006ea3f4cf5c589a980994eea8d"
+    },
+    "PS-03.06B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PS.yml",
+      "text_sha256": "c72a1d79a8b981b4d5f4f913221db4a44734f23016b6ab357ab93cdd7ab1b78e"
+    },
+    "PS-03.01AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/PS.yml",
+      "text_sha256": "46764554bb371600e4366e7b4104e1e117e404c768279732597c2d3c07bf1c3e"
+    },
+    "PS-04.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PS.yml",
+      "text_sha256": "96296785ab80fb28ea8e4536a7df92ea206a7d95115da202193f6bbcaf2a7ca7"
+    },
+    "PS-04.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PS.yml",
+      "text_sha256": "f70d09b5d2d1274e690f4a7c8adeb663ce4a9e7d9cdf882364f64c5543dca263"
+    },
+    "PS-04.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PS.yml",
+      "text_sha256": "89812dc2fa3156a8fc5a1c5968bc1d776d0017b1b7f31a524250c06ac508069e"
+    },
+    "PS-05.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PS.yml",
+      "text_sha256": "948c08e989adce60f3fd304f048b7e13070c534f426f5617dd5c1410a82dd376"
+    },
+    "PS-05.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PS.yml",
+      "text_sha256": "f3b803539b02cb0db46f56ea84588173f0520017ff6bfdffd58aff5113d8e828"
+    },
+    "PS-05.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PS.yml",
+      "text_sha256": "023d20872dcb972705612df698ea5e6c029d53a859549f242c2181ee09d5ea6f"
+    },
+    "PS-05.04B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PS.yml",
+      "text_sha256": "0f48a86dd4043ac6925b8b3b6bc57ce39540e27443e2c8ee7d75b9bba1c81537"
+    },
+    "PS-06.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PS.yml",
+      "text_sha256": "4a2a46a64d25b0a5873cd62e436afb78ccd8bf70a3d42994c29321b257dbfd23"
+    },
+    "PS-06.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PS.yml",
+      "text_sha256": "65ed61197ec9c173c54803d75ed9e26d17d713a4f02f29723f0fb0c79298083f"
+    },
+    "PS-06.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PS.yml",
+      "text_sha256": "464e6c5cf732c59abc3b9744fda29ee7de3efe0ac3c276e22bb3140a04b3e21f"
+    },
+    "PS-06.01AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/PS.yml",
+      "text_sha256": "e883330ec1566b4161b6a8bf208015f61e5667de6375e9ccf2645af2f417ce54"
+    },
+    "PS-06.02AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/PS.yml",
+      "text_sha256": "4f29ad9a9d083d2aaba57e01c4e29774ce765ae310b44a73e58f4903b1d8a708"
+    },
+    "PS-06.03AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/PS.yml",
+      "text_sha256": "a95d3931ab902adfc56a0d6fdc5cb4079b1a26c4777b37c6bd71fd636ac4a848"
+    },
+    "PS-06.04AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/PS.yml",
+      "text_sha256": "255b62b0cc280cd010137ee12d16e8606c3d9d1546e5566bd000204d482747a6"
+    },
+    "PS-07.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PS.yml",
+      "text_sha256": "94736c9c073b3b036ec2022d48e1f7f4c56e0c7e35878cba1c05bd990ad92001"
+    },
+    "PS-07.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PS.yml",
+      "text_sha256": "48656a0cbc9c5174373b94aadb1932533bbddc77c1ec79d70cf248c31bf75f85"
+    },
+    "PS-08.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PS.yml",
+      "text_sha256": "003229d08474e5d1c1c66d83c43ebe28c4a6cff22bdf14820b13c4d51a5fb710"
+    },
+    "PSS-01.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PSS.yml",
+      "text_sha256": "385d3ea551b95174ee3bf079f69dec1e25e0e9d1091672fc96645ed8b463c87a"
+    },
+    "PSS-01.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PSS.yml",
+      "text_sha256": "646135e6e4d68708ea26d5189ad6a0afbf1f9bd5010e6f32fcc4f03c869ab18e"
+    },
+    "PSS-01.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PSS.yml",
+      "text_sha256": "f2a083b8dc4589b68b8dcc7dfafc8aec3b7c681e81024a6b2d420beab7cc7bc1"
+    },
+    "PSS-01.04B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PSS.yml",
+      "text_sha256": "ebe80f6657ca007bfb8dfaae108a8dfdb0bdd51d6e7d4f0ea0bc854c78eada32"
+    },
+    "PSS-01.01AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/PSS.yml",
+      "text_sha256": "3dcd293aef39507651811e73c124c9a288f96585011468c15f6c5af308a47262"
+    },
+    "PSS-02.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PSS.yml",
+      "text_sha256": "8abf8dcea500e7f3fe418f0349510120ed6821532f39ba5c097e41f88dc9f31b"
+    },
+    "PSS-02.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PSS.yml",
+      "text_sha256": "a7e8b37d85234e1452bb41f473bc30442ab33571bb70544284b35d0cb10c6626"
+    },
+    "PSS-02.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PSS.yml",
+      "text_sha256": "63f11910ad01870ccd734812859854496a113ac087c82f82a06ea144e4dd740a"
+    },
+    "PSS-02.01AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/PSS.yml",
+      "text_sha256": "cfd50d310bf3f04e4b30a54d4d14dc72be482e3d3c61b248dda2ae0e742bb863"
+    },
+    "PSS-03.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PSS.yml",
+      "text_sha256": "5187be8462ecb0c743f8623aad299778bb6a38d4fc08f8d81561a5e426b38c88"
+    },
+    "PSS-03.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PSS.yml",
+      "text_sha256": "3c7513be66bd675a68fe0533fcff211332738173d408d34c05f77dcdc8922450"
+    },
+    "PSS-03.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PSS.yml",
+      "text_sha256": "a8aaa9af03e9fe5d5dc01e40a91e87273ea966b7f8c24403675d5a4490c533d5"
+    },
+    "PSS-03.04B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PSS.yml",
+      "text_sha256": "83e8b8e10b6b339c797fbd6bd2f77c0abc6a3a5aa751cd1b86c6ab2faddcb591"
+    },
+    "PSS-03.05B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PSS.yml",
+      "text_sha256": "50f517ddf5c46aeb7db5c297ff6ef5291ae857518474980b3f4b6708374401bc"
+    },
+    "PSS-03.01AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/PSS.yml",
+      "text_sha256": "223b3f221e03dea9d2121f46a3b966d649c734bce9a66dd5c51b4e42d5473c67"
+    },
+    "PSS-03.02AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/PSS.yml",
+      "text_sha256": "1373c0ef8d2b045d02b19a1408479f6f6872e1f36c1800e06614c5051347d971"
+    },
+    "PSS-04.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PSS.yml",
+      "text_sha256": "62cd6a68fed90521b8ec081cb0f4f0d71c7ea84e28a9d414eaadfe822cac7355"
+    },
+    "PSS-04.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PSS.yml",
+      "text_sha256": "9e0a1c422ee61decd3d983ad13c76780b6cac92b5d6767e42202c080e913fc4e"
+    },
+    "PSS-04.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PSS.yml",
+      "text_sha256": "4c13c84b86739f1373f76aa161464ca9546c01635c8183ba2b0c37f4adf8df79"
+    },
+    "PSS-04.04B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PSS.yml",
+      "text_sha256": "8aeb7b7f4b46c050f280567e15868bab08271b453324c2cc34ee9ebc012b0db1"
+    },
+    "PSS-04.05B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PSS.yml",
+      "text_sha256": "33acfce29eb3ffe74b1526931124fe13716d6299086bc64e9dd5700da2bb95f6"
+    },
+    "PSS-04.06B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PSS.yml",
+      "text_sha256": "2a5bd65abd44f7897811760cecf33d7dfb62d12d63cdaba770c392b18438a606"
+    },
+    "PSS-04.01AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/PSS.yml",
+      "text_sha256": "2122f22cd19aa5aae75cdb9eedbe45f0443e194b63e0b1747d0b325d0fd327fd"
+    },
+    "PSS-05.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PSS.yml",
+      "text_sha256": "2ae6e2cbbc5723baf10b1dc01349794b8c7233f38515dd25b03096db50e5a0b1"
+    },
+    "PSS-05.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PSS.yml",
+      "text_sha256": "92053cfd244b4b9ae82189670eee804e76885ffde0248ca6ccc08bab6ea874dd"
+    },
+    "PSS-05.01AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/PSS.yml",
+      "text_sha256": "44c82be55153a1e4172c284c46da1a41a37d158da7a05c838bafa8b31d5be3ec"
+    },
+    "PSS-06.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PSS.yml",
+      "text_sha256": "036fc0b83f0905dc006b4eb1b917ae97e57743498d2f7af00f1753e8a2b432cd"
+    },
+    "PSS-06.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PSS.yml",
+      "text_sha256": "29c34b07095c5fcc15d93f1d648c1da596b32d6f5ce31e0a3c41c692f08ac003"
+    },
+    "PSS-07.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PSS.yml",
+      "text_sha256": "5bb26bd93b0cba13e816a64b888fe30463c4a737792867cac5ae348da43f6174"
+    },
+    "PSS-07.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PSS.yml",
+      "text_sha256": "23082612215f44e113d18ef50c780f12b2c741d52529900684eb76be9d5e4c60"
+    },
+    "PSS-07.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PSS.yml",
+      "text_sha256": "8e5dc61ee0d45b2eb33f62b005f3cd79893b981fabcbb01c9a3d75c863ea2279"
+    },
+    "PSS-08.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PSS.yml",
+      "text_sha256": "eaa22251ccee23e5ccdec0b4801dcf97d3a4f791dc55356102c56ec24b213e20"
+    },
+    "PSS-08.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PSS.yml",
+      "text_sha256": "580004579b1f6812900504dbab6aa5555661ab1aab9748a74302e12af4fa8994"
+    },
+    "PSS-08.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PSS.yml",
+      "text_sha256": "b4e1d857e44cdab4d297d9d71232f7397c928ce9582a7ae21c7ebede9cf767a8"
+    },
+    "PSS-08.04B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PSS.yml",
+      "text_sha256": "485f83ce190019fb61f9ec5ddd8e268f15737f7c111dd4a4bff11258a428fda4"
+    },
+    "PSS-09.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PSS.yml",
+      "text_sha256": "4a66fb395f236511ec84ac721ad92b9cc148702efc3da01359b0c0c46f8636c8"
+    },
+    "PSS-09.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PSS.yml",
+      "text_sha256": "8a14aa2962a2427d302099b01afb43dd1c48659f2d3d9678b3c7819fcdee4fb8"
+    },
+    "PSS-09.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PSS.yml",
+      "text_sha256": "dc4d359377710578a814bf3abc2d92d972913c4242eeb4dbce91d36ba89520b9"
+    },
+    "PSS-09.01AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/PSS.yml",
+      "text_sha256": "280a382b8dd55c08470d1de3bb3bc307e3e010422cee1183fcff1fd4d0775347"
+    },
+    "PSS-10.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PSS.yml",
+      "text_sha256": "a68997b28422217dd96a2fd47ff467f6b6df616359fb735ff42c8cd11b7ccae8"
+    },
+    "PSS-10.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PSS.yml",
+      "text_sha256": "a06c74182e3317ed1df7a8c19fb8a16382b77bfd9b3c215e8a12525521053409"
+    },
+    "PSS-11.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PSS.yml",
+      "text_sha256": "a0036b9cd20f8fbc15a80820be8d2e4018131ba6f1ad166986672d9d198e7ab6"
+    },
+    "PSS-11.01AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/PSS.yml",
+      "text_sha256": "8dd7902cb98cdb361975a0f45a26ff06b08d15f7c4b74f1c6e7adac6a84e9930"
+    },
+    "PSS-11.02AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/PSS.yml",
+      "text_sha256": "b827e72d64fe0b6cfb4502514cc9005cb26625f18352ec9bea9b3e7b2dacd82b"
+    },
+    "PSS-12.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PSS.yml",
+      "text_sha256": "61023e6cf476cd47b06d2b7945f3e0ff5be6bb8a44660658afcb6f9085e763bf"
+    },
+    "PSS-12.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PSS.yml",
+      "text_sha256": "3c42befad43b532703ba018961cae938d22af3e6c4b3876672bf9becdd4f46b7"
+    },
+    "PSS-12.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PSS.yml",
+      "text_sha256": "52d50a299046112c744167148e3ad81ea824e9b1adf40f9df2cf28eda523efff"
+    },
+    "PSS-12.04B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/PSS.yml",
+      "text_sha256": "3ef7cc397b9efecf5dd5863c4aeef831a74098b2e61af6ee508cecd5680e93c2"
+    },
+    "PSS-12.01AS": {
+      "kind": "additional_sharpen",
+      "member": "C5_2026_Machine-Readable_en/PSS.yml",
+      "text_sha256": "48a11c3873065c47c3af16b0d119a227c52e7b3fe0ef250f992ae568b5a7b648"
+    },
+    "PSS-12.02AS": {
+      "kind": "additional_sharpen",
+      "member": "C5_2026_Machine-Readable_en/PSS.yml",
+      "text_sha256": "cc7d9138f90dfa91a5d5c8ccb34f5204d1cd1593e5792d5d94fc826494cb94f7"
+    },
+    "PSS-12.01AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/PSS.yml",
+      "text_sha256": "f513989391f258d5c1bc7c3240bbf3feeae7b45f5063e6d0cac0be4fd391bf22"
+    },
+    "PSS-12.02AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/PSS.yml",
+      "text_sha256": "963257251b55b25862a2674d3d0336a617a3bcbd7a0950f22b14a0acbacdfe77"
+    },
+    "SIM-01.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/SIM.yml",
+      "text_sha256": "d16d0caa16dbef10ecd309d3677c5627c7a439a1f5fd221f9306752b3456eb3b"
+    },
+    "SIM-01.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/SIM.yml",
+      "text_sha256": "ceaf67a5743036023f066290459f0eed4aebb7bc28659aa70d3232df82397b90"
+    },
+    "SIM-01.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/SIM.yml",
+      "text_sha256": "327b32431d19350aaa92c18e8a8dcc011f9521ce8e30df99cbc05ab28605b876"
+    },
+    "SIM-01.04B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/SIM.yml",
+      "text_sha256": "40c938f71716a40af807d1614fbea7d8a1b97eec71c33758a5254f7e261d10a5"
+    },
+    "SIM-02.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/SIM.yml",
+      "text_sha256": "d1f3989e4e5a5fe13a32de9a3307c38d9c27f38b68670f145101e77877ce6296"
+    },
+    "SIM-02.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/SIM.yml",
+      "text_sha256": "c651793912b6830c2b2e5490b42e805993fb9099cbc225296d11cb64b362083e"
+    },
+    "SIM-03.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/SIM.yml",
+      "text_sha256": "c261738c3c39e6660e5075df2bc796d45e7b65922a8c10cb9f58b62f0cd205f8"
+    },
+    "SIM-03.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/SIM.yml",
+      "text_sha256": "68567d0ad640154f09e3b118ebd74f3668645934cc33957df07e408f6552f429"
+    },
+    "SIM-03.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/SIM.yml",
+      "text_sha256": "50b3eb7651503a93be7b4ac405ff99ac8dc899ee3be7ab5dbbcf13ccc0e91a65"
+    },
+    "SIM-03.04B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/SIM.yml",
+      "text_sha256": "c2bbc202b44f1e3f36581dcea691aaebda1074b5bebc22190dce8de38cd56644"
+    },
+    "SIM-03.05B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/SIM.yml",
+      "text_sha256": "83fca0709145ba528374d96bd47f32ed2b581f219737b5b897a2220f7198e005"
+    },
+    "SIM-03.06B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/SIM.yml",
+      "text_sha256": "8ec6d7f4b44cbf9937142519e490636b5648c03e52d50a789ce80e45445bf96e"
+    },
+    "SIM-03.07B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/SIM.yml",
+      "text_sha256": "a946e4ec737b8d847a3013df8460a1e5a0cbc0371a5fd30e5a5d06a3054138c5"
+    },
+    "SIM-03.01AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/SIM.yml",
+      "text_sha256": "131ad0ae51e9baa622cc9cb46273c048c5c456bbae54d964387c00db179275a3"
+    },
+    "SIM-03.02AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/SIM.yml",
+      "text_sha256": "da70c60bc2c09cd5c106ffa26aca686ee20d38784f1d038e1e1b5fc4556d274a"
+    },
+    "SIM-03.03AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/SIM.yml",
+      "text_sha256": "be2b1737ae86f325d1791207633160a02dfc1601781699e983519b48755add05"
+    },
+    "SIM-04.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/SIM.yml",
+      "text_sha256": "6d68aff96b0fe2044314f2a291bc715d2aebdee1603ea4288886edfe0876ce97"
+    },
+    "SIM-04.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/SIM.yml",
+      "text_sha256": "12c709a1aec1786c44d51a2f0f78d5b41153886a97c2cc7636f405fc3afe7481"
+    },
+    "SIM-04.01AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/SIM.yml",
+      "text_sha256": "8c8ecde33a430b57d70402aaf82c04098f13b13bb699ee9486d7d270d62757d2"
+    },
+    "SIM-04.02AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/SIM.yml",
+      "text_sha256": "8965bb194e9e951615a5e502e7dbc8c505c6d0ea84a230215f1801b514f0bb70"
+    },
+    "SIM-05.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/SIM.yml",
+      "text_sha256": "7e517ad671ff19564cdfd5708870c22195846eedc040fd72252b8a7aae0a2912"
+    },
+    "SIM-05.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/SIM.yml",
+      "text_sha256": "f2225145080e956e3a8291de78c6fe76ec754cc7071669b60c3c5bbfdb2c96e2"
+    },
+    "SIM-05.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/SIM.yml",
+      "text_sha256": "7b53c214ef2a363a5839f9b8c26ec09b99096e2b9cdf27dbe5612059b4a2a202"
+    },
+    "SIM-06.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/SIM.yml",
+      "text_sha256": "efd64727fe69bfd57d4d65feff7914fbea768fe1668d8c1be40d0ad11333d5f8"
+    },
+    "SIM-06.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/SIM.yml",
+      "text_sha256": "d80fc5ecbc566bd7f322f50d3759db73f5620930e0a53ea341fcd154949e58a5"
+    },
+    "SIM-06.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/SIM.yml",
+      "text_sha256": "9309cf022c4ab56a9f54582abd7325d975a2e2db77de06eeb75fe05b23cf2212"
+    },
+    "SIM-06.04B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/SIM.yml",
+      "text_sha256": "d902d344c41b4ad8ef389ab8454d5b9c1989a9dd8e6ef900395a0a57a952588e"
+    },
+    "SP-01.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/SP.yml",
+      "text_sha256": "ecb4e219912ee039d2535c22811454b77d46009b8fdbb87d89034afc567a3fa5"
+    },
+    "SP-01.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/SP.yml",
+      "text_sha256": "ee611e7095daaf8b6f4e84a3391b6cbded9bdd54822940d652deda0db34039d4"
+    },
+    "SP-01.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/SP.yml",
+      "text_sha256": "a4b0c81cb7c9e66b164dbd4f1cceedbca1deb67c270af97ccce8344e7beb6a8e"
+    },
+    "SP-01.04B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/SP.yml",
+      "text_sha256": "06e3071429d5992cb517bb32df7ce73613ea410c9f953365cd84e6408e907ff1"
+    },
+    "SP-02.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/SP.yml",
+      "text_sha256": "5618d7fea3f1cc81ae69c4f7bef4853c5b2e2e5a5dcdade9f461e90e3f65fc7e"
+    },
+    "SP-02.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/SP.yml",
+      "text_sha256": "47b083caaf38b1e82756d251aa425cdb7fea2d6bbe8826211bbbb6f3ceedbc1f"
+    },
+    "SP-03.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/SP.yml",
+      "text_sha256": "3455e67041f748c9deec2a1919f0c334460aa4fab7b184241ee726e299dad911"
+    },
+    "SP-03.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/SP.yml",
+      "text_sha256": "513a1ee3b6e6fb09e9639bbaf18bc1c037b1df972b8f129209553e4f171eba7f"
+    },
+    "SP-03.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/SP.yml",
+      "text_sha256": "8bd8d3b2773338fc67148a8c797d19296e2f432cdfd89af43de3976c27c78dd1"
+    },
+    "SP-03.04B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/SP.yml",
+      "text_sha256": "b0fcd5c7850c91a3bc8c8f3b8b86b9e5907869501c5b3a2b8231fa13f04ca0d0"
+    },
+    "SP-03.05B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/SP.yml",
+      "text_sha256": "766fd55810949f2740f319966230125bdc3fd559beb00bca055a2f0b3652b051"
+    },
+    "SP-03.01AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/SP.yml",
+      "text_sha256": "80eb8931655df3e22a74448b910c434c7f2b96d5aac82cf531897427892d2385"
+    },
+    "SP-03.02AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/SP.yml",
+      "text_sha256": "b3ab305fcc33ab6f18551a100c51a7ab36cac0a7a99ddd1b3ade14268f2ff214"
+    },
+    "SP-03.03AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/SP.yml",
+      "text_sha256": "a614e78836319a4e20e1777b588ec1871dafe04d418916f357b7017a5589ea62"
+    },
+    "SSO-01.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/SSO.yml",
+      "text_sha256": "e4f3a3f13c0fcaa114867020e9862336d7fd09a80a4ba0c2ae57cf5a648f6fce"
+    },
+    "SSO-01.01AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/SSO.yml",
+      "text_sha256": "b24c45eb07e483ef1a26d03843b7b40721e3f76f22259e45f3ec38a441868f5b"
+    },
+    "SSO-01.02AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/SSO.yml",
+      "text_sha256": "5420f19dc2a5108052555ecc22559e10cd2fcfb4b7ed355dc413b36e49646bdd"
+    },
+    "SSO-02.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/SSO.yml",
+      "text_sha256": "2bb3e9d09a281906b66e9ff4bc300a8517f53a5f7ea7318df0e84fe7ada1284f"
+    },
+    "SSO-02.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/SSO.yml",
+      "text_sha256": "979612427f83ef3a40e86d002be9d1bb7922ebfefde2eb7cd1ed5667f021ad73"
+    },
+    "SSO-03.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/SSO.yml",
+      "text_sha256": "d41c9017356b5686c981f62897f8a8e75ded1e891ccf643945ff9e55d5b56c46"
+    },
+    "SSO-03.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/SSO.yml",
+      "text_sha256": "1bf035eaa9cd56cf3e94d383b1c4c7ade2fe79ede774dd9a42771e16aaa78e33"
+    },
+    "SSO-03.01AS": {
+      "kind": "additional_sharpen",
+      "member": "C5_2026_Machine-Readable_en/SSO.yml",
+      "text_sha256": "f11316c875e3453fb3bfb211001f170c309b1735abfb118eba32b1f633668590"
+    },
+    "SSO-04.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/SSO.yml",
+      "text_sha256": "9acfa814bc08a9c0b26d2638ea230785a25e0f4ceb5fe2e009a3d23ec4b66db7"
+    },
+    "SSO-04.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/SSO.yml",
+      "text_sha256": "bd2aa1330077468604c2f04d1a15ce78fd053e6c3dbbdb403e5feb569145e396"
+    },
+    "SSO-05.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/SSO.yml",
+      "text_sha256": "c932a67bc151106d48dfd42672144e6475915fcbc9417785d8cb23bafd03a183"
+    },
+    "SSO-05.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/SSO.yml",
+      "text_sha256": "264327427bbacf75510854641dc9f8be1840befe78af9e4e3ee51a6e4a7d186e"
+    },
+    "SSO-05.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/SSO.yml",
+      "text_sha256": "4cde3bcc1e0587134d34c13ed8a0e282fa0e86f90ec09edb5be6a2f128483b7e"
+    },
+    "SSO-05.04B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/SSO.yml",
+      "text_sha256": "8b6d82a86fb6cf4dcc395e96114556eeb9cc7ebe00ee181d8f68589c0122c3fd"
+    },
+    "SSO-05.05B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/SSO.yml",
+      "text_sha256": "9bcf584db415c920dc7ff8d41a997395336d9c26194c0bff152ff688d74d9089"
+    },
+    "SSO-05.06B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/SSO.yml",
+      "text_sha256": "e1a12a83567883add5146b8bb540ea0100a384051e82ee60ea2eb42ba48004c9"
+    },
+    "SSO-05.07B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/SSO.yml",
+      "text_sha256": "790984989e659d37db0de8ebe51e1690aa028824639b05f4c39c0db73f4b30b2"
+    },
+    "SSO-05.01AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/SSO.yml",
+      "text_sha256": "7b4173342a7365d91e16945cdb88467ce1de49fab5e68ea95b9f9dd04bbfbb46"
+    },
+    "SSO-05.02AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/SSO.yml",
+      "text_sha256": "bf794c8655e856f7431fcd3daa27fdfdd6e7636b8543a8c0756807395bc89827"
+    },
+    "SSO-05.03AC": {
+      "kind": "additional_complement",
+      "member": "C5_2026_Machine-Readable_en/SSO.yml",
+      "text_sha256": "97801d727382fdbf4afec8ca21b4731a7f15d5806801bf2a71af55aa1966dda1"
+    },
+    "SSO-06.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/SSO.yml",
+      "text_sha256": "0de9ed156709dae2aebfb29e48fa1a0a9a87f02c00cfb8598538354f25d86c9e"
+    },
+    "SSO-06.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/SSO.yml",
+      "text_sha256": "a538be1c2e51c8f29597cc89a34ba6061d621cce3f70d178a3988263b05be199"
+    },
+    "SSO-07.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/SSO.yml",
+      "text_sha256": "9ad567aa1c10f11266f3c05357949f958c55ec08df8901637ba1b443a38fbfd6"
+    },
+    "SSO-07.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/SSO.yml",
+      "text_sha256": "e94344f7e786462bdaddfd0c1384fae5e132d646a1fea16b3675eb4ac8e71ceb"
+    },
+    "SSO-07.01AS": {
+      "kind": "additional_sharpen",
+      "member": "C5_2026_Machine-Readable_en/SSO.yml",
+      "text_sha256": "b20f6ab9184d30cea237d1d853031067054c3598f7e496fb779098aa14e27455"
+    },
+    "SSO-08.01B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/SSO.yml",
+      "text_sha256": "ae1e465305a7fa15d1d710410f59c959d72af16a726b09c154424265dcb94c8a"
+    },
+    "SSO-08.02B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/SSO.yml",
+      "text_sha256": "ec9883df5f21457386ee8ea1089dd05511b91d2a6d91fcf2bd0a957b8177f3a5"
+    },
+    "SSO-08.03B": {
+      "kind": "basic",
+      "member": "C5_2026_Machine-Readable_en/SSO.yml",
+      "text_sha256": "cbbe791bba9527f8d92e694e94a49ddafbdb2a081b2f2ebd658f18978334544b"
+    }
+  },
+  "corrected_missing_ids": [
+    "AM-07.01AS",
+    "AM-10.01AS",
+    "COM-02.01AS",
+    "COS-04.01AS",
+    "CRY-04.01AS",
+    "HR-03.02AS",
+    "IAM-03.03AS",
+    "IAM-07.03AS",
+    "IAM-07.04AS",
+    "IAM-07.06AS",
+    "IAM-08.02AS",
+    "IAM-08.03AS",
+    "OIS-01.01AS",
+    "OIS-08.01AS",
+    "OPS-05.02AS",
+    "OPS-06.01AS",
+    "OPS-22.01AS",
+    "OPS-22.02AS",
+    "OPS-22.03AS",
+    "OPS-25.01AS",
+    "OPS-25.02AS",
+    "OPS-26.05AS",
+    "OPS-27.03AS",
+    "PS-02.01AS",
+    "PS-02.02AS",
+    "PSS-12.01AS",
+    "PSS-12.02AS",
+    "SSO-03.01AS",
+    "SSO-07.01AS"
+  ]
+}
