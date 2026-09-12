@@ -1,0 +1,90 @@
+[
+  {
+    "id": "LABEL",
+    "requirement_id": "ISO27001:A.5.13",
+    "status": "PROPOSED_ADDITIONAL_MEASURE",
+    "procedure": "Define labels and handling rules from the approved classification scheme; apply them to relevant files, records and exchanges, including exceptions and automated propagation. Train users and investigate missing or incorrect labels.",
+    "test_procedure": "Select information from actual repositories and transfers; compare labels and handling with approved classification, including transformed/exported copies and authorized exceptions.",
+    "review": null
+  },
+  {
+    "id": "ASSET-RETURN",
+    "requirement_id": "ISO27001:A.5.11",
+    "status": "PROPOSED_ADDITIONAL_MEASURE",
+    "procedure": "Reconcile assigned devices, media, credentials and information on exit or transfer; obtain custody records, revoke access, recover assets and escalate unresolved returns with risk treatment.",
+    "test_procedure": "Trace exit/transfer events to the independent asset and access inventories; inspect missing returns and evidence that continuing access and retained copies were addressed.",
+    "review": null
+  },
+  {
+    "id": "CABLING",
+    "requirement_id": "ISO27001:A.7.12",
+    "status": "PROPOSED_ADDITIONAL_MEASURE",
+    "procedure": "Inventory sensitive power and network cable routes, exposed access points and provider responsibilities; protect routes from interception, damage and interference and inspect after relevant site changes.",
+    "test_procedure": "Inspect selected actual routes and access points against the risk-based design; trace defects and third-party responsibilities to remediation records.",
+    "review": null
+  },
+  {
+    "id": "MAINTENANCE",
+    "requirement_id": "ISO27001:A.7.13",
+    "status": "PROPOSED_ADDITIONAL_MEASURE",
+    "procedure": "Schedule equipment maintenance against service and supplier requirements; authorize personnel and access, protect information during repair and verify equipment integrity before return to service.",
+    "test_procedure": "Reconcile maintained assets to due work; inspect technician authorization, information protection and return-to-service checks, including off-site repair.",
+    "review": null
+  },
+  {
+    "id": "CLOCK",
+    "requirement_id": "ISO27001:A.8.17",
+    "status": "PROPOSED_ADDITIONAL_MEASURE",
+    "procedure": "Define approved time sources and permissible divergence for relevant systems; configure synchronization, monitor deviations and preserve event timestamps and correction history.",
+    "test_procedure": "Compare selected system clocks and log timestamps with approved sources; exercise an approved divergence alert and verify response without rewriting historical events.",
+    "review": null
+  },
+  {
+    "id": "MASKING",
+    "requirement_id": "ISO27001:A.8.11",
+    "status": "PROPOSED_ADDITIONAL_MEASURE",
+    "procedure": "Identify uses that need obscured data; define masking from purpose, permissions and reidentification risk, restrict access to originals and validate transformed outputs before use.",
+    "test_procedure": "Trace selected nonproduction/analytical uses to purpose-specific rules; test residual identifiability, access to originals and leakage through logs or exports.",
+    "review": null
+  },
+  {
+    "id": "LEAKAGE",
+    "requirement_id": "ISO27001:A.8.12",
+    "status": "PROPOSED_ADDITIONAL_MEASURE",
+    "procedure": "Identify sensitive information and relevant egress paths; implement risk-based prevention/detection, triage events and govern exceptions. Reconcile covered channels and validate rules after material changes.",
+    "test_procedure": "Use approved synthetic sensitive data to test relevant egress paths; inspect detection/blocking, triage and authorized exceptions, including channels not covered by tooling.",
+    "review": null
+  },
+  {
+    "id": "WEB",
+    "requirement_id": "ISO27001:A.8.23",
+    "status": "PROPOSED_ADDITIONAL_MEASURE",
+    "procedure": "Determine web-access risks and applicable user/system populations; configure protective access rules, updates, exception approval and response to malicious or prohibited access.",
+    "test_procedure": "Reconcile populations to applied rules; use safe approved test destinations to verify enforcement and examine exception expiry and alert handling.",
+    "review": null
+  },
+  {
+    "id": "TEST-INFORMATION",
+    "requirement_id": "ISO27001:A.8.33",
+    "status": "PROPOSED_ADDITIONAL_MEASURE",
+    "procedure": "Approve information used in development and testing for its purpose; minimize sensitive content, protect test copies and access, record transfers and securely remove copies when no longer needed.",
+    "test_procedure": "Trace test datasets to origin, approvals and protection; inspect access and deletion records and verify production data was not copied without authorization.",
+    "review": null
+  },
+  {
+    "id": "AUDIT-TESTING",
+    "requirement_id": "ISO27001:A.8.34",
+    "status": "PROPOSED_ADDITIONAL_MEASURE",
+    "procedure": "Agree test scope, access, timing and safeguards before assessment of operating systems; protect credentials and information, monitor disruptive effects and define stop and restoration steps.",
+    "test_procedure": "Inspect selected assessment activities for prior scope and safeguards; reconcile access and extracted records to cleanup, and verify stop/restoration arrangements.",
+    "review": null
+  },
+  {
+    "id": "OUTSOURCED-DEVELOPMENT",
+    "requirement_id": "ISO27001:A.8.30",
+    "status": "PROPOSED_ADDITIONAL_MEASURE",
+    "procedure": "Define security requirements and review rights for externally developed systems; monitor supplier delivery, inspect design and test evidence, control changes and validate acceptance against the exact delivered version.",
+    "test_procedure": "Trace selected supplier releases to agreed requirements, review evidence, unresolved defects and authorized acceptance; investigate version or responsibility gaps.",
+    "review": null
+  }
+]
