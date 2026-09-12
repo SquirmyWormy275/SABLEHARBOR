@@ -1,0 +1,29 @@
+{
+  "revision": "V06",
+  "status": "ILLUSTRATIVE_ART_DIRECTION_DRAFT_NOT_GEOMETRICALLY_VALIDATED",
+  "map_id": null,
+  "metric_geometry_validated": false,
+  "observed_deviations": [
+    "Added perimeter and infill planting not in accepted source.",
+    "Road corners rounded and local paths/parking details adjusted.",
+    "Inherited scale bar does not establish metric accuracy of the illustration."
+  ],
+  "sources": {
+    "geospatial/facilities/visitor/v06/SOURCE.json": "4ee31ea8c0019dfbe690bc5a147e6052719b81deac10c8a4cadc3573dd60ca54",
+    "geospatial/facilities/visitor/v06/PROMPT.txt": "3ee7bcb8fc36e2b3328c440d56ae565956758db30cf967d95ab29a1deb33c47d",
+    "geospatial/facilities/visitor/v06/build.py": "a939dd320bca280252c701a0a1f6c6ae159346786f8befcf12d342d636d9a9ef",
+    "geospatial/facilities/visitor/v06/review.html": "16d49666706efca5c8abcc692b7d46bf7736d87afad9b8c1257531059b459928",
+    "geospatial/facilities/visitor/v02/artifacts/visitor-map-v02.png": "7c60fe5448e27510fb4cf431119c07db175a60f70709b77aca3e5bf0aca94bda",
+    "geospatial/facilities/visitor/v02/MANIFEST.json": "f0ae77c4f968a848e3ad5f029620b52c56fb9902b11c18a316b705f1ccbd3c79"
+  },
+  "artifacts": {
+    "png": {
+      "path": "geospatial/facilities/visitor/v06/artifacts/visitor-map-v06.png",
+      "sha256": "c6169b9e47969b5ddcc0758232b9d562f51b2902634f9f7a93f4016ff044e799"
+    },
+    "pdf": {
+      "path": "geospatial/facilities/visitor/v06/artifacts/visitor-map-v06.pdf",
+      "sha256": "6ef57ad192fcf043ae22f2ba8bac8c8ac462a2e0d603eb7fb09e8d2bbe466e44"
+    }
+  }
+}

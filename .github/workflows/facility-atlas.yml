@@ -21,6 +21,17 @@ jobs:
       - run: python -m pip install PyMuPDF Pillow pytest shapely==2.1.2 pyproj==3.7.2 cairosvg
       - name: Coverage, population, geometry, capacity and publication links
         run: python geospatial/facilities/validate.py --check --require-atlas
+      - name: Validate the isolated visitor-map draft
+        run: |
+          python geospatial/facilities/visitor/validate.py
+          python geospatial/facilities/visitor/v02/validate.py
+          python geospatial/facilities/visitor/v03/validate.py
+          python geospatial/facilities/visitor/v04/validate.py
+          python geospatial/facilities/visitor/v05/validate.py
+          python geospatial/facilities/visitor/v06/validate.py
+          python geospatial/facilities/visitor/v07/validate.py
+          python geospatial/facilities/visitor/v08/validate.py
+          python geospatial/facilities/visitor/validate_acceptance.py
       - name: Acceptance regression mutations
         run: python -m pytest -q geospatial/facilities/test_facilities.py geospatial/facilities/coverage/test_coverage.py geospatial/facilities/population/test_population.py
       - name: Planning workbench freshness and regression tests

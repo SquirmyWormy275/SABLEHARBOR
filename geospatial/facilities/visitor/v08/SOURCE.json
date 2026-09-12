@@ -1,0 +1,28 @@
+{
+  "revision": "V08",
+  "site_id": "SH-SITE-0001",
+  "status": "ILLUSTRATIVE_ART_DIRECTION_DRAFT_NOT_GEOMETRICALLY_VALIDATED",
+  "preferred_baseline": "geospatial/facilities/visitor/v07/MANIFEST.json",
+  "edit_target": "geospatial/facilities/visitor/v07/artifacts/visitor-map-v07.png",
+  "tool": "built-in image_gen.imagegen",
+  "prompt": "PROMPT.txt",
+  "reference_url": "https://www.getty.edu/visit/downloads/getty_center_map.pdf",
+  "reference_role": "V07 direct edit target; original external craft reference remains in V06 provenance.",
+  "reference_image_sha256": "4811511421478e7982d0d4bdf3090787a302f2b77de1e15c41e36df4e7a63480",
+  "generation_original": "/home/kingoftheeast/.codex/generated_images/01a09221-d68c-7e82-bb78-55c0fe4d5a45/exec-819badff-0819-4c11-809a-a0869d748d97.png",
+  "regeneration": "Image synthesis is nondeterministic. Committed original PNG is the immutable review artifact; build.py reproduces PDF wrapping from those bytes.",
+  "observed_deviations": [
+    "Illustrative planting inherited from V06 is not accepted source geometry.",
+    "Rounded roads and local paths/parking adjustments inherited from V06 remain illustrative.",
+    "Metric accuracy is unvalidated; numeric scale bar removed and Not to scale label added."
+  ],
+  "production_map_id": null,
+  "acceptance": "PENDING_OWNER_VISUAL_REVIEW",
+  "owner_feedback": "iterate once more",
+  "refinement_scope": [
+    "Retain illustrated style, composition and wording.",
+    "Make repeated shrub rows less mechanical without enlarging beds.",
+    "Clarify paving and entrance thresholds.",
+    "Maintain restrained textures and the not-to-scale label."
+  ]
+}

@@ -110,6 +110,75 @@ Generated file inventory. Includes current and historical records; open the sour
 
 - [Context snapshot archive](../../../geospatial/facilities/spatial/context_sources/README.md) — MD
 
+## `geospatial/facilities/visitor`
+
+- [Visitor map V01 — review evidence](../../../geospatial/facilities/visitor/QA.md) — MD
+- [Sacramento visitor map — first review draft](../../../geospatial/facilities/visitor/README.md) — MD
+
+## `geospatial/facilities/visitor/artifacts`
+
+- [visitor-map-v01](../../../geospatial/facilities/visitor/artifacts/visitor-map-v01.pdf) — PDF
+
+## `geospatial/facilities/visitor/v02`
+
+- [V02 visual and preservation review](../../../geospatial/facilities/visitor/v02/QA.md) — MD
+- [Sacramento visitor guide V02 — review draft](../../../geospatial/facilities/visitor/v02/README.md) — MD
+
+## `geospatial/facilities/visitor/v02/artifacts`
+
+- [visitor-map-v02](../../../geospatial/facilities/visitor/v02/artifacts/visitor-map-v02.pdf) — PDF
+
+## `geospatial/facilities/visitor/v03`
+
+- [V03 visual and preservation review](../../../geospatial/facilities/visitor/v03/QA.md) — MD
+- [Sacramento visitor guide V03 — review draft](../../../geospatial/facilities/visitor/v03/README.md) — MD
+
+## `geospatial/facilities/visitor/v03/artifacts`
+
+- [visitor-map-v03](../../../geospatial/facilities/visitor/v03/artifacts/visitor-map-v03.pdf) — PDF
+
+## `geospatial/facilities/visitor/v04`
+
+- [V04 review evidence](../../../geospatial/facilities/visitor/v04/QA.md) — MD
+- [Sacramento visitor guide V04 — reference-informed review draft](../../../geospatial/facilities/visitor/v04/README.md) — MD
+
+## `geospatial/facilities/visitor/v04/artifacts`
+
+- [visitor-map-v04](../../../geospatial/facilities/visitor/v04/artifacts/visitor-map-v04.pdf) — PDF
+
+## `geospatial/facilities/visitor/v05`
+
+- [V05 visual and source review](../../../geospatial/facilities/visitor/v05/QA.md) — MD
+- [Sacramento visitor guide V05 — recomposed review draft](../../../geospatial/facilities/visitor/v05/README.md) — MD
+
+## `geospatial/facilities/visitor/v05/artifacts`
+
+- [visitor-map-v05](../../../geospatial/facilities/visitor/v05/artifacts/visitor-map-v05.pdf) — PDF
+
+## `geospatial/facilities/visitor/v06`
+
+- [V06 — final illustrated visitor-map review](../../../geospatial/facilities/visitor/v06/README.md) — MD
+
+## `geospatial/facilities/visitor/v06/artifacts`
+
+- [visitor-map-v06](../../../geospatial/facilities/visitor/v06/artifacts/visitor-map-v06.pdf) — PDF
+
+## `geospatial/facilities/visitor/v07`
+
+- [V07 — refinement of the V06 illustrated visitor map](../../../geospatial/facilities/visitor/v07/README.md) — MD
+
+## `geospatial/facilities/visitor/v07/artifacts`
+
+- [visitor-map-v07](../../../geospatial/facilities/visitor/v07/artifacts/visitor-map-v07.pdf) — PDF
+
+## `geospatial/facilities/visitor/v08`
+
+- [V08 — illustrated visitor-map finishing pass](../../../geospatial/facilities/visitor/v08/README.md) — MD
+
+## `geospatial/facilities/visitor/v08/artifacts`
+
+- [visitor-map-v08](../../../geospatial/facilities/visitor/v08/artifacts/visitor-map-v08.pdf) — PDF
+
 ## `geospatial/facilities/workbench`
 
 - [Facility planning workbench](../../../geospatial/facilities/workbench/README.md) — MD

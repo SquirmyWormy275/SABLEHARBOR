@@ -1,0 +1,85 @@
+{
+  "title": "Campus visitor guide",
+  "site_id": "SH-SITE-0001",
+  "status": "DRAFT_FOR_OWNER_VISUAL_REVIEW",
+  "map_id": null,
+  "production_allocation": "PENDING_VISUAL_ACCEPTANCE",
+  "revision": "V02",
+  "visual_reference": "SH-FAC-REF-SAC-R01",
+  "artifacts": {
+    "svg": {
+      "path": "geospatial/facilities/visitor/v02/artifacts/visitor-map-v02.svg",
+      "sha256": "4e1d5a9b921e83bd4c943590985395a4b630ea7c520be5504eb9c926915f2db9"
+    },
+    "png": {
+      "path": "geospatial/facilities/visitor/v02/artifacts/visitor-map-v02.png",
+      "sha256": "7c60fe5448e27510fb4cf431119c07db175a60f70709b77aca3e5bf0aca94bda"
+    },
+    "pdf": {
+      "path": "geospatial/facilities/visitor/v02/artifacts/visitor-map-v02.pdf",
+      "sha256": "e5a5927fd97d2a39fc0b0386c3620f1bb6ef76688aa443df726223312f490838"
+    }
+  },
+  "review_surface": {
+    "path": "geospatial/facilities/visitor/v02/review.html",
+    "sha256": "bb6e5e6e3e2bf892d71f4d53b67cc8aa5b5f429176e1f6e0afbcb4e94401fc62"
+  },
+  "geometry_changes": [],
+  "entrances": [
+    {
+      "building_id": "SH-SITE-0001-A",
+      "source_access_key": "public_arrival_m",
+      "entry_ft": [
+        256.0,
+        152.0
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-B",
+      "source_access_key": "j2_controlled_entry_m",
+      "entry_ft": [
+        256.0,
+        369.99999999999994
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-C",
+      "source_access_key": "education_entry_m",
+      "entry_ft": [
+        512.0,
+        170.0
+      ]
+    },
+    {
+      "building_id": "SH-SITE-0001-D",
+      "source_access_key": "residential_arrival_m",
+      "entry_ft": [
+        551.9999999999999,
+        406.0
+      ]
+    }
+  ],
+  "sources": {
+    "geospatial/facilities/visitor/v02/SOURCE.json": "43e2f83e367be1e6b7b3d42db78f71f5b93fef0db643985028936f5411d849dc",
+    "geospatial/facilities/visitor/v02/build.py": "b461b023c1db76f42462917ac1a1e9b67b38cbc7af509c043c8fafb857db3cae",
+    "geospatial/facilities/r01_drawing.py": "8c1eae0967aac597395b16351ba0d6b1077cc3a31dded3fe292389a655d24c35",
+    "geospatial/facilities/source/campus.json": "0efd4854069ff20acb4032e02b021afebcb955990f1d684b51428624e281d950",
+    "geospatial/facilities/fonts/DejaVuSans-Bold.ttf": "b184b89e3c1075f22f6b71575b6fc20d4972b3cfd3b23322ca6fd596dcaef167",
+    "geospatial/facilities/fonts/DejaVuSans.ttf": "3fdf69cabf06049ea70a00b5919340e2ce1e6d02b0cc3c4b44fb6801bd1e0d22",
+    "geospatial/facilities/fonts/LICENSE_DEJAVU": "d75938dec098f06f0ac3c00853065d94f020be1c3c62ef1dc2975ba15b4d9b0e",
+    "geospatial/facilities/fonts/fonts.conf": "ac35d022f7b75586581ecc81fee3aa1febdea71366fd00727c1f8eabb4217d2b",
+    "docs/facilities/references/sacramento-hq/r01-approved/01_Sacramento_Campus_Master_Draft.png": "23729f7e2b427e58820361363e4a47fbc6bbd3ce9774ef67932ecab7a50bfa47",
+    "docs/facilities/references/sacramento-hq/r01-approved/02_Corporate_L02_Product_Draft.png": "09a3339ece443d6e7e8cd148cd8f207b56cd938a03efde4f4c5f8e9367dd6179",
+    "docs/facilities/references/sacramento-hq/r01-approved/03_J2_L01_Contact_JAG_Draft.png": "17bf92029276f7794721129e58830344a9a3ee4341c858f2c928d53ad8b0fefb",
+    "docs/facilities/references/sacramento-hq/r01-approved/04_Education_L01_Teaching_Draft.png": "d37ff987cf1036d32cf0fe07ca3b9a0578d7f359bd820fde2551cb268ed88361"
+  },
+  "intentional_changes": [
+    "Same four building footprints, entrances, roads, paths and landscape positions.",
+    "White building silhouettes and dark outlines replace V01 pastel blocks.",
+    "Source parking markings restored so courts read as parking rather than empty rectangles.",
+    "One compact directory replaces the repeated building/reception descriptions.",
+    "The accepted arrival path remains highlighted; the four entrance locations are unchanged.",
+    "This is a separate V02 review; V01 images, vector source, PDF and manifest remain byte-identical.",
+    "Inner building keyline is graphic articulation only, not new engineering."
+  ]
+}

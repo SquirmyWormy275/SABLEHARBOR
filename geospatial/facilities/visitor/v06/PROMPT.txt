@@ -1,0 +1,30 @@
+Use case: style-transfer.
+Asset: final visual-review draft of a professional illustrated campus visitor map.
+Input 1 is the EDIT TARGET and strict content/layout reference: Sable Harbor visitor guide V02.
+Input 2 is a DESIGN REFERENCE ONLY: Getty's visitor map, demonstrating an architecturally illustrated place rather than generic boxes. Do not copy Getty buildings, branding, callout boxes, text, or page layout.
+
+Transform the drawing in input 1 into a beautifully art-directed architectural visitor map, the sort of commissioned illustration used by an important research campus or museum. The user repeatedly rejected sterile computer diagrams. This MUST be a substantial change in illustration craft, not another recoloring, beveled rectangle, fake 3D extrusion, or generic vector graphic.
+
+KEEP the V02 north-up plan orientation, landscape page proportions, campus at left, compact directory at right, and all information. Precisely preserve the four rectangular building footprints, their relative sizes and positions, the paths and arrival route, entrances, courts, road loop, parking zones and tree locations. A Corporate lower left, B J2 upper left, C Education lower right, D Residence upper right. Exactly four buildings. No rotated campus, no isometric tilt. No new buildings, gardens, bodies of water, monuments, invented amenities or extra paths.
+Keep all text legible and correct. Institutional wordmark SABLE HARBOR. Title CAMPUS VISITOR GUIDE. Subtitle Sacramento headquarters / Arrival, reception and campus buildings. Revision badge CONCEPT REVIEW / V06. Stable ID SH-SITE-0001. Footer VISITOR GUIDE / V06.
+Right directory verbatim:
+CAMPUS DIRECTORY
+A Corporate
+Corporate and client reception
+B J2
+Separate reception
+C Education
+Teaching and campus dining
+D Residence
+Cohort and visitor rooms
+ARRIVAL
+Corporate reception is in Building A. Follow the marked path from the south arrival.
+Legend: Path to Corporate reception; Building entrance; Parking area
+Visitor parking and step-free access remain to be confirmed.
+Map labels: CENTRAL QUAD, RECEPTION COURT, RESIDENTIAL COURT, BICYCLES, DROP-OFF, SOUTH ARRIVAL; P for parking. Four entrance markers. North arrow points up. The arrival path is muted brass and follows exactly the target's existing bend from south to the south facade of A.
+Footer: Fictional campus study. No actual parcel or operating visitor access is established.
+Use 'ILLUSTRATIVE CONCEPT / NORTH IS UP' in the scale-caveat line; no precision claim.
+
+Illustration direction: sophisticated ink-and-wash architectural plan illustration, crisp selective graphite linework with subtle pale mineral washes, convincing natural tree canopies with delicate leaf and branch character, fine stone/paving texture only inside existing walks and courts, carefully articulated pale flat roof planes and discreet parapet edges. Shadows restrained and believable, lending depth without moving footprints. Refined white/stone buildings, slate-navy lettering, soft natural sage planting and cool gray drives. Mostly clean off-white paper, not sepia or distressed paper. Tree canopies should look drawn by a skilled architectural illustrator, not repeated green circles or cartoon blobs. Meaningful variation in line weight and material treatment; extremely restrained texturing. Roofs stay flat and free of invented equipment, rooftop gardens, skylights, atria or mechanical doodads. Entrances clearly visible. Give every element intentional visual weight.
+Typography remains professional and clean; no handwriting, script fonts or whimsical lettering. Maintain generous margins and precise alignment. The illustration must feel inhabited in the sense of a convincing physical landscape, without adding tiny people, vehicles or decorative props.
+Deliver the whole finished map as one high-resolution landscape image, not a mockup, screenshot, contact sheet or comparison. This is an aesthetic study, not an as-built plan.

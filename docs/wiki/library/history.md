@@ -40,6 +40,7 @@ Generated file inventory. Includes current and historical records; open the sour
 - [SABLE HARBOR — CORPORATE LORE CANON](../../canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.2.md) — MD
 - [SABLE HARBOR — CORPORATE LORE CANON](../../canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md) — MD
 - [SABLE HARBOR — CORPORATE LORE CANON](../../canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md) — MD
+- [Sacramento visitor map — V08 visual acceptance](../../canon/SACRAMENTO_VISITOR_MAP_V08_ACCEPTANCE_2026-09-11.md) — MD
 - [Third-party services — implementation scope supplement](../../canon/THIRD_PARTY_SERVICES_IMPLEMENTATION_SCOPE_2026-09-09.md) — MD
 - [SABLE HARBOR — THIRD-PARTY SERVICES AND INTERNAL OPERATIONS SOURCING DECISIONS](../../canon/THIRD_PARTY_SERVICES_SOURCING_DECISIONS_2026-09-09.md) — MD
 - [Superseded filename](../../canon/WILLOW_EVALON_CLOSEOUT_2026-09-06.md) — MD
