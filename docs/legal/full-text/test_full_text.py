@@ -128,15 +128,16 @@ class ResealedArtifactTests(unittest.TestCase):
     def fixture(self, destination):
         import json
         import shutil
+        import subprocess
 
         root = validator.ROOT
         base = validator.BASE
         manifest = json.loads((root / base / "render-manifest.json").read_text())
         sources = json.loads((root / base / "SOURCE_MANIFEST.json").read_text())
         paths = {
-            ".git",
             str(base / "SOURCE_MANIFEST.json"),
             str(base / "render-manifest.json"),
+            str(base / "full-text.sqlite3"),
             str(base / "build.py"),
             str(base / "style.css"),
             "docs/reader/transactions/evidence-register.json",
@@ -148,6 +149,16 @@ class ResealedArtifactTests(unittest.TestCase):
             target = destination / name
             target.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(root / name, target)
+        # Use a real isolated Git directory in both ordinary clones and worktrees.
+        # Only immutable object lookup is shared; no index, refs or credentials
+        # from the owning checkout are copied into a mutation fixture.
+        subprocess.run(["git", "init", "--quiet", str(destination)], check=True)
+        common = subprocess.check_output(
+            ["git", "rev-parse", "--git-common-dir"], cwd=root, text=True
+        ).strip()
+        objects = (root / common / "objects").resolve()
+        (destination / ".git/objects/info/alternates").write_text(str(objects) + "\n")
+        self.assertEqual(validator.validate(destination)["result"], "PASS")
         return manifest
 
     def test_real_html_clause_deletion_resealed(self):
