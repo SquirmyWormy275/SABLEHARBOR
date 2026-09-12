@@ -1,0 +1,34 @@
+{
+  "artifacts": {
+    "docs/finance/evidence/treasury/draft/WORKING_PAPER.md": "c8a6825c4efd9a6689d94dff89f78a08e4284bcde8a5f5a1928505110799aa65",
+    "docs/finance/evidence/treasury/draft/qa/paper-01.png": "12c8ab536292b775c48159560b8dfd17971235a4bdb4b7643119b850d2e4d5d2",
+    "docs/finance/evidence/treasury/draft/qa/workbook-01.png": "c6663318176845014a4d345bd67e494ae1434d9b349b68701bc123b1f0fc7974",
+    "docs/finance/evidence/treasury/draft/qa/workbook-02.png": "6267aab6fb30c0a93de355fb0ac0b889701a0da82f7ba04c6e947fc739dbf667",
+    "docs/finance/evidence/treasury/draft/qa/workbook-03.png": "ba15d5415234c07527001fb072781191cec590419756ffa77afbaad079181607",
+    "docs/finance/evidence/treasury/draft/qa/workbook-04.png": "c7f8808a0c46dbc945b414724253705dcbce6389398276ce17e66243b90fd0e2",
+    "docs/finance/evidence/treasury/draft/qa/workbook-05.png": "3d1c8135e2c2d3d800b077d41ae069b5d26923af4bc1c725b9bba784e5e5d039",
+    "docs/finance/evidence/treasury/draft/qa/workbook-06.png": "c70a6e913df748cab4426554acf94bf38db241ae4c6b45ed844ad6cf008e730f",
+    "docs/finance/evidence/treasury/draft/qa/workbook-07.png": "d2176137554793304e9352a7f9b89d4bc5be5c24795cf4965cd32ab0e2254834",
+    "docs/finance/evidence/treasury/draft/qa/workbook-08.png": "b50d4fbd29b7b2cc9723d3bc781de5be66c22eb9fc1531f7656ed2dfef9082db",
+    "docs/finance/evidence/treasury/draft/qa/workbook-09.png": "3bd1c3899bd9de9a811654bd3bdc9e89fc1f9a12fba593ea5c40e01babc96069",
+    "docs/finance/evidence/treasury/draft/qa/workbook-10.png": "c6e53b95d69899c1b87157288a2b9678a839115fab4e9125625cb508099f25b8",
+    "docs/finance/evidence/treasury/draft/qa/workbook-11.png": "637896d98afc14eed020af6bce489df67a85982d3669b30a75730fb2f1818c7a",
+    "docs/finance/evidence/treasury/draft/qa/workbook-12.png": "b844e5934766d0913efa585d8aa133dfcda4d30a404d48157eb0fca49060cf49",
+    "docs/finance/evidence/treasury/draft/qa/workbook-13.png": "cdf3dd3be7dad7bd058eb736d632e8c176beade67fa0da06f1589e957b63d328",
+    "docs/finance/evidence/treasury/draft/qa/workbook-14.png": "6ab7def463e50dd5c8e085c8a543fbbbea25e57b06b3fd29154082ac033fde02",
+    "docs/finance/evidence/treasury/draft/qa/workbook-15.png": "86f159757b8d07543e111c397f55868ac0f4f5d6b3fe6f07e8b5dfb10395d6b9",
+    "docs/finance/evidence/treasury/draft/qa/workbook-16.png": "baaa59f538e72c4486b2e76125856b66f604aea94df2609dfd4d676a8328a4d1",
+    "docs/finance/evidence/treasury/draft/render-manifest.json": "a0ba1a94776667061cc74d1d42fa811e00fd51d4f081c21237589a81c7621f3b",
+    "docs/finance/evidence/treasury/draft/workbook-map.json": "ea4a9646829c9db35e985e66fda094fa171a8af19582e9096cf5320a23af5bd2",
+    "docs/finance/evidence/treasury/draft/working-paper.pdf": "37e8731205a3c0b92f024142128b7628ea016e4f45930d4e1563ba01c6eb1e0a",
+    "docs/finance/evidence/treasury/draft/working-papers.xlsx": "ee50fcb561e1a5cf2ba1eee5bc6d5a64c3baa2e63d90c4822025031bdf5bd59a"
+  },
+  "renderer_sha256": "6c941b14b2d8ae30ac5d42c8ed84ebba9c51f2db8f7b51106e065b4e534dafb1",
+  "source_dependencies": {
+    "assets/brand/logos/sable-harbor__primary-horizontal.svg": "815efb4ca06e4f2df8b9dfee3d4288f94d2e64417b7c863ce5b8639d2de07076",
+    "docs/finance/evidence/coverage/build.py": "5e3d29fec63a8c631ee2f05d7ef41a81901ff413c0c1b33bde7b9453f8e7abcc",
+    "tools/documents/build_controlled_publications.py": "0552479a76b94d128a39e9f9a4a12b87f4ab876e47926918cda3c5aa0a3d872a"
+  },
+  "source_register_sha256": "0302671f94186155883591eff00f2aa8ab8045f7740acc44abaaa6187633f34f",
+  "status": "DRAFT_FOR_EXACT_FILE_REVIEW"
+}

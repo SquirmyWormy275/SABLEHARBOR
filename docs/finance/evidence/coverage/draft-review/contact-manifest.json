@@ -1,0 +1,208 @@
+[
+  {
+    "path": "docs/finance/evidence/coverage/draft-review/customer-01.png",
+    "sha256": "b8a7008b341240d08aa5129cd94cc78886ab7a9db56091aa251a3155991230a1",
+    "source_images": [
+      "docs/finance/evidence/customer/draft/qa/paper-01.png",
+      "docs/finance/evidence/customer/draft/qa/workbook-01.png",
+      "docs/finance/evidence/customer/draft/qa/workbook-02.png",
+      "docs/finance/evidence/customer/draft/qa/workbook-03.png"
+    ]
+  },
+  {
+    "path": "docs/finance/evidence/coverage/draft-review/customer-02.png",
+    "sha256": "9411cbf0e9895b102bc0ccc91c3a3a2f11b7023a82e30f22bd841581dd730d44",
+    "source_images": [
+      "docs/finance/evidence/customer/draft/qa/workbook-04.png",
+      "docs/finance/evidence/customer/draft/qa/workbook-05.png",
+      "docs/finance/evidence/customer/draft/qa/workbook-06.png",
+      "docs/finance/evidence/customer/draft/qa/workbook-07.png"
+    ]
+  },
+  {
+    "path": "docs/finance/evidence/coverage/draft-review/customer-03.png",
+    "sha256": "e5fba263d8cb8b1f986ce536dc82d49773424c41f3f466878e6e088a44089a1d",
+    "source_images": [
+      "docs/finance/evidence/customer/draft/qa/workbook-08.png",
+      "docs/finance/evidence/customer/draft/qa/workbook-09.png",
+      "docs/finance/evidence/customer/draft/qa/workbook-10.png",
+      "docs/finance/evidence/customer/draft/qa/workbook-11.png"
+    ]
+  },
+  {
+    "path": "docs/finance/evidence/coverage/draft-review/customer-04.png",
+    "sha256": "48b9b2f5af79cc4be467ed7325c82437140be1057e3dc61297100a21bb828721",
+    "source_images": [
+      "docs/finance/evidence/customer/draft/qa/workbook-12.png",
+      "docs/finance/evidence/customer/draft/qa/workbook-13.png",
+      "docs/finance/evidence/customer/draft/qa/workbook-14.png",
+      "docs/finance/evidence/customer/draft/qa/workbook-15.png"
+    ]
+  },
+  {
+    "path": "docs/finance/evidence/coverage/draft-review/customer-05.png",
+    "sha256": "5c5359f1d299801a279e53784f7961f9211ca6c354c09e1a70decd0de5fbf047",
+    "source_images": [
+      "docs/finance/evidence/customer/draft/qa/workbook-16.png"
+    ]
+  },
+  {
+    "path": "docs/finance/evidence/coverage/draft-review/treasury-01.png",
+    "sha256": "3825325f68821c0299bf3bb29d7e5245ba2077865753798f6f16f57e230bf01b",
+    "source_images": [
+      "docs/finance/evidence/treasury/draft/qa/paper-01.png",
+      "docs/finance/evidence/treasury/draft/qa/workbook-01.png",
+      "docs/finance/evidence/treasury/draft/qa/workbook-02.png",
+      "docs/finance/evidence/treasury/draft/qa/workbook-03.png"
+    ]
+  },
+  {
+    "path": "docs/finance/evidence/coverage/draft-review/treasury-02.png",
+    "sha256": "bdc8fc6892cba7e4ec554f277f956a860d99d078ea8cd51b16f7a116ffd4b1ab",
+    "source_images": [
+      "docs/finance/evidence/treasury/draft/qa/workbook-04.png",
+      "docs/finance/evidence/treasury/draft/qa/workbook-05.png",
+      "docs/finance/evidence/treasury/draft/qa/workbook-06.png",
+      "docs/finance/evidence/treasury/draft/qa/workbook-07.png"
+    ]
+  },
+  {
+    "path": "docs/finance/evidence/coverage/draft-review/treasury-03.png",
+    "sha256": "6df4d35444df4bde819019f2242a912bba3be246bbca01640d3f92afc06ddd28",
+    "source_images": [
+      "docs/finance/evidence/treasury/draft/qa/workbook-08.png",
+      "docs/finance/evidence/treasury/draft/qa/workbook-09.png",
+      "docs/finance/evidence/treasury/draft/qa/workbook-10.png",
+      "docs/finance/evidence/treasury/draft/qa/workbook-11.png"
+    ]
+  },
+  {
+    "path": "docs/finance/evidence/coverage/draft-review/treasury-04.png",
+    "sha256": "d1f5ec633de04958f4a348210cbfea0697071f0a9b91da901f870189645a8722",
+    "source_images": [
+      "docs/finance/evidence/treasury/draft/qa/workbook-12.png",
+      "docs/finance/evidence/treasury/draft/qa/workbook-13.png",
+      "docs/finance/evidence/treasury/draft/qa/workbook-14.png",
+      "docs/finance/evidence/treasury/draft/qa/workbook-15.png"
+    ]
+  },
+  {
+    "path": "docs/finance/evidence/coverage/draft-review/treasury-05.png",
+    "sha256": "594eda2c6d4c87658318719538966095b31943a2b1413c1b694fe4f7164aa576",
+    "source_images": [
+      "docs/finance/evidence/treasury/draft/qa/workbook-16.png"
+    ]
+  },
+  {
+    "path": "docs/finance/evidence/coverage/draft-review/close-01.png",
+    "sha256": "4aef307959269fd08cfd8ca6959dc553cfa3df93902cfce61c3fa08af8c1052d",
+    "source_images": [
+      "docs/finance/evidence/close/draft/qa/paper-01.png",
+      "docs/finance/evidence/close/draft/qa/workbook-01.png",
+      "docs/finance/evidence/close/draft/qa/workbook-02.png",
+      "docs/finance/evidence/close/draft/qa/workbook-03.png"
+    ]
+  },
+  {
+    "path": "docs/finance/evidence/coverage/draft-review/close-02.png",
+    "sha256": "e385b3db4b24ac9fc19edd7d93fbc0a1ac5721eba918b3ee5bc0dfd9aecc9da6",
+    "source_images": [
+      "docs/finance/evidence/close/draft/qa/workbook-04.png",
+      "docs/finance/evidence/close/draft/qa/workbook-05.png",
+      "docs/finance/evidence/close/draft/qa/workbook-06.png",
+      "docs/finance/evidence/close/draft/qa/workbook-07.png"
+    ]
+  },
+  {
+    "path": "docs/finance/evidence/coverage/draft-review/close-03.png",
+    "sha256": "5ed7921e6fa664cbbe19c8f0c4b25298b0fe22d104775b30d7952fccad134aae",
+    "source_images": [
+      "docs/finance/evidence/close/draft/qa/workbook-08.png",
+      "docs/finance/evidence/close/draft/qa/workbook-09.png",
+      "docs/finance/evidence/close/draft/qa/workbook-10.png",
+      "docs/finance/evidence/close/draft/qa/workbook-11.png"
+    ]
+  },
+  {
+    "path": "docs/finance/evidence/coverage/draft-review/close-04.png",
+    "sha256": "0d5e4f1f53ddd4f80ebf8372669955550df26b76f05cf5ea165471b2c3399d4a",
+    "source_images": [
+      "docs/finance/evidence/close/draft/qa/workbook-12.png"
+    ]
+  },
+  {
+    "path": "docs/finance/evidence/coverage/draft-review/supporting-schedules-01.png",
+    "sha256": "7d3b15c080ef7a1af2d6ea4892447f2be3f73325c9bceeaba8f4577bc91d5605",
+    "source_images": [
+      "docs/finance/evidence/supporting-schedules/draft/qa/paper-01.png",
+      "docs/finance/evidence/supporting-schedules/draft/qa/workbook-01.png",
+      "docs/finance/evidence/supporting-schedules/draft/qa/workbook-02.png",
+      "docs/finance/evidence/supporting-schedules/draft/qa/workbook-03.png"
+    ]
+  },
+  {
+    "path": "docs/finance/evidence/coverage/draft-review/supporting-schedules-02.png",
+    "sha256": "4164676f06bcc85dcde6d11518495bfbd502da26dcff2b6326418e67ea1ca554",
+    "source_images": [
+      "docs/finance/evidence/supporting-schedules/draft/qa/workbook-04.png",
+      "docs/finance/evidence/supporting-schedules/draft/qa/workbook-05.png",
+      "docs/finance/evidence/supporting-schedules/draft/qa/workbook-06.png",
+      "docs/finance/evidence/supporting-schedules/draft/qa/workbook-07.png"
+    ]
+  },
+  {
+    "path": "docs/finance/evidence/coverage/draft-review/supporting-schedules-03.png",
+    "sha256": "84312a6e4ca058b4655f9114524a23c7d369ca342c8bffd95c34ec9b54ee54ba",
+    "source_images": [
+      "docs/finance/evidence/supporting-schedules/draft/qa/workbook-08.png",
+      "docs/finance/evidence/supporting-schedules/draft/qa/workbook-09.png",
+      "docs/finance/evidence/supporting-schedules/draft/qa/workbook-10.png",
+      "docs/finance/evidence/supporting-schedules/draft/qa/workbook-11.png"
+    ]
+  },
+  {
+    "path": "docs/finance/evidence/coverage/draft-review/supporting-schedules-04.png",
+    "sha256": "a2004366d4e24a1b37c6a1a40bdf0c88eb040fbfd5731797ecbb3f0dc32c0a97",
+    "source_images": [
+      "docs/finance/evidence/supporting-schedules/draft/qa/workbook-12.png",
+      "docs/finance/evidence/supporting-schedules/draft/qa/workbook-13.png",
+      "docs/finance/evidence/supporting-schedules/draft/qa/workbook-14.png",
+      "docs/finance/evidence/supporting-schedules/draft/qa/workbook-15.png"
+    ]
+  },
+  {
+    "path": "docs/finance/evidence/coverage/draft-review/supporting-schedules-05.png",
+    "sha256": "35af0803432a7c387d2050a20d87f251b289bbee51fbb01524ccd5d3f5eae145",
+    "source_images": [
+      "docs/finance/evidence/supporting-schedules/draft/qa/workbook-16.png"
+    ]
+  },
+  {
+    "path": "docs/finance/evidence/coverage/draft-review/tax-transaction-01.png",
+    "sha256": "862c304347884441456ef415efc96767fe7f79968fc17fee1949c9138070c002",
+    "source_images": [
+      "docs/finance/evidence/tax-transaction/draft/qa/paper-01.png",
+      "docs/finance/evidence/tax-transaction/draft/qa/workbook-01.png",
+      "docs/finance/evidence/tax-transaction/draft/qa/workbook-02.png",
+      "docs/finance/evidence/tax-transaction/draft/qa/workbook-03.png"
+    ]
+  },
+  {
+    "path": "docs/finance/evidence/coverage/draft-review/tax-transaction-02.png",
+    "sha256": "57ab8000d28a412a4c891b825f64747066bde32bb71e949f2bc11985937eae8a",
+    "source_images": [
+      "docs/finance/evidence/tax-transaction/draft/qa/workbook-04.png",
+      "docs/finance/evidence/tax-transaction/draft/qa/workbook-05.png",
+      "docs/finance/evidence/tax-transaction/draft/qa/workbook-06.png",
+      "docs/finance/evidence/tax-transaction/draft/qa/workbook-07.png"
+    ]
+  },
+  {
+    "path": "docs/finance/evidence/coverage/draft-review/tax-transaction-03.png",
+    "sha256": "677df6f8e6c58244719b2c0f4a39decc034c3b047b8e918c0daf03130f5464dc",
+    "source_images": [
+      "docs/finance/evidence/tax-transaction/draft/qa/workbook-08.png",
+      "docs/finance/evidence/tax-transaction/draft/qa/workbook-09.png"
+    ]
+  }
+]
