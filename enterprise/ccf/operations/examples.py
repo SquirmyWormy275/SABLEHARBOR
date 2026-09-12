@@ -83,6 +83,187 @@ def record(adapter, boundary, failed=False):
             due_at=due,
             assessment_passed=True,
         ),
+        "identity_creation": dict(
+            approved_request_id="DEMO-REQUEST",
+            creation_request_id="DEMO-WRONG" if failed else "DEMO-REQUEST",
+            sponsor_id="DEMO-SPONSOR",
+            identity_id="DEMO-WORKER",
+            identity_proofed=True,
+            approved_at=early,
+            start_at=early,
+            created_at=good,
+            end_at=due,
+        ),
+        "access_grant": dict(
+            approved_right_ids=["DEMO-READ"],
+            actual_right_ids=["DEMO-ADMIN"] if failed else ["DEMO-READ"],
+            approver_id="DEMO-OWNER",
+            resource_owner_id="DEMO-OWNER",
+            requester_id="DEMO-WORKER",
+            conflicting_right_ids=[],
+            approved_at=early,
+            granted_at=good,
+            expires_at=due,
+        ),
+        "mover_access": dict(
+            old_right_ids=["DEMO-OLD"],
+            approved_new_right_ids=["DEMO-NEW"],
+            actual_right_ids=["DEMO-NEW", "DEMO-OLD"] if failed else ["DEMO-NEW"],
+            approved_at=early,
+            effective_at=early,
+            reconciled_at=good,
+            due_at=due,
+        ),
+        "privilege_expiry": dict(
+            privileged_identity_id="DEMO-PRIV",
+            ordinary_identity_id="DEMO-ORDINARY",
+            approved_at=early,
+            activated_at=early,
+            revoked_at=late if failed else good,
+            expires_at=due,
+            active=False,
+            session_record_ids=["DEMO-SESSION"],
+            reviewer_id="DEMO-REVIEWER",
+            operator_id="DEMO-OPERATOR",
+            reviewed_at=due,
+            review_due_at=late,
+        ),
+        "service_account": dict(
+            owner_id="DEMO-OWNER",
+            workload_id="DEMO-WORKLOAD",
+            approved_right_ids=["DEMO-READ"],
+            actual_right_ids=["DEMO-READ"],
+            rotated_at=early,
+            observed_at=late if failed else good,
+            rotation_due_at=due,
+            reviewed_at=early,
+            review_due_at=due,
+        ),
+        "revision_review": dict(
+            reviewed_revision_sha256="a" * 64,
+            merged_revision_sha256=("b" if failed else "a") * 64,
+            reviewer_id="DEMO-REVIEWER",
+            author_id="DEMO-AUTHOR",
+            decision="APPROVE",
+            protected_branch=True,
+            proposed_at=early,
+            reviewed_at=good,
+            merged_at=due,
+        ),
+        "release_tests": dict(
+            required_test_ids=["DEMO-SECURITY", "DEMO-RECOVERY"],
+            executed_test_ids=["DEMO-SECURITY", "DEMO-RECOVERY"],
+            passed_test_ids=["DEMO-SECURITY"] if failed else ["DEMO-SECURITY", "DEMO-RECOVERY"],
+            failed_test_ids=["DEMO-RECOVERY"] if failed else [],
+            tested_sha256="a" * 64,
+            released_sha256="a" * 64,
+            built_at=early,
+            tested_at=good,
+            released_at=due,
+        ),
+        "deployment_artifact": dict(
+            approved_sha256="a" * 64,
+            pipeline_sha256="a" * 64,
+            runtime_sha256=("b" if failed else "a") * 64,
+            deployment_identity_id="DEMO-PIPELINE",
+            authorized_identity_ids=["DEMO-PIPELINE"],
+            approved_environment="DEMO-PROD",
+            actual_environment="DEMO-PROD",
+            rollback_reference="DEMO-ROLLBACK",
+            approved_at=early,
+            deployed_at=good,
+            observed_at=due,
+        ),
+        "asset_inventory": dict(
+            discovered_asset_ids=["DEMO-ASSET-A", "DEMO-ASSET-B"],
+            registered_asset_ids=["DEMO-ASSET-A"] if failed else ["DEMO-ASSET-A", "DEMO-ASSET-B"],
+            owned_asset_ids=["DEMO-ASSET-A", "DEMO-ASSET-B"],
+            discovered_at=early,
+            reconciled_at=good,
+            due_at=due,
+        ),
+        "disposal": dict(
+            legal_hold=failed,
+            approver_id="DEMO-RECORDS-OWNER",
+            authorized_approver_ids=["DEMO-RECORDS-OWNER"],
+            retention_ends_at=early,
+            disposed_at=good,
+            approved_at=early,
+            active_copy_ids=["DEMO-COPY"],
+            deleted_copy_ids=["DEMO-COPY"],
+            backup_lifecycle_reference="DEMO-BACKUP-LIFECYCLE",
+            destruction_certificate_id="DEMO-CERTIFICATE",
+        ),
+        "exception_validity": dict(
+            requirement_id="DEMO-REQUIREMENT",
+            approver_id="DEMO-RISK-OWNER",
+            authorized_approver_ids=["DEMO-RISK-OWNER"],
+            approved_at=early,
+            effective_at=early,
+            observed_at=late if failed else good,
+            expires_at=due,
+            compensating_measure_id="DEMO-MEASURE",
+            compensation_operating=True,
+        ),
+        "delegated_decision": dict(
+            approver_id="DEMO-DELEGATE",
+            delegate_id="DEMO-DELEGATE",
+            matter_id="DEMO-PURCHASE",
+            permitted_matter_ids=["DEMO-PURCHASE"],
+            decision_amount=150 if failed else 50,
+            delegated_limit=100,
+            decision_currency="DEMO-USD",
+            limit_currency="DEMO-USD",
+            delegation_starts_at=early,
+            decided_at=good,
+            delegation_expires_at=due,
+            revoked=False,
+        ),
+        "conduct_acknowledgment": dict(
+            required_version="DEMO-CODE-2",
+            acknowledged_version="DEMO-CODE-1" if failed else "DEMO-CODE-2",
+            required_recipient_id="DEMO-WORKER",
+            acknowledger_id="DEMO-WORKER",
+            distributed_at=early,
+            acknowledged_at=good,
+            due_at=due,
+        ),
+        "log_coverage": dict(
+            required_source_ids=["DEMO-IDP", "DEMO-ENDPOINT"],
+            reporting_source_ids=["DEMO-IDP"] if failed else ["DEMO-IDP", "DEMO-ENDPOINT"],
+            max_observed_gap_seconds=10,
+            approved_gap_seconds=60,
+            max_observed_skew_seconds=1,
+            approved_skew_seconds=5,
+            window_start=early,
+            window_end=good,
+            measured_at=due,
+        ),
+        "corrective_retest": dict(
+            owner_id="DEMO-OWNER",
+            retester_id="DEMO-REVIEWER",
+            implementer_id="DEMO-ENGINEER",
+            opened_at=early,
+            fixed_at=good,
+            retested_at=due,
+            due_at=late,
+            retest_passed=True,
+            original_failure_sha256="a" * 64,
+            retained_failure_sha256=("b" if failed else "a") * 64,
+        ),
+        "change_notice": dict(
+            required_recipient_ids=["DEMO-CUSTOMER-A", "DEMO-CUSTOMER-B"],
+            delivered_recipient_ids=["DEMO-CUSTOMER-A"]
+            if failed
+            else ["DEMO-CUSTOMER-A", "DEMO-CUSTOMER-B"],
+            approved_notice_sha256="a" * 64,
+            delivered_notice_sha256="a" * 64,
+            approved_at=early,
+            delivered_at=good,
+            notice_due_at=due,
+            change_at=late,
+            required_lead_seconds=1800,
+        ),
     }[adapter]
     return dict(
         id="DEMO-" + adapter,
@@ -291,7 +472,13 @@ def build(output, plans):
         db.close()
     summary = dict(
         plans=len(plans),
-        baseline_controls=len({p["control_id"] for p in plans.values()}),
+        baseline_controls=len(
+            {p["control_id"] for p in plans.values() if p.get("is_baseline_control", True)}
+        ),
+        selected_controls=len({p["control_id"] for p in plans.values()}),
+        extension_controls=len(
+            {p["control_id"] for p in plans.values() if not p.get("is_baseline_control", True)}
+        ),
         automated_controls=len(testing.ADAPTERS),
         manual_only_controls=len({p["control_id"] for p in plans.values()}) - len(testing.ADAPTERS),
         cases=len(report["cases"]),
@@ -316,10 +503,10 @@ def build(output, plans):
     start.write_text(
         "# Baseline evidence intake and workflow\n\n"
         "[Test plans](TEST_PLANS.json) · [Exercise results](EXERCISE_RESULTS.json) · [Assessment history](ASSESSMENT_REPORT.json)\n\n"
-        f"{summary['plans']} plans cover {summary['baseline_controls']} baseline controls and all three reference boundaries. Eight controls have bounded automated assertions alongside mandatory human tests; 62 use manual tests. These assertions do not establish complete control or framework coverage.\n\n"
-        "The retained local database contains 16 positive/negative cases and one prospective validation. It records independently registered populations, raw exports, manual observations, computed assertions, assignments, independent reviews and remediation history. A passing same-period retest leaves the original failure intact; prospective closure links a later independently passed case.\n\n"
-        "Every case and credential is explicitly synthetic. No live connection, appointment, deployed service, actual evidence or external assurance is asserted. The local workflow authenticates random credentials with scoped, expiring grants; an administrator with filesystem/database access remains trusted. A trusted local operator controls this store. Isolated multi-user deployment still needs a service boundary and enterprise identity integration.\n\n"
-        "For actual intake, initialize a separate private store, configure authorized subjects, create an OPERATOR_SUPPLIED case with explicit service/period/criteria authority, and independently register its source population. Export records as the documented JSON envelope. Source-specific vendor APIs and enterprise identity-provider integration remain external integration work.\n"
+        f"{summary['plans']} plans cover {summary['baseline_controls']} baseline controls plus {summary['extension_controls']} selected extension controls and all three reference boundaries. {summary['automated_controls']} controls have bounded automated assertions alongside mandatory human tests; {summary['manual_only_controls']} use manual tests. These assertions do not establish complete control or framework coverage.\n\n"
+        f"The retained local database contains {len(outcomes)} positive/negative cases and one prospective validation. It records independently registered populations, raw exports, manual observations, computed assertions, assignments, independent reviews and remediation history. A passing same-period retest leaves the original failure intact; prospective closure links a later independently passed case.\n\n"
+        "Every case and credential is explicitly synthetic. No live connection, appointment, deployed service, actual evidence or external assurance is asserted. The local workflow authenticates random credentials with scoped, expiring grants; an administrator with filesystem/database access remains trusted. A trusted local operator controls this store. The signed service boundary and deployment templates are supplied in the operations package; actual deployment and provider configuration remain required.\n\n"
+        "For actual intake, initialize a separate private store, configure authorized subjects, create an OPERATOR_SUPPLIED case with explicit service/period/criteria authority, and independently register its source population. Export records as the documented JSON envelope. Configure the supplied connectors and signed API against authorized provider endpoints and verified field translations before actual use.\n"
     )
     start.chmod(0o600)
     return summary
