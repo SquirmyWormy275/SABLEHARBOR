@@ -1,0 +1,51 @@
+{
+  "status": "DRAFT_FOR_EXACT_FILE_REVIEW",
+  "approved": false,
+  "source_revision": "8898d2d0310a60bdf0e4753036790c6eda1388cd",
+  "logo": {
+    "path": "assets/brand/logos/sable-harbor__primary-horizontal.png",
+    "sha256": "a5673c57c909fee3dcce155c9ee636589f8a21c8e217de9ff541abfcf6264b4a"
+  },
+  "artifacts": [
+    {
+      "id": "SH-LEGAL-READ-IC-001",
+      "markdown": "docs/legal/evidence/commercial/SH-LEGAL-READ-IC-001.md",
+      "source_sha256": "0c01857e258a272a48460b199f8ab24ce2be1d67ef5a49efbaac92bc4efc0db9",
+      "pdf": "docs/legal/evidence/commercial/drafts/SH-LEGAL-READ-IC-001.pdf",
+      "pdf_sha256": "c7b0da7dc88e73b8646ee6ee4d34b6fd333966f1ff0509c9715b7c2469939f47",
+      "html": "docs/legal/evidence/commercial/drafts/SH-LEGAL-READ-IC-001.html",
+      "html_sha256": "91576fe04f1362c0d5829a560be3eed1c2f2aa17099803dcbebb5103033de1e9",
+      "pages": 1
+    },
+    {
+      "id": "SH-LEGAL-READ-ADV-001",
+      "markdown": "docs/legal/evidence/commercial/SH-LEGAL-READ-ADV-001.md",
+      "source_sha256": "1ebd5d814ac051e05bad0d76e69f4e042420a05edb53866f338847b349277c35",
+      "pdf": "docs/legal/evidence/commercial/drafts/SH-LEGAL-READ-ADV-001.pdf",
+      "pdf_sha256": "344b609092739c3b0ce2f3981e30fc8eda11923fedcbb56e799cd0e702bf9a78",
+      "html": "docs/legal/evidence/commercial/drafts/SH-LEGAL-READ-ADV-001.html",
+      "html_sha256": "65baaae185075e8bcd1078583619727d36ee1168c155874ddc647ea124bcb311",
+      "pages": 1
+    },
+    {
+      "id": "SH-LEGAL-READ-ATL-001",
+      "markdown": "docs/legal/evidence/commercial/SH-LEGAL-READ-ATL-001.md",
+      "source_sha256": "606865e20d8d8e2e6a4dceb12ad6b26e8bf6a8d54e9c8e0a11a69c64c37e2a91",
+      "pdf": "docs/legal/evidence/commercial/drafts/SH-LEGAL-READ-ATL-001.pdf",
+      "pdf_sha256": "4b4205d1ab555c11f7ddb5da19fe88e460ef5263b90b0d42f4c5166dbcdd8f87",
+      "html": "docs/legal/evidence/commercial/drafts/SH-LEGAL-READ-ATL-001.html",
+      "html_sha256": "342a306df4a92c76d563d6cffa81883486ca9639aec980808d99c6e9971b9c14",
+      "pages": 1
+    },
+    {
+      "id": "SH-LEGAL-READ-COLO-001",
+      "markdown": "docs/legal/evidence/commercial/SH-LEGAL-READ-COLO-001.md",
+      "source_sha256": "ff9113d646f1396e8045736a3bd4e916fc84c2936c87174519065c4224b0b412",
+      "pdf": "docs/legal/evidence/commercial/drafts/SH-LEGAL-READ-COLO-001.pdf",
+      "pdf_sha256": "d655287e390d973992a454e5e1fa09cc67ffeb0769543c6ea7afaf60a79ef02c",
+      "html": "docs/legal/evidence/commercial/drafts/SH-LEGAL-READ-COLO-001.html",
+      "html_sha256": "e969b05cd3afb33d59016f16d195caa23a6873c7c97386d91f16d0c2cc41e16a",
+      "pages": 1
+    }
+  ]
+}

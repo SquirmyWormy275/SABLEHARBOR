@@ -1,0 +1,51 @@
+{
+  "status": "DRAFT_FOR_EXACT_FILE_REVIEW",
+  "approved": false,
+  "source_revision": "8898d2d0310a60bdf0e4753036790c6eda1388cd",
+  "logo": {
+    "path": "assets/brand/logos/sable-harbor__primary-horizontal.png",
+    "sha256": "a5673c57c909fee3dcce155c9ee636589f8a21c8e217de9ff541abfcf6264b4a"
+  },
+  "artifacts": [
+    {
+      "id": "SH-LEGAL-READ-ENTITY-001",
+      "markdown": "docs/legal/evidence/corporate/SH-LEGAL-READ-ENTITY-001.md",
+      "source_sha256": "8045eb7bbd66aa9363f0e30ad478f804bb9a5d0d6c939e388042f9094c5197c1",
+      "pdf": "docs/legal/evidence/corporate/drafts/SH-LEGAL-READ-ENTITY-001.pdf",
+      "pdf_sha256": "9bb2e2fe5771889721dfb88eb688729e4b21984907a926490dd518f3865f81ef",
+      "html": "docs/legal/evidence/corporate/drafts/SH-LEGAL-READ-ENTITY-001.html",
+      "html_sha256": "d487b04e2e6e8d7771d18c4bf35fe6db19979c921f3db5e189eb78b88dfd1691",
+      "pages": 1
+    },
+    {
+      "id": "SH-LEGAL-READ-CAPITAL-001",
+      "markdown": "docs/legal/evidence/corporate/SH-LEGAL-READ-CAPITAL-001.md",
+      "source_sha256": "87126488fa1d762861cc1446d91b3e9c0d6145317f2ff363ce843939f549c321",
+      "pdf": "docs/legal/evidence/corporate/drafts/SH-LEGAL-READ-CAPITAL-001.pdf",
+      "pdf_sha256": "a726e752524e8b28ea47525b140c68203d6187823855c393e42caa02111c7fab",
+      "html": "docs/legal/evidence/corporate/drafts/SH-LEGAL-READ-CAPITAL-001.html",
+      "html_sha256": "0b2c5849d2158f2bdad8ace7d1fd244d3040ac49bd012e366ee894253c0ee923",
+      "pages": 1
+    },
+    {
+      "id": "SH-LEGAL-READ-HR-001",
+      "markdown": "docs/legal/evidence/corporate/SH-LEGAL-READ-HR-001.md",
+      "source_sha256": "e78a7f799e03ed65f628d9b573f72fe0f7b0d4d00f0219f7b50a68ef28258167",
+      "pdf": "docs/legal/evidence/corporate/drafts/SH-LEGAL-READ-HR-001.pdf",
+      "pdf_sha256": "bac4eed5472ae84f222a0775c6164e79f97c1572bda4b053aa42c12f2dfd11f5",
+      "html": "docs/legal/evidence/corporate/drafts/SH-LEGAL-READ-HR-001.html",
+      "html_sha256": "8a5b4c91bc6e013034f4b9cab51e9feb2dbf5092da715eeb216c71639406391d",
+      "pages": 1
+    },
+    {
+      "id": "SH-LEGAL-READ-CARRY-001",
+      "markdown": "docs/legal/evidence/corporate/SH-LEGAL-READ-CARRY-001.md",
+      "source_sha256": "b2ad7f023eee8ebdc20eb435c7db902f12ff8747b1c54fd321c04fd345f0877d",
+      "pdf": "docs/legal/evidence/corporate/drafts/SH-LEGAL-READ-CARRY-001.pdf",
+      "pdf_sha256": "1fe590925915b4cb02a0cce3daa99947540501e54efa38b21abd20b65e038867",
+      "html": "docs/legal/evidence/corporate/drafts/SH-LEGAL-READ-CARRY-001.html",
+      "html_sha256": "4f512018f86c683660f02da2367a8d6fd29f0e1b419da8e995221ffd5fc8d5b7",
+      "pages": 1
+    }
+  ]
+}
