@@ -1,6 +1,6 @@
-# Foundry Field invoice evidence — draft review
+# Foundry Field invoice evidence — accepted packet
 
-One packet, not a finance release. **Status: awaiting exact-version user review.** No approval of broader document production is inferred.
+One packet, not a finance release. **Status: owner accepted the exact corrected packet.** See [acceptance and frozen hashes](ACCEPTANCE.json). Future designs require separate review. Draft wording inside the frozen review files records their pre-acceptance state; it is not the current acceptance status.
 
 Open [the local review page](review.html) in a browser for the retained corporate stationery reference beside the draft, followed by every PDF page and workbook sheet. GitHub displays the [Markdown packet](PACKET.md); download the [PDF](packet.pdf) or [Excel workbook](reconciliation.xlsx) for ordinary document reading. This corrected draft uses the approved Foundry Field primary horizontal logo within the existing publication renderer; its white body pages differ deliberately from the retained blank correspondence template shown for reference.
 

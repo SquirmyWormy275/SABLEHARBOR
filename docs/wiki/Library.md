@@ -12,15 +12,15 @@ Use the subject pages for a guided introduction. Use this complete file inventor
 | [Controls, services and runtime](library/controls.md) | 56 |
 | [Geography and facilities](library/places.md) | 300 |
 | [Identity and collateral](library/identity.md) | 15 |
-| [Canon, history and decisions](library/history.md) | 39 |
+| [Canon, history and decisions](library/history.md) | 40 |
 | [Reader guides and subject pages](library/reader.md) | 36 |
 | [Implementation, source guides and delivery evidence](library/technical.md) | 78 |
 
 ## Format coverage
 
-The inventory contains 662 Markdown files, 337 PDFs and 4 Excel workbooks. The existing publication manifest verifies 131 Markdown/PDF pairs.
+The inventory contains 663 Markdown files, 337 PDFs and 4 Excel workbooks. The existing publication manifest verifies 131 Markdown/PDF pairs.
 
-Every inventoried file has a path, title, format, collection, size and SHA-256 in `reader_file` within the [institutional database](../internal/institutional_catalog.sqlite3). `reader_publication_pair` records verified source/PDF links; `reader_search` supports text search. `reader_evidence_link` separately connects validated draft evidence packets to their native accounting IDs and MD/PDF/XLSX files without declaring publication approval. These are discovery tables. Native accounting and operating databases retain their transaction records.
+Every inventoried file has a path, title, format, collection, size and SHA-256 in `reader_file` within the [institutional database](../internal/institutional_catalog.sqlite3). `reader_publication_pair` records verified source/PDF links; `reader_search` supports text search. `reader_evidence_link` separately connects validated evidence packets to their native accounting IDs and MD/PDF/XLSX files without declaring publication approval. These are discovery tables. Native accounting and operating databases retain their transaction records.
 
 The [format-review queue](library/format-review.md) lists every unpaired non-navigation Markdown record for reconciliation. Unpaired documents have not been certified against the new three-form requirement. Release-only records are reached through release guides; their archive contents are not silently counted as files in this checkout. Code, raw data, imagery and packaged binaries are reached through their domain guides and manifests. Generated library pages are excluded from their own inventory.
 

@@ -6,7 +6,7 @@ Generated reconciliation queue, not an assertion that every unpaired record lack
 
 | State | Records |
 |---|---:|
-| COUNTERPART_REVIEW_REQUIRED | 438 |
+| COUNTERPART_REVIEW_REQUIRED | 439 |
 | READER_OR_MAINTENANCE_PAGE | 93 |
 | VERIFIED_DOCUMENT_PAIR | 131 |
 
@@ -93,6 +93,7 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [SABLE HARBOR — DECISION REGISTER](../../canon/DECISION_REGISTER_v0.3.1.md) — Corporate document-format reconciliation
 - [Demotte Reclamation Services — name and visual identity](../../canon/DEMOTTE_RECLAMATION_NAME_AND_IDENTITY_2026-09-07.md) — Corporate document-format reconciliation
 - [Emberline — approved visual identity](../../canon/EMBERLINE_VISUAL_IDENTITY_2026-09-07.md) — Corporate document-format reconciliation
+- [Foundry Field evidence packet: exact-file acceptance](../../canon/FINANCE_HUMAN_EVIDENCE_001_ACCEPTANCE_2026-09-11.md) — Corporate document-format reconciliation
 - [Industrial closeout — corporate, Pale Sun, Red Wash and ARU](../../canon/INDUSTRIAL_CLOSEOUT_2026-09-05.md) — Corporate document-format reconciliation
 - [Kelly Gang Mining — approved visual identity](../../canon/KELLY_GANG_MINING_VISUAL_IDENTITY_2026-09-07.md) — Corporate document-format reconciliation
 - [Klein — name and historical identity](../../canon/KLEIN_NAME_AND_IDENTITY_2026-09-07.md) — Corporate document-format reconciliation

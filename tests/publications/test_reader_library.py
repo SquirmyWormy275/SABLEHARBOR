@@ -76,7 +76,7 @@ class EvidenceLinkTests(unittest.TestCase):
     def test_packet_discovery_preserves_draft_and_paths(self):
         records = library.evidence_records(ROOT)
         selected = next(row for row in records if row[0] == 'SH-FIN-HUMAN-001')
-        self.assertEqual(selected[1], 'DRAFT_FOR_USER_REVIEW')
+        self.assertEqual(selected[1], 'OWNER_ACCEPTED_EXACT_PACKET')
         self.assertEqual(selected[2], 'INV-base-FF-003-TERM-0')
         self.assertEqual(selected[3:5], ('base', 'foundry-field'))
         self.assertTrue(selected[11].endswith('/PACKET.md'))

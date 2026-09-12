@@ -90,6 +90,25 @@ def title(path: Path) -> str:
     return path.stem.replace("_", " ").replace("|", " / ")
 
 
+def evidence_acceptance(root: Path, directory: Path, draft_status: str) -> str:
+    """Acceptance is a separate dated record; never rewrite reviewed draft bytes."""
+    path = directory / "ACCEPTANCE.json"
+    if not path.exists():
+        return draft_status
+    accepted = json.loads(path.read_text())
+    if accepted["status"] != "OWNER_ACCEPTED_EXACT_PACKET":
+        raise ValueError("Unknown evidence acceptance state")
+    if not (root / accepted["controlling_record"]).is_file():
+        raise ValueError("Missing evidence acceptance canon")
+    for relative, digest in accepted["artifacts"].items():
+        target = (root / relative).resolve()
+        if not target.is_relative_to(directory.resolve()) or not target.is_file():
+            raise ValueError("Accepted evidence path missing or unsafe")
+        if hashlib.sha256(target.read_bytes()).hexdigest() != digest:
+            raise ValueError("Accepted evidence bytes changed: " + relative)
+    return accepted["status"]
+
+
 def evidence_records(root: Path) -> list[tuple]:
     """Validate declared draft evidence without promoting it to a controlled publication."""
     records = []
@@ -127,7 +146,7 @@ def evidence_records(root: Path) -> list[tuple]:
             raise ValueError("Evidence accounting event links mismatch")
         relatives = [str((path.parent / name).relative_to(root)) for name in ("PACKET.md", "packet.pdf", "reconciliation.xlsx")]
         hashes = [catalog["artifacts"][name] for name in ("PACKET.md", "packet.pdf", "reconciliation.xlsx")]
-        records.append((catalog["document_id"], catalog["status"], catalog["invoice_id"], catalog["scenario"], catalog["unit"], source["release"], source["release_source_revision"], source["release_sha256"], catalog["native_database"], json.dumps(source["members"], sort_keys=True), json.dumps(catalog["native_source_ids"]), *relatives, *hashes, str(path.relative_to(root))))
+        records.append((catalog["document_id"], evidence_acceptance(root, path.parent, catalog["status"]), catalog["invoice_id"], catalog["scenario"], catalog["unit"], source["release"], source["release_source_revision"], source["release_sha256"], catalog["native_database"], json.dumps(source["members"], sort_keys=True), json.dumps(catalog["native_source_ids"]), *relatives, *hashes, str(path.relative_to(root))))
     return records
 
 
@@ -318,7 +337,7 @@ def populate(
             "Every inventoried file has a path, title, format, collection, size and SHA-256 in "
             "`reader_file` within the [institutional database](../internal/institutional_catalog.sqlite3). "
             "`reader_publication_pair` records verified source/PDF links; `reader_search` supports text search. "
-            "`reader_evidence_link` separately connects validated draft evidence packets to their native accounting IDs and MD/PDF/XLSX files without declaring publication approval. These are discovery tables. Native accounting and operating databases retain their transaction records.",
+            "`reader_evidence_link` separately connects validated evidence packets to their native accounting IDs and MD/PDF/XLSX files without declaring publication approval. These are discovery tables. Native accounting and operating databases retain their transaction records.",
             "",
             "The [format-review queue](library/format-review.md) lists every unpaired non-navigation Markdown record for reconciliation. "
             "Unpaired documents have not been certified against the new three-form requirement. "

@@ -155,7 +155,7 @@ Generated file inventory. Includes current and historical records; open the sour
 ## `docs/finance/evidence/SH-FIN-HUMAN-001`
 
 - [Foundry Field: invoice evidence](../../finance/evidence/SH-FIN-HUMAN-001/PACKET.md) — MD
-- [Foundry Field invoice evidence — draft review](../../finance/evidence/SH-FIN-HUMAN-001/README.md) — MD
+- [Foundry Field invoice evidence — accepted packet](../../finance/evidence/SH-FIN-HUMAN-001/README.md) — MD
 - [packet](../../finance/evidence/SH-FIN-HUMAN-001/packet.pdf) — PDF
 - [reconciliation](../../finance/evidence/SH-FIN-HUMAN-001/reconciliation.xlsx) — XLSX
 

@@ -1,0 +1,30 @@
+{
+  "document_id": "SH-FIN-HUMAN-001",
+  "status": "OWNER_ACCEPTED_EXACT_PACKET",
+  "accepted_date": "2026-09-11",
+  "owner_statement": "Accept this exact packet",
+  "reviewed_commit": "efce3a74b5c029e4010abd93934b7686b3751ba4",
+  "pull_request": 134,
+  "controlling_record": "docs/canon/FINANCE_HUMAN_EVIDENCE_001_ACCEPTANCE_2026-09-11.md",
+  "scope": "Exact corrected Foundry Field accounting evidence memo and workbook only; future designs require separate review. Historical draft wording is retained in accepted bytes.",
+  "artifacts": {
+    "docs/finance/evidence/SH-FIN-HUMAN-001/PACKET.md": "1b7828cb0a69551ef5ff14fad874bdc6222f697679e4163933d3a6f85f27f60c",
+    "docs/finance/evidence/SH-FIN-HUMAN-001/source.json": "c4833cfc6f28db6cd3edcae761b0e2d8f463a20de79f1d6fd5b0c517f8f829b7",
+    "docs/finance/evidence/SH-FIN-HUMAN-001/catalog.json": "eadba6f55d8f819b89eb198f3c7cf6b3af13f872f098d7ff07cd21cce4e0e85c",
+    "docs/finance/evidence/SH-FIN-HUMAN-001/manifest.json": "f09b1849a89a123771b30d2b84ac4916f2f4f12d7674839c5edc5edd2f4085c3",
+    "docs/finance/evidence/SH-FIN-HUMAN-001/build.py": "5947b8c5fb2d82699bd4f3632351a0f978b70b5798458359a3b15437e0906c7f",
+    "docs/finance/evidence/SH-FIN-HUMAN-001/packet.pdf": "1914d0043f1ef3344873d10d35ed016f4cbfd28091459e8dbb2d4b8fee45a5b7",
+    "docs/finance/evidence/SH-FIN-HUMAN-001/reconciliation.xlsx": "7077ec3ae8e796a6f94759fe19624ab51a11ac45b7ce538a0c447b4c9c384214",
+    "docs/finance/evidence/SH-FIN-HUMAN-001/review.html": "943177aa3ad5d6e271b77ed1aa91b51c221bcb6841685447ecfb3f1c0265e909",
+    "docs/finance/evidence/SH-FIN-HUMAN-001/qa/renders.json": "0d60a285f40dc0b44b03010435948b512a8e8852908fe2fe3de579ee065c158d",
+    "docs/finance/evidence/SH-FIN-HUMAN-001/qa/browser-desktop.png": "0378f9f619382f367acdadbbc23b2ba554d6693c399bfe87c3f1d10e7b038906",
+    "docs/finance/evidence/SH-FIN-HUMAN-001/qa/packet-1.png": "eab89045a75714a425a41d3e1c8758f368f5d05dfa8e28d17d14948033c6f011",
+    "docs/finance/evidence/SH-FIN-HUMAN-001/qa/packet-2.png": "757503e707beca02bf32a8260af9fceca859502db5952c74c5afaf0ddd5e3d12",
+    "docs/finance/evidence/SH-FIN-HUMAN-001/qa/reference-1.png": "a05a27600f3aaca1ac21f4648d4e4cf59083499263dddca4ae7c5f933726c336",
+    "docs/finance/evidence/SH-FIN-HUMAN-001/qa/workbook-1.png": "98eeafbbf74ce46783eee4581319b940562d556b56099883c3599811417e1a71",
+    "docs/finance/evidence/SH-FIN-HUMAN-001/qa/workbook-2.png": "5db0dad2a848dd0458b53fedd3ee45a7ad7f911dbe7f8117d1b0ac3827e51a19",
+    "docs/finance/evidence/SH-FIN-HUMAN-001/qa/workbook-3.png": "eecb6c12ca5920e70bd7bf513f9bd0da80890cc4b7cad0d34ea16ba42ee31a0e",
+    "docs/finance/evidence/SH-FIN-HUMAN-001/qa/workbook-4.png": "830be3b8dc7f4e0f9c13201ff1c96f28e4c447f82fe80f20b97ba81f889d687f",
+    "docs/finance/evidence/SH-FIN-HUMAN-001/qa/workbook-5.png": "7e3b8f693d669182cb594ce67f2acaba3de9fd76190691262049628c0a76d7c8"
+  }
+}

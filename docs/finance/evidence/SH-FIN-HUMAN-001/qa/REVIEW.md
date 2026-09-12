@@ -1,3 +1,5 @@
+> **Current status:** owner accepted the exact corrected packet at `efce3a7`. [Acceptance](../ACCEPTANCE.json) controls; the review history below is preserved. No further aesthetic changes authorized.
+
 # Draft visual and numerical review
 
 **Status:** agent-reviewed draft; user visual acceptance pending. No merge or publication authorized by this QA record.
