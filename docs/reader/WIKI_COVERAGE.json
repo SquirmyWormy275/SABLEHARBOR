@@ -1,0 +1,714 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "SH-READER-WIKI-COVERAGE-2026-09-11",
+  "review_date": "2026-09-11",
+  "authoritative_base_sha": "57b01df637838581f1cee5f3b5f633f6cd70c4d0",
+  "status": "READER_NAVIGATION_AUDIT",
+  "authority": "Secondary navigation inventory; linked canonical sources retain their own authority and unresolved states.",
+  "scope": "Seven current business reading pages and all 23 existing department/institution/capability pages, plus source-backed historical and cross-cutting subject candidates. This is not a census of every source record or every company function.",
+  "counts": {
+    "business_pages": 7,
+    "department_institution_capability_pages": 23,
+    "queued_subjects": 7
+  },
+  "pages": [
+    {
+      "id": "WIKI-BIZ-ADVISORY",
+      "subject": "Sable Harbor Advisory",
+      "page": "docs/wiki/businesses/Advisory.md",
+      "disposition": "CURATED_SUBJECT_PAGE",
+      "source_entry_points": [
+        "docs/advisory/LEGAL_AND_CONTRACTING_TERM_SHEET.md",
+        "docs/advisory/MATTER_DELIVERY_PLAYBOOK.md",
+        "docs/advisory/MATTER_GOVERNANCE_AND_ECONOMICS.md",
+        "docs/advisory/README.md",
+        "docs/advisory/templates/INDEPENDENT_REVIEW_MEMO_TEMPLATE.md",
+        "docs/advisory/templates/MATTER_ACCEPTANCE_FORM.md",
+        "docs/advisory/templates/TRANSFER_CERTIFICATE_TEMPLATE.md",
+        "docs/audit/UNIT_EXPORT_SPECIFICATION.md",
+        "docs/business-lines/ADVISORY.md",
+        "docs/business-lines/README.md",
+        "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md",
+        "docs/organization/README.md",
+        "docs/organization/charts/advisory.md",
+        "docs/releases/BUSINESS_FINANCE_RELEASES.md",
+        "enterprise/business/README.md",
+        "geospatial/maps/facilities/ARTIFACT_INDEX.md"
+      ],
+      "existing_visuals_reused": [
+        "assets/brand/logos/advisory__mark.png",
+        "docs/organization/assets/current/advisory.png"
+      ],
+      "review_scope": "Navigation and explicit authority/status boundaries; source entry points are not a new independent canon synthesis."
+    },
+    {
+      "id": "WIKI-BIZ-AMERICAN-RESOURCE-UTILITY",
+      "subject": "American Resource Utility / BS&T",
+      "page": "docs/wiki/businesses/American-Resource-Utility.md",
+      "disposition": "CURATED_SUBJECT_PAGE",
+      "source_entry_points": [
+        "docs/audit/UNIT_EXPORT_SPECIFICATION.md",
+        "docs/business-lines/AMERICAN_RESOURCE_UTILITY.md",
+        "docs/business-lines/README.md",
+        "docs/organization/README.md",
+        "docs/organization/charts/aru-services.md",
+        "docs/organization/charts/bst-network.md",
+        "docs/organization/charts/people-aru-leadership.md",
+        "docs/releases/BUSINESS_FINANCE_RELEASES.md",
+        "enterprise/business/README.md",
+        "geospatial/facilities/INDUSTRIAL_FACILITIES.md",
+        "geospatial/maps/facilities/ARTIFACT_INDEX.md",
+        "industrial/CASE_GUIDE.md",
+        "industrial/corporate/LEGAL_STRUCTURE_AND_FORMATION.md",
+        "industrial/operations/LABOR_SAFETY_AND_CONTROLS.md",
+        "industrial/operations/OPERATING_AND_SERVICE_PLAN.md",
+        "industrial/planning/docs/CAPITAL_INVESTMENT_REVIEW.md",
+        "industrial/transaction/04_ARU_APPROVAL_AND_PURCHASE_AGREEMENT.md"
+      ],
+      "existing_visuals_reused": [
+        "assets/brand/industrial_sources/aru/aru_primary_centered_chat_asset.png",
+        "docs/organization/assets/current/aru-services.png"
+      ],
+      "review_scope": "Navigation and explicit authority/status boundaries; source entry points are not a new independent canon synthesis."
+    },
+    {
+      "id": "WIKI-BIZ-ATLAS-MERIDIAN",
+      "subject": "Atlas Meridian",
+      "page": "docs/wiki/businesses/Atlas-Meridian.md",
+      "disposition": "CURATED_SUBJECT_PAGE",
+      "source_entry_points": [
+        "docs/advisory/ATLAS_MERIDIAN_COMMERCIAL_PRODUCT_STANDARD.md",
+        "docs/advisory/ATLAS_MERIDIAN_PROFESSIONAL_PLATFORM.md",
+        "docs/audit/UNIT_EXPORT_SPECIFICATION.md",
+        "docs/business-lines/ATLAS_MERIDIAN.md",
+        "docs/business-lines/README.md",
+        "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md",
+        "docs/organization/README.md",
+        "docs/organization/charts/atlas-meridian.md",
+        "docs/organization/charts/people-atlas-meridian.md",
+        "docs/releases/BUSINESS_FINANCE_RELEASES.md",
+        "enterprise/business/README.md",
+        "enterprise/runtime/README.md",
+        "geospatial/maps/facilities/ARTIFACT_INDEX.md"
+      ],
+      "existing_visuals_reused": [
+        "assets/brand/logos/atlas-meridian__mark.png",
+        "docs/organization/assets/current/atlas-meridian.png"
+      ],
+      "review_scope": "Navigation and explicit authority/status boundaries; source entry points are not a new independent canon synthesis."
+    },
+    {
+      "id": "WIKI-BIZ-CRADLE",
+      "subject": "Project Cradle",
+      "page": "docs/wiki/businesses/Cradle.md",
+      "disposition": "CURATED_SUBJECT_PAGE",
+      "source_entry_points": [
+        "docs/audit/UNIT_EXPORT_SPECIFICATION.md",
+        "docs/business-lines/BUSINESS_FINANCE_AND_ALEXANDRIA_INTERFACES.md",
+        "docs/business-lines/PROJECT_CRADLE.md",
+        "docs/business-lines/README.md",
+        "docs/canon/CRADLE_CLOSEOUT_2026-09-06.md",
+        "docs/organization/PROJECT_CRADLE.md",
+        "docs/organization/README.md",
+        "docs/organization/charts/people-cradle.md",
+        "docs/organization/charts/project-cradle.md",
+        "docs/releases/BUSINESS_FINANCE_RELEASES.md",
+        "enterprise/business/README.md",
+        "geospatial/facilities/RESEARCH_CAMPUSES.md",
+        "geospatial/maps/facilities/ARTIFACT_INDEX.md"
+      ],
+      "existing_visuals_reused": [
+        "assets/brand/logos/project-cradle__mark.png",
+        "docs/organization/assets/current/project-cradle.png"
+      ],
+      "review_scope": "Navigation and explicit authority/status boundaries; source entry points are not a new independent canon synthesis."
+    },
+    {
+      "id": "WIKI-BIZ-FOUNDRY-FIELD",
+      "subject": "Foundry Field",
+      "page": "docs/wiki/businesses/Foundry-Field.md",
+      "disposition": "CURATED_SUBJECT_PAGE",
+      "source_entry_points": [
+        "docs/audit/UNIT_EXPORT_SPECIFICATION.md",
+        "docs/business-lines/BUSINESS_FINANCE_AND_ALEXANDRIA_INTERFACES.md",
+        "docs/business-lines/FOUNDRY_FIELD.md",
+        "docs/business-lines/README.md",
+        "docs/organization/FOUNDRY_AND_FOUNDRY_FIELD.md",
+        "docs/organization/FOUNDRY_FIELD_ORGANIZATION.md",
+        "docs/organization/README.md",
+        "docs/organization/charts/foundry-field.md",
+        "docs/organization/charts/people-foundry-field.md",
+        "docs/releases/BUSINESS_FINANCE_RELEASES.md",
+        "enterprise/business/README.md",
+        "geospatial/maps/facilities/ARTIFACT_INDEX.md"
+      ],
+      "existing_visuals_reused": [
+        "assets/brand/logos/foundry-field__mark.png",
+        "docs/organization/assets/current/foundry-field.png"
+      ],
+      "review_scope": "Navigation and explicit authority/status boundaries; source entry points are not a new independent canon synthesis."
+    },
+    {
+      "id": "WIKI-BIZ-PALE-SUN-RED-WASH",
+      "subject": "Pale Sun / Red Wash",
+      "page": "docs/wiki/businesses/Pale-Sun-Red-Wash.md",
+      "disposition": "CURATED_SUBJECT_PAGE",
+      "source_entry_points": [
+        "docs/audit/UNIT_EXPORT_SPECIFICATION.md",
+        "docs/business-lines/PALE_SUN.md",
+        "docs/business-lines/README.md",
+        "docs/organization/README.md",
+        "docs/organization/charts/pale-sun-red-wash.md",
+        "docs/organization/charts/people-pale-sun-red-wash.md",
+        "docs/releases/BUSINESS_FINANCE_RELEASES.md",
+        "enterprise/business/README.md",
+        "geospatial/facilities/INDUSTRIAL_FACILITIES.md",
+        "geospatial/maps/facilities/ARTIFACT_INDEX.md",
+        "industrial/transaction/01_RW_TRANSACTION_FILE.md",
+        "red_wash/README.md",
+        "red_wash/agreements/TRANSACTION_AND_COMMERCIAL_INSTRUMENTS.md",
+        "red_wash/docs/03_MINE_PLAN_AND_OPERATING_SYSTEM.md",
+        "red_wash/docs/04_PROCESSING_METALLURGY_AND_PRODUCT.md",
+        "red_wash/logistics/ARU_BST_INTERFACE_AND_DEPENDENCY_RECORD.md"
+      ],
+      "existing_visuals_reused": [
+        "assets/brand/logos/pale_sun__canonical.png",
+        "docs/organization/assets/current/pale-sun-red-wash.png"
+      ],
+      "review_scope": "Navigation and explicit authority/status boundaries; source entry points are not a new independent canon synthesis."
+    },
+    {
+      "id": "WIKI-BIZ-WILLOW",
+      "subject": "Willow",
+      "page": "docs/wiki/businesses/Willow.md",
+      "disposition": "CURATED_SUBJECT_PAGE",
+      "source_entry_points": [
+        "docs/audit/UNIT_EXPORT_SPECIFICATION.md",
+        "docs/business-lines/README.md",
+        "docs/business-lines/WILLOW.md",
+        "docs/canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md",
+        "docs/finance/WILLOW_KLEIN_FINANCE_AND_CORPORATE_MODEL_2026-09-06.md",
+        "docs/organization/README.md",
+        "docs/organization/WILLOW_KLEIN_CORPORATE_RECORD.md",
+        "docs/organization/charts/people-willow-team.md",
+        "docs/organization/charts/willow-fort.md",
+        "docs/releases/BUSINESS_FINANCE_RELEASES.md",
+        "enterprise/business/README.md",
+        "geospatial/facilities/RESEARCH_CAMPUSES.md",
+        "geospatial/maps/facilities/ARTIFACT_INDEX.md"
+      ],
+      "existing_visuals_reused": [
+        "assets/brand/logos/willow__mark.png",
+        "docs/organization/assets/current/willow-fort.png"
+      ],
+      "review_scope": "Navigation and explicit authority/status boundaries; source entry points are not a new independent canon synthesis."
+    },
+    {
+      "id": "WIKI-SUBJECT-ALEXANDRIA",
+      "subject": "Alexandria institutional environment",
+      "page": "docs/wiki/departments/alexandria.md",
+      "disposition": "CURATED_SUBJECT_PAGE",
+      "source_entry_points": [
+        "docs/internal/INSTITUTIONAL_CATALOG_QUERY_GUIDE.md",
+        "docs/j2/alexandria/ALEXANDRIA_CHARTER.md",
+        "docs/j2/alexandria/PINAKES_PORTAL_AND_UX.md",
+        "docs/j2/alexandria/README.md",
+        "docs/j2/alexandria/TEMPORAL_INTEGRITY.md",
+        "docs/organization/charts/corporate-alexandria.md",
+        "enterprise/runtime/README.md"
+      ],
+      "existing_visuals_reused": [
+        "assets/brand/logos/j2__primary-horizontal.png",
+        "docs/organization/assets/current/corporate-alexandria.png"
+      ],
+      "review_scope": "Navigation and explicit authority/status boundaries; source entry points are not a new independent canon synthesis."
+    },
+    {
+      "id": "WIKI-SUBJECT-BOARD",
+      "subject": "Board and committees",
+      "page": "docs/wiki/departments/board.md",
+      "disposition": "CURATED_SUBJECT_PAGE",
+      "source_entry_points": [
+        "docs/governance/BOARD_AND_CAPITAL_GOVERNANCE_v1.0.1.md",
+        "docs/governance/BOARD_EVOLUTION_2016_2026.md",
+        "docs/governance/board-records/README.md",
+        "docs/governance/committees/README.md",
+        "docs/organization/charts/corporate-board-committees.md"
+      ],
+      "existing_visuals_reused": [
+        "assets/brand/logos/sable-harbor__primary-horizontal.png",
+        "docs/organization/assets/current/corporate-board-committees.png"
+      ],
+      "review_scope": "Navigation and explicit authority/status boundaries; source entry points are not a new independent canon synthesis."
+    },
+    {
+      "id": "WIKI-SUBJECT-CONTACT",
+      "subject": "Contact",
+      "page": "docs/wiki/departments/contact.md",
+      "disposition": "CURATED_SUBJECT_PAGE",
+      "source_entry_points": [
+        "docs/canon/J2_LEADERSHIP_APPOINTMENTS_2026-09-10.md",
+        "docs/j2/CONTACT.md",
+        "docs/j2/CONTACT_COLLECTION_MANAGEMENT.md",
+        "docs/j2/J2_ESTABLISHMENT.md",
+        "docs/organization/charts/corporate-contact-disciplines.md"
+      ],
+      "existing_visuals_reused": [
+        "assets/brand/logos/j2__primary-horizontal.png",
+        "docs/organization/assets/current/corporate-contact-disciplines.png"
+      ],
+      "review_scope": "Navigation and explicit authority/status boundaries; source entry points are not a new independent canon synthesis."
+    },
+    {
+      "id": "WIKI-SUBJECT-CORPORATE-SECRETARY",
+      "subject": "Corporate Secretary",
+      "page": "docs/wiki/departments/corporate-secretary.md",
+      "disposition": "CURATED_SUBJECT_PAGE",
+      "source_entry_points": [
+        "docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md",
+        "docs/governance/CORPORATE_DOCUMENT_STANDARD_v0.1.md",
+        "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
+        "docs/governance/board-records/README.md",
+        "docs/organization/charts/corporate-enterprise-support.md",
+        "enterprise/runtime/docs/ASSURANCE_SCOPE.md"
+      ],
+      "existing_visuals_reused": [
+        "assets/brand/logos/sable-harbor__primary-horizontal.png",
+        "docs/organization/assets/current/corporate-enterprise-support.png"
+      ],
+      "review_scope": "Navigation and explicit authority/status boundaries; source entry points are not a new independent canon synthesis."
+    },
+    {
+      "id": "WIKI-SUBJECT-EDUCATION",
+      "subject": "J2 Education",
+      "page": "docs/wiki/departments/education.md",
+      "disposition": "CURATED_SUBJECT_PAGE",
+      "source_entry_points": [
+        "docs/canon/J2_LEADERSHIP_APPOINTMENTS_2026-09-10.md",
+        "docs/j2/EDUCATION.md",
+        "docs/j2/J2_ESTABLISHMENT.md",
+        "docs/j2/publications/README.md",
+        "docs/organization/charts/corporate-education-programs.md",
+        "geospatial/facilities/README.md"
+      ],
+      "existing_visuals_reused": [
+        "assets/brand/logos/j2__primary-horizontal.png",
+        "docs/organization/assets/current/corporate-education-programs.png"
+      ],
+      "review_scope": "Navigation and explicit authority/status boundaries; source entry points are not a new independent canon synthesis."
+    },
+    {
+      "id": "WIKI-SUBJECT-ESS",
+      "subject": "Enterprise Support Services",
+      "page": "docs/wiki/departments/ess.md",
+      "disposition": "CURATED_SUBJECT_PAGE",
+      "source_entry_points": [
+        "docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md",
+        "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
+        "docs/organization/charts/corporate-enterprise-support.md",
+        "enterprise/services/README.md"
+      ],
+      "existing_visuals_reused": [
+        "assets/brand/logos/sable-harbor__primary-horizontal.png",
+        "docs/organization/assets/current/corporate-enterprise-support.png"
+      ],
+      "review_scope": "Navigation and explicit authority/status boundaries; source entry points are not a new independent canon synthesis."
+    },
+    {
+      "id": "WIKI-SUBJECT-EXECUTIVE",
+      "subject": "Office of the CEO",
+      "page": "docs/wiki/departments/executive.md",
+      "disposition": "CURATED_SUBJECT_PAGE",
+      "source_entry_points": [
+        "docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md",
+        "docs/governance/DECISION_QUALITY_AND_AFTER_ACTION_LEARNING.md",
+        "docs/governance/ENTERPRISE_AUTHORITY_CAPITAL_AND_EXECUTIVE_RHYTHM.md",
+        "docs/governance/SABLE_HARBOR_MANAGEMENT_SYSTEM.md",
+        "docs/organization/charts/corporate-headquarters.md",
+        "docs/organization/charts/people-enterprise.md"
+      ],
+      "existing_visuals_reused": [
+        "assets/brand/logos/sable-harbor__primary-horizontal.png",
+        "docs/organization/assets/current/corporate-headquarters.png"
+      ],
+      "review_scope": "Navigation and explicit authority/status boundaries; source entry points are not a new independent canon synthesis."
+    },
+    {
+      "id": "WIKI-SUBJECT-FACILITIES",
+      "subject": "Facilities and workplace services",
+      "page": "docs/wiki/departments/facilities.md",
+      "disposition": "CURATED_SUBJECT_PAGE",
+      "source_entry_points": [
+        "docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md",
+        "docs/organization/charts/corporate-enterprise-support.md",
+        "enterprise/services/README.md",
+        "geospatial/README.md",
+        "geospatial/facilities/README.md",
+        "geospatial/facilities/spatial/README.md"
+      ],
+      "existing_visuals_reused": [
+        "assets/brand/logos/sable-harbor__primary-horizontal.png",
+        "docs/organization/assets/current/corporate-enterprise-support.png",
+        "geospatial/facilities/visitor/v08/artifacts/visitor-map-v08.png"
+      ],
+      "review_scope": "Navigation and explicit authority/status boundaries; source entry points are not a new independent canon synthesis."
+    },
+    {
+      "id": "WIKI-SUBJECT-FINANCE",
+      "subject": "Finance",
+      "page": "docs/wiki/departments/finance.md",
+      "disposition": "CURATED_SUBJECT_PAGE",
+      "source_entry_points": [
+        "docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md",
+        "docs/finance/ACCOUNTING_POLICIES.md",
+        "docs/finance/DATABASE_AND_ACCOUNTING_ARCHITECTURE.md",
+        "docs/finance/EXCEL_MODEL_GUIDE.md",
+        "docs/finance/KNOWN_LIMITATIONS.md",
+        "docs/finance/READER_EXERCISES.md",
+        "docs/finance/README.md",
+        "docs/finance/TRANSACTION_DATA_ROOM_INDEX.md",
+        "docs/organization/charts/corporate-enterprise-support.md",
+        "enterprise/business/README.md",
+        "enterprise/operations/README.md"
+      ],
+      "existing_visuals_reused": [
+        "assets/brand/logos/sable-harbor__primary-horizontal.png",
+        "docs/organization/assets/current/corporate-enterprise-support.png"
+      ],
+      "review_scope": "Navigation and explicit authority/status boundaries; source entry points are not a new independent canon synthesis."
+    },
+    {
+      "id": "WIKI-SUBJECT-INTERNAL-AUDIT",
+      "subject": "Internal Audit",
+      "page": "docs/wiki/departments/internal-audit.md",
+      "disposition": "CURATED_SUBJECT_PAGE",
+      "source_entry_points": [
+        "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
+        "docs/governance/committees/AUDIT_AND_COMPLIANCE_COMMITTEE_CHARTER.md",
+        "docs/organization/charts/corporate-board-committees.md",
+        "enterprise/ccf/README.md",
+        "enterprise/ccf/assurance/README.md",
+        "enterprise/runtime/docs/ASSURANCE_SCOPE.md"
+      ],
+      "existing_visuals_reused": [
+        "assets/brand/logos/sable-harbor__primary-horizontal.png",
+        "docs/organization/assets/current/corporate-board-committees.png"
+      ],
+      "review_scope": "Navigation and explicit authority/status boundaries; source entry points are not a new independent canon synthesis."
+    },
+    {
+      "id": "WIKI-SUBJECT-J2-HEADQUARTERS",
+      "subject": "J2 Headquarters",
+      "page": "docs/wiki/departments/j2-headquarters.md",
+      "disposition": "CURATED_SUBJECT_PAGE",
+      "source_entry_points": [
+        "docs/canon/J2_LEADERSHIP_APPOINTMENTS_2026-09-10.md",
+        "docs/j2/J2_ESTABLISHMENT.md",
+        "docs/j2/J2_HEADQUARTERS.md",
+        "docs/organization/charts/corporate-j2.md"
+      ],
+      "existing_visuals_reused": [
+        "assets/brand/logos/j2__primary-horizontal.png",
+        "docs/organization/assets/current/corporate-j2.png"
+      ],
+      "review_scope": "Navigation and explicit authority/status boundaries; source entry points are not a new independent canon synthesis."
+    },
+    {
+      "id": "WIKI-SUBJECT-J2",
+      "subject": "J2 \u2014 Judgment & Junction",
+      "page": "docs/wiki/departments/j2.md",
+      "disposition": "CURATED_SUBJECT_PAGE",
+      "source_entry_points": [
+        "docs/canon/J2_LEADERSHIP_APPOINTMENTS_2026-09-10.md",
+        "docs/j2/J2_ESTABLISHMENT.md",
+        "docs/j2/J2_HEADQUARTERS.md",
+        "docs/j2/README.md",
+        "docs/j2/publications/README.md",
+        "docs/organization/charts/corporate-j2.md",
+        "docs/organization/charts/people-j2.md"
+      ],
+      "existing_visuals_reused": [
+        "assets/brand/logos/j2__primary-horizontal.png",
+        "docs/organization/assets/current/corporate-j2.png"
+      ],
+      "review_scope": "Navigation and explicit authority/status boundaries; source entry points are not a new independent canon synthesis."
+    },
+    {
+      "id": "WIKI-SUBJECT-JAG",
+      "subject": "Junction Advisory Group",
+      "page": "docs/wiki/departments/jag.md",
+      "disposition": "CURATED_SUBJECT_PAGE",
+      "source_entry_points": [
+        "docs/j2/EDUCATION.md",
+        "docs/j2/J2_ESTABLISHMENT.md",
+        "docs/j2/JUNCTION_ADVISORY_GROUP.md",
+        "docs/organization/charts/corporate-j2.md"
+      ],
+      "existing_visuals_reused": [
+        "assets/brand/logos/j2__primary-horizontal.png",
+        "docs/organization/assets/current/corporate-j2.png"
+      ],
+      "review_scope": "Navigation and explicit authority/status boundaries; source entry points are not a new independent canon synthesis."
+    },
+    {
+      "id": "WIKI-SUBJECT-JUDGMENT",
+      "subject": "Judgment",
+      "page": "docs/wiki/departments/judgment.md",
+      "disposition": "CURATED_SUBJECT_PAGE",
+      "source_entry_points": [
+        "docs/canon/J2_LEADERSHIP_APPOINTMENTS_2026-09-10.md",
+        "docs/j2/J2_ESTABLISHMENT.md",
+        "docs/j2/JUDGMENT.md",
+        "docs/j2/JUDGMENT_OFFICER_PROFESSION.md",
+        "docs/organization/charts/corporate-j2.md"
+      ],
+      "existing_visuals_reused": [
+        "assets/brand/logos/j2__primary-horizontal.png",
+        "docs/organization/assets/current/corporate-j2.png"
+      ],
+      "review_scope": "Navigation and explicit authority/status boundaries; source entry points are not a new independent canon synthesis."
+    },
+    {
+      "id": "WIKI-SUBJECT-LEGAL",
+      "subject": "Office of the General Counsel",
+      "page": "docs/wiki/departments/legal.md",
+      "disposition": "CURATED_SUBJECT_PAGE",
+      "source_entry_points": [
+        "docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md",
+        "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
+        "docs/governance/RESERVED_MATTERS_AND_SUBSIDIARY_AUTONOMY.md",
+        "docs/organization/charts/corporate-enterprise-support.md",
+        "enterprise/runtime/docs/CONTRACT_DOSSIER.md"
+      ],
+      "existing_visuals_reused": [
+        "assets/brand/logos/sable-harbor__primary-horizontal.png",
+        "docs/organization/assets/current/corporate-enterprise-support.png"
+      ],
+      "review_scope": "Navigation and explicit authority/status boundaries; source entry points are not a new independent canon synthesis."
+    },
+    {
+      "id": "WIKI-SUBJECT-ORIENTATION",
+      "subject": "Orientation",
+      "page": "docs/wiki/departments/orientation.md",
+      "disposition": "CURATED_SUBJECT_PAGE",
+      "source_entry_points": [
+        "docs/canon/J2_LEADERSHIP_APPOINTMENTS_2026-09-10.md",
+        "docs/j2/EIB_AND_ENTERPRISE_QUESTIONS.md",
+        "docs/j2/J2_ESTABLISHMENT.md",
+        "docs/j2/ORIENTATION.md",
+        "docs/j2/ORIENTATION_OFFICER_PROFESSION.md",
+        "docs/organization/charts/corporate-j2.md"
+      ],
+      "existing_visuals_reused": [
+        "assets/brand/logos/j2__primary-horizontal.png",
+        "docs/organization/assets/current/corporate-j2.png"
+      ],
+      "review_scope": "Navigation and explicit authority/status boundaries; source entry points are not a new independent canon synthesis."
+    },
+    {
+      "id": "WIKI-SUBJECT-PEOPLE-CULTURE",
+      "subject": "People & Culture",
+      "page": "docs/wiki/departments/people-culture.md",
+      "disposition": "CURATED_SUBJECT_PAGE",
+      "source_entry_points": [
+        "docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md",
+        "docs/governance/PEOPLE_AND_CULTURE_DOCTRINE.md",
+        "docs/j2/EDUCATION.md",
+        "docs/organization/README.md",
+        "docs/organization/charts/corporate-enterprise-support.md",
+        "enterprise/ccf/PROCEDURES.md"
+      ],
+      "existing_visuals_reused": [
+        "assets/brand/logos/sable-harbor__primary-horizontal.png",
+        "docs/organization/assets/current/corporate-enterprise-support.png"
+      ],
+      "review_scope": "Navigation and explicit authority/status boundaries; source entry points are not a new independent canon synthesis."
+    },
+    {
+      "id": "WIKI-SUBJECT-PROCUREMENT",
+      "subject": "Procurement and vendor support",
+      "page": "docs/wiki/departments/procurement.md",
+      "disposition": "CURATED_SUBJECT_PAGE",
+      "source_entry_points": [
+        "docs/canon/THIRD_PARTY_SERVICES_SOURCING_DECISIONS_2026-09-09.md",
+        "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
+        "docs/organization/charts/corporate-enterprise-support.md",
+        "enterprise/runtime/docs/CONTRACT_DOSSIER.md",
+        "enterprise/services/README.md"
+      ],
+      "existing_visuals_reused": [
+        "assets/brand/logos/sable-harbor__primary-horizontal.png",
+        "docs/organization/assets/current/corporate-enterprise-support.png"
+      ],
+      "review_scope": "Navigation and explicit authority/status boundaries; source entry points are not a new independent canon synthesis."
+    },
+    {
+      "id": "WIKI-SUBJECT-QUALITY-STANDARDS",
+      "subject": "Quality and technical standards",
+      "page": "docs/wiki/departments/quality-standards.md",
+      "disposition": "CURATED_SUBJECT_PAGE",
+      "source_entry_points": [
+        "docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md",
+        "docs/controls/COMMON_CONTROL_CATALOG_v0.1.md",
+        "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
+        "docs/organization/charts/corporate-enterprise-support.md",
+        "industrial/operations/README.md"
+      ],
+      "existing_visuals_reused": [
+        "assets/brand/logos/sable-harbor__primary-horizontal.png",
+        "docs/organization/assets/current/corporate-enterprise-support.png"
+      ],
+      "review_scope": "Navigation and explicit authority/status boundaries; source entry points are not a new independent canon synthesis."
+    },
+    {
+      "id": "WIKI-SUBJECT-RISK-COMPLIANCE",
+      "subject": "Risk & Compliance",
+      "page": "docs/wiki/departments/risk-compliance.md",
+      "disposition": "CURATED_SUBJECT_PAGE",
+      "source_entry_points": [
+        "docs/controls/COMMON_CONTROLS_FRAMEWORK_FOUNDATION_v0.1.md",
+        "docs/controls/COMMON_CONTROL_CATALOG_v0.1.md",
+        "docs/governance/ASSUMPTION_OF_RISK_DOCTRINE.md",
+        "docs/governance/CCF_ENTERPRISE_OBJECTIVES_AND_RISK_UNIVERSE_v0.1.md",
+        "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
+        "docs/organization/charts/corporate-enterprise-support.md",
+        "enterprise/ccf/README.md",
+        "enterprise/ccf/assurance/README.md",
+        "enterprise/ccf/assurance/reference_data/README.md"
+      ],
+      "existing_visuals_reused": [
+        "assets/brand/logos/sable-harbor__primary-horizontal.png",
+        "docs/organization/assets/current/corporate-enterprise-support.png"
+      ],
+      "review_scope": "Navigation and explicit authority/status boundaries; source entry points are not a new independent canon synthesis."
+    },
+    {
+      "id": "WIKI-SUBJECT-SAFETY-ENVIRONMENT",
+      "subject": "Safety and environmental governance",
+      "page": "docs/wiki/departments/safety-environment.md",
+      "disposition": "CURATED_SUBJECT_PAGE",
+      "source_entry_points": [
+        "docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md",
+        "docs/controls/CCF_DOMAIN_TAXONOMY_v0.1.md",
+        "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
+        "docs/organization/charts/corporate-enterprise-support.md",
+        "industrial/operations/README.md",
+        "red_wash/README.md"
+      ],
+      "existing_visuals_reused": [
+        "assets/brand/logos/sable-harbor__primary-horizontal.png",
+        "docs/organization/assets/current/corporate-enterprise-support.png"
+      ],
+      "review_scope": "Navigation and explicit authority/status boundaries; source entry points are not a new independent canon synthesis."
+    },
+    {
+      "id": "WIKI-SUBJECT-SECURITY",
+      "subject": "Enterprise security capability",
+      "page": "docs/wiki/departments/security.md",
+      "disposition": "CURATED_SUBJECT_PAGE",
+      "source_entry_points": [
+        "docs/controls/CCF_ENTERPRISE_SECURITY_VENDOR_DECISIONS_2026-09-11.md",
+        "docs/controls/RUNTIME_CONTROL_AND_EVIDENCE_MATRIX_2026-09-11.md",
+        "docs/governance/ENTERPRISE_TECHNOLOGY_SERVICES_DOCTRINE.md",
+        "docs/organization/charts/corporate-enterprise-support.md",
+        "enterprise/ccf/README.md",
+        "enterprise/ccf/assurance/README.md",
+        "enterprise/runtime/docs/ASSURANCE_SCOPE.md"
+      ],
+      "existing_visuals_reused": [
+        "assets/brand/logos/sable-harbor__primary-horizontal.png",
+        "docs/organization/assets/current/corporate-enterprise-support.png"
+      ],
+      "review_scope": "Navigation and explicit authority/status boundaries; source entry points are not a new independent canon synthesis."
+    },
+    {
+      "id": "WIKI-SUBJECT-TECHNOLOGY",
+      "subject": "Enterprise Technology Services",
+      "page": "docs/wiki/departments/technology.md",
+      "disposition": "CURATED_SUBJECT_PAGE",
+      "source_entry_points": [
+        "docs/governance/ENTERPRISE_TECHNOLOGY_SERVICES_DOCTRINE.md",
+        "docs/organization/charts/corporate-technology-capabilities.md",
+        "enterprise/runtime/README.md",
+        "enterprise/runtime/docs/ARCHITECTURE_AND_RUNBOOKS.md",
+        "enterprise/services/README.md"
+      ],
+      "existing_visuals_reused": [
+        "assets/brand/logos/sable-harbor__primary-horizontal.png",
+        "docs/organization/assets/current/corporate-technology-capabilities.png"
+      ],
+      "review_scope": "Navigation and explicit authority/status boundaries; source entry points are not a new independent canon synthesis."
+    }
+  ],
+  "remaining_subject_queue": [
+    {
+      "id": "WIKI-QUEUE-HISTORY",
+      "subject": "Corporate chronology and The Crossing",
+      "disposition": "SOURCE_INDEXED_NO_DEDICATED_WIKI_PAGE",
+      "source": "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md",
+      "current_entry": "docs/wiki/library/history.md",
+      "next_action": "Create a short chronological subject page using dated source references and explicit supersession; no interactive redesign is required.",
+      "requires_owner_decision": false
+    },
+    {
+      "id": "WIKI-QUEUE-FOUNDERS",
+      "subject": "Original Eight and later people",
+      "disposition": "SOURCE_INDEXED_NO_DEDICATED_WIKI_PAGE",
+      "source": "docs/organization/ORIGINAL_EIGHT.md",
+      "current_entry": "docs/organization/charts/people-original-eight.md",
+      "next_action": "Add a people reading page using existing charts and source joining-year limits; do not appoint or name new personnel.",
+      "requires_owner_decision": false
+    },
+    {
+      "id": "WIKI-QUEUE-RESEARCH-HISTORY",
+      "subject": "Klein and Emberline",
+      "disposition": "SOURCE_INDEXED_NO_DEDICATED_WIKI_PAGE",
+      "source": "docs/canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md",
+      "current_entry": "docs/wiki/businesses/Willow.md",
+      "next_action": "Add historical navigation distinguishing the predecessor programs from current Willow and downstream transfers.",
+      "requires_owner_decision": false
+    },
+    {
+      "id": "WIKI-QUEUE-PROJECT-HISTORY",
+      "subject": "Glasshouse and Wallaby",
+      "disposition": "SOURCE_INDEXED_NO_DEDICATED_WIKI_PAGE",
+      "source": "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md",
+      "current_entry": "docs/wiki/library/history.md",
+      "next_action": "Index these historical projects with their recorded outcomes and source sections; do not infer current operating entities or sites.",
+      "requires_owner_decision": false
+    },
+    {
+      "id": "WIKI-QUEUE-EXTERNAL-HOSTS",
+      "subject": "Kelly Gang Mining and Demotte",
+      "disposition": "SOURCE_INDEXED_NO_DEDICATED_WIKI_PAGE",
+      "source": "docs/canon/CRADLE_CLOSEOUT_2026-09-06.md",
+      "current_entry": "docs/wiki/businesses/Cradle.md",
+      "next_action": "Add bounded host-interface pages for rights, custody and location records; exclude host-wide invented finances or organization.",
+      "requires_owner_decision": false
+    },
+    {
+      "id": "WIKI-QUEUE-BLACKRIDGE",
+      "subject": "Blackridge separate case universe",
+      "disposition": "SOURCE_INDEXED_NO_DEDICATED_WIKI_PAGE",
+      "source": "docs/business-lines/HISTORICAL_AND_EXTERNAL_BOUNDARIES.md",
+      "current_entry": "blackridge/README.md",
+      "next_action": "Provide a separate-case entry with workbook and evidence access after checking its own source and release state; never consolidate it into Sable Harbor.",
+      "requires_owner_decision": false
+    },
+    {
+      "id": "WIKI-QUEUE-CONTINUITY",
+      "subject": "Continuity and crisis responsibilities",
+      "disposition": "SOURCE_INDEXED_NO_DEDICATED_WIKI_PAGE",
+      "source": "docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md",
+      "current_entry": "docs/wiki/departments/corporate-secretary.md",
+      "next_action": "Keep governance coordination under Corporate Secretary and technical recovery under Technology; add cross-links as supported records mature, not a new resilience department.",
+      "requires_owner_decision": false
+    }
+  ],
+  "review_limits": [
+    "Existing page art is reused without byte changes.",
+    "Wiki completeness is not control operating effectiveness, legal execution, occupied space, or complete financial evidence.",
+    "CCF implementation remains a separate workline; this audit adds links to accepted documentation only.",
+    "A separate GitHub Wiki deployment is not claimed by repository Markdown delivery."
+  ]
+}

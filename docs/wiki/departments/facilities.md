@@ -9,6 +9,7 @@ This ESS capability supports offices, workspaces and shared facilities. The faci
 
 ## Read and use the records
 
+- [Selected Sacramento visitor map V08](../../../geospatial/facilities/visitor/v08/artifacts/visitor-map-v08.png) — Owner-selected illustrative visitor view; [download PDF](../../../geospatial/facilities/visitor/v08/artifacts/visitor-map-v08.pdf). Its [acceptance record](../../../geospatial/facilities/visitor/ACCEPTANCE.json) freezes the artwork, without adopting it as measured geometry.
 - [Headquarters physical doctrine](../../../docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md) — Section 15 states the Sacramento campus intent.
 - [Facility package guide](../../../geospatial/facilities/README.md) — Find coverage, population/space assumptions and generated plans.
 - [Geographic archive](../../../geospatial/README.md) — Read location authority, geometry and temporal distinctions.

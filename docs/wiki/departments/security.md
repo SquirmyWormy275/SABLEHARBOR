@@ -9,6 +9,7 @@ The enterprise security capability protects systems and data and manages cyberse
 
 ## Read and use the records
 
+- [Reference assurance preparation](../../../enterprise/ccf/assurance/README.md#approved-reference-assessment-preparation) — Find the corporate/Reno/Boise design scope and unexecuted SOC/HIPAA test plans, with optional C5 continuity workpapers.
 - [Technology and security doctrine](../../../docs/governance/ENTERPRISE_TECHNOLOGY_SERVICES_DOCTRINE.md) — Security authority, engineered controls and monitoring boundaries.
 - [Accepted security/vendor direction](../../../docs/controls/CCF_ENTERPRISE_SECURITY_VENDOR_DECISIONS_2026-09-11.md) — Read the current enterprise security and sourcing decisions.
 - [Runtime controls and evidence](../../../docs/controls/RUNTIME_CONTROL_AND_EVIDENCE_MATRIX_2026-09-11.md) — Follow local runtime controls and their evidence expectations.
