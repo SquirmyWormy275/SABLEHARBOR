@@ -1,0 +1,824 @@
+[
+  {
+    "locator": "CC1.1",
+    "summary": "Ethical conduct",
+    "controls": [
+      "SH-ETH-001"
+    ],
+    "pdf_pages": [
+      14
+    ],
+    "source": "TSC"
+  },
+  {
+    "locator": "CC1.2",
+    "summary": "Independent oversight",
+    "controls": [
+      "SH-GOV-001",
+      "SH-GOV-004"
+    ],
+    "pdf_pages": [
+      15
+    ],
+    "source": "TSC"
+  },
+  {
+    "locator": "CC1.3",
+    "summary": "Reporting and authority",
+    "controls": [
+      "SH-GOV-003",
+      "SH-POL-002"
+    ],
+    "pdf_pages": [
+      16
+    ],
+    "source": "TSC"
+  },
+  {
+    "locator": "CC1.4",
+    "summary": "Workforce competence",
+    "controls": [
+      "SH-PPL-002",
+      "SH-TRN-003"
+    ],
+    "pdf_pages": [
+      17
+    ],
+    "source": "TSC"
+  },
+  {
+    "locator": "CC1.5",
+    "summary": "Control accountability",
+    "controls": [
+      "SH-POL-002",
+      "SH-ASS-001"
+    ],
+    "pdf_pages": [
+      18
+    ],
+    "source": "TSC"
+  },
+  {
+    "locator": "CC2.1",
+    "summary": "Reliable control information",
+    "controls": [
+      "SH-REC-002",
+      "SH-REC-003"
+    ],
+    "pdf_pages": [
+      19
+    ],
+    "source": "TSC"
+  },
+  {
+    "locator": "CC2.2",
+    "summary": "Internal responsibilities communication",
+    "controls": [
+      "SH-POL-001",
+      "SH-TRN-001"
+    ],
+    "pdf_pages": [
+      21
+    ],
+    "source": "TSC"
+  },
+  {
+    "locator": "CC2.3",
+    "summary": "External commitments communication",
+    "controls": [
+      "SH-TPR-003",
+      "SH-LEG-002"
+    ],
+    "pdf_pages": [
+      22
+    ],
+    "source": "TSC"
+  },
+  {
+    "locator": "CC3.1",
+    "summary": "Risk assessment objectives",
+    "controls": [
+      "SH-ERM-002"
+    ],
+    "pdf_pages": [
+      24
+    ],
+    "source": "TSC"
+  },
+  {
+    "locator": "CC3.2",
+    "summary": "Risk identification and analysis",
+    "controls": [
+      "SH-ERM-001"
+    ],
+    "pdf_pages": [
+      27
+    ],
+    "source": "TSC"
+  },
+  {
+    "locator": "CC3.3",
+    "summary": "Fraud risk",
+    "controls": [
+      "SH-ETH-004"
+    ],
+    "pdf_pages": [
+      28
+    ],
+    "source": "TSC"
+  },
+  {
+    "locator": "CC3.4",
+    "summary": "Material change risks",
+    "controls": [
+      "SH-ERM-004"
+    ],
+    "pdf_pages": [
+      29
+    ],
+    "source": "TSC"
+  },
+  {
+    "locator": "CC4.1",
+    "summary": "Control evaluations",
+    "controls": [
+      "SH-ASS-001",
+      "SH-ASS-002",
+      "SH-ASS-004"
+    ],
+    "pdf_pages": [
+      30
+    ],
+    "source": "TSC"
+  },
+  {
+    "locator": "CC4.2",
+    "summary": "Deficiency escalation",
+    "controls": [
+      "SH-ASS-005"
+    ],
+    "pdf_pages": [
+      31
+    ],
+    "source": "TSC"
+  },
+  {
+    "locator": "CC5.1",
+    "summary": "Risk treatment controls",
+    "controls": [
+      "SH-ERM-003",
+      "SH-POL-002"
+    ],
+    "pdf_pages": [
+      31
+    ],
+    "source": "TSC"
+  },
+  {
+    "locator": "CC5.2",
+    "summary": "Technology control design",
+    "controls": [
+      "SH-SEC-001",
+      "SH-CFG-002"
+    ],
+    "pdf_pages": [
+      32
+    ],
+    "source": "TSC"
+  },
+  {
+    "locator": "CC5.3",
+    "summary": "Policy execution",
+    "controls": [
+      "SH-POL-001",
+      "SH-POL-004"
+    ],
+    "pdf_pages": [
+      33
+    ],
+    "source": "TSC"
+  },
+  {
+    "locator": "CC6.1",
+    "summary": "Logical access architecture",
+    "controls": [
+      "SH-SEC-001",
+      "SH-IAM-002",
+      "SH-IAM-005"
+    ],
+    "pdf_pages": [
+      34
+    ],
+    "source": "TSC"
+  },
+  {
+    "locator": "CC6.2",
+    "summary": "Credential lifecycle",
+    "controls": [
+      "SH-IAM-001",
+      "SH-IAM-004",
+      "SH-IAM-006"
+    ],
+    "pdf_pages": [
+      36
+    ],
+    "source": "TSC"
+  },
+  {
+    "locator": "CC6.3",
+    "summary": "Access changes and authorization",
+    "controls": [
+      "SH-IAM-002",
+      "SH-IAM-003",
+      "SH-IAM-007"
+    ],
+    "pdf_pages": [
+      36
+    ],
+    "source": "TSC"
+  },
+  {
+    "locator": "CC6.4",
+    "summary": "Physical entry restrictions",
+    "controls": [
+      "SH-SEC-001",
+      "SH-IAM-002"
+    ],
+    "pdf_pages": [
+      37
+    ],
+    "source": "TSC"
+  },
+  {
+    "locator": "CC6.5",
+    "summary": "Secure asset retirement",
+    "controls": [
+      "SH-DAT-003",
+      "SH-REC-004"
+    ],
+    "pdf_pages": [
+      37
+    ],
+    "source": "TSC"
+  },
+  {
+    "locator": "CC6.6",
+    "summary": "External threat defenses",
+    "controls": [
+      "SH-SEC-005"
+    ],
+    "pdf_pages": [
+      38
+    ],
+    "source": "TSC"
+  },
+  {
+    "locator": "CC6.7",
+    "summary": "Authorized information movement",
+    "controls": [
+      "SH-DAT-002",
+      "SH-SEC-001"
+    ],
+    "pdf_pages": [
+      38
+    ],
+    "source": "TSC"
+  },
+  {
+    "locator": "CC6.8",
+    "summary": "Unauthorized software defenses",
+    "controls": [
+      "SH-CFG-002",
+      "SH-SEC-005",
+      "SH-ENG-004"
+    ],
+    "pdf_pages": [
+      39
+    ],
+    "source": "TSC"
+  },
+  {
+    "locator": "CC7.1",
+    "summary": "Configuration and vulnerability detection",
+    "controls": [
+      "SH-CFG-002",
+      "SH-SEC-003"
+    ],
+    "pdf_pages": [
+      40
+    ],
+    "source": "TSC"
+  },
+  {
+    "locator": "CC7.2",
+    "summary": "Operational anomaly monitoring",
+    "controls": [
+      "SH-SEC-002"
+    ],
+    "pdf_pages": [
+      40
+    ],
+    "source": "TSC"
+  },
+  {
+    "locator": "CC7.3",
+    "summary": "Security event evaluation",
+    "controls": [
+      "SH-SEC-006",
+      "SH-INC-001"
+    ],
+    "pdf_pages": [
+      41
+    ],
+    "source": "TSC"
+  },
+  {
+    "locator": "CC7.4",
+    "summary": "Incident response execution",
+    "controls": [
+      "SH-INC-001",
+      "SH-INC-002"
+    ],
+    "pdf_pages": [
+      42
+    ],
+    "source": "TSC"
+  },
+  {
+    "locator": "CC7.5",
+    "summary": "Incident recovery",
+    "controls": [
+      "SH-BCM-003",
+      "SH-INC-003",
+      "SH-INC-004"
+    ],
+    "pdf_pages": [
+      44
+    ],
+    "source": "TSC"
+  },
+  {
+    "locator": "CC8.1",
+    "summary": "Controlled system changes",
+    "controls": [
+      "SH-ENG-001",
+      "SH-ENG-002",
+      "SH-ENG-003",
+      "SH-ENG-004",
+      "SH-ENG-005",
+      "SH-ENG-006"
+    ],
+    "pdf_pages": [
+      45
+    ],
+    "source": "TSC"
+  },
+  {
+    "locator": "CC9.1",
+    "summary": "Disruption risk mitigation",
+    "controls": [
+      "SH-BCM-001",
+      "SH-BCM-004",
+      "SH-ERM-003"
+    ],
+    "pdf_pages": [
+      47
+    ],
+    "source": "TSC"
+  },
+  {
+    "locator": "CC9.2",
+    "summary": "Supplier risk management",
+    "controls": [
+      "SH-TPR-001",
+      "SH-TPR-002",
+      "SH-TPR-004"
+    ],
+    "pdf_pages": [
+      48
+    ],
+    "source": "TSC"
+  },
+  {
+    "locator": "A1.1",
+    "summary": "Capacity planning",
+    "controls": [
+      "SH-BCM-001"
+    ],
+    "pdf_pages": [
+      50
+    ],
+    "source": "TSC"
+  },
+  {
+    "locator": "A1.2",
+    "summary": "Availability safeguards",
+    "controls": [
+      "SH-BCM-002",
+      "SH-SEC-001"
+    ],
+    "pdf_pages": [
+      50
+    ],
+    "source": "TSC"
+  },
+  {
+    "locator": "A1.3",
+    "summary": "Recovery exercises",
+    "controls": [
+      "SH-BCM-003",
+      "SH-BCM-004"
+    ],
+    "pdf_pages": [
+      52
+    ],
+    "source": "TSC"
+  },
+  {
+    "locator": "C1.1",
+    "summary": "Confidential data lifecycle",
+    "controls": [
+      "SH-DAT-001",
+      "SH-DAT-002"
+    ],
+    "pdf_pages": [
+      52
+    ],
+    "source": "TSC"
+  },
+  {
+    "locator": "C1.2",
+    "summary": "Confidential data disposal",
+    "controls": [
+      "SH-DAT-003",
+      "SH-REC-004"
+    ],
+    "pdf_pages": [
+      52
+    ],
+    "source": "TSC"
+  },
+  {
+    "locator": "PI1.1",
+    "summary": "Processing specifications",
+    "controls": [
+      "SH-DAT-004",
+      "SH-ENG-001"
+    ],
+    "pdf_pages": [
+      53
+    ],
+    "source": "TSC"
+  },
+  {
+    "locator": "PI1.2",
+    "summary": "Input controls",
+    "controls": [
+      "SH-DAT-004"
+    ],
+    "pdf_pages": [
+      54
+    ],
+    "source": "TSC"
+  },
+  {
+    "locator": "PI1.3",
+    "summary": "Processing controls",
+    "controls": [
+      "SH-DAT-004",
+      "SH-ENG-003"
+    ],
+    "pdf_pages": [
+      54
+    ],
+    "source": "TSC"
+  },
+  {
+    "locator": "PI1.4",
+    "summary": "Output controls",
+    "controls": [
+      "SH-DAT-004"
+    ],
+    "pdf_pages": [
+      55
+    ],
+    "source": "TSC"
+  },
+  {
+    "locator": "PI1.5",
+    "summary": "Processing data storage",
+    "controls": [
+      "SH-DAT-003",
+      "SH-BCM-002"
+    ],
+    "pdf_pages": [
+      56
+    ],
+    "source": "TSC"
+  },
+  {
+    "locator": "P1.1",
+    "summary": "Privacy notice",
+    "controls": [
+      "SH-DAT-002"
+    ],
+    "pdf_pages": [
+      57
+    ],
+    "source": "TSC"
+  },
+  {
+    "locator": "P2.1",
+    "summary": "Privacy choices",
+    "controls": [
+      "SH-DAT-002"
+    ],
+    "pdf_pages": [
+      58
+    ],
+    "source": "TSC"
+  },
+  {
+    "locator": "P3.1",
+    "summary": "Purpose-bound collection",
+    "controls": [
+      "SH-DAT-002"
+    ],
+    "pdf_pages": [
+      59
+    ],
+    "source": "TSC"
+  },
+  {
+    "locator": "P3.2",
+    "summary": "Explicit consent",
+    "controls": [
+      "SH-DAT-002"
+    ],
+    "pdf_pages": [
+      60
+    ],
+    "source": "TSC"
+  },
+  {
+    "locator": "P4.1",
+    "summary": "Purpose-bound use",
+    "controls": [
+      "SH-DAT-002"
+    ],
+    "pdf_pages": [
+      60
+    ],
+    "source": "TSC"
+  },
+  {
+    "locator": "P4.2",
+    "summary": "Personal data retention",
+    "controls": [
+      "SH-DAT-003"
+    ],
+    "pdf_pages": [
+      60
+    ],
+    "source": "TSC"
+  },
+  {
+    "locator": "P4.3",
+    "summary": "Personal data disposal",
+    "controls": [
+      "SH-REC-004"
+    ],
+    "pdf_pages": [
+      61
+    ],
+    "source": "TSC"
+  },
+  {
+    "locator": "P5.1",
+    "summary": "Individual access",
+    "controls": [
+      "SH-DAT-002",
+      "SH-IAM-002"
+    ],
+    "pdf_pages": [
+      61
+    ],
+    "source": "TSC"
+  },
+  {
+    "locator": "P5.2",
+    "summary": "Individual corrections",
+    "controls": [
+      "SH-DAT-004"
+    ],
+    "pdf_pages": [
+      62
+    ],
+    "source": "TSC"
+  },
+  {
+    "locator": "P6.1",
+    "summary": "Authorized disclosures",
+    "controls": [
+      "SH-DAT-002"
+    ],
+    "pdf_pages": [
+      63
+    ],
+    "source": "TSC"
+  },
+  {
+    "locator": "P6.2",
+    "summary": "Disclosure records",
+    "controls": [
+      "SH-REC-001"
+    ],
+    "pdf_pages": [
+      63
+    ],
+    "source": "TSC"
+  },
+  {
+    "locator": "P6.3",
+    "summary": "Unauthorized disclosure records",
+    "controls": [
+      "SH-INC-002"
+    ],
+    "pdf_pages": [
+      64
+    ],
+    "source": "TSC"
+  },
+  {
+    "locator": "P6.4",
+    "summary": "Third-party privacy commitments",
+    "controls": [
+      "SH-TPR-003"
+    ],
+    "pdf_pages": [
+      64
+    ],
+    "source": "TSC"
+  },
+  {
+    "locator": "P6.5",
+    "summary": "Third-party privacy monitoring",
+    "controls": [
+      "SH-TPR-004"
+    ],
+    "pdf_pages": [
+      65
+    ],
+    "source": "TSC"
+  },
+  {
+    "locator": "P6.6",
+    "summary": "Privacy notifications",
+    "controls": [
+      "SH-INC-001"
+    ],
+    "pdf_pages": [
+      65
+    ],
+    "source": "TSC"
+  },
+  {
+    "locator": "P6.7",
+    "summary": "Individual disclosure accounting",
+    "controls": [
+      "SH-REC-001"
+    ],
+    "pdf_pages": [
+      65
+    ],
+    "source": "TSC"
+  },
+  {
+    "locator": "P7.1",
+    "summary": "Personal data quality",
+    "controls": [
+      "SH-DAT-004"
+    ],
+    "pdf_pages": [
+      66
+    ],
+    "source": "TSC"
+  },
+  {
+    "locator": "P8.1",
+    "summary": "Privacy complaint handling",
+    "controls": [
+      "SH-DAT-002",
+      "SH-INC-004"
+    ],
+    "pdf_pages": [
+      66
+    ],
+    "source": "TSC"
+  },
+  {
+    "locator": "DC1",
+    "summary": "Service description",
+    "controls": [
+      "SH-CFG-001"
+    ],
+    "pdf_pages": [
+      10
+    ],
+    "source": "DC"
+  },
+  {
+    "locator": "DC2",
+    "summary": "Commitments and requirements",
+    "controls": [
+      "SH-LEG-002",
+      "SH-TPR-003"
+    ],
+    "pdf_pages": [
+      11
+    ],
+    "source": "DC"
+  },
+  {
+    "locator": "DC3",
+    "summary": "System components and boundaries",
+    "controls": [
+      "SH-CFG-001",
+      "SH-DAT-002"
+    ],
+    "pdf_pages": [
+      15
+    ],
+    "source": "DC"
+  },
+  {
+    "locator": "DC4",
+    "summary": "Material incident disclosures",
+    "controls": [
+      "SH-INC-002"
+    ],
+    "pdf_pages": [
+      20
+    ],
+    "source": "DC"
+  },
+  {
+    "locator": "DC5",
+    "summary": "Criteria and supporting controls",
+    "controls": [
+      "SH-POL-002",
+      "SH-ASS-004"
+    ],
+    "pdf_pages": [
+      22
+    ],
+    "source": "DC"
+  },
+  {
+    "locator": "DC6",
+    "summary": "Customer control dependencies",
+    "controls": [
+      "SH-TPR-003"
+    ],
+    "pdf_pages": [
+      23
+    ],
+    "source": "DC"
+  },
+  {
+    "locator": "DC7",
+    "summary": "Subservice dependencies",
+    "controls": [
+      "SH-TPR-002",
+      "SH-TPR-003"
+    ],
+    "pdf_pages": [
+      25
+    ],
+    "source": "DC"
+  },
+  {
+    "locator": "DC8",
+    "summary": "Criterion relevance explanations",
+    "controls": [
+      "SH-LEG-001",
+      "SH-ASS-004"
+    ],
+    "pdf_pages": [
+      28
+    ],
+    "source": "DC"
+  },
+  {
+    "locator": "DC9",
+    "summary": "Period changes",
+    "controls": [
+      "SH-ENG-001",
+      "SH-ENG-004"
+    ],
+    "pdf_pages": [
+      29
+    ],
+    "source": "DC"
+  }
+]
