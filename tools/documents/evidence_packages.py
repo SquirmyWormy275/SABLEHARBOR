@@ -12,7 +12,7 @@ from pathlib import Path
 def records(root: Path) -> list[tuple]:
     output = []
     seen = set()
-    for base in ("docs/finance/evidence", "docs/legal/evidence"):
+    for base in ("docs/finance/evidence", "docs/legal/evidence", "docs/reader/transactions"):
         for path in sorted((root / base).rglob("evidence-register.json")):
             data = json.loads(path.read_text())
             identity = data["package_id"]
