@@ -34,6 +34,12 @@ class WorkqueueTests(unittest.TestCase):
                 with self.assertRaises(ValueError):
                     queue_module.validate(ROOT, data)
 
+    def test_rejects_cross_lane_write_collision(self):
+        data = copy.deepcopy(self.data)
+        data["jobs"][1]["write_scope"] = data["jobs"][0]["write_scope"]
+        with self.assertRaisesRegex(ValueError, "Cross-lane write collision"):
+            queue_module.validate(ROOT, data)
+
     def test_rejects_escaped_paths_and_frozen_drift(self):
         for change in ("path", "hash"):
             with self.subTest(change=change):

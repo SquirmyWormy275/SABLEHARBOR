@@ -48,6 +48,15 @@ def validate(root: Path, data: dict) -> None:
                 raise ValueError(f"Missing task input: {path}")
         for path in job["write_scope"]:
             relative(path)
+    workers = [job for job in jobs if job["lane"] != "integrator"]
+    for index, left in enumerate(workers):
+        for right in workers[index + 1:]:
+            if left["lane"] == right["lane"]:
+                continue
+            for a in map(Path, left["write_scope"]):
+                for b in map(Path, right["write_scope"]):
+                    if a == b or a in b.parents or b in a.parents:
+                        raise ValueError(f"Cross-lane write collision: {left['id']} / {right['id']}")
     for record in data["frozen"]:
         path = relative(record["path"])
         if hashlib.sha256(path.read_bytes()).hexdigest() != record["sha256"]:

@@ -35,8 +35,12 @@
       ],
       "write_scope": [
         "README.md",
-        "docs/reader/",
-        "docs/wiki/"
+        "docs/reader/USE_CASES.md",
+        "docs/reader/SOURCES_AND_FORMATS.md",
+        "docs/reader/READER_DELIVERY.md",
+        "docs/reader/CONTINUATION.md",
+        "docs/wiki/Home.md",
+        "docs/wiki/README.md"
       ],
       "state": "CURRENT_REVIEW",
       "acceptance": "Validated routes to accepted sources, downloads and explicit evidence limits.",
@@ -204,7 +208,10 @@
         "docs/wiki/library/",
         "tools/documents/",
         "scripts/",
-        "tests/publications/"
+        "tests/publications/",
+        "docs/reader/WIKI_COVERAGE.json",
+        "docs/reader/overnight/QUEUE.json",
+        "docs/reader/overnight/START.md"
       ],
       "state": "READY",
       "acceptance": "Main agent exclusively regenerates shared catalog/links, runs appropriate checks and reviews changed surfaces. Accept independent finished batches; never mark blocked batches complete.",
