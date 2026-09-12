@@ -2,7 +2,7 @@
 
 [Wiki home](../Home.md) · [All business dossiers](../../business-lines/README.md) · [Company charts](../../organization/README.md)
 
-<img src="../../../assets/brand/logos/foundry-field__mark.png" alt="Approved Foundry Field logo" width="280">
+<img src="../../../assets/brand/logos/foundry-field__reverse-horizontal.png" alt="Approved Foundry Field logo" width="360">
 
 Foundry Field is software for production tracking, maintenance, reconciliations and operating exceptions. Foundry supplies the underlying representation of records, relationships, provenance and authority. Foundry Field packages that capability for customer operating work.
 

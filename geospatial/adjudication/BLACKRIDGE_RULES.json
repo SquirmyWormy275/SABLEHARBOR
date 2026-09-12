@@ -1,0 +1,242 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-09-12",
+  "review_kind": "BOUNDED_REPOSITORY_SEMANTIC_REVIEW",
+  "source_commit": "d91a22c35c91b213204411421de88815f27d8e16",
+  "sources": [
+    {
+      "path": "blackridge/data/public/databases/blackridge_m00_v0.1.0.sqlite3",
+      "sha256": "2e6622d0e710f784c49cd6b773514820dbe247c4ec50a18f4c9cbbcf784587d5"
+    },
+    {
+      "path": "blackridge/src/blackridge/cli.py",
+      "sha256": "414dcac7ab13771ad345639bbd75c8929476ea8c35232cff37dd8fa4824c34cf"
+    }
+  ],
+  "occurrences_sha256": "031d8792af1b74badc449c59b18ad739dd9be28daaf3f21b9e998302d66dbb13",
+  "rules": [
+    {
+      "id": "BR-001",
+      "table": "exclusive_assignment",
+      "column": "location_id",
+      "values": [
+        "BLACKRIDGE-PIT"
+      ],
+      "disposition": "REPEATED_LOCATION_REFERENCE",
+      "expected_occurrences": 59130,
+      "reason": "The generator assigns 27 trucks and 54 operators over 365 days and two shifts to this source-local token. Preserve every resource, assignment and interval. This is one repeated location reference, not 59,130 new sites or duplicate assignment events. Its join to named pit/location objects and geometry remain unresolved."
+    },
+    {
+      "id": "BR-002",
+      "table": "event_ledger",
+      "column": "domain",
+      "values": [
+        "mine",
+        "plant"
+      ],
+      "disposition": "NON_GEOGRAPHIC_DOMAIN_LABEL",
+      "expected_occurrences": 1666,
+      "reason": "These are event-domain categories, not names or locations of separate mines/plants. Preserve event_id, event_at and available_at; no event or bitemporal state is discarded."
+    },
+    {
+      "id": "BR-003",
+      "table": "plant_hourly",
+      "column": "name",
+      "values": [
+        "Plant Hourly 1",
+        "Plant Hourly 2",
+        "Plant Hourly 3",
+        "Plant Hourly 4",
+        "Plant Hourly 5",
+        "Plant Hourly 6",
+        "Plant Hourly 7",
+        "Plant Hourly 8",
+        "Plant Hourly 9",
+        "Plant Hourly 10",
+        "Plant Hourly 11",
+        "Plant Hourly 12",
+        "Plant Hourly 13",
+        "Plant Hourly 14",
+        "Plant Hourly 15",
+        "Plant Hourly 16",
+        "Plant Hourly 17",
+        "Plant Hourly 18",
+        "Plant Hourly 19",
+        "Plant Hourly 20",
+        "Plant Hourly 21",
+        "Plant Hourly 22",
+        "Plant Hourly 23",
+        "Plant Hourly 24",
+        "Plant Hourly 25",
+        "Plant Hourly 26",
+        "Plant Hourly 27",
+        "Plant Hourly 28",
+        "Plant Hourly 29",
+        "Plant Hourly 30",
+        "Plant Hourly 31",
+        "Plant Hourly 32",
+        "Plant Hourly 33",
+        "Plant Hourly 34",
+        "Plant Hourly 35",
+        "Plant Hourly 36",
+        "Plant Hourly 37",
+        "Plant Hourly 38",
+        "Plant Hourly 39",
+        "Plant Hourly 40",
+        "Plant Hourly 41",
+        "Plant Hourly 42",
+        "Plant Hourly 43",
+        "Plant Hourly 44",
+        "Plant Hourly 45",
+        "Plant Hourly 46",
+        "Plant Hourly 47",
+        "Plant Hourly 48",
+        "Plant Hourly 49",
+        "Plant Hourly 50",
+        "Plant Hourly 51",
+        "Plant Hourly 52",
+        "Plant Hourly 53",
+        "Plant Hourly 54",
+        "Plant Hourly 55",
+        "Plant Hourly 56",
+        "Plant Hourly 57",
+        "Plant Hourly 58",
+        "Plant Hourly 59",
+        "Plant Hourly 60",
+        "Plant Hourly 61",
+        "Plant Hourly 62",
+        "Plant Hourly 63",
+        "Plant Hourly 64",
+        "Plant Hourly 65",
+        "Plant Hourly 66",
+        "Plant Hourly 67",
+        "Plant Hourly 68",
+        "Plant Hourly 69",
+        "Plant Hourly 70",
+        "Plant Hourly 71",
+        "Plant Hourly 72",
+        "Plant Hourly 73",
+        "Plant Hourly 74",
+        "Plant Hourly 75",
+        "Plant Hourly 76",
+        "Plant Hourly 77",
+        "Plant Hourly 78",
+        "Plant Hourly 79",
+        "Plant Hourly 80",
+        "Plant Hourly 81",
+        "Plant Hourly 82",
+        "Plant Hourly 83",
+        "Plant Hourly 84",
+        "Plant Hourly 85",
+        "Plant Hourly 86",
+        "Plant Hourly 87"
+      ],
+      "disposition": "NON_GEOGRAPHIC_RECORD_LABEL",
+      "expected_occurrences": 87,
+      "reason": "Generic generated names label plant-hourly records. The row keys and time fields remain available; no geographic object or plant footprint follows from these labels."
+    },
+    {
+      "id": "BR-004",
+      "table": "capital_project",
+      "column": "name",
+      "values": [
+        "Capital Project 1"
+      ],
+      "disposition": "NON_GEOGRAPHIC_RECORD_LABEL",
+      "expected_occurrences": 1,
+      "reason": "The generated label identifies a project or plan-version record, not a separate site. No project scope, installed asset or geographic history is supplied by this name."
+    },
+    {
+      "id": "BR-005",
+      "table": "mine_plan_version",
+      "column": "name",
+      "values": [
+        "Mine Plan Version 1"
+      ],
+      "disposition": "NON_GEOGRAPHIC_RECORD_LABEL",
+      "expected_occurrences": 1,
+      "reason": "The generated label identifies a project or plan-version record, not a separate site. No project scope, installed asset or geographic history is supplied by this name."
+    },
+    {
+      "id": "BR-006",
+      "table": "facility",
+      "column": "canonical_id",
+      "values": [
+        "BRG-FACILITY-000001",
+        "BRG-FACILITY-000002"
+      ],
+      "disposition": "UNLOCATED_COMPONENT_REFERENCE",
+      "expected_occurrences": 2,
+      "reason": "Preserve the generated component and its source-local canonical ID as an unresolved spatial candidate. Name and ID appearances from one source row share a reference key; no geometric placement or alias to BLACKRIDGE-PIT is inferred. Generic event/availability timestamps are not occupancy intervals."
+    },
+    {
+      "id": "BR-007",
+      "table": "facility",
+      "column": "name",
+      "values": [
+        "Facility 1",
+        "Facility 2"
+      ],
+      "disposition": "UNLOCATED_COMPONENT_REFERENCE",
+      "expected_occurrences": 2,
+      "reason": "Preserve the generated component and its source-local canonical ID as an unresolved spatial candidate. Name and ID appearances from one source row share a reference key; no geometric placement or alias to BLACKRIDGE-PIT is inferred. Generic event/availability timestamps are not occupancy intervals."
+    },
+    {
+      "id": "BR-008",
+      "table": "location",
+      "column": "canonical_id",
+      "values": [
+        "BRG-LOCATION-000001",
+        "BRG-LOCATION-000002"
+      ],
+      "disposition": "UNLOCATED_COMPONENT_REFERENCE",
+      "expected_occurrences": 2,
+      "reason": "Preserve the generated component and its source-local canonical ID as an unresolved spatial candidate. Name and ID appearances from one source row share a reference key; no geometric placement or alias to BLACKRIDGE-PIT is inferred. Generic event/availability timestamps are not occupancy intervals."
+    },
+    {
+      "id": "BR-009",
+      "table": "location",
+      "column": "name",
+      "values": [
+        "Location 1",
+        "Location 2"
+      ],
+      "disposition": "UNLOCATED_COMPONENT_REFERENCE",
+      "expected_occurrences": 2,
+      "reason": "Preserve the generated component and its source-local canonical ID as an unresolved spatial candidate. Name and ID appearances from one source row share a reference key; no geometric placement or alias to BLACKRIDGE-PIT is inferred. Generic event/availability timestamps are not occupancy intervals."
+    },
+    {
+      "id": "BR-010",
+      "table": "plant_unit",
+      "column": "name",
+      "values": [
+        "Plant Unit 1"
+      ],
+      "disposition": "UNLOCATED_COMPONENT_REFERENCE",
+      "expected_occurrences": 1,
+      "reason": "Preserve the generated component and its source-local canonical ID as an unresolved spatial candidate. Name and ID appearances from one source row share a reference key; no geometric placement or alias to BLACKRIDGE-PIT is inferred. Generic event/availability timestamps are not occupancy intervals."
+    },
+    {
+      "id": "BR-011",
+      "table": "storage_location",
+      "column": "name",
+      "values": [
+        "Storage Location 1"
+      ],
+      "disposition": "UNLOCATED_COMPONENT_REFERENCE",
+      "expected_occurrences": 1,
+      "reason": "Preserve the generated component and its source-local canonical ID as an unresolved spatial candidate. Name and ID appearances from one source row share a reference key; no geometric placement or alias to BLACKRIDGE-PIT is inferred. Generic event/availability timestamps are not occupancy intervals."
+    },
+    {
+      "id": "BR-012",
+      "table": "warehouse",
+      "column": "name",
+      "values": [
+        "Warehouse 1"
+      ],
+      "disposition": "UNLOCATED_COMPONENT_REFERENCE",
+      "expected_occurrences": 1,
+      "reason": "Preserve the generated component and its source-local canonical ID as an unresolved spatial candidate. Name and ID appearances from one source row share a reference key; no geometric placement or alias to BLACKRIDGE-PIT is inferred. Generic event/availability timestamps are not occupancy intervals."
+    }
+  ]
+}

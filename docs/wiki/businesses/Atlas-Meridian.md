@@ -2,7 +2,7 @@
 
 [Wiki home](../Home.md) · [All business dossiers](../../business-lines/README.md) · [Company charts](../../organization/README.md)
 
-<img src="../../../assets/brand/logos/atlas-meridian__mark.png" alt="Approved Atlas Meridian logo" width="280">
+<img src="../../../assets/brand/logos/atlas-meridian__reverse-horizontal.png" alt="Approved Atlas Meridian logo" width="360">
 
 Atlas Meridian is software for investigating operating data, reviewing evidence and managing client work. It provides client workspaces and supports Advisory delivery while retaining a dedicated product organization and separately contracted licenses.
 

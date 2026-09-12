@@ -84,3 +84,13 @@ Original headings below are historical requirement identifiers. Superseded names
 | 47 | DEFINITION OF DONE | PARTIAL_OR_FUTURE | Framework reconciliation eligible for closure; entire geographic program incomplete. |
 | 48 | DO-NOT-DO LIST | IMPLEMENTED_FOR_FRAMEWORK | Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above. |
 | 49 | IMMEDIATE START INSTRUCTION | IMPLEMENTED_FOR_FRAMEWORK | Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above. |
+
+## September 12 semantic review increment
+
+The [Blackridge discovery batch](../adjudication/README.md) supplies 60,896 source-local
+dispositions from the pinned baseline, leaving 17,249 occurrences outside that batch.
+It preserves all 59,130 distinct resource assignments behind one repeated location token,
+separates non-geographic domain/record labels and retains eleven unlocated component
+appearances. Sections 6, 28 and 40 now have this additional review evidence; their
+`PARTIAL_OR_FUTURE` status remains. Full source coverage, later canon deltas, historical
+geometry, occupancy and OCR work remain open under #108.

@@ -1,6 +1,6 @@
 # Explore Sable Harbor
 
-<img src="../../assets/brand/logos/sable-harbor__primary-horizontal.png" alt="Sable Harbor" width="360">
+<img src="../../assets/brand/logos/sable-harbor__reverse-horizontal.png" alt="Sable Harbor" width="360">
 
 **Reviewed:** September 12, 2026 · **Status:** repository reading layer; linked source records control.
 

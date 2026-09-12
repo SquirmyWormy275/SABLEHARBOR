@@ -1,6 +1,6 @@
 # Quality and technical standards
 
-<img src="../../../assets/brand/logos/sable-harbor__primary-horizontal.png" alt="Sable Harbor approved identity" width="360">
+<img src="../../../assets/brand/logos/sable-harbor__reverse-horizontal.png" alt="Sable Harbor approved identity" width="360">
 
 **Canon state:** LOCKED institutional scope; implementation detail varies by linked record.<br>
 **Last substantive review:** September 11, 2026. This page is secondary navigation; the linked source records control.

@@ -1,6 +1,6 @@
 # SABLE HARBOR
 
-<img src="assets/brand/logos/sable-harbor__primary-horizontal.png" alt="Sable Harbor" width="360">
+<img src="assets/brand/logos/sable-harbor__reverse-horizontal.png" alt="Sable Harbor" width="360">
 
 Sable Harbor is a fictional company universe for exploring how businesses operate, keep accounts, make decisions, and produce evidence. Its archive includes company records, organization charts, contracts, financial models, operating records, controls, and facility plans. You can read the documents and workbooks without running code or using AI.
 

@@ -2,7 +2,7 @@
 
 [Wiki home](../Home.md) · [All business dossiers](../../business-lines/README.md) · [Company charts](../../organization/README.md)
 
-<img src="../../../assets/brand/logos/advisory__mark.png" alt="Approved Sable Harbor Advisory logo" width="280">
+<img src="../../../assets/brand/logos/advisory__reverse-horizontal.png" alt="Approved Sable Harbor Advisory logo" width="360">
 
 Sable Harbor Advisory investigates business problems, builds client intelligence capabilities and improves operations. Intelligence Advisory, Intelligence Capability and Operational Excellence draw from one common professional bench. Work is organized into client matters with defined acceptance, review and transfer obligations.
 
