@@ -163,6 +163,31 @@ Generated file inventory. Includes current and historical records; open the sour
 
 - [Draft visual and numerical review](../../finance/evidence/SH-FIN-HUMAN-001/qa/REVIEW.md) — MD
 
+## `docs/finance/evidence/close`
+
+- [Close, allowance and legal-book reconciliation](../../finance/evidence/close/README.md) — MD
+
+## `docs/finance/evidence/coverage`
+
+- [Finance evidence: scope and source access](../../finance/evidence/coverage/README.md) — MD
+
+## `docs/finance/evidence/customer`
+
+- [Billing, collections and deferred revenue](../../finance/evidence/customer/README.md) — MD
+
+## `docs/finance/evidence/supporting-schedules`
+
+- [Workforce, inventory, fixed assets and debt](../../finance/evidence/supporting-schedules/README.md) — MD
+
+## `docs/finance/evidence/tax-transaction`
+
+- [Transaction cash and conditional tax support](../../finance/evidence/tax-transaction/README.md) — MD
+- [Current industrial transaction and tax support](../../finance/evidence/tax-transaction/TRANSACTION_SUPPORT.md) — MD
+
+## `docs/finance/evidence/treasury`
+
+- [Procurement, payables and Treasury](../../finance/evidence/treasury/README.md) — MD
+
 ## `docs/finance/publications`
 
 - [Current business-unit evidence export contract — SH-AUDIT-UNIT-EXPORT-001_v1.0.0](../../finance/publications/SH-AUDIT-UNIT-EXPORT-001_v1.0.0.pdf) — PDF
@@ -173,6 +198,35 @@ Generated file inventory. Includes current and historical records; open the sour
 - [SABLE HARBOR ADVISORY — OPERATING NAME AND EXTERNAL CLEARANCE STATUS](../../legal/ADVISORY_NAME_AND_EXTERNAL_CLEARANCE_STATUS_2026-09-09.md) — MD
 - [MOCK DEED — SABLE HARBOR NORTHERN NEVADA DATA CENTER](../../legal/MOCK_DEED_NORTHERN_NEVADA_DATA_CENTER_2026-09-04.md) — MD · [formatted PDF](../../../enterprise/runtime/publications/SH-RT-DEED-001_v1.0.0.pdf)
 - [Preliminary Name and Mark Screen](../../legal/PRELIMINARY_NAME_AND_MARK_SCREEN.md) — MD
+
+## `docs/legal/evidence/assets-rights`
+
+- [Acquisitions, assets, hosts and tenure](../../legal/evidence/assets-rights/README.md) — MD
+- [ARU share purchase, closing and tax bridge](../../legal/evidence/assets-rights/SH-LEGAL-READ-ARU-001.md) — MD
+- [Cradle host rights and material title](../../legal/evidence/assets-rights/SH-LEGAL-READ-HOST-001.md) — MD
+- [Northern Nevada planning deed and cost boundary](../../legal/evidence/assets-rights/SH-LEGAL-READ-NV-001.md) — MD
+- [Red Wash purchase and closing-rights schedule](../../legal/evidence/assets-rights/SH-LEGAL-READ-RW-001.md) — MD
+- [Campus and operating-site tenure review](../../legal/evidence/assets-rights/SH-LEGAL-READ-TENURE-001.md) — MD
+
+## `docs/legal/evidence/commercial`
+
+- [Commercial contracts and service obligations](../../legal/evidence/commercial/README.md) — MD
+- [Advisory engagement and outcome terms](../../legal/evidence/commercial/SH-LEGAL-READ-ADV-001.md) — MD
+- [Atlas licensing and amendment evidence](../../legal/evidence/commercial/SH-LEGAL-READ-ATL-001.md) — MD
+- [Colocation orders and SLA review](../../legal/evidence/commercial/SH-LEGAL-READ-COLO-001.md) — MD
+- [Taylor–Red Wash service terms](../../legal/evidence/commercial/SH-LEGAL-READ-IC-001.md) — MD
+
+## `docs/legal/evidence/corporate`
+
+- [Corporate, capital and workforce records](../../legal/evidence/corporate/README.md) — MD
+- [Financing approvals and capital boundaries](../../legal/evidence/corporate/SH-LEGAL-READ-CAPITAL-001.md) — MD
+- [Advisory carry and workforce instrument boundaries](../../legal/evidence/corporate/SH-LEGAL-READ-CARRY-001.md) — MD
+- [Legal entities and separate books](../../legal/evidence/corporate/SH-LEGAL-READ-ENTITY-001.md) — MD
+- [ARU transition and retention obligations](../../legal/evidence/corporate/SH-LEGAL-READ-HR-001.md) — MD
+
+## `docs/legal/evidence/proposals`
+
+- [Legal and billing fields awaiting evidence or review](../../legal/evidence/proposals/README.md) — MD
 
 ## `enterprise/business`
 

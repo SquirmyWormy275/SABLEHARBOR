@@ -15,6 +15,11 @@ Generated file inventory. Includes current and historical records; open the sour
 
 - [Overnight reader and evidence work](../../reader/overnight/START.md) — MD
 
+## `docs/reader/transactions`
+
+- [Transaction and legal records](../../reader/transactions/README.md) — MD
+- [Legal record reconciliation](../../reader/transactions/RECONCILIATION.md) — MD
+
 ## `docs/wiki`
 
 - [Explore Sable Harbor](../Home.md) — MD

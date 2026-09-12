@@ -6,8 +6,8 @@ Generated reconciliation queue, not an assertion that every unpaired record lack
 
 | State | Records |
 |---|---:|
-| COUNTERPART_REVIEW_REQUIRED | 448 |
-| READER_OR_MAINTENANCE_PAGE | 99 |
+| COUNTERPART_REVIEW_REQUIRED | 462 |
+| READER_OR_MAINTENANCE_PAGE | 111 |
 | VERIFIED_DOCUMENT_PAIR | 131 |
 
 ## Records requiring counterpart reconciliation
@@ -172,6 +172,7 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Worklog](../../finance/WORKLOG.md) — SH-FIN-HUMAN-001
 - [Foundry Field: invoice evidence](../../finance/evidence/SH-FIN-HUMAN-001/PACKET.md) — SH-FIN-HUMAN-001
 - [Draft visual and numerical review](../../finance/evidence/SH-FIN-HUMAN-001/qa/REVIEW.md) — SH-FIN-HUMAN-001
+- [Current industrial transaction and tax support](../../finance/evidence/tax-transaction/TRANSACTION_SUPPORT.md) — SH-FIN-HUMAN-001
 - [SABLE HARBOR — SUPERSEDED 2021–2022 FINANCING & INVESTOR-DIRECTOR PROPOSAL](../../governance/2021_2022_FINANCING_AND_INVESTOR_DIRECTOR_PROPOSAL.md) — Corporate document-format reconciliation
 - [SABLE HARBOR — 2026 BOARD COMPOSITION AND FINANCING MODEL](../../governance/2026_BOARD_COMPOSITION_AND_FINANCING_MODEL.md) — Corporate document-format reconciliation
 - [SABLE HARBOR — CAPITAL DELEGATION AND INDEPENDENT ASSURANCE MODEL](../../governance/2026_CAPITAL_AND_ASSURANCE_MODEL.md) — Corporate document-format reconciliation
@@ -237,6 +238,19 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Post-Merge Main Validation — 2026-09-03](../../internal/validation/POST_MERGE_MAIN_VALIDATION_2026-09-03.md) — Corporate document-format reconciliation
 - [SABLE HARBOR ADVISORY — OPERATING NAME AND EXTERNAL CLEARANCE STATUS](../../legal/ADVISORY_NAME_AND_EXTERNAL_CLEARANCE_STATUS_2026-09-09.md) — SH-FIN-HUMAN-001
 - [Preliminary Name and Mark Screen](../../legal/PRELIMINARY_NAME_AND_MARK_SCREEN.md) — SH-FIN-HUMAN-001
+- [ARU share purchase, closing and tax bridge](../../legal/evidence/assets-rights/SH-LEGAL-READ-ARU-001.md) — SH-FIN-HUMAN-001
+- [Cradle host rights and material title](../../legal/evidence/assets-rights/SH-LEGAL-READ-HOST-001.md) — SH-FIN-HUMAN-001
+- [Northern Nevada planning deed and cost boundary](../../legal/evidence/assets-rights/SH-LEGAL-READ-NV-001.md) — SH-FIN-HUMAN-001
+- [Red Wash purchase and closing-rights schedule](../../legal/evidence/assets-rights/SH-LEGAL-READ-RW-001.md) — SH-FIN-HUMAN-001
+- [Campus and operating-site tenure review](../../legal/evidence/assets-rights/SH-LEGAL-READ-TENURE-001.md) — SH-FIN-HUMAN-001
+- [Advisory engagement and outcome terms](../../legal/evidence/commercial/SH-LEGAL-READ-ADV-001.md) — SH-FIN-HUMAN-001
+- [Atlas licensing and amendment evidence](../../legal/evidence/commercial/SH-LEGAL-READ-ATL-001.md) — SH-FIN-HUMAN-001
+- [Colocation orders and SLA review](../../legal/evidence/commercial/SH-LEGAL-READ-COLO-001.md) — SH-FIN-HUMAN-001
+- [Taylor–Red Wash service terms](../../legal/evidence/commercial/SH-LEGAL-READ-IC-001.md) — SH-FIN-HUMAN-001
+- [Financing approvals and capital boundaries](../../legal/evidence/corporate/SH-LEGAL-READ-CAPITAL-001.md) — SH-FIN-HUMAN-001
+- [Advisory carry and workforce instrument boundaries](../../legal/evidence/corporate/SH-LEGAL-READ-CARRY-001.md) — SH-FIN-HUMAN-001
+- [Legal entities and separate books](../../legal/evidence/corporate/SH-LEGAL-READ-ENTITY-001.md) — SH-FIN-HUMAN-001
+- [ARU transition and retention obligations](../../legal/evidence/corporate/SH-LEGAL-READ-HR-001.md) — SH-FIN-HUMAN-001
 - [Leadership and authority](../../organization/2026_LEADERSHIP_AND_AUTHORITY_MAP.md) — Corporate document-format reconciliation
 - [Company organization](../../organization/2026_OPERATING_TOPOLOGY.md) — Corporate document-format reconciliation
 - [ARU, BS&T AND THE ADVISORY INTERFACE](../../organization/ARU_BST_AND_ADVISORY.md) — Corporate document-format reconciliation
