@@ -167,6 +167,12 @@ Generated file inventory. Includes current and historical records; open the sour
 
 - [Close, allowance and legal-book reconciliation](../../finance/evidence/close/README.md) — MD
 
+## `docs/finance/evidence/close/draft`
+
+- [Close, allowance and legal-book reconciliation](../../finance/evidence/close/draft/WORKING_PAPER.md) — MD
+- [working-paper](../../finance/evidence/close/draft/working-paper.pdf) — PDF
+- [working-papers](../../finance/evidence/close/draft/working-papers.xlsx) — XLSX
+
 ## `docs/finance/evidence/coverage`
 
 - [Finance evidence: scope and source access](../../finance/evidence/coverage/README.md) — MD
@@ -175,18 +181,42 @@ Generated file inventory. Includes current and historical records; open the sour
 
 - [Billing, collections and deferred revenue](../../finance/evidence/customer/README.md) — MD
 
+## `docs/finance/evidence/customer/draft`
+
+- [Billing, collections and deferred revenue](../../finance/evidence/customer/draft/WORKING_PAPER.md) — MD
+- [working-paper](../../finance/evidence/customer/draft/working-paper.pdf) — PDF
+- [working-papers](../../finance/evidence/customer/draft/working-papers.xlsx) — XLSX
+
 ## `docs/finance/evidence/supporting-schedules`
 
 - [Workforce, inventory, fixed assets and debt](../../finance/evidence/supporting-schedules/README.md) — MD
+
+## `docs/finance/evidence/supporting-schedules/draft`
+
+- [Workforce, inventory, fixed assets and debt](../../finance/evidence/supporting-schedules/draft/WORKING_PAPER.md) — MD
+- [working-paper](../../finance/evidence/supporting-schedules/draft/working-paper.pdf) — PDF
+- [working-papers](../../finance/evidence/supporting-schedules/draft/working-papers.xlsx) — XLSX
 
 ## `docs/finance/evidence/tax-transaction`
 
 - [Transaction cash and conditional tax support](../../finance/evidence/tax-transaction/README.md) — MD
 - [Current industrial transaction and tax support](../../finance/evidence/tax-transaction/TRANSACTION_SUPPORT.md) — MD
 
+## `docs/finance/evidence/tax-transaction/draft`
+
+- [Transaction cash and conditional tax support](../../finance/evidence/tax-transaction/draft/WORKING_PAPER.md) — MD
+- [working-paper](../../finance/evidence/tax-transaction/draft/working-paper.pdf) — PDF
+- [working-papers](../../finance/evidence/tax-transaction/draft/working-papers.xlsx) — XLSX
+
 ## `docs/finance/evidence/treasury`
 
 - [Procurement, payables and Treasury](../../finance/evidence/treasury/README.md) — MD
+
+## `docs/finance/evidence/treasury/draft`
+
+- [Procurement, payables and Treasury](../../finance/evidence/treasury/draft/WORKING_PAPER.md) — MD
+- [working-paper](../../finance/evidence/treasury/draft/working-paper.pdf) — PDF
+- [working-papers](../../finance/evidence/treasury/draft/working-papers.xlsx) — XLSX
 
 ## `docs/finance/publications`
 
@@ -208,6 +238,18 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Red Wash purchase and closing-rights schedule](../../legal/evidence/assets-rights/SH-LEGAL-READ-RW-001.md) — MD
 - [Campus and operating-site tenure review](../../legal/evidence/assets-rights/SH-LEGAL-READ-TENURE-001.md) — MD
 
+## `docs/legal/evidence/assets-rights/drafts`
+
+- [SH-LEGAL-READ-ARU-001](../../legal/evidence/assets-rights/drafts/SH-LEGAL-READ-ARU-001.pdf) — PDF
+- [SH-LEGAL-READ-HOST-001](../../legal/evidence/assets-rights/drafts/SH-LEGAL-READ-HOST-001.pdf) — PDF
+- [SH-LEGAL-READ-NV-001](../../legal/evidence/assets-rights/drafts/SH-LEGAL-READ-NV-001.pdf) — PDF
+- [SH-LEGAL-READ-RW-001](../../legal/evidence/assets-rights/drafts/SH-LEGAL-READ-RW-001.pdf) — PDF
+- [SH-LEGAL-READ-TENURE-001](../../legal/evidence/assets-rights/drafts/SH-LEGAL-READ-TENURE-001.pdf) — PDF
+
+## `docs/legal/evidence/assets-rights/drafts/qa`
+
+- [Legal reader draft visual review](../../legal/evidence/assets-rights/drafts/qa/REVIEW.md) — MD
+
 ## `docs/legal/evidence/commercial`
 
 - [Commercial contracts and service obligations](../../legal/evidence/commercial/README.md) — MD
@@ -216,6 +258,13 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Colocation orders and SLA review](../../legal/evidence/commercial/SH-LEGAL-READ-COLO-001.md) — MD
 - [Taylor–Red Wash service terms](../../legal/evidence/commercial/SH-LEGAL-READ-IC-001.md) — MD
 
+## `docs/legal/evidence/commercial/drafts`
+
+- [SH-LEGAL-READ-ADV-001](../../legal/evidence/commercial/drafts/SH-LEGAL-READ-ADV-001.pdf) — PDF
+- [SH-LEGAL-READ-ATL-001](../../legal/evidence/commercial/drafts/SH-LEGAL-READ-ATL-001.pdf) — PDF
+- [SH-LEGAL-READ-COLO-001](../../legal/evidence/commercial/drafts/SH-LEGAL-READ-COLO-001.pdf) — PDF
+- [SH-LEGAL-READ-IC-001](../../legal/evidence/commercial/drafts/SH-LEGAL-READ-IC-001.pdf) — PDF
+
 ## `docs/legal/evidence/corporate`
 
 - [Corporate, capital and workforce records](../../legal/evidence/corporate/README.md) — MD
@@ -223,6 +272,13 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Advisory carry and workforce instrument boundaries](../../legal/evidence/corporate/SH-LEGAL-READ-CARRY-001.md) — MD
 - [Legal entities and separate books](../../legal/evidence/corporate/SH-LEGAL-READ-ENTITY-001.md) — MD
 - [ARU transition and retention obligations](../../legal/evidence/corporate/SH-LEGAL-READ-HR-001.md) — MD
+
+## `docs/legal/evidence/corporate/drafts`
+
+- [SH-LEGAL-READ-CAPITAL-001](../../legal/evidence/corporate/drafts/SH-LEGAL-READ-CAPITAL-001.pdf) — PDF
+- [SH-LEGAL-READ-CARRY-001](../../legal/evidence/corporate/drafts/SH-LEGAL-READ-CARRY-001.pdf) — PDF
+- [SH-LEGAL-READ-ENTITY-001](../../legal/evidence/corporate/drafts/SH-LEGAL-READ-ENTITY-001.pdf) — PDF
+- [SH-LEGAL-READ-HR-001](../../legal/evidence/corporate/drafts/SH-LEGAL-READ-HR-001.pdf) — PDF
 
 ## `docs/legal/evidence/proposals`
 

@@ -6,11 +6,11 @@ Generated reconciliation queue, not an assertion that every unpaired record lack
 
 | State | Records |
 |---|---:|
-| COUNTERPART_REVIEW_REQUIRED | 16 |
+| COUNTERPART_REVIEW_REQUIRED | 22 |
 | HISTORICAL_COUNTERPART_UNRESOLVED | 57 |
 | NAVIGATION_ALIAS_NO_PUBLICATION | 3 |
 | READER_MAINTENANCE_NO_LETTERHEAD | 114 |
-| READER_OR_MAINTENANCE_PAGE | 136 |
+| READER_OR_MAINTENANCE_PAGE | 137 |
 | UNRESOLVED_DOCUMENT_COUNTERPART | 229 |
 | VERIFIED_ACCEPTED_EVIDENCE_PACKET | 1 |
 | VERIFIED_CHART_PUBLICATION | 40 |
@@ -22,13 +22,19 @@ Generated reconciliation queue, not an assertion that every unpaired record lack
 Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENCE_COMPLETION.md). Other corporate records require scoped format review before any batch rendering. Existing approved visuals are retained; this queue does not authorize automatic publication.
 
 - [Accounting, finance and audit practice](../../finance/READER_EXERCISES.md) — SH-FIN-HUMAN-001
+- [Close, allowance and legal-book reconciliation](../../finance/evidence/close/draft/WORKING_PAPER.md) — SH-FIN-HUMAN-001
+- [Billing, collections and deferred revenue](../../finance/evidence/customer/draft/WORKING_PAPER.md) — SH-FIN-HUMAN-001
+- [Workforce, inventory, fixed assets and debt](../../finance/evidence/supporting-schedules/draft/WORKING_PAPER.md) — SH-FIN-HUMAN-001
 - [Current industrial transaction and tax support](../../finance/evidence/tax-transaction/TRANSACTION_SUPPORT.md) — SH-FIN-HUMAN-001
+- [Transaction cash and conditional tax support](../../finance/evidence/tax-transaction/draft/WORKING_PAPER.md) — SH-FIN-HUMAN-001
+- [Procurement, payables and Treasury](../../finance/evidence/treasury/draft/WORKING_PAPER.md) — SH-FIN-HUMAN-001
 - [Actionable CCF procedure deltas](../../internal/development/CCF_ACTIONABLE_CONTROL_DELTAS_2026-09-12.md) — Corporate document-format reconciliation
 - [ARU share purchase, closing and tax bridge](../../legal/evidence/assets-rights/SH-LEGAL-READ-ARU-001.md) — SH-FIN-HUMAN-001
 - [Cradle host rights and material title](../../legal/evidence/assets-rights/SH-LEGAL-READ-HOST-001.md) — SH-FIN-HUMAN-001
 - [Northern Nevada planning deed and cost boundary](../../legal/evidence/assets-rights/SH-LEGAL-READ-NV-001.md) — SH-FIN-HUMAN-001
 - [Red Wash purchase and closing-rights schedule](../../legal/evidence/assets-rights/SH-LEGAL-READ-RW-001.md) — SH-FIN-HUMAN-001
 - [Campus and operating-site tenure review](../../legal/evidence/assets-rights/SH-LEGAL-READ-TENURE-001.md) — SH-FIN-HUMAN-001
+- [Legal reader draft visual review](../../legal/evidence/assets-rights/drafts/qa/REVIEW.md) — SH-FIN-HUMAN-001
 - [Advisory engagement and outcome terms](../../legal/evidence/commercial/SH-LEGAL-READ-ADV-001.md) — SH-FIN-HUMAN-001
 - [Atlas licensing and amendment evidence](../../legal/evidence/commercial/SH-LEGAL-READ-ATL-001.md) — SH-FIN-HUMAN-001
 - [Colocation orders and SLA review](../../legal/evidence/commercial/SH-LEGAL-READ-COLO-001.md) — SH-FIN-HUMAN-001
