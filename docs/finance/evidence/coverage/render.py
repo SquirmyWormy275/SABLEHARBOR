@@ -204,10 +204,9 @@ def render():
             + register["scope"]["period_end"]
             + ". Synthetic reconstruction, not independent audit evidence.\n\n"
             + desc["limits"]
-            + "\n\n## What is included\n\nComplete declared source populations are in working-papers.xlsx and the source CSV/SQLite tables. The workbook Guide maps every table to its complete sheet and source file. Printed previews show leading rows and columns only; they do not limit the Excel population.\n\n| Population | Rows |\n|---|---:|\n"
+            + "\n\n## What is included\n\nComplete declared source populations are in working-papers.xlsx and the source CSV/SQLite tables. The workbook Guide maps every table to its complete sheet and source file. Values beyond Excel’s 15-digit numerical precision remain text. Printed previews show leading rows and columns only; they do not limit the Excel population.\n"
         )
-        for x in maprows:
-            report += f"| {Path(x['source']).stem.replace('_', ' ')} | {x['row_count']} |\n"
+        report += f"\nThe workbook contains {len(maprows)} complete source tables ({sum(x['row_count'] for x in maprows):,} rows), plus its Guide and Checks sheets. Repeated tables across packages are convenience mirrors, not additional transactions.\n"
         measures = []
 
         def total(table, column, predicate):
@@ -318,6 +317,8 @@ def render():
                 out_rel=str((out / "working-paper.pdf").relative_to(ROOT)),
                 brand="corporate",
             )
+        for previous in list(qa.glob("paper-*.png")) + list(qa.glob("workbook-*.png")):
+            previous.unlink()
         renders = []
         with tempfile.TemporaryDirectory() as td:
             subprocess.run(
