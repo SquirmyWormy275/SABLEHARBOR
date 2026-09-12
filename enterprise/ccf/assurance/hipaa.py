@@ -1,0 +1,72 @@
+"""Original paragraph-level review routing for three public HIPAA Security sections.
+
+Sources inspected 2026-09-11: eCFR 45 CFR 164.308, 164.310 and 164.312,
+showing Title 45 through 2026-09-10. These are unapproved mapping candidates.
+The other Part 164 entries still require decomposition. Addressable is not optional;
+scoped implementation/alternative decisions require the 164.306(d) analysis.
+"""
+
+# Paragraph, short discovery label, native candidate, specification classification.
+SECURITY_ATTRIBUTES = {
+    "164.308": [
+        ("a(1)(i)", "Security management", "SH-SEC-001", "STANDARD"),
+        ("a(1)(ii)(A)", "Risk analysis", "SH-ERM-001", "REQUIRED"),
+        ("a(1)(ii)(B)", "Risk treatment", "SH-ERM-003", "REQUIRED"),
+        ("a(1)(ii)(C)", "Workforce sanctions", "SH-ETH-001", "REQUIRED"),
+        ("a(1)(ii)(D)", "Activity review", "SH-SEC-002", "REQUIRED"),
+        ("a(2)", "Security official", "SH-SEC-001", "STANDARD"),
+        ("a(3)(i)", "Workforce security", "SH-IAM-002", "STANDARD"),
+        ("a(3)(ii)(A)", "Authorization and supervision", "SH-IAM-002", "ADDRESSABLE"),
+        ("a(3)(ii)(B)", "Workforce clearance", "SH-PPL-002", "ADDRESSABLE"),
+        ("a(3)(ii)(C)", "Access termination", "SH-IAM-004", "ADDRESSABLE"),
+        ("a(4)(i)", "Information access", "SH-IAM-002", "STANDARD"),
+        ("a(4)(ii)(A)", "Clearinghouse isolation", "SH-DAT-002", "REQUIRED"),
+        ("a(4)(ii)(B)", "Access authorization", "SH-IAM-002", "ADDRESSABLE"),
+        ("a(4)(ii)(C)", "Access changes", "SH-IAM-003", "ADDRESSABLE"),
+        ("a(5)(i)", "Workforce training", "SH-TRN-001", "STANDARD"),
+        ("a(5)(ii)(A)", "Security reminders", "SH-TRN-002", "ADDRESSABLE"),
+        ("a(5)(ii)(B)", "Malware protection", "SH-SEC-001", "ADDRESSABLE"),
+        ("a(5)(ii)(C)", "Login monitoring", "SH-SEC-002", "ADDRESSABLE"),
+        ("a(5)(ii)(D)", "Password governance", "SH-IAM-006", "ADDRESSABLE"),
+        ("a(6)(i)", "Incident procedures", "SH-INC-001", "STANDARD"),
+        ("a(6)(ii)", "Incident response records", "SH-INC-002", "REQUIRED"),
+        ("a(7)(i)", "Contingency planning", "SH-BCM-004", "STANDARD"),
+        ("a(7)(ii)(A)", "Data backup", "SH-BCM-002", "REQUIRED"),
+        ("a(7)(ii)(B)", "Disaster recovery", "SH-BCM-003", "REQUIRED"),
+        ("a(7)(ii)(C)", "Emergency operations", "SH-BCM-004", "REQUIRED"),
+        ("a(7)(ii)(D)", "Contingency exercises", "SH-BCM-004", "ADDRESSABLE"),
+        ("a(7)(ii)(E)", "Criticality analysis", "SH-BCM-001", "ADDRESSABLE"),
+        ("a(8)", "Security evaluation", "SH-SEC-004", "STANDARD"),
+        ("b(1)", "Associate assurances", "SH-TPR-003", "STANDARD"),
+        ("b(2)", "Subcontractor assurances", "SH-TPR-003", "STANDARD"),
+        ("b(3)", "Written arrangements", "SH-TPR-003", "REQUIRED"),
+    ],
+    "164.310": [
+        ("a(1)", "Facility access", "SH-SEC-001", "STANDARD"),
+        ("a(2)(i)", "Recovery access", "SH-BCM-004", "ADDRESSABLE"),
+        ("a(2)(ii)", "Facility protection", "SH-SEC-001", "ADDRESSABLE"),
+        ("a(2)(iii)", "Physical access validation", "SH-IAM-002", "ADDRESSABLE"),
+        ("a(2)(iv)", "Facility maintenance records", "SH-REC-001", "ADDRESSABLE"),
+        ("b", "Workstation use", "SH-SEC-001", "STANDARD"),
+        ("c", "Workstation protection", "SH-SEC-001", "STANDARD"),
+        ("d(1)", "Device and media handling", "SH-DAT-003", "STANDARD"),
+        ("d(2)(i)", "Media disposal", "SH-REC-004", "REQUIRED"),
+        ("d(2)(ii)", "Media sanitization", "SH-REC-004", "REQUIRED"),
+        ("d(2)(iii)", "Custody tracking", "SH-REC-001", "ADDRESSABLE"),
+        ("d(2)(iv)", "Pre-move backup", "SH-BCM-002", "ADDRESSABLE"),
+    ],
+    "164.312": [
+        ("a(1)", "Technical access", "SH-IAM-002", "STANDARD"),
+        ("a(2)(i)", "Unique identities", "SH-IAM-001", "REQUIRED"),
+        ("a(2)(ii)", "Emergency access", "SH-IAM-005", "REQUIRED"),
+        ("a(2)(iii)", "Session timeout", "SH-SEC-001", "ADDRESSABLE"),
+        ("a(2)(iv)", "Stored-data encryption", "SH-SEC-001", "ADDRESSABLE"),
+        ("b", "Audit mechanisms", "SH-SEC-002", "STANDARD"),
+        ("c(1)", "Information integrity", "SH-DAT-004", "STANDARD"),
+        ("c(2)", "Integrity verification", "SH-REC-003", "ADDRESSABLE"),
+        ("d", "Identity authentication", "SH-IAM-001", "STANDARD"),
+        ("e(1)", "Transmission protection", "SH-SEC-001", "STANDARD"),
+        ("e(2)(i)", "Transmission integrity", "SH-SEC-001", "ADDRESSABLE"),
+        ("e(2)(ii)", "Transmission encryption", "SH-SEC-001", "ADDRESSABLE"),
+    ],
+}

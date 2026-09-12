@@ -53,6 +53,8 @@ These are three bounded examples, not live vendor integrations or the full 7,560
 
 ## Decisions and next tranche
 
+The [assessment and delta workbench](assurance/README.md) adds a versioned companion schema, framework selection, evidence reuse, internal Excel/HTML views and reviewed-input validation. Its real-framework starter remains an incomplete discovery queue; the eight demonstrated adapter cases use fictional requirements. It does not populate this preparation schema's external mapping arrays or establish operating effectiveness.
+
 The generated coverage report contains twelve policy dispositions and six decision packets covering material authority thresholds, risk appetite, information access/retention, legal execution, appointments and deployment commitments. None requires an answer to run this preparatory build. Routine technical mechanics remain delegated. Future work should refine each material decision into a scoped proposal when its implementation reaches that gate.
 
 Next: review the 15 unmapped controls against native business risks; enrich accountable-role relationships and control-level applicability; populate richer policy/obligation/local-risk records; extend the source adapters to further business controls; then add assessment and external mapping layers. Keep actual contracts, tax elections, information policy and operating evidence in their explicit acceptance tracks.
