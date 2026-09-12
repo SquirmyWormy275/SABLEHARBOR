@@ -60,6 +60,10 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Source comparison authoring records](../../../enterprise/ccf/assurance/review_data/README.md) — MD
 - [Review basis, findings and remaining decisions](../../../enterprise/ccf/assurance/review_data/REVIEW_NOTES.md) — MD
 
+## `enterprise/ccf/operations`
+
+- [Baseline testing, evidence intake and assessment workflow](../../../enterprise/ccf/operations/README.md) — MD
+
 ## `enterprise/runtime`
 
 - [PR119 implementation disposition](../../../enterprise/runtime/DISPOSITION.md) — MD
