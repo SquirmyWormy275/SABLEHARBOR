@@ -62,7 +62,10 @@ Generated file inventory. Includes current and historical records; open the sour
 
 ## `enterprise/ccf/operations`
 
+- [Evidence collection and scheduling](../../../enterprise/ccf/operations/COLLECTION.md) — MD
+- [Bounded control test contracts](../../../enterprise/ccf/operations/CONTROL_TEST_CONTRACTS.md) — MD
 - [Baseline testing, evidence intake and assessment workflow](../../../enterprise/ccf/operations/README.md) — MD
+- [Protected CCF workflow API](../../../enterprise/ccf/operations/SERVICE.md) — MD
 
 ## `enterprise/runtime`
 

@@ -355,10 +355,15 @@ def replay(db):
 
 
 def command(db, token, case_id, action, payload, expected_revision):
-    """Credentials determine actor; callers cannot supply actor, clock or result."""
+    """Local credential wrapper; network callers must use a verified identity boundary."""
+    return command_as(db, authenticate(db, token), case_id, action, payload, expected_revision)
+
+
+def command_as(db, actor, case_id, action, payload, expected_revision):
+    """Internal service boundary: actor MUST come from verified authentication, never request JSON."""
     db.execute("BEGIN IMMEDIATE")
     try:
-        actor, at = authenticate(db, token), now()
+        at = now()
         states, config = replay(db), configuration(db)
         current = states.get(case_id, {}).get("revision", 0)
         if type(expected_revision) is not int or current != expected_revision:
@@ -401,9 +406,14 @@ def command(db, token, case_id, action, payload, expected_revision):
 
 
 def revoke(db, token, subject):
+    return revoke_as(db, authenticate(db, token), subject)
+
+
+def revoke_as(db, actor, subject):
+    """Internal authenticated-subject entry point; no caller-supplied clock."""
     db.execute("BEGIN IMMEDIATE")
     try:
-        actor, at = authenticate(db, token), now()
+        at = now()
         row = db.execute("SELECT payload FROM principal WHERE id=?", (subject,)).fetchone()
         if not row:
             raise ValueError("Unknown principal")
@@ -420,7 +430,21 @@ def revoke(db, token, subject):
 
 
 def report(db, token):
-    actor, at = authenticate(db, token), now()
+    return report_as(db, authenticate(db, token))
+
+
+def report_as(db, actor):
+    """Return only the authenticated subject's currently authorized boundary records."""
+    at = now()
+    row = db.execute("SELECT payload FROM principal WHERE id=?", (actor,)).fetchone()
+    if row is None:
+        raise ValueError("Unknown principal")
+    grant = json.loads(row[0])
+    revoked = db.execute("SELECT at FROM revocation WHERE principal_id=?", (actor,)).fetchone()
+    if not instant(grant["valid_from"]) <= instant(at) < instant(grant["expires_at"]) or (
+        revoked and instant(revoked[0]) <= instant(at)
+    ):
+        raise ValueError("Principal lacks current scoped permission")
     states, config = replay(db), configuration(db)
     visible = {}
     for cid, state in states.items():
