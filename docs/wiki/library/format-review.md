@@ -6,8 +6,8 @@ Generated reconciliation queue, not an assertion that every unpaired record lack
 
 | State | Records |
 |---|---:|
-| COUNTERPART_REVIEW_REQUIRED | 428 |
-| READER_OR_MAINTENANCE_PAGE | 83 |
+| COUNTERPART_REVIEW_REQUIRED | 430 |
+| READER_OR_MAINTENANCE_PAGE | 84 |
 | VERIFIED_DOCUMENT_PAIR | 131 |
 
 ## Records requiring counterpart reconciliation
@@ -167,6 +167,8 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Superseded filename](../../finance/WILLOW_EVALON_FINANCE_AND_CORPORATE_MODEL_2026-09-06.md) — SH-FIN-HUMAN-001
 - [Willow / Klein finance and corporate model](../../finance/WILLOW_KLEIN_FINANCE_AND_CORPORATE_MODEL_2026-09-06.md) — SH-FIN-HUMAN-001
 - [Worklog](../../finance/WORKLOG.md) — SH-FIN-HUMAN-001
+- [Foundry Field: invoice evidence](../../finance/evidence/SH-FIN-HUMAN-001/PACKET.md) — SH-FIN-HUMAN-001
+- [Draft visual and numerical review](../../finance/evidence/SH-FIN-HUMAN-001/qa/REVIEW.md) — SH-FIN-HUMAN-001
 - [SABLE HARBOR — SUPERSEDED 2021–2022 FINANCING & INVESTOR-DIRECTOR PROPOSAL](../../governance/2021_2022_FINANCING_AND_INVESTOR_DIRECTOR_PROPOSAL.md) — Corporate document-format reconciliation
 - [SABLE HARBOR — 2026 BOARD COMPOSITION AND FINANCING MODEL](../../governance/2026_BOARD_COMPOSITION_AND_FINANCING_MODEL.md) — Corporate document-format reconciliation
 - [SABLE HARBOR — CAPITAL DELEGATION AND INDEPENDENT ASSURANCE MODEL](../../governance/2026_CAPITAL_AND_ASSURANCE_MODEL.md) — Corporate document-format reconciliation

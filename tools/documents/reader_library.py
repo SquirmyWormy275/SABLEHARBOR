@@ -117,6 +117,12 @@ def evidence_records(root: Path) -> list[tuple]:
             raise ValueError("Evidence invoice or scope mismatch")
         if catalog["source_revision"] != source["release_source_revision"]:
             raise ValueError("Evidence revision mismatch")
+        native = source["release"] + "/" + source["members"]["native_database"]["member"]
+        if catalog["native_database"] != native:
+            raise ValueError("Evidence native database link mismatch")
+        for rows in source["rows"].values():
+            if any(row.get("scenario", catalog["scenario"]) != catalog["scenario"] or row["unit"] != catalog["unit"] for row in rows):
+                raise ValueError("Evidence source population scope mismatch")
         if catalog["native_source_ids"] != [row["event_id"] for row in source["rows"]["events"]]:
             raise ValueError("Evidence accounting event links mismatch")
         relatives = [str((path.parent / name).relative_to(root)) for name in ("PACKET.md", "packet.pdf", "reconciliation.xlsx")]

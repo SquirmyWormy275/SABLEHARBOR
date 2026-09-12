@@ -87,7 +87,7 @@ class EvidenceLinkTests(unittest.TestCase):
         import shutil
         import json
         source = ROOT / 'docs/finance/evidence/SH-FIN-HUMAN-001'
-        for change in ('bytes', 'missing', 'scope'):
+        for change in ('bytes', 'missing', 'scope', 'database'):
             with self.subTest(change=change), tempfile.TemporaryDirectory() as temporary:
                 root = Path(temporary)
                 dest = root / 'docs/finance/evidence/SH-FIN-HUMAN-001'
@@ -98,7 +98,11 @@ class EvidenceLinkTests(unittest.TestCase):
                     (dest / 'reconciliation.xlsx').unlink()
                 else:
                     catalog = json.loads((dest / 'catalog.json').read_text())
-                    catalog['scenario'] = 'downside'
+                    catalog['scenario' if change == 'scope' else 'native_database'] = 'wrong'
                     (dest / 'catalog.json').write_text(json.dumps(catalog))
+                    import hashlib
+                    manifest = json.loads((dest / 'manifest.json').read_text())
+                    manifest['files']['catalog.json'] = hashlib.sha256((dest / 'catalog.json').read_bytes()).hexdigest()
+                    (dest / 'manifest.json').write_text(json.dumps(manifest))
                 with self.assertRaises(ValueError):
                     library.evidence_records(root)
