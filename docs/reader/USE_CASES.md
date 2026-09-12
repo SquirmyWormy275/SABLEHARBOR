@@ -4,6 +4,21 @@
 
 Choose a bounded question, a business, and a period before collecting evidence. Keep one release's records together. A 2027 conditional forecast cannot stand in for a 2026 transaction record. The exercises below suggest work for the reader; they do not publish assessment answer keys.
 
+## Pick a first task
+
+These entry points are files you can open now. Where a task needs a release download or local build, that requirement is explicit.
+
+| Task | Open first | Working evidence | Produce |
+|---|---|---|---|
+| Explain a cash shortfall | [Operating review XLSX](../../enterprise/operations/publications/operating-review-v1.0.0.xlsx), **Cash obligations** | [Finance exercise 3](../finance/READER_EXERCISES.md#3-investigate-a-cash-shortfall) identifies the release tables | Arrears reconciliation and a short decision memo |
+| Trace an invoice | [Accepted invoice evidence packet](../finance/evidence/SH-FIN-HUMAN-001/README.md), then [Finance exercise 1](../finance/READER_EXERCISES.md#1-follow-a-customer-invoice-through-collection-and-credit-loss) | Foundry Field invoice, credit and journal extracts in the named release | Dated movement schedule with source IDs |
+| Review a control exception | [CCF procedures](../../enterprise/ccf/PROCEDURES.md) | Locally built native example package; see the controls route below | Test worksheet preserving the original failure and retest history |
+| Prepare an assurance evidence request | [Approved reference preparation](../../enterprise/ccf/assurance/README.md#approved-reference-assessment-preparation) | Proposed workpapers and unexecuted plans; source originals required for the build | Scoped request list and review queue, with no assurance conclusion |
+| Understand accountability | [Business and department directory](../wiki/Home.md) | Linked current charts, charters and decision records | A source-linked account of who decides, operates and reviews |
+| Review a facility programme | [Independent plan index](../../geospatial/maps/facilities/ARTIFACT_INDEX.md) | [Population bridge](../../geospatial/facilities/population/BRIDGE.md), site and floor plans | Annotated plan and capacity review |
+
+On a narrow screen, scroll tables sideways to see every column.
+
 ## Accounting and financial audit practice
 
 Start with the [finance exercise guide](../finance/READER_EXERCISES.md), [industrial finance](../../industrial/finance/README.md), and [accounting policies](../finance/ACCOUNTING_POLICIES.md). Select one entity and period; trace a supported transaction from its source register to the journal and reporting output. Reconcile a selected balance and record unexplained differences or missing support.
@@ -18,9 +33,17 @@ Produce a decision memo supported by a scenario comparison. Distinguish a retros
 
 ## Controls and assurance
 
-Read the [CCF preparation guide](../../enterprise/ccf/README.md) and [example procedures](../../enterprise/ccf/PROCEDURES.md). Select the finance-close, identity-lifecycle, or recovery example. Identify the control objective, evidence population, procedure, result, exception handling, and independent retest. Record evidence that would be needed for a broader conclusion.
+Choose one of three distinct routes. The approved reference scope and the executed synthetic examples answer different questions.
 
-Produce a scoped test worksheet and findings memo. These support internal-control and SOC-oriented evidence exercises. They do not supply a complete SOC report, accepted full external-framework mapping, or sufficient period evidence for an enterprise-wide operating-effectiveness conclusion. Passing a generator validates the exercise data, not the enterprise's controls.
+| Route | Start and access | What you inspect | What it supports |
+|---|---|---|---|
+| Native control exercises | [Preparation README](../../enterprise/ccf/README.md) and [procedures](../../enterprise/ccf/PROCEDURES.md); build locally | Finance-close, identity-lifecycle and recovery examples, including FAIL/NOT_RUN cases and independent re-performance | Practice testing a bounded population and following an exception |
+| Assessment mechanics | [Workbench instructions](../../enterprise/ccf/assurance/README.md#run-the-delivered-examples); run `demo` locally | Eight fictional requirements, evidence reuse, missing support and a failed restore case | Learn the assessment interface and why separate requirements need separate conclusions |
+| Approved reference preparation | [Reference instructions](../../enterprise/ccf/assurance/README.md#approved-reference-assessment-preparation) and [source inventory](../../enterprise/ccf/assurance/reference_data/README.md); build locally with the required source originals | Corporate/Reno/Boise SOC 2 Security/Availability/Confidentiality and HIPAA scenario, proposed implementation workpapers and unexecuted tests; optional C5 extension | Prepare evidence requests, scope review and mapping work; no completed assurance result |
+
+For the native exercise, the documented build produces `exercises.json`, `COVERAGE.md` and `registry.sqlite3` in your chosen output folder. The assessment `demo` produces `workbench.xlsx` and `explorer.html`; the reference bundle puts those files under `assessment/` and adds `WORKPAPERS.json`, implementation/test-plan CSVs and readiness notes. Open the workbook in Excel or another spreadsheet application, or open the explorer in a browser. The explorer runs locally without a server. These outputs are generated by the linked commands; this guide does not imply they are a prebuilt public download.
+
+Produce a scoped test worksheet and findings memo for an exercise, or an evidence-request list for reference preparation. Name the objective, population, procedure, original result and review history. The reference scope approval does not approve individual mappings or perform tests. Neither route supplies a SOC report or an enterprise-wide operating-effectiveness conclusion. Passing package validation checks the synthetic data and build, not the enterprise's controls.
 
 ## Management, organization, and professional practice
 
@@ -48,7 +71,7 @@ Produce a dependency assessment, recovery evidence review, or vendor-question li
 
 ## Facilities and workplace planning
 
-Use the [facility atlas](../../geospatial/facilities/README.md), [planning workbench](../../geospatial/facilities/workbench/README.md), and [spatial review](../../geospatial/facilities/spatial/README.md). Select a site, inspect its status, then follow building and floor links. Compare the area, population, attendance, and seat assumptions.
+Use the [facility atlas](../../geospatial/facilities/README.md), [planning workbench](../../geospatial/facilities/workbench/README.md), and [spatial review](../../geospatial/facilities/spatial/README.md). Select a site, inspect its status, then follow building and floor links. Compare the area, population, attendance, and seat assumptions. In GitHub, the [individual artifact index](../../geospatial/maps/facilities/ARTIFACT_INDEX.md) links straight to saved SVG, PNG and PDF plans. For a visit-oriented illustration, use the locked V08 [PNG](../../geospatial/facilities/visitor/v08/artifacts/visitor-map-v08.png) or [PDF](../../geospatial/facilities/visitor/v08/artifacts/visitor-map-v08.pdf); it is not to scale.
 
 Produce a planning review with annotated plans. Proposed geometry and modelled seats do not establish property ownership, code compliance, construction, or actual attendance. Each saved plan remains available independently of the interactive viewer.
 
@@ -67,7 +90,14 @@ Possible bounded tasks include contract-to-revenue review, customer retention an
 | Business operations | [Release index](../releases/BUSINESS_OPERATIONS_RELEASES.md) | More detailed operating histories, control exercises, and reviewed workbook. |
 | Facility atlas | [Release index](../releases/FACILITY_ATLAS_RELEASES.md) | Independent maps and plans, source status and navigation. |
 | Spatial review | [Release index](../releases/FACILITY_SPATIAL_RELEASES.md) | Sections, elevations, roofs, schedules and offline viewer. |
+| Native CCF and assessment workbench | [Local build instructions](../../enterprise/ccf/README.md#run), [assessment examples](../../enterprise/ccf/assurance/README.md#run-the-delivered-examples) and [reference preparation](../../enterprise/ccf/assurance/README.md#approved-reference-assessment-preparation) | No prebuilt download claimed. Generated JSON/SQLite examples and XLSX/HTML assessment views; reference builds require source originals. |
 
 Open Markdown in GitHub, PDFs in a PDF reader, and downloaded XLSX workbooks in a spreadsheet application. For HTML, extract the complete package before following its opening instructions. SQLite is optional for querying large tables; the [document library](../wiki/Library.md) provides ordinary file links.
+
+## Where the reading routes live
+
+The README, this guide and [wiki pages](../wiki/Home.md) are ordinary Markdown in this repository. The [library](../wiki/Library.md) links the underlying files without relocating them. A separate GitHub Wiki or hosted application is not needed for these reading routes.
+
+The facility atlas and packaged case browsers open from a downloaded checkout or extracted release. Keep their directory structure so links continue to work. CCF assessment explorers are local workbench outputs; they are not a public evidence portal. The [source and format guide](SOURCES_AND_FORMATS.md) explains document authority, publication pairings and the distinction between a library entry and transaction evidence.
 
 A classroom or professional exercise should specify its own question and deliverable. The public archive does not expose private scoring material. Repository visibility does not override the repository's rights notice.

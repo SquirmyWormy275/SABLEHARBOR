@@ -1,0 +1,163 @@
+[
+  {
+    "id": "AUTH-TECH",
+    "status": "PROPOSED_DESIGN_SUPPLEMENT",
+    "native_control_ids": [
+      "SH-SEC-001",
+      "SH-IAM-005",
+      "SH-IAM-006"
+    ],
+    "requirement_ids": [
+      "SOC2:CC6.1",
+      "SOC2:CC6.2",
+      "SOC2:CC6.6",
+      "HIPAA:164.312"
+    ],
+    "procedure": [
+      "Inventory interactive, administrative, recovery, customer and non-human authentication paths; identify IdP enforcement and unavoidable local credentials.",
+      "Propose phishing-resistant MFA for privileged/remote administration; govern authenticator enrollment, recovery and revocation separately; prevent fallback bypass.",
+      "Define session expiry, idle lock, reauthentication, service credential rotation and emergency access from risk; record exact proposed settings per platform before deployment.",
+      "Test denied unauthorized access, enrollment/recovery abuse, session revocation and loss of the shared IdP during site recovery."
+    ],
+    "evidence_outputs": [
+      "IdP and application configuration exports",
+      "Authentication-path inventory",
+      "Positive/negative test results",
+      "Emergency access exercise"
+    ],
+    "operating_inputs_needed": [
+      "Actual applications and IdP topology",
+      "Approved session/credential parameters",
+      "Authorized deployment/change window"
+    ],
+    "approval": "No deployed settings, budget or contract is approved by this proposal."
+  },
+  {
+    "id": "CRYPTO-TRANSFER",
+    "status": "PROPOSED_DESIGN_SUPPLEMENT",
+    "native_control_ids": [
+      "SH-SEC-001",
+      "SH-DAT-002",
+      "SH-REC-004"
+    ],
+    "requirement_ids": [
+      "SOC2:CC6.1",
+      "SOC2:CC6.7",
+      "SOC2:CC6.5",
+      "HIPAA:164.312",
+      "HIPAA:164.310"
+    ],
+    "procedure": [
+      "Inventory encryption boundaries for storage, replication, backups, exports and removable media; assign key custody and customer/provider responsibilities.",
+      "Specify approved protocol/cipher profiles, certificate validation, key generation/storage/access, rotation, revocation and recovery; document HIPAA addressable reasoning independently of generic security preference.",
+      "Restrict transfer destinations and export authority; prevent secrets in logs; preserve key audit events and test expired/untrusted certificates and unauthorized key use.",
+      "Exercise encrypted restore and authorized destruction; verify residual copies and holds before cryptographic erasure; loss of key access must appear in recovery risks."
+    ],
+    "evidence_outputs": [
+      "Data/key-flow diagram",
+      "Cryptographic configuration and key-access metadata without secrets",
+      "Transfer authorization and rejection tests",
+      "Restore and sanitization evidence"
+    ],
+    "operating_inputs_needed": [
+      "Actual key-management service and custody model",
+      "Data and contract restrictions",
+      "Approved cryptographic profile"
+    ],
+    "approval": "No deployed settings, budget or contract is approved by this proposal."
+  },
+  {
+    "id": "PHYSICAL-SITE",
+    "status": "PROPOSED_DESIGN_SUPPLEMENT",
+    "native_control_ids": [
+      "SH-SEC-001",
+      "SH-TPR-004",
+      "SH-IAM-004"
+    ],
+    "requirement_ids": [
+      "SOC2:CC6.4",
+      "HIPAA:164.310"
+    ],
+    "procedure": [
+      "For Reno and Boise separately, enumerate buildings, cages/racks, access zones, responsible provider and our access approvers.",
+      "Require authorized access lists, visitor purpose/approval, escort where required, badge issuance/revocation and emergency access procedures; record workstation location and protection.",
+      "Reconcile badge/access populations with workforce, contractor and approved provider lists; test removal of expired access and local access during recovery.",
+      "Obtain provider records covering relevant locations and period; inspect exceptions and complementary duties; track custody and maintenance of devices/media and require sanitization proof before release."
+    ],
+    "evidence_outputs": [
+      "Zone/responsibility map",
+      "Approved access and visitor populations",
+      "Provider physical-control records",
+      "Revocation and media custody tests"
+    ],
+    "operating_inputs_needed": [
+      "Signed colocation terms and actual zones",
+      "Provider evidence access",
+      "Named authorized site contacts"
+    ],
+    "approval": "No deployed settings, budget or contract is approved by this proposal."
+  },
+  {
+    "id": "CAPACITY",
+    "status": "PROPOSED_DESIGN_SUPPLEMENT",
+    "native_control_ids": [
+      "SH-BCM-001",
+      "SH-CFG-001",
+      "SH-ENG-001"
+    ],
+    "requirement_ids": [
+      "SOC2:A1.1"
+    ],
+    "procedure": [
+      "Inventory constrained compute, storage, network, power and recovery dependencies; measure average/peak usage and obtain representative load assumptions.",
+      "Forecast growth and simultaneous recovery demand at Boise; define proposed headroom and alert thresholds from accepted commitments, procurement lead times and failure scenarios.",
+      "Alert on approaching constraints, assign expansion or workload-management action and test degraded capacity while preserving isolation and confidentiality.",
+      "Review forecasts monthly and after material change as a proposed operating cadence; reconcile actual use and forecast error; submit capacity-changing work through change control."
+    ],
+    "evidence_outputs": [
+      "Capacity inventory and telemetry query",
+      "Demand/recovery model with assumptions",
+      "Threshold and alert tests",
+      "Capacity action/change record"
+    ],
+    "operating_inputs_needed": [
+      "Accepted service commitments and RTO/RPO",
+      "Measured workload and provider capacity",
+      "Budget approval only if expansion is needed"
+    ],
+    "approval": "No deployed settings, budget or contract is approved by this proposal."
+  },
+  {
+    "id": "ENVIRONMENT",
+    "status": "PROPOSED_DESIGN_SUPPLEMENT",
+    "native_control_ids": [
+      "SH-SEC-001",
+      "SH-BCM-002",
+      "SH-BCM-004",
+      "SH-TPR-004"
+    ],
+    "requirement_ids": [
+      "SOC2:A1.2",
+      "HIPAA:164.310",
+      "HIPAA:164.308"
+    ],
+    "procedure": [
+      "Assess power, cooling, fire, water, weather and shared utility/carrier risks for Reno and Boise with the providers.",
+      "Document protection, monitoring, maintenance, alert recipients and escalation for each environmental threat; reconcile redundancy claims to actual failure domains.",
+      "Obtain relevant maintenance, alarm and provider exercise records; test receipt/escalation of representative environmental alarms without disrupting production.",
+      "Link correlated-loss scenarios, backup isolation and alternate processing capacity to the BIA and recovery exercises; track provider exceptions and remaining local actions."
+    ],
+    "evidence_outputs": [
+      "Environmental threat register",
+      "Provider protection/maintenance records",
+      "Alarm-routing test",
+      "Failure-domain and recovery analysis"
+    ],
+    "operating_inputs_needed": [
+      "Provider facility facts and maintenance evidence",
+      "Approved outage objectives",
+      "Authorized exercise parameters"
+    ],
+    "approval": "No deployed settings, budget or contract is approved by this proposal."
+  }
+]

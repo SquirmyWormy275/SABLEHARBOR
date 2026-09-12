@@ -32,6 +32,11 @@ Generated file inventory. Includes current and historical records; open the sour
 
 - [CCF assessment and framework delta workbench](../../../enterprise/ccf/assurance/README.md) — MD
 
+## `enterprise/ccf/assurance/design_data`
+
+- [Baseline design authoring records](../../../enterprise/ccf/assurance/design_data/README.md) — MD
+- [Reference service description workpaper](../../../enterprise/ccf/assurance/design_data/SERVICE_DESCRIPTION.md) — MD
+
 ## `enterprise/ccf/assurance/reference_data`
 
 - [Reference source inventory](../../../enterprise/ccf/assurance/reference_data/README.md) — MD

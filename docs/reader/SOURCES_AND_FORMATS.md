@@ -36,7 +36,7 @@ An external host is not a subsidiary; a selected provider is not an executed con
 
 ## Wiki and interactive pages
 
-`docs/wiki/` is the versioned Markdown reading layer. On September 11 the GitHub API reported Wiki enabled, but the separate wiki Git endpoint returned “Repository not found.” Therefore these pages are delivered as repository pages; live GitHub Wiki publication is not claimed.
+`docs/wiki/` is the versioned Markdown reading layer. The repository reading layer was accepted through PR #128. On the refreshed September 11 (Pacific) inspection, the separate wiki Git endpoint still returned “Repository not found.” Therefore these pages are delivered as repository pages; live GitHub Wiki publication is not claimed.
 
 The repository pages work directly in GitHub. Interactive HTML requires a local browser or a separately published copy of the same committed files. The atlas and packaged browsers retain their existing instructions. No second content authority is introduced.
 

@@ -31,6 +31,7 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Northstar Minerals, Inc. — approved visual identity](../../canon/NORTHSTAR_MINERALS_VISUAL_IDENTITY_2026-09-07.md) — MD
 - [Organization chart design and cleanup](../../canon/ORG_CHART_DESIGN_AND_CLEANUP_2026-09-09.md) — MD
 - [Quality Forest Communications — approved visual identity](../../canon/QUALITY_FOREST_COMMUNICATIONS_VISUAL_IDENTITY_2026-09-07.md) — MD
+- [Reader overnight scope and review boundaries](../../canon/READER_OVERNIGHT_SCOPE_2026-09-11.md) — MD
 - [Red Wash Closeout Changelog](../../canon/RED_WASH_CLOSEOUT_CHANGELOG_2026-09-05.md) — MD
 - [Red Wash Transaction and Operating Record](../../canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05.md) — MD
 - [Red Wash Transaction and Operating Record](../../canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05_R2.md) — MD · [formatted PDF](../../governance/publications/SH-PS-RW-TOR-001_v1.1.0.pdf)

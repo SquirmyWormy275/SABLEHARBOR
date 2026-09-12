@@ -1,0 +1,250 @@
+{
+  "id": "SH-READER-OVERNIGHT-001",
+  "base_sha": "62048c2153977acf2bc52d8e1f54aa6ebb9b57d8",
+  "status": "PREPARED_NOT_SCHEDULED",
+  "max_parallel_agents": 3,
+  "integration_owner": "main agent",
+  "decision_defaults": {
+    "merge": "Owner confirmed nonvisual merge after green gates; future designs stay in exact-file review.",
+    "scope": "All three content lanes authorized: accounting; transaction/legal; business/department.",
+    "billing": "Separate proposed fictional billing dataset authorized for review only; no edits to booked amounts or existing source facts.",
+    "authority": "docs/canon/READER_OVERNIGHT_SCOPE_2026-09-11.md"
+  },
+  "frozen": [
+    {
+      "path": "geospatial/facilities/visitor/v08/artifacts/visitor-map-v08.png",
+      "sha256": "e5a8a81cf29da9debfc46fb7f4a0abb5e397d5b29c380eaf2ee291e0455ba611"
+    },
+    {
+      "path": "geospatial/facilities/visitor/v08/artifacts/visitor-map-v08.pdf",
+      "sha256": "0aeadf88197eb5ba18e0365b7f6510a90aa86f235b50fcba1177b3ed83930dc0"
+    },
+    {
+      "path": "docs/organization/source/chartbook.json",
+      "sha256": "6471a6362517f97574c775b73b94ac48d6060d81cee605eb661811425ed75866"
+    },
+    {
+      "path": "docs/finance/evidence/SH-FIN-HUMAN-001/packet.pdf",
+      "sha256": "1914d0043f1ef3344873d10d35ed016f4cbfd28091459e8dbb2d4b8fee45a5b7"
+    },
+    {
+      "path": "docs/finance/evidence/SH-FIN-HUMAN-001/reconciliation.xlsx",
+      "sha256": "7077ec3ae8e796a6f94759fe19624ab51a11ac45b7ce538a0c447b4c9c384214"
+    }
+  ],
+  "jobs": [
+    {
+      "id": "READ-01",
+      "lane": "reader",
+      "title": "Refresh reader routes and accepted status",
+      "depends_on": [],
+      "inputs": [
+        "README.md",
+        "docs/reader/USE_CASES.md",
+        "docs/wiki/Home.md"
+      ],
+      "write_scope": [
+        "README.md",
+        "docs/reader/USE_CASES.md",
+        "docs/reader/SOURCES_AND_FORMATS.md",
+        "docs/reader/READER_DELIVERY.md",
+        "docs/reader/CONTINUATION.md",
+        "docs/wiki/Home.md",
+        "docs/wiki/README.md"
+      ],
+      "state": "COMPLETE",
+      "acceptance": "Validated routes to accepted sources, downloads and explicit evidence limits.",
+      "gate": "existing_authority",
+      "evidence": "PR135 merged at62048c2153977acf2bc52d8e1f54aa6ebb9b57d8"
+    },
+    {
+      "id": "FIN-01",
+      "lane": "finance",
+      "title": "Recover and review Foundry invoice packet",
+      "depends_on": [],
+      "inputs": [
+        "docs/handoffs/FINANCE_HUMAN_EVIDENCE_COMPLETION.md",
+        "docs/finance/READER_EXERCISES.md"
+      ],
+      "write_scope": [
+        "docs/finance/evidence/SH-FIN-HUMAN-001/"
+      ],
+      "state": "ACCEPTED_PENDING_MAIN_INTEGRATION",
+      "acceptance": "Exact corrected packet accepted at efce3a74b5c029e4010abd93934b7686b3751ba4; frozen ACCEPTANCE.json binds every reviewed artifact. PR134 integrates after green gates.",
+      "gate": "exact_visual_acceptance"
+    },
+    {
+      "id": "READ-02",
+      "lane": "reader",
+      "title": "Reconcile every indexed document counterpart",
+      "depends_on": [
+        "READ-01"
+      ],
+      "inputs": [
+        "docs/wiki/library/format-review.md",
+        "docs/reader/SOURCES_AND_FORMATS.md"
+      ],
+      "write_scope": [
+        "docs/reader/reconciliation/"
+      ],
+      "state": "READY",
+      "acceptance": "Inventory every existing format-review row. Give explicit manifest or release-member evidence for verified counterparts; retain unresolved dispositions. Do not generate bulk PDFs.",
+      "gate": "existing_authority"
+    },
+    {
+      "id": "FIN-02",
+      "lane": "finance",
+      "title": "Inventory seven-unit accounting evidence families",
+      "depends_on": [],
+      "inputs": [
+        "enterprise/operations/README.md",
+        "docs/audit/OPERATING_DEPTH_EXPORT_SPECIFICATION.md",
+        "docs/releases/BUSINESS_OPERATIONS_RELEASES.md"
+      ],
+      "write_scope": [
+        "docs/finance/evidence/coverage/"
+      ],
+      "state": "READY",
+      "acceptance": "Pinned release inventory by scenario/unit/table: customer, receipt, credit, contract/deferred revenue, payable, Treasury, close and consolidation; identify actual human artifacts and native record joins.",
+      "gate": "existing_authority"
+    },
+    {
+      "id": "WIKI-01",
+      "lane": "wiki",
+      "title": "Close source-backed subject directory gaps",
+      "depends_on": [
+        "READ-01"
+      ],
+      "inputs": [
+        "docs/wiki/Home.md",
+        "docs/business-lines/HISTORICAL_AND_EXTERNAL_BOUNDARIES.md"
+      ],
+      "write_scope": [
+        "docs/wiki/businesses/",
+        "docs/wiki/departments/",
+        "docs/wiki/subjects/"
+      ],
+      "state": "READY",
+      "acceptance": "One source-linked route for every accepted business/department and explicit historical/external subject disposition. Reuse original artwork; never invent separate logos or departments.",
+      "gate": "existing_authority"
+    },
+    {
+      "id": "FIN-03",
+      "lane": "finance",
+      "title": "Extend customer and deferred-revenue evidence",
+      "depends_on": [
+        "FIN-01",
+        "FIN-02"
+      ],
+      "inputs": [
+        "enterprise/operations/docs/commercial.md",
+        "enterprise/operations/docs/credit.md"
+      ],
+      "write_scope": [
+        "docs/finance/evidence/customer/"
+      ],
+      "state": "READY_SOURCE_ONLY",
+      "acceptance": "After FIN-02, prepare complete selected contract/invoice population and deferred-revenue rollforward with formula/source checks. FIN-01 is accepted, but every new design/output remains in exact-file review.",
+      "gate": "exact_visual_acceptance"
+    },
+    {
+      "id": "FIN-04",
+      "lane": "finance",
+      "title": "Prepare payable and Treasury reading package",
+      "depends_on": [
+        "FIN-02"
+      ],
+      "inputs": [
+        "enterprise/operations/docs/credit.md",
+        "docs/finance/ACCOUNTING_POLICIES.md"
+      ],
+      "write_scope": [
+        "docs/finance/evidence/treasury/"
+      ],
+      "state": "READY_SOURCE_ONLY",
+      "acceptance": "Inventory requested/funded/unpaid evidence, reconcile periods and cash categories. Prepare source register and missing-record report; new visual output remains gated. No invented bank documents.",
+      "gate": "existing_authority"
+    },
+    {
+      "id": "FIN-05",
+      "lane": "finance",
+      "title": "Prepare close and consolidation reading package",
+      "depends_on": [
+        "FIN-02"
+      ],
+      "inputs": [
+        "docs/finance/BUSINESS_DRIVEN_SUCCESSOR_2026-09-09.md",
+        "enterprise/business/README.md"
+      ],
+      "write_scope": [
+        "docs/finance/evidence/close/"
+      ],
+      "state": "READY_SOURCE_ONLY",
+      "acceptance": "Reconcile one pinned full month and scenario from business units to legal entities and eliminations; complete population, no manual balancing adjustments. New workbook requires review.",
+      "gate": "existing_authority"
+    },
+    {
+      "id": "LEGAL-01",
+      "lane": "wiki",
+      "title": "Index transaction instruments and throughput evidence",
+      "depends_on": [],
+      "inputs": [
+        "industrial/transaction/01_RW_TRANSACTION_FILE.md",
+        "docs/finance/TRANSACTION_DATA_ROOM_INDEX.md",
+        "industrial/finance/README.md"
+      ],
+      "write_scope": [
+        "docs/reader/transactions/"
+      ],
+      "state": "READY",
+      "acceptance": "Distinguish actual repository instruments, released schedules and absent support. Link consideration/approvals/quantities to existing records; no synthetic signatures or invented legal terms.",
+      "gate": "existing_authority"
+    },
+    {
+      "id": "FIN-06",
+      "lane": "finance",
+      "title": "Propose fictional billing fields for owner review",
+      "depends_on": [
+        "FIN-02"
+      ],
+      "inputs": [
+        "docs/canon/READER_OVERNIGHT_SCOPE_2026-09-11.md",
+        "docs/finance/evidence/SH-FIN-HUMAN-001/source.json"
+      ],
+      "write_scope": [
+        "docs/finance/evidence/billing-proposal/"
+      ],
+      "state": "READY_SOURCE_ONLY",
+      "acceptance": "Separate explicitly PROPOSED_FOR_REVIEW scenario dataset for absent issuer/customer billing fields, with each proposed field distinguished from sourced facts. Preserve booked amounts, original records and legal canon. No operational payment instructions, signatures or visual adoption; require exact owner review before use.",
+      "gate": "exact_visual_acceptance"
+    },
+    {
+      "id": "QA-01",
+      "lane": "integrator",
+      "title": "Integrate and validate completed batches",
+      "depends_on": [
+        "READ-01"
+      ],
+      "inputs": [
+        "MAINTAINERS.md",
+        "tools/documents/README.md",
+        ".github/workflows/validate-governance-j2.yml"
+      ],
+      "write_scope": [
+        "docs/internal/institutional_catalog.json",
+        "docs/internal/institutional_catalog.sqlite3",
+        "docs/wiki/Library.md",
+        "docs/wiki/library/",
+        "tools/documents/",
+        "scripts/",
+        "tests/publications/",
+        "docs/reader/WIKI_COVERAGE.json",
+        "docs/reader/overnight/QUEUE.json",
+        "docs/reader/overnight/START.md"
+      ],
+      "state": "READY",
+      "acceptance": "Main agent exclusively regenerates shared catalog/links, runs appropriate checks and reviews changed surfaces. Accept independent finished batches; never mark blocked batches complete.",
+      "gate": "existing_authority"
+    }
+  ]
+}

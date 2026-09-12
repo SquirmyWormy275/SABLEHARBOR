@@ -9,6 +9,7 @@ Finance maintains authoritative economic records, financial reporting, treasury,
 
 ## Read and use the records
 
+- [Accounting exercises and exact evidence paths](../../../docs/finance/READER_EXERCISES.md) — Choose invoice tracing, deferred revenue, cash obligations, forecast variance or legal-book reconciliation, and locate the corresponding released records.
 - [Finance source and package guide](../../../docs/finance/README.md) — Start here for current and historical finance layers.
 - [Business financial successor](../../../enterprise/business/README.md) — Conditional 2027–2031 business economics and preserved industrial interfaces.
 - [Operating evidence and workbook](../../../enterprise/operations/README.md) — Transaction, commercial, credit and control material supporting the operating model.

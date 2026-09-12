@@ -38,7 +38,7 @@ def main(check_regeneration=False) -> None:
     pages = [
         ROOT / "README.md",
         *sorted((ROOT / "docs/wiki").rglob("*.md")),
-        *sorted((ROOT / "docs/reader").glob("*.md")),
+        *sorted((ROOT / "docs/reader").rglob("*.md")),
         ROOT / "docs/finance/READER_EXERCISES.md",
         ROOT / "docs/handoffs/FINANCE_HUMAN_EVIDENCE_COMPLETION.md",
     ]

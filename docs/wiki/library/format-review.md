@@ -6,8 +6,8 @@ Generated reconciliation queue, not an assertion that every unpaired record lack
 
 | State | Records |
 |---|---:|
-| COUNTERPART_REVIEW_REQUIRED | 439 |
-| READER_OR_MAINTENANCE_PAGE | 93 |
+| COUNTERPART_REVIEW_REQUIRED | 442 |
+| READER_OR_MAINTENANCE_PAGE | 96 |
 | VERIFIED_DOCUMENT_PAIR | 131 |
 
 ## Records requiring counterpart reconciliation
@@ -100,6 +100,7 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Northstar Minerals, Inc. — approved visual identity](../../canon/NORTHSTAR_MINERALS_VISUAL_IDENTITY_2026-09-07.md) — Corporate document-format reconciliation
 - [Organization chart design and cleanup](../../canon/ORG_CHART_DESIGN_AND_CLEANUP_2026-09-09.md) — Corporate document-format reconciliation
 - [Quality Forest Communications — approved visual identity](../../canon/QUALITY_FOREST_COMMUNICATIONS_VISUAL_IDENTITY_2026-09-07.md) — Corporate document-format reconciliation
+- [Reader overnight scope and review boundaries](../../canon/READER_OVERNIGHT_SCOPE_2026-09-11.md) — Corporate document-format reconciliation
 - [Red Wash Closeout Changelog](../../canon/RED_WASH_CLOSEOUT_CHANGELOG_2026-09-05.md) — Corporate document-format reconciliation
 - [Red Wash Transaction and Operating Record](../../canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05.md) — Corporate document-format reconciliation
 - [SABLE HARBOR — CANONICAL ARCHITECTURE HANDOVER](../../canon/SABLE_HARBOR_CANONICAL_ARCHITECTURE_HANDOVER.md) — Corporate document-format reconciliation
@@ -210,6 +211,7 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Business operating depth delivery — 2026-09-09](../../internal/development/BUSINESS_OPERATIONS_DELIVERY_2026-09-09.md) — Corporate document-format reconciliation
 - [CCF operating and assurance direction](../../internal/development/CCF_ASSURANCE_DIRECTION_2026-09-11.md) — Corporate document-format reconciliation
 - [Initial CCF assurance scope and source proposal](../../internal/development/CCF_ASSURANCE_SCOPE_PROPOSAL_2026-09-11.md) — Corporate document-format reconciliation
+- [CCF baseline design and workflow delivery](../../internal/development/CCF_BASELINE_DESIGN_DELIVERY_2026-09-11.md) — Corporate document-format reconciliation
 - [CCF preparation compared with Compliance Atlas](../../internal/development/CCF_COMPLIANCE_ATLAS_COMPARISON_2026-09-11.md) — Corporate document-format reconciliation
 - [CCF prebuild repository audit — September 11, 2026](../../internal/development/CCF_PREBUILD_REPOSITORY_AUDIT_2026-09-11.md) — Corporate document-format reconciliation
 - [CCF preparation delivery — September 11, 2026](../../internal/development/CCF_PREPARATION_DELIVERY_2026-09-11.md) — Corporate document-format reconciliation
@@ -319,6 +321,7 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Industrial case releases](../../releases/INDUSTRIAL_CASE_RELEASES.md) — Corporate document-format reconciliation
 - [Runtime estate releases](../../releases/RUNTIME_ESTATE_RELEASES.md) — Corporate document-format reconciliation
 - [CCF preparation procedures](../../../enterprise/ccf/PROCEDURES.md) — Corporate document-format reconciliation
+- [Reference service description workpaper](../../../enterprise/ccf/assurance/design_data/SERVICE_DESCRIPTION.md) — Corporate document-format reconciliation
 - [Tier 1 Advisory policy integration](../../../enterprise/operations/docs/advisory-policy.md) — SH-FIN-HUMAN-001
 - [Commercial operations and contract economics](../../../enterprise/operations/docs/commercial.md) — SH-FIN-HUMAN-001
 - [Synthetic control execution and evidence](../../../enterprise/operations/docs/controls.md) — SH-FIN-HUMAN-001

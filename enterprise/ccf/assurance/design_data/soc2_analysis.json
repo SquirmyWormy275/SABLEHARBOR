@@ -1,0 +1,237 @@
+[
+  {
+    "locator": "CC1.1",
+    "design_analysis": "Include conduct expectations, protected reporting, investigation and consistent consequences; reconcile employee and contractor coverage.",
+    "mapping_limit": "Acknowledgment alone does not demonstrate tone, investigations or sanctions."
+  },
+  {
+    "locator": "CC1.2",
+    "design_analysis": "Document governing-body oversight, relevant expertise, independence and review of management's control performance.",
+    "mapping_limit": "Charter existence does not establish independent challenge or exercised oversight."
+  },
+  {
+    "locator": "CC1.3",
+    "design_analysis": "Connect corporate authority, service ownership, site operators and supplier escalation; show how responsibilities are communicated.",
+    "mapping_limit": "Role labels are not appointments; provider duties need enforceable allocation."
+  },
+  {
+    "locator": "CC1.4",
+    "design_analysis": "Define required skills, screening, training, staffing capacity and succession for service and recovery roles.",
+    "mapping_limit": "Screening and qualifications alone omit development, retention and backup coverage."
+  },
+  {
+    "locator": "CC1.5",
+    "design_analysis": "Tie assigned control duties to performance review, incentives, excessive-pressure assessment and corrective consequences.",
+    "mapping_limit": "A control-owner list and self-assessment omit performance accountability."
+  },
+  {
+    "locator": "CC2.1",
+    "design_analysis": "Reconcile information used by controls to reliable source populations, asset/data-flow inventories, classification and location.",
+    "mapping_limit": "Export integrity alone omits whether the information is relevant, timely and complete."
+  },
+  {
+    "locator": "CC2.2",
+    "design_analysis": "Communicate objectives, system boundaries, changed responsibilities and confidential issue-reporting routes to staff and governance.",
+    "mapping_limit": "Policy publication alone omits understanding, upward reporting and change communications."
+  },
+  {
+    "locator": "CC2.3",
+    "design_analysis": "Give customers and providers accurate service boundaries, commitments, responsibilities and incident/contact routes; route incoming concerns.",
+    "mapping_limit": "Contract clauses alone omit two-way communications and operational notices."
+  },
+  {
+    "locator": "CC3.1",
+    "design_analysis": "Translate accepted security, availability and confidentiality commitments into specific risk objectives and tolerances.",
+    "mapping_limit": "A risk appetite document needs service-specific measures and resource implications."
+  },
+  {
+    "locator": "CC3.2",
+    "design_analysis": "Analyze threats and vulnerabilities across the service, corporate dependencies and providers; assign treatments for significant risks.",
+    "mapping_limit": "A register entry needs supported analysis, affected assets and response ownership."
+  },
+  {
+    "locator": "CC3.3",
+    "design_analysis": "Include malicious insiders, management override, misuse of access, incentives and dishonest reporting in fraud scenarios.",
+    "mapping_limit": "Financial fraud analysis alone misses information-system abuse."
+  },
+  {
+    "locator": "CC3.4",
+    "design_analysis": "Reassess changes in service model, leadership, providers, technology, obligations and threats.",
+    "mapping_limit": "Project review alone misses external change and emerging threats."
+  },
+  {
+    "locator": "CC4.1",
+    "design_analysis": "Combine ongoing monitoring with objective separate evaluations; adjust scope and cadence to risk and change.",
+    "mapping_limit": "Self-certification is management monitoring; independent assurance needs separate competence and authority."
+  },
+  {
+    "locator": "CC4.2",
+    "design_analysis": "Evaluate deficiencies, notify responsible management/governance and verify corrective action effectiveness.",
+    "mapping_limit": "Closing a ticket without independent validation is insufficient."
+  },
+  {
+    "locator": "CC5.1",
+    "design_analysis": "Select preventive/detective controls from service risk; document incompatible duties and compensating review.",
+    "mapping_limit": "A registry mapping does not establish a suitably designed activity."
+  },
+  {
+    "locator": "CC5.2",
+    "design_analysis": "Connect infrastructure, access and development controls to the technologies actually supporting the service.",
+    "mapping_limit": "Generic minimum standards need platform-specific technical design and deployed configuration evidence."
+  },
+  {
+    "locator": "CC5.3",
+    "design_analysis": "Translate policy into named execution roles, triggers, corrective actions and periodically updated procedures.",
+    "mapping_limit": "A published policy is insufficient without evidence of execution."
+  },
+  {
+    "locator": "CC6.1",
+    "design_analysis": "Specify identities, authentication, privileged paths, resource authorization, segmentation and protection of credentials and cryptographic keys.",
+    "mapping_limit": "IAM lifecycle mappings need AUTH-TECH and CRYPTO-TRANSFER design supplements."
+  },
+  {
+    "locator": "CC6.2",
+    "design_analysis": "Verify identity and authorization before issuing access; reconcile all identity stores and revoke access when authorization ends.",
+    "mapping_limit": "Directory controls need local accounts, customer administration and supplier access coverage."
+  },
+  {
+    "locator": "CC6.3",
+    "design_analysis": "Authorize rights by job duties and least privilege; review conflicts and changed access needs.",
+    "mapping_limit": "Additions alone omit removals, segregation conflicts and privileged exceptions."
+  },
+  {
+    "locator": "CC6.4",
+    "design_analysis": "Define approved zones, credentials, visitors, escort, access review and removal at both sites and provider facilities.",
+    "mapping_limit": "Generic security architecture needs PHYSICAL-SITE supplement and provider evidence."
+  },
+  {
+    "locator": "CC6.5",
+    "design_analysis": "Keep devices and media protected until data/software are removed or rendered unrecoverable under the approved disposition.",
+    "mapping_limit": "Asset retirement status alone is not verified sanitization."
+  },
+  {
+    "locator": "CC6.6",
+    "design_analysis": "Protect external paths using approved ingress/egress rules, strong authentication and restricted administrative channels.",
+    "mapping_limit": "Network policy alone needs concrete configurations and external-path testing."
+  },
+  {
+    "locator": "CC6.7",
+    "design_analysis": "Authorize transfers and removals; protect channels, media and endpoints; record encryption and key responsibilities.",
+    "mapping_limit": "CRYPTO-TRANSFER supplement must address exported data and removable media as well as replication."
+  },
+  {
+    "locator": "CC6.8",
+    "design_analysis": "Restrict software installation, detect unauthorized changes and malicious code, and handle externally introduced files.",
+    "mapping_limit": "Endpoint baseline alone requires effective enforcement, alert handling and exceptions."
+  },
+  {
+    "locator": "CC7.1",
+    "design_analysis": "Detect configuration drift, unknown components and vulnerabilities across the full asset population.",
+    "mapping_limit": "A scanner list omits discovery reconciliation and actionable drift management."
+  },
+  {
+    "locator": "CC7.2",
+    "design_analysis": "Monitor anomalies and detection-system health; tune detection to service risks and review collection gaps.",
+    "mapping_limit": "Log retention alone does not demonstrate useful detection or functioning collection."
+  },
+  {
+    "locator": "CC7.3",
+    "design_analysis": "Triage events against service objectives and confidentiality impact; preserve dismissals and incident classifications.",
+    "mapping_limit": "An incident ticket alone omits impact analysis and classification completeness."
+  },
+  {
+    "locator": "CC7.4",
+    "design_analysis": "Exercise command, containment, mitigation, communication, eradication and return to service; handle legal notice duties separately.",
+    "mapping_limit": "A runbook needs tested contacts, authority, upstream notice clocks and decision evidence."
+  },
+  {
+    "locator": "CC7.5",
+    "design_analysis": "Recover affected services, communicate status, analyze causes and validate preventive improvements and recovery plans.",
+    "mapping_limit": "A successful restore alone omits recurrence prevention and lessons learned."
+  },
+  {
+    "locator": "CC8.1",
+    "design_analysis": "Control requirements, design, testing, approval, release and emergency changes across code, configuration, infrastructure and data.",
+    "mapping_limit": "Repository review alone misses runtime reconciliation, purchased systems and emergency work."
+  },
+  {
+    "locator": "CC9.1",
+    "design_analysis": "Treat disruption risks across primary/recovery sites and critical suppliers; consider risk-transfer options as part of management's analysis.",
+    "mapping_limit": "A BIA identifies impact but does not itself implement mitigation; insurance is not presumed mandatory."
+  },
+  {
+    "locator": "CC9.2",
+    "design_analysis": "Tier suppliers, assess scope and exceptions, establish duties, monitor performance and plan exit.",
+    "mapping_limit": "A provider assurance report does not automatically cover customer responsibilities or our site dependencies."
+  },
+  {
+    "locator": "A1.1",
+    "design_analysis": "Measure current load, forecast average/peak demand and trigger capacity changes against accepted service objectives at both sites.",
+    "mapping_limit": "CAPACITY supplement is required; a BIA alone cannot demonstrate available recovery headroom."
+  },
+  {
+    "locator": "A1.2",
+    "design_analysis": "Address environmental threats, monitored protection, resilient processing and recoverable off-site backups.",
+    "mapping_limit": "ENVIRONMENT supplement and provider evidence are needed in addition to backup policy."
+  },
+  {
+    "locator": "A1.3",
+    "design_analysis": "Exercise service recovery and verify backup completeness/integrity against accepted recovery objectives.",
+    "mapping_limit": "Backup job success alone is insufficient; validate usable recovery and dependencies."
+  },
+  {
+    "locator": "C1.1",
+    "design_analysis": "Identify confidential data and obligations; control retention and protection against premature destruction throughout its lifecycle.",
+    "mapping_limit": "Classification alone omits retention execution and protected recovery copies."
+  },
+  {
+    "locator": "C1.2",
+    "design_analysis": "Identify data eligible for destruction and verify deletion across media, providers and backup lifecycle while respecting holds.",
+    "mapping_limit": "A retention schedule alone omits execution and documented residual copies."
+  },
+  {
+    "locator": "DC1",
+    "design_analysis": "Draft the services offered, intended customers and relevant service operations; tie statements to the proposed service inventory.",
+    "mapping_limit": "Use proposed wording until actual service facts and management ownership are supplied."
+  },
+  {
+    "locator": "DC2",
+    "design_analysis": "List principal service commitments and system requirements, their origins and relationship to the selected categories.",
+    "mapping_limit": "Do not invent customer SLAs, RTO/RPO or contractual obligations."
+  },
+  {
+    "locator": "DC3",
+    "design_analysis": "Describe infrastructure, software, people, procedures and data with boundaries and data flows, including corporate and recovery dependencies.",
+    "mapping_limit": "Inventory labels alone omit how components interact and which parties operate them."
+  },
+  {
+    "locator": "DC4",
+    "design_analysis": "Maintain the incident population and assess incidents affecting achievement of service commitments during the reporting period.",
+    "mapping_limit": "No supplied incidents is not evidence that no material incidents occurred."
+  },
+  {
+    "locator": "DC5",
+    "design_analysis": "Explain selected criteria and controls sufficient for users to understand the design and relevant period operation.",
+    "mapping_limit": "Candidate mappings must not be described as implemented controls."
+  },
+  {
+    "locator": "DC6",
+    "design_analysis": "Identify customer actions necessary with our controls to meet commitments, and explain their interaction.",
+    "mapping_limit": "Do not label every customer duty a complementary user-entity control or assume execution."
+  },
+  {
+    "locator": "DC7",
+    "design_analysis": "Identify subservice organizations, functions, scope treatment and complementary dependencies; reconcile report coverage.",
+    "mapping_limit": "Carve-out/inclusive treatment requires engagement facts and examiner agreement; supplier opinions are not inherited."
+  },
+  {
+    "locator": "DC8",
+    "design_analysis": "Explain any criterion determined irrelevant to the system and its factual basis.",
+    "mapping_limit": "Owner category selection is not approval of individual exclusions."
+  },
+  {
+    "locator": "DC9",
+    "design_analysis": "Maintain changes relevant to the system description and service commitments across the period.",
+    "mapping_limit": "A release list must include organizational, supplier and infrastructure changes and their effects."
+  }
+]
