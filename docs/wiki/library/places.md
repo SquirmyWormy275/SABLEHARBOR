@@ -25,6 +25,10 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Rights and source attribution](../../../geospatial/LICENSES.md) — MD
 - [Sable Harbor geospatial framework](../../../geospatial/README.md) — MD
 
+## `geospatial/adjudication`
+
+- [Geographic discovery adjudication](../../../geospatial/adjudication/README.md) — MD
+
 ## `geospatial/docs`
 
 - [ARU/BS&T geographic implementation summary](../../../geospatial/docs/ARU_BST_GEOGRAPHY_ADDENDUM_IMPLEMENTATION_SUMMARY.md) — MD
