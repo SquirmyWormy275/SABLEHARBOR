@@ -9,7 +9,7 @@
     "arrears_paid_usd",
     "closing_unpaid_usd"
   ],
-  "limitations": "Treasury is illustrative FIFO allocation within cash-flow class, not employee/vendor bank-payment proof. Obligation and payable master funded/unpaid fields are terminal snapshots, not month-end balances; history and reconciliation rows control dated exposure. Industrial invoice terminal settlement fields have the same boundary. Complete industrial PO/receipt/invoice joins are present; Core vendor originals and daily bank confirmations are not supplied. Native industrial document lineage is a model support chain, not independent corroboration.",
+  "limitations": "Treasury is illustrative FIFO allocation within cash-flow class, not employee/vendor bank-payment proof. Obligation and payable master funded/unpaid fields are terminal snapshots, not month-end balances; history and reconciliation rows control dated exposure. Industrial invoice terminal settlement fields have the same boundary. Complete industrial PO/receipt/invoice joins are present; Core vendor originals and independent daily bank confirmations are not supplied. Industrial bank transactions/reconciliations are retained as modeled clearing records, not bank-issued evidence. Native industrial document lineage is a model support chain, not independent corroboration.",
   "rows": [
     {
       "arrears_paid_usd": "0.0000",

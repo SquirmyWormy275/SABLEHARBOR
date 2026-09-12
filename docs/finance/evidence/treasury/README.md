@@ -2,7 +2,7 @@
 
 **Scope:** base scenario, 2027; complete declared table populations, all applicable reporting units. Public synthetic records. New PDF/Excel presentation remains subject to exact-file review.
 
-Treasury is illustrative FIFO allocation within cash-flow class, not employee/vendor bank-payment proof. Obligation and payable master funded/unpaid fields are terminal snapshots, not month-end balances; history and reconciliation rows control dated exposure. Industrial invoice terminal settlement fields have the same boundary. Complete industrial PO/receipt/invoice joins are present; Core vendor originals and daily bank confirmations are not supplied. Native industrial document lineage is a model support chain, not independent corroboration.
+Treasury is illustrative FIFO allocation within cash-flow class, not employee/vendor bank-payment proof. Obligation and payable master funded/unpaid fields are terminal snapshots, not month-end balances; history and reconciliation rows control dated exposure. Industrial invoice terminal settlement fields have the same boundary. Complete industrial PO/receipt/invoice joins are present; Core vendor originals and independent daily bank confirmations are not supplied. Industrial bank transactions/reconciliations are retained as modeled clearing records, not bank-issued evidence. Native industrial document lineage is a model support chain, not independent corroboration.
 
 ## Open and trace the records
 
@@ -20,6 +20,10 @@ Open the CSV files below directly in Excel, or use `evidence.sqlite3` for the sa
 | industrial_receipts | 300 | 4500 | [CSV](source/industrial_receipts.csv) |
 | industrial_supplier_invoices | 300 | 4500 | [CSV](source/industrial_supplier_invoices.csv) |
 | industrial_document_journal_lineage | 7131 | 123716 | [CSV](source/industrial_document_journal_lineage.csv) |
+| industrial_bank_transactions | 1754 | 26440 | [CSV](source/industrial_bank_transactions.csv) |
+| industrial_bank_reconciliations | 24 | 360 | [CSV](source/industrial_bank_reconciliations.csv) |
+| industrial_vendors | 25 | 25 | [CSV](source/industrial_vendors.csv) |
+| industrial_work_orders | 60 | 900 | [CSV](source/industrial_work_orders.csv) |
 
 ## Reconciliation
 

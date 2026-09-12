@@ -1,7 +1,7 @@
 {
   "extracted_database": {
     "path": "docs/finance/evidence/close/evidence.sqlite3",
-    "sha256": "4bf4c76fc1bd6986828c7b397044bb16882b40efac6bc536749bb48110117b8d"
+    "sha256": "4bfc65cbf1ce5d1bde4e3ec4759c806a6a1af95326190231c703581056715c4d"
   },
   "markdown": "docs/finance/evidence/close/README.md",
   "native_database": {
@@ -28,6 +28,7 @@
       "release_member": "tables/journal.csv",
       "release_member_sha256": "7c17836d2e659e3f17f9d1a95875acdb5f402d7db97280edb196e73d75b6aa93",
       "row_count": 4864,
+      "selection_role": "SCOPED_OPERATING_POPULATION",
       "sha256": "10b8bee2f13881e14ae9ddf0a862cf264eea3de92693368119421eee48a9bc91"
     },
     {
@@ -38,6 +39,7 @@
       "release_member": "tables/enterprise_journal.csv",
       "release_member_sha256": "660b9e4635f9abcb5b65f773128a1f2df3d36517c135db7a521300aeff88220d",
       "row_count": 6097,
+      "selection_role": "SCOPED_OPERATING_POPULATION",
       "sha256": "7077496950b963701e8a4a387c15044a9c02f390a53e6e00a7be3f90cc70de40"
     },
     {
@@ -48,6 +50,7 @@
       "release_member": "tables/unit_trial_balance.csv",
       "release_member_sha256": "95096f9b3e17e8110af4967f2939db05bf7d9a9d21e962502d941ec771134f62",
       "row_count": 1867,
+      "selection_role": "SCOPED_OPERATING_POPULATION",
       "sha256": "5eb03bd25ccd803a92913ec098aa8324def9ffd619eb6cb7ab83dc3937b929c7"
     },
     {
@@ -58,6 +61,7 @@
       "release_member": "tables/legal_trial_balance.csv",
       "release_member_sha256": "d21b8227c07cabf9717c7dc2d1badbd6360deb03e8e36ce90f4f529b79e65cb5",
       "row_count": 1616,
+      "selection_role": "SCOPED_OPERATING_POPULATION",
       "sha256": "023ebf1bd5001ce70bde19ee8bf364a41b54534cb4f8c9477597bccf46f296bc"
     },
     {
@@ -68,6 +72,7 @@
       "release_member": "tables/monthly_statements.csv",
       "release_member_sha256": "4310ca7d71648e83006010b425ab381d248879de645c6b034b2dc169dfbe9d31",
       "row_count": 108,
+      "selection_role": "SCOPED_OPERATING_POPULATION",
       "sha256": "c3f06769ce6975764e8edb6ec7c61c95de2ed3088cc7b6468cbfad5715fe0c34"
     },
     {
@@ -78,6 +83,7 @@
       "release_member": "tables/legal_statements.csv",
       "release_member_sha256": "5a340a4de6564b94ef841524b9d71c5002a5273e74b0577ffe1184d5a138ec79",
       "row_count": 96,
+      "selection_role": "SCOPED_OPERATING_POPULATION",
       "sha256": "c5761ef899d30c336400272e0f8497868d12ff7412d4b03f758f5f8f1db3b641"
     },
     {
@@ -88,6 +94,7 @@
       "release_member": "tables/credit_allowance.csv",
       "release_member_sha256": "6f40a2bfe29457425d1641abd1191f9a5d075728c5fbb93616dde4918f604d80",
       "row_count": 136,
+      "selection_role": "SCOPED_OPERATING_POPULATION",
       "sha256": "48f7d95bb00f0cec4489c5e15b42e98138226b745af4f8b18460d63a10e4f097"
     },
     {
@@ -98,7 +105,30 @@
       "release_member": "tables/subledger_rollforward.csv",
       "release_member_sha256": "e0720dcbf6474fcca8ffb84ee406abfff725086d429fdb3219118542106e7d6d",
       "row_count": 72,
+      "selection_role": "SCOPED_OPERATING_POPULATION",
       "sha256": "9a2d216f5c3b7bce6f5a7c5e1c5491bb06586f129d171f61a486f9dbb7feaaa2"
+    },
+    {
+      "full_release_row_count": 180,
+      "native_table": null,
+      "path": "docs/finance/evidence/close/source/industrial_eliminations.csv",
+      "predicate": "base scenario where supplied; 2027 by year/period/month index; shared static inputs retained; terminal master snapshots explicitly identified in README",
+      "release_member": "industrial/forecast/eliminations.csv",
+      "release_member_sha256": "11c99e9edceae33172a3ab1ed5ddc9fd325dff62cf6c025814e023f49bc87142",
+      "row_count": 12,
+      "selection_role": "SCOPED_OPERATING_POPULATION",
+      "sha256": "df335d419785a7c370417ed871d6da1878993d2149b155e1ec0b30969f6e8966"
+    },
+    {
+      "full_release_row_count": 3240,
+      "native_table": null,
+      "path": "docs/finance/evidence/close/source/industrial_intercompany.csv",
+      "predicate": "base scenario where supplied; 2027 by year/period/month index; shared static inputs retained; terminal master snapshots explicitly identified in README",
+      "release_member": "industrial/forecast/intercompany.csv",
+      "release_member_sha256": "e680f945df3673a4c6a08353b1a111769e20eb3c0917e08c74b3e29d792137af",
+      "row_count": 216,
+      "selection_role": "SCOPED_OPERATING_POPULATION",
+      "sha256": "cae2ce39164d9a602167c7607e39a8cb44caddab37df8222e1a726b0b6986b78"
     }
   ],
   "status": "SOURCE_RECONCILED_VISUAL_REVIEW_PENDING",
