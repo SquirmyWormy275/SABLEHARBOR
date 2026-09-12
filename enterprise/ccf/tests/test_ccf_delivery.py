@@ -47,8 +47,8 @@ def test_delivery_hash_verification_rejects_modified_member(tmp_path):
 
 @pytest.mark.parametrize("member", ["plans", "counts", "coverage", "rehearsal"])
 def test_delivery_reperformance_rejects_resealed_inconsistency(
-    tmp_path, monkeypatch, plans, member
-):  # noqa: F811
+    tmp_path, monkeypatch, plans, member  # noqa: F811
+):
     import copy
 
     selected = copy.deepcopy(plans)
