@@ -98,3 +98,20 @@ uv run python -m enterprise.ccf.assurance.reference verify \
 The new output directory contains `assessment/` (the existing ten-member workbench), `WORKPAPERS.json`, CSV implementation/test plans, source inventories, a mapping review queue, the reference scope, readiness notes and a bundle manifest. Both the inner assessment and the outer bundle can be re-performed; available source originals are hash-checked and the HIPAA paragraph population is reconciled to the pinned XML. These bundles are internal preparation records. The baseline has 447 requirement/boundary rows and 870 attribute test plans; all assessment conclusions remain unresolved pending the relevant reviews and evidence. Counts include context, definitions and review tasks, not only operative controls.
 
 The [reference source notes](reference_data/README.md) distinguish all 61 TSC and nine DC identifiers, the full Part 160/164 section/paragraph extraction, and the eight C5 continuity workpapers from complete obligation/mapping review. The generic `starter` and fictional `demo` retain their existing behavior. ISO extensions stay discoverable but are not selected in this first reference build.
+
+## Baseline design and workflow delivery
+
+The design builder adds 149 authored requirement analyses, 64 distinct proposed control procedures, five technical supplements, a service-description workpaper, 192 operating-input rows and five separately labelled fictional assessment stages. Real-framework reviews and operating evidence remain absent. The reference workpapers now include the concrete procedures.
+
+```bash
+uv run python -m enterprise.ccf.assurance.preparation build \
+  --source-root /path/to/content-addressed-originals --output /new/design-package
+uv run python -m enterprise.ccf.assurance.preparation verify \
+  --source-root /path/to/content-addressed-originals --output /existing/design-package
+```
+
+Requires `pdftotext` plus the pinned source originals. C5 builds additionally require the publisher YAML ZIP at SHA-256 `ab906417ae2a4f210b0f23b0edaafd77cb20bc944af1aeeccfd8257eab59727a`. The corrected C5 population contains 623 child identifiers, including 29 sharpened children missed by the earlier extraction, and two internal context gates. The source validator rejects omitted or misclassified children. General conditions and assessment chapters still require semantic review.
+
+`START_HERE.md` links the design documents, reference explorer and five synthetic explorers. `DESIGNS.json` and CSVs carry the authored analysis; `SOURCE_CONTEXT.json` carries paragraph/focus-candidate fingerprints rather than republished criteria. Bullet spans are source-review aids, not an authoritative points-of-focus population. `OPERATING_INPUTS.csv` is intentionally unfilled where actual people, systems, parameters and providers are needed.
+
+The exercise demonstrates shared corporate evidence with separate site validation, independent SOC/HIPAA tests, C5 delta creation, failed-test preservation, same-period retesting and prospective validation of a new implementation version. Fictional reviews remain confined to the fictional catalog. A later passing period does not repair the earlier failed period. These examples are not external framework coverage or an examination opinion.

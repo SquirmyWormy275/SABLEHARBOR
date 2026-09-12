@@ -472,6 +472,10 @@ DEFAULT_PROCEDURE = [
 
 def workpapers(catalog, assessment, native):
     controls = {r["id"]: r for r in native["records"] if r["kind"] == "control"}
+    designs = {
+        r["control_id"]: r
+        for r in read_json(DATA.parent / "design_data" / "control_procedures.json")
+    }
     selected = {
         s.framework_id: set(s.categories)
         for s in assessment.scope.baseline + assessment.scope.targets
@@ -546,12 +550,16 @@ def workpapers(catalog, assessment, native):
                 owner_role_label=roles[impl.owner_role_id],
                 appointment_status="NOT_ASSERTED",
                 proposed_design=control["statement"],
+                implementation_procedure=designs[impl.control_id]["procedure"],
+                proposed_system_of_record=designs[impl.control_id]["proposed_system_of_record"],
+                procedure_evidence_outputs=designs[impl.control_id]["evidence_outputs"],
+                proposed_reviewer_role=designs[impl.control_id]["reviewer_role_description"],
                 trigger=control["frequency_or_trigger"],
                 native_evidence_expectation=control["evidence_expectation"],
                 state="PROPOSED",
                 deployment_status="NOT_ASSERTED",
                 enhancements_needed=[
-                    "Translate the enterprise statement into this service's actors, systems, frequency, thresholds, exceptions and evidence.",
+                    "Accept the proposed procedure and supply actual actors, system instances and approved risk-based thresholds before operation.",
                     "Record upstream and supplier responsibilities, local execution and any inherited design with boundary-specific validation.",
                     "Reconcile every mapped source objective; a broad native statement may need additional measures or a new control.",
                 ],
@@ -589,6 +597,47 @@ def validate_source_inventory(catalog, source_root):
     expected = {s["locator"]: [p["text_sha256"] for p in s["paragraphs"]] for s in inv["sections"]}
     if len(expected) != len(inv["sections"]) or actual != expected:
         raise ValueError("HIPAA section/paragraph inventory differs from pinned source")
+    if any(f.id == "C5" for f in catalog.frameworks):
+        validate_c5_inventory(catalog, source_root)
+
+
+def validate_c5_inventory(catalog, source_root):
+    """Check the child population against the pinned publisher YAML, including sharpened IDs."""
+    from zipfile import ZipFile
+
+    import yaml
+
+    inventory = read_json(DATA / "c5_inventory.json")
+    actual, parents = {}, []
+    with ZipFile(Path(source_root) / inventory["source_sha256"]) as archive:
+        for name in archive.namelist():
+            if not name.endswith(".yml") or Path(name).stem in {"GC", "version_and_license"}:
+                continue
+            for parent in yaml.safe_load(archive.read(name)):
+                pid = f"{Path(name).stem}-{parent['identifier']}"
+                parents.append(pid)
+                for kind in ("basic", "additional_sharpen", "additional_complement"):
+                    for child in parent.get(kind) or []:
+                        cid = pid + "." + child["identifier"]
+                        if cid in actual:
+                            raise ValueError("Duplicate C5 publisher child")
+                        actual[cid] = dict(
+                            kind=kind,
+                            member=name,
+                            text_sha256=hashlib.sha256(child["criterion"].encode()).hexdigest(),
+                        )
+    if actual != inventory["children"] or sorted(parents) != inventory["parents"]:
+        raise ValueError("C5 inventory differs from pinned publisher source")
+    requirements = {
+        r.id.removeprefix("C5:"): r
+        for r in catalog.requirements
+        if r.framework_id == "C5" and not r.id.startswith("C5:PREP-")
+    }
+    if requirements.keys() != actual.keys() or any(
+        requirements[cid].category != ("BASIC" if row["kind"] == "basic" else "ADDITIONAL")
+        for cid, row in actual.items()
+    ):
+        raise ValueError("C5 catalog omits or misclassifies a publisher child")
 
 
 def bundle_files(root):

@@ -77,6 +77,7 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Business operating depth delivery — 2026-09-09](../../internal/development/BUSINESS_OPERATIONS_DELIVERY_2026-09-09.md) — MD
 - [CCF operating and assurance direction](../../internal/development/CCF_ASSURANCE_DIRECTION_2026-09-11.md) — MD
 - [Initial CCF assurance scope and source proposal](../../internal/development/CCF_ASSURANCE_SCOPE_PROPOSAL_2026-09-11.md) — MD
+- [CCF baseline design and workflow delivery](../../internal/development/CCF_BASELINE_DESIGN_DELIVERY_2026-09-11.md) — MD
 - [CCF preparation compared with Compliance Atlas](../../internal/development/CCF_COMPLIANCE_ATLAS_COMPARISON_2026-09-11.md) — MD
 - [CCF prebuild repository audit — September 11, 2026](../../internal/development/CCF_PREBUILD_REPOSITORY_AUDIT_2026-09-11.md) — MD
 - [CCF preparation delivery — September 11, 2026](../../internal/development/CCF_PREPARATION_DELIVERY_2026-09-11.md) — MD

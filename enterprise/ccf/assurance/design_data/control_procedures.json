@@ -1,0 +1,740 @@
+[
+  {
+    "control_id": "SH-ASS-001",
+    "proposed_system_of_record": "Control calendar and owner certification register",
+    "procedure": "Quarterly, collect each owner's execution counts, exceptions and overdue actions; compare certifications with underlying records; label the result management self-assessment.",
+    "evidence_outputs": [
+      "Certification",
+      "execution count reconciliation",
+      "exception links"
+    ],
+    "reviewer_role_description": "Second-line assurance lead"
+  },
+  {
+    "control_id": "SH-ASS-002",
+    "proposed_system_of_record": "Monitoring schedule and obligation register",
+    "procedure": "Select risk-based controls and sites; inspect source evidence separately from owner attestations; record scope limitations and escalate deviations.",
+    "evidence_outputs": [
+      "Monitoring plan",
+      "working papers",
+      "escalations"
+    ],
+    "reviewer_role_description": "Independent assurance lead"
+  },
+  {
+    "control_id": "SH-ASS-004",
+    "proposed_system_of_record": "Assessment workspace and evidence index",
+    "procedure": "Define the objective, boundary, period and independent population query before selection; record selection rationale; execute each attribute test and preserve failed and untested cases.",
+    "evidence_outputs": [
+      "Population query",
+      "selected IDs",
+      "test record",
+      "review"
+    ],
+    "reviewer_role_description": "Reviewer distinct from test preparer"
+  },
+  {
+    "control_id": "SH-ASS-005",
+    "proposed_system_of_record": "Findings register",
+    "procedure": "Assign severity, accountable role and due date when a finding opens; link corrective work and independent retest; escalate overdue items; retain original failures after closure.",
+    "evidence_outputs": [
+      "Finding history",
+      "action evidence",
+      "retest",
+      "closure approval"
+    ],
+    "reviewer_role_description": "Risk authority for residual acceptance"
+  },
+  {
+    "control_id": "SH-BCM-001",
+    "proposed_system_of_record": "Service inventory and BIA workbook",
+    "procedure": "Walk each critical service from Reno loss through Boise recovery; record outage impacts, dependencies, tolerable outage, recovery order, RTO, RPO and required resources; obtain business acceptance annually and after material change.",
+    "evidence_outputs": [
+      "Versioned BIA",
+      "dependency map",
+      "objective approval"
+    ],
+    "reviewer_role_description": "Business service owner"
+  },
+  {
+    "control_id": "SH-BCM-002",
+    "proposed_system_of_record": "Backup scheduler and recovery catalogue",
+    "procedure": "Assign each dataset a schedule derived from its approved RPO; record retention and isolation; monitor every scheduled job; ticket missed or failed runs and reconcile protected datasets to inventory.",
+    "evidence_outputs": [
+      "Schedule",
+      "job ledger",
+      "failure tickets",
+      "access and isolation configuration"
+    ],
+    "reviewer_role_description": "Recovery service owner"
+  },
+  {
+    "control_id": "SH-BCM-003",
+    "proposed_system_of_record": "Restore test environment",
+    "procedure": "Select critical datasets and recovery paths using documented risk; restore into an isolated environment; measure recovery time and recovered data age; validate integrity and usability against the BIA; record failures and retest.",
+    "evidence_outputs": [
+      "Restore commands",
+      "timestamps",
+      "reconciliation",
+      "result and findings"
+    ],
+    "reviewer_role_description": "Service owner distinct from restore operator"
+  },
+  {
+    "control_id": "SH-BCM-004",
+    "proposed_system_of_record": "Continuity exercise register",
+    "procedure": "Exercise primary-site loss, recovery-site operation and return to service annually and after major change; include suppliers and customer dependencies; record decision times, communications, capacity and lessons; update plans and retest failures.",
+    "evidence_outputs": [
+      "Scenario",
+      "attendance",
+      "event timeline",
+      "measured results",
+      "revised plan"
+    ],
+    "reviewer_role_description": "Continuity sponsor"
+  },
+  {
+    "control_id": "SH-CFG-001",
+    "proposed_system_of_record": "Asset and service inventory",
+    "procedure": "Record assets, software, services, owners, locations and lifecycle states at onboarding/change/retirement; reconcile identity, endpoint, network, provider and deployment discovery to inventory; resolve unowned resources.",
+    "evidence_outputs": [
+      "Inventory snapshot",
+      "discovery comparison",
+      "discrepancy tickets"
+    ],
+    "reviewer_role_description": "Service owner"
+  },
+  {
+    "control_id": "SH-CFG-002",
+    "proposed_system_of_record": "Configuration baseline repository",
+    "procedure": "Version the intended configuration for each technology; compare deployed settings to the approved baseline; investigate drift and link correction or an expiring exception.",
+    "evidence_outputs": [
+      "Baseline version",
+      "drift export",
+      "change or exception link"
+    ],
+    "reviewer_role_description": "Security architecture reviewer"
+  },
+  {
+    "control_id": "SH-DAT-001",
+    "proposed_system_of_record": "Dataset and classification register",
+    "procedure": "Name a steward for each dataset; classify by sensitivity and contractual restrictions; validate the classification at intake and material change; propagate it to storage, sharing and retention rules.",
+    "evidence_outputs": [
+      "Dataset entry",
+      "steward assignment proposal",
+      "classification decision"
+    ],
+    "reviewer_role_description": "Data owner"
+  },
+  {
+    "control_id": "SH-DAT-002",
+    "proposed_system_of_record": "Processing register and privacy case queue",
+    "procedure": "Record purpose, authority, parties, PHI role, designated record set and approved flows before processing; verify request authority and minimum-necessary conditions; route access, amendment and accounting support through the upstream agreement; preserve decisions.",
+    "evidence_outputs": [
+      "Flow inventory",
+      "authority analysis",
+      "request log",
+      "response evidence"
+    ],
+    "reviewer_role_description": "Privacy/legal reviewer"
+  },
+  {
+    "control_id": "SH-DAT-003",
+    "proposed_system_of_record": "Retention schedule and deletion scheduler",
+    "procedure": "Map each record class to legal and contractual retention and the retention start event; separate security documentation from clinical records; resolve conflicts and holds before enabling deletion; review the schedule annually and on obligation change.",
+    "evidence_outputs": [
+      "Schedule",
+      "authority citations",
+      "hold check",
+      "deletion design"
+    ],
+    "reviewer_role_description": "Legal and data owner"
+  },
+  {
+    "control_id": "SH-DAT-004",
+    "proposed_system_of_record": "Data validation and amendment queue",
+    "procedure": "Define completeness, accuracy and provenance checks for material datasets; record failed checks and usage restrictions; process authorized corrections with before/after lineage and downstream notification where required.",
+    "evidence_outputs": [
+      "Validation rules",
+      "exception ledger",
+      "amendment trail"
+    ],
+    "reviewer_role_description": "Data steward distinct from change executor"
+  },
+  {
+    "control_id": "SH-ENG-001",
+    "proposed_system_of_record": "Engineering issue tracker",
+    "procedure": "For every material change, identify business intent, affected services/data, risks and owner; link commitments and source requirements before implementation; include period-change description impacts.",
+    "evidence_outputs": [
+      "Change record",
+      "risk assessment",
+      "linked requirement"
+    ],
+    "reviewer_role_description": "Service owner"
+  },
+  {
+    "control_id": "SH-ENG-002",
+    "proposed_system_of_record": "Protected source/configuration repository",
+    "procedure": "Require peer review of the exact proposed revision; check separation from author and protected-branch rules; route emergency bypasses to the documented emergency workflow.",
+    "evidence_outputs": [
+      "Diff",
+      "reviewer identity",
+      "branch settings",
+      "approval event"
+    ],
+    "reviewer_role_description": "Peer other than author"
+  },
+  {
+    "control_id": "SH-ENG-003",
+    "proposed_system_of_record": "Build and test pipeline",
+    "procedure": "Choose tests from change risk including security, privacy, recovery and data effects; bind results to the release artifact; block release on failed mandatory tests unless an authorized exception applies.",
+    "evidence_outputs": [
+      "Test plan",
+      "results",
+      "artifact hash",
+      "exception"
+    ],
+    "reviewer_role_description": "Release authority"
+  },
+  {
+    "control_id": "SH-ENG-004",
+    "proposed_system_of_record": "Deployment pipeline and runtime inventory",
+    "procedure": "Release only approved artifacts using attributable deployment identities; reconcile pipeline runs with actual runtime versions and out-of-band changes; record target environment and rollback reference.",
+    "evidence_outputs": [
+      "Release approval",
+      "artifact digest",
+      "deployment log",
+      "runtime comparison"
+    ],
+    "reviewer_role_description": "Release authority distinct from author"
+  },
+  {
+    "control_id": "SH-ENG-005",
+    "proposed_system_of_record": "Emergency change queue",
+    "procedure": "Record emergency reason, affected boundary, limited authority and recovery plan before execution where feasible; preserve timestamps and bypass scope; obtain retrospective review and correct recurring bypass causes.",
+    "evidence_outputs": [
+      "Emergency ticket",
+      "approval trail",
+      "execution log",
+      "retrospective"
+    ],
+    "reviewer_role_description": "Emergency authority and later independent reviewer"
+  },
+  {
+    "control_id": "SH-ENG-006",
+    "proposed_system_of_record": "Release recovery runbook",
+    "procedure": "For each material release, identify rollback prerequisites, irreversible data effects and stop conditions; test recovery in a representative environment; require a tested recovery alternative when rollback is infeasible.",
+    "evidence_outputs": [
+      "Recovery procedure",
+      "rehearsal result",
+      "release stop decision"
+    ],
+    "reviewer_role_description": "Service owner"
+  },
+  {
+    "control_id": "SH-ERM-001",
+    "proposed_system_of_record": "Enterprise risk register",
+    "procedure": "Reconcile service, technology, supplier, people and legal risks quarterly and when threats change; score impact and likelihood with evidence; assign treatment, residual exposure and affected controls.",
+    "evidence_outputs": [
+      "Risk assessment",
+      "input sources",
+      "treatment and residual rationale"
+    ],
+    "reviewer_role_description": "Risk committee"
+  },
+  {
+    "control_id": "SH-ERM-002",
+    "proposed_system_of_record": "Risk appetite and service commitment register",
+    "procedure": "Translate proposed service commitments into measurable tolerances and escalation triggers; submit tolerances for management acceptance; review annually and before major changes.",
+    "evidence_outputs": [
+      "Tolerance proposal",
+      "approval record",
+      "escalation rules"
+    ],
+    "reviewer_role_description": "Authorized governing body"
+  },
+  {
+    "control_id": "SH-ERM-003",
+    "proposed_system_of_record": "Residual risk acceptance register",
+    "procedure": "Review accepted exposure quarterly and at threshold breach; check authority, expiry and compensating measures; escalate unacceptable or expired acceptance and preserve previous decisions.",
+    "evidence_outputs": [
+      "Acceptance",
+      "monitoring evidence",
+      "expiry and escalation"
+    ],
+    "reviewer_role_description": "Delegated risk authority"
+  },
+  {
+    "control_id": "SH-ERM-004",
+    "proposed_system_of_record": "Stage-gate review register",
+    "procedure": "Before a new service, location or major operating change, review security, privacy, legal, supplier, recovery and capacity implications; record go/no-go conditions and track closure before activation.",
+    "evidence_outputs": [
+      "Cross-functional assessment",
+      "gate decision",
+      "action closure"
+    ],
+    "reviewer_role_description": "Venture or service sponsor"
+  },
+  {
+    "control_id": "SH-ETH-001",
+    "proposed_system_of_record": "Policy portal and attestation register",
+    "procedure": "Distribute approved conduct expectations at onboarding and annually; reconcile the recipient population; follow up missing acknowledgments and route reported violations through protected channels.",
+    "evidence_outputs": [
+      "Approved policy",
+      "distribution and acknowledgment ledger",
+      "case routing"
+    ],
+    "reviewer_role_description": "People/compliance reviewer"
+  },
+  {
+    "control_id": "SH-ETH-004",
+    "proposed_system_of_record": "Fraud and conflict risk register",
+    "procedure": "Review override, incentives, related-party and contracting abuse scenarios annually and for high-risk transactions; assign preventive and detective measures and record unresolved conflicts.",
+    "evidence_outputs": [
+      "Fraud scenario analysis",
+      "conflict check",
+      "approval trail"
+    ],
+    "reviewer_role_description": "Independent governance reviewer"
+  },
+  {
+    "control_id": "SH-GOV-001",
+    "proposed_system_of_record": "Governance charter repository",
+    "procedure": "Maintain governing-body and committee mandates, expertise expectations and reporting duties; schedule oversight of service risks and control deficiencies; retain approved versions and meeting decisions.",
+    "evidence_outputs": [
+      "Charters",
+      "agenda",
+      "minutes",
+      "action log"
+    ],
+    "reviewer_role_description": "Authorized governing body"
+  },
+  {
+    "control_id": "SH-GOV-003",
+    "proposed_system_of_record": "Delegation register",
+    "procedure": "Publish reserved matters and approval limits; verify approving authority at each material decision; resolve conflicting or expired delegations before execution.",
+    "evidence_outputs": [
+      "Delegation version",
+      "approval identity",
+      "decision record"
+    ],
+    "reviewer_role_description": "Governance secretary/legal reviewer"
+  },
+  {
+    "control_id": "SH-GOV-004",
+    "proposed_system_of_record": "Independence and conflict register",
+    "procedure": "Collect annual and event-driven declarations; assess independence and committee eligibility; record recusals and substitute decision authority in relevant proceedings.",
+    "evidence_outputs": [
+      "Declarations",
+      "eligibility assessment",
+      "recusal minutes"
+    ],
+    "reviewer_role_description": "Independent governance reviewer"
+  },
+  {
+    "control_id": "SH-IAM-001",
+    "proposed_system_of_record": "Authoritative personnel/service request and identity directory",
+    "procedure": "Create a unique identity only from an approved worker, contractor or service request; bind sponsor, start/end dates and identity proofing; reconcile creations with authoritative requests.",
+    "evidence_outputs": [
+      "Request",
+      "sponsor",
+      "unique identifier",
+      "creation log"
+    ],
+    "reviewer_role_description": "Hiring manager or service owner"
+  },
+  {
+    "control_id": "SH-IAM-002",
+    "proposed_system_of_record": "Access request queue and entitlement catalogue",
+    "procedure": "Record business need, role, boundary and duration; obtain resource-owner approval; check conflicting privileges; provision only approved rights and confirm actual grants.",
+    "evidence_outputs": [
+      "Approval",
+      "entitlement diff",
+      "conflict check",
+      "provisioning event"
+    ],
+    "reviewer_role_description": "Resource owner distinct from provisioner"
+  },
+  {
+    "control_id": "SH-IAM-003",
+    "proposed_system_of_record": "Personnel change feed and entitlement catalogue",
+    "procedure": "On role change, compare old and new required rights; revoke obsolete entitlements as well as grant approved additions; reconcile applications and site access to the change.",
+    "evidence_outputs": [
+      "Mover event",
+      "before/after rights",
+      "revocation confirmation"
+    ],
+    "reviewer_role_description": "New and prior resource owners"
+  },
+  {
+    "control_id": "SH-IAM-004",
+    "proposed_system_of_record": "Personnel termination feed and application/site directories",
+    "procedure": "At termination or contract expiry, use the authorized effective time to disable accounts, sessions, tokens, remote access and physical credentials; reconcile every connected system; escalate missed revocations immediately.",
+    "evidence_outputs": [
+      "Termination event",
+      "system list",
+      "disable timestamps",
+      "exception case"
+    ],
+    "reviewer_role_description": "People owner and independent access reviewer"
+  },
+  {
+    "control_id": "SH-IAM-005",
+    "proposed_system_of_record": "Privileged access vault and emergency access log",
+    "procedure": "Issue privileged access separately with purpose and duration; record emergency activation and session activity; expire access, rotate exposed credentials and review each emergency use plus quarterly privilege population.",
+    "evidence_outputs": [
+      "Approval",
+      "session log",
+      "expiration",
+      "emergency review"
+    ],
+    "reviewer_role_description": "Privileged service owner other than user"
+  },
+  {
+    "control_id": "SH-IAM-006",
+    "proposed_system_of_record": "Service identity and secret inventory",
+    "procedure": "Record owner, workload, permissions, dependencies and credential lifecycle for every non-human account; constrain grants and rotation according to approved risk requirements; review quarterly and on ownership change.",
+    "evidence_outputs": [
+      "Service identity record",
+      "secret metadata",
+      "rotation and access review"
+    ],
+    "reviewer_role_description": "Workload owner"
+  },
+  {
+    "control_id": "SH-IAM-007",
+    "proposed_system_of_record": "Access review campaign",
+    "procedure": "Quarterly for privileged access and at a risk-approved cadence for other rights, reconcile HR/contractor records to actual entitlements; require owner decisions per account; independently confirm removals and overdue escalation.",
+    "evidence_outputs": [
+      "Complete population",
+      "reviewer decisions",
+      "removal tickets",
+      "verification"
+    ],
+    "reviewer_role_description": "Resource owner and second-line validator"
+  },
+  {
+    "control_id": "SH-INC-001",
+    "proposed_system_of_record": "Incident queue and call tree",
+    "procedure": "Assign severity and commander at discovery; activate escalation, preservation and communications; for suspected PHI breaches route discovery time and upstream notification requirements to legal/privacy; exercise contacts annually.",
+    "evidence_outputs": [
+      "Triage record",
+      "call tree",
+      "escalation and notification timeline"
+    ],
+    "reviewer_role_description": "Incident commander and legal/privacy reviewer"
+  },
+  {
+    "control_id": "SH-INC-002",
+    "proposed_system_of_record": "Incident case repository",
+    "procedure": "Preserve chronology, affected data/services, containment, decisions and communications; assess breach exceptions and documented compromise factors; maintain legal and contract notification clocks and known missing facts.",
+    "evidence_outputs": [
+      "Case timeline",
+      "impact and breach analysis",
+      "notices",
+      "evidence index"
+    ],
+    "reviewer_role_description": "Legal/privacy reviewer and incident sponsor"
+  },
+  {
+    "control_id": "SH-INC-003",
+    "proposed_system_of_record": "Post-incident review register",
+    "procedure": "For defined incident classes, reconstruct contributing factors from evidence; distinguish proximate failure from systemic causes; assign preventive actions and update risk and recovery plans.",
+    "evidence_outputs": [
+      "Root-cause analysis",
+      "action register",
+      "revised risk assessment"
+    ],
+    "reviewer_role_description": "Incident reviewer outside response execution"
+  },
+  {
+    "control_id": "SH-INC-004",
+    "proposed_system_of_record": "Corrective action queue",
+    "procedure": "Track each incident action to an owner, due date and measurable completion condition; validate the fix with evidence; escalate overdue or ineffective actions.",
+    "evidence_outputs": [
+      "Action",
+      "execution evidence",
+      "independent validation",
+      "escalation"
+    ],
+    "reviewer_role_description": "Independent validator"
+  },
+  {
+    "control_id": "SH-LEG-001",
+    "proposed_system_of_record": "Source and obligation register",
+    "procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+    "evidence_outputs": [
+      "Source hash",
+      "applicability rationale",
+      "legal-status check",
+      "reviewer decision"
+    ],
+    "reviewer_role_description": "Qualified legal/compliance reviewer"
+  },
+  {
+    "control_id": "SH-LEG-002",
+    "proposed_system_of_record": "Contract review and signature workflow",
+    "procedure": "Before signature, reconcile service scope, data rights, BA/subcontractor duties, notification timing, liabilities, assurance access and exit terms; verify delegation and unresolved redlines.",
+    "evidence_outputs": [
+      "Review checklist",
+      "redlines",
+      "risk acceptance",
+      "authorized signature"
+    ],
+    "reviewer_role_description": "Authorized legal and business signatories"
+  },
+  {
+    "control_id": "SH-POL-001",
+    "proposed_system_of_record": "Controlled policy repository",
+    "procedure": "Maintain owner, approver, version, effective/review dates and distribution for each policy; link operational procedures; withdraw obsolete versions and review annually or at material change.",
+    "evidence_outputs": [
+      "Version history",
+      "approval",
+      "distribution",
+      "supersession record"
+    ],
+    "reviewer_role_description": "Policy approver distinct from author"
+  },
+  {
+    "control_id": "SH-POL-002",
+    "proposed_system_of_record": "Native control registry",
+    "procedure": "Bind each control to stable ID, objective, owner role, boundary and evidence expectation; evaluate source-mapping impact before changes; version designs and preserve review history.",
+    "evidence_outputs": [
+      "Registry revision",
+      "mapping impact",
+      "ownership and change record"
+    ],
+    "reviewer_role_description": "Control governance reviewer"
+  },
+  {
+    "control_id": "SH-POL-003",
+    "proposed_system_of_record": "Exception and addressable-measure register",
+    "procedure": "Record the exact requirement, rationale, risk, alternatives, compensating measure, approver and expiry; for HIPAA addressable measures document reasonableness and equivalent alternatives; block silent waivers and escalate expiry.",
+    "evidence_outputs": [
+      "Exception/analysis",
+      "approval",
+      "compensating evidence",
+      "expiry review"
+    ],
+    "reviewer_role_description": "Authorized risk and legal reviewer"
+  },
+  {
+    "control_id": "SH-POL-004",
+    "proposed_system_of_record": "Boundary variation register",
+    "procedure": "Compare local and provider designs to the enterprise control; record the reason, responsibility split and additional measures; review changes and verify local evidence before accepting inheritance.",
+    "evidence_outputs": [
+      "Local design",
+      "corporate dependency",
+      "provider split",
+      "validation"
+    ],
+    "reviewer_role_description": "Enterprise control owner and site service owner"
+  },
+  {
+    "control_id": "SH-PPL-002",
+    "proposed_system_of_record": "Restricted personnel screening register",
+    "procedure": "Determine screening and qualification needs by role and jurisdiction before start; obtain permitted checks; resolve adverse or incomplete results through authorized People/legal review before granting sensitive access.",
+    "evidence_outputs": [
+      "Role requirement",
+      "completion attestation",
+      "exception decision"
+    ],
+    "reviewer_role_description": "Authorized People/legal reviewer"
+  },
+  {
+    "control_id": "SH-REC-001",
+    "proposed_system_of_record": "Controlled records repository",
+    "procedure": "Capture actor, timestamp/timezone, boundary, input, decision and outcome for material control events; link approvals and protect records from unauthorized alteration; reconcile missing event records.",
+    "evidence_outputs": [
+      "Event record",
+      "approval link",
+      "access history",
+      "integrity check"
+    ],
+    "reviewer_role_description": "Record owner"
+  },
+  {
+    "control_id": "SH-REC-002",
+    "proposed_system_of_record": "Evidence extraction workspace",
+    "procedure": "Record source, query, parameters, timezone, period and raw count; reconcile against an independent population source; record omissions and access limits before using the extract.",
+    "evidence_outputs": [
+      "Query/run manifest",
+      "raw file hash",
+      "independent count comparison"
+    ],
+    "reviewer_role_description": "Evidence reviewer other than extractor"
+  },
+  {
+    "control_id": "SH-REC-003",
+    "proposed_system_of_record": "Evidence transformation workspace",
+    "procedure": "Retain raw and derived files separately; record transform code/version, parameters and hashes; reperform joins, exclusions and aggregations and reconcile row counts.",
+    "evidence_outputs": [
+      "Raw/derived hashes",
+      "transformation revision",
+      "reconciliation"
+    ],
+    "reviewer_role_description": "Independent evidence reviewer"
+  },
+  {
+    "control_id": "SH-REC-004",
+    "proposed_system_of_record": "Disposal queue and legal-hold register",
+    "procedure": "At scheduled disposal or exit, check retention and holds; execute authorized deletion or destruction across active copies and documented backup lifecycle; retain certificates and investigate failed deletions.",
+    "evidence_outputs": [
+      "Hold check",
+      "authorization",
+      "deletion result",
+      "exception"
+    ],
+    "reviewer_role_description": "Legal hold owner and data owner"
+  },
+  {
+    "control_id": "SH-SEC-001",
+    "proposed_system_of_record": "Security architecture repository",
+    "procedure": "Document trust zones, data flows, administrative paths, authentication, key custody and supplier responsibilities for both sites; assess threat scenarios and minimum requirements before material architecture change.",
+    "evidence_outputs": [
+      "Architecture",
+      "threat assessment",
+      "technical requirements",
+      "review"
+    ],
+    "reviewer_role_description": "Security architecture authority"
+  },
+  {
+    "control_id": "SH-SEC-002",
+    "proposed_system_of_record": "Central logging and detection platform",
+    "procedure": "Inventory required log sources and detections; monitor ingestion and clock gaps; route alerts with severity and ownership; test representative detections and collection-loss alerts.",
+    "evidence_outputs": [
+      "Source coverage",
+      "ingestion health",
+      "detection exercise",
+      "response ticket"
+    ],
+    "reviewer_role_description": "Security monitoring lead"
+  },
+  {
+    "control_id": "SH-SEC-003",
+    "proposed_system_of_record": "Vulnerability management queue",
+    "procedure": "Reconcile asset coverage across scanners, testing and advisories; validate findings; assign remediation against approved severity/exploitability SLAs; verify fixes by rescan or record expiring acceptance.",
+    "evidence_outputs": [
+      "Coverage reconciliation",
+      "finding",
+      "SLA",
+      "fix verification"
+    ],
+    "reviewer_role_description": "Security risk owner"
+  },
+  {
+    "control_id": "SH-SEC-005",
+    "proposed_system_of_record": "Endpoint/network/cloud configuration management",
+    "procedure": "Enforce approved host, endpoint, SaaS and network settings; restrict unauthorized software and flows; detect exceptions and link to remediation or approved time-limited deviation.",
+    "evidence_outputs": [
+      "Configuration exports",
+      "enforcement results",
+      "drift and exception log"
+    ],
+    "reviewer_role_description": "Security baseline owner"
+  },
+  {
+    "control_id": "SH-SEC-006",
+    "proposed_system_of_record": "Security event queue",
+    "procedure": "Escalate material threats into incident command; preserve original alerts and source evidence; record containment authority and actions; reconcile closed alerts to incident criteria.",
+    "evidence_outputs": [
+      "Alert",
+      "triage rationale",
+      "incident link",
+      "preserved evidence"
+    ],
+    "reviewer_role_description": "Incident commander"
+  },
+  {
+    "control_id": "SH-TPR-001",
+    "proposed_system_of_record": "Supplier intake register",
+    "procedure": "Before onboarding, classify service criticality, data/access, concentration and recovery dependency; record PHI/subcontractor role and required diligence tier.",
+    "evidence_outputs": [
+      "Intake",
+      "data/access assessment",
+      "risk tier"
+    ],
+    "reviewer_role_description": "Business service owner"
+  },
+  {
+    "control_id": "SH-TPR-002",
+    "proposed_system_of_record": "Supplier diligence workspace",
+    "procedure": "Obtain tier-appropriate security, privacy, continuity and financial evidence; inspect report scope, period, exceptions and customer controls; record gaps and conditions before onboarding or renewal.",
+    "evidence_outputs": [
+      "Diligence report",
+      "source scope",
+      "exception analysis",
+      "decision"
+    ],
+    "reviewer_role_description": "Security/privacy/procurement reviewers"
+  },
+  {
+    "control_id": "SH-TPR-003",
+    "proposed_system_of_record": "Contract obligation matrix",
+    "procedure": "Translate service, security, BA, subcontractor, incident, evidence, continuity and exit requirements into clauses and named responsible parties; reconcile signed terms with technical design and upstream promises.",
+    "evidence_outputs": [
+      "Clause matrix",
+      "signed agreement when available",
+      "flow-down and dependency register"
+    ],
+    "reviewer_role_description": "Legal reviewer and service owner"
+  },
+  {
+    "control_id": "SH-TPR-004",
+    "proposed_system_of_record": "Supplier monitoring register",
+    "procedure": "At the risk-based cadence, review performance, incidents, assurance exceptions, subcontractor changes, financial exposure and concentration; track breach of terms and corrective action.",
+    "evidence_outputs": [
+      "Monitoring record",
+      "report review",
+      "SLA incidents",
+      "corrective actions"
+    ],
+    "reviewer_role_description": "Vendor service owner"
+  },
+  {
+    "control_id": "SH-TPR-005",
+    "proposed_system_of_record": "Supplier exit checklist",
+    "procedure": "Plan service transfer before termination; revoke supplier identities and connections; obtain data return/destruction or continuing-protection rationale; verify residual backups and open financial obligations.",
+    "evidence_outputs": [
+      "Transition plan",
+      "revocation proof",
+      "data disposition",
+      "closure"
+    ],
+    "reviewer_role_description": "Service owner and legal/privacy reviewer"
+  },
+  {
+    "control_id": "SH-TRN-001",
+    "proposed_system_of_record": "Role-based learning matrix",
+    "procedure": "Map worker and contractor populations to conduct, security, privacy and incident training; update at onboarding and role/obligation change; specify refresher cadence and competency checks.",
+    "evidence_outputs": [
+      "Learning matrix",
+      "population mapping",
+      "approved course versions"
+    ],
+    "reviewer_role_description": "People and compliance owners"
+  },
+  {
+    "control_id": "SH-TRN-002",
+    "proposed_system_of_record": "Learning completion register",
+    "procedure": "Monthly, reconcile required learners to course completions; notify overdue learners and managers; escalate persistent gaps and record approved exceptions.",
+    "evidence_outputs": [
+      "Completion export",
+      "population reconciliation",
+      "overdue and exception log"
+    ],
+    "reviewer_role_description": "People/compliance reviewer"
+  },
+  {
+    "control_id": "SH-TRN-003",
+    "proposed_system_of_record": "Competency register",
+    "procedure": "Define competence and continuity requirements for critical roles; verify qualifications and practical capability; address gaps with training, supervision or backup coverage.",
+    "evidence_outputs": [
+      "Role requirements",
+      "qualification evidence",
+      "gap and succession plan"
+    ],
+    "reviewer_role_description": "Function leader"
+  }
+]
