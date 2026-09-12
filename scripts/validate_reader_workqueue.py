@@ -85,7 +85,7 @@ def validate_coverage(root: Path) -> None:
     actual = {record["page"] for record in data["pages"]}
     expected = {
         str(path.relative_to(root))
-        for directory in ("businesses", "departments")
+        for directory in ("businesses", "departments", "subjects")
         for path in (root / "docs/wiki" / directory).glob("*.md")
         if path.name != "README.md"
     }
@@ -95,6 +95,8 @@ def validate_coverage(root: Path) -> None:
     if counts != {
         "business_pages": sum("/businesses/" in path for path in actual),
         "department_institution_capability_pages": sum("/departments/" in path for path in actual),
+        **({"historical_external_cross_cutting_pages": sum("/subjects/" in path for path in actual)}
+           if any("/subjects/" in path for path in actual) else {}),
         "queued_subjects": len(data["remaining_subject_queue"]),
     }:
         raise ValueError("Wiki coverage counts do not reconcile")
