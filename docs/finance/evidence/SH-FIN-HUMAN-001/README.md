@@ -2,7 +2,7 @@
 
 One packet, not a finance release. **Status: awaiting exact-version user review.** No approval of broader document production is inferred.
 
-Open [the local review page](review.html) in a browser for the retained corporate stationery reference beside the draft, followed by every PDF page and workbook sheet. GitHub displays the [Markdown packet](PACKET.md); download the [PDF](packet.pdf) or [Excel workbook](reconciliation.xlsx) for ordinary document reading. This draft uses the existing corporate publication renderer; its white body pages differ deliberately from the retained blank correspondence template shown for reference.
+Open [the local review page](review.html) in a browser for the retained corporate stationery reference beside the draft, followed by every PDF page and workbook sheet. GitHub displays the [Markdown packet](PACKET.md); download the [PDF](packet.pdf) or [Excel workbook](reconciliation.xlsx) for ordinary document reading. This corrected draft uses the approved Foundry Field primary horizontal logo within the existing publication renderer; its white body pages differ deliberately from the retained blank correspondence template shown for reference.
 
 The packet follows invoice `INV-base-FF-003-TERM-0`, base scenario, from January billing to October 2027 recovery. It contains one invoice, one contract, two first-term contract versions, five movements, two credit notes, six source events and twelve journal lines. No source amounts, financial models or approved artwork were changed.
 

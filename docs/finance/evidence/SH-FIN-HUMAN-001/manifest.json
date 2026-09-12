@@ -1,14 +1,14 @@
 {
   "approved_style_references": {
     "assets/brand/collateral/letterhead/sable-harbor-letterhead-us-letter.pdf": "1ef7c8d26d8cd2bd9b93e7794c81d43befe3794f9fb6c44a4638e870294e6a9c",
-    "assets/brand/logos/sable-harbor__primary-horizontal.svg": "815efb4ca06e4f2df8b9dfee3d4288f94d2e64417b7c863ce5b8639d2de07076",
+    "assets/brand/logos/foundry-field__primary-horizontal.svg": "32bef31266baae81136912f113547fd135160612e03246f0c7726baf78f06f7a",
     "tools/documents/build_controlled_publications.py": "0552479a76b94d128a39e9f9a4a12b87f4ab876e47926918cda3c5aa0a3d872a"
   },
   "files": {
     "PACKET.md": "1b7828cb0a69551ef5ff14fad874bdc6222f697679e4163933d3a6f85f27f60c",
-    "build.py": "383361c4edeae6d1c777ee83486f13ffd2b63a45f699ffc2880c567b5cc686f9",
-    "catalog.json": "76286e276adc6f552adc20aa85a46e3d41f9aedea6cc0729fb80f4372288c0c4",
-    "packet.pdf": "00d0a7f3b831e26982dcbaf965c280f6df2a33e6bc1568bac027f65e475d9244",
+    "build.py": "5947b8c5fb2d82699bd4f3632351a0f978b70b5798458359a3b15437e0906c7f",
+    "catalog.json": "eadba6f55d8f819b89eb198f3c7cf6b3af13f872f098d7ff07cd21cce4e0e85c",
+    "packet.pdf": "1914d0043f1ef3344873d10d35ed016f4cbfd28091459e8dbb2d4b8fee45a5b7",
     "reconciliation.xlsx": "7077ec3ae8e796a6f94759fe19624ab51a11ac45b7ce538a0c447b4c9c384214",
     "source.json": "c4833cfc6f28db6cd3edcae761b0e2d8f463a20de79f1d6fd5b0c517f8f829b7"
   },

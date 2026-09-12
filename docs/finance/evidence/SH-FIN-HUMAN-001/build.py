@@ -109,13 +109,14 @@ def main():
     # Reuse the exact renderer in a private namespace; change only draft footer
     # wording and this packet's page break. No global publication behavior changes.
     namespace=dict(vars(publication))
+    namespace['BRANDS']={**publication.BRANDS, 'foundry-field': {**publication.BRANDS['corporate'], 'logo': 'assets/brand/logos/foundry-field__primary-horizontal.svg', 'logo_width': 220, 'logo_height': 69}}
     namespace['body']=lambda *args,**kwargs: publication.body(*args,**kwargs).replace('<h2>Reconciliation</h2>','<h2 style="page-break-before:always">Reconciliation</h2>')
     renderer_source=inspect.getsource(publication.render_pdf).replace('Controlled publication • Generated from', 'Draft reconstruction • Generated from')
     exec(compile(renderer_source, '<scoped draft publication renderer>', 'exec'), namespace)
     render_pdf=namespace['render_pdf']
     with tempfile.TemporaryDirectory() as td:
-        render_pdf(libreoffice='libreoffice',ghostscript='gs',qpdf=None,tmp=Path(td),src_rel=str((HERE/'PACKET.md').relative_to(ROOT)),out_rel=str((HERE/'packet.pdf').relative_to(ROOT)),brand='corporate')
+        render_pdf(libreoffice='libreoffice',ghostscript='gs',qpdf=None,tmp=Path(td),src_rel=str((HERE/'PACKET.md').relative_to(ROOT)),out_rel=str((HERE/'packet.pdf').relative_to(ROOT)),brand='foundry-field')
     artifacts=['PACKET.md','packet.pdf','reconciliation.xlsx','source.json','build.py']
     dump(HERE/'catalog.json',{'document_id':s['packet_id'],'status':s['status'],'source_revision':s['release_source_revision'],'scenario':'base','unit':'foundry-field','invoice_id':INVOICE,'native_database':'business-operations-v1.0.0/units/foundry-field/evidence.sqlite3','native_source_ids':[r['event_id'] for r in s['rows']['events']],'effective_period':'2027-01 through 2027-10','fact_state':'PUBLIC_SYNTHETIC_CONDITIONAL_FORECAST','artifacts':{p:sha(HERE/p) for p in artifacts},'catalog_integration':'reader_evidence_link in institutional_catalog.sqlite3; draft discovery only'})
-    dump(HERE/'manifest.json',{'status':'DRAFT_NOT_APPROVED','release_sha256':DIGEST,'files':{p:sha(HERE/p) for p in artifacts+['catalog.json']},'approved_style_references':{p:sha(ROOT/p) for p in ['assets/brand/logos/sable-harbor__primary-horizontal.svg','assets/brand/collateral/letterhead/sable-harbor-letterhead-us-letter.pdf','tools/documents/build_controlled_publications.py']}})
+    dump(HERE/'manifest.json',{'status':'DRAFT_NOT_APPROVED','release_sha256':DIGEST,'files':{p:sha(HERE/p) for p in artifacts+['catalog.json']},'approved_style_references':{p:sha(ROOT/p) for p in ['assets/brand/logos/foundry-field__primary-horizontal.svg','assets/brand/collateral/letterhead/sable-harbor-letterhead-us-letter.pdf','tools/documents/build_controlled_publications.py']}})
 if __name__=='__main__':main()

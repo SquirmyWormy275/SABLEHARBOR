@@ -58,3 +58,14 @@ regeneration reproduced all table and search contents exactly (1,003 indexed fil
 pages; 2,224 local links). Institutional catalog, public-safety and locked V08 checks passed.
 The existing openpyxl footer warning remains limited to that library's parsing; the actual rendered
 footer is present and readable. This audit does not claim broad finance-engine or SOC/CCF revalidation.
+
+## Owner-requested header correction — September 11, 2026
+
+The prior PDF used the corporate logo where the owner expected Foundry Field branding. Replaced
+that header with the accepted Foundry Field primary horizontal SVG, without altering the SVG,
+financial Markdown, source records or workbook. The scoped renderer now records that exact logo
+as its dependency. This does not adopt the separate working letterhead or turn the evidence memo
+into an original customer invoice. Refreshed the PDF, first-page preview and browser review image;
+page 2 and all workbook previews remain byte-identical. Inspected both PDF pages and corrected
+browser preview: Foundry Field is visible in the header; no clipping or table overflow. Acceptance
+of these corrected files remains pending.
