@@ -1,6 +1,6 @@
 {
   "id": "SH-READER-OVERNIGHT-001",
-  "base_sha": "62048c2153977acf2bc52d8e1f54aa6ebb9b57d8",
+  "base_sha": "44e42d37782986fd353e89c1eb2e1f896cdf2918",
   "status": "PREPARED_NOT_SCHEDULED",
   "max_parallel_agents": 3,
   "integration_owner": "main agent",
@@ -55,7 +55,7 @@
       "state": "COMPLETE",
       "acceptance": "Validated routes to accepted sources, downloads and explicit evidence limits.",
       "gate": "existing_authority",
-      "evidence": "PR135 merged at62048c2153977acf2bc52d8e1f54aa6ebb9b57d8"
+      "evidence": "PR #135 merged at 62048c2153977acf2bc52d8e1f54aa6ebb9b57d8"
     },
     {
       "id": "FIN-01",
@@ -69,9 +69,10 @@
       "write_scope": [
         "docs/finance/evidence/SH-FIN-HUMAN-001/"
       ],
-      "state": "ACCEPTED_PENDING_MAIN_INTEGRATION",
-      "acceptance": "Exact corrected packet accepted at efce3a74b5c029e4010abd93934b7686b3751ba4; frozen ACCEPTANCE.json binds every reviewed artifact. PR134 integrates after green gates.",
-      "gate": "exact_visual_acceptance"
+      "state": "COMPLETE",
+      "acceptance": "Exact corrected packet accepted at efce3a74b5c029e4010abd93934b7686b3751ba4 and merged through PR #134. Preserve every artifact bound by ACCEPTANCE.json.",
+      "gate": "exact_visual_acceptance",
+      "evidence": "PR #134 merged at 44e42d37782986fd353e89c1eb2e1f896cdf2918; exact packet remains hash-frozen."
     },
     {
       "id": "READ-02",
@@ -94,7 +95,7 @@
     {
       "id": "FIN-02",
       "lane": "finance",
-      "title": "Inventory seven-unit accounting evidence families",
+      "title": "Inventory accounting evidence across all applicable entities and seven business lines",
       "depends_on": [],
       "inputs": [
         "enterprise/operations/README.md",
@@ -105,12 +106,12 @@
         "docs/finance/evidence/coverage/"
       ],
       "state": "READY",
-      "acceptance": "Pinned release inventory by scenario/unit/table: customer, receipt, credit, contract/deferred revenue, payable, Treasury, close and consolidation; identify actual human artifacts and native record joins.",
+      "acceptance": "Inventory every applicable accounting family in pinned current/successor releases: billing, receipts, credits, revenue, procurement/payables, Treasury, workforce costs, inventory, fixed assets, debt, close, consolidation and tax-support boundaries. Record period/scenario/entity/unit scope, all native populations, MD/PDF/XLSX/database coverage and supported/absent/exempt/proposed dispositions. Do not combine successive releases as extra transactions.",
       "gate": "existing_authority"
     },
     {
       "id": "WIKI-01",
-      "lane": "wiki",
+      "lane": "reader",
       "title": "Close source-backed subject directory gaps",
       "depends_on": [
         "READ-01"
@@ -131,7 +132,7 @@
     {
       "id": "FIN-03",
       "lane": "finance",
-      "title": "Extend customer and deferred-revenue evidence",
+      "title": "Complete source-backed billing, collections and revenue evidence",
       "depends_on": [
         "FIN-01",
         "FIN-02"
@@ -144,13 +145,13 @@
         "docs/finance/evidence/customer/"
       ],
       "state": "READY_SOURCE_ONLY",
-      "acceptance": "After FIN-02, prepare complete selected contract/invoice population and deferred-revenue rollforward with formula/source checks. FIN-01 is accepted, but every new design/output remains in exact-file review.",
+      "acceptance": "For each applicable selected release/unit population, link contracts and versions, invoices, receipts, credits, collection/write-off histories, source events and journals; reconcile AR and deferred revenue. Deliver readable MD and draft PDF/XLSX with database lineage. Preserve complete scoped populations and missing-original disclosures; new visual files require exact review.",
       "gate": "exact_visual_acceptance"
     },
     {
       "id": "FIN-04",
       "lane": "finance",
-      "title": "Prepare payable and Treasury reading package",
+      "title": "Complete procurement, payables and Treasury evidence",
       "depends_on": [
         "FIN-02"
       ],
@@ -162,13 +163,13 @@
         "docs/finance/evidence/treasury/"
       ],
       "state": "READY_SOURCE_ONLY",
-      "acceptance": "Inventory requested/funded/unpaid evidence, reconcile periods and cash categories. Prepare source register and missing-record report; new visual output remains gated. No invented bank documents.",
+      "acceptance": "Join existing purchase orders, receipts, vendor bills, match/approval records and payment events where supplied; reconcile payable exposure and requested/funded/unpaid Treasury obligations by period. Deliver MD plus draft human schedules/documents and database links. Mark unsupported supplier/bank/daily-cash evidence explicitly; do not invent executed bank documents or alter released amounts.",
       "gate": "existing_authority"
     },
     {
       "id": "FIN-05",
       "lane": "finance",
-      "title": "Prepare close and consolidation reading package",
+      "title": "Complete close, allowance, reporting and consolidation working papers",
       "depends_on": [
         "FIN-02"
       ],
@@ -180,13 +181,13 @@
         "docs/finance/evidence/close/"
       ],
       "state": "READY_SOURCE_ONLY",
-      "acceptance": "Reconcile one pinned full month and scenario from business units to legal entities and eliminations; complete population, no manual balancing adjustments. New workbook requires review.",
+      "acceptance": "For each scoped entity/unit and period reconcile source subledgers, journals, trial balances, statements, allowance/close evidence and legal-entity eliminations. Deliver source-bound MD, draft XLSX, database lineage and discrepancy reports, with no balancing plugs, double counting or historical release changes. New workbooks require exact review.",
       "gate": "existing_authority"
     },
     {
       "id": "LEGAL-01",
-      "lane": "wiki",
-      "title": "Index transaction instruments and throughput evidence",
+      "lane": "legal",
+      "title": "Inventory legal instruments and connect transaction support to accounting",
       "depends_on": [],
       "inputs": [
         "industrial/transaction/01_RW_TRANSACTION_FILE.md",
@@ -197,16 +198,14 @@
         "docs/reader/transactions/"
       ],
       "state": "READY",
-      "acceptance": "Distinguish actual repository instruments, released schedules and absent support. Link consideration/approvals/quantities to existing records; no synthetic signatures or invented legal terms.",
+      "acceptance": "Inventory applicable formation/governance/capital records, customer/vendor/service contracts, workforce terms, acquisition/bill-of-sale instruments, leases/host rights, ownership/title/security interests and tax-support documents. Map each to existing sources, human formats, accounting effects and missing/proposed/exempt states. Prior legal data-room categories do not prove an instrument exists.",
       "gate": "existing_authority"
     },
     {
       "id": "FIN-06",
       "lane": "finance",
       "title": "Propose fictional billing fields for owner review",
-      "depends_on": [
-        "FIN-02"
-      ],
+      "depends_on": [],
       "inputs": [
         "docs/canon/READER_OVERNIGHT_SCOPE_2026-09-11.md",
         "docs/finance/evidence/SH-FIN-HUMAN-001/source.json"
@@ -214,8 +213,127 @@
       "write_scope": [
         "docs/finance/evidence/billing-proposal/"
       ],
-      "state": "READY_SOURCE_ONLY",
+      "state": "AWAITING_REVIEW",
       "acceptance": "Separate explicitly PROPOSED_FOR_REVIEW scenario dataset for absent issuer/customer billing fields, with each proposed field distinguished from sourced facts. Preserve booked amounts, original records and legal canon. No operational payment instructions, signatures or visual adoption; require exact owner review before use.",
+      "gate": "exact_visual_acceptance",
+      "evidence": "Draft PR #138 at e4995ba; concrete proposed fields exist and remain unaccepted. Recover this work before producing any successor."
+    },
+    {
+      "id": "FIN-07",
+      "lane": "finance",
+      "title": "Complete workforce costs, inventory, assets and debt support",
+      "depends_on": [
+        "FIN-02"
+      ],
+      "inputs": [
+        "docs/finance/ACCOUNTING_POLICIES.md",
+        "docs/finance/KNOWN_LIMITATIONS.md",
+        "enterprise/operations/docs/management.md",
+        "industrial/finance/README.md"
+      ],
+      "write_scope": [
+        "docs/finance/evidence/supporting-schedules/"
+      ],
+      "state": "READY_SOURCE_ONLY",
+      "acceptance": "Reconcile supported workforce/payroll cost populations, inventory quantities/valuation, asset additions/depreciation, debt draws/repayments/interest and related journal IDs. Deliver complete scoped schedules with MD, draft XLSX and database links. No invented employee payments, reserves, asset ownership or covenant thresholds.",
+      "gate": "existing_authority"
+    },
+    {
+      "id": "FIN-08",
+      "lane": "finance",
+      "title": "Complete tax-support and transaction-accounting bridges",
+      "depends_on": [
+        "FIN-02",
+        "LEGAL-01"
+      ],
+      "inputs": [
+        "industrial/finance/TRANSACTION_ACCOUNTING.md",
+        "industrial/transaction/07_ARU_TAX_STRUCTURE_MEMORANDUM.md",
+        "docs/finance/TRANSACTION_DATA_ROOM_INDEX.md"
+      ],
+      "write_scope": [
+        "docs/finance/evidence/tax-transaction/"
+      ],
+      "state": "READY_SOURCE_ONLY",
+      "acceptance": "Trace accepted consideration, opening balances, acquisition allocations and tax assumptions to current source records and financial effects; reconcile existing modeled amounts. Prepare readable support and proposed missing-case inputs separately. No new election, tax conclusion, executed filing or valuation opinion is inferred from a model.",
+      "gate": "existing_authority"
+    },
+    {
+      "id": "LEGAL-02",
+      "lane": "legal",
+      "title": "Complete customer, vendor and service-contract evidence packages",
+      "depends_on": [
+        "LEGAL-01"
+      ],
+      "inputs": [
+        "docs/advisory/LEGAL_AND_CONTRACTING_TERM_SHEET.md",
+        "docs/advisory/COMMERCIAL_CONTRACTING_AND_PRICING_STANDARD.md",
+        "enterprise/services/README.md",
+        "enterprise/operations/docs/commercial.md"
+      ],
+      "write_scope": [
+        "docs/legal/evidence/commercial/"
+      ],
+      "state": "READY_SOURCE_ONLY",
+      "acceptance": "For supported terms, prepare source-linked contract/SLA/order/amendment and approval reading packages, including term, price, service, renewal and obligation-to-accounting links. Retain actual source execution status. Missing clauses may be separately proposed for review, never presented as negotiated or signed. Deliver MD and draft letterhead PDF where appropriate plus database identity.",
+      "gate": "existing_authority"
+    },
+    {
+      "id": "LEGAL-03",
+      "lane": "legal",
+      "title": "Complete corporate, capital and workforce legal-record access",
+      "depends_on": [
+        "LEGAL-01"
+      ],
+      "inputs": [
+        "docs/governance/BOARD_AND_CAPITAL_GOVERNANCE_v1.0.1.md",
+        "docs/governance/board-records/README.md",
+        "docs/finance/TRANSACTION_DATA_ROOM_INDEX.md"
+      ],
+      "write_scope": [
+        "docs/legal/evidence/corporate/"
+      ],
+      "state": "READY_SOURCE_ONLY",
+      "acceptance": "Recover and connect existing entity/authority, board approval, capitalization, financing, compensation/incentive and contractor/employment instruments. Distinguish reporting units from legal entities and policies from executed agreements. Provide readable document packages and identity/accounting cross-references; record absent formations, grants, signatures or appointments explicitly.",
+      "gate": "existing_authority"
+    },
+    {
+      "id": "LEGAL-04",
+      "lane": "legal",
+      "title": "Complete acquisition, asset-rights and host/tenure document packages",
+      "depends_on": [
+        "LEGAL-01"
+      ],
+      "inputs": [
+        "industrial/transaction/01_RW_TRANSACTION_FILE.md",
+        "industrial/transaction/04_ARU_APPROVAL_AND_PURCHASE_AGREEMENT.md",
+        "docs/canon/CRADLE_CLOSEOUT_2026-09-06.md",
+        "geospatial/facilities/README.md"
+      ],
+      "write_scope": [
+        "docs/legal/evidence/assets-rights/"
+      ],
+      "state": "READY_SOURCE_ONLY",
+      "acceptance": "Connect supported purchase/bill-of-sale terms, closing conditions, consideration, title/host/custody/lease rights and asset schedules to accounting and geographic records. Prepare MD and draft formatted instruments/schedules from supported facts. Unavailable ownership, permitting, execution or tenure stays explicit; never promote external hosts or modelled parcels into owned assets.",
+      "gate": "existing_authority"
+    },
+    {
+      "id": "LEGAL-05",
+      "lane": "legal",
+      "title": "Reconcile missing legal and billing decisions without inventing execution",
+      "depends_on": [
+        "LEGAL-01"
+      ],
+      "inputs": [
+        "docs/canon/READER_OVERNIGHT_SCOPE_2026-09-11.md",
+        "docs/finance/TRANSACTION_DATA_ROOM_INDEX.md",
+        "docs/finance/evidence/SH-FIN-HUMAN-001/source.json"
+      ],
+      "write_scope": [
+        "docs/legal/evidence/proposals/"
+      ],
+      "state": "READY_SOURCE_ONLY",
+      "acceptance": "Consolidate remaining legal-party, billing, tax and document-term gaps into bounded field-level proposals for review. Reuse draft PR #138 rather than duplicating it. Show sourced values, proposed additions, affected records and acceptance state; isolate any financial assumption change for explicit approval. No signatures, operational remittance endpoints, or false legal execution.",
       "gate": "exact_visual_acceptance"
     },
     {
@@ -243,8 +361,13 @@
         "docs/reader/overnight/START.md"
       ],
       "state": "READY",
-      "acceptance": "Main agent exclusively regenerates shared catalog/links, runs appropriate checks and reviews changed surfaces. Accept independent finished batches; never mark blocked batches complete.",
+      "acceptance": "Main agent exclusively regenerates shared catalog/links and reconciles financial, legal and reader coverage. For every scoped record require MD, applicable PDF/XLSX and native database linkage or a supported exemption/missing/proposal disposition. Run accounting rollups, source/period/ID checks, manifest/link integrity and required CI; inspect every changed page/sheet. Merge nonvisual batches after gates; hold new designs and proposed canon for review. Do not mark a family complete merely because it has an index or example.",
       "gate": "existing_authority"
     }
-  ]
+  ],
+  "scope_update": {
+    "date": "2026-09-12",
+    "owner_instruction": "Can you roll up the accounting and legal intp that too?",
+    "interpretation": "Include accounting and legal-document completion in the prepared overnight run; this update does not start execution."
+  }
 }
