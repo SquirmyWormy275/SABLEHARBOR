@@ -22,7 +22,9 @@ jobs:
       - name: Coverage, population, geometry, capacity and publication links
         run: python geospatial/facilities/validate.py --check --require-atlas
       - name: Validate the isolated visitor-map draft
-        run: python geospatial/facilities/visitor/validate.py
+        run: |
+          python geospatial/facilities/visitor/validate.py
+          python geospatial/facilities/visitor/v02/validate.py
       - name: Acceptance regression mutations
         run: python -m pytest -q geospatial/facilities/test_facilities.py geospatial/facilities/coverage/test_coverage.py geospatial/facilities/population/test_population.py
       - name: Planning workbench freshness and regression tests

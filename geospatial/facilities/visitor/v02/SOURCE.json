@@ -1,0 +1,57 @@
+{
+  "site_id": "SH-SITE-0001",
+  "revision": "V02",
+  "status": "DRAFT_FOR_OWNER_VISUAL_REVIEW",
+  "geometry_source": "geospatial/facilities/source/campus.json",
+  "reference": "docs/facilities/references/sacramento-hq/r01-approved/01_Sacramento_Campus_Master_Draft.png",
+  "reference_sha256": "23729f7e2b427e58820361363e4a47fbc6bbd3ce9774ef67932ecab7a50bfa47",
+  "title": "Campus visitor guide",
+  "subtitle": "Sacramento headquarters  /  Arrival, reception and campus buildings",
+  "building_labels": {
+    "A": {
+      "name": "CORPORATE",
+      "map_note": "Reception",
+      "description": "Corporate and client visits",
+      "color": "blue",
+      "entry_key": "public_arrival_m"
+    },
+    "B": {
+      "name": "J2",
+      "map_note": "Separate reception",
+      "description": "J2 appointments; separate reception",
+      "color": "blue",
+      "entry_key": "j2_controlled_entry_m"
+    },
+    "C": {
+      "name": "EDUCATION",
+      "map_note": "Education reception",
+      "description": "Courses, convening and campus dining",
+      "color": "sand",
+      "entry_key": "education_entry_m"
+    },
+    "D": {
+      "name": "RESIDENCE",
+      "map_note": "Residential entry",
+      "description": "Residential rooms for cohorts and visitors",
+      "color": "sage",
+      "entry_key": "residential_arrival_m"
+    }
+  },
+  "highlight_route": "public_arrival_m",
+  "arrival_note": "Corporate reception is in Building A. Follow the marked path from the south arrival.",
+  "parking_note": "Visitor parking and step-free access remain to be confirmed.",
+  "scope_note": "Fictional campus study. No actual parcel or operating visitor access is established.",
+  "intentional_changes_from_r01": [
+    "Same four building footprints, entrances, roads, paths and landscape positions.",
+    "White building silhouettes and dark outlines replace V01 pastel blocks.",
+    "Source parking markings restored so courts read as parking rather than empty rectangles.",
+    "One compact directory replaces the repeated building/reception descriptions.",
+    "The accepted arrival path remains highlighted; the four entrance locations are unchanged.",
+    "This is a separate V02 review; V01 images, vector source, PDF and manifest remain byte-identical."
+  ],
+  "review_feedback": {
+    "source": "Owner feedback in Codex",
+    "quote": "It looks ok but still very AI-y. Make it more professional. This looks aesthetically like the V1 org charts.",
+    "disposition": "V01 not accepted; revise graphic hierarchy and linework, preserve geometry."
+  }
+}
