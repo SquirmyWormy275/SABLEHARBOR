@@ -80,6 +80,8 @@ Generated file inventory. Includes current and historical records; open the sour
 - [CCF preparation compared with Compliance Atlas](../../internal/development/CCF_COMPLIANCE_ATLAS_COMPARISON_2026-09-11.md) — MD
 - [CCF prebuild repository audit — September 11, 2026](../../internal/development/CCF_PREBUILD_REPOSITORY_AUDIT_2026-09-11.md) — MD
 - [CCF preparation delivery — September 11, 2026](../../internal/development/CCF_PREPARATION_DELIVERY_2026-09-11.md) — MD
+- [Approved reference assessment preparation](../../internal/development/CCF_REFERENCE_ASSESSMENT_DELIVERY_2026-09-11.md) — MD
+- [CCF publisher-source search follow-up](../../internal/development/CCF_SOURCE_SEARCH_FOLLOWUP_2026-09-11.md) — MD
 - [PR #119 — Runtime Estate Completion Handover](../../internal/development/PR119_RUNTIME_ESTATE_COMPLETION_HANDOVER_2026-09-11.md) — MD
 - [Sable Harbor — business-line development review](../../internal/development/REPOSITORY_DEVELOPMENT_REVIEW_2026-09-09.md) — MD
 - [Third-party services and internal operations — assessment for discussion](../../internal/development/THIRD_PARTY_SERVICES_ASSESSMENT_2026-09-09.md) — MD
