@@ -55,6 +55,7 @@ permissions:
 
 jobs:
   reconcile:
+    name: Business Operations CI / reconcile
     runs-on: ubuntu-latest
     timeout-minutes: 45
     steps:
@@ -81,6 +82,7 @@ jobs:
           if-no-files-found: error
 
   publish:
+    name: Business Operations CI / publish
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     needs: reconcile
     runs-on: ubuntu-latest

@@ -130,6 +130,10 @@ Generated file inventory. Includes current and historical records; open the sour
 
 - [Enterprise operating and financial models](../../../enterprise/README.md) — MD
 
+## `tools/ci`
+
+- [Repository checks](../../../tools/ci/README.md) — MD
+
 ## `tools/documents`
 
 - [Controlled-publication builds](../../../tools/documents/README.md) — MD

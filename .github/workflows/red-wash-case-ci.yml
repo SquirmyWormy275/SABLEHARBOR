@@ -39,6 +39,7 @@ defaults:
 
 jobs:
   build-and-validate:
+    name: Red Wash Case CI / build and validate
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:

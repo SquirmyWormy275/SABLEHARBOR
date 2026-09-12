@@ -6,7 +6,7 @@ RUN_ID ?= $(shell uv run shfin run-id $(PROFILE) --scenario $(SCENARIO) --seed $
 
 .PHONY: bootstrap db-up db-down migrate seed-canon generate post close validate reports report workbooks package package-units test lint typecheck ci
 bootstrap:
-	uv sync --all-extras
+	uv sync --frozen --all-extras
 
 db-up:
 	docker compose up -d postgres
