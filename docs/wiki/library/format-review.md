@@ -6,8 +6,8 @@ Generated reconciliation queue, not an assertion that every unpaired record lack
 
 | State | Records |
 |---|---:|
-| COUNTERPART_REVIEW_REQUIRED | 432 |
-| READER_OR_MAINTENANCE_PAGE | 87 |
+| COUNTERPART_REVIEW_REQUIRED | 433 |
+| READER_OR_MAINTENANCE_PAGE | 88 |
 | VERIFIED_DOCUMENT_PAIR | 131 |
 
 ## Records requiring counterpart reconciliation
@@ -373,6 +373,7 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [V02 visual and preservation review](../../../geospatial/facilities/visitor/v02/QA.md) — Corporate document-format reconciliation
 - [V03 visual and preservation review](../../../geospatial/facilities/visitor/v03/QA.md) — Corporate document-format reconciliation
 - [V04 review evidence](../../../geospatial/facilities/visitor/v04/QA.md) — Corporate document-format reconciliation
+- [V05 visual and source review](../../../geospatial/facilities/visitor/v05/QA.md) — Corporate document-format reconciliation
 - [Evidence intake and review candidates](../../../geospatial/facilities/workbench/README_EVIDENCE.md) — Corporate document-format reconciliation
 - [Architectural concept readiness](../../../geospatial/facilities/workbench/README_READINESS.md) — Corporate document-format reconciliation
 - [Governing addendum implementation summary](../../../geospatial/history/rc3/docs__ARU_BST_GEOGRAPHY_ADDENDUM_IMPLEMENTATION_SUMMARY.md) — Corporate document-format reconciliation

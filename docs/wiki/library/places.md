@@ -146,6 +146,15 @@ Generated file inventory. Includes current and historical records; open the sour
 
 - [visitor-map-v04](../../../geospatial/facilities/visitor/v04/artifacts/visitor-map-v04.pdf) — PDF
 
+## `geospatial/facilities/visitor/v05`
+
+- [V05 visual and source review](../../../geospatial/facilities/visitor/v05/QA.md) — MD
+- [Sacramento visitor guide V05 — recomposed review draft](../../../geospatial/facilities/visitor/v05/README.md) — MD
+
+## `geospatial/facilities/visitor/v05/artifacts`
+
+- [visitor-map-v05](../../../geospatial/facilities/visitor/v05/artifacts/visitor-map-v05.pdf) — PDF
+
 ## `geospatial/facilities/workbench`
 
 - [Facility planning workbench](../../../geospatial/facilities/workbench/README.md) — MD
