@@ -6,8 +6,8 @@ Generated reconciliation queue, not an assertion that every unpaired record lack
 
 | State | Records |
 |---|---:|
-| COUNTERPART_REVIEW_REQUIRED | 448 |
-| READER_OR_MAINTENANCE_PAGE | 99 |
+| COUNTERPART_REVIEW_REQUIRED | 449 |
+| READER_OR_MAINTENANCE_PAGE | 100 |
 | VERIFIED_DOCUMENT_PAIR | 131 |
 
 ## Records requiring counterpart reconciliation
@@ -209,6 +209,7 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Current business and publication alignment delivery](../../internal/development/ALIGNMENT_DELIVERY_2026-09-09.md) — Corporate document-format reconciliation
 - [Business finance and evidence implementation delivery](../../internal/development/BUSINESS_FINANCE_DELIVERY_2026-09-09.md) — Corporate document-format reconciliation
 - [Business operating depth delivery — 2026-09-09](../../internal/development/BUSINESS_OPERATIONS_DELIVERY_2026-09-09.md) — Corporate document-format reconciliation
+- [Actionable CCF procedure deltas](../../internal/development/CCF_ACTIONABLE_CONTROL_DELTAS_2026-09-12.md) — Corporate document-format reconciliation
 - [CCF operating and assurance direction](../../internal/development/CCF_ASSURANCE_DIRECTION_2026-09-11.md) — Corporate document-format reconciliation
 - [Initial CCF assurance scope and source proposal](../../internal/development/CCF_ASSURANCE_SCOPE_PROPOSAL_2026-09-11.md) — Corporate document-format reconciliation
 - [CCF baseline design and workflow delivery](../../internal/development/CCF_BASELINE_DESIGN_DELIVERY_2026-09-11.md) — Corporate document-format reconciliation
