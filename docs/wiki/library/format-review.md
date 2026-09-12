@@ -6,8 +6,8 @@ Generated reconciliation queue, not an assertion that every unpaired record lack
 
 | State | Records |
 |---|---:|
-| COUNTERPART_REVIEW_REQUIRED | 430 |
-| READER_OR_MAINTENANCE_PAGE | 84 |
+| COUNTERPART_REVIEW_REQUIRED | 436 |
+| READER_OR_MAINTENANCE_PAGE | 92 |
 | VERIFIED_DOCUMENT_PAIR | 131 |
 
 ## Records requiring counterpart reconciliation
@@ -106,6 +106,7 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [SABLE HARBOR — CORPORATE LORE CANON](../../canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.2.md) — Corporate document-format reconciliation
 - [SABLE HARBOR — CORPORATE LORE CANON](../../canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md) — Corporate document-format reconciliation
 - [SABLE HARBOR — CORPORATE LORE CANON](../../canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md) — Corporate document-format reconciliation
+- [Sacramento visitor map — V08 visual acceptance](../../canon/SACRAMENTO_VISITOR_MAP_V08_ACCEPTANCE_2026-09-11.md) — Corporate document-format reconciliation
 - [Third-party services — implementation scope supplement](../../canon/THIRD_PARTY_SERVICES_IMPLEMENTATION_SCOPE_2026-09-09.md) — Corporate document-format reconciliation
 - [SABLE HARBOR — THIRD-PARTY SERVICES AND INTERNAL OPERATIONS SOURCING DECISIONS](../../canon/THIRD_PARTY_SERVICES_SOURCING_DECISIONS_2026-09-09.md) — Corporate document-format reconciliation
 - [Superseded filename](../../canon/WILLOW_EVALON_CLOSEOUT_2026-09-06.md) — Corporate document-format reconciliation
@@ -371,6 +372,11 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Spatial-quality decision and closeout record](../../../geospatial/facilities/spatial/CLOSEOUT_2026-09-11.md) — Corporate document-format reconciliation
 - [Revision comparisons and floor overlays](../../../geospatial/facilities/spatial/COMPARE.md) — Corporate document-format reconciliation
 - [Source-backed geographic context](../../../geospatial/facilities/spatial/CONTEXT.md) — Corporate document-format reconciliation
+- [Visitor map V01 — review evidence](../../../geospatial/facilities/visitor/QA.md) — Corporate document-format reconciliation
+- [V02 visual and preservation review](../../../geospatial/facilities/visitor/v02/QA.md) — Corporate document-format reconciliation
+- [V03 visual and preservation review](../../../geospatial/facilities/visitor/v03/QA.md) — Corporate document-format reconciliation
+- [V04 review evidence](../../../geospatial/facilities/visitor/v04/QA.md) — Corporate document-format reconciliation
+- [V05 visual and source review](../../../geospatial/facilities/visitor/v05/QA.md) — Corporate document-format reconciliation
 - [Evidence intake and review candidates](../../../geospatial/facilities/workbench/README_EVIDENCE.md) — Corporate document-format reconciliation
 - [Architectural concept readiness](../../../geospatial/facilities/workbench/README_READINESS.md) — Corporate document-format reconciliation
 - [Governing addendum implementation summary](../../../geospatial/history/rc3/docs__ARU_BST_GEOGRAPHY_ADDENDUM_IMPLEMENTATION_SUMMARY.md) — Corporate document-format reconciliation

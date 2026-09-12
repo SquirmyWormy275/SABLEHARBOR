@@ -1,0 +1,21 @@
+{
+  "record_id": "SH-VISITOR-SAC-V08-ACCEPTANCE",
+  "selected_revision": "V08",
+  "status": "OWNER_ACCEPTED_VISUAL",
+  "owner_instruction": "OK. Youre clearly not actually iterating so well lock V8",
+  "reviewed_commit": "929244ec18f5cb4ac78adf4c52baa59d53e0d025",
+  "pr": 132,
+  "artifacts": {
+    "png": {
+      "path": "geospatial/facilities/visitor/v08/artifacts/visitor-map-v08.png",
+      "sha256": "e5a8a81cf29da9debfc46fb7f4a0abb5e397d5b29c380eaf2ee291e0455ba611"
+    },
+    "pdf": {
+      "path": "geospatial/facilities/visitor/v08/artifacts/visitor-map-v08.pdf",
+      "sha256": "0aeadf88197eb5ba18e0365b7f6510a90aa86f235b50fcba1177b3ed83930dc0"
+    }
+  },
+  "scope": "Lock the exact V08 visitor-map artwork and PDF. No further aesthetic iterations without a new explicit owner request.",
+  "geography_scope": "Illustrative visitor map, not to scale. Selection does not adopt generated planting or local geometry differences into the authoritative campus model.",
+  "controlling_record": "docs/canon/SACRAMENTO_VISITOR_MAP_V08_ACCEPTANCE_2026-09-11.md"
+}

@@ -1,0 +1,21 @@
+{
+  "revision": "V06",
+  "site_id": "SH-SITE-0001",
+  "status": "ILLUSTRATIVE_ART_DIRECTION_DRAFT_NOT_GEOMETRICALLY_VALIDATED",
+  "preferred_baseline": "geospatial/facilities/visitor/v02/MANIFEST.json",
+  "edit_target": "geospatial/facilities/visitor/v02/artifacts/visitor-map-v02.png",
+  "tool": "built-in image_gen.imagegen",
+  "prompt": "PROMPT.txt",
+  "reference_url": "https://www.getty.edu/visit/downloads/getty_center_map.pdf",
+  "reference_role": "Getty map used as illustrative craft reference, not corporate canon",
+  "reference_image_sha256": "4811511421478e7982d0d4bdf3090787a302f2b77de1e15c41e36df4e7a63480",
+  "generation_original": "/home/kingoftheeast/.codex/generated_images/01a09221-d68c-7e82-bb78-55c0fe4d5a45/exec-b96ae4c8-fd90-4bf6-ad12-489c34ed06d7.png",
+  "regeneration": "Image synthesis is nondeterministic. Committed original PNG is the immutable review artifact; build.py reproduces PDF wrapping from those bytes.",
+  "observed_deviations": [
+    "Added perimeter and infill planting not in accepted source.",
+    "Road corners rounded and local paths/parking details adjusted.",
+    "Inherited scale bar does not establish metric accuracy of the illustration."
+  ],
+  "production_map_id": null,
+  "acceptance": "PENDING_OWNER_VISUAL_REVIEW"
+}

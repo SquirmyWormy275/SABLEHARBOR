@@ -1,0 +1,29 @@
+{
+  "revision": "V07",
+  "status": "ILLUSTRATIVE_ART_DIRECTION_DRAFT_NOT_GEOMETRICALLY_VALIDATED",
+  "map_id": null,
+  "metric_geometry_validated": false,
+  "observed_deviations": [
+    "Illustrative planting inherited from V06 is not accepted source geometry.",
+    "Rounded roads and local paths/parking adjustments inherited from V06 remain illustrative.",
+    "Metric accuracy is unvalidated; numeric scale bar removed and Not to scale label added."
+  ],
+  "sources": {
+    "geospatial/facilities/visitor/v07/SOURCE.json": "1fa1edd1c83a36cc50620e7e8089709855ed60af4976708cddd09083da910135",
+    "geospatial/facilities/visitor/v07/PROMPT.txt": "aa5329b5d839f2706e9119ef71e19b5aa118e109d208a13965dfbc2e93f2b511",
+    "geospatial/facilities/visitor/v07/build.py": "b687ac8816d3f057320ad7072c5d3fee3f91a7564345eac7a63c752bce6b25c8",
+    "geospatial/facilities/visitor/v07/review.html": "d08ada2ed86965c6693caf7ef709f87cb604c21163d03b2d8dbd2ad879f4455f",
+    "geospatial/facilities/visitor/v06/artifacts/visitor-map-v06.png": "c6169b9e47969b5ddcc0758232b9d562f51b2902634f9f7a93f4016ff044e799",
+    "geospatial/facilities/visitor/v06/MANIFEST.json": "625e51b51fae592b70ba33571f9a18cc3847825af26be9c211bd5797e69e559b"
+  },
+  "artifacts": {
+    "png": {
+      "path": "geospatial/facilities/visitor/v07/artifacts/visitor-map-v07.png",
+      "sha256": "559344a3d97512ed5ba7f503d4bdbc1d932ea155b60d93023b0c35144d5092bc"
+    },
+    "pdf": {
+      "path": "geospatial/facilities/visitor/v07/artifacts/visitor-map-v07.pdf",
+      "sha256": "216e6fa8ca68b948a15ca49b9de4b028dadb6307fdfe92775d949d997315be22"
+    }
+  }
+}

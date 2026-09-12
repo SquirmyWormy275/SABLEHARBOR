@@ -1,0 +1,28 @@
+{
+  "revision": "V07",
+  "site_id": "SH-SITE-0001",
+  "status": "ILLUSTRATIVE_ART_DIRECTION_DRAFT_NOT_GEOMETRICALLY_VALIDATED",
+  "preferred_baseline": "geospatial/facilities/visitor/v06/MANIFEST.json",
+  "edit_target": "geospatial/facilities/visitor/v06/artifacts/visitor-map-v06.png",
+  "tool": "built-in image_gen.imagegen",
+  "prompt": "PROMPT.txt",
+  "reference_url": "https://www.getty.edu/visit/downloads/getty_center_map.pdf",
+  "reference_role": "V06 direct edit target; Getty reference belongs to V06 provenance, not a new V07 input.",
+  "reference_image_sha256": "4811511421478e7982d0d4bdf3090787a302f2b77de1e15c41e36df4e7a63480",
+  "generation_original": "/home/kingoftheeast/.codex/generated_images/01a09221-d68c-7e82-bb78-55c0fe4d5a45/exec-2079f380-580a-4750-bdb4-40fb6c5ea86c.png",
+  "regeneration": "Image synthesis is nondeterministic. Committed original PNG is the immutable review artifact; build.py reproduces PDF wrapping from those bytes.",
+  "observed_deviations": [
+    "Illustrative planting inherited from V06 is not accepted source geometry.",
+    "Rounded roads and local paths/parking adjustments inherited from V06 remain illustrative.",
+    "Metric accuracy is unvalidated; numeric scale bar removed and Not to scale label added."
+  ],
+  "production_map_id": null,
+  "acceptance": "PENDING_OWNER_VISUAL_REVIEW",
+  "owner_feedback": "Better. Lets iterate one more time. Youre making sme improvements",
+  "refinement_scope": [
+    "Retain V06 illustration direction.",
+    "Sharpen text, architecture and paving.",
+    "Reduce mottled texture and clarify planting edges.",
+    "Remove misleading numeric scale bar."
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "site_id": "SH-SITE-0001",
+  "revision": "V05",
+  "status": "DRAFT_FOR_OWNER_VISUAL_REVIEW",
+  "geometry_source": "geospatial/facilities/source/campus.json",
+  "reference": "docs/facilities/references/sacramento-hq/r01-approved/01_Sacramento_Campus_Master_Draft.png",
+  "reference_sha256": "23729f7e2b427e58820361363e4a47fbc6bbd3ce9774ef67932ecab7a50bfa47",
+  "title": "Campus visitor guide",
+  "subtitle": "Sacramento headquarters  /  Arrival, reception and campus buildings",
+  "building_labels": {
+    "A": {
+      "name": "CORPORATE",
+      "map_note": "Reception",
+      "description": "Corporate and client visits",
+      "color": "blue",
+      "entry_key": "public_arrival_m"
+    },
+    "B": {
+      "name": "J2",
+      "map_note": "Separate reception",
+      "description": "J2 appointments; separate reception",
+      "color": "blue",
+      "entry_key": "j2_controlled_entry_m"
+    },
+    "C": {
+      "name": "EDUCATION",
+      "map_note": "Education reception",
+      "description": "Courses, convening and campus dining",
+      "color": "sand",
+      "entry_key": "education_entry_m"
+    },
+    "D": {
+      "name": "RESIDENCE",
+      "map_note": "Residential entry",
+      "description": "Residential rooms for cohorts and visitors",
+      "color": "sage",
+      "entry_key": "residential_arrival_m"
+    }
+  },
+  "highlight_route": "public_arrival_m",
+  "arrival_note": "Corporate reception is in Building A. Follow the marked path from the south arrival.",
+  "parking_note": "Visitor parking and step-free access remain to be confirmed.",
+  "scope_note": "Fictional campus study. No actual parcel or operating visitor access is established.",
+  "intentional_changes_from_r01": [
+    "New axonometric composition with compact horizontal directory.",
+    "Fixed site geometry projected uniformly; north arrow follows projection.",
+    "Building heights, parapets and proposed facade openings derived from existing spatial study.",
+    "V02 visitor wording retained; architectural concept status remains explicit.",
+    "Earlier drafts and approved originals unchanged."
+  ],
+  "review_feedback": {
+    "source": "Owner feedback in Codex",
+    "disposition": "V02 preferred. V03/V04 aesthetic changes rejected as superficial. Recompose as a campus illustration using existing architectural study; retain visitor content."
+  },
+  "spatial_source": "geospatial/facilities/spatial/MODEL.json",
+  "architectural_assumptions": "geospatial/facilities/spatial/ARCHITECTURAL_ASSUMPTIONS.json",
+  "projection": {
+    "east": [
+      2.45,
+      -0.48
+    ],
+    "north": [
+      -1.05,
+      -1.35
+    ],
+    "up": [
+      0,
+      -2.4
+    ],
+    "origin": [
+      1620,
+      1020
+    ],
+    "center_ft": [
+      420,
+      300
+    ],
+    "status": "Parallel projection; scale varies with direction; use existing orthographic plans for measurement."
+  }
+}
