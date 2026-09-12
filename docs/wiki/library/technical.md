@@ -75,6 +75,7 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Current business and publication alignment delivery](../../internal/development/ALIGNMENT_DELIVERY_2026-09-09.md) — MD
 - [Business finance and evidence implementation delivery](../../internal/development/BUSINESS_FINANCE_DELIVERY_2026-09-09.md) — MD
 - [Business operating depth delivery — 2026-09-09](../../internal/development/BUSINESS_OPERATIONS_DELIVERY_2026-09-09.md) — MD
+- [Actionable CCF procedure deltas](../../internal/development/CCF_ACTIONABLE_CONTROL_DELTAS_2026-09-12.md) — MD
 - [CCF operating and assurance direction](../../internal/development/CCF_ASSURANCE_DIRECTION_2026-09-11.md) — MD
 - [Initial CCF assurance scope and source proposal](../../internal/development/CCF_ASSURANCE_SCOPE_PROPOSAL_2026-09-11.md) — MD
 - [CCF baseline design and workflow delivery](../../internal/development/CCF_BASELINE_DESIGN_DELIVERY_2026-09-11.md) — MD
