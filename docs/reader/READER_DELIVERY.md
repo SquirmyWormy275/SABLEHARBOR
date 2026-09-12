@@ -3,7 +3,9 @@
 **Decision reference:** owner instructions, September 11, 2026.
 **Base:** `5baa59d6bc6ef21441ff1d787395d06ae2bc9738`.
 **Branch:** `build/universe-reader-experience`.
-**State:** review branch; not accepted main or live GitHub Wiki publication.
+**State:** accepted repository reading layer in [PR #128](https://github.com/SquirmyWormy275/SABLEHARBOR/pull/128), merge `4b5b0c0b47692bd65fffcea94b5a4f28abf1346d`. No live GitHub Wiki publication.
+
+The implementation and counts below describe that original delivery. Current file counts live in the generated [library](../wiki/Library.md). The [reader continuation](CONTINUATION.md) records later work.
 
 ## Authorized direction
 
@@ -11,7 +13,7 @@ Make the README a guide to using the fictional enterprise for accounting, audit,
 
 ## Review boundary
 
-Existing approved artwork and publications are reused. No new maps, logos, diagrams, layouts, or bulk restyling are authorized for publication by this navigation work. Newly designed visual materials remain subject to exact-file review. Draft work stays on this branch pending owner review; a code or content check is not visual acceptance.
+Existing approved artwork and publications are reused. No new maps, logos, diagrams, layouts, or bulk restyling are authorized for publication by this navigation work. Newly designed visual materials remain subject to exact-file review. The reading structure was subsequently accepted in PR #128. New publication designs still require exact-file review; a code or content check is not visual acceptance.
 
 ## Parallel work
 
@@ -38,10 +40,10 @@ Validation and exact coverage totals are recorded after integration below.
 - Controlled-publication build: zero rendered, 131 existing publications retained with verified hashes.
 - Configured `ruff check .` and `ruff format --check .`: passed.
 - Browser checks: 98 desktop/mobile views of 49 reader pages, zero broken images, page-width overflows or missing same-page anchors. Preview screenshots are temporary local QA files, not new production artwork.
-- Parent visual inspection sampled the README, Advisory business page and Finance department page at readable desktop/mobile sizes. Other pages received browser/render checks and source/link review, not a claimed exhaustive human visual acceptance. The owner has not yet accepted these drafts.
+- Parent visual inspection sampled the README, Advisory business page and Finance department page at readable desktop/mobile sizes. Other pages received browser/render checks and source/link review, not a claimed exhaustive human visual acceptance. This describes the pre-merge QA scope; PR #128 subsequently accepted the reading layer.
 
 Corrections made: reduced oversized corporate/J2 logo display widths without changing source images; linked chart previews to full-size originals; excluded untracked scratch files from discovery; used descriptive source titles for manifested PDFs; added a complete counterpart-review queue; corrected the stale operations release status from a verified download.
 
 The library contains 970 files: 639 Markdown, 328 PDF and 3 XLSX. Of the Markdown records, 131 have verified controlled PDF pairs, 82 are reader/maintenance pages, and 426 need counterpart reconciliation against domain manifests/releases. The last count is not a missing-publication count. Every inventoried file has a database discovery row; native financial completeness remains separate.
 
-No main merge, live Wiki publication, new financial engine, source-art revision or bulk corporate-document conversion is claimed. The next owner review concerns the reading structure and wording. Finance continuation is provided as the explicitly authorized parallel-chat handoff.
+The original navigation work merged through PR #128. No live Wiki publication, new financial engine, source-art revision or bulk corporate-document conversion is claimed. Finance continuation is provided as the explicitly authorized parallel-chat handoff.

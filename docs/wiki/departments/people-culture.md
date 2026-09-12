@@ -9,6 +9,7 @@ People & Culture handles recruiting, compensation and benefits, employee relatio
 
 ## Read and use the records
 
+- [Identity lifecycle example](../../../enterprise/ccf/PROCEDURES.md) — Inspect a public synthetic joiner/mover/leaver exercise and the evidence needed for independent re-performance; it is not an employee census.
 - [People & Culture doctrine](../../../docs/governance/PEOPLE_AND_CULTURE_DOCTRINE.md) — Recruiting, benefits, careers, hybrid work and continuity.
 - [Full headquarters decision](../../../docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md) — Section 6 includes the eight exploration assessments and workforce principles.
 - [Controlled people doctrine](../../../docs/governance/publications/SH-PNC-001_v1.0.0.pdf) — Reader edition.

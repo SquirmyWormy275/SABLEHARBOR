@@ -6,7 +6,7 @@ The wiki's canonical presentation source lives here in ordinary Markdown. Seven 
 
 ## Publication status
 
-These pages are review-branch repository content. The GitHub API reports Wiki enabled, but the separate `SABLEHARBOR.wiki.git` endpoint returned “Repository not found” during September 11 inspection. A live GitHub Wiki is not claimed. The repository pages themselves can be browsed directly; no external host is needed.
+These pages were accepted into main through [PR #128](https://github.com/SquirmyWormy275/SABLEHARBOR/pull/128), with subsequent catalog reconciliation in PRs #130 and #132. The GitHub API reports Wiki enabled, but the separate `SABLEHARBOR.wiki.git` endpoint returned “Repository not found” during the refreshed September 11 (Pacific) inspection. A live GitHub Wiki is not claimed. The repository pages themselves can be browsed directly; no external host is needed.
 
 Future wiki publication should copy accepted Markdown from this directory and convert repository-relative links to exact repository URLs. The separate wiki must not become an independently edited source. Preserve the [wiki policy](../governance/PUBLIC_REPOSITORY_AND_WIKI_POLICY.md), source states, and public-content boundary.
 

@@ -9,6 +9,7 @@ Corporate Secretary organizes Board processes, maintains formal corporate record
 
 ## Read and use the records
 
+- [Runtime recovery and assurance scope](../../../enterprise/runtime/docs/ASSURANCE_SCOPE.md) — Locate technical recovery evidence and its limitations when reviewing continuity records.
 - [Headquarters closeout](../../../docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md) — Sections 2–3 define the office within OGC and its continuity duty.
 - [ESS and independence](../../../docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md) — Administrative and substantive boundaries.
 - [Board record archive](../../../docs/governance/board-records/README.md) — Read minutes, written consent and supporting exhibits.

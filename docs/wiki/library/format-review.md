@@ -7,7 +7,7 @@ Generated reconciliation queue, not an assertion that every unpaired record lack
 | State | Records |
 |---|---:|
 | COUNTERPART_REVIEW_REQUIRED | 440 |
-| READER_OR_MAINTENANCE_PAGE | 94 |
+| READER_OR_MAINTENANCE_PAGE | 96 |
 | VERIFIED_DOCUMENT_PAIR | 131 |
 
 ## Records requiring counterpart reconciliation
