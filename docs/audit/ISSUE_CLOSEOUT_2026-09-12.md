@@ -1,6 +1,9 @@
 # Outstanding issue review — September 12, 2026
 
 Inspected main: `79437a778d4a4d5097a3cdaa36d7d8ab13217536`.
+Integration refresh: main `98b8ab4` includes the owning session’s merged PR #146.
+Its accepted source/catalog bytes were incorporated unchanged before rebuilding the Wiki export.
+
 Worktree: `/home/kingoftheeast/Projects/SABLEHARBOR-issue-closeout`.
 Branch: `cleanup/outstanding-issues-2026-09-12`.
 This is a delivery/disposition record, not a canon decision or evidence of external execution.
@@ -52,8 +55,9 @@ was represented as completed.
 
 ## Concurrent work preserved
 
-- PR #146, `feature/ccf-evidence-intake-workflow`, its worktree and `enterprise/ccf/`
-  remain with the CCF session. Private generated evidence packages were not inspected.
+- PR #146, `feature/ccf-evidence-intake-workflow`, was merged by its owning session
+  during validation. Its accepted CCF/catalog changes were incorporated from main without
+  alteration. The other worktree and private generated evidence packages were not inspected.
 - PR #145, `review/overnight-human-evidence-2026-09-12`, its 56-source legal manifest,
   legal publications, reader generators and validation workflow remain with their owner.
 - Billing PR #138 remains unapproved and unchanged.
@@ -71,8 +75,14 @@ search, not proof that the file does not exist in an external source or unsearch
 
 ## Validation
 
-The export produced 56 pages including `_Sidebar.md`, and converted 1,967 local links.
+The export produced 56 pages including `_Sidebar.md`, and converted 1,968 local links after incorporating PR #146 (1,967 on the initial baseline).
 Five focused tests passed for navigation/image/reference conversion, fragments, code
 preservation, invalid paths, deterministic output, source-checkout protection, page-name
 collisions, checksum tampering, manifest path traversal and preservation of unmanaged pages.
 Live Wiki publication remains unexecuted for the prerequisites above.
+
+The full local pytest suite completed successfully (186 tests collected; existing skips
+retained). Repository lint, formatting and type checking passed, as did governance/J2,
+institutional catalog, organization maps and repository hygiene validation. After the
+main refresh, the complete Wiki export, its five focused tests and catalog validation
+passed again. PR #147 carries the final candidate CI results and acceptance state.
