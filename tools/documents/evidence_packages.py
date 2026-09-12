@@ -70,6 +70,8 @@ def artifact_records(root: Path) -> list[tuple]:
             if isinstance(data["artifacts"], dict):
                 if data["source_register_sha256"] != package[5]:
                     raise ValueError("Review source register changed: " + package[4])
+                if "renderer_sha256" in data:
+                    verify("docs/finance/evidence/coverage/render.py", data["renderer_sha256"])
                 for relative, digest in data.get("source_dependencies", {}).items():
                     verify(relative, digest)
                 for relative, digest in data["artifacts"].items():
