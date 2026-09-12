@@ -115,3 +115,19 @@ Requires `pdftotext` plus the pinned source originals. C5 builds additionally re
 `START_HERE.md` links the design documents, reference explorer and five synthetic explorers. `DESIGNS.json` and CSVs carry the authored analysis; `SOURCE_CONTEXT.json` carries paragraph/focus-candidate fingerprints rather than republished criteria. Bullet spans are source-review aids, not an authoritative points-of-focus population. `OPERATING_INPUTS.csv` is intentionally unfilled where actual people, systems, parameters and providers are needed.
 
 The exercise demonstrates shared corporate evidence with separate site validation, independent SOC/HIPAA tests, C5 delta creation, failed-test preservation, same-period retesting and prospective validation of a new implementation version. Fictional reviews remain confined to the fictional catalog. A later passing period does not repair the earlier failed period. These examples are not external framework coverage or an examination opinion.
+
+## ISO extension planning
+
+The owner's ISO/IEC 27001:2022 and BS ISO/IEC 42001:2023 copies are available, together with the exact 27001:2022/Amd 1:2024 amendment. Use the source-bound ISO adapter rather than the historical starter's access placeholders:
+
+```bash
+uv run python -m enterprise.ccf.assurance.iso build \
+  --target ISO27001 --target ISO42001 \
+  --source-root /path/to/content-addressed-originals --output /new/iso-package
+uv run python -m enterprise.ccf.assurance.iso verify \
+  --source-root /path/to/content-addressed-originals --output /existing/iso-package
+```
+
+Use either ISO target alone or add `--target C5`. Omitting targets selects both ISO frameworks. The SOC 2/HIPAA baseline always remains visible. The package includes an explorer, original implementation plan, delta-action records and unresolved Statement of Applicability rows. The inventory distinguishes 30 ISMS clauses/93 reference controls and 32 AIMS clauses/38 reference controls; normative Annex B guidance, document context and the climate amendment remain explicit review work. Additional native candidates do not mean additional controls are conclusively necessary or sufficient.
+
+Originals and full OCR text remain outside Git and generated exports. The 42001 scan's watermark interferes with OCR; Annex A identifiers were visually checked, but exact wording and complete semantics remain unreviewed. All source/mapping/applicability reviews and actual operating evidence remain absent. Atlas is the read-only reference guide; these adapters and generated designs belong to SABLEHARBOR.
