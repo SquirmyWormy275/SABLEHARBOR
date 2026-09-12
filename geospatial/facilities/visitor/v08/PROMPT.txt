@@ -1,0 +1,14 @@
+Use case: precise-object-edit / illustration refinement.
+Edit this Sable Harbor V07 visitor map into V08. The user likes the current architectural ink-and-wash direction and requests another refinement. Preserve it. Same complete landscape page, same scale and framing, north-up campus on left and directory on right, identical four building locations/footprints, roads, paths, courts, entrance positions, parking zones and gold arrival route. Preserve every word of the visitor information. Do not redesign or rotate the map.
+
+Targeted art direction:
+- Replace the too-perfect strings of identical round shrubs along building bases and road edges with lower, continuous planting beds with subtle irregular natural foliage. Keep the same bed extents and preserve gaps at every entrance and walkway. Do not enlarge beds or invent new ones. These should feel like maintained campus planting, not beads glued along every edge.
+- Give existing tree canopies better individual branch/leaf character and modest tonal variation, with softer coherent shadows. Preserve their locations and general sizes. Keep the landscape calm and cultivated; no additional trees, dense forests, flowers, people or props.
+- Let walks, entrance thresholds and open lawns breathe: remove stray foliage or heavy texture that obscures their edges. Keep the illustration detailed but controlled.
+- Maintain the crisp type and restrained architectural detail of V07. Quieten repetitive roof grids and lawn speckling. Buildings remain pale, flat-roofed, with subtle clean parapet lines; no new structural features or roof equipment.
+- Make the gold route and the four entrance markers fractionally clearer through local contrast, not giant arrows or brighter colors. Same exact route and positions. The Corporate arrival route must be immediately readable.
+- Retain slate-navy typography, off-white paper, cool mineral gray drives, restrained natural sage/olive foliage and muted brass route. Avoid yellow wash, sepia, cartoon saturation and noisy watercolor blooms.
+- Keep all directory labels, legend and footer text exactly intact. Only change V07 to V08 in the revision badge and footer.
+- Keep 'ILLUSTRATIVE STUDY · NOT TO SCALE' and 'ILLUSTRATIVE CONCEPT / NORTH IS UP'; no numeric scale bar. Keep SH-SITE-0001 and the provisional visitor-parking/step-free-access caveat.
+
+Deliver one whole polished map with the same visual identity, composition and page proportions, at the highest practical resolution. This is a careful finishing pass by the same illustrator, not a new map. No side-by-side panels, mockups or extra captions.
