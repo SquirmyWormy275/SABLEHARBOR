@@ -31,6 +31,7 @@ jobs:
           python geospatial/facilities/visitor/v06/validate.py
           python geospatial/facilities/visitor/v07/validate.py
           python geospatial/facilities/visitor/v08/validate.py
+          python geospatial/facilities/visitor/validate_acceptance.py
       - name: Acceptance regression mutations
         run: python -m pytest -q geospatial/facilities/test_facilities.py geospatial/facilities/coverage/test_coverage.py geospatial/facilities/population/test_population.py
       - name: Planning workbench freshness and regression tests

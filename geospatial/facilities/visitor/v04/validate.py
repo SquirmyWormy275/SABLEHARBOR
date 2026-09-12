@@ -1,6 +1,9 @@
 """Source integrity and basic geometry/text checks for the single review sheet."""
 
 import hashlib
+import subprocess
+import sys
+from html.parser import HTMLParser
 import json
 from pathlib import Path
 import xml.etree.ElementTree as ET
@@ -24,8 +27,10 @@ for ext, record in manifest["artifacts"].items():
     assert hashlib.sha256((ROOT / record["path"]).read_bytes()).hexdigest() == record["sha256"], (
         f"Stale {ext}"
     )
-review = manifest['review_surface']
-assert hashlib.sha256((ROOT/review['path']).read_bytes()).hexdigest()==review['sha256'], 'Changed review surface'
+review = manifest["review_surface"]
+assert hashlib.sha256((ROOT / review["path"]).read_bytes()).hexdigest() == review["sha256"], (
+    "Changed review surface"
+)
 assert manifest["geometry_changes"] == [] and manifest["map_id"] is None
 assert len(manifest["entrances"]) == 4
 route = LineString(
@@ -62,24 +67,38 @@ print(
 )
 
 # V01 is an immutable comparison, including its own source hashes.
-import subprocess
-import sys
+
 subprocess.run([sys.executable, str(BASE.parent / "v02" / "validate.py")], check=True)
-from html.parser import HTMLParser
+
+
 class Links(HTMLParser):
     def handle_starttag(self, tag, attrs):
         for key, value in attrs:
             if key in ("src", "href") and value and not value.startswith(("http:", "https:", "#")):
                 assert (BASE / value.split("#")[0]).is_file(), value
+
+
 Links().feed((BASE / "review.html").read_text())
 print("PASS: V01 preservation and all comparison links")
 
 for mass in manifest["building_masses"]:
-    building=next(b for b in model["buildings"] if b["id"]==mass["building_id"])
-    assert mass["ground_rect_ft"]==building["rect_ft"]
-    expected=building["modelled_floor_count"]*building["floor_height_m"]/.3048
-    assert abs(mass["height_ft"]-expected)<1e-9
-    assert abs(mass["roof_offset_ft"]-expected*source["projection"]["roof_north_offset_per_height_ft"])<1e-9
-    assert abs(mass["roof_east_offset_ft"]-expected*source["projection"]["roof_east_offset_per_height_ft"])<1e-9
-assert len(manifest["building_masses"])==len(model["buildings"])
+    building = next(b for b in model["buildings"] if b["id"] == mass["building_id"])
+    assert mass["ground_rect_ft"] == building["rect_ft"]
+    expected = building["modelled_floor_count"] * building["floor_height_m"] / 0.3048
+    assert abs(mass["height_ft"] - expected) < 1e-9
+    assert (
+        abs(
+            mass["roof_offset_ft"]
+            - expected * source["projection"]["roof_north_offset_per_height_ft"]
+        )
+        < 1e-9
+    )
+    assert (
+        abs(
+            mass["roof_east_offset_ft"]
+            - expected * source["projection"]["roof_east_offset_per_height_ft"]
+        )
+        < 1e-9
+    )
+assert len(manifest["building_masses"]) == len(model["buildings"])
 print("PASS: all four building masses reconcile to source floor stacks and footprints")

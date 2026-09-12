@@ -61,7 +61,7 @@
   ],
   "sources": {
     "geospatial/facilities/visitor/v02/SOURCE.json": "43e2f83e367be1e6b7b3d42db78f71f5b93fef0db643985028936f5411d849dc",
-    "geospatial/facilities/visitor/v02/build.py": "d46d93c5ccbe3e54cbe55bf827d87ba771f5a64dac760b45a42da46aca1a2af9",
+    "geospatial/facilities/visitor/v02/build.py": "b461b023c1db76f42462917ac1a1e9b67b38cbc7af509c043c8fafb857db3cae",
     "geospatial/facilities/r01_drawing.py": "8c1eae0967aac597395b16351ba0d6b1077cc3a31dded3fe292389a655d24c35",
     "geospatial/facilities/source/campus.json": "0efd4854069ff20acb4032e02b021afebcb955990f1d684b51428624e281d950",
     "geospatial/facilities/fonts/DejaVuSans-Bold.ttf": "b184b89e3c1075f22f6b71575b6fc20d4972b3cfd3b23322ca6fd596dcaef167",

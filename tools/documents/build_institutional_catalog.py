@@ -169,7 +169,11 @@ def main() -> None:
 
     coverage = populate(ROOT, db, manifest["artifacts"])
     print(f"Reader library: {coverage}")
+    # Compact generated search indexes without dropping any records or search content.
+    for table in ("institutional_search", "reader_search"):
+        db.execute(f"INSERT INTO {table}({table}) VALUES('optimize')")
     db.commit()
+    db.execute("VACUUM")
     db.close()
 
 

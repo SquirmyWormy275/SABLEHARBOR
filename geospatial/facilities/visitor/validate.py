@@ -24,8 +24,10 @@ for ext, record in manifest["artifacts"].items():
     assert hashlib.sha256((ROOT / record["path"]).read_bytes()).hexdigest() == record["sha256"], (
         f"Stale {ext}"
     )
-review = manifest['review_surface']
-assert hashlib.sha256((ROOT/review['path']).read_bytes()).hexdigest()==review['sha256'], 'Changed review surface'
+review = manifest["review_surface"]
+assert hashlib.sha256((ROOT / review["path"]).read_bytes()).hexdigest() == review["sha256"], (
+    "Changed review surface"
+)
 assert manifest["geometry_changes"] == [] and manifest["map_id"] is None
 assert len(manifest["entrances"]) == 4
 route = LineString(

@@ -6,7 +6,7 @@ Generated reconciliation queue, not an assertion that every unpaired record lack
 
 | State | Records |
 |---|---:|
-| COUNTERPART_REVIEW_REQUIRED | 433 |
+| COUNTERPART_REVIEW_REQUIRED | 434 |
 | READER_OR_MAINTENANCE_PAGE | 91 |
 | VERIFIED_DOCUMENT_PAIR | 131 |
 
@@ -106,6 +106,7 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [SABLE HARBOR — CORPORATE LORE CANON](../../canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.2.md) — Corporate document-format reconciliation
 - [SABLE HARBOR — CORPORATE LORE CANON](../../canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md) — Corporate document-format reconciliation
 - [SABLE HARBOR — CORPORATE LORE CANON](../../canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md) — Corporate document-format reconciliation
+- [Sacramento visitor map — V08 visual acceptance](../../canon/SACRAMENTO_VISITOR_MAP_V08_ACCEPTANCE_2026-09-11.md) — Corporate document-format reconciliation
 - [Third-party services — implementation scope supplement](../../canon/THIRD_PARTY_SERVICES_IMPLEMENTATION_SCOPE_2026-09-09.md) — Corporate document-format reconciliation
 - [SABLE HARBOR — THIRD-PARTY SERVICES AND INTERNAL OPERATIONS SOURCING DECISIONS](../../canon/THIRD_PARTY_SERVICES_SOURCING_DECISIONS_2026-09-09.md) — Corporate document-format reconciliation
 - [Superseded filename](../../canon/WILLOW_EVALON_CLOSEOUT_2026-09-06.md) — Corporate document-format reconciliation

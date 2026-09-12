@@ -10,7 +10,7 @@ from pathlib import Path
 BASE = Path(__file__).resolve().parent
 ROOT = BASE.parents[2]
 sys.path.insert(0, str(BASE.parent))
-from r01_drawing import BLUE, FILLS, FT, GOLD, INK, MUTED, PAPER, SAGE, Sheet
+from r01_drawing import BLUE, FILLS, FT, GOLD, INK, MUTED, PAPER, SAGE, Sheet  # noqa: E402 — local renderer path configured above
 
 
 def sha(path):

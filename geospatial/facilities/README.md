@@ -1,5 +1,7 @@
 # Facility programme and atlas — R02 / v0.2.0
 
+[Selected Sacramento visitor map — V08](visitor/index.html). Artwork locked by owner selection; illustrated, not to scale.
+
 [Planning workbench: scenarios, readiness and evidence](workbench/README.md).
 
 [Controlled release and checksums](../../docs/releases/FACILITY_ATLAS_RELEASES.md).

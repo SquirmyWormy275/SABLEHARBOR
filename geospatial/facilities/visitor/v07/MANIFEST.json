@@ -11,10 +11,10 @@
   "sources": {
     "geospatial/facilities/visitor/v07/SOURCE.json": "1fa1edd1c83a36cc50620e7e8089709855ed60af4976708cddd09083da910135",
     "geospatial/facilities/visitor/v07/PROMPT.txt": "aa5329b5d839f2706e9119ef71e19b5aa118e109d208a13965dfbc2e93f2b511",
-    "geospatial/facilities/visitor/v07/build.py": "d07cfc7e7fa81efcc7ae445a18426b70077870af717dc6b54cba035aaf872dfc",
+    "geospatial/facilities/visitor/v07/build.py": "b687ac8816d3f057320ad7072c5d3fee3f91a7564345eac7a63c752bce6b25c8",
     "geospatial/facilities/visitor/v07/review.html": "d08ada2ed86965c6693caf7ef709f87cb604c21163d03b2d8dbd2ad879f4455f",
     "geospatial/facilities/visitor/v06/artifacts/visitor-map-v06.png": "c6169b9e47969b5ddcc0758232b9d562f51b2902634f9f7a93f4016ff044e799",
-    "geospatial/facilities/visitor/v06/MANIFEST.json": "bf29fa63913ffe4405f35874b08277794768128d59886dfe02530478b56b7393"
+    "geospatial/facilities/visitor/v06/MANIFEST.json": "625e51b51fae592b70ba33571f9a18cc3847825af26be9c211bd5797e69e559b"
   },
   "artifacts": {
     "png": {
