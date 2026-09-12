@@ -165,6 +165,10 @@ def main() -> None:
             for value in values:
                 db.execute("INSERT OR IGNORE INTO relationship VALUES (?,?,?)", (obj["id"], relation_type, value))
     db.execute("CREATE VIEW current_institutional_object AS SELECT * FROM institutional_object WHERE upper(status) NOT LIKE 'SUPERSEDED%'")
+    from reader_library import populate
+
+    coverage = populate(ROOT, db, manifest["artifacts"])
+    print(f"Reader library: {coverage}")
     db.commit()
     db.close()
 

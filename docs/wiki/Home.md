@@ -1,29 +1,56 @@
-# Sable Harbor Institutional Index
+# Explore Sable Harbor
 
-**Presentation status:** Wiki source; not independent canon.
-**Controlling source:** `docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md`
+<img src="../../assets/brand/logos/sable-harbor__primary-horizontal.png" alt="Sable Harbor" width="360">
 
-Sable Harbor is primarily one operating company with selective subsidiaries and named business/program capabilities. Its 2026 governance is documented in the [board/capital instrument](../governance/BOARD_AND_CAPITAL_GOVERNANCE_v1.0.1.md) and [governance constitution](../governance/GOVERNANCE_CONSTITUTION.md).
+**Reviewed:** September 11, 2026 · **Status:** repository reading layer; linked source records control.
 
-[J2 — Judgment & Junction](../j2/README.md) is the internal intelligence, judgment, orientation, education, and learning capability. [Alexandria](../j2/alexandria/README.md) preserves and connects institutional learning; Pinakes is its nine-door human portal, Semaphore its traffic corpus, Canon its current best understanding, and Daedalus its non-authoritative personal AI companion.
+Sable Harbor develops industrial software, operates resource businesses, and provides professional services. This index connects the businesses and corporate functions to their people, records, finances and places. Start with a subject; each page points to the documents behind it.
 
-For fact state and unresolved matters, use the [decision register](../canon/DECISION_REGISTER_v0.3.1.md). LOCKED, PROVISIONAL, OPEN, and SUPERSEDED distinctions remain controlling.
+[Choose an exercise](../reader/USE_CASES.md) · [Accounting practice](../finance/READER_EXERCISES.md) · [Complete document library](Library.md) · [Source and format guide](../reader/SOURCES_AND_FORMATS.md)
 
-The historical Pittsburgh outpost is **Klein**, rechartered as Willow in 2022. Its [name and approved identity](../canon/KLEIN_NAME_AND_IDENTITY_2026-09-07.md) and [corporate record](../organization/WILLOW_KLEIN_CORPORATE_RECORD.md) distinguish it from Emberline.
+## Businesses
 
-Emberline's [approved historical identity](../canon/EMBERLINE_VISUAL_IDENTITY_2026-09-07.md) uses the owner-selected coal-company logo; its earlier geometric artwork is superseded.
+| Business | What it does |
+|---|---|
+| [Foundry Field](businesses/Foundry-Field.md) | Software for production tracking, maintenance, reconciliations, and operating exceptions. |
+| [Atlas Meridian](businesses/Atlas-Meridian.md) | Software for investigating operating data, reviewing evidence, and managing client work. |
+| [Willow](businesses/Willow.md) | Builds and tests industrial prototypes, sensors, software, and experimental processes. |
+| [Pale Sun and Red Wash](businesses/Pale-Sun-Red-Wash.md) | Develops uranium operations and owns the Red Wash mining business. |
+| [Project Cradle](businesses/Cradle.md) | Recovers rare-earth materials from industrial byproducts and mine water for specialist refiners. |
+| [American Resource Utility and BS&T](businesses/American-Resource-Utility.md) | Rail, truck, terminal, and warehouse services for industrial customers. |
+| [Sable Harbor Advisory](businesses/Advisory.md) | Investigates business problems, builds client intelligence teams, and improves operations. |
 
-[Kelly Gang Mining's approved emblem](../canon/KELLY_GANG_MINING_VISUAL_IDENTITY_2026-09-07.md) identifies the fictional external Tasmanian operator hosting Cradle's Stream 17 intervention.
+[![Business lines and their work](../organization/assets/current/business-lines.png)](../organization/charts/business-lines.md)
 
-[Quality Forest Communications' approved logo](../canon/QUALITY_FOREST_COMMUNICATIONS_VISUAL_IDENTITY_2026-09-07.md) identifies Eli Hoberg's historical forestry-communications company.
+These are business-line relationships. Use the [legal ownership chart](../organization/charts/industrial-ownership.md) when studying legal entities and consolidation.
 
-[Demotte Reclamation Services](../canon/DEMOTTE_RECLAMATION_NAME_AND_IDENTITY_2026-09-07.md) is the current name and identity of Cradle's external U.S. mine-water treatment host.
+## Departments and institutions
 
-[Northstar Minerals, Inc.'s approved logo](../canon/NORTHSTAR_MINERALS_VISUAL_IDENTITY_2026-09-07.md) identifies the external Red Wash seller.
+[Full department and capability directory](departments/README.md)
 
-Use the [seven current business dossiers](../business-lines/README.md) and [source crosswalk](../business-lines/CURRENT_SOURCE_CROSSWALK.md) for operating and financial context.
+| Area | Start here |
+|---|---|
+| Governance and direction | [Board and committees](departments/board.md), [CEO](departments/executive.md), [Corporate Secretary](departments/corporate-secretary.md) |
+| Shared services | [ESS](departments/ess.md), [Finance](departments/finance.md), [People & Culture](departments/people-culture.md), [Technology](departments/technology.md) |
+| Legal and assurance | [General Counsel](departments/legal.md), [Risk & Compliance](departments/risk-compliance.md), [Internal Audit](departments/internal-audit.md) |
+| Workplace and operating support | [Facilities](departments/facilities.md), [Security](departments/security.md), [Procurement](departments/procurement.md), [Safety](departments/safety-environment.md), [Quality](departments/quality-standards.md) |
+| J2 | [Directorate](departments/j2.md), [Headquarters](departments/j2-headquarters.md), [Contact](departments/contact.md), [Judgment](departments/judgment.md), [Orientation](departments/orientation.md), [Education](departments/education.md), [JAG](departments/jag.md) |
+| Institutional records and systems | [Alexandria](departments/alexandria.md) |
 
+Directory groupings aid navigation; they do not create departments or reporting lines. Internal Audit retains independent functional accountability. J2 remains outside ESS.
 
-## Current company organization
+## Places, records, and history
 
-[Company chart index](../organization/README.md) · [Complete displayed wording](../organization/DISPLAY_INVENTORY.md). Use these shared pages for current charts.
+- [Locations and facilities](../../geospatial/facilities/README.md) — Individual context maps, site plans, buildings, and floors, with status and source evidence.
+- [Organization charts](../organization/README.md) — Business, people, institution, external-party, and historical charts.
+- [Transaction records](../../industrial/transaction/01_RW_TRANSACTION_FILE.md) — Start a transaction review with the selected Red Wash case and linked instruments.
+- [Controlled document index](../CONTROLLED_DOCUMENT_INDEX.md) — Formal source/publication entry points.
+- [Corporate history and canon files](library/history.md) — Browse dated decisions and their supersession context.
+- [Historical and external relationships](../business-lines/HISTORICAL_AND_EXTERNAL_BOUNDARIES.md) — Distinguish former programs, host operators, and counterparties from current businesses.
+- [Approved identity assets](../../assets/brand/README.md) — Find current marks and approved source-art exceptions.
+
+## How to read
+
+Markdown opens directly in GitHub. PDFs provide formatted documents. Download Excel workbooks to inspect schedules and calculations. Complete release packages contain additional operating records, databases and, where supplied, offline browsers; follow the [download guide](../reader/USE_CASES.md#downloads-and-tools).
+
+The [library](Library.md) indexes the underlying files without moving them or creating duplicate source documents. It includes history; current subject pages and each source's status explain what controls. Some figures are conditional scenarios or reconstructions, not observed history. The [source guide](../reader/SOURCES_AND_FORMATS.md) explains these distinctions and the three-form document requirement.

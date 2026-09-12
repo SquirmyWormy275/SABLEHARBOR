@@ -1,0 +1,2 @@
+# Optional local browser preview; no effect on controlled PDF publication.
+markdown-it-py==4.2.0
