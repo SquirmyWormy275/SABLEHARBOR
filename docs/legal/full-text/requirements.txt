@@ -1,0 +1,5 @@
+# Full-source publication and validation environment; independent of finance runtime.
+markdown-it-py==4.2.0
+PyMuPDF==1.26.6
+playwright==1.62.0
+pytest==8.4.2

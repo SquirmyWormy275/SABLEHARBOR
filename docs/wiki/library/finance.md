@@ -168,6 +168,12 @@ Generated file inventory. Includes current and historical records; open the sour
 
 - [Close, allowance and legal-book reconciliation](../../finance/evidence/close/README.md) — MD
 
+## `docs/finance/evidence/close/draft`
+
+- [Close, allowance and legal-book reconciliation](../../finance/evidence/close/draft/WORKING_PAPER.md) — MD
+- [working-paper](../../finance/evidence/close/draft/working-paper.pdf) — PDF
+- [working-papers](../../finance/evidence/close/draft/working-papers.xlsx) — XLSX
+
 ## `docs/finance/evidence/coverage`
 
 - [Finance evidence: scope and source access](../../finance/evidence/coverage/README.md) — MD
@@ -176,18 +182,42 @@ Generated file inventory. Includes current and historical records; open the sour
 
 - [Billing, collections and deferred revenue](../../finance/evidence/customer/README.md) — MD
 
+## `docs/finance/evidence/customer/draft`
+
+- [Billing, collections and deferred revenue](../../finance/evidence/customer/draft/WORKING_PAPER.md) — MD
+- [working-paper](../../finance/evidence/customer/draft/working-paper.pdf) — PDF
+- [working-papers](../../finance/evidence/customer/draft/working-papers.xlsx) — XLSX
+
 ## `docs/finance/evidence/supporting-schedules`
 
 - [Workforce, inventory, fixed assets and debt](../../finance/evidence/supporting-schedules/README.md) — MD
+
+## `docs/finance/evidence/supporting-schedules/draft`
+
+- [Workforce, inventory, fixed assets and debt](../../finance/evidence/supporting-schedules/draft/WORKING_PAPER.md) — MD
+- [working-paper](../../finance/evidence/supporting-schedules/draft/working-paper.pdf) — PDF
+- [working-papers](../../finance/evidence/supporting-schedules/draft/working-papers.xlsx) — XLSX
 
 ## `docs/finance/evidence/tax-transaction`
 
 - [Transaction cash and conditional tax support](../../finance/evidence/tax-transaction/README.md) — MD
 - [Current industrial transaction and tax support](../../finance/evidence/tax-transaction/TRANSACTION_SUPPORT.md) — MD
 
+## `docs/finance/evidence/tax-transaction/draft`
+
+- [Transaction cash and conditional tax support](../../finance/evidence/tax-transaction/draft/WORKING_PAPER.md) — MD
+- [working-paper](../../finance/evidence/tax-transaction/draft/working-paper.pdf) — PDF
+- [working-papers](../../finance/evidence/tax-transaction/draft/working-papers.xlsx) — XLSX
+
 ## `docs/finance/evidence/treasury`
 
 - [Procurement, payables and Treasury](../../finance/evidence/treasury/README.md) — MD
+
+## `docs/finance/evidence/treasury/draft`
+
+- [Procurement, payables and Treasury](../../finance/evidence/treasury/draft/WORKING_PAPER.md) — MD
+- [working-paper](../../finance/evidence/treasury/draft/working-paper.pdf) — PDF
+- [working-papers](../../finance/evidence/treasury/draft/working-papers.xlsx) — XLSX
 
 ## `docs/finance/publications`
 
@@ -209,6 +239,18 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Red Wash purchase and closing-rights schedule](../../legal/evidence/assets-rights/SH-LEGAL-READ-RW-001.md) — MD
 - [Campus and operating-site tenure review](../../legal/evidence/assets-rights/SH-LEGAL-READ-TENURE-001.md) — MD
 
+## `docs/legal/evidence/assets-rights/drafts`
+
+- [SH-LEGAL-READ-ARU-001](../../legal/evidence/assets-rights/drafts/SH-LEGAL-READ-ARU-001.pdf) — PDF
+- [SH-LEGAL-READ-HOST-001](../../legal/evidence/assets-rights/drafts/SH-LEGAL-READ-HOST-001.pdf) — PDF
+- [SH-LEGAL-READ-NV-001](../../legal/evidence/assets-rights/drafts/SH-LEGAL-READ-NV-001.pdf) — PDF
+- [SH-LEGAL-READ-RW-001](../../legal/evidence/assets-rights/drafts/SH-LEGAL-READ-RW-001.pdf) — PDF
+- [SH-LEGAL-READ-TENURE-001](../../legal/evidence/assets-rights/drafts/SH-LEGAL-READ-TENURE-001.pdf) — PDF
+
+## `docs/legal/evidence/assets-rights/drafts/qa`
+
+- [Legal reader draft visual review](../../legal/evidence/assets-rights/drafts/qa/REVIEW.md) — MD
+
 ## `docs/legal/evidence/commercial`
 
 - [Commercial contracts and service obligations](../../legal/evidence/commercial/README.md) — MD
@@ -216,6 +258,13 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Atlas licensing and amendment evidence](../../legal/evidence/commercial/SH-LEGAL-READ-ATL-001.md) — MD
 - [Colocation orders and SLA review](../../legal/evidence/commercial/SH-LEGAL-READ-COLO-001.md) — MD
 - [Taylor–Red Wash service terms](../../legal/evidence/commercial/SH-LEGAL-READ-IC-001.md) — MD
+
+## `docs/legal/evidence/commercial/drafts`
+
+- [SH-LEGAL-READ-ADV-001](../../legal/evidence/commercial/drafts/SH-LEGAL-READ-ADV-001.pdf) — PDF
+- [SH-LEGAL-READ-ATL-001](../../legal/evidence/commercial/drafts/SH-LEGAL-READ-ATL-001.pdf) — PDF
+- [SH-LEGAL-READ-COLO-001](../../legal/evidence/commercial/drafts/SH-LEGAL-READ-COLO-001.pdf) — PDF
+- [SH-LEGAL-READ-IC-001](../../legal/evidence/commercial/drafts/SH-LEGAL-READ-IC-001.pdf) — PDF
 
 ## `docs/legal/evidence/corporate`
 
@@ -225,9 +274,89 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Legal entities and separate books](../../legal/evidence/corporate/SH-LEGAL-READ-ENTITY-001.md) — MD
 - [ARU transition and retention obligations](../../legal/evidence/corporate/SH-LEGAL-READ-HR-001.md) — MD
 
+## `docs/legal/evidence/corporate/drafts`
+
+- [SH-LEGAL-READ-CAPITAL-001](../../legal/evidence/corporate/drafts/SH-LEGAL-READ-CAPITAL-001.pdf) — PDF
+- [SH-LEGAL-READ-CARRY-001](../../legal/evidence/corporate/drafts/SH-LEGAL-READ-CARRY-001.pdf) — PDF
+- [SH-LEGAL-READ-ENTITY-001](../../legal/evidence/corporate/drafts/SH-LEGAL-READ-ENTITY-001.pdf) — PDF
+- [SH-LEGAL-READ-HR-001](../../legal/evidence/corporate/drafts/SH-LEGAL-READ-HR-001.pdf) — PDF
+
 ## `docs/legal/evidence/proposals`
 
 - [Legal and billing fields awaiting evidence or review](../../legal/evidence/proposals/README.md) — MD
+
+## `docs/legal/full-text`
+
+- [Complete legal source publication — delivery record](../../legal/full-text/CLOSEOUT.md) — MD
+- [Full-length legal source editions](../../legal/full-text/README.md) — MD
+- [Full-length legal source audit](../../legal/full-text/SOURCE_AUDIT.md) — MD
+
+## `docs/legal/full-text/editions`
+
+- [LEGAL-SOURCE-16BD06943F32](../../legal/full-text/editions/LEGAL-SOURCE-16BD06943F32.pdf) — PDF
+- [LEGAL-SOURCE-273909FD1A3E](../../legal/full-text/editions/LEGAL-SOURCE-273909FD1A3E.pdf) — PDF
+- [LEGAL-SOURCE-46256BC2255E](../../legal/full-text/editions/LEGAL-SOURCE-46256BC2255E.pdf) — PDF
+- [LEGAL-SOURCE-508081AAD2B2](../../legal/full-text/editions/LEGAL-SOURCE-508081AAD2B2.pdf) — PDF
+- [LEGAL-SOURCE-7FFDC6FBB585](../../legal/full-text/editions/LEGAL-SOURCE-7FFDC6FBB585.pdf) — PDF
+- [LEGAL-SOURCE-801955F60F74](../../legal/full-text/editions/LEGAL-SOURCE-801955F60F74.pdf) — PDF
+- [LEGAL-SOURCE-920F33E127C0](../../legal/full-text/editions/LEGAL-SOURCE-920F33E127C0.pdf) — PDF
+- [LEGAL-SOURCE-9E57D6909035](../../legal/full-text/editions/LEGAL-SOURCE-9E57D6909035.pdf) — PDF
+- [LEGAL-SOURCE-A709ECAC08C4](../../legal/full-text/editions/LEGAL-SOURCE-A709ECAC08C4.pdf) — PDF
+- [LEGAL-SOURCE-F1F0AD5F06DC](../../legal/full-text/editions/LEGAL-SOURCE-F1F0AD5F06DC.pdf) — PDF
+- [LEGAL-SOURCE-FCEBAA48286F](../../legal/full-text/editions/LEGAL-SOURCE-FCEBAA48286F.pdf) — PDF
+- [SH-ADV-003](../../legal/full-text/editions/SH-ADV-003.pdf) — PDF
+- [SH-ADV-005](../../legal/full-text/editions/SH-ADV-005.pdf) — PDF
+- [SH-ADV-007](../../legal/full-text/editions/SH-ADV-007.pdf) — PDF
+- [SH-ADV-009](../../legal/full-text/editions/SH-ADV-009.pdf) — PDF
+- [SH-ADV-014](../../legal/full-text/editions/SH-ADV-014.pdf) — PDF
+- [SH-ADV-017](../../legal/full-text/editions/SH-ADV-017.pdf) — PDF
+- [SH-ATL-017](../../legal/full-text/editions/SH-ATL-017.pdf) — PDF
+- [SH-BRD-CONSENT-2026-09-02](../../legal/full-text/editions/SH-BRD-CONSENT-2026-09-02.pdf) — PDF
+- [SH-BRD-MIN-2021-06-18](../../legal/full-text/editions/SH-BRD-MIN-2021-06-18.pdf) — PDF
+- [SH-BRD-MIN-2022-10-28](../../legal/full-text/editions/SH-BRD-MIN-2022-10-28.pdf) — PDF
+- [SH-BRD-MIN-2024-02-15](../../legal/full-text/editions/SH-BRD-MIN-2024-02-15.pdf) — PDF
+- [SH-CANON-WIL-KLEIN-20260906-001](../../legal/full-text/editions/SH-CANON-WIL-KLEIN-20260906-001.pdf) — PDF
+- [SH-CORP-HQ-20260903](../../legal/full-text/editions/SH-CORP-HQ-20260903.pdf) — PDF
+- [SH-CRD-CLOSEOUT-20260906](../../legal/full-text/editions/SH-CRD-CLOSEOUT-20260906.pdf) — PDF
+- [SH-GOV-AUTH-001](../../legal/full-text/editions/SH-GOV-AUTH-001.pdf) — PDF
+- [SH-GOV-BOARD-001](../../legal/full-text/editions/SH-GOV-BOARD-001.pdf) — PDF
+- [SH-GOV-COM-AUDIT-001](../../legal/full-text/editions/SH-GOV-COM-AUDIT-001.pdf) — PDF
+- [SH-GOV-COM-COMP-001](../../legal/full-text/editions/SH-GOV-COM-COMP-001.pdf) — PDF
+- [SH-GOV-COM-FIN-001](../../legal/full-text/editions/SH-GOV-COM-FIN-001.pdf) — PDF
+- [SH-GOV-COM-GOVNOM-001](../../legal/full-text/editions/SH-GOV-COM-GOVNOM-001.pdf) — PDF
+- [SH-GOV-COM-TECHOPS-001](../../legal/full-text/editions/SH-GOV-COM-TECHOPS-001.pdf) — PDF
+- [SH-GOV-ESS-001](../../legal/full-text/editions/SH-GOV-ESS-001.pdf) — PDF
+- [SH-IND-ARU-CLOSE-001](../../legal/full-text/editions/SH-IND-ARU-CLOSE-001.pdf) — PDF
+- [SH-IND-ARU-DD-001](../../legal/full-text/editions/SH-IND-ARU-DD-001.pdf) — PDF
+- [SH-IND-ARU-HR-001](../../legal/full-text/editions/SH-IND-ARU-HR-001.pdf) — PDF
+- [SH-IND-ARU-LOI-001](../../legal/full-text/editions/SH-IND-ARU-LOI-001.pdf) — PDF
+- [SH-IND-ARU-SPA-001](../../legal/full-text/editions/SH-IND-ARU-SPA-001.pdf) — PDF
+- [SH-IND-ARU-TAX-001](../../legal/full-text/editions/SH-IND-ARU-TAX-001.pdf) — PDF
+- [SH-IND-COR-001](../../legal/full-text/editions/SH-IND-COR-001.pdf) — PDF
+- [SH-IND-DR-001](../../legal/full-text/editions/SH-IND-DR-001.pdf) — PDF
+- [SH-IND-FIN-DRV-001](../../legal/full-text/editions/SH-IND-FIN-DRV-001.pdf) — PDF
+- [SH-IND-FIN-TXN-001](../../legal/full-text/editions/SH-IND-FIN-TXN-001.pdf) — PDF
+- [SH-IND-HR-001](../../legal/full-text/editions/SH-IND-HR-001.pdf) — PDF
+- [SH-IND-IC-001](../../legal/full-text/editions/SH-IND-IC-001.pdf) — PDF
+- [SH-IND-IC-PRC-001](../../legal/full-text/editions/SH-IND-IC-PRC-001.pdf) — PDF
+- [SH-IND-RW-TXN-001](../../legal/full-text/editions/SH-IND-RW-TXN-001.pdf) — PDF
+- [SH-IND-SAF-001](../../legal/full-text/editions/SH-IND-SAF-001.pdf) — PDF
+- [SH-J2-PPL-20260910](../../legal/full-text/editions/SH-J2-PPL-20260910.pdf) — PDF
+- [SH-LEGAL-ADV-001](../../legal/full-text/editions/SH-LEGAL-ADV-001.pdf) — PDF
+- [SH-PNC-001](../../legal/full-text/editions/SH-PNC-001.pdf) — PDF
+- [SH-PS-RW-TOR-001](../../legal/full-text/editions/SH-PS-RW-TOR-001.pdf) — PDF
+- [SH-RT-CONTRACT-001](../../legal/full-text/editions/SH-RT-CONTRACT-001.pdf) — PDF
+- [SH-RT-DEC-001](../../legal/full-text/editions/SH-RT-DEC-001.pdf) — PDF
+- [SH-RT-DEED-001](../../legal/full-text/editions/SH-RT-DEED-001.pdf) — PDF
+- [SH-RT-FINANCE-001](../../legal/full-text/editions/SH-RT-FINANCE-001.pdf) — PDF
+
+## `docs/legal/full-text/qa/commercial-tax`
+
+- [Commercial and accounting-tax visual review](../../legal/full-text/qa/commercial-tax/REVIEW.md) — MD
+
+## `docs/legal/full-text/qa/corporate-workforce`
+
+- [Corporate and workforce edition review](../../legal/full-text/qa/corporate-workforce/README.md) — MD
 
 ## `enterprise/business`
 

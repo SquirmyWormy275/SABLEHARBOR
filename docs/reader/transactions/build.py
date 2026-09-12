@@ -191,6 +191,13 @@ def build():
         "| Family | Source record | Existing PDF |",
         "|---|---|---|",
     ]
+    if (ROOT / "docs/legal/full-text/render-manifest.json").is_file():
+        rows[8:8] = [
+            "## Read complete documents",
+            "",
+            "[Full-length legal source editions](../../legal/full-text/README.md) provide all 56 selected records as complete PDFs and editable HTML, with original Markdown and full-text database access. New designs remain pending exact-file review. The abbreviated dossiers below are supplementary reading aids, not substitutes for these complete editions.",
+            "",
+        ]
     for i in instruments:
         p = "../../../" + i["source"]["path"]
         pub = i["formats"]["pdf"]

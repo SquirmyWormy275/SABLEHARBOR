@@ -10,7 +10,7 @@ All company financial records in these exercises are synthetic. The operating re
 
 The [accounting evidence directory](evidence/coverage/README.md) now provides complete selected base-2027 populations for customer activity, Treasury/payables, close and supporting schedules, plus a separate 2026 acquisition/tax bridge. Open its Markdown guides, CSV schedules and SQLite extracts directly. Each package states its period, release, filters, native IDs and reconciliation results. Other scenarios and future years remain available through the original release. New formatted PDF/workbook designs require exact-file review.
 
-For source terms and approvals, use the [legal instrument directory](../reader/transactions/README.md). It connects 56 source documents and 13 reading records to existing publications and missing-record dispositions.
+For source terms and approvals, use the [legal instrument directory](../reader/transactions/README.md). The [full-length legal editions](../legal/full-text/README.md) reproduce all 56 selected sources as complete PDF/HTML documents, with their original Markdown and database records. These new designs await exact-file review. The earlier 13 summaries are supplementary reading aids, not complete-document substitutes.
 
 ## Get the evidence
 

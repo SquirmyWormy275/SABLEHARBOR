@@ -25,6 +25,7 @@ on:
       - docs/internal/**
       - docs/finance/evidence/**
       - docs/legal/evidence/**
+      - docs/legal/full-text/**
       - scripts/validate_finance_evidence_acceptance.py
       - docs/structured/**
       - docs/business-lines/**
@@ -57,14 +58,27 @@ jobs:
       - name: Validate accounting and legal source packages
         run: |
           python - <<'PY'
-          import json, re, subprocess
-          revision = json.load(open('docs/reader/reconciliation/records.json'))['base_revision']
-          assert re.fullmatch(r'[0-9a-f]{40}', revision)
-          subprocess.run(['git', 'fetch', '--no-tags', '--depth=1', 'origin', revision], check=True)
+          import json, pathlib, re, subprocess
+          inputs = [('docs/reader/reconciliation/records.json', 'base_revision'),
+                    ('docs/legal/full-text/SOURCE_MANIFEST.json', 'source_revision')]
+          for path, key in inputs:
+              if not pathlib.Path(path).is_file():
+                  continue
+              revision = json.load(open(path))[key]
+              assert re.fullmatch(r'[0-9a-f]{40}', revision)
+              subprocess.run(['git', 'fetch', '--no-tags', '--depth=1', 'origin', revision], check=True)
           PY
           python docs/finance/evidence/coverage/validate.py
           python docs/reader/transactions/validate.py
           python docs/reader/reconciliation/build.py --check
+      - name: Validate complete legal source editions when present
+        run: |
+          if [ -f docs/legal/full-text/render-manifest.json ]; then
+            python -m pip install -r docs/legal/full-text/requirements.txt
+            python docs/legal/full-text/validate.py
+            python -m pytest -q docs/legal/full-text/test_full_text.py
+            python docs/legal/full-text/validate_qa.py
+          fi
       - name: Reconcile reader library
         run: |
           python scripts/validate_reader_navigation.py --check-regeneration
