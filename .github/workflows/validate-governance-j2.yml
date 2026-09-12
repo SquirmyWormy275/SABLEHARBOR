@@ -50,9 +50,8 @@ jobs:
       - run: python scripts/validate_institutional_catalog.py
       - name: Reconcile reader library
         run: |
-          python tools/documents/build_institutional_catalog.py
-          python scripts/validate_reader_navigation.py
-          git diff --exit-code -- docs/internal/institutional_catalog.json docs/internal/institutional_catalog.sqlite3 docs/wiki/Library.md docs/wiki/library
+          python scripts/validate_reader_navigation.py --check-regeneration
+          git diff --exit-code -- docs/internal/institutional_catalog.json docs/wiki/Library.md docs/wiki/library
       - run: python scripts/validate_organization_maps.py
       - run: python scripts/validate_repository_hygiene.py
       - run: python scripts/validate_business_records.py

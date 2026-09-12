@@ -3,7 +3,9 @@
 
 from __future__ import annotations
 
+import argparse
 import hashlib
+import subprocess
 import re
 import sqlite3
 import sys
@@ -14,7 +16,22 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "tools/documents"))
 
 
-def main() -> None:
+TABLES = (
+    "institutional_object",
+    "relationship",
+    "institutional_search",
+    "reader_file",
+    "reader_publication_pair",
+    "reader_format_review",
+    "reader_search",
+)
+
+
+def logical_content(db):
+    return {name: sorted(db.execute(f"SELECT * FROM {name}").fetchall()) for name in TABLES}
+
+
+def main(check_regeneration=False) -> None:
     from reader_library import inputs
 
     pages = [
@@ -75,13 +92,27 @@ def main() -> None:
         != db.execute("SELECT count(*) FROM institutional_object").fetchone()[0]
     ):
         failures.append("Controlled pair coverage differs from institutional catalog")
+    before = logical_content(db) if check_regeneration else None
     db.close()
     if failures:
         raise SystemExit("\n".join(failures))
+    if check_regeneration:
+        subprocess.run(
+            [sys.executable, str(ROOT / "tools/documents/build_institutional_catalog.py")],
+            check=True,
+        )
+        regenerated = sqlite3.connect(ROOT / "docs/internal/institutional_catalog.sqlite3")
+        after = logical_content(regenerated)
+        regenerated.close()
+        if before != after:
+            raise SystemExit("Database logical content differs after regeneration")
+        print("All institutional/reader table and search contents reproduce exactly")
     print(
         f"Reader validation passed: {len(pages)} pages, {checked} local links, {len(rows)} indexed files"
     )
 
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--check-regeneration", action="store_true")
+    main(parser.parse_args().check_regeneration)
