@@ -1,0 +1,101 @@
+{
+  "checks": [
+    {
+      "check": "journal every journal balances",
+      "maximum_absolute_difference": "0.0000",
+      "status": "PASS",
+      "tested_rows": 2425
+    },
+    {
+      "check": "enterprise_journal every journal balances",
+      "maximum_absolute_difference": "0.0000",
+      "status": "PASS",
+      "tested_rows": 2698
+    },
+    {
+      "check": "unit_trial_balance every monthly book balances",
+      "maximum_absolute_difference": "0.0000",
+      "status": "PASS",
+      "tested_rows": 108
+    },
+    {
+      "check": "legal_trial_balance every monthly book balances",
+      "maximum_absolute_difference": "0.0000",
+      "status": "PASS",
+      "tested_rows": 84
+    },
+    {
+      "check": "monthly_statements balance sheet",
+      "maximum_absolute_difference": "0.0000",
+      "status": "PASS",
+      "tested_rows": 108
+    },
+    {
+      "check": "monthly_statements cash bridge",
+      "maximum_absolute_difference": "0.0000",
+      "status": "PASS",
+      "tested_rows": 108
+    },
+    {
+      "check": "legal_statements balance sheet",
+      "maximum_absolute_difference": "0.0000",
+      "status": "PASS",
+      "tested_rows": 96
+    },
+    {
+      "check": "legal_statements cash bridge",
+      "maximum_absolute_difference": "0.0000",
+      "status": "PASS",
+      "tested_rows": 96
+    },
+    {
+      "check": "Core gross_ar_usd to cumulative journal",
+      "maximum_absolute_difference": "0.0000",
+      "status": "PASS",
+      "tested_rows": 72
+    },
+    {
+      "check": "Core allowance_usd to cumulative journal",
+      "maximum_absolute_difference": "0.0000",
+      "status": "PASS",
+      "tested_rows": 72
+    },
+    {
+      "check": "Core deferred_revenue_usd to cumulative journal",
+      "maximum_absolute_difference": "0.0000",
+      "status": "PASS",
+      "tested_rows": 72
+    },
+    {
+      "check": "Core vendor_ap_usd to cumulative journal",
+      "maximum_absolute_difference": "0.0000",
+      "status": "PASS",
+      "tested_rows": 72
+    },
+    {
+      "check": "Core host_payable_usd to cumulative journal",
+      "maximum_absolute_difference": "0.0000",
+      "status": "PASS",
+      "tested_rows": 72
+    },
+    {
+      "check": "Core inventory_usd to cumulative journal",
+      "maximum_absolute_difference": "0.0000",
+      "status": "PASS",
+      "tested_rows": 72
+    },
+    {
+      "check": "Core gross_ppe_usd to cumulative journal",
+      "maximum_absolute_difference": "0.0000",
+      "status": "PASS",
+      "tested_rows": 72
+    },
+    {
+      "check": "Core accumulated_depreciation_usd to cumulative journal",
+      "maximum_absolute_difference": "0.0000",
+      "status": "PASS",
+      "tested_rows": 72
+    }
+  ],
+  "status": "PASS"
+}

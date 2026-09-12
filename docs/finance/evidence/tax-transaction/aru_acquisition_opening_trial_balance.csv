@@ -1,0 +1,17 @@
+entity,year,account,account_name,type,debit_balance_usd,credit_balance_usd,signed_usd
+ARU_GROUP,2026,1000,Cash,asset,2000000,0,2000000
+ARU_GROUP,2026,1100,"External receivables, net of allowance",asset,6000000,0,6000000
+ARU_GROUP,2026,1200,Inventory cash cost,asset,1800000,0,1800000
+ARU_GROUP,2026,1300,Prepaids,asset,700000,0,700000
+ARU_GROUP,2026,1400,PPE gross,asset,42000000,0,42000000
+ARU_GROUP,2026,1500,Finance lease ROU gross,asset,2500000,0,2500000
+ARU_GROUP,2026,1600,Goodwill,asset,14762500,0,14762500
+ARU_GROUP,2026,1700,"Debt issuance cost, contra term debt",liability,300000,0,300000
+ARU_GROUP,2026,1800,Deferred tax asset on reserved liabilities,asset,587500,0,587500
+ARU_GROUP,2026,2000,Trade payables,liability,0,3000000,-3000000
+ARU_GROUP,2026,2100,Operating accruals,liability,0,1000000,-1000000
+ARU_GROUP,2026,2200,Environmental reserve / ARO,liability,0,1750000,-1750000
+ARU_GROUP,2026,2300,Claim reserve / other liabilities,liability,0,600000,-600000
+ARU_GROUP,2026,2400,Term debt face value,liability,0,22500000,-22500000
+ARU_GROUP,2026,2600,Finance lease obligation,liability,0,2500000,-2500000
+ARU_GROUP,2026,3000,Contributed equity,equity,0,39300000,-39300000

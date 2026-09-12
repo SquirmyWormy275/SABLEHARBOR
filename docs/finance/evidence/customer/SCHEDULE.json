@@ -1,0 +1,526 @@
+{
+  "columns": [
+    "period",
+    "unit",
+    "gross_ar_usd",
+    "allowance_usd",
+    "deferred_revenue_usd"
+  ],
+  "limitations": "Invoice master rows are end-of-model snapshots for invoices issued in 2027; collected/remaining fields include later lifecycle activity and are NOT December 2027 balances. Period aging and subledger rows control month-end balances. Events include complete 2027 populations, not only invoice events. Contracts without scenario/time fields are shared source inputs, not extra transactions. No original customer bill, signed acceptance, bank confirmation or tax invoice is supplied.",
+  "rows": [
+    {
+      "allowance_usd": "3339600.0000",
+      "deferred_revenue_usd": "51315000.0000",
+      "gross_ar_usd": "55980000.0000",
+      "period": "2027-01-31",
+      "unit": "foundry-field"
+    },
+    {
+      "allowance_usd": "9600.0000",
+      "deferred_revenue_usd": "440000.0000",
+      "gross_ar_usd": "480000.0000",
+      "period": "2027-01-31",
+      "unit": "atlas-meridian"
+    },
+    {
+      "allowance_usd": "5760.0000",
+      "deferred_revenue_usd": "288000.0000",
+      "gross_ar_usd": "288000.0000",
+      "period": "2027-01-31",
+      "unit": "advisory"
+    },
+    {
+      "allowance_usd": "0.0000",
+      "deferred_revenue_usd": "0.0000",
+      "gross_ar_usd": "0.0000",
+      "period": "2027-01-31",
+      "unit": "willow"
+    },
+    {
+      "allowance_usd": "0.0000",
+      "deferred_revenue_usd": "0.0000",
+      "gross_ar_usd": "0.0000",
+      "period": "2027-01-31",
+      "unit": "project-cradle"
+    },
+    {
+      "allowance_usd": "0.0000",
+      "deferred_revenue_usd": "0.0000",
+      "gross_ar_usd": "0.0000",
+      "period": "2027-01-31",
+      "unit": "corporate"
+    },
+    {
+      "allowance_usd": "1725540.0000",
+      "deferred_revenue_usd": "46650000.0000",
+      "gross_ar_usd": "3027000.0000",
+      "period": "2027-02-28",
+      "unit": "foundry-field"
+    },
+    {
+      "allowance_usd": "15360.0000",
+      "deferred_revenue_usd": "950000.0000",
+      "gross_ar_usd": "768000.0000",
+      "period": "2027-02-28",
+      "unit": "atlas-meridian"
+    },
+    {
+      "allowance_usd": "19920.0000",
+      "deferred_revenue_usd": "1226400.0000",
+      "gross_ar_usd": "996000.0000",
+      "period": "2027-02-28",
+      "unit": "advisory"
+    },
+    {
+      "allowance_usd": "0.0000",
+      "deferred_revenue_usd": "0.0000",
+      "gross_ar_usd": "0.0000",
+      "period": "2027-02-28",
+      "unit": "willow"
+    },
+    {
+      "allowance_usd": "1995.2064",
+      "deferred_revenue_usd": "0.0000",
+      "gross_ar_usd": "99760.3200",
+      "period": "2027-02-28",
+      "unit": "project-cradle"
+    },
+    {
+      "allowance_usd": "0.0000",
+      "deferred_revenue_usd": "0.0000",
+      "gross_ar_usd": "0.0000",
+      "period": "2027-02-28",
+      "unit": "corporate"
+    },
+    {
+      "allowance_usd": "1769700.0000",
+      "deferred_revenue_usd": "41985000.0000",
+      "gross_ar_usd": "3027000.0000",
+      "period": "2027-03-31",
+      "unit": "foundry-field"
+    },
+    {
+      "allowance_usd": "10560.0000",
+      "deferred_revenue_usd": "1190000.0000",
+      "gross_ar_usd": "528000.0000",
+      "period": "2027-03-31",
+      "unit": "atlas-meridian"
+    },
+    {
+      "allowance_usd": "16320.0000",
+      "deferred_revenue_usd": "1540800.0000",
+      "gross_ar_usd": "816000.0000",
+      "period": "2027-03-31",
+      "unit": "advisory"
+    },
+    {
+      "allowance_usd": "0.0000",
+      "deferred_revenue_usd": "0.0000",
+      "gross_ar_usd": "0.0000",
+      "period": "2027-03-31",
+      "unit": "willow"
+    },
+    {
+      "allowance_usd": "2006.2944",
+      "deferred_revenue_usd": "0.0000",
+      "gross_ar_usd": "100314.7200",
+      "period": "2027-03-31",
+      "unit": "project-cradle"
+    },
+    {
+      "allowance_usd": "0.0000",
+      "deferred_revenue_usd": "0.0000",
+      "gross_ar_usd": "0.0000",
+      "period": "2027-03-31",
+      "unit": "corporate"
+    },
+    {
+      "allowance_usd": "1714500.0000",
+      "deferred_revenue_usd": "37320000.0000",
+      "gross_ar_usd": "2475000.0000",
+      "period": "2027-04-30",
+      "unit": "foundry-field"
+    },
+    {
+      "allowance_usd": "13200.0000",
+      "deferred_revenue_usd": "1290000.0000",
+      "gross_ar_usd": "660000.0000",
+      "period": "2027-04-30",
+      "unit": "atlas-meridian"
+    },
+    {
+      "allowance_usd": "19920.0000",
+      "deferred_revenue_usd": "1992000.0000",
+      "gross_ar_usd": "996000.0000",
+      "period": "2027-04-30",
+      "unit": "advisory"
+    },
+    {
+      "allowance_usd": "0.0000",
+      "deferred_revenue_usd": "0.0000",
+      "gross_ar_usd": "0.0000",
+      "period": "2027-04-30",
+      "unit": "willow"
+    },
+    {
+      "allowance_usd": "2006.2944",
+      "deferred_revenue_usd": "0.0000",
+      "gross_ar_usd": "100314.7200",
+      "period": "2027-04-30",
+      "unit": "project-cradle"
+    },
+    {
+      "allowance_usd": "0.0000",
+      "deferred_revenue_usd": "0.0000",
+      "gross_ar_usd": "0.0000",
+      "period": "2027-04-30",
+      "unit": "corporate"
+    },
+    {
+      "allowance_usd": "1305000.0000",
+      "deferred_revenue_usd": "32655000.0000",
+      "gross_ar_usd": "1305000.0000",
+      "period": "2027-05-31",
+      "unit": "foundry-field"
+    },
+    {
+      "allowance_usd": "9360.0000",
+      "deferred_revenue_usd": "1425000.0000",
+      "gross_ar_usd": "468000.0000",
+      "period": "2027-05-31",
+      "unit": "atlas-meridian"
+    },
+    {
+      "allowance_usd": "16080.0000",
+      "deferred_revenue_usd": "2618400.0000",
+      "gross_ar_usd": "804000.0000",
+      "period": "2027-05-31",
+      "unit": "advisory"
+    },
+    {
+      "allowance_usd": "0.0000",
+      "deferred_revenue_usd": "0.0000",
+      "gross_ar_usd": "0.0000",
+      "period": "2027-05-31",
+      "unit": "willow"
+    },
+    {
+      "allowance_usd": "1995.2064",
+      "deferred_revenue_usd": "0.0000",
+      "gross_ar_usd": "99760.3200",
+      "period": "2027-05-31",
+      "unit": "project-cradle"
+    },
+    {
+      "allowance_usd": "0.0000",
+      "deferred_revenue_usd": "0.0000",
+      "gross_ar_usd": "0.0000",
+      "period": "2027-05-31",
+      "unit": "corporate"
+    },
+    {
+      "allowance_usd": "1400.0000",
+      "deferred_revenue_usd": "28050000.0000",
+      "gross_ar_usd": "70000.0000",
+      "period": "2027-06-30",
+      "unit": "foundry-field"
+    },
+    {
+      "allowance_usd": "13440.0000",
+      "deferred_revenue_usd": "1260000.0000",
+      "gross_ar_usd": "672000.0000",
+      "period": "2027-06-30",
+      "unit": "atlas-meridian"
+    },
+    {
+      "allowance_usd": "26128.0000",
+      "deferred_revenue_usd": "2937600.0000",
+      "gross_ar_usd": "1306400.0000",
+      "period": "2027-06-30",
+      "unit": "advisory"
+    },
+    {
+      "allowance_usd": "0.0000",
+      "deferred_revenue_usd": "0.0000",
+      "gross_ar_usd": "0.0000",
+      "period": "2027-06-30",
+      "unit": "willow"
+    },
+    {
+      "allowance_usd": "2006.2944",
+      "deferred_revenue_usd": "0.0000",
+      "gross_ar_usd": "100314.7200",
+      "period": "2027-06-30",
+      "unit": "project-cradle"
+    },
+    {
+      "allowance_usd": "0.0000",
+      "deferred_revenue_usd": "0.0000",
+      "gross_ar_usd": "0.0000",
+      "period": "2027-06-30",
+      "unit": "corporate"
+    },
+    {
+      "allowance_usd": "600.0000",
+      "deferred_revenue_usd": "23400000.0000",
+      "gross_ar_usd": "30000.0000",
+      "period": "2027-07-31",
+      "unit": "foundry-field"
+    },
+    {
+      "allowance_usd": "13440.0000",
+      "deferred_revenue_usd": "1480000.0000",
+      "gross_ar_usd": "672000.0000",
+      "period": "2027-07-31",
+      "unit": "atlas-meridian"
+    },
+    {
+      "allowance_usd": "17040.0000",
+      "deferred_revenue_usd": "2180400.0000",
+      "gross_ar_usd": "852000.0000",
+      "period": "2027-07-31",
+      "unit": "advisory"
+    },
+    {
+      "allowance_usd": "0.0000",
+      "deferred_revenue_usd": "0.0000",
+      "gross_ar_usd": "0.0000",
+      "period": "2027-07-31",
+      "unit": "willow"
+    },
+    {
+      "allowance_usd": "2021.1840",
+      "deferred_revenue_usd": "0.0000",
+      "gross_ar_usd": "101059.2000",
+      "period": "2027-07-31",
+      "unit": "project-cradle"
+    },
+    {
+      "allowance_usd": "0.0000",
+      "deferred_revenue_usd": "0.0000",
+      "gross_ar_usd": "0.0000",
+      "period": "2027-07-31",
+      "unit": "corporate"
+    },
+    {
+      "allowance_usd": "0.0000",
+      "deferred_revenue_usd": "18604000.0000",
+      "gross_ar_usd": "0.0000",
+      "period": "2027-08-31",
+      "unit": "foundry-field"
+    },
+    {
+      "allowance_usd": "11040.0000",
+      "deferred_revenue_usd": "1555000.0000",
+      "gross_ar_usd": "552000.0000",
+      "period": "2027-08-31",
+      "unit": "atlas-meridian"
+    },
+    {
+      "allowance_usd": "21840.0000",
+      "deferred_revenue_usd": "1914000.0000",
+      "gross_ar_usd": "1092000.0000",
+      "period": "2027-08-31",
+      "unit": "advisory"
+    },
+    {
+      "allowance_usd": "0.0000",
+      "deferred_revenue_usd": "0.0000",
+      "gross_ar_usd": "0.0000",
+      "period": "2027-08-31",
+      "unit": "willow"
+    },
+    {
+      "allowance_usd": "2021.1840",
+      "deferred_revenue_usd": "0.0000",
+      "gross_ar_usd": "101059.2000",
+      "period": "2027-08-31",
+      "unit": "project-cradle"
+    },
+    {
+      "allowance_usd": "0.0000",
+      "deferred_revenue_usd": "0.0000",
+      "gross_ar_usd": "0.0000",
+      "period": "2027-08-31",
+      "unit": "corporate"
+    },
+    {
+      "allowance_usd": "77280.0000",
+      "deferred_revenue_usd": "16795000.0000",
+      "gross_ar_usd": "3864000.0000",
+      "period": "2027-09-30",
+      "unit": "foundry-field"
+    },
+    {
+      "allowance_usd": "3600.0000",
+      "deferred_revenue_usd": "1495000.0000",
+      "gross_ar_usd": "180000.0000",
+      "period": "2027-09-30",
+      "unit": "atlas-meridian"
+    },
+    {
+      "allowance_usd": "29616.0000",
+      "deferred_revenue_usd": "1936800.0000",
+      "gross_ar_usd": "1480800.0000",
+      "period": "2027-09-30",
+      "unit": "advisory"
+    },
+    {
+      "allowance_usd": "0.0000",
+      "deferred_revenue_usd": "0.0000",
+      "gross_ar_usd": "0.0000",
+      "period": "2027-09-30",
+      "unit": "willow"
+    },
+    {
+      "allowance_usd": "25.9776",
+      "deferred_revenue_usd": "0.0000",
+      "gross_ar_usd": "1298.8800",
+      "period": "2027-09-30",
+      "unit": "project-cradle"
+    },
+    {
+      "allowance_usd": "0.0000",
+      "deferred_revenue_usd": "0.0000",
+      "gross_ar_usd": "0.0000",
+      "period": "2027-09-30",
+      "unit": "corporate"
+    },
+    {
+      "allowance_usd": "26400.0000",
+      "deferred_revenue_usd": "13102000.0000",
+      "gross_ar_usd": "1320000.0000",
+      "period": "2027-10-31",
+      "unit": "foundry-field"
+    },
+    {
+      "allowance_usd": "5010.0000",
+      "deferred_revenue_usd": "1482000.0000",
+      "gross_ar_usd": "250500.0000",
+      "period": "2027-10-31",
+      "unit": "atlas-meridian"
+    },
+    {
+      "allowance_usd": "23664.0000",
+      "deferred_revenue_usd": "2226000.0000",
+      "gross_ar_usd": "1183200.0000",
+      "period": "2027-10-31",
+      "unit": "advisory"
+    },
+    {
+      "allowance_usd": "0.0000",
+      "deferred_revenue_usd": "0.0000",
+      "gross_ar_usd": "0.0000",
+      "period": "2027-10-31",
+      "unit": "willow"
+    },
+    {
+      "allowance_usd": "2021.1840",
+      "deferred_revenue_usd": "0.0000",
+      "gross_ar_usd": "101059.2000",
+      "period": "2027-10-31",
+      "unit": "project-cradle"
+    },
+    {
+      "allowance_usd": "0.0000",
+      "deferred_revenue_usd": "0.0000",
+      "gross_ar_usd": "0.0000",
+      "period": "2027-10-31",
+      "unit": "corporate"
+    },
+    {
+      "allowance_usd": "30000.0000",
+      "deferred_revenue_usd": "9474000.0000",
+      "gross_ar_usd": "1500000.0000",
+      "period": "2027-11-30",
+      "unit": "foundry-field"
+    },
+    {
+      "allowance_usd": "6000.0000",
+      "deferred_revenue_usd": "1493500.0000",
+      "gross_ar_usd": "300000.0000",
+      "period": "2027-11-30",
+      "unit": "atlas-meridian"
+    },
+    {
+      "allowance_usd": "16080.0000",
+      "deferred_revenue_usd": "1791600.0000",
+      "gross_ar_usd": "804000.0000",
+      "period": "2027-11-30",
+      "unit": "advisory"
+    },
+    {
+      "allowance_usd": "0.0000",
+      "deferred_revenue_usd": "0.0000",
+      "gross_ar_usd": "0.0000",
+      "period": "2027-11-30",
+      "unit": "willow"
+    },
+    {
+      "allowance_usd": "2021.1840",
+      "deferred_revenue_usd": "0.0000",
+      "gross_ar_usd": "101059.2000",
+      "period": "2027-11-30",
+      "unit": "project-cradle"
+    },
+    {
+      "allowance_usd": "0.0000",
+      "deferred_revenue_usd": "0.0000",
+      "gross_ar_usd": "0.0000",
+      "period": "2027-11-30",
+      "unit": "corporate"
+    },
+    {
+      "allowance_usd": "33600.0000",
+      "deferred_revenue_usd": "5896000.0000",
+      "gross_ar_usd": "1680000.0000",
+      "period": "2027-12-31",
+      "unit": "foundry-field"
+    },
+    {
+      "allowance_usd": "3600.0000",
+      "deferred_revenue_usd": "1370000.0000",
+      "gross_ar_usd": "180000.0000",
+      "period": "2027-12-31",
+      "unit": "atlas-meridian"
+    },
+    {
+      "allowance_usd": "14848.0000",
+      "deferred_revenue_usd": "1389600.0000",
+      "gross_ar_usd": "742400.0000",
+      "period": "2027-12-31",
+      "unit": "advisory"
+    },
+    {
+      "allowance_usd": "0.0000",
+      "deferred_revenue_usd": "0.0000",
+      "gross_ar_usd": "0.0000",
+      "period": "2027-12-31",
+      "unit": "willow"
+    },
+    {
+      "allowance_usd": "2021.1840",
+      "deferred_revenue_usd": "0.0000",
+      "gross_ar_usd": "101059.2000",
+      "period": "2027-12-31",
+      "unit": "project-cradle"
+    },
+    {
+      "allowance_usd": "0.0000",
+      "deferred_revenue_usd": "0.0000",
+      "gross_ar_usd": "0.0000",
+      "period": "2027-12-31",
+      "unit": "corporate"
+    }
+  ],
+  "scope": {
+    "period_end": "2027-12",
+    "period_start": "2027-01",
+    "release": "business-operations-v1.0.0",
+    "release_sha256": "b8e81572d829fec7209d1d18eb15bac21e52b37714211aee005b5f1a68ab5817",
+    "scenario": "base",
+    "source_revision": "57cfa1b1c483ccf1f8b15d82c4cbdadbeef8063e"
+  },
+  "source_table": "subledger_rollforward",
+  "title": "Billing, collections and deferred revenue"
+}

@@ -1,0 +1,23 @@
+{
+  "checks": [
+    {
+      "check": "Contract deferred rollforward",
+      "maximum_absolute_difference": "0.0000",
+      "status": "PASS",
+      "tested_rows": 900
+    },
+    {
+      "check": "Deferred schedule to unit subledger",
+      "maximum_absolute_difference": "0.0000",
+      "status": "PASS",
+      "tested_rows": 24
+    },
+    {
+      "check": "Aging to gross AR",
+      "maximum_absolute_difference": "0.0000",
+      "status": "PASS",
+      "tested_rows": 72
+    }
+  ],
+  "status": "PASS"
+}

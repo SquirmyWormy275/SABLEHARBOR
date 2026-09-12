@@ -1,0 +1,107 @@
+{
+  "extracted_database": {
+    "path": "docs/finance/evidence/close/evidence.sqlite3",
+    "sha256": "4bf4c76fc1bd6986828c7b397044bb16882b40efac6bc536749bb48110117b8d"
+  },
+  "markdown": "docs/finance/evidence/close/README.md",
+  "native_database": {
+    "release_member": "enterprise.sqlite3",
+    "sha256": "8142909e88629e227a29ce77d8560d64a3ee60bd11bd19d6c089376fe146bb3d"
+  },
+  "package_id": "SH-FIN-CLOSE",
+  "reconciliation": "docs/finance/evidence/close/RECONCILIATION.json",
+  "schema_version": 1,
+  "scope": {
+    "period_end": "2027-12",
+    "period_start": "2027-01",
+    "release": "business-operations-v1.0.0",
+    "release_sha256": "b8e81572d829fec7209d1d18eb15bac21e52b37714211aee005b5f1a68ab5817",
+    "scenario": "base",
+    "source_revision": "57cfa1b1c483ccf1f8b15d82c4cbdadbeef8063e"
+  },
+  "sources": [
+    {
+      "full_release_row_count": 84922,
+      "native_table": "journal",
+      "path": "docs/finance/evidence/close/source/journal.csv",
+      "predicate": "base scenario where supplied; 2027 by year/period/month index; shared static inputs retained; terminal master snapshots explicitly identified in README",
+      "release_member": "tables/journal.csv",
+      "release_member_sha256": "7c17836d2e659e3f17f9d1a95875acdb5f402d7db97280edb196e73d75b6aa93",
+      "row_count": 4864,
+      "sha256": "10b8bee2f13881e14ae9ddf0a862cf264eea3de92693368119421eee48a9bc91"
+    },
+    {
+      "full_release_row_count": 108114,
+      "native_table": "enterprise_journal",
+      "path": "docs/finance/evidence/close/source/enterprise_journal.csv",
+      "predicate": "base scenario where supplied; 2027 by year/period/month index; shared static inputs retained; terminal master snapshots explicitly identified in README",
+      "release_member": "tables/enterprise_journal.csv",
+      "release_member_sha256": "660b9e4635f9abcb5b65f773128a1f2df3d36517c135db7a521300aeff88220d",
+      "row_count": 6097,
+      "sha256": "7077496950b963701e8a4a387c15044a9c02f390a53e6e00a7be3f90cc70de40"
+    },
+    {
+      "full_release_row_count": 31146,
+      "native_table": "unit_trial_balance",
+      "path": "docs/finance/evidence/close/source/unit_trial_balance.csv",
+      "predicate": "base scenario where supplied; 2027 by year/period/month index; shared static inputs retained; terminal master snapshots explicitly identified in README",
+      "release_member": "tables/unit_trial_balance.csv",
+      "release_member_sha256": "95096f9b3e17e8110af4967f2939db05bf7d9a9d21e962502d941ec771134f62",
+      "row_count": 1867,
+      "sha256": "5eb03bd25ccd803a92913ec098aa8324def9ffd619eb6cb7ab83dc3937b929c7"
+    },
+    {
+      "full_release_row_count": 27754,
+      "native_table": "legal_trial_balance",
+      "path": "docs/finance/evidence/close/source/legal_trial_balance.csv",
+      "predicate": "base scenario where supplied; 2027 by year/period/month index; shared static inputs retained; terminal master snapshots explicitly identified in README",
+      "release_member": "tables/legal_trial_balance.csv",
+      "release_member_sha256": "d21b8227c07cabf9717c7dc2d1badbd6360deb03e8e36ce90f4f529b79e65cb5",
+      "row_count": 1616,
+      "sha256": "023ebf1bd5001ce70bde19ee8bf364a41b54534cb4f8c9477597bccf46f296bc"
+    },
+    {
+      "full_release_row_count": 1944,
+      "native_table": "monthly_statements",
+      "path": "docs/finance/evidence/close/source/monthly_statements.csv",
+      "predicate": "base scenario where supplied; 2027 by year/period/month index; shared static inputs retained; terminal master snapshots explicitly identified in README",
+      "release_member": "tables/monthly_statements.csv",
+      "release_member_sha256": "4310ca7d71648e83006010b425ab381d248879de645c6b034b2dc169dfbe9d31",
+      "row_count": 108,
+      "sha256": "c3f06769ce6975764e8edb6ec7c61c95de2ed3088cc7b6468cbfad5715fe0c34"
+    },
+    {
+      "full_release_row_count": 1728,
+      "native_table": "legal_statements",
+      "path": "docs/finance/evidence/close/source/legal_statements.csv",
+      "predicate": "base scenario where supplied; 2027 by year/period/month index; shared static inputs retained; terminal master snapshots explicitly identified in README",
+      "release_member": "tables/legal_statements.csv",
+      "release_member_sha256": "5a340a4de6564b94ef841524b9d71c5002a5273e74b0577ffe1184d5a138ec79",
+      "row_count": 96,
+      "sha256": "c5761ef899d30c336400272e0f8497868d12ff7412d4b03f758f5f8f1db3b641"
+    },
+    {
+      "full_release_row_count": 3174,
+      "native_table": "credit_allowance",
+      "path": "docs/finance/evidence/close/source/credit_allowance.csv",
+      "predicate": "base scenario where supplied; 2027 by year/period/month index; shared static inputs retained; terminal master snapshots explicitly identified in README",
+      "release_member": "tables/credit_allowance.csv",
+      "release_member_sha256": "6f40a2bfe29457425d1641abd1191f9a5d075728c5fbb93616dde4918f604d80",
+      "row_count": 136,
+      "sha256": "48f7d95bb00f0cec4489c5e15b42e98138226b745af4f8b18460d63a10e4f097"
+    },
+    {
+      "full_release_row_count": 1080,
+      "native_table": "subledger_rollforward",
+      "path": "docs/finance/evidence/close/source/subledger_rollforward.csv",
+      "predicate": "base scenario where supplied; 2027 by year/period/month index; shared static inputs retained; terminal master snapshots explicitly identified in README",
+      "release_member": "tables/subledger_rollforward.csv",
+      "release_member_sha256": "e0720dcbf6474fcca8ffb84ee406abfff725086d429fdb3219118542106e7d6d",
+      "row_count": 72,
+      "sha256": "9a2d216f5c3b7bce6f5a7c5e1c5491bb06586f129d171f61a486f9dbb7feaaa2"
+    }
+  ],
+  "status": "SOURCE_RECONCILED_VISUAL_REVIEW_PENDING",
+  "title": "Close, allowance and legal-book reconciliation",
+  "visual_manifest": null
+}

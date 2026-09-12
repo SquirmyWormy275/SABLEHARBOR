@@ -1,0 +1,127 @@
+{
+  "extracted_database": {
+    "path": "docs/finance/evidence/customer/evidence.sqlite3",
+    "sha256": "21e05e6809002d732948a9a159c9e0bee89a8c26340d5cee102324ad70bf60c0"
+  },
+  "markdown": "docs/finance/evidence/customer/README.md",
+  "native_database": {
+    "release_member": "enterprise.sqlite3",
+    "sha256": "8142909e88629e227a29ce77d8560d64a3ee60bd11bd19d6c089376fe146bb3d"
+  },
+  "package_id": "SH-FIN-CUSTOMER",
+  "reconciliation": "docs/finance/evidence/customer/RECONCILIATION.json",
+  "schema_version": 1,
+  "scope": {
+    "period_end": "2027-12",
+    "period_start": "2027-01",
+    "release": "business-operations-v1.0.0",
+    "release_sha256": "b8e81572d829fec7209d1d18eb15bac21e52b37714211aee005b5f1a68ab5817",
+    "scenario": "base",
+    "source_revision": "57cfa1b1c483ccf1f8b15d82c4cbdadbeef8063e"
+  },
+  "sources": [
+    {
+      "full_release_row_count": 75,
+      "native_table": "contracts",
+      "path": "docs/finance/evidence/customer/source/contracts.csv",
+      "predicate": "base scenario where supplied; 2027 by year/period/month index; shared static inputs retained; terminal master snapshots explicitly identified in README",
+      "release_member": "tables/contracts.csv",
+      "release_member_sha256": "0440055fa6c15887ba459778a851c6cf06ab035db303ae3ddd470f512d034092",
+      "row_count": 75,
+      "sha256": "abd1caa0e5178c57ba9edba15ac2d7967b422fb69c2303c4d6383b9f4d9fea1f"
+    },
+    {
+      "full_release_row_count": 938,
+      "native_table": "contract_versions",
+      "path": "docs/finance/evidence/customer/source/contract_versions.csv",
+      "predicate": "base scenario where supplied; 2027 by year/period/month index; shared static inputs retained; terminal master snapshots explicitly identified in README",
+      "release_member": "tables/contract_versions.csv",
+      "release_member_sha256": "5948a978f0b567abcbe839962825c3f1bc30da709a804727fafe58930d9f0e78",
+      "row_count": 62,
+      "sha256": "5cfb2531080725c9e1fc90589b54915bdd83cfeb29aaea6e647e269296c681cd"
+    },
+    {
+      "full_release_row_count": 1975,
+      "native_table": "invoices",
+      "path": "docs/finance/evidence/customer/source/invoices.csv",
+      "predicate": "base scenario where supplied; 2027 by year/period/month index; shared static inputs retained; terminal master snapshots explicitly identified in README",
+      "release_member": "tables/invoices.csv",
+      "release_member_sha256": "2a91055cd152120c8533d55b2108b9e697095754b7f13108f1316d8be08adf8e",
+      "row_count": 127,
+      "sha256": "d9a91909795c5fbdf2e5cb1c6001efd1ef2cab71e5f53fc86988b821585a0f08"
+    },
+    {
+      "full_release_row_count": 1958,
+      "native_table": "credit_history",
+      "path": "docs/finance/evidence/customer/source/credit_history.csv",
+      "predicate": "base scenario where supplied; 2027 by year/period/month index; shared static inputs retained; terminal master snapshots explicitly identified in README",
+      "release_member": "tables/credit_history.csv",
+      "release_member_sha256": "71edc0123fb0ee8d9a5919d740cdd2fbe2240bcacdb9cdd7353a15fec9c26d3a",
+      "row_count": 128,
+      "sha256": "a2e35fb95b790b36afb9c3f48084b64e254e5fc991a18c43876dbf752591cbb0"
+    },
+    {
+      "full_release_row_count": 18,
+      "native_table": "credit_notes",
+      "path": "docs/finance/evidence/customer/source/credit_notes.csv",
+      "predicate": "base scenario where supplied; 2027 by year/period/month index; shared static inputs retained; terminal master snapshots explicitly identified in README",
+      "release_member": "tables/credit_notes.csv",
+      "release_member_sha256": "675b09d209aa33b67e3750b7fe59ced3955be08191b42db41bed5e127a321613",
+      "row_count": 5,
+      "sha256": "6bca506242cb564583c8bf0f7ed78e4078234d9214fa549f08aa351b1aceec00"
+    },
+    {
+      "full_release_row_count": 3174,
+      "native_table": "receivable_aging",
+      "path": "docs/finance/evidence/customer/source/receivable_aging.csv",
+      "predicate": "base scenario where supplied; 2027 by year/period/month index; shared static inputs retained; terminal master snapshots explicitly identified in README",
+      "release_member": "tables/receivable_aging.csv",
+      "release_member_sha256": "9e5368bde03d30f33eb7c3345a75017a987af94f4befcafd28f8242381a637ac",
+      "row_count": 136,
+      "sha256": "7cf54fb1b113af93b4df4c20e1ed42f9ab30f7e45707efae4a8637f3cc449049"
+    },
+    {
+      "full_release_row_count": 3174,
+      "native_table": "credit_allowance",
+      "path": "docs/finance/evidence/customer/source/credit_allowance.csv",
+      "predicate": "base scenario where supplied; 2027 by year/period/month index; shared static inputs retained; terminal master snapshots explicitly identified in README",
+      "release_member": "tables/credit_allowance.csv",
+      "release_member_sha256": "6f40a2bfe29457425d1641abd1191f9a5d075728c5fbb93616dde4918f604d80",
+      "row_count": 136,
+      "sha256": "48f7d95bb00f0cec4489c5e15b42e98138226b745af4f8b18460d63a10e4f097"
+    },
+    {
+      "full_release_row_count": 13500,
+      "native_table": "commercial_deferred_rollforward",
+      "path": "docs/finance/evidence/customer/source/commercial_deferred_rollforward.csv",
+      "predicate": "base scenario where supplied; 2027 by year/period/month index; shared static inputs retained; terminal master snapshots explicitly identified in README",
+      "release_member": "tables/commercial_deferred_rollforward.csv",
+      "release_member_sha256": "e14c5854e2a188c384251c2cb245afd9bbaa70d443f22b2129592e0d7b2664a6",
+      "row_count": 900,
+      "sha256": "7b3085519998c24243c6583927fff42d8744f8b151f5310e1ad1952d458302ce"
+    },
+    {
+      "full_release_row_count": 1080,
+      "native_table": "subledger_rollforward",
+      "path": "docs/finance/evidence/customer/source/subledger_rollforward.csv",
+      "predicate": "base scenario where supplied; 2027 by year/period/month index; shared static inputs retained; terminal master snapshots explicitly identified in README",
+      "release_member": "tables/subledger_rollforward.csv",
+      "release_member_sha256": "e0720dcbf6474fcca8ffb84ee406abfff725086d429fdb3219118542106e7d6d",
+      "row_count": 72,
+      "sha256": "9a2d216f5c3b7bce6f5a7c5e1c5491bb06586f129d171f61a486f9dbb7feaaa2"
+    },
+    {
+      "full_release_row_count": 47060,
+      "native_table": "events",
+      "path": "docs/finance/evidence/customer/source/events.csv",
+      "predicate": "base scenario where supplied; 2027 by year/period/month index; shared static inputs retained; terminal master snapshots explicitly identified in README",
+      "release_member": "tables/events.csv",
+      "release_member_sha256": "883ae25d42525d4b2bdc80a62e5bc3408225a2c6b546ec8aa1c2c16208a8424a",
+      "row_count": 2777,
+      "sha256": "d26afe2bf7a2976910eafa8cf8232aed26aaca1c95be051c40457fb3d33344b3"
+    }
+  ],
+  "status": "SOURCE_RECONCILED_VISUAL_REVIEW_PENDING",
+  "title": "Billing, collections and deferred revenue",
+  "visual_manifest": null
+}

@@ -1,0 +1,11 @@
+{
+  "checks": [
+    {
+      "check": "Acquisition consideration less acquired cash",
+      "maximum_absolute_difference": "0.0000",
+      "status": "PASS",
+      "tested_rows": 1
+    }
+  ],
+  "status": "PASS"
+}

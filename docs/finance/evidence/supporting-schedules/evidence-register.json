@@ -1,0 +1,157 @@
+{
+  "extracted_database": {
+    "path": "docs/finance/evidence/supporting-schedules/evidence.sqlite3",
+    "sha256": "41571d4bfa73826dcf70ea2956d2280716c56ac4bb022e3d90bfb457f077f19f"
+  },
+  "markdown": "docs/finance/evidence/supporting-schedules/README.md",
+  "native_database": {
+    "release_member": "enterprise.sqlite3",
+    "sha256": "8142909e88629e227a29ce77d8560d64a3ee60bd11bd19d6c089376fe146bb3d"
+  },
+  "package_id": "SH-FIN-SUPPORTING-SCHEDULES",
+  "reconciliation": "docs/finance/evidence/supporting-schedules/RECONCILIATION.json",
+  "schema_version": 1,
+  "scope": {
+    "period_end": "2027-12",
+    "period_start": "2027-01",
+    "release": "business-operations-v1.0.0",
+    "release_sha256": "b8e81572d829fec7209d1d18eb15bac21e52b37714211aee005b5f1a68ab5817",
+    "scenario": "base",
+    "source_revision": "57cfa1b1c483ccf1f8b15d82c4cbdadbeef8063e"
+  },
+  "sources": [
+    {
+      "full_release_row_count": 591,
+      "native_table": "workforce_positions",
+      "path": "docs/finance/evidence/supporting-schedules/source/workforce_positions.csv",
+      "predicate": "base scenario where supplied; 2027 by year/period/month index; shared static inputs retained; terminal master snapshots explicitly identified in README",
+      "release_member": "tables/workforce_positions.csv",
+      "release_member_sha256": "1948c31053464767500389255b7da18718c9c84cf8d879a82a4b5682aa08a503",
+      "row_count": 591,
+      "sha256": "5b9e5002187ff664e009c3d7acfdb1091dc7321bb0ba52224e3b64ec48608b39"
+    },
+    {
+      "full_release_row_count": 106380,
+      "native_table": "workforce_positions_history",
+      "path": "docs/finance/evidence/supporting-schedules/source/workforce_positions_history.csv",
+      "predicate": "base scenario where supplied; 2027 by year/period/month index; shared static inputs retained; terminal master snapshots explicitly identified in README",
+      "release_member": "tables/workforce_positions_history.csv",
+      "release_member_sha256": "96fc654d721ea8e81d699fbd1272664455945b14fd5f998b3390e529c1f2469a",
+      "row_count": 7092,
+      "sha256": "3a2a5ad467835c8c7766c7066c1450efcfc5f36aedba9b63c756ae5b029c7e65"
+    },
+    {
+      "full_release_row_count": 92352,
+      "native_table": "workforce_assignments",
+      "path": "docs/finance/evidence/supporting-schedules/source/workforce_assignments.csv",
+      "predicate": "base scenario where supplied; 2027 by year/period/month index; shared static inputs retained; terminal master snapshots explicitly identified in README",
+      "release_member": "tables/workforce_assignments.csv",
+      "release_member_sha256": "cdda2466d5b5581be8cec81f370dc28c4c58ab63fa9dc0b67f2208c90b478fe0",
+      "row_count": 6114,
+      "sha256": "4c6429e8bb693d4b5566f2859c8345892450594c6ecb15532607a268ed65acc5"
+    },
+    {
+      "full_release_row_count": 30,
+      "native_table": "workforce_changes",
+      "path": "docs/finance/evidence/supporting-schedules/source/workforce_changes.csv",
+      "predicate": "base scenario where supplied; 2027 by year/period/month index; shared static inputs retained; terminal master snapshots explicitly identified in README",
+      "release_member": "tables/workforce_changes.csv",
+      "release_member_sha256": "5cd6855c2b737c563488c1fa6960e673ec672d93db80b48dd58e0432e36fd830",
+      "row_count": 9,
+      "sha256": "dccc37e1cd88c53a7019b18072dcea1f372e640c899cb7bf1c9c24cced723382"
+    },
+    {
+      "full_release_row_count": 882,
+      "native_table": "asset_rollforward",
+      "path": "docs/finance/evidence/supporting-schedules/source/asset_rollforward.csv",
+      "predicate": "base scenario where supplied; 2027 by year/period/month index; shared static inputs retained; terminal master snapshots explicitly identified in README",
+      "release_member": "tables/asset_rollforward.csv",
+      "release_member_sha256": "da1af0d9149edcf01406ecbf5d185544c7b70cd9615341a2bc13624cf0a3bf12",
+      "row_count": 54,
+      "sha256": "a84bedaaf0e35bf6af46fcab78ecaab393f0c9a2a0b463f9cede642bd641c4e7"
+    },
+    {
+      "full_release_row_count": 180,
+      "native_table": "inventory_rollforward",
+      "path": "docs/finance/evidence/supporting-schedules/source/inventory_rollforward.csv",
+      "predicate": "base scenario where supplied; 2027 by year/period/month index; shared static inputs retained; terminal master snapshots explicitly identified in README",
+      "release_member": "tables/inventory_rollforward.csv",
+      "release_member_sha256": "3eb020e75dfce01ba9e135b39140bb37560166553d3dd125bf7794f414c04437",
+      "row_count": 12,
+      "sha256": "41dfedfbb277d3d7d6042addd1cb7f8500ad4ba944624545a9d6376231cda3a3"
+    },
+    {
+      "full_release_row_count": 180,
+      "native_table": "management_cost_reconciliation",
+      "path": "docs/finance/evidence/supporting-schedules/source/management_cost_reconciliation.csv",
+      "predicate": "base scenario where supplied; 2027 by year/period/month index; shared static inputs retained; terminal master snapshots explicitly identified in README",
+      "release_member": "tables/management_cost_reconciliation.csv",
+      "release_member_sha256": "76d2cdc227e29994aa476c462435199c2cc61c84057049eb4beb2120fcf4a623",
+      "row_count": 12,
+      "sha256": "71b94a178a15fcac350003e9fb5bcb821d27180df7ca738891bc9a21638365cf"
+    },
+    {
+      "full_release_row_count": 720,
+      "native_table": "service_cost_pools",
+      "path": "docs/finance/evidence/supporting-schedules/source/service_cost_pools.csv",
+      "predicate": "base scenario where supplied; 2027 by year/period/month index; shared static inputs retained; terminal master snapshots explicitly identified in README",
+      "release_member": "tables/service_cost_pools.csv",
+      "release_member_sha256": "036a2e8f93b380630a0e8b7cd7e10a08403f294026fb254ce9de2b4f802fd874",
+      "row_count": 48,
+      "sha256": "16f38dc25623d40ec356517366f432174277210c31c7bdcfa361ecb7ab2fcf83"
+    },
+    {
+      "full_release_row_count": 5760,
+      "native_table": "service_consumption_allocations",
+      "path": "docs/finance/evidence/supporting-schedules/source/service_consumption_allocations.csv",
+      "predicate": "base scenario where supplied; 2027 by year/period/month index; shared static inputs retained; terminal master snapshots explicitly identified in README",
+      "release_member": "tables/service_consumption_allocations.csv",
+      "release_member_sha256": "7e72aea29fc59c0da9559be10e4159c7225991fa2ab059adff4099080c115310",
+      "row_count": 384,
+      "sha256": "0463fdfa70630f99fa7a98cdae5e22fcce7da36936134899ea34d3fc00bff89f"
+    },
+    {
+      "full_release_row_count": 13867,
+      "native_table": null,
+      "path": "docs/finance/evidence/supporting-schedules/source/industrial_assets.csv",
+      "predicate": "base scenario where supplied; 2027 by year/period/month index; shared static inputs retained; terminal master snapshots explicitly identified in README",
+      "release_member": "industrial/forecast/assets.csv",
+      "release_member_sha256": "4e4c0776cb92178555164dc86eb12f0bbf29650972fbf9bd350b7e59b158a6d6",
+      "row_count": 264,
+      "sha256": "76c6c3b9958e94d234875c67a6b32bb02923444c1de34e7e4b51ffdf531d9b89"
+    },
+    {
+      "full_release_row_count": 180,
+      "native_table": null,
+      "path": "docs/finance/evidence/supporting-schedules/source/industrial_debt.csv",
+      "predicate": "base scenario where supplied; 2027 by year/period/month index; shared static inputs retained; terminal master snapshots explicitly identified in README",
+      "release_member": "industrial/forecast/debt.csv",
+      "release_member_sha256": "e7f44d305baa2ee6ecac12e65d674ce540ed5d1007c316be58a276098e7ceb92",
+      "row_count": 12,
+      "sha256": "5f6b7535dd73f440473c55672914866d51b70029477cb2b4a383777417de9c06"
+    },
+    {
+      "full_release_row_count": 180,
+      "native_table": null,
+      "path": "docs/finance/evidence/supporting-schedules/source/industrial_inventory.csv",
+      "predicate": "base scenario where supplied; 2027 by year/period/month index; shared static inputs retained; terminal master snapshots explicitly identified in README",
+      "release_member": "industrial/forecast/inventory.csv",
+      "release_member_sha256": "0e83721ae742f4ad402cc70971fb36d368cf7eae13a1efdb93b3f38f576647bf",
+      "row_count": 12,
+      "sha256": "1cbcf4423f3eecf049b5e8d9517e18a370d1c6c5f2bc7db5c56ec02c367e7a03"
+    },
+    {
+      "full_release_row_count": 900,
+      "native_table": null,
+      "path": "docs/finance/evidence/supporting-schedules/source/industrial_payroll_batches.csv",
+      "predicate": "base scenario where supplied; 2027 by year/period/month index; shared static inputs retained; terminal master snapshots explicitly identified in README",
+      "release_member": "industrial/transactions/payroll_batches.csv",
+      "release_member_sha256": "b52b83030df8a6932aa9ed60e86647e9d3475ab56e9f6a1ed1d73bc588be2b8a",
+      "row_count": 60,
+      "sha256": "d8d78b2f6021401d799a79732a02e92cbbb3a1f0d20f606cf85ab4b3711979f4"
+    }
+  ],
+  "status": "SOURCE_RECONCILED_VISUAL_REVIEW_PENDING",
+  "title": "Workforce, inventory, fixed assets and debt",
+  "visual_manifest": null
+}

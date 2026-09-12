@@ -1,0 +1,127 @@
+{
+  "extracted_database": {
+    "path": "docs/finance/evidence/treasury/evidence.sqlite3",
+    "sha256": "f8330b57f9c6ad36bf3ae60163eeed8e1b5cb66fcd208006b3509c0dfb46a6bc"
+  },
+  "markdown": "docs/finance/evidence/treasury/README.md",
+  "native_database": {
+    "release_member": "enterprise.sqlite3",
+    "sha256": "8142909e88629e227a29ce77d8560d64a3ee60bd11bd19d6c089376fe146bb3d"
+  },
+  "package_id": "SH-FIN-TREASURY",
+  "reconciliation": "docs/finance/evidence/treasury/RECONCILIATION.json",
+  "schema_version": 1,
+  "scope": {
+    "period_end": "2027-12",
+    "period_start": "2027-01",
+    "release": "business-operations-v1.0.0",
+    "release_sha256": "b8e81572d829fec7209d1d18eb15bac21e52b37714211aee005b5f1a68ab5817",
+    "scenario": "base",
+    "source_revision": "57cfa1b1c483ccf1f8b15d82c4cbdadbeef8063e"
+  },
+  "sources": [
+    {
+      "full_release_row_count": 12100,
+      "native_table": "payables",
+      "path": "docs/finance/evidence/treasury/source/payables.csv",
+      "predicate": "base scenario where supplied; 2027 by year/period/month index; shared static inputs retained; terminal master snapshots explicitly identified in README",
+      "release_member": "tables/payables.csv",
+      "release_member_sha256": "0c13268e941e1754dcb27f9e72b80a635f75abfeb68989476c6b2c062f6fd813",
+      "row_count": 705,
+      "sha256": "841c48bc251d6282b3b1553c94503412064d6756da90a06e7c758d38c9aa0430"
+    },
+    {
+      "full_release_row_count": 13554,
+      "native_table": "treasury_obligations",
+      "path": "docs/finance/evidence/treasury/source/treasury_obligations.csv",
+      "predicate": "base scenario where supplied; 2027 by year/period/month index; shared static inputs retained; terminal master snapshots explicitly identified in README",
+      "release_member": "tables/treasury_obligations.csv",
+      "release_member_sha256": "f21a167f6d58ead242b3cb6a5e58e43570473491e287035bf4004e1bce4efb09",
+      "row_count": 754,
+      "sha256": "a9e34ccf16550031a1db0f14ab3ffdf1a76e0dd33a6056bfb4907b8123fa90cf"
+    },
+    {
+      "full_release_row_count": 15270,
+      "native_table": "treasury_obligation_history",
+      "path": "docs/finance/evidence/treasury/source/treasury_obligation_history.csv",
+      "predicate": "base scenario where supplied; 2027 by year/period/month index; shared static inputs retained; terminal master snapshots explicitly identified in README",
+      "release_member": "tables/treasury_obligation_history.csv",
+      "release_member_sha256": "1ed4244d93be7086894d69b7bcab6810659b366f596d68b0414cc399278180ef",
+      "row_count": 754,
+      "sha256": "2d90d7f089cfeb0aac100d2a2f15416d8b591c763dbe7960f5a86df96a6ed4ac"
+    },
+    {
+      "full_release_row_count": 648,
+      "native_table": "treasury_reconciliation",
+      "path": "docs/finance/evidence/treasury/source/treasury_reconciliation.csv",
+      "predicate": "base scenario where supplied; 2027 by year/period/month index; shared static inputs retained; terminal master snapshots explicitly identified in README",
+      "release_member": "tables/treasury_reconciliation.csv",
+      "release_member_sha256": "fe03ff3b75e750e4ba229c81c0ecefec36e6667348d0d3498df3a555db848782",
+      "row_count": 36,
+      "sha256": "140de2f55e4bdbb5f5c65b51009205128f3d4209b4aaa34b53021beef391c338"
+    },
+    {
+      "full_release_row_count": 158,
+      "native_table": "host_collection_settlements",
+      "path": "docs/finance/evidence/treasury/source/host_collection_settlements.csv",
+      "predicate": "base scenario where supplied; 2027 by year/period/month index; shared static inputs retained; terminal master snapshots explicitly identified in README",
+      "release_member": "tables/host_collection_settlements.csv",
+      "release_member_sha256": "30c5f57f8f21239c5cbd8da13dc581fef5b605dc7ec7db4348eff9b3c718a67b",
+      "row_count": 8,
+      "sha256": "08bfeefd60b296d99ad6e0a2fa1ade547b3599a41763ddc0faf71fc04aa03492"
+    },
+    {
+      "full_release_row_count": 1080,
+      "native_table": "subledger_rollforward",
+      "path": "docs/finance/evidence/treasury/source/subledger_rollforward.csv",
+      "predicate": "base scenario where supplied; 2027 by year/period/month index; shared static inputs retained; terminal master snapshots explicitly identified in README",
+      "release_member": "tables/subledger_rollforward.csv",
+      "release_member_sha256": "e0720dcbf6474fcca8ffb84ee406abfff725086d429fdb3219118542106e7d6d",
+      "row_count": 72,
+      "sha256": "9a2d216f5c3b7bce6f5a7c5e1c5491bb06586f129d171f61a486f9dbb7feaaa2"
+    },
+    {
+      "full_release_row_count": 4500,
+      "native_table": null,
+      "path": "docs/finance/evidence/treasury/source/industrial_purchase_orders.csv",
+      "predicate": "base scenario where supplied; 2027 by year/period/month index; shared static inputs retained; terminal master snapshots explicitly identified in README",
+      "release_member": "industrial/transactions/purchase_orders.csv",
+      "release_member_sha256": "f1059b85c5652923e9f3026b1456ab954ac43acd6c08914653b0a000602386e4",
+      "row_count": 300,
+      "sha256": "810a6ec3c0c7ded41e80970f585772ea77d7a2e6189f6505add98b8c1098fa01"
+    },
+    {
+      "full_release_row_count": 4500,
+      "native_table": null,
+      "path": "docs/finance/evidence/treasury/source/industrial_receipts.csv",
+      "predicate": "base scenario where supplied; 2027 by year/period/month index; shared static inputs retained; terminal master snapshots explicitly identified in README",
+      "release_member": "industrial/transactions/receipts.csv",
+      "release_member_sha256": "3aea0ed2487ef722d402d00cf2783c26a31d22e2062bc403b7b5577fa87680ba",
+      "row_count": 300,
+      "sha256": "c051a4b594e5b8eb83e7b3f1f2b5123dd55f1f9dfe1c69d55d4596429cde17c1"
+    },
+    {
+      "full_release_row_count": 4500,
+      "native_table": null,
+      "path": "docs/finance/evidence/treasury/source/industrial_supplier_invoices.csv",
+      "predicate": "base scenario where supplied; 2027 by year/period/month index; shared static inputs retained; terminal master snapshots explicitly identified in README",
+      "release_member": "industrial/transactions/supplier_invoices.csv",
+      "release_member_sha256": "9566d4dcc9660a7c76c385b55831112787b82502d7c6aea5176fe779fb06bcd8",
+      "row_count": 300,
+      "sha256": "e51f2984e1e2314dcc86cfad2a7ee7e08330730b413963306af6805d1d629f5d"
+    },
+    {
+      "full_release_row_count": 123716,
+      "native_table": null,
+      "path": "docs/finance/evidence/treasury/source/industrial_document_journal_lineage.csv",
+      "predicate": "base scenario where supplied; 2027 by year/period/month index; shared static inputs retained; terminal master snapshots explicitly identified in README",
+      "release_member": "industrial/transactions/document_journal_lineage.csv",
+      "release_member_sha256": "a61360996419211b4ec3a464de43f458edde5468b9d7c60b79b7e73b35aef84a",
+      "row_count": 7131,
+      "sha256": "7a4c19c30d3d1171b698a91e12b8dabf76224a278f8cbb55715d8af696cc342a"
+    }
+  ],
+  "status": "SOURCE_RECONCILED_VISUAL_REVIEW_PENDING",
+  "title": "Procurement, payables and Treasury",
+  "visual_manifest": null
+}

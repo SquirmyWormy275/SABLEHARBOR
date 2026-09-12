@@ -1,0 +1,120 @@
+{
+  "status": "REPRODUCED_CURRENT_SYNTHETIC_MODEL_NOT_FILED_TAX",
+  "base_revision": "8898d2d",
+  "source_hashes": {
+    "industrial/source/finance.json": "0d4461abfcdb138da36db503ff0cfea7c47ea7fd7109494126514225fd43e38c",
+    "industrial/source/operations.json": "e7488b55c1c963d102db66e7a7b6f1373a3d68a9f94b8f99b164092245713a3b",
+    "red_wash/source/core_operating_data.json": "eb5601f3a519ac175bef07744fa3c23939734f80b5774efeed4800aa73e8aa3f",
+    "industrial/tools/build_financials.py": "4f879965a57598a5fd55f0b177d683aa9bcc8137e3b84e9b2b7c6a1343a9836c",
+    "industrial/transaction/04_ARU_APPROVAL_AND_PURCHASE_AGREEMENT.md": "3b40effe8efb1d4a69216180d508dad90f7fc6a778679b39ee2ed5371d0de9eb",
+    "industrial/transaction/05_ARU_CLOSING_AND_TAX_DELIVERY.md": "a6dd448ed3a4a3ad6f0f3748e79dd918ea43c75685de762fe00843477a5d22c9",
+    "industrial/transaction/07_ARU_TAX_STRUCTURE_MEMORANDUM.md": "d42c4d67873e1b8e9b6488eac9a70a16643680718735ab0c3948327a37b16a44",
+    "industrial/finance/TRANSACTION_ACCOUNTING.md": "d13f142968958585cfc56a7b06d54b5e95bccef6d434d11bb6bba93933a0aa58"
+  },
+  "database": {
+    "path": "docs/finance/evidence/tax-transaction/transaction-support.sqlite3",
+    "sha256": "827221135325c5adcacb3673b852724434a31a9b4da8a5eec23490ca566d0e39"
+  },
+  "files": [
+    {
+      "path": "docs/finance/evidence/tax-transaction/aru_2026_tax_rollforward.csv",
+      "sha256": "323a8532e46f3bf9cf3e39bf5666e5745cd842011372b26726df632a77f14ee0",
+      "rows": 12,
+      "table": "aru_2026_tax_rollforward"
+    },
+    {
+      "path": "docs/finance/evidence/tax-transaction/aru_acquisition_opening_trial_balance.csv",
+      "sha256": "33a28e198a5ce5a5d35f751ca8a3fac6aefc04faba4329b6297c7cd560ca02d5",
+      "rows": 16,
+      "table": "aru_acquisition_opening_trial_balance"
+    },
+    {
+      "path": "docs/finance/evidence/tax-transaction/aru_2026_debt.csv",
+      "sha256": "f4fe40dcd3672ed876be4b539428c92fbeb8ed441f7f4fd1f610529c4ebb2d53",
+      "rows": 12,
+      "table": "aru_2026_debt"
+    },
+    {
+      "path": "docs/finance/evidence/tax-transaction/aru_2026_assets.csv",
+      "sha256": "6039079a477cd1c21d3419631ed8ffd5089f711ad5599be627d1bfa19da34c79",
+      "rows": 12,
+      "table": "aru_2026_assets"
+    },
+    {
+      "path": "docs/finance/evidence/tax-transaction/acquisition_ppa.csv",
+      "sha256": "bd024c5ac926ed98ee89876e0bb4f32a3e80c5e0bea47c7bb227ad3c172b8fa0",
+      "rows": 18,
+      "table": "acquisition_ppa"
+    }
+  ],
+  "reconciliation": "Sources equal uses; consideration less fair net assets equals book goodwill; modeled AGUB less other tax bases equals tax goodwill.",
+  "ppa": {
+    "close_date": "2026-01-07",
+    "net_book_equity_after_excess_cash_distribution_usd": 13350000,
+    "book_ppe_net_usd": 22700000,
+    "fair_ppe_usd": 42000000,
+    "fair_ppe_step_up_usd": 19300000,
+    "identifiable_net_assets_before_refinancing_usd": 33237500,
+    "stock_consideration_usd": 48000000,
+    "goodwill_usd": 14762500,
+    "tax_goodwill_basis_usd": 13000000,
+    "initial_book_goodwill_excess_over_tax_usd": 1762500,
+    "tax_allocation": {
+      "stock_tax_basis_usd": 48000000,
+      "recognized_assumed_liabilities_usd": 20000000,
+      "deferred_assumed_liabilities_usd": 2350000,
+      "modeled_agub_usd": 68000000,
+      "other_tax_asset_bases_usd": {
+        "cash": 2000000,
+        "receivables_net": 6000000,
+        "inventory": 1800000,
+        "prepaids": 700000,
+        "owned_ppe": 42000000,
+        "tax_owned_finance_lease_assets": 2500000
+      },
+      "tax_goodwill_basis_usd": 13000000,
+      "initial_goodwill_dtl_usd": 0,
+      "policy": {
+        "state": "PROVISIONAL_ASSUMPTION",
+        "recognized_assumed_liability_accounts": [
+          "2000",
+          "2100",
+          "2400",
+          "2500",
+          "2600"
+        ],
+        "deferred_assumed_liability_accounts": [
+          "2200",
+          "2300"
+        ],
+        "additional_capitalized_stock_basis_usd": 0,
+        "basis_policy": "Separate modeled adjusted grossed-up basis: $48M stock basis plus $20M recognized assumed liabilities, excluding $2.35M environmental/claim liabilities pending economic performance. Deduct $55M other tax asset bases to derive $13M tax goodwill independently of book goodwill. Finance leases are conditionally treated as tax-owned property with $2.5M basis; net AR tax basis aligns with its $6M book amount under the assumed specific disputed-debt treatment. Buyer transaction costs have zero modeled addition to target deemed-purchase basis; parent tax treatment is outside the group tax forecast. These classifications are conditional model assumptions, not a filed asset-allocation certificate.",
+        "future_reserve_treatment": "No ARU reserve settlement occurs in 2026. Future settlements require redetermined assumed-liability recognition, AGUB/asset allocation and tax amortization. The reserve DTA assumes eventual recovery through additional deductible basis, not an automatic immediate deduction on settlement.",
+        "initial_goodwill_accounting": "The $1.7625M initial book goodwill excess over tax basis is separately identified. No opening DTL is recognized for this initial excess under the modeled goodwill initial-recognition treatment. Subsequent tax amortization of the independent $13M basis creates a DTL. This is an explicit conditional accounting judgment, not an audited FASB conclusion.",
+        "official_tax_sources": [
+          "https://www.irs.gov/irb/2004-42_IRB",
+          "https://www.irs.gov/irb/2007-41_IRB",
+          "https://www.irs.gov/instructions/i4562"
+        ]
+      }
+    },
+    "close_sources_before_fees_usd": 61500000,
+    "close_uses_before_fees_usd": 61500000,
+    "deferred_tax_asset_usd": 587500,
+    "deferred_tax_basis_usd": 2350000,
+    "deferred_tax_assumptions": "Environmental/claim book accruals have no current deduction or included assumed-liability tax basis before economic performance. Settlement may increase deemed-acquisition asset basis recoverable through later tax amortization rather than create an immediate deduction. At the 25% scenario rate, full future DTA realization is assumed from positive forecast taxable income; no 2026 settlement/reversal of these ARU reserves. Other deemed-acquisition asset book/tax bases assumed aligned; debt issue costs amortized identically in this simplified scenario.",
+    "new_debt_upstream_acquisition_distribution_usd": 9000000,
+    "parent_cash_before_fees_usd": 39000000,
+    "parent_cash_including_fees_usd": 40200000,
+    "working_capital_usd": 4500000,
+    "working_capital_true_up_usd": 0,
+    "tax_basis_boundary": "Synthetic book-tax step-up alignment is conditional on the tax memo; no audited deferred tax conclusion.",
+    "goodwill_method": "Residual of consideration over disclosed fair identifiable net assets; not an operating income or cash plug."
+  },
+  "boundaries": [
+    "Current 2026 industrial reconstruction, separate from immutable operations release; never additive.",
+    "ARU-CL-07 filing-ready 2026-03-02 is not IRS filing/acceptance.",
+    "Red Wash pre-close day dates conflict across summaries/instruments; July18 2025 close and28M price agree; no date reconciliation inferred.",
+    "Northern Nevada3M land acquisition is later runtime canon, not part of this scoped release/tax bridge; settlement remains unresolved."
+  ]
+}

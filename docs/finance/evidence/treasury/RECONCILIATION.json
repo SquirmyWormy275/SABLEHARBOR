@@ -1,0 +1,35 @@
+{
+  "checks": [
+    {
+      "check": "Treasury arrears rollforward",
+      "maximum_absolute_difference": "0.0000",
+      "status": "PASS",
+      "tested_rows": 36
+    },
+    {
+      "check": "Lifetime request allocation",
+      "maximum_absolute_difference": "0.0000",
+      "status": "PASS",
+      "tested_rows": 754
+    },
+    {
+      "check": "Complete supplier PO and receipt links",
+      "maximum_absolute_difference": "0",
+      "status": "PASS",
+      "tested_rows": 300
+    },
+    {
+      "check": "Supplier invoice to purchase order amount",
+      "maximum_absolute_difference": "0",
+      "status": "PASS",
+      "tested_rows": 300
+    },
+    {
+      "check": "Supplier invoice to receipt amount",
+      "maximum_absolute_difference": "0",
+      "status": "PASS",
+      "tested_rows": 300
+    }
+  ],
+  "status": "PASS"
+}
