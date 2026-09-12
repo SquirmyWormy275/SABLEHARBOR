@@ -256,7 +256,7 @@ def test_changed_evaluator_requires_history_migration(running, monkeypatch):
 def test_full_demo_links_prospective_case_and_preserves_original(plans, tmp_path):
     out = tmp_path / "demo"
     summary = ex.build(out, plans)
-    assert summary["cases"] == 17
+    assert summary["cases"] == 2 * len(testing.ADAPTERS) + 1
     r = json.loads((out / "ASSESSMENT_REPORT.json").read_text())
     s = r["cases"]["DEMO-termination-negative"]
     assert s["state"] == "CLOSED_PROSPECTIVE_VALIDATION"

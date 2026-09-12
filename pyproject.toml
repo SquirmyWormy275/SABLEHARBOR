@@ -26,6 +26,10 @@ dev = [
   "types-PyYAML>=6,<7"
 ]
 postgres = ["psycopg[binary]>=3.2,<4"]
+ccf-service = [
+    "gunicorn>=26.2,<27 ; python_full_version >= '3.12'",
+    "pyjwt[crypto]>=2.12.2,<3",
+]
 
 [project.scripts]
 shfin = "sable_harbor.cli:app"
