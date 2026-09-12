@@ -5,6 +5,7 @@ on:
     - cron: "17 7 1 * *"
 jobs:
   build:
+    name: Blackridge Full Build / build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
