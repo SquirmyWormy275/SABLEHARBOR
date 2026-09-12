@@ -204,6 +204,96 @@ def render():
         )
         for x in maprows:
             report += f"| {Path(x['source']).stem.replace('_', ' ')} | {x['row_count']} |\n"
+        measures = []
+
+        def total(table, column, predicate):
+            return sum(
+                (
+                    m.num(row, column)
+                    for row in m.rows((folder / "source" / (table + ".csv")).read_bytes())
+                    if predicate(row)
+                ),
+                m.D(0),
+            )
+
+        december = lambda row: (
+            row.get("period", "").startswith("2027-12")
+            or (row.get("year") == "2027" and row.get("month") == "12")
+        )
+        if family == "customer":
+            for label, column in [
+                ("Core gross receivables at December close", "gross_ar_usd"),
+                ("Core allowance at December close", "allowance_usd"),
+                ("Core deferred revenue at December close", "deferred_revenue_usd"),
+            ]:
+                measures.append((label, total("subledger_rollforward", column, december)))
+        elif family == "treasury":
+            for flow in ["OPERATING", "INVESTING", "FINANCING"]:
+                measures.append(
+                    (
+                        flow.capitalize() + " unpaid requests at December close",
+                        total(
+                            "treasury_reconciliation",
+                            "closing_unpaid_usd",
+                            lambda row: december(row) and row["cash_flow"] == flow,
+                        ),
+                    )
+                )
+        elif family == "close":
+            for label, column in [
+                ("Consolidated December ending cash", "ending_cash_usd"),
+                ("Consolidated December assets", "assets_usd"),
+            ]:
+                measures.append(
+                    (
+                        label,
+                        total(
+                            "legal_statements",
+                            column,
+                            lambda row: december(row) and row["entity"] == "CONSOLIDATED",
+                        ),
+                    )
+                )
+            measures.append(
+                (
+                    "Consolidated 2027 net income",
+                    total(
+                        "legal_statements",
+                        "net_income_usd",
+                        lambda row: row["entity"] == "CONSOLIDATED",
+                    ),
+                )
+            )
+        elif family == "supporting-schedules":
+            measures.append(
+                (
+                    "Core December asset net book value",
+                    total("asset_rollforward", "net_book_usd", december),
+                )
+            )
+            measures.append(
+                (
+                    "Core 2027 allocated employer cost",
+                    total("workforce_assignments", "loaded_cost_usd", lambda row: True),
+                )
+            )
+            measures.append(
+                (
+                    "ARU December legacy term principal",
+                    total("industrial_debt", "closing_legacy_term_usd", december),
+                )
+            )
+        else:
+            bridge = json.loads((folder / "CURRENT_SOURCE_BRIDGE.json").read_text())["ppa"]
+            measures = [
+                ("ARU stock consideration", bridge["stock_consideration_usd"]),
+                ("Residual book goodwill", bridge["goodwill_usd"]),
+                ("Independent tax goodwill basis", bridge["tax_goodwill_basis_usd"]),
+            ]
+        report += "\n## Financial measures\n\n| Measure | USD |\n|---|---:|\n"
+        for label, value in measures:
+            report += f"| {label} | {value:,.2f} |\n"
+        report += "\nThese measures use the stated Core, Treasury, consolidated or industrial view; they are not interchangeable populations. Source columns remain in the complete workbook.\n"
         report += (
             "\n## Reconciliation and review\n\n"
             + str(len(checks))
