@@ -37,6 +37,11 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Baseline design authoring records](../../../enterprise/ccf/assurance/design_data/README.md) — MD
 - [Reference service description workpaper](../../../enterprise/ccf/assurance/design_data/SERVICE_DESCRIPTION.md) — MD
 
+## `enterprise/ccf/assurance/iso_data`
+
+- [ISO extension implementation plan](../../../enterprise/ccf/assurance/iso_data/IMPLEMENTATION_PLAN.md) — MD
+- [Source-bound ISO planning inputs](../../../enterprise/ccf/assurance/iso_data/README.md) — MD
+
 ## `enterprise/ccf/assurance/reference_data`
 
 - [Reference source inventory](../../../enterprise/ccf/assurance/reference_data/README.md) — MD
