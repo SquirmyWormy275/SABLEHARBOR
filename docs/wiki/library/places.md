@@ -155,6 +155,14 @@ Generated file inventory. Includes current and historical records; open the sour
 
 - [visitor-map-v05](../../../geospatial/facilities/visitor/v05/artifacts/visitor-map-v05.pdf) — PDF
 
+## `geospatial/facilities/visitor/v06`
+
+- [V06 — final illustrated visitor-map review](../../../geospatial/facilities/visitor/v06/README.md) — MD
+
+## `geospatial/facilities/visitor/v06/artifacts`
+
+- [visitor-map-v06](../../../geospatial/facilities/visitor/v06/artifacts/visitor-map-v06.pdf) — PDF
+
 ## `geospatial/facilities/workbench`
 
 - [Facility planning workbench](../../../geospatial/facilities/workbench/README.md) — MD
