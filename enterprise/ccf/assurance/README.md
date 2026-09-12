@@ -177,3 +177,20 @@ uv run python -m enterprise.ccf.assurance.actions verify \
 ```
 
 Outputs include readable shared procedures and implementation backlog, CSVs, the complete JSON plan and a re-performance manifest. Verification rejects checksum-resealed edits. All implementation/coverage approvals remain unasserted; the adapter does not modify the native registry or assurance engine.
+
+## Exercised reference assessment
+
+`assessment_run` connects the approved SOC 2/HIPAA reference scope to the actionable control library. It produces 210 collection rows (70 candidate controls across corporate, Reno and Boise), baseline and individual/combined ISO 27001, ISO 42001 and C5 comparisons, and an isolated synthetic demonstration.
+
+```sh
+uv run python -m enterprise.ccf.assurance.assessment_run build --source-root /path/to/authorized/source-documents --output /new/private/assessment-run
+uv run python -m enterprise.ccf.assurance.assessment_run verify --source-root /path/to/authorized/source-documents --output /new/private/assessment-run
+```
+
+Start with `START_HERE.md`. `ASSESSMENT_RUN.json` holds the complete reference, canonical proposed work and selection-specific requirement links. The checklist specifies records, collection triggers, proposed source systems, population reconciliation and boundary tests; named appointments, actual periods, populations and results remain unset. Corporate artifacts are reuse candidates subject to separate local validation.
+
+The comparison rejects lost baseline duties, changed baseline procedures, duplicate controls/actions and a combined selection that differs from the individual action union. Seven tests compute results from explicitly invented event times or actors. Five separate fictional assurance-engine stages demonstrate failure, same-period retesting and prospective correction. These are bounded workflow examples, not completed ISO assessments. No synthetic evidence, tests or approvals enter the source-backed reference.
+
+`SOURCE_DEPENDENCIES.json` retains unresolved ISO normative/context references, HIPAA current-law reconciliation and C5 parent/customer/method review. BSI Standard 200-4 (German, 2023) was acquired from BSI on September 12, 2026; only identity/provenance was checked. Its content needs qualified review. Licensed originals and populated deliverables stay in private SABLEHARBOR holdings; Atlas remains a reference guide.
+
+Verification checks file hashes and rebuilds the entire bundle from source inputs, so editing results and resealing the manifest does not establish acceptance. Operational use still needs actual entity/service and PHI facts, appointments, commitments, source populations, an assessment period and independent review.
