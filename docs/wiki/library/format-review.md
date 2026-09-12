@@ -6,8 +6,8 @@ Generated reconciliation queue, not an assertion that every unpaired record lack
 
 | State | Records |
 |---|---:|
-| COUNTERPART_REVIEW_REQUIRED | 428 |
-| READER_OR_MAINTENANCE_PAGE | 83 |
+| COUNTERPART_REVIEW_REQUIRED | 430 |
+| READER_OR_MAINTENANCE_PAGE | 84 |
 | VERIFIED_DOCUMENT_PAIR | 131 |
 
 ## Records requiring counterpart reconciliation
@@ -209,6 +209,8 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [CCF preparation compared with Compliance Atlas](../../internal/development/CCF_COMPLIANCE_ATLAS_COMPARISON_2026-09-11.md) — Corporate document-format reconciliation
 - [CCF prebuild repository audit — September 11, 2026](../../internal/development/CCF_PREBUILD_REPOSITORY_AUDIT_2026-09-11.md) — Corporate document-format reconciliation
 - [CCF preparation delivery — September 11, 2026](../../internal/development/CCF_PREPARATION_DELIVERY_2026-09-11.md) — Corporate document-format reconciliation
+- [Approved reference assessment preparation](../../internal/development/CCF_REFERENCE_ASSESSMENT_DELIVERY_2026-09-11.md) — Corporate document-format reconciliation
+- [CCF publisher-source search follow-up](../../internal/development/CCF_SOURCE_SEARCH_FOLLOWUP_2026-09-11.md) — Corporate document-format reconciliation
 - [PR #119 — Runtime Estate Completion Handover](../../internal/development/PR119_RUNTIME_ESTATE_COMPLETION_HANDOVER_2026-09-11.md) — Corporate document-format reconciliation
 - [Sable Harbor — business-line development review](../../internal/development/REPOSITORY_DEVELOPMENT_REVIEW_2026-09-09.md) — Corporate document-format reconciliation
 - [Third-party services and internal operations — assessment for discussion](../../internal/development/THIRD_PARTY_SERVICES_ASSESSMENT_2026-09-09.md) — Corporate document-format reconciliation

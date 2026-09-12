@@ -32,6 +32,10 @@ Generated file inventory. Includes current and historical records; open the sour
 
 - [CCF assessment and framework delta workbench](../../../enterprise/ccf/assurance/README.md) — MD
 
+## `enterprise/ccf/assurance/reference_data`
+
+- [Reference source inventory](../../../enterprise/ccf/assurance/reference_data/README.md) — MD
+
 ## `enterprise/runtime`
 
 - [PR119 implementation disposition](../../../enterprise/runtime/DISPOSITION.md) — MD
