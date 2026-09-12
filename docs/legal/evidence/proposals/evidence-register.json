@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "package_id": "SH-LEGAL-FIELD-REVIEW-001",
+  "title": "Legal and billing missing-field reconciliation",
+  "status": "SOURCE_FACTS_AND_UNACCEPTED_PROPOSAL_REFERENCE",
+  "scope": {
+    "source_revision": "8898d2d0310a60bdf0e4753036790c6eda1388cd"
+  },
+  "sources": [
+    {
+      "path": "docs/advisory/CARRY_PLAN_STANDARD.md",
+      "sha256": "c8b64ecd570a2402233bd6067eea0e274e267c8f1aa90d9153de4b3a4865de45"
+    },
+    {
+      "path": "docs/canon/CRADLE_CLOSEOUT_2026-09-06.md",
+      "sha256": "b49eaf96f1582f11886e9543b1543013f47acc99aa5533082d73717ab523e8aa"
+    },
+    {
+      "path": "docs/canon/READER_OVERNIGHT_SCOPE_2026-09-11.md",
+      "sha256": "f22d96629c029d754378c7250c88356957276e6990282c8eb8c5cdccb96ed7e0"
+    },
+    {
+      "path": "docs/finance/RUNTIME_INFRASTRUCTURE_FINANCE_RECONCILIATION_2026-09-11.md",
+      "sha256": "20558ea7ecde58914b7ccd44dc866f56c754b5eabd053eff01b43e7684aa40c8"
+    },
+    {
+      "path": "docs/finance/evidence/SH-FIN-HUMAN-001/source.json",
+      "sha256": "c4833cfc6f28db6cd3edcae761b0e2d8f463a20de79f1d6fd5b0c517f8f829b7"
+    },
+    {
+      "path": "enterprise/services/source/runtime_sites_2026-09-11.json",
+      "sha256": "fa216f629762503865fd9f1a3207e87691cd484cec9885bf25ce045b4525519c"
+    },
+    {
+      "path": "geospatial/facilities/README.md",
+      "sha256": "a58a62e1bfd735eaf954ebce3d3aeaab72f1c9494271250367014d574e0eaf3b"
+    },
+    {
+      "path": "industrial/source/entities.json",
+      "sha256": "799a24baf3240d50c5d6a80ac0f9ddb9d023b7a36de058ec12546aac60caee29"
+    },
+    {
+      "path": "industrial/transaction/05_ARU_CLOSING_AND_TAX_DELIVERY.md",
+      "sha256": "a6dd448ed3a4a3ad6f0f3748e79dd918ea43c75685de762fe00843477a5d22c9"
+    }
+  ],
+  "markdown": "docs/legal/evidence/proposals/README.md",
+  "reconciliation": "docs/legal/evidence/proposals/decision-register.json",
+  "visual_manifest": null,
+  "pdf_disposition": "NO_NEW_VISUAL_PROPOSED",
+  "billing_proposal_reference": {
+    "proposal_id": "SH-FIN-BILL-PROP-001",
+    "version": "0.1.0",
+    "status": "UNACCEPTED_REFERENCE_ONLY",
+    "pull_request": "https://github.com/SquirmyWormy275/SABLEHARBOR/pull/138",
+    "commit": "e4995ba",
+    "path": "docs/finance/evidence/billing-proposal/proposal.json",
+    "sha256": "23d8d6080ad296468d6b649eda55593d49c33cde0e6b038343ce11e4973e23f8",
+    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/e4995ba/docs/finance/evidence/billing-proposal/proposal.json",
+    "acceptance": {
+      "state": "NOT_ACCEPTED",
+      "required": "Owner review naming proposal version and SHA-256, with accepted/rejected field IDs; dated repository acceptance record through reviewed PR. Legal/tax unresolved treatments remain explicit unless separately resolved.",
+      "record": null,
+      "source_overwrite_permitted": false,
+      "amount_change_permitted": false,
+      "visual_design_approval_implied": false
+    }
+  }
+}

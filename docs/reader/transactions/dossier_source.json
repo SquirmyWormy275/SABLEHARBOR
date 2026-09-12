@@ -1,0 +1,592 @@
+{
+  "schema_version": 1,
+  "status": "SOURCE_BOUND_READER_DERIVATIVES",
+  "dossiers": [
+    {
+      "folder": "commercial",
+      "id": "SH-LEGAL-READ-IC-001",
+      "title": "Taylor–Red Wash service terms",
+      "status": "SYNTHETIC_RECONSTRUCTED; uranium custody OPEN_GATED",
+      "sources": [
+        "industrial/transaction/08_INTERCOMPANY_LOGISTICS_AGREEMENT.md",
+        "industrial/source/operations.json",
+        "industrial/source/finance.json"
+      ],
+      "clauses": [
+        {
+          "label": "Parties and duration",
+          "text": "ARU supplies terminal/trucking services; BS&T separately supplies rail; RWH is customer. Five-year term: July 7, 2026–July 6, 2031. Each service names its actual seller even when ARU administers billing.",
+          "source": "industrial/transaction/08_INTERCOMPANY_LOGISTICS_AGREEMENT.md"
+        },
+        {
+          "label": "Price and quantity",
+          "text": "Combined rates per car: acid $3,010; binder $2,390; lime $2,500; steel $2,725; process/MRO $1,900; qualified project freight $4,600. The 225-slot allowance contains 215 billable cars and ten unbilled contingencies; no minimum-volume or exclusive-carrier covenant.",
+          "source": "industrial/transaction/08_INTERCOMPANY_LOGISTICS_AGREEMENT.md"
+        },
+        {
+          "label": "Service and exceptions",
+          "text": "72 elapsed hours interchange-to-empty-release, 96 for steel; 36–48-hour operating goal. Customer-caused storage may incur $50/car/24 hours, prorated; provider delay earns no such charge. Baseline has zero chargeable dwell.",
+          "source": "industrial/transaction/08_INTERCOMPANY_LOGISTICS_AGREEMENT.md"
+        },
+        {
+          "label": "Billing and exit",
+          "text": "Monthly actual quantities and accepted rate versions; payment due within 30 calendar days. Thirty-day curable-breach period. Convenience termination after first year requires 180 days notice and carries no volume penalty.",
+          "source": "industrial/transaction/08_INTERCOMPANY_LOGISTICS_AGREEMENT.md"
+        },
+        {
+          "label": "Asset and custody boundary",
+          "text": "RWH owns the $3.25M mine program; ARU the $5.25M Taylor program. The $8.5M phase is separate from tariff revenue. Finished uranium concentrate and a mine rail spur are excluded.",
+          "source": "industrial/transaction/08_INTERCOMPANY_LOGISTICS_AGREEMENT.md"
+        }
+      ],
+      "accounting": "Reconcile reciprocal invoice IDs once across rail, terminal and trucking sellers and the RWH buyer. Eliminate internal balances/income once; preserve external costs and owner depreciation.",
+      "missing": "No authentic executed tariff, insurer certificate or uranium qualification is supplied. Third-party linehaul/demurrage needs its own invoice and governing terms.",
+      "native_keys": [
+        "SH-IND-IC-001",
+        "ARU",
+        "BST",
+        "RWH",
+        "intercompany_invoices_2026",
+        "intercompany_eliminations"
+      ]
+    },
+    {
+      "folder": "commercial",
+      "id": "SH-LEGAL-READ-ADV-001",
+      "title": "Advisory engagement and outcome terms",
+      "status": "LOCKED DIRECTION; contract architecture, not executed client agreement",
+      "sources": [
+        "docs/advisory/LEGAL_AND_CONTRACTING_TERM_SHEET.md",
+        "docs/advisory/COMMERCIAL_CONTRACTING_AND_PRICING_STANDARD.md",
+        "docs/advisory/IP_DATA_AND_METHOD_TRANSFER_STANDARD.md"
+      ],
+      "clauses": [
+        {
+          "label": "Agreement stack",
+          "text": "MSA/PSA; required data/security addendum; separate Atlas license; matter SOW/charter; outcome schedule for measurable-value work or transfer schedule for capability work; jurisdiction/client addenda where required.",
+          "source": "docs/advisory/LEGAL_AND_CONTRACTING_TERM_SHEET.md"
+        },
+        {
+          "label": "Required SOW",
+          "text": "Name problem, deliverable, success criteria, authority/non-authority, client dependencies, milestones, committed/variable fees, Atlas charges, expenses, data assumptions, IP class, acceptance, change control and stop rights.",
+          "source": "docs/advisory/LEGAL_AND_CONTRACTING_TERM_SHEET.md"
+        },
+        {
+          "label": "Commercial rules",
+          "text": "Normal minimum professional fee $150,000, excluding Atlas, travel, third-party costs and taxes; exceptions need documented rationale. Measurable-value default is 60% committed / 40% variable, with approved scope and capped payout mechanics.",
+          "source": "docs/advisory/COMMERCIAL_CONTRACTING_AND_PRICING_STANDARD.md"
+        },
+        {
+          "label": "Recognition evidence",
+          "text": "Committed amounts follow milestone or monthly fixed billing. Variable fees are invoiced only after Value Office certification and contractual dispute procedures. Hours are internal cost/capacity evidence; they do not automatically create billable revenue.",
+          "source": "docs/advisory/COMMERCIAL_CONTRACTING_AND_PRICING_STANDARD.md"
+        },
+        {
+          "label": "Transfer and exit",
+          "text": "Separate client-owned, licensed SH capability, reserved professional IP and nontransferable third-party/institutional material. Unsafe/unlawful requests, falsification demands and material security/conflict issues can stop work.",
+          "source": "docs/advisory/IP_DATA_AND_METHOD_TRANSFER_STANDARD.md"
+        }
+      ],
+      "accounting": "Trace matter class and accepted fee components separately from Atlas license and pass-through costs. Link certification/acceptance to the chosen released contract and invoice; no imagined executed SOW.",
+      "missing": "Actual client legal parties, negotiated limitations, executed MSA/SOW versions, insurance and counsel implementation are not completed by the standards.",
+      "native_keys": [
+        "SH-ADV-014",
+        "SH-ADV-009",
+        "SH-ADV-007",
+        "SHI",
+        "advisory"
+      ]
+    },
+    {
+      "folder": "commercial",
+      "id": "SH-LEGAL-READ-ATL-001",
+      "title": "Atlas licensing and amendment evidence",
+      "status": "LOCKED DIRECTION plus conditional commercial scenarios",
+      "sources": [
+        "docs/advisory/ATLAS_MERIDIAN_COMMERCIAL_PRODUCT_STANDARD.md",
+        "enterprise/operations/docs/commercial.md"
+      ],
+      "clauses": [
+        {
+          "label": "License perimeter",
+          "text": "Core and Enterprise are client editions; Professional remains the SH-controlled professional plane. Managed adds agreed operated client-plane services. Licensing is institutional/tenant based, not primarily per seat.",
+          "source": "docs/advisory/ATLAS_MERIDIAN_COMMERCIAL_PRODUCT_STANDARD.md"
+        },
+        {
+          "label": "Price status",
+          "text": "Illustrative market-testing annual bands are Core $150K–$350K and Enterprise $350K–$1.25M. Negotiation depends on scope, connectors, environments and support. These are not binding public offers or issued invoices.",
+          "source": "docs/advisory/ATLAS_MERIDIAN_COMMERCIAL_PRODUCT_STANDARD.md"
+        },
+        {
+          "label": "Separation",
+          "text": "Material implementation is priced separately. Client-transferred agents cannot depend silently on unlicensed Professional resources. Tenant, data, access, connector and export boundaries remain documented.",
+          "source": "docs/advisory/ATLAS_MERIDIAN_COMMERCIAL_PRODUCT_STANDARD.md"
+        },
+        {
+          "label": "Amendment record",
+          "text": "The operating successor supplies immutable contract versions with effective rate, seats, term, approval ID and applied month. Positive changes bill the remaining term; contraction/cancellation credits unearned claims rather than recognized service.",
+          "source": "enterprise/operations/docs/commercial.md"
+        },
+        {
+          "label": "Service-credit boundary",
+          "text": "Monthly modeled service demand and breach consequences are not uptime evidence or a negotiated contractual SLA. Earned-service credits reduce revenue and cannot reduce ARR/deferred revenue twice.",
+          "source": "enterprise/operations/docs/commercial.md"
+        }
+      ],
+      "accounting": "Join contract_id, scenario and month across contract_versions, commercial_changes, invoices, credit notes and commercial_deferred_rollforward. Separate license revenue, implementation, cash and ARR.",
+      "missing": "No full executed customer license, actual operational SLA result or signed amendment follows from synthetic approval IDs.",
+      "native_keys": [
+        "SH-ATL-017",
+        "atlas-meridian",
+        "contract_versions",
+        "commercial_changes",
+        "commercial_deferred_rollforward"
+      ]
+    },
+    {
+      "folder": "commercial",
+      "id": "SH-LEGAL-READ-COLO-001",
+      "title": "Colocation orders and SLA review",
+      "status": "CUSTOMER-PROPOSED DRAFT; unsigned",
+      "sources": [
+        "enterprise/runtime/docs/CONTRACT_DOSSIER.md",
+        "enterprise/services/source/runtime_sites_2026-09-11.json",
+        "docs/canon/RUNTIME_HOSTING_AND_DATA_CENTER_DECISIONS_2026-09-11.md"
+      ],
+      "clauses": [
+        {
+          "label": "Selected providers",
+          "text": "Switch TAHOE RENO is the primary transition selection; IDACORE Boise is independent recovery. Both selections are accepted direction; neither is executed procurement, reserved capacity or installed service.",
+          "source": "docs/canon/RUNTIME_HOSTING_AND_DATA_CENTER_DECISIONS_2026-09-11.md"
+        },
+        {
+          "label": "Reno order",
+          "text": "RT-SO-RENO requests 75/100 kW alternatives with expansion toward 200–250 kW. The $350/kW/month finance input is analyst assumption, not a Switch quote. Building/enclosure/legal provider party/commencement are unverified.",
+          "source": "enterprise/runtime/docs/CONTRACT_DOSSIER.md"
+        },
+        {
+          "label": "Boise order",
+          "text": "RT-SO-BOISE uses a 25 kW recovery envelope with 50/100 kW expansion cases. Published $300/kW/month actual-draw pricing is a procurement baseline; meter intervals, minimums, charges and term ambiguity require order resolution.",
+          "source": "enterprise/runtime/docs/CONTRACT_DOSSIER.md"
+        },
+        {
+          "label": "Proposed remedies",
+          "text": "Power availability is measured per affected delivery point, separate from application uptime. Proposed credits are 5/10/25/50% by outage band, capped at 50% of affected recurring facility charges; not accepted provider obligations.",
+          "source": "enterprise/runtime/docs/CONTRACT_DOSSIER.md"
+        },
+        {
+          "label": "Access and exit",
+          "text": "Proposed authenticated remote-hands work orders exclude data/key access. Customer retains equipment/data/keys. Proposed 90-day transition and no obstructive liens require negotiated legal acceptance.",
+          "source": "enterprise/runtime/docs/CONTRACT_DOSSIER.md"
+        }
+      ],
+      "accounting": "No vendor payable at provider selection. Keep colo service cost, deposits/prepayments, IT hardware and owned-site capital separate; do not duplicate power charges in a power-inclusive rate.",
+      "missing": "Legal provider entities, quotes, executed orders, insurance, access/audit rights, technical acceptance and control-period reports are still needed.",
+      "native_keys": [
+        "SH-RT-CONTRACT-001",
+        "RT-MSA-001",
+        "RT-SO-RENO",
+        "RT-SO-BOISE",
+        "RUNTIME-RENO-COLO",
+        "RUNTIME-BOISE-DR"
+      ]
+    },
+    {
+      "folder": "corporate",
+      "id": "SH-LEGAL-READ-ENTITY-001",
+      "title": "Legal entities and separate books",
+      "status": "ACCEPTED SYNTHETIC INTERNAL FORMATION RECORD",
+      "sources": [
+        "industrial/corporate/LEGAL_STRUCTURE_AND_FORMATION.md",
+        "industrial/source/entities.json",
+        "docs/governance/RESERVED_MATTERS_AND_SUBSIDIARY_AUTONOMY.md"
+      ],
+      "clauses": [
+        {
+          "label": "Parent and holding chain",
+          "text": "SHI is Sable Harbor, LLC, a Delaware LLC with Sacramento headquarters. It owns SHIH, a Delaware corporation; SHIH owns Pale Sun and ARU; Pale Sun owns RWH; ARU owns BS&T. Each subsidiary interest is 100%.",
+          "source": "industrial/corporate/LEGAL_STRUCTURE_AND_FORMATION.md"
+        },
+        {
+          "label": "Operating boundary",
+          "text": "Pale Sun holds its platform investment/payroll; RWH its mine assets, permits, inventory and liabilities. ARU owns reusable logistics assets and BS&T retains rail property, employees and operating books.",
+          "source": "industrial/corporate/LEGAL_STRUCTURE_AND_FORMATION.md"
+        },
+        {
+          "label": "Formation precision",
+          "text": "SHI founding remains 2016 year precision. SHIH December 2, 2024 and Pale Sun January 13, 2025 are derived fictional formation dates, not registry findings or actual certificate dates.",
+          "source": "industrial/corporate/LEGAL_STRUCTURE_AND_FORMATION.md"
+        },
+        {
+          "label": "Authority",
+          "text": "Entity creation, material debt/guarantees/security, consequential M&A and material related-party exposures ordinarily go to the Board. No mechanical dollar ladder or investor ordinary-operations veto is invented.",
+          "source": "docs/governance/RESERVED_MATTERS_AND_SUBSIDIARY_AUTONOMY.md"
+        }
+      ],
+      "accounting": "Join entity_id and owner_entity_id before combining books. A management unit or J2 capability is not another legal company; no double posting from organizational displays.",
+      "missing": "No government certificate number, tax identifier, actual registry filing or signed operating agreement is provided. SHI federal tax classification remains unresolved outside the industrial acquisition model.",
+      "native_keys": [
+        "SH-IND-ENT-001",
+        "SHI",
+        "SHIH",
+        "PS",
+        "RWH",
+        "ARU",
+        "BST"
+      ]
+    },
+    {
+      "folder": "corporate",
+      "id": "SH-LEGAL-READ-CAPITAL-001",
+      "title": "Financing approvals and capital boundaries",
+      "status": "LOCKED IN-UNIVERSE BOARD RECORDS",
+      "sources": [
+        "docs/governance/board-records/2021-06-18_harrison-vale-growth-financing-minutes.md",
+        "docs/governance/board-records/2022-10-28_wolf-ridge-industrial-financing-minutes.md",
+        "docs/governance/BOARD_AND_CAPITAL_GOVERNANCE_v1.0.1.md"
+      ],
+      "clauses": [
+        {
+          "label": "2021 approval",
+          "text": "June 18 minutes approve entry into definitive documents for approximately $48M Harrison Vale financing, subject to final legal review and no material adverse terms. Evan Mercer board appointment is effective on closing.",
+          "source": "docs/governance/board-records/2021-06-18_harrison-vale-growth-financing-minutes.md"
+        },
+        {
+          "label": "2022 approval",
+          "text": "October 28 minutes approve approximately $135M Wolf Ridge financing at approximately $900M post-money; no founder secondary; working ownership approximately 66.5% insiders and 33.5% outside capital.",
+          "source": "docs/governance/board-records/2022-10-28_wolf-ridge-industrial-financing-minutes.md"
+        },
+        {
+          "label": "Rights retained",
+          "text": "Investor directors serve SH, not an operating constituency. Neither investor gets ordinary-operations veto or privileged commercial access. Exact thresholds/side letters are not supplied by minutes.",
+          "source": "docs/governance/BOARD_AND_CAPITAL_GOVERNANCE_v1.0.1.md"
+        },
+        {
+          "label": "Current governance",
+          "text": "One nine-member Board; Kincaid is independent Chair and Daniel Mercer is CEO. Founder name correction is not a new meeting, seat or financing event.",
+          "source": "docs/governance/BOARD_AND_CAPITAL_GOVERNANCE_v1.0.1.md"
+        }
+      ],
+      "accounting": "Use approved approximate financing facts and native capital records; do not substitute the 66.5/33.5 working split for a full share-level capitalization or book journal.",
+      "missing": "Full subscription agreements, side letters, option-pool mechanics and cash bank confirmations are not supplied here.",
+      "native_keys": [
+        "SH-BRD-MIN-2021-06-18",
+        "SH-BRD-MIN-2022-10-28",
+        "SH-GOV-BOARD-001"
+      ]
+    },
+    {
+      "folder": "corporate",
+      "id": "SH-LEGAL-READ-HR-001",
+      "title": "ARU transition and retention obligations",
+      "status": "SYNTHETIC RECONSTRUCTED SERVICE/EMPLOYMENT TERMS",
+      "sources": [
+        "industrial/transaction/06_ARU_TRANSITION_AND_RETENTION.md",
+        "industrial/source/finance.json"
+      ],
+      "clauses": [
+        {
+          "label": "Operating authority",
+          "text": "Nora Ashcombe is President/COO at close; Seth Kettering remains BS&T GM. Fred Tolman retains no dispatch, hiring, capital, contract or operating command authority.",
+          "source": "industrial/transaction/06_ARU_TRANSITION_AND_RETENTION.md"
+        },
+        {
+          "label": "Consultancy",
+          "text": "January 7–October 7, 2026; $225,000 total as knowledge-transfer services are performed. Nora commissions work and accepts records. Share price and retention are separate.",
+          "source": "industrial/transaction/06_ARU_TRANSITION_AND_RETENTION.md"
+        },
+        {
+          "label": "Retention allocations",
+          "text": "Nora $100K; Gareth $60K; Tessa $60K; Owen $50K; Seth $80K; Derek $50K; Marta $50K; Inez $50K. Total $500K; each has half at six months and half at twelve months.",
+          "source": "industrial/transaction/06_ARU_TRANSITION_AND_RETENTION.md"
+        },
+        {
+          "label": "Conditions and timing",
+          "text": "Installments July 7, 2026 and January 7, 2027 depend on continued service/protected departure. Pro rata protections and cause limitations are stated in the source. Scheduled installments do not prove payment.",
+          "source": "industrial/transaction/06_ARU_TRANSITION_AND_RETENTION.md"
+        },
+        {
+          "label": "No acquisition disguise",
+          "text": "No award depends on headcount reduction, hidden subsidy or guaranteed Red Wash volume. Property CBAs and safety obligations remain intact.",
+          "source": "industrial/transaction/06_ARU_TRANSITION_AND_RETENTION.md"
+        }
+      ],
+      "accounting": "Compare the eight retention allocations to $500K and each $250K installment; reconcile earned/service cost and cash according to native periods. Keep Tolman consulting and seller proceeds distinct.",
+      "missing": "Individual signed originals and independent payroll-payment evidence are absent. Do not create new employees, protected-departure events or completed milestones.",
+      "native_keys": [
+        "SH-IND-ARU-HR-001",
+        "ARU",
+        "employee_census_payroll",
+        "seller_cap_table"
+      ]
+    },
+    {
+      "folder": "corporate",
+      "id": "SH-LEGAL-READ-CARRY-001",
+      "title": "Advisory carry and workforce instrument boundaries",
+      "status": "LOCKED DIRECTION; counsel implementation outstanding",
+      "sources": [
+        "docs/advisory/CARRY_PLAN_STANDARD.md",
+        "docs/governance/PEOPLE_AND_CULTURE_DOCTRINE.md"
+      ],
+      "clauses": [
+        {
+          "label": "Instrument",
+          "text": "Contractual phantom carry; 10,000 notional units, not shares. Pool is 20% of Excess Advisory Economic Profit after losses, reserves and the greater of 10% allocated operating capital or enterprise-approved capital charge.",
+          "source": "docs/advisory/CARRY_PLAN_STANDARD.md"
+        },
+        {
+          "label": "Eligibility",
+          "text": "Qualifying former J2 service permits consideration, not a grant. Serving J2 personnel cannot receive individualized grant discussions, previews or promises; HQ service alone creates no eligibility.",
+          "source": "docs/advisory/CARRY_PLAN_STANDARD.md"
+        },
+        {
+          "label": "Vesting and distributions",
+          "text": "Default five years, 20% each completed year without cliff. Annual distributions require Finance-certified/audited results, reserves, dispute accruals and approval. Two-year rolling holdback may apply.",
+          "source": "docs/advisory/CARRY_PLAN_STANDARD.md"
+        },
+        {
+          "label": "No governance rights",
+          "text": "Units create no Board vote, veto, management role, J2 access or ownership of IP. Unallocated units accrue to no person. Individual grants, tax treatment and counsel instrument are separate.",
+          "source": "docs/advisory/CARRY_PLAN_STANDARD.md"
+        },
+        {
+          "label": "General compensation",
+          "text": "P&C direction supports fair cash compensation, profit participation and conservatively structured employee ownership. It does not establish a completed ESOP, grant roster or executed employment contracts.",
+          "source": "docs/governance/PEOPLE_AND_CULTURE_DOCTRINE.md"
+        }
+      ],
+      "accounting": "Use approved plan definition only for scoped hypothetical calculations; never book a named award or tax treatment without an accepted individual instrument and financial source.",
+      "missing": "No grants are created. Counsel must resolve legal/tax/withholding/deferred-compensation implementation; no new ESOP financing or employee ownership percentages.",
+      "native_keys": [
+        "SH-ADV-005",
+        "SH-PNC-001",
+        "advisory",
+        "SHI"
+      ]
+    },
+    {
+      "folder": "assets-rights",
+      "id": "SH-LEGAL-READ-RW-001",
+      "title": "Red Wash purchase and closing-rights schedule",
+      "status": "LOCKED CASE TERMS; SYNTHETIC INSTRUMENTS",
+      "sources": [
+        "industrial/transaction/01_RW_TRANSACTION_FILE.md",
+        "red_wash/agreements/TRANSACTION_AND_COMMERCIAL_INSTRUMENTS.md",
+        "docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05_R2.md"
+      ],
+      "clauses": [
+        {
+          "label": "Transfer and consideration",
+          "text": "Pale Sun buys all RWH interests from Northstar on July 18, 2025. $42M operating assets + $4.5M current assets − $16M ARO − $2.5M other liabilities = $28M identifiable net assets and consideration; zero selected goodwill/transaction debt.",
+          "source": "industrial/transaction/01_RW_TRANSACTION_FILE.md"
+        },
+        {
+          "label": "Seller allocation",
+          "text": "$24.5M direct payment + $3M environmental/title escrow + $0.5M holdback = $28M. Escrow and holdback are included, not additional uses. The separate stabilization program is $11M: $8M capital and $3M expense.",
+          "source": "industrial/transaction/01_RW_TRANSACTION_FILE.md"
+        },
+        {
+          "label": "Rights and deliveries",
+          "text": "The equity instrument retains the mine operator and scheduled assets/permits/contracts. The bill-of-sale section covers listed assets, inventory, source records and transferable rights only as law permits; it is not proof of completed consent.",
+          "source": "red_wash/agreements/TRANSACTION_AND_COMMERCIAL_INSTRUMENTS.md"
+        },
+        {
+          "label": "Risk and transition",
+          "text": "The $3M escrow has a 36-month term for specified title/environmental matters. NMI transition assistance is up to six months at cost plus 5%, without operating, safety, personnel or capital authority.",
+          "source": "red_wash/agreements/TRANSACTION_AND_COMMERCIAL_INSTRUMENTS.md"
+        },
+        {
+          "label": "Source discrepancy",
+          "text": "Industrial and mine documents disagree on exact pre-close re-trade/walk-away dates. The higher-level canon locks the sequence and July 18 close, not those conflicting day-level details.",
+          "source": "docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05_R2.md"
+        }
+      ],
+      "accounting": "Reconcile consideration and escrow once. Keep current-cost closure estimate distinct from accounting ARO, and mine stabilization distinct from ARU catch-up capital.",
+      "missing": "Individual title cures, permit/consent proof, bank confirmations and escrow releases are not demonstrated by a closing-delivery list. Preserve the date discrepancy for chronology exercises.",
+      "native_keys": [
+        "SH-IND-RW-TXN-001",
+        "SH-PS-RW-TOR-001",
+        "RWH",
+        "PS"
+      ]
+    },
+    {
+      "folder": "assets-rights",
+      "id": "SH-LEGAL-READ-ARU-001",
+      "title": "ARU share purchase, closing and tax bridge",
+      "status": "LOCKED CASE TERMS; tax filing not established",
+      "sources": [
+        "industrial/transaction/04_ARU_APPROVAL_AND_PURCHASE_AGREEMENT.md",
+        "industrial/transaction/05_ARU_CLOSING_AND_TAX_DELIVERY.md",
+        "industrial/transaction/07_ARU_TAX_STRUCTURE_MEMORANDUM.md"
+      ],
+      "clauses": [
+        {
+          "label": "Parties and close",
+          "text": "SHIH acquires all ARU shares January 7, 2026 from Fred 60%, Adele 20%, Nora 10%, Seth 10%; no rollover, earn-out or statutory merger. Nora and Seth continue as employees.",
+          "source": "industrial/transaction/04_ARU_APPROVAL_AND_PURCHASE_AGREEMENT.md"
+        },
+        {
+          "label": "EV and consideration",
+          "text": "$62M EV − $16M gross debt + $3.5M cash = $49.5M seller equity value. After $1.5M excess-cash distribution, buyer consideration is $48M: $45M direct plus $3M escrow.",
+          "source": "industrial/transaction/05_ARU_CLOSING_AND_TAX_DELIVERY.md"
+        },
+        {
+          "label": "Funding and leases",
+          "text": "$13.5M old debt payoff plus $48M consideration = $61.5M before fees, funded by $22.5M new term debt and $39M parent equity. Fees add $0.9M expense and $0.3M debt costs. $2.5M leases remain and are not paid off twice.",
+          "source": "industrial/transaction/05_ARU_CLOSING_AND_TAX_DELIVERY.md"
+        },
+        {
+          "label": "Adjustment and protection",
+          "text": "$4.5M working-capital peg excludes cash, debt/leases, income tax and separately scheduled reserves/claim. Closing statement: 60 days; seller objection: 30 days. General survival 18 months; environmental survival five years.",
+          "source": "industrial/transaction/04_ARU_APPROVAL_AND_PURCHASE_AGREEMENT.md"
+        },
+        {
+          "label": "Tax boundary",
+          "text": "Intended joint §338(h)(10) case retains synthetic eligibility facts and conditional PPA/tax allocation. ARU-CL-07 is filing-ready March 2; actual IRS submission/acceptance is not established.",
+          "source": "industrial/transaction/07_ARU_TAX_STRUCTURE_MEMORANDUM.md"
+        }
+      ],
+      "accounting": "Reconcile native stock basis, retained liabilities, book PPA and independent tax allocation; keep seller excess cash, fees, retention, consultancy and separate $11M catch-up capital out of stock consideration.",
+      "missing": "No IRS filing proof, actual lender confirmation, title/lien release or independently appraised PPA is supplied. Use the source tax memorandum as a dated case record, not a current professional opinion.",
+      "native_keys": [
+        "SH-IND-ARU-SPA-001",
+        "SH-IND-ARU-CLOSE-001",
+        "SH-IND-ARU-TAX-001",
+        "SHIH",
+        "ARU",
+        "BST"
+      ]
+    },
+    {
+      "folder": "assets-rights",
+      "id": "SH-LEGAL-READ-HOST-001",
+      "title": "Cradle host rights and material title",
+      "status": "LOCKED HOST BOUNDARIES; precise terms intentionally unassigned",
+      "sources": [
+        "docs/canon/CRADLE_CLOSEOUT_2026-09-06.md",
+        "geospatial/facilities/RESEARCH_CAMPUSES.md"
+      ],
+      "clauses": [
+        {
+          "label": "Kelly Gang Mining",
+          "text": "External Tasmanian operator retains host-plant command. Cradle owns/maintains recovery equipment, has exclusive recovery right to designated Stream 17 material during agreement term, and receives title at defined capture point.",
+          "source": "docs/canon/CRADLE_CLOSEOUT_2026-09-06.md"
+        },
+        {
+          "label": "Commercial allocation",
+          "text": "Cradle bears direct recovery cost; Kelly Gang receives negotiated participation in realized recovered-product value. Canon intentionally does not fix percentage, exact price, tonnage or permanent margin.",
+          "source": "docs/canon/CRADLE_CLOSEOUT_2026-09-06.md"
+        },
+        {
+          "label": "Demotte",
+          "text": "External West Virginia treatment operator retains treatment/discharge duties and immediate stop/bypass authority. Cradle recovery rights cover only captured intervention material; no host mine or remediation asset transfers.",
+          "source": "docs/canon/CRADLE_CLOSEOUT_2026-09-06.md"
+        },
+        {
+          "label": "Bedford and genealogy",
+          "text": "Bedford is the Fairmont-area development/upgrading center, separate from the host treatment site. Trace stream, sample/assay, recovery, captured intermediate, Bedford batch, product acceptance, host settlement and financial record.",
+          "source": "docs/canon/CRADLE_CLOSEOUT_2026-09-06.md"
+        },
+        {
+          "label": "Plan distinction",
+          "text": "Site/building layouts are modelled planning views. An external host context view is not a deed, plant ownership or authority to operate the host process.",
+          "source": "geospatial/facilities/RESEARCH_CAMPUSES.md"
+        }
+      ],
+      "accounting": "Use captured quantity and downstream acceptance before revenue/host settlement. Do not consolidate host payroll, plant or treatment liabilities; use selected model participation assumptions explicitly.",
+      "missing": "Full negotiated host term dates, final capture specification, signed instruments and independent title/settlement proof are not supplied by the closeout.",
+      "native_keys": [
+        "SH-CRD-CLOSEOUT-20260906",
+        "project-cradle",
+        "Stream 17",
+        "Kelly Gang Mining",
+        "Demotte Reclamation Services",
+        "Bedford"
+      ]
+    },
+    {
+      "folder": "assets-rights",
+      "id": "SH-LEGAL-READ-NV-001",
+      "title": "Northern Nevada planning deed and cost boundary",
+      "status": "ACCEPTED FICTIONAL LAND ACQUISITION; no real conveyance",
+      "sources": [
+        "docs/canon/RUNTIME_HOSTING_AND_DATA_CENTER_DECISIONS_2026-09-11.md",
+        "docs/legal/MOCK_DEED_NORTHERN_NEVADA_DATA_CENTER_2026-09-04.md",
+        "docs/finance/RUNTIME_INFRASTRUCTURE_FINANCE_RECONCILIATION_2026-09-11.md"
+      ],
+      "clauses": [
+        {
+          "label": "Accepted planning event",
+          "text": "Fictional 7.5-acre Northern Nevada parcel, $3M planning consideration, acquisition September 4, 2026. As of September 11: land acquired/preconstruction; no vertical building, installed critical plant or operating owned data center.",
+          "source": "docs/canon/RUNTIME_HOSTING_AND_DATA_CENTER_DECISIONS_2026-09-11.md"
+        },
+        {
+          "label": "Parties and geometry",
+          "text": "Mock grantor TRIC Development Holdings is fictional; grantee Sable Harbor, LLC maps to SHI. Approximate planning pin 39.5450, −119.4550 is not a real APN, cadastral parcel, recorded deed or metes-and-bounds survey.",
+          "source": "docs/legal/MOCK_DEED_NORTHERN_NEVADA_DATA_CENTER_2026-09-04.md"
+        },
+        {
+          "label": "Cost boundary",
+          "text": "$15.5M Phase-I envelope includes the $3M land; about $12.5M remains before production IT hardware. Do not represent the full envelope as spent. Studies are a $200K forecast, not invoices.",
+          "source": "docs/finance/RUNTIME_INFRASTRUCTURE_FINANCE_RECONCILIATION_2026-09-11.md"
+        },
+        {
+          "label": "Settlement and readiness",
+          "text": "The executable land adjustment uses unresolved settlement clearing; it claims no paid cash, accepted vendor payable or loan. Construction commitment and migration require separately evidenced financial/technical gates.",
+          "source": "docs/finance/RUNTIME_INFRASTRUCTURE_FINANCE_RECONCILIATION_2026-09-11.md"
+        }
+      ],
+      "accounting": "Land is separate from depreciating buildings/plant/hardware and from colo service. Use the runtime adjustment source; never invent a bank disbursement to balance the $3M event.",
+      "missing": "Real title documents, utility commitments, permits, provider quotes and settlement evidence are not present. Preserve accepted fictional land status while retaining these limits.",
+      "native_keys": [
+        "SH-RT-DEED-001",
+        "SH-RT-DEC-001",
+        "SH-RT-FINANCE-001",
+        "SHI",
+        "RUNTIME-NN-OWNED-DC"
+      ]
+    },
+    {
+      "folder": "assets-rights",
+      "id": "SH-LEGAL-READ-TENURE-001",
+      "title": "Campus and operating-site tenure review",
+      "status": "MIXED RECORDED SITE STATES; plans do not establish title",
+      "sources": [
+        "geospatial/facilities/README.md",
+        "geospatial/facilities/RESEARCH_CAMPUSES.md",
+        "geospatial/facilities/INDUSTRIAL_FACILITIES.md",
+        "docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md"
+      ],
+      "clauses": [
+        {
+          "label": "Sacramento",
+          "text": "The integrated campus program and saved plans express accepted functions and explicit planning assumptions. The primary corporate/J2 location is Sacramento; that decision alone does not supply a lease, recorded parcel title or completed construction.",
+          "source": "docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md"
+        },
+        {
+          "label": "Willow and Bedford",
+          "text": "Fort sheds/Museum and Bedford building functions are source-backed concepts. Read each plan title/status and exact site record before asserting measured floor area, ownership dates or occupation.",
+          "source": "geospatial/facilities/RESEARCH_CAMPUSES.md"
+        },
+        {
+          "label": "Industrial sites",
+          "text": "Keep mine, rail, terminal, trucking and warehouse functions with their accepted operating anchors. A structure plan cannot supply missing track engineering, underground workings, surveyed rights or an acquisition instrument.",
+          "source": "geospatial/facilities/INDUSTRIAL_FACILITIES.md"
+        },
+        {
+          "label": "External and historical",
+          "text": "Coverage includes external hosts, historical sites and unresolved locations. These dispositions are retained; a mapped counterparty does not become a subsidiary or owned workplace.",
+          "source": "geospatial/facilities/README.md"
+        }
+      ],
+      "accounting": "Join facility/site/building ID and source status before allocating property cost. Seats/areas are planning capacity, not employee count, lease commitment or recognized PPE.",
+      "missing": "Exact unsupported deeds, leases, parcel surveys, occupancy dates and construction certificates remain individual source gaps; plans cannot fill them.",
+      "native_keys": [
+        "geospatial/facilities/coverage/COVERAGE_MATRIX.json",
+        "geospatial/facilities/SPACE_REGISTER.json"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "schema_version": 1,
+  "package_id": "SH-LEGAL-ASSETS-RIGHTS-001",
+  "title": "Acquisitions, assets, hosts and tenure",
+  "status": "SOURCE_BOUND_READER_DERIVATIVES",
+  "scope": {
+    "source_revision": "8898d2d0310a60bdf0e4753036790c6eda1388cd",
+    "review_date": "2026-09-12"
+  },
+  "sources": [
+    {
+      "path": "docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md",
+      "sha256": "25e484d7fbc2c83a37f0e7ae7fe20ff741cde176bd0c2ba7be742fa7fb3e2624"
+    },
+    {
+      "path": "docs/canon/CRADLE_CLOSEOUT_2026-09-06.md",
+      "sha256": "b49eaf96f1582f11886e9543b1543013f47acc99aa5533082d73717ab523e8aa"
+    },
+    {
+      "path": "docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05_R2.md",
+      "sha256": "89eae89e18db1d3cf3ab4f7bf7f54fa57efabb84c57127717b731572048d563b"
+    },
+    {
+      "path": "docs/canon/RUNTIME_HOSTING_AND_DATA_CENTER_DECISIONS_2026-09-11.md",
+      "sha256": "fd309a9bdf596ea96498b7207b60ea3bea70a35d8c418371aa96c06d928bb17b"
+    },
+    {
+      "path": "docs/finance/RUNTIME_INFRASTRUCTURE_FINANCE_RECONCILIATION_2026-09-11.md",
+      "sha256": "20558ea7ecde58914b7ccd44dc866f56c754b5eabd053eff01b43e7684aa40c8"
+    },
+    {
+      "path": "docs/legal/MOCK_DEED_NORTHERN_NEVADA_DATA_CENTER_2026-09-04.md",
+      "sha256": "aa1717ac07ea2968d0ad877045d57b29ec0766dd852a79bd61553fa24eb97d79"
+    },
+    {
+      "path": "docs/reader/transactions/dossier_source.json",
+      "sha256": "b91505c08404cc27d66067d90b6fe5005b27441aff083663fdc74ed2f5b8201c"
+    },
+    {
+      "path": "geospatial/facilities/INDUSTRIAL_FACILITIES.md",
+      "sha256": "3987e927a6b3b5633117d31737ccdd4ffbaae8b22bbdaf765c380316af3e89e9"
+    },
+    {
+      "path": "geospatial/facilities/README.md",
+      "sha256": "a58a62e1bfd735eaf954ebce3d3aeaab72f1c9494271250367014d574e0eaf3b"
+    },
+    {
+      "path": "geospatial/facilities/RESEARCH_CAMPUSES.md",
+      "sha256": "094ea7bb3bc9dd920f29dbe7ef0062880b399c46443cc5c32661589a8e51239a"
+    },
+    {
+      "path": "industrial/transaction/01_RW_TRANSACTION_FILE.md",
+      "sha256": "902ff083d3857004b5c868b106fddc8e3600e59ad959201fb97c99d68dba298c"
+    },
+    {
+      "path": "industrial/transaction/04_ARU_APPROVAL_AND_PURCHASE_AGREEMENT.md",
+      "sha256": "3b40effe8efb1d4a69216180d508dad90f7fc6a778679b39ee2ed5371d0de9eb"
+    },
+    {
+      "path": "industrial/transaction/05_ARU_CLOSING_AND_TAX_DELIVERY.md",
+      "sha256": "a6dd448ed3a4a3ad6f0f3748e79dd918ea43c75685de762fe00843477a5d22c9"
+    },
+    {
+      "path": "industrial/transaction/07_ARU_TAX_STRUCTURE_MEMORANDUM.md",
+      "sha256": "d42c4d67873e1b8e9b6488eac9a70a16643680718735ab0c3948327a37b16a44"
+    },
+    {
+      "path": "red_wash/agreements/TRANSACTION_AND_COMMERCIAL_INSTRUMENTS.md",
+      "sha256": "5ee3715b0b5b08ba2fd259504ff7455da005d3d2e3701668945aa1ca90477808"
+    }
+  ],
+  "markdown": "docs/legal/evidence/assets-rights/README.md",
+  "reconciliation": "docs/reader/transactions/RECONCILIATION.md",
+  "visual_manifest": null,
+  "database": "docs/reader/transactions/legal-records.sqlite3",
+  "dossiers": [
+    {
+      "id": "SH-LEGAL-READ-RW-001",
+      "title": "Red Wash purchase and closing-rights schedule",
+      "status": "LOCKED CASE TERMS; SYNTHETIC INSTRUMENTS",
+      "markdown": "docs/legal/evidence/assets-rights/SH-LEGAL-READ-RW-001.md",
+      "native_keys": [
+        "SH-IND-RW-TXN-001",
+        "SH-PS-RW-TOR-001",
+        "RWH",
+        "PS"
+      ],
+      "pdf_disposition": "NEW_DESIGN_AWAITING_EXACT_REVIEW"
+    },
+    {
+      "id": "SH-LEGAL-READ-ARU-001",
+      "title": "ARU share purchase, closing and tax bridge",
+      "status": "LOCKED CASE TERMS; tax filing not established",
+      "markdown": "docs/legal/evidence/assets-rights/SH-LEGAL-READ-ARU-001.md",
+      "native_keys": [
+        "SH-IND-ARU-SPA-001",
+        "SH-IND-ARU-CLOSE-001",
+        "SH-IND-ARU-TAX-001",
+        "SHIH",
+        "ARU",
+        "BST"
+      ],
+      "pdf_disposition": "NEW_DESIGN_AWAITING_EXACT_REVIEW"
+    },
+    {
+      "id": "SH-LEGAL-READ-HOST-001",
+      "title": "Cradle host rights and material title",
+      "status": "LOCKED HOST BOUNDARIES; precise terms intentionally unassigned",
+      "markdown": "docs/legal/evidence/assets-rights/SH-LEGAL-READ-HOST-001.md",
+      "native_keys": [
+        "SH-CRD-CLOSEOUT-20260906",
+        "project-cradle",
+        "Stream 17",
+        "Kelly Gang Mining",
+        "Demotte Reclamation Services",
+        "Bedford"
+      ],
+      "pdf_disposition": "NEW_DESIGN_AWAITING_EXACT_REVIEW"
+    },
+    {
+      "id": "SH-LEGAL-READ-NV-001",
+      "title": "Northern Nevada planning deed and cost boundary",
+      "status": "ACCEPTED FICTIONAL LAND ACQUISITION; no real conveyance",
+      "markdown": "docs/legal/evidence/assets-rights/SH-LEGAL-READ-NV-001.md",
+      "native_keys": [
+        "SH-RT-DEED-001",
+        "SH-RT-DEC-001",
+        "SH-RT-FINANCE-001",
+        "SHI",
+        "RUNTIME-NN-OWNED-DC"
+      ],
+      "pdf_disposition": "NEW_DESIGN_AWAITING_EXACT_REVIEW"
+    },
+    {
+      "id": "SH-LEGAL-READ-TENURE-001",
+      "title": "Campus and operating-site tenure review",
+      "status": "MIXED RECORDED SITE STATES; plans do not establish title",
+      "markdown": "docs/legal/evidence/assets-rights/SH-LEGAL-READ-TENURE-001.md",
+      "native_keys": [
+        "geospatial/facilities/coverage/COVERAGE_MATRIX.json",
+        "geospatial/facilities/SPACE_REGISTER.json"
+      ],
+      "pdf_disposition": "NEW_DESIGN_AWAITING_EXACT_REVIEW"
+    }
+  ]
+}
