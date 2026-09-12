@@ -79,6 +79,7 @@
       "title": "Red Wash purchase and closing-rights schedule",
       "status": "LOCKED CASE TERMS; SYNTHETIC INSTRUMENTS",
       "markdown": "docs/legal/evidence/assets-rights/SH-LEGAL-READ-RW-001.md",
+      "markdown_sha256": "4c00aa02862711624cbbf9129c2be8f7204c5e467f985741d7004605f225d01c",
       "native_keys": [
         "SH-IND-RW-TXN-001",
         "SH-PS-RW-TOR-001",
@@ -92,6 +93,7 @@
       "title": "ARU share purchase, closing and tax bridge",
       "status": "LOCKED CASE TERMS; tax filing not established",
       "markdown": "docs/legal/evidence/assets-rights/SH-LEGAL-READ-ARU-001.md",
+      "markdown_sha256": "9156c7e004de8a090e4d6343b846e02980e6fca8db0aacb83cbfcab3969040df",
       "native_keys": [
         "SH-IND-ARU-SPA-001",
         "SH-IND-ARU-CLOSE-001",
@@ -107,6 +109,7 @@
       "title": "Cradle host rights and material title",
       "status": "LOCKED HOST BOUNDARIES; precise terms intentionally unassigned",
       "markdown": "docs/legal/evidence/assets-rights/SH-LEGAL-READ-HOST-001.md",
+      "markdown_sha256": "c53a3ec3d5532d54a38ed573717690a0331959c5f97127c72a49ef5e5f652290",
       "native_keys": [
         "SH-CRD-CLOSEOUT-20260906",
         "project-cradle",
@@ -122,6 +125,7 @@
       "title": "Northern Nevada planning deed and cost boundary",
       "status": "ACCEPTED FICTIONAL LAND ACQUISITION; no real conveyance",
       "markdown": "docs/legal/evidence/assets-rights/SH-LEGAL-READ-NV-001.md",
+      "markdown_sha256": "a794fc0af3d7e4d9f21a87c9de924459300a4b2281d87357487c6f757840c871",
       "native_keys": [
         "SH-RT-DEED-001",
         "SH-RT-DEC-001",
@@ -136,6 +140,7 @@
       "title": "Campus and operating-site tenure review",
       "status": "MIXED RECORDED SITE STATES; plans do not establish title",
       "markdown": "docs/legal/evidence/assets-rights/SH-LEGAL-READ-TENURE-001.md",
+      "markdown_sha256": "cca80fe84a7e0e1189eefaa0c2e9cfea632a2d24bbccdbfd4deea471eec285a4",
       "native_keys": [
         "geospatial/facilities/coverage/COVERAGE_MATRIX.json",
         "geospatial/facilities/SPACE_REGISTER.json"

@@ -125,6 +125,11 @@ def validate(drafts=False):
             require(
                 len(package["scope"]["source_revision"]) == 40, "Source revision must be full SHA"
             )
+            for dossier in package.get("dossiers", []):
+                require(
+                    sha(ROOT / dossier["markdown"]) == dossier["markdown_sha256"],
+                    "Dossier Markdown drift",
+                )
             for ref in package["sources"]:
                 require(
                     sha(ROOT / ref["path"]) == ref["sha256"], "Package source drift " + ref["path"]

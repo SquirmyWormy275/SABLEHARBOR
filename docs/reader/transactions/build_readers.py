@@ -130,6 +130,7 @@ def build(render=False):
                         "title": d["title"],
                         "status": d["status"],
                         "markdown": str((base / (d["id"] + ".md")).relative_to(ROOT)),
+                        "markdown_sha256": sha(base / (d["id"] + ".md")),
                         "native_keys": d["native_keys"],
                         "pdf_disposition": "NEW_DESIGN_AWAITING_EXACT_REVIEW",
                     }
@@ -198,7 +199,7 @@ def render_drafts(dossiers):
                 for s in d["sources"]:
                     body += f'<p class="source">{html.escape(s)}</p>'
                 body += "</section>"
-                css = """@page{size:Letter;margin:0.6in 0.65in 0.65in}*{box-sizing:border-box}body{font-family:Arial,sans-serif;color:#20262a;font-size:10.5pt;line-height:1.4;margin:0}header{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #363d40;padding-bottom:12px;margin-bottom:12px}header img{width:210px;height:auto}header span{font-size:8pt;letter-spacing:.8px;color:#5c6265}h1{font-size:22pt;line-height:1.12;margin:16px 0 8px;font-weight:600}h2{font-size:11pt;margin:13px 0 4px}p{margin:0 0 6px}.draft{font-size:8pt;color:#735c38;letter-spacing:.35px}.meta{font-size:9pt;color:#60686d}.state{font-size:9pt;border-bottom:1px solid #d4d8db;padding-bottom:10px;margin-bottom:12px}section{break-inside:avoid}.keys,.source{font-size:8.5pt;overflow-wrap:anywhere;color:#4a5359}.source{margin:3px 0}@media screen{body{max-width:850px;margin:24px auto;padding:42px;background:white}html{background:#eceff1}}"""
+                css = """@page{size:Letter;margin:0.6in 0.65in 0.65in}*{box-sizing:border-box}body{font-family:Arial,sans-serif;color:#20262a;font-size:10.5pt;line-height:1.36;margin:0}header{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #363d40;padding-bottom:12px;margin-bottom:12px}header img{width:210px;height:auto}header span{font-size:8pt;letter-spacing:.8px;color:#5c6265}h1{font-size:22pt;line-height:1.12;margin:16px 0 8px;font-weight:600}h2{font-size:11pt;margin:10px 0 4px}p{margin:0 0 6px}.draft{font-size:8pt;color:#735c38;letter-spacing:.35px}.meta{font-size:9pt;color:#60686d}.state{font-size:9pt;border-bottom:1px solid #d4d8db;padding-bottom:10px;margin-bottom:12px}section{break-inside:avoid}.keys,.source{font-size:8.5pt;overflow-wrap:anywhere;color:#4a5359}.source{margin:3px 0}@media screen{body{max-width:850px;margin:24px auto;padding:42px;background:white}html{background:#eceff1}}"""
                 payload = (
                     '<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'
                     + html.escape(d["title"])

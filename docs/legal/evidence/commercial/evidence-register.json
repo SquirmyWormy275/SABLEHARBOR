@@ -67,6 +67,7 @@
       "title": "Taylor–Red Wash service terms",
       "status": "SYNTHETIC_RECONSTRUCTED; uranium custody OPEN_GATED",
       "markdown": "docs/legal/evidence/commercial/SH-LEGAL-READ-IC-001.md",
+      "markdown_sha256": "0c01857e258a272a48460b199f8ab24ce2be1d67ef5a49efbaac92bc4efc0db9",
       "native_keys": [
         "SH-IND-IC-001",
         "ARU",
@@ -82,6 +83,7 @@
       "title": "Advisory engagement and outcome terms",
       "status": "LOCKED DIRECTION; contract architecture, not executed client agreement",
       "markdown": "docs/legal/evidence/commercial/SH-LEGAL-READ-ADV-001.md",
+      "markdown_sha256": "1ebd5d814ac051e05bad0d76e69f4e042420a05edb53866f338847b349277c35",
       "native_keys": [
         "SH-ADV-014",
         "SH-ADV-009",
@@ -96,6 +98,7 @@
       "title": "Atlas licensing and amendment evidence",
       "status": "LOCKED DIRECTION plus conditional commercial scenarios",
       "markdown": "docs/legal/evidence/commercial/SH-LEGAL-READ-ATL-001.md",
+      "markdown_sha256": "606865e20d8d8e2e6a4dceb12ad6b26e8bf6a8d54e9c8e0a11a69c64c37e2a91",
       "native_keys": [
         "SH-ATL-017",
         "atlas-meridian",
@@ -110,6 +113,7 @@
       "title": "Colocation orders and SLA review",
       "status": "CUSTOMER-PROPOSED DRAFT; unsigned",
       "markdown": "docs/legal/evidence/commercial/SH-LEGAL-READ-COLO-001.md",
+      "markdown_sha256": "ff9113d646f1396e8045736a3bd4e916fc84c2936c87174519065c4224b0b412",
       "native_keys": [
         "SH-RT-CONTRACT-001",
         "RT-MSA-001",
