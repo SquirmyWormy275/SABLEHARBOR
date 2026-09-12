@@ -13,6 +13,7 @@ Generated file inventory. Includes current and historical records; open the sour
 
 ## `docs/reader/overnight`
 
+- [Overnight accounting, legal and reader delivery](../../reader/overnight/RESULTS.md) — MD
 - [Accounting and legal design review](../../reader/overnight/REVIEW.md) — MD
 - [Overnight reader and evidence work](../../reader/overnight/START.md) — MD
 
