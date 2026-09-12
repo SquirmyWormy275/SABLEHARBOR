@@ -83,6 +83,7 @@ Generated file inventory. Includes current and historical records; open the sour
 - [CCF control library and coverage review preparation](../../internal/development/CCF_CONTROL_LIBRARY_REVIEW_DELIVERY_2026-09-12.md) — MD
 - [Integrated CCF delivery workflow](../../internal/development/CCF_INTEGRATED_DELIVERY_WORKFLOW_2026-09-12.md) — MD
 - [ISO extension planning delivery](../../internal/development/CCF_ISO_EXTENSION_DELIVERY_2026-09-11.md) — MD
+- [A practical first CCF system](../../internal/development/CCF_PILOT_SYSTEM_DESIGN_2026-09-12.md) — MD
 - [CCF prebuild repository audit — September 11, 2026](../../internal/development/CCF_PREBUILD_REPOSITORY_AUDIT_2026-09-11.md) — MD
 - [CCF preparation delivery — September 11, 2026](../../internal/development/CCF_PREPARATION_DELIVERY_2026-09-11.md) — MD
 - [Approved reference assessment preparation](../../internal/development/CCF_REFERENCE_ASSESSMENT_DELIVERY_2026-09-11.md) — MD
