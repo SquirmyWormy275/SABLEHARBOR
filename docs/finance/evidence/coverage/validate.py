@@ -35,7 +35,18 @@ def validate(base=BASE):
             assert len(rs) == s["row_count"]
             data[p.stem] = rs
             assert [dict(r) for r in db.execute('SELECT * FROM "' + p.stem + '"')] == rs
-            assert all(m.selected(r, int(reg["scope"]["period_start"][:4])) for r in rs)
+            assert s.get(
+                "selection_role"
+            ) == "HISTORICAL_REFERENCE_INPUT_WHOLE_NOT_CURRENT_REVENUE" or all(
+                m.selected(r, int(reg["scope"]["period_start"][:4])) for r in rs
+            )
+        expected_tables = set(m.FAMILIES[family]["tables"]) | set(m.FAMILIES[family]["extras"])
+        assert set(data) == expected_tables, (
+            f"{family}: source register omits or adds population tables"
+        )
+        assert {
+            r[0] for r in db.execute("SELECT name FROM sqlite_master WHERE type='table'")
+        } == expected_tables, f"{family}: database table coverage differs"
         db.close()
         actual = m.checks(data, family)
         expected = json.loads((folder / "RECONCILIATION.json").read_text())
@@ -59,6 +70,65 @@ def validate(base=BASE):
     assert all(r["event_id"] in posted for r in customer["events"] if r.get("invoice_id")), (
         "Invoice events.event_id absent from close journal.source_id"
     )
+    issued = {row["source_id"]: row for row in customer["events"] if row["kind"] == "INVOICE"}
+    assert len(issued) == sum(row["kind"] == "INVOICE" for row in customer["events"]), (
+        "Duplicate INVOICE event source_id"
+    )
+    assert set(issued) == invoice_ids, "Core invoice issuance population differs from invoices"
+    for invoice in customer["invoices"]:
+        event = issued[invoice["invoice_id"]]
+        assert event["performance_source"] == invoice["source_id"], (
+            "Invoice performance source mismatch: " + invoice["invoice_id"]
+        )
+        assert event["unit"] == invoice["unit"] and m.num(event, "amount_usd") == m.num(
+            invoice, "amount_usd"
+        ), "Invoice event unit/amount mismatch: " + invoice["invoice_id"]
+        assert event["event_id"] in posted, (
+            "INVOICE event missing from Core journal: " + event["event_id"]
+        )
+    lineage = m.rows(
+        (base / "treasury/source/industrial_document_journal_lineage.csv").read_bytes()
+    )
+    identity = {(r["journal_id"], r["event_id"], r["source_id"]) for r in lineage}
+    revenue = collections.defaultdict(m.D)
+    for row in lineage:
+        revenue[row["journal_id"], row["event_id"], row["source_id"], row["account"]] += m.num(
+            row, "signed_usd"
+        )
+    industrial_sales = collections.defaultdict(m.D)
+    for row in customer["industrial_sales_invoices"]:
+        key = (row["journal_id"], row["event_id"], row["source_id"])
+        assert key in identity, "Industrial invoice missing journal lineage: " + row["invoice_id"]
+        assert -revenue[(*key, row["revenue_account"])] == m.num(row, "amount_usd"), (
+            "Industrial invoice recognition amount mismatch: " + row["invoice_id"]
+        )
+        industrial_sales[row["source_id"]] += m.num(row, "amount_usd")
+    industrial_contract_ids = {r["contract_id"] for r in customer["industrial_contract_register"]}
+    industrial_customer_ids = {r["customer_id"] for r in customer["industrial_customer_register"]}
+    for row in customer["industrial_contract_revenue"]:
+        assert (
+            row["contract_id"] in industrial_contract_ids
+            and row["customer_id"] in industrial_customer_ids
+        ), "Industrial contract/customer reference missing: " + row["source_id"]
+        assert industrial_sales[row["source_id"]] == m.num(row, "revenue_usd"), (
+            "Industrial contract revenue/invoice mismatch: " + row["source_id"]
+        )
+    for family, settings in m.FAMILIES.items():
+        register = json.loads((base / family / "evidence-register.json").read_text())
+        source_rows = m.rows(
+            (base / family / "source" / (settings["schedule"] + ".csv")).read_bytes()
+        )
+        expected = {
+            "title": settings["title"],
+            "columns": settings["columns"],
+            "rows": [{c: r.get(c, "") for c in settings["columns"]} for r in source_rows],
+            "source_table": settings["schedule"],
+            "scope": register["scope"],
+            "limitations": settings["limits"],
+        }
+        assert json.loads((base / family / "SCHEDULE.json").read_text()) == expected, (
+            "Stale schedule source/limitations: " + family
+        )
     assignments = m.rows(
         (base / "supporting-schedules/source/workforce_assignments.csv").read_bytes()
     )
@@ -83,28 +153,12 @@ def validate(base=BASE):
     assert all(abs(value - posted_payroll[key]) <= m.D(".02") for key, value in costs.items()), (
         "Assigned employer costs differ from payroll journal"
     )
-    bridge = json.loads((base / "tax-transaction/CURRENT_SOURCE_BRIDGE.json").read_text())
-    for relative, digest in bridge["source_hashes"].items():
-        assert m.digest((ROOT / relative).read_bytes()) == digest, (
-            "Current transaction source changed: " + relative
-        )
-    for entry in bridge["files"]:
-        path = base / "tax-transaction" / Path(entry["path"]).name
-        assert m.digest(path.read_bytes()) == entry["sha256"], entry["path"]
-        assert len(m.rows(path.read_bytes())) == entry["rows"], entry["path"]
-    ppa = bridge["ppa"]
-    assert ppa["close_sources_before_fees_usd"] == ppa["close_uses_before_fees_usd"], (
-        "Acquisition sources/uses mismatch"
+    bridge_spec = importlib.util.spec_from_file_location(
+        "validate_transaction_bridge", base / "tax-transaction/validate_bridge.py"
     )
-    assert (
-        ppa["stock_consideration_usd"] - ppa["identifiable_net_assets_before_refinancing_usd"]
-        == ppa["goodwill_usd"]
-    ), "Book PPA residual mismatch"
-    assert (
-        ppa["tax_allocation"]["modeled_agub_usd"]
-        - sum(ppa["tax_allocation"]["other_tax_asset_bases_usd"].values())
-        == ppa["tax_goodwill_basis_usd"]
-    ), "Tax goodwill residual mismatch"
+    bridge_module = importlib.util.module_from_spec(bridge_spec)
+    bridge_spec.loader.exec_module(bridge_module)
+    bridge_module.validate(base / "tax-transaction")
     print("PASS exact CSV/database populations, hashes, scope and accounting:", totals)
     return totals
 

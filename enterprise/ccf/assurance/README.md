@@ -157,3 +157,23 @@ uv run python -m enterprise.ccf.assurance.substantive verify \
 This adapter adds 50 targeted source-comparison findings with corrective procedures and tests, 193 ISO objective condition checks, comparisons across all 17 C5 domains, and a source-reconciled register of all 22 HIPAA addressable specifications. Its per-requirement review-depth ledger distinguishes targeted findings, objective/domain comparisons, prior baseline section analysis and remaining source-context work. None of these levels establishes independent acceptance or exhaustive paragraph coverage. C5 guidance links and corresponding customer responsibilities are fingerprinted separately from its 623 basic/sharpened/additional-complement provider criteria.
 
 The persisted author bindings pin the reviewed catalogue and draft designs. Builds reject stale findings after source, requirement, procedure or analysis changes; do not refresh those bindings without reconsidering the findings. The generated review includes the earlier draft library, corrective designs, tests, source navigation details and a concrete owner/reviewer decision packet. The adapter does not approve mappings or mutate native controls, implementations or evidence. Source originals and generated work remain local; Atlas is read-only.
+
+## Actionable shared procedures and selectable deltas
+
+The action adapter integrates source findings into proposed shared-control steps, with individual C5 comparisons, baseline condition checks and a prioritized backlog. It retains source/design bindings and separates reuse validation, enhancements, conditional capability candidates and assessment work. See [authoring scope and limits](action_data/README.md).
+
+```bash
+# SOC2/HIPAA baseline only: omit --target.
+uv run python -m enterprise.ccf.assurance.actions build \
+  --source-root /path/to/source-documents --output /new/private/baseline
+
+# Baseline plus selected planning extensions; flags may be combined.
+uv run python -m enterprise.ccf.assurance.actions build \
+  --source-root /path/to/source-documents --output /new/private/deltas \
+  --target ISO27001 --target ISO42001 --target C5
+
+uv run python -m enterprise.ccf.assurance.actions verify \
+  --source-root /path/to/source-documents --output /new/private/deltas
+```
+
+Outputs include readable shared procedures and implementation backlog, CSVs, the complete JSON plan and a re-performance manifest. Verification rejects checksum-resealed edits. All implementation/coverage approvals remain unasserted; the adapter does not modify the native registry or assurance engine.

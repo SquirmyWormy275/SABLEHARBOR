@@ -95,6 +95,18 @@
       "maximum_absolute_difference": "0.0000",
       "status": "PASS",
       "tested_rows": 72
+    },
+    {
+      "check": "Unit to legal account/month bridge",
+      "maximum_absolute_difference": "0.0000",
+      "status": "PASS",
+      "tested_rows": 897
+    },
+    {
+      "check": "Core to enterprise replacement source/account bridge",
+      "maximum_absolute_difference": "0.0000",
+      "status": "PASS",
+      "tested_rows": 4863
     }
   ],
   "status": "PASS"

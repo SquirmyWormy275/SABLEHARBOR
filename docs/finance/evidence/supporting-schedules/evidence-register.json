@@ -1,7 +1,7 @@
 {
   "extracted_database": {
     "path": "docs/finance/evidence/supporting-schedules/evidence.sqlite3",
-    "sha256": "41571d4bfa73826dcf70ea2956d2280716c56ac4bb022e3d90bfb457f077f19f"
+    "sha256": "7d122d1619f29ab785f04a597c3723d8c6f19e47529c5890696e1785c154c852"
   },
   "markdown": "docs/finance/evidence/supporting-schedules/README.md",
   "native_database": {
@@ -28,6 +28,7 @@
       "release_member": "tables/workforce_positions.csv",
       "release_member_sha256": "1948c31053464767500389255b7da18718c9c84cf8d879a82a4b5682aa08a503",
       "row_count": 591,
+      "selection_role": "SCOPED_OPERATING_POPULATION",
       "sha256": "5b9e5002187ff664e009c3d7acfdb1091dc7321bb0ba52224e3b64ec48608b39"
     },
     {
@@ -38,6 +39,7 @@
       "release_member": "tables/workforce_positions_history.csv",
       "release_member_sha256": "96fc654d721ea8e81d699fbd1272664455945b14fd5f998b3390e529c1f2469a",
       "row_count": 7092,
+      "selection_role": "SCOPED_OPERATING_POPULATION",
       "sha256": "3a2a5ad467835c8c7766c7066c1450efcfc5f36aedba9b63c756ae5b029c7e65"
     },
     {
@@ -48,6 +50,7 @@
       "release_member": "tables/workforce_assignments.csv",
       "release_member_sha256": "cdda2466d5b5581be8cec81f370dc28c4c58ab63fa9dc0b67f2208c90b478fe0",
       "row_count": 6114,
+      "selection_role": "SCOPED_OPERATING_POPULATION",
       "sha256": "4c6429e8bb693d4b5566f2859c8345892450594c6ecb15532607a268ed65acc5"
     },
     {
@@ -58,6 +61,7 @@
       "release_member": "tables/workforce_changes.csv",
       "release_member_sha256": "5cd6855c2b737c563488c1fa6960e673ec672d93db80b48dd58e0432e36fd830",
       "row_count": 9,
+      "selection_role": "SCOPED_OPERATING_POPULATION",
       "sha256": "dccc37e1cd88c53a7019b18072dcea1f372e640c899cb7bf1c9c24cced723382"
     },
     {
@@ -68,6 +72,7 @@
       "release_member": "tables/asset_rollforward.csv",
       "release_member_sha256": "da1af0d9149edcf01406ecbf5d185544c7b70cd9615341a2bc13624cf0a3bf12",
       "row_count": 54,
+      "selection_role": "SCOPED_OPERATING_POPULATION",
       "sha256": "a84bedaaf0e35bf6af46fcab78ecaab393f0c9a2a0b463f9cede642bd641c4e7"
     },
     {
@@ -78,6 +83,7 @@
       "release_member": "tables/inventory_rollforward.csv",
       "release_member_sha256": "3eb020e75dfce01ba9e135b39140bb37560166553d3dd125bf7794f414c04437",
       "row_count": 12,
+      "selection_role": "SCOPED_OPERATING_POPULATION",
       "sha256": "41dfedfbb277d3d7d6042addd1cb7f8500ad4ba944624545a9d6376231cda3a3"
     },
     {
@@ -88,6 +94,7 @@
       "release_member": "tables/management_cost_reconciliation.csv",
       "release_member_sha256": "76d2cdc227e29994aa476c462435199c2cc61c84057049eb4beb2120fcf4a623",
       "row_count": 12,
+      "selection_role": "SCOPED_OPERATING_POPULATION",
       "sha256": "71b94a178a15fcac350003e9fb5bcb821d27180df7ca738891bc9a21638365cf"
     },
     {
@@ -98,6 +105,7 @@
       "release_member": "tables/service_cost_pools.csv",
       "release_member_sha256": "036a2e8f93b380630a0e8b7cd7e10a08403f294026fb254ce9de2b4f802fd874",
       "row_count": 48,
+      "selection_role": "SCOPED_OPERATING_POPULATION",
       "sha256": "16f38dc25623d40ec356517366f432174277210c31c7bdcfa361ecb7ab2fcf83"
     },
     {
@@ -108,6 +116,7 @@
       "release_member": "tables/service_consumption_allocations.csv",
       "release_member_sha256": "7e72aea29fc59c0da9559be10e4159c7225991fa2ab059adff4099080c115310",
       "row_count": 384,
+      "selection_role": "SCOPED_OPERATING_POPULATION",
       "sha256": "0463fdfa70630f99fa7a98cdae5e22fcce7da36936134899ea34d3fc00bff89f"
     },
     {
@@ -118,6 +127,7 @@
       "release_member": "industrial/forecast/assets.csv",
       "release_member_sha256": "4e4c0776cb92178555164dc86eb12f0bbf29650972fbf9bd350b7e59b158a6d6",
       "row_count": 264,
+      "selection_role": "SCOPED_OPERATING_POPULATION",
       "sha256": "76c6c3b9958e94d234875c67a6b32bb02923444c1de34e7e4b51ffdf531d9b89"
     },
     {
@@ -128,6 +138,7 @@
       "release_member": "industrial/forecast/debt.csv",
       "release_member_sha256": "e7f44d305baa2ee6ecac12e65d674ce540ed5d1007c316be58a276098e7ceb92",
       "row_count": 12,
+      "selection_role": "SCOPED_OPERATING_POPULATION",
       "sha256": "5f6b7535dd73f440473c55672914866d51b70029477cb2b4a383777417de9c06"
     },
     {
@@ -138,6 +149,7 @@
       "release_member": "industrial/forecast/inventory.csv",
       "release_member_sha256": "0e83721ae742f4ad402cc70971fb36d368cf7eae13a1efdb93b3f38f576647bf",
       "row_count": 12,
+      "selection_role": "SCOPED_OPERATING_POPULATION",
       "sha256": "1cbcf4423f3eecf049b5e8d9517e18a370d1c6c5f2bc7db5c56ec02c367e7a03"
     },
     {
@@ -148,7 +160,19 @@
       "release_member": "industrial/transactions/payroll_batches.csv",
       "release_member_sha256": "b52b83030df8a6932aa9ed60e86647e9d3475ab56e9f6a1ed1d73bc588be2b8a",
       "row_count": 60,
+      "selection_role": "SCOPED_OPERATING_POPULATION",
       "sha256": "d8d78b2f6021401d799a79732a02e92cbbb3a1f0d20f606cf85ab4b3711979f4"
+    },
+    {
+      "full_release_row_count": 23694,
+      "native_table": null,
+      "path": "docs/finance/evidence/supporting-schedules/source/industrial_payroll_role_details.csv",
+      "predicate": "base scenario where supplied; 2027 by year/period/month index; shared static inputs retained; terminal master snapshots explicitly identified in README",
+      "release_member": "industrial/transactions/payroll_role_details.csv",
+      "release_member_sha256": "4d268f1fbab4bf7b5b27874a0016e8be680d465313118153c3880389aace702e",
+      "row_count": 1572,
+      "selection_role": "SCOPED_OPERATING_POPULATION",
+      "sha256": "8ace1d18e2c99ad8ad577d06f1dc24b7e648bf4466da7a4af6c0091339df9ca1"
     }
   ],
   "status": "SOURCE_RECONCILED_VISUAL_REVIEW_PENDING",

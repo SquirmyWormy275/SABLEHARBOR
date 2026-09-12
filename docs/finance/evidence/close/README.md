@@ -18,6 +18,8 @@ Open the CSV files below directly in Excel, or use `evidence.sqlite3` for the sa
 | legal_statements | 96 | 1728 | [CSV](source/legal_statements.csv) |
 | credit_allowance | 136 | 3174 | [CSV](source/credit_allowance.csv) |
 | subledger_rollforward | 72 | 1080 | [CSV](source/subledger_rollforward.csv) |
+| industrial_eliminations | 12 | 180 | [CSV](source/industrial_eliminations.csv) |
+| industrial_intercompany | 216 | 3240 | [CSV](source/industrial_intercompany.csv) |
 
 ## Reconciliation
 
@@ -39,6 +41,8 @@ Open the CSV files below directly in Excel, or use `evidence.sqlite3` for the sa
 | Core inventory_usd to cumulative journal | 72 | 0.0000 | PASS |
 | Core gross_ppe_usd to cumulative journal | 72 | 0.0000 | PASS |
 | Core accumulated_depreciation_usd to cumulative journal | 72 | 0.0000 | PASS |
+| Unit to legal account/month bridge | 897 | 0.0000 | PASS |
+| Core to enterprise replacement source/account bridge | 4863 | 0.0000 | PASS |
 
 All monetary checks use decimal arithmetic with a $0.02 tolerance for released rounding. This does not hide an unexplained balancing entry. Complete values, including zero and adverse outcomes, remain in the source tables. See [machine-readable discrepancies](RECONCILIATION.json).
 

@@ -1,6 +1,6 @@
 {
   "status": "REPRODUCED_CURRENT_SYNTHETIC_MODEL_NOT_FILED_TAX",
-  "base_revision": "8898d2d",
+  "base_revision": "8898d2d0310a60bdf0e4753036790c6eda1388cd",
   "source_hashes": {
     "industrial/source/finance.json": "0d4461abfcdb138da36db503ff0cfea7c47ea7fd7109494126514225fd43e38c",
     "industrial/source/operations.json": "e7488b55c1c963d102db66e7a7b6f1373a3d68a9f94b8f99b164092245713a3b",
@@ -114,7 +114,7 @@
   "boundaries": [
     "Current 2026 industrial reconstruction, separate from immutable operations release; never additive.",
     "ARU-CL-07 filing-ready 2026-03-02 is not IRS filing/acceptance.",
-    "Red Wash pre-close day dates conflict across summaries/instruments; July18 2025 close and28M price agree; no date reconciliation inferred.",
-    "Northern Nevada3M land acquisition is later runtime canon, not part of this scoped release/tax bridge; settlement remains unresolved."
+    "Red Wash pre-close day dates conflict across summaries/instruments; July 18 2025 close and $28M price agree; no date reconciliation inferred.",
+    "Northern Nevada $3M land acquisition is later runtime canon, not part of this scoped release/tax bridge; settlement remains unresolved."
   ]
 }

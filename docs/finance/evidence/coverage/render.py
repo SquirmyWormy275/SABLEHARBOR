@@ -141,6 +141,8 @@ def render():
             ]
             name = f"{i:02d} " + p.stem[:27]
             w = sheet(name, cols)
+            if p.stem == "acquisition_ppa":
+                w.set_column(1, 1, 60, body)
             for n, r in enumerate(rs, 4):
                 for col, key in enumerate(cols):
                     v = r.get(key, "")
@@ -152,7 +154,7 @@ def render():
                         w.write_number(n, col, float(v), money)
                     else:
                         w.write_string(n, col, v, body)
-                w.set_row(n, 46)
+                w.set_row(n, 90 if p.stem == "host_collection_settlements" else 46)
             if rs:
                 w.autofilter(3, 0, len(rs) + 3, len(cols) - 1)
             w.print_area(0, 0, min(15, len(rs) + 3), min(6, len(cols) - 1))

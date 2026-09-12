@@ -28,6 +28,7 @@
       "release_member": "enterprise/acquisition_cashflow_bridge.csv",
       "release_member_sha256": "38c97d266e27cc721e0bca64eb135ba8edf33cbdc1584bc34a1704cecc94ae7b",
       "row_count": 1,
+      "selection_role": "SCOPED_OPERATING_POPULATION",
       "sha256": "3058362e23b9c4448bba01db664d8fc31774e032a49adb5bc0c4a5c62cc826d6"
     },
     {
@@ -38,6 +39,7 @@
       "release_member": "enterprise/enterprise_tax_allocation_bridge.csv",
       "release_member_sha256": "00b85a3b2964232abb334628f96e158195fd0eebe18cc2c912b27426da43fd11",
       "row_count": 72,
+      "selection_role": "SCOPED_OPERATING_POPULATION",
       "sha256": "6b2174fe67ae580a8f2fc8d138ab07df96af69920d2467f8a5ce86a3f2840f35"
     }
   ],

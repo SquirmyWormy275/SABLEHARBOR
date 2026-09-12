@@ -184,6 +184,36 @@ def checks(data, family):
                     - num(r, field)
                 ),
             )
+        unit = collections.defaultdict(D)
+        legal = collections.defaultdict(D)
+        for row in data["unit_trial_balance"]:
+            unit[row["scenario"], row["year"], row["month"], row["account"]] += num(
+                row, "signed_usd"
+            )
+        for row in data["legal_trial_balance"]:
+            legal[row["scenario"], row["year"], row["month"], row["account"]] += num(
+                row, "signed_usd"
+            )
+        keys = set(unit) | set(legal)
+        check(
+            "Unit to legal account/month bridge",
+            max((abs(unit[k] - legal[k]) for k in keys), default=D(0)),
+            len(keys),
+        )
+        core = collections.defaultdict(D)
+        enterprise = collections.defaultdict(D)
+        fields = ("scenario", "year", "month", "account", "segment", "source_id")
+        for row in data["journal"]:
+            core[tuple(row[k] for k in fields)] += num(row, "signed_usd")
+        for row in data["enterprise_journal"]:
+            if row["source_type"] == "BUSINESS_DRIVEN_FORECAST":
+                enterprise[tuple(row[k] for k in fields)] += num(row, "signed_usd")
+        keys = set(core) | set(enterprise)
+        check(
+            "Core to enterprise replacement source/account bridge",
+            max((abs(core[k] - enterprise[k]) for k in keys), default=D(0)),
+            len(keys),
+        )
     if family == "supporting-schedules":
         equations(
             "Core asset cost less accumulated depreciation",
@@ -242,10 +272,15 @@ FAMILIES = {
             "subledger_rollforward",
             "events",
         ],
-        "extras": {},
+        "extras": {
+            "industrial_sales_invoices": "industrial/transactions/sales_invoices.csv",
+            "industrial_contract_revenue": "industrial/forecast/contract_revenue.csv",
+            "industrial_customer_register": "tables/reference_american_resource_utility_reference_customer_register.csv",
+            "industrial_contract_register": "tables/reference_american_resource_utility_reference_contract_register.csv",
+        },
         "schedule": "subledger_rollforward",
         "columns": ["period", "unit", "gross_ar_usd", "allowance_usd", "deferred_revenue_usd"],
-        "limits": "Invoice master rows are end-of-model snapshots for invoices issued in 2027; collected/remaining fields include later lifecycle activity and are NOT December 2027 balances. Period aging and subledger rows control month-end balances. Events include complete 2027 populations, not only invoice events. Contracts without scenario/time fields are shared source inputs, not extra transactions. No original customer bill, signed acceptance, bank confirmation or tax invoice is supplied.",
+        "limits": "Invoice master rows are end-of-model snapshots for invoices issued in 2027; collected/remaining fields include later lifecycle activity and are NOT December 2027 balances. Period aging and subledger rows control month-end balances. Events include complete 2027 populations, not only invoice events. Contracts without scenario/time fields are shared source inputs, not extra transactions. Whole historical industrial customer/contract reference registers are retained as source inputs, never added as 2027 revenue. Industrial sales invoices and contract revenue are included separately, with modeled journal lineage through Treasury. These are reconstructed model records, not original customer bills, signed acceptances, independent bank confirmations or tax invoices.",
     },
     "treasury": {
         "title": "Procurement, payables and Treasury",
@@ -264,6 +299,10 @@ FAMILIES = {
                 "industrial_receipts",
                 "industrial_supplier_invoices",
                 "industrial_document_journal_lineage",
+                "industrial_bank_transactions",
+                "industrial_bank_reconciliations",
+                "industrial_vendors",
+                "industrial_work_orders",
             ]
         },
         "schedule": "treasury_reconciliation",
@@ -277,7 +316,7 @@ FAMILIES = {
             "arrears_paid_usd",
             "closing_unpaid_usd",
         ],
-        "limits": "Treasury is illustrative FIFO allocation within cash-flow class, not employee/vendor bank-payment proof. Obligation and payable master funded/unpaid fields are terminal snapshots, not month-end balances; history and reconciliation rows control dated exposure. Industrial invoice terminal settlement fields have the same boundary. Complete industrial PO/receipt/invoice joins are present; Core vendor originals and daily bank confirmations are not supplied. Native industrial document lineage is a model support chain, not independent corroboration.",
+        "limits": "Treasury is illustrative FIFO allocation within cash-flow class, not employee/vendor bank-payment proof. Obligation and payable master funded/unpaid fields are terminal snapshots, not month-end balances; history and reconciliation rows control dated exposure. Industrial invoice terminal settlement fields have the same boundary. Complete industrial PO/receipt/invoice joins are present; Core vendor originals and independent daily bank confirmations are not supplied. Industrial bank transactions/reconciliations are retained as modeled clearing records, not bank-issued evidence. Native industrial document lineage is a model support chain, not independent corroboration.",
     },
     "close": {
         "title": "Close, allowance and legal-book reconciliation",
@@ -291,7 +330,10 @@ FAMILIES = {
             "credit_allowance",
             "subledger_rollforward",
         ],
-        "extras": {},
+        "extras": {
+            "industrial_eliminations": "industrial/forecast/eliminations.csv",
+            "industrial_intercompany": "industrial/forecast/intercompany.csv",
+        },
         "schedule": "monthly_statements",
         "columns": [
             "unit",
@@ -325,6 +367,7 @@ FAMILIES = {
                 for n in ["industrial_assets", "industrial_debt", "industrial_inventory"]
             },
             "industrial_payroll_batches": "industrial/transactions/payroll_batches.csv",
+            "industrial_payroll_role_details": "industrial/transactions/payroll_role_details.csv",
         },
         "schedule": "asset_rollforward",
         "columns": ["period", "unit", "asset_id", "cost_usd", "accumulated_usd", "net_book_usd"],
@@ -415,14 +458,16 @@ def build(archive):
                 for table, member in members.items():
                     payload = z.read(member)
                     full = rows(payload)
-                    filtered = [r for r in full if selected(r, year)]
+                    is_reference = member.startswith("tables/reference_")
+                    filtered = full if is_reference else [r for r in full if selected(r, year)]
                     columns = (
                         list(full[0]) if full else next(csv.reader(io.StringIO(payload.decode())))
                     )
+                    native_table = Path(member).stem if member.startswith("tables/") else None
                     if member.startswith("tables/"):
                         # Native table and CSV must contain exactly the same full population and serialized values.
                         native_rows = [
-                            dict(r) for r in native.execute('SELECT * FROM "' + table + '"')
+                            dict(r) for r in native.execute('SELECT * FROM "' + native_table + '"')
                         ]
                         canonical = lambda rs: sorted(json.dumps(r, sort_keys=True) for r in rs)
                         assert canonical(native_rows) == canonical(full), (
@@ -452,11 +497,14 @@ def build(archive):
                         {
                             "path": str(target.relative_to(ROOT)),
                             "release_member": member,
-                            "native_table": table if member.startswith("tables/") else None,
+                            "native_table": native_table,
                             "row_count": len(filtered),
                             "full_release_row_count": len(full),
                             "sha256": digest(target.read_bytes()),
                             "release_member_sha256": digest(payload),
+                            "selection_role": "HISTORICAL_REFERENCE_INPUT_WHOLE_NOT_CURRENT_REVENUE"
+                            if is_reference
+                            else "SCOPED_OPERATING_POPULATION",
                             "predicate": f"base scenario where supplied; {year} by year/period/month index; shared static inputs retained; terminal master snapshots explicitly identified in README",
                         }
                     )
@@ -511,7 +559,7 @@ def build(archive):
                 if family == "tax-transaction":
                     text += "\n[Current industrial acquisition and tax support](TRANSACTION_SUPPORT.md) separately reproduces the accepted2026 PPA, full opening trial balance, twelve-month tax/debt/assets schedules and legal documentary limits. Its current-source identity is not the immutable operations archive.\n"
                 if family == "customer":
-                    text += "\n## Contract, receipt and journal joins\n\nMatch contract_versions.contract_id to contracts.contract_id. The selected model starts product histories in 2027; no pre-2027 product-version population is omitted. Match credit_history.invoice_id to invoices.invoice_id, then credit_history.source_id to events.event_id and [the complete Core journal](../close/source/journal.csv) source_id. Receipts are released history/event rows, not a separate authentic bank receipt. The cross-family validator rejects dangling contract, invoice, event or invoice-event journal joins. Earlier/later commercial sources are not silently imported as new transactions.\n"
+                    text += "\n## Contract, receipt and journal joins\n\nMatch contract_versions.contract_id to contracts.contract_id. The selected model starts product histories in 2027; no pre-2027 product-version population is omitted. Match credit_history.invoice_id to invoices.invoice_id, then credit_history.source_id to events.event_id and [the complete Core journal](../close/source/journal.csv) source_id. Receipts are released history/event rows, not a separate authentic bank receipt. The cross-family validator rejects dangling contract, invoice, event or invoice-event journal joins. Core INVOICE events use source_id (not their empty invoice_id field) to join invoices.invoice_id; performance_source matches invoices.source_id, and event_id joins the Core journal. Industrial invoices join source_id/event_id/journal_id to the full industrial lineage in the Treasury package; contract revenue uses its own supported source_id. Earlier/later commercial sources are not silently imported as new transactions.\n"
                 (folder / "README.md").write_text(text)
                 dump(
                     folder / "SCHEDULE.json",

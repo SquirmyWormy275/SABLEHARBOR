@@ -226,7 +226,6 @@ def main(check=False):
                 "manifest_path_matches": matches,
                 "direct_publication_links": direct,
                 "verified_evidence": evidence,
-                "source_state_excerpt": "\n".join(text.splitlines()[:12])[:1200],
                 "database_scope": (
                     "Reader discovery metadata only; native financial linkage is "
                     "asserted only where explicitly listed in evidence."

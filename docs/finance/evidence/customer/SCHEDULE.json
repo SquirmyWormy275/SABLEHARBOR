@@ -6,7 +6,7 @@
     "allowance_usd",
     "deferred_revenue_usd"
   ],
-  "limitations": "Invoice master rows are end-of-model snapshots for invoices issued in 2027; collected/remaining fields include later lifecycle activity and are NOT December 2027 balances. Period aging and subledger rows control month-end balances. Events include complete 2027 populations, not only invoice events. Contracts without scenario/time fields are shared source inputs, not extra transactions. No original customer bill, signed acceptance, bank confirmation or tax invoice is supplied.",
+  "limitations": "Invoice master rows are end-of-model snapshots for invoices issued in 2027; collected/remaining fields include later lifecycle activity and are NOT December 2027 balances. Period aging and subledger rows control month-end balances. Events include complete 2027 populations, not only invoice events. Contracts without scenario/time fields are shared source inputs, not extra transactions. Whole historical industrial customer/contract reference registers are retained as source inputs, never added as 2027 revenue. Industrial sales invoices and contract revenue are included separately, with modeled journal lineage through Treasury. These are reconstructed model records, not original customer bills, signed acceptances, independent bank confirmations or tax invoices.",
   "rows": [
     {
       "allowance_usd": "3339600.0000",

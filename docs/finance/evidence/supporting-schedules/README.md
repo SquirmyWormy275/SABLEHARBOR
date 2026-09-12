@@ -23,6 +23,7 @@ Open the CSV files below directly in Excel, or use `evidence.sqlite3` for the sa
 | industrial_debt | 12 | 180 | [CSV](source/industrial_debt.csv) |
 | industrial_inventory | 12 | 180 | [CSV](source/industrial_inventory.csv) |
 | industrial_payroll_batches | 60 | 900 | [CSV](source/industrial_payroll_batches.csv) |
+| industrial_payroll_role_details | 1572 | 23694 | [CSV](source/industrial_payroll_role_details.csv) |
 
 ## Reconciliation
 
