@@ -1,0 +1,48 @@
+{
+  "status": "DRAFT_FOR_EXACT_FILE_REVIEW",
+  "source_pins": [
+    {
+      "id": "E01",
+      "path": "docs/finance/evidence/treasury/source/industrial_bank_reconciliations.csv",
+      "sha256": "12e2a7c840f5202a76e4317fd693f53a110202b64e8571831c3b0ded4a80dded"
+    },
+    {
+      "id": "E02",
+      "path": "docs/finance/evidence/customer/source/receivable_aging.csv",
+      "sha256": "7cf54fb1b113af93b4df4c20e1ed42f9ab30f7e45707efae4a8637f3cc449049"
+    },
+    {
+      "id": "E03",
+      "path": "docs/finance/evidence/customer/source/subledger_rollforward.csv",
+      "sha256": "9a2d216f5c3b7bce6f5a7c5e1c5491bb06586f129d171f61a486f9dbb7feaaa2"
+    },
+    {
+      "id": "E04",
+      "path": "docs/finance/evidence/close/source/journal.csv",
+      "sha256": "10b8bee2f13881e14ae9ddf0a862cf264eea3de92693368119421eee48a9bc91"
+    },
+    {
+      "id": "E05",
+      "path": "docs/finance/evidence/treasury/source/subledger_rollforward.csv",
+      "sha256": "9a2d216f5c3b7bce6f5a7c5e1c5491bb06586f129d171f61a486f9dbb7feaaa2"
+    },
+    {
+      "id": "E06",
+      "path": "docs/finance/evidence/supporting-schedules/source/industrial_debt.csv",
+      "sha256": "5f6b7535dd73f440473c55672914866d51b70029477cb2b4a383777417de9c06"
+    },
+    {
+      "id": "E07",
+      "path": "docs/finance/evidence/supporting-schedules/source/asset_rollforward.csv",
+      "sha256": "a84bedaaf0e35bf6af46fcab78ecaab393f0c9a2a0b463f9cede642bd641c4e7"
+    }
+  ],
+  "files": {
+    "README.md": "0aa76f63f66d7ca12fe8156a9372533dce4cfaf108240d82ed7e6bc793414662",
+    "WORKED.md": "68b015baf3876b2eb99a1c5637f561d01850a286f55f8e3103bd5a445eb590e4",
+    "blank.xlsx": "4a249a7b1e52eb13403b244daca603a19b6a73250c919267f66a182255db8122",
+    "reconciliations.sqlite3": "e6e52483a6e5f4dc6c7b620f779ee2ea4902c9395b846d2b1abce823fc9c1070",
+    "source.json": "167cdac04d99d603611ca169c9987436d3e6f92a17c21a90b06d2215133d5ea3",
+    "worked.xlsx": "e3b74616c43695faf256080ce2d15cb8da9a9e45135bbb8ae72be13d9ea2fc32"
+  }
+}

@@ -1,0 +1,2 @@
+amount_usd,collected_usd,collection_month,credit_profile,credit_state,credit_usd,customer_id,due_date,due_month,host_settled_usd,host_share,invoice_id,issue_month,recovered_usd,refunded_usd,remaining_usd,scenario,source_id,unit,writtenoff_credit_usd,writtenoff_usd
+1740000.0000,609000.0000,2,DEFAULT-003,DEFAULT,159500.0000,SYN-CUSTOMER-003,2027-02-28,2,0.0000,0,INV-base-FF-003-TERM-0,1,174000.0000,0.0000,0.0000,base,FF-003-TERM-0,foundry-field,159500.0000,1305000.0000
