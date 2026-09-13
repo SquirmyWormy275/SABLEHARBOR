@@ -106,6 +106,7 @@ Generated file inventory. Includes current and historical records; open the sour
 ## `docs/audit`
 
 - [Branch and Pull Request Register](../../audit/BRANCH_AND_PR_REGISTER.md) — MD
+- [Repository completion batch — September 13, 2026](../../audit/COMPLETION_BATCH_2026-09-13.md) — MD
 - [Repository Hygiene Backlog](../../audit/HYGIENE_BACKLOG.md) — MD
 - [Outstanding issue review — September 12, 2026](../../audit/ISSUE_CLOSEOUT_2026-09-12.md) — MD
 - [Operating-depth evidence export specification](../../audit/OPERATING_DEPTH_EXPORT_SPECIFICATION.md) — MD

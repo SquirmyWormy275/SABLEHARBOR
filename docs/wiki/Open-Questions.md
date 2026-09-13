@@ -22,7 +22,7 @@ The archive deliberately preserves the difference between a complete presentatio
 
 ## Executed reference evidence
 
-The [closeout evidence dossier](../../evidence/closeout/README.md) supplies runtime observations, retained validation logs and the exact remaining geographic occurrence population. Its [release index](../releases/CLOSEOUT_EVIDENCE_RELEASES.md) provides the versioned workbook and machine-readable records. These are executed reference tests and source reconciliation; the open acceptance requirements above remain explicit.
+The [closeout evidence dossier](../../evidence/closeout/README.md) supplies runtime observations, retained validation logs and the exact remaining geographic occurrence population. Version 1.1 adds an offline review interface, complete baseline source verification, site records, raster text candidates and portable draft notes. The [completion audit](../audit/COMPLETION_BATCH_2026-09-13.md) accounts for the full remaining scope and owner boundaries. Its [release index](../releases/CLOSEOUT_EVIDENCE_RELEASES.md) provides the versioned workbook and machine-readable records. These are executed reference tests and source reconciliation; the open acceptance requirements above remain explicit.
 
 ## What this review changes
 

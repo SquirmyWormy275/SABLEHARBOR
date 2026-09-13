@@ -5,6 +5,12 @@ on:
       - 'tools/evidence/**'
       - 'tests/evidence/**'
       - 'evidence/closeout/**'
+      - 'pyproject.toml'
+      - 'geospatial/registers/**'
+      - 'geospatial/adjudication/**'
+      - 'enterprise/runtime/**'
+      - 'enterprise/services/source/**'
+      - 'uv.lock'
       - '.github/workflows/closeout-evidence.yml'
   workflow_dispatch:
 permissions:
@@ -19,13 +25,23 @@ jobs:
       - uses: astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d # v10.0.1
         with:
           version: "0.12.4"
+      - name: Install OCR engine and English model
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y tesseract-ocr tesseract-ocr-eng
       - run: make bootstrap
       - run: uv run python -m pytest tests/evidence -q
-      - run: uv run python -m tools.evidence.closeout --output var/closeout-evidence
+      - run: uv run python -m tools.evidence.closeout --output var/closeout-evidence --with-ocr
       - run: uv run python -m tools.evidence.closeout --verify var/closeout-evidence
+      - name: Install browser
+        run: uv run --with-requirements tools/wiki/visual/requirements.txt playwright install --with-deps --only-shell chromium
+      - name: Exercise offline review, imports and layouts
+        run: uv run --with-requirements tools/wiki/visual/requirements.txt python -m tools.evidence.check_browser --directory var/closeout-evidence --output var/closeout-browser
       - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         if: always()
         with:
           name: closeout-reference-evidence
-          path: var/closeout-evidence*
+          path: |
+            var/closeout-evidence*
+            var/closeout-browser
           if-no-files-found: error
