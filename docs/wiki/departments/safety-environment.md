@@ -3,9 +3,13 @@
 <img src="../../../assets/brand/logos/sable-harbor__reverse-horizontal.png" alt="Sable Harbor approved identity" width="360">
 
 **Canon state:** LOCKED institutional scope; implementation detail varies by linked record.<br>
-**Last substantive review:** September 11, 2026. This page is secondary navigation; the linked source records control.
+**Reviewed:** September 12, 2026. This is a reading guide; linked source records control.
 
 This ESS capability sets enterprise safety and environmental requirements where enterprise-wide oversight is justified. Site operations remain responsible for their operating work.
+
+## Reading guide
+
+Read enterprise oversight alongside the operating constraints of each business. Mine, railway, laboratory and recovery activities retain their own technical context and accountable operating owners.
 
 ## Read and use the records
 
@@ -23,8 +27,17 @@ This ESS capability sets enterprise safety and environmental requirements where 
 
 The shared chart retains its original scope; it is not a new reporting chart for this page. The approved corporate mark above identifies the parent institution.
 
-## Boundaries and unresolved detail
-
-The chart label describes a capability, not an additional formal department. A planned drawing or control statement is not a site inspection, permit or engineering certification.
-
 [Department and institution directory](README.md) · [Business directory](../businesses/README.md) · [Wiki home](../Home.md)
+
+## What remains unknown
+
+A shared capability label is not a new department or a safety qualification. Unresolved operating permissions and detailed engineering remain with the business records. See the [open questions register](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Open-Questions) for the evidence needed to resolve tracked gaps.
+
+## Related reading
+
+- [Pale Sun / Red Wash](../businesses/Pale-Sun-Red-Wash.md)
+- [Project Cradle](../businesses/Cradle.md)
+- [American Resource Utility / BS&T](../businesses/American-Resource-Utility.md)
+- [Quality and technical standards](quality-standards.md)
+
+Related reading describes useful connections, not additional reporting lines.

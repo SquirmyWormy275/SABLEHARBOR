@@ -67,6 +67,8 @@ def publish():
             "source_revision": revision,
             "wiki_commit": git("rev-parse", "HEAD", cwd=verified),
             "verified_pages": len(expected["files"]),
+            "canonical_pages": len(expected["files"]) - len(expected.get("aliases", {})),
+            "historical_addresses": len(expected.get("aliases", {})),
             "url": f"https://github.com/{REPOSITORY}/wiki",
         }
         output = ROOT / "var/wiki-publication.json"

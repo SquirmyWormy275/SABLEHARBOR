@@ -3,9 +3,13 @@
 <img src="../../../assets/brand/logos/sable-harbor__reverse-horizontal.png" alt="Sable Harbor approved identity" width="360">
 
 **Canon state:** LOCKED institutional scope; implementation detail varies by linked record.<br>
-**Last substantive review:** September 11, 2026. This page is secondary navigation; the linked source records control.
+**Reviewed:** September 12, 2026. This is a reading guide; linked source records control.
 
 Risk & Compliance maintains enterprise risk visibility, coordinates policy and controls, and stewards the Common Controls Framework. Operating management owns the risks, controls and remediation.
+
+## Reading guide
+
+Risk & Compliance helps management see exposure, coordinate policies and maintain workable controls. The assessment material is useful when its requested evidence, actual evidence and unresolved review tasks are kept distinct.
 
 ## Read and use the records
 
@@ -26,8 +30,17 @@ Risk & Compliance maintains enterprise risk visibility, coordinates policy and c
 
 The shared chart retains its original scope; it is not a new reporting chart for this page. The approved corporate mark above identifies the parent institution.
 
-## Boundaries and unresolved detail
-
-The CCF preparation is not a fully implemented framework or an operating-effectiveness opinion. Applicability and unresolved control fields retain their recorded status.
-
 [Department and institution directory](README.md) · [Business directory](../businesses/README.md) · [Wiki home](../Home.md)
+
+## What remains unknown
+
+Reference assessments retain unexecuted procedures and evidence gaps. Control mappings alone do not establish compliance or an assurance opinion. See the [open questions register](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Open-Questions) for the evidence needed to resolve tracked gaps.
+
+## Related reading
+
+- [Internal Audit](internal-audit.md)
+- [Office of the General Counsel](legal.md)
+- [Enterprise security capability](security.md)
+- [Finance](finance.md)
+
+Related reading describes useful connections, not additional reporting lines.

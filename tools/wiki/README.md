@@ -77,3 +77,38 @@ To extend coverage, update the explicit inventory and source selections, run the
 unit tests, export and audit the complete output, then inspect mobile and desktop
 rendering. Source content is compiled afresh at the accepted main revision on every
 publication. Do not edit the live Wiki independently.
+
+## Editorial presentation and historical addresses
+
+All 39 subject guides include a plain-language orientation, related reading and an
+explicit unknowns section. Start Here, the glossary and the open-questions register
+provide onboarding and a dated evidence boundary. Source text remains separately
+identified in the composed in-depth reading sections.
+
+`titles.json` assigns readable published titles without renaming repository sources.
+The export rewrites navigation and retains every prior address as a compatibility page,
+including its section anchors. These pages are recorded in the manifest's `aliases`;
+they are not counted as additional articles. The navigation audit checks each route,
+and the browser review checks the canonical reading edition.
+
+## Detect stale publication
+
+```bash
+make wiki-freshness
+```
+
+The checker clones the live Wiki read-only, verifies its managed page bytes and compares
+an export from the inspected checkout with the publication. It reuses the published
+revision in URLs so unrelated code commits do not cause false drift. Source, configuration,
+linked-file hashes and tracked directory trees identify changes that affect the reading
+edition. Run from refreshed main when assessing the accepted source.
+
+States are `current`, `stale`, `modified` (independent or missing remote pages),
+`unverifiable` (a legacy manifest lacks input hashes), or `unavailable` (inspection
+failed). Only `current` exits successfully by default. `--report-only` retains the report
+without failing; it does not turn an unknown result into a verified publication.
+
+The read-only workflow runs after main changes, daily and on manual dispatch. Its JSON
+artifact and run summary show the precise differences. It does not provision credentials,
+publish pages or change repository settings. After an accepted content change, publish
+with `make wiki-publish` and dispatch the freshness workflow to verify the updated state.

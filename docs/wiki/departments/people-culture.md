@@ -3,9 +3,13 @@
 <img src="../../../assets/brand/logos/sable-harbor__reverse-horizontal.png" alt="Sable Harbor approved identity" width="360">
 
 **Canon state:** LOCKED institutional scope; implementation detail varies by linked record.<br>
-**Last substantive review:** September 11, 2026. This page is secondary navigation; the linked source records control.
+**Reviewed:** September 12, 2026. This is a reading guide; linked source records control.
 
 People & Culture handles recruiting, compensation and benefits, employee relations, records, mobility and career development. It administers required learning while subject owners retain their requirements and J2 Education owns teaching practice.
+
+## Reading guide
+
+Read People & Culture through the employee experience: joining, doing serious work, developing capability and maintaining continuity over a career. Its service doctrine treats recurring administrative friction as a problem to resolve.
 
 ## Read and use the records
 
@@ -24,8 +28,17 @@ People & Culture handles recruiting, compensation and benefits, employee relatio
 
 The shared chart retains its original scope; it is not a new reporting chart for this page. The approved corporate mark above identifies the parent institution.
 
-## Boundaries and unresolved detail
-
-An unnamed role is not proof of a vacancy, and a chart display count is not workforce headcount.
-
 [Department and institution directory](README.md) · [Business directory](../businesses/README.md) · [Wiki home](../Home.md)
+
+## What remains unknown
+
+Authorized billets, named people, modeled staffing and actual occupancy are different populations. Joining years do not establish appointment dates. See the [open questions register](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Open-Questions) for the evidence needed to resolve tracked gaps.
+
+## Related reading
+
+- [Founders, early colleagues and later people](../subjects/People.md)
+- [J2 Education](education.md)
+- [Enterprise Support Services](ess.md)
+- [Facilities and workplace services](facilities.md)
+
+Related reading describes useful connections, not additional reporting lines.

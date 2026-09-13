@@ -16,3 +16,21 @@ Download the workbook to open it in a spreadsheet application. The full-profile 
 The workbook is a generated interface and the case database is its own structured source. A workbook row or preview is not an independently obtained mine record. Keep profile, seed, period and dataset version with any analysis. This page introduces no new distribution release and no new financial assumptions.
 
 [Subject directory](README.md) · [Business directory](../businesses/README.md) · [Department directory](../departments/README.md) · [Wiki home](../Home.md)
+
+## Reading guide
+
+Read Blackridge as its own 2015 mine and enterprise case. Keep the workbook, database profile and dated access model together so that an analysis uses one consistent population and scenario.
+
+
+## What remains unknown
+
+Blackridge is not a Sable Harbor subsidiary. The committed m00 database is not the full-profile population, and generated previews are not independent mine evidence. See the [open questions register](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Open-Questions) for the evidence needed to resolve tracked gaps.
+
+## Related reading
+
+- [Company history and The Crossing](History.md)
+- [Finance](../departments/finance.md)
+- [Internal Audit](../departments/internal-audit.md)
+- [Founders, early colleagues and later people](People.md)
+
+Related reading describes useful connections, not additional reporting lines.
