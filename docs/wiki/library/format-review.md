@@ -6,11 +6,11 @@ Generated reconciliation queue, not an assertion that every unpaired record lack
 
 | State | Records |
 |---|---:|
-| COUNTERPART_REVIEW_REQUIRED | 62 |
+| COUNTERPART_REVIEW_REQUIRED | 63 |
 | HISTORICAL_COUNTERPART_UNRESOLVED | 57 |
 | NAVIGATION_ALIAS_NO_PUBLICATION | 3 |
 | READER_MAINTENANCE_NO_LETTERHEAD | 111 |
-| READER_OR_MAINTENANCE_PAGE | 159 |
+| READER_OR_MAINTENANCE_PAGE | 160 |
 | UNRESOLVED_DOCUMENT_COUNTERPART | 227 |
 | VERIFIED_ACCEPTED_EVIDENCE_PACKET | 1 |
 | VERIFIED_CHART_PUBLICATION | 40 |
@@ -78,6 +78,7 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [ARU individual retention agreements and Tolman consultancy](../../legal/gap-instruments/source/workforce.md) — SH-FIN-HUMAN-001
 - [Closeout evidence releases](../../releases/CLOSEOUT_EVIDENCE_RELEASES.md) — Corporate document-format reconciliation
 - [Facility atlas controlled releases](../../releases/FACILITY_ATLAS_RELEASES.md) — Corporate document-format reconciliation
+- [Geographic evidence releases](../../releases/GEOGRAPHIC_EVIDENCE_RELEASES.md) — Corporate document-format reconciliation
 - [Evidence collection and scheduling](../../../enterprise/ccf/operations/COLLECTION.md) — Corporate document-format reconciliation
 - [Bounded control test contracts](../../../enterprise/ccf/operations/CONTROL_TEST_CONTRACTS.md) — Corporate document-format reconciliation
 - [GitHub pull-request review source](../../../enterprise/ccf/operations/GITHUB_SOURCE.md) — Corporate document-format reconciliation

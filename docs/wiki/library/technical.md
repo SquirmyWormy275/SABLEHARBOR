@@ -120,6 +120,7 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Facility atlas controlled releases](../../releases/FACILITY_ATLAS_RELEASES.md) — MD
 - [Facility spatial releases](../../releases/FACILITY_SPATIAL_RELEASES.md) — MD
 - [Facility planning workbench releases](../../releases/FACILITY_WORKBENCH_RELEASES.md) — MD
+- [Geographic evidence releases](../../releases/GEOGRAPHIC_EVIDENCE_RELEASES.md) — MD
 - [Industrial case releases](../../releases/INDUSTRIAL_CASE_RELEASES.md) — MD
 - [Runtime estate releases](../../releases/RUNTIME_ESTATE_RELEASES.md) — MD
 
