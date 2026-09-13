@@ -1,0 +1,6 @@
+{
+  "scope": "Raster candidates under Projects, Downloads and Pictures; excludes .git, .venv, node_modules, var and private directories; files above 100 MB excluded; unique inodes counted",
+  "checked": 13994,
+  "expected_sha256": "2bf5a1209b9c3ece435271f2fbf5a3c827bbbccf242ea4ee60535749ccee9d92",
+  "matches": []
+}
