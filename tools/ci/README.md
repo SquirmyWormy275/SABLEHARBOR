@@ -43,3 +43,34 @@ an approximation of GitHub styling through the existing local preview, not the l
 or a pixel-perfect assertion about GitHub's renderer. Browser dependencies are separately
 pinned. Header hash changes require explicit review; never regenerate the inventory merely
 to make a changed or missing asset pass. The publication workflow remains manual.
+
+## Choose a check for your change
+
+Run `make help` for the command list. These targets use the same committed dependencies
+and validators as CI; focused checks do not replace a full applicable CI run.
+
+| Change | Local command | Scope |
+|---|---|---|
+| Small code or Wiki edit | `make check-fast` | Root lint/types plus Wiki navigation, accessibility, exporter and publication-guard tests |
+| Wiki links or prose | `make check-wiki` | All Wiki pages, local anchors, Home reachability, heading order and image/link descriptions |
+| Wiki layout | `make wiki-visual` | Real Chromium rendering with screenshots; install the separately pinned browser first as shown above |
+| Geographic adjudication | `make check-geo-review` | Reproduce all reviewed batches and test their source bindings |
+| Business operations | `make check-operations` | Operations/business/planning tests without building full distribution packages |
+| Root code before delivery | `make ci` | Full root suite, lint and types |
+
+Business-operations CI now performs both complete distribution builds in separate clean
+runners. A reconciliation job waits for the original test suite and both builds, verifies
+both checksum manifests, compares every distribution file byte for byte, and only then
+uploads the accepted artifact consumed by the existing publication job. No build is reused
+from a prior commit and no reproducibility check is skipped. The two builds consume more
+concurrent runner capacity but remove the serial second-build wait.
+
+## Publish the accepted Wiki
+
+The live Wiki is initialized. From a clean checkout of current accepted main, run
+`make wiki-publish` using existing local Git authentication. The command fetches the public
+main reference, refuses dirty or unaccepted source, exports into temporary directories,
+preserves unmanaged Wiki pages/history, pushes without force and verifies a fresh remote
+clone against every exported page hash. `var/wiki-publication.json` records the result.
+No credential is copied into repository secrets. The manual Actions workflow remains an
+alternative when its `WIKI_TOKEN` is configured. See [publication status](../../docs/wiki/README.md).

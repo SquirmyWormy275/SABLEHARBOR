@@ -17,7 +17,7 @@ Contact obtains records, interviews, field observations and external research in
 
 ## Organization and identity
 
-[Current chart and all of its pages](../../organization/charts/corporate-contact-disciplines.md) · [Complete organization publication](../../organization/assets/current/Sable-Harbor-Organization-Charts.pdf).
+[Organization chart, text roster and source qualifications](../../organization/charts/corporate-contact-disciplines.md) · [Complete organization publication](../../organization/assets/current/Sable-Harbor-Organization-Charts.pdf).
 
 [![Contact — shared organization chart, first page](../../organization/assets/current/corporate-contact-disciplines.png)](../../organization/assets/current/corporate-contact-disciplines.png)
 
@@ -27,4 +27,4 @@ The shared chart retains its original scope; it is not a new reporting chart for
 
 Collection disciplines are capabilities, not seven independently staffed departments. Provisional requirement labels retain their source status.
 
-[Department and institution directory](README.md) · [Wiki home](../Home.md)
+[Department and institution directory](README.md) · [Business directory](../businesses/README.md) · [Wiki home](../Home.md)

@@ -18,7 +18,7 @@ Education designs and teaches enterprise and professional courses, cases and exe
 
 ## Organization and identity
 
-[Current chart and all of its pages](../../organization/charts/corporate-education-programs.md) · [Complete organization publication](../../organization/assets/current/Sable-Harbor-Organization-Charts.pdf).
+[Organization chart, text roster and source qualifications](../../organization/charts/corporate-education-programs.md) · [Complete organization publication](../../organization/assets/current/Sable-Harbor-Organization-Charts.pdf).
 
 [![J2 Education — shared organization chart, first page](../../organization/assets/current/corporate-education-programs.png)](../../organization/assets/current/corporate-education-programs.png)
 
@@ -28,4 +28,4 @@ The shared chart retains its original scope; it is not a new reporting chart for
 
 Learners, rotating faculty, permanent billets and residential capacity are different populations. A planned classroom or course design does not establish a completed operating campus.
 
-[Department and institution directory](README.md) · [Wiki home](../Home.md)
+[Department and institution directory](README.md) · [Business directory](../businesses/README.md) · [Wiki home](../Home.md)

@@ -15,6 +15,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(ROOT))
 from tools.documents import preview_reader as preview
+from tools.wiki.audit import audit
 from playwright.sync_api import sync_playwright
 
 DARK = """
@@ -27,6 +28,9 @@ tr:nth-child(even),code,pre{background:#161b22}small{color:#8b949e}}
 
 def run(output, executable=None):
     output.mkdir(parents=True, exist_ok=True)
+    navigation = audit()
+    (output / "navigation.json").write_text(json.dumps(navigation, indent=2) + "\n")
+    assert not navigation["errors"], navigation["errors"]
     manifest = json.loads(Path(__file__).with_name("headers.json").read_text())
     pages = sorted(
         [
@@ -89,6 +93,8 @@ def run(output, executable=None):
                           }
                           if(document.documentElement.scrollWidth>innerWidth+1) failures.push('page overflow');
                           for(const table of document.querySelectorAll('table')) {
+                            const headers=[...table.querySelectorAll('thead th')];
+                            if(!headers.length || headers.some(h=>!h.textContent.trim())) failures.push('table lacks descriptive column headers');
                             const r=table.getBoundingClientRect();
                             if(r.right>innerWidth+1) failures.push('table outside viewport');
                             if(table.scrollWidth>table.clientWidth+1 && !['auto','scroll'].includes(getComputedStyle(table).overflowX))

@@ -100,3 +100,9 @@ classifies 7,844 additional occurrences against 3,912 existing road/waterbody re
 features. The two disjoint batches classify 68,740 occurrences; 9,405 remain outside them.
 Reference-layer provenance and geometry hashes do not establish company ownership or
 occupancy, and no section is promoted to complete by these counts.
+
+The subsequent [catalog derivation batch](../adjudication/README.md#catalog-derivation-batch--september-12-2026)
+traces 444 index/metadata occurrences to 84 hash-verified source documents, including
+336 repeated search-text copies. Cumulative classification reaches 69,184 occurrences;
+8,961 remain outside the three batches. Derived text is not independent corroboration,
+and substantive geographic claims in the referenced documents remain subject to review.

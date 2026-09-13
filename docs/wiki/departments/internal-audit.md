@@ -18,7 +18,7 @@ Internal Audit independently evaluates governance, controls and operations. It c
 
 ## Organization and identity
 
-[Current chart and all of its pages](../../organization/charts/corporate-board-committees.md) · [Complete organization publication](../../organization/assets/current/Sable-Harbor-Organization-Charts.pdf).
+[Organization chart, text roster and source qualifications](../../organization/charts/corporate-board-committees.md) · [Complete organization publication](../../organization/assets/current/Sable-Harbor-Organization-Charts.pdf).
 
 [![Internal Audit — shared organization chart, first page](../../organization/assets/current/corporate-board-committees.png)](../../organization/assets/current/corporate-board-committees.png)
 
@@ -28,6 +28,6 @@ The shared chart retains its original scope; it is not a new reporting chart for
 
 Internal Audit is separate from Finance, OGC, Risk & Compliance, Technology and J2. ESS administrative support cannot condition its communications to the committee.
 
-[Department and institution directory](README.md) · [Wiki home](../Home.md)
+[Department and institution directory](README.md) · [Business directory](../businesses/README.md) · [Wiki home](../Home.md)
 
 [Continuity and crisis responsibilities across the existing institutions](../subjects/Continuity.md).

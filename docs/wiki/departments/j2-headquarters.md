@@ -16,7 +16,7 @@ J2 Headquarters coordinates professional standards, intelligence priorities, sta
 
 ## Organization and identity
 
-[Current chart and all of its pages](../../organization/charts/corporate-j2.md) · [Complete organization publication](../../organization/assets/current/Sable-Harbor-Organization-Charts.pdf).
+[Organization chart, text roster and source qualifications](../../organization/charts/corporate-j2.md) · [Complete organization publication](../../organization/assets/current/Sable-Harbor-Organization-Charts.pdf).
 
 [![J2 Headquarters — shared organization chart, first page](../../organization/assets/current/corporate-j2.png)](../../organization/assets/current/corporate-j2.png)
 
@@ -26,4 +26,4 @@ The shared chart retains its original scope; it is not a new reporting chart for
 
 Chief of Staff, other unnamed roles and exact appointment histories remain open where not separately established. Joining year does not establish appointment or occupancy date.
 
-[Department and institution directory](README.md) · [Wiki home](../Home.md)
+[Department and institution directory](README.md) · [Business directory](../businesses/README.md) · [Wiki home](../Home.md)

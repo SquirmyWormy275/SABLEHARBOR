@@ -1,6 +1,6 @@
 # Sable Harbor Advisory
 
-[Wiki home](../Home.md) · [All business dossiers](../../business-lines/README.md) · [Company charts](../../organization/README.md)
+[Wiki home](../Home.md) · [Business directory](README.md) · [Department directory](../departments/README.md) · [Business dossiers](../../business-lines/README.md) · [Company charts](../../organization/README.md)
 
 <img src="../../../assets/brand/logos/advisory__reverse-horizontal.png" alt="Approved Sable Harbor Advisory logo" width="360">
 
@@ -18,7 +18,7 @@ Advisory remains a business line of the existing Sable Harbor contracting entity
 
 [![Sable Harbor Advisory existing organization chart](../../../docs/organization/assets/current/advisory.png)](../../../docs/organization/charts/advisory.md)
 
-Open the chart to read its relationship key and any additional pages. Grouped functions are not automatically reporting lines, separate companies or additional employees.
+[Read the chart’s text roster, relationship key and source qualifications](../../../docs/organization/charts/advisory.md). Grouped functions are not automatically reporting lines, separate companies or additional employees.
 
 The chart shows practice and function membership. It does not name an appointed President or create one.
 
