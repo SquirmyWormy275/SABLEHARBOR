@@ -1,6 +1,6 @@
 # Project Cradle
 
-[Wiki home](../Home.md) · [All business dossiers](../../business-lines/README.md) · [Company charts](../../organization/README.md)
+[Wiki home](../Home.md) · [Business directory](README.md) · [Department directory](../departments/README.md) · [Business dossiers](../../business-lines/README.md) · [Company charts](../../organization/README.md)
 
 <img src="../../../assets/brand/logos/project-cradle__reverse-horizontal.png" alt="Approved Project Cradle logo" width="360">
 
@@ -18,7 +18,7 @@ Cradle is an early commercial parent-book business. Kelly Gang Mining and Demott
 
 [![Project Cradle existing organization chart](../../../docs/organization/assets/current/project-cradle.png)](../../../docs/organization/charts/project-cradle.md)
 
-Open the chart to read its relationship key and any additional pages. Grouped functions are not automatically reporting lines, separate companies or additional employees.
+[Read the chart’s text roster, relationship key and source qualifications](../../../docs/organization/charts/project-cradle.md). Grouped functions are not automatically reporting lines, separate companies or additional employees.
 
 [Named people and recorded roles](../../../docs/organization/charts/people-cradle.md) — the current chart preserves unknown joining years rather than inventing them.
 

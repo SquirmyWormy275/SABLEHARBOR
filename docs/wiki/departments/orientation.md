@@ -18,7 +18,7 @@ Orientation maintains enterprise questions, the Enterprise Intelligence Brief an
 
 ## Organization and identity
 
-[Current chart and all of its pages](../../organization/charts/corporate-j2.md) · [Complete organization publication](../../organization/assets/current/Sable-Harbor-Organization-Charts.pdf).
+[Organization chart, text roster and source qualifications](../../organization/charts/corporate-j2.md) · [Complete organization publication](../../organization/assets/current/Sable-Harbor-Organization-Charts.pdf).
 
 [![Orientation — shared organization chart, first page](../../organization/assets/current/corporate-j2.png)](../../organization/assets/current/corporate-j2.png)
 
@@ -28,4 +28,4 @@ The shared chart retains its original scope; it is not a new reporting chart for
 
 An officer does not vote for the Board, direct the outcome or automatically delay a decision. Detailed rank and placement questions retain their recorded state.
 
-[Department and institution directory](README.md) · [Wiki home](../Home.md)
+[Department and institution directory](README.md) · [Business directory](../businesses/README.md) · [Wiki home](../Home.md)

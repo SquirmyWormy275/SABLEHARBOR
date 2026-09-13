@@ -16,7 +16,7 @@ This ESS capability supports purchasing, vendor management and technology/supply
 
 ## Organization and identity
 
-[Current chart and all of its pages](../../organization/charts/corporate-enterprise-support.md) · [Complete organization publication](../../organization/assets/current/Sable-Harbor-Organization-Charts.pdf).
+[Organization chart, text roster and source qualifications](../../organization/charts/corporate-enterprise-support.md) · [Complete organization publication](../../organization/assets/current/Sable-Harbor-Organization-Charts.pdf).
 
 [![Procurement and vendor support — shared organization chart, first page](../../organization/assets/current/corporate-enterprise-support.png)](../../organization/assets/current/corporate-enterprise-support.png)
 
@@ -26,4 +26,4 @@ The shared chart retains its original scope; it is not a new reporting chart for
 
 The label is a navigation aid for an accepted capability, not a newly named department. Supplier selection, quote, contract execution and installed service are distinct states.
 
-[Department and institution directory](README.md) · [Wiki home](../Home.md)
+[Department and institution directory](README.md) · [Business directory](../businesses/README.md) · [Wiki home](../Home.md)

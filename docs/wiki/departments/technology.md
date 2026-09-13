@@ -17,7 +17,7 @@ Technology Services runs employee technology, shared platforms, developer system
 
 ## Organization and identity
 
-[Current chart and all of its pages](../../organization/charts/corporate-technology-capabilities.md) · [Complete organization publication](../../organization/assets/current/Sable-Harbor-Organization-Charts.pdf).
+[Organization chart, text roster and source qualifications](../../organization/charts/corporate-technology-capabilities.md) · [Complete organization publication](../../organization/assets/current/Sable-Harbor-Organization-Charts.pdf).
 
 [![Enterprise Technology Services — shared organization chart, first page](../../organization/assets/current/corporate-technology-capabilities.png)](../../organization/assets/current/corporate-technology-capabilities.png)
 
@@ -27,6 +27,6 @@ The shared chart retains its original scope; it is not a new reporting chart for
 
 The runtime package is an accepted synthetic design, not an operating estate. Professional colocation and recovery locations do not become Sacramento campus data centers.
 
-[Department and institution directory](README.md) · [Wiki home](../Home.md)
+[Department and institution directory](README.md) · [Business directory](../businesses/README.md) · [Wiki home](../Home.md)
 
 [Continuity and crisis responsibilities across the existing institutions](../subjects/Continuity.md).

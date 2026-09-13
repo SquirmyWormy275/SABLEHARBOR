@@ -1,6 +1,6 @@
 # Foundry Field
 
-[Wiki home](../Home.md) · [All business dossiers](../../business-lines/README.md) · [Company charts](../../organization/README.md)
+[Wiki home](../Home.md) · [Business directory](README.md) · [Department directory](../departments/README.md) · [Business dossiers](../../business-lines/README.md) · [Company charts](../../organization/README.md)
 
 <img src="../../../assets/brand/logos/foundry-field__reverse-horizontal.png" alt="Approved Foundry Field logo" width="360">
 
@@ -18,7 +18,7 @@ It is a commercial product business recorded on the parent’s SHI books. A dedi
 
 [![Foundry Field existing organization chart](../../../docs/organization/assets/current/foundry-field.png)](../../../docs/organization/charts/foundry-field.md)
 
-Open the chart to read its relationship key and any additional pages. Grouped functions are not automatically reporting lines, separate companies or additional employees.
+[Read the chart’s text roster, relationship key and source qualifications](../../../docs/organization/charts/foundry-field.md). Grouped functions are not automatically reporting lines, separate companies or additional employees.
 
 [Named people and recorded roles](../../../docs/organization/charts/people-foundry-field.md) — the current chart preserves unknown joining years rather than inventing them.
 

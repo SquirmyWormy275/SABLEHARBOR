@@ -92,3 +92,28 @@ canon deltas, OCR and temporal-map requirements remain unresolved; #108 stays op
 python -m geospatial.adjudication.review_reference_layers --check
 python -m pytest geospatial/tests/test_reference_layer_adjudication.py -q
 ```
+
+## Catalog derivation batch — September 12, 2026
+
+[CATALOG_RULES.json](CATALOG_RULES.json) binds the two archived institutional catalog
+representations to the same discovery baseline. The [review](CATALOG_REVIEW.csv.gz)
+traces **444 occurrences**: 336 search-text copies and 108 catalog metadata references.
+The search text reproduces exactly from each recorded title, source path and source text,
+using the archived generator's lowercase concatenation. All **84 referenced source
+Markdown hashes** match their archived bytes. JSON, object rows, full-text search rows
+and SQLite's backing content rows resolve to the same stable catalog object IDs.
+
+A search index is a derived copy, not independent corroboration of each geographic claim
+inside it. The original occurrence IDs, exact wording, locators, canonical fields,
+referenced document hashes and non-text row context are retained. Source-document claims
+still require substantive geographic review; a `LOCKED` document status is not promoted
+to a surveyed location, ownership record or occupancy date.
+
+The [summary](CATALOG_REVIEW.json) records **69,184 classified occurrences** across three
+disjoint batches, with **8,961** outside them. Those counts describe occurrence carriers;
+they do not complete the source-level semantic census or the geographic program.
+
+```bash
+python -m geospatial.adjudication.review_catalog --check
+make check-geo-review
+```

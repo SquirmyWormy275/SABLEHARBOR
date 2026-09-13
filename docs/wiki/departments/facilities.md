@@ -19,7 +19,7 @@ This ESS capability supports offices, workspaces and shared facilities. The faci
 
 ## Organization and identity
 
-[Current chart and all of its pages](../../organization/charts/corporate-enterprise-support.md) · [Complete organization publication](../../organization/assets/current/Sable-Harbor-Organization-Charts.pdf).
+[Organization chart, text roster and source qualifications](../../organization/charts/corporate-enterprise-support.md) · [Complete organization publication](../../organization/assets/current/Sable-Harbor-Organization-Charts.pdf).
 
 [![Facilities and workplace services — shared organization chart, first page](../../organization/assets/current/corporate-enterprise-support.png)](../../organization/assets/current/corporate-enterprise-support.png)
 
@@ -29,6 +29,6 @@ The shared chart retains its original scope; it is not a new reporting chart for
 
 Facilities/workplace services is an accepted capability label. Proposed campus geometry, seat capacity and floor plans do not prove property ownership, occupation or completed construction.
 
-[Department and institution directory](README.md) · [Wiki home](../Home.md)
+[Department and institution directory](README.md) · [Business directory](../businesses/README.md) · [Wiki home](../Home.md)
 
 [Continuity and crisis responsibilities across the existing institutions](../subjects/Continuity.md).

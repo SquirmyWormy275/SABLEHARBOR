@@ -18,7 +18,7 @@ The CEO directs the enterprise and its businesses within Board-reserved authorit
 
 ## Organization and identity
 
-[Current chart and all of its pages](../../organization/charts/corporate-headquarters.md) · [Complete organization publication](../../organization/assets/current/Sable-Harbor-Organization-Charts.pdf).
+[Organization chart, text roster and source qualifications](../../organization/charts/corporate-headquarters.md) · [Complete organization publication](../../organization/assets/current/Sable-Harbor-Organization-Charts.pdf).
 
 [![Office of the CEO — shared organization chart, first page](../../organization/assets/current/corporate-headquarters.png)](../../organization/assets/current/corporate-headquarters.png)
 
@@ -28,4 +28,4 @@ The shared chart retains its original scope; it is not a new reporting chart for
 
 Authority Core, Enterprise Staff and temporary Issue Rooms are coordination arrangements, not three new departments. No centralized Grand Scheme department is established.
 
-[Department and institution directory](README.md) · [Wiki home](../Home.md)
+[Department and institution directory](README.md) · [Business directory](../businesses/README.md) · [Wiki home](../Home.md)
