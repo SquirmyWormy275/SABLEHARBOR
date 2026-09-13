@@ -6,6 +6,8 @@ Choose a bounded question, a business, and a period before collecting evidence. 
 
 ## Pick a first task
 
+For a step-by-step start, use the [three practical exercises](exercises/README.md): acquisition accounting, an invoice-to-ledger trace, or contract obligations. These routes use existing accepted records and identify the exact evidence to open.
+
 These entry points are files you can open now. Where a task needs a release download or local build, that requirement is explicit.
 
 | Task | Open first | Working evidence | Produce |

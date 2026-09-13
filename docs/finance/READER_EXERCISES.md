@@ -1,5 +1,7 @@
 # Accounting, finance and audit practice
 
+Start with the [three practical exercise routes](../reader/exercises/README.md) for named records, workbook tabs, and step-by-step acquisition, invoice, and contract reviews.
+
 This guide is for a person opening the Sable Harbor archive in a browser and a spreadsheet application. No AI assistant, SQL query or text parser is required for the exercises below. Source code and databases remain available for deeper verification.
 
 For a ready-to-read example, open the [accepted Foundry Field evidence memo and workbook](evidence/SH-FIN-HUMAN-001/README.md). It follows one invoice through collection, writeoff, credits and recovery; it is reconstructed evidence, not an original invoice.

@@ -6,10 +6,18 @@ Generated file inventory. Includes current and historical records; open the sour
 
 ## `docs/reader`
 
+- [Protecting accepted visual files](../../reader/APPROVED_ASSET_PROTECTION.md) — MD
 - [Reader and evidence continuation](../../reader/CONTINUATION.md) — MD
 - [Reader experience implementation record](../../reader/READER_DELIVERY.md) — MD
 - [Sources, formats, and reading the archive](../../reader/SOURCES_AND_FORMATS.md) — MD
 - [Using the Sable Harbor universe](../../reader/USE_CASES.md) — MD
+
+## `docs/reader/exercises`
+
+- [Reconcile the ARU acquisition to its opening books](../../reader/exercises/ACQUISITION.md) — MD
+- [Turn the Taylor–Red Wash terms into a testable obligation register](../../reader/exercises/CONTRACTS.md) — MD
+- [Follow one Foundry Field invoice into the ledger](../../reader/exercises/INVOICE.md) — MD
+- [Three exercises using the existing records](../../reader/exercises/README.md) — MD
 
 ## `docs/reader/overnight`
 
@@ -35,8 +43,13 @@ Generated file inventory. Includes current and historical records; open the sour
 
 ## `docs/reader/transactions`
 
+- [Legal evidence priorities for the reader exercises](../../reader/transactions/GAP_PRIORITIES.md) — MD
 - [Transaction and legal records](../../reader/transactions/README.md) — MD
 - [Legal record reconciliation](../../reader/transactions/RECONCILIATION.md) — MD
+
+## `docs/reader/usability`
+
+- [Practical reading routes: verification record](../../reader/usability/README.md) — MD
 
 ## `docs/wiki`
 

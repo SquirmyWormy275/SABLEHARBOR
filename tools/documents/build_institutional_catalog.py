@@ -142,8 +142,7 @@ def main() -> None:
     if OUT_DB.exists():
         OUT_DB.unlink()
     db = sqlite3.connect(OUT_DB)
-    # Smaller pages reduce unused space in this many-table, mixed-text catalog.
-    # This changes storage only; every source value and full-text index is retained.
+    # Reduce unused storage while retaining every record and full-text index.
     db.execute("PRAGMA page_size=2048")
     db.executescript("""
     CREATE TABLE institutional_object (

@@ -1,0 +1,206 @@
+{
+  "method": "Agent visual inspection of Chromium screenshots from existing local GitHub-like Markdown preview. Not a human usability study, exact GitHub rendering, or owner approval.",
+  "pages": [
+    {
+      "path": "docs/reader/exercises/README.md",
+      "source_sha256": "5b4c649a50ab38a3609b72d1e875a83d22ec289dbede99d0d5626a30de7f56d3",
+      "coverage": "complete desktop and mobile content",
+      "inspected_images": [
+        {
+          "path": "docs/reader/usability/evidence/README-1280-0.png",
+          "sha256": "0b67ce768883e472e8becc4df06f80bac2b3cd443b6bbeb58ad41c5c5b1293fd"
+        },
+        {
+          "path": "docs/reader/usability/evidence/README-1280-900.png",
+          "sha256": "1edf4d05063b21ec7ebb222608246b432ce770bc450ba9939acf719f0bdd524e"
+        },
+        {
+          "path": "docs/reader/usability/evidence/README-390-0.png",
+          "sha256": "4061ee8fd14b8c0a9daed4db7291bad2bf28bab31a2e4e024074ecc9770636e6"
+        },
+        {
+          "path": "docs/reader/usability/evidence/README-390-900.png",
+          "sha256": "5c506fc150f402138b38adfc0a75e92af70f48268842cf664260b6b4fd0f9d0d"
+        },
+        {
+          "path": "docs/reader/usability/evidence/README-390-1800.png",
+          "sha256": "658a1dbcac1018993290f72187e94883bef4074a3747fd6ddf94fefd42e967a5"
+        },
+        {
+          "path": "docs/reader/usability/evidence/README-mobile-table-right.png",
+          "sha256": "fdf4d094041ced3d78cabb6fa6b2e75f860a07ea87b075ae55fec4e55c7f62b8"
+        }
+      ]
+    },
+    {
+      "path": "docs/reader/exercises/ACQUISITION.md",
+      "source_sha256": "dcaecdb7b9ee29ea717fbbe52bfbc23e26052741d70b375aeafd661d41b60a3d",
+      "coverage": "complete desktop and mobile content",
+      "inspected_images": [
+        {
+          "path": "docs/reader/usability/evidence/docs__reader__exercises__ACQUISITION.md-1280.png",
+          "sha256": "e28dd3156ac5d7d50d6f5587732aaff61211f97f47de3221e38dd4654b847059"
+        },
+        {
+          "path": "docs/reader/usability/evidence/ACQUISITION-390-0.png",
+          "sha256": "d787d3cbb3b96be4e1e0ea19610d6da9f214df1ab6b51e96f9b84b0e5fc59ba3"
+        },
+        {
+          "path": "docs/reader/usability/evidence/ACQUISITION-390-900.png",
+          "sha256": "f433ecdb722390fed8ba28b1872555ae05ec0e179326b7835742c6b58f7076b9"
+        },
+        {
+          "path": "docs/reader/usability/evidence/ACQUISITION-390-1800.png",
+          "sha256": "4489af6183aa7db6363e62c5f9e7c5a8c842133981274c0d067cf495f32ddaa3"
+        },
+        {
+          "path": "docs/reader/usability/evidence/ACQUISITION-390-2700.png",
+          "sha256": "d45034eea93cbb4bf8d117eb2e38d6cecda1d7f44e06dc82358d861fbcc7cca9"
+        },
+        {
+          "path": "docs/reader/usability/evidence/ACQUISITION-390-3600.png",
+          "sha256": "b25affa0532fc403f21fa992c673e5ab5601d1e8279c1a3f80a5358f36bb06e9"
+        }
+      ]
+    },
+    {
+      "path": "docs/reader/exercises/INVOICE.md",
+      "source_sha256": "96e7b7cea62e13016a08d96b7eccd85d39f141b0545ae14f3cd837c7de9f64e6",
+      "coverage": "complete desktop and mobile content",
+      "inspected_images": [
+        {
+          "path": "docs/reader/usability/evidence/INVOICE-1280-0.png",
+          "sha256": "6e5aaeeec8379247fbe4f408c239b5cf8071b911e1a1ef70470e3e812b2bbc8b"
+        },
+        {
+          "path": "docs/reader/usability/evidence/INVOICE-1280-900.png",
+          "sha256": "f02e843e68282b8fd15bff2e077c09b2b1b430638d3a244083364b1eba0094b4"
+        },
+        {
+          "path": "docs/reader/usability/evidence/INVOICE-390-0.png",
+          "sha256": "1de56f8aa4f52c07b4c5fd676fab7812d397e2e5b910c1db7f693282c52ff044"
+        },
+        {
+          "path": "docs/reader/usability/evidence/INVOICE-390-900.png",
+          "sha256": "791187e5bba57db77ecef68753ce6b5058929561422115c5949965ed8b78db90"
+        },
+        {
+          "path": "docs/reader/usability/evidence/INVOICE-390-1800.png",
+          "sha256": "4b98344dcceec7661641a7099c9ad42717a718d69cb85f2163b7ba351a076203"
+        },
+        {
+          "path": "docs/reader/usability/evidence/INVOICE-390-2700.png",
+          "sha256": "ce54c3c60481dc087ec9414b049e311d5d4f6ddd60ed38f8e039921651fae4bc"
+        }
+      ]
+    },
+    {
+      "path": "docs/reader/exercises/CONTRACTS.md",
+      "source_sha256": "80faac20c9cb9161fd3e4074d2e8351b5626a6c04f9129696a872485bfa726a2",
+      "coverage": "complete desktop and mobile content",
+      "inspected_images": [
+        {
+          "path": "docs/reader/usability/evidence/docs__reader__exercises__CONTRACTS.md-1280.png",
+          "sha256": "11ec1d7f26720448ede8e49a9a9b591e017029f44ad74f878d6d29f192a966b4"
+        },
+        {
+          "path": "docs/reader/usability/evidence/CONTRACTS-390-0.png",
+          "sha256": "de749d03aa3c64a8746dd34ec2cc205ffaca8f3d72eea1aaf6d6312da409e6a1"
+        },
+        {
+          "path": "docs/reader/usability/evidence/CONTRACTS-390-900.png",
+          "sha256": "0d7cdc9b28a34522a29b81bbad633febd6a3698eed479480dbf2ab464896114f"
+        },
+        {
+          "path": "docs/reader/usability/evidence/CONTRACTS-390-1800.png",
+          "sha256": "12ed14fc4d5a096f37a780e4df5ba66616b4e0e1d7a7184f91b1f0c8b42b8efc"
+        },
+        {
+          "path": "docs/reader/usability/evidence/CONTRACTS-390-2700.png",
+          "sha256": "21346e34ef1ef5313b4fa54308e929bc0c91561f2d4f0ac737a83da0a28482c6"
+        }
+      ]
+    },
+    {
+      "path": "docs/reader/APPROVED_ASSET_PROTECTION.md",
+      "source_sha256": "abe9db753651ae767b5af1b81209824d8cd4538bb1a4ecac19a2a648500d627e",
+      "coverage": "complete desktop and mobile content",
+      "inspected_images": [
+        {
+          "path": "docs/reader/usability/evidence/APPROVED_ASSET_PROTECTION-1280-0.png",
+          "sha256": "e366d045b5bd4fc67b5b4ff69ced793ade82ce9d88821698d8f9996038e6df6e"
+        },
+        {
+          "path": "docs/reader/usability/evidence/APPROVED_ASSET_PROTECTION-1280-900.png",
+          "sha256": "3b2d31c180720a679992c95074dbe13a69606b37d598f1cf450dce91211c34ea"
+        },
+        {
+          "path": "docs/reader/usability/evidence/APPROVED_ASSET_PROTECTION-390-0.png",
+          "sha256": "cd87f8f0c58801c47a8745cd9c9b456f8e94efec33832d9311b41185dad412a0"
+        },
+        {
+          "path": "docs/reader/usability/evidence/APPROVED_ASSET_PROTECTION-390-900.png",
+          "sha256": "b53be156d16f2b1f76d2363c43c1dca1c52bd35323a149dbf7bbbd43a80412d4"
+        },
+        {
+          "path": "docs/reader/usability/evidence/APPROVED_ASSET_PROTECTION-390-1800.png",
+          "sha256": "32967fea17ae3e23d826a797a336ac9a4c52801045c0775a9e3d8fb421005763"
+        }
+      ]
+    },
+    {
+      "path": "docs/reader/transactions/GAP_PRIORITIES.md",
+      "source_sha256": "6a405f79cb1d45429c90b646a210d04487f962dd010fd28cff398488861d3968",
+      "coverage": "sampled",
+      "inspected_images": [
+        {
+          "path": "docs/reader/usability/evidence/GAP_PRIORITIES-1280-0.png",
+          "sha256": "57974615c6cdf0aaa9b624b9e2b69295dce4f89d63bb7e099448158a93f3250b"
+        },
+        {
+          "path": "docs/reader/usability/evidence/GAP_PRIORITIES-1280-1800.png",
+          "sha256": "bb0dddfeae650fb88caa2323ae490be32a76d104a582ef71a4a6639a58cb6373"
+        },
+        {
+          "path": "docs/reader/usability/evidence/GAP_PRIORITIES-1280-4500.png",
+          "sha256": "7258feb219bfd3cc0edc94f5da0e387708f7c1a17e6f48f533ae5fabe92a2632"
+        },
+        {
+          "path": "docs/reader/usability/evidence/GAP_PRIORITIES-1280-8100.png",
+          "sha256": "70106921c36137c9365016ff5ea1ced614a087fb435bd62ef92810520a483e31"
+        },
+        {
+          "path": "docs/reader/usability/evidence/GAP_PRIORITIES-390-0.png",
+          "sha256": "c2db376d1376dfad786c334833bef4764f08fc07720fbad5f85edc4ad443c3a5"
+        },
+        {
+          "path": "docs/reader/usability/evidence/GAP_PRIORITIES-390-900.png",
+          "sha256": "956f83f8fd0977d1eaa7a0905bcff6536c4301f955b53745b099df3e48c9e86c"
+        },
+        {
+          "path": "docs/reader/usability/evidence/GAP_PRIORITIES-390-4500.png",
+          "sha256": "17ce6411fe6592008f4e73b1adee14ccf95593d0dd0f894fe8d98d0003be198b"
+        },
+        {
+          "path": "docs/reader/usability/evidence/GAP_PRIORITIES-390-9900.png",
+          "sha256": "17a4175b0f63d4faa783bc7ba6ebb382b62bc7210864d59c79994654f5b5a66d"
+        },
+        {
+          "path": "docs/reader/usability/evidence/GAP_PRIORITIES-390-13500.png",
+          "sha256": "807092782f4e211fa739537070152c4ce46427d0a9f8dd7e626379b2bbf5dade"
+        }
+      ]
+    }
+  ],
+  "corrections_verified": [
+    "Removed implementation QA sentence from invoice reader flow.",
+    "Added narrow-screen table scrolling instruction and ranked-gap navigation to exercise index.",
+    "Reduced gap-priority table to three columns; all columns visible on mobile, detailed rationale retained below."
+  ],
+  "limitations": [
+    "GAP_PRIORITIES sampled top/middle/end at both widths; not exhaustive visual review of entire long page.",
+    "Source-guide navigation addition was outside these six page captures."
+  ],
+  "blocking_findings": [],
+  "inspected_image_count": 37
+}
