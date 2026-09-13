@@ -142,6 +142,8 @@ def main() -> None:
     if OUT_DB.exists():
         OUT_DB.unlink()
     db = sqlite3.connect(OUT_DB)
+    # Reduce unused storage while retaining every record and full-text index.
+    db.execute("PRAGMA page_size=2048")
     db.executescript("""
     CREATE TABLE institutional_object (
       id TEXT PRIMARY KEY, title TEXT NOT NULL, category TEXT NOT NULL,

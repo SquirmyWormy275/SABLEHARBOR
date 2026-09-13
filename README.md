@@ -27,6 +27,7 @@ The [full use-case guide](docs/reader/USE_CASES.md) gives reading routes, sugges
 
 ## Open something useful now
 
+- **Complete a first exercise:** choose an [acquisition reconciliation, invoice trace, or contract-obligations review](docs/reader/exercises/README.md). Each route names the records, worksheet tabs, steps, and evidence limits.
 - **Review financial results:** download the [operating review workbook](enterprise/operations/publications/operating-review-v1.0.0.xlsx). Start with **Results** or **Cash obligations**, then use the [exercise guide](docs/finance/READER_EXERCISES.md) to find the supporting transactions.
 - **Trace accounting support:** open the [five scoped evidence packages](docs/finance/evidence/coverage/README.md) for complete selected populations, reconciliation results and CSV/SQLite access. New PDF/workbook designs remain in review.
 - **Read legal records:** use the [instrument directory](docs/reader/transactions/README.md) for commercial terms, corporate approvals, acquisitions and host rights, with missing evidence identified.

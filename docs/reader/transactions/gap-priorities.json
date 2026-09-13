@@ -1,0 +1,399 @@
+{
+  "schema_version": 1,
+  "status": "READER_IMPLEMENTATION_RECOMMENDATIONS_NO_CANON_CHANGE",
+  "audited_main_revision": "f7c9da881176da19901fe5ec6e776f0fd8719a39",
+  "audit_date": "2026-09-12",
+  "controlling_gap_register": "docs/reader/transactions/gaps.json",
+  "scope": "Prioritize discoverability and narrowly useful evidence additions for three reader routes. Original gap dispositions remain controlling; no issue closure, new agreement, executed event or visual approval is implied.",
+  "priority_definitions": {
+    "USE_EXISTING_FIRST": "Use accepted source content in the current routes; the named independent evidence gap remains.",
+    "OWNER_REVIEW_IF_EXPANDING": "An existing proposal or specifically scoped new scenario needs owner acceptance; current route remains usable without it.",
+    "DEFER_NOT_REQUIRED": "No new document is justified for the three current routes. Preserve the gap for a specifically requested extension."
+  },
+  "billing_pr_observation": {
+    "pull_request": 138,
+    "state": "OPEN",
+    "merged_at": null,
+    "head_revision": "e4995ba59d5eeab46fc6e6dd09bcf4b43efa2df4",
+    "observed_on": "2026-09-12"
+  },
+  "source_hashes": {
+    "docs/advisory/CARRY_PLAN_STANDARD.md": "c8b64ecd570a2402233bd6067eea0e274e267c8f1aa90d9153de4b3a4865de45",
+    "docs/advisory/COMMERCIAL_CONTRACTING_AND_PRICING_STANDARD.md": "d205a6b5d1a254ed30fc35c395f0f3ea3372a449d0537fea7c7bb18583cb8275",
+    "docs/advisory/LEGAL_AND_CONTRACTING_TERM_SHEET.md": "b0e842b631713579f2890efb846de642b100a576282ba88dea9880fb671428f7",
+    "docs/canon/CRADLE_CLOSEOUT_2026-09-06.md": "b49eaf96f1582f11886e9543b1543013f47acc99aa5533082d73717ab523e8aa",
+    "docs/canon/FINANCE_HUMAN_EVIDENCE_001_ACCEPTANCE_2026-09-11.md": "e4a5f41eec6fcac6a3a1a71512869a5f2ef63019a198de7dde78737ef27303a9",
+    "docs/canon/INDUSTRIAL_CLOSEOUT_2026-09-05.md": "0b21f22c2a8ffe55fa4e43898834ddc38389e42efe2e9c11ff48c7418dad8be7",
+    "docs/canon/READER_OVERNIGHT_SCOPE_2026-09-11.md": "f22d96629c029d754378c7250c88356957276e6990282c8eb8c5cdccb96ed7e0",
+    "docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05_R2.md": "89eae89e18db1d3cf3ab4f7bf7f54fa57efabb84c57127717b731572048d563b",
+    "docs/canon/RUNTIME_HOSTING_AND_DATA_CENTER_DECISIONS_2026-09-11.md": "fd309a9bdf596ea96498b7207b60ea3bea70a35d8c418371aa96c06d928bb17b",
+    "docs/finance/RUNTIME_INFRASTRUCTURE_FINANCE_RECONCILIATION_2026-09-11.md": "20558ea7ecde58914b7ccd44dc866f56c754b5eabd053eff01b43e7684aa40c8",
+    "docs/finance/evidence/SH-FIN-HUMAN-001/source.json": "c4833cfc6f28db6cd3edcae761b0e2d8f463a20de79f1d6fd5b0c517f8f829b7",
+    "docs/governance/PEOPLE_AND_CULTURE_DOCTRINE.md": "9e8c8b6b3b3ce8500553adfc0e35e94956a8251d395fd8d39355f3d84c1dc5ee",
+    "docs/governance/board-records/2021-06-18_harrison-vale-growth-financing-minutes.md": "b994512c64f86abe0d649f95d4ea3d3e00fd0c2c22af0ed56b62bd7ed41fae97",
+    "docs/governance/board-records/2022-10-28_wolf-ridge-industrial-financing-minutes.md": "ec3625726d23588816c073afb4bd76cce51085a195833c6089faea3c3efed1a4",
+    "docs/legal/ADVISORY_NAME_AND_EXTERNAL_CLEARANCE_STATUS_2026-09-09.md": "53cb9756ad05f9422b8d0bc93eeecace454cc25c6652424154caf2eaf0b4984d",
+    "docs/legal/MOCK_DEED_NORTHERN_NEVADA_DATA_CENTER_2026-09-04.md": "aa1717ac07ea2968d0ad877045d57b29ec0766dd852a79bd61553fa24eb97d79",
+    "docs/legal/evidence/proposals/decision-register.json": "e252899c2f323096e54a37eb7b754c19ef1fbb48ce612d9460db37ade4fb743c",
+    "docs/reader/transactions/RECONCILIATION.md": "8a6cf52933c1e0939372d6fb3a9b5f4a9e4123b08c3336a313566b15228d5679",
+    "docs/reader/transactions/gaps.json": "48aeb86f3fec7337c866203adcca58c174fa187e4a659811db21b6f2b0843609",
+    "enterprise/runtime/docs/CONTRACT_DOSSIER.md": "7cd01050b17f9451ff5bd341573289440c74fb190c01253bdc8197a6599d2ad1",
+    "geospatial/facilities/README.md": "a58a62e1bfd735eaf954ebce3d3aeaab72f1c9494271250367014d574e0eaf3b",
+    "geospatial/facilities/RESEARCH_CAMPUSES.md": "094ea7bb3bc9dd920f29dbe7ef0062880b399c46443cc5c32661589a8e51239a",
+    "industrial/corporate/LEGAL_STRUCTURE_AND_FORMATION.md": "5a10f112b015d5dfa7ca3b500108718015a41369182092cabc44dfb224119fbc",
+    "industrial/finance/TRANSACTION_ACCOUNTING.md": "d13f142968958585cfc56a7b06d54b5e95bccef6d434d11bb6bba93933a0aa58",
+    "industrial/operations/LABOR_SAFETY_AND_CONTROLS.md": "586d3aa95bbb894c3891ceded1ddb78b6d73fb0df54e4d20b58ab523c9d622d6",
+    "industrial/source/chronology.json": "53fe564b06301176a3a8322aedb82fee5a61c82caeae3d333e0a2c520b3eedc5",
+    "industrial/source/entities.json": "799a24baf3240d50c5d6a80ac0f9ddb9d023b7a36de058ec12546aac60caee29",
+    "industrial/source/finance.json": "0d4461abfcdb138da36db503ff0cfea7c47ea7fd7109494126514225fd43e38c",
+    "industrial/source/operations.json": "e7488b55c1c963d102db66e7a7b6f1373a3d68a9f94b8f99b164092245713a3b",
+    "industrial/transaction/01_RW_TRANSACTION_FILE.md": "902ff083d3857004b5c868b106fddc8e3600e59ad959201fb97c99d68dba298c",
+    "industrial/transaction/05_ARU_CLOSING_AND_TAX_DELIVERY.md": "a6dd448ed3a4a3ad6f0f3748e79dd918ea43c75685de762fe00843477a5d22c9",
+    "industrial/transaction/06_ARU_TRANSITION_AND_RETENTION.md": "3e3653f95a286d71aa513410603dd0c78684db0ad94e2460708c434a6fc4aec0",
+    "industrial/transaction/07_ARU_TAX_STRUCTURE_MEMORANDUM.md": "d42c4d67873e1b8e9b6488eac9a70a16643680718735ab0c3948327a37b16a44",
+    "industrial/transaction/08_INTERCOMPANY_LOGISTICS_AGREEMENT.md": "23153dc86a3e9ea9fd501bce6bdf3c8478dbdf3ab79fa5e8abc84ca8bbb771fc",
+    "red_wash/agreements/TRANSACTION_AND_COMMERCIAL_INSTRUMENTS.md": "5ee3715b0b5b08ba2fd259504ff7455da005d3d2e3701668945aa1ca90477808",
+    "red_wash/source/core_operating_data.json": "eb5601f3a519ac175bef07744fa3c23939734f80b5774efeed4800aa73e8aa3f"
+  },
+  "priorities": [
+    {
+      "gap_id": "LEGAL-GAP-DEBT-LIENS",
+      "rank": 1,
+      "priority": "USE_EXISTING_FIRST",
+      "assessment": "EXISTING_SCHEDULES_MISSING_INDEPENDENT_SUPPORT",
+      "exercise_routes": [
+        "acquisition-accounting"
+      ],
+      "reason": "The acquisition bridge can be checked now; absent lender originals only limit independent corroboration.",
+      "source_finding": "ARU closing delivery ARU-CL-03 and transaction accounting identify debt payoff, retained leases and funding separately.",
+      "task_unlocked": "A closing sources-and-uses reconciliation with a separate column for independently unsupported balances.",
+      "current_usable_alternative": "Use the native finance schedule and closing statement; label modeled balances and retain the retained-lease distinction.",
+      "next_action": "Link the debt/payoff and lease rows into the acquisition route. Seek a specific lender confirmation or release only if the exercise later tests discharge of security.",
+      "acceptance_boundary": "No new instrument is needed for the current route. A fictional confirmation would require separate owner acceptance.",
+      "sources": [
+        "industrial/transaction/05_ARU_CLOSING_AND_TAX_DELIVERY.md",
+        "industrial/finance/TRANSACTION_ACCOUNTING.md",
+        "industrial/source/finance.json"
+      ]
+    },
+    {
+      "gap_id": "LEGAL-GAP-WORKFORCE",
+      "rank": 2,
+      "priority": "USE_EXISTING_FIRST",
+      "assessment": "EXISTING_TERMS_MISSING_INDIVIDUAL_ORIGINALS",
+      "exercise_routes": [
+        "acquisition-accounting",
+        "contract-obligations"
+      ],
+      "reason": "Separating retention and consulting services from purchase price is immediately useful and already supported.",
+      "source_finding": "The transition instrument names eight retention allocations and Fred Tolman’s separate nine-month consultancy; it does not confirm cash payment.",
+      "task_unlocked": "A service-compensation versus acquisition-consideration comparison and a schedule of future service conditions.",
+      "current_usable_alternative": "Use the retention table, consultancy scope and native finance schedules without adding employees or treating modeled payment timing as bank evidence.",
+      "next_action": "Point readers to the retention and consultancy sections; request only the individual service/payment evidence needed for a subsequently selected payment test.",
+      "acceptance_boundary": "New employment originals, signatures or payment facts require separate source and owner acceptance.",
+      "sources": [
+        "industrial/transaction/06_ARU_TRANSITION_AND_RETENTION.md",
+        "docs/governance/PEOPLE_AND_CULTURE_DOCTRINE.md",
+        "industrial/operations/LABOR_SAFETY_AND_CONTROLS.md",
+        "industrial/source/finance.json"
+      ]
+    },
+    {
+      "gap_id": "LEGAL-GAP-URANIUM-CUSTODY",
+      "rank": 3,
+      "priority": "USE_EXISTING_FIRST",
+      "assessment": "EXISTING_BASE_AGREEMENT_FUTURE_SCOPE_EXCLUDED",
+      "exercise_routes": [
+        "contract-obligations",
+        "invoice-ledger"
+      ],
+      "reason": "The ordinary-inbound agreement supplies concrete billing and duty terms without expanding into excluded uranium service.",
+      "source_finding": "The July 7 logistics summary contains rates, clocks, invoice requirements and exclusions; direct uranium-product custody remains OPEN_GATED.",
+      "task_unlocked": "A duty-to-evidence review and, separately from the Foundry Field invoice route, a possible future intercompany billing comparison.",
+      "current_usable_alternative": "Use ordinary-inbound service terms only; a planned slot is not a shipment, and a future service period is not performed service.",
+      "next_action": "Extract the existing ordinary-inbound obligations for the contract route. Leave uranium transport adoption outside this queue.",
+      "acceptance_boundary": "Any new product-custody service requires separate operating, legal, safety, insurance and owner authorization.",
+      "sources": [
+        "industrial/transaction/08_INTERCOMPANY_LOGISTICS_AGREEMENT.md",
+        "industrial/source/operations.json"
+      ]
+    },
+    {
+      "gap_id": "LEGAL-GAP-TAX-FILING",
+      "rank": 4,
+      "priority": "USE_EXISTING_FIRST",
+      "assessment": "MISSING_SUBMISSION_EVIDENCE",
+      "exercise_routes": [
+        "acquisition-accounting",
+        "contract-obligations"
+      ],
+      "reason": "Conditional tax treatment is a useful evidence exercise; inventing successful submission would erase the teaching problem.",
+      "source_finding": "ARU-CL-07 establishes an internal filing-ready review, not external submission or acceptance.",
+      "task_unlocked": "Identify which acquisition-model conclusions depend on an unproved election and what evidence would change that assessment.",
+      "current_usable_alternative": "Use the existing tax memorandum and conditional allocation. Retain the no-election alternative as an analysis boundary; do not describe it as a separately delivered workbook.",
+      "next_action": "Include the filing-ready distinction in the acquisition route. If a later case needs a resolved outcome, obtain an accepted dated filing-status record through LEGAL-FIELD-005.",
+      "acceptance_boundary": "A newly authored fictional filing outcome needs owner acceptance; never manufacture a government confirmation.",
+      "sources": [
+        "industrial/transaction/05_ARU_CLOSING_AND_TAX_DELIVERY.md",
+        "industrial/transaction/07_ARU_TAX_STRUCTURE_MEMORANDUM.md",
+        "docs/legal/evidence/proposals/decision-register.json"
+      ]
+    },
+    {
+      "gap_id": "LEGAL-GAP-COLO",
+      "rank": 5,
+      "priority": "USE_EXISTING_FIRST",
+      "assessment": "EXISTING_DRAFT_MISSING_EXECUTION_AND_ACCEPTANCE",
+      "exercise_routes": [
+        "contract-obligations"
+      ],
+      "reason": "Comparing proposed duties to evidence needed for acceptance is valuable now; pretending a provider executed them is not.",
+      "source_finding": "The dossier supplies a proposed master, site orders and schedules; selected provider brands are not verified contracting parties.",
+      "task_unlocked": "A draft-contract readiness review, including who must approve price, scope, technical delivery and evidence rights.",
+      "current_usable_alternative": "Use the unsigned dossier beside accepted runtime decisions; calculate illustrative examples only in their stated draft/assumption status.",
+      "next_action": "Link the proposed schedules as an optional contract comparison; route legal-party/order evidence to existing LEGAL-FIELD-004 before any executed-order scenario.",
+      "acceptance_boundary": "Provider confirmation is missing. New fictional executed terms or acceptance events require owner acceptance.",
+      "sources": [
+        "enterprise/runtime/docs/CONTRACT_DOSSIER.md",
+        "docs/canon/RUNTIME_HOSTING_AND_DATA_CENTER_DECISIONS_2026-09-11.md",
+        "docs/legal/evidence/proposals/decision-register.json"
+      ]
+    },
+    {
+      "gap_id": "LEGAL-GAP-BILLING",
+      "rank": 6,
+      "priority": "OWNER_REVIEW_IF_EXPANDING",
+      "assessment": "EXISTING_UNACCEPTED_PROPOSAL",
+      "exercise_routes": [
+        "invoice-ledger"
+      ],
+      "reason": "Realistic addressing improves presentation but does not unlock invoice-to-journal tracing, which works with the accepted packet.",
+      "source_finding": "PR138 holds the existing field-level proposal; its customer identity and presentation fields are not adopted on the audited main.",
+      "task_unlocked": "A future fully addressed invoice example after field adoption and separate visual acceptance.",
+      "current_usable_alternative": "Use the exact accepted Foundry Field packet, source invoice ID and customer ID with unavailable fields left explicit.",
+      "next_action": "Review the existing proposal version 0.1.0 and SHA-256 23d8d6080ad296468d6b649eda55593d49c33cde0e6b038343ce11e4973e23f8; record accepted/rejected field IDs. Do not create another billing proposal.",
+      "acceptance_boundary": "Owner acceptance of fields is distinct from acceptance of any changed PDF or workbook.",
+      "sources": [
+        "docs/canon/READER_OVERNIGHT_SCOPE_2026-09-11.md",
+        "docs/finance/evidence/SH-FIN-HUMAN-001/source.json",
+        "docs/legal/evidence/proposals/decision-register.json",
+        "docs/canon/FINANCE_HUMAN_EVIDENCE_001_ACCEPTANCE_2026-09-11.md"
+      ]
+    },
+    {
+      "gap_id": "LEGAL-GAP-TAX-BILLING",
+      "rank": 7,
+      "priority": "OWNER_REVIEW_IF_EXPANDING",
+      "assessment": "MISSING_TREATMENT_NEW_SCENARIO_IF_REQUIRED",
+      "exercise_routes": [
+        "invoice-ledger"
+      ],
+      "reason": "A tax calculation requires facts the released invoice does not supply; the existing reconciliation does not need a new tax line.",
+      "source_finding": "The packet has no independent tax-master determination; the entity register does not resolve all parent tax treatment.",
+      "task_unlocked": "A future tax-bearing invoice scenario with an explicit basis and reconciled financial effect.",
+      "current_usable_alternative": "Trace existing booked amounts unchanged and record tax treatment as unavailable, not zero or exempt.",
+      "next_action": "Keep tax out of the current route. If tax testing is requested, scope one separate proposed scenario through BILL-DEC-003 / LEGAL-FIELD-003 with affected amounts identified.",
+      "acceptance_boundary": "Owner acceptance and an adequate source basis are required before adopting new treatment or amounts.",
+      "sources": [
+        "industrial/source/entities.json",
+        "docs/finance/evidence/SH-FIN-HUMAN-001/source.json",
+        "docs/legal/evidence/proposals/decision-register.json"
+      ]
+    },
+    {
+      "gap_id": "LEGAL-GAP-RW-CHRONOLOGY",
+      "rank": 8,
+      "priority": "DEFER_NOT_REQUIRED",
+      "assessment": "SOURCE_CONFLICT_NOT_DISCOVERY_FAILURE",
+      "exercise_routes": [
+        "acquisition-accounting"
+      ],
+      "reason": "An exact negotiation calendar is unnecessary for the selected ARU exercise or Red Wash purchase-price comparison.",
+      "source_finding": "Industrial and mine sources disagree on pre-close day precision; both preserve the closing date and selected consideration.",
+      "task_unlocked": "A later dated negotiation-history case, once the conflicting event identities are resolved.",
+      "current_usable_alternative": "Use the agreed closing date and amount; present earlier events without selecting one disputed exact day.",
+      "next_action": "If a chronology exercise is commissioned, prepare a dated correction matching each disputed event across both sources for owner review.",
+      "acceptance_boundary": "Do not silently choose dates or rewrite pinned history; accepted correction is required.",
+      "sources": [
+        "industrial/transaction/01_RW_TRANSACTION_FILE.md",
+        "red_wash/agreements/TRANSACTION_AND_COMMERCIAL_INSTRUMENTS.md",
+        "docs/canon/INDUSTRIAL_CLOSEOUT_2026-09-05.md",
+        "docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05_R2.md",
+        "industrial/source/chronology.json",
+        "red_wash/source/core_operating_data.json"
+      ]
+    },
+    {
+      "gap_id": "LEGAL-GAP-LAND",
+      "rank": 9,
+      "priority": "DEFER_NOT_REQUIRED",
+      "assessment": "ACCEPTED_OWNERSHIP_MISSING_SETTLEMENT_EVIDENCE",
+      "exercise_routes": [
+        "acquisition-accounting"
+      ],
+      "reason": "Land settlement would broaden the case but is not needed for the acquisition route; the existing clearing entry demonstrates the current limit.",
+      "source_finding": "Accepted runtime canon establishes the fictional acquisition; the finance successor explicitly leaves settlement unresolved.",
+      "task_unlocked": "A future land-to-clearing reconciliation, followed by a settlement test only when funding evidence exists.",
+      "current_usable_alternative": "Use the $3M planning event and unresolved settlement clearing; the mock deed is neither a bank record nor real title evidence.",
+      "next_action": "For an optional land case, link the existing finance bridge. Request a source-specific settlement record through LEGAL-FIELD-009 before proposing a cash, loan or payable counterpart.",
+      "acceptance_boundary": "Do not reopen accepted fictional ownership. New settlement facts need separate acceptance.",
+      "sources": [
+        "docs/canon/RUNTIME_HOSTING_AND_DATA_CENTER_DECISIONS_2026-09-11.md",
+        "docs/legal/MOCK_DEED_NORTHERN_NEVADA_DATA_CENTER_2026-09-04.md",
+        "docs/finance/RUNTIME_INFRASTRUCTURE_FINANCE_RECONCILIATION_2026-09-11.md",
+        "docs/legal/evidence/proposals/decision-register.json"
+      ]
+    },
+    {
+      "gap_id": "LEGAL-GAP-RW-TITLE",
+      "rank": 10,
+      "priority": "DEFER_NOT_REQUIRED",
+      "assessment": "EXISTING_SCHEDULES_MISSING_TRANSFER_CONFIRMATIONS",
+      "exercise_routes": [
+        "acquisition-accounting",
+        "contract-obligations"
+      ],
+      "reason": "Title-condition testing is useful later but needs a chosen scheduled right, not a generic fabricated closing binder.",
+      "source_finding": "The mine instrument lists transfer limits, scheduled rights and title/environmental escrow mechanics; it does not prove every consent or cure.",
+      "task_unlocked": "A future closing-deliverable completeness test for one selected easement, permit or consent.",
+      "current_usable_alternative": "Use the instrument and native permit register to identify what must be evidenced, retaining any transfer limitation.",
+      "next_action": "Choose one right and trace its native record before requesting a specific consent/cure artifact; preserve the escrow boundary until actual support is accepted.",
+      "acceptance_boundary": "New fictional consents or completed cures require owner acceptance; an instrument list is not confirmation.",
+      "sources": [
+        "red_wash/agreements/TRANSACTION_AND_COMMERCIAL_INSTRUMENTS.md",
+        "red_wash/source/core_operating_data.json"
+      ]
+    },
+    {
+      "gap_id": "LEGAL-GAP-FORMATIONS",
+      "rank": 11,
+      "priority": "DEFER_NOT_REQUIRED",
+      "assessment": "EXISTING_INTERNAL_RECORD_EXTERNAL_CERTIFICATES_ABSENT",
+      "exercise_routes": [
+        "acquisition-accounting"
+      ],
+      "reason": "Legal perimeter is already sufficient for the exercise; government replicas add no necessary analytical value.",
+      "source_finding": "The accepted six-entity formation record and entity register establish the fictional company chain and source-status limits.",
+      "task_unlocked": "Identify buyer, target, parent and separate operating ledgers without equating a business-line name with a corporation.",
+      "current_usable_alternative": "Use the internal formation record and legal entity IDs; preserve year precision where exact formation day is not established.",
+      "next_action": "Link the internal formation record as background; do not commission certificates, seals, state file numbers or government replicas.",
+      "acceptance_boundary": "No new document or owner decision is needed for the current exercise.",
+      "sources": [
+        "industrial/corporate/LEGAL_STRUCTURE_AND_FORMATION.md",
+        "industrial/source/entities.json"
+      ]
+    },
+    {
+      "gap_id": "LEGAL-GAP-ADVISORY-CONTRACTS",
+      "rank": 12,
+      "priority": "DEFER_NOT_REQUIRED",
+      "assessment": "EXISTING_DESIGN_STANDARD_MISSING_SCOPED_AGREEMENTS",
+      "exercise_routes": [
+        "contract-obligations"
+      ],
+      "reason": "An Advisory execution exercise would require new matter-specific paper; the ordinary-inbound agreement already provides concrete terms.",
+      "source_finding": "The term sheet specifies contract architecture and the pricing standard supplies policy, not universal executed customer agreements.",
+      "task_unlocked": "A future policy-to-SOW completeness comparison for a selected accepted matter.",
+      "current_usable_alternative": "Use the standards as requirements, or choose the existing logistics contract route for actual case-specific terms.",
+      "next_action": "First select a matter already represented in an accepted scenario, then identify missing SOW fields; only prepare proposed missing terms if that extension is requested.",
+      "acceptance_boundary": "Matter parties, negotiated terms and execution status cannot be inferred from the standard.",
+      "sources": [
+        "docs/advisory/LEGAL_AND_CONTRACTING_TERM_SHEET.md",
+        "docs/advisory/COMMERCIAL_CONTRACTING_AND_PRICING_STANDARD.md"
+      ]
+    },
+    {
+      "gap_id": "LEGAL-GAP-HOST-RIGHTS",
+      "rank": 13,
+      "priority": "DEFER_NOT_REQUIRED",
+      "assessment": "ACCEPTED_RIGHTS_INTENTIONALLY_UNFIXED_TERMS",
+      "exercise_routes": [
+        "contract-obligations"
+      ],
+      "reason": "Cradle’s rights can be understood now; a fixed payment schedule would introduce a separate quantitative scenario.",
+      "source_finding": "Canon establishes host authority, equipment ownership and capture-point rights while intentionally leaving permanent price, percentage and tonnage unfixed.",
+      "task_unlocked": "A future recovery-rights and host-settlement exercise tied to one explicitly selected quantitative case.",
+      "current_usable_alternative": "Use the accepted rights boundary; keep quantitative model assumptions inside their selected scenario.",
+      "next_action": "If extending into host settlement, identify the accepted model and its assumption lineage before requesting a scoped agreement through LEGAL-FIELD-006.",
+      "acceptance_boundary": "Do not convert scenario percentages into permanent canon or host assets into Sable Harbor property.",
+      "sources": [
+        "docs/canon/CRADLE_CLOSEOUT_2026-09-06.md",
+        "docs/legal/evidence/proposals/decision-register.json"
+      ]
+    },
+    {
+      "gap_id": "LEGAL-GAP-FINANCING-DOCUMENTS",
+      "rank": 14,
+      "priority": "DEFER_NOT_REQUIRED",
+      "assessment": "EXISTING_APPROVALS_MISSING_DEFINITIVE_TERMS",
+      "exercise_routes": [
+        "acquisition-accounting"
+      ],
+      "reason": "Detailed parent investor-rights testing is outside the selected acquisition bridge.",
+      "source_finding": "Board minutes record approximate financing approvals and governance boundaries, not complete subscription agreements or side letters.",
+      "task_unlocked": "A later board-approval versus definitive-financing-document comparison.",
+      "current_usable_alternative": "Use minutes only for what the Board approved; avoid invented thresholds, dilution mechanics or exact investment terms.",
+      "next_action": "Search for a separately accepted definitive source if that exercise is selected; otherwise retain the minutes and gap without generating financing paper.",
+      "acceptance_boundary": "New definitive fictional terms require owner acceptance.",
+      "sources": [
+        "docs/governance/board-records/2021-06-18_harrison-vale-growth-financing-minutes.md",
+        "docs/governance/board-records/2022-10-28_wolf-ridge-industrial-financing-minutes.md"
+      ]
+    },
+    {
+      "gap_id": "LEGAL-GAP-TENURE",
+      "rank": 15,
+      "priority": "DEFER_NOT_REQUIRED",
+      "assessment": "EXISTING_SITE_MODELS_MISSING_TENURE_RECORDS",
+      "exercise_routes": [
+        "contract-obligations"
+      ],
+      "reason": "Lease abstraction would be a new exercise requiring unsupported lease terms; plans already serve navigation.",
+      "source_finding": "Facility coverage and concept programs distinguish modeled plans from parcel tenure, occupancy dates and construction evidence.",
+      "task_unlocked": "A future site-specific lease or property-record review after a tenure source is accepted.",
+      "current_usable_alternative": "Use the coverage record to report known site function and exact status; never use a render date as lease or occupancy date.",
+      "next_action": "Select a stable site ID and obtain the unresolved tenure evidence through LEGAL-FIELD-007 before preparing lease abstraction material.",
+      "acceptance_boundary": "New tenure dates, leases, or construction completion are not authorized by this prioritization.",
+      "sources": [
+        "geospatial/facilities/README.md",
+        "geospatial/facilities/RESEARCH_CAMPUSES.md",
+        "docs/legal/evidence/proposals/decision-register.json"
+      ]
+    },
+    {
+      "gap_id": "LEGAL-GAP-CARRY",
+      "rank": 16,
+      "priority": "DEFER_NOT_REQUIRED",
+      "assessment": "EXISTING_POLICY_MISSING_INDIVIDUAL_GRANTS",
+      "exercise_routes": [
+        "contract-obligations"
+      ],
+      "reason": "Individual grant testing would require recipient and instrument decisions that add nothing to the three current routes.",
+      "source_finding": "The carry standard governs phantom economics and eligibility; it does not grant units or settle counsel drafting.",
+      "task_unlocked": "A future eligibility and grant-authority exercise after an eligible award has an accepted source.",
+      "current_usable_alternative": "Use the plan as policy only; no individualized serving-J2 preview or implied equity grant.",
+      "next_action": "Retain LEGAL-FIELD-008 for any future instrument request; obtain eligibility and authority before proposing an individual award.",
+      "acceptance_boundary": "Counsel-ready terms and specific owner acceptance are needed before new fictional grants.",
+      "sources": [
+        "docs/advisory/CARRY_PLAN_STANDARD.md",
+        "docs/legal/evidence/proposals/decision-register.json"
+      ]
+    },
+    {
+      "gap_id": "LEGAL-GAP-MARK-CLEARANCE",
+      "rank": 17,
+      "priority": "DEFER_NOT_REQUIRED",
+      "assessment": "ACCEPTED_NAME_EXTERNAL_CLEARANCE_ABSENT",
+      "exercise_routes": [],
+      "reason": "Trademark execution neither unlocks nor improves the three reader exercises.",
+      "source_finding": "The operating name is accepted; external clearance and registration remain distinct and unestablished.",
+      "task_unlocked": "No current reader task requires a new trademark artifact.",
+      "current_usable_alternative": "Use Sable Harbor Advisory as the accepted operating name with the existing clearance-status boundary.",
+      "next_action": "Retain the status note. Qualified external review is only needed if real commercialization is pursued.",
+      "acceptance_boundary": "Do not invent a clearance opinion, filing or registration, or reopen the operating name.",
+      "sources": [
+        "docs/legal/ADVISORY_NAME_AND_EXTERNAL_CLEARANCE_STATUS_2026-09-09.md"
+      ]
+    }
+  ]
+}

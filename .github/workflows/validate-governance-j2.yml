@@ -20,6 +20,7 @@ on:
       - scripts/organization_history.py
       - tools/organization/**
       - tools/documents/**
+      - tools/reader/**
       - tests/publications/**
       - tests/unit/test_controlled_publication_catalog.py
       - docs/internal/**
@@ -48,8 +49,20 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y poppler-utils
       - name: Check PDF compatibility backend
         run: |
-          python -m pip install -r tools/documents/requirements.txt -r tools/organization/requirements.txt
+          python -m pip install -r tools/documents/requirements.txt -r tools/organization/requirements.txt -r tools/reader/requirements.txt
           python -m unittest discover -s tests/publications
+      - name: Verify accepted artwork and practical routes
+        run: |
+          python - <<'PY'
+          import subprocess
+          from tools.documents.approval_guard import RECORDS
+          for _, revision, _ in RECORDS:
+              subprocess.run(['git', 'fetch', '--no-tags', '--depth=1', 'origin', revision], check=True)
+          PY
+          python tools/documents/approval_guard.py
+          python tools/reader/validate_routes.py
+          python tools/reader/validate_gap_priorities.py
+          python -m pytest -q tests/publications/test_approval_guard.py tests/publications/test_reader_routes.py
       - run: python scripts/validate_reader_workqueue.py
       - run: python scripts/validate_governance_j2.py
       - run: python scripts/validate_institutional_catalog.py

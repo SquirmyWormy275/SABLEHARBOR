@@ -1,0 +1,126 @@
+{
+  "method": "Automated browser journeys in existing GitHub-like local preview; not a human usability study",
+  "journeys": [
+    {
+      "task": "invoice",
+      "width": 390,
+      "paths": [
+        "README.md",
+        "docs/reader/exercises/README.md",
+        "docs/reader/exercises/INVOICE.md",
+        "docs/finance/evidence/SH-FIN-HUMAN-001/README.md"
+      ],
+      "result": "PASS"
+    },
+    {
+      "task": "acquisition",
+      "width": 390,
+      "paths": [
+        "README.md",
+        "docs/reader/exercises/README.md",
+        "docs/reader/exercises/ACQUISITION.md",
+        "industrial/finance/TRANSACTION_ACCOUNTING.md"
+      ],
+      "result": "PASS"
+    },
+    {
+      "task": "contract",
+      "width": 390,
+      "paths": [
+        "README.md",
+        "docs/reader/exercises/README.md",
+        "docs/reader/exercises/CONTRACTS.md",
+        "industrial/transaction/08_INTERCOMPANY_LOGISTICS_AGREEMENT.md"
+      ],
+      "result": "PASS"
+    },
+    {
+      "task": "authority",
+      "width": 390,
+      "paths": [
+        "README.md",
+        "docs/reader/SOURCES_AND_FORMATS.md",
+        "MAINTAINERS.md"
+      ],
+      "result": "PASS"
+    },
+    {
+      "task": "floor",
+      "width": 390,
+      "paths": [
+        "README.md",
+        "geospatial/maps/facilities/ARTIFACT_INDEX.md",
+        "geospatial/maps/facilities/SH-MAP-SAC-024.png"
+      ],
+      "result": "PASS"
+    },
+    {
+      "task": "invoice",
+      "width": 1280,
+      "paths": [
+        "README.md",
+        "docs/reader/exercises/README.md",
+        "docs/reader/exercises/INVOICE.md",
+        "docs/finance/evidence/SH-FIN-HUMAN-001/README.md"
+      ],
+      "result": "PASS"
+    },
+    {
+      "task": "acquisition",
+      "width": 1280,
+      "paths": [
+        "README.md",
+        "docs/reader/exercises/README.md",
+        "docs/reader/exercises/ACQUISITION.md",
+        "industrial/finance/TRANSACTION_ACCOUNTING.md"
+      ],
+      "result": "PASS"
+    },
+    {
+      "task": "contract",
+      "width": 1280,
+      "paths": [
+        "README.md",
+        "docs/reader/exercises/README.md",
+        "docs/reader/exercises/CONTRACTS.md",
+        "industrial/transaction/08_INTERCOMPANY_LOGISTICS_AGREEMENT.md"
+      ],
+      "result": "PASS"
+    },
+    {
+      "task": "authority",
+      "width": 1280,
+      "paths": [
+        "README.md",
+        "docs/reader/SOURCES_AND_FORMATS.md",
+        "MAINTAINERS.md"
+      ],
+      "result": "PASS"
+    },
+    {
+      "task": "floor",
+      "width": 1280,
+      "paths": [
+        "README.md",
+        "geospatial/maps/facilities/ARTIFACT_INDEX.md",
+        "geospatial/maps/facilities/SH-MAP-SAC-024.png"
+      ],
+      "result": "PASS"
+    }
+  ],
+  "source_sha256": {
+    "README.md": "163d05cf4c7e5fd974945f8936fa3b7d678af703b7a7b22a100bbc32238c15de",
+    "docs/reader/exercises/README.md": "5b4c649a50ab38a3609b72d1e875a83d22ec289dbede99d0d5626a30de7f56d3",
+    "docs/reader/exercises/INVOICE.md": "96e7b7cea62e13016a08d96b7eccd85d39f141b0545ae14f3cd837c7de9f64e6",
+    "docs/finance/evidence/SH-FIN-HUMAN-001/README.md": "e0578c47c1b66c405f9a98036dc7238892e1ac9c106a11e102cbdca8503735e2",
+    "docs/reader/exercises/ACQUISITION.md": "dcaecdb7b9ee29ea717fbbe52bfbc23e26052741d70b375aeafd661d41b60a3d",
+    "industrial/finance/TRANSACTION_ACCOUNTING.md": "d13f142968958585cfc56a7b06d54b5e95bccef6d434d11bb6bba93933a0aa58",
+    "docs/reader/exercises/CONTRACTS.md": "80faac20c9cb9161fd3e4074d2e8351b5626a6c04f9129696a872485bfa726a2",
+    "industrial/transaction/08_INTERCOMPANY_LOGISTICS_AGREEMENT.md": "23153dc86a3e9ea9fd501bce6bdf3c8478dbdf3ab79fa5e8abc84ca8bbb771fc",
+    "docs/reader/SOURCES_AND_FORMATS.md": "a9049216916aba2595bd12972e9e78a7af2f537594f9d8e017ddce71048f2aa3",
+    "MAINTAINERS.md": "69a45e9b98ce1afaabcab914bcfa615bea5dae54979c173c686dbfcd4520b392",
+    "geospatial/maps/facilities/ARTIFACT_INDEX.md": "618cde92a53b3c7a825710afb6a2bf2b6847d4f434617a96abae936c276751f8",
+    "geospatial/maps/facilities/SH-MAP-SAC-024.png": "0f8dae48f757472a17d4579aa280ae9c0b9d784f3c3e4b322aa4d7f435e42540"
+  },
+  "capture_disposition": "Full-page browser captures are reproducible CI artifacts under var/reader-journeys; separately inspected images are retained by VISUAL_REVIEW.json."
+}

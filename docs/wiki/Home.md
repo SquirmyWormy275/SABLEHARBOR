@@ -10,6 +10,8 @@ Sable Harbor develops industrial software, operates resource businesses, and pro
 
 ## Find records for a task
 
+The [three practical exercises](../reader/exercises/README.md) provide a step-by-step entry to acquisition accounting, invoice tracing, and contract review using accepted records.
+
 | I want to… | Open first | Then inspect |
 |---|---|---|
 | Reconcile an invoice, revenue balance or cash shortfall | [Accounting exercises](../finance/READER_EXERCISES.md) | Named workbook sheets and evidence files for one release, unit and period. |
