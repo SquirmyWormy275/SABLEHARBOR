@@ -21,7 +21,7 @@ from tools.evidence.inventory import inventory
 
 PREDECESSOR_SHA256 = "70723d888c6e9eccf9cc9fac87da4fd37e241468a2aefdf0fc097d7325c379d5"
 GPKG = "geospatial/master/sable_harbor_master_v0.1.gpkg"
-VERSION = "1.2.0"
+VERSION = "1.3.0"
 
 
 def sha(path):
@@ -98,6 +98,11 @@ def prepare(output, predecessor, allow_dirty=False):
     verify_evidence(output / "review")
     sites, sources = review()
     history = write_history(output / "chronology")
+    from geospatial.completion.build import build as build_completion
+
+    completion, reviewed, raster_review, docket, options, plates = build_completion(
+        output / "completion", history
+    )
     operations_raw, operations_summary, operations_rows = review_operations()
     (output / "chronology/OPERATIONS_REVIEW.csv.gz").write_bytes(operations_raw)
     dump(output / "chronology/OPERATIONS_REVIEW.json", operations_summary)
@@ -159,6 +164,23 @@ def prepare(output, predecessor, allow_dirty=False):
             raise ValueError("History references an unknown object")
         attribute_table(db, "review_site_history", history["sites"], "object_id")
         attribute_table(db, "review_operations", operations_rows, "occurrence_id")
+        attribute_table(db, "review_source_dispositions", reviewed, "occurrence_id")
+        attribute_table(db, "review_visual_dispositions", raster_review, "review_id")
+        attribute_table(db, "review_site_docket", docket["records"], "object_id")
+        attribute_table(db, "review_site_observations", docket["observations"], "observation_id")
+        attribute_table(
+            db,
+            "review_site_options",
+            [
+                dict(
+                    option_id=r["id"],
+                    **{k: v for k, v in r["properties"].items() if k != "option_id"},
+                    geometry=r["geometry"],
+                )
+                for r in options["features"]
+            ],
+            "option_id",
+        )
         attribute_table(db, "review_occurrences", residual, "occurrence_id")
         attribute_table(
             db, "review_source_coverage", source_inventory["baseline_sources"], "source_path"
@@ -197,6 +219,7 @@ def prepare(output, predecessor, allow_dirty=False):
             "site_records": len(sites["rows"]),
             "history_events": len(history["events"]),
             "operations_review": operations_summary,
+            "completion": completion,
             "remaining_occurrences": len(residual),
             "source_reconciliation": reconciliation,
             "issue_106_complete": False,
@@ -207,9 +230,9 @@ def prepare(output, predecessor, allow_dirty=False):
 
 Source: `{revision}`. {"DEVELOPMENT PREVIEW" if dirty else "Clean source build"}.
 
-Open **chronology/history.html** for the new interactive timeline, site histories and dated route views. Open **geospatial/qgis/sable_harbor_master.qgz** in QGIS. Its relative paths work after moving the complete folder. The GeoPackage is **{GPKG}**; it can also be opened directly by GIS or SQLite tools. Open **geospatial/maps/index.html** for the existing facility atlas, or **review/review.html** for the preserved offline review edition.
+Open **completion/maps/index.html** for the historical and site atlas, **completion/site-docket.html** for the 34-site evidence docket, or **completion/source-review.html** for source adjudication. Open **chronology/history.html** for the interactive timeline, site histories and dated route views. Open **geospatial/qgis/sable_harbor_master.qgz** in QGIS. Its relative paths work after moving the complete folder. The GeoPackage is **{GPKG}**; it can also be opened directly by GIS or SQLite tools. Open **geospatial/maps/index.html** for the existing facility atlas, or **review/review.html** for the preserved offline review edition.
 
-Continuity edition 1.2.0 includes 73 source-bound events/observations and an additional 295 industrial occurrence dispositions, leaving 8,666 carriers outside four reviewed batches. The original three-batch residual table remains preserved. The approved staged 2024 Klein/Fort relocation and year-bounded occupancy are included; exact days and parcel boundaries remain unknown.
+Requirements edition 1.3.0 retains 73 source-bound events/observations and adds 1,770 reviewed carriers across 147 files, leaving 6,896 outside five completed batches. It supplies nine unselected dimensioned site options, nine access tests, a complete site docket and a historical/site atlas. All 97 baseline PNGs have visual-role dispositions; all 109 PDF/office/archive containers have page/image inventories and three sparse-text PDF pages have executed OCR. The original three-batch residual table remains preserved. The approved staged 2024 Klein/Fort relocation and year-bounded occupancy are included; exact days and parcel boundaries remain unknown.
 
 The package contains {len(old_counts)} accepted feature layers, 34 site/component source bindings, 8,961 residual occurrences, 919 baseline source records and the 97-image OCR candidate population from evidence release 1.1.0. New review tables are registered as GeoPackage attributes and joined by stable IDs; they are not invented geographic features. SITE_EVIDENCE.csv is the compact review sheet. SITE_EVIDENCE.json preserves all full records, source excerpts, operational-state evidence and map-feature hashes. ARCHIVED_SOURCES.json identifies the exact historical source bytes included under archived-sources/.
 
@@ -252,6 +275,11 @@ def validate(output):
             or attributes["review_occurrences"] != 8961
             or attributes["review_source_coverage"] != 919
             or attributes["review_raster_candidates"] != 97
+            or attributes["review_source_dispositions"] != 1770
+            or attributes["review_visual_dispositions"] != 97
+            or attributes["review_site_docket"] != 34
+            or attributes["review_site_observations"] != 17
+            or attributes["review_site_options"] != 9
             or attributes["review_history_events"] != 73
             or attributes["review_site_history"] != 34
             or attributes["review_operations"] != 295
@@ -277,6 +305,12 @@ def seal(output):
     browser = json.loads((output / "chronology/BROWSER_RESULTS.json").read_text())
     if not browser["passed"] or browser["html_sha256"] != sha(output / "chronology/history.html"):
         raise ValueError("History browser qualification is absent or stale")
+    research_browser = json.loads((output / "completion/BROWSER_RESULTS.json").read_text())
+    if not research_browser["passed"] or any(
+        sha(output / "completion" / name) != digest
+        for name, digest in research_browser["html_sha256"].items()
+    ):
+        raise ValueError("Research reader browser qualification is absent or stale")
     native = json.loads((output / "NATIVE_QGIS.json").read_text())
     if (
         not native["passed"]

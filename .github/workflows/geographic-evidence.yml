@@ -4,6 +4,8 @@ on:
     paths:
       - 'geospatial/closeout/**'
       - 'geospatial/chronology/**'
+      - 'geospatial/completion/**'
+      - 'geospatial/tests/test_completion.py'
       - 'geospatial/sources/klein_fort_occupancy.json'
       - 'docs/canon/KLEIN_FORT_OCCUPANCY_2026-09-13.md'
       - 'geospatial/tests/test_chronology.py'
@@ -31,19 +33,21 @@ jobs:
       - name: Install native QGIS reader
         run: |
           sudo apt-get update
-          sudo apt-get install -y python3-qgis
+          sudo apt-get install -y python3-qgis tesseract-ocr
       - run: make bootstrap
       - name: Retrieve immutable predecessor evidence
         env:
           GH_TOKEN: ${{ github.token }}
         run: gh release download closeout-evidence-v1.1.0 --pattern sable-harbor-closeout-evidence-v1.1.0.zip --dir var/predecessor
-      - run: uv run --with-requirements geospatial/requirements.txt python -m pytest geospatial/tests/test_site_evidence.py geospatial/tests/test_chronology.py -q
+      - run: uv run --with-requirements geospatial/requirements.txt python -m pytest geospatial/tests/test_site_evidence.py geospatial/tests/test_chronology.py geospatial/tests/test_completion.py -q
       - name: Build geographic database and review records
         run: uv run --with-requirements geospatial/requirements.txt python -m geospatial.closeout.package --output var/geographic-evidence --evidence-archive var/predecessor/sable-harbor-closeout-evidence-v1.1.0.zip
       - name: Install browser for the history edition
         run: uv run --with-requirements tools/wiki/visual/requirements.txt playwright install --with-deps --only-shell chromium
       - name: Verify offline chronology and route date boundaries
         run: uv run --with-requirements tools/wiki/visual/requirements.txt python -m geospatial.chronology.check_browser --directory var/geographic-evidence/chronology
+      - name: Verify offline research readers
+        run: uv run --with-requirements tools/wiki/visual/requirements.txt python -m geospatial.completion.check_browser --directory var/geographic-evidence/completion
       - name: Read, render and relocate in native QGIS
         run: QT_QPA_PLATFORM=offscreen /usr/bin/python3 geospatial/closeout/native.py --package var/geographic-evidence
       - name: Seal verified package
