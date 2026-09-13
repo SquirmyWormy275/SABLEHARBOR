@@ -7,7 +7,7 @@
   "canon_status": "PROPOSED_SITE_GEOMETRY",
   "source_package_version": "0.1.0-rc4",
   "source_commit": "d91a22c35c91b213204411421de88815f27d8e16",
-  "source_geopackage_sha256": "dbad2c303e9b325a7e98da96c278f619c639ffe51e6514e39be9104c819f75d8",
+  "source_geopackage_sha256": "d2da433ed41700fc8c6e8dc667aec89374e7dc10787d086a90429d950158b4af",
   "projection": "EPSG:26913",
   "build_timestamp": "2026-09-07T16:00:00+00:00",
   "builder": "geospatial/scripts/render_maps.py",

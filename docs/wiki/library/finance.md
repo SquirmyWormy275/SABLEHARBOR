@@ -397,6 +397,10 @@ Generated file inventory. Includes current and historical records; open the sour
 
 - [Legal instrument revision comparison](../../legal/gap-instruments/review-support/qa/v4/PRESERVATION.md) — MD
 
+## `docs/legal/gap-instruments/review-support/qa/v4.2`
+
+- [Legal instrument revision comparison](../../legal/gap-instruments/review-support/qa/v4.2/PRESERVATION.md) — MD
+
 ## `docs/legal/gap-instruments/source`
 
 - [Advisory master services agreement and matter schedules](../../legal/gap-instruments/source/advisory-contracts.md) — MD
@@ -420,6 +424,11 @@ Generated file inventory. Includes current and historical records; open the sour
 ## `docs/legal/gap-instruments/source-impact`
 
 - [What needs rechecking when a source changes?](../../legal/gap-instruments/source-impact/README.md) — MD
+
+## `docs/legal/gap-instruments/source-impact/baseline-reconciliation-381e4ae`
+
+- [Baseline reconciliation: CI import portability](../../legal/gap-instruments/source-impact/baseline-reconciliation-381e4ae/DISPOSITION.md) — MD
+- [Source-change impact report](../../legal/gap-instruments/source-impact/baseline-reconciliation-381e4ae/REPORT.md) — MD
 
 ## `docs/legal/gap-instruments/source-impact/sample-audit`
 

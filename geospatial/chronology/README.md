@@ -1,8 +1,12 @@
 # Geographic history and source review
 
-The chronology turns accepted dates into a usable historical record: 72 events and observations, 34 corporate site/component histories, and an offline timeline with dated railway views. It includes 18 existing corporate/railway events, 12 facility openings, 26 structure construction years, 14 safety events and two directly bound site observations.
+## Approved continuity edition 1.2.0
 
-The original shop's **2021 lease observation** is bound to both its narrative heading and lease sentence. This is stronger evidence than the previous generic 2020–2022 programme label, but still does not establish exact occupancy endpoints. The [Klein/Fort continuity proposal](CONTINUITY_PROPOSAL.md) supplies a reviewable choice for the missing fictional history. It is expressly excluded from accepted events and geometry.
+The owner [accepted the proposed history](../../docs/canon/KLEIN_FORT_OCCUPANCY_2026-09-13.md). The current edition contains **73** events, including the staged 2024 relocation to separate Fort premises. Both affected site histories expose year-bounded occupancy and an as-of date query. The new source supersedes the earlier unresolved-linkage statements below; exact entry/exit days and parcels remain unknown. `GEO-C002` is resolved; the broader site/history issues retain their other requirements.
+
+The chronology turns accepted dates into a usable historical record: 73 events and observations, 34 corporate site/component histories, and an offline timeline with dated railway views. It includes 18 existing corporate/railway events, 12 facility openings, 26 structure construction years, 14 safety events, two directly bound site observations and the approved 2024 relocation.
+
+The original shop's **2021 lease observation** is bound to both its narrative heading and lease sentence. This is stronger evidence than the previous generic 2020–2022 programme label, but still does not establish exact occupancy endpoints. The [Klein/Fort continuity proposal](CONTINUITY_PROPOSAL.md) records the accepted choice for the previously missing fictional history. The original proposal is retained as review history; its approved relocation is now included in accepted events and occupancy states, without adding parcel geometry.
 
 ## Use and reproduce
 
@@ -27,4 +31,4 @@ Together with the three prior disjoint batches, this gives **69,479 classified d
 
 ## Remaining decisions
 
-#106 still requires an accepted shop/Fort continuity decision. #108 still has broader semantic, occupancy and historical geometry requirements. Proposed history must pass through a controlling accepted decision before appearing as fact in this viewer. A visually complete timeline is not evidence that missing history is known.
+#106 now has the approved shop/Fort continuity decision; other site occupancy and precision requirements remain. #108 still has broader semantic, occupancy and historical geometry requirements. Proposed history must pass through a controlling accepted decision before appearing as fact in this viewer. A visually complete timeline is not evidence that missing history is known.

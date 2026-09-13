@@ -1,11 +1,11 @@
 {
-  "version": "1.0.0",
+  "version": "1.2.0",
   "scope": "All thirty SH-SITE records and the four named Fort components. Unlocated and proposed records are retained; accepted dates are not converted into occupancy intervals.",
   "period_meanings": {
     "SH-SITE-0001": "No occupancy interval established by the headquarters location decision.",
-    "SH-SITE-0002": "2020–2022 describes historical programme context, not a lease interval or continuity with the Fort.",
-    "SH-SITE-0003": "2022–2026 is programme context; the retained operational snapshot does not establish lease commencement.",
-    "SH-SITE-0004": "2022–2025 is the Emberline venture period, not real-estate tenure.",
+    "SH-SITE-0002": "Lease documented in 2021; continued Willow use after 2022 recharter; old shop vacated during staged 2024 move. Exact days and parcel remain unknown.",
+    "SH-SITE-0003": "Separate Fort premises entered during 2024; year-bounded occupancy follows explicit owner approval, not the 2022 recharter.",
+    "SH-SITE-0004": "2022\u20132025 is the Emberline venture period, not real-estate tenure.",
     "SH-SITE-0005": "The Fairmont-area site concept does not establish an occupancy commencement date.",
     "SH-SITE-0006": "2025-07-18 is the accepted acquisition/operator event, not the mine's first occupation or a property-title assertion.",
     "SH-SITE-0007": "Accepted current synthetic railway geography; no occupancy commencement date is inferred.",
@@ -23,7 +23,7 @@
     "SH-SITE-0019": "The Advisory operating function does not identify dedicated premises or occupancy dates.",
     "SH-SITE-0020": "Aggregate railway estate identity, not an additional property or a common occupancy interval for every facility.",
     "SH-SITE-0021": "External customer delivery relationships, not company-owned premises or customer tenure dates.",
-    "SH-SITE-0022": "2024–2025 is opportunity/programme context, not a title or occupancy interval.",
+    "SH-SITE-0022": "2024\u20132025 is opportunity/programme context, not a title or occupancy interval.",
     "SH-SITE-0023": "2025 is programme/deployment context at an external Tasmanian host, not company real-estate tenure.",
     "SH-SITE-0024": "The Glasshouse incident does not establish a dated parcel or occupancy interval.",
     "SH-SITE-0025": "A licensed conversion-delivery dependency remains unlocated and independently custody-gated.",
@@ -37,7 +37,26 @@
     "SH-FAC-FORT-WHITE": "Named component of the Fort programme; no separate property or occupancy interval is inferred.",
     "SH-FAC-FORT-MUSEUM": "Working-yard identity within the Fort programme; no separate property or occupancy interval is inferred."
   },
-  "external_hosts": ["SH-SITE-0010", "SH-SITE-0021", "SH-SITE-0023", "SH-SITE-0025", "SH-SITE-0027"],
-  "runtime_dependencies": {"SH-SITE-0016": ["SH-SITE-0028", "SH-SITE-0029", "SH-SITE-0030"]},
-  "continuity_conflict": {"id": "GEO-C002", "objects": ["SH-SITE-0002", "SH-SITE-0003"], "disposition": "UNRESOLVED: no accepted evidence establishes same-site continuity or a dated relocation."}
+  "external_hosts": [
+    "SH-SITE-0010",
+    "SH-SITE-0021",
+    "SH-SITE-0023",
+    "SH-SITE-0025",
+    "SH-SITE-0027"
+  ],
+  "runtime_dependencies": {
+    "SH-SITE-0016": [
+      "SH-SITE-0028",
+      "SH-SITE-0029",
+      "SH-SITE-0030"
+    ]
+  },
+  "continuity_conflict": {
+    "id": "GEO-C002",
+    "objects": [
+      "SH-SITE-0002",
+      "SH-SITE-0003"
+    ],
+    "disposition": "RESOLVED_OWNER_APPROVED_2024_RELOCATION: distinct premises; staged move and old-shop vacancy during 2024."
+  }
 }

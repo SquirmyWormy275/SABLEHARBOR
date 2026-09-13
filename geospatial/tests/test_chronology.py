@@ -8,7 +8,7 @@ from geospatial.chronology.operations_review import review
 def test_history_preserves_evidence_and_temporal_meaning():
     result = build()
     events = {r["event_id"]: r for r in result["events"]}
-    assert len(events) == len(result["events"]) == 72
+    assert len(events) == len(result["events"]) == 73
     assert len(result["sites"]) == 34
     assert not any(e["occupancy_interval_established"] for e in events.values())
     lease = events["OBS-KLEIN-LEASE-2021"]
@@ -17,12 +17,17 @@ def test_history_preserves_evidence_and_temporal_meaning():
     assert lease["precision"] == "YEAR"
     assert lease["earliest"] == "2021-01-01" and lease["latest"] == "2021-12-31"
     assert (
-        next(s for s in result["sites"] if s["object_id"] == "SH-SITE-0002")["occupancy_interval"]
-        is None
+        next(s for s in result["sites"] if s["object_id"] == "SH-SITE-0002")["occupancy_interval"][
+            "latest_end"
+        ]
+        == "2025-01-01"
     )
     assert events["SH-EVT-0008"]["evidence"]["evidence"]["ownership_effective_on"] == "2026-01-07"
     assert all(e["object_ids"] == [] for e in events.values() if e["kind"] == "SAFETY_EVENT")
-    assert not any("2024 relocation" in e["title"].lower() for e in events.values())
+    assert events["MOVE-KLEIN-FORT-2024"]["date_text"] == "2024"
+    assert events["MOVE-KLEIN-FORT-2024"]["evidence"]["decision_id"] == "GEO-KLEIN-FORT-20260913"
+    assert all(e["source_revision"] == e["evidence"]["revision"] for e in events.values())
+    assert events["MOVE-KLEIN-FORT-2024"]["source_revision"] == result["build_revision"]
 
 
 def test_route_history_does_not_backfill_unknown_alignment():

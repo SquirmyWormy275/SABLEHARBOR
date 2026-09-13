@@ -38,4 +38,6 @@ None of the 11 issues meets every remaining acceptance criterion in the inspecte
 
 Runtime and CCF implementation boundaries remain with their owning work. The [dated issue review](../audit/PROFESSIONAL_PRESENTATION_ISSUE_REVIEW.json) records the inspected baseline, source hashes and each disposition. It is a snapshot, not a live issue tracker.
 
-The [geographic history edition](../../geospatial/chronology/README.md) adds dated events, site histories and an interactive railway chronology. The [Klein/Fort continuity proposal](../../geospatial/chronology/CONTINUITY_PROPOSAL.md) identifies the new fictional facts that require acceptance; it is excluded from accepted timeline data.
+The [geographic history edition](../../geospatial/chronology/README.md) adds dated events, site histories and an interactive railway chronology. The [Klein/Fort continuity decision](../../docs/canon/KLEIN_FORT_OCCUPANCY_2026-09-13.md) now accepts separate premises and staged relocation in 2024; the history edition includes its year-bounded occupancy.
+
+The owner has now [approved Klein/Fort continuity](../../docs/canon/KLEIN_FORT_OCCUPANCY_2026-09-13.md): separate premises, continued use after recharter, and a staged 2024 relocation. GEO-C002 is resolved. Exact days, parcels and other site/history requirements remain separate.
