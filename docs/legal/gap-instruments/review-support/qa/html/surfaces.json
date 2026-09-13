@@ -3,19 +3,19 @@
   "surfaces": [
     {
       "path": "START_HERE.html",
-      "sha256": "eaf1fc468d2ff432464bdb00c83fb23e09558cc2d3572453f151ea3fb5b39aab",
+      "sha256": "f261721845cf8c14d9d3573e9ca696d7841a83960cfe19332b09704ed5aa79d3",
       "desktop_viewports": 2,
       "mobile_overflow": false,
       "contacts": [
         {
           "file": "01-contact-000.png",
-          "sha256": "1a392a2eedd5ec43433f2554c08bee1c6e09e8cb94de69052c1acc9d341017a5"
+          "sha256": "6318e0af5a5ae973b3309325be85d5c8b075a6077e616d9a56bd28ea4e4cc7e9"
         }
       ]
     },
     {
       "path": "docs/legal/gap-instruments/accounting/LINKS.md.html",
-      "sha256": "2939849d6d3599feea0eaa86218f2f81934ad87a8fc511e8af5c5b5ef6f8b547",
+      "sha256": "4558c3e02933069b934ec836be0032dbe47e5c6ec5600c16285d437ae5376b5f",
       "desktop_viewports": 17,
       "mobile_overflow": false,
       "contacts": [
@@ -43,13 +43,13 @@
     },
     {
       "path": "docs/legal/gap-instruments/accounting/README.md.html",
-      "sha256": "6fcc7d1f1cc54cd041dad49c8e2393167e21a2e05fcd4b8369c539adaf351e78",
+      "sha256": "1c288f8d27924855d7c887096e6be9ed5c440a9851b9e951be9c64555d746a55",
       "desktop_viewports": 2,
       "mobile_overflow": false,
       "contacts": [
         {
           "file": "03-contact-000.png",
-          "sha256": "066f5b2473db47ec09490be0d55efee54ff86c37559f65c50222b27cea35f67f"
+          "sha256": "5e2b2a321a441e11bc7c1a0e3ac40f0f39caaf2420d9678d9d8ea1a7dda945c8"
         }
       ]
     },

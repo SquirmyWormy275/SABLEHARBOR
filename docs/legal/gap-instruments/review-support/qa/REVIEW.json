@@ -92,13 +92,13 @@
     "docs/legal/gap-instruments/practice/qa/revenue-dispute-blank.png": "7fd259231f6bf27eff5e1c0b381e71a1786a047f5ff2f2bd5ea4ec38e7e5b1ca",
     "docs/legal/gap-instruments/practice/qa/revenue-dispute-worked.png": "fe2f4f7d467f6c3f7af426d0eec1c752a9f561fe7faa5471b3522d7cafe2f365",
     "docs/legal/gap-instruments/review-support/qa/README.md": "2dc7a14d8d79e98a57c95686afc3aac6383289cd7d5a78d88a1d07fa3e7b21ec",
-    "docs/legal/gap-instruments/review-support/qa/html/01-contact-000.png": "1a392a2eedd5ec43433f2554c08bee1c6e09e8cb94de69052c1acc9d341017a5",
+    "docs/legal/gap-instruments/review-support/qa/html/01-contact-000.png": "6318e0af5a5ae973b3309325be85d5c8b075a6077e616d9a56bd28ea4e4cc7e9",
     "docs/legal/gap-instruments/review-support/qa/html/02-contact-000.png": "4c7e3d5f06ca4c7907854ab148c4aae4ab70060ad89e6ad697e44c51114b53c7",
     "docs/legal/gap-instruments/review-support/qa/html/02-contact-004.png": "da8c5b281f95154c9c623705feefa1d46446a166832ef0d9965d7c56a626f0c9",
     "docs/legal/gap-instruments/review-support/qa/html/02-contact-008.png": "8409b3eb7b9c31c5f5cc3c63b8371b579a1c19f4e5abe4663a651cf8e9ca2a96",
     "docs/legal/gap-instruments/review-support/qa/html/02-contact-012.png": "77af311c8a4ea470abb7da7ac69d44c0326076860dfff71b4bae7c1ff6e79205",
     "docs/legal/gap-instruments/review-support/qa/html/02-contact-016.png": "9d22ab9692756fec93c424972277aa6a8b4cc4f3e18ef96c003f8147b9b7374e",
-    "docs/legal/gap-instruments/review-support/qa/html/03-contact-000.png": "066f5b2473db47ec09490be0d55efee54ff86c37559f65c50222b27cea35f67f",
+    "docs/legal/gap-instruments/review-support/qa/html/03-contact-000.png": "5e2b2a321a441e11bc7c1a0e3ac40f0f39caaf2420d9678d9d8ea1a7dda945c8",
     "docs/legal/gap-instruments/review-support/qa/html/04-contact-000.png": "ae443138f008a98f6c0023ab88cd477bf62d4e684e298c9d2202c02b8b81fa1d",
     "docs/legal/gap-instruments/review-support/qa/html/05-contact-000.png": "0469070bc98cc45d63d445da635cf5ca95f009617f0384f14addd22514b855be",
     "docs/legal/gap-instruments/review-support/qa/html/06-contact-000.png": "276b2de67ad82b2d77bb106a728d26c21ea4978762d438004c138ba3cc29fddd",
@@ -168,7 +168,7 @@
     "docs/legal/gap-instruments/review-support/qa/html/horizontal/table-07-850.png": "cfed6c2d74a0c622304019a15e5e5c5052dd4be8eecd1e09d03adc0e36c867b7",
     "docs/legal/gap-instruments/review-support/qa/html/horizontal/table-07-left.png": "306b6eaf19028e7dc0db4ad170d513a98321c46f258d1dfc9fbbf85d841913a4",
     "docs/legal/gap-instruments/review-support/qa/html/horizontal/table-07-right.png": "7fc9a338e5715fdbe0bdc6b118bd0f6f42486f625c6858e3ed345a5e8ced3caa",
-    "docs/legal/gap-instruments/review-support/qa/html/surfaces.json": "2d0e3d4ef22c8a990dc13eb699f8ef201a629ff03f8c8468effe2d292df354a6",
+    "docs/legal/gap-instruments/review-support/qa/html/surfaces.json": "d960c0399b9199beb5a699c5e8b4c990f7af80736cebf17803d829eda23ef231",
     "docs/legal/gap-instruments/review-support/qa/workbook/REVIEW.json": "a73f3c879fc2f41c150ce50483be84f12a13955959266fc795be9dba4e09711f",
     "docs/legal/gap-instruments/review-support/qa/workbook/page-01.png": "f5a60cc06689bcdab879f4710c1bb0baee021df50984c30221621f094ebe424f",
     "docs/legal/gap-instruments/review-support/qa/workbook/page-02.png": "ef1c545b0da25a48d868ca60bbcfa6d91c311bbce942130c14f4108d6a85661f",
@@ -230,5 +230,11 @@
     "docs/legal/gap-instruments/review-support/qa/workbook/source-right-13.png": "7ebb34264e0d85092b7d0180773d27632df819a5a5e1c3aabe89ec3b24efc887",
     "docs/legal/gap-instruments/review-support/qa/workbook/source-right-14.png": "af4adf79adb00a351afaa7b2c97bdbf6e2039b648aa0d78c932327c94008b62a"
   },
-  "html_review": "Preview-d rendered from these sources; 14 complete new surfaces manually inspected including horizontal table offsets; 17 source-reading companions pixel-identical to reviewed original HTML. Final clean release binds its own source revision and artifact manifest; review does not confer acceptance."
+  "html_review": "Final clean c399740 release: all 31 HTML surfaces rendered (74 viewports). START_HERE and accounting README changes manually inspected; all other contact sheets match prior complete manual review. All 17 instrument companions remain pixel-identical. Owner acceptance remains pending.",
+  "release": {
+    "source_revision": "c39974070ccdae1205e71fa1b0f86eb7b3b6d000",
+    "zip_sha256": "859e3168ac2f0906c4933ffea183b5366c410174d58dee4237bad833b6baed64",
+    "retrieval_verified": true,
+    "status": "DRAFT"
+  }
 }
