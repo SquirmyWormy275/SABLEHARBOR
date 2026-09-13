@@ -25,9 +25,15 @@ jobs:
       - run: python tools/legal_gaps/accounting.py --check
       - run: python tools/legal_gaps/practice.py validate
       - run: python tools/legal_gaps/validate_review_support.py
+      - run: python tools/legal_gaps/walkthroughs.py --check
+      - run: python tools/legal_gaps/reconciliations.py validate
+      - run: python tools/legal_gaps/reconciliations.py qa-check
+      - run: python tools/legal_gaps/validate_practical_work.py
+      - run: python tools/reader/usability.py --check
+      - run: python -m pytest -q tests/publications/test_legal_decision_import.py tests/publications/test_legal_walkthroughs.py tests/publications/test_legal_reconciliations.py tests/publications/test_legal_package_v3.py tests/publications/test_reader_usability.py --confcutdir=tests/publications
       - run: python tools/legal_gaps/revisions.py --output "$RUNNER_TEMP/legal-revision-check" --fail-on-change
       - run: python -m pytest -q tests/publications/test_legal_decisions.py tests/publications/test_legal_accounting.py tests/publications/test_legal_practice.py tests/publications/test_legal_revisions.py tests/publications/test_legal_package.py --confcutdir=tests/publications
-      - run: python tools/legal_gaps/package.py --output "$RUNNER_TEMP/legal-review-bundle"
+      - run: python tools/legal_gaps/package_v3.py --output "$RUNNER_TEMP/legal-review-bundle"
       - uses: actions/upload-artifact@v4
         with:
           name: legal-review-bundle

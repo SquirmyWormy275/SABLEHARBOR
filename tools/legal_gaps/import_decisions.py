@@ -244,7 +244,7 @@ def import_workbook(workbook, output, root=ROOT):
         "",
         "**PROPOSAL ONLY — not approved or applied.**",
         "",
-        f"{len(items)} source items checked; {len(changes)} exact field replacements proposed.",
+        f"Source items checked: {len(items)}. Proposed field replacements: {len(changes)}.",
         "",
         (
             "The original sources and all PDF, HTML and workbook editions remain unchanged. "
@@ -261,7 +261,7 @@ def import_workbook(workbook, output, root=ROOT):
     ]
     for relative in sorted({c["source_path"] for c in changes}):
         before = raw[relative].splitlines(keepends=True)
-        after_text = json.dumps(proposals[relative], indent=2) + "\n"
+        after_text = json.dumps(proposals[relative], indent=2, ensure_ascii=False) + "\n"
         target = output / "proposed" / relative
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(after_text)

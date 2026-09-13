@@ -6,11 +6,11 @@ Generated reconciliation queue, not an assertion that every unpaired record lack
 
 | State | Records |
 |---|---:|
-| COUNTERPART_REVIEW_REQUIRED | 63 |
+| COUNTERPART_REVIEW_REQUIRED | 65 |
 | HISTORICAL_COUNTERPART_UNRESOLVED | 57 |
 | NAVIGATION_ALIAS_NO_PUBLICATION | 3 |
 | READER_MAINTENANCE_NO_LETTERHEAD | 111 |
-| READER_OR_MAINTENANCE_PAGE | 160 |
+| READER_OR_MAINTENANCE_PAGE | 164 |
 | UNRESOLVED_DOCUMENT_COUNTERPART | 227 |
 | VERIFIED_ACCEPTED_EVIDENCE_PACKET | 1 |
 | VERIFIED_CHART_PUBLICATION | 40 |
@@ -45,6 +45,7 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Legal entities and separate books](../../legal/evidence/corporate/SH-LEGAL-READ-ENTITY-001.md) — SH-FIN-HUMAN-001
 - [ARU transition and retention obligations](../../legal/evidence/corporate/SH-LEGAL-READ-HR-001.md) — SH-FIN-HUMAN-001
 - [Draft instrument index](../../legal/gap-instruments/PACKAGE_INDEX.md) — SH-FIN-HUMAN-001
+- [Case walkthroughs, reconciliations and decision import](../../legal/gap-instruments/PRACTICAL_WORK.md) — SH-FIN-HUMAN-001
 - [Seventeen legal gap packages — drafting and validation record](../../legal/gap-instruments/RESULTS.md) — SH-FIN-HUMAN-001
 - [Legal review bundle releases](../../legal/gap-instruments/REVIEW_RELEASES.md) — SH-FIN-HUMAN-001
 - [Review, trace and use the legal documents](../../legal/gap-instruments/REVIEW_WORKFLOW.md) — SH-FIN-HUMAN-001
@@ -57,6 +58,7 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Taylor–Red Wash legal due diligence](../../legal/gap-instruments/practice/legal-due-diligence/WORKED.md) — SH-FIN-HUMAN-001
 - [Foundry Field revenue and credit dispute](../../legal/gap-instruments/practice/revenue-dispute/TASK.md) — SH-FIN-HUMAN-001
 - [Foundry Field revenue and credit dispute](../../legal/gap-instruments/practice/revenue-dispute/WORKED.md) — SH-FIN-HUMAN-001
+- [Public worked reconciliations](../../legal/gap-instruments/reconciliations/WORKED.md) — SH-FIN-HUMAN-001
 - [Consolidated review decisions](../../legal/gap-instruments/review-support/DECISIONS.md) — SH-FIN-HUMAN-001
 - [Comparing legal draft revisions](../../legal/gap-instruments/revision-policy.md) — SH-FIN-HUMAN-001
 - [Advisory master services agreement and matter schedules](../../legal/gap-instruments/source/advisory-contracts.md) — SH-FIN-HUMAN-001

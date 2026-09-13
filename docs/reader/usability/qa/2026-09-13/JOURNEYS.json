@@ -1,0 +1,227 @@
+{
+  "method": "Automated browser journeys in existing GitHub-like local preview; not a human usability study",
+  "journeys": [
+    {
+      "task": "draft_review",
+      "width": 390,
+      "paths": [
+        "README.md",
+        "docs/reader/transactions/README.md",
+        "docs/legal/gap-instruments/REVIEW_WORKFLOW.md"
+      ],
+      "result": "PASS"
+    },
+    {
+      "task": "wiki_invoice",
+      "width": 390,
+      "paths": [
+        "docs/wiki/Start-Here.md",
+        "docs/reader/exercises/INVOICE.md",
+        "docs/finance/evidence/SH-FIN-HUMAN-001/README.md"
+      ],
+      "result": "PASS"
+    },
+    {
+      "task": "finance_department",
+      "width": 390,
+      "paths": [
+        "docs/wiki/Home.md",
+        "docs/wiki/departments/finance.md",
+        "docs/finance/READER_EXERCISES.md"
+      ],
+      "result": "PASS"
+    },
+    {
+      "task": "invoice",
+      "width": 390,
+      "paths": [
+        "README.md",
+        "docs/reader/exercises/README.md",
+        "docs/reader/exercises/INVOICE.md",
+        "docs/finance/evidence/SH-FIN-HUMAN-001/README.md"
+      ],
+      "result": "PASS"
+    },
+    {
+      "task": "acquisition",
+      "width": 390,
+      "paths": [
+        "README.md",
+        "docs/reader/exercises/README.md",
+        "docs/reader/exercises/ACQUISITION.md",
+        "industrial/finance/TRANSACTION_ACCOUNTING.md"
+      ],
+      "result": "PASS"
+    },
+    {
+      "task": "contract",
+      "width": 390,
+      "paths": [
+        "README.md",
+        "docs/reader/exercises/README.md",
+        "docs/reader/exercises/CONTRACTS.md",
+        "industrial/transaction/08_INTERCOMPANY_LOGISTICS_AGREEMENT.md"
+      ],
+      "result": "PASS"
+    },
+    {
+      "task": "authority",
+      "width": 390,
+      "paths": [
+        "README.md",
+        "docs/reader/SOURCES_AND_FORMATS.md",
+        "MAINTAINERS.md"
+      ],
+      "result": "PASS"
+    },
+    {
+      "task": "floor",
+      "width": 390,
+      "paths": [
+        "README.md",
+        "geospatial/maps/facilities/ARTIFACT_INDEX.md",
+        "geospatial/maps/facilities/SH-MAP-SAC-024.png"
+      ],
+      "result": "PASS"
+    },
+    {
+      "task": "draft_review",
+      "width": 1280,
+      "paths": [
+        "README.md",
+        "docs/reader/transactions/README.md",
+        "docs/legal/gap-instruments/REVIEW_WORKFLOW.md"
+      ],
+      "result": "PASS"
+    },
+    {
+      "task": "wiki_invoice",
+      "width": 1280,
+      "paths": [
+        "docs/wiki/Start-Here.md",
+        "docs/reader/exercises/INVOICE.md",
+        "docs/finance/evidence/SH-FIN-HUMAN-001/README.md"
+      ],
+      "result": "PASS"
+    },
+    {
+      "task": "finance_department",
+      "width": 1280,
+      "paths": [
+        "docs/wiki/Home.md",
+        "docs/wiki/departments/finance.md",
+        "docs/finance/READER_EXERCISES.md"
+      ],
+      "result": "PASS"
+    },
+    {
+      "task": "invoice",
+      "width": 1280,
+      "paths": [
+        "README.md",
+        "docs/reader/exercises/README.md",
+        "docs/reader/exercises/INVOICE.md",
+        "docs/finance/evidence/SH-FIN-HUMAN-001/README.md"
+      ],
+      "result": "PASS"
+    },
+    {
+      "task": "acquisition",
+      "width": 1280,
+      "paths": [
+        "README.md",
+        "docs/reader/exercises/README.md",
+        "docs/reader/exercises/ACQUISITION.md",
+        "industrial/finance/TRANSACTION_ACCOUNTING.md"
+      ],
+      "result": "PASS"
+    },
+    {
+      "task": "contract",
+      "width": 1280,
+      "paths": [
+        "README.md",
+        "docs/reader/exercises/README.md",
+        "docs/reader/exercises/CONTRACTS.md",
+        "industrial/transaction/08_INTERCOMPANY_LOGISTICS_AGREEMENT.md"
+      ],
+      "result": "PASS"
+    },
+    {
+      "task": "authority",
+      "width": 1280,
+      "paths": [
+        "README.md",
+        "docs/reader/SOURCES_AND_FORMATS.md",
+        "MAINTAINERS.md"
+      ],
+      "result": "PASS"
+    },
+    {
+      "task": "floor",
+      "width": 1280,
+      "paths": [
+        "README.md",
+        "geospatial/maps/facilities/ARTIFACT_INDEX.md",
+        "geospatial/maps/facilities/SH-MAP-SAC-024.png"
+      ],
+      "result": "PASS"
+    }
+  ],
+  "source_sha256": {
+    "README.md": "4337d93605cd90f3a0a357242deca21c0defaf13c721e8e492845d36dbd4cb98",
+    "docs/reader/transactions/README.md": "ecee864180bed42a59dbc18d1f789aa7f650f520edac0e37d9f8a23ac58463f9",
+    "docs/legal/gap-instruments/REVIEW_WORKFLOW.md": "8b54945de408dbdf77e8c2cde4efa16fb2ff2c283ed930c8f952d1f057cf3494",
+    "docs/wiki/Start-Here.md": "e8b184d551f16de39514c4c360fa4cdd24148c57143108004157468ff50ed850",
+    "docs/reader/exercises/INVOICE.md": "96e7b7cea62e13016a08d96b7eccd85d39f141b0545ae14f3cd837c7de9f64e6",
+    "docs/finance/evidence/SH-FIN-HUMAN-001/README.md": "e0578c47c1b66c405f9a98036dc7238892e1ac9c106a11e102cbdca8503735e2",
+    "docs/wiki/Home.md": "4f9e6a2eb40175a86969a5db41b86c1117182e07beacf66e344886fecd1fcf5f",
+    "docs/wiki/departments/finance.md": "fca680a08382eec752cff2d1ae1d2befd1f0d58a65e7c6586f2914e060d8747b",
+    "docs/finance/READER_EXERCISES.md": "027e27b616be6ad4ebe913293851b15c42427d3ed0bb94becb961c4b6ab8bf93",
+    "docs/reader/exercises/README.md": "5b4c649a50ab38a3609b72d1e875a83d22ec289dbede99d0d5626a30de7f56d3",
+    "docs/reader/exercises/ACQUISITION.md": "dcaecdb7b9ee29ea717fbbe52bfbc23e26052741d70b375aeafd661d41b60a3d",
+    "industrial/finance/TRANSACTION_ACCOUNTING.md": "d13f142968958585cfc56a7b06d54b5e95bccef6d434d11bb6bba93933a0aa58",
+    "docs/reader/exercises/CONTRACTS.md": "80faac20c9cb9161fd3e4074d2e8351b5626a6c04f9129696a872485bfa726a2",
+    "industrial/transaction/08_INTERCOMPANY_LOGISTICS_AGREEMENT.md": "23153dc86a3e9ea9fd501bce6bdf3c8478dbdf3ab79fa5e8abc84ca8bbb771fc",
+    "docs/reader/SOURCES_AND_FORMATS.md": "fef4719dd8c56f9b8c147d07798c1b8a83b5e78e2c8568b243555740de6d3472",
+    "MAINTAINERS.md": "69a45e9b98ce1afaabcab914bcfa615bea5dae54979c173c686dbfcd4520b392",
+    "geospatial/maps/facilities/ARTIFACT_INDEX.md": "618cde92a53b3c7a825710afb6a2bf2b6847d4f434617a96abae936c276751f8",
+    "geospatial/maps/facilities/SH-MAP-SAC-024.png": "0f8dae48f757472a17d4579aa280ae9c0b9d784f3c3e4b322aa4d7f435e42540"
+  },
+  "screenshots": [
+    "MAINTAINERS.md-1280.png",
+    "MAINTAINERS.md-390.png",
+    "README.md-1280.png",
+    "README.md-390.png",
+    "docs__finance__READER_EXERCISES.md-1280.png",
+    "docs__finance__READER_EXERCISES.md-390.png",
+    "docs__finance__evidence__SH-FIN-HUMAN-001__README.md-1280.png",
+    "docs__finance__evidence__SH-FIN-HUMAN-001__README.md-390.png",
+    "docs__legal__gap-instruments__REVIEW_WORKFLOW.md-1280.png",
+    "docs__legal__gap-instruments__REVIEW_WORKFLOW.md-390.png",
+    "docs__reader__SOURCES_AND_FORMATS.md-1280.png",
+    "docs__reader__SOURCES_AND_FORMATS.md-390.png",
+    "docs__reader__exercises__ACQUISITION.md-1280.png",
+    "docs__reader__exercises__ACQUISITION.md-390.png",
+    "docs__reader__exercises__CONTRACTS.md-1280.png",
+    "docs__reader__exercises__CONTRACTS.md-390.png",
+    "docs__reader__exercises__INVOICE.md-1280.png",
+    "docs__reader__exercises__INVOICE.md-390.png",
+    "docs__reader__exercises__README.md-1280.png",
+    "docs__reader__exercises__README.md-390.png",
+    "docs__reader__transactions__README.md-1280.png",
+    "docs__reader__transactions__README.md-390.png",
+    "docs__wiki__Home.md-1280.png",
+    "docs__wiki__Home.md-390.png",
+    "docs__wiki__Start-Here.md-1280.png",
+    "docs__wiki__Start-Here.md-390.png",
+    "docs__wiki__departments__finance.md-1280.png",
+    "docs__wiki__departments__finance.md-390.png",
+    "geospatial__maps__facilities__ARTIFACT_INDEX.md-1280.png",
+    "geospatial__maps__facilities__ARTIFACT_INDEX.md-390.png",
+    "industrial__finance__TRANSACTION_ACCOUNTING.md-1280.png",
+    "industrial__finance__TRANSACTION_ACCOUNTING.md-390.png",
+    "industrial__transaction__08_INTERCOMPANY_LOGISTICS_AGREEMENT.md-1280.png",
+    "industrial__transaction__08_INTERCOMPANY_LOGISTICS_AGREEMENT.md-390.png"
+  ]
+}

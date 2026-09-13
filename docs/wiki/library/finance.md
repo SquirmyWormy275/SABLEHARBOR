@@ -233,6 +233,7 @@ Generated file inventory. Includes current and historical records; open the sour
 ## `docs/legal/gap-instruments`
 
 - [Draft instrument index](../../legal/gap-instruments/PACKAGE_INDEX.md) — MD
+- [Case walkthroughs, reconciliations and decision import](../../legal/gap-instruments/PRACTICAL_WORK.md) — MD
 - [Legal gap instruments — draft review](../../legal/gap-instruments/README.md) — MD
 - [Seventeen legal gap packages — drafting and validation record](../../legal/gap-instruments/RESULTS.md) — MD
 - [Legal review bundle releases](../../legal/gap-instruments/REVIEW_RELEASES.md) — MD
@@ -244,6 +245,10 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Contract clauses and accounting evidence](../../legal/gap-instruments/accounting/LINKS.md) — MD
 - [Contract clauses and accounting evidence](../../legal/gap-instruments/accounting/README.md) — MD
 - [links](../../legal/gap-instruments/accounting/links.xlsx) — XLSX
+
+## `docs/legal/gap-instruments/decision-import`
+
+- [Import a completed decision workbook](../../legal/gap-instruments/decision-import/README.md) — MD
 
 ## `docs/legal/gap-instruments/dependencies`
 
@@ -322,6 +327,13 @@ Generated file inventory. Includes current and historical records; open the sour
 
 - [Exact-artifact visual QA](../../legal/gap-instruments/qa/README.md) — MD
 
+## `docs/legal/gap-instruments/reconciliations`
+
+- [Reconciliation practice](../../legal/gap-instruments/reconciliations/README.md) — MD
+- [Public worked reconciliations](../../legal/gap-instruments/reconciliations/WORKED.md) — MD
+- [blank](../../legal/gap-instruments/reconciliations/blank.xlsx) — XLSX
+- [worked](../../legal/gap-instruments/reconciliations/worked.xlsx) — XLSX
+
 ## `docs/legal/gap-instruments/review-support`
 
 - [Consolidated review decisions](../../legal/gap-instruments/review-support/DECISIONS.md) — MD
@@ -350,6 +362,11 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Sacramento, Fort and Bedford proposed site tenure and access instrument](../../legal/gap-instruments/source/tenure.md) — MD
 - [Conditional future Red Wash product custody and carrier agreement](../../legal/gap-instruments/source/uranium-custody.md) — MD
 - [ARU individual retention agreements and Tolman consultancy](../../legal/gap-instruments/source/workforce.md) — MD
+
+## `docs/legal/gap-instruments/walkthroughs`
+
+- [Follow a transaction into the books](../../legal/gap-instruments/walkthroughs/README.md) — MD
+- [walkthroughs](../../legal/gap-instruments/walkthroughs/walkthroughs.xlsx) — XLSX
 
 ## `enterprise/business`
 

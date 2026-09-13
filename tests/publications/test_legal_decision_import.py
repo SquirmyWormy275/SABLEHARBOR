@@ -76,6 +76,7 @@ def test_explicit_replacement_exact_diff_database_and_no_writeback(workspace):
         )
     )
     assert (output / "debt-liens.diff").read_text() == expected_diff
+    assert expected_diff.count("\n@@ ") == 1  # No unrelated Unicode escape churn.
     with sqlite3.connect(output / "review.sqlite3") as db:
         assert db.execute("SELECT count(*) FROM response").fetchone()[0] == 125
         assert db.execute("SELECT count(*) FROM proposed_change").fetchone()[0] == 1

@@ -13,8 +13,8 @@ ALLOWED_LARGE_PUBLIC_ARTIFACTS = {
     # PR158 legal packages and review tools; full reader regeneration verified.
     # Exact bytes only: no general allowance for new databases or later drift.
     Path("docs/internal/institutional_catalog.sqlite3"): (
-        10838016,
-        "3d124cac736741b0c086ddb4862d9b1a460eeac21a4e9c676f139dc306eb3d40",
+        10887168,
+        "d01be4550a722b048cde43649b82462c31eae1571c58dc6c3d721ad52f434cfe",
     ),
     # Reviewed September 10 successor: six approved J2 names, unchanged public scope.
     Path("docs/organization/assets/current/Sable-Harbor-Organization-Charts.pdf"): (

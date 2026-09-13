@@ -1,0 +1,178 @@
+{
+  "method": "AGENT_TASK_WALKTHROUGH_NOT_HUMAN_USER_STUDY",
+  "accepted_main": "9cc0d2a5c31700dcd166ef9acf1dd284bddb6e8d",
+  "task_source_sha256": "f950a6028a6e2726da482479eec48361e51ee23a06631a8715eb413e7c98b89b",
+  "tasks": [
+    {
+      "id": "READ-01",
+      "question": "Open the ARU closing statement from the README.",
+      "route": [
+        "README.md",
+        "docs/reader/exercises/README.md",
+        "docs/reader/exercises/ACQUISITION.md",
+        "industrial/publications/SH-IND-ARU-CLOSE-001_v1.0.0.pdf"
+      ],
+      "expected_pdf_text": [
+        "January 7, 2026",
+        "ARU-CL-07"
+      ],
+      "finding": "The route reaches the closing statement in three links and identifies the filing-ready versus external filing boundary.",
+      "result": "PASS",
+      "links_followed": 3,
+      "input_hashes": {
+        "README.md": "4337d93605cd90f3a0a357242deca21c0defaf13c721e8e492845d36dbd4cb98",
+        "docs/reader/exercises/README.md": "5b4c649a50ab38a3609b72d1e875a83d22ec289dbede99d0d5626a30de7f56d3",
+        "docs/reader/exercises/ACQUISITION.md": "dcaecdb7b9ee29ea717fbbe52bfbc23e26052741d70b375aeafd661d41b60a3d",
+        "industrial/publications/SH-IND-ARU-CLOSE-001_v1.0.0.pdf": "2db8049ce4ee571d4a681505321b73af49739adb2cbd86d1fae78e92082d7883"
+      },
+      "pdf_pages": 2
+    },
+    {
+      "id": "READ-02",
+      "question": "Find the accepted Foundry Field workbook starting at the Wiki start page.",
+      "route": [
+        "docs/wiki/Start-Here.md",
+        "docs/reader/exercises/INVOICE.md",
+        "docs/finance/evidence/SH-FIN-HUMAN-001/README.md",
+        "docs/finance/evidence/SH-FIN-HUMAN-001/reconciliation.xlsx"
+      ],
+      "expected_sheets": [
+        "Reconciliation",
+        "Movements",
+        "Journal",
+        "Terms and credits",
+        "Source register"
+      ],
+      "finding": "The exact five named sheets exist. The Wiki introduction was corrected to promise contract terms, movements and journals, rather than unavailable delivery evidence.",
+      "result": "PASS",
+      "links_followed": 3,
+      "input_hashes": {
+        "docs/wiki/Start-Here.md": "e8b184d551f16de39514c4c360fa4cdd24148c57143108004157468ff50ed850",
+        "docs/reader/exercises/INVOICE.md": "96e7b7cea62e13016a08d96b7eccd85d39f141b0545ae14f3cd837c7de9f64e6",
+        "docs/finance/evidence/SH-FIN-HUMAN-001/README.md": "e0578c47c1b66c405f9a98036dc7238892e1ac9c106a11e102cbdca8503735e2",
+        "docs/finance/evidence/SH-FIN-HUMAN-001/reconciliation.xlsx": "7077ec3ae8e796a6f94759fe19624ab51a11ac45b7ce538a0c447b4c9c384214"
+      },
+      "worksheets": [
+        "Reconciliation",
+        "Movements",
+        "Journal",
+        "Terms and credits",
+        "Source register"
+      ]
+    },
+    {
+      "id": "READ-03",
+      "question": "Find the draft decision workbook without searching filenames.",
+      "route": [
+        "README.md",
+        "docs/reader/transactions/README.md",
+        "docs/legal/gap-instruments/REVIEW_WORKFLOW.md",
+        "docs/legal/gap-instruments/review-support/decisions.xlsx"
+      ],
+      "expected_sheets": [
+        "Read first",
+        "Review",
+        "Source details"
+      ],
+      "finding": "Moved the existing draft-review link ahead of the 56-source inventory and added it to its generator so regeneration retains the route. Draft status stays visible.",
+      "result": "PASS",
+      "links_followed": 3,
+      "input_hashes": {
+        "README.md": "4337d93605cd90f3a0a357242deca21c0defaf13c721e8e492845d36dbd4cb98",
+        "docs/reader/transactions/README.md": "ecee864180bed42a59dbc18d1f789aa7f650f520edac0e37d9f8a23ac58463f9",
+        "docs/legal/gap-instruments/REVIEW_WORKFLOW.md": "8b54945de408dbdf77e8c2cde4efa16fb2ff2c283ed930c8f952d1f057cf3494",
+        "docs/legal/gap-instruments/review-support/decisions.xlsx": "36394a1a6b2c13f1e4a721d904f6b5a956015610302b284b3121d72e2dd6823a"
+      },
+      "worksheets": [
+        "Read first",
+        "Review",
+        "Source details"
+      ]
+    },
+    {
+      "id": "READ-04",
+      "question": "Find the separate corporate ground-floor plan from the README.",
+      "route": [
+        "README.md",
+        "geospatial/maps/facilities/ARTIFACT_INDEX.md",
+        "geospatial/maps/facilities/SH-MAP-SAC-024.pdf"
+      ],
+      "expected_pdf_text": [
+        "SH-MAP-SAC-024"
+      ],
+      "finding": "The individual PDF is two links from the README. The index labels the floor MODELLED_R02_DESIGN_NOT_EXISTING; it does not establish occupancy.",
+      "result": "PASS",
+      "links_followed": 2,
+      "input_hashes": {
+        "README.md": "4337d93605cd90f3a0a357242deca21c0defaf13c721e8e492845d36dbd4cb98",
+        "geospatial/maps/facilities/ARTIFACT_INDEX.md": "618cde92a53b3c7a825710afb6a2bf2b6847d4f434617a96abae936c276751f8",
+        "geospatial/maps/facilities/SH-MAP-SAC-024.pdf": "49c2b36fb5c641f2ac757c3fd84024d684d397123fcf9c393309617c314f00e7"
+      },
+      "pdf_pages": 1
+    },
+    {
+      "id": "READ-05",
+      "question": "Reach accounting exercise instructions through the Finance department page.",
+      "route": [
+        "docs/wiki/Home.md",
+        "docs/wiki/departments/finance.md",
+        "docs/finance/READER_EXERCISES.md"
+      ],
+      "expected_text": [
+        "scenario",
+        "2027"
+      ],
+      "finding": "The Finance article supplies an explicit accounting-exercise link. Its source boundaries remain visible in the linked guide.",
+      "result": "PASS",
+      "links_followed": 2,
+      "input_hashes": {
+        "docs/wiki/Home.md": "4f9e6a2eb40175a86969a5db41b86c1117182e07beacf66e344886fecd1fcf5f",
+        "docs/wiki/departments/finance.md": "fca680a08382eec752cff2d1ae1d2befd1f0d58a65e7c6586f2914e060d8747b",
+        "docs/finance/READER_EXERCISES.md": "027e27b616be6ad4ebe913293851b15c42427d3ed0bb94becb961c4b6ab8bf93"
+      }
+    },
+    {
+      "id": "READ-06",
+      "question": "Find the model's transaction-accounting narrative from the acquisition route.",
+      "route": [
+        "README.md",
+        "docs/reader/exercises/README.md",
+        "docs/reader/exercises/ACQUISITION.md",
+        "industrial/finance/TRANSACTION_ACCOUNTING.md"
+      ],
+      "expected_text": [
+        "Sources and uses",
+        "Purchase price allocation"
+      ],
+      "finding": "The narrative is directly linked alongside the closing statement. The route distinguishes the 2026 reconstruction from the base-2027 operating forecast.",
+      "result": "PASS",
+      "links_followed": 3,
+      "input_hashes": {
+        "README.md": "4337d93605cd90f3a0a357242deca21c0defaf13c721e8e492845d36dbd4cb98",
+        "docs/reader/exercises/README.md": "5b4c649a50ab38a3609b72d1e875a83d22ec289dbede99d0d5626a30de7f56d3",
+        "docs/reader/exercises/ACQUISITION.md": "dcaecdb7b9ee29ea717fbbe52bfbc23e26052741d70b375aeafd661d41b60a3d",
+        "industrial/finance/TRANSACTION_ACCOUNTING.md": "d13f142968958585cfc56a7b06d54b5e95bccef6d434d11bb6bba93933a0aa58"
+      }
+    }
+  ],
+  "corrections": [
+    {
+      "id": "READ-F01",
+      "path": "docs/wiki/Start-Here.md",
+      "problem": "Invoice route promised delivery evidence not supplied by the accepted packet.",
+      "fix": "Name the actual contract terms, dated movements and journal entries."
+    },
+    {
+      "id": "READ-F02",
+      "path": "docs/reader/transactions/build.py",
+      "problem": "The useful draft-review link was after the full source inventory and absent from the generator; rebuilding removed it.",
+      "fix": "Generate the draft-review and 17-package links in the initial Reading packages section."
+    },
+    {
+      "id": "READ-F03",
+      "path": "docs/reader/transactions/build.py",
+      "problem": "The documented rebuild command recreated the source database without its separately generated reading-dossier tables.",
+      "fix": "Document and execute both build.py and build_readers.py before validation; full reconstructed database contents matched the retained original."
+    }
+  ]
+}
