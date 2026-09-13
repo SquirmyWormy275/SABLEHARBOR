@@ -6,12 +6,12 @@ Generated reconciliation queue, not an assertion that every unpaired record lack
 
 | State | Records |
 |---|---:|
-| COUNTERPART_REVIEW_REQUIRED | 31 |
+| COUNTERPART_REVIEW_REQUIRED | 39 |
 | HISTORICAL_COUNTERPART_UNRESOLVED | 57 |
 | NAVIGATION_ALIAS_NO_PUBLICATION | 3 |
-| READER_MAINTENANCE_NO_LETTERHEAD | 112 |
+| READER_MAINTENANCE_NO_LETTERHEAD | 109 |
 | READER_OR_MAINTENANCE_PAGE | 154 |
-| UNRESOLVED_DOCUMENT_COUNTERPART | 227 |
+| UNRESOLVED_DOCUMENT_COUNTERPART | 223 |
 | VERIFIED_ACCEPTED_EVIDENCE_PACKET | 1 |
 | VERIFIED_CHART_PUBLICATION | 40 |
 | VERIFIED_DOCUMENT_PAIR | 131 |
@@ -25,6 +25,7 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Branch and Pull Request Register](../../audit/BRANCH_AND_PR_REGISTER.md) — SH-FIN-HUMAN-001
 - [Repository completion batch — September 13, 2026](../../audit/COMPLETION_BATCH_2026-09-13.md) — SH-FIN-HUMAN-001
 - [Outstanding issue review — September 12, 2026](../../audit/ISSUE_CLOSEOUT_2026-09-12.md) — SH-FIN-HUMAN-001
+- [Klein shop and Fort occupancy continuity](../../canon/KLEIN_FORT_OCCUPANCY_2026-09-13.md) — Corporate document-format reconciliation
 - [Accounting, finance and audit practice](../../finance/READER_EXERCISES.md) — SH-FIN-HUMAN-001
 - [Current industrial transaction and tax support](../../finance/evidence/tax-transaction/TRANSACTION_SUPPORT.md) — SH-FIN-HUMAN-001
 - [Actionable CCF procedure deltas](../../internal/development/CCF_ACTIONABLE_CONTROL_DELTAS_2026-09-12.md) — Corporate document-format reconciliation
@@ -51,7 +52,14 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [GitHub pull-request review source](../../../enterprise/ccf/operations/GITHUB_SOURCE.md) — Corporate document-format reconciliation
 - [Protected CCF workflow API](../../../enterprise/ccf/operations/SERVICE.md) — Corporate document-format reconciliation
 - [Klein shop and Fort continuity — proposed decision](../../../geospatial/chronology/CONTINUITY_PROPOSAL.md) — Corporate document-format reconciliation
+- [Geo continuation after canon reconciliation](../../../geospatial/docs/NEXT_CHAT_HANDOFF.md) — Corporate document-format reconciliation
 - [Geo canon reconciliation and program closeout matrix](../../../geospatial/docs/PROGRAM_CLOSEOUT_MATRIX.md) — Corporate document-format reconciliation
+- [Time, ownership and operating state](../../../geospatial/docs/TEMPORAL_MODEL.md) — Corporate document-format reconciliation
+- [Geographic decision register v0.1](../../../geospatial/registers/GEOGRAPHIC_DECISION_REGISTER_v0.1.md) — Corporate document-format reconciliation
+- [Open geographic questions v0.1](../../../geospatial/registers/OPEN_GEOGRAPHIC_QUESTIONS_v0.1.md) — Corporate document-format reconciliation
+- [Provenance register](../../../geospatial/registers/PROVENANCE_REGISTER.md) — Corporate document-format reconciliation
+- [Geospatial validation report](../../../geospatial/reports/GEOSPATIAL_VALIDATION_REPORT.md) — Corporate document-format reconciliation
+- [Open geographic questions v0.1](../../../geospatial/reports/OPEN_CONFLICTS.md) — Corporate document-format reconciliation
 
 ## Dated counterpart dispositions
 

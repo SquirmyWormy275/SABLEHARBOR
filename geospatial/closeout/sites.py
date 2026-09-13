@@ -60,6 +60,13 @@ def bind_source(record, root=ROOT):
 
 
 def review(root=ROOT):
+    from geospatial.chronology.continuity import (
+        load as load_continuity,
+        evidence as continuity_evidence,
+    )
+
+    continuity = load_continuity(root)
+    approved = continuity_evidence(root)
     decisions = json.loads((root / "geospatial/closeout/site_decisions.json").read_text())
     catalog = json.loads((root / "geospatial/sources/catalog.json").read_text())
     objects = [
@@ -93,7 +100,7 @@ def review(root=ROOT):
     coverage = json.loads(
         (root / "geospatial/facilities/coverage/COVERAGE_MATRIX.json").read_text()
     )
-    rows, sources = [], {}
+    rows, sources = [], {approved["sha256"]: (approved, (root / approved["path"]).read_bytes())}
     for obj in objects:
         source, raw = bind_source(obj, root)
         sources[source["sha256"]] = (source, raw)
@@ -110,7 +117,15 @@ def review(root=ROOT):
                 else "EXPLICITLY_UNLOCATED",
                 "geometry_features": linked,
                 "exact_parcel_or_survey_established": False,
-                "occupancy_disposition": "NO_ACCEPTED_OCCUPANCY_INTERVAL",
+                "occupancy_disposition": "OWNER_APPROVED_YEAR_BOUNDED_OCCUPANCY"
+                if oid in ("SH-SITE-0002", "SH-SITE-0003")
+                else "NO_ACCEPTED_OCCUPANCY_INTERVAL",
+                "occupancy_bounds": next(
+                    (r for r in continuity["states"] if r["asset_id"] == oid), None
+                ),
+                "continuity_evidence": approved
+                if oid in ("SH-SITE-0002", "SH-SITE-0003")
+                else None,
                 "occupancy_valid_from": None,
                 "occupancy_valid_to": None,
                 "source_period": obj["relevant_date"],
@@ -133,10 +148,10 @@ def review(root=ROOT):
             }
         )
     return {
-        "version": "1.0.0",
+        "version": "1.2.0",
         "rows": rows,
         "verified_site_records": len(rows),
         "continuity_conflict": decisions["continuity_conflict"],
         "issue_106_complete": False,
-        "closure_boundary": "Source binding and explicit spatial/temporal dispositions are complete. Exact historical shop/Fort continuity and occupancy evidence remain unresolved; this package does not close #106 or the broader #108 programme.",
+        "closure_boundary": "Source binding and explicit spatial/temporal dispositions are complete. Shop/Fort continuity and year-bounded occupancy are resolved by explicit owner approval. Other site occupancy and exact geometry requirements remain; this package does not close the whole #106 or broader #108 programme.",
     }, sources

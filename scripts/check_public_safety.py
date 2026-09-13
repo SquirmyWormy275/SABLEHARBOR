@@ -19,11 +19,11 @@ ALLOWED_LARGE_PUBLIC_ARTIFACTS = {
         12421998,
         "c1589fbd0c0bfcb2a823cc4e582b580510f3d1408a933ddb09188aa217f62665",
     ),
-    # Reviewed PR119 runtime successor; public references and synthetic parcel.
-    # Native QGIS and source/geometry CI: run 34641354582 at 07bda1b.
+    # PR162 owner-approved Klein/Fort continuity successor.
+    # Public canon/occupancy metadata only; all 60 spatial tables retain every row.
     Path("geospatial/master/sable_harbor_master_v0.1.gpkg"): (
         40 * 1024 * 1024,
-        "dbad2c303e9b325a7e98da96c278f619c639ffe51e6514e39be9104c819f75d8",
+        "d2da433ed41700fc8c6e8dc667aec89374e7dc10787d086a90429d950158b4af",
     ),
     # Byte-identical preservation copy of the already approved public database below.
     Path("geospatial/sources/canon_snapshot/blackridge/data/public/databases/blackridge_m00_v0.1.0.sqlite3"): (

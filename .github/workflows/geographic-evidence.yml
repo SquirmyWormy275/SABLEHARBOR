@@ -4,6 +4,8 @@ on:
     paths:
       - 'geospatial/closeout/**'
       - 'geospatial/chronology/**'
+      - 'geospatial/sources/klein_fort_occupancy.json'
+      - 'docs/canon/KLEIN_FORT_OCCUPANCY_2026-09-13.md'
       - 'geospatial/tests/test_chronology.py'
       - 'geospatial/tests/test_site_evidence.py'
       - '.github/workflows/geographic-evidence.yml'

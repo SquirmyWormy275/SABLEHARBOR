@@ -10,13 +10,13 @@ Recommendation / disposition: Implemented user-approved GEO-D009–GEO-D011; pre
 
 Effect: Exact anchor is locked. Full site and railway remain engineering work, with no survey or title claim.
 
-## GEO-C002 — Klein historical shop and Fort/Hazelwood occupancy linkage [OPEN_USER_DECISION]
+## GEO-C002 — Klein historical shop and Fort/Hazelwood occupancy linkage [RESOLVED_OWNER_APPROVED_2024_RELOCATION]
 
-The Fort concept and Klein name are settled. Exact historical shop/campus identity and occupancy dates remain unestablished.
+Resolved: Willow continued at the original shop after recharter, moved to separate Fort premises during 2024 and vacated the old shop that year.
 
-Recommendation / disposition: Keep the historical outside-Pittsburgh shop separate from the Hazelwood study area until dated evidence establishes same-site continuity or relocation.
+Recommendation / disposition: Retain distinct site IDs; use the approved year-bounded relocation and occupancy states.
 
-Effect: No new owner decision is needed about Fort size or shed functions; only historical linkage remains open.
+Effect: No same-parcel continuity, exact move day, individual component commissioning date or real property right is inferred.
 
 ## GEO-C003 — BS&T current case geography and chronology reconciled [RESOLVED_ACCEPTED_INDUSTRIAL_IMPLEMENTATION]
 
@@ -28,4 +28,4 @@ Effect: No direct mine spur or uranium custody approval; georeferenced 1898/1954
 
 ## Independent open facts
 
-J2 Education location; exact Blackridge location; Klein/Fort occupancy history; provisional Reno/Elko/Tucson offices; exact Bedford, Demotte and Kelly Gang Mining parcels; Wallaby/Glasshouse sites; historical offices; early railway alignments; exact lease/title records; conversion destination; corporate hosting geography. Named hosts, the Fort concept, current ARU estate and current BS&T case geography are resolved. See PROGRAM_CLOSEOUT_MATRIX.md for disposition.
+J2 Education location; exact Blackridge location; Klein/Fort exact parcel/lease-day precision (2024 linkage resolved); provisional Reno/Elko/Tucson offices; exact Bedford, Demotte and Kelly Gang Mining parcels; Wallaby/Glasshouse sites; historical offices; early railway alignments; exact lease/title records; conversion destination; corporate hosting geography. Named hosts, the Fort concept, current ARU estate and current BS&T case geography are resolved. See PROGRAM_CLOSEOUT_MATRIX.md for disposition.

@@ -2,9 +2,9 @@
 
 This package joins the accepted spatial estate to source-bound review records in a portable GeoPackage and QGIS project. The [release index](../../docs/releases/GEOGRAPHIC_EVIDENCE_RELEASES.md) provides the complete download.
 
-## History edition 1.1.0
+## Approved continuity edition 1.2.0
 
-Open `chronology/history.html` for the [source-bound history edition](../chronology/README.md): 72 dated events and observations, 34 site histories and accepted route evolution. Four additional GeoPackage attribute tables expose events, normalized event/object links, site histories and 295 operations-review dispositions. Native QGIS verifies all four evidence relations after relocation. The [Klein/Fort proposal](../chronology/CONTINUITY_PROPOSAL.md) remains separate from accepted history.
+Open `chronology/history.html` for the [source-bound history edition](../chronology/README.md): 73 dated events and observations, 34 site histories and accepted route evolution. Four additional GeoPackage attribute tables expose events, normalized event/object links, site histories and 295 operations-review dispositions. Native QGIS verifies all four evidence relations after relocation. The original [Klein/Fort proposal](../chronology/CONTINUITY_PROPOSAL.md) is retained as review history. Edition 1.2.0 implements its owner-approved staged 2024 relocation, with 73 events and year-bounded occupancy queries.
 
 ## Open the package
 
@@ -23,7 +23,7 @@ The existing facility atlas opens at `geospatial/maps/index.html`. The preserved
 | `review_source_changes` | Added, modified and removed paths since discovery | A source-tree comparison, not approval of every later claim. |
 | `review_raster_candidates` | The 97-image OCR population from accepted evidence release 1.1.0 | Unreviewed machine text; raw word positions/confidence and engine provenance remain under `review/`. |
 
-`SITE_EVIDENCE.csv` is a compact worksheet. `SITE_EVIDENCE.json` retains every full record, source excerpt, operational-state record and feature hash. Sixteen distinct archived source files are supplied with SHA-256 identities under `archived-sources/`.
+`SITE_EVIDENCE.csv` is a compact worksheet. `SITE_EVIDENCE.json` retains every full record, source excerpt, operational-state record and feature hash. Seventeen distinct archived source files are supplied with SHA-256 identities under `archived-sources/`.
 
 ## Rebuild and qualify
 
@@ -52,6 +52,6 @@ The top-level `PACKAGE_MANIFEST.json`, `VALIDATION.json`, `NATIVE_QGIS.json` and
 
 ## Issue acceptance
 
-The package completes a source-bound representation and review deliverable. It does **not** close #106 or #108 by substituting missing facts with empty fields. The Klein historical shop/Fort continuity and exact occupancy evidence remain unresolved; detailed railway geometry and engineering remain under #107. The broader semantic/historical programme remains under #108. New source evidence or accepted fictional decisions must resolve those substantive requirements before whole-issue closure.
+The package completes a source-bound representation and review deliverable. It does **not** close #106 or #108 by substituting missing facts with empty fields. The Klein/Fort continuity and year-bounded occupancy are now owner-approved; other exact site occupancy and parcel evidence remain unresolved; detailed railway geometry and engineering remain under #107. The broader semantic/historical programme remains under #108. New source evidence or accepted fictional decisions must resolve those substantive requirements before whole-issue closure.
 
 The workflow can transfer a qualified ZIP directly to an existing draft release when dispatched on accepted `main` with the optional `release_tag` input. It verifies the version, source commit, draft target and every manifest member; it neither replaces existing assets nor publishes the draft. Normal PR/build runs retain read-only permissions.

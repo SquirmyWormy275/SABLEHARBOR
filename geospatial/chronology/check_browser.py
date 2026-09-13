@@ -39,7 +39,7 @@ def check(directory, executable=None):
         page.locator("#kind").select_option("LEASE_OBSERVATION")
         page.locator("#from").fill("2021")
         page.locator("#through").fill("2021")
-        assert page.locator("#count").inner_text() == "1 of 72 records"
+        assert page.locator("#count").inner_text() == "1 of 73 records"
         page.locator("#list button").click()
         assert (
             "Observation bounds: 2021-01-01 through 2021-12-31"
@@ -53,7 +53,7 @@ def check(directory, executable=None):
             rows = list(csv.DictReader(f))
         assert len(rows) == 1 and rows[0]["event_id"] == "OBS-KLEIN-LEASE-2021"
         page.locator("#search").fill("absent-92831")
-        assert page.locator("#count").inner_text() == "0 of 72 records"
+        assert page.locator("#count").inner_text() == "0 of 73 records"
         with page.expect_download() as event:
             page.locator("#export").click()
         with open(event.value.path(), newline="") as f:
@@ -62,7 +62,15 @@ def check(directory, executable=None):
         page.locator("#search").fill("SH-SITE-0002")
         assert page.locator("#count").inner_text() == "1 of 34 records"
         page.locator("#list button").click()
-        assert "Exact occupancy endpoints remain unknown" in page.locator("#detail").inner_text()
+        assert "Owner-approved year-bounded occupancy" in page.locator("#detail").inner_text()
+        for day, expected in [
+            ("2023-07-01", "CERTAIN"),
+            ("2024-07-01", "POSSIBLE"),
+            ("2025-01-01", "ABSENT"),
+        ]:
+            page.locator("#occupancy-date").fill(day)
+            assert page.locator("#occupancy-result").inner_text().startswith(expected)
+            checks.append({"occupancy_date": day, "expected": expected, "passed": True})
         page.locator('button[data-view="routes"]').click()
         for day, count in [
             ("1898-04-06", 0),
