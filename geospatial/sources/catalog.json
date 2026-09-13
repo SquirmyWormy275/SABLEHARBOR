@@ -5500,22 +5500,6 @@
       "notes": "Preserved exact snapshot; implementation fact states remain qualified."
     },
     {
-      "source_id": "SRC-RUNTIME-20260911",
-      "title": "Runtime estate September 2026",
-      "publisher_or_author": "Sable Harbor synthetic archive",
-      "source_type": "STRUCTURED_OWNER_DECISION",
-      "publication_date": "2026-09-11",
-      "accessed_date": "2026-09-11",
-      "url_or_repo_path": "enterprise/services/source/runtime_sites_2026-09-11.json",
-      "repository_commit": null,
-      "file_sha256": "fa216f629762503865fd9f1a3207e87691cd484cec9885bf25ce045b4525519c",
-      "license": "Owner-authorized synthetic project material",
-      "citation": "enterprise/services/source/runtime_sites_2026-09-11.json",
-      "coverage": "Reno/Boise selected relationships and synthetic owned parcel",
-      "source_quality": "OWNER_AUTHORIZED_PENDING_MERGE",
-      "notes": "No tenancy, real property title, or operating effectiveness asserted."
-    },
-    {
       "source_id": "SRC-KLEIN-FORT-20260913",
       "title": "Approved Klein/Fort occupancy continuity",
       "publisher_or_author": "Sable Harbor owner",
@@ -5530,6 +5514,22 @@
       "coverage": "Separate premises; staged 2024 relocation; year-bounded occupancy",
       "source_quality": "OWNER_APPROVED",
       "notes": "Exact days, parcels, real title and access remain unresolved."
+    },
+    {
+      "source_id": "SRC-RUNTIME-20260911",
+      "title": "Runtime estate September 2026",
+      "publisher_or_author": "Sable Harbor synthetic archive",
+      "source_type": "STRUCTURED_OWNER_DECISION",
+      "publication_date": "2026-09-11",
+      "accessed_date": "2026-09-11",
+      "url_or_repo_path": "enterprise/services/source/runtime_sites_2026-09-11.json",
+      "repository_commit": null,
+      "file_sha256": "fa216f629762503865fd9f1a3207e87691cd484cec9885bf25ce045b4525519c",
+      "license": "Owner-authorized synthetic project material",
+      "citation": "enterprise/services/source/runtime_sites_2026-09-11.json",
+      "coverage": "Reno/Boise selected relationships and synthetic owned parcel",
+      "source_quality": "OWNER_AUTHORIZED_PENDING_MERGE",
+      "notes": "No tenancy, real property title, or operating effectiveness asserted."
     }
   ],
   "decisions": [
@@ -5963,6 +5963,24 @@
       "notes": "Names and regional constraints do not establish survey, title, or statutory certification."
     },
     {
+      "decision_id": "GEO-KLEIN-FORT-20260913",
+      "decision_date": "2026-09-13",
+      "decision_title": "Klein shop to separate Fort premises in 2024",
+      "decision_type": "OWNER_APPROVED_CONTINUITY",
+      "affected_object_ids": [
+        "SH-SITE-0002",
+        "SH-SITE-0003"
+      ],
+      "decision_status": "OWNER_APPROVED",
+      "deciding_authority": "Owner: Approve the proposed history",
+      "source_conversation": "Repository work session; explicit acceptance of the staged-2024 relocation proposal",
+      "source_document": "docs/canon/KLEIN_FORT_OCCUPANCY_2026-09-13.md",
+      "rationale": "Resolve physical continuity separately from the 2022 institutional recharter.",
+      "alternatives_considered": "The previously unresolved same-site or separate-site alternatives are superseded by explicit owner acceptance.",
+      "supersedes_decision_id": "GEO-D002",
+      "notes": "Supersedes historical-linkage uncertainty only; Hazelwood study geography and unlocated exact parcels remain."
+    },
+    {
       "decision_id": "GEO-RUNTIME-20260911",
       "decision_date": "2026-09-11",
       "decision_title": "Runtime selection and synthetic parcel integration",
@@ -5980,24 +5998,6 @@
       "alternatives_considered": "Preserve existing Alexandria hosting concept ID.",
       "supersedes_decision_id": null,
       "notes": "Source-prepared September 11; effective land event September 4."
-    },
-    {
-      "decision_id": "GEO-KLEIN-FORT-20260913",
-      "decision_date": "2026-09-13",
-      "decision_title": "Klein shop to separate Fort premises in 2024",
-      "decision_type": "OWNER_APPROVED_CONTINUITY",
-      "affected_object_ids": [
-        "SH-SITE-0002",
-        "SH-SITE-0003"
-      ],
-      "decision_status": "OWNER_APPROVED",
-      "deciding_authority": "Owner: Approve the proposed history",
-      "source_conversation": "Repository work session; explicit acceptance of the staged-2024 relocation proposal",
-      "source_document": "docs/canon/KLEIN_FORT_OCCUPANCY_2026-09-13.md",
-      "rationale": "Resolve physical continuity separately from the 2022 institutional recharter.",
-      "alternatives_considered": "The previously unresolved same-site or separate-site alternatives are superseded by explicit owner acceptance.",
-      "supersedes_decision_id": "GEO-D002",
-      "notes": "Supersedes historical-linkage uncertainty only; Hazelwood study geography and unlocated exact parcels remain."
     }
   ],
   "relationships": [

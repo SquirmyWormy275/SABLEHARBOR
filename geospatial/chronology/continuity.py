@@ -74,7 +74,15 @@ def sync(root=ROOT):
     sid = record["source_id"]
     stamp = record["states"][0]["recorded_at"]
     c["sources"] = [s for s in c["sources"] if s["source_id"] != sid]
-    c["sources"].append(
+    c["sources"].insert(
+        next(
+            (
+                i
+                for i, row in enumerate(c["sources"])
+                if row["source_id"].startswith("SRC-RUNTIME-")
+            ),
+            len(c["sources"]),
+        ),
         dict(
             source_id=sid,
             title="Approved Klein/Fort occupancy continuity",
@@ -90,10 +98,18 @@ def sync(root=ROOT):
             coverage="Separate premises; staged 2024 relocation; year-bounded occupancy",
             source_quality="OWNER_APPROVED",
             notes="Exact days, parcels, real title and access remain unresolved.",
-        )
+        ),
     )
     c["decisions"] = [d for d in c["decisions"] if d["decision_id"] != DECISION]
-    c["decisions"].append(
+    c["decisions"].insert(
+        next(
+            (
+                i
+                for i, row in enumerate(c["decisions"])
+                if row["decision_id"].startswith("GEO-RUNTIME-")
+            ),
+            len(c["decisions"]),
+        ),
         dict(
             decision_id=DECISION,
             decision_date=record["decision_date"],
@@ -108,7 +124,7 @@ def sync(root=ROOT):
             alternatives_considered="The previously unresolved same-site or separate-site alternatives are superseded by explicit owner acceptance.",
             supersedes_decision_id="GEO-D002",
             notes="Supersedes historical-linkage uncertainty only; Hazelwood study geography and unlocated exact parcels remain.",
-        )
+        ),
     )
     conflict = next(r for r in c["conflicts"] if r["conflict_id"] == "GEO-C002")
     conflict.update(
