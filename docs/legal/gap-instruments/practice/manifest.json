@@ -1,0 +1,104 @@
+{
+  "classification": "PUBLIC_WORKED_EXAMPLE",
+  "design_status": "DRAFT_FOR_REVIEW",
+  "prepared": "2026-09-12",
+  "packets": [
+    "SH-LEGAL-PRACTICE-ACQUISITION",
+    "SH-LEGAL-PRACTICE-DEBT",
+    "SH-LEGAL-PRACTICE-REVENUE-DISPUTE",
+    "SH-LEGAL-PRACTICE-LEGAL-DUE-DILIGENCE"
+  ],
+  "workbooks": 8,
+  "worksheets": 40,
+  "artifacts": [
+    {
+      "path": "docs/legal/gap-instruments/practice/acquisition/TASK.md",
+      "sha256": "26e3e44bb7124ac8fce565c4729e8f534bd5583c8c3be990167f7d2fede473a6"
+    },
+    {
+      "path": "docs/legal/gap-instruments/practice/acquisition/WORKED.md",
+      "sha256": "b37ee935f68a1e916ca5c2c381d3f0660cf0d1df1916a5152b93e312031ab857"
+    },
+    {
+      "path": "docs/legal/gap-instruments/practice/acquisition/packet.json",
+      "sha256": "4204e7f03a72cfffa2de5f304fe0666753a80c1af7f238c765442c40ceb73ab0"
+    },
+    {
+      "path": "docs/legal/gap-instruments/practice/acquisition/blank.xlsx",
+      "sha256": "f093de0e40a2c9eac6a5e73d5d99766c856247b9ceade38fba74b4ac9c20841d"
+    },
+    {
+      "path": "docs/legal/gap-instruments/practice/acquisition/worked.xlsx",
+      "sha256": "90227ea974c0e9acd278328f4bd057a2e156ee5d06e0cb057b6f5888dcacb198"
+    },
+    {
+      "path": "docs/legal/gap-instruments/practice/debt/TASK.md",
+      "sha256": "d388101a6cc09f6b7b3502fac43618b994f5a3f893cabac05b7bdb3dd53d00e5"
+    },
+    {
+      "path": "docs/legal/gap-instruments/practice/debt/WORKED.md",
+      "sha256": "a6551b84775e9515d19b2b1d3af0299cee09d9df7b6649ed9f0f87cd6ad3d5c9"
+    },
+    {
+      "path": "docs/legal/gap-instruments/practice/debt/packet.json",
+      "sha256": "1fa980b3a033c7d04683425683ec877d3eec6261a93246ef551e16db956bb1a1"
+    },
+    {
+      "path": "docs/legal/gap-instruments/practice/debt/blank.xlsx",
+      "sha256": "b834a05fe38295b8677069a4071d7c07f52b14cc440a7a295d31236b7585b980"
+    },
+    {
+      "path": "docs/legal/gap-instruments/practice/debt/worked.xlsx",
+      "sha256": "1bbf491c5765cdd500cd326f7dfc668c7a9adae466dd7408acfd5c2b8bc3ebe0"
+    },
+    {
+      "path": "docs/legal/gap-instruments/practice/revenue-dispute/TASK.md",
+      "sha256": "953ef961fc31a93a56e5cf39e3f4b524079a2befd70faebe459beb80813ccdab"
+    },
+    {
+      "path": "docs/legal/gap-instruments/practice/revenue-dispute/WORKED.md",
+      "sha256": "2c9161727fc9bcaa5b3ffc7159bf12907ae40cd2d7028daeb5b042fcd85c79c8"
+    },
+    {
+      "path": "docs/legal/gap-instruments/practice/revenue-dispute/packet.json",
+      "sha256": "5b27b42d3e0a26cdf1c221c0ca4ab758c68e1398403ca5e281ef9c7f7c06588d"
+    },
+    {
+      "path": "docs/legal/gap-instruments/practice/revenue-dispute/blank.xlsx",
+      "sha256": "12a7525e545def188bc2902b72f16ce46cd31b80ba0fad10ecd4e27b4c91afc1"
+    },
+    {
+      "path": "docs/legal/gap-instruments/practice/revenue-dispute/worked.xlsx",
+      "sha256": "61644d24656e64aa260547cdae78e90bd044d2378883226726c09cd37ffcef88"
+    },
+    {
+      "path": "docs/legal/gap-instruments/practice/legal-due-diligence/TASK.md",
+      "sha256": "3fd467e37607a715b50689c32b44a539c04dc6064f4f61959107338e2e2b70de"
+    },
+    {
+      "path": "docs/legal/gap-instruments/practice/legal-due-diligence/WORKED.md",
+      "sha256": "a9a88c285878cbb577f03c663f04a5f8ab5ee0dd7cd6f90248e24803a7549b05"
+    },
+    {
+      "path": "docs/legal/gap-instruments/practice/legal-due-diligence/packet.json",
+      "sha256": "3c95513a7b05462a6a7bcbf18edc991398af0a1c62b0902cc222987e65357db9"
+    },
+    {
+      "path": "docs/legal/gap-instruments/practice/legal-due-diligence/blank.xlsx",
+      "sha256": "1847cf054e37da4ae2ece38859f5af6b447f4e68ca9e299869ab70ade55001e5"
+    },
+    {
+      "path": "docs/legal/gap-instruments/practice/legal-due-diligence/worked.xlsx",
+      "sha256": "6383b64594e777840582c8d8773276a4828fc1d11858b89af9e339e76d435ac9"
+    },
+    {
+      "path": "docs/legal/gap-instruments/practice/practice.sqlite3",
+      "sha256": "1040235eb89f3ac34f19cbd2c07962a3972603fc00418157b88ff7a06b41d5de"
+    },
+    {
+      "path": "docs/legal/gap-instruments/practice/README.md",
+      "sha256": "76962e179749148f7de921329184fbe47119a7156c1ff03f7e34671e2950bcf2"
+    }
+  ],
+  "generator_sha256": "72c27eb755c6cba3030353a86b0c147e12e6749298c353f1a9f102c4c6339777"
+}
