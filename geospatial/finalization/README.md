@@ -16,6 +16,8 @@ python -m geospatial.finalization.build --output var/geographic-decisions
 python -m pytest geospatial/tests/test_finalization.py -q
 ```
 
-The build produces a searchable offline reader, three context-map plates, a PDF atlas and machine-readable review records. The main evidence-package builder incorporates them and adds registered GeoPackage attribute tables. Package publication additionally requires a clean accepted source, native QGIS checks, browser checks and sealed-release verification. Current delivery status belongs in the release record; source adjudication alone does not assert issue closure.
+The build produces searchable offline decision, source-carrier and source-ledger readers, three context-map plates, a PDF atlas and machine-readable review records. The main evidence-package builder incorporates them and adds registered GeoPackage attribute tables. Package publication additionally requires a clean accepted source, native QGIS checks, browser checks and sealed-release verification. Current delivery status belongs in the release record; source adjudication alone does not assert issue closure.
 
 Reference downloads are retained for offline reproducibility. `screen.py` verifies and reads them without network access. `fetch_context.py` is a research acquisition helper, not a build step; running it creates a fresh acquisition manifest that must be reviewed before replacing the selected reference archive.
+
+`SOURCE_LEDGER.json.gz` verifies all 919 original file fingerprints and records every changed path through the pinned accepted main. Its 17 canonical delta findings came from full-text review; other paths retain explicit domain/derivation dispositions rather than claiming a full-domain audit. Later source changes are not automatically approved.

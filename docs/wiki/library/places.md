@@ -50,9 +50,9 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Cradle geographic supersession — implemented September 7](../../../geospatial/docs/CRADLE_GEOGRAPHY_SUPERSESSION_2026-09-06.md) — MD
 - [Data model and authority](../../../geospatial/docs/DATA_MODEL.md) — MD
 - [Definition of done — reconciled framework](../../../geospatial/docs/DEFINITION_OF_DONE.md) — MD
-- [Geo continuation after canon reconciliation](../../../geospatial/docs/NEXT_CHAT_HANDOFF.md) — MD
+- [Geographic continuation boundary](../../../geospatial/docs/NEXT_CHAT_HANDOFF.md) — MD
 - [Operating-model reconciliation](../../../geospatial/docs/OPERATING_MODEL_RECONCILIATION_20260906.md) — MD
-- [Geo canon reconciliation and program closeout matrix](../../../geospatial/docs/PROGRAM_CLOSEOUT_MATRIX.md) — MD
+- [Geographic program closeout matrix](../../../geospatial/docs/PROGRAM_CLOSEOUT_MATRIX.md) — MD
 - [Provenance and reproducibility](../../../geospatial/docs/PROVENANCE_AND_REPRODUCIBILITY.md) — MD
 - [Red Wash location supersession and Taylor rename](../../../geospatial/docs/RED_WASH_LOCATION_SUPERSESSION_NOTE.md) — MD
 - [Site-selection evidence and current limits](../../../geospatial/docs/SITE_SELECTION_EVIDENCE.md) — MD
@@ -201,6 +201,12 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Facility planning workbench](../../../geospatial/facilities/workbench/README.md) — MD
 - [Evidence intake and review candidates](../../../geospatial/facilities/workbench/README_EVIDENCE.md) — MD
 - [Architectural concept readiness](../../../geospatial/facilities/workbench/README_READINESS.md) — MD
+
+## `geospatial/finalization`
+
+- [Geographic completion authority — September 13, 2026](../../../geospatial/finalization/AUTHORIZATION.md) — MD
+- [Geographic decisions and final source review](../../../geospatial/finalization/README.md) — MD
+- [Source interpretation and geographic crosswalk](../../../geospatial/finalization/SOURCE_REVIEW.md) — MD
 
 ## `geospatial/history`
 

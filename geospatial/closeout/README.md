@@ -2,7 +2,14 @@
 
 This package joins the accepted spatial estate to source-bound review records in a portable GeoPackage and QGIS project. The [release index](../../docs/releases/GEOGRAPHIC_EVIDENCE_RELEASES.md) provides the complete download.
 
-## Requirements edition 1.3.0
+## Geographic decisions edition 1.4.0
+
+Open `finalization/index.html` for all 34 current site/component decisions, three screened fictional footprints and three rejected prospects. `finalization/source-review.html` contains the final 6,896 source-carrier dispositions, and `finalization/source-ledger.html` records the 919 baseline files and later changed paths through the pinned reviewed main. Read each ledger row's scope: geographic authority review does not certify an entire financial or legal publication.
+
+The [finalization record](../finalization/README.md) supplies reproducible screens, 135 unique embedded-image dispositions / 290 appearances, preserved source context and current canon. Six `review_final_*` GeoPackage tables expose these decisions and review populations beside the original release tables. The chronology now contains 79 events, preserving all 73 earlier records and adding six rejected-prospect inquiry endpoints.
+
+### Preserved requirements edition
+
 
 Open `completion/maps/index.html`, `completion/site-docket.html` and `completion/source-review.html` for the [source review, site options and historical atlas](../completion/README.md). This edition adds five review tables, two unselected GeoJSON layers and four further evidence relations. It preserves the approved continuity below and all original spatial rows.
 
@@ -20,14 +27,14 @@ The existing facility atlas opens at `geospatial/maps/index.html`. The preserved
 
 | Table | Contents | Boundary |
 |---|---|---|
-| Existing feature layers | Full accepted spatial rows, including original geometry, precision and temporal metadata | No new parcel, survey geometry or historical alignment is invented. |
+| Existing feature layers | Full accepted spatial rows, including original geometry, precision and temporal metadata | Original geometry is preserved; three separately classified fictional planning footprints are added. No survey or early historical alignment is asserted. |
 | `review_site_evidence` | 30 SH-SITE records and four named Fort components, exact archived source bindings, geometry references and temporal meanings | Programme, incident, provider-selection and acquisition dates do not become occupancy intervals. |
-| `review_occurrences` | Exact 8,961 occurrence carriers outside the three accepted review batches | Unresolved discovery population; no automatic geographic claim adjudication. |
+| `review_occurrences` | Exact 8,961 occurrence carriers outside the three accepted review batches | Historical three-batch residual population. Later batches and final source dispositions are separate tables; the original rows are preserved. |
 | `review_source_coverage` | 919 baseline files verified against archived bytes | Hash verification does not imply semantic review. |
 | `review_source_changes` | Added, modified and removed paths since discovery | A source-tree comparison, not approval of every later claim. |
-| `review_raster_candidates` | The 97-image OCR population from accepted evidence release 1.1.0 | Unreviewed machine text; raw word positions/confidence and engine provenance remain under `review/`. |
+| `review_raster_candidates` | The 97-image OCR population from accepted evidence release 1.1.0 | Historical machine output; later visual-role review is supplied separately. Original word positions/confidence and engine provenance remain under `review/`. |
 
-`SITE_EVIDENCE.csv` is a compact worksheet. `SITE_EVIDENCE.json` retains every full record, source excerpt, operational-state record and feature hash. Seventeen distinct archived source files are supplied with SHA-256 identities under `archived-sources/`.
+`SITE_EVIDENCE.csv` is a compact worksheet. `SITE_EVIDENCE.json` retains every full record, source excerpt, operational-state record and feature hash. Eighteen distinct archived source files are supplied with SHA-256 identities under `archived-sources/`.
 
 ## Rebuild and qualify
 
@@ -44,6 +51,9 @@ uv run --with-requirements tools/wiki/visual/requirements.txt python -m geospati
 uv run --with-requirements tools/wiki/visual/requirements.txt python -m geospatial.completion.check_browser \
   --directory var/geographic-evidence/completion
 
+uv run --with-requirements tools/wiki/visual/requirements.txt python -m geospatial.finalization.check_browser \
+  --directory var/geographic-evidence/finalization
+
 QT_QPA_PLATFORM=offscreen /usr/bin/python3 geospatial/closeout/native.py \
   --package var/geographic-evidence
 
@@ -59,6 +69,6 @@ The top-level `PACKAGE_MANIFEST.json`, `VALIDATION.json`, `NATIVE_QGIS.json` and
 
 ## Issue acceptance
 
-The package completes a source-bound representation and review deliverable. It does **not** close #106 or #108 by substituting missing facts with empty fields. The Klein/Fort continuity and year-bounded occupancy are now owner-approved; other exact site occupancy and parcel evidence remain unresolved; detailed railway geometry and engineering remain under #107. The broader semantic/historical programme remains under #108. New source evidence or accepted fictional decisions must resolve those substantive requirements before whole-issue closure.
+The delegated addendum resolves #106's site/occupancy implementation at explicit accepted precision; clean integration and verified publication establish delivery. Unknown exact tenure days and intentionally unlocated external sites are accepted dispositions, not empty fields substituted for a pending decision. The full #107 engineering remainder and its #108 program dependency remain visible in the [current matrix](../docs/PROGRAM_CLOSEOUT_MATRIX.md). Neither all-carrier review nor the new maps certify survey, construction, title, permits or external execution.
 
 The workflow can transfer a qualified ZIP directly to an existing draft release when dispatched on accepted `main` with the optional `release_tag` input. It verifies the version, source commit, draft target and every manifest member; it neither replaces existing assets nor publishes the draft. Normal PR/build runs retain read-only permissions.

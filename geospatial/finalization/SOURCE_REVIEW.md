@@ -27,3 +27,7 @@ A carrier with no locating content is retained with its full context. Words such
 The review added source-bound records for Cedar Junction (Kentucky), Juniper Mesa (western New Mexico), Salt Rim (western United States, state unspecified), BTC career geography (South Africa), Van der Velde's DeMotte/Kansas State/Harvard references, and Gid's unnamed 2018 coal-preparation customer incident. It restored Illinois as the regional conversion destination. Rejected-property dates describe inquiries and withdrawals; they are not acquisition or occupancy dates. Six prospect chronology events supplement the preserved 73 events.
 
 The baseline carrier review is complete. Subsequent additions and modifications, visual coverage, geographic implementation and release validation remain separately measured; the count alone does not close issue #108.
+
+## Accepted-source delta boundary
+
+`SOURCE_LEDGER.json.gz` supplies the per-file geographic disposition ledger through accepted main `dff38f04131b8f10cd62b543becb71aec5a7080a`: 919 baseline files, 3,190 changed paths and 17 full-text controlling canon deltas. Each retains archived/current fingerprints. Other domain and generated records are explicitly bounded by their authority, not represented as full legal, financial or technical certification. New sources beyond this fixed revision require review. The ledger and all-carrier review do not waive #107 engineering or establish whole-program closure.

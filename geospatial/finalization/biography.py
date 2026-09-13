@@ -73,12 +73,13 @@ def sync(catalog):
             raise ValueError("Ambiguous biography source: " + path)
         line, text = hits[0]
         sid = f"SRC-GFC-BIO-{index:03}"
-        limit = (
-            "Career or educational reference only; no company ownership, lease, deployment or physical office is established. "
-            "DeMotte, Indiana is distinct from the Demotte Reclamation Services host in West Virginia. "
-            "BTC is a fictional former employer; its legal-name expansion and exact premises remain unspecified. "
-            "Nationality is not evidence of a precise birthplace."
-        )
+        limit = {
+            "SH-REF-0027": "Former-employer career geography only. BTC is fictional; its expanded legal name and exact premises are unspecified. No current company ownership, deployment or office is established.",
+            "SH-REF-0028": "Biographical regional reference, distinct from Demotte Reclamation Services in West Virginia. Nationality does not establish a birthplace; no corporate occupancy is established.",
+            "SH-REF-0029": "Educational reference only; campus and attendance dates are unknown. Corporate occupancy is not applicable.",
+            "SH-REF-0030": "Educational opportunity reference only; no campus, attendance period, graduation or company premises are inferred.",
+            "SH-REF-0031": "Year-bounded customer incident at an unnamed coal preparation plant. The region, premises and tenure are unknown; this is not Klein, the Fort or Emberline.",
+        }[oid]
         catalog["sources"].append(
             dict(
                 source_id=sid,
@@ -113,8 +114,8 @@ def sync(catalog):
                 source_commit=REVISION,
                 source_locator=f"line:{line}",
                 exact_source_wording=text,
-                relevant_date="",
-                date_precision="UNKNOWN",
+                relevant_date="2018" if oid == "SH-REF-0031" else "",
+                date_precision="YEAR" if oid == "SH-REF-0031" else "UNKNOWN",
                 conflict_id="",
                 next_action="Retain named reference; corporate occupancy is not applicable.",
                 notes=limit,

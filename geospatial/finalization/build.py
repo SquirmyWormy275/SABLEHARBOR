@@ -156,6 +156,41 @@ def build(output, raster_inventory=None):
     from geospatial.finalization.source_review import write as write_sources
 
     source_summary, source_rows = write_sources(output)
+    from geospatial.finalization.source_ledger import write as write_ledger
+    from geospatial.finalization.readers import write as write_reader
+
+    ledger = write_ledger(output)
+    write_reader(
+        output,
+        "source-review.html",
+        "Final source adjudication",
+        "6,896 final discovery carriers. Together with the five preserved batches, all 78,145 baseline carriers have a disposition. Source claims and current canon remain distinct.",
+        source_rows,
+    )
+    ledger_rows = []
+    for i, r in enumerate(ledger["baseline_sources"] + ledger["subsequent_changes"]):
+        ledger_rows.append(
+            {
+                **r,
+                "occurrence_id": f"FILE-{i + 1:05}",
+                "source_locator": r.get(
+                    "source_commit", ledger["reviewed_main_revision"]
+                ),
+                "exact_source_wording": r.get("geographic_finding", r.get("basis", "")),
+                "limit": r.get(
+                    "limit",
+                    "Geographic authority disposition; only controlling canon deltas are represented as full-text reviewed. See the retained source and domain owner for other acceptance criteria.",
+                ),
+            }
+        )
+    write_reader(
+        output,
+        "source-ledger.html",
+        "Source coverage and authority",
+        "919 original files and every subsequent changed path through the pinned accepted main. Inspect the exact revision, hashes, scope and geographic disposition.",
+        ledger_rows,
+    )
+
     from geospatial.finalization.visual_review import verify as verify_visuals
 
     if raster_inventory is None:
@@ -232,7 +267,7 @@ def build(output, raster_inventory=None):
     page = (
         '<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Sable Harbor · Geographic decisions</title><style>'
         + STYLE
-        + '</style><header><small>SABLE HARBOR / CONTROLLING GEOGRAPHIC DECISIONS</small><h1>Places, premises and continuity</h1><p>Three screened fictional footprints and an explicit disposition for every corporate site and Fort component. Accepted canon controls; exactness is used only where it carries meaning.</p></header><main><nav><a href="Geographic-site-decisions.pdf">Download site atlas</a> · <a href="../chronology/history.html">Historical chronology</a> · <a href="../completion/maps/index.html">Historical map series</a></nav><label for="search">Find a place, function or disposition</label><p><input id="search" type="search" placeholder="Search sites and rejected prospects" aria-controls="results"></p><p id="count" role="status">37 records</p><section id="results">'
+        + '</style><header><small>SABLE HARBOR / CONTROLLING GEOGRAPHIC DECISIONS</small><h1>Places, premises and continuity</h1><p>Three screened fictional footprints and an explicit disposition for every corporate site and Fort component. Accepted canon controls; exactness is used only where it carries meaning.</p></header><main><nav><a href="source-review.html">Final source review</a> · <a href="source-ledger.html">Source ledger</a> · <a href="Geographic-site-decisions.pdf">Download site atlas</a> · <a href="../chronology/history.html">Historical chronology</a> · <a href="../completion/maps/index.html">Historical map series</a></nav><label for="search">Find a place, function or disposition</label><p><input id="search" type="search" placeholder="Search sites and rejected prospects" aria-controls="results"></p><p id="count" role="status">37 records</p><section id="results">'
         + "".join(cards)
         + '</section></main><script>const q=document.querySelector("#search"),cards=[...document.querySelectorAll("article")];q.addEventListener("input",()=>{let n=0;for(const c of cards){c.hidden=!c.dataset.search.toLowerCase().includes(q.value.toLowerCase());n+=!c.hidden;}document.querySelector("#count").textContent=`${n} records`;});</script></html>'
     )
@@ -254,6 +289,7 @@ def build(output, raster_inventory=None):
         selected_footprints=len(features),
         rejected_prospects=len(prospects),
         source_review=source_summary,
+        source_ledger=ledger["summary"],
         visual_review=visual_summary,
         maps=maps,
         canon_sha256=decisions["canon_sha256"],

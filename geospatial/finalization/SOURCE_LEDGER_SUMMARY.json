@@ -1,0 +1,14 @@
+{
+  "baseline_files": 919,
+  "subsequent_changes": 3190,
+  "canon_deltas": 17,
+  "dispositions": {
+    "CONTEXT_RECORD_CANON_BOUNDED": 301,
+    "IMPLEMENTATION_OR_VALIDATION": 179,
+    "PUBLICATION_OR_VISUAL_REPRESENTATION": 283,
+    "CONTROLLING_CANON_DELTA_REVIEWED": 17,
+    "DOMAIN_RECORD_CANON_BOUNDED": 1107,
+    "GEOGRAPHIC_IMPLEMENTATION_OR_ARCHIVE": 1303
+  },
+  "scope": "Complete per-file geographic disposition ledger through the pinned accepted main; only the 17 controlling canon deltas claim full-text delta review. Other rows explicitly retain their domain/derivation boundary. Later commits require a new review; no automatic approval of future sources."
+}

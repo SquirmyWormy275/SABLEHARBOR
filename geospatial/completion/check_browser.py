@@ -33,7 +33,7 @@ def check(directory, executable=None):
                     page.locator("#filter").fill("SH-SITE-0011")
                     assert page.locator("article:visible").count() == 1
                     assert (
-                        "Proposed not proved occupied"
+                        "Authored shared leased office"
                         in page.locator("article:visible").inner_text()
                     )
                 else:

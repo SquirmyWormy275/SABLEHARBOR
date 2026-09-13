@@ -1,38 +1,16 @@
-# Geo canon reconciliation and program closeout matrix
+# Geographic program closeout matrix
 
-**Review:** September 7, 2026. **Accepted canon baseline:** `d91a22c35c91b213204411421de88815f27d8e16`.
+Current review: September 13, 2026. The [delegated geographic addendum](../../docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md) resolves site and occupancy choices at explicit accepted precision. The [final review](../finalization/README.md) supplies the supporting evidence. Earlier dated increments below are historical release records.
 
-PR #94 is the original partial addendum; #96 is the superseded rc3 checkpoint. This successor preserves their useful work and immutable source inventories while consuming accepted current main. Old branches must not overwrite current canon.
+Issue #106 has implementation evidence for all 34 site/component records, including three screened selected footprints. Closure requires the accepted merge and qualified publication. Issue #107 still requires detailed railway/site engineering beyond the existing grade-only synthetic screening. Issue #108 retains that whole-program dependency; source-carrier completion alone is not whole-program closure. Actual land rights, external execution and uranium custody are not established by this package.
 
-## Resolved scope
+The baseline census is fully dispositioned: 78,145 carriers across six disjoint batches. The source ledger covers all 919 original files and 3,190 changed paths through accepted main `dff38f0`, including full-text review of all 17 controlling canon deltas. Its other rows explicitly distinguish domain records, implementation and derived publications; they are not represented as comprehensive legal or financial audits. The final visual review verifies 135 unique embedded images and 290 appearances against the container inventory.
 
-| Earlier gap | Current answer |
-|---|---|
-| Belle / Kanawha | Bedford near Fairmont, 15–20 acres; separate historical proposal retained |
-| Gunns / Stream 17 | Kelly Gang Mining, Tasmania; external host |
-| U.S. Cradle host | Demotte Reclamation Services; separate from Bedford |
-| Evalon / Willow site concept | Klein historical identity; the Fort, Big/Small/White Sheds and Museum |
-| Taylor C / 38.81-mile corridor | Accepted Taylor A, 40-mile main/branch network and nine-mile truck road |
-| ARU geographic estate | 12 facilities, 31 track-register segments and 26 structures |
-| Railway history | Accepted chronology from 1898 through 1991; early geometry unlocated |
-| Legal perimeter | SHI → SHIH → Pale Sun → RWH; SHIH → ARU → BS&T; Northstar Minerals external |
-| Source inventory | 919 main-tree files, 78,145 discovery occurrences, zero extraction errors; OCR and semantic review separately qualified |
+## Current numbered dispositions
 
-Successor: [PR #105](https://github.com/SquirmyWormy275/SABLEHARBOR/pull/105).
+Historical requirement headings are identifiers, not authority for superseded names. Implementation states below are separate from release qualification and issue closure.
 
-## Remaining work
-
-1. **Exact sites and occupancy history ([#106](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/106)):** HQ, Fort, Bedford, Demotte, Kelly Gang Mining; Klein/Fort exact parcel/day precision (linkage resolved); J2 residential campus; Blackridge precise location; Wallaby/Glasshouse; provisional and former offices; hosting and conversion destination.
-2. **Engineering and early railway geometry ([#107](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/107)):** survey-grade transitions/profiles, actual land/access records, early coal/1954 and abandoned alignments, exact external client-site footprints. The current accepted synthetic estate is already implemented.
-3. **Complete geographic program ([#108](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/108)):** semantic adjudication of discovery occurrences, complete enterprise asset histories, remaining temporal map series and future interactive views.
-
-Cradle business canon, Fort functions, current names, current railway case and January 7 acquisition do not require renewed owner decisions. Uranium custody remains OPEN_GATED independently of geography. Existing enterprise issues #11, #12, #18, #19, #21, #22, #24, #33, #34, #37, #38, #44 and #88 are outside this closure. The initial live issue inventory had no standalone open Geo issue; #94 and #96 were the open Geo PRs.
-
-## Original numbered program
-
-Original headings below are historical requirement identifiers. Superseded names in headings do not govern current geography. “Implemented” means the reconciled framework scope, not completion of every physical asset.
-
-| Section | Original requirement | State | Disposition |
+| Section | Original requirement | State | Current disposition |
 |---|---|---|---|
 | 0 | WORK TRANSFER CONTEXT AND SUPPLIED SOURCE ASSETS | IMPLEMENTED_FOR_FRAMEWORK | Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above. |
 | 1 | FIRST PRINCIPLE | IMPLEMENTED_FOR_FRAMEWORK | Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above. |
@@ -40,50 +18,52 @@ Original headings below are historical requirement identifiers. Superseded names
 | 3 | CANON / PROVENANCE CLASSIFICATION | IMPLEMENTED_FOR_FRAMEWORK | Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above. |
 | 4 | IMPORTANT LESSON FROM THE RED WASH PROBLEM | IMPLEMENTED_FOR_FRAMEWORK | Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above. |
 | 5 | GEOGRAPHIC DECISIONS MADE IN THE PARENT CONVERSATION | IMPLEMENTED_FOR_FRAMEWORK | Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above. |
-| 6 | OTHER KNOWN GEOGRAPHIC CANON TO INVENTORY | PARTIAL_OR_FUTURE | Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above. |
+| 6 | OTHER KNOWN GEOGRAPHIC CANON TO INVENTORY | IMPLEMENTED_AT_ACCEPTED_PRECISION | All baseline carriers reviewed; eight additional references retained; subsequent accepted canon deltas reviewed in full and every changed file assigned a geographic-authority disposition. |
 | 7 | BUILD A GEOGRAPHIC DECISION REGISTER FIRST | IMPLEMENTED_FOR_FRAMEWORK | Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above. |
 | 8 | MASTER SITE IDENTIFIERS | IMPLEMENTED_FOR_FRAMEWORK | Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above. |
-| 9 | TEMPORAL GIS | PARTIAL_OR_FUTURE | Temporal machinery implemented; full occupancy histories incomplete. |
-| 10 | RAILWAY MODEL | PARTIAL_OR_FUTURE | Current accepted 40-mile network present; early/abandoned and final survey geometry incomplete. |
-| 11 | RESOURCE GEOGRAPHY | PARTIAL_OR_FUTURE | Mine anchor and resource context retained; detailed mine design remains. |
-| 12 | CORPORATE FOOTPRINT | PARTIAL_OR_FUTURE | HQ/Fort/Bedford constraints and industrial estate represented; exact enterprise parcels remain. |
-| 13 | EVENT GEOGRAPHY | PARTIAL_OR_FUTURE | 73 source-bound events and observations, dated map plates and normalized object links; unlocated events stay unlocated. |
-| 14 | CARTOGRAPHIC PRODUCTS | PARTIAL_OR_FUTURE | Eleven-sheet atlas regenerated; full historical series incomplete. |
-| 15 | MAP DESIGN STANDARD | PARTIAL_OR_FUTURE | Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above. |
+| 9 | TEMPORAL GIS | IMPLEMENTED_AT_ACCEPTED_PRECISION | 34 site histories with accepted current dispositions, 79 dated events and bounded occupancy; unknown dates stay unknown. |
+| 10 | RAILWAY MODEL | ENGINEERING_REMAINDER | Accepted synthetic estate preserved. Detailed transitions, design profiles, construction/site engineering and real land/access evidence are not certified by source adjudication; see #107. |
+| 11 | RESOURCE GEOGRAPHY | ENGINEERING_REMAINDER | Accepted synthetic estate preserved. Detailed transitions, design profiles, construction/site engineering and real land/access evidence are not certified by source adjudication; see #107. |
+| 12 | CORPORATE FOOTPRINT | IMPLEMENTED_AT_ACCEPTED_PRECISION | Three screened selected footprints and explicit accepted precision dispositions for all 34 sites/components. |
+| 13 | EVENT GEOGRAPHY | IMPLEMENTED_AT_ACCEPTED_PRECISION | 79 source-bound events, including six rejected-prospect inquiry endpoints; no tenure inferred from inquiry. |
+| 14 | CARTOGRAPHIC PRODUCTS | IMPLEMENTED_AT_ACCEPTED_PRECISION | Full historical/site atlas plus three screened selected-footprint plates; no current alignments back-projected into unlocated eras. |
+| 15 | MAP DESIGN STANDARD | IMPLEMENTED_AT_ACCEPTED_PRECISION | Current branded map system, explicit source/precision labels, responsive offline readers and preserved approved artwork. |
 | 16 | CANONICAL GEOSPATIAL TECHNOLOGY STACK | IMPLEMENTED_FOR_FRAMEWORK | Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above. |
 | 17 | CORE DATA MODEL | IMPLEMENTED_FOR_FRAMEWORK | Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above. |
 | 18 | FICTIONALITY AND REAL-WORLD RELATION POLICY | IMPLEMENTED_FOR_FRAMEWORK | Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above. |
 | 19 | GEOGRAPHIC PRECISION POLICY | IMPLEMENTED_FOR_FRAMEWORK | Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above. |
 | 20 | SOURCE ACQUISITION AND LICENSING | IMPLEMENTED_FOR_FRAMEWORK | Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above. |
 | 21 | LOCKED DECISIONS VERSUS ENGINEERING DETAILS | IMPLEMENTED_FOR_FRAMEWORK | Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above. |
-| 22 | RED WASH EXACT-SITING WORKFLOW | PARTIAL_OR_FUTURE | Sweetwater anchor locked; complete detailed mine/site engineering remains. |
-| 23 | BS&T NETWORK ENGINEERING WORKFLOW | PARTIAL_OR_FUTURE | Current network, branches, road, tracks and structures consumed; detailed survey/design remains. |
-| 24 | SACRAMENTO HQ GEOMETRY | PARTIAL_OR_FUTURE | Sacramento district retained; exact parcel unfinished. |
-| 25 | EVALON / HAZELWOOD GEOMETRY | PARTIAL_OR_FUTURE | Klein/Fort continuity resolved by approved staged 2024 relocation; year-bounded occupancy recorded; exact parcels remain. |
-| 26 | CRADLE / BELLE GEOMETRY | PARTIAL_OR_FUTURE | Bedford/Fairmont supersedes Belle; exact site/access unfinished. |
-| 27 | BLACKRIDGE AND OTHER MAJOR ASSETS | PARTIAL_OR_FUTURE | Blackridge Nevada scope retained; exact site unresolved. |
-| 28 | CORPORATE ASSET CENSUS | PARTIAL_OR_FUTURE | 919 baseline files; 71,249 of 78,145 carriers classified across five batches; full semantic and later-source review remains. |
-| 29 | TEMPORAL AND BITEMPORAL INTEGRITY | PARTIAL_OR_FUTURE | Half-open dates supported; institutional founding no longer invents physical occupancy. |
-| 30 | CORPORATE-HISTORY MAP ENGINE | PARTIAL_OR_FUTURE | Current/pre-acquisition BS&T maps present; early route geometry unlocated. |
+| 22 | RED WASH EXACT-SITING WORKFLOW | ENGINEERING_REMAINDER | Accepted synthetic estate preserved. Detailed transitions, design profiles, construction/site engineering and real land/access evidence are not certified by source adjudication; see #107. |
+| 23 | BS&T NETWORK ENGINEERING WORKFLOW | ENGINEERING_REMAINDER | Accepted synthetic estate preserved. Detailed transitions, design profiles, construction/site engineering and real land/access evidence are not certified by source adjudication; see #107. |
+| 24 | SACRAMENTO HQ GEOMETRY | IMPLEMENTED_AT_ACCEPTED_PRECISION | 11.57-acre Sacramento fictional footprint screened against terrain, dated imagery, roads/rail and flood mapping; V08 artwork remains unchanged. |
+| 25 | EVALON / HAZELWOOD GEOMETRY | IMPLEMENTED_AT_ACCEPTED_PRECISION | 10.65-acre Fort fictional footprint screened; accepted 2024 separate-premises relocation preserved with unknown days. |
+| 26 | CRADLE / BELLE GEOMETRY | IMPLEMENTED_AT_ACCEPTED_PRECISION | 15.27-acre Bedford/Fairmont fictional footprint screened; upper bench and steep-buffer distinction retained; external hosts remain separate. |
+| 27 | BLACKRIDGE AND OTHER MAJOR ASSETS | IMPLEMENTED_AT_ACCEPTED_PRECISION | Blackridge and remaining assets receive explicit geographic/public-precision dispositions without inventing restricted premises. |
+| 28 | CORPORATE ASSET CENSUS | IMPLEMENTED_AT_ACCEPTED_PRECISION | 78,145 baseline carriers in six fixed batches; 919-file source ledger; 17 full-text canonical deltas; visual roles and source counterparts verified. Other domain records retain explicit geographic authority boundaries. |
+| 29 | TEMPORAL AND BITEMPORAL INTEGRITY | IMPLEMENTED_AT_ACCEPTED_PRECISION | Source-recorded dates remain separate from effective inquiry, ownership and occupancy dates; unknown day precision preserved. |
+| 30 | CORPORATE-HISTORY MAP ENGINE | IMPLEMENTED_AT_ACCEPTED_PRECISION | Historical/site maps and dated route queries complete at accepted precision; 1898/1954/abandoned alignments explicitly unlocated. |
 | 31 | PROVENANCE MUST BE FEATURE-LEVEL | IMPLEMENTED_FOR_FRAMEWORK | Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above. |
 | 32 | REPOSITORY INTEGRATION | IMPLEMENTED_FOR_FRAMEWORK | Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above. |
 | 33 | BRAND ASSET HANDLING | IMPLEMENTED_FOR_FRAMEWORK | Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above. |
 | 34 | MAP PRODUCT CONTROL | IMPLEMENTED_FOR_FRAMEWORK | Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above. |
 | 35 | VALIDATION REQUIREMENTS | IMPLEMENTED_FOR_FRAMEWORK | Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above. |
 | 36 | TESTS | IMPLEMENTED_FOR_FRAMEWORK | Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above. |
-| 37 | WEB AND INTERACTIVE MAP FUTURE | IMPLEMENTED_SOURCE_BOUND_VIEWS | Offline chronology, dated routes, historical/site atlas, searchable site docket and source-review readers delivered; unsupported facts remain explicit. |
+| 37 | WEB AND INTERACTIVE MAP FUTURE | IMPLEMENTED_AT_ACCEPTED_PRECISION | Offline decision, source-ledger, carrier, timeline and historical-map readers implemented. |
 | 38 | DECISION-MAKING METHOD | IMPLEMENTED_FOR_FRAMEWORK | Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above. |
 | 39 | USER CONTINUATION RULE | IMPLEMENTED_FOR_FRAMEWORK | Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above. |
-| 40 | OPEN QUESTIONS TO SURFACE, NOT SILENTLY ANSWER | PARTIAL_OR_FUTURE | Known decisions closed; remaining history and implementation gaps explicitly listed. |
-| 41 | FIRST EXECUTION PHASE | PARTIAL_OR_FUTURE | Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above. |
-| 42 | SECOND EXECUTION PHASE | PARTIAL_OR_FUTURE | Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above. |
-| 43 | THIRD EXECUTION PHASE | PARTIAL_OR_FUTURE | Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above. |
-| 44 | FOURTH EXECUTION PHASE | PARTIAL_OR_FUTURE | Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above. |
-| 45 | FIFTH EXECUTION PHASE | PARTIAL_OR_FUTURE | Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above. |
-| 46 | RELEASE PACKAGE | PARTIAL_OR_FUTURE | New bundles built to ignored dist for GitHub Releases; prior bytes remain immutable. |
-| 47 | DEFINITION OF DONE | PARTIAL_OR_FUTURE | Framework reconciliation eligible for closure; entire geographic program incomplete. |
+| 40 | OPEN QUESTIONS TO SURFACE, NOT SILENTLY ANSWER | IMPLEMENTED_AT_ACCEPTED_PRECISION | All fictional site/occupancy decisions resolved under owner delegation; engineering and external execution limits remain explicit. |
+| 41 | FIRST EXECUTION PHASE | IMPLEMENTED_AT_ACCEPTED_PRECISION | Source discovery and provenance architecture implemented; fixed review records preserve original wording and source hashes. |
+| 42 | SECOND EXECUTION PHASE | IMPLEMENTED_AT_ACCEPTED_PRECISION | Current geographic decisions and site identity crosswalk implemented. |
+| 43 | THIRD EXECUTION PHASE | IMPLEMENTED_AT_ACCEPTED_PRECISION | Accepted current railway/industrial estate and chronology integrated; survey/design extensions remain #107. |
+| 44 | FOURTH EXECUTION PHASE | IMPLEMENTED_AT_ACCEPTED_PRECISION | Enterprise histories and bounded site precision integrated across catalog, docket and map products. |
+| 45 | FIFTH EXECUTION PHASE | IMPLEMENTED_AT_ACCEPTED_PRECISION | Offline historical and source research readers implemented with executable browser qualification. |
+| 46 | RELEASE PACKAGE | DELIVERY_QUALIFICATION_REQUIRED | Version 1.4 adds final decisions and source review. Clean integration, native/browser tests, sealed release and publication receipts are required; #107 engineering prevents claiming full-program completion. |
+| 47 | DEFINITION OF DONE | PROGRAM_REMAINDER | Version 1.4 adds final decisions and source review. Clean integration, native/browser tests, sealed release and publication receipts are required; #107 engineering prevents claiming full-program completion. |
 | 48 | DO-NOT-DO LIST | IMPLEMENTED_FOR_FRAMEWORK | Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above. |
 | 49 | IMMEDIATE START INSTRUCTION | IMPLEMENTED_FOR_FRAMEWORK | Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above. |
+
+## Historical increments (superseded where stated above)
 
 ## September 12 semantic review increment
 

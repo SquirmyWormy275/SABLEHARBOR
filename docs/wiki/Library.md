@@ -10,15 +10,15 @@ Use the subject pages for a guided introduction. Use this complete file inventor
 | [People, governance and departments](library/people.md) | 228 |
 | [Finance, transactions and operating cases](library/finance.md) | 348 |
 | [Controls, services and runtime](library/controls.md) | 70 |
-| [Geography and facilities](library/places.md) | 305 |
+| [Geography and facilities](library/places.md) | 308 |
 | [Identity and collateral](library/identity.md) | 15 |
-| [Canon, history and decisions](library/history.md) | 43 |
+| [Canon, history and decisions](library/history.md) | 44 |
 | [Reader guides and subject pages](library/reader.md) | 76 |
 | [Implementation, source guides and delivery evidence](library/technical.md) | 88 |
 
 ## Format coverage
 
-The inventory contains 832 Markdown files, 360 PDFs and 43 Excel workbooks. The existing publication manifest verifies 131 Markdown/PDF pairs.
+The inventory contains 836 Markdown files, 360 PDFs and 43 Excel workbooks. The existing publication manifest verifies 131 Markdown/PDF pairs.
 
 Every inventoried file has a path, title, format, collection, size and SHA-256 in `reader_file` within the [institutional database](../internal/institutional_catalog.sqlite3). `reader_publication_pair` records verified source/PDF links; `reader_search` supports text search. `reader_evidence_link` separately connects validated evidence packets to their native accounting IDs and MD/PDF/XLSX files without declaring publication approval. These are discovery tables. Native accounting and operating databases retain their transaction records.
 `reader_evidence_package` preserves accounting/legal package registers and review states; `reader_counterpart_audit` records applicable dated counterpart evidence.

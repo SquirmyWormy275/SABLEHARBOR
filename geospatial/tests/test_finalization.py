@@ -92,3 +92,18 @@ def test_visual_review_rejects_missing_and_changed_image_appearances():
     )
     with pytest.raises(ValueError, match="no visual disposition"):
         visual_review.verify(altered)
+
+
+def test_reviewed_source_ledger_rejects_unreviewed_canon_population(monkeypatch):
+    from geospatial.finalization import source_ledger
+
+    ledger = source_ledger.build()
+    assert ledger["summary"]["baseline_files"] == 919
+    assert ledger["summary"]["canon_deltas"] == 17
+    assert all(
+        r["current_sha256"] or r["baseline_sha256"]
+        for r in ledger["subsequent_changes"]
+    )
+    monkeypatch.setattr(source_ledger, "CANON_FINDINGS", {})
+    with pytest.raises(ValueError, match="canon delta population"):
+        source_ledger.build()
