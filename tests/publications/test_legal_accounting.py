@@ -3,6 +3,8 @@
 import copy
 import importlib.util
 import json
+import shutil
+import sqlite3
 from pathlib import Path
 
 import pytest
@@ -64,3 +66,40 @@ def test_no_entry_has_no_posting_value():
     for link in links:
         if link["evidence_kind"] == "NO_ENTRY":
             assert link["native_value"]["posting"] is None
+
+
+@pytest.mark.parametrize("mutation", ["value", "schema", "missing_row", "user_version"])
+def test_database_logical_mutations_rejected(tmp_path, mutation):
+    original = ROOT / a.HERE / "links.sqlite3"
+    changed = tmp_path / "changed.sqlite3"
+    shutil.copyfile(original, changed)
+    with sqlite3.connect(changed) as con:
+        if mutation == "value":
+            con.execute("UPDATE coverage SET disposition='INVENTED'")
+        elif mutation == "schema":
+            con.execute("CREATE INDEX unauthorized_index ON coverage(disposition)")
+        elif mutation == "missing_row":
+            con.execute("DELETE FROM reconciliation WHERE rowid=1")
+        else:
+            con.execute("PRAGMA user_version=1")
+    with pytest.raises(ValueError, match="schema or contents"):
+        a.compare_databases(original, changed)
+
+
+def test_database_header_variation_permitted_without_rewriting(tmp_path):
+    original = ROOT / a.HERE / "links.sqlite3"
+    changed = tmp_path / "other_engine.sqlite3"
+    raw = bytearray(original.read_bytes())
+    # SQLite header bytes 96-99 identify the last writing library version.
+    raw[96:100] = (3045000).to_bytes(4, "big")
+    changed.write_bytes(raw)
+    before = changed.read_bytes()
+    a.compare_databases(original, changed)
+    assert changed.read_bytes() == before
+
+
+def test_database_corruption_rejected(tmp_path):
+    bad = tmp_path / "corrupt.sqlite3"
+    bad.write_bytes(b"not a SQLite database")
+    with pytest.raises((ValueError, sqlite3.DatabaseError)):
+        a.compare_databases(ROOT / a.HERE / "links.sqlite3", bad)

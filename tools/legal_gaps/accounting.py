@@ -479,6 +479,37 @@ def workbook(path, data, links, checks):
             dst.writestr(info, content)
 
 
+def database_snapshot(path):
+    """Compare logical databases without depending on SQLite storage-version bytes."""
+    with sqlite3.connect(path.resolve().as_uri() + "?mode=ro", uri=True) as con:
+        if con.execute("PRAGMA integrity_check").fetchall() != [("ok",)]:
+            raise ValueError(f"Invalid accounting database integrity: {path}")
+        if con.execute("PRAGMA foreign_key_check").fetchall():
+            raise ValueError(f"Invalid accounting database foreign keys: {path}")
+        schema = con.execute(
+            "SELECT type,name,tbl_name,sql FROM sqlite_schema ORDER BY type,name"
+        ).fetchall()
+        tables = {}
+        for kind, name, _, _ in schema:
+            if kind != "table":
+                continue
+            quoted = '"' + name.replace('"', '""') + '"'
+            rows = con.execute("SELECT * FROM " + quoted).fetchall()
+            # repr distinguishes NULL, numeric, text and BLOB values; preserve duplicate rows.
+            tables[name] = sorted(rows, key=repr)
+        return {
+            "schema": schema,
+            "tables": tables,
+            "user_version": con.execute("PRAGMA user_version").fetchone()[0],
+            "application_id": con.execute("PRAGMA application_id").fetchone()[0],
+        }
+
+
+def compare_databases(expected, actual):
+    if database_snapshot(expected) != database_snapshot(actual):
+        raise ValueError("Stale accounting derivative: links.sqlite3 schema or contents")
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--check", action="store_true")
@@ -486,9 +517,10 @@ def main():
     if args.check:
         with tempfile.TemporaryDirectory() as tmp:
             payload = build(output=Path(tmp))
-            for name in ("LINKS.md", "links.json", "links.xlsx", "links.sqlite3"):
+            for name in ("LINKS.md", "links.json", "links.xlsx"):
                 if digest(Path(tmp) / name) != digest(ROOT / HERE / name):
                     raise ValueError("Stale accounting derivative: " + name)
+            compare_databases(Path(tmp) / "links.sqlite3", ROOT / HERE / "links.sqlite3")
     else:
         payload = build()
     print(
