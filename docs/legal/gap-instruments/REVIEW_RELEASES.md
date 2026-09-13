@@ -6,7 +6,7 @@ receive a new version for any correction.
 
 ## 0.3.0-review.1 — practical-work addendum, downloadable draft
 
-[Download the draft release](https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/untagged-29cc41b454eeb35cd3e5).
+[Download the draft release](https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/untagged-7613517b0b0ef5d5ab19).
 Repository draft-release access and GitHub sign-in are required. Extract the complete
 ZIP and open `START_HERE.html`. [The practical-work guide](PRACTICAL_WORK.md) also
 opens directly in GitHub. This edition remains held in PR #158 for exact-file review.
