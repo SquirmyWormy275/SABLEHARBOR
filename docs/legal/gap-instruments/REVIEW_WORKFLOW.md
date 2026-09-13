@@ -45,7 +45,7 @@ included; deeper repository references are labeled online links. The
 belong in GitHub Releases, not as additional ZIPs in the Git tree.
 
 The broader [evidence workbench](../../../evidence/closeout/README.md) remains the
-entry point for runtime, geographic and repository-wide evidence. Its PR #159
+entry point for runtime, geographic and repository-wide evidence. Its accepted PR #159
 workline is preserved; this legal package does not replace its interface or
 change its draft-note format. The two entry points link to the same underlying
 repository sources.
