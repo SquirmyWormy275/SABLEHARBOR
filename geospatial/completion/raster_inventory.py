@@ -13,7 +13,7 @@ import fitz
 from geospatial.chronology.build import ROOT, archived, sha
 
 
-def build(output, execute_ocr=True):
+def build(output, execute_ocr=True, image_dir=None):
     output.mkdir(parents=True, exist_ok=True)
     rows = list(csv.DictReader((ROOT / "geospatial/registers/SOURCE_COVERAGE.csv").open()))
     known = {
@@ -28,6 +28,9 @@ def build(output, execute_ocr=True):
 
     def image_record(raw, path, locator):
         digest = sha(raw)
+        if image_dir is not None:
+            image_dir.mkdir(parents=True, exist_ok=True)
+            (image_dir / (digest + ".image")).write_bytes(raw)
         records.append(
             dict(
                 record_id=sha((path + "::" + locator).encode())[:24],

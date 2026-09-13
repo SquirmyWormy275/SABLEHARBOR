@@ -8,7 +8,7 @@ from geospatial.chronology.operations_review import review
 def test_history_preserves_evidence_and_temporal_meaning():
     result = build()
     events = {r["event_id"]: r for r in result["events"]}
-    assert len(events) == len(result["events"]) == 73
+    assert len(events) == len(result["events"]) == 79
     assert len(result["sites"]) == 34
     assert not any(e["occupancy_interval_established"] for e in events.values())
     lease = events["OBS-KLEIN-LEASE-2021"]

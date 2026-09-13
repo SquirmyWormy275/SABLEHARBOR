@@ -9,13 +9,14 @@ from geospatial.closeout.sites import ROOT, bind_source, review
 def test_every_site_has_a_source_binding_and_separate_occupancy_disposition():
     result, sources = review()
     assert result["verified_site_records"] == 34
-    assert len(sources) == 17
+    assert len(sources) == 18
     assert all(
         row["occupancy_valid_from"] is None and row["occupancy_valid_to"] is None
         for row in result["rows"]
     )
     assert all(row["source"]["sha256"] in sources for row in result["rows"])
-    assert not result["issue_106_complete"]
+    assert result["issue_106_complete"]
+    assert all(r["current_decision_evidence"]["sha256"] in sources for r in result["rows"])
     by_id = {row["object_id"]: row for row in result["rows"]}
     assert by_id["SH-SITE-0016"]["hosting_dependency_ids"] == [
         "SH-SITE-0028",

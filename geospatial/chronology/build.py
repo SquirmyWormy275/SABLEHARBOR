@@ -232,6 +232,26 @@ def build():
         )
     )
     sites, _ = site_review()
+    from geospatial.finalization.prospects import recover as recover_prospects
+
+    for prospect in recover_prospects():
+        src = prospect["source"]
+        raw = archived(src["path"], src["revision"])
+        evidence = dict(path=src["path"], revision=src["revision"],
+                        locator="Complete dated rejected-prospect record",
+                        sha256=sha(raw), evidence=raw.decode(),
+                        source_recorded_at=prospect["source_recorded_at"],
+                        available_to_case_company=prospect["source_available_as_of"])
+        for suffix, field, title in [
+            ("START", "review_started", "Inquiry begins"),
+            ("CLOSE", "review_closed", "Acquisition opportunity rejected"),
+        ]:
+            events.append(event(
+                prospect["object_id"] + "-" + suffix,
+                prospect["canonical_name"] + " — " + title,
+                "REJECTED_PROSPECT_HISTORY", prospect[field], evidence,
+                [prospect["object_id"]], prospect["meaning"], prospect["place"],
+            ))
     histories = []
     for site in sites["rows"]:
         observations = [e["event_id"] for e in events if site["object_id"] in e["object_ids"]]

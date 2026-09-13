@@ -1,0 +1,148 @@
+{
+  "records": [
+    {
+      "option_id": "SH-SITE-0001-OPTION-1",
+      "disposition": "REJECTED_AFTER_IMAGERY_AND_TERRAIN_REVIEW",
+      "reason": "Occupied industrial infrastructure in imagery; reject as campus placement.",
+      "reference_files": [
+        {
+          "file": "SH-SITE-0001-OPTION-1-elevation.tif",
+          "sha256": "17dd918cbfb272a0aec553765f32cd1c0ea98ef8f052fb3359449711ffbb93b0"
+        },
+        {
+          "file": "SH-SITE-0001-OPTION-1-imagery.png",
+          "sha256": "aa8c33916bbc403327668d93964a0728ca9972cfd4dc42961ed8235e0f7a6e1b"
+        }
+      ],
+      "limit": "Context screening of fictional alternatives; not a cadastral, geotechnical, planning-permission or title determination. Earlier release bytes remain unchanged."
+    },
+    {
+      "option_id": "SH-SITE-0001-OPTION-2",
+      "disposition": "REJECTED_AFTER_IMAGERY_AND_TERRAIN_REVIEW",
+      "reason": "Existing office/developed context in imagery; reject without appropriating a real occupant.",
+      "reference_files": [
+        {
+          "file": "SH-SITE-0001-OPTION-2-elevation.tif",
+          "sha256": "21ff67036086b619ef0f08c63262be96c1b733cbe7ae252119c5d3fa5560838c"
+        },
+        {
+          "file": "SH-SITE-0001-OPTION-2-imagery.png",
+          "sha256": "fc7be0b8bfc313ef4966e1754552573996c45c05baa027a6220069c2fa7534d7"
+        }
+      ],
+      "limit": "Context screening of fictional alternatives; not a cadastral, geotechnical, planning-permission or title determination. Earlier release bytes remain unchanged."
+    },
+    {
+      "option_id": "SH-SITE-0001-OPTION-3",
+      "disposition": "REJECTED_AFTER_IMAGERY_AND_TERRAIN_REVIEW",
+      "reason": "Mounded/disturbed industrial ground conflicts with the proposed campus placement; the separate HQ-F placement is selected.",
+      "reference_files": [
+        {
+          "file": "SH-SITE-0001-OPTION-3-elevation.tif",
+          "sha256": "45098cccedd7dcc71faa1729e83302ac8851d6fe83834b8044183805da228823"
+        },
+        {
+          "file": "SH-SITE-0001-OPTION-3-imagery.png",
+          "sha256": "6d0454d3ed407e98db5ff57ca2bcb4fc3490eadd30027467a1fc4124c10f715e"
+        }
+      ],
+      "limit": "Context screening of fictional alternatives; not a cadastral, geotechnical, planning-permission or title determination. Earlier release bytes remain unchanged."
+    },
+    {
+      "option_id": "SH-SITE-0003-OPTION-1",
+      "disposition": "REJECTED_AFTER_IMAGERY_AND_TERRAIN_REVIEW",
+      "reason": "Wooded river-valley hillside rather than the required working Hazelwood compound.",
+      "reference_files": [
+        {
+          "file": "SH-SITE-0003-OPTION-1-imagery.png",
+          "sha256": "59581e69ecb60024e443d872b71edb671d46956c78dfaa4a5d1f4f6e6abc7cd0"
+        },
+        {
+          "file": "SH-SITE-0003-OPTION-1-elevation.tif",
+          "sha256": "ef0988a9ec69046e94e206a2a8507453c42be3a5b2a721f8ffebc28f4f9c2c2c"
+        }
+      ],
+      "limit": "Context screening of fictional alternatives; not a cadastral, geotechnical, planning-permission or title determination. Earlier release bytes remain unchanged."
+    },
+    {
+      "option_id": "SH-SITE-0003-OPTION-2",
+      "disposition": "REJECTED_AFTER_IMAGERY_AND_TERRAIN_REVIEW",
+      "reason": "Hillside and existing test/industrial context; the cleared north-Hazelwood strip is selected separately.",
+      "reference_files": [
+        {
+          "file": "SH-SITE-0003-OPTION-2-elevation.tif",
+          "sha256": "43c649400ecb2e93c20067f8c5b16190401a770db280e75ee421bdd0a2967885"
+        },
+        {
+          "file": "SH-SITE-0003-OPTION-2-imagery.png",
+          "sha256": "8a3989b5b1f761fff0c46823fe25649d95683e6f1a5f5ebbe771d8226dea2aae"
+        }
+      ],
+      "limit": "Context screening of fictional alternatives; not a cadastral, geotechnical, planning-permission or title determination. Earlier release bytes remain unchanged."
+    },
+    {
+      "option_id": "SH-SITE-0003-OPTION-3",
+      "disposition": "REJECTED_AFTER_IMAGERY_AND_TERRAIN_REVIEW",
+      "reason": "Existing solar/parking/developed context; reject without appropriating real facilities.",
+      "reference_files": [
+        {
+          "file": "SH-SITE-0003-OPTION-3-elevation.tif",
+          "sha256": "4b287fe32dac0841efe01aae6bb2d3793c3888241765300512ca3075cfbd8e39"
+        },
+        {
+          "file": "SH-SITE-0003-OPTION-3-imagery.png",
+          "sha256": "64a6d69b4c9eb73d5df361dfd3c6df4c0e975f1da8edc7a5779f26e34c79f492"
+        }
+      ],
+      "limit": "Context screening of fictional alternatives; not a cadastral, geotechnical, planning-permission or title determination. Earlier release bytes remain unchanged."
+    },
+    {
+      "option_id": "SH-SITE-0005-OPTION-1",
+      "disposition": "REJECTED_AFTER_IMAGERY_AND_TERRAIN_REVIEW",
+      "reason": "Existing residential/developed land conflicts with an industrial recovery center.",
+      "reference_files": [
+        {
+          "file": "SH-SITE-0005-OPTION-1-imagery.png",
+          "sha256": "d7b55497432dcce372ddb502b0f0cb810c4362f4d731b02cdae6ee46f8049300"
+        },
+        {
+          "file": "SH-SITE-0005-OPTION-1-elevation.tif",
+          "sha256": "04de9f2d9a4c2309d849e0282a5340fd57e2d8e96cf304ced060b9572195154b"
+        }
+      ],
+      "limit": "Context screening of fictional alternatives; not a cadastral, geotechnical, planning-permission or title determination. Earlier release bytes remain unchanged."
+    },
+    {
+      "option_id": "SH-SITE-0005-OPTION-2",
+      "disposition": "REJECTED_AFTER_IMAGERY_AND_TERRAIN_REVIEW",
+      "reason": "Steep wooded terrain; reject as the working brownfield footprint.",
+      "reference_files": [
+        {
+          "file": "SH-SITE-0005-OPTION-2-elevation.tif",
+          "sha256": "4c00ce30457028a8c031c26e97d0fba628b0b9acc91e7745480592f16f5a0abe"
+        },
+        {
+          "file": "SH-SITE-0005-OPTION-2-imagery.png",
+          "sha256": "ca7624c28f125d3473351e9786e22b8b73fd336bf6aee3b0ace31d2d50dad1f6"
+        }
+      ],
+      "limit": "Context screening of fictional alternatives; not a cadastral, geotechnical, planning-permission or title determination. Earlier release bytes remain unchanged."
+    },
+    {
+      "option_id": "SH-SITE-0005-OPTION-3",
+      "disposition": "REJECTED_AFTER_IMAGERY_AND_TERRAIN_REVIEW",
+      "reason": "Steep wooded terrain; reject in favor of the separate redevelopment-bench design.",
+      "reference_files": [
+        {
+          "file": "SH-SITE-0005-OPTION-3-elevation.tif",
+          "sha256": "02d13ba030769e13581ec7fb9b7d54fe1fd60e1625f08da004d0fac112614062"
+        },
+        {
+          "file": "SH-SITE-0005-OPTION-3-imagery.png",
+          "sha256": "09e75a34ad736db5c1d17d75eaad5321e2a9d838fac977444aedd69788e01d56"
+        }
+      ],
+      "limit": "Context screening of fictional alternatives; not a cadastral, geotechnical, planning-permission or title determination. Earlier release bytes remain unchanged."
+    }
+  ]
+}

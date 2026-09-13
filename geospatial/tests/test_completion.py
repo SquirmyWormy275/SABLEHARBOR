@@ -146,10 +146,10 @@ def test_all_site_requirements_keep_observations_distinct_from_intervals():
         o["occupancy_start"] is None and o["occupancy_end"] is None for o in data["observations"]
     )
     for oid in ("SH-SITE-0011", "SH-SITE-0012", "SH-SITE-0013"):
-        assert records[oid]["disposition"] == "PROPOSED_NOT_PROVED_OCCUPIED"
-    assert records["SH-SITE-0027"]["disposition"] == "OPERATING_HOST_GEOGRAPHY_OPEN"
+        assert records[oid]["disposition"] == "AUTHORED_SHARED_LEASED_OFFICE"
+    assert records["SH-SITE-0027"]["disposition"] == "EXTERNAL_OPERATING_HOST_REGIONAL_PRECISION_ACCEPTED"
     assert records["SH-SITE-0002"]["occupancy_bounds"]["latest_end"] == "2025-01-01"
-    assert all(not r["issue_106_complete"] for r in records.values())
+    assert all(r["issue_106_complete"] for r in records.values())
 
 
 def test_visual_role_review_is_complete_and_preserves_superseded_maps():

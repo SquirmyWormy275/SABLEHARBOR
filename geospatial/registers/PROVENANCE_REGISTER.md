@@ -38,6 +38,15 @@
 | SRC-CURRENT-CURRENT-LORE | SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1 | docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md | All rights reserved; user-authorized Sable Harbor project material |
 | SRC-KLEIN-FORT-20260913 | Approved Klein/Fort occupancy continuity | docs/canon/KLEIN_FORT_OCCUPANCY_2026-09-13.md | Owner-authorized synthetic project material |
 | SRC-RUNTIME-20260911 | Runtime estate September 2026 | enterprise/services/source/runtime_sites_2026-09-11.json | Owner-authorized synthetic project material |
+| SRC-GEO-COMPLETE-20260913 | Geographic and occupancy completion | docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md | Owner-authorized synthetic project material |
+| SRC-GFC-PROP-001 | Cedar Junction processing prospect | industrial/pale_sun/05_FALSE_START_CEDAR_JUNCTION.md | Repository synthetic project material |
+| SRC-GFC-PROP-002 | Juniper Mesa uranium-property prospect | industrial/pale_sun/06_FALSE_START_JUNIPER_MESA.md | Repository synthetic project material |
+| SRC-GFC-PROP-003 | Salt Rim recovery-restart prospect | industrial/pale_sun/07_FALSE_START_SALT_RIM.md | Repository synthetic project material |
+| SRC-GFC-BIO-001 | BTC career geography | industrial/pale_sun/01_VILANDER_BIOGRAPHY.md | Repository synthetic project material |
+| SRC-GFC-BIO-002 | DeMotte / agricultural Midwest biography | docs/governance/BOARD_AND_CAPITAL_GOVERNANCE_v1.0.1.md | Repository synthetic project material |
+| SRC-GFC-BIO-003 | Kansas State education reference | docs/governance/BOARD_AND_CAPITAL_GOVERNANCE_v1.0.1.md | Repository synthetic project material |
+| SRC-GFC-BIO-004 | Gid Voss 2018 coal-preparation customer incident | docs/canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md | Repository synthetic project material |
+| SRC-GFC-BIO-005 | Harvard Business School education reference | docs/governance/BOARD_AND_CAPITAL_GOVERNANCE_v1.0.1.md | Repository synthetic project material |
 | REF-US-STATES | us_states | https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/State_County/MapServer/0/query | U.S. federal government geographic data; public domain |
 | REF-WYOMING-COUNTIES | wyoming_counties | https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/State_County/MapServer/1/query | U.S. federal government geographic data; public domain |
 | REF-CONTEXT-PLACES | context_places | https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Current/MapServer/28/query | U.S. federal government geographic data; public domain |
