@@ -20,6 +20,7 @@ from enterprise.runtime import security
 from enterprise.runtime.tests.test_security import SecurityTests
 
 ROOT = Path(__file__).resolve().parents[2]
+VERSION = "1.1.0"
 
 
 def sha(path):
@@ -191,7 +192,7 @@ def verify(output):
     return manifest
 
 
-def build(output, allow_dirty=False):
+def build(output, allow_dirty=False, with_ocr=False):
     output = output.resolve()
     if output.exists() and any(output.iterdir()):
         raise ValueError('Output must be empty; prior evidence runs are immutable')
@@ -213,6 +214,16 @@ def build(output, allow_dirty=False):
     runs = [collect_command(output, label, args) for label, args in commands]
     cases = runtime_cases()
     residual, geographic = residual_geography()
+    from tools.evidence.inventory import inventory
+    source_inventory = inventory(ROOT, revision, residual)
+    write_json(output / 'source-coverage.json', source_inventory)
+    write_csv(output / 'baseline-sources.csv', source_inventory['baseline_sources'])
+    write_csv(output / 'source-changes.csv', source_inventory['subsequent_changes'])
+    write_csv(output / 'site-records.csv', source_inventory['sites'])
+    ocr = None
+    if with_ocr:
+        from tools.evidence.ocr import collect
+        ocr = collect(ROOT, output, source_inventory)
     gaps = json.loads((ROOT / 'docs/audit/PROFESSIONAL_PRESENTATION_ISSUE_REVIEW.json').read_text())['issues']
     write_json(output / 'case-events.json', cases)
     write_json(output / 'execution-register.json', runs)
@@ -223,10 +234,14 @@ def build(output, allow_dirty=False):
     paths = {'tools/evidence/closeout.py', 'docs/audit/PROFESSIONAL_PRESENTATION_ISSUE_REVIEW.json', 'geospatial/registers/GEOGRAPHIC_CANDIDATE_OCCURRENCES.csv.gz', 'uv.lock', 'pyproject.toml'}
     paths |= {str(p.relative_to(ROOT)) for directory in ('enterprise/runtime', 'enterprise/services', 'geospatial/adjudication') for p in (ROOT / directory).rglob('*') if p.is_file() and p.suffix in ('.py', '.json', '.gz') and '__pycache__' not in p.parts}
     paths |= {r['source'] for r in gaps}
+    paths |= {str(p.relative_to(ROOT)) for p in (ROOT / 'tools/evidence').glob('*') if p.is_file()}
+    paths |= {'geospatial/registers/SOURCE_COVERAGE.csv', 'geospatial/registers/CENSUS_MANIFEST.json', 'geospatial/registers/SITE_REGISTER.csv'}
     inputs = {p: sha(ROOT / p) for p in sorted(paths)}
     write_json(output / 'source-inputs.json', inputs)
     write_json(output / 'environment.json', {'python': sys.version, 'platform': sys.platform, 'dependency_lock_sha256': sha(ROOT / 'uv.lock')})
     workbook(output, cases, geographic, residual, gaps)
+    from tools.evidence.workbench import render
+    render(output, revision, bool(status), cases, residual, gaps, source_inventory, VERSION, ocr)
     passed = all(r['passed'] for r in cases) and all(r['exit_code'] == 0 for r in runs)
     report = f'''# Closeout evidence dossier
 
@@ -246,6 +261,8 @@ def build(output, allow_dirty=False):
 - The exact remaining {geographic['residual_occurrences']:,} carriers are in geographic-backlog.csv, with original locators and wording.
 
 ## Read the evidence
+
+Open the [offline review interface](review.html) to search cases, inspect source coverage and site records, filter the backlog, and export portable draft notes. The interface makes no network requests while browsing. Drafts do not change accepted sources.
 
 Open the [review workbook](closeout-evidence.xlsx). [Case events](case-events.json) preserve each fixture, expectation and observed result; [runtime results](runtime-results.csv) provide the compact population. Inspect the [geographic backlog](geographic-backlog.csv), [reconciliation](geographic-reconciliation.json) and [execution register](execution-register.json). source-inputs.json fingerprints selected generating and controlling sources; the Git revision pins the full checkout and uv.lock pins dependencies. The issue requirements are the dated audit snapshot, whose original source hashes remain historical; current fingerprints are recorded separately. The manifest hashes the delivered bytes.
 
@@ -267,7 +284,7 @@ Execution times and collection timestamps describe each actual run and will diff
     from markdown_it import MarkdownIt
     (output / 'report.html').write_text('<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Closeout evidence</title><style>body{max-width:960px;margin:40px auto;padding:24px;font:17px/1.6 system-ui;color:#16324f}code{overflow-wrap:anywhere}</style>' + MarkdownIt().render(report) + '</html>')
     files = {str(p.relative_to(output)): sha(p) for p in sorted(output.rglob('*')) if p.is_file()}
-    write_json(output / 'manifest.json', {'version': '1.0.0', 'source_revision': revision, 'dirty_review': bool(status), 'passed': passed, 'files': files, 'evidence_class': 'EXECUTED_REFERENCE_TEST_AND_SOURCE_RECONCILIATION', 'issues_closed': []})
+    write_json(output / 'manifest.json', {'version': VERSION, 'source_revision': revision, 'dirty_review': bool(status), 'passed': passed, 'files': files, 'evidence_class': 'EXECUTED_REFERENCE_TEST_AND_SOURCE_RECONCILIATION', 'issues_closed': [], 'ocr_included': with_ocr})
     if not passed:
         raise ValueError('Evidence records failures; inspect retained outputs before publication')
     archive = Path(str(output) + '.zip')
@@ -286,9 +303,10 @@ if __name__ == '__main__':
     mode.add_argument('--output', type=Path)
     mode.add_argument('--verify', type=Path)
     parser.add_argument('--allow-dirty-review', action='store_true')
+    parser.add_argument('--with-ocr', action='store_true', help='Extract unreviewed text candidates from the 97 archived PNGs using Tesseract')
     args = parser.parse_args()
     if args.verify:
         result = verify(args.verify)
         print(f"Verified {len(result['files'])} files at {result['source_revision']}")
     else:
-        build(args.output, args.allow_dirty_review)
+        build(args.output, args.allow_dirty_review, args.with_ocr)
