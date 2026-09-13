@@ -62,7 +62,9 @@ def qualify(package):
     if not project.write(str(project_path)):
         raise ValueError("Cannot save the enriched portable project")
     settings = QgsMapSettings()
-    settings.setLayers([layer for layer in project.mapLayers().values() if layer.isSpatial()])
+    settings.setLayers(
+        [layer for layer in project.layerTreeRoot().layerOrder() if layer.isSpatial()]
+    )
     settings.setDestinationCrs(QgsCoordinateReferenceSystem("EPSG:4326"))
     settings.setOutputSize(QSize(1600, 1000))
     settings.setExtent(settings.fullExtent())
@@ -90,7 +92,13 @@ def qualify(package):
                 raise ValueError("Project omits a registered layer/table")
             for name, (kind, count) in expected.items():
                 layer = layers[name]
-                passed = layer.isValid() and layer.featureCount() == count
+                actual_database = Path(layer.source().split("|", 1)[0]).resolve()
+                expected_database = source.parent.parent / "master" / gpkg.name
+                passed = (
+                    layer.isValid()
+                    and layer.featureCount() == count
+                    and actual_database == expected_database.resolve()
+                )
                 if kind == "features":
                     passed = passed and layer.crs().authid() == "EPSG:4326"
                 checks.append(
@@ -100,6 +108,7 @@ def qualify(package):
                         "kind": kind,
                         "expected_count": count,
                         "observed_count": layer.featureCount(),
+                        "database_is_local": actual_database == expected_database.resolve(),
                         "passed": passed,
                     }
                 )
