@@ -71,7 +71,7 @@
     "docs/legal/gap-instruments/reconciliations/qa/worked-05.png": "41e2531bc892b4913eae1b9035d994af6098aeb3ab8e72ab3127054a8d33caba",
     "docs/legal/gap-instruments/reconciliations/qa/worked-06.png": "6c4492262b42b5e942f34b06bfab6c4071b07b484a69bbfafe4427e501cd025f",
     "docs/legal/gap-instruments/reconciliations/qa/worked-07.png": "5b8ad152e61b4d27ca7b910c918d994aa6acd56cc8c4b230d2bdb15b5144b252",
-    "docs/legal/gap-instruments/review-support/qa/v3/01-contact-000.png": "80058090b970d866b28eadd9031c7376bdf298c34bb627c1824c4a4238dc4c69",
+    "docs/legal/gap-instruments/review-support/qa/v3/01-contact-000.png": "3b08d62848add68162315d43a3e86cb5b6cfe2e1f028466963f35577c4f51720",
     "docs/legal/gap-instruments/review-support/qa/v3/02-contact-000.png": "84db4709360ba781f874dfc922024e5a6707f81d5bb6ec3ddbdab47db1d91cbf",
     "docs/legal/gap-instruments/review-support/qa/v3/05-contact-000.png": "ade84e848417b7e1f81e44016fa2fd7d8d304001c6000edaebb3cfe9cbf050e1",
     "docs/legal/gap-instruments/review-support/qa/v3/15-contact-000.png": "6d6eb6190067ace7c54acd879bbe341a4625714473c8527cfdbe584e78e45c57",
@@ -100,7 +100,7 @@
     "docs/legal/gap-instruments/review-support/qa/v3/reconciliations-mobile/mobile-table-right-bottom.png": "34fa3a8ba613e027d5b39ec47d1eb40f4dd41d275c80c6b77afd60395aabe1bc",
     "docs/legal/gap-instruments/review-support/qa/v3/reconciliations-mobile/mobile-table-right-top.png": "f8f6c31613e359761452873c2e24c56f34409b9d10fdf463cb81f7fabd47e5b6",
     "docs/legal/gap-instruments/review-support/qa/v3/reconciliations-mobile/report.json": "fbec33dcad3c40a28d225d43a374bb664dbd4fdcf49470c8a895c46a9322aa09",
-    "docs/legal/gap-instruments/review-support/qa/v3/surfaces.json": "4b307f1bca6f8a61dc3e57163805e087d47f9f04f252a45cfc3c46ea2e1cd879",
+    "docs/legal/gap-instruments/review-support/qa/v3/surfaces.json": "34648245997cdf49a5dfe66923f4368be0dcc9ffb3281f54f60b2c8165c10de3",
     "docs/legal/gap-instruments/review-support/qa/v3/walkthrough-mobile/desktop-0.png": "96d0760121eacfda0ca7a5650894853f54ed13599eaf12ed0d7778334b8ae2f5",
     "docs/legal/gap-instruments/review-support/qa/v3/walkthrough-mobile/desktop-1000.png": "bdce73766fe04ee3a2b87f3eee9d56d1cb7deec65f78953c72a88e89dfc987a2",
     "docs/legal/gap-instruments/review-support/qa/v3/walkthrough-mobile/desktop-2000.png": "195858d707abd83c5372954d8064af14be0d5320a6b998746114cb9e796d24cb",
@@ -154,5 +154,12 @@
     "docs/reader/usability/qa/2026-09-13/docs__wiki__Start-Here.md-1280-top.png": "9308df1f143ada09900ed1beee3787e2751db2eb14a93d995d2fbaca313a0410",
     "docs/reader/usability/qa/2026-09-13/docs__wiki__Start-Here.md-390-bottom.png": "47a2c5ed92cfaae3552cdb0a4b82c3c1f8830a7226208f88d39b99ca46c0448d",
     "docs/reader/usability/qa/2026-09-13/docs__wiki__Start-Here.md-390-top.png": "b2187bc6ee3d5ce4e57563e40524af2680710be5068f01114c044813bb680c90"
+  },
+  "clean_release": {
+    "source_revision": "1d86f78944c95d3fdde72c4dcc31cd9b50c2ada9",
+    "sha256": "ccc62baa261c4502a3ff389f269cdac6e3b48fb5e1f5d904fa2549baffbbeee7",
+    "status": "DRAFT",
+    "retrieval_verified": true,
+    "final_html_comparison": "All36surfaces rerendered; only START source revision text changed versus reviewed preview. Final START manually inspected; all other contact sheets identical."
   }
 }
