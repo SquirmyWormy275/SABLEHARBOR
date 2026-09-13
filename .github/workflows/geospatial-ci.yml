@@ -10,6 +10,7 @@ permissions:
   contents: read
 jobs:
   validate:
+    name: Geospatial CI / validate
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -29,6 +30,7 @@ jobs:
       - name: Source and generated data do not drift on rebuild
         run: git diff --exit-code -- geospatial/sources/catalog.json geospatial/geojson geospatial/qgis
   native-qgis:
+    name: Geospatial CI / native qgis
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

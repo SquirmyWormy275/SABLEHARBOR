@@ -1,11 +1,15 @@
 # Enterprise Support Services
 
-<img src="../../../assets/brand/logos/sable-harbor__primary-horizontal.png" alt="Sable Harbor approved identity" width="360">
+<img src="../../../assets/brand/logos/sable-harbor__reverse-horizontal.png" alt="Sable Harbor approved identity" width="360">
 
 **Canon state:** LOCKED institutional scope; implementation detail varies by linked record.<br>
-**Last substantive review:** September 11, 2026. This page is secondary navigation; the linked source records control.
+**Reviewed:** September 12, 2026. This is a reading guide; linked source records control.
 
 ESS coordinates shared administration, service budgets, staffing support and facilities for the enterprise support functions. Its administrative umbrella preserves the substantive authority of the CFO, General Counsel, technology leader and other professional officers.
+
+## Reading guide
+
+ESS coordinates the shared services that let businesses work. Read administrative support separately from the substantive standing of Finance, Legal and other officers, and from the independence of Internal Audit.
 
 ## Read and use the records
 
@@ -16,14 +20,23 @@ ESS coordinates shared administration, service budgets, staffing support and fac
 
 ## Organization and identity
 
-[Current chart and all of its pages](../../organization/charts/corporate-enterprise-support.md) · [Complete organization publication](../../organization/assets/current/Sable-Harbor-Organization-Charts.pdf).
+[Organization chart, text roster and source qualifications](../../organization/charts/corporate-enterprise-support.md) · [Complete organization publication](../../organization/assets/current/Sable-Harbor-Organization-Charts.pdf).
 
 [![Enterprise Support Services — shared organization chart, first page](../../organization/assets/current/corporate-enterprise-support.png)](../../organization/assets/current/corporate-enterprise-support.png)
 
 The shared chart retains its original scope; it is not a new reporting chart for this page. The approved corporate mark above identifies the parent institution.
 
-## Boundaries and unresolved detail
+[Department and institution directory](README.md) · [Business directory](../businesses/README.md) · [Wiki home](../Home.md)
 
-The Chief of ESS is not a super-executive. J2 remains outside ESS; Internal Audit retains independent functional accountability.
+## What remains unknown
 
-[Department and institution directory](README.md) · [Wiki home](../Home.md)
+A capability label does not create another department or a new reporting line. Service plans do not establish selected suppliers or installed capacity. See the [open questions register](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Open-Questions) for the evidence needed to resolve tracked gaps.
+
+## Related reading
+
+- [Office of the CEO](executive.md)
+- [People & Culture](people-culture.md)
+- [Enterprise Technology Services](technology.md)
+- [Internal Audit](internal-audit.md)
+
+Related reading describes useful connections, not additional reporting lines.

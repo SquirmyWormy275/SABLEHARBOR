@@ -1,0 +1,32 @@
+{
+  "source_commit": "d91a22c35c91b213204411421de88815f27d8e16",
+  "occurrences_sha256": "031d8792af1b74badc449c59b18ad739dd9be28daaf3f21b9e998302d66dbb13",
+  "sources": [
+    {
+      "path": "industrial/source/geography/wyoming_local_roads.geojson",
+      "sha256": "7e3345de206ce8dd2610ad4469175b239ea72f0126dff0c89ada3c5b8b058c75",
+      "source_id": "REF-WYOMING-LOCAL-ROADS",
+      "features": 3195,
+      "occurrences": 6410
+    },
+    {
+      "path": "industrial/source/geography/wyoming_waterbodies.geojson",
+      "sha256": "82c333660ce69714452e999c9ef871adb5bbcf328776cc81ce2dd003482a046f",
+      "source_id": "REF-WYOMING-WATERBODIES",
+      "features": 540,
+      "occurrences": 1080
+    },
+    {
+      "path": "industrial/source/geography/wamsutter_highways.geojson",
+      "sha256": "81fe705260fefe9d195d4a1c8f362930af6aad7b6bf40064c9017795b838e24f",
+      "source_id": "REF-WAMSUTTER-HIGHWAYS",
+      "features": 177,
+      "occurrences": 354
+    }
+  ],
+  "reviewed_names": [
+    "Wamsutter-Crooks Gap Rd",
+    "Wamsutter Crooks Gap Rd",
+    "Railroad Ave"
+  ]
+}

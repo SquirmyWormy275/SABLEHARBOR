@@ -1,11 +1,15 @@
 # Board and committees
 
-<img src="../../../assets/brand/logos/sable-harbor__primary-horizontal.png" alt="Sable Harbor approved identity" width="360">
+<img src="../../../assets/brand/logos/sable-harbor__reverse-horizontal.png" alt="Sable Harbor approved identity" width="360">
 
 **Canon state:** LOCKED institutional scope; implementation detail varies by linked record.<br>
-**Last substantive review:** September 11, 2026. This page is secondary navigation; the linked source records control.
+**Reviewed:** September 12, 2026. This is a reading guide; linked source records control.
 
 The Board oversees management, appoints senior leadership and approves reserved commitments. Its five committees divide oversight of audit, finance, technology and operations, compensation, and governance. Committee oversight does not make a committee an operating department.
+
+## Reading guide
+
+Use this page to distinguish oversight from day-to-day operating authority. The committee charters explain which questions go to which committee; dated minutes and consents explain what was actually ratified.
 
 ## Read and use the records
 
@@ -18,14 +22,23 @@ The Board oversees management, appoints senior leadership and approves reserved 
 
 ## Organization and identity
 
-[Current chart and all of its pages](../../organization/charts/corporate-board-committees.md) · [Complete organization publication](../../organization/assets/current/Sable-Harbor-Organization-Charts.pdf).
+[Organization chart, text roster and source qualifications](../../organization/charts/corporate-board-committees.md) · [Complete organization publication](../../organization/assets/current/Sable-Harbor-Organization-Charts.pdf).
 
 [![Board and committees — shared organization chart, first page](../../organization/assets/current/corporate-board-committees.png)](../../organization/assets/current/corporate-board-committees.png)
 
 The shared chart retains its original scope; it is not a new reporting chart for this page. The approved corporate mark above identifies the parent institution.
 
-## Boundaries and unresolved detail
+[Department and institution directory](README.md) · [Business directory](../businesses/README.md) · [Wiki home](../Home.md)
 
-Internal Audit reports functionally to the Audit & Compliance Committee. Board membership and employee status are different populations.
+## What remains unknown
 
-[Department and institution directory](README.md) · [Wiki home](../Home.md)
+Board membership is not an employee census. An oversight remit does not prove that a particular transaction or commitment has been approved. See the [open questions register](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Open-Questions) for the evidence needed to resolve tracked gaps.
+
+## Related reading
+
+- [Office of the CEO](executive.md)
+- [Corporate Secretary](corporate-secretary.md)
+- [Internal Audit](internal-audit.md)
+- [Founders, early colleagues and later people](../subjects/People.md)
+
+Related reading describes useful connections, not additional reporting lines.

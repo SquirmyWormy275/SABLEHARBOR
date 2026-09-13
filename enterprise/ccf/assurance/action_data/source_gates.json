@@ -1,0 +1,33 @@
+[
+  {
+    "requirement_id": "ISO27001:PREP-DOCUMENT-CONTEXT",
+    "source_condition": "Read scope, terminology, parent clauses and Annex A in context. ISO27001's undated ISO27000 reference requires edition reconciliation; the ISO publisher now lists 27000:2026 rather than 2018.",
+    "procedure_and_test": "Maintain a dated reference-resolution record identifying the available 27001 edition/amendment, the undated reference, actual acquired 27000 edition and the consequences for terms used in the control design. Check each Annex A inclusion/exclusion against risk treatment and the Statement of Applicability; catalogue presence is not mandatory implementation of every reference control.",
+    "resolved_analysis": "The document-context work is identified and separated from individual operating controls.",
+    "remaining_dependency": "Full ISO27000:2026 reference content and qualified reconciliation remain unavailable in the retained source set.",
+    "dependency_status": "SOURCE_CONTENT_REQUIRED",
+    "publisher_url": "https://www.iso.org/standard/27000",
+    "review": null
+  },
+  {
+    "requirement_id": "ISO27001:AMD1-4.1-4.2",
+    "source_condition": "The retained amendment adds a climate-relevance determination to 4.1 and an interested-party climate note to 4.2. The note is not a separate universal emissions-reduction control.",
+    "procedure_and_test": "In the ISMS context review, evaluate climate-related effects on the approved primary/recovery service, utilities and suppliers, record the relevance conclusion and rationale, and identify any applicable interested-party requirements. If relevant, trace issues into risk assessment, treatment and review. If not relevant, retain support for that conclusion and reconsider on material change. Test both decision branches without inventing actual site hazards or a required third site.",
+    "resolved_analysis": "Amendment text was read from the pinned original, PDF page 5; the requirement and explanatory note have distinct treatment.",
+    "remaining_dependency": "Actual context, interested-party requirements and management's reasoned relevance determination.",
+    "dependency_status": "OPERATING_FACTS_REQUIRED",
+    "publisher_url": "https://www.iso.org/standard/27001",
+    "proposed_control_ids": ["SH-ERM-001", "SH-ERM-004"],
+    "review": null
+  },
+  {
+    "requirement_id": "ISO42001:PREP-DOCUMENT-CONTEXT",
+    "source_condition": "The supplied 42001 scan cites ISO22989:2022. Annex B is normative implementation guidance to consider; Annexes C/D are informative and do not create the same type of mandatory control population.",
+    "procedure_and_test": "Resolve terms against the cited 22989 edition and definitions in clause 3; document actual AI provider/user roles and AIMS scope. Reconcile each selected Annex A control with the corresponding Annex B guidance, including continuation pages and applicable conditions. Record C/D relevance as informative context. Visually resolve uncertain OCR against the scan before accepting a reading.",
+    "resolved_analysis": "Reference edition and annex treatment are identified; PDF page 9 establishes the dated normative reference.",
+    "remaining_dependency": "Full ISO22989:2022 reference content, full Annex B semantic reconciliation and qualified source interpretation/authenticity review.",
+    "dependency_status": "SOURCE_CONTENT_AND_GUIDANCE_REVIEW_REQUIRED",
+    "publisher_url": "https://www.iso.org/standard/74296.html",
+    "review": null
+  }
+]

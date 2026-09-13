@@ -1,0 +1,2 @@
+scenario,entity,year,month,opening_bank_cash_usd,cleared_receipts_usd,cleared_payments_usd,closing_bank_cash_usd,deposits_in_transit_usd,outstanding_payments_usd,adjusted_bank_cash_usd,ledger_cash_usd,difference_usd,treasury_scope,evidence_role,fact_state,record_origin,available_at
+base,ARU_GROUP,2027,1,4198440,0,0,4198440,4639240,5343152,3494528,3494528,0,ARU_GROUP,SYNTHETIC_CLEARING_TIMING_RECONCILIATION,FORECAST,PUBLIC_SYNTHETIC_PLANNING_MODEL,2026-09-06T00:00:00-07:00

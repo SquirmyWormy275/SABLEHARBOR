@@ -1,0 +1,120 @@
+{
+  "gap_id": "LEGAL-GAP-TAX-FILING",
+  "document_id": "SH-LEGAL-DRAFT-TAX-FILING",
+  "title": "ARU election cooperation and filing-status workpaper draft",
+  "status": "DRAFT_FOR_REVIEW",
+  "source_paths": [
+    "industrial/transaction/07_ARU_TAX_STRUCTURE_MEMORANDUM.md",
+    "industrial/transaction/05_ARU_CLOSING_AND_TAX_DELIVERY.md",
+    "industrial/source/finance.json"
+  ],
+  "proposed_terms": [
+    {
+      "id": "TAX-P01",
+      "term": "Parties cooperate on complete reviewed acquisition and allocation facts; each seller authority remains separate.",
+      "basis": "Proposed cooperation instrument; no filing or execution claim."
+    },
+    {
+      "id": "TAX-P02",
+      "term": "Identify discrepancies within 5 business days of a complete packet and escalate deadline risks; silence is not consent.",
+      "basis": "New proposed coordination deadline; no extension of official filing rules."
+    },
+    {
+      "id": "TAX-P03",
+      "term": "Track preparation, signatures, dispatch, receipt and agency correspondence as separate evidenced events.",
+      "basis": "Proposed internal filing workpaper preserving ARU-CL-07 filing-ready status."
+    },
+    {
+      "id": "TAX-P04",
+      "term": "Use a separately identified alternative basis analysis if intended election cannot be supported; preserve stock purchase.",
+      "basis": "Proposed review response implementing existing conditional tax boundary."
+    }
+  ],
+  "unresolved_fields": [
+    {
+      "id": "TAX-U01",
+      "field": "Independently supported tax eligibility and authority",
+      "next_action": "Qualified reviewer verifies applicable target/seller/buyer and QSub facts."
+    },
+    {
+      "id": "TAX-U02",
+      "field": "Complete authorized signature packet",
+      "next_action": "Obtain appropriate controlled records without public tax identifiers or manufactured signatures."
+    },
+    {
+      "id": "TAX-U03",
+      "field": "Actual submission and subsequent status",
+      "next_action": "Obtain source evidence; current state remains internal filing-ready."
+    },
+    {
+      "id": "TAX-U04",
+      "field": "Approved alternative basis outcome if election unavailable",
+      "next_action": "Prepare separately reviewed financial successor; do not reuse elected tax basis unqualified."
+    }
+  ],
+  "financial_schedules": [
+    {
+      "name": "Conditional acquisition tax and book bridge — distinct measures",
+      "columns": [
+        "measure",
+        "amount_usd",
+        "basis"
+      ],
+      "rows": [
+        [
+          "Stock consideration",
+          48000000,
+          "Closing source"
+        ],
+        [
+          "Recognized tax assumed liabilities",
+          20000000,
+          "Conditional classifications"
+        ],
+        [
+          "Modeled adjusted grossed-up basis",
+          68000000,
+          "48M+20M"
+        ],
+        [
+          "Other tax asset bases",
+          55000000,
+          "Selected schedule"
+        ],
+        [
+          "Tax goodwill",
+          13000000,
+          "68M−55M"
+        ],
+        [
+          "Environmental/claim reserves",
+          2350000,
+          "Excluded from opening tax purchase-price measure"
+        ],
+        [
+          "Conditional reserve DTA",
+          587500,
+          "2.35M×25%model rate"
+        ],
+        [
+          "Identifiable book net assets",
+          33237500,
+          "Includes conditional DTA"
+        ],
+        [
+          "Book goodwill",
+          14762500,
+          "48M−33.2375M"
+        ],
+        [
+          "Initial book goodwill excess over tax",
+          1762500,
+          "14.7625M−13M"
+        ]
+      ]
+    }
+  ],
+  "version": "0.1.0",
+  "prepared": "2026-09-12",
+  "approval_status": "NOT_ACCEPTED"
+}

@@ -47,3 +47,7 @@ The census command is `python geospatial/scripts/census.py --ref <accepted-canon
 [Open the offline workbench](maps/workbench.html) for capacity scenarios, source-change impacts, architectural readiness and controlled evidence intake. [Methods and commands](facilities/workbench/README.md).
 
 [Spatial review and architectural addendum](facilities/spatial/README.md) adds coordinated building views and official Sacramento reference layers to the existing atlas.
+
+## Geographic evidence delivery
+
+The [portable geographic evidence package](closeout/README.md) joins the accepted spatial layers with site-source bindings, explicit occupancy limits, the residual occurrence population and source/OCR review tables. Its native QGIS project is relocation-tested. [Versioned downloads](../docs/releases/GEOGRAPHIC_EVIDENCE_RELEASES.md) preserve the distinction between a complete package and unresolved geographic facts.

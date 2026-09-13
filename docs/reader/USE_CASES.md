@@ -6,12 +6,14 @@ Choose a bounded question, a business, and a period before collecting evidence. 
 
 ## Pick a first task
 
+For a step-by-step start, use the [three practical exercises](exercises/README.md): acquisition accounting, an invoice-to-ledger trace, or contract obligations. These routes use existing accepted records and identify the exact evidence to open.
+
 These entry points are files you can open now. Where a task needs a release download or local build, that requirement is explicit.
 
 | Task | Open first | Working evidence | Produce |
 |---|---|---|---|
 | Explain a cash shortfall | [Operating review XLSX](../../enterprise/operations/publications/operating-review-v1.0.0.xlsx), **Cash obligations** | [Finance exercise 3](../finance/READER_EXERCISES.md#3-investigate-a-cash-shortfall) identifies the release tables | Arrears reconciliation and a short decision memo |
-| Trace an invoice | [Finance exercise 1](../finance/READER_EXERCISES.md#1-follow-a-customer-invoice-through-collection-and-credit-loss) | Foundry Field invoice, credit and journal extracts in the named release | Dated movement schedule with source IDs |
+| Trace an invoice | [Accepted invoice evidence packet](../finance/evidence/SH-FIN-HUMAN-001/README.md), then [Finance exercise 1](../finance/READER_EXERCISES.md#1-follow-a-customer-invoice-through-collection-and-credit-loss) | Foundry Field invoice, credit and journal extracts in the named release | Dated movement schedule with source IDs |
 | Review a control exception | [CCF procedures](../../enterprise/ccf/PROCEDURES.md) | Locally built native example package; see the controls route below | Test worksheet preserving the original failure and retest history |
 | Prepare an assurance evidence request | [Approved reference preparation](../../enterprise/ccf/assurance/README.md#approved-reference-assessment-preparation) | Proposed workpapers and unexecuted plans; source originals required for the build | Scoped request list and review queue, with no assurance conclusion |
 | Understand accountability | [Business and department directory](../wiki/Home.md) | Linked current charts, charters and decision records | A source-linked account of who decides, operates and reviews |

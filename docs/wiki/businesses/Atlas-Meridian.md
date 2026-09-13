@@ -1,12 +1,16 @@
 # Atlas Meridian
 
-[Wiki home](../Home.md) · [All business dossiers](../../business-lines/README.md) · [Company charts](../../organization/README.md)
+[Wiki home](../Home.md) · [Business directory](README.md) · [Department directory](../departments/README.md) · [Business dossiers](../../business-lines/README.md) · [Company charts](../../organization/README.md)
 
-<img src="../../../assets/brand/logos/atlas-meridian__mark.png" alt="Approved Atlas Meridian logo" width="280">
+<img src="../../../assets/brand/logos/atlas-meridian__reverse-horizontal.png" alt="Approved Atlas Meridian logo" width="360">
 
 Atlas Meridian is software for investigating operating data, reviewing evidence and managing client work. It provides client workspaces and supports Advisory delivery while retaining a dedicated product organization and separately contracted licenses.
 
-**Reader status:** Navigation summary checked September 11, 2026. Linked canon controls; this page creates no new facts. Existing chart artwork is from publication 1.1.0, September 10, 2026. Financial cases are publicly synthetic.
+**Reviewed:** September 12, 2026 · Fictional enterprise; source records control.
+
+## Reading guide
+
+Read Atlas Meridian as an investigation product with a client-work context. Its commercial records explain how access, delivery and economics fit together; they do not give software the authority to decide a matter.
 
 ## Start here
 
@@ -18,7 +22,7 @@ Atlas is a parent-book product business, distinct from Advisory, J2 and the geog
 
 [![Atlas Meridian existing organization chart](../../../docs/organization/assets/current/atlas-meridian.png)](../../../docs/organization/charts/atlas-meridian.md)
 
-Open the chart to read its relationship key and any additional pages. Grouped functions are not automatically reporting lines, separate companies or additional employees.
+[Read the chart’s text roster, relationship key and source qualifications](../../../docs/organization/charts/atlas-meridian.md). Grouped functions are not automatically reporting lines, separate companies or additional employees.
 
 [Named people and recorded roles](../../../docs/organization/charts/people-atlas-meridian.md) — the current chart preserves unknown joining years rather than inventing them.
 
@@ -49,6 +53,15 @@ The [finance successor guide](../../../enterprise/business/README.md) explains g
 
 Use the [complete facility artifact index](../../../geospatial/maps/facilities/ARTIFACT_INDEX.md) for independently saved maps and floor plans, or open the [interactive atlas](../../../geospatial/maps/index.html) locally in a browser. GitHub displays the linked Markdown and images directly; it does not execute the atlas HTML.
 
-## Limits to keep visible
+## What remains unknown
 
-Product architecture does not establish a deployed client portal or completed security sign-off. The 70/30 professional/client-plane heuristic is not a revenue split or usage ratio.
+Commercial calibration is an operating policy. It does not establish executed contracts, real customer adoption or future results. See the [open questions register](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Open-Questions) for the evidence needed to resolve tracked gaps.
+
+## Related reading
+
+- [Sable Harbor Advisory](Advisory.md)
+- [Foundry Field](Foundry-Field.md)
+- [Judgment](../departments/judgment.md)
+- [Enterprise Technology Services](../departments/technology.md)
+
+Related reading describes useful connections, not additional reporting lines.

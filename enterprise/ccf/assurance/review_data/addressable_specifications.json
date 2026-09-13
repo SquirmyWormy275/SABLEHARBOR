@@ -1,0 +1,178 @@
+[
+  {
+    "requirement_id": "HIPAA:164.308",
+    "locator": "164.308(a)(3)(ii)(A)",
+    "source_label": "Authorization and/or supervision",
+    "implementation_class": "ADDRESSABLE",
+    "disposition": "ENVIRONMENTAL_DECISION_REQUIRED",
+    "review": null
+  },
+  {
+    "requirement_id": "HIPAA:164.308",
+    "locator": "164.308(a)(3)(ii)(B)",
+    "source_label": "Workforce clearance procedure",
+    "implementation_class": "ADDRESSABLE",
+    "disposition": "ENVIRONMENTAL_DECISION_REQUIRED",
+    "review": null
+  },
+  {
+    "requirement_id": "HIPAA:164.308",
+    "locator": "164.308(a)(3)(ii)(C)",
+    "source_label": "Termination procedures",
+    "implementation_class": "ADDRESSABLE",
+    "disposition": "ENVIRONMENTAL_DECISION_REQUIRED",
+    "review": null
+  },
+  {
+    "requirement_id": "HIPAA:164.308",
+    "locator": "164.308(a)(4)(ii)(B)",
+    "source_label": "Access authorization",
+    "implementation_class": "ADDRESSABLE",
+    "disposition": "ENVIRONMENTAL_DECISION_REQUIRED",
+    "review": null
+  },
+  {
+    "requirement_id": "HIPAA:164.308",
+    "locator": "164.308(a)(4)(ii)(C)",
+    "source_label": "Access establishment and modification",
+    "implementation_class": "ADDRESSABLE",
+    "disposition": "ENVIRONMENTAL_DECISION_REQUIRED",
+    "review": null
+  },
+  {
+    "requirement_id": "HIPAA:164.308",
+    "locator": "164.308(a)(5)(ii)(A)",
+    "source_label": "Security reminders",
+    "implementation_class": "ADDRESSABLE",
+    "disposition": "ENVIRONMENTAL_DECISION_REQUIRED",
+    "review": null
+  },
+  {
+    "requirement_id": "HIPAA:164.308",
+    "locator": "164.308(a)(5)(ii)(B)",
+    "source_label": "Protection from malicious software",
+    "implementation_class": "ADDRESSABLE",
+    "disposition": "ENVIRONMENTAL_DECISION_REQUIRED",
+    "review": null
+  },
+  {
+    "requirement_id": "HIPAA:164.308",
+    "locator": "164.308(a)(5)(ii)(C)",
+    "source_label": "Log-in monitoring",
+    "implementation_class": "ADDRESSABLE",
+    "disposition": "ENVIRONMENTAL_DECISION_REQUIRED",
+    "review": null
+  },
+  {
+    "requirement_id": "HIPAA:164.308",
+    "locator": "164.308(a)(5)(ii)(D)",
+    "source_label": "Password management",
+    "implementation_class": "ADDRESSABLE",
+    "disposition": "ENVIRONMENTAL_DECISION_REQUIRED",
+    "review": null
+  },
+  {
+    "requirement_id": "HIPAA:164.308",
+    "locator": "164.308(a)(7)(ii)(D)",
+    "source_label": "Testing and revision procedures",
+    "implementation_class": "ADDRESSABLE",
+    "disposition": "ENVIRONMENTAL_DECISION_REQUIRED",
+    "review": null
+  },
+  {
+    "requirement_id": "HIPAA:164.308",
+    "locator": "164.308(a)(7)(ii)(E)",
+    "source_label": "Applications and data criticality analysis",
+    "implementation_class": "ADDRESSABLE",
+    "disposition": "ENVIRONMENTAL_DECISION_REQUIRED",
+    "review": null
+  },
+  {
+    "requirement_id": "HIPAA:164.310",
+    "locator": "164.310(a)(2)(i)",
+    "source_label": "Contingency operations",
+    "implementation_class": "ADDRESSABLE",
+    "disposition": "ENVIRONMENTAL_DECISION_REQUIRED",
+    "review": null
+  },
+  {
+    "requirement_id": "HIPAA:164.310",
+    "locator": "164.310(a)(2)(ii)",
+    "source_label": "Facility security plan",
+    "implementation_class": "ADDRESSABLE",
+    "disposition": "ENVIRONMENTAL_DECISION_REQUIRED",
+    "review": null
+  },
+  {
+    "requirement_id": "HIPAA:164.310",
+    "locator": "164.310(a)(2)(iii)",
+    "source_label": "Access control and validation procedures",
+    "implementation_class": "ADDRESSABLE",
+    "disposition": "ENVIRONMENTAL_DECISION_REQUIRED",
+    "review": null
+  },
+  {
+    "requirement_id": "HIPAA:164.310",
+    "locator": "164.310(a)(2)(iv)",
+    "source_label": "Maintenance records",
+    "implementation_class": "ADDRESSABLE",
+    "disposition": "ENVIRONMENTAL_DECISION_REQUIRED",
+    "review": null
+  },
+  {
+    "requirement_id": "HIPAA:164.310",
+    "locator": "164.310(d)(2)(iii)",
+    "source_label": "Accountability",
+    "implementation_class": "ADDRESSABLE",
+    "disposition": "ENVIRONMENTAL_DECISION_REQUIRED",
+    "review": null
+  },
+  {
+    "requirement_id": "HIPAA:164.310",
+    "locator": "164.310(d)(2)(iv)",
+    "source_label": "Data backup and storage",
+    "implementation_class": "ADDRESSABLE",
+    "disposition": "ENVIRONMENTAL_DECISION_REQUIRED",
+    "review": null
+  },
+  {
+    "requirement_id": "HIPAA:164.312",
+    "locator": "164.312(a)(2)(iii)",
+    "source_label": "Automatic logoff",
+    "implementation_class": "ADDRESSABLE",
+    "disposition": "ENVIRONMENTAL_DECISION_REQUIRED",
+    "review": null
+  },
+  {
+    "requirement_id": "HIPAA:164.312",
+    "locator": "164.312(a)(2)(iv)",
+    "source_label": "Encryption and decryption",
+    "implementation_class": "ADDRESSABLE",
+    "disposition": "ENVIRONMENTAL_DECISION_REQUIRED",
+    "review": null
+  },
+  {
+    "requirement_id": "HIPAA:164.312",
+    "locator": "164.312(c)(2)",
+    "source_label": "Mechanism to authenticate electronic protected health information",
+    "implementation_class": "ADDRESSABLE",
+    "disposition": "ENVIRONMENTAL_DECISION_REQUIRED",
+    "review": null
+  },
+  {
+    "requirement_id": "HIPAA:164.312",
+    "locator": "164.312(e)(2)(i)",
+    "source_label": "Integrity controls",
+    "implementation_class": "ADDRESSABLE",
+    "disposition": "ENVIRONMENTAL_DECISION_REQUIRED",
+    "review": null
+  },
+  {
+    "requirement_id": "HIPAA:164.312",
+    "locator": "164.312(e)(2)(ii)",
+    "source_label": "Encryption",
+    "implementation_class": "ADDRESSABLE",
+    "disposition": "ENVIRONMENTAL_DECISION_REQUIRED",
+    "review": null
+  }
+]

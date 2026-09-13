@@ -1,14 +1,24 @@
 # Explore Sable Harbor
 
-<img src="../../assets/brand/logos/sable-harbor__primary-horizontal.png" alt="Sable Harbor" width="360">
+<img src="../../assets/brand/logos/sable-harbor__reverse-horizontal.png" alt="Sable Harbor" width="360">
 
-**Reviewed:** September 11, 2026 · **Status:** repository reading layer; linked source records control.
+**Reviewed:** September 12, 2026 · **Status:** repository reading layer; linked source records control.
 
-Sable Harbor develops industrial software, operates resource businesses, and provides professional services. This index connects the businesses and corporate functions to their people, records, finances and places. Start with a subject; each page points to the documents behind it.
+Sable Harbor develops industrial software, operates resource businesses, and provides professional services. This Wiki explains the businesses and corporate functions, their people, operating work, finances and places. Each business, department and history article includes in-depth source text. The reading rooms contain complete supporting records, with links between them inside the Wiki.
 
-[Choose an exercise](../reader/USE_CASES.md) · [Accounting practice](../finance/READER_EXERCISES.md) · [Complete document library](Library.md) · [Source and format guide](../reader/SOURCES_AND_FORMATS.md)
+[Start here](Start-Here.md) · [Practical exercises](../reader/exercises/README.md) · [Document library](Library.md) · [Reading glossary](Glossary.md) · [Open questions](Open-Questions.md)
+
+<a id="read-the-wiki"></a>
+
+## Start your reading
+
+Start with a business or department below. Use **In-depth reading** for the operating dossier, authority or history on that page, and **On this page** to jump through longer articles. The [full-text reading room](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Reading) collects 198 supporting records across the enterprise. Each edition links to its exact repository source. The [start guide](Start-Here.md) explains the reading routes, downloads and status language.
+
+For practical work, read the [acquisition exercise](../reader/exercises/ACQUISITION.md), [invoice exercise](../reader/exercises/INVOICE.md) or [contract review exercise](../reader/exercises/CONTRACTS.md) directly in the Wiki. Downloads such as Excel, PDF and SQLite remain linked to their original files or releases.
 
 ## Find records for a task
+
+The [three practical exercises](../reader/exercises/README.md) provide a step-by-step entry to acquisition accounting, invoice tracing, and contract review using accepted records.
 
 | I want to… | Open first | Then inspect |
 |---|---|---|
@@ -56,8 +66,10 @@ Directory groupings aid navigation; they do not create departments or reporting 
 
 - [Locations and facilities](../../geospatial/facilities/README.md) — Individual context maps, site plans, buildings, and floors, with status and source evidence.
 - [Organization charts](../organization/README.md) — Business, people, institution, external-party, and historical charts.
-- [Transaction records](../../industrial/transaction/01_RW_TRANSACTION_FILE.md) — Start a transaction review with the selected Red Wash case and linked instruments.
+- [Legal and transaction records](../reader/transactions/README.md) — Source-linked commercial, corporate, acquisition and host-rights records, with missing evidence and accounting links.
+- [Accounting evidence packages](../finance/evidence/coverage/README.md) — Five scoped families with complete selected rows and reconciliation results.
 - [Controlled document index](../CONTROLLED_DOCUMENT_INDEX.md) — Formal source/publication entry points.
+- [History and external subjects](subjects/README.md) — Nine guided routes through people, former programs, host relationships and separate cases.
 - [Corporate history and canon files](library/history.md) — Browse dated decisions and their supersession context.
 - [Historical and external relationships](../business-lines/HISTORICAL_AND_EXTERNAL_BOUNDARIES.md) — Distinguish former programs, host operators, and counterparties from current businesses.
 - [Approved identity assets](../../assets/brand/README.md) — Find current marks and approved source-art exceptions.
@@ -68,4 +80,4 @@ Markdown opens directly in GitHub. PDFs provide formatted documents. Download Ex
 
 The [library](Library.md) indexes the underlying files without moving them or creating duplicate source documents. It includes history; current subject pages and each source's status explain what controls. Some figures are conditional scenarios or reconstructions, not observed history. The [source guide](../reader/SOURCES_AND_FORMATS.md) explains these distinctions and the three-form document requirement.
 
-[Wiki coverage and remaining subject queue](../reader/WIKI_COVERAGE.json) records the reviewed pages and source-backed subjects still served by indexes.
+[Wiki coverage](../reader/WIKI_COVERAGE.json) records seven business pages, 23 department/institution/capability pages and nine historical, external or cross-cutting subject pages.

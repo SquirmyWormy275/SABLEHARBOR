@@ -3,9 +3,13 @@
 <img src="../../../assets/brand/logos/j2__primary-horizontal.png" alt="J2 approved identity" width="240">
 
 **Canon state:** LOCKED DIRECTION doctrine; LOCKED establishment and current leadership.<br>
-**Last substantive review:** September 11, 2026. This page is secondary navigation; the linked source records control.
+**Reviewed:** September 12, 2026. This is a reading guide; linked source records control.
 
 Contact obtains records, interviews, field observations and external research in response to intelligence requirements. It chooses lawful collection methods and records provenance; Judgment Officers retain ownership of the resulting investigations.
+
+## Reading guide
+
+Contact turns intelligence requirements into lawful collection and a traceable evidentiary handoff. It chooses collection methods; the resulting investigation remains with its Judgment Officer.
 
 ## Read and use the records
 
@@ -17,14 +21,23 @@ Contact obtains records, interviews, field observations and external research in
 
 ## Organization and identity
 
-[Current chart and all of its pages](../../organization/charts/corporate-contact-disciplines.md) · [Complete organization publication](../../organization/assets/current/Sable-Harbor-Organization-Charts.pdf).
+[Organization chart, text roster and source qualifications](../../organization/charts/corporate-contact-disciplines.md) · [Complete organization publication](../../organization/assets/current/Sable-Harbor-Organization-Charts.pdf).
 
 [![Contact — shared organization chart, first page](../../organization/assets/current/corporate-contact-disciplines.png)](../../organization/assets/current/corporate-contact-disciplines.png)
 
 The shared chart retains its original scope; it is not a new reporting chart for this page. The approved J2 mark above identifies the parent institution.
 
-## Boundaries and unresolved detail
+[Department and institution directory](README.md) · [Business directory](../businesses/README.md) · [Wiki home](../Home.md)
 
-Collection disciplines are capabilities, not seven independently staffed departments. Provisional requirement labels retain their source status.
+## What remains unknown
 
-[Department and institution directory](README.md) · [Wiki home](../Home.md)
+Collection disciplines are capabilities, not additional staffed departments. Raw-source entitlements and integrated enforcement retain issue #22’s boundary. See the [open questions register](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Open-Questions) for the evidence needed to resolve tracked gaps.
+
+## Related reading
+
+- [Judgment](judgment.md)
+- [Orientation](orientation.md)
+- [Alexandria institutional environment](alexandria.md)
+- [J2 Headquarters](j2-headquarters.md)
+
+Related reading describes useful connections, not additional reporting lines.

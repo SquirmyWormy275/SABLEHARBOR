@@ -1,0 +1,26 @@
+{
+  "purpose": "Public source-derived independent agent cold-start exercise; not human review, hidden assessment material or applied evidence state.",
+  "command": [
+    "/home/kingoftheeast/Projects/SABLEHARBOR-campus/.venv/bin/python",
+    "tools/legal_gaps/evidence_tracking.py",
+    "import",
+    "--workbook",
+    "/tmp/aru-cold-start-v4/evidence-update-corrected.xlsx",
+    "--output",
+    "/tmp/aru-cold-start-v4/evidence-proposal-durable-retest"
+  ],
+  "exit_code": 0,
+  "files": {
+    "evidence-proposal/PROPOSAL.md": "0246e373685243bb452184a592fbe785b7c1d40049eb838b37c3c99530202b13",
+    "evidence-proposal/PROPOSAL.original.txt": "43423df0f80b2881ae246e084ef1b5b99971981d296bbfe9e000e160fe2f587c",
+    "evidence-proposal/import-receipt.json": "125da6d0d85b26927016d3e9e5af42a530099af7fd3b82bdcd528020c1e6f7be",
+    "evidence-proposal/tracker.json": "233074317286211e747c209a41f8c53116ce4d54415105bfde55c6ea348592b2",
+    "evidence-proposal/tracker.sqlite3": "455c9093b723fe3f08b253e41b0dcb8ad479ee17bcfc339c99aa970e32f9bcf4",
+    "evidence-proposal/tracker.xlsx": "3e46a1bca26f0f4f0f5120414fad9388c74287249853b4c472c9c23084d39065",
+    "evidence-update-corrected.xlsx": "9ec4bbe04331fd5e0a12827401b85e22a1110a742c87f00750f6e8af1bcbbe93",
+    "import.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "import.stdout.txt": "086af6b3334be32b1da852fb501a990c9aa30bb99d680e9c8b315fc7ce41bc01",
+    "manifest.original.json": "59353e29946d870e9c518a5956f30307b004254b49775beb3ebac86357f961a7"
+  },
+  "portable_copy_note": "Original generated proposal and manifest bytes are retained as PROPOSAL.original.txt and manifest.original.json. PROPOSAL.md changes only source-link targets for repository portability."
+}

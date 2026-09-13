@@ -1,0 +1,2 @@
+scenario,year,month,stock_consideration_usd,cash_acquired_usd,acquisition_investing_cash_usd,parent_acquisition_capital_usd,transaction_operating_expense_usd,net_external_financing_usd,net_cash_change_usd,source,available_at,created_on,record_origin,fact_state,period_role
+base,2026,1,48000000.0000,2000000.0000,-46000000.0000,39300000.0000,900000.0000,8700000.0000,0.0000,Accepted acquisition sources and uses,2026-09-09T00:00:00Z,2026-09-09,PUBLIC_SYNTHETIC_PLANNING_MODEL,SYNTHETIC_SUCCESSOR_RECONSTRUCTION,SYNTHETIC_CALIBRATION_AND_FORECAST

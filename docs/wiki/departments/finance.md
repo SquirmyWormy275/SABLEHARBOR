@@ -1,11 +1,15 @@
 # Finance
 
-<img src="../../../assets/brand/logos/sable-harbor__primary-horizontal.png" alt="Sable Harbor approved identity" width="360">
+<img src="../../../assets/brand/logos/sable-harbor__reverse-horizontal.png" alt="Sable Harbor approved identity" width="360">
 
 **Canon state:** LOCKED institutional scope; implementation detail varies by linked record.<br>
-**Last substantive review:** September 11, 2026. This page is secondary navigation; the linked source records control.
+**Reviewed:** September 12, 2026. This is a reading guide; linked source records control.
 
 Finance maintains authoritative economic records, financial reporting, treasury, common accounting standards and capital analysis. Business leaders retain operating judgment within their authority.
+
+## Reading guide
+
+Start with the economic event and the evidence available for it, then follow the accounting and capital decision. A workbook can help you reconcile a selected population while still leaving wider execution or funding questions unanswered.
 
 ## Read and use the records
 
@@ -22,14 +26,23 @@ Finance maintains authoritative economic records, financial reporting, treasury,
 
 ## Organization and identity
 
-[Current chart and all of its pages](../../organization/charts/corporate-enterprise-support.md) · [Complete organization publication](../../organization/assets/current/Sable-Harbor-Organization-Charts.pdf).
+[Organization chart, text roster and source qualifications](../../organization/charts/corporate-enterprise-support.md) · [Complete organization publication](../../organization/assets/current/Sable-Harbor-Organization-Charts.pdf).
 
 [![Finance — shared organization chart, first page](../../organization/assets/current/corporate-enterprise-support.png)](../../organization/assets/current/corporate-enterprise-support.png)
 
 The shared chart retains its original scope; it is not a new reporting chart for this page. The approved corporate mark above identifies the parent institution.
 
-## Boundaries and unresolved detail
+[Department and institution directory](README.md) · [Business directory](../businesses/README.md) · [Wiki home](../Home.md)
 
-Conditional forecasts, generated transactions and source-locked historical releases are different evidence sets. They do not establish current company headcount, executed contracts or actual future results.
+## What remains unknown
 
-[Department and institution directory](README.md) · [Wiki home](../Home.md)
+Conditional forecasts, historical reconstructions and executed records remain separate. Parent tax and external legal execution requirements are still open under issue #18. See the [open questions register](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Open-Questions) for the evidence needed to resolve tracked gaps.
+
+## Related reading
+
+- [Board and committees](board.md)
+- [Internal Audit](internal-audit.md)
+- [Procurement and vendor support](procurement.md)
+- [Sable Harbor Advisory](../businesses/Advisory.md)
+
+Related reading describes useful connections, not additional reporting lines.

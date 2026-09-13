@@ -1,0 +1,25 @@
+{
+  "id": "SH-LEGAL-REVIEW-ACCEPTANCE-004",
+  "date": "2026-09-13",
+  "owner_statement": "I approve the changes",
+  "status": "OWNER_APPROVED_IMPLEMENTATION_AND_V4_DESIGNS",
+  "source_revision": "3004549cfe2018698b0a5085abd90d1d85ad2f68",
+  "pull_request": 158,
+  "scope": "Implementation of all five approved tasks and the current v0.4 period-close, evidence-tracker and one-page brief designs. Authorizes integration after repository gates. Existing draft wording is preserved in these exact bytes.",
+  "excluded": "No adoption of proposed legal/billing terms, no executed instruments, no external evidence receipt, no waiver of repository gates; earlier approval records remain controlling within their own scope.",
+  "artifacts": {
+    "docs/legal/gap-instruments/period-close/blank.xlsx": "bcfa7b874e5d534edd5895408b34a3b75d01d1a5535bc177cd5628a516dd7dc4",
+    "docs/legal/gap-instruments/period-close/worked.xlsx": "f56bbdb328c7ad27636371161b1c53f276413e91707ee4e202d50fa69db9f1f8",
+    "docs/legal/gap-instruments/evidence-tracking/tracker.xlsx": "c1e859b5737019716d8de6ff4b3408d3e5881e9ec467207ee978cf87a23c168c",
+    "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.html": "6aa25f472102574b434a9ba1b3fd851579a1cb8d8cdf70c39ad617d951e787bb",
+    "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.pdf": "d7c1c01667ded0a5378f6617f855b7b1d43e44da84dee1cb762290a929852a23",
+    "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.html": "00b14ba850132f48a309617c91b88f913a885a8d6cb9cb1defb6e73287f46f31",
+    "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.pdf": "45f0d367af866ff2ce95c1ba42ed27e7e8e107e45c47a2ae46ae0790995a5f57",
+    "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.html": "6b229c3c2289417df66b287f33d27ee07e7132753713bd52d6d29d585cfb9f6a",
+    "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.pdf": "3b3ff7a81efd7eaa7086aff2a63083e89e4e49b38697a2185171d30c2e5f02f2",
+    "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.html": "b9350f905ff441741a8126e9c07aeb4ad3b3012506ff114a4593009ab43a2868",
+    "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.pdf": "2ab4062e1bbd8de0d2efba0597341a38978eb614603bdf1d5ab4e6154b508c5c",
+    "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.html": "bd932c44faa69112f8474adb6adbce9740b0dff7e5e7565626a240c0082f2f88",
+    "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.pdf": "ecc196f15258c308cbb935f894042398f54bc2ff42445d057310d3a599cac0b6"
+  }
+}

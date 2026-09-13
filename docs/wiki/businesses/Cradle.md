@@ -1,12 +1,16 @@
 # Project Cradle
 
-[Wiki home](../Home.md) · [All business dossiers](../../business-lines/README.md) · [Company charts](../../organization/README.md)
+[Wiki home](../Home.md) · [Business directory](README.md) · [Department directory](../departments/README.md) · [Business dossiers](../../business-lines/README.md) · [Company charts](../../organization/README.md)
 
-<img src="../../../assets/brand/logos/project-cradle__mark.png" alt="Approved Project Cradle logo" width="280">
+<img src="../../../assets/brand/logos/project-cradle__reverse-horizontal.png" alt="Approved Project Cradle logo" width="360">
 
 Cradle recovers rare-earth materials from designated industrial side streams and mine water for specialist downstream sale. Its work connects external host deployments with the separate Bedford development, refurbishment, analytical and upgrading facility.
 
-**Reader status:** Navigation summary checked September 11, 2026. Linked canon controls; this page creates no new facts. Existing chart artwork is from publication 1.1.0, September 10, 2026. Financial cases are publicly synthetic.
+**Reviewed:** September 12, 2026 · Fictional enterprise; source records control.
+
+## Reading guide
+
+Follow a material stream from the host site through recovery and onward processing. Host rights, technical results and the economics of a useful recovered output answer different questions in that chain.
 
 ## Start here
 
@@ -18,7 +22,7 @@ Cradle is an early commercial parent-book business. Kelly Gang Mining and Demott
 
 [![Project Cradle existing organization chart](../../../docs/organization/assets/current/project-cradle.png)](../../../docs/organization/charts/project-cradle.md)
 
-Open the chart to read its relationship key and any additional pages. Grouped functions are not automatically reporting lines, separate companies or additional employees.
+[Read the chart’s text roster, relationship key and source qualifications](../../../docs/organization/charts/project-cradle.md). Grouped functions are not automatically reporting lines, separate companies or additional employees.
 
 [Named people and recorded roles](../../../docs/organization/charts/people-cradle.md) — the current chart preserves unknown joining years rather than inventing them.
 
@@ -49,6 +53,17 @@ The [finance successor guide](../../../enterprise/business/README.md) explains g
 
 Use the [complete facility artifact index](../../../geospatial/maps/facilities/ARTIFACT_INDEX.md) for independently saved maps and floor plans, or open the [interactive atlas](../../../geospatial/maps/index.html) locally in a browser. GitHub displays the linked Markdown and images directly; it does not execute the atlas HTML.
 
-## Limits to keep visible
+[Kelly Gang Mining and Demotte host interfaces](../subjects/External-Hosts.md) · [Wallaby history](../subjects/Project-History.md)
 
-The host retains its primary operation and stop/bypass authority. Chemistry, prices, host-share percentages and commissioning ramps in finance are synthetic scenario assumptions; they do not grant operating permission.
+## What remains unknown
+
+External host records do not establish ownership of the host sites. Exact footprints, access instruments and remaining implementation evidence retain their source limits. See the [open questions register](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Open-Questions) for the evidence needed to resolve tracked gaps.
+
+## Related reading
+
+- [Cradle's external hosts](../subjects/External-Hosts.md)
+- [Safety and environmental governance](../departments/safety-environment.md)
+- [Quality and technical standards](../departments/quality-standards.md)
+- [Willow](Willow.md)
+
+Related reading describes useful connections, not additional reporting lines.

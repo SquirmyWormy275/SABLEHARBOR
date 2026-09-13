@@ -1,0 +1,22 @@
+# enterprise counterpart dispositions
+
+[Reconciliation scope and methods](README.md)
+
+| Source | Disposition | Counterpart or next action |
+|---|---|---|
+| [CCF preparation procedures ](../../../enterprise/ccf/PROCEDURES.md)<br>`READ-FMT-38CB7E694511` | UNRESOLVED_DOCUMENT_COUNTERPART | Find an explicit publication source/member mapping or prepare a scoped derivative after its design review. |
+| [Operating decisions needed to complete the CCF ](../../../enterprise/ccf/assurance/completion_data/DECISIONS.md)<br>`READ-FMT-775A1D683BF2` | UNRESOLVED_DOCUMENT_COUNTERPART | Find an explicit publication source/member mapping or prepare a scoped derivative after its design review. |
+| [Reference service description workpaper ](../../../enterprise/ccf/assurance/design_data/SERVICE_DESCRIPTION.md)<br>`READ-FMT-1F76144DF0B1` | UNRESOLVED_DOCUMENT_COUNTERPART | Find an explicit publication source/member mapping or prepare a scoped derivative after its design review. |
+| [ISO extension implementation plan ](../../../enterprise/ccf/assurance/iso_data/IMPLEMENTATION_PLAN.md)<br>`READ-FMT-50C3A8CD151E` | UNRESOLVED_DOCUMENT_COUNTERPART | Find an explicit publication source/member mapping or prepare a scoped derivative after its design review. |
+| [Review basis, findings and remaining decisions ](../../../enterprise/ccf/assurance/review_data/REVIEW_NOTES.md)<br>`READ-FMT-A92CE7055175` | UNRESOLVED_DOCUMENT_COUNTERPART | Find an explicit publication source/member mapping or prepare a scoped derivative after its design review. |
+| [Tier 1 Advisory policy integration ](../../../enterprise/operations/docs/advisory-policy.md)<br>`READ-FMT-28C2D39A8EA0` | UNRESOLVED_DOCUMENT_COUNTERPART | Find an explicit publication source/member mapping or prepare a scoped derivative after its design review. |
+| [Commercial operations and contract economics ](../../../enterprise/operations/docs/commercial.md)<br>`READ-FMT-F1F0AD5F06DC` | UNRESOLVED_DOCUMENT_COUNTERPART | Find an explicit publication source/member mapping or prepare a scoped derivative after its design review. |
+| [Synthetic control execution and evidence ](../../../enterprise/operations/docs/controls.md)<br>`READ-FMT-42E2FFC87224` | UNRESOLVED_DOCUMENT_COUNTERPART | Find an explicit publication source/member mapping or prepare a scoped derivative after its design review. |
+| [Credit and Treasury operating histories ](../../../enterprise/operations/docs/credit.md)<br>`READ-FMT-320B05A57BD9` | UNRESOLVED_DOCUMENT_COUNTERPART | Find an explicit publication source/member mapping or prepare a scoped derivative after its design review. |
+| [Workforce and management development ](../../../enterprise/operations/docs/management.md)<br>`READ-FMT-8124B54215A7` | UNRESOLVED_DOCUMENT_COUNTERPART | Find an explicit publication source/member mapping or prepare a scoped derivative after its design review. |
+| [Advisory matter operating histories ](../../../enterprise/operations/docs/matters.md)<br>`READ-FMT-B62702B71E0E` | UNRESOLVED_DOCUMENT_COUNTERPART | Find an explicit publication source/member mapping or prepare a scoped derivative after its design review. |
+| [Research, captured material and industrial operating detail ](../../../enterprise/operations/docs/research.md)<br>`READ-FMT-8D50C088A60F` | UNRESOLVED_DOCUMENT_COUNTERPART | Find an explicit publication source/member mapping or prepare a scoped derivative after its design review. |
+| [PR119 implementation disposition ](../../../enterprise/runtime/DISPOSITION.md)<br>`READ-FMT-1F683D300821` | UNRESOLVED_DOCUMENT_COUNTERPART | Find an explicit publication source/member mapping or prepare a scoped derivative after its design review. |
+| [Runtime publication visual review ](../../../enterprise/runtime/VISUAL_REVIEW.md)<br>`READ-FMT-5F57DBD02C2A` | UNRESOLVED_DOCUMENT_COUNTERPART | Find an explicit publication source/member mapping or prepare a scoped derivative after its design review. |
+| [Operating assumptions and acceptance gates ](../../../enterprise/services/docs/OPERATING_ASSUMPTIONS_AND_GATES.md)<br>`READ-FMT-75D3E12CAFA4` | UNRESOLVED_DOCUMENT_COUNTERPART | Find an explicit publication source/member mapping or prepare a scoped derivative after its design review. |
+| [Service operating-model comparison ](../../../enterprise/services/generated/REPORT.md)<br>`READ-FMT-207841B86BCD` | UNRESOLVED_DOCUMENT_COUNTERPART | Find an explicit publication source/member mapping or prepare a scoped derivative after its design review. |

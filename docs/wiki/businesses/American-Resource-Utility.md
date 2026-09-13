@@ -1,12 +1,16 @@
 # American Resource Utility / BS&T
 
-[Wiki home](../Home.md) · [All business dossiers](../../business-lines/README.md) · [Company charts](../../organization/README.md)
+[Wiki home](../Home.md) · [Business directory](README.md) · [Department directory](../departments/README.md) · [Business dossiers](../../business-lines/README.md) · [Company charts](../../organization/README.md)
 
 <img src="../../../assets/brand/industrial_sources/aru/aru_primary_centered_chat_asset.png" alt="Approved American Resource Utility / BS&T logo" width="280">
 
 American Resource Utility provides railway, terminal, trucking and warehouse services for industrial customers. Blood, Sweat & Tears Railway Company is its separately incorporated railway subsidiary. Taylor, Wamsutter and Rawlins records describe different parts of the operating network.
 
-**Reader status:** Navigation summary checked September 11, 2026. Linked canon controls; this page creates no new facts. Existing chart artwork is from publication 1.1.0, September 10, 2026. Financial cases are publicly synthetic.
+**Reviewed:** September 12, 2026 · Fictional enterprise; source records control.
+
+## Reading guide
+
+Follow freight through railway, truck, terminal and warehouse services, then reconcile the service volumes and costs. Use the legal ownership chain when studying consolidation and the operating network when studying capacity.
 
 ## Start here
 
@@ -18,7 +22,7 @@ The legal chain is Sable Harbor → Sable Harbor Industrial Holdings → ARU →
 
 [![American Resource Utility / BS&T existing organization chart](../../../docs/organization/assets/current/aru-services.png)](../../../docs/organization/charts/aru-services.md)
 
-Open the chart to read its relationship key and any additional pages. Grouped functions are not automatically reporting lines, separate companies or additional employees.
+[Read the chart’s text roster, relationship key and source qualifications](../../../docs/organization/charts/aru-services.md). Grouped functions are not automatically reporting lines, separate companies or additional employees.
 
 [Named people and recorded roles](../../../docs/organization/charts/people-aru-leadership.md) — the current chart preserves unknown joining years rather than inventing them.
 
@@ -53,6 +57,15 @@ The [finance successor guide](../../../enterprise/business/README.md) explains g
 
 Use the [complete facility artifact index](../../../geospatial/maps/facilities/ARTIFACT_INDEX.md) for independently saved maps and floor plans, or open the [interactive atlas](../../../geospatial/maps/index.html) locally in a browser. GitHub displays the linked Markdown and images directly; it does not execute the atlas HTML.
 
-## Limits to keep visible
+## What remains unknown
 
-Historical geometry and detailed engineering retain explicit unresolved boundaries. Neither a map nor a service forecast grants custody permission, creates a mine spur or demonstrates safety qualification.
+Early railway alignments and detailed engineering remain incomplete. Service availability does not establish uranium custody qualification or authorize a mine spur. See the [open questions register](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Open-Questions) for the evidence needed to resolve tracked gaps.
+
+## Related reading
+
+- [Pale Sun / Red Wash](Pale-Sun-Red-Wash.md)
+- [Procurement and vendor support](../departments/procurement.md)
+- [Safety and environmental governance](../departments/safety-environment.md)
+- [Finance](../departments/finance.md)
+
+Related reading describes useful connections, not additional reporting lines.

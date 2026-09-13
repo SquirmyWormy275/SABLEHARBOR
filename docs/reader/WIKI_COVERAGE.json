@@ -1,15 +1,16 @@
 {
   "schema_version": "1.0.0",
   "record_id": "SH-READER-WIKI-COVERAGE-2026-09-11",
-  "review_date": "2026-09-11",
-  "authoritative_base_sha": "57b01df637838581f1cee5f3b5f633f6cd70c4d0",
+  "review_date": "2026-09-12",
+  "authoritative_base_sha": "a2eed19e2f9191e6a5c9795c0e865473f111d14a",
   "status": "READER_NAVIGATION_AUDIT",
   "authority": "Secondary navigation inventory; linked canonical sources retain their own authority and unresolved states.",
-  "scope": "Seven current business reading pages and all 23 existing department/institution/capability pages, plus source-backed historical and cross-cutting subject candidates. This is not a census of every source record or every company function.",
+  "scope": "Seven current business pages, all 23 existing department/institution/capability pages, and nine source-backed historical, external and cross-cutting subject pages. Navigation completeness does not establish evidence completeness or new organization.",
   "counts": {
     "business_pages": 7,
     "department_institution_capability_pages": 23,
-    "queued_subjects": 7
+    "queued_subjects": 0,
+    "historical_external_cross_cutting_pages": 9
   },
   "pages": [
     {
@@ -638,77 +639,254 @@
         "docs/organization/assets/current/corporate-technology-capabilities.png"
       ],
       "review_scope": "Navigation and explicit authority/status boundaries; source entry points are not a new independent canon synthesis."
-    }
-  ],
-  "remaining_subject_queue": [
-    {
-      "id": "WIKI-QUEUE-HISTORY",
-      "subject": "Corporate chronology and The Crossing",
-      "disposition": "SOURCE_INDEXED_NO_DEDICATED_WIKI_PAGE",
-      "source": "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md",
-      "current_entry": "docs/wiki/library/history.md",
-      "next_action": "Create a short chronological subject page using dated source references and explicit supersession; no interactive redesign is required.",
-      "requires_owner_decision": false
     },
     {
-      "id": "WIKI-QUEUE-FOUNDERS",
-      "subject": "Original Eight and later people",
-      "disposition": "SOURCE_INDEXED_NO_DEDICATED_WIKI_PAGE",
-      "source": "docs/organization/ORIGINAL_EIGHT.md",
-      "current_entry": "docs/organization/charts/people-original-eight.md",
-      "next_action": "Add a people reading page using existing charts and source joining-year limits; do not appoint or name new personnel.",
-      "requires_owner_decision": false
+      "id": "WIKI-SUBJECT-BLACKRIDGE",
+      "subject": "Blackridge \u2014 separate case universe",
+      "page": "docs/wiki/subjects/Blackridge.md",
+      "disposition": "CURATED_SUBJECT_PAGE",
+      "source_entry_points": [
+        "blackridge/README.md",
+        "blackridge/data/public/databases/blackridge_m00_v0.1.0.sqlite3",
+        "blackridge/data/public/manifests/DATA_MANIFEST.json",
+        "blackridge/data/public/workbooks/BLACKRIDGE_MASTER_TRACKER_v0.1.0.xlsx",
+        "blackridge/docs/accounting/BLACKRIDGE_ACCOUNTING_POLICIES.md",
+        "blackridge/docs/accounting/BLACKRIDGE_FINANCIAL_MODEL_GUIDE.md",
+        "blackridge/docs/case/BLACKRIDGE_CASE_SNAPSHOT_GUIDE.md",
+        "blackridge/reports/WORKBOOK_QA_REPORT.md",
+        "docs/business-lines/HISTORICAL_AND_EXTERNAL_BOUNDARIES.md"
+      ],
+      "existing_visuals_reused": [
+        "blackridge/reports/workbook_previews/BLACKRIDGE_WORKBOOK_RENDER_PREVIEWS.pdf"
+      ],
+      "review_scope": "Source-backed historical, external or cross-cutting reading route; no new entity, department, appointment or independent canon."
     },
     {
-      "id": "WIKI-QUEUE-RESEARCH-HISTORY",
-      "subject": "Klein and Emberline",
-      "disposition": "SOURCE_INDEXED_NO_DEDICATED_WIKI_PAGE",
-      "source": "docs/canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md",
-      "current_entry": "docs/wiki/businesses/Willow.md",
-      "next_action": "Add historical navigation distinguishing the predecessor programs from current Willow and downstream transfers.",
-      "requires_owner_decision": false
-    },
-    {
-      "id": "WIKI-QUEUE-PROJECT-HISTORY",
-      "subject": "Glasshouse and Wallaby",
-      "disposition": "SOURCE_INDEXED_NO_DEDICATED_WIKI_PAGE",
-      "source": "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md",
-      "current_entry": "docs/wiki/library/history.md",
-      "next_action": "Index these historical projects with their recorded outcomes and source sections; do not infer current operating entities or sites.",
-      "requires_owner_decision": false
-    },
-    {
-      "id": "WIKI-QUEUE-EXTERNAL-HOSTS",
-      "subject": "Kelly Gang Mining and Demotte",
-      "disposition": "SOURCE_INDEXED_NO_DEDICATED_WIKI_PAGE",
-      "source": "docs/canon/CRADLE_CLOSEOUT_2026-09-06.md",
-      "current_entry": "docs/wiki/businesses/Cradle.md",
-      "next_action": "Add bounded host-interface pages for rights, custody and location records; exclude host-wide invented finances or organization.",
-      "requires_owner_decision": false
-    },
-    {
-      "id": "WIKI-QUEUE-BLACKRIDGE",
-      "subject": "Blackridge separate case universe",
-      "disposition": "SOURCE_INDEXED_NO_DEDICATED_WIKI_PAGE",
-      "source": "docs/business-lines/HISTORICAL_AND_EXTERNAL_BOUNDARIES.md",
-      "current_entry": "blackridge/README.md",
-      "next_action": "Provide a separate-case entry with workbook and evidence access after checking its own source and release state; never consolidate it into Sable Harbor.",
-      "requires_owner_decision": false
-    },
-    {
-      "id": "WIKI-QUEUE-CONTINUITY",
+      "id": "WIKI-SUBJECT-CONTINUITY",
       "subject": "Continuity and crisis responsibilities",
-      "disposition": "SOURCE_INDEXED_NO_DEDICATED_WIKI_PAGE",
-      "source": "docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md",
-      "current_entry": "docs/wiki/departments/corporate-secretary.md",
-      "next_action": "Keep governance coordination under Corporate Secretary and technical recovery under Technology; add cross-links as supported records mature, not a new resilience department.",
-      "requires_owner_decision": false
+      "page": "docs/wiki/subjects/Continuity.md",
+      "disposition": "CURATED_SUBJECT_PAGE",
+      "source_entry_points": [
+        "docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md",
+        "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
+        "enterprise/ccf/PROCEDURES.md",
+        "enterprise/ccf/assurance/README.md",
+        "enterprise/runtime/README.md",
+        "enterprise/runtime/docs/ASSURANCE_SCOPE.md",
+        "enterprise/services/README.md"
+      ],
+      "existing_visuals_reused": [],
+      "review_scope": "Source-backed historical, external or cross-cutting reading route; no new entity, department, appointment or independent canon."
+    },
+    {
+      "id": "WIKI-SUBJECT-EXTERNAL-COUNTERPARTIES",
+      "subject": "Other external and personal relationships",
+      "page": "docs/wiki/subjects/External-Counterparties.md",
+      "disposition": "CURATED_SUBJECT_PAGE",
+      "source_entry_points": [
+        "docs/business-lines/HISTORICAL_AND_EXTERNAL_BOUNDARIES.md",
+        "docs/canon/NORTHSTAR_MINERALS_VISUAL_IDENTITY_2026-09-07.md",
+        "docs/canon/QUALITY_FOREST_COMMUNICATIONS_VISUAL_IDENTITY_2026-09-07.md",
+        "docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05_R2.md",
+        "docs/canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md",
+        "docs/governance/BOARD_AND_CAPITAL_GOVERNANCE_v1.0.1.md",
+        "docs/organization/charts/external-counterparties.md",
+        "docs/organization/charts/external-investors.md",
+        "docs/organization/charts/industrial-ownership.md",
+        "enterprise/runtime/README.md",
+        "enterprise/services/README.md",
+        "industrial/transaction/01_RW_TRANSACTION_FILE.md"
+      ],
+      "existing_visuals_reused": [
+        "assets/brand/logos/northstar-minerals__primary-horizontal.png",
+        "assets/brand/logos/quality-forest-communications__primary-horizontal.png"
+      ],
+      "review_scope": "Source-backed historical, external or cross-cutting reading route; no new entity, department, appointment or independent canon."
+    },
+    {
+      "id": "WIKI-SUBJECT-EXTERNAL-HOSTS",
+      "subject": "Cradle's external hosts",
+      "page": "docs/wiki/subjects/External-Hosts.md",
+      "disposition": "CURATED_SUBJECT_PAGE",
+      "source_entry_points": [
+        "docs/canon/CRADLE_CLOSEOUT_2026-09-06.md",
+        "docs/canon/DEMOTTE_RECLAMATION_NAME_AND_IDENTITY_2026-09-07.md",
+        "docs/canon/KELLY_GANG_MINING_VISUAL_IDENTITY_2026-09-07.md",
+        "docs/organization/charts/external-cradle-hosts.md",
+        "enterprise/operations/docs/commercial.md",
+        "geospatial/maps/facilities/ARTIFACT_INDEX.md"
+      ],
+      "existing_visuals_reused": [
+        "assets/brand/logos/demotte-reclamation-services__primary-horizontal.png",
+        "assets/brand/logos/kelly-gang-mining__stacked.png"
+      ],
+      "review_scope": "Source-backed historical, external or cross-cutting reading route; no new entity, department, appointment or independent canon."
+    },
+    {
+      "id": "WIKI-SUBJECT-HISTORICAL-OPPORTUNITIES",
+      "subject": "Abandoned acquisition opportunities",
+      "page": "docs/wiki/subjects/Historical-Opportunities.md",
+      "disposition": "CURATED_SUBJECT_PAGE",
+      "source_entry_points": [
+        "docs/organization/charts/historical-opportunities.md",
+        "industrial/pale_sun/05_FALSE_START_CEDAR_JUNCTION.md",
+        "industrial/pale_sun/06_FALSE_START_JUNIPER_MESA.md",
+        "industrial/transaction/01_RW_TRANSACTION_FILE.md"
+      ],
+      "existing_visuals_reused": [],
+      "review_scope": "Source-backed historical, external or cross-cutting reading route; no new entity, department, appointment or independent canon."
+    },
+    {
+      "id": "WIKI-SUBJECT-HISTORY",
+      "subject": "Company history and The Crossing",
+      "page": "docs/wiki/subjects/History.md",
+      "disposition": "CURATED_SUBJECT_PAGE",
+      "source_entry_points": [
+        "docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md",
+        "docs/canon/CRADLE_CLOSEOUT_2026-09-06.md",
+        "docs/canon/KLEIN_NAME_AND_IDENTITY_2026-09-07.md",
+        "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md",
+        "docs/governance/BOARD_AND_CAPITAL_GOVERNANCE_v1.0.1.md",
+        "docs/governance/BOARD_EVOLUTION_2016_2026.md",
+        "docs/organization/FOUNDRY_AND_FOUNDRY_FIELD.md",
+        "docs/organization/ORGANIZATIONAL_LINEAGE_2015_2026_v0.3.1.md",
+        "docs/reader/SOURCES_AND_FORMATS.md"
+      ],
+      "existing_visuals_reused": [],
+      "review_scope": "Source-backed historical, external or cross-cutting reading route; no new entity, department, appointment or independent canon."
+    },
+    {
+      "id": "WIKI-SUBJECT-PEOPLE",
+      "subject": "Founders, early colleagues and later people",
+      "page": "docs/wiki/subjects/People.md",
+      "disposition": "CURATED_SUBJECT_PAGE",
+      "source_entry_points": [
+        "docs/canon/J2_LEADERSHIP_APPOINTMENTS_2026-09-10.md",
+        "docs/governance/BOARD_AND_CAPITAL_GOVERNANCE_v1.0.1.md",
+        "docs/organization/README.md",
+        "docs/organization/charts/people-board.md",
+        "docs/organization/charts/people-enterprise.md",
+        "docs/organization/charts/people-j2.md",
+        "docs/organization/charts/people-original-eight.md",
+        "geospatial/facilities/population/BRIDGE.md"
+      ],
+      "existing_visuals_reused": [
+        "docs/organization/assets/current/Sable-Harbor-Organization-Charts.pdf",
+        "docs/organization/assets/current/people-original-eight.png"
+      ],
+      "review_scope": "Source-backed historical, external or cross-cutting reading route; no new entity, department, appointment or independent canon."
+    },
+    {
+      "id": "WIKI-SUBJECT-PROJECT-HISTORY",
+      "subject": "Glasshouse, Wallaby and failed experiments",
+      "page": "docs/wiki/subjects/Project-History.md",
+      "disposition": "CURATED_SUBJECT_PAGE",
+      "source_entry_points": [
+        "docs/canon/CRADLE_CLOSEOUT_2026-09-06.md",
+        "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md",
+        "geospatial/facilities/coverage/COVERAGE_MATRIX.md"
+      ],
+      "existing_visuals_reused": [],
+      "review_scope": "Source-backed historical, external or cross-cutting reading route; no new entity, department, appointment or independent canon."
+    },
+    {
+      "id": "WIKI-SUBJECT-RESEARCH-HISTORY",
+      "subject": "Klein, Emberline and Willow",
+      "page": "docs/wiki/subjects/Research-History.md",
+      "disposition": "CURATED_SUBJECT_PAGE",
+      "source_entry_points": [
+        "docs/canon/EMBERLINE_VISUAL_IDENTITY_2026-09-07.md",
+        "docs/canon/KLEIN_NAME_AND_IDENTITY_2026-09-07.md",
+        "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md",
+        "docs/canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md",
+        "docs/finance/WILLOW_KLEIN_FINANCE_AND_CORPORATE_MODEL_2026-09-06.md",
+        "docs/organization/charts/research-artifacts.md",
+        "docs/organization/charts/research-history.md"
+      ],
+      "existing_visuals_reused": [
+        "assets/brand/logos/emberline__primary-horizontal.png",
+        "assets/brand/logos/klein__primary-horizontal.png"
+      ],
+      "review_scope": "Source-backed historical, external or cross-cutting reading route; no new entity, department, appointment or independent canon."
     }
   ],
+  "remaining_subject_queue": [],
   "review_limits": [
     "Existing page art is reused without byte changes.",
     "Wiki completeness is not control operating effectiveness, legal execution, occupied space, or complete financial evidence.",
     "CCF implementation remains a separate workline; this audit adds links to accepted documentation only.",
     "A separate GitHub Wiki deployment is not claimed by repository Markdown delivery."
+  ],
+  "completed_subject_queue": [
+    {
+      "id": "WIKI-QUEUE-HISTORY",
+      "subject": "Corporate chronology and The Crossing",
+      "disposition": "CURATED_SUBJECT_PAGE",
+      "source": "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md",
+      "current_entry": "docs/wiki/subjects/History.md",
+      "next_action": "Maintain source links and explicit authority boundaries.",
+      "requires_owner_decision": false,
+      "page": "docs/wiki/subjects/History.md"
+    },
+    {
+      "id": "WIKI-QUEUE-FOUNDERS",
+      "subject": "Original Eight and later people",
+      "disposition": "CURATED_SUBJECT_PAGE",
+      "source": "docs/organization/ORIGINAL_EIGHT.md",
+      "current_entry": "docs/wiki/subjects/People.md",
+      "next_action": "Maintain source links and explicit authority boundaries.",
+      "requires_owner_decision": false,
+      "page": "docs/wiki/subjects/People.md"
+    },
+    {
+      "id": "WIKI-QUEUE-RESEARCH-HISTORY",
+      "subject": "Klein and Emberline",
+      "disposition": "CURATED_SUBJECT_PAGE",
+      "source": "docs/canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md",
+      "current_entry": "docs/wiki/subjects/Research-History.md",
+      "next_action": "Maintain source links and explicit authority boundaries.",
+      "requires_owner_decision": false,
+      "page": "docs/wiki/subjects/Research-History.md"
+    },
+    {
+      "id": "WIKI-QUEUE-PROJECT-HISTORY",
+      "subject": "Glasshouse and Wallaby",
+      "disposition": "CURATED_SUBJECT_PAGE",
+      "source": "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md",
+      "current_entry": "docs/wiki/subjects/Project-History.md",
+      "next_action": "Maintain source links and explicit authority boundaries.",
+      "requires_owner_decision": false,
+      "page": "docs/wiki/subjects/Project-History.md"
+    },
+    {
+      "id": "WIKI-QUEUE-EXTERNAL-HOSTS",
+      "subject": "Kelly Gang Mining and Demotte",
+      "disposition": "CURATED_SUBJECT_PAGE",
+      "source": "docs/canon/CRADLE_CLOSEOUT_2026-09-06.md",
+      "current_entry": "docs/wiki/subjects/External-Hosts.md",
+      "next_action": "Maintain source links and explicit authority boundaries.",
+      "requires_owner_decision": false,
+      "page": "docs/wiki/subjects/External-Hosts.md"
+    },
+    {
+      "id": "WIKI-QUEUE-BLACKRIDGE",
+      "subject": "Blackridge separate case universe",
+      "disposition": "CURATED_SUBJECT_PAGE",
+      "source": "docs/business-lines/HISTORICAL_AND_EXTERNAL_BOUNDARIES.md",
+      "current_entry": "docs/wiki/subjects/Blackridge.md",
+      "next_action": "Maintain source links and explicit authority boundaries.",
+      "requires_owner_decision": false,
+      "page": "docs/wiki/subjects/Blackridge.md"
+    },
+    {
+      "id": "WIKI-QUEUE-CONTINUITY",
+      "subject": "Continuity and crisis responsibilities",
+      "disposition": "CURATED_SUBJECT_PAGE",
+      "source": "docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md",
+      "current_entry": "docs/wiki/subjects/Continuity.md",
+      "next_action": "Maintain source links and explicit authority boundaries.",
+      "requires_owner_decision": false,
+      "page": "docs/wiki/subjects/Continuity.md"
+    }
   ]
 }

@@ -1,0 +1,43 @@
+"""Validate exact reviewed practical-work inputs and retained visual evidence."""
+
+import hashlib
+import json
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[2]
+BASE = ROOT / "docs/legal/gap-instruments"
+
+
+def sha(path):
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def validate():
+    receipt = json.loads((BASE / "review-support/qa/v3/REVIEW.json").read_text())
+    assert receipt["status"] == "MANUAL_REVIEW_COMPLETE_DRAFT_DESIGNS"
+    assert receipt["owner_acceptance"] == "PENDING"
+    for group in ("input_hashes", "evidence_hashes"):
+        assert receipt[group], "Empty review coverage"
+        for relative, digest in receipt[group].items():
+            path = (ROOT / relative).resolve()
+            assert path.is_relative_to(ROOT) and sha(path) == digest, ("Stale review", relative)
+    walk = json.loads((BASE / "walkthroughs/qa/REVIEW.json").read_text())
+    assert walk["status"] == "MANUAL_REVIEW_PASS_DRAFT_DESIGN"
+    assert sha(BASE / "walkthroughs/walkthroughs.xlsx") == walk["workbook_sha256"]
+    for item in walk["evidence"]:
+        assert sha(BASE / "walkthroughs" / item["path"]) == item["sha256"]
+    recon = json.loads((BASE / "reconciliations/qa/REVIEW.json").read_text())
+    assert recon["status"] == "MANUAL_REVIEW_PASS_DRAFT_DESIGN"
+    for item in recon["records"]:
+        assert sha(BASE / "reconciliations" / (item["mode"] + ".xlsx")) == item["workbook_sha256"]
+        for page in item["pages"]:
+            assert sha(ROOT / page["path"]) == page["sha256"]
+    assert receipt["new_workbooks"] == 3 and receipt["new_worksheets"] == 23
+    print(
+        f"PASS: {len(receipt['input_hashes'])} practical-work inputs; "
+        "all 23 new worksheets and retained visual evidence"
+    )
+
+
+if __name__ == "__main__":
+    validate()

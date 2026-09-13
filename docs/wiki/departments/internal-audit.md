@@ -1,11 +1,15 @@
 # Internal Audit
 
-<img src="../../../assets/brand/logos/sable-harbor__primary-horizontal.png" alt="Sable Harbor approved identity" width="360">
+<img src="../../../assets/brand/logos/sable-harbor__reverse-horizontal.png" alt="Sable Harbor approved identity" width="360">
 
 **Canon state:** LOCKED institutional scope; implementation detail varies by linked record.<br>
-**Last substantive review:** September 11, 2026. This page is secondary navigation; the linked source records control.
+**Reviewed:** September 12, 2026. This is a reading guide; linked source records control.
 
 Internal Audit independently evaluates governance, controls and operations. It controls its audit scope, methods, findings and communications under its charter and Board committee oversight.
+
+## Reading guide
+
+Begin with a defined population, period and procedure, then assess the evidence and the limits of the conclusion. Internal Audit has its own functional accountability and does not become the owner of management controls.
 
 ## Read and use the records
 
@@ -18,14 +22,24 @@ Internal Audit independently evaluates governance, controls and operations. It c
 
 ## Organization and identity
 
-[Current chart and all of its pages](../../organization/charts/corporate-board-committees.md) · [Complete organization publication](../../organization/assets/current/Sable-Harbor-Organization-Charts.pdf).
+[Organization chart, text roster and source qualifications](../../organization/charts/corporate-board-committees.md) · [Complete organization publication](../../organization/assets/current/Sable-Harbor-Organization-Charts.pdf).
 
 [![Internal Audit — shared organization chart, first page](../../organization/assets/current/corporate-board-committees.png)](../../organization/assets/current/corporate-board-committees.png)
 
 The shared chart retains its original scope; it is not a new reporting chart for this page. The approved corporate mark above identifies the parent institution.
 
-## Boundaries and unresolved detail
+[Department and institution directory](README.md) · [Business directory](../businesses/README.md) · [Wiki home](../Home.md)
+[Continuity and crisis responsibilities across the existing institutions](../subjects/Continuity.md).
 
-Internal Audit is separate from Finance, OGC, Risk & Compliance, Technology and J2. ESS administrative support cannot condition its communications to the committee.
+## What remains unknown
 
-[Department and institution directory](README.md) · [Wiki home](../Home.md)
+Generated workpapers and reference test plans are not performed assurance. A passing synthetic test does not establish operating effectiveness across the enterprise. See the [open questions register](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Open-Questions) for the evidence needed to resolve tracked gaps.
+
+## Related reading
+
+- [Board and committees](board.md)
+- [Risk & Compliance](risk-compliance.md)
+- [Finance](finance.md)
+- [Continuity and crisis responsibilities](../subjects/Continuity.md)
+
+Related reading describes useful connections, not additional reporting lines.

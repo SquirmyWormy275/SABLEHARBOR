@@ -454,7 +454,7 @@ def registers():
             "",
             "## Independent open facts",
             "",
-            "J2 Education location; exact Blackridge location; Klein/Fort occupancy history; provisional Reno/Elko/Tucson offices; exact Bedford, Demotte and Kelly Gang Mining parcels; Wallaby/Glasshouse sites; historical offices; early railway alignments; exact lease/title records; conversion destination; corporate hosting geography. Named hosts, the Fort concept, current ARU estate and current BS&T case geography are resolved. See PROGRAM_CLOSEOUT_MATRIX.md for disposition.",
+            "J2 Education location; exact Blackridge location; Klein/Fort exact parcel/lease-day precision (2024 linkage resolved); provisional Reno/Elko/Tucson offices; exact Bedford, Demotte and Kelly Gang Mining parcels; Wallaby/Glasshouse sites; historical offices; early railway alignments; exact lease/title records; conversion destination; corporate hosting geography. Named hosts, the Fort concept, current ARU estate and current BS&T case geography are resolved. See PROGRAM_CLOSEOUT_MATRIX.md for disposition.",
         ]
     )
     (out / "OPEN_GEOGRAPHIC_QUESTIONS_v0.1.md").write_text("\n".join(lines) + "\n")

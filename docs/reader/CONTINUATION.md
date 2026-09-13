@@ -12,18 +12,27 @@ The [wiki coverage register](WIKI_COVERAGE.json) records seven business pages, 2
 
 The reader layer was accepted through PR #128; catalog reconciliation followed in PRs #130 and #132. The earlier delivery record now distinguishes that accepted state from its historical pre-merge QA report. A refreshed `git ls-remote` still returned “Repository not found” for the separate Wiki endpoint. All content remains accessible through repository Markdown; live Wiki publication is not claimed.
 
-## Finance review recovered
+## Finance packet accepted
 
-[Draft PR #134](https://github.com/SquirmyWormy275/SABLEHARBOR/pull/134) recovers the existing Foundry Field packet at `59201ccfa6a302e19c766694b3160fe8e9b942a4`. It contains the source-bound Markdown evidence memo, two-page PDF, five-sheet workbook, native source links and full-page review images. The branch reconciles current main and preserves the prior reviewed bytes.
+[PR #134](https://github.com/SquirmyWormy275/SABLEHARBOR/pull/134) delivers the existing Foundry Field
+accounting evidence memo, two-page PDF, five-sheet workbook, native source links and review images.
+After the approved Foundry Field logo correction at `efce3a74b5c029e4010abd93934b7686b3751ba4`,
+the owner explicitly said “Accept this exact packet.” [The dated acceptance](../canon/FINANCE_HUMAN_EVIDENCE_001_ACCEPTANCE_2026-09-11.md)
+and [frozen hashes](../finance/evidence/SH-FIN-HUMAN-001/ACCEPTANCE.json) control that exact version.
+It remains an accounting evidence memo, not a customer-facing invoice original. Draft labels inside
+the reviewed bytes are preserved; they do not override the later acceptance record. Acceptance is
+complete; current-main integration proceeds through PR #134 after green gates.
 
-The packet is an accounting evidence memo, not a customer-facing invoice original. The owner raised the business-branding distinction during review. Draft `efce3a74b5c029e4010abd93934b7686b3751ba4` corrects the PDF header to the approved Foundry Field mark; the owner responded “much better.” The source and workbook remain unchanged. This positive correction feedback is recorded without inferring full-packet acceptance or broader production approval. Any separately reconstructed invoice should use the approved business identity and supported legal issuer, with absent billing fields explicit. Do not mass-produce that design or promote the draft to accepted evidence while this distinction remains under review.
+Future designs remain subject to exact-file review. The separately authorized proposed billing dataset
+may add clearly fictional scenario fields for review, but cannot revise booked amounts, existing
+source records or legal canon. See [the overnight authorization](../canon/READER_OVERNIGHT_SCOPE_2026-09-11.md).
 
 ## Overnight preparation
 
-[Start or resume instructions](overnight/START.md) and the [ten-job queue](overnight/QUEUE.json) partition reader reconciliation, finance evidence and wiki/transaction work. The queue records inputs, dependencies, write boundaries, acceptance and visual gates. It is prepared, not scheduled or running in the background. The active session can execute ready work when directed; exact-file review remains a real gate.
+[Start or resume instructions](overnight/START.md) and the [eleven-job queue](overnight/QUEUE.json) partition reader reconciliation, finance evidence and wiki/transaction work. The queue records inputs, dependencies, write boundaries, acceptance and visual gates. It is prepared, not scheduled or running in the background. The active session can execute ready work when directed; exact-file review remains a real gate.
 
-The queue validator checks dependencies, repository paths and frozen V08/organization hashes. It is not an approval engine. Current authorization permits nonvisual integration after required gates; the user may still steer overnight priority or request draft-only delivery.
+The queue validator checks dependencies, repository paths and frozen V08/organization hashes. It is not an approval engine. The owner confirmed all three content lanes: accounting, transaction/legal, and business/department. Nonvisual work may merge after required gates; new designs stay in review.
 
 ## Validation
 
-Validation evidence for this continuation is recorded in the implementation PR. Reader links, institutional logical regeneration, queue preflight, applicable maintainer checks and unchanged artwork hashes must pass before merge. New finance visuals remain in their separate draft regardless of these results.
+Validation evidence for this continuation is recorded in the implementation PR. Reader links, institutional logical regeneration, queue preflight, applicable maintainer checks and unchanged artwork hashes must pass before merge. Future finance visuals remain in review regardless of these results; the exact accepted packet is governed separately.

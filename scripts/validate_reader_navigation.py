@@ -24,6 +24,11 @@ TABLES = (
     "reader_publication_pair",
     "reader_format_review",
     "reader_search",
+    "reader_evidence_link",
+    "reader_evidence_package",
+    "reader_counterpart_audit",
+    "reader_text",
+    "reader_evidence_artifact",
 )
 
 
@@ -32,7 +37,9 @@ def logical_content(db):
 
 
 def main(check_regeneration=False) -> None:
-    from reader_library import inputs
+    from reader_library import inputs, evidence_records
+    from evidence_packages import records as package_records
+    from evidence_packages import artifact_records
 
     pages = [
         ROOT / "README.md",
@@ -40,6 +47,8 @@ def main(check_regeneration=False) -> None:
         *sorted((ROOT / "docs/reader").rglob("*.md")),
         ROOT / "docs/finance/READER_EXERCISES.md",
         ROOT / "docs/handoffs/FINANCE_HUMAN_EVIDENCE_COMPLETION.md",
+        *sorted((ROOT / "docs/finance/evidence").rglob("*.md")),
+        *sorted((ROOT / "docs/legal/evidence").rglob("*.md")),
     ]
     failures = []
     checked = 0
@@ -92,6 +101,17 @@ def main(check_regeneration=False) -> None:
         != db.execute("SELECT count(*) FROM institutional_object").fetchone()[0]
     ):
         failures.append("Controlled pair coverage differs from institutional catalog")
+    try:
+        expected_evidence = sorted(evidence_records(ROOT))
+        actual_evidence = sorted(db.execute("SELECT * FROM reader_evidence_link").fetchall())
+        if expected_evidence != actual_evidence:
+            failures.append("Evidence database links differ from validated packet catalogs")
+        if package_records(ROOT) != sorted(db.execute("SELECT * FROM reader_evidence_package").fetchall()):
+            failures.append("Evidence package database differs from source registers")
+        if artifact_records(ROOT) != sorted(db.execute("SELECT * FROM reader_evidence_artifact").fetchall()):
+            failures.append("Review artifact database differs from verified manifests")
+    except (ValueError, KeyError) as error:
+        failures.append(str(error))
     before = logical_content(db) if check_regeneration else None
     db.close()
     if failures:

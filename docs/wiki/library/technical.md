@@ -6,7 +6,7 @@ Generated file inventory. Includes current and historical records; open the sour
 
 ## `.`
 
-- [Contributing](../../../CONTRIBUTING.md) — MD
+- [Contributing to Sable Harbor](../../../CONTRIBUTING.md) — MD
 - [All Rights Reserved](../../../LICENSE.md) — MD
 - [Maintainer Rules](../../../MAINTAINERS.md) — MD
 - [SABLE HARBOR](../../../README.md) — MD
@@ -75,14 +75,20 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Current business and publication alignment delivery](../../internal/development/ALIGNMENT_DELIVERY_2026-09-09.md) — MD
 - [Business finance and evidence implementation delivery](../../internal/development/BUSINESS_FINANCE_DELIVERY_2026-09-09.md) — MD
 - [Business operating depth delivery — 2026-09-09](../../internal/development/BUSINESS_OPERATIONS_DELIVERY_2026-09-09.md) — MD
+- [Actionable CCF procedure deltas](../../internal/development/CCF_ACTIONABLE_CONTROL_DELTAS_2026-09-12.md) — MD
 - [CCF operating and assurance direction](../../internal/development/CCF_ASSURANCE_DIRECTION_2026-09-11.md) — MD
 - [Initial CCF assurance scope and source proposal](../../internal/development/CCF_ASSURANCE_SCOPE_PROPOSAL_2026-09-11.md) — MD
 - [CCF baseline design and workflow delivery](../../internal/development/CCF_BASELINE_DESIGN_DELIVERY_2026-09-11.md) — MD
 - [CCF preparation compared with Compliance Atlas](../../internal/development/CCF_COMPLIANCE_ATLAS_COMPARISON_2026-09-11.md) — MD
+- [CCF control library and coverage review preparation](../../internal/development/CCF_CONTROL_LIBRARY_REVIEW_DELIVERY_2026-09-12.md) — MD
+- [Integrated CCF delivery workflow](../../internal/development/CCF_INTEGRATED_DELIVERY_WORKFLOW_2026-09-12.md) — MD
+- [ISO extension planning delivery](../../internal/development/CCF_ISO_EXTENSION_DELIVERY_2026-09-11.md) — MD
+- [A practical first CCF system](../../internal/development/CCF_PILOT_SYSTEM_DESIGN_2026-09-12.md) — MD
 - [CCF prebuild repository audit — September 11, 2026](../../internal/development/CCF_PREBUILD_REPOSITORY_AUDIT_2026-09-11.md) — MD
 - [CCF preparation delivery — September 11, 2026](../../internal/development/CCF_PREPARATION_DELIVERY_2026-09-11.md) — MD
 - [Approved reference assessment preparation](../../internal/development/CCF_REFERENCE_ASSESSMENT_DELIVERY_2026-09-11.md) — MD
 - [CCF publisher-source search follow-up](../../internal/development/CCF_SOURCE_SEARCH_FOLLOWUP_2026-09-11.md) — MD
+- [CCF substantive source comparison delivery](../../internal/development/CCF_SUBSTANTIVE_SOURCE_REVIEW_2026-09-12.md) — MD
 - [PR #119 — Runtime Estate Completion Handover](../../internal/development/PR119_RUNTIME_ESTATE_COMPLETION_HANDOVER_2026-09-11.md) — MD
 - [Sable Harbor — business-line development review](../../internal/development/REPOSITORY_DEVELOPMENT_REVIEW_2026-09-09.md) — MD
 - [Third-party services and internal operations — assessment for discussion](../../internal/development/THIRD_PARTY_SERVICES_ASSESSMENT_2026-09-09.md) — MD
@@ -102,12 +108,6 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Klein rename and artwork — validation and delivery record](../../internal/validation/KLEIN_RENAME_2026-09-07.md) — MD
 - [Post-Merge Main Validation — 2026-09-03](../../internal/validation/POST_MERGE_MAIN_VALIDATION_2026-09-03.md) — MD
 
-## `docs/legal`
-
-- [SABLE HARBOR ADVISORY — OPERATING NAME AND EXTERNAL CLEARANCE STATUS](../../legal/ADVISORY_NAME_AND_EXTERNAL_CLEARANCE_STATUS_2026-09-09.md) — MD
-- [MOCK DEED — SABLE HARBOR NORTHERN NEVADA DATA CENTER](../../legal/MOCK_DEED_NORTHERN_NEVADA_DATA_CENTER_2026-09-04.md) — MD · [formatted PDF](../../../enterprise/runtime/publications/SH-RT-DEED-001_v1.0.0.pdf)
-- [Preliminary Name and Mark Screen](../../legal/PRELIMINARY_NAME_AND_MARK_SCREEN.md) — MD
-
 ## `docs/procurement`
 
 - [Reno Primary / Boise Recovery Colocation Procurement and Negotiation Package](../../procurement/RENO_BOISE_COLOCATION_RFP_2026-09-11.md) — MD · [formatted PDF](../../../enterprise/runtime/publications/SH-RT-PROC-001_v1.0.0.pdf)
@@ -116,9 +116,11 @@ Generated file inventory. Includes current and historical records; open the sour
 
 - [Business-driven finance releases](../../releases/BUSINESS_FINANCE_RELEASES.md) — MD
 - [Business operations releases](../../releases/BUSINESS_OPERATIONS_RELEASES.md) — MD
+- [Closeout evidence releases](../../releases/CLOSEOUT_EVIDENCE_RELEASES.md) — MD
 - [Facility atlas controlled releases](../../releases/FACILITY_ATLAS_RELEASES.md) — MD
 - [Facility spatial releases](../../releases/FACILITY_SPATIAL_RELEASES.md) — MD
 - [Facility planning workbench releases](../../releases/FACILITY_WORKBENCH_RELEASES.md) — MD
+- [Geographic evidence releases](../../releases/GEOGRAPHIC_EVIDENCE_RELEASES.md) — MD
 - [Industrial case releases](../../releases/INDUSTRIAL_CASE_RELEASES.md) — MD
 - [Runtime estate releases](../../releases/RUNTIME_ESTATE_RELEASES.md) — MD
 
@@ -130,6 +132,22 @@ Generated file inventory. Includes current and historical records; open the sour
 
 - [Enterprise operating and financial models](../../../enterprise/README.md) — MD
 
+## `evidence/closeout`
+
+- [Closeout evidence](../../../evidence/closeout/README.md) — MD
+
+## `tools/ci`
+
+- [Repository checks](../../../tools/ci/README.md) — MD
+
 ## `tools/documents`
 
 - [Controlled-publication builds](../../../tools/documents/README.md) — MD
+
+## `tools/legal_gaps`
+
+- [Gap instrument publications](../../../tools/legal_gaps/README.md) — MD
+
+## `tools/wiki`
+
+- [Wiki publication](../../../tools/wiki/README.md) — MD

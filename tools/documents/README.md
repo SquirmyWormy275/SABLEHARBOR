@@ -43,3 +43,44 @@ current version. Never hand-edit the PDF, catalog, or checksum to conceal source
 Before merge, render changed PDFs for visual inspection and follow the remaining checks in
 `MAINTAINERS.md`. September 6 compatibility and canon evidence is recorded in
 `docs/internal/validation/CANON_CLOSEOUT_2026-09-06.md`.
+
+## Accounting and legal evidence discovery
+
+The institutional SQLite catalog also exposes `reader_evidence_package`. Each row preserves
+its package ID, review state, Markdown entry, source-register path/hash and complete provenance
+JSON. The builder reads explicit `evidence-register.json` files under the accounting and legal
+evidence directories, verifies source hashes, and rejects duplicate identities or unsafe paths.
+A source-only package can have `visual_manifest: null`; it does not imply an accepted PDF or
+workbook. The separately accepted Foundry Field packet retains its original schema and hashes.
+
+```sql
+SELECT package_id, title, status, markdown_path, register_path
+FROM reader_evidence_package ORDER BY package_id;
+```
+
+Native transaction tables remain in the pinned release databases. Discovery records link to
+those populations; they do not replace the ledger or turn proposed documents into executed
+instruments. Run `python scripts/validate_reader_navigation.py --check-regeneration` to check
+source hashes, database contents and reader links after rebuilding.
+
+Dated counterpart reviews are applied only to unchanged source hashes. Verified artifact
+hashes must also match; a changed publication fails the build. Historical audit evidence
+remains in its dated register when current source edits return a document to review.
+
+The institutional full-text index uses an external-content view over existing object rows.
+This avoids storing the same controlled-document text twice while preserving the public
+search columns and full-text query behavior. Catalog regeneration and search tests verify
+logical content; SQLite byte layout can change when the schema changes.
+
+Reader full-text search likewise uses an external-content view. Controlled Markdown reuses
+its institutional normalized search text (including title/path); other files retain their
+complete search body in `reader_text`. Search bodies are discovery text, not byte-exact source
+exports. Original Markdown and its checksum remain available through `reader_file`.
+Counterpart audit rows omit the duplicated source excerpt from database JSON; the complete
+dated register and searchable source retain it. No evidence disposition or artifact hash is
+removed. These storage choices keep the generated catalog within the repository file limit.
+
+`reader_evidence_artifact` links saved review files to their package, source reference, exact
+hash and domain manifest. Its explicit draft status does not confer approval. Finance
+workbooks can point to a source register covering several tables; legal PDFs point to their
+specific Markdown record. Domain manifests also validate the render source and approved logo.

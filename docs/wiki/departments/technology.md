@@ -1,11 +1,15 @@
 # Enterprise Technology Services
 
-<img src="../../../assets/brand/logos/sable-harbor__primary-horizontal.png" alt="Sable Harbor approved identity" width="360">
+<img src="../../../assets/brand/logos/sable-harbor__reverse-horizontal.png" alt="Sable Harbor approved identity" width="360">
 
 **Canon state:** LOCKED institutional scope; implementation detail varies by linked record.<br>
-**Last substantive review:** September 11, 2026. This page is secondary navigation; the linked source records control.
+**Reviewed:** September 12, 2026. This is a reading guide; linked source records control.
 
 Technology Services runs employee technology, shared platforms, developer systems, compute infrastructure and reliability services. Product engineering remains within the businesses.
+
+## Reading guide
+
+Technology Services provides the shared foundations on which businesses build and operate. Read autonomy alongside identity, security and consequential delegation, and distinguish the accepted runtime design from an operating deployment.
 
 ## Read and use the records
 
@@ -17,14 +21,24 @@ Technology Services runs employee technology, shared platforms, developer system
 
 ## Organization and identity
 
-[Current chart and all of its pages](../../organization/charts/corporate-technology-capabilities.md) · [Complete organization publication](../../organization/assets/current/Sable-Harbor-Organization-Charts.pdf).
+[Organization chart, text roster and source qualifications](../../organization/charts/corporate-technology-capabilities.md) · [Complete organization publication](../../organization/assets/current/Sable-Harbor-Organization-Charts.pdf).
 
 [![Enterprise Technology Services — shared organization chart, first page](../../organization/assets/current/corporate-technology-capabilities.png)](../../organization/assets/current/corporate-technology-capabilities.png)
 
 The shared chart retains its original scope; it is not a new reporting chart for this page. The approved corporate mark above identifies the parent institution.
 
-## Boundaries and unresolved detail
+[Department and institution directory](README.md) · [Business directory](../businesses/README.md) · [Wiki home](../Home.md)
+[Continuity and crisis responsibilities across the existing institutions](../subjects/Continuity.md).
 
-The runtime package is an accepted synthetic design, not an operating estate. Professional colocation and recovery locations do not become Sacramento campus data centers.
+## What remains unknown
 
-[Department and institution directory](README.md) · [Wiki home](../Home.md)
+The runtime estate is an accepted synthetic design. Supplier acceptance, installed service and production qualification remain separate readiness gates. See the [open questions register](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Open-Questions) for the evidence needed to resolve tracked gaps.
+
+## Related reading
+
+- [Enterprise security capability](security.md)
+- [Alexandria institutional environment](alexandria.md)
+- [Procurement and vendor support](procurement.md)
+- [Continuity and crisis responsibilities](../subjects/Continuity.md)
+
+Related reading describes useful connections, not additional reporting lines.

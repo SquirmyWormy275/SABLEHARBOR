@@ -1,11 +1,15 @@
 # Facilities and workplace services
 
-<img src="../../../assets/brand/logos/sable-harbor__primary-horizontal.png" alt="Sable Harbor approved identity" width="360">
+<img src="../../../assets/brand/logos/sable-harbor__reverse-horizontal.png" alt="Sable Harbor approved identity" width="360">
 
 **Canon state:** LOCKED institutional scope; implementation detail varies by linked record.<br>
-**Last substantive review:** September 11, 2026. This page is secondary navigation; the linked source records control.
+**Reviewed:** September 12, 2026. This is a reading guide; linked source records control.
 
 This ESS capability supports offices, workspaces and shared facilities. The facility archive connects source locations, planning populations, campus programs, buildings and individual floor assets.
+
+## Reading guide
+
+Use the visitor map to understand the campus concept, then the facility records to inspect specific sites, buildings and floors. Keep capacity assumptions, measured geometry and historical occupancy separate throughout the review.
 
 ## Read and use the records
 
@@ -19,14 +23,24 @@ This ESS capability supports offices, workspaces and shared facilities. The faci
 
 ## Organization and identity
 
-[Current chart and all of its pages](../../organization/charts/corporate-enterprise-support.md) · [Complete organization publication](../../organization/assets/current/Sable-Harbor-Organization-Charts.pdf).
+[Organization chart, text roster and source qualifications](../../organization/charts/corporate-enterprise-support.md) · [Complete organization publication](../../organization/assets/current/Sable-Harbor-Organization-Charts.pdf).
 
 [![Facilities and workplace services — shared organization chart, first page](../../organization/assets/current/corporate-enterprise-support.png)](../../organization/assets/current/corporate-enterprise-support.png)
 
 The shared chart retains its original scope; it is not a new reporting chart for this page. The approved corporate mark above identifies the parent institution.
 
-## Boundaries and unresolved detail
+[Department and institution directory](README.md) · [Business directory](../businesses/README.md) · [Wiki home](../Home.md)
+[Continuity and crisis responsibilities across the existing institutions](../subjects/Continuity.md).
 
-Facilities/workplace services is an accepted capability label. Proposed campus geometry, seat capacity and floor plans do not prove property ownership, occupation or completed construction.
+## What remains unknown
 
-[Department and institution directory](README.md) · [Wiki home](../Home.md)
+Exact site and occupancy evidence remains open under issue #106. The original September 3 headquarters image still requires recovery under issue #88. See the [open questions register](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Open-Questions) for the evidence needed to resolve tracked gaps.
+
+## Related reading
+
+- [Enterprise Support Services](ess.md)
+- [People & Culture](people-culture.md)
+- [Continuity and crisis responsibilities](../subjects/Continuity.md)
+- [Willow](../businesses/Willow.md)
+
+Related reading describes useful connections, not additional reporting lines.

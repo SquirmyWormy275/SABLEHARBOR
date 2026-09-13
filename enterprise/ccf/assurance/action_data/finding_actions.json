@@ -1,0 +1,1097 @@
+[
+  {
+    "finding_id": "H-ADDRESSABLE",
+    "work_type": "ENHANCE_EXISTING_CONTROL",
+    "priority": "P0",
+    "priority_basis": "Resolve applicability, authority or obligation before dependent execution",
+    "dependencies": [
+      "GATE-SERVICE-FACTS",
+      "GATE-QUALIFIED-REVIEW"
+    ],
+    "evidence_required": [
+      {
+        "artifact": "Dated execution record",
+        "must_show": "Maintain a specification-level register with risk contribution, environment, selected measure, reason for any nonimplementation, alternative assessment, accountable approval and reassessment trigger. Addressable is not synonymous with optional."
+      },
+      {
+        "artifact": "Independent test record",
+        "must_show": "Reconcile all 22 addressable entries to documented decisions; inspect both implemented measures and alternatives. Reject blank reasoning and a generic risk waiver substituted for the environmental assessment."
+      }
+    ]
+  },
+  {
+    "finding_id": "H-SECURITY-OFFICIAL",
+    "work_type": "ENHANCE_EXISTING_CONTROL",
+    "priority": "P0",
+    "priority_basis": "Resolve applicability, authority or obligation before dependent execution",
+    "dependencies": [
+      "GATE-SERVICE-FACTS",
+      "GATE-QUALIFIED-REVIEW"
+    ],
+    "evidence_required": [
+      {
+        "artifact": "Dated execution record",
+        "must_show": "Record the actual appointment, authority, responsibilities, deputy coverage and effective dates; communicate the assignment and reconcile it with policy and incident escalation owners."
+      },
+      {
+        "artifact": "Independent test record",
+        "must_show": "Inspect authorized appointment evidence and trace two policy/incident responsibilities to the appointed official. Flag vacant or conflicting authority."
+      }
+    ]
+  },
+  {
+    "finding_id": "H-SANCTIONS",
+    "work_type": "ENHANCE_EXISTING_CONTROL",
+    "priority": "P1",
+    "priority_basis": "Implement and test before relying on the affected control",
+    "dependencies": [
+      "GATE-SERVICE-FACTS",
+      "GATE-QUALIFIED-REVIEW"
+    ],
+    "evidence_required": [
+      {
+        "artifact": "Dated execution record",
+        "must_show": "Link substantiated security-policy violations to a proportionate, consistently applied disciplinary decision; record responsible authority, confidentiality, conflicts and outcome. Review control responsibilities, incentives and excessive pressure in performance processes."
+      },
+      {
+        "artifact": "Independent test record",
+        "must_show": "Trace substantiated cases to reasoned sanction decisions and follow-up, and inspect responsibility-related performance reviews. An acknowledgment without enforcement evidence cannot pass this test."
+      }
+    ]
+  },
+  {
+    "finding_id": "H-ACTIVITY-REVIEW",
+    "work_type": "ENHANCE_EXISTING_CONTROL",
+    "priority": "P1",
+    "priority_basis": "Implement and test before relying on the affected control",
+    "dependencies": [
+      "GATE-SERVICE-FACTS",
+      "GATE-QUALIFIED-REVIEW"
+    ],
+    "evidence_required": [
+      {
+        "artifact": "Dated execution record",
+        "must_show": "Define an ePHI-system activity review schedule and query set covering audit logs, access reports and incident records. Reconcile the system population, retain reviewer decisions and investigate anomalies and unreviewed periods."
+      },
+      {
+        "artifact": "Independent test record",
+        "must_show": "Select periods independently; reperform an activity query and inspect anomaly disposition and missing periods. Validate recording as well as actual examination."
+      }
+    ]
+  },
+  {
+    "finding_id": "H-EMERGENCY",
+    "work_type": "ENHANCE_EXISTING_CONTROL",
+    "priority": "P1",
+    "priority_basis": "Implement and test before relying on the affected control",
+    "dependencies": [
+      "GATE-SERVICE-FACTS",
+      "GATE-QUALIFIED-REVIEW"
+    ],
+    "evidence_required": [
+      {
+        "artifact": "Dated execution record",
+        "must_show": "Document emergency-mode workflows, minimum safeguards, authorized access, time limits, logging under degraded dependencies and return to normal operation. Exercise loss of the identity and logging dependencies as well as the primary site."
+      },
+      {
+        "artifact": "Independent test record",
+        "must_show": "Observe an approved emergency-mode exercise; verify necessary ePHI remains accessible to authorized operators and access decisions and activity survive recovery."
+      }
+    ]
+  },
+  {
+    "finding_id": "H-EVALUATION",
+    "work_type": "ENHANCE_EXISTING_CONTROL",
+    "priority": "P1",
+    "priority_basis": "Implement and test before relying on the affected control",
+    "dependencies": [
+      "GATE-SERVICE-FACTS",
+      "GATE-QUALIFIED-REVIEW"
+    ],
+    "evidence_required": [
+      {
+        "artifact": "Dated execution record",
+        "must_show": "Maintain an evaluation covering applicable Security Rule standards and specifications; set a reasoned cadence and changes that trigger reevaluation. Record methods, results and deficiencies for both technical and administrative measures."
+      },
+      {
+        "artifact": "Independent test record",
+        "must_show": "Compare material environment changes and scheduled evaluations to completed work. Inspect a nontechnical safeguard and a technical configuration for evaluated effectiveness."
+      }
+    ]
+  },
+  {
+    "finding_id": "H-PHYSICAL-MOVEMENT",
+    "work_type": "ENHANCE_EXISTING_CONTROL",
+    "priority": "P1",
+    "priority_basis": "Implement and test before relying on the affected control",
+    "dependencies": [
+      "GATE-SERVICE-FACTS",
+      "GATE-QUALIFIED-REVIEW"
+    ],
+    "evidence_required": [
+      {
+        "artifact": "Dated execution record",
+        "must_show": "Add workstation classes and permitted use/surroundings, a security-repair log, and equipment movement records identifying custody, authorization, backup decision and destination. Verify removal of ePHI before media reuse separately from asset retirement."
+      },
+      {
+        "artifact": "Independent test record",
+        "must_show": "Trace workstations, facility repairs and moved/reused equipment from independent populations to the applicable records; reperform retrieval of a required pre-movement copy."
+      }
+    ]
+  },
+  {
+    "finding_id": "H-INTEGRITY",
+    "work_type": "ENHANCE_EXISTING_CONTROL",
+    "priority": "P1",
+    "priority_basis": "Implement and test before relying on the affected control",
+    "dependencies": [
+      "GATE-SERVICE-FACTS",
+      "GATE-QUALIFIED-REVIEW"
+    ],
+    "evidence_required": [
+      {
+        "artifact": "Dated execution record",
+        "must_show": "Identify integrity threats and implement risk-appropriate verification at storage, processing and transfer boundaries; document addressable decisions. Reconcile integrity failures to incident response and preserve originals for investigation."
+      },
+      {
+        "artifact": "Independent test record",
+        "must_show": "Inject approved synthetic unauthorized alteration into a test copy and a transfer; verify detection and response. Distinguish business-data validity from protection against unauthorized alteration."
+      }
+    ]
+  },
+  {
+    "finding_id": "H-RETENTION",
+    "work_type": "ENHANCE_EXISTING_CONTROL",
+    "priority": "P1",
+    "priority_basis": "Implement and test before relying on the affected control",
+    "dependencies": [
+      "GATE-SERVICE-FACTS",
+      "GATE-QUALIFIED-REVIEW"
+    ],
+    "evidence_required": [
+      {
+        "artifact": "Dated execution record",
+        "must_show": "Classify Security Rule documentation separately from clinical records; calculate its earliest disposition date from the later of creation and last effective use plus six years, subject to longer holds or obligations. Preserve version history and access for implementers; review after environmental changes."
+      },
+      {
+        "artifact": "Independent test record",
+        "must_show": "Recompute dates for superseded and currently effective policies and required activity records. Attempt premature disposition in a test workflow; verify denial and accessible superseded records."
+      }
+    ]
+  },
+  {
+    "finding_id": "H-BREACH-DECISION",
+    "work_type": "ENHANCE_EXISTING_CONTROL",
+    "priority": "P0",
+    "priority_basis": "Resolve applicability, authority or obligation before dependent execution",
+    "dependencies": [
+      "GATE-SERVICE-FACTS",
+      "GATE-QUALIFIED-REVIEW"
+    ],
+    "evidence_required": [
+      {
+        "artifact": "Dated execution record",
+        "must_show": "Record the use/disclosure, secured-status basis and exact exception considered. If relying on low probability of compromise, address information/identifiers, recipient, actual acquisition/viewing and mitigation. Preserve the conclusion and supporting evidence; keep general security-incident reporting separate."
+      },
+      {
+        "artifact": "Independent test record",
+        "must_show": "Use approved fictional cases covering a security incident without PHI, impermissible disclosure and claimed encryption protection; challenge omitted risk factors and unsubstantiated no-notice decisions."
+      }
+    ]
+  },
+  {
+    "finding_id": "H-NOTICE-CLOCK",
+    "work_type": "ENHANCE_EXISTING_CONTROL",
+    "priority": "P0",
+    "priority_basis": "Resolve applicability, authority or obligation before dependent execution",
+    "dependencies": [
+      "GATE-SERVICE-FACTS",
+      "GATE-QUALIFIED-REVIEW"
+    ],
+    "evidence_required": [
+      {
+        "artifact": "Dated execution record",
+        "must_show": "Track occurrence, first knowledge, reasonable-diligence discovery and upstream contractual deadlines separately. Calculate the outer 60-day date while requiring prompt action and honoring shorter contracts. Send available affected-person and notice information and supplement promptly. Record written delay terms or the official and date of an oral delay, capped at 30 days unless supported by a written statement."
+      },
+      {
+        "artifact": "Independent test record",
+        "must_show": "Test a delayed escalation, discovery by an agent, a shorter contractual limit, incomplete initial information and oral/written law-enforcement delays. Reject clocks restarted at management confirmation and treating day 60 as the routine target."
+      }
+    ]
+  },
+  {
+    "finding_id": "H-SUBCONTRACT",
+    "work_type": "ENHANCE_EXISTING_CONTROL",
+    "priority": "P0",
+    "priority_basis": "Resolve applicability, authority or obligation before dependent execution",
+    "dependencies": [
+      "GATE-SERVICE-FACTS",
+      "GATE-QUALIFIED-REVIEW"
+    ],
+    "evidence_required": [
+      {
+        "artifact": "Dated execution record",
+        "must_show": "Reconcile every subcontractor creating, receiving, maintaining or transmitting PHI to the applicable written arrangement before delegation. Review safeguards, security-incident/breach reporting, permitted uses, assistance and exit terms. On known material violation, record reasonable cure/end steps and, if unsuccessful, feasibility of termination."
+      },
+      {
+        "artifact": "Independent test record",
+        "must_show": "Select downstream data flows independently from vendor lists; inspect signed scope and reporting paths. Exercise an unsuccessful cure and review documented termination feasibility."
+      }
+    ]
+  },
+  {
+    "finding_id": "H-PRIVACY-PURPOSE",
+    "work_type": "ENHANCE_EXISTING_CONTROL",
+    "priority": "P0",
+    "priority_basis": "Resolve applicability, authority or obligation before dependent execution",
+    "dependencies": [
+      "GATE-SERVICE-FACTS",
+      "GATE-QUALIFIED-REVIEW"
+    ],
+    "evidence_required": [
+      {
+        "artifact": "Dated execution record",
+        "must_show": "Record purpose, permitted authority, recipients and data scope before disclosure or reuse. Apply a documented minimum-necessary decision and relevant exception. Treat sales, marketing, research and management/administration exceptions as separate legal questions rather than generic data rights."
+      },
+      {
+        "artifact": "Independent test record",
+        "must_show": "Trace selected disclosures and proposed reuse to actual authority and justified scope; reject a new AI-training use based solely on possession of PHI."
+      }
+    ]
+  },
+  {
+    "finding_id": "H-RIGHTS-ASSISTANCE",
+    "work_type": "ENHANCE_EXISTING_CONTROL",
+    "priority": "P1",
+    "priority_basis": "Implement and test before relying on the affected control",
+    "dependencies": [
+      "GATE-SERVICE-FACTS",
+      "GATE-QUALIFIED-REVIEW"
+    ],
+    "evidence_required": [
+      {
+        "artifact": "Dated execution record",
+        "must_show": "Define the BA/customer allocation for access, amendment and accounting. Authenticate requests, route promptly under agreed time limits, retrieve the relevant records, preserve changes and disclosure history, and confirm completion to the responsible party. Separate direct electronic-copy duties from other delegated tasks."
+      },
+      {
+        "artifact": "Independent test record",
+        "must_show": "Exercise an electronic-copy request, an accepted amendment and an accounting request on synthetic data; trace the correct recipient, complete records and upstream completion requirements."
+      }
+    ]
+  },
+  {
+    "finding_id": "H-REGULATOR",
+    "work_type": "ENHANCE_EXISTING_CONTROL",
+    "priority": "P1",
+    "priority_basis": "Implement and test before relying on the affected control",
+    "dependencies": [
+      "GATE-SERVICE-FACTS",
+      "GATE-QUALIFIED-REVIEW"
+    ],
+    "evidence_required": [
+      {
+        "artifact": "Dated execution record",
+        "must_show": "Create a counsel-coordinated response route with record preservation, access authority, required reports and response tracking. Document efforts to obtain information held exclusively by third parties and the required certification if refused. Protect complainants and participants from retaliation."
+      },
+      {
+        "artifact": "Independent test record",
+        "must_show": "Exercise a regulator request with inaccessible provider records and an urgent access scenario; inspect response authority and preservation without treating ordinary customer disclosure rules as a bar to lawful access."
+      }
+    ]
+  },
+  {
+    "finding_id": "H-LEGAL-STATUS",
+    "work_type": "ASSESSMENT_ONLY",
+    "priority": "P0",
+    "priority_basis": "Resolve applicability, authority or obligation before dependent execution",
+    "dependencies": [
+      "GATE-SERVICE-FACTS",
+      "GATE-QUALIFIED-REVIEW"
+    ],
+    "evidence_required": [
+      {
+        "artifact": "Dated execution record",
+        "must_show": "Maintain a provision-level legal-status overlay linked to current authoritative notices and qualified review. Preserve affected source text as historical context. Do not mark all privacy-notice amendments invalid or implement vacated provisions automatically."
+      },
+      {
+        "artifact": "Independent test record",
+        "must_show": "Compare any proposed obligation from the affected sections to the overlay; block an applicability conclusion based only on the historical XML."
+      }
+    ]
+  },
+  {
+    "finding_id": "S-ACCOUNTABILITY",
+    "work_type": "ENHANCE_EXISTING_CONTROL",
+    "priority": "P1",
+    "priority_basis": "Implement and test before relying on the affected control",
+    "dependencies": [
+      "GATE-SERVICE-FACTS",
+      "GATE-QUALIFIED-REVIEW"
+    ],
+    "evidence_required": [
+      {
+        "artifact": "Dated execution record",
+        "must_show": "Link competence and succession reviews to selected service/control duties; evaluate whether training improved performance. Add control-duty results, workload pressure and corrective consequences to the appropriate performance review. Propose SH-PPL-005 as an additional candidate; do not accept the mapping automatically."
+      },
+      {
+        "artifact": "Independent test record",
+        "must_show": "Trace critical duties to competence evidence and backups; inspect whether recurring execution failures led to appropriate workload, training or accountability action."
+      }
+    ]
+  },
+  {
+    "finding_id": "S-COMMUNICATION",
+    "work_type": "ENHANCE_EXISTING_CONTROL",
+    "priority": "P1",
+    "priority_basis": "Implement and test before relying on the affected control",
+    "dependencies": [
+      "GATE-SERVICE-FACTS",
+      "GATE-QUALIFIED-REVIEW"
+    ],
+    "evidence_required": [
+      {
+        "artifact": "Dated execution record",
+        "must_show": "Maintain internal and customer/provider communication responsibilities and triggers; connect material changes and incidents to affected parties and maintain incoming issue routes. Add the product communication procedures as candidate support to the baseline review."
+      },
+      {
+        "artifact": "Independent test record",
+        "must_show": "Trace a changed service responsibility and an external concern through receipt, response and the appropriate audience. Test contact accuracy and incomplete recipient lists."
+      }
+    ]
+  },
+  {
+    "finding_id": "S-DESCRIPTION",
+    "work_type": "ASSESSMENT_ONLY",
+    "priority": "P1",
+    "priority_basis": "Implement and test before relying on the affected control",
+    "dependencies": [
+      "GATE-SERVICE-FACTS",
+      "GATE-QUALIFIED-REVIEW"
+    ],
+    "evidence_required": [
+      {
+        "artifact": "Dated execution record",
+        "must_show": "Build a management-owned description fact ledger linking each assertion to service records and the relevant reporting period. Reconcile incidents and material changes. Decide inclusive/carve-out treatment with the assessor and identify actual complementary controls rather than copying generic provider lists."
+      },
+      {
+        "artifact": "Independent test record",
+        "must_show": "Trace each description assertion to an authoritative record; independently compare incident/change/vendor populations to disclosures and investigate omitted relevant items."
+      }
+    ]
+  },
+  {
+    "finding_id": "I-SCOPE",
+    "work_type": "ENHANCE_EXISTING_CONTROL",
+    "priority": "P0",
+    "priority_basis": "Resolve applicability, authority or obligation before dependent execution",
+    "dependencies": [
+      "GATE-SERVICE-FACTS",
+      "GATE-QUALIFIED-REVIEW"
+    ],
+    "evidence_required": [
+      {
+        "artifact": "Dated execution record",
+        "must_show": "Create a context/party/requirement ledger and a scoped process-interface map. Explain inclusions, interfaces and dependencies from actual activities; distinguish the management system from the software/system inventory. Maintain separate AI-role and use-case facts."
+      },
+      {
+        "artifact": "Independent test record",
+        "must_show": "Reconcile scoped activities to process owners and dependencies; challenge excluded interfaces and unexplained differences between service and management-system scope."
+      }
+    ]
+  },
+  {
+    "finding_id": "I-RISK-SOA",
+    "work_type": "ENHANCE_EXISTING_CONTROL",
+    "priority": "P0",
+    "priority_basis": "Resolve applicability, authority or obligation before dependent execution",
+    "dependencies": [
+      "GATE-SERVICE-FACTS",
+      "GATE-QUALIFIED-REVIEW"
+    ],
+    "evidence_required": [
+      {
+        "artifact": "Dated execution record",
+        "must_show": "Record risk criteria, consequences, likelihood where relevant, risk levels, owners and priorities. Document treatment options, all necessary controls, Annex A comparison and justified exclusions. Record ISMS risk-owner approval and AIMS designated-management approval distinctly; link AI impact results and Annex B consideration."
+      },
+      {
+        "artifact": "Independent test record",
+        "must_show": "Reperform comparable risk scenarios and trace treatment to SoA entries, external necessary controls and correct authority. Reject an all-Annex-A checkbox used as the risk process."
+      }
+    ]
+  },
+  {
+    "finding_id": "I-OBJECTIVES",
+    "work_type": "ENHANCE_EXISTING_CONTROL",
+    "priority": "P1",
+    "priority_basis": "Implement and test before relying on the affected control",
+    "dependencies": [
+      "GATE-SERVICE-FACTS",
+      "GATE-QUALIFIED-REVIEW"
+    ],
+    "evidence_required": [
+      {
+        "artifact": "Dated execution record",
+        "must_show": "Maintain objective records linked to policy and applicable requirements, with measurable criteria where practicable, resources, accountable people, dates and evaluation method. Control changes to objectives and management-system processes and communicate updates."
+      },
+      {
+        "artifact": "Independent test record",
+        "must_show": "Inspect one objective from approval through measurement and corrective action; challenge a change executed without resource or process impact assessment."
+      }
+    ]
+  },
+  {
+    "finding_id": "I-MEASUREMENT",
+    "work_type": "ENHANCE_EXISTING_CONTROL",
+    "priority": "P1",
+    "priority_basis": "Implement and test before relying on the affected control",
+    "dependencies": [
+      "GATE-SERVICE-FACTS",
+      "GATE-QUALIFIED-REVIEW"
+    ],
+    "evidence_required": [
+      {
+        "artifact": "Dated execution record",
+        "must_show": "Define a measurement register separating service metrics from management-system effectiveness; record methods, validity checks, collection/evaluation cadence, accountable roles and interpretation of trends."
+      },
+      {
+        "artifact": "Independent test record",
+        "must_show": "Reperform a selected metric from its population and assess repeatability; verify that a poor result led to evaluation and an assigned response."
+      }
+    ]
+  },
+  {
+    "finding_id": "I-MANAGEMENT-REVIEW",
+    "work_type": "ENHANCE_EXISTING_CONTROL",
+    "priority": "P1",
+    "priority_basis": "Implement and test before relying on the affected control",
+    "dependencies": [
+      "GATE-SERVICE-FACTS",
+      "GATE-QUALIFIED-REVIEW"
+    ],
+    "evidence_required": [
+      {
+        "artifact": "Dated execution record",
+        "must_show": "Maintain separate ISMS and AIMS source checklists. Both include prior actions, context/party changes, nonconformity/corrective-action, measurement and audit trends, and improvement opportunities. The ISMS checklist also expressly includes objective fulfilment, party feedback and risk assessment/treatment status. Record additional useful AIMS inputs as chosen management practice, not invented clause obligations. Retain decisions, owners and follow-up."
+      },
+      {
+        "artifact": "Independent test record",
+        "must_show": "Compare review records to the complete input checklist and trace outputs to actions. Reject minutes containing only attendance and operational dashboard review."
+      }
+    ]
+  },
+  {
+    "finding_id": "I-CORRECTIVE-ACTION",
+    "work_type": "ENHANCE_EXISTING_CONTROL",
+    "priority": "P1",
+    "priority_basis": "Implement and test before relying on the affected control",
+    "dependencies": [
+      "GATE-SERVICE-FACTS",
+      "GATE-QUALIFIED-REVIEW"
+    ],
+    "evidence_required": [
+      {
+        "artifact": "Dated execution record",
+        "must_show": "Add cross-system recurrence analysis and consequence handling to every relevant nonconformity; record actions proportional to effects, effectiveness checks and necessary management-system changes while preserving failure history."
+      },
+      {
+        "artifact": "Independent test record",
+        "must_show": "Trace a finding to cause analysis, checks of comparable systems and an independent effectiveness test; challenge closure based on fixing the original instance alone."
+      }
+    ]
+  },
+  {
+    "finding_id": "AI-IMPACT",
+    "work_type": "ENHANCE_EXISTING_CONTROL",
+    "priority": "P1",
+    "priority_basis": "Implement and test before relying on the affected control",
+    "dependencies": [
+      "GATE-SERVICE-FACTS",
+      "GATE-QUALIFIED-REVIEW",
+      "GATE-AI-FACTS"
+    ],
+    "evidence_required": [
+      {
+        "artifact": "Dated execution record",
+        "must_show": "Use a per-system impact record listing affected populations, intended/foreseeable misuse, consequences and uncertainty, jurisdictional context, safeguards and residual concerns. Link each material consequence to risk assessment and treatment and determine appropriate disclosure and reassessment."
+      },
+      {
+        "artifact": "Independent test record",
+        "must_show": "Challenge an apparently accurate model with a harmful use scenario; verify impacts beyond model accuracy and trace changed deployment into reassessment and treatment."
+      }
+    ]
+  },
+  {
+    "finding_id": "AI-LIFECYCLE",
+    "work_type": "ENHANCE_EXISTING_CONTROL",
+    "priority": "P1",
+    "priority_basis": "Implement and test before relying on the affected control",
+    "dependencies": [
+      "GATE-SERVICE-FACTS",
+      "GATE-QUALIFIED-REVIEW",
+      "GATE-AI-FACTS"
+    ],
+    "evidence_required": [
+      {
+        "artifact": "Dated execution record",
+        "must_show": "Maintain a release dossier connecting responsible-development objectives, requirements, design choices, verification/validation criteria, exact version, deployment approval, operating limits, technical documentation and event records. Preserve validation failures and version-specific restrictions."
+      },
+      {
+        "artifact": "Independent test record",
+        "must_show": "Trace a deployed version backward to requirements and approved validation and forward to logs and monitoring; detect missing documentation, changed dependencies and release outside authorized conditions."
+      }
+    ]
+  },
+  {
+    "finding_id": "AI-DATA",
+    "work_type": "ENHANCE_EXISTING_CONTROL",
+    "priority": "P1",
+    "priority_basis": "Implement and test before relying on the affected control",
+    "dependencies": [
+      "GATE-SERVICE-FACTS",
+      "GATE-QUALIFIED-REVIEW",
+      "GATE-AI-FACTS"
+    ],
+    "evidence_required": [
+      {
+        "artifact": "Dated execution record",
+        "must_show": "Define acquisition criteria, rights and origin; record dataset suitability/limitations for the intended use and populations. Version transformations and quality decisions through training/evaluation/deployment, including rejected records and changes in source restrictions."
+      },
+      {
+        "artifact": "Independent test record",
+        "must_show": "Reperform a preparation chain and trace a quality failure to exclusion or treatment. Challenge apparently clean data that is unsuitable for the affected population."
+      }
+    ]
+  },
+  {
+    "finding_id": "C5-CONTEXT",
+    "work_type": "ASSESSMENT_ONLY",
+    "priority": "P0",
+    "priority_basis": "Resolve applicability, authority or obligation before dependent execution",
+    "dependencies": [
+      "GATE-SERVICE-FACTS",
+      "GATE-QUALIFIED-REVIEW",
+      "GATE-C5-SELECTION"
+    ],
+    "evidence_required": [
+      {
+        "artifact": "Dated execution record",
+        "must_show": "Build a parent-context ledger with information-to-child links and separate corresponding-control records. Require each selected child review to examine its linked context; never treat an additional-complement criterion as merely a customer duty."
+      },
+      {
+        "artifact": "Independent test record",
+        "must_show": "Reconcile parent context and corresponding responsibilities to the publisher YAML, preserving absent fields and all child kinds. Reject dropped guidance or a provider criterion relabelled customer-only."
+      }
+    ]
+  },
+  {
+    "finding_id": "C5-CONFIDENTIAL",
+    "work_type": "ENHANCE_EXISTING_CONTROL",
+    "priority": "P1",
+    "priority_basis": "Implement and test before relying on the affected control",
+    "dependencies": [
+      "GATE-SERVICE-FACTS",
+      "GATE-QUALIFIED-REVIEW",
+      "GATE-C5-SELECTION"
+    ],
+    "evidence_required": [
+      {
+        "artifact": "Dated execution record",
+        "must_show": "First record whether the capability exists. If selected, design a TEE trust-boundary record, supplier and key responsibilities, customer information, measured-state/identity verification and customer attestation interface. Address provider access restrictions and failed attestation explicitly."
+      },
+      {
+        "artifact": "Independent test record",
+        "must_show": "In a permitted test environment, validate expected and altered measured states and verify the customer can check attestation integrity. Do not infer this capability from encrypted storage."
+      }
+    ],
+    "capability_candidate": {
+      "id": "CAP-CONFIDENTIAL-COMPUTING",
+      "title": "Attested confidential execution",
+      "proposed_owner_role": "Platform security architect",
+      "classification": "NEW_CAPABILITY_CANDIDATE_NOT_CONFIRMED_ABSENT",
+      "activation": "Only when the exact criterion is selected/applicable and existing service capability is shown insufficient; assess reuse before funding or implementation.",
+      "procedure": "First record whether the capability exists. If selected, design a TEE trust-boundary record, supplier and key responsibilities, customer information, measured-state/identity verification and customer attestation interface. Address provider access restrictions and failed attestation explicitly.",
+      "acceptance_test": "In a permitted test environment, validate expected and altered measured states and verify the customer can check attestation integrity. Do not infer this capability from encrypted storage."
+    }
+  },
+  {
+    "finding_id": "C5-CONTAINERS",
+    "work_type": "ENHANCE_EXISTING_CONTROL",
+    "priority": "P1",
+    "priority_basis": "Implement and test before relying on the affected control",
+    "dependencies": [
+      "GATE-SERVICE-FACTS",
+      "GATE-QUALIFIED-REVIEW",
+      "GATE-C5-SELECTION"
+    ],
+    "evidence_required": [
+      {
+        "artifact": "Dated execution record",
+        "must_show": "Add image build/test/registry/deploy/operate/retire controls with immutable version lineage, appropriate access, tenant separation, monitoring, network and secret handling. Review additional criteria separately for signing, runtime restrictions and image scanning."
+      },
+      {
+        "artifact": "Independent test record",
+        "must_show": "Trace an image to running instances and retirement; test denied unauthorized deployment and cross-tenant access, runtime alerts and decommissioning of obsolete images."
+      }
+    ],
+    "capability_candidate": {
+      "id": "CAP-CONTAINER-ISOLATION",
+      "title": "Container image and runtime isolation",
+      "proposed_owner_role": "Platform engineering lead",
+      "classification": "NEW_CAPABILITY_CANDIDATE_NOT_CONFIRMED_ABSENT",
+      "activation": "Only when the exact criterion is selected/applicable and existing service capability is shown insufficient; assess reuse before funding or implementation.",
+      "procedure": "Add image build/test/registry/deploy/operate/retire controls with immutable version lineage, appropriate access, tenant separation, monitoring, network and secret handling. Review additional criteria separately for signing, runtime restrictions and image scanning.",
+      "acceptance_test": "Trace an image to running instances and retirement; test denied unauthorized deployment and cross-tenant access, runtime alerts and decommissioning of obsolete images."
+    }
+  },
+  {
+    "finding_id": "C5-REGIONS",
+    "work_type": "ENHANCE_EXISTING_CONTROL",
+    "priority": "P1",
+    "priority_basis": "Implement and test before relying on the affected control",
+    "dependencies": [
+      "GATE-SERVICE-FACTS",
+      "GATE-QUALIFIED-REVIEW",
+      "GATE-C5-SELECTION"
+    ],
+    "evidence_required": [
+      {
+        "artifact": "Dated execution record",
+        "must_show": "Map customer, derived, account and backup data separately to contractual regions and actual processing. Implement region restrictions, reconcile suppliers and document advance change notices and required authorizations or termination rights. If sharpened criteria are selected, explicitly extend technical scope to derived data."
+      },
+      {
+        "artifact": "Independent test record",
+        "must_show": "Attempt deployment/replication outside an approved region in a test environment and inspect provider data paths. Trace a region change to contractual authority and notices; test basic versus sharpened scope separately."
+      }
+    ],
+    "capability_candidate": {
+      "id": "CAP-REGIONAL-ENFORCEMENT",
+      "title": "Enforced data-region selection",
+      "proposed_owner_role": "Data/platform engineering lead",
+      "classification": "NEW_CAPABILITY_CANDIDATE_NOT_CONFIRMED_ABSENT",
+      "activation": "Only when the exact criterion is selected/applicable and existing service capability is shown insufficient; assess reuse before funding or implementation.",
+      "procedure": "Map customer, derived, account and backup data separately to contractual regions and actual processing. Implement region restrictions, reconcile suppliers and document advance change notices and required authorizations or termination rights. If sharpened criteria are selected, explicitly extend technical scope to derived data.",
+      "acceptance_test": "Attempt deployment/replication outside an approved region in a test environment and inspect provider data paths. Trace a region change to contractual authority and notices; test basic versus sharpened scope separately."
+    }
+  },
+  {
+    "finding_id": "C5-KEY-CONTINUITY",
+    "work_type": "ENHANCE_EXISTING_CONTROL",
+    "priority": "P1",
+    "priority_basis": "Implement and test before relying on the affected control",
+    "dependencies": [
+      "GATE-SERVICE-FACTS",
+      "GATE-QUALIFIED-REVIEW",
+      "GATE-C5-SELECTION"
+    ],
+    "evidence_required": [
+      {
+        "artifact": "Dated execution record",
+        "must_show": "Document backup/redundancy choice and key-exposure risks; test recovery without exporting secrets. For external KMS, assess certification, integration, access, monitoring, rotation and vulnerability handling. For customer keys, document import/custody/access and activity records."
+      },
+      {
+        "artifact": "Independent test record",
+        "must_show": "Exercise lost-key and failed-KMS scenarios with test keys; verify customer-key authorization and monitoring. Challenge a backup plan that cannot recover encrypted customer data."
+      }
+    ],
+    "capability_candidate": {
+      "id": "CAP-KEY-SERVICE",
+      "title": "Key custody and recovery service",
+      "proposed_owner_role": "Cryptography service owner",
+      "classification": "NEW_CAPABILITY_CANDIDATE_NOT_CONFIRMED_ABSENT",
+      "activation": "Only when the exact criterion is selected/applicable and existing service capability is shown insufficient; assess reuse before funding or implementation.",
+      "procedure": "Document backup/redundancy choice and key-exposure risks; test recovery without exporting secrets. For external KMS, assess certification, integration, access, monitoring, rotation and vulnerability handling. For customer keys, document import/custody/access and activity records.",
+      "acceptance_test": "Exercise lost-key and failed-KMS scenarios with test keys; verify customer-key authorization and monitoring. Challenge a backup plan that cannot recover encrypted customer data."
+    }
+  },
+  {
+    "finding_id": "C5-EXPORT",
+    "work_type": "ENHANCE_EXISTING_CONTROL",
+    "priority": "P1",
+    "priority_basis": "Implement and test before relying on the affected control",
+    "dependencies": [
+      "GATE-SERVICE-FACTS",
+      "GATE-QUALIFIED-REVIEW",
+      "GATE-C5-SELECTION"
+    ],
+    "evidence_required": [
+      {
+        "artifact": "Dated execution record",
+        "must_show": "Specify customer-data export type, scope, format, method, timing during service and after exit, cutoff/deletion point and cooperation duties. Reconcile ownership/possession terms through legal review and prove delivered data can be used independently."
+      },
+      {
+        "artifact": "Independent test record",
+        "must_show": "Execute a synthetic customer exit, reconcile records to the export, validate format usability and verify the agreed access/deletion sequence."
+      }
+    ],
+    "capability_candidate": {
+      "id": "CAP-CUSTOMER-EXPORT",
+      "title": "Usable customer export and exit",
+      "proposed_owner_role": "Product engineering lead",
+      "classification": "NEW_CAPABILITY_CANDIDATE_NOT_CONFIRMED_ABSENT",
+      "activation": "Only when the exact criterion is selected/applicable and existing service capability is shown insufficient; assess reuse before funding or implementation.",
+      "procedure": "Specify customer-data export type, scope, format, method, timing during service and after exit, cutoff/deletion point and cooperation duties. Reconcile ownership/possession terms through legal review and prove delivered data can be used independently.",
+      "acceptance_test": "Execute a synthetic customer exit, reconcile records to the export, validate format usability and verify the agreed access/deletion sequence."
+    }
+  },
+  {
+    "finding_id": "C5-INVESTIGATIONS",
+    "work_type": "ENHANCE_EXISTING_CONTROL",
+    "priority": "P1",
+    "priority_basis": "Implement and test before relying on the affected control",
+    "dependencies": [
+      "GATE-SERVICE-FACTS",
+      "GATE-QUALIFIED-REVIEW",
+      "GATE-C5-SELECTION"
+    ],
+    "evidence_required": [
+      {
+        "artifact": "Dated execution record",
+        "must_show": "Maintain a qualified legal assessment and scoped authorization before access; record customer-notice decision and exceptions. Limit extracts to subject data, apply required anonymization/pseudonymization where separation is not possible, and maintain service-specific technical disclosure documentation and logs."
+      },
+      {
+        "artifact": "Independent test record",
+        "must_show": "Exercise a request covering only one customer and inspect extraction boundaries, legal decision and notice. Review the required customer-facing technical explanation without disclosing another customer's information."
+      }
+    ]
+  },
+  {
+    "finding_id": "C5-SBOM",
+    "work_type": "ENHANCE_EXISTING_CONTROL",
+    "priority": "P1",
+    "priority_basis": "Implement and test before relying on the affected control",
+    "dependencies": [
+      "GATE-SERVICE-FACTS",
+      "GATE-QUALIFIED-REVIEW",
+      "GATE-C5-SELECTION"
+    ],
+    "evidence_required": [
+      {
+        "artifact": "Dated execution record",
+        "must_show": "Produce and maintain a component/dependency list for developed and integrated deliverables, bound to exact versions. Document unavailable information, reasonable acquisition effort and risk treatment through the exception process."
+      },
+      {
+        "artifact": "Independent test record",
+        "must_show": "Trace release artifacts to component lists and dependency updates; test a known vulnerable component lookup and inspect a supplier information exception."
+      }
+    ]
+  },
+  {
+    "finding_id": "C5-NO-WAIVER",
+    "work_type": "ENHANCE_EXISTING_CONTROL",
+    "priority": "P0",
+    "priority_basis": "Resolve applicability, authority or obligation before dependent execution",
+    "dependencies": [
+      "GATE-SERVICE-FACTS",
+      "GATE-QUALIFIED-REVIEW",
+      "GATE-C5-SELECTION"
+    ],
+    "evidence_required": [
+      {
+        "artifact": "Dated execution record",
+        "must_show": "Record each exception's affected criteria and combined risk. Preserve any criterion deviation as an open finding regardless of internal risk acceptance. Evaluate only alternatives explicitly allowed by the relevant criterion and do not treat an arbitrary waiver as conformity."
+      },
+      {
+        "artifact": "Independent test record",
+        "must_show": "Test a management-approved waiver that violates an applicable criterion; it must remain a deviation. Separately test an expressly permitted criterion alternative supported by the required evidence."
+      }
+    ]
+  },
+  {
+    "finding_id": "C5-ACCESS-CLOCKS",
+    "work_type": "ENHANCE_EXISTING_CONTROL",
+    "priority": "P1",
+    "priority_basis": "Implement and test before relying on the affected control",
+    "dependencies": [
+      "GATE-SERVICE-FACTS",
+      "GATE-QUALIFIED-REVIEW",
+      "GATE-C5-SELECTION"
+    ],
+    "evidence_required": [
+      {
+        "artifact": "Dated execution record",
+        "must_show": "Add separate clocks for effective role changes and review discoveries; set no looser limits than the selected criteria or shorter obligations. Reconcile workforce and automated identities, time-bound temporary access and detect orphan resources. Keep the additional privileged-review cadence distinct."
+      },
+      {
+        "artifact": "Independent test record",
+        "must_show": "Recompute a privileged change at hour 49, ordinary change at day 15 and review finding at day 8; flag each breach while preserving the original clock."
+      }
+    ]
+  },
+  {
+    "finding_id": "C5-CUSTOMER-ACCESS",
+    "work_type": "ENHANCE_EXISTING_CONTROL",
+    "priority": "P1",
+    "priority_basis": "Implement and test before relying on the affected control",
+    "dependencies": [
+      "GATE-SERVICE-FACTS",
+      "GATE-QUALIFIED-REVIEW",
+      "GATE-C5-SELECTION"
+    ],
+    "evidence_required": [
+      {
+        "artifact": "Dated execution record",
+        "must_show": "Register cause, start/duration, geography, type/scope and retained logs/copies; evaluate the exact contractual/legal exceptions. Apply the basic notice clock and any stricter terms. If sharpened criteria are selected, enforce the source's prior-consent conditions, including its encrypted-data/key treatment."
+      },
+      {
+        "artifact": "Independent test record",
+        "must_show": "Exercise support access with and without consent, an applicable exception and notice after 72 hours. Confirm a delayed approval cannot retrospectively satisfy a prior-consent condition."
+      }
+    ],
+    "capability_candidate": {
+      "id": "CAP-SUPPORT-CONSENT",
+      "title": "Customer consent and support-access notices",
+      "proposed_owner_role": "Support platform owner",
+      "classification": "NEW_CAPABILITY_CANDIDATE_NOT_CONFIRMED_ABSENT",
+      "activation": "Only when the exact criterion is selected/applicable and existing service capability is shown insufficient; assess reuse before funding or implementation.",
+      "procedure": "Register cause, start/duration, geography, type/scope and retained logs/copies; evaluate the exact contractual/legal exceptions. Apply the basic notice clock and any stricter terms. If sharpened criteria are selected, enforce the source's prior-consent conditions, including its encrypted-data/key treatment.",
+      "acceptance_test": "Exercise support access with and without consent, an applicable exception and notice after 72 hours. Confirm a delayed approval cannot retrospectively satisfy a prior-consent condition."
+    }
+  },
+  {
+    "finding_id": "C5-AUTHENTICATION",
+    "work_type": "ENHANCE_EXISTING_CONTROL",
+    "priority": "P1",
+    "priority_basis": "Implement and test before relying on the affected control",
+    "dependencies": [
+      "GATE-SERVICE-FACTS",
+      "GATE-QUALIFIED-REVIEW",
+      "GATE-C5-SELECTION"
+    ],
+    "evidence_required": [
+      {
+        "artifact": "Dated execution record",
+        "must_show": "Inventory every production human and workload path and obtain qualified interpretation and technical design for automated MFA. Keep provider and customer credential rules separate; implement initial-password change/expiry and single-use reset handling with the applicable 24/48-hour limits. Do not silently exempt service accounts."
+      },
+      {
+        "artifact": "Independent test record",
+        "must_show": "Test uncovered workload paths and provider/customer reset expiry independently. Reject a provider reset flow that inherits the customer 48-hour limit."
+      }
+    ]
+  },
+  {
+    "finding_id": "C5-VULNERABILITY-CLOCKS",
+    "work_type": "ENHANCE_EXISTING_CONTROL",
+    "priority": "P1",
+    "priority_basis": "Implement and test before relying on the affected control",
+    "dependencies": [
+      "GATE-SERVICE-FACTS",
+      "GATE-QUALIFIED-REVIEW",
+      "GATE-C5-SELECTION"
+    ],
+    "evidence_required": [
+      {
+        "artifact": "Dated execution record",
+        "must_show": "Track discovery, engagement, ongoing follow-up, mitigation and fix verification separately. Add out-of-hours escalation, a defined working-day calendar and minimum selected scan/evaluation cadence. Do not restate the one-day engagement limit as a universal one-day remediation deadline."
+      },
+      {
+        "artifact": "Independent test record",
+        "must_show": "Use a high finding near a weekend and a critical finding out of hours; verify engagement and escalation, then separately test overdue remediation and missing scan periods."
+      }
+    ]
+  },
+  {
+    "finding_id": "C5-PENTEST",
+    "work_type": "ENHANCE_EXISTING_CONTROL",
+    "priority": "P1",
+    "priority_basis": "Implement and test before relying on the affected control",
+    "dependencies": [
+      "GATE-SERVICE-FACTS",
+      "GATE-QUALIFIED-REVIEW",
+      "GATE-C5-SELECTION"
+    ],
+    "evidence_required": [
+      {
+        "artifact": "Dated execution record",
+        "must_show": "Maintain scope and qualified-tester evidence, selected cadence and a component coverage calendar. Trace discovered weaknesses to root cause and similar-system review. Identify the external-testing requirement separately when sharpened criteria are selected."
+      },
+      {
+        "artifact": "Independent test record",
+        "must_show": "Reconcile assets to the multi-year schedule, detect a component beyond three years and inspect change-triggered testing. Reject an internal-only test as satisfying the sharpened external requirement."
+      }
+    ]
+  },
+  {
+    "finding_id": "C5-LOG-DATA",
+    "work_type": "ENHANCE_EXISTING_CONTROL",
+    "priority": "P1",
+    "priority_basis": "Implement and test before relying on the affected control",
+    "dependencies": [
+      "GATE-SERVICE-FACTS",
+      "GATE-QUALIFIED-REVIEW",
+      "GATE-C5-SELECTION"
+    ],
+    "evidence_required": [
+      {
+        "artifact": "Dated execution record",
+        "must_show": "Classify derived/account/provider logs, document permitted purposes and retention, prohibit unapproved commercial reuse, and validate tenant attribution. Map SIEM capabilities to actual implementation and use approved bounded response actions; protect logging administration separately."
+      },
+      {
+        "artifact": "Independent test record",
+        "must_show": "Trace a tenant event through normalization, correlation, alert/update and permitted response; test unauthorized log access and a proposed secondary commercial use."
+      }
+    ]
+  },
+  {
+    "finding_id": "C5-RESTORE",
+    "work_type": "ENHANCE_EXISTING_CONTROL",
+    "priority": "P1",
+    "priority_basis": "Implement and test before relying on the affected control",
+    "dependencies": [
+      "GATE-SERVICE-FACTS",
+      "GATE-QUALIFIED-REVIEW",
+      "GATE-C5-SELECTION"
+    ],
+    "evidence_required": [
+      {
+        "artifact": "Dated execution record",
+        "must_show": "Document scoped restore populations, protection and cleanup, annual/change activities and remote-site hazard analysis. Resolve the operational interpretation and feasibility of the selected sharpened daily backup/restore criterion with the assessor rather than silently reducing it to backup frequency."
+      },
+      {
+        "artifact": "Independent test record",
+        "must_show": "Reconcile restore-test scope and resulting data copies; test unauthorized access and cleanup. Compare selected daily/annual conditions separately with evidence."
+      }
+    ]
+  },
+  {
+    "finding_id": "C5-PHYSICAL-REDUNDANCY",
+    "work_type": "ENHANCE_EXISTING_CONTROL",
+    "priority": "P1",
+    "priority_basis": "Implement and test before relying on the affected control",
+    "dependencies": [
+      "GATE-SERVICE-FACTS",
+      "GATE-QUALIFIED-REVIEW",
+      "GATE-C5-SELECTION"
+    ],
+    "evidence_required": [
+      {
+        "artifact": "Dated execution record",
+        "must_show": "Retain two-site basic readiness as a candidate subject to actual implementation. Record sharpened topology as an explicit unresolved architecture/criterion-selection gap. Do not add or claim a third deployment; prepare topology and failure-test requirements for an owner decision."
+      },
+      {
+        "artifact": "Independent test record",
+        "must_show": "Test actual failure domains and contracted availability. A two-site recovery exercise must not be counted as proof of surviving two location failures."
+      }
+    ],
+    "capability_candidate": {
+      "id": "CAP-SELECTED-REDUNDANCY",
+      "title": "Selected C5 physical redundancy",
+      "proposed_owner_role": "Continuity and facilities owner",
+      "classification": "NEW_CAPABILITY_CANDIDATE_NOT_CONFIRMED_ABSENT",
+      "activation": "Only when the exact criterion is selected/applicable and existing service capability is shown insufficient; assess reuse before funding or implementation.",
+      "procedure": "Retain two-site basic readiness as a candidate subject to actual implementation. Record sharpened topology as an explicit unresolved architecture/criterion-selection gap. Do not add or claim a third deployment; prepare topology and failure-test requirements for an owner decision.",
+      "acceptance_test": "Test actual failure domains and contracted availability. A two-site recovery exercise must not be counted as proof of surviving two location failures."
+    }
+  },
+  {
+    "finding_id": "C5-PHYSICAL-DETAIL",
+    "work_type": "ENHANCE_EXISTING_CONTROL",
+    "priority": "P1",
+    "priority_basis": "Implement and test before relying on the affected control",
+    "dependencies": [
+      "GATE-SERVICE-FACTS",
+      "GATE-QUALIFIED-REVIEW",
+      "GATE-C5-SELECTION"
+    ],
+    "evidence_required": [
+      {
+        "artifact": "Dated execution record",
+        "must_show": "Create a facility acceptance checklist with source thresholds, specifically allowed alternatives, provider responsibility and evidence for each site. Obtain qualified facility review rather than infer construction ratings from marketing or a generic provider report."
+      },
+      {
+        "artifact": "Independent test record",
+        "must_show": "Inspect source-specific engineering and test records, access inactivity and factor enforcement; challenge missing or non-site-specific evidence."
+      }
+    ]
+  },
+  {
+    "finding_id": "C5-SUPPLIER-TRANSFERS",
+    "work_type": "ENHANCE_EXISTING_CONTROL",
+    "priority": "P1",
+    "priority_basis": "Implement and test before relying on the affected control",
+    "dependencies": [
+      "GATE-SERVICE-FACTS",
+      "GATE-QUALIFIED-REVIEW",
+      "GATE-C5-SELECTION"
+    ],
+    "evidence_required": [
+      {
+        "artifact": "Dated execution record",
+        "must_show": "Record customer specific/general preauthorization and subcontractor paths. Inventory component callbacks and update channels; mediate incoming/outgoing content with authorization before transfer and attributable proposed/verified/completed records."
+      },
+      {
+        "artifact": "Independent test record",
+        "must_show": "Exercise a component callback and supplier update without authorization; verify blocking or an approved mediation path with complete traces."
+      }
+    ]
+  },
+  {
+    "finding_id": "C5-CUSTOMER-FUNCTIONS",
+    "work_type": "ENHANCE_EXISTING_CONTROL",
+    "priority": "P1",
+    "priority_basis": "Implement and test before relying on the affected control",
+    "dependencies": [
+      "GATE-SERVICE-FACTS",
+      "GATE-QUALIFIED-REVIEW",
+      "GATE-C5-SELECTION"
+    ],
+    "evidence_required": [
+      {
+        "artifact": "Dated execution record",
+        "must_show": "Create a product capability checklist per service/version and verify customer audit logs, MFA enforcement, rights review, tenant-safe authorization and negative access tests. Record absent functions as development gaps, not narrative assurances."
+      },
+      {
+        "artifact": "Independent test record",
+        "must_show": "Run a synthetic customer administrator/user exercise across interfaces; test unauthorized actions and logging completeness before release."
+      }
+    ],
+    "capability_candidate": {
+      "id": "CAP-CUSTOMER-SECURITY",
+      "title": "Customer-facing security capabilities",
+      "proposed_owner_role": "Product engineering lead",
+      "classification": "NEW_CAPABILITY_CANDIDATE_NOT_CONFIRMED_ABSENT",
+      "activation": "Only when the exact criterion is selected/applicable and existing service capability is shown insufficient; assess reuse before funding or implementation.",
+      "procedure": "Create a product capability checklist per service/version and verify customer audit logs, MFA enforcement, rights review, tenant-safe authorization and negative access tests. Record absent functions as development gaps, not narrative assurances.",
+      "acceptance_test": "Run a synthetic customer administrator/user exercise across interfaces; test unauthorized actions and logging completeness before release."
+    }
+  },
+  {
+    "finding_id": "I-PHYSICAL-REMOTE",
+    "work_type": "ENHANCE_EXISTING_CONTROL",
+    "priority": "P1",
+    "priority_basis": "Implement and test before relying on the affected control",
+    "dependencies": [
+      "GATE-SERVICE-FACTS",
+      "GATE-QUALIFIED-REVIEW"
+    ],
+    "evidence_required": [
+      {
+        "artifact": "Dated execution record",
+        "must_show": "Define permitted remote devices/access and offsite custody, actual physical monitoring coverage and alarm response, secure-area work rules and clear desk/screen enforcement. Map providers and local duties without assuming colocation coverage."
+      },
+      {
+        "artifact": "Independent test record",
+        "must_show": "Walk through a remote-work and secure-area scenario; inspect monitoring gaps, unattended information and offsite custody."
+      }
+    ]
+  },
+  {
+    "finding_id": "I-DEVELOPMENT",
+    "work_type": "ENHANCE_EXISTING_CONTROL",
+    "priority": "P1",
+    "priority_basis": "Implement and test before relying on the affected control",
+    "dependencies": [
+      "GATE-SERVICE-FACTS",
+      "GATE-QUALIFIED-REVIEW"
+    ],
+    "evidence_required": [
+      {
+        "artifact": "Dated execution record",
+        "must_show": "Define applicable security engineering/coding rules and approved requirements; maintain source/tool and privileged utility access, environment separation and specific security-feature tests. Trace these through actual releases."
+      },
+      {
+        "artifact": "Independent test record",
+        "must_show": "Inspect a release from requirements through abuse-case tests and deployment; test unauthorized source/tool access and a utility capable of bypassing ordinary application controls."
+      }
+    ]
+  }
+]

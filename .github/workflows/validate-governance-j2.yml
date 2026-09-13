@@ -20,9 +20,13 @@ on:
       - scripts/organization_history.py
       - tools/organization/**
       - tools/documents/**
+      - tools/reader/**
       - tests/publications/**
       - tests/unit/test_controlled_publication_catalog.py
       - docs/internal/**
+      - docs/finance/evidence/**
+      - docs/legal/evidence/**
+      - scripts/validate_finance_evidence_acceptance.py
       - docs/structured/**
       - docs/business-lines/**
       - scripts/validate_business_records.py
@@ -45,11 +49,35 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y poppler-utils
       - name: Check PDF compatibility backend
         run: |
-          python -m pip install -r tools/documents/requirements.txt -r tools/organization/requirements.txt
+          python -m pip install -r tools/documents/requirements.txt -r tools/organization/requirements.txt -r tools/reader/requirements.txt -r tools/legal_gaps/requirements-review.txt
           python -m unittest discover -s tests/publications
+      - name: Verify accepted artwork and practical routes
+        run: |
+          python - <<'PY'
+          import subprocess
+          from tools.documents.approval_guard import RECORDS
+          for _, revision, _ in RECORDS:
+              subprocess.run(['git', 'fetch', '--no-tags', '--depth=1', 'origin', revision], check=True)
+          PY
+          python tools/documents/approval_guard.py
+          python tools/reader/validate_routes.py
+          python tools/reader/validate_gap_priorities.py
+          python -m pytest -q --confcutdir=tests/publications tests/publications/test_approval_guard.py tests/publications/test_reader_routes.py
       - run: python scripts/validate_reader_workqueue.py
       - run: python scripts/validate_governance_j2.py
       - run: python scripts/validate_institutional_catalog.py
+      - run: python scripts/validate_finance_evidence_acceptance.py
+      - name: Validate accounting and legal source packages
+        run: |
+          python - <<'PY'
+          import json, re, subprocess
+          revision = json.load(open('docs/reader/reconciliation/records.json'))['base_revision']
+          assert re.fullmatch(r'[0-9a-f]{40}', revision)
+          subprocess.run(['git', 'fetch', '--no-tags', '--depth=1', 'origin', revision], check=True)
+          PY
+          python docs/finance/evidence/coverage/validate.py
+          python docs/reader/transactions/validate.py
+          python docs/reader/reconciliation/build.py --check
       - name: Reconcile reader library
         run: |
           python scripts/validate_reader_navigation.py --check-regeneration

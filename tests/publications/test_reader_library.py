@@ -71,3 +71,80 @@ class ReaderLibraryTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class EvidenceLinkTests(unittest.TestCase):
+    def test_packet_discovery_preserves_draft_and_paths(self):
+        records = library.evidence_records(ROOT)
+        selected = next(row for row in records if row[0] == "SH-FIN-HUMAN-001")
+        self.assertEqual(selected[1], "OWNER_ACCEPTED_EXACT_PACKET")
+        self.assertEqual(selected[2], "INV-base-FF-003-TERM-0")
+        self.assertEqual(selected[3:5], ("base", "foundry-field"))
+        self.assertTrue(selected[11].endswith("/PACKET.md"))
+        self.assertTrue(selected[12].endswith("/packet.pdf"))
+        self.assertTrue(selected[13].endswith("/reconciliation.xlsx"))
+
+    def test_changed_evidence_and_broken_link_rejected(self):
+        import json
+        import shutil
+
+        source = ROOT / "docs/finance/evidence/SH-FIN-HUMAN-001"
+        for change in ("bytes", "missing", "scope", "database"):
+            with self.subTest(change=change), tempfile.TemporaryDirectory() as temporary:
+                root = Path(temporary)
+                dest = root / "docs/finance/evidence/SH-FIN-HUMAN-001"
+                shutil.copytree(source, dest)
+                if change == "bytes":
+                    (dest / "packet.pdf").write_bytes(b"changed")
+                elif change == "missing":
+                    (dest / "reconciliation.xlsx").unlink()
+                else:
+                    catalog = json.loads((dest / "catalog.json").read_text())
+                    catalog["scenario" if change == "scope" else "native_database"] = "wrong"
+                    (dest / "catalog.json").write_text(json.dumps(catalog))
+                    import hashlib
+
+                    manifest = json.loads((dest / "manifest.json").read_text())
+                    manifest["files"]["catalog.json"] = hashlib.sha256(
+                        (dest / "catalog.json").read_bytes()
+                    ).hexdigest()
+                    (dest / "manifest.json").write_text(json.dumps(manifest))
+                with self.assertRaises(ValueError):
+                    library.evidence_records(root)
+
+
+class CounterpartAuditTests(unittest.TestCase):
+    def test_changed_source_returns_to_review_and_changed_artifact_fails(self):
+        import hashlib
+        import json
+
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            audit = root / "docs/reader/reconciliation"
+            audit.mkdir(parents=True)
+            source = root / "source.md"
+            source.write_text("# Source")
+            artifact = root / "artifact.pdf"
+            artifact.write_bytes(b"approved original")
+            record = {
+                "source": "source.md",
+                "source_sha256": hashlib.sha256(source.read_bytes()).hexdigest(),
+                "verified_evidence": [
+                    {
+                        "artifacts": [
+                            {
+                                "path": "artifact.pdf",
+                                "sha256": hashlib.sha256(artifact.read_bytes()).hexdigest(),
+                            }
+                        ]
+                    }
+                ],
+            }
+            (audit / "records.json").write_text(json.dumps({"records": [record]}))
+            self.assertIn("source.md", library.counterpart_records(root))
+            source.write_text("# Changed source")
+            self.assertEqual(library.counterpart_records(root), {})
+            source.write_text("# Source")
+            artifact.write_bytes(b"unreviewed replacement")
+            with self.assertRaisesRegex(ValueError, "Stale counterpart artifact"):
+                library.counterpart_records(root)

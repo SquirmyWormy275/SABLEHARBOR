@@ -1,0 +1,22 @@
+[Unit]
+Description=SABLEHARBOR CCF workflow API
+After=network.target
+
+[Service]
+Type=simple
+User=ccf
+Group=ccf
+WorkingDirectory=/opt/sableharbor
+EnvironmentFile=/etc/ccf/service.env
+ExecStart=/opt/sableharbor/.venv/bin/gunicorn --config enterprise/ccf/operations/deploy/gunicorn.conf.py enterprise.ccf.operations.service:from_environment()
+Restart=on-failure
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/ccf
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+
+[Install]
+WantedBy=multi-user.target

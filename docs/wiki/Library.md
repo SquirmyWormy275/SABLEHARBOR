@@ -8,19 +8,20 @@ Use the subject pages for a guided introduction. Use this complete file inventor
 |---|---:|
 | [Businesses and professional practice](library/business.md) | 62 |
 | [People, governance and departments](library/people.md) | 228 |
-| [Finance, transactions and operating cases](library/finance.md) | 184 |
-| [Controls, services and runtime](library/controls.md) | 58 |
-| [Geography and facilities](library/places.md) | 300 |
+| [Finance, transactions and operating cases](library/finance.md) | 341 |
+| [Controls, services and runtime](library/controls.md) | 70 |
+| [Geography and facilities](library/places.md) | 305 |
 | [Identity and collateral](library/identity.md) | 15 |
-| [Canon, history and decisions](library/history.md) | 39 |
-| [Reader guides and subject pages](library/reader.md) | 38 |
-| [Implementation, source guides and delivery evidence](library/technical.md) | 79 |
+| [Canon, history and decisions](library/history.md) | 42 |
+| [Reader guides and subject pages](library/reader.md) | 76 |
+| [Implementation, source guides and delivery evidence](library/technical.md) | 88 |
 
 ## Format coverage
 
-The inventory contains 664 Markdown files, 336 PDFs and 3 Excel workbooks. The existing publication manifest verifies 131 Markdown/PDF pairs.
+The inventory contains 826 Markdown files, 359 PDFs and 42 Excel workbooks. The existing publication manifest verifies 131 Markdown/PDF pairs.
 
-Every inventoried file has a path, title, format, collection, size and SHA-256 in `reader_file` within the [institutional database](../internal/institutional_catalog.sqlite3). `reader_publication_pair` records verified source/PDF links; `reader_search` supports text search. These are discovery tables. Native accounting and operating databases retain their transaction records.
+Every inventoried file has a path, title, format, collection, size and SHA-256 in `reader_file` within the [institutional database](../internal/institutional_catalog.sqlite3). `reader_publication_pair` records verified source/PDF links; `reader_search` supports text search. `reader_evidence_link` separately connects validated evidence packets to their native accounting IDs and MD/PDF/XLSX files without declaring publication approval. These are discovery tables. Native accounting and operating databases retain their transaction records.
+`reader_evidence_package` preserves accounting/legal package registers and review states; `reader_counterpart_audit` records applicable dated counterpart evidence.
 
 The [format-review queue](library/format-review.md) lists every unpaired non-navigation Markdown record for reconciliation. Unpaired documents have not been certified against the new three-form requirement. Release-only records are reached through release guides; their archive contents are not silently counted as files in this checkout. Code, raw data, imagery and packaged binaries are reached through their domain guides and manifests. Generated library pages are excluded from their own inventory.
 

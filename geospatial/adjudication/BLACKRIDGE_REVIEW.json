@@ -1,0 +1,36 @@
+{
+  "source_commit": "d91a22c35c91b213204411421de88815f27d8e16",
+  "source_path": "blackridge/data/public/databases/blackridge_m00_v0.1.0.sqlite3",
+  "source_sha256": "2e6622d0e710f784c49cd6b773514820dbe247c4ec50a18f4c9cbbcf784587d5",
+  "rules_sha256": "0df623c3e6c7b3ec107baf6a1c1bed9cecfc778039300db0d9a5464f2e0d9d3d",
+  "discovery_sha256": "031d8792af1b74badc449c59b18ad739dd9be28daaf3f21b9e998302d66dbb13",
+  "review_output_sha256": "04dee76a72fc6121c49cfafec1af232c1297247a0155f3edc0a824930859aa23",
+  "baseline_occurrences": 78145,
+  "reviewed_occurrences": 60896,
+  "remaining_unreviewed_occurrences": 17249,
+  "rule_counts": {
+    "BR-001": 59130,
+    "BR-002": 1666,
+    "BR-003": 87,
+    "BR-004": 1,
+    "BR-005": 1,
+    "BR-006": 2,
+    "BR-007": 2,
+    "BR-008": 2,
+    "BR-009": 2,
+    "BR-010": 1,
+    "BR-011": 1,
+    "BR-012": 1
+  },
+  "disposition_counts": {
+    "NON_GEOGRAPHIC_DOMAIN_LABEL": 1666,
+    "NON_GEOGRAPHIC_RECORD_LABEL": 89,
+    "REPEATED_LOCATION_REFERENCE": 59130,
+    "UNLOCATED_COMPONENT_REFERENCE": 11
+  },
+  "repeated_location_token_count": 1,
+  "distinct_assignments_preserved": 59130,
+  "semantic_census_complete": false,
+  "geometry_or_occupancy_promoted": false,
+  "limits": "One pinned source reviewed. Repeated tokens are not duplicate events. Source-local IDs do not establish joins, geometry, ownership or occupancy. Unlocated components remain unresolved. OCR and later canon deltas are outside this batch."
+}

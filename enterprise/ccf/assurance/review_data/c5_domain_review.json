@@ -1,0 +1,216 @@
+[
+  {
+    "domain": "AM",
+    "control_ids": [
+      "SH-CFG-001",
+      "SH-CFG-003",
+      "SH-DAT-001",
+      "SH-REC-004"
+    ],
+    "source_conditions": "Differentiate production and expanded nonproduction scope; keep lifecycle/change/access links; annual classification review; authorization, custody and protection during storage/transfer; tightly bounded removable-media use.",
+    "design_comparison": "Inventory and disposal drafts cover lifecycle intent but omit all four C5 data categories, standby hardware, commissioning checks and the specific removable-media restrictions.",
+    "corrective_design": "Extend asset records with hardware/software relationships, data protection needs including authenticity, access lists, approved commissioning and movement evidence. Document basic/sharpened scope and test each applicable exception.",
+    "review_depth": "DOMAIN_CONDITION_COMPARISON_NOT_CHILD_ACCEPTANCE"
+  },
+  {
+    "domain": "BCM",
+    "control_ids": [
+      "SH-BCM-001",
+      "SH-BCM-003",
+      "SH-BCM-004"
+    ],
+    "source_conditions": "Operate the referenced continuity management approach; assign management responsibility; review BIA/plans and test at least annually and after significant change, involving affected customers/third parties.",
+    "design_comparison": "Reno/Boise exercises are candidate support; a recovery drill does not establish the referenced management system or customer involvement.",
+    "corrective_design": "Reconcile ISO22301/BSI200-4 requirements, scope and management responsibilities; retain annual/change-triggered schedules, customer/provider involvement and plan updates. Do not infer that certification itself is mandatory from the basic criterion.",
+    "review_depth": "DOMAIN_CONDITION_COMPARISON_NOT_CHILD_ACCEPTANCE"
+  },
+  {
+    "domain": "COM",
+    "control_ids": [
+      "SH-ASS-003",
+      "SH-GOV-002"
+    ],
+    "source_conditions": "Maintain a multi-year audit programme; apply operating safeguards; annual internal audits and management review; impartiality outside the audited reporting line or supported alternative. Sharpened programme specifies three years.",
+    "design_comparison": "Risk-based audit and meeting procedures omit explicit minimum intervals, safe access restrictions and evidence of reporting-line independence.",
+    "corrective_design": "Add source-specific cadence and independence checks, audit access/test safeguards, relevant authority and customer audit rights when selected. Distinguish management review from independent audit.",
+    "review_depth": "DOMAIN_CONDITION_COMPARISON_NOT_CHILD_ACCEPTANCE"
+  },
+  {
+    "domain": "COS",
+    "control_ids": [
+      "SH-SEC-001",
+      "SH-SEC-002",
+      "SH-IAM-005"
+    ],
+    "source_conditions": "Protect network boundaries and administrative/workload orchestration paths; separate tenants; annually review topology/configuration and significant changes; review service/port justification.",
+    "design_comparison": "Generic network baseline and MFA do not specify every trust boundary, permitted flow or topology reconciliation.",
+    "corrective_design": "Create a flow/zone/administrative-plane matrix; test cross-tenant and cross-network denials, detection/SIEM linkage and configuration drift. Keep additional encrypted logical separation and sharpened redundant gateways distinct.",
+    "review_depth": "DOMAIN_CONDITION_COMPARISON_NOT_CHILD_ACCEPTANCE"
+  },
+  {
+    "domain": "CRY",
+    "control_ids": [
+      "SH-CFG-004",
+      "SH-SEC-001",
+      "SH-BCM-003"
+    ],
+    "source_conditions": "Govern the full key lifecycle, supplier/customer key access, annual and incident-triggered cryptographic review, customer change notifications and current approved cryptographic guidance. Additional PQC strategy is separate.",
+    "design_comparison": "The baseline crypto supplement omits several lifecycle states, customer access agreements, the HSM continuity choice and explicit review/notification duties.",
+    "corrective_design": "Implement key-state and custody records, certificate/provisioning verification, restricted compromised/expired-key uses, archival and recovery tests, customer access/change notices and separate PQC planning if selected.",
+    "review_depth": "DOMAIN_CONDITION_COMPARISON_NOT_CHILD_ACCEPTANCE"
+  },
+  {
+    "domain": "DEV",
+    "control_ids": [
+      "SH-ENG-001",
+      "SH-ENG-003",
+      "SH-ENG-004",
+      "SH-CFG-001"
+    ],
+    "source_conditions": "Secure lifecycle requirements and provider access minimization; cumulative change risks; security-feature inputs/outputs/errors; customer approval and anonymization before test use; software composition and supplier control.",
+    "design_comparison": "Peer review and release attribution omit security-feature test completeness, cumulative change risk, composition lists and explicit customer-data test rules.",
+    "corrective_design": "Add a security-feature specification/test matrix, combined-change assessment, outsourced acceptance evidence, version/dependency inventory and test-data approval/anonymization checks. Preserve emergency deviations and protect rollback data.",
+    "review_depth": "DOMAIN_CONDITION_COMPARISON_NOT_CHILD_ACCEPTANCE"
+  },
+  {
+    "domain": "HR",
+    "control_ids": [
+      "SH-PPL-001",
+      "SH-PPL-002",
+      "SH-PPL-003",
+      "SH-TRN-001",
+      "SH-ETH-003"
+    ],
+    "source_conditions": "Risk-proportionate lawful screening and higher-risk role reassessment; pre-access terms/acknowledgment; learning outcomes; documented disciplinary measures; annual confidentiality review; controlled remote work.",
+    "design_comparison": "Hiring/training drafts cover broad process but omit several timing, learning-outcome, ongoing confidentiality and remote-equipment conditions.",
+    "corrective_design": "Reconcile all internal/external personnel, assess role changes and effectiveness of training, track continuing obligations and updated agreements, and test remote equipment/access enforcement. Sharpened annual training is separate from basic regular role-based training.",
+    "review_depth": "DOMAIN_CONDITION_COMPARISON_NOT_CHILD_ACCEPTANCE"
+  },
+  {
+    "domain": "IAM",
+    "control_ids": [
+      "SH-IAM-001",
+      "SH-IAM-003",
+      "SH-IAM-005",
+      "SH-IAM-007"
+    ],
+    "source_conditions": "Provider identity lifecycle includes fixed adjustment and review-remediation limits, orphan resources, customer-data access notice, privileged monitoring and production MFA including automated access.",
+    "design_comparison": "Generic timely revocation and risk-based authentication omit explicit clocks, production workload interpretation and customer access-notice facts.",
+    "corrective_design": "Add exact source-bound timing rules and identity populations, customer consent/notification paths, supervised support and compromised-identity fallback. Keep provider and customer authentication rules and basic/sharpened scopes separate.",
+    "review_depth": "DOMAIN_CONDITION_COMPARISON_NOT_CHILD_ACCEPTANCE"
+  },
+  {
+    "domain": "INQ",
+    "control_ids": [
+      "SH-LEG-002",
+      "SH-DAT-002",
+      "SH-REC-002"
+    ],
+    "source_conditions": "Require qualified lawful-basis assessment, customer notification with source exceptions, scoped disclosure, inseparable-data protection and service-specific technical transparency.",
+    "design_comparison": "Contract review is not a government-request operating process.",
+    "corrective_design": "Use a request/disclosure register with authorization, minimization tests, notice decisions and documented technical means; preserve the distinction between basic processing and additional activity monitoring.",
+    "review_depth": "DOMAIN_CONDITION_COMPARISON_NOT_CHILD_ACCEPTANCE"
+  },
+  {
+    "domain": "OIS",
+    "control_ids": [
+      "SH-ERM-001",
+      "SH-ERM-002",
+      "SH-POL-002",
+      "SH-GOV-002"
+    ],
+    "source_conditions": "ISMS conformity and complete cloud scope, shared responsibility, conflicting duties, threat intelligence, conditional German public-sector contacts, repeatable risk process and annual/change reviews.",
+    "design_comparison": "Reference scope and broad ERM routes omit an actual ISMS/SSRM and the explicit annual/risk-owner and external communication conditions.",
+    "corrective_design": "Document scoped processes, SSRM, conflicts/compensation, threat-to-risk linkage and risk-owner decisions. Basic ISMS conformity does not itself require the sharpened certification evidence.",
+    "review_depth": "DOMAIN_CONDITION_COMPARISON_NOT_CHILD_ACCEPTANCE"
+  },
+  {
+    "domain": "OPS",
+    "control_ids": [
+      "SH-OPS-002",
+      "SH-SEC-002",
+      "SH-SEC-003",
+      "SH-SEC-004",
+      "SH-BCM-003"
+    ],
+    "source_conditions": "Address service capacity, malware update cadence, backups and protected restores, derived/account data purposes, SIEM capabilities, crash data, vulnerability clocks/testing, tenant separation and conditional confidential computing/container operation.",
+    "design_comparison": "Broad security and recovery procedures omit numerous explicit service capabilities, data classes, clocks and test populations.",
+    "corrective_design": "Use the detailed findings for timing and capabilities; add data-specific log/backup/crash handling, correlated alerts, tenant-layer tests and customer information. Do not equate a periodic scanner or retained logs with the full operational criteria.",
+    "review_depth": "DOMAIN_CONDITION_COMPARISON_NOT_CHILD_ACCEPTANCE"
+  },
+  {
+    "domain": "PI",
+    "control_ids": [
+      "SH-DAT-002",
+      "SH-TPR-003",
+      "SH-REC-004"
+    ],
+    "source_conditions": "Provide secure interoperable interfaces and usable extraction, defined customer exit terms and documented nonrecoverable deletion with bounded retention exceptions.",
+    "design_comparison": "Supplier exit and internal retention rules do not establish customer-facing extraction or proof of customer-data deletion.",
+    "corrective_design": "Implement and test customer export and deletion workflows, authenticated interfaces, integrity checks, agreed formats/windows and evidence accessible to the customer; additional federation and derived-data export remain separate.",
+    "review_depth": "DOMAIN_CONDITION_COMPARISON_NOT_CHILD_ACCEPTANCE"
+  },
+  {
+    "domain": "PS",
+    "control_ids": [
+      "SH-SEC-001",
+      "SH-TPR-004",
+      "SH-BCM-004"
+    ],
+    "source_conditions": "Meet actual sensitive/public zones, provider physical CSOCs, two-site basic redundancy, physical access/monitoring, intrusion/fire criteria, utilities and environmental monitoring; sharpened redundancy exceeds two locations.",
+    "design_comparison": "Two proposed site names and broad physical/environment supplements do not establish facilities capability, numeric criteria or verified provider duties.",
+    "corrective_design": "Obtain site-specific design/test evidence and CSOC coverage; compare exact physical thresholds and allowed alternatives, access factors and stale access, utility maintenance and environmental limits. Treat a third-site requirement as an architecture/selection decision.",
+    "review_depth": "DOMAIN_CONDITION_COMPARISON_NOT_CHILD_ACCEPTANCE"
+  },
+  {
+    "domain": "PSS",
+    "control_ids": [
+      "SH-PRD-002",
+      "SH-PRD-003",
+      "SH-SEC-003",
+      "SH-IAM-002"
+    ],
+    "source_conditions": "Provide version-specific secure-use guidance/CUECs, vulnerability information, customer audit logs, enforceable authentication/roles/session controls, safe SDN/images where offered and region commitments.",
+    "design_comparison": "Corporate IAM and support procedures do not prove customer product functionality.",
+    "corrective_design": "Build a customer capability matrix linked to service version, interface and tests; include distinct password/reset bounds, tenant administration, security logs, supplier vulnerability intake, image/SDN validation and regional constraints.",
+    "review_depth": "DOMAIN_CONDITION_COMPARISON_NOT_CHILD_ACCEPTANCE"
+  },
+  {
+    "domain": "SIM",
+    "control_ids": [
+      "SH-INC-001",
+      "SH-INC-002",
+      "SH-INC-003",
+      "SH-INC-004"
+    ],
+    "source_conditions": "Operate response team/plans, annual plan review, classification/root cause, qualified help, secure evidence and customer solution/incident communication; protect good-faith false reports.",
+    "design_comparison": "Generic incident chronology and closure omit explicit customer acknowledgments, a safe reporting assurance and maintained classification/learning knowledge.",
+    "corrective_design": "Add communication/acknowledgment terms, reporting duties, protected false reports, evidence custody and a linked incident knowledge base. Keep additional annual simulations/forensic team choices separate.",
+    "review_depth": "DOMAIN_CONDITION_COMPARISON_NOT_CHILD_ACCEPTANCE"
+  },
+  {
+    "domain": "SP",
+    "control_ids": [
+      "SH-POL-001",
+      "SH-POL-003"
+    ],
+    "source_conditions": "Standardize policy structure and communication; approve before effect; review annually/after significant change; consider aggregated exception risk; no exception may create an applicable C5 deviation.",
+    "design_comparison": "Generic expiring waivers could conceal a framework deviation and omit aggregate risk.",
+    "corrective_design": "Link policy review calendars to C5 minima; review combined exceptions and flag any conflict with an applicable criterion as unresolved deviation rather than waived compliance.",
+    "review_depth": "DOMAIN_CONDITION_COMPARISON_NOT_CHILD_ACCEPTANCE"
+  },
+  {
+    "domain": "SSO",
+    "control_ids": [
+      "SH-TPR-001",
+      "SH-TPR-002",
+      "SH-TPR-003",
+      "SH-TPR-004",
+      "SH-TPR-005"
+    ],
+    "source_conditions": "Assess suppliers before use and annually, obtain customer processing authority, track jurisdictions/locations/subcontractors, verify actual CSOCs, communicate adverse changes, govern exits and supplier-component exchanges.",
+    "design_comparison": "Tiered diligence and contract clauses omit customer preauthorization, explicit CSOC verification and each-transfer supplier component control.",
+    "corrective_design": "Reconcile supplier/subcontractor data paths and customer authorizations, annual directory/risk/confidentiality reviews, scoped independent evidence or audit rights, high-dependency exit triggers and logged transfer authorization.",
+    "review_depth": "DOMAIN_CONDITION_COMPARISON_NOT_CHILD_ACCEPTANCE"
+  }
+]

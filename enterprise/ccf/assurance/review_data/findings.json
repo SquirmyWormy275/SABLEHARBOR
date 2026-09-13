@@ -1,0 +1,1211 @@
+[
+  {
+    "id": "H-ADDRESSABLE",
+    "requirement_ids": [
+      "HIPAA:164.306",
+      "HIPAA:164.308",
+      "HIPAA:164.310",
+      "HIPAA:164.312"
+    ],
+    "control_ids": [
+      "SH-POL-003",
+      "SH-SEC-001"
+    ],
+    "source_locator": "164.306(d)(3); each addressable implementation specification",
+    "duties": [
+      "Assess each addressable specification for the actual environment",
+      "Implement reasonable and appropriate specifications",
+      "Otherwise document why and evaluate an equivalent alternative"
+    ],
+    "observed_design_gap": "Generic waivers and proposed encryption settings do not provide one environmental decision per addressable specification.",
+    "corrective_procedure": "Maintain a specification-level register with risk contribution, environment, selected measure, reason for any nonimplementation, alternative assessment, accountable approval and reassessment trigger. Addressable is not synonymous with optional.",
+    "test_procedure": "Reconcile all 22 addressable entries to documented decisions; inspect both implemented measures and alternatives. Reject blank reasoning and a generic risk waiver substituted for the environmental assessment.",
+    "remaining_decision": "RISK_CRITERIA_AND_QUALIFIED_INTERPRETATION",
+    "status": "AUTHOR_FINDING_NOT_INDEPENDENT_ACCEPTANCE"
+  },
+  {
+    "id": "H-SECURITY-OFFICIAL",
+    "requirement_ids": [
+      "HIPAA:164.308"
+    ],
+    "control_ids": [
+      "SH-POL-002",
+      "SH-GOV-003"
+    ],
+    "source_locator": "164.308(a)(2)",
+    "duties": [
+      "Identify an official responsible for developing and implementing Security Rule policies"
+    ],
+    "observed_design_gap": "Native role labels and approval limits do not identify the appointed HIPAA security official.",
+    "corrective_procedure": "Record the actual appointment, authority, responsibilities, deputy coverage and effective dates; communicate the assignment and reconcile it with policy and incident escalation owners.",
+    "test_procedure": "Inspect authorized appointment evidence and trace two policy/incident responsibilities to the appointed official. Flag vacant or conflicting authority.",
+    "remaining_decision": "OWNER_APPOINTMENT",
+    "status": "AUTHOR_FINDING_NOT_INDEPENDENT_ACCEPTANCE"
+  },
+  {
+    "id": "H-SANCTIONS",
+    "requirement_ids": [
+      "HIPAA:164.308",
+      "SOC2:CC1.1",
+      "SOC2:CC1.5"
+    ],
+    "control_ids": [
+      "SH-ETH-001",
+      "SH-ETH-003"
+    ],
+    "source_locator": "164.308(a)(1)(ii)(C); TSC CC1.1 and CC1.5",
+    "duties": [
+      "Apply appropriate sanctions for workforce security-policy failures",
+      "Establish and enforce conduct and control accountability"
+    ],
+    "observed_design_gap": "Conduct acknowledgment and investigation routing do not specify sanction decisions or accountability consequences.",
+    "corrective_procedure": "Link substantiated security-policy violations to a proportionate, consistently applied disciplinary decision; record responsible authority, confidentiality, conflicts and outcome. Review control responsibilities, incentives and excessive pressure in performance processes.",
+    "test_procedure": "Trace substantiated cases to reasoned sanction decisions and follow-up, and inspect responsibility-related performance reviews. An acknowledgment without enforcement evidence cannot pass this test.",
+    "remaining_decision": "HR_POLICY_AND_AUTHORITY",
+    "status": "AUTHOR_FINDING_NOT_INDEPENDENT_ACCEPTANCE"
+  },
+  {
+    "id": "H-ACTIVITY-REVIEW",
+    "requirement_ids": [
+      "HIPAA:164.308",
+      "HIPAA:164.312"
+    ],
+    "control_ids": [
+      "SH-SEC-002",
+      "SH-REC-002"
+    ],
+    "source_locator": "164.308(a)(1)(ii)(D); 164.312(b)",
+    "duties": [
+      "Regularly examine system activity",
+      "Record and examine activity in systems containing or using ePHI"
+    ],
+    "observed_design_gap": "Log collection health and extract completeness do not specify the review of access and incident activity for each ePHI system.",
+    "corrective_procedure": "Define an ePHI-system activity review schedule and query set covering audit logs, access reports and incident records. Reconcile the system population, retain reviewer decisions and investigate anomalies and unreviewed periods.",
+    "test_procedure": "Select periods independently; reperform an activity query and inspect anomaly disposition and missing periods. Validate recording as well as actual examination.",
+    "remaining_decision": "EPHI_SYSTEM_POPULATION_AND_CADENCE",
+    "status": "AUTHOR_FINDING_NOT_INDEPENDENT_ACCEPTANCE"
+  },
+  {
+    "id": "H-EMERGENCY",
+    "requirement_ids": [
+      "HIPAA:164.308",
+      "HIPAA:164.312"
+    ],
+    "control_ids": [
+      "SH-BCM-004",
+      "SH-IAM-005"
+    ],
+    "source_locator": "164.308(a)(7)(ii)(C); 164.312(a)(2)(ii)",
+    "duties": [
+      "Protect critical processes during emergency mode",
+      "Obtain necessary ePHI during emergencies"
+    ],
+    "observed_design_gap": "Site recovery and break-glass drafts do not expressly join emergency access with continued ePHI safeguards throughout degraded operation.",
+    "corrective_procedure": "Document emergency-mode workflows, minimum safeguards, authorized access, time limits, logging under degraded dependencies and return to normal operation. Exercise loss of the identity and logging dependencies as well as the primary site.",
+    "test_procedure": "Observe an approved emergency-mode exercise; verify necessary ePHI remains accessible to authorized operators and access decisions and activity survive recovery.",
+    "remaining_decision": "CRITICAL_PROCESSES_AND_EMERGENCY_AUTHORITY",
+    "status": "AUTHOR_FINDING_NOT_INDEPENDENT_ACCEPTANCE"
+  },
+  {
+    "id": "H-EVALUATION",
+    "requirement_ids": [
+      "HIPAA:164.308"
+    ],
+    "control_ids": [
+      "SH-ASS-002",
+      "SH-ASS-003"
+    ],
+    "source_locator": "164.308(a)(8)",
+    "duties": [
+      "Evaluate technical and nontechnical safeguards periodically and after relevant environmental or operational change"
+    ],
+    "observed_design_gap": "Risk-based assurance planning lacks an explicit Security Rule evaluation and change-trigger reconciliation.",
+    "corrective_procedure": "Maintain an evaluation covering applicable Security Rule standards and specifications; set a reasoned cadence and changes that trigger reevaluation. Record methods, results and deficiencies for both technical and administrative measures.",
+    "test_procedure": "Compare material environment changes and scheduled evaluations to completed work. Inspect a nontechnical safeguard and a technical configuration for evaluated effectiveness.",
+    "remaining_decision": "EVALUATION_CADENCE_AND_REVIEWER",
+    "status": "AUTHOR_FINDING_NOT_INDEPENDENT_ACCEPTANCE"
+  },
+  {
+    "id": "H-PHYSICAL-MOVEMENT",
+    "requirement_ids": [
+      "HIPAA:164.310"
+    ],
+    "control_ids": [
+      "SH-SEC-001",
+      "SH-REC-004"
+    ],
+    "source_locator": "164.310(a)(2)(iv), (b), (c), (d)",
+    "duties": [
+      "Document security-related facility repairs",
+      "Define workstation functions and surroundings",
+      "Control device/media movement and reuse",
+      "Assess need for an exact retrievable copy before equipment movement"
+    ],
+    "observed_design_gap": "The physical supplement covers zones and custody broadly; workstation-use rules, security repair records and pre-movement backup decisions need explicit records.",
+    "corrective_procedure": "Add workstation classes and permitted use/surroundings, a security-repair log, and equipment movement records identifying custody, authorization, backup decision and destination. Verify removal of ePHI before media reuse separately from asset retirement.",
+    "test_procedure": "Trace workstations, facility repairs and moved/reused equipment from independent populations to the applicable records; reperform retrieval of a required pre-movement copy.",
+    "remaining_decision": "ACTUAL_WORKSTATIONS_EQUIPMENT_AND_PROVIDER_RECORDS",
+    "status": "AUTHOR_FINDING_NOT_INDEPENDENT_ACCEPTANCE"
+  },
+  {
+    "id": "H-INTEGRITY",
+    "requirement_ids": [
+      "HIPAA:164.312"
+    ],
+    "control_ids": [
+      "SH-DAT-004",
+      "SH-SEC-001"
+    ],
+    "source_locator": "164.312(c); 164.312(e)(2)(i)",
+    "duties": [
+      "Protect ePHI from improper alteration/destruction",
+      "Assess mechanisms for authenticating ePHI and detecting alteration in transit"
+    ],
+    "observed_design_gap": "Data quality and encrypted transport do not themselves establish integrity detection for stored ePHI and its transfer lifecycle.",
+    "corrective_procedure": "Identify integrity threats and implement risk-appropriate verification at storage, processing and transfer boundaries; document addressable decisions. Reconcile integrity failures to incident response and preserve originals for investigation.",
+    "test_procedure": "Inject approved synthetic unauthorized alteration into a test copy and a transfer; verify detection and response. Distinguish business-data validity from protection against unauthorized alteration.",
+    "remaining_decision": "DATA_FLOWS_AND_INTEGRITY_DESIGN",
+    "status": "AUTHOR_FINDING_NOT_INDEPENDENT_ACCEPTANCE"
+  },
+  {
+    "id": "H-RETENTION",
+    "requirement_ids": [
+      "HIPAA:164.316"
+    ],
+    "control_ids": [
+      "SH-DAT-003",
+      "SH-POL-001",
+      "SH-REC-004"
+    ],
+    "source_locator": "164.316(b)(1)-(2)",
+    "duties": [
+      "Keep required policies and activity records in writing",
+      "Retain required security documentation for six years from creation or last effective date, whichever is later",
+      "Make it available and update it"
+    ],
+    "observed_design_gap": "Generic retention and disposition controls omit the security-document retention clock and availability to implementers.",
+    "corrective_procedure": "Classify Security Rule documentation separately from clinical records; calculate its earliest disposition date from the later of creation and last effective use plus six years, subject to longer holds or obligations. Preserve version history and access for implementers; review after environmental changes.",
+    "test_procedure": "Recompute dates for superseded and currently effective policies and required activity records. Attempt premature disposition in a test workflow; verify denial and accessible superseded records.",
+    "remaining_decision": "RETENTION_SCHEDULE_APPROVAL",
+    "status": "AUTHOR_FINDING_NOT_INDEPENDENT_ACCEPTANCE"
+  },
+  {
+    "id": "H-BREACH-DECISION",
+    "requirement_ids": [
+      "HIPAA:164.402",
+      "HIPAA:164.414"
+    ],
+    "control_ids": [
+      "SH-INC-001",
+      "SH-INC-002"
+    ],
+    "source_locator": "164.402 breach definition and exceptions; 164.414(b)",
+    "duties": [
+      "Evaluate impermissible use/disclosure and unsecured PHI",
+      "Preserve a reasoned exception or low-probability analysis",
+      "Maintain proof of required notification or no breach"
+    ],
+    "observed_design_gap": "Incident severity classification does not implement breach presumption, the defined exceptions or the four-factor assessment.",
+    "corrective_procedure": "Record the use/disclosure, secured-status basis and exact exception considered. If relying on low probability of compromise, address information/identifiers, recipient, actual acquisition/viewing and mitigation. Preserve the conclusion and supporting evidence; keep general security-incident reporting separate.",
+    "test_procedure": "Use approved fictional cases covering a security incident without PHI, impermissible disclosure and claimed encryption protection; challenge omitted risk factors and unsubstantiated no-notice decisions.",
+    "remaining_decision": "QUALIFIED_BREACH_ANALYSIS",
+    "status": "AUTHOR_FINDING_NOT_INDEPENDENT_ACCEPTANCE"
+  },
+  {
+    "id": "H-NOTICE-CLOCK",
+    "requirement_ids": [
+      "HIPAA:164.410",
+      "HIPAA:164.412"
+    ],
+    "control_ids": [
+      "SH-INC-001",
+      "SH-INC-002",
+      "SH-TPR-003"
+    ],
+    "source_locator": "164.410(a)-(c); 164.412(a)-(b)",
+    "duties": [
+      "Start discovery from actual or reasonably diligent knowledge including relevant agents",
+      "Notify without unreasonable delay and within the outer 60-calendar-day limit",
+      "Supply affected identities and other available notice facts, with later updates",
+      "Apply only supported law-enforcement delays"
+    ],
+    "observed_design_gap": "The incident procedure has no explicit discovery calculation, notice-content reconciliation or bounded oral-delay exception.",
+    "corrective_procedure": "Track occurrence, first knowledge, reasonable-diligence discovery and upstream contractual deadlines separately. Calculate the outer 60-day date while requiring prompt action and honoring shorter contracts. Send available affected-person and notice information and supplement promptly. Record written delay terms or the official and date of an oral delay, capped at 30 days unless supported by a written statement.",
+    "test_procedure": "Test a delayed escalation, discovery by an agent, a shorter contractual limit, incomplete initial information and oral/written law-enforcement delays. Reject clocks restarted at management confirmation and treating day 60 as the routine target.",
+    "remaining_decision": "CONTRACTS_AND_QUALIFIED_NOTICE_DECISION",
+    "status": "AUTHOR_FINDING_NOT_INDEPENDENT_ACCEPTANCE"
+  },
+  {
+    "id": "H-SUBCONTRACT",
+    "requirement_ids": [
+      "HIPAA:164.308",
+      "HIPAA:164.314",
+      "HIPAA:164.502",
+      "HIPAA:164.504"
+    ],
+    "control_ids": [
+      "SH-TPR-003",
+      "SH-TPR-004"
+    ],
+    "source_locator": "164.308(b); 164.314(a); 164.502(e); 164.504(e)",
+    "duties": [
+      "Obtain required subcontractor assurances",
+      "Flow applicable safeguards and reporting duties down the chain",
+      "Address known material violations"
+    ],
+    "observed_design_gap": "Broad BA clauses omit a reconciled subcontractor population and explicit cure/end/termination decision path.",
+    "corrective_procedure": "Reconcile every subcontractor creating, receiving, maintaining or transmitting PHI to the applicable written arrangement before delegation. Review safeguards, security-incident/breach reporting, permitted uses, assistance and exit terms. On known material violation, record reasonable cure/end steps and, if unsuccessful, feasibility of termination.",
+    "test_procedure": "Select downstream data flows independently from vendor lists; inspect signed scope and reporting paths. Exercise an unsuccessful cure and review documented termination feasibility.",
+    "remaining_decision": "EXECUTED_AGREEMENTS_AND_ROLE_ANALYSIS",
+    "status": "AUTHOR_FINDING_NOT_INDEPENDENT_ACCEPTANCE"
+  },
+  {
+    "id": "H-PRIVACY-PURPOSE",
+    "requirement_ids": [
+      "HIPAA:164.502",
+      "HIPAA:164.504"
+    ],
+    "control_ids": [
+      "SH-DAT-002",
+      "SH-LEG-002"
+    ],
+    "source_locator": "164.502(a)(3), (b); 164.504(e)",
+    "duties": [
+      "Limit BA uses/disclosures to contractual or legal authority",
+      "Apply minimum-necessary duties with the relevant exceptions",
+      "Distinguish direct duties from delegated covered-entity work"
+    ],
+    "observed_design_gap": "A processing inventory does not implement use/disclosure authorization or purpose-specific minimization.",
+    "corrective_procedure": "Record purpose, permitted authority, recipients and data scope before disclosure or reuse. Apply a documented minimum-necessary decision and relevant exception. Treat sales, marketing, research and management/administration exceptions as separate legal questions rather than generic data rights.",
+    "test_procedure": "Trace selected disclosures and proposed reuse to actual authority and justified scope; reject a new AI-training use based solely on possession of PHI.",
+    "remaining_decision": "ACTUAL_PURPOSES_AND_QUALIFIED_PRIVACY_INTERPRETATION",
+    "status": "AUTHOR_FINDING_NOT_INDEPENDENT_ACCEPTANCE"
+  },
+  {
+    "id": "H-RIGHTS-ASSISTANCE",
+    "requirement_ids": [
+      "HIPAA:164.502",
+      "HIPAA:164.504",
+      "HIPAA:164.524",
+      "HIPAA:164.526",
+      "HIPAA:164.528"
+    ],
+    "control_ids": [
+      "SH-DAT-002",
+      "SH-TPR-003"
+    ],
+    "source_locator": "164.502(a)(4)(ii); 164.504(e)(2)(ii)(E)-(G)",
+    "duties": [
+      "Provide required electronic-copy access to the designated recipient",
+      "Support amendment and accounting duties allocated through the applicable arrangement"
+    ],
+    "observed_design_gap": "Processing and contract drafts omit request routing, retrieval, amendment propagation and disclosure-accounting operations.",
+    "corrective_procedure": "Define the BA/customer allocation for access, amendment and accounting. Authenticate requests, route promptly under agreed time limits, retrieve the relevant records, preserve changes and disclosure history, and confirm completion to the responsible party. Separate direct electronic-copy duties from other delegated tasks.",
+    "test_procedure": "Exercise an electronic-copy request, an accepted amendment and an accounting request on synthetic data; trace the correct recipient, complete records and upstream completion requirements.",
+    "remaining_decision": "CONTRACTUAL_ALLOCATION_AND_RECORD_SYSTEMS",
+    "status": "AUTHOR_FINDING_NOT_INDEPENDENT_ACCEPTANCE"
+  },
+  {
+    "id": "H-REGULATOR",
+    "requirement_ids": [
+      "HIPAA:160.310",
+      "HIPAA:160.316"
+    ],
+    "control_ids": [
+      "SH-LEG-001",
+      "SH-ETH-003",
+      "SH-REC-002"
+    ],
+    "source_locator": "160.310(a)-(c); 160.316",
+    "duties": [
+      "Provide required compliance records and access",
+      "Cooperate with investigations",
+      "Protect participants and reasonable opposition from retaliation"
+    ],
+    "observed_design_gap": "Evidence exports and speak-up procedures do not specify regulator access, exigent access or unavailable third-party information.",
+    "corrective_procedure": "Create a counsel-coordinated response route with record preservation, access authority, required reports and response tracking. Document efforts to obtain information held exclusively by third parties and the required certification if refused. Protect complainants and participants from retaliation.",
+    "test_procedure": "Exercise a regulator request with inaccessible provider records and an urgent access scenario; inspect response authority and preservation without treating ordinary customer disclosure rules as a bar to lawful access.",
+    "remaining_decision": "REGULATORY_RESPONSE_AUTHORITY",
+    "status": "AUTHOR_FINDING_NOT_INDEPENDENT_ACCEPTANCE"
+  },
+  {
+    "id": "H-LEGAL-STATUS",
+    "requirement_ids": [
+      "HIPAA:164.502",
+      "HIPAA:164.509",
+      "HIPAA:164.520"
+    ],
+    "control_ids": [
+      "SH-LEG-001"
+    ],
+    "source_locator": "HHS current court-status notice; court-affected 2024 amendments",
+    "duties": [
+      "Separate retained regulatory text from enforceable obligations",
+      "Reconcile court-affected provisions and remaining notice modifications"
+    ],
+    "observed_design_gap": "The retained XML includes provisions affected by the court order; a byte-valid source cannot establish current legal effect.",
+    "corrective_procedure": "Maintain a provision-level legal-status overlay linked to current authoritative notices and qualified review. Preserve affected source text as historical context. Do not mark all privacy-notice amendments invalid or implement vacated provisions automatically.",
+    "test_procedure": "Compare any proposed obligation from the affected sections to the overlay; block an applicability conclusion based only on the historical XML.",
+    "remaining_decision": "QUALIFIED_CURRENT_LAW_REVIEW",
+    "status": "AUTHOR_FINDING_NOT_INDEPENDENT_ACCEPTANCE"
+  },
+  {
+    "id": "S-ACCOUNTABILITY",
+    "requirement_ids": [
+      "SOC2:CC1.4",
+      "SOC2:CC1.5"
+    ],
+    "control_ids": [
+      "SH-TRN-003",
+      "SH-PPL-005",
+      "SH-ASS-001"
+    ],
+    "source_locator": "TSC CC1.4/CC1.5 and relevant points of focus",
+    "duties": [
+      "Develop and retain competence for control responsibilities",
+      "Evaluate accountability and pressures"
+    ],
+    "observed_design_gap": "Baseline candidate routes omit the extension workforce-capacity procedure and do not define evaluation of control responsibility performance.",
+    "corrective_procedure": "Link competence and succession reviews to selected service/control duties; evaluate whether training improved performance. Add control-duty results, workload pressure and corrective consequences to the appropriate performance review. Propose SH-PPL-005 as an additional candidate; do not accept the mapping automatically.",
+    "test_procedure": "Trace critical duties to competence evidence and backups; inspect whether recurring execution failures led to appropriate workload, training or accountability action.",
+    "remaining_decision": "ACTUAL_APPOINTMENTS_AND_HR_DECISIONS",
+    "status": "AUTHOR_FINDING_NOT_INDEPENDENT_ACCEPTANCE"
+  },
+  {
+    "id": "S-COMMUNICATION",
+    "requirement_ids": [
+      "SOC2:CC2.2",
+      "SOC2:CC2.3"
+    ],
+    "control_ids": [
+      "SH-POL-001",
+      "SH-PRD-002",
+      "SH-PRD-003",
+      "SH-PRD-004"
+    ],
+    "source_locator": "TSC CC2.2/CC2.3",
+    "duties": [
+      "Communicate objectives and responsibilities internally",
+      "Exchange relevant information with external parties"
+    ],
+    "observed_design_gap": "Policy distribution and contract approval do not cover changed user guidance, incoming concerns or confirmed operational contacts.",
+    "corrective_procedure": "Maintain internal and customer/provider communication responsibilities and triggers; connect material changes and incidents to affected parties and maintain incoming issue routes. Add the product communication procedures as candidate support to the baseline review.",
+    "test_procedure": "Trace a changed service responsibility and an external concern through receipt, response and the appropriate audience. Test contact accuracy and incomplete recipient lists.",
+    "remaining_decision": "ACTUAL_PARTIES_AND_COMMITMENTS",
+    "status": "AUTHOR_FINDING_NOT_INDEPENDENT_ACCEPTANCE"
+  },
+  {
+    "id": "S-DESCRIPTION",
+    "requirement_ids": [
+      "SOC2:DC1",
+      "SOC2:DC2",
+      "SOC2:DC3",
+      "SOC2:DC4",
+      "SOC2:DC5",
+      "SOC2:DC6",
+      "SOC2:DC7",
+      "SOC2:DC8",
+      "SOC2:DC9"
+    ],
+    "control_ids": [
+      "SH-ASS-004",
+      "SH-TPR-002",
+      "SH-INC-002"
+    ],
+    "source_locator": "DC1-DC9, including significant incidents, complementary controls, subservice method and period changes",
+    "duties": [
+      "Reconcile described services, commitments and system components",
+      "Describe relevant incidents and controls",
+      "Explain complementary user controls and subservice treatment",
+      "Justify nonrelevance and disclose significant period changes"
+    ],
+    "observed_design_gap": "The service-description draft has factual placeholders; control procedures cannot establish the accuracy of the description or choose the subservice method.",
+    "corrective_procedure": "Build a management-owned description fact ledger linking each assertion to service records and the relevant reporting period. Reconcile incidents and material changes. Decide inclusive/carve-out treatment with the assessor and identify actual complementary controls rather than copying generic provider lists.",
+    "test_procedure": "Trace each description assertion to an authoritative record; independently compare incident/change/vendor populations to disclosures and investigate omitted relevant items.",
+    "remaining_decision": "MANAGEMENT_FACTS_AND_ASSESSOR_SCOPE",
+    "status": "AUTHOR_FINDING_NOT_INDEPENDENT_ACCEPTANCE"
+  },
+  {
+    "id": "I-SCOPE",
+    "requirement_ids": [
+      "ISO27001:4.1",
+      "ISO27001:4.2",
+      "ISO27001:4.3",
+      "ISO27001:4.4",
+      "ISO42001:4.1",
+      "ISO42001:4.2",
+      "ISO42001:4.3",
+      "ISO42001:4.4"
+    ],
+    "control_ids": [
+      "SH-ERM-001",
+      "SH-POL-002"
+    ],
+    "source_locator": "ISO clauses 4.1-4.4",
+    "duties": [
+      "Determine context, relevant parties and requirements",
+      "Document scope and interacting management-system processes",
+      "Resolve AI lifecycle roles from actual activities"
+    ],
+    "observed_design_gap": "Reference boundaries do not define actual ISMS/AIMS scope, interested parties or process interactions.",
+    "corrective_procedure": "Create a context/party/requirement ledger and a scoped process-interface map. Explain inclusions, interfaces and dependencies from actual activities; distinguish the management system from the software/system inventory. Maintain separate AI-role and use-case facts.",
+    "test_procedure": "Reconcile scoped activities to process owners and dependencies; challenge excluded interfaces and unexplained differences between service and management-system scope.",
+    "remaining_decision": "ACTUAL_SCOPE_PARTIES_AND_ROLES",
+    "status": "AUTHOR_FINDING_NOT_INDEPENDENT_ACCEPTANCE"
+  },
+  {
+    "id": "I-RISK-SOA",
+    "requirement_ids": [
+      "ISO27001:6.1.1",
+      "ISO27001:6.1.2",
+      "ISO27001:6.1.3",
+      "ISO27001:8.2",
+      "ISO27001:8.3",
+      "ISO42001:6.1.1",
+      "ISO42001:6.1.2",
+      "ISO42001:6.1.3",
+      "ISO42001:8.2",
+      "ISO42001:8.3"
+    ],
+    "control_ids": [
+      "SH-ERM-001",
+      "SH-ERM-002",
+      "SH-ERM-003"
+    ],
+    "source_locator": "ISO risk assessment/treatment clauses; 27001 risk-owner approval; 42001 designated-management approval",
+    "duties": [
+      "Produce repeatable risk assessment and prioritization",
+      "Determine all necessary controls and compare Annex A",
+      "Record treatment and residual-risk approval by the specified authority",
+      "Consider AI Annex B guidance"
+    ],
+    "observed_design_gap": "Generic enterprise risk acceptance and blank Annex A rows omit comparability, necessary controls outside Annex A and the different approval authorities.",
+    "corrective_procedure": "Record risk criteria, consequences, likelihood where relevant, risk levels, owners and priorities. Document treatment options, all necessary controls, Annex A comparison and justified exclusions. Record ISMS risk-owner approval and AIMS designated-management approval distinctly; link AI impact results and Annex B consideration.",
+    "test_procedure": "Reperform comparable risk scenarios and trace treatment to SoA entries, external necessary controls and correct authority. Reject an all-Annex-A checkbox used as the risk process.",
+    "remaining_decision": "RISK_CRITERIA_AND_TREATMENT_AUTHORITY",
+    "status": "AUTHOR_FINDING_NOT_INDEPENDENT_ACCEPTANCE"
+  },
+  {
+    "id": "I-OBJECTIVES",
+    "requirement_ids": [
+      "ISO27001:6.2",
+      "ISO27001:6.3",
+      "ISO42001:6.2",
+      "ISO42001:6.3"
+    ],
+    "control_ids": [
+      "SH-ERM-002",
+      "SH-GOV-005"
+    ],
+    "source_locator": "ISO 6.2 and 6.3",
+    "duties": [
+      "Set and monitor objectives at relevant functions",
+      "Plan actions, resources, responsibility, completion and evaluation",
+      "Plan management-system changes"
+    ],
+    "observed_design_gap": "Risk thresholds and board action tracking do not themselves provide an objective delivery plan or planned management-system change.",
+    "corrective_procedure": "Maintain objective records linked to policy and applicable requirements, with measurable criteria where practicable, resources, accountable people, dates and evaluation method. Control changes to objectives and management-system processes and communicate updates.",
+    "test_procedure": "Inspect one objective from approval through measurement and corrective action; challenge a change executed without resource or process impact assessment.",
+    "remaining_decision": "OBJECTIVES_RESOURCES_AND_OWNERS",
+    "status": "AUTHOR_FINDING_NOT_INDEPENDENT_ACCEPTANCE"
+  },
+  {
+    "id": "I-MEASUREMENT",
+    "requirement_ids": [
+      "ISO27001:9.1",
+      "ISO42001:9.1"
+    ],
+    "control_ids": [
+      "SH-ASS-002",
+      "SH-OPS-002"
+    ],
+    "source_locator": "ISO 9.1",
+    "duties": [
+      "Both systems: define what/how/when to measure and evaluate, retain results and evaluate effectiveness",
+      "ISMS 9.1 explicitly also specifies who measures and evaluates; record AIMS ownership as management design rather than an invented identical clause list"
+    ],
+    "observed_design_gap": "Service dashboards alone omit management-system measures, valid methods and accountable analysis.",
+    "corrective_procedure": "Define a measurement register separating service metrics from management-system effectiveness; record methods, validity checks, collection/evaluation cadence, accountable roles and interpretation of trends.",
+    "test_procedure": "Reperform a selected metric from its population and assess repeatability; verify that a poor result led to evaluation and an assigned response.",
+    "remaining_decision": "MEASURE_CRITERIA_AND_RESPONSIBILITIES",
+    "status": "AUTHOR_FINDING_NOT_INDEPENDENT_ACCEPTANCE"
+  },
+  {
+    "id": "I-MANAGEMENT-REVIEW",
+    "requirement_ids": [
+      "ISO27001:9.3.1",
+      "ISO27001:9.3.2",
+      "ISO27001:9.3.3",
+      "ISO42001:9.3.1",
+      "ISO42001:9.3.2",
+      "ISO42001:9.3.3"
+    ],
+    "control_ids": [
+      "SH-GOV-002",
+      "SH-GOV-005"
+    ],
+    "source_locator": "ISO 9.3.1-9.3.3",
+    "duties": [
+      "Both systems: prior actions, changed context and party needs, performance trends and improvement opportunities",
+      "ISMS additionally specifies party feedback, risk assessment/treatment status and objective fulfilment trends; do not silently import these as separate AIMS clause 9.3.2 mandates",
+      "Record improvement and management-system change decisions"
+    ],
+    "observed_design_gap": "The review procedure names some inputs but omits explicit prior-action status, interested-party feedback and trends; meeting occurrence alone is insufficient.",
+    "corrective_procedure": "Maintain separate ISMS and AIMS source checklists. Both include prior actions, context/party changes, nonconformity/corrective-action, measurement and audit trends, and improvement opportunities. The ISMS checklist also expressly includes objective fulfilment, party feedback and risk assessment/treatment status. Record additional useful AIMS inputs as chosen management practice, not invented clause obligations. Retain decisions, owners and follow-up.",
+    "test_procedure": "Compare review records to the complete input checklist and trace outputs to actions. Reject minutes containing only attendance and operational dashboard review.",
+    "remaining_decision": "TOP_MANAGEMENT_REVIEW_AND_OPERATING_RESULTS",
+    "status": "AUTHOR_FINDING_NOT_INDEPENDENT_ACCEPTANCE"
+  },
+  {
+    "id": "I-CORRECTIVE-ACTION",
+    "requirement_ids": [
+      "ISO27001:10.2",
+      "ISO42001:10.2"
+    ],
+    "control_ids": [
+      "SH-ASS-005",
+      "SH-INC-003"
+    ],
+    "source_locator": "ISO 10.2",
+    "duties": [
+      "Control nonconformity and consequences",
+      "Identify cause and whether similar problems exist or could occur elsewhere",
+      "Validate action effectiveness and needed system changes"
+    ],
+    "observed_design_gap": "Finding closure and root-cause reviews do not expressly require checking similar nonconformities elsewhere.",
+    "corrective_procedure": "Add cross-system recurrence analysis and consequence handling to every relevant nonconformity; record actions proportional to effects, effectiveness checks and necessary management-system changes while preserving failure history.",
+    "test_procedure": "Trace a finding to cause analysis, checks of comparable systems and an independent effectiveness test; challenge closure based on fixing the original instance alone.",
+    "remaining_decision": "ACTUAL_FINDINGS_AND_REVIEW_AUTHORITY",
+    "status": "AUTHOR_FINDING_NOT_INDEPENDENT_ACCEPTANCE"
+  },
+  {
+    "id": "AI-IMPACT",
+    "requirement_ids": [
+      "ISO42001:6.1.4",
+      "ISO42001:8.4",
+      "ISO42001:A.5.2",
+      "ISO42001:A.5.3",
+      "ISO42001:A.5.4",
+      "ISO42001:A.5.5"
+    ],
+    "control_ids": [
+      "SH-AIM-002"
+    ],
+    "source_locator": "ISO42001 6.1.4/8.4 and Annex A.5 with B.5 guidance",
+    "duties": [
+      "Assess impacts on individuals/groups and society in technical and jurisdictional context",
+      "Include deployment, intended use and foreseeable misuse",
+      "Feed results into risk assessment and retain appropriate disclosures"
+    ],
+    "observed_design_gap": "The extension draft adds impact assessment, but actual consequences, affected groups, reassessment triggers and disclosure decisions remain undefined.",
+    "corrective_procedure": "Use a per-system impact record listing affected populations, intended/foreseeable misuse, consequences and uncertainty, jurisdictional context, safeguards and residual concerns. Link each material consequence to risk assessment and treatment and determine appropriate disclosure and reassessment.",
+    "test_procedure": "Challenge an apparently accurate model with a harmful use scenario; verify impacts beyond model accuracy and trace changed deployment into reassessment and treatment.",
+    "remaining_decision": "ACTUAL_AI_USE_AND_IMPACT_CRITERIA",
+    "status": "AUTHOR_FINDING_NOT_INDEPENDENT_ACCEPTANCE"
+  },
+  {
+    "id": "AI-LIFECYCLE",
+    "requirement_ids": [
+      "ISO42001:A.6.1.2",
+      "ISO42001:A.6.1.3",
+      "ISO42001:A.6.2.2",
+      "ISO42001:A.6.2.3",
+      "ISO42001:A.6.2.4",
+      "ISO42001:A.6.2.5",
+      "ISO42001:A.6.2.6",
+      "ISO42001:A.6.2.7",
+      "ISO42001:A.6.2.8"
+    ],
+    "control_ids": [
+      "SH-AIM-001",
+      "SH-AIM-002",
+      "SH-AIM-004",
+      "SH-ENG-004"
+    ],
+    "source_locator": "ISO42001 Annex A.6; consider matching B.6 guidance",
+    "duties": [
+      "Define responsible-development objectives and lifecycle processes",
+      "Specify requirements/design and version-bound validation/deployment",
+      "Maintain operating monitoring, technical documentation and event logging"
+    ],
+    "observed_design_gap": "Separate model registry, validation and deployment drafts lack a joined lifecycle decision record with development objectives and documented requirements.",
+    "corrective_procedure": "Maintain a release dossier connecting responsible-development objectives, requirements, design choices, verification/validation criteria, exact version, deployment approval, operating limits, technical documentation and event records. Preserve validation failures and version-specific restrictions.",
+    "test_procedure": "Trace a deployed version backward to requirements and approved validation and forward to logs and monitoring; detect missing documentation, changed dependencies and release outside authorized conditions.",
+    "remaining_decision": "ACTUAL_AI_LIFECYCLE_AND_RELEASE_CRITERIA",
+    "status": "AUTHOR_FINDING_NOT_INDEPENDENT_ACCEPTANCE"
+  },
+  {
+    "id": "AI-DATA",
+    "requirement_ids": [
+      "ISO42001:A.7.2",
+      "ISO42001:A.7.3",
+      "ISO42001:A.7.4",
+      "ISO42001:A.7.5",
+      "ISO42001:A.7.6"
+    ],
+    "control_ids": [
+      "SH-AIM-003",
+      "SH-DAT-005",
+      "SH-FND-003"
+    ],
+    "source_locator": "ISO42001 Annex A.7; consider matching B.7 guidance",
+    "duties": [
+      "Govern acquisition and provenance",
+      "Define use-specific data quality and preparation",
+      "Preserve origin and processing lineage"
+    ],
+    "observed_design_gap": "Dependency versioning and rights review do not establish fitness for the intended population or complete preparation lineage.",
+    "corrective_procedure": "Define acquisition criteria, rights and origin; record dataset suitability/limitations for the intended use and populations. Version transformations and quality decisions through training/evaluation/deployment, including rejected records and changes in source restrictions.",
+    "test_procedure": "Reperform a preparation chain and trace a quality failure to exclusion or treatment. Challenge apparently clean data that is unsuitable for the affected population.",
+    "remaining_decision": "DATA_RIGHTS_QUALITY_AND_USE_CONTEXT",
+    "status": "AUTHOR_FINDING_NOT_INDEPENDENT_ACCEPTANCE"
+  },
+  {
+    "id": "C5-CONTEXT",
+    "requirement_ids": [
+      "C5:PREP-SOURCE-BASIC",
+      "C5:PREP-SOURCE-ADDITIONAL"
+    ],
+    "control_ids": [
+      "SH-ASS-004"
+    ],
+    "source_locator": "C5 publisher YAML information and corresponding fields",
+    "duties": [
+      "Read child criteria with their linked parent guidance",
+      "Keep customer corresponding controls distinct from provider additional-complement criteria"
+    ],
+    "observed_design_gap": "The child fingerprint inventory does not itself enumerate parent information blocks or corresponding customer responsibilities.",
+    "corrective_procedure": "Build a parent-context ledger with information-to-child links and separate corresponding-control records. Require each selected child review to examine its linked context; never treat an additional-complement criterion as merely a customer duty.",
+    "test_procedure": "Reconcile parent context and corresponding responsibilities to the publisher YAML, preserving absent fields and all child kinds. Reject dropped guidance or a provider criterion relabelled customer-only.",
+    "remaining_decision": "SOURCE_INTERPRETATION_AND_RESPONSIBILITY_SPLIT",
+    "status": "AUTHOR_FINDING_NOT_INDEPENDENT_ACCEPTANCE"
+  },
+  {
+    "id": "C5-CONFIDENTIAL",
+    "requirement_ids": [
+      "C5:OPS-32.01B",
+      "C5:OPS-32.02B",
+      "C5:OPS-32.03B",
+      "C5:OPS-33.01B",
+      "C5:OPS-33.02B",
+      "C5:OPS-33.03B"
+    ],
+    "control_ids": [
+      "SH-SEC-001",
+      "SH-CFG-004"
+    ],
+    "source_locator": "C5 OPS-32/33 basic criteria; conditional confidential-computing capability",
+    "duties": [
+      "Determine whether the service offers confidential computing",
+      "If present, define protected stack, suppliers and access limitations",
+      "Provide customer-verifiable remote attestation"
+    ],
+    "observed_design_gap": "Encryption-at-rest and key management drafts do not protect data in use or establish remote-attestation capability.",
+    "corrective_procedure": "First record whether the capability exists. If selected, design a TEE trust-boundary record, supplier and key responsibilities, customer information, measured-state/identity verification and customer attestation interface. Address provider access restrictions and failed attestation explicitly.",
+    "test_procedure": "In a permitted test environment, validate expected and altered measured states and verify the customer can check attestation integrity. Do not infer this capability from encrypted storage.",
+    "remaining_decision": "ACTUAL_SERVICE_CAPABILITY_AND_ARCHITECTURE",
+    "status": "AUTHOR_FINDING_NOT_INDEPENDENT_ACCEPTANCE"
+  },
+  {
+    "id": "C5-CONTAINERS",
+    "requirement_ids": [
+      "C5:OPS-34.01B",
+      "C5:OPS-34.02B",
+      "C5:OPS-35.01B"
+    ],
+    "control_ids": [
+      "SH-CFG-002",
+      "SH-ENG-004",
+      "SH-SEC-005"
+    ],
+    "source_locator": "C5 OPS-34/35 basic criteria",
+    "duties": [
+      "Govern container images and runtime across their full lifecycle",
+      "Reconcile inventory, malware, logs, isolation, access, cryptography, network protection, changes and hardening"
+    ],
+    "observed_design_gap": "Generic baseline configuration and release procedures do not enumerate container lifecycle responsibilities or runtime enforcement.",
+    "corrective_procedure": "Add image build/test/registry/deploy/operate/retire controls with immutable version lineage, appropriate access, tenant separation, monitoring, network and secret handling. Review additional criteria separately for signing, runtime restrictions and image scanning.",
+    "test_procedure": "Trace an image to running instances and retirement; test denied unauthorized deployment and cross-tenant access, runtime alerts and decommissioning of obsolete images.",
+    "remaining_decision": "ACTUAL_CONTAINER_PLATFORM_AND_SELECTED_CRITERIA",
+    "status": "AUTHOR_FINDING_NOT_INDEPENDENT_ACCEPTANCE"
+  },
+  {
+    "id": "C5-REGIONS",
+    "requirement_ids": [
+      "C5:PSS-12.01B",
+      "C5:PSS-12.02B",
+      "C5:PSS-12.03B",
+      "C5:PSS-12.04B",
+      "C5:PSS-12.01AS",
+      "C5:PSS-12.02AS"
+    ],
+    "control_ids": [
+      "SH-DAT-002",
+      "SH-TPR-003",
+      "SH-CFG-001"
+    ],
+    "source_locator": "C5 PSS-12 basic and sharpened region criteria",
+    "duties": [
+      "Constrain customer-data processing/storage and backups to agreed regions",
+      "Include service organizations",
+      "Distinguish derived/account data commitments and sharpened coverage",
+      "Handle region changes and customer rights"
+    ],
+    "observed_design_gap": "Naming Reno and Boise does not establish technical regional enforcement or supplier/derived-data coverage.",
+    "corrective_procedure": "Map customer, derived, account and backup data separately to contractual regions and actual processing. Implement region restrictions, reconcile suppliers and document advance change notices and required authorizations or termination rights. If sharpened criteria are selected, explicitly extend technical scope to derived data.",
+    "test_procedure": "Attempt deployment/replication outside an approved region in a test environment and inspect provider data paths. Trace a region change to contractual authority and notices; test basic versus sharpened scope separately.",
+    "remaining_decision": "CONTRACTUAL_REGIONS_AND_CRITERIA_SELECTION",
+    "status": "AUTHOR_FINDING_NOT_INDEPENDENT_ACCEPTANCE"
+  },
+  {
+    "id": "C5-KEY-CONTINUITY",
+    "requirement_ids": [
+      "C5:CRY-16.01B",
+      "C5:CRY-16.02B",
+      "C5:CRY-18.01B",
+      "C5:CRY-19.01B"
+    ],
+    "control_ids": [
+      "SH-CFG-004",
+      "SH-BCM-003"
+    ],
+    "source_locator": "C5 CRY-16/18/19",
+    "duties": [
+      "Assess HSM backup versus redundancy and exposure risk",
+      "Recover lost/corrupt keys",
+      "Secure external KMS and customer-key integration when used"
+    ],
+    "observed_design_gap": "Rotation and recovery drafts omit the explicit HSM continuity tradeoff and external/customer key interfaces.",
+    "corrective_procedure": "Document backup/redundancy choice and key-exposure risks; test recovery without exporting secrets. For external KMS, assess certification, integration, access, monitoring, rotation and vulnerability handling. For customer keys, document import/custody/access and activity records.",
+    "test_procedure": "Exercise lost-key and failed-KMS scenarios with test keys; verify customer-key authorization and monitoring. Challenge a backup plan that cannot recover encrypted customer data.",
+    "remaining_decision": "ACTUAL_KEY_CUSTODY_AND_SERVICE_CAPABILITIES",
+    "status": "AUTHOR_FINDING_NOT_INDEPENDENT_ACCEPTANCE"
+  },
+  {
+    "id": "C5-EXPORT",
+    "requirement_ids": [
+      "C5:PI-02.01B"
+    ],
+    "control_ids": [
+      "SH-TPR-003",
+      "SH-TPR-005"
+    ],
+    "source_locator": "C5 PI-02.01B",
+    "duties": [
+      "Agree return format/method, availability windows, termination timing and responsibilities",
+      "Address data possession and deletion after exit"
+    ],
+    "observed_design_gap": "Generic supplier exit planning does not define the service customer export contract and usable delivery.",
+    "corrective_procedure": "Specify customer-data export type, scope, format, method, timing during service and after exit, cutoff/deletion point and cooperation duties. Reconcile ownership/possession terms through legal review and prove delivered data can be used independently.",
+    "test_procedure": "Execute a synthetic customer exit, reconcile records to the export, validate format usability and verify the agreed access/deletion sequence.",
+    "remaining_decision": "CUSTOMER_CONTRACT_AND_EXPORT_CAPABILITY",
+    "status": "AUTHOR_FINDING_NOT_INDEPENDENT_ACCEPTANCE"
+  },
+  {
+    "id": "C5-INVESTIGATIONS",
+    "requirement_ids": [
+      "C5:INQ-01.01B",
+      "C5:INQ-01.02B",
+      "C5:INQ-02.01B",
+      "C5:INQ-03.01B",
+      "C5:INQ-03.02B",
+      "C5:INQ-04.01B",
+      "C5:INQ-04.02B",
+      "C5:INQ-04.03B"
+    ],
+    "control_ids": [
+      "SH-LEG-002",
+      "SH-DAT-002",
+      "SH-REC-002"
+    ],
+    "source_locator": "C5 INQ-01 through INQ-04 basic criteria",
+    "duties": [
+      "Assess lawful basis before government access/disclosure",
+      "Notify customers subject to stated exceptions",
+      "Limit disclosure and address inseparable data",
+      "Explain service-specific disclosure mechanisms"
+    ],
+    "observed_design_gap": "Contract review and privacy inventory do not implement government-request assessment, minimization and customer transparency.",
+    "corrective_procedure": "Maintain a qualified legal assessment and scoped authorization before access; record customer-notice decision and exceptions. Limit extracts to subject data, apply required anonymization/pseudonymization where separation is not possible, and maintain service-specific technical disclosure documentation and logs.",
+    "test_procedure": "Exercise a request covering only one customer and inspect extraction boundaries, legal decision and notice. Review the required customer-facing technical explanation without disclosing another customer's information.",
+    "remaining_decision": "QUALIFIED_LEGAL_REQUEST_DECISION",
+    "status": "AUTHOR_FINDING_NOT_INDEPENDENT_ACCEPTANCE"
+  },
+  {
+    "id": "C5-SBOM",
+    "requirement_ids": [
+      "C5:DEV-13.01B",
+      "C5:DEV-13.02B"
+    ],
+    "control_ids": [
+      "SH-CFG-001",
+      "SH-ENG-004"
+    ],
+    "source_locator": "C5 DEV-13 basic criteria",
+    "duties": [
+      "Maintain component lists for developed and integrated software",
+      "Govern unavailable integrated-component information as an exception"
+    ],
+    "observed_design_gap": "Asset inventory and release attribution do not require a maintained per-component software composition list.",
+    "corrective_procedure": "Produce and maintain a component/dependency list for developed and integrated deliverables, bound to exact versions. Document unavailable information, reasonable acquisition effort and risk treatment through the exception process.",
+    "test_procedure": "Trace release artifacts to component lists and dependency updates; test a known vulnerable component lookup and inspect a supplier information exception.",
+    "remaining_decision": "SOFTWARE_POPULATION_AND_SUPPLIER_INFORMATION",
+    "status": "AUTHOR_FINDING_NOT_INDEPENDENT_ACCEPTANCE"
+  },
+  {
+    "id": "C5-NO-WAIVER",
+    "requirement_ids": [
+      "C5:SP-03.03B",
+      "C5:SP-03.04B",
+      "C5:SP-03.05B"
+    ],
+    "control_ids": [
+      "SH-POL-003",
+      "SH-ERM-003"
+    ],
+    "source_locator": "C5 SP-03.03B-.05B",
+    "duties": [
+      "Assess aggregate exception risk and review validity at least annually",
+      "Do not permit a policy exception that causes a deviation from an applicable C5 criterion"
+    ],
+    "observed_design_gap": "Generic risk acceptance could be mistaken for curing a C5 deviation.",
+    "corrective_procedure": "Record each exception's affected criteria and combined risk. Preserve any criterion deviation as an open finding regardless of internal risk acceptance. Evaluate only alternatives explicitly allowed by the relevant criterion and do not treat an arbitrary waiver as conformity.",
+    "test_procedure": "Test a management-approved waiver that violates an applicable criterion; it must remain a deviation. Separately test an expressly permitted criterion alternative supported by the required evidence.",
+    "remaining_decision": "RISK_OWNER_AND_ASSESSOR_INTERPRETATION",
+    "status": "AUTHOR_FINDING_NOT_INDEPENDENT_ACCEPTANCE"
+  },
+  {
+    "id": "C5-ACCESS-CLOCKS",
+    "requirement_ids": [
+      "C5:IAM-04.02B",
+      "C5:IAM-04.03B",
+      "C5:IAM-05.01B",
+      "C5:IAM-05.03B",
+      "C5:IAM-05.01AC"
+    ],
+    "control_ids": [
+      "SH-IAM-003",
+      "SH-IAM-007"
+    ],
+    "source_locator": "C5 IAM-04 and IAM-05",
+    "duties": [
+      "Adjust changed privileged access within 48 hours and other changed access within 14 days",
+      "Review identities/rights at least annually and after significant change",
+      "Correct identified review deviations within seven days",
+      "Additional privileged review is at least six-monthly"
+    ],
+    "observed_design_gap": "Timely adjustment and periodic access review lack the source-specific outer limits.",
+    "corrective_procedure": "Add separate clocks for effective role changes and review discoveries; set no looser limits than the selected criteria or shorter obligations. Reconcile workforce and automated identities, time-bound temporary access and detect orphan resources. Keep the additional privileged-review cadence distinct.",
+    "test_procedure": "Recompute a privileged change at hour 49, ordinary change at day 15 and review finding at day 8; flag each breach while preserving the original clock.",
+    "remaining_decision": "IDENTITY_POPULATIONS_AND_STRICTER_LOCAL_TARGETS",
+    "status": "AUTHOR_FINDING_NOT_INDEPENDENT_ACCEPTANCE"
+  },
+  {
+    "id": "C5-CUSTOMER-ACCESS",
+    "requirement_ids": [
+      "C5:IAM-07.03B",
+      "C5:IAM-07.04B",
+      "C5:IAM-07.05B",
+      "C5:IAM-07.03AS",
+      "C5:IAM-07.04AS"
+    ],
+    "control_ids": [
+      "SH-IAM-005",
+      "SH-PRD-002",
+      "SH-INC-002"
+    ],
+    "source_locator": "C5 IAM-07 basic notice and sharpened consent",
+    "duties": [
+      "Apply source conditions for provider access to customer data",
+      "Provide required notice no later than 72 hours from initiation",
+      "For selected sharpened conditions obtain prior customer consent and include derived/encrypted-data cases"
+    ],
+    "observed_design_gap": "Privileged access logging does not provide the required customer facts, notification deadline or conditional prior consent.",
+    "corrective_procedure": "Register cause, start/duration, geography, type/scope and retained logs/copies; evaluate the exact contractual/legal exceptions. Apply the basic notice clock and any stricter terms. If sharpened criteria are selected, enforce the source's prior-consent conditions, including its encrypted-data/key treatment.",
+    "test_procedure": "Exercise support access with and without consent, an applicable exception and notice after 72 hours. Confirm a delayed approval cannot retrospectively satisfy a prior-consent condition.",
+    "remaining_decision": "CONTRACTUAL_CONSENT_AND_NOTICE_TERMS",
+    "status": "AUTHOR_FINDING_NOT_INDEPENDENT_ACCEPTANCE"
+  },
+  {
+    "id": "C5-AUTHENTICATION",
+    "requirement_ids": [
+      "C5:IAM-08.02B",
+      "C5:IAM-08.02AS",
+      "C5:IAM-09.03B",
+      "C5:IAM-09.07B",
+      "C5:PSS-07.01B"
+    ],
+    "control_ids": [
+      "SH-IAM-006",
+      "SH-SEC-001"
+    ],
+    "source_locator": "C5 IAM-08, IAM-09 and PSS-07",
+    "duties": [
+      "Basic production MFA covers human and automated access; sharpened scope covers all environments",
+      "Provider initial passwords expire within 14 days and reset procedures within 24 hours",
+      "Customer reset procedures have a distinct 48-hour maximum"
+    ],
+    "observed_design_gap": "The authentication supplement focuses on privileged/remote humans and proposes unspecified reset parameters; that is narrower than these C5 conditions.",
+    "corrective_procedure": "Inventory every production human and workload path and obtain qualified interpretation and technical design for automated MFA. Keep provider and customer credential rules separate; implement initial-password change/expiry and single-use reset handling with the applicable 24/48-hour limits. Do not silently exempt service accounts.",
+    "test_procedure": "Test uncovered workload paths and provider/customer reset expiry independently. Reject a provider reset flow that inherits the customer 48-hour limit.",
+    "remaining_decision": "ACTUAL_AUTHENTICATION_ARCHITECTURE_AND_QUALIFIED_WORKLOAD_INTERPRETATION",
+    "status": "AUTHOR_FINDING_NOT_INDEPENDENT_ACCEPTANCE"
+  },
+  {
+    "id": "C5-VULNERABILITY-CLOCKS",
+    "requirement_ids": [
+      "C5:OPS-18.02B",
+      "C5:OPS-18.03B",
+      "C5:OPS-23.02B",
+      "C5:OPS-25.01B",
+      "C5:OPS-25.01AS"
+    ],
+    "control_ids": [
+      "SH-SEC-003",
+      "SH-SEC-004"
+    ],
+    "source_locator": "C5 OPS-18/23/25",
+    "duties": [
+      "Engage critical findings promptly including out of hours; engage high findings within one working day",
+      "Review procedure results at least quarterly",
+      "Scan at least monthly under basic and daily under sharpened selection"
+    ],
+    "observed_design_gap": "Risk-based remediation targets do not specify engagement clocks or distinguish initiating work from completing a fix.",
+    "corrective_procedure": "Track discovery, engagement, ongoing follow-up, mitigation and fix verification separately. Add out-of-hours escalation, a defined working-day calendar and minimum selected scan/evaluation cadence. Do not restate the one-day engagement limit as a universal one-day remediation deadline.",
+    "test_procedure": "Use a high finding near a weekend and a critical finding out of hours; verify engagement and escalation, then separately test overdue remediation and missing scan periods.",
+    "remaining_decision": "WORKING_CALENDAR_ONCALL_AND_REMEDIATION_TARGETS",
+    "status": "AUTHOR_FINDING_NOT_INDEPENDENT_ACCEPTANCE"
+  },
+  {
+    "id": "C5-PENTEST",
+    "requirement_ids": [
+      "C5:OPS-22.01B",
+      "C5:OPS-22.05B",
+      "C5:OPS-22.08B",
+      "C5:OPS-22.01AS"
+    ],
+    "control_ids": [
+      "SH-SEC-003",
+      "SH-ASS-003"
+    ],
+    "source_locator": "C5 OPS-22",
+    "duties": [
+      "Basic penetration testing at least annually and after significant change",
+      "Every relevant component within three years under multi-year plans",
+      "Root-cause and similar-vulnerability analysis",
+      "Sharpened testing at least six-monthly by independent external testers"
+    ],
+    "observed_design_gap": "Risk-based testing lacks explicit frequency, component-cycle reconciliation and the additional external independence requirement.",
+    "corrective_procedure": "Maintain scope and qualified-tester evidence, selected cadence and a component coverage calendar. Trace discovered weaknesses to root cause and similar-system review. Identify the external-testing requirement separately when sharpened criteria are selected.",
+    "test_procedure": "Reconcile assets to the multi-year schedule, detect a component beyond three years and inspect change-triggered testing. Reject an internal-only test as satisfying the sharpened external requirement.",
+    "remaining_decision": "TEST_SCOPE_PROVIDER_AND_SELECTED_CRITERIA",
+    "status": "AUTHOR_FINDING_NOT_INDEPENDENT_ACCEPTANCE"
+  },
+  {
+    "id": "C5-LOG-DATA",
+    "requirement_ids": [
+      "C5:OPS-11.01B",
+      "C5:OPS-11.02B",
+      "C5:OPS-13.02B",
+      "C5:OPS-15.01B",
+      "C5:OPS-16.01B"
+    ],
+    "control_ids": [
+      "SH-SEC-002",
+      "SH-DAT-002",
+      "SH-DAT-003"
+    ],
+    "source_locator": "C5 OPS-11/13/15/16",
+    "duties": [
+      "Limit derived/account data purposes and retention",
+      "Provide required SIEM analysis, alerting and automated response capability",
+      "Attribute tenant access and protect logging administration with MFA"
+    ],
+    "observed_design_gap": "Retaining logs and monitoring collection gaps do not establish purpose limits, tenant attribution or all specified SIEM capabilities.",
+    "corrective_procedure": "Classify derived/account/provider logs, document permitted purposes and retention, prohibit unapproved commercial reuse, and validate tenant attribution. Map SIEM capabilities to actual implementation and use approved bounded response actions; protect logging administration separately.",
+    "test_procedure": "Trace a tenant event through normalization, correlation, alert/update and permitted response; test unauthorized log access and a proposed secondary commercial use.",
+    "remaining_decision": "DATA_PURPOSES_AND_MONITORING_CAPABILITIES",
+    "status": "AUTHOR_FINDING_NOT_INDEPENDENT_ACCEPTANCE"
+  },
+  {
+    "id": "C5-RESTORE",
+    "requirement_ids": [
+      "C5:OPS-06.01AS",
+      "C5:OPS-08.01B",
+      "C5:OPS-08.03B",
+      "C5:OPS-08.04B",
+      "C5:OPS-09.04B",
+      "C5:OPS-09.05B"
+    ],
+    "control_ids": [
+      "SH-BCM-002",
+      "SH-BCM-003"
+    ],
+    "source_locator": "C5 OPS-06/08/09",
+    "duties": [
+      "Basic restore testing at least annually with specified data/contract scope",
+      "Protect restored customer data as in production and dispose safely",
+      "Justify remote-site separation and equivalent protection",
+      "Sharpened policy addresses at least daily backup/replication and restore"
+    ],
+    "observed_design_gap": "Backup success and generic recovery cadence omit protected test copies, explicit minima and the source's sharper daily restore wording.",
+    "corrective_procedure": "Document scoped restore populations, protection and cleanup, annual/change activities and remote-site hazard analysis. Resolve the operational interpretation and feasibility of the selected sharpened daily backup/restore criterion with the assessor rather than silently reducing it to backup frequency.",
+    "test_procedure": "Reconcile restore-test scope and resulting data copies; test unauthorized access and cleanup. Compare selected daily/annual conditions separately with evidence.",
+    "remaining_decision": "RECOVERY_OBJECTIVES_AND_SHARPENED_INTERPRETATION",
+    "status": "AUTHOR_FINDING_NOT_INDEPENDENT_ACCEPTANCE"
+  },
+  {
+    "id": "C5-PHYSICAL-REDUNDANCY",
+    "requirement_ids": [
+      "C5:PS-02.01B",
+      "C5:PS-02.03B",
+      "C5:PS-02.01AS",
+      "C5:PS-02.02AS"
+    ],
+    "control_ids": [
+      "SH-BCM-004",
+      "SH-TPR-004"
+    ],
+    "source_locator": "C5 PS-02 basic versus sharpened",
+    "duties": [
+      "Basic requires at least two sufficiently separated locations and annual redundancy tests",
+      "Sharpened requires more than two locations, retaining service after two simultaneous location failures"
+    ],
+    "observed_design_gap": "The approved Reno/Boise reference has two planned site boundaries; it cannot establish the selected sharpened topology.",
+    "corrective_procedure": "Retain two-site basic readiness as a candidate subject to actual implementation. Record sharpened topology as an explicit unresolved architecture/criterion-selection gap. Do not add or claim a third deployment; prepare topology and failure-test requirements for an owner decision.",
+    "test_procedure": "Test actual failure domains and contracted availability. A two-site recovery exercise must not be counted as proof of surviving two location failures.",
+    "remaining_decision": "OWNER_ARCHITECTURE_AND_ASSESSMENT_SELECTION",
+    "status": "AUTHOR_FINDING_NOT_INDEPENDENT_ACCEPTANCE"
+  },
+  {
+    "id": "C5-PHYSICAL-DETAIL",
+    "requirement_ids": [
+      "C5:PS-03.03B",
+      "C5:PS-04.01B",
+      "C5:PS-05.02B",
+      "C5:PS-06.01B",
+      "C5:PS-06.03B"
+    ],
+    "control_ids": [
+      "SH-SEC-001",
+      "SH-TPR-004"
+    ],
+    "source_locator": "C5 PS-03 through PS-06",
+    "duties": [
+      "Check ten-minute combined resistance from detection",
+      "Revoke two-month-unused physical access subject to bounded source exceptions and apply required factors",
+      "Evaluate fire protection and permitted alternatives",
+      "Verify N+1 utilities, annual backup-power tests and two-year or suspected-tampering line inspections"
+    ],
+    "observed_design_gap": "Generic site-zone and environmental supplements do not establish these physical thresholds or provider test records.",
+    "corrective_procedure": "Create a facility acceptance checklist with source thresholds, specifically allowed alternatives, provider responsibility and evidence for each site. Obtain qualified facility review rather than infer construction ratings from marketing or a generic provider report.",
+    "test_procedure": "Inspect source-specific engineering and test records, access inactivity and factor enforcement; challenge missing or non-site-specific evidence.",
+    "remaining_decision": "ACTUAL_FACILITIES_AND_QUALIFIED_ENGINEERING_REVIEW",
+    "status": "AUTHOR_FINDING_NOT_INDEPENDENT_ACCEPTANCE"
+  },
+  {
+    "id": "C5-SUPPLIER-TRANSFERS",
+    "requirement_ids": [
+      "C5:SSO-03.02B",
+      "C5:SSO-08.01B",
+      "C5:SSO-08.02B",
+      "C5:SSO-08.03B"
+    ],
+    "control_ids": [
+      "SH-TPR-003",
+      "SH-SEC-001"
+    ],
+    "source_locator": "C5 SSO-03/08",
+    "duties": [
+      "Obtain customer authorization for relevant service-organization processing",
+      "Control exchanges between supplier components and suppliers before each transfer",
+      "Preserve automated authorization and transfer traces"
+    ],
+    "observed_design_gap": "Vendor diligence and restricted egress alone omit customer processing authority and per-transfer component exchange controls.",
+    "corrective_procedure": "Record customer specific/general preauthorization and subcontractor paths. Inventory component callbacks and update channels; mediate incoming/outgoing content with authorization before transfer and attributable proposed/verified/completed records.",
+    "test_procedure": "Exercise a component callback and supplier update without authorization; verify blocking or an approved mediation path with complete traces.",
+    "remaining_decision": "CUSTOMER_AUTHORIZATION_AND_SUPPLIER_INTERFACES",
+    "status": "AUTHOR_FINDING_NOT_INDEPENDENT_ACCEPTANCE"
+  },
+  {
+    "id": "C5-CUSTOMER-FUNCTIONS",
+    "requirement_ids": [
+      "C5:PSS-04.01B",
+      "C5:PSS-04.03B",
+      "C5:PSS-05.01B",
+      "C5:PSS-08.03B",
+      "C5:PSS-09.02B"
+    ],
+    "control_ids": [
+      "SH-PRD-002",
+      "SH-ENG-003",
+      "SH-IAM-002"
+    ],
+    "source_locator": "C5 PSS-04/05/08/09",
+    "duties": [
+      "Expose relevant customer security/audit information",
+      "Offer enforceable customer authentication and access-review capabilities",
+      "Validate authorization on new and changed functions"
+    ],
+    "observed_design_gap": "Corporate controls and a customer assurance document cannot substitute for actual customer-facing security functions.",
+    "corrective_procedure": "Create a product capability checklist per service/version and verify customer audit logs, MFA enforcement, rights review, tenant-safe authorization and negative access tests. Record absent functions as development gaps, not narrative assurances.",
+    "test_procedure": "Run a synthetic customer administrator/user exercise across interfaces; test unauthorized actions and logging completeness before release.",
+    "remaining_decision": "ACTUAL_PRODUCT_CAPABILITIES_AND_ROADMAP",
+    "status": "AUTHOR_FINDING_NOT_INDEPENDENT_ACCEPTANCE"
+  },
+  {
+    "id": "I-PHYSICAL-REMOTE",
+    "requirement_ids": [
+      "ISO27001:A.6.7",
+      "ISO27001:A.7.4",
+      "ISO27001:A.7.6",
+      "ISO27001:A.7.7",
+      "ISO27001:A.7.9"
+    ],
+    "control_ids": [
+      "SH-SEC-001",
+      "SH-SEC-005"
+    ],
+    "source_locator": "ISO27001 Annex A remote and physical controls",
+    "duties": [
+      "Protect remote/offsite information",
+      "Continuously monitor premises for unauthorized access",
+      "Enforce secure-area work and clear desk/screen rules"
+    ],
+    "observed_design_gap": "The earlier technical supplements omit explicit continuous physical monitoring and remote/offsite handling procedures.",
+    "corrective_procedure": "Define permitted remote devices/access and offsite custody, actual physical monitoring coverage and alarm response, secure-area work rules and clear desk/screen enforcement. Map providers and local duties without assuming colocation coverage.",
+    "test_procedure": "Walk through a remote-work and secure-area scenario; inspect monitoring gaps, unattended information and offsite custody.",
+    "remaining_decision": "ACTUAL_WORK_LOCATIONS_AND_PROVIDER_COVERAGE",
+    "status": "AUTHOR_FINDING_NOT_INDEPENDENT_ACCEPTANCE"
+  },
+  {
+    "id": "I-DEVELOPMENT",
+    "requirement_ids": [
+      "ISO27001:A.8.4",
+      "ISO27001:A.8.18",
+      "ISO27001:A.8.25",
+      "ISO27001:A.8.26",
+      "ISO27001:A.8.27",
+      "ISO27001:A.8.28",
+      "ISO27001:A.8.29",
+      "ISO27001:A.8.31"
+    ],
+    "control_ids": [
+      "SH-ENG-001",
+      "SH-ENG-003",
+      "SH-SEC-001",
+      "SH-IAM-005"
+    ],
+    "source_locator": "ISO27001 Annex A development and privileged tooling",
+    "duties": [
+      "Control source/tool access and utilities able to override safeguards",
+      "Apply approved security requirements, architecture and coding rules",
+      "Test security and separate environments"
+    ],
+    "observed_design_gap": "Peer review and generic change tests do not establish secure coding/architecture practices, negative security tests or privileged utility restrictions.",
+    "corrective_procedure": "Define applicable security engineering/coding rules and approved requirements; maintain source/tool and privileged utility access, environment separation and specific security-feature tests. Trace these through actual releases.",
+    "test_procedure": "Inspect a release from requirements through abuse-case tests and deployment; test unauthorized source/tool access and a utility capable of bypassing ordinary application controls.",
+    "remaining_decision": "ACTUAL_ENGINEERING_PLATFORMS_AND_SECURITY_CRITERIA",
+    "status": "AUTHOR_FINDING_NOT_INDEPENDENT_ACCEPTANCE"
+  }
+]

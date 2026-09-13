@@ -1,12 +1,16 @@
 # Willow
 
-[Wiki home](../Home.md) · [All business dossiers](../../business-lines/README.md) · [Company charts](../../organization/README.md)
+[Wiki home](../Home.md) · [Business directory](README.md) · [Department directory](../departments/README.md) · [Business dossiers](../../business-lines/README.md) · [Company charts](../../organization/README.md)
 
-<img src="../../../assets/brand/logos/willow__mark.png" alt="Approved Willow logo" width="280">
+<img src="../../../assets/brand/logos/willow__reverse-horizontal.png" alt="Approved Willow logo" width="360">
 
 Willow builds and tests industrial prototypes, sensors, software and experimental processes at the Pittsburgh-area Fort. Its outputs include experiments, failed-test records, prototypes and qualified transfers to operating owners.
 
-**Reader status:** Navigation summary checked September 11, 2026. Linked canon controls; this page creates no new facts. Existing chart artwork is from publication 1.1.0, September 10, 2026. Financial cases are publicly synthetic.
+**Reviewed:** September 12, 2026 · Fictional enterprise; source records control.
+
+## Reading guide
+
+Follow an experiment from its question and budget to a useful transfer or a recorded failure. The important handoff is to an operating owner who can qualify, maintain and use the result.
 
 ## Start here
 
@@ -18,7 +22,7 @@ Willow is an internal parent-book program and cost center, not a subsidiary or a
 
 [![Willow existing organization chart](../../../docs/organization/assets/current/willow-fort.png)](../../../docs/organization/charts/willow-fort.md)
 
-Open the chart to read its relationship key and any additional pages. Grouped functions are not automatically reporting lines, separate companies or additional employees.
+[Read the chart’s text roster, relationship key and source qualifications](../../../docs/organization/charts/willow-fort.md). Grouped functions are not automatically reporting lines, separate companies or additional employees.
 
 [Named people and recorded roles](../../../docs/organization/charts/people-willow-team.md) — the current chart preserves unknown joining years rather than inventing them.
 
@@ -49,6 +53,17 @@ The [finance successor guide](../../../enterprise/business/README.md) explains g
 
 Use the [complete facility artifact index](../../../geospatial/maps/facilities/ARTIFACT_INDEX.md) for independently saved maps and floor plans, or open the [interactive atlas](../../../geospatial/maps/index.html) locally in a browser. GitHub displays the linked Markdown and images directly; it does not execute the atlas HTML.
 
-## Limits to keep visible
+[Klein, Emberline and the Willow transition](../subjects/Research-History.md) · [Failed research projects](../subjects/Project-History.md)
 
-The 24-person working calibration is a model population, not an established employee census. Parcel tenure, actual occupancy dates and measured floor areas remain unresolved. Plan drawings do not prove construction.
+## What remains unknown
+
+Exact Fort parcels, measured floor areas and historical occupancy remain unresolved. The 24-person calibration is a model population, not an employee census. See the [open questions register](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Open-Questions) for the evidence needed to resolve tracked gaps.
+
+## Related reading
+
+- [Klein, Emberline and Willow](../subjects/Research-History.md)
+- [Glasshouse, Wallaby and failed experiments](../subjects/Project-History.md)
+- [Finance](../departments/finance.md)
+- [Enterprise Technology Services](../departments/technology.md)
+
+Related reading describes useful connections, not additional reporting lines.

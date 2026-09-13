@@ -1,0 +1,385 @@
+{
+  "columns": [
+    "period",
+    "cash_flow",
+    "opening_unpaid_usd",
+    "requested_usd",
+    "current_funded_usd",
+    "new_deferral_usd",
+    "arrears_paid_usd",
+    "closing_unpaid_usd"
+  ],
+  "limitations": "Treasury is illustrative FIFO allocation within cash-flow class, not employee/vendor bank-payment proof. Obligation and payable master funded/unpaid fields are terminal snapshots, not month-end balances; history and reconciliation rows control dated exposure. Industrial invoice terminal settlement fields have the same boundary. Complete industrial PO/receipt/invoice joins are present; Core vendor originals and independent daily bank confirmations are not supplied. Industrial bank transactions/reconciliations are retained as modeled clearing records, not bank-issued evidence. Native industrial document lineage is a model support chain, not independent corroboration.",
+  "rows": [
+    {
+      "arrears_paid_usd": "0.0000",
+      "cash_flow": "OPERATING",
+      "closing_unpaid_usd": "0.0000",
+      "current_funded_usd": "7673930.8907",
+      "new_deferral_usd": "0.0000",
+      "opening_unpaid_usd": "0.0000",
+      "period": "2027-01-31",
+      "requested_usd": "7673930.8907"
+    },
+    {
+      "arrears_paid_usd": "0.0000",
+      "cash_flow": "INVESTING",
+      "closing_unpaid_usd": "0.0000",
+      "current_funded_usd": "560000.0000",
+      "new_deferral_usd": "0.0000",
+      "opening_unpaid_usd": "0.0000",
+      "period": "2027-01-31",
+      "requested_usd": "560000.0000"
+    },
+    {
+      "arrears_paid_usd": "0.0000",
+      "cash_flow": "FINANCING",
+      "closing_unpaid_usd": "0.0000",
+      "current_funded_usd": "100000.0000",
+      "new_deferral_usd": "0.0000",
+      "opening_unpaid_usd": "0.0000",
+      "period": "2027-01-31",
+      "requested_usd": "100000.0000"
+    },
+    {
+      "arrears_paid_usd": "0.0000",
+      "cash_flow": "OPERATING",
+      "closing_unpaid_usd": "0.0000",
+      "current_funded_usd": "6663413.3241",
+      "new_deferral_usd": "0.0000",
+      "opening_unpaid_usd": "0.0000",
+      "period": "2027-02-28",
+      "requested_usd": "6663413.3241"
+    },
+    {
+      "arrears_paid_usd": "0.0000",
+      "cash_flow": "INVESTING",
+      "closing_unpaid_usd": "0.0000",
+      "current_funded_usd": "830000.0000",
+      "new_deferral_usd": "0.0000",
+      "opening_unpaid_usd": "0.0000",
+      "period": "2027-02-28",
+      "requested_usd": "830000.0000"
+    },
+    {
+      "arrears_paid_usd": "0.0000",
+      "cash_flow": "FINANCING",
+      "closing_unpaid_usd": "0.0000",
+      "current_funded_usd": "100000.0000",
+      "new_deferral_usd": "0.0000",
+      "opening_unpaid_usd": "0.0000",
+      "period": "2027-02-28",
+      "requested_usd": "100000.0000"
+    },
+    {
+      "arrears_paid_usd": "0.0000",
+      "cash_flow": "OPERATING",
+      "closing_unpaid_usd": "0.0000",
+      "current_funded_usd": "6680701.4574",
+      "new_deferral_usd": "0.0000",
+      "opening_unpaid_usd": "0.0000",
+      "period": "2027-03-31",
+      "requested_usd": "6680701.4574"
+    },
+    {
+      "arrears_paid_usd": "0.0000",
+      "cash_flow": "INVESTING",
+      "closing_unpaid_usd": "0.0000",
+      "current_funded_usd": "0.0000",
+      "new_deferral_usd": "0.0000",
+      "opening_unpaid_usd": "0.0000",
+      "period": "2027-03-31",
+      "requested_usd": "0.0000"
+    },
+    {
+      "arrears_paid_usd": "0.0000",
+      "cash_flow": "FINANCING",
+      "closing_unpaid_usd": "0.0000",
+      "current_funded_usd": "100000.0000",
+      "new_deferral_usd": "0.0000",
+      "opening_unpaid_usd": "0.0000",
+      "period": "2027-03-31",
+      "requested_usd": "100000.0000"
+    },
+    {
+      "arrears_paid_usd": "0.0000",
+      "cash_flow": "OPERATING",
+      "closing_unpaid_usd": "0.0000",
+      "current_funded_usd": "6706426.8547",
+      "new_deferral_usd": "0.0000",
+      "opening_unpaid_usd": "0.0000",
+      "period": "2027-04-30",
+      "requested_usd": "6706426.8547"
+    },
+    {
+      "arrears_paid_usd": "0.0000",
+      "cash_flow": "INVESTING",
+      "closing_unpaid_usd": "0.0000",
+      "current_funded_usd": "0.0000",
+      "new_deferral_usd": "0.0000",
+      "opening_unpaid_usd": "0.0000",
+      "period": "2027-04-30",
+      "requested_usd": "0.0000"
+    },
+    {
+      "arrears_paid_usd": "0.0000",
+      "cash_flow": "FINANCING",
+      "closing_unpaid_usd": "0.0000",
+      "current_funded_usd": "100000.0000",
+      "new_deferral_usd": "0.0000",
+      "opening_unpaid_usd": "0.0000",
+      "period": "2027-04-30",
+      "requested_usd": "100000.0000"
+    },
+    {
+      "arrears_paid_usd": "0.0000",
+      "cash_flow": "OPERATING",
+      "closing_unpaid_usd": "0.0000",
+      "current_funded_usd": "6740540.1881",
+      "new_deferral_usd": "0.0000",
+      "opening_unpaid_usd": "0.0000",
+      "period": "2027-05-31",
+      "requested_usd": "6740540.1881"
+    },
+    {
+      "arrears_paid_usd": "0.0000",
+      "cash_flow": "INVESTING",
+      "closing_unpaid_usd": "0.0000",
+      "current_funded_usd": "210000.0000",
+      "new_deferral_usd": "0.0000",
+      "opening_unpaid_usd": "0.0000",
+      "period": "2027-05-31",
+      "requested_usd": "210000.0000"
+    },
+    {
+      "arrears_paid_usd": "0.0000",
+      "cash_flow": "FINANCING",
+      "closing_unpaid_usd": "0.0000",
+      "current_funded_usd": "100000.0000",
+      "new_deferral_usd": "0.0000",
+      "opening_unpaid_usd": "0.0000",
+      "period": "2027-05-31",
+      "requested_usd": "100000.0000"
+    },
+    {
+      "arrears_paid_usd": "0.0000",
+      "cash_flow": "OPERATING",
+      "closing_unpaid_usd": "0.0000",
+      "current_funded_usd": "6722261.0214",
+      "new_deferral_usd": "0.0000",
+      "opening_unpaid_usd": "0.0000",
+      "period": "2027-06-30",
+      "requested_usd": "6722261.0214"
+    },
+    {
+      "arrears_paid_usd": "0.0000",
+      "cash_flow": "INVESTING",
+      "closing_unpaid_usd": "0.0000",
+      "current_funded_usd": "0.0000",
+      "new_deferral_usd": "0.0000",
+      "opening_unpaid_usd": "0.0000",
+      "period": "2027-06-30",
+      "requested_usd": "0.0000"
+    },
+    {
+      "arrears_paid_usd": "0.0000",
+      "cash_flow": "FINANCING",
+      "closing_unpaid_usd": "0.0000",
+      "current_funded_usd": "100000.0000",
+      "new_deferral_usd": "0.0000",
+      "opening_unpaid_usd": "0.0000",
+      "period": "2027-06-30",
+      "requested_usd": "100000.0000"
+    },
+    {
+      "arrears_paid_usd": "0.0000",
+      "cash_flow": "OPERATING",
+      "closing_unpaid_usd": "0.0000",
+      "current_funded_usd": "6745768.1880",
+      "new_deferral_usd": "0.0000",
+      "opening_unpaid_usd": "0.0000",
+      "period": "2027-07-31",
+      "requested_usd": "6745768.1880"
+    },
+    {
+      "arrears_paid_usd": "0.0000",
+      "cash_flow": "INVESTING",
+      "closing_unpaid_usd": "0.0000",
+      "current_funded_usd": "0.0000",
+      "new_deferral_usd": "0.0000",
+      "opening_unpaid_usd": "0.0000",
+      "period": "2027-07-31",
+      "requested_usd": "0.0000"
+    },
+    {
+      "arrears_paid_usd": "0.0000",
+      "cash_flow": "FINANCING",
+      "closing_unpaid_usd": "0.0000",
+      "current_funded_usd": "100000.0000",
+      "new_deferral_usd": "0.0000",
+      "opening_unpaid_usd": "0.0000",
+      "period": "2027-07-31",
+      "requested_usd": "100000.0000"
+    },
+    {
+      "arrears_paid_usd": "0.0000",
+      "cash_flow": "OPERATING",
+      "closing_unpaid_usd": "0.0000",
+      "current_funded_usd": "6754498.5214",
+      "new_deferral_usd": "0.0000",
+      "opening_unpaid_usd": "0.0000",
+      "period": "2027-08-31",
+      "requested_usd": "6754498.5214"
+    },
+    {
+      "arrears_paid_usd": "0.0000",
+      "cash_flow": "INVESTING",
+      "closing_unpaid_usd": "0.0000",
+      "current_funded_usd": "0.0000",
+      "new_deferral_usd": "0.0000",
+      "opening_unpaid_usd": "0.0000",
+      "period": "2027-08-31",
+      "requested_usd": "0.0000"
+    },
+    {
+      "arrears_paid_usd": "0.0000",
+      "cash_flow": "FINANCING",
+      "closing_unpaid_usd": "0.0000",
+      "current_funded_usd": "100000.0000",
+      "new_deferral_usd": "0.0000",
+      "opening_unpaid_usd": "0.0000",
+      "period": "2027-08-31",
+      "requested_usd": "100000.0000"
+    },
+    {
+      "arrears_paid_usd": "0.0000",
+      "cash_flow": "OPERATING",
+      "closing_unpaid_usd": "0.0000",
+      "current_funded_usd": "7393876.8547",
+      "new_deferral_usd": "0.0000",
+      "opening_unpaid_usd": "0.0000",
+      "period": "2027-09-30",
+      "requested_usd": "7393876.8547"
+    },
+    {
+      "arrears_paid_usd": "0.0000",
+      "cash_flow": "INVESTING",
+      "closing_unpaid_usd": "0.0000",
+      "current_funded_usd": "0.0000",
+      "new_deferral_usd": "0.0000",
+      "opening_unpaid_usd": "0.0000",
+      "period": "2027-09-30",
+      "requested_usd": "0.0000"
+    },
+    {
+      "arrears_paid_usd": "0.0000",
+      "cash_flow": "FINANCING",
+      "closing_unpaid_usd": "0.0000",
+      "current_funded_usd": "100000.0000",
+      "new_deferral_usd": "0.0000",
+      "opening_unpaid_usd": "0.0000",
+      "period": "2027-09-30",
+      "requested_usd": "100000.0000"
+    },
+    {
+      "arrears_paid_usd": "0.0000",
+      "cash_flow": "OPERATING",
+      "closing_unpaid_usd": "0.0000",
+      "current_funded_usd": "6771155.3880",
+      "new_deferral_usd": "0.0000",
+      "opening_unpaid_usd": "0.0000",
+      "period": "2027-10-31",
+      "requested_usd": "6771155.3880"
+    },
+    {
+      "arrears_paid_usd": "0.0000",
+      "cash_flow": "INVESTING",
+      "closing_unpaid_usd": "0.0000",
+      "current_funded_usd": "0.0000",
+      "new_deferral_usd": "0.0000",
+      "opening_unpaid_usd": "0.0000",
+      "period": "2027-10-31",
+      "requested_usd": "0.0000"
+    },
+    {
+      "arrears_paid_usd": "0.0000",
+      "cash_flow": "FINANCING",
+      "closing_unpaid_usd": "0.0000",
+      "current_funded_usd": "100000.0000",
+      "new_deferral_usd": "0.0000",
+      "opening_unpaid_usd": "0.0000",
+      "period": "2027-10-31",
+      "requested_usd": "100000.0000"
+    },
+    {
+      "arrears_paid_usd": "0.0000",
+      "cash_flow": "OPERATING",
+      "closing_unpaid_usd": "0.0000",
+      "current_funded_usd": "6741373.4574",
+      "new_deferral_usd": "0.0000",
+      "opening_unpaid_usd": "0.0000",
+      "period": "2027-11-30",
+      "requested_usd": "6741373.4574"
+    },
+    {
+      "arrears_paid_usd": "0.0000",
+      "cash_flow": "INVESTING",
+      "closing_unpaid_usd": "0.0000",
+      "current_funded_usd": "0.0000",
+      "new_deferral_usd": "0.0000",
+      "opening_unpaid_usd": "0.0000",
+      "period": "2027-11-30",
+      "requested_usd": "0.0000"
+    },
+    {
+      "arrears_paid_usd": "0.0000",
+      "cash_flow": "FINANCING",
+      "closing_unpaid_usd": "0.0000",
+      "current_funded_usd": "100000.0000",
+      "new_deferral_usd": "0.0000",
+      "opening_unpaid_usd": "0.0000",
+      "period": "2027-11-30",
+      "requested_usd": "100000.0000"
+    },
+    {
+      "arrears_paid_usd": "0.0000",
+      "cash_flow": "OPERATING",
+      "closing_unpaid_usd": "0.0000",
+      "current_funded_usd": "6749768.5214",
+      "new_deferral_usd": "0.0000",
+      "opening_unpaid_usd": "0.0000",
+      "period": "2027-12-31",
+      "requested_usd": "6749768.5214"
+    },
+    {
+      "arrears_paid_usd": "0.0000",
+      "cash_flow": "INVESTING",
+      "closing_unpaid_usd": "0.0000",
+      "current_funded_usd": "0.0000",
+      "new_deferral_usd": "0.0000",
+      "opening_unpaid_usd": "0.0000",
+      "period": "2027-12-31",
+      "requested_usd": "0.0000"
+    },
+    {
+      "arrears_paid_usd": "0.0000",
+      "cash_flow": "FINANCING",
+      "closing_unpaid_usd": "0.0000",
+      "current_funded_usd": "100000.0000",
+      "new_deferral_usd": "0.0000",
+      "opening_unpaid_usd": "0.0000",
+      "period": "2027-12-31",
+      "requested_usd": "100000.0000"
+    }
+  ],
+  "scope": {
+    "period_end": "2027-12",
+    "period_start": "2027-01",
+    "release": "business-operations-v1.0.0",
+    "release_sha256": "b8e81572d829fec7209d1d18eb15bac21e52b37714211aee005b5f1a68ab5817",
+    "scenario": "base",
+    "source_revision": "57cfa1b1c483ccf1f8b15d82c4cbdadbeef8063e"
+  },
+  "source_table": "treasury_reconciliation",
+  "title": "Procurement, payables and Treasury"
+}

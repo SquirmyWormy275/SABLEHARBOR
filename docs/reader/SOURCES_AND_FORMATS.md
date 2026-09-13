@@ -36,11 +36,13 @@ An external host is not a subsidiary; a selected provider is not an executed con
 
 ## Wiki and interactive pages
 
-`docs/wiki/` is the versioned Markdown reading layer. The repository reading layer was accepted through PR #128. On the refreshed September 11 (Pacific) inspection, the separate wiki Git endpoint still returned “Repository not found.” Therefore these pages are delivered as repository pages; live GitHub Wiki publication is not claimed.
+`docs/wiki/` is the versioned Markdown reading layer. The [live Wiki](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki) was published from accepted main on September 12, 2026. Its export manifest records the source revision and page hashes; [publication and verification details](../wiki/README.md) distinguish the initial delivery from later updates. Repository sources remain controlling.
 
 The repository pages work directly in GitHub. Interactive HTML requires a local browser or a separately published copy of the same committed files. The atlas and packaged browsers retain their existing instructions. No second content authority is introduced.
 
 ## Maintenance
+
+The [approved-file protection guide](APPROVED_ASSET_PROTECTION.md) explains which exact files are protected by existing acceptance records and how changes are detected. It does not grant approval to new designs.
 
 Rebuild the institutional catalog and reader library with:
 

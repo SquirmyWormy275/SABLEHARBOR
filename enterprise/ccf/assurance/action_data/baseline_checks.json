@@ -1,0 +1,1162 @@
+[
+  {
+    "requirement_id": "SOC2:CC1.2",
+    "source_locator": "CC1.2",
+    "source_condition": "Oversight must include independence from management and oversight of development and performance of internal control; document expertise and challenge of management.",
+    "procedure_and_test": "Inspect governing-body composition, conflicts and minutes challenging a control failure; a meeting calendar alone cannot demonstrate oversight.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P1",
+    "activation": "Before relying on the affected requirement for the actual selected service and role."
+  },
+  {
+    "requirement_id": "SOC2:CC1.3",
+    "source_locator": "CC1.3",
+    "source_condition": "Translate objectives into reporting lines, delegated authority and responsibilities across entities, locations and outsourced functions.",
+    "procedure_and_test": "Trace a cross-site escalation from executor through delegated authority to governing oversight; test a conflicting assignment.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P1",
+    "activation": "Before relying on the affected requirement for the actual selected service and role."
+  },
+  {
+    "requirement_id": "SOC2:CC2.1",
+    "source_locator": "CC2.1",
+    "source_condition": "Information used by controls must be relevant and sufficiently reliable, timely, complete and accurate for the objective.",
+    "procedure_and_test": "Reconcile a control report to its originating system, transformation logic, excluded records and data-quality exceptions; count reconciliation alone does not establish accuracy.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P1",
+    "activation": "Before relying on the affected requirement for the actual selected service and role."
+  },
+  {
+    "requirement_id": "SOC2:CC3.1",
+    "source_locator": "CC3.1",
+    "source_condition": "Specify objectives clearly enough to identify and assess related risks; bind service commitments and system requirements to those objectives.",
+    "procedure_and_test": "Compare accepted commitments to risk objectives and tolerances; challenge a vague availability objective that cannot be measured.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P1",
+    "activation": "Before relying on the affected requirement for the actual selected service and role."
+  },
+  {
+    "requirement_id": "SOC2:CC3.2",
+    "source_locator": "CC3.2",
+    "source_condition": "Identify and analyze risks across the entity and its dependencies as the basis for risk management.",
+    "procedure_and_test": "Trace a supplier outage and an internal threat through likelihood, impact, significance, treatment and accountable decision; reject a risk list without analysis.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P1",
+    "activation": "Before relying on the affected requirement for the actual selected service and role."
+  },
+  {
+    "requirement_id": "SOC2:CC3.3",
+    "source_locator": "CC3.3",
+    "source_condition": "Consider fraud in assessing achievement of objectives, including incentives, opportunities, rationalization and management override.",
+    "procedure_and_test": "Inspect fraud scenarios beyond external intrusion; trace an override or dishonest reporting scenario to mitigation and review.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P1",
+    "activation": "Before relying on the affected requirement for the actual selected service and role."
+  },
+  {
+    "requirement_id": "SOC2:CC3.4",
+    "source_locator": "CC3.4",
+    "source_condition": "Identify changes that could significantly affect internal control, including business model, external environment and leadership.",
+    "procedure_and_test": "Select a changed provider or service and verify a timely risk reassessment and resulting procedure change, including a decision that no change is needed.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P1",
+    "activation": "Before relying on the affected requirement for the actual selected service and role."
+  },
+  {
+    "requirement_id": "SOC2:CC4.1",
+    "source_locator": "CC4.1",
+    "source_condition": "Select and perform ongoing or separate evaluations to determine whether control components are present and functioning.",
+    "procedure_and_test": "Compare the evaluation plan with risk, change and evaluator objectivity; inspect an ongoing monitoring gap and an independently performed evaluation.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P1",
+    "activation": "Before relying on the affected requirement for the actual selected service and role."
+  },
+  {
+    "requirement_id": "SOC2:CC4.2",
+    "source_locator": "CC4.2",
+    "source_condition": "Evaluate and communicate deficiencies in time for corrective action, including senior management and governance when appropriate.",
+    "procedure_and_test": "Trace severity, notification, accountable action and overdue escalation; verify that closure evidence addresses the deficiency rather than only closing a ticket.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P1",
+    "activation": "Before relying on the affected requirement for the actual selected service and role."
+  },
+  {
+    "requirement_id": "SOC2:CC5.1",
+    "source_locator": "CC5.1",
+    "source_condition": "Select control activities that reduce risk to acceptable levels, including segregation or justified alternative activities where segregation is impracticable.",
+    "procedure_and_test": "Trace a significant risk to preventive/detective steps and incompatible responsibilities; test whether the alternative actually addresses the conflict.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P1",
+    "activation": "Before relying on the affected requirement for the actual selected service and role."
+  },
+  {
+    "requirement_id": "SOC2:CC5.2",
+    "source_locator": "CC5.2",
+    "source_condition": "Select technology control activities supporting objectives across infrastructure, access and acquisition/development/maintenance.",
+    "procedure_and_test": "Reconcile technologies and outsourced components to controls and test an unsupported component; a hardening baseline alone does not cover the technology lifecycle.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P1",
+    "activation": "Before relying on the affected requirement for the actual selected service and role."
+  },
+  {
+    "requirement_id": "SOC2:CC5.3",
+    "source_locator": "CC5.3",
+    "source_condition": "Deploy control activities through policies and procedures that assign timely execution, competent personnel, correction and reassessment.",
+    "procedure_and_test": "Walk one policy into an executable trigger, responsible person, dated result and correction; reject an approved policy with no execution procedure.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P1",
+    "activation": "Before relying on the affected requirement for the actual selected service and role."
+  },
+  {
+    "requirement_id": "SOC2:CC6.1",
+    "source_locator": "CC6.1",
+    "source_condition": "Protect information assets through logical access architecture, authentication and authorization, including privileged paths and credentials.",
+    "procedure_and_test": "Trace a human and service identity through each trust boundary and resource permission; test unauthorized access, key/credential protection and a privileged path.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P1",
+    "activation": "Before relying on the affected requirement for the actual selected service and role."
+  },
+  {
+    "requirement_id": "SOC2:CC6.2",
+    "source_locator": "CC6.2",
+    "source_condition": "Register and authorize users before credentials/access are issued and remove credentials when access is no longer authorized.",
+    "procedure_and_test": "Reconcile HR, contractor and nonhuman identity populations with all identity stores; inspect pre-issue approval and termination removal including local accounts.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P1",
+    "activation": "Before relying on the affected requirement for the actual selected service and role."
+  },
+  {
+    "requirement_id": "SOC2:CC6.3",
+    "source_locator": "CC6.3",
+    "source_condition": "Authorize, modify and remove resource access based on responsibilities, least privilege and segregation of duties.",
+    "procedure_and_test": "Test an access change against actual job duties, conflicting privileges and approval authority; review effective permissions rather than group membership alone.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P1",
+    "activation": "Before relying on the affected requirement for the actual selected service and role."
+  },
+  {
+    "requirement_id": "SOC2:CC6.4",
+    "source_locator": "CC6.4",
+    "source_condition": "Restrict physical access to facilities and protected information assets to authorized personnel.",
+    "procedure_and_test": "Inspect site zoning, visitor authorization, escort, credentials and revocation at Reno, Boise and relevant providers; logical IAM records are insufficient physical evidence.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P1",
+    "activation": "Before relying on the affected requirement for the actual selected service and role."
+  },
+  {
+    "requirement_id": "SOC2:CC6.5",
+    "source_locator": "CC6.5",
+    "source_condition": "End protection of physical assets only after data and software cannot be read or recovered, when no longer needed for objectives.",
+    "procedure_and_test": "Trace retired media through custody, hold checks, sanitization method and verification before release; a disposal receipt alone does not prove unrecoverability.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P1",
+    "activation": "Before relying on the affected requirement for the actual selected service and role."
+  },
+  {
+    "requirement_id": "SOC2:CC6.6",
+    "source_locator": "CC6.6",
+    "source_condition": "Protect against threats originating outside system boundaries through restricted connectivity and protected access paths.",
+    "procedure_and_test": "Test approved ingress/egress paths, remote administration and boundary defenses against an unauthorized connection; reconcile rules to actual external interfaces.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P1",
+    "activation": "Before relying on the affected requirement for the actual selected service and role."
+  },
+  {
+    "requirement_id": "SOC2:CC6.7",
+    "source_locator": "CC6.7",
+    "source_condition": "Restrict transmission, movement and removal of information to authorized processes and protect it during those activities.",
+    "procedure_and_test": "Trace a transfer to purpose, recipient authorization, channel/endpoint protection and handling after receipt; transport encryption alone does not authorize the transfer.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P1",
+    "activation": "Before relying on the affected requirement for the actual selected service and role."
+  },
+  {
+    "requirement_id": "SOC2:CC6.8",
+    "source_locator": "CC6.8",
+    "source_condition": "Prevent or detect and act upon unauthorized or malicious software introduction.",
+    "procedure_and_test": "Inspect installation restrictions, update coverage and detection response on representative assets; test an unapproved executable and exception path.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P1",
+    "activation": "Before relying on the affected requirement for the actual selected service and role."
+  },
+  {
+    "requirement_id": "SOC2:CC7.1",
+    "source_locator": "CC7.1",
+    "source_condition": "Detect configuration changes creating vulnerabilities and newly identified vulnerabilities across the system.",
+    "procedure_and_test": "Reconcile inventory, scan and baseline populations; trace drift and a newly disclosed vulnerability through detection and correction.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P1",
+    "activation": "Before relying on the affected requirement for the actual selected service and role."
+  },
+  {
+    "requirement_id": "SOC2:CC7.2",
+    "source_locator": "CC7.2",
+    "source_condition": "Monitor components and operation for anomalous behavior affecting objectives and analyze anomalies.",
+    "procedure_and_test": "Inspect detection rules, source coverage, alert analysis and periods of collection failure; a healthy collector is not evidence that anomalies were examined.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P1",
+    "activation": "Before relying on the affected requirement for the actual selected service and role."
+  },
+  {
+    "requirement_id": "SOC2:CC7.3",
+    "source_locator": "CC7.3",
+    "source_condition": "Evaluate security events to determine whether they constitute incidents affecting objectives and act appropriately.",
+    "procedure_and_test": "Reperform classification for an incident and dismissed event using impact evidence, escalation criteria and recorded rationale.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P1",
+    "activation": "Before relying on the affected requirement for the actual selected service and role."
+  },
+  {
+    "requirement_id": "SOC2:CC7.4",
+    "source_locator": "CC7.4",
+    "source_condition": "Execute an incident response program to understand, contain, remediate and communicate incidents.",
+    "procedure_and_test": "Walk a scenario through command, containment, eradication, recovery authorization and communications; evaluate legal notification on its separate clock.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P1",
+    "activation": "Before relying on the affected requirement for the actual selected service and role."
+  },
+  {
+    "requirement_id": "SOC2:CC7.5",
+    "source_locator": "CC7.5",
+    "source_condition": "Identify, develop and implement recovery activities after identified security incidents.",
+    "procedure_and_test": "Trace restored service validation, stakeholder communications, root-cause analysis and changes preventing recurrence; closure alone is not recovery validation.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P1",
+    "activation": "Before relying on the affected requirement for the actual selected service and role."
+  },
+  {
+    "requirement_id": "SOC2:CC8.1",
+    "source_locator": "CC8.1",
+    "source_condition": "Authorize, design/develop or acquire, configure, document, test, approve and implement changes supporting objectives.",
+    "procedure_and_test": "Select normal and emergency code, infrastructure and data changes; trace requirements, security tests, independent approval, deployment verification and rollback.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P1",
+    "activation": "Before relying on the affected requirement for the actual selected service and role."
+  },
+  {
+    "requirement_id": "SOC2:CC9.1",
+    "source_locator": "CC9.1",
+    "source_condition": "Identify and develop mitigation for potential business disruptions, including risk-transfer choices where appropriate.",
+    "procedure_and_test": "Trace a dependency failure to continuity treatment, recovery resources and accepted residual risk; insurance is a possible treatment, not a universal mandated purchase.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P1",
+    "activation": "Before relying on the affected requirement for the actual selected service and role."
+  },
+  {
+    "requirement_id": "SOC2:CC9.2",
+    "source_locator": "CC9.2",
+    "source_condition": "Assess and manage risks associated with vendors and business partners.",
+    "procedure_and_test": "Trace supplier selection, contractual responsibilities, ongoing monitoring, unresolved report exceptions and exit capability; possession of a supplier report does not close its exceptions.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P1",
+    "activation": "Before relying on the affected requirement for the actual selected service and role."
+  },
+  {
+    "requirement_id": "SOC2:A1.1",
+    "source_locator": "A1.1",
+    "source_condition": "Measure current use and forecast capacity to manage demand and enable additional capacity supporting availability objectives.",
+    "procedure_and_test": "Compare peak and expected demand with primary and recovery capacity and action thresholds; a BIA without utilization/forecast records is insufficient.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P1",
+    "activation": "Before relying on the affected requirement for the actual selected service and role."
+  },
+  {
+    "requirement_id": "SOC2:A1.2",
+    "source_locator": "A1.2",
+    "source_condition": "Provide environmental protection, backup and recovery infrastructure supporting availability objectives.",
+    "procedure_and_test": "Inspect monitored environmental protections, backup recoverability and recovery infrastructure under a site failure; backup job success does not establish recovery capacity.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P1",
+    "activation": "Before relying on the affected requirement for the actual selected service and role."
+  },
+  {
+    "requirement_id": "SOC2:A1.3",
+    "source_locator": "A1.3",
+    "source_condition": "Test recovery procedures supporting availability objectives.",
+    "procedure_and_test": "Reperform restore and failover outcomes against accepted RTO/RPO and data usability; include deviations, corrective actions and retests.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P1",
+    "activation": "Before relying on the affected requirement for the actual selected service and role."
+  },
+  {
+    "requirement_id": "SOC2:C1.1",
+    "source_locator": "C1.1",
+    "source_condition": "Identify and maintain confidential information in accordance with confidentiality objectives.",
+    "procedure_and_test": "Trace classification, contractual obligations, retention and lifecycle protection to actual datasets; inspect premature deletion and unauthorized retention risks.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P1",
+    "activation": "Before relying on the affected requirement for the actual selected service and role."
+  },
+  {
+    "requirement_id": "SOC2:C1.2",
+    "source_locator": "C1.2",
+    "source_condition": "Dispose of confidential information in accordance with confidentiality objectives.",
+    "procedure_and_test": "Reconcile expiry and holds with deletion across active systems, backup lifecycle and providers; retain disposition verification and unresolved copies.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P1",
+    "activation": "Before relying on the affected requirement for the actual selected service and role."
+  },
+  {
+    "requirement_id": "HIPAA:160.101",
+    "source_locator": "160.101",
+    "source_condition": "Statutory authority establishes context; it is not a separate operating safeguard.",
+    "procedure_and_test": "Check the authority citation in the obligation register without creating a recurring technical control.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P2",
+    "activation": "On an actual legal event or scheduled source-context review; no enforcement matter is asserted."
+  },
+  {
+    "requirement_id": "HIPAA:160.102",
+    "source_locator": "160.102",
+    "source_condition": "Associate applicability is only where provided; covered-entity categories and functions determine the role.",
+    "procedure_and_test": "Trace each actual entity/function to a role decision and the specific provisions applying to that role.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P0",
+    "activation": "Before relying on the affected requirement for the actual selected service and role."
+  },
+  {
+    "requirement_id": "HIPAA:160.103",
+    "source_locator": "160.103",
+    "source_condition": "Maintaining PHI on behalf of an associate can create subcontractor status; workforce and listed exclusions require factual analysis.",
+    "procedure_and_test": "Compare contracting chain, PHI flows and workforce status to the definitions, including exceptions; do not classify from a vendor label alone.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P0",
+    "activation": "Before relying on the affected requirement for the actual selected service and role."
+  },
+  {
+    "requirement_id": "HIPAA:160.104",
+    "source_locator": "160.104",
+    "source_condition": "Modification timing is a rulemaking provision; the applicable final rule establishes the actual compliance date.",
+    "procedure_and_test": "Record final-rule effective/compliance dates and exceptions; do not turn the general 180-day floor into an automatic service grace period.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P2",
+    "activation": "On an actual legal event or scheduled source-context review; no enforcement matter is asserted."
+  },
+  {
+    "requirement_id": "HIPAA:160.105",
+    "source_locator": "160.105",
+    "source_condition": "The post-2013 default transition is 180 days after effectiveness except where otherwise provided.",
+    "procedure_and_test": "Verify the specific new or modified rule overrides before docketing the compliance date.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P2",
+    "activation": "On an actual legal event or scheduled source-context review; no enforcement matter is asserted."
+  },
+  {
+    "requirement_id": "HIPAA:160.201",
+    "source_locator": "160.201",
+    "source_condition": "Preemption authority is legal context rather than an operating safeguard.",
+    "procedure_and_test": "Link the authority to the preemption analysis and retain context classification.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P2",
+    "activation": "On an actual legal event or scheduled source-context review; no enforcement matter is asserted."
+  },
+  {
+    "requirement_id": "HIPAA:160.202",
+    "source_locator": "160.202",
+    "source_condition": "Contrary law concerns impossibility or obstruction; more-stringent tests differ for disclosure, rights, notices, permission and records.",
+    "procedure_and_test": "Require a provision-by-provision state/federal comparison identifying the applicable test, not a blanket stricter-law assertion.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P0",
+    "activation": "Before relying on the affected requirement for the actual selected service and role."
+  },
+  {
+    "requirement_id": "HIPAA:160.203",
+    "source_locator": "160.203",
+    "source_condition": "Federal preemption has separate exceptions for Secretary determinations, stronger privacy law and specified reporting/oversight laws.",
+    "procedure_and_test": "Record the actual exception and supporting law for each conflict before treating a state duty as displaced.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P0",
+    "activation": "Before relying on the affected requirement for the actual selected service and role."
+  },
+  {
+    "requirement_id": "HIPAA:160.204",
+    "source_locator": "160.204",
+    "source_condition": "An exception request identifies the conflicting provisions, affected entities and grounds; the federal rule remains effective until determination.",
+    "procedure_and_test": "Inspect the written request and determination; reject a pending request as authority to stop compliance.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P2",
+    "activation": "On an actual legal event or scheduled source-context review; no enforcement matter is asserted."
+  },
+  {
+    "requirement_id": "HIPAA:160.205",
+    "source_locator": "160.205",
+    "source_condition": "An exception ends on material change removing its grounds or Secretary revocation.",
+    "procedure_and_test": "Reassess relied-on exceptions on legal/factual change and retain revocation monitoring evidence.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P2",
+    "activation": "On an actual legal event or scheduled source-context review; no enforcement matter is asserted."
+  },
+  {
+    "requirement_id": "HIPAA:160.300",
+    "source_locator": "160.300",
+    "source_condition": "The subpart covers compliance ascertainment and enforcement for regulated actors.",
+    "procedure_and_test": "Classify as triggered legal-response context and link the response playbook.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P2",
+    "activation": "On an actual legal event or scheduled source-context review; no enforcement matter is asserted."
+  },
+  {
+    "requirement_id": "HIPAA:160.302",
+    "source_locator": "160.302",
+    "source_condition": "The retained section is reserved and contains no substantive paragraph.",
+    "procedure_and_test": "Verify the reserved source entry; retain inventory presence without inventing an operating duty.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P2",
+    "activation": "On an actual legal event or scheduled source-context review; no enforcement matter is asserted."
+  },
+  {
+    "requirement_id": "HIPAA:160.304",
+    "source_locator": "160.304",
+    "source_condition": "Cooperation and technical assistance describe Secretary activities and voluntary compliance support.",
+    "procedure_and_test": "Retain correspondence and distinguish assistance from an approval or assurance conclusion.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P2",
+    "activation": "On an actual legal event or scheduled source-context review; no enforcement matter is asserted."
+  },
+  {
+    "requirement_id": "HIPAA:160.306",
+    "source_locator": "160.306",
+    "source_condition": "Written complaints identify alleged acts and respondent; the complainant normally has 180 days from knowledge, subject to good-cause waiver.",
+    "procedure_and_test": "Keep complaint dates and records, protect reporting and route regulator correspondence; do not convert the complainant clock into the organization's response deadline.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P2",
+    "activation": "On an actual legal event or scheduled source-context review; no enforcement matter is asserted."
+  },
+  {
+    "requirement_id": "HIPAA:160.308",
+    "source_locator": "160.308",
+    "source_condition": "The Secretary conducts reviews for possible willful neglect and may review other circumstances.",
+    "procedure_and_test": "Trigger preservation and authorized cooperation when notified; record review scope and response orders rather than inventing a recurring inspection cadence.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P2",
+    "activation": "On an actual legal event or scheduled source-context review; no enforcement matter is asserted."
+  },
+  {
+    "requirement_id": "HIPAA:160.312",
+    "source_locator": "160.312",
+    "source_condition": "After unsuccessful informal resolution, mitigating/defense evidence is due within 30 days of notification using the referenced computation rule.",
+    "procedure_and_test": "Docket notice receipt, response and service; preserve completed corrective plans and written disposition separately from internal closure.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P2",
+    "activation": "On an actual legal event or scheduled source-context review; no enforcement matter is asserted."
+  },
+  {
+    "requirement_id": "HIPAA:160.314",
+    "source_locator": "160.314",
+    "source_condition": "Entity subpoenas require knowledgeable designees; transcript correction/signature normally has a 30-day window and privilege/objections must be recorded.",
+    "procedure_and_test": "Check subpoena scope, designated witnesses, service, transcript corrections and counsel-controlled objections against the actual proceeding.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P2",
+    "activation": "On an actual legal event or scheduled source-context review; no enforcement matter is asserted."
+  },
+  {
+    "requirement_id": "HIPAA:160.400",
+    "source_locator": "160.400",
+    "source_condition": "This subpart governs civil-money-penalty imposition.",
+    "procedure_and_test": "Retain enforcement classification; do not generate a technical control from the penalty authority.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P2",
+    "activation": "On an actual legal event or scheduled source-context review; no enforcement matter is asserted."
+  },
+  {
+    "requirement_id": "HIPAA:160.401",
+    "source_locator": "160.401",
+    "source_condition": "Reasonable cause, diligence and willful neglect have distinct evidentiary meanings.",
+    "procedure_and_test": "Preserve knowledge, diligence and correction facts for counsel; do not let an incident severity label decide the legal standard.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P2",
+    "activation": "On an actual legal event or scheduled source-context review; no enforcement matter is asserted."
+  },
+  {
+    "requirement_id": "HIPAA:160.402",
+    "source_locator": "160.402",
+    "source_condition": "Agency acts within scope may create associate liability, including workforce and subcontractors.",
+    "procedure_and_test": "Analyze actual agency relationships and conduct; a supplier agreement alone does not eliminate exposure.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P2",
+    "activation": "On an actual legal event or scheduled source-context review; no enforcement matter is asserted."
+  },
+  {
+    "requirement_id": "HIPAA:160.404",
+    "source_locator": "160.404",
+    "source_condition": "Amounts refer to annually adjusted Part 102; duplicate general/specific provisions have penalty-counting limits.",
+    "procedure_and_test": "Resolve the applicable date, tier and current primary adjustment before exposure modeling; leave amounts unpopulated until verified.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P2",
+    "activation": "On an actual legal event or scheduled source-context review; no enforcement matter is asserted."
+  },
+  {
+    "requirement_id": "HIPAA:160.406",
+    "source_locator": "160.406",
+    "source_condition": "Occurrence counting depends on the duty and may count each day of a continuing violation.",
+    "procedure_and_test": "Preserve start/end dates and affected occurrences; distinguish continuous failure from incident ticket counts.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P2",
+    "activation": "On an actual legal event or scheduled source-context review; no enforcement matter is asserted."
+  },
+  {
+    "requirement_id": "HIPAA:160.408",
+    "source_locator": "160.408",
+    "source_condition": "Penalty factors include affected individuals, duration, harm, compliance history and financial circumstances.",
+    "procedure_and_test": "Collect supporting facts with provenance and privilege handling rather than auto-scoring mitigation from remediation status.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P2",
+    "activation": "On an actual legal event or scheduled source-context review; no enforcement matter is asserted."
+  },
+  {
+    "requirement_id": "HIPAA:160.410",
+    "source_locator": "160.410",
+    "source_condition": "Current-period correction defenses require the specified absence of willful neglect and correction within 30 days of actual/constructive knowledge or allowed extension.",
+    "procedure_and_test": "Preserve discovery and correction evidence and any Secretary extension; internal risk acceptance does not establish an affirmative defense.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P2",
+    "activation": "On an actual legal event or scheduled source-context review; no enforcement matter is asserted."
+  },
+  {
+    "requirement_id": "HIPAA:160.412",
+    "source_locator": "160.412",
+    "source_condition": "The Secretary may waive qualifying penalties where payment would be excessive relative to the violation.",
+    "procedure_and_test": "Record eligibility analysis, request and actual disposition; do not mark waiver granted when requested.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P2",
+    "activation": "On an actual legal event or scheduled source-context review; no enforcement matter is asserted."
+  },
+  {
+    "requirement_id": "HIPAA:160.414",
+    "source_locator": "160.414",
+    "source_condition": "The retained rule requires commencement within six years of occurrence.",
+    "procedure_and_test": "Counsel verifies occurrence and commencement facts and applicable authority; retention policy is not this limitations determination.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P2",
+    "activation": "On an actual legal event or scheduled source-context review; no enforcement matter is asserted."
+  },
+  {
+    "requirement_id": "HIPAA:160.416",
+    "source_locator": "160.416",
+    "source_condition": "Secretary settlement authority is not constrained by the subpart.",
+    "procedure_and_test": "Route proposed terms to authorized counsel and management; retain the actual executed settlement and duties.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P2",
+    "activation": "On an actual legal event or scheduled source-context review; no enforcement matter is asserted."
+  },
+  {
+    "requirement_id": "HIPAA:160.418",
+    "source_locator": "160.418",
+    "source_condition": "Civil penalties can coexist with other penalties subject to the stated statutory exceptions.",
+    "procedure_and_test": "Assess additional exposure separately; payment does not automatically resolve every proceeding.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P2",
+    "activation": "On an actual legal event or scheduled source-context review; no enforcement matter is asserted."
+  },
+  {
+    "requirement_id": "HIPAA:160.420",
+    "source_locator": "160.420",
+    "source_condition": "The proposed determination includes basis, facts, amount, factors and hearing instructions; failure to request hearing within 90 days has stated consequences.",
+    "procedure_and_test": "Capture receipt and completeness, docket the hearing path and preserve a statistical study if relied on.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P2",
+    "activation": "On an actual legal event or scheduled source-context review; no enforcement matter is asserted."
+  },
+  {
+    "requirement_id": "HIPAA:160.422",
+    "source_locator": "160.422",
+    "source_condition": "Absent timely hearing request or settlement, an imposed penalty becomes final on receipt with no specified Board appeal right.",
+    "procedure_and_test": "Escalate missed hearing deadlines and preserve final notice; do not presume an appeal remains available.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P2",
+    "activation": "On an actual legal event or scheduled source-context review; no enforcement matter is asserted."
+  },
+  {
+    "requirement_id": "HIPAA:160.424",
+    "source_locator": "160.424",
+    "source_condition": "Final penalties may be collected or offset; previously available hearing issues cannot simply be raised again as collection defenses.",
+    "procedure_and_test": "Reconcile final determination, payment/offset and counsel's available remedies before finance execution.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P2",
+    "activation": "On an actual legal event or scheduled source-context review; no enforcement matter is asserted."
+  },
+  {
+    "requirement_id": "HIPAA:160.426",
+    "source_locator": "160.426",
+    "source_condition": "The Secretary notifies the public and specified organizations after a proposed penalty becomes final.",
+    "procedure_and_test": "Prepare accurate authorized communications and track finality; this is not a mandate for routine customer publication by the company.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P2",
+    "activation": "On an actual legal event or scheduled source-context review; no enforcement matter is asserted."
+  },
+  {
+    "requirement_id": "HIPAA:160.500",
+    "source_locator": "160.500",
+    "source_condition": "Hearing procedures concern civil-money-penalty cases.",
+    "procedure_and_test": "Activate the case playbook only for a real proceeding; retain source context otherwise.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P2",
+    "activation": "On an actual legal event or scheduled source-context review; no enforcement matter is asserted."
+  },
+  {
+    "requirement_id": "HIPAA:160.502",
+    "source_locator": "160.502",
+    "source_condition": "Board means the specified HHS Departmental Appeals Board panel.",
+    "procedure_and_test": "Verify the proper appellate body and addressee rather than routing to corporate governance.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P2",
+    "activation": "On an actual legal event or scheduled source-context review; no enforcement matter is asserted."
+  },
+  {
+    "requirement_id": "HIPAA:160.504",
+    "source_locator": "160.504",
+    "source_condition": "Hearing request is signed, sent by certified mail within 90 days of receipt; receipt is presumed five days after notice absent a reasonable contrary showing.",
+    "procedure_and_test": "Test actual/presumed receipt, admitted/denied facts, defense grounds and mailing proof with counsel; do not add the general mail-response extension to this request.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P2",
+    "activation": "On an actual legal event or scheduled source-context review; no enforcement matter is asserted."
+  },
+  {
+    "requirement_id": "HIPAA:160.506",
+    "source_locator": "160.506",
+    "source_condition": "Party rights include representation, permitted discovery, evidence and cross-examination subject to the subpart.",
+    "procedure_and_test": "Confirm representative authority and ethical conduct; record exercised or intentionally waived procedural rights.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P2",
+    "activation": "On an actual legal event or scheduled source-context review; no enforcement matter is asserted."
+  },
+  {
+    "requirement_id": "HIPAA:160.508",
+    "source_locator": "160.508",
+    "source_condition": "ALJ powers include scheduling, discovery and summary judgment within specified limits.",
+    "procedure_and_test": "Maintain orders and assigned actions; distinguish ALJ directions from options or requests and flag contested authority for counsel.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P2",
+    "activation": "On an actual legal event or scheduled source-context review; no enforcement matter is asserted."
+  },
+  {
+    "requirement_id": "HIPAA:160.510",
+    "source_locator": "160.510",
+    "source_condition": "Merits communications require notice and participation opportunity for both parties; routine administrative inquiries are excepted.",
+    "procedure_and_test": "Inspect case communications for prohibited ex parte contact while allowing documented scheduling/status inquiries.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P2",
+    "activation": "On an actual legal event or scheduled source-context review; no enforcement matter is asserted."
+  },
+  {
+    "requirement_id": "HIPAA:160.512",
+    "source_locator": "160.512",
+    "source_condition": "At least one prehearing conference has at least 14 business days' reasonable notice; the ALJ records agreements/orders.",
+    "procedure_and_test": "Docket the conference, prepare authorized representatives and reconcile the resulting order to action owners and deadlines.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P2",
+    "activation": "On an actual legal event or scheduled source-context review; no enforcement matter is asserted."
+  },
+  {
+    "requirement_id": "HIPAA:160.514",
+    "source_locator": "160.514",
+    "source_condition": "The Secretary has exclusive settlement authority without ALJ consent.",
+    "procedure_and_test": "Verify the settlement counterparty's authority; do not make ALJ signature an invented condition.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P2",
+    "activation": "On an actual legal event or scheduled source-context review; no enforcement matter is asserted."
+  },
+  {
+    "requirement_id": "HIPAA:160.516",
+    "source_locator": "160.516",
+    "source_condition": "Permitted document discovery requires response or reasoned objection within 30 days unless extended; electronic data must be accessible and privileges remain relevant.",
+    "procedure_and_test": "Track requests, scoped objections, accessible production and protective/compel motions, including the second 30-day motion window.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P2",
+    "activation": "On an actual legal event or scheduled source-context review; no enforcement matter is asserted."
+  },
+  {
+    "requirement_id": "HIPAA:160.518",
+    "source_locator": "160.518",
+    "source_condition": "Witness/exhibit exchange is 15-60 days before hearing, with a respondent statistical expert report at least 30 days before; late material can be excluded.",
+    "procedure_and_test": "Independently compute each exchange deadline and preserve delivery, objections and any extraordinary-circumstance ruling.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P2",
+    "activation": "On an actual legal event or scheduled source-context review; no enforcement matter is asserted."
+  },
+  {
+    "requirement_id": "HIPAA:160.520",
+    "source_locator": "160.520",
+    "source_condition": "Subpoena motion is normally at least 30 days before hearing; response and quash windows are 15 and 10 days respectively.",
+    "procedure_and_test": "Docket motion, opposition, service and quash separately; verify named witnesses, necessary evidence and allowed exceptions.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P2",
+    "activation": "On an actual legal event or scheduled source-context review; no enforcement matter is asserted."
+  },
+  {
+    "requirement_id": "HIPAA:160.522",
+    "source_locator": "160.522",
+    "source_condition": "The requesting party pays witness fees/mileage; a check accompanies service except the stated Secretary exception.",
+    "procedure_and_test": "Reconcile the actual subpoenaing party, service package and authorized fee payment.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P2",
+    "activation": "On an actual legal event or scheduled source-context review; no enforcement matter is asserted."
+  },
+  {
+    "requirement_id": "HIPAA:160.524",
+    "source_locator": "160.524",
+    "source_condition": "Absent contrary ALJ direction, filings include prescribed copies, caption, signature and contact data; service and certificate accompany filing.",
+    "procedure_and_test": "Check the actual order first, then filing form, mailing date, opposing counsel service and proof.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P2",
+    "activation": "On an actual legal event or scheduled source-context review; no enforcement matter is asserted."
+  },
+  {
+    "requirement_id": "HIPAA:160.526",
+    "source_locator": "160.526",
+    "source_condition": "Time starts the following day; last-day weekends/holidays roll forward, periods under seven days exclude intervening nonbusiness days, and mail normally adds five days except hearing requests.",
+    "procedure_and_test": "Reperform the docket with federal holidays and actual service method; independently test the hearing-request exception.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P2",
+    "activation": "On an actual legal event or scheduled source-context review; no enforcement matter is asserted."
+  },
+  {
+    "requirement_id": "HIPAA:160.528",
+    "source_locator": "160.528",
+    "source_condition": "Motions specify relief, authority and facts and are served; written response is generally ten days unless otherwise fixed.",
+    "procedure_and_test": "Reconcile each motion with service and actual ALJ response deadline; oral-motion exceptions require case context.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P2",
+    "activation": "On an actual legal event or scheduled source-context review; no enforcement matter is asserted."
+  },
+  {
+    "requirement_id": "HIPAA:160.530",
+    "source_locator": "160.530",
+    "source_condition": "Noncompliance or misconduct can trigger proportionate sanctions including adverse inferences, default and costs.",
+    "procedure_and_test": "Escalate missed orders and preserve the actual sanction decision; do not silently cure the docket history.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P2",
+    "activation": "On an actual legal event or scheduled source-context review; no enforcement matter is asserted."
+  },
+  {
+    "requirement_id": "HIPAA:160.532",
+    "source_locator": "160.532",
+    "source_condition": "A final violation determination binds a respondent that was a party with opportunity to be heard.",
+    "procedure_and_test": "Link the prior final determination and participation record before asserting issue preclusion.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P2",
+    "activation": "On an actual legal event or scheduled source-context review; no enforcement matter is asserted."
+  },
+  {
+    "requirement_id": "HIPAA:160.534",
+    "source_locator": "160.534",
+    "source_condition": "Respondent bears proof for specified defenses, penalty mitigation and breach-rule compliance; other issues generally fall to the Secretary under a preponderance standard.",
+    "procedure_and_test": "Organize the evidence burden by issue and preserve breach notification/no-breach support; do not treat no regulator evidence as proof of company compliance.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P2",
+    "activation": "On an actual legal event or scheduled source-context review; no enforcement matter is asserted."
+  },
+  {
+    "requirement_id": "HIPAA:160.536",
+    "source_locator": "160.536",
+    "source_condition": "Valid regulator statistical sampling may establish a prima facie case and shift the evidentiary response burden.",
+    "procedure_and_test": "Retain the study, population and methods for qualified rebuttal; never substitute this enforcement rule for an audit sample-size policy.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P2",
+    "activation": "On an actual legal event or scheduled source-context review; no enforcement matter is asserted."
+  },
+  {
+    "requirement_id": "HIPAA:160.538",
+    "source_locator": "160.538",
+    "source_condition": "Oral sworn testimony is the default; ALJ-permitted written testimony retains exchange and cross-examination conditions.",
+    "procedure_and_test": "Verify witness statements, availability, disclosures and actual ALJ orders before relying on a written statement.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P2",
+    "activation": "On an actual legal event or scheduled source-context review; no enforcement matter is asserted."
+  },
+  {
+    "requirement_id": "HIPAA:160.540",
+    "source_locator": "160.540",
+    "source_condition": "The ALJ decides admissibility; irrelevant and privileged material must be excluded and other exclusions/inspection rules apply.",
+    "procedure_and_test": "Keep evidence provenance and counsel's privilege/admissibility assessment; confidentiality markings alone do not establish privilege.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P2",
+    "activation": "On an actual legal event or scheduled source-context review; no enforcement matter is asserted."
+  },
+  {
+    "requirement_id": "HIPAA:160.542",
+    "source_locator": "160.542",
+    "source_condition": "The transcript, admitted evidence and filings form the record; public inspection is subject to ordered restrictions/redactions.",
+    "procedure_and_test": "Reconcile the official record and request appropriate protection through counsel; do not assume a private internal evidence folder makes the hearing record private.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P2",
+    "activation": "On an actual legal event or scheduled source-context review; no enforcement matter is asserted."
+  },
+  {
+    "requirement_id": "HIPAA:160.544",
+    "source_locator": "160.544",
+    "source_condition": "The ALJ sets post-hearing briefing deadlines, no more than 60 days after transcript or stipulated-record receipt.",
+    "procedure_and_test": "Docket the actual order and receipt event; preserve timely filed briefs and any allowed reply.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P2",
+    "activation": "On an actual legal event or scheduled source-context review; no enforcement matter is asserted."
+  },
+  {
+    "requirement_id": "HIPAA:160.546",
+    "source_locator": "160.546",
+    "source_condition": "ALJ decisions contain findings/conclusions; decision timing and 60-day finality coexist with a shorter appeal deadline.",
+    "procedure_and_test": "Record service, finality and the separate 30-day appeal path; do not use finality as the appeal deadline.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P2",
+    "activation": "On an actual legal event or scheduled source-context review; no enforcement matter is asserted."
+  },
+  {
+    "requirement_id": "HIPAA:160.548",
+    "source_locator": "160.548",
+    "source_condition": "Board appeal normally has 30 days from service; timely good-cause extension may add at most 30 days; judicial review has a separate 60-day final-decision clock.",
+    "procedure_and_test": "Maintain appeal, opposition, reconsideration, service and finality events separately with counsel; preserve briefs and court-stamped petition service.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P2",
+    "activation": "On an actual legal event or scheduled source-context review; no enforcement matter is asserted."
+  },
+  {
+    "requirement_id": "HIPAA:160.550",
+    "source_locator": "160.550",
+    "source_condition": "A judicial-review stay request with notice of appeal automatically stays effectiveness until the ALJ rules; a granted stay requires bond or adequate security.",
+    "procedure_and_test": "Preserve request, appeal copy, interim status, security and ruling; an appeal alone is not the specified stay request.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P2",
+    "activation": "On an actual legal event or scheduled source-context review; no enforcement matter is asserted."
+  },
+  {
+    "requirement_id": "HIPAA:160.552",
+    "source_locator": "160.552",
+    "source_condition": "Procedural error is assessed against substantial rights/justice.",
+    "procedure_and_test": "Route alleged error to counsel with prejudice evidence; never label an operational control failure harmless using this hearing rule.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P2",
+    "activation": "On an actual legal event or scheduled source-context review; no enforcement matter is asserted."
+  },
+  {
+    "requirement_id": "HIPAA:164.102",
+    "source_locator": "164.102",
+    "source_condition": "Part 164 statutory authority is context.",
+    "procedure_and_test": "Retain authority references without creating a recurring safeguard.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P2",
+    "activation": "On an actual legal event or scheduled source-context review; no enforcement matter is asserted."
+  },
+  {
+    "requirement_id": "HIPAA:164.103",
+    "source_locator": "164.103",
+    "source_condition": "Hybrid/affiliated concepts and required-by-law definitions depend on organizational facts and enforceable mandates.",
+    "procedure_and_test": "Inspect ownership/control, covered functions and actual legal demands; shared corporate services alone do not create a hybrid designation.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P0",
+    "activation": "Before relying on the affected requirement for the actual selected service and role."
+  },
+  {
+    "requirement_id": "HIPAA:164.104",
+    "source_locator": "164.104",
+    "source_condition": "Part 164 applies to listed covered entities and to associates where provided.",
+    "procedure_and_test": "Bind applicability to actual functions and direct provisions, preserving the approved scenario as hypothetical.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P0",
+    "activation": "Before relying on the affected requirement for the actual selected service and role."
+  },
+  {
+    "requirement_id": "HIPAA:164.105",
+    "source_locator": "164.105",
+    "source_condition": "Hybrid and affiliated designations require qualifying facts, segregation and documented designation retained six years from creation or last effect, whichever later.",
+    "procedure_and_test": "Inspect actual designation, included components and separation safeguards; do not infer a designation from the reference scope.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P1",
+    "activation": "Before relying on the affected requirement for the actual selected service and role."
+  },
+  {
+    "requirement_id": "HIPAA:164.106",
+    "source_locator": "164.106",
+    "source_condition": "Applicable Parts 160 and 162 must be considered alongside Part 164.",
+    "procedure_and_test": "Determine whether transaction functions invoke Part 162 and open a scoped dependency review if so; current inventory does not prove Part 162 coverage.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P2",
+    "activation": "On an actual legal event or scheduled source-context review; no enforcement matter is asserted."
+  },
+  {
+    "requirement_id": "HIPAA:164.302",
+    "source_locator": "164.302",
+    "source_condition": "Security Rule scope concerns ePHI of a covered entity handled by the entity or associate.",
+    "procedure_and_test": "Reconcile created, received, maintained and transmitted ePHI across systems, backups and subcontractors before choosing safeguards.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P1",
+    "activation": "Before relying on the affected requirement for the actual selected service and role."
+  },
+  {
+    "requirement_id": "HIPAA:164.304",
+    "source_locator": "164.304",
+    "source_condition": "Security definitions include attempted incidents, authorization and usable availability across people, technology and facilities.",
+    "procedure_and_test": "Verify incident intake includes attempts and that recovery tests assess usability; distinguish security access from individual privacy access rights.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P2",
+    "activation": "On an actual legal event or scheduled source-context review; no enforcement matter is asserted."
+  },
+  {
+    "requirement_id": "HIPAA:164.318",
+    "source_locator": "164.318",
+    "source_condition": "Initial 2005/2006 covered-entity compliance dates are historical.",
+    "procedure_and_test": "Retain dates as context and test that no new-service grace period is inferred.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P2",
+    "activation": "On an actual legal event or scheduled source-context review; no enforcement matter is asserted."
+  },
+  {
+    "requirement_id": "HIPAA:164.400",
+    "source_locator": "164.400",
+    "source_condition": "Breach subpart applies to breaches occurring on or after September 23, 2009.",
+    "procedure_and_test": "Record event occurrence and distinguish the subpart's date scope from discovery-based notice clocks.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P0",
+    "activation": "Before relying on the affected requirement for the actual selected service and role."
+  },
+  {
+    "requirement_id": "HIPAA:164.404",
+    "source_locator": "164.404",
+    "source_condition": "Covered-entity notice has content/method requirements and a no-unreasonable-delay/60-day maximum; substitute notice differs at ten missing contacts.",
+    "procedure_and_test": "For delegated work, test approved content, contact quality, delivery and 90-day substitute posting/phone conditions; preserve the associate's separate upstream notice.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P1",
+    "activation": "Before relying on the affected requirement for the actual selected service and role."
+  },
+  {
+    "requirement_id": "HIPAA:164.406",
+    "source_locator": "164.406",
+    "source_condition": "Covered-entity media notice is triggered by more than 500 residents of a state/jurisdiction, with the stated timeliness and content.",
+    "procedure_and_test": "Reconcile affected residents by jurisdiction and delegated authority; exactly 500 is not the more-than-500 media trigger.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P1",
+    "activation": "Before relying on the affected requirement for the actual selected service and role."
+  },
+  {
+    "requirement_id": "HIPAA:164.408",
+    "source_locator": "164.408",
+    "source_condition": "HHS reporting uses 500 or more individuals for contemporaneous notice; smaller breaches are logged and reported within 60 days after year-end.",
+    "procedure_and_test": "Reconcile total individuals separately from state residents and maintain the covered entity's reporting/delegation record; exactly 500 triggers this reporting tier.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P1",
+    "activation": "Before relying on the affected requirement for the actual selected service and role."
+  },
+  {
+    "requirement_id": "HIPAA:164.500",
+    "source_locator": "164.500",
+    "source_condition": "Associate privacy duties apply where provided; clearinghouses have distinct role-dependent rules.",
+    "procedure_and_test": "Separate direct BA, delegated covered-entity and inapplicable-by-fact duties, with reviewer reasoning for each actual workflow.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P0",
+    "activation": "Before relying on the affected requirement for the actual selected service and role."
+  },
+  {
+    "requirement_id": "HIPAA:164.501",
+    "source_locator": "164.501",
+    "source_condition": "Designated record sets and purpose categories determine rights/support and permission scope.",
+    "procedure_and_test": "Inventory records used to make decisions about individuals, not only clinical databases; validate actual payment/operations/research purpose before relying on a category.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P2",
+    "activation": "On an actual legal event or scheduled source-context review; no enforcement matter is asserted."
+  },
+  {
+    "requirement_id": "HIPAA:164.506",
+    "source_locator": "164.506",
+    "source_condition": "Treatment/payment/operations permissions have recipient/relationship limits and do not replace required authorization or other conditions.",
+    "procedure_and_test": "Trace a cross-entity operations disclosure to qualifying relationships and purpose plus the BAA; ordinary consent cannot replace a required authorization.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P1",
+    "activation": "Before relying on the affected requirement for the actual selected service and role."
+  },
+  {
+    "requirement_id": "HIPAA:164.508",
+    "source_locator": "164.508",
+    "source_condition": "Valid authorization requires defined data, sender/recipient, purpose, expiry, signature/authority and notices; defects, revocation and combination/conditioning limits matter.",
+    "procedure_and_test": "Test an expired, revoked and incomplete authorization as well as a permitted one; validate special psychotherapy/marketing/sale conditions before release.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P1",
+    "activation": "Before relying on the affected requirement for the actual selected service and role."
+  },
+  {
+    "requirement_id": "HIPAA:164.510",
+    "source_locator": "164.510",
+    "source_condition": "Facility-directory and care/family disclosures have opportunity-to-object, relevance and emergency/best-interest conditions.",
+    "procedure_and_test": "For any delegated workflow, inspect the customer's decision and prior preferences; do not grant general family access based solely on relationship.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P1",
+    "activation": "Before relying on the affected requirement for the actual selected service and role."
+  },
+  {
+    "requirement_id": "HIPAA:164.512",
+    "source_locator": "164.512",
+    "source_condition": "Each no-authorization disclosure route has its own predicates; a subpoena without a court order may require notice/protective-order assurances.",
+    "procedure_and_test": "Use a route-specific legal decision with demand scope, recipient authority and necessary assurances; printed reproductive-health cross-references need the legal-status overlay before use.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P1",
+    "activation": "Before relying on the affected requirement for the actual selected service and role."
+  },
+  {
+    "requirement_id": "HIPAA:164.514",
+    "source_locator": "164.514",
+    "source_condition": "De-identification requires expert determination or the complete safe-harbor conditions; a limited data set remains PHI with purpose and agreement restrictions.",
+    "procedure_and_test": "Test residual identifiers and actual-knowledge limits; distinguish de-identification, re-identification code, limited data set and minimum-necessary workflows and retain supporting determinations.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P1",
+    "activation": "Before relying on the affected requirement for the actual selected service and role."
+  },
+  {
+    "requirement_id": "HIPAA:164.522",
+    "source_locator": "164.522",
+    "source_condition": "Accepted restrictions, paid-in-full health-plan restrictions and reasonable confidential communications have distinct conditions and termination rules.",
+    "procedure_and_test": "Trace customer instructions to filtering/contact configuration; test a termination against data timing and a paid-in-full exception before releasing information.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P1",
+    "activation": "Before relying on the affected requirement for the actual selected service and role."
+  },
+  {
+    "requirement_id": "HIPAA:164.530",
+    "source_locator": "164.530",
+    "source_condition": "Administrative duties include complaint disposition, sanctions with protected-reporting exceptions, mitigation, nonretaliation, policy change and documentation; role and breach cross-references govern BA treatment.",
+    "procedure_and_test": "Inspect applicable delegated/direct steps and six-year later-of retention; reject sanctions against protected reporting and a policy update without required notice coordination.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P1",
+    "activation": "Before relying on the affected requirement for the actual selected service and role."
+  },
+  {
+    "requirement_id": "HIPAA:164.532",
+    "source_locator": "164.532",
+    "source_condition": "Transition provisions depend on qualifying historical permissions and arrangements.",
+    "procedure_and_test": "Require dated pre-transition evidence and the exact exception before reliance; do not treat this as a new agreement exemption.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P2",
+    "activation": "On an actual legal event or scheduled source-context review; no enforcement matter is asserted."
+  },
+  {
+    "requirement_id": "HIPAA:164.534",
+    "source_locator": "164.534",
+    "source_condition": "Initial privacy compliance dates are historical and distinct from subsequent amendments.",
+    "procedure_and_test": "Retain initial dates as context and reconcile later changes separately.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P2",
+    "activation": "On an actual legal event or scheduled source-context review; no enforcement matter is asserted."
+  },
+  {
+    "requirement_id": "HIPAA:164.535",
+    "source_locator": "164.535",
+    "source_condition": "Severability states how invalid provisions are treated but does not itself identify a vacated provision.",
+    "procedure_and_test": "Require the actual judgment/status analysis for the affected text; do not infer enforceability merely from its presence in XML.",
+    "depth": "TARGETED_CONDITION_AND_TEST_NOT_EXHAUSTIVE",
+    "review": null,
+    "priority": "P0",
+    "activation": "Before relying on the affected requirement for the actual selected service and role."
+  }
+]

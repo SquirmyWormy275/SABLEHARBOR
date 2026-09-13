@@ -1,0 +1,126 @@
+{
+  "docs/wiki/Home.md": {
+    "asset": "assets/brand/logos/sable-harbor__reverse-horizontal.png",
+    "sha256": "562e0d37539f88e154a6e5924755ac0ea700dcbfa6e1fe493ef0b8d0eb5c6c31"
+  },
+  "docs/wiki/businesses/Advisory.md": {
+    "asset": "assets/brand/logos/advisory__reverse-horizontal.png",
+    "sha256": "e45a54553e44c7f08b3963e2487c167097fa80f9868d1759de69624e02b24c63"
+  },
+  "docs/wiki/businesses/American-Resource-Utility.md": {
+    "asset": "assets/brand/industrial_sources/aru/aru_primary_centered_chat_asset.png",
+    "sha256": "5892792a95e7fbc2a16171fea38b96d2aee5becf0603b68687f0d48e1bd9fc46"
+  },
+  "docs/wiki/businesses/Atlas-Meridian.md": {
+    "asset": "assets/brand/logos/atlas-meridian__reverse-horizontal.png",
+    "sha256": "fe342ce3c8a9316c1f0ae73de2bee778993ac6ceadffaf03c1b8928ae8a360bc"
+  },
+  "docs/wiki/businesses/Cradle.md": {
+    "asset": "assets/brand/logos/project-cradle__reverse-horizontal.png",
+    "sha256": "f2b9543360866c921b2cf47ca6bcca5cab835e9198098fd28cb0d43ee7fcb460"
+  },
+  "docs/wiki/businesses/Foundry-Field.md": {
+    "asset": "assets/brand/logos/foundry-field__reverse-horizontal.png",
+    "sha256": "35f9e9d89030c432c50e3d57752e09111ff76b0bc9bccfc0a32ac5c357195631"
+  },
+  "docs/wiki/businesses/Pale-Sun-Red-Wash.md": {
+    "asset": "assets/brand/logos/pale_sun__canonical.png",
+    "sha256": "eedcabfca73460e8ff5ad72864c9f669ba2375097b05daa2912f30c9ff35c025"
+  },
+  "docs/wiki/businesses/Willow.md": {
+    "asset": "assets/brand/logos/willow__reverse-horizontal.png",
+    "sha256": "0a99e9dced004db4e47958fd19e40e45fc7d85e94634a45f1583a186503fa4b1"
+  },
+  "docs/wiki/departments/alexandria.md": {
+    "asset": "assets/brand/logos/j2__primary-horizontal.png",
+    "sha256": "9ee44d72f7cf52474d10ab37662c4690e56a01b6d621a52d26ec22bbd0a7a1e2"
+  },
+  "docs/wiki/departments/board.md": {
+    "asset": "assets/brand/logos/sable-harbor__reverse-horizontal.png",
+    "sha256": "562e0d37539f88e154a6e5924755ac0ea700dcbfa6e1fe493ef0b8d0eb5c6c31"
+  },
+  "docs/wiki/departments/contact.md": {
+    "asset": "assets/brand/logos/j2__primary-horizontal.png",
+    "sha256": "9ee44d72f7cf52474d10ab37662c4690e56a01b6d621a52d26ec22bbd0a7a1e2"
+  },
+  "docs/wiki/departments/corporate-secretary.md": {
+    "asset": "assets/brand/logos/sable-harbor__reverse-horizontal.png",
+    "sha256": "562e0d37539f88e154a6e5924755ac0ea700dcbfa6e1fe493ef0b8d0eb5c6c31"
+  },
+  "docs/wiki/departments/education.md": {
+    "asset": "assets/brand/logos/j2__primary-horizontal.png",
+    "sha256": "9ee44d72f7cf52474d10ab37662c4690e56a01b6d621a52d26ec22bbd0a7a1e2"
+  },
+  "docs/wiki/departments/ess.md": {
+    "asset": "assets/brand/logos/sable-harbor__reverse-horizontal.png",
+    "sha256": "562e0d37539f88e154a6e5924755ac0ea700dcbfa6e1fe493ef0b8d0eb5c6c31"
+  },
+  "docs/wiki/departments/executive.md": {
+    "asset": "assets/brand/logos/sable-harbor__reverse-horizontal.png",
+    "sha256": "562e0d37539f88e154a6e5924755ac0ea700dcbfa6e1fe493ef0b8d0eb5c6c31"
+  },
+  "docs/wiki/departments/facilities.md": {
+    "asset": "assets/brand/logos/sable-harbor__reverse-horizontal.png",
+    "sha256": "562e0d37539f88e154a6e5924755ac0ea700dcbfa6e1fe493ef0b8d0eb5c6c31"
+  },
+  "docs/wiki/departments/finance.md": {
+    "asset": "assets/brand/logos/sable-harbor__reverse-horizontal.png",
+    "sha256": "562e0d37539f88e154a6e5924755ac0ea700dcbfa6e1fe493ef0b8d0eb5c6c31"
+  },
+  "docs/wiki/departments/internal-audit.md": {
+    "asset": "assets/brand/logos/sable-harbor__reverse-horizontal.png",
+    "sha256": "562e0d37539f88e154a6e5924755ac0ea700dcbfa6e1fe493ef0b8d0eb5c6c31"
+  },
+  "docs/wiki/departments/j2-headquarters.md": {
+    "asset": "assets/brand/logos/j2__primary-horizontal.png",
+    "sha256": "9ee44d72f7cf52474d10ab37662c4690e56a01b6d621a52d26ec22bbd0a7a1e2"
+  },
+  "docs/wiki/departments/j2.md": {
+    "asset": "assets/brand/logos/j2__primary-horizontal.png",
+    "sha256": "9ee44d72f7cf52474d10ab37662c4690e56a01b6d621a52d26ec22bbd0a7a1e2"
+  },
+  "docs/wiki/departments/jag.md": {
+    "asset": "assets/brand/logos/j2__primary-horizontal.png",
+    "sha256": "9ee44d72f7cf52474d10ab37662c4690e56a01b6d621a52d26ec22bbd0a7a1e2"
+  },
+  "docs/wiki/departments/judgment.md": {
+    "asset": "assets/brand/logos/j2__primary-horizontal.png",
+    "sha256": "9ee44d72f7cf52474d10ab37662c4690e56a01b6d621a52d26ec22bbd0a7a1e2"
+  },
+  "docs/wiki/departments/legal.md": {
+    "asset": "assets/brand/logos/sable-harbor__reverse-horizontal.png",
+    "sha256": "562e0d37539f88e154a6e5924755ac0ea700dcbfa6e1fe493ef0b8d0eb5c6c31"
+  },
+  "docs/wiki/departments/orientation.md": {
+    "asset": "assets/brand/logos/j2__primary-horizontal.png",
+    "sha256": "9ee44d72f7cf52474d10ab37662c4690e56a01b6d621a52d26ec22bbd0a7a1e2"
+  },
+  "docs/wiki/departments/people-culture.md": {
+    "asset": "assets/brand/logos/sable-harbor__reverse-horizontal.png",
+    "sha256": "562e0d37539f88e154a6e5924755ac0ea700dcbfa6e1fe493ef0b8d0eb5c6c31"
+  },
+  "docs/wiki/departments/procurement.md": {
+    "asset": "assets/brand/logos/sable-harbor__reverse-horizontal.png",
+    "sha256": "562e0d37539f88e154a6e5924755ac0ea700dcbfa6e1fe493ef0b8d0eb5c6c31"
+  },
+  "docs/wiki/departments/quality-standards.md": {
+    "asset": "assets/brand/logos/sable-harbor__reverse-horizontal.png",
+    "sha256": "562e0d37539f88e154a6e5924755ac0ea700dcbfa6e1fe493ef0b8d0eb5c6c31"
+  },
+  "docs/wiki/departments/risk-compliance.md": {
+    "asset": "assets/brand/logos/sable-harbor__reverse-horizontal.png",
+    "sha256": "562e0d37539f88e154a6e5924755ac0ea700dcbfa6e1fe493ef0b8d0eb5c6c31"
+  },
+  "docs/wiki/departments/safety-environment.md": {
+    "asset": "assets/brand/logos/sable-harbor__reverse-horizontal.png",
+    "sha256": "562e0d37539f88e154a6e5924755ac0ea700dcbfa6e1fe493ef0b8d0eb5c6c31"
+  },
+  "docs/wiki/departments/security.md": {
+    "asset": "assets/brand/logos/sable-harbor__reverse-horizontal.png",
+    "sha256": "562e0d37539f88e154a6e5924755ac0ea700dcbfa6e1fe493ef0b8d0eb5c6c31"
+  },
+  "docs/wiki/departments/technology.md": {
+    "asset": "assets/brand/logos/sable-harbor__reverse-horizontal.png",
+    "sha256": "562e0d37539f88e154a6e5924755ac0ea700dcbfa6e1fe493ef0b8d0eb5c6c31"
+  }
+}

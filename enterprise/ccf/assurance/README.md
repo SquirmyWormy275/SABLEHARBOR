@@ -115,3 +115,86 @@ Requires `pdftotext` plus the pinned source originals. C5 builds additionally re
 `START_HERE.md` links the design documents, reference explorer and five synthetic explorers. `DESIGNS.json` and CSVs carry the authored analysis; `SOURCE_CONTEXT.json` carries paragraph/focus-candidate fingerprints rather than republished criteria. Bullet spans are source-review aids, not an authoritative points-of-focus population. `OPERATING_INPUTS.csv` is intentionally unfilled where actual people, systems, parameters and providers are needed.
 
 The exercise demonstrates shared corporate evidence with separate site validation, independent SOC/HIPAA tests, C5 delta creation, failed-test preservation, same-period retesting and prospective validation of a new implementation version. Fictional reviews remain confined to the fictional catalog. A later passing period does not repair the earlier failed period. These examples are not external framework coverage or an examination opinion.
+
+## ISO extension planning
+
+The owner's ISO/IEC 27001:2022 and BS ISO/IEC 42001:2023 copies are available, together with the exact 27001:2022/Amd 1:2024 amendment. Use the source-bound ISO adapter rather than the historical starter's access placeholders:
+
+```bash
+uv run python -m enterprise.ccf.assurance.iso build \
+  --target ISO27001 --target ISO42001 \
+  --source-root /path/to/content-addressed-originals --output /new/iso-package
+uv run python -m enterprise.ccf.assurance.iso verify \
+  --source-root /path/to/content-addressed-originals --output /existing/iso-package
+```
+
+Use either ISO target alone or add `--target C5`. Omitting targets selects both ISO frameworks. The SOC 2/HIPAA baseline always remains visible. The package includes an explorer, original implementation plan, delta-action records and unresolved Statement of Applicability rows. The inventory distinguishes 30 ISMS clauses/93 reference controls and 32 AIMS clauses/38 reference controls; normative Annex B guidance, document context and the climate amendment remain explicit review work. Additional native candidates do not mean additional controls are conclusively necessary or sufficient.
+
+Originals and full OCR text remain outside Git and generated exports. The 42001 scan's watermark interferes with OCR; Annex A identifiers were visually checked, but exact wording and complete semantics remain unreviewed. All source/mapping/applicability reviews and actual operating evidence remain absent. Atlas is the read-only reference guide; these adapters and generated designs belong to SABLEHARBOR.
+
+### Control library and coverage review preparation
+
+The completion adapter combines the 64 baseline procedures with 22 authored extension procedures and 11 proposed technical measures. It emits one review workpaper per selected inventoried attribute, retaining source, requirement, mapping and design digests. Routing counts are not accepted coverage; missing routes include assessment/context work as well as control design questions. Source semantics, actual applicability and independent acceptance remain pending.
+
+```sh
+uv run python -m enterprise.ccf.assurance.completion build \
+  --source-root /path/to/content-addressed-originals --output /new/review-packet
+uv run python -m enterprise.ccf.assurance.completion verify \
+  --source-root /path/to/content-addressed-originals --output /existing/review-packet
+```
+
+This preparation packet selects both ISO frameworks and C5 over the SOC 2/HIPAA reference baseline to expose the full current design workload. Use the ISO adapter for selectable individual-framework deltas. Neither adapter changes native controls or records approvals. The completion packet includes proposed tests, required operating inputs, additional measures and a consolidated decision worksheet. Baseline tests provide a procedure-specific evidence walkthrough; exact source-level acceptance criteria still need substantive review. Verification checks original source hashes and regenerates all members, detecting even resealed edits. Original documents and generated packets remain local; Atlas is read-only.
+
+### Substantive source comparison
+
+```sh
+uv run python -m enterprise.ccf.assurance.substantive build \
+  --source-root /path/to/content-addressed-originals --output /new/source-review
+uv run python -m enterprise.ccf.assurance.substantive verify \
+  --source-root /path/to/content-addressed-originals --output /existing/source-review
+```
+
+This adapter adds 50 targeted source-comparison findings with corrective procedures and tests, 193 ISO objective condition checks, comparisons across all 17 C5 domains, and a source-reconciled register of all 22 HIPAA addressable specifications. Its per-requirement review-depth ledger distinguishes targeted findings, objective/domain comparisons, prior baseline section analysis and remaining source-context work. None of these levels establishes independent acceptance or exhaustive paragraph coverage. C5 guidance links and corresponding customer responsibilities are fingerprinted separately from its 623 basic/sharpened/additional-complement provider criteria.
+
+The persisted author bindings pin the reviewed catalogue and draft designs. Builds reject stale findings after source, requirement, procedure or analysis changes; do not refresh those bindings without reconsidering the findings. The generated review includes the earlier draft library, corrective designs, tests, source navigation details and a concrete owner/reviewer decision packet. The adapter does not approve mappings or mutate native controls, implementations or evidence. Source originals and generated work remain local; Atlas is read-only.
+
+## Actionable shared procedures and selectable deltas
+
+The action adapter integrates source findings into proposed shared-control steps, with individual C5 comparisons, baseline condition checks and a prioritized backlog. It retains source/design bindings and separates reuse validation, enhancements, conditional capability candidates and assessment work. See [authoring scope and limits](action_data/README.md).
+
+```bash
+# SOC2/HIPAA baseline only: omit --target.
+uv run python -m enterprise.ccf.assurance.actions build \
+  --source-root /path/to/source-documents --output /new/private/baseline
+
+# Baseline plus selected planning extensions; flags may be combined.
+uv run python -m enterprise.ccf.assurance.actions build \
+  --source-root /path/to/source-documents --output /new/private/deltas \
+  --target ISO27001 --target ISO42001 --target C5
+
+uv run python -m enterprise.ccf.assurance.actions verify \
+  --source-root /path/to/source-documents --output /new/private/deltas
+```
+
+Outputs include readable shared procedures and implementation backlog, CSVs, the complete JSON plan and a re-performance manifest. Verification rejects checksum-resealed edits. All implementation/coverage approvals remain unasserted; the adapter does not modify the native registry or assurance engine.
+
+## Exercised reference assessment
+
+`assessment_run` connects the approved SOC 2/HIPAA reference scope to the actionable control library. It produces 210 collection rows (70 candidate controls across corporate, Reno and Boise), baseline and individual/combined ISO 27001, ISO 42001 and C5 comparisons, and an isolated synthetic demonstration.
+
+```sh
+uv run python -m enterprise.ccf.assurance.assessment_run build --source-root /path/to/authorized/source-documents --output /new/private/assessment-run
+uv run python -m enterprise.ccf.assurance.assessment_run verify --source-root /path/to/authorized/source-documents --output /new/private/assessment-run
+```
+
+Start with `START_HERE.md`. `ASSESSMENT_RUN.json` holds the complete reference, canonical proposed work and selection-specific requirement links. The checklist specifies records, collection triggers, proposed source systems, population reconciliation and boundary tests; named appointments, actual periods, populations and results remain unset. Corporate artifacts are reuse candidates subject to separate local validation.
+
+The comparison rejects lost baseline duties, changed baseline procedures, duplicate controls/actions and a combined selection that differs from the individual action union. Seven tests compute results from explicitly invented event times or actors. Five separate fictional assurance-engine stages demonstrate failure, same-period retesting and prospective correction. These are bounded workflow examples, not completed ISO assessments. No synthetic evidence, tests or approvals enter the source-backed reference.
+
+`SOURCE_DEPENDENCIES.json` retains unresolved ISO normative/context references, HIPAA current-law reconciliation and C5 parent/customer/method review. BSI Standard 200-4 (German, 2023) was acquired from BSI on September 12, 2026; only identity/provenance was checked. Its content needs qualified review. Licensed originals and populated deliverables stay in private SABLEHARBOR holdings; Atlas remains a reference guide.
+
+Verification checks file hashes and rebuilds the entire bundle from source inputs, so editing results and resealing the manifest does not establish acceptance. Operational use still needs actual entity/service and PHI facts, appointments, commitments, source populations, an assessment period and independent review.
+
+## Baseline evidence intake and durable workflow
+
+The [local evidence workflow](../operations/README.md) imports the verified 210-row reference checklist into control-specific test plans. Eight controls have bounded automated assertions alongside mandatory manual observations; the remaining baseline controls retain manual tests. Authenticated local commands register independent populations, retain raw JSON exports, enforce scoped review separation and preserve findings through retests and prospective closure. The private SQLite history replays on reopen and report. These mechanics do not establish framework acceptance, live vendor integrations or a deployed multi-user service.

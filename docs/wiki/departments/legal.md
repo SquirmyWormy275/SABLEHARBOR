@@ -1,11 +1,15 @@
 # Office of the General Counsel
 
-<img src="../../../assets/brand/logos/sable-harbor__primary-horizontal.png" alt="Sable Harbor approved identity" width="360">
+<img src="../../../assets/brand/logos/sable-harbor__reverse-horizontal.png" alt="Sable Harbor approved identity" width="360">
 
 **Canon state:** LOCKED institutional scope; implementation detail varies by linked record.<br>
-**Last substantive review:** September 11, 2026. This page is secondary navigation; the linked source records control.
+**Reviewed:** September 12, 2026. This is a reading guide; linked source records control.
 
 OGC provides legal advice and manages corporate legal affairs. Corporate Secretary sits within OGC and handles formal corporate records and Board mechanics.
+
+## Reading guide
+
+Legal identifies lawful paths and explains legal constraints; the accountable manager retains the business decision. Read the authority and transaction sources before treating a draft, an approval or an execution record as interchangeable.
 
 ## Read and use the records
 
@@ -17,14 +21,23 @@ OGC provides legal advice and manages corporate legal affairs. Corporate Secreta
 
 ## Organization and identity
 
-[Current chart and all of its pages](../../organization/charts/corporate-enterprise-support.md) · [Complete organization publication](../../organization/assets/current/Sable-Harbor-Organization-Charts.pdf).
+[Organization chart, text roster and source qualifications](../../organization/charts/corporate-enterprise-support.md) · [Complete organization publication](../../organization/assets/current/Sable-Harbor-Organization-Charts.pdf).
 
 [![Office of the General Counsel — shared organization chart, first page](../../organization/assets/current/corporate-enterprise-support.png)](../../organization/assets/current/corporate-enterprise-support.png)
 
 The shared chart retains its original scope; it is not a new reporting chart for this page. The approved corporate mark above identifies the parent institution.
 
-## Boundaries and unresolved detail
+[Department and institution directory](README.md) · [Business directory](../businesses/README.md) · [Wiki home](../Home.md)
 
-Legal advises; management decides within the law. A contract baseline or model document is not evidence of a signed agreement.
+## What remains unknown
 
-[Department and institution directory](README.md) · [Wiki home](../Home.md)
+Drafts and documented operating choices do not establish signatures, elections, clearances or external legal execution. Issue #18 and the separately owned publication review remain open. See the [open questions register](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Open-Questions) for the evidence needed to resolve tracked gaps.
+
+## Related reading
+
+- [Corporate Secretary](corporate-secretary.md)
+- [Risk & Compliance](risk-compliance.md)
+- [Sable Harbor Advisory](../businesses/Advisory.md)
+- [Board and committees](board.md)
+
+Related reading describes useful connections, not additional reporting lines.

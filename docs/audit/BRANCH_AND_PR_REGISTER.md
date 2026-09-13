@@ -1,7 +1,11 @@
 # Branch and Pull Request Register
 
 **Status:** Active repository hygiene register  
-**Updated:** September 3, 2026
+**Updated:** September 3, 2026 (historical inventory)
+
+For the current September 12 issue/PR disposition and active-session exclusions, see
+[Outstanding issue review](ISSUE_CLOSEOUT_2026-09-12.md). The older rows below preserve
+their inspection-date state; they do not reopen merged or superseded pull requests.
 
 ## Current pull requests
 

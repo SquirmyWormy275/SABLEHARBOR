@@ -1,0 +1,230 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "SH-SITE-0001-OPTION-1-ACCESS",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.49866548609772,
+            38.5939636736463
+          ],
+          [
+            -121.498668,
+            38.59384300000001
+          ]
+        ]
+      },
+      "properties": {
+        "option_id": "SH-SITE-0001-OPTION-1",
+        "object_id": "SH-SITE-0001",
+        "status": "UNAPPROVED_STRAIGHT_LINE_ACCESS_TEST",
+        "length_m": 13.394961,
+        "access_rights": null,
+        "note": "Geometric gap only. Not an engineered drive, route clearance, public access or easement."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SH-SITE-0001-OPTION-2-ACCESS",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.4897733894297,
+            38.59874128519747
+          ],
+          [
+            -121.48992521191997,
+            38.59878158968964
+          ]
+        ]
+      },
+      "properties": {
+        "option_id": "SH-SITE-0001-OPTION-2",
+        "object_id": "SH-SITE-0001",
+        "status": "UNAPPROVED_STRAIGHT_LINE_ACCESS_TEST",
+        "length_m": 13.959454,
+        "access_rights": null,
+        "note": "Geometric gap only. Not an engineered drive, route clearance, public access or easement."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SH-SITE-0001-OPTION-3-ACCESS",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.49750837640251,
+            38.593434096128185
+          ],
+          [
+            -121.49746031005603,
+            38.59356133381718
+          ]
+        ]
+      },
+      "properties": {
+        "option_id": "SH-SITE-0001-OPTION-3",
+        "object_id": "SH-SITE-0001",
+        "status": "UNAPPROVED_STRAIGHT_LINE_ACCESS_TEST",
+        "length_m": 14.729261,
+        "access_rights": null,
+        "note": "Geometric gap only. Not an engineered drive, route clearance, public access or easement."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SH-SITE-0003-OPTION-1-ACCESS",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -79.96313606980625,
+            40.41426763750586
+          ],
+          [
+            -79.963288,
+            40.41426899999999
+          ]
+        ]
+      },
+      "properties": {
+        "option_id": "SH-SITE-0003-OPTION-1",
+        "object_id": "SH-SITE-0003",
+        "status": "UNAPPROVED_STRAIGHT_LINE_ACCESS_TEST",
+        "length_m": 12.89212,
+        "access_rights": null,
+        "note": "Geometric gap only. Not an engineered drive, route clearance, public access or easement."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SH-SITE-0003-OPTION-2-ACCESS",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -79.94693597354923,
+            40.41065640062929
+          ],
+          [
+            -79.946934,
+            40.410783
+          ]
+        ]
+      },
+      "properties": {
+        "option_id": "SH-SITE-0003-OPTION-2",
+        "object_id": "SH-SITE-0003",
+        "status": "UNAPPROVED_STRAIGHT_LINE_ACCESS_TEST",
+        "length_m": 14.054671,
+        "access_rights": null,
+        "note": "Geometric gap only. Not an engineered drive, route clearance, public access or easement."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SH-SITE-0003-OPTION-3-ACCESS",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -79.94594513033044,
+            40.41316986700907
+          ],
+          [
+            -79.94578065306426,
+            40.41321259320422
+          ]
+        ]
+      },
+      "properties": {
+        "option_id": "SH-SITE-0003-OPTION-3",
+        "object_id": "SH-SITE-0003",
+        "status": "UNAPPROVED_STRAIGHT_LINE_ACCESS_TEST",
+        "length_m": 14.740054,
+        "access_rights": null,
+        "note": "Geometric gap only. Not an engineered drive, route clearance, public access or easement."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SH-SITE-0005-OPTION-1-ACCESS",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -80.17100444317481,
+            39.41347693488752
+          ],
+          [
+            -80.17093470969468,
+            39.41357608263784
+          ]
+        ]
+      },
+      "properties": {
+        "option_id": "SH-SITE-0005-OPTION-1",
+        "object_id": "SH-SITE-0005",
+        "status": "UNAPPROVED_STRAIGHT_LINE_ACCESS_TEST",
+        "length_m": 12.535116,
+        "access_rights": null,
+        "note": "Geometric gap only. Not an engineered drive, route clearance, public access or easement."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SH-SITE-0005-OPTION-2-ACCESS",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -80.18505025623722,
+            39.49405592246148
+          ],
+          [
+            -80.185204,
+            39.49405699999999
+          ]
+        ]
+      },
+      "properties": {
+        "option_id": "SH-SITE-0005-OPTION-2",
+        "object_id": "SH-SITE-0005",
+        "status": "UNAPPROVED_STRAIGHT_LINE_ACCESS_TEST",
+        "length_m": 13.221203,
+        "access_rights": null,
+        "note": "Geometric gap only. Not an engineered drive, route clearance, public access or easement."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SH-SITE-0005-OPTION-3-ACCESS",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -80.16300809584074,
+            39.46045444202127
+          ],
+          [
+            -80.16287813385557,
+            39.460390050658376
+          ]
+        ]
+      },
+      "properties": {
+        "option_id": "SH-SITE-0005-OPTION-3",
+        "object_id": "SH-SITE-0005",
+        "status": "UNAPPROVED_STRAIGHT_LINE_ACCESS_TEST",
+        "length_m": 13.269885,
+        "access_rights": null,
+        "note": "Geometric gap only. Not an engineered drive, route clearance, public access or easement."
+      }
+    }
+  ]
+}

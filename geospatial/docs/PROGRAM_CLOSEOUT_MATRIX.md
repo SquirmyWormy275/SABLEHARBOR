@@ -22,7 +22,7 @@ Successor: [PR #105](https://github.com/SquirmyWormy275/SABLEHARBOR/pull/105).
 
 ## Remaining work
 
-1. **Exact sites and occupancy history ([#106](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/106)):** HQ, Fort, Bedford, Demotte, Kelly Gang Mining; Klein/Fort linkage; J2 residential campus; Blackridge precise location; Wallaby/Glasshouse; provisional and former offices; hosting and conversion destination.
+1. **Exact sites and occupancy history ([#106](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/106)):** HQ, Fort, Bedford, Demotte, Kelly Gang Mining; Klein/Fort exact parcel/day precision (linkage resolved); J2 residential campus; Blackridge precise location; Wallaby/Glasshouse; provisional and former offices; hosting and conversion destination.
 2. **Engineering and early railway geometry ([#107](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/107)):** survey-grade transitions/profiles, actual land/access records, early coal/1954 and abandoned alignments, exact external client-site footprints. The current accepted synthetic estate is already implemented.
 3. **Complete geographic program ([#108](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/108)):** semantic adjudication of discovery occurrences, complete enterprise asset histories, remaining temporal map series and future interactive views.
 
@@ -47,7 +47,7 @@ Original headings below are historical requirement identifiers. Superseded names
 | 10 | RAILWAY MODEL | PARTIAL_OR_FUTURE | Current accepted 40-mile network present; early/abandoned and final survey geometry incomplete. |
 | 11 | RESOURCE GEOGRAPHY | PARTIAL_OR_FUTURE | Mine anchor and resource context retained; detailed mine design remains. |
 | 12 | CORPORATE FOOTPRINT | PARTIAL_OR_FUTURE | HQ/Fort/Bedford constraints and industrial estate represented; exact enterprise parcels remain. |
-| 13 | EVENT GEOGRAPHY | PARTIAL_OR_FUTURE | Ten industrial history events plus corporate event register; unlocated events stay unlocated. |
+| 13 | EVENT GEOGRAPHY | PARTIAL_OR_FUTURE | 73 source-bound events and observations, dated map plates and normalized object links; unlocated events stay unlocated. |
 | 14 | CARTOGRAPHIC PRODUCTS | PARTIAL_OR_FUTURE | Eleven-sheet atlas regenerated; full historical series incomplete. |
 | 15 | MAP DESIGN STANDARD | PARTIAL_OR_FUTURE | Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above. |
 | 16 | CANONICAL GEOSPATIAL TECHNOLOGY STACK | IMPLEMENTED_FOR_FRAMEWORK | Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above. |
@@ -59,10 +59,10 @@ Original headings below are historical requirement identifiers. Superseded names
 | 22 | RED WASH EXACT-SITING WORKFLOW | PARTIAL_OR_FUTURE | Sweetwater anchor locked; complete detailed mine/site engineering remains. |
 | 23 | BS&T NETWORK ENGINEERING WORKFLOW | PARTIAL_OR_FUTURE | Current network, branches, road, tracks and structures consumed; detailed survey/design remains. |
 | 24 | SACRAMENTO HQ GEOMETRY | PARTIAL_OR_FUTURE | Sacramento district retained; exact parcel unfinished. |
-| 25 | EVALON / HAZELWOOD GEOMETRY | PARTIAL_OR_FUTURE | Klein/Fort concept implemented; exact parcel and historical occupancy linkage remain. |
+| 25 | EVALON / HAZELWOOD GEOMETRY | PARTIAL_OR_FUTURE | Klein/Fort continuity resolved by approved staged 2024 relocation; year-bounded occupancy recorded; exact parcels remain. |
 | 26 | CRADLE / BELLE GEOMETRY | PARTIAL_OR_FUTURE | Bedford/Fairmont supersedes Belle; exact site/access unfinished. |
 | 27 | BLACKRIDGE AND OTHER MAJOR ASSETS | PARTIAL_OR_FUTURE | Blackridge Nevada scope retained; exact site unresolved. |
-| 28 | CORPORATE ASSET CENSUS | PARTIAL_OR_FUTURE | 919 files and 78,145 discovery occurrences indexed; semantic long tail remains. |
+| 28 | CORPORATE ASSET CENSUS | PARTIAL_OR_FUTURE | 919 baseline files; 71,249 of 78,145 carriers classified across five batches; full semantic and later-source review remains. |
 | 29 | TEMPORAL AND BITEMPORAL INTEGRITY | PARTIAL_OR_FUTURE | Half-open dates supported; institutional founding no longer invents physical occupancy. |
 | 30 | CORPORATE-HISTORY MAP ENGINE | PARTIAL_OR_FUTURE | Current/pre-acquisition BS&T maps present; early route geometry unlocated. |
 | 31 | PROVENANCE MUST BE FEATURE-LEVEL | IMPLEMENTED_FOR_FRAMEWORK | Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above. |
@@ -71,7 +71,7 @@ Original headings below are historical requirement identifiers. Superseded names
 | 34 | MAP PRODUCT CONTROL | IMPLEMENTED_FOR_FRAMEWORK | Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above. |
 | 35 | VALIDATION REQUIREMENTS | IMPLEMENTED_FOR_FRAMEWORK | Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above. |
 | 36 | TESTS | IMPLEMENTED_FOR_FRAMEWORK | Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above. |
-| 37 | WEB AND INTERACTIVE MAP FUTURE | PARTIAL_OR_FUTURE | Future interactive views deferred; portable QGIS supplied. |
+| 37 | WEB AND INTERACTIVE MAP FUTURE | IMPLEMENTED_SOURCE_BOUND_VIEWS | Offline chronology, dated routes, historical/site atlas, searchable site docket and source-review readers delivered; unsupported facts remain explicit. |
 | 38 | DECISION-MAKING METHOD | IMPLEMENTED_FOR_FRAMEWORK | Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above. |
 | 39 | USER CONTINUATION RULE | IMPLEMENTED_FOR_FRAMEWORK | Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above. |
 | 40 | OPEN QUESTIONS TO SURFACE, NOT SILENTLY ANSWER | PARTIAL_OR_FUTURE | Known decisions closed; remaining history and implementation gaps explicitly listed. |
@@ -84,3 +84,53 @@ Original headings below are historical requirement identifiers. Superseded names
 | 47 | DEFINITION OF DONE | PARTIAL_OR_FUTURE | Framework reconciliation eligible for closure; entire geographic program incomplete. |
 | 48 | DO-NOT-DO LIST | IMPLEMENTED_FOR_FRAMEWORK | Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above. |
 | 49 | IMMEDIATE START INSTRUCTION | IMPLEMENTED_FOR_FRAMEWORK | Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above. |
+
+## September 12 semantic review increment
+
+The [Blackridge discovery batch](../adjudication/README.md) supplies 60,896 source-local
+dispositions from the pinned baseline, leaving 17,249 occurrences outside that batch.
+It preserves all 59,130 distinct resource assignments behind one repeated location token,
+separates non-geographic domain/record labels and retains eleven unlocated component
+appearances. Sections 6, 28 and 40 now have this additional review evidence; their
+`PARTIAL_OR_FUTURE` status remains. Full source coverage, later canon deltas, historical
+geometry, occupancy and OCR work remain open under #108.
+
+A second [reference-layer batch](../adjudication/README.md#reference-layer-batch--september-12-2026)
+classifies 7,844 additional occurrences against 3,912 existing road/waterbody reference
+features. The two disjoint batches classify 68,740 occurrences; 9,405 remain outside them.
+Reference-layer provenance and geometry hashes do not establish company ownership or
+occupancy, and no section is promoted to complete by these counts.
+
+The subsequent [catalog derivation batch](../adjudication/README.md#catalog-derivation-batch--september-12-2026)
+traces 444 index/metadata occurrences to 84 hash-verified source documents, including
+336 repeated search-text copies. Cumulative classification reaches 69,184 occurrences;
+8,961 remain outside the three batches. Derived text is not independent corroboration,
+and substantive geographic claims in the referenced documents remain subject to review.
+
+## Geographic evidence package — September 13, 2026
+
+The [portable package](../closeout/README.md) binds 34 site/component records to 16 exact archived sources, preserves all accepted spatial rows, and exposes source coverage, the 8,961 residual occurrences and 97-image OCR candidate population as GeoPackage attributes. The native QGIS project links review records to canonical object IDs and is checked after relocation. This completes that integration deliverable; it does not resolve the shop/Fort continuity conflict, invent occupancy intervals or complete semantic/history adjudication. Sections 12, 24–30, 40 and 47 therefore retain their substantive open boundaries.
+
+
+## Geographic history edition — September 13, 2026
+
+The [history edition](../chronology/README.md) supplies 72 dated records: 18 corporate/railway events, 12 facility openings, 26 construction-year observations, 14 safety events and two site observations. The original shop's 2021 lease is now bound to its narrative heading and exact lease sentence. All 34 corporate site/component histories expose dated observations and retained operational states while keeping unsupported occupancy endpoints unknown.
+
+Sections 9, 13, 14, 29, 30 and 37 now have an offline interactive timeline, source inspection, CSV export and date-controlled views of the five accepted railway segments. The 1898/1954 alignments remain unlocated; current facilities and structures are not back-projected into historical footprints. This completes this interactive-view implementation, not the full historical map series.
+
+Sections 6, 28 and 40 gain 295 field-level industrial operations dispositions, bringing the four disjoint batches to 69,479 discovery carriers and leaving 8,666 outside them. Distinct allocations, full containing records and stable asset links are preserved. Full source-level semantic coverage and subsequent-delta review remain open.
+
+The [Klein/Fort continuity proposal](../chronology/CONTINUITY_PROPOSAL.md) makes the unresolved decision concrete but remains PROPOSED. No numbered section is promoted to whole-program completion through this unaccepted proposal. #106 and #108 remain open.
+
+
+## Owner-approved Klein/Fort continuity — September 13, 2026
+
+The [controlling decision](../../docs/canon/KLEIN_FORT_OCCUPANCY_2026-09-13.md) accepts separate premises, continued use after the 2022 recharter and a staged 2024 move with old-shop vacancy that year. `GEO-C002` is resolved. The chronology now has 73 events, and both site histories include approved year-bounded occupancy states. Earlier source/state records remain traceable; no exact day, parcel or component commissioning date is invented.
+
+Registers, GeoPackage attribute data and affected map captions are regenerated. Section 25's historical-linkage requirement is complete. #106's other site/occupancy precision requirements and #108's semantic/history long tail remain open; the approval does not certify those unrelated requirements. Earlier dated increments above describe their historical release state.
+
+## Geographic requirements implementation — September 13, 2026
+
+The [requirements edition](../completion/README.md) completes a further 1,770 exact carrier dispositions across 147 sources, leaving 6,896 outside five disjoint batches. It supplies 97 visual-role dispositions, a 109-container / 353-page PDF and archive audit with three executed sparse-page OCR cases, nine dimensioned unselected site alternatives with access tests, 17 controlling site observations, a 34-record decision docket and the full dated-evidence map series. The machine-readable review retains complete records and hashes.
+
+Sections 9/13/14/29/30/37 now have the published historical series and interactive research readers described by the release. Sections 24–26 have reproducible dimensioned site alternatives, with selection and missing suitability screens explicit. Section 28 advances source adjudication and visual coverage. Earlier dated framework rows remain historical dispositions; neither those rows nor this delivery claims unsupported parcels, occupancy, early route alignments or full semantic programme completion. #106 and #108 retain the concrete residuals recorded in the new docket and source review.

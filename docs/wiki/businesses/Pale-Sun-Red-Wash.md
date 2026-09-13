@@ -1,12 +1,16 @@
 # Pale Sun / Red Wash
 
-[Wiki home](../Home.md) · [All business dossiers](../../business-lines/README.md) · [Company charts](../../organization/README.md)
+[Wiki home](../Home.md) · [Business directory](README.md) · [Department directory](../departments/README.md) · [Business dossiers](../../business-lines/README.md) · [Company charts](../../organization/README.md)
 
 <img src="../../../assets/brand/logos/pale_sun__canonical.png" alt="Approved Pale Sun / Red Wash logo" width="280">
 
 Pale Sun owns Red Wash Mining, LLC, which operates the Red Wash uranium mine in Sweetwater County, Wyoming. The archive includes acquisition records, mine and processing descriptions, operating evidence, financial models and logistics constraints.
 
-**Reader status:** Navigation summary checked September 11, 2026. Linked canon controls; this page creates no new facts. Existing chart artwork is from publication 1.1.0, September 10, 2026. Financial cases are publicly synthetic.
+**Reviewed:** September 12, 2026 · Fictional enterprise; source records control.
+
+## Reading guide
+
+Read the acquisition story alongside the operating constraints of the mining business. Separate investment assumptions from available cash, mine readiness and the permissions needed to move uranium.
 
 ## Start here
 
@@ -18,7 +22,7 @@ The legal chain is Sable Harbor → Sable Harbor Industrial Holdings → Pale Su
 
 [![Pale Sun / Red Wash existing organization chart](../../../docs/organization/assets/current/pale-sun-red-wash.png)](../../../docs/organization/charts/pale-sun-red-wash.md)
 
-Open the chart to read its relationship key and any additional pages. Grouped functions are not automatically reporting lines, separate companies or additional employees.
+[Read the chart’s text roster, relationship key and source qualifications](../../../docs/organization/charts/pale-sun-red-wash.md). Grouped functions are not automatically reporting lines, separate companies or additional employees.
 
 [Named people and recorded roles](../../../docs/organization/charts/people-pale-sun-red-wash.md) — the current chart preserves unknown joining years rather than inventing them.
 
@@ -53,6 +57,17 @@ The [finance successor guide](../../../enterprise/business/README.md) explains g
 
 Use the [complete facility artifact index](../../../geospatial/maps/facilities/ARTIFACT_INDEX.md) for independently saved maps and floor plans, or open the [interactive atlas](../../../geospatial/maps/index.html) locally in a browser. GitHub displays the linked Markdown and images directly; it does not execute the atlas HTML.
 
-## Limits to keep visible
+[Abandoned acquisition files](../subjects/Historical-Opportunities.md) · [Northstar seller boundary](../subjects/External-Counterparties.md)
 
-No Red Wash rail spur is authorized. Ordinary inbound logistics availability does not qualify uranium custody. Conditional funding is not committed cash, and modelled facilities are not as-built drawings.
+## What remains unknown
+
+Uranium custody remains gated, and no Red Wash rail spur is authorized. Conditional funding and planned facilities are not executed financing or as-built infrastructure. See the [open questions register](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Open-Questions) for the evidence needed to resolve tracked gaps.
+
+## Related reading
+
+- [American Resource Utility / BS&T](American-Resource-Utility.md)
+- [Abandoned acquisition opportunities](../subjects/Historical-Opportunities.md)
+- [Safety and environmental governance](../departments/safety-environment.md)
+- [Finance](../departments/finance.md)
+
+Related reading describes useful connections, not additional reporting lines.

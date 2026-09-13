@@ -1,0 +1,922 @@
+{
+  "addressable_inventory_digest": "c7f2d160f25c65061ed1f0395db8b6e9fbc42222f17696a56bb8978b4a48a0c2",
+  "baseline_analysis_digest": "37314ead34b599faaec3f629cb35f188e10040d1b2b212342cc97b8dd10919f7",
+  "c5_domain_review_digest": "e0647b102f4766176b4aed487ba2207f3320ddb28e622e87e34acb8782471a44",
+  "catalog_digest": "d2ee90e7c54d1b4923aac5b8f673d7bcd16160949c2a37b2e38e103f6516e9ea",
+  "draft_designs": {
+    "SH-AIM-001": "078beec2e853c1df93de97d5f30ddbfa5fdd2c13dfaa2f9942defa35d629657b",
+    "SH-AIM-002": "ea9ec748443247a97c258ecc895d7722cc3ef9f519bd1fd64a3204de14fed0ca",
+    "SH-AIM-003": "a9ab3b0bebac0c7346413ff1020cdd0d22ef068e03af4caa992328d28ad3e477",
+    "SH-AIM-004": "c9cd6670a300d8883eedc7117c231a31e78b58fe8a98d975337842ae742e7d9e",
+    "SH-AIM-005": "449a14cf46c315d24daba9f0a4c28c13ba0c404d00e40ac895bdaf42ab2fbb98",
+    "SH-ASS-001": "ba3b00223b8d378edfccf3ae8c70e576afddff97ac7212e50da8b0249a37674c",
+    "SH-ASS-002": "57339e40bb95f6aa3d30525745db471053a8e3f5d4df1c90879b094a6794dcfa",
+    "SH-ASS-003": "b87cb3ea5836a1ce7780adc81745e569a6bad712cc566cbd27a7a3952489b18f",
+    "SH-ASS-004": "e97a44549a378235aca343de380fbc35283d3f530c58770c33f2c011b5206f60",
+    "SH-ASS-005": "5fa2fa5add0e19ff0ede1487173c4c67c25da687af422773520b3de10015aec5",
+    "SH-BCM-001": "1574c2137005cb66621f168bffc9a389e7bfbe3e974c5dfa03301b79488c04c4",
+    "SH-BCM-002": "a4d97510f8e5e4bff8e904ce4458374d8ed71365ecaf02edabfde87b9d0666cc",
+    "SH-BCM-003": "38fd069631c575e496a6f0e442a017fb3cf5d3f4ef8fa71727cce0da58877d2c",
+    "SH-BCM-004": "093c4c543cce4e8af7266534777a91212ec80f8c84b153092b2f6dcf64093a00",
+    "SH-CFG-001": "7ec8207786a298b65122a342718d746919fe2fa0acc55557afd5845ecd28ca49",
+    "SH-CFG-002": "3dc484977b209b13d15746d469cb3453c7abf2ade856236264a3c381a9e3d650",
+    "SH-CFG-003": "a0600261d8b3b7d0c2cd1296f03bd6f3cced925034860c56fd2e3bf532e1c401",
+    "SH-CFG-004": "c216b7b03fb29a4073bef35728dc4ec72e6c9c054b3456ed78004968087855ff",
+    "SH-DAT-001": "bf67fe6528802cf4a48d6f4fd6b2461f86d0bfc43e1d50fa81c9e9b9d9cf9209",
+    "SH-DAT-002": "cb5c7ce8432eef9e3026a04cb2ead4c74eaf1453553110e14938463e03d21565",
+    "SH-DAT-003": "2e86ed61e0dbff9dc4ff251ea92e07b1597ed105c2ddcd745106df61b6dc2c88",
+    "SH-DAT-004": "dc777b7cc3f4cd4270b8c72d99fe25a892575d7dcda06acd51604fbbaebec081",
+    "SH-DAT-005": "67d36a35912a9670808a607930e8e4e81070e9c11101c190ab80366e162f3a45",
+    "SH-ENG-001": "16e92ad3dea8f1228a4b3ede26923f939a52b7391283e39768b152e29d0e9541",
+    "SH-ENG-002": "d3c684c1fc08c5f24ac694f0af6bc819cb3d93c9c2071c5dfbf5634398791480",
+    "SH-ENG-003": "91ecf8adaa82000e6e6c518c8546a9cbe88e613bbb0fdd4f3b38f1f8978b838c",
+    "SH-ENG-004": "31803e0846ed848cf4cf9314ad6b0eea4e1fe29f7f5cf92c0b394873943417e5",
+    "SH-ENG-005": "f0f2e3414c6471bb862e411b9e1afc13665c4ed6ccdabaea29d316cea61e839e",
+    "SH-ENG-006": "773bb99674eb2bfc34ffa5a208c7f1ef3e10c1f25d648b4671eb3feea9cf460a",
+    "SH-ERM-001": "4fd447e79111b6e9a75300b56fdc5016cc0e419a081462c67871770bfeb2c269",
+    "SH-ERM-002": "f295e70552c03a29e6ffeb3b17e319a93df88179ad3760e304157b98f577aa5e",
+    "SH-ERM-003": "b7d1a9c94fc2f7269ec26ab64300e8dadc78e96c63a446f4fe39c5a0c00327bf",
+    "SH-ERM-004": "770386a44a06b7408385e75b4409b6eee3b240c3e8a1a5ac9048372748a2242d",
+    "SH-ETH-001": "fbf03059a5b709faa10dcbebf663187b38ae75c059034b53e7f01690ba136d88",
+    "SH-ETH-003": "1c2e3dd6dda5a5f77aeca20baac494746f0cc044ccf7ec4ed0783e55efb97522",
+    "SH-ETH-004": "f97082b1006727b3ad4fad6f731d5e911f4d9e48dcbeb3a81d82b18803d12be2",
+    "SH-FND-003": "e7243e455d8cc3c557efec6d1b14bf2a1da2e807157ae1ffc8c23895742c409e",
+    "SH-GOV-001": "82182c833b948d6871e016787a0bff59e2b279606b0c3301ccc3d2244495011c",
+    "SH-GOV-002": "c823436d9d064178abe74244e1173ea7c17da98b88b497ef2439a35202676642",
+    "SH-GOV-003": "0827b9714a02a1d992134cc7fadc2c9a2dd279cd991c4cb53fa8fee9398fa1bd",
+    "SH-GOV-004": "dc590fe5cbbf9f6282bc80bcab6ed87b4406ec44ebec421aba6e27c5bcd934b5",
+    "SH-GOV-005": "8f5409be0468646f3e257301e846d1afa5c9c9bbd9b518796186f591bf85576a",
+    "SH-IAM-001": "0ff85847e7b1fd43a63040242b4f4dca6aa40d38a9870287327c84d18fb4b744",
+    "SH-IAM-002": "a7be426785c6e08526dc10f11c1c57d4ff2ff23cdc15eec9a78cf31efc3a4417",
+    "SH-IAM-003": "594fef431e2a6979ded937ac67bd06fadf3bb6691478d8863e3e5badf14580f1",
+    "SH-IAM-004": "25c4c8886bf0b517a659a5a40eaff1b959ae967d1404c22b0cc2b71bacf10ced",
+    "SH-IAM-005": "d4e62d8f60a1f3c0416d243b97dd0b3e4e88a1ab5b9373b157826fbee2086677",
+    "SH-IAM-006": "f047252e8bc21b93d0eb51b1819b5a7047f912216df91d65eae7620ba15d2243",
+    "SH-IAM-007": "e454b82f117bc2e18a5d3339aad3b353079f754ad401e7f83b0ddede57f669ee",
+    "SH-INC-001": "81d0a2d6a939865fd285554bcfab42de54e40b897663edb25fd8e8117b9aa989",
+    "SH-INC-002": "14732635b4684601f36714ef6ea3de4bcefcbf7c9b63ad706463d4350e43f570",
+    "SH-INC-003": "e38e41c9e6aa923ffbbd1555664bb04338eebf4b5c9c74bdbf0948f41eafec1a",
+    "SH-INC-004": "e4382980300fc0ba31945a9fd6638363338d7e0eba73d4751a69c2640a927247",
+    "SH-LEG-001": "50f954d2eb39c92804c6702d424988781ce75a011f2e4dec79b0531257e8fff9",
+    "SH-LEG-002": "6d64c446447b674979161c4f58b7359ff5018ecba886d3c71adf1f65d9601401",
+    "SH-OPS-002": "332fba6e64eda92d0577a0fc4794154589849dbae5750b4d0a5a30ae5a29ed78",
+    "SH-OPS-004": "9c2ea87ae20331549c456e73b207305ef890ff9157d4cfd01238de22596b9f6f",
+    "SH-POL-001": "e804139004d99baf865387f10420e296836c3f12f46fae465b454fe88beb6a23",
+    "SH-POL-002": "9e80d6b57640945f082246680a999add346b612e61088faa2c821c49344334d2",
+    "SH-POL-003": "e6edf3930214901dae6bed0b3d3becadeb416b6844dbfec507d008c60f0bb08a",
+    "SH-POL-004": "c8f96da7762cca33e94afc9db7574b33c60505f1e0f16fd2918003bcbd84bff3",
+    "SH-PPL-001": "3f17ab8a9a4bc0f1c1d91b11aaa16b35173b1d745027c063794aa40da7144f71",
+    "SH-PPL-002": "ed51209f67a8d5a39195628c8f11aa3eeb187727ff79e2b59a672e141f108e2c",
+    "SH-PPL-003": "127a25240a9966651f75318e97e17fee3907436f706d43eec8b01e1dec84e388",
+    "SH-PPL-005": "d060ec230f016e4319f0f9f3bb8444f0db6a19bdfbf38f8ea0fbd668876e9520",
+    "SH-PRD-002": "098f684b77e67a588abc23fe78f844d79cead5d82d16546cf39018f6f485e714",
+    "SH-PRD-003": "1bc765549bcf421d828204f9b19e7519ed0cff5df8a9fd2a5b7fbbf4cfe03746",
+    "SH-PRD-004": "e6e91081951c81f8794a6e24bfbdbd175b6b16331ac08a3aacca892917a05256",
+    "SH-REC-001": "539bafc8161f26bfe9afd61e917e2735538532cd05755e0fe584de283885c52b",
+    "SH-REC-002": "8fb80fa99fc00af8196d7bb03038e23ef649f7e9c5e89efb93dcdd89980c1e31",
+    "SH-REC-003": "1421528143bb75ffc8bbad314713cd5bf3cd872005485d1a8d0636cdbf1e29dd",
+    "SH-REC-004": "03573aa501c4b68443bf95419ef16f77f7e7fdf07f501237c34a93072567ce36",
+    "SH-SEC-001": "0653c632fc29121122a02d8a6269b7815e96adfa937396837c72bfe1c43e9c50",
+    "SH-SEC-002": "e582836e0b30f6622a6835b73220d060ba9b6a3151f1dfc0e5f5f1a2f8828e05",
+    "SH-SEC-003": "b858bf944ff3004b0b58eceba84787df03fd62b7be78984e4d851f212949948d",
+    "SH-SEC-004": "bce496443fe681bf4e40fd20fe02fdc676115dd66cf45e3853338732d86f4186",
+    "SH-SEC-005": "b5d26733d656aa943f82e0b4a3bb7301a3d91e58ba456ed98dfab0ed551413fb",
+    "SH-SEC-006": "3781a060608d81c0cbdb74872e7aa109fd71f6f908d0585c7ba219e6667831be",
+    "SH-TPR-001": "487e298cbf33b5dc0a49cd473a21ed8ecd06c1bbb64a36db410919bc796bcb3e",
+    "SH-TPR-002": "e2e7f650d9a805d3a2d76ecf263e2606d3fa839923831a6702d145227e26a5ed",
+    "SH-TPR-003": "9c44d6ca1a656688949d1870dbe61ab8b946827d7985db09efc5b397dde7af89",
+    "SH-TPR-004": "cccfac2fee5b90a7c80c5c0b1ba686c41659ac8e9f1a6d7226bd7f92020b5088",
+    "SH-TPR-005": "d3fc78a03724228316aa34dc36801a9861689497caa333a5bd05f37f3df12f2d",
+    "SH-TRN-001": "f982fa0aec98501f61208bbd7aa644f14f8b604270e5b2ca0027f826a123f8de",
+    "SH-TRN-002": "ca125ffe3a7af0de7d6f626fe732959ce9f50938cabb9f96a0d300286015111a",
+    "SH-TRN-003": "960b132f1e05619a4dca61fece976a5bbb26a4a2dd7c1910f731a21d1a3a0b12"
+  },
+  "findings": {
+    "AI-DATA": {
+      "design_digests": {
+        "SH-AIM-003": "a9ab3b0bebac0c7346413ff1020cdd0d22ef068e03af4caa992328d28ad3e477",
+        "SH-DAT-005": "67d36a35912a9670808a607930e8e4e81070e9c11101c190ab80366e162f3a45",
+        "SH-FND-003": "e7243e455d8cc3c557efec6d1b14bf2a1da2e807157ae1ffc8c23895742c409e"
+      },
+      "finding_digest": "ddabd6fec4cbb7ed3258a773d5a249511960ce66192cbc9c95e9520bccbacac7",
+      "requirement_digests": {
+        "ISO42001:A.7.2": "00f35a2c437edf0409f52cceef7f640785db035860a6713347767a9510427b93",
+        "ISO42001:A.7.3": "1bc0597cc102dacfaa1b70e1b91e1473bdb5e3c922cdc3c47da7ad630c8cbfb5",
+        "ISO42001:A.7.4": "f3761f939fd14b26a61fec5681796e0cf683b515ac24a62c59c813a072e08f7c",
+        "ISO42001:A.7.5": "9905df1647bdb3d43ef73c9e2bf41b0271115fb51cfb3ce706f1306ba542d2b9",
+        "ISO42001:A.7.6": "a931cefcc71f44338cbd9212ba924f36dcaf2f0707caf44c91d998d4dbb0be88"
+      },
+      "source_hashes": {
+        "SOURCE-ISO42001": "d50103cc0af6d2322c60753ab4a6d9cc54594bc78163481322bf80ee2f75a896"
+      }
+    },
+    "AI-IMPACT": {
+      "design_digests": {
+        "SH-AIM-002": "ea9ec748443247a97c258ecc895d7722cc3ef9f519bd1fd64a3204de14fed0ca"
+      },
+      "finding_digest": "f6760deaaae7e2937f841ae5001ab27cf1d16b072928f74663bb73eae7e9ae26",
+      "requirement_digests": {
+        "ISO42001:6.1.4": "085d6770b5a8ea90c1887780d5988bc5f228cdb99eb1910aae940d1dc32aec24",
+        "ISO42001:8.4": "572ff83c439b6de580b86bc11001dccb2afbd8f7b9c4f06a261cc648ec921107",
+        "ISO42001:A.5.2": "0f873d5c24ce43c738edd1b3dc6ab6143ece1bcd72e18cdd728f859bfb861f7d",
+        "ISO42001:A.5.3": "adfaf0fd14b88a0ad14563d04c3c32486196a1090bb4b6f52264cc4d1c9d3eea",
+        "ISO42001:A.5.4": "ece983e76ed29a1b8be19dee07e1d3a7a076b37e1f337025f6dc5402e7544be3",
+        "ISO42001:A.5.5": "d9c64bbd495e14c5d8856347ac8024d0c373a3a753a51657a0b7eb89a698a680"
+      },
+      "source_hashes": {
+        "SOURCE-ISO42001": "d50103cc0af6d2322c60753ab4a6d9cc54594bc78163481322bf80ee2f75a896"
+      }
+    },
+    "AI-LIFECYCLE": {
+      "design_digests": {
+        "SH-AIM-001": "078beec2e853c1df93de97d5f30ddbfa5fdd2c13dfaa2f9942defa35d629657b",
+        "SH-AIM-002": "ea9ec748443247a97c258ecc895d7722cc3ef9f519bd1fd64a3204de14fed0ca",
+        "SH-AIM-004": "c9cd6670a300d8883eedc7117c231a31e78b58fe8a98d975337842ae742e7d9e",
+        "SH-ENG-004": "31803e0846ed848cf4cf9314ad6b0eea4e1fe29f7f5cf92c0b394873943417e5"
+      },
+      "finding_digest": "e876b2fb868acaefae5c05207ea1366d88fe770e9211fd94e67651eeb8f17923",
+      "requirement_digests": {
+        "ISO42001:A.6.1.2": "028858e880da56ef3b51aad71c9665587eb44c5453753746f2abddd4af34465a",
+        "ISO42001:A.6.1.3": "2e7904c49cf10475446a5718cf86c0a71bbc50327569550768a2e911d1d12e27",
+        "ISO42001:A.6.2.2": "39adf677a9b8c33194941bee2b793f66231c4df05492dcd3b219c02820ec7a77",
+        "ISO42001:A.6.2.3": "4c4f99ed8c22b9ff798c3da48553bdd2e64f3496d6ef7225e947fecd66b679b6",
+        "ISO42001:A.6.2.4": "5a88f2f5b22458fee1f49d249771081cf8695be942a5325e63fc0fb874e7f171",
+        "ISO42001:A.6.2.5": "0aafba9486418c80a16a7881a78cf8ffda3a3cfcbd746f4fd12c8048bfa538fc",
+        "ISO42001:A.6.2.6": "a5ce7dd7e6c701418f444fd37be5e75f103199cfd2b1c944195749fb47fbcdfd",
+        "ISO42001:A.6.2.7": "eed80987766ef63989b9f74697f077c0a4d1e4a17bdd776768494bc26dd48541",
+        "ISO42001:A.6.2.8": "8d27f538d568f8c3475f691394c3c399d9b227a8c1262fd82c096aa7148aa303"
+      },
+      "source_hashes": {
+        "SOURCE-ISO42001": "d50103cc0af6d2322c60753ab4a6d9cc54594bc78163481322bf80ee2f75a896"
+      }
+    },
+    "C5-ACCESS-CLOCKS": {
+      "design_digests": {
+        "SH-IAM-003": "594fef431e2a6979ded937ac67bd06fadf3bb6691478d8863e3e5badf14580f1",
+        "SH-IAM-007": "e454b82f117bc2e18a5d3339aad3b353079f754ad401e7f83b0ddede57f669ee"
+      },
+      "finding_digest": "80378dbfd9c9592cc1f99b135b5d53729bdba999abe715dc519a614dfdc5f32a",
+      "requirement_digests": {
+        "C5:IAM-04.02B": "dbb00e08c9c36bbcea8b459a83840a8e886134a967c6b37f45d959dc95f1b737",
+        "C5:IAM-04.03B": "777190d98187d2a4606ae9e4e1c97e7b2d84d9d083cdf61327cfbe44b0476cf5",
+        "C5:IAM-05.01AC": "ee890c56a71bb85f8ab89b44baeb019c64824589410d366a4fb08f1fdfd1755d",
+        "C5:IAM-05.01B": "dfe2d1a54389724760c53db16e3bb6d835a070ff140a671232d77191b86c2e33",
+        "C5:IAM-05.03B": "a2a3f197433bd3ccbe54b1c3a19e59c1ed9bd723fd6140d39a4c76ba13a1fc8d"
+      },
+      "source_hashes": {
+        "SOURCE-C5": "b48f7ccdd6844b2a0bb5055edf5ce109dfb186b1680c49a52c5b92cb16537163"
+      }
+    },
+    "C5-AUTHENTICATION": {
+      "design_digests": {
+        "SH-IAM-006": "f047252e8bc21b93d0eb51b1819b5a7047f912216df91d65eae7620ba15d2243",
+        "SH-SEC-001": "0653c632fc29121122a02d8a6269b7815e96adfa937396837c72bfe1c43e9c50"
+      },
+      "finding_digest": "04ab6038ba7feeaf01c06c9086fabd4b54d596b38fc5a023881c15fdc5665ea5",
+      "requirement_digests": {
+        "C5:IAM-08.02AS": "2f08ca00e2044015fcb5ade89be8da2da9a8e5aa89fbeb3261b45c5b72c09e27",
+        "C5:IAM-08.02B": "59c4ea5b287d9bf76f109affa30a4fdeb85e84395bbb479530727e200b044e03",
+        "C5:IAM-09.03B": "4238f5b243a944a078da88947aa5241163cec0d209fdba2140caae4493b5e67b",
+        "C5:IAM-09.07B": "5c8dc31e56692a96387d71432bf91d4e1743110cfe5ca68a5eb89d0937298321",
+        "C5:PSS-07.01B": "16869307f5a014e140fee99dc743ef4398fd7b15e00c2f8f95c743886c2053cb"
+      },
+      "source_hashes": {
+        "SOURCE-C5": "b48f7ccdd6844b2a0bb5055edf5ce109dfb186b1680c49a52c5b92cb16537163"
+      }
+    },
+    "C5-CONFIDENTIAL": {
+      "design_digests": {
+        "SH-CFG-004": "c216b7b03fb29a4073bef35728dc4ec72e6c9c054b3456ed78004968087855ff",
+        "SH-SEC-001": "0653c632fc29121122a02d8a6269b7815e96adfa937396837c72bfe1c43e9c50"
+      },
+      "finding_digest": "16b7737271a78ccbfe00c45952ca7371e276a81df585869f88d469cb83569cd4",
+      "requirement_digests": {
+        "C5:OPS-32.01B": "21c7fbc4508c645a8c85412224e4dc0ed6d03c142c9b0b65641a22964da92e34",
+        "C5:OPS-32.02B": "8a3a8224deb0b9669c2fac0e3ead93dd5a5de14f0b524670c56af8266cd4aaae",
+        "C5:OPS-32.03B": "a7c0b306197f6f043baf9a317fec6edc532f1a13712af1fafce186cd8f1c7726",
+        "C5:OPS-33.01B": "52572fbec0f7284e34ac3708ab9d12cadc3ffc1b69dc79e07999e5043b010a07",
+        "C5:OPS-33.02B": "1b6e1b042946ce22545f12a2e45dbaac2086ee2fec0a959ecf9dd541e7c76b0d",
+        "C5:OPS-33.03B": "8b72d1d1aab033c34dd70adc389f35d8a699c4d6ed22434e1b4adbdbd27c41df"
+      },
+      "source_hashes": {
+        "SOURCE-C5": "b48f7ccdd6844b2a0bb5055edf5ce109dfb186b1680c49a52c5b92cb16537163"
+      }
+    },
+    "C5-CONTAINERS": {
+      "design_digests": {
+        "SH-CFG-002": "3dc484977b209b13d15746d469cb3453c7abf2ade856236264a3c381a9e3d650",
+        "SH-ENG-004": "31803e0846ed848cf4cf9314ad6b0eea4e1fe29f7f5cf92c0b394873943417e5",
+        "SH-SEC-005": "b5d26733d656aa943f82e0b4a3bb7301a3d91e58ba456ed98dfab0ed551413fb"
+      },
+      "finding_digest": "8c70af67596d42dae25156f0ae853082a76493bf228755370a1f5a59a0f6091a",
+      "requirement_digests": {
+        "C5:OPS-34.01B": "2e9471e8ee804b489b47661345a542eb0b8f92c2f35b5f2786226e2f067f3f2e",
+        "C5:OPS-34.02B": "7ff15728eac6a4f60ea6975125e478c0f8a41b98f3bf30f343b96298548e5019",
+        "C5:OPS-35.01B": "c5694f761a85dc3b12b0f4176db92fff35586a2448c7773297e617e952ec5339"
+      },
+      "source_hashes": {
+        "SOURCE-C5": "b48f7ccdd6844b2a0bb5055edf5ce109dfb186b1680c49a52c5b92cb16537163"
+      }
+    },
+    "C5-CONTEXT": {
+      "design_digests": {
+        "SH-ASS-004": "e97a44549a378235aca343de380fbc35283d3f530c58770c33f2c011b5206f60"
+      },
+      "finding_digest": "0d692c56dacd1fea74eb24eaac562d0c5181e1693b7f9ef1da0b9f41a05318fa",
+      "requirement_digests": {
+        "C5:PREP-SOURCE-ADDITIONAL": "8545c8be981d71d9945fe66c6eee4ee884a5cc60f333a311e379918412e4e7e6",
+        "C5:PREP-SOURCE-BASIC": "bcce670480f5736fc16f1c58f93de1b8e7952e4225114439554e162f181bde0c"
+      },
+      "source_hashes": {
+        "SOURCE-C5": "b48f7ccdd6844b2a0bb5055edf5ce109dfb186b1680c49a52c5b92cb16537163"
+      }
+    },
+    "C5-CUSTOMER-ACCESS": {
+      "design_digests": {
+        "SH-IAM-005": "d4e62d8f60a1f3c0416d243b97dd0b3e4e88a1ab5b9373b157826fbee2086677",
+        "SH-INC-002": "14732635b4684601f36714ef6ea3de4bcefcbf7c9b63ad706463d4350e43f570",
+        "SH-PRD-002": "098f684b77e67a588abc23fe78f844d79cead5d82d16546cf39018f6f485e714"
+      },
+      "finding_digest": "dcb01902fe3331363aa47a401606368c3b496b426aa359290fb8601b1adff480",
+      "requirement_digests": {
+        "C5:IAM-07.03AS": "96c3b182be603f4daad5cbcbe547a962103c868d51ebcc92bcc809cf77ec5a72",
+        "C5:IAM-07.03B": "62c495278110be86540919730280e62ee7fa794bf6464606f077d74ddf65e717",
+        "C5:IAM-07.04AS": "5adc9192c6cf8ac462e7da3833955b7251a2e35a8b176a23983e1ca5725e73af",
+        "C5:IAM-07.04B": "3bcf92c1e2b73cc78e2aaa7befc84a74a8eb117fa1bf69585738e76a10517604",
+        "C5:IAM-07.05B": "09fdc07c23ec220982cad7a168cdc2346bd786c43107b3d3955e3c21fc18f138"
+      },
+      "source_hashes": {
+        "SOURCE-C5": "b48f7ccdd6844b2a0bb5055edf5ce109dfb186b1680c49a52c5b92cb16537163"
+      }
+    },
+    "C5-CUSTOMER-FUNCTIONS": {
+      "design_digests": {
+        "SH-ENG-003": "91ecf8adaa82000e6e6c518c8546a9cbe88e613bbb0fdd4f3b38f1f8978b838c",
+        "SH-IAM-002": "a7be426785c6e08526dc10f11c1c57d4ff2ff23cdc15eec9a78cf31efc3a4417",
+        "SH-PRD-002": "098f684b77e67a588abc23fe78f844d79cead5d82d16546cf39018f6f485e714"
+      },
+      "finding_digest": "f46b2df963f43b179fba3dcfcaea3d58a2d8c1d153233b7ea2a1ce59cf95d4bb",
+      "requirement_digests": {
+        "C5:PSS-04.01B": "64f0bcd8341b2a74772dd194c7cfcffc43b25b7ec227c44aeca9f3f60a0fcf73",
+        "C5:PSS-04.03B": "5b0ef81da509f6db82a490e28f1dfd5aee901f23ca415ce06007e65806e52748",
+        "C5:PSS-05.01B": "4eabcb1653b98511fe28cde9fa7fd090075dbad54bb439892e85694599d9b278",
+        "C5:PSS-08.03B": "fdc905bae79290bbd112c1dfefeb163e893ecc0b65acf9714900fa5862a85a2a",
+        "C5:PSS-09.02B": "6450930a93534c77d42f48d2abd8b3010c7b9f5d86f7a1960f389723d9aa177c"
+      },
+      "source_hashes": {
+        "SOURCE-C5": "b48f7ccdd6844b2a0bb5055edf5ce109dfb186b1680c49a52c5b92cb16537163"
+      }
+    },
+    "C5-EXPORT": {
+      "design_digests": {
+        "SH-TPR-003": "9c44d6ca1a656688949d1870dbe61ab8b946827d7985db09efc5b397dde7af89",
+        "SH-TPR-005": "d3fc78a03724228316aa34dc36801a9861689497caa333a5bd05f37f3df12f2d"
+      },
+      "finding_digest": "ee5aa5ce814c886d7079714eae418f74d7eda6b0338e84a43890906c31d195b8",
+      "requirement_digests": {
+        "C5:PI-02.01B": "902f1c344588ca62832919529c2c8fe21b381943aca31cb9ed971b8fcb387f01"
+      },
+      "source_hashes": {
+        "SOURCE-C5": "b48f7ccdd6844b2a0bb5055edf5ce109dfb186b1680c49a52c5b92cb16537163"
+      }
+    },
+    "C5-INVESTIGATIONS": {
+      "design_digests": {
+        "SH-DAT-002": "cb5c7ce8432eef9e3026a04cb2ead4c74eaf1453553110e14938463e03d21565",
+        "SH-LEG-002": "6d64c446447b674979161c4f58b7359ff5018ecba886d3c71adf1f65d9601401",
+        "SH-REC-002": "8fb80fa99fc00af8196d7bb03038e23ef649f7e9c5e89efb93dcdd89980c1e31"
+      },
+      "finding_digest": "8a7f86e47338fed8075b5971c11cf8b8a215720106cc46c2988d32347ac85ba5",
+      "requirement_digests": {
+        "C5:INQ-01.01B": "b1faae92b1afa311fc31ff98e8d08bdaf5ff8493a45ecfd32c244388df5d4ab2",
+        "C5:INQ-01.02B": "5862cfe7c7ad4570a8b987bc423ce3c5f52de0c8188b07412affb803ba1808bc",
+        "C5:INQ-02.01B": "3ac1d5a687a22fd22d08a454c708ac19cf44c8d41180e57e3d9ee04bb81852f9",
+        "C5:INQ-03.01B": "f90fb389362b018f1673d4f0a39d7662f10bb45107c6dc5e0f48ce327f8a4992",
+        "C5:INQ-03.02B": "dd30d7b67d88a88a69bd52849968df14e7fbe701f2a7e8cdf839f17d8c0c531f",
+        "C5:INQ-04.01B": "b0c77aee365f0dfe341b873071b0f082915e6a20fdfe71360d684ca93ce34959",
+        "C5:INQ-04.02B": "406888b1f8210b269b44d156667a7ff2914a0a1e9476e5f548b942611882ecd0",
+        "C5:INQ-04.03B": "7494c8ba5c5b669f7f58e7b8fe9d16a6c50e33977f33b4f492b4d11be72fffc3"
+      },
+      "source_hashes": {
+        "SOURCE-C5": "b48f7ccdd6844b2a0bb5055edf5ce109dfb186b1680c49a52c5b92cb16537163"
+      }
+    },
+    "C5-KEY-CONTINUITY": {
+      "design_digests": {
+        "SH-BCM-003": "38fd069631c575e496a6f0e442a017fb3cf5d3f4ef8fa71727cce0da58877d2c",
+        "SH-CFG-004": "c216b7b03fb29a4073bef35728dc4ec72e6c9c054b3456ed78004968087855ff"
+      },
+      "finding_digest": "2b7c65b4c4737ecfac4edd232be1413f4e8a2130c526c3033f16afb0b25b3262",
+      "requirement_digests": {
+        "C5:CRY-16.01B": "b71d118b7a8741e74de28ed74e188e66e1f93fc6545a5dab09f48e1b4f0f092f",
+        "C5:CRY-16.02B": "ca40b9de79273048cc3d4cb499fd751f5058438282e6d86634f34f39caa1172e",
+        "C5:CRY-18.01B": "4dbb0c258ce509eb3816a82c1f7fd62c22fc9410ccbbca796abede74dd7a6ae9",
+        "C5:CRY-19.01B": "574b7e1e333eac89c9ad62145a1caa70e4674ce50c072c332dfd5b5f182c663a"
+      },
+      "source_hashes": {
+        "SOURCE-C5": "b48f7ccdd6844b2a0bb5055edf5ce109dfb186b1680c49a52c5b92cb16537163"
+      }
+    },
+    "C5-LOG-DATA": {
+      "design_digests": {
+        "SH-DAT-002": "cb5c7ce8432eef9e3026a04cb2ead4c74eaf1453553110e14938463e03d21565",
+        "SH-DAT-003": "2e86ed61e0dbff9dc4ff251ea92e07b1597ed105c2ddcd745106df61b6dc2c88",
+        "SH-SEC-002": "e582836e0b30f6622a6835b73220d060ba9b6a3151f1dfc0e5f5f1a2f8828e05"
+      },
+      "finding_digest": "b421bbe1f78823964959999bd3e9a0ae4573e3742e97d99dc5ce053ecb97215d",
+      "requirement_digests": {
+        "C5:OPS-11.01B": "989427dd20ca6fed00a5a3d5c9616816d127ba49995e116728130c744c12e8cf",
+        "C5:OPS-11.02B": "9ddc9e756b26de743d7a90704d2d474c4a7b465484aff28dae8b5084fff1b3b5",
+        "C5:OPS-13.02B": "702f064fc853bedfd2d94786b803145b93e811cc43cdbd240206ed98207b3faf",
+        "C5:OPS-15.01B": "9630d77796e72681ff129b79d455d543825fc9e34d79fc47cb12b94f7224d074",
+        "C5:OPS-16.01B": "afe40fe814646a4557f04e4dad9a40774d16ab65bfb72af10ae839cb75bff6b9"
+      },
+      "source_hashes": {
+        "SOURCE-C5": "b48f7ccdd6844b2a0bb5055edf5ce109dfb186b1680c49a52c5b92cb16537163"
+      }
+    },
+    "C5-NO-WAIVER": {
+      "design_digests": {
+        "SH-ERM-003": "b7d1a9c94fc2f7269ec26ab64300e8dadc78e96c63a446f4fe39c5a0c00327bf",
+        "SH-POL-003": "e6edf3930214901dae6bed0b3d3becadeb416b6844dbfec507d008c60f0bb08a"
+      },
+      "finding_digest": "dd9defaf37747e3bb3253813bae03668057843090e738abd048c30840b9f05e6",
+      "requirement_digests": {
+        "C5:SP-03.03B": "a36f1fc1afc8887a488aabb5774dc2eb9b611d4738f8a79250549b4d2f84887f",
+        "C5:SP-03.04B": "334885ae32da110ce92f4e44528753e82b9e7713703ff2d6abb1b7b26bbf33f5",
+        "C5:SP-03.05B": "9e90ae09c336c8c48a45ae9edb276156a8e6c548386b3277dec3d2decb2d8ee1"
+      },
+      "source_hashes": {
+        "SOURCE-C5": "b48f7ccdd6844b2a0bb5055edf5ce109dfb186b1680c49a52c5b92cb16537163"
+      }
+    },
+    "C5-PENTEST": {
+      "design_digests": {
+        "SH-ASS-003": "b87cb3ea5836a1ce7780adc81745e569a6bad712cc566cbd27a7a3952489b18f",
+        "SH-SEC-003": "b858bf944ff3004b0b58eceba84787df03fd62b7be78984e4d851f212949948d"
+      },
+      "finding_digest": "5c5f0dd457afb3c4393f88ac2a251967369d23eee676a198f4bde44f0f87cddc",
+      "requirement_digests": {
+        "C5:OPS-22.01AS": "9dc5acb7a7f7d421f3b1237f1d798638f2fcf24a0b2b9c09f45b578622e597fd",
+        "C5:OPS-22.01B": "8e8e9b30826375c213db8dc914a6fb08109d3e9fd9a175f96bc863f29ef01e96",
+        "C5:OPS-22.05B": "ef851f89ef34bfab6c3b40f811b04ee59ddbb1110b8b88979008f1a876af52f4",
+        "C5:OPS-22.08B": "85da7571adb981297c31e4eab6bc0c22525bfce517fa9717b0e2afe99d93b9e0"
+      },
+      "source_hashes": {
+        "SOURCE-C5": "b48f7ccdd6844b2a0bb5055edf5ce109dfb186b1680c49a52c5b92cb16537163"
+      }
+    },
+    "C5-PHYSICAL-DETAIL": {
+      "design_digests": {
+        "SH-SEC-001": "0653c632fc29121122a02d8a6269b7815e96adfa937396837c72bfe1c43e9c50",
+        "SH-TPR-004": "cccfac2fee5b90a7c80c5c0b1ba686c41659ac8e9f1a6d7226bd7f92020b5088"
+      },
+      "finding_digest": "3a26ec3cbfa4ee9d1f9579eab2ce102cd09077d7022fc0492a98572f22dcec1f",
+      "requirement_digests": {
+        "C5:PS-03.03B": "502f7bacdcab1a384debcaa4a13861b6358d1b29f2fb0f13f4e5d1920298edb2",
+        "C5:PS-04.01B": "733f14bd3e1887c7c85813c002b2f9f6c1091069dd96d49e26bec4fd08df5ec8",
+        "C5:PS-05.02B": "2492b94def83c9e40e6190e75d16fe57d646b40caa402db758b5d5f5c3b78144",
+        "C5:PS-06.01B": "0bbad35bf063364721a2c01a42643aeebf9368cba53b674ee6fbdef7296dbf7a",
+        "C5:PS-06.03B": "b23e99944c60b30d4e2187e1f4d411cd0ad296699fb99fa156aaf830a3236450"
+      },
+      "source_hashes": {
+        "SOURCE-C5": "b48f7ccdd6844b2a0bb5055edf5ce109dfb186b1680c49a52c5b92cb16537163"
+      }
+    },
+    "C5-PHYSICAL-REDUNDANCY": {
+      "design_digests": {
+        "SH-BCM-004": "093c4c543cce4e8af7266534777a91212ec80f8c84b153092b2f6dcf64093a00",
+        "SH-TPR-004": "cccfac2fee5b90a7c80c5c0b1ba686c41659ac8e9f1a6d7226bd7f92020b5088"
+      },
+      "finding_digest": "9938a2bfdf8767f28b9763fb6ed37115f00cfa506ad2dd3207c5121d20adfb75",
+      "requirement_digests": {
+        "C5:PS-02.01AS": "aef14f565160604b8e1c9ac6554424c4690a75fa658a1b0f1b14d7c49f75d305",
+        "C5:PS-02.01B": "cf004214a271aa6a881629f8d99c6ca98698f18c2ff3a81605b7428449e0f547",
+        "C5:PS-02.02AS": "37b9263820648db5009289e2b1e698f33df1ce31579af4ce9438ceb6b9e8aa67",
+        "C5:PS-02.03B": "ce810ef1167dda6b3d0685736469f78825f6942aeeaaea443aa47cba21b1fe5c"
+      },
+      "source_hashes": {
+        "SOURCE-C5": "b48f7ccdd6844b2a0bb5055edf5ce109dfb186b1680c49a52c5b92cb16537163"
+      }
+    },
+    "C5-REGIONS": {
+      "design_digests": {
+        "SH-CFG-001": "7ec8207786a298b65122a342718d746919fe2fa0acc55557afd5845ecd28ca49",
+        "SH-DAT-002": "cb5c7ce8432eef9e3026a04cb2ead4c74eaf1453553110e14938463e03d21565",
+        "SH-TPR-003": "9c44d6ca1a656688949d1870dbe61ab8b946827d7985db09efc5b397dde7af89"
+      },
+      "finding_digest": "44c563ac560a7aa8f0ab12946d9ebc12e4d173979688a1a9e4aa7e4cd22c22ef",
+      "requirement_digests": {
+        "C5:PSS-12.01AS": "5729f737338c5b3a7f06813c0d2ea56f4ebf30e452487f40ab592aa3c90efd3a",
+        "C5:PSS-12.01B": "f7fb318f69bf0467ebca4d249dc102bce27d64fc60221b6baab2d2186843da20",
+        "C5:PSS-12.02AS": "9d117b4724fe8ef088f219cd44eb4e80a5b56180762632d86f4b43a5e78922fb",
+        "C5:PSS-12.02B": "eddd50f358cab4d6e9d5ef2e3cc179694e5e51f363dd1dfdfdbf937bba412e7c",
+        "C5:PSS-12.03B": "450e635b5f96c00705bf64da41383e8076f99eef5e713ab5feb2072c454d41b0",
+        "C5:PSS-12.04B": "23fce6d65bf64c2164f9e15cfa356f70fbbb44fc36ab9b2042379f33c70ddd8c"
+      },
+      "source_hashes": {
+        "SOURCE-C5": "b48f7ccdd6844b2a0bb5055edf5ce109dfb186b1680c49a52c5b92cb16537163"
+      }
+    },
+    "C5-RESTORE": {
+      "design_digests": {
+        "SH-BCM-002": "a4d97510f8e5e4bff8e904ce4458374d8ed71365ecaf02edabfde87b9d0666cc",
+        "SH-BCM-003": "38fd069631c575e496a6f0e442a017fb3cf5d3f4ef8fa71727cce0da58877d2c"
+      },
+      "finding_digest": "287a5aa2a76adc70e059169c095ea657015ea8f2545f613de21585e4ca53a6b6",
+      "requirement_digests": {
+        "C5:OPS-06.01AS": "ae4565c2fd718b7fab316fecb25b19f5f40cd82b954a5339776725cc151082ba",
+        "C5:OPS-08.01B": "a6d13266c8d27ada8f497a01a43e3ec18eda22074c72fbd8de46732567298379",
+        "C5:OPS-08.03B": "c1d2ff02e31b984c8fd472853837a502ac16fb7c87a85e8ab33ff2e27e535ac4",
+        "C5:OPS-08.04B": "86ef442d2e30f568b1827cef19e52ad52446ba9ffdbc4fa790eab0073cae549b",
+        "C5:OPS-09.04B": "c37c29fc57372d974616c2e7ed2e1c9f41c1e3666814af2a3e5fbbdfe37b4306",
+        "C5:OPS-09.05B": "16fa77fc993e84253ea7416b19e76ca9545cf9db443708bde9213947b8a2b541"
+      },
+      "source_hashes": {
+        "SOURCE-C5": "b48f7ccdd6844b2a0bb5055edf5ce109dfb186b1680c49a52c5b92cb16537163"
+      }
+    },
+    "C5-SBOM": {
+      "design_digests": {
+        "SH-CFG-001": "7ec8207786a298b65122a342718d746919fe2fa0acc55557afd5845ecd28ca49",
+        "SH-ENG-004": "31803e0846ed848cf4cf9314ad6b0eea4e1fe29f7f5cf92c0b394873943417e5"
+      },
+      "finding_digest": "3f3f2173b7d99326cc5d291ee0c057c053029df02966a64744243281200f57e6",
+      "requirement_digests": {
+        "C5:DEV-13.01B": "40baff7754c9bff48d58e76b14557d4823d42e254245857fabcf66e1ef97bae2",
+        "C5:DEV-13.02B": "39e3240fbbf5c08a5ac97a3cbdfb7c398e50ad2485d789c5cb1474781c667ec7"
+      },
+      "source_hashes": {
+        "SOURCE-C5": "b48f7ccdd6844b2a0bb5055edf5ce109dfb186b1680c49a52c5b92cb16537163"
+      }
+    },
+    "C5-SUPPLIER-TRANSFERS": {
+      "design_digests": {
+        "SH-SEC-001": "0653c632fc29121122a02d8a6269b7815e96adfa937396837c72bfe1c43e9c50",
+        "SH-TPR-003": "9c44d6ca1a656688949d1870dbe61ab8b946827d7985db09efc5b397dde7af89"
+      },
+      "finding_digest": "bbd1d211c9392754055651ac523d96f5dd50f332c123a3e786484ef743df0c76",
+      "requirement_digests": {
+        "C5:SSO-03.02B": "462b7d3be4bf509b0d175ac3966be78b4471db8f807c6088111684e3bc8fd6e6",
+        "C5:SSO-08.01B": "5cf6c130e064b962e0b57833d556c48de35c9278615d45685d77f790f8772286",
+        "C5:SSO-08.02B": "7a8097b8f33b2264745d8fb6cbcc957146c52f59b064e7cac4d619b33e9b2ea1",
+        "C5:SSO-08.03B": "2b18f3c6d58b357a140cb97ef85e3a6b412e1e849782f1d36f778bf096dd6b2b"
+      },
+      "source_hashes": {
+        "SOURCE-C5": "b48f7ccdd6844b2a0bb5055edf5ce109dfb186b1680c49a52c5b92cb16537163"
+      }
+    },
+    "C5-VULNERABILITY-CLOCKS": {
+      "design_digests": {
+        "SH-SEC-003": "b858bf944ff3004b0b58eceba84787df03fd62b7be78984e4d851f212949948d",
+        "SH-SEC-004": "bce496443fe681bf4e40fd20fe02fdc676115dd66cf45e3853338732d86f4186"
+      },
+      "finding_digest": "297949b27ae5f3c89c1bc57f5db1b77873e05031c06154a5bb30ff3d175b4919",
+      "requirement_digests": {
+        "C5:OPS-18.02B": "fc3da89ba78460e712ca05dc4cd97c3398da11078115f68cc15d6cee3a3295de",
+        "C5:OPS-18.03B": "fe3eca1cd6d1425fbe1ba64f9cfc7d266e9394b01dc28d6e3063fd36e677d874",
+        "C5:OPS-23.02B": "de0cf8d0799460abebb6424f6dced1871ca424cfc2b380817338ce5fbe2dc5e7",
+        "C5:OPS-25.01AS": "e8416ce88f82c31d8d9127553f50f5cd5cd77f98f52e5948db1e664016df55cd",
+        "C5:OPS-25.01B": "125a90887072511f1608c4118f8baab6fe7a8b4d2e4fb96e26205118b027caea"
+      },
+      "source_hashes": {
+        "SOURCE-C5": "b48f7ccdd6844b2a0bb5055edf5ce109dfb186b1680c49a52c5b92cb16537163"
+      }
+    },
+    "H-ACTIVITY-REVIEW": {
+      "design_digests": {
+        "SH-REC-002": "8fb80fa99fc00af8196d7bb03038e23ef649f7e9c5e89efb93dcdd89980c1e31",
+        "SH-SEC-002": "e582836e0b30f6622a6835b73220d060ba9b6a3151f1dfc0e5f5f1a2f8828e05"
+      },
+      "finding_digest": "543a44bf33bf2f7c203c597a46e6a6730728e8e23ed357c15f4aa62764cf7bc5",
+      "requirement_digests": {
+        "HIPAA:164.308": "e1889f0b30c5ddc678c0b72b7a5cac568ab173ec77aed3f9fdfcae7b4e2724ba",
+        "HIPAA:164.312": "b8f2505f6026428d0eec20a0099ec20eb1ded96263ba79a5173ee775490d023e"
+      },
+      "source_hashes": {
+        "SOURCE-HIPAA": "36081016f4d49c0856cb9e28f5d2deab5f49c8440a6c3d9a184577ea59a4f1f3"
+      }
+    },
+    "H-ADDRESSABLE": {
+      "design_digests": {
+        "SH-POL-003": "e6edf3930214901dae6bed0b3d3becadeb416b6844dbfec507d008c60f0bb08a",
+        "SH-SEC-001": "0653c632fc29121122a02d8a6269b7815e96adfa937396837c72bfe1c43e9c50"
+      },
+      "finding_digest": "b2bd98ce8dc68413bdca570e39a7cd439b67bb7be720a78b93bf2ea2917fc0bc",
+      "requirement_digests": {
+        "HIPAA:164.306": "2ce7c2be7b6e4549d34b418037206528862ef3504844ce34115a20537e9ccae4",
+        "HIPAA:164.308": "e1889f0b30c5ddc678c0b72b7a5cac568ab173ec77aed3f9fdfcae7b4e2724ba",
+        "HIPAA:164.310": "7bcbca2a84bdc293750288d75d9878dd438551a0450e1ae25ba8d634444073cd",
+        "HIPAA:164.312": "b8f2505f6026428d0eec20a0099ec20eb1ded96263ba79a5173ee775490d023e"
+      },
+      "source_hashes": {
+        "SOURCE-HIPAA": "36081016f4d49c0856cb9e28f5d2deab5f49c8440a6c3d9a184577ea59a4f1f3"
+      }
+    },
+    "H-BREACH-DECISION": {
+      "design_digests": {
+        "SH-INC-001": "81d0a2d6a939865fd285554bcfab42de54e40b897663edb25fd8e8117b9aa989",
+        "SH-INC-002": "14732635b4684601f36714ef6ea3de4bcefcbf7c9b63ad706463d4350e43f570"
+      },
+      "finding_digest": "1355cad6fe44d1d422ad5a2aac5875509395ac849fe85be77719cdc89d62ab37",
+      "requirement_digests": {
+        "HIPAA:164.402": "0dc7cdf77a8b6893a3b9afc8f7ea88617174b05824ab32041d265d5a93616530",
+        "HIPAA:164.414": "927fa9857a51ebd42257097a126112f062244f51a97ab431d8e6b0d8059c5962"
+      },
+      "source_hashes": {
+        "SOURCE-HIPAA": "36081016f4d49c0856cb9e28f5d2deab5f49c8440a6c3d9a184577ea59a4f1f3"
+      }
+    },
+    "H-EMERGENCY": {
+      "design_digests": {
+        "SH-BCM-004": "093c4c543cce4e8af7266534777a91212ec80f8c84b153092b2f6dcf64093a00",
+        "SH-IAM-005": "d4e62d8f60a1f3c0416d243b97dd0b3e4e88a1ab5b9373b157826fbee2086677"
+      },
+      "finding_digest": "381fd7dbab9c0bd2c493835efdc0e1e89fa1de3b89b37e353b9d6461bd20ec76",
+      "requirement_digests": {
+        "HIPAA:164.308": "e1889f0b30c5ddc678c0b72b7a5cac568ab173ec77aed3f9fdfcae7b4e2724ba",
+        "HIPAA:164.312": "b8f2505f6026428d0eec20a0099ec20eb1ded96263ba79a5173ee775490d023e"
+      },
+      "source_hashes": {
+        "SOURCE-HIPAA": "36081016f4d49c0856cb9e28f5d2deab5f49c8440a6c3d9a184577ea59a4f1f3"
+      }
+    },
+    "H-EVALUATION": {
+      "design_digests": {
+        "SH-ASS-002": "57339e40bb95f6aa3d30525745db471053a8e3f5d4df1c90879b094a6794dcfa",
+        "SH-ASS-003": "b87cb3ea5836a1ce7780adc81745e569a6bad712cc566cbd27a7a3952489b18f"
+      },
+      "finding_digest": "73cc90b311724dabe9fe563169c95c4b15e59c8a045542eba966f88f3a6383c0",
+      "requirement_digests": {
+        "HIPAA:164.308": "e1889f0b30c5ddc678c0b72b7a5cac568ab173ec77aed3f9fdfcae7b4e2724ba"
+      },
+      "source_hashes": {
+        "SOURCE-HIPAA": "36081016f4d49c0856cb9e28f5d2deab5f49c8440a6c3d9a184577ea59a4f1f3"
+      }
+    },
+    "H-INTEGRITY": {
+      "design_digests": {
+        "SH-DAT-004": "dc777b7cc3f4cd4270b8c72d99fe25a892575d7dcda06acd51604fbbaebec081",
+        "SH-SEC-001": "0653c632fc29121122a02d8a6269b7815e96adfa937396837c72bfe1c43e9c50"
+      },
+      "finding_digest": "cd895e63368e6a591737407b55ce440a1814b4d83a88428cf0ded4fe12ae5dc2",
+      "requirement_digests": {
+        "HIPAA:164.312": "b8f2505f6026428d0eec20a0099ec20eb1ded96263ba79a5173ee775490d023e"
+      },
+      "source_hashes": {
+        "SOURCE-HIPAA": "36081016f4d49c0856cb9e28f5d2deab5f49c8440a6c3d9a184577ea59a4f1f3"
+      }
+    },
+    "H-LEGAL-STATUS": {
+      "design_digests": {
+        "SH-LEG-001": "50f954d2eb39c92804c6702d424988781ce75a011f2e4dec79b0531257e8fff9"
+      },
+      "finding_digest": "62a6c285e47f9ef622da139f333465ea3af79e65314d7827dedfd125e20850a0",
+      "requirement_digests": {
+        "HIPAA:164.502": "2c1e33d1a22e39142f29a7ca3689661c4b724e03f2110dfdf178fbbd60263353",
+        "HIPAA:164.509": "1218ce903da55dc2f015afa1ee346d3b93ba01b774b7b430b75c4f918d3d1cda",
+        "HIPAA:164.520": "57fd9b363ce784a8d5482d609c02a2cea7b3021d2429cce6ab825fa8568aa484"
+      },
+      "source_hashes": {
+        "SOURCE-HIPAA": "36081016f4d49c0856cb9e28f5d2deab5f49c8440a6c3d9a184577ea59a4f1f3"
+      }
+    },
+    "H-NOTICE-CLOCK": {
+      "design_digests": {
+        "SH-INC-001": "81d0a2d6a939865fd285554bcfab42de54e40b897663edb25fd8e8117b9aa989",
+        "SH-INC-002": "14732635b4684601f36714ef6ea3de4bcefcbf7c9b63ad706463d4350e43f570",
+        "SH-TPR-003": "9c44d6ca1a656688949d1870dbe61ab8b946827d7985db09efc5b397dde7af89"
+      },
+      "finding_digest": "1cab2eb2746e82cd58c2afcebba557855e1782a65b5cc68f6e4212c276657f7d",
+      "requirement_digests": {
+        "HIPAA:164.410": "274f22e7313d54422b900af733bb6da7d7ef09b9021db303f35edb7f16ca74f9",
+        "HIPAA:164.412": "d5c3ff838fd3a66efc7bf1bec6275aa2e6e1c7e685fc54b634b347e151ce9790"
+      },
+      "source_hashes": {
+        "SOURCE-HIPAA": "36081016f4d49c0856cb9e28f5d2deab5f49c8440a6c3d9a184577ea59a4f1f3"
+      }
+    },
+    "H-PHYSICAL-MOVEMENT": {
+      "design_digests": {
+        "SH-REC-004": "03573aa501c4b68443bf95419ef16f77f7e7fdf07f501237c34a93072567ce36",
+        "SH-SEC-001": "0653c632fc29121122a02d8a6269b7815e96adfa937396837c72bfe1c43e9c50"
+      },
+      "finding_digest": "2cf12c75804987eebabed375fbe95f8458e1d53d31d6ec4fff1417e9e74cfd3d",
+      "requirement_digests": {
+        "HIPAA:164.310": "7bcbca2a84bdc293750288d75d9878dd438551a0450e1ae25ba8d634444073cd"
+      },
+      "source_hashes": {
+        "SOURCE-HIPAA": "36081016f4d49c0856cb9e28f5d2deab5f49c8440a6c3d9a184577ea59a4f1f3"
+      }
+    },
+    "H-PRIVACY-PURPOSE": {
+      "design_digests": {
+        "SH-DAT-002": "cb5c7ce8432eef9e3026a04cb2ead4c74eaf1453553110e14938463e03d21565",
+        "SH-LEG-002": "6d64c446447b674979161c4f58b7359ff5018ecba886d3c71adf1f65d9601401"
+      },
+      "finding_digest": "846b8c393c20c262cada22b706cf8d066ae8c3e66cfa3507ddf91cd993a2edab",
+      "requirement_digests": {
+        "HIPAA:164.502": "2c1e33d1a22e39142f29a7ca3689661c4b724e03f2110dfdf178fbbd60263353",
+        "HIPAA:164.504": "2ae663ed3b0534b19665bb508b2df7cd9722a50a5e6fb29693924f920c926d74"
+      },
+      "source_hashes": {
+        "SOURCE-HIPAA": "36081016f4d49c0856cb9e28f5d2deab5f49c8440a6c3d9a184577ea59a4f1f3"
+      }
+    },
+    "H-REGULATOR": {
+      "design_digests": {
+        "SH-ETH-003": "1c2e3dd6dda5a5f77aeca20baac494746f0cc044ccf7ec4ed0783e55efb97522",
+        "SH-LEG-001": "50f954d2eb39c92804c6702d424988781ce75a011f2e4dec79b0531257e8fff9",
+        "SH-REC-002": "8fb80fa99fc00af8196d7bb03038e23ef649f7e9c5e89efb93dcdd89980c1e31"
+      },
+      "finding_digest": "4ec3249077852512abec6caee6a72262168e06f30a58c4fe3aa40d01ccb34a51",
+      "requirement_digests": {
+        "HIPAA:160.310": "dde561f4f10f8f76b442a8913fc2fac9c4ba45ecca5425e14588b7f44b7c6ccd",
+        "HIPAA:160.316": "709b90717924ac61c3e3fd5db58c465bb822ad4ec6dda3ab565791974705bda7"
+      },
+      "source_hashes": {
+        "SOURCE-HIPAA": "36081016f4d49c0856cb9e28f5d2deab5f49c8440a6c3d9a184577ea59a4f1f3"
+      }
+    },
+    "H-RETENTION": {
+      "design_digests": {
+        "SH-DAT-003": "2e86ed61e0dbff9dc4ff251ea92e07b1597ed105c2ddcd745106df61b6dc2c88",
+        "SH-POL-001": "e804139004d99baf865387f10420e296836c3f12f46fae465b454fe88beb6a23",
+        "SH-REC-004": "03573aa501c4b68443bf95419ef16f77f7e7fdf07f501237c34a93072567ce36"
+      },
+      "finding_digest": "6cd1ca00d83417a9956591e7d087dd89c3c29855d4b46ef1205dc604999beb37",
+      "requirement_digests": {
+        "HIPAA:164.316": "096bd14cf82821785b21df6a4d13c0902f44962a9d1a86cccff0e321e8311ebd"
+      },
+      "source_hashes": {
+        "SOURCE-HIPAA": "36081016f4d49c0856cb9e28f5d2deab5f49c8440a6c3d9a184577ea59a4f1f3"
+      }
+    },
+    "H-RIGHTS-ASSISTANCE": {
+      "design_digests": {
+        "SH-DAT-002": "cb5c7ce8432eef9e3026a04cb2ead4c74eaf1453553110e14938463e03d21565",
+        "SH-TPR-003": "9c44d6ca1a656688949d1870dbe61ab8b946827d7985db09efc5b397dde7af89"
+      },
+      "finding_digest": "4daefa263ecb96d24a763cef59d8959f897624eff1c66543196f3a1f8404eb5a",
+      "requirement_digests": {
+        "HIPAA:164.502": "2c1e33d1a22e39142f29a7ca3689661c4b724e03f2110dfdf178fbbd60263353",
+        "HIPAA:164.504": "2ae663ed3b0534b19665bb508b2df7cd9722a50a5e6fb29693924f920c926d74",
+        "HIPAA:164.524": "92299c5c03539f92a9b3ecd3d1a9b7f69ac5dfb1dfa4764e77979ff055abb37e",
+        "HIPAA:164.526": "30468cf1a0a2ffde2a94200ca00d2d73755bcd87e7ad12b5e7598f537f6813bb",
+        "HIPAA:164.528": "87f43de50e03ee1191b7e9e3f743f2b1aad2aa345e7deeb35459a28d0c9a4c88"
+      },
+      "source_hashes": {
+        "SOURCE-HIPAA": "36081016f4d49c0856cb9e28f5d2deab5f49c8440a6c3d9a184577ea59a4f1f3"
+      }
+    },
+    "H-SANCTIONS": {
+      "design_digests": {
+        "SH-ETH-001": "fbf03059a5b709faa10dcbebf663187b38ae75c059034b53e7f01690ba136d88",
+        "SH-ETH-003": "1c2e3dd6dda5a5f77aeca20baac494746f0cc044ccf7ec4ed0783e55efb97522"
+      },
+      "finding_digest": "ab042d7044fb838a8df842783384c4247c08bdb80c44863b0ab19d0d4bb38d31",
+      "requirement_digests": {
+        "HIPAA:164.308": "e1889f0b30c5ddc678c0b72b7a5cac568ab173ec77aed3f9fdfcae7b4e2724ba",
+        "SOC2:CC1.1": "51b47cf154303dce4860514cb403614527992b92b0f37a4500610fae098117ed",
+        "SOC2:CC1.5": "66ae1acfdea6d25c010fb15088376196ac08d8df75be100d7c373af0a5df11b6"
+      },
+      "source_hashes": {
+        "SOURCE-HIPAA": "36081016f4d49c0856cb9e28f5d2deab5f49c8440a6c3d9a184577ea59a4f1f3",
+        "SOURCE-SOC2-TSC": "23a099dd1dc273b7a45fda2351f376344c33fcb2911d586036c0e0d631b8ad69"
+      }
+    },
+    "H-SECURITY-OFFICIAL": {
+      "design_digests": {
+        "SH-GOV-003": "0827b9714a02a1d992134cc7fadc2c9a2dd279cd991c4cb53fa8fee9398fa1bd",
+        "SH-POL-002": "9e80d6b57640945f082246680a999add346b612e61088faa2c821c49344334d2"
+      },
+      "finding_digest": "9baf6b490a7025a1ed9dedf826840129a35719d5322817975bdbbefc4369b144",
+      "requirement_digests": {
+        "HIPAA:164.308": "e1889f0b30c5ddc678c0b72b7a5cac568ab173ec77aed3f9fdfcae7b4e2724ba"
+      },
+      "source_hashes": {
+        "SOURCE-HIPAA": "36081016f4d49c0856cb9e28f5d2deab5f49c8440a6c3d9a184577ea59a4f1f3"
+      }
+    },
+    "H-SUBCONTRACT": {
+      "design_digests": {
+        "SH-TPR-003": "9c44d6ca1a656688949d1870dbe61ab8b946827d7985db09efc5b397dde7af89",
+        "SH-TPR-004": "cccfac2fee5b90a7c80c5c0b1ba686c41659ac8e9f1a6d7226bd7f92020b5088"
+      },
+      "finding_digest": "f238c2f9300e8fbadbfa3f9d683239e3a5f0e47b4971ffdb1ba34f2493b1f71c",
+      "requirement_digests": {
+        "HIPAA:164.308": "e1889f0b30c5ddc678c0b72b7a5cac568ab173ec77aed3f9fdfcae7b4e2724ba",
+        "HIPAA:164.314": "6ea26fdd8293c99e1abe8951b71b3d4e71a45dbfbd2b0352946ae313238fe35b",
+        "HIPAA:164.502": "2c1e33d1a22e39142f29a7ca3689661c4b724e03f2110dfdf178fbbd60263353",
+        "HIPAA:164.504": "2ae663ed3b0534b19665bb508b2df7cd9722a50a5e6fb29693924f920c926d74"
+      },
+      "source_hashes": {
+        "SOURCE-HIPAA": "36081016f4d49c0856cb9e28f5d2deab5f49c8440a6c3d9a184577ea59a4f1f3"
+      }
+    },
+    "I-CORRECTIVE-ACTION": {
+      "design_digests": {
+        "SH-ASS-005": "5fa2fa5add0e19ff0ede1487173c4c67c25da687af422773520b3de10015aec5",
+        "SH-INC-003": "e38e41c9e6aa923ffbbd1555664bb04338eebf4b5c9c74bdbf0948f41eafec1a"
+      },
+      "finding_digest": "18dc0a8281f8759b6462d23d9196e5fe427df0f43f9d0fb3c4360e9786b7500c",
+      "requirement_digests": {
+        "ISO27001:10.2": "8b8c9e155d5d7d635d21850402689a7bac793fd99a8e8632144ea7f0f5147d26",
+        "ISO42001:10.2": "627e3093630f80253ff00dc77b3648dccbfa714a6c1f0a17aa36ce000b395408"
+      },
+      "source_hashes": {
+        "SOURCE-ISO27001": "843a6728009540947b2c5531f94b4cf1fb698d5bf3b51b324c8801e3e01c5b78",
+        "SOURCE-ISO42001": "d50103cc0af6d2322c60753ab4a6d9cc54594bc78163481322bf80ee2f75a896"
+      }
+    },
+    "I-DEVELOPMENT": {
+      "design_digests": {
+        "SH-ENG-001": "16e92ad3dea8f1228a4b3ede26923f939a52b7391283e39768b152e29d0e9541",
+        "SH-ENG-003": "91ecf8adaa82000e6e6c518c8546a9cbe88e613bbb0fdd4f3b38f1f8978b838c",
+        "SH-IAM-005": "d4e62d8f60a1f3c0416d243b97dd0b3e4e88a1ab5b9373b157826fbee2086677",
+        "SH-SEC-001": "0653c632fc29121122a02d8a6269b7815e96adfa937396837c72bfe1c43e9c50"
+      },
+      "finding_digest": "17f283cfad15eea0632ccf160a64feb5f5065f9e11a67c13e1e2a4b5c97c0145",
+      "requirement_digests": {
+        "ISO27001:A.8.18": "fbd2871b148b5697ca7526319a04d6ba903da0b98decaca8196065b986f9749a",
+        "ISO27001:A.8.25": "57d83d71c79fc07e86311fc9a73a310e05c3865fab2f78a7cd4e31dac2cfdef2",
+        "ISO27001:A.8.26": "154223f8f4ac942f8334f18265c2c2c889f598ecb57b88530351e9fc44972a8f",
+        "ISO27001:A.8.27": "a66fb54b8da7be8ab9aba07afcdf30b3db9b386d033e6c9c8eceaf8b0f2dd744",
+        "ISO27001:A.8.28": "7e624ad2307e24b1f10b81d136ce8e2c18bf394be4506105532f0ad1e4b4ec93",
+        "ISO27001:A.8.29": "ec5909ba64f37b60c0ef182a7bb2741ae05bbb996ae5498d4362b288aa4511dd",
+        "ISO27001:A.8.31": "4789d84148a29c123026d64702f32851e398164d86744ee006b8cfacf39c3aef",
+        "ISO27001:A.8.4": "632e86470a31fd209a36f149b5374a697652fb0b3269f7d2702d79ffe59a322b"
+      },
+      "source_hashes": {
+        "SOURCE-ISO27001": "843a6728009540947b2c5531f94b4cf1fb698d5bf3b51b324c8801e3e01c5b78"
+      }
+    },
+    "I-MANAGEMENT-REVIEW": {
+      "design_digests": {
+        "SH-GOV-002": "c823436d9d064178abe74244e1173ea7c17da98b88b497ef2439a35202676642",
+        "SH-GOV-005": "8f5409be0468646f3e257301e846d1afa5c9c9bbd9b518796186f591bf85576a"
+      },
+      "finding_digest": "93a3492bcec4860f43efbf018b87c53961694112baa4d9510caa5e43aad98427",
+      "requirement_digests": {
+        "ISO27001:9.3.1": "b76eca63ad5f2bd84b4ead12197f90aa421e4cdd4b0136408934691eec3d251c",
+        "ISO27001:9.3.2": "9ba3f125b22abb29d2b1fa74a44e3d8649f8e4f4435e7267b7c3b08f9998ac5e",
+        "ISO27001:9.3.3": "2eba0e70207cc8d843bd7c4976a65d4ef77326b137d609d96c50d05b7ff1b07d",
+        "ISO42001:9.3.1": "30e99aa55fd46c70839240ce7938dd24703c0efa9fd50105896cce39baad1497",
+        "ISO42001:9.3.2": "1cc6bdd92d45a7d35b43a88ff636107cebadcde3c0efcbb871e9308fff322de1",
+        "ISO42001:9.3.3": "934b61f256ba777deae406c7fdeff7dd42260a728f3742695024c72c267aed21"
+      },
+      "source_hashes": {
+        "SOURCE-ISO27001": "843a6728009540947b2c5531f94b4cf1fb698d5bf3b51b324c8801e3e01c5b78",
+        "SOURCE-ISO42001": "d50103cc0af6d2322c60753ab4a6d9cc54594bc78163481322bf80ee2f75a896"
+      }
+    },
+    "I-MEASUREMENT": {
+      "design_digests": {
+        "SH-ASS-002": "57339e40bb95f6aa3d30525745db471053a8e3f5d4df1c90879b094a6794dcfa",
+        "SH-OPS-002": "332fba6e64eda92d0577a0fc4794154589849dbae5750b4d0a5a30ae5a29ed78"
+      },
+      "finding_digest": "7fe92b4019c8fcc895c24f865c23c5b5149288d45f613dccc4db315ef993c4dd",
+      "requirement_digests": {
+        "ISO27001:9.1": "eeac919c49926d5dad7fc152c4ac75add7d6e0c6c5fbef3ca7f559affc9d0918",
+        "ISO42001:9.1": "c801c4a7fe0ca73b7111a9d99a9838da8d7da95e29246f8d43b5d6a15cd6c5c9"
+      },
+      "source_hashes": {
+        "SOURCE-ISO27001": "843a6728009540947b2c5531f94b4cf1fb698d5bf3b51b324c8801e3e01c5b78",
+        "SOURCE-ISO42001": "d50103cc0af6d2322c60753ab4a6d9cc54594bc78163481322bf80ee2f75a896"
+      }
+    },
+    "I-OBJECTIVES": {
+      "design_digests": {
+        "SH-ERM-002": "f295e70552c03a29e6ffeb3b17e319a93df88179ad3760e304157b98f577aa5e",
+        "SH-GOV-005": "8f5409be0468646f3e257301e846d1afa5c9c9bbd9b518796186f591bf85576a"
+      },
+      "finding_digest": "8f33ba4d81d65b062cb328bb497dc7105d2e08c4de476ae45bc7c05ff682c3ff",
+      "requirement_digests": {
+        "ISO27001:6.2": "fcec70501e6f25239f2496ebfc4961057c2408abfe4b024fe6d1b67d337c2554",
+        "ISO27001:6.3": "6e6fe8b6440398dd8e0862fe077f6ca59fe21620cfe0924eb2ee2041f09702b3",
+        "ISO42001:6.2": "2f2d5f9b84c1e4a813cb227feb3d2908431d0bbfae285a789cdac88c0796439f",
+        "ISO42001:6.3": "2e3062a4ae3003afd4fd41186c52a9c77635f0cce169107190cc8feae77503d4"
+      },
+      "source_hashes": {
+        "SOURCE-ISO27001": "843a6728009540947b2c5531f94b4cf1fb698d5bf3b51b324c8801e3e01c5b78",
+        "SOURCE-ISO42001": "d50103cc0af6d2322c60753ab4a6d9cc54594bc78163481322bf80ee2f75a896"
+      }
+    },
+    "I-PHYSICAL-REMOTE": {
+      "design_digests": {
+        "SH-SEC-001": "0653c632fc29121122a02d8a6269b7815e96adfa937396837c72bfe1c43e9c50",
+        "SH-SEC-005": "b5d26733d656aa943f82e0b4a3bb7301a3d91e58ba456ed98dfab0ed551413fb"
+      },
+      "finding_digest": "47eb4fab2f4b636f029801edf106aafccac14ad1b3d5ab5ef70f33bb721e6ace",
+      "requirement_digests": {
+        "ISO27001:A.6.7": "837e9ae3727bd2d40578b98b38e21078256e3188a1beea91290d3bd0a4934ac8",
+        "ISO27001:A.7.4": "f94f2cedb68a336306e95146737566d4b7a2202e79850fc47d5a67cc82a32d3e",
+        "ISO27001:A.7.6": "d683a282ce1da45f34e6cff78737866a7fe7876e5e4db5837360a52b70fe69f8",
+        "ISO27001:A.7.7": "d4205e9865acea53b74e0569921650f6b545a5c86369f2774526d7b139f267af",
+        "ISO27001:A.7.9": "33de9cc779abce50bf9a095690ca01b9ae3f19f7027e572f247c6dec27e976bf"
+      },
+      "source_hashes": {
+        "SOURCE-ISO27001": "843a6728009540947b2c5531f94b4cf1fb698d5bf3b51b324c8801e3e01c5b78"
+      }
+    },
+    "I-RISK-SOA": {
+      "design_digests": {
+        "SH-ERM-001": "4fd447e79111b6e9a75300b56fdc5016cc0e419a081462c67871770bfeb2c269",
+        "SH-ERM-002": "f295e70552c03a29e6ffeb3b17e319a93df88179ad3760e304157b98f577aa5e",
+        "SH-ERM-003": "b7d1a9c94fc2f7269ec26ab64300e8dadc78e96c63a446f4fe39c5a0c00327bf"
+      },
+      "finding_digest": "b59354bdb58924ec70c757d57cb15b051f9a36f6236532edf1c5e9feee0d0d83",
+      "requirement_digests": {
+        "ISO27001:6.1.1": "721994b51d79d5b1340facce5e319eda2128e62c9d00d1f65bb0af5838264d5a",
+        "ISO27001:6.1.2": "f3276bd15357e49df859d0c56c59919dbb687eaaf46f627f908b5e314509d185",
+        "ISO27001:6.1.3": "79f359c00cf8490f00929399b0e6b9198c444983be92b7593501ec5eb1a3301b",
+        "ISO27001:8.2": "da5c3a85f2dac99c9e386b285f87800db245845ce1ecdaf2750aca479f49d25d",
+        "ISO27001:8.3": "7fe195a40b5524feee610ea26a5bbde3225fe3dd614473ded5b6b32e16c05938",
+        "ISO42001:6.1.1": "fd7da4c31860b87be713360a2ddc9b66ec3a4998bc04c96983421da6d2f5b2da",
+        "ISO42001:6.1.2": "40fd5665e03e49c48c3c34e42d561a143db0de0bb803bf8059bb990b5198c57c",
+        "ISO42001:6.1.3": "4aa344d2db40b8699f0eb175bd5400cf9b6d4b23f2b1496e72f53892b1bcdaf8",
+        "ISO42001:8.2": "516aec5701e08073cef22a93a11b8d076613e9ceaa3e39b8cca9ecc262c0fe7f",
+        "ISO42001:8.3": "b3e2d07433e9d8b212135461dc537923429094a6eca999040f6f117b489d2f3d"
+      },
+      "source_hashes": {
+        "SOURCE-ISO27001": "843a6728009540947b2c5531f94b4cf1fb698d5bf3b51b324c8801e3e01c5b78",
+        "SOURCE-ISO42001": "d50103cc0af6d2322c60753ab4a6d9cc54594bc78163481322bf80ee2f75a896"
+      }
+    },
+    "I-SCOPE": {
+      "design_digests": {
+        "SH-ERM-001": "4fd447e79111b6e9a75300b56fdc5016cc0e419a081462c67871770bfeb2c269",
+        "SH-POL-002": "9e80d6b57640945f082246680a999add346b612e61088faa2c821c49344334d2"
+      },
+      "finding_digest": "f82e297524841856008f352eb16aaa18d9aaccd64ef214faaec26e78b604c0a9",
+      "requirement_digests": {
+        "ISO27001:4.1": "6b664c7dfb4437fec25cca5b6f09d89d7f3368b5bd4c7fe0a1f09bcacefb83f1",
+        "ISO27001:4.2": "797ce10aa3703290d80a05da7a03bd7216de54fad85835392c2439a19fec44ef",
+        "ISO27001:4.3": "26cef0f1c8c3169b4fa14a321896b2d6eacfb0dd0009982522b4db19c3308897",
+        "ISO27001:4.4": "084afcfc71686ffa0936a7c996f0f8e88b4ef0c38aa3d04c90dbc215552fda4a",
+        "ISO42001:4.1": "4b531450d94ed00aa9c76aa8183357411e3d46f0a17b318f78b600398f52ba02",
+        "ISO42001:4.2": "6a055de0d6d5f6d9f67793d6a5e5cc2ca6beecbfe3a9de5dd5d76fa0439a7a1a",
+        "ISO42001:4.3": "3c31747b310148a244e0b6bc0ba4ce21fdc77625d90179a69d1e2abee22afd7a",
+        "ISO42001:4.4": "cdff6ffd95a313395fec70ada7f3bb2f7ec33e57bf56ed7556850d80ab448c28"
+      },
+      "source_hashes": {
+        "SOURCE-ISO27001": "843a6728009540947b2c5531f94b4cf1fb698d5bf3b51b324c8801e3e01c5b78",
+        "SOURCE-ISO42001": "d50103cc0af6d2322c60753ab4a6d9cc54594bc78163481322bf80ee2f75a896"
+      }
+    },
+    "S-ACCOUNTABILITY": {
+      "design_digests": {
+        "SH-ASS-001": "ba3b00223b8d378edfccf3ae8c70e576afddff97ac7212e50da8b0249a37674c",
+        "SH-PPL-005": "d060ec230f016e4319f0f9f3bb8444f0db6a19bdfbf38f8ea0fbd668876e9520",
+        "SH-TRN-003": "960b132f1e05619a4dca61fece976a5bbb26a4a2dd7c1910f731a21d1a3a0b12"
+      },
+      "finding_digest": "4b3ac9e77f53314c1410d129a0569a2fa457bae9c91ea4c9b42918ba25884d7f",
+      "requirement_digests": {
+        "SOC2:CC1.4": "10c2b81070b9f39948e08541f32d95a823f14cbf5ffd8cab11b1c5b3f920061b",
+        "SOC2:CC1.5": "66ae1acfdea6d25c010fb15088376196ac08d8df75be100d7c373af0a5df11b6"
+      },
+      "source_hashes": {
+        "SOURCE-SOC2-TSC": "23a099dd1dc273b7a45fda2351f376344c33fcb2911d586036c0e0d631b8ad69"
+      }
+    },
+    "S-COMMUNICATION": {
+      "design_digests": {
+        "SH-POL-001": "e804139004d99baf865387f10420e296836c3f12f46fae465b454fe88beb6a23",
+        "SH-PRD-002": "098f684b77e67a588abc23fe78f844d79cead5d82d16546cf39018f6f485e714",
+        "SH-PRD-003": "1bc765549bcf421d828204f9b19e7519ed0cff5df8a9fd2a5b7fbbf4cfe03746",
+        "SH-PRD-004": "e6e91081951c81f8794a6e24bfbdbd175b6b16331ac08a3aacca892917a05256"
+      },
+      "finding_digest": "b914d611a9be3cda23c79ead31dfe4f8b0211c29e98f09007076ff9d14b79e6f",
+      "requirement_digests": {
+        "SOC2:CC2.2": "e044366c8e6b1517d9865e2d14831ee19292df654eabff0f4e58bc40fab02ecd",
+        "SOC2:CC2.3": "40ef444c2b18a7bca873c21ccbafcdbd7af357cf371e62449e5936119c99439f"
+      },
+      "source_hashes": {
+        "SOURCE-SOC2-TSC": "23a099dd1dc273b7a45fda2351f376344c33fcb2911d586036c0e0d631b8ad69"
+      }
+    },
+    "S-DESCRIPTION": {
+      "design_digests": {
+        "SH-ASS-004": "e97a44549a378235aca343de380fbc35283d3f530c58770c33f2c011b5206f60",
+        "SH-INC-002": "14732635b4684601f36714ef6ea3de4bcefcbf7c9b63ad706463d4350e43f570",
+        "SH-TPR-002": "e2e7f650d9a805d3a2d76ecf263e2606d3fa839923831a6702d145227e26a5ed"
+      },
+      "finding_digest": "83e79808d212b1a1cbedad40a00b43e0002b25234bd1a858cdba936828ddd6ab",
+      "requirement_digests": {
+        "SOC2:DC1": "e8a89dab0019b9b6e2f8b48f892caec2838b6d996befba2127beda8ddd9e2872",
+        "SOC2:DC2": "784e9e579cbc047a14b56c87416c54815ebd27bdb4a59abb1b8e8c783d9c935a",
+        "SOC2:DC3": "fc1dc02eda13485457d675e301be3b8d775a91463cd6f341d5a59b79b08833b3",
+        "SOC2:DC4": "c6360be1ee8b2f2b298ebe8081ad28814edb30a8f6d6ec079ace13aaeb28721c",
+        "SOC2:DC5": "3f64a4f2124bc50b3370b8e45e8c58a078f41d8a2fa964cf86ccd72aa111002b",
+        "SOC2:DC6": "e2c2188a89118d4e6a0a3e9735d978ca4bde9ebe4998a2a670cb142f0df72d1e",
+        "SOC2:DC7": "c4b9c80a08c1849428e887c24eec3c8cac80ea3cfce10b5da8ac4c75e81a372e",
+        "SOC2:DC8": "1edad72dc90ad4c2bbe99124e16f94e8356e552a529d87c0e79a8ae49e8296df",
+        "SOC2:DC9": "949d718af0b98846a29a72b901528c00d1cddbbba625a225a980c01dbb37cb70"
+      },
+      "source_hashes": {
+        "SOURCE-SOC2-DC": "81286ab2afbf98ede900366bd36b461fd0ca554e18342c403fcea3a33d2a6d98"
+      }
+    }
+  },
+  "iso_checks_digest": "b21cb80bd13015acb70f710888a0f5db6e9c1f03f45c7d54bf1f969f6fe08643"
+}

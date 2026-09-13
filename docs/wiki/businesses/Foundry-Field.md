@@ -1,12 +1,16 @@
 # Foundry Field
 
-[Wiki home](../Home.md) · [All business dossiers](../../business-lines/README.md) · [Company charts](../../organization/README.md)
+[Wiki home](../Home.md) · [Business directory](README.md) · [Department directory](../departments/README.md) · [Business dossiers](../../business-lines/README.md) · [Company charts](../../organization/README.md)
 
-<img src="../../../assets/brand/logos/foundry-field__mark.png" alt="Approved Foundry Field logo" width="280">
+<img src="../../../assets/brand/logos/foundry-field__reverse-horizontal.png" alt="Approved Foundry Field logo" width="360">
 
 Foundry Field is software for production tracking, maintenance, reconciliations and operating exceptions. Foundry supplies the underlying representation of records, relationships, provenance and authority. Foundry Field packages that capability for customer operating work.
 
-**Reader status:** Navigation summary checked September 11, 2026. Linked canon controls; this page creates no new facts. Existing chart artwork is from publication 1.1.0, September 10, 2026. Financial cases are publicly synthetic.
+**Reviewed:** September 12, 2026 · Fictional enterprise; source records control.
+
+## Reading guide
+
+Start with the operating loop: record production, reconcile what happened and make exceptions visible to the responsible operator. Then trace the commercial and deployment records behind a customer engagement.
 
 ## Start here
 
@@ -18,7 +22,7 @@ It is a commercial product business recorded on the parent’s SHI books. A dedi
 
 [![Foundry Field existing organization chart](../../../docs/organization/assets/current/foundry-field.png)](../../../docs/organization/charts/foundry-field.md)
 
-Open the chart to read its relationship key and any additional pages. Grouped functions are not automatically reporting lines, separate companies or additional employees.
+[Read the chart’s text roster, relationship key and source qualifications](../../../docs/organization/charts/foundry-field.md). Grouped functions are not automatically reporting lines, separate companies or additional employees.
 
 [Named people and recorded roles](../../../docs/organization/charts/people-foundry-field.md) — the current chart preserves unknown joining years rather than inventing them.
 
@@ -48,6 +52,15 @@ The [finance successor guide](../../../enterprise/business/README.md) explains g
 
 Use the [complete facility artifact index](../../../geospatial/maps/facilities/ARTIFACT_INDEX.md) for independently saved maps and floor plans, or open the [interactive atlas](../../../geospatial/maps/index.html) locally in a browser. GitHub displays the linked Markdown and images directly; it does not execute the atlas HTML.
 
-## Limits to keep visible
+## What remains unknown
 
-Customer operation remains under the customer’s authority. Synthetic forecast contracts and prices are exercises, not approved commercial offers. Unnamed role details and a dedicated footprint remain unresolved.
+Conditional revenue and deployment scenarios do not prove executed customer terms. Billing proposal PR #138 remains unapproved. See the [open questions register](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Open-Questions) for the evidence needed to resolve tracked gaps.
+
+## Related reading
+
+- [Enterprise Technology Services](../departments/technology.md)
+- [Finance](../departments/finance.md)
+- [Company history and The Crossing](../subjects/History.md)
+- [Atlas Meridian](Atlas-Meridian.md)
+
+Related reading describes useful connections, not additional reporting lines.

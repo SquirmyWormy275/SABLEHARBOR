@@ -19,6 +19,9 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = [
+  "PyMuPDF==1.26.6",
+  "pypdf==6.10.0",
+  "markdown-it-py==4.2.0",
   "mypy>=1.11,<2",
   "openpyxl>=3.1,<4",
   "pytest>=8,<9",
@@ -26,6 +29,10 @@ dev = [
   "types-PyYAML>=6,<7"
 ]
 postgres = ["psycopg[binary]>=3.2,<4"]
+ccf-service = [
+    "gunicorn>=26.2,<27 ; python_full_version >= '3.12'",
+    "pyjwt[crypto]>=2.12.2,<3",
+]
 
 [project.scripts]
 shfin = "sable_harbor.cli:app"
@@ -35,6 +42,7 @@ packages = ["src/sable_harbor"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+pythonpath = ["."]
 addopts = "-q"
 
 [tool.ruff]

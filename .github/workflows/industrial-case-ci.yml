@@ -19,6 +19,7 @@ permissions:
 
 jobs:
   reconcile:
+    name: Industrial Case CI / reconcile
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

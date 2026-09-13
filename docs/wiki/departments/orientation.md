@@ -3,9 +3,13 @@
 <img src="../../../assets/brand/logos/j2__primary-horizontal.png" alt="J2 approved identity" width="240">
 
 **Canon state:** LOCKED DIRECTION doctrine; LOCKED establishment and current leadership.<br>
-**Last substantive review:** September 11, 2026. This page is secondary navigation; the linked source records control.
+**Reviewed:** September 12, 2026. This is a reading guide; linked source records control.
 
 Orientation maintains enterprise questions, the Enterprise Intelligence Brief and the company’s recorded current understanding. Officers brief decision-makers on findings, assumptions, uncertainty and dissent without owning the decision.
+
+## Reading guide
+
+Orientation helps leaders maintain a shared picture of what is known, what changed and where uncertainty remains. Enterprise questions and briefings provide context for decisions rather than a second chain of command.
 
 ## Read and use the records
 
@@ -18,14 +22,23 @@ Orientation maintains enterprise questions, the Enterprise Intelligence Brief an
 
 ## Organization and identity
 
-[Current chart and all of its pages](../../organization/charts/corporate-j2.md) · [Complete organization publication](../../organization/assets/current/Sable-Harbor-Organization-Charts.pdf).
+[Organization chart, text roster and source qualifications](../../organization/charts/corporate-j2.md) · [Complete organization publication](../../organization/assets/current/Sable-Harbor-Organization-Charts.pdf).
 
 [![Orientation — shared organization chart, first page](../../organization/assets/current/corporate-j2.png)](../../organization/assets/current/corporate-j2.png)
 
 The shared chart retains its original scope; it is not a new reporting chart for this page. The approved J2 mark above identifies the parent institution.
 
-## Boundaries and unresolved detail
+[Department and institution directory](README.md) · [Business directory](../businesses/README.md) · [Wiki home](../Home.md)
 
-An officer does not vote for the Board, direct the outcome or automatically delay a decision. Detailed rank and placement questions retain their recorded state.
+## What remains unknown
 
-[Department and institution directory](README.md) · [Wiki home](../Home.md)
+Board and executive proximity do not confer executive authority. Unnamed appointments and the runtime disclosure boundary retain their explicit limits. See the [open questions register](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Open-Questions) for the evidence needed to resolve tracked gaps.
+
+## Related reading
+
+- [Office of the CEO](executive.md)
+- [Judgment](judgment.md)
+- [Contact](contact.md)
+- [J2 Education](education.md)
+
+Related reading describes useful connections, not additional reporting lines.

@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Sable Harbor · Evidence review</title>
+<style>
+:root{--bg:#f3f5f7;--paper:#fff;--ink:#182c42;--muted:#526579;--line:#c7d1dc;--accent:#175d80;--soft:#e8f1f5;--good:#24664b;--warn:#8b5612}
+@media(prefers-color-scheme:dark){:root{--bg:#101923;--paper:#182532;--ink:#edf3f8;--muted:#b2c2d1;--line:#4d6072;--accent:#8ccfee;--soft:#243e4d;--good:#92d8b6;--warn:#efc58d}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,sans-serif}a{color:var(--accent);text-underline-offset:3px}button,input,select,textarea{font:inherit;color:inherit;background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:9px 12px}button{cursor:pointer}button:hover{background:var(--soft)}button:disabled{opacity:.5;cursor:default}:focus-visible{outline:3px solid var(--accent);outline-offset:3px}.skip{position:absolute;left:12px;top:-100px}.skip:focus{top:8px;background:var(--paper);z-index:4}header{background:var(--paper);border-bottom:1px solid var(--line);padding:30px max(24px,calc((100% - 1280px)/2))}header p{max-width:850px}.eyebrow{font-weight:700;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}h1{font-size:clamp(1.8rem,4vw,2.6rem);margin:.2em 0}h2{margin:.2em 0 .7em}p{margin:.6em 0}.muted,small{color:var(--muted)}main{max-width:1328px;margin:auto;padding:24px}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-bottom:24px}.card{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:18px}.metric{display:block;font-size:1.7rem;font-weight:750}.toolbar{display:flex;gap:12px;flex-wrap:wrap;align-items:end;margin:18px 0}.toolbar label{display:flex;flex-direction:column;gap:5px}.search{flex:1;min-width:190px}.toolbar input{width:100%}nav{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0}nav button[aria-pressed=true]{background:var(--ink);color:var(--paper);border-color:var(--ink)}.panel{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:22px}.scroll{overflow:auto;max-width:100%;max-height:65vh}thead th{position:sticky;top:0;background:var(--paper)}table{width:100%;border-collapse:collapse;text-align:left;font-size:.9rem}th,td{border-bottom:1px solid var(--line);padding:11px 12px;vertical-align:top;overflow-wrap:anywhere;min-width:130px}th{color:var(--muted);font-size:.78rem;text-transform:uppercase;letter-spacing:.04em}td:first-child{min-width:220px}.pager{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:16px}.badge{display:inline-block;border:1px solid var(--line);border-radius:4px;padding:2px 6px;font-size:.75rem}.good{color:var(--good)}.notice{border-left:4px solid var(--warn);padding:10px 15px;background:var(--soft);margin:18px 0}.links{display:flex;gap:18px;flex-wrap:wrap}.empty{text-align:center;padding:32px;color:var(--muted)}dialog{background:var(--paper);color:var(--ink);border:1px solid var(--line);border-radius:12px;max-width:900px;width:calc(100% - 32px);max-height:90vh;padding:24px}dialog::backdrop{background:#0008}dialog pre{white-space:pre-wrap;overflow-wrap:anywhere;font:13px/1.5 ui-monospace,monospace;background:var(--bg);padding:16px;border-radius:6px}dialog textarea{width:100%;min-height:130px}dialog label{display:block;margin-top:14px}dialog h2{padding-right:60px}.close{float:right}#message{min-height:1.7em;overflow-wrap:anywhere}.draft-tools{border-top:1px solid var(--line);margin-top:22px;padding-top:16px}.draft-tools button{margin:5px 8px 5px 0}footer{margin:24px 0;color:var(--muted);font-size:.86rem;overflow-wrap:anywhere}[hidden]{display:none!important}@media(max-width:550px){main{padding:14px}.panel{padding:14px}.toolbar label{width:100%}header{padding:25px 18px}nav button{flex:1;min-width:140px}}@media print{body{background:#fff;color:#111}header,main{padding:10px}nav,.toolbar,.pager,.draft-tools,button,.skip{display:none}.scroll{overflow:visible;max-height:none}table{font-size:10px}.panel{border:0}.notice{background:#fff}footer{color:#333}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to evidence</a>
+<header><div class="eyebrow">Sable Harbor / Review edition</div><h1>Evidence, with its context.</h1><p>Inspect executed reference cases, follow source records and work through unresolved geographic evidence. Everything needed to browse is included in this file; no server or account is required.</p><p class="muted" id="provenance"></p></header>
+<main id="main">
+<div class="cards" id="metrics"></div>
+<div class="notice"><strong>Reference evidence and draft review.</strong> Passing tests describe the supplied synthetic fixtures. Source verification confirms archived bytes. Neither establishes deployed controls, source rights, an appointment, survey authority or an accepted new geographic claim.</div>
+<nav aria-label="Evidence collections" id="tabs"></nav>
+<section class="panel" aria-labelledby="section-title">
+<h2 id="section-title"></h2><p id="section-description" class="muted"></p>
+<div class="toolbar"><label class="search">Search this collection<input id="search" type="search" placeholder="Search names, wording, IDs or paths"></label><label id="filter-label">Filter<select id="filter"><option value="">All records</option></select></label><button id="download">Export filtered CSV</button></div>
+<p id="count" role="status" aria-live="polite"></p><p class="muted"><small>Scroll the table to see additional fields. Open a row for its complete record; long cell previews are shortened.</small></p>
+<div class="scroll" role="region" aria-label="Evidence records" tabindex="0"><table><thead id="head"></thead><tbody id="rows"></tbody></table></div>
+<div class="pager"><button id="previous">Previous</button><span id="page"></span><button id="next">Next</button></div>
+<div class="draft-tools"><strong>Portable draft notes</strong><p class="muted">For geographic backlog records, open a row to record a draft disposition and rationale. Notes never change accepted sources. Export a copy before leaving; browser storage can be unavailable or cleared.</p><button id="export-notes">Export draft notes</button><button id="import-notes">Import draft notes</button><input hidden type="file" id="notes-file" accept="application/json,.json"><span id="draft-count"></span><p id="message" role="status" aria-live="polite"></p></div>
+</section>
+<footer><div class="links"><a href="closeout-evidence.xlsx">Review workbook</a><a href="report.html">Printable overview</a><a href="manifest.json">Artifact manifest</a><a href="source-inputs.json">Source fingerprints</a><a href="execution-register.json">Execution logs</a></div><p>External source links open the recorded Git revision on GitHub and require a connection. Browsing and draft exports work offline. The issue requirements are a dated snapshot; their linked issues remain the current discussion.</p><p id="identity"></p></footer>
+</main>
+<dialog id="detail" aria-labelledby="detail-title"><button class="close" id="close">Close</button><h2 id="detail-title"></h2><div id="detail-links" class="links"></div><pre id="detail-record"></pre><form id="note-form" hidden><h3>Draft geographic review</h3><label for="note-state">Draft disposition</label><select id="note-state"><option value="needs-review">Needs review</option><option value="source-checked">Source checked; claim unresolved</option><option value="needs-evidence">Needs additional evidence</option><option value="proposed-rejection">Proposed rejection; requires review</option></select><label for="note-text">Rationale and source references</label><textarea id="note-text" maxlength="4000"></textarea><p><button type="submit">Save draft</button></p></form></dialog>
+<script id="evidence-data" type="application/json">__PAYLOAD__</script>
+<script>
+'use strict';
+const data=JSON.parse(document.getElementById('evidence-data').textContent);
+const $=id=>document.getElementById(id), num=n=>n.toLocaleString();
+const states=['needs-review','source-checked','needs-evidence','proposed-rejection'];
+const knownIds=new Set(data.backlog.map(r=>r.occurrence_id));
+const storageKey='sable-evidence-notes:'+data.identity;
+let notes=Object.create(null), storageAvailable=true, collection='cases', page=0, active=null;
+const collections={
+ cases:{title:'Runtime cases',description:'Every fixture, expected result and observation is inspectable. Select a case to see the complete event.',rows:data.cases,columns:[['case_id','Case'],['issues','Issues'],['operation','Operation'],['result','Result']],filter:'result',id:'case_id'},
+ backlog:{title:'Geographic backlog',description:'Exact remaining occurrence carriers from the pinned discovery baseline. These rows have not been promoted to geographic facts.',rows:data.backlog,columns:[['occurrence_id','Occurrence'],['source_path','Source'],['exact_source_wording','Original wording'],['draft_status','Draft status']],filter:'draft_status',id:'occurrence_id'},
+ sources:{title:'Baseline source coverage',description:'Every archived baseline source is hash-verified. Zero remaining hits does not mean that all semantic content, raster material or historical claims have been reviewed.',rows:data.inventory.baseline_sources,columns:[['source_path','Archived source'],['current_status','Current source'],['residual_occurrences','Remaining hits'],['review_boundary','Review boundary']],filter:'review_boundary',id:'source_path'},
+ changes:{title:'Changes after the discovery baseline',description:'Every added, modified or removed path between the pinned discovery tree and the package source revision. This is a complete tree comparison, not a semantic review of later canon.',rows:data.inventory.subsequent_changes,columns:[['source_path','Source path'],['change','Change'],['current_git_blob','Current Git object']],filter:'change',id:'source_path'},
+ sites:{title:'Site records',description:'The accepted register is reproduced with its original precision, dates, conflicts and next actions. No missing coordinates or occupancy dates have been filled in.',rows:data.inventory.sites,columns:[['object_id','Stable ID'],['canonical_name','Site'],['place','Place'],['census_status','Status'],['date_precision','Date precision']],filter:'census_status',id:'object_id'},
+ issues:{title:'Remaining issue requirements',description:'The dated source-backed issue review, alongside the generated evidence. These requirements are not automatically closed by a passing reference test.',rows:data.issues,columns:[['number','Issue'],['title','Title'],['reason','Remaining requirement']],filter:null,id:'number'}
+};
+if(data.ocr)collections.ocr={title:'Raster text candidates',description:data.ocr.configuration.limitations,rows:data.ocr.images,columns:[['source_path','Archived PNG'],['word_count','Candidate words'],['text','Unreviewed OCR text'],['classification','Boundary']],filter:null,id:'source_path'};
+for(const r of data.cases)r.result=r.passed?'PASS':'FAIL';
+function text(value){return Array.isArray(value)?value.join(', '):value&&typeof value==='object'?JSON.stringify(value):String(value??'');}
+function field(row,key){return key==='draft_status'?(notes[row.occurrence_id]?.status||'needs-review'):row[key];}
+function message(value){$('message').textContent=value;}
+function validateNotes(doc){
+ if(!doc||doc.version!==1||doc.identity!==data.identity||!Array.isArray(doc.notes)||doc.notes.length>knownIds.size)throw Error('This file does not match this evidence edition.');
+ const result=Object.create(null);
+ for(const row of doc.notes){
+  if(!row||!knownIds.has(row.occurrence_id)||Object.hasOwn(result,row.occurrence_id)||!states.includes(row.status)||typeof row.note!=='string'||row.note.length>4000)throw Error('Draft file contains an invalid, duplicate or unknown record.');
+  result[row.occurrence_id]={status:row.status,note:row.note};
+ }
+ return result;
+}
+function notesDocument(){return {version:1,identity:data.identity,source_revision:data.revision,classification:'DRAFT_NOT_ACCEPTED_CANON',notes:Object.entries(notes).map(([occurrence_id,row])=>({occurrence_id,...row}))};}
+function persist(){
+ try{localStorage.setItem(storageKey,JSON.stringify(notesDocument()));}catch{storageAvailable=false;message('Browser storage is unavailable. Export draft notes now to keep a portable copy.');}
+ $('draft-count').textContent=num(Object.keys(notes).length)+' saved draft records';
+}
+try{const saved=localStorage.getItem(storageKey);if(saved)notes=validateNotes(JSON.parse(saved));}catch{storageAvailable=false;message('Stored drafts could not be loaded. Import an exported copy, or begin a new draft.');}
+function filtered(){const c=collections[collection],q=$('search').value.trim().toLocaleLowerCase(),f=$('filter').value;return c.rows.filter(row=>(!f||text(field(row,c.filter))===f)&&(!q||Object.entries(row).some(([,v])=>text(v).toLocaleLowerCase().includes(q))||text(notes[row.occurrence_id]?.note).toLocaleLowerCase().includes(q)));}
+function show(){
+ const c=collections[collection],rows=filtered(),pages=Math.max(1,Math.ceil(rows.length/50));page=Math.min(page,pages-1);
+ $('count').textContent=num(rows.length)+' of '+num(c.rows.length)+' records';$('head').replaceChildren();$('rows').replaceChildren();
+ const hr=document.createElement('tr');for(const [,label] of c.columns){const h=document.createElement('th');h.scope='col';h.textContent=label;hr.append(h);}$('head').append(hr);
+ for(const row of rows.slice(page*50,(page+1)*50)){
+  const tr=document.createElement('tr');c.columns.forEach(([key],i)=>{const td=document.createElement('td');if(i===0){const b=document.createElement('button');b.textContent=text(row[key]);b.addEventListener('click',()=>detail(row));td.append(b);}else{const value=text(field(row,key));td.textContent=value.length>200?value.slice(0,200)+'…':value;}tr.append(td);});$('rows').append(tr);
+ }
+ if(!rows.length){const tr=document.createElement('tr'),td=document.createElement('td');td.colSpan=c.columns.length;td.className='empty';td.textContent='No matching records. Clear the search or choose another filter.';tr.append(td);$('rows').append(tr);}
+ $('page').textContent='Page '+(page+1)+' of '+pages;$('previous').disabled=page===0;$('next').disabled=page===pages-1;
+ $('draft-count').textContent=num(Object.keys(notes).length)+' saved draft records';
+}
+function choose(key){collection=key;page=0;$('search').value='';const c=collections[key];$('section-title').textContent=c.title;$('section-description').textContent=c.description;$('filter-label').hidden=!c.filter;$('filter').replaceChildren(new Option('All records',''));if(c.filter){const values=key==='backlog'?states:[...new Set(c.rows.map(r=>text(field(r,c.filter))))].sort();for(const v of values)$('filter').append(new Option(v,v));}for(const b of $('tabs').children)b.setAttribute('aria-pressed',String(b.dataset.key===key));show();}
+function sourceLink(path,revision){return 'https://github.com/SquirmyWormy275/SABLEHARBOR/blob/'+encodeURIComponent(revision)+'/'+path.split('/').map(encodeURIComponent).join('/');}
+function link(label,url){const a=document.createElement('a');a.textContent=label;a.href=url;a.target='_blank';a.rel='noopener noreferrer';$('detail-links').append(a);}
+function detail(row){
+ active=row;$('detail-title').textContent=text(row[collections[collection].id]);$('detail-record').textContent=JSON.stringify(row,null,2);$('detail-links').replaceChildren();
+ if(row.source_path)link('Open recorded source',sourceLink(row.source_path,row.source_commit||(collection==='changes'&&row.change==='REMOVED'?data.inventory.baseline_revision:data.revision)));
+ if(collection==='ocr'){link('Word positions and confidence',row.tsv);link('OCR execution log',row.log);}
+ if(collection==='issues'){link('Open issue #'+row.number,'https://github.com/SquirmyWormy275/SABLEHARBOR/issues/'+row.number);link('Controlling source',sourceLink(row.source,data.revision));}
+ if(collection==='cases')for(const issue of row.issues)link('Issue #'+issue,'https://github.com/SquirmyWormy275/SABLEHARBOR/issues/'+issue);
+ $('note-form').hidden=collection!=='backlog';if(collection==='backlog'){$('note-state').value=notes[row.occurrence_id]?.status||'needs-review';$('note-text').value=notes[row.occurrence_id]?.note||'';}$('detail').showModal();
+}
+function download(name,content,type){const url=URL.createObjectURL(new Blob([content],{type})),a=document.createElement('a');a.href=url;a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+function csvCell(value){let s=text(value);if(/^[\s]*[=+@-]/.test(s))s="'"+s;return '"'+s.replaceAll('"','""')+'"';}
+$('download').onclick=()=>{const c=collections[collection],rows=filtered(),keys=[...new Set((rows.length?rows:c.rows.slice(0,1)).flatMap(r=>Object.keys(r)))];if(collection==='backlog')keys.push('draft_status','draft_note');const records=[keys,...rows.map(row=>keys.map(k=>k==='draft_note'?notes[row.occurrence_id]?.note:field(row,k)))];download(collection+'-filtered.csv','\ufeff'+records.map(r=>r.map(csvCell).join(',')).join('\r\n'),'text/csv;charset=utf-8');message('Exported '+num(rows.length)+' filtered rows. CSV spreadsheet formulas are escaped; original wording remains in the package JSON and original backlog CSV.');};
+$('search').addEventListener('input',()=>{page=0;show();});$('filter').onchange=()=>{page=0;show();};$('previous').onclick=()=>{page--;show();};$('next').onclick=()=>{page++;show();};$('close').onclick=()=>$('detail').close();
+$('note-form').onsubmit=event=>{event.preventDefault();notes[active.occurrence_id]={status:$('note-state').value,note:$('note-text').value};persist();$('detail').close();show();if(storageAvailable)message('Draft saved locally. Export a copy to preserve it outside this browser.');};
+$('export-notes').onclick=()=>download('sable-harbor-draft-review.json',JSON.stringify(notesDocument(),null,2)+'\n','application/json');
+$('import-notes').onclick=()=>$('notes-file').click();$('notes-file').onchange=async()=>{const file=$('notes-file').files[0];if(!file)return;try{if(file.size>50_000_000)throw Error('Draft file exceeds the 50 MB limit.');const incoming=validateNotes(JSON.parse(await file.text()));for(const [id,value] of Object.entries(incoming)){if(Object.hasOwn(notes,id)&&JSON.stringify(notes[id])!==JSON.stringify(value))throw Error('Import conflicts with a saved draft for '+id+'. No notes were changed.');}notes=Object.assign(Object.create(null),notes,incoming);persist();show();message('Imported '+num(Object.keys(incoming).length)+' draft records. These remain unaccepted proposals.');}catch(error){message(error.message);}finally{$('notes-file').value='';}};
+for(const [key,c] of Object.entries(collections)){const b=document.createElement('button');b.textContent=c.title;b.dataset.key=key;b.setAttribute('aria-pressed','false');b.onclick=()=>choose(key);$('tabs').append(b);}
+for(const [value,label] of [[data.cases.filter(r=>r.passed).length,'Passing reference cases'],[data.backlog.length,'Remaining occurrence records'],[data.inventory.summary.baseline_files_verified,'Verified baseline sources'],[data.inventory.sites.length,'Source-backed site records']]){const d=document.createElement('div');d.className='card';const strong=document.createElement('strong');strong.className='metric';strong.textContent=num(value);d.append(strong,document.createTextNode(label));$('metrics').append(d);}
+$('provenance').textContent='Edition '+data.version+' · Source '+data.revision.slice(0,12)+' · '+(data.dirty?'Development preview':'Clean source build');$('identity').textContent='Draft compatibility identity: '+data.identity;choose('cases');
+</script>
+</body></html>

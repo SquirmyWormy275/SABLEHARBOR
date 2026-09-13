@@ -3,9 +3,13 @@
 <img src="../../../assets/brand/logos/j2__primary-horizontal.png" alt="J2 approved identity" width="240">
 
 **Canon state:** LOCKED DIRECTION institutional environment; runtime design has separate accepted scope.<br>
-**Last substantive review:** September 11, 2026. This page is secondary navigation; the linked source records control.
+**Reviewed:** September 12, 2026. This is a reading guide; linked source records control.
 
 Alexandria preserves institutional records and their history and connects questions, evidence, judgments and decisions. Pinakes is the human catalog/portal; Daedalus assists the user within human-authorship and authority boundaries.
+
+## Reading guide
+
+Alexandria preserves records, provenance and the history of what the institution knew. Pinakes is the human entry point; Daedalus assists within disclosure and authorship limits rather than becoming the institution itself.
 
 ## Read and use the records
 
@@ -20,14 +24,23 @@ Alexandria preserves institutional records and their history and connects questi
 
 ## Organization and identity
 
-[Current chart and all of its pages](../../organization/charts/corporate-alexandria.md) · [Complete organization publication](../../organization/assets/current/Sable-Harbor-Organization-Charts.pdf).
+[Organization chart, text roster and source qualifications](../../organization/charts/corporate-alexandria.md) · [Complete organization publication](../../organization/assets/current/Sable-Harbor-Organization-Charts.pdf).
 
 [![Alexandria institutional environment — shared organization chart, first page](../../organization/assets/current/corporate-alexandria.png)](../../organization/assets/current/corporate-alexandria.png)
 
 The shared chart retains its original scope; it is not a new reporting chart for this page. The approved J2 mark above identifies the parent institution.
 
-## Boundaries and unresolved detail
+[Department and institution directory](README.md) · [Business directory](../businesses/README.md) · [Wiki home](../Home.md)
 
-Alexandria is a system, not an additional department. This wiki and the generated catalog do not claim to implement the full Pinakes experience or a production Alexandria estate.
+## What remains unknown
 
-[Department and institution directory](README.md) · [Wiki home](../Home.md)
+Runtime qualification, raw-source entitlements, retention/deletion schedules and Daedalus leakage enforcement remain open under issues #21, #22, #24 and #34. See the [open questions register](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Open-Questions) for the evidence needed to resolve tracked gaps.
+
+## Related reading
+
+- [Contact](contact.md)
+- [Judgment](judgment.md)
+- [Enterprise Technology Services](technology.md)
+- [Enterprise security capability](security.md)
+
+Related reading describes useful connections, not additional reporting lines.

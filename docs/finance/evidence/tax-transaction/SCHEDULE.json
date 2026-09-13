@@ -1,0 +1,33 @@
+{
+  "columns": [
+    "year",
+    "month",
+    "stock_consideration_usd",
+    "cash_acquired_usd",
+    "acquisition_investing_cash_usd",
+    "parent_acquisition_capital_usd",
+    "transaction_operating_expense_usd"
+  ],
+  "limitations": "This separate base-2026 bridge is not added to base-2027 activity. ARU filing-ready is not IRS filing or acceptance. Tax/book PPA assumptions remain conditional current industrial source records, not an election, return or valuation opinion. Red Wash escrow/holdback are included in purchase consideration rather than extra price.",
+  "rows": [
+    {
+      "acquisition_investing_cash_usd": "-46000000.0000",
+      "cash_acquired_usd": "2000000.0000",
+      "month": "1",
+      "parent_acquisition_capital_usd": "39300000.0000",
+      "stock_consideration_usd": "48000000.0000",
+      "transaction_operating_expense_usd": "900000.0000",
+      "year": "2026"
+    }
+  ],
+  "scope": {
+    "period_end": "2026-12",
+    "period_start": "2026-01",
+    "release": "business-operations-v1.0.0",
+    "release_sha256": "b8e81572d829fec7209d1d18eb15bac21e52b37714211aee005b5f1a68ab5817",
+    "scenario": "base",
+    "source_revision": "57cfa1b1c483ccf1f8b15d82c4cbdadbeef8063e"
+  },
+  "source_table": "acquisition_cashflow_bridge",
+  "title": "Transaction cash and conditional tax support"
+}

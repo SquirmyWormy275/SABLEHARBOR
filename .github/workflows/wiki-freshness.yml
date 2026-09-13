@@ -1,0 +1,43 @@
+name: Wiki publication freshness
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: '23 8 * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: wiki-freshness-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  inspect:
+    name: Wiki / publication freshness
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d # v10.0.1
+        with:
+          version: "0.12.4"
+      - name: Inspect published pages and reading inputs
+        run: uv run python -m tools.wiki.freshness
+      - name: Add publication status to the run summary
+        if: always()
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          path = Path('var/wiki-freshness.json')
+          if path.exists():
+              report = json.loads(path.read_text())
+              with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as output:
+                  output.write('## Wiki publication: ' + report['state'] + '\n\n')
+                  output.write(report.get('action', '') + '\n\n')
+                  output.write('```json\n' + json.dumps(report, indent=2) + '\n```\n')
+          PY
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        if: always()
+        with:
+          name: wiki-publication-freshness
+          path: var/wiki-freshness.json
+          if-no-files-found: error

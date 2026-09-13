@@ -1,0 +1,113 @@
+{
+  "gap_id": "LEGAL-GAP-TAX-BILLING",
+  "document_id": "SH-LEGAL-DRAFT-TAX-BILLING",
+  "title": "Foundry Field tax determination and invoice-change workpaper draft",
+  "status": "DRAFT_FOR_REVIEW",
+  "source_paths": [
+    "docs/finance/evidence/SH-FIN-HUMAN-001/source.json",
+    "docs/canon/FINANCE_HUMAN_EVIDENCE_001_ACCEPTANCE_2026-09-11.md",
+    "docs/legal/evidence/proposals/decision-register.json",
+    "industrial/source/entities.json"
+  ],
+  "proposed_terms": [
+    {
+      "id": "BILLTAX-P01",
+      "term": "Determine jurisdiction and treatment only after transaction parties, supply, delivery/use, price basis and applicable authority are supported.",
+      "basis": "Proposed workpaper; current determination remains unavailable."
+    },
+    {
+      "id": "BILLTAX-P02",
+      "term": "Keep unknown rates, tax bases and calculated tax null; do not assign zero/exempt/inclusive defaults.",
+      "basis": "Proposed implementation of existing missing-field boundary."
+    },
+    {
+      "id": "BILLTAX-P03",
+      "term": "Adopt any tax-bearing scenario through explicit field/amount acceptance, financial successor reconciliation and separate visual review.",
+      "basis": "Proposed change procedure; original released invoice remains unchanged."
+    },
+    {
+      "id": "BILLTAX-P04",
+      "term": "Perform initial completeness review within 5 business days after receiving a full fact packet.",
+      "basis": "New proposed administrative timing; no tax opinion or filing deadline."
+    }
+  ],
+  "unresolved_fields": [
+    {
+      "id": "BILLTAX-U01",
+      "field": "Customer party, delivery/use and component allocation",
+      "next_action": "Obtain accepted transaction-specific facts; billing address alone is insufficient."
+    },
+    {
+      "id": "BILLTAX-U02",
+      "field": "Applicable jurisdiction, tax treatment and dated rate",
+      "next_action": "Qualified review uses official authority after facts are supported."
+    },
+    {
+      "id": "BILLTAX-U03",
+      "field": "Price inclusion and exemption/resale basis if claimed",
+      "next_action": "Obtain controlling contract term and applicable evidence; no default."
+    },
+    {
+      "id": "BILLTAX-U04",
+      "field": "Parent federal tax classification where relevant",
+      "next_action": "Obtain separate governing source; do not borrow ARU 25%model or S/QSub assumptions."
+    },
+    {
+      "id": "BILLTAX-U05",
+      "field": "Any revised tax amount, customer consideration and ledger effect",
+      "next_action": "Requires accepted scenario and reconciled successor; no posting in this draft."
+    }
+  ],
+  "financial_schedules": [
+    {
+      "name": "Foundry Field tax determination — unknown inputs remain null",
+      "columns": [
+        "field",
+        "amount_or_rate",
+        "unit",
+        "status"
+      ],
+      "rows": [
+        [
+          "Released invoice",
+          1740000,
+          "USD",
+          "Unchanged"
+        ],
+        [
+          "Taxable component base",
+          null,
+          "USD",
+          "Unestablished"
+        ],
+        [
+          "Applicable tax rate",
+          null,
+          "percent",
+          "Unestablished; not zero"
+        ],
+        [
+          "Calculated tax",
+          null,
+          "USD",
+          "Not calculated"
+        ],
+        [
+          "Revised customer amount",
+          null,
+          "USD",
+          "Not calculated"
+        ],
+        [
+          "Proposed journal",
+          null,
+          "not applicable",
+          "None authorized"
+        ]
+      ]
+    }
+  ],
+  "version": "0.1.0",
+  "prepared": "2026-09-12",
+  "approval_status": "NOT_ACCEPTED"
+}

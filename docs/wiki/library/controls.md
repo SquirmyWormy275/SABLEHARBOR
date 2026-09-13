@@ -32,14 +32,41 @@ Generated file inventory. Includes current and historical records; open the sour
 
 - [CCF assessment and framework delta workbench](../../../enterprise/ccf/assurance/README.md) — MD
 
+## `enterprise/ccf/assurance/action_data`
+
+- [Actionable procedure authoring](../../../enterprise/ccf/assurance/action_data/README.md) — MD
+
+## `enterprise/ccf/assurance/completion_data`
+
+- [Operating decisions needed to complete the CCF](../../../enterprise/ccf/assurance/completion_data/DECISIONS.md) — MD
+- [Control-library completion authoring](../../../enterprise/ccf/assurance/completion_data/README.md) — MD
+
 ## `enterprise/ccf/assurance/design_data`
 
 - [Baseline design authoring records](../../../enterprise/ccf/assurance/design_data/README.md) — MD
 - [Reference service description workpaper](../../../enterprise/ccf/assurance/design_data/SERVICE_DESCRIPTION.md) — MD
 
+## `enterprise/ccf/assurance/iso_data`
+
+- [ISO extension implementation plan](../../../enterprise/ccf/assurance/iso_data/IMPLEMENTATION_PLAN.md) — MD
+- [Source-bound ISO planning inputs](../../../enterprise/ccf/assurance/iso_data/README.md) — MD
+
 ## `enterprise/ccf/assurance/reference_data`
 
 - [Reference source inventory](../../../enterprise/ccf/assurance/reference_data/README.md) — MD
+
+## `enterprise/ccf/assurance/review_data`
+
+- [Source comparison authoring records](../../../enterprise/ccf/assurance/review_data/README.md) — MD
+- [Review basis, findings and remaining decisions](../../../enterprise/ccf/assurance/review_data/REVIEW_NOTES.md) — MD
+
+## `enterprise/ccf/operations`
+
+- [Evidence collection and scheduling](../../../enterprise/ccf/operations/COLLECTION.md) — MD
+- [Bounded control test contracts](../../../enterprise/ccf/operations/CONTROL_TEST_CONTRACTS.md) — MD
+- [GitHub pull-request review source](../../../enterprise/ccf/operations/GITHUB_SOURCE.md) — MD
+- [Baseline testing, evidence intake and assessment workflow](../../../enterprise/ccf/operations/README.md) — MD
+- [Protected CCF workflow API](../../../enterprise/ccf/operations/SERVICE.md) — MD
 
 ## `enterprise/runtime`
 

@@ -1,0 +1,631 @@
+{
+  "status": "REVIEW_NAVIGATION_ONLY",
+  "scope": "Groups organize related reviews; they are not one shared approval or a new substantive source. Clause references point to the relevant draft reading context; JSON pointers identify the exact source field.",
+  "items": [
+    {
+      "id": "SH-LEGAL-DRAFT-ADVISORY-CONTRACTS-T01",
+      "group": "Commercial terms and administration",
+      "clause_heading": "1. Master professional services agreement"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-ADVISORY-CONTRACTS-T02",
+      "group": "Commercial terms and administration",
+      "clause_heading": "8. Intellectual property and product separation"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-ADVISORY-CONTRACTS-T03",
+      "group": "Economic terms and settlement",
+      "clause_heading": "4. Fees, invoices and changes"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-ADVISORY-CONTRACTS-U01",
+      "group": "Authority and execution",
+      "clause_heading": "10. Risk, remedies and termination"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-ADVISORY-CONTRACTS-U02",
+      "group": "Authority and execution",
+      "clause_heading": "5. SOW execution schedule"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-BILLING-T01",
+      "group": "Foundry Field billing identity",
+      "clause_heading": "2. Proposed invoice face and identities"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-BILLING-T02",
+      "group": "Foundry Field billing identity",
+      "clause_heading": "8. Acceptance schedule and unresolved material fields"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-BILLING-T03",
+      "group": "Commercial terms and administration",
+      "clause_heading": "6. Separate retrospective reconciliation attachment"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-BILLING-U01",
+      "group": "Foundry Field billing identity",
+      "clause_heading": "8. Acceptance schedule and unresolved material fields"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-BILLING-U02",
+      "group": "Foundry Field billing identity",
+      "clause_heading": "8. Acceptance schedule and unresolved material fields"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-BILLING-U03",
+      "group": "Tax treatment and filing",
+      "clause_heading": "4. Amount integrity and no implied tax election"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-BILLING-U04",
+      "group": "Authority and execution",
+      "clause_heading": "8. Acceptance schedule and unresolved material fields"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-CARRY-T01",
+      "group": "Economic terms and settlement",
+      "clause_heading": "4. Annual economic calculation"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-CARRY-T02",
+      "group": "Commercial terms and administration",
+      "clause_heading": "2. Eligibility and prohibition on serving-J2 discussions"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-CARRY-T03",
+      "group": "Commercial terms and administration",
+      "clause_heading": "9. Information, records and transfer restrictions"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-CARRY-U01",
+      "group": "Tax treatment and filing",
+      "clause_heading": "10. Reorganization, amendment and execution"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-CARRY-U02",
+      "group": "Economic terms and settlement",
+      "clause_heading": "4. Annual economic calculation"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-COLO-T01",
+      "group": "Commercial terms and administration",
+      "clause_heading": "1. Incorporation and purpose"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-COLO-T02",
+      "group": "Commercial terms and administration",
+      "clause_heading": "6. Commencement and invoice verification"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-COLO-T03",
+      "group": "Commercial terms and administration",
+      "clause_heading": "7. Availability and service-credit certificate"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-COLO-U01",
+      "group": "Provider qualification and commencement",
+      "clause_heading": "2. Reno order completion schedule"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-COLO-U02",
+      "group": "Authority and execution",
+      "clause_heading": "9. Completion and signature conditions"
+    },
+    {
+      "id": "DEBT-P01",
+      "group": "Authority and execution",
+      "clause_heading": "2. Proposed term-credit agreement"
+    },
+    {
+      "id": "DEBT-P02",
+      "group": "Economic terms and settlement",
+      "clause_heading": "2. Proposed term-credit agreement"
+    },
+    {
+      "id": "DEBT-P03",
+      "group": "Property, collateral and site rights",
+      "clause_heading": "3. Proposed conditions and borrower undertakings"
+    },
+    {
+      "id": "DEBT-P04",
+      "group": "Authority and execution",
+      "clause_heading": "4. Proposed security agreement and collateral schedule"
+    },
+    {
+      "id": "DEBT-P05",
+      "group": "Commercial terms and administration",
+      "clause_heading": "6. Proposed release undertaking and evidence receipt"
+    },
+    {
+      "id": "DEBT-U01",
+      "group": "Commercial terms and administration",
+      "clause_heading": "2. Proposed term-credit agreement"
+    },
+    {
+      "id": "DEBT-U02",
+      "group": "Economic terms and settlement",
+      "clause_heading": "2. Proposed term-credit agreement"
+    },
+    {
+      "id": "DEBT-U03",
+      "group": "Property, collateral and site rights",
+      "clause_heading": "4. Proposed security agreement and collateral schedule"
+    },
+    {
+      "id": "DEBT-U04",
+      "group": "Commercial terms and administration",
+      "clause_heading": "5. Proposed payoff request to existing lenders"
+    },
+    {
+      "id": "DEBT-U05",
+      "group": "Commercial terms and administration",
+      "clause_heading": "3. Proposed conditions and borrower undertakings"
+    },
+    {
+      "id": "FIN-P01",
+      "group": "Authority and execution",
+      "clause_heading": "1. Separate instruments and source boundary"
+    },
+    {
+      "id": "FIN-P02",
+      "group": "Commercial terms and administration",
+      "clause_heading": "5. Common proposed information and conduct rights"
+    },
+    {
+      "id": "FIN-P03",
+      "group": "Commercial terms and administration",
+      "clause_heading": "5. Common proposed information and conduct rights"
+    },
+    {
+      "id": "FIN-P04",
+      "group": "Authority and execution",
+      "clause_heading": "6. Common proposed payment, amendment and failure provisions"
+    },
+    {
+      "id": "FIN-P05",
+      "group": "Authority and execution",
+      "clause_heading": "5. Common proposed information and conduct rights"
+    },
+    {
+      "id": "FIN-U01",
+      "group": "Authority and execution",
+      "clause_heading": "7. Completion schedules"
+    },
+    {
+      "id": "FIN-U02",
+      "group": "Authority and execution",
+      "clause_heading": "7. Completion schedules"
+    },
+    {
+      "id": "FIN-U03",
+      "group": "Authority and execution",
+      "clause_heading": "5. Common proposed information and conduct rights"
+    },
+    {
+      "id": "FIN-U04",
+      "group": "Authority and execution",
+      "clause_heading": "7. Completion schedules"
+    },
+    {
+      "id": "FIN-U05",
+      "group": "Economic terms and settlement",
+      "clause_heading": "7. Completion schedules"
+    },
+    {
+      "id": "FORM-P01",
+      "group": "Authority and execution",
+      "clause_heading": "9. Common proposed completion provisions"
+    },
+    {
+      "id": "FORM-P02",
+      "group": "Authority and execution",
+      "clause_heading": "9. Common proposed completion provisions"
+    },
+    {
+      "id": "FORM-P03",
+      "group": "Authority and execution",
+      "clause_heading": "9. Common proposed completion provisions"
+    },
+    {
+      "id": "FORM-P04",
+      "group": "Authority and execution",
+      "clause_heading": "9. Common proposed completion provisions"
+    },
+    {
+      "id": "FORM-U01",
+      "group": "Authority and execution",
+      "clause_heading": "4. SHIH \u2014 proposed sole-stockholder and organization consent"
+    },
+    {
+      "id": "FORM-U02",
+      "group": "Authority and execution",
+      "clause_heading": "9. Common proposed completion provisions"
+    },
+    {
+      "id": "FORM-U03",
+      "group": "Commercial terms and administration",
+      "clause_heading": "10. Review delivery schedule"
+    },
+    {
+      "id": "FORM-U04",
+      "group": "Commercial terms and administration",
+      "clause_heading": "7. ARU \u2014 proposed acquired-share and board-record acknowledgment"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-HOST-RIGHTS-T01",
+      "group": "Commercial terms and administration",
+      "clause_heading": "1. Contracting parties and separate deployments"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-HOST-RIGHTS-T02",
+      "group": "Commercial terms and administration",
+      "clause_heading": "3. Host command and bypass rights"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-HOST-RIGHTS-T03",
+      "group": "Economic terms and settlement",
+      "clause_heading": "6. Settlement and supporting accounts"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-HOST-RIGHTS-T04",
+      "group": "Property, collateral and site rights",
+      "clause_heading": "7. Kelly Gang Mining deployment schedule"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-HOST-RIGHTS-T05",
+      "group": "Commercial terms and administration",
+      "clause_heading": "8. Demotte deployment schedule"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-HOST-RIGHTS-T06",
+      "group": "Authority and execution",
+      "clause_heading": "1. Contracting parties and separate deployments"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-HOST-RIGHTS-U01",
+      "group": "Authority and execution",
+      "clause_heading": "1. Contracting parties and separate deployments"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-HOST-RIGHTS-U02",
+      "group": "Property, collateral and site rights",
+      "clause_heading": "2. Scope of grant and physical boundary"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-HOST-RIGHTS-U03",
+      "group": "Commercial terms and administration",
+      "clause_heading": "7. Kelly Gang Mining deployment schedule"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-HOST-RIGHTS-U04",
+      "group": "Commercial terms and administration",
+      "clause_heading": "8. Demotte deployment schedule"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-HOST-RIGHTS-U05",
+      "group": "Commercial terms and administration",
+      "clause_heading": "9. Responsibility, insurance and exit"
+    },
+    {
+      "id": "LAND-P01",
+      "group": "Authority and execution",
+      "clause_heading": "2. Proposed settlement instruction to the internal closing coordinator"
+    },
+    {
+      "id": "LAND-P02",
+      "group": "Authority and execution",
+      "clause_heading": "4. Proposed funding authorization form in narrative terms"
+    },
+    {
+      "id": "LAND-P03",
+      "group": "Commercial terms and administration",
+      "clause_heading": "6. Proposed accounting instruction"
+    },
+    {
+      "id": "LAND-P04",
+      "group": "Authority and execution",
+      "clause_heading": "8. Exceptions, amendment and review"
+    },
+    {
+      "id": "LAND-U01",
+      "group": "Commercial terms and administration",
+      "clause_heading": "2. Proposed settlement instruction to the internal closing coordinator"
+    },
+    {
+      "id": "LAND-U02",
+      "group": "Commercial terms and administration",
+      "clause_heading": "3. Evidence and control schedule"
+    },
+    {
+      "id": "LAND-U03",
+      "group": "Authority and execution",
+      "clause_heading": "4. Proposed funding authorization form in narrative terms"
+    },
+    {
+      "id": "LAND-U04",
+      "group": "Property, collateral and site rights",
+      "clause_heading": "7. Title, possession and construction reservations"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-MARK-CLEARANCE-T01",
+      "group": "Commercial terms and administration",
+      "clause_heading": "2. Scope of professional engagement"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-MARK-CLEARANCE-T02",
+      "group": "Authority and execution",
+      "clause_heading": "1. Instruction and protected decision boundary"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-MARK-CLEARANCE-T03",
+      "group": "Commercial terms and administration",
+      "clause_heading": "5. Requested advice and deliverable"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-MARK-CLEARANCE-T04",
+      "group": "Authority and execution",
+      "clause_heading": "8. Present disposition"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-MARK-CLEARANCE-U01",
+      "group": "Commercial terms and administration",
+      "clause_heading": "3. Schedule A \u2014 client use instructions"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-MARK-CLEARANCE-U02",
+      "group": "Authority and execution",
+      "clause_heading": "2. Scope of professional engagement"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-MARK-CLEARANCE-U03",
+      "group": "Commercial terms and administration",
+      "clause_heading": "5. Requested advice and deliverable"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-RW-CHRONOLOGY-T01",
+      "group": "Historical dates",
+      "clause_heading": "2. Schedule A \u2014 competing assertions"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-RW-CHRONOLOGY-T02",
+      "group": "Economic terms and settlement",
+      "clause_heading": "6. Accounting preservation schedule"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-RW-CHRONOLOGY-T03",
+      "group": "Authority and execution",
+      "clause_heading": "5. Decision instrument"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-RW-CHRONOLOGY-U01",
+      "group": "Historical dates",
+      "clause_heading": "4. Event identity examination"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-RW-CHRONOLOGY-U02",
+      "group": "Authority and execution",
+      "clause_heading": "5. Decision instrument"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-RW-TITLE-T01",
+      "group": "Authority and execution",
+      "clause_heading": "2. Instrument A \u2014 limited confirmatory assignment"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-RW-TITLE-T02",
+      "group": "Property, collateral and site rights",
+      "clause_heading": "4. Instrument C \u2014 predecessor-name easement correction"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-RW-TITLE-T03",
+      "group": "Economic terms and settlement",
+      "clause_heading": "6. Instrument D \u2014 escrow claim notice"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-RW-TITLE-T04",
+      "group": "Economic terms and settlement",
+      "clause_heading": "8. Consideration and escrow reconciliation"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-RW-TITLE-U01",
+      "group": "Property, collateral and site rights",
+      "clause_heading": "5. Schedule A \u2014 item-specific work sheets"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-RW-TITLE-U02",
+      "group": "Authority and execution",
+      "clause_heading": "3. Instrument B \u2014 counterparty consent and acknowledgment"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-RW-TITLE-U03",
+      "group": "Economic terms and settlement",
+      "clause_heading": "7. Joint release direction and disputed balances"
+    },
+    {
+      "id": "BILLTAX-P01",
+      "group": "Authority and execution",
+      "clause_heading": "4. Proposed determination procedure"
+    },
+    {
+      "id": "BILLTAX-P02",
+      "group": "Tax treatment and filing",
+      "clause_heading": "5. Calculation schedule with no assumed rate"
+    },
+    {
+      "id": "BILLTAX-P03",
+      "group": "Tax treatment and filing",
+      "clause_heading": "7. Proposed approval and implementation clauses"
+    },
+    {
+      "id": "BILLTAX-P04",
+      "group": "Commercial terms and administration",
+      "clause_heading": "4. Proposed determination procedure"
+    },
+    {
+      "id": "BILLTAX-U01",
+      "group": "Foundry Field billing identity",
+      "clause_heading": "3. Required fact schedule"
+    },
+    {
+      "id": "BILLTAX-U02",
+      "group": "Tax treatment and filing",
+      "clause_heading": "4. Proposed determination procedure"
+    },
+    {
+      "id": "BILLTAX-U03",
+      "group": "Economic terms and settlement",
+      "clause_heading": "3. Required fact schedule"
+    },
+    {
+      "id": "BILLTAX-U04",
+      "group": "Tax treatment and filing",
+      "clause_heading": "8. Parent tax classification boundary"
+    },
+    {
+      "id": "BILLTAX-U05",
+      "group": "Foundry Field billing identity",
+      "clause_heading": "7. Proposed approval and implementation clauses"
+    },
+    {
+      "id": "TAX-P01",
+      "group": "Authority and execution",
+      "clause_heading": "3. Proposed election-cooperation agreement"
+    },
+    {
+      "id": "TAX-P02",
+      "group": "Commercial terms and administration",
+      "clause_heading": "3. Proposed election-cooperation agreement"
+    },
+    {
+      "id": "TAX-P03",
+      "group": "Authority and execution",
+      "clause_heading": "5. Filing control and delivery workpaper"
+    },
+    {
+      "id": "TAX-P04",
+      "group": "Tax treatment and filing",
+      "clause_heading": "7. Alternative outcome and correction clauses"
+    },
+    {
+      "id": "TAX-U01",
+      "group": "Tax treatment and filing",
+      "clause_heading": "4. Eligibility and authority review schedule"
+    },
+    {
+      "id": "TAX-U02",
+      "group": "Authority and execution",
+      "clause_heading": "5. Filing control and delivery workpaper"
+    },
+    {
+      "id": "TAX-U03",
+      "group": "Commercial terms and administration",
+      "clause_heading": "5. Filing control and delivery workpaper"
+    },
+    {
+      "id": "TAX-U04",
+      "group": "Tax treatment and filing",
+      "clause_heading": "7. Alternative outcome and correction clauses"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-TENURE-T01",
+      "group": "Property, collateral and site rights",
+      "clause_heading": "2. Proposed investigation access grant"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-TENURE-T02",
+      "group": "Commercial terms and administration",
+      "clause_heading": "2. Proposed investigation access grant"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-TENURE-T03",
+      "group": "Property, collateral and site rights",
+      "clause_heading": "5. Sacramento site schedule \u2014 SH-SITE-0001"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-TENURE-T04",
+      "group": "Commercial terms and administration",
+      "clause_heading": "8. Financial and risk allocation"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-TENURE-T05",
+      "group": "Authority and execution",
+      "clause_heading": "1. Instrument structure and parties"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-TENURE-U01",
+      "group": "Property, collateral and site rights",
+      "clause_heading": "1. Instrument structure and parties"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-TENURE-U02",
+      "group": "Economic terms and settlement",
+      "clause_heading": "8. Financial and risk allocation"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-TENURE-U03",
+      "group": "Authority and execution",
+      "clause_heading": "4. Use, alterations and operating boundaries"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-URANIUM-CUSTODY-T01",
+      "group": "Provider qualification and commencement",
+      "clause_heading": "1. Parties, purpose and nonactivation"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-URANIUM-CUSTODY-T02",
+      "group": "Economic terms and settlement",
+      "clause_heading": "5. Service orders, price and invoicing"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-URANIUM-CUSTODY-T03",
+      "group": "Provider qualification and commencement",
+      "clause_heading": "2. Conditions before any service order"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-URANIUM-CUSTODY-T04",
+      "group": "Property, collateral and site rights",
+      "clause_heading": "6. Evidence custody and correction protocol"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-URANIUM-CUSTODY-U01",
+      "group": "Provider qualification and commencement",
+      "clause_heading": "2. Conditions before any service order"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-URANIUM-CUSTODY-U02",
+      "group": "Economic terms and settlement",
+      "clause_heading": "8. Insurance, responsibility and termination"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-URANIUM-CUSTODY-U03",
+      "group": "Authority and execution",
+      "clause_heading": "9. Activation schedule and current disposition"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-WORKFORCE-T01",
+      "group": "Commercial terms and administration",
+      "clause_heading": "2. Retention consideration and payment"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-WORKFORCE-T02",
+      "group": "Commercial terms and administration",
+      "clause_heading": "3. Service condition and protected departure"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-WORKFORCE-T03",
+      "group": "Authority and execution",
+      "clause_heading": "8. Separate Fred Tolman consultancy"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-WORKFORCE-U01",
+      "group": "Authority and execution",
+      "clause_heading": "7. Individual retention schedules"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-WORKFORCE-U02",
+      "group": "Tax treatment and filing",
+      "clause_heading": "4. Authority and continued employment terms"
+    }
+  ]
+}

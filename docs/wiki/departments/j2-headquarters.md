@@ -3,9 +3,13 @@
 <img src="../../../assets/brand/logos/j2__primary-horizontal.png" alt="J2 approved identity" width="240">
 
 **Canon state:** LOCKED institutional scope; implementation detail varies by linked record.<br>
-**Last substantive review:** September 11, 2026. This page is secondary navigation; the linked source records control.
+**Reviewed:** September 12, 2026. This is a reading guide; linked source records control.
 
 J2 Headquarters coordinates professional standards, intelligence priorities, staffing and administrative support. The Head of J2 reports administratively to the CEO with protected Board access.
+
+## Reading guide
+
+Headquarters coordinates the J2 institution and its supporting capacity. Read the headquarters billets and approved leaders separately from the work and authority of the individual arms.
 
 ## Read and use the records
 
@@ -16,14 +20,23 @@ J2 Headquarters coordinates professional standards, intelligence priorities, sta
 
 ## Organization and identity
 
-[Current chart and all of its pages](../../organization/charts/corporate-j2.md) · [Complete organization publication](../../organization/assets/current/Sable-Harbor-Organization-Charts.pdf).
+[Organization chart, text roster and source qualifications](../../organization/charts/corporate-j2.md) · [Complete organization publication](../../organization/assets/current/Sable-Harbor-Organization-Charts.pdf).
 
 [![J2 Headquarters — shared organization chart, first page](../../organization/assets/current/corporate-j2.png)](../../organization/assets/current/corporate-j2.png)
 
 The shared chart retains its original scope; it is not a new reporting chart for this page. The approved J2 mark above identifies the parent institution.
 
-## Boundaries and unresolved detail
+[Department and institution directory](README.md) · [Business directory](../businesses/README.md) · [Wiki home](../Home.md)
 
-Chief of Staff, other unnamed roles and exact appointment histories remain open where not separately established. Joining year does not establish appointment or occupancy date.
+## What remains unknown
 
-[Department and institution directory](README.md) · [Wiki home](../Home.md)
+The 28 headquarters billets are settled. Unnamed offices and exact appointment histories are not filled by the organization chart. See the [open questions register](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Open-Questions) for the evidence needed to resolve tracked gaps.
+
+## Related reading
+
+- [J2 — Judgment & Junction](j2.md)
+- [Founders, early colleagues and later people](../subjects/People.md)
+- [Junction Advisory Group](jag.md)
+- [Alexandria institutional environment](alexandria.md)
+
+Related reading describes useful connections, not additional reporting lines.

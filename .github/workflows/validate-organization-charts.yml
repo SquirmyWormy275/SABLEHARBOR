@@ -44,6 +44,7 @@ permissions:
 
 jobs:
   validate:
+    name: Validate Organization Charts / validate
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository

@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "base_sha": "8898d2d0310a60bdf0e4753036790c6eda1388cd",
+  "date": "2026-09-12",
+  "scope": "All named legal families in the overnight queue, using the listed accepted-repository source records. Source sections are indexed completely, not claimed to be separately executed originals.",
+  "groups": {
+    "acquisition": [
+      "industrial/transaction/01_RW_TRANSACTION_FILE.md",
+      "industrial/transaction/02_ARU_LOI_AND_SELLER_FILE.md",
+      "industrial/transaction/03_ARU_DILIGENCE_MEMORANDUM.md",
+      "industrial/transaction/04_ARU_APPROVAL_AND_PURCHASE_AGREEMENT.md",
+      "industrial/transaction/05_ARU_CLOSING_AND_TAX_DELIVERY.md",
+      "red_wash/agreements/TRANSACTION_AND_COMMERCIAL_INSTRUMENTS.md",
+      "docs/canon/INDUSTRIAL_CLOSEOUT_2026-09-05.md",
+      "docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05_R2.md"
+    ],
+    "commercial": [
+      "industrial/transaction/08_INTERCOMPANY_LOGISTICS_AGREEMENT.md",
+      "industrial/transaction/09_SERVICE_PRICING_COMPARISON.md",
+      "docs/advisory/LEGAL_AND_CONTRACTING_TERM_SHEET.md",
+      "docs/advisory/COMMERCIAL_CONTRACTING_AND_PRICING_STANDARD.md",
+      "docs/advisory/IP_DATA_AND_METHOD_TRANSFER_STANDARD.md",
+      "docs/advisory/EXPERT_NETWORK_AND_THIRD_PARTY_STANDARD.md",
+      "docs/advisory/ATLAS_MERIDIAN_COMMERCIAL_PRODUCT_STANDARD.md",
+      "enterprise/runtime/docs/CONTRACT_DOSSIER.md",
+      "enterprise/operations/docs/commercial.md",
+      "enterprise/services/README.md"
+    ],
+    "corporate": [
+      "industrial/corporate/LEGAL_STRUCTURE_AND_FORMATION.md",
+      "industrial/corporate/LEADERSHIP_AND_AUTHORITY.md",
+      "docs/governance/BOARD_AND_CAPITAL_GOVERNANCE_v1.0.1.md",
+      "docs/governance/RESERVED_MATTERS_AND_SUBSIDIARY_AUTONOMY.md",
+      "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
+      "docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md",
+      "docs/canon/J2_LEADERSHIP_APPOINTMENTS_2026-09-10.md",
+      "docs/legal/ADVISORY_NAME_AND_EXTERNAL_CLEARANCE_STATUS_2026-09-09.md",
+      "docs/governance/board-records/2021-06-18_harrison-vale-growth-financing-minutes.md",
+      "docs/governance/board-records/2022-10-28_wolf-ridge-industrial-financing-minutes.md",
+      "docs/governance/board-records/2024-02-15_independent-chair-and-committee-architecture-minutes.md",
+      "docs/governance/board-records/2026-09-02_governance-j2-alexandria-ratification-written-consent.md",
+      "docs/governance/board-records/exhibits/2026-09-02_exhibit-a-governance-package.md",
+      "docs/governance/board-records/exhibits/2026-09-02_exhibit-b-j2-package.md",
+      "docs/governance/board-records/exhibits/2026-09-02_exhibit-c-alexandria-package.md",
+      "docs/governance/board-records/exhibits/2026-09-02_exhibit-d-controlled-publication-and-catalog-package.md",
+      "docs/governance/committees/AUDIT_AND_COMPLIANCE_COMMITTEE_CHARTER.md",
+      "docs/governance/committees/COMPENSATION_AND_HUMAN_CAPITAL_COMMITTEE_CHARTER.md",
+      "docs/governance/committees/FINANCE_AND_INVESTMENT_COMMITTEE_CHARTER.md",
+      "docs/governance/committees/GOVERNANCE_AND_NOMINATING_COMMITTEE_CHARTER.md",
+      "docs/governance/committees/TECHNOLOGY_AND_OPERATIONS_COMMITTEE_CHARTER.md"
+    ],
+    "workforce": [
+      "industrial/transaction/06_ARU_TRANSITION_AND_RETENTION.md",
+      "docs/governance/PEOPLE_AND_CULTURE_DOCTRINE.md",
+      "docs/advisory/CARRY_PLAN_STANDARD.md",
+      "docs/advisory/TALENT_MOBILITY_AND_CARRY.md",
+      "industrial/operations/LABOR_SAFETY_AND_CONTROLS.md"
+    ],
+    "assets-rights": [
+      "docs/canon/CRADLE_CLOSEOUT_2026-09-06.md",
+      "docs/canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md",
+      "docs/legal/MOCK_DEED_NORTHERN_NEVADA_DATA_CENTER_2026-09-04.md",
+      "docs/canon/RUNTIME_HOSTING_AND_DATA_CENTER_DECISIONS_2026-09-11.md",
+      "geospatial/facilities/README.md",
+      "geospatial/facilities/RESEARCH_CAMPUSES.md",
+      "geospatial/facilities/INDUSTRIAL_FACILITIES.md"
+    ],
+    "accounting-tax": [
+      "industrial/transaction/07_ARU_TAX_STRUCTURE_MEMORANDUM.md",
+      "industrial/finance/TRANSACTION_ACCOUNTING.md",
+      "industrial/finance/DRIVERS_AND_COST_SUPPORT.md",
+      "docs/finance/TRANSACTION_DATA_ROOM_INDEX.md",
+      "docs/finance/RUNTIME_INFRASTRUCTURE_FINANCE_RECONCILIATION_2026-09-11.md"
+    ]
+  },
+  "structured_references": {
+    "acquisition": [
+      "industrial/source/finance.json",
+      "industrial/source/entities.json",
+      "industrial/source/chronology.json"
+    ],
+    "commercial": [
+      "industrial/source/operations.json",
+      "enterprise/services/source/runtime_sites_2026-09-11.json",
+      "enterprise/business/source/contracts.json"
+    ],
+    "corporate": [
+      "industrial/source/entities.json",
+      "docs/governance/structured/board_approval_records.json",
+      "docs/governance/structured/board_and_committees.json"
+    ],
+    "workforce": [
+      "industrial/source/finance.json",
+      "industrial/source/entities.json"
+    ],
+    "assets-rights": [
+      "geospatial/facilities/coverage/COVERAGE_MATRIX.json",
+      "enterprise/services/source/runtime_sites_2026-09-11.json",
+      "industrial/source/entities.json"
+    ],
+    "accounting-tax": [
+      "industrial/source/finance.json",
+      "enterprise/services/source/runtime_capital_plan_2026-09-11.json"
+    ]
+  }
+}

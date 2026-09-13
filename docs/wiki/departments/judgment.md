@@ -3,9 +3,13 @@
 <img src="../../../assets/brand/logos/j2__primary-horizontal.png" alt="J2 approved identity" width="240">
 
 **Canon state:** LOCKED DIRECTION doctrine; LOCKED establishment and current leadership.<br>
-**Last substantive review:** September 11, 2026. This page is secondary navigation; the linked source records control.
+**Reviewed:** September 12, 2026. This is a reading guide; linked source records control.
 
 Judgment Officers investigate defined company problems, test explanations against evidence and maintain living Problem Books. Judgment Watch screens and connects incoming material without taking ownership of resulting cases.
+
+## Reading guide
+
+Judgment investigates a defined problem, records evidence and alternatives, and preserves serious challenge and dissent. The Problem Book makes the reasoning legible without turning an investigation into executive authority.
 
 ## Read and use the records
 
@@ -17,14 +21,23 @@ Judgment Officers investigate defined company problems, test explanations agains
 
 ## Organization and identity
 
-[Current chart and all of its pages](../../organization/charts/corporate-j2.md) · [Complete organization publication](../../organization/assets/current/Sable-Harbor-Organization-Charts.pdf).
+[Organization chart, text roster and source qualifications](../../organization/charts/corporate-j2.md) · [Complete organization publication](../../organization/assets/current/Sable-Harbor-Organization-Charts.pdf).
 
 [![Judgment — shared organization chart, first page](../../organization/assets/current/corporate-j2.png)](../../organization/assets/current/corporate-j2.png)
 
 The shared chart retains its original scope; it is not a new reporting chart for this page. The approved J2 mark above identifies the parent institution.
 
-## Boundaries and unresolved detail
+[Department and institution directory](README.md) · [Business directory](../businesses/README.md) · [Wiki home](../Home.md)
 
-A Judgment Officer can investigate and bring a question to institutional attention, but cannot command operations or replace Internal Audit.
+## What remains unknown
 
-[Department and institution directory](README.md) · [Wiki home](../Home.md)
+A documented profession does not supply unnamed occupants or complete appointment histories. Source-access and runtime enforcement questions remain separate. See the [open questions register](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Open-Questions) for the evidence needed to resolve tracked gaps.
+
+## Related reading
+
+- [Contact](contact.md)
+- [Orientation](orientation.md)
+- [Junction Advisory Group](jag.md)
+- [Alexandria institutional environment](alexandria.md)
+
+Related reading describes useful connections, not additional reporting lines.

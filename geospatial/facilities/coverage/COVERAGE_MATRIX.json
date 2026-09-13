@@ -14,7 +14,7 @@
     "8": "proposed/unresolved disposition"
   },
   "input_sha256": {
-    "geospatial/sources/catalog.json": "3e713190703248811ab7ba397ddbeac55a4b9e11399b41ee81badd0d4b0a5bf0",
+    "geospatial/sources/catalog.json": "91cda64b06aa2b6b219c849d7bb5445c7d3d47087a10942a2f96650e6f169cef",
     "enterprise/services/source/runtime_sites_2026-09-11.json": "fa216f629762503865fd9f1a3207e87691cd484cec9885bf25ce045b4525519c",
     "docs/organization/source/chartbook.json": "6471a6362517f97574c775b73b94ac48d6060d81cee605eb661811425ed75866",
     "industrial/source/operations.json": "e7488b55c1c963d102db66e7a7b6f1373a3d68a9f94b8f99b164092245713a3b",
@@ -112,8 +112,8 @@
       "tenure": "unknown; entity affiliation is not evidence of property title",
       "occupancy_start": null,
       "occupancy_end": null,
-      "relevant_date": "2020\u20132022",
-      "date_precision": "YEAR_OR_RANGE",
+      "relevant_date": "2021\u20132024",
+      "date_precision": "YEAR_RANGE",
       "precision": "CITY_OR_DISTRICT",
       "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
       "provenance": [
@@ -146,8 +146,8 @@
       "tenure": "unknown; entity affiliation is not evidence of property title",
       "occupancy_start": null,
       "occupancy_end": null,
-      "relevant_date": "2022\u20132026",
-      "date_precision": "YEAR_OR_RANGE",
+      "relevant_date": "2024\u20132026",
+      "date_precision": "YEAR_RANGE",
       "precision": "CITY_OR_DISTRICT",
       "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
       "provenance": [
