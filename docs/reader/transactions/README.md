@@ -8,6 +8,8 @@ Start with the specific record below. Each source retains its synthetic, provisi
 
 ## Reading packages
 
+- [17 gap instrument packages — draft agreements, schedules and workpapers for review](../../legal/gap-instruments/README.md). These new drafts do not replace the source evidence or close external gaps.
+
 - [Commercial agreements, orders and service obligations](../../legal/evidence/commercial/README.md)
 - [Corporate approvals, capital and workforce terms](../../legal/evidence/corporate/README.md)
 - [Acquisitions, assets, host rights and tenure](../../legal/evidence/assets-rights/README.md)

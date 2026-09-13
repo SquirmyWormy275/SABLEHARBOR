@@ -12,6 +12,8 @@ from pathlib import Path
 from zipfile import ZIP_DEFLATED, ZipFile, ZipInfo
 
 import fitz
+from formatting import cell as display_cell
+from formatting import heading as display_heading
 from markdown_it import MarkdownIt
 from openpyxl import Workbook
 from openpyxl.styles import Alignment, Font, PatternFill
@@ -52,9 +54,9 @@ def workbook(record, output):
         sheet = wb.create_sheet(f'{n:02d} {name}'[:31])
         sheet.append([schedule['name']])
         sheet.append([STATUS, 'Not a payment or filing record'])
-        sheet.append(schedule['columns'])
+        sheet.append([display_heading(c) for c in schedule['columns']])
         for row in schedule['rows']:
-            sheet.append(row)
+            sheet.append([display_cell(value, column) for value, column in zip(row, schedule['columns'], strict=True)])
         sheet.freeze_panes = 'A4'
         sheet.auto_filter.ref = f'A3:{get_column_letter(len(schedule["columns"]))}{sheet.max_row}'
     for sheet in wb:
@@ -63,20 +65,37 @@ def workbook(record, output):
         for row in sheet:
             for cell in row:
                 cell.font = Font(name='Arial', size=11, color='101214')
-                cell.alignment = Alignment(vertical='top', wrap_text=True)
+                cell.alignment = Alignment(vertical='top', wrap_text=True, horizontal='right' if isinstance(cell.value, (int, float)) else 'left', indent=1)
                 if cell.row in (1, 3) and sheet != ws or cell.row == 1:
                     cell.fill = PatternFill('solid', fgColor='243238')
                     cell.font = Font(name='Arial', size=11, bold=True, color='FFFFFF')
                 elif cell.row % 2 == 0:
                     cell.fill = PatternFill('solid', fgColor='F4F1EA')
                 if isinstance(cell.value, (float, int)):
-                    cell.number_format = '#,##0.00;[Red](#,##0.00);0.00'
+                    heading = str(sheet.cell(3, cell.column).value or '').lower()
+                    if 'percent' in heading or 'pct' in heading:
+                        cell.number_format = '0\"%\"' if isinstance(cell.value, int) else '0.00\"%\"'
+                    elif 'usd' in heading:
+                        cell.number_format = '#,##0;[Red](#,##0);0' if isinstance(cell.value, int) else '#,##0.00;[Red](#,##0.00);0.00'
+                    else:
+                        cell.number_format = '#,##0' if isinstance(cell.value, int) else '#,##0.00'
         for col in sheet.columns:
             max_chars = max(len(str(c.value or '')) for c in col)
-            sheet.column_dimensions[col[0].column_letter].width = min(52, max(20, max_chars + 2))
+            sheet.column_dimensions[col[0].column_letter].width = min(42, max(14, max_chars + 2))
+        total_width = sum(sheet.column_dimensions[get_column_letter(c)].width for c in range(1, sheet.max_column+1))
+        if total_width > 160:
+            for c in range(1, sheet.max_column+1):
+                dim = sheet.column_dimensions[get_column_letter(c)]
+                dim.width = max(12, dim.width * 160 / total_width)
+        for c in range(1, sheet.max_column+1):
+            if any(isinstance(sheet.cell(r,c).value, (int,float)) for r in range(4,sheet.max_row+1)):
+                dim = sheet.column_dimensions[get_column_letter(c)]
+                dim.width = max(18, dim.width)
         for row in sheet:
             lines = max((len(str(c.value or '')) // max(1, int(sheet.column_dimensions[c.column_letter].width) - 3) + 1) for c in row)
             sheet.row_dimensions[row[0].row].height = max(28, lines * 16 + 10)
+        sheet.merge_cells(start_row=1, start_column=1, end_row=1, end_column=sheet.max_column)
+        sheet.print_area = f'A1:{get_column_letter(sheet.max_column)}{sheet.max_row}'
         sheet.sheet_properties.pageSetUpPr.fitToPage = True
         sheet.page_setup.orientation = 'landscape'
         sheet.page_setup.paperSize = sheet.PAPERSIZE_A3
@@ -93,6 +112,8 @@ def workbook(record, output):
         files = [(n, z.read(n)) for n in sorted(z.namelist())]
     with ZipFile(output, 'w', ZIP_DEFLATED) as z:
         for name, data in files:
+            if name == 'docProps/core.xml':
+                data = re.sub(rb'(<dcterms:modified[^>]*>).*?(</dcterms:modified>)', rb'\g<1>2026-09-12T00:00:00Z\g<2>', data)
             info = ZipInfo(name, (2026, 9, 12, 0, 0, 0))
             info.compress_type = ZIP_DEFLATED
             z.writestr(info, data)
@@ -122,6 +143,13 @@ def build():
         browser = pw.chromium.launch(executable_path='/usr/bin/chromium', args=['--no-sandbox'])
         for record in records:
             body = parser().render((ROOT / record['source']).read_text())
+            body = re.sub(r'(<h2>Source (?:documents|record and approval boundary)</h2>.*)$', r'<section class="references">\1</section>', body, flags=re.DOTALL)
+            if record['slug'] == 'tax-filing':
+                body = re.sub(r'(<h2>8\. Completion and review record</h2>.*)$', r'<section class="references">\1</section>', body, flags=re.DOTALL)
+            form_titles = ('Execution and schedule completion', 'Separate HV / WR execution and subscription sheet', 'Entity consent and subscription completion sheet', 'Settlement instruction completion sheet', 'Facility, collateral and release completion sheet')
+            for title in form_titles:
+                pattern = r'(<h2>' + re.escape(title) + r'</h2>.*?)(?=<section class="references">|$)'
+                body = re.sub(pattern, r'<section class="execution-form">\1</section>', body, flags=re.DOTALL)
             # Editions live beside source/, so relative source links retain depth.
             hp = out / f'{record["slug"]}.html'
             hp.write_text(f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{html.escape(record['title'])}</title><style>{css}</style></head><body>
@@ -170,9 +198,15 @@ def build():
             links.append(f'<a href="editions/{p.name}">{p.suffix[1:].upper()}</a>')
         rows.append(f'<tr><td><strong>{html.escape(r["title"])}</strong><br><small>{r["gap_id"]}</small></td><td>{r["pages"]}</td><td>{" · ".join(links)}</td></tr>')
     (HERE / 'review.html').write_text(f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>17 legal gap packages — review</title><style>{css}</style></head><body><header class="edition-header"><img src="{logo_uri}" alt="Sable Harbor"><span>LEGAL RECORDS<br>REVIEW ROOM</span></header><h1>17 legal gap packages</h1><p>Complete draft instruments and schedules for review. These files develop the missing language; they do not establish execution or close external evidence gaps.</p><aside class="edition-note"><strong>Drafts awaiting exact-file review.</strong> Proposed terms remain unaccepted. Read each package’s source and proposal notes before treating a provision as a company fact.</aside><p><a href="README.md">Scope and reproduction</a> · <a href="index.json">Structured index</a> · <a href="instruments.sqlite3">Searchable database</a></p><table><thead><tr><th>Package</th><th>PDF pages</th><th>Open the complete files</th></tr></thead><tbody>{''.join(rows)}</tbody></table></body></html>''')
-    files = [HERE / 'index.json', HERE / 'review.html', db]
+    lines = ['# Draft instrument index', '', 'All 17 packages are DRAFT_FOR_REVIEW. Full language, proposed terms and unresolved fields remain in each source.', '', '| Gap / package | Complete document | Structured schedules |', '|---|---|---|']
+    for r in records:
+        slug = r['slug']
+        financial = f" · [Excel](editions/{slug}.xlsx)" if r.get('sheets') else ''
+        lines.append(f"| {r['gap_id']} — {r['title']} | [Markdown](source/{slug}.md) · [PDF](editions/{slug}.pdf) · [HTML](editions/{slug}.html) | [JSON](source/{slug}.json){financial} |")
+    (HERE / 'PACKAGE_INDEX.md').write_text('\n'.join(lines)+'\n')
+    files = [HERE / 'index.json', HERE / 'review.html', HERE / 'PACKAGE_INDEX.md', db]
     write_json(HERE / 'manifest.json', {'status': STATUS, 'approved': False, 'base_revision': BASE,
-        'inputs': [{'path':str(p.relative_to(ROOT)), 'sha256':sha(p)} for p in (Path(__file__), TOOLS/'style.css',TOOLS/'requirements.txt',logo)],
+        'inputs': [{'path':str(p.relative_to(ROOT)), 'sha256':sha(p)} for p in (Path(__file__), TOOLS/'style.css',TOOLS/'requirements.txt',TOOLS/'formatting.py',logo)],
         'packages': records, 'other_artifacts':[{'path':str(p.relative_to(ROOT)),'sha256':sha(p)} for p in files],
         'counts':{'packages':len(records),'pdf_pages':sum(r['pages'] for r in records),'workbooks':sum(bool(r.get('sheets')) for r in records),'sheets':sum(len(r.get('sheets',[])) for r in records)}})
 

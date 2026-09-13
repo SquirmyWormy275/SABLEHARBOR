@@ -34,7 +34,7 @@ article img { max-width: 100%; height: auto; }
 @media screen and (max-width: 600px) { body { margin: 0; padding: 22px 18px; } h1 { font-size: 21pt; } .edition-header { gap: 12px; } .edition-header img { max-width: 55%; } table { display: block; overflow-x: auto; } }
 @media print { html { background: white; } a { text-decoration: none; } }
 /* Source metadata uses Markdown soft line breaks; retain those readable lines. */
-article p:has(> strong:first-child) { white-space: pre-line; }
+/* Source metadata already uses explicit Markdown hard breaks. */
 th,td { min-width: 5em; }
 /* Provenance remains in the editable HTML and manifest; do not create empty PDF tail pages. */
 @media print { .source-identity { display: none; } }
@@ -54,3 +54,6 @@ th,td { overflow-wrap: normal; }
 .edition-header { border-bottom-color: #C45124; }
 .edition-note { border-left-color: #C45124; background: #F4F1EA; }
 @media screen { body { box-shadow: none; } }
+
+/* Keep reference lists and fillable completion forms intact. */
+.references, .execution-form { break-inside: avoid; }

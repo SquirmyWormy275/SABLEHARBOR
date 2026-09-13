@@ -11,7 +11,7 @@ provide the corresponding structured view. All new designs remain for exact-file
 review under the owner's standing instruction. Existing approved publications
 and the 17 original evidence dispositions remain unchanged.
 
-[Open the review index](review.html) · [Artifact manifest](manifest.json) ·
+[Browse all 17 documents in GitHub](PACKAGE_INDEX.md) · [Open the browser review index](review.html) · [Artifact manifest](manifest.json) ·
 [Structured package index](index.json) · [Database](instruments.sqlite3)
 
 The review index links every package to its Markdown, full PDF, HTML, structured

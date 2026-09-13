@@ -9,7 +9,10 @@ from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 import fitz
+from formatting import cell as display_cell
+from formatting import heading as display_heading
 from markdown_it import MarkdownIt
 from openpyxl import load_workbook
 
@@ -97,7 +100,7 @@ def validate():
                         check(block in complete, f'{path.name}: missing HTML block {block[:70]}')
                 elif path.suffix == '.pdf':
                     with fitz.open(path) as doc:
-                        complete = norm(' '.join(p.get_text(sort=True) for p in doc))
+                        complete = norm(' '.join(p.get_text(sort=False) for p in doc))
                         check(len(doc) == r['pages'], f'{path.name}: page count')
                         for block in blocks:
                             check(block in complete, f'{path.name}: missing PDF block {block[:70]}')
@@ -109,7 +112,8 @@ def validate():
                     check(wb.sheetnames == r['sheets'], f'{path.name}: sheet mismatch')
                     for sheet, schedule in zip(list(wb)[1:],data['financial_schedules'],strict=True):
                         actual = [list(row) for row in sheet.iter_rows(min_row=4,max_col=len(schedule['columns']),values_only=True)]
-                        wanted = [[None if x == '' else x for x in row] for row in schedule['rows']]
+                        wanted = [[None if x == '' else display_cell(x, column) for x, column in zip(row, schedule['columns'], strict=True)] for row in schedule['rows']]
+                        check([c.value for c in sheet[3]] == [display_heading(c) for c in schedule['columns']], f'{path.name}/{sheet.title}: headers differ')
                         check(actual == wanted, f'{path.name}/{sheet.title}: changed schedule cells')
     all_hashed = manifest['inputs'] + manifest['other_artifacts']
     for r in records:

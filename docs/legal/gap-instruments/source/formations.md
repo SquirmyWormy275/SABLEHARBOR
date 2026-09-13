@@ -47,7 +47,7 @@ A subscription schedule shall accompany the consent only after the Secretary est
 
 ## 5. PS — proposed subscription and continuity consent
 
-**RESOLVED, that SHIH subscribes for the entire accepted ownership interest in PS** on terms supported by the final organization schedule. PS shall accept the subscription only after its authorized recipient verifies the class, quantity, consideration, authority and receipt or valid noncash contribution basis. Until then this draft records the existing 100% relationship but does not manufacture the original subscription price or share denomination.
+**RESOLVED, that SHIH approves the subscription record for its entire accepted ownership interest in PS**, solely to document the original organization subscription on the completed schedule; no additional interests shall be issued under this acknowledgment. PS shall accept the subscription only after its authorized recipient verifies the class, quantity, consideration, authority and receipt or valid noncash contribution basis. Until then this draft records the existing 100% relationship but does not manufacture the original subscription price or share denomination.
 
 The organizational record shall preserve January 13, 2025 as the reconstructed formation date and distinguish the initial development roles from Evan Vilander's later presidency beginning November 3, 2025. Mari Varela's PS COO and RWH CEO capacities remain distinct offices held by one person. The consent shall not count those offices as two employees or move mine operating personnel into a new platform establishment.
 

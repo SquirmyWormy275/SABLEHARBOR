@@ -17,6 +17,8 @@ jobs:
           python-version: '3.12'
       - run: pip install -r tools/legal_gaps/requirements.txt
       - run: python tools/legal_gaps/validate.py
+      - run: python tools/legal_gaps/check_terms.py
       - run: python -m pytest -q tests/publications/test_legal_gap_instruments.py --confcutdir=tests/publications
+      - run: python tools/legal_gaps/validate_qa.py
       - run: python tools/documents/approval_guard.py
       - run: git diff --check
