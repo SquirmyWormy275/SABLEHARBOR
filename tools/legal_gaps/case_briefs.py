@@ -11,7 +11,6 @@ from pathlib import Path
 
 import fitz
 from markdown_it import MarkdownIt
-from playwright.sync_api import sync_playwright
 
 ROOT = Path(__file__).resolve().parents[2]
 HERE = ROOT / "docs/legal/gap-instruments/case-briefs"
@@ -22,6 +21,8 @@ def sha(path):
 
 
 def build():
+    from playwright.sync_api import sync_playwright
+
     source = json.loads((HERE / "source.json").read_text())
     logo = ROOT / "assets/brand/logos/sable-harbor__primary-horizontal.svg"
     css = (ROOT / "tools/legal_gaps/style.css").read_text()

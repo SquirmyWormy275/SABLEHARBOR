@@ -100,4 +100,8 @@ The period-close README gained eight direct CSV links after the independent nume
 
 The final input workbook, proposal outputs, captured stdout/stderr and manifest at the links above now reflect that current context. [Earlier artifacts](cold-start/history-before-context-refresh/) preserve the previous input, proposal, receipt, output and manifest chronology. The final manifest also pins the delivered tracker XLSX/JSON, period-close README and blank/worked workbooks. The independent completed workbook, numerical results and worked comparison remain byte-identical; no arithmetic was redone or changed.
 
+## Clean-checkout portability correction
+
+GitHub CI found that the verbatim generated proposal used local absolute source links. The original bytes remain in `PROPOSAL.original.txt`, with the original manifest alongside. The repository-viewable `PROPOSAL.md` is now explicitly labeled as a reading copy and uses relative source links. No evidence event, source hash, calculation or import receipt changed. The manifest distinguishes the retained original from its portable companion.
+
 FINAL RESULT: PASS

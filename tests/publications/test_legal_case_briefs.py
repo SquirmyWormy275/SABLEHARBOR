@@ -24,3 +24,21 @@ def test_changed_input_invalidates_brief(monkeypatch):
     )
     with pytest.raises(AssertionError, match="Stale brief input"):
         case_briefs.validate()
+
+
+def test_validation_does_not_require_browser_runtime():
+    import subprocess
+    import sys
+
+    result = subprocess.run(
+        [
+            sys.executable,
+            "-c",
+            "import sys; sys.modules['playwright'] = None; "
+            "from tools.legal_gaps.case_briefs import validate; validate()",
+        ],
+        cwd=case_briefs.ROOT,
+        capture_output=True,
+        text=True,
+    )
+    assert result.returncode == 0, result.stderr

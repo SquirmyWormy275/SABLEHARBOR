@@ -12,7 +12,7 @@ if __package__ in (None, ""):
     sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 from tools.legal_gaps import package_v3 as previous
 
-VERSION = "0.4.0-review.1"
+VERSION = "0.4.0-review.2"
 ADDITIONS = ("period-close", "evidence-tracking", "source-impact", "case-briefs")
 
 
@@ -76,7 +76,7 @@ def build(output, allow_dirty=False):
             if p.is_file()
         ]
         manifest["files"] = rows
-        manifest["predecessor"] = "0.3.0-review.1; original release bytes retained"
+        manifest["predecessor"] = "0.4.0-review.1 build retained; portability correction only"
         (intermediate / "MANIFEST.json").write_text(json.dumps(manifest, indent=2) + "\n")
         (intermediate / "SHA256SUMS.txt").write_text(
             "".join(r["sha256"] + "  " + r["path"] + "\n" for r in rows)

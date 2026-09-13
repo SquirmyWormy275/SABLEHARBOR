@@ -3,7 +3,7 @@
   "status": "DRAFT_FOR_EXACT_FILE_REVIEW",
   "inputs": {
     "docs/legal/gap-instruments/case-briefs/source.json": "35769fe20897e77d21cdb38743878f9d82e5c1bd3568f8c2a93c86ebdcdc7d1e",
-    "tools/legal_gaps/case_briefs.py": "ec61a98624476a89f18095bfa5aade6005e91ffa1611129e6b624bda49252bf0",
+    "tools/legal_gaps/case_briefs.py": "dd85f7f4573555675a780f059116fa15371b7ef8b72e57d13d070f9321ed0cf1",
     "assets/brand/logos/sable-harbor__primary-horizontal.svg": "815efb4ca06e4f2df8b9dfee3d4288f94d2e64417b7c863ce5b8639d2de07076",
     "tools/legal_gaps/style.css": "fb15462569f7503b59cba8dcd3015fbbc6a82cb64d5225b53b4b2b3498913d40",
     "docs/legal/gap-instruments/practice/acquisition/TASK.md": "26e3e44bb7124ac8fce565c4729e8f534bd5583c8c3be990167f7d2fede473a6",
