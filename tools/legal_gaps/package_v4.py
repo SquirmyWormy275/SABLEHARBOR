@@ -40,7 +40,29 @@ def build(output, allow_dirty=False):
                 ("source-impact", "Check which work a source change affects"),
             )
         )
-        start.write_text(start.read_text().replace("<ul>", "<ul>" + links, 1))
+        content = start.read_text().replace("<ul>", "<ul>" + links, 1)
+        content = content.replace(
+            "New designs and proposed terms remain unaccepted.",
+            "The owner approved this implementation and the v0.4 designs on 13 September 2026. "
+            "Proposed legal and billing terms retain their recorded draft status.",
+        )
+        content = content.replace(
+            "</ul>",
+            '<li><a href="'
+            + previous.PREFIX
+            + '/case-briefs/ACCEPTANCE.md.html">Scope of owner approval'
+            + " and exact-file hashes</a></li></ul>",
+            1,
+        )
+        start.write_text(content)
+        # Long commands remain fully readable in new companions on narrow screens.
+        for folder in ADDITIONS:
+            for companion in (intermediate / previous.PREFIX / folder).rglob("*.md.html"):
+                companion.write_text(
+                    companion.read_text().replace(
+                        "</style>", "pre{white-space:pre-wrap;overflow-wrap:anywhere}</style>"
+                    )
+                )
         manifest = json.loads((intermediate / "MANIFEST.json").read_text())
         for name in ("MANIFEST.json", "SHA256SUMS.txt"):
             (intermediate / name).unlink()

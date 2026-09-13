@@ -246,6 +246,44 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Contract clauses and accounting evidence](../../legal/gap-instruments/accounting/README.md) — MD
 - [links](../../legal/gap-instruments/accounting/links.xlsx) — XLSX
 
+## `docs/legal/gap-instruments/case-briefs`
+
+- [Owner approval — close and evidence-review tranche](../../legal/gap-instruments/case-briefs/ACCEPTANCE.md) — MD
+- [Choose a case and start working](../../legal/gap-instruments/case-briefs/README.md) — MD
+- [Account for the ARU acquisition](../../legal/gap-instruments/case-briefs/SH-CASE-ARU-01.md) — MD
+- [SH-CASE-ARU-01](../../legal/gap-instruments/case-briefs/SH-CASE-ARU-01.pdf) — PDF
+- [Close one ARU reporting period](../../legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.md) — MD
+- [SH-CASE-CLOSE-01](../../legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.pdf) — PDF
+- [Resolve a disputed Foundry Field invoice](../../legal/gap-instruments/case-briefs/SH-CASE-FF-01.md) — MD
+- [SH-CASE-FF-01](../../legal/gap-instruments/case-briefs/SH-CASE-FF-01.pdf) — PDF
+- [Practice five separate reconciliations](../../legal/gap-instruments/case-briefs/SH-CASE-RECON-01.md) — MD
+- [SH-CASE-RECON-01](../../legal/gap-instruments/case-briefs/SH-CASE-RECON-01.pdf) — PDF
+- [Trace the Red Wash closure obligation](../../legal/gap-instruments/case-briefs/SH-CASE-RW-01.md) — MD
+- [SH-CASE-RW-01](../../legal/gap-instruments/case-briefs/SH-CASE-RW-01.pdf) — PDF
+
+## `docs/legal/gap-instruments/case-briefs/qa`
+
+- [Independent agent cold-start review — ARU January 2027](../../legal/gap-instruments/case-briefs/qa/COLD_START.md) — MD
+
+## `docs/legal/gap-instruments/case-briefs/qa/cold-start`
+
+- [completed](../../legal/gap-instruments/case-briefs/qa/cold-start/completed.xlsx) — XLSX
+- [evidence-update-corrected](../../legal/gap-instruments/case-briefs/qa/cold-start/evidence-update-corrected.xlsx) — XLSX
+
+## `docs/legal/gap-instruments/case-briefs/qa/cold-start/evidence-proposal`
+
+- [Proposed evidence events](../../legal/gap-instruments/case-briefs/qa/cold-start/evidence-proposal/PROPOSAL.md) — MD
+- [tracker](../../legal/gap-instruments/case-briefs/qa/cold-start/evidence-proposal/tracker.xlsx) — XLSX
+
+## `docs/legal/gap-instruments/case-briefs/qa/cold-start/history-before-context-refresh`
+
+- [evidence-update-corrected](../../legal/gap-instruments/case-briefs/qa/cold-start/history-before-context-refresh/evidence-update-corrected.xlsx) — XLSX
+
+## `docs/legal/gap-instruments/case-briefs/qa/cold-start/history-before-context-refresh/evidence-proposal`
+
+- [Proposed evidence events](../../legal/gap-instruments/case-briefs/qa/cold-start/history-before-context-refresh/evidence-proposal/PROPOSAL.md) — MD
+- [tracker](../../legal/gap-instruments/case-briefs/qa/cold-start/history-before-context-refresh/evidence-proposal/tracker.xlsx) — XLSX
+
 ## `docs/legal/gap-instruments/decision-import`
 
 - [Import a completed decision workbook](../../legal/gap-instruments/decision-import/README.md) — MD
@@ -290,6 +328,18 @@ Generated file inventory. Includes current and historical records; open the sour
 - [uranium-custody](../../legal/gap-instruments/editions/uranium-custody.xlsx) — XLSX
 - [workforce](../../legal/gap-instruments/editions/workforce.pdf) — PDF
 - [workforce](../../legal/gap-instruments/editions/workforce.xlsx) — XLSX
+
+## `docs/legal/gap-instruments/evidence-tracking`
+
+- [Evidence request follow-through](../../legal/gap-instruments/evidence-tracking/README.md) — MD
+- [tracker](../../legal/gap-instruments/evidence-tracking/tracker.xlsx) — XLSX
+
+## `docs/legal/gap-instruments/period-close`
+
+- [ARU Group — January 2027 period close](../../legal/gap-instruments/period-close/README.md) — MD
+- [Public worked close — ARU Group, January 2027](../../legal/gap-instruments/period-close/WORKED.md) — MD
+- [blank](../../legal/gap-instruments/period-close/blank.xlsx) — XLSX
+- [worked](../../legal/gap-instruments/period-close/worked.xlsx) — XLSX
 
 ## `docs/legal/gap-instruments/practice`
 
@@ -343,6 +393,10 @@ Generated file inventory. Includes current and historical records; open the sour
 
 - [Review-tool quality record](../../legal/gap-instruments/review-support/qa/README.md) — MD
 
+## `docs/legal/gap-instruments/review-support/qa/v4`
+
+- [Legal instrument revision comparison](../../legal/gap-instruments/review-support/qa/v4/PRESERVATION.md) — MD
+
 ## `docs/legal/gap-instruments/source`
 
 - [Advisory master services agreement and matter schedules](../../legal/gap-instruments/source/advisory-contracts.md) — MD
@@ -362,6 +416,14 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Sacramento, Fort and Bedford proposed site tenure and access instrument](../../legal/gap-instruments/source/tenure.md) — MD
 - [Conditional future Red Wash product custody and carrier agreement](../../legal/gap-instruments/source/uranium-custody.md) — MD
 - [ARU individual retention agreements and Tolman consultancy](../../legal/gap-instruments/source/workforce.md) — MD
+
+## `docs/legal/gap-instruments/source-impact`
+
+- [What needs rechecking when a source changes?](../../legal/gap-instruments/source-impact/README.md) — MD
+
+## `docs/legal/gap-instruments/source-impact/sample-audit`
+
+- [Source-change impact report](../../legal/gap-instruments/source-impact/sample-audit/REPORT.md) — MD
 
 ## `docs/legal/gap-instruments/walkthroughs`
 

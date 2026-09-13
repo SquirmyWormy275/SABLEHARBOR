@@ -3,7 +3,7 @@
   "status": "DRAFT_REVIEW_PROPOSAL_NOT_APPLIED",
   "source_pins": {
     "docs/finance/evidence/SH-FIN-HUMAN-001/source.json": "c4833cfc6f28db6cd3edcae761b0e2d8f463a20de79f1d6fd5b0c517f8f829b7",
-    "docs/legal/gap-instruments/period-close/README.md": "2cf05a38cb0a634ba8355e6f5e046977ada35dad0a83d210b7cd265491c59e20",
+    "docs/legal/gap-instruments/period-close/README.md": "1f764afff496bd216dfca3fd1ffac4accf7433cf0404557f894312f82887577a",
     "docs/legal/gap-instruments/period-close/case.json": "9ad2fd1377291bcbe61484aac9bb6e61c969c594be21ed86669008046ac628c3",
     "docs/legal/gap-instruments/reconciliations/source.json": "167cdac04d99d603611ca169c9987436d3e6f92a17c21a90b06d2215133d5ea3",
     "docs/legal/gap-instruments/walkthroughs/source/evidence_requests.csv": "649c0dce2e0de1b6f480c85e76d1bd7f4a364d426df3c47c6fb7871d860ec939",
@@ -170,8 +170,8 @@
         2,
         2
       ],
-      "previous_sha256": "a31397f46b49101ba75d632de23edbfc8eef3205c77571e41fe653be2fa8def5",
-      "sha256": "14b9132124c8b98592daf1881e816ac7f70788bad71bef016cf329175f5a8571"
+      "previous_sha256": "dde6c0ebd5e7d1d19757346feade554732bcb34ce35e90f8ab7e5101923021f9",
+      "sha256": "3a15899d5571ea3915892a8b35ebc85910312d48fab814bc3685e677a7950228"
     },
     {
       "id": "COLD-START-ARU-DEBT-RETEST-20260912",
@@ -187,8 +187,8 @@
         2,
         2
       ],
-      "previous_sha256": "14b9132124c8b98592daf1881e816ac7f70788bad71bef016cf329175f5a8571",
-      "sha256": "9854cc255fdf2d9fda57d827c2a98ddcf3561bce33253eecca5b137196b522f6"
+      "previous_sha256": "3a15899d5571ea3915892a8b35ebc85910312d48fab814bc3685e677a7950228",
+      "sha256": "ea7cc4b9261cdecd72150dfe318568c3de8bc125798597db576f070f23a80e3f"
     },
     {
       "id": "COLD-START-ARU-AR-RETEST-20260912",
@@ -204,8 +204,8 @@
         2,
         2
       ],
-      "previous_sha256": "9854cc255fdf2d9fda57d827c2a98ddcf3561bce33253eecca5b137196b522f6",
-      "sha256": "05c29fc31d833ab85bebc17b64632782a21e6bcc9bc3a22f732592a8c52093eb"
+      "previous_sha256": "ea7cc4b9261cdecd72150dfe318568c3de8bc125798597db576f070f23a80e3f",
+      "sha256": "6d2d739b995eefb6d6e63471e2b93b51e12a18ea1cd0a87598d0de168a319ca6"
     },
     {
       "id": "COLD-START-ARU-AP-RETEST-20260912",
@@ -221,8 +221,8 @@
         61,
         61
       ],
-      "previous_sha256": "05c29fc31d833ab85bebc17b64632782a21e6bcc9bc3a22f732592a8c52093eb",
-      "sha256": "3b2c15e397949689a411131d6e69caa817f1b6d5ad531d796ee0faa6e9cec63e"
+      "previous_sha256": "6d2d739b995eefb6d6e63471e2b93b51e12a18ea1cd0a87598d0de168a319ca6",
+      "sha256": "1ff023e014966dedeeb674533dfd61885ec1cef7253158dc23c0cee4cef4a307"
     },
     {
       "id": "COLD-START-ARU-PPE-RETEST-20260912",
@@ -238,8 +238,8 @@
         2,
         2
       ],
-      "previous_sha256": "3b2c15e397949689a411131d6e69caa817f1b6d5ad531d796ee0faa6e9cec63e",
-      "sha256": "41dcc01b9d99556664dc720c9fdf1d79ec3de7b50d8c605b9e151d1a242d6502"
+      "previous_sha256": "1ff023e014966dedeeb674533dfd61885ec1cef7253158dc23c0cee4cef4a307",
+      "sha256": "9c06ef7da3ea8d229e840b84b3c0bd4d6730836fb03b43953997ccf6e64316da"
     }
   ],
   "current": {

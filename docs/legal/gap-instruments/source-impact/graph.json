@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "baseline_revision": "d1c5945cac7064bb6b58b7c7801c2a4e8dd469ce",
+  "baseline_revision": "3004549cfe2018698b0a5085abd90d1d85ad2f68",
   "status": "BOUNDED_REVIEW_TOOL_NOT_CANON",
   "nodes": [
     {
@@ -116,6 +116,13 @@
       "sha256": "1b7828cb0a69551ef5ff14fad874bdc6222f697679e4163933d3a6f85f27f60c"
     },
     {
+      "id": "docs/finance/evidence/SH-FIN-HUMAN-001/README.md",
+      "path": "docs/finance/evidence/SH-FIN-HUMAN-001/README.md",
+      "kind": "file",
+      "role": "source",
+      "sha256": "e0578c47c1b66c405f9a98036dc7238892e1ac9c106a11e102cbdca8503735e2"
+    },
+    {
       "id": "docs/finance/evidence/SH-FIN-HUMAN-001/reconciliation.xlsx",
       "path": "docs/finance/evidence/SH-FIN-HUMAN-001/reconciliation.xlsx",
       "kind": "file",
@@ -219,6 +226,13 @@
       "kind": "file",
       "role": "source",
       "sha256": "12e2a7c840f5202a76e4317fd693f53a110202b64e8571831c3b0ded4a80dded"
+    },
+    {
+      "id": "docs/finance/evidence/treasury/source/industrial_bank_transactions.csv",
+      "path": "docs/finance/evidence/treasury/source/industrial_bank_transactions.csv",
+      "kind": "file",
+      "role": "source",
+      "sha256": "920b465e8ec8c247cc74475c94a512078355b0aa96c87f06d4823500b00547f3"
     },
     {
       "id": "docs/finance/evidence/treasury/source/subledger_rollforward.csv",
@@ -549,6 +563,139 @@
       "kind": "file",
       "role": "source",
       "sha256": "46144d3715ce03ba830d4fde76ed0aefebf2e3c0635d7bd6f813ea508ccf61f8"
+    },
+    {
+      "id": "docs/legal/gap-instruments/case-briefs/README.md",
+      "path": "docs/legal/gap-instruments/case-briefs/README.md",
+      "kind": "file",
+      "role": "artifact",
+      "sha256": "db0a4f1494e3588891aa2d8e69f9566a342434ccd62e58d9c14394a021d6d857"
+    },
+    {
+      "id": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.html",
+      "path": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.html",
+      "kind": "file",
+      "role": "artifact",
+      "sha256": "6aa25f472102574b434a9ba1b3fd851579a1cb8d8cdf70c39ad617d951e787bb"
+    },
+    {
+      "id": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.md",
+      "path": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.md",
+      "kind": "file",
+      "role": "artifact",
+      "sha256": "5d162fd228068410dd951eba4319e74bd65806244cc48db97d95cc8d88edb1b0"
+    },
+    {
+      "id": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.pdf",
+      "path": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.pdf",
+      "kind": "file",
+      "role": "artifact",
+      "sha256": "d7c1c01667ded0a5378f6617f855b7b1d43e44da84dee1cb762290a929852a23"
+    },
+    {
+      "id": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.html",
+      "path": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.html",
+      "kind": "file",
+      "role": "artifact",
+      "sha256": "00b14ba850132f48a309617c91b88f913a885a8d6cb9cb1defb6e73287f46f31"
+    },
+    {
+      "id": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.md",
+      "path": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.md",
+      "kind": "file",
+      "role": "artifact",
+      "sha256": "862dda0f232828e63c3f8ce34017336154140e709b7fcd95d09dce6247204c64"
+    },
+    {
+      "id": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.pdf",
+      "path": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.pdf",
+      "kind": "file",
+      "role": "artifact",
+      "sha256": "45f0d367af866ff2ce95c1ba42ed27e7e8e107e45c47a2ae46ae0790995a5f57"
+    },
+    {
+      "id": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.html",
+      "path": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.html",
+      "kind": "file",
+      "role": "artifact",
+      "sha256": "6b229c3c2289417df66b287f33d27ee07e7132753713bd52d6d29d585cfb9f6a"
+    },
+    {
+      "id": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.md",
+      "path": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.md",
+      "kind": "file",
+      "role": "artifact",
+      "sha256": "d1bd3b433775969c6871ec124ea784f3342d897c3877c4f722877e509c2dbc34"
+    },
+    {
+      "id": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.pdf",
+      "path": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.pdf",
+      "kind": "file",
+      "role": "artifact",
+      "sha256": "3b3ff7a81efd7eaa7086aff2a63083e89e4e49b38697a2185171d30c2e5f02f2"
+    },
+    {
+      "id": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.html",
+      "path": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.html",
+      "kind": "file",
+      "role": "artifact",
+      "sha256": "b9350f905ff441741a8126e9c07aeb4ad3b3012506ff114a4593009ab43a2868"
+    },
+    {
+      "id": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.md",
+      "path": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.md",
+      "kind": "file",
+      "role": "artifact",
+      "sha256": "6e773bb8a83a42f5f4f6cd4b61007cc285019c982de39148d9d8b59a726cf0e0"
+    },
+    {
+      "id": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.pdf",
+      "path": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.pdf",
+      "kind": "file",
+      "role": "artifact",
+      "sha256": "2ab4062e1bbd8de0d2efba0597341a38978eb614603bdf1d5ab4e6154b508c5c"
+    },
+    {
+      "id": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.html",
+      "path": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.html",
+      "kind": "file",
+      "role": "artifact",
+      "sha256": "bd932c44faa69112f8474adb6adbce9740b0dff7e5e7565626a240c0082f2f88"
+    },
+    {
+      "id": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.md",
+      "path": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.md",
+      "kind": "file",
+      "role": "artifact",
+      "sha256": "76f1070980e036fa9abbe0985b8ae9a5056ebbe06c25f765216f3e509329564a"
+    },
+    {
+      "id": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.pdf",
+      "path": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.pdf",
+      "kind": "file",
+      "role": "artifact",
+      "sha256": "ecc196f15258c308cbb935f894042398f54bc2ff42445d057310d3a599cac0b6"
+    },
+    {
+      "id": "docs/legal/gap-instruments/case-briefs/case-briefs.sqlite3",
+      "path": "docs/legal/gap-instruments/case-briefs/case-briefs.sqlite3",
+      "kind": "file",
+      "role": "artifact",
+      "sha256": "425e6a6c08f8a4c7967d4780ab07b52ffe08f9c83d69610ab217d4a415964301"
+    },
+    {
+      "id": "docs/legal/gap-instruments/case-briefs/manifest.json",
+      "path": "docs/legal/gap-instruments/case-briefs/manifest.json",
+      "kind": "file",
+      "role": "register",
+      "sha256": "977eb421f8231cec113729e9332de8a741c82a4918bba5221807b102de391ceb"
+    },
+    {
+      "id": "docs/legal/gap-instruments/case-briefs/source.json",
+      "path": "docs/legal/gap-instruments/case-briefs/source.json",
+      "kind": "file",
+      "role": "register",
+      "sha256": "35769fe20897e77d21cdb38743878f9d82e5c1bd3568f8c2a93c86ebdcdc7d1e"
     },
     {
       "id": "docs/legal/gap-instruments/dependencies/billing-proposal-PR138.json",
@@ -915,6 +1062,118 @@
       "sha256": "500db938b19706eed4558be4915598e979b79f55a3f68a2818f6aff1390fd8eb"
     },
     {
+      "id": "docs/legal/gap-instruments/evidence-tracking/README.md",
+      "path": "docs/legal/gap-instruments/evidence-tracking/README.md",
+      "kind": "file",
+      "role": "source",
+      "sha256": "8516b1d522029cd8bb60e6d70a03594b54d132b2403b8eeca7a61fc159a486bc"
+    },
+    {
+      "id": "docs/legal/gap-instruments/evidence-tracking/tracker.json",
+      "path": "docs/legal/gap-instruments/evidence-tracking/tracker.json",
+      "kind": "file",
+      "role": "register",
+      "sha256": "d01462edc7a1da6df23e69d9519eb4e779e623e4bc7bc97d07d40cae3ced8829"
+    },
+    {
+      "id": "docs/legal/gap-instruments/evidence-tracking/tracker.json#SH-CLOSE-ARU-2027-01-AP-REQ",
+      "kind": "evidence_request",
+      "request_id": "SH-CLOSE-ARU-2027-01-AP-REQ",
+      "source_locator": "/limitations/3"
+    },
+    {
+      "id": "docs/legal/gap-instruments/evidence-tracking/tracker.json#SH-CLOSE-ARU-2027-01-AR-REQ",
+      "kind": "evidence_request",
+      "request_id": "SH-CLOSE-ARU-2027-01-AR-REQ",
+      "source_locator": "/limitations/2"
+    },
+    {
+      "id": "docs/legal/gap-instruments/evidence-tracking/tracker.json#SH-CLOSE-ARU-2027-01-PPE-REQ",
+      "kind": "evidence_request",
+      "request_id": "SH-CLOSE-ARU-2027-01-PPE-REQ",
+      "source_locator": "/limitations/4"
+    },
+    {
+      "id": "docs/legal/gap-instruments/evidence-tracking/tracker.json#SH-RECON-AP-REQ",
+      "kind": "evidence_request",
+      "request_id": "SH-RECON-AP-REQ",
+      "source_locator": "/workpapers/2/evidence_request"
+    },
+    {
+      "id": "docs/legal/gap-instruments/evidence-tracking/tracker.json#SH-RECON-AR-REQ",
+      "kind": "evidence_request",
+      "request_id": "SH-RECON-AR-REQ",
+      "source_locator": "/workpapers/1/evidence_request"
+    },
+    {
+      "id": "docs/legal/gap-instruments/evidence-tracking/tracker.json#SH-RECON-BANK-REQ",
+      "kind": "evidence_request",
+      "request_id": "SH-RECON-BANK-REQ",
+      "source_locator": "/workpapers/0/evidence_request"
+    },
+    {
+      "id": "docs/legal/gap-instruments/evidence-tracking/tracker.json#SH-RECON-DEBT-REQ",
+      "kind": "evidence_request",
+      "request_id": "SH-RECON-DEBT-REQ",
+      "source_locator": "/workpapers/3/evidence_request"
+    },
+    {
+      "id": "docs/legal/gap-instruments/evidence-tracking/tracker.json#SH-RECON-FIXED-ASSETS-REQ",
+      "kind": "evidence_request",
+      "request_id": "SH-RECON-FIXED-ASSETS-REQ",
+      "source_locator": "/workpapers/4/evidence_request"
+    },
+    {
+      "id": "docs/legal/gap-instruments/evidence-tracking/tracker.json#WALK-REQ-ARU-01",
+      "kind": "evidence_request",
+      "request_id": "WALK-REQ-ARU-01",
+      "source_locator": "CSV id=WALK-REQ-ARU-01"
+    },
+    {
+      "id": "docs/legal/gap-instruments/evidence-tracking/tracker.json#WALK-REQ-ARU-02",
+      "kind": "evidence_request",
+      "request_id": "WALK-REQ-ARU-02",
+      "source_locator": "CSV id=WALK-REQ-ARU-02"
+    },
+    {
+      "id": "docs/legal/gap-instruments/evidence-tracking/tracker.json#WALK-REQ-ARU-03",
+      "kind": "evidence_request",
+      "request_id": "WALK-REQ-ARU-03",
+      "source_locator": "CSV id=WALK-REQ-ARU-03"
+    },
+    {
+      "id": "docs/legal/gap-instruments/evidence-tracking/tracker.json#WALK-REQ-FF-01",
+      "kind": "evidence_request",
+      "request_id": "WALK-REQ-FF-01",
+      "source_locator": "CSV id=WALK-REQ-FF-01"
+    },
+    {
+      "id": "docs/legal/gap-instruments/evidence-tracking/tracker.json#WALK-REQ-RW-01",
+      "kind": "evidence_request",
+      "request_id": "WALK-REQ-RW-01",
+      "source_locator": "CSV id=WALK-REQ-RW-01"
+    },
+    {
+      "id": "docs/legal/gap-instruments/evidence-tracking/tracker.json#WALK-REQ-RW-02",
+      "kind": "evidence_request",
+      "request_id": "WALK-REQ-RW-02",
+      "source_locator": "CSV id=WALK-REQ-RW-02"
+    },
+    {
+      "id": "docs/legal/gap-instruments/evidence-tracking/tracker.sqlite3",
+      "path": "docs/legal/gap-instruments/evidence-tracking/tracker.sqlite3",
+      "kind": "file",
+      "role": "artifact",
+      "sha256": "9ba37fa705b29d6beec8c852f5ff78ccdc98d36e18a2bf78a70708420d1e86d4"
+    },
+    {
+      "id": "docs/legal/gap-instruments/evidence-tracking/tracker.xlsx",
+      "path": "docs/legal/gap-instruments/evidence-tracking/tracker.xlsx",
+      "kind": "file",
+      "role": "artifact",
+      "sha256": "c1e859b5737019716d8de6ff4b3408d3e5881e9ec467207ee978cf87a23c168c"
+    },
+    {
       "id": "docs/legal/gap-instruments/index.json",
       "path": "docs/legal/gap-instruments/index.json",
       "kind": "file",
@@ -934,6 +1193,269 @@
       "kind": "file",
       "role": "register",
       "sha256": "662d1b204b40108929d6b944f33f1818968a0ffc550685d4a1720dbc2bd731cf"
+    },
+    {
+      "id": "docs/legal/gap-instruments/period-close/README.md",
+      "path": "docs/legal/gap-instruments/period-close/README.md",
+      "kind": "file",
+      "role": "artifact",
+      "sha256": "2cf05a38cb0a634ba8355e6f5e046977ada35dad0a83d210b7cd265491c59e20"
+    },
+    {
+      "id": "docs/legal/gap-instruments/period-close/WORKED.md",
+      "path": "docs/legal/gap-instruments/period-close/WORKED.md",
+      "kind": "file",
+      "role": "artifact",
+      "sha256": "dc9a19cee576addcac72d55aed7ea028fb7ae5edc871b124afb4650b5a21a86f"
+    },
+    {
+      "id": "docs/legal/gap-instruments/period-close/blank.xlsx",
+      "path": "docs/legal/gap-instruments/period-close/blank.xlsx",
+      "kind": "file",
+      "role": "artifact",
+      "sha256": "bcfa7b874e5d534edd5895408b34a3b75d01d1a5535bc177cd5628a516dd7dc4"
+    },
+    {
+      "id": "docs/legal/gap-instruments/period-close/case.json",
+      "path": "docs/legal/gap-instruments/period-close/case.json",
+      "kind": "file",
+      "role": "register",
+      "sha256": "9ad2fd1377291bcbe61484aac9bb6e61c969c594be21ed86669008046ac628c3"
+    },
+    {
+      "id": "docs/legal/gap-instruments/period-close/case.json#check/0",
+      "kind": "calculation",
+      "case_id": "SH-PERIOD-CLOSE-ARU-2027-01",
+      "name": "Bank adjusted cash to ledger",
+      "basis": "Modeled clearing schedule; not independent bank evidence",
+      "precision": "case-level dependency"
+    },
+    {
+      "id": "docs/legal/gap-instruments/period-close/case.json#check/1",
+      "kind": "calculation",
+      "case_id": "SH-PERIOD-CLOSE-ARU-2027-01",
+      "name": "Bank clearing timing",
+      "basis": "Opening bank cash + cleared receipts - cleared payments + deposits - outstanding payments",
+      "precision": "case-level dependency"
+    },
+    {
+      "id": "docs/legal/gap-instruments/period-close/case.json#check/10",
+      "kind": "calculation",
+      "case_id": "SH-PERIOD-CLOSE-ARU-2027-01",
+      "name": "PPE net rollforward",
+      "basis": "Opening NBV plus additions less depreciation",
+      "precision": "case-level dependency"
+    },
+    {
+      "id": "docs/legal/gap-instruments/period-close/case.json#check/11",
+      "kind": "calculation",
+      "case_id": "SH-PERIOD-CLOSE-ARU-2027-01",
+      "name": "assets_usd",
+      "basis": "Complete closing account classification",
+      "precision": "case-level dependency"
+    },
+    {
+      "id": "docs/legal/gap-instruments/period-close/case.json#check/12",
+      "kind": "calculation",
+      "case_id": "SH-PERIOD-CLOSE-ARU-2027-01",
+      "name": "liabilities_usd",
+      "basis": "Complete closing account classification",
+      "precision": "case-level dependency"
+    },
+    {
+      "id": "docs/legal/gap-instruments/period-close/case.json#check/13",
+      "kind": "calculation",
+      "case_id": "SH-PERIOD-CLOSE-ARU-2027-01",
+      "name": "Net income",
+      "basis": "January has no prior-year-to-date forecast income",
+      "precision": "case-level dependency"
+    },
+    {
+      "id": "docs/legal/gap-instruments/period-close/case.json#check/14",
+      "kind": "calculation",
+      "case_id": "SH-PERIOD-CLOSE-ARU-2027-01",
+      "name": "Equity including current income",
+      "basis": "Opening equity and January income",
+      "precision": "case-level dependency"
+    },
+    {
+      "id": "docs/legal/gap-instruments/period-close/case.json#check/15",
+      "kind": "calculation",
+      "case_id": "SH-PERIOD-CLOSE-ARU-2027-01",
+      "name": "operating_cash_flow_usd",
+      "basis": "Complete cash-account journal classification",
+      "precision": "case-level dependency"
+    },
+    {
+      "id": "docs/legal/gap-instruments/period-close/case.json#check/16",
+      "kind": "calculation",
+      "case_id": "SH-PERIOD-CLOSE-ARU-2027-01",
+      "name": "investing_cash_flow_usd",
+      "basis": "Complete cash-account journal classification",
+      "precision": "case-level dependency"
+    },
+    {
+      "id": "docs/legal/gap-instruments/period-close/case.json#check/17",
+      "kind": "calculation",
+      "case_id": "SH-PERIOD-CLOSE-ARU-2027-01",
+      "name": "financing_cash_flow_usd",
+      "basis": "Complete cash-account journal classification",
+      "precision": "case-level dependency"
+    },
+    {
+      "id": "docs/legal/gap-instruments/period-close/case.json#check/2",
+      "kind": "calculation",
+      "case_id": "SH-PERIOD-CLOSE-ARU-2027-01",
+      "name": "Complete bank transaction population",
+      "basis": "All 33 selected modeled cash events; journal_id joins activity",
+      "precision": "case-level dependency"
+    },
+    {
+      "id": "docs/legal/gap-instruments/period-close/case.json#check/3",
+      "kind": "calculation",
+      "case_id": "SH-PERIOD-CLOSE-ARU-2027-01",
+      "name": "Receivables opening plus activity",
+      "basis": "Complete account journal rollforward; independent January open-item schedule unavailable in this case",
+      "precision": "case-level dependency"
+    },
+    {
+      "id": "docs/legal/gap-instruments/period-close/case.json#check/4",
+      "kind": "calculation",
+      "case_id": "SH-PERIOD-CLOSE-ARU-2027-01",
+      "name": "Payables opening plus activity",
+      "basis": "Complete account journal rollforward; independent January open-item schedule unavailable in this case",
+      "precision": "case-level dependency"
+    },
+    {
+      "id": "docs/legal/gap-instruments/period-close/case.json#check/5",
+      "kind": "calculation",
+      "case_id": "SH-PERIOD-CLOSE-ARU-2027-01",
+      "name": "Debt legacy_term",
+      "basis": "Native debt row; no contractual compliance conclusion",
+      "precision": "case-level dependency"
+    },
+    {
+      "id": "docs/legal/gap-instruments/period-close/case.json#check/6",
+      "kind": "calculation",
+      "case_id": "SH-PERIOD-CLOSE-ARU-2027-01",
+      "name": "Debt replacement_term",
+      "basis": "Native debt row; no contractual compliance conclusion",
+      "precision": "case-level dependency"
+    },
+    {
+      "id": "docs/legal/gap-instruments/period-close/case.json#check/7",
+      "kind": "calculation",
+      "case_id": "SH-PERIOD-CLOSE-ARU-2027-01",
+      "name": "Debt lease",
+      "basis": "Native debt row; no contractual compliance conclusion",
+      "precision": "case-level dependency"
+    },
+    {
+      "id": "docs/legal/gap-instruments/period-close/case.json#check/8",
+      "kind": "calculation",
+      "case_id": "SH-PERIOD-CLOSE-ARU-2027-01",
+      "name": "PPE gross to ledger",
+      "basis": "All eight native PPE rows; finance-lease ROU is separate",
+      "precision": "case-level dependency"
+    },
+    {
+      "id": "docs/legal/gap-instruments/period-close/case.json#check/9",
+      "kind": "calculation",
+      "case_id": "SH-PERIOD-CLOSE-ARU-2027-01",
+      "name": "PPE accumulated depreciation",
+      "basis": "All eight native PPE rows",
+      "precision": "case-level dependency"
+    },
+    {
+      "id": "docs/legal/gap-instruments/period-close/close.sqlite3",
+      "path": "docs/legal/gap-instruments/period-close/close.sqlite3",
+      "kind": "file",
+      "role": "artifact",
+      "sha256": "dda2f106d2b4511e4cf5d00b3f35fa4164ee2615316328dd85ca1d3294c12fcb"
+    },
+    {
+      "id": "docs/legal/gap-instruments/period-close/closing_trial_balance.csv",
+      "path": "docs/legal/gap-instruments/period-close/closing_trial_balance.csv",
+      "kind": "file",
+      "role": "artifact",
+      "sha256": "dd6b43c5b668e65aa63709dafa891b588be74b36a23306ef3dbeaf64cb9f7045"
+    },
+    {
+      "id": "docs/legal/gap-instruments/period-close/inputs.json",
+      "path": "docs/legal/gap-instruments/period-close/inputs.json",
+      "kind": "file",
+      "role": "register",
+      "sha256": "86883929916b3203748aa4a27a2b9e7cea8a1d4b8194152d84af23c5355d4256"
+    },
+    {
+      "id": "docs/legal/gap-instruments/period-close/manifest.json",
+      "path": "docs/legal/gap-instruments/period-close/manifest.json",
+      "kind": "file",
+      "role": "register",
+      "sha256": "f0d7b4a6b6f9d93c76d149847401d4168cbc85f2cd790e131e3d824faba6a038"
+    },
+    {
+      "id": "docs/legal/gap-instruments/period-close/source/assets.csv",
+      "path": "docs/legal/gap-instruments/period-close/source/assets.csv",
+      "kind": "file",
+      "role": "source",
+      "sha256": "bfdd0be08eb22813bd94c0d36f790315b29dd7727bb854853145847c78a60d13"
+    },
+    {
+      "id": "docs/legal/gap-instruments/period-close/source/debt.csv",
+      "path": "docs/legal/gap-instruments/period-close/source/debt.csv",
+      "kind": "file",
+      "role": "source",
+      "sha256": "7ede82644162878ea8e4fb3a029e35162a2dc765360772639a72ea95c085c237"
+    },
+    {
+      "id": "docs/legal/gap-instruments/period-close/source/industrial_bank_reconciliations.csv",
+      "path": "docs/legal/gap-instruments/period-close/source/industrial_bank_reconciliations.csv",
+      "kind": "file",
+      "role": "source",
+      "sha256": "397114b6de513e8f259132f8d36f335712aebc042de515962505a6f848f91df5"
+    },
+    {
+      "id": "docs/legal/gap-instruments/period-close/source/industrial_bank_transactions.csv",
+      "path": "docs/legal/gap-instruments/period-close/source/industrial_bank_transactions.csv",
+      "kind": "file",
+      "role": "source",
+      "sha256": "6f79d78f9e5135b490b0c7fc0bfc4b3fac72bef076df280d7423c0345187dd96"
+    },
+    {
+      "id": "docs/legal/gap-instruments/period-close/source/journal.csv",
+      "path": "docs/legal/gap-instruments/period-close/source/journal.csv",
+      "kind": "file",
+      "role": "source",
+      "sha256": "0224ac15b5b4270d441de132519e559bd538e8f351bca8c04e654fa107f084e5"
+    },
+    {
+      "id": "docs/legal/gap-instruments/period-close/source/monthly_statements.csv",
+      "path": "docs/legal/gap-instruments/period-close/source/monthly_statements.csv",
+      "kind": "file",
+      "role": "source",
+      "sha256": "5e0749e5a79d8c0050734343eaa8a85ccf73afc12edd7982bfdcaee4b9aac928"
+    },
+    {
+      "id": "docs/legal/gap-instruments/period-close/source/opening_balances.csv",
+      "path": "docs/legal/gap-instruments/period-close/source/opening_balances.csv",
+      "kind": "file",
+      "role": "source",
+      "sha256": "66da92bcfb0791686e60ccd48b245840019b1d376f08680b4a245471258d67e2"
+    },
+    {
+      "id": "docs/legal/gap-instruments/period-close/source/trial_balances.csv",
+      "path": "docs/legal/gap-instruments/period-close/source/trial_balances.csv",
+      "kind": "file",
+      "role": "source",
+      "sha256": "effa9d74b7b69cb181a0ddb4a95d1c3fb3a7695958a7304921b1095096e43d9c"
+    },
+    {
+      "id": "docs/legal/gap-instruments/period-close/worked.xlsx",
+      "path": "docs/legal/gap-instruments/period-close/worked.xlsx",
+      "kind": "file",
+      "role": "artifact",
+      "sha256": "f56bbdb328c7ad27636371161b1c53f276413e91707ee4e202d50fa69db9f1f8"
     },
     {
       "id": "docs/legal/gap-instruments/practice/README.md",
@@ -3539,11 +4061,32 @@
       "sha256": "c97ed54d2616c6b461cf540394675c3c9de2f0a67cb3a8fcb704672bb250fa3b"
     },
     {
+      "id": "tools/legal_gaps/case_briefs.py",
+      "path": "tools/legal_gaps/case_briefs.py",
+      "kind": "file",
+      "role": "source",
+      "sha256": "ec61a98624476a89f18095bfa5aade6005e91ffa1611129e6b624bda49252bf0"
+    },
+    {
+      "id": "tools/legal_gaps/evidence_tracking.py",
+      "path": "tools/legal_gaps/evidence_tracking.py",
+      "kind": "file",
+      "role": "source",
+      "sha256": "561e33c39ca51eb51350e1dc04180ce4caa012643b7f583d4e2e9c1600ec231f"
+    },
+    {
       "id": "tools/legal_gaps/formatting.py",
       "path": "tools/legal_gaps/formatting.py",
       "kind": "file",
       "role": "source",
       "sha256": "986bcbf050ba9a29c6095da593084fd66ab1551fa73c90494268878c87082d01"
+    },
+    {
+      "id": "tools/legal_gaps/period_close.py",
+      "path": "tools/legal_gaps/period_close.py",
+      "kind": "file",
+      "role": "source",
+      "sha256": "172871aa131e8bd6db649e3d52ad9eaa32c9ed93fcfc9e7324e2a19db76b7588"
     },
     {
       "id": "tools/legal_gaps/practice.py",
@@ -4777,6 +5320,2168 @@
     },
     {
       "source": "assets/brand/logos/sable-harbor__primary-horizontal.svg",
+      "target": "docs/legal/gap-instruments/case-briefs/README.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "assets/brand/logos/sable-harbor__primary-horizontal.svg",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "assets/brand/logos/sable-harbor__primary-horizontal.svg",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "assets/brand/logos/sable-harbor__primary-horizontal.svg",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "assets/brand/logos/sable-harbor__primary-horizontal.svg",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "assets/brand/logos/sable-harbor__primary-horizontal.svg",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "assets/brand/logos/sable-harbor__primary-horizontal.svg",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "assets/brand/logos/sable-harbor__primary-horizontal.svg",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "assets/brand/logos/sable-harbor__primary-horizontal.svg",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "assets/brand/logos/sable-harbor__primary-horizontal.svg",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "assets/brand/logos/sable-harbor__primary-horizontal.svg",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "assets/brand/logos/sable-harbor__primary-horizontal.svg",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "assets/brand/logos/sable-harbor__primary-horizontal.svg",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "assets/brand/logos/sable-harbor__primary-horizontal.svg",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "assets/brand/logos/sable-harbor__primary-horizontal.svg",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "assets/brand/logos/sable-harbor__primary-horizontal.svg",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "assets/brand/logos/sable-harbor__primary-horizontal.svg",
+      "target": "docs/legal/gap-instruments/case-briefs/case-briefs.sqlite3",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/finance/evidence/SH-FIN-HUMAN-001/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/README.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/finance/evidence/SH-FIN-HUMAN-001/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/finance/evidence/SH-FIN-HUMAN-001/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/finance/evidence/SH-FIN-HUMAN-001/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/finance/evidence/SH-FIN-HUMAN-001/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/finance/evidence/SH-FIN-HUMAN-001/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/finance/evidence/SH-FIN-HUMAN-001/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/finance/evidence/SH-FIN-HUMAN-001/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/finance/evidence/SH-FIN-HUMAN-001/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/finance/evidence/SH-FIN-HUMAN-001/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/finance/evidence/SH-FIN-HUMAN-001/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/finance/evidence/SH-FIN-HUMAN-001/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/finance/evidence/SH-FIN-HUMAN-001/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/finance/evidence/SH-FIN-HUMAN-001/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/finance/evidence/SH-FIN-HUMAN-001/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/finance/evidence/SH-FIN-HUMAN-001/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/finance/evidence/SH-FIN-HUMAN-001/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/case-briefs.sqlite3",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/case-briefs/manifest.json",
+      "target": "docs/legal/gap-instruments/case-briefs/README.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/case-briefs/manifest.json",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/case-briefs/manifest.json",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/case-briefs/manifest.json",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/case-briefs/manifest.json",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/case-briefs/manifest.json",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/case-briefs/manifest.json",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/case-briefs/manifest.json",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/case-briefs/manifest.json",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/case-briefs/manifest.json",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/case-briefs/manifest.json",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/case-briefs/manifest.json",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/case-briefs/manifest.json",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/case-briefs/manifest.json",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/case-briefs/manifest.json",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/case-briefs/manifest.json",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/case-briefs/manifest.json",
+      "target": "docs/legal/gap-instruments/case-briefs/case-briefs.sqlite3",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/case-briefs/source.json",
+      "target": "docs/legal/gap-instruments/case-briefs/README.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/case-briefs/source.json",
+      "target": "docs/legal/gap-instruments/case-briefs/README.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/case-briefs/source.json",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/case-briefs/source.json",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/case-briefs/source.json",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/case-briefs/source.json",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/case-briefs/source.json",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/case-briefs/source.json",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/case-briefs/source.json",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/case-briefs/source.json",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/case-briefs/source.json",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/case-briefs/source.json",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/case-briefs/source.json",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/case-briefs/source.json",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/case-briefs/source.json",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/case-briefs/source.json",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/case-briefs/source.json",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/case-briefs/source.json",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/case-briefs/source.json",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/case-briefs/source.json",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/case-briefs/source.json",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/case-briefs/source.json",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/case-briefs/source.json",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/case-briefs/source.json",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/case-briefs/source.json",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/case-briefs/source.json",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/case-briefs/source.json",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/case-briefs/source.json",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/case-briefs/source.json",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/case-briefs/source.json",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/case-briefs/source.json",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/case-briefs/source.json",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/case-briefs/source.json",
+      "target": "docs/legal/gap-instruments/case-briefs/case-briefs.sqlite3",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/case-briefs/source.json",
+      "target": "docs/legal/gap-instruments/case-briefs/case-briefs.sqlite3",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/evidence-tracking/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/README.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/evidence-tracking/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/evidence-tracking/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/evidence-tracking/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/evidence-tracking/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/evidence-tracking/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/evidence-tracking/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/evidence-tracking/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/evidence-tracking/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/evidence-tracking/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/evidence-tracking/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/evidence-tracking/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/evidence-tracking/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/evidence-tracking/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/evidence-tracking/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/evidence-tracking/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/evidence-tracking/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/case-briefs.sqlite3",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/README.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/case-briefs.sqlite3",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/README.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/case-briefs.sqlite3",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/practice/acquisition/TASK.md",
+      "target": "docs/legal/gap-instruments/case-briefs/README.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/practice/acquisition/TASK.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/practice/acquisition/TASK.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/practice/acquisition/TASK.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/practice/acquisition/TASK.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/practice/acquisition/TASK.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/practice/acquisition/TASK.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/practice/acquisition/TASK.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/practice/acquisition/TASK.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/practice/acquisition/TASK.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/practice/acquisition/TASK.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/practice/acquisition/TASK.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/practice/acquisition/TASK.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/practice/acquisition/TASK.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/practice/acquisition/TASK.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/practice/acquisition/TASK.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/practice/acquisition/TASK.md",
+      "target": "docs/legal/gap-instruments/case-briefs/case-briefs.sqlite3",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/practice/acquisition/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/README.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/practice/acquisition/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/practice/acquisition/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/practice/acquisition/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/practice/acquisition/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/practice/acquisition/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/practice/acquisition/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/practice/acquisition/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/practice/acquisition/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/practice/acquisition/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/practice/acquisition/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/practice/acquisition/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/practice/acquisition/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/practice/acquisition/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/practice/acquisition/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/practice/acquisition/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/practice/acquisition/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/case-briefs.sqlite3",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/practice/revenue-dispute/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/README.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/practice/revenue-dispute/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/practice/revenue-dispute/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/practice/revenue-dispute/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/practice/revenue-dispute/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/practice/revenue-dispute/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/practice/revenue-dispute/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/practice/revenue-dispute/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/practice/revenue-dispute/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/practice/revenue-dispute/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/practice/revenue-dispute/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/practice/revenue-dispute/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/practice/revenue-dispute/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/practice/revenue-dispute/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/practice/revenue-dispute/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/practice/revenue-dispute/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/practice/revenue-dispute/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/case-briefs.sqlite3",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/reconciliations/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/README.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/reconciliations/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/reconciliations/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/reconciliations/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/reconciliations/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/reconciliations/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/reconciliations/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/reconciliations/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/reconciliations/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/reconciliations/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/reconciliations/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/reconciliations/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/reconciliations/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/reconciliations/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/reconciliations/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/reconciliations/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/reconciliations/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/case-briefs.sqlite3",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/reconciliations/WORKED.md",
+      "target": "docs/legal/gap-instruments/case-briefs/README.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/reconciliations/WORKED.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/reconciliations/WORKED.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/reconciliations/WORKED.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/reconciliations/WORKED.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/reconciliations/WORKED.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/reconciliations/WORKED.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/reconciliations/WORKED.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/reconciliations/WORKED.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/reconciliations/WORKED.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/reconciliations/WORKED.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/reconciliations/WORKED.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/reconciliations/WORKED.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/reconciliations/WORKED.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/reconciliations/WORKED.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/reconciliations/WORKED.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/reconciliations/WORKED.md",
+      "target": "docs/legal/gap-instruments/case-briefs/case-briefs.sqlite3",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/reconciliations/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/README.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/reconciliations/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/reconciliations/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/reconciliations/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/reconciliations/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/reconciliations/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/reconciliations/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/reconciliations/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/reconciliations/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/reconciliations/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/reconciliations/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/reconciliations/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/reconciliations/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/reconciliations/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/reconciliations/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/reconciliations/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/reconciliations/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/case-briefs.sqlite3",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/walkthroughs/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/README.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/walkthroughs/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/walkthroughs/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/walkthroughs/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/walkthroughs/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/walkthroughs/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/walkthroughs/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/walkthroughs/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/walkthroughs/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/walkthroughs/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/walkthroughs/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/walkthroughs/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/walkthroughs/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/walkthroughs/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/walkthroughs/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/walkthroughs/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/walkthroughs/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/case-briefs.sqlite3",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/walkthroughs/walkthroughs.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/README.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/walkthroughs/walkthroughs.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/walkthroughs/walkthroughs.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/walkthroughs/walkthroughs.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/walkthroughs/walkthroughs.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/walkthroughs/walkthroughs.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/walkthroughs/walkthroughs.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/walkthroughs/walkthroughs.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/walkthroughs/walkthroughs.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/walkthroughs/walkthroughs.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/walkthroughs/walkthroughs.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/walkthroughs/walkthroughs.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/walkthroughs/walkthroughs.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/walkthroughs/walkthroughs.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/walkthroughs/walkthroughs.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/walkthroughs/walkthroughs.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/walkthroughs/walkthroughs.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/case-briefs.sqlite3",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "red_wash/source/core_operating_data.json",
+      "target": "docs/legal/gap-instruments/case-briefs/README.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "red_wash/source/core_operating_data.json",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "red_wash/source/core_operating_data.json",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "red_wash/source/core_operating_data.json",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "red_wash/source/core_operating_data.json",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "red_wash/source/core_operating_data.json",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "red_wash/source/core_operating_data.json",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "red_wash/source/core_operating_data.json",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "red_wash/source/core_operating_data.json",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "red_wash/source/core_operating_data.json",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "red_wash/source/core_operating_data.json",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "red_wash/source/core_operating_data.json",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "red_wash/source/core_operating_data.json",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "red_wash/source/core_operating_data.json",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "red_wash/source/core_operating_data.json",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "red_wash/source/core_operating_data.json",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "red_wash/source/core_operating_data.json",
+      "target": "docs/legal/gap-instruments/case-briefs/case-briefs.sqlite3",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "tools/legal_gaps/case_briefs.py",
+      "target": "docs/legal/gap-instruments/case-briefs/README.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "tools/legal_gaps/case_briefs.py",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "tools/legal_gaps/case_briefs.py",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "tools/legal_gaps/case_briefs.py",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "tools/legal_gaps/case_briefs.py",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "tools/legal_gaps/case_briefs.py",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "tools/legal_gaps/case_briefs.py",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "tools/legal_gaps/case_briefs.py",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "tools/legal_gaps/case_briefs.py",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "tools/legal_gaps/case_briefs.py",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "tools/legal_gaps/case_briefs.py",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "tools/legal_gaps/case_briefs.py",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "tools/legal_gaps/case_briefs.py",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "tools/legal_gaps/case_briefs.py",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "tools/legal_gaps/case_briefs.py",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "tools/legal_gaps/case_briefs.py",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "tools/legal_gaps/case_briefs.py",
+      "target": "docs/legal/gap-instruments/case-briefs/case-briefs.sqlite3",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "tools/legal_gaps/style.css",
+      "target": "docs/legal/gap-instruments/case-briefs/README.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "tools/legal_gaps/style.css",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "tools/legal_gaps/style.css",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "tools/legal_gaps/style.css",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "tools/legal_gaps/style.css",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "tools/legal_gaps/style.css",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "tools/legal_gaps/style.css",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "tools/legal_gaps/style.css",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "tools/legal_gaps/style.css",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "tools/legal_gaps/style.css",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "tools/legal_gaps/style.css",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "tools/legal_gaps/style.css",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "tools/legal_gaps/style.css",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "tools/legal_gaps/style.css",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.html",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "tools/legal_gaps/style.css",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.md",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "tools/legal_gaps/style.css",
+      "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.pdf",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "tools/legal_gaps/style.css",
+      "target": "docs/legal/gap-instruments/case-briefs/case-briefs.sqlite3",
+      "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+    },
+    {
+      "source": "docs/legal/gap-instruments/practice/acquisition/TASK.md",
+      "target": "docs/legal/gap-instruments/case-briefs/source.json",
+      "basis": "docs/legal/gap-instruments/case-briefs/source.json/cases/files",
+      "case_id": "SH-CASE-ARU-01",
+      "precision": "Reference dependency; recheck brief after source changes"
+    },
+    {
+      "source": "docs/legal/gap-instruments/practice/acquisition/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/source.json",
+      "basis": "docs/legal/gap-instruments/case-briefs/source.json/cases/files",
+      "case_id": "SH-CASE-ARU-01",
+      "precision": "Reference dependency; recheck brief after source changes"
+    },
+    {
+      "source": "docs/legal/gap-instruments/walkthroughs/walkthroughs.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/source.json",
+      "basis": "docs/legal/gap-instruments/case-briefs/source.json/cases/files",
+      "case_id": "SH-CASE-ARU-01",
+      "precision": "Reference dependency; recheck brief after source changes"
+    },
+    {
+      "source": "docs/legal/gap-instruments/evidence-tracking/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/source.json",
+      "basis": "docs/legal/gap-instruments/case-briefs/source.json/cases/files",
+      "case_id": "SH-CASE-CLOSE-01",
+      "precision": "Reference dependency; recheck brief after source changes"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/source.json",
+      "basis": "docs/legal/gap-instruments/case-briefs/source.json/cases/files",
+      "case_id": "SH-CASE-CLOSE-01",
+      "precision": "Reference dependency; recheck brief after source changes"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/source.json",
+      "basis": "docs/legal/gap-instruments/case-briefs/source.json/cases/files",
+      "case_id": "SH-CASE-CLOSE-01",
+      "precision": "Reference dependency; recheck brief after source changes"
+    },
+    {
+      "source": "docs/finance/evidence/SH-FIN-HUMAN-001/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/source.json",
+      "basis": "docs/legal/gap-instruments/case-briefs/source.json/cases/files",
+      "case_id": "SH-CASE-FF-01",
+      "precision": "Reference dependency; recheck brief after source changes"
+    },
+    {
+      "source": "docs/legal/gap-instruments/practice/revenue-dispute/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/source.json",
+      "basis": "docs/legal/gap-instruments/case-briefs/source.json/cases/files",
+      "case_id": "SH-CASE-FF-01",
+      "precision": "Reference dependency; recheck brief after source changes"
+    },
+    {
+      "source": "docs/legal/gap-instruments/walkthroughs/walkthroughs.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/source.json",
+      "basis": "docs/legal/gap-instruments/case-briefs/source.json/cases/files",
+      "case_id": "SH-CASE-FF-01",
+      "precision": "Reference dependency; recheck brief after source changes"
+    },
+    {
+      "source": "docs/legal/gap-instruments/reconciliations/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/source.json",
+      "basis": "docs/legal/gap-instruments/case-briefs/source.json/cases/files",
+      "case_id": "SH-CASE-RECON-01",
+      "precision": "Reference dependency; recheck brief after source changes"
+    },
+    {
+      "source": "docs/legal/gap-instruments/reconciliations/WORKED.md",
+      "target": "docs/legal/gap-instruments/case-briefs/source.json",
+      "basis": "docs/legal/gap-instruments/case-briefs/source.json/cases/files",
+      "case_id": "SH-CASE-RECON-01",
+      "precision": "Reference dependency; recheck brief after source changes"
+    },
+    {
+      "source": "docs/legal/gap-instruments/reconciliations/blank.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/source.json",
+      "basis": "docs/legal/gap-instruments/case-briefs/source.json/cases/files",
+      "case_id": "SH-CASE-RECON-01",
+      "precision": "Reference dependency; recheck brief after source changes"
+    },
+    {
+      "source": "docs/legal/gap-instruments/walkthroughs/README.md",
+      "target": "docs/legal/gap-instruments/case-briefs/source.json",
+      "basis": "docs/legal/gap-instruments/case-briefs/source.json/cases/files",
+      "case_id": "SH-CASE-RW-01",
+      "precision": "Reference dependency; recheck brief after source changes"
+    },
+    {
+      "source": "docs/legal/gap-instruments/walkthroughs/walkthroughs.xlsx",
+      "target": "docs/legal/gap-instruments/case-briefs/source.json",
+      "basis": "docs/legal/gap-instruments/case-briefs/source.json/cases/files",
+      "case_id": "SH-CASE-RW-01",
+      "precision": "Reference dependency; recheck brief after source changes"
+    },
+    {
+      "source": "red_wash/source/core_operating_data.json",
+      "target": "docs/legal/gap-instruments/case-briefs/source.json",
+      "basis": "docs/legal/gap-instruments/case-briefs/source.json/cases/files",
+      "case_id": "SH-CASE-RW-01",
+      "precision": "Reference dependency; recheck brief after source changes"
+    },
+    {
+      "source": "docs/legal/gap-instruments/evidence-tracking/tracker.json",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.json#SH-CLOSE-ARU-2027-01-AR-REQ",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/requests",
+      "locator": "/limitations/2"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/README.md",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.json#SH-CLOSE-ARU-2027-01-AR-REQ",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/requests",
+      "locator": "/limitations/2"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.json#SH-CLOSE-ARU-2027-01-AR-REQ",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/requests",
+      "locator": "/limitations/2"
+    },
+    {
+      "source": "docs/legal/gap-instruments/evidence-tracking/tracker.json",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.json#SH-CLOSE-ARU-2027-01-AP-REQ",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/requests",
+      "locator": "/limitations/3"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/README.md",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.json#SH-CLOSE-ARU-2027-01-AP-REQ",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/requests",
+      "locator": "/limitations/3"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.json#SH-CLOSE-ARU-2027-01-AP-REQ",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/requests",
+      "locator": "/limitations/3"
+    },
+    {
+      "source": "docs/legal/gap-instruments/evidence-tracking/tracker.json",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.json#SH-CLOSE-ARU-2027-01-PPE-REQ",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/requests",
+      "locator": "/limitations/4"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/README.md",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.json#SH-CLOSE-ARU-2027-01-PPE-REQ",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/requests",
+      "locator": "/limitations/4"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.json#SH-CLOSE-ARU-2027-01-PPE-REQ",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/requests",
+      "locator": "/limitations/4"
+    },
+    {
+      "source": "docs/legal/gap-instruments/evidence-tracking/tracker.json",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.json#SH-RECON-BANK-REQ",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/requests",
+      "locator": "/workpapers/0/evidence_request"
+    },
+    {
+      "source": "docs/legal/gap-instruments/reconciliations/source.json",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.json#SH-RECON-BANK-REQ",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/requests",
+      "locator": "/workpapers/0/evidence_request"
+    },
+    {
+      "source": "docs/legal/gap-instruments/reconciliations/source.json",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.json#SH-RECON-BANK-REQ",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/requests",
+      "locator": "/workpapers/0/evidence_request"
+    },
+    {
+      "source": "docs/legal/gap-instruments/evidence-tracking/tracker.json",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.json#SH-RECON-AR-REQ",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/requests",
+      "locator": "/workpapers/1/evidence_request"
+    },
+    {
+      "source": "docs/legal/gap-instruments/reconciliations/source.json",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.json#SH-RECON-AR-REQ",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/requests",
+      "locator": "/workpapers/1/evidence_request"
+    },
+    {
+      "source": "docs/legal/gap-instruments/reconciliations/source.json",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.json#SH-RECON-AR-REQ",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/requests",
+      "locator": "/workpapers/1/evidence_request"
+    },
+    {
+      "source": "docs/legal/gap-instruments/evidence-tracking/tracker.json",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.json#SH-RECON-AP-REQ",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/requests",
+      "locator": "/workpapers/2/evidence_request"
+    },
+    {
+      "source": "docs/legal/gap-instruments/reconciliations/source.json",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.json#SH-RECON-AP-REQ",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/requests",
+      "locator": "/workpapers/2/evidence_request"
+    },
+    {
+      "source": "docs/legal/gap-instruments/reconciliations/source.json",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.json#SH-RECON-AP-REQ",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/requests",
+      "locator": "/workpapers/2/evidence_request"
+    },
+    {
+      "source": "docs/legal/gap-instruments/evidence-tracking/tracker.json",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.json#SH-RECON-DEBT-REQ",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/requests",
+      "locator": "/workpapers/3/evidence_request"
+    },
+    {
+      "source": "docs/legal/gap-instruments/reconciliations/source.json",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.json#SH-RECON-DEBT-REQ",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/requests",
+      "locator": "/workpapers/3/evidence_request"
+    },
+    {
+      "source": "docs/legal/gap-instruments/reconciliations/source.json",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.json#SH-RECON-DEBT-REQ",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/requests",
+      "locator": "/workpapers/3/evidence_request"
+    },
+    {
+      "source": "docs/legal/gap-instruments/evidence-tracking/tracker.json",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.json#SH-RECON-FIXED-ASSETS-REQ",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/requests",
+      "locator": "/workpapers/4/evidence_request"
+    },
+    {
+      "source": "docs/legal/gap-instruments/reconciliations/source.json",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.json#SH-RECON-FIXED-ASSETS-REQ",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/requests",
+      "locator": "/workpapers/4/evidence_request"
+    },
+    {
+      "source": "docs/legal/gap-instruments/reconciliations/source.json",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.json#SH-RECON-FIXED-ASSETS-REQ",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/requests",
+      "locator": "/workpapers/4/evidence_request"
+    },
+    {
+      "source": "docs/legal/gap-instruments/evidence-tracking/tracker.json",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.json#WALK-REQ-ARU-01",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/requests",
+      "locator": "CSV id=WALK-REQ-ARU-01"
+    },
+    {
+      "source": "docs/legal/gap-instruments/walkthroughs/source/evidence_requests.csv",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.json#WALK-REQ-ARU-01",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/requests",
+      "locator": "CSV id=WALK-REQ-ARU-01"
+    },
+    {
+      "source": "industrial/transaction/05_ARU_CLOSING_AND_TAX_DELIVERY.md",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.json#WALK-REQ-ARU-01",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/requests",
+      "locator": "CSV id=WALK-REQ-ARU-01"
+    },
+    {
+      "source": "docs/legal/gap-instruments/evidence-tracking/tracker.json",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.json#WALK-REQ-ARU-02",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/requests",
+      "locator": "CSV id=WALK-REQ-ARU-02"
+    },
+    {
+      "source": "docs/legal/gap-instruments/walkthroughs/source/evidence_requests.csv",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.json#WALK-REQ-ARU-02",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/requests",
+      "locator": "CSV id=WALK-REQ-ARU-02"
+    },
+    {
+      "source": "industrial/transaction/07_ARU_TAX_STRUCTURE_MEMORANDUM.md",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.json#WALK-REQ-ARU-02",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/requests",
+      "locator": "CSV id=WALK-REQ-ARU-02"
+    },
+    {
+      "source": "docs/legal/gap-instruments/evidence-tracking/tracker.json",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.json#WALK-REQ-ARU-03",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/requests",
+      "locator": "CSV id=WALK-REQ-ARU-03"
+    },
+    {
+      "source": "docs/legal/gap-instruments/walkthroughs/source/evidence_requests.csv",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.json#WALK-REQ-ARU-03",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/requests",
+      "locator": "CSV id=WALK-REQ-ARU-03"
+    },
+    {
+      "source": "industrial/finance/ASSUMPTIONS_AND_TEMPORAL_CONTROLS.md",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.json#WALK-REQ-ARU-03",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/requests",
+      "locator": "CSV id=WALK-REQ-ARU-03"
+    },
+    {
+      "source": "docs/finance/evidence/SH-FIN-HUMAN-001/source.json",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.json#WALK-REQ-FF-01",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/requests",
+      "locator": "CSV id=WALK-REQ-FF-01"
+    },
+    {
+      "source": "docs/legal/gap-instruments/evidence-tracking/tracker.json",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.json#WALK-REQ-FF-01",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/requests",
+      "locator": "CSV id=WALK-REQ-FF-01"
+    },
+    {
+      "source": "docs/legal/gap-instruments/walkthroughs/source/evidence_requests.csv",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.json#WALK-REQ-FF-01",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/requests",
+      "locator": "CSV id=WALK-REQ-FF-01"
+    },
+    {
+      "source": "docs/legal/gap-instruments/evidence-tracking/tracker.json",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.json#WALK-REQ-RW-01",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/requests",
+      "locator": "CSV id=WALK-REQ-RW-01"
+    },
+    {
+      "source": "docs/legal/gap-instruments/walkthroughs/source/evidence_requests.csv",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.json#WALK-REQ-RW-01",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/requests",
+      "locator": "CSV id=WALK-REQ-RW-01"
+    },
+    {
+      "source": "industrial/finance/RED_WASH_AND_FUNDING.md",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.json#WALK-REQ-RW-01",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/requests",
+      "locator": "CSV id=WALK-REQ-RW-01"
+    },
+    {
+      "source": "docs/legal/gap-instruments/evidence-tracking/tracker.json",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.json#WALK-REQ-RW-02",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/requests",
+      "locator": "CSV id=WALK-REQ-RW-02"
+    },
+    {
+      "source": "docs/legal/gap-instruments/walkthroughs/source/evidence_requests.csv",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.json#WALK-REQ-RW-02",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/requests",
+      "locator": "CSV id=WALK-REQ-RW-02"
+    },
+    {
+      "source": "red_wash/source/core_operating_data.json",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.json#WALK-REQ-RW-02",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/requests",
+      "locator": "CSV id=WALK-REQ-RW-02"
+    },
+    {
+      "source": "docs/legal/gap-instruments/evidence-tracking/tracker.json#SH-CLOSE-ARU-2027-01-AP-REQ",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.sqlite3",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/requests"
+    },
+    {
+      "source": "docs/legal/gap-instruments/evidence-tracking/tracker.json#SH-CLOSE-ARU-2027-01-AP-REQ",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.xlsx",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/requests"
+    },
+    {
+      "source": "docs/legal/gap-instruments/evidence-tracking/tracker.json#SH-CLOSE-ARU-2027-01-AR-REQ",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.sqlite3",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/requests"
+    },
+    {
+      "source": "docs/legal/gap-instruments/evidence-tracking/tracker.json#SH-CLOSE-ARU-2027-01-AR-REQ",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.xlsx",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/requests"
+    },
+    {
+      "source": "docs/legal/gap-instruments/evidence-tracking/tracker.json#SH-CLOSE-ARU-2027-01-PPE-REQ",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.sqlite3",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/requests"
+    },
+    {
+      "source": "docs/legal/gap-instruments/evidence-tracking/tracker.json#SH-CLOSE-ARU-2027-01-PPE-REQ",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.xlsx",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/requests"
+    },
+    {
+      "source": "docs/legal/gap-instruments/evidence-tracking/tracker.json#SH-RECON-AP-REQ",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.sqlite3",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/requests"
+    },
+    {
+      "source": "docs/legal/gap-instruments/evidence-tracking/tracker.json#SH-RECON-AP-REQ",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.xlsx",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/requests"
+    },
+    {
+      "source": "docs/legal/gap-instruments/evidence-tracking/tracker.json#SH-RECON-AR-REQ",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.sqlite3",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/requests"
+    },
+    {
+      "source": "docs/legal/gap-instruments/evidence-tracking/tracker.json#SH-RECON-AR-REQ",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.xlsx",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/requests"
+    },
+    {
+      "source": "docs/legal/gap-instruments/evidence-tracking/tracker.json#SH-RECON-BANK-REQ",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.sqlite3",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/requests"
+    },
+    {
+      "source": "docs/legal/gap-instruments/evidence-tracking/tracker.json#SH-RECON-BANK-REQ",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.xlsx",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/requests"
+    },
+    {
+      "source": "docs/legal/gap-instruments/evidence-tracking/tracker.json#SH-RECON-DEBT-REQ",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.sqlite3",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/requests"
+    },
+    {
+      "source": "docs/legal/gap-instruments/evidence-tracking/tracker.json#SH-RECON-DEBT-REQ",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.xlsx",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/requests"
+    },
+    {
+      "source": "docs/legal/gap-instruments/evidence-tracking/tracker.json#SH-RECON-FIXED-ASSETS-REQ",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.sqlite3",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/requests"
+    },
+    {
+      "source": "docs/legal/gap-instruments/evidence-tracking/tracker.json#SH-RECON-FIXED-ASSETS-REQ",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.xlsx",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/requests"
+    },
+    {
+      "source": "docs/legal/gap-instruments/evidence-tracking/tracker.json#WALK-REQ-ARU-01",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.sqlite3",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/requests"
+    },
+    {
+      "source": "docs/legal/gap-instruments/evidence-tracking/tracker.json#WALK-REQ-ARU-01",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.xlsx",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/requests"
+    },
+    {
+      "source": "docs/legal/gap-instruments/evidence-tracking/tracker.json#WALK-REQ-ARU-02",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.sqlite3",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/requests"
+    },
+    {
+      "source": "docs/legal/gap-instruments/evidence-tracking/tracker.json#WALK-REQ-ARU-02",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.xlsx",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/requests"
+    },
+    {
+      "source": "docs/legal/gap-instruments/evidence-tracking/tracker.json#WALK-REQ-ARU-03",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.sqlite3",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/requests"
+    },
+    {
+      "source": "docs/legal/gap-instruments/evidence-tracking/tracker.json#WALK-REQ-ARU-03",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.xlsx",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/requests"
+    },
+    {
+      "source": "docs/legal/gap-instruments/evidence-tracking/tracker.json#WALK-REQ-FF-01",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.sqlite3",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/requests"
+    },
+    {
+      "source": "docs/legal/gap-instruments/evidence-tracking/tracker.json#WALK-REQ-FF-01",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.xlsx",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/requests"
+    },
+    {
+      "source": "docs/legal/gap-instruments/evidence-tracking/tracker.json#WALK-REQ-RW-01",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.sqlite3",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/requests"
+    },
+    {
+      "source": "docs/legal/gap-instruments/evidence-tracking/tracker.json#WALK-REQ-RW-01",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.xlsx",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/requests"
+    },
+    {
+      "source": "docs/legal/gap-instruments/evidence-tracking/tracker.json#WALK-REQ-RW-02",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.sqlite3",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/requests"
+    },
+    {
+      "source": "docs/legal/gap-instruments/evidence-tracking/tracker.json#WALK-REQ-RW-02",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.xlsx",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/requests"
+    },
+    {
+      "source": "docs/finance/evidence/SH-FIN-HUMAN-001/source.json",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.json",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/source_pins"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/README.md",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.json",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/source_pins"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.json",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/source_pins"
+    },
+    {
+      "source": "docs/legal/gap-instruments/reconciliations/source.json",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.json",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/source_pins"
+    },
+    {
+      "source": "docs/legal/gap-instruments/walkthroughs/source/evidence_requests.csv",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.json",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/source_pins"
+    },
+    {
+      "source": "industrial/finance/ASSUMPTIONS_AND_TEMPORAL_CONTROLS.md",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.json",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/source_pins"
+    },
+    {
+      "source": "industrial/finance/RED_WASH_AND_FUNDING.md",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.json",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/source_pins"
+    },
+    {
+      "source": "industrial/transaction/05_ARU_CLOSING_AND_TAX_DELIVERY.md",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.json",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/source_pins"
+    },
+    {
+      "source": "industrial/transaction/07_ARU_TAX_STRUCTURE_MEMORANDUM.md",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.json",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/source_pins"
+    },
+    {
+      "source": "red_wash/source/core_operating_data.json",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.json",
+      "basis": "docs/legal/gap-instruments/evidence-tracking/tracker.json/source_pins"
+    },
+    {
+      "source": "assets/brand/logos/sable-harbor__primary-horizontal.svg",
       "target": "docs/legal/gap-instruments/PACKAGE_INDEX.md",
       "basis": "docs/legal/gap-instruments/manifest.json/other_artifacts"
     },
@@ -8474,6 +11179,840 @@
       "target": "docs/legal/gap-instruments/source/workforce.md",
       "basis": "docs/legal/gap-instruments/manifest.json/packages/dependencies",
       "case_id": "LEGAL-GAP-WORKFORCE"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json",
+      "target": "docs/legal/gap-instruments/period-close/case.json#check/0",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json",
+      "target": "docs/legal/gap-instruments/period-close/case.json#check/1",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json",
+      "target": "docs/legal/gap-instruments/period-close/case.json#check/10",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json",
+      "target": "docs/legal/gap-instruments/period-close/case.json#check/11",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json",
+      "target": "docs/legal/gap-instruments/period-close/case.json#check/12",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json",
+      "target": "docs/legal/gap-instruments/period-close/case.json#check/13",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json",
+      "target": "docs/legal/gap-instruments/period-close/case.json#check/14",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json",
+      "target": "docs/legal/gap-instruments/period-close/case.json#check/15",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json",
+      "target": "docs/legal/gap-instruments/period-close/case.json#check/16",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json",
+      "target": "docs/legal/gap-instruments/period-close/case.json#check/17",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json",
+      "target": "docs/legal/gap-instruments/period-close/case.json#check/2",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json",
+      "target": "docs/legal/gap-instruments/period-close/case.json#check/3",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json",
+      "target": "docs/legal/gap-instruments/period-close/case.json#check/4",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json",
+      "target": "docs/legal/gap-instruments/period-close/case.json#check/5",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json",
+      "target": "docs/legal/gap-instruments/period-close/case.json#check/6",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json",
+      "target": "docs/legal/gap-instruments/period-close/case.json#check/7",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json",
+      "target": "docs/legal/gap-instruments/period-close/case.json#check/8",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json",
+      "target": "docs/legal/gap-instruments/period-close/case.json#check/9",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/0",
+      "target": "docs/legal/gap-instruments/period-close/README.md",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/0",
+      "target": "docs/legal/gap-instruments/period-close/WORKED.md",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/0",
+      "target": "docs/legal/gap-instruments/period-close/blank.xlsx",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/0",
+      "target": "docs/legal/gap-instruments/period-close/close.sqlite3",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/0",
+      "target": "docs/legal/gap-instruments/period-close/closing_trial_balance.csv",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/0",
+      "target": "docs/legal/gap-instruments/period-close/worked.xlsx",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/1",
+      "target": "docs/legal/gap-instruments/period-close/README.md",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/1",
+      "target": "docs/legal/gap-instruments/period-close/WORKED.md",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/1",
+      "target": "docs/legal/gap-instruments/period-close/blank.xlsx",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/1",
+      "target": "docs/legal/gap-instruments/period-close/close.sqlite3",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/1",
+      "target": "docs/legal/gap-instruments/period-close/closing_trial_balance.csv",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/1",
+      "target": "docs/legal/gap-instruments/period-close/worked.xlsx",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/10",
+      "target": "docs/legal/gap-instruments/period-close/README.md",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/10",
+      "target": "docs/legal/gap-instruments/period-close/WORKED.md",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/10",
+      "target": "docs/legal/gap-instruments/period-close/blank.xlsx",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/10",
+      "target": "docs/legal/gap-instruments/period-close/close.sqlite3",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/10",
+      "target": "docs/legal/gap-instruments/period-close/closing_trial_balance.csv",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/10",
+      "target": "docs/legal/gap-instruments/period-close/worked.xlsx",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/11",
+      "target": "docs/legal/gap-instruments/period-close/README.md",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/11",
+      "target": "docs/legal/gap-instruments/period-close/WORKED.md",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/11",
+      "target": "docs/legal/gap-instruments/period-close/blank.xlsx",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/11",
+      "target": "docs/legal/gap-instruments/period-close/close.sqlite3",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/11",
+      "target": "docs/legal/gap-instruments/period-close/closing_trial_balance.csv",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/11",
+      "target": "docs/legal/gap-instruments/period-close/worked.xlsx",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/12",
+      "target": "docs/legal/gap-instruments/period-close/README.md",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/12",
+      "target": "docs/legal/gap-instruments/period-close/WORKED.md",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/12",
+      "target": "docs/legal/gap-instruments/period-close/blank.xlsx",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/12",
+      "target": "docs/legal/gap-instruments/period-close/close.sqlite3",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/12",
+      "target": "docs/legal/gap-instruments/period-close/closing_trial_balance.csv",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/12",
+      "target": "docs/legal/gap-instruments/period-close/worked.xlsx",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/13",
+      "target": "docs/legal/gap-instruments/period-close/README.md",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/13",
+      "target": "docs/legal/gap-instruments/period-close/WORKED.md",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/13",
+      "target": "docs/legal/gap-instruments/period-close/blank.xlsx",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/13",
+      "target": "docs/legal/gap-instruments/period-close/close.sqlite3",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/13",
+      "target": "docs/legal/gap-instruments/period-close/closing_trial_balance.csv",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/13",
+      "target": "docs/legal/gap-instruments/period-close/worked.xlsx",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/14",
+      "target": "docs/legal/gap-instruments/period-close/README.md",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/14",
+      "target": "docs/legal/gap-instruments/period-close/WORKED.md",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/14",
+      "target": "docs/legal/gap-instruments/period-close/blank.xlsx",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/14",
+      "target": "docs/legal/gap-instruments/period-close/close.sqlite3",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/14",
+      "target": "docs/legal/gap-instruments/period-close/closing_trial_balance.csv",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/14",
+      "target": "docs/legal/gap-instruments/period-close/worked.xlsx",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/15",
+      "target": "docs/legal/gap-instruments/period-close/README.md",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/15",
+      "target": "docs/legal/gap-instruments/period-close/WORKED.md",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/15",
+      "target": "docs/legal/gap-instruments/period-close/blank.xlsx",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/15",
+      "target": "docs/legal/gap-instruments/period-close/close.sqlite3",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/15",
+      "target": "docs/legal/gap-instruments/period-close/closing_trial_balance.csv",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/15",
+      "target": "docs/legal/gap-instruments/period-close/worked.xlsx",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/16",
+      "target": "docs/legal/gap-instruments/period-close/README.md",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/16",
+      "target": "docs/legal/gap-instruments/period-close/WORKED.md",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/16",
+      "target": "docs/legal/gap-instruments/period-close/blank.xlsx",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/16",
+      "target": "docs/legal/gap-instruments/period-close/close.sqlite3",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/16",
+      "target": "docs/legal/gap-instruments/period-close/closing_trial_balance.csv",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/16",
+      "target": "docs/legal/gap-instruments/period-close/worked.xlsx",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/17",
+      "target": "docs/legal/gap-instruments/period-close/README.md",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/17",
+      "target": "docs/legal/gap-instruments/period-close/WORKED.md",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/17",
+      "target": "docs/legal/gap-instruments/period-close/blank.xlsx",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/17",
+      "target": "docs/legal/gap-instruments/period-close/close.sqlite3",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/17",
+      "target": "docs/legal/gap-instruments/period-close/closing_trial_balance.csv",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/17",
+      "target": "docs/legal/gap-instruments/period-close/worked.xlsx",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/2",
+      "target": "docs/legal/gap-instruments/period-close/README.md",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/2",
+      "target": "docs/legal/gap-instruments/period-close/WORKED.md",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/2",
+      "target": "docs/legal/gap-instruments/period-close/blank.xlsx",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/2",
+      "target": "docs/legal/gap-instruments/period-close/close.sqlite3",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/2",
+      "target": "docs/legal/gap-instruments/period-close/closing_trial_balance.csv",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/2",
+      "target": "docs/legal/gap-instruments/period-close/worked.xlsx",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/3",
+      "target": "docs/legal/gap-instruments/period-close/README.md",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/3",
+      "target": "docs/legal/gap-instruments/period-close/WORKED.md",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/3",
+      "target": "docs/legal/gap-instruments/period-close/blank.xlsx",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/3",
+      "target": "docs/legal/gap-instruments/period-close/close.sqlite3",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/3",
+      "target": "docs/legal/gap-instruments/period-close/closing_trial_balance.csv",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/3",
+      "target": "docs/legal/gap-instruments/period-close/worked.xlsx",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/4",
+      "target": "docs/legal/gap-instruments/period-close/README.md",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/4",
+      "target": "docs/legal/gap-instruments/period-close/WORKED.md",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/4",
+      "target": "docs/legal/gap-instruments/period-close/blank.xlsx",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/4",
+      "target": "docs/legal/gap-instruments/period-close/close.sqlite3",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/4",
+      "target": "docs/legal/gap-instruments/period-close/closing_trial_balance.csv",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/4",
+      "target": "docs/legal/gap-instruments/period-close/worked.xlsx",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/5",
+      "target": "docs/legal/gap-instruments/period-close/README.md",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/5",
+      "target": "docs/legal/gap-instruments/period-close/WORKED.md",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/5",
+      "target": "docs/legal/gap-instruments/period-close/blank.xlsx",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/5",
+      "target": "docs/legal/gap-instruments/period-close/close.sqlite3",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/5",
+      "target": "docs/legal/gap-instruments/period-close/closing_trial_balance.csv",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/5",
+      "target": "docs/legal/gap-instruments/period-close/worked.xlsx",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/6",
+      "target": "docs/legal/gap-instruments/period-close/README.md",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/6",
+      "target": "docs/legal/gap-instruments/period-close/WORKED.md",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/6",
+      "target": "docs/legal/gap-instruments/period-close/blank.xlsx",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/6",
+      "target": "docs/legal/gap-instruments/period-close/close.sqlite3",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/6",
+      "target": "docs/legal/gap-instruments/period-close/closing_trial_balance.csv",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/6",
+      "target": "docs/legal/gap-instruments/period-close/worked.xlsx",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/7",
+      "target": "docs/legal/gap-instruments/period-close/README.md",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/7",
+      "target": "docs/legal/gap-instruments/period-close/WORKED.md",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/7",
+      "target": "docs/legal/gap-instruments/period-close/blank.xlsx",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/7",
+      "target": "docs/legal/gap-instruments/period-close/close.sqlite3",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/7",
+      "target": "docs/legal/gap-instruments/period-close/closing_trial_balance.csv",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/7",
+      "target": "docs/legal/gap-instruments/period-close/worked.xlsx",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/8",
+      "target": "docs/legal/gap-instruments/period-close/README.md",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/8",
+      "target": "docs/legal/gap-instruments/period-close/WORKED.md",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/8",
+      "target": "docs/legal/gap-instruments/period-close/blank.xlsx",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/8",
+      "target": "docs/legal/gap-instruments/period-close/close.sqlite3",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/8",
+      "target": "docs/legal/gap-instruments/period-close/closing_trial_balance.csv",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/8",
+      "target": "docs/legal/gap-instruments/period-close/worked.xlsx",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/9",
+      "target": "docs/legal/gap-instruments/period-close/README.md",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/9",
+      "target": "docs/legal/gap-instruments/period-close/WORKED.md",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/9",
+      "target": "docs/legal/gap-instruments/period-close/blank.xlsx",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/9",
+      "target": "docs/legal/gap-instruments/period-close/close.sqlite3",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/9",
+      "target": "docs/legal/gap-instruments/period-close/closing_trial_balance.csv",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json#check/9",
+      "target": "docs/legal/gap-instruments/period-close/worked.xlsx",
+      "basis": "docs/legal/gap-instruments/period-close/case.json/checks"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/source/assets.csv",
+      "target": "docs/legal/gap-instruments/period-close/case.json",
+      "basis": "docs/legal/gap-instruments/period-close/inputs.json/sources",
+      "selector": {
+        "entity": "ARU_GROUP",
+        "scenario": "base",
+        "year": "2027",
+        "month": "1"
+      },
+      "source_id": "assets",
+      "release_member": "industrial/forecast/assets.csv",
+      "precision": "case-level selection"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/source/debt.csv",
+      "target": "docs/legal/gap-instruments/period-close/case.json",
+      "basis": "docs/legal/gap-instruments/period-close/inputs.json/sources",
+      "selector": {
+        "entity": "ARU_GROUP",
+        "scenario": "base",
+        "year": "2027",
+        "month": "1"
+      },
+      "source_id": "debt",
+      "release_member": "industrial/forecast/debt.csv",
+      "precision": "case-level selection"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/source/journal.csv",
+      "target": "docs/legal/gap-instruments/period-close/case.json",
+      "basis": "docs/legal/gap-instruments/period-close/inputs.json/sources",
+      "selector": {
+        "entity": "ARU_GROUP",
+        "scenario": "base",
+        "year": "2027",
+        "month": "1"
+      },
+      "source_id": "journal",
+      "release_member": "industrial/forecast/journal.csv",
+      "precision": "case-level selection"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/source/monthly_statements.csv",
+      "target": "docs/legal/gap-instruments/period-close/case.json",
+      "basis": "docs/legal/gap-instruments/period-close/inputs.json/sources",
+      "selector": {
+        "entity": "ARU_GROUP",
+        "scenario": "base",
+        "year": "2027",
+        "month": "1"
+      },
+      "source_id": "monthly_statements",
+      "release_member": "industrial/forecast/monthly_statements.csv",
+      "precision": "case-level selection"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/source/opening_balances.csv",
+      "target": "docs/legal/gap-instruments/period-close/case.json",
+      "basis": "docs/legal/gap-instruments/period-close/inputs.json/sources",
+      "selector": {
+        "entity": "ARU_GROUP",
+        "scenario": "base",
+        "year": "2027",
+        "month": "0"
+      },
+      "source_id": "opening_balances",
+      "release_member": "industrial/forecast/opening_balances.csv",
+      "precision": "case-level selection"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/source/trial_balances.csv",
+      "target": "docs/legal/gap-instruments/period-close/case.json",
+      "basis": "docs/legal/gap-instruments/period-close/inputs.json/sources",
+      "selector": {
+        "entity": "ARU_GROUP",
+        "scenario": "base",
+        "year": "2027",
+        "month": "1"
+      },
+      "source_id": "trial_balances",
+      "release_member": "industrial/forecast/trial_balances.csv",
+      "precision": "case-level selection"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/source/industrial_bank_reconciliations.csv",
+      "target": "docs/legal/gap-instruments/period-close/case.json",
+      "basis": "docs/legal/gap-instruments/period-close/inputs.json/sources",
+      "selector": {
+        "entity": "ARU_GROUP",
+        "scenario": "base",
+        "year": "2027",
+        "month": "1"
+      },
+      "source_id": "industrial_bank_reconciliations",
+      "release_member": null,
+      "precision": "case-level selection"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/source/industrial_bank_transactions.csv",
+      "target": "docs/legal/gap-instruments/period-close/case.json",
+      "basis": "docs/legal/gap-instruments/period-close/inputs.json/sources",
+      "selector": {
+        "entity": "ARU_GROUP",
+        "scenario": "base",
+        "year": "2027",
+        "month": "1"
+      },
+      "source_id": "industrial_bank_transactions",
+      "release_member": null,
+      "precision": "case-level selection"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/inputs.json",
+      "target": "docs/legal/gap-instruments/period-close/case.json",
+      "basis": "docs/legal/gap-instruments/period-close/inputs.json/sources"
+    },
+    {
+      "source": "tools/legal_gaps/period_close.py",
+      "target": "docs/legal/gap-instruments/period-close/case.json",
+      "basis": "docs/legal/gap-instruments/period-close/inputs.json/sources"
+    },
+    {
+      "source": "docs/finance/evidence/treasury/source/industrial_bank_reconciliations.csv",
+      "target": "docs/legal/gap-instruments/period-close/source/industrial_bank_reconciliations.csv",
+      "basis": "docs/legal/gap-instruments/period-close/inputs.json/sources/upstream_path"
+    },
+    {
+      "source": "docs/finance/evidence/treasury/source/industrial_bank_transactions.csv",
+      "target": "docs/legal/gap-instruments/period-close/source/industrial_bank_transactions.csv",
+      "basis": "docs/legal/gap-instruments/period-close/inputs.json/sources/upstream_path"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json",
+      "target": "docs/legal/gap-instruments/period-close/README.md",
+      "basis": "docs/legal/gap-instruments/period-close/manifest.json/files",
+      "case_id": "SH-PERIOD-CLOSE-ARU-2027-01"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json",
+      "target": "docs/legal/gap-instruments/period-close/WORKED.md",
+      "basis": "docs/legal/gap-instruments/period-close/manifest.json/files",
+      "case_id": "SH-PERIOD-CLOSE-ARU-2027-01"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json",
+      "target": "docs/legal/gap-instruments/period-close/blank.xlsx",
+      "basis": "docs/legal/gap-instruments/period-close/manifest.json/files",
+      "case_id": "SH-PERIOD-CLOSE-ARU-2027-01"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json",
+      "target": "docs/legal/gap-instruments/period-close/close.sqlite3",
+      "basis": "docs/legal/gap-instruments/period-close/manifest.json/files",
+      "case_id": "SH-PERIOD-CLOSE-ARU-2027-01"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json",
+      "target": "docs/legal/gap-instruments/period-close/closing_trial_balance.csv",
+      "basis": "docs/legal/gap-instruments/period-close/manifest.json/files",
+      "case_id": "SH-PERIOD-CLOSE-ARU-2027-01"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/case.json",
+      "target": "docs/legal/gap-instruments/period-close/worked.xlsx",
+      "basis": "docs/legal/gap-instruments/period-close/manifest.json/files",
+      "case_id": "SH-PERIOD-CLOSE-ARU-2027-01"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/manifest.json",
+      "target": "docs/legal/gap-instruments/period-close/README.md",
+      "basis": "docs/legal/gap-instruments/period-close/manifest.json/files",
+      "case_id": "SH-PERIOD-CLOSE-ARU-2027-01"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/manifest.json",
+      "target": "docs/legal/gap-instruments/period-close/WORKED.md",
+      "basis": "docs/legal/gap-instruments/period-close/manifest.json/files",
+      "case_id": "SH-PERIOD-CLOSE-ARU-2027-01"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/manifest.json",
+      "target": "docs/legal/gap-instruments/period-close/blank.xlsx",
+      "basis": "docs/legal/gap-instruments/period-close/manifest.json/files",
+      "case_id": "SH-PERIOD-CLOSE-ARU-2027-01"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/manifest.json",
+      "target": "docs/legal/gap-instruments/period-close/close.sqlite3",
+      "basis": "docs/legal/gap-instruments/period-close/manifest.json/files",
+      "case_id": "SH-PERIOD-CLOSE-ARU-2027-01"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/manifest.json",
+      "target": "docs/legal/gap-instruments/period-close/closing_trial_balance.csv",
+      "basis": "docs/legal/gap-instruments/period-close/manifest.json/files",
+      "case_id": "SH-PERIOD-CLOSE-ARU-2027-01"
+    },
+    {
+      "source": "docs/legal/gap-instruments/period-close/manifest.json",
+      "target": "docs/legal/gap-instruments/period-close/worked.xlsx",
+      "basis": "docs/legal/gap-instruments/period-close/manifest.json/files",
+      "case_id": "SH-PERIOD-CLOSE-ARU-2027-01"
     },
     {
       "source": "docs/legal/gap-instruments/practice/acquisition/packet.json#calculation/book_goodwill",
@@ -14679,6 +18218,11 @@
         "Foundry Field",
         "Red Wash"
       ]
+    },
+    {
+      "source": "tools/legal_gaps/evidence_tracking.py",
+      "target": "docs/legal/gap-instruments/evidence-tracking/tracker.json",
+      "basis": "evidence_tracking.py build"
     }
   ],
   "baseline_problems": [],

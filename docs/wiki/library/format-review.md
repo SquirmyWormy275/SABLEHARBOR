@@ -6,11 +6,11 @@ Generated reconciliation queue, not an assertion that every unpaired record lack
 
 | State | Records |
 |---|---:|
-| COUNTERPART_REVIEW_REQUIRED | 66 |
+| COUNTERPART_REVIEW_REQUIRED | 78 |
 | HISTORICAL_COUNTERPART_UNRESOLVED | 57 |
 | NAVIGATION_ALIAS_NO_PUBLICATION | 3 |
 | READER_MAINTENANCE_NO_LETTERHEAD | 111 |
-| READER_OR_MAINTENANCE_PAGE | 165 |
+| READER_OR_MAINTENANCE_PAGE | 169 |
 | UNRESOLVED_DOCUMENT_COUNTERPART | 227 |
 | VERIFIED_ACCEPTED_EVIDENCE_PACKET | 1 |
 | VERIFIED_CHART_PUBLICATION | 40 |
@@ -50,6 +50,16 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Legal review bundle releases](../../legal/gap-instruments/REVIEW_RELEASES.md) — SH-FIN-HUMAN-001
 - [Review, trace and use the legal documents](../../legal/gap-instruments/REVIEW_WORKFLOW.md) — SH-FIN-HUMAN-001
 - [Contract clauses and accounting evidence](../../legal/gap-instruments/accounting/LINKS.md) — SH-FIN-HUMAN-001
+- [Owner approval — close and evidence-review tranche](../../legal/gap-instruments/case-briefs/ACCEPTANCE.md) — SH-FIN-HUMAN-001
+- [Account for the ARU acquisition](../../legal/gap-instruments/case-briefs/SH-CASE-ARU-01.md) — SH-FIN-HUMAN-001
+- [Close one ARU reporting period](../../legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.md) — SH-FIN-HUMAN-001
+- [Resolve a disputed Foundry Field invoice](../../legal/gap-instruments/case-briefs/SH-CASE-FF-01.md) — SH-FIN-HUMAN-001
+- [Practice five separate reconciliations](../../legal/gap-instruments/case-briefs/SH-CASE-RECON-01.md) — SH-FIN-HUMAN-001
+- [Trace the Red Wash closure obligation](../../legal/gap-instruments/case-briefs/SH-CASE-RW-01.md) — SH-FIN-HUMAN-001
+- [Independent agent cold-start review — ARU January 2027](../../legal/gap-instruments/case-briefs/qa/COLD_START.md) — SH-FIN-HUMAN-001
+- [Proposed evidence events](../../legal/gap-instruments/case-briefs/qa/cold-start/evidence-proposal/PROPOSAL.md) — SH-FIN-HUMAN-001
+- [Proposed evidence events](../../legal/gap-instruments/case-briefs/qa/cold-start/history-before-context-refresh/evidence-proposal/PROPOSAL.md) — SH-FIN-HUMAN-001
+- [Public worked close — ARU Group, January 2027](../../legal/gap-instruments/period-close/WORKED.md) — SH-FIN-HUMAN-001
 - [ARU acquisition accounting](../../legal/gap-instruments/practice/acquisition/TASK.md) — SH-FIN-HUMAN-001
 - [ARU acquisition accounting](../../legal/gap-instruments/practice/acquisition/WORKED.md) — SH-FIN-HUMAN-001
 - [ARU debt reconciliation](../../legal/gap-instruments/practice/debt/TASK.md) — SH-FIN-HUMAN-001
@@ -60,7 +70,9 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Foundry Field revenue and credit dispute](../../legal/gap-instruments/practice/revenue-dispute/WORKED.md) — SH-FIN-HUMAN-001
 - [Public worked reconciliations](../../legal/gap-instruments/reconciliations/WORKED.md) — SH-FIN-HUMAN-001
 - [Consolidated review decisions](../../legal/gap-instruments/review-support/DECISIONS.md) — SH-FIN-HUMAN-001
+- [Legal instrument revision comparison](../../legal/gap-instruments/review-support/qa/v4/PRESERVATION.md) — SH-FIN-HUMAN-001
 - [Comparing legal draft revisions](../../legal/gap-instruments/revision-policy.md) — SH-FIN-HUMAN-001
+- [Source-change impact report](../../legal/gap-instruments/source-impact/sample-audit/REPORT.md) — SH-FIN-HUMAN-001
 - [Advisory master services agreement and matter schedules](../../legal/gap-instruments/source/advisory-contracts.md) — SH-FIN-HUMAN-001
 - [Foundry Field proposed billing instrument and reconciliation attachment](../../legal/gap-instruments/source/billing.md) — SH-FIN-HUMAN-001
 - [Advisory contractual phantom carry plan — proposed instrument](../../legal/gap-instruments/source/carry.md) — SH-FIN-HUMAN-001

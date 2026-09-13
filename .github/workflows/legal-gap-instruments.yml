@@ -33,7 +33,12 @@ jobs:
       - run: python -m pytest -q tests/publications/test_legal_decision_import.py tests/publications/test_legal_walkthroughs.py tests/publications/test_legal_reconciliations.py tests/publications/test_legal_package_v3.py tests/publications/test_reader_usability.py --confcutdir=tests/publications
       - run: python tools/legal_gaps/revisions.py --output "$RUNNER_TEMP/legal-revision-check" --fail-on-change
       - run: python -m pytest -q tests/publications/test_legal_decisions.py tests/publications/test_legal_accounting.py tests/publications/test_legal_practice.py tests/publications/test_legal_revisions.py tests/publications/test_legal_package.py --confcutdir=tests/publications
-      - run: python tools/legal_gaps/package_v3.py --output "$RUNNER_TEMP/legal-review-bundle"
+      - run: python tools/legal_gaps/period_close.py validate
+      - run: python tools/legal_gaps/evidence_tracking.py validate
+      - run: python tools/legal_gaps/case_briefs.py validate
+      - run: python tools/legal_gaps/validate_close_review.py
+      - run: python -m pytest -q tests/publications/test_legal_period_close.py tests/publications/test_legal_evidence_tracking.py tests/publications/test_legal_source_impact.py tests/publications/test_legal_case_briefs.py tests/publications/test_legal_package_v4.py --confcutdir=tests/publications
+      - run: python tools/legal_gaps/package_v4.py --output "$RUNNER_TEMP/legal-review-bundle"
       - uses: actions/upload-artifact@v4
         with:
           name: legal-review-bundle

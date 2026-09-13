@@ -90,8 +90,14 @@ At the coordinating maintainer’s request, the completed source-derived workboo
 - [Worked comparison](cold-start/worked-comparison.json): 270 formula-response values compared, zero mismatches.
 - [Corrected five-area update input](cold-start/evidence-update-corrected.xlsx) and [generated proposal](cold-start/evidence-proposal/PROPOSAL.md).
 - [Import receipt](cold-start/evidence-proposal/import-receipt.json), [actual captured stdout](cold-start/import.stdout.txt) and [stderr](cold-start/import.stderr.txt). A fresh rerun of the same published command returned exit code 0 and five retained events before these outputs were copied into the repository.
-- [SHA-256 manifest](cold-start/manifest.json) pins all eleven retained output files and records the actual command/exit code.
+- [SHA-256 manifest](cold-start/manifest.json) pins the retained output files and records the actual command/exit code.
 
 The retained proposal’s source links are generated absolute paths from this shared workspace; its textual repository-relative evidence paths, hashes and line ranges remain the portable references. The supplied bytes and results are preserved; the proposal was not rewritten for publication.
+
+## Final navigation-context refresh — 2026-09-13
+
+The period-close README gained eight direct CSV links after the independent numerical exercise. The tracker Context was consequently regenerated. A fresh copy of the final tracker (`c1e859b5737019716d8de6ff4b3408d3e5881e9ec467207ee978cf87a23c168c`) received the same five scoped review events and was actually imported again. The command returned exit 0 and **PASS: 5 retained events**. The inspected receipt records five added events, parent state `a31397f46b49101ba75d632de23edbfc8eef3205c77571e41fe653be2fa8def5`, and proposal-not-applied status. Event dates retain the original September 12 observation date; September 13 is the context-only rerun date.
+
+The final input workbook, proposal outputs, captured stdout/stderr and manifest at the links above now reflect that current context. [Earlier artifacts](cold-start/history-before-context-refresh/) preserve the previous input, proposal, receipt, output and manifest chronology. The final manifest also pins the delivered tracker XLSX/JSON, period-close README and blank/worked workbooks. The independent completed workbook, numerical results and worked comparison remain byte-identical; no arithmetic was redone or changed.
 
 FINAL RESULT: PASS
