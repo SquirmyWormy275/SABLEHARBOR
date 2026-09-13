@@ -1,0 +1,76 @@
+{
+  "status": "MANUAL_REVIEW_PASS_DRAFT_DESIGN",
+  "workbook_sha256": "e043658893a739abf2c1bfb6ee600072862bcfaae9201d43df63590586589782",
+  "sheets": [
+    "Read first",
+    "Requests",
+    "Updates",
+    "History",
+    "Context"
+  ],
+  "pages": [
+    {
+      "page": 1,
+      "path": "page-01.png",
+      "sha256": "2d35f87e002d5284ca173ead749f683906eb26f2bde18392c6811b313aba27f0"
+    },
+    {
+      "page": 2,
+      "path": "page-02.png",
+      "sha256": "48cf27da9d2b4919843a6463c2af0e1743ccc07b7d5fc70aff77ed572d272cae"
+    },
+    {
+      "page": 3,
+      "path": "page-03.png",
+      "sha256": "d4a80c572ef6bfe1ac34c0d47c6ec0d4953f33b06ed14eea84e203e619c97b6a"
+    },
+    {
+      "page": 4,
+      "path": "page-04.png",
+      "sha256": "af37cfc38f45bab259285bccac5238b43e68e2b44420169d1c375e6a608afcbd"
+    },
+    {
+      "page": 5,
+      "path": "page-05.png",
+      "sha256": "c7314b696604f417aa07c4fdae2f43fdaabdceb86b8ed41014b1704cf5e943dd"
+    },
+    {
+      "page": 6,
+      "path": "page-06.png",
+      "sha256": "374ce4c4ca51d05dfb9db9453b69ffe51fc586ed90851c50a316b0624c288c6f"
+    },
+    {
+      "page": 7,
+      "path": "page-07.png",
+      "sha256": "f838ca36c068945014d6a03a062e36792143b9dc997bbea8f0057be3dccbe613"
+    },
+    {
+      "page": 8,
+      "path": "page-08.png",
+      "sha256": "c302f1574fb88cbb043c5d1c06dcfca9a4dc6500e4e79c8843eb0df185ee64e1"
+    },
+    {
+      "page": 9,
+      "path": "page-09.png",
+      "sha256": "9781fe9c84f331712019788886329b7c807fa4ed0212c6f51c7c2641e3f2726d"
+    },
+    {
+      "page": 10,
+      "path": "page-10.png",
+      "sha256": "ff06c06dfe09abc8605da006ac1d13ecb0a164aefcfac7c0951ca7ec166f179a"
+    },
+    {
+      "page": 11,
+      "path": "page-11.png",
+      "sha256": "4c70717eec4c8752ac0fdaaf060fc9aca8e85785bd00cbe26edfd10ee564b40a"
+    }
+  ],
+  "populated_cells": 143,
+  "all_cell_text_present": true,
+  "renderer": "LibreOffice native PDF; PyMuPDF 1.5x PNG",
+  "corrections": [
+    "Preserved original 11 requests and added three distinct ARU January 2027 base-scenario AR/AP/PPE request IDs; verified full labels and limitations render without clipping.",
+    "Retained readable Requests widths, header height and repeated IDs across entry print panels."
+  ],
+  "manual_review": "All 11 native pages inspected at 1.5x after adding the three ARU January close requests; all five sheets and every populated cell covered. Draft only; not owner acceptance."
+}

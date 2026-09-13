@@ -1,0 +1,543 @@
+{
+  "status": "MANUAL_REVIEW_PASS_DRAFT_DESIGN",
+  "records": [
+    {
+      "mode": "blank",
+      "workbook_sha256": "bcfa7b874e5d534edd5895408b34a3b75d01d1a5535bc177cd5628a516dd7dc4",
+      "pages": [
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/blank-01.png",
+          "sha256": "80760956df15f7e032b3b2292641f5d1a4ec05a300bec508a5e799fef289d7f5",
+          "text_characters": 1978
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/blank-02.png",
+          "sha256": "ab7c95bf3634e2e31f850560fb58b2b4232ab60bb5fe2442faca820a77721bf2",
+          "text_characters": 687
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/blank-03.png",
+          "sha256": "e118ba68aef531672331e68dd40e24771acc6a5c9ffb8008c9f04f4abe6ce475",
+          "text_characters": 500
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/blank-04.png",
+          "sha256": "506ea8798d822646984e0ba288eaa4dd8ee6c0f8b5b8c351ebaef59d797bfa4e",
+          "text_characters": 2253
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/blank-05.png",
+          "sha256": "c69af0085f278b7d3599dae048ae9afb84710da5c7a79920411fe8cc509e80ce",
+          "text_characters": 2261
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/blank-06.png",
+          "sha256": "e5da820c52886310ea039dab05683eb567a0f38d6a10bf530787587ed2b50d72",
+          "text_characters": 2253
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/blank-07.png",
+          "sha256": "8d838678d97f9e2aebd535f4e4054d380debb266b897bdd75428714d608878dd",
+          "text_characters": 2241
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/blank-08.png",
+          "sha256": "4d7c13b13e06bdb5af687080f285a8c9cd0662423d36c8016ba34350a75aebd3",
+          "text_characters": 2257
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/blank-09.png",
+          "sha256": "2a4692661e14fdd2dd10896ecc9894eaec69621828035c2be9115acd77357d7e",
+          "text_characters": 2165
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/blank-10.png",
+          "sha256": "866b930fe97294b61c2aafcf7a8ca3ada045fd3c06678bc9745f58d6b11348a1",
+          "text_characters": 2180
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/blank-11.png",
+          "sha256": "d1ca423c602f35220e8e4d50d21ca33b23d1f559b90d7c14e5e05098c6769445",
+          "text_characters": 2178
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/blank-12.png",
+          "sha256": "b995b1fdeedce31cc57ebd4157562ec047f8ded8a74a9a0c6becc4e4365e15c8",
+          "text_characters": 2150
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/blank-13.png",
+          "sha256": "2e5df4fbed32d647a23b3277af8b2a76ae0891cf455d0399a6d1fa4887e5f1e2",
+          "text_characters": 2026
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/blank-14.png",
+          "sha256": "12f77ff97307e431a13a70a5a58fa55c5785685c26e862f24dc3f78f694fcf25",
+          "text_characters": 1972
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/blank-15.png",
+          "sha256": "e8acf2b0441718cfc2404bfdfed89fe6699ebf0f95050676d31d8b7b178c735d",
+          "text_characters": 1984
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/blank-16.png",
+          "sha256": "a7067f14a845f9f1596e8e0cd8439f0e75cba8747dc34564d9b985730c568165",
+          "text_characters": 2016
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/blank-17.png",
+          "sha256": "c12177fd27f04b50bdaf90c31512f9545eb4d09745182455b099cbcb4d0b150e",
+          "text_characters": 1466
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/blank-18.png",
+          "sha256": "8c0258e19f2d720bdd83f6569bc367c399d8499bb145fe6e565faa3463586519",
+          "text_characters": 1479
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/blank-19.png",
+          "sha256": "5e19379e843e2660fb6101ece70c5331f05a5d69d098975b946f5672a3b0bf73",
+          "text_characters": 1448
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/blank-20.png",
+          "sha256": "890cb99c2b56b7aeebfcbbe5fc7b1d8cc6db064fa75501886edcd0dafa9d81cb",
+          "text_characters": 426
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/blank-21.png",
+          "sha256": "3c239fca9e57e3de2e423301b576c0d4420cb2bc0e1e9b3799a331203844fc79",
+          "text_characters": 370
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/blank-22.png",
+          "sha256": "a55ee2fe278ecf0ccac57df7504410a7c3b7203084830c7cd9cbe3be33e0e4d3",
+          "text_characters": 1743
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/blank-23.png",
+          "sha256": "6609f7d73ab5ed70d83d4b1c6b1e5e0ad519e336ed69487b2462cd5d468a89a1",
+          "text_characters": 948
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/blank-24.png",
+          "sha256": "35a2d62d5cffdd9db9d6faa151dd7d4b2a34d56e1efe46e690c8d23ce6b04d15",
+          "text_characters": 1765
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/blank-25.png",
+          "sha256": "a78f58728c01822894ef4e3839aa480738159152842377b85f409513d99243f1",
+          "text_characters": 1724
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/blank-26.png",
+          "sha256": "b02abd11b29558d52c44ff59570ed3a21744425c3e2557ad26b935eca5480242",
+          "text_characters": 1717
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/blank-27.png",
+          "sha256": "796e4080bcd70e4948f9804ad64f3342768477558d1c437e4b386ccd58a99a86",
+          "text_characters": 1115
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/blank-28.png",
+          "sha256": "fca14d95e8c2cd18184522c4d5f05b80d988e461c094f5a81c6dc570bffa2d29",
+          "text_characters": 1815
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/blank-29.png",
+          "sha256": "e612dc5fcc43a7ce38923b55ca2fd2d04dc7651ef4fdbf1a83aa4f859db1190d",
+          "text_characters": 298
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/blank-30.png",
+          "sha256": "a517e58f6632591b3555a1e05ff3b46b60776cd0bddd3096205bbc686a4404fa",
+          "text_characters": 703
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/blank-31.png",
+          "sha256": "986837a9ec5695f7808dd99a88c3e0c4d6e465c83efde8f03f4e53fa08e24975",
+          "text_characters": 613
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/blank-32.png",
+          "sha256": "754a71e7173f6477a609d20141a92d1b83641bc8d0b056ae874b4a65dac71aea",
+          "text_characters": 304
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/blank-33.png",
+          "sha256": "694d7487c4820904cbfd56b89486545b3141b231220694649e6f66e109cc0005",
+          "text_characters": 1058
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/blank-34.png",
+          "sha256": "f1e2c9b791a09ec9a5bc3fa95e57d69da8b5c1456572dfde8f64d10c64f37596",
+          "text_characters": 824
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/blank-35.png",
+          "sha256": "c5eef3c3dbe2f30731a81dfffc3caa30e05ecf64588082af7a4a03ecb59da14a",
+          "text_characters": 517
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/blank-36.png",
+          "sha256": "12fa41ffddded98036a2c8cc4a8428adb689b30443abc5d6f3c7fce0b8e2baa7",
+          "text_characters": 621
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/blank-37.png",
+          "sha256": "9632b72f12e8d5ebfb35d199d770148906eb7687f78d018165890d673153b6ee",
+          "text_characters": 621
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/blank-38.png",
+          "sha256": "2e15a0ac6db349575fde3eb6bd7ed685eacedb632bde37895a0f41c71cd4f51e",
+          "text_characters": 396
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/blank-39.png",
+          "sha256": "a881f42463e7517e4733541ae242fd564517a19a5c11eac1ae2c3ad7003d47c6",
+          "text_characters": 664
+        }
+      ],
+      "worksheets": [
+        "Read first",
+        "Opening",
+        "Activity",
+        "Bank events",
+        "Bank inputs",
+        "Receivables",
+        "Payables",
+        "Five reconciliations",
+        "Debt",
+        "PPE detail",
+        "PPE",
+        "Adjustments",
+        "Closing TB",
+        "Income statement",
+        "Balance sheet",
+        "Statements",
+        "Source index"
+      ]
+    },
+    {
+      "mode": "worked",
+      "workbook_sha256": "f56bbdb328c7ad27636371161b1c53f276413e91707ee4e202d50fa69db9f1f8",
+      "pages": [
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/worked-01.png",
+          "sha256": "55a562c694c2e53cbaa0e4c68037f756b5cb14ad68ab433cec2eaf08d9246d48",
+          "text_characters": 1979
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/worked-02.png",
+          "sha256": "d322d4bef3216eeb75fbf0f479c968f21ccee2d3d8b81b4ee41eccd72210b005",
+          "text_characters": 688
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/worked-03.png",
+          "sha256": "1c51e34cbdb6b9c5dd1728b1504400265baea4d296559a8ffd701bf0d88a49b9",
+          "text_characters": 501
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/worked-04.png",
+          "sha256": "77b38a559a44a3622fe911d316aab610beb352ae8244bd056f35da5c1085c5dc",
+          "text_characters": 2254
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/worked-05.png",
+          "sha256": "fc8054298120a85d4b63ddacc7b4940fdb575b7c084cdc403584b49d4e7d6f23",
+          "text_characters": 2262
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/worked-06.png",
+          "sha256": "452864cc4f3ef0c4543dd4b9d880e3b9fa200c3408f9f81f3ca4c6fd046c0e54",
+          "text_characters": 2254
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/worked-07.png",
+          "sha256": "82efed36abc9e4c47cac6aee3873daf590134aa9adbfb4d0e5173921f4e5d75e",
+          "text_characters": 2242
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/worked-08.png",
+          "sha256": "a7d82ad278db0ba5c668cf3493e340f8597bfcaad2b23169375474ab0a6b3aba",
+          "text_characters": 2258
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/worked-09.png",
+          "sha256": "1c3c4b06817efea0e7f11c5460bef328f0912695bab7e1805d8ac81a0ed71fc3",
+          "text_characters": 2166
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/worked-10.png",
+          "sha256": "53ae1889be58069ee99e775b2fed16c58d1fb4ba79bc2a6d90233f558b39d54d",
+          "text_characters": 2181
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/worked-11.png",
+          "sha256": "e6d78e3fba89b86a0812f420dc33ac5fb3d16cd47bbc375dff9a28fdf3754cf1",
+          "text_characters": 2179
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/worked-12.png",
+          "sha256": "a3801428af58cc3b5ac0aa369c3418066cc8b15c6dcdc56377d5851018b16217",
+          "text_characters": 2151
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/worked-13.png",
+          "sha256": "7f6f2770f05a68219d0edd4baa642619e1bba57890fce104cc9eacc8ab4a5b7f",
+          "text_characters": 2027
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/worked-14.png",
+          "sha256": "cb20e8fc16adae0991867c41eee63081af7cd07ff0abdb6fa62027b31e921dcb",
+          "text_characters": 1973
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/worked-15.png",
+          "sha256": "659729928c07e25eb835aa9e20a0cb8a62cfaa7766fd409b1f2d908837051f74",
+          "text_characters": 1985
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/worked-16.png",
+          "sha256": "99c733bc048848626c9a432e1f5a35c221ac8a504c76d98386e3e89dc248a7df",
+          "text_characters": 2017
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/worked-17.png",
+          "sha256": "de30d9a4c9349284b174a5cfbfe9780937550b124932df5ee612ebe06460eecd",
+          "text_characters": 1467
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/worked-18.png",
+          "sha256": "29600751a609b8b14cf60621083a90ed4cac1d1da8d59d4fa81db62f2606006c",
+          "text_characters": 1480
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/worked-19.png",
+          "sha256": "dd4c5638bd144e989991f3a2518614752fe59bfc9cae97f5ba57831dd6851105",
+          "text_characters": 1449
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/worked-20.png",
+          "sha256": "f0c2933b32db4a1a99f34f2201a73a3bd3817db281994ddae02ff2b6ad5412e0",
+          "text_characters": 427
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/worked-21.png",
+          "sha256": "f461a695163607ef371a9ec31886429fe4951da2722d9ea05b021e8081a39c87",
+          "text_characters": 371
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/worked-22.png",
+          "sha256": "2d4444b4af4acdf79c5ccf7886ce557ba3dc9633f1a1f269f16e1016c0eb9594",
+          "text_characters": 1744
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/worked-23.png",
+          "sha256": "345be68c69c1b37fba8a8a751df9dcaa2d89ea062f6a7227db99319abbd8c873",
+          "text_characters": 949
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/worked-24.png",
+          "sha256": "c424d62dbb62467eb4ff38900b3eb40077a918b205e15fb18f1a445c34e4ee08",
+          "text_characters": 1766
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/worked-25.png",
+          "sha256": "0f154ab75a3b5139d84013401c7f4f2519db0449bbe1fa0286a2dfdd825e9ff0",
+          "text_characters": 1725
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/worked-26.png",
+          "sha256": "46e2b4ae1eb9f64e2ebd7d88d231376ea5ee8ec6c5b67b5b96dd7abea457181f",
+          "text_characters": 1718
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/worked-27.png",
+          "sha256": "34bc95784ec01099f61308c3d2c2df100af0f617e71354467469d67fe1327c5b",
+          "text_characters": 1116
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/worked-28.png",
+          "sha256": "bd9eaf049bb59e7a2a5067f1732834ddf952bec1eaa46c943846bed9584d3151",
+          "text_characters": 2080
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/worked-29.png",
+          "sha256": "0ac03fb311ffa099e86166da65453a067cc40ea852f0c6865fa714e242404da8",
+          "text_characters": 328
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/worked-30.png",
+          "sha256": "9381b6c1128999dfec0343fea1420ba6ccfc99e2ae753f7778cc5b60fe52866d",
+          "text_characters": 704
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/worked-31.png",
+          "sha256": "0c9b7ee13caebfa12beb7596dd4abecba2c9e46a7a31d0bfea2bbd982f7232c0",
+          "text_characters": 719
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/worked-32.png",
+          "sha256": "4c1da351e1f4f60f24f770bcdf08cdbcd3826cf8e95efd20bea8350b9515afb8",
+          "text_characters": 309
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/worked-33.png",
+          "sha256": "fca32fbc2eefaa9b832a844a0e59c3e4a3afcf13047b659e3dc9771e69d0dc57",
+          "text_characters": 1794
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/worked-34.png",
+          "sha256": "56200cf2f6050245a99479636e47259a8fef5977d4a645ca0bcf8cf5b1d27c7c",
+          "text_characters": 1225
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/worked-35.png",
+          "sha256": "48290a0f5eac7d9974a60d7f0b4c39fad9e96436152dfae217345ce28da322e9",
+          "text_characters": 630
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/worked-36.png",
+          "sha256": "183b9890db151fcf5666bc9632fd2c9545a843deb3d7c161319d92eda0192a33",
+          "text_characters": 801
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/worked-37.png",
+          "sha256": "0d92e90ee4bb07cad62b944b234c28fd3522fcce70a6cb4688bd4e952e08ed87",
+          "text_characters": 729
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/worked-38.png",
+          "sha256": "7c16046a7eb24b061eb651fc157fb056ef3be158b2253b9018a92e192f9f80b6",
+          "text_characters": 532
+        },
+        {
+          "path": "docs/legal/gap-instruments/period-close/qa/worked-39.png",
+          "sha256": "cb09adb81b8648ec9659bf318d79aa70ca54ff0999c848ac48254dff2cdd69f2",
+          "text_characters": 665
+        }
+      ],
+      "worksheets": [
+        "Read first",
+        "Opening",
+        "Activity",
+        "Bank events",
+        "Bank inputs",
+        "Receivables",
+        "Payables",
+        "Five reconciliations",
+        "Debt",
+        "PPE detail",
+        "PPE",
+        "Adjustments",
+        "Closing TB",
+        "Income statement",
+        "Balance sheet",
+        "Statements",
+        "Source index"
+      ]
+    }
+  ],
+  "reviewer": "Codex period_close_v4",
+  "owner_acceptance": "NOT_REQUESTED_OR_INFERRED",
+  "method": "All 78 native LibreOffice PDF pages inspected using 20 readable four-page contact sheets and retained 1.5x page images; complete worksheet coverage, wrap, table alignment, number legibility, blank response cells and no clipped content checked.",
+  "corrections": [
+    "Read first orphan final limitation moved onto first page by reducing row height from 44 to 38 points.",
+    "Debt input rows expanded to 32 points to match other worksheet spacing.",
+    "Native bank field labels and reconciliation display labels use spaces while original identifiers remain in source CSV/JSON."
+  ],
+  "native_formula_recalculation": {
+    "tool": "LibreOffice 26.2.5.2",
+    "formulas_checked": 270,
+    "maximum_difference_usd": "0.00",
+    "result": "PASS"
+  },
+  "generator_sha256": "e40606897660a36227e3add7a1eec02e0e9fad8c8f0792ceff4d3dbbc5a03806",
+  "manifest_sha256": "f0d7b4a6b6f9d93c76d149847401d4168cbc85f2cd790e131e3d824faba6a038",
+  "contacts": [
+    {
+      "path": "docs/legal/gap-instruments/period-close/qa/blank-contact-01.png",
+      "sha256": "878ceaf83cec93a7c9f19a1d0290a3d1143558ac09813cff82ecc55f3630a5a7"
+    },
+    {
+      "path": "docs/legal/gap-instruments/period-close/qa/blank-contact-02.png",
+      "sha256": "9d461b5d26b7e821ac0ef7acb82dd333ec978acdb06b7c80a82a47509444ab12"
+    },
+    {
+      "path": "docs/legal/gap-instruments/period-close/qa/blank-contact-03.png",
+      "sha256": "941a2c35e7ad68536176bafdae839c335008abb9f2cb611e07a33609e5512bf5"
+    },
+    {
+      "path": "docs/legal/gap-instruments/period-close/qa/blank-contact-04.png",
+      "sha256": "c1af6a7c18d791ca3de9172263db38ba6620616c5a1fc92be19d4405061c5266"
+    },
+    {
+      "path": "docs/legal/gap-instruments/period-close/qa/blank-contact-05.png",
+      "sha256": "9df095fa9feb3ae0ab89724b38ddc5ef4b72603fede66f4ff66a2b9371e2b345"
+    },
+    {
+      "path": "docs/legal/gap-instruments/period-close/qa/blank-contact-06.png",
+      "sha256": "a1454b59719fbf6c84bfe22e3506d6327a5cef4c3326fa3740c758fc906d43ae"
+    },
+    {
+      "path": "docs/legal/gap-instruments/period-close/qa/blank-contact-07.png",
+      "sha256": "fd4084a7d052a1e09780f12b57d79a4ea0fa3d5dd138139a0198390c2e3cceb1"
+    },
+    {
+      "path": "docs/legal/gap-instruments/period-close/qa/blank-contact-08.png",
+      "sha256": "179fdaa5c20eb9c6d62275f98f793d84404c437b40c60ae5a2d3c5d1bbf0b02f"
+    },
+    {
+      "path": "docs/legal/gap-instruments/period-close/qa/blank-contact-09.png",
+      "sha256": "86df3c64658ffc45213af0cf7e6042edb8f563fe37153a404ea868417d359bb3"
+    },
+    {
+      "path": "docs/legal/gap-instruments/period-close/qa/blank-contact-10.png",
+      "sha256": "497bd4b2142a2152673aa5ffff544eb580d49f5e4dabbdaaa205dbe2d4cd50cb"
+    },
+    {
+      "path": "docs/legal/gap-instruments/period-close/qa/worked-contact-01.png",
+      "sha256": "45f3279ab394e7f26ba1cb4ffe4eac88ba672c358677d581c3a0b4b3acc9115e"
+    },
+    {
+      "path": "docs/legal/gap-instruments/period-close/qa/worked-contact-02.png",
+      "sha256": "c9678b25d43986fc306f1f7822a9edcbdd38f4e5af80702607d3fc38b563f002"
+    },
+    {
+      "path": "docs/legal/gap-instruments/period-close/qa/worked-contact-03.png",
+      "sha256": "0be5b70eb990022895ad3b8bdc66874979be0e370b34c28de5e412c42858c05b"
+    },
+    {
+      "path": "docs/legal/gap-instruments/period-close/qa/worked-contact-04.png",
+      "sha256": "e826665060ec6433c31bca241af0e314b258d211acbefa4b9ff81447a840e86a"
+    },
+    {
+      "path": "docs/legal/gap-instruments/period-close/qa/worked-contact-05.png",
+      "sha256": "4491fda5a69bceb7615971cb5e84b8293d15add1886e9c19313874e7b9bdd2b7"
+    },
+    {
+      "path": "docs/legal/gap-instruments/period-close/qa/worked-contact-06.png",
+      "sha256": "211ce4d780a399ef86229e77c7d19c52f60d7be4ea137a47566bfba855c749ed"
+    },
+    {
+      "path": "docs/legal/gap-instruments/period-close/qa/worked-contact-07.png",
+      "sha256": "74d30eb37d19dffb3a7eb9e04261edfc9dcc5fca87d63f9aba22a68890f46b99"
+    },
+    {
+      "path": "docs/legal/gap-instruments/period-close/qa/worked-contact-08.png",
+      "sha256": "e712964a1be91c6d4b1190cd53f19953436b488dc1b516cfe35e0de7cad1aa43"
+    },
+    {
+      "path": "docs/legal/gap-instruments/period-close/qa/worked-contact-09.png",
+      "sha256": "4c9a1a5d6e4734a47e69c30fda49dad86a3166591a987bd68d9810b839603816"
+    },
+    {
+      "path": "docs/legal/gap-instruments/period-close/qa/worked-contact-10.png",
+      "sha256": "3c4a659a2f7a0f96038a79ffc886c5a862787ded0345ceff14e2112185292812"
+    }
+  ]
+}

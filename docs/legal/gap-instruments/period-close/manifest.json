@@ -1,0 +1,13 @@
+{
+  "status": "DRAFT_FOR_EXACT_FILE_REVIEW",
+  "inputs_sha256": "86883929916b3203748aa4a27a2b9e7cea8a1d4b8194152d84af23c5355d4256",
+  "files": {
+    "README.md": "2cf05a38cb0a634ba8355e6f5e046977ada35dad0a83d210b7cd265491c59e20",
+    "WORKED.md": "dc9a19cee576addcac72d55aed7ea028fb7ae5edc871b124afb4650b5a21a86f",
+    "case.json": "9ad2fd1377291bcbe61484aac9bb6e61c969c594be21ed86669008046ac628c3",
+    "blank.xlsx": "bcfa7b874e5d534edd5895408b34a3b75d01d1a5535bc177cd5628a516dd7dc4",
+    "worked.xlsx": "f56bbdb328c7ad27636371161b1c53f276413e91707ee4e202d50fa69db9f1f8",
+    "close.sqlite3": "dda2f106d2b4511e4cf5d00b3f35fa4164ee2615316328dd85ca1d3294c12fcb",
+    "closing_trial_balance.csv": "dd6b43c5b668e65aa63709dafa891b588be74b36a23306ef3dbeaf64cb9f7045"
+  }
+}

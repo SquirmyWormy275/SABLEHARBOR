@@ -1,0 +1,94 @@
+{
+  "revision": "0.4.0-review.1",
+  "status": "DRAFT_FOR_EXACT_FILE_REVIEW",
+  "inputs": {
+    "docs/legal/gap-instruments/case-briefs/source.json": "35769fe20897e77d21cdb38743878f9d82e5c1bd3568f8c2a93c86ebdcdc7d1e",
+    "tools/legal_gaps/case_briefs.py": "ec61a98624476a89f18095bfa5aade6005e91ffa1611129e6b624bda49252bf0",
+    "assets/brand/logos/sable-harbor__primary-horizontal.svg": "815efb4ca06e4f2df8b9dfee3d4288f94d2e64417b7c863ce5b8639d2de07076",
+    "tools/legal_gaps/style.css": "fb15462569f7503b59cba8dcd3015fbbc6a82cb64d5225b53b4b2b3498913d40",
+    "docs/legal/gap-instruments/practice/acquisition/TASK.md": "26e3e44bb7124ac8fce565c4729e8f534bd5583c8c3be990167f7d2fede473a6",
+    "docs/legal/gap-instruments/practice/acquisition/blank.xlsx": "f093de0e40a2c9eac6a5e73d5d99766c856247b9ceade38fba74b4ac9c20841d",
+    "docs/legal/gap-instruments/walkthroughs/walkthroughs.xlsx": "73fca36092d713e4170e5b38a3e226407fd95da23b328c05ad11bba86110c0f7",
+    "docs/finance/evidence/SH-FIN-HUMAN-001/README.md": "e0578c47c1b66c405f9a98036dc7238892e1ac9c106a11e102cbdca8503735e2",
+    "docs/legal/gap-instruments/practice/revenue-dispute/blank.xlsx": "12a7525e545def188bc2902b72f16ce46cd31b80ba0fad10ecd4e27b4c91afc1",
+    "red_wash/source/core_operating_data.json": "eb5601f3a519ac175bef07744fa3c23939734f80b5774efeed4800aa73e8aa3f",
+    "docs/legal/gap-instruments/walkthroughs/README.md": "df59a06b3621fe6a18694be4511f5ceaaec21efcea7661db31e54afb59434619",
+    "docs/legal/gap-instruments/reconciliations/README.md": "0aa76f63f66d7ca12fe8156a9372533dce4cfaf108240d82ed7e6bc793414662",
+    "docs/legal/gap-instruments/reconciliations/blank.xlsx": "4a249a7b1e52eb13403b244daca603a19b6a73250c919267f66a182255db8122",
+    "docs/legal/gap-instruments/reconciliations/WORKED.md": "68b015baf3876b2eb99a1c5637f561d01850a286f55f8e3103bd5a445eb590e4",
+    "docs/legal/gap-instruments/period-close/README.md": "1f764afff496bd216dfca3fd1ffac4accf7433cf0404557f894312f82887577a",
+    "docs/legal/gap-instruments/period-close/blank.xlsx": "bcfa7b874e5d534edd5895408b34a3b75d01d1a5535bc177cd5628a516dd7dc4",
+    "docs/legal/gap-instruments/evidence-tracking/README.md": "8516b1d522029cd8bb60e6d70a03594b54d132b2403b8eeca7a61fc159a486bc"
+  },
+  "files": [
+    {
+      "path": "SH-CASE-ARU-01.md",
+      "sha256": "5d162fd228068410dd951eba4319e74bd65806244cc48db97d95cc8d88edb1b0"
+    },
+    {
+      "path": "SH-CASE-ARU-01.html",
+      "sha256": "6aa25f472102574b434a9ba1b3fd851579a1cb8d8cdf70c39ad617d951e787bb"
+    },
+    {
+      "path": "SH-CASE-ARU-01.pdf",
+      "sha256": "d7c1c01667ded0a5378f6617f855b7b1d43e44da84dee1cb762290a929852a23"
+    },
+    {
+      "path": "SH-CASE-FF-01.md",
+      "sha256": "d1bd3b433775969c6871ec124ea784f3342d897c3877c4f722877e509c2dbc34"
+    },
+    {
+      "path": "SH-CASE-FF-01.html",
+      "sha256": "6b229c3c2289417df66b287f33d27ee07e7132753713bd52d6d29d585cfb9f6a"
+    },
+    {
+      "path": "SH-CASE-FF-01.pdf",
+      "sha256": "3b3ff7a81efd7eaa7086aff2a63083e89e4e49b38697a2185171d30c2e5f02f2"
+    },
+    {
+      "path": "SH-CASE-RW-01.md",
+      "sha256": "76f1070980e036fa9abbe0985b8ae9a5056ebbe06c25f765216f3e509329564a"
+    },
+    {
+      "path": "SH-CASE-RW-01.html",
+      "sha256": "bd932c44faa69112f8474adb6adbce9740b0dff7e5e7565626a240c0082f2f88"
+    },
+    {
+      "path": "SH-CASE-RW-01.pdf",
+      "sha256": "ecc196f15258c308cbb935f894042398f54bc2ff42445d057310d3a599cac0b6"
+    },
+    {
+      "path": "SH-CASE-RECON-01.md",
+      "sha256": "6e773bb8a83a42f5f4f6cd4b61007cc285019c982de39148d9d8b59a726cf0e0"
+    },
+    {
+      "path": "SH-CASE-RECON-01.html",
+      "sha256": "b9350f905ff441741a8126e9c07aeb4ad3b3012506ff114a4593009ab43a2868"
+    },
+    {
+      "path": "SH-CASE-RECON-01.pdf",
+      "sha256": "2ab4062e1bbd8de0d2efba0597341a38978eb614603bdf1d5ab4e6154b508c5c"
+    },
+    {
+      "path": "SH-CASE-CLOSE-01.md",
+      "sha256": "862dda0f232828e63c3f8ce34017336154140e709b7fcd95d09dce6247204c64"
+    },
+    {
+      "path": "SH-CASE-CLOSE-01.html",
+      "sha256": "00b14ba850132f48a309617c91b88f913a885a8d6cb9cb1defb6e73287f46f31"
+    },
+    {
+      "path": "SH-CASE-CLOSE-01.pdf",
+      "sha256": "45f0d367af866ff2ce95c1ba42ed27e7e8e107e45c47a2ae46ae0790995a5f57"
+    },
+    {
+      "path": "case-briefs.sqlite3",
+      "sha256": "425e6a6c08f8a4c7967d4780ab07b52ffe08f9c83d69610ab217d4a415964301"
+    },
+    {
+      "path": "README.md",
+      "sha256": "db0a4f1494e3588891aa2d8e69f9566a342434ccd62e58d9c14394a021d6d857"
+    }
+  ],
+  "pdf_pages": 5
+}
