@@ -1,0 +1,214 @@
+{
+  "record_id": "SH-FIN-BILL-001",
+  "version": "1.0.0",
+  "decision": "docs/canon/FOUNDRY_FIELD_BILLING_ADOPTION_2026-09-13.md",
+  "authority_base": "321354190005c17bd91fa15ce15bb1c57be56f88",
+  "acceptance": "OWNER_AUTHORIZED; CANON_ON_MAIN_ACCEPTANCE",
+  "created_date": "2026-09-13",
+  "fact_state": "PUBLIC_SYNTHETIC_CONDITIONAL_FORECAST",
+  "accounting_as_of": "2027-01-31",
+  "scope": {
+    "invoice_id": "INV-base-FF-003-TERM-0",
+    "contract_id": "FF-003",
+    "customer_id": "SYN-CUSTOMER-003",
+    "scenario": "base",
+    "unit": "foundry-field",
+    "applies_to": "One separately labelled reconstructed invoice only; not the accepted accounting evidence memo or historical release."
+  },
+  "original_proposal": {
+    "path": "docs/finance/evidence/billing-proposal/proposal.json",
+    "sha256": "23d8d6080ad296468d6b649eda55593d49c33cde0e6b038343ce11e4973e23f8",
+    "version": "0.1.0"
+  },
+  "source": {
+    "packet_commit": "59201ccfa6a302e19c766694b3160fe8e9b942a4",
+    "packet_path": "docs/finance/evidence/SH-FIN-HUMAN-001/source.json",
+    "packet_sha256": "c4833cfc6f28db6cd3edcae761b0e2d8f463a20de79f1d6fd5b0c517f8f829b7",
+    "packet_url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/59201ccfa6a302e19c766694b3160fe8e9b942a4/docs/finance/evidence/SH-FIN-HUMAN-001/source.json",
+    "release": "business-operations-v1.0.0",
+    "release_source_revision": "57cfa1b1c483ccf1f8b15d82c4cbdadbeef8063e",
+    "release_sha256": "b8e81572d829fec7209d1d18eb15bac21e52b37714211aee005b5f1a68ab5817",
+    "invoice_member": {
+      "member": "units/foundry-field/invoices.csv",
+      "sha256": "f58676ff9d2f0ba004b0ad1a1a8c102229c024109399f71803c157c5a3b8f624"
+    },
+    "journal_member": {
+      "member": "units/foundry-field/journal.csv",
+      "sha256": "cc08df352beeaece968889529942cad79d067a309e705bf9e7908573a36ac24a"
+    }
+  },
+  "fields": [
+    {
+      "field_id": "customer.display_name",
+      "value": "Copperreach Fabrication",
+      "disposition": "ADOPTED_UNCHANGED",
+      "decision_id": null
+    },
+    {
+      "field_id": "customer.billing_address",
+      "value": [
+        "1840 Quarry Exchange",
+        "Suite 210",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "disposition": "ADOPTED_UNCHANGED",
+      "decision_id": null
+    },
+    {
+      "field_id": "customer.billing_attention",
+      "value": "Accounts Payable",
+      "disposition": "ADOPTED_UNCHANGED",
+      "decision_id": null
+    },
+    {
+      "field_id": "customer.display_contact",
+      "value": "accounts-payable@copperreach.invalid",
+      "disposition": "ADOPTED_UNCHANGED",
+      "decision_id": null
+    },
+    {
+      "field_id": "customer.purchase_order",
+      "value": "CRF-2027-FF003-001",
+      "disposition": "ADOPTED_UNCHANGED",
+      "decision_id": null
+    },
+    {
+      "field_id": "customer.legal_name",
+      "value": "Copperreach Fabrication, Inc.",
+      "disposition": "REPLACED_BY_BILLING_DECISION",
+      "decision_id": "BILL-DEC-001"
+    },
+    {
+      "field_id": "issuer.brand",
+      "value": "Foundry Field",
+      "disposition": "ADOPTED_UNCHANGED",
+      "decision_id": null
+    },
+    {
+      "field_id": "issuer.billing_address",
+      "value": [
+        "240 Harbor Works Avenue",
+        "Billing desk \u2014 Foundry Field",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "disposition": "ADOPTED_UNCHANGED",
+      "decision_id": null
+    },
+    {
+      "field_id": "issuer.display_contact",
+      "value": "billing@foundry-field.invalid",
+      "disposition": "ADOPTED_UNCHANGED",
+      "decision_id": null
+    },
+    {
+      "field_id": "issuer.legal_name",
+      "value": "Sable Harbor, LLC",
+      "disposition": "REPLACED_BY_BILLING_DECISION",
+      "decision_id": "BILL-DEC-002"
+    },
+    {
+      "field_id": "invoice.display_issue_date",
+      "value": "2027-01-31",
+      "disposition": "ADOPTED_UNCHANGED",
+      "decision_id": null
+    },
+    {
+      "field_id": "invoice.service_description",
+      "value": "Foundry Field subscription \u2014 initial 12-month term, 140 seats",
+      "disposition": "ADOPTED_UNCHANGED",
+      "decision_id": null
+    },
+    {
+      "field_id": "invoice.tax_presentation",
+      "value": "Seller bears sales tax separately; no customer reimbursement. Not an exemption or tax-inclusive price.",
+      "disposition": "REPLACED_BY_BILLING_DECISION",
+      "decision_id": "BILL-DEC-003"
+    },
+    {
+      "field_id": "invoice.payment_instructions",
+      "value": "Not supplied in this reconstruction.",
+      "disposition": "ADOPTED_UNCHANGED",
+      "decision_id": null
+    }
+  ],
+  "commercial_assumptions": {
+    "customer_jurisdiction": "California",
+    "customer_form": "Fictional corporation; no real filing claimed",
+    "seller_entity": "SHI",
+    "issuer_capacity": "Operating as Foundry Field; not a separate legal entity",
+    "sale_kind": "Standard prewritten software accessed remotely",
+    "service_period_start": "2027-01-01",
+    "service_period_end": "2027-12-31",
+    "seats": 140,
+    "users_in_sacramento_city": 140,
+    "billing_jurisdiction": "Sacramento city, California",
+    "purchaser_2027_digital_purchases_from_SHI_below_5000000": true,
+    "exemption_claimed": false,
+    "correspondence_addresses_are_geometry": false,
+    "payment_endpoint": "Intentionally absent from public fictional archive"
+  },
+  "invoice": {
+    "invoice_id": "INV-base-FF-003-TERM-0",
+    "contract_id": "FF-003",
+    "customer_id": "SYN-CUSTOMER-003",
+    "issue_date": "2027-01-31",
+    "due_date": "2027-02-28",
+    "monthly_subscription_usd": "145000.00",
+    "term_months": 12,
+    "subscription_usd": "1740000.00",
+    "customer_tax_reimbursement_usd": "0.00",
+    "customer_total_usd": "1740000.00",
+    "issue_date_customer_ar_usd": "1740000.00"
+  },
+  "tax": {
+    "decision_id": "BILL-DEC-003",
+    "treatment": "SELLER_BORNE_SALES_TAX_NO_REIMBURSEMENT",
+    "taxable_gross_receipts_usd": "1740000.00",
+    "rate": "0.0875",
+    "seller_expense_usd": "152250.00",
+    "initial_payable_usd": "152250.00",
+    "initial_cash_payment_usd": "0.00",
+    "rate_state": "JANUARY_2027_PLANNING_ASSUMPTION_BASED_ON_PUBLISHED_SEPTEMBER_2026_RATE",
+    "research_date": "2026-09-13",
+    "model_scope": "Invoice issuance only; no tax return, payment, bad-debt relief or refund modeled",
+    "sources": [
+      {
+        "title": "SB 122 (2026), sections 6010.5, 6016.1, 6016.2, 6052, 6372, 6372.1",
+        "url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB122"
+      },
+      {
+        "title": "CDTFA Regulation 1700: agreement governs reimbursement",
+        "url": "https://cdtfa.ca.gov/lawguides/vol1/sutr/1700.html"
+      },
+      {
+        "title": "RTC 6012: absorbed tax not excluded from gross receipts",
+        "url": "https://cdtfa.ca.gov/lawguides/vol1/sutl/6012.html"
+      },
+      {
+        "title": "City of Sacramento: published sales tax rate",
+        "url": "https://www.cityofsacramento.gov/finance/budget/sales-tax-rate"
+      }
+    ]
+  },
+  "supplemental_journal": [
+    {
+      "journal_id": "SH-FIN-BILL-001-TAX-ISSUE",
+      "period": "2027-01-31",
+      "entity": "SHI",
+      "account": "BILLING_SALES_TAX_EXPENSE",
+      "debit_usd": "152250.00",
+      "credit_usd": "0.00"
+    },
+    {
+      "journal_id": "SH-FIN-BILL-001-TAX-ISSUE",
+      "period": "2027-01-31",
+      "entity": "SHI",
+      "account": "BILLING_SALES_TAX_PAYABLE",
+      "debit_usd": "0.00",
+      "credit_usd": "152250.00"
+    }
+  ],
+  "supplemental_accounts": "Packet-scoped supplemental accounts, not silently posted into or added to the released chart of accounts."
+}

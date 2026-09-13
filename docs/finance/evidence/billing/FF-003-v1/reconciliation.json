@@ -1,0 +1,17 @@
+{
+  "customer_collected_usd": "609000.0000",
+  "customer_credits_usd": "159500.0000",
+  "initial_tax_expense_usd": "152250.00",
+  "initial_tax_payable_usd": "152250.00",
+  "legacy_ending_customer_ar_usd": "0.0000",
+  "legacy_journal_credits_usd": "3813500.0000",
+  "legacy_journal_debits_usd": "3813500.0000",
+  "principal_difference_usd": "0.0000",
+  "principal_usd": "1740000",
+  "result": "PASS",
+  "scope": "January issuance supplement; legacy principal lifecycle shown separately",
+  "supplemental_credits_usd": "152250.00",
+  "supplemental_debits_usd": "152250.00",
+  "surviving_writtenoff_claim_usd": "971500.0000",
+  "tax_journal_difference_usd": "0.00"
+}

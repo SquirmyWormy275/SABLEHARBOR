@@ -6,11 +6,11 @@ Generated reconciliation queue, not an assertion that every unpaired record lack
 
 | State | Records |
 |---|---:|
-| COUNTERPART_REVIEW_REQUIRED | 89 |
+| COUNTERPART_REVIEW_REQUIRED | 94 |
 | HISTORICAL_COUNTERPART_UNRESOLVED | 57 |
 | NAVIGATION_ALIAS_NO_PUBLICATION | 3 |
-| READER_MAINTENANCE_NO_LETTERHEAD | 108 |
-| READER_OR_MAINTENANCE_PAGE | 171 |
+| READER_MAINTENANCE_NO_LETTERHEAD | 107 |
+| READER_OR_MAINTENANCE_PAGE | 173 |
 | UNRESOLVED_DOCUMENT_COUNTERPART | 223 |
 | VERIFIED_ACCEPTED_EVIDENCE_PACKET | 1 |
 | VERIFIED_CHART_PUBLICATION | 40 |
@@ -26,9 +26,14 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Branch and Pull Request Register](../../audit/BRANCH_AND_PR_REGISTER.md) — SH-FIN-HUMAN-001
 - [Repository completion batch — September 13, 2026](../../audit/COMPLETION_BATCH_2026-09-13.md) — SH-FIN-HUMAN-001
 - [Outstanding issue review — September 12, 2026](../../audit/ISSUE_CLOSEOUT_2026-09-12.md) — SH-FIN-HUMAN-001
+- [Foundry Field FF-003 billing adoption](../../canon/FOUNDRY_FIELD_BILLING_ADOPTION_2026-09-13.md) — Corporate document-format reconciliation
 - [Klein shop and Fort occupancy continuity](../../canon/KLEIN_FORT_OCCUPANCY_2026-09-13.md) — Corporate document-format reconciliation
 - [Accounting, finance and audit practice](../../finance/READER_EXERCISES.md) — SH-FIN-HUMAN-001
+- [Current disposition of the Foundry Field billing proposal](../../finance/evidence/billing-proposal/CURRENT.md) — SH-FIN-HUMAN-001
+- [Invoice](../../finance/evidence/billing/FF-003-v1/INVOICE.md) — SH-FIN-HUMAN-001
+- [FF-003 billing quality review](../../finance/evidence/billing/FF-003-v1/QA.md) — SH-FIN-HUMAN-001
 - [Current industrial transaction and tax support](../../finance/evidence/tax-transaction/TRANSACTION_SUPPORT.md) — SH-FIN-HUMAN-001
+- [Finance and accounting: human evidence completion handoff](../../handoffs/FINANCE_HUMAN_EVIDENCE_COMPLETION.md) — Corporate document-format reconciliation
 - [Actionable CCF procedure deltas](../../internal/development/CCF_ACTIONABLE_CONTROL_DELTAS_2026-09-12.md) — Corporate document-format reconciliation
 - [Integrated CCF delivery workflow](../../internal/development/CCF_INTEGRATED_DELIVERY_WORKFLOW_2026-09-12.md) — Corporate document-format reconciliation
 - [A practical first CCF system](../../internal/development/CCF_PILOT_SYSTEM_DESIGN_2026-09-12.md) — Corporate document-format reconciliation
