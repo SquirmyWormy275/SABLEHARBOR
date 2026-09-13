@@ -710,7 +710,10 @@ def generate(root=ROOT, out=None):
     intro += "\n## Individual native files\n\n"
     for source in data["source_pins"]["sources"]:
         name = source["id"]
-        intro += f"- [{name.replace('_', ' ').capitalize()}](source/{name}.csv): {source['row_count']} rows.\n"
+        intro += (
+            f"- [{name.replace('_', ' ').capitalize()}](source/{name}.csv): "
+            f"{source['row_count']} rows.\n"
+        )
     intro += "\nVerify original extraction with `python tools/legal_gaps/period_close.py verify-archive --archive /path/to/sable-harbor-business-operations-v1.0.0.zip`. The command compares every selected column and row with the hash-pinned archive. `verify-formulas` independently recalculates all 270 worked spreadsheet formulas in LibreOffice. `validate-qa` checks both exact workbook hashes and all retained manual-review pages.\n"  # noqa: E501 -- reader-facing prose
     (out / "README.md").write_text(intro)
     worked = "# Public worked close — ARU Group, January 2027\n\nNo new economic facts or correcting entries are introduced. All amounts are USD; liabilities and equity are credit-negative in the trial balance.\n\n| Account | Opening | Activity | Adjustment | Closing |\n|---|---:|---:|---:|---:|\n"  # noqa: E501 -- reader-facing prose

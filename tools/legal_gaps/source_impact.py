@@ -348,6 +348,8 @@ def extend_current_cases(b):
         # Manifest membership is authoritative; source case IDs label the dependency details.
         bm = PREFIX + "/case-briefs/manifest.json"
         manifest = b.load(bm)
+        for path, sha in manifest["inputs"].items():
+            b.pin(path, sha, bm)
         outputs = manifest["files"]
         if isinstance(outputs, dict):
             outputs = list(outputs)
@@ -366,7 +368,7 @@ def extend_current_cases(b):
                     case_id=case["id"],
                     precision="Reference dependency; recheck brief after source changes",
                 )
-        b.outputs([brief_path, bm], outputs, bm + "/files")
+        b.outputs([brief_path, bm, *manifest["inputs"]], outputs, bm + "/files")
 
 
 def validate_graph(graph):
@@ -438,7 +440,7 @@ def analyze(graph, current_hashes, changed_paths=()):
     outside = sorted(
         set(changed_paths) - {n["path"] for n in graph["nodes"] if n["kind"] == "file"}
     )
-    problems = graph.get("baseline_problems", [])
+    problems = list(graph.get("baseline_problems", []))
     return dict(
         baseline_revision=graph["baseline_revision"],
         status="REVIEW_REQUIRED"
@@ -453,6 +455,8 @@ def analyze(graph, current_hashes, changed_paths=()):
 
 
 def report(graph, root=ROOT, current=None):
+    if current:
+        current = git(root, "rev-parse", "--verify", current + "^{commit}").decode().strip()
     hashes = {
         n["path"]: digest(read(root, n["path"], current))
         for n in graph["nodes"]

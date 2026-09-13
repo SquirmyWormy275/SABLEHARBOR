@@ -1,6 +1,6 @@
 {
   "status": "MANUAL_REVIEW_PASS_DRAFT_DESIGN",
-  "workbook_sha256": "e043658893a739abf2c1bfb6ee600072862bcfaae9201d43df63590586589782",
+  "workbook_sha256": "c1e859b5737019716d8de6ff4b3408d3e5881e9ec467207ee978cf87a23c168c",
   "sheets": [
     "Read first",
     "Requests",
@@ -62,7 +62,7 @@
     {
       "page": 11,
       "path": "page-11.png",
-      "sha256": "4c70717eec4c8752ac0fdaaf060fc9aca8e85785bd00cbe26edfd10ee564b40a"
+      "sha256": "49ecdbac8bfd14517b6a11f67c070055e2a9f33c06c43acbfaf57f417a7145c1"
     }
   ],
   "populated_cells": 143,
@@ -70,7 +70,8 @@
   "renderer": "LibreOffice native PDF; PyMuPDF 1.5x PNG",
   "corrections": [
     "Preserved original 11 requests and added three distinct ARU January 2027 base-scenario AR/AP/PPE request IDs; verified full labels and limitations render without clipping.",
-    "Retained readable Requests widths, header height and repeated IDs across entry print panels."
+    "Retained readable Requests widths, header height and repeated IDs across entry print panels.",
+    "Refreshed the period-close README context pin after direct CSV navigation links were added; no request or response content changed."
   ],
-  "manual_review": "All 11 native pages inspected at 1.5x after adding the three ARU January close requests; all five sheets and every populated cell covered. Draft only; not owner acceptance."
+  "manual_review": "All 11 native pages inspected at 1.5x for the 14-request edition. After the period-close README navigation update, pages1–10 remained byte-identical PNGs; page11 Context was inspected again with the new source and state hashes. Draft only; not owner acceptance."
 }

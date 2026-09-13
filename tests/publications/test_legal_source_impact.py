@@ -130,3 +130,36 @@ def test_changed_register_is_itself_an_input_even_if_it_removes_entries():
     ids = {i["node"]["id"] for i in result["impacted"]}
     assert impact.PREFIX + "/editions/billing.pdf" in ids
     assert result["status"] == "REVIEW_REQUIRED"
+
+
+def test_integrated_period_source_reaches_close_tracker_and_briefs():
+    saved = json.loads((impact.DEST / "graph.json").read_text())
+    path = impact.PREFIX + "/period-close/source/journal.csv"
+    hashes = {n["path"]: n["sha256"] for n in saved["nodes"] if n["kind"] == "file"}
+    assert path in hashes, "Integrated baseline must include period close"
+    hashes[path] = "changed journal"
+    result = impact.analyze(saved, hashes)
+    ids = {i["node"]["id"] for i in result["impacted"]}
+    for target in ["period-close/worked.xlsx", "evidence-tracking/tracker.xlsx"]:
+        assert impact.PREFIX + "/" + target in ids
+    assert any("/case-briefs/" in i and i.endswith(".pdf") for i in ids)
+    assert any(i["node"]["kind"] == "calculation" for i in result["impacted"])
+
+
+def test_brief_generator_change_requires_exact_pdf_review():
+    saved = json.loads((impact.DEST / "graph.json").read_text())
+    hashes = {n["path"]: n["sha256"] for n in saved["nodes"] if n["kind"] == "file"}
+    path = "tools/legal_gaps/case_briefs.py"
+    assert path in hashes
+    hashes[path] = "changed layout"
+    result = impact.analyze(saved, hashes)
+    assert any(i["node"]["id"].endswith(".pdf") for i in result["impacted"])
+
+
+def test_deleted_tracking_register_still_reaches_workbook():
+    saved = json.loads((impact.DEST / "graph.json").read_text())
+    hashes = {n["path"]: n["sha256"] for n in saved["nodes"] if n["kind"] == "file"}
+    del hashes[impact.PREFIX + "/evidence-tracking/tracker.json"]
+    result = impact.analyze(saved, hashes)
+    assert any(i["node"]["id"].endswith("/tracker.xlsx") for i in result["impacted"])
+    assert result["status"] == "REVIEW_REQUIRED"
