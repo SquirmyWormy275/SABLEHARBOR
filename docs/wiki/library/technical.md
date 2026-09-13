@@ -116,6 +116,7 @@ Generated file inventory. Includes current and historical records; open the sour
 
 - [Business-driven finance releases](../../releases/BUSINESS_FINANCE_RELEASES.md) — MD
 - [Business operations releases](../../releases/BUSINESS_OPERATIONS_RELEASES.md) — MD
+- [Closeout evidence releases](../../releases/CLOSEOUT_EVIDENCE_RELEASES.md) — MD
 - [Facility atlas controlled releases](../../releases/FACILITY_ATLAS_RELEASES.md) — MD
 - [Facility spatial releases](../../releases/FACILITY_SPATIAL_RELEASES.md) — MD
 - [Facility planning workbench releases](../../releases/FACILITY_WORKBENCH_RELEASES.md) — MD
@@ -129,6 +130,10 @@ Generated file inventory. Includes current and historical records; open the sour
 ## `enterprise`
 
 - [Enterprise operating and financial models](../../../enterprise/README.md) — MD
+
+## `evidence/closeout`
+
+- [Closeout evidence](../../../evidence/closeout/README.md) — MD
 
 ## `tools/ci`
 
