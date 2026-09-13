@@ -1,0 +1,22 @@
+name: Legal gap instruments
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r tools/legal_gaps/requirements.txt
+      - run: python tools/legal_gaps/validate.py
+      - run: python -m pytest -q tests/publications/test_legal_gap_instruments.py --confcutdir=tests/publications
+      - run: python tools/documents/approval_guard.py
+      - run: git diff --check
