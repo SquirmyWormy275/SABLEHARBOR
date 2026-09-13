@@ -83,9 +83,7 @@ def role(path):
 
 def build():
     old, current = tree(ROOT, BASELINE), tree(ROOT, REVISION)
-    paths = sorted(
-        p for p in old.keys() | current.keys() if old.get(p) != current.get(p)
-    )
+    paths = sorted(p for p in old.keys() | current.keys() if old.get(p) != current.get(p))
     canon = {Path(p).name for p in paths if p.startswith("docs/canon/")}
     if canon != set(CANON_FINDINGS):
         raise ValueError("Reviewed canon delta population changed")
@@ -94,9 +92,7 @@ def build():
     for i in range(0, len(oids), 100):
         hashes.update(fingerprints(ROOT, oids[i : i + 100]))
     baseline = []
-    for row in csv.DictReader(
-        (ROOT / "geospatial/registers/SOURCE_COVERAGE.csv").open()
-    ):
+    for row in csv.DictReader((ROOT / "geospatial/registers/SOURCE_COVERAGE.csv").open()):
         p = row["source_path"]
         if hashes[old[p]] != (int(row["bytes"]), row["file_sha256"]):
             raise ValueError("Baseline source mismatch: " + p)
@@ -116,11 +112,7 @@ def build():
         changes.append(
             dict(
                 source_path=p,
-                change="ADDED"
-                if p not in old
-                else "REMOVED"
-                if p not in current
-                else "MODIFIED",
+                change="ADDED" if p not in old else "REMOVED" if p not in current else "MODIFIED",
                 baseline_git_blob=old.get(p),
                 current_git_blob=current.get(p),
                 baseline_sha256=hashes[old[p]][1] if p in old else None,

@@ -104,13 +104,24 @@ def prepare(output, predecessor, allow_dirty=False):
         output / "completion", history
     )
     from geospatial.finalization.build import build as build_finalization
-    finalization, final_sites = build_finalization(output / 'finalization', json.loads((output / 'completion/ocr/RASTER_INVENTORY.json').read_text()))
+
+    finalization, final_sites = build_finalization(
+        output / "finalization",
+        json.loads((output / "completion/ocr/RASTER_INVENTORY.json").read_text()),
+    )
     from geospatial.finalization.source_review import review as review_final_sources
+
     _, final_sources = review_final_sources()
     from geospatial.finalization.visual_review import verify as verify_final_visuals
-    _, final_images, final_appearances = verify_final_visuals(json.loads((output / 'completion/ocr/RASTER_INVENTORY.json').read_text()))
+
+    _, final_images, final_appearances = verify_final_visuals(
+        json.loads((output / "completion/ocr/RASTER_INVENTORY.json").read_text())
+    )
     import gzip
-    final_ledger = json.loads(gzip.decompress((output / "finalization/SOURCE_LEDGER.json.gz").read_bytes()))
+
+    final_ledger = json.loads(
+        gzip.decompress((output / "finalization/SOURCE_LEDGER.json.gz").read_bytes())
+    )
     operations_raw, operations_summary, operations_rows = review_operations()
     (output / "chronology/OPERATIONS_REVIEW.csv.gz").write_bytes(operations_raw)
     dump(output / "chronology/OPERATIONS_REVIEW.json", operations_summary)
@@ -158,8 +169,12 @@ def prepare(output, predecessor, allow_dirty=False):
     build_geopackage(gpkg)
     ocr = json.loads((output / "review/ocr-results.json").read_text())
     with sqlite3.connect(gpkg) as db:
-        attribute_table(db, "review_final_baseline_sources", final_ledger["baseline_sources"], "source_path")
-        attribute_table(db, "review_final_source_changes", final_ledger["subsequent_changes"], "source_path")
+        attribute_table(
+            db, "review_final_baseline_sources", final_ledger["baseline_sources"], "source_path"
+        )
+        attribute_table(
+            db, "review_final_source_changes", final_ledger["subsequent_changes"], "source_path"
+        )
         attribute_table(db, "review_final_site_decisions", final_sites, "object_id")
         attribute_table(db, "review_final_source_claims", final_sources, "occurrence_id")
         attribute_table(db, "review_final_embedded_images", final_images, "sha256")

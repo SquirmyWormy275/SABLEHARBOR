@@ -28,9 +28,7 @@ def digest(raw):
 
 def read_json(path):
     return json.loads(
-        gzip.decompress(path.read_bytes())
-        if path.suffix == ".gz"
-        else path.read_bytes()
+        gzip.decompress(path.read_bytes()) if path.suffix == ".gz" else path.read_bytes()
     )
 
 
@@ -48,6 +46,31 @@ def esri_polygon(rings):
     return result
 
 
+def equivalent(actual, expected):
+    """Allow sub-micrometre floating-point platform noise, not evidence drift."""
+    import math
+
+    if isinstance(expected, dict):
+        return (
+            isinstance(actual, dict)
+            and actual.keys() == expected.keys()
+            and all(equivalent(actual[k], v) for k, v in expected.items())
+        )
+    if isinstance(expected, list):
+        return (
+            isinstance(actual, list)
+            and len(actual) == len(expected)
+            and all(equivalent(a, b) for a, b in zip(actual, expected))
+        )
+    if isinstance(expected, float):
+        return (
+            isinstance(actual, (int, float))
+            and not isinstance(actual, bool)
+            and math.isclose(actual, expected, rel_tol=0, abs_tol=1e-7)
+        )
+    return type(actual) is type(expected) and actual == expected
+
+
 def screen():
     refs = BASE / "reference"
     manifest = read_json(refs / "MANIFEST.json")
@@ -56,10 +79,7 @@ def screen():
             ("file", "sha256"),
             ("metadata_file", "metadata_sha256"),
         ]:
-            if (
-                file_key in r
-                and digest((refs / r[file_key]).read_bytes()) != r[hash_key]
-            ):
+            if file_key in r and digest((refs / r[file_key]).read_bytes()) != r[hash_key]:
                 raise ValueError("Reference checksum differs: " + r[file_key])
     records = []
     features = read_json(BASE / "SITE_SELECTIONS.geojson")["features"]
@@ -162,9 +182,7 @@ def screen():
                 epsg=epsg,
                 area_acres=acres,
                 geometry_sha256=digest(
-                    json.dumps(
-                        f["geometry"], sort_keys=True, separators=(",", ":")
-                    ).encode()
+                    json.dumps(f["geometry"], sort_keys=True, separators=(",", ":")).encode()
                 ),
                 elevation=elev,
                 imagery_sources=imagery_sources,
@@ -199,9 +217,7 @@ if __name__ == "__main__":
                     acres=r["area_acres"],
                     relief=r["elevation"]["relief_m"],
                     line_intersections=[
-                        x["path"]
-                        for x in r["archived_reference_screen"]
-                        if x["intersects"]
+                        x["path"] for x in r["archived_reference_screen"] if x["intersects"]
                     ],
                 )
                 for r in result["records"]

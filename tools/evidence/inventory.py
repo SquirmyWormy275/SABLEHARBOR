@@ -112,7 +112,10 @@ def inventory(root: Path, revision: str, residual):
         for p in sorted(previous.keys() | current.keys())
         if previous.get(p) != current.get(p)
     ]
-    with (root / "geospatial/registers/SITE_REGISTER.csv").open() as f:
+    site_register = root / "geospatial/registers/SITE_REGISTER_CURRENT.csv"
+    if not site_register.exists():
+        site_register = root / "geospatial/registers/SITE_REGISTER.csv"
+    with site_register.open() as f:
         sites = list(csv.DictReader(f))
     if len({r["object_id"] for r in sites}) != len(sites):
         raise ValueError("Site identifiers must be unique")
@@ -122,6 +125,7 @@ def inventory(root: Path, revision: str, residual):
         "baseline_sources": rows,
         "subsequent_changes": deltas,
         "sites": sites,
+        "site_register": str(site_register.relative_to(root)),
         "summary": {
             "baseline_files_verified": len(rows),
             "baseline_bytes_verified": sum(int(r["bytes"]) for r in rows),

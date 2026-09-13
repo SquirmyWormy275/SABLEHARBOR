@@ -16,27 +16,21 @@ BASELINE = "d91a22c35c91b213204411421de88815f27d8e16"
 
 def build(output):
     hits = list(
-        csv.DictReader(
-            gzip.open(ROOT / "geospatial/completion/REMAINING_OCCURRENCES.csv.gz", "rt")
-        )
+        csv.DictReader(gzip.open(ROOT / "geospatial/completion/REMAINING_OCCURRENCES.csv.gz", "rt"))
     )
     sources = defaultdict(list)
     for hit in hits:
         sources[hit["source_path"]].append(hit)
     coverage = {
         r["source_path"]: r
-        for r in csv.DictReader(
-            (ROOT / "geospatial/registers/SOURCE_COVERAGE.csv").open()
-        )
+        for r in csv.DictReader((ROOT / "geospatial/registers/SOURCE_COVERAGE.csv").open())
     }
     output.mkdir(parents=True, exist_ok=True)
     records = []
     source_units = {}
     with tempfile.TemporaryDirectory() as tmp:
         for path, rows in sorted(sources.items()):
-            raw = subprocess.check_output(
-                ["git", "show", BASELINE + ":" + path], cwd=ROOT
-            )
+            raw = subprocess.check_output(["git", "show", BASELINE + ":" + path], cwd=ROOT)
             digest = hashlib.sha256(raw).hexdigest()
             if digest != coverage[path]["file_sha256"]:
                 raise ValueError("Source mismatch: " + path)
@@ -47,9 +41,7 @@ def build(output):
                 index, text = indexed[hit["source_locator"]]
                 if text != hit["exact_source_wording"]:
                     raise ValueError("Locator/text mismatch: " + hit["occurrence_id"])
-                headings = [
-                    (loc, t) for loc, t in units[: index + 1] if t.startswith("#")
-                ]
+                headings = [(loc, t) for loc, t in units[: index + 1] if t.startswith("#")]
                 records.append(
                     dict(
                         **hit,

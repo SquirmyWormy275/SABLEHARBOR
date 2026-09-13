@@ -60,9 +60,7 @@ def sync(catalog):
     catalog["sources"] = [
         r for r in catalog["sources"] if not r["source_id"].startswith("SRC-GFC-BIO-")
     ]
-    for index, (oid, name, place, path, prefix, precision, fictionality) in enumerate(
-        SPECS, 1
-    ):
+    for index, (oid, name, place, path, prefix, precision, fictionality) in enumerate(SPECS, 1):
         raw = subprocess.check_output(["git", "show", REVISION + ":" + path], cwd=ROOT)
         hits = [
             (i, line)

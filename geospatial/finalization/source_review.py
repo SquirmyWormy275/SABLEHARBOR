@@ -17,24 +17,14 @@ def digest(raw):
 
 
 def review():
-    packet = json.loads(
-        gzip.decompress((BASE / "GROUP_DECISIONS.json.gz").read_bytes())
-    )
-    extracted = json.loads(
-        gzip.decompress((BASE / "EXTRACTED_RESIDUAL.json.gz").read_bytes())
-    )
+    packet = json.loads(gzip.decompress((BASE / "GROUP_DECISIONS.json.gz").read_bytes()))
+    extracted = json.loads(gzip.decompress((BASE / "EXTRACTED_RESIDUAL.json.gz").read_bytes()))
     expected = list(
-        csv.DictReader(
-            gzip.open(ROOT / "geospatial/completion/REMAINING_OCCURRENCES.csv.gz", "rt")
-        )
+        csv.DictReader(gzip.open(ROOT / "geospatial/completion/REMAINING_OCCURRENCES.csv.gz", "rt"))
     )
     by_id = {r["occurrence_id"]: r for r in extracted}
-    if len(by_id) != len(extracted) or set(by_id) != {
-        r["occurrence_id"] for r in expected
-    }:
-        raise ValueError(
-            "Adjudication extraction population differs from residual census"
-        )
+    if len(by_id) != len(extracted) or set(by_id) != {r["occurrence_id"] for r in expected}:
+        raise ValueError("Adjudication extraction population differs from residual census")
     for row in expected:
         if any(by_id[row["occurrence_id"]][k] != v for k, v in row.items()):
             raise ValueError("Exact census carrier changed")
@@ -43,9 +33,7 @@ def review():
     hashes = fingerprints(ROOT, [source_tree[p] for p in paths])
     objects = {
         r["object_id"]
-        for r in json.loads((ROOT / "geospatial/sources/catalog.json").read_text())[
-            "objects"
-        ]
+        for r in json.loads((ROOT / "geospatial/sources/catalog.json").read_text())["objects"]
     }
     output = []
     seen = set()
@@ -69,17 +57,11 @@ def review():
                 counterpart_text[path] = re.sub(
                     r"[^a-z0-9]", "", " ".join(t for _, t in units).lower()
                 )
-            if (
-                re.sub(r"[^a-z0-9]", "", group["text"].lower())
-                not in counterpart_text[path]
-            ):
+            if re.sub(r"[^a-z0-9]", "", group["text"].lower()) not in counterpart_text[path]:
                 raise ValueError("Claimed text counterpart does not match")
         for oid in group["occurrence_ids"]:
             row = by_id[oid]
-            if (
-                oid in seen
-                or " ".join(row["exact_source_wording"].split()) != group["text"]
-            ):
+            if oid in seen or " ".join(row["exact_source_wording"].split()) != group["text"]:
                 raise ValueError("Duplicate carrier or text-group mismatch")
             if hashes[source_tree[row["source_path"]]][1] != row["source_sha256"]:
                 raise ValueError("Archived source hash differs")
@@ -103,17 +85,14 @@ def review():
             )
     if seen != set(by_id):
         raise ValueError("Missing editorial disposition")
-    earlier = json.loads(
-        (ROOT / "geospatial/completion/SOURCE_REVIEW.json").read_text()
-    )
+    earlier = json.loads((ROOT / "geospatial/completion/SOURCE_REVIEW.json").read_text())
     summary = dict(
         baseline_revision=packet["baseline"],
         source_files=len(paths),
         grouped_wordings=len(packet["groups"]),
         reviewed_carriers=len(output),
         prior_reviewed_carriers=earlier["cumulative_reviewed_carriers"],
-        cumulative_reviewed_carriers=earlier["cumulative_reviewed_carriers"]
-        + len(output),
+        cumulative_reviewed_carriers=earlier["cumulative_reviewed_carriers"] + len(output),
         remaining_baseline_carriers=0,
         dispositions=dict(sorted(Counter(r["disposition"] for r in output).items())),
         group_decisions_sha256=digest((BASE / "GROUP_DECISIONS.json.gz").read_bytes()),

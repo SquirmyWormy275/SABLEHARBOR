@@ -66,9 +66,27 @@ def qualify(package):
         existing[name] = layer
         expected[name] = ("features", 9)
     relations = [
-        ("final_site_to_object", "Controlling site decision to canonical object", "review_final_site_decisions", "object_registry", "object_id"),
-        ("final_carrier_to_original", "Final source disposition to preserved carrier", "review_final_source_claims", "review_occurrences", "occurrence_id"),
-        ("final_image_to_visual", "Embedded appearance to unique visual disposition", "review_final_image_appearances", "review_final_embedded_images", "sha256"),
+        (
+            "final_site_to_object",
+            "Controlling site decision to canonical object",
+            "review_final_site_decisions",
+            "object_registry",
+            "object_id",
+        ),
+        (
+            "final_carrier_to_original",
+            "Final source disposition to preserved carrier",
+            "review_final_source_claims",
+            "review_occurrences",
+            "occurrence_id",
+        ),
+        (
+            "final_image_to_visual",
+            "Embedded appearance to unique visual disposition",
+            "review_final_image_appearances",
+            "review_final_embedded_images",
+            "sha256",
+        ),
         (
             "docket_to_object",
             "Site docket to canonical object",

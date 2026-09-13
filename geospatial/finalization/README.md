@@ -21,3 +21,5 @@ The build produces searchable offline decision, source-carrier and source-ledger
 Reference downloads are retained for offline reproducibility. `screen.py` verifies and reads them without network access. `fetch_context.py` is a research acquisition helper, not a build step; running it creates a fresh acquisition manifest that must be reviewed before replacing the selected reference archive.
 
 `SOURCE_LEDGER.json.gz` verifies all 919 original file fingerprints and records every changed path through the pinned accepted main. Its 17 canonical delta findings came from full-text review; other paths retain explicit domain/derivation dispositions rather than claiming a full-domain audit. Later source changes are not automatically approved.
+
+The current site register is `geospatial/registers/SITE_REGISTER_CURRENT.csv`. The legacy `SITE_REGISTER.csv` remains the exact accepted snapshot pinned by the other session’s legal host-rights publication; its source and validator are preserved.

@@ -16,18 +16,15 @@ def check(directory, executable=None):
     with sync_playwright() as p:
         browser = p.chromium.launch(executable_path=executable)
         for width in [390, 768, 1440]:
-            page = browser.new_page(
-                viewport={"width": width, "height": 950}, offline=True
-            )
+            page = browser.new_page(viewport={"width": width, "height": 950}, offline=True)
             page.on("pageerror", lambda e: errors.append(str(e)))
             for name in PAGES:
                 page.goto((directory / name).as_uri())
-                assert page.evaluate(
-                    "document.documentElement.scrollWidth<=innerWidth+1"
-                ), (width, name)
-                checks.append(
-                    dict(check="responsive-layout", page=name, width=width, passed=True)
+                assert page.evaluate("document.documentElement.scrollWidth<=innerWidth+1"), (
+                    width,
+                    name,
                 )
+                checks.append(dict(check="responsive-layout", page=name, width=width, passed=True))
                 if name == "index.html":
                     assert page.locator("article:visible").count() == 37
                     page.locator("#search").fill("Bedford")
@@ -36,15 +33,11 @@ def check(directory, executable=None):
                         "(im)=>im.complete&&im.naturalWidth>0"
                     )
                     page.locator("article:visible summary").click()
-                    assert (
-                        "canon_sha256"
-                        in (directory / "SITE_DECISIONS.json").read_text()
-                    )
+                    assert "canon_sha256" in (directory / "SITE_DECISIONS.json").read_text()
                     page.locator("#search").fill("Cedar Junction")
                     assert page.locator("article:visible").count() == 1
                     assert (
-                        "No ownership or occupancy"
-                        in page.locator("article:visible").inner_text()
+                        "No ownership or occupancy" in page.locator("article:visible").inner_text()
                     )
                 else:
                     assert page.locator("article").count() == 40
@@ -64,17 +57,12 @@ def check(directory, executable=None):
                     assert page.locator("article").count() > 0
                     if name == "source-ledger.html":
                         assert (
-                            "excluded from geocoding"
-                            in page.locator("article").first.inner_text()
+                            "excluded from geocoding" in page.locator("article").first.inner_text()
                         )
                 checks.append(
-                    dict(
-                        check="filter-and-evidence", page=name, width=width, passed=True
-                    )
+                    dict(check="filter-and-evidence", page=name, width=width, passed=True)
                 )
-                page.screenshot(
-                    path=str(directory / "qa" / f"{Path(name).stem}-{width}.png")
-                )
+                page.screenshot(path=str(directory / "qa" / f"{Path(name).stem}-{width}.png"))
             page.close()
         browser.close()
     if errors:
@@ -82,9 +70,7 @@ def check(directory, executable=None):
     result = dict(
         passed=True,
         checks=checks,
-        html_sha256={
-            n: hashlib.sha256((directory / n).read_bytes()).hexdigest() for n in PAGES
-        },
+        html_sha256={n: hashlib.sha256((directory / n).read_bytes()).hexdigest() for n in PAGES},
     )
     (directory / "BROWSER_RESULTS.json").write_text(json.dumps(result, indent=2) + "\n")
     print("PASS", len(checks), "final decision and source reader checks")

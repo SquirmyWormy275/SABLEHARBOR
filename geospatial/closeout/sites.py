@@ -71,10 +71,14 @@ def review(root=ROOT):
     current_raw = (root / current["canon_path"]).read_bytes()
     if digest(current_raw) != current["canon_sha256"]:
         raise ValueError("Geographic completion canon hash differs")
-    current_source = dict(path=current["canon_path"], revision=None,
-                          locator="Controlling geographic and occupancy addendum",
-                          sha256=current["canon_sha256"], evidence=current_raw.decode(),
-                          decision_id=current["decision_id"])
+    current_source = dict(
+        path=current["canon_path"],
+        revision=None,
+        locator="Controlling geographic and occupancy addendum",
+        sha256=current["canon_sha256"],
+        evidence=current_raw.decode(),
+        decision_id=current["decision_id"],
+    )
     current_rows = {r["object_id"]: r for r in current["records"]}
     decisions = json.loads((root / "geospatial/closeout/site_decisions.json").read_text())
     catalog = json.loads((root / "geospatial/sources/catalog.json").read_text())
@@ -143,8 +147,11 @@ def review(root=ROOT):
                 "source_period": obj["relevant_date"],
                 "source_period_precision": obj["date_precision"],
                 "period_meaning": decisions["period_meanings"][oid]
-                + " Current controlling disposition: " + current_rows[oid]["disposition"]
-                + "; " + current_rows[oid]["temporal_precision"] + ".",
+                + " Current controlling disposition: "
+                + current_rows[oid]["disposition"]
+                + "; "
+                + current_rows[oid]["temporal_precision"]
+                + ".",
                 "retained_operational_states": [
                     r for r in catalog["asset_states"] if r["asset_id"] == oid
                 ],

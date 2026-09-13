@@ -55,9 +55,7 @@ def retrieve(task):
         sha256=hashlib.sha256(data).hexdigest(),
         extent=meta["extent"],
         accessed_date="2026-09-13",
-        authority="USDA NAIP / USGS The National Map"
-        if kind == "imagery"
-        else "USGS 3DEP",
+        authority="USDA NAIP / USGS The National Map" if kind == "imagery" else "USGS 3DEP",
         license="US federal public-domain imagery/elevation; catalog attribution retained separately",
         use="Fictional planning compatibility screen; no vacancy, rights or geotechnical certification",
     )
@@ -65,9 +63,9 @@ def retrieve(task):
 
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
-    features = json.loads(
-        (ROOT / "geospatial/completion/SITE_OPTIONS.geojson").read_text()
-    )["features"]
+    features = json.loads((ROOT / "geospatial/completion/SITE_OPTIONS.geojson").read_text())[
+        "features"
+    ]
     tasks = [(f, k) for f in features for k in SERVICES]
     records = []
     failures = []
@@ -80,9 +78,7 @@ def main():
                 print(f["properties"]["option_id"], k, "fetched", flush=True)
             except Exception as error:
                 failures.append(
-                    dict(
-                        option_id=f["properties"]["option_id"], kind=k, error=str(error)
-                    )
+                    dict(option_id=f["properties"]["option_id"], kind=k, error=str(error))
                 )
                 print(failures[-1], flush=True)
     (OUT / "MANIFEST.json").write_text(
@@ -96,9 +92,7 @@ def main():
         + "\n"
     )
     if failures:
-        raise SystemExit(
-            "Some reference requests failed; inspect manifest before retrying"
-        )
+        raise SystemExit("Some reference requests failed; inspect manifest before retrying")
 
 
 if __name__ == "__main__":

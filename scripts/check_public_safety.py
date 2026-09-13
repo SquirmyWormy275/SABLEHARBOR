@@ -10,11 +10,11 @@ FORBIDDEN = ("ghp_", "github_pat_", "sk-proj-", "BEGIN PRIVATE KEY")
 MAX_BYTES = 10 * 1024 * 1024
 ALLOWED_LARGE_PUBLIC_ARTIFACTS = {
     # Tracked convenience catalog retained by GENERATED_RECORDS_LIFECYCLE.md.
-    # PR138 billing successor on PR163/PR158; public sources and reader regeneration verified.
+    # PR164 geographic decisions on accepted PR138 main; regenerated public catalog.
     # Exact bytes only: no general allowance for new databases or later drift.
     Path("docs/internal/institutional_catalog.sqlite3"): (
-        11147264,
-        "0abd1573c5d7b106a731dc957684a87b8b97160260bf8960725ad8536e63d88c",
+        11216896,
+        "3ad84a8dbd47b08bf5ef11eb7000d3c2171ec3bdb5bff1a34694b1653b286e50",
     ),
     # Reviewed September 10 successor: six approved J2 names, unchanged public scope.
     Path("docs/organization/assets/current/Sable-Harbor-Organization-Charts.pdf"): (
@@ -26,11 +26,11 @@ ALLOWED_LARGE_PUBLIC_ARTIFACTS = {
         12421998,
         "c1589fbd0c0bfcb2a823cc4e582b580510f3d1408a933ddb09188aa217f62665",
     ),
-    # PR162 owner-approved Klein/Fort continuity successor.
-    # Public canon/occupancy metadata only; all 60 spatial tables retain every row.
+    # PR164 delegated site decisions and final public geographic source review.
+    # All 60 original spatial tables preserve their rows; three screened footprints form one new layer.
     Path("geospatial/master/sable_harbor_master_v0.1.gpkg"): (
-        40 * 1024 * 1024,
-        "d2da433ed41700fc8c6e8dc667aec89374e7dc10787d086a90429d950158b4af",
+        40099840,
+        "2749c22b257be1519713b3e6d4011ad1f9b6a2483c509f152ae505b00739f688",
     ),
     # Byte-identical preservation copy of the already approved public database below.
     Path("geospatial/sources/canon_snapshot/blackridge/data/public/databases/blackridge_m00_v0.1.0.sqlite3"): (

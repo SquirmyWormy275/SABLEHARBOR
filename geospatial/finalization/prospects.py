@@ -82,12 +82,8 @@ def sync(c):
     rows = recover()
     ids = {r["object_id"] for r in rows}
     c["objects"] = [o for o in c["objects"] if o["object_id"] not in ids]
-    c["sources"] = [
-        s for s in c["sources"] if not s["source_id"].startswith("SRC-GFC-PROP-")
-    ]
-    c["claims"] = [
-        r for r in c["claims"] if not r["claim_id"].startswith("CLM-GFC-PROP-")
-    ]
+    c["sources"] = [s for s in c["sources"] if not s["source_id"].startswith("SRC-GFC-PROP-")]
+    c["claims"] = [r for r in c["claims"] if not r["claim_id"].startswith("CLM-GFC-PROP-")]
     for i, r in enumerate(rows, 1):
         source = r["source"]
         sid = f"SRC-GFC-PROP-{i:03}"

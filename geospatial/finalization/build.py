@@ -13,7 +13,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from matplotlib.backends.backend_pdf import PdfPages
 from shapely.geometry import shape
-from geospatial.finalization.screen import BASE, ROOT, screen
+from geospatial.finalization.screen import BASE, ROOT, screen, equivalent
 from geospatial.finalization.sync import section, CANON
 from geospatial.completion.readers import STYLE
 
@@ -25,7 +25,7 @@ def build(output, raster_inventory=None):
     if hashlib.sha256(raw).hexdigest() != decisions["canon_sha256"]:
         raise ValueError("Canon decision and source hash differ")
     report = screen()
-    if report != json.loads((BASE / "SITE_SCREEN.json").read_text()):
+    if not equivalent(report, json.loads((BASE / "SITE_SCREEN.json").read_text())):
         raise ValueError("Site screen drift; regenerate deliberately")
     features = json.loads((BASE / "SITE_SELECTIONS.geojson").read_text())["features"]
     refs = json.loads((BASE / "reference/MANIFEST.json").read_text())["records"]
@@ -41,9 +41,7 @@ def build(output, raster_inventory=None):
     ) as pdf:
         for f, r in zip(features, report["records"]):
             ident = r["option_id"]
-            image_ref = next(
-                x for x in refs if x["option_id"] == ident and x["kind"] == "imagery"
-            )
+            image_ref = next(x for x in refs if x["option_id"] == ident and x["kind"] == "imagery")
             e = image_ref["extent"]
             fig = plt.figure(figsize=(11.7, 8.3), facecolor="#f5f2eb")
             ax = fig.add_axes((0.055, 0.20, 0.64, 0.68))
@@ -94,29 +92,21 @@ def build(output, raster_inventory=None):
                 color="#596b60",
                 weight="bold",
             )
-            fig.text(
-                0.055, 0.905, r["name"], fontsize=24, color="#203b36", weight="bold"
-            )
+            fig.text(0.055, 0.905, r["name"], fontsize=24, color="#203b36", weight="bold")
             terrain = r["elevation"]
             dates = ", ".join(x["acquisition_date"] for x in r["imagery_sources"])
             summary = (
                 f"{r['object_id']}\n\n{r['area_acres']:.2f} acres\nSelected fictional footprint\n\nTerrain\n{terrain['min_m']:.1f}–{terrain['max_m']:.1f} m sampled elevation\n{terrain['relief_m']:.1f} m total relief\n\nNAIP catalog acquisition\n{dates}\n\nReference checks\nNo archived road, rail or hydro centerline intersects.\n\nFEMA mapped zones\n"
                 + "\n".join(
                     sorted(
-                        {
-                            x["zone"] + " — " + x["subtype"].lower()
-                            for x in r["flood_intersections"]
-                        }
+                        {x["zone"] + " — " + x["subtype"].lower() for x in r["flood_intersections"]}
                     )
                 )
             )
             fig.text(
                 0.735,
                 0.85,
-                "\n".join(
-                    textwrap.fill(line, 34) if line else ""
-                    for line in summary.splitlines()
-                ),
+                "\n".join(textwrap.fill(line, 34) if line else "" for line in summary.splitlines()),
                 fontsize=10,
                 va="top",
                 color="#203b36",
@@ -173,9 +163,7 @@ def build(output, raster_inventory=None):
             {
                 **r,
                 "occurrence_id": f"FILE-{i + 1:05}",
-                "source_locator": r.get(
-                    "source_commit", ledger["reviewed_main_revision"]
-                ),
+                "source_locator": r.get("source_commit", ledger["reviewed_main_revision"]),
                 "exact_source_wording": r.get("geographic_finding", r.get("basis", "")),
                 "limit": r.get(
                     "limit",
@@ -196,13 +184,9 @@ def build(output, raster_inventory=None):
     if raster_inventory is None:
         from geospatial.completion.raster_inventory import build as inventory_images
 
-        raster_inventory = inventory_images(
-            output / "container-inventory", execute_ocr=False
-        )
+        raster_inventory = inventory_images(output / "container-inventory", execute_ocr=False)
     visual_summary, visual_images, visual_appearances = verify_visuals(raster_inventory)
-    (output / "VISUAL_REVIEW.json").write_bytes(
-        (BASE / "VISUAL_REVIEW.json").read_bytes()
-    )
+    (output / "VISUAL_REVIEW.json").write_bytes((BASE / "VISUAL_REVIEW.json").read_bytes())
     prospects = json.loads((BASE / "REJECTED_PROSPECTS.json").read_text())["records"]
     (output / "REJECTED_PROSPECTS.json").write_bytes(
         (BASE / "REJECTED_PROSPECTS.json").read_bytes()
@@ -213,9 +197,7 @@ def build(output, raster_inventory=None):
         excerpt = section(raw.decode(), r["canon_section"])
         item = {
             **r,
-            "current_canon": dict(
-                path=CANON, sha256=decisions["canon_sha256"], **excerpt
-            ),
+            "current_canon": dict(path=CANON, sha256=decisions["canon_sha256"], **excerpt),
         }
         current.append(item)
         title = r["name"]
@@ -229,9 +211,7 @@ def build(output, raster_inventory=None):
         )
         cards.append(
             '<article data-search="'
-            + html.escape(
-                r["object_id"] + " " + title + " " + r["disposition"], quote=True
-            )
+            + html.escape(r["object_id"] + " " + title + " " + r["disposition"], quote=True)
             + '"><small>'
             + r["object_id"]
             + "</small><h2>"

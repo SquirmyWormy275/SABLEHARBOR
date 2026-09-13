@@ -8,9 +8,7 @@ from geospatial.finalization.screen import BASE
 
 def verify(inventory):
     reviewed = json.loads((BASE / "VISUAL_REVIEW.json").read_text())
-    expected = {
-        r["record_id"]: r for r in inventory["records"] if r["kind"] == "EMBEDDED_IMAGE"
-    }
+    expected = {r["record_id"]: r for r in inventory["records"] if r["kind"] == "EMBEDDED_IMAGE"}
     seen = {}
     for image in reviewed["records"]:
         for occurrence in image["appearances"]:
@@ -39,9 +37,7 @@ def verify(inventory):
             unique_images=len(reviewed["records"]),
             appearances=len(seen),
             all_embedded_appearances_reviewed=True,
-            review_sha256=hashlib.sha256(
-                (BASE / "VISUAL_REVIEW.json").read_bytes()
-            ).hexdigest(),
+            review_sha256=hashlib.sha256((BASE / "VISUAL_REVIEW.json").read_bytes()).hexdigest(),
             scope=reviewed["scope"],
         ),
         reviewed["records"],

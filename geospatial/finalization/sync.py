@@ -73,9 +73,7 @@ def sync():
         )
     )
     c["claims"] = [r for r in c["claims"] if not r["claim_id"].startswith("CLM-GFC-")]
-    c["asset_states"] = [
-        r for r in c["asset_states"] if r.get("decision_id") != DECISION
-    ]
+    c["asset_states"] = [r for r in c["asset_states"] if r.get("decision_id") != DECISION]
     c["relationships"] = [
         r for r in c["relationships"] if not r["relationship_id"].startswith("REL-GFC-")
     ]
