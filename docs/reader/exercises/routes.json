@@ -1,0 +1,178 @@
+{
+  "schema_version": "1.0.0",
+  "source_revision": "f7c9da881176da19901fe5ec6e776f0fd8719a39",
+  "status": "SOURCE_BOUND_LEARNING_GUIDES",
+  "routes": [
+    {
+      "classification": "PUBLIC_SYNTHETIC_LEARNING_GUIDE",
+      "new_design_required": false,
+      "id": "SH-EX-ACQ-001",
+      "title": "ARU acquisition reconciliation",
+      "guide": "docs/reader/exercises/ACQUISITION.md",
+      "period": "2026-01-07 acquisition; 2026 subsequent schedules",
+      "release_or_source": "current industrial reconstruction",
+      "source_revision": "8898d2d0310a60bdf0e4753036790c6eda1388cd",
+      "scenario": null,
+      "native_ids": [
+        "ARU_GROUP",
+        "SH-IND-ARU-CLOSE-001",
+        "SH-IND-FIN-TXN-001",
+        "ARU-CL-07"
+      ],
+      "evidence": [
+        {
+          "path": "industrial/transaction/05_ARU_CLOSING_AND_TAX_DELIVERY.md",
+          "sha256": "a6dd448ed3a4a3ad6f0f3748e79dd918ea43c75685de762fe00843477a5d22c9"
+        },
+        {
+          "path": "industrial/publications/SH-IND-ARU-CLOSE-001_v1.0.0.pdf",
+          "sha256": "2db8049ce4ee571d4a681505321b73af49739adb2cbd86d1fae78e92082d7883"
+        },
+        {
+          "path": "industrial/finance/TRANSACTION_ACCOUNTING.md",
+          "sha256": "d13f142968958585cfc56a7b06d54b5e95bccef6d434d11bb6bba93933a0aa58"
+        },
+        {
+          "path": "industrial/publications/SH-IND-FIN-TXN-001_v1.0.0.pdf",
+          "sha256": "1cd173fa65f2ff6af92ed08736e2bfef9927ff2b601474f6c485577a3fd29716"
+        },
+        {
+          "path": "docs/finance/evidence/tax-transaction/TRANSACTION_SUPPORT.md",
+          "sha256": "a65f58e80a6255c585f2f12a66fa7150f255f881bbcd90bd0e230da0a38c78f0"
+        },
+        {
+          "path": "docs/finance/evidence/tax-transaction/CURRENT_SOURCE_BRIDGE.json",
+          "sha256": "4e4c35d03d5613e0ef037d7dd14d27c250fa547fc29d2f93ddd1a1b25274e17c"
+        },
+        {
+          "path": "docs/finance/evidence/tax-transaction/acquisition_ppa.csv",
+          "sha256": "bd024c5ac926ed98ee89876e0bb4f32a3e80c5e0bea47c7bb227ad3c172b8fa0"
+        },
+        {
+          "path": "docs/finance/evidence/tax-transaction/aru_acquisition_opening_trial_balance.csv",
+          "sha256": "33a28e198a5ce5a5d35f751ca8a3fac6aefc04faba4329b6297c7cd560ca02d5"
+        },
+        {
+          "path": "docs/finance/evidence/tax-transaction/aru_2026_tax_rollforward.csv",
+          "sha256": "323a8532e46f3bf9cf3e39bf5666e5745cd842011372b26726df632a77f14ee0"
+        },
+        {
+          "path": "docs/finance/evidence/tax-transaction/transaction-support.sqlite3",
+          "sha256": "827221135325c5adcacb3673b852724434a31a9b4da8a5eec23490ca566d0e39"
+        }
+      ],
+      "steps": [
+        "Make a sources-and-uses working paper from the closing statement. Show enterprise value to seller equity, then buyer-funded share consideration. Identify the excess-cash distribution, direct seller payment and escrow separately. Show old debt payoff, new term debt and parent equity below that bridge; show transaction fees and debt issuance costs separately. Do not add the retained finance leases as a second payoff.",
+        "Compare the result to PPA measures `close_sources_before_fees_usd`, `close_uses_before_fees_usd`, `stock_consideration_usd`, `parent_cash_before_fees_usd` and `parent_cash_including_fees_usd`. Explain `new_debt_upstream_acquisition_distribution_usd` using \u201cSources and uses.\u201d A transfer financing the purchase is not revenue or an additional purchase price.",
+        "Sum `debit_balance_usd` and `credit_balance_usd` across all 16 opening accounts. Record the difference. Explain the account basis using the accounting model; do not compare only selected asset accounts to the entire purchase price or relabel the `ARU_GROUP` view as separate statutory books for ARU and BS&T.",
+        "Reperform the book goodwill residual from `stock_consideration_usd` and `identifiable_net_assets_before_refinancing_usd`. Separately follow `ppa.tax_allocation` in the current-source bridge: modeled adjusted grossed-up basis, recognized assumed liabilities and other asset tax bases. Explain why `tax_goodwill_basis_usd` differs from `goodwill_usd`. Cite the conditional reserve-DTA and initial-goodwill treatment instead of replacing them with an unsupported balancing entry.",
+        "Use months 1\u201312 in the tax rollforward to distinguish cumulative deductions and balances from monthly expenses and cash payments. Do not sum cumulative columns. Compare month 12 book/tax goodwill bases, the reserve DTA, goodwill DTL and current-tax settlement balance to the accounting narrative. Identify any rounding difference explicitly rather than overwriting supplied values.",
+        "Read delivery ID `ARU-CL-07`. State what the March 2 filing-ready record supports and what evidence would be needed to establish external filing or acceptance. Keep that finding separate from whether your arithmetic reconciles."
+      ]
+    },
+    {
+      "classification": "PUBLIC_SYNTHETIC_LEARNING_GUIDE",
+      "new_design_required": false,
+      "id": "SH-EX-INV-001",
+      "title": "Foundry Field invoice to ledger",
+      "guide": "docs/reader/exercises/INVOICE.md",
+      "period": "2027-01 through 2027-10",
+      "release_or_source": "business-operations-v1.0.0",
+      "source_revision": "57cfa1b1c483ccf1f8b15d82c4cbdadbeef8063e",
+      "scenario": "base",
+      "native_ids": [
+        "INV-base-FF-003-TERM-0",
+        "SYN-CUSTOMER-003",
+        "FF-003",
+        "SHI",
+        "BIZ-base-0000014",
+        "base-01-INVOICE-INV-base-FF-003-TERM-0"
+      ],
+      "evidence": [
+        {
+          "path": "docs/finance/evidence/SH-FIN-HUMAN-001/README.md",
+          "sha256": "e0578c47c1b66c405f9a98036dc7238892e1ac9c106a11e102cbdca8503735e2"
+        },
+        {
+          "path": "docs/finance/evidence/SH-FIN-HUMAN-001/PACKET.md",
+          "sha256": "1b7828cb0a69551ef5ff14fad874bdc6222f697679e4163933d3a6f85f27f60c"
+        },
+        {
+          "path": "docs/finance/evidence/SH-FIN-HUMAN-001/packet.pdf",
+          "sha256": "1914d0043f1ef3344873d10d35ed016f4cbfd28091459e8dbb2d4b8fee45a5b7"
+        },
+        {
+          "path": "docs/finance/evidence/SH-FIN-HUMAN-001/reconciliation.xlsx",
+          "sha256": "7077ec3ae8e796a6f94759fe19624ab51a11ac45b7ce538a0c447b4c9c384214",
+          "sheets": [
+            "Reconciliation",
+            "Movements",
+            "Journal",
+            "Terms and credits",
+            "Source register"
+          ]
+        },
+        {
+          "path": "docs/finance/evidence/SH-FIN-HUMAN-001/ACCEPTANCE.json",
+          "sha256": "6f521e7deb88875267ca705649e4db2dab8ca3dd5689c3cd22e8472fd5016f72"
+        },
+        {
+          "path": "docs/finance/evidence/SH-FIN-HUMAN-001/source.json",
+          "sha256": "c4833cfc6f28db6cd3edcae761b0e2d8f463a20de79f1d6fd5b0c517f8f829b7"
+        }
+      ],
+      "steps": [
+        "Write the invoice, contract, scenario, period and release on a separate working paper. Read \u201cThe account\u201d in the packet. Compare the original billing amount with the original contract term; distinguish the stated due date from the later model period-end events.",
+        "Read **Terms and credits** and **Movements**. Put the five movements in date order after the initial invoice. Give ledger receivable, written-off claim, cash collections and credits separate columns. A credit after writeoff does not recreate a receivable or automatically become a cash refund.",
+        "Trace initial event `base-01-INVOICE-INV-base-FF-003-TERM-0` to **Journal**, starting with journal ID `BIZ-base-0000014`. Then use each movement's exact source event ID to find its journal lines. Check debits equal credits for each of the six events, retaining account codes and dates in your cross-reference.",
+        "Compare the July `SLA_SERVICE_CREDIT` and August `SYN-AMEND-003` credits. Identify their different debit accounts and the contract-version change supporting the latter. A synthetic approval ID is not independent customer consent.",
+        "Reconcile closing ledger receivable and the surviving written-off claim separately. Calculate collections from the dated movements and compare with the invoice's collected total. Explain why adding `recovered_usd` again to a total that already includes recovery would double-count cash. Now compare your working paper to **Reconciliation** and inspect the formulas.",
+        "List what you could conclude from this packet alone and what additional records would be needed to test actual receipt, customer agreement or the period's pooled allowance. Do not interpret these twelve lines as a complete contract P&L or a period trial balance."
+      ]
+    },
+    {
+      "classification": "PUBLIC_SYNTHETIC_LEARNING_GUIDE",
+      "new_design_required": false,
+      "id": "SH-EX-CON-001",
+      "title": "Taylor\u2013Red Wash contract obligations",
+      "guide": "docs/reader/exercises/CONTRACTS.md",
+      "period": "Source effective 2026-07-07; publication cutoff 2026-09-05; term ends 2031-07-06",
+      "release_or_source": "accepted SH-IND-IC-001 v1.0.0",
+      "source_revision": "f7c9da881176da19901fe5ec6e776f0fd8719a39",
+      "scenario": null,
+      "native_ids": [
+        "SH-IND-IC-001",
+        "ARU",
+        "BST",
+        "RWH"
+      ],
+      "evidence": [
+        {
+          "path": "industrial/transaction/08_INTERCOMPANY_LOGISTICS_AGREEMENT.md",
+          "sha256": "23153dc86a3e9ea9fd501bce6bdf3c8478dbdf3ab79fa5e8abc84ca8bbb771fc"
+        },
+        {
+          "path": "industrial/publications/SH-IND-IC-001_v1.0.0.pdf",
+          "sha256": "6edd5e8f041b09b9447f51dee8f0dcc1179b1a58083396230642e31f383134f1"
+        },
+        {
+          "path": "docs/legal/evidence/commercial/SH-LEGAL-READ-IC-001.md",
+          "sha256": "0c01857e258a272a48460b199f8ab24ce2be1d67ef5a49efbaac92bc4efc0db9"
+        },
+        {
+          "path": "docs/reader/transactions/legal-records.sqlite3",
+          "sha256": "6c8a789650977b2a4282f9f623205ee1d4478d56c71dcf05dbe80f0707fda40b"
+        }
+      ],
+      "steps": [
+        "Create a working register with columns: source ID and heading, obligated party, recipient, required action, trigger, timing, evidence needed, evidence supplied, and conclusion. Use one row for each requirement you choose to test. Distinguish an obligation from a right, planning assumption or operating goal.",
+        "From \u201cParties, authority and term,\u201d separate BS&T rail service from ARU terminal/trucking service and RWH receiving duties. Record the billing-agent distinction. Ownership by a parent does not make that parent the performing carrier.",
+        "From **Schedule A**, select one ordinary commodity and transcribe its rail, terminal, truck-trip and combined rate basis. Specify the quantity and accepted rate-version evidence needed to reperform an invoice. Record why the 225-slot allowance, 300-slot design capacity and lack of a minimum-volume guarantee cannot establish billed service. Do not invent a shipment or invoice to fill the register.",
+        "From **Schedule B**, extract the interchange-to-empty-release limit, steel exception, operating goal and customer-caused storage rule into separate rows. Identify start/end timestamps, timezone, cause and charging entity as needed evidence. Explain how elapsed-time testing differs from simply counting scheduled handling windows. Where supporting events are not supplied in the reading packet, conclude \u201cnot tested\u2014event evidence required,\u201d not \u201ccompliant.\u201d",
+        "From **Schedule C**, list the custody events and qualification/insurance evidence required for ordinary inbound service. Keep stated synthetic coverage assumptions separate from actual policy evidence. Record `OPEN_GATED` uranium-product custody as an excluded, separately gated service; do not treat ordinary acid qualification as authorization for uranium.",
+        "From **Schedule D**, extract actual-quantity monthly billing, 30-calendar-day payment terms, asset ownership, breach cure and convenience termination. Record triggering notice/evidence for a deadline; do not fabricate a notice date or claim that a future deadline has passed. Explain why the model's following-month settlement convention alone cannot prove payment within 30 days of a particular invoice.",
+        "Add a missing-evidence column for genuine performance testing: shipment/custody timestamps, rate amendment where applicable, invoice, payment evidence, qualification records, policy evidence, cause allocation and notice correspondence. Mark which are absent from this reading packet. \u201cAbsent here\u201d does not mean absent everywhere in the repository or proof of breach."
+      ]
+    }
+  ]
+}

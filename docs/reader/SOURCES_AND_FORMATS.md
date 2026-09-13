@@ -42,6 +42,8 @@ The repository pages work directly in GitHub. Interactive HTML requires a local 
 
 ## Maintenance
 
+The [approved-file protection guide](APPROVED_ASSET_PROTECTION.md) explains which exact files are protected by existing acceptance records and how changes are detected. It does not grant approval to new designs.
+
 Rebuild the institutional catalog and reader library with:
 
 ```bash
