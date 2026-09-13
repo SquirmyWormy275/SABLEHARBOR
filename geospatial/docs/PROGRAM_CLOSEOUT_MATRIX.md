@@ -106,3 +106,7 @@ traces 444 index/metadata occurrences to 84 hash-verified source documents, incl
 336 repeated search-text copies. Cumulative classification reaches 69,184 occurrences;
 8,961 remain outside the three batches. Derived text is not independent corroboration,
 and substantive geographic claims in the referenced documents remain subject to review.
+
+## Geographic evidence package — September 13, 2026
+
+The [portable package](../closeout/README.md) binds 34 site/component records to 16 exact archived sources, preserves all accepted spatial rows, and exposes source coverage, the 8,961 residual occurrences and 97-image OCR candidate population as GeoPackage attributes. The native QGIS project links review records to canonical object IDs and is checked after relocation. This completes that integration deliverable; it does not resolve the shop/Fort continuity conflict, invent occupancy intervals or complete semantic/history adjudication. Sections 12, 24–30, 40 and 47 therefore retain their substantive open boundaries.

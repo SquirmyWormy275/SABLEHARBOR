@@ -1,0 +1,48 @@
+name: Geographic evidence package
+on:
+  pull_request:
+    paths:
+      - 'geospatial/closeout/**'
+      - 'geospatial/tests/test_site_evidence.py'
+      - '.github/workflows/geographic-evidence.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  package:
+    name: Geographic package / source and native QGIS
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+      - uses: astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d # v10.0.1
+        with:
+          version: "0.12.4"
+      - name: Install native QGIS reader
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y python3-qgis
+      - run: make bootstrap
+      - name: Retrieve immutable predecessor evidence
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release download closeout-evidence-v1.1.0 --pattern sable-harbor-closeout-evidence-v1.1.0.zip --dir var/predecessor
+      - run: uv run --with-requirements geospatial/requirements.txt python -m pytest geospatial/tests/test_site_evidence.py -q
+      - name: Build geographic database and review records
+        run: uv run --with-requirements geospatial/requirements.txt python -m geospatial.closeout.package --output var/geographic-evidence --evidence-archive var/predecessor/sable-harbor-closeout-evidence-v1.1.0.zip
+      - name: Read, render and relocate in native QGIS
+        run: QT_QPA_PLATFORM=offscreen /usr/bin/python3 geospatial/closeout/native.py --package var/geographic-evidence
+      - name: Seal verified package
+        run: uv run --with-requirements geospatial/requirements.txt python -m geospatial.closeout.package --output var/geographic-evidence --seal
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        if: always()
+        with:
+          name: geographic-evidence
+          path: |
+            var/geographic-evidence.zip
+            var/geographic-evidence/BUILD.json
+            var/geographic-evidence/VALIDATION.json
+            var/geographic-evidence/NATIVE_QGIS.json
+            var/geographic-evidence/MAP_PREVIEW.png
+          if-no-files-found: error

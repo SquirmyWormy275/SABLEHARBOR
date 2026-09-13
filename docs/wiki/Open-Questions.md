@@ -24,6 +24,8 @@ The archive deliberately preserves the difference between a complete presentatio
 
 The [closeout evidence dossier](../../evidence/closeout/README.md) supplies runtime observations, retained validation logs and the exact remaining geographic occurrence population. Version 1.1 adds an offline review interface, complete baseline source verification, site records, raster text candidates and portable draft notes. The [completion audit](../audit/COMPLETION_BATCH_2026-09-13.md) accounts for the full remaining scope and owner boundaries. Its [release index](../releases/CLOSEOUT_EVIDENCE_RELEASES.md) provides the versioned workbook and machine-readable records. These are executed reference tests and source reconciliation; the open acceptance requirements above remain explicit.
 
+The [portable geographic evidence package](../../geospatial/closeout/README.md) connects the accepted map layers to site/source review tables in QGIS. Its [release index](../releases/GEOGRAPHIC_EVIDENCE_RELEASES.md) records native validation and downloads. Exact occupancy and historical continuity remain explicit source gaps.
+
 ## What this review changes
 
 The Wiki has been built, published and verified. The earlier reports that its Git endpoint was unavailable are historical. That completes the publication portion of issue #11; it does not complete main-branch protection or the retirement of other sessions’ branches.
