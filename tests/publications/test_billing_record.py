@@ -1,4 +1,5 @@
 """Reject material corruption of the adopted invoice and its source reconciliation."""
+
 import copy
 import json
 import unittest
