@@ -22,7 +22,7 @@ Successor: [PR #105](https://github.com/SquirmyWormy275/SABLEHARBOR/pull/105).
 
 ## Remaining work
 
-1. **Exact sites and occupancy history ([#106](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/106)):** HQ, Fort, Bedford, Demotte, Kelly Gang Mining; Klein/Fort linkage; J2 residential campus; Blackridge precise location; Wallaby/Glasshouse; provisional and former offices; hosting and conversion destination.
+1. **Exact sites and occupancy history ([#106](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/106)):** HQ, Fort, Bedford, Demotte, Kelly Gang Mining; Klein/Fort exact parcel/day precision (linkage resolved); J2 residential campus; Blackridge precise location; Wallaby/Glasshouse; provisional and former offices; hosting and conversion destination.
 2. **Engineering and early railway geometry ([#107](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/107)):** survey-grade transitions/profiles, actual land/access records, early coal/1954 and abandoned alignments, exact external client-site footprints. The current accepted synthetic estate is already implemented.
 3. **Complete geographic program ([#108](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/108)):** semantic adjudication of discovery occurrences, complete enterprise asset histories, remaining temporal map series and future interactive views.
 
@@ -59,7 +59,7 @@ Original headings below are historical requirement identifiers. Superseded names
 | 22 | RED WASH EXACT-SITING WORKFLOW | PARTIAL_OR_FUTURE | Sweetwater anchor locked; complete detailed mine/site engineering remains. |
 | 23 | BS&T NETWORK ENGINEERING WORKFLOW | PARTIAL_OR_FUTURE | Current network, branches, road, tracks and structures consumed; detailed survey/design remains. |
 | 24 | SACRAMENTO HQ GEOMETRY | PARTIAL_OR_FUTURE | Sacramento district retained; exact parcel unfinished. |
-| 25 | EVALON / HAZELWOOD GEOMETRY | PARTIAL_OR_FUTURE | Klein/Fort concept implemented; exact parcel and historical occupancy linkage remain. |
+| 25 | EVALON / HAZELWOOD GEOMETRY | PARTIAL_OR_FUTURE | Klein/Fort continuity resolved by approved staged 2024 relocation; year-bounded occupancy recorded; exact parcels remain. |
 | 26 | CRADLE / BELLE GEOMETRY | PARTIAL_OR_FUTURE | Bedford/Fairmont supersedes Belle; exact site/access unfinished. |
 | 27 | BLACKRIDGE AND OTHER MAJOR ASSETS | PARTIAL_OR_FUTURE | Blackridge Nevada scope retained; exact site unresolved. |
 | 28 | CORPORATE ASSET CENSUS | PARTIAL_OR_FUTURE | 919 files and 78,145 discovery occurrences indexed; semantic long tail remains. |
@@ -121,3 +121,10 @@ Sections 9, 13, 14, 29, 30 and 37 now have an offline interactive timeline, sour
 Sections 6, 28 and 40 gain 295 field-level industrial operations dispositions, bringing the four disjoint batches to 69,479 discovery carriers and leaving 8,666 outside them. Distinct allocations, full containing records and stable asset links are preserved. Full source-level semantic coverage and subsequent-delta review remain open.
 
 The [Klein/Fort continuity proposal](../chronology/CONTINUITY_PROPOSAL.md) makes the unresolved decision concrete but remains PROPOSED. No numbered section is promoted to whole-program completion through this unaccepted proposal. #106 and #108 remain open.
+
+
+## Owner-approved Klein/Fort continuity — September 13, 2026
+
+The [controlling decision](../../docs/canon/KLEIN_FORT_OCCUPANCY_2026-09-13.md) accepts separate premises, continued use after the 2022 recharter and a staged 2024 move with old-shop vacancy that year. `GEO-C002` is resolved. The chronology now has 73 events, and both site histories include approved year-bounded occupancy states. Earlier source/state records remain traceable; no exact day, parcel or component commissioning date is invented.
+
+Registers, GeoPackage attribute data and affected map captions are regenerated. Section 25's historical-linkage requirement is complete. #106's other site/occupancy precision requirements and #108's semantic/history long tail remain open; the approval does not certify those unrelated requirements. Earlier dated increments above describe their historical release state.

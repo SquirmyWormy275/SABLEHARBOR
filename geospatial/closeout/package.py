@@ -21,7 +21,7 @@ from tools.evidence.inventory import inventory
 
 PREDECESSOR_SHA256 = "70723d888c6e9eccf9cc9fac87da4fd37e241468a2aefdf0fc097d7325c379d5"
 GPKG = "geospatial/master/sable_harbor_master_v0.1.gpkg"
-VERSION = "1.1.0"
+VERSION = "1.2.0"
 
 
 def sha(path):
@@ -209,11 +209,11 @@ Source: `{revision}`. {"DEVELOPMENT PREVIEW" if dirty else "Clean source build"}
 
 Open **chronology/history.html** for the new interactive timeline, site histories and dated route views. Open **geospatial/qgis/sable_harbor_master.qgz** in QGIS. Its relative paths work after moving the complete folder. The GeoPackage is **{GPKG}**; it can also be opened directly by GIS or SQLite tools. Open **geospatial/maps/index.html** for the existing facility atlas, or **review/review.html** for the preserved offline review edition.
 
-History edition 1.1.0 adds 72 source-bound events/observations and an additional 295 industrial occurrence dispositions, leaving 8,666 carriers outside four reviewed batches. The original three-batch residual table remains preserved. The proposed Klein/Fort relocation is kept separate in geospatial/chronology/CONTINUITY_PROPOSAL.md and is excluded from accepted history.
+Continuity edition 1.2.0 includes 73 source-bound events/observations and an additional 295 industrial occurrence dispositions, leaving 8,666 carriers outside four reviewed batches. The original three-batch residual table remains preserved. The approved staged 2024 Klein/Fort relocation and year-bounded occupancy are included; exact days and parcel boundaries remain unknown.
 
 The package contains {len(old_counts)} accepted feature layers, 34 site/component source bindings, 8,961 residual occurrences, 919 baseline source records and the 97-image OCR candidate population from evidence release 1.1.0. New review tables are registered as GeoPackage attributes and joined by stable IDs; they are not invented geographic features. SITE_EVIDENCE.csv is the compact review sheet. SITE_EVIDENCE.json preserves all full records, source excerpts, operational-state evidence and map-feature hashes. ARCHIVED_SOURCES.json identifies the exact historical source bytes included under archived-sources/.
 
-Planning envelopes, synthetic engineering and superseded claims keep their original classifications. Programme, incident, provider-selection and acquisition dates are separated from unknown occupancy intervals. The Klein-shop/Fort continuity conflict remains explicit. No survey, real title, new tenancy, custody approval or issue closure is asserted.
+Planning envelopes, synthetic engineering and superseded claims keep their original classifications. Programme, incident, provider-selection and acquisition dates are separated from unknown occupancy intervals. The Klein-shop/Fort continuity conflict is resolved by explicit owner approval of separate premises and a staged 2024 move. No survey, real title, exact lease days, custody approval or whole-issue closure is asserted.
 
 The predecessor offline review remains pinned to its own accepted source; SOURCE_COVERAGE.json and the GeoPackage source-change table describe this package's source revision. OCR candidates are unreviewed machine text, with their original engine/model provenance and logs. Historical QA files elsewhere in the copied geographic tree describe earlier releases; **NATIVE_QGIS.json**, **VALIDATION.json** and the top-level manifest describe this delivery.
 
@@ -252,7 +252,7 @@ def validate(output):
             or attributes["review_occurrences"] != 8961
             or attributes["review_source_coverage"] != 919
             or attributes["review_raster_candidates"] != 97
-            or attributes["review_history_events"] != 72
+            or attributes["review_history_events"] != 73
             or attributes["review_site_history"] != 34
             or attributes["review_operations"] != 295
         ):

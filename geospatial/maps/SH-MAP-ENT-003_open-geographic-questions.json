@@ -7,7 +7,7 @@
   "canon_status": "CONFLICT_REVIEW",
   "source_package_version": "0.1.0-rc4",
   "source_commit": "d91a22c35c91b213204411421de88815f27d8e16",
-  "source_geopackage_sha256": "dbad2c303e9b325a7e98da96c278f619c639ffe51e6514e39be9104c819f75d8",
+  "source_geopackage_sha256": "eb04731cb687f272e2a7bd0b66a8fe36a22307921681aa30e8eec2c1b3937eaa",
   "projection": "EPSG:26913;26917",
   "build_timestamp": "2026-09-07T16:00:00+00:00",
   "builder": "geospatial/scripts/render_maps.py",
@@ -22,15 +22,15 @@
   "files": {
     "pdf": {
       "path": "SH-MAP-ENT-003_open-geographic-questions.pdf",
-      "sha256": "6dfe1c1665075e5de96bcc99f973d9019d291215f4d7a39ef037d001fb172f17"
+      "sha256": "611a163a985166904d2c813ef3cab746ec459dec1a2a51c51e4f406f4bd6fbaf"
     },
     "svg": {
       "path": "SH-MAP-ENT-003_open-geographic-questions.svg",
-      "sha256": "05bffbf7a33c6d5594192f215dd9e2e00858be15754fae14d364a2bc0ba834f4"
+      "sha256": "b7c7a521307d4958348463ccc77a03f0f84495a9de49b684ce7620ea038d4a42"
     },
     "png": {
       "path": "SH-MAP-ENT-003_open-geographic-questions.png",
-      "sha256": "c58d456eaba26d79331ee5096762179abb8f0abbd3a9682d6cfd5624e908462b"
+      "sha256": "fd5b1bca765d325af2b1d55daf5ad5db32030a5439d32024611bb25eca41b19a"
     }
   }
 }

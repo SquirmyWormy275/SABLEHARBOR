@@ -41,12 +41,12 @@
       "source_commit": "d91a22c35c91b213204411421de88815f27d8e16",
       "source_locator": "line:579",
       "exact_source_wording": "Klein leases a light-industrial building outside Pittsburgh with three-phase power, a loading dock, machine tools, improvised test fixtures, and enough space to bring physical equipment indoors.",
-      "relevant_date": "2020–2022",
-      "date_precision": "YEAR_OR_RANGE",
+      "relevant_date": "2021–2024",
+      "date_precision": "YEAR_RANGE",
       "conflict_id": "GEO-C002",
-      "next_action": "Resolve only historical shop versus Hazelwood occupancy linkage.",
-      "notes": "Historical shop outside Pittsburgh; no in-world Evalon-to-Klein rename and no assumed same-site history with the Fort.",
-      "decision_id": "GEO-D017"
+      "next_action": "Historical linkage resolved; retain explicit parcel/access precision limits and year-bounded occupancy.",
+      "notes": "Original leased shop; use continued after the 2022 recharter, with staged relocation and vacancy during 2024. Exact parcel and lease days remain unknown.",
+      "decision_id": "GEO-KLEIN-FORT-20260913"
     },
     {
       "object_id": "SH-SITE-0003",
@@ -63,12 +63,12 @@
       "source_commit": "d91a22c35c91b213204411421de88815f27d8e16",
       "source_locator": "line:75",
       "exact_source_wording": "Willow's Pittsburgh-area physical center is a roughly **10–20 acre** industrial compound informally and then routinely called **the Fort**.",
-      "relevant_date": "2022–2026",
-      "date_precision": "YEAR_OR_RANGE",
+      "relevant_date": "2024–2026",
+      "date_precision": "YEAR_RANGE",
       "conflict_id": "",
-      "next_action": "Site engineering and occupancy history; preserve GEO-C002 without reopening Fort concept.",
-      "notes": "10–20 acres; Big Shed research, Small Shed administration/temporary lodging, White Shed intake/storage, Museum working yard. Exact parcel and historical occupancy remain unlocated.",
-      "decision_id": "GEO-D017"
+      "next_action": "Historical linkage resolved; retain explicit parcel/access precision limits and year-bounded occupancy.",
+      "notes": "Separate Fort premises; principal research operation transferred during 2024. Existing shed functions preserved; exact parcel, entry day and component commissioning dates remain unknown.",
+      "decision_id": "GEO-KLEIN-FORT-20260913"
     },
     {
       "object_id": "SH-SITE-0004",
@@ -4934,6 +4934,24 @@
       "exact_source_wording": "The working yards and accumulated outdoor collection are collectively known as **the Museum**.",
       "claim_status": "CANON_CONSTRAINED",
       "notes": "Current reconciliation; prior source assertion remains preserved."
+    },
+    {
+      "claim_id": "CLM-KF-20260913-SH-SITE-0002",
+      "object_id": "SH-SITE-0002",
+      "source_id": "SRC-KLEIN-FORT-20260913",
+      "source_locator": "Approved history / Temporal representation",
+      "exact_source_wording": "# Klein shop and Fort occupancy continuity\n\n**Decision ID:** `GEO-KLEIN-FORT-20260913`\n**Decision date:** September 13, 2026 (UTC)\n**State:** LOCKED owner-approved fictional history; controlling when accepted into main\n**Scope:** `SH-SITE-0002`, `SH-SITE-0003`, and the narrow continuity question `GEO-C002`\n\n## Authority and supersession\n\nThe owner approved the complete [Klein/Fort proposal](../../geospatial/chronology/CONTINUITY_PROPOSAL.md) in the repository work session, responding **“Approve the proposed history”** to the question specifying continued use after the 2022 recharter, separate Fort premises, a staged move during 2024 and vacancy of the old shop that year. This record implements that approval.\n\nThis decision supersedes only the earlier unresolved same-site/relocation question and missing transition-year statements. It does not alter the Klein name, Willow recharter, approved artwork, Fort functions, institutional ownership, or other enterprise canon. Earlier source bytes and release packages remain historical evidence.\n\n## Approved history\n\nThe original Klein shop is the leased light-industrial building outside Pittsburgh documented in the **2021** narrative. Willow continues using those premises after its **2022** institutional recharter. The recharter itself does not cause a relocation, property transaction or in-world intermediate rename.\n\nDuring **2024**, Willow transfers its principal Pittsburgh research operation to **separate premises**, the industrial compound known as **the Fort**. The move is staged: equipment is inventoried, transported and recommissioned rather than treated as continuously available throughout transfer. The old shop is vacated during that calendar year and is no longer occupied by the team from **January 1, 2025**. January 1 is an exclusion bound, not an invented move or lease-expiration day.\n\nThe retained Klein sign, marked equipment and selected retired prototypes move with the team. Their presence at the Fort establishes artifact continuity, not shared-parcel continuity. The Big Shed, Small Shed, White Shed and Museum keep their accepted functions. No individual component commissioning date is inferred from the relocation year.\n\n## Temporal representation\n\n| Record | Known state | Uncertainty retained |\n|---|---|---|\n| Original shop | Lease documented in 2021; use continues through the 2022 recharter and into the staged transition; vacated during 2024 | Exact initial entry, lease commencement, move and expiration dates |\n| Fort | Separate site; principal research operation transferred during 2024 and established there by the end of that year | Exact entry day and the order/timing of individual equipment and component commissioning |\n| 2024 transition | Both sites may participate in staged operations during the year | No exact overlap interval or simultaneous all-year occupancy asserted |\n\nMachine bounds use exclusive upper limits. For the old shop, `latest_start=2022-01-01` expresses known use by the end of the documented 2021 year; it is not an opening date. Its uncertain end lies in `[2024-01-01, 2025-01-01)`. Fort entry lies in that same year-bounded range. Exact `valid_from`, `valid_to`, `opened_on` and `closed_on` fields remain null. Queries within the transition year report possible occupancy, not a fabricated exact transfer date.\n\n## Geographic and rights boundary\n\nThe stable site IDs remain distinct. The historical shop stays unlocated within the accepted outside-Pittsburgh constraint. The Fort retains its Pittsburgh-area/Hazelwood study geography, 10–20 acre concept and existing component IDs. No parcel boundary, street address, surveyed feature, lessor, ownership interest, real title, statutory document or access agreement is created by this decision.\n\n`GEO-C002` is resolved as **separate premises with staged relocation during 2024**. Other sites retain their individual source-backed or explicitly unresolved geographic and temporal dispositions. Detailed site engineering, actual title/access evidence and the wider historical/semantic programme are outside this approval.\n",
+      "claim_status": "CANON_LOCKED",
+      "notes": "Owner-approved new fictional history, not recovered independent evidence."
+    },
+    {
+      "claim_id": "CLM-KF-20260913-SH-SITE-0003",
+      "object_id": "SH-SITE-0003",
+      "source_id": "SRC-KLEIN-FORT-20260913",
+      "source_locator": "Approved history / Temporal representation",
+      "exact_source_wording": "# Klein shop and Fort occupancy continuity\n\n**Decision ID:** `GEO-KLEIN-FORT-20260913`\n**Decision date:** September 13, 2026 (UTC)\n**State:** LOCKED owner-approved fictional history; controlling when accepted into main\n**Scope:** `SH-SITE-0002`, `SH-SITE-0003`, and the narrow continuity question `GEO-C002`\n\n## Authority and supersession\n\nThe owner approved the complete [Klein/Fort proposal](../../geospatial/chronology/CONTINUITY_PROPOSAL.md) in the repository work session, responding **“Approve the proposed history”** to the question specifying continued use after the 2022 recharter, separate Fort premises, a staged move during 2024 and vacancy of the old shop that year. This record implements that approval.\n\nThis decision supersedes only the earlier unresolved same-site/relocation question and missing transition-year statements. It does not alter the Klein name, Willow recharter, approved artwork, Fort functions, institutional ownership, or other enterprise canon. Earlier source bytes and release packages remain historical evidence.\n\n## Approved history\n\nThe original Klein shop is the leased light-industrial building outside Pittsburgh documented in the **2021** narrative. Willow continues using those premises after its **2022** institutional recharter. The recharter itself does not cause a relocation, property transaction or in-world intermediate rename.\n\nDuring **2024**, Willow transfers its principal Pittsburgh research operation to **separate premises**, the industrial compound known as **the Fort**. The move is staged: equipment is inventoried, transported and recommissioned rather than treated as continuously available throughout transfer. The old shop is vacated during that calendar year and is no longer occupied by the team from **January 1, 2025**. January 1 is an exclusion bound, not an invented move or lease-expiration day.\n\nThe retained Klein sign, marked equipment and selected retired prototypes move with the team. Their presence at the Fort establishes artifact continuity, not shared-parcel continuity. The Big Shed, Small Shed, White Shed and Museum keep their accepted functions. No individual component commissioning date is inferred from the relocation year.\n\n## Temporal representation\n\n| Record | Known state | Uncertainty retained |\n|---|---|---|\n| Original shop | Lease documented in 2021; use continues through the 2022 recharter and into the staged transition; vacated during 2024 | Exact initial entry, lease commencement, move and expiration dates |\n| Fort | Separate site; principal research operation transferred during 2024 and established there by the end of that year | Exact entry day and the order/timing of individual equipment and component commissioning |\n| 2024 transition | Both sites may participate in staged operations during the year | No exact overlap interval or simultaneous all-year occupancy asserted |\n\nMachine bounds use exclusive upper limits. For the old shop, `latest_start=2022-01-01` expresses known use by the end of the documented 2021 year; it is not an opening date. Its uncertain end lies in `[2024-01-01, 2025-01-01)`. Fort entry lies in that same year-bounded range. Exact `valid_from`, `valid_to`, `opened_on` and `closed_on` fields remain null. Queries within the transition year report possible occupancy, not a fabricated exact transfer date.\n\n## Geographic and rights boundary\n\nThe stable site IDs remain distinct. The historical shop stays unlocated within the accepted outside-Pittsburgh constraint. The Fort retains its Pittsburgh-area/Hazelwood study geography, 10–20 acre concept and existing component IDs. No parcel boundary, street address, surveyed feature, lessor, ownership interest, real title, statutory document or access agreement is created by this decision.\n\n`GEO-C002` is resolved as **separate premises with staged relocation during 2024**. Other sites retain their individual source-backed or explicitly unresolved geographic and temporal dispositions. Detailed site engineering, actual title/access evidence and the wider historical/semantic programme are outside this approval.\n",
+      "claim_status": "CANON_LOCKED",
+      "notes": "Owner-approved new fictional history, not recovered independent evidence."
     }
   ],
   "sources": [
@@ -5496,6 +5514,22 @@
       "coverage": "Reno/Boise selected relationships and synthetic owned parcel",
       "source_quality": "OWNER_AUTHORIZED_PENDING_MERGE",
       "notes": "No tenancy, real property title, or operating effectiveness asserted."
+    },
+    {
+      "source_id": "SRC-KLEIN-FORT-20260913",
+      "title": "Approved Klein/Fort occupancy continuity",
+      "publisher_or_author": "Sable Harbor owner",
+      "source_type": "OWNER_APPROVED_CANON",
+      "publication_date": "2026-09-13",
+      "accessed_date": "2026-09-13",
+      "url_or_repo_path": "docs/canon/KLEIN_FORT_OCCUPANCY_2026-09-13.md",
+      "repository_commit": null,
+      "file_sha256": "093f9f3b5bade83368505962db00fde92bfe776f90c26750f65e3d01289a7ea1",
+      "license": "Owner-authorized synthetic project material",
+      "citation": "docs/canon/KLEIN_FORT_OCCUPANCY_2026-09-13.md",
+      "coverage": "Separate premises; staged 2024 relocation; year-bounded occupancy",
+      "source_quality": "OWNER_APPROVED",
+      "notes": "Exact days, parcels, real title and access remain unresolved."
     }
   ],
   "decisions": [
@@ -5946,6 +5980,24 @@
       "alternatives_considered": "Preserve existing Alexandria hosting concept ID.",
       "supersedes_decision_id": null,
       "notes": "Source-prepared September 11; effective land event September 4."
+    },
+    {
+      "decision_id": "GEO-KLEIN-FORT-20260913",
+      "decision_date": "2026-09-13",
+      "decision_title": "Klein shop to separate Fort premises in 2024",
+      "decision_type": "OWNER_APPROVED_CONTINUITY",
+      "affected_object_ids": [
+        "SH-SITE-0002",
+        "SH-SITE-0003"
+      ],
+      "decision_status": "OWNER_APPROVED",
+      "deciding_authority": "Owner: Approve the proposed history",
+      "source_conversation": "Repository work session; explicit acceptance of the staged-2024 relocation proposal",
+      "source_document": "docs/canon/KLEIN_FORT_OCCUPANCY_2026-09-13.md",
+      "rationale": "Resolve physical continuity separately from the 2022 institutional recharter.",
+      "alternatives_considered": "The previously unresolved same-site or separate-site alternatives are superseded by explicit owner acceptance.",
+      "supersedes_decision_id": "GEO-D002",
+      "notes": "Supersedes historical-linkage uncertainty only; Hazelwood study geography and unlocated exact parcels remain."
     }
   ],
   "relationships": [
@@ -6291,14 +6343,15 @@
         "SH-SITE-0002",
         "SH-SITE-0003"
       ],
-      "status": "OPEN_USER_DECISION",
+      "status": "RESOLVED_OWNER_APPROVED_2024_RELOCATION",
       "source_ids": [
         "SRC-A6FFA504C779",
-        "SRC-40E5C203B8CD"
+        "SRC-40E5C203B8CD",
+        "SRC-KLEIN-FORT-20260913"
       ],
-      "recommendation": "Keep the historical outside-Pittsburgh shop separate from the Hazelwood study area until dated evidence establishes same-site continuity or relocation.",
-      "question": "The Fort concept and Klein name are settled. Exact historical shop/campus identity and occupancy dates remain unestablished.",
-      "implications": "No new owner decision is needed about Fort size or shed functions; only historical linkage remains open."
+      "recommendation": "Retain distinct site IDs; use the approved year-bounded relocation and occupancy states.",
+      "question": "Resolved: Willow continued at the original shop after recharter, moved to separate Fort premises during 2024 and vacated the old shop that year.",
+      "implications": "No same-parcel continuity, exact move day, individual component commissioning date or real property right is inferred."
     },
     {
       "conflict_id": "GEO-C003",
@@ -6350,7 +6403,7 @@
       "date_precision": "YEAR",
       "snapshot_as_of": null,
       "recorded_at": "2026-09-06T01:48:26+00:00",
-      "superseded_at": null,
+      "superseded_at": "2026-09-13T06:41:34.203956+00:00",
       "source_effective_date": null,
       "world_state_date": "2026-09-05",
       "source_id": "SRC-A6FFA504C779",
@@ -6380,7 +6433,7 @@
       "date_precision": "YEAR",
       "snapshot_as_of": "2026-09-05",
       "recorded_at": "2026-09-06T01:48:26+00:00",
-      "superseded_at": null,
+      "superseded_at": "2026-09-13T06:41:34.203956+00:00",
       "source_effective_date": null,
       "world_state_date": "2026-09-05",
       "source_id": "SRC-9525A89B2336",
@@ -6446,6 +6499,66 @@
       "source_id": "SRC-9C0F6B8A1E54",
       "decision_id": "GEO-D004",
       "notes": "Institutional/operating-state bounds, not lease occupancy or property ownership. No year-only start is silently assigned January 1."
+    },
+    {
+      "state_id": "STATE-SH-SITE-0002-OCCUPANCY-20260913",
+      "asset_id": "SH-SITE-0002",
+      "canonical_name": "Klein historical shop",
+      "owner_entity": null,
+      "operator_entity": "SH-ENT-002",
+      "host_entity": null,
+      "lessor_entity": null,
+      "rights_type": "FICTIONAL_SITE_OCCUPANCY_NOT_TITLE",
+      "operating_status": "HISTORICAL_OCCUPANCY",
+      "valid_from": null,
+      "valid_to": null,
+      "opened_on": null,
+      "closed_on": null,
+      "acquired_on": null,
+      "disposed_on": null,
+      "earliest_start": null,
+      "latest_start": "2022-01-01",
+      "earliest_end": "2024-01-01",
+      "latest_end": "2025-01-01",
+      "date_precision": "YEAR_BOUNDED",
+      "snapshot_as_of": null,
+      "recorded_at": "2026-09-13T06:41:34.203956+00:00",
+      "superseded_at": null,
+      "source_effective_date": "2026-09-13",
+      "world_state_date": "2026-09-13",
+      "source_id": "SRC-KLEIN-FORT-20260913",
+      "decision_id": "GEO-KLEIN-FORT-20260913",
+      "notes": "Owner-approved staged relocation in 2024. Exclusive upper bounds; exact lease/entry/exit days, parcel and rights remain unknown. This occupancy evidence is separate from institutional founding."
+    },
+    {
+      "state_id": "STATE-SH-SITE-0003-OCCUPANCY-20260913",
+      "asset_id": "SH-SITE-0003",
+      "canonical_name": "Willow Pittsburgh laboratory",
+      "owner_entity": null,
+      "operator_entity": "SH-ENT-002",
+      "host_entity": null,
+      "lessor_entity": null,
+      "rights_type": "FICTIONAL_SITE_OCCUPANCY_NOT_TITLE",
+      "operating_status": "CURRENT_OCCUPANCY",
+      "valid_from": null,
+      "valid_to": null,
+      "opened_on": null,
+      "closed_on": null,
+      "acquired_on": null,
+      "disposed_on": null,
+      "earliest_start": "2024-01-01",
+      "latest_start": "2025-01-01",
+      "earliest_end": null,
+      "latest_end": null,
+      "date_precision": "YEAR_BOUNDED",
+      "snapshot_as_of": null,
+      "recorded_at": "2026-09-13T06:41:34.203956+00:00",
+      "superseded_at": null,
+      "source_effective_date": "2026-09-13",
+      "world_state_date": "2026-09-13",
+      "source_id": "SRC-KLEIN-FORT-20260913",
+      "decision_id": "GEO-KLEIN-FORT-20260913",
+      "notes": "Owner-approved staged relocation in 2024. Exclusive upper bounds; exact lease/entry/exit days, parcel and rights remain unknown. This occupancy evidence is separate from institutional founding."
     }
   ],
   "rail_routes": [

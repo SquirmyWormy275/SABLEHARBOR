@@ -7,7 +7,7 @@
   "canon_status": "CONFLICT_REVIEW",
   "source_package_version": "0.1.0-rc4",
   "source_commit": "d91a22c35c91b213204411421de88815f27d8e16",
-  "source_geopackage_sha256": "dbad2c303e9b325a7e98da96c278f619c639ffe51e6514e39be9104c819f75d8",
+  "source_geopackage_sha256": "eb04731cb687f272e2a7bd0b66a8fe36a22307921681aa30e8eec2c1b3937eaa",
   "projection": "EPSG:26910;26917;26913",
   "build_timestamp": "2026-09-07T16:00:00+00:00",
   "builder": "geospatial/scripts/render_maps.py",
@@ -20,15 +20,15 @@
   "files": {
     "pdf": {
       "path": "SH-MAP-ENT-001_locked-geographic-framework.pdf",
-      "sha256": "f7e5cb4f3fb04d31182a10206246aaf4b2473e3745c949a19607906d347fbc34"
+      "sha256": "6038d11dab555704e831603f071383fbe63807267b708234656bf3b0775ec34d"
     },
     "svg": {
       "path": "SH-MAP-ENT-001_locked-geographic-framework.svg",
-      "sha256": "05effca77a8d8cb085f56c23063d91fe3ead23cd84eaaea7fce19404f1b5cf93"
+      "sha256": "6f62646f35c442fc006316e5aa19a0604cfdfd446d290d210f536dcc432f9390"
     },
     "png": {
       "path": "SH-MAP-ENT-001_locked-geographic-framework.png",
-      "sha256": "4763ce2705a3f14c9b30b40e31415304a0621cbe7bc5fb15147734721b53f3f3"
+      "sha256": "7fe0090bc14cfa854ea34c53c9df822cf28ba27709ce34e10cdd664ff9973e43"
     }
   }
 }

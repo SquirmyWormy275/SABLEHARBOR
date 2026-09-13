@@ -190,7 +190,7 @@ def build():
             "2021",
             evidence,
             ["SH-SITE-0002"],
-            "Positive year-bounded lease evidence recovered from the section heading and sentence. Exact commencement, expiration, parcel and Fort continuity remain unknown.",
+            "Positive year-bounded lease evidence recovered from the section heading and sentence. Exact commencement, expiration and parcel remain unknown. Later approved continuity is recorded separately.",
             "Pittsburgh area",
         )
     )
@@ -216,6 +216,21 @@ def build():
             "Pittsburgh area",
         )
     )
+    from geospatial.chronology.continuity import evidence as continuity_evidence
+
+    approved = continuity_evidence()
+    events.append(
+        event(
+            "MOVE-KLEIN-FORT-2024",
+            "Willow transfers from the Klein shop to separate Fort premises",
+            "SITE_RELOCATION",
+            "2024",
+            approved,
+            ["SH-SITE-0002", "SH-SITE-0003"],
+            "Owner-approved staged relocation and old-shop vacancy during 2024. Exact days, parcel boundaries and component commissioning dates remain unknown.",
+            "Pittsburgh area",
+        )
+    )
     sites, _ = site_review()
     histories = []
     for site in sites["rows"]:
@@ -228,7 +243,8 @@ def build():
                 dated_lease_observation="OBS-KLEIN-LEASE-2021"
                 if site["object_id"] == "SH-SITE-0002"
                 else None,
-                occupancy_interval=None,
+                occupancy_interval=site["occupancy_bounds"],
+                continuity_evidence=site["continuity_evidence"],
                 geometry_disposition=site["geometry_disposition"],
                 access_disposition=site["access_disposition"],
                 period_meaning=site["period_meaning"],
@@ -236,8 +252,8 @@ def build():
                 conflicts=site["conflict_ids"],
                 source=site["source"],
                 operational_states=site["retained_operational_states"],
-                disposition="DATED_LEASE_OBSERVATION_INTERVAL_UNKNOWN"
-                if site["object_id"] == "SH-SITE-0002"
+                disposition="OWNER_APPROVED_YEAR_BOUNDED_OCCUPANCY"
+                if site["occupancy_bounds"]
                 else "SOURCE_BOUND_HISTORY_WITH_EXPLICIT_GAPS",
             )
         )
@@ -260,7 +276,7 @@ def build():
                     )
                 )
     return dict(
-        version="1.0.0",
+        version="1.2.0",
         build_revision=subprocess.check_output(
             ["git", "rev-parse", "HEAD"], cwd=ROOT, text=True
         ).strip(),
@@ -273,7 +289,7 @@ def build():
             "Event bounds are not occupancy intervals.",
             "No pre-1968 alignment is inferred from modern track.",
             "Current facility footprints do not prove historical footprints.",
-            "Proposed continuity is excluded from accepted data.",
+            "Owner-approved staged 2024 relocation uses uncertain year bounds, not an invented exact move day.",
         ],
         issues_closed=[],
     )
