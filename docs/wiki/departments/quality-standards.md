@@ -3,9 +3,13 @@
 <img src="../../../assets/brand/logos/sable-harbor__reverse-horizontal.png" alt="Sable Harbor approved identity" width="360">
 
 **Canon state:** LOCKED institutional scope; implementation detail varies by linked record.<br>
-**Last substantive review:** September 11, 2026. This page is secondary navigation; the linked source records control.
+**Reviewed:** September 12, 2026. This is a reading guide; linked source records control.
 
 This ESS capability maintains common quality requirements and technical standards where enterprise consistency is justified. Professional standards do not transfer daily business operating authority to headquarters.
+
+## Reading guide
+
+Professional practices steward methods and standards while businesses own their work. Use this distinction when reading technical requirements, qualification evidence and a proposed transfer from research into operations.
 
 ## Read and use the records
 
@@ -22,8 +26,17 @@ This ESS capability maintains common quality requirements and technical standard
 
 The shared chart retains its original scope; it is not a new reporting chart for this page. The approved corporate mark above identifies the parent institution.
 
-## Boundaries and unresolved detail
-
-This page indexes an accepted capability. It does not create a new department, certification program or body of approved engineering standards.
-
 [Department and institution directory](README.md) · [Business directory](../businesses/README.md) · [Wiki home](../Home.md)
+
+## What remains unknown
+
+Standards stewardship does not establish a separate reporting chain or qualify a prototype for deployment. Business-specific evidence and unresolved technical detail still govern. See the [open questions register](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Open-Questions) for the evidence needed to resolve tracked gaps.
+
+## Related reading
+
+- [Willow](../businesses/Willow.md)
+- [Project Cradle](../businesses/Cradle.md)
+- [Safety and environmental governance](safety-environment.md)
+- [Enterprise Technology Services](technology.md)
+
+Related reading describes useful connections, not additional reporting lines.

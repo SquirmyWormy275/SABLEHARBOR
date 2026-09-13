@@ -6,7 +6,11 @@
 
 American Resource Utility provides railway, terminal, trucking and warehouse services for industrial customers. Blood, Sweat & Tears Railway Company is its separately incorporated railway subsidiary. Taylor, Wamsutter and Rawlins records describe different parts of the operating network.
 
-**Reader status:** Navigation summary checked September 11, 2026. Linked canon controls; this page creates no new facts. Existing chart artwork is from publication 1.1.0, September 10, 2026. Financial cases are publicly synthetic.
+**Reviewed:** September 12, 2026 · Fictional enterprise; source records control.
+
+## Reading guide
+
+Follow freight through railway, truck, terminal and warehouse services, then reconcile the service volumes and costs. Use the legal ownership chain when studying consolidation and the operating network when studying capacity.
 
 ## Start here
 
@@ -53,6 +57,15 @@ The [finance successor guide](../../../enterprise/business/README.md) explains g
 
 Use the [complete facility artifact index](../../../geospatial/maps/facilities/ARTIFACT_INDEX.md) for independently saved maps and floor plans, or open the [interactive atlas](../../../geospatial/maps/index.html) locally in a browser. GitHub displays the linked Markdown and images directly; it does not execute the atlas HTML.
 
-## Limits to keep visible
+## What remains unknown
 
-Historical geometry and detailed engineering retain explicit unresolved boundaries. Neither a map nor a service forecast grants custody permission, creates a mine spur or demonstrates safety qualification.
+Early railway alignments and detailed engineering remain incomplete. Service availability does not establish uranium custody qualification or authorize a mine spur. See the [open questions register](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Open-Questions) for the evidence needed to resolve tracked gaps.
+
+## Related reading
+
+- [Pale Sun / Red Wash](Pale-Sun-Red-Wash.md)
+- [Procurement and vendor support](../departments/procurement.md)
+- [Safety and environmental governance](../departments/safety-environment.md)
+- [Finance](../departments/finance.md)
+
+Related reading describes useful connections, not additional reporting lines.

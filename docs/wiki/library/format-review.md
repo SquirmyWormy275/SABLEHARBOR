@@ -6,11 +6,11 @@ Generated reconciliation queue, not an assertion that every unpaired record lack
 
 | State | Records |
 |---|---:|
-| COUNTERPART_REVIEW_REQUIRED | 26 |
+| COUNTERPART_REVIEW_REQUIRED | 27 |
 | HISTORICAL_COUNTERPART_UNRESOLVED | 57 |
 | NAVIGATION_ALIAS_NO_PUBLICATION | 3 |
-| READER_MAINTENANCE_NO_LETTERHEAD | 113 |
-| READER_OR_MAINTENANCE_PAGE | 148 |
+| READER_MAINTENANCE_NO_LETTERHEAD | 112 |
+| READER_OR_MAINTENANCE_PAGE | 151 |
 | UNRESOLVED_DOCUMENT_COUNTERPART | 227 |
 | VERIFIED_ACCEPTED_EVIDENCE_PACKET | 1 |
 | VERIFIED_CHART_PUBLICATION | 40 |
@@ -21,6 +21,7 @@ Generated reconciliation queue, not an assertion that every unpaired record lack
 
 Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENCE_COMPLETION.md). Other corporate records require scoped format review before any batch rendering. Existing approved visuals are retained; this queue does not authorize automatic publication.
 
+- [Contributing to Sable Harbor](../../../CONTRIBUTING.md) — Corporate document-format reconciliation
 - [Branch and Pull Request Register](../../audit/BRANCH_AND_PR_REGISTER.md) — SH-FIN-HUMAN-001
 - [Outstanding issue review — September 12, 2026](../../audit/ISSUE_CLOSEOUT_2026-09-12.md) — SH-FIN-HUMAN-001
 - [Accounting, finance and audit practice](../../finance/READER_EXERCISES.md) — SH-FIN-HUMAN-001

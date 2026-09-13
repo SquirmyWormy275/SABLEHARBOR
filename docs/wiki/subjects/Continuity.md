@@ -15,3 +15,21 @@ A useful exercise follows one service dependency, the stated recovery requiremen
 The linked CCF work is independently maintained. This subject page provides access to its accepted source and does not add controls, mappings, conclusions or workflow implementation.
 
 [Subject directory](README.md) · [Business directory](../businesses/README.md) · [Department directory](../departments/README.md) · [Wiki home](../Home.md)
+
+## Reading guide
+
+Follow one dependency from the service that must continue to its recovery requirement, governance owner and available evidence. The work crosses existing functions; the records do not establish a separate resilience department.
+
+
+## What remains unknown
+
+Plans and synthetic restoration results do not establish enterprise-wide recovery effectiveness or an operating runtime estate. Missing evidence and failed tests remain distinct. See the [open questions register](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Open-Questions) for the evidence needed to resolve tracked gaps.
+
+## Related reading
+
+- [Corporate Secretary](../departments/corporate-secretary.md)
+- [Enterprise Technology Services](../departments/technology.md)
+- [Enterprise security capability](../departments/security.md)
+- [Internal Audit](../departments/internal-audit.md)
+
+Related reading describes useful connections, not additional reporting lines.

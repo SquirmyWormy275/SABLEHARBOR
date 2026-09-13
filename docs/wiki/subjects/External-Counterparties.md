@@ -15,3 +15,21 @@ For a transaction exercise, follow the [Red Wash transaction file](../../../indu
 Related: [Cradle hosts](External-Hosts.md), [abandoned acquisition opportunities](Historical-Opportunities.md), [Blackridge separate case](Blackridge.md).
 
 [Subject directory](README.md) · [Business directory](../businesses/README.md) · [Department directory](../departments/README.md) · [Wiki home](../Home.md)
+
+## Reading guide
+
+Use this page to separate investors, sellers, suppliers and personal relationships from the company’s operating businesses. A relationship can matter to the history without making the counterparty part of the organization.
+
+
+## What remains unknown
+
+Names and relationship charts do not establish executed supplier contracts, institutional employment or legal ownership beyond the controlling record. See the [open questions register](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Open-Questions) for the evidence needed to resolve tracked gaps.
+
+## Related reading
+
+- [Cradle's external hosts](External-Hosts.md)
+- [Founders, early colleagues and later people](People.md)
+- [Procurement and vendor support](../departments/procurement.md)
+- [Board and committees](../departments/board.md)
+
+Related reading describes useful connections, not additional reporting lines.

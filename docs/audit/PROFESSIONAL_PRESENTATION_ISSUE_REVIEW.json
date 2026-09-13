@@ -1,0 +1,122 @@
+{
+  "review_date": "2026-09-12",
+  "baseline": "659a56747fe76522d18645ff115888c13fa8d2b0",
+  "scope": "Read-only review of all 11 outstanding issues; no inferred canon or transfer of another session\u2019s work.",
+  "issues": [
+    {
+      "number": 11,
+      "title": "Repository administration: protect main and retire superseded branches",
+      "disposition": "OPEN",
+      "reason": "Wiki publication is complete. Main protection and branch retirement remain administrative work; shared branches stay with their owners.",
+      "source": "docs/wiki/README.md",
+      "source_sha256": "4112609197c59569e13f23e3834235953dbe07bfd24744850914f7e57fbb2bfe",
+      "issue_body_sha256": "bd4f5fce6fb95a48c3570936670f5d697dcd9f8aa878de41e1302c86d7dfec5b"
+    },
+    {
+      "number": 18,
+      "title": "OPEN CANON: residual parent tax and external legal execution",
+      "disposition": "OPEN",
+      "reason": "Parent tax decisions, executed carry instruments and commercial name clearance still require their specified evidence.",
+      "source": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md",
+      "source_sha256": "9e5c2c9849f903ac945d2f1668aa2703e2d95a0de7cca94ad4a330731d3cf7a5",
+      "issue_body_sha256": "b5d6ccf9685907ff89fda2186ffec59fa5af130df75b9f0599041c1ed097188d"
+    },
+    {
+      "number": 19,
+      "title": "OPEN CANON: remaining J2 leaders and appointment histories (six approved; staffing resolved)",
+      "disposition": "OPEN",
+      "reason": "Six occupants and the 237-billet establishment are accepted. Remaining occupants and exact appointment histories are not supplied.",
+      "source": "docs/canon/J2_LEADERSHIP_APPOINTMENTS_2026-09-10.md",
+      "source_sha256": "05ee1d4bbcad3ff2de9f623de0b57373acaaf611c0b161664a9f3e36b1066509",
+      "issue_body_sha256": "1a978033878586238dad21139432c66a34d947d2521881833c1a1aa53dc45f23"
+    },
+    {
+      "number": 21,
+      "title": "OPEN CANON: Alexandria runtime technology stack",
+      "disposition": "OPEN",
+      "reason": "Accepted runtime design and reference implementation do not establish integrated deployment qualification; preserve the runtime/CCF owner boundary.",
+      "source": "enterprise/runtime/DISPOSITION.md",
+      "source_sha256": "98a6e0f22ba6f56a384c28b3017cac986f27a49ca8b3322567914c5c9ddec4bd",
+      "issue_body_sha256": "6343c399c9d4daa2d29f1175475fc46a9e3a5876b9300d12966355ebc806e60c"
+    },
+    {
+      "number": 22,
+      "title": "OPEN CANON: Collection entitlement and raw-source access model",
+      "disposition": "OPEN",
+      "reason": "Reference authorization logic does not establish production source rights or integrated entitlement enforcement.",
+      "source": "enterprise/runtime/docs/ARCHITECTURE_AND_RUNBOOKS.md",
+      "source_sha256": "202a5eb3e4e44695759a8c668a436a332d2d812472aa26efaf176b55b6fae908",
+      "issue_body_sha256": "c0ec9d711b1ea85e8a02437e2cd2266d8aa830ee048a227fa13d35a41fc51f1a"
+    },
+    {
+      "number": 24,
+      "title": "OPEN CANON: Retention and deletion rules",
+      "disposition": "OPEN",
+      "reason": "Generated-artifact retention does not settle Alexandria class-based retention, hold, deletion and enforcement requirements.",
+      "source": "docs/governance/GENERATED_RECORDS_LIFECYCLE.md",
+      "source_sha256": "6ccf966b6d8f041b57ad8c0c5f8a43ae908324dd4321ed91126b894cc2aecfc5",
+      "issue_body_sha256": "8c2d0ba2faf71c5d4067d8f9d872019125667302f5fbaaa49f1431499ea7bf59"
+    },
+    {
+      "number": 34,
+      "title": "OPEN CANON: Daedalus runtime policy and leakage tests",
+      "disposition": "OPEN",
+      "reason": "Reference tests do not establish deployed Daedalus disclosure controls and inference-leakage enforcement.",
+      "source": "enterprise/runtime/docs/ASSURANCE_SCOPE.md",
+      "source_sha256": "4db7e0b179802891b1a632d08d280445350339cee7fbb70a89d059020e587994",
+      "issue_body_sha256": "8d7e27ac2a21eef0f47865accfae1d617625fff7f08a2905e270649a5002cd5e"
+    },
+    {
+      "number": 88,
+      "title": "CLOSEOUT: recover the exact approved Sacramento HQ image",
+      "disposition": "OPEN",
+      "reason": "The exact approved September 3 headquarters image remains missing; a similar image cannot satisfy its hash requirement.",
+      "source": "docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md",
+      "source_sha256": "25e484d7fbc2c83a37f0e7ae7fe20ff741cde176bd0c2ba7be742fa7fb3e2624",
+      "issue_body_sha256": "5978959b6a025be839676ea9117ac3a8d908995c54fb9d4cf5daa4ea3b0de102"
+    },
+    {
+      "number": 106,
+      "title": "Geo: complete precise site geometry and historical occupancy records",
+      "disposition": "OPEN",
+      "reason": "Precise geometry, source-backed access and historical occupancy remain incomplete for identified sites.",
+      "source": "geospatial/docs/PROGRAM_CLOSEOUT_MATRIX.md",
+      "source_sha256": "0d80de7325879de39333121aae8f8fb7e3b9c234189f476071a9411904e05bac",
+      "issue_body_sha256": "5d9f4dff575ff18c39a53ed2bb726dc9978f6581736f26c69d1d6e84b44aad45"
+    },
+    {
+      "number": 107,
+      "title": "Geo: complete early railway geometry and remaining detailed engineering",
+      "disposition": "OPEN",
+      "reason": "Early railway alignments and remaining detailed engineering are not established by the accepted present-day synthetic network.",
+      "source": "geospatial/docs/PROGRAM_CLOSEOUT_MATRIX.md",
+      "source_sha256": "0d80de7325879de39333121aae8f8fb7e3b9c234189f476071a9411904e05bac",
+      "issue_body_sha256": "aa965f1fe0043ef9dc22085d8d474d1c02ba90062ad20a3a25af1f2c9c5bfac5"
+    },
+    {
+      "number": 108,
+      "title": "Geo: complete semantic asset census and temporal geographic program",
+      "disposition": "OPEN",
+      "reason": "Three batches classify 69,184 occurrence carriers; 8,961 remain outside those batches. Source-level semantic, OCR and temporal-history work remains.",
+      "source": "geospatial/adjudication/README.md",
+      "source_sha256": "03a89a6b39ddf40ec2afb951fa82933e45c51bfa23801be889d590bf2709b27f",
+      "issue_body_sha256": "ca482b94f0d5da3beef3a804a7fa1e63a0ad156500e0c98a3f36a067ff86bd56"
+    }
+  ],
+  "hq_asset_check": {
+    "scope": "Tracked raster images in the inspected main checkout only; no unrelated worktree or private package search.",
+    "checked_files": 570,
+    "required_sha256": "2bf5a1209b9c3ece435271f2fbf5a3c827bbbccf242ea4ee60535749ccee9d92",
+    "matches": []
+  },
+  "administration": {
+    "rulesets": [],
+    "main_protection": "GitHub returned 404 for the branch-protection endpoint; no existing protection was verified.",
+    "shared_branch_mutations": "Deferred under the user boundary: manage only this session\u2019s branches and CI runs."
+  },
+  "published_wiki_at_review": {
+    "source_revision": "659a56747fe76522d18645ff115888c13fa8d2b0",
+    "wiki_commit": "6e884db8b9e6e3ef9968f438484821299a95571d",
+    "verified_pages": 275
+  }
+}

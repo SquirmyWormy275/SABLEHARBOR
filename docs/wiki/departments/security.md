@@ -3,9 +3,13 @@
 <img src="../../../assets/brand/logos/sable-harbor__reverse-horizontal.png" alt="Sable Harbor approved identity" width="360">
 
 **Canon state:** LOCKED institutional scope; implementation detail varies by linked record.<br>
-**Last substantive review:** September 11, 2026. This page is secondary navigation; the linked source records control.
+**Reviewed:** September 12, 2026. This is a reading guide; linked source records control.
 
 The enterprise security capability protects systems and data and manages cybersecurity incidents. The CISO retains an independent security authority boundary within the enterprise support environment.
+
+## Reading guide
+
+Security provides a distinct authority boundary alongside enterprise technology services. The doctrine favors controls built into systems, proportionate restrictions and practical secure ways to do the work.
 
 ## Read and use the records
 
@@ -24,10 +28,18 @@ The enterprise security capability protects systems and data and manages cyberse
 
 The shared chart retains its original scope; it is not a new reporting chart for this page. The approved corporate mark above identifies the parent institution.
 
-## Boundaries and unresolved detail
-
-“Enterprise Security” is the current chart’s capability label; it does not establish a newly named department. System monitoring is not generalized employee surveillance.
-
 [Department and institution directory](README.md) · [Business directory](../businesses/README.md) · [Wiki home](../Home.md)
-
 [Continuity and crisis responsibilities across the existing institutions](../subjects/Continuity.md).
+
+## What remains unknown
+
+Security doctrine and deterministic reference checks do not establish deployed enforcement, supplier assurance or complete inference-leakage protection. See the [open questions register](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Open-Questions) for the evidence needed to resolve tracked gaps.
+
+## Related reading
+
+- [Enterprise Technology Services](technology.md)
+- [Risk & Compliance](risk-compliance.md)
+- [Alexandria institutional environment](alexandria.md)
+- [Continuity and crisis responsibilities](../subjects/Continuity.md)
+
+Related reading describes useful connections, not additional reporting lines.

@@ -89,3 +89,7 @@ check-operations:
 
 wiki-publish:
 	uv run python -m tools.wiki.publish
+
+.PHONY: wiki-freshness
+wiki-freshness: ## Compare the published Wiki with current reading inputs
+	uv run python -m tools.wiki.freshness

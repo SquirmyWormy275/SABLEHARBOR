@@ -3,9 +3,13 @@
 <img src="../../../assets/brand/logos/j2__primary-horizontal.png" alt="J2 approved identity" width="240">
 
 **Canon state:** LOCKED institutional scope; implementation detail varies by linked record.<br>
-**Last substantive review:** September 11, 2026. This page is secondary navigation; the linked source records control.
+**Reviewed:** September 12, 2026. This is a reading guide; linked source records control.
 
 Education designs and teaches enterprise and professional courses, cases and exercises, and supports conferences. Subject owners retain responsibility for law, safety, controls and technical content; Education owns instructional design.
+
+## Reading guide
+
+Education turns work and institutional experience into opportunities to learn and develop judgment. Read the program families alongside the rotating faculty model and the responsibilities of Orientation and JAG.
 
 ## Read and use the records
 
@@ -24,8 +28,17 @@ Education designs and teaches enterprise and professional courses, cases and exe
 
 The shared chart retains its original scope; it is not a new reporting chart for this page. The approved J2 mark above identifies the parent institution.
 
-## Boundaries and unresolved detail
-
-Learners, rotating faculty, permanent billets and residential capacity are different populations. A planned classroom or course design does not establish a completed operating campus.
-
 [Department and institution directory](README.md) · [Business directory](../businesses/README.md) · [Wiki home](../Home.md)
+
+## What remains unknown
+
+Program names do not establish a new staffing population, actual residential occupancy or completed teaching events. Model capacity retains its source scope. See the [open questions register](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Open-Questions) for the evidence needed to resolve tracked gaps.
+
+## Related reading
+
+- [People & Culture](people-culture.md)
+- [Orientation](orientation.md)
+- [Junction Advisory Group](jag.md)
+- [Sable Harbor Advisory](../businesses/Advisory.md)
+
+Related reading describes useful connections, not additional reporting lines.

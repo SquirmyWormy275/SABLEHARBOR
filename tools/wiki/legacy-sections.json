@@ -1,0 +1,156 @@
+{
+  "source_revision": "659a56747fe76522d18645ff115888c13fa8d2b0",
+  "wiki_commit": "6e884db8b9e6e3ef9968f438484821299a95571d",
+  "routes": {
+    "Reading--advisory": {
+      "advisory-reading-room": "advisory-matters"
+    },
+    "Reading--assets": {
+      "assets-reading-room": "identity-and-artwork"
+    },
+    "Reading--audit": {
+      "audit-reading-room": "audit-evidence"
+    },
+    "Reading--blackridge": {
+      "blackridge-reading-room": "blackridge-case"
+    },
+    "Reading--business-lines": {
+      "business-lines-reading-room": "business-dossiers"
+    },
+    "Reading--canon": {
+      "canon-reading-room": "canon-and-decisions"
+    },
+    "Reading--controls": {
+      "controls-reading-room": "controls-and-assurance"
+    },
+    "Reading--enterprise": {
+      "enterprise-reading-room": "enterprise-models-and-services"
+    },
+    "Reading--finance": {
+      "finance-reading-room": "finance-and-accounting"
+    },
+    "Reading--geospatial": {
+      "geospatial-reading-room": "places-and-facilities"
+    },
+    "Reading--governance": {
+      "governance-reading-room": "governance-and-authority"
+    },
+    "Reading--industrial": {
+      "industrial-reading-room": "industrial-cases"
+    },
+    "Reading--internal": {
+      "internal-reading-room": "catalog-and-source-tools"
+    },
+    "Reading--j2": {
+      "j2-reading-room": "j2-and-institutional-memory"
+    },
+    "Reading--organization": {
+      "organization-reading-room": "people-and-organization"
+    },
+    "Reading--reader": {
+      "reader-reading-room": "practical-reading-and-exercises"
+    },
+    "Reading--red_wash": {
+      "red_wash-reading-room": "red-wash-records"
+    },
+    "Reading--reference": {
+      "reference-reading-room": "document-reference"
+    },
+    "Reading--releases": {
+      "releases-reading-room": "release-packages"
+    },
+    "Reading--tools": {
+      "tools-reading-room": "publication-tools"
+    },
+    "businesses--Advisory": {
+      "limits-to-keep-visible": "what-remains-unknown"
+    },
+    "businesses--American-Resource-Utility": {
+      "limits-to-keep-visible": "what-remains-unknown"
+    },
+    "businesses--Atlas-Meridian": {
+      "limits-to-keep-visible": "what-remains-unknown"
+    },
+    "businesses--Cradle": {
+      "limits-to-keep-visible": "what-remains-unknown"
+    },
+    "businesses--Foundry-Field": {
+      "limits-to-keep-visible": "what-remains-unknown"
+    },
+    "businesses--Pale-Sun-Red-Wash": {
+      "limits-to-keep-visible": "what-remains-unknown"
+    },
+    "businesses--Willow": {
+      "limits-to-keep-visible": "what-remains-unknown"
+    },
+    "departments--alexandria": {
+      "boundaries-and-unresolved-detail": "what-remains-unknown"
+    },
+    "departments--board": {
+      "boundaries-and-unresolved-detail": "what-remains-unknown"
+    },
+    "departments--contact": {
+      "boundaries-and-unresolved-detail": "what-remains-unknown"
+    },
+    "departments--corporate-secretary": {
+      "boundaries-and-unresolved-detail": "what-remains-unknown"
+    },
+    "departments--education": {
+      "boundaries-and-unresolved-detail": "what-remains-unknown"
+    },
+    "departments--ess": {
+      "boundaries-and-unresolved-detail": "what-remains-unknown"
+    },
+    "departments--executive": {
+      "boundaries-and-unresolved-detail": "what-remains-unknown"
+    },
+    "departments--facilities": {
+      "boundaries-and-unresolved-detail": "what-remains-unknown"
+    },
+    "departments--finance": {
+      "boundaries-and-unresolved-detail": "what-remains-unknown"
+    },
+    "departments--internal-audit": {
+      "boundaries-and-unresolved-detail": "what-remains-unknown"
+    },
+    "departments--j2-headquarters": {
+      "boundaries-and-unresolved-detail": "what-remains-unknown"
+    },
+    "departments--j2": {
+      "boundaries-and-unresolved-detail": "what-remains-unknown"
+    },
+    "departments--jag": {
+      "boundaries-and-unresolved-detail": "what-remains-unknown"
+    },
+    "departments--judgment": {
+      "boundaries-and-unresolved-detail": "what-remains-unknown"
+    },
+    "departments--legal": {
+      "boundaries-and-unresolved-detail": "what-remains-unknown"
+    },
+    "departments--orientation": {
+      "boundaries-and-unresolved-detail": "what-remains-unknown"
+    },
+    "departments--people-culture": {
+      "boundaries-and-unresolved-detail": "what-remains-unknown"
+    },
+    "departments--procurement": {
+      "boundaries-and-unresolved-detail": "what-remains-unknown"
+    },
+    "departments--quality-standards": {
+      "boundaries-and-unresolved-detail": "what-remains-unknown"
+    },
+    "departments--risk-compliance": {
+      "boundaries-and-unresolved-detail": "what-remains-unknown"
+    },
+    "departments--safety-environment": {
+      "boundaries-and-unresolved-detail": "what-remains-unknown"
+    },
+    "departments--security": {
+      "boundaries-and-unresolved-detail": "what-remains-unknown"
+    },
+    "departments--technology": {
+      "boundaries-and-unresolved-detail": "what-remains-unknown"
+    }
+  }
+}
