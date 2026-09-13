@@ -1,0 +1,513 @@
+{
+  "baseline_revision": "3004549cfe2018698b0a5085abd90d1d85ad2f68",
+  "status": "REVIEW_REQUIRED",
+  "changes": [
+    {
+      "path": "docs/legal/gap-instruments/case-briefs/manifest.json",
+      "before": "977eb421f8231cec113729e9332de8a741c82a4918bba5221807b102de391ceb",
+      "after": "bd98dad6fcd3e12257eb978e9e0e2b1734c0c44c7956346487a0cf1365584db8",
+      "change": "MODIFIED"
+    },
+    {
+      "path": "tools/legal_gaps/case_briefs.py",
+      "before": "ec61a98624476a89f18095bfa5aade6005e91ffa1611129e6b624bda49252bf0",
+      "after": "dd85f7f4573555675a780f059116fa15371b7ef8b72e57d13d070f9321ed0cf1",
+      "change": "MODIFIED"
+    }
+  ],
+  "impacted": [
+    {
+      "node": {
+        "id": "docs/legal/gap-instruments/case-briefs/README.md",
+        "path": "docs/legal/gap-instruments/case-briefs/README.md",
+        "kind": "file",
+        "role": "artifact",
+        "sha256": "db0a4f1494e3588891aa2d8e69f9566a342434ccd62e58d9c14394a021d6d857"
+      },
+      "changed_inputs": [
+        "docs/legal/gap-instruments/case-briefs/manifest.json",
+        "tools/legal_gaps/case_briefs.py"
+      ],
+      "dependency_edges": [
+        {
+          "source": "docs/legal/gap-instruments/case-briefs/manifest.json",
+          "target": "docs/legal/gap-instruments/case-briefs/README.md",
+          "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+        },
+        {
+          "source": "tools/legal_gaps/case_briefs.py",
+          "target": "docs/legal/gap-instruments/case-briefs/README.md",
+          "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+        }
+      ]
+    },
+    {
+      "node": {
+        "id": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.html",
+        "path": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.html",
+        "kind": "file",
+        "role": "artifact",
+        "sha256": "6aa25f472102574b434a9ba1b3fd851579a1cb8d8cdf70c39ad617d951e787bb"
+      },
+      "changed_inputs": [
+        "docs/legal/gap-instruments/case-briefs/manifest.json",
+        "tools/legal_gaps/case_briefs.py"
+      ],
+      "dependency_edges": [
+        {
+          "source": "docs/legal/gap-instruments/case-briefs/manifest.json",
+          "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.html",
+          "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+        },
+        {
+          "source": "tools/legal_gaps/case_briefs.py",
+          "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.html",
+          "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+        }
+      ]
+    },
+    {
+      "node": {
+        "id": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.md",
+        "path": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.md",
+        "kind": "file",
+        "role": "artifact",
+        "sha256": "5d162fd228068410dd951eba4319e74bd65806244cc48db97d95cc8d88edb1b0"
+      },
+      "changed_inputs": [
+        "docs/legal/gap-instruments/case-briefs/manifest.json",
+        "tools/legal_gaps/case_briefs.py"
+      ],
+      "dependency_edges": [
+        {
+          "source": "docs/legal/gap-instruments/case-briefs/manifest.json",
+          "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.md",
+          "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+        },
+        {
+          "source": "tools/legal_gaps/case_briefs.py",
+          "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.md",
+          "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+        }
+      ]
+    },
+    {
+      "node": {
+        "id": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.pdf",
+        "path": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.pdf",
+        "kind": "file",
+        "role": "artifact",
+        "sha256": "d7c1c01667ded0a5378f6617f855b7b1d43e44da84dee1cb762290a929852a23"
+      },
+      "changed_inputs": [
+        "docs/legal/gap-instruments/case-briefs/manifest.json",
+        "tools/legal_gaps/case_briefs.py"
+      ],
+      "dependency_edges": [
+        {
+          "source": "docs/legal/gap-instruments/case-briefs/manifest.json",
+          "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.pdf",
+          "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+        },
+        {
+          "source": "tools/legal_gaps/case_briefs.py",
+          "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.pdf",
+          "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+        }
+      ]
+    },
+    {
+      "node": {
+        "id": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.html",
+        "path": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.html",
+        "kind": "file",
+        "role": "artifact",
+        "sha256": "00b14ba850132f48a309617c91b88f913a885a8d6cb9cb1defb6e73287f46f31"
+      },
+      "changed_inputs": [
+        "docs/legal/gap-instruments/case-briefs/manifest.json",
+        "tools/legal_gaps/case_briefs.py"
+      ],
+      "dependency_edges": [
+        {
+          "source": "docs/legal/gap-instruments/case-briefs/manifest.json",
+          "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.html",
+          "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+        },
+        {
+          "source": "tools/legal_gaps/case_briefs.py",
+          "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.html",
+          "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+        }
+      ]
+    },
+    {
+      "node": {
+        "id": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.md",
+        "path": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.md",
+        "kind": "file",
+        "role": "artifact",
+        "sha256": "862dda0f232828e63c3f8ce34017336154140e709b7fcd95d09dce6247204c64"
+      },
+      "changed_inputs": [
+        "docs/legal/gap-instruments/case-briefs/manifest.json",
+        "tools/legal_gaps/case_briefs.py"
+      ],
+      "dependency_edges": [
+        {
+          "source": "docs/legal/gap-instruments/case-briefs/manifest.json",
+          "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.md",
+          "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+        },
+        {
+          "source": "tools/legal_gaps/case_briefs.py",
+          "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.md",
+          "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+        }
+      ]
+    },
+    {
+      "node": {
+        "id": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.pdf",
+        "path": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.pdf",
+        "kind": "file",
+        "role": "artifact",
+        "sha256": "45f0d367af866ff2ce95c1ba42ed27e7e8e107e45c47a2ae46ae0790995a5f57"
+      },
+      "changed_inputs": [
+        "docs/legal/gap-instruments/case-briefs/manifest.json",
+        "tools/legal_gaps/case_briefs.py"
+      ],
+      "dependency_edges": [
+        {
+          "source": "docs/legal/gap-instruments/case-briefs/manifest.json",
+          "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.pdf",
+          "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+        },
+        {
+          "source": "tools/legal_gaps/case_briefs.py",
+          "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.pdf",
+          "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+        }
+      ]
+    },
+    {
+      "node": {
+        "id": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.html",
+        "path": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.html",
+        "kind": "file",
+        "role": "artifact",
+        "sha256": "6b229c3c2289417df66b287f33d27ee07e7132753713bd52d6d29d585cfb9f6a"
+      },
+      "changed_inputs": [
+        "docs/legal/gap-instruments/case-briefs/manifest.json",
+        "tools/legal_gaps/case_briefs.py"
+      ],
+      "dependency_edges": [
+        {
+          "source": "docs/legal/gap-instruments/case-briefs/manifest.json",
+          "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.html",
+          "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+        },
+        {
+          "source": "tools/legal_gaps/case_briefs.py",
+          "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.html",
+          "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+        }
+      ]
+    },
+    {
+      "node": {
+        "id": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.md",
+        "path": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.md",
+        "kind": "file",
+        "role": "artifact",
+        "sha256": "d1bd3b433775969c6871ec124ea784f3342d897c3877c4f722877e509c2dbc34"
+      },
+      "changed_inputs": [
+        "docs/legal/gap-instruments/case-briefs/manifest.json",
+        "tools/legal_gaps/case_briefs.py"
+      ],
+      "dependency_edges": [
+        {
+          "source": "docs/legal/gap-instruments/case-briefs/manifest.json",
+          "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.md",
+          "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+        },
+        {
+          "source": "tools/legal_gaps/case_briefs.py",
+          "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.md",
+          "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+        }
+      ]
+    },
+    {
+      "node": {
+        "id": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.pdf",
+        "path": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.pdf",
+        "kind": "file",
+        "role": "artifact",
+        "sha256": "3b3ff7a81efd7eaa7086aff2a63083e89e4e49b38697a2185171d30c2e5f02f2"
+      },
+      "changed_inputs": [
+        "docs/legal/gap-instruments/case-briefs/manifest.json",
+        "tools/legal_gaps/case_briefs.py"
+      ],
+      "dependency_edges": [
+        {
+          "source": "docs/legal/gap-instruments/case-briefs/manifest.json",
+          "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.pdf",
+          "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+        },
+        {
+          "source": "tools/legal_gaps/case_briefs.py",
+          "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.pdf",
+          "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+        }
+      ]
+    },
+    {
+      "node": {
+        "id": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.html",
+        "path": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.html",
+        "kind": "file",
+        "role": "artifact",
+        "sha256": "b9350f905ff441741a8126e9c07aeb4ad3b3012506ff114a4593009ab43a2868"
+      },
+      "changed_inputs": [
+        "docs/legal/gap-instruments/case-briefs/manifest.json",
+        "tools/legal_gaps/case_briefs.py"
+      ],
+      "dependency_edges": [
+        {
+          "source": "docs/legal/gap-instruments/case-briefs/manifest.json",
+          "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.html",
+          "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+        },
+        {
+          "source": "tools/legal_gaps/case_briefs.py",
+          "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.html",
+          "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+        }
+      ]
+    },
+    {
+      "node": {
+        "id": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.md",
+        "path": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.md",
+        "kind": "file",
+        "role": "artifact",
+        "sha256": "6e773bb8a83a42f5f4f6cd4b61007cc285019c982de39148d9d8b59a726cf0e0"
+      },
+      "changed_inputs": [
+        "docs/legal/gap-instruments/case-briefs/manifest.json",
+        "tools/legal_gaps/case_briefs.py"
+      ],
+      "dependency_edges": [
+        {
+          "source": "docs/legal/gap-instruments/case-briefs/manifest.json",
+          "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.md",
+          "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+        },
+        {
+          "source": "tools/legal_gaps/case_briefs.py",
+          "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.md",
+          "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+        }
+      ]
+    },
+    {
+      "node": {
+        "id": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.pdf",
+        "path": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.pdf",
+        "kind": "file",
+        "role": "artifact",
+        "sha256": "2ab4062e1bbd8de0d2efba0597341a38978eb614603bdf1d5ab4e6154b508c5c"
+      },
+      "changed_inputs": [
+        "docs/legal/gap-instruments/case-briefs/manifest.json",
+        "tools/legal_gaps/case_briefs.py"
+      ],
+      "dependency_edges": [
+        {
+          "source": "docs/legal/gap-instruments/case-briefs/manifest.json",
+          "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.pdf",
+          "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+        },
+        {
+          "source": "tools/legal_gaps/case_briefs.py",
+          "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.pdf",
+          "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+        }
+      ]
+    },
+    {
+      "node": {
+        "id": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.html",
+        "path": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.html",
+        "kind": "file",
+        "role": "artifact",
+        "sha256": "bd932c44faa69112f8474adb6adbce9740b0dff7e5e7565626a240c0082f2f88"
+      },
+      "changed_inputs": [
+        "docs/legal/gap-instruments/case-briefs/manifest.json",
+        "tools/legal_gaps/case_briefs.py"
+      ],
+      "dependency_edges": [
+        {
+          "source": "docs/legal/gap-instruments/case-briefs/manifest.json",
+          "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.html",
+          "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+        },
+        {
+          "source": "tools/legal_gaps/case_briefs.py",
+          "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.html",
+          "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+        }
+      ]
+    },
+    {
+      "node": {
+        "id": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.md",
+        "path": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.md",
+        "kind": "file",
+        "role": "artifact",
+        "sha256": "76f1070980e036fa9abbe0985b8ae9a5056ebbe06c25f765216f3e509329564a"
+      },
+      "changed_inputs": [
+        "docs/legal/gap-instruments/case-briefs/manifest.json",
+        "tools/legal_gaps/case_briefs.py"
+      ],
+      "dependency_edges": [
+        {
+          "source": "docs/legal/gap-instruments/case-briefs/manifest.json",
+          "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.md",
+          "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+        },
+        {
+          "source": "tools/legal_gaps/case_briefs.py",
+          "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.md",
+          "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+        }
+      ]
+    },
+    {
+      "node": {
+        "id": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.pdf",
+        "path": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.pdf",
+        "kind": "file",
+        "role": "artifact",
+        "sha256": "ecc196f15258c308cbb935f894042398f54bc2ff42445d057310d3a599cac0b6"
+      },
+      "changed_inputs": [
+        "docs/legal/gap-instruments/case-briefs/manifest.json",
+        "tools/legal_gaps/case_briefs.py"
+      ],
+      "dependency_edges": [
+        {
+          "source": "docs/legal/gap-instruments/case-briefs/manifest.json",
+          "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.pdf",
+          "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+        },
+        {
+          "source": "tools/legal_gaps/case_briefs.py",
+          "target": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.pdf",
+          "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+        }
+      ]
+    },
+    {
+      "node": {
+        "id": "docs/legal/gap-instruments/case-briefs/case-briefs.sqlite3",
+        "path": "docs/legal/gap-instruments/case-briefs/case-briefs.sqlite3",
+        "kind": "file",
+        "role": "artifact",
+        "sha256": "425e6a6c08f8a4c7967d4780ab07b52ffe08f9c83d69610ab217d4a415964301"
+      },
+      "changed_inputs": [
+        "docs/legal/gap-instruments/case-briefs/manifest.json",
+        "tools/legal_gaps/case_briefs.py"
+      ],
+      "dependency_edges": [
+        {
+          "source": "docs/legal/gap-instruments/case-briefs/manifest.json",
+          "target": "docs/legal/gap-instruments/case-briefs/case-briefs.sqlite3",
+          "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+        },
+        {
+          "source": "tools/legal_gaps/case_briefs.py",
+          "target": "docs/legal/gap-instruments/case-briefs/case-briefs.sqlite3",
+          "basis": "docs/legal/gap-instruments/case-briefs/manifest.json/files"
+        }
+      ]
+    }
+  ],
+  "unclassified_changes": [
+    ".github/workflows/legal-gap-instruments.yml",
+    "docs/internal/institutional_catalog.sqlite3",
+    "docs/legal/gap-instruments/case-briefs/ACCEPTANCE.json",
+    "docs/legal/gap-instruments/case-briefs/ACCEPTANCE.md",
+    "docs/legal/gap-instruments/case-briefs/qa/COLD_START.md",
+    "docs/legal/gap-instruments/case-briefs/qa/cold-start/evidence-proposal/PROPOSAL.md",
+    "docs/legal/gap-instruments/case-briefs/qa/cold-start/evidence-proposal/PROPOSAL.original.txt",
+    "docs/legal/gap-instruments/case-briefs/qa/cold-start/evidence-proposal/import-receipt.json",
+    "docs/legal/gap-instruments/case-briefs/qa/cold-start/evidence-proposal/tracker.json",
+    "docs/legal/gap-instruments/case-briefs/qa/cold-start/evidence-proposal/tracker.sqlite3",
+    "docs/legal/gap-instruments/case-briefs/qa/cold-start/evidence-proposal/tracker.xlsx",
+    "docs/legal/gap-instruments/case-briefs/qa/cold-start/evidence-update-corrected.xlsx",
+    "docs/legal/gap-instruments/case-briefs/qa/cold-start/history-before-context-refresh/evidence-proposal/PROPOSAL.md",
+    "docs/legal/gap-instruments/case-briefs/qa/cold-start/history-before-context-refresh/evidence-proposal/PROPOSAL.original.txt",
+    "docs/legal/gap-instruments/case-briefs/qa/cold-start/history-before-context-refresh/evidence-proposal/import-receipt.json",
+    "docs/legal/gap-instruments/case-briefs/qa/cold-start/history-before-context-refresh/evidence-proposal/tracker.json",
+    "docs/legal/gap-instruments/case-briefs/qa/cold-start/history-before-context-refresh/evidence-proposal/tracker.sqlite3",
+    "docs/legal/gap-instruments/case-briefs/qa/cold-start/history-before-context-refresh/evidence-proposal/tracker.xlsx",
+    "docs/legal/gap-instruments/case-briefs/qa/cold-start/history-before-context-refresh/evidence-update-corrected.xlsx",
+    "docs/legal/gap-instruments/case-briefs/qa/cold-start/history-before-context-refresh/import.stderr.txt",
+    "docs/legal/gap-instruments/case-briefs/qa/cold-start/history-before-context-refresh/import.stdout.txt",
+    "docs/legal/gap-instruments/case-briefs/qa/cold-start/history-before-context-refresh/manifest.json",
+    "docs/legal/gap-instruments/case-briefs/qa/cold-start/history-before-context-refresh/manifest.original.json",
+    "docs/legal/gap-instruments/case-briefs/qa/cold-start/import.stdout.txt",
+    "docs/legal/gap-instruments/case-briefs/qa/cold-start/manifest.json",
+    "docs/legal/gap-instruments/case-briefs/qa/cold-start/manifest.original.json",
+    "docs/legal/gap-instruments/review-support/qa/v4/01-contact-000.png",
+    "docs/legal/gap-instruments/review-support/qa/v4/05-contact-000.png",
+    "docs/legal/gap-instruments/review-support/qa/v4/06-contact-000.png",
+    "docs/legal/gap-instruments/review-support/qa/v4/07-contact-000.png",
+    "docs/legal/gap-instruments/review-support/qa/v4/08-contact-000.png",
+    "docs/legal/gap-instruments/review-support/qa/v4/09-contact-000.png",
+    "docs/legal/gap-instruments/review-support/qa/v4/10-contact-000.png",
+    "docs/legal/gap-instruments/review-support/qa/v4/11-contact-000.png",
+    "docs/legal/gap-instruments/review-support/qa/v4/13-contact-000.png",
+    "docs/legal/gap-instruments/review-support/qa/v4/14-contact-000.png",
+    "docs/legal/gap-instruments/review-support/qa/v4/15-contact-000.png",
+    "docs/legal/gap-instruments/review-support/qa/v4/46-contact-000.png",
+    "docs/legal/gap-instruments/review-support/qa/v4/47-contact-000.png",
+    "docs/legal/gap-instruments/review-support/qa/v4/47-contact-004.png",
+    "docs/legal/gap-instruments/review-support/qa/v4/HTML.json",
+    "docs/legal/gap-instruments/review-support/qa/v4/PRESERVATION.md",
+    "docs/legal/gap-instruments/review-support/qa/v4/REVIEW.json",
+    "docs/legal/gap-instruments/review-support/qa/v4/full-pytest.log",
+    "docs/legal/gap-instruments/source-impact/README.md",
+    "docs/legal/gap-instruments/source-impact/graph.json",
+    "docs/legal/gap-instruments/source-impact/sample-audit/REPORT.md",
+    "docs/legal/gap-instruments/source-impact/sample-audit/report.json",
+    "docs/legal/gap-instruments/source-impact/sample-audit/report.sqlite3",
+    "docs/wiki/Library.md",
+    "docs/wiki/library/finance.md",
+    "docs/wiki/library/format-review.md",
+    "scripts/check_public_safety.py",
+    "tests/publications/test_legal_case_briefs.py",
+    "tests/publications/test_legal_package_v4.py",
+    "tools/legal_gaps/package_v4.py",
+    "tools/legal_gaps/validate_close_review.py",
+    "tools/legal_gaps/validate_close_review_v42.py"
+  ],
+  "baseline_problems": [],
+  "uncovered_scope": [
+    "Other enterprise generators and source chains are not mapped.",
+    "Walkthrough dependencies are package-level, not individual worksheet cells.",
+    "Release targets cover graph members only, not all files in each bundle.",
+    "Changes outside these registers require classification; no universal clean claim."
+  ],
+  "current_revision": "381e4ae3fc7505405b74a1dc7fa8eb6d3ba1dc06"
+}

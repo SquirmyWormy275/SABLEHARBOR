@@ -14,7 +14,7 @@ For the longer story, read [company history](subjects/History.md), [the people](
 
 | Exercise | What you work through | Starting point |
 |---|---|---|
-| Trace an invoice | Connect an invoice to its contract, delivery evidence and accounting support. | [Invoice exercise](../reader/exercises/INVOICE.md) |
+| Trace an invoice | Connect an invoice to its contract terms, dated movements and journal entries. | [Invoice exercise](../reader/exercises/INVOICE.md) |
 | Review an acquisition | Reconcile selected consideration and accounting evidence while recording missing support. | [Acquisition exercise](../reader/exercises/ACQUISITION.md) |
 | Review contract obligations | Compare an instrument with the available evidence of obligations and execution. | [Contract exercise](../reader/exercises/CONTRACTS.md) |
 | Examine a control | Follow a synthetic population, procedure, result and independent re-performance. | [CCF procedures](../../enterprise/ccf/PROCEDURES.md) |

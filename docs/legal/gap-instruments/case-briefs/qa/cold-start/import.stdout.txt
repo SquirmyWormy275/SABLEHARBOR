@@ -1,0 +1,1 @@
+PASS: 5 retained events; proposal only at /tmp/aru-cold-start-v4-final-context/evidence-proposal

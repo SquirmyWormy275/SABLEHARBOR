@@ -1,0 +1,2592 @@
+{
+  "status": "DRAFT_FOR_REVIEW",
+  "approved": false,
+  "base_revision": "659a56747fe76522d18645ff115888c13fa8d2b0",
+  "inputs": [
+    {
+      "path": "tools/legal_gaps/build.py",
+      "sha256": "c97ed54d2616c6b461cf540394675c3c9de2f0a67cb3a8fcb704672bb250fa3b"
+    },
+    {
+      "path": "tools/legal_gaps/style.css",
+      "sha256": "fb15462569f7503b59cba8dcd3015fbbc6a82cb64d5225b53b4b2b3498913d40"
+    },
+    {
+      "path": "tools/legal_gaps/requirements.txt",
+      "sha256": "f75fe300b81b2114c30b260121110d0516e3d89c50cf317aad9fe7d935af92b5"
+    },
+    {
+      "path": "tools/legal_gaps/formatting.py",
+      "sha256": "986bcbf050ba9a29c6095da593084fd66ab1551fa73c90494268878c87082d01"
+    },
+    {
+      "path": "assets/brand/logos/sable-harbor__primary-horizontal.svg",
+      "sha256": "815efb4ca06e4f2df8b9dfee3d4288f94d2e64417b7c863ce5b8639d2de07076"
+    }
+  ],
+  "packages": [
+    {
+      "gap_id": "LEGAL-GAP-ADVISORY-CONTRACTS",
+      "document_id": "SH-LEGAL-DRAFT-ADVISORY-CONTRACTS",
+      "title": "Advisory master services agreement and matter schedules",
+      "status": "DRAFT_FOR_REVIEW",
+      "source_paths": [
+        "docs/advisory/LEGAL_AND_CONTRACTING_TERM_SHEET.md",
+        "docs/advisory/COMMERCIAL_CONTRACTING_AND_PRICING_STANDARD.md",
+        "docs/advisory/IP_DATA_AND_METHOD_TRANSFER_STANDARD.md",
+        "docs/advisory/EXPERT_NETWORK_AND_THIRD_PARTY_STANDARD.md",
+        "industrial/corporate/LEGAL_STRUCTURE_AND_FORMATION.md"
+      ],
+      "proposed_terms": [
+        {
+          "id": "SH-LEGAL-DRAFT-ADVISORY-CONTRACTS-T01",
+          "term": "Separate MSA, SOW, outcome, data, transfer and product terms.",
+          "basis": "SH-ADV-014 architecture; clauses proposed."
+        },
+        {
+          "id": "SH-LEGAL-DRAFT-ADVISORY-CONTRACTS-T02",
+          "term": "Four IP classes and no hidden continuing dependency.",
+          "basis": "SH-ADV-007 accepted direction."
+        },
+        {
+          "id": "SH-LEGAL-DRAFT-ADVISORY-CONTRACTS-T03",
+          "term": "Source pricing patterns retained as optional schedule selections, no client invoice.",
+          "basis": "SH-ADV-009; no actual fee selected."
+        }
+      ],
+      "unresolved_fields": [
+        {
+          "id": "SH-LEGAL-DRAFT-ADVISORY-CONTRACTS-U01",
+          "field": "Client legal party, jurisdiction, notices, signatory and liability limits",
+          "next_action": "Complete against client identity and approved legal/risk review."
+        },
+        {
+          "id": "SH-LEGAL-DRAFT-ADVISORY-CONTRACTS-U02",
+          "field": "Matter scope, fees, data schedule and signature",
+          "next_action": "Populate a separately approved SOW before performance."
+        }
+      ],
+      "financial_schedules": [
+        {
+          "name": "Source capability milestone pattern; not billed",
+          "columns": [
+            "milestone",
+            "percent"
+          ],
+          "rows": [
+            [
+              "Mobilization/design",
+              20
+            ],
+            [
+              "Workflow build",
+              30
+            ],
+            [
+              "Technical implementation/test",
+              25
+            ],
+            [
+              "Supervised client operation",
+              15
+            ],
+            [
+              "Transfer/independent acceptance",
+              10
+            ]
+          ]
+        }
+      ],
+      "version": "0.1.0",
+      "prepared": "2026-09-12",
+      "approval_status": "NOT_ACCEPTED",
+      "slug": "advisory-contracts",
+      "source": "docs/legal/gap-instruments/source/advisory-contracts.md",
+      "structured": "docs/legal/gap-instruments/source/advisory-contracts.json",
+      "source_sha256": "99f62e1d50c430fb7a1bb42f2315c233a13bdfba5c80cde77dcce8d72b91f9b5",
+      "structured_sha256": "1ffabe5c2f64842cc46a9dadb8267954d55f435ff6dcd2272f0c608463d7f3a7",
+      "dependencies": [
+        {
+          "path": "docs/advisory/LEGAL_AND_CONTRACTING_TERM_SHEET.md",
+          "sha256": "b0e842b631713579f2890efb846de642b100a576282ba88dea9880fb671428f7"
+        },
+        {
+          "path": "docs/advisory/COMMERCIAL_CONTRACTING_AND_PRICING_STANDARD.md",
+          "sha256": "d205a6b5d1a254ed30fc35c395f0f3ea3372a449d0537fea7c7bb18583cb8275"
+        },
+        {
+          "path": "docs/advisory/IP_DATA_AND_METHOD_TRANSFER_STANDARD.md",
+          "sha256": "e6f58bec6caeaa1eb693962bd4a021d40b4bec5319c49f0e4e59c3212f04ad91"
+        },
+        {
+          "path": "docs/advisory/EXPERT_NETWORK_AND_THIRD_PARTY_STANDARD.md",
+          "sha256": "fe6648704a935ad7c91651f5042bc5b3f5e821e9d432cbcbbab2fa648dd31763"
+        },
+        {
+          "path": "industrial/corporate/LEGAL_STRUCTURE_AND_FORMATION.md",
+          "sha256": "5a10f112b015d5dfa7ca3b500108718015a41369182092cabc44dfb224119fbc"
+        }
+      ],
+      "pages": 6,
+      "artifacts": [
+        {
+          "path": "docs/legal/gap-instruments/editions/advisory-contracts.html",
+          "sha256": "65a5bcc2de119592e7d0dac95a22bb26cd2a04483cd8fac9be6b43334607efb4"
+        },
+        {
+          "path": "docs/legal/gap-instruments/editions/advisory-contracts.pdf",
+          "sha256": "b39ec29f9c47d026de04ccb3bb9a0a91ccb3d4147ce5a99c86c010d9a1871067"
+        },
+        {
+          "path": "docs/legal/gap-instruments/editions/advisory-contracts.xlsx",
+          "sha256": "71830e1d6ed8b8c72004b1ddc519d331c1b0216ff8e550d5a86e403be81cbb1e"
+        }
+      ],
+      "sheets": [
+        "Read first",
+        "01 Source capability milestone"
+      ]
+    },
+    {
+      "gap_id": "LEGAL-GAP-BILLING",
+      "document_id": "SH-LEGAL-DRAFT-BILLING",
+      "title": "Foundry Field proposed billing instrument and reconciliation attachment",
+      "status": "DRAFT_FOR_REVIEW",
+      "source_paths": [
+        "docs/legal/gap-instruments/dependencies/billing-proposal-PR138.json",
+        "docs/finance/evidence/SH-FIN-HUMAN-001/source.json",
+        "docs/finance/evidence/SH-FIN-HUMAN-001/PACKET.md",
+        "docs/finance/evidence/SH-FIN-HUMAN-001/ACCEPTANCE.json",
+        "docs/legal/evidence/proposals/decision-register.json",
+        "industrial/corporate/LEGAL_STRUCTURE_AND_FORMATION.md"
+      ],
+      "proposed_terms": [
+        {
+          "id": "SH-LEGAL-DRAFT-BILLING-T01",
+          "term": "Use only Copperreach and Foundry Field display fields from SH-FIN-BILL-PROP-001.",
+          "basis": "Sole proposed dataset at e4995ba; no new identities."
+        },
+        {
+          "id": "SH-LEGAL-DRAFT-BILLING-T02",
+          "term": "Retain proposal null customer legal-name and invoice issuer-presentation fields, known SHI identity, unestablished tax and absent payment instructions.",
+          "basis": "BILL-DEC-001/002/003 and proposal field boundaries."
+        },
+        {
+          "id": "SH-LEGAL-DRAFT-BILLING-T03",
+          "term": "Preserve initial $1,740,000 and later source movement totals separately.",
+          "basis": "Accepted source packet; no duplicate invoice or journal."
+        }
+      ],
+      "unresolved_fields": [
+        {
+          "id": "SH-LEGAL-DRAFT-BILLING-U01",
+          "field": "BILL-DEC-001 customer legal name",
+          "next_action": "Owner disposition of sole proposal field; do not infer entity suffix."
+        },
+        {
+          "id": "SH-LEGAL-DRAFT-BILLING-U02",
+          "field": "BILL-DEC-002 invoice-specific issuer presentation/assignment",
+          "next_action": "Retain known SHI Sable Harbor, LLC identity; review the proposed invoice presentation field separately."
+        },
+        {
+          "id": "SH-LEGAL-DRAFT-BILLING-U03",
+          "field": "BILL-DEC-003 tax treatment",
+          "next_action": "Retain absence until separate approved scenario; no amount rewrite."
+        },
+        {
+          "id": "SH-LEGAL-DRAFT-BILLING-U04",
+          "field": "Proposal and design acceptance",
+          "next_action": "Review exact field IDs, version and artifact hashes."
+        }
+      ],
+      "financial_schedules": [
+        {
+          "name": "Source invoice and later reconciliation; not new postings",
+          "columns": [
+            "measure",
+            "amount_usd",
+            "basis"
+          ],
+          "rows": [
+            [
+              "Original invoice",
+              1740000,
+              "Released initial amount"
+            ],
+            [
+              "Collections including recovery",
+              609000,
+              "Released total; recovery already included"
+            ],
+            [
+              "Credits",
+              159500,
+              "Released total"
+            ],
+            [
+              "Ledger AR remaining",
+              0,
+              "Released balance after writeoff"
+            ],
+            [
+              "Surviving written-off claim",
+              971500,
+              "Derived from accepted packet; not recognized new asset"
+            ]
+          ]
+        }
+      ],
+      "version": "0.1.0",
+      "prepared": "2026-09-12",
+      "approval_status": "NOT_ACCEPTED",
+      "slug": "billing",
+      "source": "docs/legal/gap-instruments/source/billing.md",
+      "structured": "docs/legal/gap-instruments/source/billing.json",
+      "source_sha256": "83d8af1b3d5a73cab067b1d7839bcb2ed2cecfc7656d246951d213327127f28e",
+      "structured_sha256": "bc26733ecfc5286e4d5d9a2d5d3506961a2912bb135480346242325b7a8f773d",
+      "dependencies": [
+        {
+          "path": "docs/legal/gap-instruments/dependencies/billing-proposal-PR138.json",
+          "sha256": "23d8d6080ad296468d6b649eda55593d49c33cde0e6b038343ce11e4973e23f8"
+        },
+        {
+          "path": "docs/finance/evidence/SH-FIN-HUMAN-001/source.json",
+          "sha256": "c4833cfc6f28db6cd3edcae761b0e2d8f463a20de79f1d6fd5b0c517f8f829b7"
+        },
+        {
+          "path": "docs/finance/evidence/SH-FIN-HUMAN-001/PACKET.md",
+          "sha256": "1b7828cb0a69551ef5ff14fad874bdc6222f697679e4163933d3a6f85f27f60c"
+        },
+        {
+          "path": "docs/finance/evidence/SH-FIN-HUMAN-001/ACCEPTANCE.json",
+          "sha256": "6f521e7deb88875267ca705649e4db2dab8ca3dd5689c3cd22e8472fd5016f72"
+        },
+        {
+          "path": "docs/legal/evidence/proposals/decision-register.json",
+          "sha256": "e252899c2f323096e54a37eb7b754c19ef1fbb48ce612d9460db37ade4fb743c"
+        },
+        {
+          "path": "industrial/corporate/LEGAL_STRUCTURE_AND_FORMATION.md",
+          "sha256": "5a10f112b015d5dfa7ca3b500108718015a41369182092cabc44dfb224119fbc"
+        }
+      ],
+      "pages": 5,
+      "artifacts": [
+        {
+          "path": "docs/legal/gap-instruments/editions/billing.html",
+          "sha256": "6101ed6dc3ffb798fa405d2cc9f4d1882fad3a7ceee185a228835a389a04e753"
+        },
+        {
+          "path": "docs/legal/gap-instruments/editions/billing.pdf",
+          "sha256": "1454d08a5d73d68bc8bddceede45bc4b48994fbbb34fde51a3af06d54e96fe25"
+        },
+        {
+          "path": "docs/legal/gap-instruments/editions/billing.xlsx",
+          "sha256": "517c99eff78cf17dc5c0f0a82e06662d07b55f39b64380b5053a2052c4f76128"
+        }
+      ],
+      "sheets": [
+        "Read first",
+        "01 Source invoice and later re"
+      ]
+    },
+    {
+      "gap_id": "LEGAL-GAP-CARRY",
+      "document_id": "SH-LEGAL-DRAFT-CARRY",
+      "title": "Advisory contractual phantom carry plan — proposed instrument",
+      "status": "DRAFT_FOR_REVIEW",
+      "source_paths": [
+        "docs/advisory/CARRY_PLAN_STANDARD.md",
+        "docs/advisory/LEGAL_AND_CONTRACTING_TERM_SHEET.md",
+        "industrial/corporate/LEGAL_STRUCTURE_AND_FORMATION.md"
+      ],
+      "proposed_terms": [
+        {
+          "id": "SH-LEGAL-DRAFT-CARRY-T01",
+          "term": "20% pool, 10,000 notional units, five-year 20% annual vesting.",
+          "basis": "SH-ADV-005 accepted direction."
+        },
+        {
+          "id": "SH-LEGAL-DRAFT-CARRY-T02",
+          "term": "No named grants or individualized serving-J2 contact; applicant initiates after service.",
+          "basis": "SH-ADV-005 sections 5–6."
+        },
+        {
+          "id": "SH-LEGAL-DRAFT-CARRY-T03",
+          "term": "Notice, correction and calculation records administer source rights.",
+          "basis": "Proposed operational clauses; no new grant."
+        }
+      ],
+      "unresolved_fields": [
+        {
+          "id": "SH-LEGAL-DRAFT-CARRY-U01",
+          "field": "Sponsor approval, jurisdiction and legal/tax mechanics",
+          "next_action": "Qualified review before plan execution."
+        },
+        {
+          "id": "SH-LEGAL-DRAFT-CARRY-U02",
+          "field": "Annual capital, holdback and participant fields",
+          "next_action": "Populate only through approved annual calculation and post-service grant; no serving-person examples."
+        }
+      ],
+      "financial_schedules": [
+        {
+          "name": "Plan constants; no participant balances",
+          "columns": [
+            "measure",
+            "value",
+            "unit"
+          ],
+          "rows": [
+            [
+              "excess_profit_pool",
+              20,
+              "percent"
+            ],
+            [
+              "notional_pool",
+              10000,
+              "units"
+            ],
+            [
+              "default_vesting_years",
+              5,
+              "years"
+            ],
+            [
+              "annual_vesting",
+              20,
+              "percent"
+            ]
+          ]
+        }
+      ],
+      "version": "0.1.0",
+      "prepared": "2026-09-12",
+      "approval_status": "NOT_ACCEPTED",
+      "slug": "carry",
+      "source": "docs/legal/gap-instruments/source/carry.md",
+      "structured": "docs/legal/gap-instruments/source/carry.json",
+      "source_sha256": "f827af31cc408054a32c5cd602c4c378020c55fff06ff84c8851b6acd6f89312",
+      "structured_sha256": "c2b6f9f8fe1b65494d9a64c74e1813783b4fdbe30368a91b8284622402fadfe1",
+      "dependencies": [
+        {
+          "path": "docs/advisory/CARRY_PLAN_STANDARD.md",
+          "sha256": "c8b64ecd570a2402233bd6067eea0e274e267c8f1aa90d9153de4b3a4865de45"
+        },
+        {
+          "path": "docs/advisory/LEGAL_AND_CONTRACTING_TERM_SHEET.md",
+          "sha256": "b0e842b631713579f2890efb846de642b100a576282ba88dea9880fb671428f7"
+        },
+        {
+          "path": "industrial/corporate/LEGAL_STRUCTURE_AND_FORMATION.md",
+          "sha256": "5a10f112b015d5dfa7ca3b500108718015a41369182092cabc44dfb224119fbc"
+        }
+      ],
+      "pages": 5,
+      "artifacts": [
+        {
+          "path": "docs/legal/gap-instruments/editions/carry.html",
+          "sha256": "6cd6725bd2b5d703c8b722385b9757e68e134dcf58c1404d861fff2d35939148"
+        },
+        {
+          "path": "docs/legal/gap-instruments/editions/carry.pdf",
+          "sha256": "b889dbf6b3d2caa8103017feee23c77fd03071c618a45f10f93ecfcada19995c"
+        },
+        {
+          "path": "docs/legal/gap-instruments/editions/carry.xlsx",
+          "sha256": "cce5c891deefee4c231a7234e277249682a0a507086dbaa3afc946a33bd00d37"
+        }
+      ],
+      "sheets": [
+        "Read first",
+        "01 Plan constants; no particip"
+      ]
+    },
+    {
+      "gap_id": "LEGAL-GAP-COLO",
+      "document_id": "SH-LEGAL-DRAFT-COLO",
+      "title": "Colocation site-order, acceptance and invoice schedules",
+      "status": "DRAFT_FOR_REVIEW",
+      "source_paths": [
+        "enterprise/runtime/docs/CONTRACT_DOSSIER.md",
+        "enterprise/services/source/runtime_sites_2026-09-11.json"
+      ],
+      "proposed_terms": [
+        {
+          "id": "SH-LEGAL-DRAFT-COLO-T01",
+          "term": "Supplement RT-MSA-001 and existing RT-SO-RENO/RT-SO-BOISE, no competing master.",
+          "basis": "Existing SH-RT-CONTRACT-001."
+        },
+        {
+          "id": "SH-LEGAL-DRAFT-COLO-T02",
+          "term": "Technical acceptance precedes billing except expressly agreed reservation charges.",
+          "basis": "Existing master rule with proposed evidence form."
+        },
+        {
+          "id": "SH-LEGAL-DRAFT-COLO-T03",
+          "term": "Meter, quote, invoice and credits retain separate status and provenance.",
+          "basis": "Existing Schedules A/B expanded into reviewable completion clauses."
+        }
+      ],
+      "unresolved_fields": [
+        {
+          "id": "SH-LEGAL-DRAFT-COLO-U01",
+          "field": "Provider legal entity, enclosure, quote and start date",
+          "next_action": "Obtain and verify site-specific order response."
+        },
+        {
+          "id": "SH-LEGAL-DRAFT-COLO-U02",
+          "field": "Test results, signatures and invoice/payment evidence",
+          "next_action": "Complete only from actual approved case records; no automatic acceptance."
+        }
+      ],
+      "financial_schedules": [
+        {
+          "name": "Source pricing sensitivities; not quotes or invoices",
+          "columns": [
+            "site",
+            "quantity_kw",
+            "rate_usd_per_kw_month",
+            "monthly_usd",
+            "basis"
+          ],
+          "rows": [
+            [
+              "Reno",
+              75,
+              350,
+              26250,
+              "Analyst sensitivity"
+            ],
+            [
+              "Reno",
+              100,
+              350,
+              35000,
+              "Analyst sensitivity"
+            ],
+            [
+              "Boise",
+              14.6,
+              300,
+              4380,
+              "Synthetic average at reported public rate"
+            ],
+            [
+              "Boise",
+              25,
+              300,
+              7500,
+              "Hypothetical commitment sensitivity; not public actual-draw billing"
+            ]
+          ]
+        }
+      ],
+      "version": "0.1.0",
+      "prepared": "2026-09-12",
+      "approval_status": "NOT_ACCEPTED",
+      "slug": "colo",
+      "source": "docs/legal/gap-instruments/source/colo.md",
+      "structured": "docs/legal/gap-instruments/source/colo.json",
+      "source_sha256": "0590241ee1a7a1d02b6c2262f5ae3bf31ba026fa9266976e146a2be158b33506",
+      "structured_sha256": "13be7a9173e702b4f13fa65e00885ce3a4d9bb73a110ed929334b2082f21b17f",
+      "dependencies": [
+        {
+          "path": "enterprise/runtime/docs/CONTRACT_DOSSIER.md",
+          "sha256": "7cd01050b17f9451ff5bd341573289440c74fb190c01253bdc8197a6599d2ad1"
+        },
+        {
+          "path": "enterprise/services/source/runtime_sites_2026-09-11.json",
+          "sha256": "fa216f629762503865fd9f1a3207e87691cd484cec9885bf25ce045b4525519c"
+        }
+      ],
+      "pages": 5,
+      "artifacts": [
+        {
+          "path": "docs/legal/gap-instruments/editions/colo.html",
+          "sha256": "22312cd55385a51d6a2d424622557f58cc36a0d5aa062430969c136938a9603a"
+        },
+        {
+          "path": "docs/legal/gap-instruments/editions/colo.pdf",
+          "sha256": "f6ca1709d8853c22135e49ca0bc9a0c70aca9f3d2dfa27fe50b1d869b5917027"
+        },
+        {
+          "path": "docs/legal/gap-instruments/editions/colo.xlsx",
+          "sha256": "11cf8fcd7680b0cd777089b5e32adc8d58fa84e60e6365a34abb22e05b2a4217"
+        }
+      ],
+      "sheets": [
+        "Read first",
+        "01 Source pricing sensitivitie"
+      ]
+    },
+    {
+      "gap_id": "LEGAL-GAP-DEBT-LIENS",
+      "document_id": "SH-LEGAL-DRAFT-DEBT-LIENS",
+      "title": "ARU credit, security and payoff document drafts",
+      "status": "DRAFT_FOR_REVIEW",
+      "source_paths": [
+        "industrial/transaction/05_ARU_CLOSING_AND_TAX_DELIVERY.md",
+        "industrial/finance/TRANSACTION_ACCOUNTING.md",
+        "industrial/source/finance.json"
+      ],
+      "proposed_terms": [
+        {
+          "id": "DEBT-P01",
+          "term": "ARU proposed borrower and verified lender execute a 22.5M term facility only with completed authority, facility and funding schedules.",
+          "basis": "Draft borrower/contract identification; existing model supplies debt economics, not lender evidence."
+        },
+        {
+          "id": "DEBT-P02",
+          "term": "Carry 6.75% and ACT/365 with 375000 quarterly principal beginning 2026-04-07 as model-derived draft terms.",
+          "basis": "Existing transaction accounting and finance source; actual lender acceptance remains unverified."
+        },
+        {
+          "id": "DEBT-P03",
+          "term": "Deliver quarterly debt reconciliation within 45 days and material payment/collateral discrepancy notice within 5 business days.",
+          "basis": "New proposed reporting terms, not source-established lender obligations."
+        },
+        {
+          "id": "DEBT-P04",
+          "term": "Grant only separately scheduled security upon proper execution; preserve entity-specific exclusions, authority and third-party rights.",
+          "basis": "New security draft; no present grant, guarantee, filing or perfection assertion."
+        },
+        {
+          "id": "DEBT-P05",
+          "term": "Obtain payoff statement and instrument-specific release undertaking; verify supported settlement separately from lien release.",
+          "basis": "New request and undertaking clauses; current internal ARU-CL-03 is not independent lender confirmation."
+        }
+      ],
+      "unresolved_fields": [
+        {
+          "id": "DEBT-U01",
+          "field": "Lender, verified borrower capacity and any separate guarantors/grantors",
+          "next_action": "Complete party and authority schedule without assuming group-wide guarantees."
+        },
+        {
+          "id": "DEBT-U02",
+          "field": "Actual maturity, business-day rule, late interest and prepayment terms",
+          "next_action": "Negotiate explicit clauses; 60-month model amortization is not independent maturity evidence."
+        },
+        {
+          "id": "DEBT-U03",
+          "field": "Collateral assets, existing encumbrances and required consents",
+          "next_action": "Complete asset-specific grantor schedule and qualified legal review before execution."
+        },
+        {
+          "id": "DEBT-U04",
+          "field": "Payoff value date, accrued interest, instruction reference and release instruments",
+          "next_action": "Obtain exact lender documentation; do not fabricate operational bank details."
+        },
+        {
+          "id": "DEBT-U05",
+          "field": "Numerical covenants and compliance definitions",
+          "next_action": "Obtain accepted covenant schedule before any compliance certificate."
+        }
+      ],
+      "financial_schedules": [
+        {
+          "name": "Closing sources and uses — do not sum sources and uses together",
+          "columns": [
+            "line",
+            "amount_usd",
+            "classification"
+          ],
+          "rows": [
+            [
+              "Buyer share consideration",
+              48000000,
+              "Use; includes 45M seller and 3M escrow"
+            ],
+            [
+              "Old term/revolver payoff",
+              13500000,
+              "Use; excludes leases"
+            ],
+            [
+              "Total uses before fees",
+              61500000,
+              "Use subtotal"
+            ],
+            [
+              "New term advance",
+              22500000,
+              "Source"
+            ],
+            [
+              "Parent equity before fees",
+              39000000,
+              "Source"
+            ],
+            [
+              "Total sources before fees",
+              61500000,
+              "Source subtotal"
+            ],
+            [
+              "Transaction expense funding",
+              900000,
+              "Separate fee"
+            ],
+            [
+              "Debt issuance cost funding",
+              300000,
+              "Separate financing cost"
+            ],
+            [
+              "Parent cash including fees",
+              40200000,
+              "Parent 39M+fees 1.2M"
+            ]
+          ]
+        },
+        {
+          "name": "Modeled closing principal",
+          "columns": [
+            "measure",
+            "amount_usd"
+          ],
+          "rows": [
+            [
+              "New term principal",
+              22500000
+            ],
+            [
+              "Retained leases",
+              2500000
+            ],
+            [
+              "Total funded principal",
+              25000000
+            ],
+            [
+              "Retained cash",
+              2000000
+            ],
+            [
+              "Net principal debt",
+              23000000
+            ]
+          ]
+        },
+        {
+          "name": "Source-model term and revolver inputs",
+          "columns": [
+            "measure",
+            "value",
+            "unit",
+            "basis"
+          ],
+          "rows": [
+            [
+              "Term rate",
+              6.75,
+              "percent annually",
+              "Modeled"
+            ],
+            [
+              "Interest basis",
+              "ACT/365",
+              "day count",
+              "Modeled; unverified lender acceptance"
+            ],
+            [
+              "Quarterly principal",
+              375000,
+              "USD",
+              "First 2026-04-07"
+            ],
+            [
+              "Revolver capacity",
+              5000000,
+              "USD",
+              "Modeled"
+            ],
+            [
+              "Revolver draw",
+              0,
+              "USD",
+              "Modeled selected case"
+            ],
+            [
+              "Undrawn fee",
+              0.25,
+              "percent annually",
+              "Modeled"
+            ],
+            [
+              "Constant full-year undrawn fee sensitivity",
+              12500,
+              "USD",
+              "5M×0.25%; not actual settlement"
+            ]
+          ]
+        }
+      ],
+      "version": "0.1.0",
+      "prepared": "2026-09-12",
+      "approval_status": "NOT_ACCEPTED",
+      "slug": "debt-liens",
+      "source": "docs/legal/gap-instruments/source/debt-liens.md",
+      "structured": "docs/legal/gap-instruments/source/debt-liens.json",
+      "source_sha256": "e9adf8cdc08237c855556d22d30a7649ac64b471c567ce7a54c1aa67613485ef",
+      "structured_sha256": "e08aef516cba382287cd78231100dbc5ad2a6f193a864c2331c232c591c9bd03",
+      "dependencies": [
+        {
+          "path": "industrial/transaction/05_ARU_CLOSING_AND_TAX_DELIVERY.md",
+          "sha256": "a6dd448ed3a4a3ad6f0f3748e79dd918ea43c75685de762fe00843477a5d22c9"
+        },
+        {
+          "path": "industrial/finance/TRANSACTION_ACCOUNTING.md",
+          "sha256": "d13f142968958585cfc56a7b06d54b5e95bccef6d434d11bb6bba93933a0aa58"
+        },
+        {
+          "path": "industrial/source/finance.json",
+          "sha256": "0d4461abfcdb138da36db503ff0cfea7c47ea7fd7109494126514225fd43e38c"
+        }
+      ],
+      "pages": 6,
+      "artifacts": [
+        {
+          "path": "docs/legal/gap-instruments/editions/debt-liens.html",
+          "sha256": "aad02016ee7c5f11782068829ea5bc36538bf53b6d63391556855eb2b9f96815"
+        },
+        {
+          "path": "docs/legal/gap-instruments/editions/debt-liens.pdf",
+          "sha256": "59aaae8c3f5048079fe5b993f35fab239a75e0572d734fbc1f9fa2e2c99b5bdf"
+        },
+        {
+          "path": "docs/legal/gap-instruments/editions/debt-liens.xlsx",
+          "sha256": "77ccd92e8c7014d8ad5c532988fdc81bd1ff712eb95e8925bcf5691eff1d96cd"
+        }
+      ],
+      "sheets": [
+        "Read first",
+        "01 Closing sources and uses — ",
+        "02 Modeled closing principal",
+        "03 Source-model term and revol"
+      ]
+    },
+    {
+      "gap_id": "LEGAL-GAP-FINANCING-DOCUMENTS",
+      "document_id": "SH-LEGAL-DRAFT-FINANCING-DOCUMENTS",
+      "title": "Harrison Vale and Wolf Ridge subscription and rights drafts",
+      "status": "DRAFT_FOR_REVIEW",
+      "source_paths": [
+        "docs/governance/board-records/2021-06-18_harrison-vale-growth-financing-minutes.md",
+        "docs/governance/board-records/2022-10-28_wolf-ridge-industrial-financing-minutes.md",
+        "industrial/corporate/LEGAL_STRUCTURE_AND_FORMATION.md"
+      ],
+      "proposed_terms": [
+        {
+          "id": "FIN-P01",
+          "term": "Separate HV and WR subscriptions become operative only with verified subscribers, completed economics and actual execution.",
+          "basis": "New definitive-draft mechanism; historical board approvals are not recovered signed subscriptions."
+        },
+        {
+          "id": "FIN-P02",
+          "term": "Provide quarterly management financial information within 45 days and annual management information within 120 days after period end.",
+          "basis": "New proposed information-rights deadlines; no audited-statement promise."
+        },
+        {
+          "id": "FIN-P03",
+          "term": "Limit confidential information use to investment monitoring and protect J 2, personnel, privileged and third-party restricted material.",
+          "basis": "Proposed investor information safeguards within accepted institutional boundaries."
+        },
+        {
+          "id": "FIN-P04",
+          "term": "Require written approved amendments, indexed side letters, authenticated funding records and reconciliation before capital-ledger update.",
+          "basis": "New proposed closing and amendment clauses; no historical side letter asserted."
+        },
+        {
+          "id": "FIN-P05",
+          "term": "Preserve accepted board designation boundaries and no ordinary-course investor veto; exact thresholds remain open.",
+          "basis": "Existing board sources govern direction; proposed clauses cannot create new seats or operating rights."
+        }
+      ],
+      "unresolved_fields": [
+        {
+          "id": "FIN-U01",
+          "field": "Exact subscriber legal entities and allocations",
+          "next_action": "Verify each signing fund/party; lead firm name alone is insufficient."
+        },
+        {
+          "id": "FIN-U02",
+          "field": "Class, quantity, unit price and exact cap table",
+          "next_action": "Complete from accepted definitive economics without deriving exact ownership from rounded board totals."
+        },
+        {
+          "id": "FIN-U03",
+          "field": "Board designation threshold and replacement mechanics",
+          "next_action": "Obtain separately accepted rights schedule consistent with governing agreement."
+        },
+        {
+          "id": "FIN-U04",
+          "field": "Actual execution and settlement evidence",
+          "next_action": "Complete each round separately; no fabricated receipt or backdated signing."
+        },
+        {
+          "id": "FIN-U05",
+          "field": "Preference, conversion, anti-dilution, option-pool and transfer terms",
+          "next_action": "Obtain explicit acceptance if proposed; no standard term implied."
+        }
+      ],
+      "financial_schedules": [
+        {
+          "name": "Separate board financing models — approximate values",
+          "columns": [
+            "instrument",
+            "board_date",
+            "financing_usd",
+            "post_money_usd",
+            "implied_pre_money_usd",
+            "derived_new_money_ratio_percent",
+            "insiders_post_percent",
+            "outside_post_percent",
+            "precision"
+          ],
+          "rows": [
+            [
+              "HV",
+              "2021-06-18",
+              48000000,
+              null,
+              null,
+              null,
+              null,
+              null,
+              "Approximate financing; remaining economics unestablished here"
+            ],
+            [
+              "WR",
+              "2022-10-28",
+              135000000,
+              900000000,
+              765000000,
+              15,
+              66.5,
+              33.5,
+              "Approximate board model; 15% is arithmetic ratio, not exact investor allocation"
+            ]
+          ]
+        }
+      ],
+      "version": "0.1.0",
+      "prepared": "2026-09-12",
+      "approval_status": "NOT_ACCEPTED",
+      "slug": "financing-documents",
+      "source": "docs/legal/gap-instruments/source/financing-documents.md",
+      "structured": "docs/legal/gap-instruments/source/financing-documents.json",
+      "source_sha256": "f648e1844ed93a66b81111b86ae98c98e3e901907f138fd5b9e87172adbf3607",
+      "structured_sha256": "9eb62c0dda0fa6f2babf69f5b3989a6d9a7133f176bd1ef56c8a8f59a745b759",
+      "dependencies": [
+        {
+          "path": "docs/governance/board-records/2021-06-18_harrison-vale-growth-financing-minutes.md",
+          "sha256": "b994512c64f86abe0d649f95d4ea3d3e00fd0c2c22af0ed56b62bd7ed41fae97"
+        },
+        {
+          "path": "docs/governance/board-records/2022-10-28_wolf-ridge-industrial-financing-minutes.md",
+          "sha256": "ec3625726d23588816c073afb4bd76cce51085a195833c6089faea3c3efed1a4"
+        },
+        {
+          "path": "industrial/corporate/LEGAL_STRUCTURE_AND_FORMATION.md",
+          "sha256": "5a10f112b015d5dfa7ca3b500108718015a41369182092cabc44dfb224119fbc"
+        }
+      ],
+      "pages": 6,
+      "artifacts": [
+        {
+          "path": "docs/legal/gap-instruments/editions/financing-documents.html",
+          "sha256": "1b742ffd63e71b9ddd4785bf43dfcb17ea685751a905d14afc3c7700e5db99fe"
+        },
+        {
+          "path": "docs/legal/gap-instruments/editions/financing-documents.pdf",
+          "sha256": "dbec54bba2adff2e60de770a9ae36e88b344214d0bb7905fcc80b08d6b5d8e61"
+        },
+        {
+          "path": "docs/legal/gap-instruments/editions/financing-documents.xlsx",
+          "sha256": "fde18bc6873cb6dab1aa9300e6e4def4c50873953a7f8f0d9738b8c1202b86ff"
+        }
+      ],
+      "sheets": [
+        "Read first",
+        "01 Separate board financing mo"
+      ]
+    },
+    {
+      "gap_id": "LEGAL-GAP-FORMATIONS",
+      "document_id": "SH-LEGAL-DRAFT-FORMATIONS",
+      "title": "Industrial company consents and subscription record drafts",
+      "status": "DRAFT_FOR_REVIEW",
+      "source_paths": [
+        "industrial/corporate/LEGAL_STRUCTURE_AND_FORMATION.md",
+        "industrial/source/entities.json",
+        "industrial/source/chronology.json",
+        "docs/canon/INDUSTRIAL_CLOSEOUT_2026-09-05.md"
+      ],
+      "proposed_terms": [
+        {
+          "id": "FORM-P01",
+          "term": "Adopt six separate internal consent texts only through each verified approving body, with actual adoption dates and no reconstructed signatures.",
+          "basis": "New proposed document mechanism; existing entity identities and ownership unchanged."
+        },
+        {
+          "id": "FORM-P02",
+          "term": "Accept a subscription only when class, quantity, consideration, authority and contribution evidence are supplied; do not issue an acquired historical interest a second time.",
+          "basis": "Proposed completion safeguard; original nominal subscription amount is not established."
+        },
+        {
+          "id": "FORM-P03",
+          "term": "Maintain entity-specific ownership, authority and separate-book records; cross-reference existing acquisition amounts rather than treating them as formation contributions.",
+          "basis": "Proposed operative clauses implementing the existing industrial formation boundary."
+        },
+        {
+          "id": "FORM-P04",
+          "term": "Record subsequent contributions, guarantees and recapitalizations separately and preserve existing parent governance and operating authority.",
+          "basis": "Proposed administrative clause; no new contribution or guarantee adopted."
+        }
+      ],
+      "unresolved_fields": [
+        {
+          "id": "FORM-U01",
+          "field": "SHIH/PS exact subscription class, quantity and consideration",
+          "next_action": "Obtain accepted organization subscription detail; do not default to a nominal dollar amount."
+        },
+        {
+          "id": "FORM-U02",
+          "field": "Entity-specific approving body, signatory capacity and adoption date",
+          "next_action": "Legal identifies the governing authority; complete one consent sheet per company."
+        },
+        {
+          "id": "FORM-U03",
+          "field": "Original certificates and governmental records",
+          "next_action": "Obtain appropriate independent records if required; no government replicas are produced."
+        },
+        {
+          "id": "FORM-U04",
+          "field": "Exact acquired share or unit certificates",
+          "next_action": "Use accepted ownership percentages until original instrument identifiers are supported."
+        }
+      ],
+      "financial_schedules": [
+        {
+          "name": "Accepted subsidiary ownership — not additive across entities",
+          "columns": [
+            "entity_id",
+            "company",
+            "holder",
+            "ownership_percent",
+            "event_date",
+            "event_basis"
+          ],
+          "rows": [
+            [
+              "SHI",
+              "Sable Harbor, LLC",
+              "Existing members",
+              null,
+              "2016",
+              "Year precision; individual member economics not restated"
+            ],
+            [
+              "SHIH",
+              "Sable Harbor Industrial Holdings, Inc.",
+              "SHI",
+              100,
+              "2024-12-02",
+              "Reconstructed formation"
+            ],
+            [
+              "PS",
+              "Pale Sun Inc.",
+              "SHIH",
+              100,
+              "2025-01-13",
+              "Reconstructed formation"
+            ],
+            [
+              "RWH",
+              "Red Wash Mining, LLC",
+              "PS",
+              100,
+              "2025-07-18",
+              "Acquired existing interests; not new subscription"
+            ],
+            [
+              "ARU",
+              "American Resource Utility, Inc.",
+              "SHIH",
+              100,
+              "2026-01-07",
+              "Acquired existing shares; not statutory merger"
+            ],
+            [
+              "BST",
+              "Blood, Sweat & Tears Railway Company",
+              "ARU",
+              100,
+              "1991-01-02",
+              "Reconstructed historical ownership continuity"
+            ]
+          ]
+        },
+        {
+          "name": "Pre-close ARU holders — separate from parent capitalization",
+          "columns": [
+            "holder",
+            "ownership_percent"
+          ],
+          "rows": [
+            [
+              "Fred Tolman",
+              60
+            ],
+            [
+              "Adele Tolman",
+              20
+            ],
+            [
+              "Nora Ashcombe",
+              10
+            ],
+            [
+              "Seth Kettering",
+              10
+            ]
+          ]
+        }
+      ],
+      "version": "0.1.0",
+      "prepared": "2026-09-12",
+      "approval_status": "NOT_ACCEPTED",
+      "slug": "formations",
+      "source": "docs/legal/gap-instruments/source/formations.md",
+      "structured": "docs/legal/gap-instruments/source/formations.json",
+      "source_sha256": "14fd0d40cf42e80b79f1c94f924050909b98e41d3212c3819d4d04f4d1c398c4",
+      "structured_sha256": "71c341d2e9f32289fbd3e4935254d47b84bdfd8f3a0c81126d2e6e3aa10ab046",
+      "dependencies": [
+        {
+          "path": "industrial/corporate/LEGAL_STRUCTURE_AND_FORMATION.md",
+          "sha256": "5a10f112b015d5dfa7ca3b500108718015a41369182092cabc44dfb224119fbc"
+        },
+        {
+          "path": "industrial/source/entities.json",
+          "sha256": "799a24baf3240d50c5d6a80ac0f9ddb9d023b7a36de058ec12546aac60caee29"
+        },
+        {
+          "path": "industrial/source/chronology.json",
+          "sha256": "53fe564b06301176a3a8322aedb82fee5a61c82caeae3d333e0a2c520b3eedc5"
+        },
+        {
+          "path": "docs/canon/INDUSTRIAL_CLOSEOUT_2026-09-05.md",
+          "sha256": "0b21f22c2a8ffe55fa4e43898834ddc38389e42efe2e9c11ff48c7418dad8be7"
+        }
+      ],
+      "pages": 6,
+      "artifacts": [
+        {
+          "path": "docs/legal/gap-instruments/editions/formations.html",
+          "sha256": "bf33753a3759dbec86c2611e1e069aa76b199ee3e70976a9e5d65db44215c17e"
+        },
+        {
+          "path": "docs/legal/gap-instruments/editions/formations.pdf",
+          "sha256": "5cd9b56d086833bf9336cc3b37fab24626700ca88b8a1b4696834908e23c44c0"
+        },
+        {
+          "path": "docs/legal/gap-instruments/editions/formations.xlsx",
+          "sha256": "7ba1591b7b2a6e48bbc8fb156a9dc789d687598da04ee8327190e62749c7e79a"
+        }
+      ],
+      "sheets": [
+        "Read first",
+        "01 Accepted subsidiary ownersh",
+        "02 Pre-close ARU holders — sep"
+      ]
+    },
+    {
+      "gap_id": "LEGAL-GAP-HOST-RIGHTS",
+      "document_id": "SH-LEGAL-DRAFT-HOST-RIGHTS",
+      "title": "Cradle host recovery agreement with Kelly Gang Mining and Demotte schedules",
+      "status": "DRAFT_FOR_REVIEW",
+      "prepared": "2026-09-12",
+      "owner_role": "Cradle business leader with enterprise Legal and Finance",
+      "approval": null,
+      "effective_date": null,
+      "source_paths": [
+        "docs/canon/CRADLE_CLOSEOUT_2026-09-06.md",
+        "geospatial/registers/SITE_REGISTER.csv",
+        "geospatial/facilities/RESEARCH_CAMPUSES.md",
+        "industrial/corporate/LEGAL_STRUCTURE_AND_FORMATION.md"
+      ],
+      "proposed_terms": [
+        {
+          "id": "SH-LEGAL-DRAFT-HOST-RIGHTS-T01",
+          "term": "Three-year initial term and 90-day prolonged interruption exit",
+          "basis": "New negotiable proposal; no historic term asserted"
+        },
+        {
+          "id": "SH-LEGAL-DRAFT-HOST-RIGHTS-T02",
+          "term": "Host retains operating command and bypass; Cradle equipment remains Cradle-owned",
+          "basis": "Cradle closeout"
+        },
+        {
+          "id": "SH-LEGAL-DRAFT-HOST-RIGHTS-T03",
+          "term": "Monthly statement within 20 days; undisputed payment 30 days after receipt",
+          "basis": "Proposed settlement timing only"
+        },
+        {
+          "id": "SH-LEGAL-DRAFT-HOST-RIGHTS-T04",
+          "term": "Stream 17 exclusive recovery right and capture-point title",
+          "basis": "Accepted Cradle closeout; precise exhibit unresolved"
+        },
+        {
+          "id": "SH-LEGAL-DRAFT-HOST-RIGHTS-T05",
+          "term": "Demotte commercial participation choice must be separately accepted",
+          "basis": "No host percentage supplied by accepted source"
+        },
+        {
+          "id": "SH-LEGAL-DRAFT-HOST-RIGHTS-T06",
+          "term": "Sable Harbor, LLC (SHI) is the proposed contracting party; individual authority remains to be established",
+          "basis": "Accepted parent legal identity; proposed selection for this instrument"
+        }
+      ],
+      "unresolved_fields": [
+        {
+          "id": "SH-LEGAL-DRAFT-HOST-RIGHTS-U01",
+          "field": "Individual SHI signatory delegation and host execution authority",
+          "next_action": "Verify existing authority records; SHI legal identity is accepted and Cradle remains a business"
+        },
+        {
+          "id": "SH-LEGAL-DRAFT-HOST-RIGHTS-U02",
+          "field": "Capture-point/interface exhibits at both hosts",
+          "next_action": "Host and Cradle prepare source-backed commercial boundary drawings"
+        },
+        {
+          "id": "SH-LEGAL-DRAFT-HOST-RIGHTS-U03",
+          "field": "Kelly Gang participation percentage and value definition",
+          "next_action": "Negotiate explicit inputs; do not make permanent lore quantities"
+        },
+        {
+          "id": "SH-LEGAL-DRAFT-HOST-RIGHTS-U04",
+          "field": "Demotte host settlement mechanism",
+          "next_action": "Owner review separate supported commercial proposal"
+        },
+        {
+          "id": "SH-LEGAL-DRAFT-HOST-RIGHTS-U05",
+          "field": "Term dates, currencies, law,forum,insurance evidence",
+          "next_action": "Complete definitive schedule before execution"
+        }
+      ],
+      "financial_schedules": [
+        {
+          "name": "Host settlement variables",
+          "columns": [
+            "host",
+            "eligible_realized_value",
+            "participation_rate",
+            "host_amount",
+            "status"
+          ],
+          "rows": [
+            [
+              "Kelly Gang Mining",
+              null,
+              null,
+              null,
+              "negotiated participation; inputs unresolved"
+            ],
+            [
+              "Demotte Reclamation Services",
+              null,
+              null,
+              null,
+              "mechanism unresolved; no inherited Kelly Gang rate"
+            ]
+          ]
+        }
+      ],
+      "version": "0.1.0",
+      "approval_status": "NOT_ACCEPTED",
+      "slug": "host-rights",
+      "source": "docs/legal/gap-instruments/source/host-rights.md",
+      "structured": "docs/legal/gap-instruments/source/host-rights.json",
+      "source_sha256": "4fd81f5dffc2d95ba89c495a3689381648b44a4a8cdfd62750ea028b5bdde9d4",
+      "structured_sha256": "01a9645efe23f29fb9136275995af6a1e2013caa34e286e08f29ec7bacf93c45",
+      "dependencies": [
+        {
+          "path": "docs/canon/CRADLE_CLOSEOUT_2026-09-06.md",
+          "sha256": "b49eaf96f1582f11886e9543b1543013f47acc99aa5533082d73717ab523e8aa"
+        },
+        {
+          "path": "geospatial/registers/SITE_REGISTER.csv",
+          "sha256": "df07fc9b2225114deafbad5536c625982c73730ed486cbef15b5fd7a34a86fa8"
+        },
+        {
+          "path": "geospatial/facilities/RESEARCH_CAMPUSES.md",
+          "sha256": "094ea7bb3bc9dd920f29dbe7ef0062880b399c46443cc5c32661589a8e51239a"
+        },
+        {
+          "path": "industrial/corporate/LEGAL_STRUCTURE_AND_FORMATION.md",
+          "sha256": "5a10f112b015d5dfa7ca3b500108718015a41369182092cabc44dfb224119fbc"
+        }
+      ],
+      "pages": 7,
+      "artifacts": [
+        {
+          "path": "docs/legal/gap-instruments/editions/host-rights.html",
+          "sha256": "b430e269258cea1104c1717e615b91678e87dcfe2631b71fd519e740dd30279a"
+        },
+        {
+          "path": "docs/legal/gap-instruments/editions/host-rights.pdf",
+          "sha256": "c6bcc46b6479b0334ff530b77acd0d37483ea5735acb5bccb3ec3743f72f1e95"
+        },
+        {
+          "path": "docs/legal/gap-instruments/editions/host-rights.xlsx",
+          "sha256": "56f497399842db385f1f59ea07ea270bbc3713e60e3b0dd6db23564078f53bf4"
+        }
+      ],
+      "sheets": [
+        "Read first",
+        "01 Host settlement variables"
+      ]
+    },
+    {
+      "gap_id": "LEGAL-GAP-LAND",
+      "document_id": "SH-LEGAL-DRAFT-LAND",
+      "title": "Northern Nevada land settlement and funding instruction draft",
+      "status": "DRAFT_FOR_REVIEW",
+      "source_paths": [
+        "docs/canon/RUNTIME_HOSTING_AND_DATA_CENTER_DECISIONS_2026-09-11.md",
+        "docs/legal/MOCK_DEED_NORTHERN_NEVADA_DATA_CENTER_2026-09-04.md",
+        "docs/finance/RUNTIME_INFRASTRUCTURE_FINANCE_RECONCILIATION_2026-09-11.md"
+      ],
+      "proposed_terms": [
+        {
+          "id": "LAND-P01",
+          "term": "Complete transaction-specific settlement/funding instruction only after authority, recipient and counterpart evidence is supported.",
+          "basis": "New proposed instruction; accepted synthetic acquisition retained without claiming payment."
+        },
+        {
+          "id": "LAND-P02",
+          "term": "Treasury verifies funding/recipient and Finance verifies authority, amount and accounting as separate role reviews.",
+          "basis": "New proposed procedure; no control-operation claim."
+        },
+        {
+          "id": "LAND-P03",
+          "term": "Resolve the existing settlement clearing only through a supported completing entry; do not debit land twice.",
+          "basis": "Proposed completion clause implementing existing finance bridge."
+        },
+        {
+          "id": "LAND-P04",
+          "term": "Provide written owner update within 10 business days of assigning a material settlement evidence gap.",
+          "basis": "New proposed administrative timing; no statutory deadline."
+        }
+      ],
+      "unresolved_fields": [
+        {
+          "id": "LAND-U01",
+          "field": "Settlement counterpart and funding source",
+          "next_action": "Obtain accepted transaction evidence before classifying as cash, debt, payable or contribution."
+        },
+        {
+          "id": "LAND-U02",
+          "field": "Settlement adjustments and actual recipient support",
+          "next_action": "Obtain source-specific statement; blank is not zero."
+        },
+        {
+          "id": "LAND-U03",
+          "field": "Actual instruction authority/date",
+          "next_action": "Complete verified authorization without backdating to acquisition."
+        },
+        {
+          "id": "LAND-U04",
+          "field": "Exact real title or parcel evidence",
+          "next_action": "No real assertion authorized; retain synthetic geometry/no APN unless appropriately resolved."
+        }
+      ],
+      "financial_schedules": [
+        {
+          "name": "Land and development perimeter — amounts not additive",
+          "columns": [
+            "measure",
+            "amount_usd",
+            "basis"
+          ],
+          "rows": [
+            [
+              "Accepted fictional land consideration",
+              3000000,
+              "Acquisition 2026-09-04"
+            ],
+            [
+              "Phase-I planning envelope before IT",
+              15500000,
+              "Includes land; not spent"
+            ],
+            [
+              "Incremental envelope after land",
+              12500000,
+              "15.5M−3M"
+            ],
+            [
+              "Combined study forecast",
+              200000,
+              "No invoice; do not duplicate utility/survey scope"
+            ],
+            [
+              "Land settlement cash",
+              null,
+              "Unestablished,not zero"
+            ],
+            [
+              "Settlement adjustments",
+              null,
+              "Unestablished"
+            ]
+          ]
+        },
+        {
+          "name": "Existing balanced land overlay — reference only, no second posting",
+          "columns": [
+            "account_description",
+            "debit_usd",
+            "credit_usd"
+          ],
+          "rows": [
+            [
+              "Land",
+              3000000,
+              0
+            ],
+            [
+              "Unresolved settlement clearing",
+              0,
+              3000000
+            ]
+          ]
+        }
+      ],
+      "version": "0.1.0",
+      "prepared": "2026-09-12",
+      "approval_status": "NOT_ACCEPTED",
+      "slug": "land",
+      "source": "docs/legal/gap-instruments/source/land.md",
+      "structured": "docs/legal/gap-instruments/source/land.json",
+      "source_sha256": "9c4ea28e58c3355f61ab29e8df8ce7789c1c7d7305131efdddabbe3d59c9f28e",
+      "structured_sha256": "8e44d16275f79a6930d4288f7abc2c1bea6c68e7da9ab2a11642d2f58b68cf75",
+      "dependencies": [
+        {
+          "path": "docs/canon/RUNTIME_HOSTING_AND_DATA_CENTER_DECISIONS_2026-09-11.md",
+          "sha256": "fd309a9bdf596ea96498b7207b60ea3bea70a35d8c418371aa96c06d928bb17b"
+        },
+        {
+          "path": "docs/legal/MOCK_DEED_NORTHERN_NEVADA_DATA_CENTER_2026-09-04.md",
+          "sha256": "aa1717ac07ea2968d0ad877045d57b29ec0766dd852a79bd61553fa24eb97d79"
+        },
+        {
+          "path": "docs/finance/RUNTIME_INFRASTRUCTURE_FINANCE_RECONCILIATION_2026-09-11.md",
+          "sha256": "20558ea7ecde58914b7ccd44dc866f56c754b5eabd053eff01b43e7684aa40c8"
+        }
+      ],
+      "pages": 5,
+      "artifacts": [
+        {
+          "path": "docs/legal/gap-instruments/editions/land.html",
+          "sha256": "fcafbf086fcb90137083f6d0b1d624d68e9ba4d4f8d98c2cd3a1738171b34131"
+        },
+        {
+          "path": "docs/legal/gap-instruments/editions/land.pdf",
+          "sha256": "45086344d7cca1400d43bce2b4a6aec5d99597aab9f86681865d04f0d3f9dff6"
+        },
+        {
+          "path": "docs/legal/gap-instruments/editions/land.xlsx",
+          "sha256": "656ee5c15227f35ed7eb7ce74e17681a4744ff4f60efa662bb775e65acf98a6f"
+        }
+      ],
+      "sheets": [
+        "Read first",
+        "01 Land and development perime",
+        "02 Existing balanced land over"
+      ]
+    },
+    {
+      "gap_id": "LEGAL-GAP-MARK-CLEARANCE",
+      "document_id": "SH-LEGAL-DRAFT-MARK-CLEARANCE",
+      "title": "Sable Harbor Advisory counsel instruction, search record and launch decision form",
+      "status": "DRAFT_FOR_REVIEW",
+      "prepared": "2026-09-12",
+      "owner_role": "Advisory business owner with enterprise Legal",
+      "approval": null,
+      "effective_date": null,
+      "source_paths": [
+        "docs/legal/ADVISORY_NAME_AND_EXTERNAL_CLEARANCE_STATUS_2026-09-09.md",
+        "docs/legal/PRELIMINARY_NAME_AND_MARK_SCREEN.md"
+      ],
+      "proposed_terms": [
+        {
+          "id": "SH-LEGAL-DRAFT-MARK-CLEARANCE-T01",
+          "term": "Scope counsel work to actual external use of full composite name",
+          "basis": "Accepted external-clearance status note"
+        },
+        {
+          "id": "SH-LEGAL-DRAFT-MARK-CLEARANCE-T02",
+          "term": "Preserve accepted operating name and approved artwork",
+          "basis": "Existing name decision; no rebranding authorized"
+        },
+        {
+          "id": "SH-LEGAL-DRAFT-MARK-CLEARANCE-T03",
+          "term": "Keep search record, legal advice, launch decision and filing status separate",
+          "basis": "Proposed evidence/decision instrument"
+        },
+        {
+          "id": "SH-LEGAL-DRAFT-MARK-CLEARANCE-T04",
+          "term": "No counsel appointment or expenditure from draft instruction alone",
+          "basis": "Proposed engagement boundary"
+        }
+      ],
+      "unresolved_fields": [
+        {
+          "id": "SH-LEGAL-DRAFT-MARK-CLEARANCE-U01",
+          "field": "Actual external markets, services, channels and dates",
+          "next_action": "Business owner provides specific use instructions"
+        },
+        {
+          "id": "SH-LEGAL-DRAFT-MARK-CLEARANCE-U02",
+          "field": "Counsel identity, fees and engagement authority",
+          "next_action": "Appoint qualified adviser only if external commercialization is pursued"
+        },
+        {
+          "id": "SH-LEGAL-DRAFT-MARK-CLEARANCE-U03",
+          "field": "Search results, advice and launch/filingdecision",
+          "next_action": "Complete future evidence and sign-off; do not fabricate clearance"
+        }
+      ],
+      "financial_schedules": [
+        {
+          "name": "Unapproved clearance engagement",
+          "columns": [
+            "cost_item",
+            "amount",
+            "currency",
+            "approval"
+          ],
+          "rows": [
+            [
+              "professional fees",
+              null,
+              null,
+              "not authorized"
+            ],
+            [
+              "third-party search costs",
+              null,
+              null,
+              "not authorized"
+            ],
+            [
+              "filing fees",
+              null,
+              null,
+              "no filing selected"
+            ]
+          ]
+        }
+      ],
+      "version": "0.1.0",
+      "approval_status": "NOT_ACCEPTED",
+      "slug": "mark-clearance",
+      "source": "docs/legal/gap-instruments/source/mark-clearance.md",
+      "structured": "docs/legal/gap-instruments/source/mark-clearance.json",
+      "source_sha256": "a5b9b8d1a39b4c2d85111d191052ca89ebcf763176fe625a532aeb03fdca9dec",
+      "structured_sha256": "38ed7c3c8c72ae7447af982c72b15e05c1b88028c54886e45f0dd0d797a6f493",
+      "dependencies": [
+        {
+          "path": "docs/legal/ADVISORY_NAME_AND_EXTERNAL_CLEARANCE_STATUS_2026-09-09.md",
+          "sha256": "53cb9756ad05f9422b8d0bc93eeecace454cc25c6652424154caf2eaf0b4984d"
+        },
+        {
+          "path": "docs/legal/PRELIMINARY_NAME_AND_MARK_SCREEN.md",
+          "sha256": "3c6ead967615a03fadb6f4a288bb0a2b5cf2d49f7266886af5468c6c106ef6cb"
+        }
+      ],
+      "pages": 5,
+      "artifacts": [
+        {
+          "path": "docs/legal/gap-instruments/editions/mark-clearance.html",
+          "sha256": "e48f5b8d532217fcdaf891ca58373ea476665d06ac16fac2677ea7676b6228d5"
+        },
+        {
+          "path": "docs/legal/gap-instruments/editions/mark-clearance.pdf",
+          "sha256": "b345750e052d3bf5754be3cb88ab9bab364772cb9533c768420c94771311a06b"
+        },
+        {
+          "path": "docs/legal/gap-instruments/editions/mark-clearance.xlsx",
+          "sha256": "fb61ed8d7ac7b0126b0e6213e2e44daa35812f13344e008a5685c5cc7c346bbe"
+        }
+      ],
+      "sheets": [
+        "Read first",
+        "01 Unapproved clearance engage"
+      ]
+    },
+    {
+      "gap_id": "LEGAL-GAP-RW-CHRONOLOGY",
+      "document_id": "SH-LEGAL-DRAFT-RW-CHRONOLOGY",
+      "title": "Red Wash chronology reconciliation and proposed correction instrument",
+      "status": "DRAFT_FOR_REVIEW",
+      "prepared": "2026-09-12",
+      "owner_role": "Pale Sun transaction owner with enterprise Legal",
+      "approval": null,
+      "effective_date": null,
+      "source_paths": [
+        "industrial/transaction/01_RW_TRANSACTION_FILE.md",
+        "red_wash/agreements/TRANSACTION_AND_COMMERCIAL_INSTRUMENTS.md",
+        "docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05_R2.md",
+        "docs/canon/INDUSTRIAL_CLOSEOUT_2026-09-05.md",
+        "red_wash/source/core_operating_data.json"
+      ],
+      "proposed_terms": [
+        {
+          "id": "SH-LEGAL-DRAFT-RW-CHRONOLOGY-T01",
+          "term": "Display both pre-close date assertions until a scoped decision resolves their identity",
+          "basis": "Proposed representation control; existing sources disagree"
+        },
+        {
+          "id": "SH-LEGAL-DRAFT-RW-CHRONOLOGY-T02",
+          "term": "Preserve selected July 18, 2025 close and consideration",
+          "basis": "Accepted Red Wash transaction canon"
+        },
+        {
+          "id": "SH-LEGAL-DRAFT-RW-CHRONOLOGY-T03",
+          "term": "Adopt each date correction separately with source and derivative scope",
+          "basis": "Proposed correction procedure"
+        }
+      ],
+      "unresolved_fields": [
+        {
+          "id": "SH-LEGAL-DRAFT-RW-CHRONOLOGY-U01",
+          "field": "RW-CHR-01 through RW-CHR-04 event identity and dates",
+          "next_action": "Transaction owner proposes scoped decision using paired sources; owner accepts or retains uncertainty"
+        },
+        {
+          "id": "SH-LEGAL-DRAFT-RW-CHRONOLOGY-U02",
+          "field": "Post-signature approval scope in RW-CHR-04",
+          "next_action": "Review existing authority record before proposing a historical explanation"
+        }
+      ],
+      "financial_schedules": [
+        {
+          "name": "Preserved acquisition amounts",
+          "columns": [
+            "measure",
+            "amount_usd",
+            "basis"
+          ],
+          "rows": [
+            [
+              "cash_consideration",
+              28000000,
+              "accepted; unchanged"
+            ],
+            [
+              "environmental_title_escrow",
+              3000000,
+              "within consideration"
+            ],
+            [
+              "holdback",
+              500000,
+              "within consideration"
+            ],
+            [
+              "transaction_debt",
+              0,
+              "accepted; unchanged"
+            ],
+            [
+              "goodwill",
+              0,
+              "accepted; unchanged"
+            ]
+          ]
+        }
+      ],
+      "version": "0.1.0",
+      "approval_status": "NOT_ACCEPTED",
+      "slug": "rw-chronology",
+      "source": "docs/legal/gap-instruments/source/rw-chronology.md",
+      "structured": "docs/legal/gap-instruments/source/rw-chronology.json",
+      "source_sha256": "2445506da53f889d2177a0805321a3655b1fbfda0dc747c95e7f24b6f638594d",
+      "structured_sha256": "c4ee38d9aab46422a34ef38d19157c47602d636a20c4a0fa5790ab4ac8699b0f",
+      "dependencies": [
+        {
+          "path": "industrial/transaction/01_RW_TRANSACTION_FILE.md",
+          "sha256": "902ff083d3857004b5c868b106fddc8e3600e59ad959201fb97c99d68dba298c"
+        },
+        {
+          "path": "red_wash/agreements/TRANSACTION_AND_COMMERCIAL_INSTRUMENTS.md",
+          "sha256": "5ee3715b0b5b08ba2fd259504ff7455da005d3d2e3701668945aa1ca90477808"
+        },
+        {
+          "path": "docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05_R2.md",
+          "sha256": "89eae89e18db1d3cf3ab4f7bf7f54fa57efabb84c57127717b731572048d563b"
+        },
+        {
+          "path": "docs/canon/INDUSTRIAL_CLOSEOUT_2026-09-05.md",
+          "sha256": "0b21f22c2a8ffe55fa4e43898834ddc38389e42efe2e9c11ff48c7418dad8be7"
+        },
+        {
+          "path": "red_wash/source/core_operating_data.json",
+          "sha256": "eb5601f3a519ac175bef07744fa3c23939734f80b5774efeed4800aa73e8aa3f"
+        }
+      ],
+      "pages": 5,
+      "artifacts": [
+        {
+          "path": "docs/legal/gap-instruments/editions/rw-chronology.html",
+          "sha256": "9a6ec9a60b113dc5c345a5e4ec3f72f7d8318e16fe0ce9f764eb88692de4663a"
+        },
+        {
+          "path": "docs/legal/gap-instruments/editions/rw-chronology.pdf",
+          "sha256": "c469cbad13ad32e683aa690b108ecfefb5400c940e3660d6b8edf8b1e0de8da6"
+        },
+        {
+          "path": "docs/legal/gap-instruments/editions/rw-chronology.xlsx",
+          "sha256": "887db11b0ba36bbda9941737c7f7faa226234883d08b4e2018d20e66032b40b2"
+        }
+      ],
+      "sheets": [
+        "Read first",
+        "01 Preserved acquisition amoun"
+      ]
+    },
+    {
+      "gap_id": "LEGAL-GAP-RW-TITLE",
+      "document_id": "SH-LEGAL-DRAFT-RW-TITLE",
+      "title": "Red Wash supplemental assignment, consent and title-cure escrow instruments",
+      "status": "DRAFT_FOR_REVIEW",
+      "prepared": "2026-09-12",
+      "owner_role": "Pale Sun transaction owner with Red Wash operating authority and enterprise Legal",
+      "approval": null,
+      "effective_date": null,
+      "source_paths": [
+        "red_wash/agreements/TRANSACTION_AND_COMMERCIAL_INSTRUMENTS.md",
+        "industrial/transaction/01_RW_TRANSACTION_FILE.md",
+        "docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05_R2.md",
+        "red_wash/source/core_operating_data.json"
+      ],
+      "proposed_terms": [
+        {
+          "id": "SH-LEGAL-DRAFT-RW-TITLE-T01",
+          "term": "Item-specific confirmatory assignment preserves membership-interest acquisition structure",
+          "basis": "Accepted RWH membership-interest acquisition plus proposed instrument mechanics"
+        },
+        {
+          "id": "SH-LEGAL-DRAFT-RW-TITLE-T02",
+          "term": "Easement correction cannot expand property,route or use without separate amendment",
+          "basis": "Proposed scope restriction; no mine spur accepted"
+        },
+        {
+          "id": "SH-LEGAL-DRAFT-RW-TITLE-T03",
+          "term": "Escrow notice and joint release require supported claim/balance record",
+          "basis": "Existing 36-month $3M escrow; no release evidence"
+        },
+        {
+          "id": "SH-LEGAL-DRAFT-RW-TITLE-T04",
+          "term": "Separate escrow and holdback within $28M consideration",
+          "basis": "Accepted transaction accounting"
+        }
+      ],
+      "unresolved_fields": [
+        {
+          "id": "SH-LEGAL-DRAFT-RW-TITLE-U01",
+          "field": "Native easement/contract identifiers and legal descriptions",
+          "next_action": "Retrieve underlying instruments; do not infer from illustrative maps"
+        },
+        {
+          "id": "SH-LEGAL-DRAFT-RW-TITLE-U02",
+          "field": "Counterparty/administrator identity, signing authority and delivery evidence",
+          "next_action": "Complete from actual source record before instrument use"
+        },
+        {
+          "id": "SH-LEGAL-DRAFT-RW-TITLE-U03",
+          "field": "Escrow current balance and claims/releases",
+          "next_action": "Obtain supported administrator ledger; preserve unknowns"
+        }
+      ],
+      "financial_schedules": [
+        {
+          "name": "Accepted consideration allocation",
+          "columns": [
+            "component",
+            "amount_usd",
+            "status"
+          ],
+          "rows": [
+            [
+              "direct_seller_payment",
+              24500000,
+              "reconstructed allocation"
+            ],
+            [
+              "environmental_title_escrow",
+              3000000,
+              "within consideration; balance unconfirmed"
+            ],
+            [
+              "holdback",
+              500000,
+              "within consideration"
+            ],
+            [
+              "total",
+              28000000,
+              "accepted unchanged"
+            ]
+          ]
+        }
+      ],
+      "version": "0.1.0",
+      "approval_status": "NOT_ACCEPTED",
+      "slug": "rw-title",
+      "source": "docs/legal/gap-instruments/source/rw-title.md",
+      "structured": "docs/legal/gap-instruments/source/rw-title.json",
+      "source_sha256": "382bebe11df4b42fd8b9bb35b1a7831f4afe7b46d58c298d4ae9dd58fa176b54",
+      "structured_sha256": "0ace1edc5e69be480615f7ab5c426b15ae1db2311be40b49fce75a76b6045a48",
+      "dependencies": [
+        {
+          "path": "red_wash/agreements/TRANSACTION_AND_COMMERCIAL_INSTRUMENTS.md",
+          "sha256": "5ee3715b0b5b08ba2fd259504ff7455da005d3d2e3701668945aa1ca90477808"
+        },
+        {
+          "path": "industrial/transaction/01_RW_TRANSACTION_FILE.md",
+          "sha256": "902ff083d3857004b5c868b106fddc8e3600e59ad959201fb97c99d68dba298c"
+        },
+        {
+          "path": "docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05_R2.md",
+          "sha256": "89eae89e18db1d3cf3ab4f7bf7f54fa57efabb84c57127717b731572048d563b"
+        },
+        {
+          "path": "red_wash/source/core_operating_data.json",
+          "sha256": "eb5601f3a519ac175bef07744fa3c23939734f80b5774efeed4800aa73e8aa3f"
+        }
+      ],
+      "pages": 7,
+      "artifacts": [
+        {
+          "path": "docs/legal/gap-instruments/editions/rw-title.html",
+          "sha256": "5f1b108cd375e3af6ed8b380a14d89ac5702e696106f9326042b11dd5dd33e1a"
+        },
+        {
+          "path": "docs/legal/gap-instruments/editions/rw-title.pdf",
+          "sha256": "482eddfac946de9aff5a0edb9fa723e5afc876da903f0b9f241e2a6e61df0783"
+        },
+        {
+          "path": "docs/legal/gap-instruments/editions/rw-title.xlsx",
+          "sha256": "d8ddcc28106788490d0e4999cbeb676cbc988d3cb309331b84a65235ebece203"
+        }
+      ],
+      "sheets": [
+        "Read first",
+        "01 Accepted consideration allo"
+      ]
+    },
+    {
+      "gap_id": "LEGAL-GAP-TAX-BILLING",
+      "document_id": "SH-LEGAL-DRAFT-TAX-BILLING",
+      "title": "Foundry Field tax determination and invoice-change workpaper draft",
+      "status": "DRAFT_FOR_REVIEW",
+      "source_paths": [
+        "docs/finance/evidence/SH-FIN-HUMAN-001/source.json",
+        "docs/canon/FINANCE_HUMAN_EVIDENCE_001_ACCEPTANCE_2026-09-11.md",
+        "docs/legal/evidence/proposals/decision-register.json",
+        "industrial/source/entities.json"
+      ],
+      "proposed_terms": [
+        {
+          "id": "BILLTAX-P01",
+          "term": "Determine jurisdiction and treatment only after transaction parties, supply, delivery/use, price basis and applicable authority are supported.",
+          "basis": "Proposed workpaper; current determination remains unavailable."
+        },
+        {
+          "id": "BILLTAX-P02",
+          "term": "Keep unknown rates, tax bases and calculated tax null; do not assign zero/exempt/inclusive defaults.",
+          "basis": "Proposed implementation of existing missing-field boundary."
+        },
+        {
+          "id": "BILLTAX-P03",
+          "term": "Adopt any tax-bearing scenario through explicit field/amount acceptance, financial successor reconciliation and separate visual review.",
+          "basis": "Proposed change procedure; original released invoice remains unchanged."
+        },
+        {
+          "id": "BILLTAX-P04",
+          "term": "Perform initial completeness review within 5 business days after receiving a full fact packet.",
+          "basis": "New proposed administrative timing; no tax opinion or filing deadline."
+        }
+      ],
+      "unresolved_fields": [
+        {
+          "id": "BILLTAX-U01",
+          "field": "Customer party, delivery/use and component allocation",
+          "next_action": "Obtain accepted transaction-specific facts; billing address alone is insufficient."
+        },
+        {
+          "id": "BILLTAX-U02",
+          "field": "Applicable jurisdiction, tax treatment and dated rate",
+          "next_action": "Qualified review uses official authority after facts are supported."
+        },
+        {
+          "id": "BILLTAX-U03",
+          "field": "Price inclusion and exemption/resale basis if claimed",
+          "next_action": "Obtain controlling contract term and applicable evidence; no default."
+        },
+        {
+          "id": "BILLTAX-U04",
+          "field": "Parent federal tax classification where relevant",
+          "next_action": "Obtain separate governing source; do not borrow ARU 25%model or S/QSub assumptions."
+        },
+        {
+          "id": "BILLTAX-U05",
+          "field": "Any revised tax amount, customer consideration and ledger effect",
+          "next_action": "Requires accepted scenario and reconciled successor; no posting in this draft."
+        }
+      ],
+      "financial_schedules": [
+        {
+          "name": "Foundry Field tax determination — unknown inputs remain null",
+          "columns": [
+            "field",
+            "amount_or_rate",
+            "unit",
+            "status"
+          ],
+          "rows": [
+            [
+              "Released invoice",
+              1740000,
+              "USD",
+              "Unchanged"
+            ],
+            [
+              "Taxable component base",
+              null,
+              "USD",
+              "Unestablished"
+            ],
+            [
+              "Applicable tax rate",
+              null,
+              "percent",
+              "Unestablished; not zero"
+            ],
+            [
+              "Calculated tax",
+              null,
+              "USD",
+              "Not calculated"
+            ],
+            [
+              "Revised customer amount",
+              null,
+              "USD",
+              "Not calculated"
+            ],
+            [
+              "Proposed journal",
+              null,
+              "not applicable",
+              "None authorized"
+            ]
+          ]
+        }
+      ],
+      "version": "0.1.0",
+      "prepared": "2026-09-12",
+      "approval_status": "NOT_ACCEPTED",
+      "slug": "tax-billing",
+      "source": "docs/legal/gap-instruments/source/tax-billing.md",
+      "structured": "docs/legal/gap-instruments/source/tax-billing.json",
+      "source_sha256": "8a4fcc32efc81c2502158afbf7df05d2bec5cb296c366d82e90f3c7f3fa38e48",
+      "structured_sha256": "5da4a510457570db49e799b95f41a6b1e21f733329d862017df58143d2791b2c",
+      "dependencies": [
+        {
+          "path": "docs/finance/evidence/SH-FIN-HUMAN-001/source.json",
+          "sha256": "c4833cfc6f28db6cd3edcae761b0e2d8f463a20de79f1d6fd5b0c517f8f829b7"
+        },
+        {
+          "path": "docs/canon/FINANCE_HUMAN_EVIDENCE_001_ACCEPTANCE_2026-09-11.md",
+          "sha256": "e4a5f41eec6fcac6a3a1a71512869a5f2ef63019a198de7dde78737ef27303a9"
+        },
+        {
+          "path": "docs/legal/evidence/proposals/decision-register.json",
+          "sha256": "e252899c2f323096e54a37eb7b754c19ef1fbb48ce612d9460db37ade4fb743c"
+        },
+        {
+          "path": "industrial/source/entities.json",
+          "sha256": "799a24baf3240d50c5d6a80ac0f9ddb9d023b7a36de058ec12546aac60caee29"
+        }
+      ],
+      "pages": 5,
+      "artifacts": [
+        {
+          "path": "docs/legal/gap-instruments/editions/tax-billing.html",
+          "sha256": "02adac1a57fe62df378f7d39af7cd38d491b2c1e2a849f5debac938359062b7d"
+        },
+        {
+          "path": "docs/legal/gap-instruments/editions/tax-billing.pdf",
+          "sha256": "6afad8981c8200f5ad6144e3a181ebc7e7e199b5a011849e746e1c41873d6e4c"
+        },
+        {
+          "path": "docs/legal/gap-instruments/editions/tax-billing.xlsx",
+          "sha256": "6c54df2946a3e57df098a75c8ea4b798f579e50c132db9a39db490f1cb8985e9"
+        }
+      ],
+      "sheets": [
+        "Read first",
+        "01 Foundry Field tax determina"
+      ]
+    },
+    {
+      "gap_id": "LEGAL-GAP-TAX-FILING",
+      "document_id": "SH-LEGAL-DRAFT-TAX-FILING",
+      "title": "ARU election cooperation and filing-status workpaper draft",
+      "status": "DRAFT_FOR_REVIEW",
+      "source_paths": [
+        "industrial/transaction/07_ARU_TAX_STRUCTURE_MEMORANDUM.md",
+        "industrial/transaction/05_ARU_CLOSING_AND_TAX_DELIVERY.md",
+        "industrial/source/finance.json"
+      ],
+      "proposed_terms": [
+        {
+          "id": "TAX-P01",
+          "term": "Parties cooperate on complete reviewed acquisition and allocation facts; each seller authority remains separate.",
+          "basis": "Proposed cooperation instrument; no filing or execution claim."
+        },
+        {
+          "id": "TAX-P02",
+          "term": "Identify discrepancies within 5 business days of a complete packet and escalate deadline risks; silence is not consent.",
+          "basis": "New proposed coordination deadline; no extension of official filing rules."
+        },
+        {
+          "id": "TAX-P03",
+          "term": "Track preparation, signatures, dispatch, receipt and agency correspondence as separate evidenced events.",
+          "basis": "Proposed internal filing workpaper preserving ARU-CL-07 filing-ready status."
+        },
+        {
+          "id": "TAX-P04",
+          "term": "Use a separately identified alternative basis analysis if intended election cannot be supported; preserve stock purchase.",
+          "basis": "Proposed review response implementing existing conditional tax boundary."
+        }
+      ],
+      "unresolved_fields": [
+        {
+          "id": "TAX-U01",
+          "field": "Independently supported tax eligibility and authority",
+          "next_action": "Qualified reviewer verifies applicable target/seller/buyer and QSub facts."
+        },
+        {
+          "id": "TAX-U02",
+          "field": "Complete authorized signature packet",
+          "next_action": "Obtain appropriate controlled records without public tax identifiers or manufactured signatures."
+        },
+        {
+          "id": "TAX-U03",
+          "field": "Actual submission and subsequent status",
+          "next_action": "Obtain source evidence; current state remains internal filing-ready."
+        },
+        {
+          "id": "TAX-U04",
+          "field": "Approved alternative basis outcome if election unavailable",
+          "next_action": "Prepare separately reviewed financial successor; do not reuse elected tax basis unqualified."
+        }
+      ],
+      "financial_schedules": [
+        {
+          "name": "Conditional acquisition tax and book bridge — distinct measures",
+          "columns": [
+            "measure",
+            "amount_usd",
+            "basis"
+          ],
+          "rows": [
+            [
+              "Stock consideration",
+              48000000,
+              "Closing source"
+            ],
+            [
+              "Recognized tax assumed liabilities",
+              20000000,
+              "Conditional classifications"
+            ],
+            [
+              "Modeled adjusted grossed-up basis",
+              68000000,
+              "48M+20M"
+            ],
+            [
+              "Other tax asset bases",
+              55000000,
+              "Selected schedule"
+            ],
+            [
+              "Tax goodwill",
+              13000000,
+              "68M−55M"
+            ],
+            [
+              "Environmental/claim reserves",
+              2350000,
+              "Excluded from opening tax purchase-price measure"
+            ],
+            [
+              "Conditional reserve DTA",
+              587500,
+              "2.35M×25%model rate"
+            ],
+            [
+              "Identifiable book net assets",
+              33237500,
+              "Includes conditional DTA"
+            ],
+            [
+              "Book goodwill",
+              14762500,
+              "48M−33.2375M"
+            ],
+            [
+              "Initial book goodwill excess over tax",
+              1762500,
+              "14.7625M−13M"
+            ]
+          ]
+        }
+      ],
+      "version": "0.1.0",
+      "prepared": "2026-09-12",
+      "approval_status": "NOT_ACCEPTED",
+      "slug": "tax-filing",
+      "source": "docs/legal/gap-instruments/source/tax-filing.md",
+      "structured": "docs/legal/gap-instruments/source/tax-filing.json",
+      "source_sha256": "7fb216ef53a5849a317dc9cb0dc8815d725deed5a34aa513685ce5b60c609a52",
+      "structured_sha256": "4ad9c3bfad7931dd51ddc5cf4ccb0cfe9a5db677e6fcf2004091d8738b06e99b",
+      "dependencies": [
+        {
+          "path": "industrial/transaction/07_ARU_TAX_STRUCTURE_MEMORANDUM.md",
+          "sha256": "d42c4d67873e1b8e9b6488eac9a70a16643680718735ab0c3948327a37b16a44"
+        },
+        {
+          "path": "industrial/transaction/05_ARU_CLOSING_AND_TAX_DELIVERY.md",
+          "sha256": "a6dd448ed3a4a3ad6f0f3748e79dd918ea43c75685de762fe00843477a5d22c9"
+        },
+        {
+          "path": "industrial/source/finance.json",
+          "sha256": "0d4461abfcdb138da36db503ff0cfea7c47ea7fd7109494126514225fd43e38c"
+        }
+      ],
+      "pages": 5,
+      "artifacts": [
+        {
+          "path": "docs/legal/gap-instruments/editions/tax-filing.html",
+          "sha256": "98ca70d4b329ee12af44383a497933938ff5ac13a81b56f44779ed0d17385f1d"
+        },
+        {
+          "path": "docs/legal/gap-instruments/editions/tax-filing.pdf",
+          "sha256": "cb849b9f48716f05bfc680722b640b1d3442be860ed14ae3426a8dddc184742b"
+        },
+        {
+          "path": "docs/legal/gap-instruments/editions/tax-filing.xlsx",
+          "sha256": "e73c6f75498297cb72bf96ba94c38f2566fae1b3f96ee3c18447eee68f2e7957"
+        }
+      ],
+      "sheets": [
+        "Read first",
+        "01 Conditional acquisition tax"
+      ]
+    },
+    {
+      "gap_id": "LEGAL-GAP-TENURE",
+      "document_id": "SH-LEGAL-DRAFT-TENURE",
+      "title": "Sacramento, Fort and Bedford proposed site tenure and access instrument",
+      "status": "DRAFT_FOR_REVIEW",
+      "prepared": "2026-09-12",
+      "owner_role": "ESS Facilities/Workplace with enterprise Legal and relevant operating owner",
+      "approval": null,
+      "effective_date": null,
+      "source_paths": [
+        "docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md",
+        "docs/canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md",
+        "docs/canon/CRADLE_CLOSEOUT_2026-09-06.md",
+        "geospatial/facilities/source/campus.json",
+        "geospatial/facilities/source/research_campuses.json",
+        "geospatial/facilities/RESEARCH_CAMPUSES.md",
+        "industrial/corporate/LEGAL_STRUCTURE_AND_FORMATION.md"
+      ],
+      "proposed_terms": [
+        {
+          "id": "SH-LEGAL-DRAFT-TENURE-T01",
+          "term": "Separate investigation access from definitive tenancy/acquisition; no automatic conversion",
+          "basis": "Proposed instrument architecture"
+        },
+        {
+          "id": "SH-LEGAL-DRAFT-TENURE-T02",
+          "term": "90-day inspection window from future effective date",
+          "basis": "New proposed duration"
+        },
+        {
+          "id": "SH-LEGAL-DRAFT-TENURE-T03",
+          "term": "Preserve three stable site IDs, modelled geometry and null occupancy dates",
+          "basis": "Accepted facility models and closeouts"
+        },
+        {
+          "id": "SH-LEGAL-DRAFT-TENURE-T04",
+          "term": "Each party bears its own investigation costs absent accepted work order",
+          "basis": "Proposed cost allocation"
+        },
+        {
+          "id": "SH-LEGAL-DRAFT-TENURE-T05",
+          "term": "Sable Harbor, LLC (SHI) is the proposed contracting party; individual authority remains to be established",
+          "basis": "Accepted parent legal identity; proposed selection for this instrument"
+        }
+      ],
+      "unresolved_fields": [
+        {
+          "id": "SH-LEGAL-DRAFT-TENURE-U01",
+          "field": "Property counterparty, legal interest and description for each site",
+          "next_action": "Select actual/synthetic accepted parcel and verify grantor authority before definitive instrument"
+        },
+        {
+          "id": "SH-LEGAL-DRAFT-TENURE-U02",
+          "field": "Rent/price, deposit, tax treatment and commencement dates",
+          "next_action": "Owner reviews separately sourced commercial schedule"
+        },
+        {
+          "id": "SH-LEGAL-DRAFT-TENURE-U03",
+          "field": "Permitted lodging/process uses and professional approvals",
+          "next_action": "Reconcile site-specific readiness with Facilities and operating owner"
+        }
+      ],
+      "financial_schedules": [
+        {
+          "name": "Uncommitted site consideration",
+          "columns": [
+            "site_id",
+            "rent_usd",
+            "purchase_price_usd",
+            "commencement",
+            "status"
+          ],
+          "rows": [
+            [
+              "SH-SITE-0001",
+              null,
+              null,
+              null,
+              "unestablished"
+            ],
+            [
+              "SH-SITE-0003",
+              null,
+              null,
+              null,
+              "unestablished"
+            ],
+            [
+              "SH-SITE-0005",
+              null,
+              null,
+              null,
+              "unestablished"
+            ]
+          ]
+        }
+      ],
+      "version": "0.1.0",
+      "approval_status": "NOT_ACCEPTED",
+      "slug": "tenure",
+      "source": "docs/legal/gap-instruments/source/tenure.md",
+      "structured": "docs/legal/gap-instruments/source/tenure.json",
+      "source_sha256": "a054ca8350c565ebf24e5fee59f5a75da82c3ec0ec65afc9f61dec3ac8e56631",
+      "structured_sha256": "4b3f96161c38bd9a392ec68945cf6974fee3cb2c25b7079269dfd1ac56cd53ab",
+      "dependencies": [
+        {
+          "path": "docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md",
+          "sha256": "25e484d7fbc2c83a37f0e7ae7fe20ff741cde176bd0c2ba7be742fa7fb3e2624"
+        },
+        {
+          "path": "docs/canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md",
+          "sha256": "3289ad8ce5d20d767b38f1ad3ed804feeb80300c59d7e96653bfe68f1eaa24b6"
+        },
+        {
+          "path": "docs/canon/CRADLE_CLOSEOUT_2026-09-06.md",
+          "sha256": "b49eaf96f1582f11886e9543b1543013f47acc99aa5533082d73717ab523e8aa"
+        },
+        {
+          "path": "geospatial/facilities/source/campus.json",
+          "sha256": "0efd4854069ff20acb4032e02b021afebcb955990f1d684b51428624e281d950"
+        },
+        {
+          "path": "geospatial/facilities/source/research_campuses.json",
+          "sha256": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222"
+        },
+        {
+          "path": "geospatial/facilities/RESEARCH_CAMPUSES.md",
+          "sha256": "094ea7bb3bc9dd920f29dbe7ef0062880b399c46443cc5c32661589a8e51239a"
+        },
+        {
+          "path": "industrial/corporate/LEGAL_STRUCTURE_AND_FORMATION.md",
+          "sha256": "5a10f112b015d5dfa7ca3b500108718015a41369182092cabc44dfb224119fbc"
+        }
+      ],
+      "pages": 7,
+      "artifacts": [
+        {
+          "path": "docs/legal/gap-instruments/editions/tenure.html",
+          "sha256": "4b33ff0de750f1fe7d53366e7614f3696e7041017976f2dd53d9e2cd685fd19e"
+        },
+        {
+          "path": "docs/legal/gap-instruments/editions/tenure.pdf",
+          "sha256": "18b65645ff158127f06be3786248a236cf7b819b8038b84e305db545f284633d"
+        },
+        {
+          "path": "docs/legal/gap-instruments/editions/tenure.xlsx",
+          "sha256": "a9a1e23c54bc12c72600d592c27ea2772fe690aafb724a33ccf66a33e79490c2"
+        }
+      ],
+      "sheets": [
+        "Read first",
+        "01 Uncommitted site considerat"
+      ]
+    },
+    {
+      "gap_id": "LEGAL-GAP-URANIUM-CUSTODY",
+      "document_id": "SH-LEGAL-DRAFT-URANIUM-CUSTODY",
+      "title": "Conditional future Red Wash product custody and carrier agreement",
+      "status": "DRAFT_FOR_REVIEW",
+      "prepared": "2026-09-12",
+      "owner_role": "Red Wash operating authority with enterprise Legal, Safety and qualified carrier review",
+      "approval": null,
+      "effective_date": null,
+      "source_paths": [
+        "industrial/transaction/08_INTERCOMPANY_LOGISTICS_AGREEMENT.md",
+        "red_wash/agreements/TRANSACTION_AND_COMMERCIAL_INSTRUMENTS.md",
+        "docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05_R2.md",
+        "industrial/operations/OPERATING_AND_SERVICE_PLAN.md"
+      ],
+      "proposed_terms": [
+        {
+          "id": "SH-LEGAL-DRAFT-URANIUM-CUSTODY-T01",
+          "term": "Conditional future contract; service inactive until provider-specific activation",
+          "basis": "Existing OPEN_GATED product-custody boundary"
+        },
+        {
+          "id": "SH-LEGAL-DRAFT-URANIUM-CUSTODY-T02",
+          "term": "30-day undisputed invoice payment and remediable commercial cure",
+          "basis": "New negotiable terms only"
+        },
+        {
+          "id": "SH-LEGAL-DRAFT-URANIUM-CUSTODY-T03",
+          "term": "No affiliate preference, no inherited ordinary-inbound rates/qualification",
+          "basis": "Accepted Red Wash and Taylor boundaries"
+        },
+        {
+          "id": "SH-LEGAL-DRAFT-URANIUM-CUSTODY-T04",
+          "term": "Separate custody, title, assay and financial evidence",
+          "basis": "Accepted sale/custody source structure"
+        }
+      ],
+      "unresolved_fields": [
+        {
+          "id": "SH-LEGAL-DRAFT-URANIUM-CUSTODY-U01",
+          "field": "Carrier, receiver, actual service and qualification evidence",
+          "next_action": "Select service/provider and obtain role-specific reviews before activation"
+        },
+        {
+          "id": "SH-LEGAL-DRAFT-URANIUM-CUSTODY-U02",
+          "field": "Prices, liability caps, insurance, retention and law/forum",
+          "next_action": "Complete service-specific commercial/legal schedule"
+        },
+        {
+          "id": "SH-LEGAL-DRAFT-URANIUM-CUSTODY-U03",
+          "field": "Activation and execution dates",
+          "next_action": "Remain null until separately accepted future record"
+        }
+      ],
+      "financial_schedules": [
+        {
+          "name": "Unactivated service economics",
+          "columns": [
+            "service",
+            "rate",
+            "quantity",
+            "liability_cap",
+            "status"
+          ],
+          "rows": [
+            [
+              "future qualified product custody",
+              null,
+              null,
+              null,
+              "OPEN_GATED; no order or financial booking"
+            ]
+          ]
+        }
+      ],
+      "version": "0.1.0",
+      "approval_status": "NOT_ACCEPTED",
+      "slug": "uranium-custody",
+      "source": "docs/legal/gap-instruments/source/uranium-custody.md",
+      "structured": "docs/legal/gap-instruments/source/uranium-custody.json",
+      "source_sha256": "b9076e42c66e71af0178f8b754d182176a3e93b49329c2cfa8c9cddf77452894",
+      "structured_sha256": "c93ec8d2da8a22646b656d5e7186d53e9312a2b47172b8811e33a08016a5422e",
+      "dependencies": [
+        {
+          "path": "industrial/transaction/08_INTERCOMPANY_LOGISTICS_AGREEMENT.md",
+          "sha256": "23153dc86a3e9ea9fd501bce6bdf3c8478dbdf3ab79fa5e8abc84ca8bbb771fc"
+        },
+        {
+          "path": "red_wash/agreements/TRANSACTION_AND_COMMERCIAL_INSTRUMENTS.md",
+          "sha256": "5ee3715b0b5b08ba2fd259504ff7455da005d3d2e3701668945aa1ca90477808"
+        },
+        {
+          "path": "docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05_R2.md",
+          "sha256": "89eae89e18db1d3cf3ab4f7bf7f54fa57efabb84c57127717b731572048d563b"
+        },
+        {
+          "path": "industrial/operations/OPERATING_AND_SERVICE_PLAN.md",
+          "sha256": "8f1f9db0ad7958f9f967ef77fae5bc01bdaee5a5822258f4a284a8f2c218175e"
+        }
+      ],
+      "pages": 7,
+      "artifacts": [
+        {
+          "path": "docs/legal/gap-instruments/editions/uranium-custody.html",
+          "sha256": "e754034d6696151f0e136104e72161b9475bc7fdb6b572c112dca7268c054671"
+        },
+        {
+          "path": "docs/legal/gap-instruments/editions/uranium-custody.pdf",
+          "sha256": "080efcb8e7ebda54b4f2985b1335056f1ba6bcdcddfb58b1a85cebe67183bcf7"
+        },
+        {
+          "path": "docs/legal/gap-instruments/editions/uranium-custody.xlsx",
+          "sha256": "94f0ef2693665a51c0df127cfdd7103164aab3b4995502acc4df469bae86b9e3"
+        }
+      ],
+      "sheets": [
+        "Read first",
+        "01 Unactivated service economi"
+      ]
+    },
+    {
+      "gap_id": "LEGAL-GAP-WORKFORCE",
+      "document_id": "SH-LEGAL-DRAFT-WORKFORCE",
+      "title": "ARU individual retention agreements and Tolman consultancy",
+      "status": "DRAFT_FOR_REVIEW",
+      "source_paths": [
+        "industrial/transaction/06_ARU_TRANSITION_AND_RETENTION.md",
+        "industrial/corporate/LEADERSHIP_AND_AUTHORITY.md",
+        "industrial/source/finance.json",
+        "industrial/source/entities.json"
+      ],
+      "proposed_terms": [
+        {
+          "id": "SH-LEGAL-DRAFT-WORKFORCE-T01",
+          "term": "Eight awards total $500,000 in two $250,000 source installments.",
+          "basis": "Accepted SH-IND-ARU-HR-001; no payment assertion."
+        },
+        {
+          "id": "SH-LEGAL-DRAFT-WORKFORCE-T02",
+          "term": "Protected departures receive service-based pro rata recognition; calendar-day convention proposed.",
+          "basis": "Source protection retained; calculation convention DRAFT_FOR_REVIEW."
+        },
+        {
+          "id": "SH-LEGAL-DRAFT-WORKFORCE-T03",
+          "term": "Fred consultancy $225,000 January 7–October 7, without operating authority.",
+          "basis": "Accepted source economics; full administration clauses proposed."
+        }
+      ],
+      "unresolved_fields": [
+        {
+          "id": "SH-LEGAL-DRAFT-WORKFORCE-U01",
+          "field": "Individual signatures, later employment changes and payment evidence",
+          "next_action": "Preserve accepted employer mapping; verify execution and any later change before adoption."
+        },
+        {
+          "id": "SH-LEGAL-DRAFT-WORKFORCE-U02",
+          "field": "Employment jurisdiction and payroll treatment",
+          "next_action": "Complete qualified review without inventing employee private data."
+        }
+      ],
+      "financial_schedules": [
+        {
+          "name": "Eight individual retention awards",
+          "columns": [
+            "schedule",
+            "employee",
+            "total_usd",
+            "july_7_2026_usd",
+            "january_7_2027_usd",
+            "employer_entity_id"
+          ],
+          "rows": [
+            [
+              "RET-01",
+              "Nora Ashcombe",
+              100000,
+              50000,
+              50000,
+              "ARU"
+            ],
+            [
+              "RET-02",
+              "Gareth Pike",
+              60000,
+              30000,
+              30000,
+              "ARU"
+            ],
+            [
+              "RET-03",
+              "Tessa Rourke",
+              60000,
+              30000,
+              30000,
+              "ARU"
+            ],
+            [
+              "RET-04",
+              "Owen Halberg",
+              50000,
+              25000,
+              25000,
+              "ARU"
+            ],
+            [
+              "RET-05",
+              "Seth Kettering",
+              80000,
+              40000,
+              40000,
+              "BST"
+            ],
+            [
+              "RET-06",
+              "Derek Fenwick",
+              50000,
+              25000,
+              25000,
+              "ARU"
+            ],
+            [
+              "RET-07",
+              "Marta Ellery",
+              50000,
+              25000,
+              25000,
+              "ARU"
+            ],
+            [
+              "RET-08",
+              "Inez Calderon",
+              50000,
+              25000,
+              25000,
+              "ARU"
+            ]
+          ]
+        },
+        {
+          "name": "Separate consultancy",
+          "columns": [
+            "consultant",
+            "source_start",
+            "source_end",
+            "total_usd",
+            "paid_status"
+          ],
+          "rows": [
+            [
+              "Fred Tolman",
+              "2026-01-07",
+              "2026-10-07",
+              225000,
+              "NOT_ESTABLISHED"
+            ]
+          ]
+        }
+      ],
+      "version": "0.1.0",
+      "prepared": "2026-09-12",
+      "approval_status": "NOT_ACCEPTED",
+      "slug": "workforce",
+      "source": "docs/legal/gap-instruments/source/workforce.md",
+      "structured": "docs/legal/gap-instruments/source/workforce.json",
+      "source_sha256": "6b4b35a48c4c9d304ad9e9a20e64049400aeb801fe386d7968c8479faedc3834",
+      "structured_sha256": "cad6e1410ada5a9e86a961eb5c06cbe5e5c0b92e6f547282624ac09e8d9b340e",
+      "dependencies": [
+        {
+          "path": "industrial/transaction/06_ARU_TRANSITION_AND_RETENTION.md",
+          "sha256": "3e3653f95a286d71aa513410603dd0c78684db0ad94e2460708c434a6fc4aec0"
+        },
+        {
+          "path": "industrial/corporate/LEADERSHIP_AND_AUTHORITY.md",
+          "sha256": "61a32c036e8cdb2fbf7ab0234d26a925ebd423b48869667724c5a254ca14fda1"
+        },
+        {
+          "path": "industrial/source/finance.json",
+          "sha256": "0d4461abfcdb138da36db503ff0cfea7c47ea7fd7109494126514225fd43e38c"
+        },
+        {
+          "path": "industrial/source/entities.json",
+          "sha256": "799a24baf3240d50c5d6a80ac0f9ddb9d023b7a36de058ec12546aac60caee29"
+        }
+      ],
+      "pages": 6,
+      "artifacts": [
+        {
+          "path": "docs/legal/gap-instruments/editions/workforce.html",
+          "sha256": "5c7b20d746166f53c72c969ca823218374205fb1e7ce438e29ec47ef9d393f79"
+        },
+        {
+          "path": "docs/legal/gap-instruments/editions/workforce.pdf",
+          "sha256": "997d653337b5f05d5c6c0d304a7fc9b66c86f80ff64ae9cd6d5ecf3fe0f9f782"
+        },
+        {
+          "path": "docs/legal/gap-instruments/editions/workforce.xlsx",
+          "sha256": "500db938b19706eed4558be4915598e979b79f55a3f68a2818f6aff1390fd8eb"
+        }
+      ],
+      "sheets": [
+        "Read first",
+        "01 Eight individual retention ",
+        "02 Separate consultancy"
+      ]
+    }
+  ],
+  "other_artifacts": [
+    {
+      "path": "docs/legal/gap-instruments/index.json",
+      "sha256": "2743780e80962c86d9c4fa32ad5f214ac2d2ddbd7db2ea37910338536cd9a8d1"
+    },
+    {
+      "path": "docs/legal/gap-instruments/review.html",
+      "sha256": "26f34c1799471cbb4a2dc57c041a21a116e1e37fc011a1252a80a1a8697cd910"
+    },
+    {
+      "path": "docs/legal/gap-instruments/PACKAGE_INDEX.md",
+      "sha256": "ef03d857b1af7e4ce09fed23c5bb29c9e36200e1b288da067258bbe23f68283b"
+    },
+    {
+      "path": "docs/legal/gap-instruments/instruments.sqlite3",
+      "sha256": "dbbc3bcb5e0c7061591cdbdf5445bc89d9036370868aa18d2d72dbe4da7e6103"
+    }
+  ],
+  "counts": {
+    "packages": 17,
+    "pdf_pages": 98,
+    "workbooks": 17,
+    "sheets": 39
+  }
+}

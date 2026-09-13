@@ -8,6 +8,9 @@ Start with the specific record below. Each source retains its synthetic, provisi
 
 ## Reading packages
 
+- [Case walkthroughs, reconciliation workpapers and decision import](../../legal/gap-instruments/PRACTICAL_WORK.md) — Source-backed practice and review tools; new workbook designs remain held.
+- [Review decisions, accounting links and practice packets](../../legal/gap-instruments/REVIEW_WORKFLOW.md) — Draft review tools; new designs and proposed terms remain held for exact-file review.
+- [17 gap instrument packages](../../legal/gap-instruments/README.md) — Complete drafts; these do not replace source evidence or close external gaps.
 - [Commercial agreements, orders and service obligations](../../legal/evidence/commercial/README.md)
 - [Corporate approvals, capital and workforce terms](../../legal/evidence/corporate/README.md)
 - [Acquisitions, assets, host rights and tenure](../../legal/evidence/assets-rights/README.md)
@@ -82,4 +85,4 @@ The database tables are `source_document`, `source_section`, `native_reference` 
 SELECT d.id, s.heading, s.line, d.path FROM source_document d JOIN source_section s ON s.document_id=d.id WHERE d.family='acquisition';
 ```
 
-Build and verify with `python docs/reader/transactions/build.py` and `python docs/reader/transactions/validate.py`. The package dossiers cite native legal/financial/geographic keys. Only the relevant native accounting source can establish a posting or balance.
+Rebuild the source index with `python docs/reader/transactions/build.py`, then restore the reading-dossier tables with `python docs/reader/transactions/build_readers.py`. Verify the complete database with `python docs/reader/transactions/validate.py`. The package dossiers cite native legal/financial/geographic keys. Only the relevant native accounting source can establish a posting or balance.

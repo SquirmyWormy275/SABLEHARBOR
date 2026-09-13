@@ -1,0 +1,522 @@
+{
+  "schema_version": "1.0.0",
+  "status": "REVIEW_SUPPORT_NOT_POSTING_AUTHORITY",
+  "sources": {
+    "docs/legal/gap-instruments/source/billing.md": "83d8af1b3d5a73cab067b1d7839bcb2ed2cecfc7656d246951d213327127f28e",
+    "docs/finance/evidence/SH-FIN-HUMAN-001/source.json": "c4833cfc6f28db6cd3edcae761b0e2d8f463a20de79f1d6fd5b0c517f8f829b7",
+    "docs/legal/gap-instruments/source/debt-liens.md": "e9adf8cdc08237c855556d22d30a7649ac64b471c567ce7a54c1aa67613485ef",
+    "docs/finance/evidence/tax-transaction/aru_2026_debt.csv": "f4fe40dcd3672ed876be4b539428c92fbeb8ed441f7f4fd1f610529c4ebb2d53",
+    "docs/finance/evidence/tax-transaction/aru_acquisition_opening_trial_balance.csv": "33a28e198a5ce5a5d35f751ca8a3fac6aefc04faba4329b6297c7cd560ca02d5",
+    "docs/legal/gap-instruments/source/workforce.md": "6b4b35a48c4c9d304ad9e9a20e64049400aeb801fe386d7968c8479faedc3834",
+    "industrial/source/finance.json": "0d4461abfcdb138da36db503ff0cfea7c47ea7fd7109494126514225fd43e38c",
+    "industrial/tools/build_financials.py": "4f879965a57598a5fd55f0b177d683aa9bcc8137e3b84e9b2b7c6a1343a9836c",
+    "docs/legal/gap-instruments/source/land.md": "9c4ea28e58c3355f61ab29e8df8ce7789c1c7d7305131efdddabbe3d59c9f28e",
+    "enterprise/runtime/finance.py": "ff5ed41531037bf5dd146a36dfe93fbef53b98106468885d3ab870cd2c2e7aeb",
+    "docs/legal/gap-instruments/source/tax-filing.md": "7fb216ef53a5849a317dc9cb0dc8815d725deed5a34aa513685ce5b60c609a52",
+    "docs/finance/evidence/tax-transaction/acquisition_ppa.csv": "bd024c5ac926ed98ee89876e0bb4f32a3e80c5e0bea47c7bb227ad3c172b8fa0",
+    "docs/finance/evidence/tax-transaction/aru_2026_tax_rollforward.csv": "323a8532e46f3bf9cf3e39bf5666e5745cd842011372b26726df632a77f14ee0",
+    "docs/legal/gap-instruments/source/rw-title.md": "382bebe11df4b42fd8b9bb35b1a7831f4afe7b46d58c298d4ae9dd58fa176b54",
+    "red_wash/source/core_operating_data.json": "eb5601f3a519ac175bef07744fa3c23939734f80b5774efeed4800aa73e8aa3f",
+    "docs/legal/gap-instruments/source/rw-chronology.md": "2445506da53f889d2177a0805321a3655b1fbfda0dc747c95e7f24b6f638594d",
+    "docs/legal/gap-instruments/source/formations.md": "14fd0d40cf42e80b79f1c94f924050909b98e41d3212c3819d4d04f4d1c398c4",
+    "industrial/corporate/LEGAL_STRUCTURE_AND_FORMATION.md": "5a10f112b015d5dfa7ca3b500108718015a41369182092cabc44dfb224119fbc",
+    "docs/legal/gap-instruments/source/financing-documents.md": "f648e1844ed93a66b81111b86ae98c98e3e901907f138fd5b9e87172adbf3607",
+    "docs/governance/board-records/2021-06-18_harrison-vale-growth-financing-minutes.md": "b994512c64f86abe0d649f95d4ea3d3e00fd0c2c22af0ed56b62bd7ed41fae97",
+    "docs/legal/gap-instruments/source/carry.md": "f827af31cc408054a32c5cd602c4c378020c55fff06ff84c8851b6acd6f89312",
+    "docs/advisory/CARRY_PLAN_STANDARD.md": "c8b64ecd570a2402233bd6067eea0e274e267c8f1aa90d9153de4b3a4865de45",
+    "docs/legal/gap-instruments/source/advisory-contracts.md": "99f62e1d50c430fb7a1bb42f2315c233a13bdfba5c80cde77dcce8d72b91f9b5",
+    "docs/advisory/LEGAL_AND_CONTRACTING_TERM_SHEET.md": "b0e842b631713579f2890efb846de642b100a576282ba88dea9880fb671428f7",
+    "docs/legal/gap-instruments/source/colo.md": "0590241ee1a7a1d02b6c2262f5ae3bf31ba026fa9266976e146a2be158b33506",
+    "enterprise/runtime/docs/CONTRACT_DOSSIER.md": "7cd01050b17f9451ff5bd341573289440c74fb190c01253bdc8197a6599d2ad1",
+    "docs/legal/gap-instruments/source/host-rights.md": "4fd81f5dffc2d95ba89c495a3689381648b44a4a8cdfd62750ea028b5bdde9d4",
+    "docs/canon/CRADLE_CLOSEOUT_2026-09-06.md": "b49eaf96f1582f11886e9543b1543013f47acc99aa5533082d73717ab523e8aa",
+    "docs/legal/gap-instruments/source/tenure.md": "a054ca8350c565ebf24e5fee59f5a75da82c3ec0ec65afc9f61dec3ac8e56631",
+    "geospatial/facilities/README.md": "a58a62e1bfd735eaf954ebce3d3aeaab72f1c9494271250367014d574e0eaf3b",
+    "docs/legal/gap-instruments/source/uranium-custody.md": "b9076e42c66e71af0178f8b754d182176a3e93b49329c2cfa8c9cddf77452894",
+    "industrial/transaction/08_INTERCOMPANY_LOGISTICS_AGREEMENT.md": "23153dc86a3e9ea9fd501bce6bdf3c8478dbdf3ab79fa5e8abc84ca8bbb771fc",
+    "docs/legal/gap-instruments/source/tax-billing.md": "8a4fcc32efc81c2502158afbf7df05d2bec5cb296c366d82e90f3c7f3fa38e48",
+    "industrial/source/entities.json": "799a24baf3240d50c5d6a80ac0f9ddb9d023b7a36de058ec12546aac60caee29",
+    "docs/legal/gap-instruments/source/mark-clearance.md": "a5b9b8d1a39b4c2d85111d191052ca89ebcf763176fe625a532aeb03fdca9dec",
+    "docs/legal/ADVISORY_NAME_AND_EXTERNAL_CLEARANCE_STATUS_2026-09-09.md": "53cb9756ad05f9422b8d0bc93eeecace454cc25c6652424154caf2eaf0b4984d",
+    "docs/reader/transactions/gaps.json": "48aeb86f3fec7337c866203adcca58c174fa187e4a659811db21b6f2b0843609",
+    "docs/finance/evidence/tax-transaction/CURRENT_SOURCE_BRIDGE.json": "4e4c35d03d5613e0ef037d7dd14d27c250fa547fc29d2f93ddd1a1b25274e17c"
+  },
+  "coverage": [
+    {
+      "gap_id": "LEGAL-GAP-RW-CHRONOLOGY",
+      "preserved_gap_status": "SOURCE_CONFLICT_PRESERVED",
+      "link_ids": [
+        "SH-LEGAL-ACCT-RW-CHRONOLOGY-01"
+      ],
+      "new_posting_authorized": false
+    },
+    {
+      "gap_id": "LEGAL-GAP-TAX-FILING",
+      "preserved_gap_status": "EXTERNAL_EVIDENCE_NOT_ESTABLISHED",
+      "link_ids": [
+        "SH-LEGAL-ACCT-TAX-FILING-01",
+        "SH-LEGAL-ACCT-TAX-FILING-02",
+        "SH-LEGAL-ACCT-TAX-FILING-03"
+      ],
+      "new_posting_authorized": false
+    },
+    {
+      "gap_id": "LEGAL-GAP-FORMATIONS",
+      "preserved_gap_status": "INTERNAL_RECONSTRUCTION_ONLY",
+      "link_ids": [
+        "SH-LEGAL-ACCT-FORMATIONS-01"
+      ],
+      "new_posting_authorized": false
+    },
+    {
+      "gap_id": "LEGAL-GAP-FINANCING-DOCUMENTS",
+      "preserved_gap_status": "APPROVAL_RECORD_ONLY",
+      "link_ids": [
+        "SH-LEGAL-ACCT-FINANCING-DOCUMENTS-01"
+      ],
+      "new_posting_authorized": false
+    },
+    {
+      "gap_id": "LEGAL-GAP-DEBT-LIENS",
+      "preserved_gap_status": "MODEL_AND_SUMMARY_ONLY",
+      "link_ids": [
+        "SH-LEGAL-ACCT-DEBT-LIENS-01",
+        "SH-LEGAL-ACCT-DEBT-LIENS-02"
+      ],
+      "new_posting_authorized": false
+    },
+    {
+      "gap_id": "LEGAL-GAP-WORKFORCE",
+      "preserved_gap_status": "PARTIAL_SYNTHETIC_TERMS",
+      "link_ids": [
+        "SH-LEGAL-ACCT-WORKFORCE-01",
+        "SH-LEGAL-ACCT-WORKFORCE-02",
+        "SH-LEGAL-ACCT-WORKFORCE-03"
+      ],
+      "new_posting_authorized": false
+    },
+    {
+      "gap_id": "LEGAL-GAP-CARRY",
+      "preserved_gap_status": "POLICY_NOT_INDIVIDUAL_GRANT",
+      "link_ids": [
+        "SH-LEGAL-ACCT-CARRY-01"
+      ],
+      "new_posting_authorized": false
+    },
+    {
+      "gap_id": "LEGAL-GAP-ADVISORY-CONTRACTS",
+      "preserved_gap_status": "DESIGN_STANDARD_NOT_EXECUTED",
+      "link_ids": [
+        "SH-LEGAL-ACCT-ADVISORY-CONTRACTS-01"
+      ],
+      "new_posting_authorized": false
+    },
+    {
+      "gap_id": "LEGAL-GAP-COLO",
+      "preserved_gap_status": "PROVIDER_SELECTED_CONTRACT_DRAFT",
+      "link_ids": [
+        "SH-LEGAL-ACCT-COLO-01"
+      ],
+      "new_posting_authorized": false
+    },
+    {
+      "gap_id": "LEGAL-GAP-LAND",
+      "preserved_gap_status": "SYNTHETIC_ACQUISITION_UNRESOLVED_SETTLEMENT",
+      "link_ids": [
+        "SH-LEGAL-ACCT-LAND-01"
+      ],
+      "new_posting_authorized": false
+    },
+    {
+      "gap_id": "LEGAL-GAP-HOST-RIGHTS",
+      "preserved_gap_status": "CANON_RIGHTS_WITH_UNFIXED_TERMS",
+      "link_ids": [
+        "SH-LEGAL-ACCT-HOST-RIGHTS-01"
+      ],
+      "new_posting_authorized": false
+    },
+    {
+      "gap_id": "LEGAL-GAP-TENURE",
+      "preserved_gap_status": "SITE_PLAN_NOT_TITLE_RECORD",
+      "link_ids": [
+        "SH-LEGAL-ACCT-TENURE-01"
+      ],
+      "new_posting_authorized": false
+    },
+    {
+      "gap_id": "LEGAL-GAP-RW-TITLE",
+      "preserved_gap_status": "INSTRUMENT_SCHEDULE_NOT_INDEPENDENT_CONFIRMATION",
+      "link_ids": [
+        "SH-LEGAL-ACCT-RW-TITLE-01"
+      ],
+      "new_posting_authorized": false
+    },
+    {
+      "gap_id": "LEGAL-GAP-URANIUM-CUSTODY",
+      "preserved_gap_status": "OPEN_GATED_EXCLUDED_FROM_BASE_SERVICE",
+      "link_ids": [
+        "SH-LEGAL-ACCT-URANIUM-CUSTODY-01"
+      ],
+      "new_posting_authorized": false
+    },
+    {
+      "gap_id": "LEGAL-GAP-BILLING",
+      "preserved_gap_status": "PENDING_PR138_NO_ADOPTION",
+      "link_ids": [
+        "SH-LEGAL-ACCT-BILLING-01",
+        "SH-LEGAL-ACCT-BILLING-02"
+      ],
+      "new_posting_authorized": false
+    },
+    {
+      "gap_id": "LEGAL-GAP-TAX-BILLING",
+      "preserved_gap_status": "NOT_ESTABLISHED",
+      "link_ids": [
+        "SH-LEGAL-ACCT-TAX-BILLING-01"
+      ],
+      "new_posting_authorized": false
+    },
+    {
+      "gap_id": "LEGAL-GAP-MARK-CLEARANCE",
+      "preserved_gap_status": "EXTERNAL_EXECUTION_OPEN",
+      "link_ids": [
+        "SH-LEGAL-ACCT-MARK-CLEARANCE-01"
+      ],
+      "new_posting_authorized": false
+    }
+  ],
+  "links": [
+    {
+      "id": "SH-LEGAL-ACCT-BILLING-01",
+      "gap_id": "LEGAL-GAP-BILLING",
+      "clause_path": "docs/legal/gap-instruments/source/billing.md",
+      "clause_heading": "6. Separate retrospective reconciliation attachment",
+      "population": "FF-2027-BASE",
+      "evidence_kind": "SOURCE_LEDGER",
+      "source_path": "docs/finance/evidence/SH-FIN-HUMAN-001/source.json",
+      "selector": {
+        "pointer": "/rows/journal"
+      },
+      "interpretation": "Twelve released conditional-forecast journal legs for INV-base-FF-003-TERM-0; six balanced events. These are synthetic forecast postings, not actual customer payments. Credits and recovery do not reinstate AR.",
+      "new_posting_authorized": false
+    },
+    {
+      "id": "SH-LEGAL-ACCT-BILLING-02",
+      "gap_id": "LEGAL-GAP-BILLING",
+      "clause_path": "docs/legal/gap-instruments/source/billing.md",
+      "clause_heading": "3. Proposed billing statement",
+      "population": "FF-2027-BASE",
+      "evidence_kind": "MODELED_SCHEDULE",
+      "source_path": "docs/finance/evidence/SH-FIN-HUMAN-001/source.json",
+      "selector": {
+        "pointer": "/rows/invoices"
+      },
+      "interpretation": "Invoice face 1,740,000; cash collected 609,000 includes 174,000 recovery. Written-off claim remaining after credits and recovery is 971,500, not a recognized receivable. No fictional billing detail is adopted.",
+      "new_posting_authorized": false
+    },
+    {
+      "id": "SH-LEGAL-ACCT-DEBT-LIENS-01",
+      "gap_id": "LEGAL-GAP-DEBT-LIENS",
+      "clause_path": "docs/legal/gap-instruments/source/debt-liens.md",
+      "clause_heading": "2. Proposed term-credit agreement",
+      "population": "ARU-2026-MODEL",
+      "evidence_kind": "MODELED_SCHEDULE",
+      "source_path": "docs/finance/evidence/tax-transaction/aru_2026_debt.csv",
+      "selector": {
+        "csv": true
+      },
+      "interpretation": "Term-debt monthly schedule; 6.75% ACT/365 modeled convention. Contract maturity, lender release and covenant compliance remain unverified. Rounded source dollars retained.",
+      "new_posting_authorized": false
+    },
+    {
+      "id": "SH-LEGAL-ACCT-DEBT-LIENS-02",
+      "gap_id": "LEGAL-GAP-DEBT-LIENS",
+      "clause_path": "docs/legal/gap-instruments/source/debt-liens.md",
+      "clause_heading": "7. Reconciled source schedules",
+      "population": "ARU-2026-MODEL",
+      "evidence_kind": "MODELED_SCHEDULE",
+      "source_path": "docs/finance/evidence/tax-transaction/aru_acquisition_opening_trial_balance.csv",
+      "selector": {
+        "csv": true,
+        "where": {
+          "account": [
+            "1700",
+            "2400",
+            "2600"
+          ]
+        }
+      },
+      "interpretation": "Opening accounts 1700 debt issuance contra debt, 2400 face debt, 2600 retained leases. This is ARU_GROUP model opening balance, not individual statutory books.",
+      "new_posting_authorized": false
+    },
+    {
+      "id": "SH-LEGAL-ACCT-WORKFORCE-01",
+      "gap_id": "LEGAL-GAP-WORKFORCE",
+      "clause_path": "docs/legal/gap-instruments/source/workforce.md",
+      "clause_heading": "7. Individual retention schedules",
+      "population": "ARU-2026-INPUT",
+      "evidence_kind": "MODELED_SCHEDULE",
+      "source_path": "industrial/source/finance.json",
+      "selector": {
+        "pointer": "/transaction/retention_allocations"
+      },
+      "interpretation": "Eight accepted allocations total 500,000; neither draft signatures nor payment confirmations are supplied. Do not add eight people to enterprise headcount.",
+      "new_posting_authorized": false
+    },
+    {
+      "id": "SH-LEGAL-ACCT-WORKFORCE-02",
+      "gap_id": "LEGAL-GAP-WORKFORCE",
+      "clause_path": "docs/legal/gap-instruments/source/workforce.md",
+      "clause_heading": "2. Retention consideration and payment",
+      "population": "ARU-2026-GENERATOR",
+      "evidence_kind": "MODEL_RULE",
+      "source_path": "industrial/tools/build_financials.py",
+      "selector": {
+        "start": "        retention = retention_schedule[month - 1]",
+        "end": "        is_payment_month = ("
+      },
+      "interpretation": "Native IDs RETENTION-POOL (5700/2110), RETENTION-PAYMENT (2110/cash), TOLMAN-CONSULTING (5700/cash). This links rules only; generated payroll or bank evidence is not claimed. July modeled installment 250,000 differs from full award pool.",
+      "new_posting_authorized": false
+    },
+    {
+      "id": "SH-LEGAL-ACCT-WORKFORCE-03",
+      "gap_id": "LEGAL-GAP-WORKFORCE",
+      "clause_path": "docs/legal/gap-instruments/source/workforce.md",
+      "clause_heading": "8. Separate Fred Tolman consultancy",
+      "population": "ARU-2026-INPUT",
+      "evidence_kind": "MODELED_SCHEDULE",
+      "source_path": "industrial/source/finance.json",
+      "selector": {
+        "pointer": "/transaction/seller_consulting_total"
+      },
+      "interpretation": "225,000 consultancy is separate from the 500,000 retention pool; no new payable or actual payment arises from this draft.",
+      "new_posting_authorized": false
+    },
+    {
+      "id": "SH-LEGAL-ACCT-LAND-01",
+      "gap_id": "LEGAL-GAP-LAND",
+      "clause_path": "docs/legal/gap-instruments/source/land.md",
+      "clause_heading": "6. Proposed accounting instruction",
+      "population": "RUNTIME-2026-OVERLAY",
+      "evidence_kind": "MODEL_RULE",
+      "source_path": "enterprise/runtime/finance.py",
+      "selector": {
+        "start": "        if (year, month) == (2026, 9):",
+        "end": "        if year < 2027:"
+      },
+      "interpretation": "Existing RT-LAND-20260904 rule debits RT_LAND 3,000,000 and credits RT_SETTLEMENT_UNRESOLVED 3,000,000 in each scenario. Scenarios are alternatives, never summed. No second land debit, paid cash, lender or vendor liability is inferred.",
+      "new_posting_authorized": false
+    },
+    {
+      "id": "SH-LEGAL-ACCT-TAX-FILING-01",
+      "gap_id": "LEGAL-GAP-TAX-FILING",
+      "clause_path": "docs/legal/gap-instruments/source/tax-filing.md",
+      "clause_heading": "6. Allocation and accounting workpaper",
+      "population": "ARU-2026-MODEL",
+      "evidence_kind": "MODELED_SCHEDULE",
+      "source_path": "docs/finance/evidence/tax-transaction/acquisition_ppa.csv",
+      "selector": {
+        "csv": true
+      },
+      "interpretation": "Conditional election model: stock consideration 48,000,000; identifiable net assets 33,237,500; book goodwill 14,762,500; tax goodwill 13,000,000; DTA 587,500. Filing-ready is not filed. No alternative tax outcome is invented.",
+      "new_posting_authorized": false
+    },
+    {
+      "id": "SH-LEGAL-ACCT-TAX-FILING-02",
+      "gap_id": "LEGAL-GAP-TAX-FILING",
+      "clause_path": "docs/legal/gap-instruments/source/tax-filing.md",
+      "clause_heading": "6. Allocation and accounting workpaper",
+      "population": "ARU-2026-MODEL",
+      "evidence_kind": "MODELED_SCHEDULE",
+      "source_path": "docs/finance/evidence/tax-transaction/aru_acquisition_opening_trial_balance.csv",
+      "selector": {
+        "csv": true
+      },
+      "interpretation": "Sixteen ARU_GROUP opening balances reconcile independently. Account 1600 goodwill, 1800 deferred tax asset, 2200 environmental reserve and 2300 claims remain modeled balances.",
+      "new_posting_authorized": false
+    },
+    {
+      "id": "SH-LEGAL-ACCT-TAX-FILING-03",
+      "gap_id": "LEGAL-GAP-TAX-FILING",
+      "clause_path": "docs/legal/gap-instruments/source/tax-filing.md",
+      "clause_heading": "5. Filing control and delivery workpaper",
+      "population": "ARU-2026-MODEL",
+      "evidence_kind": "MODELED_SCHEDULE",
+      "source_path": "docs/finance/evidence/tax-transaction/aru_2026_tax_rollforward.csv",
+      "selector": {
+        "csv": true
+      },
+      "interpretation": "Monthly modeled tax accrual, settlement and goodwill bases; this is not a return, tax payment confirmation or IRS acceptance.",
+      "new_posting_authorized": false
+    },
+    {
+      "id": "SH-LEGAL-ACCT-RW-TITLE-01",
+      "gap_id": "LEGAL-GAP-RW-TITLE",
+      "clause_path": "docs/legal/gap-instruments/source/rw-title.md",
+      "clause_heading": "8. Consideration and escrow reconciliation",
+      "population": "RW-2025-ACQUISITION",
+      "evidence_kind": "MODELED_SCHEDULE",
+      "source_path": "red_wash/source/core_operating_data.json",
+      "selector": {
+        "pointer": "/transaction"
+      },
+      "interpretation": "28,000,000 acquisition consideration reconciles to 42,000,000 operating assets plus 4,500,000 current assets less 16,000,000 ARO and 2,500,000 other liabilities. 3,000,000 escrow and 500,000 holdback are closing components, not present balances or authorized releases.",
+      "new_posting_authorized": false
+    },
+    {
+      "id": "SH-LEGAL-ACCT-RW-CHRONOLOGY-01",
+      "gap_id": "LEGAL-GAP-RW-CHRONOLOGY",
+      "clause_path": "docs/legal/gap-instruments/source/rw-chronology.md",
+      "clause_heading": "6. Accounting preservation schedule",
+      "population": "RW-2025-ACQUISITION",
+      "evidence_kind": "MODELED_SCHEDULE",
+      "source_path": "red_wash/source/core_operating_data.json",
+      "selector": {
+        "pointer": "/transaction"
+      },
+      "interpretation": "Same transaction as RW title; duplicate reference must not be counted twice. Chronology correction authorizes no accounting change.",
+      "new_posting_authorized": false
+    },
+    {
+      "id": "SH-LEGAL-ACCT-FORMATIONS-01",
+      "gap_id": "LEGAL-GAP-FORMATIONS",
+      "clause_path": "docs/legal/gap-instruments/source/formations.md",
+      "clause_heading": "2. Schedule A \u2014 existing perimeter to be carried into the books",
+      "population": "NO-POSTING-FORMATIONS",
+      "evidence_kind": "NO_ENTRY",
+      "source_path": "industrial/corporate/LEGAL_STRUCTURE_AND_FORMATION.md",
+      "selector": {
+        "whole_document": true
+      },
+      "interpretation": "Internal ownership acknowledgments do not issue new equity or supply missing subscription postings.",
+      "new_posting_authorized": false
+    },
+    {
+      "id": "SH-LEGAL-ACCT-FINANCING-DOCUMENTS-01",
+      "gap_id": "LEGAL-GAP-FINANCING-DOCUMENTS",
+      "clause_path": "docs/legal/gap-instruments/source/financing-documents.md",
+      "clause_heading": "7. Completion schedules",
+      "population": "NO-POSTING-FINANCING-DOCUMENTS",
+      "evidence_kind": "NO_ENTRY",
+      "source_path": "docs/governance/board-records/2021-06-18_harrison-vale-growth-financing-minutes.md",
+      "selector": {
+        "whole_document": true
+      },
+      "interpretation": "Approximately 48M and 135M board financing economics are historical approval evidence, not a new subscription receipt or posting. No exact cap table is inferred.",
+      "new_posting_authorized": false
+    },
+    {
+      "id": "SH-LEGAL-ACCT-CARRY-01",
+      "gap_id": "LEGAL-GAP-CARRY",
+      "clause_path": "docs/legal/gap-instruments/source/carry.md",
+      "clause_heading": "5. Grant instrument and vesting",
+      "population": "NO-POSTING-CARRY",
+      "evidence_kind": "NO_ENTRY",
+      "source_path": "docs/advisory/CARRY_PLAN_STANDARD.md",
+      "selector": {
+        "whole_document": true
+      },
+      "interpretation": "No individual grant exists; do not recognize a draft award or invent units, valuation or liability.",
+      "new_posting_authorized": false
+    },
+    {
+      "id": "SH-LEGAL-ACCT-ADVISORY-CONTRACTS-01",
+      "gap_id": "LEGAL-GAP-ADVISORY-CONTRACTS",
+      "clause_path": "docs/legal/gap-instruments/source/advisory-contracts.md",
+      "clause_heading": "4. Fees, invoices and changes",
+      "population": "NO-POSTING-ADVISORY-CONTRACTS",
+      "evidence_kind": "NO_ENTRY",
+      "source_path": "docs/advisory/LEGAL_AND_CONTRACTING_TERM_SHEET.md",
+      "selector": {
+        "whole_document": true
+      },
+      "interpretation": "No executed client-specific SOW, consideration or performance facts; draft fees cannot create revenue or receivables.",
+      "new_posting_authorized": false
+    },
+    {
+      "id": "SH-LEGAL-ACCT-COLO-01",
+      "gap_id": "LEGAL-GAP-COLO",
+      "clause_path": "docs/legal/gap-instruments/source/colo.md",
+      "clause_heading": "6. Commencement and invoice verification",
+      "population": "NO-POSTING-COLO",
+      "evidence_kind": "NO_ENTRY",
+      "source_path": "enterprise/runtime/docs/CONTRACT_DOSSIER.md",
+      "selector": {
+        "whole_document": true
+      },
+      "interpretation": "Selection and draft orders create no supported vendor payable or acceptance date; conditional runtime forecasts remain separate.",
+      "new_posting_authorized": false
+    },
+    {
+      "id": "SH-LEGAL-ACCT-HOST-RIGHTS-01",
+      "gap_id": "LEGAL-GAP-HOST-RIGHTS",
+      "clause_path": "docs/legal/gap-instruments/source/host-rights.md",
+      "clause_heading": "6. Settlement and supporting accounts",
+      "population": "NO-POSTING-HOST-RIGHTS",
+      "evidence_kind": "NO_ENTRY",
+      "source_path": "docs/canon/CRADLE_CLOSEOUT_2026-09-06.md",
+      "selector": {
+        "whole_document": true
+      },
+      "interpretation": "Host title and recovery rights do not fix rates or volumes; no new royalty, host consolidation or permanent participation term.",
+      "new_posting_authorized": false
+    },
+    {
+      "id": "SH-LEGAL-ACCT-TENURE-01",
+      "gap_id": "LEGAL-GAP-TENURE",
+      "clause_path": "docs/legal/gap-instruments/source/tenure.md",
+      "clause_heading": "8. Financial and risk allocation",
+      "population": "NO-POSTING-TENURE",
+      "evidence_kind": "NO_ENTRY",
+      "source_path": "geospatial/facilities/README.md",
+      "selector": {
+        "whole_document": true
+      },
+      "interpretation": "Plans and access draft do not establish a lease commencement, rent, right-of-use asset or title.",
+      "new_posting_authorized": false
+    },
+    {
+      "id": "SH-LEGAL-ACCT-URANIUM-CUSTODY-01",
+      "gap_id": "LEGAL-GAP-URANIUM-CUSTODY",
+      "clause_path": "docs/legal/gap-instruments/source/uranium-custody.md",
+      "clause_heading": "9. Activation schedule and current disposition",
+      "population": "NO-POSTING-URANIUM-CUSTODY",
+      "evidence_kind": "NO_ENTRY",
+      "source_path": "industrial/transaction/08_INTERCOMPANY_LOGISTICS_AGREEMENT.md",
+      "selector": {
+        "whole_document": true
+      },
+      "interpretation": "OPEN_GATED and excluded from base service; no shipment, service revenue or custody liability implied.",
+      "new_posting_authorized": false
+    },
+    {
+      "id": "SH-LEGAL-ACCT-TAX-BILLING-01",
+      "gap_id": "LEGAL-GAP-TAX-BILLING",
+      "clause_path": "docs/legal/gap-instruments/source/tax-billing.md",
+      "clause_heading": "5. Calculation schedule with no assumed rate",
+      "population": "NO-POSTING-TAX-BILLING",
+      "evidence_kind": "NO_ENTRY",
+      "source_path": "industrial/source/entities.json",
+      "selector": {
+        "whole_document": true
+      },
+      "interpretation": "Tax base, jurisdiction, treatment and rate are unresolved. No zero/exempt default, tax amount or tax entry. Existing invoice remains unchanged.",
+      "new_posting_authorized": false
+    },
+    {
+      "id": "SH-LEGAL-ACCT-MARK-CLEARANCE-01",
+      "gap_id": "LEGAL-GAP-MARK-CLEARANCE",
+      "clause_path": "docs/legal/gap-instruments/source/mark-clearance.md",
+      "clause_heading": "8. Present disposition",
+      "population": "NO-POSTING-MARK-CLEARANCE",
+      "evidence_kind": "NO_ENTRY",
+      "source_path": "docs/legal/ADVISORY_NAME_AND_EXTERNAL_CLEARANCE_STATUS_2026-09-09.md",
+      "selector": {
+        "whole_document": true
+      },
+      "interpretation": "External counsel execution and fee are not established; no invented legal-fee accrual or registration asset.",
+      "new_posting_authorized": false
+    }
+  ],
+  "boundary": "All legal instruments remain DRAFT_FOR_REVIEW. Native model records are evidence for exercises, not independent execution evidence. No cross-population aggregate is permitted."
+}

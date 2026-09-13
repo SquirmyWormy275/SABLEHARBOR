@@ -6,3 +6,8 @@ red_wash/history/v1.0.0/** -text whitespace=-blank-at-eol
 
 # PDF publications are binary even with ASCII-encoded streams.
 *.pdf binary
+
+# Selected native period-close CSV evidence uses RFC-style CRLF record endings.
+# Preserve exact source hashes while treating CRLF as a record terminator.
+docs/legal/gap-instruments/period-close/*.csv -text whitespace=cr-at-eol
+docs/legal/gap-instruments/period-close/source/*.csv -text whitespace=cr-at-eol

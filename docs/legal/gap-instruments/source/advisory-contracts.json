@@ -1,0 +1,76 @@
+{
+  "gap_id": "LEGAL-GAP-ADVISORY-CONTRACTS",
+  "document_id": "SH-LEGAL-DRAFT-ADVISORY-CONTRACTS",
+  "title": "Advisory master services agreement and matter schedules",
+  "status": "DRAFT_FOR_REVIEW",
+  "source_paths": [
+    "docs/advisory/LEGAL_AND_CONTRACTING_TERM_SHEET.md",
+    "docs/advisory/COMMERCIAL_CONTRACTING_AND_PRICING_STANDARD.md",
+    "docs/advisory/IP_DATA_AND_METHOD_TRANSFER_STANDARD.md",
+    "docs/advisory/EXPERT_NETWORK_AND_THIRD_PARTY_STANDARD.md",
+    "industrial/corporate/LEGAL_STRUCTURE_AND_FORMATION.md"
+  ],
+  "proposed_terms": [
+    {
+      "id": "SH-LEGAL-DRAFT-ADVISORY-CONTRACTS-T01",
+      "term": "Separate MSA, SOW, outcome, data, transfer and product terms.",
+      "basis": "SH-ADV-014 architecture; clauses proposed."
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-ADVISORY-CONTRACTS-T02",
+      "term": "Four IP classes and no hidden continuing dependency.",
+      "basis": "SH-ADV-007 accepted direction."
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-ADVISORY-CONTRACTS-T03",
+      "term": "Source pricing patterns retained as optional schedule selections, no client invoice.",
+      "basis": "SH-ADV-009; no actual fee selected."
+    }
+  ],
+  "unresolved_fields": [
+    {
+      "id": "SH-LEGAL-DRAFT-ADVISORY-CONTRACTS-U01",
+      "field": "Client legal party, jurisdiction, notices, signatory and liability limits",
+      "next_action": "Complete against client identity and approved legal/risk review."
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-ADVISORY-CONTRACTS-U02",
+      "field": "Matter scope, fees, data schedule and signature",
+      "next_action": "Populate a separately approved SOW before performance."
+    }
+  ],
+  "financial_schedules": [
+    {
+      "name": "Source capability milestone pattern; not billed",
+      "columns": [
+        "milestone",
+        "percent"
+      ],
+      "rows": [
+        [
+          "Mobilization/design",
+          20
+        ],
+        [
+          "Workflow build",
+          30
+        ],
+        [
+          "Technical implementation/test",
+          25
+        ],
+        [
+          "Supervised client operation",
+          15
+        ],
+        [
+          "Transfer/independent acceptance",
+          10
+        ]
+      ]
+    }
+  ],
+  "version": "0.1.0",
+  "prepared": "2026-09-12",
+  "approval_status": "NOT_ACCEPTED"
+}

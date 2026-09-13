@@ -36,3 +36,9 @@ python scripts/validate_reader_navigation.py --check-regeneration
 The browser command writes fresh captures and results to `var/reader-journeys`; the wiki visual workflow uploads them as CI review evidence. The historical manual screenshots in this directory are deliberately retained verification evidence, not approved production artwork. Governance CI verifies source hashes, route steps, actual workbook tabs, all gap IDs and approved original bytes. Negative tests reject altered evidence, incorrect tabs, missing guides and resealed approval hashes.
 
 Required repository checks and final commit/merge evidence belong to the implementation PR. The draft publication PR remains a separate acceptance boundary.
+
+## Subsequent legal-review usability check
+
+The [September 13 continuation](REVIEW_2026-09-13.md) replays six document routes,
+verifies the promised PDF/workbook contents and records three additional
+corrections. The earlier journey results and screenshots above remain preserved.

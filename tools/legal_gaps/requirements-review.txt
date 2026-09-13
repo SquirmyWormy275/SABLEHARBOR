@@ -1,0 +1,2 @@
+-r requirements.txt
+XlsxWriter==3.2.9

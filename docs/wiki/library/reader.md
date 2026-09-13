@@ -49,6 +49,7 @@ Generated file inventory. Includes current and historical records; open the sour
 ## `docs/reader/usability`
 
 - [Practical reading routes: verification record](../../reader/usability/README.md) — MD
+- [Reader task checks](../../reader/usability/REVIEW_2026-09-13.md) — MD
 
 ## `docs/wiki`
 

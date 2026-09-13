@@ -1,0 +1,95 @@
+{
+  "status": "DRAFT_FOR_REVIEW",
+  "classification": "PUBLIC_WORKED_EXAMPLE",
+  "no_new_postings": true,
+  "internal_consistency_only": true,
+  "monetary_check_categories": {
+    "balanced_journals": 1239,
+    "opening_accounts": 16,
+    "journal_to_trial_balance": 64,
+    "numeric_statement_lines": 51,
+    "funding": 1,
+    "monthly_foundry_field": 24
+  },
+  "exact_packet_membership": {
+    "rows": 12,
+    "full_unit_rows": 2847,
+    "comparison": "Every accepted packet row matches exactly one complete close-extract row across all original columns.",
+    "status": "PASS"
+  },
+  "sources": [
+    {
+      "path": "industrial/source/finance.json",
+      "sha256": "0d4461abfcdb138da36db503ff0cfea7c47ea7fd7109494126514225fd43e38c"
+    },
+    {
+      "path": "industrial/source/operations.json",
+      "sha256": "e7488b55c1c963d102db66e7a7b6f1373a3d68a9f94b8f99b164092245713a3b"
+    },
+    {
+      "path": "red_wash/source/core_operating_data.json",
+      "sha256": "eb5601f3a519ac175bef07744fa3c23939734f80b5774efeed4800aa73e8aa3f"
+    },
+    {
+      "path": "industrial/tools/build_financials.py",
+      "sha256": "4f879965a57598a5fd55f0b177d683aa9bcc8137e3b84e9b2b7c6a1343a9836c"
+    },
+    {
+      "path": "industrial/transaction/05_ARU_CLOSING_AND_TAX_DELIVERY.md",
+      "sha256": "a6dd448ed3a4a3ad6f0f3748e79dd918ea43c75685de762fe00843477a5d22c9"
+    },
+    {
+      "path": "industrial/transaction/07_ARU_TAX_STRUCTURE_MEMORANDUM.md",
+      "sha256": "d42c4d67873e1b8e9b6488eac9a70a16643680718735ab0c3948327a37b16a44"
+    },
+    {
+      "path": "industrial/finance/TRANSACTION_ACCOUNTING.md",
+      "sha256": "d13f142968958585cfc56a7b06d54b5e95bccef6d434d11bb6bba93933a0aa58"
+    },
+    {
+      "path": "industrial/finance/ASSUMPTIONS_AND_TEMPORAL_CONTROLS.md",
+      "sha256": "933330f510acc9c05423f08f62d30c981dde8a26c2ae0325161f29d401ab43d8"
+    },
+    {
+      "path": "industrial/finance/RED_WASH_AND_FUNDING.md",
+      "sha256": "5f54d6254e1d4e21ba37e2ed911fd8468d304e729f0272b4f45141b081a5fe94"
+    },
+    {
+      "path": "docs/finance/evidence/SH-FIN-HUMAN-001/source.json",
+      "sha256": "c4833cfc6f28db6cd3edcae761b0e2d8f463a20de79f1d6fd5b0c517f8f829b7"
+    },
+    {
+      "path": "docs/finance/evidence/close/source/journal.csv",
+      "sha256": "10b8bee2f13881e14ae9ddf0a862cf264eea3de92693368119421eee48a9bc91"
+    },
+    {
+      "path": "docs/finance/evidence/close/source/monthly_statements.csv",
+      "sha256": "c3f06769ce6975764e8edb6ec7c61c95de2ed3088cc7b6468cbfad5715fe0c34"
+    },
+    {
+      "path": "docs/finance/evidence/close/evidence-register.json",
+      "sha256": "b46821a4c7d473c8d41cafe45327b22c4a0f258c3b1bd56c2d8b9305959c2a64"
+    }
+  ],
+  "scopes": {
+    "industrial": "Native build_financials.py regeneration, ARU_GROUP and RWH_PS 2026 only; management scenario cutoff 2026-09-05. No cross-release aggregate.",
+    "foundry_field": "Committed close extract: unit=foundry-field, scenario=base, year=2027. Exact 12 accepted packet journal legs verified against complete unit population. Contract trace uses literal FF-003 in source_id."
+  },
+  "tables": {
+    "aru_2026_journal": 1926,
+    "aru_2026_trial_balance": 44,
+    "aru_acquisition_opening_trial_balance": 16,
+    "red_wash_2026_journal": 575,
+    "red_wash_2026_trial_balance": 20,
+    "financial_statements": 69,
+    "ff_journal": 2847,
+    "ff_statements": 12,
+    "ff_invoice": 1,
+    "ff_packet_journal": 12,
+    "ff_contract_trace": 82,
+    "monthly_trace": 26,
+    "rw_aro_trace": 14,
+    "evidence_requests": 6,
+    "checks": 1395
+  }
+}

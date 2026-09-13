@@ -1,0 +1,83 @@
+$ python tools/legal_gaps/validate.py
+PASS:17 packages; 1423 complete source blocks; PDF/HTML/SQLite/workbook cells, hashes and links reconcile
+Exit: 0
+
+$ python tools/legal_gaps/check_terms.py
+PASS: 237 focused legal term/source checks
+Exit: 0
+
+$ python -m pytest -q tests/publications/test_legal_gap_instruments.py --confcutdir=tests/publications
+......                                                                   [100%]
+Exit: 0
+
+$ python tools/documents/approval_guard.py
+{
+  "status": "PASS",
+  "artifact_count": 30,
+  "groups": [
+    {
+      "group": "foundry-field",
+      "record": "docs/finance/evidence/SH-FIN-HUMAN-001/ACCEPTANCE.json",
+      "revision": "e71996a5c1fe567b6654ddf8956c2b757ae52ba2",
+      "artifacts": 18
+    },
+    {
+      "group": "visitor-v08",
+      "record": "geospatial/facilities/visitor/ACCEPTANCE.json",
+      "revision": "5ed6c8daa3b90cbb30122999fe92b1a36235aab8",
+      "artifacts": 2
+    },
+    {
+      "group": "sacramento-r01",
+      "record": "docs/facilities/references/sacramento-hq/r01-approved/MANIFEST.json",
+      "revision": "f91d6cbfef943927179aa3160c595028fce87d45",
+      "artifacts": 8
+    },
+    {
+      "group": "j2-originals",
+      "record": "assets/brand/manifest.json",
+      "revision": "8ed187e5dd1b7221fee10265451bf6060a1ac0e6",
+      "artifacts": 2
+    }
+  ],
+  "scope": "Existing exact-file records only; no new approval or visual quality assessment"
+}
+Exit: 0
+
+$ python scripts/validate_governance_j2.py
+PASS governance/J2 validation: board records, chat canon ledger, authority boundaries, 9 directors, 5 committees, 9 Pinakes portals, 4 process/role diagrams plus current organization charts, Daedalus boundaries, source/PDF hashes, US-Letter publications, links, supersession
+Exit: 0
+
+$ python scripts/validate_organization_maps.py
+PASS organization charts: card copy, complete publication coverage, source paths, logos, assets and immutable history
+Exit: 0
+
+$ python scripts/validate_institutional_catalog.py
+institutional catalog validation passed (131 objects, 9 Pinakes portals)
+Exit: 0
+
+$ python scripts/validate_repository_hygiene.py
+PASS repository hygiene: 3305 tracked paths; JSON, Markdown links, stale names, private/fake-contact boundaries
+Exit: 0
+
+$ python tools/legal_gaps/validate_qa.py
+PASS: manual QA receipt covers 52 exact artifacts and every instrument PDF page
+Exit: 0
+
+$ python scripts/validate_business_records.py
+Business records passed: 7 lines, 12 interfaces, 10 existing-CCF implementations
+Exit: 0
+
+$ python scripts/validate_finance_evidence_acceptance.py
+PASS: accepted Foundry Field packet and review artifacts match exact hashes
+Exit: 0
+
+$ python docs/finance/evidence/coverage/validate.py
+PASS current transaction source hashes, complete CSV/SQLite mirror and PPA identities
+PASS exact CSV/database populations, hashes, scope and accounting: {'customer': 5390, 'treasury': 12223, 'close': 15084, 'supporting-schedules': 16236, 'tax-transaction': 73}
+Exit: 0
+
+$ python docs/reader/transactions/validate.py
+PASS: 56 documents, 493 exact sections, 13 dossiers, 336 local links, 17 explicit gaps; 0 draft PDF pages
+Exit: 0
+

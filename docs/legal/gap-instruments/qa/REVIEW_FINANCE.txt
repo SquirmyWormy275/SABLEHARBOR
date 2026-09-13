@@ -1,0 +1,29 @@
+Initial rendering inspection — superseded by pending pagination fixes.
+Inspected every page through supplied original-resolution contact sheets: formations1–6; financing-documents1–6; debt-liens1–6; tax-filing1–5; land1–5; tax-billing1–5 (33 pages).
+All body text/tables readable; no clipping, overlaps, broken logo or tiny body text found. Draft status and source limits visible.
+Correction requested: financing completion/signature table split pages5–6; debt completion heading/introduction page5 separated from entire form on6. Keep final completion sections together. Main confirmed applying targeted keep-together, metadata spacing and reference list fixes.
+Other observations: ordinary multipage source tables repeat headers correctly. Tax-filing final page has substantive paragraphs, not a one-word orphan; no need to remove content to reduce page count.
+Inspected full-scroll HTML screenshot surfaces for formations, financing-documents,debt-liens: no clipped columns/overlap, complete readable continuous sections and completion tables. Remaining3 HTML plus new final PDF pagination await main notification.
+No source/style edits made during QA. This note does not certify pending new bytes or confer user acceptance.
+
+Final-style reinspection (PDF pages and HTML captured locally in /tmp/sh-final-six-qa):
+All33pages inspected again at1.3x original resolution: formations1–6,financing1–6,debt1–6,taxfiling1–5,land1–5,taxbilling1–5. All six full-scroll HTML surfaces inspected after screenshotting with Chromium1280x960. Browser checks show documentwidth1280,viewport1280,zero brokenimages for all6.
+PASS five PDFs and six continuous HTML layouts: no clipping/overlap/tinybodytext/brokenlogos. Metadata spacing improved. Financing and debt completion/signature sections now together on their final pages; original issues corrected.
+Remaining tax-filing pagination correction: final paragraph alone onpage5. Main added finalsection wrapper, but observed literal backslashes in class attribute (class=\"references\") prevented CSS match. Reported exact generator symptom; awaiting corrected render then inspecting pages4–5 once more. No content issue found.
+
+FINAL RESULT: PASS_FOR_USER_REVIEW; no visual acceptance by owner implied.
+Final tax-filing pages4–5 and HTML section reinspected after escaping fix: heading and both paragraphs together on5; no isolated tail paragraph. No other defects remaining in six PDF/HTML packages.
+Coverage:33PDFpages (6+6+6+5+5+5),6fullscroll1280pxHTML views plus targeted final taxsection recapture. PDF rendering1.3x via fitz and original-resolution view_image. Final completion forms intact; normal repeated-header table continuations retained.
+Exact final edition hashes:
+docs/legal/gap-instruments/editions/formations.pdf 5cd9b56d086833bf9336cc3b37fab24626700ca88b8a1b4696834908e23c44c0
+docs/legal/gap-instruments/editions/formations.html bf33753a3759dbec86c2611e1e069aa76b199ee3e70976a9e5d65db44215c17e
+docs/legal/gap-instruments/editions/financing-documents.pdf dbec54bba2adff2e60de770a9ae36e88b344214d0bb7905fcc80b08d6b5d8e61
+docs/legal/gap-instruments/editions/financing-documents.html 1b742ffd63e71b9ddd4785bf43dfcb17ea685751a905d14afc3c7700e5db99fe
+docs/legal/gap-instruments/editions/debt-liens.pdf 59aaae8c3f5048079fe5b993f35fab239a75e0572d734fbc1f9fa2e2c99b5bdf
+docs/legal/gap-instruments/editions/debt-liens.html aad02016ee7c5f11782068829ea5bc36538bf53b6d63391556855eb2b9f96815
+docs/legal/gap-instruments/editions/tax-filing.pdf cb849b9f48716f05bfc680722b640b1d3442be860ed14ae3426a8dddc184742b
+docs/legal/gap-instruments/editions/tax-filing.html 98ca70d4b329ee12af44383a497933938ff5ac13a81b56f44779ed0d17385f1d
+docs/legal/gap-instruments/editions/land.pdf 45086344d7cca1400d43bce2b4a6aec5d99597aab9f86681865d04f0d3f9dff6
+docs/legal/gap-instruments/editions/land.html fcafbf086fcb90137083f6d0b1d624d68e9ba4d4f8d98c2cd3a1738171b34131
+docs/legal/gap-instruments/editions/tax-billing.pdf 6afad8981c8200f5ad6144e3a181ebc7e7e199b5a011849e746e1c41873d6e4c
+docs/legal/gap-instruments/editions/tax-billing.html 02adac1a57fe62df378f7d39af7cd38d491b2c1e2a849f5debac938359062b7d

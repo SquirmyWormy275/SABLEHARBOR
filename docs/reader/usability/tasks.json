@@ -1,0 +1,117 @@
+{
+  "status": "AGENT_TASK_WALKTHROUGH_NOT_HUMAN_USER_STUDY",
+  "accepted_main": "9cc0d2a5c31700dcd166ef9acf1dd284bddb6e8d",
+  "tasks": [
+    {
+      "id": "READ-01",
+      "question": "Open the ARU closing statement from the README.",
+      "route": [
+        "README.md",
+        "docs/reader/exercises/README.md",
+        "docs/reader/exercises/ACQUISITION.md",
+        "industrial/publications/SH-IND-ARU-CLOSE-001_v1.0.0.pdf"
+      ],
+      "expected_pdf_text": [
+        "January 7, 2026",
+        "ARU-CL-07"
+      ],
+      "finding": "The route reaches the closing statement in three links and identifies the filing-ready versus external filing boundary."
+    },
+    {
+      "id": "READ-02",
+      "question": "Find the accepted Foundry Field workbook starting at the Wiki start page.",
+      "route": [
+        "docs/wiki/Start-Here.md",
+        "docs/reader/exercises/INVOICE.md",
+        "docs/finance/evidence/SH-FIN-HUMAN-001/README.md",
+        "docs/finance/evidence/SH-FIN-HUMAN-001/reconciliation.xlsx"
+      ],
+      "expected_sheets": [
+        "Reconciliation",
+        "Movements",
+        "Journal",
+        "Terms and credits",
+        "Source register"
+      ],
+      "finding": "The exact five named sheets exist. The Wiki introduction was corrected to promise contract terms, movements and journals, rather than unavailable delivery evidence."
+    },
+    {
+      "id": "READ-03",
+      "question": "Find the draft decision workbook without searching filenames.",
+      "route": [
+        "README.md",
+        "docs/reader/transactions/README.md",
+        "docs/legal/gap-instruments/REVIEW_WORKFLOW.md",
+        "docs/legal/gap-instruments/review-support/decisions.xlsx"
+      ],
+      "expected_sheets": [
+        "Read first",
+        "Review",
+        "Source details"
+      ],
+      "finding": "Moved the existing draft-review link ahead of the 56-source inventory and added it to its generator so regeneration retains the route. Draft status stays visible."
+    },
+    {
+      "id": "READ-04",
+      "question": "Find the separate corporate ground-floor plan from the README.",
+      "route": [
+        "README.md",
+        "geospatial/maps/facilities/ARTIFACT_INDEX.md",
+        "geospatial/maps/facilities/SH-MAP-SAC-024.pdf"
+      ],
+      "expected_pdf_text": [
+        "SH-MAP-SAC-024"
+      ],
+      "finding": "The individual PDF is two links from the README. The index labels the floor MODELLED_R02_DESIGN_NOT_EXISTING; it does not establish occupancy."
+    },
+    {
+      "id": "READ-05",
+      "question": "Reach accounting exercise instructions through the Finance department page.",
+      "route": [
+        "docs/wiki/Home.md",
+        "docs/wiki/departments/finance.md",
+        "docs/finance/READER_EXERCISES.md"
+      ],
+      "expected_text": [
+        "scenario",
+        "2027"
+      ],
+      "finding": "The Finance article supplies an explicit accounting-exercise link. Its source boundaries remain visible in the linked guide."
+    },
+    {
+      "id": "READ-06",
+      "question": "Find the model's transaction-accounting narrative from the acquisition route.",
+      "route": [
+        "README.md",
+        "docs/reader/exercises/README.md",
+        "docs/reader/exercises/ACQUISITION.md",
+        "industrial/finance/TRANSACTION_ACCOUNTING.md"
+      ],
+      "expected_text": [
+        "Sources and uses",
+        "Purchase price allocation"
+      ],
+      "finding": "The narrative is directly linked alongside the closing statement. The route distinguishes the 2026 reconstruction from the base-2027 operating forecast."
+    }
+  ],
+  "corrections": [
+    {
+      "id": "READ-F01",
+      "path": "docs/wiki/Start-Here.md",
+      "problem": "Invoice route promised delivery evidence not supplied by the accepted packet.",
+      "fix": "Name the actual contract terms, dated movements and journal entries."
+    },
+    {
+      "id": "READ-F02",
+      "path": "docs/reader/transactions/build.py",
+      "problem": "The useful draft-review link was after the full source inventory and absent from the generator; rebuilding removed it.",
+      "fix": "Generate the draft-review and 17-package links in the initial Reading packages section."
+    },
+    {
+      "id": "READ-F03",
+      "path": "docs/reader/transactions/build.py",
+      "problem": "The documented rebuild command recreated the source database without its separately generated reading-dossier tables.",
+      "fix": "Document and execute both build.py and build_readers.py before validation; full reconstructed database contents matched the retained original."
+    }
+  ]
+}

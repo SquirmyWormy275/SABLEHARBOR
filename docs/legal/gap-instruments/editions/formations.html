@@ -1,0 +1,245 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Industrial company consents and subscription record drafts</title><style>@page { size: Letter; margin: 0.68in 0.66in 0.68in; }
+* { box-sizing: border-box; }
+html { color: #20282c; background: #edf0f1; }
+body { margin: 0; font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.43; }
+.edition-header { display: flex; justify-content: space-between; align-items: center; gap: 24px; border-bottom: 2px solid #26383d; padding-bottom: 15px; margin-bottom: 14px; }
+.edition-header img { max-width: 245px; max-height: 65px; object-fit: contain; object-position: left center; }
+.edition-header span { color: #515e63; font-size: 8pt; letter-spacing: 0.8px; text-align: right; }
+.edition-note { padding: 10px 12px; border-left: 3px solid #958367; background: #f6f4ef; font-size: 9pt; line-height: 1.4; margin: 0 0 22px; }
+.edition-note p { margin: 0 0 4px; }
+.edition-note p:last-child { margin: 0; }
+h1 { font-size: 23pt; line-height: 1.15; margin: 0 0 18px; font-weight: 600; }
+h2 { font-size: 15pt; line-height: 1.2; margin: 23px 0 9px; }
+h3 { font-size: 12pt; line-height: 1.3; margin: 18px 0 7px; }
+h4,h5,h6 { font-size: 11pt; margin: 15px 0 6px; }
+h1,h2,h3,h4,h5,h6 { break-after: avoid; overflow-wrap: anywhere; }
+p { margin: 0 0 11px; orphans: 3; widows: 3; }
+li { margin: 0 0 5px; orphans: 2; widows: 2; }
+ul,ol { padding-left: 23px; margin: 8px 0 13px; }
+li > p { margin-bottom: 6px; }
+a { color: #294e60; text-decoration: underline; text-underline-offset: 2px; overflow-wrap: anywhere; }
+code { font-family: 'DejaVu Sans Mono', monospace; font-size: 0.88em; overflow-wrap: anywhere; }
+pre { font-size: 9.5pt; white-space: pre-wrap; overflow-wrap: anywhere; background: #f2f4f4; padding: 10px; border: 1px solid #d8dfe0; }
+blockquote { border-left: 2px solid #929fa4; margin: 12px 0; padding: 0 15px; color: #39464b; }
+table { border-collapse: collapse; width: 100%; margin: 12px 0 17px; table-layout: auto; font-size: 10.5pt; line-height: 1.35; }
+thead { display: table-header-group; }
+tfoot { display: table-footer-group; }
+th { background: #e9eef0; font-weight: 600; text-align: left; }
+th,td { padding: 7px 8px; border-bottom: 1px solid #cbd3d6; vertical-align: top; overflow-wrap: anywhere; }
+tr { break-inside: avoid; }
+hr { border: 0; border-top: 1px solid #cbd3d6; margin: 19px 0; }
+article img { max-width: 100%; height: auto; }
+.source-identity { margin-top: 24px; border-top: 1px solid #b7c1c5; padding-top: 10px; font-size: 8pt; color: #516168; overflow-wrap: anywhere; }
+@media screen { body { max-width: 900px; margin: 24px auto; padding: 48px 54px; background: white; box-shadow: 0 2px 16px #18313b12; } }
+@media screen and (max-width: 600px) { body { margin: 0; padding: 22px 18px; } h1 { font-size: 21pt; } .edition-header { gap: 12px; } .edition-header img { max-width: 55%; } table { display: block; overflow-x: auto; } }
+@media print { html { background: white; } a { text-decoration: none; } }
+/* Source metadata uses Markdown soft line breaks; retain those readable lines. */
+/* Source metadata already uses explicit Markdown hard breaks. */
+th,td { min-width: 5em; }
+/* Provenance remains in the editable HTML and manifest; do not create empty PDF tail pages. */
+@media print { .source-identity { display: none; } }
+
+/* Keep the complete closing paragraph on one page in this formation record. */
+article[data-document-id="SH-IND-COR-001"] > p:last-child { break-inside: avoid; }
+article[data-document-id="SH-IND-HR-001"] th:first-child,
+article[data-document-id="SH-IND-HR-001"] td:first-child { min-width: 8em; }
+/* Chromium does not consistently honor widows/orphans; keep ordinary clauses intact. */
+article p { break-inside: avoid; }
+/* Wrap ordinary table words at spaces; long machine paths retain code wrapping. */
+th,td { overflow-wrap: normal; }
+@media screen and (max-width: 600px) {
+  th,td { min-width: 8em; }
+}
+/* Corporate document standard SH-GOV-DOC-001. */
+.edition-header { border-bottom-color: #C45124; }
+.edition-note { border-left-color: #C45124; background: #F4F1EA; }
+@media screen { body { box-shadow: none; } }
+
+/* Keep reference lists and fillable completion forms intact. */
+.references, .execution-form { break-inside: avoid; }
+</style></head><body>
+<header class="edition-header"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDE2MDAgNTAwIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUgZGVzYyI+PHRpdGxlIGlkPSJ0aXRsZSI+U2FibGUgSGFyYm9yIOKAlCBwcmltYXJ5IGhvcml6b250YWw8L3RpdGxlPjxkZXNjIGlkPSJkZXNjIj5JbmRpdmlkdWFsIHByaW1hcnkgaG9yaXpvbnRhbCBsb2dvIGFzc2V0IGZvciBTYWJsZSBIYXJib3IuPC9kZXNjPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDgwLjAwMCwxMTAuMDAwKSBzY2FsZSgyLjMzMzMzMzMzKSI+PHJlY3QgeD0iOCIgeT0iOCIgd2lkdGg9Ijk2IiBoZWlnaHQ9IjIwIiBmaWxsPSIjMTAxMjE0Ii8+PHJlY3QgeD0iOCIgeT0iOCIgd2lkdGg9IjIwIiBoZWlnaHQ9Ijc0IiBmaWxsPSIjMTAxMjE0Ii8+PHBvbHlnb24gcG9pbnRzPSI4LjAwMCw2Mi4wMDAgNzguMDAwLDYyLjAwMCA2OC4wMDAsODIuMDAwIDguMDAwLDgyLjAwMCIgZmlsbD0iIzEwMTIxNCIvPjxyZWN0IHg9IjE2IiB5PSI5MiIgd2lkdGg9Ijk2IiBoZWlnaHQ9IjIwIiBmaWxsPSIjMTAxMjE0Ii8+PHJlY3QgeD0iOTIiIHk9IjM4IiB3aWR0aD0iMjAiIGhlaWdodD0iNzQiIGZpbGw9IiMxMDEyMTQiLz48cG9seWdvbiBwb2ludHM9IjQyLjAwMCwzOC4wMDAgMTEyLjAwMCwzOC4wMDAgMTEyLjAwMCw1OC4wMDAgNTIuMDAwLDU4LjAwMCIgZmlsbD0iIzEwMTIxNCIvPjxyZWN0IHg9IjU0IiB5PSI1NCIgd2lkdGg9IjEyIiBoZWlnaHQ9IjEyIiBmaWxsPSIjQzQ1MTI0Ii8+PC9nPjxnIGZpbGw9IiMxMDEyMTQiPjxwYXRoIGQ9Ik02NTIgLTI0Qzk5MCAtMjQgMTIwOSAxNTIgMTIwOSA0MjBDMTIwOSA2MzMgMTA3MSA3NjIgNzcyIDgzM0w2MTEgODcxQzQwNiA5MjAgMzI2IDk4MiAzMjYgMTA5MEMzMjYgMTIyNSA0NTMgMTMyMCA2MzMgMTMyMEM4MjEgMTMyMCA5NDMgMTIxNSA5NTQgMTA0NEgxMTY5QzExNjAgMTMzNSA5NTcgMTUxNCA2MzYgMTUxNEMzMTYgMTUxNCAxMDUgMTM0MSAxMDUgMTA3OUMxMDUgODczIDIzNyA3NDggNTM4IDY3N0w3MDEgNjM4QzkwOCA1ODkgOTg3IDUyMyA5ODcgNDA4Qzk4NyAyNjMgODU0IDE3MCA2NTIgMTcwQzQyOSAxNzAgMjk4IDI4NiAyOTcgNDgzSDc1Qzc1IDE2OCAyOTUgLTI0IDY1MiAtMjRaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg0MzAuMDAwLDI4MC4yNDApIHNjYWxlKDAuMDUyNzM0MzgsLTAuMDUyNzM0MzgpIi8+PHBhdGggZD0iTTE2IDBIMjUyTDM4OCAzODdIOTg5TDExMjEgMEgxMzYyTDgyNSAxNDkwSDU1N1pNNDU1IDU3NiA1NDggODQwQzU4OSA5NjMgNjMyIDEwOTQgNjkyIDEyODdDNzUxIDEwOTQgNzkzIDk2MyA4MzQgODQwTDkyNCA1NzZaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg1MDguNTExLDI4MC4yNDApIHNjYWxlKDAuMDUyNzM0MzgsLTAuMDUyNzM0MzgpIi8+PHBhdGggZD0iTTEzNiAwSDcxMEMxMDYyIDAgMTIzOSAxNjYgMTIzOSA0MTlDMTIzOSA2MzEgMTEwMyA3NDggOTMwIDc3MlY3NzRDMTA4NiA4MjIgMTE4MCA5MjcgMTE4MCAxMDk4QzExODAgMTMzNyAxMDAwIDE0OTAgNjkzIDE0OTBIMTM2Wk0zNTYgMTg3VjY2NUg3MDRDOTAxIDY2NSAxMDEzIDU3MSAxMDEzIDQyMEMxMDEzIDI2OCA4OTggMTg3IDY5NiAxODdaTTM1NiA4NDhWMTMwM0g2OTBDODU5IDEzMDMgOTYwIDEyMTUgOTYwIDEwNzVDOTYwIDkzNSA4NTkgODQ4IDY5MCA4NDhaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg1OTIuMDMyLDI4MC4yNDApIHNjYWxlKDAuMDUyNzM0MzgsLTAuMDUyNzM0MzgpIi8+PHBhdGggZD0iTTEzNiAwSDEwNjNWMTk1SDM1OFYxNDkwSDEzNloiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDY3MS45NjYsMjgwLjI0MCkgc2NhbGUoMC4wNTI3MzQzOCwtMC4wNTI3MzQzOCkiLz48cGF0aCBkPSJNMTM2IDBIMTEzOFYxOTVIMzU4VjY2M0gxMDgwVjg1NkgzNThWMTI5NUgxMTM4VjE0OTBIMTM2WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNzQxLjM1NCwyODAuMjQwKSBzY2FsZSgwLjA1MjczNDM4LC0wLjA1MjczNDM4KSIvPjxwYXRoIGQ9Ik0xMzYgMEgzNThWNjY1SDEwOTlWMEgxMzIxVjE0OTBIMTA5OVY4NTlIMzU4VjE0OTBIMTM2WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoODc4LjM5MiwyODAuMjQwKSBzY2FsZSgwLjA1MjczNDM4LC0wLjA1MjczNDM4KSIvPjxwYXRoIGQ9Ik0xNiAwSDI1MkwzODggMzg3SDk4OUwxMTIxIDBIMTM2Mkw4MjUgMTQ5MEg1NTdaTTQ1NSA1NzYgNTQ4IDg0MEM1ODkgOTYzIDYzMiAxMDk0IDY5MiAxMjg3Qzc1MSAxMDk0IDc5MyA5NjMgODM0IDg0MEw5MjQgNTc2WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoOTY2LjAyNiwyODAuMjQwKSBzY2FsZSgwLjA1MjczNDM4LC0wLjA1MjczNDM4KSIvPjxwYXRoIGQ9Ik0xMzYgMEgzNThWNTY0SDY4OEM2OTEgNTY0IDY5NSA1NjQgNjk4IDU2NEw5OTUgMEgxMjQ1TDkyMyA2MDFDMTEwOSA2NjggMTIyMiA4MTggMTIyMiAxMDI2QzEyMjIgMTMxMSAxMDIyIDE0OTAgNzAzIDE0OTBIMTM2Wk0zNTggNzUzVjEyOThINjkzQzg4NSAxMjk4IDEwMDMgMTE5NCAxMDAzIDEwMjZDMTAwMyA4NTggODg2IDc1MyA2OTQgNzUzWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTA0OS41NDcsMjgwLjI0MCkgc2NhbGUoMC4wNTI3MzQzOCwtMC4wNTI3MzQzOCkiLz48cGF0aCBkPSJNMTM2IDBINzEwQzEwNjIgMCAxMjM5IDE2NiAxMjM5IDQxOUMxMjM5IDYzMSAxMTAzIDc0OCA5MzAgNzcyVjc3NEMxMDg2IDgyMiAxMTgwIDkyNyAxMTgwIDEwOThDMTE4MCAxMzM3IDEwMDAgMTQ5MCA2OTMgMTQ5MEgxMzZaTTM1NiAxODdWNjY1SDcwNEM5MDEgNjY1IDEwMTMgNTcxIDEwMTMgNDIwQzEwMTMgMjY4IDg5OCAxODcgNjk2IDE4N1pNMzU2IDg0OFYxMzAzSDY5MEM4NTkgMTMwMyA5NjAgMTIxNSA5NjAgMTA3NUM5NjAgOTM1IDg1OSA4NDggNjkwIDg0OFoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDExMjkuMjcwLDI4MC4yNDApIHNjYWxlKDAuMDUyNzM0MzgsLTAuMDUyNzM0MzgpIi8+PHBhdGggZD0iTTc2NiAtMjRDMTE2MyAtMjQgMTQ1MiAyODggMTQ1MiA3NDRDMTQ1MiAxMjAyIDExNjMgMTUxNCA3NjYgMTUxNEMzNjkgMTUxNCA4MSAxMjAyIDgxIDc0NEM4MSAyODkgMzY5IC0yNCA3NjYgLTI0Wk03NjYgMTc5QzUwOSAxNzkgMzA0IDM4MSAzMDQgNzQ0QzMwNCAxMTA5IDUwOSAxMzExIDc2NiAxMzExQzEwMjMgMTMxMSAxMjI5IDExMDkgMTIyOSA3NDRDMTIyOSAzODEgMTAyMyAxNzkgNzY2IDE3OVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEyMDkuMjA1LDI4MC4yNDApIHNjYWxlKDAuMDUyNzM0MzgsLTAuMDUyNzM0MzgpIi8+PHBhdGggZD0iTTEzNiAwSDM1OFY1NjRINjg4QzY5MSA1NjQgNjk1IDU2NCA2OTggNTY0TDk5NSAwSDEyNDVMOTIzIDYwMUMxMTA5IDY2OCAxMjIyIDgxOCAxMjIyIDEwMjZDMTIyMiAxMzExIDEwMjIgMTQ5MCA3MDMgMTQ5MEgxMzZaTTM1OCA3NTNWMTI5OEg2OTNDODg1IDEyOTggMTAwMyAxMTk0IDEwMDMgMTAyNkMxMDAzIDg1OCA4ODYgNzUzIDY5NCA3NTNaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMzAwLjg0NywyODAuMjQwKSBzY2FsZSgwLjA1MjczNDM4LC0wLjA1MjczNDM4KSIvPjwvZz48cmVjdCB4PSI0MzAiIHk9IjMwNi4yNCIgd2lkdGg9IjkzOS43NzA4NTkzNzQ5OTk5IiBoZWlnaHQ9IjQiIGZpbGw9IiNDNDUxMjQiLz48L3N2Zz4=" alt="Sable Harbor"><span>LEGAL &amp; CORPORATE RECORDS<br>DRAFT INSTRUMENT · 12 SEPTEMBER 2026</span></header>
+<aside class="edition-note"><strong>Draft for exact-file review</strong><br>Proposed language. Accepted source facts retain their original status. No execution, filing, payment or clearance is established by this edition.</aside>
+<article id="source-content"><h1>Industrial company consents and subscription record drafts</h1>
+<p><strong>Document ID:</strong> SH-LEGAL-DRAFT-FORMATIONS<br />
+<strong>Gap:</strong> LEGAL-GAP-FORMATIONS<br />
+<strong>Version:</strong> 0.1.0<br />
+<strong>Prepared:</strong> 2026-09-12<br />
+<strong>Status:</strong> DRAFT_FOR_REVIEW — proposed internal instruments; unsigned<br />
+<strong>Owner:</strong> Corporate Secretary / Legal<br />
+<strong>Effective date and approval:</strong> not established for these drafts. Historical dates below describe accepted source events, not execution of this document.</p>
+<h2>1. Purpose and instrument boundary</h2>
+<p>This packet provides six separate internal consent and ownership-record drafts for the accepted industrial perimeter. It does not form a seventh company, issue a government certificate, or claim that a newly written consent existed at a historical closing. The company identities and ownership chain come from the <a href="../../../../industrial/corporate/LEGAL_STRUCTURE_AND_FORMATION.md">internal formation record</a>, <a href="../../../../industrial/source/entities.json">entity register</a> and <a href="../../../canon/INDUSTRIAL_CLOSEOUT_2026-09-05.md">industrial closeout</a>. The <a href="../../../../industrial/source/chronology.json">chronology</a> controls source event precision. Clauses described as proposed below are supplied for review; they do not amend accepted governing instruments merely by appearing here.</p>
+<p>Upon separate adoption, the Corporate Secretary would retain each consent in its company's book with the actual adoption date, approving capacity, authority reference and attachments. A cross-reference to another company's approval is not that company's approval. A signatory must identify the capacity in which the person acts; a parent title alone supplies no subsidiary appointment. No reconstructed signature, seal, filing number, tax identifier or exact share count is supplied.</p>
+<h2>2. Schedule A — existing perimeter to be carried into the books</h2>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Company</th>
+<th>Accepted form/jurisdiction</th>
+<th>Holder and interest</th>
+<th>Historical event represented</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SHI</td>
+<td>Sable Harbor, LLC</td>
+<td>Delaware LLC</td>
+<td>Existing members; individual economics remain in controlling sources</td>
+<td>Founding in 2016, year precision</td>
+</tr>
+<tr>
+<td>SHIH</td>
+<td>Sable Harbor Industrial Holdings, Inc.</td>
+<td>Delaware C corporation</td>
+<td>SHI, 100%</td>
+<td>Formation December 2, 2024</td>
+</tr>
+<tr>
+<td>PS</td>
+<td>Pale Sun Inc.</td>
+<td>Delaware C corporation</td>
+<td>SHIH, 100%</td>
+<td>Formation January 13, 2025</td>
+</tr>
+<tr>
+<td>RWH</td>
+<td>Red Wash Mining, LLC</td>
+<td>Wyoming LLC</td>
+<td>PS, 100%</td>
+<td>Acquisition July 18, 2025; organization September 29, 2007</td>
+</tr>
+<tr>
+<td>ARU</td>
+<td>American Resource Utility, Inc.</td>
+<td>Wyoming corporation, post-close C corporation for federal tax</td>
+<td>SHIH, 100%</td>
+<td>Stock acquisition January 7, 2026</td>
+</tr>
+<tr>
+<td>BST</td>
+<td>Blood, Sweat &amp; Tears Railway Company</td>
+<td>Wyoming corporation</td>
+<td>ARU, 100%</td>
+<td>ARU ownership from reconstructed 1991 organization</td>
+</tr>
+</tbody>
+</table>
+<p>These percentages describe ownership within separate entities; adding them gives no enterprise ownership measure. Sacramento is SHI's headquarters, not its formation jurisdiction. Parent membership details are deliberately not replaced by six subsidiary percentages. BS&amp;T's reconstructed predecessor history begins in 1898 and includes the 1954 rescue/name change; this packet neither backdates ARU nor erases railway continuity.</p>
+<h2>3. SHI — proposed member and governing-board consent</h2>
+<p>The following six consent texts become operative only upon the appropriate approving body’s actual adoption and completion of its entity-specific schedule. Each is an unexecuted draft. A proposed new subscription must be distinguished from acknowledgment of an already accepted historical interest; no duplicate issuance is authorized.</p>
+<p><strong>RESOLVED, subject to the completed authority and adoption record below, that the approving body acknowledges SHI as the existing parent and directs the Secretary</strong> to maintain its legal name as Sable Harbor, LLC. The stable accounting key SHI shall not be expanded into an Inc. suffix. The consent shall preserve the existing nine-member unitary board and independent Chair; it shall not add a financing, industrial or subsidiary representative seat.</p>
+<p>The approving bodies shall confirm that the record of SHIH ownership belongs in SHI's investment register and that industrial acquisition funding must be traced through the appropriate source transaction. They shall authorize the Secretary to obtain missing certified records where needed, without treating an internal reconstruction as a state-certified copy. Before execution, Legal shall identify the governing agreement provisions and member or board approvals actually required; this draft does not decide the legal sufficiency of a vote.</p>
+<p>SHI shall instruct Finance to keep its investment balance separate from SHIH's assets and expenses. No subsidiary permit, carrier authority, employment obligation or mine property shall transfer into SHI under this consent. A later recapitalization, distribution, guarantee or intercompany advance shall need its own economic record and authorization. Existing member rights shall continue without an inferred waiver from participation in this administrative cleanup.</p>
+<h2>4. SHIH — proposed sole-stockholder and organization consent</h2>
+<p><strong>RESOLVED, that SHI, acting in its verified approving capacity, acknowledges</strong> the December 2, 2024 formation record and directs SHIH to maintain separate books, ownership records and delegated authorities. This is an internal continuity acknowledgment, not a second formation. Any proposed appointment instrument shall identify the office, appointee, effective date and source of delegated power separately; no unnamed officer is inserted by the drafting exercise.</p>
+<p>SHIH shall maintain PS and ARU as separate wholly owned investments. It shall not merge their operating obligations, cash accounts or acquisition escrows. SHIH's holding purpose shall include receiving authorized parent investment and directing separately approved acquisition funding. This clause shall confer no authority to operate a railway or mine, dispatch employees, waive site safety controls or pledge subsidiary assets without the relevant company's approval.</p>
+<p>A subscription schedule shall accompany the consent only after the Secretary establishes the authorized class, exact units or shares and issue consideration from accepted records. The accepted nominal organization concept is not a dollar amount. The register shall record those unresolved fields as unavailable, leaving a proposed issuance unposted until supplied. Parent funding already recognized in a transaction must not be issued a second time as supposed initial organization capital.</p>
+<h2>5. PS — proposed subscription and continuity consent</h2>
+<p><strong>RESOLVED, that SHIH approves the subscription record for its entire accepted ownership interest in PS</strong>, solely to document the original organization subscription on the completed schedule; no additional interests shall be issued under this acknowledgment. PS shall accept the subscription only after its authorized recipient verifies the class, quantity, consideration, authority and receipt or valid noncash contribution basis. Until then this draft records the existing 100% relationship but does not manufacture the original subscription price or share denomination.</p>
+<p>The organizational record shall preserve January 13, 2025 as the reconstructed formation date and distinguish the initial development roles from Evan Vilander's later presidency beginning November 3, 2025. Mari Varela's PS COO and RWH CEO capacities remain distinct offices held by one person. The consent shall not count those offices as two employees or move mine operating personnel into a new platform establishment.</p>
+<p>PS shall carry the RWH investment separately from platform payroll and service expense. Its ownership of RWH shall not substitute for RWH's permits, contracts or stop authority. Any subsequent investment contribution or service agreement shall identify amount, date, consideration and reciprocal accounting independently of the organization subscription. The consent shall expressly prohibit treating Red Wash's acquisition escrow as either PS's original subscription or ARU's later escrow.</p>
+<h2>6. RWH — proposed sole-member acknowledgment</h2>
+<p><strong>RESOLVED, that PS acknowledges the accepted acquisition of all RWH membership interests</strong> from Northstar Minerals, Inc. on July 18, 2025, preserving RWH as the existing Wyoming mine/mill operator. This is an acquired-interest entry, not an initial subscription and not a statutory transfer of every scheduled operating right by this instrument. The Secretary shall attach the accepted transaction record and cross-reference each supported assignment or consent rather than certifying that every transfer condition was independently proved.</p>
+<p>The membership ledger shall distinguish the 2007 organization, Northstar's 2010 ownership and PS's 2025 acquisition. The $28,000,000 selected consideration shall be cross-referenced to the transaction file, including its $3,000,000 escrow and $500,000 holdback within that total. Those acquisition amounts shall not fill an unknown original formation contribution. No release of either retained amount is authorized here.</p>
+<p>RWH shall continue to hold mine-specific assets, liabilities, people and source records under its accepted operating boundary. Mari's operating capacity and Cole's site stop authority shall remain governed by their existing sources. An ownership-book update shall neither cure a title defect nor replace environmental, permit or product-release evidence. Any unresolved instrument shall stay attached to its existing gap record.</p>
+<h2>7. ARU — proposed acquired-share and board-record acknowledgment</h2>
+<p><strong>RESOLVED, that SHIH records its accepted January 7, 2026 purchase</strong> of every ARU share from the four accepted sellers, with no rollover and no merger. The acquired-share schedule shall show Fred Tolman 60%, Adele Tolman 20%, Nora Ashcombe 10% and Seth Kettering 10% before close, and SHIH 100% afterward. Exact share certificates and numbers remain unestablished; percentages are not converted into invented certificates.</p>
+<p>ARU shall preserve Nora's day-one President/COO authority and Fred's separate, time-bounded consultancy without operating command. Its closing consideration, debt refinance, escrow and service payments shall retain their separate accounting. The consent shall reference the closing statement for the $48,000,000 buyer-funded share consideration and shall not equate the $62,000,000 enterprise value with an organization subscription.</p>
+<p>ARU shall retain BS&amp;T as its existing wholly owned legal subsidiary. Tax classification and modeled QSub termination shall be documented through the tax memorandum; they shall not dissolve BS&amp;T or transfer railway property into a generic ARU ledger. Unconfirmed tax filing status shall remain unconfirmed after approval of this ownership acknowledgment.</p>
+<h2>8. BST — proposed continuity and separate-book consent</h2>
+<p><strong>RESOLVED, that ARU acknowledges BS&amp;T's corporate continuity and ARU's sole ownership</strong> while directing that railway property, personnel, operating records and property-specific responsibilities remain identifiable in BS&amp;T's books. Seth Kettering's accepted operating leadership shall remain governed by the authority record. No new railway officer, director or authorized signer is named here.</p>
+<p>The Secretary shall preserve the predecessor and reorganization references and identify any unavailable original share exchange instrument without replacing it with a fictional government filing. A proposed subscription is inapplicable to the already acquired historical relationship unless a separately approved new capital issuance is actually intended. A transfer or contribution schedule shall state that distinction before Finance posts any entry.</p>
+<p>The consent shall not expand ordinary inbound service into uranium custody, confer access to third-party land or create a mine spur. Railway corporate ownership and operating qualification remain separate questions. Any collateral request against railway property shall return to the applicable security and authority review rather than being embedded in this organization consent.</p>
+<h2>9. Common proposed completion provisions</h2>
+<p>For each company, the Secretary would complete an instrument cover record identifying the exact approving body, actual adoption date, authority document, attached ownership ledger and unresolved exceptions. Legal would review the instrument in the correct entity form before signatures are requested. A proposed consent may be withdrawn or revised before adoption; withdrawal would not reverse the accepted ownership facts in Schedule A.</p>
+<p>Finance would reconcile any supported capital contribution between investor and recipient before posting, stating whether it is new cash, transferred property, an existing investment or a correction. A blank amount is not zero. The Secretary would retain rejected versions and a concise supersession note, while the current book points to the approved version. No signature is requested or represented by publication of this packet.</p>
+<h2>10. Review delivery schedule</h2>
+<table>
+<thead>
+<tr>
+<th>Deliverable</th>
+<th>Supplied here</th>
+<th>Required before a new operative instrument</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Entity identities and accepted ownership</td>
+<td>Schedule A and source references</td>
+<td>Resolve any later accepted change before use</td>
+</tr>
+<tr>
+<td>Six internal consent texts</td>
+<td>Proposed clauses above</td>
+<td>Entity-specific authority and actual adoption</td>
+</tr>
+<tr>
+<td>Subscription mechanics</td>
+<td>Proposed acceptance and posting conditions</td>
+<td>Exact class, quantity and consideration where a subscription applies</td>
+</tr>
+<tr>
+<td>Acquired-interest records</td>
+<td>Historical boundaries for RWH, ARU and BST</td>
+<td>Original instrument references if a certification is requested</td>
+</tr>
+<tr>
+<td>Government evidence</td>
+<td>None</td>
+<td>Obtain appropriate external evidence; no replicas generated</td>
+</tr>
+</tbody>
+</table>
+<section class="execution-form"><h2>Entity consent and subscription completion sheet</h2>
+<p>Complete one sheet per applicable instrument. These blank fields are review placeholders, not signatures or evidence of acceptance. No instrument is effective solely because this sheet is printed.</p>
+<table>
+<thead>
+<tr>
+<th>Completion field</th>
+<th>Entry</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Entity / instrument / version</td>
+<td>__________________</td>
+</tr>
+<tr>
+<td>Approving capacity and authority source</td>
+<td>__________________</td>
+</tr>
+<tr>
+<td>Actual adoption or execution date</td>
+<td>__________________</td>
+</tr>
+<tr>
+<td>Completed economic / ownership / collateral schedule reference</td>
+<td>__________________</td>
+</tr>
+<tr>
+<td>Conditions satisfied; unresolved exceptions</td>
+<td>__________________</td>
+</tr>
+<tr>
+<td>Authorized signatory name and capacity</td>
+<td>__________________</td>
+</tr>
+<tr>
+<td>Signature — blank, not executed</td>
+<td>__________________</td>
+</tr>
+<tr>
+<td>Counterparty or separate approving capacity, if applicable</td>
+<td>__________________</td>
+</tr>
+<tr>
+<td>Counterparty signature and actual date — blank</td>
+<td>__________________</td>
+</tr>
+</tbody>
+</table>
+<p>For SHIH and PS organization subscriptions, complete class, quantity, consideration and contribution evidence before accepting an issuance. For existing RWH, ARU and BST interests, mark the action as historical acknowledgment unless a separately authorized new issuance is intended. For SHI, identify the existing member or board authority; this sheet does not invent members.</p></section>
+</article><aside class="source-identity"><a href="../review.html">All 17 packages</a> · <a href="../source/formations.md">Complete Markdown</a><br>14fd0d40cf42e80b79f1c94f924050909b98e41d3212c3819d4d04f4d1c398c4</aside></body></html>
