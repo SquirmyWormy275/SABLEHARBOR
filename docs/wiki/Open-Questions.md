@@ -20,6 +20,10 @@ The archive deliberately preserves the difference between a complete presentatio
 | [#107](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/107) | Early railway alignments and remaining detailed engineering are not established by the accepted present-day synthetic network. | [Source record](../../geospatial/docs/PROGRAM_CLOSEOUT_MATRIX.md) |
 | [#108](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/108) | Three batches classify 69,184 occurrence carriers; 8,961 remain outside those batches. Source-level semantic, OCR and temporal-history work remains. | [Source record](../../geospatial/adjudication/README.md) |
 
+## Executed reference evidence
+
+The [closeout evidence dossier](../../evidence/closeout/README.md) supplies runtime observations, retained validation logs and the exact remaining geographic occurrence population. Its [release index](../releases/CLOSEOUT_EVIDENCE_RELEASES.md) provides the versioned workbook and machine-readable records. These are executed reference tests and source reconciliation; the open acceptance requirements above remain explicit.
+
 ## What this review changes
 
 The Wiki has been built, published and verified. The earlier reports that its Git endpoint was unavailable are historical. That completes the publication portion of issue #11; it does not complete main-branch protection or the retirement of other sessions’ branches.
