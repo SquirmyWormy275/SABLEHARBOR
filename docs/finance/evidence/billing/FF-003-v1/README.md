@@ -1,7 +1,9 @@
 # Foundry Field — Copperreach billing record
 
-**Package ID:** SH-FIN-BILL-001 · **Version:** 1.0.0  
-**Status:** Owner-authorized successor; controlling on acceptance into main.  
+**Package ID:** SH-FIN-BILL-001 · **Version:** 1.0.0
+
+**Status:** Owner-authorized successor; controlling on acceptance into main.
+
 **Period:** January 31, 2027 issuance; public synthetic conditional forecast.
 
 Read the [invoice](INVOICE.md) or its [Foundry Field letterhead PDF](invoice.pdf).

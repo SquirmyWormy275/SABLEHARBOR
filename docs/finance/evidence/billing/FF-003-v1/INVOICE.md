@@ -1,26 +1,39 @@
 # Invoice
 
-**Invoice:** INV-base-FF-003-TERM-0  
-**Issued:** January 31, 2027 · **Due:** February 28, 2027  
+**Invoice:** INV-base-FF-003-TERM-0
+
+**Issued:** January 31, 2027 · **Due:** February 28, 2027
+
 **Contract:** FF-003 · **Purchase order:** CRF-2027-FF003-001
 
 ## From
 
-**Sable Harbor, LLC — operating as Foundry Field**  
-240 Harbor Works Avenue  
-Billing desk — Foundry Field  
-Sacramento, CA 95814  
-United States  
+**Sable Harbor, LLC — operating as Foundry Field**
+
+240 Harbor Works Avenue
+
+Billing desk — Foundry Field
+
+Sacramento, CA 95814
+
+United States
+
 billing@foundry-field.invalid
 
 ## Bill to
 
-**Copperreach Fabrication, Inc.** · Customer SYN-CUSTOMER-003  
-Accounts Payable  
-1840 Quarry Exchange  
-Suite 210  
-Sacramento, CA 95814  
-United States  
+**Copperreach Fabrication, Inc.** · Customer SYN-CUSTOMER-003
+
+Accounts Payable
+
+1840 Quarry Exchange
+
+Suite 210
+
+Sacramento, CA 95814
+
+United States
+
 accounts-payable@copperreach.invalid
 
 ## Subscription

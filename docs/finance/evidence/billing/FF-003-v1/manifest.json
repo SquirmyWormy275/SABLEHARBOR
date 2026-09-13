@@ -1,21 +1,21 @@
 {
   "artifacts": {
-    "INVOICE.md": "4f904bf26416a61477ae0536ba4cbeefacf5deb722832851eaf4413b12f0a5bf",
+    "INVOICE.md": "eff1094542693095655afe57d4460010c6f4dda153d3395c918f2f788c9a1eaf",
     "billing.sqlite3": "315c324409ebb426e9261a70d951be347683552623a17c4b6cf9b24af47f77fc",
     "billing.xlsx": "87d44b7e9d69e7dd24438824a18aec94fc8c93de6629d4f2388ee0d0610bd32a",
     "invoice.pdf": "01b3d0d7f0857cade8c8bc890f6a7615761985edd6147111460a8e9c13f99d75",
-    "journal.csv": "ccd10b356e2eafe1753a9247c5a2e81aae7a76098e241dd1225fb41f976deec8",
+    "journal.csv": "50a7ae432f5ad2e5b82e2ad5bcf470aefcee72e3ec835f9ec8e430f2d012b392",
     "reconciliation.json": "5fbd34cc927b42c5536fea924c7dab4387ea14b942dbd488e624d757d01777de"
   },
   "fact_state": "PUBLIC_SYNTHETIC_CONDITIONAL_FORECAST",
   "inputs": {
     "assets/brand/logos/foundry-field__primary-horizontal.svg": "32bef31266baae81136912f113547fd135160612e03246f0c7726baf78f06f7a",
-    "docs/canon/FOUNDRY_FIELD_BILLING_ADOPTION_2026-09-13.md": "7bc02817d72e7286b8b2314c3fcf6cf904a3fb5267b972d0cdf2a40895f022d5",
+    "docs/canon/FOUNDRY_FIELD_BILLING_ADOPTION_2026-09-13.md": "4a33e24a78d68f6d1b592e0239e48b6ce98b2f904444841db3d45c474193ed08",
     "docs/finance/evidence/SH-FIN-HUMAN-001/source.json": "c4833cfc6f28db6cd3edcae761b0e2d8f463a20de79f1d6fd5b0c517f8f829b7",
     "docs/finance/evidence/billing-proposal/proposal.json": "23d8d6080ad296468d6b649eda55593d49c33cde0e6b038343ce11e4973e23f8",
-    "docs/finance/evidence/billing/FF-003-v1/README.md": "a8ae5f2436edac72ad8c12970bf21974b35cc3b202d7e72acba9221f7b1dc6dd",
+    "docs/finance/evidence/billing/FF-003-v1/README.md": "352df1fa0e9b03addf509ab9cec6cf3e6d7804ee5992280ba92e7a815eefdbfc",
     "docs/finance/evidence/billing/FF-003-v1/record.json": "7af919a9f3257ce3b39f9ecd4f7fa0fae32df841f58c2157897da03a869a9fb3",
-    "tools/documents/billing_record.py": "2c58dff3628b35a78c42505e3372f2b2fbb9fdb8d1f8a4cf802100df176a46b9",
+    "tools/documents/billing_record.py": "a61bfe7a5b8d0e3188d9e6396fc46ad5ae576fa5c0f1cda96c42d3376bc12f3e",
     "tools/documents/build_controlled_publications.py": "0552479a76b94d128a39e9f9a4a12b87f4ab876e47926918cda3c5aa0a3d872a"
   },
   "record_id": "SH-FIN-BILL-001",

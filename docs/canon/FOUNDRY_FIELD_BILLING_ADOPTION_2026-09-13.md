@@ -1,9 +1,13 @@
 # Foundry Field FF-003 billing adoption
 
-**Document ID:** SH-FIN-BILL-DEC-001  
-**Version:** 1.0.0  
-**Decision date:** September 13, 2026  
-**State:** LOCKED on acceptance into main through PR #138  
+**Document ID:** SH-FIN-BILL-DEC-001
+
+**Version:** 1.0.0
+
+**Decision date:** September 13, 2026
+
+**State:** LOCKED on acceptance into main through PR #138
+
 **Owner:** Repository owner
 
 ## Authority and scope

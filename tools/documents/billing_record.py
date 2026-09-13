@@ -135,28 +135,35 @@ def reconcile(record, source, proposal):
 
 def invoice_markdown(record):
     f = {r["field_id"]: r["value"] for r in record["fields"]}
-    issuer_address = "  \n".join(f["issuer.billing_address"])
-    customer_address = "  \n".join(f["customer.billing_address"])
+    issuer_address = "\n\n".join(f["issuer.billing_address"])
+    customer_address = "\n\n".join(f["customer.billing_address"])
     amount = f"${D(record["invoice"]["customer_total_usd"]):,.2f}"
     monthly = f"${D(record["invoice"]["monthly_subscription_usd"]):,.2f}"
     seats = record["commercial_assumptions"]["seats"]
     return f'''# Invoice
 
-**Invoice:** {record["invoice"]["invoice_id"]}  
-**Issued:** January 31, 2027 · **Due:** February 28, 2027  
+**Invoice:** {record["invoice"]["invoice_id"]}
+
+**Issued:** January 31, 2027 · **Due:** February 28, 2027
+
 **Contract:** FF-003 · **Purchase order:** {f["customer.purchase_order"]}
 
 ## From
 
-**{f["issuer.legal_name"]} — operating as Foundry Field**  
-{issuer_address}  
+**{f["issuer.legal_name"]} — operating as Foundry Field**
+
+{issuer_address}
+
 {f["issuer.display_contact"]}
 
 ## Bill to
 
-**{f["customer.legal_name"]}** · Customer SYN-CUSTOMER-003  
-Accounts Payable  
-{customer_address}  
+**{f["customer.legal_name"]}** · Customer SYN-CUSTOMER-003
+
+Accounts Payable
+
+{customer_address}
+
 {f["customer.display_contact"]}
 
 ## Subscription
@@ -292,7 +299,7 @@ def build():
     (HERE / "INVOICE.md").write_text(invoice_markdown(r))
     workbook(r, result)
     with (HERE / "journal.csv").open("w", newline="") as stream:
-        writer = csv.DictWriter(stream, fieldnames=list(r["supplemental_journal"][0]))
+        writer = csv.DictWriter(stream, fieldnames=list(JOURNAL_FIELDS), lineterminator="\n")
         writer.writeheader(); writer.writerows(r["supplemental_journal"])
     dbpath = HERE / "billing.sqlite3"
     if dbpath.exists():
