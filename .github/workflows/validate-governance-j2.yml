@@ -62,7 +62,7 @@ jobs:
           python tools/documents/approval_guard.py
           python tools/reader/validate_routes.py
           python tools/reader/validate_gap_priorities.py
-          python -m pytest -q tests/publications/test_approval_guard.py tests/publications/test_reader_routes.py
+          python -m pytest -q --confcutdir=tests/publications tests/publications/test_approval_guard.py tests/publications/test_reader_routes.py
       - run: python scripts/validate_reader_workqueue.py
       - run: python scripts/validate_governance_j2.py
       - run: python scripts/validate_institutional_catalog.py
