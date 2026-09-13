@@ -74,7 +74,7 @@ def build():
             lines += [f"### {r['id']}", '', f"**{r['kind']} · {r['package']}**", '', r['text'], '',
                       '**Next action / source basis:** ' + r['action_or_basis'], '',
                       f"[Read clause {r['clause_heading']}]({clause}) · [Exact source field]({source}) `{r['json_pointer']}`", '']
-    (OUT / 'DECISIONS.md').write_text('\n'.join(lines) + '\n')
+    (OUT / 'DECISIONS.md').write_text('\n'.join(lines).rstrip() + '\n')
     wb = Workbook()
     intro = wb.active
     intro.title = 'Read first'
@@ -149,7 +149,7 @@ def build():
     ws.auto_filter.ref = ws.dimensions
     # This is an on-screen review register, not a compressed wall-sized print table.
     ws.sheet_view.zoomScale = 80
-    wb.properties.created = wb.properties.modified = datetime(2026, 9, 13)
+    wb.properties.created = wb.properties.modified = datetime(2026, 9, 13)  # noqa: DTZ001 - Excel metadata uses a fixed naive date.
     destination = OUT / 'decisions.xlsx'
     wb.save(destination)
     normalized = BytesIO()

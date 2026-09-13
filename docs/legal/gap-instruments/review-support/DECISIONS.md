@@ -1273,4 +1273,3 @@ Employment jurisdiction and payroll treatment
 **Next action / source basis:** Complete qualified review without inventing employee private data.
 
 [Read clause 4. Authority and continued employment terms](../source/workforce.md#4-authority-and-continued-employment-terms) · [Exact source field](../source/workforce.json) `/unresolved_fields/1`
-

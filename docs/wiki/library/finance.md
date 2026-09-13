@@ -235,6 +235,15 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Draft instrument index](../../legal/gap-instruments/PACKAGE_INDEX.md) — MD
 - [Legal gap instruments — draft review](../../legal/gap-instruments/README.md) — MD
 - [Seventeen legal gap packages — drafting and validation record](../../legal/gap-instruments/RESULTS.md) — MD
+- [Legal review bundle releases](../../legal/gap-instruments/REVIEW_RELEASES.md) — MD
+- [Review, trace and use the legal documents](../../legal/gap-instruments/REVIEW_WORKFLOW.md) — MD
+- [Comparing legal draft revisions](../../legal/gap-instruments/revision-policy.md) — MD
+
+## `docs/legal/gap-instruments/accounting`
+
+- [Contract clauses and accounting evidence](../../legal/gap-instruments/accounting/LINKS.md) — MD
+- [Contract clauses and accounting evidence](../../legal/gap-instruments/accounting/README.md) — MD
+- [links](../../legal/gap-instruments/accounting/links.xlsx) — XLSX
 
 ## `docs/legal/gap-instruments/dependencies`
 
@@ -277,9 +286,50 @@ Generated file inventory. Includes current and historical records; open the sour
 - [workforce](../../legal/gap-instruments/editions/workforce.pdf) — PDF
 - [workforce](../../legal/gap-instruments/editions/workforce.xlsx) — XLSX
 
+## `docs/legal/gap-instruments/practice`
+
+- [Public worked legal and accounting practice](../../legal/gap-instruments/practice/README.md) — MD
+
+## `docs/legal/gap-instruments/practice/acquisition`
+
+- [ARU acquisition accounting](../../legal/gap-instruments/practice/acquisition/TASK.md) — MD
+- [ARU acquisition accounting](../../legal/gap-instruments/practice/acquisition/WORKED.md) — MD
+- [blank](../../legal/gap-instruments/practice/acquisition/blank.xlsx) — XLSX
+- [worked](../../legal/gap-instruments/practice/acquisition/worked.xlsx) — XLSX
+
+## `docs/legal/gap-instruments/practice/debt`
+
+- [ARU debt reconciliation](../../legal/gap-instruments/practice/debt/TASK.md) — MD
+- [ARU debt reconciliation](../../legal/gap-instruments/practice/debt/WORKED.md) — MD
+- [blank](../../legal/gap-instruments/practice/debt/blank.xlsx) — XLSX
+- [worked](../../legal/gap-instruments/practice/debt/worked.xlsx) — XLSX
+
+## `docs/legal/gap-instruments/practice/legal-due-diligence`
+
+- [Taylor–Red Wash legal due diligence](../../legal/gap-instruments/practice/legal-due-diligence/TASK.md) — MD
+- [Taylor–Red Wash legal due diligence](../../legal/gap-instruments/practice/legal-due-diligence/WORKED.md) — MD
+- [blank](../../legal/gap-instruments/practice/legal-due-diligence/blank.xlsx) — XLSX
+- [worked](../../legal/gap-instruments/practice/legal-due-diligence/worked.xlsx) — XLSX
+
+## `docs/legal/gap-instruments/practice/revenue-dispute`
+
+- [Foundry Field revenue and credit dispute](../../legal/gap-instruments/practice/revenue-dispute/TASK.md) — MD
+- [Foundry Field revenue and credit dispute](../../legal/gap-instruments/practice/revenue-dispute/WORKED.md) — MD
+- [blank](../../legal/gap-instruments/practice/revenue-dispute/blank.xlsx) — XLSX
+- [worked](../../legal/gap-instruments/practice/revenue-dispute/worked.xlsx) — XLSX
+
 ## `docs/legal/gap-instruments/qa`
 
 - [Exact-artifact visual QA](../../legal/gap-instruments/qa/README.md) — MD
+
+## `docs/legal/gap-instruments/review-support`
+
+- [Consolidated review decisions](../../legal/gap-instruments/review-support/DECISIONS.md) — MD
+- [decisions](../../legal/gap-instruments/review-support/decisions.xlsx) — XLSX
+
+## `docs/legal/gap-instruments/review-support/qa`
+
+- [Review-tool quality record](../../legal/gap-instruments/review-support/qa/README.md) — MD
 
 ## `docs/legal/gap-instruments/source`
 
