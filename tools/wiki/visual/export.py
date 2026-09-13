@@ -45,6 +45,7 @@ def run(export, output, executable=None):
                         raw = f"https://raw.githubusercontent.com/{manifest['repository']}/{manifest['source_revision']}/"
                         body = MARKDOWN.render(source).replace(raw, f"http://127.0.0.1:{server.server_port}/")
                         page.set_content(f"<!doctype html><html><head><meta charset='utf-8'><style>{STYLE}{DARK}</style></head><body><main>{body}</main></body></html>", wait_until="load")
+                        page.evaluate("scrollTo(0, 0)")
                         problems = page.evaluate("""() => {
                             const errors=[];
                             if(document.documentElement.scrollWidth>innerWidth+1) errors.push('page overflow');
