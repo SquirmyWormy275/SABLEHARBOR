@@ -2,7 +2,11 @@
 
 This package joins the accepted spatial estate to source-bound review records in a portable GeoPackage and QGIS project. The [release index](../../docs/releases/GEOGRAPHIC_EVIDENCE_RELEASES.md) provides the complete download.
 
-## Approved continuity edition 1.2.0
+## Requirements edition 1.3.0
+
+Open `completion/maps/index.html`, `completion/site-docket.html` and `completion/source-review.html` for the [source review, site options and historical atlas](../completion/README.md). This edition adds five review tables, two unselected GeoJSON layers and four further evidence relations. It preserves the approved continuity below and all original spatial rows.
+
+## Approved continuity carried forward
 
 Open `chronology/history.html` for the [source-bound history edition](../chronology/README.md): 73 dated events and observations, 34 site histories and accepted route evolution. Four additional GeoPackage attribute tables expose events, normalized event/object links, site histories and 295 operations-review dispositions. Native QGIS verifies all four evidence relations after relocation. The original [Klein/Fort proposal](../chronology/CONTINUITY_PROPOSAL.md) is retained as review history. Edition 1.2.0 implements its owner-approved staged 2024 relocation, with 73 events and year-bounded occupancy queries.
 
@@ -36,6 +40,9 @@ uv run --with-requirements geospatial/requirements.txt python -m geospatial.clos
 
 uv run --with-requirements tools/wiki/visual/requirements.txt playwright install --only-shell chromium
 uv run --with-requirements tools/wiki/visual/requirements.txt python -m geospatial.chronology.check_browser --directory var/geographic-evidence/chronology
+
+uv run --with-requirements tools/wiki/visual/requirements.txt python -m geospatial.completion.check_browser \
+  --directory var/geographic-evidence/completion
 
 QT_QPA_PLATFORM=offscreen /usr/bin/python3 geospatial/closeout/native.py \
   --package var/geographic-evidence

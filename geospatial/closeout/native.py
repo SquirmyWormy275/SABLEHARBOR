@@ -50,7 +50,50 @@ def qualify(package):
             project.addMapLayer(layer, False)
             group.addLayer(layer)
             existing[name] = layer
+    supplemental = {
+        "unselected_site_options": "completion/SITE_OPTIONS.geojson",
+        "unapproved_access_tests": "completion/ACCESS_TESTS.geojson",
+    }
+    proposed_group = project.layerTreeRoot().addGroup(
+        "Unselected site alternatives — no property rights"
+    )
+    for name, relative in supplemental.items():
+        layer = QgsVectorLayer(str(package / relative), name, "ogr")
+        if not layer.isValid() or layer.featureCount() != 9:
+            raise ValueError("Cannot read site alternative: " + name)
+        project.addMapLayer(layer, False)
+        proposed_group.addLayer(layer).setItemVisibilityChecked(False)
+        existing[name] = layer
+        expected[name] = ("features", 9)
     relations = [
+        (
+            "docket_to_object",
+            "Site docket to canonical object",
+            "review_site_docket",
+            "object_registry",
+            "object_id",
+        ),
+        (
+            "option_to_object",
+            "Unselected alternative to canonical object",
+            "review_site_options",
+            "object_registry",
+            "object_id",
+        ),
+        (
+            "disposition_to_occurrence",
+            "Reviewed source carrier to original occurrence",
+            "review_source_dispositions",
+            "review_occurrences",
+            "occurrence_id",
+        ),
+        (
+            "visual_to_source",
+            "Visual review to archived raster source",
+            "review_visual_dispositions",
+            "review_raster_candidates",
+            "source_path",
+        ),
         (
             "review_site_to_object",
             "Site evidence to canonical object",
@@ -94,7 +137,11 @@ def qualify(package):
         raise ValueError("Cannot save the enriched portable project")
     settings = QgsMapSettings()
     settings.setLayers(
-        [layer for layer in project.layerTreeRoot().layerOrder() if layer.isSpatial()]
+        [
+            layer
+            for layer in project.layerTreeRoot().layerOrder()
+            if layer.isSpatial() and project.layerTreeRoot().findLayer(layer.id()).isVisible()
+        ]
     )
     settings.setDestinationCrs(QgsCoordinateReferenceSystem("EPSG:4326"))
     settings.setOutputSize(QSize(1600, 1000))
@@ -111,6 +158,10 @@ def qualify(package):
         (moved / "geospatial/qgis").mkdir(parents=True)
         shutil.copy2(gpkg, moved / "geospatial/master" / gpkg.name)
         shutil.copy2(project_path, moved / "geospatial/qgis" / project_path.name)
+        for relative in supplemental.values():
+            destination = moved / relative
+            destination.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(package / relative, destination)
         for label, source in (
             ("original", project_path),
             ("relocated", moved / "geospatial/qgis" / project_path.name),
@@ -124,7 +175,11 @@ def qualify(package):
             for name, (kind, count) in expected.items():
                 layer = layers[name]
                 actual_database = Path(layer.source().split("|", 1)[0]).resolve()
-                expected_database = source.parent.parent / "master" / gpkg.name
+                expected_database = (
+                    source.parent.parent.parent / supplemental[name]
+                    if name in supplemental
+                    else source.parent.parent / "master" / gpkg.name
+                )
                 passed = (
                     layer.isValid()
                     and layer.featureCount() == count

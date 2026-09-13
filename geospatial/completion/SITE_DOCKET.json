@@ -1,0 +1,2132 @@
+{
+  "source_revision": "a8e6dd99c113e0470bdc4fcc63bab616949186d0",
+  "records": [
+    {
+      "object_id": "SH-SITE-0001",
+      "name": "Sacramento headquarters campus",
+      "disposition": "DIMENSIONED_ALTERNATIVES_DELIVERED_SELECTION_OPEN",
+      "primary_source": {
+        "path": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-03.md",
+        "revision": "8d20e51a7cf0068729e3296840ccb5ba1ac1d7bd",
+        "locator": "line:36",
+        "sha256": "9fd150d5b6ae1517fe3db17ddcf834d802bdd3908662806c319e18b9b4ce5877",
+        "kind": "EXACT_ARCHIVED_LINE_WITH_QUOTED_FRAGMENT",
+        "evidence": "| HQ-001 | Headquarters location | LOCKED | Sable Harbor headquarters is in Sacramento, California. |"
+      },
+      "observations": [
+        "SITE-OBS-001",
+        "SITE-OBS-016"
+      ],
+      "spatial_evidence": [
+        {
+          "table": "search_areas",
+          "feature_id": "SH-GEO-0001",
+          "geometry_sha256": "70a2f9f9d69f02e4535dc20aa34f15878a692742d65db7211d6b44a6d5f3bdc1",
+          "geometry_status": "ANALYST_DEFINED_SEARCH_ENVELOPE",
+          "precision_class": "CORRIDOR_SCALE",
+          "canon_status": "CANON_CONSTRAINED",
+          "valid_from": null,
+          "valid_to": null
+        }
+      ],
+      "occupancy_bounds": null,
+      "temporal_meaning": "No occupancy interval established by the headquarters location decision.",
+      "required_action": "Compare three dimensioned alternatives and their access tests. Select an explicit fictional site only after unresolved terrain, real-context compatibility and property-overlap screens are addressed. Occupancy history requires its own evidence.",
+      "issue_106_complete": false
+    },
+    {
+      "object_id": "SH-SITE-0002",
+      "name": "Klein historical Pittsburgh-area shop",
+      "disposition": "SOURCE_BOUND_WITH_EXPLICIT_PRECISION_LIMIT",
+      "primary_source": {
+        "path": "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md",
+        "revision": "d91a22c35c91b213204411421de88815f27d8e16",
+        "locator": "line:579",
+        "sha256": "5bc15670b1d7c3c98d754329a0fad44bd4a82ea7db977bfa064b5db80062b2f7",
+        "kind": "EXACT_ARCHIVED_LINE_WITH_QUOTED_FRAGMENT",
+        "evidence": "Klein leases a light-industrial building outside Pittsburgh with three-phase power, a loading dock, machine tools, improvised test fixtures, and enough space to bring physical equipment indoors."
+      },
+      "observations": [],
+      "spatial_evidence": [
+        {
+          "table": "search_areas",
+          "feature_id": "SH-GEO-0002",
+          "geometry_sha256": "1b7d694f8d86f5ce2ce24539290d5e60f272ce4552a1d7554c8f9cd1ea23785d",
+          "geometry_status": "ANALYST_DEFINED_SEARCH_ENVELOPE",
+          "precision_class": "CORRIDOR_SCALE",
+          "canon_status": "CONFLICTING",
+          "valid_from": null,
+          "valid_to": null
+        }
+      ],
+      "occupancy_bounds": {
+        "state_id": "STATE-SH-SITE-0002-OCCUPANCY-20260913",
+        "asset_id": "SH-SITE-0002",
+        "canonical_name": "Klein historical shop",
+        "owner_entity": null,
+        "operator_entity": "SH-ENT-002",
+        "host_entity": null,
+        "lessor_entity": null,
+        "rights_type": "FICTIONAL_SITE_OCCUPANCY_NOT_TITLE",
+        "operating_status": "HISTORICAL_OCCUPANCY",
+        "valid_from": null,
+        "valid_to": null,
+        "opened_on": null,
+        "closed_on": null,
+        "acquired_on": null,
+        "disposed_on": null,
+        "earliest_start": null,
+        "latest_start": "2022-01-01",
+        "earliest_end": "2024-01-01",
+        "latest_end": "2025-01-01",
+        "date_precision": "YEAR_BOUNDED",
+        "snapshot_as_of": null,
+        "recorded_at": "2026-09-13T06:41:34.203956+00:00",
+        "superseded_at": null,
+        "source_effective_date": "2026-09-13",
+        "world_state_date": "2026-09-13",
+        "source_id": "SRC-KLEIN-FORT-20260913",
+        "decision_id": "GEO-KLEIN-FORT-20260913",
+        "notes": "Owner-approved staged relocation in 2024. Exclusive upper bounds; exact lease/entry/exit days, parcel and rights remain unknown. This occupancy evidence is separate from institutional founding."
+      },
+      "temporal_meaning": "Lease documented in 2021; continued Willow use after 2022 recharter; old shop vacated during staged 2024 move. Exact days and parcel remain unknown.",
+      "required_action": "Lease documented in 2021; continued Willow use after 2022 recharter; old shop vacated during staged 2024 move. Exact days and parcel remain unknown. Preserve source geometry/region and obtain or approve the missing location, access or dated occupancy evidence separately.",
+      "issue_106_complete": false
+    },
+    {
+      "object_id": "SH-SITE-0003",
+      "name": "The Fort \u2014 Willow industrial compound",
+      "disposition": "DIMENSIONED_ALTERNATIVES_DELIVERED_SELECTION_OPEN",
+      "primary_source": {
+        "path": "docs/canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md",
+        "revision": "d91a22c35c91b213204411421de88815f27d8e16",
+        "locator": "line:75",
+        "sha256": "3289ad8ce5d20d767b38f1ad3ed804feeb80300c59d7e96653bfe68f1eaa24b6",
+        "kind": "EXACT_ARCHIVED_LINE_WITH_QUOTED_FRAGMENT",
+        "evidence": "Willow's Pittsburgh-area physical center is a roughly **10\u201320 acre** industrial compound informally and then routinely called **the Fort**. The Fort is a working industrial research site, not a landscaped corporate campus."
+      },
+      "observations": [
+        "SITE-OBS-002",
+        "SITE-OBS-016"
+      ],
+      "spatial_evidence": [],
+      "occupancy_bounds": {
+        "state_id": "STATE-SH-SITE-0003-OCCUPANCY-20260913",
+        "asset_id": "SH-SITE-0003",
+        "canonical_name": "Willow Pittsburgh laboratory",
+        "owner_entity": null,
+        "operator_entity": "SH-ENT-002",
+        "host_entity": null,
+        "lessor_entity": null,
+        "rights_type": "FICTIONAL_SITE_OCCUPANCY_NOT_TITLE",
+        "operating_status": "CURRENT_OCCUPANCY",
+        "valid_from": null,
+        "valid_to": null,
+        "opened_on": null,
+        "closed_on": null,
+        "acquired_on": null,
+        "disposed_on": null,
+        "earliest_start": "2024-01-01",
+        "latest_start": "2025-01-01",
+        "earliest_end": null,
+        "latest_end": null,
+        "date_precision": "YEAR_BOUNDED",
+        "snapshot_as_of": null,
+        "recorded_at": "2026-09-13T06:41:34.203956+00:00",
+        "superseded_at": null,
+        "source_effective_date": "2026-09-13",
+        "world_state_date": "2026-09-13",
+        "source_id": "SRC-KLEIN-FORT-20260913",
+        "decision_id": "GEO-KLEIN-FORT-20260913",
+        "notes": "Owner-approved staged relocation in 2024. Exclusive upper bounds; exact lease/entry/exit days, parcel and rights remain unknown. This occupancy evidence is separate from institutional founding."
+      },
+      "temporal_meaning": "Separate Fort premises entered during 2024; year-bounded occupancy follows explicit owner approval, not the 2022 recharter.",
+      "required_action": "Compare three dimensioned alternatives and their access tests. Select an explicit fictional site only after unresolved terrain, real-context compatibility and property-overlap screens are addressed. Occupancy history requires its own evidence.",
+      "issue_106_complete": false
+    },
+    {
+      "object_id": "SH-SITE-0004",
+      "name": "Emberline Charleston program geography",
+      "disposition": "SOURCE_BOUND_WITH_EXPLICIT_PRECISION_LIMIT",
+      "primary_source": {
+        "path": "docs/canon/DECISION_REGISTER.md",
+        "revision": "8d20e51a7cf0068729e3296840ccb5ba1ac1d7bd",
+        "locator": "line:88",
+        "sha256": "070dc6e6dad18b8e4c18fa530366b9fc8a396986371aee8a0e16ba732e6e1de4",
+        "kind": "EXACT_ARCHIVED_LINE_WITH_QUOTED_FRAGMENT",
+        "evidence": "| EMB-001 | Project Emberline | LOCKED supersession | 2022\u20132025 Charleston coal field/commercial venture, not standalone 2026 division |"
+      },
+      "observations": [
+        "SITE-OBS-015"
+      ],
+      "spatial_evidence": [],
+      "occupancy_bounds": null,
+      "temporal_meaning": "2022\u20132025 is the Emberline venture period, not real-estate tenure.",
+      "required_action": "2022\u20132025 is the Emberline venture period, not real-estate tenure. Preserve source geometry/region and obtain or approve the missing location, access or dated occupancy evidence separately.",
+      "issue_106_complete": false
+    },
+    {
+      "object_id": "SH-SITE-0005",
+      "name": "Bedford \u2014 Cradle recovery-development center",
+      "disposition": "DIMENSIONED_ALTERNATIVES_DELIVERED_SELECTION_OPEN",
+      "primary_source": {
+        "path": "docs/canon/CRADLE_CLOSEOUT_2026-09-06.md",
+        "revision": "d91a22c35c91b213204411421de88815f27d8e16",
+        "locator": "line:136",
+        "sha256": "b49eaf96f1582f11886e9543b1543013f47acc99aa5533082d73717ab523e8aa",
+        "kind": "EXACT_ARCHIVED_LINE_WITH_QUOTED_FRAGMENT",
+        "evidence": "Bedford is located in the **Fairmont area of north-central West Virginia** on a fictional redeveloped industrial brownfield. The working site scale is approximately **15\u201320 acres**."
+      },
+      "observations": [
+        "SITE-OBS-003",
+        "SITE-OBS-004",
+        "SITE-OBS-010"
+      ],
+      "spatial_evidence": [
+        {
+          "table": "search_areas",
+          "feature_id": "SH-GEO-BEDFORD-001",
+          "geometry_sha256": "3ec075ed896650a39c894badc43109dcad99ff689941f16ac286e711b7613fb0",
+          "geometry_status": "ANALYST_DEFINED_SEARCH_ENVELOPE",
+          "precision_class": "CORRIDOR_SCALE",
+          "canon_status": "CANON_CONSTRAINED",
+          "valid_from": null,
+          "valid_to": null
+        },
+        {
+          "table": "historical_sites",
+          "feature_id": "SH-GEO-0003",
+          "geometry_sha256": "d012b54f9ca50b35a333481187d2c6abec7319a58cd03e1f89c6fca7aee22afe",
+          "geometry_status": "SUPERSEDED_EDITORIAL_SITING",
+          "precision_class": "CORRIDOR_SCALE",
+          "canon_status": "HISTORICAL",
+          "valid_from": null,
+          "valid_to": null
+        }
+      ],
+      "occupancy_bounds": null,
+      "temporal_meaning": "The Fairmont-area site concept does not establish an occupancy commencement date.",
+      "required_action": "Compare three dimensioned alternatives and their access tests. Select an explicit fictional site only after unresolved terrain, real-context compatibility and property-overlap screens are addressed. Occupancy history requires its own evidence.",
+      "issue_106_complete": false
+    },
+    {
+      "object_id": "SH-SITE-0006",
+      "name": "Red Wash Mine",
+      "disposition": "SOURCE_BOUND_WITH_EXPLICIT_PRECISION_LIMIT",
+      "primary_source": {
+        "path": "geospatial/sources/GOVERNING_CANON_ADDENDUM_2026-09-05.md",
+        "revision": "19e92a08438dbc3e03dc18862750bf38577a602a",
+        "locator": "section:2.1-2.3",
+        "sha256": "5ec4448308e0e19fdf11dc5307b24380b19e6ab51482e11bd41883aff703f150",
+        "kind": "EXACT_ARCHIVED_MULTILINE_QUOTE",
+        "evidence": "Latitude: 42.22\n    Longitude: -108.18"
+      },
+      "observations": [],
+      "spatial_evidence": [
+        {
+          "table": "search_areas",
+          "feature_id": "SH-GEO-0004",
+          "geometry_sha256": "7affcd282f1cbcf50d11ca1dfb5730dd9be1e1674df36bd34c6bce282830bb7f",
+          "geometry_status": "ANALYST_DEFINED_SEARCH_ENVELOPE",
+          "precision_class": "CORRIDOR_SCALE",
+          "canon_status": "CANON_CONSTRAINED",
+          "valid_from": null,
+          "valid_to": null
+        },
+        {
+          "table": "source_claim_points",
+          "feature_id": "SH-GEO-0101",
+          "geometry_sha256": "a72165c95842b22394877cedd2412f4730be2b821b93ea12a561fe778e3570df",
+          "geometry_status": "SUPERSEDED_SOURCE_CLAIM",
+          "precision_class": "UNKNOWN",
+          "canon_status": "HISTORICAL",
+          "valid_from": null,
+          "valid_to": null
+        },
+        {
+          "table": "source_claim_points",
+          "feature_id": "SH-GEO-0102",
+          "geometry_sha256": "fe67d7e9dfff67e0cbf1d1fd9b0893c72c07235af9228483a21efdc79bc520f6",
+          "geometry_status": "SUPERSEDED_SOURCE_CLAIM",
+          "precision_class": "UNKNOWN",
+          "canon_status": "HISTORICAL",
+          "valid_from": null,
+          "valid_to": null
+        },
+        {
+          "table": "spatial_assets",
+          "feature_id": "SITE-RW-PROP-001",
+          "geometry_sha256": "6e293bb8d4e91f5c5889b0a4e7f31a0bcfec615767f58e3614bb7c3f433e5e3a",
+          "geometry_status": "PRELIMINARY_ENGINEERING_PROPOSAL",
+          "precision_class": "PRELIMINARY_DESIGN",
+          "canon_status": "PROPOSED",
+          "valid_from": null,
+          "valid_to": null
+        },
+        {
+          "table": "red_wash_anchor",
+          "feature_id": "SH-GEO-0201",
+          "geometry_sha256": "7ddbe0f6070d27396d389083ed0c3bafbdeedb9fcd9da08c5a2a439245043352",
+          "geometry_status": "ENGINEERED_PENDING_FULL_SITE_POLYGON",
+          "precision_class": "USER_CONTROL_COORDINATE",
+          "canon_status": "CANON_SITED",
+          "valid_from": null,
+          "valid_to": null
+        }
+      ],
+      "occupancy_bounds": null,
+      "temporal_meaning": "2025-07-18 is the accepted acquisition/operator event, not the mine's first occupation or a property-title assertion.",
+      "required_action": "2025-07-18 is the accepted acquisition/operator event, not the mine's first occupation or a property-title assertion. Preserve source geometry/region and obtain or approve the missing location, access or dated occupancy evidence separately.",
+      "issue_106_complete": false
+    },
+    {
+      "object_id": "SH-SITE-0007",
+      "name": "Taylor \u2014 BS&T industrial town and operating hub",
+      "disposition": "SOURCE_BOUND_WITH_EXPLICIT_PRECISION_LIMIT",
+      "primary_source": {
+        "path": "industrial/source/operations.json",
+        "revision": "d91a22c35c91b213204411421de88815f27d8e16",
+        "locator": "/geography",
+        "sha256": "e7488b55c1c963d102db66e7a7b6f1373a3d68a9f94b8f99b164092245713a3b",
+        "kind": "EXACT_ARCHIVED_JSON_VALUE",
+        "evidence": {
+          "taylor_lon_lat": [
+            -108.1,
+            42.12
+          ],
+          "red_wash_lon_lat": [
+            -108.18,
+            42.22
+          ],
+          "wamsutter_junction_lon_lat": [
+            -107.96562715205644,
+            41.6744965783547
+          ],
+          "red_wash_nad83_utm12_m": [
+            732748.7819909531,
+            4678053.6106418725
+          ],
+          "red_wash_dem_screening_elevation_m": 2098.42431640625,
+          "geojson_crs": "EPSG:4326; longitude then latitude",
+          "map_crs": "Local equirectangular metric frame, origin42N/-108.1E; mean Earth6371008.8m; screening map only",
+          "route_miles_target": 40,
+          "route_miles_definition": "Unique centerline route miles. Parallel yard, shop and passing tracks excluded.",
+          "selected_candidate": "TAYLOR-A",
+          "selection_reason": "33.34848mi inherited screened mainline leaves6.65152mi for external customer branches. B37.06154/C38.81328mi leave too little independent branch estate. No candidate mine rail connector adopted.",
+          "last_mile_road_miles": 9,
+          "road_state": "SYNTHETIC existing industrial access, upgraded2026. Geometry is an engineered case assumption, not a verified public-road route or ROW.",
+          "county": "Sweetwater County",
+          "county_geoid": "56037",
+          "mainline_route_miles": 33.34847676361104,
+          "branch_route_miles": 6.651523236388773,
+          "network_geodesic_route_miles": 39.99999999999981,
+          "branches": [
+            {
+              "id": "BST-EAST",
+              "junction": [
+                -108.06913082528824,
+                41.86427758524971
+              ],
+              "end": [
+                -108.01259365641332,
+                41.90370776148441
+              ],
+              "miles": 3.999999999999637
+            },
+            {
+              "id": "BST-MINERAL",
+              "junction": [
+                -108.11616017126433,
+                42.017007957526936
+              ],
+              "end": [
+                -108.07098660485325,
+                42.03495699312325
+              ],
+              "miles": 2.651523236389135
+            }
+          ],
+          "source_file_sha256": {
+            "geography/candidate_comparison.json": "bf57f866ca9289227f23c17cc01733c942cbcdf1d3025999f5bb853a4101e982",
+            "geography/dem_manifest.json": "3a6da11c438f93bdfc4050b31e3b3d008f752b78e02d10039a3f821fbd095c4b",
+            "geography/derived_ground_profiles.json": "b1aad8b21f726c4012cb89a7e955dd3d621c0c6d32176fc990d0d1697ca7fbcf",
+            "geography/network.geojson": "bd6ea938ec59f50c79ee0a23fb5aa2817dcb1bb98fce8a951a073d0152a406f5",
+            "geography/reference_manifest.json": "f4ad599b41d8f0e3301408990fa3ccc7f626425a1f625db34263388e71f33783",
+            "geography/selected_mainline.geojson": "31e41659650ea9117fdd2623ed0b9f2fcd024a7f29b9fb44591548f78251afc4",
+            "geography/spatial_screen.json": "72ae6cd29e1d7ae131b96e9660a6e388fa4d2255907621e428b6df38d75de461",
+            "geography/wamsutter_fra_rail.geojson": "d24d20bdae879bff9cbbbb2ca968e52697b42913aba7614e9dca7038542c9b42",
+            "geography/wamsutter_highways.geojson": "81fe705260fefe9d195d4a1c8f362930af6aad7b6bf40064c9017795b838e24f",
+            "geography/wyoming_counties.geojson": "77b08fefe008358324d49b9ef769257ad1aa5cb3f91f72ff15b8a37313a6e5ab",
+            "geography/wyoming_dem_service.json": "a300a739a6e47627d1cd6921fca368004d88a8ac62d6d32c64571c669e4349bb",
+            "geography/wyoming_local_roads.geojson": "7e3345de206ce8dd2610ad4469175b239ea72f0126dff0c89ada3c5b8b058c75",
+            "geography/wyoming_screening_dem.tif": "0ea3719bb01c73e6e4ccaf1c21defa609a945ae7342ce58409479f574ba19b96",
+            "geography/wyoming_waterbodies.geojson": "82c333660ce69714452e999c9ef871adb5bbcf328776cc81ce2dd003482a046f"
+          },
+          "selected_branch_bearings_degrees": {
+            "BST-EAST": 45,
+            "BST-MINERAL": 60
+          },
+          "historical_route_epochs": [
+            {
+              "epoch": "1898",
+              "history_id": "HIST-1898",
+              "effective_date": "1898-04-06",
+              "event": "Coal-origin predecessor organized",
+              "route_miles": null,
+              "extent_state": "UNKNOWN_EARLY_ALIGNMENT",
+              "note": "The 1954 surviving-mileage estimate is not backdated into a measured 1898 network."
+            },
+            {
+              "epoch": "1954",
+              "history_id": "HIST-1954",
+              "effective_date": "1954-07-01",
+              "event": "Rescue and BS&T reorganization",
+              "route_miles": null,
+              "surviving_route_miles_low": 14,
+              "surviving_route_miles_high": 16,
+              "extent_state": "RECONSTRUCTED_RANGE_UNLOCATED",
+              "note": "14\u201316 surviving route-miles. Diagram placement is conceptual; no georeferenced historical survey or claim of an unchanged modern alignment."
+            },
+            {
+              "epoch": "1968",
+              "history_id": "HIST-1968",
+              "effective_date": "1968-10-14",
+              "event": "Taylor mainline extension and relocated industrial hub complete",
+              "route_miles": 33.34847676361104,
+              "extent_state": "DERIVED_CASE_ENGINEERING_HISTORY",
+              "net_route_growth_from_1954_low": 17.34847676361104,
+              "net_route_growth_from_1954_high": 19.34847676361104,
+              "gross_new_construction_miles": null,
+              "note": "Net route growth is bounded arithmetically. Gross construction and relocated old-line mileage remain unknown."
+            },
+            {
+              "epoch": "1972",
+              "history_id": "HIST-1972",
+              "effective_date": "1972-05-08",
+              "event": "East Materials branch added",
+              "route_miles": 37.34847676361104,
+              "added_route_miles": 4,
+              "extent_state": "DERIVED_CASE_ENGINEERING_HISTORY"
+            },
+            {
+              "epoch": "1986",
+              "history_id": "HIST-1986",
+              "effective_date": "1986-09-19",
+              "event": "Mineral Transfer branch added",
+              "route_miles": 40,
+              "added_route_miles": 2.651523236388961,
+              "extent_state": "DERIVED_CASE_ENGINEERING_HISTORY"
+            },
+            {
+              "epoch": "1991",
+              "history_id": "HIST-1991",
+              "effective_date": "1991-01-02",
+              "event": "ARU becomes railway parent; route extent unchanged",
+              "route_miles": 40,
+              "extent_state": "DERIVED_CASE_ENGINEERING_HISTORY"
+            },
+            {
+              "epoch": "2026",
+              "history_id": null,
+              "effective_date": "2026-09-05",
+              "event": "Current operating network",
+              "route_miles": 40,
+              "extent_state": "CURRENT_SYNTHETIC_ENGINEERED_ALIGNMENT",
+              "note": "No Red Wash mine rail spur; parallel yard tracks excluded from route mileage."
+            }
+          ]
+        }
+      },
+      "observations": [],
+      "spatial_evidence": [
+        {
+          "table": "search_areas",
+          "feature_id": "SH-GEO-0005",
+          "geometry_sha256": "bedf12e50573d971e547d3ad663504aaad8f89bbfaa835bca5148c18206d2c0d",
+          "geometry_status": "ANALYST_DEFINED_SEARCH_ENVELOPE",
+          "precision_class": "CORRIDOR_SCALE",
+          "canon_status": "CANON_CONSTRAINED",
+          "valid_from": null,
+          "valid_to": null
+        },
+        {
+          "table": "taylor_hub",
+          "feature_id": "IND-TAYLOR-CURRENT",
+          "geometry_sha256": "27b31cf91c7949d534a99859114b48176a445cf8c34d24728a78f62084ec1ef7",
+          "geometry_status": "LOCKED_DERIVED_IMPLEMENTATION",
+          "precision_class": "CASE_ENGINEERING_NOT_SURVEY",
+          "canon_status": "ENGINEERED",
+          "valid_from": null,
+          "valid_to": null
+        }
+      ],
+      "occupancy_bounds": null,
+      "temporal_meaning": "Accepted current synthetic railway geography; no occupancy commencement date is inferred.",
+      "required_action": "Accepted current synthetic railway geography; no occupancy commencement date is inferred. Preserve source geometry/region and obtain or approve the missing location, access or dated occupancy evidence separately.",
+      "issue_106_complete": false
+    },
+    {
+      "object_id": "SH-SITE-0008",
+      "name": "Wamsutter fictional interchange",
+      "disposition": "SOURCE_BOUND_WITH_EXPLICIT_PRECISION_LIMIT",
+      "primary_source": {
+        "path": "industrial/source/operations.json",
+        "revision": "d91a22c35c91b213204411421de88815f27d8e16",
+        "locator": "/facilities/0",
+        "sha256": "e7488b55c1c963d102db66e7a7b6f1373a3d68a9f94b8f99b164092245713a3b",
+        "kind": "EXACT_ARCHIVED_JSON_VALUE",
+        "evidence": {
+          "id": "FAC-WAM-INT",
+          "fact_state": "LOCKED_DERIVED_IMPLEMENTATION",
+          "provenance": "Synthetic case implementation derived from reconciled handoff and explicit user authority; no external party or surveyed certification claimed",
+          "name": "Wamsutter interchange",
+          "owner": "Blood, Sweat & Tears Railway Company",
+          "lon_lat": [
+            -107.96562715205644,
+            41.6744965783547
+          ],
+          "acreage": 18,
+          "track_count": 3,
+          "car_spots": 60,
+          "assigned_fte": 6,
+          "annual_external_ton_capacity": 0,
+          "pallet_slots": 0,
+          "services": "Three20car tracks; each accommodates16car roadtrain plus pairedlocomotives; synthetic UP interchange agreement",
+          "opened": "1968-10-14",
+          "operating_hours": "five-day service; dispatch/oncall exceptions; mine continuous receiving by appointment",
+          "environmental_controls": "segregated drainage, spillkits, stormwater inspection, protected storage and recorded custody",
+          "condition": "serviceable with identified maintenance backlog",
+          "case_status": "SYNTHETIC_OPERATING",
+          "footprint_basis": "Rectangular site envelope derived from stated acreage and declared aspect ratio; not a cadastral boundary or surveyed property.",
+          "footprint_aspect_ratio": 3
+        }
+      },
+      "observations": [],
+      "spatial_evidence": [
+        {
+          "table": "search_areas",
+          "feature_id": "SH-GEO-0006",
+          "geometry_sha256": "c01a2da490881d25a6554c90779f7c1e2bc96c017093da9a499589aeed135170",
+          "geometry_status": "ANALYST_DEFINED_SEARCH_ENVELOPE",
+          "precision_class": "CORRIDOR_SCALE",
+          "canon_status": "CANON_CONSTRAINED",
+          "valid_from": null,
+          "valid_to": null
+        }
+      ],
+      "occupancy_bounds": null,
+      "temporal_meaning": "Accepted current synthetic interchange facility; no occupancy commencement date is inferred.",
+      "required_action": "Accepted current synthetic interchange facility; no occupancy commencement date is inferred. Preserve source geometry/region and obtain or approve the missing location, access or dated occupancy evidence separately.",
+      "issue_106_complete": false
+    },
+    {
+      "object_id": "SH-SITE-0009",
+      "name": "Blackridge Mine",
+      "disposition": "SOURCE_BOUND_WITH_EXPLICIT_PRECISION_LIMIT",
+      "primary_source": {
+        "path": "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md",
+        "revision": "8d20e51a7cf0068729e3296840ccb5ba1ac1d7bd",
+        "locator": "line:68",
+        "sha256": "e1b0d123eed483f91240362f335d62210ea67da49b27b21bced7264e36c711cc",
+        "kind": "EXACT_ARCHIVED_LINE_WITH_QUOTED_FRAGMENT",
+        "evidence": "- Argent Ridge Mining operated Blackridge, a Nevada open-pit copper-and-gold mine."
+      },
+      "observations": [
+        "SITE-OBS-013"
+      ],
+      "spatial_evidence": [],
+      "occupancy_bounds": null,
+      "temporal_meaning": "2015 is institutional/dataset context, not proof of first physical mine occupancy.",
+      "required_action": "2015 is institutional/dataset context, not proof of first physical mine occupancy. Preserve source geometry/region and obtain or approve the missing location, access or dated occupancy evidence separately.",
+      "issue_106_complete": false
+    },
+    {
+      "object_id": "SH-SITE-0010",
+      "name": "Forty-Seven Names customer operation",
+      "disposition": "SOURCE_BOUND_WITH_EXPLICIT_PRECISION_LIMIT",
+      "primary_source": {
+        "path": "docs/canon/DECISION_REGISTER.md",
+        "revision": "8d20e51a7cf0068729e3296840ccb5ba1ac1d7bd",
+        "locator": "line:27",
+        "sha256": "070dc6e6dad18b8e4c18fa530366b9fc8a396986371aee8a0e16ba732e6e1de4",
+        "kind": "EXACT_ARCHIVED_LINE_WITH_QUOTED_FRAGMENT",
+        "evidence": "| FND-003 | Forty-Seven Names | LOCKED | 2016 identity-seam incident at Nevada copper customer |"
+      },
+      "observations": [
+        "SITE-OBS-014"
+      ],
+      "spatial_evidence": [],
+      "occupancy_bounds": null,
+      "temporal_meaning": "2016 dates the customer incident, not ownership or tenure at the customer site.",
+      "required_action": "2016 dates the customer incident, not ownership or tenure at the customer site. Preserve source geometry/region and obtain or approve the missing location, access or dated occupancy evidence separately.",
+      "issue_106_complete": false
+    },
+    {
+      "object_id": "SH-SITE-0011",
+      "name": "Reno provisional office",
+      "disposition": "PROPOSED_NOT_PROVED_OCCUPIED",
+      "primary_source": {
+        "path": "docs/canon/SABLE_HARBOR_CANONICAL_ARCHITECTURE_HANDOVER.md",
+        "revision": "8d20e51a7cf0068729e3296840ccb5ba1ac1d7bd",
+        "locator": "line:655",
+        "sha256": "ef0fe5602ab41f1de0a0c29146476dbb406cb56e28407652f7d00f357e3fc636",
+        "kind": "EXACT_ARCHIVED_LINE_WITH_QUOTED_FRAGMENT",
+        "evidence": "- **Reno, Nevada:** mining technology, engineering, product, customer implementation"
+      },
+      "observations": [
+        "SITE-OBS-012"
+      ],
+      "spatial_evidence": [],
+      "occupancy_bounds": null,
+      "temporal_meaning": "Proposed Reno office geography; no accepted occupancy interval.",
+      "required_action": "Confirm whether the proposed office ever opened. If so, supply or approve locality, shared/dedicated status and year-bounded entry/exit; otherwise retain as an unrealized proposal. Do not invent a closure date.",
+      "issue_106_complete": false
+    },
+    {
+      "object_id": "SH-SITE-0012",
+      "name": "Elko provisional field office",
+      "disposition": "PROPOSED_NOT_PROVED_OCCUPIED",
+      "primary_source": {
+        "path": "docs/canon/SABLE_HARBOR_CANONICAL_ARCHITECTURE_HANDOVER.md",
+        "revision": "8d20e51a7cf0068729e3296840ccb5ba1ac1d7bd",
+        "locator": "line:656",
+        "sha256": "ef0fe5602ab41f1de0a0c29146476dbb406cb56e28407652f7d00f357e3fc636",
+        "kind": "EXACT_ARCHIVED_LINE_WITH_QUOTED_FRAGMENT",
+        "evidence": "- **Elko, Nevada:** field operations and proximity to active mining customers"
+      },
+      "observations": [
+        "SITE-OBS-012"
+      ],
+      "spatial_evidence": [],
+      "occupancy_bounds": null,
+      "temporal_meaning": "Proposed Elko office geography; no accepted occupancy interval.",
+      "required_action": "Confirm whether the proposed office ever opened. If so, supply or approve locality, shared/dedicated status and year-bounded entry/exit; otherwise retain as an unrealized proposal. Do not invent a closure date.",
+      "issue_106_complete": false
+    },
+    {
+      "object_id": "SH-SITE-0013",
+      "name": "Tucson provisional engineering office",
+      "disposition": "PROPOSED_NOT_PROVED_OCCUPIED",
+      "primary_source": {
+        "path": "docs/canon/SABLE_HARBOR_CANONICAL_ARCHITECTURE_HANDOVER.md",
+        "revision": "8d20e51a7cf0068729e3296840ccb5ba1ac1d7bd",
+        "locator": "line:657",
+        "sha256": "ef0fe5602ab41f1de0a0c29146476dbb406cb56e28407652f7d00f357e3fc636",
+        "kind": "EXACT_ARCHIVED_LINE_WITH_QUOTED_FRAGMENT",
+        "evidence": "- **Tucson, Arizona:** copper, geology, mine engineering, research talent"
+      },
+      "observations": [
+        "SITE-OBS-012"
+      ],
+      "spatial_evidence": [],
+      "occupancy_bounds": null,
+      "temporal_meaning": "Proposed Tucson office geography; no accepted occupancy interval.",
+      "required_action": "Confirm whether the proposed office ever opened. If so, supply or approve locality, shared/dedicated status and year-bounded entry/exit; otherwise retain as an unrealized proposal. Do not invent a closure date.",
+      "issue_106_complete": false
+    },
+    {
+      "object_id": "SH-SITE-0014",
+      "name": "J2 Education residential campus and conference center",
+      "disposition": "PHYSICAL_ACCOMMODATION_DECISION_OPEN",
+      "primary_source": {
+        "path": "docs/j2/EDUCATION.md",
+        "revision": "8d20e51a7cf0068729e3296840ccb5ba1ac1d7bd",
+        "locator": "line:6",
+        "sha256": "a86400a7174c3b9de3834eba66d4ff218a502e646233ddb6bf3736a9bd33cc8e",
+        "kind": "EXACT_ARCHIVED_LINE_WITH_QUOTED_FRAGMENT",
+        "evidence": "Education is a separate J2 arm tightly coupled to Orientation. Its primary mission is enterprise-wide education, while it also serves as the professional schoolhouse for J2 itself. Education is both an institution and a physical place: a serious learning campus and conference center with classrooms, residential capacity, case rooms, mock executive and board environments, and space for convening across Sable Harbor."
+      },
+      "observations": [],
+      "spatial_evidence": [],
+      "occupancy_bounds": null,
+      "temporal_meaning": "The Education function and modelled Sacramento residence do not establish the actual campus occupancy interval.",
+      "required_action": "Decide dedicated versus shared/distributed premises and physical accommodation. Accepted room programmes do not establish actual residence, office tenancy or campus occupancy.",
+      "issue_106_complete": false
+    },
+    {
+      "object_id": "SH-SITE-0015",
+      "name": "J2 headquarters physical accommodation",
+      "disposition": "PHYSICAL_ACCOMMODATION_DECISION_OPEN",
+      "primary_source": {
+        "path": "docs/j2/J2_HEADQUARTERS.md",
+        "revision": "8d20e51a7cf0068729e3296840ccb5ba1ac1d7bd",
+        "locator": "line:6",
+        "sha256": "6858ab880401e8de7af861e4e9a407036a9406401e76d0d04086b152c33414c6",
+        "kind": "EXACT_ARCHIVED_LINE_WITH_QUOTED_FRAGMENT",
+        "evidence": "J2 Headquarters exists so Contact, Judgment, Orientation, JAG, and Education remain one institution rather than disconnected expert teams. It is deliberately smaller than the operating arms, but it is not skeletal. Its legitimacy comes from stewardship, professional rigor, and unusually high-quality support rather than a large command tower."
+      },
+      "observations": [],
+      "spatial_evidence": [],
+      "occupancy_bounds": null,
+      "temporal_meaning": "The headquarters function does not establish dedicated premises or occupancy dates.",
+      "required_action": "Decide dedicated versus shared/distributed premises and physical accommodation. Accepted room programmes do not establish actual residence, office tenancy or campus occupancy.",
+      "issue_106_complete": false
+    },
+    {
+      "object_id": "SH-SITE-0016",
+      "name": "Alexandria physical hosting",
+      "disposition": "RUNTIME_EVIDENCE_BOUNDARY",
+      "primary_source": {
+        "path": "docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md",
+        "revision": "8d20e51a7cf0068729e3296840ccb5ba1ac1d7bd",
+        "locator": "line:352",
+        "sha256": "85173b40c1be06f18076aef47a2c1daa646a243b2a16de584d72b277afbc2930",
+        "kind": "EXACT_ARCHIVED_LINE_WITH_QUOTED_FRAGMENT",
+        "evidence": "- detailed Alexandria runtime stack, raw-source entitlements, retention/deletion, Semaphore precedence, Daedalus runtime/leakage controls, spatial/AR, business/finance portal boundaries \u2014 defer until the CCF and technology-control architecture provide the underlying environment;"
+      },
+      "observations": [],
+      "spatial_evidence": [],
+      "occupancy_bounds": null,
+      "temporal_meaning": "Hosting identity retained; selected Reno/Boise and owned-site plans do not establish live deployment or occupancy.",
+      "required_action": "Retain the accepted provider-selection/preconstruction state. Executed procurement, assigned-space, access and commissioning evidence belongs to the runtime estate workflow.",
+      "issue_106_complete": false
+    },
+    {
+      "object_id": "SH-SITE-0017",
+      "name": "Foundry/Foundry Field dedicated footprint",
+      "disposition": "PHYSICAL_ACCOMMODATION_DECISION_OPEN",
+      "primary_source": {
+        "path": "docs/canon/SABLE_HARBOR_CANONICAL_ARCHITECTURE_HANDOVER.md",
+        "revision": "8d20e51a7cf0068729e3296840ccb5ba1ac1d7bd",
+        "locator": "line:1097",
+        "sha256": "ef0fe5602ab41f1de0a0c29146476dbb406cb56e28407652f7d00f357e3fc636",
+        "kind": "EXACT_ARCHIVED_LINE_WITH_QUOTED_FRAGMENT",
+        "evidence": "3. office footprint and headcount by location;"
+      },
+      "observations": [],
+      "spatial_evidence": [],
+      "occupancy_bounds": null,
+      "temporal_meaning": "Dedicated Foundry/Foundry Field premises and occupancy dates remain unestablished.",
+      "required_action": "Decide dedicated versus shared/distributed premises and physical accommodation. Accepted room programmes do not establish actual residence, office tenancy or campus occupancy.",
+      "issue_106_complete": false
+    },
+    {
+      "object_id": "SH-SITE-0018",
+      "name": "Atlas Meridian dedicated footprint",
+      "disposition": "PHYSICAL_ACCOMMODATION_DECISION_OPEN",
+      "primary_source": {
+        "path": "docs/canon/DECISION_REGISTER.md",
+        "revision": "8d20e51a7cf0068729e3296840ccb5ba1ac1d7bd",
+        "locator": "line:203",
+        "sha256": "070dc6e6dad18b8e4c18fa530366b9fc8a396986371aee8a0e16ba732e6e1de4",
+        "kind": "EXACT_ARCHIVED_LINE_WITH_QUOTED_FRAGMENT",
+        "evidence": "| ID-007 | Quantitative operating model | OPEN | Headcount, revenue, funding, offices, P&Ls, acquisition capital |"
+      },
+      "observations": [],
+      "spatial_evidence": [],
+      "occupancy_bounds": null,
+      "temporal_meaning": "A dedicated Atlas footprint and occupancy interval remain unestablished.",
+      "required_action": "Decide dedicated versus shared/distributed premises and physical accommodation. Accepted room programmes do not establish actual residence, office tenancy or campus occupancy.",
+      "issue_106_complete": false
+    },
+    {
+      "object_id": "SH-SITE-0019",
+      "name": "Advisory project hubs/offices",
+      "disposition": "PHYSICAL_ACCOMMODATION_DECISION_OPEN",
+      "primary_source": {
+        "path": "docs/organization/ARU_BST_AND_ADVISORY.md",
+        "revision": "8d20e51a7cf0068729e3296840ccb5ba1ac1d7bd",
+        "locator": "line:52",
+        "sha256": "d8e68912f7d0df3f6b45c3e58eba338d24d3113abb12825d406589017b6cefa5",
+        "kind": "EXACT_ARCHIVED_LINE_WITH_QUOTED_FRAGMENT",
+        "evidence": "    ADVISORY[\"EMERGING ADVISORY<br/>operating and analytical teams transfer a method the client can own<br/><b>exact name \u00b7 leader \u00b7 P&L \u00b7 pricing \u00b7 catalog \u00b7 home OPEN</b>\"]"
+      },
+      "observations": [],
+      "spatial_evidence": [],
+      "occupancy_bounds": null,
+      "temporal_meaning": "The Advisory operating function does not identify dedicated premises or occupancy dates.",
+      "required_action": "Decide dedicated versus shared/distributed premises and physical accommodation. Accepted room programmes do not establish actual residence, office tenancy or campus occupancy.",
+      "issue_106_complete": false
+    },
+    {
+      "object_id": "SH-SITE-0020",
+      "name": "ARU terminal, warehouse and trucking estate",
+      "disposition": "AGGREGATE_NOT_AN_ADDITIONAL_PARCEL",
+      "primary_source": {
+        "path": "industrial/source/operations.json",
+        "revision": "d91a22c35c91b213204411421de88815f27d8e16",
+        "locator": "/facilities",
+        "sha256": "e7488b55c1c963d102db66e7a7b6f1373a3d68a9f94b8f99b164092245713a3b",
+        "kind": "EXACT_ARCHIVED_JSON_VALUE",
+        "evidence": [
+          {
+            "id": "FAC-WAM-INT",
+            "fact_state": "LOCKED_DERIVED_IMPLEMENTATION",
+            "provenance": "Synthetic case implementation derived from reconciled handoff and explicit user authority; no external party or surveyed certification claimed",
+            "name": "Wamsutter interchange",
+            "owner": "Blood, Sweat & Tears Railway Company",
+            "lon_lat": [
+              -107.96562715205644,
+              41.6744965783547
+            ],
+            "acreage": 18,
+            "track_count": 3,
+            "car_spots": 60,
+            "assigned_fte": 6,
+            "annual_external_ton_capacity": 0,
+            "pallet_slots": 0,
+            "services": "Three20car tracks; each accommodates16car roadtrain plus pairedlocomotives; synthetic UP interchange agreement",
+            "opened": "1968-10-14",
+            "operating_hours": "five-day service; dispatch/oncall exceptions; mine continuous receiving by appointment",
+            "environmental_controls": "segregated drainage, spillkits, stormwater inspection, protected storage and recorded custody",
+            "condition": "serviceable with identified maintenance backlog",
+            "case_status": "SYNTHETIC_OPERATING",
+            "footprint_basis": "Rectangular site envelope derived from stated acreage and declared aspect ratio; not a cadastral boundary or surveyed property.",
+            "footprint_aspect_ratio": 3
+          },
+          {
+            "id": "FAC-TAY-YARD",
+            "fact_state": "LOCKED_DERIVED_IMPLEMENTATION",
+            "provenance": "Synthetic case implementation derived from reconciled handoff and explicit user authority; no external party or surveyed certification claimed",
+            "name": "Taylor Yard and Shops",
+            "owner": "Blood, Sweat & Tears Railway Company",
+            "lon_lat": [
+              -108.1,
+              42.12
+            ],
+            "acreage": 32,
+            "track_count": 7,
+            "car_spots": 100,
+            "assigned_fte": 46,
+            "annual_external_ton_capacity": 0,
+            "pallet_slots": 0,
+            "services": "classification, locomotive shop, fuelpoint, dispatch and crew facilities",
+            "opened": "1968-10-14",
+            "operating_hours": "five-day service; dispatch/oncall exceptions; mine continuous receiving by appointment",
+            "environmental_controls": "segregated drainage, spillkits, stormwater inspection, protected storage and recorded custody",
+            "condition": "serviceable with identified maintenance backlog",
+            "case_status": "SYNTHETIC_OPERATING",
+            "footprint_basis": "Rectangular site envelope derived from stated acreage and declared aspect ratio; not a cadastral boundary or surveyed property.",
+            "footprint_aspect_ratio": 3
+          },
+          {
+            "id": "FAC-TAY-TERMINAL",
+            "fact_state": "LOCKED_DERIVED_IMPLEMENTATION",
+            "provenance": "Synthetic case implementation derived from reconciled handoff and explicit user authority; no external party or surveyed certification claimed",
+            "name": "Taylor Industrial Transload Complex",
+            "owner": "American Resource Utility, Inc.",
+            "lon_lat": [
+              -108.1075,
+              42.121
+            ],
+            "acreage": 46,
+            "track_count": 5,
+            "car_spots": 50,
+            "assigned_fte": 19,
+            "annual_external_ton_capacity": 210000,
+            "pallet_slots": 0,
+            "services": "existing general transload and Phase1 two10car tracks plus sixcar liquidtrack; acids segregated from general cargo",
+            "opened": "1972-05-08",
+            "operating_hours": "Mon\u2013Fri06:00\u201322:00 plus contracted exception service",
+            "environmental_controls": "segregated drainage, spillkits, stormwater inspection, protected storage and recorded custody",
+            "condition": "serviceable with identified maintenance backlog",
+            "case_status": "SYNTHETIC_OPERATING",
+            "footprint_basis": "Rectangular site envelope derived from stated acreage and declared aspect ratio; not a cadastral boundary or surveyed property.",
+            "footprint_aspect_ratio": 1
+          },
+          {
+            "id": "FAC-TAY-WAREHOUSE",
+            "fact_state": "LOCKED_DERIVED_IMPLEMENTATION",
+            "provenance": "Synthetic case implementation derived from reconciled handoff and explicit user authority; no external party or surveyed certification claimed",
+            "name": "Taylor warehouse",
+            "owner": "American Resource Utility, Inc.",
+            "lon_lat": [
+              -108.105,
+              42.125
+            ],
+            "acreage": 18,
+            "track_count": 1,
+            "car_spots": 8,
+            "assigned_fte": 8,
+            "annual_external_ton_capacity": 0,
+            "pallet_slots": 11000,
+            "services": "210000sf reserved palletcapacity; three handling shifts; rail/truck interface",
+            "opened": "1974-06-03",
+            "operating_hours": "Mon\u2013Fri06:00\u201322:00 plus contracted exception service",
+            "environmental_controls": "segregated drainage, spillkits, stormwater inspection, protected storage and recorded custody",
+            "condition": "serviceable with identified maintenance backlog",
+            "case_status": "SYNTHETIC_OPERATING",
+            "footprint_basis": "Rectangular site envelope derived from stated acreage and declared aspect ratio; not a cadastral boundary or surveyed property.",
+            "footprint_aspect_ratio": 1
+          },
+          {
+            "id": "FAC-TAY-TRUCK",
+            "fact_state": "LOCKED_DERIVED_IMPLEMENTATION",
+            "provenance": "Synthetic case implementation derived from reconciled handoff and explicit user authority; no external party or surveyed certification claimed",
+            "name": "Taylor trucking depot",
+            "owner": "American Resource Utility, Inc.",
+            "lon_lat": [
+              -108.093,
+              42.12
+            ],
+            "acreage": 8,
+            "track_count": 0,
+            "car_spots": 0,
+            "assigned_fte": 20,
+            "annual_external_ton_capacity": 0,
+            "pallet_slots": 0,
+            "services": "tractor/trailer parking, inspection bays and dispatch",
+            "opened": "1989-10-02",
+            "operating_hours": "Mon\u2013Fri06:00\u201322:00 plus contracted exception service",
+            "environmental_controls": "segregated drainage, spillkits, stormwater inspection, protected storage and recorded custody",
+            "condition": "serviceable with identified maintenance backlog",
+            "case_status": "SYNTHETIC_OPERATING",
+            "footprint_basis": "Rectangular site envelope derived from stated acreage and declared aspect ratio; not a cadastral boundary or surveyed property.",
+            "footprint_aspect_ratio": 1
+          },
+          {
+            "id": "FAC-EAST-MATERIALS",
+            "fact_state": "LOCKED_DERIVED_IMPLEMENTATION",
+            "provenance": "Synthetic case implementation derived from reconciled handoff and explicit user authority; no external party or surveyed certification claimed",
+            "name": "East Materials team track",
+            "owner": "Blood, Sweat & Tears Railway Company",
+            "lon_lat": [
+              -108.01259365641332,
+              41.90370776148441
+            ],
+            "acreage": 9,
+            "track_count": 2,
+            "car_spots": 20,
+            "assigned_fte": 3,
+            "annual_external_ton_capacity": 0,
+            "pallet_slots": 0,
+            "services": "pipe, scrap, aggregates; customer sidings operate by appointment",
+            "opened": "1972-05-08",
+            "operating_hours": "five-day service; dispatch/oncall exceptions; mine continuous receiving by appointment",
+            "environmental_controls": "segregated drainage, spillkits, stormwater inspection, protected storage and recorded custody",
+            "condition": "serviceable with identified maintenance backlog",
+            "case_status": "SYNTHETIC_OPERATING",
+            "footprint_basis": "Rectangular site envelope derived from stated acreage and declared aspect ratio; not a cadastral boundary or surveyed property.",
+            "footprint_aspect_ratio": 3
+          },
+          {
+            "id": "FAC-MINERAL-TEAM",
+            "fact_state": "LOCKED_DERIVED_IMPLEMENTATION",
+            "provenance": "Synthetic case implementation derived from reconciled handoff and explicit user authority; no external party or surveyed certification claimed",
+            "name": "Mineral Transfer team track",
+            "owner": "Blood, Sweat & Tears Railway Company",
+            "lon_lat": [
+              -108.07098660485325,
+              42.03495699312325
+            ],
+            "acreage": 11,
+            "track_count": 2,
+            "car_spots": 18,
+            "assigned_fte": 3,
+            "annual_external_ton_capacity": 0,
+            "pallet_slots": 0,
+            "services": "inbound and outbound minerals transfer; sodaash is customer throughput, not a claim of a local trona mine",
+            "opened": "1986-09-19",
+            "operating_hours": "five-day service; dispatch/oncall exceptions; mine continuous receiving by appointment",
+            "environmental_controls": "segregated drainage, spillkits, stormwater inspection, protected storage and recorded custody",
+            "condition": "serviceable with identified maintenance backlog",
+            "case_status": "SYNTHETIC_OPERATING",
+            "footprint_basis": "Rectangular site envelope derived from stated acreage and declared aspect ratio; not a cadastral boundary or surveyed property.",
+            "footprint_aspect_ratio": 3
+          },
+          {
+            "id": "FAC-RAW-TERMINAL",
+            "fact_state": "LOCKED_DERIVED_IMPLEMENTATION",
+            "provenance": "Synthetic case implementation derived from reconciled handoff and explicit user authority; no external party or surveyed certification claimed",
+            "name": "Rawlins satellite terminal",
+            "owner": "American Resource Utility, Inc.",
+            "lon_lat": [
+              -107.233,
+              41.786
+            ],
+            "acreage": 22,
+            "track_count": 0,
+            "car_spots": 0,
+            "assigned_fte": 8,
+            "annual_external_ton_capacity": 90000,
+            "pallet_slots": 0,
+            "services": "off-BS&T truck-served terminal; external railcar material arrives through qualified third-party transload",
+            "opened": "1978-09-12",
+            "operating_hours": "Mon\u2013Fri06:00\u201322:00 plus contracted exception service",
+            "environmental_controls": "segregated drainage, spillkits, stormwater inspection, protected storage and recorded custody",
+            "condition": "serviceable with identified maintenance backlog",
+            "case_status": "SYNTHETIC_OPERATING",
+            "footprint_basis": "Rectangular site envelope derived from stated acreage and declared aspect ratio; not a cadastral boundary or surveyed property.",
+            "footprint_aspect_ratio": 1
+          },
+          {
+            "id": "FAC-RAW-WAREHOUSE",
+            "fact_state": "LOCKED_DERIVED_IMPLEMENTATION",
+            "provenance": "Synthetic case implementation derived from reconciled handoff and explicit user authority; no external party or surveyed certification claimed",
+            "name": "Rawlins warehouse",
+            "owner": "American Resource Utility, Inc.",
+            "lon_lat": [
+              -107.228,
+              41.789
+            ],
+            "acreage": 7,
+            "track_count": 0,
+            "car_spots": 0,
+            "assigned_fte": 4,
+            "annual_external_ton_capacity": 0,
+            "pallet_slots": 4000,
+            "services": "75000sf satellite contract storage and orderpick",
+            "opened": "1980-04-07",
+            "operating_hours": "Mon\u2013Fri06:00\u201322:00 plus contracted exception service",
+            "environmental_controls": "segregated drainage, spillkits, stormwater inspection, protected storage and recorded custody",
+            "condition": "serviceable with identified maintenance backlog",
+            "case_status": "SYNTHETIC_OPERATING",
+            "footprint_basis": "Rectangular site envelope derived from stated acreage and declared aspect ratio; not a cadastral boundary or surveyed property.",
+            "footprint_aspect_ratio": 1
+          },
+          {
+            "id": "FAC-RAW-TRUCK",
+            "fact_state": "LOCKED_DERIVED_IMPLEMENTATION",
+            "provenance": "Synthetic case implementation derived from reconciled handoff and explicit user authority; no external party or surveyed certification claimed",
+            "name": "Rawlins trucking satellite",
+            "owner": "American Resource Utility, Inc.",
+            "lon_lat": [
+              -107.234,
+              41.782
+            ],
+            "acreage": 4,
+            "track_count": 0,
+            "car_spots": 0,
+            "assigned_fte": 4,
+            "annual_external_ton_capacity": 0,
+            "pallet_slots": 0,
+            "services": "external heavyhaul staging",
+            "opened": "1989-10-02",
+            "operating_hours": "Mon\u2013Fri06:00\u201322:00 plus contracted exception service",
+            "environmental_controls": "segregated drainage, spillkits, stormwater inspection, protected storage and recorded custody",
+            "condition": "serviceable with identified maintenance backlog",
+            "case_status": "SYNTHETIC_OPERATING",
+            "footprint_basis": "Rectangular site envelope derived from stated acreage and declared aspect ratio; not a cadastral boundary or surveyed property.",
+            "footprint_aspect_ratio": 1
+          },
+          {
+            "id": "FAC-ARU-OFFICE",
+            "fact_state": "LOCKED_DERIVED_IMPLEMENTATION",
+            "provenance": "Synthetic case implementation derived from reconciled handoff and explicit user authority; no external party or surveyed certification claimed",
+            "name": "Taylor ARU office",
+            "owner": "American Resource Utility, Inc.",
+            "lon_lat": [
+              -108.0975,
+              42.124
+            ],
+            "acreage": 2,
+            "track_count": 0,
+            "car_spots": 0,
+            "assigned_fte": 10,
+            "annual_external_ton_capacity": 0,
+            "pallet_slots": 0,
+            "services": "corporate shared services and customerdesk",
+            "opened": "1991-01-02",
+            "operating_hours": "Mon\u2013Fri06:00\u201322:00 plus contracted exception service",
+            "environmental_controls": "segregated drainage, spillkits, stormwater inspection, protected storage and recorded custody",
+            "condition": "serviceable with identified maintenance backlog",
+            "case_status": "SYNTHETIC_OPERATING",
+            "footprint_basis": "Rectangular site envelope derived from stated acreage and declared aspect ratio; not a cadastral boundary or surveyed property.",
+            "footprint_aspect_ratio": 1
+          },
+          {
+            "id": "FAC-RW-RECEIVING",
+            "fact_state": "LOCKED_DERIVED_IMPLEMENTATION",
+            "provenance": "Synthetic case implementation derived from reconciled handoff and explicit user authority; no external party or surveyed certification claimed",
+            "name": "Red Wash receiving and reagent storage",
+            "owner": "Red Wash Mining, LLC",
+            "lon_lat": [
+              -108.18,
+              42.22
+            ],
+            "acreage": 14,
+            "track_count": 0,
+            "car_spots": 0,
+            "assigned_fte": 6,
+            "annual_external_ton_capacity": 0,
+            "pallet_slots": 0,
+            "services": "truck only; receiving, acid/binderstorage, scales, MRO and steel; workers are within128siteFTE",
+            "opened": "2026-07-07",
+            "operating_hours": "five-day service; dispatch/oncall exceptions; mine continuous receiving by appointment",
+            "environmental_controls": "segregated drainage, spillkits, stormwater inspection, protected storage and recorded custody",
+            "condition": "serviceable with identified maintenance backlog",
+            "case_status": "SYNTHETIC_IN_SERVICE_2026_07_07",
+            "footprint_basis": "Rectangular site envelope derived from stated acreage and declared aspect ratio; not a cadastral boundary or surveyed property.",
+            "footprint_aspect_ratio": 1
+          }
+        ]
+      },
+      "observations": [],
+      "spatial_evidence": [],
+      "occupancy_bounds": null,
+      "temporal_meaning": "Aggregate railway estate identity, not an additional property or a common occupancy interval for every facility.",
+      "required_action": "Retain aggregate identity. Resolve member premises individually; do not create an extra parcel or a common occupancy interval from this collection.",
+      "issue_106_complete": false
+    },
+    {
+      "object_id": "SH-SITE-0021",
+      "name": "ARU external customer delivery interfaces",
+      "disposition": "AGGREGATE_NOT_AN_ADDITIONAL_PARCEL",
+      "primary_source": {
+        "path": "industrial/source/operations.json",
+        "revision": "d91a22c35c91b213204411421de88815f27d8e16",
+        "locator": "/contract_facility_assignments",
+        "sha256": "e7488b55c1c963d102db66e7a7b6f1373a3d68a9f94b8f99b164092245713a3b",
+        "kind": "EXACT_ARCHIVED_JSON_VALUE",
+        "evidence": [
+          {
+            "id": "ALLOC-BST-2025-001-FAC-MINERAL-TEAM",
+            "contract_id": "BST-2025-001",
+            "customer_id": "ARU-C-001",
+            "facility_id": "FAC-MINERAL-TEAM",
+            "route_id": "BST-MINERAL",
+            "annual_units_2025": 2200,
+            "unit": "loaded_revenue_car",
+            "segment": "BST",
+            "provenance": "Synthetic physical allocation derived from finance contract units and registered facility capacities; no real customer or land right asserted.",
+            "fact_state": "LOCKED_DERIVED_IMPLEMENTATION"
+          },
+          {
+            "id": "ALLOC-BST-2025-006-FAC-MINERAL-TEAM",
+            "contract_id": "BST-2025-006",
+            "customer_id": "ARU-C-006",
+            "facility_id": "FAC-MINERAL-TEAM",
+            "route_id": "BST-MINERAL",
+            "annual_units_2025": 950,
+            "unit": "loaded_revenue_car",
+            "segment": "BST",
+            "provenance": "Synthetic physical allocation derived from finance contract units and registered facility capacities; no real customer or land right asserted.",
+            "fact_state": "LOCKED_DERIVED_IMPLEMENTATION"
+          },
+          {
+            "id": "ALLOC-BST-2025-002-FAC-TAY-TERMINAL",
+            "contract_id": "BST-2025-002",
+            "customer_id": "ARU-C-002",
+            "facility_id": "FAC-TAY-TERMINAL",
+            "route_id": "BST-MAIN",
+            "annual_units_2025": 1150,
+            "unit": "loaded_revenue_car",
+            "segment": "BST",
+            "provenance": "Synthetic physical allocation derived from finance contract units and registered facility capacities; no real customer or land right asserted.",
+            "fact_state": "LOCKED_DERIVED_IMPLEMENTATION"
+          },
+          {
+            "id": "ALLOC-BST-2025-007-FAC-TAY-TERMINAL",
+            "contract_id": "BST-2025-007",
+            "customer_id": "ARU-C-007",
+            "facility_id": "FAC-TAY-TERMINAL",
+            "route_id": "BST-MAIN",
+            "annual_units_2025": 500,
+            "unit": "loaded_revenue_car",
+            "segment": "BST",
+            "provenance": "Synthetic physical allocation derived from finance contract units and registered facility capacities; no real customer or land right asserted.",
+            "fact_state": "LOCKED_DERIVED_IMPLEMENTATION"
+          },
+          {
+            "id": "ALLOC-BST-2025-004-FAC-EAST-MATERIALS",
+            "contract_id": "BST-2025-004",
+            "customer_id": "ARU-C-004",
+            "facility_id": "FAC-EAST-MATERIALS",
+            "route_id": "BST-EAST",
+            "annual_units_2025": 900,
+            "unit": "loaded_revenue_car",
+            "segment": "BST",
+            "provenance": "Synthetic physical allocation derived from finance contract units and registered facility capacities; no real customer or land right asserted.",
+            "fact_state": "LOCKED_DERIVED_IMPLEMENTATION"
+          },
+          {
+            "id": "ALLOC-BST-2025-008-FAC-EAST-MATERIALS",
+            "contract_id": "BST-2025-008",
+            "customer_id": "ARU-C-008",
+            "facility_id": "FAC-EAST-MATERIALS",
+            "route_id": "BST-EAST",
+            "annual_units_2025": 450,
+            "unit": "loaded_revenue_car",
+            "segment": "BST",
+            "provenance": "Synthetic physical allocation derived from finance contract units and registered facility capacities; no real customer or land right asserted.",
+            "fact_state": "LOCKED_DERIVED_IMPLEMENTATION"
+          },
+          {
+            "id": "ALLOC-BST-2025-003-FAC-TAY-TERMINAL",
+            "contract_id": "BST-2025-003",
+            "customer_id": "ARU-C-003",
+            "facility_id": "FAC-TAY-TERMINAL",
+            "route_id": "BST-MAIN",
+            "annual_units_2025": 700,
+            "unit": "loaded_revenue_car",
+            "segment": "BST",
+            "provenance": "Synthetic physical allocation derived from finance contract units and registered facility capacities; no real customer or land right asserted.",
+            "fact_state": "LOCKED_DERIVED_IMPLEMENTATION"
+          },
+          {
+            "id": "ALLOC-BST-2025-009-FAC-TAY-TERMINAL",
+            "contract_id": "BST-2025-009",
+            "customer_id": "ARU-C-009",
+            "facility_id": "FAC-TAY-TERMINAL",
+            "route_id": "BST-MAIN",
+            "annual_units_2025": 350,
+            "unit": "loaded_revenue_car",
+            "segment": "BST",
+            "provenance": "Synthetic physical allocation derived from finance contract units and registered facility capacities; no real customer or land right asserted.",
+            "fact_state": "LOCKED_DERIVED_IMPLEMENTATION"
+          },
+          {
+            "id": "ALLOC-BST-2025-010-FAC-TAY-TERMINAL",
+            "contract_id": "BST-2025-010",
+            "customer_id": "ARU-C-010",
+            "facility_id": "FAC-TAY-TERMINAL",
+            "route_id": "BST-MAIN",
+            "annual_units_2025": 500,
+            "unit": "loaded_revenue_car",
+            "segment": "BST",
+            "provenance": "Synthetic physical allocation derived from finance contract units and registered facility capacities; no real customer or land right asserted.",
+            "fact_state": "LOCKED_DERIVED_IMPLEMENTATION"
+          },
+          {
+            "id": "ALLOC-BST-2025-011-FAC-TAY-TERMINAL",
+            "contract_id": "BST-2025-011",
+            "customer_id": "ARU-C-011",
+            "facility_id": "FAC-TAY-TERMINAL",
+            "route_id": "BST-MAIN",
+            "annual_units_2025": 250,
+            "unit": "loaded_revenue_car",
+            "segment": "BST",
+            "provenance": "Synthetic physical allocation derived from finance contract units and registered facility capacities; no real customer or land right asserted.",
+            "fact_state": "LOCKED_DERIVED_IMPLEMENTATION"
+          },
+          {
+            "id": "ALLOC-BST-2025-012-FAC-TAY-TERMINAL",
+            "contract_id": "BST-2025-012",
+            "customer_id": "ARU-C-012",
+            "facility_id": "FAC-TAY-TERMINAL",
+            "route_id": "BST-MAIN",
+            "annual_units_2025": 650,
+            "unit": "loaded_revenue_car",
+            "segment": "BST",
+            "provenance": "Synthetic physical allocation derived from finance contract units and registered facility capacities; no real customer or land right asserted.",
+            "fact_state": "LOCKED_DERIVED_IMPLEMENTATION"
+          },
+          {
+            "id": "ALLOC-BST-2025-013-FAC-TAY-TERMINAL",
+            "contract_id": "BST-2025-013",
+            "customer_id": "ARU-C-013",
+            "facility_id": "FAC-TAY-TERMINAL",
+            "route_id": "BST-MAIN",
+            "annual_units_2025": 400,
+            "unit": "loaded_revenue_car",
+            "segment": "BST",
+            "provenance": "Synthetic physical allocation derived from finance contract units and registered facility capacities; no real customer or land right asserted.",
+            "fact_state": "LOCKED_DERIVED_IMPLEMENTATION"
+          },
+          {
+            "id": "ALLOC-TRM-2025-001-FAC-TAY-TERMINAL",
+            "contract_id": "TRM-2025-001",
+            "customer_id": "ARU-C-001",
+            "facility_id": "FAC-TAY-TERMINAL",
+            "route_id": null,
+            "annual_units_2025": 26900,
+            "unit": "handled_short_ton",
+            "segment": "TERMINALS",
+            "provenance": "Synthetic physical allocation derived from finance contract units and registered facility capacities; no real customer or land right asserted.",
+            "fact_state": "LOCKED_DERIVED_IMPLEMENTATION"
+          },
+          {
+            "id": "ALLOC-TRM-2025-002-FAC-TAY-TERMINAL",
+            "contract_id": "TRM-2025-002",
+            "customer_id": "ARU-C-002",
+            "facility_id": "FAC-TAY-TERMINAL",
+            "route_id": null,
+            "annual_units_2025": 26150,
+            "unit": "handled_short_ton",
+            "segment": "TERMINALS",
+            "provenance": "Synthetic physical allocation derived from finance contract units and registered facility capacities; no real customer or land right asserted.",
+            "fact_state": "LOCKED_DERIVED_IMPLEMENTATION"
+          },
+          {
+            "id": "ALLOC-TRM-2025-003-FAC-TAY-TERMINAL",
+            "contract_id": "TRM-2025-003",
+            "customer_id": "ARU-C-003",
+            "facility_id": "FAC-TAY-TERMINAL",
+            "route_id": null,
+            "annual_units_2025": 36050,
+            "unit": "handled_short_ton",
+            "segment": "TERMINALS",
+            "provenance": "Synthetic physical allocation derived from finance contract units and registered facility capacities; no real customer or land right asserted.",
+            "fact_state": "LOCKED_DERIVED_IMPLEMENTATION"
+          },
+          {
+            "id": "ALLOC-TRM-2025-014-FAC-TAY-TERMINAL",
+            "contract_id": "TRM-2025-014",
+            "customer_id": "ARU-C-014",
+            "facility_id": "FAC-TAY-TERMINAL",
+            "route_id": null,
+            "annual_units_2025": 30000,
+            "unit": "handled_short_ton",
+            "segment": "TERMINALS",
+            "provenance": "Synthetic physical allocation derived from finance contract units and registered facility capacities; no real customer or land right asserted.",
+            "fact_state": "LOCKED_DERIVED_IMPLEMENTATION"
+          },
+          {
+            "id": "ALLOC-TRM-2025-015-FAC-TAY-TERMINAL",
+            "contract_id": "TRM-2025-015",
+            "customer_id": "ARU-C-015",
+            "facility_id": "FAC-TAY-TERMINAL",
+            "route_id": null,
+            "annual_units_2025": 35500,
+            "unit": "handled_short_ton",
+            "segment": "TERMINALS",
+            "provenance": "Synthetic physical allocation derived from finance contract units and registered facility capacities; no real customer or land right asserted.",
+            "fact_state": "LOCKED_DERIVED_IMPLEMENTATION"
+          },
+          {
+            "id": "ALLOC-TRM-2025-016-FAC-TAY-TERMINAL",
+            "contract_id": "TRM-2025-016",
+            "customer_id": "ARU-C-016",
+            "facility_id": "FAC-TAY-TERMINAL",
+            "route_id": null,
+            "annual_units_2025": 34400,
+            "unit": "handled_short_ton",
+            "segment": "TERMINALS",
+            "provenance": "Synthetic physical allocation derived from finance contract units and registered facility capacities; no real customer or land right asserted.",
+            "fact_state": "LOCKED_DERIVED_IMPLEMENTATION"
+          },
+          {
+            "id": "ALLOC-TRM-2025-017-FAC-RAW-TERMINAL",
+            "contract_id": "TRM-2025-017",
+            "customer_id": "ARU-C-017",
+            "facility_id": "FAC-RAW-TERMINAL",
+            "route_id": null,
+            "annual_units_2025": 33000,
+            "unit": "handled_short_ton",
+            "segment": "TERMINALS",
+            "provenance": "Synthetic physical allocation derived from finance contract units and registered facility capacities; no real customer or land right asserted.",
+            "fact_state": "LOCKED_DERIVED_IMPLEMENTATION"
+          },
+          {
+            "id": "ALLOC-TRM-2025-018-FAC-RAW-TERMINAL",
+            "contract_id": "TRM-2025-018",
+            "customer_id": "ARU-C-018",
+            "facility_id": "FAC-RAW-TERMINAL",
+            "route_id": null,
+            "annual_units_2025": 32000,
+            "unit": "handled_short_ton",
+            "segment": "TERMINALS",
+            "provenance": "Synthetic physical allocation derived from finance contract units and registered facility capacities; no real customer or land right asserted.",
+            "fact_state": "LOCKED_DERIVED_IMPLEMENTATION"
+          },
+          {
+            "id": "ALLOC-TRK-2025-004-FAC-TAY-TRUCK",
+            "contract_id": "TRK-2025-004",
+            "customer_id": "ARU-C-004",
+            "facility_id": "FAC-TAY-TRUCK",
+            "route_id": null,
+            "annual_units_2025": 2870,
+            "unit": "billable_truck_dispatch",
+            "segment": "TRUCKING",
+            "provenance": "Synthetic physical allocation derived from finance contract units and registered facility capacities; no real customer or land right asserted.",
+            "fact_state": "LOCKED_DERIVED_IMPLEMENTATION"
+          },
+          {
+            "id": "ALLOC-TRK-2025-019-FAC-TAY-TRUCK",
+            "contract_id": "TRK-2025-019",
+            "customer_id": "ARU-C-019",
+            "facility_id": "FAC-TAY-TRUCK",
+            "route_id": null,
+            "annual_units_2025": 3250,
+            "unit": "billable_truck_dispatch",
+            "segment": "TRUCKING",
+            "provenance": "Synthetic physical allocation derived from finance contract units and registered facility capacities; no real customer or land right asserted.",
+            "fact_state": "LOCKED_DERIVED_IMPLEMENTATION"
+          },
+          {
+            "id": "ALLOC-TRK-2025-020-FAC-TAY-TRUCK",
+            "contract_id": "TRK-2025-020",
+            "customer_id": "ARU-C-020",
+            "facility_id": "FAC-TAY-TRUCK",
+            "route_id": null,
+            "annual_units_2025": 3120,
+            "unit": "billable_truck_dispatch",
+            "segment": "TRUCKING",
+            "provenance": "Synthetic physical allocation derived from finance contract units and registered facility capacities; no real customer or land right asserted.",
+            "fact_state": "LOCKED_DERIVED_IMPLEMENTATION"
+          },
+          {
+            "id": "ALLOC-TRK-2025-021-FAC-TAY-TRUCK",
+            "contract_id": "TRK-2025-021",
+            "customer_id": "ARU-C-021",
+            "facility_id": "FAC-TAY-TRUCK",
+            "route_id": null,
+            "annual_units_2025": 2960,
+            "unit": "billable_truck_dispatch",
+            "segment": "TRUCKING",
+            "provenance": "Synthetic physical allocation derived from finance contract units and registered facility capacities; no real customer or land right asserted.",
+            "fact_state": "LOCKED_DERIVED_IMPLEMENTATION"
+          },
+          {
+            "id": "ALLOC-TRK-2025-022-FAC-TAY-TRUCK",
+            "contract_id": "TRK-2025-022",
+            "customer_id": "ARU-C-022",
+            "facility_id": "FAC-TAY-TRUCK",
+            "route_id": null,
+            "annual_units_2025": 1300,
+            "unit": "billable_truck_dispatch",
+            "segment": "TRUCKING",
+            "provenance": "Synthetic physical allocation derived from finance contract units and registered facility capacities; no real customer or land right asserted.",
+            "fact_state": "LOCKED_DERIVED_IMPLEMENTATION"
+          },
+          {
+            "id": "ALLOC-TRK-2025-022-FAC-RAW-TRUCK",
+            "contract_id": "TRK-2025-022",
+            "customer_id": "ARU-C-022",
+            "facility_id": "FAC-RAW-TRUCK",
+            "route_id": null,
+            "annual_units_2025": 1500,
+            "unit": "billable_truck_dispatch",
+            "segment": "TRUCKING",
+            "provenance": "Synthetic physical allocation derived from finance contract units and registered facility capacities; no real customer or land right asserted.",
+            "fact_state": "LOCKED_DERIVED_IMPLEMENTATION"
+          },
+          {
+            "id": "ALLOC-WHS-2025-005-FAC-TAY-WAREHOUSE",
+            "contract_id": "WHS-2025-005",
+            "customer_id": "ARU-C-005",
+            "facility_id": "FAC-TAY-WAREHOUSE",
+            "route_id": null,
+            "annual_units_2025": 54000,
+            "unit": "reserved_pallet_month",
+            "segment": "WAREHOUSE",
+            "provenance": "Synthetic physical allocation derived from finance contract units and registered facility capacities; no real customer or land right asserted.",
+            "fact_state": "LOCKED_DERIVED_IMPLEMENTATION"
+          },
+          {
+            "id": "ALLOC-WHS-2025-023-FAC-TAY-WAREHOUSE",
+            "contract_id": "WHS-2025-023",
+            "customer_id": "ARU-C-023",
+            "facility_id": "FAC-TAY-WAREHOUSE",
+            "route_id": null,
+            "annual_units_2025": 30000,
+            "unit": "reserved_pallet_month",
+            "segment": "WAREHOUSE",
+            "provenance": "Synthetic physical allocation derived from finance contract units and registered facility capacities; no real customer or land right asserted.",
+            "fact_state": "LOCKED_DERIVED_IMPLEMENTATION"
+          },
+          {
+            "id": "ALLOC-WHS-2025-024-FAC-TAY-WAREHOUSE",
+            "contract_id": "WHS-2025-024",
+            "customer_id": "ARU-C-024",
+            "facility_id": "FAC-TAY-WAREHOUSE",
+            "route_id": null,
+            "annual_units_2025": 30000,
+            "unit": "reserved_pallet_month",
+            "segment": "WAREHOUSE",
+            "provenance": "Synthetic physical allocation derived from finance contract units and registered facility capacities; no real customer or land right asserted.",
+            "fact_state": "LOCKED_DERIVED_IMPLEMENTATION"
+          },
+          {
+            "id": "ALLOC-WHS-2025-025-FAC-RAW-WAREHOUSE",
+            "contract_id": "WHS-2025-025",
+            "customer_id": "ARU-C-025",
+            "facility_id": "FAC-RAW-WAREHOUSE",
+            "route_id": null,
+            "annual_units_2025": 27000,
+            "unit": "reserved_pallet_month",
+            "segment": "WAREHOUSE",
+            "provenance": "Synthetic physical allocation derived from finance contract units and registered facility capacities; no real customer or land right asserted.",
+            "fact_state": "LOCKED_DERIVED_IMPLEMENTATION"
+          }
+        ]
+      },
+      "observations": [],
+      "spatial_evidence": [],
+      "occupancy_bounds": null,
+      "temporal_meaning": "External customer delivery relationships, not company-owned premises or customer tenure dates.",
+      "required_action": "Retain aggregate identity. Resolve member premises individually; do not create an extra parcel or a common occupancy interval from this collection.",
+      "issue_106_complete": false
+    },
+    {
+      "object_id": "SH-SITE-0022",
+      "name": "Wallaby residue/tailings opportunity",
+      "disposition": "SOURCE_BOUND_WITH_EXPLICIT_PRECISION_LIMIT",
+      "primary_source": {
+        "path": "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md",
+        "revision": "8d20e51a7cf0068729e3296840ccb5ba1ac1d7bd",
+        "locator": "line:1337",
+        "sha256": "e1b0d123eed483f91240362f335d62210ea67da49b27b21bced7264e36c711cc",
+        "kind": "EXACT_ARCHIVED_LINE_WITH_QUOTED_FRAGMENT",
+        "evidence": "Ned Kelly identifies an old tailings or process-residue complex with favorable tonnage and apparent signatures. Cradle spends real money investigating it. Initial samples are mediocre."
+      },
+      "observations": [
+        "SITE-OBS-011"
+      ],
+      "spatial_evidence": [],
+      "occupancy_bounds": null,
+      "temporal_meaning": "2024\u20132025 is opportunity/programme context, not a title or occupancy interval.",
+      "required_action": "2024\u20132025 is opportunity/programme context, not a title or occupancy interval. Preserve source geometry/region and obtain or approve the missing location, access or dated occupancy evidence separately.",
+      "issue_106_complete": false
+    },
+    {
+      "object_id": "SH-SITE-0023",
+      "name": "Kelly Gang Mining / Stream 17 host operation",
+      "disposition": "OPERATING_HOST_GEOGRAPHY_OPEN",
+      "primary_source": {
+        "path": "docs/canon/CRADLE_CLOSEOUT_2026-09-06.md",
+        "revision": "d91a22c35c91b213204411421de88815f27d8e16",
+        "locator": "line:49",
+        "sha256": "b49eaf96f1582f11886e9543b1543013f47acc99aa5533082d73717ab523e8aa",
+        "kind": "EXACT_ARCHIVED_LINE_WITH_QUOTED_FRAGMENT",
+        "evidence": "Kelly Gang Mining is a fictional Tasmanian industrial-minerals / heavy-mineral operator. Its existing physical separation circuit creates a low-volume side stream internally designated **Stream 17**. The stream contains a materially enriched monazite-bearing heavy-mineral fraction even though the overall host feed is not an attractive standalone rare-earth orebody."
+      },
+      "observations": [
+        "SITE-OBS-005",
+        "SITE-OBS-006",
+        "SITE-OBS-010"
+      ],
+      "spatial_evidence": [],
+      "occupancy_bounds": null,
+      "temporal_meaning": "2025 is programme/deployment context at an external Tasmanian host, not company real-estate tenure.",
+      "required_action": "Select fictional host geography within the accepted region and bind equipment footprint, service access and bypass to the host. Host ownership, liability and authority remain external; operating observation does not identify a parcel.",
+      "issue_106_complete": false
+    },
+    {
+      "object_id": "SH-SITE-0024",
+      "name": "Glasshouse underground trial site",
+      "disposition": "SOURCE_BOUND_WITH_EXPLICIT_PRECISION_LIMIT",
+      "primary_source": {
+        "path": "docs/canon/DECISION_REGISTER.md",
+        "revision": "8d20e51a7cf0068729e3296840ccb5ba1ac1d7bd",
+        "locator": "line:101",
+        "sha256": "070dc6e6dad18b8e4c18fa530366b9fc8a396986371aee8a0e16ba732e6e1de4",
+        "kind": "EXACT_ARCHIVED_LINE_WITH_QUOTED_FRAGMENT",
+        "evidence": "| WIL-015 | Glasshouse | LOCKED | Underground machine-vision failure; \u201cthe mine gets a vote\u201d |"
+      },
+      "observations": [
+        "SITE-OBS-017"
+      ],
+      "spatial_evidence": [],
+      "occupancy_bounds": null,
+      "temporal_meaning": "The Glasshouse incident does not establish a dated parcel or occupancy interval.",
+      "required_action": "The Glasshouse incident does not establish a dated parcel or occupancy interval. Preserve source geometry/region and obtain or approve the missing location, access or dated occupancy evidence separately.",
+      "issue_106_complete": false
+    },
+    {
+      "object_id": "SH-SITE-0025",
+      "name": "Licensed conversion-facility delivery point",
+      "disposition": "SOURCE_BOUND_WITH_EXPLICIT_PRECISION_LIMIT",
+      "primary_source": {
+        "path": "docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05.md",
+        "revision": "8d20e51a7cf0068729e3296840ccb5ba1ac1d7bd",
+        "locator": "line:166",
+        "sha256": "6e90bdb9280a562e80e04561af45fabf1856a18b55ea48541f292a42711171d5",
+        "kind": "EXACT_ARCHIVED_LINE_WITH_QUOTED_FRAGMENT",
+        "evidence": "receipt and assay at the modeled licensed conversion-facility delivery point. A"
+      },
+      "observations": [],
+      "spatial_evidence": [],
+      "occupancy_bounds": null,
+      "temporal_meaning": "A licensed conversion-delivery dependency remains unlocated and independently custody-gated.",
+      "required_action": "A licensed conversion-delivery dependency remains unlocated and independently custody-gated. Preserve source geometry/region and obtain or approve the missing location, access or dated occupancy evidence separately.",
+      "issue_106_complete": false
+    },
+    {
+      "object_id": "SH-SITE-0026",
+      "name": "Former headquarters / early offices",
+      "disposition": "AGGREGATE_NOT_AN_ADDITIONAL_PARCEL",
+      "primary_source": {
+        "path": "geospatial/sources/MASTER_EXECUTION_MANDATE.md",
+        "revision": "19e92a08438dbc3e03dc18862750bf38577a602a",
+        "locator": "line:2572",
+        "sha256": "d49a4f30625aae0220b6d252c9f75c4e746099273c5a2dee2800caf934a1f991",
+        "kind": "EXACT_ARCHIVED_LINE_WITH_QUOTED_FRAGMENT",
+        "evidence": "- historical headquarters;"
+      },
+      "observations": [],
+      "spatial_evidence": [],
+      "occupancy_bounds": null,
+      "temporal_meaning": "The requirement to recover historical offices does not establish their locations or occupancy dates.",
+      "required_action": "Retain aggregate identity. Resolve member premises individually; do not create an extra parcel or a common occupancy interval from this collection.",
+      "issue_106_complete": false
+    },
+    {
+      "object_id": "SH-SITE-0027",
+      "name": "Demotte AMD host treatment and Gen 1 recovery deployment",
+      "disposition": "OPERATING_HOST_GEOGRAPHY_OPEN",
+      "primary_source": {
+        "path": "docs/canon/CRADLE_CLOSEOUT_2026-09-06.md",
+        "revision": "d91a22c35c91b213204411421de88815f27d8e16",
+        "locator": "line:95",
+        "sha256": "b49eaf96f1582f11886e9543b1543013f47acc99aa5533082d73717ab523e8aa",
+        "kind": "EXACT_ARCHIVED_LINE_WITH_QUOTED_FRAGMENT",
+        "evidence": "Cradle's first U.S. reference deployment is an acid-mine-drainage recovery installation in north-central West Virginia operated in partnership with the fictional **Demotte Reclamation Services**."
+      },
+      "observations": [
+        "SITE-OBS-004",
+        "SITE-OBS-007",
+        "SITE-OBS-008",
+        "SITE-OBS-009",
+        "SITE-OBS-010"
+      ],
+      "spatial_evidence": [],
+      "occupancy_bounds": null,
+      "temporal_meaning": "2026 describes the reference-deployment programme at an external host, not host title or a lease interval.",
+      "required_action": "Select fictional host geography within the accepted region and bind equipment footprint, service access and bypass to the host. Host ownership, liability and authority remain external; operating observation does not identify a parcel.",
+      "issue_106_complete": false
+    },
+    {
+      "object_id": "SH-FAC-FORT-BIG",
+      "name": "The Big Shed",
+      "disposition": "COMPONENT_NOT_SEPARATE_PROPERTY",
+      "primary_source": {
+        "path": "docs/canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md",
+        "revision": "d91a22c35c91b213204411421de88815f27d8e16",
+        "locator": "line:79",
+        "sha256": "3289ad8ce5d20d767b38f1ad3ed804feeb80300c59d7e96653bfe68f1eaa24b6",
+        "kind": "EXACT_ARCHIVED_LINE_WITH_QUOTED_FRAGMENT",
+        "evidence": "1. **The Big Shed** \u2014 Willow's main research building and laboratory. Most experimental work, instrumentation, prototyping, integration, bench work, and hands-on research occurs here. It is explicitly not the primary administrative building and not bulk storage."
+      },
+      "observations": [
+        "SITE-OBS-002"
+      ],
+      "spatial_evidence": [],
+      "occupancy_bounds": null,
+      "temporal_meaning": "Named component of the Fort programme; no separate property or occupancy interval is inferred.",
+      "required_action": "Keep the Fort component linked to its parent and accepted 2024 site transition. Individual commissioning/lodging dates are unknown and must not be inherited automatically.",
+      "issue_106_complete": false
+    },
+    {
+      "object_id": "SH-FAC-FORT-SMALL",
+      "name": "The Small Shed",
+      "disposition": "COMPONENT_NOT_SEPARATE_PROPERTY",
+      "primary_source": {
+        "path": "docs/canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md",
+        "revision": "d91a22c35c91b213204411421de88815f27d8e16",
+        "locator": "line:80",
+        "sha256": "3289ad8ce5d20d767b38f1ad3ed804feeb80300c59d7e96653bfe68f1eaa24b6",
+        "kind": "EXACT_ARCHIVED_LINE_WITH_QUOTED_FRAGMENT",
+        "evidence": "2. **The Small Shed** \u2014 administrative offices plus a small attached lodging component, effectively a modest internal mini-hotel for temporary stays by visiting staff, collaborators, field personnel, or employees whose work requires them to remain at the Fort for short periods. It is not permanent employee housing."
+      },
+      "observations": [
+        "SITE-OBS-002"
+      ],
+      "spatial_evidence": [],
+      "occupancy_bounds": null,
+      "temporal_meaning": "Named component of the Fort programme; proposed lodging is not an occupied-room census.",
+      "required_action": "Keep the Fort component linked to its parent and accepted 2024 site transition. Individual commissioning/lodging dates are unknown and must not be inherited automatically.",
+      "issue_106_complete": false
+    },
+    {
+      "object_id": "SH-FAC-FORT-WHITE",
+      "name": "The White Shed",
+      "disposition": "COMPONENT_NOT_SEPARATE_PROPERTY",
+      "primary_source": {
+        "path": "docs/canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md",
+        "revision": "d91a22c35c91b213204411421de88815f27d8e16",
+        "locator": "line:81",
+        "sha256": "3289ad8ce5d20d767b38f1ad3ed804feeb80300c59d7e96653bfe68f1eaa24b6",
+        "kind": "EXACT_ARCHIVED_LINE_WITH_QUOTED_FRAGMENT",
+        "evidence": "3. **The White Shed** \u2014 controlled intake, secure storage, utility, mechanical, staging, and quarantine space for unusual equipment, samples, field gear, or material that should not move directly onto the Big Shed research floor."
+      },
+      "observations": [
+        "SITE-OBS-002"
+      ],
+      "spatial_evidence": [],
+      "occupancy_bounds": null,
+      "temporal_meaning": "Named component of the Fort programme; no separate property or occupancy interval is inferred.",
+      "required_action": "Keep the Fort component linked to its parent and accepted 2024 site transition. Individual commissioning/lodging dates are unknown and must not be inherited automatically.",
+      "issue_106_complete": false
+    },
+    {
+      "object_id": "SH-FAC-FORT-MUSEUM",
+      "name": "The Museum",
+      "disposition": "COMPONENT_NOT_SEPARATE_PROPERTY",
+      "primary_source": {
+        "path": "docs/canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md",
+        "revision": "d91a22c35c91b213204411421de88815f27d8e16",
+        "locator": "line:83",
+        "sha256": "3289ad8ce5d20d767b38f1ad3ed804feeb80300c59d7e96653bfe68f1eaa24b6",
+        "kind": "EXACT_ARCHIVED_LINE_WITH_QUOTED_FRAGMENT",
+        "evidence": "The remaining grounds are intentionally spare: controlled perimeter and gate, gravel circulation, hardstand, outdoor staging, utility/service areas, and practical non-sensitive storage. The working yards and accumulated outdoor collection are collectively known as **the Museum**. The name is affectionate and literal enough to persist: obsolete rigs, retired prototypes, industrial fragments, and odd pieces of equipment can remain because they preserve useful physical history, not because Willow is operating a public museum."
+      },
+      "observations": [
+        "SITE-OBS-002"
+      ],
+      "spatial_evidence": [],
+      "occupancy_bounds": null,
+      "temporal_meaning": "Working-yard identity within the Fort programme; no separate property or occupancy interval is inferred.",
+      "required_action": "Keep the Fort component linked to its parent and accepted 2024 site transition. Individual commissioning/lodging dates are unknown and must not be inherited automatically.",
+      "issue_106_complete": false
+    },
+    {
+      "object_id": "SH-SITE-0028",
+      "name": "Reno primary colocation",
+      "disposition": "RUNTIME_EVIDENCE_BOUNDARY",
+      "primary_source": {
+        "path": "enterprise/services/source/runtime_sites_2026-09-11.json",
+        "revision": "19e92a08438dbc3e03dc18862750bf38577a602a",
+        "locator": "RUNTIME-RENO-COLO",
+        "sha256": "fa216f629762503865fd9f1a3207e87691cd484cec9885bf25ce045b4525519c",
+        "kind": "EXACT_ARCHIVED_RUNTIME_RECORD",
+        "evidence": {
+          "id": "RUNTIME-RENO-COLO",
+          "name": "Reno primary colocation",
+          "geography": "Tahoe-Reno, Nevada",
+          "status": "PROVIDER_SELECTED_PROCUREMENT_PENDING",
+          "provider": "Switch",
+          "facility": "Switch TAHOE RENO \u2014 The Citadel Campus",
+          "provider_selection_date": "2026-09-11",
+          "contract_executed": false,
+          "capacity_reserved": false,
+          "initial_usable_it_kw_low": 75,
+          "initial_usable_it_kw_high": 100,
+          "required_expansion_kw": 250,
+          "operating": false,
+          "evidence_boundary": "Selection is canon; provider public claims and proposed commercial terms are not operating evidence until contract and acceptance.",
+          "entity_id": "SHI",
+          "geospatial_entity_id": "SH-ENT-001",
+          "facility_id": "FAC-PRIMARY",
+          "geospatial_site_id": "SH-SITE-0028",
+          "planned_environment_ids": [
+            "ENV-PROD",
+            "ENV-RESTRICTED",
+            "ENV-DEV"
+          ],
+          "dependency_id": "DEP-colo-primary",
+          "record_origin": "OWNER_DECISION",
+          "installed_capacity_kw": null,
+          "provider_id": "CP-SWITCH",
+          "contract_id": "RT-SO-RENO",
+          "contract_status": "DRAFT",
+          "provider_legal_name": null
+        }
+      },
+      "observations": [],
+      "spatial_evidence": [],
+      "occupancy_bounds": null,
+      "temporal_meaning": "2026-09-11 records provider selection; procurement pending is not occupancy or operation.",
+      "required_action": "Retain the accepted provider-selection/preconstruction state. Executed procurement, assigned-space, access and commissioning evidence belongs to the runtime estate workflow.",
+      "issue_106_complete": false
+    },
+    {
+      "object_id": "SH-SITE-0029",
+      "name": "Boise independent recovery colocation",
+      "disposition": "RUNTIME_EVIDENCE_BOUNDARY",
+      "primary_source": {
+        "path": "enterprise/services/source/runtime_sites_2026-09-11.json",
+        "revision": "19e92a08438dbc3e03dc18862750bf38577a602a",
+        "locator": "RUNTIME-BOISE-DR",
+        "sha256": "fa216f629762503865fd9f1a3207e87691cd484cec9885bf25ce045b4525519c",
+        "kind": "EXACT_ARCHIVED_RUNTIME_RECORD",
+        "evidence": {
+          "id": "RUNTIME-BOISE-DR",
+          "name": "Boise independent recovery colocation",
+          "geography": "Boise, Idaho",
+          "status": "PROVIDER_SELECTED_PROCUREMENT_PENDING",
+          "provider": "IDACORE",
+          "facility": "IDACORE Boise",
+          "street_address": "2653 S Victory View Way, Boise, Idaho 83709",
+          "provider_selection_date": "2026-09-11",
+          "contract_executed": false,
+          "capacity_reserved": false,
+          "operating": false,
+          "published_planning_price_usd_per_kw_month": 300,
+          "published_power_included": true,
+          "published_standard_term_months": 12,
+          "evidence_boundary": "Published price/specifications are procurement baselines; contract, audit scope, technical configuration and recovery tests remain required evidence.",
+          "entity_id": "SHI",
+          "geospatial_entity_id": "SH-ENT-001",
+          "facility_id": "FAC-RECOVERY",
+          "geospatial_site_id": "SH-SITE-0029",
+          "planned_environment_ids": [
+            "ENV-RECOVERY"
+          ],
+          "dependency_id": "DEP-colo-recovery",
+          "record_origin": "OWNER_DECISION",
+          "installed_capacity_kw": null,
+          "provider_id": "CP-IDACORE",
+          "contract_id": "RT-SO-BOISE",
+          "contract_status": "DRAFT",
+          "provider_legal_name": null,
+          "independence_required": true,
+          "independence_verified": false,
+          "independence_evidence": [],
+          "initial_usable_it_kw_low": 25,
+          "initial_usable_it_kw_high": 25
+        }
+      },
+      "observations": [],
+      "spatial_evidence": [],
+      "occupancy_bounds": null,
+      "temporal_meaning": "2026-09-11 records provider selection; procurement pending is not occupancy or operation.",
+      "required_action": "Retain the accepted provider-selection/preconstruction state. Executed procurement, assigned-space, access and commissioning evidence belongs to the runtime estate workflow.",
+      "issue_106_complete": false
+    },
+    {
+      "object_id": "SH-SITE-0030",
+      "name": "SABLE HARBOR Northern Nevada Data Center",
+      "disposition": "RUNTIME_EVIDENCE_BOUNDARY",
+      "primary_source": {
+        "path": "enterprise/services/source/runtime_sites_2026-09-11.json",
+        "revision": "19e92a08438dbc3e03dc18862750bf38577a602a",
+        "locator": "RUNTIME-NN-OWNED-DC",
+        "sha256": "fa216f629762503865fd9f1a3207e87691cd484cec9885bf25ce045b4525519c",
+        "kind": "EXACT_ARCHIVED_RUNTIME_RECORD",
+        "evidence": {
+          "id": "RUNTIME-NN-OWNED-DC",
+          "name": "SABLE HARBOR Northern Nevada Data Center",
+          "geography": "Tahoe-Reno Industrial Center / USA Parkway industrial district, Storey County, Nevada",
+          "planning_lon_lat": [
+            -119.455,
+            39.545
+          ],
+          "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+          "parcel_acres_planning": 7.5,
+          "real_apn": null,
+          "planning_purchase_date": "2026-09-04",
+          "planning_consideration_usd": 3000000,
+          "status": "LAND_ACQUIRED_PRECONSTRUCTION",
+          "vertical_construction_percent": 0,
+          "commissioned_it_kw": 0,
+          "commissioned_critical_kw": 0,
+          "planned_shell_sqft_low": 10000,
+          "planned_shell_sqft_high": 15000,
+          "planned_initial_critical_kw_low": 250,
+          "planned_initial_critical_kw_high": 500,
+          "planned_utility_path_kw": 1000,
+          "preserve_expansion_path_kw": 2000,
+          "operating": false,
+          "entity_id": "SHI",
+          "geospatial_entity_id": "SH-ENT-001",
+          "facility_id": "FAC-OWNED",
+          "geospatial_site_id": "SH-SITE-0030",
+          "planned_environment_ids": [],
+          "dependency_id": null,
+          "record_origin": "OWNER_DECISION",
+          "installed_capacity_kw": null
+        }
+      },
+      "observations": [],
+      "spatial_evidence": [
+        {
+          "table": "runtime_parcel",
+          "feature_id": "RT-PARCEL-001",
+          "geometry_sha256": "d566a11039290857562173963e0d82c5f74ffeb3bab71ae3dd1b66caa162b364",
+          "geometry_status": "SYNTHETIC_UNSURVEYED",
+          "precision_class": "PLANNING_PIN_WITH_SYNTHETIC_ENVELOPE",
+          "canon_status": "PROPOSED",
+          "valid_from": "2026-09-04",
+          "valid_to": null
+        }
+      ],
+      "occupancy_bounds": null,
+      "temporal_meaning": "2026-09-04 is the accepted synthetic acquisition date; preconstruction does not establish building occupancy.",
+      "required_action": "Retain the accepted provider-selection/preconstruction state. Executed procurement, assigned-space, access and commissioning evidence belongs to the runtime estate workflow.",
+      "issue_106_complete": false
+    }
+  ],
+  "observations": [
+    {
+      "observation_id": "SITE-OBS-001",
+      "object_ids": [
+        "SH-SITE-0001"
+      ],
+      "kind": "LOCATION_AND_CAMPUS_DIRECTION",
+      "meaning": "City and institutional campus direction; no opening or lease date.",
+      "source": {
+        "path": "docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md",
+        "revision": "a8e6dd99c113e0470bdc4fcc63bab616949186d0",
+        "sha256": "25e484d7fbc2c83a37f0e7ae7fe20ff741cde176bd0c2ba7be742fa7fb3e2624",
+        "locator": "lines:339-348",
+        "text": "Headquarters is in **Sacramento, California**. It is a formidable, beautiful long-duration institutional campus, not a gaudy tower or performatively austere office. It should feel like an advanced research/industrial institution: excellent materials, strong geometry, warm human interiors, serious common/project/education space, and landscaping that rewards presence.\n\nThe canonical September 3 exterior reference depicts contemporary glass, metal, concrete, and warm wood; landscaped grasses, stone, trees, water, and a clear illuminated SABLE HARBOR / HEADQUARTERS / SACRAMENTO, CALIFORNIA monument. No invented Capitol or San Jose setting is canon. Canonical source-image SHA-256 at approval: `2bf5a1209b9c3ece435271f2fbf5a3c827bbbccf242ea4ee60535749ccee9d92`.\n\nCorporate leaders are expected to spend meaningful time in the businesses. Headquarters is a working institutional center, not the place where all important people permanently retreat.\n\n## 16. Explicitly deferred\n\nThe following are intentionally not resolved by this closeout:\n"
+      },
+      "occupancy_start": null,
+      "occupancy_end": null
+    },
+    {
+      "observation_id": "SITE-OBS-002",
+      "object_ids": [
+        "SH-SITE-0003",
+        "SH-FAC-FORT-BIG",
+        "SH-FAC-FORT-SMALL",
+        "SH-FAC-FORT-WHITE",
+        "SH-FAC-FORT-MUSEUM"
+      ],
+      "kind": "OPERATING_SITE_AND_COMPONENTS",
+      "meaning": "The operating compound and component roles are established. Component commissioning dates remain unknown.",
+      "source": {
+        "path": "docs/canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md",
+        "revision": "a8e6dd99c113e0470bdc4fcc63bab616949186d0",
+        "sha256": "3289ad8ce5d20d767b38f1ad3ed804feeb80300c59d7e96653bfe68f1eaa24b6",
+        "locator": "lines:75-84",
+        "text": "Willow's Pittsburgh-area physical center is a roughly **10\u201320 acre** industrial compound informally and then routinely called **the Fort**. The Fort is a working industrial research site, not a landscaped corporate campus.\n\nThe site has three principal structures:\n\n1. **The Big Shed** \u2014 Willow's main research building and laboratory. Most experimental work, instrumentation, prototyping, integration, bench work, and hands-on research occurs here. It is explicitly not the primary administrative building and not bulk storage.\n2. **The Small Shed** \u2014 administrative offices plus a small attached lodging component, effectively a modest internal mini-hotel for temporary stays by visiting staff, collaborators, field personnel, or employees whose work requires them to remain at the Fort for short periods. It is not permanent employee housing.\n3. **The White Shed** \u2014 controlled intake, secure storage, utility, mechanical, staging, and quarantine space for unusual equipment, samples, field gear, or material that should not move directly onto the Big Shed research floor.\n\nThe remaining grounds are intentionally spare: controlled perimeter and gate, gravel circulation, hardstand, outdoor staging, utility/service areas, and practical non-sensitive storage. The working yards and accumulated outdoor collection are collectively known as **the Museum**. The name is affectionate and literal enough to persist: obsolete rigs, retired prototypes, industrial fragments, and odd pieces of equipment can remain because they preserve useful physical history, not because Willow is operating a public museum.\n"
+      },
+      "occupancy_start": null,
+      "occupancy_end": null
+    },
+    {
+      "observation_id": "SITE-OBS-003",
+      "object_ids": [
+        "SH-SITE-0005"
+      ],
+      "kind": "REGIONAL_SITE_AND_SCALE",
+      "meaning": "15\u201320 acre fictional brownfield; Fairmont supersedes Belle editorial siting, not an in-world move.",
+      "source": {
+        "path": "docs/canon/CRADLE_CLOSEOUT_2026-09-06.md",
+        "revision": "a8e6dd99c113e0470bdc4fcc63bab616949186d0",
+        "sha256": "b49eaf96f1582f11886e9543b1543013f47acc99aa5533082d73717ab523e8aa",
+        "locator": "lines:136-145",
+        "text": "Bedford is located in the **Fairmont area of north-central West Virginia** on a fictional redeveloped industrial brownfield. The working site scale is approximately **15\u201320 acres**.\n\nBedford is not a mine and is not the Demotte treatment site. It is the central development, integration and upgrading facility supporting distributed recovery deployments.\n\nBedford's 2026 role includes:\n\n- analytical and process-development laboratory work;\n- field-unit assembly, maintenance and refurbishment;\n- controlled receipt and genealogy verification of recovered intermediates;\n- blending and upgrading into saleable mixed REE products;"
+      },
+      "occupancy_start": null,
+      "occupancy_end": null
+    },
+    {
+      "observation_id": "SITE-OBS-004",
+      "object_ids": [
+        "SH-SITE-0005",
+        "SH-SITE-0027"
+      ],
+      "kind": "DISTINCT_SITE_IDENTITIES",
+      "meaning": "Do not merge Bedford and the external treatment host.",
+      "source": {
+        "path": "docs/canon/CRADLE_CLOSEOUT_2026-09-06.md",
+        "revision": "a8e6dd99c113e0470bdc4fcc63bab616949186d0",
+        "sha256": "b49eaf96f1582f11886e9543b1543013f47acc99aa5533082d73717ab523e8aa",
+        "locator": "lines:138-147",
+        "text": "Bedford is not a mine and is not the Demotte treatment site. It is the central development, integration and upgrading facility supporting distributed recovery deployments.\n\nBedford's 2026 role includes:\n\n- analytical and process-development laboratory work;\n- field-unit assembly, maintenance and refurbishment;\n- controlled receipt and genealogy verification of recovered intermediates;\n- blending and upgrading into saleable mixed REE products;\n- secure material storage and outbound logistics;\n- operator / deployment support and autopsy work on failed or degraded recovery runs."
+      },
+      "occupancy_start": null,
+      "occupancy_end": null
+    },
+    {
+      "observation_id": "SITE-OBS-005",
+      "object_ids": [
+        "SH-SITE-0023"
+      ],
+      "kind": "HOST_PROCESS_OBSERVATION",
+      "meaning": "The existing separation circuit and Stream 17 are established; exact host parcel and access are not.",
+      "source": {
+        "path": "docs/canon/CRADLE_CLOSEOUT_2026-09-06.md",
+        "revision": "a8e6dd99c113e0470bdc4fcc63bab616949186d0",
+        "sha256": "b49eaf96f1582f11886e9543b1543013f47acc99aa5533082d73717ab523e8aa",
+        "locator": "lines:49-58",
+        "text": "Kelly Gang Mining is a fictional Tasmanian industrial-minerals / heavy-mineral operator. Its existing physical separation circuit creates a low-volume side stream internally designated **Stream 17**. The stream contains a materially enriched monazite-bearing heavy-mineral fraction even though the overall host feed is not an attractive standalone rare-earth orebody.\n\nCradle does not redesign the host mine or require the host to adopt a new mine thesis. It adds a bounded recovery step to Stream 17.\n\nThe Cradle intervention is designed so that:\n\n- Kelly Gang Mining retains operating authority over the host plant;\n- host production does not depend on Cradle equipment being available;\n- Cradle equipment can be bypassed without stopping the host process;\n- Cradle owns and maintains the recovery equipment used for the reference case;"
+      },
+      "occupancy_start": null,
+      "occupancy_end": null
+    },
+    {
+      "observation_id": "SITE-OBS-006",
+      "object_ids": [
+        "SH-SITE-0023"
+      ],
+      "kind": "HOST_AUTHORITY_AND_BYPASS",
+      "meaning": "Cradle equipment does not confer host-plant ownership or authority.",
+      "source": {
+        "path": "docs/canon/CRADLE_CLOSEOUT_2026-09-06.md",
+        "revision": "a8e6dd99c113e0470bdc4fcc63bab616949186d0",
+        "sha256": "b49eaf96f1582f11886e9543b1543013f47acc99aa5533082d73717ab523e8aa",
+        "locator": "lines:55-64",
+        "text": "- Kelly Gang Mining retains operating authority over the host plant;\n- host production does not depend on Cradle equipment being available;\n- Cradle equipment can be bypassed without stopping the host process;\n- Cradle owns and maintains the recovery equipment used for the reference case;\n- Cradle receives an exclusive recovery right to the designated Stream 17 material during the agreement term;\n- title to recovered Cradle material transfers at the defined capture point;\n- Cradle bears its direct recovery operating costs;\n- Kelly Gang Mining receives negotiated participation in realized recovered-product value;\n- Cradle sells a **mixed REE mineral concentrate** to a specialist downstream refiner rather than separating individual rare-earth oxides or manufacturing magnets at the host site.\n"
+      },
+      "occupancy_start": null,
+      "occupancy_end": null
+    },
+    {
+      "observation_id": "SITE-OBS-007",
+      "object_ids": [
+        "SH-SITE-0027"
+      ],
+      "kind": "OPERATING_DEPLOYMENT_OBSERVATION",
+      "meaning": "North-central West Virginia Gen 1 deployment is operating by the closeout; source does not establish installation day or host parcel.",
+      "source": {
+        "path": "docs/canon/CRADLE_CLOSEOUT_2026-09-06.md",
+        "revision": "a8e6dd99c113e0470bdc4fcc63bab616949186d0",
+        "sha256": "b49eaf96f1582f11886e9543b1543013f47acc99aa5533082d73717ab523e8aa",
+        "locator": "lines:95-104",
+        "text": "Cradle's first U.S. reference deployment is an acid-mine-drainage recovery installation in north-central West Virginia operated in partnership with the fictional **Demotte Reclamation Services**.\n\nDemotte operates ordinary treatment for water from a legacy underground coal complex. Environmental treatment and discharge obligations remain with the host operator. Cradle does not acquire the mine, the remediation liability or the host treatment system.\n\nThe first-generation Cradle unit is a containerized / skid-based **Gen 1 recovery module** connected to a controlled slipstream ahead of ordinary treatment.\n\nIts interface rules are:\n\n- the normal treatment path remains available at all times;\n- a hard bypass returns the slipstream to ordinary treatment if Cradle equipment is unavailable or outside agreed operating limits;"
+      },
+      "occupancy_start": null,
+      "occupancy_end": null
+    },
+    {
+      "observation_id": "SITE-OBS-008",
+      "object_ids": [
+        "SH-SITE-0027"
+      ],
+      "kind": "HOST_LIABILITY_BOUNDARY",
+      "meaning": "Mine, treatment system and remediation liabilities remain with the host.",
+      "source": {
+        "path": "docs/canon/CRADLE_CLOSEOUT_2026-09-06.md",
+        "revision": "a8e6dd99c113e0470bdc4fcc63bab616949186d0",
+        "sha256": "b49eaf96f1582f11886e9543b1543013f47acc99aa5533082d73717ab523e8aa",
+        "locator": "lines:97-106",
+        "text": "Demotte operates ordinary treatment for water from a legacy underground coal complex. Environmental treatment and discharge obligations remain with the host operator. Cradle does not acquire the mine, the remediation liability or the host treatment system.\n\nThe first-generation Cradle unit is a containerized / skid-based **Gen 1 recovery module** connected to a controlled slipstream ahead of ordinary treatment.\n\nIts interface rules are:\n\n- the normal treatment path remains available at all times;\n- a hard bypass returns the slipstream to ordinary treatment if Cradle equipment is unavailable or outside agreed operating limits;\n- the host owns immediate water-treatment and compliance consequences;\n- the host may stop or bypass Cradle when operating or environmental conditions require it;"
+      },
+      "occupancy_start": null,
+      "occupancy_end": null
+    },
+    {
+      "observation_id": "SITE-OBS-009",
+      "object_ids": [
+        "SH-SITE-0027"
+      ],
+      "kind": "HOST_TREATMENT_BYPASS",
+      "meaning": "Normal treatment remains available and the host can bypass recovery; this is operating canon, not an executed access instrument.",
+      "source": {
+        "path": "docs/canon/CRADLE_CLOSEOUT_2026-09-06.md",
+        "revision": "a8e6dd99c113e0470bdc4fcc63bab616949186d0",
+        "sha256": "b49eaf96f1582f11886e9543b1543013f47acc99aa5533082d73717ab523e8aa",
+        "locator": "lines:103-112",
+        "text": "- the normal treatment path remains available at all times;\n- a hard bypass returns the slipstream to ordinary treatment if Cradle equipment is unavailable or outside agreed operating limits;\n- the host owns immediate water-treatment and compliance consequences;\n- the host may stop or bypass Cradle when operating or environmental conditions require it;\n- Cradle owns its recovery equipment, recovery procedure, maintenance and direct operating cost;\n- Cradle's recovery right applies only to material captured through the defined intervention and does not create ownership of the host mine, water system or remediation asset;\n- recovered intermediate is segregated, identified and transferred into Maeve's genealogy chain.\n\nThe Gen 1 deployment works but fouls more than expected under variable field chemistry. The result is not treated as failure or hidden as maintenance noise. It directly drives Gen 2 toward better continuous characterization, maintainability and operating-range awareness.\n"
+      },
+      "occupancy_start": null,
+      "occupancy_end": null
+    },
+    {
+      "observation_id": "SITE-OBS-010",
+      "object_ids": [
+        "SH-SITE-0005",
+        "SH-SITE-0023",
+        "SH-SITE-0027"
+      ],
+      "kind": "2026_OPERATING_SNAPSHOT",
+      "meaning": "Positive operating snapshot at the September 6 closeout; no backdated first occupancy or exact commissioning event.",
+      "source": {
+        "path": "docs/canon/CRADLE_CLOSEOUT_2026-09-06.md",
+        "revision": "a8e6dd99c113e0470bdc4fcc63bab616949186d0",
+        "sha256": "b49eaf96f1582f11886e9543b1543013f47acc99aa5533082d73717ab523e8aa",
+        "locator": "lines:157-166",
+        "text": "By the closeout date it has:\n\n- the completed Wallaby failure history;\n- the Stream 17 commercial reference case with Kelly Gang Mining;\n- one operating U.S. Gen 1 reference deployment at Demotte;\n- Bedford as its U.S. development and upgrading center;\n- additional candidate streams and deployments under disciplined evaluation;\n- a high kill rate by design rather than a requirement to convert every target into a project.\n\nKenji Arakawa remains Cradle leader. Tessa Quinn, Luis Ortega and Maeve Donnelly retain the founding roles already established in canon. This closeout does not manufacture a large department chart or new named executives merely to make the business look mature."
+      },
+      "occupancy_start": null,
+      "occupancy_end": null
+    },
+    {
+      "observation_id": "SITE-OBS-011",
+      "object_ids": [
+        "SH-SITE-0022"
+      ],
+      "kind": "PROJECT_TERMINATION_STATUS",
+      "meaning": "A terminated project is not evidence of continuing occupancy or a newly relocated site.",
+      "source": {
+        "path": "docs/canon/CRADLE_CLOSEOUT_2026-09-06.md",
+        "revision": "a8e6dd99c113e0470bdc4fcc63bab616949186d0",
+        "sha256": "b49eaf96f1582f11886e9543b1543013f47acc99aa5533082d73717ab523e8aa",
+        "locator": "lines:73-82",
+        "text": "Wallaby remains a killed project. Maeve does not rescue it.\n\nMaeve's decisive contribution begins when an experienced host operator casually describes the physical process in a way that conflicts with the official flowsheet and administrative stream categories. Maeve treats the discrepancy as evidence rather than operator error.\n\nShe reconstructs the actual material genealogy across:\n\n> **source \u2192 physical process \u2192 stream \u2192 sampled lot \u2192 disposition**\n\nThe reconstruction shows that the existing sampling scheme follows administrative categories rather than the physical process that created concentration. The revised understanding changes Ned Kelly Mark II from a grade-finding exercise into a process-genealogy search.\n"
+      },
+      "occupancy_start": null,
+      "occupancy_end": null
+    },
+    {
+      "observation_id": "SITE-OBS-012",
+      "object_ids": [
+        "SH-SITE-0011",
+        "SH-SITE-0012",
+        "SH-SITE-0013"
+      ],
+      "kind": "PROPOSED_OFFICE_NETWORK",
+      "meaning": "Reno, Elko and Tucson are proposed office roles. Neither an opened nor a closed physical office is proved by this paragraph.",
+      "source": {
+        "path": "docs/canon/SABLE_HARBOR_CANONICAL_ARCHITECTURE_HANDOVER.md",
+        "revision": "a8e6dd99c113e0470bdc4fcc63bab616949186d0",
+        "sha256": "ef0fe5602ab41f1de0a0c29146476dbb406cb56e28407652f7d00f357e3fc636",
+        "locator": "lines:652-661",
+        "text": "A plausible broader office structure already discussed is:\n\n- **Sacramento:** headquarters, leadership, legal/compliance, corporate functions\n- **Reno, Nevada:** mining technology, engineering, product, customer implementation\n- **Elko, Nevada:** field operations and proximity to active mining customers\n- **Tucson, Arizona:** copper, geology, mine engineering, research talent\n- **Charleston, West Virginia:** Emberline coal R&D and services\n- **Pale Sun location:** unresolved; may require a distinct federal or regulated environment\n\nDo not finalize these locations or headcounts without explicitly reviewing them."
+      },
+      "occupancy_start": null,
+      "occupancy_end": null
+    },
+    {
+      "observation_id": "SITE-OBS-013",
+      "object_ids": [
+        "SH-SITE-0009"
+      ],
+      "kind": "REGIONAL_HISTORICAL_MINE",
+      "meaning": "Nevada open-pit copper/gold and antecedent operator; detailed site coordinates and individual facility histories remain separate.",
+      "source": {
+        "path": "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md",
+        "revision": "a8e6dd99c113e0470bdc4fcc63bab616949186d0",
+        "sha256": "5bc15670b1d7c3c98d754329a0fad44bd4a82ea7db977bfa064b5db80062b2f7",
+        "locator": "lines:70-79",
+        "text": "- Argent Ridge Mining operated Blackridge, a Nevada open-pit copper-and-gold mine.\n- West Wall Phase 4 was approved after competent functional reviews.\n- The failure arose from interacting fleet, haulage, stripping, ore-exposure, blending, processing, capital, and decision-authority constraints.\n- Competence existed locally. Integration was absent globally.\n- Relevant information existed, but the organization could not connect it in time.\n- No single person possessed both the complete picture and the authority to act on it.\n\nThe corporate-lore work does not alter Blackridge\u2019s physical facts, dates, economics, causal chain, or epistemic model.\n\n## 2.1 Who was actually there"
+      },
+      "occupancy_start": null,
+      "occupancy_end": null
+    },
+    {
+      "observation_id": "SITE-OBS-014",
+      "object_ids": [
+        "SH-SITE-0010"
+      ],
+      "kind": "CUSTOMER_INCIDENT_LOCATION",
+      "meaning": "Nevada customer operation; incident geography does not establish company property or tenancy.",
+      "source": {
+        "path": "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md",
+        "revision": "a8e6dd99c113e0470bdc4fcc63bab616949186d0",
+        "sha256": "5bc15670b1d7c3c98d754329a0fad44bd4a82ea7db977bfa064b5db80062b2f7",
+        "locator": "lines:175-184",
+        "text": "The first foundational post-Blackridge incident occurs at a Nevada copper operation.\n\nA customer asks Sable Harbor to clean up equipment identity across maintenance, dispatch, finance, planning, and local records. What looks like duplicate data is not simple duplication. Across the relevant fleet, Sable Harbor finds approximately forty-seven names, identifiers, aliases, and locally meaningful references for the same set of physical assets.\n\n**Marcus Reed** builds an ugly resolver that works.\n\n**Priya** recognizes that the work is not merely a one-time cleanup.\n\n**Elena Torres** stops the team from deleting a field identifier that appears redundant but tells mechanics something none of the corporate identifiers preserve.\n"
+      },
+      "occupancy_start": null,
+      "occupancy_end": null
+    },
+    {
+      "observation_id": "SITE-OBS-015",
+      "object_ids": [
+        "SH-SITE-0004"
+      ],
+      "kind": "PROGRAMME_ABSORPTION",
+      "meaning": "End of the named programme is not a dated surrender of Charleston premises.",
+      "source": {
+        "path": "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md",
+        "revision": "a8e6dd99c113e0470bdc4fcc63bab616949186d0",
+        "sha256": "5bc15670b1d7c3c98d754329a0fad44bd4a82ea7db977bfa064b5db80062b2f7",
+        "locator": "lines:573-582",
+        "text": "Emberline remains active through 2025, after which its enduring work is absorbed into Foundry, Willow, field operations, and the emerging Advisory practice. It is not a standalone 2026 core division.\n\n## 7.4 The Klein shop \u2014 2021\n\n### LOCKED\n\nKlein leases a light-industrial building outside Pittsburgh with three-phase power, a loading dock, machine tools, improvised test fixtures, and enough space to bring physical equipment indoors.\n\nOfficially, it is an eastern operations center. Internally, it becomes **the shop**.\n"
+      },
+      "occupancy_start": null,
+      "occupancy_end": null
+    },
+    {
+      "observation_id": "SITE-OBS-016",
+      "object_ids": [
+        "SH-SITE-0003",
+        "SH-SITE-0001"
+      ],
+      "kind": "DISTINCT_OPERATING_CENTERS",
+      "meaning": "Laboratory office and Sacramento institutional connection do not establish shared parcel identity.",
+      "source": {
+        "path": "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md",
+        "revision": "a8e6dd99c113e0470bdc4fcc63bab616949186d0",
+        "sha256": "5bc15670b1d7c3c98d754329a0fad44bd4a82ea7db977bfa064b5db80062b2f7",
+        "locator": "lines:708-717",
+        "text": "Gid remains in Pittsburgh. His office is in the laboratory, not at headquarters.\n\nAfter 2022, Willow also gains an institutional seam in Sacramento through **Rachel Sloane**, Director of Advanced Programs or an equivalent role.\n\nRachel Sloane is not Gid\u2019s boss. She translates budget, legal, security, product, and executive concerns into constraints the laboratory can live with, and translates Willow\u2019s strange but valuable work back into language the company can govern.\n\nWillow therefore has two deliberate centers of gravity:\n\n- Pittsburgh holds experimental and epistemic authority;\n- Sacramento holds institutional connection and accountability."
+      },
+      "occupancy_start": null,
+      "occupancy_end": null
+    },
+    {
+      "observation_id": "SITE-OBS-017",
+      "object_ids": [
+        "SH-SITE-0024"
+      ],
+      "kind": "EXPERIMENTAL_SITE_CONTEXT",
+      "meaning": "The incident identifies experimental activity, not a surveyed mine or occupied parcel.",
+      "source": {
+        "path": "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md",
+        "revision": "a8e6dd99c113e0470bdc4fcc63bab616949186d0",
+        "sha256": "5bc15670b1d7c3c98d754329a0fad44bd4a82ea7db977bfa064b5db80062b2f7",
+        "locator": "lines:741-750",
+        "text": "Glasshouse attempts underground machine vision.\n\nThe system performs well under controlled conditions and blinds itself in dust, moisture, condensation, glare, and ordinary mine contamination.\n\nThe project fails as designed.\n\nThe surviving lesson is:\n\n> **The mine gets a vote.**\n"
+      },
+      "occupancy_start": null,
+      "occupancy_end": null
+    }
+  ],
+  "counts": {
+    "DIMENSIONED_ALTERNATIVES_DELIVERED_SELECTION_OPEN": 3,
+    "SOURCE_BOUND_WITH_EXPLICIT_PRECISION_LIMIT": 10,
+    "PROPOSED_NOT_PROVED_OCCUPIED": 3,
+    "PHYSICAL_ACCOMMODATION_DECISION_OPEN": 5,
+    "RUNTIME_EVIDENCE_BOUNDARY": 4,
+    "AGGREGATE_NOT_AN_ADDITIONAL_PARCEL": 3,
+    "OPERATING_HOST_GEOGRAPHY_OPEN": 2,
+    "COMPONENT_NOT_SEPARATE_PROPERTY": 4
+  },
+  "scope": "All 34 stable site/component records. This docket identifies concrete next evidence or design decisions; it does not promote unresolved canon."
+}

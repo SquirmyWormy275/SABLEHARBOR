@@ -38,6 +38,10 @@ Generated file inventory. Includes current and historical records; open the sour
 
 - [Geographic evidence package](../../../geospatial/closeout/README.md) — MD
 
+## `geospatial/completion`
+
+- [Geographic requirements: source review, site alternatives and history](../../../geospatial/completion/README.md) — MD
+
 ## `geospatial/docs`
 
 - [ARU/BS&T geographic implementation summary](../../../geospatial/docs/ARU_BST_GEOGRAPHY_ADDENDUM_IMPLEMENTATION_SUMMARY.md) — MD
