@@ -1,0 +1,16 @@
+{
+  "record_id": "SH-FIN-BILL-PROP-001",
+  "state": "DRAFT_FOR_OWNER_REVIEW",
+  "members": [
+    {
+      "path": "proposal.json",
+      "sha256": "23d8d6080ad296468d6b649eda55593d49c33cde0e6b038343ce11e4973e23f8"
+    },
+    {
+      "path": "README.md",
+      "sha256": "059ce8e77ff8b47c7d5f768f994bfb73525fb4dedf7c3e47e3fd87f656e01b73"
+    }
+  ],
+  "financial_source_changes": false,
+  "shared_catalog_integration": "DEFERRED_UNTIL_REVIEW"
+}
