@@ -1,0 +1,84 @@
+{
+  "gap_id": "LEGAL-GAP-COLO",
+  "document_id": "SH-LEGAL-DRAFT-COLO",
+  "title": "Colocation site-order, acceptance and invoice schedules",
+  "status": "DRAFT_FOR_REVIEW",
+  "source_paths": [
+    "enterprise/runtime/docs/CONTRACT_DOSSIER.md",
+    "enterprise/services/source/runtime_sites_2026-09-11.json"
+  ],
+  "proposed_terms": [
+    {
+      "id": "SH-LEGAL-DRAFT-COLO-T01",
+      "term": "Supplement RT-MSA-001 and existing RT-SO-RENO/RT-SO-BOISE, no competing master.",
+      "basis": "Existing SH-RT-CONTRACT-001."
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-COLO-T02",
+      "term": "Technical acceptance precedes billing except expressly agreed reservation charges.",
+      "basis": "Existing master rule with proposed evidence form."
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-COLO-T03",
+      "term": "Meter, quote, invoice and credits retain separate status and provenance.",
+      "basis": "Existing Schedules A/B expanded into reviewable completion clauses."
+    }
+  ],
+  "unresolved_fields": [
+    {
+      "id": "SH-LEGAL-DRAFT-COLO-U01",
+      "field": "Provider legal entity, enclosure, quote and start date",
+      "next_action": "Obtain and verify site-specific order response."
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-COLO-U02",
+      "field": "Test results, signatures and invoice/payment evidence",
+      "next_action": "Complete only from actual approved case records; no automatic acceptance."
+    }
+  ],
+  "financial_schedules": [
+    {
+      "name": "Source pricing sensitivities; not quotes or invoices",
+      "columns": [
+        "site",
+        "quantity_kw",
+        "rate_usd_per_kw_month",
+        "monthly_usd",
+        "basis"
+      ],
+      "rows": [
+        [
+          "Reno",
+          75,
+          350,
+          26250,
+          "Analyst sensitivity"
+        ],
+        [
+          "Reno",
+          100,
+          350,
+          35000,
+          "Analyst sensitivity"
+        ],
+        [
+          "Boise",
+          14.6,
+          300,
+          4380,
+          "Synthetic average at reported public rate"
+        ],
+        [
+          "Boise",
+          25,
+          300,
+          7500,
+          "Hypothetical commitment sensitivity; not public actual-draw billing"
+        ]
+      ]
+    }
+  ],
+  "version": "0.1.0",
+  "prepared": "2026-09-12",
+  "approval_status": "NOT_ACCEPTED"
+}

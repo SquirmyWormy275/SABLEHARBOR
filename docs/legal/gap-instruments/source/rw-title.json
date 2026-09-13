@@ -1,0 +1,89 @@
+{
+  "gap_id": "LEGAL-GAP-RW-TITLE",
+  "document_id": "SH-LEGAL-DRAFT-RW-TITLE",
+  "title": "Red Wash supplemental assignment, consent and title-cure escrow instruments",
+  "status": "DRAFT_FOR_REVIEW",
+  "prepared": "2026-09-12",
+  "owner_role": "Pale Sun transaction owner with Red Wash operating authority and enterprise Legal",
+  "approval": null,
+  "effective_date": null,
+  "source_paths": [
+    "red_wash/agreements/TRANSACTION_AND_COMMERCIAL_INSTRUMENTS.md",
+    "industrial/transaction/01_RW_TRANSACTION_FILE.md",
+    "docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05_R2.md",
+    "red_wash/source/core_operating_data.json"
+  ],
+  "proposed_terms": [
+    {
+      "id": "SH-LEGAL-DRAFT-RW-TITLE-T01",
+      "term": "Item-specific confirmatory assignment preserves membership-interest acquisition structure",
+      "basis": "Accepted RWH membership-interest acquisition plus proposed instrument mechanics"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-RW-TITLE-T02",
+      "term": "Easement correction cannot expand property,route or use without separate amendment",
+      "basis": "Proposed scope restriction; no mine spur accepted"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-RW-TITLE-T03",
+      "term": "Escrow notice and joint release require supported claim/balance record",
+      "basis": "Existing 36-month $3M escrow; no release evidence"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-RW-TITLE-T04",
+      "term": "Separate escrow and holdback within $28M consideration",
+      "basis": "Accepted transaction accounting"
+    }
+  ],
+  "unresolved_fields": [
+    {
+      "id": "SH-LEGAL-DRAFT-RW-TITLE-U01",
+      "field": "Native easement/contract identifiers and legal descriptions",
+      "next_action": "Retrieve underlying instruments; do not infer from illustrative maps"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-RW-TITLE-U02",
+      "field": "Counterparty/administrator identity, signing authority and delivery evidence",
+      "next_action": "Complete from actual source record before instrument use"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-RW-TITLE-U03",
+      "field": "Escrow current balance and claims/releases",
+      "next_action": "Obtain supported administrator ledger; preserve unknowns"
+    }
+  ],
+  "financial_schedules": [
+    {
+      "name": "Accepted consideration allocation",
+      "columns": [
+        "component",
+        "amount_usd",
+        "status"
+      ],
+      "rows": [
+        [
+          "direct_seller_payment",
+          24500000,
+          "reconstructed allocation"
+        ],
+        [
+          "environmental_title_escrow",
+          3000000,
+          "within consideration; balance unconfirmed"
+        ],
+        [
+          "holdback",
+          500000,
+          "within consideration"
+        ],
+        [
+          "total",
+          28000000,
+          "accepted unchanged"
+        ]
+      ]
+    }
+  ],
+  "version": "0.1.0",
+  "approval_status": "NOT_ACCEPTED"
+}

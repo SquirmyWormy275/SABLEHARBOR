@@ -1,0 +1,229 @@
+{
+  "proposal_id": "SH-FIN-BILL-PROP-001",
+  "version": "0.1.0",
+  "status": "DRAFT_FOR_OWNER_REVIEW",
+  "base_revision": "62048c2153977acf2bc52d8e1f54aa6ebb9b57d8",
+  "scope": {
+    "invoice_id": "INV-base-FF-003-TERM-0",
+    "contract_id": "FF-003",
+    "customer_id": "SYN-CUSTOMER-003",
+    "scenario": "base",
+    "unit": "foundry-field",
+    "applies_to": "One separately labelled reconstructed invoice only; not the accepted accounting evidence memo or historical release."
+  },
+  "source": {
+    "packet_commit": "59201ccfa6a302e19c766694b3160fe8e9b942a4",
+    "packet_path": "docs/finance/evidence/SH-FIN-HUMAN-001/source.json",
+    "packet_sha256": "c4833cfc6f28db6cd3edcae761b0e2d8f463a20de79f1d6fd5b0c517f8f829b7",
+    "packet_url": "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/59201ccfa6a302e19c766694b3160fe8e9b942a4/docs/finance/evidence/SH-FIN-HUMAN-001/source.json",
+    "release": "business-operations-v1.0.0",
+    "release_source_revision": "57cfa1b1c483ccf1f8b15d82c4cbdadbeef8063e",
+    "release_sha256": "b8e81572d829fec7209d1d18eb15bac21e52b37714211aee005b5f1a68ab5817",
+    "invoice_member": {
+      "member": "units/foundry-field/invoices.csv",
+      "sha256": "f58676ff9d2f0ba004b0ad1a1a8c102229c024109399f71803c157c5a3b8f624"
+    },
+    "journal_member": {
+      "member": "units/foundry-field/journal.csv",
+      "sha256": "cc08df352beeaece968889529942cad79d067a309e705bf9e7908573a36ac24a"
+    }
+  },
+  "preserved_source_values": {
+    "invoice": {
+      "amount_usd": "1740000.0000",
+      "collected_usd": "609000.0000",
+      "collection_month": "2",
+      "credit_profile": "DEFAULT-003",
+      "credit_state": "DEFAULT",
+      "credit_usd": "159500.0000",
+      "customer_id": "SYN-CUSTOMER-003",
+      "due_date": "2027-02-28",
+      "due_month": "2",
+      "host_settled_usd": "0.0000",
+      "host_share": "0",
+      "invoice_id": "INV-base-FF-003-TERM-0",
+      "issue_month": "1",
+      "recovered_usd": "174000.0000",
+      "refunded_usd": "0.0000",
+      "remaining_usd": "0.0000",
+      "scenario": "base",
+      "source_id": "FF-003-TERM-0",
+      "unit": "foundry-field",
+      "writtenoff_credit_usd": "159500.0000",
+      "writtenoff_usd": "1305000.0000"
+    },
+    "contract": {
+      "compute_monthly_usd": "3600",
+      "contract_id": "FF-003",
+      "customer_id": "SYN-CUSTOMER-003",
+      "deployment_fee_usd": "0",
+      "monthly_subscription_usd": "145000",
+      "origin": "DIRECT",
+      "payment_due_months": "1",
+      "pricing_basis": "",
+      "scenario_status": "SYNTHETIC_COMMERCIAL_POPULATION",
+      "seats": "140",
+      "start_month": "1",
+      "term_months": "12",
+      "unit": "foundry-field"
+    },
+    "invoice_posting_periods": [
+      "2027-01-31"
+    ],
+    "journal_entity_codes": [
+      "SHI"
+    ],
+    "invoice_posting_source_ids": [
+      "base-01-INVOICE-INV-base-FF-003-TERM-0"
+    ]
+  },
+  "proposed_fields": [
+    {
+      "field_id": "customer.display_name",
+      "value": "Copperreach Fabrication",
+      "state": "PROPOSED_SCENARIO_DETAIL",
+      "source_value": null,
+      "basis": "New fictional display name for existing SYN-CUSTOMER-003; no new customer ledger row.",
+      "decision_id": null
+    },
+    {
+      "field_id": "customer.billing_address",
+      "value": [
+        "1840 Quarry Exchange",
+        "Suite 210",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "state": "PROPOSED_SCENARIO_DETAIL",
+      "source_value": null,
+      "basis": "Invented correspondence address for this scenario only; no geocoding, site, property, occupancy or postal-delivery claim.",
+      "decision_id": null
+    },
+    {
+      "field_id": "customer.billing_attention",
+      "value": "Accounts Payable",
+      "state": "PROPOSED_SCENARIO_DETAIL",
+      "source_value": null,
+      "basis": "Functional addressee; no named employee or authorization grant.",
+      "decision_id": null
+    },
+    {
+      "field_id": "customer.display_contact",
+      "value": "accounts-payable@copperreach.invalid",
+      "state": "PROPOSED_SCENARIO_DETAIL",
+      "source_value": null,
+      "basis": "Display-only fictional contact; not an endpoint to deploy or contact.",
+      "decision_id": null
+    },
+    {
+      "field_id": "customer.purchase_order",
+      "value": "CRF-2027-FF003-001",
+      "state": "PROPOSED_SCENARIO_DETAIL",
+      "source_value": null,
+      "basis": "Invented display reference; no existing approval document or new procurement authorization.",
+      "decision_id": null
+    },
+    {
+      "field_id": "customer.legal_name",
+      "value": null,
+      "state": "PROPOSED_SCENARIO_DETAIL",
+      "source_value": null,
+      "basis": "Retain customer ID and display name only; no incorporation suffix, jurisdiction or executed party identity inferred.",
+      "decision_id": "BILL-DEC-001"
+    },
+    {
+      "field_id": "issuer.brand",
+      "value": "Foundry Field",
+      "state": "PROPOSED_SCENARIO_DETAIL",
+      "source_value": null,
+      "basis": "Use existing business identity; this field proposes invoice presentation, not a new logo or legal entity.",
+      "decision_id": null
+    },
+    {
+      "field_id": "issuer.billing_address",
+      "value": [
+        "240 Harbor Works Avenue",
+        "Billing desk \u2014 Foundry Field",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "state": "PROPOSED_SCENARIO_DETAIL",
+      "source_value": null,
+      "basis": "Invented display-only correspondence address; not the campus location, a registered office, a service site or a proposed geography-register addition.",
+      "decision_id": null
+    },
+    {
+      "field_id": "issuer.display_contact",
+      "value": "billing@foundry-field.invalid",
+      "state": "PROPOSED_SCENARIO_DETAIL",
+      "source_value": null,
+      "basis": "Display-only fictional contact; no live service or remittance endpoint.",
+      "decision_id": null
+    },
+    {
+      "field_id": "issuer.legal_name",
+      "value": null,
+      "state": "PROPOSED_SCENARIO_DETAIL",
+      "source_value": null,
+      "basis": "Present source legal-book code SHI with legal issuer name unestablished for this reconstructed instrument; do not make Foundry Field a subsidiary.",
+      "decision_id": "BILL-DEC-002"
+    },
+    {
+      "field_id": "invoice.display_issue_date",
+      "value": "2027-01-31",
+      "state": "PROPOSED_SCENARIO_DETAIL",
+      "source_value": null,
+      "basis": "Proposed documentary date aligned to first posting period; source issue_month is 1 and source has no exact issue-date field.",
+      "decision_id": null
+    },
+    {
+      "field_id": "invoice.service_description",
+      "value": "Foundry Field subscription \u2014 initial 12-month term, 140 seats",
+      "state": "PROPOSED_SCENARIO_DETAIL",
+      "source_value": null,
+      "basis": "Plain-language rendering of contract FF-003; does not add SLA terms, acceptance or implementation deliverables.",
+      "decision_id": null
+    },
+    {
+      "field_id": "invoice.tax_presentation",
+      "value": "Tax treatment not established in the source; no separate tax amount represented.",
+      "state": "PROPOSED_SCENARIO_DETAIL",
+      "source_value": null,
+      "basis": "Do not show zero tax, exemption, tax ID, inclusive/exclusive election or recompute the released amount.",
+      "decision_id": "BILL-DEC-003"
+    },
+    {
+      "field_id": "invoice.payment_instructions",
+      "value": "Not supplied in this reconstruction.",
+      "state": "PROPOSED_SCENARIO_DETAIL",
+      "source_value": null,
+      "basis": "No bank, routing, account, payment link, remittance address or payee instruction.",
+      "decision_id": null
+    }
+  ],
+  "acceptance": {
+    "state": "NOT_ACCEPTED",
+    "required": "Owner review naming proposal version and SHA-256, with accepted/rejected field IDs; dated repository acceptance record through reviewed PR. Legal/tax unresolved treatments remain explicit unless separately resolved.",
+    "record": null,
+    "source_overwrite_permitted": false,
+    "amount_change_permitted": false,
+    "visual_design_approval_implied": false
+  },
+  "decisions": [
+    {
+      "id": "BILL-DEC-001",
+      "question": "Retain an unincorporated display name and omit customer legal form, or authorize a separately specified fictional legal party?",
+      "recommended_treatment": "Display name only; legal name remains null."
+    },
+    {
+      "id": "BILL-DEC-002",
+      "question": "Which accepted legal entity issues this reconstructed invoice? SHI is the accounting code, not by itself evidence of an executed seller name.",
+      "recommended_treatment": "Keep legal name null and label issuer legal identity unestablished; preserve Foundry Field branding and SHI book linkage."
+    },
+    {
+      "id": "BILL-DEC-003",
+      "question": "Is a separately modelled tax scenario required? Existing source does not determine tax.",
+      "recommended_treatment": "No tax scenario in this proposal; disclose absence without asserting zero/exempt tax or altering USD 1,740,000."
+    }
+  ]
+}
