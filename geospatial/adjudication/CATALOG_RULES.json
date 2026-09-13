@@ -1,0 +1,16 @@
+{
+  "source_commit": "d91a22c35c91b213204411421de88815f27d8e16",
+  "occurrences_sha256": "031d8792af1b74badc449c59b18ad739dd9be28daaf3f21b9e998302d66dbb13",
+  "sources": [
+    {
+      "path": "docs/internal/institutional_catalog.json",
+      "sha256": "11813a0cbf0a69318710e977e36860f97893eab1f178a04469dbb572bf6fc8ce",
+      "occurrences": 110
+    },
+    {
+      "path": "docs/internal/institutional_catalog.sqlite3",
+      "sha256": "ffa1509f3e73cee0c1f28c9224d3e99ff1b927b131506630aab0cabc84e64d82",
+      "occurrences": 334
+    }
+  ]
+}

@@ -6,9 +6,11 @@ The wiki's canonical presentation source lives here in ordinary Markdown. Seven 
 
 ## Publication status
 
-These pages were accepted into main through [PR #128](https://github.com/SquirmyWormy275/SABLEHARBOR/pull/128), with subsequent catalog reconciliation in PRs #130 and #132. The GitHub API reports Wiki enabled, but the separate `SABLEHARBOR.wiki.git` endpoint returned “Repository not found” during the refreshed September 11 (Pacific) inspection. A live GitHub Wiki is not claimed. The repository pages themselves can be browsed directly; no external host is needed.
+The [live GitHub Wiki](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki) was first published on September 12, 2026 from accepted source `f7c9da881176da19901fe5ec6e776f0fd8719a39`. Wiki commit `c7b1859` published 56 pages; a fresh remote clone verified every page against the export manifest. Earlier endpoint-unavailable reports describe the pre-publication state.
 
-The accepted [exporter](../../tools/wiki/export.py) and [manual publication workflow](../../.github/workflows/publish-wiki.yml), delivered in [PR #147](https://github.com/SquirmyWormy275/SABLEHARBOR/pull/147), copy accepted Markdown and convert repository-relative links to commit-pinned repository URLs. Publication still requires an initialized Wiki endpoint and its configured `WIKI_TOKEN`; the workflow does not run a publication on pull requests. The separate wiki must not become an independently edited source. Preserve the [wiki policy](../governance/PUBLIC_REPOSITORY_AND_WIKI_POLICY.md), source states, and public-content boundary.
+The [exporter](../../tools/wiki/export.py) converts repository links to commit-pinned source URLs. The remote `sable-harbor-wiki-manifest.json` records the published revision and page hashes. Publish accepted main only; the separate Wiki is a reading copy, not an independently edited source. Preserve the [Wiki policy](../governance/PUBLIC_REPOSITORY_AND_WIKI_POLICY.md).
+
+Publication can use existing local Git authentication. The [manual Actions workflow](../../.github/workflows/publish-wiki.yml) additionally requires its configured `WIKI_TOKEN`; no token was copied into repository secrets for the initial publication.
 
 ## Maintenance and review
 

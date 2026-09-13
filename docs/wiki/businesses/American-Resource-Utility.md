@@ -1,6 +1,6 @@
 # American Resource Utility / BS&T
 
-[Wiki home](../Home.md) · [All business dossiers](../../business-lines/README.md) · [Company charts](../../organization/README.md)
+[Wiki home](../Home.md) · [Business directory](README.md) · [Department directory](../departments/README.md) · [Business dossiers](../../business-lines/README.md) · [Company charts](../../organization/README.md)
 
 <img src="../../../assets/brand/industrial_sources/aru/aru_primary_centered_chat_asset.png" alt="Approved American Resource Utility / BS&T logo" width="280">
 
@@ -18,7 +18,7 @@ The legal chain is Sable Harbor → Sable Harbor Industrial Holdings → ARU →
 
 [![American Resource Utility / BS&T existing organization chart](../../../docs/organization/assets/current/aru-services.png)](../../../docs/organization/charts/aru-services.md)
 
-Open the chart to read its relationship key and any additional pages. Grouped functions are not automatically reporting lines, separate companies or additional employees.
+[Read the chart’s text roster, relationship key and source qualifications](../../../docs/organization/charts/aru-services.md). Grouped functions are not automatically reporting lines, separate companies or additional employees.
 
 [Named people and recorded roles](../../../docs/organization/charts/people-aru-leadership.md) — the current chart preserves unknown joining years rather than inventing them.
 

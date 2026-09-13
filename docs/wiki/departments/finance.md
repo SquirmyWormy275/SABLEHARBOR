@@ -22,7 +22,7 @@ Finance maintains authoritative economic records, financial reporting, treasury,
 
 ## Organization and identity
 
-[Current chart and all of its pages](../../organization/charts/corporate-enterprise-support.md) · [Complete organization publication](../../organization/assets/current/Sable-Harbor-Organization-Charts.pdf).
+[Organization chart, text roster and source qualifications](../../organization/charts/corporate-enterprise-support.md) · [Complete organization publication](../../organization/assets/current/Sable-Harbor-Organization-Charts.pdf).
 
 [![Finance — shared organization chart, first page](../../organization/assets/current/corporate-enterprise-support.png)](../../organization/assets/current/corporate-enterprise-support.png)
 
@@ -32,4 +32,4 @@ The shared chart retains its original scope; it is not a new reporting chart for
 
 Conditional forecasts, generated transactions and source-locked historical releases are different evidence sets. They do not establish current company headcount, executed contracts or actual future results.
 
-[Department and institution directory](README.md) · [Wiki home](../Home.md)
+[Department and institution directory](README.md) · [Business directory](../businesses/README.md) · [Wiki home](../Home.md)
