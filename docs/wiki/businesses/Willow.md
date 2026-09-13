@@ -1,6 +1,6 @@
 # Willow
 
-[Wiki home](../Home.md) · [All business dossiers](../../business-lines/README.md) · [Company charts](../../organization/README.md)
+[Wiki home](../Home.md) · [Business directory](README.md) · [Department directory](../departments/README.md) · [Business dossiers](../../business-lines/README.md) · [Company charts](../../organization/README.md)
 
 <img src="../../../assets/brand/logos/willow__reverse-horizontal.png" alt="Approved Willow logo" width="360">
 
@@ -18,7 +18,7 @@ Willow is an internal parent-book program and cost center, not a subsidiary or a
 
 [![Willow existing organization chart](../../../docs/organization/assets/current/willow-fort.png)](../../../docs/organization/charts/willow-fort.md)
 
-Open the chart to read its relationship key and any additional pages. Grouped functions are not automatically reporting lines, separate companies or additional employees.
+[Read the chart’s text roster, relationship key and source qualifications](../../../docs/organization/charts/willow-fort.md). Grouped functions are not automatically reporting lines, separate companies or additional employees.
 
 [Named people and recorded roles](../../../docs/organization/charts/people-willow-team.md) — the current chart preserves unknown joining years rather than inventing them.
 

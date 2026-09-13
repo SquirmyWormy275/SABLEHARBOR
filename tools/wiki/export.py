@@ -22,7 +22,9 @@ MARKDOWN = MarkdownIt("commonmark", {"html": True}).enable("table")
 INLINE = re.compile(r'(\]\()(<[^>\n]+>|[^\s()]+)(?=\s*(?:["\'][^\n]*["\']\s*)?\))')
 REFERENCE = re.compile(r"^( {0,3}\[[^\]\n]+\]:\s*)(<[^>\n]+>|\S+)", re.M)
 ATTRIBUTE = re.compile(r'\b(href|src)\s*=\s*(["\'])(.*?)\2', re.I)
-CODE = re.compile(r"(^ {0,3}(`{3,}|~{3,})[^\n]*\n[\s\S]*?^ {0,3}\2\s*$|`+[^`\n]*`+)", re.M)
+CODE = re.compile(
+    r"(^ {0,3}(`{3,}|~{3,})[^\n]*\n[\s\S]*?^ {0,3}\2\s*$|`+[^`\n]*`+)", re.M
+)
 
 
 class Exporter:
@@ -34,7 +36,8 @@ class Exporter:
         self.wiki = self.root / "docs/wiki"
         self.pages = sorted(self.wiki.rglob("*.md"))
         self.names = {
-            p: "--".join(p.relative_to(self.wiki).with_suffix("").parts) for p in self.pages
+            p: "--".join(p.relative_to(self.wiki).with_suffix("").parts)
+            for p in self.pages
         }
         if len({name.casefold() for name in self.names.values()}) != len(self.names):
             raise ValueError("Wiki page names collide after flattening")
@@ -48,7 +51,9 @@ class Exporter:
             return value
         target = (source.parent / unquote(parsed.path)).resolve()
         if not target.is_relative_to(self.root) or not target.exists():
-            raise ValueError(f"{source.relative_to(self.root)}: missing/outside target {value}")
+            raise ValueError(
+                f"{source.relative_to(self.root)}: missing/outside target {value}"
+            )
         self.links += 1
         base = f"https://github.com/{REPOSITORY}"
         if target in self.names and not image:
@@ -83,7 +88,9 @@ class Exporter:
             value = INLINE.sub(destination, value)
             value = REFERENCE.sub(destination, value)
             return ATTRIBUTE.sub(
-                lambda m: f"{m[1]}={m[2]}{self.target(source, m[3], m[1].lower() == 'src')}{m[2]}",
+                lambda m: (
+                    f"{m[1]}={m[2]}{self.target(source, m[3], m[1].lower() == 'src')}{m[2]}"
+                ),
                 value,
             )
 
@@ -110,12 +117,29 @@ class Exporter:
             raise ValueError("Export output must be empty")
         # Validate everything before writing any publication files.
         content = {self.names[p] + ".md": self.rewrite(p) for p in self.pages}
-        sidebar = ["# Sable Harbor", "", "[Home](Home)", "[Library](Library)", ""]
-        sidebar.extend(
-            f"- [{p.stem}]({self.names[p]})"
-            for p in self.pages
-            if p.parent.name == "businesses" and p.stem != "README"
-        )
+        sidebar = [
+            "# Sable Harbor",
+            "",
+            "[Home](Home)",
+            "",
+            "- [Business directory](businesses--README)",
+            "- [Department directory](departments--README)",
+            "- [History and subjects](subjects--README)",
+            "- [Document library](Library)",
+            "",
+        ]
+        for directory, title in (
+            ("businesses", "Businesses"),
+            ("departments", "Departments and institutions"),
+            ("subjects", "History and subjects"),
+        ):
+            sidebar.extend([f"## {title}", ""])
+            for page in self.pages:
+                if page.parent.name == directory and page.stem != "README":
+                    heading = re.search(r"^# (.+)$", page.read_text(), re.M)
+                    label = heading[1] if heading else page.stem
+                    sidebar.append(f"- [{label}]({self.names[page]})")
+            sidebar.append("")
         content["_Sidebar.md"] = "\n".join(sidebar) + "\n"
         output.mkdir(parents=True, exist_ok=True)
         files = {}
@@ -159,7 +183,9 @@ def sync(export: Path, wiki: Path):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--root", type=Path, default=Path(__file__).resolve().parents[2])
+    parser.add_argument(
+        "--root", type=Path, default=Path(__file__).resolve().parents[2]
+    )
     parser.add_argument("--revision", required=True)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--sync-to", type=Path)
@@ -167,4 +193,6 @@ if __name__ == "__main__":
     manifest = Exporter(args.root, args.revision).build(args.output)
     if args.sync_to:
         sync(args.output, args.sync_to)
-    print(f"Exported {len(manifest['files'])} pages; converted {manifest['converted_links']} links")
+    print(
+        f"Exported {len(manifest['files'])} pages; converted {manifest['converted_links']} links"
+    )

@@ -20,7 +20,7 @@ Alexandria preserves institutional records and their history and connects questi
 
 ## Organization and identity
 
-[Current chart and all of its pages](../../organization/charts/corporate-alexandria.md) · [Complete organization publication](../../organization/assets/current/Sable-Harbor-Organization-Charts.pdf).
+[Organization chart, text roster and source qualifications](../../organization/charts/corporate-alexandria.md) · [Complete organization publication](../../organization/assets/current/Sable-Harbor-Organization-Charts.pdf).
 
 [![Alexandria institutional environment — shared organization chart, first page](../../organization/assets/current/corporate-alexandria.png)](../../organization/assets/current/corporate-alexandria.png)
 
@@ -30,4 +30,4 @@ The shared chart retains its original scope; it is not a new reporting chart for
 
 Alexandria is a system, not an additional department. This wiki and the generated catalog do not claim to implement the full Pinakes experience or a production Alexandria estate.
 
-[Department and institution directory](README.md) · [Wiki home](../Home.md)
+[Department and institution directory](README.md) · [Business directory](../businesses/README.md) · [Wiki home](../Home.md)

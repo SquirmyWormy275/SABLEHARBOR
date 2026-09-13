@@ -57,3 +57,35 @@ typecheck:
 	uv run mypy src
 
 ci: lint typecheck test
+
+.PHONY: help check-fast check-wiki check-geo-review check-operations wiki-visual wiki-publish
+help:
+	@echo 'make bootstrap         Install locked development dependencies'
+	@echo 'make check-fast        Lint, types, Wiki links and focused Wiki tests'
+	@echo 'make check-wiki        Wiki navigation, accessibility and exporter checks'
+	@echo 'make wiki-visual       Browser checks (install Chromium once; see tools/ci/README.md)'
+	@echo 'make check-geo-review  Reproduce geographic review batches and their tests'
+	@echo 'make check-operations Run business/operations/planning tests without full packaging'
+	@echo 'make ci               Full root test suite, lint and types'
+	@echo 'make wiki-publish     Publish clean accepted main using existing Git authentication'
+
+check-fast: lint typecheck check-wiki
+
+check-wiki:
+	uv run python -m unittest discover -s tests/wiki -q
+	uv run python tools/wiki/audit.py --output var/wiki-navigation.json
+
+wiki-visual:
+	uv run --with-requirements tools/wiki/visual/requirements.txt python tools/wiki/visual/check.py
+
+check-geo-review:
+	uv run python geospatial/adjudication/review_blackridge.py --check
+	uv run python -m geospatial.adjudication.review_reference_layers --check
+	uv run python -m geospatial.adjudication.review_catalog --check
+	uv run python -m pytest geospatial/tests/test_*adjudication.py -q
+
+check-operations:
+	uv run python -m pytest enterprise/operations/tests enterprise/business/tests industrial/planning/tests -q
+
+wiki-publish:
+	uv run python -m tools.wiki.publish

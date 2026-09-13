@@ -1,0 +1,16 @@
+{
+  "source_commit": "d91a22c35c91b213204411421de88815f27d8e16",
+  "rules_sha256": "ff64882b929a4b0b114be6e09b6f5c5bec63ecaaf8f6fc1c6ec44174ffd01ecd",
+  "review_output_sha256": "7e5455d47dae1b8b00d7f52fa2aa793bb8aa235d06ba01c7e5765de4a65859bd",
+  "reviewed_occurrences": 444,
+  "hash_verified_source_documents": 84,
+  "disposition_counts": {
+    "DERIVED_SEARCH_COPY": 336,
+    "CATALOG_METADATA_REFERENCE": 108
+  },
+  "cumulative_reviewed_occurrences": 69184,
+  "remaining_unreviewed_occurrences": 8961,
+  "semantic_census_complete": false,
+  "geometry_or_occupancy_promoted": false,
+  "limits": "Index carriers are traced to their archived sources. This does not adjudicate geographic claims within those documents or promote catalog metadata to canon. Search text copies are retained, not counted as independent corroboration."
+}
