@@ -22,14 +22,29 @@ def build(output, allow_dirty=False):
     if output.exists() or archive.exists():
         raise ValueError("Use a new output path; never replace a delivered edition")
     version, additions = previous.VERSION, previous.ADDITIONS
+    collect_original = previous.previous.collect
+
+    def collect_review_files():
+        # Reports may name QA and derived discovery files without making them
+        # financial packet inputs. Keep those references repository-linked.
+        return [
+            p
+            for p in collect_original()
+            if "/qa/" not in p
+            and not p.startswith("docs/wiki/")
+            and p != "docs/internal/institutional_catalog.sqlite3"
+        ]
+
     with tempfile.TemporaryDirectory() as scratch:
         intermediate = Path(scratch) / "review"
         try:
+            previous.previous.collect = collect_review_files
             previous.VERSION = VERSION
             previous.ADDITIONS = additions + ADDITIONS
             previous.build(intermediate, allow_dirty)
         finally:
             previous.VERSION, previous.ADDITIONS = version, additions
+            previous.previous.collect = collect_original
         start = intermediate / "START_HERE.html"
         links = "".join(
             f'<li><a href="{previous.PREFIX}/{folder}/README.md.html">{label}</a></li>'

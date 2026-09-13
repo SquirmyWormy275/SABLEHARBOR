@@ -14,6 +14,8 @@ def test_new_bundle_preserves_bytes_and_offline_routes(tmp_path):
     assert manifest["version"] == "0.4.0-review.2"
     for relative in manifest["original_files"]:
         assert (output / relative).read_bytes() == (package.ROOT / relative).read_bytes()
+    assert not any("/qa/" in r["path"] for r in manifest["files"])
+    assert not (output / "docs/internal/institutional_catalog.sqlite3").exists()
     start = (output / "START_HERE.html").read_text()
     for folder in package_v4.ADDITIONS:
         assert folder + "/README.md.html" in start

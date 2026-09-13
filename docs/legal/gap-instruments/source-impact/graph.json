@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "baseline_revision": "3004549cfe2018698b0a5085abd90d1d85ad2f68",
+  "baseline_revision": "381e4ae3fc7505405b74a1dc7fa8eb6d3ba1dc06",
   "status": "BOUNDED_REVIEW_TOOL_NOT_CANON",
   "nodes": [
     {
@@ -688,7 +688,7 @@
       "path": "docs/legal/gap-instruments/case-briefs/manifest.json",
       "kind": "file",
       "role": "register",
-      "sha256": "977eb421f8231cec113729e9332de8a741c82a4918bba5221807b102de391ceb"
+      "sha256": "bd98dad6fcd3e12257eb978e9e0e2b1734c0c44c7956346487a0cf1365584db8"
     },
     {
       "id": "docs/legal/gap-instruments/case-briefs/source.json",
@@ -4065,7 +4065,7 @@
       "path": "tools/legal_gaps/case_briefs.py",
       "kind": "file",
       "role": "source",
-      "sha256": "ec61a98624476a89f18095bfa5aade6005e91ffa1611129e6b624bda49252bf0"
+      "sha256": "dd85f7f4573555675a780f059116fa15371b7ef8b72e57d13d070f9321ed0cf1"
     },
     {
       "id": "tools/legal_gaps/evidence_tracking.py",

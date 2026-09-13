@@ -66,7 +66,11 @@ purpose. No new release membership is inferred before that release exists.
 ## Baseline maintenance
 
 The integrated baseline is commit
-`3004549cfe2018698b0a5085abd90d1d85ad2f68`: 473 nodes and 2,452 explicit edges.
+`381e4ae3fc7505405b74a1dc7fa8eb6d3ba1dc06`: 473 nodes and 2,452 explicit edges.
+The [CI portability reconciliation](baseline-reconciliation-381e4ae/DISPOSITION.md)
+records the two changed mapped inputs, 17 flagged downstream nodes and verification
+that all 13 reviewed PDF/HTML/workbook files remain byte-identical. The prior
+3004549 baseline remains in Git history.
 The preliminary d1c5945 baseline remains preserved in Git at commit
 `831e5cec3616779f59ce1f9f2b963bf256cf8416`; it was extended to include the new
 period close, 14-request tracker and five case briefs. The simulated invoice
