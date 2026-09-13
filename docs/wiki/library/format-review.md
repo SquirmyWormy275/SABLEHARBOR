@@ -6,11 +6,11 @@ Generated reconciliation queue, not an assertion that every unpaired record lack
 
 | State | Records |
 |---|---:|
-| COUNTERPART_REVIEW_REQUIRED | 28 |
+| COUNTERPART_REVIEW_REQUIRED | 48 |
 | HISTORICAL_COUNTERPART_UNRESOLVED | 57 |
 | NAVIGATION_ALIAS_NO_PUBLICATION | 3 |
-| READER_MAINTENANCE_NO_LETTERHEAD | 112 |
-| READER_OR_MAINTENANCE_PAGE | 152 |
+| READER_MAINTENANCE_NO_LETTERHEAD | 111 |
+| READER_OR_MAINTENANCE_PAGE | 156 |
 | UNRESOLVED_DOCUMENT_COUNTERPART | 227 |
 | VERIFIED_ACCEPTED_EVIDENCE_PACKET | 1 |
 | VERIFIED_CHART_PUBLICATION | 40 |
@@ -22,6 +22,7 @@ Generated reconciliation queue, not an assertion that every unpaired record lack
 Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENCE_COMPLETION.md). Other corporate records require scoped format review before any batch rendering. Existing approved visuals are retained; this queue does not authorize automatic publication.
 
 - [Contributing to Sable Harbor](../../../CONTRIBUTING.md) — Corporate document-format reconciliation
+- [SABLE HARBOR CONTROLLED DOCUMENT INDEX](../../CONTROLLED_DOCUMENT_INDEX.md) — Corporate document-format reconciliation
 - [Branch and Pull Request Register](../../audit/BRANCH_AND_PR_REGISTER.md) — SH-FIN-HUMAN-001
 - [Outstanding issue review — September 12, 2026](../../audit/ISSUE_CLOSEOUT_2026-09-12.md) — SH-FIN-HUMAN-001
 - [Accounting, finance and audit practice](../../finance/READER_EXERCISES.md) — SH-FIN-HUMAN-001
@@ -42,6 +43,25 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Advisory carry and workforce instrument boundaries](../../legal/evidence/corporate/SH-LEGAL-READ-CARRY-001.md) — SH-FIN-HUMAN-001
 - [Legal entities and separate books](../../legal/evidence/corporate/SH-LEGAL-READ-ENTITY-001.md) — SH-FIN-HUMAN-001
 - [ARU transition and retention obligations](../../legal/evidence/corporate/SH-LEGAL-READ-HR-001.md) — SH-FIN-HUMAN-001
+- [Draft instrument index](../../legal/gap-instruments/PACKAGE_INDEX.md) — SH-FIN-HUMAN-001
+- [Seventeen legal gap packages — drafting and validation record](../../legal/gap-instruments/RESULTS.md) — SH-FIN-HUMAN-001
+- [Advisory master services agreement and matter schedules](../../legal/gap-instruments/source/advisory-contracts.md) — SH-FIN-HUMAN-001
+- [Foundry Field proposed billing instrument and reconciliation attachment](../../legal/gap-instruments/source/billing.md) — SH-FIN-HUMAN-001
+- [Advisory contractual phantom carry plan — proposed instrument](../../legal/gap-instruments/source/carry.md) — SH-FIN-HUMAN-001
+- [Colocation site-order, acceptance and invoice schedules](../../legal/gap-instruments/source/colo.md) — SH-FIN-HUMAN-001
+- [ARU credit, security and payoff document drafts](../../legal/gap-instruments/source/debt-liens.md) — SH-FIN-HUMAN-001
+- [Harrison Vale and Wolf Ridge subscription and rights drafts](../../legal/gap-instruments/source/financing-documents.md) — SH-FIN-HUMAN-001
+- [Industrial company consents and subscription record drafts](../../legal/gap-instruments/source/formations.md) — SH-FIN-HUMAN-001
+- [Cradle host recovery agreement with Kelly Gang Mining and Demotte schedules](../../legal/gap-instruments/source/host-rights.md) — SH-FIN-HUMAN-001
+- [Northern Nevada land settlement and funding instruction draft](../../legal/gap-instruments/source/land.md) — SH-FIN-HUMAN-001
+- [Sable Harbor Advisory counsel instruction, search record and launch decision form](../../legal/gap-instruments/source/mark-clearance.md) — SH-FIN-HUMAN-001
+- [Red Wash chronology reconciliation and proposed correction instrument](../../legal/gap-instruments/source/rw-chronology.md) — SH-FIN-HUMAN-001
+- [Red Wash supplemental assignment, consent and title-cure escrow instruments](../../legal/gap-instruments/source/rw-title.md) — SH-FIN-HUMAN-001
+- [Foundry Field tax determination and invoice-change workpaper draft](../../legal/gap-instruments/source/tax-billing.md) — SH-FIN-HUMAN-001
+- [ARU election cooperation and filing-status workpaper draft](../../legal/gap-instruments/source/tax-filing.md) — SH-FIN-HUMAN-001
+- [Sacramento, Fort and Bedford proposed site tenure and access instrument](../../legal/gap-instruments/source/tenure.md) — SH-FIN-HUMAN-001
+- [Conditional future Red Wash product custody and carrier agreement](../../legal/gap-instruments/source/uranium-custody.md) — SH-FIN-HUMAN-001
+- [ARU individual retention agreements and Tolman consultancy](../../legal/gap-instruments/source/workforce.md) — SH-FIN-HUMAN-001
 - [Closeout evidence releases](../../releases/CLOSEOUT_EVIDENCE_RELEASES.md) — Corporate document-format reconciliation
 - [Facility atlas controlled releases](../../releases/FACILITY_ATLAS_RELEASES.md) — Corporate document-format reconciliation
 - [Evidence collection and scheduling](../../../enterprise/ccf/operations/COLLECTION.md) — Corporate document-format reconciliation

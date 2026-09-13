@@ -143,6 +143,10 @@ Generated file inventory. Includes current and historical records; open the sour
 
 - [Controlled-publication builds](../../../tools/documents/README.md) — MD
 
+## `tools/legal_gaps`
+
+- [Gap instrument publications](../../../tools/legal_gaps/README.md) — MD
+
 ## `tools/wiki`
 
 - [Wiki publication](../../../tools/wiki/README.md) — MD

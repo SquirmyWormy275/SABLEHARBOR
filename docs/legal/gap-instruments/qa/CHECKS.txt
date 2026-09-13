@@ -52,3 +52,32 @@ $ python scripts/validate_organization_maps.py
 PASS organization charts: card copy, complete publication coverage, source paths, logos, assets and immutable history
 Exit: 0
 
+$ python scripts/validate_institutional_catalog.py
+institutional catalog validation passed (131 objects, 9 Pinakes portals)
+Exit: 0
+
+$ python scripts/validate_repository_hygiene.py
+PASS repository hygiene: 3305 tracked paths; JSON, Markdown links, stale names, private/fake-contact boundaries
+Exit: 0
+
+$ python tools/legal_gaps/validate_qa.py
+PASS: manual QA receipt covers 52 exact artifacts and every instrument PDF page
+Exit: 0
+
+$ python scripts/validate_business_records.py
+Business records passed: 7 lines, 12 interfaces, 10 existing-CCF implementations
+Exit: 0
+
+$ python scripts/validate_finance_evidence_acceptance.py
+PASS: accepted Foundry Field packet and review artifacts match exact hashes
+Exit: 0
+
+$ python docs/finance/evidence/coverage/validate.py
+PASS current transaction source hashes, complete CSV/SQLite mirror and PPA identities
+PASS exact CSV/database populations, hashes, scope and accounting: {'customer': 5390, 'treasury': 12223, 'close': 15084, 'supporting-schedules': 16236, 'tax-transaction': 73}
+Exit: 0
+
+$ python docs/reader/transactions/validate.py
+PASS: 56 documents, 493 exact sections, 13 dossiers, 336 local links, 17 explicit gaps; 0 draft PDF pages
+Exit: 0
+

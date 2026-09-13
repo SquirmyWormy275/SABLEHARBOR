@@ -3,6 +3,9 @@
 Prepared September 12, 2026. Drafting base:
 `659a56747fe76522d18645ff115888c13fa8d2b0`.
 
+Compatibility integration includes main `5087a1180aa70db780625a9a2a7f9ef3299609c6`.
+Its wiki and reference-evidence additions do not change the legal drafting sources.
+
 All 17 IDs in the transaction gap register have substantial draft packages.
 The [complete index](PACKAGE_INDEX.md) provides individual Markdown, corporate
 PDF, HTML, JSON and Excel files. There are 17 PDF editions containing 98 pages,

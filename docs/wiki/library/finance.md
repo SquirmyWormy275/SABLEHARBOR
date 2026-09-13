@@ -229,6 +229,77 @@ Generated file inventory. Includes current and historical records; open the sour
 
 - [Legal and billing fields awaiting evidence or review](../../legal/evidence/proposals/README.md) — MD
 
+## `docs/legal/gap-instruments`
+
+- [Draft instrument index](../../legal/gap-instruments/PACKAGE_INDEX.md) — MD
+- [Legal gap instruments — draft review](../../legal/gap-instruments/README.md) — MD
+- [Seventeen legal gap packages — drafting and validation record](../../legal/gap-instruments/RESULTS.md) — MD
+
+## `docs/legal/gap-instruments/dependencies`
+
+- [Pinned review dependency](../../legal/gap-instruments/dependencies/README.md) — MD
+
+## `docs/legal/gap-instruments/editions`
+
+- [advisory-contracts](../../legal/gap-instruments/editions/advisory-contracts.pdf) — PDF
+- [advisory-contracts](../../legal/gap-instruments/editions/advisory-contracts.xlsx) — XLSX
+- [billing](../../legal/gap-instruments/editions/billing.pdf) — PDF
+- [billing](../../legal/gap-instruments/editions/billing.xlsx) — XLSX
+- [carry](../../legal/gap-instruments/editions/carry.pdf) — PDF
+- [carry](../../legal/gap-instruments/editions/carry.xlsx) — XLSX
+- [colo](../../legal/gap-instruments/editions/colo.pdf) — PDF
+- [colo](../../legal/gap-instruments/editions/colo.xlsx) — XLSX
+- [debt-liens](../../legal/gap-instruments/editions/debt-liens.pdf) — PDF
+- [debt-liens](../../legal/gap-instruments/editions/debt-liens.xlsx) — XLSX
+- [financing-documents](../../legal/gap-instruments/editions/financing-documents.pdf) — PDF
+- [financing-documents](../../legal/gap-instruments/editions/financing-documents.xlsx) — XLSX
+- [formations](../../legal/gap-instruments/editions/formations.pdf) — PDF
+- [formations](../../legal/gap-instruments/editions/formations.xlsx) — XLSX
+- [host-rights](../../legal/gap-instruments/editions/host-rights.pdf) — PDF
+- [host-rights](../../legal/gap-instruments/editions/host-rights.xlsx) — XLSX
+- [land](../../legal/gap-instruments/editions/land.pdf) — PDF
+- [land](../../legal/gap-instruments/editions/land.xlsx) — XLSX
+- [mark-clearance](../../legal/gap-instruments/editions/mark-clearance.pdf) — PDF
+- [mark-clearance](../../legal/gap-instruments/editions/mark-clearance.xlsx) — XLSX
+- [rw-chronology](../../legal/gap-instruments/editions/rw-chronology.pdf) — PDF
+- [rw-chronology](../../legal/gap-instruments/editions/rw-chronology.xlsx) — XLSX
+- [rw-title](../../legal/gap-instruments/editions/rw-title.pdf) — PDF
+- [rw-title](../../legal/gap-instruments/editions/rw-title.xlsx) — XLSX
+- [tax-billing](../../legal/gap-instruments/editions/tax-billing.pdf) — PDF
+- [tax-billing](../../legal/gap-instruments/editions/tax-billing.xlsx) — XLSX
+- [tax-filing](../../legal/gap-instruments/editions/tax-filing.pdf) — PDF
+- [tax-filing](../../legal/gap-instruments/editions/tax-filing.xlsx) — XLSX
+- [tenure](../../legal/gap-instruments/editions/tenure.pdf) — PDF
+- [tenure](../../legal/gap-instruments/editions/tenure.xlsx) — XLSX
+- [uranium-custody](../../legal/gap-instruments/editions/uranium-custody.pdf) — PDF
+- [uranium-custody](../../legal/gap-instruments/editions/uranium-custody.xlsx) — XLSX
+- [workforce](../../legal/gap-instruments/editions/workforce.pdf) — PDF
+- [workforce](../../legal/gap-instruments/editions/workforce.xlsx) — XLSX
+
+## `docs/legal/gap-instruments/qa`
+
+- [Exact-artifact visual QA](../../legal/gap-instruments/qa/README.md) — MD
+
+## `docs/legal/gap-instruments/source`
+
+- [Advisory master services agreement and matter schedules](../../legal/gap-instruments/source/advisory-contracts.md) — MD
+- [Foundry Field proposed billing instrument and reconciliation attachment](../../legal/gap-instruments/source/billing.md) — MD
+- [Advisory contractual phantom carry plan — proposed instrument](../../legal/gap-instruments/source/carry.md) — MD
+- [Colocation site-order, acceptance and invoice schedules](../../legal/gap-instruments/source/colo.md) — MD
+- [ARU credit, security and payoff document drafts](../../legal/gap-instruments/source/debt-liens.md) — MD
+- [Harrison Vale and Wolf Ridge subscription and rights drafts](../../legal/gap-instruments/source/financing-documents.md) — MD
+- [Industrial company consents and subscription record drafts](../../legal/gap-instruments/source/formations.md) — MD
+- [Cradle host recovery agreement with Kelly Gang Mining and Demotte schedules](../../legal/gap-instruments/source/host-rights.md) — MD
+- [Northern Nevada land settlement and funding instruction draft](../../legal/gap-instruments/source/land.md) — MD
+- [Sable Harbor Advisory counsel instruction, search record and launch decision form](../../legal/gap-instruments/source/mark-clearance.md) — MD
+- [Red Wash chronology reconciliation and proposed correction instrument](../../legal/gap-instruments/source/rw-chronology.md) — MD
+- [Red Wash supplemental assignment, consent and title-cure escrow instruments](../../legal/gap-instruments/source/rw-title.md) — MD
+- [Foundry Field tax determination and invoice-change workpaper draft](../../legal/gap-instruments/source/tax-billing.md) — MD
+- [ARU election cooperation and filing-status workpaper draft](../../legal/gap-instruments/source/tax-filing.md) — MD
+- [Sacramento, Fort and Bedford proposed site tenure and access instrument](../../legal/gap-instruments/source/tenure.md) — MD
+- [Conditional future Red Wash product custody and carrier agreement](../../legal/gap-instruments/source/uranium-custody.md) — MD
+- [ARU individual retention agreements and Tolman consultancy](../../legal/gap-instruments/source/workforce.md) — MD
+
 ## `enterprise/business`
 
 - [Business-driven enterprise finance successor](../../../enterprise/business/README.md) — MD
