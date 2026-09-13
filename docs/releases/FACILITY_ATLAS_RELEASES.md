@@ -1,8 +1,8 @@
 # Facility atlas controlled releases
 
-## v0.2.0 / R02 — pending acceptance
+## v0.2.0 / R02 — accepted and published
 
-Acceptance vehicle: [PR #121](https://github.com/SquirmyWormy275/SABLEHARBOR/pull/121). Complete R02/runtime visual QA and two byte-identical generator rebuilds pass. Final-head CI, merge and release publication remain pending. This index does not claim a published delivery.
+Acceptance vehicle: [PR #121](https://github.com/SquirmyWormy275/SABLEHARBOR/pull/121). Complete R02/runtime visual QA and two byte-identical generator rebuilds pass. PR #121 merged as `7bc9879fb94dbf999066b8072cc66ec8e05fda0a` after final-head CI passed. The release was published on September 11, 2026 at 22:10:17 UTC. The [published acceptance record](https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/facility-atlas-v0.2.0/FACILITY_ATLAS_R02_CLOSEOUT.json) records download verification; this index correction does not rebuild or replace released bytes.
 
 The successor preserves the [approved R01 references](../facilities/references/sacramento-hq/r01-approved/README.md), ingested in `ebe7e9e`, and replaces the pre-recovery six-building Sacramento design. Its source program has four Sacramento buildings, ten floors, 175,392 sf gross, 362 workplaces and 60 single rooms. The original facility subpackage is 16 sites, 17 buildings, 24 floors and 58 sheets in 174 independent SVG/PNG/PDF assets. The [accepted runtime bridge](../../geospatial/facilities/RUNTIME_BRIDGE.json) reuses twelve plates and adds three sites, one proposed owned building and one floor. Combined inventory is 19 location packages, 18 buildings, 25 floors and 70 plates in 210 SVG/PNG/PDF assets, alongside eleven preserved rc4 context records (81 maps total). Actual personnel, occupancy, property and construction boundaries remain explicit.
 
@@ -15,7 +15,7 @@ The successor preserves the [approved R01 references](../facilities/references/s
 | Canon bases | Initial `786fc9a5311a04dde92ee6dbb08ac3b77a380200`; R01 ingestion `ebe7e9e`; accepted runtime main `b83e4be2182a5e4143808a3dab5f8d929a133caf`, integrated through `5d7e5a0` |
 | PDF pages, bookmarks and link totals | 150 pages; 1,067 graph nodes and 1,750 validated edges |
 | QA / CI / merge | Local gates and visual QA PASS; final PR-head CI and merge are recorded by PR #121 |
-| Published download and retrieval verification | Publication follows green PR-head gates and merge; retrieval must match the exact ZIP hash above |
+| Published download and retrieval verification | Published; acceptance record reports retrieval matched the exact ZIP hash above and all 2,094 payload hashes |
 
 Build only from the final committed snapshot:
 
@@ -29,7 +29,7 @@ The builder validates ZIP integrity and every embedded checksum, with fixed memb
 
 The two historical distribution ZIPs remain excluded. The immutable owner-supplied approved source archive, `docs/facilities/references/sacramento-hq/r01-approved/SABLE_HARBOR_Sacramento_HQ_Drafts_R01.zip`, is an explicit inclusion exception: SHA-256 `eb10588f6cc6e214d8541b96b1bd044f52f0df85e384fc53a316b55b5d026fe0`. The builder rejects changed or missing reference bytes. This is preserved source artwork, not a duplicate generated delivery ZIP. The original PNGs, handover, addendum and reference manifest are also included unchanged.
 
-Start at `geospatial/maps/index.html`, the separate `geospatial/maps/SABLE_HARBOR_Facility_Atlas_v0.2.0.pdf`, or the individual artifact index. The [closeout record](../../geospatial/facilities/CLOSEOUT_2026-09-11.md) tracks remaining evidence. Publication requires retrievable download bytes matching the final checksum; published identities must never be silently overwritten.
+Start at `geospatial/maps/index.html`, the separate `geospatial/maps/SABLE_HARBOR_Facility_Atlas_v0.2.0.pdf`, or the individual artifact index. The [historical closeout record](../../geospatial/facilities/CLOSEOUT_2026-09-11.md) retains its pre-publication evidence scope. The published acceptance record linked above supplies the subsequent delivery evidence. Publication requires retrievable download bytes matching the final checksum; published identities must never be silently overwritten.
 
 ## v0.1.0 — superseded unpublished draft
 

@@ -9,7 +9,35 @@ permissions:
   contents: read
 
 jobs:
+  tests:
+    name: Finance tests / shard ${{ matrix.shard }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2]
+    env:
+      SHFIN_TEST_SHARDS: "3"
+      SHFIN_TEST_SHARD: ${{ matrix.shard }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+      - uses: astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d # v10.0.1
+        with:
+          enable-cache: true
+          version: "0.12.4"
+      - run: uv sync --frozen --all-extras
+      - run: uv run python -m pytest -p tools.ci.shard --durations=20 --junitxml=test-results.xml
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        if: always()
+        with:
+          name: finance-test-results-${{ matrix.shard }}
+          path: test-results.xml
+          if-no-files-found: error
+
   sqlite:
+    name: Finance Platform CI / sqlite
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -24,7 +52,6 @@ jobs:
       - run: uv run ruff format --check .
       - run: uv run ruff check .
       - run: uv run mypy src
-      - run: uv run --with-requirements tools/organization/requirements.txt pytest
       - run: uv run pytest -q docs/finance/evidence/coverage/test_extracts.py
       - run: echo "SHFIN_DATABASE_URL=sqlite:///var/ci-standard.db" >> "$GITHUB_ENV"
       - run: uv run alembic upgrade head
@@ -46,6 +73,7 @@ jobs:
             releases/generated/business-units
 
   postgres:
+    name: Finance Platform CI / postgres
     runs-on: ubuntu-latest
     services:
       postgres:

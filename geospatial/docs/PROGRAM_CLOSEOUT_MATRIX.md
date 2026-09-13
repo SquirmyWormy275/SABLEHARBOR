@@ -94,3 +94,9 @@ separates non-geographic domain/record labels and retains eleven unlocated compo
 appearances. Sections 6, 28 and 40 now have this additional review evidence; their
 `PARTIAL_OR_FUTURE` status remains. Full source coverage, later canon deltas, historical
 geometry, occupancy and OCR work remain open under #108.
+
+A second [reference-layer batch](../adjudication/README.md#reference-layer-batch--september-12-2026)
+classifies 7,844 additional occurrences against 3,912 existing road/waterbody reference
+features. The two disjoint batches classify 68,740 occurrences; 9,405 remain outside them.
+Reference-layer provenance and geometry hashes do not establish company ownership or
+occupancy, and no section is promoted to complete by these counts.

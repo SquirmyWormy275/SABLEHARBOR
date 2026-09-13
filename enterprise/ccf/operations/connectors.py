@@ -202,6 +202,11 @@ def collect(config, *, allow_test_http=False):
         raise ValueError("Duplicate source IDs")
     if config.get("purpose", "evidence") == "evidence":
         scope = config["scope"]
+        if scope["origin"] not in {"SYNTHETIC", "OPERATOR_SUPPLIED"}:
+            raise ValueError("Workflow-compatible source origin required")
+        nonempty(scope["boundary_id"])
+        if instant(scope["period_start"]) > instant(scope["period_end"]):
+            raise ValueError("Invalid source scope period")
         for row in rows:
             if row["boundary_id"] != scope["boundary_id"] or row["origin"] != scope["origin"]:
                 raise ValueError("Source record has wrong boundary or origin")

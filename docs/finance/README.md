@@ -15,7 +15,7 @@ SQLite/PostgreSQL and artifact acceptance passed for v0.1 and is recorded in
 `PLATFORM_ACCEPTANCE_v0.1.md`.
 
 ```bash
-uv sync --all-extras
+make bootstrap
 SHFIN_DATABASE_URL=sqlite:///var/standard.db uv run alembic upgrade head
 SHFIN_DATABASE_URL=sqlite:///var/standard.db uv run shfin generate --profile standard --scenario base
 RUN_ID=$(SHFIN_DATABASE_URL=sqlite:///var/standard.db uv run shfin run-id standard --scenario base --seed 20260831)

@@ -1,0 +1,17 @@
+{
+  "source_commit": "d91a22c35c91b213204411421de88815f27d8e16",
+  "rules_sha256": "7508bc1f447c675e2bc4a6606240344561de3ae6026b9fb071011894e3e1fbda",
+  "review_output_sha256": "7f5be2e4a7fc3d16530ae80afd0e319bc55a3ed19e7e074f4f73896a3bc0f150",
+  "reviewed_occurrences": 7844,
+  "reference_features": 3912,
+  "disposition_counts": {
+    "REFERENCE_FEATURE_IDENTIFIER": 3912,
+    "REFERENCE_FEATURE_NAME": 20,
+    "REFERENCE_SOURCE_LINK": 3912
+  },
+  "cumulative_reviewed_occurrences": 68740,
+  "remaining_unreviewed_occurrences": 9405,
+  "semantic_census_complete": false,
+  "geometry_or_occupancy_promoted": false,
+  "limits": "Archived real-world context layers only. Feature IDs and provider metadata establish neither Sable Harbor ownership nor occupancy. Geometry is hash-bound source context, not promoted canon. OCR and later canon deltas remain outside these batches."
+}

@@ -61,3 +61,34 @@ source**, not semantic review of all 919 source files or all their geographic co
 Eleven appearances still require spatial adjudication. Remaining source review, subsequent
 canon deltas, raster/OCR review, historical occupancy and the temporal map program keep
 #108 open. No geometry, access rights, construction or institutional canon is promoted.
+
+## Reference-layer batch — September 12, 2026
+
+The second batch reviews **7,844 occurrences** in three archived public reference layers
+at the same pinned discovery commit. [REFERENCE_LAYER_RULES.json](REFERENCE_LAYER_RULES.json)
+binds each source hash and expected coverage. All 3,912 existing features explicitly carry
+`REAL_REFERENCE`, `REAL` and `REFERENCE_ONLY`; these are map context, not company assets.
+
+| Archived layer | Features | Discovery occurrences |
+|---|---:|---:|
+| Wyoming local roads | 3,195 | 6,410 |
+| Wyoming waterbodies | 540 | 1,080 |
+| Wamsutter highways | 177 | 354 |
+
+The review separates 3,912 feature identifiers, 3,912 repeated source-layer links and
+20 appearances of three road names. Each appearance resolves to an exact archived JSON
+pointer and the existing feature ID. The output preserves every source property, including
+provider identifiers and available dates, and binds the geometry by type and canonical JSON
+SHA-256. Provider dates do not become occupancy dates. Road-name variants are preserved;
+this review does not infer that separately identified road segments are duplicate features.
+
+The [review output](REFERENCE_LAYER_REVIEW.csv.gz) and [summary](REFERENCE_LAYER_REVIEW.json)
+bring cumulative occurrence classification to **68,740 of 78,145**, leaving **9,405**
+outside these two disjoint batches. This is occurrence classification, not complete review
+of every geographic claim in the 919 sources. The Blackridge spatial questions, later
+canon deltas, OCR and temporal-map requirements remain unresolved; #108 stays open.
+
+```bash
+python -m geospatial.adjudication.review_reference_layers --check
+python -m pytest geospatial/tests/test_reference_layer_adjudication.py -q
+```

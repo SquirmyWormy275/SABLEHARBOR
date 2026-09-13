@@ -110,11 +110,15 @@ class Identity:
                 issuer=self.issuer,
                 audience=self.audience,
                 leeway=0,
-                options={"require": ["iss", "sub", "aud", "exp", "iat", "nbf"], "strict_aud": True},
+                options={"require": ["iss", "sub", "aud", "exp", "iat"], "strict_aud": True},
             )
             if (
-                any(type(claims[k]) is not int for k in ("iat", "exp", "nbf"))
-                or not claims["iat"] <= claims["nbf"] < claims["exp"]
+                any(type(claims[k]) is not int for k in ("iat", "exp"))
+                or not claims["iat"] < claims["exp"]
+                or (
+                    "nbf" in claims
+                    and (type(claims["nbf"]) is not int or claims["nbf"] >= claims["exp"])
+                )
                 or claims["exp"] - claims["iat"] > self.max_lifetime
             ):
                 raise ValueError("Invalid token lifetime")

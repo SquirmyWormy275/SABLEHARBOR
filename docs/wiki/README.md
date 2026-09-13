@@ -8,7 +8,7 @@ The wiki's canonical presentation source lives here in ordinary Markdown. Seven 
 
 These pages were accepted into main through [PR #128](https://github.com/SquirmyWormy275/SABLEHARBOR/pull/128), with subsequent catalog reconciliation in PRs #130 and #132. The GitHub API reports Wiki enabled, but the separate `SABLEHARBOR.wiki.git` endpoint returned “Repository not found” during the refreshed September 11 (Pacific) inspection. A live GitHub Wiki is not claimed. The repository pages themselves can be browsed directly; no external host is needed.
 
-Future wiki publication should copy accepted Markdown from this directory and convert repository-relative links to exact repository URLs. The separate wiki must not become an independently edited source. Preserve the [wiki policy](../governance/PUBLIC_REPOSITORY_AND_WIKI_POLICY.md), source states, and public-content boundary.
+The accepted [exporter](../../tools/wiki/export.py) and [manual publication workflow](../../.github/workflows/publish-wiki.yml), delivered in [PR #147](https://github.com/SquirmyWormy275/SABLEHARBOR/pull/147), copy accepted Markdown and convert repository-relative links to commit-pinned repository URLs. Publication still requires an initialized Wiki endpoint and its configured `WIKI_TOKEN`; the workflow does not run a publication on pull requests. The separate wiki must not become an independently edited source. Preserve the [wiki policy](../governance/PUBLIC_REPOSITORY_AND_WIKI_POLICY.md), source states, and public-content boundary.
 
 ## Maintenance and review
 
@@ -26,3 +26,5 @@ python tools/documents/preview_reader.py
 ```
 
 Open `http://127.0.0.1:8765/README.md`. It serves only on the local machine and does not publish the wiki. The preview is an approximation; final GitHub layout may differ. Stop with Ctrl+C.
+
+The [automated browser review](../../tools/ci/README.md#wiki-browser-review) checks department and business headers in light/dark themes and mobile/desktop viewports, preserving approved header hashes. Screenshots are review artifacts, not new visual sources.

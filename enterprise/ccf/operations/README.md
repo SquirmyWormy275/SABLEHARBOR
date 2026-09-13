@@ -111,3 +111,14 @@ Omit both legacy arguments when there is no prior store. Migration loads the exa
 `START_HERE.md` links control coverage, framework deltas, source dependencies, the signed API rehearsal, and the actual inputs required for live activation. `ASSESSMENT_HANDOFF.json` remains preparation until actual operating evidence and qualified source/mapping reviews support the strict assurance-engine input contract. No source availability, local test result or migration receipt establishes external coverage by itself.
 
 The repeatable `--framework` option also works with `operations init` and `operations demo`. Omit it for the SOC 2/HIPAA baseline (70 controls, 210 boundary plans); select any subset of `ISO27001`, `ISO42001` and `C5` to add their candidate duties. Selecting all three yields 86 distinct controls and 258 boundary plans, with 24 bounded automated adapters and mandatory human tests. Shared duties are deduplicated by action ID with only selected requirement links retained. Unrouted assessment prerequisites stay explicit global review items; they never become invented control mappings. Selection is retained in the immutable store configuration and re-performed during delivery verification. Qualified acceptance remains unresolved.
+
+## Concrete local pilot
+
+When no enterprise identity tenant or deployment host has been chosen, use the [pilot system design](../../../docs/internal/development/CCF_PILOT_SYSTEM_DESIGN_2026-09-12.md): Keycloak sign-in, a loopback TLS API, a new private workflow store, and a [read-only GitHub review source](GITHUB_SOURCE.md).
+
+```sh
+uv run --extra ccf-service python -m enterprise.ccf.operations.pilot build \
+  --delivery /private/verified-integrated-delivery --output /new/private/local-pilot
+```
+
+The generated `START_HERE.md`, `run.sh` and `identity/README.md` provide setup and login commands. The pilot creates three separate test subjects and short-lived local certificates; it copies selected plans into an empty database. Real GitHub acquisition remains operator-supplied source evidence with unresolved population and control facts. No actual owner appointment, deployed Reno/Boise infrastructure, PHI activity or assurance acceptance is inferred. The pilot uses its own explicit CA trust and never modifies machine-wide trust or service configuration.
