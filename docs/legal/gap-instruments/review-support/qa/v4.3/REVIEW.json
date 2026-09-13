@@ -10,8 +10,8 @@
   "brief_pdfs": 5,
   "brief_pdf_pages": 5,
   "new_original_html_views": 5,
-  "offline_html_surfaces": 50,
-  "offline_html_viewports": 125,
+  "offline_html_surfaces": 51,
+  "offline_html_viewports": 127,
   "prior_html_surfaces_identical": 45,
   "input_hashes": {
     "docs/legal/gap-instruments/period-close/inputs.json": "86883929916b3203748aa4a27a2b9e7cea8a1d4b8194152d84af23c5355d4256",
@@ -71,13 +71,20 @@
     "tools/legal_gaps/evidence_tracking.py": "561e33c39ca51eb51350e1dc04180ce4caa012643b7f583d4e2e9c1600ec231f",
     "tools/legal_gaps/case_briefs.py": "dd85f7f4573555675a780f059116fa15371b7ef8b72e57d13d070f9321ed0cf1",
     "tools/legal_gaps/source_impact.py": "077101852e4d070842e895fd65a046ec8c0b7ceab6a9d3e93bae8baf7eae56d6",
-    "tools/legal_gaps/package_v4.py": "82336dc3d8ef1ac43f523b5ec6eeaa2f10a6b6ff10baf911410636bb6b730df5",
+    "tools/legal_gaps/package_v4.py": "60603f94693c5f7d90934db631e833c4cda6b42dc8e9f2a698bce4c34ecbf9ce",
     "tools/legal_gaps/validate_close_review_v42.py": "cffec6870e69c03d610b470feb7e195f973588c1082847b201922b7e9a8bf0ed",
     "tests/publications/test_legal_evidence_tracking.py": "754a976d4b26e5984b82a129de52a235ddf992abf585ef22c16f4938fa003e3f",
     "tests/publications/test_legal_source_impact.py": "ef84f266e125ad64fffd8bf72c6a75ef86165f6902c78b3e88e67cea6603a22d",
     "tests/publications/test_legal_case_briefs.py": "73226bedf381afa68943d194591c69aa80caa2b23abb3d949d4d59729d61fb2b",
-    "tests/publications/test_legal_package_v4.py": "8bdb482b775e0a0b325dbd9bd008e1811d14c4d756b9ba6d71d6710f2f85c1b8",
-    "tests/publications/test_legal_period_close.py": "ff608faa1332dc22f25f308b1eb0cc895c77731327fe1c37e0f826741c28e815"
+    "tests/publications/test_legal_package_v4.py": "b6158083e8877e21f3c46257f3cd2d2d77f629318af4f5518380d880a7372d32",
+    "tests/publications/test_legal_period_close.py": "ff608faa1332dc22f25f308b1eb0cc895c77731327fe1c37e0f826741c28e815",
+    "docs/legal/gap-instruments/dependency-successors/SITE_REGISTER.before-PR162.csv": "df07fc9b2225114deafbad5536c625982c73730ed486cbef15b5fd7a34a86fa8",
+    "docs/legal/gap-instruments/dependency-successors/PR162.json": "8b13014537e5c1ca36d68a28e4db6c4e14b8991f4e8c11205797046c4864e804",
+    "docs/legal/gap-instruments/dependency-successors/README.md": "6bcf1b766e2b45142bdd00603d15751bd884b0a7fbd01605b03b24b10632730f",
+    "tools/legal_gaps/validate.py": "e8d36db3f769429893d0815c864cc8c76ab2cd3c5b19ff92ed975af525ea4d83",
+    "tools/legal_gaps/dependency_successors.py": "32ed47ff44b8e87d632623af01318efc3fce354789169bda43d1fce9e7bda604",
+    "tools/legal_gaps/validate_close_review_v43.py": "a531963dd486973b09729ec012febfb42816d1c430b78e15f3d434a969c57f2c",
+    "tests/publications/test_legal_dependency_successors.py": "7efd7786cf372c498f41292a973bd5ab69962cc842172dfa50d263eff181c7c5"
   },
   "evidence_hashes": {
     "docs/legal/gap-instruments/review-support/qa/v4.2/01-contact-000.png": "67dee173af9fe4350fc17181359157c88dbb0ebb084b0a94329bc7ef42c0979b",
@@ -250,9 +257,14 @@
     "docs/legal/gap-instruments/case-briefs/qa/cold-start/history-before-context-refresh/evidence-proposal/tracker.json": "233074317286211e747c209a41f8c53116ce4d54415105bfde55c6ea348592b2",
     "docs/legal/gap-instruments/case-briefs/qa/cold-start/history-before-context-refresh/evidence-proposal/PROPOSAL.original.txt": "43423df0f80b2881ae246e084ef1b5b99971981d296bbfe9e000e160fe2f587c",
     "docs/legal/gap-instruments/review-support/qa/v4.2/RELEASE_HTML.json": "616a574b7d50970af5ce3d50f206078fb7a39cb745b4c23e8db97f38da886083",
-    "docs/legal/gap-instruments/review-support/qa/v4.2/release-start.png": "6b41243b45a9e21d6b2ced561f145b2d4ac019e4c7c2f470ad751580ee65b719"
+    "docs/legal/gap-instruments/review-support/qa/v4.2/release-start.png": "6b41243b45a9e21d6b2ced561f145b2d4ac019e4c7c2f470ad751580ee65b719",
+    "docs/legal/gap-instruments/review-support/qa/v4.3/HTML.json": "1e5c7e2e7a30624ec5ebe37496444b89e96dfafde9fc800ae0830f7d5dd89ca9",
+    "docs/legal/gap-instruments/review-support/qa/v4.3/01-contact-000.png": "2c09fa6279820f317e3e3de97997278682c91f38505a0fdacea3b3acb0e89501",
+    "docs/legal/gap-instruments/review-support/qa/v4.3/13-contact-000.png": "c57a19ea97d575340d5662f8f3d2aae52e6976932f552220df03d2352506be6e",
+    "docs/legal/gap-instruments/review-support/qa/v4.3/successor-tests.log": "b71db6006ecc410f6085db2500759568a2da5d0cdf2fd3f7165307654085abe2",
+    "docs/legal/gap-instruments/review-support/qa/v4.3/integrated-pre-fix-tests.log": "23ad6c5e8b9c702033521e18fd9c6fa33cfd0a2cdb2a75e0af1d842292119117"
   },
-  "method": "Native LibreOffice pages manually inspected by package agents; main inspected five brief PDFs and all ten desktop/mobile brief views. Full new offline HTML viewports inspected; 45 surfaces pixel-identical to preceding V4 review. Independent agent completed case before seeing workedanswers and performed five actual evidence proposal events. Not a human usability study.",
+  "method": "Native LibreOffice pages manually inspected by package agents; main inspected five brief PDFs and all ten desktop/mobile brief views. Full new offline HTML viewports inspected; 45 surfaces pixel-identical to preceding V4 review. Independent agent completed case before seeing workedanswers and performed five actual evidence proposal events. Not a human usability study. Review.3 adds exact site-register successor audit; new README and changed start page inspected;49 prior surfaces pixel-identical to review.2.",
   "corrections": [
     "Successor v4.2 fixes validator-only browser dependency and portable cold-start reading-copy links, retaining original output bytes separately. All 13 owner-approved visual files remain identical. QA and catalog/wiki data stay repository-linked rather than recursively bundled.",
     "Removed orphan close Read-first print page and expanded Debt row heights.",
@@ -262,15 +274,5 @@
     "Wrapped long new-companion commands for narrow screens; existing styles and original publications retained.",
     "Refreshed Context pins after directCSVlinks; repeated actualfive-eventimport."
   ],
-  "local_validation": "Predecessor full root pytest exits 0 with 3 existing skips; successor 61 focused tests pass. Final integrated root run and CI required before merge.90originalfilesunchanged;30protectedassetsunchanged;v2/v3QAreceiptsvalid;131controlledpublicationsretained.",
-  "downloaded_release": {
-    "source_revision": "a3a7df7dc33c3bd177a1e29016a9c73dd03aece3",
-    "zip_sha256": "29b5e6a08aab0bf55b63525ce1d43f75f7f5b39d1b8fe7e7130f6350ee86128f",
-    "files": 386,
-    "html_surfaces": 50,
-    "viewports": 125,
-    "same_pixels_as_preview": 49,
-    "changed_start_page": "MANUALLY_INSPECTED_PASS",
-    "downloaded_assets": "All three byte-identical to clean local build; extracted manifest/hash/links pass"
-  }
+  "local_validation": "Integrated root run: 387 pass,3 skip, one stale dependency failure; corrected dependency plus original instrument and package tests:29 pass. Previously61 new tests pass; added21 dependency tests. Final integrated root/CI runs required before merge."
 }

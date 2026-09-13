@@ -36,8 +36,8 @@ jobs:
       - run: python tools/legal_gaps/period_close.py validate
       - run: python tools/legal_gaps/evidence_tracking.py validate
       - run: python tools/legal_gaps/case_briefs.py validate
-      - run: python tools/legal_gaps/validate_close_review_v42.py
-      - run: python -m pytest -q tests/publications/test_legal_period_close.py tests/publications/test_legal_evidence_tracking.py tests/publications/test_legal_source_impact.py tests/publications/test_legal_case_briefs.py tests/publications/test_legal_package_v4.py --confcutdir=tests/publications
+      - run: python tools/legal_gaps/validate_close_review_v43.py
+      - run: python -m pytest -q tests/publications/test_legal_period_close.py tests/publications/test_legal_evidence_tracking.py tests/publications/test_legal_source_impact.py tests/publications/test_legal_case_briefs.py tests/publications/test_legal_package_v4.py tests/publications/test_legal_dependency_successors.py --confcutdir=tests/publications
       - run: python tools/legal_gaps/package_v4.py --output "$RUNNER_TEMP/legal-review-bundle"
       - uses: actions/upload-artifact@v4
         with:

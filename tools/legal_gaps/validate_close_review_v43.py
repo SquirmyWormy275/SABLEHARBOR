@@ -10,7 +10,7 @@ BASE = ROOT / "docs/legal/gap-instruments"
 
 
 def validate():
-    receipt = json.loads((BASE / "review-support/qa/v4.2/REVIEW.json").read_text())
+    receipt = json.loads((BASE / "review-support/qa/v4.3/REVIEW.json").read_text())
     assert receipt["status"] == "MANUAL_REVIEW_COMPLETE_DRAFT_DESIGNS"
     assert receipt["owner_acceptance"] == "APPROVED_IMPLEMENTATION_AND_V4_DESIGNS"
     for group in ("input_hashes", "evidence_hashes"):
@@ -19,7 +19,7 @@ def validate():
             path = (ROOT / relative).resolve()
             assert path.is_relative_to(ROOT)
             assert hashlib.sha256(path.read_bytes()).hexdigest() == digest, (
-                "Stale v4.2 review",
+                "Stale v4.3 review",
                 relative,
             )
     for folder in ("period-close", "evidence-tracking"):

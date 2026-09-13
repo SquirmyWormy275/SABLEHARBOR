@@ -12,8 +12,14 @@ if __package__ in (None, ""):
     sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 from tools.legal_gaps import package_v3 as previous
 
-VERSION = "0.4.0-review.2"
-ADDITIONS = ("period-close", "evidence-tracking", "source-impact", "case-briefs")
+VERSION = "0.4.0-review.3"
+ADDITIONS = (
+    "period-close",
+    "evidence-tracking",
+    "source-impact",
+    "case-briefs",
+    "dependency-successors",
+)
 
 
 def build(output, allow_dirty=False):
@@ -53,6 +59,7 @@ def build(output, allow_dirty=False):
                 ("period-close", "Complete one ARU reporting-period close"),
                 ("evidence-tracking", "Track evidence requests and responses"),
                 ("source-impact", "Check which work a source change affects"),
+                ("dependency-successors", "Accepted site-register dependency reconciliation"),
             )
         )
         content = start.read_text().replace("<ul>", "<ul>" + links, 1)
@@ -91,7 +98,9 @@ def build(output, allow_dirty=False):
             if p.is_file()
         ]
         manifest["files"] = rows
-        manifest["predecessor"] = "0.4.0-review.1 build retained; portability correction only"
+        manifest["predecessor"] = (
+            "0.4.0-review.2 build retained; accepted site-register audit added"
+        )
         (intermediate / "MANIFEST.json").write_text(json.dumps(manifest, indent=2) + "\n")
         (intermediate / "SHA256SUMS.txt").write_text(
             "".join(r["sha256"] + "  " + r["path"] + "\n" for r in rows)

@@ -4,6 +4,51 @@ Review bundles supplement the independently saved instruments. They do not
 supersede source files or establish owner acceptance. Published package bytes
 receive a new version for any correction.
 
+## 0.4.0-review.2 — retained portability draft
+
+[Download the review edition](https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/untagged-55aebf70fb862276ab45).
+Extract the ZIP and open `START_HERE.html`. [Five case briefs](case-briefs/README.md)
+also provide a repository-native starting point. [Exact-file owner approval](case-briefs/ACCEPTANCE.md)
+covers implementation and the 13 new designs; proposed legal and fictional billing
+terms remain draft. This draft is retained unchanged; review.3 adds the accepted dependency audit.
+
+- Source: `a3a7df7dc33c3bd177a1e29016a9c73dd03aece3`; accepted main integrated: `a8e6dd99c113e0470bdc4fcc63bab616949186d0`.
+- ZIP: `sable-harbor-legal-review-v0.4.0-review.2.zip`.
+- ZIP SHA-256: `29b5e6a08aab0bf55b63525ce1d43f75f7f5b39d1b8fe7e7130f6350ee86128f`.
+- Companion assets: `MANIFEST.json` and `SHA256SUMS.txt`.
+- 386 manifested files; two clean builds are byte-identical. All three hosted
+  assets were downloaded again, compared and validated after extraction.
+
+Adds the complete ARU_GROUP January 2027 forecast close (18 checks, all zero),
+14 unresolved evidence requests, source-impact reporting and five one-page case
+briefs. The three new workbooks have 39 sheets and 89 printed pages. The five
+brief PDFs each have one page. Independent cold-start review matched all 270
+values and tested five actual proposal events without applying evidence states.
+
+[Successor QA](review-support/qa/v4.2/REVIEW.json) retains visual and portability
+checks. The accepted site-register successor is reconciled separately in
+[dependency dispositions](dependency-successors/README.md); the original 17
+instruments and their source manifests have not been repinned or regenerated.
+Release metadata and repository-only validation fixes after the source commit do
+not modify the versioned ZIP. QA and the enterprise catalog remain repository-linked.
+
+```sh
+python tools/legal_gaps/package_v4.py --output /tmp/sable-harbor-legal-review-v0.4.0-review.2
+python tools/legal_gaps/package.py --verify /tmp/sable-harbor-legal-review-v0.4.0-review.2
+```
+
+Run from the recorded clean source revision. Later source revisions receive their
+own provenance in generated manifests; they do not overwrite this release.
+
+### Retained first v0.4 build
+
+[The v0.4.0-review.1 draft](https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/untagged-a9e08fe0d1b06d542808)
+remains unchanged as build history, superseded by the portable review.2 package.
+Source: `5b716cf0d7915c1d6b2130b809c62e560188c037`; 377 manifested files;
+ZIP SHA-256 `44163dbab28e336b07b7dbfdca3b08684586a4439c0b2bc1cf9bfe37ec159fec`.
+It requires repository draft-release access. The original v0.2/v0.3 entries below
+retain their contemporaneous review status; current acceptance scope is recorded above.
+
 ## 0.3.0-review.1 — practical-work addendum, downloadable draft
 
 [Download the draft release](https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/untagged-7613517b0b0ef5d5ab19).

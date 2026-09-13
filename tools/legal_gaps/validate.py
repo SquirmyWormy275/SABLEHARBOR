@@ -11,6 +11,7 @@ from urllib.parse import unquote, urlsplit
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import fitz
+from dependency_successors import accepted_dependency_successor
 from formatting import cell as display_cell
 from formatting import heading as display_heading
 from markdown_it import MarkdownIt
@@ -115,14 +116,26 @@ def validate():
                         wanted = [[None if x == '' else display_cell(x, column) for x, column in zip(row, schedule['columns'], strict=True)] for row in schedule['rows']]
                         check([c.value for c in sheet[3]] == [display_heading(c) for c in schedule['columns']], f'{path.name}/{sheet.title}: headers differ')
                         check(actual == wanted, f'{path.name}/{sheet.title}: changed schedule cells')
-    all_hashed = manifest['inputs'] + manifest['other_artifacts']
+    # Historical source/artifact pins remain strict. Only a specifically audited
+    # dependency transition may reconcile current main without rewriting history.
+    all_hashed = [(item, None) for item in manifest['inputs'] + manifest['other_artifacts']]
     for r in records:
-        all_hashed += r['dependencies'] + r['artifacts']
-    for item in all_hashed:
+        all_hashed += [(item, r['document_id']) for item in r['dependencies']]
+        all_hashed += [(item, None) for item in r['artifacts']]
+    for item, document_id in all_hashed:
         path = ROOT/item['path']
         check(path.is_file(), f'Missing {path}')
         if path.is_file():
-            check(hashlib.sha256(path.read_bytes()).hexdigest() == item['sha256'], f'Stale {item["path"]}')
+            matches = hashlib.sha256(path.read_bytes()).hexdigest() == item['sha256']
+            successor = None
+            if not matches and document_id is not None:
+                successor = accepted_dependency_successor(ROOT, document_id, item)
+            check(matches or successor is not None, f'Stale {item["path"]}')
+            if successor:
+                print(
+                    f'DEPENDENCY SUCCESSOR {successor}: {document_id}; '
+                    'historical pin retained; accepted current source audited'
+                )
     for path in [HERE/'review.html', *sorted((HERE/'editions').glob('*.html'))]:
         parser = HTML()
         parser.feed(path.read_text())

@@ -292,6 +292,10 @@ Generated file inventory. Includes current and historical records; open the sour
 
 - [Pinned review dependency](../../legal/gap-instruments/dependencies/README.md) — MD
 
+## `docs/legal/gap-instruments/dependency-successors`
+
+- [Historical legal dependency: accepted Klein/Fort successor](../../legal/gap-instruments/dependency-successors/README.md) — MD
+
 ## `docs/legal/gap-instruments/editions`
 
 - [advisory-contracts](../../legal/gap-instruments/editions/advisory-contracts.pdf) — PDF

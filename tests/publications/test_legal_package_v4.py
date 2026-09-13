@@ -11,7 +11,7 @@ def test_new_bundle_preserves_bytes_and_offline_routes(tmp_path):
     package_v4.build(output, allow_dirty=True)
     assert old == (package_v3.VERSION, package_v3.ADDITIONS, package.VERSION, package.collect)
     manifest = package.verify(output)
-    assert manifest["version"] == "0.4.0-review.2"
+    assert manifest["version"] == "0.4.0-review.3"
     for relative in manifest["original_files"]:
         assert (output / relative).read_bytes() == (package.ROOT / relative).read_bytes()
     assert not any("/qa/" in r["path"] for r in manifest["files"])
