@@ -157,6 +157,8 @@ def excerpt(path, needle):
 
 def build():
     result, _ = review()
+    current = json.loads((ROOT / "geospatial/finalization/DECISIONS.json").read_text())
+    current_rows = {r["object_id"]: r for r in current["records"]}
     observations = []
     for i, (ids, path, needle, kind, meaning) in enumerate(OBSERVATIONS, 1):
         observations.append(
@@ -173,39 +175,8 @@ def build():
     records = []
     for r in result["rows"]:
         oid = r["object_id"]
-        if oid in ("SH-SITE-0001", "SH-SITE-0003", "SH-SITE-0005"):
-            action = "Compare three dimensioned alternatives and their access tests. Select an explicit fictional site only after unresolved terrain, real-context compatibility and property-overlap screens are addressed. Occupancy history requires its own evidence."
-            cls = "DIMENSIONED_ALTERNATIVES_DELIVERED_SELECTION_OPEN"
-        elif oid in ("SH-SITE-0011", "SH-SITE-0012", "SH-SITE-0013"):
-            action = "Confirm whether the proposed office ever opened. If so, supply or approve locality, shared/dedicated status and year-bounded entry/exit; otherwise retain as an unrealized proposal. Do not invent a closure date."
-            cls = "PROPOSED_NOT_PROVED_OCCUPIED"
-        elif oid in ("SH-SITE-0023", "SH-SITE-0027"):
-            action = "Select fictional host geography within the accepted region and bind equipment footprint, service access and bypass to the host. Host ownership, liability and authority remain external; operating observation does not identify a parcel."
-            cls = "OPERATING_HOST_GEOGRAPHY_OPEN"
-        elif oid in (
-            "SH-SITE-0014",
-            "SH-SITE-0015",
-            "SH-SITE-0017",
-            "SH-SITE-0018",
-            "SH-SITE-0019",
-        ):
-            action = "Decide dedicated versus shared/distributed premises and physical accommodation. Accepted room programmes do not establish actual residence, office tenancy or campus occupancy."
-            cls = "PHYSICAL_ACCOMMODATION_DECISION_OPEN"
-        elif oid in ("SH-SITE-0016", "SH-SITE-0028", "SH-SITE-0029", "SH-SITE-0030"):
-            action = "Retain the accepted provider-selection/preconstruction state. Executed procurement, assigned-space, access and commissioning evidence belongs to the runtime estate workflow."
-            cls = "RUNTIME_EVIDENCE_BOUNDARY"
-        elif oid in ("SH-SITE-0020", "SH-SITE-0021", "SH-SITE-0026"):
-            action = "Retain aggregate identity. Resolve member premises individually; do not create an extra parcel or a common occupancy interval from this collection."
-            cls = "AGGREGATE_NOT_AN_ADDITIONAL_PARCEL"
-        elif oid.startswith("SH-FAC-FORT-"):
-            action = "Keep the Fort component linked to its parent and accepted 2024 site transition. Individual commissioning/lodging dates are unknown and must not be inherited automatically."
-            cls = "COMPONENT_NOT_SEPARATE_PROPERTY"
-        else:
-            action = (
-                r["period_meaning"]
-                + " Preserve source geometry/region and obtain or approve the missing location, access or dated occupancy evidence separately."
-            )
-            cls = "SOURCE_BOUND_WITH_EXPLICIT_PRECISION_LIMIT"
+        cls = current_rows[oid]["disposition"]
+        action = "The controlling geographic addendum resolves this decision. Retain its explicit precision and external-execution boundaries; no further fictional approval is required."
         records.append(
             dict(
                 object_id=oid,
@@ -217,7 +188,8 @@ def build():
                 occupancy_bounds=r["occupancy_bounds"],
                 temporal_meaning=r["period_meaning"],
                 required_action=action,
-                issue_106_complete=False,
+                current_decision_evidence=r["current_decision_evidence"],
+                issue_106_complete=True,
             )
         )
     return dict(
@@ -225,7 +197,7 @@ def build():
         records=records,
         observations=observations,
         counts=dict(Counter(r["disposition"] for r in records)),
-        scope="All 34 stable site/component records. This docket identifies concrete next evidence or design decisions; it does not promote unresolved canon.",
+        scope="All 34 stable site/component records. Current dispositions follow the owner-delegated controlling addendum; original sources, observations and unknown dates remain traceable. Acceptance into main controls pending branch copies.",
     )
 
 

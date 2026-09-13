@@ -61,7 +61,7 @@ def write(output, docket, reviewed, summary):
             + html.escape(r["disposition"].replace("_", " ").capitalize())
             + "</p><p>"
             + html.escape(temporal)
-            + "</p><p><strong>Remaining decision or evidence:</strong> "
+            + "</p><p><strong>Controlling decision and precision:</strong> "
             + html.escape(r["required_action"])
             + "</p>"
             + "".join(parts)
@@ -70,6 +70,7 @@ def write(output, docket, reviewed, summary):
                 json.dumps(
                     dict(
                         primary_source=source,
+                        current_decision=r.get("current_decision_evidence"),
                         spatial_evidence=r["spatial_evidence"],
                         approved_occupancy_bounds=bounds,
                     ),

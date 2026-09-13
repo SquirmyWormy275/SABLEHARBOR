@@ -21,7 +21,7 @@ from tools.evidence.inventory import inventory
 
 PREDECESSOR_SHA256 = "70723d888c6e9eccf9cc9fac87da4fd37e241468a2aefdf0fc097d7325c379d5"
 GPKG = "geospatial/master/sable_harbor_master_v0.1.gpkg"
-VERSION = "1.3.0"
+VERSION = "1.4.0"
 
 
 def sha(path):
@@ -103,6 +103,25 @@ def prepare(output, predecessor, allow_dirty=False):
     completion, reviewed, raster_review, docket, options, plates = build_completion(
         output / "completion", history
     )
+    from geospatial.finalization.build import build as build_finalization
+
+    finalization, final_sites = build_finalization(
+        output / "finalization",
+        json.loads((output / "completion/ocr/RASTER_INVENTORY.json").read_text()),
+    )
+    from geospatial.finalization.source_review import review as review_final_sources
+
+    _, final_sources = review_final_sources()
+    from geospatial.finalization.visual_review import verify as verify_final_visuals
+
+    _, final_images, final_appearances = verify_final_visuals(
+        json.loads((output / "completion/ocr/RASTER_INVENTORY.json").read_text())
+    )
+    import gzip
+
+    final_ledger = json.loads(
+        gzip.decompress((output / "finalization/SOURCE_LEDGER.json.gz").read_bytes())
+    )
     operations_raw, operations_summary, operations_rows = review_operations()
     (output / "chronology/OPERATIONS_REVIEW.csv.gz").write_bytes(operations_raw)
     dump(output / "chronology/OPERATIONS_REVIEW.json", operations_summary)
@@ -150,6 +169,16 @@ def prepare(output, predecessor, allow_dirty=False):
     build_geopackage(gpkg)
     ocr = json.loads((output / "review/ocr-results.json").read_text())
     with sqlite3.connect(gpkg) as db:
+        attribute_table(
+            db, "review_final_baseline_sources", final_ledger["baseline_sources"], "source_path"
+        )
+        attribute_table(
+            db, "review_final_source_changes", final_ledger["subsequent_changes"], "source_path"
+        )
+        attribute_table(db, "review_final_site_decisions", final_sites, "object_id")
+        attribute_table(db, "review_final_source_claims", final_sources, "occurrence_id")
+        attribute_table(db, "review_final_embedded_images", final_images, "sha256")
+        attribute_table(db, "review_final_image_appearances", final_appearances, "record_id")
         attribute_table(db, "review_site_evidence", sites["rows"], "object_id")
         attribute_table(db, "review_history_events", history["events"], "event_id")
         history_links = [
@@ -220,6 +249,7 @@ def prepare(output, predecessor, allow_dirty=False):
             "history_events": len(history["events"]),
             "operations_review": operations_summary,
             "completion": completion,
+            "finalization": finalization,
             "remaining_occurrences": len(residual),
             "source_reconciliation": reconciliation,
             "issue_106_complete": False,
@@ -230,15 +260,15 @@ def prepare(output, predecessor, allow_dirty=False):
 
 Source: `{revision}`. {"DEVELOPMENT PREVIEW" if dirty else "Clean source build"}.
 
-Open **completion/maps/index.html** for the historical and site atlas, **completion/site-docket.html** for the 34-site evidence docket, or **completion/source-review.html** for source adjudication. Open **chronology/history.html** for the interactive timeline, site histories and dated route views. Open **geospatial/qgis/sable_harbor_master.qgz** in QGIS. Its relative paths work after moving the complete folder. The GeoPackage is **{GPKG}**; it can also be opened directly by GIS or SQLite tools. Open **geospatial/maps/index.html** for the existing facility atlas, or **review/review.html** for the preserved offline review edition.
+Open **finalization/index.html** for current geographic decisions and selected site maps. Open **completion/maps/index.html** for the historical and site atlas, **completion/site-docket.html** for the 34-site evidence docket, or **finalization/source-review.html** and **finalization/source-ledger.html** for the final source review. **completion/source-review.html** preserves the earlier review batch. Open **chronology/history.html** for the interactive timeline, site histories and dated route views. Open **geospatial/qgis/sable_harbor_master.qgz** in QGIS. Its relative paths work after moving the complete folder. The GeoPackage is **{GPKG}**; it can also be opened directly by GIS or SQLite tools. Open **geospatial/maps/index.html** for the existing facility atlas, or **review/review.html** for the preserved offline review edition.
 
-Requirements edition 1.3.0 retains 73 source-bound events/observations and adds 1,770 reviewed carriers across 147 files, leaving 6,896 outside five completed batches. It supplies nine unselected dimensioned site options, nine access tests, a complete site docket and a historical/site atlas. All 97 baseline PNGs have visual-role dispositions; all 109 PDF/office/archive containers have page/image inventories and three sparse-text PDF pages have executed OCR. The original three-batch residual table remains preserved. The approved staged 2024 Klein/Fort relocation and year-bounded occupancy are included; exact days and parcel boundaries remain unknown.
+Geographic decisions edition 1.4.0 preserves the 73 earlier events and adds six rejected-prospect events. The fixed final source review gives dispositions to all 6,896 remaining baseline carriers; subsequent-source review remains separately recorded. Three selected footprints supplement the preserved nine earlier alternatives. All 135 unique embedded images and 290 appearances have source-bound visual-role dispositions. It supplies nine unselected dimensioned site options, nine access tests, a complete site docket and a historical/site atlas. All 97 baseline PNGs have visual-role dispositions; all 109 PDF/office/archive containers have page/image inventories and three sparse-text PDF pages have executed OCR. The original three-batch residual table remains preserved. The approved staged 2024 Klein/Fort relocation and year-bounded occupancy are included; exact days and parcel boundaries remain unknown.
 
-The package contains {len(old_counts)} accepted feature layers, 34 site/component source bindings, 8,961 residual occurrences, 919 baseline source records and the 97-image OCR candidate population from evidence release 1.1.0. New review tables are registered as GeoPackage attributes and joined by stable IDs; they are not invented geographic features. SITE_EVIDENCE.csv is the compact review sheet. SITE_EVIDENCE.json preserves all full records, source excerpts, operational-state evidence and map-feature hashes. ARCHIVED_SOURCES.json identifies the exact historical source bytes included under archived-sources/.
+The package contains {len(old_counts)} accepted feature layers, 34 site/component source bindings, 8,961 preserved historical residual occurrences (subsequently dispositioned), 919 baseline source records and the 97-image OCR candidate population from evidence release 1.1.0. New review tables are registered as GeoPackage attributes and joined by stable IDs; they are not invented geographic features. SITE_EVIDENCE.csv is the compact review sheet. SITE_EVIDENCE.json preserves all full records, source excerpts, operational-state evidence and map-feature hashes. ARCHIVED_SOURCES.json identifies the exact historical source bytes included under archived-sources/.
 
 Planning envelopes, synthetic engineering and superseded claims keep their original classifications. Programme, incident, provider-selection and acquisition dates are separated from unknown occupancy intervals. The Klein-shop/Fort continuity conflict is resolved by explicit owner approval of separate premises and a staged 2024 move. No survey, real title, exact lease days, custody approval or whole-issue closure is asserted.
 
-The predecessor offline review remains pinned to its own accepted source; SOURCE_COVERAGE.json and the GeoPackage source-change table describe this package's source revision. OCR candidates are unreviewed machine text, with their original engine/model provenance and logs. Historical QA files elsewhere in the copied geographic tree describe earlier releases; **NATIVE_QGIS.json**, **VALIDATION.json** and the top-level manifest describe this delivery.
+The predecessor offline review remains pinned to its own accepted source; SOURCE_COVERAGE.json and the GeoPackage source-change table describe this package's source revision. Original OCR output keeps its engine/model provenance and logs; subsequent visual-role dispositions remain separate from machine transcription. Historical QA files elsewhere in the copied geographic tree describe earlier releases; **NATIVE_QGIS.json**, **VALIDATION.json** and the top-level manifest describe this delivery.
 
 Reproduce from the recorded Git revision with full history and the pinned evidence archive: follow geospatial/closeout/README.md. No source image or accepted geometry is replaced by this package.
 """)
@@ -271,7 +301,13 @@ def validate(output):
             )
         }
         if (
-            attributes["review_site_evidence"] != 34
+            attributes["review_final_baseline_sources"] != 919
+            or attributes["review_final_source_changes"] != 3190
+            or attributes["review_final_site_decisions"] != 34
+            or attributes["review_final_source_claims"] != 6896
+            or attributes["review_final_embedded_images"] != 135
+            or attributes["review_final_image_appearances"] != 290
+            or attributes["review_site_evidence"] != 34
             or attributes["review_occurrences"] != 8961
             or attributes["review_source_coverage"] != 919
             or attributes["review_raster_candidates"] != 97
@@ -280,7 +316,7 @@ def validate(output):
             or attributes["review_site_docket"] != 34
             or attributes["review_site_observations"] != 17
             or attributes["review_site_options"] != 9
-            or attributes["review_history_events"] != 73
+            or attributes["review_history_events"] != 79
             or attributes["review_site_history"] != 34
             or attributes["review_operations"] != 295
         ):
@@ -311,6 +347,12 @@ def seal(output):
         for name, digest in research_browser["html_sha256"].items()
     ):
         raise ValueError("Research reader browser qualification is absent or stale")
+    final_browser = json.loads((output / "finalization/BROWSER_RESULTS.json").read_text())
+    if not final_browser["passed"] or any(
+        sha(output / "finalization" / name) != digest
+        for name, digest in final_browser["html_sha256"].items()
+    ):
+        raise ValueError("Final decision/source reader qualification is absent or stale")
     native = json.loads((output / "NATIVE_QGIS.json").read_text())
     if (
         not native["passed"]

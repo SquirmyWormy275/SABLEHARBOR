@@ -356,6 +356,7 @@
     "event_locations",
     "event_registry",
     "facilities",
+    "geographic_selections",
     "geometry_provenance",
     "historical_sites",
     "industrial_facilities",

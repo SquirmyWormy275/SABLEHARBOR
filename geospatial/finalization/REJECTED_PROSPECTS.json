@@ -1,0 +1,77 @@
+{
+  "records": [
+    {
+      "object_id": "SH-PROP-0001",
+      "canonical_name": "Cedar Junction processing prospect",
+      "place": "Kentucky, United States",
+      "source": {
+        "path": "industrial/pale_sun/05_FALSE_START_CEDAR_JUNCTION.md",
+        "revision": "321354190005c17bd91fa15ce15bb1c57be56f88",
+        "sha256": "2f922e81b39b52b29a3bba4ec5d24489688715cee9ac38094901132bd0481fcc",
+        "locator": "line:10",
+        "text": "Cedar Junction Conversion Services, LLC and its Kentucky brownfield processing property are fictional. Its legal name, geography, personnel roles, seller figures and artifacts are derived case detail; none identifies a real licensee. Sable Harbor did not acquire or operate the property. The record depicts an abandoned transaction and confers no conversion authority."
+      },
+      "review_started": "2023-11-06",
+      "review_closed": "2024-02-16",
+      "source_recorded_at": "2026-09-05T22:16:52-07:00",
+      "source_available_as_of": "2024-02-16",
+      "geometry": null,
+      "geometry_disposition": "INTENTIONALLY_UNLOCATED_WITH_SOURCE_REGION",
+      "occupancy_start": null,
+      "occupancy_end": null,
+      "acquired_on": null,
+      "owner_entity": null,
+      "disposition": "REJECTED_EXTERNAL_PROSPECT_NOT_SABLE_HARBOR_PROPERTY",
+      "meaning": "Dates describe the inquiry and rejected acquisition, not tenure or operation. Seller forecasts and analyst screening costs are not company expenditures, permits, reserves or production commitments."
+    },
+    {
+      "object_id": "SH-PROP-0002",
+      "canonical_name": "Juniper Mesa uranium-property prospect",
+      "place": "Western New Mexico, United States",
+      "source": {
+        "path": "industrial/pale_sun/06_FALSE_START_JUNIPER_MESA.md",
+        "revision": "321354190005c17bd91fa15ce15bb1c57be56f88",
+        "sha256": "7391bd1f09afa3c6e1b54f5e18739271e77236cbd4e728fda59cbdff736bb0a9",
+        "locator": "line:10",
+        "text": "Juniper Mesa is a fictional western New Mexico uranium-property opportunity sold by fictional Mesa Lantern Minerals, LLC. Its name, seller, figures and documents are authored case detail. It has no canonical surveyed coordinate, no Sable Harbor ownership and no approved production in this corpus."
+      },
+      "review_started": "2024-03-04",
+      "review_closed": "2024-06-14",
+      "source_recorded_at": "2026-09-05T22:16:52-07:00",
+      "source_available_as_of": "2024-06-14",
+      "geometry": null,
+      "geometry_disposition": "INTENTIONALLY_UNLOCATED_WITH_SOURCE_REGION",
+      "occupancy_start": null,
+      "occupancy_end": null,
+      "acquired_on": null,
+      "owner_entity": null,
+      "disposition": "REJECTED_EXTERNAL_PROSPECT_NOT_SABLE_HARBOR_PROPERTY",
+      "meaning": "Dates describe the inquiry and rejected acquisition, not tenure or operation. Seller forecasts and analyst screening costs are not company expenditures, permits, reserves or production commitments."
+    },
+    {
+      "object_id": "SH-PROP-0003",
+      "canonical_name": "Salt Rim recovery-restart prospect",
+      "place": "Western United States; state intentionally unspecified",
+      "source": {
+        "path": "industrial/pale_sun/07_FALSE_START_SALT_RIM.md",
+        "revision": "321354190005c17bd91fa15ce15bb1c57be56f88",
+        "sha256": "2640adebc7826e638578611adfbd49a6f2d786b6af185ec051db2bfac6ba0f3e",
+        "locator": "line:10",
+        "text": "Salt Rim Recovery Venture was a fictional proposal to restart a western uranium recovery operation through a seller/operating-partner arrangement. Dillon Severn, a fictional veteran uranium specialist, supplied its principal expert thesis. Names and details are synthetic. Neither the venture nor Severn is a disguised statement about a real company or individual."
+      },
+      "review_started": "2024-07-08",
+      "review_closed": "2024-10-04",
+      "source_recorded_at": "2026-09-05T22:16:52-07:00",
+      "source_available_as_of": "2024-10-04",
+      "geometry": null,
+      "geometry_disposition": "INTENTIONALLY_UNLOCATED_WITH_SOURCE_REGION",
+      "occupancy_start": null,
+      "occupancy_end": null,
+      "acquired_on": null,
+      "owner_entity": null,
+      "disposition": "REJECTED_EXTERNAL_PROSPECT_NOT_SABLE_HARBOR_PROPERTY",
+      "meaning": "Dates describe the inquiry and rejected acquisition, not tenure or operation. Seller forecasts and analyst screening costs are not company expenditures, permits, reserves or production commitments."
+    }
+  ],
+  "scope": "Three newly enumerated geographic references from accepted case narratives. These supplement the 34-site/component docket without creating company premises."
+}

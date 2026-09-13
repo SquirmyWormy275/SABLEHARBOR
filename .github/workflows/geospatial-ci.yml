@@ -24,6 +24,7 @@ jobs:
       - run: ruff format geospatial --config geospatial/pyproject.toml --force-exclude --check
       - run: python geospatial/scripts/sync_industrial.py
       - run: python geospatial/scripts/sync_runtime.py
+      - run: python -m geospatial.finalization.sync
       - run: python geospatial/scripts/build_geopackage.py --output /tmp/geo-rebuild.gpkg --database-only
       - run: python geospatial/scripts/validate_geospatial.py
       - run: python -m pytest geospatial/tests -q

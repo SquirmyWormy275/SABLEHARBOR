@@ -3,392 +3,420 @@
     "section": 0,
     "title": "WORK TRANSFER CONTEXT AND SUPPLIED SOURCE ASSETS",
     "status": "IMPLEMENTED_FOR_FRAMEWORK",
-    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above."
+    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above.",
+    "review": "2026-09-13 delegated geographic completion",
+    "evidence": "geospatial/finalization/README.md"
   },
   {
     "section": 1,
     "title": "FIRST PRINCIPLE",
     "status": "IMPLEMENTED_FOR_FRAMEWORK",
-    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above."
+    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above.",
+    "review": "2026-09-13 delegated geographic completion",
+    "evidence": "geospatial/finalization/README.md"
   },
   {
     "section": 2,
     "title": "DATA ARCHITECTURE",
     "status": "IMPLEMENTED_FOR_FRAMEWORK",
-    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above."
+    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above.",
+    "review": "2026-09-13 delegated geographic completion",
+    "evidence": "geospatial/finalization/README.md"
   },
   {
     "section": 3,
     "title": "CANON / PROVENANCE CLASSIFICATION",
     "status": "IMPLEMENTED_FOR_FRAMEWORK",
-    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above."
+    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above.",
+    "review": "2026-09-13 delegated geographic completion",
+    "evidence": "geospatial/finalization/README.md"
   },
   {
     "section": 4,
     "title": "IMPORTANT LESSON FROM THE RED WASH PROBLEM",
     "status": "IMPLEMENTED_FOR_FRAMEWORK",
-    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above."
+    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above.",
+    "review": "2026-09-13 delegated geographic completion",
+    "evidence": "geospatial/finalization/README.md"
   },
   {
     "section": 5,
     "title": "GEOGRAPHIC DECISIONS MADE IN THE PARENT CONVERSATION",
     "status": "IMPLEMENTED_FOR_FRAMEWORK",
-    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above."
+    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above.",
+    "review": "2026-09-13 delegated geographic completion",
+    "evidence": "geospatial/finalization/README.md"
   },
   {
     "section": 6,
     "title": "OTHER KNOWN GEOGRAPHIC CANON TO INVENTORY",
-    "status": "PARTIAL_OR_FUTURE",
-    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above.",
-    "follow_up_issues": [
-      108
-    ]
+    "status": "IMPLEMENTED_AT_ACCEPTED_PRECISION",
+    "disposition": "All baseline carriers reviewed; eight additional references retained; subsequent accepted canon deltas reviewed in full and every changed file assigned a geographic-authority disposition.",
+    "review": "2026-09-13 delegated geographic completion",
+    "evidence": "geospatial/finalization/README.md"
   },
   {
     "section": 7,
     "title": "BUILD A GEOGRAPHIC DECISION REGISTER FIRST",
     "status": "IMPLEMENTED_FOR_FRAMEWORK",
-    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above."
+    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above.",
+    "review": "2026-09-13 delegated geographic completion",
+    "evidence": "geospatial/finalization/README.md"
   },
   {
     "section": 8,
     "title": "MASTER SITE IDENTIFIERS",
     "status": "IMPLEMENTED_FOR_FRAMEWORK",
-    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above."
+    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above.",
+    "review": "2026-09-13 delegated geographic completion",
+    "evidence": "geospatial/finalization/README.md"
   },
   {
     "section": 9,
     "title": "TEMPORAL GIS",
-    "status": "PARTIAL_OR_FUTURE",
-    "disposition": "Temporal machinery implemented; full occupancy histories incomplete.",
-    "follow_up_issues": [
-      108
-    ]
+    "status": "IMPLEMENTED_AT_ACCEPTED_PRECISION",
+    "disposition": "34 site histories with accepted current dispositions, 79 dated events and bounded occupancy; unknown dates stay unknown.",
+    "review": "2026-09-13 delegated geographic completion",
+    "evidence": "geospatial/finalization/README.md"
   },
   {
     "section": 10,
     "title": "RAILWAY MODEL",
-    "status": "PARTIAL_OR_FUTURE",
-    "disposition": "Current accepted 40-mile network present; early/abandoned and final survey geometry incomplete.",
+    "status": "ENGINEERING_REMAINDER",
+    "disposition": "Accepted synthetic estate preserved. Detailed transitions, design profiles, construction/site engineering and real land/access evidence are not certified by source adjudication; see #107.",
     "follow_up_issues": [
       107
-    ]
+    ],
+    "review": "2026-09-13 delegated geographic completion",
+    "evidence": "geospatial/finalization/README.md"
   },
   {
     "section": 11,
     "title": "RESOURCE GEOGRAPHY",
-    "status": "PARTIAL_OR_FUTURE",
-    "disposition": "Mine anchor and resource context retained; detailed mine design remains.",
+    "status": "ENGINEERING_REMAINDER",
+    "disposition": "Accepted synthetic estate preserved. Detailed transitions, design profiles, construction/site engineering and real land/access evidence are not certified by source adjudication; see #107.",
     "follow_up_issues": [
       107
-    ]
+    ],
+    "review": "2026-09-13 delegated geographic completion",
+    "evidence": "geospatial/finalization/README.md"
   },
   {
     "section": 12,
     "title": "CORPORATE FOOTPRINT",
-    "status": "PARTIAL_OR_FUTURE",
-    "disposition": "HQ/Fort/Bedford constraints and industrial estate represented; exact enterprise parcels remain.",
-    "follow_up_issues": [
-      106
-    ]
+    "status": "IMPLEMENTED_AT_ACCEPTED_PRECISION",
+    "disposition": "Three screened selected footprints and explicit accepted precision dispositions for all 34 sites/components.",
+    "review": "2026-09-13 delegated geographic completion",
+    "evidence": "geospatial/finalization/README.md"
   },
   {
     "section": 13,
     "title": "EVENT GEOGRAPHY",
-    "status": "PARTIAL_OR_FUTURE",
-    "disposition": "Ten industrial history events plus corporate event register; unlocated events stay unlocated.",
-    "follow_up_issues": [
-      108
-    ]
+    "status": "IMPLEMENTED_AT_ACCEPTED_PRECISION",
+    "disposition": "79 source-bound events, including six rejected-prospect inquiry endpoints; no tenure inferred from inquiry.",
+    "review": "2026-09-13 delegated geographic completion",
+    "evidence": "geospatial/finalization/README.md"
   },
   {
     "section": 14,
     "title": "CARTOGRAPHIC PRODUCTS",
-    "status": "PARTIAL_OR_FUTURE",
-    "disposition": "Eleven-sheet atlas regenerated; full historical series incomplete.",
-    "follow_up_issues": [
-      108
-    ]
+    "status": "IMPLEMENTED_AT_ACCEPTED_PRECISION",
+    "disposition": "Full historical/site atlas plus three screened selected-footprint plates; no current alignments back-projected into unlocated eras.",
+    "review": "2026-09-13 delegated geographic completion",
+    "evidence": "geospatial/finalization/README.md"
   },
   {
     "section": 15,
     "title": "MAP DESIGN STANDARD",
-    "status": "PARTIAL_OR_FUTURE",
-    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above.",
-    "follow_up_issues": [
-      108
-    ]
+    "status": "IMPLEMENTED_AT_ACCEPTED_PRECISION",
+    "disposition": "Current branded map system, explicit source/precision labels, responsive offline readers and preserved approved artwork.",
+    "review": "2026-09-13 delegated geographic completion",
+    "evidence": "geospatial/finalization/README.md"
   },
   {
     "section": 16,
     "title": "CANONICAL GEOSPATIAL TECHNOLOGY STACK",
     "status": "IMPLEMENTED_FOR_FRAMEWORK",
-    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above."
+    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above.",
+    "review": "2026-09-13 delegated geographic completion",
+    "evidence": "geospatial/finalization/README.md"
   },
   {
     "section": 17,
     "title": "CORE DATA MODEL",
     "status": "IMPLEMENTED_FOR_FRAMEWORK",
-    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above."
+    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above.",
+    "review": "2026-09-13 delegated geographic completion",
+    "evidence": "geospatial/finalization/README.md"
   },
   {
     "section": 18,
     "title": "FICTIONALITY AND REAL-WORLD RELATION POLICY",
     "status": "IMPLEMENTED_FOR_FRAMEWORK",
-    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above."
+    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above.",
+    "review": "2026-09-13 delegated geographic completion",
+    "evidence": "geospatial/finalization/README.md"
   },
   {
     "section": 19,
     "title": "GEOGRAPHIC PRECISION POLICY",
     "status": "IMPLEMENTED_FOR_FRAMEWORK",
-    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above."
+    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above.",
+    "review": "2026-09-13 delegated geographic completion",
+    "evidence": "geospatial/finalization/README.md"
   },
   {
     "section": 20,
     "title": "SOURCE ACQUISITION AND LICENSING",
     "status": "IMPLEMENTED_FOR_FRAMEWORK",
-    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above."
+    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above.",
+    "review": "2026-09-13 delegated geographic completion",
+    "evidence": "geospatial/finalization/README.md"
   },
   {
     "section": 21,
     "title": "LOCKED DECISIONS VERSUS ENGINEERING DETAILS",
     "status": "IMPLEMENTED_FOR_FRAMEWORK",
-    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above."
+    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above.",
+    "review": "2026-09-13 delegated geographic completion",
+    "evidence": "geospatial/finalization/README.md"
   },
   {
     "section": 22,
     "title": "RED WASH EXACT-SITING WORKFLOW",
-    "status": "PARTIAL_OR_FUTURE",
-    "disposition": "Sweetwater anchor locked; complete detailed mine/site engineering remains.",
+    "status": "ENGINEERING_REMAINDER",
+    "disposition": "Accepted synthetic estate preserved. Detailed transitions, design profiles, construction/site engineering and real land/access evidence are not certified by source adjudication; see #107.",
     "follow_up_issues": [
       107
-    ]
+    ],
+    "review": "2026-09-13 delegated geographic completion",
+    "evidence": "geospatial/finalization/README.md"
   },
   {
     "section": 23,
     "title": "BS&T NETWORK ENGINEERING WORKFLOW",
-    "status": "PARTIAL_OR_FUTURE",
-    "disposition": "Current network, branches, road, tracks and structures consumed; detailed survey/design remains.",
+    "status": "ENGINEERING_REMAINDER",
+    "disposition": "Accepted synthetic estate preserved. Detailed transitions, design profiles, construction/site engineering and real land/access evidence are not certified by source adjudication; see #107.",
     "follow_up_issues": [
       107
-    ]
+    ],
+    "review": "2026-09-13 delegated geographic completion",
+    "evidence": "geospatial/finalization/README.md"
   },
   {
     "section": 24,
     "title": "SACRAMENTO HQ GEOMETRY",
-    "status": "PARTIAL_OR_FUTURE",
-    "disposition": "Sacramento district retained; exact parcel unfinished.",
-    "follow_up_issues": [
-      106
-    ]
+    "status": "IMPLEMENTED_AT_ACCEPTED_PRECISION",
+    "disposition": "11.57-acre Sacramento fictional footprint screened against terrain, dated imagery, roads/rail and flood mapping; V08 artwork remains unchanged.",
+    "review": "2026-09-13 delegated geographic completion",
+    "evidence": "geospatial/finalization/README.md"
   },
   {
     "section": 25,
     "title": "EVALON / HAZELWOOD GEOMETRY",
-    "status": "PARTIAL_OR_FUTURE",
-    "disposition": "Klein/Fort concept implemented; exact parcel and historical occupancy linkage remain.",
-    "follow_up_issues": [
-      106
-    ]
+    "status": "IMPLEMENTED_AT_ACCEPTED_PRECISION",
+    "disposition": "10.65-acre Fort fictional footprint screened; accepted 2024 separate-premises relocation preserved with unknown days.",
+    "review": "2026-09-13 delegated geographic completion",
+    "evidence": "geospatial/finalization/README.md"
   },
   {
     "section": 26,
     "title": "CRADLE / BELLE GEOMETRY",
-    "status": "PARTIAL_OR_FUTURE",
-    "disposition": "Bedford/Fairmont supersedes Belle; exact site/access unfinished.",
-    "follow_up_issues": [
-      106
-    ]
+    "status": "IMPLEMENTED_AT_ACCEPTED_PRECISION",
+    "disposition": "15.27-acre Bedford/Fairmont fictional footprint screened; upper bench and steep-buffer distinction retained; external hosts remain separate.",
+    "review": "2026-09-13 delegated geographic completion",
+    "evidence": "geospatial/finalization/README.md"
   },
   {
     "section": 27,
     "title": "BLACKRIDGE AND OTHER MAJOR ASSETS",
-    "status": "PARTIAL_OR_FUTURE",
-    "disposition": "Blackridge Nevada scope retained; exact site unresolved.",
-    "follow_up_issues": [
-      106
-    ]
+    "status": "IMPLEMENTED_AT_ACCEPTED_PRECISION",
+    "disposition": "Blackridge and remaining assets receive explicit geographic/public-precision dispositions without inventing restricted premises.",
+    "review": "2026-09-13 delegated geographic completion",
+    "evidence": "geospatial/finalization/README.md"
   },
   {
     "section": 28,
     "title": "CORPORATE ASSET CENSUS",
-    "status": "PARTIAL_OR_FUTURE",
-    "disposition": "919 files and 78,145 discovery occurrences indexed; semantic long tail remains.",
-    "follow_up_issues": [
-      108
-    ]
+    "status": "IMPLEMENTED_AT_ACCEPTED_PRECISION",
+    "disposition": "78,145 baseline carriers in six fixed batches; 919-file source ledger; 17 full-text canonical deltas; visual roles and source counterparts verified. Other domain records retain explicit geographic authority boundaries.",
+    "review": "2026-09-13 delegated geographic completion",
+    "evidence": "geospatial/finalization/README.md"
   },
   {
     "section": 29,
     "title": "TEMPORAL AND BITEMPORAL INTEGRITY",
-    "status": "PARTIAL_OR_FUTURE",
-    "disposition": "Half-open dates supported; institutional founding no longer invents physical occupancy.",
-    "follow_up_issues": [
-      108
-    ]
+    "status": "IMPLEMENTED_AT_ACCEPTED_PRECISION",
+    "disposition": "Source-recorded dates remain separate from effective inquiry, ownership and occupancy dates; unknown day precision preserved.",
+    "review": "2026-09-13 delegated geographic completion",
+    "evidence": "geospatial/finalization/README.md"
   },
   {
     "section": 30,
     "title": "CORPORATE-HISTORY MAP ENGINE",
-    "status": "PARTIAL_OR_FUTURE",
-    "disposition": "Current/pre-acquisition BS&T maps present; early route geometry unlocated.",
-    "follow_up_issues": [
-      108
-    ]
+    "status": "IMPLEMENTED_AT_ACCEPTED_PRECISION",
+    "disposition": "Historical/site maps and dated route queries complete at accepted precision; 1898/1954/abandoned alignments explicitly unlocated.",
+    "review": "2026-09-13 delegated geographic completion",
+    "evidence": "geospatial/finalization/README.md"
   },
   {
     "section": 31,
     "title": "PROVENANCE MUST BE FEATURE-LEVEL",
     "status": "IMPLEMENTED_FOR_FRAMEWORK",
-    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above."
+    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above.",
+    "review": "2026-09-13 delegated geographic completion",
+    "evidence": "geospatial/finalization/README.md"
   },
   {
     "section": 32,
     "title": "REPOSITORY INTEGRATION",
     "status": "IMPLEMENTED_FOR_FRAMEWORK",
-    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above."
+    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above.",
+    "review": "2026-09-13 delegated geographic completion",
+    "evidence": "geospatial/finalization/README.md"
   },
   {
     "section": 33,
     "title": "BRAND ASSET HANDLING",
     "status": "IMPLEMENTED_FOR_FRAMEWORK",
-    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above."
+    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above.",
+    "review": "2026-09-13 delegated geographic completion",
+    "evidence": "geospatial/finalization/README.md"
   },
   {
     "section": 34,
     "title": "MAP PRODUCT CONTROL",
     "status": "IMPLEMENTED_FOR_FRAMEWORK",
-    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above."
+    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above.",
+    "review": "2026-09-13 delegated geographic completion",
+    "evidence": "geospatial/finalization/README.md"
   },
   {
     "section": 35,
     "title": "VALIDATION REQUIREMENTS",
     "status": "IMPLEMENTED_FOR_FRAMEWORK",
-    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above."
+    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above.",
+    "review": "2026-09-13 delegated geographic completion",
+    "evidence": "geospatial/finalization/README.md"
   },
   {
     "section": 36,
     "title": "TESTS",
     "status": "IMPLEMENTED_FOR_FRAMEWORK",
-    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above."
+    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above.",
+    "review": "2026-09-13 delegated geographic completion",
+    "evidence": "geospatial/finalization/README.md"
   },
   {
     "section": 37,
     "title": "WEB AND INTERACTIVE MAP FUTURE",
-    "status": "PARTIAL_OR_FUTURE",
-    "disposition": "Future interactive views deferred; portable QGIS supplied.",
-    "follow_up_issues": [
-      108
-    ]
+    "status": "IMPLEMENTED_AT_ACCEPTED_PRECISION",
+    "disposition": "Offline decision, source-ledger, carrier, timeline and historical-map readers implemented.",
+    "review": "2026-09-13 delegated geographic completion",
+    "evidence": "geospatial/finalization/README.md"
   },
   {
     "section": 38,
     "title": "DECISION-MAKING METHOD",
     "status": "IMPLEMENTED_FOR_FRAMEWORK",
-    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above."
+    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above.",
+    "review": "2026-09-13 delegated geographic completion",
+    "evidence": "geospatial/finalization/README.md"
   },
   {
     "section": 39,
     "title": "USER CONTINUATION RULE",
     "status": "IMPLEMENTED_FOR_FRAMEWORK",
-    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above."
+    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above.",
+    "review": "2026-09-13 delegated geographic completion",
+    "evidence": "geospatial/finalization/README.md"
   },
   {
     "section": 40,
     "title": "OPEN QUESTIONS TO SURFACE, NOT SILENTLY ANSWER",
-    "status": "PARTIAL_OR_FUTURE",
-    "disposition": "Known decisions closed; remaining history and implementation gaps explicitly listed.",
-    "follow_up_issues": [
-      106,
-      107,
-      108
-    ]
+    "status": "IMPLEMENTED_AT_ACCEPTED_PRECISION",
+    "disposition": "All fictional site/occupancy decisions resolved under owner delegation; engineering and external execution limits remain explicit.",
+    "review": "2026-09-13 delegated geographic completion",
+    "evidence": "geospatial/finalization/README.md"
   },
   {
     "section": 41,
     "title": "FIRST EXECUTION PHASE",
-    "status": "PARTIAL_OR_FUTURE",
-    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above.",
-    "follow_up_issues": [
-      106,
-      107,
-      108
-    ]
+    "status": "IMPLEMENTED_AT_ACCEPTED_PRECISION",
+    "disposition": "Source discovery and provenance architecture implemented; fixed review records preserve original wording and source hashes.",
+    "review": "2026-09-13 delegated geographic completion",
+    "evidence": "geospatial/finalization/README.md"
   },
   {
     "section": 42,
     "title": "SECOND EXECUTION PHASE",
-    "status": "PARTIAL_OR_FUTURE",
-    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above.",
-    "follow_up_issues": [
-      106,
-      107,
-      108
-    ]
+    "status": "IMPLEMENTED_AT_ACCEPTED_PRECISION",
+    "disposition": "Current geographic decisions and site identity crosswalk implemented.",
+    "review": "2026-09-13 delegated geographic completion",
+    "evidence": "geospatial/finalization/README.md"
   },
   {
     "section": 43,
     "title": "THIRD EXECUTION PHASE",
-    "status": "PARTIAL_OR_FUTURE",
-    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above.",
-    "follow_up_issues": [
-      106,
-      107,
-      108
-    ]
+    "status": "IMPLEMENTED_AT_ACCEPTED_PRECISION",
+    "disposition": "Accepted current railway/industrial estate and chronology integrated; survey/design extensions remain #107.",
+    "review": "2026-09-13 delegated geographic completion",
+    "evidence": "geospatial/finalization/README.md"
   },
   {
     "section": 44,
     "title": "FOURTH EXECUTION PHASE",
-    "status": "PARTIAL_OR_FUTURE",
-    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above.",
-    "follow_up_issues": [
-      106,
-      107,
-      108
-    ]
+    "status": "IMPLEMENTED_AT_ACCEPTED_PRECISION",
+    "disposition": "Enterprise histories and bounded site precision integrated across catalog, docket and map products.",
+    "review": "2026-09-13 delegated geographic completion",
+    "evidence": "geospatial/finalization/README.md"
   },
   {
     "section": 45,
     "title": "FIFTH EXECUTION PHASE",
-    "status": "PARTIAL_OR_FUTURE",
-    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above.",
-    "follow_up_issues": [
-      106,
-      107,
-      108
-    ]
+    "status": "IMPLEMENTED_AT_ACCEPTED_PRECISION",
+    "disposition": "Offline historical and source research readers implemented with executable browser qualification.",
+    "review": "2026-09-13 delegated geographic completion",
+    "evidence": "geospatial/finalization/README.md"
   },
   {
     "section": 46,
     "title": "RELEASE PACKAGE",
-    "status": "PARTIAL_OR_FUTURE",
-    "disposition": "New bundles built to ignored dist for GitHub Releases; prior bytes remain immutable.",
+    "status": "DELIVERY_QUALIFICATION_REQUIRED",
+    "disposition": "Version 1.4 adds final decisions and source review. Clean integration, native/browser tests, sealed release and publication receipts are required; #107 engineering prevents claiming full-program completion.",
     "follow_up_issues": [
+      107,
       108
-    ]
+    ],
+    "review": "2026-09-13 delegated geographic completion",
+    "evidence": "geospatial/finalization/README.md"
   },
   {
     "section": 47,
     "title": "DEFINITION OF DONE",
-    "status": "PARTIAL_OR_FUTURE",
-    "disposition": "Framework reconciliation eligible for closure; entire geographic program incomplete.",
+    "status": "PROGRAM_REMAINDER",
+    "disposition": "Version 1.4 adds final decisions and source review. Clean integration, native/browser tests, sealed release and publication receipts are required; #107 engineering prevents claiming full-program completion.",
     "follow_up_issues": [
-      106,
       107,
       108
-    ]
+    ],
+    "review": "2026-09-13 delegated geographic completion",
+    "evidence": "geospatial/finalization/README.md"
   },
   {
     "section": 48,
     "title": "DO-NOT-DO LIST",
     "status": "IMPLEMENTED_FOR_FRAMEWORK",
-    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above."
+    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above.",
+    "review": "2026-09-13 delegated geographic completion",
+    "evidence": "geospatial/finalization/README.md"
   },
   {
     "section": 49,
     "title": "IMMEDIATE START INSTRUCTION",
     "status": "IMPLEMENTED_FOR_FRAMEWORK",
-    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above."
+    "disposition": "Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above.",
+    "review": "2026-09-13 delegated geographic completion",
+    "evidence": "geospatial/finalization/README.md"
   }
 ]

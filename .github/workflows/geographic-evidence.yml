@@ -3,6 +3,9 @@ on:
   pull_request:
     paths:
       - 'geospatial/closeout/**'
+      - 'geospatial/finalization/**'
+      - 'geospatial/tests/test_finalization.py'
+      - 'docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md'
       - 'geospatial/chronology/**'
       - 'geospatial/completion/**'
       - 'geospatial/tests/test_completion.py'
@@ -39,7 +42,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: gh release download closeout-evidence-v1.1.0 --pattern sable-harbor-closeout-evidence-v1.1.0.zip --dir var/predecessor
-      - run: uv run --with-requirements geospatial/requirements.txt python -m pytest geospatial/tests/test_site_evidence.py geospatial/tests/test_chronology.py geospatial/tests/test_completion.py -q
+      - run: uv run --with-requirements geospatial/requirements.txt python -m pytest geospatial/tests/test_site_evidence.py geospatial/tests/test_chronology.py geospatial/tests/test_completion.py geospatial/tests/test_finalization.py -q
       - name: Build geographic database and review records
         run: uv run --with-requirements geospatial/requirements.txt python -m geospatial.closeout.package --output var/geographic-evidence --evidence-archive var/predecessor/sable-harbor-closeout-evidence-v1.1.0.zip
       - name: Install browser for the history edition
@@ -48,6 +51,8 @@ jobs:
         run: uv run --with-requirements tools/wiki/visual/requirements.txt python -m geospatial.chronology.check_browser --directory var/geographic-evidence/chronology
       - name: Verify offline research readers
         run: uv run --with-requirements tools/wiki/visual/requirements.txt python -m geospatial.completion.check_browser --directory var/geographic-evidence/completion
+      - name: Verify final decisions and source ledger offline
+        run: uv run --with-requirements tools/wiki/visual/requirements.txt python -m geospatial.finalization.check_browser --directory var/geographic-evidence/finalization
       - name: Read, render and relocate in native QGIS
         run: QT_QPA_PLATFORM=offscreen /usr/bin/python3 geospatial/closeout/native.py --package var/geographic-evidence
       - name: Seal verified package

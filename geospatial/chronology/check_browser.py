@@ -39,7 +39,7 @@ def check(directory, executable=None):
         page.locator("#kind").select_option("LEASE_OBSERVATION")
         page.locator("#from").fill("2021")
         page.locator("#through").fill("2021")
-        assert page.locator("#count").inner_text() == "1 of 73 records"
+        assert page.locator("#count").inner_text() == "1 of 79 records"
         page.locator("#list button").click()
         assert (
             "Observation bounds: 2021-01-01 through 2021-12-31"
@@ -53,7 +53,7 @@ def check(directory, executable=None):
             rows = list(csv.DictReader(f))
         assert len(rows) == 1 and rows[0]["event_id"] == "OBS-KLEIN-LEASE-2021"
         page.locator("#search").fill("absent-92831")
-        assert page.locator("#count").inner_text() == "0 of 73 records"
+        assert page.locator("#count").inner_text() == "0 of 79 records"
         with page.expect_download() as event:
             page.locator("#export").click()
         with open(event.value.path(), newline="") as f:
