@@ -6,12 +6,12 @@ Generated reconciliation queue, not an assertion that every unpaired record lack
 
 | State | Records |
 |---|---:|
-| COUNTERPART_REVIEW_REQUIRED | 97 |
+| COUNTERPART_REVIEW_REQUIRED | 98 |
 | HISTORICAL_COUNTERPART_UNRESOLVED | 57 |
 | NAVIGATION_ALIAS_NO_PUBLICATION | 3 |
 | READER_MAINTENANCE_NO_LETTERHEAD | 107 |
-| READER_OR_MAINTENANCE_PAGE | 174 |
-| UNRESOLVED_DOCUMENT_COUNTERPART | 223 |
+| READER_OR_MAINTENANCE_PAGE | 175 |
+| UNRESOLVED_DOCUMENT_COUNTERPART | 222 |
 | VERIFIED_ACCEPTED_EVIDENCE_PACKET | 1 |
 | VERIFIED_CHART_PUBLICATION | 40 |
 | VERIFIED_DOCUMENT_PAIR | 131 |
@@ -111,6 +111,7 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Geographic continuation boundary](../../../geospatial/docs/NEXT_CHAT_HANDOFF.md) — Corporate document-format reconciliation
 - [Geographic program closeout matrix](../../../geospatial/docs/PROGRAM_CLOSEOUT_MATRIX.md) — Corporate document-format reconciliation
 - [Time, ownership and operating state](../../../geospatial/docs/TEMPORAL_MODEL.md) — Corporate document-format reconciliation
+- [Facility coverage matrix](../../../geospatial/facilities/coverage/COVERAGE_MATRIX.md) — Corporate document-format reconciliation
 - [Geographic completion authority — September 13, 2026](../../../geospatial/finalization/AUTHORIZATION.md) — Corporate document-format reconciliation
 - [Source interpretation and geographic crosswalk](../../../geospatial/finalization/SOURCE_REVIEW.md) — Corporate document-format reconciliation
 - [Geographic decision register v0.1](../../../geospatial/registers/GEOGRAPHIC_DECISION_REGISTER_v0.1.md) — Corporate document-format reconciliation

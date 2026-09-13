@@ -3,7 +3,7 @@
 import hashlib
 import json
 from pathlib import Path
-from geospatial.finalization.screen import screen
+from geospatial.finalization.screen import screen, equivalent
 
 ROOT = Path(__file__).resolve().parents[2]
 BASE = ROOT / "geospatial/finalization"
@@ -33,8 +33,11 @@ def sync():
     original_ids = {x for x in objects if x.startswith(("SH-SITE-", "SH-FAC-FORT-"))}
     if {r["object_id"] for r in decisions["records"]} != original_ids:
         raise ValueError("Incomplete site disposition")
-    report = screen()
-    (BASE / "SITE_SCREEN.json").write_text(json.dumps(report, indent=2) + "\n")
+    report = json.loads((BASE / "SITE_SCREEN.json").read_text())
+    if not equivalent(screen(), report):
+        raise ValueError("Retained site screen differs; review changed inputs explicitly")
+    # Canonical feature attributes use the reviewed values. Recomputing projection
+    # last bits on another platform must not rewrite governed source bytes.
     c["sources"] = [s for s in c["sources"] if s["source_id"] != SOURCE]
     c["sources"].append(
         dict(

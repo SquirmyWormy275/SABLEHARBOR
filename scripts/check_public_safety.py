@@ -13,8 +13,8 @@ ALLOWED_LARGE_PUBLIC_ARTIFACTS = {
     # PR164 geographic decisions on accepted PR138 main; regenerated public catalog.
     # Exact bytes only: no general allowance for new databases or later drift.
     Path("docs/internal/institutional_catalog.sqlite3"): (
-        11216896,
-        "3ad84a8dbd47b08bf5ef11eb7000d3c2171ec3bdb5bff1a34694b1653b286e50",
+        11220992,
+        "6dab70b9f9015dc7136fd4755e6fa2eccfa4f0b530974eccf3475b29525dbaff",
     ),
     # Reviewed September 10 successor: six approved J2 names, unchanged public scope.
     Path("docs/organization/assets/current/Sable-Harbor-Organization-Charts.pdf"): (

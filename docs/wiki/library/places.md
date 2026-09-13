@@ -412,6 +412,7 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Geographic decision register v0.1](../../../geospatial/registers/GEOGRAPHIC_DECISION_REGISTER_v0.1.md) — MD
 - [Open geographic questions v0.1](../../../geospatial/registers/OPEN_GEOGRAPHIC_QUESTIONS_v0.1.md) — MD
 - [Provenance register](../../../geospatial/registers/PROVENANCE_REGISTER.md) — MD
+- [Geographic registers](../../../geospatial/registers/README.md) — MD
 
 ## `geospatial/releases`
 
