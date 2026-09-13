@@ -26,6 +26,8 @@ def test_history_preserves_evidence_and_temporal_meaning():
     assert all(e["object_ids"] == [] for e in events.values() if e["kind"] == "SAFETY_EVENT")
     assert events["MOVE-KLEIN-FORT-2024"]["date_text"] == "2024"
     assert events["MOVE-KLEIN-FORT-2024"]["evidence"]["decision_id"] == "GEO-KLEIN-FORT-20260913"
+    assert all(e["source_revision"] == e["evidence"]["revision"] for e in events.values())
+    assert events["MOVE-KLEIN-FORT-2024"]["source_revision"] == result["build_revision"]
 
 
 def test_route_history_does_not_backfill_unknown_alignment():

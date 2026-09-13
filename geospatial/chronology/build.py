@@ -73,7 +73,7 @@ def event(ident, title, kind, when, evidence, object_ids=(), notes="", place="Un
         object_ids=list(object_ids),
         place=place,
         evidence=evidence,
-        source_revision=BASELINE,
+        source_revision=evidence["revision"],
         occupancy_interval_established=False,
         notes=notes,
     )
