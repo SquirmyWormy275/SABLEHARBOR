@@ -9,6 +9,13 @@ from sable_harbor.exports.safety import scan_generated_artifacts
 FORBIDDEN = ("ghp_", "github_pat_", "sk-proj-", "BEGIN PRIVATE KEY")
 MAX_BYTES = 10 * 1024 * 1024
 ALLOWED_LARGE_PUBLIC_ARTIFACTS = {
+    # Tracked convenience catalog retained by GENERATED_RECORDS_LIFECYCLE.md.
+    # PR158 adds 17 review-only legal packages; full reader regeneration verified.
+    # Exact bytes only: no general allowance for new databases or later drift.
+    Path("docs/internal/institutional_catalog.sqlite3"): (
+        10610688,
+        "6999f5eb27da69c166d161ff1ec949d0d328ed3290f04a49de8e4c160acd1d77",
+    ),
     # Reviewed September 10 successor: six approved J2 names, unchanged public scope.
     Path("docs/organization/assets/current/Sable-Harbor-Organization-Charts.pdf"): (
         12412796,
