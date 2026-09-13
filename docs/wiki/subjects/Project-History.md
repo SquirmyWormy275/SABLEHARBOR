@@ -12,3 +12,21 @@ A useful case question is which physical assumption invalidated the original des
 The [facility coverage matrix](../../../geospatial/facilities/coverage/COVERAGE_MATRIX.md) preserves geography/status dispositions; historical project names do not authorize occupied buildings or fabricated engineering detail. There are no independent Glasshouse or Wallaby logos introduced here. For other abandoned property opportunities, use [acquisition history](Historical-Opportunities.md).
 
 [Subject directory](README.md) · [Business directory](../businesses/README.md) · [Department directory](../departments/README.md) · [Wiki home](../Home.md)
+
+## Reading guide
+
+Read the unsuccessful and changing projects as part of the company’s learning history. Their records distinguish an interesting experiment, a useful technical result and something an operating business can actually use.
+
+
+## What remains unknown
+
+A named project or incident does not establish a separate company, exact location or complete chronology. Source-level provisional and open details remain visible. See the [open questions register](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Open-Questions) for the evidence needed to resolve tracked gaps.
+
+## Related reading
+
+- [Willow](../businesses/Willow.md)
+- [Project Cradle](../businesses/Cradle.md)
+- [Klein, Emberline and Willow](Research-History.md)
+- [Abandoned acquisition opportunities](Historical-Opportunities.md)
+
+Related reading describes useful connections, not additional reporting lines.

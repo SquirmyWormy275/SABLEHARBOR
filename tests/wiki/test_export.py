@@ -163,6 +163,35 @@ class WikiExportTests(unittest.TestCase):
         self.assertIn("[One](#one-1)", result)
         self.assertIn("[`Three`](#three)", result)
 
+    def test_readable_titles_preserve_bookmarks_fragments_and_literal_code(self):
+        other = self.home.parent / "businesses/One.md"
+        other.parent.mkdir()
+        other.write_text("# One\n\n## Detail\n\nThe actual article.\n")
+        self.home.write_text(
+            "# Home\n\n[One](businesses/One.md#detail)\n\n`[Literal](businesses--One)`\n"
+        )
+        config = self.root / "tools/wiki/titles.json"
+        config.parent.mkdir(parents=True)
+        config.write_text(json.dumps({"businesses--One": "One"}))
+        (config.parent / "legacy-sections.json").write_text(
+            json.dumps({"routes": {"businesses--One": {"previous-detail": "detail"}}})
+        )
+        output = self.base / "output"
+        manifest = MODULE.Exporter(self.root, SHA).build(output)
+        self.assertIn("/wiki/One#detail", (output / "Home.md").read_text())
+        self.assertIn("`[Literal](businesses--One)`", (output / "Home.md").read_text())
+        self.assertIn("The actual article.", (output / "One.md").read_text())
+        old = (output / "businesses--One.md").read_text()
+        self.assertIn('id="detail"', old)
+        self.assertIn('id="previous-detail"', old)
+        self.assertIn("/wiki/One#detail", old)
+        self.assertEqual(manifest["aliases"], {"businesses--One.md": "One.md"})
+        self.assertIn("tools/wiki/titles.json", manifest["inputs"])
+        config.write_text(json.dumps({"businesses--One": "Home"}))
+        with self.assertRaisesRegex(ValueError, "collide"):
+            MODULE.Exporter(self.root, SHA).build(self.base / "collision")
+        self.assertFalse((self.base / "collision").exists())
+
     def test_collisions_and_manifest_traversal(self):
         (self.home.parent / "home.md").write_text("collision")
         with self.assertRaises(ValueError):

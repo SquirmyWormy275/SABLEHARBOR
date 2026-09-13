@@ -6,7 +6,7 @@ Generated file inventory. Includes current and historical records; open the sour
 
 ## `.`
 
-- [Contributing](../../../CONTRIBUTING.md) — MD
+- [Contributing to Sable Harbor](../../../CONTRIBUTING.md) — MD
 - [All Rights Reserved](../../../LICENSE.md) — MD
 - [Maintainer Rules](../../../MAINTAINERS.md) — MD
 - [SABLE HARBOR](../../../README.md) — MD

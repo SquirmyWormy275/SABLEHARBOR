@@ -6,7 +6,11 @@
 
 Sable Harbor Advisory investigates business problems, builds client intelligence capabilities and improves operations. Intelligence Advisory, Intelligence Capability and Operational Excellence draw from one common professional bench. Work is organized into client matters with defined acceptance, review and transfer obligations.
 
-**Reader status:** Navigation summary checked September 11, 2026. Linked canon controls; this page creates no new facts. Existing chart artwork is from publication 1.1.0, September 10, 2026. Financial cases are publicly synthetic.
+**Reviewed:** September 12, 2026 · Fictional enterprise; source records control.
+
+## Reading guide
+
+Follow a matter from acceptance through investigation, delivery and its economics. Keep the client engagement, the people doing the work and the authority to make a consequential decision distinct.
 
 ## Start here
 
@@ -53,6 +57,15 @@ The [finance successor guide](../../../enterprise/business/README.md) explains g
 
 Use the [complete facility artifact index](../../../geospatial/maps/facilities/ARTIFACT_INDEX.md) for independently saved maps and floor plans, or open the [interactive atlas](../../../geospatial/maps/index.html) locally in a browser. GitHub displays the linked Markdown and images directly; it does not execute the atlas HTML.
 
-## Limits to keep visible
+## What remains unknown
 
-The individual President remains an appointment decision. External legal, tax, insurance, privacy and trademark implementation is not complete merely because the operating design is recorded. Serving J2 personnel are not an Advisory recruiting pool.
+Parent tax treatment, external legal execution of carry arrangements and commercial name clearance remain open under issue #18. See the [open questions register](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Open-Questions) for the evidence needed to resolve tracked gaps.
+
+## Related reading
+
+- [Atlas Meridian](Atlas-Meridian.md)
+- [Office of the General Counsel](../departments/legal.md)
+- [J2 Education](../departments/education.md)
+- [Finance](../departments/finance.md)
+
+Related reading describes useful connections, not additional reporting lines.

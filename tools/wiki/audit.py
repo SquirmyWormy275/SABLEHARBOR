@@ -145,16 +145,24 @@ def audit_export(directory):
                 edges[name].add(target)
                 if url.fragment and unquote(url.fragment) not in pages[target].anchors:
                     errors.append(f"{name}: missing Wiki anchor {href}")
-    seen, queue = set(), deque(["Home", "_Sidebar"])
+    manifest_path = directory / "sable-harbor-wiki-manifest.json"
+    manifest = json.loads(manifest_path.read_text()) if manifest_path.exists() else {}
+    aliases = {Path(k).stem: Path(v).stem for k, v in manifest.get("aliases", {}).items()}
+    for alias, target in aliases.items():
+        if alias not in pages or target not in pages or target not in edges.get(alias, set()):
+            errors.append(f"{alias}: invalid historical page route to {target}")
+    seen, queue = set(), deque(["Home", "_Sidebar", "_Footer"])
     while queue:
         page = queue.popleft()
         if page not in seen:
             seen.add(page)
             queue.extend(edges.get(page, set()) - seen)
-    for name in set(pages) - seen:
+    for name in set(pages) - seen - aliases.keys():
         errors.append(f"{name}: unreachable exported Wiki page")
     return {"pages": len(pages), "wiki_destinations": checked,
-            "reachable_pages": len(seen & pages.keys()), "errors": sorted(errors)}
+            "reachable_pages": len((seen | aliases.keys()) & pages.keys()),
+            "canonical_pages": len(pages) - len(aliases), "historical_addresses": len(aliases),
+            "errors": sorted(errors)}
 
 
 if __name__ == "__main__":

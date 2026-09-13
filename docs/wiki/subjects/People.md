@@ -16,3 +16,21 @@ Open the [original full-size cohort artwork](../../organization/assets/current/p
 An incident establishing someone's presence does not establish their exact hire date. A plain chart title may still carry an unresolved appointment qualification. Repeated appearances in charts are not separate people, and authorized billets are not a named employee census. This route adds no appointments or biographies.
 
 [Subject directory](README.md) · [Business directory](../businesses/README.md) · [Department directory](../departments/README.md) · [Wiki home](../Home.md)
+
+## Reading guide
+
+Start with the historical cohort, then move to the current board, enterprise and business charts. Read each person’s recorded role and its qualifications before using a chart to reconstruct an earlier organization.
+
+
+## What remains unknown
+
+Joining years, appointment dates, board membership, employment and authorized billets are different facts. Remaining J2 occupants and appointment histories are open under issue #19. See the [open questions register](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Open-Questions) for the evidence needed to resolve tracked gaps.
+
+## Related reading
+
+- [Board and committees](../departments/board.md)
+- [J2 — Judgment & Junction](../departments/j2.md)
+- [People & Culture](../departments/people-culture.md)
+- [Company history and The Crossing](History.md)
+
+Related reading describes useful connections, not additional reporting lines.

@@ -15,3 +15,21 @@ For financial review, open the [Willow/Klein finance model](../../finance/WILLOW
 [Existing research-history chart](../../organization/charts/research-history.md) · [Research artifacts](../../organization/charts/research-artifacts.md)
 
 [Subject directory](README.md) · [Business directory](../businesses/README.md) · [Department directory](../departments/README.md) · [Wiki home](../Home.md)
+
+## Reading guide
+
+Trace Klein, Emberline and Willow as distinct historical and institutional concepts. The transition is easier to follow when experiments, the physical outpost and the current parent-book program are kept separate.
+
+
+## What remains unknown
+
+Institutional founding and formalization dates do not establish parcel tenure or occupancy. Exact historical site linkage remains open under issue #106. See the [open questions register](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Open-Questions) for the evidence needed to resolve tracked gaps.
+
+## Related reading
+
+- [Willow](../businesses/Willow.md)
+- [Glasshouse, Wallaby and failed experiments](Project-History.md)
+- [Company history and The Crossing](History.md)
+- [Facilities and workplace services](../departments/facilities.md)
+
+Related reading describes useful connections, not additional reporting lines.

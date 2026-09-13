@@ -16,3 +16,21 @@ For a management case, compare one specific pre-Crossing dependency with the cha
 Use the [dated canon library](../library/history.md) for detail and [source authority guide](../../reader/SOURCES_AND_FORMATS.md) for conflicts. Joining years, incorporation, office appointments and occupancy dates are different facts. Current named-person charts cannot reconstruct every historical employee population.
 
 [Subject directory](README.md) · [Business directory](../businesses/README.md) · [Department directory](../departments/README.md) · [Wiki home](../Home.md)
+
+## Reading guide
+
+Follow the transition from a services-led company to reusable software and a broader operating portfolio. The Crossing is useful as a management case because it connects a practical deployment constraint to a lasting change in the way the company worked.
+
+
+## What remains unknown
+
+Retrospective narrative is not a contemporaneous incident log or audited financial series. Later dated decisions control the parts of earlier lore they supersede. See the [open questions register](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Open-Questions) for the evidence needed to resolve tracked gaps.
+
+## Related reading
+
+- [Founders, early colleagues and later people](People.md)
+- [Klein, Emberline and Willow](Research-History.md)
+- [Foundry Field](../businesses/Foundry-Field.md)
+- [Atlas Meridian](../businesses/Atlas-Meridian.md)
+
+Related reading describes useful connections, not additional reporting lines.

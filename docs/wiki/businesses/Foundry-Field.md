@@ -6,7 +6,11 @@
 
 Foundry Field is software for production tracking, maintenance, reconciliations and operating exceptions. Foundry supplies the underlying representation of records, relationships, provenance and authority. Foundry Field packages that capability for customer operating work.
 
-**Reader status:** Navigation summary checked September 11, 2026. Linked canon controls; this page creates no new facts. Existing chart artwork is from publication 1.1.0, September 10, 2026. Financial cases are publicly synthetic.
+**Reviewed:** September 12, 2026 · Fictional enterprise; source records control.
+
+## Reading guide
+
+Start with the operating loop: record production, reconcile what happened and make exceptions visible to the responsible operator. Then trace the commercial and deployment records behind a customer engagement.
 
 ## Start here
 
@@ -48,6 +52,15 @@ The [finance successor guide](../../../enterprise/business/README.md) explains g
 
 Use the [complete facility artifact index](../../../geospatial/maps/facilities/ARTIFACT_INDEX.md) for independently saved maps and floor plans, or open the [interactive atlas](../../../geospatial/maps/index.html) locally in a browser. GitHub displays the linked Markdown and images directly; it does not execute the atlas HTML.
 
-## Limits to keep visible
+## What remains unknown
 
-Customer operation remains under the customer’s authority. Synthetic forecast contracts and prices are exercises, not approved commercial offers. Unnamed role details and a dedicated footprint remain unresolved.
+Conditional revenue and deployment scenarios do not prove executed customer terms. Billing proposal PR #138 remains unapproved. See the [open questions register](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Open-Questions) for the evidence needed to resolve tracked gaps.
+
+## Related reading
+
+- [Enterprise Technology Services](../departments/technology.md)
+- [Finance](../departments/finance.md)
+- [Company history and The Crossing](../subjects/History.md)
+- [Atlas Meridian](Atlas-Meridian.md)
+
+Related reading describes useful connections, not additional reporting lines.

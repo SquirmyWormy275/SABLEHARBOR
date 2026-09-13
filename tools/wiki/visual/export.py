@@ -41,6 +41,8 @@ def run(export, output, executable=None):
                     context = browser.new_context(viewport={"width": width, "height": 1000}, color_scheme=theme)
                     page = context.new_page()
                     for name in manifest["files"]:
+                        if name in manifest.get("aliases", {}):
+                            continue
                         source = (export / name).read_text()
                         raw = f"https://raw.githubusercontent.com/{manifest['repository']}/{manifest['source_revision']}/"
                         body = MARKDOWN.render(source).replace(raw, f"http://127.0.0.1:{server.server_port}/")
@@ -65,7 +67,8 @@ def run(export, output, executable=None):
                         if page.evaluate('document.documentElement.scrollWidth>innerWidth+1'):
                             problems.append('expanded contents overflow')
                         results.append({"page": name, "theme": theme, "width": width, "problems": problems})
-                        if name in ('Home.md', 'businesses--Willow.md', 'departments--finance.md', 'departments--contact.md', 'subjects--History.md', 'records--docs--reader--exercises--INVOICE.md'):
+                        samples = ('Home.md', 'businesses--Willow.md', 'departments--finance.md', 'departments--contact.md', 'subjects--History.md', 'records--docs--reader--exercises--INVOICE.md', 'Start-Here.md', 'Open-Questions.md', 'Glossary.md', 'Reading--finance.md')
+                        if name in {manifest.get('aliases', {}).get(sample, sample) for sample in samples}:
                             page.locator('details').evaluate_all('(nodes) => nodes.forEach(n => n.open=false)')
                             page.screenshot(path=str(output / f"{name}-{theme}-{width}-top.png"))
                             page.evaluate('scrollTo(0, 1100)')

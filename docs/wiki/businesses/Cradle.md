@@ -6,7 +6,11 @@
 
 Cradle recovers rare-earth materials from designated industrial side streams and mine water for specialist downstream sale. Its work connects external host deployments with the separate Bedford development, refurbishment, analytical and upgrading facility.
 
-**Reader status:** Navigation summary checked September 11, 2026. Linked canon controls; this page creates no new facts. Existing chart artwork is from publication 1.1.0, September 10, 2026. Financial cases are publicly synthetic.
+**Reviewed:** September 12, 2026 · Fictional enterprise; source records control.
+
+## Reading guide
+
+Follow a material stream from the host site through recovery and onward processing. Host rights, technical results and the economics of a useful recovered output answer different questions in that chain.
 
 ## Start here
 
@@ -49,8 +53,17 @@ The [finance successor guide](../../../enterprise/business/README.md) explains g
 
 Use the [complete facility artifact index](../../../geospatial/maps/facilities/ARTIFACT_INDEX.md) for independently saved maps and floor plans, or open the [interactive atlas](../../../geospatial/maps/index.html) locally in a browser. GitHub displays the linked Markdown and images directly; it does not execute the atlas HTML.
 
-## Limits to keep visible
-
-The host retains its primary operation and stop/bypass authority. Chemistry, prices, host-share percentages and commissioning ramps in finance are synthetic scenario assumptions; they do not grant operating permission.
-
 [Kelly Gang Mining and Demotte host interfaces](../subjects/External-Hosts.md) · [Wallaby history](../subjects/Project-History.md)
+
+## What remains unknown
+
+External host records do not establish ownership of the host sites. Exact footprints, access instruments and remaining implementation evidence retain their source limits. See the [open questions register](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Open-Questions) for the evidence needed to resolve tracked gaps.
+
+## Related reading
+
+- [Cradle's external hosts](../subjects/External-Hosts.md)
+- [Safety and environmental governance](../departments/safety-environment.md)
+- [Quality and technical standards](../departments/quality-standards.md)
+- [Willow](Willow.md)
+
+Related reading describes useful connections, not additional reporting lines.

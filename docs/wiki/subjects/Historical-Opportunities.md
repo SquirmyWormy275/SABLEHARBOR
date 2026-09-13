@@ -13,3 +13,21 @@ Review what prevented each acquisition before comparing it with the [selected Re
 For failed research and recovery projects rather than acquisition opportunities, see [Glasshouse and Wallaby](Project-History.md).
 
 [Subject directory](README.md) · [Business directory](../businesses/README.md) · [Department directory](../departments/README.md) · [Wiki home](../Home.md)
+
+## Reading guide
+
+Compare the abandoned opportunities with the eventual Red Wash transaction. These records support a study of selection and rejection without treating every investigated opportunity as an acquired asset.
+
+
+## What remains unknown
+
+An abandoned opportunity is not a current operating business, an acquired property or an approved future investment. Preserve its original scenario and source status. See the [open questions register](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Open-Questions) for the evidence needed to resolve tracked gaps.
+
+## Related reading
+
+- [Pale Sun / Red Wash](../businesses/Pale-Sun-Red-Wash.md)
+- [Finance](../departments/finance.md)
+- [Glasshouse, Wallaby and failed experiments](Project-History.md)
+- [Company history and The Crossing](History.md)
+
+Related reading describes useful connections, not additional reporting lines.

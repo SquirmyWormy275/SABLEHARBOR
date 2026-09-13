@@ -3,9 +3,13 @@
 <img src="../../../assets/brand/logos/sable-harbor__reverse-horizontal.png" alt="Sable Harbor approved identity" width="360">
 
 **Canon state:** LOCKED institutional scope; implementation detail varies by linked record.<br>
-**Last substantive review:** September 11, 2026. This page is secondary navigation; the linked source records control.
+**Reviewed:** September 12, 2026. This is a reading guide; linked source records control.
 
 The CEO directs the enterprise and its businesses within Board-reserved authority. The corporate center allocates surplus capital and supplies shared services; business presidents retain end-to-end operating responsibility.
+
+## Reading guide
+
+Start with the owner of a decision, then read the capital and planning rhythm around it. The executive coordination groups improve context and access to expertise without creating shared or ambiguous decision ownership.
 
 ## Read and use the records
 
@@ -24,8 +28,17 @@ The CEO directs the enterprise and its businesses within Board-reserved authorit
 
 The shared chart retains its original scope; it is not a new reporting chart for this page. The approved corporate mark above identifies the parent institution.
 
-## Boundaries and unresolved detail
-
-Authority Core, Enterprise Staff and temporary Issue Rooms are coordination arrangements, not three new departments. No centralized Grand Scheme department is established.
-
 [Department and institution directory](README.md) · [Business directory](../businesses/README.md) · [Wiki home](../Home.md)
+
+## What remains unknown
+
+The executive architecture does not fill unnamed offices or approve every investment represented in a model. Reserved matters still require their own authority. See the [open questions register](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Open-Questions) for the evidence needed to resolve tracked gaps.
+
+## Related reading
+
+- [Board and committees](board.md)
+- [Enterprise Support Services](ess.md)
+- [J2 — Judgment & Junction](j2.md)
+- [Finance](finance.md)
+
+Related reading describes useful connections, not additional reporting lines.

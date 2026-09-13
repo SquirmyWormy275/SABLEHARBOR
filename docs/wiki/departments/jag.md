@@ -3,9 +3,13 @@
 <img src="../../../assets/brand/logos/j2__primary-horizontal.png" alt="J2 approved identity" width="240">
 
 **Canon state:** LOCKED DIRECTION field doctrine; LOCKED establishment.<br>
-**Last substantive review:** September 11, 2026. This page is secondary navigation; the linked source records control.
+**Reviewed:** September 12, 2026. This is a reading guide; linked source records control.
 
 JAG sends rotating teams into operating businesses to observe work, collect evidence, test improvements and transfer lessons. Each five-person team combines a team lead, data scientist, technical systems advisor, operational advisor and human systems advisor.
+
+## Reading guide
+
+JAG brings bounded field support to consequential operating problems. Its deployment compact and handoff requirements explain how a team helps without inheriting the operating owner’s authority.
 
 ## Read and use the records
 
@@ -22,8 +26,17 @@ JAG sends rotating teams into operating businesses to observe work, collect evid
 
 The shared chart retains its original scope; it is not a new reporting chart for this page. The approved J2 mark above identifies the parent institution.
 
-## Boundaries and unresolved detail
-
-JAG belongs to J2. It is not the customer-facing Advisory business, a host leader’s permanent staff, an audit unit or an operating command.
-
 [Department and institution directory](README.md) · [Business directory](../businesses/README.md) · [Wiki home](../Home.md)
+
+## What remains unknown
+
+Six active five-person teams describe the accepted establishment. That count does not establish every named occupant, visit or completed deployment. See the [open questions register](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Open-Questions) for the evidence needed to resolve tracked gaps.
+
+## Related reading
+
+- [Judgment](judgment.md)
+- [Contact](contact.md)
+- [J2 Education](education.md)
+- [J2 Headquarters](j2-headquarters.md)
+
+Related reading describes useful connections, not additional reporting lines.
