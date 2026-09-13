@@ -85,3 +85,5 @@ SELECT d.id, s.heading, s.line, d.path FROM source_document d JOIN source_sectio
 ```
 
 Build and verify with `python docs/reader/transactions/build.py` and `python docs/reader/transactions/validate.py`. The package dossiers cite native legal/financial/geographic keys. Only the relevant native accounting source can establish a posting or balance.
+
+[Review decisions, accounting links and practice packets](../../legal/gap-instruments/REVIEW_WORKFLOW.md) extend the draft legal instruments without changing their reviewed bytes. New designs and proposed terms remain held for exact-file review.
