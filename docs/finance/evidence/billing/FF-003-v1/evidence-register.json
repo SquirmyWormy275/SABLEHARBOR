@@ -1,0 +1,30 @@
+{
+  "artifacts": {
+    "docs/finance/evidence/billing/FF-003-v1/INVOICE.md": "4f904bf26416a61477ae0536ba4cbeefacf5deb722832851eaf4413b12f0a5bf",
+    "docs/finance/evidence/billing/FF-003-v1/billing.sqlite3": "315c324409ebb426e9261a70d951be347683552623a17c4b6cf9b24af47f77fc",
+    "docs/finance/evidence/billing/FF-003-v1/billing.xlsx": "87d44b7e9d69e7dd24438824a18aec94fc8c93de6629d4f2388ee0d0610bd32a",
+    "docs/finance/evidence/billing/FF-003-v1/invoice.pdf": "01b3d0d7f0857cade8c8bc890f6a7615761985edd6147111460a8e9c13f99d75",
+    "docs/finance/evidence/billing/FF-003-v1/journal.csv": "ccd10b356e2eafe1753a9247c5a2e81aae7a76098e241dd1225fb41f976deec8",
+    "docs/finance/evidence/billing/FF-003-v1/reconciliation.json": "5fbd34cc927b42c5536fea924c7dab4387ea14b942dbd488e624d757d01777de"
+  },
+  "markdown": "docs/finance/evidence/billing/FF-003-v1/README.md",
+  "package_id": "SH-FIN-BILL-001",
+  "reconciliation": "docs/finance/evidence/billing/FF-003-v1/reconciliation.json",
+  "sources": [
+    {
+      "path": "docs/finance/evidence/billing/FF-003-v1/record.json",
+      "sha256": "7af919a9f3257ce3b39f9ecd4f7fa0fae32df841f58c2157897da03a869a9fb3"
+    },
+    {
+      "path": "docs/canon/FOUNDRY_FIELD_BILLING_ADOPTION_2026-09-13.md",
+      "sha256": "7bc02817d72e7286b8b2314c3fcf6cf904a3fb5267b972d0cdf2a40895f022d5"
+    },
+    {
+      "path": "docs/finance/evidence/SH-FIN-HUMAN-001/source.json",
+      "sha256": "c4833cfc6f28db6cd3edcae761b0e2d8f463a20de79f1d6fd5b0c517f8f829b7"
+    }
+  ],
+  "status": "OWNER_AUTHORIZED; CANON_ON_MAIN_ACCEPTANCE",
+  "title": "Foundry Field / Copperreach adopted billing record",
+  "visual_manifest": "docs/finance/evidence/billing/FF-003-v1/manifest.json"
+}

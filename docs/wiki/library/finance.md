@@ -165,6 +165,19 @@ Generated file inventory. Includes current and historical records; open the sour
 
 - [Draft visual and numerical review](../../finance/evidence/SH-FIN-HUMAN-001/qa/REVIEW.md) — MD
 
+## `docs/finance/evidence/billing-proposal`
+
+- [Current disposition of the Foundry Field billing proposal](../../finance/evidence/billing-proposal/CURRENT.md) — MD
+- [Proposed billing details — Foundry Field invoice FF-003](../../finance/evidence/billing-proposal/README.md) — MD
+
+## `docs/finance/evidence/billing/FF-003-v1`
+
+- [Invoice](../../finance/evidence/billing/FF-003-v1/INVOICE.md) — MD
+- [FF-003 billing quality review](../../finance/evidence/billing/FF-003-v1/QA.md) — MD
+- [Foundry Field — Copperreach billing record](../../finance/evidence/billing/FF-003-v1/README.md) — MD
+- [billing](../../finance/evidence/billing/FF-003-v1/billing.xlsx) — XLSX
+- [invoice](../../finance/evidence/billing/FF-003-v1/invoice.pdf) — PDF
+
 ## `docs/finance/evidence/close`
 
 - [Close, allowance and legal-book reconciliation](../../finance/evidence/close/README.md) — MD
