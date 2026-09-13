@@ -6,11 +6,11 @@ Generated reconciliation queue, not an assertion that every unpaired record lack
 
 | State | Records |
 |---|---:|
-| COUNTERPART_REVIEW_REQUIRED | 65 |
+| COUNTERPART_REVIEW_REQUIRED | 66 |
 | HISTORICAL_COUNTERPART_UNRESOLVED | 57 |
 | NAVIGATION_ALIAS_NO_PUBLICATION | 3 |
 | READER_MAINTENANCE_NO_LETTERHEAD | 111 |
-| READER_OR_MAINTENANCE_PAGE | 164 |
+| READER_OR_MAINTENANCE_PAGE | 165 |
 | UNRESOLVED_DOCUMENT_COUNTERPART | 227 |
 | VERIFIED_ACCEPTED_EVIDENCE_PACKET | 1 |
 | VERIFIED_CHART_PUBLICATION | 40 |
@@ -85,6 +85,7 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Bounded control test contracts](../../../enterprise/ccf/operations/CONTROL_TEST_CONTRACTS.md) — Corporate document-format reconciliation
 - [GitHub pull-request review source](../../../enterprise/ccf/operations/GITHUB_SOURCE.md) — Corporate document-format reconciliation
 - [Protected CCF workflow API](../../../enterprise/ccf/operations/SERVICE.md) — Corporate document-format reconciliation
+- [Klein shop and Fort continuity — proposed decision](../../../geospatial/chronology/CONTINUITY_PROPOSAL.md) — Corporate document-format reconciliation
 - [Geo canon reconciliation and program closeout matrix](../../../geospatial/docs/PROGRAM_CLOSEOUT_MATRIX.md) — Corporate document-format reconciliation
 
 ## Dated counterpart dispositions

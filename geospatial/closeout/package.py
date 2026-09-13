@@ -13,12 +13,15 @@ import zipfile
 from pathlib import Path
 
 from geospatial.closeout.sites import ROOT, review
+from geospatial.chronology.build import write as write_history
+from geospatial.chronology.operations_review import review as review_operations
 from geospatial.scripts.build_geopackage import build as build_geopackage
 from tools.evidence.closeout import residual_geography, verify as verify_evidence
 from tools.evidence.inventory import inventory
 
 PREDECESSOR_SHA256 = "70723d888c6e9eccf9cc9fac87da4fd37e241468a2aefdf0fc097d7325c379d5"
 GPKG = "geospatial/master/sable_harbor_master_v0.1.gpkg"
+VERSION = "1.1.0"
 
 
 def sha(path):
@@ -94,6 +97,10 @@ def prepare(output, predecessor, allow_dirty=False):
         archive.extractall(output / "review")
     verify_evidence(output / "review")
     sites, sources = review()
+    history = write_history(output / "chronology")
+    operations_raw, operations_summary, operations_rows = review_operations()
+    (output / "chronology/OPERATIONS_REVIEW.csv.gz").write_bytes(operations_raw)
+    dump(output / "chronology/OPERATIONS_REVIEW.json", operations_summary)
     residual, reconciliation = residual_geography()
     source_inventory = inventory(ROOT, revision, residual)
     dump(output / "SITE_EVIDENCE.json", sites)
@@ -139,6 +146,19 @@ def prepare(output, predecessor, allow_dirty=False):
     ocr = json.loads((output / "review/ocr-results.json").read_text())
     with sqlite3.connect(gpkg) as db:
         attribute_table(db, "review_site_evidence", sites["rows"], "object_id")
+        attribute_table(db, "review_history_events", history["events"], "event_id")
+        history_links = [
+            {"link_id": e["event_id"] + "::" + oid, "event_id": e["event_id"], "object_id": oid}
+            for e in history["events"]
+            for oid in e["object_ids"]
+        ]
+        attribute_table(db, "review_history_links", history_links, "link_id")
+        if db.execute(
+            "SELECT object_id FROM review_history_links EXCEPT SELECT object_id FROM object_registry"
+        ).fetchall():
+            raise ValueError("History references an unknown object")
+        attribute_table(db, "review_site_history", history["sites"], "object_id")
+        attribute_table(db, "review_operations", operations_rows, "occurrence_id")
         attribute_table(db, "review_occurrences", residual, "occurrence_id")
         attribute_table(
             db, "review_source_coverage", source_inventory["baseline_sources"], "source_path"
@@ -169,12 +189,14 @@ def prepare(output, predecessor, allow_dirty=False):
     dump(
         output / "BUILD.json",
         {
-            "version": "1.0.0",
+            "version": VERSION,
             "source_revision": revision,
             "dirty_review": dirty,
             "predecessor_sha256": PREDECESSOR_SHA256,
             "spatial_feature_counts": old_counts,
             "site_records": len(sites["rows"]),
+            "history_events": len(history["events"]),
+            "operations_review": operations_summary,
             "remaining_occurrences": len(residual),
             "source_reconciliation": reconciliation,
             "issue_106_complete": False,
@@ -185,7 +207,9 @@ def prepare(output, predecessor, allow_dirty=False):
 
 Source: `{revision}`. {"DEVELOPMENT PREVIEW" if dirty else "Clean source build"}.
 
-Open **geospatial/qgis/sable_harbor_master.qgz** in QGIS. Its relative paths work after moving the complete folder. The GeoPackage is **{GPKG}**; it can also be opened directly by GIS or SQLite tools. Open **geospatial/maps/index.html** for the existing facility atlas, or **review/review.html** for the preserved offline review edition.
+Open **chronology/history.html** for the new interactive timeline, site histories and dated route views. Open **geospatial/qgis/sable_harbor_master.qgz** in QGIS. Its relative paths work after moving the complete folder. The GeoPackage is **{GPKG}**; it can also be opened directly by GIS or SQLite tools. Open **geospatial/maps/index.html** for the existing facility atlas, or **review/review.html** for the preserved offline review edition.
+
+History edition 1.1.0 adds 72 source-bound events/observations and an additional 295 industrial occurrence dispositions, leaving 8,666 carriers outside four reviewed batches. The original three-batch residual table remains preserved. The proposed Klein/Fort relocation is kept separate in geospatial/chronology/CONTINUITY_PROPOSAL.md and is excluded from accepted history.
 
 The package contains {len(old_counts)} accepted feature layers, 34 site/component source bindings, 8,961 residual occurrences, 919 baseline source records and the 97-image OCR candidate population from evidence release 1.1.0. New review tables are registered as GeoPackage attributes and joined by stable IDs; they are not invented geographic features. SITE_EVIDENCE.csv is the compact review sheet. SITE_EVIDENCE.json preserves all full records, source excerpts, operational-state evidence and map-feature hashes. ARCHIVED_SOURCES.json identifies the exact historical source bytes included under archived-sources/.
 
@@ -228,6 +252,9 @@ def validate(output):
             or attributes["review_occurrences"] != 8961
             or attributes["review_source_coverage"] != 919
             or attributes["review_raster_candidates"] != 97
+            or attributes["review_history_events"] != 72
+            or attributes["review_site_history"] != 34
+            or attributes["review_operations"] != 295
         ):
             raise ValueError("Review populations differ")
     report = {
@@ -247,6 +274,9 @@ def seal(output):
     build = json.loads((output / "BUILD.json").read_text())
     if build["dirty_review"]:
         raise ValueError("Development previews cannot be published")
+    browser = json.loads((output / "chronology/BROWSER_RESULTS.json").read_text())
+    if not browser["passed"] or browser["html_sha256"] != sha(output / "chronology/history.html"):
+        raise ValueError("History browser qualification is absent or stale")
     native = json.loads((output / "NATIVE_QGIS.json").read_text())
     if (
         not native["passed"]
@@ -263,7 +293,7 @@ def seal(output):
     dump(
         output / "PACKAGE_MANIFEST.json",
         {
-            "version": "1.0.0",
+            "version": VERSION,
             "source_revision": build["source_revision"],
             "files": files,
             "issues_closed": [],
