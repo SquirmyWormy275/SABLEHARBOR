@@ -231,8 +231,11 @@ def build(output, allow_dirty=False):
     report = f'''# Closeout evidence dossier
 
 **Evidence class:** EXECUTED_REFERENCE_TEST / SOURCE_RECONCILIATION
+
 **Source revision:** `{revision}`
+
 **Working tree:** {'DIRTY REVIEW ONLY' if status else 'clean'}
+
 **Collected at:** {datetime.now(timezone.utc).isoformat()}
 
 ## Results
