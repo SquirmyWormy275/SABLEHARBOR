@@ -11,7 +11,8 @@ spec.loader.exec_module(module)
 
 def test_clause_omission_is_detectable():
     blocks = module.source_blocks(
-        "# Agreement\n\nPayment is due only after acceptance.\n\nNo lien attaches to customer equipment.\n"
+        "# Agreement\n\nPayment is due only after acceptance.\n\n"
+        "No lien attaches to customer equipment.\n"
     )
     truncated = module.norm("Agreement Payment is due only after acceptance.")
     assert blocks[0] in truncated
