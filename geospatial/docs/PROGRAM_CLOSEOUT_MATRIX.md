@@ -110,3 +110,14 @@ and substantive geographic claims in the referenced documents remain subject to 
 ## Geographic evidence package — September 13, 2026
 
 The [portable package](../closeout/README.md) binds 34 site/component records to 16 exact archived sources, preserves all accepted spatial rows, and exposes source coverage, the 8,961 residual occurrences and 97-image OCR candidate population as GeoPackage attributes. The native QGIS project links review records to canonical object IDs and is checked after relocation. This completes that integration deliverable; it does not resolve the shop/Fort continuity conflict, invent occupancy intervals or complete semantic/history adjudication. Sections 12, 24–30, 40 and 47 therefore retain their substantive open boundaries.
+
+
+## Geographic history edition — September 13, 2026
+
+The [history edition](../chronology/README.md) supplies 72 dated records: 18 corporate/railway events, 12 facility openings, 26 construction-year observations, 14 safety events and two site observations. The original shop's 2021 lease is now bound to its narrative heading and exact lease sentence. All 34 corporate site/component histories expose dated observations and retained operational states while keeping unsupported occupancy endpoints unknown.
+
+Sections 9, 13, 14, 29, 30 and 37 now have an offline interactive timeline, source inspection, CSV export and date-controlled views of the five accepted railway segments. The 1898/1954 alignments remain unlocated; current facilities and structures are not back-projected into historical footprints. This completes this interactive-view implementation, not the full historical map series.
+
+Sections 6, 28 and 40 gain 295 field-level industrial operations dispositions, bringing the four disjoint batches to 69,479 discovery carriers and leaving 8,666 outside them. Distinct allocations, full containing records and stable asset links are preserved. Full source-level semantic coverage and subsequent-delta review remain open.
+
+The [Klein/Fort continuity proposal](../chronology/CONTINUITY_PROPOSAL.md) makes the unresolved decision concrete but remains PROPOSED. No numbered section is promoted to whole-program completion through this unaccepted proposal. #106 and #108 remain open.

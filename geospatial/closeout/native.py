@@ -50,15 +50,46 @@ def qualify(package):
             project.addMapLayer(layer, False)
             group.addLayer(layer)
             existing[name] = layer
-    relation = QgsRelation()
-    relation.setId("review_site_to_object")
-    relation.setName("Site evidence to canonical object")
-    relation.setReferencedLayer(existing["object_registry"].id())
-    relation.setReferencingLayer(existing["review_site_evidence"].id())
-    relation.addFieldPair("object_id", "object_id")
-    if not relation.isValid():
-        raise ValueError("Site-object relation is invalid")
-    project.relationManager().addRelation(relation)
+    relations = [
+        (
+            "review_site_to_object",
+            "Site evidence to canonical object",
+            "review_site_evidence",
+            "object_registry",
+            "object_id",
+        ),
+        (
+            "history_site_to_object",
+            "Site history to canonical object",
+            "review_site_history",
+            "object_registry",
+            "object_id",
+        ),
+        (
+            "history_link_to_event",
+            "Historical object links to events",
+            "review_history_links",
+            "review_history_events",
+            "event_id",
+        ),
+        (
+            "history_link_to_object",
+            "Historical event links to objects",
+            "review_history_links",
+            "object_registry",
+            "object_id",
+        ),
+    ]
+    for ident, title, child, parent, field in relations:
+        relation = QgsRelation()
+        relation.setId(ident)
+        relation.setName(title)
+        relation.setReferencedLayer(existing[parent].id())
+        relation.setReferencingLayer(existing[child].id())
+        relation.addFieldPair(field, field)
+        if not relation.isValid():
+            raise ValueError("Invalid evidence relation: " + ident)
+        project.relationManager().addRelation(relation)
     if not project.write(str(project_path)):
         raise ValueError("Cannot save the enriched portable project")
     settings = QgsMapSettings()
@@ -114,12 +145,14 @@ def qualify(package):
                 )
                 if not passed:
                     raise ValueError("Native layer validation failed: " + name)
-            if not project.relationManager().relations()["review_site_to_object"].isValid():
-                raise ValueError("Relocated site-object relation failed")
+            for ident, *_ in relations:
+                if not project.relationManager().relations()[ident].isValid():
+                    raise ValueError("Relocated evidence relation failed: " + ident)
     report = {
         "passed": True,
         "qgis_version": Qgis.QGIS_VERSION,
         "checks": checks,
+        "relations_verified_at_both_locations": [r[0] for r in relations],
         "gpkg_sha256": sha(gpkg),
         "project_sha256": sha(project_path),
         "source_revision": json.loads((package / "BUILD.json").read_text())["source_revision"],

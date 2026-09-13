@@ -29,6 +29,11 @@ Generated file inventory. Includes current and historical records; open the sour
 
 - [Geographic discovery adjudication](../../../geospatial/adjudication/README.md) — MD
 
+## `geospatial/chronology`
+
+- [Klein shop and Fort continuity — proposed decision](../../../geospatial/chronology/CONTINUITY_PROPOSAL.md) — MD
+- [Geographic history and source review](../../../geospatial/chronology/README.md) — MD
+
 ## `geospatial/closeout`
 
 - [Geographic evidence package](../../../geospatial/closeout/README.md) — MD

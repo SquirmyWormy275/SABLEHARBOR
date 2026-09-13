@@ -3,9 +3,16 @@ on:
   pull_request:
     paths:
       - 'geospatial/closeout/**'
+      - 'geospatial/chronology/**'
+      - 'geospatial/tests/test_chronology.py'
       - 'geospatial/tests/test_site_evidence.py'
       - '.github/workflows/geographic-evidence.yml'
   workflow_dispatch:
+    inputs:
+      release_tag:
+        description: "Optional existing draft geographic release; upload verified ZIP without publishing"
+        required: false
+        type: string
 permissions:
   contents: read
 jobs:
@@ -28,9 +35,13 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: gh release download closeout-evidence-v1.1.0 --pattern sable-harbor-closeout-evidence-v1.1.0.zip --dir var/predecessor
-      - run: uv run --with-requirements geospatial/requirements.txt python -m pytest geospatial/tests/test_site_evidence.py -q
+      - run: uv run --with-requirements geospatial/requirements.txt python -m pytest geospatial/tests/test_site_evidence.py geospatial/tests/test_chronology.py -q
       - name: Build geographic database and review records
         run: uv run --with-requirements geospatial/requirements.txt python -m geospatial.closeout.package --output var/geographic-evidence --evidence-archive var/predecessor/sable-harbor-closeout-evidence-v1.1.0.zip
+      - name: Install browser for the history edition
+        run: uv run --with-requirements tools/wiki/visual/requirements.txt playwright install --with-deps --only-shell chromium
+      - name: Verify offline chronology and route date boundaries
+        run: uv run --with-requirements tools/wiki/visual/requirements.txt python -m geospatial.chronology.check_browser --directory var/geographic-evidence/chronology
       - name: Read, render and relocate in native QGIS
         run: QT_QPA_PLATFORM=offscreen /usr/bin/python3 geospatial/closeout/native.py --package var/geographic-evidence
       - name: Seal verified package
@@ -46,3 +57,40 @@ jobs:
             var/geographic-evidence/NATIVE_QGIS.json
             var/geographic-evidence/MAP_PREVIEW.png
           if-no-files-found: error
+
+  upload:
+    name: Upload qualified package to matching draft release
+    needs: package
+    if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main' && inputs.release_tag != ''
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      actions: read
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+      RELEASE_TAG: ${{ inputs.release_tag }}
+    steps:
+      - name: Retrieve this run's sealed artifact
+        run: gh run download "$GITHUB_RUN_ID" --name geographic-evidence --dir artifact
+      - name: Check draft, source revision and every packaged file
+        run: |
+          gh release view "$RELEASE_TAG" --json isDraft,targetCommitish > draft.json
+          python3 - <<'PYCODE'
+          import hashlib,json,os,re,shutil,zipfile
+          with zipfile.ZipFile('artifact/geographic-evidence.zip') as z:
+              assert z.testzip() is None
+              build=json.loads(z.read('BUILD.json'))
+              manifest=json.loads(z.read('PACKAGE_MANIFEST.json'))
+              draft=json.load(open('draft.json'))
+              assert re.fullmatch(r'[0-9]+[.][0-9]+[.][0-9]+',build['version'])
+              assert os.environ['RELEASE_TAG']=='geographic-evidence-v'+build['version']
+              assert draft['isDraft'] and draft['targetCommitish']==os.environ['GITHUB_SHA']==build['source_revision']==manifest['source_revision']
+              assert not build['dirty_review']
+              assert set(z.namelist())==set(manifest['files'])|{'PACKAGE_MANIFEST.json'}
+              for name,digest in manifest['files'].items():
+                  assert hashlib.sha256(z.read(name)).hexdigest()==digest,name
+              shutil.copyfile('artifact/geographic-evidence.zip','sable-harbor-'+os.environ['RELEASE_TAG']+'.zip')
+          PYCODE
+      - name: Upload without replacing assets or publishing draft
+        run: gh release upload "$RELEASE_TAG" "sable-harbor-$RELEASE_TAG.zip"
