@@ -4,6 +4,40 @@ Review bundles supplement the independently saved instruments. They do not
 supersede source files or establish owner acceptance. Published package bytes
 receive a new version for any correction.
 
+## 0.4.0-review.3 — current approved implementation and designs
+
+[Download the complete review edition](https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/sable-harbor-legal-review-v0.4.0-review.3).
+Extract the ZIP and open `START_HERE.html`, or start with the [five case briefs](case-briefs/README.md)
+in GitHub. [Owner acceptance](case-briefs/ACCEPTANCE.md) pins 13 exact designs;
+proposed legal and fictional billing terms retain their draft status.
+
+- Source: `860e8636b5987c0bcb4401f93709ce04f28caf38`.
+- Integrated accepted main: `a8e6dd99c113e0470bdc4fcc63bab616949186d0`.
+- ZIP: `sable-harbor-legal-review-v0.4.0-review.3.zip`.
+- ZIP SHA-256: `a3236d2a0c8cc8e44e45e3f2dbd85c89eeffdac308c1e4e49213c7a2ef4598a3`.
+- 392 manifested files, plus `MANIFEST.json` and `SHA256SUMS.txt`.
+- Two clean builds produced identical ZIP bytes. Hosted assets were retrieved and
+  checked; all extracted files, checksums and local HTML links validate.
+
+This edition includes the complete ARU January forecast close, evidence follow-through,
+source-impact tools, five briefs and all preceding legal/accounting practice packages.
+It adds the [accepted dependency audit](dependency-successors/README.md) directly to
+the portable packet. Historical source pins remain unchanged; the audit proves why
+the original host agreement remains compatible with accepted Klein/Fort history.
+
+[Visual QA](review-support/qa/v4.3/REVIEW.json) covers all 51 offline HTML surfaces
+and 127 viewports, with native workbook/PDF and independent cold-start evidence
+retained from the exact approved files. No approved design was regenerated.
+The earlier builds below remain unchanged as draft release history.
+
+```sh
+python tools/legal_gaps/package_v4.py --output /tmp/sable-harbor-legal-review-v0.4.0-review.3
+python tools/legal_gaps/package.py --verify /tmp/sable-harbor-legal-review-v0.4.0-review.3
+```
+
+Reproduce from the recorded clean source revision. Release-index and QA closeout
+records added afterward do not alter this package's committed source or bytes.
+
 ## 0.4.0-review.2 — retained portability draft
 
 [Download the review edition](https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/untagged-55aebf70fb862276ab45).

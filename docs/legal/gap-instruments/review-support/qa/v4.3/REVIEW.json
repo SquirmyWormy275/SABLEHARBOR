@@ -262,7 +262,10 @@
     "docs/legal/gap-instruments/review-support/qa/v4.3/01-contact-000.png": "2c09fa6279820f317e3e3de97997278682c91f38505a0fdacea3b3acb0e89501",
     "docs/legal/gap-instruments/review-support/qa/v4.3/13-contact-000.png": "c57a19ea97d575340d5662f8f3d2aae52e6976932f552220df03d2352506be6e",
     "docs/legal/gap-instruments/review-support/qa/v4.3/successor-tests.log": "b71db6006ecc410f6085db2500759568a2da5d0cdf2fd3f7165307654085abe2",
-    "docs/legal/gap-instruments/review-support/qa/v4.3/integrated-pre-fix-tests.log": "23ad6c5e8b9c702033521e18fd9c6fa33cfd0a2cdb2a75e0af1d842292119117"
+    "docs/legal/gap-instruments/review-support/qa/v4.3/integrated-pre-fix-tests.log": "23ad6c5e8b9c702033521e18fd9c6fa33cfd0a2cdb2a75e0af1d842292119117",
+    "docs/legal/gap-instruments/review-support/qa/v4.3/RELEASE_HTML.json": "348a559dcc7d5e554470ac283fe1f4d9ef69aa2bc308fd926761ea8c5d659662",
+    "docs/legal/gap-instruments/review-support/qa/v4.3/release-start.png": "61afafd12d322c618e39e735647f551e953d9aa342c801031e8f1bfea776dbbb",
+    "docs/legal/gap-instruments/review-support/qa/v4.3/full-pytest.log": "e477168e0729764e1aa20d9c8b9391639cb9f4c9b5e361e7e64be069f1c838e8"
   },
   "method": "Native LibreOffice pages manually inspected by package agents; main inspected five brief PDFs and all ten desktop/mobile brief views. Full new offline HTML viewports inspected; 45 surfaces pixel-identical to preceding V4 review. Independent agent completed case before seeing workedanswers and performed five actual evidence proposal events. Not a human usability study. Review.3 adds exact site-register successor audit; new README and changed start page inspected;49 prior surfaces pixel-identical to review.2.",
   "corrections": [
@@ -274,5 +277,15 @@
     "Wrapped long new-companion commands for narrow screens; existing styles and original publications retained.",
     "Refreshed Context pins after directCSVlinks; repeated actualfive-eventimport."
   ],
-  "local_validation": "Integrated root run: 387 pass,3 skip, one stale dependency failure; corrected dependency plus original instrument and package tests:29 pass. Previously61 new tests pass; added21 dependency tests. Final integrated root/CI runs required before merge."
+  "local_validation": "Full integrated root suite:409 passed,3 skipped.82 focused new tests including21 adversarial dependency tests. Original90files unchanged;30protectedassets unchanged; oldv2/v3QA pass. Final CI gates required before merge.",
+  "downloaded_release": {
+    "source_revision": "860e8636b5987c0bcb4401f93709ce04f28caf38",
+    "zip_sha256": "a3236d2a0c8cc8e44e45e3f2dbd85c89eeffdac308c1e4e49213c7a2ef4598a3",
+    "files": 392,
+    "html_surfaces": 51,
+    "viewports": 127,
+    "same_pixels_as_preview": 50,
+    "changed_start_page": "MANUALLY_INSPECTED_PASS",
+    "downloaded_assets": "All three byte-identical to clean local build; extracted manifest/hash/links pass"
+  }
 }
