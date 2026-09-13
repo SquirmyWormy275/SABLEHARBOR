@@ -4,6 +4,8 @@ import tempfile
 import unittest
 from pathlib import Path
 
+from tools.wiki.audit import audit_export
+
 SPEC = importlib.util.spec_from_file_location(
     "wiki_export", Path(__file__).resolve().parents[2] / "tools/wiki/export.py"
 )
@@ -113,6 +115,15 @@ class WikiExportTests(unittest.TestCase):
 
     def test_full_reading_and_article_preserve_source_and_fragments(self):
         source = self.reading_plan(["Purpose"])
+        for name in (
+            "Library.md",
+            "businesses/README.md",
+            "departments/README.md",
+            "subjects/README.md",
+        ):
+            page = self.home.parent / name
+            page.parent.mkdir(exist_ok=True)
+            page.write_text("# Directory\n")
         original = source.read_bytes()
         output = self.base / "output"
         manifest = MODULE.Exporter(self.root, SHA).build(output)
@@ -128,6 +139,7 @@ class WikiExportTests(unittest.TestCase):
         self.assertEqual(source.read_bytes(), original)
         self.assertIn("source file.md", manifest["reading_sources"])
         self.assertEqual(manifest["expanded_articles"], ["Home.md"])
+        self.assertEqual(audit_export(output)["errors"], [])
 
     def test_changed_section_fails_before_publication(self):
         self.reading_plan(["Deleted section"])

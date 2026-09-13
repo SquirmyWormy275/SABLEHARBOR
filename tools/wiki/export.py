@@ -218,7 +218,7 @@ class Exporter:
         groups = {}
         for source in self.records:
             relative = source.relative_to(self.root)
-            group = (relative.parts[1] if len(relative.parts) > 2 else "reference") if relative.parts[0] == "docs" else relative.parts[0]
+            group = (relative.parts[1] if len(relative.parts) > 2 else "reference") if relative.parts[0] == "docs" else (relative.parts[0] if len(relative.parts) > 1 else "reference")
             groups.setdefault(group, []).append(source)
             title = re.search(r"^# (.+)$", source.read_text(), re.M)
             label = title[1] if title else source.stem
@@ -238,7 +238,7 @@ class Exporter:
             for source in sorted(sources):
                 heading = re.search(r"^# (.+)$", source.read_text(), re.M)
                 label = heading[1] if heading else source.stem
-                rows.append(f"- [{label}]({self.names[source]})")
+                rows.append(f"- [{label}]({quote(self.names[source])})")
             result[f"Reading--{group}.md"] = "\n".join(rows) + "\n"
         result["Reading.md"] = "\n".join(index) + "\n"
         return result
