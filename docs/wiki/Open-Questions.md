@@ -37,3 +37,5 @@ None of the 11 issues meets every remaining acceptance criterion in the inspecte
 [PR #145](https://github.com/SquirmyWormy275/SABLEHARBOR/pull/145) owns the full legal-publication review. [PR #138](https://github.com/SquirmyWormy275/SABLEHARBOR/pull/138) remains an unapproved billing proposal. Their pending work is not presented as accepted by this Wiki.
 
 Runtime and CCF implementation boundaries remain with their owning work. The [dated issue review](../audit/PROFESSIONAL_PRESENTATION_ISSUE_REVIEW.json) records the inspected baseline, source hashes and each disposition. It is a snapshot, not a live issue tracker.
+
+The [geographic history edition](../../geospatial/chronology/README.md) adds dated events, site histories and an interactive railway chronology. The [Klein/Fort continuity proposal](../../geospatial/chronology/CONTINUITY_PROPOSAL.md) identifies the new fictional facts that require acceptance; it is excluded from accepted timeline data.

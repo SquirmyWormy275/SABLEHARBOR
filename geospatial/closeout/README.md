@@ -2,6 +2,10 @@
 
 This package joins the accepted spatial estate to source-bound review records in a portable GeoPackage and QGIS project. The [release index](../../docs/releases/GEOGRAPHIC_EVIDENCE_RELEASES.md) provides the complete download.
 
+## History edition 1.1.0
+
+Open `chronology/history.html` for the [source-bound history edition](../chronology/README.md): 72 dated events and observations, 34 site histories and accepted route evolution. Four additional GeoPackage attribute tables expose events, normalized event/object links, site histories and 295 operations-review dispositions. Native QGIS verifies all four evidence relations after relocation. The [Klein/Fort proposal](../chronology/CONTINUITY_PROPOSAL.md) remains separate from accepted history.
+
 ## Open the package
 
 Extract the entire ZIP, then open `geospatial/qgis/sable_harbor_master.qgz` in QGIS. The project retains the original spatial styling and adds an **Evidence and source registers** group. Its site-to-object relation connects `review_site_evidence.object_id` to the canonical `object_registry.object_id`.
@@ -30,6 +34,9 @@ uv run --with-requirements geospatial/requirements.txt python -m geospatial.clos
   --output var/geographic-evidence \
   --evidence-archive /path/to/sable-harbor-closeout-evidence-v1.1.0.zip
 
+uv run --with-requirements tools/wiki/visual/requirements.txt playwright install --only-shell chromium
+uv run --with-requirements tools/wiki/visual/requirements.txt python -m geospatial.chronology.check_browser --directory var/geographic-evidence/chronology
+
 QT_QPA_PLATFORM=offscreen /usr/bin/python3 geospatial/closeout/native.py \
   --package var/geographic-evidence
 
@@ -46,3 +53,5 @@ The top-level `PACKAGE_MANIFEST.json`, `VALIDATION.json`, `NATIVE_QGIS.json` and
 ## Issue acceptance
 
 The package completes a source-bound representation and review deliverable. It does **not** close #106 or #108 by substituting missing facts with empty fields. The Klein historical shop/Fort continuity and exact occupancy evidence remain unresolved; detailed railway geometry and engineering remain under #107. The broader semantic/historical programme remains under #108. New source evidence or accepted fictional decisions must resolve those substantive requirements before whole-issue closure.
+
+The workflow can transfer a qualified ZIP directly to an existing draft release when dispatched on accepted `main` with the optional `release_tag` input. It verifies the version, source commit, draft target and every manifest member; it neither replaces existing assets nor publishes the draft. Normal PR/build runs retain read-only permissions.

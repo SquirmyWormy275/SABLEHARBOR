@@ -1,0 +1,709 @@
+<!doctype html>
+<html lang="en">
+  <meta charset="utf-8" /><meta
+    name="viewport"
+    content="width=device-width,initial-scale=1"
+  /><title>Sable Harbor · Geographic history</title
+  ><style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f3f0e8;
+      --panel: #fffdf8;
+      --ink: #203730;
+      --muted: #586960;
+      --line: #d1d7cd;
+      --accent: #975022;
+      --wash: #e6ece1;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font:
+        16px/1.55 system-ui,
+        sans-serif;
+    }
+    header {
+      background: #183d34;
+      color: #f7f1df;
+      padding: 44px max(24px, calc((100vw - 1320px) / 2));
+      border-bottom: 6px solid #b7804d;
+    }
+    header small {
+      color: #b7cdbc;
+      letter-spacing: 0.18em;
+      font-weight: 650;
+    }
+    h1 {
+      font-size: clamp(32px, 5vw, 56px);
+      line-height: 1.1;
+      letter-spacing: -0.04em;
+      margin: 18px 0;
+    }
+    header p {
+      max-width: 760px;
+      color: #d0dfd4;
+      margin-bottom: 0;
+    }
+    main {
+      max-width: 1368px;
+      margin: auto;
+      padding: 28px 24px;
+    }
+    h2 {
+      font-size: 25px;
+      margin: 0 0 12px;
+    }
+    p {
+      margin: 8px 0 16px;
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+    .stat {
+      border-top: 2px solid var(--accent);
+      padding: 14px 0;
+    }
+    .stat strong {
+      font-size: 26px;
+      display: block;
+    }
+    .stat span,
+    small,
+    .muted {
+      color: var(--muted);
+    }
+    nav {
+      display: flex;
+      gap: 8px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 16px;
+      margin-bottom: 20px;
+    }
+    button,
+    input,
+    select {
+      font: inherit;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 10px 12px;
+      background: var(--panel);
+      color: var(--ink);
+    }
+    button {
+      cursor: pointer;
+    }
+    button[aria-selected="true"],
+    button.primary {
+      background: var(--ink);
+      color: var(--panel);
+    }
+    button:hover {
+      outline: 2px solid var(--accent);
+    }
+    :focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 3px;
+    }
+    .filters {
+      display: grid;
+      grid-template-columns: 2fr 1.5fr 1fr 1fr auto;
+      gap: 12px;
+      align-items: end;
+      margin-bottom: 24px;
+    }
+    label {
+      display: grid;
+      gap: 6px;
+      font-size: 13px;
+      font-weight: 650;
+    }
+    input,
+    select {
+      min-width: 0;
+      width: 100%;
+    }
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+      gap: 24px;
+    }
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 24px;
+      min-width: 0;
+    }
+    .list {
+      max-height: 780px;
+      overflow: auto;
+      padding-right: 6px;
+    }
+    .entry {
+      display: block;
+      text-align: left;
+      width: 100%;
+      border: 0;
+      border-bottom: 1px solid var(--line);
+      border-radius: 0;
+      padding: 18px 10px;
+      background: transparent;
+    }
+    .entry strong {
+      display: block;
+    }
+    .entry .year {
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 14px;
+    }
+    .entry small {
+      display: block;
+      margin-top: 5px;
+    }
+    .badge {
+      display: inline-block;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      padding: 2px 7px;
+      font-size: 12px;
+      margin: 5px 5px 5px 0;
+    }
+    .notice {
+      border-left: 3px solid var(--accent);
+      padding: 8px 16px;
+      background: var(--wash);
+      margin: 18px 0;
+    }
+    pre {
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+      font:
+        12px/1.6 ui-monospace,
+        monospace;
+      background: var(--wash);
+      padding: 16px;
+      border-radius: 6px;
+      max-height: 430px;
+      overflow: auto;
+    }
+    a {
+      color: var(--accent);
+      overflow-wrap: anywhere;
+    }
+    #count {
+      font-size: 14px;
+      color: var(--muted);
+      margin: 0 0 12px;
+    }
+    #map {
+      width: 100%;
+      height: auto;
+      display: block;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: var(--bg);
+    }
+    .map-control {
+      display: flex;
+      gap: 16px;
+      align-items: end;
+      margin-bottom: 20px;
+    }
+    .map-control label {
+      flex: 1;
+      min-width: 180px;
+    }
+    footer {
+      border-top: 1px solid var(--line);
+      margin-top: 28px;
+      padding: 20px 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    details {
+      margin-top: 20px;
+    }
+    summary {
+      cursor: pointer;
+      font-weight: 650;
+    }
+    [hidden] {
+      display: none !important;
+    }
+    @media (max-width: 760px) {
+      header {
+        padding: 30px 20px;
+      }
+      main {
+        padding: 20px 16px;
+      }
+      .stats {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .filters {
+        grid-template-columns: 1fr 1fr;
+      }
+      .filters label:first-child {
+        grid-column: 1/-1;
+      }
+      .layout {
+        grid-template-columns: 1fr;
+      }
+      .panel {
+        padding: 18px;
+      }
+      .list {
+        max-height: 500px;
+      }
+      nav {
+        flex-wrap: wrap;
+      }
+      .map-control {
+        flex-wrap: wrap;
+      }
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #14231f;
+        --panel: #1c3029;
+        --ink: #e6eee2;
+        --muted: #b4c6b7;
+        --line: #3c5448;
+        --accent: #e2ab77;
+        --wash: #243e32;
+      }
+      button[aria-selected="true"] {
+        color: #14231f;
+      }
+    }
+  </style>
+  <header>
+    <small>SABLE HARBOR / GEOGRAPHIC ARCHIVE</small>
+    <h1>Places have histories.</h1>
+    <p>
+      Follow the enterprise, its industrial estate and the evidence behind each
+      date. Explore accepted chronology without turning unknown occupancy into a
+      continuous history.
+    </p>
+  </header>
+  <main>
+    <div class="stats">
+      <div class="stat">
+        <strong id="event-total"></strong
+        ><span>dated observations & events</span>
+      </div>
+      <div class="stat">
+        <strong>34</strong><span>site & component histories</span>
+      </div>
+      <div class="stat">
+        <strong>1898—2026</strong><span>documented chronology</span>
+      </div>
+      <div class="stat">
+        <strong>2 time axes</strong><span>world dates & source records</span>
+      </div>
+    </div>
+    <nav aria-label="History views" role="tablist">
+      <button role="tab" aria-selected="true" data-view="events">
+        Timeline</button
+      ><button role="tab" aria-selected="false" data-view="sites">
+        Site histories</button
+      ><button role="tab" aria-selected="false" data-view="routes">
+        Route evolution
+      </button>
+    </nav>
+    <section id="records">
+      <div class="filters">
+        <label
+          >Search records<input
+            id="search"
+            type="search"
+            placeholder="Klein, Taylor, 2021…" /></label
+        ><label
+          >Event type<select id="kind">
+            <option value="">All event types</option>
+          </select></label
+        ><label
+          >From year<input
+            id="from"
+            type="number"
+            value="1898"
+            min="1898"
+            max="2026" /></label
+        ><label
+          >Through year<input
+            id="through"
+            type="number"
+            value="2026"
+            min="1898"
+            max="2026" /></label
+        ><button id="export">Export CSV</button>
+      </div>
+      <div class="layout">
+        <section class="panel">
+          <h2 id="list-title">The recorded timeline</h2>
+          <p id="count" role="status" aria-live="polite"></p>
+          <div id="list" class="list"></div>
+        </section>
+        <aside class="panel" aria-label="Selected evidence">
+          <h2 id="detail-title">Read the source behind a date</h2>
+          <div id="detail">
+            <p>
+              Select a record to inspect its evidence, date precision and stable
+              object links.
+            </p>
+            <div class="notice">
+              A year bounds an observation. It does not mean a lease began on
+              January 1 or lasted all year.
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+    <section id="routes" hidden>
+      <div class="map-control">
+        <label
+          >Historical date<input
+            id="map-date"
+            type="date"
+            value="2026-09-06"
+            min="1898-01-01"
+            max="2026-09-13" /></label
+        ><button id="early">1898 origin</button
+        ><button id="mainline">1968 mainline</button
+        ><button id="complete">1986 network</button>
+      </div>
+      <div class="layout">
+        <div class="panel">
+          <h2>Accepted route evolution</h2>
+          <p id="route-count" role="status"></p>
+          <svg
+            id="map"
+            viewBox="0 0 800 560"
+            role="img"
+            aria-label="Dated synthetic railway geometry"
+          ></svg>
+          <p class="muted">
+            Longitude/latitude overview of accepted synthetic route geometry. No
+            survey or historical parcel boundary is asserted.
+          </p>
+        </div>
+        <aside class="panel">
+          <h2 id="epoch-title"></h2>
+          <p id="epoch-detail"></p>
+          <div class="notice">
+            The 1898 and 1954 alignments are unlocated. Modern track is
+            deliberately absent from those views.
+          </div>
+          <div id="route-evidence"></div>
+        </aside>
+      </div>
+    </section>
+    <footer>
+      Offline edition · <a href="HISTORY.json">Full evidence JSON</a> ·
+      <a href="EVENTS.csv">Complete event CSV</a>
+      <p id="revision"></p>
+      Proposed Klein/Fort continuity is a separate review document and is
+      excluded from this accepted-data viewer.
+    </footer>
+  </main>
+  <script id="data" type="application/json">
+    __HISTORY_DATA__
+  </script>
+  <script>
+    "use strict";
+    const data = JSON.parse(document.getElementById("data").textContent);
+    let view = "events",
+      visible = [];
+    const $ = (id) => document.getElementById(id),
+      esc = (s) =>
+        String(s ?? "").replace(
+          /[&<>"']/g,
+          (c) =>
+            ({
+              "&": "&amp;",
+              "<": "&lt;",
+              ">": "&gt;",
+              '"': "&quot;",
+              "'": "&#39;",
+            })[c],
+        );
+    const nice = (s) => s.toLowerCase().replaceAll("_", " ");
+    $("event-total").textContent = data.events.length;
+    $("revision").textContent = "Source revision " + data.source_revision;
+    for (const kind of [...new Set(data.events.map((e) => e.kind))]) {
+      const o = document.createElement("option");
+      o.value = kind;
+      o.textContent = nice(kind);
+      $("kind").append(o);
+    }
+    function evidence(src) {
+      const target =
+        "https://github.com/SquirmyWormy275/SABLEHARBOR/blob/" +
+        src.revision +
+        "/" +
+        src.path;
+      return (
+        '<p><a href="' +
+        esc(target) +
+        '">' +
+        esc(src.path) +
+        "</a><br><small>" +
+        esc(src.locator) +
+        " · " +
+        esc(src.revision) +
+        "</small></p><details><summary>Exact source record & provenance</summary><pre>" +
+        esc(JSON.stringify(src, null, 2)) +
+        "</pre></details>"
+      );
+    }
+    function detail(row) {
+      $("detail-title").textContent = view === "events" ? row.title : row.name;
+      if (view === "events") {
+        $("detail").innerHTML =
+          '<span class="badge">' +
+          esc(row.date_text) +
+          '</span><span class="badge">' +
+          esc(nice(row.precision)) +
+          '</span><span class="badge">' +
+          esc(nice(row.kind)) +
+          "</span><p>" +
+          esc(row.notes) +
+          "</p><p><strong>Object links:</strong> " +
+          esc(row.object_ids.join(", ") || "No exact asset established") +
+          "</p><p><strong>Stable event:</strong> " +
+          esc(row.event_id) +
+          '</p><div class="notice">Observation bounds: ' +
+          esc(row.earliest) +
+          " through " +
+          esc(row.latest) +
+          ". These are event bounds, not lease commencement or expiration.</div>" +
+          evidence(row.evidence);
+      } else {
+        $("detail").innerHTML =
+          '<span class="badge">' +
+          esc(row.object_id) +
+          "</span><p>" +
+          esc(row.period_meaning) +
+          "</p><p><strong>Geometry:</strong> " +
+          esc(nice(row.geometry_disposition)) +
+          "</p><p><strong>Access:</strong> " +
+          esc(nice(row.access_disposition)) +
+          '</p><div class="notice">' +
+          (row.dated_lease_observation
+            ? "The narrative documents a shop lease in 2021. Exact occupancy endpoints remain unknown."
+            : "No accepted occupancy interval is established.") +
+          "</div><h3>Linked observations</h3>" +
+          row.events
+            .map((id) => {
+              const e = data.events.find((x) => x.event_id === id);
+              return "<p>" + esc(e.date_text) + " · " + esc(e.title) + "</p>";
+            })
+            .join("") +
+          "<p><strong>Open conflicts:</strong> " +
+          esc(
+            row.conflicts.join(", ") ||
+              "No conflict ID; source limitations still apply",
+          ) +
+          "</p>" +
+          evidence(row.source) +
+          "<details><summary>Retained operational states</summary><pre>" +
+          esc(JSON.stringify(row.operational_states, null, 2)) +
+          "</pre></details>";
+      }
+    }
+    function render() {
+      const query = $("search").value.toLowerCase(),
+        start = Number($("from").value),
+        end = Number($("through").value);
+      visible = data[view].filter(
+        (r) =>
+          JSON.stringify(r).toLowerCase().includes(query) &&
+          (view === "sites" ||
+            ((!$("kind").value || r.kind === $("kind").value) &&
+              Number(r.earliest.slice(0, 4)) <= end &&
+              Number(r.latest.slice(0, 4)) >= start)),
+      );
+      $("count").textContent =
+        visible.length + " of " + data[view].length + " records";
+      $("list").replaceChildren();
+      for (const row of visible) {
+        const b = document.createElement("button");
+        b.className = "entry";
+        b.innerHTML =
+          view === "events"
+            ? '<span class="year">' +
+              esc(row.date_text) +
+              "</span><strong>" +
+              esc(row.title) +
+              "</strong><small>" +
+              esc(nice(row.kind)) +
+              " · " +
+              esc(nice(row.precision)) +
+              "</small>"
+            : '<span class="year">' +
+              esc(row.object_id) +
+              "</span><strong>" +
+              esc(row.name) +
+              "</strong><small>" +
+              esc(nice(row.disposition)) +
+              "</small>";
+        b.addEventListener("click", () => detail(row));
+        $("list").append(b);
+      }
+      if (!visible.length)
+        $("list").textContent =
+          "No matching records. Try a broader date range or search.";
+    }
+    for (const id of ["search", "kind", "from", "through"])
+      $(id).addEventListener("input", render);
+    document.querySelectorAll("nav button").forEach(
+      (b) =>
+        (b.onclick = () => {
+          view = b.dataset.view;
+          document
+            .querySelectorAll("nav button")
+            .forEach((x) => x.setAttribute("aria-selected", String(x === b)));
+          $("routes").hidden = view !== "routes";
+          $("records").hidden = view === "routes";
+          if (view === "routes") {
+            map();
+            return;
+          }
+          $("kind").disabled =
+            $("from").disabled =
+            $("through").disabled =
+              view === "sites";
+          $("list-title").textContent =
+            view === "sites"
+              ? "Site evidence & continuity"
+              : "The recorded timeline";
+          $("detail-title").textContent = "Select a record";
+          $("detail").textContent = "Inspect its evidence and temporal limits.";
+          render();
+        }),
+    );
+    $("export").onclick = () => {
+      const fields =
+        view === "events"
+          ? [
+              "event_id",
+              "title",
+              "kind",
+              "date_text",
+              "precision",
+              "earliest",
+              "latest",
+              "object_ids",
+              "notes",
+            ]
+          : [
+              "object_id",
+              "name",
+              "disposition",
+              "dated_lease_observation",
+              "occupancy_interval",
+              "source_period",
+              "period_meaning",
+            ];
+      const cell = (v) => '"' + String(v ?? "").replaceAll('"', '""') + '"';
+      const csv = [
+        fields.join(","),
+        ...visible.map((r) =>
+          fields
+            .map((k) => cell(Array.isArray(r[k]) ? r[k].join(";") : r[k]))
+            .join(","),
+        ),
+      ].join("\r\n");
+      const a = document.createElement("a"),
+        url = URL.createObjectURL(
+          new Blob([csv], { type: "text/csv;charset=utf-8" }),
+        );
+      a.href = url;
+      a.download = "geographic-" + view + ".csv";
+      a.click();
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
+    };
+    function map() {
+      const when = $("map-date").value;
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(when)) return;
+      const active = data.route_features.filter(
+        (r) =>
+          r.valid_from &&
+          r.valid_from <= when &&
+          (!r.valid_to || when < r.valid_to),
+      );
+      $("route-count").textContent = active.length + " dated route segments";
+      const x = (lon) => 80 + (lon + 108.16) * 2500,
+        y = (lat) => 510 - (lat - 41.64) * 900;
+      let svg = "";
+      for (let lat = 41.7; lat < 42.2; lat += 0.1) {
+        const yy = y(lat);
+        svg +=
+          '<path d="M60 ' +
+          yy +
+          ' H760" stroke="currentColor" opacity=".12"/><text x="8" y="' +
+          yy +
+          '" fill="currentColor" font-size="12">' +
+          lat.toFixed(1) +
+          "°N</text>";
+      }
+      for (const r of active) {
+        const points = r.feature.geometry.coordinates;
+        svg +=
+          '<polyline points="' +
+          points.map((c) => x(c[0]) + "," + y(c[1])).join(" ") +
+          '" fill="none" stroke="var(--accent)" stroke-width="4"><title>' +
+          esc(r.feature.properties.feature_id) +
+          "</title></polyline>";
+      }
+      if (!active.length)
+        svg +=
+          '<text x="400" y="260" text-anchor="middle" fill="currentColor" font-size="21">No sourced alignment for this date</text>';
+      $("map").innerHTML = svg;
+      const epoch = [...data.route_epochs]
+        .reverse()
+        .find((r) => r.effective_date <= when);
+      $("epoch-title").textContent = epoch
+        ? epoch.epoch + " · " + epoch.event
+        : "Before the documented railway chronology";
+      $("epoch-detail").textContent = epoch
+        ? epoch.note || epoch.extent_state
+        : "No earlier route extent is established.";
+      $("route-evidence").innerHTML = active.length
+        ? "<h3>Geometry provenance</h3>" +
+          [...new Set(active.map((r) => r.source.locator))]
+            .map((loc) => {
+              const r = active.find((r) => r.source.locator === loc);
+              return (
+                "<p>" +
+                esc(r.source.evidence.canonical_name) +
+                " · effective " +
+                esc(r.valid_from) +
+                "</p>" +
+                evidence(r.source)
+              );
+            })
+            .join("")
+        : "";
+    }
+    $("map-date").oninput = map;
+    for (const [id, day] of [
+      ["early", "1898-04-06"],
+      ["mainline", "1968-10-14"],
+      ["complete", "1986-09-19"],
+    ])
+      $(id).onclick = () => {
+        $("map-date").value = day;
+        map();
+      };
+    render();
+  </script>
+</html>
