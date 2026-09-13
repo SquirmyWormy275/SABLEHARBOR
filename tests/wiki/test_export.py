@@ -94,6 +94,63 @@ class WikiExportTests(unittest.TestCase):
             MODULE.sync(output, wiki)
         self.assertEqual((wiki / "Home.md").read_text(), "# Home\n")
 
+    def reading_plan(self, sections=None):
+        plan = self.root / "tools/wiki/reading.json"
+        plan.parent.mkdir(parents=True)
+        source = self.root / "source file.md"
+        source.write_text(
+            "# Source\n\n**Status:** PROVISIONAL\n\n## Purpose\n\n"
+            "Real source text. [Detail](#detail)\n\n## Detail\n\n"
+            "Keep unresolved.\n\n```md\n## Code heading\n```\n"
+        )
+        entry = {"source": "source file.md"}
+        if sections:
+            entry["sections"] = sections
+        plan.write_text(
+            json.dumps({"sources": ["source file.md"], "articles": {"Home.md": [entry]}})
+        )
+        return source
+
+    def test_full_reading_and_article_preserve_source_and_fragments(self):
+        source = self.reading_plan(["Purpose"])
+        original = source.read_bytes()
+        output = self.base / "output"
+        manifest = MODULE.Exporter(self.root, SHA).build(output)
+        home = (output / "Home.md").read_text()
+        record = (output / "records--source file.md").read_text()
+        self.assertIn("Real source text.", home)
+        self.assertNotIn("Keep unresolved.", home)
+        self.assertIn("Keep unresolved.", record)
+        self.assertIn("**Status:** PROVISIONAL", record)
+        self.assertIn("/wiki/records--source%20file#detail", home)
+        self.assertIn(f"/blob/{SHA}/source%20file.md", record)
+        self.assertIn("```md\n## Code heading\n```", record)
+        self.assertEqual(source.read_bytes(), original)
+        self.assertIn("source file.md", manifest["reading_sources"])
+        self.assertEqual(manifest["expanded_articles"], ["Home.md"])
+
+    def test_changed_section_fails_before_publication(self):
+        self.reading_plan(["Deleted section"])
+        with self.assertRaisesRegex(ValueError, "Unmatched article sections"):
+            MODULE.Exporter(self.root, SHA).build(self.base / "output")
+        self.assertFalse((self.base / "output").exists())
+
+    def test_reading_inventory_cannot_escape_checkout(self):
+        self.reading_plan()
+        (self.base / "outside.md").write_text("# Outside")
+        (self.root / "tools/wiki/reading.json").write_text(
+            json.dumps({"sources": ["../outside.md"], "articles": {}})
+        )
+        with self.assertRaisesRegex(ValueError, "Invalid reading source"):
+            MODULE.Exporter(self.root, SHA)
+
+    def test_contents_handles_duplicate_and_formatted_headings(self):
+        text = "# Home\n\n## **One**\n\n## One\n\n## `Three`\n"
+        result = MODULE.Exporter.contents(text)
+        self.assertIn("[**One**](#one)", result)
+        self.assertIn("[One](#one-1)", result)
+        self.assertIn("[`Three`](#three)", result)
+
     def test_collisions_and_manifest_traversal(self):
         (self.home.parent / "home.md").write_text("collision")
         with self.assertRaises(ValueError):

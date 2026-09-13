@@ -123,11 +123,46 @@ def audit(root=ROOT):
     }
 
 
+def audit_export(directory):
+    """Check the actual composed Wiki, including all records and generated rooms."""
+    pages = {p.stem: Page(p.read_text()) for p in directory.glob("*.md")}
+    edges = {name: set() for name in pages}
+    errors, checked = [], 0
+    prefix = "/SquirmyWormy275/SABLEHARBOR/wiki/"
+    for name, page in pages.items():
+        for href, _ in page.links:
+            url = urlsplit(href)
+            if url.netloc == "github.com" and url.path.startswith(prefix):
+                target = unquote(url.path[len(prefix):])
+            elif not url.scheme and not url.netloc:
+                target = unquote(url.path) or name
+            else:
+                continue
+            checked += 1
+            if target not in pages:
+                errors.append(f"{name}: missing Wiki page {href}")
+            else:
+                edges[name].add(target)
+                if url.fragment and unquote(url.fragment) not in pages[target].anchors:
+                    errors.append(f"{name}: missing Wiki anchor {href}")
+    seen, queue = set(), deque(["Home", "_Sidebar"])
+    while queue:
+        page = queue.popleft()
+        if page not in seen:
+            seen.add(page)
+            queue.extend(edges.get(page, set()) - seen)
+    for name in set(pages) - seen:
+        errors.append(f"{name}: unreachable exported Wiki page")
+    return {"pages": len(pages), "wiki_destinations": checked,
+            "reachable_pages": len(seen & pages.keys()), "errors": sorted(errors)}
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", type=Path)
+    parser.add_argument("--export", type=Path)
     args = parser.parse_args()
-    report = audit()
+    report = audit_export(args.export) if args.export else audit()
     if args.output:
         args.output.parent.mkdir(parents=True, exist_ok=True)
         args.output.write_text(json.dumps(report, indent=2) + "\n")

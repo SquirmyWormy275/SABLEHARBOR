@@ -1,0 +1,464 @@
+{
+  "version": 1,
+  "scope": "Accepted public reading editions; source status and supersession remain controlling. Excludes pending legal publications and private evidence.",
+  "articles": {
+    "businesses/Advisory.md": [
+      {
+        "source": "docs/business-lines/ADVISORY.md"
+      }
+    ],
+    "businesses/American-Resource-Utility.md": [
+      {
+        "source": "docs/business-lines/AMERICAN_RESOURCE_UTILITY.md"
+      }
+    ],
+    "businesses/Atlas-Meridian.md": [
+      {
+        "source": "docs/business-lines/ATLAS_MERIDIAN.md"
+      }
+    ],
+    "businesses/Cradle.md": [
+      {
+        "source": "docs/business-lines/PROJECT_CRADLE.md"
+      }
+    ],
+    "businesses/Foundry-Field.md": [
+      {
+        "source": "docs/business-lines/FOUNDRY_FIELD.md"
+      }
+    ],
+    "businesses/Pale-Sun-Red-Wash.md": [
+      {
+        "source": "docs/business-lines/PALE_SUN.md"
+      }
+    ],
+    "businesses/Willow.md": [
+      {
+        "source": "docs/business-lines/WILLOW.md"
+      }
+    ],
+    "departments/corporate-secretary.md": [
+      {
+        "source": "docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md",
+        "sections": [
+          "2. Enterprise Support Services",
+          "3. OGC doctrine"
+        ]
+      }
+    ],
+    "departments/finance.md": [
+      {
+        "source": "docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md",
+        "sections": [
+          "5. Finance doctrine",
+          "9. Capital allocation rhythm",
+          "10. Planning and performance rhythm"
+        ]
+      }
+    ],
+    "departments/facilities.md": [
+      {
+        "source": "docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md",
+        "sections": [
+          "15. Physical headquarters doctrine"
+        ]
+      }
+    ],
+    "departments/legal.md": [
+      {
+        "source": "docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md",
+        "sections": [
+          "3. OGC doctrine"
+        ]
+      }
+    ],
+    "departments/risk-compliance.md": [
+      {
+        "source": "docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md",
+        "sections": [
+          "4. Risk & Compliance"
+        ]
+      }
+    ],
+    "departments/security.md": [
+      {
+        "source": "docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md",
+        "sections": [
+          "7. Technology Services doctrine"
+        ]
+      }
+    ],
+    "departments/procurement.md": [
+      {
+        "source": "docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md",
+        "sections": [
+          "2. Enterprise Support Services",
+          "13. Federated professional practices"
+        ]
+      }
+    ],
+    "departments/quality-standards.md": [
+      {
+        "source": "docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md",
+        "sections": [
+          "2. Enterprise Support Services",
+          "13. Federated professional practices"
+        ]
+      }
+    ],
+    "departments/safety-environment.md": [
+      {
+        "source": "docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md",
+        "sections": [
+          "2. Enterprise Support Services",
+          "13. Federated professional practices"
+        ]
+      }
+    ],
+    "departments/board.md": [
+      {
+        "source": "docs/governance/BOARD_AND_CAPITAL_GOVERNANCE_v1.0.1.md"
+      }
+    ],
+    "departments/ess.md": [
+      {
+        "source": "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md"
+      }
+    ],
+    "departments/internal-audit.md": [
+      {
+        "source": "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md"
+      }
+    ],
+    "departments/executive.md": [
+      {
+        "source": "docs/governance/ENTERPRISE_AUTHORITY_CAPITAL_AND_EXECUTIVE_RHYTHM.md"
+      }
+    ],
+    "departments/people-culture.md": [
+      {
+        "source": "docs/governance/PEOPLE_AND_CULTURE_DOCTRINE.md"
+      }
+    ],
+    "departments/technology.md": [
+      {
+        "source": "docs/governance/ENTERPRISE_TECHNOLOGY_SERVICES_DOCTRINE.md"
+      }
+    ],
+    "departments/j2.md": [
+      {
+        "source": "docs/j2/J2_CHARTER.md"
+      }
+    ],
+    "departments/j2-headquarters.md": [
+      {
+        "source": "docs/j2/J2_HEADQUARTERS.md"
+      }
+    ],
+    "departments/contact.md": [
+      {
+        "source": "docs/j2/CONTACT.md"
+      }
+    ],
+    "departments/judgment.md": [
+      {
+        "source": "docs/j2/JUDGMENT.md"
+      }
+    ],
+    "departments/orientation.md": [
+      {
+        "source": "docs/j2/ORIENTATION.md"
+      }
+    ],
+    "departments/education.md": [
+      {
+        "source": "docs/j2/EDUCATION.md"
+      }
+    ],
+    "departments/jag.md": [
+      {
+        "source": "docs/j2/JUNCTION_ADVISORY_GROUP.md"
+      }
+    ],
+    "departments/alexandria.md": [
+      {
+        "source": "docs/j2/alexandria/ALEXANDRIA_CHARTER.md"
+      }
+    ],
+    "subjects/History.md": [
+      {
+        "source": "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md",
+        "sections": [
+          "4.1 Incorporation",
+          "4.2 The Forty-Seven Names \u2014 2016",
+          "4.3 The Customer Is Right Twice \u2014 2017",
+          "4.4 The Spreadsheet That Would Not Die \u2014 2018",
+          "6.1 Foundry begins as reusable substrate",
+          "6.2 Foundry is not anti-authority",
+          "6.3 Operational applications",
+          "6.4 The operating loop",
+          "6.5 Product signal in 2019",
+          "6.6 The Crossing and COVID-19 \u2014 2020",
+          "6.7 Foundry versus Foundry Field",
+          "6.8 The 2021 threshold"
+        ]
+      }
+    ],
+    "subjects/Project-History.md": [
+      {
+        "source": "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md",
+        "sections": [
+          "8.1 The 2023 inventory",
+          "8.2 Project Glasshouse",
+          "8.3 Project Mule",
+          "8.4 Project Lantern",
+          "8.5 Nadia and the return path into Foundry",
+          "8.6 First language-model experiments",
+          "11.5 Wallaby"
+        ]
+      }
+    ],
+    "subjects/Research-History.md": [
+      {
+        "source": "docs/organization/WILLOW_KLEIN_CORPORATE_RECORD.md"
+      }
+    ],
+    "subjects/People.md": [
+      {
+        "source": "docs/organization/charts/people-original-eight.md"
+      }
+    ],
+    "subjects/External-Hosts.md": [
+      {
+        "source": "docs/organization/charts/external-cradle-hosts.md"
+      }
+    ],
+    "subjects/External-Counterparties.md": [
+      {
+        "source": "docs/business-lines/HISTORICAL_AND_EXTERNAL_BOUNDARIES.md"
+      }
+    ],
+    "subjects/Historical-Opportunities.md": [
+      {
+        "source": "industrial/pale_sun/05_FALSE_START_CEDAR_JUNCTION.md"
+      },
+      {
+        "source": "industrial/pale_sun/06_FALSE_START_JUNIPER_MESA.md"
+      }
+    ],
+    "subjects/Blackridge.md": [
+      {
+        "source": "blackridge/docs/accounting/BLACKRIDGE_FINANCIAL_MODEL_GUIDE.md"
+      }
+    ],
+    "subjects/Continuity.md": [
+      {
+        "source": "docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md",
+        "sections": [
+          "3. OGC doctrine",
+          "7. Technology Services doctrine"
+        ]
+      }
+    ]
+  },
+  "sources": [
+    "assets/brand/README.md",
+    "blackridge/README.md",
+    "blackridge/docs/accounting/BLACKRIDGE_ACCOUNTING_POLICIES.md",
+    "blackridge/docs/accounting/BLACKRIDGE_FINANCIAL_MODEL_GUIDE.md",
+    "blackridge/docs/case/BLACKRIDGE_CASE_SNAPSHOT_GUIDE.md",
+    "blackridge/reports/WORKBOOK_QA_REPORT.md",
+    "docs/CONTROLLED_DOCUMENT_INDEX.md",
+    "docs/advisory/ATLAS_MERIDIAN_COMMERCIAL_PRODUCT_STANDARD.md",
+    "docs/advisory/ATLAS_MERIDIAN_PROFESSIONAL_PLATFORM.md",
+    "docs/advisory/LEGAL_AND_CONTRACTING_TERM_SHEET.md",
+    "docs/advisory/MATTER_DELIVERY_PLAYBOOK.md",
+    "docs/advisory/MATTER_GOVERNANCE_AND_ECONOMICS.md",
+    "docs/advisory/README.md",
+    "docs/advisory/templates/INDEPENDENT_REVIEW_MEMO_TEMPLATE.md",
+    "docs/advisory/templates/MATTER_ACCEPTANCE_FORM.md",
+    "docs/advisory/templates/TRANSFER_CERTIFICATE_TEMPLATE.md",
+    "docs/audit/UNIT_EXPORT_SPECIFICATION.md",
+    "docs/business-lines/ADVISORY.md",
+    "docs/business-lines/AMERICAN_RESOURCE_UTILITY.md",
+    "docs/business-lines/ATLAS_MERIDIAN.md",
+    "docs/business-lines/BUSINESS_FINANCE_AND_ALEXANDRIA_INTERFACES.md",
+    "docs/business-lines/CURRENT_SOURCE_CROSSWALK.md",
+    "docs/business-lines/FOUNDRY_FIELD.md",
+    "docs/business-lines/HISTORICAL_AND_EXTERNAL_BOUNDARIES.md",
+    "docs/business-lines/PALE_SUN.md",
+    "docs/business-lines/PROJECT_CRADLE.md",
+    "docs/business-lines/README.md",
+    "docs/business-lines/WILLOW.md",
+    "docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md",
+    "docs/canon/CRADLE_CLOSEOUT_2026-09-06.md",
+    "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md",
+    "docs/canon/DEMOTTE_RECLAMATION_NAME_AND_IDENTITY_2026-09-07.md",
+    "docs/canon/EMBERLINE_VISUAL_IDENTITY_2026-09-07.md",
+    "docs/canon/J2_LEADERSHIP_APPOINTMENTS_2026-09-10.md",
+    "docs/canon/KELLY_GANG_MINING_VISUAL_IDENTITY_2026-09-07.md",
+    "docs/canon/KLEIN_NAME_AND_IDENTITY_2026-09-07.md",
+    "docs/canon/NORTHSTAR_MINERALS_VISUAL_IDENTITY_2026-09-07.md",
+    "docs/canon/QUALITY_FOREST_COMMUNICATIONS_VISUAL_IDENTITY_2026-09-07.md",
+    "docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05_R2.md",
+    "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md",
+    "docs/canon/THIRD_PARTY_SERVICES_SOURCING_DECISIONS_2026-09-09.md",
+    "docs/canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md",
+    "docs/controls/CCF_DOMAIN_TAXONOMY_v0.1.md",
+    "docs/controls/CCF_ENTERPRISE_SECURITY_VENDOR_DECISIONS_2026-09-11.md",
+    "docs/controls/COMMON_CONTROLS_FRAMEWORK_FOUNDATION_v0.1.md",
+    "docs/controls/COMMON_CONTROL_CATALOG_v0.1.md",
+    "docs/controls/RUNTIME_CONTROL_AND_EVIDENCE_MATRIX_2026-09-11.md",
+    "docs/finance/ACCOUNTING_POLICIES.md",
+    "docs/finance/DATABASE_AND_ACCOUNTING_ARCHITECTURE.md",
+    "docs/finance/EXCEL_MODEL_GUIDE.md",
+    "docs/finance/KNOWN_LIMITATIONS.md",
+    "docs/finance/READER_EXERCISES.md",
+    "docs/finance/README.md",
+    "docs/finance/TRANSACTION_DATA_ROOM_INDEX.md",
+    "docs/finance/WILLOW_KLEIN_FINANCE_AND_CORPORATE_MODEL_2026-09-06.md",
+    "docs/finance/evidence/coverage/README.md",
+    "docs/governance/ASSUMPTION_OF_RISK_DOCTRINE.md",
+    "docs/governance/BOARD_AND_CAPITAL_GOVERNANCE_v1.0.1.md",
+    "docs/governance/BOARD_EVOLUTION_2016_2026.md",
+    "docs/governance/CCF_ENTERPRISE_OBJECTIVES_AND_RISK_UNIVERSE_v0.1.md",
+    "docs/governance/CORPORATE_DOCUMENT_STANDARD_v0.1.md",
+    "docs/governance/DECISION_QUALITY_AND_AFTER_ACTION_LEARNING.md",
+    "docs/governance/ENTERPRISE_AUTHORITY_CAPITAL_AND_EXECUTIVE_RHYTHM.md",
+    "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
+    "docs/governance/ENTERPRISE_TECHNOLOGY_SERVICES_DOCTRINE.md",
+    "docs/governance/PEOPLE_AND_CULTURE_DOCTRINE.md",
+    "docs/governance/PUBLIC_REPOSITORY_AND_WIKI_POLICY.md",
+    "docs/governance/RESERVED_MATTERS_AND_SUBSIDIARY_AUTONOMY.md",
+    "docs/governance/SABLE_HARBOR_MANAGEMENT_SYSTEM.md",
+    "docs/governance/board-records/README.md",
+    "docs/governance/committees/AUDIT_AND_COMPLIANCE_COMMITTEE_CHARTER.md",
+    "docs/governance/committees/COMPENSATION_AND_HUMAN_CAPITAL_COMMITTEE_CHARTER.md",
+    "docs/governance/committees/FINANCE_AND_INVESTMENT_COMMITTEE_CHARTER.md",
+    "docs/governance/committees/GOVERNANCE_AND_NOMINATING_COMMITTEE_CHARTER.md",
+    "docs/governance/committees/README.md",
+    "docs/governance/committees/TECHNOLOGY_AND_OPERATIONS_COMMITTEE_CHARTER.md",
+    "docs/internal/INSTITUTIONAL_CATALOG_QUERY_GUIDE.md",
+    "docs/j2/CONTACT.md",
+    "docs/j2/CONTACT_COLLECTION_MANAGEMENT.md",
+    "docs/j2/EDUCATION.md",
+    "docs/j2/EIB_AND_ENTERPRISE_QUESTIONS.md",
+    "docs/j2/INFORMATION_ACCESS_DOCTRINE.md",
+    "docs/j2/J2_CHARTER.md",
+    "docs/j2/J2_ESTABLISHMENT.md",
+    "docs/j2/J2_HEADQUARTERS.md",
+    "docs/j2/J2_OPERATING_MODEL.md",
+    "docs/j2/JUDGMENT.md",
+    "docs/j2/JUDGMENT_OFFICER_PROFESSION.md",
+    "docs/j2/JUNCTION_ADVISORY_GROUP.md",
+    "docs/j2/ORIENTATION.md",
+    "docs/j2/ORIENTATION_OFFICER_PROFESSION.md",
+    "docs/j2/README.md",
+    "docs/j2/alexandria/AI_AUTHORITY_AND_HUMAN_AUTHORSHIP.md",
+    "docs/j2/alexandria/ALEXANDRIA_CHARTER.md",
+    "docs/j2/alexandria/CANON_INSTITUTIONAL_KNOWLEDGE.md",
+    "docs/j2/alexandria/DAEDALUS_OPERATING_DOCTRINE.md",
+    "docs/j2/alexandria/DAEDALUS_PERSONAL_INSTANCE_AND_WORKSPACE.md",
+    "docs/j2/alexandria/INFORMATION_ACCESS_AND_DISCLOSURE.md",
+    "docs/j2/alexandria/INSTITUTIONAL_MEMORY_AND_CONNECTION.md",
+    "docs/j2/alexandria/PINAKES_PORTAL_AND_UX.md",
+    "docs/j2/alexandria/PROVENANCE_AND_LINEAGE.md",
+    "docs/j2/alexandria/README.md",
+    "docs/j2/alexandria/SEARCH_AND_HISTORICAL_RECONSTRUCTION.md",
+    "docs/j2/alexandria/SEMAPHORE_TRAFFIC_SYSTEM.md",
+    "docs/j2/alexandria/TEMPORAL_INTEGRITY.md",
+    "docs/j2/alexandria/VISUALIZATION_AND_BRANCHING_HISTORY.md",
+    "docs/j2/publications/README.md",
+    "docs/organization/FOUNDRY_AND_FOUNDRY_FIELD.md",
+    "docs/organization/FOUNDRY_FIELD_ORGANIZATION.md",
+    "docs/organization/ORGANIZATIONAL_LINEAGE_2015_2026_v0.3.1.md",
+    "docs/organization/PROJECT_CRADLE.md",
+    "docs/organization/README.md",
+    "docs/organization/WILLOW_KLEIN_CORPORATE_RECORD.md",
+    "docs/organization/charts/advisory.md",
+    "docs/organization/charts/aru-facilities.md",
+    "docs/organization/charts/aru-services.md",
+    "docs/organization/charts/atlas-meridian.md",
+    "docs/organization/charts/bst-network.md",
+    "docs/organization/charts/business-lines.md",
+    "docs/organization/charts/corporate-alexandria.md",
+    "docs/organization/charts/corporate-board-committees.md",
+    "docs/organization/charts/corporate-contact-disciplines.md",
+    "docs/organization/charts/corporate-education-programs.md",
+    "docs/organization/charts/corporate-enterprise-support.md",
+    "docs/organization/charts/corporate-headquarters.md",
+    "docs/organization/charts/corporate-j2.md",
+    "docs/organization/charts/corporate-pinakes-portals.md",
+    "docs/organization/charts/corporate-technology-capabilities.md",
+    "docs/organization/charts/external-counterparties.md",
+    "docs/organization/charts/external-cradle-hosts.md",
+    "docs/organization/charts/external-investors.md",
+    "docs/organization/charts/foundry-field.md",
+    "docs/organization/charts/historical-opportunities.md",
+    "docs/organization/charts/industrial-ownership.md",
+    "docs/organization/charts/pale-sun-red-wash.md",
+    "docs/organization/charts/people-aru-leadership.md",
+    "docs/organization/charts/people-aru-operations.md",
+    "docs/organization/charts/people-atlas-meridian.md",
+    "docs/organization/charts/people-board-committees.md",
+    "docs/organization/charts/people-board.md",
+    "docs/organization/charts/people-bst.md",
+    "docs/organization/charts/people-cradle.md",
+    "docs/organization/charts/people-enterprise.md",
+    "docs/organization/charts/people-foundry-field.md",
+    "docs/organization/charts/people-j2.md",
+    "docs/organization/charts/people-original-eight.md",
+    "docs/organization/charts/people-pale-sun-red-wash.md",
+    "docs/organization/charts/people-willow-leadership.md",
+    "docs/organization/charts/people-willow-team.md",
+    "docs/organization/charts/project-cradle.md",
+    "docs/organization/charts/research-artifacts.md",
+    "docs/organization/charts/research-history.md",
+    "docs/organization/charts/willow-fort.md",
+    "docs/reader/READER_DELIVERY.md",
+    "docs/reader/SOURCES_AND_FORMATS.md",
+    "docs/reader/USE_CASES.md",
+    "docs/reader/exercises/ACQUISITION.md",
+    "docs/reader/exercises/CONTRACTS.md",
+    "docs/reader/exercises/INVOICE.md",
+    "docs/reader/exercises/README.md",
+    "docs/reader/transactions/README.md",
+    "docs/releases/BUSINESS_FINANCE_RELEASES.md",
+    "enterprise/business/README.md",
+    "enterprise/ccf/PROCEDURES.md",
+    "enterprise/ccf/README.md",
+    "enterprise/ccf/assurance/README.md",
+    "enterprise/ccf/assurance/reference_data/README.md",
+    "enterprise/operations/README.md",
+    "enterprise/operations/docs/commercial.md",
+    "enterprise/runtime/README.md",
+    "enterprise/runtime/docs/ARCHITECTURE_AND_RUNBOOKS.md",
+    "enterprise/runtime/docs/ASSURANCE_SCOPE.md",
+    "enterprise/runtime/docs/CONTRACT_DOSSIER.md",
+    "enterprise/services/README.md",
+    "geospatial/README.md",
+    "geospatial/facilities/INDUSTRIAL_FACILITIES.md",
+    "geospatial/facilities/README.md",
+    "geospatial/facilities/RESEARCH_CAMPUSES.md",
+    "geospatial/facilities/coverage/COVERAGE_MATRIX.md",
+    "geospatial/facilities/population/BRIDGE.md",
+    "geospatial/facilities/spatial/README.md",
+    "geospatial/maps/facilities/ARTIFACT_INDEX.md",
+    "industrial/CASE_GUIDE.md",
+    "industrial/corporate/LEGAL_STRUCTURE_AND_FORMATION.md",
+    "industrial/operations/LABOR_SAFETY_AND_CONTROLS.md",
+    "industrial/operations/OPERATING_AND_SERVICE_PLAN.md",
+    "industrial/operations/README.md",
+    "industrial/pale_sun/05_FALSE_START_CEDAR_JUNCTION.md",
+    "industrial/pale_sun/06_FALSE_START_JUNIPER_MESA.md",
+    "industrial/planning/docs/CAPITAL_INVESTMENT_REVIEW.md",
+    "industrial/transaction/01_RW_TRANSACTION_FILE.md",
+    "industrial/transaction/04_ARU_APPROVAL_AND_PURCHASE_AGREEMENT.md",
+    "red_wash/README.md",
+    "red_wash/agreements/TRANSACTION_AND_COMMERCIAL_INSTRUMENTS.md",
+    "red_wash/docs/03_MINE_PLAN_AND_OPERATING_SYSTEM.md",
+    "red_wash/docs/04_PROCESSING_METALLURGY_AND_PRODUCT.md",
+    "red_wash/logistics/ARU_BST_INTERFACE_AND_DEPENDENCY_RECORD.md",
+    "tools/ci/README.md"
+  ]
+}
