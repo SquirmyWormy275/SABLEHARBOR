@@ -84,6 +84,33 @@ def test_source_revocation_blocks_discovery_and_new_collection(workspace):
     assert e.store.get(actor, s["id"])["artifacts"] == []
 
 
+def test_long_colon_source_identity_can_be_collected_without_filename_loss(workspace):
+    e, actor, s = workspace
+    system, record = "source:" + "s" * 120, "record:" + "r" * 120
+    e.company_store.register_system("SH", "base", system, "owner")
+    e.company_store.append_version(
+        "SH",
+        "base",
+        system,
+        record,
+        expected_version=0,
+        command_id="long-source",
+        event_at="2027-01-01T00:00:00Z",
+        available_at="2027-01-02T00:00:00Z",
+        content=b'{"value": 1}',
+        provenance={"source_reference": record},
+    )
+    e.company_store.grant(actor, s["id"], "SH", "base", system)
+    cmd = envelope(s)
+    cmd["payload"].update(system_id=system, record_id=record)
+    out = e.command(actor, s["id"], cmd)
+    artifact = out["artifacts"][0]
+    assert e.artifacts.read(artifact) == b'{"value": 1}'
+    assert artifact["source"]["receipt"]["source"]["record"] == record
+    assert artifact["source"]["receipt"]["source"]["system"] == system
+    assert len(artifact["name"]) < 180 and ":" not in artifact["name"]
+
+
 def test_client_cannot_choose_company_branch_or_clock(workspace):
     e, actor, s = workspace
     cmd = envelope(s)

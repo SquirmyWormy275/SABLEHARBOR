@@ -1,5 +1,7 @@
 # Overnight reader and evidence work
 
+**Execution update:** the owner authorized the audit-company run to proceed autonomously from canon and repository sources, stopping only for real blockers. The structured queue now records `audit_execution` and current job states; earlier “queued, not started” passages below are retained planning history. See the [company-source implementation checkpoint](../../internal/development/audit-suite/COMPANY_SOURCE_IMPLEMENTATION.md) for implemented behavior and precise limits. Historical reader review jobs are not restarted or silently approved.
+
 **Workline:** SH-READER-OVERNIGHT-001 · **State:** prior reader source implementation delivered; designs await exact-file review; company-source audit readiness queued, not started.
 
 ## Company-source audit readiness addition — September 13

@@ -1,7 +1,7 @@
 {
   "id": "SH-READER-OVERNIGHT-001",
   "base_sha": "44e42d37782986fd353e89c1eb2e1f896cdf2918",
-  "status": "DESIGN_REVIEW_PENDING",
+  "status": "IN_PROGRESS",
   "max_parallel_agents": 3,
   "integration_owner": "main agent",
   "decision_defaults": {
@@ -397,11 +397,12 @@
         "docs/internal/development/audit-suite/",
         "enterprise/generated/audit-suite/"
       ],
-      "state": "IN_PROGRESS",
+      "state": "COMPLETE",
       "acceptance": "Inventory systems, people, services, assets, obligations, periods and existing records. Map every scoped control and procedure to required source records; distinguish policy/design, operating records, populations and independent corroboration. Record gaps rather than treating file counts as sufficiency. Inventory the shared enterprise baseline for both Clean and Messy modes; distinguish operating-condition variants from baseline realism.",
       "gate": "existing_authority",
       "execution_policy": "READY requires completed dependencies. Shared schemas, dependencies and catalog changes belong to the integrator. Keep populated sources, migration manifests and audit records in excluded private storage. No remote publication or deployment under this addition.",
-      "execution_authorized": true
+      "execution_authorized": true,
+      "evidence": "Private enterprise/generated/company-source-inventory/aq01-2026-09-13/INVENTORY_v2.json and OPERATING_TABLE_BRIDGE_CENSUS.json; tools/audit_suite/COMPANY_SOURCE_INVENTORY.md. 70 controls,409 tasks,359 prepared requests,597 source pins; inventory identifies gaps, does not claim sufficiency."
     },
     {
       "id": "AQ-02",
@@ -423,11 +424,12 @@
         "docs/internal/development/audit-suite/",
         "enterprise/generated/audit-suite/"
       ],
-      "state": "READY",
+      "state": "IN_PROGRESS",
       "acceptance": "Persistent record stores for identity/HR, tickets and changes, infrastructure/security operations, incidents, vendors, governance/risk, continuity and relevant finance records. Define stable IDs, owners, access, relationships, record versions and event time. Use existing company systems where present; implementation need not introduce external SaaS. Both modes use the same depth of persistent source systems, causal record relationships and version/history mechanics.",
       "gate": "existing_authority",
       "execution_policy": "READY requires completed dependencies. Shared schemas, dependencies and catalog changes belong to the integrator. Keep populated sources, migration manifests and audit records in excluded private storage. No remote publication or deployment under this addition.",
-      "execution_authorized": true
+      "execution_authorized": true,
+      "evidence": "Private company store, grant boundaries, immutable source versions and verified recovery implemented; operating bridge and one mover lifecycle exercised. Broader company-system coverage remains in progress."
     },
     {
       "id": "AQ-03",
@@ -449,11 +451,12 @@
         "docs/internal/development/audit-suite/",
         "enterprise/generated/audit-suite/"
       ],
-      "state": "READY",
+      "state": "IN_PROGRESS",
       "acceptance": "Import manifest binds old artifacts to canonical records, preserves originals and synthetic origin, and records conflicts or unresolved provenance. Reconcile cross-system names, dates, assets and financial locks. Never convert rubric answers into operational facts. Existing engagements remain readable and are not silently rewritten. Preserve coherent source lineage and branch identity; do not migrate hidden rubric answers into either company operational history.",
       "gate": "existing_authority",
       "execution_policy": "READY requires completed dependencies. Shared schemas, dependencies and catalog changes belong to the integrator. Keep populated sources, migration manifests and audit records in excluded private storage. No remote publication or deployment under this addition.",
-      "execution_authorized": true
+      "execution_authorized": true,
+      "evidence": "359 original legacy documentary sources imported with original pins/unknown dates retained. Four existing model tables imported separately; full cross-system operational history reconciliation remains incomplete."
     },
     {
       "id": "AQ-04",
@@ -475,11 +478,12 @@
         "docs/internal/development/audit-suite/",
         "enterprise/generated/audit-suite/"
       ],
-      "state": "READY",
+      "state": "IN_PROGRESS",
       "acceptance": "Build missing operational history through explicit company activities and dependencies: joiners/leavers, approvals, reviews, changes, alerts, incidents, backup/restore exercises and vendor actions. Records reflect frequency, period, scope, responsible personnel and genuine simulated exceptions. Company activity can run without an audit. Clean controls operate as designed with supported reviews and properly handled exceptions. Messy introduces selected causal operating failures and explainable discrepancies within the same company model. Both retain full-period operational depth; no separate planted evidence package.",
       "gate": "existing_authority",
       "execution_policy": "READY requires completed dependencies. Shared schemas, dependencies and catalog changes belong to the integrator. Keep populated sources, migration manifests and audit records in excluded private storage. No remote publication or deployment under this addition.",
-      "execution_authorized": true
+      "execution_authorized": true,
+      "evidence": "One paired SH-IAM-003 mover lifecycle implemented and collected through isolated audits; original hashes and mode-label independence verified. See AQ04_MOVER_SOURCE_COLLECTION_2026-09-14.md. Full period/control coverage remains incomplete."
     },
     {
       "id": "AQ-05",
@@ -502,11 +506,12 @@
         "docs/internal/development/audit-suite/",
         "enterprise/generated/audit-suite/"
       ],
-      "state": "READY",
+      "state": "IN_PROGRESS",
       "acceptance": "PBC requests route to responsible roles; authorized agents inspect records and produce reproducible source exports. Handle permission denials, delays, missing support, corrections and follow-ups. Every retained audit copy traces to an actual source record/version or attributed response; absent evidence remains absent. Disable prepared-evidence delivery for this operating mode. Separate company truth, employee knowledge and auditor knowledge. Both modes use the same authorized collection mechanics; role-bounded staff can consult colleagues and correct statements with history. Neither mode supplies hidden answers.",
       "gate": "existing_authority",
       "execution_policy": "READY requires completed dependencies. Shared schemas, dependencies and catalog changes belong to the integrator. Keep populated sources, migration manifests and audit records in excluded private storage. No remote publication or deployment under this addition.",
-      "execution_authorized": true
+      "execution_authorized": true,
+      "evidence": "Actual browser source discovery/collection and bounded company-persona retrieval exercised; no prepared world in source mode. Paired mover audits retrieve all ten preexisting versions each. Broader company staff collaboration remains queued."
     },
     {
       "id": "AQ-06",
@@ -529,11 +534,12 @@
         "docs/internal/development/audit-suite/",
         "enterprise/generated/audit-suite/"
       ],
-      "state": "READY",
+      "state": "IN_PROGRESS",
       "acceptance": "For every scoped procedure, verify source provenance, population completeness/accuracy, extraction filters, period coverage, sample traceability, approval chronology and corroboration. Maintain a gap register with owner, disposition and retest. Preserve independent population review gates where required. Both modes require population reconciliation, sampling and evidence-based conclusions; mode labels never prove effectiveness or failure. Support defensible alternative procedures.",
       "gate": "existing_authority",
       "execution_policy": "READY requires completed dependencies. Shared schemas, dependencies and catalog changes belong to the integrator. Keep populated sources, migration manifests and audit records in excluded private storage. No remote publication or deployment under this addition.",
-      "execution_authorized": true
+      "execution_authorized": true,
+      "evidence": "Typed source-version population collection and explicit provisional population registration exercised. Source completeness, scope applicability and independent acceptance remain separate gates."
     },
     {
       "id": "AQ-07",
@@ -606,7 +612,7 @@
         "docs/internal/development/audit-suite/",
         "enterprise/generated/audit-suite/"
       ],
-      "state": "READY",
+      "state": "IN_PROGRESS",
       "acceptance": "Inventory every existing scenario; map authored material to the model, preserve original pins and identify missing or ambiguous explanations. No silent invented rubric answers or bulk completeness claim from schema validity. Validate causal links and shared issue identity.",
       "gate": "existing_authority",
       "execution_policy": "Queued, not started. READY is conditional on completed dependencies and the recorded execution authorization. Keep populated keys and learner records private. Integrator owns shared schema, dependency and catalog changes. IK-06 requires actual professional review and owner acceptance, not inferred approval.",
@@ -632,7 +638,7 @@
         "docs/internal/development/audit-suite/",
         "enterprise/generated/audit-suite/"
       ],
-      "state": "READY",
+      "state": "IN_PROGRESS",
       "acceptance": "Enforce instructor authorization server-side for every key route and export. Learner services and company-agent contexts never receive hidden truth/rubrics. Log access, reveals and exports; pin exact versions. Explicit instructor-authorized debrief releases expose only selected content. Test direct requests, cross-engagement access, client payloads and agent-context leaks.",
       "gate": "existing_authority",
       "execution_policy": "Queued, not started. READY is conditional on completed dependencies and the recorded execution authorization. Keep populated keys and learner records private. Integrator owns shared schema, dependency and catalog changes. IK-06 requires actual professional review and owner acceptance, not inferred approval.",
@@ -657,7 +663,7 @@
         "docs/internal/development/audit-suite/",
         "enterprise/generated/audit-suite/"
       ],
-      "state": "READY",
+      "state": "IN_PROGRESS",
       "acceptance": "Deliver hierarchical navigation, saved filters/search, synchronized timeline and relationship map, side-by-side original/version inspection and alternative discovery-path exploration. Timeline reflects what existed and was discoverable then. Use progressive disclosure, keyboard access and text/table alternatives; verify usability against the full corpus rather than a small demo.",
       "gate": "existing_authority",
       "execution_policy": "Queued, not started. READY is conditional on completed dependencies and the recorded execution authorization. Keep populated keys and learner records private. Integrator owns shared schema, dependency and catalog changes. IK-06 requires actual professional review and owner acceptance, not inferred approval.",
@@ -761,7 +767,7 @@
         "docs/internal/development/audit-suite/",
         "enterprise/generated/audit-suite/"
       ],
-      "state": "READY",
+      "state": "IN_PROGRESS",
       "acceptance": "Map existing screens and terminology; implement coherent work paths and explicit engagement/branch/period/role/time orientation. Separate company, auditor and instructor responsibilities. Show actionable work versus external waits, consistent states and reliable contextual links/back navigation. Validate role permissions and preserved context.",
       "gate": "existing_authority",
       "execution_policy": "Locked design direction; queued, not started. Complete dependencies before execution. Preserve private data and prior scope boundaries. Owner usability and exact visual acceptance cannot be inferred from scripted checks.",
@@ -893,11 +899,12 @@
         "docs/internal/development/audit-suite/",
         "enterprise/generated/audit-suite/"
       ],
-      "state": "READY",
+      "state": "IN_PROGRESS",
       "acceptance": "Preserve open documents, scroll positions, filters, drafts, bookmarks, investigation questions and relevant context across resume. Show changes since last visit. Transfer assignments and unresolved questions without losing authorship; enforce recipient access and do not expose another user's private notes by default.",
       "gate": "existing_authority",
-      "execution_policy": "Locked direction, queued not started; satisfy dependencies and existing audit_company execution boundaries. Preserve private data and assessment history. User acceptance cannot be inferred from scripted checks.",
-      "execution_authorized": true
+      "execution_policy": "Owner authorized execution; retain dependency acceptance gates and existing audit_company execution boundaries. Preserve private data and assessment history. User acceptance cannot be inferred from scripted checks.",
+      "execution_authorized": true,
+      "evidence": "Personal note/workpaper drafts persist independently of formal history, with reload recovery, conflict choices and scoped authorization; real browser checks passed. Separate private companion recovery implemented. Full workspace/handoff coverage remains in progress."
     },
     {
       "id": "UX-07",
@@ -918,11 +925,12 @@
         "docs/internal/development/audit-suite/",
         "enterprise/generated/audit-suite/"
       ],
-      "state": "READY",
+      "state": "IN_PROGRESS",
       "acceptance": "Compare scope, population and evidence versions; trace affected samples, procedures, workpapers and conclusions. Mark potentially affected work for reassessment without automatic invalidation or rewriting history. Distinguish received, inspected, tested, concluded and reviewed; unknown, not applicable, not tested and failed remain separate. Explain count denominators/exclusions and distinguish event, collection and simulation times. Severity, effectiveness and evidence confidence are separate dimensions.",
       "gate": "existing_authority",
-      "execution_policy": "Locked direction, queued not started; satisfy dependencies and existing audit_company execution boundaries. Preserve private data and assessment history. User acceptance cannot be inferred from scripted checks.",
-      "execution_authorized": true
+      "execution_policy": "Owner authorized execution; retain dependency acceptance gates and existing audit_company execution boundaries. Preserve private data and assessment history. User acceptance cannot be inferred from scripted checks.",
+      "execution_authorized": true,
+      "evidence": "Observable source-version impact report and direct authorized work links implemented; no automatic invalidation or conclusion. Broader hypothesis/review dependency coverage remains incomplete."
     },
     {
       "id": "UX-08",
@@ -945,7 +953,7 @@
       "state": "READY",
       "acceptance": "Anchor comments to exact passages and source versions; preserve responses, revisions, open points and explicit resolution acceptance. Separate scratch notes, hypotheses and provisional calculations from formal workpapers/findings through deliberate promotion. Distinguish company statements, auditor observations and reviewer judgments. Agent extraction cannot silently promote speculation into a finding.",
       "gate": "existing_authority",
-      "execution_policy": "Locked direction, queued not started; satisfy dependencies and existing audit_company execution boundaries. Preserve private data and assessment history. User acceptance cannot be inferred from scripted checks.",
+      "execution_policy": "Owner authorized execution; retain dependency acceptance gates and existing audit_company execution boundaries. Preserve private data and assessment history. User acceptance cannot be inferred from scripted checks.",
       "execution_authorized": true
     },
     {
@@ -970,7 +978,7 @@
       "state": "READY",
       "acceptance": "Group routine updates and prioritize explained changes/blockers. Clearly distinguish selected rows from all filtered results, preview bulk consequences and report per-item partial failures. Distinguish no activity, empty search, missing evidence, denied access, pending response and technical failure with appropriate next actions, without leaking restricted record existence.",
       "gate": "existing_authority",
-      "execution_policy": "Locked direction, queued not started; satisfy dependencies and existing audit_company execution boundaries. Preserve private data and assessment history. User acceptance cannot be inferred from scripted checks.",
+      "execution_policy": "Owner authorized execution; retain dependency acceptance gates and existing audit_company execution boundaries. Preserve private data and assessment history. User acceptance cannot be inferred from scripted checks.",
       "execution_authorized": true
     },
     {
@@ -995,7 +1003,7 @@
       "state": "READY",
       "acceptance": "Exercise a tested access population, drafted finding, reviewer challenge, corrected source and handoff. Verify impact traceability, resume, changed hypotheses, safe batch selection and pending/unavailable distinctions. Measure effort and errors against recorded baselines. Retain tentative and historical work appropriately; record actual user evaluation separately from scripted checks and obtain owner acceptance.",
       "gate": "existing_authority",
-      "execution_policy": "Locked direction, queued not started; satisfy dependencies and existing audit_company execution boundaries. Preserve private data and assessment history. User acceptance cannot be inferred from scripted checks.",
+      "execution_policy": "Owner authorized execution; retain dependency acceptance gates and existing audit_company execution boundaries. Preserve private data and assessment history. User acceptance cannot be inferred from scripted checks.",
       "execution_authorized": true
     },
     {
@@ -1019,10 +1027,10 @@
         "docs/internal/development/audit-suite/",
         "enterprise/generated/audit-suite/"
       ],
-      "state": "READY",
+      "state": "IN_PROGRESS",
       "acceptance": "Persist and expose the context contract with provenance, staleness and explicit context switching. Keep engagement/branch boundaries and user intent inspectable. Demonstrate no hidden-key, future-record, cross-role or cross-engagement leakage, including inferred context and caches.",
       "gate": "existing_authority",
-      "execution_policy": "Locked direction, queued not started. Existing audit_company execution boundaries apply. Suggestions and search use authorized context, never hidden key data; final usability acceptance requires actual feedback.",
+      "execution_policy": "Owner authorized execution; bounded implementation may proceed while whole-stage dependencies remain in progress. Existing audit_company execution boundaries apply. Suggestions and search use authorized context, never hidden key data; final usability acceptance requires actual feedback.",
       "execution_authorized": true
     },
     {
@@ -1046,11 +1054,12 @@
         "docs/internal/development/audit-suite/",
         "enterprise/generated/audit-suite/"
       ],
-      "state": "READY",
+      "state": "IN_PROGRESS",
       "acceptance": "Consolidate overlapping destinations; use consistent object summaries, contextual actions, permission-aware grouped search and previews. Preserve filters, position and drafts across deep links/back navigation; support next/previous inspection and saved role/engagement workspaces with reset. Keep navigation stable rather than adaptively moving controls.",
       "gate": "existing_authority",
-      "execution_policy": "Locked direction, queued not started. Existing audit_company execution boundaries apply. Suggestions and search use authorized context, never hidden key data; final usability acceptance requires actual feedback.",
-      "execution_authorized": true
+      "execution_policy": "Owner authorized execution; bounded implementation may proceed while whole-stage dependencies remain in progress. Existing audit_company execution boundaries apply. Suggestions and search use authorized context, never hidden key data; final usability acceptance requires actual feedback.",
+      "execution_authorized": true,
+      "evidence": "Stable navigation, authorized grouped search, record previews, in-memory list context and durable personal drafts implemented. Saved workspaces and full navigation acceptance remain incomplete."
     },
     {
       "id": "CX-03",
@@ -1077,7 +1086,7 @@
       "state": "READY",
       "acceptance": "Surface relevant authorized relationships, changes, blockers and suggested next actions with reasons and cited records/work. Distinguish declarations from inference and missing evidence from adverse conclusions. Permit user correction/dismissal. Respect unassisted assessment boundaries and log deliberate hints; never use hidden answers to steer learners. Refresh suggestions when versions, access or scope change.",
       "gate": "existing_authority",
-      "execution_policy": "Locked direction, queued not started. Existing audit_company execution boundaries apply. Suggestions and search use authorized context, never hidden key data; final usability acceptance requires actual feedback.",
+      "execution_policy": "Owner authorized execution; bounded implementation may proceed while whole-stage dependencies remain in progress. Existing audit_company execution boundaries apply. Suggestions and search use authorized context, never hidden key data; final usability acceptance requires actual feedback.",
       "execution_authorized": true
     },
     {
@@ -1104,7 +1113,7 @@
       "state": "READY",
       "acceptance": "Reuse known scoped context visibly and allow correction; progressively disclose advanced fields, preserve invalid-form entries, explain disabled actions without leaking restricted facts. Provide discoverable keyboard shortcuts and non-hover alternatives. Preview references without losing work; explicit actions preserve accountability.",
       "gate": "existing_authority",
-      "execution_policy": "Locked direction, queued not started. Existing audit_company execution boundaries apply. Suggestions and search use authorized context, never hidden key data; final usability acceptance requires actual feedback.",
+      "execution_policy": "Owner authorized execution; bounded implementation may proceed while whole-stage dependencies remain in progress. Existing audit_company execution boundaries apply. Suggestions and search use authorized context, never hidden key data; final usability acceptance requires actual feedback.",
       "execution_authorized": true
     },
     {
@@ -1132,7 +1141,7 @@
       "state": "READY",
       "acceptance": "Exercise unfamiliar investigation, evidence correction, role/context switch, access revocation, stale suggestion, contradictory support, empty filtered search and model unavailability. Verify deep links/back navigation/draft retention, recommendation provenance, cache isolation and no covert key assistance. Measure navigation/entry burden and obtain actual user feedback; record scripted versus human acceptance separately.",
       "gate": "existing_authority",
-      "execution_policy": "Locked direction, queued not started. Existing audit_company execution boundaries apply. Suggestions and search use authorized context, never hidden key data; final usability acceptance requires actual feedback.",
+      "execution_policy": "Owner authorized execution; bounded implementation may proceed while whole-stage dependencies remain in progress. Existing audit_company execution boundaries apply. Suggestions and search use authorized context, never hidden key data; final usability acceptance requires actual feedback.",
       "execution_authorized": true
     }
   ],
@@ -1253,6 +1262,8 @@
     "started_at": "2026-09-14T06:29:38.622168+00:00",
     "worktree": "SABLEHARBOR-audit-suite",
     "branch": "build/audit-training-suite",
-    "boundaries": "Local integrated implementation; preserve immutable sources and private records. Atlas read-only. No inferred professional acceptance or remote deployment."
-  }
+    "boundaries": "Local integrated implementation; preserve immutable sources and private records. Atlas read-only. No inferred professional acceptance or remote deployment.",
+    "checkpoint_note": "Company source foundation, retrospective documentary migration, original operating-table bridge, live browser collection, protected reference-key explorer and context/navigation foundation implemented. Full queued acceptance remains in progress."
+  },
+  "historical_reader_status": "DESIGN_REVIEW_PENDING"
 }

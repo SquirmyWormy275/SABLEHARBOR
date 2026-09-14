@@ -1,3 +1,11 @@
+import CompanyPopulation from "./CompanyPopulation";
+import { createDraftStore, type DraftKey } from "./draftContext";
+import {
+  createNavigationMemory,
+  parseWorkspaceLink,
+  workspaceLink,
+  orientation,
+} from "./navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
 import {
   ApiError,
@@ -27,6 +35,10 @@ import {
   type Field,
 } from "./components";
 import Setup from "./Setup";
+import CompanySources from "./CompanySources";
+import SourceImpact from "./SourceImpact";
+import InstructorKey from "./InstructorKey";
+import WorkspaceSearch from "./WorkspaceSearch";
 import CustomAuthoring from "./CustomAuthoring";
 import SelectionImport from "./SelectionImport";
 import SampleResponses from "./SampleResponses";
@@ -207,84 +219,236 @@ export default function App() {
     [uploadLink, setUploadLink] = useState(""),
     [experimentalConsent, setExperimentalConsent] = useState(false);
   const uploadRef = useRef<HTMLInputElement>(null);
+  const navigationMemory = useRef(createNavigationMemory());
+  const draftStore = useRef(createDraftStore());
+  const navigationEpoch = useRef(0);
+  const authorizedContext = useRef("");
+  const currentEngagement = useRef<string | null>(null);
+  const listPosition = useRef({ section, query, framework });
+  listPosition.current = { section, query, framework };
+  function savePosition() {
+    const current = listPosition.current;
+    navigationMemory.current.save(current.section, {
+      query: current.query,
+      framework: current.framework,
+      scrollTop: window.scrollY,
+    });
+  }
+  function restorePosition(next: Section) {
+    const saved = navigationMemory.current.restore(next);
+    setSection(next);
+    setQuery(saved.query);
+    setFramework(saved.framework);
+    requestAnimationFrame(() => window.scrollTo(0, saved.scrollTop));
+  }
+  const clearContext = useCallback(() => {
+    navigationMemory.current.clear();
+    draftStore.current.clear();
+    authorizedContext.current = "";
+    currentEngagement.current = null;
+    setEngagement(null);
+    setDetail(null);
+    setAction(null);
+    setMeetingId("");
+    setMessage("");
+    setUploadLink("");
+    setUploadKind("workpaper");
+    setExperimentalConsent(false);
+    setQuery("");
+    setFramework("all");
+    setNotice("");
+    setBusy(false);
+    setSetup(false);
+    if (uploadRef.current) uploadRef.current.value = "";
+  }, []);
   const load = useCallback(async () => {
+    const epoch = ++navigationEpoch.current;
+    const search = location.search;
+    const id = new URLSearchParams(search).get("engagement");
+    if (id !== currentEngagement.current) clearContext();
     try {
       const b = await request<Bootstrap>("/api/bootstrap");
+      if (epoch !== navigationEpoch.current) return;
       setCSRF(b.csrf_token);
       setBootstrap(b);
       setUnauthorized(false);
       setError("");
-      const params = new URLSearchParams(location.search);
-      const id = params.get("engagement");
-      if (id)
-        setEngagement(
-          normalize(
+      const fetched = id
+        ? normalize(
             await request<Engagement>(
               `/api/engagements/${encodeURIComponent(id)}`,
             ),
-          ),
-        );
-      const target = params.get("view");
-      if (sections.some((s) => s[0] === target)) setSection(target as Section);
+          )
+        : null;
+      if (epoch !== navigationEpoch.current) return;
+      const resolved = parseWorkspaceLink(search, fetched);
+      if (resolved.status !== "ready" || !fetched) {
+        clearContext();
+        if (resolved.status === "unavailable")
+          setError(
+            "This workspace link is unavailable. Return to engagements to choose accessible work.",
+          );
+        return;
+      }
+      currentEngagement.current = fetched.id;
+      navigationMemory.current.activate(fetched, b.viewer);
+      setEngagement(fetched);
+      setSetup(false);
+      const saved = navigationMemory.current.restore(resolved.location.section);
+      setSection(resolved.location.section);
+      setQuery(saved.query);
+      setFramework(saved.framework);
+      setDetail(null);
+      if (resolved.location.object) {
+        const object = resolved.location.object;
+        const singular: Record<string, string> = {
+          people: "person",
+          controls: "control",
+          requests: "request",
+          artifacts: "artifact",
+          populations: "population",
+          selections: "selection",
+          findings: "finding",
+          workpapers: "workpaper",
+          reviews: "review",
+          meetings: "meeting",
+          notes: "note",
+          calendar: "calendar",
+        };
+        setDetail({
+          row: fetched[object.kind].find((row) => row.id === object.id)!,
+          kind: singular[object.kind],
+        });
+      }
+      requestAnimationFrame(() => {
+        if (epoch === navigationEpoch.current)
+          window.scrollTo(0, saved.scrollTop);
+      });
     } catch (e) {
+      if (epoch !== navigationEpoch.current) return;
+      clearContext();
       if (e instanceof ApiError && e.status === 401) setUnauthorized(true);
       else setError((e as Error).message);
     }
-  }, []);
+  }, [clearContext]);
   useEffect(() => {
     void load();
   }, [load]);
   useEffect(() => {
-    const fn = () => void load();
+    const fn = () => {
+      savePosition();
+      void load();
+    };
     window.addEventListener("popstate", fn);
     return () => window.removeEventListener("popstate", fn);
   }, [load]);
   useEffect(() => {
+    if (!engagement || !bootstrap) return;
+    const contextKey = JSON.stringify([
+      bootstrap.viewer.id,
+      [...bootstrap.viewer.roles].sort(),
+      engagement.id,
+      [...(engagement.permissions ?? [])].sort(),
+      engagement.scope,
+    ]);
+    if (authorizedContext.current && authorizedContext.current !== contextKey) {
+      ++navigationEpoch.current;
+      setAction(null);
+      setDetail(null);
+      setMessage("");
+      setMeetingId("");
+      setUploadLink("");
+      setExperimentalConsent(false);
+      setQuery("");
+      setFramework("all");
+      setBusy(false);
+    }
+    authorizedContext.current = contextKey;
+    draftStore.current.activate({
+      actorId: bootstrap.viewer.id,
+      engagementId: engagement.id,
+      roles: bootstrap.viewer.roles,
+      permissions: engagement.permissions ?? [],
+      scope: engagement.scope,
+    });
+    navigationMemory.current.activate(engagement, bootstrap.viewer);
+    const collections: Record<string, Row[]> = {
+      control: engagement.controls,
+      task: engagement.tasks,
+      person: engagement.people,
+      request: engagement.requests,
+      artifact: engagement.artifacts,
+      population: engagement.populations,
+      selection: engagement.selections,
+      finding: engagement.findings,
+      workpaper: engagement.workpapers,
+      review: engagement.reviews,
+      note: engagement.notes,
+      meeting: engagement.meetings,
+      calendar: engagement.calendar,
+    };
+    setDetail((previous) => {
+      if (!previous) return null;
+      const rows = (collections[previous.kind] ?? []).filter(
+        (row) => row.id === previous.row.id,
+      );
+      return rows.length === 1 ? { kind: previous.kind, row: rows[0] } : null;
+    });
+  }, [engagement, bootstrap]);
+  useEffect(() => {
     if (!engagement || !["GENERATING", "VALIDATING"].includes(engagement.phase))
       return;
+    const epoch = navigationEpoch.current;
+    let cancelled = false;
     const timer = setInterval(() => {
       void request<Engagement>(
         `/api/engagements/${encodeURIComponent(engagement.id)}`,
       )
-        .then((e) => setEngagement(normalize(e)))
-        .catch((e) => setError(e.message));
+        .then((e) => {
+          if (!cancelled && epoch === navigationEpoch.current)
+            setEngagement((old) =>
+              old && old.id === e.id && old.revision <= e.revision
+                ? normalize(e)
+                : old,
+            );
+        })
+        .catch((e) => {
+          if (!cancelled && epoch === navigationEpoch.current)
+            setError(e.message);
+        });
     }, 1500);
-    return () => clearInterval(timer);
+    return () => {
+      cancelled = true;
+      clearInterval(timer);
+    };
   }, [engagement?.id, engagement?.phase]);
   function navigate(next: Section) {
-    setSection(next);
-    setQuery("");
-    const url = new URL(location.href);
-    url.searchParams.set("view", next);
-    if (engagement) url.searchParams.set("engagement", engagement.id);
-    history.pushState({}, "", url);
+    if (!engagement) return;
+    savePosition();
+    restorePosition(next);
+    setDetail(null);
+    history.pushState(
+      {},
+      "",
+      workspaceLink({ engagement: engagement.id, section: next }),
+    );
   }
   async function open(id: string) {
-    setBusy(true);
-    setError("");
-    try {
-      setEngagement(
-        normalize(
-          await request<Engagement>(
-            `/api/engagements/${encodeURIComponent(id)}`,
-          ),
-        ),
-      );
-      setSetup(false);
-      setSection("kickoff");
-      history.pushState(
-        {},
-        "",
-        `?engagement=${encodeURIComponent(id)}&view=kickoff`,
-      );
-    } catch (e) {
-      setError((e as Error).message);
-    } finally {
-      setBusy(false);
-    }
+    savePosition();
+    history.pushState(
+      {},
+      "",
+      workspaceLink({ engagement: id, section: "kickoff" }),
+    );
+    await load();
   }
-  async function act(kind: string, payload: Record<string, unknown>) {
+  async function act(
+    kind: string,
+    payload: Record<string, unknown>,
+    afterFormalSave?: () => Promise<boolean>,
+  ) {
     if (!engagement) return;
+    const epoch = navigationEpoch.current;
     setBusy(true);
     setError("");
     setNotice("");
@@ -292,11 +456,20 @@ export default function App() {
       const e = normalize(
         await command(engagement.id, engagement.revision, kind, payload),
       );
+      const cleanupFailed = afterFormalSave
+        ? !(await afterFormalSave())
+        : false;
+      if (epoch !== navigationEpoch.current) return;
       setEngagement(e);
       setAction(null);
-      setNotice("Saved to this engagement.");
+      setNotice(
+        cleanupFailed
+          ? "Formal record saved. Personal draft cleanup failed; the retained draft must be reviewed before reuse."
+          : "Saved to this engagement.",
+      );
       return e;
     } catch (e) {
+      if (epoch !== navigationEpoch.current) return;
       setError(
         e instanceof ApiError && e.status === 409
           ? "This engagement changed in another session. Refresh to review the latest version before saving again."
@@ -304,7 +477,7 @@ export default function App() {
       );
       throw e;
     } finally {
-      setBusy(false);
+      if (epoch === navigationEpoch.current) setBusy(false);
     }
   }
   function run(kind: string, payload: Record<string, unknown>) {
@@ -320,12 +493,15 @@ export default function App() {
     setAction({ title, kind, fields, initial, description });
   }
   async function create(payload: Record<string, unknown>) {
+    const epoch = navigationEpoch.current;
     setBusy(true);
     setError("");
     try {
       let e = normalize(
         await request<Engagement>("/api/engagements", "POST", payload),
       );
+      if (epoch !== navigationEpoch.current) return;
+      currentEngagement.current = e.id;
       setEngagement(e);
       setSetup(false);
       history.pushState(
@@ -335,24 +511,30 @@ export default function App() {
       );
       setSection("kickoff");
       e = normalize(await command(e.id, e.revision, "scenario.validate", {}));
+      if (epoch !== navigationEpoch.current) return;
+      currentEngagement.current = e.id;
       setEngagement(e);
       if (
         e.phase !== "INVALID" &&
         !((e.configuration as { selections?: Row[] })?.selections ?? []).some(
           (s) => s.authoring_mode === "CUSTOM",
         )
-      )
-        setEngagement(
-          normalize(await command(e.id, e.revision, "scenario.build", {})),
+      ) {
+        const built = normalize(
+          await command(e.id, e.revision, "scenario.build", {}),
         );
+        if (epoch === navigationEpoch.current) setEngagement(built);
+      }
     } catch (e) {
+      if (epoch !== navigationEpoch.current) return;
       setError((e as Error).message);
     } finally {
-      setBusy(false);
+      if (epoch === navigationEpoch.current) setBusy(false);
     }
   }
   async function upload(file: File) {
     if (!engagement) return;
+    const epoch = navigationEpoch.current;
     setBusy(true);
     setError("");
     try {
@@ -362,21 +544,23 @@ export default function App() {
       data.set("linked_id", uploadLink);
       data.set("expected_revision", String(engagement.revision));
       data.set("command_id", crypto.randomUUID());
-      setEngagement(
-        normalize(
-          await request<Engagement>(
-            `/api/engagements/${encodeURIComponent(engagement.id)}/uploads`,
-            "POST",
-            data,
-          ),
+      const uploaded = normalize(
+        await request<Engagement>(
+          `/api/engagements/${encodeURIComponent(engagement.id)}/uploads`,
+          "POST",
+          data,
         ),
       );
+      if (epoch !== navigationEpoch.current) return;
+      setEngagement(uploaded);
       setNotice("Original file retained with its submission history.");
     } catch (e) {
+      if (epoch !== navigationEpoch.current) return;
       setError((e as Error).message);
     } finally {
-      setBusy(false);
-      if (uploadRef.current) uploadRef.current.value = "";
+      if (epoch === navigationEpoch.current) setBusy(false);
+      if (epoch === navigationEpoch.current && uploadRef.current)
+        uploadRef.current.value = "";
     }
   }
   if (unauthorized) return <Login onSuccess={() => void load()} />;
@@ -394,7 +578,41 @@ export default function App() {
         )}
       </main>
     );
+  const draftKind = action?.kind;
+  const draftPaper =
+    draftKind === "workpaper.update"
+      ? engagement?.workpapers.find(
+          (p) => p.id === action?.initial?.workpaper_id,
+        )
+      : undefined;
+  const actionDraft =
+    action &&
+    engagement &&
+    bootstrap &&
+    (engagement.permissions ?? []).some(
+      (p) => p === "learn" || p === "instruct",
+    ) &&
+    (draftKind === "note.create" ||
+      draftKind === "workpaper.add" ||
+      (draftKind === "workpaper.update" && draftPaper))
+      ? {
+          store: draftStore.current,
+          key: {
+            actorId: bootstrap.viewer.id,
+            engagementId: engagement.id,
+            kind: draftKind,
+            objectId: draftPaper?.id ?? "new",
+            baseVersion: draftPaper
+              ? String(workpaperVersions(draftPaper).at(-1)?.version ?? "1")
+              : "NEW",
+          } as DraftKey,
+          initial: draftPaper
+            ? newWorkpaperVersion(draftPaper)
+            : (action.initial ?? {}),
+        }
+      : undefined;
   const e = engagement;
+  const renderEpoch = navigationEpoch.current;
   const controlLink = (row: Row) => {
     const id = str(row.control_id);
     const control = e?.controls.find((c) => c.id === id);
@@ -531,11 +749,12 @@ export default function App() {
             onSubmit={async (event) => {
               event.preventDefault();
               try {
-                await act("meeting.message", {
+                const saved = await act("meeting.message", {
                   meeting_id: activeMeeting.id,
                   content: message,
                 });
-                setMessage("");
+                if (saved && renderEpoch === navigationEpoch.current)
+                  setMessage("");
               } catch {}
             }}
           >
@@ -553,7 +772,9 @@ export default function App() {
             <VoiceInput
               engagement={e.id}
               enabled={!!e.capabilities.voice}
-              onConfirm={setMessage}
+              onConfirm={(text) => {
+                if (renderEpoch === navigationEpoch.current) setMessage(text);
+              }}
             />
             <div>
               <span className="hint">
@@ -593,8 +814,8 @@ export default function App() {
         <button
           className="engagement-switch"
           onClick={() => {
-            setEngagement(null);
-            setSetup(false);
+            ++navigationEpoch.current;
+            clearContext();
             history.pushState({}, "", "/");
           }}
         >
@@ -631,7 +852,8 @@ export default function App() {
             onClick={() => {
               void request("/api/logout", "POST", {})
                 .then(() => {
-                  setEngagement(null);
+                  ++navigationEpoch.current;
+                  clearContext();
                   setBootstrap(null);
                   setUnauthorized(true);
                 })
@@ -670,6 +892,30 @@ export default function App() {
                 : "Engagements"}
           </span>
         </header>
+        {e && (
+          <div
+            className="workspace-orientation"
+            aria-label="Current engagement context"
+          >
+            <strong>{e.title}</strong>
+            <span>
+              Boundary:{" "}
+              {orientation(e, bootstrap.viewer).boundaries.join(" · ")}
+            </span>
+            <span>
+              Period: {e.scope.period_start} — {e.scope.period_end} ·{" "}
+              {e.scope.report_type}
+            </span>
+            <span>
+              Signed in: {bootstrap.viewer.display_name} ·{" "}
+              {bootstrap.viewer.roles.join(" · ")}
+            </span>
+            <span>
+              Engagement permissions:{" "}
+              {(e.permissions ?? []).join(" · ") || "None reported"}
+            </span>
+          </div>
+        )}
         {error && (
           <div className="alert error" role="alert">
             <span>{error}</span>
@@ -691,6 +937,14 @@ export default function App() {
               ✕
             </button>
           </div>
+        )}
+        {e && !setup && (
+          <WorkspaceSearch
+            engagement={e}
+            viewerId={bootstrap.viewer.id}
+            onPreview={(kind, row) => setDetail({ kind, row })}
+            onNavigate={navigate}
+          />
         )}
         <div id="main" tabIndex={-1}>
           {setup ? (
@@ -1024,6 +1278,21 @@ export default function App() {
               )}
               {section === "pbc" && (
                 <>
+                  {bootstrap.capabilities.company_sources && (
+                    <>
+                      <CompanySources
+                        key={e.id}
+                        engagement={e}
+                        busy={busy}
+                        onCommand={act}
+                      />
+                      <SourceImpact
+                        key={e.id + ":impact"}
+                        engagement={e}
+                        onPreview={(kind, row) => setDetail({ kind, row })}
+                      />
+                    </>
+                  )}
                   <div className="actions">
                     <button
                       className="primary"
@@ -1149,6 +1418,14 @@ export default function App() {
               )}
               {section === "populations" && (
                 <>
+                  {bootstrap.capabilities.company_sources && (
+                    <CompanyPopulation
+                      key={e.id + ":population"}
+                      engagement={e}
+                      busy={busy}
+                      onCommand={act}
+                    />
+                  )}
                   <ParentSupport engagement={e} busy={busy} onCommand={run} />
                   <div className="actions">
                     <button
@@ -1318,7 +1595,22 @@ export default function App() {
                       },
                     ]}
                   />
-                  <SelectionImport engagement={e} onSaved={setEngagement} />
+                  <SelectionImport
+                    engagement={e}
+                    onSaved={(updated) => {
+                      if (
+                        renderEpoch === navigationEpoch.current &&
+                        currentEngagement.current === updated.id
+                      )
+                        setEngagement((previous) =>
+                          previous &&
+                          previous.id === updated.id &&
+                          previous.revision <= updated.revision
+                            ? updated
+                            : previous,
+                        );
+                    }}
+                  />
                   <SampleResponses engagement={e} busy={busy} onCommand={run} />
                   <h2>Selection history</h2>
                   <Table
@@ -1594,6 +1886,12 @@ export default function App() {
               )}
               {section === "review" && (
                 <>
+                  {e.permissions?.includes("instruct") && (
+                    <InstructorKey
+                      key={bootstrap.viewer.id + ":" + e.id}
+                      engagement={e}
+                    />
+                  )}
                   <div className="review-intro">
                     <div>
                       <p className="eyebrow">Portable, version-bound review</p>
@@ -1835,13 +2133,33 @@ export default function App() {
       </div>
       {action && (
         <ActionForm
+          key={
+            actionDraft
+              ? JSON.stringify(actionDraft.key)
+              : action.kind + action.title
+          }
+          draft={actionDraft}
+          onDraftCleanupFailure={() =>
+            setNotice(
+              "Formal record saved. Personal draft cleanup failed; the saved draft remains and must be reviewed before reuse.",
+            )
+          }
           action={action}
           busy={busy}
           onClose={() => setAction(null)}
-          onSubmit={async (payload) => {
+          onSubmit={async (payload, afterFormalSave) => {
             try {
-              await act(action.kind, payload);
-            } catch {}
+              const saved = await act(action.kind, payload, afterFormalSave);
+              if (
+                saved &&
+                actionDraft &&
+                renderEpoch === navigationEpoch.current
+              )
+                actionDraft.store.discardObject(actionDraft.key);
+              return Boolean(saved);
+            } catch {
+              return false;
+            }
           }}
         />
       )}

@@ -158,12 +158,153 @@ try {
         conclusion: "OPEN",
       },
     ],
+    permissions: ["instruct", "review", "learn"],
     reviews: [],
     surveys: [],
     events: [],
   };
+  const keyEntry = {
+    id: "MM-01.01.V01",
+    raw_sha256: "a".repeat(64),
+    canonical_sha256: "b".repeat(64),
+    key_sha256: "c".repeat(64),
+    review: {
+      professional: "UNVALIDATED",
+      causal_validation: "NOT_RUN",
+      grading: "NOT_RUN",
+      gaps: ["NEUTRAL_REFERENCE_REVIEW_REQUIRED"],
+    },
+  };
+  const keyContext = {
+    status: "UNBOUND_REFERENCE_LIBRARY",
+    binding: { status: "NOT_BOUND", engagement_id: e.id },
+    archive: { sha256: "d".repeat(64) },
+  };
+  const keyIndex = {
+    ...keyContext,
+    audience: "INSTRUCTOR_ONLY",
+    required: 1,
+    migrated: 1,
+    entries: [keyEntry],
+  };
+  const keyDetail = {
+    ...keyContext,
+    key: {
+      schema: "PRIVATE_INSTRUCTOR_KEY_V1",
+      audience: "INSTRUCTOR_ONLY",
+      id: keyEntry.id,
+      source: {
+        raw_sha256: keyEntry.raw_sha256,
+        canonical_sha256: keyEntry.canonical_sha256,
+        schema_version: "1.0",
+      },
+      review: keyEntry.review,
+      explanation: {
+        title: "Neutral instructor browser fixture",
+        mechanism: { cause: "Synthetic reference preservation" },
+        facts: [{ id: "F1", statement: "Neutral archived fact" }],
+        actor_knowledge: [
+          { role_ref: "Neutral owner", beliefs: ["Authored statement only"] },
+        ],
+        artifacts: [{ id: "A1", name: "neutral.txt" }],
+        events: [{ id: "E1", trigger: "REQUEST" }],
+        playable_paths: [
+          { id: "P1", rationale: "Alternative neutral procedure" },
+        ],
+        rubric: {
+          supported_conclusions: ["Bounded neutral observation"],
+          acceptable_alternatives: ["Further neutral inquiry"],
+          unsupported_guesses: ["Automatic approval"],
+        },
+      },
+      graph: {
+        nodes: [{ id: "fact:F1" }],
+        edges: [],
+        edge_semantics: "AUTHORED_REFERENCES_ONLY_NOT_CORROBORATION",
+      },
+    },
+  };
+  let instructorRequests = 0;
+  let failNextDraftSave = false;
+  const personalDrafts = new Map();
+  let conflictNextPersonalDraft = false;
   await page.route("**/api/**", (route) => {
     const path = new URL(route.request().url()).pathname;
+    if (path.includes("/drafts/")) {
+      let saved = personalDrafts.get(path) ?? {
+        status: "EMPTY",
+        version: 0,
+        fields: {},
+        base_workpaper_version: null,
+      };
+      const method = route.request().method();
+      if (method !== "GET") {
+        const body = route.request().postDataJSON();
+        if (conflictNextPersonalDraft && method === "PUT") {
+          conflictNextPersonalDraft = false;
+          saved = {
+            ...saved,
+            status: "DRAFT",
+            version: saved.version + 1,
+            fields: {
+              title: "Other session draft",
+              text: "Other session text",
+            },
+          };
+          personalDrafts.set(path, saved);
+        }
+        if (body.expected_version !== saved.version)
+          return route.fulfill({
+            status: 409,
+            contentType: "application/json",
+            body: JSON.stringify({ error: "Concurrent personal draft change" }),
+          });
+        saved =
+          method === "DELETE"
+            ? {
+                status: "EMPTY",
+                version: saved.version + 1,
+                fields: {},
+                base_workpaper_version: null,
+              }
+            : {
+                status: "DRAFT",
+                version: saved.version + 1,
+                fields: body.fields,
+                base_workpaper_version: body.base_workpaper_version,
+              };
+        personalDrafts.set(path, saved);
+      }
+      const current = e.workpapers[0].versions?.at(-1)?.version ?? 1;
+      return route.fulfill({
+        status: 200,
+        contentType: "application/json",
+        body: JSON.stringify({
+          ...saved,
+          workpaper_stale:
+            saved.base_workpaper_version != null &&
+            saved.base_workpaper_version !== current,
+        }),
+      });
+    }
+    if (path.endsWith("/commands") && failNextDraftSave) {
+      failNextDraftSave = false;
+      return route.fulfill({
+        status: 409,
+        contentType: "application/json",
+        body: JSON.stringify({ error: "Neutral concurrent edit fixture" }),
+      });
+    }
+    if (path.includes("/instructor-key")) {
+      ++instructorRequests;
+      return route.fulfill({
+        status: 200,
+        contentType: "application/json",
+        body: JSON.stringify(
+          path.endsWith("/instructor-key") ? keyIndex : keyDetail,
+        ),
+      });
+    }
     return route.fulfill({
       status: 200,
       contentType: "application/json",
@@ -214,6 +355,286 @@ try {
     )
       throw Error(`Overflow ${view}`);
   }
+  // Personal draft endpoints are mocked here; full page reload clears all client memory.
+  await page.goto(`http://127.0.0.1:5193/?engagement=${e.id}&view=notes`);
+  await page
+    .getByRole("button", { name: "Add observation", exact: true })
+    .click();
+  let form = page.getByRole("dialog");
+  await form.getByLabel("Control", { exact: true }).selectOption("CC-1");
+  await form
+    .getByLabel("Subject", { exact: true })
+    .fill("Neutral draft subject");
+  await form
+    .getByLabel("Observation", { exact: true })
+    .fill("Unsent draft observation");
+  await page.keyboard.press("Escape");
+  await page.getByRole("button", { name: /Controls & tracker/ }).click();
+  await page
+    .getByRole("button", { name: /Notes/, exact: false })
+    .first()
+    .click();
+  await page
+    .getByRole("button", { name: "Add observation", exact: true })
+    .click();
+  form = page.getByRole("dialog");
+  if (
+    (await form.getByLabel("Observation", { exact: true }).inputValue()) !==
+    "Unsent draft observation"
+  )
+    throw Error("Closed note draft lost");
+  await page.keyboard.press("Escape");
+  await form.waitFor({ state: "detached" });
+  await page.reload();
+  await page
+    .getByRole("button", { name: "Add observation", exact: true })
+    .click();
+  form = page.getByRole("dialog");
+  await form.getByText("Personal draft restored.", { exact: false }).waitFor();
+  if (
+    (await form.getByLabel("Observation", { exact: true }).inputValue()) !==
+    "Unsent draft observation"
+  )
+    throw Error("Reload lost saved personal draft");
+  conflictNextPersonalDraft = true;
+  await form
+    .getByLabel("Observation", { exact: true })
+    .fill("Local conflict text");
+  await form
+    .getByText("Another session changed this draft.", { exact: false })
+    .waitFor();
+  if (
+    (await form.getByLabel("Observation", { exact: true }).inputValue()) !==
+    "Local conflict text"
+  )
+    throw Error("Conflict overwrote local text");
+  if (
+    !(await form
+      .getByRole("button", { name: "Save record", exact: true })
+      .isDisabled())
+  )
+    throw Error("Conflict permitted formal save");
+  await form
+    .getByText("Inspect saved draft from the other session", { exact: true })
+    .click();
+  await form.getByText("Other session text", { exact: true }).waitFor();
+  await form
+    .getByRole("button", {
+      name: "Keep this form; replace the inspected saved draft",
+      exact: true,
+    })
+    .click();
+  await form
+    .getByText("Personal draft saved; not submitted as an audit record.", {
+      exact: false,
+    })
+    .waitFor();
+  await form
+    .getByLabel("Observation", { exact: true })
+    .fill("Unsent draft observation");
+  failNextDraftSave = true;
+  await form.getByRole("button", { name: "Save record", exact: true }).click();
+  await page.getByRole("alert").waitFor();
+  await page.keyboard.press("Escape");
+  await page
+    .getByRole("button", { name: "Add observation", exact: true })
+    .click();
+  form = page.getByRole("dialog");
+  if (
+    (await form.getByLabel("Observation", { exact: true }).inputValue()) !==
+    "Unsent draft observation"
+  )
+    throw Error("Failed save erased draft");
+  await form.getByRole("button", { name: "Save record", exact: true }).click();
+  await form.waitFor({ state: "detached" });
+  await page
+    .getByRole("button", { name: "Add observation", exact: true })
+    .click();
+  form = page.getByRole("dialog");
+  if (
+    (await form.getByLabel("Observation", { exact: true }).inputValue()) !== ""
+  )
+    throw Error("Successful save retained stale draft");
+  await page.keyboard.press("Escape");
+  await page.getByRole("button", { name: /Workpapers & review/ }).click();
+  await page
+    .getByRole("button", { name: "New structured workpaper", exact: true })
+    .click();
+  form = page.getByRole("dialog");
+  await form
+    .getByLabel("Workpaper title", { exact: true })
+    .fill("Unsent new workpaper");
+  await page.keyboard.press("Escape");
+  await page
+    .getByRole("button", { name: "New structured workpaper", exact: true })
+    .click();
+  form = page.getByRole("dialog");
+  if (
+    (await form.getByLabel("Workpaper title", { exact: true }).inputValue()) !==
+    "Unsent new workpaper"
+  )
+    throw Error("New workpaper draft lost");
+  await form
+    .getByRole("button", { name: "Discard unsaved draft", exact: true })
+    .click();
+  await page.waitForFunction(
+    () =>
+      document.querySelector('input[aria-label="Workpaper title"]')?.value ===
+      "",
+  );
+  await page.keyboard.press("Escape");
+  const openPaperDraft = async () => {
+    await page
+      .getByRole("searchbox", { name: "Search this engagement" })
+      .fill("W-01");
+    await page
+      .getByRole("button", { name: "Search records", exact: true })
+      .click();
+    await page
+      .getByRole("button", { name: "Preview W-01", exact: true })
+      .click();
+    await page
+      .getByRole("button", { name: "Save new version", exact: true })
+      .click();
+  };
+  await openPaperDraft();
+  form = page.getByRole("dialog");
+  await form
+    .getByLabel("Objective", { exact: true })
+    .fill("Unsent successor objective");
+  await page.keyboard.press("Escape");
+  e.workpapers[0].versions = [
+    { version: 1, objective: "Original objective" },
+    {
+      version: 2,
+      objective: "Concurrent saved objective",
+      procedures: "Current procedure",
+      conclusion: "OPEN",
+      text: "Current base",
+    },
+  ];
+  e.revision += 1;
+  await page.evaluate(() => dispatchEvent(new PopStateEvent("popstate")));
+  await page.getByText(`revision ${e.revision}`, { exact: false }).waitFor();
+  await openPaperDraft();
+  form = page.getByRole("dialog");
+  await form.getByText("Stale base:", { exact: false }).waitFor();
+  if (
+    !(await form
+      .getByRole("button", { name: "Save record", exact: true })
+      .isDisabled())
+  )
+    throw Error("Stale draft remained submittable");
+  await form.getByText("Inspect current saved base", { exact: true }).click();
+  await form.getByText("Concurrent saved objective", { exact: true }).waitFor();
+  await form
+    .getByRole("button", {
+      name: "I reviewed the current base; use this draft",
+      exact: true,
+    })
+    .click();
+  if (
+    (await form.getByLabel("Objective", { exact: true }).inputValue()) !==
+    "Unsent successor objective"
+  )
+    throw Error("Explicit stale draft rebase lost text");
+  await page.keyboard.press("Escape");
+  // Search previews resolve actual current public records; no instructor fields enter search.
+  await page.goto(`http://127.0.0.1:5193/?engagement=${e.id}&view=controls`);
+  const search = page.getByRole("searchbox", {
+    name: "Search this engagement",
+  });
+  await search.fill("CC-1");
+  await page
+    .getByRole("button", { name: "Search records", exact: true })
+    .click();
+  await page.getByRole("button", { name: "Preview CC-1", exact: true }).click();
+  await page.getByRole("dialog").waitFor();
+  if (
+    !(await page.getByRole("dialog").textContent()).includes(
+      "Access authorization",
+    )
+  )
+    throw Error("Control search preview mismatched row");
+  await page.keyboard.press("Escape");
+  await page.getByRole("button", { name: "Reset search", exact: true }).click();
+  if ((await search.inputValue()) !== "")
+    throw Error("Search reset lost input state");
+  await search.fill("unmatched neutral phrase");
+  await page
+    .getByRole("button", { name: "Search records", exact: true })
+    .click();
+  await page
+    .getByText(
+      "No matches in the current authorized records and selected type.",
+      { exact: false },
+    )
+    .waitFor();
+  await page.getByRole("button", { name: "Reset search", exact: true }).click();
+  // Existing Detail singular mapping must handle notes and tasks from unified search.
+  for (const id of ["N-01", "T-01", "W-01"]) {
+    await search.fill(id);
+    await page
+      .getByRole("button", { name: "Search records", exact: true })
+      .click();
+    await page
+      .getByRole("button", { name: `Preview ${id}`, exact: true })
+      .click();
+    await page.getByRole("dialog").waitFor();
+    if (!(await page.getByRole("dialog").textContent()).includes(id))
+      throw Error(`Missing ${id} preview identity`);
+    await page.keyboard.press("Escape");
+  }
+  await page.goto(`http://127.0.0.1:5193/?engagement=${e.id}&view=review`);
+  const instructor = page.getByRole("region", {
+    name: "Protected instructor source archive",
+  });
+  await instructor
+    .getByRole("button", { name: keyEntry.id, exact: true })
+    .click();
+  const explanation = page.getByRole("article", {
+    name: "Selected instructor explanation",
+  });
+  await explanation.waitFor();
+  if (
+    !(await explanation.textContent()).includes("UNVALIDATED") ||
+    !(await explanation.textContent()).includes("NOT_BOUND")
+  )
+    throw Error("Instructor source limitations missing");
+  await explanation.getByText("Facts", { exact: true }).click();
+  await explanation
+    .getByText("Neutral archived fact", { exact: true })
+    .waitFor();
+  await explanation
+    .getByText("Acceptable alternatives", { exact: true })
+    .click();
+  await explanation
+    .getByText("Further neutral inquiry", { exact: true })
+    .waitFor();
+  await instructor.getByLabel("Search source ID or review gap").fill("absent");
+  await instructor
+    .getByText("No matching archived explanations.", { exact: false })
+    .waitFor();
+  await instructor
+    .getByRole("button", { name: "Reset filters", exact: true })
+    .click();
+  // Client absence check complements separate backend403 tests; mock does not establish server authorization.
+  const priorInstructorRequests = instructorRequests;
+  e.permissions = ["learn"];
+  await page.goto(`http://127.0.0.1:5193/?engagement=${e.id}&view=review`);
+  await page.locator(".workspace-footer").waitFor();
+  if (
+    (await page
+      .getByRole("region", { name: "Protected instructor source archive" })
+      .count()) ||
+    instructorRequests !== priorInstructorRequests
+  )
+    throw Error("Learner requested protected archive");
+  if (
+    (await page.locator("body").textContent()).includes("Neutral archived fact")
+  )
+    throw Error("Learner DOM retained instructor fixture");
+  e.permissions = ["instruct", "review", "learn"];
   await page.goto(`http://127.0.0.1:5193/?engagement=${e.id}&view=pbc`);
   await page.locator(".workspace-footer").waitFor();
   await page
@@ -223,6 +644,90 @@ try {
   await page.keyboard.press("Escape");
   if (await page.getByRole("dialog").count())
     throw Error("Escape did not close dialog");
+  // Actual App navigation on the same page; API remains a neutral mocked fixture.
+  await page.getByRole("button", { name: /Controls & tracker/ }).click();
+  await page.getByLabel("Program view").selectOption("SOC2");
+  await page.getByRole("button", { name: /PBC & evidence/ }).click();
+  await page.goBack();
+  await page.getByLabel("Program view").waitFor();
+  if ((await page.getByLabel("Program view").inputValue()) !== "SOC2")
+    throw Error("Back lost program filter");
+  await page
+    .getByRole("button", { name: /Notes/, exact: false })
+    .first()
+    .click();
+  await page.getByLabel("Search central notes").fill("neutral investigation");
+  await page.getByRole("button", { name: /Controls & tracker/ }).click();
+  await page
+    .getByRole("button", { name: /Notes/, exact: false })
+    .first()
+    .click();
+  if (
+    (await page.getByLabel("Search central notes").inputValue()) !==
+    "neutral investigation"
+  )
+    throw Error("Navigation lost notes filter");
+  await page.getByRole("button", { name: /Meetings · MRL/ }).click();
+  await page.getByLabel("Ask the owner").fill("Unsent neutral question");
+  await page.getByRole("button", { name: /Controls & tracker/ }).click();
+  await page.getByRole("button", { name: /Meetings · MRL/ }).click();
+  if (
+    (await page.getByLabel("Ask the owner").inputValue()) !==
+    "Unsent neutral question"
+  )
+    throw Error("Same engagement lost conversation draft");
+  const orientation = page.getByLabel("Current engagement context");
+  if (!(await orientation.textContent()).includes("2027-12-31"))
+    throw Error("Missing period orientation");
+  await page.evaluate(() => {
+    history.pushState({}, "", "/");
+    dispatchEvent(new PopStateEvent("popstate"));
+  });
+  await page.getByRole("button", { name: /New engagement/i }).waitFor();
+  if (await page.getByLabel("Current engagement context").count())
+    throw Error("List retained prior engagement");
+  let releaseSlow;
+  const slow = new Promise((resolve) => {
+    releaseSlow = resolve;
+  });
+  let slowStarted;
+  const started = new Promise((resolve) => {
+    slowStarted = resolve;
+  });
+  await page.route("**/api/engagements/ENG-SLOW", async (route) => {
+    slowStarted();
+    await slow;
+    await route.fulfill({
+      contentType: "application/json",
+      body: JSON.stringify({
+        ...e,
+        id: "ENG-SLOW",
+        title: "Delayed engagement",
+      }),
+    });
+  });
+  await page.evaluate(() => {
+    history.pushState({}, "", "?engagement=ENG-SLOW&view=kickoff");
+    dispatchEvent(new PopStateEvent("popstate"));
+  });
+  await started;
+  await page.evaluate(() => {
+    history.pushState({}, "", "/");
+    dispatchEvent(new PopStateEvent("popstate"));
+  });
+  await page.getByRole("button", { name: /New engagement/i }).waitFor();
+  releaseSlow();
+  await page.waitForTimeout(150);
+  if (await page.getByLabel("Current engagement context").count())
+    throw Error("Late engagement response reopened abandoned scope");
+  await page.goto(
+    `http://127.0.0.1:5193/?engagement=${e.id}&view=pbc&kind=artifacts&object=unavailable-id`,
+  );
+  await page.getByRole("alert").waitFor();
+  if (await page.getByLabel("Current engagement context").count())
+    throw Error("Unavailable deep link exposed workspace");
+  await page.goto(`http://127.0.0.1:5193/?engagement=${e.id}&view=pbc`);
+  await page.locator(".workspace-footer").waitFor();
   await page.addStyleTag({
     content:
       ".rail{position:static;width:auto;min-height:0;padding:14px;display:flex;flex-wrap:wrap;gap:12px}.rail nav{display:flex;flex-wrap:wrap}.rail footer,.rail-label,.engagement-switch{display:none}.main-shell{margin-left:0}.app{display:block}.brand{width:190px}.rail nav button{padding:8px}.topbar{height:48px}",
@@ -256,6 +761,35 @@ try {
         fixture:
           "Public synthetic layout data; API mocked; not a backend acceptance claim",
         views: 10,
+        draft_checks: [
+          "new note close/reopen and section continuity",
+          "full reload recovers saved personal draft via endpoint",
+          "409draft conflict retains local text and requires explicit inspected choice",
+          "failed save retains draft",
+          "successful save clears saved draft",
+          "new workpaper and explicit discard",
+          "stale successor base disables save until explicit review",
+        ],
+        search_checks: [
+          "control/note/task/workpaper preview identity",
+          "reset and empty-state filters",
+        ],
+        instructor_checks: [
+          "exact index/detail payload",
+          "unbound/unvalidated labels",
+          "facts/alternative drilldown",
+          "filter reset",
+          "no learner component/request/private DOM",
+        ],
+        navigation_checks: [
+          "program filter survives browser back",
+          "notes search survives section navigation",
+          "scope orientation",
+          "conversation draft survives same-engagement navigation",
+          "late engagement response cannot reopen abandoned scope",
+          "popstate to list clears engagement",
+          "unavailable object deep link fails closed",
+        ],
         desktop: [1440, 1050],
         narrow: [390, 844],
         page_errors: errors,

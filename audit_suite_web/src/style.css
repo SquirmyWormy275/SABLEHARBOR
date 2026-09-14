@@ -1388,3 +1388,62 @@ body:has(dialog[open]) {
   font-size: 0.75rem;
   color: var(--muted);
 }
+
+.workspace-orientation {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.2rem;
+  padding: 0.8rem 1.5rem;
+  border-bottom: 1px solid var(--line, #d7dce0);
+  background: var(--paper, #fff);
+  font-size: 0.85rem;
+  overflow-wrap: anywhere;
+}
+.workspace-orientation strong {
+  flex-basis: 100%;
+}
+
+/* Long source identities remain readable inside the active workspace. */
+.instructor-key,
+.workspace-search,
+.panel {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.instructor-key details {
+  margin-block: 10px;
+}
+.instructor-key dd {
+  margin-inline-start: 16px;
+}
+.workspace-search {
+  margin: 16px 38px 0;
+  padding: 16px 20px;
+  border: 1px solid var(--line, #d7d9cf);
+  background: var(--paper, #fffdf7);
+}
+.workspace-search h2 {
+  margin: 0 0 6px;
+  font-size: 1.1rem;
+}
+.workspace-search p {
+  margin-block: 8px;
+}
+.workspace-search .actions label {
+  flex: 1 1 180px;
+  min-width: 0;
+}
+.workspace-search input,
+.workspace-search select {
+  width: 100%;
+}
+@media (max-width: 700px) {
+  .workspace-search {
+    margin: 12px 16px 0;
+    padding: 12px;
+  }
+  .instructor-key .actions > * {
+    min-width: 0;
+    max-width: 100%;
+  }
+}

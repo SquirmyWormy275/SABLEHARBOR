@@ -77,9 +77,11 @@ def collect(engine, state, payload, stamped, command_id):
         )
     except CompanyStoreError as exc:
         raise DomainError("Company source unavailable or request invalid", status=403) from exc
-    name = record["provenance"].get(
-        "name", f"{record['system']}-{record['record']}-v{record['version']}.json"
-    )
+    # Source identifiers may contain colons or exceed filename limits together.
+    # Keep their exact values in the receipt, independently of the download name.
+    name = record["provenance"].get("name")
+    if name is None:
+        name = "company-source-" + digest(identity) + ".json"
     source = {"kind": "COLLECTED_COMPANY_SOURCE", "receipt": receipt, "origin": record["origin"]}
     manifest = engine.artifacts.retain(
         state["id"],

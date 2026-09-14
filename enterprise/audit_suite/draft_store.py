@@ -15,7 +15,7 @@ from datetime import UTC, datetime
 from .store import DomainError, digest
 
 FIELDS = {
-    "note.create": {"title", "text", "source_message_id"},
+    "note.create": {"title", "text", "source_message_id", "control_id"},
     "workpaper.add": {
         "title",
         "text",
@@ -164,6 +164,14 @@ class DraftStore:
         encoded, base = None, None
         if not discard:
             fields, base = payload["fields"], payload["base_workpaper_version"]
+            if isinstance(fields, dict) and fields.get("control_id") not in (None, ""):
+                state = self.store.get(actor, engagement)
+                if not any(
+                    control.get("id") == fields["control_id"]
+                    for control in state.get("controls", [])
+                ):
+                    raise DomainError("Draft control must belong to the engagement scope")
+
             if not isinstance(fields, dict) or set(fields) - FIELDS[action]:
                 raise DomainError("Unsupported draft fields")
             for name, value in fields.items():

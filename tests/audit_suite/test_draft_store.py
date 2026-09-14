@@ -144,3 +144,32 @@ def test_size_permission_digest_and_expired_principal(setup):
         db.execute("UPDATE principals SET expires=0 WHERE id=?", (user["id"],))
     with pytest.raises(DomainError):
         drafts.get(*args)
+
+
+def test_note_control_choice_must_be_in_actual_scope(setup):
+    app, user, _, state = setup
+    store = app.state.engine.store
+
+    def add_control(s, c, a):
+        s["controls"] = [{"id": "C1"}]
+        return s
+
+    store.command(
+        user["id"],
+        state["id"],
+        {
+            "command_id": "scope-control",
+            "expected_revision": state["revision"],
+            "kind": "fixture",
+            "payload": {},
+        },
+        add_control,
+        permissions={"learn"},
+    )
+    drafts = DraftStore(store)
+    args = (user["id"], state["id"], "note.create", "new")
+    result = drafts.write(*args, payload(fields={"title": "Observation", "control_id": "C1"}))
+    assert result["fields"]["control_id"] == "C1"
+    with pytest.raises(DomainError):
+        drafts.write(*args, payload("wrong-control", 1, fields={"control_id": "OTHER"}))
+    assert drafts.get(*args) == result

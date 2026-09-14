@@ -1,5 +1,7 @@
 # Company-source audit readiness workflow queue
 
+Execution update, September 14, 2026: **IN_PROGRESS** under the owner’s explicit overnight authorization. The planning status and authorization language retained below describe the earlier queue proposal; current execution is controlled by [QUEUE.json](../../../reader/overnight/QUEUE.json). Partial technical checkpoints do not establish full-stage completion or professional/user acceptance. See [the implementation checkpoint](COMPANY_SOURCE_IMPLEMENTATION.md).
+
 Recorded September 13, 2026 from the owner's instruction. Status: **QUEUED; implementation not started**. This queue extends the implementation direction and supersedes engagement-specific prepared evidence as the target operating architecture. Historical delivery and test results remain historical results.
 
 ## Required outcome
