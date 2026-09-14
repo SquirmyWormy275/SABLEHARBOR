@@ -27,6 +27,9 @@ def main(argv=None):
     serve.add_argument("--port", type=int, default=8780)
     serve.add_argument("--inference-config", type=Path)
     serve.add_argument("--voice-config", type=Path)
+    serve.add_argument("--company-root", type=Path)
+    serve.add_argument("--company-bindings", type=Path)
+    serve.add_argument("--instructor-key-root", type=Path)
     serve.add_argument("--corpus-root", type=Path)
     serve.add_argument("--program-pack", type=Path)
     serve.add_argument("--tls-cert", type=Path)
@@ -131,6 +134,9 @@ def main(argv=None):
             allowed_hosts=["localhost", "127.0.0.1"],
             inference_config=args.inference_config,
             voice_config=args.voice_config,
+            company_root=args.company_root,
+            company_bindings=args.company_bindings,
+            instructor_key_root=args.instructor_key_root,
             corpus_root=args.corpus_root,
             program_pack=args.program_pack,
         )

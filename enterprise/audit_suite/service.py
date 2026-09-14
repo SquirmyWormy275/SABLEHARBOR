@@ -69,6 +69,46 @@ class BodyLimit:
         await self.app(scope, bounded_receive, send)
 
 
+def load_company_bindings(path: Path | None) -> dict:
+    """Read operator-owned configuration, never HTTP input or caller identity claims."""
+    if path is None:
+        return {}
+    import os
+    import re
+    import stat
+
+    from .inference import _json
+
+    path = Path(path).absolute()
+    if any(p.is_symlink() for p in [path, *path.parents]):
+        raise DomainError("Company binding aliases forbidden")
+    if not path.parent.is_dir() or path.parent.stat().st_mode & 0o077:
+        raise DomainError("Company bindings require a private directory")
+    fd = os.open(path, os.O_RDONLY | os.O_NOFOLLOW)
+    with os.fdopen(fd, "rb") as stream:
+        info = os.fstat(stream.fileno())
+        if not stat.S_ISREG(info.st_mode) or info.st_mode & 0o077 or info.st_size > 1024 * 1024:
+            raise DomainError("Company bindings require a bounded private regular file")
+        try:
+            value = _json(stream.read(1024 * 1024 + 1))
+        except (ValueError, TypeError) as error:
+            raise DomainError("Invalid company bindings JSON") from error
+    pattern = r"[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}"
+    if not isinstance(value, dict):
+        raise DomainError("Company bindings must be an engagement mapping")
+    for engagement, selected in value.items():
+        if (
+            not re.fullmatch(pattern, engagement)
+            or not isinstance(selected, dict)
+            or set(selected) != {"company", "branch"}
+            or any(
+                not isinstance(v, str) or not re.fullmatch(pattern, v) for v in selected.values()
+            )
+        ):
+            raise DomainError("Invalid company binding schema")
+    return value
+
+
 def create_app(
     private_root: Path,
     *,
@@ -80,7 +120,60 @@ def create_app(
     voice_config: Path | None = None,
     corpus_root: Path | None = None,
     program_pack: Path | None = None,
+    company_root: Path | None = None,
+    company_bindings: Path | None = None,
+    instructor_key_root: Path | None = None,
 ) -> FastAPI:
+    if company_bindings is not None and company_root is None:
+        raise DomainError("Company root required with bindings")
+    bindings = load_company_bindings(company_bindings)
+    key_pin = None
+    key_files = None
+
+    def verified_keys():
+        import hashlib
+        import json
+        import re
+
+        from .instructor_key import verify_archive
+
+        if instructor_key_root is None:
+            raise DomainError("Instructor reference library is not configured", status=503)
+        root = Path(instructor_key_root).absolute()
+        try:
+            if any(p.is_symlink() for p in [root, *root.parents]) or not root.is_dir():
+                raise ValueError
+            if root.stat().st_mode & 0o077:
+                raise ValueError
+            fingerprints = {}
+            for path in root.rglob("*"):
+                if path.is_symlink() or path.stat().st_mode & 0o077:
+                    raise ValueError
+                if not (path.is_dir() or path.is_file()):
+                    raise ValueError
+                if path.is_file():
+                    fingerprints[path.relative_to(root).as_posix()] = hashlib.sha256(
+                        path.read_bytes()
+                    ).hexdigest()
+            if key_files is not None and fingerprints != key_files:
+                raise ValueError
+            index = json.loads((root / "index.json").read_bytes())
+            receipt = json.loads((root / "receipt.json").read_bytes())
+            for entry in index["entries"]:
+                if not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9_.-]{0,127}", entry["id"]):
+                    raise ValueError
+            pin = hashlib.sha256((root / "receipt.json").read_bytes()).hexdigest()
+            if key_pin is not None and pin != key_pin:
+                raise ValueError
+            if key_files is None:
+                verify_archive(root)
+            return root, index, receipt, pin, fingerprints
+        except Exception as error:
+            raise DomainError("Instructor reference integrity check failed", status=503) from error
+
+    if instructor_key_root is not None:
+        initial_keys = verified_keys()
+        key_pin, key_files = initial_keys[3], initial_keys[4]
     limits = RequestLimits()
     engine = Engine(
         private_root,
@@ -88,6 +181,8 @@ def create_app(
         voice_config=voice_config,
         corpus_root=corpus_root,
         program_pack=program_pack,
+        company_root=company_root,
+        company_bindings=bindings,
         **({"repository": repository} if repository else {}),
     )
     app = FastAPI(
@@ -203,6 +298,141 @@ def create_app(
     @app.get("/api/engagements/{engagement_id}")
     async def get(engagement_id: str, request: Request):
         return await asyncio.to_thread(engine.get, actor(request)["id"], engagement_id)
+
+    def instructor_reference(principal, engagement_id, scenario_id=None):
+        import hashlib
+        import json
+        import re
+
+        if engine.store.membership(principal["id"], engagement_id) != "instruct":
+            raise DomainError("Instructor membership required", status=403)
+        if scenario_id is not None and not re.fullmatch(
+            r"[A-Za-z0-9][A-Za-z0-9_.-]{0,127}", scenario_id
+        ):
+            raise DomainError("Instructor reference not found", status=404)
+        root, index, receipt, _, _ = verified_keys()
+        metadata = {
+            "status": "UNBOUND_REFERENCE_LIBRARY",
+            "binding": {"status": "NOT_BOUND", "engagement_id": engagement_id},
+            "archive": {"sha256": receipt["archive_sha256"]},
+        }
+        if scenario_id is None:
+            return {**index, **metadata}
+        entry = next((entry for entry in index["entries"] if entry["id"] == scenario_id), None)
+        if entry is None:
+            raise DomainError("Instructor reference not found", status=404)
+        try:
+            raw = (root / entry["key"]).read_bytes()
+            if hashlib.sha256(raw).hexdigest() != entry["key_sha256"]:
+                raise ValueError
+            key = json.loads(raw)
+        except Exception as error:
+            raise DomainError("Instructor reference integrity check failed", status=503) from error
+        return {"key": key, **metadata}
+
+    @app.get("/api/engagements/{engagement_id}/drafts/{action}/{object_id}")
+    async def get_personal_draft(engagement_id: str, action: str, object_id: str, request: Request):
+        from .draft_store import DraftStore
+
+        principal = actor(request)
+        return await asyncio.to_thread(
+            DraftStore(engine.store).get, principal["id"], engagement_id, action, object_id
+        )
+
+    @app.put("/api/engagements/{engagement_id}/drafts/{action}/{object_id}")
+    async def put_personal_draft(engagement_id: str, action: str, object_id: str, request: Request):
+        from .draft_store import DraftStore
+
+        principal = actor(request, mutation=True)
+        payload = await json_body(request)
+        return await asyncio.to_thread(
+            DraftStore(engine.store).write,
+            principal["id"],
+            engagement_id,
+            action,
+            object_id,
+            payload,
+        )
+
+    @app.delete("/api/engagements/{engagement_id}/drafts/{action}/{object_id}")
+    async def delete_personal_draft(
+        engagement_id: str, action: str, object_id: str, request: Request
+    ):
+        from .draft_store import DraftStore
+
+        principal = actor(request, mutation=True)
+        payload = await json_body(request)
+        return await asyncio.to_thread(
+            DraftStore(engine.store).write,
+            principal["id"],
+            engagement_id,
+            action,
+            object_id,
+            payload,
+            discard=True,
+        )
+
+    @app.get("/api/engagements/{engagement_id}/instructor-key")
+    async def instructor_key_index(engagement_id: str, request: Request):
+        return await asyncio.to_thread(instructor_reference, actor(request), engagement_id)
+
+    @app.get("/api/engagements/{engagement_id}/instructor-key/{scenario_id}")
+    async def instructor_key_detail(engagement_id: str, scenario_id: str, request: Request):
+        return await asyncio.to_thread(
+            instructor_reference, actor(request), engagement_id, scenario_id
+        )
+
+    @app.get("/api/engagements/{engagement_id}/company/impact")
+    async def company_impact(engagement_id: str, request: Request):
+        principal = actor(request)
+        if request.query_params:
+            raise DomainError("Source impact uses the current engagement context")
+        from .company_impact import report
+
+        return await asyncio.to_thread(report, engine, principal["id"], engagement_id)
+
+    @app.get("/api/engagements/{engagement_id}/company/systems")
+    async def company_systems(engagement_id: str, request: Request):
+        from .company_collection import binding
+        from .company_store import CompanyStoreError
+
+        principal = actor(request)
+        if request.query_params:
+            raise DomainError("System discovery accepts no query overrides")
+
+        def discover_systems():
+            state = engine.store.get(principal["id"], engagement_id)
+            bound = binding(engine, state)
+            try:
+                return engine.company_store.list_systems(
+                    principal["id"], engagement_id, bound["company"], bound["branch"]
+                )
+            except CompanyStoreError as error:
+                raise DomainError("Company source unavailable", status=403) from error
+
+        return await asyncio.to_thread(discover_systems)
+
+    @app.get("/api/engagements/{engagement_id}/company/systems/{system_id}/records")
+    async def company_records(engagement_id: str, system_id: str, request: Request):
+        from .company_collection import discover
+
+        principal = actor(request)
+        query = request.query_params
+        if set(query) - {"after_record", "limit"} or len(query.multi_items()) != len(query):
+            raise DomainError("Only record cursor and bounded limit are accepted")
+        try:
+            limit = int(query.get("limit", "100"))
+        except ValueError as error:
+            raise DomainError("Invalid discovery limit") from error
+        return await asyncio.to_thread(
+            discover,
+            engine,
+            principal["id"],
+            engagement_id,
+            system_id,
+            after_record=query.get("after_record"),
+            limit=limit,
+        )
 
     @app.get("/api/engagements/{engagement_id}/custom-drafts/{draft_id}")
     async def custom_draft(engagement_id: str, draft_id: str, request: Request):

@@ -150,10 +150,16 @@ class Engine:
         program_pack: Path | None = None,
         inference_config: Path | None = None,
         voice_config: Path | None = None,
+        company_root: Path | None = None,
+        company_bindings: dict | None = None,
     ):
         self.store = Store(private_root)
         self.artifacts = Artifacts(private_root)
         self.repository = repository
+        from .company_store import CompanyStore
+
+        self.company_store = CompanyStore(company_root) if company_root else None
+        self.company_bindings = json.loads(json.dumps(company_bindings or {}))
         self.corpus_root = (
             corpus_root or repository / "enterprise/generated/audit-suite/private-corpus"
         )
@@ -194,6 +200,7 @@ class Engine:
             }
         self.capabilities = {
             **CAPABILITIES,
+            "company_sources": self.company_store is not None,
             "custom_authoring": inference_config is not None,
             "experimental_review": inference_config is not None,
             "voice": voice_config is not None,
@@ -501,7 +508,7 @@ class Engine:
         ):
             permissions = {"review", "instruct"}
         kind = command.get("kind", "")
-        if kind.startswith("scenario.custom."):
+        if kind.startswith("scenario.custom.") or kind == "company.activate":
             permissions = {"instruct"}
         if kind in {"review.prepare", "review.experimental"}:
             permissions = {"learn", "review", "instruct"}
@@ -520,7 +527,7 @@ class Engine:
 
                 inference_result = prepare_custom(self, current, kind, command["payload"])
             elif kind == "meeting.message":
-                inference_result = self._conversation(current, command.get("payload", {}))
+                inference_result = self._conversation(current, command.get("payload", {}), actor)
             elif kind == "review.prepare":
                 from .review import prepare, public_prepared
                 from .store import digest
@@ -571,7 +578,19 @@ class Engine:
         from .temporal_workflow import COMMANDS as TEMPORAL_COMMANDS
         from .temporal_workflow import handle as temporal_handle
 
-        if kind in TEMPORAL_COMMANDS:
+        if kind == "company.activate":
+            from .company_collection import activate
+
+            activate(self, state, p, stamped)
+        elif kind == "company.population.collect":
+            from .company_population_collection import collect as collect_population
+
+            collect_population(self, state, p, stamped, command["command_id"])
+        elif kind == "company.collect":
+            from .company_collection import collect
+
+            collect(self, state, p, stamped, command["command_id"])
+        elif kind in TEMPORAL_COMMANDS:
             temporal_handle(self, state, kind, p, stamped)
         elif kind == "scenario.validate":
             validate_configuration(state["configuration"], state["mode"])
@@ -1052,11 +1071,16 @@ class Engine:
                 }
             )
         elif kind == "pbc.create":
+            boundaries = state["scope"].get("boundaries", [])
+            boundary = p.get("boundary_id") or (boundaries[0] if len(boundaries) == 1 else None)
+            if boundary is not None and boundary not in boundaries:
+                raise DomainError("Request boundary must be inside the engagement scope")
             state["requests"].append(
                 {
                     "id": identifier("PBC"),
                     "title": require_text(p, "title"),
                     "purpose": require_text(p, "purpose"),
+                    "boundary_id": boundary,
                     "control_id": p.get("control_id"),
                     "person_id": p.get("person_id"),
                     "status": "DRAFT",
@@ -1117,7 +1141,7 @@ class Engine:
             ],
         }
 
-    def _conversation(self, state: dict, p: dict) -> dict:
+    def _conversation(self, state: dict, p: dict, actor_id: str | None = None) -> dict:
         if state["phase"] != "ACTIVE":
             raise DomainError("Kickoff and scoped generation must precede company dialogue")
         text = require_text(p, "content", maximum=8000)
@@ -1139,6 +1163,13 @@ class Engine:
                 },
             },
         ]
+        source_mode = state.get("evidence_acquisition") == "COMPANY_SOURCE_COLLECTION"
+        if source_mode:
+            if actor_id is None:
+                raise DomainError("Authenticated company-source context required", status=403)
+            from .company_persona import sources as company_sources
+
+            sources.extend(company_sources(self, actor_id, state, person["id"]))
         if meeting.get("kind") == "KICKOFF":
             sources.append(
                 {
@@ -1147,6 +1178,9 @@ class Engine:
                     "value": {
                         "request_count": len(state["requests"]),
                         "protocol": (
+                            "Issue requests in PBC and obtain existing company source records; "
+                            "receipt is not acceptance."
+                            if source_mode else
                             "Issue requests in PBC; original files arrive at their scheduled "
                             "availability. Receipt is not acceptance."
                         ),
@@ -1160,7 +1194,7 @@ class Engine:
                     },
                 }
             )
-        else:
+        elif not source_mode:
             from .generation import epoch_directory, read_plan
 
             root = epoch_directory(self, state["id"], state.get("generation_epoch", 0))
