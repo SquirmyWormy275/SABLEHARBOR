@@ -1,0 +1,28 @@
+# Instructor investigation and debrief workflow
+
+Status: **QUEUED_NOT_STARTED**. Owner requested adding the expanded interactive key to the overnight queue on September 13, 2026. This records future work; it does not start execution or claim these features exist. The structured jobs are IK-01 through IK-06 in [the overnight queue](../../../reader/overnight/QUEUE.json), alongside the [company-source readiness work](AUDIT_READINESS_WORKFLOW_QUEUE.md).
+
+## Required model and organization
+
+Represent company event → control obligation → affected source records → discovery opportunities → audit procedures → supported conclusions. Relationships are many-to-many: group manifestations by underlying issue without automatically double-counting findings. Navigate portfolio, engagement, issue family, exception, evidence and learner action through progressive detail. Support search by person, asset, record ID, control, procedure and scenario, plus saved filters for domain, severity, period, owner, discovery and review status.
+
+Each versioned scenario explanation records underlying facts and causes; affected boundaries; framework requirements distinct from company procedures; employee knowledge and beliefs over time; evidence existence, location, permissions and retention; alternative discovery paths and corroboration; supported conclusions and unjustified claims; uncertainty; remediation and meaningful retesting. Attributed management explanations are not corroborated facts. Bind the key to exact company branch, scenario and rubric versions, source versions, audit scope/period and learner history. Corrections preserve earlier keys and assessments.
+
+## Ordered deliverables
+
+| Job | Deliverable | Acceptance |
+|---|---|---|
+| IK-01 | Structured explanation model and existing-corpus inventory/migration | Inventory every existing scenario; map authored material to the model, preserve original pins and identify missing or ambiguous explanations. No silent invented rubric answers or bulk completeness claim from schema validity. Validate causal links and shared issue identity. |
+| IK-02 | Protected key service and version boundaries | Enforce instructor authorization server-side for every key route and export. Learner services and company-agent contexts never receive hidden truth/rubrics. Log access, reveals and exports; pin exact versions. Explicit instructor-authorized debrief releases expose only selected content. Test direct requests, cross-engagement access, client payloads and agent-context leaks. |
+| IK-03 | Interactive instructor explorer | Deliver hierarchical navigation, saved filters/search, synchronized timeline and relationship map, side-by-side original/version inspection and alternative discovery-path exploration. Timeline reflects what existed and was discoverable then. Use progressive disclosure, keyboard access and text/table alternatives; verify usability against the full corpus rather than a small demo. |
+| IK-04 | Evidence-linked learner comparison and assessment | Link actual requests, inspection events, selections, tests, workpapers, conclusions and reviews to expectations. Assess discovery, evidence, testing, judgment, documentation and follow-through separately. Distinguish not requested, unavailable, uninspected, inadequately tested, misinterpreted and insufficiently documented; separate out-of-scope issues. File opens and keywords do not prove understanding. Support instructor acceptance of defensible alternatives, reasoned overrides, scenario-defect flags and assessment history. |
+| IK-05 | Progressive reveal and debrief builder | Provide staged hints, source/procedure pointers, evidence and full explanations; record assistance separately from unassisted performance. Assemble selected issues, annotated evidence and prompts into interactive and portable debriefs with pinned provenance. If AI assistance is enabled, suggestions cite actual learner work and rubric versions, remain distinguishable from human decisions and cannot silently determine grades. |
+| IK-06 | Paired-mode validation and qualified calibration | Exercise matched Clean/Messy engagements, overlapping issues, missing/inaccessible evidence, alternative procedures, unsupported findings, time-dependent discoverability and corrected rubrics. Clean explains supported operation and appropriately handled exceptions; Messy explains causal failures. Verify reproducible debriefs and access isolation. Obtain qualified review of realism, sufficiency and grading fairness plus owner usability acceptance; retain ambiguity and unresolved review status. |
+
+## Assessment discipline
+
+“Should have caught” depends on scope, available evidence and reasonable procedures, not hidden truth alone. A learner can reach a defensible conclusion through an unanticipated route. An issue can remain unresolved for legitimate reasons. A Clean label does not prove effectiveness; a Messy label does not prove a finding. Show authored expectations, technically verified behavior and professionally reviewed judgment separately. Avoid false precision in aggregate scores; retain dimension-level explanations and evidence.
+
+## Execution boundaries
+
+Use the existing `audit_company` lane sequentially, within the overnight worker cap. Shared schema, dependency and catalog changes belong to the integrator. Populated keys, hidden scenario material, migration manifests and learner records remain in excluded private storage; public code contains generic mechanics only. Preserve historical audit snapshots and original authored sources. This addition authorizes queue preparation, not a scheduler, remote publication, deployment, outside messages or professional approval. Atlas remains read-only.

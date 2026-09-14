@@ -1,12 +1,28 @@
 # Overnight reader and evidence work
 
-**Workline:** SH-READER-OVERNIGHT-001 · **State:** source implementation complete; new designs await exact-file review.
+**Workline:** SH-READER-OVERNIGHT-001 · **State:** prior reader source implementation delivered; designs await exact-file review; company-source audit readiness queued, not started.
+
+## Company-source audit readiness addition — September 13
+
+The owner added the complete [audit-readiness workflow](../../internal/development/audit-suite/AUDIT_READINESS_WORKFLOW_QUEUE.md) to this overnight queue. AQ-01 through AQ-08 cover source inventory, persistent company systems, retroactive migration, full-period operations, actual audit collection, population/evidence sufficiency, a fresh audit rehearsal and reviewed release. All eight are queued; `READY` denotes eligibility only after dependencies complete and an execution instruction is received. Adding these jobs does not start an overnight run or scheduler.
+
+Use the `audit_company` lane sequentially, within the existing three-worker cap; do not add a fourth simultaneous worker. The integrator owns shared schema, dependency and catalog changes. Preserve the current audit-suite worktree and its uncommitted queue additions when reconciling branches; a refreshed main alone may not contain this work. Record the actual execution baseline when this new lane starts; the earlier queue base and execution records describe the historical reader run.
+
+The company must own its operational history independently of engagements. Auditors collect existing source records through authorized people and systems; only collected copies belong in audit evidence storage. Preserve old synthetic history and snapshots with truthful migration provenance. Keep populated company records and hidden scenario/rubric material private and separate. No Atlas writes, remote publication, external deployment or source-license acceptance is authorized by this queue addition; earlier reader publication instructions do not extend to AQ jobs. AQ-08 remains awaiting review until real qualified review and owner acceptance occur. Missing source records and control failures remain visible rather than becoming manufactured passing evidence.
 
 The owner started execution with “ok. let er rip”. The structured queue records the source revision, isolated branches and current job states. The [execution results](RESULTS.md) record delivered sources, validation and held review files. PR #142 supplies source-merge acceptance; no new design acceptance is implied.
 
 Continue the existing reader/evidence work from a refreshed main. Read [the structured queue](QUEUE.json), [maintainer rules](../../../MAINTAINERS.md), [format boundaries](../SOURCES_AND_FORMATS.md) and [finance handoff](../../handoffs/FINANCE_HUMAN_EVIDENCE_COMPLETION.md) before assigning work. Earlier finance overnight logs describe historical runs; this queue does not resume their stale commands.
 
+## Instructor key addition — September 13
+
+IK-01 through IK-06 add the [instructor investigation and debrief workflow](../../internal/development/audit-suite/INSTRUCTOR_KEY_WORKFLOW_QUEUE.md): structured scenario explanations, protected key access, an interactive explorer, evidence-linked learner comparison, progressive reveals and debriefs, and qualified calibration across Clean/Messy modes. These six jobs are queued, not started, and run in the existing `audit_company` lane after their listed dependencies. They preserve scope/availability-based judgments, acceptable alternative procedures, assessment history and separation of hidden truth from learner/company access. Final acceptance requires real professional review and owner usability feedback. The execution/publication restrictions for AQ additions also apply to IK jobs.
+
 ## Scope and decisions
+
+CX-01 through CX-05 lock the [intelligent contextual workspace](../../internal/development/audit-suite/CONTEXTUAL_WORKSPACE_WORKFLOW.md) and all final navigation proposals: stable destinations, unified search, previews, consistent summaries, contextual actions, saved workspaces, shortcuts, progressive forms and navigation/recovery checks. Contextual guidance must explain its relevance using authorized evidence, preserve investigation continuity and never consume hidden instructor answers. These jobs reuse UX/AQ/IK foundations in the same lane; they are queued, not started.
+
+The owner locked the [UX professionalization direction](../../internal/development/audit-suite/UX_PROFESSIONALIZATION_WORKFLOW.md). UX-01 through UX-05 queue navigation/terminology, evidence/workpaper ergonomics, responsiveness/recovery, visual/accessibility/export consistency and full-session usability evaluation, in that priority order with listed dependencies. These jobs share the `audit_company` lane and its restrictions. Locked direction is not implemented work or exact visual acceptance; subsequent recommendations are proposals until adopted.
 
 The owner authorized README/wiki usability, existing finance evidence completion, and preparation for a substantial overnight run on September 11 (Pacific). Existing authorization allows isolated branches, commits, pushes, PRs and merges after required gates. New PDF/workbook designs still require exact-file visual review. Pending questions do not become approvals through elapsed time.
 

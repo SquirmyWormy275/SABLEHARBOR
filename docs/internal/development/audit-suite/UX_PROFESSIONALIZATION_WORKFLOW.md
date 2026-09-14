@@ -1,0 +1,40 @@
+# Audit workspace UX professionalization
+
+Status: **LOCKED_DIRECTION; QUEUED_NOT_STARTED**. Owner instruction: “ok. lock that and come up with more.” Recorded September 13, 2026. Locked means an accepted design direction and queued acceptance criteria, not implementation, exact visual acceptance or permission to start an unattended run. Later suggestions require separate adoption.
+
+## Accepted priorities
+
+1. Navigation and terminology: organize around understanding scope, obtaining evidence, testing, resolving issues and concluding. Always identify engagement, company branch, period, role and simulated date. Explicit context switching; separate auditor, company-owner and instructor experiences. Hide implementation/scenario terminology from ordinary work.
+2. Evidence and workpaper workspace: inspect procedure, population/sample and original evidence alongside workpaper drafting. Link precise records/pages, preserve navigation position and filters, and connect controls, requests, evidence, tests, findings and reviews. Templates structure reasoning without supplying conclusions.
+3. Responsiveness and recovery: preserve drafts and versions; allow other work during slow generation/conversation; show durable progress and completion. Safely retry without duplicating actions. Distinguish failed processing from completed actions with lost responses.
+4. Visual consistency and export quality: coherent typography, spacing, density, tables, status language, dates, forms, validation and confirmations. Calm long-session use; cards/charts only where useful. Portable workpapers carry scope, source references, procedures, results, limitations and review history.
+
+Every important screen explains its object, engagement relevance, current state, next available actions and supporting information. Role work queues distinguish pending company responses from work requiring the user's action. Received evidence shows request, covered period, replacement relationship and evaluation state. Saved table views, sorting and filtering support dense work. Batch administrative actions retain individual outcomes and accountability; bulk professional conclusions require deliberate handling.
+
+Accessibility is part of each stage: keyboard operation, visible focus, contrast, adjustable density, textual/table graph alternatives and status cues beyond color. Preserve user context during navigation. Role switching must respect authorization rather than merely change the UI. Scope-aware performance work includes the measured slow local conversation path; do not invent latency improvements or numerical acceptance targets without baseline measurements.
+
+## Queued delivery stages
+
+| ID | Deliverable | Acceptance |
+|---|---|---|
+| UX-01 | Navigation, terminology and role-oriented work queues | Map existing screens and terminology; implement coherent work paths and explicit engagement/branch/period/role/time orientation. Separate company, auditor and instructor responsibilities. Show actionable work versus external waits, consistent states and reliable contextual links/back navigation. Validate role permissions and preserved context. |
+| UX-02 | Evidence inspection and workpaper testing workspace | Side-by-side procedure/sample/source/draft inspection, precise evidence references, autosave and version recovery; preserve filters and position. Trace replacement evidence without changing prior snapshots. Administrative batch actions expose per-item outcomes; no automatic effectiveness conclusions. Verify complete testing and review journeys. |
+| UX-03 | Responsive background work and reliable recovery | Measure normal navigation and long-running generation/conversation; keep other work usable. Persist pending/completed/failed state, drafts and results across navigation/reconnection. Demonstrate safe retry and ambiguous-response recovery without duplicate actions. Report measured performance and limitations on the target machine. |
+| UX-04 | Consistent visual system, accessibility and professional exports | Apply coherent components, typography, density, tables, statuses, dates, forms, empty/error states and confirmations. Verify keyboard/focus/contrast and graph alternatives. Inspect actual exports for standalone readability, references, limits and review history. Keep exact visual acceptance distinct from engineering validation. |
+| UX-05 | End-to-end usability evaluation and refinement | Exercise resuming yesterday's audit; company incomplete support and correction; population reconciliation/sample testing/exception documentation; reviewer challenge and reference traversal; instructor missed-issue debrief. Record navigation time, repeated entry, lost context, failures and help needed. Separate scripted checks from actual user evaluation; resolve findings and obtain owner acceptance without invented scores. |
+
+## Second locked refinement pass
+
+Owner instruction: “ok. lock it. Give me one more round of polish and refinement that we can do to make this efficient and easy to navigate.” The following prior proposals are now accepted direction and queued, not implemented. Further navigation proposals remain unapproved until adopted.
+
+| ID | Deliverable | Acceptance |
+|---|---|---|
+| UX-06 | Session continuity and contextual handoffs | Preserve open documents, scroll positions, filters, drafts, bookmarks, investigation questions and relevant context across resume. Show changes since last visit. Transfer assignments and unresolved questions without losing authorship; enforce recipient access and do not expose another user's private notes by default. |
+| UX-07 | Change-impact tracking and precise work states | Compare scope, population and evidence versions; trace affected samples, procedures, workpapers and conclusions. Mark potentially affected work for reassessment without automatic invalidation or rewriting history. Distinguish received, inspected, tested, concluded and reviewed; unknown, not applicable, not tested and failed remain separate. Explain count denominators/exclusions and distinguish event, collection and simulation times. Severity, effectiveness and evidence confidence are separate dimensions. |
+| UX-08 | Review conversations and working-to-formal record transitions | Anchor comments to exact passages and source versions; preserve responses, revisions, open points and explicit resolution acceptance. Separate scratch notes, hypotheses and provisional calculations from formal workpapers/findings through deliberate promotion. Distinguish company statements, auditor observations and reviewer judgments. Agent extraction cannot silently promote speculation into a finding. |
+| UX-09 | Attention, bulk-action and unavailable-state refinement | Group routine updates and prioritize explained changes/blockers. Clearly distinguish selected rows from all filtered results, preview bulk consequences and report per-item partial failures. Distinguish no activity, empty search, missing evidence, denied access, pending response and technical failure with appropriate next actions, without leaking restricted record existence. |
+| UX-10 | Long-investigation and corrected-evidence usability evaluation | Exercise a tested access population, drafted finding, reviewer challenge, corrected source and handoff. Verify impact traceability, resume, changed hypotheses, safe batch selection and pending/unavailable distinctions. Measure effort and errors against recorded baselines. Retain tentative and historical work appropriately; record actual user evaluation separately from scripted checks and obtain owner acceptance. |
+
+## Coordination and execution
+
+UX jobs share the `audit_company` lane and existing worker cap. Implement generic mechanics in public code; keep populated records, keys and evaluation artifacts private. Integrator owns shared dependency/schema/catalog changes. Dependencies in the overnight queue coordinate company-source and instructor-key work. Existing protected history, frozen financial/visual sources, Atlas read-only and no-publication/deployment boundaries remain in force. Queue preparation does not start execution.

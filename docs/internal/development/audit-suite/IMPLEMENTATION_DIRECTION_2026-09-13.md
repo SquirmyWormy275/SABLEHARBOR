@@ -1,5 +1,7 @@
 # Audit training suite implementation direction
 
+**Subsequent owner direction:** the [company-source audit readiness workflow queue](AUDIT_READINESS_WORKFLOW_QUEUE.md) records the requested persistent company operations architecture and retroactive migration. It is queued work; earlier engineering delivery does not establish completion of this new requirement.
+
 **State:** local implementation delivered with retained engineering evidence; two optional program packs remain source gated. Owner acceptance and professional validation are separate.
 **Baseline:** `325fdc8a25ab8ba8d74bf4b62d6853e703cfecd8`.
 **Origin:** owner instruction on September 13 to use the most recent Downloads Codex handover as the implementation guide.

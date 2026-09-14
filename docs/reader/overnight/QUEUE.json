@@ -378,6 +378,762 @@
       "acceptance": "Main agent exclusively regenerates shared catalog/links and reconciles financial, legal and reader coverage. For every scoped record require MD, applicable PDF/XLSX and native database linkage or a supported exemption/missing/proposal disposition. Run accounting rollups, source/period/ID checks, manifest/link integrity and required CI; inspect every changed page/sheet. Merge nonvisual batches after gates; hold new designs and proposed canon for review. Do not mark a family complete merely because it has an index or example.",
       "gate": "existing_authority",
       "evidence": "Source, ledger, link, publication and preservation checks recorded in RESULTS.md; PR #142 supplies final CI/merge evidence. Saved visual packages remain in exact-file owner review."
+    },
+    {
+      "id": "AQ-01",
+      "lane": "audit_company",
+      "title": "Freeze scope and inventory current company history",
+      "depends_on": [],
+      "inputs": [
+        "docs/internal/development/audit-suite/AUDIT_READINESS_WORKFLOW_QUEUE.md",
+        "docs/internal/development/audit-suite/IMPLEMENTATION_DIRECTION_2026-09-13.md"
+      ],
+      "write_scope": [
+        "enterprise/audit_suite/",
+        "enterprise/operations/",
+        "audit_suite_web/",
+        "tools/audit_suite/",
+        "tests/audit_suite/",
+        "docs/internal/development/audit-suite/",
+        "enterprise/generated/audit-suite/"
+      ],
+      "state": "IN_PROGRESS",
+      "acceptance": "Inventory systems, people, services, assets, obligations, periods and existing records. Map every scoped control and procedure to required source records; distinguish policy/design, operating records, populations and independent corroboration. Record gaps rather than treating file counts as sufficiency. Inventory the shared enterprise baseline for both Clean and Messy modes; distinguish operating-condition variants from baseline realism.",
+      "gate": "existing_authority",
+      "execution_policy": "READY requires completed dependencies. Shared schemas, dependencies and catalog changes belong to the integrator. Keep populated sources, migration manifests and audit records in excluded private storage. No remote publication or deployment under this addition.",
+      "execution_authorized": true
+    },
+    {
+      "id": "AQ-02",
+      "lane": "audit_company",
+      "title": "Establish company-owned source systems",
+      "depends_on": [
+        "AQ-01"
+      ],
+      "inputs": [
+        "docs/internal/development/audit-suite/AUDIT_READINESS_WORKFLOW_QUEUE.md",
+        "docs/internal/development/audit-suite/IMPLEMENTATION_DIRECTION_2026-09-13.md"
+      ],
+      "write_scope": [
+        "enterprise/audit_suite/",
+        "enterprise/operations/",
+        "audit_suite_web/",
+        "tools/audit_suite/",
+        "tests/audit_suite/",
+        "docs/internal/development/audit-suite/",
+        "enterprise/generated/audit-suite/"
+      ],
+      "state": "READY",
+      "acceptance": "Persistent record stores for identity/HR, tickets and changes, infrastructure/security operations, incidents, vendors, governance/risk, continuity and relevant finance records. Define stable IDs, owners, access, relationships, record versions and event time. Use existing company systems where present; implementation need not introduce external SaaS. Both modes use the same depth of persistent source systems, causal record relationships and version/history mechanics.",
+      "gate": "existing_authority",
+      "execution_policy": "READY requires completed dependencies. Shared schemas, dependencies and catalog changes belong to the integrator. Keep populated sources, migration manifests and audit records in excluded private storage. No remote publication or deployment under this addition.",
+      "execution_authorized": true
+    },
+    {
+      "id": "AQ-03",
+      "lane": "audit_company",
+      "title": "Migrate existing history retroactively",
+      "depends_on": [
+        "AQ-02"
+      ],
+      "inputs": [
+        "docs/internal/development/audit-suite/AUDIT_READINESS_WORKFLOW_QUEUE.md",
+        "docs/internal/development/audit-suite/IMPLEMENTATION_DIRECTION_2026-09-13.md"
+      ],
+      "write_scope": [
+        "enterprise/audit_suite/",
+        "enterprise/operations/",
+        "audit_suite_web/",
+        "tools/audit_suite/",
+        "tests/audit_suite/",
+        "docs/internal/development/audit-suite/",
+        "enterprise/generated/audit-suite/"
+      ],
+      "state": "READY",
+      "acceptance": "Import manifest binds old artifacts to canonical records, preserves originals and synthetic origin, and records conflicts or unresolved provenance. Reconcile cross-system names, dates, assets and financial locks. Never convert rubric answers into operational facts. Existing engagements remain readable and are not silently rewritten. Preserve coherent source lineage and branch identity; do not migrate hidden rubric answers into either company operational history.",
+      "gate": "existing_authority",
+      "execution_policy": "READY requires completed dependencies. Shared schemas, dependencies and catalog changes belong to the integrator. Keep populated sources, migration manifests and audit records in excluded private storage. No remote publication or deployment under this addition.",
+      "execution_authorized": true
+    },
+    {
+      "id": "AQ-04",
+      "lane": "audit_company",
+      "title": "Complete period-based company operations",
+      "depends_on": [
+        "AQ-03"
+      ],
+      "inputs": [
+        "docs/internal/development/audit-suite/AUDIT_READINESS_WORKFLOW_QUEUE.md",
+        "docs/internal/development/audit-suite/IMPLEMENTATION_DIRECTION_2026-09-13.md"
+      ],
+      "write_scope": [
+        "enterprise/audit_suite/",
+        "enterprise/operations/",
+        "audit_suite_web/",
+        "tools/audit_suite/",
+        "tests/audit_suite/",
+        "docs/internal/development/audit-suite/",
+        "enterprise/generated/audit-suite/"
+      ],
+      "state": "READY",
+      "acceptance": "Build missing operational history through explicit company activities and dependencies: joiners/leavers, approvals, reviews, changes, alerts, incidents, backup/restore exercises and vendor actions. Records reflect frequency, period, scope, responsible personnel and genuine simulated exceptions. Company activity can run without an audit. Clean controls operate as designed with supported reviews and properly handled exceptions. Messy introduces selected causal operating failures and explainable discrepancies within the same company model. Both retain full-period operational depth; no separate planted evidence package.",
+      "gate": "existing_authority",
+      "execution_policy": "READY requires completed dependencies. Shared schemas, dependencies and catalog changes belong to the integrator. Keep populated sources, migration manifests and audit records in excluded private storage. No remote publication or deployment under this addition.",
+      "execution_authorized": true
+    },
+    {
+      "id": "AQ-05",
+      "lane": "audit_company",
+      "title": "Connect audit collection to company systems and people",
+      "depends_on": [
+        "AQ-02",
+        "AQ-03"
+      ],
+      "inputs": [
+        "docs/internal/development/audit-suite/AUDIT_READINESS_WORKFLOW_QUEUE.md",
+        "docs/internal/development/audit-suite/IMPLEMENTATION_DIRECTION_2026-09-13.md"
+      ],
+      "write_scope": [
+        "enterprise/audit_suite/",
+        "enterprise/operations/",
+        "audit_suite_web/",
+        "tools/audit_suite/",
+        "tests/audit_suite/",
+        "docs/internal/development/audit-suite/",
+        "enterprise/generated/audit-suite/"
+      ],
+      "state": "READY",
+      "acceptance": "PBC requests route to responsible roles; authorized agents inspect records and produce reproducible source exports. Handle permission denials, delays, missing support, corrections and follow-ups. Every retained audit copy traces to an actual source record/version or attributed response; absent evidence remains absent. Disable prepared-evidence delivery for this operating mode. Separate company truth, employee knowledge and auditor knowledge. Both modes use the same authorized collection mechanics; role-bounded staff can consult colleagues and correct statements with history. Neither mode supplies hidden answers.",
+      "gate": "existing_authority",
+      "execution_policy": "READY requires completed dependencies. Shared schemas, dependencies and catalog changes belong to the integrator. Keep populated sources, migration manifests and audit records in excluded private storage. No remote publication or deployment under this addition.",
+      "execution_authorized": true
+    },
+    {
+      "id": "AQ-06",
+      "lane": "audit_company",
+      "title": "Reconcile populations and evidence sufficiency",
+      "depends_on": [
+        "AQ-04",
+        "AQ-05"
+      ],
+      "inputs": [
+        "docs/internal/development/audit-suite/AUDIT_READINESS_WORKFLOW_QUEUE.md",
+        "docs/internal/development/audit-suite/IMPLEMENTATION_DIRECTION_2026-09-13.md"
+      ],
+      "write_scope": [
+        "enterprise/audit_suite/",
+        "enterprise/operations/",
+        "audit_suite_web/",
+        "tools/audit_suite/",
+        "tests/audit_suite/",
+        "docs/internal/development/audit-suite/",
+        "enterprise/generated/audit-suite/"
+      ],
+      "state": "READY",
+      "acceptance": "For every scoped procedure, verify source provenance, population completeness/accuracy, extraction filters, period coverage, sample traceability, approval chronology and corroboration. Maintain a gap register with owner, disposition and retest. Preserve independent population review gates where required. Both modes require population reconciliation, sampling and evidence-based conclusions; mode labels never prove effectiveness or failure. Support defensible alternative procedures.",
+      "gate": "existing_authority",
+      "execution_policy": "READY requires completed dependencies. Shared schemas, dependencies and catalog changes belong to the integrator. Keep populated sources, migration manifests and audit records in excluded private storage. No remote publication or deployment under this addition.",
+      "execution_authorized": true
+    },
+    {
+      "id": "AQ-07",
+      "lane": "audit_company",
+      "title": "Run a fresh full-scope audit rehearsal",
+      "depends_on": [
+        "AQ-06"
+      ],
+      "inputs": [
+        "docs/internal/development/audit-suite/AUDIT_READINESS_WORKFLOW_QUEUE.md",
+        "docs/internal/development/audit-suite/IMPLEMENTATION_DIRECTION_2026-09-13.md"
+      ],
+      "write_scope": [
+        "enterprise/audit_suite/",
+        "enterprise/operations/",
+        "audit_suite_web/",
+        "tools/audit_suite/",
+        "tests/audit_suite/",
+        "docs/internal/development/audit-suite/",
+        "enterprise/generated/audit-suite/"
+      ],
+      "state": "READY",
+      "acceptance": "Start with no collected evidence. Execute collection, sampling, all applicable procedures, workpapers, findings, remediation and separate review. Record justified not-applicable procedures and unresolved limitations. Demonstrate missing and contradictory evidence paths; no forced passing conclusions. Exercise matched isolated Clean/Messy branches from one company baseline, starting without collected evidence. Verify equal system depth, causal propagation of selected differences, continuity across engagements and supported alternative investigative routes.",
+      "gate": "existing_authority",
+      "execution_policy": "READY requires completed dependencies. Shared schemas, dependencies and catalog changes belong to the integrator. Keep populated sources, migration manifests and audit records in excluded private storage. No remote publication or deployment under this addition.",
+      "execution_authorized": true
+    },
+    {
+      "id": "AQ-08",
+      "lane": "audit_company",
+      "title": "Release the audit-ready training universe",
+      "depends_on": [
+        "AQ-07"
+      ],
+      "inputs": [
+        "docs/internal/development/audit-suite/AUDIT_READINESS_WORKFLOW_QUEUE.md",
+        "docs/internal/development/audit-suite/IMPLEMENTATION_DIRECTION_2026-09-13.md"
+      ],
+      "write_scope": [
+        "enterprise/audit_suite/",
+        "enterprise/operations/",
+        "audit_suite_web/",
+        "tools/audit_suite/",
+        "tests/audit_suite/",
+        "docs/internal/development/audit-suite/",
+        "enterprise/generated/audit-suite/"
+      ],
+      "state": "READY",
+      "acceptance": "Assemble traceability matrix, migration/recovery receipts, source inventory, rehearsal results and open findings. Obtain qualified review of applicability and evidence sufficiency and owner usability acceptance. Report engineering, substantive review and professional acceptance separately. Qualified review evaluates realism and evidence sufficiency in both modes. Software checks alone cannot establish professional realism or an assurance opinion.",
+      "gate": "existing_authority",
+      "execution_policy": "READY requires completed dependencies. Shared schemas, dependencies and catalog changes belong to the integrator. Keep populated sources, migration manifests and audit records in excluded private storage. No remote publication or deployment under this addition.",
+      "execution_authorized": true
+    },
+    {
+      "id": "IK-01",
+      "lane": "audit_company",
+      "title": "Structured explanation model and existing-corpus inventory/migration",
+      "depends_on": [
+        "AQ-01"
+      ],
+      "inputs": [
+        "docs/internal/development/audit-suite/INSTRUCTOR_KEY_WORKFLOW_QUEUE.md",
+        "docs/internal/development/audit-suite/AUDIT_READINESS_WORKFLOW_QUEUE.md"
+      ],
+      "write_scope": [
+        "enterprise/audit_suite/",
+        "audit_suite_web/",
+        "tools/audit_suite/",
+        "tests/audit_suite/",
+        "docs/internal/development/audit-suite/",
+        "enterprise/generated/audit-suite/"
+      ],
+      "state": "READY",
+      "acceptance": "Inventory every existing scenario; map authored material to the model, preserve original pins and identify missing or ambiguous explanations. No silent invented rubric answers or bulk completeness claim from schema validity. Validate causal links and shared issue identity.",
+      "gate": "existing_authority",
+      "execution_policy": "Queued, not started. READY is conditional on completed dependencies and the recorded execution authorization. Keep populated keys and learner records private. Integrator owns shared schema, dependency and catalog changes. IK-06 requires actual professional review and owner acceptance, not inferred approval.",
+      "execution_authorized": true
+    },
+    {
+      "id": "IK-02",
+      "lane": "audit_company",
+      "title": "Protected key service and version boundaries",
+      "depends_on": [
+        "IK-01",
+        "AQ-02"
+      ],
+      "inputs": [
+        "docs/internal/development/audit-suite/INSTRUCTOR_KEY_WORKFLOW_QUEUE.md",
+        "docs/internal/development/audit-suite/AUDIT_READINESS_WORKFLOW_QUEUE.md"
+      ],
+      "write_scope": [
+        "enterprise/audit_suite/",
+        "audit_suite_web/",
+        "tools/audit_suite/",
+        "tests/audit_suite/",
+        "docs/internal/development/audit-suite/",
+        "enterprise/generated/audit-suite/"
+      ],
+      "state": "READY",
+      "acceptance": "Enforce instructor authorization server-side for every key route and export. Learner services and company-agent contexts never receive hidden truth/rubrics. Log access, reveals and exports; pin exact versions. Explicit instructor-authorized debrief releases expose only selected content. Test direct requests, cross-engagement access, client payloads and agent-context leaks.",
+      "gate": "existing_authority",
+      "execution_policy": "Queued, not started. READY is conditional on completed dependencies and the recorded execution authorization. Keep populated keys and learner records private. Integrator owns shared schema, dependency and catalog changes. IK-06 requires actual professional review and owner acceptance, not inferred approval.",
+      "execution_authorized": true
+    },
+    {
+      "id": "IK-03",
+      "lane": "audit_company",
+      "title": "Interactive instructor explorer",
+      "depends_on": [
+        "IK-02"
+      ],
+      "inputs": [
+        "docs/internal/development/audit-suite/INSTRUCTOR_KEY_WORKFLOW_QUEUE.md",
+        "docs/internal/development/audit-suite/AUDIT_READINESS_WORKFLOW_QUEUE.md"
+      ],
+      "write_scope": [
+        "enterprise/audit_suite/",
+        "audit_suite_web/",
+        "tools/audit_suite/",
+        "tests/audit_suite/",
+        "docs/internal/development/audit-suite/",
+        "enterprise/generated/audit-suite/"
+      ],
+      "state": "READY",
+      "acceptance": "Deliver hierarchical navigation, saved filters/search, synchronized timeline and relationship map, side-by-side original/version inspection and alternative discovery-path exploration. Timeline reflects what existed and was discoverable then. Use progressive disclosure, keyboard access and text/table alternatives; verify usability against the full corpus rather than a small demo.",
+      "gate": "existing_authority",
+      "execution_policy": "Queued, not started. READY is conditional on completed dependencies and the recorded execution authorization. Keep populated keys and learner records private. Integrator owns shared schema, dependency and catalog changes. IK-06 requires actual professional review and owner acceptance, not inferred approval.",
+      "execution_authorized": true
+    },
+    {
+      "id": "IK-04",
+      "lane": "audit_company",
+      "title": "Evidence-linked learner comparison and assessment",
+      "depends_on": [
+        "IK-03",
+        "AQ-05",
+        "AQ-06"
+      ],
+      "inputs": [
+        "docs/internal/development/audit-suite/INSTRUCTOR_KEY_WORKFLOW_QUEUE.md",
+        "docs/internal/development/audit-suite/AUDIT_READINESS_WORKFLOW_QUEUE.md"
+      ],
+      "write_scope": [
+        "enterprise/audit_suite/",
+        "audit_suite_web/",
+        "tools/audit_suite/",
+        "tests/audit_suite/",
+        "docs/internal/development/audit-suite/",
+        "enterprise/generated/audit-suite/"
+      ],
+      "state": "READY",
+      "acceptance": "Link actual requests, inspection events, selections, tests, workpapers, conclusions and reviews to expectations. Assess discovery, evidence, testing, judgment, documentation and follow-through separately. Distinguish not requested, unavailable, uninspected, inadequately tested, misinterpreted and insufficiently documented; separate out-of-scope issues. File opens and keywords do not prove understanding. Support instructor acceptance of defensible alternatives, reasoned overrides, scenario-defect flags and assessment history.",
+      "gate": "existing_authority",
+      "execution_policy": "Queued, not started. READY is conditional on completed dependencies and the recorded execution authorization. Keep populated keys and learner records private. Integrator owns shared schema, dependency and catalog changes. IK-06 requires actual professional review and owner acceptance, not inferred approval.",
+      "execution_authorized": true
+    },
+    {
+      "id": "IK-05",
+      "lane": "audit_company",
+      "title": "Progressive reveal and debrief builder",
+      "depends_on": [
+        "IK-04"
+      ],
+      "inputs": [
+        "docs/internal/development/audit-suite/INSTRUCTOR_KEY_WORKFLOW_QUEUE.md",
+        "docs/internal/development/audit-suite/AUDIT_READINESS_WORKFLOW_QUEUE.md"
+      ],
+      "write_scope": [
+        "enterprise/audit_suite/",
+        "audit_suite_web/",
+        "tools/audit_suite/",
+        "tests/audit_suite/",
+        "docs/internal/development/audit-suite/",
+        "enterprise/generated/audit-suite/"
+      ],
+      "state": "READY",
+      "acceptance": "Provide staged hints, source/procedure pointers, evidence and full explanations; record assistance separately from unassisted performance. Assemble selected issues, annotated evidence and prompts into interactive and portable debriefs with pinned provenance. If AI assistance is enabled, suggestions cite actual learner work and rubric versions, remain distinguishable from human decisions and cannot silently determine grades.",
+      "gate": "existing_authority",
+      "execution_policy": "Queued, not started. READY is conditional on completed dependencies and the recorded execution authorization. Keep populated keys and learner records private. Integrator owns shared schema, dependency and catalog changes. IK-06 requires actual professional review and owner acceptance, not inferred approval.",
+      "execution_authorized": true
+    },
+    {
+      "id": "IK-06",
+      "lane": "audit_company",
+      "title": "Paired-mode validation and qualified calibration",
+      "depends_on": [
+        "IK-05",
+        "AQ-07"
+      ],
+      "inputs": [
+        "docs/internal/development/audit-suite/INSTRUCTOR_KEY_WORKFLOW_QUEUE.md",
+        "docs/internal/development/audit-suite/AUDIT_READINESS_WORKFLOW_QUEUE.md"
+      ],
+      "write_scope": [
+        "enterprise/audit_suite/",
+        "audit_suite_web/",
+        "tools/audit_suite/",
+        "tests/audit_suite/",
+        "docs/internal/development/audit-suite/",
+        "enterprise/generated/audit-suite/"
+      ],
+      "state": "READY",
+      "acceptance": "Exercise matched Clean/Messy engagements, overlapping issues, missing/inaccessible evidence, alternative procedures, unsupported findings, time-dependent discoverability and corrected rubrics. Clean explains supported operation and appropriately handled exceptions; Messy explains causal failures. Verify reproducible debriefs and access isolation. Obtain qualified review of realism, sufficiency and grading fairness plus owner usability acceptance; retain ambiguity and unresolved review status.",
+      "gate": "existing_authority",
+      "execution_policy": "Queued, not started. READY is conditional on completed dependencies and the recorded execution authorization. Keep populated keys and learner records private. Integrator owns shared schema, dependency and catalog changes. IK-06 requires actual professional review and owner acceptance, not inferred approval.",
+      "execution_authorized": true
+    },
+    {
+      "id": "UX-01",
+      "lane": "audit_company",
+      "title": "Navigation, terminology and role-oriented work queues",
+      "depends_on": [
+        "AQ-01"
+      ],
+      "inputs": [
+        "docs/internal/development/audit-suite/UX_PROFESSIONALIZATION_WORKFLOW.md",
+        "docs/internal/development/audit-suite/AUDIT_READINESS_WORKFLOW_QUEUE.md",
+        "docs/internal/development/audit-suite/INSTRUCTOR_KEY_WORKFLOW_QUEUE.md"
+      ],
+      "write_scope": [
+        "enterprise/audit_suite/",
+        "audit_suite_web/",
+        "tools/audit_suite/",
+        "tests/audit_suite/",
+        "docs/internal/development/audit-suite/",
+        "enterprise/generated/audit-suite/"
+      ],
+      "state": "READY",
+      "acceptance": "Map existing screens and terminology; implement coherent work paths and explicit engagement/branch/period/role/time orientation. Separate company, auditor and instructor responsibilities. Show actionable work versus external waits, consistent states and reliable contextual links/back navigation. Validate role permissions and preserved context.",
+      "gate": "existing_authority",
+      "execution_policy": "Locked design direction; queued, not started. Complete dependencies before execution. Preserve private data and prior scope boundaries. Owner usability and exact visual acceptance cannot be inferred from scripted checks.",
+      "execution_authorized": true
+    },
+    {
+      "id": "UX-02",
+      "lane": "audit_company",
+      "title": "Evidence inspection and workpaper testing workspace",
+      "depends_on": [
+        "UX-01",
+        "AQ-05"
+      ],
+      "inputs": [
+        "docs/internal/development/audit-suite/UX_PROFESSIONALIZATION_WORKFLOW.md",
+        "docs/internal/development/audit-suite/AUDIT_READINESS_WORKFLOW_QUEUE.md",
+        "docs/internal/development/audit-suite/INSTRUCTOR_KEY_WORKFLOW_QUEUE.md"
+      ],
+      "write_scope": [
+        "enterprise/audit_suite/",
+        "audit_suite_web/",
+        "tools/audit_suite/",
+        "tests/audit_suite/",
+        "docs/internal/development/audit-suite/",
+        "enterprise/generated/audit-suite/"
+      ],
+      "state": "READY",
+      "acceptance": "Side-by-side procedure/sample/source/draft inspection, precise evidence references, autosave and version recovery; preserve filters and position. Trace replacement evidence without changing prior snapshots. Administrative batch actions expose per-item outcomes; no automatic effectiveness conclusions. Verify complete testing and review journeys.",
+      "gate": "existing_authority",
+      "execution_policy": "Locked design direction; queued, not started. Complete dependencies before execution. Preserve private data and prior scope boundaries. Owner usability and exact visual acceptance cannot be inferred from scripted checks.",
+      "execution_authorized": true
+    },
+    {
+      "id": "UX-03",
+      "lane": "audit_company",
+      "title": "Responsive background work and reliable recovery",
+      "depends_on": [
+        "UX-02"
+      ],
+      "inputs": [
+        "docs/internal/development/audit-suite/UX_PROFESSIONALIZATION_WORKFLOW.md",
+        "docs/internal/development/audit-suite/AUDIT_READINESS_WORKFLOW_QUEUE.md",
+        "docs/internal/development/audit-suite/INSTRUCTOR_KEY_WORKFLOW_QUEUE.md"
+      ],
+      "write_scope": [
+        "enterprise/audit_suite/",
+        "audit_suite_web/",
+        "tools/audit_suite/",
+        "tests/audit_suite/",
+        "docs/internal/development/audit-suite/",
+        "enterprise/generated/audit-suite/"
+      ],
+      "state": "READY",
+      "acceptance": "Measure normal navigation and long-running generation/conversation; keep other work usable. Persist pending/completed/failed state, drafts and results across navigation/reconnection. Demonstrate safe retry and ambiguous-response recovery without duplicate actions. Report measured performance and limitations on the target machine.",
+      "gate": "existing_authority",
+      "execution_policy": "Locked design direction; queued, not started. Complete dependencies before execution. Preserve private data and prior scope boundaries. Owner usability and exact visual acceptance cannot be inferred from scripted checks.",
+      "execution_authorized": true
+    },
+    {
+      "id": "UX-04",
+      "lane": "audit_company",
+      "title": "Consistent visual system, accessibility and professional exports",
+      "depends_on": [
+        "UX-03",
+        "IK-03"
+      ],
+      "inputs": [
+        "docs/internal/development/audit-suite/UX_PROFESSIONALIZATION_WORKFLOW.md",
+        "docs/internal/development/audit-suite/AUDIT_READINESS_WORKFLOW_QUEUE.md",
+        "docs/internal/development/audit-suite/INSTRUCTOR_KEY_WORKFLOW_QUEUE.md"
+      ],
+      "write_scope": [
+        "enterprise/audit_suite/",
+        "audit_suite_web/",
+        "tools/audit_suite/",
+        "tests/audit_suite/",
+        "docs/internal/development/audit-suite/",
+        "enterprise/generated/audit-suite/"
+      ],
+      "state": "READY",
+      "acceptance": "Apply coherent components, typography, density, tables, statuses, dates, forms, empty/error states and confirmations. Verify keyboard/focus/contrast and graph alternatives. Inspect actual exports for standalone readability, references, limits and review history. Keep exact visual acceptance distinct from engineering validation.",
+      "gate": "existing_authority",
+      "execution_policy": "Locked design direction; queued, not started. Complete dependencies before execution. Preserve private data and prior scope boundaries. Owner usability and exact visual acceptance cannot be inferred from scripted checks.",
+      "execution_authorized": true
+    },
+    {
+      "id": "UX-05",
+      "lane": "audit_company",
+      "title": "End-to-end usability evaluation and refinement",
+      "depends_on": [
+        "UX-04",
+        "AQ-07",
+        "IK-05"
+      ],
+      "inputs": [
+        "docs/internal/development/audit-suite/UX_PROFESSIONALIZATION_WORKFLOW.md",
+        "docs/internal/development/audit-suite/AUDIT_READINESS_WORKFLOW_QUEUE.md",
+        "docs/internal/development/audit-suite/INSTRUCTOR_KEY_WORKFLOW_QUEUE.md"
+      ],
+      "write_scope": [
+        "enterprise/audit_suite/",
+        "audit_suite_web/",
+        "tools/audit_suite/",
+        "tests/audit_suite/",
+        "docs/internal/development/audit-suite/",
+        "enterprise/generated/audit-suite/"
+      ],
+      "state": "READY",
+      "acceptance": "Exercise resuming yesterday's audit; company incomplete support and correction; population reconciliation/sample testing/exception documentation; reviewer challenge and reference traversal; instructor missed-issue debrief. Record navigation time, repeated entry, lost context, failures and help needed. Separate scripted checks from actual user evaluation; resolve findings and obtain owner acceptance without invented scores.",
+      "gate": "existing_authority",
+      "execution_policy": "Locked design direction; queued, not started. Complete dependencies before execution. Preserve private data and prior scope boundaries. Owner usability and exact visual acceptance cannot be inferred from scripted checks.",
+      "execution_authorized": true
+    },
+    {
+      "id": "UX-06",
+      "lane": "audit_company",
+      "title": "Session continuity and contextual handoffs",
+      "depends_on": [
+        "UX-03"
+      ],
+      "inputs": [
+        "docs/internal/development/audit-suite/UX_PROFESSIONALIZATION_WORKFLOW.md"
+      ],
+      "write_scope": [
+        "enterprise/audit_suite/",
+        "audit_suite_web/",
+        "tools/audit_suite/",
+        "tests/audit_suite/",
+        "docs/internal/development/audit-suite/",
+        "enterprise/generated/audit-suite/"
+      ],
+      "state": "READY",
+      "acceptance": "Preserve open documents, scroll positions, filters, drafts, bookmarks, investigation questions and relevant context across resume. Show changes since last visit. Transfer assignments and unresolved questions without losing authorship; enforce recipient access and do not expose another user's private notes by default.",
+      "gate": "existing_authority",
+      "execution_policy": "Locked direction, queued not started; satisfy dependencies and existing audit_company execution boundaries. Preserve private data and assessment history. User acceptance cannot be inferred from scripted checks.",
+      "execution_authorized": true
+    },
+    {
+      "id": "UX-07",
+      "lane": "audit_company",
+      "title": "Change-impact tracking and precise work states",
+      "depends_on": [
+        "UX-02",
+        "AQ-06"
+      ],
+      "inputs": [
+        "docs/internal/development/audit-suite/UX_PROFESSIONALIZATION_WORKFLOW.md"
+      ],
+      "write_scope": [
+        "enterprise/audit_suite/",
+        "audit_suite_web/",
+        "tools/audit_suite/",
+        "tests/audit_suite/",
+        "docs/internal/development/audit-suite/",
+        "enterprise/generated/audit-suite/"
+      ],
+      "state": "READY",
+      "acceptance": "Compare scope, population and evidence versions; trace affected samples, procedures, workpapers and conclusions. Mark potentially affected work for reassessment without automatic invalidation or rewriting history. Distinguish received, inspected, tested, concluded and reviewed; unknown, not applicable, not tested and failed remain separate. Explain count denominators/exclusions and distinguish event, collection and simulation times. Severity, effectiveness and evidence confidence are separate dimensions.",
+      "gate": "existing_authority",
+      "execution_policy": "Locked direction, queued not started; satisfy dependencies and existing audit_company execution boundaries. Preserve private data and assessment history. User acceptance cannot be inferred from scripted checks.",
+      "execution_authorized": true
+    },
+    {
+      "id": "UX-08",
+      "lane": "audit_company",
+      "title": "Review conversations and working-to-formal record transitions",
+      "depends_on": [
+        "UX-07"
+      ],
+      "inputs": [
+        "docs/internal/development/audit-suite/UX_PROFESSIONALIZATION_WORKFLOW.md"
+      ],
+      "write_scope": [
+        "enterprise/audit_suite/",
+        "audit_suite_web/",
+        "tools/audit_suite/",
+        "tests/audit_suite/",
+        "docs/internal/development/audit-suite/",
+        "enterprise/generated/audit-suite/"
+      ],
+      "state": "READY",
+      "acceptance": "Anchor comments to exact passages and source versions; preserve responses, revisions, open points and explicit resolution acceptance. Separate scratch notes, hypotheses and provisional calculations from formal workpapers/findings through deliberate promotion. Distinguish company statements, auditor observations and reviewer judgments. Agent extraction cannot silently promote speculation into a finding.",
+      "gate": "existing_authority",
+      "execution_policy": "Locked direction, queued not started; satisfy dependencies and existing audit_company execution boundaries. Preserve private data and assessment history. User acceptance cannot be inferred from scripted checks.",
+      "execution_authorized": true
+    },
+    {
+      "id": "UX-09",
+      "lane": "audit_company",
+      "title": "Attention, bulk-action and unavailable-state refinement",
+      "depends_on": [
+        "UX-06",
+        "UX-08"
+      ],
+      "inputs": [
+        "docs/internal/development/audit-suite/UX_PROFESSIONALIZATION_WORKFLOW.md"
+      ],
+      "write_scope": [
+        "enterprise/audit_suite/",
+        "audit_suite_web/",
+        "tools/audit_suite/",
+        "tests/audit_suite/",
+        "docs/internal/development/audit-suite/",
+        "enterprise/generated/audit-suite/"
+      ],
+      "state": "READY",
+      "acceptance": "Group routine updates and prioritize explained changes/blockers. Clearly distinguish selected rows from all filtered results, preview bulk consequences and report per-item partial failures. Distinguish no activity, empty search, missing evidence, denied access, pending response and technical failure with appropriate next actions, without leaking restricted record existence.",
+      "gate": "existing_authority",
+      "execution_policy": "Locked direction, queued not started; satisfy dependencies and existing audit_company execution boundaries. Preserve private data and assessment history. User acceptance cannot be inferred from scripted checks.",
+      "execution_authorized": true
+    },
+    {
+      "id": "UX-10",
+      "lane": "audit_company",
+      "title": "Long-investigation and corrected-evidence usability evaluation",
+      "depends_on": [
+        "UX-09",
+        "UX-05"
+      ],
+      "inputs": [
+        "docs/internal/development/audit-suite/UX_PROFESSIONALIZATION_WORKFLOW.md"
+      ],
+      "write_scope": [
+        "enterprise/audit_suite/",
+        "audit_suite_web/",
+        "tools/audit_suite/",
+        "tests/audit_suite/",
+        "docs/internal/development/audit-suite/",
+        "enterprise/generated/audit-suite/"
+      ],
+      "state": "READY",
+      "acceptance": "Exercise a tested access population, drafted finding, reviewer challenge, corrected source and handoff. Verify impact traceability, resume, changed hypotheses, safe batch selection and pending/unavailable distinctions. Measure effort and errors against recorded baselines. Retain tentative and historical work appropriately; record actual user evaluation separately from scripted checks and obtain owner acceptance.",
+      "gate": "existing_authority",
+      "execution_policy": "Locked direction, queued not started; satisfy dependencies and existing audit_company execution boundaries. Preserve private data and assessment history. User acceptance cannot be inferred from scripted checks.",
+      "execution_authorized": true
+    },
+    {
+      "id": "CX-01",
+      "lane": "audit_company",
+      "title": "Permission-aware context model and investigation state",
+      "depends_on": [
+        "AQ-02",
+        "UX-01"
+      ],
+      "inputs": [
+        "docs/internal/development/audit-suite/CONTEXTUAL_WORKSPACE_WORKFLOW.md",
+        "docs/internal/development/audit-suite/UX_PROFESSIONALIZATION_WORKFLOW.md",
+        "docs/internal/development/audit-suite/INSTRUCTOR_KEY_WORKFLOW_QUEUE.md"
+      ],
+      "write_scope": [
+        "enterprise/audit_suite/",
+        "audit_suite_web/",
+        "tools/audit_suite/",
+        "tests/audit_suite/",
+        "docs/internal/development/audit-suite/",
+        "enterprise/generated/audit-suite/"
+      ],
+      "state": "READY",
+      "acceptance": "Persist and expose the context contract with provenance, staleness and explicit context switching. Keep engagement/branch boundaries and user intent inspectable. Demonstrate no hidden-key, future-record, cross-role or cross-engagement leakage, including inferred context and caches.",
+      "gate": "existing_authority",
+      "execution_policy": "Locked direction, queued not started. Existing audit_company execution boundaries apply. Suggestions and search use authorized context, never hidden key data; final usability acceptance requires actual feedback.",
+      "execution_authorized": true
+    },
+    {
+      "id": "CX-02",
+      "lane": "audit_company",
+      "title": "Stable navigation, unified search and list-preview-workspace flow",
+      "depends_on": [
+        "CX-01",
+        "UX-02"
+      ],
+      "inputs": [
+        "docs/internal/development/audit-suite/CONTEXTUAL_WORKSPACE_WORKFLOW.md",
+        "docs/internal/development/audit-suite/UX_PROFESSIONALIZATION_WORKFLOW.md",
+        "docs/internal/development/audit-suite/INSTRUCTOR_KEY_WORKFLOW_QUEUE.md"
+      ],
+      "write_scope": [
+        "enterprise/audit_suite/",
+        "audit_suite_web/",
+        "tools/audit_suite/",
+        "tests/audit_suite/",
+        "docs/internal/development/audit-suite/",
+        "enterprise/generated/audit-suite/"
+      ],
+      "state": "READY",
+      "acceptance": "Consolidate overlapping destinations; use consistent object summaries, contextual actions, permission-aware grouped search and previews. Preserve filters, position and drafts across deep links/back navigation; support next/previous inspection and saved role/engagement workspaces with reset. Keep navigation stable rather than adaptively moving controls.",
+      "gate": "existing_authority",
+      "execution_policy": "Locked direction, queued not started. Existing audit_company execution boundaries apply. Suggestions and search use authorized context, never hidden key data; final usability acceptance requires actual feedback.",
+      "execution_authorized": true
+    },
+    {
+      "id": "CX-03",
+      "lane": "audit_company",
+      "title": "Evidence-linked contextual guidance",
+      "depends_on": [
+        "CX-02",
+        "UX-07",
+        "IK-02"
+      ],
+      "inputs": [
+        "docs/internal/development/audit-suite/CONTEXTUAL_WORKSPACE_WORKFLOW.md",
+        "docs/internal/development/audit-suite/UX_PROFESSIONALIZATION_WORKFLOW.md",
+        "docs/internal/development/audit-suite/INSTRUCTOR_KEY_WORKFLOW_QUEUE.md"
+      ],
+      "write_scope": [
+        "enterprise/audit_suite/",
+        "audit_suite_web/",
+        "tools/audit_suite/",
+        "tests/audit_suite/",
+        "docs/internal/development/audit-suite/",
+        "enterprise/generated/audit-suite/"
+      ],
+      "state": "READY",
+      "acceptance": "Surface relevant authorized relationships, changes, blockers and suggested next actions with reasons and cited records/work. Distinguish declarations from inference and missing evidence from adverse conclusions. Permit user correction/dismissal. Respect unassisted assessment boundaries and log deliberate hints; never use hidden answers to steer learners. Refresh suggestions when versions, access or scope change.",
+      "gate": "existing_authority",
+      "execution_policy": "Locked direction, queued not started. Existing audit_company execution boundaries apply. Suggestions and search use authorized context, never hidden key data; final usability acceptance requires actual feedback.",
+      "execution_authorized": true
+    },
+    {
+      "id": "CX-04",
+      "lane": "audit_company",
+      "title": "Efficient contextual forms and accessible actions",
+      "depends_on": [
+        "CX-02",
+        "UX-09"
+      ],
+      "inputs": [
+        "docs/internal/development/audit-suite/CONTEXTUAL_WORKSPACE_WORKFLOW.md",
+        "docs/internal/development/audit-suite/UX_PROFESSIONALIZATION_WORKFLOW.md",
+        "docs/internal/development/audit-suite/INSTRUCTOR_KEY_WORKFLOW_QUEUE.md"
+      ],
+      "write_scope": [
+        "enterprise/audit_suite/",
+        "audit_suite_web/",
+        "tools/audit_suite/",
+        "tests/audit_suite/",
+        "docs/internal/development/audit-suite/",
+        "enterprise/generated/audit-suite/"
+      ],
+      "state": "READY",
+      "acceptance": "Reuse known scoped context visibly and allow correction; progressively disclose advanced fields, preserve invalid-form entries, explain disabled actions without leaking restricted facts. Provide discoverable keyboard shortcuts and non-hover alternatives. Preview references without losing work; explicit actions preserve accountability.",
+      "gate": "existing_authority",
+      "execution_policy": "Locked direction, queued not started. Existing audit_company execution boundaries apply. Suggestions and search use authorized context, never hidden key data; final usability acceptance requires actual feedback.",
+      "execution_authorized": true
+    },
+    {
+      "id": "CX-05",
+      "lane": "audit_company",
+      "title": "Contextual journey and isolation validation",
+      "depends_on": [
+        "CX-03",
+        "CX-04",
+        "UX-10"
+      ],
+      "inputs": [
+        "docs/internal/development/audit-suite/CONTEXTUAL_WORKSPACE_WORKFLOW.md",
+        "docs/internal/development/audit-suite/UX_PROFESSIONALIZATION_WORKFLOW.md",
+        "docs/internal/development/audit-suite/INSTRUCTOR_KEY_WORKFLOW_QUEUE.md"
+      ],
+      "write_scope": [
+        "enterprise/audit_suite/",
+        "audit_suite_web/",
+        "tools/audit_suite/",
+        "tests/audit_suite/",
+        "docs/internal/development/audit-suite/",
+        "enterprise/generated/audit-suite/"
+      ],
+      "state": "READY",
+      "acceptance": "Exercise unfamiliar investigation, evidence correction, role/context switch, access revocation, stale suggestion, contradictory support, empty filtered search and model unavailability. Verify deep links/back navigation/draft retention, recommendation provenance, cache isolation and no covert key assistance. Measure navigation/entry burden and obtain actual user feedback; record scripted versus human acceptance separately.",
+      "gate": "existing_authority",
+      "execution_policy": "Locked direction, queued not started. Existing audit_company execution boundaries apply. Suggestions and search use authorized context, never hidden key data; final usability acceptance requires actual feedback.",
+      "execution_authorized": true
     }
   ],
   "scope_update": {
@@ -399,5 +1155,104 @@
     "compatibility_base_sha": "035304bf8860e9bc393ae73382a3e60501a23757",
     "source_pr": 142,
     "source_delivery": "Source changes are delivered through PR #142; its GitHub merge record supplies repository acceptance."
+  },
+  "audit_scope_update": {
+    "date": "2026-09-13",
+    "owner_instruction": "Awesome. Can you add all of that to our overnight workflow queue?",
+    "workflow": "docs/internal/development/audit-suite/AUDIT_READINESS_WORKFLOW_QUEUE.md",
+    "status": "QUEUED_NOT_STARTED",
+    "jobs": [
+      "AQ-01",
+      "AQ-02",
+      "AQ-03",
+      "AQ-04",
+      "AQ-05",
+      "AQ-06",
+      "AQ-07",
+      "AQ-08"
+    ],
+    "interpretation": "Add all eight company-source readiness stages including retroactive migration; this update does not start execution or a scheduler. Prior reader job states, source baseline and execution receipts remain historical.",
+    "completion_boundary": "AQ-08 requires actual qualified substantive review and owner usability acceptance; neither may be inferred from automated checks. Preserve fictional provenance, frozen assets, financial locks and historical audit snapshots. Atlas remains read-only."
+  },
+  "audit_mode_clarification": {
+    "status": "QUEUED_NOT_STARTED",
+    "owner_instruction": "Right. Add that to the workflow queue",
+    "principle": "Clean and Messy share enterprise realism, source-system depth and professional audit effort; mode changes operating conditions rather than delivering different preassembled answer sets.",
+    "applies_to": [
+      "AQ-01",
+      "AQ-02",
+      "AQ-03",
+      "AQ-04",
+      "AQ-05",
+      "AQ-06",
+      "AQ-07",
+      "AQ-08"
+    ],
+    "authority": "docs/internal/development/audit-suite/AUDIT_READINESS_WORKFLOW_QUEUE.md#shared-realism-and-cleanmessy-operating-conditions"
+  },
+  "instructor_key_scope_update": {
+    "date": "2026-09-13",
+    "owner_instruction": "ok. add it to the queue",
+    "status": "QUEUED_NOT_STARTED",
+    "workflow": "docs/internal/development/audit-suite/INSTRUCTOR_KEY_WORKFLOW_QUEUE.md",
+    "jobs": [
+      "IK-01",
+      "IK-02",
+      "IK-03",
+      "IK-04",
+      "IK-05",
+      "IK-06"
+    ],
+    "interpretation": "Add the robust instructor investigation, interactive key, learner comparison and debrief workflow; preserve all existing jobs and historical execution receipts. This does not start execution."
+  },
+  "ux_scope_update": {
+    "owner_instruction": "ok. lock that and come up with more",
+    "status": "LOCKED_DIRECTION_QUEUED_NOT_STARTED",
+    "workflow": "docs/internal/development/audit-suite/UX_PROFESSIONALIZATION_WORKFLOW.md",
+    "jobs": [
+      "UX-01",
+      "UX-02",
+      "UX-03",
+      "UX-04",
+      "UX-05"
+    ],
+    "interpretation": "Lock the preceding UX priorities; new suggestions remain proposals unless adopted. No execution or scheduler started."
+  },
+  "ux_second_scope_update": {
+    "owner_instruction": "ok. lock it. Give me one more round of polish and refinement that we can do to make this efficient and easy to navigate",
+    "status": "LOCKED_DIRECTION_QUEUED_NOT_STARTED",
+    "workflow": "docs/internal/development/audit-suite/UX_PROFESSIONALIZATION_WORKFLOW.md",
+    "jobs": [
+      "UX-06",
+      "UX-07",
+      "UX-08",
+      "UX-09",
+      "UX-10"
+    ],
+    "interpretation": "Adopt the preceding continuity, impact, review, handoff, attention, bulk-action and state refinements. Subsequent proposals remain proposals."
+  },
+  "context_scope_update": {
+    "owner_instructions": [
+      "YES! CONTEXT CONTEXT CONTEXT!!!!! Make this intelligent!!!!!!!!!!!!!",
+      "add everything else you mentioned too"
+    ],
+    "status": "LOCKED_DIRECTION_QUEUED_NOT_STARTED",
+    "workflow": "docs/internal/development/audit-suite/CONTEXTUAL_WORKSPACE_WORKFLOW.md",
+    "jobs": [
+      "CX-01",
+      "CX-02",
+      "CX-03",
+      "CX-04",
+      "CX-05"
+    ],
+    "interpretation": "Adopt all final navigation/efficiency proposals and the contextual workspace requirements. Covers stable navigation, unified search, previews, consistent summaries, contextual actions, saved workspaces, shortcuts, progressive forms, navigation acceptance checks and consolidation of overlapping screens. No execution started."
+  },
+  "audit_execution": {
+    "status": "IN_PROGRESS",
+    "owner_instruction": "Only stop if there is a REAL problem or blocker. Iterate faithfully from company canon, history, architecture and locked decisions; create where needed.",
+    "started_at": "2026-09-14T06:29:38.622168+00:00",
+    "worktree": "SABLEHARBOR-audit-suite",
+    "branch": "build/audit-training-suite",
+    "boundaries": "Local integrated implementation; preserve immutable sources and private records. Atlas read-only. No inferred professional acceptance or remote deployment."
   }
 }
