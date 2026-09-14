@@ -9,7 +9,16 @@ def binding(engine, state):
     if engine.company_store is None:
         raise DomainError("Company source connection is not configured", status=503)
     selected = engine.company_bindings.get(state["id"])
-    if not isinstance(selected, dict) or set(selected) != {"company", "branch"}:
+    if getattr(engine.company_store, "is_federated", False):
+        from .company_store import CompanyStoreError
+
+        try:
+            engine.company_store.validate_binding(selected)
+        except CompanyStoreError as exc:
+            raise DomainError(
+                "Company portfolio binding changed or unavailable", status=409
+            ) from exc
+    elif not isinstance(selected, dict) or set(selected) != {"company", "branch"}:
         raise DomainError("Company source binding is unavailable", status=404)
     frozen = state.get("company_source_binding")
     if frozen is not None and frozen != selected:
@@ -68,6 +77,9 @@ def collect(engine, state, payload, stamped, command_id):
             key: record[key]
             for key in ("company", "branch", "system", "record", "version", "sha256")
         }
+        for key in ("source_store_id", "source_system_alias", "registry_sha256"):
+            if key in record:
+                identity[key] = record[key]
         if any(
             row.get("source_identity") == identity for row in request.get("company_collections", [])
         ):

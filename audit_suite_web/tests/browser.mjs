@@ -51,6 +51,9 @@ try {
     },
     capabilities: {
       work_status: true,
+      instructor_reference_library: true,
+      personal_drafts: true,
+      workpaper_procedure_links: true,
       custom_authoring: false,
       experimental_review: false,
       voice: false,
@@ -311,7 +314,7 @@ try {
     }
     if(path.includes('/jobs')) {
       let value={jobs:[backgroundJob]};
-      if(path.endsWith('/input')) {inputReads++; value={command_id:'queued-neutral',expected_revision:4,kind:'meeting.message',payload:{meeting_id:'MEET-01',content:'Neutral queued question retained across reload'}};}
+      if(path.endsWith('/input')) {inputReads++; value={command_id:'queued-neutral',expected_revision:4,kind:'meeting.message',payload:{meeting_id:'MEET-01',content:'Neutral queued question retained across reload',source_records:[{system_id:'owned:SYS',record_id:'PINNED-QUEUED',version:3,sha256:'d'.repeat(64)}]}};}
       if(path.endsWith('/retry')) {
         const body=route.request().postDataJSON();
         if(body.observed_job_revision!==backgroundJob.job_revision)throw Error('Retry changed observed job version');
@@ -533,6 +536,11 @@ try {
   await form
     .getByLabel("Workpaper title", { exact: true })
     .fill("Unsent new workpaper");
+  await form.getByLabel('Control',{exact:true}).selectOption('CC-1');
+  await form.getByLabel('Support procedure',{exact:true}).selectOption('T-01');
+  await form.getByRole('button',{name:'Link selected procedure to this version',exact:true}).click();
+  await form.getByRole('button',{name:'Remove procedure T-01',exact:true}).waitFor();
+
   await page.keyboard.press("Escape");
   await page
     .getByRole("button", { name: "New structured workpaper", exact: true })
@@ -543,6 +551,10 @@ try {
     "Unsent new workpaper"
   )
     throw Error("New workpaper draft lost");
+  await form.getByRole('button',{name:'Remove procedure T-01',exact:true}).waitFor();
+  if(await form.getByLabel('Control',{exact:true}).inputValue()!=='CC-1')throw Error('Procedure draft lost scoped control');
+  await form.getByRole('button',{name:'Remove procedure T-01',exact:true}).click();
+
   await form
     .getByRole("button", { name: "Discard unsaved draft", exact: true })
     .click();
@@ -826,6 +838,9 @@ try {
     fullPage: true,
   });
   e.capabilities.background_jobs=true;
+  e.capabilities.company_message_sources=true;e.meetings[0].person_id='P-01';e.meetings.push({id:'M-OTHER',title:'Other participant meeting',person_id:'P-02',messages:[],status:'OPEN'});
+  await page.route(`**/api/engagements/${e.id}/company/systems`,route=>route.fulfill({contentType:'application/json',body:JSON.stringify({systems:[{system:'owned:SYS',owner:'P-01'},{system:'other:SYS',owner:'P-02'}],registry_sha256:'c'.repeat(64)})}));
+  await page.route(`**/api/engagements/${e.id}/company/systems/*/records?*`,route=>route.fulfill({contentType:'application/json',body:JSON.stringify({records:[1,2].map(n=>({company:'NEUTRAL',branch:'B',system:'SYS',record:'REC-'+n,version:n,sha256:String(n).repeat(64),registry_sha256:'c'.repeat(64),source_system_alias:'owned:SYS'})),registry_sha256:'c'.repeat(64),next_after_record:null})}));
   await page.setViewportSize({width:1440,height:1050});
   await page.goto(`http://127.0.0.1:5193/?engagement=${e.id}&view=controls`);
   await page.getByText('Company replies and background work',{exact:true}).click();
@@ -845,6 +860,7 @@ try {
   if(await background.getByRole('checkbox').isEnabled())throw Error('Inspection checkbox enabled before input read');
   await background.getByRole('button',{name:'Inspect queued question',exact:true}).click();
   await background.getByText('Neutral queued question retained across reload',{exact:true}).waitFor();
+  await background.getByText(/owned:SYS \/ PINNED-QUEUED/).waitFor();
   await background.getByRole('checkbox').check();
   await retry.click();
   await background.getByText('RUNNING',{exact:true}).waitFor();
@@ -862,13 +878,54 @@ try {
     submittedEnvelope=route.request().postDataJSON();sentQueued();await acceptance;
     return route.fulfill({status:200,contentType:'application/json',body:JSON.stringify({...backgroundJob,status:'RUNNING'})});
   });
+  await page.getByText('Choose exact company records for this question',{exact:true}).click();
+  await page.getByRole('button',{name:"Load participant's source systems",exact:true}).click();
+  const sourceSystem=page.getByLabel('Participant source system',{exact:true});await sourceSystem.selectOption('owned:SYS');
+  if(await sourceSystem.locator('option[value="other:SYS"]').count())throw Error('Picker exposed another participant system');
+  await page.getByRole('button',{name:'Load source records',exact:true}).click();
+  await page.getByRole('button',{name:'Use record REC-1 version 1',exact:true}).click();
+  let releaseOldSources,oldSourcesRequested;const oldSourcesWait=new Promise(r=>{releaseOldSources=r;}),oldSourcesSeen=new Promise(r=>{oldSourcesRequested=r;});let oldSourceOnce=true;
+  await page.route(`**/api/engagements/${e.id}/company/systems`,async route=>{if(!oldSourceOnce)return route.fallback();oldSourceOnce=false;oldSourcesRequested();await oldSourcesWait;return route.fulfill({contentType:'application/json',body:JSON.stringify({systems:[],registry_sha256:'f'.repeat(64)})});});
+  await page.getByRole('button',{name:"Load participant's source systems",exact:true}).click();await oldSourcesSeen;
+  await page.getByLabel('Ask the owner').fill('Question retained across participant switch');
+  await page.getByRole('button',{name:/Other participant meeting/}).click();
+  if(await page.getByLabel('Ask the owner').inputValue()!=='Question retained across participant switch')throw Error('Meeting switch lost question');
+  await page.getByRole('button',{name:/Infrastructure walkthrough/}).click();
+  await page.getByText('Choose exact company records for this question',{exact:true}).click();
+  await page.getByText('0 explicit source records selected',{exact:true}).waitFor();
+  await page.getByRole('button',{name:"Load participant's source systems",exact:true}).click();
+  await page.getByLabel('Participant source system',{exact:true}).selectOption('owned:SYS');
+  await page.getByRole('button',{name:'Load source records',exact:true}).click();
+  await page.getByRole('button',{name:'Use record REC-1 version 1',exact:true}).click();
+  releaseOldSources();await page.waitForTimeout(100);await page.getByRole('button',{name:'Remove source REC-1',exact:true}).waitFor();
   await page.getByLabel('Ask the owner').fill('First queued question');
   await page.getByRole('button',{name:'Send message',exact:true}).click();await sent;
   await page.getByLabel('Ask the owner').fill('Next question typed during acceptance');
+  await page.getByRole('button',{name:'Remove source REC-1',exact:true}).click();
+  await page.getByRole('button',{name:'Use record REC-2 version 2',exact:true}).click();
   acceptQueued();
   await page.waitForTimeout(150);
   if(await page.getByLabel('Ask the owner').inputValue()!=='Next question typed during acceptance')throw Error('Delayed acceptance cleared newer meeting draft');
   if(submittedEnvelope.payload.content!=='First queued question'||!submittedEnvelope.command_id)throw Error('Background submission changed original envelope');
+  if(submittedEnvelope.payload.source_records?.[0]?.record_id!=='REC-1'||submittedEnvelope.payload.source_records[0].system_id!=='owned:SYS')throw Error('Exact selected pin not retained in command');
+  await page.getByRole('button',{name:'Remove source REC-2',exact:true}).waitFor();
+  let lostEnvelope=null,retriedEnvelope=null,dropSourcePost=true;
+  await page.route(`**/api/engagements/${e.id}/jobs`,async route=>{
+    if(route.request().method()!=='POST')return route.fallback();
+    const value=route.request().postDataJSON();
+    if(dropSourcePost){dropSourcePost=false;lostEnvelope=value;return route.abort('failed');}
+    retriedEnvelope=value;return route.fulfill({contentType:'application/json',body:JSON.stringify({...backgroundJob,status:'PENDING'})});
+  });
+  await page.getByRole('button',{name:'Send message',exact:true}).click();
+  await page.getByRole('button',{name:'Restore unconfirmed question',exact:true}).waitFor();
+  await page.getByLabel('Ask the owner').fill('Newer unsent question must survive restore');
+  await page.getByRole('button',{name:'Restore unconfirmed question',exact:true}).click();
+  if(await page.getByLabel('Ask the owner').inputValue()!=='Newer unsent question must survive restore')throw Error('Restore overwrote newer composer');
+  await page.getByLabel('Ask the owner').fill('');await page.getByRole('button',{name:'Remove source REC-2',exact:true}).click();
+  await page.getByRole('button',{name:'Restore unconfirmed question',exact:true}).click();
+  await page.getByRole('button',{name:'Remove source REC-2',exact:true}).waitFor();
+  await page.getByRole('button',{name:'Send message',exact:true}).click();await page.waitForTimeout(150);
+  if(JSON.stringify(lostEnvelope)!==JSON.stringify(retriedEnvelope))throw Error('Transport retry changed exact source envelope');
   e.capabilities.workspace_contexts=true;
   await page.goto(`http://127.0.0.1:5193/?engagement=${e.id}&view=controls`);
   await page.getByText('Saved investigations',{exact:true}).first().click();
@@ -989,6 +1046,49 @@ try {
   await comparison.getByRole('button',{name:'Trace recorded links',exact:true}).click();
   await comparison.getByRole('alert').waitFor();
   if(await comparison.getByText(/recorded commands by the audited actor/).count())throw Error('Changed manifest retained comparison');
+  e.capabilities.company_sources=true;e.capabilities.company_source_impact=false;e.capabilities.company_populations=false;
+  let portfolioCollected=null,portfolioPagePin=null;
+  const alias='ledger:SOURCE_SYS',registry='e'.repeat(64);
+  await page.route(`**/api/engagements/${e.id}/company/systems`,route=>route.fulfill({contentType:'application/json',body:JSON.stringify({systems:[{system:alias,owner:'P-01',source_store_id:'documentary',portfolio_qualification:'QUALIFIED_SOURCE_PORTFOLIO_NOT_COHERENT_OPERATING_YEAR'}],registry_sha256:registry,snapshot_isolation:'PER_SOURCE_NOT_GLOBAL'})}));
+  await page.route(`**/api/engagements/${e.id}/company/systems/*/records?*`,route=>route.fulfill({contentType:'application/json',body:JSON.stringify({records:[{company:'ORIGINAL_COMPANY',branch:'ORIGINAL_BRANCH',system:'SOURCE_SYS',record:'NATIVE_RECORD',version:4,sha256:'a'.repeat(64),source_store_id:'documentary',source_system_alias:alias,registry_sha256:registry,provenance:{name:'/private/source-store/native-original.csv'},event_at:null,available_at:'2027-01-01T00:00:00Z'}],next_after_record:null,registry_sha256:portfolioPagePin??registry,snapshot_isolation:'ONE_SOURCE_PAGE_ONLY'})}));
+  await page.route(`**/api/engagements/${e.id}/commands`,route=>{const c=route.request().postDataJSON();if(c.kind!=='company.collect')return route.fallback();portfolioCollected=c.payload;return route.fulfill({contentType:'application/json',body:JSON.stringify(e)});});
+  await page.goto(`http://127.0.0.1:5193/?engagement=${e.id}&view=pbc`);
+  await page.getByText('Browse company source records',{exact:true}).click();
+  await page.getByLabel('Company system',{exact:true}).selectOption(alias);
+  await page.getByText('Original filename: native-original.csv',{exact:true}).waitFor();
+  if((await page.locator('body').innerText()).includes('/private/source-store'))throw Error('Source filename leaked a filesystem path');
+  await page.getByText(/ORIGINAL_COMPANY \/ ORIGINAL_BRANCH \/ SOURCE_SYS \/ NATIVE_RECORD/).waitFor();
+  await page.getByText(/Page received by browser:/).waitFor();
+  await page.getByText(/not a coherent operating year or a single synchronized snapshot/).waitFor();
+  if(await page.getByText('Check collected sources for changes',{exact:true}).count())throw Error('Unsupported portfolio impact panel shown');
+  await page.getByLabel('Link collection to request',{exact:true}).selectOption('PBC-01');
+  await page.getByRole('button',{name:'Collect this version',exact:true}).click();
+  await page.waitForTimeout(100);
+  if(portfolioCollected?.system_id!==alias||portfolioCollected?.record_id!=='NATIVE_RECORD'||portfolioCollected?.version!==4)throw Error('Portfolio collection replaced alias with native system');
+  portfolioPagePin='f'.repeat(64);
+  await page.getByLabel('Company system',{exact:true}).selectOption('');
+  await page.getByLabel('Company system',{exact:true}).selectOption(alias);
+  await page.getByRole('alert').filter({hasText:'Source portfolio identity changed'}).waitFor();
+  if(await page.getByRole('button',{name:'Collect this version',exact:true}).count())throw Error('Changed registry retained collectible records');
+  await page.getByRole('button',{name:/Populations & samples/}).click();
+  if(await page.getByText('Collect a company source population',{exact:true}).count())throw Error('Unsupported portfolio population collector shown');
+  e.capabilities.company_source_impact=true;e.artifacts[0].sha256='a'.repeat(64);
+  let impactMode='current',releaseImpact;
+  await page.route(`**/api/engagements/${e.id}/company/impact`,async route=>{
+    const report={status:'OBSERVABLE_SOURCE_CHANGE_REVIEW',engagement_id:e.id,engagement_revision:impactMode==='stale'?e.revision-1:e.revision,simulated_as_of:e.simulated_at,started_at:'2026-09-14T20:00:00Z',completed_at:'2026-09-14T20:00:01Z',compared_artifacts:2,unavailable_comparisons:3,snapshot_isolation:'PER_SOURCE_OPERATION_NOT_GLOBAL',changes:[{artifact_id:e.artifacts[0].id,collected_version:1,latest_visible_version:2,collected_sha256:'a'.repeat(64),latest_visible_sha256:'b'.repeat(64),source_identity:{company:'ORIGINAL_COMPANY',branch:'B',system:'SYS',record:'R',source_store_id:'original-store',source_system_alias:'portfolio:SYS',registry_sha256:'e'.repeat(64)},latest_source_qualifiers:{record_status:'WITHDRAWN'},discovered_at:'2026-09-14T20:00:00Z',rechecked_at:'2026-09-14T20:00:01Z',references:[]}]};
+    if(impactMode==='delayed')await new Promise(r=>{releaseImpact=r;});
+    return route.fulfill({contentType:'application/json',body:JSON.stringify(report)});
+  });
+  await page.goto(`http://127.0.0.1:5193/?engagement=${e.id}&view=pbc`);
+  await page.getByText('Check collected sources for changes',{exact:true}).click();
+  await page.getByRole('button',{name:'Check source changes',exact:true}).click();
+  await page.getByText(/2 retained artifacts compared · 1 later source versions observed · 3 comparisons unavailable/).waitFor();
+  await page.getByText(/record_status: WITHDRAWN/).waitFor();await page.getByText(/Collection route: portfolio:SYS/).waitFor();
+  await page.getByRole('button',{name:'Open artifact '+e.artifacts[0].id,exact:true}).click();await page.getByRole('dialog').waitFor();await page.keyboard.press('Escape');
+  impactMode='stale';await page.getByRole('button',{name:'Check source changes',exact:true}).click();await page.getByRole('alert').filter({hasText:'Source comparison is outdated'}).waitFor();
+  if(await page.getByText(/record_status: WITHDRAWN/).count())throw Error('Stale impact retained previous result');
+  impactMode='delayed';await page.getByRole('button',{name:'Check source changes',exact:true}).click();await page.waitForTimeout(100);await page.getByRole('button',{name:/Notes/}).first().click();releaseImpact();await page.waitForTimeout(100);await page.getByRole('button',{name:/PBC & evidence/}).click();
+  if(await page.getByText(/record_status: WITHDRAWN/).count())throw Error('Late impact response crossed section lifetime');
   if (errors.length) throw Error(errors.join("\n"));
   await writeFile(
     `${output}/browser-receipt.json`,
@@ -997,10 +1097,14 @@ try {
         fixture:
           "Public synthetic layout data; API mocked; not a backend acceptance claim",
         views: 10,
+        source_impact_checks:['compared and unavailable denominators distinct','original and alias source identity','source withdrawal qualifier is not audit conclusion','exact retained original preview','outdated response removes prior result','late response cannot cross component lifetime'],
+        meeting_source_checks:['only participant-owned systems','meeting switch clears pins without losing question','late source response cannot clear new meeting selection','exact alias/version/SHA command pins','delayed acceptance preserves newer selection and question','queued retry inspection shows original pins','ambiguous transport retry preserves exact envelope','restore refuses overwrite of newer composer'],
+        portfolio_checks:['originalsixpartidentity distinct from route alias','originalfilename preserved without filesystem path','registry pin change removes collectible records','registry pin/perpage receipt qualification','collection uses exact selectedalias','unsupported impact/population panels absent'],
         comparison_checks:['explicit historical revision preserved','audited vs shared commands distinct','missing link not missedissue inference','context mismatch withholds all comparisons','changed bound manifest rejected'],
         work_status_checks:['exact denominators retain exclusions','selected control procedure and source previews','outdated revision clears previous report','late response after section exit discarded','no status panel without current engagement permissions'],
         investigation_checks:['explicit user question/link save and reload','current pinned record preview','409 retains unsaved editor without overwrite','changed source pin non-clickable','dirty editor prevents silent investigation switch','changed branch/acquisition/permission basis blocks exact pin until explicit review/save'],
         background_checks: ['pending navigation and reload continuity','no eager queued input reads','explicit exact question inspection gates retry','observed job revision retained','conflicted job never retries','delayed acceptance preserves newly typed next question'],
+        procedure_link_checks:["explicit same-control procedure added to version draft","procedure and control survive reopen","explicit procedure removal"],
         draft_checks: [
           "new note close/reopen and section continuity",
           "full reload recovers saved personal draft via endpoint",

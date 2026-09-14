@@ -150,7 +150,11 @@ class CompanyStore:
             raise CompanyStoreError("Nonnegative expected version required")
         if not isinstance(content, bytes) or not 0 < len(content) <= 25 * 1024 * 1024:
             raise CompanyStoreError("Source bytes must be between 1 byte and 25 MiB")
-        if origin not in {"AUTHORED_TRAINING_SOURCE", "MIGRATED_SYNTHETIC_HISTORY"}:
+        if origin not in {
+            "AUTHORED_TRAINING_SOURCE",
+            "MIGRATED_SYNTHETIC_HISTORY",
+            "REPOSITORY_SYNTHETIC_DOCUMENT",
+        }:
             raise CompanyStoreError("Explicit synthetic source origin required")
         if not isinstance(provenance, dict) or not provenance.get("source_reference"):
             raise CompanyStoreError("Source reference provenance required")
@@ -158,7 +162,10 @@ class CompanyStore:
         if len(provenance_json.encode()) > 65536:
             raise CompanyStoreError("Provenance too large")
         event = (
-            None if event_at is None and origin == "MIGRATED_SYNTHETIC_HISTORY" else _time(event_at)
+            None
+            if event_at is None
+            and origin in {"MIGRATED_SYNTHETIC_HISTORY", "REPOSITORY_SYNTHETIC_DOCUMENT"}
+            else _time(event_at)
         )
         available = _time(available_at)
         if event is not None and available < event:

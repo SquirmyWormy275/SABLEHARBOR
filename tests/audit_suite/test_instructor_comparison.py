@@ -102,6 +102,11 @@ def test_exact_source_version_links_and_shared_actor_are_separate(workspace):
     expectation = selected["expectations"][0]
     assert expectation["status"] == "EXPLICIT_SOURCE_LINK_PRESENT"
     assert expectation["source_linked_workpaper_versions"][0]["version_sha256"] == digest(version)
+    assert expectation["source_linked_workpaper_versions"][0]["task_ids"] == []
+    assert (
+        expectation["source_linked_workpaper_versions"][0]["task_link_validation"]
+        == "NOT_RECORDED_LEGACY_VERSION"
+    )
     assert expectation["workpaper_version_reviews"][0]["target_digest_matches"]
     assert selected["audited_actor_activity"] == []
     old = compare(
@@ -211,4 +216,42 @@ def test_actual_protected_route_and_no_learner_access(workspace):
             headers={"authorization": "Bearer " + teacher["credential"]},
         ).status_code
         == 404
+    )
+
+
+def test_explicit_version_task_links_are_validated_against_selected_control_scope(workspace):
+    from enterprise.audit_suite.instructor_comparison import _inventory
+
+    engine, args, bindings = bound(workspace)
+    from enterprise.audit_suite.bound_instructor import read_binding
+
+    snapshot = read_binding(engine, {"id": args["instructor_id"]}, args["engagement_id"], bindings)[
+        "snapshot"
+    ]
+    state = engine.store.get(args["instructor_id"], args["engagement_id"])
+    source = args["source_refs"][0]
+    state["artifacts"] = [
+        {"id": "A1", "sha256": source["sha256"], "source": {"receipt": {"source": source}}}
+    ]
+    state["tasks"] = [{"id": "T1", "control_id": "CONTROL1"}]
+    state["workpapers"] = [
+        {
+            "id": "W1",
+            "control_id": "CONTROL1",
+            "versions": [{"version": 1, "task_ids": ["T1"], "evidence_ids": ["A1"]}],
+        }
+    ]
+    result = _inventory(snapshot, state, [])
+    linked = result["expectations"][0]["source_linked_workpaper_versions"][0]
+    assert (
+        linked["task_ids"] == ["T1"]
+        and linked["task_link_validation"] == "VALID_FOR_SELECTED_STATE"
+    )
+    state["tasks"][0]["control_id"] = "OTHER"
+    linked = _inventory(snapshot, state, [])["expectations"][0]["source_linked_workpaper_versions"][
+        0
+    ]
+    assert (
+        linked["task_ids"] == []
+        and linked["task_link_validation"] == "UNRESOLVED_IN_SELECTED_SCOPE"
     )

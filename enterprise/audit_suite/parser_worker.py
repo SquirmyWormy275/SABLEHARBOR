@@ -33,6 +33,7 @@ MIMES = {
     "html": "text/html",
     "log": "text/plain",
     "txt": "text/plain",
+    "md": "text/plain",
     "pdf": "application/pdf",
     "xlsx": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
     "png": "image/png",
@@ -147,7 +148,7 @@ def extract(manifest: dict, data: bytes) -> dict:
                 add("json:" + pointer, str(value))
 
         walk(document)
-    elif extension in {".txt", ".log", ".html"}:
+    elif extension in {".txt", ".md", ".log", ".html"}:
         text = data.decode("utf-8-sig")
         if extension == ".html":
             parser = _Text()
@@ -242,7 +243,7 @@ def inspect_upload(name: str, data: bytes) -> dict:
         reason = "Invalid PNG signature"
     elif suffix == "html":
         reason = "HTML upload retained as attachment; active preview prohibited"
-    elif suffix in {"csv", "json", "txt", "log"}:
+    elif suffix in {"csv", "json", "txt", "md", "log"}:
         try:
             text = data.decode("utf-8-sig")
             if "\x00" in text:

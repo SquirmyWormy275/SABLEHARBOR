@@ -109,6 +109,14 @@ def export_population(
     page_size=100,
     max_pages=10000,
 ):
+    if getattr(store, "is_federated", False):
+        from .store import DomainError
+
+        raise DomainError(
+            "Portfolio population export requires a concrete source snapshot",
+            code="FEDERATION_OPERATION_UNSUPPORTED",
+            status=409,
+        )
     query, schema, source_schema = validate_query(query, repository)
     if type(page_size) is not int or not 1 <= page_size <= 1000:
         raise CompanyStoreError("Page size must be1–1000")

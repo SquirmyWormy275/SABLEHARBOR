@@ -524,7 +524,9 @@ class LocalInference:
         self.endpoint = endpoint.rstrip("/")
         self.model = _string(config.get("model"), "model", 200)
         self.key = _string(config.get("api_key"), "local API key", 300)
-        self.timeout = min(180, max(1, int(config.get("timeout", 120))))
+        # Background conversations can outlast three minutes on a shared local model.
+        # Keep the default and an explicit upper bound; this never triggers a retry.
+        self.timeout = min(900, max(1, int(config.get("timeout", 120))))
         self.context_window = int(config.get("context_window", 8192))
         if not 4096 <= self.context_window <= 65536:
             raise _error("Invalid configured local context window")
@@ -715,6 +717,24 @@ class LocalInference:
             value = _json(choice["message"]["content"])
         except DomainError:
             raise
+        except TimeoutError:
+            raise _error(
+                "Local model exceeded the configured wait; inspect before explicitly retrying",
+                code="INFERENCE_TIMEOUT",
+                status=504,
+            ) from None
+        except urllib.error.URLError as exc:
+            if isinstance(exc.reason, TimeoutError):
+                raise _error(
+                    "Local model exceeded the configured wait; inspect before explicitly retrying",
+                    code="INFERENCE_TIMEOUT",
+                    status=504,
+                ) from None
+            raise _error(
+                "Local inference unavailable",
+                code="INFERENCE_UNAVAILABLE",
+                status=503,
+            ) from None
         except (OSError, ValueError, KeyError, IndexError, TypeError):
             raise _error(
                 "Local inference unavailable or returned invalid JSON",

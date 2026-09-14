@@ -1,3 +1,6 @@
+import { MeetingSourceContext } from "./MeetingSourceContext";
+import { samePins, type SourcePin } from "./meetingSources";
+import { compatibleWorkpaperValues, supports } from "./compatibility";
 import { recordSequence } from "./recordSequence";
 import { BackgroundWork } from "./BackgroundWork";
 import { InvestigationContexts } from "./InvestigationContexts";
@@ -237,8 +240,36 @@ export default function App() {
   const navigationEpoch = useRef(0);
   const authorizedContext = useRef("");
   const currentEngagement = useRef<string | null>(null);
+  const [sourceSelection, setSourceSelection] = useState<{
+    key: string;
+    pins: SourcePin[];
+  }>({ key: "", pins: [] });
+  const activeMeeting =
+    engagement?.meetings.find((m) => m.id === meetingId) ??
+    engagement?.meetings.find((m) => m.kind === "kickoff") ??
+    engagement?.meetings[0];
+  const sourceContext = JSON.stringify([
+    bootstrap?.viewer.id,
+    engagement?.id,
+    engagement?.scope,
+    engagement?.permissions,
+    engagement?.company_source_binding,
+    engagement?.evidence_acquisition,
+    engagement?.simulated_at,
+  ]);
+  const meetingSourceKey = (meeting: Row | undefined) =>
+    JSON.stringify([sourceContext, meeting?.id, meeting?.person_id]);
+  const sourceSelectionKey = meetingSourceKey(activeMeeting);
+  useEffect(() => {
+    setSourceSelection((old) =>
+      old.key === sourceSelectionKey
+        ? old
+        : { key: sourceSelectionKey, pins: [] },
+    );
+  }, [sourceSelectionKey]);
   const pendingSend = useRef<{
     engagement: string;
+    sourceContext: string;
     command: Parameters<typeof submitMeetingJob>[1];
   } | null>(null);
   const listPosition = useRef({ section, query, framework });
@@ -260,6 +291,7 @@ export default function App() {
   }
   const clearContext = useCallback(() => {
     pendingSend.current = null;
+    setSourceSelection({ key: "", pins: [] });
     navigationMemory.current.clear();
     draftStore.current.clear();
     authorizedContext.current = "";
@@ -615,6 +647,7 @@ export default function App() {
       (draftKind === "workpaper.update" && draftPaper))
       ? {
           store: draftStore.current,
+          remote: supports(bootstrap.capabilities, "personal_drafts"),
           key: {
             actorId: bootstrap.viewer.id,
             engagementId: engagement.id,
@@ -624,9 +657,13 @@ export default function App() {
               ? String(workpaperVersions(draftPaper).at(-1)?.version ?? "1")
               : "NEW",
           } as DraftKey,
-          initial: draftPaper
-            ? newWorkpaperVersion(draftPaper)
-            : (action.initial ?? {}),
+          initial: compatibleWorkpaperValues(
+            action.kind,
+            draftPaper
+              ? newWorkpaperVersion(draftPaper)
+              : (action.initial ?? {}),
+            bootstrap.capabilities,
+          ),
         }
       : undefined;
   const e = engagement;
@@ -677,10 +714,11 @@ export default function App() {
       r.toLowerCase(),
     ),
   );
-  const activeMeeting =
-    e?.meetings.find((m) => m.id === meetingId) ??
-    e?.meetings.find((m) => m.kind === "kickoff") ??
-    e?.meetings[0];
+  const selectedSources =
+    sourceSelection.key === sourceSelectionKey &&
+    bootstrap.capabilities.company_message_sources
+      ? sourceSelection.pins
+      : [];
   const messages = Array.isArray(activeMeeting?.messages)
     ? (activeMeeting.messages as Row[])
     : [];
@@ -771,8 +809,13 @@ export default function App() {
                 if (
                   pending &&
                   (pending.engagement !== e.id ||
+                    pending.sourceContext !== sourceContext ||
                     pending.command.payload.meeting_id !== activeMeeting.id ||
-                    pending.command.payload.content !== message)
+                    pending.command.payload.content !== message ||
+                    !samePins(
+                      pending.command.payload.source_records ?? [],
+                      selectedSources,
+                    ))
                 ) {
                   setError(
                     "The previous send has an unconfirmed outcome. Inspect background work or restore the queued question before retrying.",
@@ -783,9 +826,19 @@ export default function App() {
                   command_id: crypto.randomUUID(),
                   expected_revision: e.revision,
                   kind: "meeting.message" as const,
-                  payload: { meeting_id: activeMeeting.id, content: message },
+                  payload: {
+                    meeting_id: activeMeeting.id,
+                    content: message,
+                    ...(selectedSources.length
+                      ? { source_records: structuredClone(selectedSources) }
+                      : {}),
+                  },
                 };
-                pendingSend.current = { engagement: e.id, command: envelope };
+                pendingSend.current = {
+                  engagement: e.id,
+                  sourceContext,
+                  command: envelope,
+                };
                 setBusy(true);
                 setError("");
                 try {
@@ -794,6 +847,15 @@ export default function App() {
                   pendingSend.current = null;
                   setMessage((current) =>
                     current === envelope.payload.content ? "" : current,
+                  );
+                  setSourceSelection((current) =>
+                    current.key === sourceSelectionKey &&
+                    samePins(
+                      current.pins,
+                      envelope.payload.source_records ?? [],
+                    )
+                      ? { key: sourceSelectionKey, pins: [] }
+                      : current,
                   );
                   setNotice(
                     `Company reply ${job.status.toLowerCase()}. You can continue working; inspect background work for its status.`,
@@ -812,9 +874,19 @@ export default function App() {
                 const saved = await act("meeting.message", {
                   meeting_id: activeMeeting.id,
                   content: message,
+                  ...(selectedSources.length
+                    ? { source_records: structuredClone(selectedSources) }
+                    : {}),
                 });
-                if (saved && renderEpoch === navigationEpoch.current)
-                  setMessage("");
+                if (saved && renderEpoch === navigationEpoch.current) {
+                  setMessage((current) => (current === message ? "" : current));
+                  setSourceSelection((current) =>
+                    current.key === sourceSelectionKey &&
+                    samePins(current.pins, selectedSources)
+                      ? { key: sourceSelectionKey, pins: [] }
+                      : current,
+                  );
+                }
               } catch {}
             }}
           >
@@ -829,6 +901,18 @@ export default function App() {
                 placeholder="Ask about the process, changes, population or supporting records…"
               />
             </label>
+            {bootstrap.capabilities.company_message_sources &&
+              Boolean(activeMeeting.person_id) && (
+                <MeetingSourceContext
+                  key={sourceSelectionKey}
+                  engagement={e}
+                  personId={str(activeMeeting.person_id)}
+                  pins={selectedSources}
+                  onChange={(pins) =>
+                    setSourceSelection({ key: sourceSelectionKey, pins })
+                  }
+                />
+              )}
             <VoiceInput
               engagement={e.id}
               enabled={!!e.capabilities.voice}
@@ -846,8 +930,38 @@ export default function App() {
                     onClick={() => {
                       const pending = pendingSend.current;
                       if (pending) {
-                        setMeetingId(pending.command.payload.meeting_id);
+                        if (pending.sourceContext !== sourceContext) {
+                          setError(
+                            "The source context changed. Inspect the original queued question; reselect sources before creating a new command.",
+                          );
+                          return;
+                        }
+                        if (
+                          (message &&
+                            message !== pending.command.payload.content) ||
+                          (selectedSources.length &&
+                            !samePins(
+                              selectedSources,
+                              pending.command.payload.source_records ?? [],
+                            ))
+                        ) {
+                          setError(
+                            "Newer composer text or source selections are present. Keep them, or explicitly clear them before restoring the original queued question.",
+                          );
+                          return;
+                        }
+                        const target = e.meetings.find(
+                          (m) => m.id === pending.command.payload.meeting_id,
+                        );
+                        if (!target) return;
+                        setMeetingId(target.id);
                         setMessage(pending.command.payload.content);
+                        setSourceSelection({
+                          key: meetingSourceKey(target),
+                          pins: structuredClone(
+                            pending.command.payload.source_records ?? [],
+                          ),
+                        });
                       }
                     }}
                   >
@@ -1458,11 +1572,14 @@ export default function App() {
                           busy={busy}
                           onCommand={act}
                         />
-                        <SourceImpact
-                          key={e.id + ":impact"}
-                          engagement={e}
-                          onPreview={(kind, row) => setDetail({ kind, row })}
-                        />
+                        {bootstrap.capabilities.company_source_impact !==
+                          false && (
+                          <SourceImpact
+                            key={e.id + ":impact"}
+                            engagement={e}
+                            onPreview={(kind, row) => setDetail({ kind, row })}
+                          />
+                        )}
                       </>
                     )}
                     <div className="actions">
@@ -1604,14 +1721,15 @@ export default function App() {
                 )}
                 {section === "populations" && (
                   <>
-                    {bootstrap.capabilities.company_sources && (
-                      <CompanyPopulation
-                        key={e.id + ":population"}
-                        engagement={e}
-                        busy={busy}
-                        onCommand={act}
-                      />
-                    )}
+                    {bootstrap.capabilities.company_sources &&
+                      bootstrap.capabilities.company_populations !== false && (
+                        <CompanyPopulation
+                          key={e.id + ":population"}
+                          engagement={e}
+                          busy={busy}
+                          onCommand={act}
+                        />
+                      )}
                     <ParentSupport engagement={e} busy={busy} onCommand={run} />
                     <div className="actions">
                       <button
@@ -2102,8 +2220,10 @@ export default function App() {
                         />
                       )}
                     {e.permissions?.includes("instruct") &&
-                      bootstrap.capabilities.instructor_reference_library !==
-                        false && (
+                      supports(
+                        bootstrap.capabilities,
+                        "instructor_reference_library",
+                      ) && (
                         <InstructorKey
                           key={bootstrap.viewer.id + ":" + e.id}
                           engagement={e}
@@ -2364,7 +2484,7 @@ export default function App() {
           <ActionForm
             key={
               actionDraft
-                ? JSON.stringify(actionDraft.key)
+                ? JSON.stringify([actionDraft.key, actionDraft.remote])
                 : action.kind + action.title
             }
             draft={actionDraft}
@@ -2375,6 +2495,15 @@ export default function App() {
                       engagement={e}
                       viewerId={bootstrap.viewer.id}
                       values={values}
+                      onTaskIds={
+                        editable &&
+                        supports(
+                          bootstrap.capabilities,
+                          "workpaper_procedure_links",
+                        )
+                          ? (ids) => onChange({ ...values, task_ids: ids })
+                          : undefined
+                      }
                       onAppendEvidence={
                         editable
                           ? (id) =>
@@ -2401,7 +2530,15 @@ export default function App() {
             onClose={() => setAction(null)}
             onSubmit={async (payload, afterFormalSave) => {
               try {
-                const saved = await act(action.kind, payload, afterFormalSave);
+                const saved = await act(
+                  action.kind,
+                  compatibleWorkpaperValues(
+                    action.kind,
+                    payload,
+                    bootstrap.capabilities,
+                  ),
+                  afterFormalSave,
+                );
                 if (
                   saved &&
                   actionDraft &&
@@ -2523,6 +2660,10 @@ export default function App() {
                             : "Structured record",
                       },
                       { key: "evidence_ids", label: "Evidence references" },
+                      {
+                        key: "task_ids",
+                        label: "Explicit procedure references",
+                      },
                       { key: "conclusion", label: "Conclusion" },
                       {
                         key: "id",

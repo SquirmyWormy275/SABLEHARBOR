@@ -6,25 +6,30 @@ copies in the isolated rehearsal. These remain documentary sources with unknown
 business event dates and provisional custody, not established operating history.
 
 The inspected independent company stores contain explicit native control references
-for six scoped controls: IAM-003/IAM-007 and INC-001 through INC-004. This is a
+for ten scoped controls: IAM-003/IAM-007, INC-001 through INC-004,
+TRN-001/TRN-002 and BCM-002/BCM-003. This is a
 reference inventory, not an applicability or effectiveness determination. The other
-64 controls have no explicit independent-source control reference in these inspected
+60 controls have no explicit independent-source control reference in these inspected
 stores. Existing sources elsewhere may still require reconciliation. The 1,015
 OperatingModel versions remain unmapped company-source candidates; their month/model
 qualifications and lack of automatic corporate SOC 2/HIPAA applicability are preserved.
 Separate branches are not combined into a single company history.
 
+The latest paired training collection retains 29 originals and the paired backup
+collection retains 51. Both are bounded local exercises, not accepted policy, real
+employment/training, deployed infrastructure or full-year population coverage.
+
 Concrete next source families should follow each public control's actual evidence
 expectation and procedure, for example:
 
-- BCM-002/003: dated backup execution and restore-test results tied to critical
-  system inventory and the applicable recovery requirements.
+- BCM-002/003: extend the bounded backup/restore slice only after defining the
+  intended system population, period and applicable recovery requirements.
 - ENG-002/004: approved change/peer-review records linked to exact release artifacts
   and attributable deployment events.
 - TPR-001/002/004: vendor population and tier decisions, due diligence records and
   dated monitoring results, preserving selected-provider versus actual-service status.
-- TRN-001/002: role-based required-course matrix and dated completion/overdue records
-  with an independently reconcilable worker population.
+- TRN-001/002: extend the local three-role training cycle only after defining the
+  intended worker population, onboarding/course changes and required period.
 - REC-002: explicit extract query, parameters, timezone, transformations and source
   population reconciliation for each intended test.
 

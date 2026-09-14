@@ -3,6 +3,7 @@
 from .bound_instructor import read_binding
 from .instructor_access import InstructorAccessLog
 from .store import DomainError, digest
+from .workpaper_links import validate_task_ids
 
 IDENTITY = ("company", "branch", "system", "record", "version", "sha256")
 
@@ -58,6 +59,17 @@ def _inventory(snapshot, state, history):
                 if version.get("artifact_id"):
                     refs.add(version["artifact_id"])
                 if refs & artifact_ids:
+                    declared_tasks = version.get("task_ids", [])
+                    try:
+                        valid_tasks = validate_task_ids(state, wp.get("control_id"), declared_tasks)
+                        task_validation = (
+                            "VALID_FOR_SELECTED_STATE"
+                            if "task_ids" in version
+                            else "NOT_RECORDED_LEGACY_VERSION"
+                        )
+                    except DomainError:
+                        valid_tasks = []
+                        task_validation = "UNRESOLVED_IN_SELECTED_SCOPE"
                     workpapers.append(
                         _ref(
                             wp,
@@ -66,6 +78,8 @@ def _inventory(snapshot, state, history):
                             source_artifact_ids=sorted(refs & artifact_ids),
                             actor=version.get("actor"),
                             prepared_by=wp.get("prepared_by"),
+                            task_ids=valid_tasks,
+                            task_link_validation=task_validation,
                             recorded_conclusion=version.get("conclusion"),
                         )
                     )

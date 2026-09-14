@@ -118,7 +118,7 @@ export function useDurableDraft(
     return ok;
   }
   function schedule(values: Record<string, unknown>, baseKey = key) {
-    if (!baseKey) return;
+    if (!key || !baseKey) return;
     pending.current = {
       key: baseKey,
       values: { ...values },

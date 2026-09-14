@@ -239,6 +239,7 @@ export function ActionForm({
   action: Action;
   draft?: {
     store: DraftStore;
+    remote?: boolean;
     key: DraftKey;
     initial: Record<string, unknown>;
   };
@@ -268,26 +269,29 @@ export function ActionForm({
   const [baseKey, setBaseKey] = useState(
     restored.status !== "EMPTY" ? restored.draft.key : draft?.key,
   );
-  const durable = useDurableDraft(draft?.key, (saved) => {
-    if (!draft) return;
-    const fields = formDraftFields(saved.fields ?? {});
-    const sourceKey = {
-      ...draft.key,
-      baseVersion:
-        saved.base_workpaper_version == null
-          ? "NEW"
-          : String(saved.base_workpaper_version),
-    };
-    setBaseKey(sourceKey);
-    setValue({ ...initial, ...fields });
-    setStale(
-      saved.status === "DRAFT" &&
-        (saved.workpaper_stale === true ||
-          sourceKey.baseVersion !== draft.key.baseVersion),
-    );
-    setDraftError("");
-    if (saved.status === "DRAFT") draft.store.save(sourceKey, fields);
-  });
+  const durable = useDurableDraft(
+    draft?.remote ? draft.key : undefined,
+    (saved) => {
+      if (!draft) return;
+      const fields = formDraftFields(saved.fields ?? {});
+      const sourceKey = {
+        ...draft.key,
+        baseVersion:
+          saved.base_workpaper_version == null
+            ? "NEW"
+            : String(saved.base_workpaper_version),
+      };
+      setBaseKey(sourceKey);
+      setValue({ ...initial, ...fields });
+      setStale(
+        saved.status === "DRAFT" &&
+          (saved.workpaper_stale === true ||
+            sourceKey.baseVersion !== draft.key.baseVersion),
+      );
+      setDraftError("");
+      if (saved.status === "DRAFT") draft.store.save(sourceKey, fields);
+    },
+  );
   function update(next: Record<string, unknown>) {
     setValue(next);
     if (!draft) return;
@@ -331,9 +335,20 @@ export function ActionForm({
           {action.description && <p className="muted">{action.description}</p>}
           {draft && (
             <p role="status">
-              {durable.status} Personal draft text is stored separately from
-              submitted audit records. Closing saves it; reload can recover it.
-              Scope/access changes require explicit review or discard.
+              {draft.remote ? (
+                <>
+                  {durable.status} Personal draft text is stored separately from
+                  submitted audit records. Closing saves it; reload can recover
+                  it. Scope/access changes require explicit review or discard.
+                </>
+              ) : (
+                <>
+                  Draft retained only in this open workroom. Closing this form
+                  keeps it in memory; reloading, signing out or changing
+                  workroom context clears it. This service does not support
+                  saved personal drafts.
+                </>
+              )}
             </p>
           )}
           {draft && durable.error && <p role="alert">{durable.error}</p>}

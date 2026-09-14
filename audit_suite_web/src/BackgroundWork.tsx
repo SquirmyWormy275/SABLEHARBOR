@@ -1,3 +1,4 @@
+import type { SourcePin } from "./meetingSources";
 import { useEffect, useRef, useState } from "react";
 import { ApiError, request } from "./api";
 import type { Engagement } from "./api";
@@ -38,7 +39,11 @@ function WorkList({
       {
         command_id: string;
         expected_revision: number;
-        payload: { meeting_id: string; content: string };
+        payload: {
+          meeting_id: string;
+          content: string;
+          source_records?: SourcePin[];
+        };
       }
     >
   >({});
@@ -101,7 +106,11 @@ function WorkList({
       const input = await request<{
         command_id: string;
         expected_revision: number;
-        payload: { meeting_id: string; content: string };
+        payload: {
+          meeting_id: string;
+          content: string;
+          source_records?: SourcePin[];
+        };
       }>(`${jobsPath(engagement.id)}/${encodeURIComponent(job.id)}/input`);
       if (alive.current) setInputs((old) => ({ ...old, [job.id]: input }));
     } catch (e) {
@@ -164,6 +173,24 @@ function WorkList({
                   {inputs[job.id].expected_revision}
                 </p>
                 <blockquote>{inputs[job.id].payload.content}</blockquote>
+                {inputs[job.id].payload.source_records?.length ? (
+                  <>
+                    <p>Explicit source pins retained with this question:</p>
+                    <ul>
+                      {inputs[job.id].payload.source_records!.map((pin) => (
+                        <li key={`${pin.system_id}:${pin.record_id}`}>
+                          {pin.system_id} / {pin.record_id} · Version{" "}
+                          {pin.version} · SHA256 <code>{pin.sha256}</code>
+                        </li>
+                      ))}
+                    </ul>
+                  </>
+                ) : (
+                  <p>
+                    No explicit source pins; the original command uses automatic
+                    bounded source sampling.
+                  </p>
+                )}
               </div>
             )}
             {jobAction(job) === "retry" && (

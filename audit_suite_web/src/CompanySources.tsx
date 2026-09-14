@@ -16,6 +16,7 @@ export default function CompanySources({
   const [requestId, setRequestId] = useState(""),
     [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  const [registryPin, setRegistryPin] = useState("");
   const epoch = useRef(0);
   const base = `/api/engagements/${encodeURIComponent(e.id)}/company/systems`;
   useEffect(() => {
@@ -26,10 +27,14 @@ export default function CompanySources({
     setRequestId("");
     setError("");
     setSystems([]);
+    setRegistryPin("");
     setLoading(false);
-    request<{ systems: Row[] }>(base)
+    request<{ systems: Row[]; registry_sha256?: string }>(base)
       .then((result) => {
-        if (epoch.current === current) setSystems(result.systems);
+        if (epoch.current === current) {
+          setSystems(result.systems);
+          setRegistryPin(result.registry_sha256 ?? "");
+        }
       })
       .catch((err) => {
         if (epoch.current === current) setError(err.message);
@@ -37,7 +42,14 @@ export default function CompanySources({
     return () => {
       epoch.current++;
     };
-  }, [base, e.simulated_at, JSON.stringify(e.permissions)]);
+  }, [
+    base,
+    e.simulated_at,
+    JSON.stringify(e.permissions),
+    JSON.stringify(e.company_source_binding),
+    JSON.stringify(e.scope),
+    JSON.stringify(e.evidence_acquisition),
+  ]);
   async function browse(selected: string, after?: string) {
     const current = ++epoch.current;
     setSystem(selected);
@@ -57,10 +69,28 @@ export default function CompanySources({
       const result = await request<{
         records: Row[];
         next_after_record: string | null;
+        registry_sha256?: string;
       }>(`${base}/${encodeURIComponent(selected)}/records?${q}`);
       if (current !== epoch.current) return;
+      if (
+        registryPin &&
+        (result.registry_sha256 !== registryPin ||
+          result.records.some(
+            (row) =>
+              row.registry_sha256 !== registryPin ||
+              row.source_system_alias !== selected,
+          ))
+      )
+        throw Error(
+          "Source portfolio identity changed. Refresh the source list before collecting.",
+        );
+      const receivedAt = new Date().toISOString();
+      const pageRecords = result.records.map((row) => ({
+        ...row,
+        client_received_at: receivedAt,
+      }));
       setRecords((previous) =>
-        after ? [...previous, ...result.records] : result.records,
+        after ? [...previous, ...pageRecords] : pageRecords,
       );
       setNext(result.next_after_record);
     } catch (err) {
@@ -93,17 +123,34 @@ export default function CompanySources({
         version against an issued request; collection does not establish
         sufficient support.
       </p>
+      {registryPin && (
+        <aside aria-label="Source portfolio qualification">
+          <p>
+            This connection combines separately retained source stores. It is
+            not a coherent operating year or a single synchronized snapshot.
+            Each page is read from one source; the displayed response time is
+            the browser receipt time.
+          </p>
+          <p>
+            Portfolio registry SHA256: <code>{registryPin}</code>
+          </p>
+        </aside>
+      )}
       {error && <p role="alert">{error}</p>}
       <label>
         Company system
         <select
+          aria-label="Company system"
           value={system}
           onChange={(event) => void browse(event.target.value)}
         >
           <option value="">Choose a source system</option>
           {systems.map((s) => (
             <option key={str(s.system)} value={str(s.system)}>
-              {str(s.system).replaceAll("_", " ")} ·{" "}
+              {str(s.system).replaceAll("_", " ")}
+              {s.source_store_id
+                ? ` (source ${str(s.source_store_id)})`
+                : ""} ·{" "}
               {str(
                 e.people.find((person) => person.id === s.owner)?.name ??
                   s.owner,
@@ -120,6 +167,7 @@ export default function CompanySources({
       <label>
         Link collection to request
         <select
+          aria-label="Link collection to request"
           value={requestId}
           onChange={(event) => setRequestId(event.target.value)}
         >
@@ -154,8 +202,38 @@ export default function CompanySources({
             .join(" · ");
           return (
             <li key={`${r.record}:${r.version}`}>
-              <strong>{subject || str(provenance.name ?? r.record)}</strong> ·
-              Version {str(r.version)}
+              <strong>
+                {subject ||
+                  str(provenance.name ?? r.record)
+                    .split(/[\\/]/)
+                    .pop()}
+              </strong>{" "}
+              · Version {str(r.version)}
+              {Boolean(provenance.name) && (
+                <p>
+                  Original filename: {str(provenance.name).split(/[\\/]/).pop()}
+                </p>
+              )}
+              {Boolean(r.source_store_id) && (
+                <div>
+                  <p>
+                    Source store {str(r.source_store_id)} · Collection route{" "}
+                    {str(r.source_system_alias)}
+                  </p>
+                  <p>
+                    Original source identity: {str(r.company)} / {str(r.branch)}{" "}
+                    / {str(r.system)} / {str(r.record)} · Version{" "}
+                    {str(r.version)}
+                  </p>
+                  <p>
+                    Original SHA256: <code>{str(r.sha256)}</code>
+                  </p>
+                  <p>
+                    Page received by browser: {str(r.client_received_at)} ·
+                    Simulation availability cutoff: {e.simulated_at}
+                  </p>
+                </div>
+              )}
               <p>
                 {str(identity.unit)} · Source period{" "}
                 {str(provenance.source_period_start)} —{" "}

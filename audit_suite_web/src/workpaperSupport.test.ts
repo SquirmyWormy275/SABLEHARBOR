@@ -69,3 +69,10 @@ it("deduplicates explicit appended references without touching other draft field
   expect(appendEvidenceReference("A1, A2\nA1", "A2")).toEqual(["A1", "A2"]);
   expect(appendEvidenceReference(["A1"], "A3")).toEqual(["A1", "A3"]);
 });
+
+it("procedure picker excludes task boundaries outside current scope", () => {
+  const e = fixture();
+  e.scope = { boundaries: ["corporate"] } as Engagement["scope"];
+  e.tasks.push({ id: "T3", control_id: "C1", boundary_id: "other" });
+  expect(supportingTasks(e, "C1").map((t) => t.id)).toEqual(["T1"]);
+});

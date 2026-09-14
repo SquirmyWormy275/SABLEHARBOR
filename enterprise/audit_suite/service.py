@@ -100,7 +100,12 @@ def load_company_bindings(path: Path | None) -> dict:
         if (
             not re.fullmatch(pattern, engagement)
             or not isinstance(selected, dict)
-            or set(selected) != {"company", "branch"}
+            or set(selected)
+            not in ({"company", "branch"}, {"company", "branch", "registry_sha256"})
+            or (
+                "registry_sha256" in selected
+                and not re.fullmatch(r"[0-9a-f]{64}", str(selected["registry_sha256"]))
+            )
             or any(
                 not isinstance(v, str) or not re.fullmatch(pattern, v) for v in selected.values()
             )
@@ -122,13 +127,15 @@ def create_app(
     program_pack: Path | None = None,
     company_root: Path | None = None,
     company_bindings: Path | None = None,
+    company_registry: Path | None = None,
+    company_profile: str | None = None,
     instructor_key_root: Path | None = None,
     instructor_bindings: Path | None = None,
     background_jobs: bool = False,
     workspace_contexts: bool = False,
 ) -> FastAPI:
-    if company_bindings is not None and company_root is None:
-        raise DomainError("Company root required with bindings")
+    if company_bindings is not None and company_root is None and company_registry is None:
+        raise DomainError("Company root or registry required with bindings")
     from .bound_instructor import load_bindings as load_instructor_bindings
 
     protected_bindings = load_instructor_bindings(instructor_bindings)
@@ -189,6 +196,8 @@ def create_app(
         program_pack=program_pack,
         company_root=company_root,
         company_bindings=bindings,
+        company_registry=company_registry,
+        company_profile=company_profile,
         **({"repository": repository} if repository else {}),
     )
     app = FastAPI(

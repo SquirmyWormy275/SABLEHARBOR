@@ -222,6 +222,7 @@ export function newWorkpaperVersion(row: Row): Record<string, unknown> {
   const latest: Record<string, unknown> = workpaperVersions(row).at(-1) ?? {};
   return {
     workpaper_id: row.id,
+    task_ids: Array.isArray(latest.task_ids) ? [...latest.task_ids] : [],
     text: latest.text ?? "",
     section: latest.section ?? "",
     objective: latest.objective ?? "",

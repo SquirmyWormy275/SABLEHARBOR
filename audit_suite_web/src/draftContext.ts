@@ -7,7 +7,7 @@ export type DraftKey = {
   objectId: string;
   baseVersion: string;
 };
-export type DraftValues = Record<string, string | number | boolean>;
+export type DraftValues = Record<string, string | number | boolean | string[]>;
 export type Draft = { key: DraftKey; values: DraftValues; sequence: number };
 export type DraftLookup =
   { status: "EMPTY" } | { status: "CURRENT" | "STALE_BASE"; draft: Draft };
@@ -23,11 +23,13 @@ const allowed: Record<DraftKind, readonly string[]> = {
     "title",
     "section",
     "code",
+    "control_id",
     "objective",
     "procedures",
     "text",
     "artifact_id",
     "evidence_ids",
+    "task_ids",
     "conclusion",
   ],
   "workpaper.update": [
@@ -37,6 +39,7 @@ const allowed: Record<DraftKind, readonly string[]> = {
     "text",
     "artifact_id",
     "evidence_ids",
+    "task_ids",
     "conclusion",
   ],
   "note.create": [
@@ -63,7 +66,7 @@ const sameObject = (a: DraftKey, b: DraftKey) =>
   a.objectId === b.objectId;
 const clone = (draft: Draft): Draft => ({
   key: { ...draft.key },
-  values: { ...draft.values },
+  values: structuredClone(draft.values),
   sequence: draft.sequence,
 });
 export function createDraftStore() {
@@ -88,6 +91,18 @@ export function createDraftStore() {
     for (const field of allowed[key.kind]) {
       const value = values[field];
       if (value === undefined) continue;
+      if (
+        field === "task_ids" &&
+        Array.isArray(value) &&
+        value.length <= 500 &&
+        value.every(
+          (id) => typeof id === "string" && id.length > 0 && id.length <= 128,
+        ) &&
+        new Set(value).size === value.length
+      ) {
+        projected[field] = [...value];
+        continue;
+      }
       if (
         typeof value !== "string" &&
         typeof value !== "boolean" &&

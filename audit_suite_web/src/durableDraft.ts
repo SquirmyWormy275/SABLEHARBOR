@@ -23,6 +23,8 @@ export function draftFields(key: DraftKey, values: Record<string, unknown>) {
           "conclusion",
           "section",
           "evidence_ids",
+          "task_ids",
+          ...(key.kind === "workpaper.add" ? ["control_id"] : []),
           "artifact_id",
         ];
   const fields: Record<string, unknown> = {};
@@ -38,7 +40,9 @@ export function draftFields(key: DraftKey, values: Record<string, unknown>) {
     }
   return fields;
 }
-export function formDraftFields(fields: Record<string, unknown>) {
+export function formDraftFields(
+  fields: Record<string, unknown>,
+): Record<string, unknown> {
   return {
     ...fields,
     ...(Array.isArray(fields.evidence_ids)

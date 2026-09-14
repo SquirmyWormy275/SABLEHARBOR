@@ -25,8 +25,20 @@ ERRORS = {
         "model computation may repeat."
     ),
     "EXECUTION_FAILED": "Action failed. Inspect the engagement before explicitly retrying.",
+    "INFERENCE_TIMEOUT": (
+        "The local model exceeded its configured wait. No reply was saved. "
+        "Inspect the engagement before explicitly retrying; model computation may repeat."
+    ),
     "INVALID_COMMAND": "The original command is invalid. Correct it and submit a new command.",
     "INTEGRITY": "The retained command does not match its original digest.",
+    "SOURCE_CONTEXT_UNAVAILABLE": (
+        "Selected source records are unavailable or no longer valid for this contact. "
+        "Inspect source access, versions and context limits before submitting a new command."
+    ),
+    "INVALID_SOURCE_SELECTION": (
+        "The source selection is invalid. Choose one to four exact original versions "
+        "or remove the explicit selection, then submit a new command."
+    ),
 }
 
 
@@ -320,7 +332,13 @@ class BackgroundJobs:
                 result = self.engine.command(actor, engagement, command)
                 status, error, revision = "COMPLETED", None, result["revision"]
             except DomainError as exc:
-                if exc.status == 409:
+                if exc.code in {
+                    "SOURCE_CONTEXT_UNAVAILABLE",
+                    "INVALID_SOURCE_SELECTION",
+                    "INFERENCE_TIMEOUT",
+                }:
+                    status, error = "FAILED", exc.code
+                elif exc.status == 409:
                     status, error = "CONFLICTED", "REVISION_CONFLICT"
                 elif exc.status in {401, 403, 404}:
                     status, error = "FAILED", "ACCESS_DENIED"

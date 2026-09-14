@@ -50,7 +50,12 @@ export function supportingTasks(
 ): Row[] {
   if (!engagement.controls.some((control) => control.id === controlId))
     return [];
-  return engagement.tasks.filter((task) => task.control_id === controlId);
+  return engagement.tasks.filter(
+    (task) =>
+      task.control_id === controlId &&
+      (!task.boundary_id ||
+        engagement.scope?.boundaries?.includes(String(task.boundary_id))),
+  );
 }
 export function evidenceReference(artifact: Row): string {
   const source = record(record(record(artifact.source).receipt).source);

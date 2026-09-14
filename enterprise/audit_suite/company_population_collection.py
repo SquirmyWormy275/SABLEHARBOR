@@ -59,6 +59,12 @@ def collect(engine, state, payload, stamped, command_id):
     if boundary not in state["scope"]["boundaries"]:
         raise DomainError("Request must identify an existing scoped boundary")
     bound = binding(engine, state)
+    if getattr(engine.company_store, "is_federated", False):
+        raise DomainError(
+            "Portfolio population collection requires a concrete source snapshot",
+            code="FEDERATION_OPERATION_UNSUPPORTED",
+            status=409,
+        )
     try:
         query, _, _ = validate_query(
             {**payload["query"], "as_of": state["simulated_at"]}, engine.repository

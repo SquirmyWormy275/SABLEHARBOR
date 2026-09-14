@@ -44,6 +44,7 @@ def _qualifiers(artifact):
         "classification",
         "custody_status",
         "custody_basis",
+        "portfolio_qualification",
         "forecast_status",
         "model_version",
         "event_time_state",
@@ -199,6 +200,9 @@ def summarize(projection):
                 for k in ("company", "branch", "system", "record", "version", "sha256")
             }
             exact = all(v is not None for v in identity.values())
+            for key in ("source_store_id", "source_system_alias", "registry_sha256"):
+                if key in original:
+                    identity[key] = original[key]
             if original.get("sha256") and original["sha256"] != a.get("sha256"):
                 stale.append(
                     {"reference": _ref("artifact", a), "reason": "SOURCE_RECEIPT_DIGEST_MISMATCH"}
@@ -288,14 +292,33 @@ def summarize(projection):
                 for w in cw
                 if w.get("task_id") == task["id"] or w["id"] in task.get("workpaper_ids", [])
             ]
+            version_links = [
+                {
+                    **_ref("workpaper", w),
+                    "version": v["version"],
+                    "version_digest": digest(v),
+                    "current_version": v["version"]
+                    == max(item["version"] for item in w["versions"]),
+                    "link_basis": "EXPLICIT_VERSION_TASK_IDS",
+                }
+                for w in cw
+                for v in w.get("versions", [])
+                if task["id"] in v.get("task_ids", [])
+            ]
             procedures.append(
                 {
                     "task": _ref("task", task),
                     "assigned_kind": task.get("kind", task.get("test_type")),
                     "recorded_status": task.get("status", "UNKNOWN"),
                     "recorded_conclusion": task.get("conclusion", "UNKNOWN"),
-                    "workpaper_links": [_ref("workpaper", w) for w in explicit],
+                    "workpaper_links": version_links,
+                    "legacy_unversioned_workpaper_links": [_ref("workpaper", w) for w in explicit],
+                    "current_version_link_recorded": any(
+                        link["current_version"] for link in version_links
+                    ),
                     "procedure_evidence_linkage": "EXPLICIT_LINK_RECORDED"
+                    if version_links
+                    else "LEGACY_UNVERSIONED_LINK_RECORDED"
                     if explicit
                     else "NOT_RECORDED",
                     "testing_verified": "NOT_ASSESSED",

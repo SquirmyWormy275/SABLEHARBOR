@@ -87,3 +87,15 @@ it("reads only the selected personal scoped draft", async () => {
   await readDraft(key);
   expect(request).toHaveBeenCalledWith(draftURL(key));
 });
+
+it("keeps explicit procedure arrays and scoped control across creation draft recovery", () => {
+  const creation = { ...key, kind: "workpaper.add" as const };
+  expect(
+    draftFields(creation, {
+      control_id: "C1",
+      task_ids: ["T1"],
+      title: "Paper",
+    }),
+  ).toEqual({ title: "Paper", task_ids: ["T1"], control_id: "C1" });
+  expect(formDraftFields({ task_ids: ["T1"] }).task_ids).toEqual(["T1"]);
+});

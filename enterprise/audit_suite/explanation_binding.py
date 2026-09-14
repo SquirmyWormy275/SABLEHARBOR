@@ -140,6 +140,12 @@ def bind_snapshot(
     if not history or history[-1]["state"]["revision"] != state["revision"]:
         raise DomainError("Engagement changed during binding; retry a new snapshot", status=409)
     bound = dict(binding(engine, state))
+    if getattr(engine.company_store, "is_federated", False):
+        raise DomainError(
+            "Portfolio explanation binding requires explicit per-source snapshots",
+            code="FEDERATION_OPERATION_UNSUPPORTED",
+            status=409,
+        )
     clock, operator_clock = _time(state["simulated_at"]), _time(source_as_of)
     if not isinstance(source_refs, list) or not source_refs:
         raise DomainError("Explicit source version references required")

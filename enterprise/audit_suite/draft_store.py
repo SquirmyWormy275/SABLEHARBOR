@@ -24,6 +24,7 @@ FIELDS = {
         "conclusion",
         "section",
         "evidence_ids",
+        "task_ids",
         "artifact_id",
         "control_id",
     },
@@ -34,6 +35,7 @@ FIELDS = {
         "conclusion",
         "section",
         "evidence_ids",
+        "task_ids",
         "artifact_id",
     },
 }
@@ -175,7 +177,7 @@ class DraftStore:
             if not isinstance(fields, dict) or set(fields) - FIELDS[action]:
                 raise DomainError("Unsupported draft fields")
             for name, value in fields.items():
-                if name == "evidence_ids":
+                if name in {"evidence_ids", "task_ids"}:
                     if (
                         not isinstance(value, list)
                         or len(value) > 500
@@ -184,6 +186,16 @@ class DraftStore:
                         raise DomainError("Invalid draft evidence IDs")
                 elif value is not None and (not isinstance(value, str) or len(value) > MAX_BYTES):
                     raise DomainError("Draft fields must be bounded text")
+            if "task_ids" in fields:
+                from .workpaper_links import validate_task_ids
+
+                state = self.store.get(actor, engagement)
+                control_id = fields.get("control_id")
+                if action == "workpaper.update":
+                    control_id = next(w for w in state["workpapers"] if w["id"] == object_id).get(
+                        "control_id"
+                    )
+                validate_task_ids(state, control_id, fields["task_ids"])
             if action == "workpaper.update":
                 if type(base) is not int or base < 0 or base > latest:
                     raise DomainError("Explicit existing base workpaper version required")

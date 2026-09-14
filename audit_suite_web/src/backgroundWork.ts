@@ -1,3 +1,4 @@
+import type { SourcePin } from "./meetingSources";
 import { request } from "./api";
 export type BackgroundJob = {
   id: string;
@@ -32,7 +33,11 @@ export function submitMeetingJob(
     command_id: string;
     expected_revision: number;
     kind: "meeting.message";
-    payload: { meeting_id: string; content: string };
+    payload: {
+      meeting_id: string;
+      content: string;
+      source_records?: SourcePin[];
+    };
   },
 ) {
   return request<BackgroundJob>(jobsPath(engagement), "POST", command);

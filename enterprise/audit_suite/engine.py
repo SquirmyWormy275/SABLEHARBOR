@@ -152,13 +152,24 @@ class Engine:
         voice_config: Path | None = None,
         company_root: Path | None = None,
         company_bindings: dict | None = None,
+        company_registry: Path | None = None,
+        company_profile: str | None = None,
     ):
+        if company_root is not None and company_registry is not None:
+            raise DomainError("Choose one concrete company store or source registry")
+        if (company_registry is None) != (company_profile is None):
+            raise DomainError("Company registry and profile must be configured together")
         self.store = Store(private_root)
         self.artifacts = Artifacts(private_root)
         self.repository = repository
         from .company_store import CompanyStore
 
-        self.company_store = CompanyStore(company_root) if company_root else None
+        if company_registry is not None:
+            from .company_federation import FederatedCompanyStore
+
+            self.company_store = FederatedCompanyStore(company_registry, company_profile)
+        else:
+            self.company_store = CompanyStore(company_root) if company_root else None
         self.company_bindings = json.loads(json.dumps(company_bindings or {}))
         self.corpus_root = (
             corpus_root or repository / "enterprise/generated/audit-suite/private-corpus"
@@ -200,7 +211,14 @@ class Engine:
             }
         self.capabilities = {
             **CAPABILITIES,
+            "personal_drafts": True,
+            "workpaper_procedure_links": True,
             "company_sources": self.company_store is not None,
+            "company_message_sources": self.company_store is not None,
+            "company_populations": self.company_store is not None
+            and getattr(self.company_store, "capabilities", {}).get("company_populations", True),
+            "company_source_impact": self.company_store is not None
+            and getattr(self.company_store, "capabilities", {}).get("source_impact", True),
             "custom_authoring": inference_config is not None,
             "experimental_review": inference_config is not None,
             "voice": voice_config is not None,
@@ -655,12 +673,18 @@ class Engine:
             if inference_result is None:
                 raise DomainError("Conversation result unavailable")
             meeting = find(state, "meetings", p.get("meeting_id"))
+            if "source_records" in p:
+                from .company_persona import validate_selection
+
+                validate_selection(self, actor, state, meeting["person_id"], p["source_records"])
             user_message = {
                 "id": inference_result.get("message_ids", {}).get("user") or identifier("MSG"),
                 "role": "user",
                 "content": require_text(p, "content", maximum=8000),
                 **stamped,
             }
+            if "source_records" in p:
+                user_message["source_records"] = json.loads(json.dumps(p["source_records"]))
             company_message = {
                 "id": inference_result.get("message_ids", {}).get("company") or identifier("MSG"),
                 "role": "assistant",
@@ -955,6 +979,18 @@ class Engine:
                     row["management_response"] = require_text(p, "response")
             row.update(stamped)
         elif kind in {"workpaper.add", "workpaper.update"}:
+            from .workpaper_links import validate_task_ids
+
+            prior = (
+                None
+                if kind.endswith("add")
+                else find(state, "workpapers", p.get("id", p.get("workpaper_id")))
+            )
+            control_id = p.get("control_id") if prior is None else prior.get("control_id")
+            previous_tasks = (
+                prior["versions"][-1].get("task_ids", []) if prior and prior["versions"] else []
+            )
+            task_ids = validate_task_ids(state, control_id, p.get("task_ids", previous_tasks))
             if kind.endswith("add"):
                 row = {
                     "id": identifier("WP"),
@@ -969,6 +1005,7 @@ class Engine:
             row["versions"].append(
                 {
                     "version": len(row["versions"]) + 1,
+                    "task_ids": task_ids,
                     "text": p.get("text", ""),
                     "artifact_id": p.get("artifact_id"),
                     "section": p.get("section"),
@@ -1169,7 +1206,20 @@ class Engine:
                 raise DomainError("Authenticated company-source context required", status=403)
             from .company_persona import sources as company_sources
 
-            sources.extend(company_sources(self, actor_id, state, person["id"]))
+            if "source_records" in p and p["source_records"] is None:
+                raise DomainError(
+                    "Explicit source selection cannot be null", code="INVALID_SOURCE_SELECTION"
+                )
+            sources.extend(
+                company_sources(
+                    self, actor_id, state, person["id"], selected_records=p.get("source_records")
+                )
+            )
+        elif "source_records" in p:
+            raise DomainError(
+                "Explicit originals require company-source collection mode",
+                code="INVALID_SOURCE_SELECTION",
+            )
         if meeting.get("kind") == "KICKOFF":
             sources.append(
                 {
@@ -1180,8 +1230,8 @@ class Engine:
                         "protocol": (
                             "Issue requests in PBC and obtain existing company source records; "
                             "receipt is not acceptance."
-                            if source_mode else
-                            "Issue requests in PBC; original files arrive at their scheduled "
+                            if source_mode
+                            else "Issue requests in PBC; original files arrive at their scheduled "
                             "availability. Receipt is not acceptance."
                         ),
                         "company_contacts": [

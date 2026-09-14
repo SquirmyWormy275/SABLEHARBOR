@@ -29,6 +29,8 @@ def main(argv=None):
     serve.add_argument("--voice-config", type=Path)
     serve.add_argument("--company-root", type=Path)
     serve.add_argument("--company-bindings", type=Path)
+    serve.add_argument("--company-registry", type=Path)
+    serve.add_argument("--company-profile")
     serve.add_argument("--instructor-key-root", type=Path)
     serve.add_argument("--instructor-bindings", type=Path)
     serve.add_argument("--background-jobs", action="store_true")
@@ -139,6 +141,8 @@ def main(argv=None):
             voice_config=args.voice_config,
             company_root=args.company_root,
             company_bindings=args.company_bindings,
+            company_registry=args.company_registry,
+            company_profile=args.company_profile,
             instructor_key_root=args.instructor_key_root,
             instructor_bindings=args.instructor_bindings,
             background_jobs=args.background_jobs,

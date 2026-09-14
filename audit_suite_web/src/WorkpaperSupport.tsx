@@ -15,6 +15,7 @@ type Props = {
   engagement: Engagement;
   viewerId: string;
   values: Readonly<Record<string, unknown>>;
+  onTaskIds?: (ids: string[]) => void;
   onAppendEvidence?: (artifactId: string) => void;
 };
 export function WorkpaperSupport({
@@ -22,9 +23,17 @@ export function WorkpaperSupport({
   viewerId,
   values,
   onAppendEvidence,
+  onTaskIds,
 }: Props) {
   const label = useId();
-  const [controlId, setControl] = useState(String(values.control_id ?? ""));
+  const [controlId, setControl] = useState(
+    String(
+      values.control_id ??
+        engagement.workpapers.find((row) => row.id === values.workpaper_id)
+          ?.control_id ??
+        "",
+    ),
+  );
   const [taskId, setTask] = useState("");
   const [artifactId, setArtifact] = useState("");
   const [preview, setPreview] = useState<{ key: string; text: string } | null>(
@@ -45,14 +54,35 @@ export function WorkpaperSupport({
     return () => abort.current?.abort();
   }, [key]);
   useEffect(() => {
-    setControl(String(values.control_id ?? ""));
+    setControl(
+      String(
+        values.control_id ??
+          engagement.workpapers.find((row) => row.id === values.workpaper_id)
+            ?.control_id ??
+          "",
+      ),
+    );
     setTask("");
     setArtifact("");
   }, [viewerId, engagement.id]);
   useEffect(() => {
-    setControl(String(values.control_id ?? ""));
+    setControl(
+      String(
+        values.control_id ??
+          engagement.workpapers.find((row) => row.id === values.workpaper_id)
+            ?.control_id ??
+          "",
+      ),
+    );
     setTask("");
   }, [values.control_id]);
+  const paperControl =
+    values.control_id ??
+    engagement.workpapers.find((row) => row.id === values.workpaper_id)
+      ?.control_id;
+  const linkedTasks = Array.isArray(values.task_ids)
+    ? values.task_ids.filter((id): id is string => typeof id === "string")
+    : [];
   const control = engagement.controls.find((row) => row.id === controlId);
   const tasks = supportingTasks(engagement, controlId);
   const task = tasks.find((row) => row.id === taskId);
@@ -110,7 +140,7 @@ export function WorkpaperSupport({
       <h3 id={label}>Inspect support while drafting</h3>
       <p>
         Selections do not change your draft or establish a conclusion. Add an
-        evidence reference only when you choose.
+        evidence or procedure reference only when you choose.
       </p>
       <div className="support-columns">
         <section aria-label="Scoped control and procedure">
@@ -157,6 +187,41 @@ export function WorkpaperSupport({
               ))}
             </select>
           </label>
+          <button
+            type="button"
+            disabled={
+              !onTaskIds ||
+              !task ||
+              task.control_id !== paperControl ||
+              linkedTasks.includes(task.id)
+            }
+            onClick={() => {
+              if (task && task.control_id === paperControl)
+                onTaskIds?.([...linkedTasks, task.id]);
+            }}
+          >
+            Link selected procedure to this version
+          </button>
+          <p>
+            Procedure links record what this version addresses; they do not
+            complete tests.
+          </p>
+          <ul>
+            {linkedTasks.map((id) => (
+              <li key={id}>
+                {id}
+                <button
+                  type="button"
+                  disabled={!onTaskIds}
+                  onClick={() =>
+                    onTaskIds?.(linkedTasks.filter((value) => value !== id))
+                  }
+                >
+                  Remove procedure {id}
+                </button>
+              </li>
+            ))}
+          </ul>
           {control && !tasks.length && (
             <p>No task explicitly references this control.</p>
           )}

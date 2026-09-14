@@ -184,6 +184,24 @@ export function WorkStatus({
                       {reference(p.task as Row)} · Recorded state:{" "}
                       {str(p.recorded_status)} · Conclusion:{" "}
                       {str(p.recorded_conclusion)}
+                      <ul>
+                        {((p.workpaper_links as Row[]) ?? []).map(
+                          (link, index) => (
+                            <li key={index}>
+                              {reference(link)} ·{" "}
+                              {link.current_version
+                                ? "Current version link"
+                                : "Historical version link; absent from latest unless separately listed"}
+                            </li>
+                          ),
+                        )}
+                      </ul>
+                      {Array.isArray(p.legacy_unversioned_workpaper_links) &&
+                        p.legacy_unversioned_workpaper_links.length > 0 && (
+                          <p>
+                            Legacy links have no workpaper version provenance.
+                          </p>
+                        )}
                     </li>
                   ))}
                 </ul>
