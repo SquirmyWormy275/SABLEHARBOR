@@ -46,6 +46,33 @@ def _notice():
     }
 
 
+def _authorized_result(engine, actor_id, state, person_id, bound, result):
+    """Recheck access after bounded native parsing, before returning model context."""
+    try:
+        current = engine.store.get(actor_id, state["id"])
+        if (
+            binding(engine, current) != bound
+            or current.get("simulated_at") != state.get("simulated_at")
+            or current.get("scope") != state.get("scope")
+            or current.get("evidence_acquisition") != "COMPANY_SOURCE_COLLECTION"
+            or not any(p.get("id") == person_id for p in current.get("people", []))
+        ):
+            return [_notice()]
+        allowed = engine.company_store.list_systems(
+            actor_id, state["id"], bound["company"], bound["branch"]
+        )["systems"]
+        owned = {system["system"] for system in allowed if system["owner"] == person_id}
+        if any(
+            item["value"]["system_id"] not in owned
+            for item in result
+            if item["kind"] == "COMPANY_ORIGINAL_RECORD"
+        ):
+            return [_notice()]
+        return result
+    except (CompanyStoreError, DomainError):
+        return [_notice()]
+
+
 def sources(engine, actor_id, state, person_id):
     """Return model source objects; authority and clock are reloaded from durable state."""
     if state.get("evidence_acquisition") != "COMPANY_SOURCE_COLLECTION":
@@ -75,7 +102,7 @@ def sources(engine, actor_id, state, person_id):
             )
             for item in page["records"]:
                 if records >= MAX_RECORDS or remaining_bytes <= 0 or remaining_chars <= 0:
-                    return result
+                    return _authorized_result(engine, actor_id, current, person_id, bound, result)
                 # Exact read rechecks grants after discovery; no source content is model tooling.
                 record = engine.company_store.read_version(
                     actor_id,
@@ -159,4 +186,4 @@ def sources(engine, actor_id, state, person_id):
     except (CompanyStoreError, DomainError):
         # Do not disclose which systems or record versions exist behind failed grants.
         return [_notice()]
-    return result
+    return _authorized_result(engine, actor_id, current, person_id, bound, result)

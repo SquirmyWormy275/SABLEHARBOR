@@ -225,6 +225,8 @@ try {
     },
   };
   let instructorRequests = 0;
+  const backgroundJob = {id:'JOB-NEUTRAL',status:'RUNNING',job_revision:2,expected_revision:4,attempts:1,created_at:'2027-02-12T09:00:00Z',updated_at:'2027-02-12T09:00:00Z',result_revision:null,error_code:null,error_message:null};
+  let inputReads=0, exactRetries=0;
   let failNextDraftSave = false;
   const personalDrafts = new Map();
   let conflictNextPersonalDraft = false;
@@ -295,6 +297,16 @@ try {
         body: JSON.stringify({ error: "Neutral concurrent edit fixture" }),
       });
     }
+    if(path.includes('/jobs')) {
+      let value={jobs:[backgroundJob]};
+      if(path.endsWith('/input')) {inputReads++; value={command_id:'queued-neutral',expected_revision:4,kind:'meeting.message',payload:{meeting_id:'MEET-01',content:'Neutral queued question retained across reload'}};}
+      if(path.endsWith('/retry')) {
+        const body=route.request().postDataJSON();
+        if(body.observed_job_revision!==backgroundJob.job_revision)throw Error('Retry changed observed job version');
+        exactRetries++; backgroundJob.status='RUNNING';backgroundJob.job_revision++;value=backgroundJob;
+      }
+      return route.fulfill({status:200,contentType:'application/json',body:JSON.stringify(value)});
+    }
     if (path.includes("/instructor-key")) {
       ++instructorRequests;
       return route.fulfill({
@@ -355,6 +367,51 @@ try {
     )
       throw Error(`Overflow ${view}`);
   }
+  // Table navigation retains only search/sort/page, never row data.
+  await page.goto(`http://127.0.0.1:5193/?engagement=${e.id}&view=controls`);
+  const controlTable = page
+    .locator(".record-table")
+    .filter({
+      has: page.getByRole("button", { name: "Sort by Control", exact: true }),
+    })
+    .last();
+  await controlTable.getByRole("button", { name: "Next", exact: true }).click();
+  await page.getByRole("button", { name: /PBC & evidence/ }).click();
+  await page.getByRole("button", { name: /Controls & tracker/ }).click();
+  if (!(await controlTable.innerText()).includes("Page 2 of 2"))
+    throw Error("Table page lost across navigation");
+  await controlTable.getByRole("searchbox").fill("unmatched-neutral-filter");
+  await page.getByRole("button", { name: /PBC & evidence/ }).click();
+  if (
+    (await page
+      .locator(".record-table")
+      .first()
+      .getByRole("searchbox")
+      .inputValue()) !== ""
+  )
+    throw Error("Table search crossed collections");
+  await page.getByRole("button", { name: /Controls & tracker/ }).click();
+  if (
+    (await controlTable.getByRole("searchbox").inputValue()) !==
+    "unmatched-neutral-filter"
+  )
+    throw Error("Table search lost across navigation");
+  await controlTable
+    .getByRole("button", { name: "Clear table search", exact: true })
+    .click();
+  await controlTable.getByRole("button", { name: "CC-1", exact: true }).click();
+  await page
+    .getByRole("dialog")
+    .getByRole("button", { name: "Next record", exact: true })
+    .click();
+  await page
+    .getByRole("dialog")
+    .getByRole("heading", {
+      name: "Access authorization and quarterly review 2",
+      exact: true,
+    })
+    .waitFor();
+  await page.keyboard.press("Escape");
   // Personal draft endpoints are mocked here; full page reload clears all client memory.
   await page.goto(`http://127.0.0.1:5193/?engagement=${e.id}&view=notes`);
   await page
@@ -753,6 +810,34 @@ try {
     path: `${output}/configuration-desktop.png`,
     fullPage: true,
   });
+  e.capabilities.background_jobs=true;
+  await page.setViewportSize({width:1440,height:1050});
+  await page.goto(`http://127.0.0.1:5193/?engagement=${e.id}&view=controls`);
+  await page.getByText('Company replies and background work',{exact:true}).click();
+  let background=page.getByRole('region',{name:'Background work'});
+  await background.getByText('RUNNING',{exact:true}).waitFor();
+  await page.getByRole('button',{name:/Notes/}).first().click();
+  await background.getByText('RUNNING',{exact:true}).waitFor();
+  await page.reload();
+  await page.getByText('Company replies and background work',{exact:true}).click();
+  background=page.getByRole('region',{name:'Background work'});
+  await background.getByText('RUNNING',{exact:true}).waitFor();
+  if(inputReads!==0)throw Error('List eagerly fetched private queued questions');
+  backgroundJob.status='INTERRUPTED';backgroundJob.job_revision=3;
+  await background.getByText('INTERRUPTED',{exact:true}).waitFor();
+  const retry=background.getByRole('button',{name:'Retry original command',exact:true});
+  if(await retry.isEnabled())throw Error('Retry enabled without inspection');
+  if(await background.getByRole('checkbox').isEnabled())throw Error('Inspection checkbox enabled before input read');
+  await background.getByRole('button',{name:'Inspect queued question',exact:true}).click();
+  await background.getByText('Neutral queued question retained across reload',{exact:true}).waitFor();
+  await background.getByRole('checkbox').check();
+  await retry.click();
+  await background.getByText('RUNNING',{exact:true}).waitFor();
+  if(inputReads!==1||exactRetries!==1)throw Error('Inspection/retry identity mismatch');
+  backgroundJob.status='CONFLICTED';backgroundJob.job_revision=5;
+  await background.getByText('CONFLICTED',{exact:true}).waitFor();
+  if(await background.getByRole('button',{name:'Retry original command',exact:true}).count())throw Error('Conflicted command offered rebase/retry');
+  await page.screenshot({path:`${output}/background-work-desktop.png`,fullPage:true});
   if (errors.length) throw Error(errors.join("\n"));
   await writeFile(
     `${output}/browser-receipt.json`,
@@ -761,6 +846,7 @@ try {
         fixture:
           "Public synthetic layout data; API mocked; not a backend acceptance claim",
         views: 10,
+        background_checks: ['pending navigation and reload continuity','no eager queued input reads','explicit exact question inspection gates retry','observed job revision retained','conflicted job never retries'],
         draft_checks: [
           "new note close/reopen and section continuity",
           "full reload recovers saved personal draft via endpoint",

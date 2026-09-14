@@ -123,9 +123,14 @@ def create_app(
     company_root: Path | None = None,
     company_bindings: Path | None = None,
     instructor_key_root: Path | None = None,
+    instructor_bindings: Path | None = None,
+    background_jobs: bool = False,
 ) -> FastAPI:
     if company_bindings is not None and company_root is None:
         raise DomainError("Company root required with bindings")
+    from .bound_instructor import load_bindings as load_instructor_bindings
+
+    protected_bindings = load_instructor_bindings(instructor_bindings)
     bindings = load_company_bindings(company_bindings)
     key_pin = None
     key_files = None
@@ -189,6 +194,14 @@ def create_app(
         title="Sable Harbor audit training", docs_url=None, redoc_url=None, openapi_url=None
     )
     app.state.engine = engine
+    jobs = None
+    if background_jobs:
+        from .background_jobs import BackgroundJobs
+
+        job_root = engine.store.root / "background-jobs"
+        job_root.mkdir(mode=0o700, exist_ok=True)
+        jobs = BackgroundJobs(job_root, engine, max_workers=2, max_pending=32)
+    app.state.background_jobs = jobs
     app.state.generation_jobs = {}
     app.add_middleware(BodyLimit)
     app.add_middleware(
@@ -282,7 +295,13 @@ def create_app(
 
     @app.get("/api/bootstrap")
     async def bootstrap(request: Request):
-        return await asyncio.to_thread(engine.bootstrap, actor(request))
+        result = await asyncio.to_thread(engine.bootstrap, actor(request))
+        result["capabilities"].update(
+            background_jobs=jobs is not None,
+            bound_instructor_keys=bool(protected_bindings),
+            instructor_reference_library=instructor_key_root is not None,
+        )
+        return result
 
     @app.get("/api/openapi.json")
     async def schema(request: Request):
@@ -299,7 +318,7 @@ def create_app(
     async def get(engagement_id: str, request: Request):
         return await asyncio.to_thread(engine.get, actor(request)["id"], engagement_id)
 
-    def instructor_reference(principal, engagement_id, scenario_id=None):
+    def instructor_reference_value(principal, engagement_id, scenario_id=None):
         import hashlib
         import json
         import re
@@ -317,7 +336,7 @@ def create_app(
             "archive": {"sha256": receipt["archive_sha256"]},
         }
         if scenario_id is None:
-            return {**index, **metadata}
+            return {**index, **metadata}, None, None
         entry = next((entry for entry in index["entries"] if entry["id"] == scenario_id), None)
         if entry is None:
             raise DomainError("Instructor reference not found", status=404)
@@ -328,7 +347,38 @@ def create_app(
             key = json.loads(raw)
         except Exception as error:
             raise DomainError("Instructor reference integrity check failed", status=503) from error
-        return {"key": key, **metadata}
+        return ({"key": key, **metadata}, entry["key_sha256"], key["source"]["raw_sha256"])
+
+    def instructor_reference(principal, engagement_id, scenario_id=None):
+        from .instructor_access import InstructorAccessLog
+
+        log = InstructorAccessLog(engine.store.root / "instructor-key-access")
+        try:
+            value, key_pin, source_pin = instructor_reference_value(
+                principal, engagement_id, scenario_id
+            )
+        except Exception as error:
+            status = error.status if isinstance(error, DomainError) else 500
+            outcome = {403: "DENIED", 404: "NOT_FOUND", 503: "UNAVAILABLE"}.get(status, "ERROR")
+            log.append(
+                actor=principal["id"],
+                engagement=engagement_id,
+                target=scenario_id,
+                outcome=outcome,
+                http_status=status,
+            )
+            raise
+        log.append(
+            actor=principal["id"],
+            engagement=engagement_id,
+            target=scenario_id,
+            outcome="SUCCESS",
+            http_status=200,
+            archive_sha256=value["archive"]["sha256"],
+            key_sha256=key_pin,
+            source_sha256=source_pin,
+        )
+        return value
 
     @app.get("/api/engagements/{engagement_id}/drafts/{action}/{object_id}")
     async def get_personal_draft(engagement_id: str, action: str, object_id: str, request: Request):
@@ -370,6 +420,14 @@ def create_app(
             object_id,
             payload,
             discard=True,
+        )
+
+    @app.get("/api/engagements/{engagement_id}/instructor-binding")
+    async def instructor_binding(engagement_id: str, request: Request):
+        from .bound_instructor import read_binding
+
+        return await asyncio.to_thread(
+            read_binding, engine, actor(request), engagement_id, protected_bindings
         )
 
     @app.get("/api/engagements/{engagement_id}/instructor-key")
@@ -443,6 +501,62 @@ def create_app(
 
         state = engine.store.get(principal["id"], engagement_id)
         return await asyncio.to_thread(read, engine, state, draft_id)
+
+    def enabled_jobs():
+        if jobs is None:
+            raise DomainError("Background work is not configured", status=503)
+        return jobs
+
+    @app.get("/api/engagements/{engagement_id}/jobs")
+    async def job_list(engagement_id: str, request: Request):
+        principal = actor(request)
+        return {
+            "jobs": await asyncio.to_thread(enabled_jobs().listing, principal["id"], engagement_id)
+        }
+
+    @app.get("/api/engagements/{engagement_id}/jobs/{job_id}/input")
+    async def job_input(engagement_id: str, job_id: str, request: Request):
+        principal = actor(request)
+        return await asyncio.to_thread(enabled_jobs().input, principal["id"], engagement_id, job_id)
+
+    @app.post("/api/engagements/{engagement_id}/jobs")
+    async def job_submit(engagement_id: str, request: Request):
+        principal = actor(request, mutation=True)
+        payload = await json_body(request)
+        limits.check("commands", principal["id"], 240)
+        limits.check("inference", principal["id"], 20)
+        runner = enabled_jobs()
+        job = await asyncio.to_thread(runner.submit, principal["id"], engagement_id, payload)
+        if job["status"] == "PENDING":
+            try:
+                job = await asyncio.to_thread(
+                    runner.start, principal["id"], engagement_id, job["id"]
+                )
+            except DomainError as exc:
+                if exc.status != 429:
+                    raise
+                job = await asyncio.to_thread(
+                    runner.read, principal["id"], engagement_id, job["id"]
+                )
+        return job
+
+    @app.post("/api/engagements/{engagement_id}/jobs/{job_id}/{operation}")
+    async def job_action(engagement_id: str, job_id: str, operation: str, request: Request):
+        principal = actor(request, mutation=True)
+        body = await json_body(request)
+        limits.check("inference", principal["id"], 20)
+        runner = enabled_jobs()
+        if operation == "start" and not body:
+            return await asyncio.to_thread(runner.start, principal["id"], engagement_id, job_id)
+        if operation == "retry" and set(body) == {"observed_job_revision"}:
+            return await asyncio.to_thread(
+                runner.retry,
+                principal["id"],
+                engagement_id,
+                job_id,
+                observed_job_revision=body["observed_job_revision"],
+            )
+        raise DomainError("Invalid background work operation")
 
     @app.post("/api/engagements/{engagement_id}/commands")
     async def command(engagement_id: str, request: Request):

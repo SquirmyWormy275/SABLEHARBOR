@@ -4,7 +4,7 @@ from enterprise.audit_suite.company_persona import sources
 from enterprise.audit_suite.engine import COLLECTIONS, Engine
 
 
-def test_owner_and_auditor_intersection_future_and_forecast_qualifiers(tmp_path):
+def test_owner_and_auditor_intersection_future_and_forecast_qualifiers(tmp_path, monkeypatch):
     root = tmp_path / "company"
     root.mkdir(mode=0o700)
     e = Engine(tmp_path / "audit", company_root=root)
@@ -53,7 +53,17 @@ def test_owner_and_auditor_intersection_future_and_forecast_qualifiers(tmp_path)
     assert "NOT_MODEL_CONTEXT" not in json.dumps(result)
     forged = {**state, "simulated_at": "2030-01-01T00:00:00Z"}
     assert sources(e, actor, forged, "owner") == result
-    e.company_store.grant(actor, state["id"], "SH", "base", "owned", active=False)
+    from enterprise.audit_suite import company_persona
+
+    original_extract = company_persona.extract
+
+    def revoke_during_extract(manifest, data):
+        result = original_extract(manifest, data)
+        e.company_store.grant(actor, state["id"], "SH", "base", "owned", active=False)
+        return result
+
+    monkeypatch.setattr(company_persona, "extract", revoke_during_extract)
+
     assert len(sources(e, actor, state, "owner")) == 1
     assert e.store.get(actor, state["id"])["revision"] == state["revision"]
 

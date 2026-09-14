@@ -102,10 +102,18 @@ Generated file inventory. Includes current and historical records; open the sour
 
 ## `docs/internal/development/audit-suite`
 
+- [Identity period slice and remaining coverage](../../internal/development/audit-suite/AQ04_IDENTITY_PERIOD_SLICE_2026-09-14.md) — MD
+- [Bounded mover source collection](../../internal/development/audit-suite/AQ04_MOVER_SOURCE_COLLECTION_2026-09-14.md) — MD
+- [Company-source audit readiness workflow queue](../../internal/development/audit-suite/AUDIT_READINESS_WORKFLOW_QUEUE.md) — MD
+- [Company-source implementation checkpoint](../../internal/development/audit-suite/COMPANY_SOURCE_IMPLEMENTATION.md) — MD
+- [Intelligent contextual workspace](../../internal/development/audit-suite/CONTEXTUAL_WORKSPACE_WORKFLOW.md) — MD
 - [Audit-suite contribution and state formats](../../internal/development/audit-suite/CONTRIBUTING_AND_STATE_FORMATS.md) — MD
 - [Audit training suite implementation direction](../../internal/development/audit-suite/IMPLEMENTATION_DIRECTION_2026-09-13.md) — MD
+- [Instructor investigation and debrief workflow](../../internal/development/audit-suite/INSTRUCTOR_KEY_WORKFLOW_QUEUE.md) — MD
 - [Local audit-training delivery](../../internal/development/audit-suite/LOCAL_DELIVERY.md) — MD
+- [Navigation continuity foundation](../../internal/development/audit-suite/NAVIGATION_FOUNDATION_IMPLEMENTATION.md) — MD
 - [Audit-suite organization bridge and reconciliation proposal](../../internal/development/audit-suite/ORGANIZATION_RECONCILIATION_2026-09-13.md) — MD
+- [Audit workspace UX professionalization](../../internal/development/audit-suite/UX_PROFESSIONALIZATION_WORKFLOW.md) — MD
 
 ## `docs/internal/validation`
 
@@ -149,6 +157,7 @@ Generated file inventory. Includes current and historical records; open the sour
 
 ## `tools/audit_suite`
 
+- [Company source inventory](../../../tools/audit_suite/COMPANY_SOURCE_INVENTORY.md) — MD
 - [Local operator commands](../../../tools/audit_suite/OPERATOR_COMMANDS.md) — MD
 
 ## `tools/ci`

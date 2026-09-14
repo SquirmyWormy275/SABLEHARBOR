@@ -1447,3 +1447,22 @@ body:has(dialog[open]) {
     max-width: 100%;
   }
 }
+
+section[aria-label="Bound instructor explanation"] {
+  overflow-wrap: anywhere;
+}
+section[aria-label="Bound instructor explanation"] dd {
+  margin-inline-start: 0;
+}
+
+.modal.modal-wide { width: min(1320px, 96vw); max-width: 96vw; }
+.workpaper-editor { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px; align-items: start; }
+.workpaper-editor > form { min-width: 0; }
+.workpaper-inspection { min-width: 0; position: sticky; top: 0; max-height: 72vh; overflow: auto; }
+@media (max-width: 900px) {
+  .workpaper-editor { grid-template-columns: minmax(0, 1fr); }
+  .workpaper-inspection { position: static; max-height: none; }
+}
+
+.background-work-panel { margin: 16px 32px; overflow-wrap: anywhere; }
+@media (max-width: 700px) { .background-work-panel { margin: 12px; } }

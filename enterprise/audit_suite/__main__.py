@@ -30,6 +30,8 @@ def main(argv=None):
     serve.add_argument("--company-root", type=Path)
     serve.add_argument("--company-bindings", type=Path)
     serve.add_argument("--instructor-key-root", type=Path)
+    serve.add_argument("--instructor-bindings", type=Path)
+    serve.add_argument("--background-jobs", action="store_true")
     serve.add_argument("--corpus-root", type=Path)
     serve.add_argument("--program-pack", type=Path)
     serve.add_argument("--tls-cert", type=Path)
@@ -137,6 +139,8 @@ def main(argv=None):
             company_root=args.company_root,
             company_bindings=args.company_bindings,
             instructor_key_root=args.instructor_key_root,
+            instructor_bindings=args.instructor_bindings,
+            background_jobs=args.background_jobs,
             corpus_root=args.corpus_root,
             program_pack=args.program_pack,
         )
