@@ -1,8 +1,10 @@
 # Control-source readiness implementation gaps
 
-The private September 14 inventory covers the current 70-control corporate SOC 2 +
-HIPAA scope. All 359 migrated documentary originals have exact retained collection
-copies in the isolated rehearsal. These remain documentary sources with unknown
+The maintained [explicit-config inventory](../../docs/internal/development/audit-suite/AQ_SOURCE_READINESS_INVENTORY_2026-09-14.md)
+covers the current 70-control corporate SOC 2 + HIPAA scope. Its reference-v3 run
+verifies 457 original source versions and retained copies across 115 systems:
+359 migrated documents, eight repository documents and 90 qualified activity records.
+The documentary sources have unknown
 business event dates and provisional custody, not established operating history.
 
 The inspected independent company stores contain explicit native control references
@@ -24,8 +26,11 @@ expectation and procedure, for example:
 
 - BCM-002/003: extend the bounded backup/restore slice only after defining the
   intended system population, period and applicable recovery requirements.
-- ENG-002/004: approved change/peer-review records linked to exact release artifacts
-  and attributable deployment events.
+- ENG-002/004: extend the implemented local change/release exercise only after
+  selecting its supported system population and period. Its paired Engine rehearsal
+  retained 32 originals. Downstream configuration checks retained 12 originals with
+  exact upstream pins; neither exercise is included automatically in reference-v3's
+  selected inventory or establishes deployed infrastructure.
 - TPR-001/002/004: vendor population and tier decisions, due diligence records and
   dated monitoring results, preserving selected-provider versus actual-service status.
 - TRN-001/002: extend the local three-role training cycle only after defining the

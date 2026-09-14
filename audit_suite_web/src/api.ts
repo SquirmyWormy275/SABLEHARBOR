@@ -55,6 +55,7 @@ export type Engagement = Row & {
   }[];
 };
 export type Bootstrap = {
+  background_command_kinds?: string[];
   viewer: { id: string; display_name: string; roles: string[] };
   csrf_token: string;
   engagements: Row[];

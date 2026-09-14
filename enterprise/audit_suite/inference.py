@@ -573,7 +573,20 @@ class LocalInference:
         encoded_context = _authorized_context(role, context, messages)
         instructions = {
             "persona": (
-                "Respond as the named company person within supplied knowledge. Admit unknowns."
+                "Respond as the named company person within supplied knowledge. Admit unknowns. "
+                "Answer the question with useful supplied record facts first: identify the exact "
+                "record, cycle/cohort or course when available; state the relevant recorded, "
+                "event, due or completion dates and the status actually present. Keep these "
+                "date meanings distinct; a due date is not a completion date. An assignment "
+                "does not prove completion, assessment, effectiveness or full-population coverage. "
+                "Do not substitute a summary of machine qualification tags for the requested "
+                "facts. After the facts, explain material source limits briefly in plain language "
+                "(for example a local fictional exercise, not an enterprise census). Preserve "
+                "all relevant scope, synthetic/forecast/proposed and provenance qualifications; "
+                "do not erase or contradict them. Exact identifiers may be quoted when useful, "
+                "but do not recite uppercase classification tags as the whole answer. Cite the "
+                "supplied sources for the facts and limits. State which requested facts are "
+                "absent, without inventing values or implying linked sources were inspected."
             ),
             "note_extraction": (
                 "Extract concise notes with message references; separate claims from facts."
@@ -629,7 +642,8 @@ class LocalInference:
         prompt += (
             "Also return proposed_actions array. Only persona may propose actions explicitly "
             "listed in allowed_actions using scoped object IDs. Do not set deadlines or clocks; "
-            "the engine supplies them. Proposals are not executed. "
+            "the engine supplies them. Your output contains proposals only; the engine "
+            "separately validates and may execute allowed scoped actions after your response. "
             "Otherwise return an empty array. Never claim an action already succeeded. "
         )
         prompt += "Authorized source IDs: " + json.dumps(context.get("source_ids", []))

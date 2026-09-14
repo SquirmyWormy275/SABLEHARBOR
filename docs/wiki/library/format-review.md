@@ -6,7 +6,7 @@ Generated reconciliation queue, not an assertion that every unpaired record lack
 
 | State | Records |
 |---|---:|
-| COUNTERPART_REVIEW_REQUIRED | 103 |
+| COUNTERPART_REVIEW_REQUIRED | 109 |
 | HISTORICAL_COUNTERPART_UNRESOLVED | 57 |
 | NAVIGATION_ALIAS_NO_PUBLICATION | 3 |
 | READER_MAINTENANCE_NO_LETTERHEAD | 106 |
@@ -35,6 +35,8 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Incident and continuity activity slice](../../internal/development/audit-suite/AQ04_INCIDENT_CONTINUITY_SLICE_2026-09-14.md) — Corporate document-format reconciliation
 - [Bounded mover source collection](../../internal/development/audit-suite/AQ04_MOVER_SOURCE_COLLECTION_2026-09-14.md) — Corporate document-format reconciliation
 - [Read-through company source portfolio — September 14, 2026](../../internal/development/audit-suite/AQ_SOURCE_PORTFOLIO_READ_THROUGH_2026-09-14.md) — Corporate document-format reconciliation
+- [Explicit source-readiness inventory](../../internal/development/audit-suite/AQ_SOURCE_READINESS_INVENTORY_2026-09-14.md) — Corporate document-format reconciliation
+- [One-system source-record census](../../internal/development/audit-suite/AQ_SOURCE_RECORD_CENSUS_2026-09-14.md) — Corporate document-format reconciliation
 - [Company source and recovery review — September 14, 2026](../../internal/development/audit-suite/AQ_SOURCE_RECOVERY_REVIEW_2026-09-14.md) — Corporate document-format reconciliation
 - [Company-source audit readiness workflow queue](../../internal/development/audit-suite/AUDIT_READINESS_WORKFLOW_QUEUE.md) — Corporate document-format reconciliation
 - [Company-source implementation checkpoint](../../internal/development/audit-suite/COMPANY_SOURCE_IMPLEMENTATION.md) — Corporate document-format reconciliation
@@ -107,7 +109,9 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Closeout evidence releases](../../releases/CLOSEOUT_EVIDENCE_RELEASES.md) — Corporate document-format reconciliation
 - [Facility atlas controlled releases](../../releases/FACILITY_ATLAS_RELEASES.md) — Corporate document-format reconciliation
 - [Geographic evidence releases](../../releases/GEOGRAPHIC_EVIDENCE_RELEASES.md) — Corporate document-format reconciliation
+- [Local configuration change and release source pair](../../../enterprise/audit_suite/CHANGE_ACTIVITY.md) — Corporate document-format reconciliation
 - [Private companion recovery](../../../enterprise/audit_suite/COMPANION_RECOVERY.md) — Corporate document-format reconciliation
+- [Configuration inventory and drift from original release records](../../../enterprise/audit_suite/CONFIGURATION_ACTIVITY.md) — Corporate document-format reconciliation
 - [Per-control legacy documentary custody](../../../enterprise/audit_suite/DOCUMENTARY_CUSTODY.md) — Corporate document-format reconciliation
 - [Repository documentary sync](../../../enterprise/audit_suite/REPOSITORY_DOCUMENT_SYNC.md) — Corporate document-format reconciliation
 - [Local role-based training source pair](../../../enterprise/audit_suite/TRAINING_ACTIVITY.md) — Corporate document-format reconciliation
@@ -118,8 +122,10 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Klein shop and Fort continuity — proposed decision](../../../geospatial/chronology/CONTINUITY_PROPOSAL.md) — Corporate document-format reconciliation
 - [Geo canon reconciliation and program closeout matrix](../../../geospatial/docs/PROGRAM_CLOSEOUT_MATRIX.md) — Corporate document-format reconciliation
 - [Headcount, occupancy and space bridge](../../../geospatial/facilities/population/BRIDGE.md) — Corporate document-format reconciliation
+- [Local change/release source slice](../../../tools/audit_suite/CHANGE_RELEASE_SOURCE_SLICE.md) — Corporate document-format reconciliation
 - [Independent company activity runner](../../../tools/audit_suite/COMPANY_ACTIVITY_RUNNER.md) — Corporate document-format reconciliation
 - [Company source inventory](../../../tools/audit_suite/COMPANY_SOURCE_INVENTORY.md) — Corporate document-format reconciliation
+- [Configuration source extension](../../../tools/audit_suite/CONFIGURATION_SOURCE_SLICE.md) — Corporate document-format reconciliation
 - [Control-source readiness implementation gaps](../../../tools/audit_suite/CONTROL_SOURCE_READINESS.md) — Corporate document-format reconciliation
 - [Local operator commands](../../../tools/audit_suite/OPERATOR_COMMANDS.md) — Corporate document-format reconciliation
 - [Repository company documents: first bounded ingestion](../../../tools/audit_suite/REPOSITORY_DOCUMENTARY_SYNC.md) — Corporate document-format reconciliation

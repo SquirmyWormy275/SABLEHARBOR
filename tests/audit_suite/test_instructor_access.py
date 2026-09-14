@@ -55,6 +55,8 @@ def test_symlink_and_public_modes_rejected(tmp_path):
     assert outside.read_text() == "untouched"
     other = tmp_path / "public"
     other.mkdir(mode=0o755)
+    # The operator may use umask 077; make the invalid fixture explicitly public.
+    other.chmod(0o755)
     with pytest.raises(DomainError):
         InstructorAccessLog(other).append(
             actor="a", engagement="e", target=None, outcome="DENIED", http_status=403

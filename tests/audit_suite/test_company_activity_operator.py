@@ -63,13 +63,14 @@ def test_public_or_aliased_recipe_denied_before_output(tmp_path):
         operator.run("mover", alias, tmp_path / "aliased", repository=ROOT)
 
 
-@pytest.mark.parametrize("kind,versions", [("training", 29), ("backup", 51)])
+@pytest.mark.parametrize("kind,versions", [("training", 29), ("backup", 51), ("change", 32)])
 def test_nested_training_recipe_and_computed_backup_adapter(tmp_path, kind, versions):
     from tests.audit_suite.test_company_backup_activity import recipe as backup_recipe
+    from tests.audit_suite.test_company_change_activity import recipe as change_recipe
     from tests.audit_suite.test_company_training_activity import recipe as training_recipe
 
     source = prepare(tmp_path)
-    value = training_recipe() if kind == "training" else backup_recipe()
+    value = {"training": training_recipe, "backup": backup_recipe, "change": change_recipe}[kind]()
     source.write_text(json.dumps(asdict(value)))
     result = operator.run(kind, source, tmp_path / "result", repository=ROOT)
     assert result["counts"]["versions"] == versions
@@ -130,3 +131,48 @@ def test_recipe_growth_after_size_check_is_still_bounded(tmp_path, monkeypatch):
     with pytest.raises(CompanyStoreError, match="bounded size"):
         operator.run("mover", source, tmp_path / "result", repository=ROOT)
     assert not (tmp_path / "result").exists()
+
+
+def test_configuration_operator_reads_pinned_change_sources_without_mutation(tmp_path):
+    import hashlib
+
+    from tests.audit_suite.test_company_configuration_activity import inputs
+
+    source_root, recipe_value, _ = inputs.__wrapped__(tmp_path)
+    source = tmp_path / "configuration-recipe.json"
+    source.write_text(json.dumps(asdict(recipe_value)))
+    source.chmod(0o600)
+    original = (source_root / "company.sqlite3").read_bytes()
+    result = operator.run(
+        "configuration",
+        source,
+        tmp_path / "configuration-output",
+        repository=ROOT,
+        source_root=source_root,
+    )
+    assert result["counts"] == {"systems": 6, "versions": 12, "grants": 0, "collections": 0}
+    assert result["source_input"]["source_versions_sha256"] == recipe_value.source_versions_sha256
+    assert (source_root / "company.sqlite3").read_bytes() == original
+    for name, expected in result["members"].items():
+        assert (
+            hashlib.sha256((tmp_path / "configuration-output" / name).read_bytes()).hexdigest()
+            == expected
+        )
+    with pytest.raises(CompanyStoreError, match="outside"):
+        operator.run(
+            "configuration",
+            source,
+            source_root / "nested-output",
+            repository=ROOT,
+            source_root=source_root,
+        )
+    assert not (source_root / "nested-output").exists()
+
+
+def test_source_dependency_must_be_explicit_and_kind_specific(tmp_path):
+    source = prepare(tmp_path)
+    with pytest.raises(CompanyStoreError, match="explicit source root"):
+        operator.run("configuration", source, tmp_path / "cfg", repository=ROOT)
+    with pytest.raises(CompanyStoreError, match="only for configuration"):
+        operator.run("mover", source, tmp_path / "mover", repository=ROOT, source_root=tmp_path)
+    assert not (tmp_path / "cfg").exists() and not (tmp_path / "mover").exists()

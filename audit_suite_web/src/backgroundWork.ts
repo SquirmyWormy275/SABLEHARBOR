@@ -1,6 +1,30 @@
+import type { CensusQuery } from "./sourceCensus";
 import type { SourcePin } from "./meetingSources";
 import { request } from "./api";
+export type CensusCommand = {
+  command_id: string;
+  expected_revision: number;
+  kind: "company.census.collect";
+  payload: { request_id: string; system_id: string; query: CensusQuery };
+};
+export type BackgroundInput = {
+  command_id: string;
+  expected_revision: number;
+  kind?: string;
+  payload: {
+    meeting_id?: string;
+    content?: string;
+    source_records?: SourcePin[];
+    request_id?: string;
+    system_id?: string;
+    query?: CensusQuery;
+  };
+};
+export function submitCensusJob(engagement: string, command: CensusCommand) {
+  return request<BackgroundJob>(jobsPath(engagement), "POST", command);
+}
 export type BackgroundJob = {
+  kind?: string;
   id: string;
   status:
     | "PENDING"

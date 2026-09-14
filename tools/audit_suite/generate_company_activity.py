@@ -15,6 +15,10 @@ from pathlib import Path
 from enterprise.audit_suite.company_activity import TransferRecipe, generate_pair
 from enterprise.audit_suite.company_activity_period import PeriodRecipe, generate_period
 from enterprise.audit_suite.company_backup_activity import BackupRecipe, generate_backup_pair
+from enterprise.audit_suite.company_change_activity import ChangeRecipe
+from enterprise.audit_suite.company_change_activity import generate_pair as generate_change_pair
+from enterprise.audit_suite.company_configuration_activity import ConfigurationRecipe
+from enterprise.audit_suite.company_configuration_activity import generate as generate_configuration
 from enterprise.audit_suite.company_incident_activity import IncidentRecipe, generate_incident
 from enterprise.audit_suite.company_store import CompanyStore, CompanyStoreError
 from enterprise.audit_suite.company_training_activity import (
@@ -33,6 +37,8 @@ KINDS = {
     "incident": (IncidentRecipe, generate_incident),
     "backup": (BackupRecipe, generate_backup_pair),
     "training": (TrainingRecipe, generate_training_pair),
+    "change": (ChangeRecipe, generate_change_pair),
+    "configuration": (ConfigurationRecipe, generate_configuration),
 }
 MAX_RECIPE_BYTES = 64 * 1024
 
@@ -55,7 +61,7 @@ def _write(path, content):
         stream.write(content)
 
 
-def run(kind, recipe_path, destination, *, repository):
+def run(kind, recipe_path, destination, *, repository, source_root=None):
     recipe_path, destination = Path(recipe_path).absolute(), Path(destination).absolute()
     if kind not in KINDS:
         raise CompanyStoreError("Unknown company activity kind")
@@ -63,6 +69,16 @@ def run(kind, recipe_path, destination, *, repository):
     _private(destination.parent, True)
     if destination.exists() or destination.is_symlink():
         raise CompanyStoreError("New private activity destination required")
+    if kind == "configuration":
+        if source_root is None:
+            raise CompanyStoreError("Configuration activity requires an explicit source root")
+        source_root = Path(source_root).absolute()
+        _private(source_root, True)
+        _private(source_root / "company.sqlite3")
+        if destination.is_relative_to(source_root):
+            raise CompanyStoreError("Activity output must be outside its original source root")
+    elif source_root is not None:
+        raise CompanyStoreError("Source root is supported only for configuration activity")
     if recipe_path.stat().st_size > MAX_RECIPE_BYTES:
         raise CompanyStoreError("Activity recipe exceeds bounded size")
     fd = os.open(recipe_path, os.O_RDONLY | os.O_NOFOLLOW)
@@ -98,13 +114,23 @@ def run(kind, recipe_path, destination, *, repository):
                 TrainingCourse(**{**row, "role_ids": tuple(row["role_ids"])})
                 for row in body["courses"]
             )
+        if kind == "configuration":
+            for key in ("branch_ids", "checkpoints"):
+                if not isinstance(body[key], list):
+                    raise ValueError("Explicit JSON arrays required")
+                body[key] = tuple(body[key])
         recipe = cls(**body)
     except (TypeError, ValueError, KeyError) as error:
         raise CompanyStoreError("Invalid explicit activity recipe") from error
     with tempfile.TemporaryDirectory(prefix=".company-activity-", dir=destination.parent) as temp:
         stage = Path(temp)
-        if kind == "training":
-            result = generate(stage / "company", repository=Path(repository), recipe=recipe)
+        if kind in {"training", "change", "configuration"}:
+            result = generate(
+                stage / "company",
+                repository=Path(repository),
+                recipe=recipe,
+                **({"source_root": source_root} if kind == "configuration" else {}),
+            )
             store = CompanyStore(stage / "company")
         else:
             (stage / "company").mkdir(mode=0o700)
@@ -141,6 +167,12 @@ def run(kind, recipe_path, destination, *, repository):
             "recipe_sha256": hashlib.sha256(raw).hexdigest(),
             "members": members,
         }
+        if kind == "configuration":
+            manifest["source_input"] = {
+                "root": str(source_root),
+                "source_store_id": recipe.source_store_id,
+                "source_versions_sha256": recipe.source_versions_sha256,
+            }
         _write(stage / "MANIFEST.json", (json.dumps(manifest, indent=2) + "\n").encode())
         publish(stage, destination)
     return manifest
@@ -152,8 +184,17 @@ def main(argv=None):
     parser.add_argument("--recipe", type=Path, required=True)
     parser.add_argument("--destination", type=Path, required=True)
     parser.add_argument("--repository", type=Path, default=Path(__file__).resolve().parents[2])
+    parser.add_argument(
+        "--source-root", type=Path, help="Existing original change store; configuration only"
+    )
     args = parser.parse_args(argv)
-    result = run(args.kind, args.recipe, args.destination, repository=args.repository)
+    result = run(
+        args.kind,
+        args.recipe,
+        args.destination,
+        repository=args.repository,
+        source_root=args.source_root,
+    )
     print(
         json.dumps(
             {

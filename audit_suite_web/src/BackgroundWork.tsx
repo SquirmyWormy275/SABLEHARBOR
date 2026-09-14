@@ -1,14 +1,13 @@
-import type { SourcePin } from "./meetingSources";
 import { useEffect, useRef, useState } from "react";
 import { ApiError, request } from "./api";
 import type { Engagement } from "./api";
 import { jobAction, jobsPath } from "./backgroundWork";
-import type { BackgroundJob } from "./backgroundWork";
+import type { BackgroundJob, BackgroundInput } from "./backgroundWork";
 
 export function BackgroundWork(props: {
   engagement: Engagement;
   viewerId: string;
-  onInspect: () => void;
+  onInspect: (kind?: string) => void;
   onCompleted: () => void;
 }) {
   const context = JSON.stringify([
@@ -16,6 +15,8 @@ export function BackgroundWork(props: {
     props.engagement.id,
     props.engagement.permissions,
     props.engagement.scope,
+    props.engagement.company_source_binding,
+    props.engagement.evidence_acquisition,
   ]);
   return <WorkList key={context} {...props} />;
 }
@@ -26,27 +27,14 @@ function WorkList({
 }: {
   engagement: Engagement;
   viewerId: string;
-  onInspect: () => void;
+  onInspect: (kind?: string) => void;
   onCompleted: () => void;
 }) {
   const [jobs, setJobs] = useState<BackgroundJob[]>([]);
   const [error, setError] = useState("");
   const [busy, setBusy] = useState(false);
   const [inspected, setInspected] = useState<Record<string, number>>({});
-  const [inputs, setInputs] = useState<
-    Record<
-      string,
-      {
-        command_id: string;
-        expected_revision: number;
-        payload: {
-          meeting_id: string;
-          content: string;
-          source_records?: SourcePin[];
-        };
-      }
-    >
-  >({});
+  const [inputs, setInputs] = useState<Record<string, BackgroundInput>>({});
   const alive = useRef(true);
   const completed = useRef(new Set<string>());
   const callback = useRef(onCompleted);
@@ -103,15 +91,9 @@ function WorkList({
   async function inspectInput(job: BackgroundJob) {
     setError("");
     try {
-      const input = await request<{
-        command_id: string;
-        expected_revision: number;
-        payload: {
-          meeting_id: string;
-          content: string;
-          source_records?: SourcePin[];
-        };
-      }>(`${jobsPath(engagement.id)}/${encodeURIComponent(job.id)}/input`);
+      const input = await request<BackgroundInput>(
+        `${jobsPath(engagement.id)}/${encodeURIComponent(job.id)}/input`,
+      );
       if (alive.current) setInputs((old) => ({ ...old, [job.id]: input }));
     } catch (e) {
       if (alive.current)
@@ -144,52 +126,83 @@ function WorkList({
     <section aria-label="Background work">
       <h2>Background work</h2>
       <p>
-        Meeting responses continue while you navigate. This list belongs to your
-        current engagement and account. Reloading does not submit another
-        message.
+        Company responses and source census collections continue while you
+        navigate. This list belongs to your current engagement and account.
+        Reloading does not submit another message.
       </p>
       {error && <p role="alert">{error}</p>}
-      {!jobs.length && <p>No background meeting work.</p>}
+      {!jobs.length && <p>No background work.</p>}
       <ul>
         {jobs.map((job) => (
           <li key={job.id}>
-            <strong>{job.status}</strong> · {job.id} · Original engagement
-            revision {job.expected_revision} · Attempts {job.attempts}
+            <strong>{job.status}</strong> ·{" "}
+            {job.kind === "company.census.collect"
+              ? "Source-record census"
+              : "Meeting reply"}{" "}
+            · {job.id} · Original engagement revision {job.expected_revision} ·
+            Attempts {job.attempts}
             {job.result_revision !== null && (
               <span> · Result revision {job.result_revision}</span>
             )}
             {job.error_message && <p>{job.error_message}</p>}
-            <button onClick={onInspect}>
-              Inspect meetings and current engagement
+            <button onClick={() => onInspect(job.kind)}>
+              {job.kind === "company.census.collect"
+                ? "Inspect populations and current engagement"
+                : "Inspect meetings and current engagement"}
             </button>
             <button onClick={() => void inspectInput(job)}>
-              Inspect queued question
+              {job.kind === "company.census.collect"
+                ? "Inspect queued census query"
+                : "Inspect queued question"}
             </button>
             {inputs[job.id] && (
               <div>
-                <p>
-                  Meeting {inputs[job.id].payload.meeting_id} · Command{" "}
-                  {inputs[job.id].command_id} · Original revision{" "}
-                  {inputs[job.id].expected_revision}
-                </p>
-                <blockquote>{inputs[job.id].payload.content}</blockquote>
-                {inputs[job.id].payload.source_records?.length ? (
-                  <>
-                    <p>Explicit source pins retained with this question:</p>
-                    <ul>
-                      {inputs[job.id].payload.source_records!.map((pin) => (
-                        <li key={`${pin.system_id}:${pin.record_id}`}>
-                          {pin.system_id} / {pin.record_id} · Version{" "}
-                          {pin.version} · SHA256 <code>{pin.sha256}</code>
-                        </li>
-                      ))}
-                    </ul>
-                  </>
+                {inputs[job.id].kind === "company.census.collect" ? (
+                  <div>
+                    <p>
+                      Source-record census · System{" "}
+                      {inputs[job.id].payload.system_id} · Request{" "}
+                      {inputs[job.id].payload.request_id}
+                    </p>
+                    <p>
+                      Command {inputs[job.id].command_id} · Original revision{" "}
+                      {inputs[job.id].expected_revision}
+                    </p>
+                    <pre>
+                      {JSON.stringify(inputs[job.id].payload.query, null, 2)}
+                    </pre>
+                    <p>
+                      This query is the original queued input; retries do not
+                      replace it with current form values.
+                    </p>
+                  </div>
                 ) : (
-                  <p>
-                    No explicit source pins; the original command uses automatic
-                    bounded source sampling.
-                  </p>
+                  <>
+                    <p>
+                      Meeting {inputs[job.id].payload.meeting_id} · Command{" "}
+                      {inputs[job.id].command_id} · Original revision{" "}
+                      {inputs[job.id].expected_revision}
+                    </p>
+                    <blockquote>{inputs[job.id].payload.content}</blockquote>
+                    {inputs[job.id].payload.source_records?.length ? (
+                      <>
+                        <p>Explicit source pins retained with this question:</p>
+                        <ul>
+                          {inputs[job.id].payload.source_records!.map((pin) => (
+                            <li key={`${pin.system_id}:${pin.record_id}`}>
+                              {pin.system_id} / {pin.record_id} · Version{" "}
+                              {pin.version} · SHA256 <code>{pin.sha256}</code>
+                            </li>
+                          ))}
+                        </ul>
+                      </>
+                    ) : (
+                      <p>
+                        No explicit source pins; the original command uses
+                        automatic bounded source sampling.
+                      </p>
+                    )}
+                  </>
                 )}
               </div>
             )}
@@ -207,7 +220,7 @@ function WorkList({
                   }
                 />
                 I inspected the engagement. Retry the original command without
-                changing its base revision; model computation may repeat.
+                changing its base revision; execution may repeat.
               </label>
             )}
             {jobAction(job) && (

@@ -1,3 +1,5 @@
+import SourceRecordCensus from "./SourceRecordCensus";
+import { ConversationProvenance } from "./ConversationProvenance";
 import { MeetingSourceContext } from "./MeetingSourceContext";
 import { samePins, type SourcePin } from "./meetingSources";
 import { compatibleWorkpaperValues, supports } from "./compatibility";
@@ -773,13 +775,11 @@ export default function App() {
                   <Badge>{human(m.claim_type ?? "statement")}</Badge>
                 </div>
                 <p>{str(m.content ?? m.text)}</p>
-                {Array.isArray(m.action_receipts) &&
-                  m.action_receipts.map((receipt: Row, index: number) => (
-                    <p className="action-receipt" key={index}>
-                      Recorded action: {human(receipt.kind)} ·{" "}
-                      {str(receipt.request_id)} · {human(receipt.status)}
-                    </p>
-                  ))}
+                <ConversationProvenance
+                  engagement={e}
+                  message={m}
+                  onPreview={(kind, row) => setDetail({ kind, row })}
+                />
                 {m.role === "assistant" && (
                   <SpeakButton
                     engagement={e.id}
@@ -1182,7 +1182,13 @@ export default function App() {
                 <BackgroundWork
                   engagement={e}
                   viewerId={bootstrap.viewer.id}
-                  onInspect={() => navigate("meetings")}
+                  onInspect={(kind) =>
+                    navigate(
+                      kind === "company.census.collect"
+                        ? "populations"
+                        : "meetings",
+                    )
+                  }
                   onCompleted={() => {
                     const epoch = navigationEpoch.current;
                     void request<Engagement>(
@@ -1718,6 +1724,17 @@ export default function App() {
                       { key: "effective_from", label: "Effective from" },
                     ]}
                   />
+                )}
+                {bootstrap.capabilities.company_source_census && (
+                  <div hidden={section !== "populations"}>
+                    <SourceRecordCensus
+                      engagement={e}
+                      viewerId={bootstrap.viewer.id}
+                      busy={busy}
+                      backgroundKinds={bootstrap.background_command_kinds ?? []}
+                      onCommand={act}
+                    />
+                  </div>
                 )}
                 {section === "populations" && (
                   <>

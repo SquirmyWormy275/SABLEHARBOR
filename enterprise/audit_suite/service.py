@@ -321,6 +321,7 @@ def create_app(
             bound_instructor_keys=bool(protected_bindings),
             instructor_reference_library=instructor_key_root is not None,
         )
+        result["background_command_kinds"] = jobs.supported_commands() if jobs is not None else []
         return result
 
     @app.get("/api/openapi.json")

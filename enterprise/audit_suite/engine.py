@@ -215,6 +215,7 @@ class Engine:
             "workpaper_procedure_links": True,
             "company_sources": self.company_store is not None,
             "company_message_sources": self.company_store is not None,
+            "company_source_census": self.company_store is not None,
             "company_populations": self.company_store is not None
             and getattr(self.company_store, "capabilities", {}).get("company_populations", True),
             "company_source_impact": self.company_store is not None
@@ -600,6 +601,10 @@ class Engine:
             from .company_collection import activate
 
             activate(self, state, p, stamped)
+        elif kind == "company.census.collect":
+            from .company_source_census_collection import collect as collect_census
+
+            collect_census(self, state, p, stamped, command["command_id"])
         elif kind == "company.population.collect":
             from .company_population_collection import collect as collect_population
 

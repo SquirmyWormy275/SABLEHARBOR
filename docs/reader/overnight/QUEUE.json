@@ -429,7 +429,7 @@
       "gate": "existing_authority",
       "execution_policy": "READY requires completed dependencies. Shared schemas, dependencies and catalog changes belong to the integrator. Keep populated sources, migration manifests and audit records in excluded private storage. No remote publication or deployment under this addition.",
       "execution_authorized": true,
-      "evidence": "Private company store, grant boundaries, immutable source versions and verified recovery implemented; operating bridge and one mover lifecycle exercised. Broader company-system coverage remains in progress."
+      "evidence": "Immutable company stores, grants, recovery and read-through source portfolios implemented. New independent change records and configuration checks consume pinned upstream originals. Broader company-system coverage remains in progress."
     },
     {
       "id": "AQ-03",
@@ -483,7 +483,7 @@
       "gate": "existing_authority",
       "execution_policy": "READY requires completed dependencies. Shared schemas, dependencies and catalog changes belong to the integrator. Keep populated sources, migration manifests and audit records in excluded private storage. No remote publication or deployment under this addition.",
       "execution_authorized": true,
-      "evidence": "Independent mover, four-quarter bounded identity, incident/continuity, backup/restore and training source activities now run before audit creation. Backup includes real synthetic byte restoration and preserved failed/retest versions; training preserves overdue and late-completion chronology. A private-recipe operator runner validates native hashes and creates no audit or grants. Full company-period coverage remains incomplete."
+      "evidence": "Independent mover, bounded four-quarter identity, incident, backup, training, change and configuration exercises create native history before audit collection. Configuration consumes original release records, preserves earlier drift and later correction. Explicit recipe runner validates source pins/native hashes and creates no audits or grants. Full coherent company-period coverage remains incomplete."
     },
     {
       "id": "AQ-05",
@@ -511,7 +511,7 @@
       "gate": "existing_authority",
       "execution_policy": "READY requires completed dependencies. Shared schemas, dependencies and catalog changes belong to the integrator. Keep populated sources, migration manifests and audit records in excluded private storage. No remote publication or deployment under this addition.",
       "execution_authorized": true,
-      "evidence": "Fresh documentary rehearsal collected 359 originals for 70 owner-routed requests; separate incident, backup and training rehearsals retained their exact company originals. Read-through portfolio v2 exposes 107 aliases across five original source families without copying or rewriting native stores. Explicit owner-conversation source pins pass all five family checks, current authority/hash/clock checks, and immutable queued retry checks. Portfolio qualification does not establish a coherent operating year."
+      "evidence": "Reference-v3 collected and independently verified 457 originals across 115 systems and six selected source components, with no generated audit world. Separate change/configuration rehearsals collected 32/12 originals. Exact owner-conversation pins and executed scoped action provenance are visible; one factual local-model follow-up was independently checked. One-system census supports exact query retention and explicit provisional import. Independent exercises do not establish a coherent operating year."
     },
     {
       "id": "AQ-06",
@@ -539,7 +539,7 @@
       "gate": "existing_authority",
       "execution_policy": "READY requires completed dependencies. Shared schemas, dependencies and catalog changes belong to the integrator. Keep populated sources, migration manifests and audit records in excluded private storage. No remote publication or deployment under this addition.",
       "execution_authorized": true,
-      "evidence": "Typed source-version population collection and explicit provisional registration remain separate from completeness/applicability acceptance. Latest explicit-reference source matrix identifies independent activity references for 10 of 70 scoped controls and no such references for 60 in the inspected stores. All 359 documentary originals were collected; 1,015 operating-model versions remain qualified unmapped candidates. These counts are coverage inventory, not control effectiveness."
+      "evidence": "Maintained explicit-config inventory verified all 457 source/retained originals and 690 historical states/events at reference-v3 revision 689:367 documentary and90 qualified activity originals, explicit activity references for10 of70 controls. Later source families require separately selected inventory. One-system census distinguishes latest/all versions and undated strata, preserving exact originals/query/manifest before explicit provisional import. Business population completeness, procedure sufficiency and professional acceptance remain unassessed."
     },
     {
       "id": "AQ-07",

@@ -1,4 +1,4 @@
-"""Durable bounded meeting jobs around the unchanged Engine.command API.
+"""Durable bounded conversation and source-census jobs around Engine.command.
 
 Interrupted model computation may repeat after explicit retry. Engine command
 receipts protect audit mutations; this does not promise exactly-once inference.
@@ -17,6 +17,7 @@ from pathlib import Path
 from .store import DomainError, canonical, digest
 
 PERMISSIONS = {"learn", "instruct"}
+COMMAND_KINDS = frozenset({"meeting.message", "company.census.collect"})
 ERRORS = {
     "REVISION_CONFLICT": "Engagement changed. Inspect its state and submit a new command.",
     "ACCESS_DENIED": "Access changed. Restore authorized access before deciding whether to retry.",
@@ -38,6 +39,14 @@ ERRORS = {
     "INVALID_SOURCE_SELECTION": (
         "The source selection is invalid. Choose one to four exact original versions "
         "or remove the explicit selection, then submit a new command."
+    ),
+    "INVALID_CENSUS_QUERY": (
+        "The source census query or request is invalid. Inspect its system, "
+        "version policy and period before submitting a new command."
+    ),
+    "SOURCE_CENSUS_UNAVAILABLE": (
+        "The source census is unavailable. Inspect source access, the pinned "
+        "binding and export limits before deciding whether to retry."
     ),
 }
 
@@ -128,6 +137,12 @@ class BackgroundJobs:
         if self.engine.store.membership(actor, engagement) not in PERMISSIONS:
             raise DomainError("Current learner or instructor access required", status=403)
 
+    def supported_commands(self):
+        return [
+            "meeting.message",
+            *(["company.census.collect"] if self.engine.company_store is not None else []),
+        ]
+
     @staticmethod
     def _row(db, actor, engagement, job_id):
         row = db.execute(
@@ -153,6 +168,14 @@ class BackgroundJobs:
 
     @staticmethod
     def _public(row):
+        try:
+            kind = json.loads(row["command"])["kind"]
+            if kind not in COMMAND_KINDS:
+                raise ValueError()
+        except (KeyError, TypeError, ValueError):
+            raise DomainError(
+                "Stored job command unavailable", code="INTEGRITY", status=500
+            ) from None
         fields = (
             "id",
             "status",
@@ -166,7 +189,7 @@ class BackgroundJobs:
         )
         return {
             **{k: row[k] for k in fields},
-            "kind": "meeting.message",
+            "kind": kind,
             "error_message": ERRORS.get(row["error_code"]),
             "retry_requires_inspection": row["status"] in {"FAILED", "INTERRUPTED"},
         }
@@ -176,10 +199,10 @@ class BackgroundJobs:
         if (
             not isinstance(command, dict)
             or set(command) != {"command_id", "expected_revision", "kind", "payload"}
-            or command.get("kind") != "meeting.message"
+            or command.get("kind") not in self.supported_commands()
             or len(canonical(command)) > 50000
         ):
-            raise DomainError("Exact bounded meeting.message command required")
+            raise DomainError("Exact bounded supported background command required")
         fingerprint = digest(command)
         self.engine.store._validate_command(command)
         with self._db() as db:
@@ -250,7 +273,7 @@ class BackgroundJobs:
         with self._db() as db:
             row = self._row(db, actor, engagement, job_id)
         command = json.loads(row["command"])
-        if digest(command) != row["command_digest"] or command.get("kind") != "meeting.message":
+        if digest(command) != row["command_digest"] or command.get("kind") not in COMMAND_KINDS:
             raise DomainError("Retained job input integrity failure", code="INTEGRITY", status=500)
         self._authorize(actor, engagement)
         return command
@@ -336,6 +359,8 @@ class BackgroundJobs:
                     "SOURCE_CONTEXT_UNAVAILABLE",
                     "INVALID_SOURCE_SELECTION",
                     "INFERENCE_TIMEOUT",
+                    "INVALID_CENSUS_QUERY",
+                    "SOURCE_CENSUS_UNAVAILABLE",
                 }:
                     status, error = "FAILED", exc.code
                 elif exc.status == 409:

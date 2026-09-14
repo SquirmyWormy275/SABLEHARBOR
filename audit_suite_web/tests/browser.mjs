@@ -346,6 +346,7 @@ try {
               csrf_token: "fixture",
               engagements: [e],
               capabilities: e.capabilities,
+              background_command_kinds:e.background_command_kinds??[],
               programs: [
                 { id: "SOC2", name: "SOC 2" },
                 { id: "HIPAA", name: "HIPAA" },
@@ -1089,6 +1090,32 @@ try {
   if(await page.getByText(/record_status: WITHDRAWN/).count())throw Error('Stale impact retained previous result');
   impactMode='delayed';await page.getByRole('button',{name:'Check source changes',exact:true}).click();await page.waitForTimeout(100);await page.getByRole('button',{name:/Notes/}).first().click();releaseImpact();await page.waitForTimeout(100);await page.getByRole('button',{name:/PBC & evidence/}).click();
   if(await page.getByText(/record_status: WITHDRAWN/).count())throw Error('Late impact response crossed section lifetime');
+  e.artifacts[0].status='AVAILABLE';e.artifacts[0].source={kind:'COLLECTED_COMPANY_SOURCE',receipt:{engagement_id:e.id,source:{system:'SYS',source_system_alias:'conversation:SYS',record:'SAVED-R',version:2,sha256:e.artifacts[0].sha256}}};
+  e.meetings[0].messages.push({id:'SAVED-USER',role:'user',content:'Neutral saved source question',source_records:[{system_id:'conversation:SYS',record_id:'SAVED-R',version:2,sha256:e.artifacts[0].sha256}]});
+  e.meetings[0].messages.push({id:'SAVED-REPLY',role:'assistant',content:'Neutral response with retained action receipt',source_refs:['SOURCE-SNAPSHOT-NEUTRAL'],action_receipts:[{kind:'pbc.followup',executed:true,status:'ACKNOWLEDGED',authority:'SCOPED_ENGINE_COMMAND',request_id:'PBC-01',reason:'Neutral recorded source follow-up'},{kind:'pbc.create',executed:false,status:'REJECTED',authority:'SCOPED_ENGINE_COMMAND',request_id:'MISSING'}]});
+  await page.goto(`http://127.0.0.1:5193/?engagement=${e.id}&view=meetings`);
+  await page.getByRole('button',{name:/Infrastructure walkthrough/}).click();
+  await page.getByText('Exact source records selected for this question (1)',{exact:true}).click();
+  await page.getByText(/conversation:SYS \/ SAVED-R · Version 2/).waitFor();
+  await page.getByRole('button',{name:'Open retained original '+e.artifacts[0].id,exact:true}).click();await page.getByRole('dialog').waitFor();await page.keyboard.press('Escape');
+  await page.getByText('Source references recorded with this reply (1)',{exact:true}).click();await page.getByText('SOURCE-SNAPSHOT-NEUTRAL',{exact:true}).waitFor();
+  await page.getByText('Executed scoped action: pbc.followup · ACKNOWLEDGED',{exact:true}).waitFor();await page.getByText('Action not executed: pbc.create · REJECTED',{exact:true}).waitFor();
+  await page.getByRole('button',{name:'Open affected request PBC-01',exact:true}).click();await page.getByRole('dialog').waitFor();await page.keyboard.press('Escape');
+  e.capabilities.company_source_census=true;e.background_command_kinds=['meeting.message','company.census.collect'];e.requests[0].boundary_id=e.scope.boundaries[0];e.phase='ACTIVE';
+  let censusEnvelope=null,censusImport=null;
+  const censusJob={...backgroundJob,id:'JOB-CENSUS',kind:'company.census.collect',status:'PENDING',expected_revision:e.revision,result_revision:null};
+  await page.route(`**/api/engagements/${e.id}/company/systems`,route=>route.fulfill({contentType:'application/json',body:JSON.stringify({systems:[{system:'CENSUS:SYS',owner:'P-01',source_store_id:'census-original'}]})}));
+  await page.route(`**/api/engagements/${e.id}/jobs`,route=>{if(route.request().method()==='POST'){censusEnvelope=route.request().postDataJSON();return route.fulfill({contentType:'application/json',body:JSON.stringify(censusJob)});}return route.fulfill({contentType:'application/json',body:JSON.stringify({jobs:censusEnvelope?[censusJob]:[]})});});
+  await page.route(`**/api/engagements/${e.id}/jobs/JOB-CENSUS/input`,route=>route.fulfill({contentType:'application/json',body:JSON.stringify(censusEnvelope)}));
+  await page.route(`**/api/engagements/${e.id}/commands`,route=>{const c=route.request().postDataJSON();if(c.kind!=='population.import')return route.fallback();censusImport=c;return route.fulfill({contentType:'application/json',body:JSON.stringify(e)});});
+  await page.goto(`http://127.0.0.1:5193/?engagement=${e.id}&view=populations`);await page.getByText('Collect a source-record census',{exact:true}).click();
+  await page.getByRole('button',{name:'Load census source systems',exact:true}).click();await page.getByLabel('Census source system',{exact:true}).selectOption('CENSUS:SYS');await page.getByLabel('Census version policy',{exact:true}).selectOption('LATEST_VISIBLE_PER_RECORD');await page.getByLabel('Census event window start',{exact:true}).fill('2027-01-01T00:00:00Z');await page.getByLabel('Census event window end',{exact:true}).fill('2028-01-01T00:00:00Z');await page.getByLabel('Census undated policy',{exact:true}).selectOption('INCLUDE_UNDATED_STRATUM');await page.getByLabel('Census evidence request',{exact:true}).selectOption('PBC-01');
+  await page.getByRole('button',{name:/Notes/}).first().click();await page.getByRole('button',{name:/Populations & samples/}).click();if(await page.getByLabel('Census source system',{exact:true}).inputValue()!=='CENSUS:SYS')throw Error('Census query lost across navigation');
+  await page.getByRole('button',{name:'Collect census and source manifest',exact:true}).click();await page.getByRole('status').filter({hasText:'Census submission accepted (initial status: pending)'}).waitFor();if(censusEnvelope?.kind!=='company.census.collect'||censusEnvelope.payload.system_id!=='CENSUS:SYS'||censusEnvelope.payload.query.unknown_event_policy!=='INCLUDE_UNDATED_STRATUM')throw Error('Wrong census envelope');if(censusImport)throw Error('Census automatically imported');
+  await page.getByText('Company replies and background work',{exact:true}).click();await page.getByRole('button',{name:'Inspect queued census query',exact:true}).click();await page.getByText(/Source-record census · System CENSUS:SYS · Request PBC-01/).waitFor();
+  const censusNext={kind:'population.import',payload:{title:'Explicit source census',artifact_id:'CENSUS-ROWS',rows:[{id:'SV1',date_stratum:'IN_EVENT_WINDOW'},{id:'SV2',date_stratum:'UNDATED'}],scope:{unit:'SOURCE_RECORD_VERSION'},source:{query_manifest_sha256:'f'.repeat(64)}}};
+  e.requests[0].company_census_collections=[{snapshot_id:'SNAP-CENSUS',manifest_sha256:'f'.repeat(64),query:censusEnvelope.payload.query,system_id:'CENSUS:SYS',source_versions:2,distinct_source_records:2,strata:{IN_EVENT_WINDOW:1,UNDATED:1},excluded:{outside_event_window:2,undated:0},native_artifacts:[1,2].map(n=>({artifact_id:'CENSUS-ORIG-'+n,source:{company:'ORIGINAL',branch:'B',system:'SYS',record:'R'+n,version:1,sha256:String(n).repeat(64),origin:'LOCAL_SYNTHETIC',date_stratum:n===1?'IN_EVENT_WINDOW':'UNDATED'}})),manifest_artifact_id:'CENSUS-MANIFEST',population_artifact_id:'CENSUS-ROWS',next_command:censusNext,registration:'AWAITING_EXPLICIT_IMPORT',recorded_at:'2026-09-14T20:00:00Z',simulated_at:e.simulated_at}];e.revision++;censusJob.status='COMPLETED';censusJob.result_revision=e.revision;
+  await page.getByText('CENSUS:SYS · 2 source versions · 2 distinct source records',{exact:true}).waitFor();await page.getByText(/In event window: 1 · Undated: 1/).waitFor();const importCensus=page.getByRole('button',{name:'Import reviewed census as provisional',exact:true});if(await importCensus.isEnabled())throw Error('Census import enabled before explicit review');await page.getByRole('checkbox',{name:'I reviewed the exact query, version unit, undated stratum and source qualifiers for provisional import.',exact:true}).check();await importCensus.click();await page.waitForTimeout(100);if(JSON.stringify(censusImport?.payload)!==JSON.stringify(censusNext.payload))throw Error('Provisional import changed exact census rows or pins');
   if (errors.length) throw Error(errors.join("\n"));
   await writeFile(
     `${output}/browser-receipt.json`,
@@ -1097,6 +1124,8 @@ try {
         fixture:
           "Public synthetic layout data; API mocked; not a backend acceptance claim",
         views: 10,
+        census_checks:['query preserved across section navigation','exact background census envelope','pending acceptance not complete population','queued query inspection distinguishes census from meeting','dated/undated/excluded counts distinct','no automatic import; explicit provisional command preserves rows and manifest pin'],
+        saved_conversation_checks:['exact historical source pins visible and original preview','source snapshot citation ID preserved','executed action distinguished from unexecuted proposal','affected request preview exact'],
         source_impact_checks:['compared and unavailable denominators distinct','original and alias source identity','source withdrawal qualifier is not audit conclusion','exact retained original preview','outdated response removes prior result','late response cannot cross component lifetime'],
         meeting_source_checks:['only participant-owned systems','meeting switch clears pins without losing question','late source response cannot clear new meeting selection','exact alias/version/SHA command pins','delayed acceptance preserves newer selection and question','queued retry inspection shows original pins','ambiguous transport retry preserves exact envelope','restore refuses overwrite of newer composer'],
         portfolio_checks:['originalsixpartidentity distinct from route alias','originalfilename preserved without filesystem path','registry pin change removes collectible records','registry pin/perpage receipt qualification','collection uses exact selectedalias','unsupported impact/population panels absent'],
