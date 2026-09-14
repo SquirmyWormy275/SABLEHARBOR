@@ -121,3 +121,54 @@ def test_import_retry_and_two_engagements_share_source_without_changing_original
         assert record["content"] == source.read_bytes()
         assert record["event_at"] is None
     assert result["historical_audit_modified"] is False
+
+
+def test_scope_epochs_preserve_distinct_original_identities_and_exact_pins(tmp_path):
+    source = fixture(tmp_path)
+    world = tmp_path / "worlds" / "ENG-abc"
+    initial = plan_legacy_documents(tmp_path, "ENG-abc")
+    later = world / "scope-00001"
+    later.mkdir()
+    # Reused local IDs must not alias across retained scope generations.
+    raw = (world / "unit-00000.json").read_bytes()
+    (later / "unit-00000.json").write_bytes(raw)
+    plan = plan_legacy_documents(tmp_path, "ENG-abc")
+    assert len(plan["documents"]) == 2
+    assert len({d["record_id"] for d in plan["documents"]}) == 2
+    assert {d["source_identity"]["unit"] for d in plan["documents"]} == {
+        "unit-00000.json",
+        "scope-00001/unit-00000.json",
+    }
+    original = next(
+        d for d in plan["documents"] if d["source_identity"]["unit"] == "unit-00000.json"
+    )
+    assert original == initial["documents"][0]
+    assert {p["path"] for p in plan["source_units"]} == {
+        "worlds/ENG-abc/unit-00000.json",
+        "worlds/ENG-abc/scope-00001/unit-00000.json",
+    }
+    assert source.read_bytes() == b"company original\n"
+    assert "HIDDEN" not in json.dumps(plan)
+
+
+def test_corrupt_later_scope_original_is_not_silently_omitted(tmp_path):
+    fixture(tmp_path)
+    world = tmp_path / "worlds" / "ENG-abc"
+    later = world / "scope-00001"
+    later.mkdir()
+    unit = json.loads((world / "unit-00000.json").read_bytes())
+    row = unit["requests"][0]["prepared_artifacts"][0]
+    row["sha256"] = hashlib.sha256(b"later original").hexdigest()
+    row["bytes"] = len(b"later original")
+    (tmp_path / "artifacts" / row["sha256"]).write_bytes(b"corrupted")
+    (later / "unit-00000.json").write_text(json.dumps(unit))
+    with pytest.raises(DomainError, match="integrity"):
+        plan_legacy_documents(tmp_path, "ENG-abc")
+
+
+def test_scope_epoch_alias_rejected(tmp_path):
+    fixture(tmp_path)
+    world = tmp_path / "worlds" / "ENG-abc"
+    (world / "scope-00001").symlink_to(world, target_is_directory=True)
+    with pytest.raises(DomainError, match="scope epoch"):
+        plan_legacy_documents(tmp_path, "ENG-abc")

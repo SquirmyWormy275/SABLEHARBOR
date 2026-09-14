@@ -1,6 +1,9 @@
 import type { Engagement, Row } from "./api";
 
 const kinds = {
+  controls: "control",
+  requests: "request",
+  reviews: "review",
   artifacts: "artifact",
   workpapers: "workpaper",
   populations: "population",
@@ -19,6 +22,11 @@ export function sourceReference(e: Engagement, ref: Row) {
   const rows = e[collection].filter((row) => row.id === ref.id);
   if (rows.length !== 1) return null;
   const row = rows[0];
+  if (
+    ref.sha256 !== undefined &&
+    (typeof ref.sha256 !== "string" || ref.sha256 !== row.sha256)
+  )
+    return null;
   if (ref.version !== undefined) {
     const versions = collection === "workpapers" ? row.versions : [row];
     if (

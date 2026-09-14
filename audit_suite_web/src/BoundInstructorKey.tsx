@@ -1,3 +1,4 @@
+import { InstructorComparison } from "./InstructorComparison";
 import { useEffect, useState } from "react";
 import { request, type Engagement } from "./api";
 import {
@@ -134,6 +135,7 @@ function BoundExplorer({
           ))}
         </ul>
       </details>
+      <InstructorComparison engagement={e} bound={response} />
       <label>
         Find bound source
         <input

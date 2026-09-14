@@ -125,6 +125,7 @@ def create_app(
     instructor_key_root: Path | None = None,
     instructor_bindings: Path | None = None,
     background_jobs: bool = False,
+    workspace_contexts: bool = False,
 ) -> FastAPI:
     if company_bindings is not None and company_root is None:
         raise DomainError("Company root required with bindings")
@@ -201,6 +202,14 @@ def create_app(
         job_root = engine.store.root / "background-jobs"
         job_root.mkdir(mode=0o700, exist_ok=True)
         jobs = BackgroundJobs(job_root, engine, max_workers=2, max_pending=32)
+    contexts = None
+    if workspace_contexts:
+        from .workspace_context import WorkspaceContexts
+
+        context_root = engine.store.root / "workspace-contexts"
+        context_root.mkdir(mode=0o700, exist_ok=True)
+        contexts = WorkspaceContexts(context_root, engine)
+    app.state.workspace_contexts = contexts
     app.state.background_jobs = jobs
     app.state.generation_jobs = {}
     app.add_middleware(BodyLimit)
@@ -297,6 +306,8 @@ def create_app(
     async def bootstrap(request: Request):
         result = await asyncio.to_thread(engine.bootstrap, actor(request))
         result["capabilities"].update(
+            work_status=True,
+            workspace_contexts=contexts is not None,
             background_jobs=jobs is not None,
             bound_instructor_keys=bool(protected_bindings),
             instructor_reference_library=instructor_key_root is not None,
@@ -317,6 +328,12 @@ def create_app(
     @app.get("/api/engagements/{engagement_id}")
     async def get(engagement_id: str, request: Request):
         return await asyncio.to_thread(engine.get, actor(request)["id"], engagement_id)
+
+    @app.get("/api/engagements/{engagement_id}/work-status")
+    async def work_status(engagement_id: str, request: Request):
+        from .audit_readiness import report
+
+        return await asyncio.to_thread(report, engine, actor(request)["id"], engagement_id)
 
     def instructor_reference_value(principal, engagement_id, scenario_id=None):
         import hashlib
@@ -422,6 +439,16 @@ def create_app(
             discard=True,
         )
 
+    @app.get("/api/engagements/{engagement_id}/instructor-comparison")
+    async def instructor_comparison(engagement_id: str, revision: int, request: Request):
+        from .instructor_comparison import compare
+
+        principal = actor(request)
+        limits.check("instructor-comparison", principal["id"], 60)
+        return await asyncio.to_thread(
+            compare, engine, principal, engagement_id, protected_bindings, revision=revision
+        )
+
     @app.get("/api/engagements/{engagement_id}/instructor-binding")
     async def instructor_binding(engagement_id: str, request: Request):
         from .bound_instructor import read_binding
@@ -501,6 +528,84 @@ def create_app(
 
         state = engine.store.get(principal["id"], engagement_id)
         return await asyncio.to_thread(read, engine, state, draft_id)
+
+    def enabled_contexts():
+        if contexts is None:
+            raise DomainError("Saved investigations are not configured", status=503)
+        return contexts
+
+    @app.get("/api/engagements/{engagement_id}/contexts")
+    async def context_list(engagement_id: str, request: Request):
+        principal = actor(request)
+        return {
+            "contexts": await asyncio.to_thread(
+                enabled_contexts().listing, principal["id"], engagement_id
+            )
+        }
+
+    @app.post("/api/engagements/{engagement_id}/contexts/link")
+    async def context_link(engagement_id: str, request: Request):
+        principal = actor(request, mutation=True)
+        body = await json_body(request)
+        limits.check("contexts", principal["id"], 120)
+        if set(body) != {"kind", "id", "version"}:
+            raise DomainError("Choose an exact existing record link")
+        return await asyncio.to_thread(
+            enabled_contexts().make_link,
+            principal["id"],
+            engagement_id,
+            kind=body["kind"],
+            record_id=body["id"],
+            version=body["version"],
+        )
+
+    @app.post("/api/engagements/{engagement_id}/contexts")
+    async def context_create(engagement_id: str, request: Request):
+        principal = actor(request, mutation=True)
+        body = await json_body(request)
+        limits.check("contexts", principal["id"], 120)
+        if set(body) != {"command_id", "payload"}:
+            raise DomainError("Invalid investigation create request")
+        return await asyncio.to_thread(
+            enabled_contexts().create,
+            principal["id"],
+            engagement_id,
+            body["payload"],
+            command_id=body["command_id"],
+        )
+
+    @app.put("/api/engagements/{engagement_id}/contexts/{context_id}")
+    async def context_save(engagement_id: str, context_id: str, request: Request):
+        principal = actor(request, mutation=True)
+        body = await json_body(request)
+        limits.check("contexts", principal["id"], 120)
+        if set(body) != {"command_id", "expected_version", "payload"}:
+            raise DomainError("Invalid investigation save request")
+        return await asyncio.to_thread(
+            enabled_contexts().save,
+            principal["id"],
+            engagement_id,
+            context_id,
+            body["payload"],
+            expected_version=body["expected_version"],
+            command_id=body["command_id"],
+        )
+
+    @app.post("/api/engagements/{engagement_id}/contexts/{context_id}/reset")
+    async def context_reset(engagement_id: str, context_id: str, request: Request):
+        principal = actor(request, mutation=True)
+        body = await json_body(request)
+        limits.check("contexts", principal["id"], 120)
+        if set(body) != {"command_id", "expected_version"}:
+            raise DomainError("Invalid investigation reset request")
+        return await asyncio.to_thread(
+            enabled_contexts().reset,
+            principal["id"],
+            engagement_id,
+            context_id,
+            expected_version=body["expected_version"],
+            command_id=body["command_id"],
+        )
 
     def enabled_jobs():
         if jobs is None:

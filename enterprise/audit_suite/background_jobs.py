@@ -8,6 +8,7 @@ import fcntl
 import json
 import os
 import sqlite3
+import stat
 import threading
 from contextlib import contextmanager
 from datetime import UTC, datetime
@@ -51,6 +52,8 @@ class BackgroundJobs:
         self.mutex, self.threads = threading.Lock(), {}
         with self._db() as db:
             db.executescript("""
+                CREATE TABLE IF NOT EXISTS capacity(id INTEGER PRIMARY KEY CHECK(id=1),
+                    workers INTEGER NOT NULL, pending INTEGER NOT NULL);
                 CREATE TABLE IF NOT EXISTS jobs(
                     id TEXT PRIMARY KEY, actor TEXT, engagement TEXT, command_id TEXT,
                     command TEXT, command_digest TEXT, expected_revision INTEGER,
@@ -64,11 +67,25 @@ class BackgroundJobs:
                   actor,engagement,command_id,command,command_digest,expected_revision ON jobs
                   BEGIN SELECT RAISE(ABORT,'Immutable job command'); END;
             """)
+            db.execute("INSERT OR IGNORE INTO capacity VALUES(1,?,?)", (max_workers, max_pending))
+            limits = db.execute("SELECT workers,pending FROM capacity WHERE id=1").fetchone()
+            self.max_workers, self.max_pending = limits["workers"], limits["pending"]
+            if (
+                type(self.max_workers) is not int
+                or not 1 <= self.max_workers <= 4
+                or type(self.max_pending) is not int
+                or not 1 <= self.max_pending <= 128
+            ):
+                raise DomainError("Stored worker capacity is invalid", status=503)
         self.recover()
 
     @contextmanager
     def _db(self):
-        if self.path.is_symlink() or self.path.stat().st_mode & 0o077:
+        if (
+            any(p.is_symlink() for p in [self.path, *self.path.parents])
+            or not self.path.is_file()
+            or self.path.stat().st_mode & 0o077
+        ):
             raise DomainError("Private regular job database required")
         db = sqlite3.connect(self.path, timeout=10)
         db.row_factory = sqlite3.Row
@@ -181,7 +198,7 @@ class BackgroundJobs:
             count = db.execute(
                 "SELECT COUNT(*) FROM jobs WHERE status IN ('PENDING','RUNNING')"
             ).fetchone()[0]
-            if count >= self.max_pending:
+            if replay is None and count >= self.max_pending:
                 raise DomainError("Pending job quota reached", code="JOB_QUOTA", status=429)
             jid = "JOB-" + digest([actor, engagement, command["command_id"]])[:32]
             timestamp = now()
@@ -236,6 +253,24 @@ class BackgroundJobs:
             ).fetchall()
         return [self._public(dict(row)) for row in rows]
 
+    def _reserve_worker(self):
+        # A store retains its initially configured capacity across processes/restarts.
+        for slot in range(self.max_workers):
+            path = self.root / f"capacity-{slot}.lock"
+            fd = os.open(path, os.O_RDWR | os.O_CREAT | os.O_NOFOLLOW, 0o600)
+            info = os.fstat(fd)
+            if not stat.S_ISREG(info.st_mode) or info.st_mode & 0o077 or info.st_nlink != 1:
+                os.close(fd)
+                raise DomainError("Private worker slot required", status=503)
+            try:
+                fcntl.flock(fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
+                return fd
+            except BlockingIOError:
+                os.close(fd)
+        raise DomainError(
+            "Worker capacity reached; job remains pending", code="JOB_CAPACITY", status=429
+        )
+
     def start(self, actor, engagement, job_id):
         current = self.read(actor, engagement, job_id)
         if current["status"] != "PENDING":
@@ -248,14 +283,26 @@ class BackgroundJobs:
                 raise DomainError(
                     "Worker capacity reached; job remains pending", code="JOB_CAPACITY", status=429
                 )
+            worker_fd = self._reserve_worker()
             thread = threading.Thread(
-                target=self._execute, args=(actor, engagement, job_id), daemon=True
+                target=self._execute, args=(actor, engagement, job_id, worker_fd), daemon=True
             )
             self.threads[job_id] = thread
-            thread.start()
+            try:
+                thread.start()
+            except Exception:
+                os.close(worker_fd)
+                raise
         return self.read(actor, engagement, job_id)
 
-    def _execute(self, actor, engagement, job_id):
+    def _execute(self, actor, engagement, job_id, worker_fd):
+        try:
+            self._execute_job(actor, engagement, job_id)
+        finally:
+            fcntl.flock(worker_fd, fcntl.LOCK_UN)
+            os.close(worker_fd)
+
+    def _execute_job(self, actor, engagement, job_id):
         with self._lock(job_id) as acquired:
             if not acquired:
                 return

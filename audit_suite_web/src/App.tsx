@@ -1,5 +1,7 @@
 import { recordSequence } from "./recordSequence";
 import { BackgroundWork } from "./BackgroundWork";
+import { InvestigationContexts } from "./InvestigationContexts";
+import { WorkStatus } from "./WorkStatus";
 import { submitMeetingJob } from "./backgroundWork";
 import { WorkpaperSupport } from "./WorkpaperSupport";
 import { appendEvidenceReference } from "./workpaperSupport";
@@ -790,7 +792,9 @@ export default function App() {
                   const job = await submitMeetingJob(e.id, envelope);
                   if (renderEpoch !== navigationEpoch.current) return;
                   pendingSend.current = null;
-                  setMessage("");
+                  setMessage((current) =>
+                    current === envelope.payload.content ? "" : current,
+                  );
                   setNotice(
                     `Company reply ${job.status.toLowerCase()}. You can continue working; inspect background work for its status.`,
                   );
@@ -1051,6 +1055,13 @@ export default function App() {
             />
           )}
           <div id="main" tabIndex={-1}>
+            {e && !setup && bootstrap.capabilities.workspace_contexts && (
+              <InvestigationContexts
+                engagement={e}
+                viewerId={bootstrap.viewer.id}
+                onPreview={(kind, row) => setDetail({ kind, row })}
+              />
+            )}
             {e && !setup && bootstrap.capabilities.background_jobs && (
               <details className="panel background-work-panel">
                 <summary>Company replies and background work</summary>
@@ -1262,6 +1273,13 @@ export default function App() {
                 )}
                 {section === "controls" && (
                   <>
+                    {bootstrap.capabilities.work_status && (
+                      <WorkStatus
+                        key={e.id}
+                        engagement={e}
+                        onPreview={(kind, row) => setDetail({ kind, row })}
+                      />
+                    )}
                     <TemporalCoverage
                       engagement={e}
                       busy={busy}

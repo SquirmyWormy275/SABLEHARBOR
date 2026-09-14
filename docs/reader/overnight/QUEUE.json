@@ -456,7 +456,7 @@
       "gate": "existing_authority",
       "execution_policy": "READY requires completed dependencies. Shared schemas, dependencies and catalog changes belong to the integrator. Keep populated sources, migration manifests and audit records in excluded private storage. No remote publication or deployment under this addition.",
       "execution_authorized": true,
-      "evidence": "359 original legacy documentary sources imported with original pins/unknown dates retained. Four existing model tables imported separately; full cross-system operational history reconciliation remains incomplete."
+      "evidence": "All359 legacy originals migrated into70 scoped-owner documentary archives with exact bytes, unknown event dates and explicit provisional custody. Source scope-epoch completeness is under review. No claim of completed operating-history reconstruction."
     },
     {
       "id": "AQ-04",
@@ -483,7 +483,7 @@
       "gate": "existing_authority",
       "execution_policy": "READY requires completed dependencies. Shared schemas, dependencies and catalog changes belong to the integrator. Keep populated sources, migration manifests and audit records in excluded private storage. No remote publication or deployment under this addition.",
       "execution_authorized": true,
-      "evidence": "One paired SH-IAM-003 mover lifecycle implemented and collected through isolated audits; original hashes and mode-label independence verified. See AQ04_MOVER_SOURCE_COLLECTION_2026-09-14.md. Full period/control coverage remains incomplete."
+      "evidence": "Paired mover collection, four-quarter bounded identity history, and independent paired incident/continuity source records implemented. Incident source timing follows one shared cause and preserves canonical non-operating site qualifiers. Full company-period and control coverage remains incomplete."
     },
     {
       "id": "AQ-05",
@@ -511,7 +511,7 @@
       "gate": "existing_authority",
       "execution_policy": "READY requires completed dependencies. Shared schemas, dependencies and catalog changes belong to the integrator. Keep populated sources, migration manifests and audit records in excluded private storage. No remote publication or deployment under this addition.",
       "execution_authorized": true,
-      "evidence": "Actual browser source discovery/collection and bounded company-persona retrieval exercised; no prepared world in source mode. Paired mover audits retrieve all ten preexisting versions each. Broader company staff collaboration remains queued."
+      "evidence": "Fresh isolated70control rehearsal issued70owner-routed requests and collected359 existing documentary originals through standard company discovery/collection; source versions unchanged. Separate paired incident audits collected18 original versions each. Broader operating evidence and professional sufficiency remain incomplete."
     },
     {
       "id": "AQ-06",
@@ -690,11 +690,12 @@
         "docs/internal/development/audit-suite/",
         "enterprise/generated/audit-suite/"
       ],
-      "state": "READY",
+      "state": "IN_PROGRESS",
       "acceptance": "Link actual requests, inspection events, selections, tests, workpapers, conclusions and reviews to expectations. Assess discovery, evidence, testing, judgment, documentation and follow-through separately. Distinguish not requested, unavailable, uninspected, inadequately tested, misinterpreted and insufficiently documented; separate out-of-scope issues. File opens and keywords do not prove understanding. Support instructor acceptance of defensible alternatives, reasoned overrides, scenario-defect flags and assessment history.",
       "gate": "existing_authority",
       "execution_policy": "Queued, not started. READY is conditional on completed dependencies and the recorded execution authorization. Keep populated keys and learner records private. Integrator owns shared schema, dependency and catalog changes. IK-06 requires actual professional review and owner acceptance, not inferred approval.",
-      "execution_authorized": true
+      "execution_authorized": true,
+      "evidence": "Protected historical linkage inventory and instructor UI implemented: explicit selected revision/state/history pins, exact retained-source metadata and workpaper links, audited-actor commands separated from shared work. Actual bound-workroom browser and learner denial pass. No submission, inspection, missed-issue inference or grading; full assessment/calibration remains incomplete."
     },
     {
       "id": "IK-05",
@@ -794,11 +795,12 @@
         "docs/internal/development/audit-suite/",
         "enterprise/generated/audit-suite/"
       ],
-      "state": "READY",
+      "state": "IN_PROGRESS",
       "acceptance": "Side-by-side procedure/sample/source/draft inspection, precise evidence references, autosave and version recovery; preserve filters and position. Trace replacement evidence without changing prior snapshots. Administrative batch actions expose per-item outcomes; no automatic effectiveness conclusions. Verify complete testing and review journeys.",
       "gate": "existing_authority",
       "execution_policy": "Locked design direction; queued, not started. Complete dependencies before execution. Preserve private data and prior scope boundaries. Owner usability and exact visual acceptance cannot be inferred from scripted checks.",
-      "execution_authorized": true
+      "execution_authorized": true,
+      "evidence": "Scoped procedure/evidence support now sits alongside durable workpaper drafts. Actual workroom browser verifies exact original preview, explicit deduplicated references, reload recovery and unchanged formal history. Whole-stage testing journey remains incomplete."
     },
     {
       "id": "UX-03",
@@ -820,11 +822,12 @@
         "docs/internal/development/audit-suite/",
         "enterprise/generated/audit-suite/"
       ],
-      "state": "READY",
+      "state": "IN_PROGRESS",
       "acceptance": "Measure normal navigation and long-running generation/conversation; keep other work usable. Persist pending/completed/failed state, drafts and results across navigation/reconnection. Demonstrate safe retry and ambiguous-response recovery without duplicate actions. Report measured performance and limitations on the target machine.",
       "gate": "existing_authority",
       "execution_policy": "Locked design direction; queued, not started. Complete dependencies before execution. Preserve private data and prior scope boundaries. Owner usability and exact visual acceptance cannot be inferred from scripted checks.",
-      "execution_authorized": true
+      "execution_authorized": true,
+      "evidence": "Durable company-reply jobs passed actual local-model execution while navigation/reload remained available. Shared worker-slot limits and original command receipts protect execution. Separate engagement/company/draft/context/job-archive/access-log recovery passed against populated workroom; component captures are not globally atomic. Whole-stage resilience acceptance remains incomplete."
     },
     {
       "id": "UX-04",
@@ -904,7 +907,7 @@
       "gate": "existing_authority",
       "execution_policy": "Owner authorized execution; retain dependency acceptance gates and existing audit_company execution boundaries. Preserve private data and assessment history. User acceptance cannot be inferred from scripted checks.",
       "execution_authorized": true,
-      "evidence": "Personal note/workpaper drafts persist independently of formal history, with reload recovery, conflict choices and scoped authorization; real browser checks passed. Separate private companion recovery implemented. Full workspace/handoff coverage remains in progress."
+      "evidence": "Personal saved investigation questions, next steps and exact record pins persist with optimistic versions, dirty-edit protection and explicit reset. Actual browser verifies reload and unchanged formal history. Broader handoff acceptance remains incomplete."
     },
     {
       "id": "UX-07",
@@ -930,7 +933,7 @@
       "gate": "existing_authority",
       "execution_policy": "Owner authorized execution; retain dependency acceptance gates and existing audit_company execution boundaries. Preserve private data and assessment history. User acceptance cannot be inferred from scripted checks.",
       "execution_authorized": true,
-      "evidence": "Observable source-version impact report and direct authorized work links implemented; no automatic invalidation or conclusion. Broader hypothesis/review dependency coverage remains incomplete."
+      "evidence": "Read-only administrative work-status view exposes exact scoped denominators, requests, evidence/procedure links and unresolved dependencies without inferring effectiveness. Actual workroom shows 70 controls and 407 assigned procedures; full change-impact acceptance remains incomplete."
     },
     {
       "id": "UX-08",
@@ -1031,7 +1034,8 @@
       "acceptance": "Persist and expose the context contract with provenance, staleness and explicit context switching. Keep engagement/branch boundaries and user intent inspectable. Demonstrate no hidden-key, future-record, cross-role or cross-engagement leakage, including inferred context and caches.",
       "gate": "existing_authority",
       "execution_policy": "Owner authorized execution; bounded implementation may proceed while whole-stage dependencies remain in progress. Existing audit_company execution boundaries apply. Suggestions and search use authorized context, never hidden key data; final usability acceptance requires actual feedback.",
-      "execution_authorized": true
+      "execution_authorized": true,
+      "evidence": "Saved context records bind scope, company source, acquisition settings and current permissions. Changed or unrecorded basis requires explicit review before links reopen; original text/pins remain intact. Focused backend and mocked-browser isolation checks pass; comprehensive journey acceptance remains incomplete."
     },
     {
       "id": "CX-02",
@@ -1059,7 +1063,7 @@
       "gate": "existing_authority",
       "execution_policy": "Owner authorized execution; bounded implementation may proceed while whole-stage dependencies remain in progress. Existing audit_company execution boundaries apply. Suggestions and search use authorized context, never hidden key data; final usability acceptance requires actual feedback.",
       "execution_authorized": true,
-      "evidence": "Stable navigation, authorized grouped search, record previews, in-memory list context and durable personal drafts implemented. Saved workspaces and full navigation acceptance remain incomplete."
+      "evidence": "Stable navigation, authorized grouped search, record previews, bounded list context, durable drafts and personal saved investigations implemented. Actual investigation reload and preview pass; full navigation acceptance remains incomplete."
     },
     {
       "id": "CX-03",

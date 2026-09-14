@@ -103,7 +103,9 @@ Generated file inventory. Includes current and historical records; open the sour
 ## `docs/internal/development/audit-suite`
 
 - [Identity period slice and remaining coverage](../../internal/development/audit-suite/AQ04_IDENTITY_PERIOD_SLICE_2026-09-14.md) — MD
+- [Incident and continuity activity slice](../../internal/development/audit-suite/AQ04_INCIDENT_CONTINUITY_SLICE_2026-09-14.md) — MD
 - [Bounded mover source collection](../../internal/development/audit-suite/AQ04_MOVER_SOURCE_COLLECTION_2026-09-14.md) — MD
+- [Company source and recovery review — September 14, 2026](../../internal/development/audit-suite/AQ_SOURCE_RECOVERY_REVIEW_2026-09-14.md) — MD
 - [Company-source audit readiness workflow queue](../../internal/development/audit-suite/AUDIT_READINESS_WORKFLOW_QUEUE.md) — MD
 - [Company-source implementation checkpoint](../../internal/development/audit-suite/COMPANY_SOURCE_IMPLEMENTATION.md) — MD
 - [Intelligent contextual workspace](../../internal/development/audit-suite/CONTEXTUAL_WORKSPACE_WORKFLOW.md) — MD
@@ -151,6 +153,11 @@ Generated file inventory. Includes current and historical records; open the sour
 
 - [Enterprise operating and financial models](../../../enterprise/README.md) — MD
 
+## `enterprise/audit_suite`
+
+- [Private companion recovery](../../../enterprise/audit_suite/COMPANION_RECOVERY.md) — MD
+- [Per-control legacy documentary custody](../../../enterprise/audit_suite/DOCUMENTARY_CUSTODY.md) — MD
+
 ## `evidence/closeout`
 
 - [Closeout evidence](../../../evidence/closeout/README.md) — MD
@@ -158,6 +165,7 @@ Generated file inventory. Includes current and historical records; open the sour
 ## `tools/audit_suite`
 
 - [Company source inventory](../../../tools/audit_suite/COMPANY_SOURCE_INVENTORY.md) — MD
+- [Control-source readiness implementation gaps](../../../tools/audit_suite/CONTROL_SOURCE_READINESS.md) — MD
 - [Local operator commands](../../../tools/audit_suite/OPERATOR_COMMANDS.md) — MD
 
 ## `tools/ci`

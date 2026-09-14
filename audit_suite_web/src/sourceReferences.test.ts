@@ -47,3 +47,25 @@ it("rejects hidden, missing and ambiguous references", () => {
   e.artifacts.push({ id: "A1" });
   expect(sourceReference(e, { collection: "artifacts", id: "A1" })).toBeNull();
 });
+
+it("requires the exact artifact hash when the source DTO supplies a pin", () => {
+  const e = engagement();
+  e.artifacts[0].sha256 = "a".repeat(64);
+  expect(
+    sourceReference(e, {
+      collection: "artifacts",
+      id: "A1",
+      sha256: "a".repeat(64),
+    })?.kind,
+  ).toBe("artifact");
+  expect(
+    sourceReference(e, {
+      collection: "artifacts",
+      id: "A1",
+      sha256: "b".repeat(64),
+    }),
+  ).toBeNull();
+  expect(
+    sourceReference(e, { collection: "artifacts", id: "A1", sha256: null }),
+  ).toBeNull();
+});
