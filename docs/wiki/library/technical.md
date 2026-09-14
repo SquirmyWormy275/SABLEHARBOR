@@ -17,6 +17,10 @@ Generated file inventory. Includes current and historical records; open the sour
 
 - [PULL REQUEST TEMPLATE](../../../.github/PULL_REQUEST_TEMPLATE.md) — MD
 
+## `audit_suite_web`
+
+- [Audit workroom browser](../../../audit_suite_web/README.md) — MD
+
 ## `db`
 
 - [Sable Harbor database and SQL index](../../../db/README.md) — MD
@@ -96,6 +100,13 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Third-party services — executable implementation record](../../internal/development/THIRD_PARTY_SERVICES_IMPLEMENTATION_2026-09-09.md) — MD
 - [Third-party services and internal operations — reconciliation pass](../../internal/development/THIRD_PARTY_SERVICES_RECONCILIATION_2026-09-09.md) — MD
 
+## `docs/internal/development/audit-suite`
+
+- [Audit-suite contribution and state formats](../../internal/development/audit-suite/CONTRIBUTING_AND_STATE_FORMATS.md) — MD
+- [Audit training suite implementation direction](../../internal/development/audit-suite/IMPLEMENTATION_DIRECTION_2026-09-13.md) — MD
+- [Local audit-training delivery](../../internal/development/audit-suite/LOCAL_DELIVERY.md) — MD
+- [Audit-suite organization bridge and reconciliation proposal](../../internal/development/audit-suite/ORGANIZATION_RECONCILIATION_2026-09-13.md) — MD
+
 ## `docs/internal/validation`
 
 - [September 6 canon closeout - validation and delivery evidence](../../internal/validation/CANON_CLOSEOUT_2026-09-06.md) — MD
@@ -135,6 +146,10 @@ Generated file inventory. Includes current and historical records; open the sour
 ## `evidence/closeout`
 
 - [Closeout evidence](../../../evidence/closeout/README.md) — MD
+
+## `tools/audit_suite`
+
+- [Local operator commands](../../../tools/audit_suite/OPERATOR_COMMANDS.md) — MD
 
 ## `tools/ci`
 

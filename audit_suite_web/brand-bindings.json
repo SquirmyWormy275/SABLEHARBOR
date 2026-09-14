@@ -1,0 +1,14 @@
+[
+  {
+    "source": "assets/brand/logos/sable-harbor__primary-horizontal.svg",
+    "sha256": "815efb4ca06e4f2df8b9dfee3d4288f94d2e64417b7c863ce5b8639d2de07076"
+  },
+  {
+    "source": "assets/brand/logos/sable-harbor__reverse-horizontal.svg",
+    "sha256": "4931c819cfc1845cf22d7082dd08db996209d5ab6107340abbad2d4753992459"
+  },
+  {
+    "source": "assets/brand/logos/sable-harbor__mark.svg",
+    "sha256": "96fd8918371076e58e6d659db392f105c7e9187d4f690bd52ea026011d073493"
+  }
+]

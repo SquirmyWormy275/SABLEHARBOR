@@ -20,8 +20,9 @@
       "sha256": "0aeadf88197eb5ba18e0365b7f6510a90aa86f235b50fcba1177b3ed83930dc0"
     },
     {
-      "path": "docs/organization/source/chartbook.json",
-      "sha256": "6471a6362517f97574c775b73b94ac48d6060d81cee605eb661811425ed75866"
+      "path": "docs/organization/history/v1.1.0/chartbook.json",
+      "sha256": "6471a6362517f97574c775b73b94ac48d6060d81cee605eb661811425ed75866",
+      "preservation_basis": "Byte-identical predecessor retained for the September13 organization successor; original review hash unchanged."
     },
     {
       "path": "docs/finance/evidence/SH-FIN-HUMAN-001/packet.pdf",

@@ -6,15 +6,14 @@ Generated reconciliation queue, not an assertion that every unpaired record lack
 
 | State | Records |
 |---|---:|
-| COUNTERPART_REVIEW_REQUIRED | 31 |
+| COUNTERPART_REVIEW_REQUIRED | 83 |
 | HISTORICAL_COUNTERPART_UNRESOLVED | 57 |
 | NAVIGATION_ALIAS_NO_PUBLICATION | 3 |
-| READER_MAINTENANCE_NO_LETTERHEAD | 112 |
-| READER_OR_MAINTENANCE_PAGE | 154 |
-| UNRESOLVED_DOCUMENT_COUNTERPART | 227 |
+| READER_MAINTENANCE_NO_LETTERHEAD | 106 |
+| READER_OR_MAINTENANCE_PAGE | 156 |
+| UNRESOLVED_DOCUMENT_COUNTERPART | 226 |
 | VERIFIED_ACCEPTED_EVIDENCE_PACKET | 1 |
-| VERIFIED_CHART_PUBLICATION | 40 |
-| VERIFIED_DOCUMENT_PAIR | 131 |
+| VERIFIED_DOCUMENT_PAIR | 133 |
 | VERIFIED_IDENTICAL_SOURCE_PUBLICATION | 3 |
 
 ## Records requiring counterpart reconciliation
@@ -22,6 +21,7 @@ Generated reconciliation queue, not an assertion that every unpaired record lack
 Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENCE_COMPLETION.md). Other corporate records require scoped format review before any batch rendering. Existing approved visuals are retained; this queue does not authorize automatic publication.
 
 - [Contributing to Sable Harbor](../../../CONTRIBUTING.md) — Corporate document-format reconciliation
+- [SABLE HARBOR CONTROLLED DOCUMENT INDEX](../../CONTROLLED_DOCUMENT_INDEX.md) — Corporate document-format reconciliation
 - [Branch and Pull Request Register](../../audit/BRANCH_AND_PR_REGISTER.md) — SH-FIN-HUMAN-001
 - [Repository completion batch — September 13, 2026](../../audit/COMPLETION_BATCH_2026-09-13.md) — SH-FIN-HUMAN-001
 - [Outstanding issue review — September 12, 2026](../../audit/ISSUE_CLOSEOUT_2026-09-12.md) — SH-FIN-HUMAN-001
@@ -30,6 +30,10 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Actionable CCF procedure deltas](../../internal/development/CCF_ACTIONABLE_CONTROL_DELTAS_2026-09-12.md) — Corporate document-format reconciliation
 - [Integrated CCF delivery workflow](../../internal/development/CCF_INTEGRATED_DELIVERY_WORKFLOW_2026-09-12.md) — Corporate document-format reconciliation
 - [A practical first CCF system](../../internal/development/CCF_PILOT_SYSTEM_DESIGN_2026-09-12.md) — Corporate document-format reconciliation
+- [Audit-suite contribution and state formats](../../internal/development/audit-suite/CONTRIBUTING_AND_STATE_FORMATS.md) — Corporate document-format reconciliation
+- [Audit training suite implementation direction](../../internal/development/audit-suite/IMPLEMENTATION_DIRECTION_2026-09-13.md) — Corporate document-format reconciliation
+- [Local audit-training delivery](../../internal/development/audit-suite/LOCAL_DELIVERY.md) — Corporate document-format reconciliation
+- [Audit-suite organization bridge and reconciliation proposal](../../internal/development/audit-suite/ORGANIZATION_RECONCILIATION_2026-09-13.md) — Corporate document-format reconciliation
 - [ARU share purchase, closing and tax bridge](../../legal/evidence/assets-rights/SH-LEGAL-READ-ARU-001.md) — SH-FIN-HUMAN-001
 - [Cradle host rights and material title](../../legal/evidence/assets-rights/SH-LEGAL-READ-HOST-001.md) — SH-FIN-HUMAN-001
 - [Northern Nevada planning deed and cost boundary](../../legal/evidence/assets-rights/SH-LEGAL-READ-NV-001.md) — SH-FIN-HUMAN-001
@@ -43,6 +47,51 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Advisory carry and workforce instrument boundaries](../../legal/evidence/corporate/SH-LEGAL-READ-CARRY-001.md) — SH-FIN-HUMAN-001
 - [Legal entities and separate books](../../legal/evidence/corporate/SH-LEGAL-READ-ENTITY-001.md) — SH-FIN-HUMAN-001
 - [ARU transition and retention obligations](../../legal/evidence/corporate/SH-LEGAL-READ-HR-001.md) — SH-FIN-HUMAN-001
+- [Organization chart source traceability](../../organization/CANON_TRACEABILITY_MATRIX.md) — Corporate document-format reconciliation
+- [Organization chart governance](../../organization/CHART_GOVERNANCE.md) — Corporate document-format reconciliation
+- [Organization chart migration](../../organization/CHART_MIGRATION.md) — Corporate document-format reconciliation
+- [Complete chart wording](../../organization/DISPLAY_INVENTORY.md) — Corporate document-format reconciliation
+- [Unresolved and excluded records](../../organization/UNRESOLVED_AND_EXCLUDED.md) — Corporate document-format reconciliation
+- [Sable Harbor Advisory](../../organization/charts/advisory.md) — Corporate document-format reconciliation
+- [ARU operating facilities](../../organization/charts/aru-facilities.md) — Corporate document-format reconciliation
+- [ARU businesses and services](../../organization/charts/aru-services.md) — Corporate document-format reconciliation
+- [Atlas Meridian](../../organization/charts/atlas-meridian.md) — Corporate document-format reconciliation
+- [BS&T railway and facilities](../../organization/charts/bst-network.md) — Corporate document-format reconciliation
+- [Business lines](../../organization/charts/business-lines.md) — Corporate document-format reconciliation
+- [Alexandria systems and publications](../../organization/charts/corporate-alexandria.md) — Corporate document-format reconciliation
+- [Board committees](../../organization/charts/corporate-board-committees.md) — Corporate document-format reconciliation
+- [Contact collection disciplines](../../organization/charts/corporate-contact-disciplines.md) — Corporate document-format reconciliation
+- [J2 Education programs](../../organization/charts/corporate-education-programs.md) — Corporate document-format reconciliation
+- [Enterprise support services](../../organization/charts/corporate-enterprise-support.md) — Corporate document-format reconciliation
+- [Corporate headquarters](../../organization/charts/corporate-headquarters.md) — Corporate document-format reconciliation
+- [J2 organization](../../organization/charts/corporate-j2.md) — Corporate document-format reconciliation
+- [Pinakes portals](../../organization/charts/corporate-pinakes-portals.md) — Corporate document-format reconciliation
+- [Enterprise technology capabilities](../../organization/charts/corporate-technology-capabilities.md) — Corporate document-format reconciliation
+- [Business origins and former counterparties](../../organization/charts/external-counterparties.md) — Corporate document-format reconciliation
+- [Project Cradle — external hosts](../../organization/charts/external-cradle-hosts.md) — Corporate document-format reconciliation
+- [External investors](../../organization/charts/external-investors.md) — Corporate document-format reconciliation
+- [Foundry and Foundry Field](../../organization/charts/foundry-field.md) — Corporate document-format reconciliation
+- [Historical opportunities](../../organization/charts/historical-opportunities.md) — Corporate document-format reconciliation
+- [Industrial ownership](../../organization/charts/industrial-ownership.md) — Corporate document-format reconciliation
+- [Pale Sun and Red Wash](../../organization/charts/pale-sun-red-wash.md) — Corporate document-format reconciliation
+- [American Resource Utility Leadership](../../organization/charts/people-aru-leadership.md) — Corporate document-format reconciliation
+- [American Resource Utility Operations](../../organization/charts/people-aru-operations.md) — Corporate document-format reconciliation
+- [Atlas Meridian Product Leadership](../../organization/charts/people-atlas-meridian.md) — Corporate document-format reconciliation
+- [Board Committees](../../organization/charts/people-board-committees.md) — Corporate document-format reconciliation
+- [Board and Chief Executive](../../organization/charts/people-board.md) — Corporate document-format reconciliation
+- [Blood, Sweat & Tears Railway](../../organization/charts/people-bst.md) — Corporate document-format reconciliation
+- [Project Cradle Team](../../organization/charts/people-cradle.md) — Corporate document-format reconciliation
+- [Enterprise Leadership](../../organization/charts/people-enterprise.md) — Corporate document-format reconciliation
+- [Foundry and Customer Delivery](../../organization/charts/people-foundry-field.md) — Corporate document-format reconciliation
+- [J2 Leadership](../../organization/charts/people-j2.md) — Corporate document-format reconciliation
+- [The Original Eight](../../organization/charts/people-original-eight.md) — Corporate document-format reconciliation
+- [Pale Sun and Red Wash Leadership](../../organization/charts/people-pale-sun-red-wash.md) — Corporate document-format reconciliation
+- [Willow and Advanced Programs](../../organization/charts/people-willow-leadership.md) — Corporate document-format reconciliation
+- [Willow Research Team](../../organization/charts/people-willow-team.md) — Corporate document-format reconciliation
+- [Project Cradle](../../organization/charts/project-cradle.md) — Corporate document-format reconciliation
+- [Research artifacts](../../organization/charts/research-artifacts.md) — Corporate document-format reconciliation
+- [Research history](../../organization/charts/research-history.md) — Corporate document-format reconciliation
+- [Willow and the Fort](../../organization/charts/willow-fort.md) — Corporate document-format reconciliation
 - [Closeout evidence releases](../../releases/CLOSEOUT_EVIDENCE_RELEASES.md) — Corporate document-format reconciliation
 - [Facility atlas controlled releases](../../releases/FACILITY_ATLAS_RELEASES.md) — Corporate document-format reconciliation
 - [Geographic evidence releases](../../releases/GEOGRAPHIC_EVIDENCE_RELEASES.md) — Corporate document-format reconciliation
@@ -52,6 +101,8 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Protected CCF workflow API](../../../enterprise/ccf/operations/SERVICE.md) — Corporate document-format reconciliation
 - [Klein shop and Fort continuity — proposed decision](../../../geospatial/chronology/CONTINUITY_PROPOSAL.md) — Corporate document-format reconciliation
 - [Geo canon reconciliation and program closeout matrix](../../../geospatial/docs/PROGRAM_CLOSEOUT_MATRIX.md) — Corporate document-format reconciliation
+- [Headcount, occupancy and space bridge](../../../geospatial/facilities/population/BRIDGE.md) — Corporate document-format reconciliation
+- [Local operator commands](../../../tools/audit_suite/OPERATOR_COMMANDS.md) — Corporate document-format reconciliation
 
 ## Dated counterpart dispositions
 

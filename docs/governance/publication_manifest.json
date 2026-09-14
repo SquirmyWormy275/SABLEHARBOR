@@ -1,6 +1,6 @@
 {
   "standard": "SH-GOV-DOC-001",
-  "generated_for_version": "2026-09-06",
+  "generated_for_version": "2026-09-13",
   "reproducibility": {
     "mutable_pdf_metadata": "removed",
     "document_id": "derived from page content",
@@ -1017,6 +1017,22 @@
       "source_sha256": "4db7e0b179802891b1a632d08d280445350339cee7fbb70a89d059020e587994",
       "brand": "corporate",
       "normalizer": "pypdf"
+    },
+    {
+      "source": "docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md",
+      "publication": "docs/governance/publications/SH-ENTERPRISE-PPL-20260913_v1.0.0.pdf",
+      "sha256": "ea61b15fb4d130ce5c345e243c2459d4b6d0bcc6be2580d6a1b25eb3c1adf022",
+      "source_sha256": "1707ed7021576048ca5f1904ca5e94d484e8f7e2992da5c9e04965421f79a751",
+      "brand": "corporate",
+      "normalizer": "qpdf"
+    },
+    {
+      "source": "docs/governance/ENTERPRISE_COORDINATION_2026-09-13.md",
+      "publication": "docs/governance/publications/SH-ENTERPRISE-COORD-20260913_v1.0.0.pdf",
+      "sha256": "d903685a75cb3096ffdc183a086fdbca3d999f7b8b16683789c59fd85cae8439",
+      "source_sha256": "3f358e1a89ba640ab35be53682388e7d9604c0f5627dfeb5a176a6de1e7c2da9",
+      "brand": "corporate",
+      "normalizer": "qpdf"
     }
   ]
 }

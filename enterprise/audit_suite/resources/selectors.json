@@ -1,0 +1,662 @@
+{
+  "schema_version": "1.0.0",
+  "selectors": [
+    {
+      "id": "MM-01",
+      "name": "Fraud detection needed",
+      "options": [
+        {
+          "id": "MM-01.01",
+          "label": "Appears to be fraud, but is not",
+          "description": "False positive / apparent fraud with an innocent explanation."
+        },
+        {
+          "id": "MM-01.02",
+          "label": "Petty fraud",
+          "description": "The example given was minor expense misuse."
+        },
+        {
+          "id": "MM-01.03",
+          "label": "Large-scale financial misstatement",
+          "description": "Preserve this approved label within the fraud family; intent still has to be specified in the authored case."
+        },
+        {
+          "id": "MM-01.04",
+          "label": "Collusion between internal employees and vendors",
+          "description": "Coordinated conduct spanning company and vendor participants."
+        },
+        {
+          "id": "MM-01.05",
+          "label": "Fraud discovered by an external whistleblower",
+          "description": "Preserve the external-whistleblower discovery route, not merely a generic anomaly."
+        }
+      ]
+    },
+    {
+      "id": "MM-02",
+      "name": "Incomplete evidence",
+      "options": [
+        {
+          "id": "MM-02.01",
+          "label": "Missing key documents entirely",
+          "description": "The requested document is not supplied at all."
+        },
+        {
+          "id": "MM-02.02",
+          "label": "Over-redacted documents",
+          "description": "The owner described meeting minutes redacted so heavily that the relevant content could not be evaluated."
+        },
+        {
+          "id": "MM-02.03",
+          "label": "Screenshots of system references without actual documents",
+          "description": "The owner described receiving a screenshot of an internal SharePoint reference showing that an audit committee charter exists, rather than the charter itself."
+        },
+        {
+          "id": "MM-02.04",
+          "label": "Draft versions instead of final versions",
+          "description": "The requested final or signed version is replaced by a draft."
+        },
+        {
+          "id": "MM-02.05",
+          "label": "Out-of-scope substitutes",
+          "description": "A different document is supplied in place of the requested evidence."
+        },
+        {
+          "id": "MM-02.06",
+          "label": "Summaries or descriptions instead of source evidence",
+          "description": "An explanation or summary is provided instead of the underlying support."
+        },
+        {
+          "id": "MM-02.07",
+          "label": "Obsolete versions",
+          "description": "An outdated policy, report, or other version is supplied."
+        },
+        {
+          "id": "MM-02.08",
+          "label": "Evidence with unverified authorship",
+          "description": "The source or authorship of the supplied evidence cannot be established from what was provided."
+        },
+        {
+          "id": "MM-02.09",
+          "label": "Incomplete approval chains",
+          "description": "Only some required signoffs or approval steps are visible."
+        },
+        {
+          "id": "MM-02.10",
+          "label": "Unreadable formats",
+          "description": "Proprietary, corrupted, or otherwise unreadable files prevent inspection."
+        },
+        {
+          "id": "MM-02.11",
+          "label": "Demonstrated but not evidenced",
+          "description": "The owner described a genuine live process whose connected MFA/VPN/application path is difficult to capture and document. The intended problem is the support or linkage available to the auditor, not necessarily failure of the underlying process."
+        }
+      ]
+    },
+    {
+      "id": "MM-03",
+      "name": "Inexperienced client-side audit team",
+      "options": [
+        {
+          "id": "MM-03.01",
+          "label": "Misinterpretation of evidence requests",
+          "description": "The team misunderstands what was asked and provides irrelevant material."
+        },
+        {
+          "id": "MM-03.02",
+          "label": "Delays due to uncertainty",
+          "description": "Responses are delayed because the team is unsure how to respond."
+        },
+        {
+          "id": "MM-03.03",
+          "label": "Over-reliance on higher-ups",
+          "description": "The team escalates routine decisions to senior personnel."
+        },
+        {
+          "id": "MM-03.04",
+          "label": "Poor documentation of their own processes",
+          "description": "The team lacks usable documentation explaining its processes."
+        },
+        {
+          "id": "MM-03.05",
+          "label": "Difficulty explaining controls",
+          "description": "Walkthrough explanations are confused or incomplete."
+        },
+        {
+          "id": "MM-03.06",
+          "label": "Redaction and over-redaction",
+          "description": "The owner explicitly added this sixth symptom."
+        }
+      ]
+    },
+    {
+      "id": "MM-04",
+      "name": "Shifting scope mid-engagement",
+      "options": [
+        {
+          "id": "MM-04.01",
+          "label": "New business line added mid-audit",
+          "description": "An additional business line enters the scenario\u2019s engagement scope."
+        },
+        {
+          "id": "MM-04.02",
+          "label": "Previously excluded geographic locations included",
+          "description": "The engagement must address additional locations."
+        },
+        {
+          "id": "MM-04.03",
+          "label": "New regulatory framework required",
+          "description": "An additional framework is introduced into the engagement."
+        },
+        {
+          "id": "MM-04.04",
+          "label": "Previously scoped-out IT systems brought into scope",
+          "description": "Additional systems become relevant to the work."
+        },
+        {
+          "id": "MM-04.05",
+          "label": "Audit period expanded",
+          "description": "The example was adding a quarter to the period."
+        },
+        {
+          "id": "MM-04.06",
+          "label": "New third-party vendor introduced",
+          "description": "A new vendor requires consideration in the engagement."
+        },
+        {
+          "id": "MM-04.07",
+          "label": "Client internal control framework changes",
+          "description": "The example was adoption of a new set of control standards."
+        },
+        {
+          "id": "MM-04.08",
+          "label": "Materiality thresholds change mid-audit",
+          "description": "Preserve the agreed event; the earlier statement assigning audit materiality to the client was subsequently identified as incorrect by the research comparison."
+        }
+      ]
+    },
+    {
+      "id": "MM-05",
+      "name": "Client micromanagement",
+      "options": [
+        {
+          "id": "MM-05.01",
+          "label": "Management reviews every evidence item before release",
+          "description": "Every item must pass management review before the auditor receives it."
+        },
+        {
+          "id": "MM-05.02",
+          "label": "Management overrides control-owner responses",
+          "description": "Management forces different responses from control owners."
+        },
+        {
+          "id": "MM-05.03",
+          "label": "Audit committee demands direct evidence access",
+          "description": "The discussed scenario bypasses the client\u2019s normal evidence-control route."
+        },
+        {
+          "id": "MM-05.04",
+          "label": "Management changes audit evidence after feedback",
+          "description": "Preserve this label; whether a change is a legitimate correction, filtering, or misconduct must be specified in the actual case."
+        },
+        {
+          "id": "MM-05.05",
+          "label": "Audit committee requests additional procedures",
+          "description": "Additional work is requested outside the original scope."
+        },
+        {
+          "id": "MM-05.06",
+          "label": "Management pre-screens questions and delays meetings",
+          "description": "Meetings are gated or rescheduled while management reviews the questions."
+        }
+      ]
+    },
+    {
+      "id": "MM-06",
+      "name": "Conflicting regulations",
+      "options": [
+        {
+          "id": "MM-06.01",
+          "label": "Data residency and cloud storage requirements",
+          "description": "IT scenario: potential tension between residency restrictions and the proposed storage arrangement."
+        },
+        {
+          "id": "MM-06.02",
+          "label": "Encryption requirements and jurisdictional access laws",
+          "description": "IT scenario: competing claimed requirements involving encryption and access."
+        },
+        {
+          "id": "MM-06.03",
+          "label": "Data retention and data minimization",
+          "description": "IT scenario: retention requirements and minimization policies require reconciliation."
+        },
+        {
+          "id": "MM-06.04",
+          "label": "U.S. GAAP and IFRS revenue treatment",
+          "description": "Financial scenario: different reporting bases affect the revenue analysis."
+        },
+        {
+          "id": "MM-06.05",
+          "label": "Tax reporting rules and internal control policies",
+          "description": "Financial scenario: tax-reporting obligations and the client\u2019s control policy need to be reconciled."
+        }
+      ]
+    },
+    {
+      "id": "MM-07",
+      "name": "System outage impacting data",
+      "options": [
+        {
+          "id": "MM-07.01",
+          "label": "Transaction logs unavailable for a period",
+          "description": "A defined interval of transaction history cannot be accessed."
+        },
+        {
+          "id": "MM-07.02",
+          "label": "Corrupt backups",
+          "description": "Historical evidence cannot be recovered from the backup supplied in the scenario."
+        },
+        {
+          "id": "MM-07.03",
+          "label": "Lost IAM/access-control evidence",
+          "description": "Role-change or other access history is unavailable."
+        },
+        {
+          "id": "MM-07.04",
+          "label": "Incomplete change-management logs",
+          "description": "Deployments cannot be fully traced through the expected records."
+        },
+        {
+          "id": "MM-07.05",
+          "label": "Incomplete financial-system reports",
+          "description": "Downtime affects the financial reports available to the auditor."
+        },
+        {
+          "id": "MM-07.06",
+          "label": "Evidence only available in an outdated format",
+          "description": "Recovery leaves evidence in an older format that complicates inspection."
+        },
+        {
+          "id": "MM-07.07",
+          "label": "Missing approval-workflow logs",
+          "description": "Control signoffs cannot be verified from the expected workflow records."
+        },
+        {
+          "id": "MM-07.08",
+          "label": "Lost patch/update evidence",
+          "description": "The expected records of system patching or updates are missing."
+        },
+        {
+          "id": "MM-07.09",
+          "label": "Unavailable prior-period financial comparisons",
+          "description": "Historical comparisons needed for analysis cannot be produced."
+        },
+        {
+          "id": "MM-07.10",
+          "label": "Missing incident-response logs",
+          "description": "The incident-response record is incomplete or unavailable."
+        }
+      ]
+    },
+    {
+      "id": "MM-08",
+      "name": "Control-owner disagreements",
+      "options": []
+    },
+    {
+      "id": "MM-09",
+      "name": "Uncooperative third parties",
+      "options": [
+        {
+          "id": "MM-09.01",
+          "label": "Vendor delays evidence beyond deadlines",
+          "description": "The expected response arrives late or remains overdue."
+        },
+        {
+          "id": "MM-09.02",
+          "label": "Subservice organization refuses control-testing results",
+          "description": "The provider declines the requested results."
+        },
+        {
+          "id": "MM-09.03",
+          "label": "External legal counsel restricts document production",
+          "description": "The available document-production route is restricted."
+        },
+        {
+          "id": "MM-09.04",
+          "label": "Third-party evidence incomplete or redacted",
+          "description": "The provider supplies only part of the requested support."
+        },
+        {
+          "id": "MM-09.05",
+          "label": "Third-party access reviews denied",
+          "description": "Access-review evidence or access needed to perform the requested audit test is denied; the exact denial must be specified in the case."
+        }
+      ]
+    },
+    {
+      "id": "MM-10",
+      "name": "Excessive change volume",
+      "options": [
+        {
+          "id": "MM-10.01",
+          "label": "Major software patch",
+          "description": "IT: a major patch is implemented mid-audit."
+        },
+        {
+          "id": "MM-10.02",
+          "label": "Cloud migration",
+          "description": "IT: migration completes during the audit period."
+        },
+        {
+          "id": "MM-10.03",
+          "label": "Data-center relocation",
+          "description": "IT: infrastructure moves to another data center."
+        },
+        {
+          "id": "MM-10.04",
+          "label": "Critical IT vendor replacement",
+          "description": "IT: replacement affects integrations."
+        },
+        {
+          "id": "MM-10.05",
+          "label": "IAM system overhaul",
+          "description": "IT: identity and access management is substantially changed."
+        },
+        {
+          "id": "MM-10.06",
+          "label": "Network architecture redesign",
+          "description": "IT: the relevant network architecture changes."
+        },
+        {
+          "id": "MM-10.07",
+          "label": "Backup solution replacement",
+          "description": "IT: replacement affects retention arrangements."
+        },
+        {
+          "id": "MM-10.08",
+          "label": "New security tool",
+          "description": "IT: the example included logs initially unavailable."
+        },
+        {
+          "id": "MM-10.09",
+          "label": "Legacy-system decommissioning",
+          "description": "IT: a legacy system is decommissioned mid-audit."
+        },
+        {
+          "id": "MM-10.10",
+          "label": "Change-management process update",
+          "description": "IT: preserve this approved type; the earlier claim that a process change makes old evidence obsolete is not an accepted general evidence rule."
+        },
+        {
+          "id": "MM-10.11",
+          "label": "New revenue-recognition policy",
+          "description": "Financial: a new policy is adopted mid-period."
+        },
+        {
+          "id": "MM-10.12",
+          "label": "Depreciation-method change",
+          "description": "Financial: the fixed-asset depreciation method changes."
+        },
+        {
+          "id": "MM-10.13",
+          "label": "New tax legislation affecting deferred tax",
+          "description": "Financial: revised tax rules affect calculations."
+        },
+        {
+          "id": "MM-10.14",
+          "label": "Key supplier contract renegotiation",
+          "description": "Financial: the change affects cost structure."
+        },
+        {
+          "id": "MM-10.15",
+          "label": "Internal control framework update",
+          "description": "Financial: the example required renewed walkthrough work."
+        }
+      ]
+    },
+    {
+      "id": "MM-11",
+      "name": "Rapid staff turnover",
+      "options": [
+        {
+          "id": "MM-11.01",
+          "label": "Loss of process knowledge",
+          "description": "Evidence preparation is delayed after knowledgeable personnel leave."
+        },
+        {
+          "id": "MM-11.02",
+          "label": "New owners unfamiliar with audit requirements",
+          "description": "Incomplete or incorrect evidence is supplied by successors."
+        },
+        {
+          "id": "MM-11.03",
+          "label": "Vacant approval roles",
+          "description": "Required approvals or signoffs are delayed."
+        },
+        {
+          "id": "MM-11.04",
+          "label": "Repeat walkthroughs or audit work",
+          "description": "New staff do not follow prior procedures, requiring additional understanding or testing."
+        }
+      ]
+    },
+    {
+      "id": "MM-12",
+      "name": "Unapproved tools used",
+      "options": [
+        {
+          "id": "MM-12.01",
+          "label": "Unapproved cloud storage",
+          "description": "Example: personal file shares."
+        },
+        {
+          "id": "MM-12.02",
+          "label": "Unapproved communication platforms",
+          "description": "Example: unsanctioned messaging applications."
+        },
+        {
+          "id": "MM-12.03",
+          "label": "Unapproved financial modeling tools",
+          "description": "The discussion used nonvalidated spreadsheets as an example; actual approval status must be established in the authored scenario."
+        },
+        {
+          "id": "MM-12.04",
+          "label": "Unapproved encryption or security tools",
+          "description": "Example: shadow-IT security solutions."
+        },
+        {
+          "id": "MM-12.05",
+          "label": "Unapproved data-analysis tools",
+          "description": "Example: unvetted AI platforms."
+        }
+      ]
+    },
+    {
+      "id": "MM-13",
+      "name": "Regulatory change mid-audit",
+      "options": [
+        {
+          "id": "MM-13.01",
+          "label": "Data privacy laws",
+          "description": "Example: a new privacy requirement takes effect during the year."
+        },
+        {
+          "id": "MM-13.02",
+          "label": "Financial reporting standards",
+          "description": "Example: an IFRS or GAAP update."
+        },
+        {
+          "id": "MM-13.03",
+          "label": "Cybersecurity requirements",
+          "description": "Example: changed breach-notification obligations."
+        },
+        {
+          "id": "MM-13.04",
+          "label": "Tax legislation",
+          "description": "Example: corporate-tax changes."
+        },
+        {
+          "id": "MM-13.05",
+          "label": "Industry-specific compliance",
+          "description": "Examples: healthcare or financial-sector rules."
+        }
+      ]
+    },
+    {
+      "id": "MM-14",
+      "name": "Data breach impacting integrity",
+      "options": [
+        {
+          "id": "MM-14.01",
+          "label": "Compromised data integrity",
+          "description": "The stated impact was that the relevant evidence cannot be trusted; the actual scope of affected evidence must be defined in the case."
+        },
+        {
+          "id": "MM-14.02",
+          "label": "Missing records following breach response",
+          "description": "Key records are unavailable after response activity."
+        },
+        {
+          "id": "MM-14.03",
+          "label": "Confidential data exposure affecting scope",
+          "description": "Exposure requires reconsideration of the scenario\u2019s audit scope."
+        },
+        {
+          "id": "MM-14.04",
+          "label": "Additional incident-response work",
+          "description": "Incident-response processes become part of the work and affect the original procedures/timeline."
+        },
+        {
+          "id": "MM-14.05",
+          "label": "Regulatory reporting obligations",
+          "description": "Applicable reporting obligations create additional work in the scenario."
+        }
+      ]
+    },
+    {
+      "id": "MM-15",
+      "name": "Legacy systems with minimal documentation",
+      "options": [
+        {
+          "id": "MM-15.01",
+          "label": "Lack of audit trails",
+          "description": "Key transactions cannot be traced through the expected records."
+        },
+        {
+          "id": "MM-15.02",
+          "label": "Unsupported file formats",
+          "description": "Relevant data is held in obsolete formats."
+        },
+        {
+          "id": "MM-15.03",
+          "label": "Missing system documentation",
+          "description": "System manuals or process descriptions are unavailable."
+        },
+        {
+          "id": "MM-15.04",
+          "label": "Manual workarounds",
+          "description": "Critical processes rely on manual steps around system limitations."
+        },
+        {
+          "id": "MM-15.05",
+          "label": "No vendor support",
+          "description": "Problems cannot be escalated to a supporting vendor for fixes."
+        }
+      ]
+    },
+    {
+      "id": "MM-16",
+      "name": "Data and population reliability",
+      "options": [
+        {
+          "id": "MM-16.01",
+          "label": "Population incompleteness",
+          "description": "Relevant entities or records are missing from reports."
+        },
+        {
+          "id": "MM-16.02",
+          "label": "Report filter errors",
+          "description": "Report logic excludes relevant transactions."
+        },
+        {
+          "id": "MM-16.03",
+          "label": "Duplicated records",
+          "description": "The same items are counted more than once."
+        },
+        {
+          "id": "MM-16.04",
+          "label": "Unverified report parameters",
+          "description": "Extraction settings need to be established before use."
+        },
+        {
+          "id": "MM-16.05",
+          "label": "Data-source conflicts",
+          "description": "Different systems present inconsistent populations."
+        }
+      ]
+    },
+    {
+      "id": "MM-17",
+      "name": "Control design failures \u2014 test of design only",
+      "options": [
+        {
+          "id": "MM-17.01",
+          "label": "Control does not cover all relevant risks",
+          "description": "The approved wording was: control exists but does not cover all relevant risks."
+        },
+        {
+          "id": "MM-17.02",
+          "label": "Undocumented design assumptions",
+          "description": "The approved wording was: the control design relies on assumptions that are not documented."
+        },
+        {
+          "id": "MM-17.03",
+          "label": "Undefined key steps",
+          "description": "The approved wording was: key steps in the control are not defined, with vague procedures."
+        },
+        {
+          "id": "MM-17.04",
+          "label": "Subjective criteria without thresholds",
+          "description": "The approved wording was: the control relies on subjective criteria with no thresholds."
+        },
+        {
+          "id": "MM-17.05",
+          "label": "Missing documentation of control intent",
+          "description": "The approved wording was: documentation of control intent is missing, making the design untestable."
+        }
+      ]
+    },
+    {
+      "id": "MM-18",
+      "name": "Accounting errors or assumptions",
+      "options": [
+        {
+          "id": "MM-18.01",
+          "label": "Revenue-recognition errors",
+          "description": "Incorrect timing or recognition criteria."
+        },
+        {
+          "id": "MM-18.02",
+          "label": "Incorrect assumptions in estimates",
+          "description": "The example given was warranty reserves."
+        },
+        {
+          "id": "MM-18.03",
+          "label": "Cutoff errors",
+          "description": "Revenue or expense recorded in the wrong period."
+        },
+        {
+          "id": "MM-18.04",
+          "label": "Unrecorded liabilities",
+          "description": "Obligations are omitted."
+        },
+        {
+          "id": "MM-18.05",
+          "label": "Inventory misstatements",
+          "description": "Valuation or existence problems."
+        }
+      ]
+    }
+  ]
+}

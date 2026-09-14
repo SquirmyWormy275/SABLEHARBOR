@@ -9,8 +9,13 @@ from sable_harbor.exports.safety import scan_generated_artifacts
 FORBIDDEN = ("ghp_", "github_pat_", "sk-proj-", "BEGIN PRIVATE KEY")
 MAX_BYTES = 10 * 1024 * 1024
 ALLOWED_LARGE_PUBLIC_ARTIFACTS = {
-    # Reviewed September 10 successor: six approved J2 names, unchanged public scope.
+    # September13 locally reviewed successor; owner visual acceptance remains separate.
     Path("docs/organization/assets/current/Sable-Harbor-Organization-Charts.pdf"): (
+        12419501,
+        "7cf4607406ed56bd7cafdbcaecd136ba53ba7df21706f2fa7080056f908fcdf9",
+    ),
+    # Byte-identical September10 predecessor preserved by the new successor.
+    Path("docs/organization/history/v1.1.0/Sable-Harbor-Organization-Charts.pdf"): (
         12412796,
         "352dfa4f1247f6089d340b19940f75758a666dce14f239fb38b1c2a300aaa38b",
     ),

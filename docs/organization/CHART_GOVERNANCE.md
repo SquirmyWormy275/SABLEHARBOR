@@ -1,6 +1,6 @@
 # Organization chart governance
 
-**Revision 1.1.0 · September 10, 2026**
+**Revision 1.2.0 · September 13, 2026**
 
 ## Card contract
 
@@ -21,3 +21,7 @@ The recovered September 9 PDF is preserved in history/v1.0.0. The September 10 s
 ## Change control
 
 Run the exporter, organization validator, repository hygiene, governance/publication checks and tests before merge. Validate every changed card, all affected relationships and current-source qualifications. Preserve [immutable history](CHART_MIGRATION.md) and [pinned sources](SOURCE_LOCK_EXCEPTIONS.md). No legacy generator may restore retired artwork to current navigation.
+
+## September 13 successor review
+
+The [dated enterprise appointment decision](../canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md) authorizes fifteen fictional occupants of existing functions. The v1.1.0 approved PDF and display source remain byte-identical in `history/v1.1.0/`. The v1.2.0 successor appends three membership pages and updates publication footers, retaining original cards, connectors, logos and typography. Joining years remain unrecorded, rather than treating appointment dates as employment dates. Exact card-source validation and engineering visual review support this branch; owner pixel approval and accepted merge are not asserted.

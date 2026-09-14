@@ -74,7 +74,7 @@ def export():
     assets = {master.name}
     chart_pages = set()
     register = {'schemaVersion': '1.0.0', 'canonicalDate': data['as_of'],
-                'registerVersion': data['publication_revision'], 'status': 'source-backed-approved-chart-book',
+                'registerVersion': data['publication_revision'], 'status': data.get('publication_status', 'source-backed-approved-chart-book'),
                 'visualMaster': data['visual_master'], 'visualMasterSha256': data['visual_master_sha256'],
                 'displaySource': str(SOURCE.relative_to(ROOT)), 'charts': []}
     for chart in data['charts']:

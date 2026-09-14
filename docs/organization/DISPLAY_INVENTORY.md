@@ -1,6 +1,6 @@
 # Complete chart wording
 
-208 display records. Repeated appearances of the same card are counted once. Person columns mean name, job title and joining year; entity columns mean name, location and actual work.
+223 display records. Repeated appearances of the same card are counted once. Person columns mean name, job title and joining year; entity columns mean name, location and actual work.
 
 | ID | Name | Location / job title | Actual work / joining year | Sources |
 | --- | --- | --- | --- | --- |
@@ -212,3 +212,18 @@
 | P066 | Anika Trish | Head of Judgment | Joined 2021 | docs/canon/J2_LEADERSHIP_APPOINTMENTS_2026-09-10.md; docs/j2/J2_ESTABLISHMENT.md |
 | P067 | Grant Kohrs | Head of Orientation | Joined 2020 | docs/canon/J2_LEADERSHIP_APPOINTMENTS_2026-09-10.md; docs/j2/J2_ESTABLISHMENT.md |
 | P068 | Brett Calder | Head of Education | Joined 2021 | docs/canon/J2_LEADERSHIP_APPOINTMENTS_2026-09-10.md; docs/j2/EDUCATION.md |
+| AS-P001 | Lila Kestrel | Chief of Enterprise Support Services | Year not recorded | docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md |
+| AS-P002 | Adrian Lowe | Chief Financial Officer | Year not recorded | docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md |
+| AS-P003 | Helena Ward | General Counsel | Year not recorded | docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md |
+| AS-P004 | Nina Rowan | Corporate Secretary | Year not recorded | docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md |
+| AS-P005 | Martin Ives | Head of Risk and Compliance | Year not recorded | docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md |
+| AS-P006 | Sofia Hart | Head of People and Culture | Year not recorded | docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md |
+| AS-P007 | Elliot Tran | Head of Enterprise Technology Services | Year not recorded | docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md |
+| AS-P008 | Dana West | Chief Information Security Officer | Year not recorded | docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md |
+| AS-P009 | Rowan Price | Head of Internal Audit | Year not recorded | docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md |
+| AS-P010 | Cameron Shore | President of Sable Harbor Advisory | Year not recorded | docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md |
+| AS-P011 | Clara Bennett | Corporate Controller | Year not recorded | docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md |
+| AS-P012 | Victor Lane | Facilities and Workplace Lead | Year not recorded | docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md |
+| AS-P013 | Erin Cross | Procurement and Supplier Risk Lead | Year not recorded | docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md |
+| AS-P014 | Omar Vale | Data Governance and Records Lead | Year not recorded | docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md |
+| AS-P015 | Evie Quinn | Enterprise Safety and Environmental Governance Lead | Year not recorded | docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md |

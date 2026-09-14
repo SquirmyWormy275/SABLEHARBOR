@@ -5,8 +5,7 @@ from __future__ import annotations
 import hashlib
 import importlib.util
 import json
-import subprocess
-import sys
+import shutil
 from pathlib import Path
 
 import fitz
@@ -25,7 +24,11 @@ EXPECTED = [
 
 
 def source():
-    return json.loads((ORG / "source/chartbook.json").read_text())
+    # September 10 migration remains tested against its preserved release,
+    # independently of later authorized organization successors.
+    data = json.loads((ORG / "history/v1.1.0/chartbook.json").read_text())
+    data["visual_master"] = "docs/organization/history/v1.1.0/Sable-Harbor-Organization-Charts.pdf"
+    return data
 
 
 def roster():
@@ -205,21 +208,25 @@ def test_decision_is_in_controlled_publication_and_catalog():
             assert name in text
 
 
-def test_migration_is_idempotent_after_accepted_authoring():
-    paths = [
-        ORG / "source/chartbook.json",
-        ROOT / source()["visual_master"],
-        ROOT / "docs/structured/j2_leadership_2026-09-10.json",
-        ROOT / DECISION,
-    ]
-    before = {path: digest(path) for path in paths}
-    subprocess.run(
-        [
-            sys.executable,
-            str(ROOT / "tools/organization/adopt_j2_leadership_20260910.py"),
-            "--apply",
-        ],
-        cwd=ROOT,
-        check=True,
+def test_migration_is_idempotent_after_accepted_authoring(tmp_path):
+    spec = importlib.util.spec_from_file_location(
+        "j2_migration_archived_test", ROOT / "tools/organization/adopt_j2_leadership_20260910.py"
     )
-    assert {path: digest(path) for path in paths} == before
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    module.ROOT = tmp_path
+    module.ORG = tmp_path / "docs/organization"
+    archived = json.loads((ORG / "history/v1.1.0/chartbook.json").read_text())
+    copies = {
+        "docs/organization/source/chartbook.json": ORG / "history/v1.1.0/chartbook.json",
+        archived["visual_master"]: ORG / "history/v1.1.0/Sable-Harbor-Organization-Charts.pdf",
+        module.ROSTER: ROOT / module.ROSTER,
+        DECISION: ROOT / DECISION,
+    }
+    for destination, original in copies.items():
+        path = tmp_path / destination
+        path.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(original, path)
+    before = {path: digest(tmp_path / path) for path in copies}
+    module.apply()
+    assert {path: digest(tmp_path / path) for path in copies} == before
