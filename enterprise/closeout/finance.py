@@ -69,6 +69,7 @@ class CloseoutAdjustment(RuntimeAdjustment):
         self.parent_tax = None
         self.industrial_tax = None
         self.future_industrial_tax = None
+        self.historical_rot = None
         self.state_minimum = None
         self.software_tax = None
         self.legacy_equipment_correction = False
@@ -115,6 +116,8 @@ class CloseoutAdjustment(RuntimeAdjustment):
             )
         if self.rwh_book is not None:
             self.rwh_book.post_opening(books)
+        if self.historical_rot is not None:
+            self.historical_rot.post_opening(books)
         if self.state_minimum is not None:
             self.state_minimum.post_opening(books)
         if self.parent_tax is not None:
