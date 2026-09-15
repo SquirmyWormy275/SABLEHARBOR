@@ -405,3 +405,45 @@ cash. Changed use jurisdiction, tangible delivery, amount or period forces renew
 review; this treatment does not persist past the 2027 legal change by default.
 The other 34 material/industrial contracts remain separately classified rather
 than receiving this service conclusion through a shared issuer or tax field.
+
+## Current industrial transaction tax successor
+
+[industrial_transaction_tax.json](industrial_transaction_tax.json) completes the remaining
+34 August contract/invoice tax screens over **$6,939,266.00** of unchanged principal:
+17 Wyoming freight, eight Wyoming handling, four Wyoming custody-storage contracts,
+one West Virginia refiner-input resale, and four Illinois uranium-intermediate resales.
+These classifications use the existing industrial facility assignments and Red Wash's
+accepted Illinois delivery terms. Commodity names in a railway contract describe cargo;
+they do not mean the carrier sold that cargo. Wyoming SF0079's July 1, 2026
+sales/use-tax reorganization is included in the authority review.
+
+Five newly authored synthetic purchaser certificates document the physical-product
+resale conclusions, including express downstream title transfer for utility procurement
+and out-of-state purchaser certification for Illinois. No blanket nuclear-utility exemption,
+real tax-registration number, regulatory signature, or government acknowledgement is
+asserted. The older uranium private-letter rulings returned by search are expressly
+**excluded**: Illinois's archive states that rulings are revoked after ten years. The
+current general resale rules and the declared transaction facts support this edition.
+
+This is ordinary retrospective fictional completion, available September 15; it does
+not recover contemporary external evidence. The mine invoice population remains the
+retained equal-month allocation of annual contract economics, distinct from physical
+production/delivery dates. The September 200lb toll-custody event retains RWH title and
+adds no revenue. Zero tax for these stated transactions creates no deduction, cash,
+new journal, or relief from mineral, property, income or purchase-use taxes. Changes
+to delivery, consumption, repair, well-site work or resale evidence require a fresh
+measurement and a separately reconciled financial adjustment.
+
+Reperform against the composed company checkout:
+
+```sh
+python -m enterprise.ccf.company_closeout.industrial_tax --repository /path/to/company-checkout
+python -m unittest enterprise.ccf.company_closeout.test_industrial_tax -v
+```
+
+The actual-current-generator integration check passes 34 IDs, five certificates,
+$6,939,266.00 principal and $0.00 additional sales tax. Negative tests reject changed
+use facts, canceled/missing/late certificates, wrong entity/invoice/period, omitted or
+duplicated contracts. This narrow screen supplements current invoice `tax_usd=null`
+fields until the operations owner consumes the annotations; it does not silently
+rewrite another lane's source or derivative.
