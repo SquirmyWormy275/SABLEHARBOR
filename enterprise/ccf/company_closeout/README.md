@@ -172,3 +172,63 @@ survive. This is exercised local reference software, not backup/restore evidence
 for the active portal or a deployed company estate; those integration gates remain.
 The fixed fixture backup hash is
 `4140b4fe12e2cd0ec4046b8115cada2bb772a336d879c53fbbb589cd5d8e1965`.
+
+## Seven-unit and corporate activity applicability
+
+`activity_applicability.json` extends the original permit/event review with 30
+explicit activity/duty boundaries covering all seven businesses and corporate
+functions. Each records legal entity, site, jurisdiction, activity, source hash,
+owner, condition, population, status and next action. The unit list reuses existing
+export slugs. It creates neither a parallel company database nor new legal entities.
+
+| Boundary | Declared source population and principal obligation |
+|---|---|
+| Foundry Field | 60 conditional contracts; accepted FF-003 issuance supplement separately scoped; delivery/acceptance/billing and source entitlement |
+| Atlas Meridian | 15 conditional licenses and 40 evaluation engagements; separate license rights, client/professional-plane boundary and gated acceptance |
+| Advisory | 120 conditional matters; outcome acceptance, confidentiality and actual-service professional-scope screening |
+| Willow | Four conditional research projects; failure/transfer gates, Fort workplace exposure and receiving-owner qualification |
+| Cradle | Stream 17, Demotte and Bedford responsibilities; two distinct recovery processes; host stop/compliance authority, custody/assay/title and accepted sale |
+| Pale Sun / RWH | 14 permits, linked environmental/workplace evidence; separate legal operator and source-material responsibility |
+| ARU / BST | 12 industrial facilities and 14 historical safety events; custody, qualified assignments, reporting and open-claim boundaries |
+| Corporate | Employer/payroll, tax/filing groups, financing, privacy, retention/hold and three separate runtime activation boundaries |
+
+The matrix also joins each unit to the existing information-access contract.
+It distinguishes six conditional future-due boundaries, three source-scoped
+no-occurrence activation boundaries, performed reference work and missing/not-run
+evidence. Counts describe activity boundaries and source populations, not statutory
+occurrences. An inactive provider site has no activation in the declared source;
+that is not a claim that the entire company has no incidents. Missing PHI or
+CCPA-threshold facts mean unresolved applicability, not non-applicability.
+
+Primary authority work is retained in `primary_authority_reviews`: IRS employer
+reporting/deposit guidance, 2025 29 CFR Part 516, CPPA's January 2026 regulations and
+January 2025 monetary adjustment, and HHS's covered-entity/business-associate
+boundary guidance. Exact downloaded primary bytes are hash-recorded where obtained.
+The HHS browser page was read, but direct retrieval was forbidden; no fabricated
+hash is supplied. DOL fact-sheet retrieval failed twice; GovInfo Part 516 supplied
+the primary text instead. These are factual applicability screens, not legal
+opinions. Filing-year forms, amendments, worker classifications and instrument
+conditions remain necessary for specific executable conclusions.
+
+The payroll route explicitly preserves BST's railroad-tax boundary rather than
+assigning ordinary FICA/FUTA to every employee. The payroll lane separately models
+RRTA and retains RUIA experience-rating limits. Privacy review uses actual preceding-
+year business/processing facts; a future revenue forecast cannot establish CCPA
+scope. HIPAA is not imposed because an employer possesses employee information.
+Professional-service regulation is screened from actual scope and remuneration,
+not from the name Advisory or an internal carry plan. Site duties follow operator
+and host responsibility; no blanket framework requirement is created.
+
+```sh
+uv run python -m enterprise.ccf.company_closeout.applicability
+uv run python -m unittest enterprise.ccf.company_closeout.test_applicability -v
+```
+
+Source population selectors independently reconcile contracts, matters, permits,
+facilities, events and selected site states. Tests reject omissions/duplicates,
+wrong legal identity, stale source, changed counts, premature availability and
+unsupported PASS promotion. The initial third-site check expected a colocation
+contract field absent from the owned-site schema; the corrected validator tests
+owned-site operation and retains contract-state checks only for provider sites.
+All declared site/contract checks then passed. SH-C05 remains bounded where actual
+occurrence populations, authority details or performance are explicitly missing.
