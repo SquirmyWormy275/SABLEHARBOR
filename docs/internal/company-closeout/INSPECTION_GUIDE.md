@@ -1,6 +1,8 @@
 # Company edition inspection and reproduction
 
-Document ID SH-COMPANY-INSPECTION-2026-09-15. Prepared September 15, 2026 UTC.
+**Document ID:** SH-COMPANY-INSPECTION-2026-09-15
+**Version:** 1.0.0
+Prepared September 15, 2026 UTC.
 This guide defines the package route. The [register](REGISTER.json) and final release
 receipt determine accepted scope; this working guide is not a delivery receipt.
 
@@ -85,6 +87,14 @@ retention window truncates the distributable CSV/SQLite files. Source-specific
 population and availability filters still apply.
 
 ## Reproduce from the pinned source
+
+Controlled publications use `python -m tools.company_closeout.publications`, the
+dated document-population successor to `tools/documents/build_controlled_publications.py`.
+It reuses that exact approved renderer, style and source artwork. The predecessor
+file is itself pinned by historical finance evidence and retains its original bytes.
+When running the maintainer's predecessor command, run the successor afterward,
+then `python tools/documents/build_institutional_catalog.py`; this restores the
+complete current publication population before catalog verification.
 
 Use a real Git checkout of `MANIFEST.json`'s `source_commit`, then install the
 supported dependency environment. `uv.lock` and the repository requirement files

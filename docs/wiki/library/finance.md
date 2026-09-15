@@ -188,6 +188,17 @@ Generated file inventory. Includes current and historical records; open the sour
 - [working-paper](../../finance/evidence/close/draft/working-paper.pdf) — PDF
 - [working-papers](../../finance/evidence/close/draft/working-papers.xlsx) — XLSX
 
+## `docs/finance/evidence/company-closeout`
+
+- [Adopted parent corporate history and provision successor](../../finance/evidence/company-closeout/ADOPTED_PARENT_TAX.md) — MD · [formatted PDF](../../finance/publications/SH-COMPANY-PARENT-TAX-20260915_v1.0.0.pdf)
+- [Authored 2016–2022 tax and cash reconstruction](../../finance/evidence/company-closeout/HISTORICAL_TAX_RECONSTRUCTION.md) — MD
+- [Company finance successor — September 15, 2026](../../finance/evidence/company-closeout/README.md) — MD
+- [Prospective software sales-tax population](../../finance/evidence/company-closeout/SOFTWARE_SALES_TAX.md) — MD
+- [Continuing sovereignty reporting](../../finance/evidence/company-closeout/SOVEREIGNTY_METHOD.md) — MD · [formatted PDF](../../finance/publications/SH-COMPANY-SOVEREIGNTY-20260915_v1.0.0.pdf)
+- [Entity filing calendar and performance boundary](../../finance/evidence/company-closeout/TAX_FILING_CALENDAR.md) — MD
+- [Parent tax history and filing boundaries](../../finance/evidence/company-closeout/TAX_HISTORY.md) — MD
+- [Treasury timing, debt/security and investor reading route](../../finance/evidence/company-closeout/TREASURY_AND_INVESTOR_ROUTE.md) — MD
+
 ## `docs/finance/evidence/coverage`
 
 - [Finance evidence: scope and source access](../../finance/evidence/coverage/README.md) — MD
@@ -236,6 +247,9 @@ Generated file inventory. Includes current and historical records; open the sour
 ## `docs/finance/publications`
 
 - [Current business-unit evidence export contract — SH-AUDIT-UNIT-EXPORT-001_v1.0.0](../../finance/publications/SH-AUDIT-UNIT-EXPORT-001_v1.0.0.pdf) — PDF
+- [Company edition inspection and reproduction — SH-COMPANY-INSPECTION-20260915_v1.0.0](../../finance/publications/SH-COMPANY-INSPECTION-20260915_v1.0.0.pdf) — PDF
+- [Adopted parent corporate history and provision successor — SH-COMPANY-PARENT-TAX-20260915_v1.0.0](../../finance/publications/SH-COMPANY-PARENT-TAX-20260915_v1.0.0.pdf) — PDF
+- [Continuing sovereignty reporting — SH-COMPANY-SOVEREIGNTY-20260915_v1.0.0](../../finance/publications/SH-COMPANY-SOVEREIGNTY-20260915_v1.0.0.pdf) — PDF
 - [Business-driven enterprise financial model — SH-FIN-BUSINESS-001_v1.0.0](../../finance/publications/SH-FIN-BUSINESS-001_v1.0.0.pdf) — PDF
 
 ## `docs/legal`
@@ -597,10 +611,12 @@ Generated file inventory. Includes current and historical records; open the sour
 
 - [Tier 1 Advisory policy integration](../../../enterprise/operations/docs/advisory-policy.md) — MD
 - [Commercial operations and contract economics](../../../enterprise/operations/docs/commercial.md) — MD
+- [August 2026 people and operating reconstruction](../../../enterprise/operations/docs/completed-period.md) — MD
 - [Synthetic control execution and evidence](../../../enterprise/operations/docs/controls.md) — MD
 - [Credit and Treasury operating histories](../../../enterprise/operations/docs/credit.md) — MD
 - [Workforce and management development](../../../enterprise/operations/docs/management.md) — MD
 - [Advisory matter operating histories](../../../enterprise/operations/docs/matters.md) — MD
+- [August Pale Sun legal-employer allocation](../../../enterprise/operations/docs/ps-legal-payroll-bridge.md) — MD
 - [Research, captured material and industrial operating detail](../../../enterprise/operations/docs/research.md) — MD
 
 ## `enterprise/operations/publications`

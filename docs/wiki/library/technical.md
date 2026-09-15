@@ -72,7 +72,11 @@ Generated file inventory. Includes current and historical records; open the sour
 
 ## `docs/internal/company-closeout`
 
+- [Exact historical capitalization — reviewable authoring proposal](../../internal/company-closeout/CAPITAL_HISTORY_PROPOSAL.md) — MD
+- [Debt and selected host evidence — August 2026](../../internal/company-closeout/DEBT_AND_HOST_DISPOSITIONS.md) — MD
+- [Company edition inspection and reproduction](../../internal/company-closeout/INSPECTION_GUIDE.md) — MD · [formatted PDF](../../finance/publications/SH-COMPANY-INSPECTION-20260915_v1.0.0.pdf)
 - [Main source protection](../../internal/company-closeout/MAIN_PROTECTION.md) — MD
+- [Company edition to existing audit portal](../../internal/company-closeout/PORTAL_CONTRACT.md) — MD
 - [PR #145 integration evidence](../../internal/company-closeout/PR145_INTEGRATION.md) — MD
 
 ## `docs/internal/development`

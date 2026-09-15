@@ -1,5 +1,8 @@
 # Adopted parent corporate history and provision successor
 
+**Document ID:** SH-COMPANY-PARENT-TAX-2026-09-15
+**Version:** 1.0.0
+
 Prepared September 15, 2026 UTC. Authority: SH-VOICE-TAX-01 and the subsequent
 owner statement, **“Adopt corporate-from-formation history.”** This supersedes
 the open initial-versus-prospective history selection in TAX_HISTORY.md. It does

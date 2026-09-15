@@ -1,6 +1,7 @@
 # Continuing sovereignty reporting
 
-Document ID SH-CAP-SOVEREIGNTY-2026-09-15. Version 1.0.0.
+**Document ID:** SH-CAP-SOVEREIGNTY-2026-09-15
+**Version:** 1.0.0
 Prepared September 15, 2026 UTC; implementation pending integrated acceptance.
 Authority: [SH-VOICE-CAP-01](../../../canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md).
 

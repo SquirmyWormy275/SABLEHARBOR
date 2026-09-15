@@ -891,38 +891,6 @@
       "normalizer": "pypdf"
     },
     {
-      "source": "docs/canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md",
-      "publication": "docs/governance/publications/SH-COMPANY-DIRECTIONS-20260915_v1.1.0.pdf",
-      "sha256": "cf3e20c5b5c8afb6bd1659e12953b37fe595e60d30b9db2abad50df97ec164a4",
-      "source_sha256": "8deda12a2e74889f62cbf81d7e8842ce23cda54cdfa8f47d26a19536e0777ec4",
-      "brand": "corporate",
-      "normalizer": "qpdf"
-    },
-    {
-      "source": "docs/internal/company-closeout/INSPECTION_GUIDE.md",
-      "publication": "docs/finance/publications/SH-COMPANY-INSPECTION-20260915_v1.0.0.pdf",
-      "sha256": "4749b0dac216bfe9efb7422cac1fb237deb9721e5248ddc822c9d700162729f7",
-      "source_sha256": "05d4216b9e0d2f2a5d1ecadf3e7abc6a4421068e5579e6006f284c9b653ce82c",
-      "brand": "corporate",
-      "normalizer": "qpdf"
-    },
-    {
-      "source": "docs/finance/evidence/company-closeout/SOVEREIGNTY_METHOD.md",
-      "publication": "docs/finance/publications/SH-COMPANY-SOVEREIGNTY-20260915_v1.0.0.pdf",
-      "sha256": "5a9d3bd176030a5f412745b3dedd278bd03c620dc5ce87e3c793d97ece7bf188",
-      "source_sha256": "3be0ab85c2a5d4fd1a0c6f9478794f2c55a8e2deb2b1a3649488036e2763dd39",
-      "brand": "corporate",
-      "normalizer": "qpdf"
-    },
-    {
-      "source": "docs/finance/evidence/company-closeout/ADOPTED_PARENT_TAX.md",
-      "publication": "docs/finance/publications/SH-COMPANY-PARENT-TAX-20260915_v1.0.0.pdf",
-      "sha256": "9145ffba495bdf0175be3ad96f5aa550743b85bfd4672ef6770b9222e724dde1",
-      "source_sha256": "d87b3eeae17362428bc341a8a8c843aa298fb242a93257894d7c42388538c069",
-      "brand": "corporate",
-      "normalizer": "qpdf"
-    },
-    {
       "source": "docs/finance/BUSINESS_DRIVEN_SUCCESSOR_2026-09-09.md",
       "publication": "docs/finance/publications/SH-FIN-BUSINESS-001_v1.0.0.pdf",
       "sha256": "b8b53402ebe7a3be8859d19bee3cd98b29e5dc354ca3732a1dc9c872131699df",
@@ -1049,6 +1017,38 @@
       "source_sha256": "4db7e0b179802891b1a632d08d280445350339cee7fbb70a89d059020e587994",
       "brand": "corporate",
       "normalizer": "pypdf"
+    },
+    {
+      "source": "docs/canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md",
+      "publication": "docs/governance/publications/SH-COMPANY-DIRECTIONS-20260915_v1.1.0.pdf",
+      "sha256": "cf3e20c5b5c8afb6bd1659e12953b37fe595e60d30b9db2abad50df97ec164a4",
+      "source_sha256": "8deda12a2e74889f62cbf81d7e8842ce23cda54cdfa8f47d26a19536e0777ec4",
+      "brand": "corporate",
+      "normalizer": "qpdf"
+    },
+    {
+      "source": "docs/internal/company-closeout/INSPECTION_GUIDE.md",
+      "publication": "docs/finance/publications/SH-COMPANY-INSPECTION-20260915_v1.0.0.pdf",
+      "sha256": "c09e68bd589f6e270f2517d52cb10b32e8fec5916f62a77afecb3e009e4f2cec",
+      "source_sha256": "a385117643ca7d6d067ef61e50e1ae2e2ba8ec0f0b6b79689e3ab5634f25032e",
+      "brand": "corporate",
+      "normalizer": "qpdf"
+    },
+    {
+      "source": "docs/finance/evidence/company-closeout/SOVEREIGNTY_METHOD.md",
+      "publication": "docs/finance/publications/SH-COMPANY-SOVEREIGNTY-20260915_v1.0.0.pdf",
+      "sha256": "b630b38d45301e94eaeecace49f0b62b113c2067a33bd17a4b285a1ebf107b47",
+      "source_sha256": "057e782cf13a440fc0a87617e288d22f30af910ffff2f90abb28d9adbf8587db",
+      "brand": "corporate",
+      "normalizer": "qpdf"
+    },
+    {
+      "source": "docs/finance/evidence/company-closeout/ADOPTED_PARENT_TAX.md",
+      "publication": "docs/finance/publications/SH-COMPANY-PARENT-TAX-20260915_v1.0.0.pdf",
+      "sha256": "36a2379a57bb06c75de423af4b594e70a0966bfa1bbb129cc7123cdc69e9b686",
+      "source_sha256": "78631d768575a8ed9d54b927f87c6e8164fb0efb6bc57a74e336dd6399e6ea18",
+      "brand": "corporate",
+      "normalizer": "qpdf"
     }
   ]
 }
