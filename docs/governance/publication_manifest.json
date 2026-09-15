@@ -1029,24 +1029,24 @@
     {
       "source": "docs/internal/company-closeout/INSPECTION_GUIDE.md",
       "publication": "docs/finance/publications/SH-COMPANY-INSPECTION-20260915_v1.0.0.pdf",
-      "sha256": "c09e68bd589f6e270f2517d52cb10b32e8fec5916f62a77afecb3e009e4f2cec",
-      "source_sha256": "a385117643ca7d6d067ef61e50e1ae2e2ba8ec0f0b6b79689e3ab5634f25032e",
+      "sha256": "2aafdfbc7a365f00b58fb03dbfd8cc1dcb92d65ccc5d6fc892bef6e61f5c283b",
+      "source_sha256": "5214b5b560be394dafe1a795a6c6532b96df1150ec69828ec9a391711284341e",
       "brand": "corporate",
       "normalizer": "qpdf"
     },
     {
       "source": "docs/finance/evidence/company-closeout/SOVEREIGNTY_METHOD.md",
       "publication": "docs/finance/publications/SH-COMPANY-SOVEREIGNTY-20260915_v1.0.0.pdf",
-      "sha256": "b630b38d45301e94eaeecace49f0b62b113c2067a33bd17a4b285a1ebf107b47",
-      "source_sha256": "057e782cf13a440fc0a87617e288d22f30af910ffff2f90abb28d9adbf8587db",
+      "sha256": "6bb3296fc1e9d4107580d866d73a0bfb8f8f11bfbbc8f46646c5539ce33cb397",
+      "source_sha256": "21f9356eb8aeb00ffbe1fae0cd3f307fc7bbc70248fc82de13e4b0bc035d8ad7",
       "brand": "corporate",
       "normalizer": "qpdf"
     },
     {
       "source": "docs/finance/evidence/company-closeout/ADOPTED_PARENT_TAX.md",
       "publication": "docs/finance/publications/SH-COMPANY-PARENT-TAX-20260915_v1.0.0.pdf",
-      "sha256": "36a2379a57bb06c75de423af4b594e70a0966bfa1bbb129cc7123cdc69e9b686",
-      "source_sha256": "78631d768575a8ed9d54b927f87c6e8164fb0efb6bc57a74e336dd6399e6ea18",
+      "sha256": "eea802de1b3b770e5efa305cabb356fda160b607eafd4c76916dfed52e60a502",
+      "source_sha256": "fbd32653ff9e93f53c2f282476acf65e4be834278c3481cc081f1d510438b899",
       "brand": "corporate",
       "normalizer": "qpdf"
     }

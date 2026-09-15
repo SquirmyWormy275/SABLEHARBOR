@@ -190,9 +190,10 @@ Generated file inventory. Includes current and historical records; open the sour
 
 ## `docs/finance/evidence/company-closeout`
 
-- [Adopted parent corporate history and provision successor](../../finance/evidence/company-closeout/ADOPTED_PARENT_TAX.md) — MD · [formatted PDF](../../finance/publications/SH-COMPANY-PARENT-TAX-20260915_v1.0.0.pdf)
+- [Adopted parent corporate-tax history and provision](../../finance/evidence/company-closeout/ADOPTED_PARENT_TAX.md) — MD · [formatted PDF](../../finance/publications/SH-COMPANY-PARENT-TAX-20260915_v1.0.0.pdf)
 - [Authored 2016–2022 tax and cash reconstruction](../../finance/evidence/company-closeout/HISTORICAL_TAX_RECONSTRUCTION.md) — MD
 - [Company finance successor — September 15, 2026](../../finance/evidence/company-closeout/README.md) — MD
+- [RWH Illinois transaction-tax composition](../../finance/evidence/company-closeout/RWH_TRANSACTION_TAX.md) — MD
 - [Prospective software sales-tax population](../../finance/evidence/company-closeout/SOFTWARE_SALES_TAX.md) — MD
 - [Continuing sovereignty reporting](../../finance/evidence/company-closeout/SOVEREIGNTY_METHOD.md) — MD · [formatted PDF](../../finance/publications/SH-COMPANY-SOVEREIGNTY-20260915_v1.0.0.pdf)
 - [Entity filing calendar and performance boundary](../../finance/evidence/company-closeout/TAX_FILING_CALENDAR.md) — MD
@@ -248,7 +249,7 @@ Generated file inventory. Includes current and historical records; open the sour
 
 - [Current business-unit evidence export contract — SH-AUDIT-UNIT-EXPORT-001_v1.0.0](../../finance/publications/SH-AUDIT-UNIT-EXPORT-001_v1.0.0.pdf) — PDF
 - [Company edition inspection and reproduction — SH-COMPANY-INSPECTION-20260915_v1.0.0](../../finance/publications/SH-COMPANY-INSPECTION-20260915_v1.0.0.pdf) — PDF
-- [Adopted parent corporate history and provision successor — SH-COMPANY-PARENT-TAX-20260915_v1.0.0](../../finance/publications/SH-COMPANY-PARENT-TAX-20260915_v1.0.0.pdf) — PDF
+- [Adopted parent corporate-tax history and provision — SH-COMPANY-PARENT-TAX-20260915_v1.0.0](../../finance/publications/SH-COMPANY-PARENT-TAX-20260915_v1.0.0.pdf) — PDF
 - [Continuing sovereignty reporting — SH-COMPANY-SOVEREIGNTY-20260915_v1.0.0](../../finance/publications/SH-COMPANY-SOVEREIGNTY-20260915_v1.0.0.pdf) — PDF
 - [Business-driven enterprise financial model — SH-FIN-BUSINESS-001_v1.0.0](../../finance/publications/SH-FIN-BUSINESS-001_v1.0.0.pdf) — PDF
 
