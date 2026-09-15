@@ -292,3 +292,38 @@ assessment. Exact source/risk and business-interface hashes accompany the report
 The 1,660 local-review decisions are not replaced wholesale by this company's 30
 activity rows or 204 permit checks. Reference framework prerequisites and qualified
 human review remain explicit at their original scope.
+
+## Selected September external-carrier advancement
+
+`september_shipment_qualification.json` records one newly authored fictional
+qualification and receiving packet after the September 6 OPEN boundary. It covers
+lot RW-LOT-202608-01 / drum RW-DRUM-202608-01, linked to the passed August production
+chain. The failed lot stays quarantined. The August hold remains correct at that
+period. Qualification is ready September 13 at 07:30 America/Denver, after the
+survey; release is 08:00 and converter receipt September 14 at 14:00. All evidence
+is newly authored and available September 15.
+
+Cobalt Basin Specialist Transport and Mesa Conversion Services are expressly
+fictional external counterparties. Their registration, training, engineering and
+receiving-license schedules are authored synthetic records, not real government
+issuance, measured radiation or completed physical transport. No ARU/BS&T uranium
+carriage or new SH ownership is introduced. RWH retains title in toll-conversion
+custody; receipt alone does not create revenue or cash.
+
+The [primary LSA definition](https://www.ecfr.gov/current/title-49/subtitle-B/chapter-I/subchapter-C/part-173/subpart-I/section-173.403)
+supports classification from the specifically authored natural, unirradiated solid
+concentrate facts. It does not rely on a made-up activity threshold. The record
+separately preserves contained U3O8, concentrate and gross-package mass, synthetic
+assay/activity, package design review, survey and wipe data, training and timed
+release checks. Source provisions, displayed version and access date are recorded
+per conclusion. This is a bounded synthetic inspection record, not a generic
+shipping procedure or authority to transport actual material.
+
+```sh
+python -m enterprise.ccf.company_closeout.shipment
+python -m unittest enterprise.ccf.company_closeout.test_shipment -v
+```
+
+The operations lane consumes `shipment.validate(data)` and the eight check records,
+then joins custody quantities and the separately supported September expense
+allocation. This qualification module posts no financial entries.

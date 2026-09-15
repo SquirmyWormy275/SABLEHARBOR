@@ -1,0 +1,293 @@
+{
+  "document_id": "RW-QUAL-SHIP-202609-01",
+  "schema_version": "1.0.0",
+  "acceptance_state": "PENDING_REPOSITORY_ACCEPTANCE",
+  "fact_status": "NEWLY_AUTHORED_RETROSPECTIVE_SYNTHETIC_QUALIFICATION_AND_RECEIPT",
+  "authored_on": "2026-09-15",
+  "available_on": "2026-09-15",
+  "source_boundary": "Advances selected lot only after September 6 OPEN source state; does not supersede August hold, rejected lot or ARU/BS&T finished-uranium carriage restriction.",
+  "chain_id": "SH-CHAIN-202608-PRODUCTION-01",
+  "lot_id": "RW-LOT-202608-01",
+  "drum_id": "RW-DRUM-202608-01",
+  "shipment_id": "RW-SHIP-202609-01",
+  "shipper_entity": "RWH",
+  "carrier": {
+    "id": "SYN-RW-CARRIER-001",
+    "name": "Cobalt Basin Specialist Transport LLC",
+    "ownership": "External vendor; no SH equity or control relationship",
+    "mode": "Domestic public highway, exclusive use, closed vehicle; no rail/air/water segment",
+    "synthetic_registration": "SYN-CBST-HMR-2026",
+    "registration_period": [
+      "2026-07-01",
+      "2027-06-30"
+    ],
+    "synthetic_motor_authority": "SYN-CBST-MOTOR-2026",
+    "vehicle_id": "SYN-CBST-TRUCK-001",
+    "driver_id": "SYN-CBST-DRIVER-001",
+    "driver_name": "Nora Bell",
+    "record_origin": "New fictional training registration and motor-authority document references; not records recovered from FMCSA/PHMSA or real identifiers"
+  },
+  "receiver": {
+    "id": "SYN-RW-CONVERTER-001",
+    "name": "Mesa Conversion Services LLC",
+    "ownership": "External receiving/processing vendor; no SH equity or control relationship",
+    "synthetic_license_id": "SYN-MCS-SOURCE-MATERIAL-2026",
+    "scope": "Synthetic instrument permits receipt and possession of this natural uranium concentrate at fictional domestic converter receiving bay; no SH authority over host operations",
+    "receiving_agent_id": "SYN-MCS-RECEIVER-001",
+    "receiving_agent_name": "Iris Chen",
+    "license_period": [
+      "2026-01-01",
+      "2026-12-31"
+    ],
+    "record_origin": "New synthetic receiving license schedule and receipt; no real license assertion"
+  },
+  "material": {
+    "form": "Dry solid natural unirradiated uranium ore concentrate containing U3O8; no enriched uranium, plutonium addition, irradiated feed or special-form claim",
+    "contained_u3o8_lb": "200.000000",
+    "contained_u3o8_kg": "90.718474",
+    "dry_concentrate_kg": "92.000000",
+    "gross_package_kg": "110.000000",
+    "assay_status": "New synthetic lot assay confirms natural isotope distribution and unirradiated ore provenance; original passed assay chain retained",
+    "u235_percent_of_uranium_mass": "0.7200",
+    "u234_percent_of_uranium_mass": "0.0055",
+    "u238_percent_of_uranium_mass": "99.2745",
+    "specific_activity_bq_per_g_concentrate": "21000",
+    "total_activity_bq": "1932000000",
+    "activity_origin": "New synthetic measured assay, not a universal U3O8 constant or inferred from mass alone",
+    "classification": "LSA-I",
+    "classification_basis": "49 CFR 173.403 LSA-I(1)(i)/(ii): concentrate of natural uranium ore and natural unirradiated uranium compound. Excluded from fissile-material definition for this transport classification; not an enrichment or nuclear-use authorization."
+  },
+  "package": {
+    "type": "IP-1",
+    "model_id": "SYN-RW-IP1-110",
+    "design_review_id": "SYN-RW-IP1-DESIGN-20260911",
+    "design_review_date": "2026-09-11",
+    "reviewer_id": "SYN-CBST-PACKAGING-001",
+    "reviewer_name": "Dara Kim",
+    "description": "Existing lot drum placed in a sealed, restrained industrial package; compatible liner and closure; no claimed DOT government type approval",
+    "evaluated_requirements": [
+      "handling and securement for selected gross mass",
+      "lifting features disabled or evaluated for intended handling",
+      "external surfaces cleanable and no trapping pockets",
+      "normal transport vibration and acceleration closure integrity",
+      "chemical compatibility of concentrate liner and closure",
+      "temperature and pressure conditions of selected ground transport",
+      "secure fastenings and no damage or leakage before loading"
+    ],
+    "result": "SYNTHETIC_ENGINEERING_REVIEW_CONFORMS_173410_FOR_SELECTED_PACKAGE",
+    "source_character": "New fictional engineering review summary, not actual hardware testing or a general package design publication"
+  },
+  "survey": {
+    "survey_id": "RW-SURVEY-20260913-01",
+    "event_at": "2026-09-13T07:00:00-06:00",
+    "examiner_id": "RW-0112",
+    "surface_max_msv_h": "0.004",
+    "one_metre_max_msv_h": "0.0004",
+    "transport_index": "0.1",
+    "unshielded_three_metre_msv_h": "0.0002",
+    "vehicle_surface_msv_h": "0.001",
+    "vehicle_two_metre_msv_h": "0.0002",
+    "occupied_space_msv_h": "0.0001",
+    "wipe_area_cm2": "300",
+    "wipe_efficiency": "0.10",
+    "max_wipe_activity_bq": "3.0",
+    "nonfixed_low_toxicity_alpha_bq_cm2": "0.10",
+    "instrument_id": "SYN-RW-SURVEY-01",
+    "calibration_id": "SYN-RW-CAL-20260701",
+    "calibration_expires": "2027-07-01",
+    "result": "PASS_SELECTED_SYNTHETIC_LIMITS",
+    "origin": "New synthetic measured values; no actual radioactive material or physical test performed"
+  },
+  "training": [
+    {
+      "id": "RW-HAZTRAIN-20260910-RW-0112",
+      "person_id": "RW-0112",
+      "name": "Maya Ortiz",
+      "employer_id": "RWH",
+      "completed_on": "2026-09-10",
+      "internal_recheck_due": "2027-09-10",
+      "regulatory_recurrent_due": "2029-09-10",
+      "scope": "Offeror classification, packaging check, radiation survey and loading",
+      "materials_id": "SYN-CBST-CLASS7-CURRICULUM-2026",
+      "materials_description": "General awareness, assigned function, worker safety, emergency response, security awareness and carrier security-plan role instruction",
+      "trainer_name": "Dara Kim",
+      "trainer_synthetic_address": "Cobalt Basin training office, fictional Red Wash service area, Wyoming; no real postal facility",
+      "certification": "New synthetic employer certification: named employee trained and tested successfully for listed functions. RW-0112 mine examination designation alone was not used as hazmat qualification."
+    },
+    {
+      "id": "RW-HAZTRAIN-20260910-SYN-CBST-DRIVER-001",
+      "person_id": "SYN-CBST-DRIVER-001",
+      "name": "Nora Bell",
+      "employer_id": "SYN-RW-CARRIER-001",
+      "completed_on": "2026-09-10",
+      "internal_recheck_due": "2027-09-10",
+      "regulatory_recurrent_due": "2029-09-10",
+      "scope": "Exclusive-use highway carriage and emergency procedures",
+      "materials_id": "SYN-CBST-CLASS7-CURRICULUM-2026",
+      "materials_description": "General awareness, assigned function, worker safety, emergency response, security awareness and carrier security-plan role instruction",
+      "trainer_name": "Dara Kim",
+      "trainer_synthetic_address": "Cobalt Basin training office, fictional Red Wash service area, Wyoming; no real postal facility",
+      "certification": "New synthetic employer certification: named employee trained and tested successfully for listed functions. RW-0112 mine examination designation alone was not used as hazmat qualification."
+    },
+    {
+      "id": "RW-HAZTRAIN-20260910-SYN-MCS-RECEIVER-001",
+      "person_id": "SYN-MCS-RECEIVER-001",
+      "name": "Iris Chen",
+      "employer_id": "SYN-RW-CONVERTER-001",
+      "completed_on": "2026-09-10",
+      "internal_recheck_due": "2027-09-10",
+      "regulatory_recurrent_due": "2029-09-10",
+      "scope": "Radiological unloading, custody and receipt",
+      "materials_id": "SYN-CBST-CLASS7-CURRICULUM-2026",
+      "materials_description": "General awareness, assigned function, worker safety, emergency response, security awareness and carrier security-plan role instruction",
+      "trainer_name": "Dara Kim",
+      "trainer_synthetic_address": "Cobalt Basin training office, fictional Red Wash service area, Wyoming; no real postal facility",
+      "certification": "New synthetic employer certification: named employee trained and tested successfully for listed functions. RW-0112 mine examination designation alone was not used as hazmat qualification."
+    }
+  ],
+  "events": [
+    {
+      "id": "RW-SHIP-QUAL-READY",
+      "event_at": "2026-09-12T16:00:00-06:00",
+      "state": "QUALIFICATION_REVIEW_COMPLETE",
+      "preparer_id": "RW-0112",
+      "reviewer_id": "P023",
+      "evidence": "Carrier registration/motor authority, driver qualification, package review, receiver scope and training reviewed for selected shipment; final survey still due."
+    },
+    {
+      "id": "RW-SHIP-RELEASE",
+      "event_at": "2026-09-13T08:00:00-06:00",
+      "state": "RELEASED_TO_EXTERNAL_CARRIER",
+      "preparer_id": "RW-0112",
+      "reviewer_id": "P023",
+      "evidence": "Survey passed before release; seal intact, load restrained, written exclusive-use instructions, shipping paper and emergency-response packet, hazard marking/placards and trained parties confirmed."
+    },
+    {
+      "id": "RW-SHIP-RECEIPT",
+      "event_at": "2026-09-14T14:00:00-06:00",
+      "state": "ACCEPTED_BY_EXTERNAL_CONVERTER",
+      "preparer_id": "SYN-MCS-RECEIVER-001",
+      "reviewer_id": "P023",
+      "evidence": "Matched lot/drum/seal; one package110kg gross and200lbU3O8 equivalent accepted, no discrepancy. Custody receipt is not a sale, cash receipt or completed conversion."
+    }
+  ],
+  "release_checks": {
+    "shipping_paper": "SYN-RW-SHIPPING-PAPER-20260913",
+    "emergency_information": "SYN-RW-EMERGENCY-20260913",
+    "exclusive_use_instructions": "SYN-RW-EXCLUSIVE-20260913",
+    "package_marking_and_vehicle_placards": "SYN-RW-HAZCOM-20260913",
+    "carrier_registration_and_driver_qualification": "SYN-CBST-CHECK-20260912",
+    "receiver_license_scope": "SYN-MCS-CHECK-20260912",
+    "security_plan_review": "Selected carrier plan and role training checked as synthetic vendor qualification; not an enterprise-wide legal security-plan threshold conclusion"
+  },
+  "financial_boundary": "This record posts no revenue, inventory value, payable, cash or vendor fee. Operations lane records custody quantities; finance source determines title/valuation/settlement independently. No price, financing commitment or equity right added.",
+  "failed_lot": "SH-CHAIN-202608-PRODUCTION-02 remains quarantined and excluded",
+  "authorities": [
+    {
+      "provision": "49 CFR 173.403",
+      "url": "https://www.ecfr.gov/current/title-49/subtitle-B/chapter-I/subchapter-C/part-173/subpart-I/section-173.403",
+      "version": "eCFR displayed current through2026-09-11; read2026-09-15 forSeptember13shipment; section source notes inspected",
+      "accessed_on": "2026-09-15",
+      "conclusion": "Natural unirradiated uranium concentrate meets categorical LSA-I definition; transport index uses one-metre radiation level rounded upward to next tenth."
+    },
+    {
+      "provision": "49 CFR 173.427",
+      "url": "https://www.ecfr.gov/current/title-49/subtitle-B/chapter-I/subchapter-C/part-173/subpart-I/section-173.427",
+      "version": "eCFR displayed current through2026-09-11; read2026-09-15 forSeptember13shipment; section source notes inspected",
+      "accessed_on": "2026-09-15",
+      "conclusion": "Table6 permitsIP1 forsolidLSAI; apply unshielded dose,contamination,vehicle andexclusive-use controls. Chosen modegroundonly."
+    },
+    {
+      "provision": "49 CFR 173.410",
+      "url": "https://www.ecfr.gov/current/title-49/subtitle-B/chapter-I/subchapter-C/part-173/subpart-I/section-173.410",
+      "version": "eCFR displayed current through2026-09-11; read2026-09-15 forSeptember13shipment; section source notes inspected",
+      "accessed_on": "2026-09-15",
+      "conclusion": "Selectedpackage design review addresses general handling,restraint,closure andmaterialcompatibility provisions; this is syntheticengineering evidence."
+    },
+    {
+      "provision": "49 CFR 173.411",
+      "url": "https://www.ecfr.gov/current/title-49/subtitle-B/chapter-I/subchapter-C/part-173/subpart-I/section-173.411",
+      "version": "eCFR displayed current through2026-09-11; read2026-09-15 forSeptember13shipment; section source notes inspected",
+      "accessed_on": "2026-09-15",
+      "conclusion": "IP1 requires173.410 generaldesign; do not claim IP2testrecord requirements or governmenttypeapproval."
+    },
+    {
+      "provision": "49 CFR 173.441",
+      "url": "https://www.ecfr.gov/current/title-49/subtitle-B/chapter-I/subchapter-C/part-173/subpart-I/section-173.441",
+      "version": "eCFR displayed current through2026-09-11; read2026-09-15 forSeptember13shipment; section source notes inspected",
+      "accessed_on": "2026-09-15",
+      "conclusion": "Selectedsurface2mSv/h andTI10 limits plus applicableexclusive-usevehicle limits checked independently of activity classification."
+    },
+    {
+      "provision": "49 CFR 173.443",
+      "url": "https://www.ecfr.gov/current/title-49/subtitle-B/chapter-I/subchapter-C/part-173/subpart-I/section-173.443",
+      "version": "eCFR displayed current through2026-09-11; read2026-09-15 forSeptember13shipment; section source notes inspected",
+      "accessed_on": "2026-09-15",
+      "conclusion": "Lowtoxicityalpha nonfixedcontamination limit4Bq/cm2; wipe activity dividedby300cm2 and0.10 efficiency equals0.10Bq/cm2."
+    },
+    {
+      "provision": "49 CFR 172.704",
+      "url": "https://www.ecfr.gov/current/title-49/subtitle-B/chapter-I/subchapter-C/part-172/subpart-H/section-172.704",
+      "version": "eCFR displayed current through2026-09-11; read2026-09-15 forSeptember13shipment; section source notes inspected",
+      "accessed_on": "2026-09-15",
+      "conclusion": "Function-specific training and tested employer records required; recurrent trainingwithin3years, records retainedduringemploymentplus90days."
+    }
+  ],
+  "qualification_id": "RW-QUAL-SHIP-202609-01",
+  "ready_at": "2026-09-13T07:30:00-06:00",
+  "available_at": "2026-09-15T00:00:00Z",
+  "carrier_id": "SYN-RW-CARRIER-001",
+  "receiver_id": "SYN-RW-CONVERTER-001",
+  "state": "QUALIFIED_SELECTED_SYNTHETIC_SHIPMENT",
+  "checks": [
+    {
+      "check_id": "RW-SHIP-CHECK-01",
+      "outcome": "PASS",
+      "evidence_id": "SYN-CBST-CHECK-20260912",
+      "finding": "New synthetic vendor documents registration/motor authority valid on release; no ARU or BST carriage"
+    },
+    {
+      "check_id": "RW-SHIP-CHECK-02",
+      "outcome": "PASS",
+      "evidence_id": "SYN-MCS-CHECK-20260912",
+      "finding": "New synthetic receiver scope valid for natural uranium concentrate custody"
+    },
+    {
+      "check_id": "RW-SHIP-CHECK-03",
+      "outcome": "PASS",
+      "evidence_id": "SYN-RW-IP1-DESIGN-20260911",
+      "finding": "Selected package review conforms to scope described in package object"
+    },
+    {
+      "check_id": "RW-SHIP-CHECK-04",
+      "outcome": "PASS",
+      "evidence_id": "RW-SURVEY-20260913-01",
+      "finding": "Numeric survey and wipe results within selected limits"
+    },
+    {
+      "check_id": "RW-SHIP-CHECK-05",
+      "outcome": "PASS",
+      "evidence_id": "SYN-CBST-CLASS7-CURRICULUM-2026",
+      "finding": "All three functioning individuals trained and tested before shipment"
+    },
+    {
+      "check_id": "RW-SHIP-CHECK-06",
+      "outcome": "PASS",
+      "evidence_id": "SYN-RW-EXCLUSIVE-20260913",
+      "finding": "Closed vehicle,bracedpackage,nointermediateunloading,shipperwritteninstructions"
+    },
+    {
+      "check_id": "RW-SHIP-CHECK-07",
+      "outcome": "PASS",
+      "evidence_id": "SYN-RW-SHIPPING-PAPER-20260913",
+      "finding": "ConsignorRWH, externalcarrier/receiver,lot/drum,chemicalform,activity,mass andemergency packet linked"
+    },
+    {
+      "check_id": "RW-SHIP-CHECK-08",
+      "outcome": "PASS",
+      "evidence_id": "SYN-RW-HAZCOM-20260913",
+      "finding": "Hazard marking and vehicleplacarding synthetic release inspection recorded"
+    }
+  ],
+  "custody_terms": "Toll conversion/custodial receipt only; legal title remains RWH; no sale or revenue on this receipt."
+}
