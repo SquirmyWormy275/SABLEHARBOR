@@ -13,7 +13,7 @@ def tax():
                 result['monthly_rows'].append(dict(entity='SHI',scenario=case,year=year,month=month,net_income_usd='-100'))
     legacy={'rows':[dict(entity='SHI',book='PRIMARY_USD',entry_date=f'{year}-12-31',
       account_type='expense',signed_usd='100') for year in [2023,2024,2025]]}
-    return ParentTax(result,legacy)
+    return ParentTax(result,legacy,history=dict(federal_nol=D(0),california_nol=D(0),research_2022=D(0),research_remaining_2026=D(0),historical_tax_cash=D(7200)))
 
 
 def test_adopted_history_and_full_allowance_no_goodwill_tax():

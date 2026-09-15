@@ -164,6 +164,8 @@ def build(allow_working_tree=False, *, company_closeout=False):
             legacy_result=legacy, source=policy, core_provider=operating, adjustment_provider=adjustment)
         enterprise.write_csv(output / "parent_tax_provision.csv", tax.rows)
         enterprise.write_csv(output / "parent_tax_assets.csv", tax.asset_rows)
+        enterprise.write_csv(output / "historical_tax_events.csv", tax.history["events"])
+        enterprise.write_csv(output / "historical_tax_annual.csv", tax.history["annual"])
         (output / "parent_tax_history.json").write_text(json.dumps({"source": tax.source,
             "supported_historical_income": tax.historical_income,
             "supported_opening_nol_usd": str(tax.opening_nol)}, indent=2) + "\n")

@@ -26,6 +26,12 @@ releases retain their bytes and prior unresolved-parent-tax disclosures.
 
 ## Historical income and opening bridge
 
+**Current historical successor:** [HISTORICAL_TAX_RECONSTRUCTION.md](HISTORICAL_TAX_RECONSTRUCTION.md)
+completes the authored 2016–2022 event budgets and section 174 pool. It supersedes
+the earlier pre-2023 exclusion and $7,200-only correction described below; current
+generator output uses the reconstructed history and $1,037,879.0800 correction.
+The following earlier workpaper paragraphs remain provenance, not current totals.
+
 The actual isolated legacy PRIMARY_USD SHI population gives:
 
 | Period | Revenue | Production cost | Book loss |

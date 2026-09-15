@@ -12,7 +12,7 @@ TAX_TYPES={'CO_TAX_CURRENT':'expense','CO_TAX_PAY_FED':'liability','CO_TAX_PAY_C
 
 
 class ParentTax:
-    def __init__(self,result,legacy,operating=None):
+    def __init__(self,result,legacy,operating=None,history=None):
         self.source=json.loads(SOURCE.read_text());self.rows=[];self.monthly={}
         if any(r.get('source_id','').startswith('CO-TAX-') for r in result['journal_rows']):
             raise ValueError('Parent tax must consume unadjusted pre-tax books exactly once')
@@ -28,12 +28,15 @@ class ParentTax:
         if set(historic)!={2023,2024,2025} or any(v>0 for v in historic.values()):
             raise ValueError('Historical tax loss population requires renewed workpaper')
         self.historical_income={str(k):str(v) for k,v in historic.items()}
+        from enterprise.closeout.historical_tax import build as historical_build
+        self.history=historical_build() if history is None else history
+        h=self.history
         from enterprise.closeout.tax_assets import build as asset_tax
         self.asset_rows, self.asset_totals, asset_openings = asset_tax(result,operating)
         asset_opening=asset_openings['base']
-        self.opening_nol=-sum(historic.values())+asset_opening['federal_depreciation']
-        self.opening_state_nol=-sum(historic.values())+asset_opening['ca_depreciation']
-        self.opening_dta=(self.opening_nol*D('.21')+self.opening_state_nol*D('.0884')*D('.79')).quantize(Q)
+        self.opening_nol=-sum(historic.values())+asset_opening['federal_depreciation']+h['federal_nol']+h['research_2022']*D('.6')
+        self.opening_state_nol=-sum(historic.values())+asset_opening['ca_depreciation']+h['california_nol']
+        self.opening_dta=(self.opening_nol*D('.21')+self.opening_state_nol*D('.0884')*D('.79')+h['research_remaining_2026']*D('.21')).quantize(Q)
         fed_dtl=max(asset_opening['book_net']-asset_opening['federal_basis'],D(0))*D('.21')
         ca_dtl=max(asset_opening['book_net']-asset_opening['ca_basis'],D(0))*D('.0884')*D('.79')
         self.opening_dtl=(fed_dtl+ca_dtl).quantize(Q)
@@ -59,7 +62,9 @@ class ParentTax:
                 asset=self.asset_totals[scenario,year]
                 common=pretax+dda+allowance+impairment+fees
                 state_common=common-asset['ca_depreciation']
-                federal_common=common-asset['federal_depreciation']
+                research_amort=h['research_2022']*(D('.2') if year==2026 else D('.1') if year==2027 else D(0))
+                research_basis=h['research_2022']*(D('.1') if year==2026 else D(0))
+                federal_common=common-asset['federal_depreciation']-research_amort
                 temporary+=allowance+impairment
                 ca_used=min(snol,max(state_common,D(0))) if not (year<=2026 and state_common>=1000000) else D(0)
                 snol+=max(-state_common,D(0))-ca_used
@@ -75,7 +80,7 @@ class ParentTax:
                 fnol+=max(-fed_before,D(0))-nol_used
                 fed=((max(fed_before,D(0))-nol_used)*D('.21')).quantize(Q)
                 dta=(fnol*D('.21')+snol*D('.0884')*D('.79')+interest_cf*D('.21')+
-                     max(temporary,D(0))*(D('.21')+D('.0884')*D('.79'))).quantize(Q)
+                     max(temporary,D(0))*(D('.21')+D('.0884')*D('.79'))+research_basis*D('.21')).quantize(Q)
                 fed_dtl=max(asset['book_net']-asset['federal_basis'],D(0))*D('.21')
                 ca_dtl=max(asset['book_net']-asset['ca_basis'],D(0))*D('.0884')*D('.79')
                 dtl=(fed_dtl+ca_dtl).quantize(Q)
@@ -84,7 +89,7 @@ class ParentTax:
                   book_depreciation_usd=str(dda),federal_depreciation_usd=str(asset['federal_depreciation']),california_depreciation_usd=str(asset['ca_depreciation']),federal_asset_basis_usd=str(asset['federal_basis']),california_asset_basis_usd=str(asset['ca_basis']),book_asset_carrying_usd=str(asset['book_net']),allowance_addback_usd=str(allowance),
                   inventory_addback_usd=str(impairment),book_only_service_fee_reversal_usd=str(fees),
                   domestic_research_current_deduction_in_book_usd=str(a['LEG_6000']+a['BIZ_RESEARCH']),
-                  foreign_research_usd='0',interest_usd=str(interest),ati_usd=str(ati),
+                  foreign_research_usd='0',historical_research_amortization_usd=str(research_amort),historical_research_basis_usd=str(research_basis),interest_usd=str(interest),ati_usd=str(ati),
                   interest_deducted_usd=str(interest_used),interest_carryforward_usd=str(interest_cf),
                   federal_nol_used_usd=str(nol_used),closing_federal_nol_usd=str(fnol),
                   closing_california_nol_usd=str(snol),federal_current_usd=str(fed),california_current_usd=str(ca),
@@ -107,11 +112,11 @@ class ParentTax:
         return [part]*11+[total-part*11]
 
     def post_opening(self,books):
-        amount=D(self.source['historical_california_minimum_correction'])
-        books.post('SHI',2026,0,[('3100',amount),('1000',-amount)],'CO-TAX-HISTORICAL-MINIMUM',
-          'Authored 2017-2025 California minimum cash-tax correction to successor opening; retained sources unchanged',kind='COMPANY_TAX_ADJUSTMENT')
+        amount=self.history['historical_tax_cash']
+        books.post('SHI',2026,0,[('3100',amount),('1000',-amount)],'CO-TAX-HISTORICAL-PAYMENTS',
+          'Authored 2016-2025 federal/state paid tax correction; reconstructed events retained separately from calibration',kind='COMPANY_TAX_ADJUSTMENT')
         books.post('SHI',2026,0,[('CO_TAX_DTA',self.opening_dta),('CO_TAX_VA',-self.opening_va),('CO_TAX_DTL',-self.opening_dtl),('3100',self.opening_va+self.opening_dtl-self.opening_dta)],'CO-TAX-OPENING-NOL',
-          'Supported 2023-2025 loss and authored asset tax cohorts; allowance recognizes only supported DTL reversal capacity',kind='COMPANY_TAX_ADJUSTMENT')
+          'Historical income, authored pre2023 costs/research and asset tax cohorts; allowance recognizes only supported DTL reversal capacity',kind='COMPANY_TAX_ADJUSTMENT')
 
     def post_month(self,books,year,month):
         if any(r['source_id']==f'CO-TAX-PROVISION-{year}-{month}' for r in books.rows):
