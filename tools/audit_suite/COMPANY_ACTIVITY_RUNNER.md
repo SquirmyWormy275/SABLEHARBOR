@@ -8,7 +8,7 @@ PYTHONPATH=. .venv/bin/python -m tools.audit_suite.generate_company_activity inc
   --destination /private/new-incident-run
 ```
 
-The maintained runner currently accepts `mover`, `identity-period`, `incident`, `backup`, `training`, `change`, `configuration`, `security-logging`, `provider-intake`, `identity-lifecycle`, `nonhuman-identity` and `risk-assessment`.
+The maintained runner currently accepts `mover`, `identity-period`, `incident`, `backup`, `training`, `change`, `configuration`, `security-logging`, `provider-intake`, `identity-lifecycle`, `nonhuman-identity`, `risk-assessment` and `access-remediation`.
 Recipe fields follow `TransferRecipe`, `PeriodRecipe`, `IncidentRecipe`, `BackupRecipe`, `TrainingRecipe`, `ChangeRecipe`, `ConfigurationRecipe`, `LoggingRecipe` and `ProviderIntakeRecipe` in the
 corresponding company activity modules. For an identity period, `movers` is a JSON
 array of transfer recipes. Training uses arrays of `TrainingMember` objects in
@@ -102,3 +102,11 @@ For one ordered producer/consumer run, the
 metadata capture after a producer completes, plus the existing whole-change-store
 contract for configuration and logging. Caller-specified native content hashes
 remain mandatory for selected dependencies.
+
+Access remediation consumes five exact IAM review/application/HR originals through
+`--source-root`, with a selected metadata hash and `input_at` cutoff. Its new
+qualified continuation branches apply the same removal request, preserve actual
+local permission state and independently check the resulting authorization.
+Earlier quarterly reviews stay unchanged. Operating verification does not claim
+professional assurance or enterprise population completeness. See the
+[access remediation activity contract](../../enterprise/audit_suite/ACCESS_REMEDIATION_ACTIVITY.md).

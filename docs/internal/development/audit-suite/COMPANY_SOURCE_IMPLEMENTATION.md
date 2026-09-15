@@ -326,3 +326,47 @@ The isolated full repository check at `0cf0934` passed 1,156 tests with three
 skips and no failures or errors (`repository-0cf0934-isolated-2026-09-14.xml`).
 The subsequent runtime initialization change at `41c3f8b` is covered by the
 44-test integration result above; it is not included in that earlier full run.
+
+Reference-v5's instructor snapshot binds 15 exact retained source versions and
+three authored task links at revision 892. The actual read-only browser check
+verified all 165 authorized systems, original-byte previews, exact portfolio
+routing, retained panel context and Back focus. Learner access to the Key was
+denied, with no automatic protected fetch or protected content in the page.
+Compact audit state, history and membership remained unchanged. The private
+receipts are `reference-v5/KEY_V1_VALIDATION.json` and
+`reference-v5-browser/receipt.json` under `company-portfolio-2026-09-14/`.
+The Key remains instructor-authored and unvalidated; linkage creates no grade
+or assessment conclusion.
+
+[Access-remediation activity](../../../../enterprise/audit_suite/ACCESS_REMEDIATION_ACTIVITY.md)
+now extends one exact quarterly owner decision through local permission execution,
+a distinct operating check, escalation and correction. Its two new continuation
+branches retain 22 versions across 12 systems. A missing permission-name mapping
+leaves the excess entitlement usable in the first check; the correction removes
+it and a later check denies that permission. Both branches preserve the same
+original decision and the unresolved population omission. Earlier quarter records
+are not rewritten, and operating checks do not imply independent assurance.
+
+The actual private operator run is
+`company-access-remediation-2026-09-14/operator-v1/`, with independent native-byte,
+lineage and authorization-probe checks in `VALIDATION_V1.json`. All five original
+source inputs and the sealed identity capsule remain unchanged. The operator
+created no grants or audit. Existing-source V2 and explicit producer V3 routing
+use the recipe's `input_at` cutoff and preserve their exact-source contracts.
+
+The routing regression batch passed 84 tests; the subsequent reviewed native,
+operator, collection and runtime-initialization integration passed 40 tests.
+Receipts are `access-remediation-routing-integration.xml` and
+`access-remediation-reviewed-integration.xml`. Independent review found and
+closed malformed population-query and chronology cases, including predecessors
+published after the decisions that purported to use them. These checks validate
+a bounded fictional continuation, not enterprise-period coverage or sufficiency.
+
+The separate actual rehearsal initialized `runtime-v1/` from that capsule, then
+collected all 22 historical versions through federation into two isolated local
+Internal assessments. Future and revoked access were denied; exact command
+replays added no duplicate collections. All temporary grants were revoked after
+collection. Independent reopening verified every retained original hash and all
+sealed capsule members. `collection-v1/RECEIPT.json` and
+`collection-v1/POSTRUN_VERIFICATION.json` retain the checks. The existing
+reference-v5 audit and its 559-original inventory were not changed by this run.

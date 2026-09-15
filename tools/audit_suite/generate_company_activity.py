@@ -12,6 +12,10 @@ import stat
 import tempfile
 from pathlib import Path
 
+from enterprise.audit_suite.company_access_remediation_activity import AccessRemediationRecipe
+from enterprise.audit_suite.company_access_remediation_activity import (
+    generate_pair as generate_access_remediation_pair,
+)
 from enterprise.audit_suite.company_activity import TransferRecipe, generate_pair
 from enterprise.audit_suite.company_activity_period import PeriodRecipe, generate_period
 from enterprise.audit_suite.company_backup_activity import BackupRecipe, generate_backup_pair
@@ -70,8 +74,15 @@ KINDS = {
     "identity-lifecycle": (LifecycleRecipe, generate_lifecycle_pair),
     "nonhuman-identity": (NonhumanIdentityRecipe, generate_nonhuman_pair),
     "risk-assessment": (RiskAssessmentRecipe, generate_risk_pair),
+    "access-remediation": (AccessRemediationRecipe, generate_access_remediation_pair),
 }
-SOURCE_KINDS = {"configuration", "security-logging", "identity-lifecycle", "nonhuman-identity"}
+SOURCE_KINDS = {
+    "configuration",
+    "security-logging",
+    "identity-lifecycle",
+    "nonhuman-identity",
+    "access-remediation",
+}
 MULTI_SOURCE_KINDS = {"risk-assessment"}
 MAX_RECIPE_BYTES = 64 * 1024
 
@@ -190,7 +201,7 @@ def run(kind, recipe_path, destination, *, repository, source_root=None, source_
                 if not isinstance(body[key], list):
                     raise ValueError("Explicit JSON arrays required")
                 body[key] = tuple(body[key])
-        if kind in {"identity-lifecycle", "nonhuman-identity"}:
+        if kind in {"identity-lifecycle", "nonhuman-identity", "access-remediation"}:
             if not isinstance(body["source_refs"], list) or not isinstance(
                 body["branch_ids"], list
             ):

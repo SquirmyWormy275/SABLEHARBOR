@@ -19,7 +19,7 @@ from .company_activity_plan import (
 from .company_store import CompanyStoreError
 
 FORMAT = "PRIVATE_COMPANY_ACTIVITY_LINKED_PLAN_V2"
-SELECTED = {"identity-lifecycle", "nonhuman-identity", "risk-assessment"}
+SELECTED = {"identity-lifecycle", "nonhuman-identity", "risk-assessment", "access-remediation"}
 KINDS = {
     "mover",
     "identity-period",
@@ -63,6 +63,8 @@ def _slots(job):
         }:
             raise CompanyStoreError("Four exact risk source groups required")
         return {g["id"]: g for g in groups}, recipe["input_at"]
+    if job["kind"] == "access-remediation":
+        return {"source": recipe}, recipe["input_at"]
     if job["kind"] in SELECTED:
         return {"source": recipe}, recipe[
             "request_at" if job["kind"] == "identity-lifecycle" else "period_start"
