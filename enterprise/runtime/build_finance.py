@@ -143,6 +143,8 @@ def build(allow_working_tree=False, *, company_closeout=False):
         policy.update(model_id="SH-COMPANY-CLOSEOUT-V1", schema_version="6.0.0",
                       knowledge_cutoff="2026-09-15", created_on="2026-09-15")
         policy["canonical_sources"] += ["enterprise/closeout/source/adjustments.json"]
+        policy["legacy_adapter"]["calibration_boundary"] = "Preserved legacy calibration; dated successor removes $30M unsupported Core goodwill against initialization equity. ARU allocation remains separate."
+        policy["core"]["tax_boundary"] = "Owner adopted corporate-from-formation history; parent provision follows separately versioned closeout tax workpapers; historical sources retain omission disclosures."
     successor = enterprise.build(
         output / "enterprise",
         forecast_result=fin,
@@ -227,6 +229,8 @@ def build(allow_working_tree=False, *, company_closeout=False):
         tax_sensitivity(output)
         from enterprise.closeout.treasury import build as treasury
         treasury(output)
+        from enterprise.closeout.exports import build as company_exports
+        company_exports(output, operating, successor, op, fin, bridge, identity)
     inventory = {
         str(p.relative_to(output)): hashlib.sha256(p.read_bytes()).hexdigest()
         for p in sorted(output.rglob("*"))

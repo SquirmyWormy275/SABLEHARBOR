@@ -137,3 +137,21 @@ adds the bounded September–November 13-week view, exact monthly bridges, nativ
 cash-leg population and unavailable-member-cash sensitivity. It distinguishes
 known source payment dates from uniform within-month allocation and keeps
 security/holder-rights evidence gaps separate from arithmetic completeness.
+
+### Seven-unit CSV/SQLite successor
+
+The company build reuses `enterprise.operations.exports` unchanged schema/scope
+validation and CSV/SQLite verification. `exports/enterprise.sqlite3` contains
+corrected legal/unit books, operating, workforce, research, management and
+control tables; `exports/units/` contains the seven scoped unit databases/CSVs.
+Corporate Treasury and eliminations remain in the enterprise database. Read
+`exports/coverage.json` and the existing export schema before joining populations.
+
+The initial integration correctly failed because the operating Treasury allocator
+excluded runtime investing requests while the finance model already included
+their deferrals. An explicit optional request-type parameter now admits the
+accepted `RUNTIME_CONDITIONAL_FORECAST_REQUEST` population in the closeout path;
+default operating builds preserve their original request scope. Rebuilt request
+allocations therefore reconcile to the same corrected books instead of exporting
+stale settlements or suppressing finance failures. The complete export build
+passed the existing table/column/route allowlists and exact database verification.
