@@ -78,48 +78,48 @@ entity/period/scenario. Legal and consolidated statements consume the same legs.
 
 ## Capital and sovereignty
 
-`sovereignty.csv` selects only SHI cash account 1000 / source_type MEMBER_EQUITY;
-it excludes OPEN-MEMBER-BASIS noncash investment reconstruction and subsidiary
-receipts. It lists every source ID, annual/cumulative cash and changes, operating
-cash, net investment and cash after both. Taxes/interest already in operating
-cash are not subtracted twice. The ratio is member cash / positive operating
-cash; otherwise N/A. Existing-member money is external funding. A falling
-requirement is not attainment; parent tax remains unresolved and net investment
-does not distinguish all sustaining/growth commitments. The report deliberately
-carries that limitation on every row. Later revisions must retain the objective
-and explain operational causes of increases/decreases, not impose monotonicity.
+The owner adopted the exact five-holder schedule and voluntary proportional
+contributions without new units. The [capital source](../../../../enterprise/closeout/source/capital_register.json)
+and [founder admission reconstruction](../../../internal/company-closeout/FOUNDER_ADMISSION_BASIS.md)
+now supply holder identity, equal participating units, exact subscriptions,
+formation value and initial contributed-capital/basis history. Historical
+subscriptions total $183 million; they are not new 2026 cash. The register
+expressly authors each financing lead as its round's sole registered subscriber.
+No such conclusion is inferred from the old rounded financing descriptions.
 
-Historical approximate rounds and 66.5/33.5 split are preserved. Accepted
-financing source FIN-U01/U02/U03/U05 explicitly lacks subscribers, class/price,
-thresholds and economic rights. Proportional funding cannot use rounded groups
-as fictitious exact holders. No compulsory call, issuance, preference, outside
-subscriber, dilution or investor exit is added. Unused scenario capacity stays
-outside cash. The current finance build therefore cannot prove holder-level
-ownership continuity or commitments. Ordinary fictional identifiers can be
-completed once the participation rights population is established; precision
-alone cannot resolve absent class economics.
+`capital_register.py` joins each final SHI MEMBER_EQUITY source event to the
+approved holder population. `capital.py` allocates cash cents by established
+share, largest remainder and holder-ID tie break; it preserves economic/voting
+rights and keeps requested, committed, received and issued states separate.
+Unavailable holder funding remains a shortfall. No compulsory call, new units,
+preference, outsider, dilution or investor exit is added. Substantive designation
+thresholds and any unlisted side letters remain explicitly outside this approval.
 
-## Validation and remaining evidence
+[The sovereignty method](SOVEREIGNTY_METHOD.md) distinguishes member cash,
+operating generation, debt/other financing, sustaining investment, growth and
+booked unpaid cash requirements. It excludes noncash opening investment and
+avoids counting subsidiary receipts again as new enterprise member money.
+Taxes and interest already in operating cash are not subtracted twice. Unpaid
+tax cannot improve internally available cash; unsupported opening cash origins
+remain unattributed. Results may worsen or retain long-term funding dependence.
+Later revisions must preserve the objective and explain economic causes without
+promising an attainment year or monotonic progress.
 
-The lane ran the full successor build successfully in a supported existing
-virtual environment with local `PYTHONPATH=src:.`; nine targeted tests passed.
-The source locks ran through the isolated legacy adapter. Required integration
-checks and clean accepted-revision rebuild remain the integration owner's gate.
+## Current validation and remaining integration
 
-Tax effective history, provision, state apportionment, historical holder bases,
-exact participation rights, independent settlement and 13-week cash timing are
-not supplied by this partial build. See [tax history workpaper](TAX_HISTORY.md).
-No issue closure or completed SH-C04 claim follows from this record.
+The owner-approved parent corporate-from-formation history is implemented in
+[ADOPTED_PARENT_TAX.md](ADOPTED_PARENT_TAX.md). The
+[accounting-basis successor](ACCOUNTING_BASIS_SUCCESSOR.md) defines the declared
+management accrual scope. The [treasury/investor route](TREASURY_AND_INVESTOR_ROUTE.md)
+now supplies the bounded 13-week view and exact current ownership routes.
+Earlier missing-tax/holder descriptions below are historical implementation
+findings, not reopened owner questions.
 
-### Proportional request implementation
-
-`enterprise/closeout/capital.py` implements total × established participation
-share with largest-remainder cents and stable holder-ID tie breaking. It rejects
-missing/duplicate holders, shares not totaling one, mixed sources and a rounded
-or unestablished basis. It retains supplied economic/voting rights unchanged;
-request, commitment, receipt and issuance are distinct. Its synthetic test
-holders are computational fixtures, not Sable Harbor subscribers. It deliberately
-cannot turn the approximate 66.5/33.5 groups into a cap table or receipts.
+Statutory subsidiary current/deferred tax, payment calendars, complete after-tax
+funding composition and final clean-revision packaging remain in progress.
+Use the [current register](../../../internal/company-closeout/REGISTER.json) for
+precise rights, runtime, source and acceptance limits. Branch implementation
+and intermediate tests do not establish an accepted company edition.
 
 ### Retained correction/retest history
 
@@ -128,9 +128,13 @@ existing regression. The implementation restored `ADD_RUNTIME_LAND_OVERLAY`
 and introduced `ADD_GOODWILL_OPENING_CORRECTION` only for the new correction;
 all 24 finance/tax/runtime tests then passed. A development build rejected source
 changes made while it ran, as intended; a final clean-source build is required
-for its package identity. The independent reperformance compares 9,778 ARU/BST
-legal legs unchanged and reproduces the seven-source $13,325,751.3907 predecessor
-funding population. Five additional proportional-request tests pass.
+for its package identity. At clean revision `90fc0b3f`, native build and independent reperformance
+validated 9,778 protected ARU/BST legal legs after reconstructing the exact
+January closing effects of the separately reviewed July employer levy. It also
+reproduced the seven-source $13,325,751.3907 predecessor funding population.
+The [retained receipt](../../../internal/company-closeout/validation/RETENTION_CLOSING_RETEST.json)
+records the failed comparison, precise correction and successful native retest;
+no broad carryforward exemption was introduced. Five additional proportional-request tests pass.
 
 [Treasury, debt/security and investor reading route](TREASURY_AND_INVESTOR_ROUTE.md)
 adds the bounded September–November 13-week view, exact monthly bridges, native

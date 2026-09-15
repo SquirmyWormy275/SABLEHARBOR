@@ -1029,8 +1029,8 @@
     {
       "source": "docs/internal/company-closeout/INSPECTION_GUIDE.md",
       "publication": "docs/finance/publications/SH-COMPANY-INSPECTION-20260915_v1.0.0.pdf",
-      "sha256": "2aafdfbc7a365f00b58fb03dbfd8cc1dcb92d65ccc5d6fc892bef6e61f5c283b",
-      "source_sha256": "5214b5b560be394dafe1a795a6c6532b96df1150ec69828ec9a391711284341e",
+      "sha256": "7ed1b3ad43420a98a41ae57d65de098448713b1bc32656cd3187daa32b6def40",
+      "source_sha256": "880cc57e2dd5e8a97904fc943d79ef08994f3277560487cc791d4b088c04c745",
       "brand": "corporate",
       "normalizer": "qpdf"
     },
