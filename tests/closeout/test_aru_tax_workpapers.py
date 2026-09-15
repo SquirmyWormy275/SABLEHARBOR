@@ -3,7 +3,14 @@ from decimal import Decimal as D
 
 import pytest
 
-from enterprise.closeout.aru_tax_workpapers import build, financing_components
+from enterprise.closeout.aru_tax_workpapers import build as release_build
+from enterprise.closeout.aru_tax_workpapers import financing_components
+
+
+def build(rows, forecast):
+    return release_build(
+        rows, forecast, expected_groups={("base", e, 2026) for e in ("ARU", "BST")}
+    )
 
 
 def fixture():
@@ -122,3 +129,25 @@ def test_native_forecast_retention_schema_without_line_number():
     forecast["datasets"]["journal"].append(row)
     with pytest.raises(ValueError, match="Duplicate forecast"):
         retention_components(forecast)
+
+
+def test_default_release_scope_rejects_entire_missing_scenarios_and_years():
+    rows, forecast = fixture()
+    # This formerly succeeded because groups were inferred only from supplied rows.
+    with pytest.raises(ValueError, match="source-scope groups"):
+        release_build(rows, forecast)
+    partial = build(rows, forecast)
+    assert partial["source_scope"] == "EXPLICIT_PARTIAL_WORKPAPER"
+    only_aru = [r for r in rows if r["entity"] == "ARU"]
+    with pytest.raises(ValueError, match="source-scope groups"):
+        build(only_aru, forecast)
+
+
+@pytest.mark.parametrize(
+    "account", ["CO_SUB_TAX_CURRENT", "CO_SUB_TAX_DEFERRED", "CO_SUB_TAX_VA_EXP"]
+)
+def test_final_subsidiary_income_tax_accounts_rejected(account):
+    rows, forecast = fixture()
+    rows[1]["account"] = account
+    with pytest.raises(ValueError, match="before income-tax"):
+        build(rows, forecast)

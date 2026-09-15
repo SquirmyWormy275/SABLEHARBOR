@@ -110,10 +110,16 @@ def retention_components(forecast):
     return rows
 
 
-def build(journal_rows, forecast):
-    assets = asset_workpapers(forecast)
-    debt = financing_components(forecast)
-    retention = retention_components(forecast)
+def build(journal_rows, forecast, *, expected_groups=None):
+    release_groups = {
+        (s, e, y)
+        for s in ("base", "downside", "expansion")
+        for e in ("ARU", "BST")
+        for y in range(2026, 2032)
+    }
+    expected = release_groups if expected_groups is None else set(expected_groups)
+    if not expected or not expected <= release_groups:
+        raise ValueError("Invalid explicit ARU/BST tax workpaper scope")
     source = json.loads((ROOT / "industrial/source/finance.json").read_text())
     bst_share = D(str(source["legal_book_policy"]["central_financing_cost_to_bst_pct"])) / 100
     monthly = defaultdict(lambda: defaultdict(D))
@@ -127,11 +133,16 @@ def build(journal_rows, forecast):
         if identity in identities:
             raise ValueError("Duplicate ARU/BST journal leg")
         identities.add(identity)
-        if r["account"].startswith("CO_TAX_") and r["account_type"] == "expense":
+        if r["account"].startswith(("CO_TAX_", "CO_SUB_TAX_")) and r["account_type"] == "expense":
             raise ValueError("ARU tax base requires journal before income-tax provider")
         monthly[key][r["account"]] += D(r["signed_usd"])
         types[r["account"]] = r["account_type"]
     groups = sorted({(s, e, y) for s, e, y, m in monthly})
+    if set(groups) != expected:
+        raise ValueError("ARU/BST source-scope groups omitted or unexpected")
+    assets = asset_workpapers(forecast)
+    debt = financing_components(forecast)
+    retention = retention_components(forecast)
     result, components = [], []
     for scenario, entity, year in groups:
         if {m for s, e, y, m in monthly if (s, e, y) == (scenario, entity, year)} != set(
@@ -291,6 +302,8 @@ def build(journal_rows, forecast):
         accounting_basis="Accrual synthetic management books; "
         "separate source-based tax timing bridge",
         election_state="INTENDED_SECTION338H10_NEW_TARGET_JANUARY8_NOT_SUBMISSION_EVIDENCE",
+        source_scope="FULL_RELEASE" if expected == release_groups else "EXPLICIT_PARTIAL_WORKPAPER",
+        expected_groups=[list(k) for k in sorted(expected)],
         rows=result,
         financing_components=components,
         source_hashes={

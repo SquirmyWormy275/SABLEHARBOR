@@ -46,3 +46,11 @@ successor deduction. No reserve settlement or election acknowledgement is inferr
 Tests reject duplicate journal legs, omitted months, changed financing totals and
 recursive tax inputs, and reperform retention timing. Final same-source finance
 composition remains required; this module does not issue an audit conclusion.
+
+
+The default source scope is exactly three scenarios, two legal taxpayers and
+2026–2031: 36 entity-year groups, each with twelve monthly book populations.
+Omitting an entire group fails before tax calculations. Explicit smaller review
+scopes require the `expected_groups` keyword and are labeled partial; they cannot
+silently become full-release evidence. Both CO_TAX and CO_SUB_TAX income-tax
+expense namespaces are rejected as recursive provider inputs.
