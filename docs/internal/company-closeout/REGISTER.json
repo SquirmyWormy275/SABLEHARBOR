@@ -1,6 +1,6 @@
 {
   "document_id": "SH-CODEX-COMPANY-CLOSEOUT-2026-09-15",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "status": "IMPLEMENTATION_IN_PROGRESS_NOT_ACCEPTED",
   "recorded_on": "2026-09-15",
   "record_timezone": "UTC",
@@ -29,13 +29,36 @@
       "lane": "A/B",
       "status": "IN_PROGRESS",
       "acceptance_status": "PENDING",
-      "controlling_sources": [],
-      "affected_paths": [],
-      "commits_prs": [],
-      "evidence": [],
+      "controlling_sources": [
+        "docs/canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md",
+        "enterprise/operations/source/current_company_2026_08.json",
+        "enterprise/operations/docs/completed-period.md"
+      ],
+      "affected_paths": [
+        "enterprise/operations/source/current_company_2026_08.json",
+        "enterprise/operations/docs/completed-period.md",
+        "enterprise/operations/source/lane_receipt_2026_09_15.json"
+      ],
+      "commits_prs": [
+        "39aa95c1",
+        "6ab8dda7"
+      ],
+      "evidence": [
+        "enterprise/operations/source/current_company_2026_08.json",
+        "enterprise/operations/docs/completed-period.md",
+        "enterprise/operations/source/lane_receipt_2026_09_15.json"
+      ],
       "commands_results": [],
-      "reconciliation_totals": {},
-      "limitations": [],
+      "reconciliation_totals": {
+        "contracts": 92,
+        "customers": 88,
+        "service_environments": 104,
+        "research_projects": 5,
+        "industrial_assets": 149
+      },
+      "limitations": [
+        "Integration acceptance, final composed-revision validation and indexed Release packaging remain pending."
+      ],
       "next_owner": "finance and operations lanes"
     },
     {
@@ -44,13 +67,32 @@
       "lane": "A",
       "status": "IN_PROGRESS",
       "acceptance_status": "PENDING",
-      "controlling_sources": [],
-      "affected_paths": [],
+      "controlling_sources": [
+        "docs/canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md",
+        "enterprise/closeout/finance.py",
+        "docs/finance/evidence/company-closeout/README.md"
+      ],
+      "affected_paths": [
+        "enterprise/closeout/finance.py",
+        "docs/finance/evidence/company-closeout/README.md"
+      ],
       "commits_prs": [],
-      "evidence": [],
+      "evidence": [
+        "enterprise/closeout/finance.py",
+        "docs/finance/evidence/company-closeout/README.md"
+      ],
       "commands_results": [],
-      "reconciliation_totals": {},
-      "limitations": [],
+      "reconciliation_totals": {
+        "core_goodwill_removed_usd": "30000000.00",
+        "direct_cash_delta_usd": "0.00",
+        "protected_aru_book_goodwill_usd": "14762500.00",
+        "protected_aru_tax_goodwill_usd": "13000000.00",
+        "ff003_expense_payable_usd": "152250.00",
+        "ff003_customer_principal_delta_usd": "0.00"
+      },
+      "limitations": [
+        "Integration acceptance, final composed-revision validation and indexed Release packaging remain pending."
+      ],
       "next_owner": "finance lane"
     },
     {
@@ -59,13 +101,41 @@
       "lane": "B",
       "status": "IN_PROGRESS",
       "acceptance_status": "PENDING",
-      "controlling_sources": [],
-      "affected_paths": [],
-      "commits_prs": [],
-      "evidence": [],
+      "controlling_sources": [
+        "docs/canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md",
+        "enterprise/operations/source/completed_period_2026_08.json",
+        "enterprise/operations/docs/ps-legal-payroll-bridge.md"
+      ],
+      "affected_paths": [
+        "enterprise/operations/source/completed_period_2026_08.json",
+        "enterprise/operations/docs/ps-legal-payroll-bridge.md",
+        "enterprise/operations/source/lane_receipt_2026_09_15.json"
+      ],
+      "commits_prs": [
+        "39aa95c1",
+        "6ab8dda7"
+      ],
+      "evidence": [
+        "enterprise/operations/source/completed_period_2026_08.json",
+        "enterprise/operations/docs/ps-legal-payroll-bridge.md",
+        "enterprise/operations/source/lane_receipt_2026_09_15.json"
+      ],
       "commands_results": [],
-      "reconciliation_totals": {},
-      "limitations": [],
+      "reconciliation_totals": {
+        "employees": 702,
+        "positions": 758,
+        "nonemployee_directors": 7,
+        "payroll_events": 1404,
+        "gross_usd": "6259287.81",
+        "withholding_usd": "1706523.80",
+        "net_pay_usd": "4552764.01",
+        "employer_cost_usd": "8137074.52",
+        "august_ps_legal_reclassification_usd": "78125.00",
+        "reclassification_group_cash_and_expense_delta_usd": "0.00"
+      },
+      "limitations": [
+        "Integration acceptance, final composed-revision validation and indexed Release packaging remain pending."
+      ],
       "next_owner": "people and operations lane"
     },
     {
@@ -74,13 +144,36 @@
       "lane": "A",
       "status": "IN_PROGRESS",
       "acceptance_status": "PENDING",
-      "controlling_sources": [],
-      "affected_paths": [],
+      "controlling_sources": [
+        "docs/canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md",
+        "docs/finance/evidence/company-closeout/ADOPTED_PARENT_TAX.md",
+        "docs/finance/evidence/company-closeout/HISTORICAL_TAX_RECONSTRUCTION.md",
+        "docs/finance/evidence/company-closeout/TREASURY_AND_INVESTOR_ROUTE.md",
+        "docs/finance/evidence/company-closeout/SOVEREIGNTY_METHOD.md",
+        "docs/internal/company-closeout/CAPITAL_HISTORY_PROPOSAL.md"
+      ],
+      "affected_paths": [
+        "docs/finance/evidence/company-closeout/ADOPTED_PARENT_TAX.md",
+        "docs/finance/evidence/company-closeout/HISTORICAL_TAX_RECONSTRUCTION.md",
+        "docs/finance/evidence/company-closeout/TREASURY_AND_INVESTOR_ROUTE.md",
+        "docs/finance/evidence/company-closeout/SOVEREIGNTY_METHOD.md",
+        "docs/internal/company-closeout/CAPITAL_HISTORY_PROPOSAL.md"
+      ],
       "commits_prs": [],
-      "evidence": [],
+      "evidence": [
+        "docs/finance/evidence/company-closeout/ADOPTED_PARENT_TAX.md",
+        "docs/finance/evidence/company-closeout/HISTORICAL_TAX_RECONSTRUCTION.md",
+        "docs/finance/evidence/company-closeout/TREASURY_AND_INVESTOR_ROUTE.md",
+        "docs/finance/evidence/company-closeout/SOVEREIGNTY_METHOD.md",
+        "docs/internal/company-closeout/CAPITAL_HISTORY_PROPOSAL.md"
+      ],
       "commands_results": [],
       "reconciliation_totals": {},
-      "limitations": [],
+      "limitations": [
+        "Integration acceptance, final composed-revision validation and indexed Release packaging remain pending.",
+        "Exact holder interests and material rights proposal awaits owner disposition; no acceptance inferred.",
+        "Full legal-entity/state income-tax and current RWH transaction-tax integration remains in progress; prior generated totals are not final."
+      ],
       "next_owner": "finance lane"
     },
     {
@@ -89,13 +182,41 @@
       "lane": "C",
       "status": "IN_PROGRESS",
       "acceptance_status": "PENDING",
-      "controlling_sources": [],
-      "affected_paths": [],
+      "controlling_sources": [
+        "docs/canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md",
+        "enterprise/ccf/company_closeout/README.md",
+        "enterprise/ccf/company_closeout/current_activity_successor.json",
+        "enterprise/ccf/company_closeout/synthetic_permit_instruments_august.json",
+        "enterprise/ccf/company_closeout/rail_reporting_successor.json",
+        "enterprise/ccf/company_closeout/industrial_transaction_tax.json"
+      ],
+      "affected_paths": [
+        "enterprise/ccf/company_closeout/README.md",
+        "enterprise/ccf/company_closeout/current_activity_successor.json",
+        "enterprise/ccf/company_closeout/synthetic_permit_instruments_august.json",
+        "enterprise/ccf/company_closeout/rail_reporting_successor.json",
+        "enterprise/ccf/company_closeout/industrial_transaction_tax.json"
+      ],
       "commits_prs": [],
-      "evidence": [],
+      "evidence": [
+        "enterprise/ccf/company_closeout/README.md",
+        "enterprise/ccf/company_closeout/current_activity_successor.json",
+        "enterprise/ccf/company_closeout/synthetic_permit_instruments_august.json",
+        "enterprise/ccf/company_closeout/rail_reporting_successor.json",
+        "enterprise/ccf/company_closeout/industrial_transaction_tax.json"
+      ],
       "commands_results": [],
-      "reconciliation_totals": {},
-      "limitations": [],
+      "reconciliation_totals": {
+        "permit_instruments": 14,
+        "permit_occurrences": 204,
+        "historical_rail_events": 14,
+        "native_controls": 166,
+        "native_control_boundaries": 1660,
+        "business_conditional_occurrences": 7560
+      },
+      "limitations": [
+        "Integration acceptance, final composed-revision validation and indexed Release packaging remain pending."
+      ],
       "next_owner": "obligations and controls lane"
     },
     {
@@ -104,13 +225,29 @@
       "lane": "C",
       "status": "IN_PROGRESS",
       "acceptance_status": "PENDING",
-      "controlling_sources": [],
-      "affected_paths": [],
+      "controlling_sources": [
+        "docs/canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md",
+        "docs/internal/company-closeout/PORTAL_CONTRACT.md",
+        "docs/internal/company-closeout/PORTAL_REHEARSAL.json",
+        "docs/internal/company-closeout/REFERENCE_RESTORE_RECEIPT.json"
+      ],
+      "affected_paths": [
+        "docs/internal/company-closeout/PORTAL_CONTRACT.md",
+        "docs/internal/company-closeout/PORTAL_REHEARSAL.json",
+        "docs/internal/company-closeout/REFERENCE_RESTORE_RECEIPT.json"
+      ],
       "commits_prs": [],
-      "evidence": [],
+      "evidence": [
+        "docs/internal/company-closeout/PORTAL_CONTRACT.md",
+        "docs/internal/company-closeout/PORTAL_REHEARSAL.json",
+        "docs/internal/company-closeout/REFERENCE_RESTORE_RECEIPT.json"
+      ],
       "commands_results": [],
       "reconciliation_totals": {},
-      "limitations": [],
+      "limitations": [
+        "Integration acceptance, final composed-revision validation and indexed Release packaging remain pending.",
+        "Pinned CompanyStore exercise covers six public documents only; full-edition integration pending. Reference restore and portal restore have distinct scopes. Existing thirteen external readiness gates are not cleared."
+      ],
       "next_owner": "obligations and controls lane"
     },
     {
@@ -119,43 +256,103 @@
       "lane": "B",
       "status": "IN_PROGRESS",
       "acceptance_status": "PENDING",
-      "controlling_sources": [],
-      "affected_paths": [],
-      "commits_prs": [],
-      "evidence": [],
+      "controlling_sources": [
+        "docs/canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md",
+        "enterprise/operations/source/september_custody_2026.json",
+        "enterprise/operations/source/lane_receipt_2026_09_15.json"
+      ],
+      "affected_paths": [
+        "enterprise/operations/source/september_custody_2026.json",
+        "enterprise/operations/source/lane_receipt_2026_09_15.json",
+        "enterprise/operations/source/lane_receipt_2026_09_15.json"
+      ],
+      "commits_prs": [
+        "39aa95c1",
+        "6ab8dda7"
+      ],
+      "evidence": [
+        "enterprise/operations/source/september_custody_2026.json",
+        "enterprise/operations/source/lane_receipt_2026_09_15.json"
+      ],
       "commands_results": [],
       "reconciliation_totals": {},
-      "limitations": [],
+      "limitations": [
+        "Integration acceptance, final composed-revision validation and indexed Release packaging remain pending."
+      ],
       "next_owner": "people and operations lane"
     },
     {
       "id": "SH-C08",
       "title": "Publication status and source protection",
       "lane": "D",
-      "status": "IN_PROGRESS",
-      "acceptance_status": "PENDING",
-      "controlling_sources": [],
-      "affected_paths": [],
-      "commits_prs": [],
-      "evidence": [],
-      "commands_results": [],
+      "status": "ACCEPTED_PR145_AND_PROTECTION_FINAL_EDITION_PENDING",
+      "acceptance_status": "PARTIAL_ACCEPTANCE_PR145_PR165",
+      "controlling_sources": [
+        "docs/canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md",
+        "docs/internal/company-closeout/PR145_INTEGRATION.md",
+        "docs/internal/company-closeout/PR145_VALIDATION.json",
+        "docs/internal/company-closeout/MAIN_PROTECTION.md",
+        "docs/internal/company-closeout/MAIN_PROTECTION_RECEIPT.json"
+      ],
+      "affected_paths": [
+        "docs/internal/company-closeout/PR145_INTEGRATION.md",
+        "docs/internal/company-closeout/PR145_VALIDATION.json",
+        "docs/internal/company-closeout/MAIN_PROTECTION.md",
+        "docs/internal/company-closeout/MAIN_PROTECTION_RECEIPT.json"
+      ],
+      "commits_prs": [
+        "https://github.com/SquirmyWormy275/SABLEHARBOR/pull/145",
+        "c8d628aa84140d63f6b8da8e2cba173c26c9a3b1",
+        "https://github.com/SquirmyWormy275/SABLEHARBOR/pull/165",
+        "667fddbeb2876ef83bc836b21dc4062e943bcb2c"
+      ],
+      "evidence": [
+        "docs/internal/company-closeout/PR145_INTEGRATION.md",
+        "docs/internal/company-closeout/PR145_VALIDATION.json",
+        "docs/internal/company-closeout/MAIN_PROTECTION.md",
+        "docs/internal/company-closeout/MAIN_PROTECTION_RECEIPT.json"
+      ],
+      "commands_results": [
+        {
+          "scope": "PR145 reviewed head12fdd3b942672f2f84d8fdd27d7e749afdea2760",
+          "result": "16 successful hosted validation contexts; two intentional publish skips"
+        },
+        {
+          "scope": "Main protection administration",
+          "result": "Applied and API readback verified; exact configuration in MAIN_PROTECTION_RECEIPT.json"
+        }
+      ],
       "reconciliation_totals": {},
-      "limitations": [],
+      "limitations": [
+        "Integration acceptance, final composed-revision validation and indexed Release packaging remain pending."
+      ],
       "next_owner": "integration owner"
     },
     {
       "id": "SH-C09",
       "title": "Reject malformed tenant identity",
       "lane": "C",
-      "status": "IN_PROGRESS",
+      "status": "IMPLEMENTED_ACCEPTANCE_PENDING",
       "acceptance_status": "PENDING",
-      "controlling_sources": [],
-      "affected_paths": [],
+      "controlling_sources": [
+        "docs/canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md",
+        "enterprise/runtime/security.py",
+        "enterprise/runtime/tests/test_security.py"
+      ],
+      "affected_paths": [
+        "enterprise/runtime/security.py",
+        "enterprise/runtime/tests/test_security.py"
+      ],
       "commits_prs": [],
-      "evidence": [],
+      "evidence": [
+        "enterprise/runtime/security.py",
+        "enterprise/runtime/tests/test_security.py"
+      ],
       "commands_results": [],
       "reconciliation_totals": {},
-      "limitations": [],
+      "limitations": [
+        "Integration acceptance, final composed-revision validation and indexed Release packaging remain pending."
+      ],
       "next_owner": "obligations and controls lane"
     },
     {
@@ -164,13 +361,31 @@
       "lane": "D",
       "status": "IN_PROGRESS",
       "acceptance_status": "PENDING",
-      "controlling_sources": [],
-      "affected_paths": [],
+      "controlling_sources": [
+        "docs/canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md",
+        "docs/internal/company-closeout/INSPECTION_GUIDE.md",
+        "tools/company_closeout/compose.py",
+        "tools/company_closeout/edition.py",
+        "tools/company_closeout/independent_import.py"
+      ],
+      "affected_paths": [
+        "docs/internal/company-closeout/INSPECTION_GUIDE.md",
+        "tools/company_closeout/compose.py",
+        "tools/company_closeout/edition.py",
+        "tools/company_closeout/independent_import.py"
+      ],
       "commits_prs": [],
-      "evidence": [],
+      "evidence": [
+        "docs/internal/company-closeout/INSPECTION_GUIDE.md",
+        "tools/company_closeout/compose.py",
+        "tools/company_closeout/edition.py",
+        "tools/company_closeout/independent_import.py"
+      ],
       "commands_results": [],
       "reconciliation_totals": {},
-      "limitations": [],
+      "limitations": [
+        "Integration acceptance, final composed-revision validation and indexed Release packaging remain pending."
+      ],
       "next_owner": "integration owner"
     }
   ],
@@ -207,5 +422,6 @@
     "billing_adoption_pr": 138,
     "publication_pr": 145,
     "protection_pr": 165
-  }
+  },
+  "evidence_boundary": "Progress inventory at integration head39aa95c1. Counts identify implemented source populations, not final acceptance or a released company edition."
 }

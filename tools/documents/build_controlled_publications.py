@@ -105,6 +105,14 @@ DOCS.extend([('docs/business-lines/FOUNDRY_FIELD.md', 'docs/business-lines/publi
 # Accepted September 8 Advisory/Atlas source package (PR #109).
 DOCS.extend([('docs/advisory/SABLE_HARBOR_ADVISORY_EXECUTIVE_MEMORANDUM_2026-09-08.md', 'docs/advisory/publications/SH-ADV-MEM-20260908-001_v1.0.0.pdf', 'corporate'), ('docs/advisory/OPERATING_MODEL.md', 'docs/advisory/publications/SH-ADV-001_v1.0.0.pdf', 'corporate'), ('docs/advisory/MATTER_GOVERNANCE_AND_ECONOMICS.md', 'docs/advisory/publications/SH-ADV-002_v1.0.0.pdf', 'corporate'), ('docs/advisory/TALENT_MOBILITY_AND_CARRY.md', 'docs/advisory/publications/SH-ADV-003_v1.0.0.pdf', 'corporate'), ('docs/advisory/ATLAS_MERIDIAN_PROFESSIONAL_PLATFORM.md', 'docs/advisory/publications/SH-ATL-016_v1.0.0.pdf', 'corporate'), ('docs/canon/ADVISORY_ATLAS_MERIDIAN_CLOSEOUT_2026-09-08.md', 'docs/advisory/publications/SH-ADV-ATL-DR-001_v1.0.0.pdf', 'corporate'), ('docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-08_ADVISORY.md', 'docs/advisory/publications/SH-ADV-ATL-DR-002_v1.0.0.pdf', 'corporate'), ('docs/controls/ADVISORY_MATTER_CONTROLS_v1.0.md', 'docs/advisory/publications/SH-ADV-CTRL-001_v1.0.0.pdf', 'corporate')])
 
+# Dated company closeout successors reuse the approved corporate publication style.
+DOCS.extend([
+    ("docs/canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md", "docs/governance/publications/SH-COMPANY-DIRECTIONS-20260915_v1.1.0.pdf", "corporate"),
+    ("docs/internal/company-closeout/INSPECTION_GUIDE.md", "docs/finance/publications/SH-COMPANY-INSPECTION-20260915_v1.0.0.pdf", "corporate"),
+    ("docs/finance/evidence/company-closeout/SOVEREIGNTY_METHOD.md", "docs/finance/publications/SH-COMPANY-SOVEREIGNTY-20260915_v1.0.0.pdf", "corporate"),
+    ("docs/finance/evidence/company-closeout/ADOPTED_PARENT_TAX.md", "docs/finance/publications/SH-COMPANY-PARENT-TAX-20260915_v1.0.0.pdf", "corporate"),
+])
+
 BRANDS = {
     "aru": {
         "logo": "assets/brand/industrial_sources/aru/aru_primary_centered_chat_asset.png",

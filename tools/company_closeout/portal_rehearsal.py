@@ -11,6 +11,7 @@ import json
 import sqlite3
 import subprocess
 from datetime import timedelta
+from itertools import zip_longest
 from pathlib import Path
 
 from .edition import EditionError, encoded, sha, timestamp, verify
@@ -140,13 +141,18 @@ def exercise(edition: Path, portal: Path, revision: str, destination: Path) -> d
         else:
             raise EditionError("Restore resurrected revoked access")
 
-    def rows(path, table):
-        with sqlite3.connect(path) as db:
-            return db.execute(f"SELECT * FROM {table} ORDER BY rowid").fetchall()
-
-    for table in ["systems", "versions", "grants", "access_events", "collections"]:
-        if rows(store.path, table) != rows(restored.path, table):
-            raise EditionError("Restore changed history/content")
+    # Compare every original byte and history row without materializing both
+    # complete enterprise BLOB populations in memory.
+    with sqlite3.connect(store.path) as original_db, sqlite3.connect(restored.path) as restored_db:
+        missing = object()
+        for table in ["systems", "versions", "grants", "access_events", "collections"]:
+            original_rows = original_db.execute(f"SELECT * FROM {table} ORDER BY rowid")
+            restored_rows = restored_db.execute(f"SELECT * FROM {table} ORDER BY rowid")
+            for original_row, restored_row in zip_longest(
+                original_rows, restored_rows, fillvalue=missing
+            ):
+                if original_row != restored_row:
+                    raise EditionError("Restore changed history/content")
     result = {
         "schema_version": "1.0.0",
         "result": "PASS",
