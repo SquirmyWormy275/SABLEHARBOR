@@ -4,6 +4,9 @@ Document ID: SH-C05-C06-REVIEW-2026-09-15. Prepared September 15, 2026 UTC.
 Acceptance: pending repository acceptance. Implementation of the closeout assignment;
 this record does not claim completed C05/C06 or accepted operating effectiveness.
 
+Current navigation: [current evidence and residual receipt](CURRENT_RESIDUALS.md).
+The dated sections below retain earlier findings and scoped successors.
+
 ## Reperform the declared population
 
 ```sh
