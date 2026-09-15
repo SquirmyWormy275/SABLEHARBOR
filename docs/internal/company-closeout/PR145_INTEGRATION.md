@@ -41,3 +41,15 @@ check found four Markdown hard-break spaces in SOURCE_AUDIT.md. Those source-onl
 spaces were removed; the final `git diff --check origin/main HEAD` passes. These checks apply to the integrated
 source tree prepared here; accepted merge SHA and hosted checks remain separately
 recorded on PR #145. No company-wide completion or after-tax release is claimed.
+
+## Hosted-check correction and retest
+
+The first hosted integration checks exposed the changed catalog's stale exact-large-file
+allowance and two current navigation files differing from the preserved v3 review receipt.
+The catalog is 11,458,560 bytes; its exact allowlist entry was updated after full catalog
+validation and public scanning. The global 10 MiB default remains unchanged.
+The v3 receipt remains byte-for-byte intact. A dated navigation successor binds the two
+new full-text routes and the versioned validator, while Git history verifies every original
+reviewed byte. All other v3 input/evidence hashes remain required. The independent v4.3
+review and 90-file revision comparison still pass. These are integration corrections,
+not retroactive visual reviews or new approval of proposed legal terms.
