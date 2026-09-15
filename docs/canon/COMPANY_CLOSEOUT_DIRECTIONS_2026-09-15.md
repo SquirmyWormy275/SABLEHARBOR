@@ -1,7 +1,7 @@
 # Company closeout owner directions
 
 **Document ID:** SH-CODEX-COMPANY-DIRECTIONS-2026-09-15
-**Version:** 1.0.0
+**Version:** 1.1.0
 **Record date:** September 15, 2026 UTC
 **Voice record date:** September 14, 2026 America/Los_Angeles; exact utterance times unavailable
 **Acceptance:** Pending repository integration; conversation-authorized implementation
@@ -41,6 +41,19 @@ No rate, benefit, expense, liability or saving was approved by voice.
 **Supersession:** resolves the parent C-corporation preference within issue #18 and
 prior open preference questions only. Effective history and its material consequences
 require evidenced implementation; it does not supersede legal identity or subsidiary canon.
+
+## SH-VOICE-TAX-01 implementation return — corporate from formation
+
+On September 14, 2026 America/Los_Angeles (September 15 UTC), the owner answered
+“Adopt corporate-from-formation history” after receiving the two prepared alternatives
+and their material effect on prior member-tax periods. This authorizes the newly authored
+2016 corporate-from-formation history and reconstruction of its prior tax records.
+The October 1, 2026 prospective alternative remains a preserved, unselected workpaper.
+The original LLC legal identity and year-precision recovered formation fact remain intact.
+The detailed fictional dates, submission/acknowledgement states, bases and workpapers
+must be labeled authored and reconciled; no real filing or recovered certificate is implied.
+This supplemental return resolves the effective-history choice within SH-VOICE-TAX-01.
+Repository acceptance and financial reconciliation remain separately evidenced.
 
 ## SH-VOICE-GW-01 — Unsupported Core goodwill removal
 

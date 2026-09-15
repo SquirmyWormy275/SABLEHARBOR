@@ -14,7 +14,7 @@
     "worktree": "SABLEHARBOR-audit-suite",
     "branch": "build/audit-training-suite",
     "observed_commit": "548cb5d",
-    "observation": "Running servers and dirty company activity work establish active workstream; individual owner coordination remains pending. No edits made in that worktree.",
+    "observation": "Owner confirmed this is the active portal workstream on September 15 UTC. Running servers and dirty company activity work observed; reserved paths remain untouched. Company source work uses isolated branches and a pinned module rehearsal, not live private data.",
     "reserved_paths": [
       "enterprise/audit_suite/",
       "audit_suite_web/",
@@ -174,5 +174,6 @@
       "next_owner": "integration owner"
     }
   ],
-  "residuals": []
+  "residuals": [],
+  "tax_history_direction": "OWNER_APPROVED_CORPORATE_FROM_FORMATION_2016_NEWLY_AUTHORED_HISTORY"
 }

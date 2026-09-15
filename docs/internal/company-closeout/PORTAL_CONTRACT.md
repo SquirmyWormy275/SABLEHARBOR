@@ -8,8 +8,8 @@ the existing workstream; it does not create a competing portal or company schema
 The local `SABLEHARBOR-audit-suite` worktree, branch `build/audit-training-suite`, had
 running company-source servers and uncommitted activity/access changes at discovery.
 Its observed committed source was `548cb5d2be82ec11877e298c2c8d00aa1e555b7f`.
-The closeout does not edit that worktree, its private data or live servers. Individual
-owner coordination remains pending; the reserved paths are recorded in REGISTER.json.
+The closeout does not edit that worktree, its private data or live servers. The owner confirmed this is the active portal workflow. Reserved paths are recorded
+in REGISTER.json; no overlapping portal edits are required by this input work.
 The source module is a concurrent dependency, not accepted main by implication.
 
 ## Existing schema and bounded import
