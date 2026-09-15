@@ -1,0 +1,86 @@
+{
+  "document_id": "SH-C05-TAX-CALENDAR-SUPPLEMENT-20260915",
+  "version": "1.0.0",
+  "acceptance_state": "PENDING_REPOSITORY_ACCEPTANCE",
+  "origin": "NEWLY_AUTHORED_SYNTHETIC_ADMINISTRATIVE_HISTORY_NOT_REAL_TAX_AGENCY_EVIDENCE",
+  "event_cutoff": "2026-09-14",
+  "authorship_date": "2026-09-15",
+  "authorship_precision": "DAY_NOT_BACKDATED_AVAILABILITY",
+  "historical_months": [
+    {
+      "month": 7,
+      "sales_usd": "2100000",
+      "receipts_usd": "0"
+    },
+    {
+      "month": 8,
+      "sales_usd": "2100000",
+      "receipts_usd": "1400000"
+    },
+    {
+      "month": 9,
+      "sales_usd": "2100000",
+      "receipts_usd": "1800000"
+    },
+    {
+      "month": 10,
+      "sales_usd": "2100000",
+      "receipts_usd": "1800000"
+    },
+    {
+      "month": 11,
+      "sales_usd": "2100000",
+      "receipts_usd": "1800000"
+    },
+    {
+      "month": 12,
+      "sales_usd": "2100000",
+      "receipts_usd": "1800000"
+    }
+  ],
+  "historical_scope": "Newly authored H2 monthly schedule within source12.6M sales/8.6M receipts/4MclosingAR; no new sale/cash. Four2026contract valueweights are explicit historical allocation precision, not recovered2025 customer invoices. No trader certificate inferred. July sales occurafterJul7close; receiver jurisdiction retained Metropolis outside businessdistrict, no newsite/operator.",
+  "accounts": [
+    {
+      "account_id": "SYN-TAX-RWH-IL-ROT",
+      "entity": "RWH",
+      "tax_type": "ROT",
+      "registration_effective": "2025-07-08",
+      "state": "AUTHORED_MODELED_ACCOUNT_REGISTRATION",
+      "filing_frequency": "MONTHLY",
+      "source_boundary": "Postclosing account administration; no assertion about previous operator filing",
+      "accelerated_notice_id": "SYN-IL-RWH-ACCEL-20260102",
+      "notice_date": "2026-01-02",
+      "effective_period": "2026-01",
+      "notice_state": "NEWLY_AUTHORED_SYNTHETIC_NOTICE_BASED_ON_REPERFORMED2025_THRESHOLD",
+      "tax_payments": "NONE_MODELED"
+    },
+    {
+      "account_id": "SYN-TAX-PS-IL-INCOME",
+      "entity": "PS",
+      "tax_type": "CORPORATE_AND_REPLACEMENT",
+      "state": "PREPARED_SYNTHETIC_ACCOUNT_REFERENCE_NOT_SUBMITTED"
+    },
+    {
+      "account_id": "SYN-TAX-SHI-WV-CIT",
+      "entity": "SHI",
+      "tax_type": "CORPORATE_NET_INCOME",
+      "state": "PREPARED_SYNTHETIC_ACCOUNT_REFERENCE_NOT_SUBMITTED"
+    }
+  ],
+  "authorities": {
+    "IL-RETURN": "https://tax.illinois.gov/content/dam/soi/en/web/tax/forms/incometax/documents/currentyear/business/corporate/il-1120-instr.pdf",
+    "IL-ESTIMATE": "https://tax.illinois.gov/businesses/business-income-tax-estimated-payments.html",
+    "WV-RETURN-ESTIMATE": "https://tax.wv.gov/Documents/CIT/2025/cit120.instructions.2025.pdf",
+    "IL-ST1": "https://tax.illinois.gov/research/publications/pubs/retailers-overview-of-sales-and-use-tax/requirements-for-retailers-who-file-form-st-1.html",
+    "IL-ROT-STATUTE": "https://www.ilga.gov/Legislation/ILCS/Articles?ActID=582&ChapterID=8",
+    "IL-EFT": "https://www.ilga.gov/ftp/JCAR/AdminCode/086/086007500003000R.html",
+    "IL-RATE2025-07": "https://tax.illinois.gov/research/publications/bulletins/fy-2025-25.html",
+    "IL-RATE2026-01": "https://tax.illinois.gov/research/publications/bulletins/fy-2026-10.html",
+    "IL-RATE2026-07": "https://tax.illinois.gov/research/publications/bulletins/fy-2026-26.html",
+    "US-CORP": "https://www.irs.gov/instructions/i1120"
+  },
+  "authority_accessed_on": "2026-09-15",
+  "rate_conclusion": "H22025 ordinaryMetropolis6.25% inferred from primaryJuly2026before-rate6.25% and interveningJuly2025/January2026change schedules; businessdistrict expresslyexcluded. July2026increase7.25% doesnotbackapply.",
+  "payroll_boundary": "People/finance retain federal/state payroll deposit liabilities/calendar; this source doesnot classify Julybonus levy as corporate incomeestimate.",
+  "settlement_boundary": "No remittance or agency acceptance invented; pastdueunpaid taxes remainfailure. Treasury amount/payment journals must come from finance, not thiscalendar. No 2026 accepted invoice receiptdates changed."
+}
