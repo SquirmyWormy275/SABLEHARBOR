@@ -46,6 +46,30 @@ truth, grading rules/results and NAILEX proprietary implementation remain outsid
 this package under maintainer rules. Neither tests nor public manifests disclose
 private grading payloads.
 
+## Current accounting and ownership sources
+
+The [accounting-basis successor](../../finance/evidence/company-closeout/ACCOUNTING_BASIS_SUCCESSOR.md)
+defines the synthetic management accrual presentation and exact correction scope.
+Legal books, financial consolidation and tax filing groups have separate boundaries.
+The edition makes no US GAAP or audit-opinion claim. Use the final release receipt
+to identify the implemented tax provision, payment states and numerical effects.
+
+The [adopted directions](../../canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md)
+resolve corporate taxation from formation and the exact five-holder register.
+The [capital source](../../../enterprise/closeout/source/capital_register.json)
+and [founder reconstruction](FOUNDER_ADMISSION_BASIS.md) distinguish historical
+subscriptions, admission value, retained earnings and subsequent member cash.
+The $183 million subscription history is not additional current cash. Funding
+requests preserve the established participation shares and issue no new units.
+The [investor route](../../finance/evidence/company-closeout/TREASURY_AND_INVESTOR_ROUTE.md)
+joins those records to the same edition's financial results and funding limits.
+
+The register's residuals identify specific rights and capability limits, evidence
+reviewed, impact, alternatives and next owner. Accepted packaging cannot establish
+an unknown covenant, side-letter disposition, lien release or unexercised runtime
+surface. Selected mine examinations and rail-event reporting remain distinct from
+complete monthly mine and railway compliance populations.
+
 ## Financial and completed-period joins
 
 The finance export directory is
