@@ -9,9 +9,9 @@
   "supersedes_scope": "Selected current populations and factual privacy/benefit/service screens replace unresolved current-population portions of activity_applicability.json; its distinct forecasts, runtime readiness and future FF003 remain unchanged.",
   "source_hashes": {
     "enterprise/operations/source/current_company_2026_08.json": "729e45f44d5240be558bb8d1cfef3bdd527a379a810a342173b2409d7ce0ea74",
-    "enterprise/operations/source/completed_period_2026_08.json": "b64e0d5d9041feae1816c533abdd99b26fa9c31fef01122614a9ec8a42800a8a",
+    "enterprise/operations/source/completed_period_2026_08.json": "14e7b53177b80d671ed66fdc309c6b2c0e1b0b68567f54da97dd02dca4d1ddf8",
     "enterprise/operations/current_records.py": "8a4333283cf3c8706aed0092c8c0f8cf90b4a8a37fcfc76b447fd19b4f4d2776",
-    "enterprise/operations/completed_period.py": "1321c346232f9b2f2f3992836fca144a7a7b026c6f19eeab56df703d79cef60f"
+    "enterprise/operations/completed_period.py": "8c120f029b53b41731c636e6291c2390e56764601cda56c3faa2655b59cbecf5"
   },
   "populations": {
     "current_contracts": {

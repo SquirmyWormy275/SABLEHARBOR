@@ -49,3 +49,41 @@ passing arithmetic tests. Finance must reconcile the revised cost population,
 forward inventory release and book-versus-tax treatment before posting. This
 review does not direct a second cash charge or removal of the separately preserved
 ARU acquisition balances.
+
+## Revised source retest: aaf13c31 and b91be16c
+
+The three revised history tests passed. Reperformance gives book DD&A
+$1,477,832.5123, opening inventory increase $737,430.2135 and opening equity
+decrease $740,402.2988. The earlier prepared $1,549,568.9655 correction is
+superseded by this method revision, pending forward composition. The retained
+$3M abnormal repair/stabilization period expense and $687,500 abnormal
+mobilization expense are separate from $1.942M normal book production overhead.
+The fictional seven-day outage leaves160 production days; the selected throughput
+remains below600tpd. The equipment/building split now excludes the $4M structure
+from100%bonus and uses39-year/midmonth depreciation.
+
+Revised federal loss is $8,098,998.0919 and California pre-apportionment loss
+$1,896,395.3522. These are intermediate, before the shutdown allowance disposition
+below and any forward-provider reconciliation. No additional cash or goodwill
+was introduced. Neither passing tests nor a loss establishes deferred realization.
+
+### Shutdown-specific tax refinement
+
+[2025 annual CFR section1.263A-1(e)(3)(iii)(E)](https://www.govinfo.gov/content/pkg/CFR-2025-title26-vol4/xml/CFR-2025-title26-vol4-sec1-263A-1.xml)
+excludes temporarily idle depreciation/amortization/cost-recovery allowances from
+required capitalization. It does not broadly exempt repair or security spending.
+A finite removal from service differs from ordinary breaks or normal interruptions.
+Thus the production-benefit repair allocation is supported, but the newly authored
+seven-day abnormal shutdown also needs an explicit depreciation allocation/method
+disposition. Do not assume an arbitrary7/167 share of one-time bonus without
+explaining attribution. Finance was notified to resolve this before final posting.
+
+[FASB Statement151](https://storage.fasb.org/fas151.pdf) supports the model's
+abnormal-period-cost and normal-capacity distinction. It is a superseded primary
+pronouncement, not current Codification text or a full current USGAAP opinion.
+The selected source expressly preserves that professional-conclusion limit.
+
+Primary downloads accessed September15UTC; SHA256:
+
+- `sh-263a.xml`: `2c671ed352e47520454f393f22c992e6a4342a3230c1b4cd47562359501ca26e`
+- `sh-fas151.pdf`: `14a65c68921730175fcc5a5879a74d03223829b29418ad840672f3a85b8c425e`
