@@ -557,3 +557,18 @@ Review comments can optionally anchor an exact passage in their already pinned
 workpaper version. Server validation checks the precise Unicode offsets and text;
 a later workpaper version does not move the comment. The existing independent
 review and issue-resolution requirements continue to apply.
+
+
+The first [explicit instructor assistance slice](IK05_EXPLICIT_RELEASE_CORE.md)
+keeps named-learner hints and pointers outside the general engagement state.
+An instructor previews exact content and explicitly confirms its release. The
+learner chooses whether to open it; delivery and acknowledgment do not establish
+understanding. Changed scope, source binding or Key pins suspend access, and
+revocation prevents subsequent retrieval without claiming prior knowledge was
+erased. No actual learner release was made during implementation.
+
+Companion backup preserves sensitive preview drafts and assistance history as a
+verified private archive. Restoration is inert: it does not recreate an active
+release service, credentials, grants or recipient mappings. Full explanation
+selection, portable debriefs, operational rehydration and qualified calibration
+remain open parts of IK-05/IK-06.

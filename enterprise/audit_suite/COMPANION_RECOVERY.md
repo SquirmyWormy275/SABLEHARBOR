@@ -56,3 +56,11 @@ bundle and manifest. Keep a separate trusted copy of the manifest. Model runtime
 licensed references, instructor key archives and company-source databases require
 their own existing delivery/recovery procedures. An interrupted filesystem publication
 must be treated as incomplete; never activate a partial directory manually.
+
+## Instructor-release archive custody
+
+Pass `instructor_releases=existing_release_store` to `backup`. The existing private store's validated snapshot captures document rows (including unconfirmed previews), release/delivery/acknowledgement/revocation events, and idempotency receipts in one transaction. This content is sensitive private instructor material. It is never included in ordinary engagement exports or model state. The companion manifest retains the exact canonical snapshot bytes, length, hash and a component capture timestamp; separate companions do not constitute a global atomic snapshot.
+
+Restore verifies the member bytes and the maintained release snapshot validator, then writes only `instructor-releases-ARCHIVE-ONLY.json`. It never creates `releases.sqlite3`, invokes the release-store constructor, remaps recipients, restores current key bindings, grants access or republishes hints. Original IDs and authority references remain historical archive data. The receipt explicitly records `ARCHIVE_ONLY_NOT_OPERATIONALLY_REHYDRATED` and `release_principals_or_bindings_rehydrated: false`.
+
+An operational release migration requiring explicit new-principal mapping and fresh role/key/scope checks is not implemented by this archive slice. Do not point a live release service at the archive or treat recovery as authorization to deliver its contents. Existing context ownership restoration and inert background-job semantics remain separate.

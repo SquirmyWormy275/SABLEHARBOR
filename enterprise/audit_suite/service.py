@@ -225,6 +225,14 @@ def create_app(
         context_root = engine.store.root / "workspace-contexts"
         context_root.mkdir(mode=0o700, exist_ok=True)
         contexts = WorkspaceContexts(context_root, engine)
+    releases = None
+    if protected_bindings:
+        from .instructor_releases import InstructorReleases
+
+        release_root = engine.store.root / "instructor-releases"
+        release_root.mkdir(mode=0o700, exist_ok=True)
+        releases = InstructorReleases(release_root, engine, protected_bindings)
+    app.state.instructor_releases = releases
     app.state.workspace_contexts = contexts
     app.state.background_jobs = jobs
     app.state.generation_jobs = {}
@@ -326,6 +334,7 @@ def create_app(
             workspace_contexts=contexts is not None,
             background_jobs=jobs is not None,
             bound_instructor_keys=bool(protected_bindings),
+            instructor_releases=releases is not None,
             instructor_reference_library=instructor_key_root is not None,
         )
         result["background_command_kinds"] = jobs.supported_commands() if jobs is not None else []
@@ -465,6 +474,65 @@ def create_app(
         return await asyncio.to_thread(
             compare, engine, principal, engagement_id, protected_bindings, revision=revision
         )
+
+    def release_store(request: Request, *, mutation=False):
+        principal = actor(request, mutation=mutation)
+        if releases is None:
+            raise DomainError("Instructor assistance is not configured", status=503)
+        if request.query_params:
+            raise DomainError("Assistance uses the current authenticated context")
+        limits.check("instructor-assistance", principal["id"], 120)
+        return principal["id"], releases
+
+    @app.get("/api/engagements/{engagement_id}/instructor-releases")
+    async def release_history(engagement_id: str, request: Request):
+        principal, store = release_store(request)
+        return await asyncio.to_thread(store.history, principal, engagement_id)
+
+    @app.get("/api/engagements/{engagement_id}/instructor-releases/options")
+    async def release_options(engagement_id: str, request: Request):
+        principal, store = release_store(request)
+        return await asyncio.to_thread(store.options, principal, engagement_id)
+
+    @app.post("/api/engagements/{engagement_id}/instructor-releases/preview")
+    async def release_preview(engagement_id: str, request: Request):
+        principal, store = release_store(request, mutation=True)
+        return await asyncio.to_thread(
+            store.preview, principal, engagement_id, await json_body(request)
+        )
+
+    @app.post("/api/engagements/{engagement_id}/instructor-releases")
+    async def release_confirm(engagement_id: str, request: Request):
+        principal, store = release_store(request, mutation=True)
+        return await asyncio.to_thread(
+            store.confirm, principal, engagement_id, await json_body(request)
+        )
+
+    @app.post("/api/engagements/{engagement_id}/instructor-releases/{release_id}/revoke")
+    async def release_revoke(engagement_id: str, release_id: str, request: Request):
+        principal, store = release_store(request, mutation=True)
+        payload = await json_body(request)
+        if payload.get("release_id") != release_id:
+            raise DomainError("Exact release identity required")
+        return await asyncio.to_thread(store.revoke, principal, engagement_id, payload)
+
+    @app.get("/api/engagements/{engagement_id}/assistance")
+    async def assistance_list(engagement_id: str, request: Request):
+        principal, store = release_store(request)
+        return await asyncio.to_thread(store.list, principal, engagement_id)
+
+    @app.get("/api/engagements/{engagement_id}/assistance/{release_id}")
+    async def assistance_read(engagement_id: str, release_id: str, request: Request):
+        principal, store = release_store(request)
+        return await asyncio.to_thread(store.read, principal, engagement_id, release_id)
+
+    @app.post("/api/engagements/{engagement_id}/assistance/{release_id}/acknowledge")
+    async def assistance_acknowledge(engagement_id: str, release_id: str, request: Request):
+        principal, store = release_store(request, mutation=True)
+        payload = await json_body(request)
+        if payload.get("release_id") != release_id:
+            raise DomainError("Exact release identity required")
+        return await asyncio.to_thread(store.acknowledge, principal, engagement_id, payload)
 
     @app.get("/api/engagements/{engagement_id}/instructor-binding")
     async def instructor_binding(engagement_id: str, request: Request):

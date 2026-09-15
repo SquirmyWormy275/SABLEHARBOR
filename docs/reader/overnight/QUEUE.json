@@ -717,11 +717,12 @@
         "docs/internal/development/audit-suite/",
         "enterprise/generated/audit-suite/"
       ],
-      "state": "READY",
+      "state": "IN_PROGRESS",
       "acceptance": "Provide staged hints, source/procedure pointers, evidence and full explanations; record assistance separately from unassisted performance. Assemble selected issues, annotated evidence and prompts into interactive and portable debriefs with pinned provenance. If AI assistance is enabled, suggestions cite actual learner work and rubric versions, remain distinguishable from human decisions and cannot silently determine grades.",
       "gate": "existing_authority",
-      "execution_policy": "Queued, not started. READY is conditional on completed dependencies and the recorded execution authorization. Keep populated keys and learner records private. Integrator owns shared schema, dependency and catalog changes. IK-06 requires actual professional review and owner acceptance, not inferred approval.",
-      "execution_authorized": true
+      "execution_policy": "Owner authorized execution. This bounded implementation does not establish completed dependency acceptance. Keep populated keys and learner records private; shared schema and catalog changes belong to the integrator. Qualified review and user acceptance remain separate.",
+      "execution_authorized": true,
+      "evidence": "Initial HINT/POINTER implementation uses a separate private release store, named current learner, exact preview/confirmation pins and explicit delivery/acknowledgment/revocation history. It does not alter task results, infer understanding, expose the whole Key or feed company/model contexts. Companion recovery preserves an inert private archive; operational rehydration, full explanations, portable debriefs and qualified calibration remain open. No real learner release has been performed."
     },
     {
       "id": "IK-06",

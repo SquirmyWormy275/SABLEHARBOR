@@ -1,0 +1,28 @@
+# Explicit instructor assistance release core
+
+`enterprise/audit_suite/instructor_releases.py` implements the first bounded IK-05 slice: instructor-authored HINT and POINTER releases to one current learner in one engagement. EXPLANATION, whole-Key disclosure, AI hints, grades and portable learner debriefs are unsupported. These mechanics do not validate instructional correctness, professional sufficiency or learner understanding.
+
+The caller constructs `InstructorReleases(existing_private_0700_directory, engine, protected_bindings)`. The private `releases.sqlite3` contains immutable preview/release documents, an append-only hash-linked event journal and command receipts. Files must be private regular files without aliases. This is separate from audit/company state: none of its content is automatically supplied to company personas, experimental reviewers, ordinary engagement projections or evidence exports. Source-file/code validation is not binary attestation, and hashes cannot resist a privileged rewrite of all retained records.
+
+## Core contract
+
+- `options(instructor, engagement_id)` returns current revision, active named learner IDs/names, eligible task IDs/titles/digests and learner-visible artifact IDs/names/hashes. No credentials, Key text or original-byte bulk reads. These are metadata choices; selected bytes are checked later.
+- `preview(instructor, engagement_id, payload)` accepts exactly `recipient_id`, `expected_revision`, `stage`, `text`, `pointers`. Stages are HINT (empty pointers) and POINTER (one to four explicit `{kind: task|artifact, id, sha256}` pointers). Text is explicitly authored by the instructor. It stores a private draft and returns the exact preview with its digest; this is not learner delivery.
+- `confirm(instructor, engagement_id, {preview_id, preview_sha256, command_id})` publishes that exact preview once. The thirty-minute preview must still match engagement revision/full-state digest, scope/source-binding/acquisition basis, exact configured Key manifest and pointer pins. A stale preview requires a new preview, not automatic rebase. Exact command replay returns the original receipt only after current authority/context and non-revocation checks. A new command cannot republish the same preview.
+- `history(instructor, engagement_id)` returns only that instructor's released metadata: recipient, stage, release ID, status, delivered/acknowledged flags and pre-release revision. Draft content is omitted.
+- `list(recipient, engagement_id)` returns only that current learner's release IDs/status and delivery/acknowledgement flags. Listing does not deliver content.
+- `read(recipient, engagement_id, release_id)` returns only the released content, release digest, pre-release revision and Key manifest pin. It journals DELIVERED once per release, meaning an authorized content response was prepared; it does not prove receipt, reading or understanding.
+- `acknowledge(recipient, engagement_id, {release_id, command_id})` requires a prior delivery and an active release. Acknowledgement is explicit self-report, not comprehension evidence.
+- `revoke(instructor, engagement_id, {release_id, command_id, reason})` appends revocation and preserves its reason and prior delivery. Current scoped instructors may revoke within the engagement, including when a recipient no longer has access. Revocation cannot erase previously delivered knowledge or downloads.
+
+Publication and content reads recheck current instructor and recipient memberships. The sponsoring instructor's continuing membership is a release validity condition, not an impersonated instructor request: private Key verification does not add an instructor-access event attributed to the sponsor during a learner read. The assistance journal records the actual caller.
+
+Scope, source-binding, acquisition, Key or selected-pointer changes suspend retrieval; old release content is never silently regenerated or relinked. Ordinary audit revision changes after release do not alone erase access when its pinned context/pointers remain valid. This historical boundary does not certify earlier work as unassisted. Source pointers neither create source grants nor expose inaccessible originals. A retained learner copy remains a retained copy, rather than a claim about current upstream access.
+
+## Boundaries and recovery
+
+Limits include 2,000 stored drafts/releases, 10,000 journal events/command receipts, four pointers, 4 MiB per selected original and 4,000 characters of instructor text. No inference or native source generation occurs. Membership/context rechecks span separate audit and sidecar stores; they do not assert a global cross-database transaction or protection from a change after the final check. Delivery is append-once to avoid repeated polling growing that journal.
+
+`snapshot()` is a trusted-operator, private logical export of all three tables, including unreleased drafts. `validate_snapshot(body)` checks the archive schema, document pins, release-to-preview equality, event chain/lifecycle and command references. It is not a public route. Companion backup/recovery may retain this snapshot as an inert private archive; recovery must not recreate an active release database, grants or current authorization. Current service, UI and backup wiring are separate integration work and must receive their own validation.
+
+Tests use real disposable Store/Key bindings and verify unchanged audit state, recipient isolation, stale revision/Key rejection, role loss during final checks, exact byte and task pins, no metadata-only delivery, idempotency, revoke/replay denial, private IO and inert archive integrity. No real learner release was made by this implementation task.

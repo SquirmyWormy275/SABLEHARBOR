@@ -172,10 +172,22 @@ def _validate(kind, body):
                 raise DomainError("Job transition head mismatch")
 
 
-def backup(destination: Path, *, contexts=None, jobs=None, instructor_access_root=None):
+def backup(
+    destination: Path,
+    *,
+    contexts=None,
+    jobs=None,
+    instructor_access_root=None,
+    instructor_releases=None,
+):
     """Capture selected live companion objects; never starts/retries jobs."""
     destination = _new(destination)
-    if contexts is None and jobs is None and instructor_access_root is None:
+    if (
+        contexts is None
+        and jobs is None
+        and instructor_access_root is None
+        and instructor_releases is None
+    ):
         raise DomainError("Select at least one companion")
     members, captures = {}, {}
     for kind, instance in [("contexts", contexts), ("jobs", jobs)]:
@@ -204,11 +216,23 @@ def backup(destination: Path, *, contexts=None, jobs=None, instructor_access_roo
             InstructorAccessLog._verify(raw, json.loads(head))
             members.update({"access.jsonl": raw, "head.json": head})
             captures["instructor_access"] = datetime.now(UTC).isoformat()
+    if instructor_releases is not None:
+        from .instructor_releases import validate_snapshot
+
+        snapshot = instructor_releases.snapshot()
+        validate_snapshot(snapshot)
+        members["instructor-releases.json"] = _json(snapshot)
+        captures["instructor_releases"] = datetime.now(UTC).isoformat()
     manifest = {
         "schema": "PRIVATE_COMPANION_V1",
         "component_captured_at": captures,
         "globally_atomic": False,
         "jobs_restore_mode": "ARCHIVE_ONLY",
+        "instructor_releases_restore_mode": (
+            "ARCHIVE_ONLY_NOT_OPERATIONALLY_REHYDRATED"
+            if instructor_releases is not None
+            else "NOT_INCLUDED"
+        ),
         "members": {
             name: {"sha256": hashlib.sha256(raw).hexdigest(), "bytes": len(raw)}
             for name, raw in members.items()
@@ -234,7 +258,13 @@ def restore(source: Path, destination: Path, *, engine=None, principal_map=None)
     _private(source, True)
     destination = _new(destination)
     manifest = json.loads(_read(source / "MANIFEST.json"))
-    allowed = {"contexts.json", "jobs.json", "access.jsonl", "head.json"}
+    allowed = {
+        "contexts.json",
+        "jobs.json",
+        "access.jsonl",
+        "head.json",
+        "instructor-releases.json",
+    }
     names = set(manifest.get("members", {}))
     if (
         manifest.get("schema") != "PRIVATE_COMPANION_V1"
@@ -260,6 +290,14 @@ def restore(source: Path, destination: Path, *, engine=None, principal_map=None)
             _validate(kind, bodies[kind])
     if "access.jsonl" in members:
         InstructorAccessLog._verify(members["access.jsonl"], json.loads(members["head.json"]))
+    if "instructor-releases.json" in members:
+        from .inference import _json as strict_json
+        from .instructor_releases import validate_snapshot
+
+        try:
+            validate_snapshot(strict_json(members["instructor-releases.json"]))
+        except (ValueError, TypeError, KeyError) as error:
+            raise DomainError("Invalid private release archive") from error
     tables = bodies.get("contexts", {}).get("tables")
     if tables is not None:
         owners = {r["actor"] for r in tables["contexts"]}
@@ -307,6 +345,10 @@ def restore(source: Path, destination: Path, *, engine=None, principal_map=None)
                             f"INSERT INTO {table} VALUES({placeholders})",
                             tuple(row[c] for c in columns),
                         )
+        if "instructor-releases.json" in members:
+            _write(
+                stage / "instructor-releases-ARCHIVE-ONLY.json", members["instructor-releases.json"]
+            )
         if "jobs.json" in members:
             _write(stage / "jobs-ARCHIVE-ONLY.json", members["jobs.json"])
         if "access.jsonl" in members:
@@ -323,6 +365,12 @@ def restore(source: Path, destination: Path, *, engine=None, principal_map=None)
             "principal_map": principal_map if tables else {},
             "credentials_or_grants_restored": False,
             "jobs": "ARCHIVE_ONLY",
+            "instructor_releases": (
+                "ARCHIVE_ONLY_NOT_OPERATIONALLY_REHYDRATED"
+                if "instructor-releases.json" in members
+                else "NOT_INCLUDED"
+            ),
+            "release_principals_or_bindings_rehydrated": False,
             "automatic_execution": False,
             "original_hashed_context_content_preserved": True,
         }
