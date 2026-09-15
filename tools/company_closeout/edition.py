@@ -1,4 +1,5 @@
 """Compose an explicitly scoped edition over existing outputs, without new company tables."""
+
 from __future__ import annotations
 
 import argparse
@@ -49,8 +50,11 @@ def validate_contract(contract: dict) -> None:
             raise EditionError("Duplicate component population")
         seen.add(item["id"])
         if item["fact_status"] not in {
-            "ACCEPTED_SOURCE", "CONDITIONAL_FORECAST", "NEWLY_AUTHORED_SYNTHETIC_HISTORY",
-            "REFERENCE_SOFTWARE_EXERCISE", "HISTORICAL_RELEASE",
+            "ACCEPTED_SOURCE",
+            "CONDITIONAL_FORECAST",
+            "NEWLY_AUTHORED_SYNTHETIC_HISTORY",
+            "REFERENCE_SOFTWARE_EXERCISE",
+            "HISTORICAL_RELEASE",
         }:
             raise EditionError("Unknown fact role")
         if item["access_scope"] != "PUBLIC_SYNTHETIC":
@@ -58,7 +62,9 @@ def validate_contract(contract: dict) -> None:
         if not item["population_definition"] or not item["units"] or not item["legal_entities"]:
             raise EditionError("Population, unit and entity scope required")
         timestamp(item["available_at"])
-        if item.get("claims_known_on") and timestamp(item["available_at"]) > timestamp(item["claims_known_on"]):
+        if item.get("claims_known_on") and timestamp(item["available_at"]) > timestamp(
+            item["claims_known_on"]
+        ):
             raise EditionError("Future evidence promoted into an earlier known-on state")
         members = item["members"]
         if not members or len(members) != len({m["path"] for m in members}):
@@ -86,19 +92,37 @@ def build(root: Path, contract_path: Path, destination: Path) -> dict:
             if sha(data) != member["sha256"]:
                 raise EditionError(f"Stale source/derivative pin: {member['path']}")
             if member["path"] in payloads:
-                raise EditionError("A physical member must belong to one component; use relationships")
+                raise EditionError(
+                    "A physical member must belong to one component; use relationships"
+                )
             payloads[member["path"]] = data
     if destination.exists():
         raise EditionError("New immutable edition destination required")
     # Validate every input before writing the new package. No deletion/replacement mode.
-    revision = subprocess.check_output(["git", "-C", str(root), "rev-parse", "HEAD"], text=True).strip()
+    revision = subprocess.check_output(
+        ["git", "-C", str(root), "rev-parse", "HEAD"], text=True
+    ).strip()
+    dirty = bool(
+        subprocess.check_output(
+            ["git", "-C", str(root), "status", "--porcelain"], text=True
+        ).strip()
+    )
+    if contract["status"] == "ACCEPTED_SCOPED_EDITION" and dirty:
+        raise EditionError("Accepted edition requires a clean source checkout")
     receipt = {
-        "schema_version": "1.0.0", "edition_id": contract["edition_id"],
-        "version": contract["version"], "status": contract["status"],
-        "source_commit": revision, "contract_sha256": sha(contract_bytes),
-        "members": [{"path": p, "bytes": len(b), "sha256": sha(b)} for p, b in sorted(payloads.items())],
+        "schema_version": "1.0.0",
+        "edition_id": contract["edition_id"],
+        "version": contract["version"],
+        "status": contract["status"],
+        "source_commit": revision,
+        "dirty_source_checkout": dirty,
+        "contract_sha256": sha(contract_bytes),
+        "members": [
+            {"path": p, "bytes": len(b), "sha256": sha(b)} for p, b in sorted(payloads.items())
+        ],
         "component_count": len(contract["components"]),
-        "scope": contract["scope"], "limitations": contract["limitations"],
+        "scope": contract["scope"],
+        "limitations": contract["limitations"],
     }
     destination.mkdir(parents=True)
     for path, data in payloads.items():
@@ -112,17 +136,34 @@ def build(root: Path, contract_path: Path, destination: Path) -> dict:
 
 
 def verify(directory: Path) -> dict:
+    if directory.is_symlink() or any(p.is_symlink() for p in directory.rglob("*")):
+        raise EditionError("Linked edition member")
     manifest = json.loads((directory / "MANIFEST.json").read_bytes())
     contract_bytes = (directory / "CONTRACT.json").read_bytes()
     if sha(contract_bytes) != manifest["contract_sha256"]:
         raise EditionError("Contract changed")
     contract = json.loads(contract_bytes)
     validate_contract(contract)
+    for key in ("edition_id", "version", "status", "scope", "limitations"):
+        if manifest[key] != contract[key]:
+            raise EditionError("Receipt metadata contradicts contract")
+    if manifest["component_count"] != len(contract["components"]):
+        raise EditionError("Receipt component count contradicts contract")
+    if manifest["status"] == "ACCEPTED_SCOPED_EDITION" and manifest["dirty_source_checkout"]:
+        raise EditionError("Accepted receipt has dirty source provenance")
     declared = {m["path"]: m["sha256"] for c in contract["components"] for m in c["members"]}
     inventoried = {m["path"]: m["sha256"] for m in manifest["members"]}
     if len(inventoried) != len(manifest["members"]) or declared != inventoried:
         raise EditionError("Manifest population differs from source contract")
-    actual = {str(p.relative_to(directory / "content")) for p in (directory / "content").rglob("*") if p.is_file()}
+    actual = {
+        str(p.relative_to(directory / "content"))
+        for p in (directory / "content").rglob("*")
+        if p.is_file()
+    }
+    expected_files = {"CONTRACT.json", "MANIFEST.json"} | {"content/" + p for p in inventoried}
+    all_files = {str(p.relative_to(directory)) for p in directory.rglob("*") if p.is_file()}
+    if all_files != expected_files:
+        raise EditionError("Missing or unmanifested edition member")
     if actual != set(inventoried):
         raise EditionError("Missing or unmanifested payload")
     for member in manifest["members"]:
@@ -140,14 +181,19 @@ def archive(directory: Path, output: Path) -> None:
     verify(directory)
     if output.exists():
         raise EditionError("New package filename required")
+    manifest = json.loads((directory / "MANIFEST.json").read_bytes())
+    selected = ["CONTRACT.json", "MANIFEST.json"] + [
+        "content/" + m["path"] for m in manifest["members"]
+    ]
     with zipfile.ZipFile(output, "x", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as z:
-        for p in sorted(directory.rglob("*")):
-            if p.is_file():
-                info = zipfile.ZipInfo(str(p.relative_to(directory)), (2026, 9, 15, 0, 0, 0))
-                info.compress_type = zipfile.ZIP_DEFLATED
-                info.external_attr = 0o100644 << 16
-                z.writestr(info, p.read_bytes())
-    output.with_suffix(output.suffix + ".sha256").write_text(f"{sha(output.read_bytes())}  {output.name}\n")
+        for relative in sorted(selected):
+            info = zipfile.ZipInfo(relative, (2026, 9, 15, 0, 0, 0))
+            info.compress_type = zipfile.ZIP_DEFLATED
+            info.external_attr = 0o100644 << 16
+            z.writestr(info, (directory / relative).read_bytes())
+    output.with_suffix(output.suffix + ".sha256").write_text(
+        f"{sha(output.read_bytes())}  {output.name}\n"
+    )
 
 
 def main():

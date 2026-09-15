@@ -109,3 +109,43 @@ def test_manifest_resealing_does_not_hide_changed_contract_population(source, tm
     manifest_path.write_bytes(encoded(manifest))
     with pytest.raises(EditionError, match="population"):
         verify(result)
+
+
+@pytest.mark.parametrize("extra", ["top-level", "nested", "symlink"])
+def test_archive_rejects_unmanifested_or_linked_material(source, tmp_path, extra):
+    root, path, _ = source
+    result = tmp_path / "result"
+    build(root, path, result)
+    if extra == "symlink":
+        (result / "leak").symlink_to(root / "rows.csv")
+    elif extra == "nested":
+        (result / "content/extra.txt").write_text("unmanifested")
+    else:
+        (result / "extra.txt").write_text("unmanifested")
+    with pytest.raises(EditionError):
+        archive(result, tmp_path / "unsafe.zip")
+    assert not (tmp_path / "unsafe.zip").exists()
+
+
+def test_accepted_claim_rejects_dirty_source(source, tmp_path):
+    root, path, contract = source
+    contract["status"] = "ACCEPTED_SCOPED_EDITION"
+    path.write_bytes(encoded(contract))
+    with pytest.raises(EditionError, match="clean"):
+        build(root, path, tmp_path / "result")
+
+
+@pytest.mark.parametrize(
+    "key,value",
+    [("status", "ACCEPTED_SCOPED_EDITION"), ("edition_id", "other"), ("component_count", 99)],
+)
+def test_receipt_cannot_promote_or_relabel_contract(source, tmp_path, key, value):
+    root, path, _ = source
+    result = tmp_path / "result"
+    build(root, path, result)
+    manifest_path = result / "MANIFEST.json"
+    manifest = json.loads(manifest_path.read_bytes())
+    manifest[key] = value
+    manifest_path.write_bytes(encoded(manifest))
+    with pytest.raises(EditionError, match="contradicts"):
+        verify(result)
