@@ -149,6 +149,7 @@ Generated file inventory. Includes current and historical records; open the sour
 
 ## `enterprise/closeout`
 
+- [Conditional mine utility ROT continuation](../../../enterprise/closeout/INDUSTRIAL_TAX_FUTURE.md) — MD
 - [State receipt apportionment — company closeout](../../../enterprise/closeout/STATE_APPORTIONMENT.md) — MD
 
 ## `evidence/closeout`

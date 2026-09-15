@@ -453,11 +453,11 @@
       "id": "SH-RES-TAX-INTEGRATION",
       "nature": "Implementation dependency",
       "status": "OPEN_AT_WORKING_EDITION",
-      "missing_fact_or_capability": "Final statutory subsidiary current/deferred tax, payment classification and common-head financial regeneration.",
+      "missing_fact_or_capability": "Final statutory subsidiary current/deferred tax, IL/WV filing perimeter and calendar, ST-1 receipt/accelerated-payment lookback, current/future trader resale disposition, July employer-levy deposit treatment and common-head financial regeneration.",
       "affected_claim": "Final after-tax legal/consolidated results and funding need.",
       "sources": [
         "enterprise/closeout/industrial_tax_assets.py",
-        "enterprise/ccf/company_closeout/STATE_APPORTIONMENT.md"
+        "enterprise/closeout/STATE_APPORTIONMENT.md"
       ],
       "attempts": [
         "Parent corporate-from-formation direction recorded; period-specific tax research, industrial asset cohorts and state-factor populations prepared."

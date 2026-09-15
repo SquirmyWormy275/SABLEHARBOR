@@ -6,7 +6,7 @@ Generated reconciliation queue, not an assertion that every unpaired record lack
 
 | State | Records |
 |---|---:|
-| COUNTERPART_REVIEW_REQUIRED | 129 |
+| COUNTERPART_REVIEW_REQUIRED | 130 |
 | HISTORICAL_COUNTERPART_UNRESOLVED | 57 |
 | NAVIGATION_ALIAS_NO_PUBLICATION | 3 |
 | READER_MAINTENANCE_NO_LETTERHEAD | 107 |
@@ -135,6 +135,7 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Bounded control test contracts](../../../enterprise/ccf/operations/CONTROL_TEST_CONTRACTS.md) — Corporate document-format reconciliation
 - [GitHub pull-request review source](../../../enterprise/ccf/operations/GITHUB_SOURCE.md) — Corporate document-format reconciliation
 - [Protected CCF workflow API](../../../enterprise/ccf/operations/SERVICE.md) — Corporate document-format reconciliation
+- [Conditional mine utility ROT continuation](../../../enterprise/closeout/INDUSTRIAL_TAX_FUTURE.md) — Corporate document-format reconciliation
 - [State receipt apportionment — company closeout](../../../enterprise/closeout/STATE_APPORTIONMENT.md) — Corporate document-format reconciliation
 - [August 2026 people and operating reconstruction](../../../enterprise/operations/docs/completed-period.md) — SH-FIN-HUMAN-001
 - [August Pale Sun legal-employer allocation](../../../enterprise/operations/docs/ps-legal-payroll-bridge.md) — SH-FIN-HUMAN-001
