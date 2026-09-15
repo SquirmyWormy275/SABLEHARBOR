@@ -74,3 +74,24 @@ def test_reversed_or_wrong_period_balanced_overlay_rejected():
             changed = changed[2:]
         with pytest.raises(ValueError):
             t.verify(changed)
+
+
+def test_receipt_tax_uses_sale_period_not_august_invoice_accrual():
+    from enterprise.closeout.industrial_tax import august_receipt_workpaper
+    from enterprise.operations.completed_period import build
+
+    edition = build()
+    rows, bridge = august_receipt_workpaper(edition)
+    assert D(bridge[0]["collected_tax_cents_usd"]) == D("167698.94")
+    assert all(D(r["collected_tax_usd"]) == 0 for r in rows if r["sale_period"] == "2026-08")
+    assert all(r["additional_book_expense_usd"] == "0" for r in rows)
+    assert bridge[0]["ordinary_return_due"] == "2026-09-21"
+    changed = deepcopy(edition)
+    invoice = next(
+        r
+        for r in changed["tables"]["current_customer_invoice_ledger"]
+        if r.get("source_contract_id") == "UCA-2019-04"
+    )
+    invoice["sale_period"] = "2025-12"
+    with pytest.raises(ValueError):
+        august_receipt_workpaper(changed)

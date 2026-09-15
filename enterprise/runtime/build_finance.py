@@ -98,6 +98,8 @@ def build(allow_working_tree=False, *, company_closeout=False):
         original_snapshot = snapshot
         def snapshot():
             result = original_snapshot()
+            from enterprise.operations.completed_period import build as completed_source
+            result.update(completed_source()["source_hashes"])
             for rel in ["enterprise/ccf/company_closeout/industrial_transaction_tax.json", "red_wash/source/core_operating_data.json"]:
                 result[rel] = hashlib.sha256((ROOT / rel).read_bytes()).hexdigest()
             for p in sorted((ROOT / "enterprise/closeout").rglob("*")):
@@ -185,6 +187,11 @@ def build(allow_working_tree=False, *, company_closeout=False):
     rows = enterprise.read_csv(output / "enterprise/enterprise_journal.csv")
     check = verify_land_adjustment(rows)
     if company_closeout:
+        from enterprise.closeout.industrial_tax import august_receipt_workpaper
+        from enterprise.operations.completed_period import build as completed_edition
+        receipt_tax, receipt_bridge = august_receipt_workpaper(completed_edition())
+        enterprise.write_csv(output / "rwh_august_collected_tax.csv", receipt_tax)
+        enterprise.write_csv(output / "rwh_august_return_bridge.csv", receipt_bridge)
         from enterprise.closeout.receipt_markets import allocate as receipt_markets
         enterprise.write_csv(output / "receipt_markets.csv", receipt_markets(rows))
         from enterprise.closeout.finance import verify

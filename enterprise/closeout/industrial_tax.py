@@ -123,3 +123,67 @@ class IndustrialTax:
             "cash_paid_usd": "0",
             "reporting_state": "RECEIPT_ALLOCATION_REQUIRED",
         }
+
+
+def august_receipt_workpaper(edition):
+    """Reclassify tax on identified collections; never create another accrual."""
+    source = json.loads(SOURCE.read_text())["period_contract_2026"]
+    rates = {p["period"]: D(p["rate"]) for p in source["periods"]}
+    contracts = set(source["contracts"])
+    rows = []
+    seen = set()
+    for invoice in edition["tables"]["current_customer_invoice_ledger"]:
+        contract = invoice.get("source_contract_id")
+        if contract not in contracts:
+            continue
+        ident = invoice["invoice_id"]
+        if ident in seen:
+            raise ValueError("Duplicate utility receipt-tax invoice")
+        seen.add(ident)
+        period = invoice["sale_period"]
+        if period not in rates or invoice["legal_issuer"] != "RWH":
+            raise ValueError("Utility invoice lacks valid underlying sale period/entity")
+        paid = D(invoice["paid_august_usd"])
+        outstanding = D(invoice["closing_gross_usd"])
+        if paid < 0 or outstanding < 0:
+            raise ValueError("Negative collection requires separately reviewed credit")
+        rows.append(
+            dict(
+                invoice_id=ident,
+                contract_id=contract,
+                sale_period=period,
+                collection_period="2026-08",
+                receipt_principal_usd=str(paid),
+                rate=str(rates[period]),
+                collected_tax_usd=str(
+                    (paid * rates[period]).quantize(D(".01"), rounding=ROUND_HALF_UP)
+                ),
+                uncollected_tax_usd=str(
+                    (outstanding * rates[period]).quantize(D(".01"), rounding=ROUND_HALF_UP)
+                ),
+                additional_book_expense_usd="0",
+                tax_cash_paid_usd="0",
+                collection_origin="SOURCE_LINKED_SYNTHETIC_CUSTOMER_RECEIPT",
+                return_state="PREPARED_WORKPAPER_NOT_FILED",
+                payment_state="NO_TAX_REMITTANCE_EVIDENCE",
+                accelerated_payment_state="PRIOR_LOOKBACK_REVIEW_REQUIRED",
+            )
+        )
+    if len(rows) != 9 or {r["sale_period"] for r in rows} != {"2026-06", "2026-07", "2026-08"}:
+        raise ValueError("Incomplete June/July/August utility invoice population")
+    collected = sum(D(r["collected_tax_usd"]) for r in rows)
+    whole = collected.quantize(D(1), rounding=ROUND_HALF_UP)
+    bridge = dict(
+        collection_period="2026-08",
+        collected_tax_cents_usd=str(collected),
+        indicative_whole_dollar_tax_usd=str(whole),
+        rounding_difference_usd=str(whole - collected),
+        ordinary_return_due="2026-09-21",
+        due_basis="September20 Sunday shifts to next business day; accelerated installments require separate lookback",
+        completeness="THREE_UTILITY_CONTRACTS_ONLY_NOT_COMPLETE_ST1",
+        trader_other_period_certificate_state="UNRESOLVED_NOT_ASSUMED_EXEMPT",
+        filing_state="NOT_SUBMITTED",
+        acknowledgement_state="NONE",
+        tax_cash_paid_usd="0",
+    )
+    return rows, [bridge]
