@@ -175,5 +175,37 @@
     }
   ],
   "residuals": [],
-  "tax_history_direction": "OWNER_APPROVED_CORPORATE_FROM_FORMATION_2016_NEWLY_AUTHORED_HISTORY"
+  "tax_history_direction": "OWNER_APPROVED_CORPORATE_FROM_FORMATION_2016_NEWLY_AUTHORED_HISTORY",
+  "issue_snapshot": {
+    "observed_on": "2026-09-15",
+    "open": [
+      11,
+      18,
+      19,
+      21,
+      22,
+      24,
+      34,
+      88,
+      107,
+      108
+    ],
+    "closed_at_baseline": [
+      106
+    ],
+    "accepted_geography": {
+      "pr": 164,
+      "source_commit": "78d4fcdf1df5b8ffc0775b9af22cae1002d456d7",
+      "original_carriers": 78145,
+      "remaining_original_carriers": 0,
+      "batches": 6,
+      "baseline_files": 919,
+      "changed_paths_at_reviewed_boundary": 3190,
+      "dated_events": 79,
+      "site_component_dispositions": 34
+    },
+    "billing_adoption_pr": 138,
+    "publication_pr": 145,
+    "protection_pr": 165
+  }
 }

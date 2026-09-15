@@ -26,3 +26,14 @@ to protect current main.
 
 The final receipt must retain the request JSON, response projection and a fresh readback,
 including `protected: true`. Prepared bytes alone are not evidence of enforcement.
+
+## Applied and independently read back
+
+PR #165 merged as `667fddbeb2876ef83bc836b21dc4062e943bcb2c` on September 15 UTC
+after all eleven applicable hosted validation contexts passed (one publication job
+intentionally skipped). The exact request was applied through authorized GitHub
+administration. Fresh branch/protection reads return `protected: true`, strict
+`Source integrity / required`, required PRs and resolved conversations, with force
+push and deletion disabled. `MAIN_PROTECTION_RECEIPT.json` retains the configuration.
+Administrator emergency bypass remains as documented above; ordinary integration
+uses checked PRs. No branch or live portal work was deleted or overwritten.

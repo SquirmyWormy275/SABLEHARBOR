@@ -1,0 +1,49 @@
+{
+  "record_id": "SH-C08-MAIN-PROTECTION-2026-09-15",
+  "observed_on": "2026-09-15",
+  "applied": true,
+  "protected_readback": true,
+  "accepted_pr": 165,
+  "accepted_main_commit": "667fddbeb2876ef83bc836b21dc4062e943bcb2c",
+  "configuration": {
+    "required_status_checks": {
+      "url": "https://api.github.com/repos/SquirmyWormy275/SABLEHARBOR/branches/main/protection/required_status_checks",
+      "strict": true,
+      "contexts": [
+        "Source integrity / required"
+      ],
+      "contexts_url": "https://api.github.com/repos/SquirmyWormy275/SABLEHARBOR/branches/main/protection/required_status_checks/contexts",
+      "checks": [
+        {
+          "context": "Source integrity / required",
+          "app_id": 15368
+        }
+      ]
+    },
+    "enforce_admins": {
+      "url": "https://api.github.com/repos/SquirmyWormy275/SABLEHARBOR/branches/main/protection/enforce_admins",
+      "enabled": false
+    },
+    "required_pull_request_reviews": {
+      "url": "https://api.github.com/repos/SquirmyWormy275/SABLEHARBOR/branches/main/protection/required_pull_request_reviews",
+      "dismiss_stale_reviews": true,
+      "require_code_owner_reviews": false,
+      "require_last_push_approval": false,
+      "required_approving_review_count": 0
+    },
+    "allow_force_pushes": {
+      "enabled": false
+    },
+    "allow_deletions": {
+      "enabled": false
+    },
+    "required_conversation_resolution": {
+      "enabled": true
+    }
+  },
+  "limits": [
+    "Administrator emergency bypass remains explicit; no claim of impossible owner override",
+    "Branch retirement deferred for unique-content and active-owner review",
+    "No force-push or deletion attempted as a test"
+  ]
+}
