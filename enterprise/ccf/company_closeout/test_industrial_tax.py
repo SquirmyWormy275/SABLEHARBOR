@@ -78,3 +78,22 @@ class IndustrialTaxTests(unittest.TestCase):
             mutate(d)
             with self.assertRaises(ValueError):
                 validate(d, self.tables, ROOT, verify_source_bytes=False)
+
+    def test_utility_tax_cannot_be_zeroed_or_treated_as_resale(self):
+        for field, value in [
+            ("sales_tax_usd", "0"),
+            ("tax_rate", ".0625"),
+            ("tax_payable_usd", "0"),
+            ("customer_tax_billed_usd", "55281.24"),
+        ]:
+            d = copy.deepcopy(self.data)
+            row = next(r for r in d["rows"] if r["classification"] == "IL_UTILITY_OWN_USE")
+            row[field] = value
+            with self.assertRaises(ValueError):
+                validate(d, self.tables, ROOT, verify_source_bytes=False)
+        for field in ["inside_special_business_district", "onward_resale_supported"]:
+            d = copy.deepcopy(self.data)
+            row = next(r for r in d["rows"] if r["classification"] == "IL_UTILITY_OWN_USE")
+            row["facts"][field] = True
+            with self.assertRaises(ValueError):
+                validate(d, self.tables, ROOT, verify_source_bytes=False)

@@ -10,7 +10,8 @@
   "source_hashes": {
     "enterprise/operations/source/current_company_2026_08.json": "729e45f44d5240be558bb8d1cfef3bdd527a379a810a342173b2409d7ce0ea74",
     "enterprise/operations/source/completed_period_2026_08.json": "b64e0d5d9041feae1816c533abdd99b26fa9c31fef01122614a9ec8a42800a8a",
-    "enterprise/operations/current_records.py": "98a6752d69151ab62d915bfd3291b0ac6076e472ca6de65ad5353809d77e463e"
+    "enterprise/operations/current_records.py": "98a6752d69151ab62d915bfd3291b0ac6076e472ca6de65ad5353809d77e463e",
+    "enterprise/operations/completed_period.py": "322175388739b0deb0831700087c1f55d92fc750329d43e8cd5e89bda3e40ae2"
   },
   "populations": {
     "current_contracts": {

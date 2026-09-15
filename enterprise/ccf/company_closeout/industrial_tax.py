@@ -6,6 +6,7 @@ import json
 import subprocess
 import sys
 from collections import Counter
+from decimal import ROUND_HALF_UP
 from decimal import Decimal as D
 from pathlib import Path
 
@@ -36,7 +37,7 @@ def validate(data, tables, root=ROOT, *, verify_source_bytes=True):
     if len(rows) != 34 or {r["contract_id"] for r in rows} != set(contracts):
         raise ValueError("Missing duplicate or substituted industrial contract")
     certs = {r["certificate_id"]: r for r in data["certificates"]}
-    if len(certs) != 5 or len(data["certificates"]) != 5:
+    if len(certs) != 2 or len(data["certificates"]) != 2:
         raise ValueError("Wrong certificate population")
     ops = json.loads((root / "industrial/source/operations.json").read_text())
     for row in rows:
@@ -51,10 +52,35 @@ def validate(data, tables, root=ROOT, *, verify_source_bytes=True):
             or D(row["principal_usd"]) != D(contract["monthly_fee_usd"])
             or row["event_period"] != "2026-08"
             or row["available_at"] < data["available_at"]
-            or D(row["sales_tax_usd"]) != 0
         ):
             raise ValueError("Invoice amount period or availability changed")
         facts = row["facts"]
+        utility_ids = {"UCA-2019-04", "UCA-2024-11", "UCA-2025-03"}
+        if row["contract_id"] in utility_ids:
+            tax = (D(row["principal_usd"]) * D(".0725")).quantize(D(".01"), rounding=ROUND_HALF_UP)
+            if (
+                row["classification"] != "IL_UTILITY_OWN_USE"
+                or row["state"] != "TAXABLE_SELLER_BORNE_UNREMITTED"
+                or row["service_jurisdiction"] != "US-IL"
+                or row["certificate_id"] is not None
+                or D(row["tax_rate"]) != D(".0725")
+                or row["liable_entity"] != "RWH"
+                or any(
+                    D(row[k]) != tax
+                    for k in ["sales_tax_usd", "tax_expense_usd", "tax_payable_usd"]
+                )
+                or any(D(row[k]) for k in ["customer_tax_billed_usd", "cash_tax_paid_usd"])
+                or facts["municipal_receiver_location"] != "Metropolis, Illinois"
+                or facts["inside_special_business_district"]
+                or facts["onward_resale_supported"]
+                or facts["tax_included_representation"]
+                or not facts["title_transfers_to_buyer_in_illinois_after_assay"]
+                or not facts["buyer_retains_title_through_toll_processing"]
+            ):
+                raise ValueError("Utility own-use tax suppressed or misstated")
+            continue
+        if D(row["sales_tax_usd"]) != 0:
+            raise ValueError("Reviewed service/resale amount changed")
         if row["legal_entity"] in {"ARU", "BST"}:
             prefix = row["contract_id"].split("-")[0]
             classes = {
@@ -163,18 +189,38 @@ def validate(data, tables, root=ROOT, *, verify_source_bytes=True):
                     raise ValueError(
                         "Illinois resale factual screen failed; no automatic utility exemption"
                     )
+    rejected = data["rejected_certificates"]
+    if (
+        len(rejected) != 3
+        or {c["contract_id"] for c in rejected} != {"UCA-2019-04", "UCA-2024-11", "UCA-2025-03"}
+        or any(
+            c["disposition"] != "REJECTED_UNSUPPORTED_AUTHORING_NOT_ACCEPTED_EXEMPTION"
+            for c in rejected
+        )
+    ):
+        raise ValueError("Rejected utility resale history erased")
+    total_tax = sum(D(r["sales_tax_usd"]) for r in rows)
+    if total_tax != D("180947.89") or any(
+        D(data["accounting"][k]) != total_tax
+        for k in [
+            "additional_sales_tax_usd",
+            "additional_tax_expense_usd",
+            "additional_tax_payable_usd",
+        ]
+    ):
+        raise ValueError("Tax adjustment does not reconcile")
     if any(
         D(data["accounting"][k])
-        for k in ["additional_revenue_usd", "additional_cash_usd", "additional_sales_tax_usd"]
+        for k in ["additional_revenue_usd", "additional_cash_usd", "additional_customer_ar_usd"]
     ):
-        raise ValueError("Annotation cannot post or plug finance")
+        raise ValueError("Unbilled tax cannot manufacture cash or customer principal")
     return {
         "contracts": len(rows),
         "certificates": len(certs),
         "classifications": dict(Counter(r["classification"] for r in rows)),
         "principal_usd": str(sum(D(r["principal_usd"]) for r in rows)),
-        "sales_tax_usd": "0.00",
-        "posting_mode": "ANNOTATION_ONLY",
+        "sales_tax_usd": str(total_tax),
+        "posting_mode": "MEASURED_ADJUSTMENT_INTEGRATION_REQUIRED",
         "scope": "AUGUST_AUTHORED_FACTUAL_SCREEN_NOT_ACTUAL_EXTERNAL_VERIFICATION",
     }
 

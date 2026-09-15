@@ -408,42 +408,61 @@ than receiving this service conclusion through a shared issuer or tax field.
 
 ## Current industrial transaction tax successor
 
-[industrial_transaction_tax.json](industrial_transaction_tax.json) completes the remaining
-34 August contract/invoice tax screens over **$6,939,266.00** of unchanged principal:
-17 Wyoming freight, eight Wyoming handling, four Wyoming custody-storage contracts,
-one West Virginia refiner-input resale, and four Illinois uranium-intermediate resales.
-These classifications use the existing industrial facility assignments and Red Wash's
-accepted Illinois delivery terms. Commodity names in a railway contract describe cargo;
-they do not mean the carrier sold that cargo. Wyoming SF0079's July 1, 2026
-sales/use-tax reorganization is included in the authority review.
+[industrial_transaction_tax.json](industrial_transaction_tax.json) version1.1 completes
+34 August contract/invoice screens over **$6,939,266.00** unchanged principal:
+17 Wyoming freight, eight handling, four custody storage, one West Virginia refiner
+resale, one Illinois trader resale, and **three taxable Illinois utility purchases**.
 
-Five newly authored synthetic purchaser certificates document the physical-product
-resale conclusions, including express downstream title transfer for utility procurement
-and out-of-state purchaser certification for Illinois. No blanket nuclear-utility exemption,
-real tax-registration number, regulatory signature, or government acknowledgement is
-asserted. The older uranium private-letter rulings returned by search are expressly
-**excluded**: Illinois's archive states that rulings are revoked after ten years. The
-current general resale rules and the declared transaction facts support this edition.
+Independent review rejected the first draft's unsupported onward-resale premise for
+three utility buyers. The accepted contract book identifies utility/cooperative,
+procurement-pool and nuclear-utility buyers and transfers title at the Illinois
+converter after assay. It establishes no downstream swap. The three rejected synthetic
+certificates remain in `rejected_certificates`; they are not exemption evidence.
+Ordinary completion now retains utility ownership through toll processing for own use.
+The trader and refiner retain two separately supported synthetic resale certificates.
 
-This is ordinary retrospective fictional completion, available September 15; it does
-not recover contemporary external evidence. The mine invoice population remains the
-retained equal-month allocation of annual contract economics, distinct from physical
-production/delivery dates. The September 200lb toll-custody event retains RWH title and
-adds no revenue. Zero tax for these stated transactions creates no deduction, cash,
-new journal, or relief from mineral, property, income or purchase-use taxes. Changes
-to delivery, consumption, repair, well-site work or resale evidence require a fresh
-measurement and a separately reconciled financial adjustment.
+Newly authored jurisdiction precision places the existing external receiving point
+within Metropolis, Illinois, outside a special business district. This creates no new
+operator, real license, SH site or surveyed geography. Primary IDOR FY2026-26-A sets
+7.25% from July1 2026 for this scope (the Interstate North Business District is8.25%
+and is expressly excluded). Existing invoice principal is not restated as tax-inclusive,
+and no separately billed tax or supported customer reimbursement asset exists:
 
-Reperform against the composed company checkout:
+| Contract | August principal | Seller tax expense/payable |
+| --- | ---: | ---: |
+| UCA-2019-04 | $762,499.92 | $55,281.24 |
+| UCA-2024-11 | $899,999.90 | $65,249.99 |
+| UCA-2025-03 | $833,333.24 | $60,416.66 |
+| Total | $2,495,833.06 | **$180,947.89** |
+
+Each invoice is multiplied by0.0725 and rounded half-up to cents before summing.
+RWH owes the uncollected seller tax. The designated three adjustment IDs must reach
+RWH expense/payable once through the finance owner. Cash, customer principal and
+revenue do not increase. No tax payment, filing or later reimbursement is inferred.
+This module measures the adjustment; it does not claim the accounting overlay is
+already posted. Other2026 periods require their own populations and rate/settlement
+reperformance; August must not be multiplied by12 blindly.
+
+Wyoming uses the July2026 SF0079 revised statute. Freight/custody charges are distinct
+from merchandise, repair, equipment leases and taxable well-site work. Illinois
+current resale rules govern the two active certificate scopes; old uranium private
+rulings surfaced by search are expressly excluded as revoked. Temporary processing
+outside-state-use relief cannot automatically exempt acquisition/title transfer in
+Illinois with sellerROT liability. No automatic utility-fuel exemption is asserted.
+
+All customer-use, certificate and municipal precision details are newly authored
+synthetic records, available September15; they do not recover contemporary external
+evidence. Mine invoices still decompose retained annual equal-month revenue, not
+physical August shipments. The separate September200lb toll-custody event retains
+RWH title and adds no revenue. Mineral/property/income and company purchase-use taxes
+are outside this selected transaction-tax computation.
 
 ```sh
 python -m enterprise.ccf.company_closeout.industrial_tax --repository /path/to/company-checkout
 python -m unittest enterprise.ccf.company_closeout.test_industrial_tax -v
 ```
 
-The actual-current-generator integration check passes 34 IDs, five certificates,
-$6,939,266.00 principal and $0.00 additional sales tax. Negative tests reject changed
-use facts, canceled/missing/late certificates, wrong entity/invoice/period, omitted or
-duplicated contracts. This narrow screen supplements current invoice `tax_usd=null`
-fields until the operations owner consumes the annotations; it does not silently
-rewrite another lane's source or derivative.
+The current generator/hash integration check validates all34 IDs, two active and three
+rejected certificates, principal and measured tax. Negative tests reject changed use,
+wrong tax/rate/district, missing or late evidence and wrong invoice/entity/period.
+The operations owner consumes annotations; the finance owner posts and reconciles tax.
