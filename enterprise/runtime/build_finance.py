@@ -98,6 +98,8 @@ def build(allow_working_tree=False, *, company_closeout=False):
         original_snapshot = snapshot
         def snapshot():
             result = original_snapshot()
+            for rel in ["enterprise/ccf/company_closeout/industrial_transaction_tax.json", "red_wash/source/core_operating_data.json"]:
+                result[rel] = hashlib.sha256((ROOT / rel).read_bytes()).hexdigest()
             for p in sorted((ROOT / "enterprise/closeout").rglob("*")):
                 if p.suffix in {".py", ".json"}:
                     result[str(p.relative_to(ROOT))] = hashlib.sha256(p.read_bytes()).hexdigest()
@@ -158,6 +160,10 @@ def build(allow_working_tree=False, *, company_closeout=False):
         adjustment_provider=adjustment,
     )
     if company_closeout:
+        from enterprise.closeout.industrial_tax import IndustrialTax
+        adjustment.industrial_tax = IndustrialTax(successor)
+        successor = enterprise.build(output / "enterprise", forecast_result=fin, legacy_result=legacy,
+            source=policy, core_provider=operating, adjustment_provider=adjustment)
         from enterprise.closeout.parent_tax import ParentTax
         tax = ParentTax(successor, legacy, operating)
         enterprise.write_csv(output / "before_parent_tax_statements.csv", successor["annual_rows"])
@@ -166,6 +172,7 @@ def build(allow_working_tree=False, *, company_closeout=False):
         adjustment.input_hash = hashlib.sha256((adjustment.input_hash + tax.input_hash).encode()).hexdigest()
         successor = enterprise.build(output / "enterprise", forecast_result=fin,
             legacy_result=legacy, source=policy, core_provider=operating, adjustment_provider=adjustment)
+        enterprise.write_csv(output / "industrial_sales_tax.csv", adjustment.industrial_tax.rows)
         enterprise.write_csv(output / "parent_tax_provision.csv", tax.rows)
         enterprise.write_csv(output / "parent_tax_assets.csv", tax.asset_rows)
         enterprise.write_csv(output / "software_sales_tax.csv", adjustment.software_tax.rows)
@@ -180,6 +187,7 @@ def build(allow_working_tree=False, *, company_closeout=False):
     if company_closeout:
         from enterprise.closeout.finance import verify
         check["company_closeout"] = verify(rows)
+        check["industrial_sales_tax"] = adjustment.industrial_tax.verify(rows)
         check["software_sales_tax"] = adjustment.software_tax.verify(rows)
     if company_closeout:
         from enterprise.closeout.statement_bridge import bridge as company_bridge
@@ -217,7 +225,7 @@ def build(allow_working_tree=False, *, company_closeout=False):
             for r in records
             if int(r["year"]) == 2026 and not r["source_id"].startswith("RT-")
             and r["source_id"] != "SH-VOICE-GW-01"
-            and not (company_closeout and (r["source_id"].startswith(("CO-TAX-", "CO-ASSET-", "CO-PAYROLL-")) or r["source_type"] == "MEMBER_EQUITY"))
+            and not (company_closeout and (r["source_id"].startswith(("CO-TAX-", "CO-ASSET-", "CO-PAYROLL-", "SH-RWH-IL-ROT-")) or r["source_type"] == "MEMBER_EQUITY"))
         )
 
     if history(before) != history(rows):

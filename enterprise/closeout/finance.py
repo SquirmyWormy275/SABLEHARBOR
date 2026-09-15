@@ -35,11 +35,12 @@ def load():
 
 class CloseoutAdjustment(RuntimeAdjustment):
     account_types = RuntimeAdjustment.account_types | {
-        'CO_FF_TAX_EXP': 'expense', 'CO_FF_TAX_PAY': 'liability', 'CO_SOFTWARE_TAX_EXP':'expense','CO_SOFTWARE_TAX_PAY':'liability'} | TAX_TYPES
+        'CO_RWH_ROT_EXP':'expense','CO_RWH_ROT_PAY':'liability','CO_FF_TAX_EXP': 'expense', 'CO_FF_TAX_PAY': 'liability', 'CO_SOFTWARE_TAX_EXP':'expense','CO_SOFTWARE_TAX_PAY':'liability'} | TAX_TYPES
 
     def __init__(self, data=None):
         super().__init__(data)
         self.parent_tax = None
+        self.industrial_tax = None
         self.software_tax = None
         self.legacy_equipment_correction = False
         self.payroll_legal_correction = False
@@ -89,6 +90,8 @@ class CloseoutAdjustment(RuntimeAdjustment):
                 f'CO-ASSET-LEGACY-DDA-{year}-{month}','Existing equipment book depreciation following authored 2023 service vintage',kind='COMPANY_ASSET_CORRECTION')
         if self.software_tax is not None:
             self.software_tax.post_month(books,year,month)
+        if self.industrial_tax is not None:
+            self.industrial_tax.post_month(books,year,month)
         if self.parent_tax is not None:
             self.parent_tax.post_month(books, year, month)
 

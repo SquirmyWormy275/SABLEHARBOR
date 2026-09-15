@@ -60,12 +60,13 @@ class ParentTax:
                 allowance=-a['BIZ_ALLOWANCE'];impairment=a['BIZ_INVENTORY_LOSS']
                 fees=a['SHARED_EXP']+a['SHARED_REV']
                 asset=self.asset_totals[scenario,year]
-                common=pretax+dda+allowance+impairment+fees
+                unpaid_tax=-a['CO_FF_TAX_PAY']-a['CO_SOFTWARE_TAX_PAY']
+                common=pretax+dda+allowance+impairment+fees+unpaid_tax
                 state_common=common-asset['ca_depreciation']
                 research_amort=h['research_2022']*(D('.2') if year==2026 else D('.1') if year==2027 else D(0))
                 research_basis=h['research_2022']*(D('.1') if year==2026 else D(0))
                 federal_common=common-asset['federal_depreciation']-research_amort
-                temporary+=allowance+impairment
+                temporary+=allowance+impairment+unpaid_tax
                 ca_used=min(snol,max(state_common,D(0))) if not (year<=2026 and state_common>=1000000) else D(0)
                 snol+=max(-state_common,D(0))-ca_used
                 ca_exposure=max(D(800),(max(state_common,D(0))-ca_used)*D('.0884')).quantize(Q)
@@ -87,7 +88,7 @@ class ParentTax:
                 va=(dta-min(fnol*D('.21'),fed_dtl*D('.8'))-min(snol*D('.0884')*D('.79'),ca_dtl)).quantize(Q)
                 record=dict(scenario=scenario,entity='SHI',year=year,book_pretax_usd=str(pretax),
                   book_depreciation_usd=str(dda),federal_depreciation_usd=str(asset['federal_depreciation']),california_depreciation_usd=str(asset['ca_depreciation']),federal_asset_basis_usd=str(asset['federal_basis']),california_asset_basis_usd=str(asset['ca_basis']),book_asset_carrying_usd=str(asset['book_net']),allowance_addback_usd=str(allowance),
-                  inventory_addback_usd=str(impairment),book_only_service_fee_reversal_usd=str(fees),
+                  inventory_addback_usd=str(impairment),unpaid_transaction_tax_addback_usd=str(unpaid_tax),book_only_service_fee_reversal_usd=str(fees),
                   domestic_research_current_deduction_in_book_usd=str(a['LEG_6000']+a['BIZ_RESEARCH']),
                   foreign_research_usd='0',historical_research_amortization_usd=str(research_amort),historical_research_basis_usd=str(research_basis),interest_usd=str(interest),ati_usd=str(ati),
                   interest_deducted_usd=str(interest_used),interest_carryforward_usd=str(interest_cf),

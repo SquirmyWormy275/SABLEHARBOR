@@ -44,3 +44,18 @@ def test_duplicate_provision_rejected():
        CloseoutAdjustment.account_types|{'1000':'asset','3100':'equity'})
     t.post_month(b,2026,1)
     with pytest.raises(ValueError):t.post_month(b,2026,1)
+
+
+def test_unpaid_transaction_tax_deduction_waits_for_payment():
+    result={'monthly_rows':[], 'journal_rows':[], 'legal_trial_balance_rows':[]}
+    for case in ['base','downside','expansion']:
+        for year in range(2026,2032):
+            for month in range(1,13):
+                result['monthly_rows'].append(dict(entity='SHI',scenario=case,year=year,month=month,net_income_usd='-100'))
+        result['journal_rows'] += [dict(entity='SHI',scenario=case,year=y,month=1,account='CO_SOFTWARE_TAX_PAY',signed_usd=v,source_id=f'fixture-{y}',journal_id=f'fixture-{y}') for y,v in [(2027,'-90'),(2028,'90')]]
+    legacy={'rows':[dict(entity='SHI',book='PRIMARY_USD',entry_date=f'{y}-12-31',account_type='expense',signed_usd='100') for y in [2023,2024,2025]]}
+    t=ParentTax(result,legacy,history=dict(federal_nol=D(0),california_nol=D(0),research_2022=D(0),research_remaining_2026=D(0),historical_tax_cash=D(7200)))
+    rows={r['year']:r for r in t.rows if r['scenario']=='base'}
+    assert D(rows[2027]['unpaid_transaction_tax_addback_usd'])==90
+    assert D(rows[2028]['unpaid_transaction_tax_addback_usd'])==-90
+    assert rows[2027]['gross_dta_usd']==rows[2027]['valuation_allowance_usd']
