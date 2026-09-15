@@ -3234,6 +3234,27 @@ export default function App() {
                     "review_feedback",
                   )}
                   busy={busy}
+                  viewerId={bootstrap.viewer.id}
+                  resolutionSupported={supports(
+                    bootstrap.capabilities,
+                    "review_independent_resolution",
+                  )}
+                  onResolveHuman={(payload) => {
+                    setDetail(null);
+                    edit(
+                      "Resolve human review",
+                      "review.resolve",
+                      [
+                        f(
+                          "response",
+                          "Resolution rationale and evidence checked",
+                          "textarea",
+                        ),
+                      ],
+                      payload,
+                      "This separate reviewer action resolves the human comment against the current retained workpaper version. It preserves earlier comments and responses; it does not accept any AI suggestion.",
+                    );
+                  }}
                   onRespond={(payload) => {
                     setDetail(null);
                     edit(

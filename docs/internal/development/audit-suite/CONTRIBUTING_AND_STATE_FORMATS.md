@@ -191,3 +191,12 @@ compatibility, a human review command without disposition remains an independent
 resolution action restricted to review/instruct permission. Historical entries
 are not rewritten. Focused authorization, replay, stale-input and preservation
 tests cover both routes.
+
+Independent resolution additionally requires an OPEN human comment and an actor
+who neither prepared nor contributed a workpaper version. The server enforces
+this even for an instructor. Explicit feedback remains available to contributors;
+its correction claim does not resolve the comment. The UI exposes a separate
+resolution form only when `review_independent_resolution` is advertised and the
+current reviewer qualifies. Its command omits disposition and pins the current
+workpaper version. Replaying the original command retains its receipt; a new
+second resolution of an already resolved comment is rejected.

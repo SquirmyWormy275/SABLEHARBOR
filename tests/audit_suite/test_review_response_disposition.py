@@ -207,3 +207,59 @@ def test_prepared_input_is_not_a_review_and_cannot_be_resolved(tmp_path):
             },
         )
     assert engine.store.get(author, eid) == before
+
+
+def test_resolution_requires_independence_even_with_current_review_permission(tmp_path):
+    engine, author, reviewer, learner, eid, command, paper, review = human(tmp_path)
+    command(
+        learner, "workpaper.update", {"workpaper_id": paper["id"], "text": "Later contribution"}
+    )
+    engine.store.grant(eid, learner, "review")
+    for actor in [author, learner]:
+        before = engine.store.get(actor, eid)
+        with pytest.raises(DomainError, match="cannot independently resolve") as exc:
+            command(
+                actor,
+                "review.resolve",
+                {
+                    "review_id": review["id"],
+                    "response": "Cannot resolve own contribution",
+                    "response_workpaper_version": 2,
+                },
+            )
+        assert exc.value.status == 403
+        assert engine.store.get(actor, eid) == before
+        state = command(
+            actor,
+            "review.resolve",
+            {
+                "review_id": review["id"],
+                "disposition": "correct",
+                "response": "Can record my correction claim",
+                "response_workpaper_version": 2,
+            },
+        )
+        assert state["reviews"][0]["status"] == "OPEN"
+    state = command(
+        reviewer,
+        "review.resolve",
+        {
+            "review_id": review["id"],
+            "response": "Independent resolution recorded",
+            "response_workpaper_version": 2,
+        },
+    )
+    assert state["reviews"][0]["status"] == "RESOLVED"
+    assert state["reviews"][0]["history"][-1]["response_workpaper_version"] == 2
+    before = engine.store.get(reviewer, eid)
+    with pytest.raises(DomainError, match="Only an open human review"):
+        command(
+            reviewer,
+            "review.resolve",
+            {
+                "review_id": review["id"],
+                "response": "Stale second resolution",
+                "response_workpaper_version": 2,
+            },
+        )
+    assert engine.store.get(reviewer, eid) == before

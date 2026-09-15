@@ -1,4 +1,4 @@
-import type { Engagement, Row } from "./api";
+import { canReviewWorkpaper, type Engagement, type Row } from "./api";
 export const FEEDBACK_DISPOSITIONS = [
   "agree",
   "disagree",
@@ -74,4 +74,33 @@ export function recordedFeedback(row: Row): Row[] {
           v !== null && typeof v === "object" && !Array.isArray(v),
       )
     : [];
+}
+
+export function humanResolutionTarget(
+  e: Engagement,
+  reviewId: string,
+  viewerId: string | undefined,
+  supported: boolean,
+): Record<string, unknown> | null {
+  const rows = e.reviews.filter((row) => row.id === reviewId);
+  if (rows.length !== 1) return null;
+  const review = rows[0];
+  if (
+    (review.kind !== undefined && review.kind !== "HUMAN") ||
+    review.status !== "OPEN"
+  )
+    return null;
+  const target = reviewFeedbackTarget(e, reviewId, supported);
+  if (!target.payload) return null;
+  const paper = e.workpapers.find((row) => row.id === review.workpaper_id);
+  const latest = Array.isArray(paper?.versions)
+    ? (paper.versions.at(-1) as Row | undefined)
+    : undefined;
+  if (
+    !paper ||
+    !latest ||
+    !canReviewWorkpaper(paper, viewerId, e.permissions, latest)
+  )
+    return null;
+  return { review_id: review.id, response_workpaper_version: latest.version };
 }

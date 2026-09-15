@@ -62,6 +62,7 @@ CAPABILITIES = {
     "custom_authoring": False,
     "experimental_review": False,
     "review_feedback": True,
+    "review_independent_resolution": True,
     "voice": False,
 }
 REVIEW_COMMANDS = {"review.comment", "review.resolve"}
@@ -1116,6 +1117,17 @@ class Engine:
                         raise DomainError("Only human comments or AI suggestions accept responses")
                     workpaper = find(state, "workpapers", row["workpaper_id"])
                     latest = workpaper["versions"][-1]
+                    if not explicit_feedback and row.get("status") != "OPEN":
+                        raise DomainError("Only an open human review can be resolved", status=409)
+                    if not explicit_feedback and (
+                        workpaper.get("prepared_by") == actor
+                        or any(version.get("actor") == actor for version in workpaper["versions"])
+                    ):
+                        raise DomainError(
+                            "A preparer or version contributor cannot independently resolve "
+                            "a review of their own work",
+                            status=403,
+                        )
                     if "response_workpaper_version" in p and (
                         type(p["response_workpaper_version"]) is not int
                         or p["response_workpaper_version"] != latest["version"]

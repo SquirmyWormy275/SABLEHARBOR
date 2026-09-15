@@ -1,6 +1,10 @@
 import { expect, it } from "vitest";
 import type { Engagement } from "./api";
-import { recordedFeedback, reviewFeedbackTarget } from "./reviewFeedback";
+import {
+  recordedFeedback,
+  reviewFeedbackTarget,
+  humanResolutionTarget,
+} from "./reviewFeedback";
 const fixture = () =>
   ({
     id: "E",
@@ -63,4 +67,32 @@ it("keeps AI appeals distinct from human and legacy history", () => {
   expect(recordedFeedback(e.reviews[1]).map((x) => x.response)).toEqual([
     "Request review",
   ]);
+});
+
+it("only an independent current reviewer can resolve an open human comment", () => {
+  const e = fixture();
+  e.permissions = ["review"];
+  e.workpapers[0].prepared_by = "PREPARER";
+  expect(humanResolutionTarget(e, "H", "REVIEWER", true)).toEqual({
+    review_id: "H",
+    response_workpaper_version: 2,
+  });
+  expect(humanResolutionTarget(e, "H", "PREPARER", true)).toBeNull();
+  e.workpapers[0].versions = [
+    { version: 1, actor: "REVIEWER" },
+    { version: 2, actor: "PREPARER" },
+  ];
+  expect(humanResolutionTarget(e, "H", "REVIEWER", true)).toBeNull();
+});
+it("resolution never targets AI, prepared, resolved, legacy-server or learner-only rows", () => {
+  const e = fixture();
+  e.permissions = ["review"];
+  for (const id of ["A", "P"])
+    expect(humanResolutionTarget(e, id, "REVIEWER", true)).toBeNull();
+  expect(humanResolutionTarget(e, "H", "REVIEWER", false)).toBeNull();
+  e.reviews[0].status = "RESOLVED";
+  expect(humanResolutionTarget(e, "H", "REVIEWER", true)).toBeNull();
+  e.reviews[0].status = "OPEN";
+  e.permissions = ["learn"];
+  expect(humanResolutionTarget(e, "H", "LEARNER", true)).toBeNull();
 });

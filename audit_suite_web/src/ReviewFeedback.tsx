@@ -1,17 +1,27 @@
 import { human, str, type Engagement, type Row } from "./api";
-import { recordedFeedback, reviewFeedbackTarget } from "./reviewFeedback";
+import {
+  recordedFeedback,
+  reviewFeedbackTarget,
+  humanResolutionTarget,
+} from "./reviewFeedback";
 export function ReviewFeedback({
   engagement,
   review,
   supported,
   busy,
   onRespond,
+  onResolveHuman,
+  viewerId,
+  resolutionSupported = false,
 }: {
   engagement: Engagement;
   review: Row;
   supported: boolean;
   busy: boolean;
   onRespond: (payload: Record<string, unknown>) => void;
+  onResolveHuman?: (payload: Record<string, unknown>) => void;
+  viewerId?: string;
+  resolutionSupported?: boolean;
 }) {
   const target = reviewFeedbackTarget(engagement, review.id, supported),
     entries = recordedFeedback(review);
@@ -44,7 +54,7 @@ export function ReviewFeedback({
                 <h4>
                   {entry.disposition
                     ? human(str(entry.disposition))
-                    : "Legacy reviewer resolution record"}
+                    : "Recorded reviewer resolution"}
                 </h4>
                 <p>{str(entry.response)}</p>
                 <p>
@@ -106,6 +116,36 @@ export function ReviewFeedback({
       ) : (
         <p>{target.reason}</p>
       )}
+      {onResolveHuman &&
+        humanResolutionTarget(
+          engagement,
+          review.id,
+          viewerId,
+          resolutionSupported,
+        ) && (
+          <div>
+            <p>
+              After checking the current workpaper, an independent reviewer can
+              explicitly resolve this human comment. The original comment and
+              responses remain recorded.
+            </p>
+            <button
+              type="button"
+              disabled={busy}
+              onClick={() => {
+                const payload = humanResolutionTarget(
+                  engagement,
+                  review.id,
+                  viewerId,
+                  resolutionSupported,
+                );
+                if (payload) onResolveHuman(payload);
+              }}
+            >
+              Resolve human review
+            </button>
+          </div>
+        )}
     </section>
   );
 }
