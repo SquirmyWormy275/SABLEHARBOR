@@ -1020,9 +1020,9 @@
     },
     {
       "source": "docs/canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md",
-      "publication": "docs/governance/publications/SH-COMPANY-DIRECTIONS-20260915_v1.1.0.pdf",
-      "sha256": "cf3e20c5b5c8afb6bd1659e12953b37fe595e60d30b9db2abad50df97ec164a4",
-      "source_sha256": "8deda12a2e74889f62cbf81d7e8842ce23cda54cdfa8f47d26a19536e0777ec4",
+      "publication": "docs/governance/publications/SH-COMPANY-DIRECTIONS-20260915_v1.2.0.pdf",
+      "sha256": "8c73463a0a12e3315be592ed1e54e59715605411f272a58382b0288f9d6f3c28",
+      "source_sha256": "400190fc75b2e8ca001dedb9eb99773f677d9ed8462e1bd41ae56ac35aeb9a69",
       "brand": "corporate",
       "normalizer": "qpdf"
     },

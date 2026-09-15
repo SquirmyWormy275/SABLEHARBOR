@@ -10,7 +10,7 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Business development direction and implementation boundary](../../canon/BUSINESS_DEVELOPMENT_DIRECTION_2026-09-09.md) — MD · [formatted PDF](../../governance/publications/SH-CANON-BIZ-20260909-001_v1.0.0.pdf)
 - [SABLE HARBOR — CANON CHANGELOG v0.2](../../canon/CANON_CHANGELOG_v0.2.md) — MD
 - [SABLE HARBOR — CANON CHANGELOG v0.3](../../canon/CANON_CHANGELOG_v0.3.md) — MD
-- [Company closeout owner directions](../../canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md) — MD · [formatted PDF](../../governance/publications/SH-COMPANY-DIRECTIONS-20260915_v1.1.0.pdf)
+- [Company closeout owner directions](../../canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md) — MD · [formatted PDF](../../governance/publications/SH-COMPANY-DIRECTIONS-20260915_v1.2.0.pdf)
 - [SABLE HARBOR — CORPORATE HEADQUARTERS CLOSEOUT](../../canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md) — MD · [formatted PDF](../../governance/publications/SH-CORP-HQ-20260903_v1.0.1.pdf)
 - [SABLE HARBOR — PROJECT CRADLE CLOSEOUT](../../canon/CRADLE_CLOSEOUT_2026-09-06.md) — MD
 - [SABLE HARBOR — DECISION REGISTER](../../canon/DECISION_REGISTER.md) — MD

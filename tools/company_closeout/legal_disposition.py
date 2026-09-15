@@ -159,6 +159,19 @@ def build(root=ROOT):
                 "borrowing ARU rates or treating missing tax as zero."
             )
             paths += ["docs/canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md"]
+        elif identity in {"FIN-U01", "FIN-U02"}:
+            status = "OWNER_DIRECTION_RESOLVED_IMPLEMENTATION_RECONCILIATION_REQUIRED"
+            explanation = (
+                "The owner expressly adopted the proposed fictional five-holder register: "
+                "Daniel33.25%, Priya19.95%, Jon13.30%, Harrison18.50%, Wolf15.00%, "
+                "100 million equal participating units. Each lead is expressly authored as "
+                "its round's sole registered subscriber; this is not inferred from 'led'. "
+                "Exact 2021/2022 subscription economics and voluntary proportional paid-in "
+                "contributions without new units are approved for implementation. Historical "
+                "capital-account reconstruction and repository acceptance remain separate. "
+                "No new preference or substantive designation threshold is adopted."
+            )
+            paths += ["docs/canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md"]
         elif identity in SCOPED_SUCCESSORS:
             path, explanation = SCOPED_SUCCESSORS[identity]
             status = "SCOPED_AUTHORED_SUCCESSOR_REMAINDER_EXPLICIT"

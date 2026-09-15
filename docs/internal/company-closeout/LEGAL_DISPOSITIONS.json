@@ -397,30 +397,32 @@
     },
     {
       "clause_path": "docs/legal/gap-instruments/source/financing-documents.md#7-completion-schedules",
-      "current_disposition": "MATERIAL_SOURCE_OR_RIGHTS_BOUNDARY",
+      "current_disposition": "OWNER_DIRECTION_RESOLVED_IMPLEMENTATION_RECONCILIATION_REQUIRED",
       "field_or_term": "Exact subscriber legal entities and allocations",
       "id": "FIN-U01",
       "original_json_pointer": "/unresolved_fields/0",
       "original_next_action_or_basis": "Verify each signing fund/party; lead firm name alone is insufficient.",
       "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
       "package": "financing-documents",
-      "rationale": "This cannot be filled by a template or inferred from rounded financial figures. Preserve the exact unsupported party/right/eligibility field, current source economics and affected claim. No compulsory funding, new investor, collateral, host participation or tax election is invented.",
+      "rationale": "The owner expressly adopted the proposed fictional five-holder register: Daniel33.25%, Priya19.95%, Jon13.30%, Harrison18.50%, Wolf15.00%, 100 million equal participating units. Each lead is expressly authored as its round's sole registered subscriber; this is not inferred from 'led'. Exact 2021/2022 subscription economics and voluntary proportional paid-in contributions without new units are approved for implementation. Historical capital-account reconstruction and repository acceptance remain separate. No new preference or substantive designation threshold is adopted.",
       "source_hashes": {
+        "docs/canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md": "400190fc75b2e8ca001dedb9eb99773f677d9ed8462e1bd41ae56ac35aeb9a69",
         "docs/legal/gap-instruments/source/financing-documents.json": "9eb62c0dda0fa6f2babf69f5b3989a6d9a7133f176bd1ef56c8a8f59a745b759",
         "docs/legal/gap-instruments/source/financing-documents.md": "f648e1844ed93a66b81111b86ae98c98e3e901907f138fd5b9e87172adbf3607"
       }
     },
     {
       "clause_path": "docs/legal/gap-instruments/source/financing-documents.md#7-completion-schedules",
-      "current_disposition": "MATERIAL_SOURCE_OR_RIGHTS_BOUNDARY",
+      "current_disposition": "OWNER_DIRECTION_RESOLVED_IMPLEMENTATION_RECONCILIATION_REQUIRED",
       "field_or_term": "Class, quantity, unit price and exact cap table",
       "id": "FIN-U02",
       "original_json_pointer": "/unresolved_fields/1",
       "original_next_action_or_basis": "Complete from accepted definitive economics without deriving exact ownership from rounded board totals.",
       "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
       "package": "financing-documents",
-      "rationale": "This cannot be filled by a template or inferred from rounded financial figures. Preserve the exact unsupported party/right/eligibility field, current source economics and affected claim. No compulsory funding, new investor, collateral, host participation or tax election is invented.",
+      "rationale": "The owner expressly adopted the proposed fictional five-holder register: Daniel33.25%, Priya19.95%, Jon13.30%, Harrison18.50%, Wolf15.00%, 100 million equal participating units. Each lead is expressly authored as its round's sole registered subscriber; this is not inferred from 'led'. Exact 2021/2022 subscription economics and voluntary proportional paid-in contributions without new units are approved for implementation. Historical capital-account reconstruction and repository acceptance remain separate. No new preference or substantive designation threshold is adopted.",
       "source_hashes": {
+        "docs/canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md": "400190fc75b2e8ca001dedb9eb99773f677d9ed8462e1bd41ae56ac35aeb9a69",
         "docs/legal/gap-instruments/source/financing-documents.json": "9eb62c0dda0fa6f2babf69f5b3989a6d9a7133f176bd1ef56c8a8f59a745b759",
         "docs/legal/gap-instruments/source/financing-documents.md": "f648e1844ed93a66b81111b86ae98c98e3e901907f138fd5b9e87172adbf3607"
       }
@@ -1860,7 +1862,7 @@
       "package": "tax-billing",
       "rationale": "C-corporation tax treatment of the Delaware LLC from formation is selected. The history is newly authored; use the adopted tax workpaper rather than borrowing ARU rates or treating missing tax as zero.",
       "source_hashes": {
-        "docs/canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md": "8deda12a2e74889f62cbf81d7e8842ce23cda54cdfa8f47d26a19536e0777ec4",
+        "docs/canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md": "400190fc75b2e8ca001dedb9eb99773f677d9ed8462e1bd41ae56ac35aeb9a69",
         "docs/legal/gap-instruments/source/tax-billing.json": "5da4a510457570db49e799b95f41a6b1e21f733329d862017df58143d2791b2c",
         "docs/legal/gap-instruments/source/tax-billing.md": "8a4fcc32efc81c2502158afbf7df05d2bec5cb296c366d82e90f3c7f3fa38e48"
       }

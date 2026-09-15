@@ -122,7 +122,7 @@ history, not evidence recovered from rounded financing descriptions:
 | Wolf Ridge Holdings | 15,000,000 | 15.00% |
 | Total | 100,000,000 | 100.00% |
 
-The accepted implementation choice makes Harrison Vale the sole registered
+The owner-approved implementation choice makes Harrison Vale the sole registered
 subscriber to the authored $48,000,000 June 18, 2021 round and Wolf Ridge the sole
 registered subscriber to the authored $135,000,000 October 28, 2022 round. It does
 not claim that “led” established sole subscription. The 2021 consideration is the

@@ -13,7 +13,7 @@ preserved in [Git history](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/7
 | Issue | Current disposition | Evidence route |
 |---|---|---|
 | [#11](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/11) | PR #165 is merged; main protection is applied and verified. Required source checks/PRs, force-push and deletion protection are active. Branch retirement remains separately reviewed; active portal branches stay reserved. | [Administration](../internal/company-closeout/MAIN_PROTECTION.md) |
-| [#18](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/18) | Owner chose corporate taxation from formation for the existing Delaware LLC. Reconstruct and reconcile tax/filing history; preserve separate external execution limits. The C-corporation preference is settled. | [Owner directions](../canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md), [tax workpaper](../finance/evidence/company-closeout/TAX_HISTORY.md) |
+| [#18](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/18) | Owner chose corporate taxation from formation for the existing Delaware LLC. Reconstruct and reconcile tax/filing history; preserve separate external execution limits. The C-corporation preference is settled. | [Owner directions](../canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md), [tax workpaper](../finance/evidence/company-closeout/ADOPTED_PARENT_TAX.md) |
 | [#19](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/19) | Six leaders and 237 billets remain accepted. Retrospective company population work does not automatically complete every appointment-history promise. | [Completed-period workforce](../../enterprise/operations/docs/completed-period.md) |
 | [#21](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/21) | Existing portal remains active. Company-source import/restore rehearsals have bounded evidence; external deployment readiness is separate. | [Portal input contract](../internal/company-closeout/PORTAL_CONTRACT.md) |
 | [#22](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/22) | Malformed tenant identity fix and direct authorization tests do not establish all production or indirect disclosure boundaries. | [Reference policy](../../enterprise/runtime/security.py) |
@@ -22,6 +22,11 @@ preserved in [Git history](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/7
 | [#88](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/88) | Exact approved September 3 HQ image recovery remains open. A lookalike cannot establish recovered identity. | [HQ source](../canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md) |
 | [#107](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/107) | Early railway alignment and detailed engineering remainder survive; they block the affected engineering claims. | [Geographic matrix](../../geospatial/docs/PROGRAM_CLOSEOUT_MATRIX.md) |
 | [#108](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/108) | All original geographic carriers are dispositioned. Broader engineering and source-domain limits remain; the old carrier backlog is obsolete. | [Completion decision](../canon/GEOGRAPHIC_COMPLETION_2026-09-13.md) |
+
+The owner also adopted the exact fictional five-holder register and voluntary
+proportional contributions without new units. The [dated direction](../canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md)
+settles that choice; capital-account implementation and repository acceptance
+remain separately recorded in the company register.
 
 ## Accepted successors to older status claims
 

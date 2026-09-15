@@ -146,6 +146,10 @@ Generated file inventory. Includes current and historical records; open the sour
 
 - [Enterprise operating and financial models](../../../enterprise/README.md) — MD
 
+## `enterprise/closeout`
+
+- [State receipt apportionment — company closeout](../../../enterprise/closeout/STATE_APPORTIONMENT.md) — MD
+
 ## `evidence/closeout`
 
 - [Closeout evidence](../../../evidence/closeout/README.md) — MD
