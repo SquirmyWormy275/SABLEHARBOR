@@ -1027,15 +1027,16 @@ try {
   boundFixture.snapshot.authored.issues[0].source_ids=['BOUND-S1'];
   boundFixture.snapshot.authored.expectations[0].task_ids=['T-01'];
   boundFixture.snapshot.authored.expectations.push({id:'E-LEGACY',issue_ids:['I1'],procedure:'Legacy expectation without a procedure mapping',acceptable_alternatives:[]});
-  let comparisonMode='normal';let requestedHistory;let boundRouteCalls=0;
+  let comparisonMode='normal';let requestedHistory;let boundRouteCalls=0;let delayComparison=true,releaseComparison;
 
   await page.route(`**/api/engagements/${e.id}/instructor-binding`,route=>{boundRouteCalls++;return route.fulfill({contentType:'application/json',body:JSON.stringify(boundFixture)});} );
-  await page.route(`**/api/engagements/${e.id}/instructor-comparison?*`,route=>{
+  await page.route(`**/api/engagements/${e.id}/instructor-comparison?*`,async route=>{
     requestedHistory=Number(new URL(route.request().url()).searchParams.get('revision'));
     const value={status:comparisonMode==='mismatch'?'CONTEXT_MISMATCH':'DETERMINISTIC_LINK_INVENTORY_ONLY',engagement_id:e.id,audited_actor_id:'LEARNER-NEUTRAL',binding_manifest_sha256:(comparisonMode==='changed'?'f':'d').repeat(64),bound_revision:0,selected_history_revision:requestedHistory,current_revision:e.revision,selected_state_sha256:'a'.repeat(64),selected_history_sha256:'b'.repeat(64),selected_history_tip_sha256:'c'.repeat(64),grading:'NOT_PERFORMED',professional_validation:'UNVALIDATED',mismatches:comparisonMode==='mismatch'?['CURRENT_COMPANY_BASIS_DIFFERS_FROM_BOUND_SOURCE']:[],limits:['No inspection or sufficiency determination'],sources:[],audited_actor_activity:[{revision:1,command_id:'NEUTRAL1',kind:'note.create'}],shared_workspace_activity_count:2,expectations:[{expectation_id:'E1',status:'NO_EXPLICIT_WORKPAPER_SOURCE_LINK_RECORDED',source_linked_workpaper_versions:[],workpaper_version_reviews:[],source_linked_populations:[],population_linked_selections:[],control_associated_records_only:{requests:[],tasks:[{id:'T-01',recorded_status:'COMPLETE'}]}}]};
     value.expectations[0].authored_task_ids=['T-01'];value.expectations[0].task_mapping_status='EXPLICIT_AUTHORED_LINKS';
     value.expectations[0].task_linked_workpaper_versions=[{id:'WP-TASK-LINKED',version:1,version_sha256:'3'.repeat(64),task_ids:['T-01'],source_artifact_ids:[]}];
     value.expectations.push({expectation_id:'E-LEGACY',status:'NO_EXPLICIT_WORKPAPER_SOURCE_LINK_RECORDED',source_linked_workpaper_versions:[],workpaper_version_reviews:[],source_linked_populations:[],population_linked_selections:[],control_associated_records_only:{requests:[],tasks:[]}});
+    if(delayComparison){delayComparison=false;await new Promise(resolve=>{releaseComparison=resolve;});}
     return route.fulfill({contentType:'application/json',body:JSON.stringify(value)});
   });
   // Newer shared version deliberately has no task link; the protected DTO keeps v1 only.
@@ -1054,6 +1055,12 @@ try {
   const comparison=page.locator('.instructor-comparison');
   await comparison.getByLabel('History revision',{exact:true}).fill('1');
   await comparison.getByRole('button',{name:'Trace recorded links',exact:true}).click();
+  await comparison.getByRole('status').filter({hasText:'Reading and verifying the selected history'}).waitFor();
+  await page.getByRole('button',{name:/PBC & evidence/}).click();
+  if(await comparison.isVisible())throw Error('Inactive retained key stayed visible');
+  await page.getByRole('button',{name:/Workpapers & review/}).click();
+  if(await page.getByLabel('Find bound source',{exact:true}).inputValue()!=='neutral:NATIVE_SYS')throw Error('Panel switch erased bound search');
+  await comparison.getByRole('status').waitFor();if(!releaseComparison)throw Error('Pending comparison not retained');releaseComparison();
   await comparison.getByText(/1 recorded commands by the audited actor.*2 by other actors/).waitFor();
   if(requestedHistory!==1)throw Error('Comparison silently selected current history');
   await comparison.getByLabel('Bound expectation',{exact:true}).selectOption('E1');
@@ -1085,13 +1092,15 @@ try {
   e.permissions=['instruct','review','learn'];
 
   e.capabilities.company_sources=true;e.capabilities.company_source_impact=false;e.capabilities.company_populations=false;
-  let portfolioCollected=null,portfolioPagePin=null;
+  let portfolioCollected=null,portfolioPagePin=null,releaseSourceIndex;let delaySourceIndex=true;const sourceIndexResolvers=[];
   const alias='ledger:SOURCE_SYS',registry='e'.repeat(64);
-  await page.route(`**/api/engagements/${e.id}/company/systems`,route=>route.fulfill({contentType:'application/json',body:JSON.stringify({systems:[{system:alias,owner:'P-01',source_store_id:'documentary',portfolio_qualification:'QUALIFIED_SOURCE_PORTFOLIO_NOT_COHERENT_OPERATING_YEAR'}],registry_sha256:registry,snapshot_isolation:'PER_SOURCE_NOT_GLOBAL'})}));
+  await page.route(`**/api/engagements/${e.id}/company/systems`,async route=>{if(delaySourceIndex){await new Promise(resolve=>{sourceIndexResolvers.push(resolve);releaseSourceIndex=()=>{delaySourceIndex=false;sourceIndexResolvers.forEach(done=>done());};});}return route.fulfill({contentType:'application/json',body:JSON.stringify({systems:[{system:alias,owner:'P-01',source_store_id:'documentary',portfolio_qualification:'QUALIFIED_SOURCE_PORTFOLIO_NOT_COHERENT_OPERATING_YEAR'}],registry_sha256:registry,snapshot_isolation:'PER_SOURCE_NOT_GLOBAL'})});});
   await page.route(`**/api/engagements/${e.id}/company/systems/*/records?*`,route=>route.fulfill({contentType:'application/json',body:JSON.stringify({records:[{company:'ORIGINAL_COMPANY',branch:'ORIGINAL_BRANCH',system:'SOURCE_SYS',record:'NATIVE_RECORD',version:4,sha256:'a'.repeat(64),source_store_id:'documentary',source_system_alias:alias,registry_sha256:registry,provenance:{name:'/private/source-store/native-original.csv'},event_at:null,available_at:'2027-01-01T00:00:00Z'}],next_after_record:null,registry_sha256:portfolioPagePin??registry,snapshot_isolation:'ONE_SOURCE_PAGE_ONLY'})}));
   await page.route(`**/api/engagements/${e.id}/commands`,route=>{const c=route.request().postDataJSON();if(c.kind!=='company.collect')return route.fallback();portfolioCollected=c.payload;return route.fulfill({contentType:'application/json',body:JSON.stringify(e)});});
+  const privateReadsBeforePbc=boundRouteCalls;
   await page.goto(`http://127.0.0.1:5193/?engagement=${e.id}&view=pbc`);
   await page.getByText('Browse company source records',{exact:true}).click();
+  await page.getByRole('status').filter({hasText:'Loading company source systems'}).waitFor();if(boundRouteCalls!==privateReadsBeforePbc)throw Error('Hidden unvisited bound key fetched private content');if(await page.getByLabel('Company system',{exact:true}).isEnabled())throw Error('Pending source selector enabled');if(await page.getByText('No company systems are available through this engagement connection.',{exact:true}).count())throw Error('Loading index reported an empty system census');if(!releaseSourceIndex)throw Error('No pending source index');releaseSourceIndex();
   await page.getByLabel('Company system',{exact:true}).selectOption(alias);
   await page.getByText('Original filename: native-original.csv',{exact:true}).waitFor();
   if((await page.locator('body').innerText()).includes('/private/source-store'))throw Error('Source filename leaked a filesystem path');
@@ -1100,6 +1109,8 @@ try {
   await page.getByText(/not a coherent operating year or a single synchronized snapshot/).waitFor();
   if(await page.getByText('Check collected sources for changes',{exact:true}).count())throw Error('Unsupported portfolio impact panel shown');
   await page.getByLabel('Link collection to request',{exact:true}).selectOption('PBC-01');
+  await page.getByRole('button',{name:/Populations & samples/}).click();await page.getByRole('button',{name:/PBC & evidence/}).click();
+  if(await page.getByLabel('Company system',{exact:true}).inputValue()!==alias||await page.getByLabel('Link collection to request',{exact:true}).inputValue()!=='PBC-01')throw Error('Panel switch lost source collection context');await page.getByText('Original filename: native-original.csv',{exact:true}).waitFor();
   await page.getByRole('button',{name:'Collect this version',exact:true}).click();
   await page.waitForTimeout(100);
   if(portfolioCollected?.system_id!==alias||portfolioCollected?.record_id!=='NATIVE_RECORD'||portfolioCollected?.version!==4)throw Error('Portfolio collection replaced alias with native system');
@@ -1177,7 +1188,7 @@ try {
         source_impact_checks:['compared and unavailable denominators distinct','original and alias source identity','source withdrawal qualifier is not audit conclusion','exact retained original preview','outdated response removes prior result','late response cannot cross component lifetime'],
         meeting_source_checks:['only participant-owned systems','meeting switch clears pins without losing question','late source response cannot clear new meeting selection','exact alias/version/SHA command pins','delayed acceptance preserves newer selection and question','queued retry inspection shows original pins','ambiguous transport retry preserves exact envelope','restore refuses overwrite of newer composer'],
         portfolio_checks:['originalsixpartidentity distinct from route alias','originalfilename preserved without filesystem path','registry pin change removes collectible records','registry pin/perpage receipt qualification','collection uses exact selectedalias','unsupported impact/population panels absent'],
-        comparison_checks:['exact retained bound original opens existing preview and Back preserves key search/selection/focus','bound source search matches alias absent from native identity','full native/store/alias/registry identity displayed','explicit authored task historical WPv1 with empty source intersection','newer unlinked WPv2 not substituted','legacy unmapped expectation supported','incomplete portfolio route rejected','learner bound route and DOM withheld','explicit historical revision preserved','audited vs shared commands distinct','missing link not missedissue inference','context mismatch withholds all comparisons','changed bound manifest rejected'],
+        comparison_checks:['pending comparison and key search survive panel switch','source system/request/loaded page survive panel switch','source index loading is announced without premature empty claim','exact retained bound original opens existing preview and Back preserves key search/selection/focus','bound source search matches alias absent from native identity','full native/store/alias/registry identity displayed','explicit authored task historical WPv1 with empty source intersection','newer unlinked WPv2 not substituted','legacy unmapped expectation supported','incomplete portfolio route rejected','learner bound route and DOM withheld','explicit historical revision preserved','audited vs shared commands distinct','missing link not missedissue inference','context mismatch withholds all comparisons','changed bound manifest rejected'],
         work_status_checks:['exact denominators retain exclusions','selected control procedure and source previews','outdated revision clears previous report','late response after section exit discarded','no status panel without current engagement permissions'],
         investigation_checks:['explicit user question/link save and reload','current pinned record preview','409 retains unsaved editor without overwrite','changed source pin non-clickable','dirty editor prevents silent investigation switch','changed branch/acquisition/permission basis blocks exact pin until explicit review/save'],
         background_checks: ['pending navigation and reload continuity','no eager queued input reads','explicit exact question inspection gates retry','observed job revision retained','conflicted job never retries','delayed acceptance preserves newly typed next question'],

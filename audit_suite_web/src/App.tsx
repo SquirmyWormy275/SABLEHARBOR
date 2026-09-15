@@ -1,3 +1,4 @@
+import RetainedPanel from "./RetainedPanel";
 import PopulationLineage from "./PopulationLineage";
 import { lineageReference } from "./populationLineage";
 import SourceRecordCensus from "./SourceRecordCensus";
@@ -1593,16 +1594,23 @@ export default function App() {
                     />
                   </>
                 )}
+                {bootstrap.capabilities.company_sources && (
+                  <RetainedPanel
+                    key={sourceContext + ":company-browser"}
+                    active={section === "pbc"}
+                  >
+                    <CompanySources
+                      key={e.id}
+                      engagement={e}
+                      busy={busy}
+                      onCommand={act}
+                    />
+                  </RetainedPanel>
+                )}
                 {section === "pbc" && (
                   <>
                     {bootstrap.capabilities.company_sources && (
                       <>
-                        <CompanySources
-                          key={e.id}
-                          engagement={e}
-                          busy={busy}
-                          onCommand={act}
-                        />
                         {bootstrap.capabilities.company_source_impact !==
                           false && (
                           <SourceImpact
@@ -2252,32 +2260,37 @@ export default function App() {
                     </p>
                   </>
                 )}
+                <RetainedPanel
+                  key={sourceContext + ":bound-key"}
+                  active={section === "review"}
+                >
+                  {e.permissions?.includes("instruct") &&
+                    bootstrap.capabilities.bound_instructor_keys && (
+                      <BoundInstructorKey
+                        engagement={e}
+                        viewerId={bootstrap.viewer.id}
+                        onPreview={(artifact) => {
+                          if (!e.permissions?.includes("instruct")) return;
+                          const ref = {
+                            id: artifact.id,
+                            collection: "artifacts",
+                            sha256: artifact.sha256,
+                            version: artifact.version,
+                          };
+                          const target = lineageReference(e, ref);
+                          if (target)
+                            setDetail({
+                              kind: "artifact",
+                              row: target.row,
+                              pinnedReference: ref,
+                              returnToBoundSource: true,
+                            });
+                        }}
+                      />
+                    )}
+                </RetainedPanel>
                 {section === "review" && (
                   <>
-                    {e.permissions?.includes("instruct") &&
-                      bootstrap.capabilities.bound_instructor_keys && (
-                        <BoundInstructorKey
-                          engagement={e}
-                          viewerId={bootstrap.viewer.id}
-                          onPreview={(artifact) => {
-                            if (!e.permissions?.includes("instruct")) return;
-                            const ref = {
-                              id: artifact.id,
-                              collection: "artifacts",
-                              sha256: artifact.sha256,
-                              version: artifact.version,
-                            };
-                            const target = lineageReference(e, ref);
-                            if (target)
-                              setDetail({
-                                kind: "artifact",
-                                row: target.row,
-                                pinnedReference: ref,
-                                returnToBoundSource: true,
-                              });
-                          }}
-                        />
-                      )}
                     {e.permissions?.includes("instruct") &&
                       supports(
                         bootstrap.capabilities,

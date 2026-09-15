@@ -171,6 +171,12 @@ export function InstructorComparison({
       <button type="button" disabled={busy} onClick={() => void inspect()}>
         {busy ? "Tracing recorded links…" : "Trace recorded links"}
       </button>
+      {busy && (
+        <p role="status">
+          Reading and verifying the selected history. You can switch panels and
+          return while this read continues.
+        </p>
+      )}
       {error && <p role="alert">{error}</p>}
       {result && (
         <>

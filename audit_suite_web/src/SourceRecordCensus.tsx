@@ -158,6 +158,7 @@ function CensusForm({
         {str(e.scope.timezone) || "UTC"}). The server validates the event window
         against that interval.
       </p>
+      {loading && <p role="status">Loading census source systems…</p>}
       {error && <p role="alert">{error}</p>}
       {notice && <p role="status">{notice}</p>}
       <form

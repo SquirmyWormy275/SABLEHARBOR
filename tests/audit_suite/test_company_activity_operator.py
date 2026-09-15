@@ -11,6 +11,46 @@ from tools.audit_suite import generate_company_activity as operator
 ROOT = Path(__file__).resolve().parents[2]
 
 
+def test_nonhuman_operator_preserves_originals_and_rejects_changed_input_pin(tmp_path):
+    import hashlib
+
+    from tests.audit_suite.test_company_nonhuman_identity_activity import inputs
+
+    source_root, value = inputs.__wrapped__(tmp_path)
+    recipe_path = tmp_path / "nonhuman.json"
+    raw = json.dumps(asdict(value)).encode()
+    recipe_path.write_bytes(raw)
+    recipe_path.chmod(0o600)
+    original = (source_root / "company.sqlite3").read_bytes()
+    destination = tmp_path / "nonhuman-output"
+    result = operator.run(
+        "nonhuman-identity",
+        recipe_path,
+        destination,
+        repository=ROOT,
+        source_root=source_root,
+    )
+    assert result["counts"] == {"systems": 16, "versions": 35, "grants": 0, "collections": 0}
+    assert result["source_input"]["source_versions_sha256"] == value.source_versions_sha256
+    assert (source_root / "company.sqlite3").read_bytes() == original
+    assert (destination / "RECIPE.json").read_bytes() == raw
+    for name, pin in result["members"].items():
+        assert hashlib.sha256((destination / name).read_bytes()).hexdigest() == pin
+    body = asdict(value)
+    body["source_versions_sha256"] = "0" * 64
+    recipe_path.write_text(json.dumps(body))
+    with pytest.raises(CompanyStoreError):
+        operator.run(
+            "nonhuman-identity",
+            recipe_path,
+            tmp_path / "changed-pin",
+            repository=ROOT,
+            source_root=source_root,
+        )
+    assert not (tmp_path / "changed-pin").exists()
+    assert (source_root / "company.sqlite3").read_bytes() == original
+
+
 def test_lifecycle_operator_preserves_selected_originals_and_exact_recipe(tmp_path):
     import hashlib
 

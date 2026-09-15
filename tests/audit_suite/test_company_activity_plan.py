@@ -14,10 +14,11 @@ from tests.audit_suite.test_company_change_activity import recipe as change_reci
 ROOT = Path(__file__).resolve().parents[2]
 
 
-def test_v1_plan_rejects_selected_identity_dependency_before_creating_output(tmp_path):
+@pytest.mark.parametrize("kind", ["identity-lifecycle", "nonhuman-identity"])
+def test_v1_plan_rejects_selected_identity_dependency_before_creating_output(tmp_path, kind):
     value = {
         "format": runner.FORMAT,
-        "jobs": [{"id": "identity", "kind": "identity-lifecycle", "depends_on": [], "recipe": {}}],
+        "jobs": [{"id": "identity", "kind": kind, "depends_on": [], "recipe": {}}],
     }
     path = write_plan(tmp_path, value)
     with pytest.raises(CompanyStoreError, match="Unknown company activity kind"):

@@ -8,7 +8,7 @@ PYTHONPATH=. .venv/bin/python -m tools.audit_suite.generate_company_activity inc
   --destination /private/new-incident-run
 ```
 
-The maintained runner currently accepts `mover`, `identity-period`, `incident`, `backup`, `training`, `change`, `configuration`, `security-logging`, `provider-intake` and `identity-lifecycle`.
+The maintained runner currently accepts `mover`, `identity-period`, `incident`, `backup`, `training`, `change`, `configuration`, `security-logging`, `provider-intake`, `identity-lifecycle` and `nonhuman-identity`.
 Recipe fields follow `TransferRecipe`, `PeriodRecipe`, `IncidentRecipe`, `BackupRecipe`, `TrainingRecipe`, `ChangeRecipe`, `ConfigurationRecipe`, `LoggingRecipe` and `ProviderIntakeRecipe` in the
 corresponding company activity modules. For an identity period, `movers` is a JSON
 array of transfer recipes. Training uses arrays of `TrainingMember` objects in
@@ -41,6 +41,16 @@ cached-session omission and later correction. This is a local data exercise, wit
 canonical hiring or vendor deployment. The V1 multi-job plan does not yet support this
 selected-identity dependency contract; use the explicit single-activity command.
 Kinds without source dependencies reject the source-root argument.
+
+Non-human identity activity uses the same exact-reference arrays and selected metadata
+digest, with `NonhumanIdentityRecipe` and an existing backup `--source-root`. Four
+original backup records are explicitly selected. A separate fictional workload,
+inert credential versions, constrained source/target permissions and one explicit
+calendar quarter govern actual byte-copy attempts. A missed consumer update causes
+an authorization denial; later correction retains the failure and successful new
+copy. The copied dataset's historical payload stays unchanged, with new copy-event
+time and identity in outer provenance. No original human principal becomes a service
+account. This selected-reference activity is also excluded from the V1 multi-job plan.
 
 Provider intake pins the original canonical runtime-site JSON through
 `source_sites_sha256` and requires explicit start, review-due and backfill dates.

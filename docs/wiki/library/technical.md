@@ -109,6 +109,7 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Next source-gap slice: non-human credential lifecycle](../../internal/development/audit-suite/AQ_NEXT_NONHUMAN_IDENTITY_SLICE_2026-09-14.md) — MD
 - [Planned-provider intake and review-queue exercise](../../internal/development/audit-suite/AQ_PLANNED_PROVIDER_INTAKE_SLICE_2026-09-14.md) — MD
 - [SEC-002 local security-log collection exercise](../../internal/development/audit-suite/AQ_SECURITY_LOG_COLLECTION_SLICE_2026-09-14.md) — MD
+- [Selected source dependencies and declared period support](../../internal/development/audit-suite/AQ_SOURCE_DEPENDENCY_PERIOD_RECONCILIATION_2026-09-14.md) — MD
 - [Read-through company source portfolio — September 14, 2026](../../internal/development/audit-suite/AQ_SOURCE_PORTFOLIO_READ_THROUGH_2026-09-14.md) — MD
 - [Explicit source-readiness inventory](../../internal/development/audit-suite/AQ_SOURCE_READINESS_INVENTORY_2026-09-14.md) — MD
 - [One-system source-record census](../../internal/development/audit-suite/AQ_SOURCE_RECORD_CENSUS_2026-09-14.md) — MD
@@ -168,6 +169,7 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Configuration inventory and drift from original release records](../../../enterprise/audit_suite/CONFIGURATION_ACTIVITY.md) — MD
 - [Per-control legacy documentary custody](../../../enterprise/audit_suite/DOCUMENTARY_CUSTODY.md) — MD
 - [Local worker lifecycle sources](../../../enterprise/audit_suite/LIFECYCLE_ACTIVITY.md) — MD
+- [Local non-human credential lifecycle](../../../enterprise/audit_suite/NONHUMAN_IDENTITY_ACTIVITY.md) — MD
 - [Protected portfolio source snapshots](../../../enterprise/audit_suite/PORTFOLIO_EXPLANATION.md) — MD
 - [Repository documentary sync](../../../enterprise/audit_suite/REPOSITORY_DOCUMENT_SYNC.md) — MD
 - [Local role-based training source pair](../../../enterprise/audit_suite/TRAINING_ACTIVITY.md) — MD
@@ -186,6 +188,7 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Control-source readiness implementation gaps](../../../tools/audit_suite/CONTROL_SOURCE_READINESS.md) — MD
 - [Local operator commands](../../../tools/audit_suite/OPERATOR_COMMANDS.md) — MD
 - [Repository company documents: first bounded ingestion](../../../tools/audit_suite/REPOSITORY_DOCUMENTARY_SYNC.md) — MD
+- [Explicit source dependency and period reconciliation](../../../tools/audit_suite/SOURCE_DEPENDENCY_RECONCILIATION.md) — MD
 
 ## `tools/ci`
 

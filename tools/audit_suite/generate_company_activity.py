@@ -24,6 +24,10 @@ from enterprise.audit_suite.company_lifecycle_activity import LifecycleRecipe, L
 from enterprise.audit_suite.company_lifecycle_activity import (
     generate_pair as generate_lifecycle_pair,
 )
+from enterprise.audit_suite.company_nonhuman_identity_activity import NonhumanIdentityRecipe
+from enterprise.audit_suite.company_nonhuman_identity_activity import (
+    generate_pair as generate_nonhuman_pair,
+)
 from enterprise.audit_suite.company_provider_intake_activity import ProviderIntakeRecipe
 from enterprise.audit_suite.company_provider_intake_activity import (
     generate_pair as generate_provider_pair,
@@ -54,8 +58,9 @@ KINDS = {
     "security-logging": (LoggingRecipe, generate_logging_pair),
     "provider-intake": (ProviderIntakeRecipe, generate_provider_pair),
     "identity-lifecycle": (LifecycleRecipe, generate_lifecycle_pair),
+    "nonhuman-identity": (NonhumanIdentityRecipe, generate_nonhuman_pair),
 }
-SOURCE_KINDS = {"configuration", "security-logging", "identity-lifecycle"}
+SOURCE_KINDS = {"configuration", "security-logging", "identity-lifecycle", "nonhuman-identity"}
 MAX_RECIPE_BYTES = 64 * 1024
 
 
@@ -135,7 +140,7 @@ def run(kind, recipe_path, destination, *, repository, source_root=None):
                 if not isinstance(body[key], list):
                     raise ValueError("Explicit JSON arrays required")
                 body[key] = tuple(body[key])
-        if kind == "identity-lifecycle":
+        if kind in {"identity-lifecycle", "nonhuman-identity"}:
             if not isinstance(body["source_refs"], list) or not isinstance(
                 body["branch_ids"], list
             ):

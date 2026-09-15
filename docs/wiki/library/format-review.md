@@ -6,7 +6,7 @@ Generated reconciliation queue, not an assertion that every unpaired record lack
 
 | State | Records |
 |---|---:|
-| COUNTERPART_REVIEW_REQUIRED | 116 |
+| COUNTERPART_REVIEW_REQUIRED | 119 |
 | HISTORICAL_COUNTERPART_UNRESOLVED | 57 |
 | NAVIGATION_ALIAS_NO_PUBLICATION | 3 |
 | READER_MAINTENANCE_NO_LETTERHEAD | 106 |
@@ -37,6 +37,7 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Next source-gap slice: non-human credential lifecycle](../../internal/development/audit-suite/AQ_NEXT_NONHUMAN_IDENTITY_SLICE_2026-09-14.md) — Corporate document-format reconciliation
 - [Planned-provider intake and review-queue exercise](../../internal/development/audit-suite/AQ_PLANNED_PROVIDER_INTAKE_SLICE_2026-09-14.md) — Corporate document-format reconciliation
 - [SEC-002 local security-log collection exercise](../../internal/development/audit-suite/AQ_SECURITY_LOG_COLLECTION_SLICE_2026-09-14.md) — Corporate document-format reconciliation
+- [Selected source dependencies and declared period support](../../internal/development/audit-suite/AQ_SOURCE_DEPENDENCY_PERIOD_RECONCILIATION_2026-09-14.md) — Corporate document-format reconciliation
 - [Read-through company source portfolio — September 14, 2026](../../internal/development/audit-suite/AQ_SOURCE_PORTFOLIO_READ_THROUGH_2026-09-14.md) — Corporate document-format reconciliation
 - [Explicit source-readiness inventory](../../internal/development/audit-suite/AQ_SOURCE_READINESS_INVENTORY_2026-09-14.md) — Corporate document-format reconciliation
 - [One-system source-record census](../../internal/development/audit-suite/AQ_SOURCE_RECORD_CENSUS_2026-09-14.md) — Corporate document-format reconciliation
@@ -118,6 +119,7 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Configuration inventory and drift from original release records](../../../enterprise/audit_suite/CONFIGURATION_ACTIVITY.md) — Corporate document-format reconciliation
 - [Per-control legacy documentary custody](../../../enterprise/audit_suite/DOCUMENTARY_CUSTODY.md) — Corporate document-format reconciliation
 - [Local worker lifecycle sources](../../../enterprise/audit_suite/LIFECYCLE_ACTIVITY.md) — Corporate document-format reconciliation
+- [Local non-human credential lifecycle](../../../enterprise/audit_suite/NONHUMAN_IDENTITY_ACTIVITY.md) — Corporate document-format reconciliation
 - [Protected portfolio source snapshots](../../../enterprise/audit_suite/PORTFOLIO_EXPLANATION.md) — Corporate document-format reconciliation
 - [Repository documentary sync](../../../enterprise/audit_suite/REPOSITORY_DOCUMENT_SYNC.md) — Corporate document-format reconciliation
 - [Local role-based training source pair](../../../enterprise/audit_suite/TRAINING_ACTIVITY.md) — Corporate document-format reconciliation
@@ -136,6 +138,7 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Control-source readiness implementation gaps](../../../tools/audit_suite/CONTROL_SOURCE_READINESS.md) — Corporate document-format reconciliation
 - [Local operator commands](../../../tools/audit_suite/OPERATOR_COMMANDS.md) — Corporate document-format reconciliation
 - [Repository company documents: first bounded ingestion](../../../tools/audit_suite/REPOSITORY_DOCUMENTARY_SYNC.md) — Corporate document-format reconciliation
+- [Explicit source dependency and period reconciliation](../../../tools/audit_suite/SOURCE_DEPENDENCY_RECONCILIATION.md) — Corporate document-format reconciliation
 
 ## Dated counterpart dispositions
 

@@ -16,6 +16,7 @@ export default function CompanySources({
   const [requestId, setRequestId] = useState(""),
     [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  const [loadingSystems, setLoadingSystems] = useState(true);
   const [registryPin, setRegistryPin] = useState("");
   const epoch = useRef(0);
   const base = `/api/engagements/${encodeURIComponent(e.id)}/company/systems`;
@@ -29,6 +30,7 @@ export default function CompanySources({
     setSystems([]);
     setRegistryPin("");
     setLoading(false);
+    setLoadingSystems(true);
     request<{ systems: Row[]; registry_sha256?: string }>(base)
       .then((result) => {
         if (epoch.current === current) {
@@ -38,6 +40,9 @@ export default function CompanySources({
       })
       .catch((err) => {
         if (epoch.current === current) setError(err.message);
+      })
+      .finally(() => {
+        if (epoch.current === current) setLoadingSystems(false);
       });
     return () => {
       epoch.current++;
@@ -141,6 +146,7 @@ export default function CompanySources({
         Company system
         <select
           aria-label="Company system"
+          disabled={loadingSystems}
           value={system}
           onChange={(event) => void browse(event.target.value)}
         >
@@ -159,7 +165,8 @@ export default function CompanySources({
           ))}
         </select>
       </label>
-      {!error && systems.length === 0 && (
+      {loadingSystems && <p role="status">Loading company source systems…</p>}
+      {!loadingSystems && !error && systems.length === 0 && (
         <p>
           No company systems are available through this engagement connection.
         </p>
