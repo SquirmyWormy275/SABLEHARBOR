@@ -39,12 +39,12 @@ def replacement_bridge(before, after):
     for row in after["journal_rows"]:
         key = tuple(row[k] for k in keys)
         expected[key] += D(row["signed_usd"])
-        if int(row["year"]) > 2026 or row["source_id"] == "RT-LAND-20260904":
+        if int(row["year"]) > 2026 or row["source_id"] in {"RT-LAND-20260904", "SH-VOICE-GW-01"}:
             combined[key] += D(row["signed_usd"])
             bridge.append(
                 {k: row[k] for k in keys}
                 | {
-                    "action": "ADD_RUNTIME_LAND_OVERLAY"
+                    "action": ("ADD_GOODWILL_OPENING_CORRECTION" if row["source_id"] == "SH-VOICE-GW-01" else "ADD_RUNTIME_LAND_OVERLAY")
                     if int(row["year"]) == 2026
                     else "ADD_SUCCESSOR_FORECAST",
                     "signed_usd": row["signed_usd"],
@@ -58,7 +58,8 @@ def replacement_bridge(before, after):
     return bridge
 
 
-def build(allow_working_tree=False):
+def build(allow_working_tree=False, *, company_closeout=False):
+    output = ROOT / "enterprise/generated/company-closeout-v1" if company_closeout else OUT
     revision = subprocess.check_output(
         ["git", "rev-parse", "HEAD"], cwd=ROOT, text=True
     ).strip()
@@ -93,22 +94,32 @@ def build(allow_working_tree=False):
             ).hexdigest()
         return result
 
+    if company_closeout:
+        original_snapshot = snapshot
+        def snapshot():
+            result = original_snapshot()
+            for p in sorted((ROOT / "enterprise/closeout").rglob("*")):
+                if p.suffix in {".py", ".json"}:
+                    result[str(p.relative_to(ROOT))] = hashlib.sha256(p.read_bytes()).hexdigest()
+            p = ROOT / "industrial/planning/enterprise.py"
+            result[str(p.relative_to(ROOT))] = hashlib.sha256(p.read_bytes()).hexdigest()
+            return result
     source_snapshot = snapshot()
     initial = model.export(source)["source_sha256"]
-    OUT.mkdir(parents=True, exist_ok=True)
+    output.mkdir(parents=True, exist_ok=True)
     print(
         "Building runtime successor from retained operations and industrial sources",
         flush=True,
     )
     run_builders(ROOT)
-    op = operating_model.build(OUT / "industrial/operations")
+    op = operating_model.build(output / "industrial/operations")
     fin = forecast.build(
-        OUT / "industrial/forecast", operating_rows=op["operating_rows"]
+        output / "industrial/forecast", operating_rows=op["operating_rows"]
     )
     legacy = legacy_snapshot()
     operating = OperatingModel().build()
     predecessor = enterprise.build(
-        OUT / "predecessor",
+        output / "predecessor",
         forecast_result=fin,
         legacy_result=legacy,
         source=enterprise_policy(operating, 4),
@@ -125,28 +136,38 @@ def build(allow_working_tree=False):
     policy["core"]["additional_deferrable_source_types"] = [
         "RUNTIME_CONDITIONAL_FORECAST_REQUEST"
     ]
+    adjustment = RuntimeAdjustment(source)
+    if company_closeout:
+        from enterprise.closeout.finance import CloseoutAdjustment
+        adjustment = CloseoutAdjustment(source)
+        policy.update(model_id="SH-COMPANY-CLOSEOUT-V1", schema_version="6.0.0",
+                      knowledge_cutoff="2026-09-15", created_on="2026-09-15")
+        policy["canonical_sources"] += ["enterprise/closeout/source/adjustments.json"]
     successor = enterprise.build(
-        OUT / "enterprise",
+        output / "enterprise",
         forecast_result=fin,
         legacy_result=legacy,
         source=policy,
         core_provider=operating,
-        adjustment_provider=RuntimeAdjustment(source),
+        adjustment_provider=adjustment,
     )
-    rows = enterprise.read_csv(OUT / "enterprise/enterprise_journal.csv")
+    rows = enterprise.read_csv(output / "enterprise/enterprise_journal.csv")
     check = verify_land_adjustment(rows)
+    if company_closeout:
+        from enterprise.closeout.finance import verify
+        check["company_closeout"] = verify(rows)
     bridge = replacement_bridge(predecessor, successor)
     from .construction_finance import phase_reconciliation, asset_forecast
 
     enterprise.write_csv(
-        OUT / "construction_budget_bridge.csv", phase_reconciliation(source)
+        output / "construction_budget_bridge.csv", phase_reconciliation(source)
     )
     enterprise.write_csv(
-        OUT / "owned_asset_acceptance_sensitivity.csv", asset_forecast(source)
+        output / "owned_asset_acceptance_sensitivity.csv", asset_forecast(source)
     )
-    enterprise.write_csv(OUT / "runtime_statement_bridge.csv", bridge)
+    enterprise.write_csv(output / "runtime_statement_bridge.csv", bridge)
     # The accepted historical journals must survive byte-for-field outside adjustment identity dates.
-    before = enterprise.read_csv(OUT / "predecessor/enterprise_journal.csv")
+    before = enterprise.read_csv(output / "predecessor/enterprise_journal.csv")
     fields = (
         "scenario",
         "entity",
@@ -166,6 +187,7 @@ def build(allow_working_tree=False):
             tuple(r[k] for k in fields)
             for r in records
             if int(r["year"]) == 2026 and not r["source_id"].startswith("RT-")
+            and r["source_id"] != "SH-VOICE-GW-01"
         )
 
     if history(before) != history(rows):
@@ -190,19 +212,23 @@ def build(allow_working_tree=False):
         "land": check,
         "limitations": [
             "Settlement clearing is unresolved, not vendor financing.",
+            *(["Parent corporate-tax direction is settled; effective history/provision and holder-level capital rights remain unresolved. This is a partial financial successor."] if company_closeout else []),
             "Future expenses and IT acceptance are conditional scenarios, not actual occupied employees or operations.",
             "Construction remains CIP; no building/plant in-service event is fabricated.",
             "Runtime delayed-build sensitivity is separate from the three consolidated enterprise scenarios.",
         ],
     }
-    (OUT / "identity.json").write_text(json.dumps(identity, indent=2) + "\n")
-    (OUT / "runtime.json").write_text(json.dumps(model.export(source), indent=2) + "\n")
+    (output / "identity.json").write_text(json.dumps(identity, indent=2) + "\n")
+    (output / "runtime.json").write_text(json.dumps(model.export(source), indent=2) + "\n")
+    if company_closeout:
+        from enterprise.closeout.report import report
+        report(output)
     inventory = {
-        str(p.relative_to(OUT)): hashlib.sha256(p.read_bytes()).hexdigest()
-        for p in sorted(OUT.rglob("*"))
+        str(p.relative_to(output)): hashlib.sha256(p.read_bytes()).hexdigest()
+        for p in sorted(output.rglob("*"))
         if p.is_file() and p.name != "manifest.json"
     }
-    (OUT / "manifest.json").write_text(json.dumps(inventory, indent=2) + "\n")
+    (output / "manifest.json").write_text(json.dumps(inventory, indent=2) + "\n")
     print(
         json.dumps(
             {k: v for k, v in identity.items() if k != "source_files"}, indent=2
