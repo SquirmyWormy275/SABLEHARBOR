@@ -34,7 +34,7 @@
   "rehabilitation_usd": "8000000",
   "rehabilitation_service_date": "2026-01-01",
   "closing_trade_payables_usd": "3000000",
-  "book_method": "Retain composite units-of-production for productive acquired plant/mineral estate; exclude separately identified surface land. Rehabilitation remains CIP untilJanuary2026. H2depreciation and production-benefit indirectcosts flowthroughweighted-averageinventory. Historical3mrepair expense and45cash-unitcalibration receive a dated source correction; incurredcash remainsunchanged.",
+  "book_method": "USGAAP-oriented accrual inventorypolicy: retainedcomposite units-of-production for productiveestate, excludingland; normalproductionoverhead allocatedthroughweighted-average inventory. The controlling3mrepair/stabilization expense remains H2periodP&L, newlyspecified abnormalpostcloseshakedown/idlefacilityrepaircost;687500abnormalmobilizationalsoexpense. Onlynormal1.942m siteadmin/propertytax/plantinsurance entersbookinventory. Tax263Aallocationis separate anddoesnotdeterminebookcost.",
   "tax_allocation": "Cost28m plus fixed assumed otherliabilities2.5m less acquiredcurrentassets4.5m gives26m initial operating taxcost. All three non-goodwill operating asset classes are ClassV; allocate26m in proportion to the separately authored42m fair-value class population. AssumedARO16m excluded until economicperformance; no replacement goodwill.",
   "federal_plant_method": "ClassVplant22m separates18meligiblemining/millingequipment (unrelatedpurchase,no priorbuyeruse,no carryoverbasis,not structuralproperty,<=20yrrecovery) and4mnonresidentialbuilding. Equipment receives100%bonus; building39yrstraightline/midmonthJuly convention. Bothproductiondepreciation components capitalize under263A and releasethroughweighted-average inventory.",
   "california_plant_method": "No federalbonus. Equipmentsection167straightline tenyearusefullife/ACT365firstperiod; productionbuilding39yearstraightline withsameJuly-midmonth convention. Separately authored life/componentfacts are not a recoveredcostsegregationreport.",
@@ -51,7 +51,7 @@
   "authority_accessed_on": "2026-09-15",
   "limitations": "Full mineral property grossincome/transport adjustments and subsequentyear asset,inventory,ARO anddeferredtax realization are separately required. This source does not submit a return, claim an IRS acknowledgement or establish a taxsharing agreement. Nonproductioncost population is expressly fictional; accepted 2025 external-carrier boundaries remain unchanged.",
   "capacity_test": "At the retained0.17%grade/92%recovery and2000lb/shortton,300000lb requires95907.93shorttons over167days=574.30tpd,below600tpdnameplate. This is an authored finite H2population, not a claimed engineering study or recovered throughput log.",
-  "repair_scope": "The3m knownrepaircost is newly specified as routine repairs/consumable replacement to already operating plant, with no betterment,adaptation or restoration of an entireunitofproperty; the separate8m rehabilitation is capitalized. No samecost is deducted andcapitalized.",
+  "repair_scope": "The3m repairs/stabilization are abnormalpost-close shakedown andidlefacilitycosts maintainingalreadyoperatingequipment, notbetterment/adaptation/restorationofanentireunitofproperty. TheirbookH2expense classification isretained; separate8mrehabilitation capitalized. Taxproduction-benefitallocationis evaluatedseparately. Newlyauthored seven-day maintenanceoutage fits300kproductionbelow600tpdnameplate over167days.",
   "production_indirect_allocations": {
     "routine_repairs": "3000000",
     "site_administration_labor": "200000",
@@ -63,5 +63,11 @@
   "plant_components": {
     "mining_and_milling_equipment": "18000000",
     "production_building_structure": "4000000"
-  }
+  },
+  "book_normal_production_indirect_usd": "1942000",
+  "book_abnormal_period_costs": {
+    "repair_and_shakedown": "3000000",
+    "abnormal_mobilization_and_security": "687500"
+  },
+  "book_authority": "FASB Statement151 https://storage.fasb.org/fas151.pdf supplies primaryhistoricalnormal-capacity/abnormalcost principle; supersededbyCodification, notrepresented ascurrentoperativeASCtext. This is anexplicitmodelaccountingpolicy, nota verifiedfullUSGAAPopinion. Bookclassificationof3mperiodexpense preservescontrollingR2canon; normalindirectallocationupdatesderivedopeningcalibration only."
 }

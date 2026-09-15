@@ -60,8 +60,12 @@ def build():
     book_dda = productive * produced / reserve
     book_dda_inventory = book_dda * ending / produced
     original_dda_inventory = D("687500")
-    book_inventory_delta = book_dda_inventory - original_dda_inventory + indirect_inventory
-    opening_equity_correction = book_dda - book_inventory_delta
+    book_inventory_delta = (
+        book_dda_inventory
+        - original_dda_inventory
+        + D(s["book_normal_production_indirect_usd"]) * ending / produced
+    )
+    opening_equity_correction = book_dda.quantize(Q) - book_inventory_delta.quantize(Q)
     initial_tax_cost = (
         D(t["cash_consideration_usd"]) + D(t["other_liabilities_usd"]) - D(t["current_assets_usd"])
     )
