@@ -1,6 +1,7 @@
 """Protected exact-link inventory. Neither learner assessment nor submission grading."""
 
 from .bound_instructor import read_binding
+from .expectation_links import inventory as task_inventory
 from .instructor_access import InstructorAccessLog
 from .portfolio_explanation import same_route, validate_routes
 from .store import DomainError, digest
@@ -107,6 +108,7 @@ def _inventory(snapshot, state, history):
         results.append(
             {
                 "expectation_id": expectation["id"],
+                **task_inventory(expectation, controls, artifact_ids, state),
                 "issue_ids": expectation["issue_ids"],
                 "control_ids": controls,
                 "source_ids": source_ids,

@@ -8,8 +8,8 @@ PYTHONPATH=. .venv/bin/python -m tools.audit_suite.generate_company_activity inc
   --destination /private/new-incident-run
 ```
 
-The maintained runner currently accepts `mover`, `identity-period`, `incident`, `backup`, `training`, `change`, `configuration` and `security-logging`.
-Recipe fields follow `TransferRecipe`, `PeriodRecipe`, `IncidentRecipe`, `BackupRecipe`, `TrainingRecipe`, `ChangeRecipe`, `ConfigurationRecipe` and `LoggingRecipe` in the
+The maintained runner currently accepts `mover`, `identity-period`, `incident`, `backup`, `training`, `change`, `configuration`, `security-logging` and `provider-intake`.
+Recipe fields follow `TransferRecipe`, `PeriodRecipe`, `IncidentRecipe`, `BackupRecipe`, `TrainingRecipe`, `ChangeRecipe`, `ConfigurationRecipe`, `LoggingRecipe` and `ProviderIntakeRecipe` in the
 corresponding company activity modules. For an identity period, `movers` is a JSON
 array of transfer recipes. Training uses arrays of `TrainingMember` objects in
 `cohort` and `TrainingCourse` objects in `courses`, with `role_ids` as an array. All assumptions, people, branch identities and dates are
@@ -31,6 +31,13 @@ reconciles its sequence and hashes, then retains later backfill without erasing 
 initial gap. Publisher sequences and lag requirements belong to the local exercise;
 they do not assert a deployed logging platform or corporate coverage. Other activity
 kinds reject the source-root argument.
+
+Provider intake pins the original canonical runtime-site JSON through
+`source_sites_sha256` and requires explicit start, review-due and backfill dates.
+It computes local planned-provider inventory, provisional tiers, missing diligence
+requests and internal review coverage. Existing DRAFT contracts, nonoperating
+services and unavailable third-party support remain explicit. It sends no external
+requests and accepts no provider. No separate source-root argument is used.
 
 Keep the recipe private (0600), and use a new destination under an existing private
 0700 parent. Symlinked or hard-linked recipes and existing destinations are rejected.

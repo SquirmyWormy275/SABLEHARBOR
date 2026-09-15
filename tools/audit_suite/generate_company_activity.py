@@ -20,6 +20,10 @@ from enterprise.audit_suite.company_change_activity import generate_pair as gene
 from enterprise.audit_suite.company_configuration_activity import ConfigurationRecipe
 from enterprise.audit_suite.company_configuration_activity import generate as generate_configuration
 from enterprise.audit_suite.company_incident_activity import IncidentRecipe, generate_incident
+from enterprise.audit_suite.company_provider_intake_activity import ProviderIntakeRecipe
+from enterprise.audit_suite.company_provider_intake_activity import (
+    generate_pair as generate_provider_pair,
+)
 from enterprise.audit_suite.company_security_logging_activity import LoggingRecipe
 from enterprise.audit_suite.company_security_logging_activity import (
     generate_pair as generate_logging_pair,
@@ -44,6 +48,7 @@ KINDS = {
     "change": (ChangeRecipe, generate_change_pair),
     "configuration": (ConfigurationRecipe, generate_configuration),
     "security-logging": (LoggingRecipe, generate_logging_pair),
+    "provider-intake": (ProviderIntakeRecipe, generate_provider_pair),
 }
 SOURCE_KINDS = {"configuration", "security-logging"}
 MAX_RECIPE_BYTES = 64 * 1024
@@ -130,7 +135,7 @@ def run(kind, recipe_path, destination, *, repository, source_root=None):
         raise CompanyStoreError("Invalid explicit activity recipe") from error
     with tempfile.TemporaryDirectory(prefix=".company-activity-", dir=destination.parent) as temp:
         stage = Path(temp)
-        if kind in {"training", "change", *SOURCE_KINDS}:
+        if kind in {"training", "change", "provider-intake", *SOURCE_KINDS}:
             result = generate(
                 stage / "company",
                 repository=Path(repository),

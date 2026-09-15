@@ -63,14 +63,20 @@ def test_public_or_aliased_recipe_denied_before_output(tmp_path):
         operator.run("mover", alias, tmp_path / "aliased", repository=ROOT)
 
 
-@pytest.mark.parametrize("kind,versions", [("training", 29), ("backup", 51), ("change", 32)])
-def test_nested_training_recipe_and_computed_backup_adapter(tmp_path, kind, versions):
+@pytest.mark.parametrize(
+    "kind,versions", [("training", 29), ("backup", 51), ("change", 32), ("provider-intake", 46)]
+)
+def test_native_activity_generator_adapters(tmp_path, kind, versions):
     from tests.audit_suite.test_company_backup_activity import recipe as backup_recipe
     from tests.audit_suite.test_company_change_activity import recipe as change_recipe
+    from tests.audit_suite.test_company_provider_intake_activity import recipe as provider_recipe
     from tests.audit_suite.test_company_training_activity import recipe as training_recipe
 
     source = prepare(tmp_path)
-    value = {"training": training_recipe, "backup": backup_recipe, "change": change_recipe}[kind]()
+    value = {
+        "training": training_recipe, "backup": backup_recipe,
+        "change": change_recipe, "provider-intake": provider_recipe,
+    }[kind]()
     source.write_text(json.dumps(asdict(value)))
     result = operator.run(kind, source, tmp_path / "result", repository=ROOT)
     assert result["counts"]["versions"] == versions

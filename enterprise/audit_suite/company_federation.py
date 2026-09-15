@@ -17,7 +17,7 @@ CAPABILITIES = {
     "cross_store_populations": False,
     "company_populations": False,
     "source_impact": True,
-    "explanation_binding": False,
+    "explanation_binding": True,
     "global_snapshot": False,
     "source_mutation": False,
 }

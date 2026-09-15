@@ -76,6 +76,9 @@ function BoundExplorer({
       row.branch,
       row.system,
       row.record,
+      row.source_store_id,
+      row.source_system_alias,
+      row.registry_sha256,
       row.actor_visibility_at_binding,
     ]
       .join(" ")
@@ -174,6 +177,14 @@ function BoundExplorer({
           <p>
             Exact SHA256: <code>{source.sha256}</code>
           </p>
+          {source.source_store_id && (
+            <p>
+              Physical source store: <code>{source.source_store_id}</code> ·
+              alias <code>{source.source_system_alias}</code>. Registry SHA256:{" "}
+              <code>{source.registry_sha256}</code>. Capture is per component;
+              there is no shared transaction across the portfolio.
+            </p>
+          )}
           <p>
             Actor grant at binding:{" "}
             {source.actor_granted_at_binding ? "Granted" : "Not granted"}.
@@ -225,6 +236,11 @@ function BoundExplorer({
           <h4>{row.id}</h4>
           <p>Referenced issues: {row.issue_ids.join(", ")}</p>
           <p>{row.procedure}</p>
+          <p>
+            Explicit authored procedure IDs:{" "}
+            {row.task_ids?.join(", ") || "Unmapped"}. These are authored links,
+            not evidence of completed testing.
+          </p>
           <ul>
             {row.acceptable_alternatives.map((text, i) => (
               <li key={i}>{text}</li>

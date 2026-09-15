@@ -84,3 +84,31 @@ it("preserves three distinct timestamp types in source timeline", () => {
     sourceTimeline(v.snapshot.sources).every((row) => row.sourceId === "S1"),
   ).toBe(true);
 });
+
+it("requires complete physical routing pins for portfolio sources", () => {
+  const v = fixture();
+  v.snapshot.snapshot_isolation = "PER_COMPONENT_NOT_GLOBAL";
+  expect(() => validateBoundResponse(v, "ENG1")).toThrow("routing pins");
+  Object.assign(v.snapshot.sources[0], {
+    source_store_id: "physical-one",
+    source_system_alias: "ONE:records",
+    registry_sha256: "b".repeat(64),
+  });
+  expect(() => validateBoundResponse(v, "ENG1")).not.toThrow();
+  v.snapshot.sources[0].registry_sha256 = "unverified";
+  expect(() => validateBoundResponse(v, "ENG1")).toThrow("routing pins");
+});
+
+it("rejects partial routing even if a legacy response omits snapshot isolation", () => {
+  const v = fixture();
+  v.snapshot.sources[0].source_store_id = "physical-one";
+  expect(() => validateBoundResponse(v, "ENG1")).toThrow("routing pins");
+});
+
+it("preserves optional explicit procedure mappings and rejects duplicate IDs", () => {
+  const v = fixture();
+  v.snapshot.authored.expectations[0].task_ids = ["TASK-1"];
+  expect(() => validateBoundResponse(v, "ENG1")).not.toThrow();
+  v.snapshot.authored.expectations[0].task_ids.push("TASK-1");
+  expect(() => validateBoundResponse(v, "ENG1")).toThrow("procedure links");
+});

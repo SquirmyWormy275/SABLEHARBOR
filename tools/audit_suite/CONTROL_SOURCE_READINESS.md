@@ -21,6 +21,15 @@ OperatingModel versions remain unmapped company-source candidates; their month/m
 qualifications and lack of automatic corporate SOC 2/HIPAA applicability are preserved.
 Separate branches are not combined into a single company history.
 
+The newest reference-v4 selection has ten components and one fresh collection
+engagement: 520 originals across 146 systems, comprising 367 documentary and 153
+qualified activity versions. All native/retained hashes and 815 history events were
+verified. It adds SEC-002 and TPR-001/002/004 to the explicit activity references,
+for 21 of 70 scoped controls; 49 lack such references in this selection. Provider
+records address pre-operating internal diligence/review queues, with third-party
+support still absent. This does not convert either source counts or control labels
+into period coverage, reliability acceptance or professional sufficiency.
+
 The latest paired training collection retains 29 originals and the paired backup
 collection retains 51. Both are bounded local exercises, not accepted policy, real
 employment/training, deployed infrastructure or full-year population coverage.

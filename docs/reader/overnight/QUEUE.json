@@ -511,7 +511,7 @@
       "gate": "existing_authority",
       "execution_policy": "READY requires completed dependencies. Shared schemas, dependencies and catalog changes belong to the integrator. Keep populated sources, migration manifests and audit records in excluded private storage. No remote publication or deployment under this addition.",
       "execution_authorized": true,
-      "evidence": "Reference-v3 collected and independently verified 457 originals across 115 systems and six selected source components, with no generated audit world. Separate change/configuration rehearsals collected 32/12 originals. Exact owner-conversation pins and executed scoped action provenance are visible; one factual local-model follow-up was independently checked. One-system census supports exact query retention and explicit provisional import. Independent exercises do not establish a coherent operating year."
+      "evidence": "Fresh reference-v4 rehearsal collected all 520 originals across 146 systems and ten explicit source components; maintained inventory verifies exact native/retained hashes and 815 history events. No prepared audit world or model was used. Existing owner-routed collection and explicit conversations preserve source authority and qualifiers. The linked activity-plan runner produces native originals before any audit. Independent reference exercises do not establish a coherent company year."
     },
     {
       "id": "AQ-06",
@@ -539,7 +539,7 @@
       "gate": "existing_authority",
       "execution_policy": "READY requires completed dependencies. Shared schemas, dependencies and catalog changes belong to the integrator. Keep populated sources, migration manifests and audit records in excluded private storage. No remote publication or deployment under this addition.",
       "execution_authorized": true,
-      "evidence": "Maintained explicit-config inventory verifies 478 unique source versions and 482 retained copies across eight qualified components and three explicitly selected audits; four duplicates are exact identity census copies. The 367 documentary and 111 activity originals have explicit activity references for 17 of 70 controls; 53 lack such references in this selection. Reference-v3 census collection/import is PROVISIONAL at revision 691, source/manifest/history hashes verified and testing states unchanged. Completeness, a coherent period, procedure sufficiency and professional acceptance remain unassessed."
+      "evidence": "Reference-v4 explicit inventory verifies 520 unique source versions and retained originals: 367 documentary and 153 qualified activity, with explicit activity references for 21 of 70 controls and none for 49 in this selection. Earlier eight-component inventory preserves its distinct 478-original/482-copy counts. Source-record census import remains provisional; source counts and exact procedure/version links do not establish business completeness, period coherence, sufficiency or professional acceptance."
     },
     {
       "id": "AQ-07",

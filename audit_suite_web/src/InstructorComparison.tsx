@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { request, str, type Engagement, type Row } from "./api";
 import type { BoundResponse } from "./boundInstructorKey";
+import { validExpectationTaskLinks } from "./expectationTaskLinks";
 
 type Inventory = {
   status: "DETERMINISTIC_LINK_INVENTORY_ONLY" | "CONTEXT_MISMATCH";
@@ -75,7 +76,9 @@ export function InstructorComparison({
         (value.expectations ?? []).some(
           (item) =>
             !bound.snapshot.authored.expectations.some(
-              (expected) => expected.id === item.expectation_id,
+              (expected) =>
+                expected.id === item.expectation_id &&
+                validExpectationTaskLinks(item, expected),
             ),
         ) ||
         value.current_revision !== e.revision ||
@@ -230,6 +233,22 @@ export function InstructorComparison({
                       : "No explicit workpaper source link is recorded. This does not establish a missed issue."}
                   </p>
                   <p>Testing, understanding and judgment are not assessed.</p>
+                  <p>
+                    {expectation.task_mapping_status ===
+                    "EXPLICIT_AUTHORED_LINKS"
+                      ? "The author explicitly linked this expectation to the listed procedures."
+                      : expectation.task_mapping_status ===
+                          "UNRESOLVED_IN_SELECTED_SCOPE"
+                        ? "The authored procedure IDs do not all resolve in this selected historical scope."
+                        : "This expectation has no explicit procedure mapping in this report."}
+                    {Array.isArray(expectation.authored_task_ids) &&
+                      expectation.authored_task_ids.length > 0 &&
+                      ` Procedure IDs: ${expectation.authored_task_ids.join(", ")}.`}
+                  </p>
+                  {records(
+                    "Workpaper versions with explicit procedure links",
+                    expectation.task_linked_workpaper_versions as Row[],
+                  )}
                   {records(
                     "Source-linked workpaper versions",
                     expectation.source_linked_workpaper_versions as Row[],

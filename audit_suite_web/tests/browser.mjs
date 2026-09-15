@@ -1021,14 +1021,33 @@ try {
   // Protected neutral bound reference, separate historical comparison selection.
   e.capabilities.bound_instructor_keys=true;
   const boundFixture={binding:{manifest_sha256:'d'.repeat(64),engagement_id:e.id,bound_revision:0,current_revision:e.revision,status:'HISTORICAL_REVISION'},snapshot:{status:'BOUND_INSTRUCTOR_AUTHORED_UNVALIDATED',professional_validation:'UNVALIDATED',authored_status:'INSTRUCTOR_AUTHORED_INFERENCE',grading:'NOT_PERFORMED',audited_actor_id:'LEARNER-NEUTRAL',created_at:'2027-02-12T09:00:00Z',operator_source_as_of:'2027-02-12T09:00:00Z',engagement:{id:e.id,revision:0,scope:e.scope,simulated_at:e.simulated_at,state_sha256:'a'.repeat(64),history_sha256:'b'.repeat(64)},sources:[],software_verified:['Exact source metadata'],limits:['Unvalidated instructor interpretation'],authored:{issues:[{id:'I1',control_ids:['CC-1'],source_ids:[],claim:'Neutral authored interpretation',uncertainty:'Requires review'}],expectations:[{id:'E1',issue_ids:['I1'],procedure:'Inspect explicit evidence links',acceptable_alternatives:['Other authorized corroboration']}],uncertainty:[],source_pins:{}}}};
-  let comparisonMode='normal';let requestedHistory;
-  await page.route(`**/api/engagements/${e.id}/instructor-binding`,route=>route.fulfill({contentType:'application/json',body:JSON.stringify(boundFixture)}));
+  boundFixture.snapshot.snapshot_isolation='PER_COMPONENT_NOT_GLOBAL';
+  boundFixture.snapshot.sources=[{id:'BOUND-S1',company:'NEUTRAL_COMPANY',branch:'NEUTRAL_BRANCH',system:'NATIVE_SYS',record:'NATIVE_RECORD',version:3,sha256:'1'.repeat(64),source_store_id:'neutral-original-store',source_system_alias:'neutral:NATIVE_SYS',registry_sha256:'2'.repeat(64),event_at:null,available_at:'2027-01-01T00:00:00Z',imported_at:'2027-01-02T00:00:00Z',actor_granted_at_binding:false,actor_visibility_at_binding:'ACCESS_NOT_GRANTED',retained_audit_artifact_ids:['ART-NEUTRAL'],fact_verification:'Native identity and retained digest checked; interpretation unvalidated.'}];
+  boundFixture.snapshot.authored.issues[0].source_ids=['BOUND-S1'];
+  boundFixture.snapshot.authored.expectations[0].task_ids=['T-01'];
+  boundFixture.snapshot.authored.expectations.push({id:'E-LEGACY',issue_ids:['I1'],procedure:'Legacy expectation without a procedure mapping',acceptable_alternatives:[]});
+  let comparisonMode='normal';let requestedHistory;let boundRouteCalls=0;
+
+  await page.route(`**/api/engagements/${e.id}/instructor-binding`,route=>{boundRouteCalls++;return route.fulfill({contentType:'application/json',body:JSON.stringify(boundFixture)});} );
   await page.route(`**/api/engagements/${e.id}/instructor-comparison?*`,route=>{
     requestedHistory=Number(new URL(route.request().url()).searchParams.get('revision'));
     const value={status:comparisonMode==='mismatch'?'CONTEXT_MISMATCH':'DETERMINISTIC_LINK_INVENTORY_ONLY',engagement_id:e.id,audited_actor_id:'LEARNER-NEUTRAL',binding_manifest_sha256:(comparisonMode==='changed'?'f':'d').repeat(64),bound_revision:0,selected_history_revision:requestedHistory,current_revision:e.revision,selected_state_sha256:'a'.repeat(64),selected_history_sha256:'b'.repeat(64),selected_history_tip_sha256:'c'.repeat(64),grading:'NOT_PERFORMED',professional_validation:'UNVALIDATED',mismatches:comparisonMode==='mismatch'?['CURRENT_COMPANY_BASIS_DIFFERS_FROM_BOUND_SOURCE']:[],limits:['No inspection or sufficiency determination'],sources:[],audited_actor_activity:[{revision:1,command_id:'NEUTRAL1',kind:'note.create'}],shared_workspace_activity_count:2,expectations:[{expectation_id:'E1',status:'NO_EXPLICIT_WORKPAPER_SOURCE_LINK_RECORDED',source_linked_workpaper_versions:[],workpaper_version_reviews:[],source_linked_populations:[],population_linked_selections:[],control_associated_records_only:{requests:[],tasks:[{id:'T-01',recorded_status:'COMPLETE'}]}}]};
+    value.expectations[0].authored_task_ids=['T-01'];value.expectations[0].task_mapping_status='EXPLICIT_AUTHORED_LINKS';
+    value.expectations[0].task_linked_workpaper_versions=[{id:'WP-TASK-LINKED',version:1,version_sha256:'3'.repeat(64),task_ids:['T-01'],source_artifact_ids:[]}];
+    value.expectations.push({expectation_id:'E-LEGACY',status:'NO_EXPLICIT_WORKPAPER_SOURCE_LINK_RECORDED',source_linked_workpaper_versions:[],workpaper_version_reviews:[],source_linked_populations:[],population_linked_selections:[],control_associated_records_only:{requests:[],tasks:[]}});
     return route.fulfill({contentType:'application/json',body:JSON.stringify(value)});
   });
+  // Newer shared version deliberately has no task link; the protected DTO keeps v1 only.
+  e.workpapers.push({id:'WP-TASK-LINKED',title:'Neutral authored procedure work',versions:[{id:'TASK-WPV1',version:1,task_ids:['T-01'],evidence_ids:[],text:'Historical explicitly linked version'},{id:'TASK-WPV2',version:2,task_ids:[],evidence_ids:[],text:'Newer unlinked version must not substitute'}]});
   await page.goto(`http://127.0.0.1:5193/?engagement=${e.id}&view=review`);
+  await page.getByLabel('Find bound source',{exact:true}).fill('neutral:NATIVE_SYS');
+  await page.getByText('1 of 1 bound sources match.',{exact:false}).waitFor();
+  await page.getByRole('button',{name:'BOUND-S1 · NATIVE_RECORD · v3',exact:true}).click();
+  await page.getByLabel('Find bound source',{exact:true}).fill('');
+  const boundSource=page.getByRole('article',{name:'Selected bound source',exact:true});
+  await boundSource.getByText('neutral-original-store',{exact:true}).waitFor();await boundSource.getByText('neutral:NATIVE_SYS',{exact:true}).waitFor();await boundSource.getByText('2'.repeat(64),{exact:true}).waitFor();await boundSource.getByText(/NEUTRAL_COMPANY \/ NEUTRAL_BRANCH \/ NATIVE_SYS/).waitFor();await boundSource.getByText(/no shared transaction across the portfolio/).waitFor();
+  await page.getByText(/Explicit authored procedure IDs: T-01/).waitFor();
+
   await page.getByText('Trace recorded work against bound expectations',{exact:true}).click();
   const comparison=page.locator('.instructor-comparison');
   await comparison.getByLabel('History revision',{exact:true}).fill('1');
@@ -1039,6 +1058,13 @@ try {
   await comparison.getByText(/This does not establish a missed issue/).waitFor();
   await comparison.getByText(/Control-associated procedures · 1/).click();
   await comparison.getByText('T-01',{exact:true}).waitFor();
+  await comparison.getByText(/The author explicitly linked this expectation/).waitFor();
+  await comparison.getByText('Workpaper versions with explicit procedure links · 1',{exact:true}).click();
+  const taskVersionDetails=comparison.locator('details').filter({has:page.getByText('Workpaper versions with explicit procedure links · 1',{exact:true})});
+  await taskVersionDetails.getByText('WP-TASK-LINKED',{exact:true}).waitFor();await taskVersionDetails.getByText(/version 1/).waitFor();
+  if(await taskVersionDetails.getByText(/version 2/).count())throw Error('Authored task comparison substituted newer unlinked workpaper');
+  const emptyIntersection=taskVersionDetails.locator('div').filter({has:page.locator('dt').getByText('source artifact ids',{exact:true})});await emptyIntersection.locator('dd').getByText('[]',{exact:true}).waitFor();
+  await comparison.getByLabel('Bound expectation',{exact:true}).selectOption('E-LEGACY');await comparison.getByText(/has no explicit procedure mapping in this report/).waitFor();await comparison.getByText('Workpaper versions with explicit procedure links · 0',{exact:true}).waitFor();
   comparisonMode='mismatch';
   await comparison.getByRole('button',{name:'Trace recorded links',exact:true}).click();
   await comparison.getByText(/Record comparison is withheld/).waitFor();
@@ -1047,6 +1073,15 @@ try {
   await comparison.getByRole('button',{name:'Trace recorded links',exact:true}).click();
   await comparison.getByRole('alert').waitFor();
   if(await comparison.getByText(/recorded commands by the audited actor/).count())throw Error('Changed manifest retained comparison');
+  delete boundFixture.snapshot.sources[0].registry_sha256;
+  await page.goto(`http://127.0.0.1:5193/?engagement=${e.id}&view=review`);await page.getByRole('alert').filter({hasText:'Protected source routing pins are incomplete.'}).waitFor();
+  if(await page.getByRole('button',{name:'BOUND-S1 · NATIVE_RECORD · v3',exact:true}).count())throw Error('Incomplete portfolio route exposed bound source');
+  boundFixture.snapshot.sources[0].registry_sha256='2'.repeat(64);
+  e.permissions=['learn'];const protectedCalls=boundRouteCalls;
+  await page.goto(`http://127.0.0.1:5193/?engagement=${e.id}&view=review`);await page.getByLabel('Current engagement context').waitFor();await page.waitForTimeout(100);
+  if(boundRouteCalls!==protectedCalls||await page.getByText('neutral-original-store',{exact:true}).count()||await page.locator('.instructor-comparison').count())throw Error('Learner exposed protected bound key route or DOM');
+  e.permissions=['instruct','review','learn'];
+
   e.capabilities.company_sources=true;e.capabilities.company_source_impact=false;e.capabilities.company_populations=false;
   let portfolioCollected=null,portfolioPagePin=null;
   const alias='ledger:SOURCE_SYS',registry='e'.repeat(64);
@@ -1140,7 +1175,7 @@ try {
         source_impact_checks:['compared and unavailable denominators distinct','original and alias source identity','source withdrawal qualifier is not audit conclusion','exact retained original preview','outdated response removes prior result','late response cannot cross component lifetime'],
         meeting_source_checks:['only participant-owned systems','meeting switch clears pins without losing question','late source response cannot clear new meeting selection','exact alias/version/SHA command pins','delayed acceptance preserves newer selection and question','queued retry inspection shows original pins','ambiguous transport retry preserves exact envelope','restore refuses overwrite of newer composer'],
         portfolio_checks:['originalsixpartidentity distinct from route alias','originalfilename preserved without filesystem path','registry pin change removes collectible records','registry pin/perpage receipt qualification','collection uses exact selectedalias','unsupported impact/population panels absent'],
-        comparison_checks:['explicit historical revision preserved','audited vs shared commands distinct','missing link not missedissue inference','context mismatch withholds all comparisons','changed bound manifest rejected'],
+        comparison_checks:['bound source search matches alias absent from native identity','full native/store/alias/registry identity displayed','explicit authored task historical WPv1 with empty source intersection','newer unlinked WPv2 not substituted','legacy unmapped expectation supported','incomplete portfolio route rejected','learner bound route and DOM withheld','explicit historical revision preserved','audited vs shared commands distinct','missing link not missedissue inference','context mismatch withholds all comparisons','changed bound manifest rejected'],
         work_status_checks:['exact denominators retain exclusions','selected control procedure and source previews','outdated revision clears previous report','late response after section exit discarded','no status panel without current engagement permissions'],
         investigation_checks:['explicit user question/link save and reload','current pinned record preview','409 retains unsaved editor without overwrite','changed source pin non-clickable','dirty editor prevents silent investigation switch','changed branch/acquisition/permission basis blocks exact pin until explicit review/save'],
         background_checks: ['pending navigation and reload continuity','no eager queued input reads','explicit exact question inspection gates retry','observed job revision retained','conflicted job never retries','delayed acceptance preserves newly typed next question'],

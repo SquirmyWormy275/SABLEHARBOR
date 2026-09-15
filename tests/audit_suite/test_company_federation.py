@@ -281,10 +281,11 @@ def test_actual_engine_retains_identical_native_ids_from_distinct_stores(tmp_pat
             source_as_of="2027-02-01T00:00:00Z",
             source_refs=[],
             authored={},
-            output=tmp_path / "unsupported-binding",
+            output=tmp_path / "invalid-binding",
         )
-    assert error.value.code == "FEDERATION_OPERATION_UNSUPPORTED"
-    assert not (tmp_path / "unsupported-binding").exists()
+    # Binding is supported; an empty, unauthored request remains invalid.
+    assert error.value.code == "INVALID"
+    assert not (tmp_path / "invalid-binding").exists()
     with pytest.raises(DomainError) as error:
         command(
             "company.population.collect",

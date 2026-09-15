@@ -24,7 +24,7 @@ def _ids(value):
     )
 
 
-def _authored(value, source_ids, control_ids, repository):
+def _authored(value, source_ids, control_ids, repository, state=None):
     if not isinstance(value, dict) or set(value) != {
         "issues",
         "expectations",
@@ -69,7 +69,11 @@ def _authored(value, source_ids, control_ids, repository):
     for row in value["expectations"]:
         if (
             not isinstance(row, dict)
-            or set(row) != {"id", "issue_ids", "procedure", "acceptable_alternatives"}
+            or set(row)
+            not in (
+                {"id", "issue_ids", "procedure", "acceptable_alternatives"},
+                {"id", "issue_ids", "procedure", "acceptable_alternatives", "task_ids"},
+            )
             or not isinstance(row["id"], str)
             or not row["id"]
             or row["id"] in expectation_ids
@@ -82,6 +86,13 @@ def _authored(value, source_ids, control_ids, repository):
         ):
             raise DomainError(
                 "Expectations require actual issues and explicit alternative procedures"
+            )
+        if "task_ids" in row:
+            from .expectation_links import validate_authored_tasks
+
+            related = [issue for issue in value["issues"] if issue["id"] in row["issue_ids"]]
+            validate_authored_tasks(
+                state, {c for issue in related for c in issue["control_ids"]}, row["task_ids"]
             )
         expectation_ids.add(row["id"])
     for relative, expected in value["source_pins"].items():
@@ -174,7 +185,9 @@ def bind_snapshot(
             raise DomainError("Duplicate source version")
         identities.add(identity)
         ids.add(ref["id"])
-    authored = _authored(authored, ids, {c["id"] for c in state["controls"]}, engine.repository)
+    authored = _authored(
+        authored, ids, {c["id"] for c in state["controls"]}, engine.repository, state=state
+    )
     sources, files = [], {}
     try:
         components = []

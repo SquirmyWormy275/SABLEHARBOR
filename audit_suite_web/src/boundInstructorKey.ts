@@ -7,6 +7,9 @@ export type BoundSource = {
   record: string;
   version: number;
   sha256: string;
+  source_store_id?: string;
+  source_system_alias?: string;
+  registry_sha256?: string;
   event_at: string | null;
   available_at: string;
   imported_at: string;
@@ -31,8 +34,10 @@ export type BoundExpectation = {
   issue_ids: string[];
   procedure: string;
   acceptable_alternatives: string[];
+  task_ids?: string[];
 };
 export type BoundSnapshot = {
+  snapshot_isolation?: "PER_COMPONENT_NOT_GLOBAL";
   status: "BOUND_INSTRUCTOR_AUTHORED_UNVALIDATED";
   created_at: string;
   audited_actor_id: string;
@@ -104,6 +109,37 @@ export function validateBoundResponse(v: BoundResponse, engagementId: string) {
     )
   )
     throw Error("Authored references do not match the retained source graph.");
+  if (
+    s.sources.some((source) => {
+      const routed =
+        s.snapshot_isolation === "PER_COMPONENT_NOT_GLOBAL" ||
+        [
+          source.source_store_id,
+          source.source_system_alias,
+          source.registry_sha256,
+        ].some((value) => value !== undefined);
+      return (
+        routed &&
+        (typeof source.source_store_id !== "string" ||
+          !source.source_store_id ||
+          typeof source.source_system_alias !== "string" ||
+          !source.source_system_alias ||
+          typeof source.registry_sha256 !== "string" ||
+          !/^[a-f0-9]{64}$/.test(source.registry_sha256))
+      );
+    })
+  )
+    throw Error("Protected source routing pins are incomplete.");
+  if (
+    s.authored.expectations.some(
+      (expectation) =>
+        expectation.task_ids !== undefined &&
+        (!Array.isArray(expectation.task_ids) ||
+          expectation.task_ids.some((id) => typeof id !== "string" || !id) ||
+          new Set(expectation.task_ids).size !== expectation.task_ids.length),
+    )
+  )
+    throw Error("Authored procedure links are invalid.");
 }
 export function sourceTimeline(sources: BoundSource[]) {
   return sources
