@@ -59,7 +59,7 @@ SHEETS = [
             "scenario",
             "year",
             "ending_cash_usd",
-            "outstanding_due_or_unresolved_settlement_usd",
+            "outstanding_booked_cash_requirements_usd",
             "requirement_excess_over_consolidated_cash_usd",
             "peak_core_unpaid_within_year_usd",
             "planned_industrial_project_balance_usd",

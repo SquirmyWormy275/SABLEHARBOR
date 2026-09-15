@@ -55,3 +55,32 @@ def test_refresh_preserves_source_cycle_and_splits_new_capacity():
         < runtime_sustaining_share("RT-FORECAST-hardware_cash_request-2031-1", "base", 2031, data)
         <= 1
     )
+
+
+def test_unpaid_tax_cannot_improve_cash_available_or_net_across_entities():
+    from enterprise.closeout.sovereignty import tax_requirements
+
+    def balance(entity, account, amount):
+        return dict(
+            scenario="base",
+            entity=entity,
+            year="2027",
+            month="12",
+            account=account,
+            account_type="liability",
+            signed_usd=str(amount),
+        )
+
+    totals, detail = tax_requirements(
+        [
+            balance("SHI", "CO_FF_TAX_PAY", -152250),
+            balance("PS", "CO_SUB_TAX_PAY_FED", 10000),
+            balance("SHI", "CO_TAX_DTL", -500000),
+            balance("SHI", "CO_SOFTWARE_TAX_PAY", 0),
+        ]
+    )
+    assert totals["base", 2027] == D(152250)
+    assert len(detail) == 3
+    assert cash(200000, 0, 0, 152250, 100000, 0, 0)[0] == D(47750)
+    with pytest.raises(ValueError, match="Duplicate"):
+        tax_requirements([balance("SHI", "CO_FF_TAX_PAY", -152250)] * 2)

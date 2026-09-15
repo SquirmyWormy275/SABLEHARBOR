@@ -9,6 +9,40 @@ from industrial.planning.enterprise import load_anchor, read_csv, write_csv
 
 ROOT = Path(__file__).resolve().parents[2]
 Q = D(".0001")
+CURRENT_TAX_PAYABLES = {
+    "CO_FF_TAX_PAY",
+    "CO_SOFTWARE_TAX_PAY",
+    "CO_RWH_ROT_PAY",
+    "CO_STATE_MIN_PAY",
+    "CO_TAX_PAY_FED",
+    "CO_TAX_PAY_CA",
+    "CO_SUB_TAX_PAY_FED",
+    "CO_SUB_TAX_PAY_STATE",
+}
+
+
+def tax_requirements(trial):
+    """Current tax balances; no deferred tax, interentity netting or tax paid twice."""
+    totals, rows, seen = defaultdict(D), [], set()
+    for row in trial:
+        if int(row["month"]) != 12 or row["account"] not in CURRENT_TAX_PAYABLES:
+            continue
+        if row["entity"] not in {"SHI", "SHIH", "PS", "RWH", "ARU", "BST"}:
+            raise ValueError("Tax requirement must use legal-entity balances once")
+        key = row["scenario"], row["entity"], int(row["year"]), row["account"]
+        if key in seen or row["account_type"] != "liability":
+            raise ValueError("Duplicate or misclassified current tax balance")
+        seen.add(key)
+        amount = max(-D(row["signed_usd"]), D(0))
+        totals[row["scenario"], int(row["year"])] += amount
+        rows.append(
+            dict(
+                row,
+                booked_unpaid_tax_usd=str(amount),
+                due_state="SEE_FILING_CALENDAR_NOT_ALL_CURRENTLY_PAST_DUE",
+            )
+        )
+    return totals, rows
 
 
 def attribute(operating, sustaining, financing_paid, reserve_change, growth, member, other_in):
@@ -65,6 +99,10 @@ def enrich(out, result):
     industrial_months = read_csv(out / "industrial/forecast/monthly_statements.csv")
     industrial_assets = read_csv(out / "industrial/forecast/assets.csv")
     annual = read_csv(out / "enterprise/enterprise_annual_statements.csv")
+    tax_unpaid, tax_details = tax_requirements(
+        read_csv(out / "enterprise/legal_monthly_trial_balances.csv")
+    )
+    write_csv(out / "sovereignty_tax_requirements.csv", tax_details)
     by_obligation = {r["obligation_id"]: r for r in obligations}
     if len(by_obligation) != len(obligations):
         raise ValueError("Duplicate treasury obligation")
@@ -269,7 +307,8 @@ def enrich(out, result):
                 f"{t['sustaining'] + t['growth']} vs {investing}"
             )
         cumulative_land[key[0]] += land[key]
-        reserve = t["core_unpaid"] + t["industrial_unpaid"] + cumulative_land[key[0]]
+        legacy_requirements = t["core_unpaid"] + t["industrial_unpaid"] + cumulative_land[key[0]]
+        reserve = legacy_requirements + tax_unpaid[key]
         reserve_change = reserve - previous_reserve[key[0]]
         previous_reserve[key[0]] = reserve
         operating, member = D(row["operating_cash_generation_usd"]), D(row["member_cash_usd"])
@@ -287,7 +326,9 @@ def enrich(out, result):
             growth_net_investment_paid_usd=t["growth"],
             required_financing_cash_paid_usd=t["financing_paid"],
             other_external_financing_in_usd=t["other_external_in"],
-            outstanding_due_or_unresolved_settlement_usd=reserve,
+            outstanding_due_or_unresolved_settlement_usd=legacy_requirements,
+            booked_current_tax_payables_usd=tax_unpaid[key],
+            outstanding_booked_cash_requirements_usd=reserve,
             unpaid_requirement_change_usd=reserve_change,
             released_prior_requirement_origin_unattributed_usd=max(-reserve_change, D(0)),
             consolidated_cash_coverage_before_other_needs_usd=min(

@@ -65,7 +65,13 @@ commitment or independent payment evidence is inferred from these model records.
 
 Let **O** be reported operating cash flow, **S** sustaining cash investment,
 **F** paid debt principal and other financing payments, and **ΔR** the change in
-recorded unpaid due requirements and unresolved land settlement.
+recorded unpaid due requirements, unresolved land settlement and separately
+booked current tax payables. `sovereignty_tax_requirements.csv` retains each legal
+entity/account balance; `booked_current_tax_payables_usd` does not assert all those
+balances are already past due. `outstanding_booked_cash_requirements_usd` is the
+combined population. Deferred tax is excluded; a refund position in one entity
+does not offset another entity's unpaid tax. The older
+`outstanding_due_or_unresolved_settlement_usd` retains its original nontax scope.
 Then current-year cash available before growth is **O − S − F − max(ΔR, 0)**. Interest and tax cash
 already in O are not subtracted again. The land settlement is an existing recorded
 liability, not a new loan or assumed vendor-finance arrangement. Its unchanged

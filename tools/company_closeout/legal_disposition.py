@@ -41,6 +41,40 @@ MATERIAL = {
 FUTURE_PACKAGES = {"colo", "tenure", "uranium-custody", "mark-clearance"}
 
 SCOPED_SUCCESSORS = {
+    "SH-LEGAL-DRAFT-ADVISORY-CONTRACTS-U01": (
+        "enterprise/operations/source/current_legal_completion_2026_08.json",
+        "The four current Advisory clients have newly authored legal names, "
+        "organization jurisdiction, synthetic notice contacts and signatory capacity. "
+        "This completes ordinary current-party detail without adopting a new liability limit.",
+    ),
+    "SH-LEGAL-DRAFT-ADVISORY-CONTRACTS-U02": (
+        "enterprise/operations/source/current_legal_completion_2026_08.json",
+        "Four current $25,000 SOWs have scoped data schedules and expressly authored "
+        "August1 execution/authority, August28 delivery and August31 billing/receipt. "
+        "No extra revenue, perpetual service obligation or unsigned template term is adopted.",
+    ),
+    "SH-LEGAL-DRAFT-WORKFORCE-U01": (
+        "enterprise/operations/source/current_legal_completion_2026_08.json",
+        "This field concerns the eight ARU/BST retention awards and Fred consultancy, "
+        "not all regular employees. Current acknowledgments and eight completed-month "
+        "consultancy deliveries join retained source cash and the July retention wage "
+        "workpaper. Employer-levy settlement is a separate finance state; January2027 "
+        "retention and later consultancy events are not prematurely completed.",
+    ),
+    "DEBT-U01": (
+        "docs/internal/company-closeout/DEBT_AND_HOST_DISPOSITIONS.md",
+        "The existing ARU term-creditor role now has an expressly fictional legal name "
+        "and administrative account reference; ARU borrower identity and accepted "
+        "officer capacity are retained. Maturity, prepayment, collateral and numerical "
+        "covenant terms remain separate unsupported material rights. No new loan or guarantee.",
+    ),
+    "SH-LEGAL-DRAFT-RW-TITLE-U03": (
+        "docs/internal/company-closeout/ESCROW_DISPOSITIONS.md",
+        "The current register expressly authors no disbursements through August31 in "
+        "the existing $3M Red Wash escrow and separately funded $500,000 holdback. "
+        "Administrator names/references are new fictional precision. Claim eligibility, "
+        "title cure and deliverable release remain separate; no recovery asset or extra cash.",
+    ),
     "DEBT-U04": (
         "docs/internal/company-closeout/DEBT_AND_HOST_DISPOSITIONS.md",
         "The current debt successor supplies internal payoff and settlement references and "

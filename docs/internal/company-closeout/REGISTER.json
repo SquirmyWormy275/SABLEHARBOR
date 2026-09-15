@@ -1,6 +1,6 @@
 {
   "document_id": "SH-CODEX-COMPANY-CLOSEOUT-2026-09-15",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "status": "IMPLEMENTATION_IN_PROGRESS_NOT_ACCEPTED",
   "recorded_on": "2026-09-15",
   "record_timezone": "UTC",
@@ -41,7 +41,8 @@
       ],
       "commits_prs": [
         "39aa95c1",
-        "6ab8dda7"
+        "6ab8dda7",
+        "https://github.com/SquirmyWormy275/SABLEHARBOR/pull/166"
       ],
       "evidence": [
         "enterprise/operations/source/current_company_2026_08.json",
@@ -76,7 +77,9 @@
         "enterprise/closeout/finance.py",
         "docs/finance/evidence/company-closeout/README.md"
       ],
-      "commits_prs": [],
+      "commits_prs": [
+        "https://github.com/SquirmyWormy275/SABLEHARBOR/pull/166"
+      ],
       "evidence": [
         "enterprise/closeout/finance.py",
         "docs/finance/evidence/company-closeout/README.md"
@@ -113,7 +116,8 @@
       ],
       "commits_prs": [
         "39aa95c1",
-        "6ab8dda7"
+        "6ab8dda7",
+        "https://github.com/SquirmyWormy275/SABLEHARBOR/pull/166"
       ],
       "evidence": [
         "enterprise/operations/source/completed_period_2026_08.json",
@@ -127,14 +131,15 @@
         "nonemployee_directors": 7,
         "payroll_events": 1404,
         "gross_usd": "6259287.81",
-        "withholding_usd": "1706523.80",
-        "net_pay_usd": "4552764.01",
+        "withholding_usd": "1704580.70",
+        "net_pay_usd": "4554707.11",
         "employer_cost_usd": "8137074.52",
         "august_ps_legal_reclassification_usd": "78125.00",
         "reclassification_group_cash_and_expense_delta_usd": "0.00"
       },
       "limitations": [
-        "Integration acceptance, final composed-revision validation and indexed Release packaging remain pending."
+        "Integration acceptance, final composed-revision validation and indexed Release packaging remain pending.",
+        "July retention compensation is now included in YTD wage bases; incremental employer levy24266.75 awaits finance provider integration."
       ],
       "next_owner": "people and operations lane"
     },
@@ -150,22 +155,36 @@
         "docs/finance/evidence/company-closeout/HISTORICAL_TAX_RECONSTRUCTION.md",
         "docs/finance/evidence/company-closeout/TREASURY_AND_INVESTOR_ROUTE.md",
         "docs/finance/evidence/company-closeout/SOVEREIGNTY_METHOD.md",
-        "docs/internal/company-closeout/CAPITAL_HISTORY_PROPOSAL.md"
+        "docs/internal/company-closeout/CAPITAL_HISTORY_PROPOSAL.md",
+        "docs/internal/company-closeout/DEBT_AND_HOST_DISPOSITIONS.md",
+        "docs/internal/company-closeout/ESCROW_DISPOSITIONS.md",
+        "enterprise/ccf/company_closeout/STATE_UNITARY_ANALYSIS.md",
+        "enterprise/closeout/source/receipt_markets.json"
       ],
       "affected_paths": [
         "docs/finance/evidence/company-closeout/ADOPTED_PARENT_TAX.md",
         "docs/finance/evidence/company-closeout/HISTORICAL_TAX_RECONSTRUCTION.md",
         "docs/finance/evidence/company-closeout/TREASURY_AND_INVESTOR_ROUTE.md",
         "docs/finance/evidence/company-closeout/SOVEREIGNTY_METHOD.md",
-        "docs/internal/company-closeout/CAPITAL_HISTORY_PROPOSAL.md"
+        "docs/internal/company-closeout/CAPITAL_HISTORY_PROPOSAL.md",
+        "docs/internal/company-closeout/DEBT_AND_HOST_DISPOSITIONS.md",
+        "docs/internal/company-closeout/ESCROW_DISPOSITIONS.md",
+        "enterprise/ccf/company_closeout/STATE_UNITARY_ANALYSIS.md",
+        "enterprise/closeout/source/receipt_markets.json"
       ],
-      "commits_prs": [],
+      "commits_prs": [
+        "https://github.com/SquirmyWormy275/SABLEHARBOR/pull/166"
+      ],
       "evidence": [
         "docs/finance/evidence/company-closeout/ADOPTED_PARENT_TAX.md",
         "docs/finance/evidence/company-closeout/HISTORICAL_TAX_RECONSTRUCTION.md",
         "docs/finance/evidence/company-closeout/TREASURY_AND_INVESTOR_ROUTE.md",
         "docs/finance/evidence/company-closeout/SOVEREIGNTY_METHOD.md",
-        "docs/internal/company-closeout/CAPITAL_HISTORY_PROPOSAL.md"
+        "docs/internal/company-closeout/CAPITAL_HISTORY_PROPOSAL.md",
+        "docs/internal/company-closeout/DEBT_AND_HOST_DISPOSITIONS.md",
+        "docs/internal/company-closeout/ESCROW_DISPOSITIONS.md",
+        "enterprise/ccf/company_closeout/STATE_UNITARY_ANALYSIS.md",
+        "enterprise/closeout/source/receipt_markets.json"
       ],
       "commands_results": [],
       "reconciliation_totals": {},
@@ -197,13 +216,18 @@
         "enterprise/ccf/company_closeout/rail_reporting_successor.json",
         "enterprise/ccf/company_closeout/industrial_transaction_tax.json"
       ],
-      "commits_prs": [],
+      "commits_prs": [
+        "https://github.com/SquirmyWormy275/SABLEHARBOR/pull/166"
+      ],
       "evidence": [
         "enterprise/ccf/company_closeout/README.md",
         "enterprise/ccf/company_closeout/current_activity_successor.json",
         "enterprise/ccf/company_closeout/synthetic_permit_instruments_august.json",
         "enterprise/ccf/company_closeout/rail_reporting_successor.json",
-        "enterprise/ccf/company_closeout/industrial_transaction_tax.json"
+        "enterprise/ccf/company_closeout/industrial_transaction_tax.json",
+        "enterprise/ccf/company_closeout/CURRENT_RESIDUALS.md",
+        "enterprise/ccf/company_closeout/august_admin_completion.json",
+        "enterprise/ccf/company_closeout/benefit_admin_completion.json"
       ],
       "commands_results": [],
       "reconciliation_totals": {
@@ -236,7 +260,9 @@
         "docs/internal/company-closeout/PORTAL_REHEARSAL.json",
         "docs/internal/company-closeout/REFERENCE_RESTORE_RECEIPT.json"
       ],
-      "commits_prs": [],
+      "commits_prs": [
+        "https://github.com/SquirmyWormy275/SABLEHARBOR/pull/166"
+      ],
       "evidence": [
         "docs/internal/company-closeout/PORTAL_CONTRACT.md",
         "docs/internal/company-closeout/PORTAL_REHEARSAL.json",
@@ -268,7 +294,8 @@
       ],
       "commits_prs": [
         "39aa95c1",
-        "6ab8dda7"
+        "6ab8dda7",
+        "https://github.com/SquirmyWormy275/SABLEHARBOR/pull/166"
       ],
       "evidence": [
         "enterprise/operations/source/september_custody_2026.json",
@@ -304,7 +331,8 @@
         "https://github.com/SquirmyWormy275/SABLEHARBOR/pull/145",
         "c8d628aa84140d63f6b8da8e2cba173c26c9a3b1",
         "https://github.com/SquirmyWormy275/SABLEHARBOR/pull/165",
-        "667fddbeb2876ef83bc836b21dc4062e943bcb2c"
+        "667fddbeb2876ef83bc836b21dc4062e943bcb2c",
+        "https://github.com/SquirmyWormy275/SABLEHARBOR/pull/166"
       ],
       "evidence": [
         "docs/internal/company-closeout/PR145_INTEGRATION.md",
@@ -343,7 +371,9 @@
         "enterprise/runtime/security.py",
         "enterprise/runtime/tests/test_security.py"
       ],
-      "commits_prs": [],
+      "commits_prs": [
+        "https://github.com/SquirmyWormy275/SABLEHARBOR/pull/166"
+      ],
       "evidence": [
         "enterprise/runtime/security.py",
         "enterprise/runtime/tests/test_security.py"
@@ -374,12 +404,16 @@
         "tools/company_closeout/edition.py",
         "tools/company_closeout/independent_import.py"
       ],
-      "commits_prs": [],
+      "commits_prs": [
+        "https://github.com/SquirmyWormy275/SABLEHARBOR/pull/166"
+      ],
       "evidence": [
         "docs/internal/company-closeout/INSPECTION_GUIDE.md",
         "tools/company_closeout/compose.py",
         "tools/company_closeout/edition.py",
-        "tools/company_closeout/independent_import.py"
+        "tools/company_closeout/independent_import.py",
+        "enterprise/operations/reperform_closeout.py",
+        "docs/internal/company-closeout/validation/README.md"
       ],
       "commands_results": [],
       "reconciliation_totals": {},
@@ -423,5 +457,5 @@
     "publication_pr": 145,
     "protection_pr": 165
   },
-  "evidence_boundary": "Progress inventory at integration head39aa95c1. Counts identify implemented source populations, not final acceptance or a released company edition."
+  "evidence_boundary": "Working integration inventory through f2717a73; PR166 remains draft. Source population totals are not final accepted edition results. Tax subsidiary/state reconciliation and final clean regeneration continue."
 }
