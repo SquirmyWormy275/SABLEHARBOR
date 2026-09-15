@@ -24,6 +24,21 @@ FORBIDDEN = {
 
 def authorize(resource, principal, action, now):
     """Filter before retrieval/model context; protected discovery stays server-side."""
+    # Identity and mandatory policy metadata must be valid before any allow path.
+    # In particular, two absent tenant values never establish a shared boundary.
+    if not isinstance(resource, dict) or not isinstance(principal, dict):
+        return "DENY"
+
+    def text(value):
+        return isinstance(value, str) and bool(value.strip())
+
+    if any(not text(principal.get(key)) for key in ("id", "tenant", "purpose")):
+        return "DENY"
+    if any(not text(resource.get(key)) for key in ("tenant", "classification", "rights")):
+        return "DENY"
+    purposes = resource.get("purposes")
+    if not isinstance(purposes, list) or not purposes or not all(map(text, purposes)):
+        return "DENY"
     instant = datetime.fromisoformat(now)
     if action in FORBIDDEN or action not in DISCLOSURES | {"existence"}:
         return "DENY"
@@ -39,9 +54,7 @@ def authorize(resource, principal, action, now):
         return "DENY"
     if resource.get("tenant") != principal.get("tenant"):
         return "DENY"
-    if resource.get("expires_at") and instant >= datetime.fromisoformat(
-        resource["expires_at"]
-    ):
+    if resource.get("expires_at") and instant >= datetime.fromisoformat(resource["expires_at"]):
         return "DENY"
     if principal.get("purpose") not in resource.get("purposes", []):
         return "DENY"
@@ -52,16 +65,11 @@ def authorize(resource, principal, action, now):
             if principal["id"] in resource.get("existence_readers", [])
             else "DENY"
         )
-    if (
-        resource.get("classification") == "OPEN"
-        and resource.get("rights") == "INTERNAL_REUSE"
-    ):
+    if resource.get("classification") == "OPEN" and resource.get("rights") == "INTERNAL_REUSE":
         return "ALLOW"
     if resource.get("rights") not in principal.get("rights", []):
         return "DENY"
-    if not set(resource.get("compartments", [])) <= set(
-        principal.get("compartments", [])
-    ):
+    if not set(resource.get("compartments", [])) <= set(principal.get("compartments", [])):
         return "DENY"
     if principal["id"] not in resource.get("detail_readers", []):
         return "DENY"
@@ -80,11 +88,7 @@ def authorize(resource, principal, action, now):
 
 def disclosed_context(resources, principal, action, now):
     """No rejected text, embeddings, counts, titles or identifiers enter user context."""
-    return [
-        r["payload"]
-        for r in resources
-        if authorize(r, principal, action, now) == "ALLOW"
-    ]
+    return [r["payload"] for r in resources if authorize(r, principal, action, now) == "ALLOW"]
 
 
 def delegate(parent, child):
@@ -103,9 +107,7 @@ def revoke_graph(records, root, held=False):
     affected = {root}
     while True:
         expanded = affected | {
-            key
-            for key, row in records.items()
-            if affected.intersection(row.get("sources", []))
+            key for key, row in records.items() if affected.intersection(row.get("sources", []))
         }
         if expanded == affected:
             break
@@ -115,9 +117,7 @@ def revoke_graph(records, root, held=False):
         row["restore_suppressed"] = True
         row["disclosure_enabled"] = False
         row["disposition"] = (
-            "HOLD_RESTRICTED"
-            if held or row.get("legal_hold")
-            else "DELETE_PENDING_BACKUP_EXPIRY"
+            "HOLD_RESTRICTED" if held or row.get("legal_hold") else "DELETE_PENDING_BACKUP_EXPIRY"
         )
         if row["disposition"] != "HOLD_RESTRICTED":
             row.pop("payload", None)
@@ -126,9 +126,7 @@ def revoke_graph(records, root, held=False):
 
 def restore(records, tombstones):
     return {
-        k: v
-        for k, v in records.items()
-        if k not in tombstones and not v.get("restore_suppressed")
+        k: v for k, v in records.items() if k not in tombstones and not v.get("restore_suppressed")
     }
 
 
@@ -150,11 +148,7 @@ def assess_evidence(manifest, expected_count, now, actual_required=True):
     )
     if not manifest or any(key not in manifest for key in required):
         return "NOT_RUN"
-    if (
-        not manifest["complete"]
-        or manifest["count"] != expected_count
-        or expected_count <= 0
-    ):
+    if not manifest["complete"] or manifest["count"] != expected_count or expected_count <= 0:
         return "FAIL_INCOMPLETE_POPULATION"
     if manifest["reviewer"] == manifest["preparer"]:
         return "FAIL_SELF_REVIEW"
