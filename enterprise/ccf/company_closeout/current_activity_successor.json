@@ -8,9 +8,9 @@
   "fact_status": "NEWLY_AUTHORED_SYNTHETIC_ACTIVITY_AND_DATA_FLOW_RECONSTRUCTION",
   "supersedes_scope": "Selected current populations and factual privacy/benefit/service screens replace unresolved current-population portions of activity_applicability.json; its distinct forecasts, runtime readiness and future FF003 remain unchanged.",
   "source_hashes": {
-    "enterprise/operations/source/current_company_2026_08.json": "b335f343c9328d3ea27a63dd061fd7e864e7dd954c66c04b8e24a8f54467d2fa",
+    "enterprise/operations/source/current_company_2026_08.json": "729e45f44d5240be558bb8d1cfef3bdd527a379a810a342173b2409d7ce0ea74",
     "enterprise/operations/source/completed_period_2026_08.json": "b64e0d5d9041feae1816c533abdd99b26fa9c31fef01122614a9ec8a42800a8a",
-    "enterprise/operations/current_records.py": "45d6ac519cf6d1f89e4b226090b9f183738c44e87443eb7e889b2d443c153eae"
+    "enterprise/operations/current_records.py": "98a6752d69151ab62d915bfd3291b0ac6076e472ca6de65ad5353809d77e463e"
   },
   "populations": {
     "current_contracts": {
