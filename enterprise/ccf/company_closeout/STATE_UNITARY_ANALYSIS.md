@@ -83,3 +83,12 @@ foreign operations, transport routes or qualifying-activity proportions trigger
 reassessment. Primary sources were accessed September15,2026 UTC; dated authorities
 and effective clauses provide the stated temporal basis. The broader perimeter
 research supplies nexus, filing and deduction-timing rules separately.
+
+## Computational handoff
+
+Use `STATE_TAX_IMPLEMENTATION_ADDENDUM.md` for the Illinois subgroup conversion
+and 2026 depreciation/conformity mechanics. The separate market-fact input is
+`enterprise/closeout/source/receipt_markets.json`, validated by
+`enterprise/closeout/receipt_markets.py` (integration source commit b62f6ff1).
+Those authored service-benefit/destination facts cover the declared legacy
+populations; employee location is not a proxy for customer receipts.

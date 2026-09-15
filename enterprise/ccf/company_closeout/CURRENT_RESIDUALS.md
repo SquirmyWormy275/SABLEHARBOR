@@ -1,9 +1,9 @@
 # Current C05/C06 evidence and residual receipt
 
-Document ID: SH-C05-C06-RESIDUAL-20260915; version 1.0.0.
+Document ID: SH-C05-C06-RESIDUAL-20260915; version 1.1.0.
 Prepared September 15, 2026 UTC; PENDING_REPOSITORY_ACCEPTANCE.
-Status snapshot reads integration commit `39aa95c1` and controls commit `2e68b57f`.
-The later administrative successor below updates R03/R04/R07. This is the current navigation successor to the README's historical residual table;
+Status incorporates controls administrative successor `bb660b20` and unitary source `da92ab9f`.
+This is the current navigation successor to the README's historical residual table;
 it does not delete earlier gap findings or change their event-time truth.
 
 ## Delivered scope
@@ -45,11 +45,11 @@ it does not delete earlier gap findings or change their event-time truth.
 |---|---|---|---|
 | C05-R01 | Authentic fictional failure; future response | RW-0140 returned badge has no lab result (RW-AUG-EVID-0134). No zero-dose/compliant-exposure conclusion; follow-up September18. | Radiation protection role obtains/evaluates result; preserve missing state at cutoff. |
 | C05-R02 | Authentic adverse condition; future response | MW-17 +0.01085mg/L over authored baseline exceeds internal trigger; Cell1 pathway unresolved. September30 investigation/October15 prospective retest. No statutory exceedance or clean pathway asserted. | Environmental manager completes investigation; do not fabricate a retrospective clean retest. |
-| C05-R03 | Ordinary synthetic instrument completion still open | Bond face/instrument evidence absent (RW-AUG-EVID-0203). $25M closure estimate and $16M opening ARO are not bond face. | Corporate/environmental lane reconciles existing security terms and authors supported instrument detail; no new guarantee or cash collateral assumed. A surety-adequacy claim remains unsupported. |
-| C05-R04 | Ordinary technical fact completion still open | Impoundment radon category/phase-area support absent (RW-AUG-EVID-0204). This is not inability to obtain a real regulator document. | Environmental source owner supplies consistent fictional phase/area/workpractice facts, then applies the relevant primary provision. No radon compliance pass until supported. |
+| C05-R03 | Prospective adequacy and instrument-term scope | Existing bond identity, $25M face and continuation are supplied in august_admin_completion.json. Face equals the current estimate numerically; changed-condition/agency-specific adequacy remains open. Underlying indemnity terms and a discrete premium receipt are not established. | Environmental/corporate owner completes September30 cost and applicable assurance review; no fee-zero, absent-indemnity or available-cash inference. |
+| C05-R04 | Authentic condition; ongoing performance | Cell1 post-1989 category, 32-acre phased configuration, liner compatibility and 31 daily August work-practice records are supplied. MW17 pathway/ongoing liner performance remains under investigation. | Environmental owner retains R02 response; no retrospective clean retest or blanket radon-compliance opinion. |
 | C05-R05 | Professional primary-version limit | Full event-day amendments and original annual FRA threshold notices are not recovered for every historical event. Ten CFR editions, selected rules and DOT tables support bounded screens; 2025 threshold is inferred from next year's notice. | Compliance reviewer retrieves exact annual instruments or states a bounded conclusion. This limits final event-year legal certainty, not existence of authored reports or preserved late filing. |
 | C05-R06 | Declared scope exclusion | Four workplace exams cover two places/two shifts on Aug31, not every August mine workplace/day. 204 selected permit occurrences do not claim every possible instrument condition or historical period. | Expand only if the edition claims those additional populations; otherwise retain explicit selected scope. |
-| C05-R07 | Ordinary administrative evidence outside delivered plan screen | Fully insured benefit arrangement/data flow is authored; plan-specific notices and insurer control performance are not demonstrated. | Benefits owner completes selected plan records if a plan-compliance claim is included. Premium payment is not insurer assurance. |
+| C05-R07 | Future duty and selected plan scope | 702 enrollment/waiver records (612 covered, 90 waived) and 1,404 selected notice deliveries are supplied. Covered leaver continuation election notice due September22 remains future. Full SPD/SBC, annual plan filing and insurer clinical performance are outside selected administrative claim. | Benefits administrator performs due notice; reconcile any later claim expansion to the exact insured plan and participant population. |
 | C05-R08 | Active finance integration | Statutory subsidiary federal/state bases and IL/WV unitary groups, member NOLs, annual ROT receipts/filing timing and current/deferred/cash bridges require finance's successor. See SUBSIDIARY_TAX_PERIMETER_RESEARCH.md. | Finance owns providers/calendars; the three owner choices are settled. No new broad approval is required for ordinary factual completion. |
 | C05-R09 | Reference framework scope | 1,660 preparation rows remain PENDING_LOCAL_REVIEW; 70/86 operational selections are documented reference scopes, not fresh professional framework-equivalence acceptance. | CCF/runtime owner reviews only the edition's represented boundaries. The completed 15 mappings are not still missing. |
 | C06-R01 | Software integration capability | CompanyStore is immutable and lacks class-based deletion/hold; its restore exercise therefore does not prove deletion/hold lifecycle enforcement. Reference fixture does exercise suppression/held access separately. | Runtime owner implements and exercises native lifecycle or keeps the end-to-end claim bounded. |
@@ -58,10 +58,10 @@ it does not delete earlier gap findings or change their event-time truth.
 | C06-R04 | Genuine external deployment limit | Original readiness gates requiring ACTUAL_COLLECTED_EVIDENCE are unchanged. Local reference and isolated pinned-store execution do not establish a deployed Alexandria/Daedalus estate. | Runtime owner retains exact gate owners/evidence requirements; no real facility purchase or live deployment is necessary to validate the declared local scope. |
 | C09-R01 | Acceptance/integration | Source fix is tested on the closeout branch; active dirty portal was not modified. | Integration owner records accepted revision and runtime owner adopts/tests any live successor. No production breach asserted. |
 
-An open fictional failure is valid inspection evidence, not an instruction to erase
-it. Ordinary uncompleted source detail (R03/R04/R07) is distinguished from unavailable
-primary authority (R05), bounded populations (R06/R09), and actual runtime capability
-(R01–R04 under C06). The selected edition must not claim any affected outcome passed.
+An open fictional failure is valid inspection evidence. The ordinary instrument,
+phase and selected plan administration details are complete in their stated scope.
+Remaining primary-version limits, future responses and runtime capability limits
+affect only the corresponding claims above.
 
 ## Evidence paths and rechecks
 
@@ -74,21 +74,11 @@ and `portal_rehearsal.py`. Read receipt scope, source commit and counts before c
 PASS. Required acceptance/head checks and final regeneration remain integration
 owner work; this status note does not substitute historical tests for current ones.
 
-## Administrative completion update
+## Administrative evidence
 
 `august_admin_completion.json` and `benefit_admin_completion.json`, validated by
-`admin_completion.py`, supersede the missing ordinary detail in R03/R04/R07:
-existing bond identity/face/continuation and measurement bridge are supplied;
-Cell1 phase/area/design compatibility and31 daily work-practice records are supplied;
-702 benefit elections and1,404 selected administrative-notice deliveries are
-supplied. These are newly authored retrospective synthetic records.
-
-R03 now retains only prospective changed-condition/agency-specific adequacy review;
-no new surety obligation, parent guarantee or cash collateral was introduced.
-R04 retains MW17 ongoing liner/pathway investigation, not missing category facts.
-R07's selected administration evidence is complete; insurer clinical performance
-and full annual plan publication/filing assurance are outside that selected claim.
-The covered September leaver's election notice is future-due September22. The
-missing badge result and MW17 future response remain open. The original204-row
-review retains historical states, joined to these dated successors rather than
-rewritten as if the detail had been recovered before its authorship.
+`admin_completion.py`, supply the instrument, phase and selected notice records.
+They are newly authored retrospective synthetic records. The original 204-row
+review retains historical states and joins these dated successors. It is not
+rewritten as though evidence had existed before its authorship. Missing badge and
+MW17 response states remain visible.
