@@ -1,0 +1,95 @@
+{
+  "document_id": "SH-CAPITAL-REGISTER-20260915",
+  "legal_entity": "SHI",
+  "legal_name": "Sable Harbor, LLC",
+  "authored_day": "2026-09-15",
+  "fact_state": "NEWLY_AUTHORED_SYNTHETIC_HISTORY",
+  "acceptance_state": "PENDING_REPOSITORY_ACCEPTANCE",
+  "authority_source": "docs/canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md#sh-voice-cap-01-implementation-return--exact-fictional-holder-register",
+  "holders": [
+    {
+      "holder_id": "SH-HOLDER-DM",
+      "name": "Daniel Mercer",
+      "units": 33250000,
+      "holder_role": "FOUNDER",
+      "unit_class": "EQUAL_PARTICIPATING_COMMON"
+    },
+    {
+      "holder_id": "SH-HOLDER-PR",
+      "name": "Priya Raman",
+      "units": 19950000,
+      "holder_role": "FOUNDER",
+      "unit_class": "EQUAL_PARTICIPATING_COMMON"
+    },
+    {
+      "holder_id": "SH-HOLDER-JB",
+      "name": "Jon Bell",
+      "units": 13300000,
+      "holder_role": "FOUNDER",
+      "unit_class": "EQUAL_PARTICIPATING_COMMON"
+    },
+    {
+      "holder_id": "SH-HOLDER-HV",
+      "name": "Harrison Vale Partners",
+      "units": 18500000,
+      "holder_role": "REGISTERED_INVESTOR",
+      "unit_class": "EQUAL_PARTICIPATING_COMMON"
+    },
+    {
+      "holder_id": "SH-HOLDER-WR",
+      "name": "Wolf Ridge Holdings",
+      "units": 15000000,
+      "holder_role": "REGISTERED_INVESTOR",
+      "unit_class": "EQUAL_PARTICIPATING_COMMON"
+    }
+  ],
+  "subscriptions": [
+    {
+      "subscription_id": "SH-SUB-20210618-HV",
+      "holder_id": "SH-HOLDER-HV",
+      "authorization_date": "2021-06-18",
+      "effective_date": "2021-06-18",
+      "settlement_date": "2021-06-18",
+      "units": 18500000,
+      "consideration_usd": "48000000.00",
+      "price_numerator": "96",
+      "price_denominator": "37",
+      "authority_source": "docs/governance/board-records/2021-06-18_harrison-vale-growth-financing-minutes.md",
+      "settlement_reference": "SYN-SHI-CAPITAL-20210618-HV",
+      "state": "NEWLY_AUTHORED_SYNTHETIC_EXECUTION_AND_RECEIPT"
+    },
+    {
+      "subscription_id": "SH-SUB-20221028-WR",
+      "holder_id": "SH-HOLDER-WR",
+      "authorization_date": "2022-10-28",
+      "effective_date": "2022-10-28",
+      "settlement_date": "2022-10-28",
+      "units": 15000000,
+      "consideration_usd": "135000000.00",
+      "price_numerator": "9",
+      "price_denominator": "1",
+      "authority_source": "docs/governance/board-records/2022-10-28_wolf-ridge-industrial-financing-minutes.md",
+      "settlement_reference": "SYN-SHI-CAPITAL-20221028-WR",
+      "state": "NEWLY_AUTHORED_SYNTHETIC_EXECUTION_AND_RECEIPT"
+    }
+  ],
+  "governing_record": {
+    "record_id": "SH-MEMBER-REGISTER-ADDENDUM-20260915",
+    "scope": "New synthetic register/addendum implements owner-approved equal economic and ordinary unit-vote rights; authorized voluntary paid-in contributions issue no units. Preserves current nine-member board, CEO/Chair separation and investor/independent roles. No operational veto, new preference, conversion, anti-dilution, option pool or privileged information access.",
+    "signatory_role": "SHI authorized corporate records custodian",
+    "record_date": "2026-09-15",
+    "state": "NEWLY_AUTHORED_SYNTHETIC_GOVERNING_RECORD_PENDING_ACCEPTANCE",
+    "side_letter_disposition": "No unlisted side letter is adopted or asserted absent. Substantive designation thresholds remain outside this register."
+  },
+  "founder_basis_boundary": {
+    "units": 66500000,
+    "formation_year": 2016,
+    "date_precision": "YEAR",
+    "consideration_usd": null,
+    "tax_basis_usd": null,
+    "monetary_capital_opening_usd": null,
+    "state": "SOURCE_RECONSTRUCTION_REQUIRED",
+    "impact": "Approved founder units establish participation, not historical contributed cash, property basis or an opening monetary capital balance. Verified external subscriptions and scenario additions are separately subtotaled; no invented offset to goodwill or retained earnings."
+  },
+  "cash_boundary": "183000000historical subscription receipts are newly authored precision of accepted rounds; not additional2026cash. Internal synthetic settlement references are not independent bank confirmation. No founder secondary."
+}
