@@ -1,3 +1,5 @@
+import { assistancePointer } from "./instructorAssistance";
+import { InstructorAssistance } from "./InstructorAssistance";
 import { SampleExecutions } from "./SampleExecutions";
 import {
   WorkpaperReviewAction,
@@ -2353,6 +2355,33 @@ export default function App() {
                 </RetainedPanel>
                 {section === "review" && (
                   <>
+                    <InstructorAssistance
+                      engagement={e}
+                      viewerId={bootstrap.viewer.id}
+                      supported={
+                        bootstrap.capabilities.instructor_releases === true
+                      }
+                      mode="instructor"
+                      onReloadContext={() => open(e.id)}
+                    />
+                    <InstructorAssistance
+                      engagement={e}
+                      viewerId={bootstrap.viewer.id}
+                      supported={
+                        bootstrap.capabilities.instructor_releases === true
+                      }
+                      mode="learner"
+                      onOpenPointer={(pointer) => {
+                        const ref = assistancePointer(e, pointer);
+                        const target = ref && lineageReference(e, ref);
+                        if (target)
+                          setDetail({
+                            kind: target.kind,
+                            row: target.row,
+                            pinnedReference: ref,
+                          });
+                      }}
+                    />
                     {e.permissions?.includes("instruct") &&
                       supports(
                         bootstrap.capabilities,
