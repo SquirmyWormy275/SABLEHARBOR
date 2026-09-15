@@ -141,6 +141,8 @@ def build(allow_working_tree=False, *, company_closeout=False):
         from enterprise.closeout.finance import CloseoutAdjustment
         adjustment = CloseoutAdjustment(source)
         adjustment.legacy_equipment_correction = True
+        from enterprise.closeout.software_sales_tax import SoftwareTax
+        adjustment.software_tax=SoftwareTax(operating)
         policy.update(model_id="SH-COMPANY-CLOSEOUT-V1", schema_version="6.0.0",
                       knowledge_cutoff="2026-09-15", created_on="2026-09-15")
         policy["canonical_sources"] += ["enterprise/closeout/source/adjustments.json"]
@@ -165,6 +167,8 @@ def build(allow_working_tree=False, *, company_closeout=False):
             legacy_result=legacy, source=policy, core_provider=operating, adjustment_provider=adjustment)
         enterprise.write_csv(output / "parent_tax_provision.csv", tax.rows)
         enterprise.write_csv(output / "parent_tax_assets.csv", tax.asset_rows)
+        enterprise.write_csv(output / "software_sales_tax.csv", adjustment.software_tax.rows)
+        enterprise.write_csv(output / "software_tax_customer_population.csv", adjustment.software_tax.population)
         enterprise.write_csv(output / "historical_tax_events.csv", tax.history["events"])
         enterprise.write_csv(output / "historical_tax_annual.csv", tax.history["annual"])
         (output / "parent_tax_history.json").write_text(json.dumps({"source": tax.source,
@@ -175,6 +179,7 @@ def build(allow_working_tree=False, *, company_closeout=False):
     if company_closeout:
         from enterprise.closeout.finance import verify
         check["company_closeout"] = verify(rows)
+        check["software_sales_tax"] = adjustment.software_tax.verify(rows)
     if company_closeout:
         from enterprise.closeout.statement_bridge import bridge as company_bridge
         bridge = company_bridge(predecessor, successor)
