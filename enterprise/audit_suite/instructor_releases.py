@@ -335,7 +335,10 @@ class InstructorReleases:
             self._put(db, "PREVIEW", value)
         return {"preview": value, "preview_sha256": digest(value), "delivered": False}
 
-    def _check(self, value, exact=False):
+    def _check(self, value, exact=False, *, verify_bytes=True, metadata_context=None):
+        if metadata_context is not None:
+            require(not exact and not verify_bytes, "Metadata-only release check required")
+            return self._metadata_check(value, metadata_context)
         state = self._state(value["instructor_id"], value["recipient_id"], value["engagement_id"])
         require(
             digest(basis(state)) == value["context_sha256"],
@@ -359,7 +362,7 @@ class InstructorReleases:
                 "Preview expired",
                 409,
             )
-        self._pointers(state, value["content"]["pointers"])
+        self._pointers(state, value["content"]["pointers"], verify_bytes=verify_bytes)
         require(
             self._key(value["instructor_id"], value["engagement_id"])
             == value["key_manifest_sha256"],
@@ -368,6 +371,93 @@ class InstructorReleases:
         )
         final = self._state(value["instructor_id"], value["recipient_id"], value["engagement_id"])
         require(digest(final) == digest(state), "Engagement changed during release check", 409)
+
+    def _metadata_context(self, actor, eid, role):
+        self._member(actor, eid, role)
+        state = self.engine.store.get(actor, eid)
+        require(
+            len(state.get("tasks", [])) <= 20000 and len(state.get("artifacts", [])) <= 20000,
+            "Release metadata limit exceeded",
+        )
+        index = {}
+        for kind, collection in (("task", "tasks"), ("artifact", "artifacts")):
+            for row in state.get(collection, []):
+                index.setdefault((kind, row["id"]), []).append(row)
+        return {
+            "actor": actor,
+            "eid": eid,
+            "role": role,
+            "state": state,
+            "state_digest": digest(state),
+            "basis_digest": digest(basis(state)),
+            "binding": deepcopy(self.bindings.get(eid)),
+            "row_index": index,
+            "participants": set(),
+            "key_checked": False,
+        }
+
+    def _metadata_check(self, value, context):
+        require(value["engagement_id"] == context["eid"], "Release context differs", 409)
+        teacher, recipient = value["instructor_id"], value["recipient_id"]
+        self._member(teacher, context["eid"], "instruct")
+        self._member(recipient, context["eid"], "learn")
+        context["participants"].update(((teacher, "instruct"), (recipient, "learn")))
+        require(
+            context["basis_digest"] == value["context_sha256"],
+            "Release context changed; suspended",
+            409,
+        )
+        if not context["key_checked"]:
+            context["key_checked"] = True
+            try:
+                context["key"] = self._key(teacher, context["eid"])
+                context["key_teacher"] = teacher
+            except DomainError as error:
+                context["key_error"] = error
+        if "key_error" in context:
+            raise context["key_error"]
+        require(
+            context["key"] == value["key_manifest_sha256"], "Key changed; release suspended", 409
+        )
+        self._pointers(
+            context["state"],
+            value["content"]["pointers"],
+            verify_bytes=False,
+            row_index=context["row_index"],
+        )
+
+    def _metadata_finish(self, context):
+        # No authority or file-integrity cache survives this request.
+        for actor, role in context["participants"]:
+            self._member(actor, context["eid"], role)
+        if "key" in context:
+            require(
+                self._key(context["key_teacher"], context["eid"]) == context["key"],
+                "Key changed during metadata listing",
+                409,
+            )
+        require(
+            context["binding"] == self.bindings.get(context["eid"]),
+            "Key binding changed during metadata listing",
+            409,
+        )
+        self._member(context["actor"], context["eid"], context["role"])
+        require(
+            digest(self.engine.store.get(context["actor"], context["eid"]))
+            == context["state_digest"],
+            "Engagement changed during metadata listing",
+            409,
+        )
+        for actor, role in context["participants"]:
+            self._member(actor, context["eid"], role)
+
+    @staticmethod
+    def _metadata_actions(db):
+        result = {}
+        for row in db.execute("SELECT content FROM events ORDER BY seq"):
+            event = json.loads(row[0])
+            result.setdefault(event["release_id"], []).append(event["action"])
+        return result
 
     @staticmethod
     def _replay(db, actor, eid, payload):
@@ -451,28 +541,31 @@ class InstructorReleases:
 
     def list(self, recipient, eid):
         self._member(recipient, eid, "learn")
+        context = self._metadata_context(recipient, eid, "learn")
         result = []
         with self._db() as db:
+            action_index = self._metadata_actions(db)
             for row in db.execute("SELECT id FROM documents WHERE kind='RELEASE'"):
                 value = self._get(db, row["id"], "RELEASE")
                 if value["recipient_id"] != recipient or value["engagement_id"] != eid:
                     continue
-                actions = self._actions(db, value["id"])
+                actions = action_index.get(value["id"], [])
                 status = "REVOKED" if "REVOKED" in actions else "RELEASED"
                 if status == "RELEASED":
                     try:
-                        self._check(value)
+                        self._check(value, verify_bytes=False, metadata_context=context)
                     except DomainError:
                         status = "SUSPENDED"
                 result.append(
                     {
                         "release_id": value["id"],
                         "status": status,
+                        "pointer_validation": "METADATA_ONLY_ORIGINAL_BYTES_RECHECKED_ON_READ",
                         "delivered": "DELIVERED" in actions,
                         "acknowledged": "ACKNOWLEDGED" in actions,
                     }
                 )
-            self._member(recipient, eid, "learn")
+            self._metadata_finish(context)
         return result
 
     def read(self, recipient, eid, release_id):
@@ -625,17 +718,19 @@ class InstructorReleases:
     def history(self, instructor, eid):
         """Own released metadata only; no private draft or released content in lists."""
         self._member(instructor, eid, "instruct")
+        context = self._metadata_context(instructor, eid, "instruct")
         result = []
         with self._db() as db:
+            action_index = self._metadata_actions(db)
             for row in db.execute("SELECT id FROM documents WHERE kind='RELEASE'"):
                 value = self._get(db, row["id"], "RELEASE")
                 if value["instructor_id"] != instructor or value["engagement_id"] != eid:
                     continue
-                actions = self._actions(db, value["id"])
+                actions = action_index.get(value["id"], [])
                 status = "REVOKED" if "REVOKED" in actions else "RELEASED"
                 if status == "RELEASED":
                     try:
-                        self._check(value)
+                        self._check(value, verify_bytes=False, metadata_context=context)
                     except DomainError:
                         status = "SUSPENDED"
                 result.append(
@@ -644,12 +739,13 @@ class InstructorReleases:
                         "recipient_id": value["recipient_id"],
                         "stage": value["content"]["stage"],
                         "status": status,
+                        "pointer_validation": "METADATA_ONLY_ORIGINAL_BYTES_RECHECKED_ON_READ",
                         "delivered": "DELIVERED" in actions,
                         "acknowledged": "ACKNOWLEDGED" in actions,
                         "pre_release_revision": value["revision"],
                     }
                 )
-            self._member(instructor, eid, "instruct")
+            self._metadata_finish(context)
         return result
 
     def snapshot(self):
