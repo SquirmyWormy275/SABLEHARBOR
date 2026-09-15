@@ -1,3 +1,5 @@
+import PopulationLineage from "./PopulationLineage";
+import { lineageReference } from "./populationLineage";
 import SourceRecordCensus from "./SourceRecordCensus";
 import { ConversationProvenance } from "./ConversationProvenance";
 import { MeetingSourceContext } from "./MeetingSourceContext";
@@ -214,6 +216,14 @@ function Login({ onSuccess }: { onSuccess: () => void }) {
     </main>
   );
 }
+type DetailContext = {
+  row: Row;
+  kind: string;
+  sequence?: string[];
+  returnTo?: DetailContext;
+  focusVersion?: number;
+  pinnedReference?: Row;
+};
 export default function App() {
   const [bootstrap, setBootstrap] = useState<Bootstrap | null>(null),
     [engagement, setEngagement] = useState<Engagement | null>(null),
@@ -224,11 +234,7 @@ export default function App() {
     [notice, setNotice] = useState(""),
     [busy, setBusy] = useState(false),
     [action, setAction] = useState<Action | null>(null),
-    [detail, setDetail] = useState<{
-      row: Row;
-      kind: string;
-      sequence?: string[];
-    } | null>(null),
+    [detail, setDetail] = useState<DetailContext | null>(null),
     [meetingId, setMeetingId] = useState(""),
     [message, setMessage] = useState(""),
     [query, setQuery] = useState(""),
@@ -444,7 +450,20 @@ export default function App() {
       const rows = (collections[previous.kind] ?? []).filter(
         (row) => row.id === previous.row.id,
       );
-      return rows.length === 1 ? { ...previous, row: rows[0] } : null;
+      if (rows.length !== 1) return null;
+      if (
+        previous.pinnedReference &&
+        !lineageReference(engagement, previous.pinnedReference)
+      )
+        return null;
+      if (
+        previous.focusVersion !== undefined &&
+        !workpaperVersions(rows[0]).some(
+          (version) => version.version === previous.focusVersion,
+        )
+      )
+        return null;
+      return { ...previous, row: rows[0] };
     });
   }, [engagement, bootstrap]);
   useEffect(() => {
@@ -2575,6 +2594,57 @@ export default function App() {
             title={str(detail.row.title ?? detail.row.name ?? detail.row.id)}
             onClose={() => setDetail(null)}
           >
+            {detail.returnTo && (
+              <button
+                type="button"
+                onClick={() => {
+                  const back = detail.returnTo!;
+                  const collections: Record<string, string> = {
+                    population: "populations",
+                    selection: "selections",
+                    artifact: "artifacts",
+                    workpaper: "workpapers",
+                  };
+                  const ref = {
+                    id: back.row.id,
+                    collection: collections[back.kind],
+                    ...(back.row.version !== undefined
+                      ? { version: back.row.version }
+                      : {}),
+                    ...(back.row.sha256 ? { sha256: back.row.sha256 } : {}),
+                  };
+                  const target = lineageReference(e, ref);
+                  if (target) setDetail({ ...back, row: target.row });
+                  else
+                    setError(
+                      "The original inspection context is no longer available at its pinned version.",
+                    );
+                }}
+              >
+                Back to {detail.returnTo.kind} {detail.returnTo.row.id}
+              </button>
+            )}
+            {["population", "selection"].includes(detail.kind) && (
+              <PopulationLineage
+                engagement={e}
+                kind={detail.kind}
+                row={detail.row}
+                onOpen={(ref) => {
+                  const target = lineageReference(e, ref);
+                  if (target)
+                    setDetail({
+                      row: target.row,
+                      kind: target.kind,
+                      returnTo: detail,
+                      pinnedReference: ref,
+                      ...(ref.collection === "workpapers" &&
+                      typeof ref.version === "number"
+                        ? { focusVersion: ref.version }
+                        : {}),
+                    });
+                }}
+              />
+            )}
             {neighbors && (
               <nav className="actions" aria-label="Inspect filtered records">
                 <button
@@ -2603,6 +2673,12 @@ export default function App() {
             <div className="actions">
               {detail.kind === "workpaper" && (
                 <section>
+                  {detail.focusVersion !== undefined && (
+                    <p>
+                      Showing explicitly linked workpaper version{" "}
+                      {detail.focusVersion}. Other versions are not substituted.
+                    </p>
+                  )}
                   <p>
                     Each saved revision is retained with its preparer and
                     timestamps. Reviews identify the exact version reviewed.
@@ -2659,8 +2735,18 @@ export default function App() {
                     </button>
                   )}
                   <Table
-                    memoryKey={"versions:" + detail.row.id}
-                    rows={workpaperVersions(detail.row)}
+                    memoryKey={
+                      "versions:" +
+                      detail.row.id +
+                      (detail.focusVersion === undefined
+                        ? ""
+                        : ":pinned:" + detail.focusVersion)
+                    }
+                    rows={workpaperVersions(detail.row).filter(
+                      (version) =>
+                        detail.focusVersion === undefined ||
+                        version.version === detail.focusVersion,
+                    )}
                     columns={[
                       { key: "version", label: "Version" },
                       { key: "actor", label: "Prepared by" },

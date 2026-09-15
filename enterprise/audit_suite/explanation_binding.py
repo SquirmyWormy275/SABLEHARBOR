@@ -5,6 +5,7 @@ Trusted local operator API. No route, learner projection, scoring or archive mut
 
 import json
 import os
+import tempfile
 from datetime import UTC, datetime
 from pathlib import Path
 
@@ -140,12 +141,7 @@ def bind_snapshot(
     if not history or history[-1]["state"]["revision"] != state["revision"]:
         raise DomainError("Engagement changed during binding; retry a new snapshot", status=409)
     bound = dict(binding(engine, state))
-    if getattr(engine.company_store, "is_federated", False):
-        raise DomainError(
-            "Portfolio explanation binding requires explicit per-source snapshots",
-            code="FEDERATION_OPERATION_UNSUPPORTED",
-            status=409,
-        )
+    portfolio = getattr(engine.company_store, "is_federated", False)
     clock, operator_clock = _time(state["simulated_at"]), _time(source_as_of)
     if not isinstance(source_refs, list) or not source_refs:
         raise DomainError("Explicit source version references required")
@@ -153,17 +149,27 @@ def bind_snapshot(
     for ref in source_refs:
         if (
             not isinstance(ref, dict)
-            or set(ref) != {"id", "company", "branch", "system", "record", "version", "sha256"}
+            or set(ref)
+            != (
+                {"id", "company", "branch", "system", "record", "version", "sha256"}
+                | (
+                    {"source_store_id", "source_system_alias", "registry_sha256"}
+                    if portfolio
+                    else set()
+                )
+            )
             or not isinstance(ref["id"], str)
             or not ref["id"]
             or ref["id"] in ids
-            or ref["company"] != bound["company"]
-            or ref["branch"] != bound["branch"]
+            or (not portfolio and ref["company"] != bound["company"])
+            or (not portfolio and ref["branch"] != bound["branch"])
             or type(ref["version"]) is not int
             or ref["version"] < 1
         ):
             raise DomainError("Exact distinct source identities within the bound branch required")
         identity = tuple(ref[k] for k in ("company", "branch", "system", "record", "version"))
+        if portfolio:
+            identity = (ref["source_store_id"], *identity)
         if identity in identities:
             raise DomainError("Duplicate source version")
         identities.add(identity)
@@ -171,69 +177,89 @@ def bind_snapshot(
     authored = _authored(authored, ids, {c["id"] for c in state["controls"]}, engine.repository)
     sources, files = [], {}
     try:
-        with engine.company_store._db() as db:
-            db.execute("BEGIN")
-            watermark = db.execute("SELECT COALESCE(MAX(id),0) FROM access_events").fetchone()[0]
-            for index, ref in enumerate(source_refs):
-                key = tuple(ref[k] for k in ("company", "branch", "system", "record"))
-                row = engine.company_store._read(
-                    db, source_operator_id, engagement_id, key, ref["version"], operator_clock
-                )
-                if sha(row["content"]) != ref["sha256"]:
-                    raise DomainError("Bound source digest mismatch", status=409)
-                grant = db.execute(
-                    "SELECT active FROM grants WHERE principal=? AND engagement=? "
-                    "AND company=? AND branch=? AND system=?",
-                    (audited_actor_id, engagement_id, *key[:3]),
-                ).fetchone()
-                granted = bool(grant and grant[0])
-                exists_now = row["available_at"] <= clock and (
-                    row["event_at"] is None or row["event_at"] <= clock
-                )
-                latest = db.execute(
-                    "SELECT MAX(version) FROM versions WHERE company=? AND branch=? "
-                    "AND system=? AND record=? AND available_at<=? "
-                    "AND (event_at IS NULL OR event_at<=?)",
-                    (*key, clock, clock),
-                ).fetchone()[0]
-                visibility = (
-                    "FUTURE_UNAVAILABLE"
-                    if not exists_now
-                    else (
-                        "ACCESS_NOT_GRANTED"
-                        if not granted
+        components = []
+        watermark = None
+        if portfolio:
+            from .portfolio_explanation import capture
+
+            sources, files, components = capture(
+                engine,
+                state=state,
+                bound=bound,
+                refs=source_refs,
+                actor=audited_actor_id,
+                operator=source_operator_id,
+                clock=clock,
+                operator_clock=operator_clock,
+            )
+        else:
+            with engine.company_store._db() as db:
+                db.execute("BEGIN")
+                watermark = db.execute("SELECT COALESCE(MAX(id),0) FROM access_events").fetchone()[
+                    0
+                ]
+                for index, ref in enumerate(source_refs):
+                    key = tuple(ref[k] for k in ("company", "branch", "system", "record"))
+                    row = engine.company_store._read(
+                        db, source_operator_id, engagement_id, key, ref["version"], operator_clock
+                    )
+                    if sha(row["content"]) != ref["sha256"]:
+                        raise DomainError("Bound source digest mismatch", status=409)
+                    grant = db.execute(
+                        "SELECT active FROM grants WHERE principal=? AND engagement=? "
+                        "AND company=? AND branch=? AND system=?",
+                        (audited_actor_id, engagement_id, *key[:3]),
+                    ).fetchone()
+                    granted = bool(grant and grant[0])
+                    exists_now = row["available_at"] <= clock and (
+                        row["event_at"] is None or row["event_at"] <= clock
+                    )
+                    latest = db.execute(
+                        "SELECT MAX(version) FROM versions WHERE company=? AND branch=? "
+                        "AND system=? AND record=? AND available_at<=? "
+                        "AND (event_at IS NULL OR event_at<=?)",
+                        (*key, clock, clock),
+                    ).fetchone()[0]
+                    visibility = (
+                        "FUTURE_UNAVAILABLE"
+                        if not exists_now
                         else (
-                            "DISCOVERABLE_LATEST"
-                            if latest == ref["version"]
-                            else "READABLE_PRIOR_VERSION"
+                            "ACCESS_NOT_GRANTED"
+                            if not granted
+                            else (
+                                "DISCOVERABLE_LATEST"
+                                if latest == ref["version"]
+                                else "READABLE_PRIOR_VERSION"
+                            )
                         )
                     )
-                )
-                artifact_ids = []
-                for artifact in state["artifacts"]:
-                    source = artifact.get("source", {}).get("receipt", {}).get("source", {})
-                    if all(
-                        source.get(k) == ref[k]
-                        for k in ("company", "branch", "system", "record", "version", "sha256")
-                    ):
-                        if sha(engine.artifacts.read(artifact)) != ref["sha256"]:
-                            raise DomainError("Retained audit copy differs from bound source")
-                        artifact_ids.append(artifact["id"])
-                name = f"sources/{index:05d}.json"
-                files[name] = row["content"]
-                sources.append(
-                    {
-                        **ref,
-                        "path": name,
-                        "event_at": row["event_at"],
-                        "available_at": row["available_at"],
-                        "imported_at": row["imported_at"],
-                        "actor_granted_at_binding": granted,
-                        "actor_visibility_at_binding": visibility,
-                        "retained_audit_artifact_ids": artifact_ids,
-                        "fact_verification": "EXACT_EXISTING_SOURCE_BYTES_AND_ACCESS_STATE_ONLY",
-                    }
-                )
+                    artifact_ids = []
+                    for artifact in state["artifacts"]:
+                        source = artifact.get("source", {}).get("receipt", {}).get("source", {})
+                        if all(
+                            source.get(k) == ref[k]
+                            for k in ("company", "branch", "system", "record", "version", "sha256")
+                        ):
+                            if sha(engine.artifacts.read(artifact)) != ref["sha256"]:
+                                raise DomainError("Retained audit copy differs from bound source")
+                            artifact_ids.append(artifact["id"])
+                    name = f"sources/{index:05d}.json"
+                    files[name] = row["content"]
+                    sources.append(
+                        {
+                            **ref,
+                            "path": name,
+                            "event_at": row["event_at"],
+                            "available_at": row["available_at"],
+                            "imported_at": row["imported_at"],
+                            "actor_granted_at_binding": granted,
+                            "actor_visibility_at_binding": visibility,
+                            "retained_audit_artifact_ids": artifact_ids,
+                            "fact_verification": (
+                                "EXACT_EXISTING_SOURCE_BYTES_AND_ACCESS_STATE_ONLY"
+                            ),
+                        }
+                    )
     except CompanyStoreError as exc:
         raise DomainError(
             "Operator source access unavailable or source version invalid", status=403
@@ -278,12 +304,30 @@ def bind_snapshot(
             "Authored claims and expectations are not software-verified audit conclusions.",
         ],
     }
+    if portfolio:
+        snapshot["snapshot_isolation"] = "PER_COMPONENT_NOT_GLOBAL"
+        snapshot["component_snapshots"] = components
+        snapshot["limits"].append(
+            "Component capture times differ; no global source snapshot is asserted."
+        )
     files["snapshot.json"] = encoded(snapshot)
     output = Path(output).absolute()
     _private(output.parent)
     if output.exists() or output.is_symlink():
         raise DomainError("New snapshot directory required; history cannot be overwritten")
-    output.mkdir(mode=0o700)
+    stage = None
+    target = output
+    if portfolio:
+        inputs = [
+            engine.store.root,
+            *[Path(c["root"]) for c in engine.company_store._manifest["components"].values()],
+        ]
+        if any(output.resolve().is_relative_to(Path(root).resolve()) for root in inputs):
+            raise DomainError("Portfolio snapshot must be outside original audit/source roots")
+        stage = tempfile.TemporaryDirectory(prefix="portfolio-snapshot-", dir=output.parent)
+        output = Path(stage.name)
+    else:
+        output.mkdir(mode=0o700)
     (output / "sources").mkdir(mode=0o700)
     manifest = {
         "schema_version": "1.0",
@@ -291,11 +335,31 @@ def bind_snapshot(
         "engagement_id": engagement_id,
         "engagement_revision": state["revision"],
     }
-    for name, raw in files.items():
-        _write(output / name, raw)
-    _write(output / "manifest.json", encoded(manifest))
+    try:
+        for name, raw in files.items():
+            _write(output / name, raw)
+        _write(output / "manifest.json", encoded(manifest))
+        if portfolio:
+            from .portfolio_explanation import validate_capture_authority
+            from .private_publication import publish
+
+            validate_capture_authority(engine, snapshot)
+            final = engine.store.get(instructor_id, engagement_id)
+            engine.store.get(audited_actor_id, engagement_id)
+            if (
+                engine.store.membership(instructor_id, engagement_id) != "instruct"
+                or final["revision"] != state["revision"]
+                or binding(engine, final) != bound
+            ):
+                raise DomainError(
+                    "Engagement authority changed before snapshot publication", status=409
+                )
+            publish(output, target)
+    finally:
+        if stage is not None:
+            stage.cleanup()
     return {
-        "path": str(output),
+        "path": str(target),
         "manifest_sha256": sha(encoded(manifest)),
         "status": snapshot["status"],
         "sources": len(sources),

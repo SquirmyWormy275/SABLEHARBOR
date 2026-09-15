@@ -2,6 +2,7 @@
 
 from .bound_instructor import read_binding
 from .instructor_access import InstructorAccessLog
+from .portfolio_explanation import same_route, validate_routes
 from .store import DomainError, digest
 from .workpaper_links import validate_task_ids
 
@@ -19,7 +20,7 @@ def _inventory(snapshot, state, history):
         matched, changed = [], []
         for artifact in artifacts:
             original = artifact.get("source", {}).get("receipt", {}).get("source", {})
-            if all(original.get(k) == source[k] for k in IDENTITY):
+            if same_route(original, source) and all(original.get(k) == source[k] for k in IDENTITY):
                 if artifact.get("sha256") == source["sha256"]:
                     matched.append(
                         _ref(
@@ -30,7 +31,9 @@ def _inventory(snapshot, state, history):
                     )
                 else:
                     changed.append(artifact["id"])
-            elif all(original.get(k) == source[k] for k in IDENTITY[:4]):
+            elif same_route(original, source) and all(
+                original.get(k) == source[k] for k in IDENTITY[:4]
+            ):
                 changed.append(artifact["id"])
         sources[source["id"]] = {
             "source_id": source["id"],
@@ -250,6 +253,12 @@ def _compare(engine, principal, engagement_id, bindings, *, revision):
         raise DomainError("Instructor access changed", status=403)
     if engine.store.get(principal["id"], engagement_id)["revision"] != history[-1]["revision"]:
         raise DomainError("Engagement changed during comparison; select again", status=409)
+    try:
+        validate_routes(engine, snapshot)
+    except Exception as error:
+        raise DomainError(
+            "Bound portfolio routing changed during comparison", status=503
+        ) from error
     InstructorAccessLog(engine.store.root / "instructor-key-access").append(
         actor=principal["id"],
         engagement=engagement_id,

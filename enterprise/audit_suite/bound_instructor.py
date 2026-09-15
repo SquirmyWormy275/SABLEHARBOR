@@ -68,6 +68,9 @@ def read_binding(engine, principal: dict, engagement_id: str, bindings: dict) ->
             )
             if snapshot["engagement"]["id"] != engagement_id:
                 raise ValueError
+            from .portfolio_explanation import validate_routes
+
+            validate_routes(engine, snapshot)
             snapshot_pin = hashlib.sha256(
                 (selected["path"] / "snapshot.json").read_bytes()
             ).hexdigest()
@@ -80,6 +83,12 @@ def read_binding(engine, principal: dict, engagement_id: str, bindings: dict) ->
                 raise ValueError
         except Exception as error:
             raise DomainError("Protected explanation integrity check failed", status=503) from error
+        if engine.store.membership(principal["id"], engagement_id) != "instruct":
+            raise DomainError("Instructor access changed", status=403)
+        try:
+            validate_routes(engine, snapshot)
+        except Exception as error:
+            raise DomainError("Protected explanation routing changed", status=503) from error
         response = {
             "snapshot": snapshot,
             "binding": {
