@@ -25,18 +25,102 @@
     "settlement_policy": "Source-posted monthly interest and leases settle on period end; quarterly term principal settles on April 7 and July 7. Newly authored internal clearing detail, not recovered bank evidence. Closing payoff excludes retained leases.",
     "lien_release_status": "NOT_ESTABLISHED_INSTRUMENT_POPULATION_MISSING",
     "security_grant_status": "NO_NEW_GRANT_AUTHORED",
-    "lender_identity_status": "EXISTING_MODELED_CREDITOR_UNNAMED_NO_NEW_RELATIONSHIP",
-    "binding_revolver_commitment_status": "NOT_ESTABLISHED_MODEL_CAPACITY_ONLY"
+    "lender_identity_status": "NEWLY_AUTHORED_EXISTING_MODELED_CREDITOR_ADMINISTRATIVE_IDENTITY",
+    "binding_revolver_commitment_status": "NOT_ESTABLISHED_MODEL_CAPACITY_ONLY",
+    "lender": {
+      "party_id": "SH-LENDER-ARU-TERM-001",
+      "legal_name": "High Plains Infrastructure Credit, LLC",
+      "organization_jurisdiction": "US-DE",
+      "role": "Existing modeled acquisition term creditor, not a new investor or financing event",
+      "record_representative": "Dana Keene",
+      "representative_capacity": "Authorized credit-record administrator for acknowledgment of existing selected facility economics; no new amendment or waiver authority",
+      "administrative_account_ref": "SH-SYN-LENDER-ARU-TERM-001",
+      "record_acknowledged_on": "2026-09-15",
+      "fact_origin": "NEWLY_AUTHORED_SYNTHETIC_ADMINISTRATIVE_COMPLETION",
+      "economic_terms_source": "industrial/source/finance.json transaction",
+      "real_registration_or_bank_license_claimed": false
+    },
+    "borrower_authority": {
+      "legal_entity": "ARU",
+      "officer_person_id": "P029",
+      "officer_name": "Nora Ashcombe",
+      "authority_ref": "ARU-CL-04;industrial/transaction/04_ARU_APPROVAL_AND_PURCHASE_AGREEMENT.md",
+      "scope": "Existing selected acquisition funding and ordinary term-debt administration; no guarantee or new collateral grant",
+      "record_owner": "ARU_CONTROLLER_TESSA_ROURKE"
+    }
   },
   "host_events": [
-    {"event_id": "SH-HOST-S17-202608-01", "host": "Kelly Gang Mining", "project_id": "SH-CRD-202608-STREAM17", "effective_on": "2026-08-03", "event": "HOST_INTERFACE_AND_CAPTURE_POINT_CONFIRMED", "performer_role": "KGM_HOST_OPERATING_OWNER", "reviewer_person_id": "P025", "evidence": "Stream 17 boundary confirmed; host bypass remains available; capture point at recovery outlet into segregated intermediate S17-A. No host plant or mine title transfers."},
-    {"event_id": "SH-HOST-S17-202608-02", "host": "Kelly Gang Mining", "project_id": "SH-CRD-202608-STREAM17", "effective_on": "2026-08-25", "event": "REFINER_ACCEPTANCE_HOST_SHARE_RECONCILED", "performer_role": "CRADLE_DELIVERY_OWNER", "reviewer_person_id": "P025", "accepted_kg": "1500", "realized_product_value_usd": "60000", "host_participation_usd": "12000", "evidence": "August selected run; 20 percent derived participation for this settlement only, not a perpetual contract rate. Bedford blend B202608 to current Cradle buyer; external host retains operating authority."},
-    {"event_id": "SH-HOST-S17-202608-03", "host": "Kelly Gang Mining", "project_id": "SH-CRD-202608-STREAM17", "effective_on": "2026-08-31", "event": "HOST_PARTICIPATION_PAID", "performer_role": "SHI_TREASURY_PREPARER", "reviewer_role": "ESS_FINANCE_RELEASE", "invoice_id": "SH-HOST-KGM-202608", "payment_ref": "SH-SYN-HOST-KGM-20260831", "amount_usd": "12000", "evidence": "Paid within retained SHI August operating cost envelope, after current customer receipt on August 31; synthetic release/clearing at end of day. No new group expense or cash posting."},
-    {"event_id": "SH-HOST-DEM-202608-01", "host": "Demotte Reclamation Services", "project_id": "SH-CRD-202608-AMD", "effective_on": "2026-08-18", "event": "FOULING_EXCEPTION_BYPASS_AND_SAMPLE_HOLD", "performer_role": "DEMOTTE_HOST_OPERATING_OWNER", "reviewer_person_id": "P025", "evidence": "Host bypass selected for fouled Gen 1 test; ordinary water treatment continues under host authority. Cradle samples held for autopsy, no release or sale. September engineering retest remains prospective; no pollution-free or universal permit compliance claim."}
+    {
+      "event_id": "SH-HOST-S17-202608-01",
+      "host": "Kelly Gang Mining",
+      "project_id": "SH-CRD-202608-STREAM17",
+      "effective_on": "2026-08-03",
+      "event": "HOST_INTERFACE_AND_CAPTURE_POINT_CONFIRMED",
+      "performer_role": "KGM_HOST_OPERATING_OWNER",
+      "reviewer_person_id": "P025",
+      "evidence": "Stream 17 boundary confirmed; host bypass remains available; capture point at recovery outlet into segregated intermediate S17-A. No host plant or mine title transfers."
+    },
+    {
+      "event_id": "SH-HOST-S17-202608-02",
+      "host": "Kelly Gang Mining",
+      "project_id": "SH-CRD-202608-STREAM17",
+      "effective_on": "2026-08-25",
+      "event": "REFINER_ACCEPTANCE_HOST_SHARE_RECONCILED",
+      "performer_role": "CRADLE_DELIVERY_OWNER",
+      "reviewer_person_id": "P025",
+      "accepted_kg": "1500",
+      "realized_product_value_usd": "60000",
+      "host_participation_usd": "12000",
+      "evidence": "August selected run; 20 percent derived participation for this settlement only, not a perpetual contract rate. Bedford blend B202608 to current Cradle buyer; external host retains operating authority."
+    },
+    {
+      "event_id": "SH-HOST-S17-202608-03",
+      "host": "Kelly Gang Mining",
+      "project_id": "SH-CRD-202608-STREAM17",
+      "effective_on": "2026-08-31",
+      "event": "HOST_PARTICIPATION_PAID",
+      "performer_role": "SHI_TREASURY_PREPARER",
+      "reviewer_role": "ESS_FINANCE_RELEASE",
+      "invoice_id": "SH-HOST-KGM-202608",
+      "payment_ref": "SH-SYN-HOST-KGM-20260831",
+      "amount_usd": "12000",
+      "evidence": "Paid within retained SHI August operating cost envelope, after current customer receipt on August 31; synthetic release/clearing at end of day. No new group expense or cash posting."
+    },
+    {
+      "event_id": "SH-HOST-DEM-202608-01",
+      "host": "Demotte Reclamation Services",
+      "project_id": "SH-CRD-202608-AMD",
+      "effective_on": "2026-08-18",
+      "event": "FOULING_EXCEPTION_BYPASS_AND_SAMPLE_HOLD",
+      "performer_role": "DEMOTTE_HOST_OPERATING_OWNER",
+      "reviewer_person_id": "P025",
+      "evidence": "Host bypass selected for fouled Gen 1 test; ordinary water treatment continues under host authority. Cradle samples held for autopsy, no release or sale. September engineering retest remains prospective; no pollution-free or universal permit compliance claim."
+    }
   ],
   "material_rights_residuals": [
-    {"id": "DEBT-R01", "missing": "Executed lender identity/capacity, actual maturity/prepayment and numerical covenant instruments", "affected_claim": "Binding credit rights and covenant compliance", "impact": "22500000 opening term principal modeled; schedules do not prove accepted lender terms", "next_owner": "Legal and Treasury", "next_action": "Resolve definitive historical instrument or separately approve material terms; no covenants or guarantees invented"},
-    {"id": "DEBT-R02", "missing": "Instrument-level old encumbrance population and release evidence", "affected_claim": "Lien-free assets or perfected new collateral", "impact": "13500000 old payoff does not establish release; collateral amount and affected assets cannot be quantified from supported source", "next_owner": "Legal", "next_action": "Complete instrument-specific encumbrance/release chain; preserve unknown rather than author waiver or discharge"},
-    {"id": "HOST-R01", "missing": "Definitive duration, termination and notice/venue instruments outside accepted bounded operating rights", "affected_claim": "Long-term enforceability or unrestricted recovery exclusivity", "impact": "No extension of accepted Stream17 recovery right or Demotte operating permission; August performed evidence remains usable", "next_owner": "Legal and Cradle", "next_action": "Resolve terms only where required for claimed commitment; do not promote unsigned template terms"}
+    {
+      "id": "DEBT-R01",
+      "missing": "Definitive maturity, prepayment and numerical covenant terms absent from accepted source",
+      "affected_claim": "Binding credit rights and covenant compliance",
+      "impact": "22500000 opening term principal modeled; schedules do not prove accepted lender terms",
+      "next_owner": "Legal and Treasury",
+      "next_action": "Resolve definitive historical instrument or separately adopt material terms; ordinary creditor/borrower identity and administrative authority now completed"
+    },
+    {
+      "id": "DEBT-R02",
+      "missing": "Instrument-level old encumbrance population and release evidence",
+      "affected_claim": "Lien-free assets or perfected new collateral",
+      "impact": "13500000 old payoff does not establish release; collateral amount and affected assets cannot be quantified from supported source",
+      "next_owner": "Legal",
+      "next_action": "Complete instrument-specific encumbrance/release chain; preserve unknown rather than author waiver or discharge"
+    },
+    {
+      "id": "HOST-R01",
+      "missing": "Definitive duration, termination and notice/venue instruments outside accepted bounded operating rights",
+      "affected_claim": "Long-term enforceability or unrestricted recovery exclusivity",
+      "impact": "No extension of accepted Stream17 recovery right or Demotte operating permission; August performed evidence remains usable",
+      "next_owner": "Legal and Cradle",
+      "next_action": "Resolve terms only where required for claimed commitment; do not promote unsigned template terms"
+    }
   ]
 }

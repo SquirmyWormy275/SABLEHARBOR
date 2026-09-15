@@ -27,8 +27,24 @@ Demotte's August 18 fouling exception invokes host bypass and sample hold, prese
 
 The source includes three machine-readable residuals. They concern actual material rights, not missing ordinary record identifiers:
 
-- **DEBT-R01:** definitive lender capacity/identity, maturity/prepayment terms and numerical covenant instruments. Modeled debt service can be inspected; binding rights and covenant compliance cannot be certified from unsigned draft terms.
+- **DEBT-R01:** definitive maturity/prepayment terms and numerical covenant instruments. Modeled debt service can be inspected; binding rights and covenant compliance cannot be certified from unsigned draft terms.
 - **DEBT-R02:** the old encumbrance population, asset-specific new collateral and release instruments are not established. The amount paid is $13.5 million; the collateral population cannot be inferred from that amount. No waiver, release, perfection or lien-free claim is authored.
 - **HOST-R01:** duration, termination and notice/venue terms outside the accepted bounded rights are not established. The supplement documents selected performance without granting longer exclusivity or adopting unsigned template terms.
 
 Legal/Treasury and Legal/Cradle own these respective residuals. Sources reviewed: the accepted ARU closing statement, transaction accounting model and finance source; September 6 Cradle controlling record; current operating source; and the unsigned debt/liens and host-rights draft packets. Draft reporting deadlines, collateral clauses and unagreed commercial terms were not promoted into accepted duties. No external legal enforceability conclusion is made here.
+
+## Existing creditor administrative identity
+
+The selected $22.5 million term creditor now has the expressly authored identity
+High Plains Infrastructure Credit, LLC (`SH-LENDER-ARU-TERM-001`), a fictional
+Delaware LLC. This supplies a legal-party label and synthetic account reference
+for the already modeled creditor, not a new financing/investor relationship or a
+claim of real registration or bank licensing. Dana Keene is the fictional credit
+record administrator; September 15 acknowledgment concerns the selected economic
+record only and grants no amendment, waiver or new lending authority.
+
+ARU remains borrower. Nora Ashcombe's accepted officer authority and the accepted
+acquisition/funding records support ordinary administration of that debt. These
+identities no longer remain generic owner decisions. Actual maturity, prepayment
+rights, numerical covenants and asset-specific security/release terms remain
+precise separate residuals; administrative completion does not invent them.
