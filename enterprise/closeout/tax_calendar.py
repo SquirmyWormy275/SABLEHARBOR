@@ -134,7 +134,7 @@ def build():
                 return_due(year, "US"),
                 "SEPARATE_C_RETURN",
                 AUTH["US"],
-                scope="No federalconsolidation election; ARU/BST2026startJan7 afterconditionalS/QSubtermination"
+                scope="No federal consolidated election. No-338 case post-close starts January 7; intended valid338 case old-target deemed sale January 7 and new-target January 8. January1–6 financial stub does not establish tax-return boundary. BST former QSub assets follow old ARU election treatment; no separate BST338 election."
                 if entity in {"ARU", "BST"}
                 else "SeparateCcorporation; PSincludesRWHdisregardedoperator from2025July18",
             )
