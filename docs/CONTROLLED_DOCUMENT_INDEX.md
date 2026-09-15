@@ -5,9 +5,24 @@ Facility delivery: [controlled release, source commit and checksums](releases/FA
 
 **Index version:** 1.0.18 | **As of:** September 7, 2026
 
+## September 15 company closeout successor
+
+[Current company register](internal/company-closeout/REGISTER.json) ·
+[Owner directions, including corporate taxation from formation](canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md) ·
+[Financial reconciliation](finance/evidence/company-closeout/README.md) ·
+[Current workforce and operating records](../enterprise/operations/docs/completed-period.md) ·
+[Obligations and controls](../enterprise/ccf/company_closeout/README.md) ·
+[Existing portal input contract](internal/company-closeout/PORTAL_CONTRACT.md).
+
+The dated register distinguishes implemented, validated and accepted scope. PR #145
+is merged with its approved designs preserved; [its receipt](internal/company-closeout/PR145_INTEGRATION.md)
+identifies the acceptance and validation. [Main source protection](internal/company-closeout/MAIN_PROTECTION.md)
+is applied and verified. The older index date and draft headings below describe their
+historical source populations; current dispositions follow the linked successors.
+
 ## Draft legal gap instruments — September 12
 
-[17 draft packages](legal/gap-instruments/README.md) provide complete Markdown, corporate PDF/HTML, structured records and financial workbooks where applicable. New terms and designs await exact-file review; the original transaction gap dispositions remain in force. [Open the review index](legal/gap-instruments/review.html).
+[17 draft packages](legal/gap-instruments/README.md) provide complete Markdown, corporate PDF/HTML, structured records and financial workbooks where applicable. PR #158 accepted the implementation and scoped v0.4 designs; proposed legal terms and execution states require their individual dispositions. The [September 15 field review](internal/company-closeout/LEGAL_DISPOSITIONS.json) preserves all 125 items and applies accepted successors, including FF-003. [Open the historical review index](legal/gap-instruments/review.html).
 
 ## Authority order
 

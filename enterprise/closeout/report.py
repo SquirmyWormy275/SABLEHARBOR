@@ -42,5 +42,7 @@ def report(out):
             'growth_vs_sustaining_split':'N/A_UNCLASSIFIED_SOURCE_ASSET_PURPOSES',
             'scope':'Conditional model; all net investment included; no all-growth sovereignty claim; tax cash included once in operating cash',
             'settlement_state':'MODELED_NOT_BINDING_COMMITMENT_OR_BANK_CONFIRMATION'})
+    from enterprise.closeout.sovereignty import enrich
+    result = enrich(out, result)
     write_csv(out/'sovereignty.csv', result)
     return result

@@ -32,10 +32,11 @@ extension in #107/#108 or supply missing original artwork.
 
 [PR #138 billing adoption](../canon/FOUNDRY_FIELD_BILLING_ADOPTION_2026-09-13.md) is
 accepted. FF-003 is a January 2027 base conditional forecast, not September 2026
-actual revenue. The owner also approved PR #145 designs subject to substantive
-reconciliation. [Its integration receipt](../internal/company-closeout/PR145_INTEGRATION.md)
-records current-main reconciliation and validation; its GitHub state determines
-actual merge acceptance. Earlier unapproved-design notices retain their historical dates.
+actual revenue. PR #145 merged September 15 as
+`c8d628aa84140d63f6b8da8e2cba173c26c9a3b1` after 16 successful validation contexts
+and two intentionally skipped publication jobs. [Its integration receipt](../internal/company-closeout/PR145_INTEGRATION.md)
+records the numerical/source reconciliation and preserved approved designs.
+Earlier unapproved-design notices retain their historical dates.
 
 The [financial successor](../finance/evidence/company-closeout/README.md) separately
 composes goodwill removal and billing tax. Immutable historical workbooks remain
