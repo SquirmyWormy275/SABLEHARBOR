@@ -1,6 +1,6 @@
 {
   "document_id": "SH-CURRENT-INDUSTRIAL-TAX-202608",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "acceptance_state": "PENDING_REPOSITORY_ACCEPTANCE",
   "authored_on": "2026-09-15",
   "available_at": "2026-09-15T00:00:00Z",
@@ -100,6 +100,21 @@
       "version": "2026 current guidance; fiscal2026-12 controls updatedthreshold",
       "accessed_on": "2026-09-15",
       "analysis": "Uncollected seller obligation remains payable. No separatelybilled customer tax or supportedreimbursement asset is manufactured."
+    },
+    {
+      "id": "IL-RECEIPTS",
+      "url": "https://www.ilga.gov/ftp/JCAR/AdminCode/086/086001300D04010R.html",
+      "provision": "86Ill130.401(a)",
+      "version": "October2 2000 amendment; current text",
+      "accessed_on": "2026-09-15",
+      "analysis": "Receiptbasis preferred; writtennotice for gross-sales reporting change. Bookaccrual cannotprove statutoryreporting orpayment."
+    },
+    {
+      "id": "IL-RETURN",
+      "url": "https://tax.illinois.gov/forms/sales/salesandusetax/st-1-instructions.html",
+      "provision": "2026 ST1 instructions: grossreceipts, whole-dollarreturnrounding, differing-rate sales andpaymentcredits",
+      "version": "January2026 andafter",
+      "accessed_on": "2026-09-15"
     }
   ],
   "rejected_authority": {
@@ -1481,5 +1496,123 @@
       "address_state": "NEWLY_AUTHORED_FICTIONAL_CORRESPONDENCE_ONLY_NOT_HQ_OR_SITE_GEOGRAPHY",
       "disposition": "REJECTED_UNSUPPORTED_AUTHORING_NOT_ACCEPTED_EXEMPTION"
     }
-  ]
+  ],
+  "period_contract_2026": {
+    "id": "SH-RWH-IL-ROT-PERIODS-2026",
+    "origin": "NEWLY_AUTHORED_SUPPORTED_2026_TERMS_AND_RECEIVER_PRECISION",
+    "legal_book": "RWH",
+    "contracts": [
+      "UCA-2019-04",
+      "UCA-2024-11",
+      "UCA-2025-03"
+    ],
+    "trader_exclusion": "SPOT-2026-01 is not a utility own-use sale; review resale certificate scope for eachadditionalperiod before exempting it. Augustcertificate alone is not a yearlong blanket.",
+    "receiver_jurisdiction": "Metropolis, Illinois, outside special business districts",
+    "own_use_terms": "Three acceptedutilityprocurementcontracts purchase for own-use through downstream tollprocessing; no unsupported swaps/affiliates. Existingcontractprice maintained; seller bears uncollectedROT absent supportedcustomerreimbursement.",
+    "population_contract": "Finance must join each2026nativeinvoice/revenue source to contract, legalissuer, sale/invoice date, scenario and principal. Reperform monthlyamounts; do not useAugustsum as forcedallmonthvalue. Revenuecalendar fromacceptedannual equal-monthsource is reconstruction, notphysicalshipmentproof. Historicalopening AR invoiceallocations are not new2026revenue and cannotbe taxedagain as anewinvoice.",
+    "periods": [
+      {
+        "period": "2026-01",
+        "from": "2026-01-01",
+        "through": "2026-01-31",
+        "rate": "0.0625",
+        "record_role": "COMPLETED_PERIOD_SYNTHETIC_RECONSTRUCTION",
+        "authority_id": "IL-LOCAL-ILLUSTRATION"
+      },
+      {
+        "period": "2026-02",
+        "from": "2026-02-01",
+        "through": "2026-02-28",
+        "rate": "0.0625",
+        "record_role": "COMPLETED_PERIOD_SYNTHETIC_RECONSTRUCTION",
+        "authority_id": "IL-LOCAL-ILLUSTRATION"
+      },
+      {
+        "period": "2026-03",
+        "from": "2026-03-01",
+        "through": "2026-03-31",
+        "rate": "0.0625",
+        "record_role": "COMPLETED_PERIOD_SYNTHETIC_RECONSTRUCTION",
+        "authority_id": "IL-LOCAL-ILLUSTRATION"
+      },
+      {
+        "period": "2026-04",
+        "from": "2026-04-01",
+        "through": "2026-04-30",
+        "rate": "0.0625",
+        "record_role": "COMPLETED_PERIOD_SYNTHETIC_RECONSTRUCTION",
+        "authority_id": "IL-LOCAL-ILLUSTRATION"
+      },
+      {
+        "period": "2026-05",
+        "from": "2026-05-01",
+        "through": "2026-05-31",
+        "rate": "0.0625",
+        "record_role": "COMPLETED_PERIOD_SYNTHETIC_RECONSTRUCTION",
+        "authority_id": "IL-LOCAL-ILLUSTRATION"
+      },
+      {
+        "period": "2026-06",
+        "from": "2026-06-01",
+        "through": "2026-06-30",
+        "rate": "0.0625",
+        "record_role": "COMPLETED_PERIOD_SYNTHETIC_RECONSTRUCTION",
+        "authority_id": "IL-LOCAL-ILLUSTRATION"
+      },
+      {
+        "period": "2026-07",
+        "from": "2026-07-01",
+        "through": "2026-07-31",
+        "rate": "0.0725",
+        "record_role": "COMPLETED_PERIOD_SYNTHETIC_RECONSTRUCTION",
+        "authority_id": "IL-LOCAL-ILLUSTRATION"
+      },
+      {
+        "period": "2026-08",
+        "from": "2026-08-01",
+        "through": "2026-08-31",
+        "rate": "0.0725",
+        "record_role": "COMPLETED_PERIOD_SYNTHETIC_RECONSTRUCTION",
+        "authority_id": "IL-LOCAL-ILLUSTRATION"
+      },
+      {
+        "period": "2026-09",
+        "from": "2026-09-01",
+        "through": "2026-09-30",
+        "rate": "0.0725",
+        "record_role": "CONDITIONAL_FORECAST_NOT_COMPLETED",
+        "authority_id": "IL-LOCAL-ILLUSTRATION"
+      },
+      {
+        "period": "2026-10",
+        "from": "2026-10-01",
+        "through": "2026-10-31",
+        "rate": "0.0725",
+        "record_role": "CONDITIONAL_FORECAST_NOT_COMPLETED",
+        "authority_id": "IL-LOCAL-ILLUSTRATION"
+      },
+      {
+        "period": "2026-11",
+        "from": "2026-11-01",
+        "through": "2026-11-30",
+        "rate": "0.0725",
+        "record_role": "CONDITIONAL_FORECAST_NOT_COMPLETED",
+        "authority_id": "IL-LOCAL-ILLUSTRATION"
+      },
+      {
+        "period": "2026-12",
+        "from": "2026-12-01",
+        "through": "2026-12-31",
+        "rate": "0.0725",
+        "record_role": "CONDITIONAL_FORECAST_NOT_COMPLETED",
+        "authority_id": "IL-LOCAL-ILLUSTRATION"
+      }
+    ],
+    "book_measurement": "Accrue sellerexpense and taxobligation againsteachnative saleprincipal atperiodrate, invoicehalf-upcents. August3specificadjustmentIDsareincludedonce inyearscope, notaddedtwice.",
+    "statutory_reporting": "Grossreceiptsbasis under86Ill130.401 absentan expresslyauthoredwrittenmethodnotice. No suchnotice is claimed. Split bookaccrual into taxoncollectedprincipal andtaxonuncollectedprincipal. Receipts reduceuncollectedtaxclassification, notcreatea secondtaxexpense.",
+    "payment_state": "No remittance is established by invoice, receipt, thisworkpaper or modelcashrowalone; retain authorizations/filing/settlement separately. Existingtaxpayments ifany mustbeseparatelysourceidentified.",
+    "rate_on_later_receipt": "Preserve underlying sale-date rate when reporting a laterreceipt, including preJulytaxableinvoice collectedafterJuly. Keep bill/source datebasis distinctfrom physicalsale datewhereonlycalibrationexists.",
+    "return_rounding": "ST1 whole-dollar reporting per2026instructions requires a separatecents-to-returnbridge; do notround journalcents towhole dollars.",
+    "calendar_owner": "Finance taxcalendar: evaluate monthlyreturns and acceleratedpaymentapplicability fromactualsupportedlookback; thisworkpaperdoesnotdeclareallpaymentsdueonly20th."
+  }
 }

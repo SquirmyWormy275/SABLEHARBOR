@@ -466,3 +466,16 @@ The current generator/hash integration check validates all34 IDs, two active and
 rejected certificates, principal and measured tax. Negative tests reject changed use,
 wrong tax/rate/district, missing or late evidence and wrong invoice/entity/period.
 The operations owner consumes annotations; the finance owner posts and reconciles tax.
+
+Version1.2 additionally supplies the **2026 period contract** for finance to reperform
+native monthly populations: Metropolis6.25% January–June and7.25% July–December.
+September–December remain conditional forecasts. The three August source IDs are
+part of the yearly population, not a second overlay. Opening invoice aging is not
+new revenue. This contract authorizes no automatic exemption for the trader's other
+periods from its August-only certificate.
+
+Under86Ill130.401, gross-receipts reporting is the default absent a written
+method-change notice. No notice is asserted. Book tax accrual, tax attributable to
+collected/uncollected principal, return amount and actual payment must remain separate.
+The finance handoff requires the underlying sale-date rate on later collections and
+a cents-to-whole-dollar ST1 bridge, plus review of accelerated payment requirements.

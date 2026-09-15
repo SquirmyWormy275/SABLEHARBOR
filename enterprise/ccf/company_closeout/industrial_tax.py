@@ -214,6 +214,22 @@ def validate(data, tables, root=ROOT, *, verify_source_bytes=True):
         for k in ["additional_revenue_usd", "additional_cash_usd", "additional_customer_ar_usd"]
     ):
         raise ValueError("Unbilled tax cannot manufacture cash or customer principal")
+    periods = data["period_contract_2026"]["periods"]
+    if len(periods) != 12 or {r["period"] for r in periods} != {
+        f"2026-{m:02}" for m in range(1, 13)
+    }:
+        raise ValueError("Incomplete 2026 rate-period contract")
+    for period in periods:
+        month = int(period["period"][-2:])
+        if D(period["rate"]) != (D(".0625") if month <= 6 else D(".0725")) or (
+            period["record_role"]
+            != (
+                "COMPLETED_PERIOD_SYNTHETIC_RECONSTRUCTION"
+                if month <= 8
+                else "CONDITIONAL_FORECAST_NOT_COMPLETED"
+            )
+        ):
+            raise ValueError("Wrong period rate or forecast promoted into completed evidence")
     return {
         "contracts": len(rows),
         "certificates": len(certs),
