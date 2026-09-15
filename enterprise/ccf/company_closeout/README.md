@@ -108,3 +108,67 @@ operations 70 baseline or 86 extended / 24 computed assertions; business exercis
 7,560 expected occurrences across 42 combinations. This 28-row review is not a
 replacement denominator or evidence that the 15 native risk mapping gaps closed.
 No IT or regulator acceptance gate is asserted by this source review.
+
+
+## Supported fictional performance successor
+
+The original census above remains an unchanged record of the initial evidence gap.
+`permit_condition_performance.json` now adds 14 explicit **internal** condition
+schedules, newly authored September 15. These schedules do not impersonate a
+regulator-issued amendment or replace statutory frequencies. Their first monthly
+review is due September 30; existing program duties still require the precise
+instrument-specific population. Six condition rows have a performed review with
+an exception; the other eight retain missing evidence. Do not combine these
+internal schedules with the historical 28-row census as one occurrence denominator.
+
+The completed September 15 environmental review reproduces all 180 station/quarter
+rows from the existing Red Wash generator (six stations, 2019-Q1 through 2026-Q2).
+No 2026-Q3 result is invented at the August cutoff. MW-17's four 2019 readings sum
+to 0.0494 mg/L, mean 0.01235; the latest 0.0232 yields +0.01085 mg/L. This exceeds
+the newly authored internal investigation trigger of +0.005 mg/L. It is not a
+statutory concentration limit or proof of a discharge. A joint groundwater/Cell 1
+investigation remains open, due September 30, with prospective October 15 retest.
+The existing adverse trend remains visible. The method and primary 2025 BLM
+monitoring-plan reference are versioned in the performance source.
+
+`workplace_examinations.json` authors four August 31 examinations in exactly two
+places and two shifts. It joins existing workforce IDs RW-0112 (Maya Ortiz),
+RW-0113 (Evan Cross) and RW-0119 (Leah Foster). Operator designation is a newly
+authored scoped company qualification, not a professional license. One expired
+assignment is blocked, replaced by the qualified examiner; renewal remains open.
+A slippery walkway is closed, corrected and reinspected before work begins.
+The remaining three selected examinations record no adverse condition. Existing
+payroll covers these ordinary duties; no incremental invoice, production change
+or external cash is added. The collection is authored/available September 15:
+these newly created retrospective records cannot enter an August known-on view.
+Synthetic preparer/reviewer separation is explicit and does not claim a real
+human audit. All other mine workplaces and dates remain outside this sample.
+
+The primary 2025 30 CFR 57.18002 text and contemporaneous July 27, 2026 MSHA notice
+are retrieved with hashes in the source. Examination timing, record retention and
+hazard handling constrain the records; the notice corroborates existing duties,
+and is not a new rule. Public evidence contains no private evaluator answers.
+
+```sh
+uv run python red_wash/tools/validate_red_wash_record.py --generate
+uv run python -m enterprise.ccf.company_closeout.environmental_review
+uv run python -m enterprise.ccf.company_closeout.performance
+uv run python -m unittest enterprise.ccf.company_closeout.test_performance -v
+uv run python -m enterprise.ccf.company_closeout.restore_rehearsal
+```
+
+The Red Wash source build passed 514/514 checks. Performance reconciliation yields
+14 condition schedules, 180 monitoring rows, four examinations and one blocked
+assignment. Negative tests reject omitted/duplicate examinations, expired
+designation, wrong entity, late record, premature hazard release and self-review.
+
+The restore command performs actual filesystem backup and restoration into a
+separate temporary directory using existing reference `revoke_graph`, `restore`
+and `authorize`. It verifies exact backup/history hashes, replays the current
+revocation log after the earlier backup, denies revoked-principal access, removes
+three suppressed records from live disclosure, retains one restricted held copy,
+and preserves legitimate access to the remaining record. Two history entries
+survive. This is exercised local reference software, not backup/restore evidence
+for the active portal or a deployed company estate; those integration gates remain.
+The fixed fixture backup hash is
+`4140b4fe12e2cd0ec4046b8115cada2bb772a336d879c53fbbb589cd5d8e1965`.
