@@ -70,6 +70,10 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Validator Scope Audit — 2026-09-03](../../internal/VALIDATOR_SCOPE_AUDIT_2026-09-03.md) — MD
 - [Wiki Sync Boundary Review — 2026-09-03](../../internal/WIKI_SYNC_BOUNDARY_REVIEW_2026-09-03.md) — MD
 
+## `docs/internal/company-closeout`
+
+- [Main source protection](../../internal/company-closeout/MAIN_PROTECTION.md) — MD
+
 ## `docs/internal/development`
 
 - [Current business and publication alignment delivery](../../internal/development/ALIGNMENT_DELIVERY_2026-09-09.md) — MD
