@@ -59,3 +59,23 @@ instructor investigation with focus/search retained. Learner isolation and
 unchanged formal history were verified. Private receipts are under
 `enterprise/generated/audit-suite/company-portfolio-2026-09-14/reference-a-v1-evidence-context-browser/`.
 These are scripted checks, not owner usability or full contextual-journey acceptance.
+
+## Implemented retained-original comparison and review feedback
+
+The PBC workspace now includes a retained side-by-side original inspector. Each
+side searches the currently authorized artifact inventory, caps matching options
+and preserves an explicitly selected original when the search changes. Text is
+loaded only on request through the existing download route, bounded to 1 MiB per
+file and verified against exact retained size and hash. Binary files retain their
+exact download link. Concise source identity accompanies the content; full hash,
+routing and coverage fields remain expandable. Changing authority or source
+context clears the pair; stale successes and failures cannot replace current
+content. Ordinary panel navigation retains the selected pair. This does not
+produce workpaper content or infer equivalence between files.
+
+Review details now show recorded human response history and experimental appeals.
+The response form passes the exact current workpaper version or original review
+input digest. Prepared inputs and unauthorized viewers cannot respond. The UI
+requires the server's explicit `review_feedback` capability: older local servers
+cannot accidentally apply their earlier resolution semantics to the new form.
+Feedback remains distinct from the issue status and independent reviewer action.

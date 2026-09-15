@@ -50,7 +50,7 @@ exact independent operating-period declaration. The private local run is
 datasets; these do not establish corporate backup cadence or production inventory.
 
 The run retains 21 native versions across eight source systems at command
-revision13. Six declared copy/restore occurrences completed, one remains missing
+revision 13. Six declared copy/restore occurrences completed, one remains missing
 after its due date, and a failed attempt remains in history after a corrected
 retry. The exact older copy restores successfully while content reconciliation
 still exposes differences from the selected current dataset. This runtime
@@ -63,3 +63,18 @@ The private run's VERIFICATION.json and MANIFEST.json retain exact native pins,
 command receipts and checks. Initial execution created no audit, grants or model
 calls. Later collection, if performed, has its own receipt and does not establish
 control effectiveness, accepted recovery objectives or a coherent operating year.
+
+The successor's separate `collection-v2/` run at `3274817` collected all 21
+preexisting originals through maintained discovery/PBC/exact-version collection
+into technical engagement `ENG-a5ceb89d5a796d646ad8c9c0` at revision 40. Its native
+operations remain revision 13. Future and revoked requests were denied, successful
+commands replayed exactly, and all new source grants were revoked. Native rows,
+copy files, declaration and earlier A/B audit records remain unchanged; source
+authorization/collection journals changed intentionally. The independent cutoff
+still reports seven due occurrences and one missing. No workpapers, populations,
+findings, procedure credit, model calls or prepared world were created.
+
+The earlier `collection-v1/` attempt is retained: scope validation rejected a
+fieldwork date before the audit period, before any engagement or source grant was
+created. Its script, log and independent failure inspection remain available.
+The successor corrected the date and did not overwrite that history.

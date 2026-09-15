@@ -1,0 +1,41 @@
+.original-comparison {
+  min-width: 0;
+}
+.original-comparison-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+.original-comparison-columns > section {
+  min-width: 0;
+  border: 1px solid var(--border, #aab4bb);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+.original-comparison select {
+  width: 100%;
+}
+.original-comparison dd {
+  margin: 0 0 0.5rem;
+  overflow-wrap: anywhere;
+}
+.original-comparison p {
+  overflow-wrap: anywhere;
+}
+.original-comparison pre {
+  max-height: 32rem;
+  overflow: auto;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  padding: 0.75rem;
+  background: var(--panel, #f2f4f6);
+}
+.original-comparison a {
+  display: inline-block;
+  margin: 0.6rem;
+}
+@media (max-width: 760px) {
+  .original-comparison-columns {
+    grid-template-columns: 1fr;
+  }
+}

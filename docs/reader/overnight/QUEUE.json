@@ -511,7 +511,7 @@
       "gate": "existing_authority",
       "execution_policy": "READY requires completed dependencies. Shared schemas, dependencies and catalog changes belong to the integrator. Keep populated sources, migration manifests and audit records in excluded private storage. No remote publication or deployment under this addition.",
       "execution_authorized": true,
-      "evidence": "Fresh reference-v4 rehearsal collected all 520 originals across 146 systems and ten explicit source components; maintained inventory verifies exact native/retained hashes and 815 history events. No prepared audit world or model was used. Existing owner-routed collection and explicit conversations preserve source authority and qualifiers. The linked activity-plan runner produces native originals before any audit. Independent reference exercises do not establish a coherent company year."
+      "evidence": "Fresh reference-v4 rehearsal collected all 520 originals across 146 systems and ten explicit source components; maintained inventory verifies exact native/retained hashes and 815 history events. No prepared audit world or model was used. Existing owner-routed collection and explicit conversations preserve source authority and qualifiers. The linked activity-plan runner produces native originals before any audit. Independent reference exercises do not establish a coherent company year. Persistent backup runtime collection now retained all21 preexisting originals across8systems in a separate technical engagement; failedattempt, future/revoked denial, exactreplay and temporarygrantrevocation verified. No procedurecredit or professionalacceptance."
     },
     {
       "id": "AQ-06",
@@ -801,7 +801,7 @@
       "gate": "existing_authority",
       "execution_policy": "Locked design direction; queued, not started. Complete dependencies before execution. Preserve private data and prior scope boundaries. Owner usability and exact visual acceptance cannot be inferred from scripted checks.",
       "execution_authorized": true,
-      "evidence": "Versioned workpapers now retain explicit same-control procedure IDs; omission preserves links and explicit empty list clears them. Actual isolated browser verified draft recovery, version-one links, version-two clearing and historical reporting while tasks remained NOT_STARTED/NOT_RUN. Exact original preview and deduplicated evidence references remain available beside drafts. Whole-stage testing/review journey remains incomplete."
+      "evidence": "Versioned workpapers now retain explicit same-control procedure IDs; omission preserves links and explicit empty list clears them. Actual isolated browser verified draft recovery, version-one links, version-two clearing and historical reporting while tasks remained NOT_STARTED/NOT_RUN. Exact original preview and deduplicated evidence references remain available beside drafts. Whole-stage testing/review journey remains incomplete. Side-by-side retained-original component now supports bounded per-side search, exactbyte/hash verification and preserved selection. Dedicated current-context/error/keyboard/mobile tests pass; actual workspace comparison verified exact displayed hashes, search retention, panel return and narrow layout."
     },
     {
       "id": "UX-03",
@@ -954,11 +954,12 @@
         "docs/internal/development/audit-suite/",
         "enterprise/generated/audit-suite/"
       ],
-      "state": "READY",
+      "state": "IN_PROGRESS",
       "acceptance": "Anchor comments to exact passages and source versions; preserve responses, revisions, open points and explicit resolution acceptance. Separate scratch notes, hypotheses and provisional calculations from formal workpapers/findings through deliberate promotion. Distinguish company statements, auditor observations and reviewer judgments. Agent extraction cannot silently promote speculation into a finding.",
       "gate": "existing_authority",
       "execution_policy": "Owner authorized execution; retain dependency acceptance gates and existing audit_company execution boundaries. Preserve private data and assessment history. User acceptance cannot be inferred from scripted checks.",
-      "execution_authorized": true
+      "execution_authorized": true,
+      "evidence": " Explicit review feedback now preserves disposition and version/input pins without closing human issues or accepting AI suggestions. Current-role checks and an explicit backend capability protect older local servers; learner keyboard flow and backend authorization/replay tests pass."
     },
     {
       "id": "UX-09",

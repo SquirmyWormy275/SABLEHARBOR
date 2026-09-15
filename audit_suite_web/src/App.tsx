@@ -1,3 +1,6 @@
+import { ReviewFeedback } from "./ReviewFeedback";
+import OriginalComparison from "./OriginalComparison";
+import { FEEDBACK_DISPOSITIONS } from "./reviewFeedback";
 import { EvidenceContext } from "./EvidenceContext";
 import { evidenceContextKey, recordedEvidenceContext } from "./evidenceContext";
 import RetainedPanel from "./RetainedPanel";
@@ -1735,6 +1738,18 @@ export default function App() {
                     />
                   </>
                 )}
+                <RetainedPanel
+                  key={sourceContext + ":original-comparison"}
+                  active={section === "pbc"}
+                >
+                  <details>
+                    <summary>Compare retained originals side by side</summary>
+                    <OriginalComparison
+                      engagement={e}
+                      viewerId={bootstrap.viewer.id}
+                    />
+                  </details>
+                </RetainedPanel>
                 {section === "meetings" && (
                   <>
                     <div className="actions">
@@ -3211,29 +3226,34 @@ export default function App() {
                   </section>
                 )}
               {detail.kind === "review" && (
-                <button
-                  onClick={() => {
-                    const r = detail.row;
+                <ReviewFeedback
+                  engagement={e}
+                  review={detail.row}
+                  supported={supports(
+                    bootstrap.capabilities,
+                    "review_feedback",
+                  )}
+                  busy={busy}
+                  onRespond={(payload) => {
                     setDetail(null);
                     edit(
-                      "Respond to review",
+                      "Record review feedback",
                       "review.resolve",
                       [
                         select("disposition", "Your response", [
-                          "agree",
-                          "disagree",
-                          "correct",
-                          "missing_context",
-                          "human_review",
+                          ...FEEDBACK_DISPOSITIONS,
                         ]),
-                        f("response", "Correction and evidence", "textarea"),
+                        f(
+                          "response",
+                          "Response and supporting evidence",
+                          "textarea",
+                        ),
                       ],
-                      { review_id: r.id },
+                      payload,
+                      "This records your response against the current review and workpaper pins. It does not close the review or change the original suggestion.",
                     );
                   }}
-                >
-                  Agree, correct or appeal
-                </button>
+                />
               )}
               {detail.kind === "artifact" && (
                 <>

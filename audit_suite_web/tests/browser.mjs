@@ -1100,8 +1100,10 @@ try {
   // Newer shared version deliberately has no task link; the protected DTO keeps v1 only.
   e.workpapers.push({id:'WP-TASK-LINKED',title:'Neutral authored procedure work',versions:[{id:'TASK-WPV1',version:1,task_ids:['T-01'],evidence_ids:[],text:'Historical explicitly linked version'},{id:'TASK-WPV2',version:2,task_ids:[],evidence_ids:[],text:'Newer unlinked version must not substitute'}]});
   await page.goto(`http://127.0.0.1:5193/?engagement=${e.id}&view=review`);
+  await page.getByRole('region',{name:'Authored issue index',exact:true}).getByRole('button').first().click();
+  await page.getByRole('region',{name:'Selected authored issue',exact:true}).getByText('E1',{exact:true}).click();
   await page.getByLabel('Find bound source',{exact:true}).fill('neutral:NATIVE_SYS');
-  await page.getByText('1 of 1 bound sources match.',{exact:false}).waitFor();
+  await page.getByText('1 of 1 originals match this scope and search',{exact:false}).waitFor();
   await page.getByRole('button',{name:'BOUND-S1 · NATIVE_RECORD · v3',exact:true}).click();
   const boundSource=page.getByRole('article',{name:'Selected bound source',exact:true});
   await boundSource.getByText('neutral-original-store',{exact:true}).waitFor();await boundSource.getByText('neutral:NATIVE_SYS',{exact:true}).waitFor();await boundSource.getByText('2'.repeat(64),{exact:true}).waitFor();await boundSource.getByText(/NEUTRAL_COMPANY \/ NEUTRAL_BRANCH \/ NATIVE_SYS/).waitFor();await boundSource.getByText(/no shared transaction across the portfolio/).waitFor();
