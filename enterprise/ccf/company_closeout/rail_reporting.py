@@ -7,6 +7,8 @@ from datetime import date, timedelta
 from decimal import Decimal as D
 from pathlib import Path
 
+from .rail_authority import threshold_on
+
 SOURCE = Path(__file__).with_name("rail_reporting_successor.json")
 
 
@@ -29,7 +31,7 @@ def validate(data):
             raise ValueError("Claim/repair decomposition changed original total")
         day = date.fromisoformat(s["date"])
         groups = []
-        threshold = data["thresholds"].get(str(day.year), {}).get("usd")
+        threshold = threshold_on(day, data)
         if row["crossing"]:
             groups.append("I")
         if threshold is not None and D(row["repair_cost_usd"]) > threshold:
@@ -71,7 +73,7 @@ def validate(data):
         "states": dict(Counter(r["filing_state"] for r in data["cases"])),
         "incident_form_records": sum(len(r["groups"]) for r in data["cases"]),
         "open_liability_claims": 1,
-        "scope": "SELECTED_CASES; EVENT_DAY_AUTHORITY_RESIDUAL_RETAINED",
+        "scope": "SELECTED_CASES; EVENT_DAY_AUTHORITY_RECONCILED_SEE_RAIL_AUTHORITY_REVIEW",
     }
 
 

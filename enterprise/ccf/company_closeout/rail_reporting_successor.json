@@ -1,6 +1,6 @@
 {
   "document_id": "SH-C05-RAIL-REPORTING-SUCCESSOR-20260915",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "acceptance_state": "PENDING_REPOSITORY_ACCEPTANCE",
   "authored_on": "2026-09-15",
   "available_on": "2026-09-15",
@@ -14,7 +14,7 @@
       "url": "https://www.govinfo.gov/content/pkg/CFR-2014-title49-vol4/pdf/CFR-2014-title49-vol4-sec225-19.pdf",
       "accessed_on": "2026-09-15",
       "sha256": "c15ec484d543ed3242ce8a8b4a24e439126d06ac4fe2f6c12b9918c54bfc31cb",
-      "review": "Primary annual-edition text retrieved and reporting group criteria read; intrayear amendment check remains required for event-date conclusion."
+      "review": "Primary annual edition read; event-dayamendments now reconciled inrail_authority_review.json."
     },
     {
       "id": "FRA-22519-2016",
@@ -23,7 +23,7 @@
       "url": "https://www.govinfo.gov/content/pkg/CFR-2016-title49-vol4/pdf/CFR-2016-title49-vol4-sec225-19.pdf",
       "accessed_on": "2026-09-15",
       "sha256": "71c128f2bf4b2d330fe358499702f86ce67d6ed0bc32aeb2826dcf546c9f3a36",
-      "review": "Primary annual-edition text retrieved and reporting group criteria read; intrayear amendment check remains required for event-date conclusion."
+      "review": "Primary annual edition read; event-dayamendments now reconciled inrail_authority_review.json."
     },
     {
       "id": "FRA-22519-2018",
@@ -32,7 +32,7 @@
       "url": "https://www.govinfo.gov/content/pkg/CFR-2018-title49-vol4/pdf/CFR-2018-title49-vol4-sec225-19.pdf",
       "accessed_on": "2026-09-15",
       "sha256": "123ff9c2323c2b9c3cf736aa173b08aeec2f6314a1919fb3519ac2cba214200c",
-      "review": "Primary annual-edition text retrieved and reporting group criteria read; intrayear amendment check remains required for event-date conclusion."
+      "review": "Primary annual edition read; event-dayamendments now reconciled inrail_authority_review.json."
     },
     {
       "id": "FRA-22519-2019",
@@ -41,7 +41,7 @@
       "url": "https://www.govinfo.gov/content/pkg/CFR-2019-title49-vol4/pdf/CFR-2019-title49-vol4-sec225-19.pdf",
       "accessed_on": "2026-09-15",
       "sha256": "e792dad55c4604cad68e7418bdf3f1cbac8e0fc1712e3c75e001283a3653af26",
-      "review": "Primary annual-edition text retrieved and reporting group criteria read; intrayear amendment check remains required for event-date conclusion."
+      "review": "Primary annual edition read; event-dayamendments now reconciled inrail_authority_review.json."
     },
     {
       "id": "FRA-22519-2020",
@@ -50,7 +50,7 @@
       "url": "https://www.govinfo.gov/content/pkg/CFR-2020-title49-vol4/pdf/CFR-2020-title49-vol4-sec225-19.pdf",
       "accessed_on": "2026-09-15",
       "sha256": "6f5f4bf92faffb0067ef53084f32cccd18db567b19eb6803036fbf684b6dd7d5",
-      "review": "Primary annual-edition text retrieved and reporting group criteria read; intrayear amendment check remains required for event-date conclusion."
+      "review": "Primary annual edition read; event-dayamendments now reconciled inrail_authority_review.json."
     },
     {
       "id": "FRA-22519-2021",
@@ -59,7 +59,7 @@
       "url": "https://www.govinfo.gov/content/pkg/CFR-2021-title49-vol4/pdf/CFR-2021-title49-vol4-sec225-19.pdf",
       "accessed_on": "2026-09-15",
       "sha256": "e204e67c8e9e9f9b0a4420952beeaed08863b410c1996f871e4ff86960c2d6d5",
-      "review": "Primary annual-edition text retrieved and reporting group criteria read; intrayear amendment check remains required for event-date conclusion."
+      "review": "Primary annual edition read; event-dayamendments now reconciled inrail_authority_review.json."
     },
     {
       "id": "FRA-22519-2022",
@@ -68,7 +68,7 @@
       "url": "https://www.govinfo.gov/content/pkg/CFR-2022-title49-vol4/pdf/CFR-2022-title49-vol4-sec225-19.pdf",
       "accessed_on": "2026-09-15",
       "sha256": "29da96ba1d7c28f1c24e4b5acb46a6c8953f2c26bd54c76655936eaa0ca358ad",
-      "review": "Primary annual-edition text retrieved and reporting group criteria read; intrayear amendment check remains required for event-date conclusion."
+      "review": "Primary annual edition read; event-dayamendments now reconciled inrail_authority_review.json."
     },
     {
       "id": "FRA-22519-2023",
@@ -77,7 +77,7 @@
       "url": "https://www.govinfo.gov/content/pkg/CFR-2023-title49-vol4/pdf/CFR-2023-title49-vol4-sec225-19.pdf",
       "accessed_on": "2026-09-15",
       "sha256": "d9a02611a7a6ed4b2882b240d5a904bca8336c952ad72a5fb8035dc262a93a1b",
-      "review": "Primary annual-edition text retrieved and reporting group criteria read; intrayear amendment check remains required for event-date conclusion."
+      "review": "Primary annual edition read; event-dayamendments now reconciled inrail_authority_review.json."
     },
     {
       "id": "FRA-22519-2024",
@@ -86,7 +86,7 @@
       "url": "https://www.govinfo.gov/content/pkg/CFR-2024-title49-vol4/pdf/CFR-2024-title49-vol4-sec225-19.pdf",
       "accessed_on": "2026-09-15",
       "sha256": "6a30cd05f46f6bfbb378021081d7af69aceec846615f48995f6b6696e5acf0ee",
-      "review": "Primary annual-edition text retrieved and reporting group criteria read; intrayear amendment check remains required for event-date conclusion."
+      "review": "Primary annual edition read; event-dayamendments now reconciled inrail_authority_review.json."
     },
     {
       "id": "FRA-22519-2025",
@@ -95,7 +95,7 @@
       "url": "https://www.govinfo.gov/content/pkg/CFR-2025-title49-vol4/pdf/CFR-2025-title49-vol4-sec225-19.pdf",
       "accessed_on": "2026-09-15",
       "sha256": "71aad10066d86c7a83fd0924fb14e579fb392d88b07f687c04c8073c4697a062",
-      "review": "Primary annual-edition text retrieved and reporting group criteria read; intrayear amendment check remains required for event-date conclusion."
+      "review": "Primary annual edition read; event-dayamendments now reconciled inrail_authority_review.json."
     },
     {
       "id": "FRA-THRESHOLD-2018",
@@ -113,13 +113,13 @@
       "id": "FRA-THRESHOLD-2026",
       "url": "https://railroads.dot.gov/safety-data/forms-guides-publications/guides/monetary-threshold-notice",
       "accessed_on": "2026-09-15",
-      "review": "2026 threshold $12,600 and $200 increase over 2025 imply $12,400 for 2025. Explicit inference; original 2025 notice not separately recovered."
+      "review": "2026threshold12600 retained primaryconfirmation; original2025notice now recovered separately, replacing needforbackward inference."
     },
     {
       "id": "DOT-HISTORIC-THRESHOLD",
       "url": "https://downloads.regulations.gov/PHMSA-2016-0015-0057/attachment_1.pdf",
       "accessed_on": "2026-09-15",
-      "review": "US DOT research table 5 records 2021 $11,200 and 2023 $11,500. Original annual notices remain a source-review residual."
+      "review": "HistoricalprimaryDOTtable confirms2021/2023; originalannualnotices now recovered separately."
     },
     {
       "id": "FRA-MONTHLY-DUE",
@@ -138,9 +138,33 @@
       "url": "https://www.epa.gov/emergency-response/when-are-you-required-report-oil-spill-and-hazardous-substance-release",
       "accessed_on": "2026-09-15",
       "review": "Federal petroleum water-sheen reporting is not a generic gallon threshold. State/local duties remain independent."
+    },
+    {
+      "id": "FRA-ORIGINAL-NOTICE-2021",
+      "url": "https://web.archive.org/web/20210612233940id_/https://railroads.dot.gov/forms-guides-publications/guides/monetary-threshold-notice",
+      "original_url": "https://railroads.dot.gov/forms-guides-publications/guides/monetary-threshold-notice",
+      "accessed_on": "2026-09-15",
+      "sha256": "cc20f42f8d8ef0b05962cf76a53cb4cc2fd995fc37e359a1deaa6e3eefc2d6e3",
+      "review": "Recoveredprimarynotice; see publisher/effective/capturedates inrail_authority_review.json."
+    },
+    {
+      "id": "FRA-ORIGINAL-NOTICE-2023",
+      "url": "https://web.archive.org/web/20231002151607id_/https://railroads.dot.gov/safety-data/forms-guides-publications/guides/monetary-threshold-notice",
+      "original_url": "https://railroads.dot.gov/safety-data/forms-guides-publications/guides/monetary-threshold-notice",
+      "accessed_on": "2026-09-15",
+      "sha256": "55b9b3c8ed36c4276980348c3c4f2a11898957cb11c21d8f86142f34ad53b47e",
+      "review": "Recoveredprimarynotice; see publisher/effective/capturedates inrail_authority_review.json."
+    },
+    {
+      "id": "FRA-ORIGINAL-NOTICE-2025",
+      "url": "https://web.archive.org/web/20251116171657id_/https://railroads.dot.gov/safety-data/forms-guides-publications/guides/monetary-threshold-notice",
+      "original_url": "https://railroads.dot.gov/safety-data/forms-guides-publications/guides/monetary-threshold-notice",
+      "accessed_on": "2026-09-15",
+      "sha256": "251cc4bca8a3854ca9a122cf35be98c5de071c900ec36497d559bb420c5e0bcd",
+      "review": "Recoveredprimarynotice; see publisher/effective/capturedates inrail_authority_review.json."
     }
   ],
-  "event_year_authority_boundary": "Annual 225.19 editions retained with exact hashes. The 2018 threshold and 2020 method rules were read. Current 225.9/225.11 source notes identify last amendments in 2010, before all cases. Historical eCFR date pages failed and API returned 406; precise event-day amendment reconciliation remains a qualified legal-review residual, separate from fictional performance. Apply reproduced annual criteria to expressly authored facts.",
+  "event_year_authority_boundary": "Original2021/2023/2025agency notices recovered; event-day225.9/.11/.19 amendment andeffective-date review complete for14selectedevents. See rail_authority_review.json. No universal railwaycompliance claim.",
   "thresholds": {
     "2014": {
       "usd": 10500,
@@ -152,15 +176,17 @@
     },
     "2021": {
       "usd": 11200,
-      "source": "US DOT Cost of Delay from HAZMAT Rail Incidents table5; original annualFRA notice not recovered in this session"
+      "source": "FRA-ORIGINAL-NOTICE-2021; recoveredprimarypublisherHTML",
+      "effective_from": "2021-01-08",
+      "prior_usd": 10700
     },
     "2023": {
       "usd": 11500,
-      "source": "US DOT Cost of Delay from HAZMAT Rail Incidents table5; no above-threshold determination needed for authored$6000repair"
+      "source": "FRA-ORIGINAL-NOTICE-2023; recoveredprimarypublisherHTML"
     },
     "2025": {
       "usd": 12400,
-      "source": "Inference from FRA2026 officialnotice$12600 and$200increase overpreviousyear; original2025 notice not separately recovered"
+      "source": "FRA-ORIGINAL-NOTICE-2025; recoveredprimarypublisherHTML"
     }
   },
   "cases": [

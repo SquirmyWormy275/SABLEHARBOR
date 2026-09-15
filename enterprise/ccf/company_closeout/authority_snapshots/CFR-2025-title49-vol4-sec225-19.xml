@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="cfr.xsl"?>
+<CFRGRANULE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="CFRMergedXML.xsd">
+    <FDSYS>
+        <CFRTITLE>49</CFRTITLE>
+        <CFRTITLETEXT>Transportation</CFRTITLETEXT>
+        <VOL>4</VOL>
+        <DATE>2025-10-01</DATE>
+        <COVERONLY>false</COVERONLY>
+        <ORIGINALDATE>2025-10-01</ORIGINALDATE>
+        <TITLE>Editorial Note:</TITLE>
+        <ANCESTORS>
+            <PARENT HEADING="Title 49" SEQ="3">Transportation</PARENT>
+            <PARENT HEADING="Subtitle B" SEQ="2">Other Regulations Relating to Transportation (Continued)</PARENT>
+            <PARENT HEADING="CHAPTER II" SEQ="1">FEDERAL RAILROAD ADMINISTRATION, DEPARTMENT OF TRANSPORTATION</PARENT>
+            <PARENT HEADING="PART 225" SEQ="0">RAILROAD ACCIDENTS/INCIDENTS: REPORTS CLASSIFICATION, AND INVESTIGATIONS</PARENT>
+        </ANCESTORS>
+    </FDSYS>
+    <SECTION>
+        <PRTPAGE P="423"/>
+        <SECTNO>§ 225.19</SECTNO>
+        <SUBJECT>Primary groups of accidents/incidents.</SUBJECT>
+        <P>(a) For reporting purposes reportable railroad accidents/incidents are divided into three groups:</P>
+        <EXTRACT>
+            <FP SOURCE="FP-1">Group I—Highway-Rail Grade Crossing;</FP>
+            <FP SOURCE="FP-1">Group II—Rail Equipment;</FP>
+            <FP SOURCE="FP-1">Group III—Death, Injury and Occupational Illness.</FP>
+        </EXTRACT>
+        <P>
+            (b) 
+            <E T="03">Group I—Highway-rail grade crossing.</E>
+             Each highway-rail grade crossing accident/incident must be reported to the FRA on Form FRA F 6180.57, regardless of the extent of damages or whether a casualty occurred. In addition, whenever a highway-rail grade crossing accident/incident results in damages greater than the current reporting threshold to railroad on-track equipment, signals, track, track structures, or roadbed, that accident/incident shall be reported to the FRA on Form FRA F 6180.54. For reporting purposes, damages include labor costs and all other costs to repair or replace in kind damaged on-track equipment, signals, track, track structures, or roadbed, but do not include the cost of clearing a wreck.
+        </P>
+        <P>
+            (c) 
+            <E T="03">Group II—Rail equipment.</E>
+             Rail equipment accidents/incidents are collisions, derailments, fires, explosions, acts of God, and other events involving the operation of on-track equipment (standing or moving) that result in damages higher than the current reporting threshold to railroad on-track equipment, signals, tracks, track structures, or roadbed, including labor costs and costs for acquiring new equipment and material.
+        </P>
+        <P>
+            (d) 
+            <E T="03">Group III—Death, injury, or occupational illness.</E>
+             Each death, injury, or occupational illness that is a new case and meets the general reporting criteria listed in paragraphs (d)(1) through (6) of this section shall be reported to FRA on Form FRA F 6180.55a, “Railroad Injury and Illness Summary (Continuation Sheet)” if an event or exposure arising from the operation of a railroad is a discernable cause of the resulting condition or a discernable cause of a significant aggravation to a pre-existing injury or illness. The event or exposure arising from the operation of a railroad need only be one of the discernable causes; it need not be the sole or predominant cause. The general injury/illness reporting criteria are as follows:
+        </P>
+        <P>(1) Death to any person;</P>
+        <P>(2) Injury to any person that results in:</P>
+        <P>(i) Medical treatment;</P>
+        <P>(ii) Significant injury diagnosed by a physician or other licensed health care professional even if it does not result in death, medical treatment or loss of consciousness of any person; or</P>
+        <P>(iii) Loss of consciousness;</P>
+        <P>(3) Injury to a railroad employee that results in:</P>
+        <P>(i) A day away from work;</P>
+        <P>(ii) Restricted work activity or job transfer; or</P>
+        <P>(iii) Significant injury diagnosed by a physician or other licensed health care professional even if it does not result in death, medical treatment, loss of consciousness, a day away from work, restricted work activity or job transfer of a railroad employee;</P>
+        <P>(4) Occupational illness of a railroad employee that results in:</P>
+        <P>(i) A day away from work;</P>
+        <P>(ii) Restricted work activity or job transfer;</P>
+        <P>(iii) Loss of consciousness; or</P>
+        <P>(iv) Medical treatment;</P>
+        <P>(5) Significant illness of a railroad employee diagnosed by a physician or other licensed health care professional even if it does not result in death, a day away from work, restricted work activity or job transfer, medical treatment, or loss of consciousness;</P>
+        <P>(6) Illness or injury that:</P>
+        <P>(i) Meets the application of any of the following specific case criteria:</P>
+        <P>(A) Needlestick or sharps injury to a railroad employee;</P>
+        <P>(B) Medical removal of a railroad employee;</P>
+        <P>(C) Occupational hearing loss of a railroad employee;</P>
+        <P>(D) Occupational tuberculosis of a railroad employee;</P>
+        <P>(E) Musculoskeletal disorder of a railroad employee if this disorder is reportable under one or more of the general reporting criteria; or</P>
+        <P>(ii) Is a covered data case.</P>
+        <P>
+            (e) 
+            <E T="03">Notice.</E>
+             No later than November 30 of each year, the Administrator will publish a notice on FRA's website announcing the reporting threshold that 
+            <PRTPAGE P="424"/>
+            will take effect on January 1 of the following calendar year.
+        </P>
+        <CITA>[39 FR 43224, Dec. 11, 1974]</CITA>
+        <EDNOTE>
+            <HD SOURCE="HED">Editorial Note:</HD>
+            <P>
+                For 
+                <E T="04">Federal Register</E>
+                 citations affecting § 225.19, see the List of CFR Sections Affected, which appears in the Finding Aids section of the printed volume and at 
+                <E T="03">www.govinfo.gov.</E>
+            </P>
+        </EDNOTE>
+    </SECTION>
+</CFRGRANULE>
