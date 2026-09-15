@@ -6,7 +6,7 @@ Generated reconciliation queue, not an assertion that every unpaired record lack
 
 | State | Records |
 |---|---:|
-| COUNTERPART_REVIEW_REQUIRED | 123 |
+| COUNTERPART_REVIEW_REQUIRED | 125 |
 | HISTORICAL_COUNTERPART_UNRESOLVED | 57 |
 | NAVIGATION_ALIAS_NO_PUBLICATION | 3 |
 | READER_MAINTENANCE_NO_LETTERHEAD | 106 |
@@ -34,6 +34,7 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Identity period slice and remaining coverage](../../internal/development/audit-suite/AQ04_IDENTITY_PERIOD_SLICE_2026-09-14.md) — Corporate document-format reconciliation
 - [Incident and continuity activity slice](../../internal/development/audit-suite/AQ04_INCIDENT_CONTINUITY_SLICE_2026-09-14.md) — Corporate document-format reconciliation
 - [Bounded mover source collection](../../internal/development/audit-suite/AQ04_MOVER_SOURCE_COLLECTION_2026-09-14.md) — Corporate document-format reconciliation
+- [Explicit producer metadata capture](../../internal/development/audit-suite/AQ_EXPLICIT_PRODUCER_METADATA_CAPTURE_2026-09-14.md) — Corporate document-format reconciliation
 - [Optional IAM007 native review reconciliation](../../internal/development/audit-suite/AQ_IAM_NATIVE_REVIEW_RECONCILIATION_2026-09-14.md) — Corporate document-format reconciliation
 - [Exact selected-source prerequisite for linked activity plans](../../internal/development/audit-suite/AQ_LINKED_ACTIVITY_SOURCE_RESOLVER_2026-09-14.md) — Corporate document-format reconciliation
 - [Next source-gap slice: non-human credential lifecycle](../../internal/development/audit-suite/AQ_NEXT_NONHUMAN_IDENTITY_SLICE_2026-09-14.md) — Corporate document-format reconciliation
@@ -136,6 +137,7 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Local change/release source slice](../../../tools/audit_suite/CHANGE_RELEASE_SOURCE_SLICE.md) — Corporate document-format reconciliation
 - [Existing-source linked activity plan V2](../../../tools/audit_suite/COMPANY_ACTIVITY_LINKED_PLAN.md) — Corporate document-format reconciliation
 - [Private ordered company activity plans](../../../tools/audit_suite/COMPANY_ACTIVITY_PLAN_RUNNER.md) — Corporate document-format reconciliation
+- [Selected producer routing V3](../../../tools/audit_suite/COMPANY_ACTIVITY_PRODUCER_PLAN.md) — Corporate document-format reconciliation
 - [Independent company activity runner](../../../tools/audit_suite/COMPANY_ACTIVITY_RUNNER.md) — Corporate document-format reconciliation
 - [Company source inventory](../../../tools/audit_suite/COMPANY_SOURCE_INVENTORY.md) — Corporate document-format reconciliation
 - [Configuration source extension](../../../tools/audit_suite/CONFIGURATION_SOURCE_SLICE.md) — Corporate document-format reconciliation

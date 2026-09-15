@@ -235,3 +235,38 @@ routing needs an explicit contract binding the newly completed producer manifest
 The selected metadata digest excludes imported_at and can match across reproductions;
 it is distinct from the full database/manifest pin. Neither execution ordering nor
 successful reproduction establishes a coherent company year.
+
+The [V3 producer plan](../../../../tools/audit_suite/COMPANY_ACTIVITY_PRODUCER_PLAN.md)
+now joins native producers and consumers in one ordered run. Selected consumers
+retain caller-specified record/version/content hashes and explicitly opt into one
+metadata capture after verified producer completion. Resolved recipes and metadata
+are frozen for every later check. A separate whole-change mode reuses the V1
+configuration/logging snapshot contract and native event/checkpoint timing rules.
+The selected metadata includes origin/provenance but excludes imported_at; a changed
+source revision can change that metadata while the native payload stays identical.
+V1 and V2 retain their original contracts.
+
+A comprehensive actual CLI run completed eleven activities and eight source edges,
+producing 381 native versions across 174 paired branch/system registrations.
+Independent checks verified every native content hash, run/job manifest member,
+resolved recipe and unchanged historical recipe source. Initial output remains at
+`linked-activity-workflow-2026-09-14/comprehensive-v3-run-v1/`. An explicit successor
+aligns the lifecycle sponsor references to year-messy for reference-b: exact HR and
+directory payloads remain the same, while the original application version retains
+its additional right. The earlier clean-branch selection is preserved in the first
+run. No source field or historical record was rewritten to hide that difference.
+
+The successor `reference-b-v3-run-v2/` again completed all eleven jobs and 381
+versions, with zero grants or collections. Its independent read-only verifier
+recomputed all six selected-group metadata hashes and checked their intended
+reference-b branches, alongside the two whole-change edges. The receipt is
+`REFERENCE_B_V3_VALIDATION_V2.json`; the exact recipe adjustment is retained in
+`REFERENCE_B_ALIGNMENT_RECIPE_V1.json`. These are company activity outputs before
+an audit; they do not change the existing 559-original collected inventory. Paired
+unselected variants, enterprise-period sufficiency and a coherent full company
+year remain separate from this selected dependency alignment.
+
+The integrated V3/capture/V2/resolver/V1 checks passed 87 tests with no
+failures, errors or skips (`producer-plan-integrated-2026-09-14.xml`). Independent
+review separately passed 29 current V3/capture cases and Ruff. All prior run and
+validation receipts remain preserved.

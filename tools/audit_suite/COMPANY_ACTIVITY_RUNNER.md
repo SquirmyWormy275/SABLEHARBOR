@@ -96,3 +96,9 @@ For multiple jobs consuming exact existing operator outputs, use the
 [existing-source linked runner](COMPANY_ACTIVITY_LINKED_PLAN.md). It validates
 explicit selected references and source availability before creating the run;
 its separate V2 contract does not extend the V1 whole-change-store plan.
+
+For one ordered producer/consumer run, the
+[V3 producer plan](COMPANY_ACTIVITY_PRODUCER_PLAN.md) supports explicit selected
+metadata capture after a producer completes, plus the existing whole-change-store
+contract for configuration and logging. Caller-specified native content hashes
+remain mandatory for selected dependencies.
