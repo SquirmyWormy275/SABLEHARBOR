@@ -168,6 +168,8 @@ def build(allow_working_tree=False, *, company_closeout=False):
     if company_closeout:
         from enterprise.closeout.industrial_tax import IndustrialTax
         adjustment.industrial_tax = IndustrialTax(successor)
+        from enterprise.closeout.industrial_tax_future import FutureIndustrialTax
+        adjustment.future_industrial_tax = FutureIndustrialTax(successor)
         from enterprise.closeout.rwh_book import RwhBook
         adjustment.rwh_book = RwhBook(successor, fin, enterprise.load_anchor())
         successor = enterprise.build(output / "enterprise", forecast_result=fin, legacy_result=legacy,
@@ -185,6 +187,8 @@ def build(allow_working_tree=False, *, company_closeout=False):
         enterprise.write_csv(output / "rwh_historical_tax.csv", adjustment.rwh_book.history["rows"])
         enterprise.write_csv(output / "state_minimum_tax.csv", adjustment.state_minimum.rows)
         enterprise.write_csv(output / "industrial_sales_tax.csv", adjustment.industrial_tax.rows)
+        enterprise.write_csv(output / "industrial_future_sales_tax.csv", adjustment.future_industrial_tax.rows)
+        enterprise.write_csv(output / "industrial_future_contract_allocation.csv", adjustment.future_industrial_tax.allocation_rows)
         enterprise.write_csv(output / "parent_tax_provision.csv", tax.rows)
         enterprise.write_csv(output / "parent_tax_assets.csv", tax.asset_rows)
         enterprise.write_csv(output / "software_sales_tax.csv", adjustment.software_tax.rows)
@@ -207,6 +211,7 @@ def build(allow_working_tree=False, *, company_closeout=False):
         from enterprise.closeout.finance import verify
         check["company_closeout"] = verify(rows)
         check["industrial_sales_tax"] = adjustment.industrial_tax.verify(rows)
+        check["industrial_future_sales_tax"] = adjustment.future_industrial_tax.verify(rows)
         check["software_sales_tax"] = adjustment.software_tax.verify(rows)
     if company_closeout:
         from enterprise.closeout.statement_bridge import bridge as company_bridge

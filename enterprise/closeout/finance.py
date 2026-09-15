@@ -68,6 +68,7 @@ class CloseoutAdjustment(RuntimeAdjustment):
         self.rwh_book = None
         self.parent_tax = None
         self.industrial_tax = None
+        self.future_industrial_tax = None
         self.state_minimum = None
         self.software_tax = None
         self.legacy_equipment_correction = False
@@ -169,6 +170,8 @@ class CloseoutAdjustment(RuntimeAdjustment):
             self.rwh_book.post_month(books, year, month)
         if self.industrial_tax is not None:
             self.industrial_tax.post_month(books, year, month)
+        if self.future_industrial_tax is not None:
+            self.future_industrial_tax.post_month(books, year, month)
         if self.state_minimum is not None:
             self.state_minimum.post_month(books, year, month)
         if self.parent_tax is not None:
