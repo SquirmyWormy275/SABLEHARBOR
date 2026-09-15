@@ -9,7 +9,7 @@ from industrial.planning.enterprise import load_anchor
 def test_current_inventory_opening_activity_closing_and_scope():
     rows = current_inventory_bridge(load_anchor())
     assert len(rows) == 12
-    assert D(rows[7]["corrected_cash_inventory_usd"]) == D("8385238.1530")
+    assert D(rows[7]["corrected_cash_inventory_usd"]) == D("8693912.5497")
     assert D(rows[7]["corrected_dda_inventory_usd"]) == D("867149.3725")
     for previous, current in zip(rows[:-1], rows[1:], strict=True):
         assert previous["corrected_cash_inventory_usd"] == current["opening_cash_inventory_usd"]

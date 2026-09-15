@@ -5,6 +5,7 @@ from decimal import Decimal as D
 
 from enterprise.closeout.rwh_history import Q
 from enterprise.closeout.rwh_history import build as history
+from enterprise.closeout.support_inventory import step as support_step
 
 
 def current_inventory_bridge(anchor):
@@ -35,6 +36,9 @@ def current_inventory_bridge(anchor):
     cash_cogs = (cash + D("27950000") + D("2125000")) * D("500000") / D("672400") / 12
     dda_cogs = (dda + D("547400") * rate) * D("500000") / D("672400") / 12
     rows = []
+    support = D(0)
+    elimination = D(0)
+    units = D(125000)
     for month in range(1, 13):
         source = [r for r in anchor if r["entity"] == "RWH_PS" and int(r["month"]) == month]
         production = sum(
@@ -47,7 +51,13 @@ def current_inventory_bridge(anchor):
         )
         if production <= 0 or taxes <= 0:
             raise ValueError("Missing current mine production cost or tax population")
-        opening_cash, opening_dda = cash, dda
+        opening_cash, opening_dda = cash + support, dda
+        support_row = support_step(
+            support, elimination, source, 2026, month, units + D(547400) / 12, D(500000) / 12
+        )
+        support = support_row["closing_legal"]
+        elimination = support_row["closing_elimination"]
+        units += D(47400) / 12
         cash += production + taxes - cash_cogs
         dda += D("547400") / 12 * rate - dda_cogs
         rows.append(
@@ -56,9 +66,13 @@ def current_inventory_bridge(anchor):
                 month=month,
                 opening_cash_inventory_usd=str(opening_cash.quantize(Q)),
                 opening_dda_inventory_usd=str(opening_dda.quantize(Q)),
-                corrected_cash_inventory_usd=str(cash.quantize(Q)),
+                corrected_cash_inventory_usd=str((cash + support).quantize(Q)),
+                support_inventory_usd=str(support.quantize(Q)),
+                consolidated_service_cost_inventory_usd=str(elimination.quantize(Q)),
                 corrected_dda_inventory_usd=str(dda.quantize(Q)),
-                corrected_cash_cost_cogs_usd=str(cash_cogs.quantize(Q)),
+                corrected_cash_cost_cogs_usd=str(
+                    (cash_cogs + support_row["legal_cogs"]).quantize(Q)
+                ),
                 corrected_dda_cogs_usd=str(dda_cogs.quantize(Q)),
             )
         )
@@ -71,6 +85,7 @@ class RwhBook:
         self.history = h
         self.rows = []
         self.entries = {}
+        self.elimination_entries = {}
         self.open_cash = (
             D(h["source"]["book_normal_production_indirect_usd"])
             * D(h["ending_inventory_lb"])
@@ -105,6 +120,9 @@ class RwhBook:
         rate26 = (D(48000000) - self.open_accum) / D(7820000)
         rate27 = ((D(48000000) - self.open_accum) - D(547400) * rate26 + D(9000000)) / D(7272600)
         for scenario in ["base", "downside", "expansion"]:
+            support = D(0)
+            support_elim = D(0)
+            prior_support_elim = D(0)
             cash = D(5625000) + self.open_cash
             dda = D(687500) + self.open_dda
             units = D(125000)
@@ -158,12 +176,18 @@ class RwhBook:
                         available = units + produced
                         cash_cogs = (cash + production + taxes) * sold / available
                         dda_cogs = (dda + total_dda - legacy_dda + new_legacy) * sold / available
+                    support_row = support_step(
+                        support, support_elim, source, year, month, units + produced, sold
+                    )
+                    support = support_row["closing_legal"]
+                    support_elim = support_row["closing_elimination"]
                     cash += production + taxes - cash_cogs
                     dda += total_dda - legacy_dda + new_legacy - dda_cogs
                     if year == 2026:
                         if (
                             abs(
-                                cash.quantize(Q) - D(current[month]["corrected_cash_inventory_usd"])
+                                (cash + support).quantize(Q)
+                                - D(current[month]["corrected_cash_inventory_usd"])
                             )
                             > Q
                             or abs(
@@ -174,7 +198,9 @@ class RwhBook:
                             raise ValueError("Current carrying helper differs from full provider")
                     units += produced - sold
                     new_accum_delta += new_legacy - legacy_dda
-                    cash_delta = cash.quantize(Q) - old_close[scenario, year, month, "1200"]
+                    cash_delta = (cash + support).quantize(Q) - old_close[
+                        scenario, year, month, "1200"
+                    ]
                     dda_delta = dda.quantize(Q) - old_close[scenario, year, month, "1210"]
                     accum_delta = new_accum_delta.quantize(Q)
                     dc = cash_delta - prior_cash_delta
@@ -182,11 +208,15 @@ class RwhBook:
                     dep = accum_delta - prior_accum_delta
                     self.entries[k] = [
                         ("1200", dc),
-                        ("5100", -dc),
+                        ("5100", -dc + support_row["fee_production_cost"].quantize(Q)),
+                        ("5150", -support_row["fee_production_cost"].quantize(Q)),
                         ("1210", di),
                         ("5300", dep - di),
                         ("1490", -dep),
                     ]
+                    elim_delta = support_elim.quantize(Q) - prior_support_elim
+                    self.elimination_entries[k] = [("1200", elim_delta), ("5100", -elim_delta)]
+                    prior_support_elim = support_elim.quantize(Q)
                     self.rows.append(
                         dict(
                             scenario=scenario,
@@ -198,9 +228,19 @@ class RwhBook:
                             ending_inventory_lb=str(units),
                             production_cash_cost_usd=str(production),
                             production_mineral_tax_usd=str(taxes),
-                            corrected_cash_cost_cogs_usd=str(cash_cogs.quantize(Q)),
+                            corrected_cash_cost_cogs_usd=str(
+                                (cash_cogs + support_row["legal_cogs"]).quantize(Q)
+                            ),
                             corrected_dda_cogs_usd=str(dda_cogs.quantize(Q)),
-                            corrected_cash_inventory_usd=str(cash.quantize(Q)),
+                            corrected_cash_inventory_usd=str((cash + support).quantize(Q)),
+                            support_inventory_usd=str(support.quantize(Q)),
+                            group_support_production_cost_usd=str(
+                                support_row["group_production_cost"].quantize(Q)
+                            ),
+                            legal_support_production_cost_usd=str(
+                                support_row["legal_production_cost"].quantize(Q)
+                            ),
+                            consolidated_service_cost_inventory_usd=str(support_elim.quantize(Q)),
                             corrected_dda_inventory_usd=str(dda.quantize(Q)),
                             accumulated_ppe_correction_usd=str(accum_delta),
                             cash_flow_change_usd="0",
@@ -239,5 +279,14 @@ class RwhBook:
             self.entries[books.scenario, year, month],
             sid,
             "Normal production mineral tax absorbed into inventory; corrected source productiveestate DDA and carryforwards",
+            kind="COMPANY_MINE_BOOK_CORRECTION",
+        )
+        books.post(
+            "ELIM",
+            year,
+            month,
+            self.elimination_entries[books.scenario, year, month],
+            f"CO-RWH-BOOK-SERVICE-{year}-{month}",
+            "Replace production fee embedded in inventory with platform provider cost; no new fee or cash",
             kind="COMPANY_MINE_BOOK_CORRECTION",
         )
