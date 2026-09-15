@@ -205,3 +205,33 @@ paths containing `..` now fail before recipe reads or staging inside an original
 source directory. Five regressions preserve source bytes and directory timestamps;
 all 72 focused operator, plan and risk checks passed after the fix. Multi-root
 containment already rejected this case.
+
+The [existing-source linked runner](../../../../tools/audit_suite/COMPANY_ACTIVITY_LINKED_PLAN.md)
+adds explicit multi-source routing for lifecycle, non-human identity and risk recipes.
+Its [selected-source resolver](AQ_LINKED_ACTIVITY_SOURCE_RESOLVER_2026-09-14.md)
+checks original operator manifests, exact native versions/content/metadata and event
+availability before the declared consumer cutoff. Earlier external inputs and
+completed outputs are rechecked after later jobs. Failed published outputs remain
+identified and, when safely readable, their manifest bytes remain pinned without
+becoming accepted dependencies. Review fixed alternate path spellings, changing
+plan reads, omitted failed-output inventory and late changes to prior inputs.
+
+The reviewed linked-runner/resolver/V1 compatibility integration passed
+58 tests without failures, errors or skips
+(`linked-plan-reviewed-integration-2026-09-14.xml`). An actual trusted CLI run under
+`linked-activity-workflow-2026-09-14/run-v1/` completed two consumers: 24 lifecycle
+and 35 non-human identity originals. All run/job manifest members and original
+producer members were independently verified. It used fresh operator reproductions
+of the prior identity-period and backup recipes, with distinct operator manifests
+and explicitly verified selected metadata; historical originals, previous recipes and audits were unchanged.
+`VALIDATION_V1.json` preserves the receipt. No audit, grant, collection or model call
+was created, and these uncollected copies do not change the maintained 559-original
+inventory.
+
+This V2 contract requires existing preserved operator outputs. It does not accept
+legacy direct-generator directories or source-job references to future outputs;
+configuration/logging whole-store dependencies remain in V1. Native producer-output
+routing needs an explicit contract binding the newly completed producer manifest.
+The selected metadata digest excludes imported_at and can match across reproductions;
+it is distinct from the full database/manifest pin. Neither execution ordering nor
+successful reproduction establishes a coherent company year.

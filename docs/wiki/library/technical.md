@@ -107,6 +107,7 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Incident and continuity activity slice](../../internal/development/audit-suite/AQ04_INCIDENT_CONTINUITY_SLICE_2026-09-14.md) — MD
 - [Bounded mover source collection](../../internal/development/audit-suite/AQ04_MOVER_SOURCE_COLLECTION_2026-09-14.md) — MD
 - [Optional IAM007 native review reconciliation](../../internal/development/audit-suite/AQ_IAM_NATIVE_REVIEW_RECONCILIATION_2026-09-14.md) — MD
+- [Exact selected-source prerequisite for linked activity plans](../../internal/development/audit-suite/AQ_LINKED_ACTIVITY_SOURCE_RESOLVER_2026-09-14.md) — MD
 - [Next source-gap slice: non-human credential lifecycle](../../internal/development/audit-suite/AQ_NEXT_NONHUMAN_IDENTITY_SLICE_2026-09-14.md) — MD
 - [Planned-provider intake and review-queue exercise](../../internal/development/audit-suite/AQ_PLANNED_PROVIDER_INTAKE_SLICE_2026-09-14.md) — MD
 - [SEC-002 local security-log collection exercise](../../internal/development/audit-suite/AQ_SECURITY_LOG_COLLECTION_SLICE_2026-09-14.md) — MD
@@ -183,6 +184,7 @@ Generated file inventory. Includes current and historical records; open the sour
 ## `tools/audit_suite`
 
 - [Local change/release source slice](../../../tools/audit_suite/CHANGE_RELEASE_SOURCE_SLICE.md) — MD
+- [Existing-source linked activity plan V2](../../../tools/audit_suite/COMPANY_ACTIVITY_LINKED_PLAN.md) — MD
 - [Private ordered company activity plans](../../../tools/audit_suite/COMPANY_ACTIVITY_PLAN_RUNNER.md) — MD
 - [Independent company activity runner](../../../tools/audit_suite/COMPANY_ACTIVITY_RUNNER.md) — MD
 - [Company source inventory](../../../tools/audit_suite/COMPANY_SOURCE_INVENTORY.md) — MD

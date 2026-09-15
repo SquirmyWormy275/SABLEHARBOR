@@ -91,3 +91,8 @@ The focused operator tests exercise a real paired source generation, exact recip
 retention, private files, rejection of existing/public/aliased inputs, and cleanup
 following an injected partial-generation failure. Generator-specific chronology,
 causality and canonical-boundary checks remain in their own test suites.
+
+For multiple jobs consuming exact existing operator outputs, use the
+[existing-source linked runner](COMPANY_ACTIVITY_LINKED_PLAN.md). It validates
+explicit selected references and source availability before creating the run;
+its separate V2 contract does not extend the V1 whole-change-store plan.
