@@ -539,7 +539,7 @@
       "gate": "existing_authority",
       "execution_policy": "READY requires completed dependencies. Shared schemas, dependencies and catalog changes belong to the integrator. Keep populated sources, migration manifests and audit records in excluded private storage. No remote publication or deployment under this addition.",
       "execution_authorized": true,
-      "evidence": "Maintained explicit-config inventory verified all 457 source/retained originals and 690 historical states/events at reference-v3 revision 689:367 documentary and90 qualified activity originals, explicit activity references for10 of70 controls. Later source families require separately selected inventory. One-system census distinguishes latest/all versions and undated strata, preserving exact originals/query/manifest before explicit provisional import. Business population completeness, procedure sufficiency and professional acceptance remain unassessed."
+      "evidence": "Maintained explicit-config inventory verifies 478 unique source versions and 482 retained copies across eight qualified components and three explicitly selected audits; four duplicates are exact identity census copies. The 367 documentary and 111 activity originals have explicit activity references for 17 of 70 controls; 53 lack such references in this selection. Reference-v3 census collection/import is PROVISIONAL at revision 691, source/manifest/history hashes verified and testing states unchanged. Completeness, a coherent period, procedure sufficiency and professional acceptance remain unassessed."
     },
     {
       "id": "AQ-07",

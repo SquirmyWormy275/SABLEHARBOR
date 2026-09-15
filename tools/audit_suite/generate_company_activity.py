@@ -20,6 +20,10 @@ from enterprise.audit_suite.company_change_activity import generate_pair as gene
 from enterprise.audit_suite.company_configuration_activity import ConfigurationRecipe
 from enterprise.audit_suite.company_configuration_activity import generate as generate_configuration
 from enterprise.audit_suite.company_incident_activity import IncidentRecipe, generate_incident
+from enterprise.audit_suite.company_security_logging_activity import LoggingRecipe
+from enterprise.audit_suite.company_security_logging_activity import (
+    generate_pair as generate_logging_pair,
+)
 from enterprise.audit_suite.company_store import CompanyStore, CompanyStoreError
 from enterprise.audit_suite.company_training_activity import (
     TrainingCourse,
@@ -39,7 +43,9 @@ KINDS = {
     "training": (TrainingRecipe, generate_training_pair),
     "change": (ChangeRecipe, generate_change_pair),
     "configuration": (ConfigurationRecipe, generate_configuration),
+    "security-logging": (LoggingRecipe, generate_logging_pair),
 }
+SOURCE_KINDS = {"configuration", "security-logging"}
 MAX_RECIPE_BYTES = 64 * 1024
 
 
@@ -69,16 +75,16 @@ def run(kind, recipe_path, destination, *, repository, source_root=None):
     _private(destination.parent, True)
     if destination.exists() or destination.is_symlink():
         raise CompanyStoreError("New private activity destination required")
-    if kind == "configuration":
+    if kind in SOURCE_KINDS:
         if source_root is None:
-            raise CompanyStoreError("Configuration activity requires an explicit source root")
+            raise CompanyStoreError("This activity requires an explicit source root")
         source_root = Path(source_root).absolute()
         _private(source_root, True)
         _private(source_root / "company.sqlite3")
         if destination.is_relative_to(source_root):
             raise CompanyStoreError("Activity output must be outside its original source root")
     elif source_root is not None:
-        raise CompanyStoreError("Source root is supported only for configuration activity")
+        raise CompanyStoreError("Source root is supported only for source-dependent activity")
     if recipe_path.stat().st_size > MAX_RECIPE_BYTES:
         raise CompanyStoreError("Activity recipe exceeds bounded size")
     fd = os.open(recipe_path, os.O_RDONLY | os.O_NOFOLLOW)
@@ -124,12 +130,12 @@ def run(kind, recipe_path, destination, *, repository, source_root=None):
         raise CompanyStoreError("Invalid explicit activity recipe") from error
     with tempfile.TemporaryDirectory(prefix=".company-activity-", dir=destination.parent) as temp:
         stage = Path(temp)
-        if kind in {"training", "change", "configuration"}:
+        if kind in {"training", "change", *SOURCE_KINDS}:
             result = generate(
                 stage / "company",
                 repository=Path(repository),
                 recipe=recipe,
-                **({"source_root": source_root} if kind == "configuration" else {}),
+                **({"source_root": source_root} if kind in SOURCE_KINDS else {}),
             )
             store = CompanyStore(stage / "company")
         else:
@@ -167,7 +173,7 @@ def run(kind, recipe_path, destination, *, repository, source_root=None):
             "recipe_sha256": hashlib.sha256(raw).hexdigest(),
             "members": members,
         }
-        if kind == "configuration":
+        if kind in SOURCE_KINDS:
             manifest["source_input"] = {
                 "root": str(source_root),
                 "source_store_id": recipe.source_store_id,
@@ -185,7 +191,7 @@ def main(argv=None):
     parser.add_argument("--destination", type=Path, required=True)
     parser.add_argument("--repository", type=Path, default=Path(__file__).resolve().parents[2])
     parser.add_argument(
-        "--source-root", type=Path, help="Existing original change store; configuration only"
+        "--source-root", type=Path, help="Existing original change store for dependent activities"
     )
     args = parser.parse_args(argv)
     result = run(

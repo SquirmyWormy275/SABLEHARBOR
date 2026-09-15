@@ -106,6 +106,7 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Identity period slice and remaining coverage](../../internal/development/audit-suite/AQ04_IDENTITY_PERIOD_SLICE_2026-09-14.md) — MD
 - [Incident and continuity activity slice](../../internal/development/audit-suite/AQ04_INCIDENT_CONTINUITY_SLICE_2026-09-14.md) — MD
 - [Bounded mover source collection](../../internal/development/audit-suite/AQ04_MOVER_SOURCE_COLLECTION_2026-09-14.md) — MD
+- [SEC-002 local security-log collection exercise](../../internal/development/audit-suite/AQ_SECURITY_LOG_COLLECTION_SLICE_2026-09-14.md) — MD
 - [Read-through company source portfolio — September 14, 2026](../../internal/development/audit-suite/AQ_SOURCE_PORTFOLIO_READ_THROUGH_2026-09-14.md) — MD
 - [Explicit source-readiness inventory](../../internal/development/audit-suite/AQ_SOURCE_READINESS_INVENTORY_2026-09-14.md) — MD
 - [One-system source-record census](../../internal/development/audit-suite/AQ_SOURCE_RECORD_CENSUS_2026-09-14.md) — MD

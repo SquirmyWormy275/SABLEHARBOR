@@ -7,12 +7,16 @@ verifies 457 original source versions and retained copies across 115 systems:
 The documentary sources have unknown
 business event dates and provisional custody, not established operating history.
 
-The inspected independent company stores contain explicit native control references
-for ten scoped controls: IAM-003/IAM-007, INC-001 through INC-004,
-TRN-001/TRN-002 and BCM-002/BCM-003. This is a
-reference inventory, not an applicability or effectiveness determination. The other
-60 controls have no explicit independent-source control reference in these inspected
-stores. Existing sources elsewhere may still require reconciliation. The 1,015
+The later eight-component inventory explicitly adds one change branch and its
+dependent configuration branch, and selects their two existing collection audits.
+It verifies 478 unique source versions and 482 retained instances across three
+engagements; four extra retained instances are census copies of existing originals.
+Seventeen scoped controls have explicit activity references: IAM-003/IAM-007,
+INC-001 through INC-004, TRN-001/TRN-002, BCM-002/BCM-003,
+ENG-001/002/003/004/006 and CFG-001/002. This is a reference inventory, not an
+applicability or effectiveness determination. The other 53 controls have no explicit
+activity reference in this selection. Existing sources elsewhere may still require
+reconciliation. The 1,015
 OperatingModel versions remain unmapped company-source candidates; their month/model
 qualifications and lack of automatic corporate SOC 2/HIPAA applicability are preserved.
 Separate branches are not combined into a single company history.

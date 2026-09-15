@@ -6,7 +6,7 @@ Generated reconciliation queue, not an assertion that every unpaired record lack
 
 | State | Records |
 |---|---:|
-| COUNTERPART_REVIEW_REQUIRED | 109 |
+| COUNTERPART_REVIEW_REQUIRED | 110 |
 | HISTORICAL_COUNTERPART_UNRESOLVED | 57 |
 | NAVIGATION_ALIAS_NO_PUBLICATION | 3 |
 | READER_MAINTENANCE_NO_LETTERHEAD | 106 |
@@ -34,6 +34,7 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Identity period slice and remaining coverage](../../internal/development/audit-suite/AQ04_IDENTITY_PERIOD_SLICE_2026-09-14.md) — Corporate document-format reconciliation
 - [Incident and continuity activity slice](../../internal/development/audit-suite/AQ04_INCIDENT_CONTINUITY_SLICE_2026-09-14.md) — Corporate document-format reconciliation
 - [Bounded mover source collection](../../internal/development/audit-suite/AQ04_MOVER_SOURCE_COLLECTION_2026-09-14.md) — Corporate document-format reconciliation
+- [SEC-002 local security-log collection exercise](../../internal/development/audit-suite/AQ_SECURITY_LOG_COLLECTION_SLICE_2026-09-14.md) — Corporate document-format reconciliation
 - [Read-through company source portfolio — September 14, 2026](../../internal/development/audit-suite/AQ_SOURCE_PORTFOLIO_READ_THROUGH_2026-09-14.md) — Corporate document-format reconciliation
 - [Explicit source-readiness inventory](../../internal/development/audit-suite/AQ_SOURCE_READINESS_INVENTORY_2026-09-14.md) — Corporate document-format reconciliation
 - [One-system source-record census](../../internal/development/audit-suite/AQ_SOURCE_RECORD_CENSUS_2026-09-14.md) — Corporate document-format reconciliation

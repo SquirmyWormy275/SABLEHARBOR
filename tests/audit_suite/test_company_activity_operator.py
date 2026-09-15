@@ -169,10 +169,40 @@ def test_configuration_operator_reads_pinned_change_sources_without_mutation(tmp
     assert not (source_root / "nested-output").exists()
 
 
-def test_source_dependency_must_be_explicit_and_kind_specific(tmp_path):
+def test_logging_operator_verifies_original_dependency_and_private_output(tmp_path):
+    import hashlib
+
+    from tests.audit_suite.test_company_security_logging_activity import inputs
+
+    source_root, recipe_value = inputs.__wrapped__(tmp_path)
+    source = tmp_path / "logging-recipe.json"
+    source.write_text(json.dumps(asdict(recipe_value)))
+    source.chmod(0o600)
+    before = (source_root / "company.sqlite3").read_bytes()
+    output = tmp_path / "logging-output"
+    result = operator.run(
+        "security-logging", source, output, repository=ROOT, source_root=source_root
+    )
+    assert result["counts"] == {"systems": 20, "versions": 32, "grants": 0, "collections": 0}
+    assert result["source_input"]["source_versions_sha256"] == recipe_value.source_versions_sha256
+    assert (source_root / "company.sqlite3").read_bytes() == before
+    assert not list(output.rglob("engagements.sqlite3"))
+    for name, expected in result["members"].items():
+        assert hashlib.sha256((output / name).read_bytes()).hexdigest() == expected
+    assert all(not p.stat().st_mode & 0o077 for p in output.rglob("*"))
+    with pytest.raises(CompanyStoreError, match="outside"):
+        operator.run(
+            "security-logging", source, source_root / "nested", repository=ROOT,
+            source_root=source_root,
+        )
+    assert not (source_root / "nested").exists()
+
+
+@pytest.mark.parametrize("kind", ["configuration", "security-logging"])
+def test_source_dependency_must_be_explicit_and_kind_specific(tmp_path, kind):
     source = prepare(tmp_path)
     with pytest.raises(CompanyStoreError, match="explicit source root"):
-        operator.run("configuration", source, tmp_path / "cfg", repository=ROOT)
-    with pytest.raises(CompanyStoreError, match="only for configuration"):
+        operator.run(kind, source, tmp_path / "cfg", repository=ROOT)
+    with pytest.raises(CompanyStoreError, match="only for source-dependent"):
         operator.run("mover", source, tmp_path / "mover", repository=ROOT, source_root=tmp_path)
     assert not (tmp_path / "cfg").exists() and not (tmp_path / "mover").exists()

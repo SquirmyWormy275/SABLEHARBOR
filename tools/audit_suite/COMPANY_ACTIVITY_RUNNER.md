@@ -8,8 +8,8 @@ PYTHONPATH=. .venv/bin/python -m tools.audit_suite.generate_company_activity inc
   --destination /private/new-incident-run
 ```
 
-The maintained runner currently accepts `mover`, `identity-period`, `incident`, `backup`, `training`, `change` and `configuration`.
-Recipe fields follow `TransferRecipe`, `PeriodRecipe`, `IncidentRecipe`, `BackupRecipe`, `TrainingRecipe`, `ChangeRecipe` and `ConfigurationRecipe` in the
+The maintained runner currently accepts `mover`, `identity-period`, `incident`, `backup`, `training`, `change`, `configuration` and `security-logging`.
+Recipe fields follow `TransferRecipe`, `PeriodRecipe`, `IncidentRecipe`, `BackupRecipe`, `TrainingRecipe`, `ChangeRecipe`, `ConfigurationRecipe` and `LoggingRecipe` in the
 corresponding company activity modules. For an identity period, `movers` is a JSON
 array of transfer recipes. Training uses arrays of `TrainingMember` objects in
 `cohort` and `TrainingCourse` objects in `courses`, with `role_ids` as an array. All assumptions, people, branch identities and dates are
@@ -21,7 +21,16 @@ Its recipe explicitly pins `source_store_id`, `source_versions_sha256`, `branch_
 and `checkpoints` (the last two are JSON arrays). It reads existing original change
 approvals, releases and configuration bytes to compute inventory/drift records;
 it does not regenerate or modify those inputs. Output must be outside the original
-source root. Other activity kinds reject this extra argument.
+source root.
+
+Security logging also requires an explicit original change `--source-root`. Its
+`LoggingRecipe` pins the source store/version digest, one upstream branch, two new
+logging branches, a local source identifier and the local ingestion-lag threshold.
+The generator applies a collector filter to an original release-authorization feed,
+reconciles its sequence and hashes, then retains later backfill without erasing the
+initial gap. Publisher sequences and lag requirements belong to the local exercise;
+they do not assert a deployed logging platform or corporate coverage. Other activity
+kinds reject the source-root argument.
 
 Keep the recipe private (0600), and use a new destination under an existing private
 0700 parent. Symlinked or hard-linked recipes and existing destinations are rejected.
