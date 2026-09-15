@@ -298,3 +298,31 @@ collection, future/revoked access denial, exact record preservation and unchange
 capsules after runtime journals changed. Source descriptor closure, unmanifested
 SQLite sidecars and fresh-schema boundaries are verified. The source/runtime
 separation creates no operating, employment, deployment or assurance conclusion.
+
+The successor private `company-portfolio-2026-09-14/reference-v5/` collects from
+the eleven writable company runtimes and two existing documentary archives. Its
+single fresh engagement retained 559 exact source versions across 13 components
+and 165 systems: 367 documentary originals and 192 qualified activity originals,
+with 536 distinct content hashes. Equal bytes do not collapse distinct native
+source identities. All 893 audit history events and successful command replays
+verified; an early access attempt was denied, and the same source became
+collectible after an explicit clock advance. The 2027 audit period was unchanged.
+
+`RECEIPT.json`, `VALIDATION.json`, `FUTURE_DENIAL.json` and
+`inventory-v1/MANIFEST.json` preserve that run. Independent verification confirmed
+all 381 runtime native rows still match their sealed capsules, every capsule member
+is unchanged, and prior grants were preserved. Authorized grants and collection
+journals belong to the new runtime and engagement. This is a new collection from
+company sources, not an audit evidence-pack import.
+
+The inventory has explicit activity references for 26 of 70 scoped controls,
+with zero unmatched retained originals or unmapped selected source versions.
+These remain separate component exercises with different periods and declared
+populations; a coherent operating year, population sufficiency, substantive
+testing and professional acceptance are not established. Earlier inventories
+and audits remain preserved.
+
+The isolated full repository check at `0cf0934` passed 1,156 tests with three
+skips and no failures or errors (`repository-0cf0934-isolated-2026-09-14.xml`).
+The subsequent runtime initialization change at `41c3f8b` is covered by the
+44-test integration result above; it is not included in that earlier full run.
