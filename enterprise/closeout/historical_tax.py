@@ -55,4 +55,4 @@ def build():
     tax_cash=ftax+ctax+D(2400)
     if cash+ftax+ctax!=D(34800000):raise ValueError('Historical events do not reconcile original pre-tax cash initialization')
     return dict(events=events,annual=annual,federal_nol=fnol,california_nol=snol,
-      historical_tax_cash=tax_cash,research_2022=D(40000000),research_remaining_2026=D(12000000))
+      historical_tax_cash=tax_cash,subsequent_ca_deduction=D(2400),research_2022=D(40000000),research_remaining_2026=D(12000000))

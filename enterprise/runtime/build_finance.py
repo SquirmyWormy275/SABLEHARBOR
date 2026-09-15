@@ -245,13 +245,15 @@ def build(allow_working_tree=False, *, company_closeout=False):
     (output / "runtime.json").write_text(json.dumps(model.export(source), indent=2) + "\n")
     if company_closeout:
         from enterprise.closeout.report import report
-        report(output)
         from enterprise.closeout.tax_sensitivity import run as tax_sensitivity
         tax_sensitivity(output)
         from enterprise.closeout.treasury import build as treasury
         treasury(output)
         from enterprise.closeout.exports import build as company_exports
         company_exports(output, operating, successor, op, fin, bridge, identity)
+        report(output)
+        from enterprise.closeout.tax_calendar import build as tax_calendar
+        enterprise.write_csv(output / "tax_filing_register.csv", tax_calendar())
     inventory = {
         str(p.relative_to(output)): hashlib.sha256(p.read_bytes()).hexdigest()
         for p in sorted(output.rglob("*"))

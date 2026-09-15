@@ -34,7 +34,7 @@ class ParentTax:
         from enterprise.closeout.tax_assets import build as asset_tax
         self.asset_rows, self.asset_totals, asset_openings = asset_tax(result,operating)
         asset_opening=asset_openings['base']
-        self.opening_nol=-sum(historic.values())+asset_opening['federal_depreciation']+h['federal_nol']+h['research_2022']*D('.6')
+        self.opening_nol=-sum(historic.values())+asset_opening['federal_depreciation']+h['federal_nol']+h['research_2022']*D('.6')+h.get('subsequent_ca_deduction',D(0))
         self.opening_state_nol=-sum(historic.values())+asset_opening['ca_depreciation']+h['california_nol']
         self.opening_dta=(self.opening_nol*D('.21')+self.opening_state_nol*D('.0884')*D('.79')+h['research_remaining_2026']*D('.21')).quantize(Q)
         fed_dtl=max(asset_opening['book_net']-asset_opening['federal_basis'],D(0))*D('.21')
