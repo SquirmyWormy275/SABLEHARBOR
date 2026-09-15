@@ -572,3 +572,29 @@ verified private archive. Restoration is inert: it does not recreate an active
 release service, credentials, grants or recipient mappings. Full explanation
 selection, portable debriefs, operational rehydration and qualified calibration
 remain open parts of IK-05/IK-06.
+
+An explicit [backup monitoring scan](AQ04_BACKUP_MONITOR_OPERATOR.md) subsequently
+ran against the existing local backup runtime. It added four native originals
+while preserving the prior 21 originals and operation history. A fresh technical
+engagement then collected all 25 originals across 11 systems through source
+grants and ordinary discovery. Future monitoring records remained unavailable
+until an explicit audit-clock advance. Temporary grants were revoked, and the
+earlier technical and reference audits remained unchanged. Monitoring retained
+the missing-job and prior failure tickets; collection conferred no testing credit.
+
+The [persistent configuration runtime](../../../../enterprise/audit_suite/CONFIGURATION_RUNTIME.md)
+extends the existing change exercise with a separate data-only file target.
+It validates seven exact upstream originals before local application, explicit
+drift, correction or rollback. Reconciliation independently rereads the current
+file. Immutable operations retain before/after hashes and the original approval
+chain, with no inferred deployment approval or ticket closure. The trusted CLI
+preserves private receipts and exact-command replay after receipt-write failure.
+Core, independent review and CLI checks passed 19 tests; actual operation requires
+a separately reviewed, retained execution receipt.
+
+Evidence context now displays item observations citing the selected exact
+artifact ID and SHA, including correction history and author-recorded locators.
+Procedure and workpaper navigation requires matching server-provided version
+pins. Actual retained backup observations passed desktop and narrow-screen
+verification against the authorized projection without altering audit history
+or original evidence. This adds context, not independent review or testing credit.

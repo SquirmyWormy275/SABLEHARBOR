@@ -179,6 +179,7 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Private companion recovery](../../../enterprise/audit_suite/COMPANION_RECOVERY.md) — MD
 - [Company runtime activation contract](../../../enterprise/audit_suite/COMPANY_RUNTIME_ACTIVATION.md) — MD
 - [Configuration inventory and drift from original release records](../../../enterprise/audit_suite/CONFIGURATION_ACTIVITY.md) — MD
+- [Persistent local configuration runtime](../../../enterprise/audit_suite/CONFIGURATION_RUNTIME.md) — MD
 - [Per-control legacy documentary custody](../../../enterprise/audit_suite/DOCUMENTARY_CUSTODY.md) — MD
 - [Local worker lifecycle sources](../../../enterprise/audit_suite/LIFECYCLE_ACTIVITY.md) — MD
 - [Local non-human credential lifecycle](../../../enterprise/audit_suite/NONHUMAN_IDENTITY_ACTIVITY.md) — MD

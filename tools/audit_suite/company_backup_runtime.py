@@ -57,7 +57,9 @@ def parent_identity(output):
     return info.st_dev, info.st_ino
 
 
-def publish_receipt(output, request, result, expected_parent):
+def publish_receipt(
+    output, request, result, expected_parent, *, receipt_format="COMPANY_BACKUP_OPERATOR_RECEIPT_V1"
+):
     """Operation receipts also remain in the runtime if this publication fails."""
     if parent_identity(output) != expected_parent:
         raise DomainError("Receipt parent changed during operation; use exact replay")
@@ -74,7 +76,7 @@ def publish_receipt(output, request, result, expected_parent):
         files = {"REQUEST.json": encoded(request), "RESULT.json": encoded(result)}
         files["MANIFEST.json"] = encoded(
             {
-                "format": "COMPANY_BACKUP_OPERATOR_RECEIPT_V1",
+                "format": receipt_format,
                 "files": {name: sha(raw) for name, raw in files.items()},
                 "audit_created": False,
                 "professional_acceptance": "NOT_PERFORMED",

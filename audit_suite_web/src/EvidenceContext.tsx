@@ -1,3 +1,4 @@
+import { SampleEvidenceContext } from "./SampleEvidenceContext";
 import { useId, useRef, useState } from "react";
 import type { Engagement } from "./api";
 import {
@@ -202,6 +203,12 @@ export function EvidenceContext({
               </p>
             )}
           </section>
+          <SampleEvidenceContext
+            key={key}
+            engagement={e}
+            artifactId={artifactId}
+            onOpen={open}
+          />
           {onStartDraft && context.canDraft && (
             <button
               type="button"
