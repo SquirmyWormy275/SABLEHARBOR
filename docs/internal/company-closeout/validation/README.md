@@ -40,3 +40,15 @@ Nineteen packaging/import tests passed after correction (`a978edb4`). No source-
 or accepted-build condition was relaxed. Company reconciliation now has a dedicated
 workflow, `.github/workflows/company-closeout.yml`, including all three native builds,
 independent import, cross-functional reperformance and isolated reference restore.
+
+The first hosted company integration also detected three distinct issues: a long
+test comment, trailing whitespace in the preserved pytest transcript, and a stale
+operating workbook input identity. The transcript now strips line-end whitespace
+only; original bytes remain recoverable at `a445ae28`. Error content is unchanged.
+The original forecast model had globbed every JSON file in its source directory,
+including newly added completed-period histories it did not consume. Its explicit
+eight-source forecast population now excludes those unrelated inputs. Real forecast
+source changes still alter identity; current-company source hashes remain captured
+by their native generators and the full operations source inventory. The approved
+workbook and review-manifest bytes are preserved; no comparison was disabled or
+rebaselined to suppress the failure.

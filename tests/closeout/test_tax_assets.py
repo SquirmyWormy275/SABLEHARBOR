@@ -70,7 +70,7 @@ def test_book_vintage_correction_is_noncash_and_retires_existing_cost_exactly():
     adjustment.post_opening(b)
     for year in range(2026, 2030):
         for month in range(1, 13):
-            # Exercise only legacy correction; reference runtime provider needs the full runtime context.
+            # Exercise only legacy correction; the runtime provider needs its full context.
             from unittest.mock import patch
 
             with patch("enterprise.runtime.finance.RuntimeAdjustment.post_month"):

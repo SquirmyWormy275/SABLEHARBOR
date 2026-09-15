@@ -13,11 +13,11 @@ self = <test_billing_record.BillingRecordTests testMethod=test_generated_artifac
     def test_generated_artifacts_and_protected_inputs(self):
 >       billing.validate()
 
-tests/publications/test_billing_record.py:65: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/publications/test_billing_record.py:65:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 tools/documents/billing_record.py:353: in validate
     check(sha(ROOT / path) == digest, "Stale input: " + path)
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
 condition = False
 message = 'Stale input: tools/documents/build_controlled_publications.py'
