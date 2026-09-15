@@ -6,7 +6,7 @@
   "known_on": "2026-09-15T00:00:00Z",
   "work_packages": {
     "SH-C01": "Implemented declared employee, commercial/research, customer/supplier balance, legal-book allocation, inventory valuation and asset-source populations; specific population precision limitations retained below.",
-    "SH-C03": "Implemented702employee roster,1404payments, exactwithholding/remittance, benefits/UI/RUIA, existingcost decomposition, HR/access eventstate; runtime access effectiveness remains integration-owned.",
+    "SH-C03": "Implemented702employee roster,1404payments, exactwithholding/remittance, benefits/UI/RUIA, existingcost decomposition, HR/access eventstate; runtime access effectiveness remains integration-owned. July retention250k included in eight recipients AugustYTD;136regular/bonus taxevents. Grossbonusnet173951.75+employee withholding76048.25; employer24266.75 supplied tofinance separately.",
     "SH-C07": "Implemented ten selected August normal/exception chains; September selected200lb custody successor invokes sourcequalification numericchecks; rejected200lb preserved. No whole physical monthly dispatch simulator claimed.",
     "SH-C04": "Implemented bounded18ARU debt settlements/principal bridge and four Cradle host events; exact material debt/security/host rights residuals preserved. Current92 invoice tax annotations consume controls source; finance owns postings."
   },
@@ -23,7 +23,8 @@
     "enterprise/ccf/company_closeout/september_shipment_qualification.json",
     "enterprise/ccf/company_closeout/current_activity_successor.json",
     "enterprise/operations/source/debt_host_2026_08.json",
-    "enterprise/ccf/company_closeout/industrial_transaction_tax.json"
+    "enterprise/ccf/company_closeout/industrial_transaction_tax.json",
+    "enterprise/operations/source/retention_payroll_2026.json"
   ],
   "generator_paths": [
     "enterprise/operations/completed_period.py",
@@ -34,7 +35,8 @@
     "enterprise/operations/invoice_settlement.py",
     "enterprise/operations/availability.py",
     "enterprise/operations/debt_host.py",
-    "enterprise/operations/payroll_legal_bridge.py"
+    "enterprise/operations/payroll_legal_bridge.py",
+    "enterprise/operations/retention_payroll.py"
   ],
   "reproduction_commands": [
     "python -m enterprise.operations.completed_period",
@@ -59,7 +61,8 @@
     "aru": "29retainedARU/BSTcontracts ->92populationjoined delivery/invoice records ->25groupcustomer balances/6supplierpool rows across industrialgroups ->149sourceassetrecords ->131staff ->warehouse/dispatch/maintenancechains",
     "corporate": "SHIlegalbook paidcost11968000 decomposition ->ESS/IA/J2/corporate payroll/approvals ->tradeAR/AP/inventoryzero source bridge ->9000000gross assetcomponents/4285714.2861netafterbookDDA; financing/tax/treasury remain finance integration",
     "debt_and_hosts": "debt_host_records.json ->18source cash legs and term/lease rollforward ->4host interface/acceptance/settlement/exception events ->exact rights residuals; no lien discharge inferred",
-    "current_transaction_tax": "92 current_invoices ->58Core scopedCA services +34industrial controls dispositions; threeRWHutility sellerborne tax180947.89 expense/payable, no customerprincipal/AR/cashdelta; certificates only forCradle refiner andSPOTtrader"
+    "current_transaction_tax": "92 current_invoices ->58Core scopedCA services +34industrial controls dispositions; threeRWHutility sellerborne tax180947.89 expense/payable, no customerprincipal/AR/cashdelta; certificates only forCradle refiner andSPOTtrader",
+    "retention": "retention_payroll_ytd ->eightacceptedretentionawards ->July250kexistinggrosscash/netpluswithholding ->August wagecaps/payroll ->finance employerbonuslevy disposition;Jan2027halfnotpaid"
   },
   "residuals": [
     {
@@ -85,8 +88,8 @@
   "validation_receipt": {
     "recorded_at": "2026-09-15",
     "dependency_environment": "SABLEHARBOR-company-closeout/.venv Python with repository locked dependencies",
-    "focused_cases": 100,
-    "focused_result": "PASS99 focused cases together, then PASS9 payroll cases after adding one source/entity guard;100 distinct focused cases. Final integration must rerun after source composition.",
+    "focused_cases": 110,
+    "focused_result": "PASS110 focused tests after corrected retention YTD, RWH historical sale-period allocation, debt-host packaging and composite identity guards; rerun on final integration revision.",
     "ruff": "PASS on all changed generators and tests",
     "august_and_september_regeneration_checks": "PASS; rerun for final integration source_commit",
     "diff_check": "PASS",
@@ -101,7 +104,7 @@
     {
       "id": "B-RES-01",
       "status": "IMPLEMENTED_PENDING_INTEGRATION_ACCEPTANCE",
-      "result": "113datedindustrialcustomerinvoices,113agingrows,29receipts; actualAugustinvoiceIDs/issuers/principals bind33currentindustrialinvoices. Historicinvoice dates and receiptallocation newlyauthored; customerpools nowweighted byactualbillings, not prior equalallocation. $80kfullyreserveddisputeand700k/300kolderDPDbuckets retained. No independentbankconfirmationclaimed.",
+      "result": "117datedindustrialcustomerinvoices,117agingrows,33receipts; actualAugustinvoiceIDs/issuers/principals bind33currentindustrialinvoices. Historicinvoice dates and receiptallocation newlyauthored; customerpools nowweighted byactualbillings, not prior equalallocation. $80kfullyreserveddisputeand700k/300kolderDPDbuckets retained. No independentbankconfirmationclaimed.",
       "source": "enterprise/operations/invoice_settlement.py"
     },
     {

@@ -293,7 +293,10 @@ def payroll(source, people):
     leave = {e["person_id"]: D(e["hours"]) for e in source["events"] if e["action"] == "PAID_LEAVE"}
     for p in people:
         monthly = cents(D(p["annual_salary_usd"]) / 12)
-        ytd = monthly * 7
+        from .retention_payroll import prior_bonus
+
+        bonus_ytd = prior_bonus(p)
+        ytd = monthly * 7 + bonus_ytd
         for sequence, date in enumerate(source["payroll"]["pay_dates"], 1):
             gross = cents(monthly / 2) if sequence == 1 else monthly - cents(monthly / 2)
             pay_id = f"SH-PAY-202608-{sequence}-{p['person_id']}"
@@ -316,6 +319,7 @@ def payroll(source, people):
                     pay_date=date,
                     gross_usd=money(gross),
                     opening_ytd_wages_usd=money(ytd),
+                    opening_ytd_retention_wages_usd=money(bonus_ytd),
                     withholding_usd=money(deductions),
                     net_usd=money(net),
                     employer_known_taxes_usd=money(known),
@@ -735,6 +739,10 @@ def validate(source, tables):
     from .current_balances import validate as validate_balances
 
     validate_balances(tables)
+    if "retention_payroll_ytd" in tables:
+        from .retention_payroll import validate as validate_retention
+
+        validate_retention(tables)
     if "debt_settlements" in tables:
         from industrial.planning.enterprise import load_anchor
 
@@ -895,6 +903,9 @@ def build(source=None):
     tables["operating_events"], tables["operating_quantities"] = operating_records(source, people)
     tables["dispatch_assignments"] = dispatch_assignments(source, qualifications)
     tables["payroll_source_bridges"] = payroll_bridges(source, people, pay)
+    from .retention_payroll import workpapers as retention_workpapers
+
+    tables["retention_payroll_ytd"] = retention_workpapers(source, people)
     from .current_records import (
         CURRENT_SOURCE,
         INDUSTRIAL_TAX_SOURCE,
@@ -929,6 +940,8 @@ def build(source=None):
         SOURCE,
         "enterprise/operations/completed_period.py",
         "enterprise/operations/availability.py",
+        "enterprise/operations/retention_payroll.py",
+        "enterprise/operations/source/retention_payroll_2026.json",
         "geospatial/facilities/population/REGISTER.json",
         CURRENT_SOURCE,
         TAX_SCOPE_SOURCE,

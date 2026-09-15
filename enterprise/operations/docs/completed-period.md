@@ -87,8 +87,8 @@ those earlier payroll records have been delivered.
 | August measure | USD |
 |---|---:|
 | Gross earnings | 6,259,287.81 |
-| Employee withholding | 1,706,523.80 |
-| Net employee payments | 4,552,764.01 |
+| Employee withholding | 1,704,580.70 |
+| Net employee payments | 4,554,707.11 |
 | Employer loaded burden | 1,877,786.71 |
 | Total loaded expense | 8,137,074.52 |
 
@@ -104,7 +104,7 @@ FICA/RRTA and $3,117.50 August BST RUIA are separately calculated inside it.
 January–July reconstructed wages exhaust every nonrail annual unemployment base,
 so August incremental FUTA/state UI is zero. BST's 2.5% experience rate is a newly
 authored synthetic notice within the genuine 2026 permitted range, not a recovered
-RRB notice. Remaining $1,345,337.82 is allocated to health/welfare administration,
+RRB notice. Remaining $1,348,751.41 is allocated to health/welfare administration,
 existing employer benefit contributions and workers compensation coverage, with
 three declared provider invoices per employer and modeled August 31 settlement.
 No new voting, vesting, pension or substantive employee rights are created.
@@ -299,8 +299,8 @@ The selected RWH custody lots remain a bounded subset of the full inventory valu
 ## Dated industrial invoice and remittance successor
 
 The final allocation replaces the earlier newly authored equal-customer pool with
-weights from actual August invoice billings. `invoice_settlement.py` supplies 113
-industrial customer invoice records, 113 dated aging rows and 29 August 28 source
+weights from actual August invoice billings. `invoice_settlement.py` supplies 117
+industrial customer invoice records, 117 dated aging rows and 33 August 28 source
 cash allocations. The 33 current ARU/BST/RWH invoices keep their exact existing
 IDs, issuers and principals. Historical opening invoices receive expressly new
 fictional issue/due dates, including the $80,000 fully reserved legacy dispute.
@@ -404,3 +404,30 @@ invoice date alone is insufficient. August collections apply oldest-first:
 $1,281,252 to June sales and $1,712,498 to July sales, with August sales unpaid.
 These remain authored subledger allocations, not proof of physical shipment.
 The resulting company ledger has 117 invoices and 33 receipt allocations.
+
+### Retention wages in the August YTD history
+
+The eight accepted retention awards' July 7 installment is taxable compensation,
+not additional regular salary or stock consideration. `retention_payroll_ytd.csv`
+contains their 136 regular/bonus payment calculations through August and joins
+the same eight current person IDs. Its $250,000 gross batch reconciles to the
+existing `RETENTION-PAYMENT` cash source: $173,951.75 employee net and $76,048.25
+employee withholding. These component remittances are newly authored synthetic
+internal settlements, not agency acknowledgments. The second $250,000 installment
+remains conditional and future-due January 7, 2027.
+
+The July bonus is included in August opening wages. Nora's Social Security and
+Seth's Tier II wage bases are consequently exhausted before August; additional
+Medicare withholding is computed separately. August gross and fixed loaded cost
+remain unchanged, while net is $4,554,707.11 and withholding $1,704,580.70.
+Remaining benefit/administration allocation within the retained salary-cost
+source becomes $1,348,751.41. The workpaper preserves the fixed source envelope;
+it does not grant a new benefit formula.
+
+Gross employer bonus taxes are $24,266.75 ($16,065 ARU; $8,201.75 BST). This
+calculation is supplied to finance for its separate expense/liability/settlement
+entry; this export does not infer that the employer portion was paid or already
+covered by the 30% regular-salary burden. Salary wage-cap effects are distinct
+from gross bonus levies. Primary authority and the permitted separate 22%
+supplemental federal withholding method are recorded in
+`source/retention_payroll_2026.json`.
