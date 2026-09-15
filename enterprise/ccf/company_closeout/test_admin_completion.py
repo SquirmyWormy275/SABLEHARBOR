@@ -22,6 +22,10 @@ class CompletionTests(unittest.TestCase):
             lambda x: x["radon"]["daily_workpractice"].pop(),
             lambda x: x["radon"]["liner_compatibility"].update(retained_tensile_strength_pct="80"),
             lambda x: x["bond"].update(additional_parent_guarantee=True),
+            lambda x: x["bond"]["premium_component"].update(payer="PS"),
+            lambda x: x["bond"]["premium_component"].update(selected_month_expense_usd="40000"),
+            lambda x: x["bond"]["premium_component"].update(additional_group_cash_usd="10000"),
+            lambda x: x["bond"]["premium_component"].update(independent_external_confirmation=True),
             lambda x: x["bond"]["reconciliation"].update(cash_available_from_bond_usd="25000000"),
         ]:
             with self.subTest(mutate=mutate):

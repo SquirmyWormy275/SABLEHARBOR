@@ -82,6 +82,21 @@ def validate_environment(data, root=ROOT):
             raise ValueError("Bond measurement bridge")
     if Decimal(b["cash_available_from_bond_usd"]) != 0:
         raise ValueError("Surety is not operating cash")
+    fee = bond["premium_component"]
+    if (fee["instrument_id"] != bond["instrument_id"] or fee["period"] != "2026-08"
+            or fee["legal_entity"] != "RWH" or fee["payer"] != "RWH"):
+        raise ValueError("Bond fee entity/period/instrument")
+    if (Decimal(fee["native_combined_month_expense_usd"])
+            != Decimal(fee["ps_employer_expense_usd"])
+            + Decimal(fee["rwh_site_ga_after_payroll_bridge_usd"])):
+        raise ValueError("Bond fee legal expense bridge")
+    if (Decimal(fee["rwh_site_ga_after_payroll_bridge_usd"])
+            != Decimal(fee["selected_month_expense_usd"]) + Decimal(fee["rwh_site_ga_other_usd"])):
+        raise ValueError("Bond fee overallocates existing expense")
+    if (Decimal(fee["selected_settlement_usd"]) != Decimal(fee["selected_month_expense_usd"])
+            or fee["independent_external_confirmation"]
+            or any(Decimal(fee[k]) for k in ["additional_group_expense_usd", "additional_group_cash_usd"])):
+        raise ValueError("Bond fee unsupported additional cash or confirmation")
     prior = read("synthetic_permit_instruments_august.json")
     badge = next(e for e in prior["evidence"] if e["id"] == "RW-AUG-EVID-0134")
     if badge["state"] != "MISSING_EVIDENCE":

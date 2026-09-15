@@ -542,7 +542,7 @@
     "new_cash_collateral_usd": "0.00",
     "new_interest_or_preference": false,
     "new_cash_transaction_usd": "0.00",
-    "premium_scope": "No new premium posting. This instrument identity/face supplement does not establish a premium receipt or independently recalculate the retained operating cost envelope.",
+    "premium_scope": "Newly authored existing continuation fee allocation within retained RWH site G&A; not zero fee, new aggregate expense/cash, real bank confirmation or collateral.",
     "indemnity_scope": "No new indemnity or parent recourse drafted; underlying operator performance duty preserved. No finding that an omitted surety agreement contains no indemnity.",
     "reconciliation": {
       "engineering_current_cost_usd": "25000000.00",
@@ -563,6 +563,45 @@
     "alternatives_if_additional_security_required": [
       "Existingissuer amendment after supported updatedcost/terms; no commitment assumed",
       "Separately reviewed supported replacementsecurity; no cashcollateral orparentguarantee selected"
-    ]
+    ],
+    "premium_component": {
+      "id": "RW-BOND-FEE-202608",
+      "origin": "AUTHORED_RETROSPECTIVE_SYNTHETIC_COST_COMPONENT",
+      "instrument_id": "BOND-RW-2026",
+      "period": "2026-08",
+      "legal_entity": "RWH",
+      "payer": "RWH",
+      "account": "5100",
+      "issuer_id": "SYN-RW-SURETY-001",
+      "invoice_id": "SYN-BOND-RW-202608",
+      "invoice_on": "2026-08-01",
+      "due_on": "2026-08-31",
+      "description": "Monthly charge for continuation of existing reclamation surety; annual fee120000 payable monthly, no financing or new security terms.",
+      "annual_contract_fee_usd": "120000.00",
+      "selected_month_expense_usd": "10000.00",
+      "settlement_on": "2026-08-31",
+      "settlement_state": "AUTHORED_COMPONENT_OF_EXISTING_MODELED_MONTHLY_CASH_PAYMENT",
+      "selected_settlement_usd": "10000.00",
+      "settlement_evidence_id": "SYN-BOND-RW-202608-CLEAR",
+      "independent_external_confirmation": false,
+      "source_path": "red_wash/source/core_operating_data.json",
+      "source_field": "finance_2026.pale_sun_site_g_and_a_usd",
+      "native_source_id": "RW-FINANCE-SELECTED",
+      "native_combined_month_expense_usd": "233333.00",
+      "ps_employer_expense_usd": "203125.00",
+      "rwh_site_ga_after_payroll_bridge_usd": "30208.00",
+      "rwh_site_ga_other_usd": "20208.00",
+      "legal_bridge_source_ids": [
+        "CO-PAYROLL-PS-202608",
+        "CO-PAYROLL-RWH-202608"
+      ],
+      "legal_bridge_validator": "enterprise/operations/payroll_legal_bridge.py",
+      "additional_group_expense_usd": "0.00",
+      "additional_group_cash_usd": "0.00",
+      "period_limit": "Only August component settlement supplied here; other periods require actual native source joins, not annual-payment inference.",
+      "measurement_limit": "Fee is newly authored ordinary contract precision, not an inferred market rate or proof of surety adequacy.",
+      "preparer_id": "RW-0119",
+      "reviewer_id": "P023"
+    }
   }
 }
