@@ -1,0 +1,46 @@
+from decimal import Decimal as D
+import pytest
+from enterprise.closeout.parent_tax import ParentTax
+from enterprise.closeout.finance import CloseoutAdjustment
+from industrial.planning.enterprise import Books
+
+
+def tax():
+    result={'monthly_rows':[], 'journal_rows':[]}
+    for case in ['base','downside','expansion']:
+        for year in range(2026,2032):
+            for month in range(1,13):
+                result['monthly_rows'].append(dict(entity='SHI',scenario=case,year=year,month=month,net_income_usd='-100'))
+    legacy={'rows':[dict(entity='SHI',book='PRIMARY_USD',entry_date=f'{year}-12-31',
+      account_type='expense',signed_usd='100') for year in [2023,2024,2025]]}
+    return ParentTax(result,legacy)
+
+
+def test_adopted_history_and_full_allowance_no_goodwill_tax():
+    t=tax()
+    assert t.source['corporate_effective_date']==t.source['formation_date']=='2016-04-12'
+    assert t.opening_nol==300
+    for row in t.rows:
+        assert D(row['federal_current_usd'])==0 and D(row['california_current_usd'])==800
+        assert row['gross_dta_usd']==row['valuation_allowance_usd']
+        assert D(row['net_deferred_expense_usd'])==0
+        assert D(row['book_depreciation_unrecognized_deduction_usd'])==0
+
+
+def test_provision_payment_and_deferred_legs_balance():
+    t=tax();b=Books('base',{'segment_mapping':{},'knowledge_cutoff':'2026-09-15','created_on':'2026-09-15'},
+       CloseoutAdjustment.account_types|{'1000':'asset','3100':'equity'})
+    t.post_opening(b)
+    for month in range(1,13):t.post_month(b,2026,month)
+    assert sum(D(r['signed_usd']) for r in b.rows)==0
+    assert b.balances['SHI']['CO_TAX_PAY_CA']==0
+    assert b.balances['SHI']['CO_TAX_PAY_FED']==0
+    assert b.balances['SHI']['CO_TAX_DTA']+b.balances['SHI']['CO_TAX_VA']==0
+    assert b.balances['SHI']['1000']==-8000
+
+
+def test_duplicate_provision_rejected():
+    t=tax();b=Books('base',{'segment_mapping':{},'knowledge_cutoff':'2026-09-15','created_on':'2026-09-15'},
+       CloseoutAdjustment.account_types|{'1000':'asset','3100':'equity'})
+    t.post_month(b,2026,1)
+    with pytest.raises(ValueError):t.post_month(b,2026,1)

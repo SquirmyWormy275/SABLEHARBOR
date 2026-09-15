@@ -24,7 +24,7 @@ def provision(income, federal_nol, state_nol, apportionment, year):
 
 def run(output):
     data = json.loads(SOURCE.read_text())
-    statements = read_csv(output/'enterprise/enterprise_monthly_statements.csv')
+    statements = read_csv(output/'before_parent_tax_monthly.csv' if (output/'before_parent_tax_monthly.csv').exists() else output/'enterprise/enterprise_monthly_statements.csv')
     annual = defaultdict(D)
     for row in statements:
         if row['entity']!='SHI' or int(row['month'])==0: continue

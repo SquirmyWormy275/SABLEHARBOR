@@ -38,8 +38,9 @@ def report(out):
             'ending_cash_usd':row['ending_cash_usd'],
             'dependence_ratio_to_positive_operating_cash':str(funding[key]/operating) if operating>0 else 'N/A',
             'change_in_member_cash_usd':str(funding[key]-funding.get((key[0],str(int(key[1])-1)),D(0))) if int(key[1])>2026 else 'N/A',
-            'parent_tax_adjustment':'UNRESOLVED_NOT_ZERO',
-            'scope':'Conditional model; net investment includes growth; no all-growth sovereignty claim',
+            'parent_tax_adjustment':'POSTED_PARENT_PROVISION_SEE_STATE_AND_BASIS_RESERVATIONS',
+            'growth_vs_sustaining_split':'N/A_UNCLASSIFIED_SOURCE_ASSET_PURPOSES',
+            'scope':'Conditional model; all net investment included; no all-growth sovereignty claim; tax cash included once in operating cash',
             'settlement_state':'MODELED_NOT_BINDING_COMMITMENT_OR_BANK_CONFIRMATION'})
     write_csv(out/'sovereignty.csv', result)
     return result

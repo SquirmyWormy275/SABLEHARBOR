@@ -4,6 +4,7 @@ import json
 from decimal import Decimal as D
 from pathlib import Path
 from enterprise.runtime.finance import RuntimeAdjustment
+from enterprise.closeout.parent_tax import TAX_TYPES
 
 SOURCE = Path(__file__).parent / 'source/adjustments.json'
 
@@ -34,10 +35,11 @@ def load():
 
 class CloseoutAdjustment(RuntimeAdjustment):
     account_types = RuntimeAdjustment.account_types | {
-        'CO_FF_TAX_EXP': 'expense', 'CO_FF_TAX_PAY': 'liability'}
+        'CO_FF_TAX_EXP': 'expense', 'CO_FF_TAX_PAY': 'liability'} | TAX_TYPES
 
     def __init__(self, data=None):
         super().__init__(data)
+        self.parent_tax = None
         self.adjustments = load()
         self.input_hash = hashlib.sha256((self.input_hash + SOURCE.read_text()).encode()).hexdigest()
 
@@ -56,10 +58,14 @@ class CloseoutAdjustment(RuntimeAdjustment):
 
     def post_opening(self, books):
         self._post(books, 2026, 0)
+        if self.parent_tax is not None:
+            self.parent_tax.post_opening(books)
 
     def post_month(self, books, year, month):
         super().post_month(books, year, month)
         self._post(books, year, month)
+        if self.parent_tax is not None:
+            self.parent_tax.post_month(books, year, month)
 
 
 def verify(rows):
@@ -74,4 +80,4 @@ def verify(rows):
         if expected != actual or any(r['cash_flow'] != 'NONCASH_OR_OPENING' for r in selected):
             raise ValueError('Emitted adjustment population mismatch: ' + adjustment['id'])
     return {'goodwill_removed_usd': '30000000', 'ff003_expense_payable_usd': '152250',
-            'direct_cash_usd': '0', 'parent_tax': 'UNRESOLVED_EFFECTIVE_HISTORY_NO_ZERO_TAX_CLAIM'}
+            'direct_cash_usd': '0', 'parent_tax': 'CORPORATE_FROM_FORMATION_ADOPTED_SEE_PROVISION_WORKPAPER'}

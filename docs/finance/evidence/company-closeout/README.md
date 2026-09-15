@@ -155,3 +155,13 @@ default operating builds preserve their original request scope. Rebuilt request
 allocations therefore reconcile to the same corrected books instead of exporting
 stale settlements or suppressing finance failures. The complete export build
 passed the existing table/column/route allowlists and exact database verification.
+
+### Adopted parent tax successor
+
+The owner subsequently adopted corporate-from-formation history. The controlling
+implementation is now [Adopted parent tax](ADOPTED_PARENT_TAX.md) and
+`enterprise/closeout/source/parent_tax.json`; the earlier alternatives and
+sensitivity retain their historical review purpose. Parent current/deferred/VA
+journals and modeled cash now feed funding, statements and exports. Tax basis,
+older history and California combined-report reservations remain explicit;
+neither the former unresolved preference nor a blanket zero-tax claim controls.

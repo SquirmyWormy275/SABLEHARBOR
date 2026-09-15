@@ -153,12 +153,29 @@ def build(allow_working_tree=False, *, company_closeout=False):
         core_provider=operating,
         adjustment_provider=adjustment,
     )
+    if company_closeout:
+        from enterprise.closeout.parent_tax import ParentTax
+        tax = ParentTax(successor, legacy)
+        enterprise.write_csv(output / "before_parent_tax_statements.csv", successor["annual_rows"])
+        enterprise.write_csv(output / "before_parent_tax_monthly.csv", successor["monthly_rows"])
+        adjustment.parent_tax = tax
+        adjustment.input_hash = hashlib.sha256((adjustment.input_hash + tax.input_hash).encode()).hexdigest()
+        successor = enterprise.build(output / "enterprise", forecast_result=fin,
+            legacy_result=legacy, source=policy, core_provider=operating, adjustment_provider=adjustment)
+        enterprise.write_csv(output / "parent_tax_provision.csv", tax.rows)
+        (output / "parent_tax_history.json").write_text(json.dumps({"source": tax.source,
+            "supported_historical_income": tax.historical_income,
+            "supported_opening_nol_usd": str(tax.opening_nol)}, indent=2) + "\n")
     rows = enterprise.read_csv(output / "enterprise/enterprise_journal.csv")
     check = verify_land_adjustment(rows)
     if company_closeout:
         from enterprise.closeout.finance import verify
         check["company_closeout"] = verify(rows)
-    bridge = replacement_bridge(predecessor, successor)
+    if company_closeout:
+        from enterprise.closeout.statement_bridge import bridge as company_bridge
+        bridge = company_bridge(predecessor, successor)
+    else:
+        bridge = replacement_bridge(predecessor, successor)
     from .construction_finance import phase_reconciliation, asset_forecast
 
     enterprise.write_csv(
@@ -190,6 +207,7 @@ def build(allow_working_tree=False, *, company_closeout=False):
             for r in records
             if int(r["year"]) == 2026 and not r["source_id"].startswith("RT-")
             and r["source_id"] != "SH-VOICE-GW-01"
+            and not (company_closeout and (r["source_id"].startswith("CO-TAX-") or r["source_type"] == "MEMBER_EQUITY"))
         )
 
     if history(before) != history(rows):
@@ -214,7 +232,7 @@ def build(allow_working_tree=False, *, company_closeout=False):
         "land": check,
         "limitations": [
             "Settlement clearing is unresolved, not vendor financing.",
-            *(["Parent corporate-tax direction is settled; effective history/provision and holder-level capital rights remain unresolved. This is a partial financial successor."] if company_closeout else []),
+            *(["Corporate-from-formation tax history adopted; current provision and cash plan are modeled. Tax asset-basis/apportionment reservations and exact holder rights remain disclosed."] if company_closeout else []),
             "Future expenses and IT acceptance are conditional scenarios, not actual occupied employees or operations.",
             "Construction remains CIP; no building/plant in-service event is fabricated.",
             "Runtime delayed-build sensitivity is separate from the three consolidated enterprise scenarios.",
