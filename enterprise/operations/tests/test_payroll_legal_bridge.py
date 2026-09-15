@@ -49,7 +49,17 @@ def test_legal_employer_paid_on_behalf_reconciles():
 
 
 @pytest.mark.parametrize(
-    "mutation", ["duplicate", "reverse", "period", "cash", "entity", "uncorrected_legal", "omit"]
+    "mutation",
+    [
+        "duplicate",
+        "reverse",
+        "period",
+        "cash",
+        "entity",
+        "uncorrected_legal",
+        "omit",
+        "source_entity",
+    ],
 )
 def test_balanced_wrong_legal_payroll_is_rejected(mutation):
     edition, rows, trial = fixture()
@@ -64,6 +74,8 @@ def test_balanced_wrong_legal_payroll_is_rejected(mutation):
         rows[1]["account"] = "1000"
     elif mutation == "entity":
         rows[0]["entity"] = "SHI"
+    elif mutation == "source_entity":
+        rows[0]["source_id"] = "CO-PAYROLL-RWH-202608"
     elif mutation == "uncorrected_legal":
         trial[1]["signed_usd"] = "1000000"
     else:

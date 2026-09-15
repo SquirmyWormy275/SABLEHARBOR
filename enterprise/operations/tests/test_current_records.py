@@ -192,10 +192,11 @@ def test_authority_and_performance_links_fail_closed(edition, table, field, valu
 def test_current_august_tax_annotation_is_scoped():
     edition = build()
     invoices = edition["tables"]["current_invoices"]
-    scoped = [r for r in invoices if r.get("tax_authority_id")]
+    scoped = [r for r in invoices if r.get("service_use_jurisdiction") == "US-CA"]
     assert len(scoped) == 58
     assert all(r["tax_usd"] == "0.00" and r["tax_effective_period"] == "2026-08" for r in scoped)
-    assert len([r for r in invoices if r["tax_usd"] is None]) == 34
+    assert len([r for r in invoices if r["tax_usd"] is None]) == 0
+    assert sum(D(r.get("seller_borne_tax_payable_usd", "0")) for r in invoices) == D("180947.89")
     for field, value in (("tax_usd", "1.00"), ("tax_effective_period", "2027-08")):
         broken = copy.deepcopy(edition["tables"])
         broken["current_invoices"][0][field] = value
@@ -214,3 +215,32 @@ def test_ps_combined_envelope_is_not_mislabeled_legal_expense(edition):
     assert sum(D(r["amount_usd"]) for r in rows if r["corrected_legal_cost_owner"] == "RWH") == D(
         "30208"
     )
+
+
+def test_current_seller_borne_tax_cannot_disappear_or_increase_customer_principal(edition):
+    for field, value in [
+        ("seller_borne_tax_payable_usd", "0.00"),
+        ("customer_tax_charge_usd", "1.00"),
+        ("resale_certificate_id", "INVENTED"),
+    ]:
+        tables = copy.deepcopy(edition["tables"])
+        next(r for r in tables["current_invoices"] if r["contract_id"] == "UCA-2019-04")[field] = (
+            value
+        )
+        with pytest.raises(ValueError, match="industrial tax annotation"):
+            validate_current(read(SOURCE), tables)
+
+
+def test_embedded_debt_host_packaged_and_validated(edition, tmp_path):
+    import json
+
+    from enterprise.operations.completed_period import write
+
+    write(edition, tmp_path)
+    manifest = json.loads((tmp_path / "manifest.json").read_text())
+    assert "debt_host_records.json" in manifest["artifacts"]
+    assert len(edition["tables"]["debt_settlements"]) == 18
+    tables = copy.deepcopy(edition["tables"])
+    tables["debt_settlements"][0]["amount_usd"] = "0"
+    with pytest.raises(ValueError, match="Debt clearing population"):
+        validate(read(SOURCE), tables)

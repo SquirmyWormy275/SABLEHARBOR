@@ -7,7 +7,8 @@
   "work_packages": {
     "SH-C01": "Implemented declared employee, commercial/research, customer/supplier balance, legal-book allocation, inventory valuation and asset-source populations; specific population precision limitations retained below.",
     "SH-C03": "Implemented702employee roster,1404payments, exactwithholding/remittance, benefits/UI/RUIA, existingcost decomposition, HR/access eventstate; runtime access effectiveness remains integration-owned.",
-    "SH-C07": "Implemented ten selected August normal/exception chains; September selected200lb custody successor invokes sourcequalification numericchecks; rejected200lb preserved. No whole physical monthly dispatch simulator claimed."
+    "SH-C07": "Implemented ten selected August normal/exception chains; September selected200lb custody successor invokes sourcequalification numericchecks; rejected200lb preserved. No whole physical monthly dispatch simulator claimed.",
+    "SH-C04": "Implemented bounded18ARU debt settlements/principal bridge and four Cradle host events; exact material debt/security/host rights residuals preserved. Current92 invoice tax annotations consume controls source; finance owns postings."
   },
   "implementation_commits": [
     "71b81cee027562dd783a05ce4c4a654ba8b5b7b1",
@@ -20,7 +21,9 @@
     "enterprise/operations/source/current_company_2026_08.json",
     "enterprise/operations/source/september_custody_2026.json",
     "enterprise/ccf/company_closeout/september_shipment_qualification.json",
-    "enterprise/ccf/company_closeout/current_activity_successor.json"
+    "enterprise/ccf/company_closeout/current_activity_successor.json",
+    "enterprise/operations/source/debt_host_2026_08.json",
+    "enterprise/ccf/company_closeout/industrial_transaction_tax.json"
   ],
   "generator_paths": [
     "enterprise/operations/completed_period.py",
@@ -29,7 +32,9 @@
     "enterprise/operations/september_custody.py",
     "enterprise/ccf/company_closeout/shipment.py",
     "enterprise/operations/invoice_settlement.py",
-    "enterprise/operations/availability.py"
+    "enterprise/operations/availability.py",
+    "enterprise/operations/debt_host.py",
+    "enterprise/operations/payroll_legal_bridge.py"
   ],
   "reproduction_commands": [
     "python -m enterprise.operations.completed_period",
@@ -52,7 +57,9 @@
     "cradle": "1materialscontract plus selectedfailedresearch ->mass/yield/acceptedvalue/directmargin ->16staff ->pilot equipment; host ownership external",
     "pale-sun": "4retainedRWHcustomercontracts ->booked revenue/customerbalance/inventorysource ->PS12/RWH128staff ->selectedheld/qualifiedcustodychain and permit controls",
     "aru": "29retainedARU/BSTcontracts ->92populationjoined delivery/invoice records ->25groupcustomer balances/6supplierpool rows across industrialgroups ->149sourceassetrecords ->131staff ->warehouse/dispatch/maintenancechains",
-    "corporate": "SHIlegalbook paidcost11968000 decomposition ->ESS/IA/J2/corporate payroll/approvals ->tradeAR/AP/inventoryzero source bridge ->9000000gross assetcomponents/4285714.2861netafterbookDDA; financing/tax/treasury remain finance integration"
+    "corporate": "SHIlegalbook paidcost11968000 decomposition ->ESS/IA/J2/corporate payroll/approvals ->tradeAR/AP/inventoryzero source bridge ->9000000gross assetcomponents/4285714.2861netafterbookDDA; financing/tax/treasury remain finance integration",
+    "debt_and_hosts": "debt_host_records.json ->18source cash legs and term/lease rollforward ->4host interface/acceptance/settlement/exception events ->exact rights residuals; no lien discharge inferred",
+    "current_transaction_tax": "92 current_invoices ->58Core scopedCA services +34industrial controls dispositions; threeRWHutility sellerborne tax180947.89 expense/payable, no customerprincipal/AR/cashdelta; certificates only forCradle refiner andSPOTtrader"
   },
   "residuals": [
     {
@@ -62,14 +69,6 @@
       "source": "industrial/source/operations.json;industrial/source/finance.json;red_wash/source/core_operating_data.json",
       "next_owner": "integration/release scope",
       "unaffected": "Selectednormal/exceptionchains,200lbSeptemberqualifiedcustody and financialinventoryvaluation trace."
-    },
-    {
-      "id": "B-RES-03",
-      "affected_claim": "Currentinvoice salestax treatment",
-      "missing": "58currentCoreCAservices have explicitly adopted scopedzero-tax annotations from controls. Remaining34industrial/materialcontracts retain ownproduct/sourcing review; no blanketexemption.",
-      "source": "enterprise/operations/source/current_company_2026_08.json",
-      "next_owner": "controls/finance",
-      "unaffected": "Accepted2027FF003 remains separate forecastoverlay; currentprincipal andsourcebookreconcile."
     },
     {
       "id": "B-RES-04",
@@ -86,8 +85,8 @@
   "validation_receipt": {
     "recorded_at": "2026-09-15",
     "dependency_environment": "SABLEHARBOR-company-closeout/.venv Python with repository locked dependencies",
-    "focused_cases": 77,
-    "focused_result": "PASS77cases: existing74plus3deterministic repository availability/dirtypreview/recordpopulation tests",
+    "focused_cases": 100,
+    "focused_result": "PASS99 focused cases together, then PASS9 payroll cases after adding one source/entity guard;100 distinct focused cases. Final integration must rerun after source composition.",
     "ruff": "PASS on all changed generators and tests",
     "august_and_september_regeneration_checks": "PASS; rerun for final integration source_commit",
     "diff_check": "PASS",
@@ -113,5 +112,12 @@
     }
   ],
   "invoice_rounding": "ROUND_HALF_UPtocents for weightedallocations; last sortedcustomer receivescentresidual. Aging isdayspastdue, currentincludesnotdueand0-30DPD.",
-  "availability_policy": "DeclaredSeptember15day retained; generatedavailable/recorded atmax(declaredday,deterministicHEADcommitterUTC). Dirtypreviewnotpublishable andasofdeniedunlessexplicitanalysisoverride. Acceptance/publicationseparate."
+  "availability_policy": "DeclaredSeptember15day retained; generatedavailable/recorded atmax(declaredday,deterministicHEADcommitterUTC). Dirtypreviewnotpublishable andasofdeniedunlessexplicitanalysisoverride. Acceptance/publicationseparate.",
+  "resolved_residuals": [
+    {
+      "id": "B-RES-03",
+      "status": "IMPLEMENTED_PENDING_INTEGRATION_ACCEPTANCE",
+      "evidence": "All92 invoice tax annotations bind scoped controls sources; three utility own-use rows remain sellerborne taxpayable, not exempt or remitted."
+    }
+  ]
 }

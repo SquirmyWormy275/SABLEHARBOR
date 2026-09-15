@@ -354,3 +354,20 @@ or publicly released. The composite publication boundary must still be applied.
 The generated lane receipt and manifest expose these same distinctions. Tests
 verify deterministic commit timestamps, the just-before boundary, all generated
 row populations and dirty-preview denial without using nondeterministic time.
+
+### Debt, hosts and current transaction tax
+
+The existing completed-period manifest now includes `debt_host_records.json` plus
+`debt_settlements.csv`, `debt_principal_bridges.csv`, `host_events.csv` and
+`debt_host_rights_residuals.csv`. Follow the lane receipt's `debt_and_hosts` route
+for 18 source debt cash payments and four selected Cradle events. No separate
+company database is introduced. See
+[debt/host dispositions](../../../docs/internal/company-closeout/DEBT_AND_HOST_DISPOSITIONS.md).
+
+All 92 current invoices carry scoped transaction-tax annotations. The 34
+industrial/material rows consume the corrected controls source: three RWH
+utility own-use contracts have $180,947.89 seller-borne expense/payable; the
+Cradle refiner and SPOT trader alone carry the two selected resale certificates.
+Customer principal, AR and cash do not increase. `tax_usd` identifies the
+associated tax; `customer_tax_charge_usd` remains zero for these industrial rows.
+Tax liability posting belongs to the finance successor, not this invoice export.

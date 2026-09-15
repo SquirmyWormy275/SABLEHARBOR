@@ -4,6 +4,7 @@ from collections import defaultdict
 from decimal import Decimal as D
 
 CURRENT_SOURCE = "enterprise/operations/source/current_company_2026_08.json"
+INDUSTRIAL_TAX_SOURCE = "enterprise/ccf/company_closeout/industrial_transaction_tax.json"
 TAX_SCOPE_SOURCE = "enterprise/ccf/company_closeout/current_activity_successor.json"
 
 
@@ -146,8 +147,41 @@ def extend(source, tables):
     tables["benefit_settlements"] = benefits
     tables["unemployment_workpapers"] = unemployment
     tables.update(commercial(source, current, tables))
+    industrial_tax_annotations(tables)
     tables["current_book_cost_components"] = cost_components(source, current, tables)
     return current
+
+
+def industrial_tax_annotations(tables, *, check=False):
+    from enterprise.ccf.company_closeout.industrial_tax import validate as validate_tax
+
+    from .completed_period import read
+
+    source = read(INDUSTRIAL_TAX_SOURCE)
+    validate_tax(source, tables)
+    bycontract = {r["contract_id"]: r for r in source["rows"]}
+    for invoice in tables["current_invoices"]:
+        tax = bycontract.get(invoice["contract_id"])
+        if tax is None:
+            continue
+        values = dict(
+            tax_usd=tax["sales_tax_usd"],
+            tax_effective_period=tax["event_period"],
+            tax_authority_id=source["document_id"],
+            invoice_tax_basis=tax["classification"],
+            service_use_jurisdiction=tax["service_jurisdiction"],
+            tax_state=tax["state"],
+            resale_certificate_id=tax["certificate_id"],
+            customer_tax_charge_usd="0.00",
+            tax_cash_paid_usd="0.00",
+            seller_borne_tax_expense_usd=tax.get("tax_expense_usd", "0.00"),
+            seller_borne_tax_payable_usd=tax.get("tax_payable_usd", "0.00"),
+        )
+        if check:
+            if any(invoice.get(key) != value for key, value in values.items()):
+                raise ValueError("Current industrial tax annotation differs from source")
+        else:
+            invoice.update(values)
 
 
 def commercial(source, current, tables):
@@ -565,6 +599,7 @@ def validate_current(source, tables):
         current["core_revenue_usd"]
     ):
         raise ValueError("Current source revenue does not reconcile")
+    industrial_tax_annotations(tables, check=True)
     bycontract = {r["contract_id"]: r for r in contracts}
     tax_source = read(TAX_SCOPE_SOURCE)["august_core_transaction_tax"]
     tax_by_customer = {r["customer_id"]: r for r in tax_source["customers"]}
@@ -718,7 +753,10 @@ def verify_current_finance(edition, legacy_snapshot, anchor_rows):
         raise ValueError("Industrial current invoice population differs from source journal")
     return {
         "status": "RECONCILED_TO_INDEPENDENT_CURRENT_SOURCE_ENVELOPES",
-        "legal_employer_check": "enterprise.operations.payroll_legal_bridge.verify required for PS; group anchor alone is insufficient",
+        "legal_employer_check": (
+            "enterprise.operations.payroll_legal_bridge.verify required for PS; "
+            "group anchor alone is insufficient"
+        ),
         "core_revenue_usd": money(corerevenue),
         "paid_cost_parent_usd": {k: money(v) for k, v in parents.items()},
         "industrial_external_invoices": len(invoices),

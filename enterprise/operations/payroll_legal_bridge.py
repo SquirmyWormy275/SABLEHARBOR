@@ -22,6 +22,9 @@ def verify(edition, journal_rows, trial_balance_rows):
     for row in rows:
         key = row.get("scenario", "base")
         byscenario.setdefault(key, []).append(row)
+    for row in rows:
+        if row["source_id"] != f"CO-PAYROLL-{row['entity']}-202608":
+            raise ValueError("Payroll source ID belongs to another legal employer")
     for selected in byscenario.values():
         if len(selected) != 4:
             raise ValueError("PS legal correction duplicated or missing source legs")

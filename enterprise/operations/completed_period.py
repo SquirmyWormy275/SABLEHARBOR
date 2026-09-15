@@ -735,6 +735,19 @@ def validate(source, tables):
     from .current_balances import validate as validate_balances
 
     validate_balances(tables)
+    if "debt_settlements" in tables:
+        from industrial.planning.enterprise import load_anchor
+
+        from .debt_host import SOURCE as DEBT_HOST_SOURCE
+        from .debt_host import validate as validate_debt_host
+
+        debt = read(DEBT_HOST_SOURCE)
+        debt["debt_settlements"] = tables["debt_settlements"]
+        debt["host_events"] = tables["host_events"]
+        if len(tables["debt_principal_bridges"]) != 1:
+            raise ValueError("Debt principal bridge population changed")
+        debt["principal_bridge"] = tables["debt_principal_bridges"][0]
+        validate_debt_host(debt, load_anchor())
     validate_chains(source, tables)
     quals = {r["qualification_id"]: r for r in tables["qualifications"]}
     for assignment in tables["dispatch_assignments"]:
@@ -882,12 +895,34 @@ def build(source=None):
     tables["operating_events"], tables["operating_quantities"] = operating_records(source, people)
     tables["dispatch_assignments"] = dispatch_assignments(source, qualifications)
     tables["payroll_source_bridges"] = payroll_bridges(source, people, pay)
-    from .current_records import CURRENT_SOURCE, TAX_SCOPE_SOURCE, extend, validate_current
+    from .current_records import (
+        CURRENT_SOURCE,
+        INDUSTRIAL_TAX_SOURCE,
+        TAX_SCOPE_SOURCE,
+        extend,
+        validate_current,
+    )
 
     extend(source, tables)
     from .current_balances import extend as extend_balances
 
     extend_balances(source, tables)
+    from .debt_host import build as build_debt_host
+
+    debt_host = build_debt_host()
+    tables["debt_settlements"] = debt_host["debt_settlements"]
+    tables["host_events"] = debt_host["host_events"]
+    tables["debt_principal_bridges"] = [debt_host["principal_bridge"]]
+    tables["debt_host_rights_residuals"] = debt_host["material_rights_residuals"]
+    for name in (
+        "debt_settlements",
+        "host_events",
+        "debt_principal_bridges",
+        "debt_host_rights_residuals",
+    ):
+        tables[name] = [dict(stamp(source), **row) for row in tables[name]]
+        for row in tables[name]:
+            row["effective_period"] = row.get("accounting_period", source["effective_period"])
     totals = validate(source, tables)
     totals.update(validate_current(source, tables))
     inputs = source["sources"] + [
@@ -897,6 +932,10 @@ def build(source=None):
         "geospatial/facilities/population/REGISTER.json",
         CURRENT_SOURCE,
         TAX_SCOPE_SOURCE,
+        INDUSTRIAL_TAX_SOURCE,
+        "enterprise/ccf/company_closeout/industrial_tax.py",
+        "enterprise/operations/debt_host.py",
+        "enterprise/operations/source/debt_host_2026_08.json",
         "enterprise/operations/current_records.py",
         "enterprise/operations/current_balances.py",
         "enterprise/operations/invoice_settlement.py",
@@ -912,6 +951,7 @@ def build(source=None):
         available_at=source["available_at"],
         source_hashes=hashes,
         totals=totals,
+        debt_host_evidence=debt_host,
         tables=tables,
     )
     return apply_availability(result)
@@ -991,7 +1031,11 @@ def write(result, destination=OUTPUT, check=False):
     receipt["table_counts"] = {k: len(v) for k, v in result["tables"].items()}
     receipt["reconciliation_totals"] = result["totals"]
     receipt["source_hashes"] = result["source_hashes"]
-    artifacts = {"records.json": encoded(result), "lane_receipt.json": encoded(receipt)}
+    artifacts = {
+        "records.json": encoded(result),
+        "lane_receipt.json": encoded(receipt),
+        "debt_host_records.json": encoded(result["debt_host_evidence"]),
+    }
     for name, rows in result["tables"].items():
         import io
 
