@@ -9,6 +9,16 @@ from enterprise.closeout.rwh_history import build as history
 
 def current_inventory_bridge(anchor):
     """Pure current-year carrying schedule from locked anchor and authored H2 history."""
+    native_keys = set()
+    for row in anchor:
+        if row["entity"] != "RWH_PS":
+            continue
+        if int(row["year"]) != 2026:
+            raise ValueError("Current mine anchor requires 2026 source period")
+        key = (row["entity"], row["year"], row["journal_id"], row["account"])
+        if key in native_keys:
+            raise ValueError("Duplicate native mine anchor leg")
+        native_keys.add(key)
     h = history()
     ending = D(h["ending_inventory_lb"])
     produced_h2 = D(h["source"]["produced_lb"])

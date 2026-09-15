@@ -17,3 +17,17 @@ def test_current_inventory_opening_activity_closing_and_scope():
     # Omission of a month is a population error, not a zero-cost month.
     with pytest.raises(ValueError, match="Missing current"):
         current_inventory_bridge([r for r in load_anchor() if int(r["month"]) != 8])
+
+
+def test_duplicate_anchor_is_not_a_second_production_event():
+    anchor = load_anchor()
+    leg = next(
+        r
+        for r in anchor
+        if r["entity"] == "RWH_PS"
+        and int(r["month"]) == 8
+        and r["account"] == "1200"
+        and D(r["signed_usd"]) > 0
+    )
+    with pytest.raises(ValueError, match="Duplicate native"):
+        current_inventory_bridge(anchor + [leg])

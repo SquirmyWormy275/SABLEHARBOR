@@ -95,7 +95,7 @@ class RetentionTax:
                 SOURCE_IDS[entity],
                 "July retention employer levy; separate from regular burden, unremitted",
                 kind="COMPANY_RETENTION_EMPLOYER_TAX",
-                segment="ARU" if entity == "ARU" else "BST",
+                segment="CORPORATE",
             )
 
     def receipt(self):
