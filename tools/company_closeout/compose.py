@@ -1,0 +1,189 @@
+"""Pin the declared company source snapshot and existing generated packages for inspection."""
+
+from __future__ import annotations
+
+import argparse
+import json
+import subprocess
+from pathlib import Path
+
+from .edition import EditionError, encoded, sha, timestamp, validate_contract
+
+ENTITIES = ["SHI", "SHIH", "PS", "RWH", "ARU", "BST"]
+UNITS = [
+    "foundry-field",
+    "atlas-meridian",
+    "advisory",
+    "willow",
+    "project-cradle",
+    "pale-sun",
+    "american-resource-utility",
+    "corporate",
+]
+
+
+def pin(root, paths):
+    result = []
+    for relative in sorted(paths):
+        path = root / relative
+        if not path.is_file() or path.is_symlink():
+            raise EditionError(f"Missing or linked input: {relative}")
+        result.append({"path": relative, "sha256": sha(path.read_bytes())})
+    return result
+
+
+def generate(root: Path, available_at: str, version: str, accepted=False):
+    timestamp(available_at)
+    revision = subprocess.check_output(
+        ["git", "-C", str(root), "rev-parse", "HEAD"], text=True
+    ).strip()
+    recorded_at = subprocess.check_output(
+        ["git", "-C", str(root), "show", "-s", "--format=%cI", "HEAD"], text=True
+    ).strip()
+    if timestamp(available_at) < max(timestamp(recorded_at), timestamp("2026-09-15T00:00:00Z")):
+        raise EditionError("Edition evidence cannot predate its source record/authoring boundary")
+    tracked = subprocess.check_output(["git", "-C", str(root), "ls-files", "-z"], text=True).split(
+        "\0"
+    )
+    # Historical ZIP disposition is retained in source indexes, not silently redistributed.
+    excluded = sorted(p for p in tracked if p.endswith(".zip"))
+    sources = [p for p in tracked if p and p not in excluded]
+    finance = root / "enterprise/generated/company-closeout-v1"
+    workforce = root / "enterprise/generated/completed-period-2026-08"
+    identity = json.loads((finance / "identity.json").read_bytes())
+    people_manifest = json.loads((workforce / "manifest.json").read_bytes())
+    if identity["source_revision"] != revision or people_manifest["source_commit"] != revision:
+        raise EditionError("Generated package source revision is stale; regenerate at this head")
+    if accepted and identity["dirty_development_build"]:
+        raise EditionError("Accepted package cannot use a development finance build")
+    for relative, digest in identity["source_files"].items():
+        if sha((root / relative).read_bytes()) != digest:
+            raise EditionError(f"Finance controlling source changed: {relative}")
+    for relative, digest in people_manifest["source_hashes"].items():
+        if sha((root / relative).read_bytes()) != digest:
+            raise EditionError(f"Workforce controlling source changed: {relative}")
+    finance_inventory = json.loads((finance / "manifest.json").read_bytes())
+    generated = []
+    for directory, inventory in [
+        (finance, finance_inventory),
+        (workforce, people_manifest["artifacts"]),
+    ]:
+        members = []
+        for relative, digest in inventory.items():
+            p = directory / relative
+            if sha(p.read_bytes()) != digest:
+                raise EditionError(f"Stale generated member: {p.relative_to(root)}")
+            members.append(str(p.relative_to(root)))
+        # Nested package manifests are separately verified by their native tools.
+        members.extend(str(p.relative_to(root)) for p in directory.rglob("manifest.json"))
+        actual = {str(p.relative_to(root)) for p in directory.rglob("*") if p.is_file()}
+        if set(members) != actual:
+            raise EditionError("Unexpected or omitted generated package file")
+        generated.append(sorted(set(members)))
+    components = []
+    for cid, role, definition, members in [
+        (
+            "repository-source",
+            "ACCEPTED_SOURCE" if accepted else "NEWLY_AUTHORED_SYNTHETIC_HISTORY",
+            "Exact tracked public repository snapshot except inventoried historical ZIP packages. "
+            "Includes controlling and superseded sources, code, schemas, publications, "
+            "catalogs and "
+            "artwork; each source retains its own acceptance, period and fact status. Source files "
+            "are not additional transaction or person populations.",
+            sources,
+        ),
+        (
+            "financial-successor",
+            "CONDITIONAL_FORECAST",
+            "Existing composed financial calibration and three conditional scenario populations, "
+            "including seven-unit CSV/SQLite exports. Row-level period/scenario/source "
+            "roles control; "
+            "2027–2031 forecast activity is never September 2026 actual activity. Repeated formats "
+            "and unit extracts are representations of the same populations, not additive members.",
+            generated[0],
+        ),
+        (
+            "completed-company-records",
+            "NEWLY_AUTHORED_SYNTHETIC_HISTORY",
+            "Declared August 2026 workforce, payroll and current operating populations with a "
+            "separate September change/custody ledger through September 14. Authored evidence "
+            "is available only from this edition's declared known-on boundary, "
+            "regardless of event date.",
+            generated[1],
+        ),
+    ]:
+        components.append(
+            {
+                "id": cid,
+                "fact_status": role,
+                "access_scope": "PUBLIC_SYNTHETIC",
+                "population_definition": definition,
+                "units": UNITS,
+                "legal_entities": ENTITIES,
+                "available_at": available_at,
+                "claims_known_on": available_at,
+                "members": pin(root, members),
+            }
+        )
+    contract = {
+        "schema_version": "1.0.0",
+        "edition_id": "SH-COMPANY-2026-09-15",
+        "version": version,
+        "status": "ACCEPTED_SCOPED_EDITION" if accepted else "REVIEW_CANDIDATE",
+        "source_commit_required": revision,
+        "scope": "Seven business lines and corporate: August completed-period packaging, "
+        "September events through September 14 America/Los_Angeles, and separately "
+        "identified forecasts.",
+        "limitations": [
+            "Synthetic company evidence, not actual registration, filings, payments or "
+            "an audit opinion.",
+            "Source status and the release exception register govern every claim; acceptance of "
+            "this package does not convert OPEN records, forecasts or review proposals into facts.",
+            "Engineering and original-artifact residuals remain at their precise recorded scope.",
+            "The active portal's live services and private evaluator data are outside "
+            "this package; "
+            "only the documented isolated software exercises are demonstrated.",
+            "Hash agreement establishes byte identity, not factual completeness or "
+            "independent confirmation.",
+        ],
+        "allowed_joins": [
+            "Existing stable record/person/position/asset/contract/source IDs within "
+            "their declared populations.",
+            "Financial scenario + legal entity + effective period + journal/source ID; "
+            "never add consolidated, legal-book, unit or duplicate-format "
+            "representations together.",
+            "Workforce person_id + effective event interval + legal employer; "
+            "positions, directors and FTE remain distinct.",
+            "Evidence/source relationships preserve available_at, acceptance date and "
+            "access scope; "
+            "no latest-version fallback into an earlier known-on view.",
+        ],
+        "historical_zip_exclusions": excluded,
+        "required_components": [c["id"] for c in components],
+        "components": components,
+    }
+    validate_contract(contract)
+    return contract
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--root", type=Path, default=Path.cwd())
+    parser.add_argument("--available-at", required=True)
+    parser.add_argument("--version", required=True)
+    parser.add_argument("--accepted", action="store_true")
+    parser.add_argument("--output", required=True, type=Path)
+    args = parser.parse_args()
+    if args.output.exists():
+        raise EditionError("New immutable contract filename required")
+    contract = generate(args.root.resolve(), args.available_at, args.version, args.accepted)
+    args.output.parent.mkdir(parents=True, exist_ok=True)
+    args.output.write_bytes(encoded(contract))
+    print(
+        json.dumps(
+            {
+                "components": len(contract["components"]),
+                "members": sum(len(c["members"]) for c in contract["components"]),
+            }
+        )
+    )

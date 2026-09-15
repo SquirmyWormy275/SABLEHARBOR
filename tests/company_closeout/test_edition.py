@@ -67,6 +67,30 @@ def test_independent_import_and_reproducible_archive(source, tmp_path):
     assert (tmp_path / "one.zip").read_bytes() == (tmp_path / "two.zip").read_bytes()
 
 
+def test_wrong_source_revision_rejected(source, tmp_path):
+    root, path, contract = source
+    contract["source_commit_required"] = "0" * 40
+    path.write_bytes(encoded(contract))
+    with pytest.raises(EditionError, match="another source revision"):
+        build(root, path, tmp_path / "edition")
+
+
+def test_manifest_revision_cannot_override_pinned_source(source, tmp_path):
+    root, path, contract = source
+    contract["source_commit_required"] = subprocess.check_output(
+        ["git", "-C", str(root), "rev-parse", "HEAD"], text=True
+    ).strip()
+    path.write_bytes(encoded(contract))
+    destination = tmp_path / "edition"
+    build(root, path, destination)
+    manifest_path = destination / "MANIFEST.json"
+    manifest = json.loads(manifest_path.read_bytes())
+    manifest["source_commit"] = "0" * 40
+    manifest_path.write_bytes(encoded(manifest))
+    with pytest.raises(EditionError, match="source revision contradicts"):
+        verify(destination)
+
+
 @pytest.mark.parametrize(
     "fault", ["duplicate", "omitted", "future", "private", "traversal", "stale"]
 )

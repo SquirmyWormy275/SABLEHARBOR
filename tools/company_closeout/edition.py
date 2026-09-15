@@ -102,6 +102,8 @@ def build(root: Path, contract_path: Path, destination: Path) -> dict:
     revision = subprocess.check_output(
         ["git", "-C", str(root), "rev-parse", "HEAD"], text=True
     ).strip()
+    if contract.get("source_commit_required", revision) != revision:
+        raise EditionError("Contract pins another source revision")
     dirty = bool(
         subprocess.check_output(
             ["git", "-C", str(root), "status", "--porcelain"], text=True
@@ -144,6 +146,11 @@ def verify(directory: Path) -> dict:
         raise EditionError("Contract changed")
     contract = json.loads(contract_bytes)
     validate_contract(contract)
+    if (
+        contract.get("source_commit_required", manifest["source_commit"])
+        != manifest["source_commit"]
+    ):
+        raise EditionError("Receipt source revision contradicts contract")
     for key in ("edition_id", "version", "status", "scope", "limitations"):
         if manifest[key] != contract[key]:
             raise EditionError("Receipt metadata contradicts contract")
