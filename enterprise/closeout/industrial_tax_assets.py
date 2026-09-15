@@ -12,10 +12,71 @@ ROOT = Path(__file__).resolve().parents[2]
 SOURCE = Path(__file__).with_name("source") / "industrial_tax_cohorts.json"
 
 
+def validate_components(source, finance):
+    """Tie independent component buckets to retained acquisition source amounts."""
+    mapping = {
+        "ARU-TRACK": "track_bridges_culverts",
+        "ARU-TERMINAL": "terminals_warehouses",
+        "ARU-MOBILE": "locomotives_trucks_equipment",
+    }
+    expected = {
+        group: D(
+            str(
+                next(
+                    r["fair_value"]
+                    for r in finance["ppa_assets"]
+                    if r["asset_class"] == asset_class
+                )
+            )
+        )
+        for group, asset_class in mapping.items()
+    }
+    expected["LEASE"] = D(str(finance["transaction"]["retained_leases"]))
+    actual = defaultdict(D)
+    ids = set()
+    for row in source["aru_initial_components"]:
+        if row["id"] in ids:
+            raise ValueError("Duplicate acquired tax component")
+        ids.add(row["id"])
+        actual[row["book_group"]] += D(row["cost_usd"])
+    if dict(actual) != expected:
+        raise ValueError("Acquired tax component buckets differ from source asset population")
+
+
+def validate_card_history(rows):
+    """One paid tranche keeps identity, gross cost and one supported service gate."""
+    keys = set()
+    identity = None
+    service = None
+    for row in rows:
+        key = (int(row["year"]), int(row["month"]))
+        if key in keys:
+            raise ValueError("Duplicate forecast tax asset period")
+        keys.add(key)
+        current = (row["entity"], row["project_id"], D(str(row["gross_usd"])))
+        if identity is not None and current != identity:
+            raise ValueError("Forecast paid tranche identity or cost changed")
+        identity = current
+        period = row["actual_conditional_service_period"]
+        if row["asset_status"] == "CONSTRUCTION_IN_PROGRESS":
+            if period not in {"", "NOT_IN_SERVICE", "NONE"} or service is not None:
+                raise ValueError("Forecast CIP has an inconsistent service state")
+        elif row["asset_status"] == "CONDITIONAL_IN_SERVICE":
+            if period in {"", "NOT_IN_SERVICE", "NONE"}:
+                raise ValueError("Forecast in-service asset lacks service period")
+            actual_service = tuple(map(int, period.split("-")))
+            if actual_service > key or (service is not None and actual_service != service):
+                raise ValueError("Forecast service date is future or changes")
+            service = actual_service
+        else:
+            raise ValueError("Unknown forecast tax asset status")
+
+
 def build(forecast_result):
     source = json.loads(SOURCE.read_text())
     finance = json.loads((ROOT / "industrial/source/finance.json").read_text())
     operations = json.loads((ROOT / "industrial/source/operations.json").read_text())
+    validate_components(source, finance)
     history = mine_history()
     cohorts = []
 
@@ -125,6 +186,7 @@ def build(forecast_result):
     }
     for (scenario, identifier), rows in by_asset.items():
         rows.sort(key=lambda r: (int(r["year"]), int(r["month"])))
+        validate_card_history(rows)
         active = next(
             (
                 r
@@ -139,7 +201,9 @@ def build(forecast_result):
             active = rows[-1]
             service_year, service_month = 2032, 1
         else:
-            service_year, service_month = int(active["year"]), int(active["month"])
+            service_year, service_month = map(
+                int, active["actual_conditional_service_period"].split("-")
+            )
         project = active["project_id"]
         if project not in projects:
             raise ValueError("Unclassified industrial project tax cohort")
