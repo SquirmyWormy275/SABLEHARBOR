@@ -58,8 +58,9 @@ this candidate before acceptance; no dilution/removal is authorized by this draf
 
 After adoption and reconciliation of governing instruments, a voluntary proportional
 paid-in contribution can increase monetary capital accounts without issuing new units:
-request × established participating-unit share, half-even cash rounding with the final
-cent residual allocated by a stated largest-remainder rule. Capacity, authorization,
+request × established participating-unit share, initially rounded down to cents;
+remaining cents go to the largest fractional remainders, with stable holder-ID tie
+breaking. This matches the reviewable request generator. Capacity, authorization,
 request, due date, payment and settlement remain separate. Requests are not compulsory;
 nonpayment creates a funding shortfall without forfeiture, dilution or another holder's
 cash. Retained supported debt is unaffected. No guaranteed sovereignty or attainment
