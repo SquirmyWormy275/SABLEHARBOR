@@ -232,3 +232,63 @@ contract field absent from the owned-site schema; the corrected validator tests
 owned-site operation and retains contract-state checks only for provider sites.
 All declared site/contract checks then passed. SH-C05 remains bounded where actual
 occurrence populations, authority details or performance are explicitly missing.
+
+## August fictional instrument and performance successor
+
+`synthetic_permit_instruments_august.json` adds expressly authored instrument terms
+and evidence, available September 15, for a finite August scope over all 14 existing
+fictional permit identities. It does not represent issuance by an actual regulator,
+change a mine right, expand a facility or authorize uranium transport. The initial
+census's missing-condition assessment remains inspectable as the earlier review;
+this successor resolves selected conditions through newly authored fictional detail.
+
+There are **204 condition occurrences**: 196 performed, three failed then corrected,
+two missing-evidence, two performed with unresolved exceptions and one blocked.
+Four rows join the existing four workplace examinations; they are **not four new
+exams**. Radiation accountability is 128 employees/badges, not 128 numeric dose
+measurements. A missing result is not zero exposure. Inspectors/reviewers are named
+synthetic role-holders; their review here checks the condition record, not a
+professional certification of radiological, engineering or legal compliance.
+
+MW-17 investigation remains open. Physical Cell 1 walkovers do not clear groundwater
+trends or establish the pathway. The selected uranium shipment gate remains blocked;
+this is not a claim that the annual source model had zero sales. Bond-face evidence
+and radon category/phase-area evidence remain separate precise residuals. The
+$25 million current closure estimate and $16 million opening accounting ARO are not
+asserted bond values. Two future duties and one explicitly declared zero-occurrence
+change-request population are separate from performed counts. Other historical
+periods and unselected conditions remain outside this completed evidence population.
+
+```sh
+python -m enterprise.ccf.company_closeout.instruments
+python -m unittest enterprise.ccf.company_closeout.test_instruments -v
+```
+
+## CCF denominator and risk reconciliation
+
+`risk_mapping_supplement.json` supplies dated primary risk relationships for exactly
+the 15 native controls whose original risk list was empty: ADV-001–004, CRD-001–004,
+ETH-001–004, PRD-002, PRD-004 and SEC-006 (all with `SH-` prefix). Each maps to an
+existing enterprise risk family with a control-specific rationale. It supplements
+the original matrix after September 15 availability; it does not backdate its
+September 2/11 records, accept external framework equivalence or approve local
+applicability. The composed mapping has zero unmapped native controls while the
+historical native-only count remains 15.
+
+| Population | Refreshed scope/count | Meaning |
+|---|---|---|
+| Native preparation | 166 controls; 1,660 boundary rows still PENDING_LOCAL_REVIEW | Proposed applicability, not completed controls |
+| Operational reference baseline | 70 controls × three boundaries = 210 plans | Existing documented SOC2/HIPAA reference selection; legal HIPAA role still factual |
+| Operational reference with all extensions | 86 controls × three boundaries = 258 plans | Existing selectable ISO27001/ISO42001/C5 reference scope |
+| Automated adapters | 24 | Recounted executable adapter inventory; manual duties still required |
+| Business control exercise | 42 control/unit combinations × three scenarios × 60 months = 7,560 | Recounted conditional 2027–2031 expected occurrences; not August actuals |
+| Company activity review | 30 activity/duty boundaries across seven units and corporate | Separate source census; neither native boundaries nor performed occurrences |
+| August permit successor | 14 conditions / 204 declared occurrences | Newly authored completed-period condition evidence, with adverse states preserved |
+
+Native, adapter and forecast denominators are recomputed by `instruments.report()`.
+70/86 and 210/258 are the current operational README's documented selection counts;
+this lane does not claim a fresh external normative-source rebuild of that reference
+assessment. Exact source/risk and business-interface hashes accompany the report.
+The 1,660 local-review decisions are not replaced wholesale by this company's 30
+activity rows or 204 permit checks. Reference framework prerequisites and qualified
+human review remain explicit at their original scope.
