@@ -91,7 +91,7 @@
       "provision": "Metropolis combined rate7.25% fromJuly1 2026",
       "version": "FY2026-26-A",
       "accessed_on": "2026-09-15",
-      "analysis": "Metropolis existingreceiver city now expressly authored; July1 2026 combined7.25% applies to August population."
+      "analysis": "The existing receiver municipality is now expressly authored as Metropolis outside special business districts. The July 1, 2026 combined rate of 7.25% applies to August."
     },
     {
       "id": "IL-SELLER-BURDEN",
@@ -107,7 +107,7 @@
       "provision": "86Ill130.401(a)",
       "version": "October2 2000 amendment; current text",
       "accessed_on": "2026-09-15",
-      "analysis": "Receiptbasis preferred; writtennotice for gross-sales reporting change. Bookaccrual cannotprove statutoryreporting orpayment."
+      "analysis": "Receipt reporting is preferred; a change to gross-sales reporting requires written notice. Book accrual does not prove a filed return or payment."
     },
     {
       "id": "IL-RETURN",
@@ -1380,11 +1380,11 @@
     "legal_book": "RWH",
     "effective_date": "2026-08-31",
     "scenario": "completed-period-reconstruction",
-    "finance_carryforward": "All successors carrying the selected2026 books; do not inject into2027FF003 or duplicate original mineral taxes.",
+    "finance_carryforward": "Carry the selected 2026 legal books into their successors. Do not duplicate this adjustment, the 2027 FF-003 seller tax or original mineral taxes.",
     "settlement_state": "UNREMITTED_NO_CASH_ENTRY",
     "filing_state": "PREPARATION_REQUIRED_NOT_SUBMITTED",
     "rounding": "Each invoice principal multiplied by0.0725; roundhalfup cents; sumthree independently rounded invoices. No tax-inclusive divisor because existing invoice has no tax-included statement.",
-    "period_boundary": "August-only measurement; other2026month potentialobligations require separate source population reperform, not automatic multiplication by12."
+    "period_boundary": "August is the specifically measured current population. Reperform other months from native sources under period_contract_2026; do not multiply August by twelve."
   },
   "september_exclusion": {
     "shipment_id": "RW-SHIP-202609-01",
@@ -1406,7 +1406,7 @@
     "affected_claim": "Three utility tax obligations now measured; finance must post designated adjustment once and preserve payable until supported settlement.",
     "state_rate_component_usd": "155989.56",
     "metropolis_illustration_usd": "180947.89",
-    "locality_state": "Newly authored September15 jurisdiction precision: existing external conversion delivery point is within Metropolis, Illinois; no new operator, license, SH site or surveyed coordinates."
+    "locality_state": "Newly authored September 15 precision places the existing external conversion delivery point in Metropolis, Illinois, outside a special business district. No operator, government license, SH site or survey is created."
   },
   "rejected_certificates": [
     {
@@ -1506,10 +1506,10 @@
       "UCA-2024-11",
       "UCA-2025-03"
     ],
-    "trader_exclusion": "SPOT-2026-01 is not a utility own-use sale; review resale certificate scope for eachadditionalperiod before exempting it. Augustcertificate alone is not a yearlong blanket.",
+    "trader_exclusion": "SPOT-2026-01 is a trader sale. Its August certificate is not a yearlong exemption; each additional period needs applicable resale evidence.",
     "receiver_jurisdiction": "Metropolis, Illinois, outside special business districts",
-    "own_use_terms": "Three acceptedutilityprocurementcontracts purchase for own-use through downstream tollprocessing; no unsupported swaps/affiliates. Existingcontractprice maintained; seller bears uncollectedROT absent supportedcustomerreimbursement.",
-    "population_contract": "Finance must join each2026nativeinvoice/revenue source to contract, legalissuer, sale/invoice date, scenario and principal. Reperform monthlyamounts; do not useAugustsum as forcedallmonthvalue. Revenuecalendar fromacceptedannual equal-monthsource is reconstruction, notphysicalshipmentproof. Historicalopening AR invoiceallocations are not new2026revenue and cannotbe taxedagain as anewinvoice.",
+    "own_use_terms": "The three utility contracts purchase for own use through downstream toll processing. No swap or affiliate is assumed. Existing prices remain; RWH bears uncollected ROT unless a customer reimbursement right is separately supported.",
+    "population_contract": "Join each native 2026 invoice or revenue source to contract, legal issuer, sale date, scenario and principal. Reperform monthly amounts. Retained annual equal-month allocations are financial reconstruction, not physical shipment evidence. Opening receivable invoices are not new revenue and must not create a second tax accrual.",
     "periods": [
       {
         "period": "2026-01",
@@ -1608,11 +1608,11 @@
         "authority_id": "IL-LOCAL-ILLUSTRATION"
       }
     ],
-    "book_measurement": "Accrue sellerexpense and taxobligation againsteachnative saleprincipal atperiodrate, invoicehalf-upcents. August3specificadjustmentIDsareincludedonce inyearscope, notaddedtwice.",
-    "statutory_reporting": "Grossreceiptsbasis under86Ill130.401 absentan expresslyauthoredwrittenmethodnotice. No suchnotice is claimed. Split bookaccrual into taxoncollectedprincipal andtaxonuncollectedprincipal. Receipts reduceuncollectedtaxclassification, notcreatea secondtaxexpense.",
-    "payment_state": "No remittance is established by invoice, receipt, thisworkpaper or modelcashrowalone; retain authorizations/filing/settlement separately. Existingtaxpayments ifany mustbeseparatelysourceidentified.",
-    "rate_on_later_receipt": "Preserve underlying sale-date rate when reporting a laterreceipt, including preJulytaxableinvoice collectedafterJuly. Keep bill/source datebasis distinctfrom physicalsale datewhereonlycalibrationexists.",
-    "return_rounding": "ST1 whole-dollar reporting per2026instructions requires a separatecents-to-returnbridge; do notround journalcents towhole dollars.",
-    "calendar_owner": "Finance taxcalendar: evaluate monthlyreturns and acceleratedpaymentapplicability fromactualsupportedlookback; thisworkpaperdoesnotdeclareallpaymentsdueonly20th."
+    "book_measurement": "Accrue seller expense and tax obligation against each native sale principal at its period rate; round each invoice half-up to cents. The three August adjustment IDs belong in the annual population exactly once.",
+    "statutory_reporting": "Use gross-receipts reporting under 86 Ill. Code 130.401 absent a written method-change notice. No notice is claimed. Separate tax on collected and uncollected principal. Collection changes the reporting classification; it does not create another tax expense.",
+    "payment_state": "Invoice, customer receipt and workpaper do not prove remittance. Preserve approval, filing and settlement separately. Any existing tax payment must have its own identified source.",
+    "rate_on_later_receipt": "Preserve the underlying sale-date rate on later collections, including pre-July invoices collected after July. Distinguish invoice dates from physical sale dates where only financial calibration exists.",
+    "return_rounding": "ST-1 requires whole-dollar reporting. Retain a separate bridge from journal cents to return dollars.",
+    "calendar_owner": "Finance must assess monthly returns and accelerated payments from the supported lookback population. This workpaper does not declare every payment due only on the twentieth."
   }
 }
