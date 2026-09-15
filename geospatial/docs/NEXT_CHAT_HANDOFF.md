@@ -1,7 +1,9 @@
-# Geo continuation after canon reconciliation
+# Geographic continuation boundary
 
-The rc3 handoff is superseded by [the rc4 closeout matrix](PROGRAM_CLOSEOUT_MATRIX.md). Its exact earlier bytes are preserved in `../history/rc3/docs__NEXT_CHAT_HANDOFF.md` and its original PR commit.
+The [current program matrix](PROGRAM_CLOSEOUT_MATRIX.md) and [delegated canon addendum](../../docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md) control. Do not ask again for fictional site/occupancy choices already accepted there. Preserve all prior source bindings and release bytes.
 
-Current decisions already answer Bedford, the Fort functions, Klein, Kelly Gang Mining, Demotte, Taylor candidate A, current BS&T mileage/branches, current terminals, the modeled truck route, industrial legal identities, and the accepted railway chronology. Do not ask the owner to reapprove those.
+The final decision edition adds three screened footprints, explicit dispositions for all 34 sites/components, three rejected prospects, five non-premises references and six inquiry events. All 78,145 baseline discovery carriers have fixed review dispositions; the ledger records the accepted-main review boundary. Later canon changes require review rather than blanket approval.
 
-Remaining work: exact campuses and host sites; Klein/Fort historical occupancy; Blackridge physical siting; J2 residential campus; provisional/early offices and hosting; early railway/abandoned geometry; final surveying/land/engineering detail; complete semantic adjudication of discovery occurrences. Continue from the explicit source/status/next-action fields. Uranium custody is a separate operating gate and must not be closed by a map.
+Remaining substantive program work is #107 detailed railway/site engineering beyond the existing grade-only synthetic screening; real survey/title/access assertions require actual evidence and are outside fictional delegation. #108 remains dependent on its full program requirements. Runtime, legal publication, billing and external execution stay with their owning sessions. Uranium custody remains independently gated.
+
+Publication and issue closure must use a clean accepted source plus native GIS, browser, manifest and downloaded-release verification. See the release index for actual delivery receipts; implementation files do not establish that publication has occurred.

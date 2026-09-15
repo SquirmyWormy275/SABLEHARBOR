@@ -2,8 +2,8 @@
   "schema_version": "1.0.0",
   "state": "REVIEW_QUEUE_NOT_CANON",
   "baseline": {
-    "coverage_sha256": "a7243cf7f6b89d8dc8e7741c82680c4599e62dfe0bb157069f1bd5fdec336adf",
-    "source_main_sha": "b83e4be2182a5e4143808a3dab5f8d929a133caf"
+    "coverage_sha256": "f9f4d06cb2d01f517d0f1563bc7f5784d464caa994dc792330722d515cac1b82",
+    "source_main_sha": "dff38f04131b8f10cd62b543becb71aec5a7080a"
   },
   "records": [
     {
@@ -33,10 +33,14 @@
           "path": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-03.md",
           "locator": "line:36",
           "source_id": "SRC-1412A4959F32"
+        },
+        {
+          "path": "docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md",
+          "locator": "Selected geographic implementation",
+          "sha256": "f3966c6afbba4a57c394f9662de3ab6bc15ab5df22b5ff3d2df9157203acbf78"
         }
       ],
       "issues": [
-        "#106",
         "#107"
       ],
       "claim_required": false
@@ -68,12 +72,14 @@
           "path": "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md",
           "locator": "line:579",
           "source_id": "SRC-CURRENT-CURRENT-LORE"
+        },
+        {
+          "path": "docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md",
+          "locator": "Current accommodation decisions",
+          "sha256": "f3966c6afbba4a57c394f9662de3ab6bc15ab5df22b5ff3d2df9157203acbf78"
         }
       ],
-      "issues": [
-        "#106",
-        "#106"
-      ],
+      "issues": [],
       "claim_required": false
     },
     {
@@ -103,10 +109,14 @@
           "path": "docs/canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md",
           "locator": "line:75",
           "source_id": "SRC-CURRENT-FORT"
+        },
+        {
+          "path": "docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md",
+          "locator": "Selected geographic implementation",
+          "sha256": "f3966c6afbba4a57c394f9662de3ab6bc15ab5df22b5ff3d2df9157203acbf78"
         }
       ],
       "issues": [
-        "#106",
         "#107"
       ],
       "claim_required": false
@@ -138,12 +148,14 @@
           "path": "docs/canon/DECISION_REGISTER.md",
           "locator": "line:88",
           "source_id": "SRC-A6FFA504C779"
+        },
+        {
+          "path": "docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md",
+          "locator": "Current accommodation decisions",
+          "sha256": "f3966c6afbba4a57c394f9662de3ab6bc15ab5df22b5ff3d2df9157203acbf78"
         }
       ],
-      "issues": [
-        "#106",
-        "#106"
-      ],
+      "issues": [],
       "claim_required": false
     },
     {
@@ -173,10 +185,14 @@
           "path": "docs/canon/CRADLE_CLOSEOUT_2026-09-06.md",
           "locator": "line:136",
           "source_id": "SRC-CURRENT-CRADLE"
+        },
+        {
+          "path": "docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md",
+          "locator": "Selected geographic implementation",
+          "sha256": "f3966c6afbba4a57c394f9662de3ab6bc15ab5df22b5ff3d2df9157203acbf78"
         }
       ],
       "issues": [
-        "#106",
         "#107"
       ],
       "claim_required": false
@@ -207,10 +223,14 @@
           "path": "geospatial/sources/GOVERNING_CANON_ADDENDUM_2026-09-05.md",
           "locator": "section:2.1-2.3",
           "source_id": "SRC-ADDENDUM-20260905"
+        },
+        {
+          "path": "docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md",
+          "locator": "Time and historical representation",
+          "sha256": "f3966c6afbba4a57c394f9662de3ab6bc15ab5df22b5ff3d2df9157203acbf78"
         }
       ],
       "issues": [
-        "#106",
         "#107"
       ],
       "claim_required": false
@@ -242,10 +262,14 @@
           "path": "industrial/source/operations.json",
           "locator": "/geography",
           "source_id": "SRC-CURRENT-OPS"
+        },
+        {
+          "path": "docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md",
+          "locator": "Time and historical representation",
+          "sha256": "f3966c6afbba4a57c394f9662de3ab6bc15ab5df22b5ff3d2df9157203acbf78"
         }
       ],
       "issues": [
-        "#106",
         "#107"
       ],
       "claim_required": false
@@ -277,10 +301,14 @@
           "path": "industrial/source/operations.json",
           "locator": "/facilities/0",
           "source_id": "SRC-CURRENT-OPS"
+        },
+        {
+          "path": "docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md",
+          "locator": "Time and historical representation",
+          "sha256": "f3966c6afbba4a57c394f9662de3ab6bc15ab5df22b5ff3d2df9157203acbf78"
         }
       ],
       "issues": [
-        "#106",
         "#107"
       ],
       "claim_required": false
@@ -311,10 +339,14 @@
           "path": "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md",
           "locator": "line:68",
           "source_id": "SRC-9525A89B2336"
+        },
+        {
+          "path": "docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md",
+          "locator": "External hosts, reference geography and historical cases",
+          "sha256": "f3966c6afbba4a57c394f9662de3ab6bc15ab5df22b5ff3d2df9157203acbf78"
         }
       ],
       "issues": [
-        "#106",
         "#107"
       ],
       "claim_required": false
@@ -345,18 +377,20 @@
           "path": "docs/canon/DECISION_REGISTER.md",
           "locator": "line:27",
           "source_id": "SRC-A6FFA504C779"
+        },
+        {
+          "path": "docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md",
+          "locator": "External hosts, reference geography and historical cases",
+          "sha256": "f3966c6afbba4a57c394f9662de3ab6bc15ab5df22b5ff3d2df9157203acbf78"
         }
       ],
-      "issues": [
-        "#106",
-        "#106"
-      ],
+      "issues": [],
       "claim_required": false
     },
     {
       "scope_id": "SH-SITE-0011",
-      "name": "Reno provisional office",
-      "status": "unresolved",
+      "name": "Reno shared office",
+      "status": "bounded_design_precision",
       "classification": "proposed/unresolved disposition",
       "unresolved_fields": [
         "occupancy_start",
@@ -374,24 +408,28 @@
         "tenure": "APPLICABLE",
         "supported_geometry": "APPLICABLE"
       },
-      "disposition": "Location, dedicated footprint or implementation remains proposed/unresolved; labeled planning disposition preserves the record without claiming occupancy.",
+      "disposition": "Geographic/occupancy disposition accepted: AUTHORED_SHARED_LEASED_OFFICE. Exact architectural fitout remains unspecified; this is a design disposition, not a pending fictional location decision.",
       "provenance": [
         {
           "path": "docs/canon/SABLE_HARBOR_CANONICAL_ARCHITECTURE_HANDOVER.md",
           "locator": "line:655",
           "source_id": "SRC-D038D3A87100"
+        },
+        {
+          "path": "docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md",
+          "locator": "Current accommodation decisions",
+          "sha256": "f3966c6afbba4a57c394f9662de3ab6bc15ab5df22b5ff3d2df9157203acbf78"
         }
       ],
       "issues": [
-        "#106",
         "#107"
       ],
       "claim_required": false
     },
     {
       "scope_id": "SH-SITE-0012",
-      "name": "Elko provisional field office",
-      "status": "unresolved",
+      "name": "Elko shared field office",
+      "status": "bounded_design_precision",
       "classification": "proposed/unresolved disposition",
       "unresolved_fields": [
         "occupancy_start",
@@ -409,24 +447,28 @@
         "tenure": "APPLICABLE",
         "supported_geometry": "APPLICABLE"
       },
-      "disposition": "Location, dedicated footprint or implementation remains proposed/unresolved; labeled planning disposition preserves the record without claiming occupancy.",
+      "disposition": "Geographic/occupancy disposition accepted: AUTHORED_SHARED_LEASED_OFFICE. Exact architectural fitout remains unspecified; this is a design disposition, not a pending fictional location decision.",
       "provenance": [
         {
           "path": "docs/canon/SABLE_HARBOR_CANONICAL_ARCHITECTURE_HANDOVER.md",
           "locator": "line:656",
           "source_id": "SRC-D038D3A87100"
+        },
+        {
+          "path": "docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md",
+          "locator": "Current accommodation decisions",
+          "sha256": "f3966c6afbba4a57c394f9662de3ab6bc15ab5df22b5ff3d2df9157203acbf78"
         }
       ],
       "issues": [
-        "#106",
         "#107"
       ],
       "claim_required": false
     },
     {
       "scope_id": "SH-SITE-0013",
-      "name": "Tucson provisional engineering office",
-      "status": "unresolved",
+      "name": "Tucson shared engineering office",
+      "status": "bounded_design_precision",
       "classification": "proposed/unresolved disposition",
       "unresolved_fields": [
         "occupancy_start",
@@ -444,16 +486,20 @@
         "tenure": "APPLICABLE",
         "supported_geometry": "APPLICABLE"
       },
-      "disposition": "Location, dedicated footprint or implementation remains proposed/unresolved; labeled planning disposition preserves the record without claiming occupancy.",
+      "disposition": "Geographic/occupancy disposition accepted: AUTHORED_SHARED_LEASED_OFFICE. Exact architectural fitout remains unspecified; this is a design disposition, not a pending fictional location decision.",
       "provenance": [
         {
           "path": "docs/canon/SABLE_HARBOR_CANONICAL_ARCHITECTURE_HANDOVER.md",
           "locator": "line:657",
           "source_id": "SRC-D038D3A87100"
+        },
+        {
+          "path": "docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md",
+          "locator": "Current accommodation decisions",
+          "sha256": "f3966c6afbba4a57c394f9662de3ab6bc15ab5df22b5ff3d2df9157203acbf78"
         }
       ],
       "issues": [
-        "#106",
         "#107"
       ],
       "claim_required": false
@@ -461,7 +507,7 @@
     {
       "scope_id": "SH-SITE-0014",
       "name": "J2 Education residential campus and conference center",
-      "status": "unresolved",
+      "status": "bounded_design_precision",
       "classification": "proposed/unresolved disposition",
       "unresolved_fields": [
         "occupancy_start",
@@ -479,16 +525,20 @@
         "tenure": "APPLICABLE",
         "supported_geometry": "APPLICABLE"
       },
-      "disposition": "Location, dedicated footprint or implementation remains proposed/unresolved; labeled planning disposition preserves the record without claiming occupancy.",
+      "disposition": "Geographic/occupancy disposition accepted: RESIDENTIAL_CAMPUS_REGIONAL_PRECISION_ACCEPTED. Exact architectural fitout remains unspecified; this is a design disposition, not a pending fictional location decision.",
       "provenance": [
         {
           "path": "docs/j2/EDUCATION.md",
           "locator": "line:6",
           "source_id": "SRC-A3ABC1DA40B3"
+        },
+        {
+          "path": "docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md",
+          "locator": "Current accommodation decisions",
+          "sha256": "f3966c6afbba4a57c394f9662de3ab6bc15ab5df22b5ff3d2df9157203acbf78"
         }
       ],
       "issues": [
-        "#106",
         "#107"
       ],
       "claim_required": false
@@ -496,7 +546,7 @@
     {
       "scope_id": "SH-SITE-0015",
       "name": "J2 headquarters physical accommodation",
-      "status": "unresolved",
+      "status": "bounded_design_precision",
       "classification": "proposed/unresolved disposition",
       "unresolved_fields": [
         "occupancy_start",
@@ -514,16 +564,20 @@
         "tenure": "APPLICABLE",
         "supported_geometry": "APPLICABLE"
       },
-      "disposition": "Location, dedicated footprint or implementation remains proposed/unresolved; labeled planning disposition preserves the record without claiming occupancy.",
+      "disposition": "Geographic/occupancy disposition accepted: SHARED_HEADQUARTERS_ACCOMMODATION. Exact architectural fitout remains unspecified; this is a design disposition, not a pending fictional location decision.",
       "provenance": [
         {
           "path": "docs/j2/J2_HEADQUARTERS.md",
           "locator": "line:6",
           "source_id": "SRC-0DA566D3CF72"
+        },
+        {
+          "path": "docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md",
+          "locator": "Current accommodation decisions",
+          "sha256": "f3966c6afbba4a57c394f9662de3ab6bc15ab5df22b5ff3d2df9157203acbf78"
         }
       ],
       "issues": [
-        "#106",
         "#107"
       ],
       "claim_required": false
@@ -531,7 +585,7 @@
     {
       "scope_id": "SH-SITE-0016",
       "name": "Alexandria physical hosting",
-      "status": "unresolved",
+      "status": "bounded_design_precision",
       "classification": "proposed/unresolved disposition",
       "unresolved_fields": [
         "occupancy_start",
@@ -555,117 +609,106 @@
           "path": "docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md",
           "locator": "line:352",
           "source_id": "SRC-F57EE60ABBEA"
+        },
+        {
+          "path": "docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md",
+          "locator": "Runtime estate boundary",
+          "sha256": "f3966c6afbba4a57c394f9662de3ab6bc15ab5df22b5ff3d2df9157203acbf78"
         }
       ],
       "issues": [
-        "#106",
         "#107"
       ],
       "claim_required": false
     },
     {
       "scope_id": "SH-SITE-0017",
-      "name": "Foundry/Foundry Field dedicated footprint",
-      "status": "unresolved",
-      "classification": "proposed/unresolved disposition",
-      "unresolved_fields": [
-        "occupancy_start",
-        "occupancy_end",
-        "actual_occupancy",
-        "actual_floor_count",
-        "supported_geometry",
-        "tenure"
-      ],
+      "name": "Foundry / Foundry Field shared accommodation",
+      "status": "open",
+      "classification": "distributed/nonphysical/reference",
+      "unresolved_fields": [],
       "field_applicability": {
-        "occupancy_start": "APPLICABLE",
-        "occupancy_end": "APPLICABLE",
-        "actual_occupancy": "APPLICABLE",
-        "actual_floor_count": "APPLICABLE",
-        "tenure": "APPLICABLE",
-        "supported_geometry": "APPLICABLE"
+        "occupancy_start": "NOT_APPLICABLE",
+        "occupancy_end": "NOT_APPLICABLE",
+        "actual_occupancy": "NOT_APPLICABLE",
+        "actual_floor_count": "NOT_APPLICABLE",
+        "tenure": "NOT_APPLICABLE",
+        "supported_geometry": "NOT_APPLICABLE"
       },
-      "disposition": "Location, dedicated footprint or implementation remains proposed/unresolved; labeled planning disposition preserves the record without claiming occupancy.",
+      "disposition": "Accepted shared organizational accommodation; no separate dedicated building or additional property is established.",
       "provenance": [
         {
           "path": "docs/canon/SABLE_HARBOR_CANONICAL_ARCHITECTURE_HANDOVER.md",
           "locator": "line:1097",
           "source_id": "SRC-D038D3A87100"
+        },
+        {
+          "path": "docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md",
+          "locator": "Current accommodation decisions",
+          "sha256": "f3966c6afbba4a57c394f9662de3ab6bc15ab5df22b5ff3d2df9157203acbf78"
         }
       ],
-      "issues": [
-        "#106",
-        "#107"
-      ],
+      "issues": [],
       "claim_required": false
     },
     {
       "scope_id": "SH-SITE-0018",
-      "name": "Atlas Meridian dedicated footprint",
-      "status": "unresolved",
-      "classification": "proposed/unresolved disposition",
-      "unresolved_fields": [
-        "occupancy_start",
-        "occupancy_end",
-        "actual_occupancy",
-        "actual_floor_count",
-        "supported_geometry",
-        "tenure"
-      ],
+      "name": "Atlas Meridian shared accommodation",
+      "status": "open",
+      "classification": "distributed/nonphysical/reference",
+      "unresolved_fields": [],
       "field_applicability": {
-        "occupancy_start": "APPLICABLE",
-        "occupancy_end": "APPLICABLE",
-        "actual_occupancy": "APPLICABLE",
-        "actual_floor_count": "APPLICABLE",
-        "tenure": "APPLICABLE",
-        "supported_geometry": "APPLICABLE"
+        "occupancy_start": "NOT_APPLICABLE",
+        "occupancy_end": "NOT_APPLICABLE",
+        "actual_occupancy": "NOT_APPLICABLE",
+        "actual_floor_count": "NOT_APPLICABLE",
+        "tenure": "NOT_APPLICABLE",
+        "supported_geometry": "NOT_APPLICABLE"
       },
-      "disposition": "Location, dedicated footprint or implementation remains proposed/unresolved; labeled planning disposition preserves the record without claiming occupancy.",
+      "disposition": "Accepted shared organizational accommodation; no separate dedicated building or additional property is established.",
       "provenance": [
         {
           "path": "docs/canon/DECISION_REGISTER.md",
           "locator": "line:203",
           "source_id": "SRC-A6FFA504C779"
+        },
+        {
+          "path": "docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md",
+          "locator": "Current accommodation decisions",
+          "sha256": "f3966c6afbba4a57c394f9662de3ab6bc15ab5df22b5ff3d2df9157203acbf78"
         }
       ],
-      "issues": [
-        "#106",
-        "#107"
-      ],
+      "issues": [],
       "claim_required": false
     },
     {
       "scope_id": "SH-SITE-0019",
-      "name": "Advisory project hubs/offices",
-      "status": "unresolved",
-      "classification": "proposed/unresolved disposition",
-      "unresolved_fields": [
-        "occupancy_start",
-        "occupancy_end",
-        "actual_occupancy",
-        "actual_floor_count",
-        "supported_geometry",
-        "tenure"
-      ],
+      "name": "Advisory shared and project accommodation",
+      "status": "open",
+      "classification": "distributed/nonphysical/reference",
+      "unresolved_fields": [],
       "field_applicability": {
-        "occupancy_start": "APPLICABLE",
-        "occupancy_end": "APPLICABLE",
-        "actual_occupancy": "APPLICABLE",
-        "actual_floor_count": "APPLICABLE",
-        "tenure": "APPLICABLE",
-        "supported_geometry": "APPLICABLE"
+        "occupancy_start": "NOT_APPLICABLE",
+        "occupancy_end": "NOT_APPLICABLE",
+        "actual_occupancy": "NOT_APPLICABLE",
+        "actual_floor_count": "NOT_APPLICABLE",
+        "tenure": "NOT_APPLICABLE",
+        "supported_geometry": "NOT_APPLICABLE"
       },
-      "disposition": "Location, dedicated footprint or implementation remains proposed/unresolved; labeled planning disposition preserves the record without claiming occupancy.",
+      "disposition": "Accepted shared organizational accommodation; no separate dedicated building or additional property is established.",
       "provenance": [
         {
           "path": "docs/organization/ARU_BST_AND_ADVISORY.md",
           "locator": "line:52",
           "source_id": "SRC-BE31B2023403"
+        },
+        {
+          "path": "docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md",
+          "locator": "Current accommodation decisions",
+          "sha256": "f3966c6afbba4a57c394f9662de3ab6bc15ab5df22b5ff3d2df9157203acbf78"
         }
       ],
-      "issues": [
-        "#106",
-        "#107"
-      ],
+      "issues": [],
       "claim_required": false
     },
     {
@@ -695,10 +738,14 @@
           "path": "industrial/source/operations.json",
           "locator": "/facilities",
           "source_id": "SRC-CURRENT-OPS"
+        },
+        {
+          "path": "docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md",
+          "locator": "External hosts, reference geography and historical cases",
+          "sha256": "f3966c6afbba4a57c394f9662de3ab6bc15ab5df22b5ff3d2df9157203acbf78"
         }
       ],
       "issues": [
-        "#106",
         "#107"
       ],
       "claim_required": false
@@ -730,12 +777,14 @@
           "path": "industrial/source/operations.json",
           "locator": "/contract_facility_assignments",
           "source_id": "SRC-CURRENT-OPS"
+        },
+        {
+          "path": "docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md",
+          "locator": "External hosts, reference geography and historical cases",
+          "sha256": "f3966c6afbba4a57c394f9662de3ab6bc15ab5df22b5ff3d2df9157203acbf78"
         }
       ],
-      "issues": [
-        "#106",
-        "#106"
-      ],
+      "issues": [],
       "claim_required": false
     },
     {
@@ -765,12 +814,14 @@
           "path": "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.md",
           "locator": "line:1337",
           "source_id": "SRC-9525A89B2336"
+        },
+        {
+          "path": "docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md",
+          "locator": "External hosts, reference geography and historical cases",
+          "sha256": "f3966c6afbba4a57c394f9662de3ab6bc15ab5df22b5ff3d2df9157203acbf78"
         }
       ],
-      "issues": [
-        "#106",
-        "#106"
-      ],
+      "issues": [],
       "claim_required": false
     },
     {
@@ -799,18 +850,20 @@
           "path": "docs/canon/CRADLE_CLOSEOUT_2026-09-06.md",
           "locator": "line:49",
           "source_id": "SRC-CURRENT-CRADLE"
+        },
+        {
+          "path": "docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md",
+          "locator": "External hosts, reference geography and historical cases",
+          "sha256": "f3966c6afbba4a57c394f9662de3ab6bc15ab5df22b5ff3d2df9157203acbf78"
         }
       ],
-      "issues": [
-        "#106",
-        "#106"
-      ],
+      "issues": [],
       "claim_required": false
     },
     {
       "scope_id": "SH-SITE-0024",
       "name": "Glasshouse underground trial site",
-      "status": "unresolved",
+      "status": "bounded_design_precision",
       "classification": "proposed/unresolved disposition",
       "unresolved_fields": [
         "occupancy_start",
@@ -828,16 +881,20 @@
         "tenure": "APPLICABLE",
         "supported_geometry": "APPLICABLE"
       },
-      "disposition": "Location, dedicated footprint or implementation remains proposed/unresolved; labeled planning disposition preserves the record without claiming occupancy.",
+      "disposition": "Geographic/occupancy disposition accepted: HISTORICAL_CASE_EXACT_LOCATION_INTENTIONALLY_UNKNOWN. Exact architectural fitout remains unspecified; this is a design disposition, not a pending fictional location decision.",
       "provenance": [
         {
           "path": "docs/canon/DECISION_REGISTER.md",
           "locator": "line:101",
           "source_id": "SRC-A6FFA504C779"
+        },
+        {
+          "path": "docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md",
+          "locator": "External hosts, reference geography and historical cases",
+          "sha256": "f3966c6afbba4a57c394f9662de3ab6bc15ab5df22b5ff3d2df9157203acbf78"
         }
       ],
       "issues": [
-        "#106",
         "#107"
       ],
       "claim_required": false
@@ -852,7 +909,6 @@
         "occupancy_end",
         "actual_occupancy",
         "actual_floor_count",
-        "supported_geometry",
         "tenure"
       ],
       "field_applicability": {
@@ -869,12 +925,14 @@
           "path": "docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05.md",
           "locator": "line:166",
           "source_id": "SRC-748B20676052"
+        },
+        {
+          "path": "docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md",
+          "locator": "External hosts, reference geography and historical cases",
+          "sha256": "f3966c6afbba4a57c394f9662de3ab6bc15ab5df22b5ff3d2df9157203acbf78"
         }
       ],
-      "issues": [
-        "#106",
-        "#106"
-      ],
+      "issues": [],
       "claim_required": false
     },
     {
@@ -904,12 +962,14 @@
           "path": "geospatial/sources/MASTER_EXECUTION_MANDATE.md",
           "locator": "line:2572",
           "source_id": "SRC-40E5C203B8CD"
+        },
+        {
+          "path": "docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md",
+          "locator": "Current accommodation decisions",
+          "sha256": "f3966c6afbba4a57c394f9662de3ab6bc15ab5df22b5ff3d2df9157203acbf78"
         }
       ],
-      "issues": [
-        "#106",
-        "#106"
-      ],
+      "issues": [],
       "claim_required": false
     },
     {
@@ -2775,12 +2835,14 @@
           "path": "docs/canon/CRADLE_CLOSEOUT_2026-09-06.md",
           "locator": "line:95",
           "source_id": "SRC-CURRENT-CRADLE"
+        },
+        {
+          "path": "docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md",
+          "locator": "External hosts, reference geography and historical cases",
+          "sha256": "f3966c6afbba4a57c394f9662de3ab6bc15ab5df22b5ff3d2df9157203acbf78"
         }
       ],
-      "issues": [
-        "#106",
-        "#106"
-      ],
+      "issues": [],
       "claim_required": false
     },
     {
@@ -2809,10 +2871,14 @@
           "path": "docs/canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md",
           "locator": "line:79",
           "source_id": "SRC-CURRENT-FORT"
+        },
+        {
+          "path": "docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md",
+          "locator": "Selected geographic implementation",
+          "sha256": "f3966c6afbba4a57c394f9662de3ab6bc15ab5df22b5ff3d2df9157203acbf78"
         }
       ],
       "issues": [
-        "#106",
         "#107"
       ],
       "claim_required": false
@@ -2843,10 +2909,14 @@
           "path": "docs/canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md",
           "locator": "line:80",
           "source_id": "SRC-CURRENT-FORT"
+        },
+        {
+          "path": "docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md",
+          "locator": "Selected geographic implementation",
+          "sha256": "f3966c6afbba4a57c394f9662de3ab6bc15ab5df22b5ff3d2df9157203acbf78"
         }
       ],
       "issues": [
-        "#106",
         "#107"
       ],
       "claim_required": false
@@ -2877,10 +2947,14 @@
           "path": "docs/canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md",
           "locator": "line:81",
           "source_id": "SRC-CURRENT-FORT"
+        },
+        {
+          "path": "docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md",
+          "locator": "Selected geographic implementation",
+          "sha256": "f3966c6afbba4a57c394f9662de3ab6bc15ab5df22b5ff3d2df9157203acbf78"
         }
       ],
       "issues": [
-        "#106",
         "#107"
       ],
       "claim_required": false
@@ -2911,11 +2985,14 @@
           "path": "docs/canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md",
           "locator": "line:83",
           "source_id": "SRC-CURRENT-FORT"
+        },
+        {
+          "path": "docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md",
+          "locator": "Selected geographic implementation",
+          "sha256": "f3966c6afbba4a57c394f9662de3ab6bc15ab5df22b5ff3d2df9157203acbf78"
         }
       ],
-      "issues": [
-        "#106"
-      ],
+      "issues": [],
       "claim_required": false
     },
     {
@@ -5538,14 +5615,16 @@
           "source_id": "SRC-RUNTIME-20260911"
         },
         {
+          "path": "docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md",
+          "locator": "Runtime estate boundary",
+          "sha256": "f3966c6afbba4a57c394f9662de3ab6bc15ab5df22b5ff3d2df9157203acbf78"
+        },
+        {
           "path": "enterprise/services/source/runtime_sites_2026-09-11.json",
           "locator": "sites/RUNTIME-RENO-COLO"
         }
       ],
-      "issues": [
-        "#106",
-        "#106"
-      ],
+      "issues": [],
       "claim_required": false
     },
     {
@@ -5575,14 +5654,16 @@
           "source_id": "SRC-RUNTIME-20260911"
         },
         {
+          "path": "docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md",
+          "locator": "Runtime estate boundary",
+          "sha256": "f3966c6afbba4a57c394f9662de3ab6bc15ab5df22b5ff3d2df9157203acbf78"
+        },
+        {
           "path": "enterprise/services/source/runtime_sites_2026-09-11.json",
           "locator": "sites/RUNTIME-BOISE-DR"
         }
       ],
-      "issues": [
-        "#106",
-        "#106"
-      ],
+      "issues": [],
       "claim_required": false
     },
     {
@@ -5612,14 +5693,218 @@
           "source_id": "SRC-RUNTIME-20260911"
         },
         {
+          "path": "docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md",
+          "locator": "Runtime estate boundary",
+          "sha256": "f3966c6afbba4a57c394f9662de3ab6bc15ab5df22b5ff3d2df9157203acbf78"
+        },
+        {
           "path": "enterprise/services/source/runtime_sites_2026-09-11.json",
           "locator": "sites/RUNTIME-NN-OWNED-DC"
         }
       ],
       "issues": [
-        "#106",
         "#107"
       ],
+      "claim_required": false
+    },
+    {
+      "scope_id": "SH-PROP-0001",
+      "name": "Cedar Junction processing prospect",
+      "status": "constrained",
+      "classification": "distributed/nonphysical/reference",
+      "unresolved_fields": [],
+      "field_applicability": {
+        "occupancy_start": "NOT_APPLICABLE",
+        "occupancy_end": "NOT_APPLICABLE",
+        "actual_occupancy": "NOT_APPLICABLE",
+        "actual_floor_count": "NOT_APPLICABLE",
+        "tenure": "NOT_APPLICABLE",
+        "supported_geometry": "NOT_APPLICABLE"
+      },
+      "disposition": "Rejected external opportunity; inquiry history creates no company premises or architectural design requirement.",
+      "provenance": [
+        {
+          "path": "industrial/pale_sun/05_FALSE_START_CEDAR_JUNCTION.md",
+          "locator": "line:10",
+          "source_id": "SRC-GFC-PROP-001"
+        }
+      ],
+      "issues": [],
+      "claim_required": false
+    },
+    {
+      "scope_id": "SH-PROP-0002",
+      "name": "Juniper Mesa uranium-property prospect",
+      "status": "constrained",
+      "classification": "distributed/nonphysical/reference",
+      "unresolved_fields": [],
+      "field_applicability": {
+        "occupancy_start": "NOT_APPLICABLE",
+        "occupancy_end": "NOT_APPLICABLE",
+        "actual_occupancy": "NOT_APPLICABLE",
+        "actual_floor_count": "NOT_APPLICABLE",
+        "tenure": "NOT_APPLICABLE",
+        "supported_geometry": "NOT_APPLICABLE"
+      },
+      "disposition": "Rejected external opportunity; inquiry history creates no company premises or architectural design requirement.",
+      "provenance": [
+        {
+          "path": "industrial/pale_sun/06_FALSE_START_JUNIPER_MESA.md",
+          "locator": "line:10",
+          "source_id": "SRC-GFC-PROP-002"
+        }
+      ],
+      "issues": [],
+      "claim_required": false
+    },
+    {
+      "scope_id": "SH-PROP-0003",
+      "name": "Salt Rim recovery-restart prospect",
+      "status": "constrained",
+      "classification": "distributed/nonphysical/reference",
+      "unresolved_fields": [],
+      "field_applicability": {
+        "occupancy_start": "NOT_APPLICABLE",
+        "occupancy_end": "NOT_APPLICABLE",
+        "actual_occupancy": "NOT_APPLICABLE",
+        "actual_floor_count": "NOT_APPLICABLE",
+        "tenure": "NOT_APPLICABLE",
+        "supported_geometry": "NOT_APPLICABLE"
+      },
+      "disposition": "Rejected external opportunity; inquiry history creates no company premises or architectural design requirement.",
+      "provenance": [
+        {
+          "path": "industrial/pale_sun/07_FALSE_START_SALT_RIM.md",
+          "locator": "line:10",
+          "source_id": "SRC-GFC-PROP-003"
+        }
+      ],
+      "issues": [],
+      "claim_required": false
+    },
+    {
+      "scope_id": "SH-REF-0027",
+      "name": "BTC career geography",
+      "status": "constrained",
+      "classification": "distributed/nonphysical/reference",
+      "unresolved_fields": [],
+      "field_applicability": {
+        "occupancy_start": "NOT_APPLICABLE",
+        "occupancy_end": "NOT_APPLICABLE",
+        "actual_occupancy": "NOT_APPLICABLE",
+        "actual_floor_count": "NOT_APPLICABLE",
+        "tenure": "NOT_APPLICABLE",
+        "supported_geometry": "NOT_APPLICABLE"
+      },
+      "disposition": "Event or real-world reference is not an enterprise property and creates no building requirement.",
+      "provenance": [
+        {
+          "path": "industrial/pale_sun/01_VILANDER_BIOGRAPHY.md",
+          "locator": "line:12",
+          "source_id": "SRC-GFC-BIO-001"
+        }
+      ],
+      "issues": [],
+      "claim_required": false
+    },
+    {
+      "scope_id": "SH-REF-0028",
+      "name": "DeMotte / agricultural Midwest biography",
+      "status": "constrained",
+      "classification": "distributed/nonphysical/reference",
+      "unresolved_fields": [],
+      "field_applicability": {
+        "occupancy_start": "NOT_APPLICABLE",
+        "occupancy_end": "NOT_APPLICABLE",
+        "actual_occupancy": "NOT_APPLICABLE",
+        "actual_floor_count": "NOT_APPLICABLE",
+        "tenure": "NOT_APPLICABLE",
+        "supported_geometry": "NOT_APPLICABLE"
+      },
+      "disposition": "Event or real-world reference is not an enterprise property and creates no building requirement.",
+      "provenance": [
+        {
+          "path": "docs/governance/BOARD_AND_CAPITAL_GOVERNANCE_v1.0.1.md",
+          "locator": "line:42",
+          "source_id": "SRC-GFC-BIO-002"
+        }
+      ],
+      "issues": [],
+      "claim_required": false
+    },
+    {
+      "scope_id": "SH-REF-0029",
+      "name": "Kansas State education reference",
+      "status": "constrained",
+      "classification": "distributed/nonphysical/reference",
+      "unresolved_fields": [],
+      "field_applicability": {
+        "occupancy_start": "NOT_APPLICABLE",
+        "occupancy_end": "NOT_APPLICABLE",
+        "actual_occupancy": "NOT_APPLICABLE",
+        "actual_floor_count": "NOT_APPLICABLE",
+        "tenure": "NOT_APPLICABLE",
+        "supported_geometry": "NOT_APPLICABLE"
+      },
+      "disposition": "Event or real-world reference is not an enterprise property and creates no building requirement.",
+      "provenance": [
+        {
+          "path": "docs/governance/BOARD_AND_CAPITAL_GOVERNANCE_v1.0.1.md",
+          "locator": "line:42",
+          "source_id": "SRC-GFC-BIO-003"
+        }
+      ],
+      "issues": [],
+      "claim_required": false
+    },
+    {
+      "scope_id": "SH-REF-0031",
+      "name": "Gid Voss 2018 coal-preparation customer incident",
+      "status": "constrained",
+      "classification": "distributed/nonphysical/reference",
+      "unresolved_fields": [],
+      "field_applicability": {
+        "occupancy_start": "NOT_APPLICABLE",
+        "occupancy_end": "NOT_APPLICABLE",
+        "actual_occupancy": "NOT_APPLICABLE",
+        "actual_floor_count": "NOT_APPLICABLE",
+        "tenure": "NOT_APPLICABLE",
+        "supported_geometry": "NOT_APPLICABLE"
+      },
+      "disposition": "Event or real-world reference is not an enterprise property and creates no building requirement.",
+      "provenance": [
+        {
+          "path": "docs/canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md",
+          "locator": "line:19",
+          "source_id": "SRC-GFC-BIO-004"
+        }
+      ],
+      "issues": [],
+      "claim_required": false
+    },
+    {
+      "scope_id": "SH-REF-0030",
+      "name": "Harvard Business School education reference",
+      "status": "constrained",
+      "classification": "distributed/nonphysical/reference",
+      "unresolved_fields": [],
+      "field_applicability": {
+        "occupancy_start": "NOT_APPLICABLE",
+        "occupancy_end": "NOT_APPLICABLE",
+        "actual_occupancy": "NOT_APPLICABLE",
+        "actual_floor_count": "NOT_APPLICABLE",
+        "tenure": "NOT_APPLICABLE",
+        "supported_geometry": "NOT_APPLICABLE"
+      },
+      "disposition": "Event or real-world reference is not an enterprise property and creates no building requirement.",
+      "provenance": [
+        {
+          "path": "docs/governance/BOARD_AND_CAPITAL_GOVERNANCE_v1.0.1.md",
+          "locator": "line:42",
+          "source_id": "SRC-GFC-BIO-005"
+        }
+      ],
+      "issues": [],
       "claim_required": false
     },
     {

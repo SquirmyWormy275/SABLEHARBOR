@@ -1,0 +1,38 @@
+{
+  "status": "MANUAL_REVIEW_PASS",
+  "scope": "Changed navigation wording at top and rebuild instructions at bottom, desktop/mobile; unchanged long source inventory not re-certified as new content. All16browserjourneys automated full-pageoverflow and link checks.",
+  "evidence": [
+    {
+      "path": "docs/reader/usability/qa/2026-09-13/docs__wiki__Start-Here.md-1280-top.png",
+      "sha256": "9308df1f143ada09900ed1beee3787e2751db2eb14a93d995d2fbaca313a0410"
+    },
+    {
+      "path": "docs/reader/usability/qa/2026-09-13/docs__wiki__Start-Here.md-1280-bottom.png",
+      "sha256": "ad42cbfe5345f7fcb2fcc8dcfe93a30d04116e4bc6f0c5423d8a306b7f1312fc"
+    },
+    {
+      "path": "docs/reader/usability/qa/2026-09-13/docs__wiki__Start-Here.md-390-top.png",
+      "sha256": "b2187bc6ee3d5ce4e57563e40524af2680710be5068f01114c044813bb680c90"
+    },
+    {
+      "path": "docs/reader/usability/qa/2026-09-13/docs__wiki__Start-Here.md-390-bottom.png",
+      "sha256": "47a2c5ed92cfaae3552cdb0a4b82c3c1f8830a7226208f88d39b99ca46c0448d"
+    },
+    {
+      "path": "docs/reader/usability/qa/2026-09-13/docs__reader__transactions__README.md-1280-top.png",
+      "sha256": "7aef92b8f81922206ccc76fac30c389a7bc031a00a0c8111011a4769c60fc35f"
+    },
+    {
+      "path": "docs/reader/usability/qa/2026-09-13/docs__reader__transactions__README.md-1280-bottom.png",
+      "sha256": "d141ef5aa0d1b80ab7b0a7c2a90beca56f32d34097b3fe1a99d0d5e7d0d107ac"
+    },
+    {
+      "path": "docs/reader/usability/qa/2026-09-13/docs__reader__transactions__README.md-390-top.png",
+      "sha256": "9e4eccf3fbec509eb12b77d35ccd3490e133cb8f19410b9b1a07c9bc753012e8"
+    },
+    {
+      "path": "docs/reader/usability/qa/2026-09-13/docs__reader__transactions__README.md-390-bottom.png",
+      "sha256": "61b5a5fdd3bca4647af75273803e04677168aa521bf83de8cd9e741f6e87d7c6"
+    }
+  ]
+}

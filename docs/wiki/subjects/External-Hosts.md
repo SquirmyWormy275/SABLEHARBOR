@@ -14,3 +14,21 @@ Exact price, participation, tonnage and margin in a scenario are numerical assum
 [Existing external-host chart](../../organization/charts/external-cradle-hosts.md)
 
 [Subject directory](README.md) · [Business directory](../businesses/README.md) · [Department directory](../departments/README.md) · [Wiki home](../Home.md)
+
+## Reading guide
+
+Cradle’s host relationships connect its recovery work to someone else’s operating site. Read the technical opportunity alongside the host-rights record and the distinction between ownership, access and a planned installation.
+
+
+## What remains unknown
+
+Host relationships do not establish ownership of the host site. Precise footprints, access and occupancy remain limited by the supporting instruments and issue #106. See the [open questions register](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Open-Questions) for the evidence needed to resolve tracked gaps.
+
+## Related reading
+
+- [Project Cradle](../businesses/Cradle.md)
+- [Office of the General Counsel](../departments/legal.md)
+- [Facilities and workplace services](../departments/facilities.md)
+- [Other external and personal relationships](External-Counterparties.md)
+
+Related reading describes useful connections, not additional reporting lines.

@@ -25,6 +25,8 @@ jobs:
       - run: python -m unittest discover -s tests/wiki
       - name: Export and validate local link targets
         run: python tools/wiki/export.py --revision "$(git rev-parse HEAD)" --output "$RUNNER_TEMP/wiki-export"
+      - name: Audit all composed pages and section links
+        run: python -m tools.wiki.audit --export "$RUNNER_TEMP/wiki-export"
       - uses: actions/upload-artifact@v4
         with:
           name: wiki-export
@@ -58,6 +60,7 @@ jobs:
           GH_TOKEN: ${{ secrets.WIKI_TOKEN }}
         run: |
           python tools/wiki/export.py --revision "$(git rev-parse HEAD)" --output "$RUNNER_TEMP/wiki-export" --sync-to "$RUNNER_TEMP/wiki"
+          python -m tools.wiki.audit --export "$RUNNER_TEMP/wiki-export"
           cd "$RUNNER_TEMP/wiki"
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'

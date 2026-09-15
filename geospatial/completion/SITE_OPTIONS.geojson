@@ -1,0 +1,563 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "SH-SITE-0001-OPTION-1",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -121.4984159798579,
+              38.593960471971826
+            ],
+            [
+              -121.49838165060842,
+              38.59560801619733
+            ],
+            [
+              -121.50132075008877,
+              38.59564569840274
+            ],
+            [
+              -121.50135501220737,
+              38.59399815196906
+            ],
+            [
+              -121.4984159798579,
+              38.593960471971826
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "option_id": "SH-SITE-0001-OPTION-1",
+        "object_id": "SH-SITE-0001",
+        "name": "Sacramento headquarters",
+        "status": "UNSELECTED_ENGINEERING_ALTERNATIVE",
+        "fictionality": "SYNTHETIC_DESIGN_IN_REAL_REFERENCE_CONTEXT",
+        "precision": "DIMENSIONED_DESIGN_NOT_SURVEY",
+        "area_acres": 11.570247933931181,
+        "width_m": 256.032,
+        "depth_m": 182.88,
+        "study_id": "SH-GEO-0001",
+        "projected_epsg": 26910,
+        "reference_access_gap_m": 13.394961,
+        "occupancy_start": null,
+        "occupancy_end": null,
+        "owner_entity": null,
+        "valid_from": null,
+        "valid_to": null,
+        "source_note": "Preserves the approved R01-derived 840 by 600 ft local campus envelope. This placement alternative does not rotate or redraw approved building references.",
+        "unavailable_screens": [
+          "cadastral interests",
+          "building occupancy",
+          "zoning",
+          "floodplain/waterbody polygons",
+          "terrain/geotechnical",
+          "contamination",
+          "utilities",
+          "public-road access permission"
+        ],
+        "ranking": "Shortest straight-line gap to archived ordinary road linework; not a suitability ranking."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SH-SITE-0001-OPTION-2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -121.4868687763415,
+              38.59705577585693
+            ],
+            [
+              -121.48683417933313,
+              38.59870331044927
+            ],
+            [
+              -121.4897733894297,
+              38.59874128519747
+            ],
+            [
+              -121.48980791929834,
+              38.59709374837987
+            ],
+            [
+              -121.4868687763415,
+              38.59705577585693
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "option_id": "SH-SITE-0001-OPTION-2",
+        "object_id": "SH-SITE-0001",
+        "name": "Sacramento headquarters",
+        "status": "UNSELECTED_ENGINEERING_ALTERNATIVE",
+        "fictionality": "SYNTHETIC_DESIGN_IN_REAL_REFERENCE_CONTEXT",
+        "precision": "DIMENSIONED_DESIGN_NOT_SURVEY",
+        "area_acres": 11.570247933931181,
+        "width_m": 256.032,
+        "depth_m": 182.88,
+        "study_id": "SH-GEO-0001",
+        "projected_epsg": 26910,
+        "reference_access_gap_m": 13.959454,
+        "occupancy_start": null,
+        "occupancy_end": null,
+        "owner_entity": null,
+        "valid_from": null,
+        "valid_to": null,
+        "source_note": "Preserves the approved R01-derived 840 by 600 ft local campus envelope. This placement alternative does not rotate or redraw approved building references.",
+        "unavailable_screens": [
+          "cadastral interests",
+          "building occupancy",
+          "zoning",
+          "floodplain/waterbody polygons",
+          "terrain/geotechnical",
+          "contamination",
+          "utilities",
+          "public-road access permission"
+        ],
+        "ranking": "Shortest straight-line gap to archived ordinary road linework; not a suitability ranking."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SH-SITE-0001-OPTION-3",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -121.49754272294305,
+              38.591786551949276
+            ],
+            [
+              -121.49750837640251,
+              38.593434096128185
+            ],
+            [
+              -121.50044738606849,
+              38.5934717984872
+            ],
+            [
+              -121.50048166548554,
+              38.59182425209888
+            ],
+            [
+              -121.49754272294305,
+              38.591786551949276
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "option_id": "SH-SITE-0001-OPTION-3",
+        "object_id": "SH-SITE-0001",
+        "name": "Sacramento headquarters",
+        "status": "UNSELECTED_ENGINEERING_ALTERNATIVE",
+        "fictionality": "SYNTHETIC_DESIGN_IN_REAL_REFERENCE_CONTEXT",
+        "precision": "DIMENSIONED_DESIGN_NOT_SURVEY",
+        "area_acres": 11.570247933931181,
+        "width_m": 256.032,
+        "depth_m": 182.88,
+        "study_id": "SH-GEO-0001",
+        "projected_epsg": 26910,
+        "reference_access_gap_m": 14.729261,
+        "occupancy_start": null,
+        "occupancy_end": null,
+        "owner_entity": null,
+        "valid_from": null,
+        "valid_to": null,
+        "source_note": "Preserves the approved R01-derived 840 by 600 ft local campus envelope. This placement alternative does not rotate or redraw approved building references.",
+        "unavailable_screens": [
+          "cadastral interests",
+          "building occupancy",
+          "zoning",
+          "floodplain/waterbody polygons",
+          "terrain/geotechnical",
+          "contamination",
+          "utilities",
+          "public-road access permission"
+        ],
+        "ranking": "Shortest straight-line gap to archived ordinary road linework; not a suitability ranking."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SH-SITE-0003-OPTION-1",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -79.95962903913392,
+              40.41239292452354
+            ],
+            [
+              -79.95959851588277,
+              40.41437461169785
+            ],
+            [
+              -79.9631339400652,
+              40.41440637349263
+            ],
+            [
+              -79.96316435963959,
+              40.412424684107414
+            ],
+            [
+              -79.95962903913392,
+              40.41239292452354
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "option_id": "SH-SITE-0003-OPTION-1",
+        "object_id": "SH-SITE-0003",
+        "name": "The Fort / Willow",
+        "status": "UNSELECTED_ENGINEERING_ALTERNATIVE",
+        "fictionality": "SYNTHETIC_DESIGN_IN_REAL_REFERENCE_CONTEXT",
+        "precision": "DIMENSIONED_DESIGN_NOT_SURVEY",
+        "area_acres": 16.308955176832914,
+        "width_m": 300,
+        "depth_m": 220,
+        "study_id": "SH-GEO-0002",
+        "projected_epsg": 26917,
+        "reference_access_gap_m": 12.89212,
+        "occupancy_start": null,
+        "occupancy_end": null,
+        "owner_entity": null,
+        "valid_from": null,
+        "valid_to": null,
+        "source_note": "Separate premises from the Klein shop. The Hazelwood study window supplies regional context only; this is not a reuse of the historical shop's property or a claim on Hazelwood Green tenants.",
+        "unavailable_screens": [
+          "cadastral interests",
+          "building occupancy",
+          "zoning",
+          "floodplain/waterbody polygons",
+          "terrain/geotechnical",
+          "contamination",
+          "utilities",
+          "public-road access permission"
+        ],
+        "ranking": "Shortest straight-line gap to archived ordinary road linework; not a suitability ranking."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SH-SITE-0003-OPTION-2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -79.94648675188343,
+              40.408670346258916
+            ],
+            [
+              -79.94645584715764,
+              40.41065202638717
+            ],
+            [
+              -79.94999106171066,
+              40.41068418761481
+            ],
+            [
+              -79.95002186278079,
+              40.4087025052478
+            ],
+            [
+              -79.94648675188343,
+              40.408670346258916
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "option_id": "SH-SITE-0003-OPTION-2",
+        "object_id": "SH-SITE-0003",
+        "name": "The Fort / Willow",
+        "status": "UNSELECTED_ENGINEERING_ALTERNATIVE",
+        "fictionality": "SYNTHETIC_DESIGN_IN_REAL_REFERENCE_CONTEXT",
+        "precision": "DIMENSIONED_DESIGN_NOT_SURVEY",
+        "area_acres": 16.308955176832914,
+        "width_m": 300,
+        "depth_m": 220,
+        "study_id": "SH-GEO-0002",
+        "projected_epsg": 26917,
+        "reference_access_gap_m": 14.054671,
+        "occupancy_start": null,
+        "occupancy_end": null,
+        "owner_entity": null,
+        "valid_from": null,
+        "valid_to": null,
+        "source_note": "Separate premises from the Klein shop. The Hazelwood study window supplies regional context only; this is not a reuse of the historical shop's property or a claim on Hazelwood Green tenants.",
+        "unavailable_screens": [
+          "cadastral interests",
+          "building occupancy",
+          "zoning",
+          "floodplain/waterbody polygons",
+          "terrain/geotechnical",
+          "contamination",
+          "utilities",
+          "public-road access permission"
+        ],
+        "ranking": "Shortest straight-line gap to archived ordinary road linework; not a suitability ranking."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SH-SITE-0003-OPTION-3",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -79.94597605278429,
+              40.411188188072025
+            ],
+            [
+              -79.94594513033044,
+              40.41316986700907
+            ],
+            [
+              -79.94948047606391,
+              40.413202045496384
+            ],
+            [
+              -79.94951129484909,
+              40.411220364319426
+            ],
+            [
+              -79.94597605278429,
+              40.411188188072025
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "option_id": "SH-SITE-0003-OPTION-3",
+        "object_id": "SH-SITE-0003",
+        "name": "The Fort / Willow",
+        "status": "UNSELECTED_ENGINEERING_ALTERNATIVE",
+        "fictionality": "SYNTHETIC_DESIGN_IN_REAL_REFERENCE_CONTEXT",
+        "precision": "DIMENSIONED_DESIGN_NOT_SURVEY",
+        "area_acres": 16.308955176832914,
+        "width_m": 300,
+        "depth_m": 220,
+        "study_id": "SH-GEO-0002",
+        "projected_epsg": 26917,
+        "reference_access_gap_m": 14.740054,
+        "occupancy_start": null,
+        "occupancy_end": null,
+        "owner_entity": null,
+        "valid_from": null,
+        "valid_to": null,
+        "source_note": "Separate premises from the Klein shop. The Hazelwood study window supplies regional context only; this is not a reuse of the historical shop's property or a claim on Hazelwood Green tenants.",
+        "unavailable_screens": [
+          "cadastral interests",
+          "building occupancy",
+          "zoning",
+          "floodplain/waterbody polygons",
+          "terrain/geotechnical",
+          "contamination",
+          "utilities",
+          "public-road access permission"
+        ],
+        "ranking": "Shortest straight-line gap to archived ordinary road linework; not a suitability ranking."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SH-SITE-0005-OPTION-1",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.17102791783881,
+              39.41149478504602
+            ],
+            [
+              -80.17100444317481,
+              39.41347693488752
+            ],
+            [
+              -80.17483744098122,
+              39.41350418676879
+            ],
+            [
+              -80.17486080713633,
+              39.41152203501776
+            ],
+            [
+              -80.17102791783881,
+              39.41149478504602
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "option_id": "SH-SITE-0005-OPTION-1",
+        "object_id": "SH-SITE-0005",
+        "name": "Bedford / Cradle",
+        "status": "UNSELECTED_ENGINEERING_ALTERNATIVE",
+        "fictionality": "SYNTHETIC_DESIGN_IN_REAL_REFERENCE_CONTEXT",
+        "precision": "DIMENSIONED_DESIGN_NOT_SURVEY",
+        "area_acres": 17.939850694516203,
+        "width_m": 330,
+        "depth_m": 220,
+        "study_id": "SH-GEO-BEDFORD-001",
+        "projected_epsg": 26917,
+        "reference_access_gap_m": 12.535116,
+        "occupancy_start": null,
+        "occupancy_end": null,
+        "owner_entity": null,
+        "valid_from": null,
+        "valid_to": null,
+        "source_note": "Fairmont-area development/upgrading center, separate from Demotte. Brownfield condition is a fictional design requirement; no contamination clearance, river berth or rail connection is inferred.",
+        "unavailable_screens": [
+          "cadastral interests",
+          "building occupancy",
+          "zoning",
+          "floodplain/waterbody polygons",
+          "terrain/geotechnical",
+          "contamination",
+          "utilities",
+          "public-road access permission"
+        ],
+        "ranking": "Shortest straight-line gap to archived ordinary road linework; not a suitability ranking."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SH-SITE-0005-OPTION-2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.18123310028685,
+              39.49230093218135
+            ],
+            [
+              -80.18120984795813,
+              39.494283059493284
+            ],
+            [
+              -80.18504728925107,
+              39.494310020849
+            ],
+            [
+              -80.18507043263209,
+              39.49232789164899
+            ],
+            [
+              -80.18123310028685,
+              39.49230093218135
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "option_id": "SH-SITE-0005-OPTION-2",
+        "object_id": "SH-SITE-0005",
+        "name": "Bedford / Cradle",
+        "status": "UNSELECTED_ENGINEERING_ALTERNATIVE",
+        "fictionality": "SYNTHETIC_DESIGN_IN_REAL_REFERENCE_CONTEXT",
+        "precision": "DIMENSIONED_DESIGN_NOT_SURVEY",
+        "area_acres": 17.939850694516203,
+        "width_m": 330,
+        "depth_m": 220,
+        "study_id": "SH-GEO-BEDFORD-001",
+        "projected_epsg": 26917,
+        "reference_access_gap_m": 13.221203,
+        "occupancy_start": null,
+        "occupancy_end": null,
+        "owner_entity": null,
+        "valid_from": null,
+        "valid_to": null,
+        "source_note": "Fairmont-area development/upgrading center, separate from Demotte. Brownfield condition is a fictional design requirement; no contamination clearance, river berth or rail connection is inferred.",
+        "unavailable_screens": [
+          "cadastral interests",
+          "building occupancy",
+          "zoning",
+          "floodplain/waterbody polygons",
+          "terrain/geotechnical",
+          "contamination",
+          "utilities",
+          "public-road access permission"
+        ],
+        "ranking": "Shortest straight-line gap to archived ordinary road linework; not a suitability ranking."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SH-SITE-0005-OPTION-3",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.16300809584074,
+              39.46045444202127
+            ],
+            [
+              -80.16298435283672,
+              39.46243657108707
+            ],
+            [
+              -80.16682002701904,
+              39.462464115532654
+            ],
+            [
+              -80.16684366125006,
+              39.460481984537516
+            ],
+            [
+              -80.16300809584074,
+              39.46045444202127
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "option_id": "SH-SITE-0005-OPTION-3",
+        "object_id": "SH-SITE-0005",
+        "name": "Bedford / Cradle",
+        "status": "UNSELECTED_ENGINEERING_ALTERNATIVE",
+        "fictionality": "SYNTHETIC_DESIGN_IN_REAL_REFERENCE_CONTEXT",
+        "precision": "DIMENSIONED_DESIGN_NOT_SURVEY",
+        "area_acres": 17.939850694516203,
+        "width_m": 330,
+        "depth_m": 220,
+        "study_id": "SH-GEO-BEDFORD-001",
+        "projected_epsg": 26917,
+        "reference_access_gap_m": 13.269885,
+        "occupancy_start": null,
+        "occupancy_end": null,
+        "owner_entity": null,
+        "valid_from": null,
+        "valid_to": null,
+        "source_note": "Fairmont-area development/upgrading center, separate from Demotte. Brownfield condition is a fictional design requirement; no contamination clearance, river berth or rail connection is inferred.",
+        "unavailable_screens": [
+          "cadastral interests",
+          "building occupancy",
+          "zoning",
+          "floodplain/waterbody polygons",
+          "terrain/geotechnical",
+          "contamination",
+          "utilities",
+          "public-road access permission"
+        ],
+        "ranking": "Shortest straight-line gap to archived ordinary road linework; not a suitability ranking."
+      }
+    }
+  ]
+}

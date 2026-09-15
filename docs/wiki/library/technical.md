@@ -6,7 +6,7 @@ Generated file inventory. Includes current and historical records; open the sour
 
 ## `.`
 
-- [Contributing](../../../CONTRIBUTING.md) — MD
+- [Contributing to Sable Harbor](../../../CONTRIBUTING.md) — MD
 - [All Rights Reserved](../../../LICENSE.md) — MD
 - [Maintainer Rules](../../../MAINTAINERS.md) — MD
 - [SABLE HARBOR](../../../README.md) — MD
@@ -70,6 +70,10 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Validator Scope Audit — 2026-09-03](../../internal/VALIDATOR_SCOPE_AUDIT_2026-09-03.md) — MD
 - [Wiki Sync Boundary Review — 2026-09-03](../../internal/WIKI_SYNC_BOUNDARY_REVIEW_2026-09-03.md) — MD
 
+## `docs/internal/company-closeout`
+
+- [PR #145 integration evidence](../../internal/company-closeout/PR145_INTEGRATION.md) — MD
+
 ## `docs/internal/development`
 
 - [Current business and publication alignment delivery](../../internal/development/ALIGNMENT_DELIVERY_2026-09-09.md) — MD
@@ -116,9 +120,11 @@ Generated file inventory. Includes current and historical records; open the sour
 
 - [Business-driven finance releases](../../releases/BUSINESS_FINANCE_RELEASES.md) — MD
 - [Business operations releases](../../releases/BUSINESS_OPERATIONS_RELEASES.md) — MD
+- [Closeout evidence releases](../../releases/CLOSEOUT_EVIDENCE_RELEASES.md) — MD
 - [Facility atlas controlled releases](../../releases/FACILITY_ATLAS_RELEASES.md) — MD
 - [Facility spatial releases](../../releases/FACILITY_SPATIAL_RELEASES.md) — MD
 - [Facility planning workbench releases](../../releases/FACILITY_WORKBENCH_RELEASES.md) — MD
+- [Geographic evidence releases](../../releases/GEOGRAPHIC_EVIDENCE_RELEASES.md) — MD
 - [Industrial case releases](../../releases/INDUSTRIAL_CASE_RELEASES.md) — MD
 - [Runtime estate releases](../../releases/RUNTIME_ESTATE_RELEASES.md) — MD
 
@@ -130,6 +136,10 @@ Generated file inventory. Includes current and historical records; open the sour
 
 - [Enterprise operating and financial models](../../../enterprise/README.md) — MD
 
+## `evidence/closeout`
+
+- [Closeout evidence](../../../evidence/closeout/README.md) — MD
+
 ## `tools/ci`
 
 - [Repository checks](../../../tools/ci/README.md) — MD
@@ -137,6 +147,10 @@ Generated file inventory. Includes current and historical records; open the sour
 ## `tools/documents`
 
 - [Controlled-publication builds](../../../tools/documents/README.md) — MD
+
+## `tools/legal_gaps`
+
+- [Gap instrument publications](../../../tools/legal_gaps/README.md) — MD
 
 ## `tools/wiki`
 

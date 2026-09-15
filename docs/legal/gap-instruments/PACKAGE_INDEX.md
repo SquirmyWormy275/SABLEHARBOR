@@ -1,0 +1,23 @@
+# Draft instrument index
+
+All 17 packages are DRAFT_FOR_REVIEW. Full language, proposed terms and unresolved fields remain in each source.
+
+| Gap / package | Complete document | Structured schedules |
+|---|---|---|
+| LEGAL-GAP-ADVISORY-CONTRACTS — Advisory master services agreement and matter schedules | [Markdown](source/advisory-contracts.md) · [PDF](editions/advisory-contracts.pdf) · [HTML](editions/advisory-contracts.html) | [JSON](source/advisory-contracts.json) · [Excel](editions/advisory-contracts.xlsx) |
+| LEGAL-GAP-BILLING — Foundry Field proposed billing instrument and reconciliation attachment | [Markdown](source/billing.md) · [PDF](editions/billing.pdf) · [HTML](editions/billing.html) | [JSON](source/billing.json) · [Excel](editions/billing.xlsx) |
+| LEGAL-GAP-CARRY — Advisory contractual phantom carry plan — proposed instrument | [Markdown](source/carry.md) · [PDF](editions/carry.pdf) · [HTML](editions/carry.html) | [JSON](source/carry.json) · [Excel](editions/carry.xlsx) |
+| LEGAL-GAP-COLO — Colocation site-order, acceptance and invoice schedules | [Markdown](source/colo.md) · [PDF](editions/colo.pdf) · [HTML](editions/colo.html) | [JSON](source/colo.json) · [Excel](editions/colo.xlsx) |
+| LEGAL-GAP-DEBT-LIENS — ARU credit, security and payoff document drafts | [Markdown](source/debt-liens.md) · [PDF](editions/debt-liens.pdf) · [HTML](editions/debt-liens.html) | [JSON](source/debt-liens.json) · [Excel](editions/debt-liens.xlsx) |
+| LEGAL-GAP-FINANCING-DOCUMENTS — Harrison Vale and Wolf Ridge subscription and rights drafts | [Markdown](source/financing-documents.md) · [PDF](editions/financing-documents.pdf) · [HTML](editions/financing-documents.html) | [JSON](source/financing-documents.json) · [Excel](editions/financing-documents.xlsx) |
+| LEGAL-GAP-FORMATIONS — Industrial company consents and subscription record drafts | [Markdown](source/formations.md) · [PDF](editions/formations.pdf) · [HTML](editions/formations.html) | [JSON](source/formations.json) · [Excel](editions/formations.xlsx) |
+| LEGAL-GAP-HOST-RIGHTS — Cradle host recovery agreement with Kelly Gang Mining and Demotte schedules | [Markdown](source/host-rights.md) · [PDF](editions/host-rights.pdf) · [HTML](editions/host-rights.html) | [JSON](source/host-rights.json) · [Excel](editions/host-rights.xlsx) |
+| LEGAL-GAP-LAND — Northern Nevada land settlement and funding instruction draft | [Markdown](source/land.md) · [PDF](editions/land.pdf) · [HTML](editions/land.html) | [JSON](source/land.json) · [Excel](editions/land.xlsx) |
+| LEGAL-GAP-MARK-CLEARANCE — Sable Harbor Advisory counsel instruction, search record and launch decision form | [Markdown](source/mark-clearance.md) · [PDF](editions/mark-clearance.pdf) · [HTML](editions/mark-clearance.html) | [JSON](source/mark-clearance.json) · [Excel](editions/mark-clearance.xlsx) |
+| LEGAL-GAP-RW-CHRONOLOGY — Red Wash chronology reconciliation and proposed correction instrument | [Markdown](source/rw-chronology.md) · [PDF](editions/rw-chronology.pdf) · [HTML](editions/rw-chronology.html) | [JSON](source/rw-chronology.json) · [Excel](editions/rw-chronology.xlsx) |
+| LEGAL-GAP-RW-TITLE — Red Wash supplemental assignment, consent and title-cure escrow instruments | [Markdown](source/rw-title.md) · [PDF](editions/rw-title.pdf) · [HTML](editions/rw-title.html) | [JSON](source/rw-title.json) · [Excel](editions/rw-title.xlsx) |
+| LEGAL-GAP-TAX-BILLING — Foundry Field tax determination and invoice-change workpaper draft | [Markdown](source/tax-billing.md) · [PDF](editions/tax-billing.pdf) · [HTML](editions/tax-billing.html) | [JSON](source/tax-billing.json) · [Excel](editions/tax-billing.xlsx) |
+| LEGAL-GAP-TAX-FILING — ARU election cooperation and filing-status workpaper draft | [Markdown](source/tax-filing.md) · [PDF](editions/tax-filing.pdf) · [HTML](editions/tax-filing.html) | [JSON](source/tax-filing.json) · [Excel](editions/tax-filing.xlsx) |
+| LEGAL-GAP-TENURE — Sacramento, Fort and Bedford proposed site tenure and access instrument | [Markdown](source/tenure.md) · [PDF](editions/tenure.pdf) · [HTML](editions/tenure.html) | [JSON](source/tenure.json) · [Excel](editions/tenure.xlsx) |
+| LEGAL-GAP-URANIUM-CUSTODY — Conditional future Red Wash product custody and carrier agreement | [Markdown](source/uranium-custody.md) · [PDF](editions/uranium-custody.pdf) · [HTML](editions/uranium-custody.html) | [JSON](source/uranium-custody.json) · [Excel](editions/uranium-custody.xlsx) |
+| LEGAL-GAP-WORKFORCE — ARU individual retention agreements and Tolman consultancy | [Markdown](source/workforce.md) · [PDF](editions/workforce.pdf) · [HTML](editions/workforce.html) | [JSON](source/workforce.json) · [Excel](editions/workforce.xlsx) |

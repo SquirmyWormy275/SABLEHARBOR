@@ -5,6 +5,10 @@ Facility delivery: [controlled release, source commit and checksums](releases/FA
 
 **Index version:** 1.0.18 | **As of:** September 7, 2026
 
+## Draft legal gap instruments — September 12
+
+[17 draft packages](legal/gap-instruments/README.md) provide complete Markdown, corporate PDF/HTML, structured records and financial workbooks where applicable. New terms and designs await exact-file review; the original transaction gap dispositions remain in force. [Open the review index](legal/gap-instruments/review.html).
+
 ## Authority order
 
 1. Accepted controlling canon under `docs/canon/`, including [corporate lore v0.3.1](canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md), the [decision register](canon/DECISION_REGISTER_v0.3.1.md), and dated addenda with their explicit supersession scope. The [September 6 closeout addendum](canon/DECISION_REGISTER_ADDENDUM_2026-09-06_CLOSEOUT.md) controls the four closeout decisions.

@@ -23,10 +23,13 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Demotte Reclamation Services — name and visual identity](../../canon/DEMOTTE_RECLAMATION_NAME_AND_IDENTITY_2026-09-07.md) — MD
 - [Emberline — approved visual identity](../../canon/EMBERLINE_VISUAL_IDENTITY_2026-09-07.md) — MD
 - [Foundry Field evidence packet: exact-file acceptance](../../canon/FINANCE_HUMAN_EVIDENCE_001_ACCEPTANCE_2026-09-11.md) — MD
+- [Foundry Field FF-003 billing adoption](../../canon/FOUNDRY_FIELD_BILLING_ADOPTION_2026-09-13.md) — MD
+- [Geographic and occupancy completion — September 13, 2026](../../canon/GEOGRAPHIC_COMPLETION_2026-09-13.md) — MD
 - [Industrial closeout — corporate, Pale Sun, Red Wash and ARU](../../canon/INDUSTRIAL_CLOSEOUT_2026-09-05.md) — MD
 - [Industrial planning and enterprise successor authority](../../canon/INDUSTRIAL_PLANNING_SUCCESSOR_2026-09-06.md) — MD · [formatted PDF](../../../industrial/planning/publications/SH-IND-PLAN-DEC-002_v2.0.0.pdf)
 - [J2 leadership appointments — September 10, 2026](../../canon/J2_LEADERSHIP_APPOINTMENTS_2026-09-10.md) — MD · [formatted PDF](../../j2/publications/SH-J2-PPL-20260910_v1.0.0.pdf)
 - [Kelly Gang Mining — approved visual identity](../../canon/KELLY_GANG_MINING_VISUAL_IDENTITY_2026-09-07.md) — MD
+- [Klein shop and Fort occupancy continuity](../../canon/KLEIN_FORT_OCCUPANCY_2026-09-13.md) — MD
 - [Klein — name and historical identity](../../canon/KLEIN_NAME_AND_IDENTITY_2026-09-07.md) — MD
 - [Northstar Minerals, Inc. — approved visual identity](../../canon/NORTHSTAR_MINERALS_VISUAL_IDENTITY_2026-09-07.md) — MD
 - [Organization chart design and cleanup](../../canon/ORG_CHART_DESIGN_AND_CLEANUP_2026-09-09.md) — MD

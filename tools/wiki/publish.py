@@ -8,6 +8,7 @@ import subprocess
 import tempfile
 from pathlib import Path
 
+from tools.wiki.audit import audit_export
 from tools.wiki.export import MANIFEST, REPOSITORY, Exporter, sync
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -35,6 +36,9 @@ def publish():
             directory / name for name in ("export", "wiki", "verified")
         )
         expected = Exporter(ROOT, revision).build(exported)
+        report = audit_export(exported)
+        if report["errors"]:
+            raise ValueError(f"Wiki export failed navigation audit: {report}")
         url = f"https://github.com/{REPOSITORY}.wiki.git"
         git("clone", url, str(wiki))
         sync(exported, wiki)
@@ -63,6 +67,8 @@ def publish():
             "source_revision": revision,
             "wiki_commit": git("rev-parse", "HEAD", cwd=verified),
             "verified_pages": len(expected["files"]),
+            "canonical_pages": len(expected["files"]) - len(expected.get("aliases", {})),
+            "historical_addresses": len(expected.get("aliases", {})),
             "url": f"https://github.com/{REPOSITORY}/wiki",
         }
         output = ROOT / "var/wiki-publication.json"

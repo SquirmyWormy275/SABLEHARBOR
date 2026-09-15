@@ -29,6 +29,19 @@ Generated file inventory. Includes current and historical records; open the sour
 
 - [Geographic discovery adjudication](../../../geospatial/adjudication/README.md) — MD
 
+## `geospatial/chronology`
+
+- [Klein shop and Fort continuity — proposed decision](../../../geospatial/chronology/CONTINUITY_PROPOSAL.md) — MD
+- [Geographic history and source review](../../../geospatial/chronology/README.md) — MD
+
+## `geospatial/closeout`
+
+- [Geographic evidence package](../../../geospatial/closeout/README.md) — MD
+
+## `geospatial/completion`
+
+- [Geographic requirements: source review, site alternatives and history](../../../geospatial/completion/README.md) — MD
+
 ## `geospatial/docs`
 
 - [ARU/BS&T geographic implementation summary](../../../geospatial/docs/ARU_BST_GEOGRAPHY_ADDENDUM_IMPLEMENTATION_SUMMARY.md) — MD
@@ -37,9 +50,9 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Cradle geographic supersession — implemented September 7](../../../geospatial/docs/CRADLE_GEOGRAPHY_SUPERSESSION_2026-09-06.md) — MD
 - [Data model and authority](../../../geospatial/docs/DATA_MODEL.md) — MD
 - [Definition of done — reconciled framework](../../../geospatial/docs/DEFINITION_OF_DONE.md) — MD
-- [Geo continuation after canon reconciliation](../../../geospatial/docs/NEXT_CHAT_HANDOFF.md) — MD
+- [Geographic continuation boundary](../../../geospatial/docs/NEXT_CHAT_HANDOFF.md) — MD
 - [Operating-model reconciliation](../../../geospatial/docs/OPERATING_MODEL_RECONCILIATION_20260906.md) — MD
-- [Geo canon reconciliation and program closeout matrix](../../../geospatial/docs/PROGRAM_CLOSEOUT_MATRIX.md) — MD
+- [Geographic program closeout matrix](../../../geospatial/docs/PROGRAM_CLOSEOUT_MATRIX.md) — MD
 - [Provenance and reproducibility](../../../geospatial/docs/PROVENANCE_AND_REPRODUCIBILITY.md) — MD
 - [Red Wash location supersession and Taylor rename](../../../geospatial/docs/RED_WASH_LOCATION_SUPERSESSION_NOTE.md) — MD
 - [Site-selection evidence and current limits](../../../geospatial/docs/SITE_SELECTION_EVIDENCE.md) — MD
@@ -188,6 +201,12 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Facility planning workbench](../../../geospatial/facilities/workbench/README.md) — MD
 - [Evidence intake and review candidates](../../../geospatial/facilities/workbench/README_EVIDENCE.md) — MD
 - [Architectural concept readiness](../../../geospatial/facilities/workbench/README_READINESS.md) — MD
+
+## `geospatial/finalization`
+
+- [Geographic completion authority — September 13, 2026](../../../geospatial/finalization/AUTHORIZATION.md) — MD
+- [Geographic decisions and final source review](../../../geospatial/finalization/README.md) — MD
+- [Source interpretation and geographic crosswalk](../../../geospatial/finalization/SOURCE_REVIEW.md) — MD
 
 ## `geospatial/history`
 
@@ -393,6 +412,7 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Geographic decision register v0.1](../../../geospatial/registers/GEOGRAPHIC_DECISION_REGISTER_v0.1.md) — MD
 - [Open geographic questions v0.1](../../../geospatial/registers/OPEN_GEOGRAPHIC_QUESTIONS_v0.1.md) — MD
 - [Provenance register](../../../geospatial/registers/PROVENANCE_REGISTER.md) — MD
+- [Geographic registers](../../../geospatial/registers/README.md) — MD
 
 ## `geospatial/releases`
 

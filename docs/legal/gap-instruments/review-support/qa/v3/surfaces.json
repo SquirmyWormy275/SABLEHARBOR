@@ -1,0 +1,413 @@
+{
+  "status": "REQUIRES_MANUAL_INSPECTION",
+  "surfaces": [
+    {
+      "path": "START_HERE.html",
+      "sha256": "4289df460429cfe7204b730b504eb10ac888d4a7e0ed301318ab1a39e683dc8d",
+      "desktop_viewports": 2,
+      "mobile_overflow": false,
+      "contacts": [
+        {
+          "file": "01-contact-000.png",
+          "sha256": "3b08d62848add68162315d43a3e86cb5b6cfe2e1f028466963f35577c4f51720"
+        }
+      ]
+    },
+    {
+      "path": "docs/legal/gap-instruments/PRACTICAL_WORK.md.html",
+      "sha256": "dd58cfbe12d58f8d384e521d686434c69c97d230476d14d5eac8821379c6af12",
+      "desktop_viewports": 2,
+      "mobile_overflow": false,
+      "contacts": [
+        {
+          "file": "02-contact-000.png",
+          "sha256": "84db4709360ba781f874dfc922024e5a6707f81d5bb6ec3ddbdab47db1d91cbf"
+        }
+      ]
+    },
+    {
+      "path": "docs/legal/gap-instruments/accounting/LINKS.md.html",
+      "sha256": "05aad8190fb9fe0216e4b229e29591f94f26c0e74c422ed9b09ef140a8996746",
+      "desktop_viewports": 17,
+      "mobile_overflow": false,
+      "contacts": [
+        {
+          "file": "03-contact-000.png",
+          "sha256": "4c7e3d5f06ca4c7907854ab148c4aae4ab70060ad89e6ad697e44c51114b53c7"
+        },
+        {
+          "file": "03-contact-004.png",
+          "sha256": "da8c5b281f95154c9c623705feefa1d46446a166832ef0d9965d7c56a626f0c9"
+        },
+        {
+          "file": "03-contact-008.png",
+          "sha256": "8409b3eb7b9c31c5f5cc3c63b8371b579a1c19f4e5abe4663a651cf8e9ca2a96"
+        },
+        {
+          "file": "03-contact-012.png",
+          "sha256": "77af311c8a4ea470abb7da7ac69d44c0326076860dfff71b4bae7c1ff6e79205"
+        },
+        {
+          "file": "03-contact-016.png",
+          "sha256": "9d22ab9692756fec93c424972277aa6a8b4cc4f3e18ef96c003f8147b9b7374e"
+        }
+      ]
+    },
+    {
+      "path": "docs/legal/gap-instruments/accounting/README.md.html",
+      "sha256": "1c288f8d27924855d7c887096e6be9ed5c440a9851b9e951be9c64555d746a55",
+      "desktop_viewports": 2,
+      "mobile_overflow": false,
+      "contacts": [
+        {
+          "file": "04-contact-000.png",
+          "sha256": "5e2b2a321a441e11bc7c1a0e3ac40f0f39caaf2420d9678d9d8ea1a7dda945c8"
+        }
+      ]
+    },
+    {
+      "path": "docs/legal/gap-instruments/decision-import/README.md.html",
+      "sha256": "414b006d2b5b79ccc4a6b13ef7b55f8dcd55e5d33127c8239743e130cc2eca80",
+      "desktop_viewports": 3,
+      "mobile_overflow": false,
+      "contacts": [
+        {
+          "file": "05-contact-000.png",
+          "sha256": "ade84e848417b7e1f81e44016fa2fd7d8d304001c6000edaebb3cfe9cbf050e1"
+        }
+      ]
+    },
+    {
+      "path": "docs/legal/gap-instruments/practice/README.md.html",
+      "sha256": "6ecbb7fd19fd618b3111631b4550944939c29722e3d94d71415a2deb6d9d2b46",
+      "desktop_viewports": 2,
+      "mobile_overflow": false,
+      "contacts": [
+        {
+          "file": "06-contact-000.png",
+          "sha256": "ae443138f008a98f6c0023ab88cd477bf62d4e684e298c9d2202c02b8b81fa1d"
+        }
+      ]
+    },
+    {
+      "path": "docs/legal/gap-instruments/practice/acquisition/TASK.md.html",
+      "sha256": "476c824c2cba2c59de321ddd8b04d0b61d3539492cb6d83cf2813871cb3bcaf8",
+      "desktop_viewports": 2,
+      "mobile_overflow": false,
+      "contacts": [
+        {
+          "file": "07-contact-000.png",
+          "sha256": "0469070bc98cc45d63d445da635cf5ca95f009617f0384f14addd22514b855be"
+        }
+      ]
+    },
+    {
+      "path": "docs/legal/gap-instruments/practice/acquisition/WORKED.md.html",
+      "sha256": "62ff37ddc205800ecc2599c642b01878b69aaf6e7d782d074fcc82a8d931efba",
+      "desktop_viewports": 3,
+      "mobile_overflow": false,
+      "contacts": [
+        {
+          "file": "08-contact-000.png",
+          "sha256": "276b2de67ad82b2d77bb106a728d26c21ea4978762d438004c138ba3cc29fddd"
+        }
+      ]
+    },
+    {
+      "path": "docs/legal/gap-instruments/practice/debt/TASK.md.html",
+      "sha256": "925ddaecf91dd6e8a5e10e0ed1f8f0b5d4f7876c232af57ac3935e9ac17625f1",
+      "desktop_viewports": 2,
+      "mobile_overflow": false,
+      "contacts": [
+        {
+          "file": "09-contact-000.png",
+          "sha256": "4404c0fda5e92160987f3055b11935aa22c5b864001434236a4faca93bf6c142"
+        }
+      ]
+    },
+    {
+      "path": "docs/legal/gap-instruments/practice/debt/WORKED.md.html",
+      "sha256": "ec46c59a25d53986beb65a877ddfd11502ac1c88d8d6e94c45a15e51a21180b6",
+      "desktop_viewports": 3,
+      "mobile_overflow": false,
+      "contacts": [
+        {
+          "file": "10-contact-000.png",
+          "sha256": "8f8b06b0687de25fc7d9fe088d6f422d23352ce075a8f725bc2b3accfc08a97a"
+        }
+      ]
+    },
+    {
+      "path": "docs/legal/gap-instruments/practice/legal-due-diligence/TASK.md.html",
+      "sha256": "dd07c2342c43a8c68c2b52b5cbcb47e2cc19d0fb0199da2745b9715db41e12c8",
+      "desktop_viewports": 2,
+      "mobile_overflow": false,
+      "contacts": [
+        {
+          "file": "11-contact-000.png",
+          "sha256": "dd33bf5e5314d8b418443d7749ec5a0f8d1729ff87fead8be78946f14e775c67"
+        }
+      ]
+    },
+    {
+      "path": "docs/legal/gap-instruments/practice/legal-due-diligence/WORKED.md.html",
+      "sha256": "4979548c1bdb933077d3bedc5145d91dadfbf3de2c78837d824ddc50a952acba",
+      "desktop_viewports": 3,
+      "mobile_overflow": false,
+      "contacts": [
+        {
+          "file": "12-contact-000.png",
+          "sha256": "cc748776f019450c5746848863ef24ce993cdb063dff93c5bdb06ae15bca0574"
+        }
+      ]
+    },
+    {
+      "path": "docs/legal/gap-instruments/practice/revenue-dispute/TASK.md.html",
+      "sha256": "d3ca08af367cc87a7d37bf6797b3f79eb7b8f60b7ae12c3c276756170f0f68e8",
+      "desktop_viewports": 2,
+      "mobile_overflow": false,
+      "contacts": [
+        {
+          "file": "13-contact-000.png",
+          "sha256": "1bf43e7f0ee9d74cb3861bd9face1119a6a2c8eb2201db3de0a932a4233429cc"
+        }
+      ]
+    },
+    {
+      "path": "docs/legal/gap-instruments/practice/revenue-dispute/WORKED.md.html",
+      "sha256": "74a9d3a76a9183fb8848f782152b2064e0e20dacf79ed161dadff466e551b0b0",
+      "desktop_viewports": 3,
+      "mobile_overflow": false,
+      "contacts": [
+        {
+          "file": "14-contact-000.png",
+          "sha256": "e5896e3941019ba52d203a5f3d6b0398e0d3a78c92705b6ddb96a9abdeea7385"
+        }
+      ]
+    },
+    {
+      "path": "docs/legal/gap-instruments/reconciliations/README.md.html",
+      "sha256": "dd7c441e7930dec39de1dfc4a76e847619b60083cfd7f52e8ec45076b9052498",
+      "desktop_viewports": 2,
+      "mobile_overflow": false,
+      "contacts": [
+        {
+          "file": "15-contact-000.png",
+          "sha256": "6d6eb6190067ace7c54acd879bbe341a4625714473c8527cfdbe584e78e45c57"
+        }
+      ]
+    },
+    {
+      "path": "docs/legal/gap-instruments/reconciliations/WORKED.md.html",
+      "sha256": "2c07b32b0c50f75e194a1481ff57186d717087d471b597729afbfb124ea73256",
+      "desktop_viewports": 2,
+      "mobile_overflow": false,
+      "contacts": [
+        {
+          "file": "16-contact-000.png",
+          "sha256": "d73984f64ea654a413abe6d1e1938a7aae74361b347fb3ecdb76fc4aa4aee0ca"
+        }
+      ]
+    },
+    {
+      "path": "docs/legal/gap-instruments/review-support/DECISIONS.md.html",
+      "sha256": "155fe05c2e542baeea14d7afb8b531020409db36c91b71de85e754136956e887",
+      "desktop_viewports": 29,
+      "mobile_overflow": false,
+      "contacts": [
+        {
+          "file": "17-contact-000.png",
+          "sha256": "7f9ffb2da5d4bceb8255a7b5764d304076ed26dc3691ec92cce44e4cb7e16105"
+        },
+        {
+          "file": "17-contact-004.png",
+          "sha256": "67e9474383386dbeab199f19b93a8306dd59e3416832ac3135eacdebb0269825"
+        },
+        {
+          "file": "17-contact-008.png",
+          "sha256": "df191b7e1b57cab2c979049756acc9fc2fbf2597846f8617e72242ceada63568"
+        },
+        {
+          "file": "17-contact-012.png",
+          "sha256": "67d3343f533c4871dfb809cd12fd4f749bd0c654ebb3842d071ba5a2d9c0ebc2"
+        },
+        {
+          "file": "17-contact-016.png",
+          "sha256": "a50d93da657e9bed24c4992d48d870798d6041b6c008631280b6dbbd417f64db"
+        },
+        {
+          "file": "17-contact-020.png",
+          "sha256": "3bfd4d89cc6a63bf6c0530a3d6507e44cc5fb3c535c919ce8894b56257d8df10"
+        },
+        {
+          "file": "17-contact-024.png",
+          "sha256": "64a419a4399c12e1f9e561e7a6a3ca208a8c6fefc89a3644474ed1c5bb9d144a"
+        },
+        {
+          "file": "17-contact-028.png",
+          "sha256": "c14f465233eea666b5f2403293634f1f4fffaed229d84d498f3239185038e534"
+        }
+      ]
+    },
+    {
+      "path": "docs/legal/gap-instruments/revision-policy.md.html",
+      "sha256": "4d9ceec382535f97791bea21397517de432b8ad88f36e9f844d51d54b687132a",
+      "desktop_viewports": 2,
+      "mobile_overflow": false,
+      "contacts": [
+        {
+          "file": "18-contact-000.png",
+          "sha256": "73c2f8e597fe98b13d539b7304256a68bc3436ad5a1c3a682895fda88e89116e"
+        }
+      ]
+    },
+    {
+      "path": "docs/legal/gap-instruments/source/advisory-contracts.md.html",
+      "sha256": "40ea6c7e14974274d826bf5c132b2d0e045320c34212b5442aca31d81d119479",
+      "method": "PIXEL_IDENTICAL_TO_REVIEWED_EDITION",
+      "counterpart": "docs/legal/gap-instruments/editions/advisory-contracts.html",
+      "desktop_viewports": 0,
+      "contacts": []
+    },
+    {
+      "path": "docs/legal/gap-instruments/source/billing.md.html",
+      "sha256": "97452ea633786dea14b4785d44ba73696b641c4d4a330ba79bf5a4a69b5b3bf0",
+      "method": "PIXEL_IDENTICAL_TO_REVIEWED_EDITION",
+      "counterpart": "docs/legal/gap-instruments/editions/billing.html",
+      "desktop_viewports": 0,
+      "contacts": []
+    },
+    {
+      "path": "docs/legal/gap-instruments/source/carry.md.html",
+      "sha256": "38b6f0d942f77ea34aaef7a9d0e3ad87f1d5f0bb433d23311b3c2e6560a345a6",
+      "method": "PIXEL_IDENTICAL_TO_REVIEWED_EDITION",
+      "counterpart": "docs/legal/gap-instruments/editions/carry.html",
+      "desktop_viewports": 0,
+      "contacts": []
+    },
+    {
+      "path": "docs/legal/gap-instruments/source/colo.md.html",
+      "sha256": "b295825cd3582192258626ca97994d113280b1ce7b813437c22a0729d9707fe3",
+      "method": "PIXEL_IDENTICAL_TO_REVIEWED_EDITION",
+      "counterpart": "docs/legal/gap-instruments/editions/colo.html",
+      "desktop_viewports": 0,
+      "contacts": []
+    },
+    {
+      "path": "docs/legal/gap-instruments/source/debt-liens.md.html",
+      "sha256": "97128839f32fadbbd8dbd40e72f4ca9a8876e5dff05a35631659de9f600c14ff",
+      "method": "PIXEL_IDENTICAL_TO_REVIEWED_EDITION",
+      "counterpart": "docs/legal/gap-instruments/editions/debt-liens.html",
+      "desktop_viewports": 0,
+      "contacts": []
+    },
+    {
+      "path": "docs/legal/gap-instruments/source/financing-documents.md.html",
+      "sha256": "2a9f7604fa7173ff7e4b5e06c22c08aac19f1c1e108bc18f41f69b0b4b699adb",
+      "method": "PIXEL_IDENTICAL_TO_REVIEWED_EDITION",
+      "counterpart": "docs/legal/gap-instruments/editions/financing-documents.html",
+      "desktop_viewports": 0,
+      "contacts": []
+    },
+    {
+      "path": "docs/legal/gap-instruments/source/formations.md.html",
+      "sha256": "753620f1f50e36b12560c83b352d0a0bfe3b35265cfc78b2da2a1f134ed4af13",
+      "method": "PIXEL_IDENTICAL_TO_REVIEWED_EDITION",
+      "counterpart": "docs/legal/gap-instruments/editions/formations.html",
+      "desktop_viewports": 0,
+      "contacts": []
+    },
+    {
+      "path": "docs/legal/gap-instruments/source/host-rights.md.html",
+      "sha256": "2b516ff63e6d5bbf48f8186c39aee5a2991877777b578859f443b81997ea08e3",
+      "method": "PIXEL_IDENTICAL_TO_REVIEWED_EDITION",
+      "counterpart": "docs/legal/gap-instruments/editions/host-rights.html",
+      "desktop_viewports": 0,
+      "contacts": []
+    },
+    {
+      "path": "docs/legal/gap-instruments/source/land.md.html",
+      "sha256": "12991292a9f0a9b55702a9667af0a655d36798ef52343e65459fb73414f728ee",
+      "method": "PIXEL_IDENTICAL_TO_REVIEWED_EDITION",
+      "counterpart": "docs/legal/gap-instruments/editions/land.html",
+      "desktop_viewports": 0,
+      "contacts": []
+    },
+    {
+      "path": "docs/legal/gap-instruments/source/mark-clearance.md.html",
+      "sha256": "501cb44b272cfe57d518ca2242aa6bba734d91bca1ab9be8edbd052eaef31600",
+      "method": "PIXEL_IDENTICAL_TO_REVIEWED_EDITION",
+      "counterpart": "docs/legal/gap-instruments/editions/mark-clearance.html",
+      "desktop_viewports": 0,
+      "contacts": []
+    },
+    {
+      "path": "docs/legal/gap-instruments/source/rw-chronology.md.html",
+      "sha256": "371bc375c7bb5a4de21eab1fb95684eaea65b4b0e0f6ae3338b5cd9db975102b",
+      "method": "PIXEL_IDENTICAL_TO_REVIEWED_EDITION",
+      "counterpart": "docs/legal/gap-instruments/editions/rw-chronology.html",
+      "desktop_viewports": 0,
+      "contacts": []
+    },
+    {
+      "path": "docs/legal/gap-instruments/source/rw-title.md.html",
+      "sha256": "c04051be0fce5d8de2df00a521de2903547a734a8d6327930188f02f93481738",
+      "method": "PIXEL_IDENTICAL_TO_REVIEWED_EDITION",
+      "counterpart": "docs/legal/gap-instruments/editions/rw-title.html",
+      "desktop_viewports": 0,
+      "contacts": []
+    },
+    {
+      "path": "docs/legal/gap-instruments/source/tax-billing.md.html",
+      "sha256": "3e92c994f1a68b268fa39d55680dcda4884b29233a04b417a178e3f6e6c34787",
+      "method": "PIXEL_IDENTICAL_TO_REVIEWED_EDITION",
+      "counterpart": "docs/legal/gap-instruments/editions/tax-billing.html",
+      "desktop_viewports": 0,
+      "contacts": []
+    },
+    {
+      "path": "docs/legal/gap-instruments/source/tax-filing.md.html",
+      "sha256": "26dd61f6db9396f5587634ca474feb68177cca87945c92406c4a089ca82d0fcb",
+      "method": "PIXEL_IDENTICAL_TO_REVIEWED_EDITION",
+      "counterpart": "docs/legal/gap-instruments/editions/tax-filing.html",
+      "desktop_viewports": 0,
+      "contacts": []
+    },
+    {
+      "path": "docs/legal/gap-instruments/source/tenure.md.html",
+      "sha256": "3adaf2629a65040b88ecf00f340c224af44f507863be288d8f926ab738835044",
+      "method": "PIXEL_IDENTICAL_TO_REVIEWED_EDITION",
+      "counterpart": "docs/legal/gap-instruments/editions/tenure.html",
+      "desktop_viewports": 0,
+      "contacts": []
+    },
+    {
+      "path": "docs/legal/gap-instruments/source/uranium-custody.md.html",
+      "sha256": "8b5392a5be2b16154fe47034d144f001b39fa071350b36e0621ddb461e38cacb",
+      "method": "PIXEL_IDENTICAL_TO_REVIEWED_EDITION",
+      "counterpart": "docs/legal/gap-instruments/editions/uranium-custody.html",
+      "desktop_viewports": 0,
+      "contacts": []
+    },
+    {
+      "path": "docs/legal/gap-instruments/source/workforce.md.html",
+      "sha256": "ab11376d4c660d2d2711d532b15c157ff5cef919824ea9e8bb2d1f0fb8d618de",
+      "method": "PIXEL_IDENTICAL_TO_REVIEWED_EDITION",
+      "counterpart": "docs/legal/gap-instruments/editions/workforce.html",
+      "desktop_viewports": 0,
+      "contacts": []
+    },
+    {
+      "path": "docs/legal/gap-instruments/walkthroughs/README.md.html",
+      "sha256": "6f9c8b9dade2b0933e0e43d32f51f8f599838aec8a30d1382c00a667a40f3cba",
+      "desktop_viewports": 3,
+      "mobile_overflow": false,
+      "contacts": [
+        {
+          "file": "36-contact-000.png",
+          "sha256": "e5cc58dcd7d50cf83360d20e46eafef1aa3ec9622c3705fd23d634e32285e462"
+        }
+      ]
+    }
+  ]
+}

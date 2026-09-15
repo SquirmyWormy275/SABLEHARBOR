@@ -1,0 +1,147 @@
+{
+  "gap_id": "LEGAL-GAP-FORMATIONS",
+  "document_id": "SH-LEGAL-DRAFT-FORMATIONS",
+  "title": "Industrial company consents and subscription record drafts",
+  "status": "DRAFT_FOR_REVIEW",
+  "source_paths": [
+    "industrial/corporate/LEGAL_STRUCTURE_AND_FORMATION.md",
+    "industrial/source/entities.json",
+    "industrial/source/chronology.json",
+    "docs/canon/INDUSTRIAL_CLOSEOUT_2026-09-05.md"
+  ],
+  "proposed_terms": [
+    {
+      "id": "FORM-P01",
+      "term": "Adopt six separate internal consent texts only through each verified approving body, with actual adoption dates and no reconstructed signatures.",
+      "basis": "New proposed document mechanism; existing entity identities and ownership unchanged."
+    },
+    {
+      "id": "FORM-P02",
+      "term": "Accept a subscription only when class, quantity, consideration, authority and contribution evidence are supplied; do not issue an acquired historical interest a second time.",
+      "basis": "Proposed completion safeguard; original nominal subscription amount is not established."
+    },
+    {
+      "id": "FORM-P03",
+      "term": "Maintain entity-specific ownership, authority and separate-book records; cross-reference existing acquisition amounts rather than treating them as formation contributions.",
+      "basis": "Proposed operative clauses implementing the existing industrial formation boundary."
+    },
+    {
+      "id": "FORM-P04",
+      "term": "Record subsequent contributions, guarantees and recapitalizations separately and preserve existing parent governance and operating authority.",
+      "basis": "Proposed administrative clause; no new contribution or guarantee adopted."
+    }
+  ],
+  "unresolved_fields": [
+    {
+      "id": "FORM-U01",
+      "field": "SHIH/PS exact subscription class, quantity and consideration",
+      "next_action": "Obtain accepted organization subscription detail; do not default to a nominal dollar amount."
+    },
+    {
+      "id": "FORM-U02",
+      "field": "Entity-specific approving body, signatory capacity and adoption date",
+      "next_action": "Legal identifies the governing authority; complete one consent sheet per company."
+    },
+    {
+      "id": "FORM-U03",
+      "field": "Original certificates and governmental records",
+      "next_action": "Obtain appropriate independent records if required; no government replicas are produced."
+    },
+    {
+      "id": "FORM-U04",
+      "field": "Exact acquired share or unit certificates",
+      "next_action": "Use accepted ownership percentages until original instrument identifiers are supported."
+    }
+  ],
+  "financial_schedules": [
+    {
+      "name": "Accepted subsidiary ownership — not additive across entities",
+      "columns": [
+        "entity_id",
+        "company",
+        "holder",
+        "ownership_percent",
+        "event_date",
+        "event_basis"
+      ],
+      "rows": [
+        [
+          "SHI",
+          "Sable Harbor, LLC",
+          "Existing members",
+          null,
+          "2016",
+          "Year precision; individual member economics not restated"
+        ],
+        [
+          "SHIH",
+          "Sable Harbor Industrial Holdings, Inc.",
+          "SHI",
+          100,
+          "2024-12-02",
+          "Reconstructed formation"
+        ],
+        [
+          "PS",
+          "Pale Sun Inc.",
+          "SHIH",
+          100,
+          "2025-01-13",
+          "Reconstructed formation"
+        ],
+        [
+          "RWH",
+          "Red Wash Mining, LLC",
+          "PS",
+          100,
+          "2025-07-18",
+          "Acquired existing interests; not new subscription"
+        ],
+        [
+          "ARU",
+          "American Resource Utility, Inc.",
+          "SHIH",
+          100,
+          "2026-01-07",
+          "Acquired existing shares; not statutory merger"
+        ],
+        [
+          "BST",
+          "Blood, Sweat & Tears Railway Company",
+          "ARU",
+          100,
+          "1991-01-02",
+          "Reconstructed historical ownership continuity"
+        ]
+      ]
+    },
+    {
+      "name": "Pre-close ARU holders — separate from parent capitalization",
+      "columns": [
+        "holder",
+        "ownership_percent"
+      ],
+      "rows": [
+        [
+          "Fred Tolman",
+          60
+        ],
+        [
+          "Adele Tolman",
+          20
+        ],
+        [
+          "Nora Ashcombe",
+          10
+        ],
+        [
+          "Seth Kettering",
+          10
+        ]
+      ]
+    }
+  ],
+  "version": "0.1.0",
+  "prepared": "2026-09-12",
+  "approval_status": "NOT_ACCEPTED"
+}

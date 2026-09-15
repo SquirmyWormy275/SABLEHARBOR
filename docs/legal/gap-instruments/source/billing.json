@@ -1,0 +1,93 @@
+{
+  "gap_id": "LEGAL-GAP-BILLING",
+  "document_id": "SH-LEGAL-DRAFT-BILLING",
+  "title": "Foundry Field proposed billing instrument and reconciliation attachment",
+  "status": "DRAFT_FOR_REVIEW",
+  "source_paths": [
+    "docs/legal/gap-instruments/dependencies/billing-proposal-PR138.json",
+    "docs/finance/evidence/SH-FIN-HUMAN-001/source.json",
+    "docs/finance/evidence/SH-FIN-HUMAN-001/PACKET.md",
+    "docs/finance/evidence/SH-FIN-HUMAN-001/ACCEPTANCE.json",
+    "docs/legal/evidence/proposals/decision-register.json",
+    "industrial/corporate/LEGAL_STRUCTURE_AND_FORMATION.md"
+  ],
+  "proposed_terms": [
+    {
+      "id": "SH-LEGAL-DRAFT-BILLING-T01",
+      "term": "Use only Copperreach and Foundry Field display fields from SH-FIN-BILL-PROP-001.",
+      "basis": "Sole proposed dataset at e4995ba; no new identities."
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-BILLING-T02",
+      "term": "Retain proposal null customer legal-name and invoice issuer-presentation fields, known SHI identity, unestablished tax and absent payment instructions.",
+      "basis": "BILL-DEC-001/002/003 and proposal field boundaries."
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-BILLING-T03",
+      "term": "Preserve initial $1,740,000 and later source movement totals separately.",
+      "basis": "Accepted source packet; no duplicate invoice or journal."
+    }
+  ],
+  "unresolved_fields": [
+    {
+      "id": "SH-LEGAL-DRAFT-BILLING-U01",
+      "field": "BILL-DEC-001 customer legal name",
+      "next_action": "Owner disposition of sole proposal field; do not infer entity suffix."
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-BILLING-U02",
+      "field": "BILL-DEC-002 invoice-specific issuer presentation/assignment",
+      "next_action": "Retain known SHI Sable Harbor, LLC identity; review the proposed invoice presentation field separately."
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-BILLING-U03",
+      "field": "BILL-DEC-003 tax treatment",
+      "next_action": "Retain absence until separate approved scenario; no amount rewrite."
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-BILLING-U04",
+      "field": "Proposal and design acceptance",
+      "next_action": "Review exact field IDs, version and artifact hashes."
+    }
+  ],
+  "financial_schedules": [
+    {
+      "name": "Source invoice and later reconciliation; not new postings",
+      "columns": [
+        "measure",
+        "amount_usd",
+        "basis"
+      ],
+      "rows": [
+        [
+          "Original invoice",
+          1740000,
+          "Released initial amount"
+        ],
+        [
+          "Collections including recovery",
+          609000,
+          "Released total; recovery already included"
+        ],
+        [
+          "Credits",
+          159500,
+          "Released total"
+        ],
+        [
+          "Ledger AR remaining",
+          0,
+          "Released balance after writeoff"
+        ],
+        [
+          "Surviving written-off claim",
+          971500,
+          "Derived from accepted packet; not recognized new asset"
+        ]
+      ]
+    }
+  ],
+  "version": "0.1.0",
+  "prepared": "2026-09-12",
+  "approval_status": "NOT_ACCEPTED"
+}

@@ -1,5 +1,8 @@
 # Complete legal source publication — delivery record
 
+> **September 15, 2026 successor status:** The owner approved these publication designs, as recorded in the accepted [billing adoption](../../canon/FOUNDRY_FIELD_BILLING_ADOPTION_2026-09-13.md). Design preference is settled; numerical/substantive reconciliation and repository integration remain required. Earlier exact-file-review statements below are preserved as dated history. See [integration evidence](../../internal/company-closeout/PR145_INTEGRATION.md).
+
+
 The owner rejected the earlier 13 abbreviated legal dossiers as a substitute for complete documents and authorized autonomous full-length publication on September 12, 2026. This package corrects that scope error. New designs remain in [draft PR #145](https://github.com/SquirmyWormy275/SABLEHARBOR/pull/145) for exact-file owner review.
 
 ## Delivered scope

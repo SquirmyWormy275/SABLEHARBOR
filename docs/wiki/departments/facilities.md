@@ -3,9 +3,13 @@
 <img src="../../../assets/brand/logos/sable-harbor__reverse-horizontal.png" alt="Sable Harbor approved identity" width="360">
 
 **Canon state:** LOCKED institutional scope; implementation detail varies by linked record.<br>
-**Last substantive review:** September 11, 2026. This page is secondary navigation; the linked source records control.
+**Reviewed:** September 12, 2026. This is a reading guide; linked source records control.
 
 This ESS capability supports offices, workspaces and shared facilities. The facility archive connects source locations, planning populations, campus programs, buildings and individual floor assets.
+
+## Reading guide
+
+Use the visitor map to understand the campus concept, then the facility records to inspect specific sites, buildings and floors. Keep capacity assumptions, measured geometry and historical occupancy separate throughout the review.
 
 ## Read and use the records
 
@@ -25,10 +29,18 @@ This ESS capability supports offices, workspaces and shared facilities. The faci
 
 The shared chart retains its original scope; it is not a new reporting chart for this page. The approved corporate mark above identifies the parent institution.
 
-## Boundaries and unresolved detail
-
-Facilities/workplace services is an accepted capability label. Proposed campus geometry, seat capacity and floor plans do not prove property ownership, occupation or completed construction.
-
 [Department and institution directory](README.md) · [Business directory](../businesses/README.md) · [Wiki home](../Home.md)
-
 [Continuity and crisis responsibilities across the existing institutions](../subjects/Continuity.md).
+
+## What remains unknown
+
+Exact site and occupancy evidence remains open under issue #106. The original September 3 headquarters image still requires recovery under issue #88. See the [open questions register](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Open-Questions) for the evidence needed to resolve tracked gaps.
+
+## Related reading
+
+- [Enterprise Support Services](ess.md)
+- [People & Culture](people-culture.md)
+- [Continuity and crisis responsibilities](../subjects/Continuity.md)
+- [Willow](../businesses/Willow.md)
+
+Related reading describes useful connections, not additional reporting lines.

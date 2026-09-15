@@ -1,0 +1,636 @@
+{
+  "records": [
+    {
+      "option_id": "SH-SITE-0001-OPTION-1",
+      "kind": "elevation",
+      "request_url": "https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer/exportImage?bbox=-121.50285501220736%2C38.59276047197183%2C-121.49688165060843%2C38.59684569840274&bboxSR=4326&imageSR=4326&size=256%2C256&format=tiff&f=json&pixelType=F32&interpolation=%2BRSP_BilinearInterpolation",
+      "metadata_file": "SH-SITE-0001-OPTION-1-elevation.json",
+      "metadata_sha256": "412abb70e3901e7bc30206d672c63897b9c7a818ddbee1c9df2170342ced912e",
+      "file": "SH-SITE-0001-OPTION-1-elevation.tif",
+      "sha256": "17dd918cbfb272a0aec553765f32cd1c0ea98ef8f052fb3359449711ffbb93b0",
+      "extent": {
+        "xmin": -121.50285501220736,
+        "ymin": 38.591816404387814,
+        "xmax": -121.49688165060843,
+        "ymax": 38.59778976598675,
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      },
+      "accessed_date": "2026-09-13",
+      "authority": "USGS 3DEP",
+      "license": "US federal public-domain imagery/elevation; catalog attribution retained separately",
+      "use": "Fictional planning compatibility screen; no vacancy, rights or geotechnical certification"
+    },
+    {
+      "option_id": "SH-SITE-0001-OPTION-1",
+      "kind": "imagery",
+      "request_url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-121.50285501220736%2C38.59276047197183%2C-121.49688165060843%2C38.59684569840274&bboxSR=4326&imageSR=4326&size=800%2C800&format=png&f=json",
+      "metadata_file": "SH-SITE-0001-OPTION-1-imagery.json",
+      "metadata_sha256": "317ae52526ef64d97a86cc5c8235e1fe564c7d29f9b0e97b066acd6aa96a9c19",
+      "file": "SH-SITE-0001-OPTION-1-imagery.png",
+      "sha256": "aa8c33916bbc403327668d93964a0728ca9972cfd4dc42961ed8235e0f7a6e1b",
+      "extent": {
+        "xmin": -121.50285501220736,
+        "ymin": 38.591816404387814,
+        "xmax": -121.49688165060843,
+        "ymax": 38.59778976598675,
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      },
+      "accessed_date": "2026-09-13",
+      "authority": "USDA NAIP / USGS The National Map",
+      "license": "US federal public-domain imagery/elevation; catalog attribution retained separately",
+      "use": "Fictional planning compatibility screen; no vacancy, rights or geotechnical certification"
+    },
+    {
+      "option_id": "SH-SITE-0001-OPTION-2",
+      "kind": "elevation",
+      "request_url": "https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer/exportImage?bbox=-121.49130791929834%2C38.59585577585693%2C-121.48533417933314%2C38.59994128519747&bboxSR=4326&imageSR=4326&size=256%2C256&format=tiff&f=json&pixelType=F32&interpolation=%2BRSP_BilinearInterpolation",
+      "metadata_file": "SH-SITE-0001-OPTION-2-elevation.json",
+      "metadata_sha256": "13b2c756437ee0ad4a9904ceacaace9f4e4d5bd8aa588bbb77e428c4c19d1e17",
+      "file": "SH-SITE-0001-OPTION-2-elevation.tif",
+      "sha256": "21ff67036086b619ef0f08c63262be96c1b733cbe7ae252119c5d3fa5560838c",
+      "extent": {
+        "xmin": -121.49130791929835,
+        "ymin": 38.594911660544604,
+        "xmax": -121.48533417933315,
+        "ymax": 38.6008854005098,
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      },
+      "accessed_date": "2026-09-13",
+      "authority": "USGS 3DEP",
+      "license": "US federal public-domain imagery/elevation; catalog attribution retained separately",
+      "use": "Fictional planning compatibility screen; no vacancy, rights or geotechnical certification"
+    },
+    {
+      "option_id": "SH-SITE-0001-OPTION-2",
+      "kind": "imagery",
+      "request_url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-121.49130791929834%2C38.59585577585693%2C-121.48533417933314%2C38.59994128519747&bboxSR=4326&imageSR=4326&size=800%2C800&format=png&f=json",
+      "metadata_file": "SH-SITE-0001-OPTION-2-imagery.json",
+      "metadata_sha256": "01dcb2618a14d7e23c38b6a4692115a6e254875b18fb1c78b652ab35c4cbcf84",
+      "file": "SH-SITE-0001-OPTION-2-imagery.png",
+      "sha256": "fc7be0b8bfc313ef4966e1754552573996c45c05baa027a6220069c2fa7534d7",
+      "extent": {
+        "xmin": -121.49130791929835,
+        "ymin": 38.594911660544604,
+        "xmax": -121.48533417933315,
+        "ymax": 38.6008854005098,
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      },
+      "accessed_date": "2026-09-13",
+      "authority": "USDA NAIP / USGS The National Map",
+      "license": "US federal public-domain imagery/elevation; catalog attribution retained separately",
+      "use": "Fictional planning compatibility screen; no vacancy, rights or geotechnical certification"
+    },
+    {
+      "option_id": "SH-SITE-0001-OPTION-3",
+      "kind": "elevation",
+      "request_url": "https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer/exportImage?bbox=-121.50198166548553%2C38.59058655194928%2C-121.49600837640251%2C38.5946717984872&bboxSR=4326&imageSR=4326&size=256%2C256&format=tiff&f=json&pixelType=F32&interpolation=%2BRSP_BilinearInterpolation",
+      "metadata_file": "SH-SITE-0001-OPTION-3-elevation.json",
+      "metadata_sha256": "a5ee04ea6c8d71c85db68f8b3b0a37ab2d463a2b00a64f7557ad304208617926",
+      "file": "SH-SITE-0001-OPTION-3-elevation.tif",
+      "sha256": "45098cccedd7dcc71faa1729e83302ac8851d6fe83834b8044183805da228823",
+      "extent": {
+        "xmin": -121.50198166548553,
+        "ymin": 38.58964253067673,
+        "xmax": -121.49600837640251,
+        "ymax": 38.59561581975974,
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      },
+      "accessed_date": "2026-09-13",
+      "authority": "USGS 3DEP",
+      "license": "US federal public-domain imagery/elevation; catalog attribution retained separately",
+      "use": "Fictional planning compatibility screen; no vacancy, rights or geotechnical certification"
+    },
+    {
+      "option_id": "SH-SITE-0001-OPTION-3",
+      "kind": "imagery",
+      "request_url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-121.50198166548553%2C38.59058655194928%2C-121.49600837640251%2C38.5946717984872&bboxSR=4326&imageSR=4326&size=800%2C800&format=png&f=json",
+      "metadata_file": "SH-SITE-0001-OPTION-3-imagery.json",
+      "metadata_sha256": "24988e6868ad9604aa91789727c3262d2ba5945ea442ce1c0d34c7f733c40b3d",
+      "file": "SH-SITE-0001-OPTION-3-imagery.png",
+      "sha256": "6d0454d3ed407e98db5ff57ca2bcb4fc3490eadd30027467a1fc4124c10f715e",
+      "extent": {
+        "xmin": -121.50198166548553,
+        "ymin": 38.58964253067673,
+        "xmax": -121.49600837640251,
+        "ymax": 38.59561581975974,
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      },
+      "accessed_date": "2026-09-13",
+      "authority": "USDA NAIP / USGS The National Map",
+      "license": "US federal public-domain imagery/elevation; catalog attribution retained separately",
+      "use": "Fictional planning compatibility screen; no vacancy, rights or geotechnical certification"
+    },
+    {
+      "option_id": "SH-SITE-0003-OPTION-1",
+      "kind": "imagery",
+      "request_url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-79.96466435963958%2C40.41119292452354%2C-79.95809851588278%2C40.41560637349263&bboxSR=4326&imageSR=4326&size=800%2C800&format=png&f=json",
+      "metadata_file": "SH-SITE-0003-OPTION-1-imagery.json",
+      "metadata_sha256": "659341dfa9feb8eae1b8bc29327aabe3accaddfb6e584c5e9f01a21d402336f7",
+      "file": "SH-SITE-0003-OPTION-1-imagery.png",
+      "sha256": "59581e69ecb60024e443d872b71edb671d46956c78dfaa4a5d1f4f6e6abc7cd0",
+      "extent": {
+        "xmin": -79.96466435963958,
+        "ymin": 40.41011672712968,
+        "xmax": -79.95809851588278,
+        "ymax": 40.416682570886486,
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      },
+      "accessed_date": "2026-09-13",
+      "authority": "USDA NAIP / USGS The National Map",
+      "license": "US federal public-domain imagery/elevation; catalog attribution retained separately",
+      "use": "Fictional planning compatibility screen; no vacancy, rights or geotechnical certification"
+    },
+    {
+      "option_id": "SH-SITE-0003-OPTION-2",
+      "kind": "elevation",
+      "request_url": "https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer/exportImage?bbox=-79.95152186278078%2C40.40747034625892%2C-79.94495584715764%2C40.41188418761481&bboxSR=4326&imageSR=4326&size=256%2C256&format=tiff&f=json&pixelType=F32&interpolation=%2BRSP_BilinearInterpolation",
+      "metadata_file": "SH-SITE-0003-OPTION-2-elevation.json",
+      "metadata_sha256": "e0a9150f88ebb6e53db510ab7fdfff5645448d1167c152abb9c0182fbc9316d7",
+      "file": "SH-SITE-0003-OPTION-2-elevation.tif",
+      "sha256": "43c649400ecb2e93c20067f8c5b16190401a770db280e75ee421bdd0a2967885",
+      "extent": {
+        "xmin": -79.9515218627808,
+        "ymin": 40.4063942591253,
+        "xmax": -79.94495584715766,
+        "ymax": 40.412960274748436,
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      },
+      "accessed_date": "2026-09-13",
+      "authority": "USGS 3DEP",
+      "license": "US federal public-domain imagery/elevation; catalog attribution retained separately",
+      "use": "Fictional planning compatibility screen; no vacancy, rights or geotechnical certification"
+    },
+    {
+      "option_id": "SH-SITE-0003-OPTION-2",
+      "kind": "imagery",
+      "request_url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-79.95152186278078%2C40.40747034625892%2C-79.94495584715764%2C40.41188418761481&bboxSR=4326&imageSR=4326&size=800%2C800&format=png&f=json",
+      "metadata_file": "SH-SITE-0003-OPTION-2-imagery.json",
+      "metadata_sha256": "43412686e2f0a8014938404cd736cf5cfb6babfcdb1de8ef84ff8401d6ead9b0",
+      "file": "SH-SITE-0003-OPTION-2-imagery.png",
+      "sha256": "8a3989b5b1f761fff0c46823fe25649d95683e6f1a5f5ebbe771d8226dea2aae",
+      "extent": {
+        "xmin": -79.9515218627808,
+        "ymin": 40.4063942591253,
+        "xmax": -79.94495584715766,
+        "ymax": 40.412960274748436,
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      },
+      "accessed_date": "2026-09-13",
+      "authority": "USDA NAIP / USGS The National Map",
+      "license": "US federal public-domain imagery/elevation; catalog attribution retained separately",
+      "use": "Fictional planning compatibility screen; no vacancy, rights or geotechnical certification"
+    },
+    {
+      "option_id": "SH-SITE-0003-OPTION-3",
+      "kind": "elevation",
+      "request_url": "https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer/exportImage?bbox=-79.95101129484908%2C40.40998818807203%2C-79.94444513033045%2C40.41440204549638&bboxSR=4326&imageSR=4326&size=256%2C256&format=tiff&f=json&pixelType=F32&interpolation=%2BRSP_BilinearInterpolation",
+      "metadata_file": "SH-SITE-0003-OPTION-3-elevation.json",
+      "metadata_sha256": "d18bbcc33c7246246da14b372c1db5668ff926dff1f357fba1cc297763cfc5e8",
+      "file": "SH-SITE-0003-OPTION-3-elevation.tif",
+      "sha256": "4b287fe32dac0841efe01aae6bb2d3793c3888241765300512ca3075cfbd8e39",
+      "extent": {
+        "xmin": -79.95101129484908,
+        "ymin": 40.40891203452489,
+        "xmax": -79.94444513033045,
+        "ymax": 40.41547819904352,
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      },
+      "accessed_date": "2026-09-13",
+      "authority": "USGS 3DEP",
+      "license": "US federal public-domain imagery/elevation; catalog attribution retained separately",
+      "use": "Fictional planning compatibility screen; no vacancy, rights or geotechnical certification"
+    },
+    {
+      "option_id": "SH-SITE-0003-OPTION-3",
+      "kind": "imagery",
+      "request_url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-79.95101129484908%2C40.40998818807203%2C-79.94444513033045%2C40.41440204549638&bboxSR=4326&imageSR=4326&size=800%2C800&format=png&f=json",
+      "metadata_file": "SH-SITE-0003-OPTION-3-imagery.json",
+      "metadata_sha256": "186aaddad96ef3a4f886f41f59f92a355c2842efc778a44acd04bddcf1de28c2",
+      "file": "SH-SITE-0003-OPTION-3-imagery.png",
+      "sha256": "64a6d69b4c9eb73d5df361dfd3c6df4c0e975f1da8edc7a5779f26e34c79f492",
+      "extent": {
+        "xmin": -79.95101129484908,
+        "ymin": 40.40891203452489,
+        "xmax": -79.94444513033045,
+        "ymax": 40.41547819904352,
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      },
+      "accessed_date": "2026-09-13",
+      "authority": "USDA NAIP / USGS The National Map",
+      "license": "US federal public-domain imagery/elevation; catalog attribution retained separately",
+      "use": "Fictional planning compatibility screen; no vacancy, rights or geotechnical certification"
+    },
+    {
+      "option_id": "SH-SITE-0005-OPTION-1",
+      "kind": "imagery",
+      "request_url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-80.17636080713632%2C39.41029478504602%2C-80.16950444317482%2C39.41470418676879&bboxSR=4326&imageSR=4326&size=800%2C800&format=png&f=json",
+      "metadata_file": "SH-SITE-0005-OPTION-1-imagery.json",
+      "metadata_sha256": "ab7d1fb026bef11beccdd270d6196710f60c349015f54c607d4c557f53488cdf",
+      "file": "SH-SITE-0005-OPTION-1-imagery.png",
+      "sha256": "d7b55497432dcce372ddb502b0f0cb810c4362f4d731b02cdae6ee46f8049300",
+      "extent": {
+        "xmin": -80.17636080713632,
+        "ymin": 39.40907130392665,
+        "xmax": -80.16950444317482,
+        "ymax": 39.415927667888155,
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      },
+      "accessed_date": "2026-09-13",
+      "authority": "USDA NAIP / USGS The National Map",
+      "license": "US federal public-domain imagery/elevation; catalog attribution retained separately",
+      "use": "Fictional planning compatibility screen; no vacancy, rights or geotechnical certification"
+    },
+    {
+      "option_id": "SH-SITE-0005-OPTION-2",
+      "kind": "elevation",
+      "request_url": "https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer/exportImage?bbox=-80.18657043263208%2C39.491100932181354%2C-80.17970984795814%2C39.495510020849&bboxSR=4326&imageSR=4326&size=256%2C256&format=tiff&f=json&pixelType=F32&interpolation=%2BRSP_BilinearInterpolation",
+      "metadata_file": "SH-SITE-0005-OPTION-2-elevation.json",
+      "metadata_sha256": "b86a51dc7e3ab55dd2aae95125051040ad2cebdd8b485cb5b6ff73dab6139551",
+      "file": "SH-SITE-0005-OPTION-2-elevation.tif",
+      "sha256": "4c00ce30457028a8c031c26e97d0fba628b0b9acc91e7745480592f16f5a0abe",
+      "extent": {
+        "xmin": -80.18657043263208,
+        "ymin": 39.4898751841782,
+        "xmax": -80.17970984795814,
+        "ymax": 39.49673576885215,
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      },
+      "accessed_date": "2026-09-13",
+      "authority": "USGS 3DEP",
+      "license": "US federal public-domain imagery/elevation; catalog attribution retained separately",
+      "use": "Fictional planning compatibility screen; no vacancy, rights or geotechnical certification"
+    },
+    {
+      "option_id": "SH-SITE-0005-OPTION-2",
+      "kind": "imagery",
+      "request_url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-80.18657043263208%2C39.491100932181354%2C-80.17970984795814%2C39.495510020849&bboxSR=4326&imageSR=4326&size=800%2C800&format=png&f=json",
+      "metadata_file": "SH-SITE-0005-OPTION-2-imagery.json",
+      "metadata_sha256": "a5f6f7a27e3588046cdfb3c5f7f28831a2ca1e7b1a5326b9d70a3d74aa57e070",
+      "file": "SH-SITE-0005-OPTION-2-imagery.png",
+      "sha256": "ca7624c28f125d3473351e9786e22b8b73fd336bf6aee3b0ace31d2d50dad1f6",
+      "extent": {
+        "xmin": -80.18657043263208,
+        "ymin": 39.4898751841782,
+        "xmax": -80.17970984795814,
+        "ymax": 39.49673576885215,
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      },
+      "accessed_date": "2026-09-13",
+      "authority": "USDA NAIP / USGS The National Map",
+      "license": "US federal public-domain imagery/elevation; catalog attribution retained separately",
+      "use": "Fictional planning compatibility screen; no vacancy, rights or geotechnical certification"
+    },
+    {
+      "option_id": "SH-SITE-0005-OPTION-3",
+      "kind": "elevation",
+      "request_url": "https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer/exportImage?bbox=-80.16834366125005%2C39.459254442021276%2C-80.16148435283672%2C39.46366411553265&bboxSR=4326&imageSR=4326&size=256%2C256&format=tiff&f=json&pixelType=F32&interpolation=%2BRSP_BilinearInterpolation",
+      "metadata_file": "SH-SITE-0005-OPTION-3-elevation.json",
+      "metadata_sha256": "b1af412e7929d6c61c5a41a10e95266f15d258788064844474a042ccf3c84d85",
+      "file": "SH-SITE-0005-OPTION-3-elevation.tif",
+      "sha256": "02d13ba030769e13581ec7fb9b7d54fe1fd60e1625f08da004d0fac112614062",
+      "extent": {
+        "xmin": -80.16834366125005,
+        "ymin": 39.4580296245703,
+        "xmax": -80.16148435283672,
+        "ymax": 39.46488893298363,
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      },
+      "accessed_date": "2026-09-13",
+      "authority": "USGS 3DEP",
+      "license": "US federal public-domain imagery/elevation; catalog attribution retained separately",
+      "use": "Fictional planning compatibility screen; no vacancy, rights or geotechnical certification"
+    },
+    {
+      "option_id": "SH-SITE-0005-OPTION-3",
+      "kind": "imagery",
+      "request_url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-80.16834366125005%2C39.459254442021276%2C-80.16148435283672%2C39.46366411553265&bboxSR=4326&imageSR=4326&size=800%2C800&format=png&f=json",
+      "metadata_file": "SH-SITE-0005-OPTION-3-imagery.json",
+      "metadata_sha256": "3ea752c0b47ad23ac52c09eeba78687027007876cc0cb5230c356712e4b8c8bb",
+      "file": "SH-SITE-0005-OPTION-3-imagery.png",
+      "sha256": "09e75a34ad736db5c1d17d75eaad5321e2a9d838fac977444aedd69788e01d56",
+      "extent": {
+        "xmin": -80.16834366125005,
+        "ymin": 39.4580296245703,
+        "xmax": -80.16148435283672,
+        "ymax": 39.46488893298363,
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      },
+      "accessed_date": "2026-09-13",
+      "authority": "USDA NAIP / USGS The National Map",
+      "license": "US federal public-domain imagery/elevation; catalog attribution retained separately",
+      "use": "Fictional planning compatibility screen; no vacancy, rights or geotechnical certification"
+    },
+    {
+      "option_id": "SH-SITE-0003-OPTION-1",
+      "kind": "elevation",
+      "request_url": "https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer/exportImage?bbox=-79.96466435963958%2C40.41119292452354%2C-79.95809851588278%2C40.41560637349263&bboxSR=4326&imageSR=4326&size=256%2C256&format=tiff&f=json&pixelType=F32&interpolation=%2BRSP_BilinearInterpolation",
+      "metadata_file": "SH-SITE-0003-OPTION-1-elevation.json",
+      "metadata_sha256": "96b497f1dd638d20dab2966379cbc9763914f3c1790a53952a87f5ff2317676c",
+      "file": "SH-SITE-0003-OPTION-1-elevation.tif",
+      "sha256": "ef0988a9ec69046e94e206a2a8507453c42be3a5b2a721f8ffebc28f4f9c2c2c",
+      "extent": {
+        "xmin": -79.96466435963958,
+        "ymin": 40.41011672712968,
+        "xmax": -79.95809851588278,
+        "ymax": 40.416682570886486,
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      },
+      "accessed_date": "2026-09-13",
+      "authority": "USGS 3DEP",
+      "license": "US federal public-domain imagery/elevation; catalog attribution retained separately",
+      "use": "Fictional planning compatibility screen; no vacancy, rights or geotechnical certification"
+    },
+    {
+      "option_id": "SH-SITE-0005-OPTION-1",
+      "kind": "elevation",
+      "request_url": "https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer/exportImage?bbox=-80.17636080713632%2C39.41029478504602%2C-80.16950444317482%2C39.41470418676879&bboxSR=4326&imageSR=4326&size=256%2C256&format=tiff&f=json&pixelType=F32&interpolation=%2BRSP_BilinearInterpolation",
+      "metadata_file": "SH-SITE-0005-OPTION-1-elevation.json",
+      "metadata_sha256": "baa35689f8e914207cdc43d625e44cc5e8366d3b02c2ecc945ad17acd40a3f62",
+      "file": "SH-SITE-0005-OPTION-1-elevation.tif",
+      "sha256": "04de9f2d9a4c2309d849e0282a5340fd57e2d8e96cf304ced060b9572195154b",
+      "extent": {
+        "xmin": -80.17636080713632,
+        "ymin": 39.40907130392665,
+        "xmax": -80.16950444317482,
+        "ymax": 39.415927667888155,
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      },
+      "accessed_date": "2026-09-13",
+      "authority": "USGS 3DEP",
+      "license": "US federal public-domain imagery/elevation; catalog attribution retained separately",
+      "use": "Fictional planning compatibility screen; no vacancy, rights or geotechnical certification"
+    },
+    {
+      "option_id": "HQ-F",
+      "kind": "elevation",
+      "request_url": "https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer/exportImage?bbox=-121.49843663515774%2C38.589107325229804%2C-121.49246333195785%2C38.59319265731288&bboxSR=4326&imageSR=4326&size=256%2C256&format=tiff&f=json&pixelType=F32&interpolation=%2BRSP_BilinearInterpolation",
+      "metadata_file": "HQ-F-elevation.json",
+      "metadata_sha256": "6e5078410f45973d12185faa130da80c9b7330cabc9c0a4f1387769184f41c7a",
+      "file": "HQ-F-elevation.tif",
+      "sha256": "2835054f3f45dd211996542d349e28dab0d1d4c129a7feb1fcccbb9ac1cdf76d",
+      "extent": {
+        "xmin": -121.49843663515773,
+        "ymin": 38.5881633396714,
+        "xmax": -121.49246333195784,
+        "ymax": 38.59413664287129,
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      },
+      "accessed_date": "2026-09-13",
+      "authority": "USGS 3DEP",
+      "license": "US federal public-domain imagery/elevation; catalog attribution retained separately",
+      "use": "Fictional planning compatibility screen; no vacancy, rights or geotechnical certification"
+    },
+    {
+      "option_id": "HQ-F",
+      "kind": "imagery",
+      "request_url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-121.49843663515774%2C38.589107325229804%2C-121.49246333195785%2C38.59319265731288&bboxSR=4326&imageSR=4326&size=800%2C800&format=png&f=json",
+      "metadata_file": "HQ-F-imagery.json",
+      "metadata_sha256": "425366d79d59d8f933930ad260a5a74d15d28379b90531e863d209f913c5c173",
+      "file": "HQ-F-imagery.png",
+      "sha256": "5386fefe8748f37170c2d76c3365eb6473941138998839e3ea22f9305fb165e2",
+      "extent": {
+        "xmin": -121.49843663515773,
+        "ymin": 38.5881633396714,
+        "xmax": -121.49246333195784,
+        "ymax": 38.59413664287129,
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      },
+      "accessed_date": "2026-09-13",
+      "authority": "USDA NAIP / USGS The National Map",
+      "license": "US federal public-domain imagery/elevation; catalog attribution retained separately",
+      "use": "Fictional planning compatibility screen; no vacancy, rights or geotechnical certification"
+    },
+    {
+      "option_id": "FORT-NORTH",
+      "kind": "imagery",
+      "request_url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-79.95665%2C40.4202%2C-79.9487%2C40.42745&bboxSR=4326&imageSR=4326&size=800%2C800&format=png&f=json",
+      "metadata_file": "FORT-NORTH-imagery.json",
+      "metadata_sha256": "35c498671c41a594bd04a34020f0162c057a70a8ace1c969910c44e4f904f3bd",
+      "file": "FORT-NORTH-imagery.png",
+      "sha256": "fd900ef9178851bc88b69dc4489e3f96f906096e11f2ac998da4b52203c54b38",
+      "extent": {
+        "xmin": -79.95665,
+        "ymin": 40.419850000000004,
+        "xmax": -79.9487,
+        "ymax": 40.4278,
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      },
+      "accessed_date": "2026-09-13",
+      "authority": "USDA NAIP / USGS The National Map",
+      "license": "US federal public-domain imagery/elevation; catalog attribution retained separately",
+      "use": "Fictional planning compatibility screen; no vacancy, rights or geotechnical certification"
+    },
+    {
+      "option_id": "FORT-NORTH",
+      "kind": "elevation",
+      "request_url": "https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer/exportImage?bbox=-79.95665%2C40.4202%2C-79.9487%2C40.42745&bboxSR=4326&imageSR=4326&size=256%2C256&format=tiff&f=json&pixelType=F32&interpolation=%2BRSP_BilinearInterpolation",
+      "metadata_file": "FORT-NORTH-elevation.json",
+      "metadata_sha256": "96183873dcab581dba0ed997e2a8f508cb38f01ca543ec287e8bc8be148e0a96",
+      "file": "FORT-NORTH-elevation.tif",
+      "sha256": "2aee52e6d1c52a4f19ffe47c13d14fa84edfdb5eb9b08d8d291731682f7a42b5",
+      "extent": {
+        "xmin": -79.95665,
+        "ymin": 40.419850000000004,
+        "xmax": -79.9487,
+        "ymax": 40.4278,
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      },
+      "accessed_date": "2026-09-13",
+      "authority": "USGS 3DEP",
+      "license": "US federal public-domain imagery/elevation; catalog attribution retained separately",
+      "use": "Fictional planning compatibility screen; no vacancy, rights or geotechnical certification"
+    },
+    {
+      "option_id": "BEDFORD-F",
+      "kind": "imagery",
+      "request_url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-80.1862%2C39.428700000000006%2C-80.17905%2C39.433319999999995&bboxSR=4326&imageSR=4326&size=800%2C800&format=png&f=json",
+      "metadata_file": "BEDFORD-F-imagery.json",
+      "metadata_sha256": "c070f05eaddf0e266e40a7696f42e31798a80beb2277262a0374d92fa76716fc",
+      "file": "BEDFORD-F-imagery.png",
+      "sha256": "cfd67dd4e1aecc2771cd96cb918fdb71a6723644d52e9b7bfc0d4766ea5a4904",
+      "extent": {
+        "xmin": -80.1862,
+        "ymin": 39.427435,
+        "xmax": -80.17905,
+        "ymax": 39.434585,
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      },
+      "accessed_date": "2026-09-13",
+      "authority": "USDA NAIP / USGS The National Map",
+      "license": "US federal public-domain imagery/elevation; catalog attribution retained separately",
+      "use": "Fictional planning compatibility screen; no vacancy, rights or geotechnical certification"
+    },
+    {
+      "option_id": "BEDFORD-F",
+      "kind": "elevation",
+      "request_url": "https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer/exportImage?bbox=-80.1862%2C39.428700000000006%2C-80.17905%2C39.433319999999995&bboxSR=4326&imageSR=4326&size=256%2C256&format=tiff&f=json&pixelType=F32&interpolation=%2BRSP_BilinearInterpolation",
+      "metadata_file": "BEDFORD-F-elevation.json",
+      "metadata_sha256": "8ec3936cef96ce7ddb2cb03c51c10fb26a3a63cb776496c9de2eaee0f9e4e640",
+      "file": "BEDFORD-F-elevation.tif",
+      "sha256": "bacb40486d49fe1be806f4f4f8500ea5ca1cac8d831b46539993d5202553ad1a",
+      "extent": {
+        "xmin": -80.1862,
+        "ymin": 39.427435,
+        "xmax": -80.17905,
+        "ymax": 39.434585,
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      },
+      "accessed_date": "2026-09-13",
+      "authority": "USGS 3DEP",
+      "license": "US federal public-domain imagery/elevation; catalog attribution retained separately",
+      "use": "Fictional planning compatibility screen; no vacancy, rights or geotechnical certification"
+    },
+    {
+      "option_id": "HQ-F",
+      "kind": "naip",
+      "file": "HQ-F-naip.json.gz",
+      "sha256": "44f8edbca23435251c847f6e867addae1350c4bf5483ca6170cd71b9aa7c0dd9",
+      "decoded_sha256": "3d2d81dbe8428bf0da3e7f96023d452aa6a6a5dc5ed37ef16d04e7f7e139502d",
+      "request_file": "HQ-F-naip.request.txt",
+      "request_url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/query?geometry=-121.49545000033734%2C38.5911499907177&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=%2A&returnGeometry=false&f=json",
+      "accessed_date": "2026-09-13",
+      "authority": "USGS NAIP catalog",
+      "license": "US federal public data",
+      "use": "Point catalog metadata"
+    },
+    {
+      "option_id": "HQ-F",
+      "kind": "flood",
+      "file": "HQ-F-flood.json.gz",
+      "sha256": "abc841eac97c6cdebe7cf6a4a16241a6687498d3ae982ac47acd3f432583dce9",
+      "decoded_sha256": "68d3fc4673bf4b79423d91774b6dddef55385eb549a4053723476ad431d784e0",
+      "request_file": "HQ-F-flood.request.txt",
+      "request_url": "https://hazards.fema.gov/arcgis/rest/services/public/NFHL/MapServer/28/query?geometry=%7B%22rings%22%3A+%5B%5B%5B-121.49399775769854%2C+38.5903073252298%5D%2C+%5B-121.49396333195784%2C+38.59195486714256%5D%2C+%5B-121.49690227653522%2C+38.591992657312886%5D%2C+%5B-121.49693663515775%2C+38.59034511318556%5D%2C+%5B-121.49399775769854%2C+38.5903073252298%5D%5D%5D%2C+%22spatialReference%22%3A+%7B%22wkid%22%3A+4326%7D%7D&geometryType=esriGeometryPolygon&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=%2A&returnGeometry=true&outSR=4326&f=json",
+      "accessed_date": "2026-09-13",
+      "authority": "FEMA National Flood Hazard Layer",
+      "license": "US federal public data",
+      "use": "Polygon intersection; mapped hazards only, not flood safety certification"
+    },
+    {
+      "option_id": "FORT-NORTH",
+      "kind": "naip",
+      "file": "FORT-NORTH-naip.json.gz",
+      "sha256": "f6ef2884809f20d410a50d9ddd10079fceaa0862c517bbbf0356dcfd1bf9f1bf",
+      "decoded_sha256": "dcdf84fe2b33513a987d1084c8f418bb3199272e464bac5e9110ecf8672d6024",
+      "request_file": "FORT-NORTH-naip.request.txt",
+      "request_url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/query?geometry=-79.95282166666667%2C40.423988333333334&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=%2A&returnGeometry=false&f=json",
+      "accessed_date": "2026-09-13",
+      "authority": "USGS NAIP catalog",
+      "license": "US federal public data",
+      "use": "Point catalog metadata"
+    },
+    {
+      "option_id": "FORT-NORTH",
+      "kind": "flood",
+      "file": "FORT-NORTH-flood.json.gz",
+      "sha256": "544a4ad084b742919ff7ca2c64680114e0f993abc3041625558a14ababf8a5d3",
+      "decoded_sha256": "cf6de2a5d1f49506eeb1b5148bfa16150b24ee4ba64a595667f5af0795d9ea54",
+      "request_file": "FORT-NORTH-flood.request.txt",
+      "request_url": "https://hazards.fema.gov/arcgis/rest/services/public/NFHL/MapServer/28/query?geometry=%7B%22rings%22%3A+%5B%5B%5B-79.95515%2C+40.4262%5D%2C+%5B-79.95425%2C+40.42625%5D%2C+%5B-79.95235%2C+40.4244%5D%2C+%5B-79.9502%2C+40.42148%5D%2C+%5B-79.95138%2C+40.4214%5D%2C+%5B-79.9536%2C+40.4242%5D%2C+%5B-79.95515%2C+40.4262%5D%5D%5D%2C+%22spatialReference%22%3A+%7B%22wkid%22%3A+4326%7D%7D&geometryType=esriGeometryPolygon&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=%2A&returnGeometry=true&outSR=4326&f=json",
+      "accessed_date": "2026-09-13",
+      "authority": "FEMA National Flood Hazard Layer",
+      "license": "US federal public data",
+      "use": "Polygon intersection; mapped hazards only, not flood safety certification"
+    },
+    {
+      "option_id": "BEDFORD-F",
+      "kind": "naip",
+      "file": "BEDFORD-F-naip.json.gz",
+      "sha256": "01ad31c40fd48af90244b2f0ea084693654904b38980c2a96c0c3f98166e8265",
+      "decoded_sha256": "1e5415ee51ab0d6a1f572b06d2a2c0ba94a855b2fe8e424454716b6b8233c824",
+      "request_file": "BEDFORD-F-naip.request.txt",
+      "request_url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/query?geometry=-80.18275%2C39.43084555555556&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=%2A&returnGeometry=false&f=json",
+      "accessed_date": "2026-09-13",
+      "authority": "USGS NAIP catalog",
+      "license": "US federal public data",
+      "use": "Point catalog metadata"
+    },
+    {
+      "option_id": "BEDFORD-F",
+      "kind": "flood",
+      "file": "BEDFORD-F-flood.json.gz",
+      "sha256": "dc9ee2b8e348f0b108daf8a9aff8df78197800261fbbdd50d0cf007c6c56d3ff",
+      "decoded_sha256": "94c7888a6a18679ddcb7f0034212ae5013225d7ef0a6b90a9810e3edef4cb872",
+      "request_file": "BEDFORD-F-flood.request.txt",
+      "request_url": "https://hazards.fema.gov/arcgis/rest/services/public/NFHL/MapServer/28/query?geometry=%7B%22rings%22%3A+%5B%5B%5B-80.1847%2C+39.43172%5D%2C+%5B-80.18115%2C+39.43212%5D%2C+%5B-80.1808%2C+39.4316%5D%2C+%5B-80.18055%2C+39.4299%5D%2C+%5B-80.1818%2C+39.42995%5D%2C+%5B-80.1831%2C+39.4306%5D%2C+%5B-80.18365%2C+39.43045%5D%2C+%5B-80.1843%2C+39.43072%5D%2C+%5B-80.1847%2C+39.43055%5D%2C+%5B-80.1847%2C+39.43172%5D%5D%5D%2C+%22spatialReference%22%3A+%7B%22wkid%22%3A+4326%7D%7D&geometryType=esriGeometryPolygon&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=%2A&returnGeometry=true&outSR=4326&f=json",
+      "accessed_date": "2026-09-13",
+      "authority": "FEMA National Flood Hazard Layer",
+      "license": "US federal public data",
+      "use": "Polygon intersection; mapped hazards only, not flood safety certification"
+    }
+  ],
+  "failures": [],
+  "scope": "Original nine rejected alternatives plus three selected fictional design footprints. Export mosaics are contextual observations; acquisition metadata is retained separately."
+}

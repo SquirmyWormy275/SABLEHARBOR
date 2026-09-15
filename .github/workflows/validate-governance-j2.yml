@@ -50,7 +50,7 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y poppler-utils
       - name: Check PDF compatibility backend
         run: |
-          python -m pip install -r tools/documents/requirements.txt -r tools/organization/requirements.txt -r tools/reader/requirements.txt
+          python -m pip install -r tools/documents/requirements.txt -r tools/organization/requirements.txt -r tools/reader/requirements.txt -r tools/legal_gaps/requirements-review.txt
           python -m unittest discover -s tests/publications
       - name: Verify accepted artwork and practical routes
         run: |
@@ -68,6 +68,7 @@ jobs:
       - run: python scripts/validate_governance_j2.py
       - run: python scripts/validate_institutional_catalog.py
       - run: python scripts/validate_finance_evidence_acceptance.py
+      - run: python tools/documents/billing_record.py validate
       - name: Validate accounting and legal source packages
         run: |
           python - <<'PY'

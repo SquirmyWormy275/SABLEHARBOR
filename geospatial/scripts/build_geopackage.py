@@ -373,9 +373,17 @@ def write_csv(path, rows, fields):
 def registers():
     catalog, refs = load_inputs()
     out = BASE / "registers"
+    # This accepted snapshot is a pinned legal-publication dependency. Current
+    # geographic decisions have a separately generated register; never rewrite
+    # the source bytes underlying another owner's publication.
+    if (
+        digest(out / "SITE_REGISTER.csv")
+        != "d9d445d6ebab15bad40186a7de742ddd881b3971119ae7da3ae95cb1886f6720"
+    ):
+        raise ValueError("Pinned site-register snapshot changed")
     write_csv(out / "GEOGRAPHIC_CENSUS_v0.1.csv", catalog["objects"], list(catalog["objects"][0]))
     write_csv(
-        out / "SITE_REGISTER.csv",
+        out / "SITE_REGISTER_CURRENT.csv",
         [
             x
             for x in catalog["objects"]
@@ -454,7 +462,7 @@ def registers():
             "",
             "## Independent open facts",
             "",
-            "J2 Education location; exact Blackridge location; Klein/Fort occupancy history; provisional Reno/Elko/Tucson offices; exact Bedford, Demotte and Kelly Gang Mining parcels; Wallaby/Glasshouse sites; historical offices; early railway alignments; exact lease/title records; conversion destination; corporate hosting geography. Named hosts, the Fort concept, current ARU estate and current BS&T case geography are resolved. See PROGRAM_CLOSEOUT_MATRIX.md for disposition.",
+            "J2 Education location; exact Blackridge location; Klein/Fort exact parcel/lease-day precision (2024 linkage resolved); provisional Reno/Elko/Tucson offices; exact Bedford, Demotte and Kelly Gang Mining parcels; Wallaby/Glasshouse sites; historical offices; early railway alignments; exact lease/title records; conversion destination; corporate hosting geography. Named hosts, the Fort concept, current ARU estate and current BS&T case geography are resolved. See PROGRAM_CLOSEOUT_MATRIX.md for disposition.",
         ]
     )
     (out / "OPEN_GEOGRAPHIC_QUESTIONS_v0.1.md").write_text("\n".join(lines) + "\n")

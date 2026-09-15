@@ -1,5 +1,8 @@
 # Accounting and legal design review
 
+> **September 15, 2026 successor status:** The owner approved these publication designs, as recorded in the accepted [billing adoption](../../canon/FOUNDRY_FIELD_BILLING_ADOPTION_2026-09-13.md). Design preference is settled; numerical/substantive reconciliation and repository integration remain required. Earlier exact-file-review statements below are preserved as dated history. See [integration evidence](../../internal/company-closeout/PR145_INTEGRATION.md).
+
+
 **Status: exact-file owner review pending.** These designs are separate from the source-only delivery. The accepted Foundry Field packet and visitor map are unchanged.
 
 Download the workbooks to inspect every column and row. Worksheet previews show the leading print area, not the full population. Each workbook includes a Guide, complete data sheets and Checks. The source-cell validator compares every included value.

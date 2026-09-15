@@ -1,0 +1,1792 @@
+{
+  "version": "0.3.0-review.1",
+  "status": "DRAFT_FOR_EXACT_FILE_REVIEW",
+  "source_revision": "1d86f78944c95d3fdde72c4dcc31cd9b50c2ada9",
+  "original_files": [
+    "docs/advisory/CARRY_PLAN_STANDARD.md",
+    "docs/advisory/COMMERCIAL_CONTRACTING_AND_PRICING_STANDARD.md",
+    "docs/advisory/EXPERT_NETWORK_AND_THIRD_PARTY_STANDARD.md",
+    "docs/advisory/IP_DATA_AND_METHOD_TRANSFER_STANDARD.md",
+    "docs/advisory/LEGAL_AND_CONTRACTING_TERM_SHEET.md",
+    "docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md",
+    "docs/canon/CRADLE_CLOSEOUT_2026-09-06.md",
+    "docs/canon/FINANCE_HUMAN_EVIDENCE_001_ACCEPTANCE_2026-09-11.md",
+    "docs/canon/INDUSTRIAL_CLOSEOUT_2026-09-05.md",
+    "docs/canon/J2_LEADERSHIP_APPOINTMENTS_2026-09-10.md",
+    "docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05_R2.md",
+    "docs/canon/RUNTIME_HOSTING_AND_DATA_CENTER_DECISIONS_2026-09-11.md",
+    "docs/canon/THIRD_PARTY_SERVICES_SOURCING_DECISIONS_2026-09-09.md",
+    "docs/canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md",
+    "docs/facilities/references/sacramento-hq/r01-approved/02_Corporate_L02_Product_Draft.png",
+    "docs/facilities/references/sacramento-hq/r01-approved/03_J2_L01_Contact_JAG_Draft.png",
+    "docs/facilities/references/sacramento-hq/r01-approved/04_Education_L01_Teaching_Draft.png",
+    "docs/facilities/references/sacramento-hq/r01-approved/CODEX_ADDENDUM_APPROVED_SACRAMENTO_VISUAL_BASELINE_R01.md",
+    "docs/finance/RUNTIME_INFRASTRUCTURE_FINANCE_RECONCILIATION_2026-09-11.md",
+    "docs/finance/evidence/SH-FIN-HUMAN-001/ACCEPTANCE.json",
+    "docs/finance/evidence/SH-FIN-HUMAN-001/PACKET.md",
+    "docs/finance/evidence/SH-FIN-HUMAN-001/reconciliation.xlsx",
+    "docs/finance/evidence/SH-FIN-HUMAN-001/source.json",
+    "docs/finance/evidence/close/README.md",
+    "docs/finance/evidence/close/RECONCILIATION.json",
+    "docs/finance/evidence/close/evidence-register.json",
+    "docs/finance/evidence/close/evidence.sqlite3",
+    "docs/finance/evidence/close/source/credit_allowance.csv",
+    "docs/finance/evidence/close/source/enterprise_journal.csv",
+    "docs/finance/evidence/close/source/industrial_eliminations.csv",
+    "docs/finance/evidence/close/source/industrial_intercompany.csv",
+    "docs/finance/evidence/close/source/journal.csv",
+    "docs/finance/evidence/close/source/legal_statements.csv",
+    "docs/finance/evidence/close/source/legal_trial_balance.csv",
+    "docs/finance/evidence/close/source/monthly_statements.csv",
+    "docs/finance/evidence/close/source/subledger_rollforward.csv",
+    "docs/finance/evidence/close/source/unit_trial_balance.csv",
+    "docs/finance/evidence/customer/source/receivable_aging.csv",
+    "docs/finance/evidence/customer/source/subledger_rollforward.csv",
+    "docs/finance/evidence/supporting-schedules/source/asset_rollforward.csv",
+    "docs/finance/evidence/supporting-schedules/source/industrial_debt.csv",
+    "docs/finance/evidence/tax-transaction/CURRENT_SOURCE_BRIDGE.json",
+    "docs/finance/evidence/tax-transaction/acquisition_ppa.csv",
+    "docs/finance/evidence/tax-transaction/aru_2026_assets.csv",
+    "docs/finance/evidence/tax-transaction/aru_2026_debt.csv",
+    "docs/finance/evidence/tax-transaction/aru_2026_tax_rollforward.csv",
+    "docs/finance/evidence/tax-transaction/aru_acquisition_opening_trial_balance.csv",
+    "docs/finance/evidence/tax-transaction/transaction-support.sqlite3",
+    "docs/finance/evidence/treasury/source/industrial_bank_reconciliations.csv",
+    "docs/finance/evidence/treasury/source/subledger_rollforward.csv",
+    "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
+    "docs/governance/board-records/2021-06-18_harrison-vale-growth-financing-minutes.md",
+    "docs/governance/board-records/2022-10-28_wolf-ridge-industrial-financing-minutes.md",
+    "docs/j2/EDUCATION.md",
+    "docs/j2/J2_ESTABLISHMENT.md",
+    "docs/j2/J2_HEADQUARTERS.md",
+    "docs/legal/ADVISORY_NAME_AND_EXTERNAL_CLEARANCE_STATUS_2026-09-09.md",
+    "docs/legal/MOCK_DEED_NORTHERN_NEVADA_DATA_CENTER_2026-09-04.md",
+    "docs/legal/PRELIMINARY_NAME_AND_MARK_SCREEN.md",
+    "docs/legal/evidence/proposals/decision-register.json",
+    "docs/legal/gap-instruments/PACKAGE_INDEX.md",
+    "docs/legal/gap-instruments/PRACTICAL_WORK.md",
+    "docs/legal/gap-instruments/README.md",
+    "docs/legal/gap-instruments/RESULTS.md",
+    "docs/legal/gap-instruments/REVIEW_WORKFLOW.md",
+    "docs/legal/gap-instruments/accounting/LINKS.md",
+    "docs/legal/gap-instruments/accounting/README.md",
+    "docs/legal/gap-instruments/accounting/links.json",
+    "docs/legal/gap-instruments/accounting/links.sqlite3",
+    "docs/legal/gap-instruments/accounting/links.xlsx",
+    "docs/legal/gap-instruments/accounting/source.json",
+    "docs/legal/gap-instruments/decision-import/README.md",
+    "docs/legal/gap-instruments/dependencies/README.md",
+    "docs/legal/gap-instruments/dependencies/billing-proposal-PR138.json",
+    "docs/legal/gap-instruments/editions/advisory-contracts.html",
+    "docs/legal/gap-instruments/editions/advisory-contracts.pdf",
+    "docs/legal/gap-instruments/editions/advisory-contracts.xlsx",
+    "docs/legal/gap-instruments/editions/billing.html",
+    "docs/legal/gap-instruments/editions/billing.pdf",
+    "docs/legal/gap-instruments/editions/billing.xlsx",
+    "docs/legal/gap-instruments/editions/carry.html",
+    "docs/legal/gap-instruments/editions/carry.pdf",
+    "docs/legal/gap-instruments/editions/carry.xlsx",
+    "docs/legal/gap-instruments/editions/colo.html",
+    "docs/legal/gap-instruments/editions/colo.pdf",
+    "docs/legal/gap-instruments/editions/colo.xlsx",
+    "docs/legal/gap-instruments/editions/debt-liens.html",
+    "docs/legal/gap-instruments/editions/debt-liens.pdf",
+    "docs/legal/gap-instruments/editions/debt-liens.xlsx",
+    "docs/legal/gap-instruments/editions/financing-documents.html",
+    "docs/legal/gap-instruments/editions/financing-documents.pdf",
+    "docs/legal/gap-instruments/editions/financing-documents.xlsx",
+    "docs/legal/gap-instruments/editions/formations.html",
+    "docs/legal/gap-instruments/editions/formations.pdf",
+    "docs/legal/gap-instruments/editions/formations.xlsx",
+    "docs/legal/gap-instruments/editions/host-rights.html",
+    "docs/legal/gap-instruments/editions/host-rights.pdf",
+    "docs/legal/gap-instruments/editions/host-rights.xlsx",
+    "docs/legal/gap-instruments/editions/land.html",
+    "docs/legal/gap-instruments/editions/land.pdf",
+    "docs/legal/gap-instruments/editions/land.xlsx",
+    "docs/legal/gap-instruments/editions/mark-clearance.html",
+    "docs/legal/gap-instruments/editions/mark-clearance.pdf",
+    "docs/legal/gap-instruments/editions/mark-clearance.xlsx",
+    "docs/legal/gap-instruments/editions/rw-chronology.html",
+    "docs/legal/gap-instruments/editions/rw-chronology.pdf",
+    "docs/legal/gap-instruments/editions/rw-chronology.xlsx",
+    "docs/legal/gap-instruments/editions/rw-title.html",
+    "docs/legal/gap-instruments/editions/rw-title.pdf",
+    "docs/legal/gap-instruments/editions/rw-title.xlsx",
+    "docs/legal/gap-instruments/editions/tax-billing.html",
+    "docs/legal/gap-instruments/editions/tax-billing.pdf",
+    "docs/legal/gap-instruments/editions/tax-billing.xlsx",
+    "docs/legal/gap-instruments/editions/tax-filing.html",
+    "docs/legal/gap-instruments/editions/tax-filing.pdf",
+    "docs/legal/gap-instruments/editions/tax-filing.xlsx",
+    "docs/legal/gap-instruments/editions/tenure.html",
+    "docs/legal/gap-instruments/editions/tenure.pdf",
+    "docs/legal/gap-instruments/editions/tenure.xlsx",
+    "docs/legal/gap-instruments/editions/uranium-custody.html",
+    "docs/legal/gap-instruments/editions/uranium-custody.pdf",
+    "docs/legal/gap-instruments/editions/uranium-custody.xlsx",
+    "docs/legal/gap-instruments/editions/workforce.html",
+    "docs/legal/gap-instruments/editions/workforce.pdf",
+    "docs/legal/gap-instruments/editions/workforce.xlsx",
+    "docs/legal/gap-instruments/index.json",
+    "docs/legal/gap-instruments/instruments.sqlite3",
+    "docs/legal/gap-instruments/manifest.json",
+    "docs/legal/gap-instruments/practice/README.md",
+    "docs/legal/gap-instruments/practice/acquisition/TASK.md",
+    "docs/legal/gap-instruments/practice/acquisition/WORKED.md",
+    "docs/legal/gap-instruments/practice/acquisition/blank.xlsx",
+    "docs/legal/gap-instruments/practice/acquisition/packet.json",
+    "docs/legal/gap-instruments/practice/acquisition/worked.xlsx",
+    "docs/legal/gap-instruments/practice/debt/TASK.md",
+    "docs/legal/gap-instruments/practice/debt/WORKED.md",
+    "docs/legal/gap-instruments/practice/debt/blank.xlsx",
+    "docs/legal/gap-instruments/practice/debt/packet.json",
+    "docs/legal/gap-instruments/practice/debt/worked.xlsx",
+    "docs/legal/gap-instruments/practice/legal-due-diligence/TASK.md",
+    "docs/legal/gap-instruments/practice/legal-due-diligence/WORKED.md",
+    "docs/legal/gap-instruments/practice/legal-due-diligence/blank.xlsx",
+    "docs/legal/gap-instruments/practice/legal-due-diligence/packet.json",
+    "docs/legal/gap-instruments/practice/legal-due-diligence/worked.xlsx",
+    "docs/legal/gap-instruments/practice/manifest.json",
+    "docs/legal/gap-instruments/practice/practice.sqlite3",
+    "docs/legal/gap-instruments/practice/revenue-dispute/TASK.md",
+    "docs/legal/gap-instruments/practice/revenue-dispute/WORKED.md",
+    "docs/legal/gap-instruments/practice/revenue-dispute/blank.xlsx",
+    "docs/legal/gap-instruments/practice/revenue-dispute/packet.json",
+    "docs/legal/gap-instruments/practice/revenue-dispute/worked.xlsx",
+    "docs/legal/gap-instruments/reconciliations/README.md",
+    "docs/legal/gap-instruments/reconciliations/WORKED.md",
+    "docs/legal/gap-instruments/reconciliations/blank.xlsx",
+    "docs/legal/gap-instruments/reconciliations/manifest.json",
+    "docs/legal/gap-instruments/reconciliations/reconciliations.sqlite3",
+    "docs/legal/gap-instruments/reconciliations/source.json",
+    "docs/legal/gap-instruments/reconciliations/worked.xlsx",
+    "docs/legal/gap-instruments/review-support/DECISIONS.md",
+    "docs/legal/gap-instruments/review-support/decisions.json",
+    "docs/legal/gap-instruments/review-support/decisions.xlsx",
+    "docs/legal/gap-instruments/review-support/organization.json",
+    "docs/legal/gap-instruments/review-support/review.sqlite3",
+    "docs/legal/gap-instruments/review.html",
+    "docs/legal/gap-instruments/revision-policy.md",
+    "docs/legal/gap-instruments/source/advisory-contracts.json",
+    "docs/legal/gap-instruments/source/advisory-contracts.md",
+    "docs/legal/gap-instruments/source/billing.json",
+    "docs/legal/gap-instruments/source/billing.md",
+    "docs/legal/gap-instruments/source/carry.json",
+    "docs/legal/gap-instruments/source/carry.md",
+    "docs/legal/gap-instruments/source/colo.json",
+    "docs/legal/gap-instruments/source/colo.md",
+    "docs/legal/gap-instruments/source/debt-liens.json",
+    "docs/legal/gap-instruments/source/debt-liens.md",
+    "docs/legal/gap-instruments/source/financing-documents.json",
+    "docs/legal/gap-instruments/source/financing-documents.md",
+    "docs/legal/gap-instruments/source/formations.json",
+    "docs/legal/gap-instruments/source/formations.md",
+    "docs/legal/gap-instruments/source/host-rights.json",
+    "docs/legal/gap-instruments/source/host-rights.md",
+    "docs/legal/gap-instruments/source/land.json",
+    "docs/legal/gap-instruments/source/land.md",
+    "docs/legal/gap-instruments/source/mark-clearance.json",
+    "docs/legal/gap-instruments/source/mark-clearance.md",
+    "docs/legal/gap-instruments/source/rw-chronology.json",
+    "docs/legal/gap-instruments/source/rw-chronology.md",
+    "docs/legal/gap-instruments/source/rw-title.json",
+    "docs/legal/gap-instruments/source/rw-title.md",
+    "docs/legal/gap-instruments/source/tax-billing.json",
+    "docs/legal/gap-instruments/source/tax-billing.md",
+    "docs/legal/gap-instruments/source/tax-filing.json",
+    "docs/legal/gap-instruments/source/tax-filing.md",
+    "docs/legal/gap-instruments/source/tenure.json",
+    "docs/legal/gap-instruments/source/tenure.md",
+    "docs/legal/gap-instruments/source/uranium-custody.json",
+    "docs/legal/gap-instruments/source/uranium-custody.md",
+    "docs/legal/gap-instruments/source/workforce.json",
+    "docs/legal/gap-instruments/source/workforce.md",
+    "docs/legal/gap-instruments/walkthroughs/README.md",
+    "docs/legal/gap-instruments/walkthroughs/source-register.json",
+    "docs/legal/gap-instruments/walkthroughs/source/aru_2026_journal.csv",
+    "docs/legal/gap-instruments/walkthroughs/source/aru_2026_trial_balance.csv",
+    "docs/legal/gap-instruments/walkthroughs/source/aru_acquisition_opening_trial_balance.csv",
+    "docs/legal/gap-instruments/walkthroughs/source/checks.csv",
+    "docs/legal/gap-instruments/walkthroughs/source/evidence_requests.csv",
+    "docs/legal/gap-instruments/walkthroughs/source/ff_contract_trace.csv",
+    "docs/legal/gap-instruments/walkthroughs/source/ff_invoice.csv",
+    "docs/legal/gap-instruments/walkthroughs/source/ff_journal.csv",
+    "docs/legal/gap-instruments/walkthroughs/source/ff_packet_journal.csv",
+    "docs/legal/gap-instruments/walkthroughs/source/ff_statements.csv",
+    "docs/legal/gap-instruments/walkthroughs/source/financial_statements.csv",
+    "docs/legal/gap-instruments/walkthroughs/source/monthly_trace.csv",
+    "docs/legal/gap-instruments/walkthroughs/source/red_wash_2026_journal.csv",
+    "docs/legal/gap-instruments/walkthroughs/source/red_wash_2026_trial_balance.csv",
+    "docs/legal/gap-instruments/walkthroughs/source/rw_aro_trace.csv",
+    "docs/legal/gap-instruments/walkthroughs/walkthroughs.sqlite3",
+    "docs/legal/gap-instruments/walkthroughs/walkthroughs.xlsx",
+    "docs/reader/exercises/ACQUISITION.md",
+    "docs/reader/exercises/CONTRACTS.md",
+    "docs/reader/exercises/INVOICE.md",
+    "docs/structured/j2_leadership_2026-09-10.json",
+    "enterprise/runtime/docs/CONTRACT_DOSSIER.md",
+    "enterprise/runtime/finance.py",
+    "enterprise/services/source/runtime_sites_2026-09-11.json",
+    "geospatial/facilities/RESEARCH_CAMPUSES.md",
+    "geospatial/facilities/source/campus.json",
+    "geospatial/facilities/source/research_campuses.json",
+    "geospatial/registers/SITE_REGISTER.csv",
+    "industrial/corporate/LEADERSHIP_AND_AUTHORITY.md",
+    "industrial/corporate/LEGAL_STRUCTURE_AND_FORMATION.md",
+    "industrial/finance/ASSUMPTIONS_AND_TEMPORAL_CONTROLS.md",
+    "industrial/finance/RED_WASH_AND_FUNDING.md",
+    "industrial/finance/TRANSACTION_ACCOUNTING.md",
+    "industrial/operations/OPERATING_AND_SERVICE_PLAN.md",
+    "industrial/pale_sun/01_VILANDER_BIOGRAPHY.md",
+    "industrial/pale_sun/02_BTC_RECRUITMENT_AND_ASSESSMENT.md",
+    "industrial/pale_sun/03_URANIUM_PROBLEM_BOOK.md",
+    "industrial/pale_sun/04_ALEXANDRIA_AND_ESCALATION_RECORD.md",
+    "industrial/pale_sun/05_FALSE_START_CEDAR_JUNCTION.md",
+    "industrial/pale_sun/06_FALSE_START_JUNIPER_MESA.md",
+    "industrial/pale_sun/07_FALSE_START_SALT_RIM.md",
+    "industrial/pale_sun/08_FOUNDING_AND_APPOINTMENT.md",
+    "industrial/pale_sun/09_RED_WASH_JUDGMENT_AAR.md",
+    "industrial/pale_sun/10_FEDERAL_AND_DOWNSTREAM_BRIEF.md",
+    "industrial/publications/SH-IND-ARU-CLOSE-001_v1.0.0.pdf",
+    "industrial/publications/SH-IND-IC-001_v1.0.0.pdf",
+    "industrial/source/chronology.json",
+    "industrial/source/entities.json",
+    "industrial/source/finance.json",
+    "industrial/source/operations.json",
+    "industrial/tools/build_financials.py",
+    "industrial/transaction/01_RW_TRANSACTION_FILE.md",
+    "industrial/transaction/02_ARU_LOI_AND_SELLER_FILE.md",
+    "industrial/transaction/03_ARU_DILIGENCE_MEMORANDUM.md",
+    "industrial/transaction/04_ARU_APPROVAL_AND_PURCHASE_AGREEMENT.md",
+    "industrial/transaction/05_ARU_CLOSING_AND_TAX_DELIVERY.md",
+    "industrial/transaction/06_ARU_TRANSITION_AND_RETENTION.md",
+    "industrial/transaction/07_ARU_TAX_STRUCTURE_MEMORANDUM.md",
+    "industrial/transaction/08_INTERCOMPANY_LOGISTICS_AGREEMENT.md",
+    "industrial/transaction/09_SERVICE_PRICING_COMPARISON.md",
+    "red_wash/agreements/TRANSACTION_AND_COMMERCIAL_INSTRUMENTS.md",
+    "red_wash/source/core_operating_data.json",
+    "tools/legal_gaps/build.py",
+    "tools/legal_gaps/formatting.py",
+    "tools/legal_gaps/requirements.txt",
+    "tools/legal_gaps/style.css"
+  ],
+  "files": [
+    {
+      "path": "START_HERE.html",
+      "sha256": "4289df460429cfe7204b730b504eb10ac888d4a7e0ed301318ab1a39e683dc8d",
+      "bytes": 2237
+    },
+    {
+      "path": "docs/advisory/CARRY_PLAN_STANDARD.md",
+      "sha256": "c8b64ecd570a2402233bd6067eea0e274e267c8f1aa90d9153de4b3a4865de45",
+      "bytes": 9981
+    },
+    {
+      "path": "docs/advisory/COMMERCIAL_CONTRACTING_AND_PRICING_STANDARD.md",
+      "sha256": "d205a6b5d1a254ed30fc35c395f0f3ea3372a449d0537fea7c7bb18583cb8275",
+      "bytes": 9124
+    },
+    {
+      "path": "docs/advisory/EXPERT_NETWORK_AND_THIRD_PARTY_STANDARD.md",
+      "sha256": "fe6648704a935ad7c91651f5042bc5b3f5e821e9d432cbcbbab2fa648dd31763",
+      "bytes": 4493
+    },
+    {
+      "path": "docs/advisory/IP_DATA_AND_METHOD_TRANSFER_STANDARD.md",
+      "sha256": "e6f58bec6caeaa1eb693962bd4a021d40b4bec5319c49f0e4e59c3212f04ad91",
+      "bytes": 9358
+    },
+    {
+      "path": "docs/advisory/LEGAL_AND_CONTRACTING_TERM_SHEET.md",
+      "sha256": "b0e842b631713579f2890efb846de642b100a576282ba88dea9880fb671428f7",
+      "bytes": 9184
+    },
+    {
+      "path": "docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md",
+      "sha256": "25e484d7fbc2c83a37f0e7ae7fe20ff741cde176bd0c2ba7be742fa7fb3e2624",
+      "bytes": 27859
+    },
+    {
+      "path": "docs/canon/CRADLE_CLOSEOUT_2026-09-06.md",
+      "sha256": "b49eaf96f1582f11886e9543b1543013f47acc99aa5533082d73717ab523e8aa",
+      "bytes": 13471
+    },
+    {
+      "path": "docs/canon/FINANCE_HUMAN_EVIDENCE_001_ACCEPTANCE_2026-09-11.md",
+      "sha256": "e4a5f41eec6fcac6a3a1a71512869a5f2ef63019a198de7dde78737ef27303a9",
+      "bytes": 1586
+    },
+    {
+      "path": "docs/canon/INDUSTRIAL_CLOSEOUT_2026-09-05.md",
+      "sha256": "0b21f22c2a8ffe55fa4e43898834ddc38389e42efe2e9c11ff48c7418dad8be7",
+      "bytes": 13400
+    },
+    {
+      "path": "docs/canon/J2_LEADERSHIP_APPOINTMENTS_2026-09-10.md",
+      "sha256": "05ee1d4bbcad3ff2de9f623de0b57373acaaf611c0b161664a9f3e36b1066509",
+      "bytes": 4781
+    },
+    {
+      "path": "docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05_R2.md",
+      "sha256": "89eae89e18db1d3cf3ab4f7bf7f54fa57efabb84c57127717b731572048d563b",
+      "bytes": 13506
+    },
+    {
+      "path": "docs/canon/RUNTIME_HOSTING_AND_DATA_CENTER_DECISIONS_2026-09-11.md",
+      "sha256": "fd309a9bdf596ea96498b7207b60ea3bea70a35d8c418371aa96c06d928bb17b",
+      "bytes": 7509
+    },
+    {
+      "path": "docs/canon/THIRD_PARTY_SERVICES_SOURCING_DECISIONS_2026-09-09.md",
+      "sha256": "53dc3c69be68cd66fe9fdd30048f8229416fd6bd6660272dfeae20f802f986d4",
+      "bytes": 19036
+    },
+    {
+      "path": "docs/canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md",
+      "sha256": "3289ad8ce5d20d767b38f1ad3ed804feeb80300c59d7e96653bfe68f1eaa24b6",
+      "bytes": 12161
+    },
+    {
+      "path": "docs/facilities/references/sacramento-hq/r01-approved/02_Corporate_L02_Product_Draft.png",
+      "sha256": "09a3339ece443d6e7e8cd148cd8f207b56cd938a03efde4f4c5f8e9367dd6179",
+      "bytes": 470667
+    },
+    {
+      "path": "docs/facilities/references/sacramento-hq/r01-approved/03_J2_L01_Contact_JAG_Draft.png",
+      "sha256": "17bf92029276f7794721129e58830344a9a3ee4341c858f2c928d53ad8b0fefb",
+      "bytes": 479716
+    },
+    {
+      "path": "docs/facilities/references/sacramento-hq/r01-approved/04_Education_L01_Teaching_Draft.png",
+      "sha256": "d37ff987cf1036d32cf0fe07ca3b9a0578d7f359bd820fde2551cb268ed88361",
+      "bytes": 448627
+    },
+    {
+      "path": "docs/facilities/references/sacramento-hq/r01-approved/CODEX_ADDENDUM_APPROVED_SACRAMENTO_VISUAL_BASELINE_R01.md",
+      "sha256": "8fc176378cc3717f2e4cac42c8d56851fa33ddfc916622913f3820d5c99331db",
+      "bytes": 13325
+    },
+    {
+      "path": "docs/finance/RUNTIME_INFRASTRUCTURE_FINANCE_RECONCILIATION_2026-09-11.md",
+      "sha256": "20558ea7ecde58914b7ccd44dc866f56c754b5eabd053eff01b43e7684aa40c8",
+      "bytes": 7004
+    },
+    {
+      "path": "docs/finance/evidence/SH-FIN-HUMAN-001/ACCEPTANCE.json",
+      "sha256": "6f521e7deb88875267ca705649e4db2dab8ca3dd5689c3cd22e8472fd5016f72",
+      "bytes": 2881
+    },
+    {
+      "path": "docs/finance/evidence/SH-FIN-HUMAN-001/PACKET.md",
+      "sha256": "1b7828cb0a69551ef5ff14fad874bdc6222f697679e4163933d3a6f85f27f60c",
+      "bytes": 4583
+    },
+    {
+      "path": "docs/finance/evidence/SH-FIN-HUMAN-001/reconciliation.xlsx",
+      "sha256": "7077ec3ae8e796a6f94759fe19624ab51a11ac45b7ce538a0c447b4c9c384214",
+      "bytes": 12459
+    },
+    {
+      "path": "docs/finance/evidence/SH-FIN-HUMAN-001/source.json",
+      "sha256": "c4833cfc6f28db6cd3edcae761b0e2d8f463a20de79f1d6fd5b0c517f8f829b7",
+      "bytes": 34879
+    },
+    {
+      "path": "docs/finance/evidence/close/README.md",
+      "sha256": "b0cee3836cd0c06afd15940ebf54ea02f812579de419eb17bc72172ee920944d",
+      "bytes": 3587
+    },
+    {
+      "path": "docs/finance/evidence/close/RECONCILIATION.json",
+      "sha256": "b42bd62a798656e82e92f6e80775612c7efbf780ef9bffa9bf98ab3875ca266f",
+      "bytes": 3051
+    },
+    {
+      "path": "docs/finance/evidence/close/evidence-register.json",
+      "sha256": "b46821a4c7d473c8d41cafe45327b22c4a0f258c3b1bd56c2d8b9305959c2a64",
+      "bytes": 7558
+    },
+    {
+      "path": "docs/finance/evidence/close/evidence.sqlite3",
+      "sha256": "4bfc65cbf1ce5d1bde4e3ec4759c806a6a1af95326190231c703581056715c4d",
+      "bytes": 4800512
+    },
+    {
+      "path": "docs/finance/evidence/close/source/credit_allowance.csv",
+      "sha256": "48f7d95bb00f0cec4489c5e15b42e98138226b745af4f8b18460d63a10e4f097",
+      "bytes": 14293
+    },
+    {
+      "path": "docs/finance/evidence/close/source/enterprise_journal.csv",
+      "sha256": "7077496950b963701e8a4a387c15044a9c02f390a53e6e00a7be3f90cc70de40",
+      "bytes": 2178741
+    },
+    {
+      "path": "docs/finance/evidence/close/source/industrial_eliminations.csv",
+      "sha256": "df335d419785a7c370417ed871d6da1878993d2149b155e1ec0b30969f6e8966",
+      "bytes": 1789
+    },
+    {
+      "path": "docs/finance/evidence/close/source/industrial_intercompany.csv",
+      "sha256": "cae2ce39164d9a602167c7607e39a8cb44caddab37df8222e1a726b0b6986b78",
+      "bytes": 41946
+    },
+    {
+      "path": "docs/finance/evidence/close/source/journal.csv",
+      "sha256": "10b8bee2f13881e14ae9ddf0a862cf264eea3de92693368119421eee48a9bc91",
+      "bytes": 1428373
+    },
+    {
+      "path": "docs/finance/evidence/close/source/legal_statements.csv",
+      "sha256": "c5761ef899d30c336400272e0f8497868d12ff7412d4b03f758f5f8f1db3b641",
+      "bytes": 25431
+    },
+    {
+      "path": "docs/finance/evidence/close/source/legal_trial_balance.csv",
+      "sha256": "023ebf1bd5001ce70bde19ee8bf364a41b54534cb4f8c9477597bccf46f296bc",
+      "bytes": 292282
+    },
+    {
+      "path": "docs/finance/evidence/close/source/monthly_statements.csv",
+      "sha256": "c3f06769ce6975764e8edb6ec7c61c95de2ed3088cc7b6468cbfad5715fe0c34",
+      "bytes": 36147
+    },
+    {
+      "path": "docs/finance/evidence/close/source/subledger_rollforward.csv",
+      "sha256": "9a2d216f5c3b7bce6f5a7c5e1c5491bb06586f129d171f61a486f9dbb7feaaa2",
+      "bytes": 7434
+    },
+    {
+      "path": "docs/finance/evidence/close/source/unit_trial_balance.csv",
+      "sha256": "5eb03bd25ccd803a92913ec098aa8324def9ffd619eb6cb7ab83dc3937b929c7",
+      "bytes": 394792
+    },
+    {
+      "path": "docs/finance/evidence/customer/source/receivable_aging.csv",
+      "sha256": "7cf54fb1b113af93b4df4c20e1ed42f9ab30f7e45707efae4a8637f3cc449049",
+      "bytes": 15102
+    },
+    {
+      "path": "docs/finance/evidence/customer/source/subledger_rollforward.csv",
+      "sha256": "9a2d216f5c3b7bce6f5a7c5e1c5491bb06586f129d171f61a486f9dbb7feaaa2",
+      "bytes": 7434
+    },
+    {
+      "path": "docs/finance/evidence/supporting-schedules/source/asset_rollforward.csv",
+      "sha256": "a84bedaaf0e35bf6af46fcab78ecaab393f0c9a2a0b463f9cede642bd641c4e7",
+      "bytes": 4906
+    },
+    {
+      "path": "docs/finance/evidence/supporting-schedules/source/industrial_debt.csv",
+      "sha256": "5f6b7535dd73f440473c55672914866d51b70029477cb2b4a383777417de9c06",
+      "bytes": 3362
+    },
+    {
+      "path": "docs/finance/evidence/tax-transaction/CURRENT_SOURCE_BRIDGE.json",
+      "sha256": "4e4c35d03d5613e0ef037d7dd14d27c250fa547fc29d2f93ddd1a1b25274e17c",
+      "bytes": 7394
+    },
+    {
+      "path": "docs/finance/evidence/tax-transaction/acquisition_ppa.csv",
+      "sha256": "bd024c5ac926ed98ee89876e0bb4f32a3e80c5e0bea47c7bb227ad3c172b8fa0",
+      "bytes": 676
+    },
+    {
+      "path": "docs/finance/evidence/tax-transaction/aru_2026_assets.csv",
+      "sha256": "6039079a477cd1c21d3419631ed8ffd5089f711ad5599be627d1bfa19da34c79",
+      "bytes": 774
+    },
+    {
+      "path": "docs/finance/evidence/tax-transaction/aru_2026_debt.csv",
+      "sha256": "f4fe40dcd3672ed876be4b539428c92fbeb8ed441f7f4fd1f610529c4ebb2d53",
+      "bytes": 972
+    },
+    {
+      "path": "docs/finance/evidence/tax-transaction/aru_2026_tax_rollforward.csv",
+      "sha256": "323a8532e46f3bf9cf3e39bf5666e5745cd842011372b26726df632a77f14ee0",
+      "bytes": 1581
+    },
+    {
+      "path": "docs/finance/evidence/tax-transaction/aru_acquisition_opening_trial_balance.csv",
+      "sha256": "33a28e198a5ce5a5d35f751ca8a3fac6aefc04faba4329b6297c7cd560ca02d5",
+      "bytes": 1187
+    },
+    {
+      "path": "docs/finance/evidence/tax-transaction/transaction-support.sqlite3",
+      "sha256": "827221135325c5adcacb3673b852724434a31a9b4da8a5eec23490ca566d0e39",
+      "bytes": 24576
+    },
+    {
+      "path": "docs/finance/evidence/treasury/source/industrial_bank_reconciliations.csv",
+      "sha256": "12e2a7c840f5202a76e4317fd693f53a110202b64e8571831c3b0ded4a80dded",
+      "bytes": 5137
+    },
+    {
+      "path": "docs/finance/evidence/treasury/source/subledger_rollforward.csv",
+      "sha256": "9a2d216f5c3b7bce6f5a7c5e1c5491bb06586f129d171f61a486f9dbb7feaaa2",
+      "bytes": 7434
+    },
+    {
+      "path": "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
+      "sha256": "40b45496c66d6e7e5eb5dcd118c3ba37feb710744760c3617acbddcd899e466f",
+      "bytes": 5946
+    },
+    {
+      "path": "docs/governance/board-records/2021-06-18_harrison-vale-growth-financing-minutes.md",
+      "sha256": "b994512c64f86abe0d649f95d4ea3d3e00fd0c2c22af0ed56b62bd7ed41fae97",
+      "bytes": 3498
+    },
+    {
+      "path": "docs/governance/board-records/2022-10-28_wolf-ridge-industrial-financing-minutes.md",
+      "sha256": "ec3625726d23588816c073afb4bd76cce51085a195833c6089faea3c3efed1a4",
+      "bytes": 3601
+    },
+    {
+      "path": "docs/j2/EDUCATION.md",
+      "sha256": "a86400a7174c3b9de3834eba66d4ff218a502e646233ddb6bf3736a9bd33cc8e",
+      "bytes": 7026
+    },
+    {
+      "path": "docs/j2/J2_ESTABLISHMENT.md",
+      "sha256": "826bbe8b359d73938c69f8bbd984114fd3b73109bbb9e8af7f003f6b39590c82",
+      "bytes": 2519
+    },
+    {
+      "path": "docs/j2/J2_HEADQUARTERS.md",
+      "sha256": "6858ab880401e8de7af861e4e9a407036a9406401e76d0d04086b152c33414c6",
+      "bytes": 4146
+    },
+    {
+      "path": "docs/legal/ADVISORY_NAME_AND_EXTERNAL_CLEARANCE_STATUS_2026-09-09.md",
+      "sha256": "53cb9756ad05f9422b8d0bc93eeecace454cc25c6652424154caf2eaf0b4984d",
+      "bytes": 2897
+    },
+    {
+      "path": "docs/legal/MOCK_DEED_NORTHERN_NEVADA_DATA_CENTER_2026-09-04.md",
+      "sha256": "aa1717ac07ea2968d0ad877045d57b29ec0766dd852a79bd61553fa24eb97d79",
+      "bytes": 3955
+    },
+    {
+      "path": "docs/legal/PRELIMINARY_NAME_AND_MARK_SCREEN.md",
+      "sha256": "3c6ead967615a03fadb6f4a288bb0a2b5cf2d49f7266886af5468c6c106ef6cb",
+      "bytes": 11048
+    },
+    {
+      "path": "docs/legal/evidence/proposals/decision-register.json",
+      "sha256": "e252899c2f323096e54a37eb7b754c19ef1fbb48ce612d9460db37ade4fb743c",
+      "bytes": 6224
+    },
+    {
+      "path": "docs/legal/gap-instruments/PACKAGE_INDEX.md",
+      "sha256": "ef03d857b1af7e4ce09fed23c5bb29c9e36200e1b288da067258bbe23f68283b",
+      "bytes": 4811
+    },
+    {
+      "path": "docs/legal/gap-instruments/PRACTICAL_WORK.md",
+      "sha256": "365fb4d9a1b737dc5ab0bd596aeff2b5aeab261fe95469a03389d534b6a5cd63",
+      "bytes": 3850
+    },
+    {
+      "path": "docs/legal/gap-instruments/PRACTICAL_WORK.md.html",
+      "sha256": "dd58cfbe12d58f8d384e521d686434c69c97d230476d14d5eac8821379c6af12",
+      "bytes": 5437
+    },
+    {
+      "path": "docs/legal/gap-instruments/README.md",
+      "sha256": "74ea5af9a8ebcdec002ef3bb97d1037750309a428a5f19e1f2d43c7c1abf67ae",
+      "bytes": 2561
+    },
+    {
+      "path": "docs/legal/gap-instruments/RESULTS.md",
+      "sha256": "5d97c1ef3a2056965d0a2f12ee63d089f3409d10bd2420fb38304f03216cc42b",
+      "bytes": 3211
+    },
+    {
+      "path": "docs/legal/gap-instruments/REVIEW_WORKFLOW.md",
+      "sha256": "8b54945de408dbdf77e8c2cde4efa16fb2ff2c283ed930c8f952d1f057cf3494",
+      "bytes": 2966
+    },
+    {
+      "path": "docs/legal/gap-instruments/accounting/LINKS.md",
+      "sha256": "f26db2bce6f940e60c25d45ee581ccfedca03e80d8de2dd97407a3288550d799",
+      "bytes": 31613
+    },
+    {
+      "path": "docs/legal/gap-instruments/accounting/LINKS.md.html",
+      "sha256": "05aad8190fb9fe0216e4b229e29591f94f26c0e74c422ed9b09ef140a8996746",
+      "bytes": 45919
+    },
+    {
+      "path": "docs/legal/gap-instruments/accounting/README.md",
+      "sha256": "a519cca0fdce06c0d87e952db2b8ab0678de9a36408e90531725ecca909fd719",
+      "bytes": 3431
+    },
+    {
+      "path": "docs/legal/gap-instruments/accounting/README.md.html",
+      "sha256": "1c288f8d27924855d7c887096e6be9ed5c440a9851b9e951be9c64555d746a55",
+      "bytes": 4558
+    },
+    {
+      "path": "docs/legal/gap-instruments/accounting/links.json",
+      "sha256": "6023bcfa45ad587d37554bdd7d5e2598dcc40c8580e1e2214ee52c4ba1b8b47f",
+      "bytes": 67562
+    },
+    {
+      "path": "docs/legal/gap-instruments/accounting/links.sqlite3",
+      "sha256": "dba91a7e433dfe8850a92d3a1d50e9fa8b2999b4abc1001703c9e016f51d0a64",
+      "bytes": 90112
+    },
+    {
+      "path": "docs/legal/gap-instruments/accounting/links.xlsx",
+      "sha256": "872b73fbd8273d95d79b364ce8148cc83eab0ed4539c00f9cb8cb30fb60aa99d",
+      "bytes": 50419
+    },
+    {
+      "path": "docs/legal/gap-instruments/accounting/source.json",
+      "sha256": "46144d3715ce03ba830d4fde76ed0aefebf2e3c0635d7bd6f813ea508ccf61f8",
+      "bytes": 24763
+    },
+    {
+      "path": "docs/legal/gap-instruments/decision-import/README.md",
+      "sha256": "4409a30c850a4baaf10f27feca3f5a5e30200d93e9b1d163b3db8fcc92de584e",
+      "bytes": 4691
+    },
+    {
+      "path": "docs/legal/gap-instruments/decision-import/README.md.html",
+      "sha256": "414b006d2b5b79ccc4a6b13ef7b55f8dcd55e5d33127c8239743e130cc2eca80",
+      "bytes": 6342
+    },
+    {
+      "path": "docs/legal/gap-instruments/dependencies/README.md",
+      "sha256": "43a3ce06bc184c008d8ab5ec7cf8173b6a69e0fbbaa201b4a7e31a6f77240586",
+      "bytes": 607
+    },
+    {
+      "path": "docs/legal/gap-instruments/dependencies/billing-proposal-PR138.json",
+      "sha256": "23d8d6080ad296468d6b649eda55593d49c33cde0e6b038343ce11e4973e23f8",
+      "bytes": 9028
+    },
+    {
+      "path": "docs/legal/gap-instruments/editions/advisory-contracts.html",
+      "sha256": "65a5bcc2de119592e7d0dac95a22bb26cd2a04483cd8fac9be6b43334607efb4",
+      "bytes": 26744
+    },
+    {
+      "path": "docs/legal/gap-instruments/editions/advisory-contracts.pdf",
+      "sha256": "b39ec29f9c47d026de04ccb3bb9a0a91ccb3d4147ce5a99c86c010d9a1871067",
+      "bytes": 71401
+    },
+    {
+      "path": "docs/legal/gap-instruments/editions/advisory-contracts.xlsx",
+      "sha256": "71830e1d6ed8b8c72004b1ddc519d331c1b0216ff8e550d5a86e403be81cbb1e",
+      "bytes": 6725
+    },
+    {
+      "path": "docs/legal/gap-instruments/editions/billing.html",
+      "sha256": "6101ed6dc3ffb798fa405d2cc9f4d1882fad3a7ceee185a228835a389a04e753",
+      "bytes": 22716
+    },
+    {
+      "path": "docs/legal/gap-instruments/editions/billing.pdf",
+      "sha256": "1454d08a5d73d68bc8bddceede45bc4b48994fbbb34fde51a3af06d54e96fe25",
+      "bytes": 78477
+    },
+    {
+      "path": "docs/legal/gap-instruments/editions/billing.xlsx",
+      "sha256": "517c99eff78cf17dc5c0f0a82e06662d07b55f39b64380b5053a2052c4f76128",
+      "bytes": 6881
+    },
+    {
+      "path": "docs/legal/gap-instruments/editions/carry.html",
+      "sha256": "6cd6725bd2b5d703c8b722385b9757e68e134dcf58c1404d861fff2d35939148",
+      "bytes": 23958
+    },
+    {
+      "path": "docs/legal/gap-instruments/editions/carry.pdf",
+      "sha256": "b889dbf6b3d2caa8103017feee23c77fd03071c618a45f10f93ecfcada19995c",
+      "bytes": 63763
+    },
+    {
+      "path": "docs/legal/gap-instruments/editions/carry.xlsx",
+      "sha256": "cce5c891deefee4c231a7234e277249682a0a507086dbaa3afc946a33bd00d37",
+      "bytes": 6713
+    },
+    {
+      "path": "docs/legal/gap-instruments/editions/colo.html",
+      "sha256": "22312cd55385a51d6a2d424622557f58cc36a0d5aa062430969c136938a9603a",
+      "bytes": 23726
+    },
+    {
+      "path": "docs/legal/gap-instruments/editions/colo.pdf",
+      "sha256": "f6ca1709d8853c22135e49ca0bc9a0c70aca9f3d2dfa27fe50b1d869b5917027",
+      "bytes": 62995
+    },
+    {
+      "path": "docs/legal/gap-instruments/editions/colo.xlsx",
+      "sha256": "11cf8fcd7680b0cd777089b5e32adc8d58fa84e60e6365a34abb22e05b2a4217",
+      "bytes": 6904
+    },
+    {
+      "path": "docs/legal/gap-instruments/editions/debt-liens.html",
+      "sha256": "aad02016ee7c5f11782068829ea5bc36538bf53b6d63391556855eb2b9f96815",
+      "bytes": 25249
+    },
+    {
+      "path": "docs/legal/gap-instruments/editions/debt-liens.pdf",
+      "sha256": "59aaae8c3f5048079fe5b993f35fab239a75e0572d734fbc1f9fa2e2c99b5bdf",
+      "bytes": 64605
+    },
+    {
+      "path": "docs/legal/gap-instruments/editions/debt-liens.xlsx",
+      "sha256": "77ccd92e8c7014d8ad5c532988fdc81bd1ff712eb95e8925bcf5691eff1d96cd",
+      "bytes": 9370
+    },
+    {
+      "path": "docs/legal/gap-instruments/editions/financing-documents.html",
+      "sha256": "1b742ffd63e71b9ddd4785bf43dfcb17ea685751a905d14afc3c7700e5db99fe",
+      "bytes": 25211
+    },
+    {
+      "path": "docs/legal/gap-instruments/editions/financing-documents.pdf",
+      "sha256": "dbec54bba2adff2e60de770a9ae36e88b344214d0bb7905fcc80b08d6b5d8e61",
+      "bytes": 65315
+    },
+    {
+      "path": "docs/legal/gap-instruments/editions/financing-documents.xlsx",
+      "sha256": "fde18bc6873cb6dab1aa9300e6e4def4c50873953a7f8f0d9738b8c1202b86ff",
+      "bytes": 7071
+    },
+    {
+      "path": "docs/legal/gap-instruments/editions/formations.html",
+      "sha256": "bf33753a3759dbec86c2611e1e069aa76b199ee3e70976a9e5d65db44215c17e",
+      "bytes": 26291
+    },
+    {
+      "path": "docs/legal/gap-instruments/editions/formations.pdf",
+      "sha256": "5cd9b56d086833bf9336cc3b37fab24626700ca88b8a1b4696834908e23c44c0",
+      "bytes": 70345
+    },
+    {
+      "path": "docs/legal/gap-instruments/editions/formations.xlsx",
+      "sha256": "7ba1591b7b2a6e48bbc8fb156a9dc789d687598da04ee8327190e62749c7e79a",
+      "bytes": 8206
+    },
+    {
+      "path": "docs/legal/gap-instruments/editions/host-rights.html",
+      "sha256": "b430e269258cea1104c1717e615b91678e87dcfe2631b71fd519e740dd30279a",
+      "bytes": 26966
+    },
+    {
+      "path": "docs/legal/gap-instruments/editions/host-rights.pdf",
+      "sha256": "c6bcc46b6479b0334ff530b77acd0d37483ea5735acb5bccb3ec3743f72f1e95",
+      "bytes": 76986
+    },
+    {
+      "path": "docs/legal/gap-instruments/editions/host-rights.xlsx",
+      "sha256": "56f497399842db385f1f59ea07ea270bbc3713e60e3b0dd6db23564078f53bf4",
+      "bytes": 6734
+    },
+    {
+      "path": "docs/legal/gap-instruments/editions/land.html",
+      "sha256": "fcafbf086fcb90137083f6d0b1d624d68e9ba4d4f8d98c2cd3a1738171b34131",
+      "bytes": 23884
+    },
+    {
+      "path": "docs/legal/gap-instruments/editions/land.pdf",
+      "sha256": "45086344d7cca1400d43bce2b4a6aec5d99597aab9f86681865d04f0d3f9dff6",
+      "bytes": 60677
+    },
+    {
+      "path": "docs/legal/gap-instruments/editions/land.xlsx",
+      "sha256": "656ee5c15227f35ed7eb7ce74e17681a4744ff4f60efa662bb775e65acf98a6f",
+      "bytes": 7966
+    },
+    {
+      "path": "docs/legal/gap-instruments/editions/mark-clearance.html",
+      "sha256": "e48f5b8d532217fcdaf891ca58373ea476665d06ac16fac2677ea7676b6228d5",
+      "bytes": 22566
+    },
+    {
+      "path": "docs/legal/gap-instruments/editions/mark-clearance.pdf",
+      "sha256": "b345750e052d3bf5754be3cb88ab9bab364772cb9533c768420c94771311a06b",
+      "bytes": 69569
+    },
+    {
+      "path": "docs/legal/gap-instruments/editions/mark-clearance.xlsx",
+      "sha256": "fb61ed8d7ac7b0126b0e6213e2e44daa35812f13344e008a5685c5cc7c346bbe",
+      "bytes": 6700
+    },
+    {
+      "path": "docs/legal/gap-instruments/editions/rw-chronology.html",
+      "sha256": "9a6ec9a60b113dc5c345a5e4ec3f72f7d8318e16fe0ce9f764eb88692de4663a",
+      "bytes": 21307
+    },
+    {
+      "path": "docs/legal/gap-instruments/editions/rw-chronology.pdf",
+      "sha256": "c469cbad13ad32e683aa690b108ecfefb5400c940e3660d6b8edf8b1e0de8da6",
+      "bytes": 75716
+    },
+    {
+      "path": "docs/legal/gap-instruments/editions/rw-chronology.xlsx",
+      "sha256": "887db11b0ba36bbda9941737c7f7faa226234883d08b4e2018d20e66032b40b2",
+      "bytes": 6789
+    },
+    {
+      "path": "docs/legal/gap-instruments/editions/rw-title.html",
+      "sha256": "5f1b108cd375e3af6ed8b380a14d89ac5702e696106f9326042b11dd5dd33e1a",
+      "bytes": 26208
+    },
+    {
+      "path": "docs/legal/gap-instruments/editions/rw-title.pdf",
+      "sha256": "482eddfac946de9aff5a0edb9fa723e5afc876da903f0b9f241e2a6e61df0783",
+      "bytes": 77204
+    },
+    {
+      "path": "docs/legal/gap-instruments/editions/rw-title.xlsx",
+      "sha256": "d8ddcc28106788490d0e4999cbeb676cbc988d3cb309331b84a65235ebece203",
+      "bytes": 6786
+    },
+    {
+      "path": "docs/legal/gap-instruments/editions/tax-billing.html",
+      "sha256": "02adac1a57fe62df378f7d39af7cd38d491b2c1e2a849f5debac938359062b7d",
+      "bytes": 23053
+    },
+    {
+      "path": "docs/legal/gap-instruments/editions/tax-billing.pdf",
+      "sha256": "6afad8981c8200f5ad6144e3a181ebc7e7e199b5a011849e746e1c41873d6e4c",
+      "bytes": 71733
+    },
+    {
+      "path": "docs/legal/gap-instruments/editions/tax-billing.xlsx",
+      "sha256": "6c54df2946a3e57df098a75c8ea4b798f579e50c132db9a39db490f1cb8985e9",
+      "bytes": 6884
+    },
+    {
+      "path": "docs/legal/gap-instruments/editions/tax-filing.html",
+      "sha256": "98ca70d4b329ee12af44383a497933938ff5ac13a81b56f44779ed0d17385f1d",
+      "bytes": 22007
+    },
+    {
+      "path": "docs/legal/gap-instruments/editions/tax-filing.pdf",
+      "sha256": "cb849b9f48716f05bfc680722b640b1d3442be860ed14ae3426a8dddc184742b",
+      "bytes": 61203
+    },
+    {
+      "path": "docs/legal/gap-instruments/editions/tax-filing.xlsx",
+      "sha256": "e73c6f75498297cb72bf96ba94c38f2566fae1b3f96ee3c18447eee68f2e7957",
+      "bytes": 7115
+    },
+    {
+      "path": "docs/legal/gap-instruments/editions/tenure.html",
+      "sha256": "4b33ff0de750f1fe7d53366e7614f3696e7041017976f2dd53d9e2cd685fd19e",
+      "bytes": 26580
+    },
+    {
+      "path": "docs/legal/gap-instruments/editions/tenure.pdf",
+      "sha256": "18b65645ff158127f06be3786248a236cf7b819b8038b84e305db545f284633d",
+      "bytes": 78899
+    },
+    {
+      "path": "docs/legal/gap-instruments/editions/tenure.xlsx",
+      "sha256": "a9a1e23c54bc12c72600d592c27ea2772fe690aafb724a33ccf66a33e79490c2",
+      "bytes": 6692
+    },
+    {
+      "path": "docs/legal/gap-instruments/editions/uranium-custody.html",
+      "sha256": "e754034d6696151f0e136104e72161b9475bc7fdb6b572c112dca7268c054671",
+      "bytes": 26688
+    },
+    {
+      "path": "docs/legal/gap-instruments/editions/uranium-custody.pdf",
+      "sha256": "080efcb8e7ebda54b4f2985b1335056f1ba6bcdcddfb58b1a85cebe67183bcf7",
+      "bytes": 77936
+    },
+    {
+      "path": "docs/legal/gap-instruments/editions/uranium-custody.xlsx",
+      "sha256": "94f0ef2693665a51c0df127cfdd7103164aab3b4995502acc4df469bae86b9e3",
+      "bytes": 6675
+    },
+    {
+      "path": "docs/legal/gap-instruments/editions/workforce.html",
+      "sha256": "5c7b20d746166f53c72c969ca823218374205fb1e7ce438e29ec47ef9d393f79",
+      "bytes": 27468
+    },
+    {
+      "path": "docs/legal/gap-instruments/editions/workforce.pdf",
+      "sha256": "997d653337b5f05d5c6c0d304a7fc9b66c86f80ff64ae9cd6d5ecf3fe0f9f782",
+      "bytes": 69162
+    },
+    {
+      "path": "docs/legal/gap-instruments/editions/workforce.xlsx",
+      "sha256": "500db938b19706eed4558be4915598e979b79f55a3f68a2818f6aff1390fd8eb",
+      "bytes": 8073
+    },
+    {
+      "path": "docs/legal/gap-instruments/index.json",
+      "sha256": "2743780e80962c86d9c4fa32ad5f214ac2d2ddbd7db2ea37910338536cd9a8d1",
+      "bytes": 94147
+    },
+    {
+      "path": "docs/legal/gap-instruments/instruments.sqlite3",
+      "sha256": "dbbc3bcb5e0c7061591cdbdf5445bc89d9036370868aa18d2d72dbe4da7e6103",
+      "bytes": 712704
+    },
+    {
+      "path": "docs/legal/gap-instruments/manifest.json",
+      "sha256": "662d1b204b40108929d6b944f33f1818968a0ffc550685d4a1720dbc2bd731cf",
+      "bytes": 95670
+    },
+    {
+      "path": "docs/legal/gap-instruments/practice/README.md",
+      "sha256": "76962e179749148f7de921329184fbe47119a7156c1ff03f7e34671e2950bcf2",
+      "bytes": 1688
+    },
+    {
+      "path": "docs/legal/gap-instruments/practice/README.md.html",
+      "sha256": "6ecbb7fd19fd618b3111631b4550944939c29722e3d94d71415a2deb6d9d2b46",
+      "bytes": 2984
+    },
+    {
+      "path": "docs/legal/gap-instruments/practice/acquisition/TASK.md",
+      "sha256": "26e3e44bb7124ac8fce565c4729e8f534bd5583c8c3be990167f7d2fede473a6",
+      "bytes": 2833
+    },
+    {
+      "path": "docs/legal/gap-instruments/practice/acquisition/TASK.md.html",
+      "sha256": "476c824c2cba2c59de321ddd8b04d0b61d3539492cb6d83cf2813871cb3bcaf8",
+      "bytes": 4064
+    },
+    {
+      "path": "docs/legal/gap-instruments/practice/acquisition/WORKED.md",
+      "sha256": "b37ee935f68a1e916ca5c2c381d3f0660cf0d1df1916a5152b93e312031ab857",
+      "bytes": 4140
+    },
+    {
+      "path": "docs/legal/gap-instruments/practice/acquisition/WORKED.md.html",
+      "sha256": "62ff37ddc205800ecc2599c642b01878b69aaf6e7d782d074fcc82a8d931efba",
+      "bytes": 6151
+    },
+    {
+      "path": "docs/legal/gap-instruments/practice/acquisition/blank.xlsx",
+      "sha256": "f093de0e40a2c9eac6a5e73d5d99766c856247b9ceade38fba74b4ac9c20841d",
+      "bytes": 12926
+    },
+    {
+      "path": "docs/legal/gap-instruments/practice/acquisition/packet.json",
+      "sha256": "4204e7f03a72cfffa2de5f304fe0666753a80c1af7f238c765442c40ceb73ab0",
+      "bytes": 26549
+    },
+    {
+      "path": "docs/legal/gap-instruments/practice/acquisition/worked.xlsx",
+      "sha256": "90227ea974c0e9acd278328f4bd057a2e156ee5d06e0cb057b6f5888dcacb198",
+      "bytes": 13455
+    },
+    {
+      "path": "docs/legal/gap-instruments/practice/debt/TASK.md",
+      "sha256": "d388101a6cc09f6b7b3502fac43618b994f5a3f893cabac05b7bdb3dd53d00e5",
+      "bytes": 2490
+    },
+    {
+      "path": "docs/legal/gap-instruments/practice/debt/TASK.md.html",
+      "sha256": "925ddaecf91dd6e8a5e10e0ed1f8f0b5d4f7876c232af57ac3935e9ac17625f1",
+      "bytes": 3683
+    },
+    {
+      "path": "docs/legal/gap-instruments/practice/debt/WORKED.md",
+      "sha256": "a6551b84775e9515d19b2b1d3af0299cee09d9df7b6649ed9f0f87cd6ad3d5c9",
+      "bytes": 4487
+    },
+    {
+      "path": "docs/legal/gap-instruments/practice/debt/WORKED.md.html",
+      "sha256": "ec46c59a25d53986beb65a877ddfd11502ac1c88d8d6e94c45a15e51a21180b6",
+      "bytes": 6796
+    },
+    {
+      "path": "docs/legal/gap-instruments/practice/debt/blank.xlsx",
+      "sha256": "b834a05fe38295b8677069a4071d7c07f52b14cc440a7a295d31236b7585b980",
+      "bytes": 12528
+    },
+    {
+      "path": "docs/legal/gap-instruments/practice/debt/packet.json",
+      "sha256": "1fa980b3a033c7d04683425683ec877d3eec6261a93246ef551e16db956bb1a1",
+      "bytes": 26010
+    },
+    {
+      "path": "docs/legal/gap-instruments/practice/debt/worked.xlsx",
+      "sha256": "1bbf491c5765cdd500cd326f7dfc668c7a9adae466dd7408acfd5c2b8bc3ebe0",
+      "bytes": 12864
+    },
+    {
+      "path": "docs/legal/gap-instruments/practice/legal-due-diligence/TASK.md",
+      "sha256": "3fd467e37607a715b50689c32b44a539c04dc6064f4f61959107338e2e2b70de",
+      "bytes": 2235
+    },
+    {
+      "path": "docs/legal/gap-instruments/practice/legal-due-diligence/TASK.md.html",
+      "sha256": "dd07c2342c43a8c68c2b52b5cbcb47e2cc19d0fb0199da2745b9715db41e12c8",
+      "bytes": 3381
+    },
+    {
+      "path": "docs/legal/gap-instruments/practice/legal-due-diligence/WORKED.md",
+      "sha256": "a9a88c285878cbb577f03c663f04a5f8ab5ee0dd7cd6f90248e24803a7549b05",
+      "bytes": 5258
+    },
+    {
+      "path": "docs/legal/gap-instruments/practice/legal-due-diligence/WORKED.md.html",
+      "sha256": "4979548c1bdb933077d3bedc5145d91dadfbf3de2c78837d824ddc50a952acba",
+      "bytes": 7252
+    },
+    {
+      "path": "docs/legal/gap-instruments/practice/legal-due-diligence/blank.xlsx",
+      "sha256": "1847cf054e37da4ae2ece38859f5af6b447f4e68ca9e299869ab70ade55001e5",
+      "bytes": 11484
+    },
+    {
+      "path": "docs/legal/gap-instruments/practice/legal-due-diligence/packet.json",
+      "sha256": "3c95513a7b05462a6a7bcbf18edc991398af0a1c62b0902cc222987e65357db9",
+      "bytes": 7545
+    },
+    {
+      "path": "docs/legal/gap-instruments/practice/legal-due-diligence/worked.xlsx",
+      "sha256": "6383b64594e777840582c8d8773276a4828fc1d11858b89af9e339e76d435ac9",
+      "bytes": 12218
+    },
+    {
+      "path": "docs/legal/gap-instruments/practice/manifest.json",
+      "sha256": "0b15e2b193000183cf96a404209c7e3e9b42f73d655b7436e7c2605a279f7a55",
+      "bytes": 4218
+    },
+    {
+      "path": "docs/legal/gap-instruments/practice/practice.sqlite3",
+      "sha256": "1040235eb89f3ac34f19cbd2c07962a3972603fc00418157b88ff7a06b41d5de",
+      "bytes": 151552
+    },
+    {
+      "path": "docs/legal/gap-instruments/practice/revenue-dispute/TASK.md",
+      "sha256": "953ef961fc31a93a56e5cf39e3f4b524079a2befd70faebe459beb80813ccdab",
+      "bytes": 2500
+    },
+    {
+      "path": "docs/legal/gap-instruments/practice/revenue-dispute/TASK.md.html",
+      "sha256": "d3ca08af367cc87a7d37bf6797b3f79eb7b8f60b7ae12c3c276756170f0f68e8",
+      "bytes": 3685
+    },
+    {
+      "path": "docs/legal/gap-instruments/practice/revenue-dispute/WORKED.md",
+      "sha256": "2c9161727fc9bcaa5b3ffc7159bf12907ae40cd2d7028daeb5b042fcd85c79c8",
+      "bytes": 4265
+    },
+    {
+      "path": "docs/legal/gap-instruments/practice/revenue-dispute/WORKED.md.html",
+      "sha256": "74a9d3a76a9183fb8848f782152b2064e0e20dacf79ed161dadff466e551b0b0",
+      "bytes": 6347
+    },
+    {
+      "path": "docs/legal/gap-instruments/practice/revenue-dispute/blank.xlsx",
+      "sha256": "12a7525e545def188bc2902b72f16ce46cd31b80ba0fad10ecd4e27b4c91afc1",
+      "bytes": 11867
+    },
+    {
+      "path": "docs/legal/gap-instruments/practice/revenue-dispute/packet.json",
+      "sha256": "5b27b42d3e0a26cdf1c221c0ca4ab758c68e1398403ca5e281ef9c7f7c06588d",
+      "bytes": 45327
+    },
+    {
+      "path": "docs/legal/gap-instruments/practice/revenue-dispute/worked.xlsx",
+      "sha256": "61644d24656e64aa260547cdae78e90bd044d2378883226726c09cd37ffcef88",
+      "bytes": 12271
+    },
+    {
+      "path": "docs/legal/gap-instruments/reconciliations/README.md",
+      "sha256": "0aa76f63f66d7ca12fe8156a9372533dce4cfaf108240d82ed7e6bc793414662",
+      "bytes": 2644
+    },
+    {
+      "path": "docs/legal/gap-instruments/reconciliations/README.md.html",
+      "sha256": "dd7c441e7930dec39de1dfc4a76e847619b60083cfd7f52e8ec45076b9052498",
+      "bytes": 4183
+    },
+    {
+      "path": "docs/legal/gap-instruments/reconciliations/WORKED.md",
+      "sha256": "68b015baf3876b2eb99a1c5637f561d01850a286f55f8e3103bd5a445eb590e4",
+      "bytes": 3481
+    },
+    {
+      "path": "docs/legal/gap-instruments/reconciliations/WORKED.md.html",
+      "sha256": "2c07b32b0c50f75e194a1481ff57186d717087d471b597729afbfb124ea73256",
+      "bytes": 4740
+    },
+    {
+      "path": "docs/legal/gap-instruments/reconciliations/blank.xlsx",
+      "sha256": "4a249a7b1e52eb13403b244daca603a19b6a73250c919267f66a182255db8122",
+      "bytes": 14327
+    },
+    {
+      "path": "docs/legal/gap-instruments/reconciliations/manifest.json",
+      "sha256": "efe15c1d21b547b98ad6097191db110c87cb02964a260bb9bc117fef9e75d101",
+      "bytes": 1989
+    },
+    {
+      "path": "docs/legal/gap-instruments/reconciliations/reconciliations.sqlite3",
+      "sha256": "e6e52483a6e5f4dc6c7b620f779ee2ea4902c9395b846d2b1abce823fc9c1070",
+      "bytes": 32768
+    },
+    {
+      "path": "docs/legal/gap-instruments/reconciliations/source.json",
+      "sha256": "167cdac04d99d603611ca169c9987436d3e6f92a17c21a90b06d2215133d5ea3",
+      "bytes": 21037
+    },
+    {
+      "path": "docs/legal/gap-instruments/reconciliations/worked.xlsx",
+      "sha256": "e3b74616c43695faf256080ce2d15cb8da9a9e45135bbb8ae72be13d9ea2fc32",
+      "bytes": 15131
+    },
+    {
+      "path": "docs/legal/gap-instruments/review-support/DECISIONS.md",
+      "sha256": "28d1cb9f94956bc082611aa8a527d1bffc28cc0c4c2686e76c3da65457e46fd5",
+      "bytes": 55253
+    },
+    {
+      "path": "docs/legal/gap-instruments/review-support/DECISIONS.md.html",
+      "sha256": "155fe05c2e542baeea14d7afb8b531020409db36c91b71de85e754136956e887",
+      "bytes": 71225
+    },
+    {
+      "path": "docs/legal/gap-instruments/review-support/decisions.json",
+      "sha256": "42cd29aa93d64f1f57eecd85d92afe418eefc13f729a4d5468b37b95585b9cd8",
+      "bytes": 110440
+    },
+    {
+      "path": "docs/legal/gap-instruments/review-support/decisions.xlsx",
+      "sha256": "36394a1a6b2c13f1e4a721d904f6b5a956015610302b284b3121d72e2dd6823a",
+      "bytes": 41244
+    },
+    {
+      "path": "docs/legal/gap-instruments/review-support/organization.json",
+      "sha256": "dd88eed42b5d146a51a86e82e138df4221ed441b4f456161fa42604f1899be6a",
+      "bytes": 20954
+    },
+    {
+      "path": "docs/legal/gap-instruments/review-support/review.sqlite3",
+      "sha256": "5b3236f2bb3d452916fa501af32f5cb359b42c4261d58c74686c80d88798072b",
+      "bytes": 249856
+    },
+    {
+      "path": "docs/legal/gap-instruments/review.html",
+      "sha256": "26f34c1799471cbb4a2dc57c041a21a116e1e37fc011a1252a80a1a8697cd910",
+      "bytes": 16606
+    },
+    {
+      "path": "docs/legal/gap-instruments/revision-policy.md",
+      "sha256": "93929cfa0050f2039a87807ecac5c3c09291985e14f9d71d0d2e56e7c58ad2df",
+      "bytes": 3794
+    },
+    {
+      "path": "docs/legal/gap-instruments/revision-policy.md.html",
+      "sha256": "4d9ceec382535f97791bea21397517de432b8ad88f36e9f844d51d54b687132a",
+      "bytes": 4910
+    },
+    {
+      "path": "docs/legal/gap-instruments/source/advisory-contracts.json",
+      "sha256": "1ffabe5c2f64842cc46a9dadb8267954d55f435ff6dcd2272f0c608463d7f3a7",
+      "bytes": 2305
+    },
+    {
+      "path": "docs/legal/gap-instruments/source/advisory-contracts.md",
+      "sha256": "99f62e1d50c430fb7a1bb42f2315c233a13bdfba5c80cde77dcce8d72b91f9b5",
+      "bytes": 16041
+    },
+    {
+      "path": "docs/legal/gap-instruments/source/advisory-contracts.md.html",
+      "sha256": "40ea6c7e14974274d826bf5c132b2d0e045320c34212b5442aca31d81d119479",
+      "bytes": 27287
+    },
+    {
+      "path": "docs/legal/gap-instruments/source/billing.json",
+      "sha256": "bc26733ecfc5286e4d5d9a2d5d3506961a2912bb135480346242325b7a8f773d",
+      "bytes": 3116
+    },
+    {
+      "path": "docs/legal/gap-instruments/source/billing.md",
+      "sha256": "83d8af1b3d5a73cab067b1d7839bcb2ed2cecfc7656d246951d213327127f28e",
+      "bytes": 11653
+    },
+    {
+      "path": "docs/legal/gap-instruments/source/billing.md.html",
+      "sha256": "97452ea633786dea14b4785d44ba73696b641c4d4a330ba79bf5a4a69b5b3bf0",
+      "bytes": 23223
+    },
+    {
+      "path": "docs/legal/gap-instruments/source/carry.json",
+      "sha256": "c2b6f9f8fe1b65494d9a64c74e1813783b4fdbe30368a91b8284622402fadfe1",
+      "bytes": 2073
+    },
+    {
+      "path": "docs/legal/gap-instruments/source/carry.md",
+      "sha256": "f827af31cc408054a32c5cd602c4c378020c55fff06ff84c8851b6acd6f89312",
+      "bytes": 13580
+    },
+    {
+      "path": "docs/legal/gap-instruments/source/carry.md.html",
+      "sha256": "38b6f0d942f77ea34aaef7a9d0e3ad87f1d5f0bb433d23311b3c2e6560a345a6",
+      "bytes": 24498
+    },
+    {
+      "path": "docs/legal/gap-instruments/source/colo.json",
+      "sha256": "13be7a9173e702b4f13fa65e00885ce3a4d9bb73a110ed929334b2082f21b17f",
+      "bytes": 2331
+    },
+    {
+      "path": "docs/legal/gap-instruments/source/colo.md",
+      "sha256": "0590241ee1a7a1d02b6c2262f5ae3bf31ba026fa9266976e146a2be158b33506",
+      "bytes": 13359
+    },
+    {
+      "path": "docs/legal/gap-instruments/source/colo.md.html",
+      "sha256": "b295825cd3582192258626ca97994d113280b1ce7b813437c22a0729d9707fe3",
+      "bytes": 24202
+    },
+    {
+      "path": "docs/legal/gap-instruments/source/debt-liens.json",
+      "sha256": "e08aef516cba382287cd78231100dbc5ad2a6f193a864c2331c232c591c9bd03",
+      "bytes": 5838
+    },
+    {
+      "path": "docs/legal/gap-instruments/source/debt-liens.md",
+      "sha256": "e9adf8cdc08237c855556d22d30a7649ac64b471c567ce7a54c1aa67613485ef",
+      "bytes": 13736
+    },
+    {
+      "path": "docs/legal/gap-instruments/source/debt-liens.md.html",
+      "sha256": "97128839f32fadbbd8dbd40e72f4ca9a8876e5dff05a35631659de9f600c14ff",
+      "bytes": 25835
+    },
+    {
+      "path": "docs/legal/gap-instruments/source/financing-documents.json",
+      "sha256": "9eb62c0dda0fa6f2babf69f5b3989a6d9a7133f176bd1ef56c8a8f59a745b759",
+      "bytes": 4014
+    },
+    {
+      "path": "docs/legal/gap-instruments/source/financing-documents.md",
+      "sha256": "f648e1844ed93a66b81111b86ae98c98e3e901907f138fd5b9e87172adbf3607",
+      "bytes": 14243
+    },
+    {
+      "path": "docs/legal/gap-instruments/source/financing-documents.md.html",
+      "sha256": "2a9f7604fa7173ff7e4b5e06c22c08aac19f1c1e108bc18f41f69b0b4b699adb",
+      "bytes": 25925
+    },
+    {
+      "path": "docs/legal/gap-instruments/source/formations.json",
+      "sha256": "71c341d2e9f32289fbd3e4935254d47b84bdfd8f3a0c81126d2e6e3aa10ab046",
+      "bytes": 4549
+    },
+    {
+      "path": "docs/legal/gap-instruments/source/formations.md",
+      "sha256": "14fd0d40cf42e80b79f1c94f924050909b98e41d3212c3819d4d04f4d1c398c4",
+      "bytes": 15025
+    },
+    {
+      "path": "docs/legal/gap-instruments/source/formations.md.html",
+      "sha256": "753620f1f50e36b12560c83b352d0a0bfe3b35265cfc78b2da2a1f134ed4af13",
+      "bytes": 26948
+    },
+    {
+      "path": "docs/legal/gap-instruments/source/host-rights.json",
+      "sha256": "01a9645efe23f29fb9136275995af6a1e2013caa34e286e08f29ec7bacf93c45",
+      "bytes": 3653
+    },
+    {
+      "path": "docs/legal/gap-instruments/source/host-rights.md",
+      "sha256": "4fd81f5dffc2d95ba89c495a3689381648b44a4a8cdfd62750ea028b5bdde9d4",
+      "bytes": 15519
+    },
+    {
+      "path": "docs/legal/gap-instruments/source/host-rights.md.html",
+      "sha256": "2b516ff63e6d5bbf48f8186c39aee5a2991877777b578859f443b81997ea08e3",
+      "bytes": 27490
+    },
+    {
+      "path": "docs/legal/gap-instruments/source/land.json",
+      "sha256": "8e44d16275f79a6930d4288f7abc2c1bea6c68e7da9ab2a11642d2f58b68cf75",
+      "bytes": 3687
+    },
+    {
+      "path": "docs/legal/gap-instruments/source/land.md",
+      "sha256": "9c4ea28e58c3355f61ab29e8df8ce7789c1c7d7305131efdddabbe3d59c9f28e",
+      "bytes": 12635
+    },
+    {
+      "path": "docs/legal/gap-instruments/source/land.md.html",
+      "sha256": "12991292a9f0a9b55702a9667af0a655d36798ef52343e65459fb73414f728ee",
+      "bytes": 24401
+    },
+    {
+      "path": "docs/legal/gap-instruments/source/mark-clearance.json",
+      "sha256": "38ed7c3c8c72ae7447af982c72b15e05c1b88028c54886e45f0dd0d797a6f493",
+      "bytes": 2639
+    },
+    {
+      "path": "docs/legal/gap-instruments/source/mark-clearance.md",
+      "sha256": "a5b9b8d1a39b4c2d85111d191052ca89ebcf763176fe625a532aeb03fdca9dec",
+      "bytes": 11366
+    },
+    {
+      "path": "docs/legal/gap-instruments/source/mark-clearance.md.html",
+      "sha256": "501cb44b272cfe57d518ca2242aa6bba734d91bca1ab9be8edbd052eaef31600",
+      "bytes": 23001
+    },
+    {
+      "path": "docs/legal/gap-instruments/source/rw-chronology.json",
+      "sha256": "c4ee38d9aab46422a34ef38d19157c47602d636a20c4a0fa5790ab4ac8699b0f",
+      "bytes": 2581
+    },
+    {
+      "path": "docs/legal/gap-instruments/source/rw-chronology.md",
+      "sha256": "2445506da53f889d2177a0805321a3655b1fbfda0dc747c95e7f24b6f638594d",
+      "bytes": 10095
+    },
+    {
+      "path": "docs/legal/gap-instruments/source/rw-chronology.md.html",
+      "sha256": "371bc375c7bb5a4de21eab1fb95684eaea65b4b0e0f6ae3338b5cd9db975102b",
+      "bytes": 21680
+    },
+    {
+      "path": "docs/legal/gap-instruments/source/rw-title.json",
+      "sha256": "0ace1edc5e69be480615f7ab5c426b15ae1db2311be40b49fce75a76b6045a48",
+      "bytes": 2925
+    },
+    {
+      "path": "docs/legal/gap-instruments/source/rw-title.md",
+      "sha256": "382bebe11df4b42fd8b9bb35b1a7831f4afe7b46d58c298d4ae9dd58fa176b54",
+      "bytes": 14701
+    },
+    {
+      "path": "docs/legal/gap-instruments/source/rw-title.md.html",
+      "sha256": "c04051be0fce5d8de2df00a521de2903547a734a8d6327930188f02f93481738",
+      "bytes": 26792
+    },
+    {
+      "path": "docs/legal/gap-instruments/source/tax-billing.json",
+      "sha256": "5da4a510457570db49e799b95f41a6b1e21f733329d862017df58143d2791b2c",
+      "bytes": 3648
+    },
+    {
+      "path": "docs/legal/gap-instruments/source/tax-billing.md",
+      "sha256": "8a4fcc32efc81c2502158afbf7df05d2bec5cb296c366d82e90f3c7f3fa38e48",
+      "bytes": 12042
+    },
+    {
+      "path": "docs/legal/gap-instruments/source/tax-billing.md.html",
+      "sha256": "3e92c994f1a68b268fa39d55680dcda4884b29233a04b417a178e3f6e6c34787",
+      "bytes": 23508
+    },
+    {
+      "path": "docs/legal/gap-instruments/source/tax-filing.json",
+      "sha256": "4ad9c3bfad7931dd51ddc5cf4ccb0cfe9a5db677e6fcf2004091d8738b06e99b",
+      "bytes": 3737
+    },
+    {
+      "path": "docs/legal/gap-instruments/source/tax-filing.md",
+      "sha256": "7fb216ef53a5849a317dc9cb0dc8815d725deed5a34aa513685ce5b60c609a52",
+      "bytes": 10797
+    },
+    {
+      "path": "docs/legal/gap-instruments/source/tax-filing.md.html",
+      "sha256": "26dd61f6db9396f5587634ca474feb68177cca87945c92406c4a089ca82d0fcb",
+      "bytes": 22414
+    },
+    {
+      "path": "docs/legal/gap-instruments/source/tenure.json",
+      "sha256": "4b3f96161c38bd9a392ec68945cf6974fee3cb2c25b7079269dfd1ac56cd53ab",
+      "bytes": 3218
+    },
+    {
+      "path": "docs/legal/gap-instruments/source/tenure.md",
+      "sha256": "a054ca8350c565ebf24e5fee59f5a75da82c3ec0ec65afc9f61dec3ac8e56631",
+      "bytes": 15558
+    },
+    {
+      "path": "docs/legal/gap-instruments/source/tenure.md.html",
+      "sha256": "3adaf2629a65040b88ecf00f340c224af44f507863be288d8f926ab738835044",
+      "bytes": 27112
+    },
+    {
+      "path": "docs/legal/gap-instruments/source/uranium-custody.json",
+      "sha256": "c93ec8d2da8a22646b656d5e7186d53e9312a2b47172b8811e33a08016a5422e",
+      "bytes": 2659
+    },
+    {
+      "path": "docs/legal/gap-instruments/source/uranium-custody.md",
+      "sha256": "b9076e42c66e71af0178f8b754d182176a3e93b49329c2cfa8c9cddf77452894",
+      "bytes": 15448
+    },
+    {
+      "path": "docs/legal/gap-instruments/source/uranium-custody.md.html",
+      "sha256": "8b5392a5be2b16154fe47034d144f001b39fa071350b36e0621ddb461e38cacb",
+      "bytes": 27238
+    },
+    {
+      "path": "docs/legal/gap-instruments/source/workforce.json",
+      "sha256": "cad6e1410ada5a9e86a961eb5c06cbe5e5c0b92e6f547282624ac09e8d9b340e",
+      "bytes": 3443
+    },
+    {
+      "path": "docs/legal/gap-instruments/source/workforce.md",
+      "sha256": "6b4b35a48c4c9d304ad9e9a20e64049400aeb801fe386d7968c8479faedc3834",
+      "bytes": 16582
+    },
+    {
+      "path": "docs/legal/gap-instruments/source/workforce.md.html",
+      "sha256": "ab11376d4c660d2d2711d532b15c157ff5cef919824ea9e8bb2d1f0fb8d618de",
+      "bytes": 28278
+    },
+    {
+      "path": "docs/legal/gap-instruments/walkthroughs/README.md",
+      "sha256": "df59a06b3621fe6a18694be4511f5ceaaec21efcea7661db31e54afb59434619",
+      "bytes": 8604
+    },
+    {
+      "path": "docs/legal/gap-instruments/walkthroughs/README.md.html",
+      "sha256": "6f9c8b9dade2b0933e0e43d32f51f8f599838aec8a30d1382c00a667a40f3cba",
+      "bytes": 10710
+    },
+    {
+      "path": "docs/legal/gap-instruments/walkthroughs/source/aru_2026_journal.csv",
+      "sha256": "d4344bc1355b51454b28fff5400fc8d3bcb66e56c0f13a0fa8ee49f5cb9b1ebd",
+      "bytes": 541563
+    },
+    {
+      "path": "docs/legal/gap-instruments/walkthroughs/source/aru_2026_trial_balance.csv",
+      "sha256": "369a1fcf09816954ffa15b5e01555be758e062614acffef302d4daa6c204b024",
+      "bytes": 8678
+    },
+    {
+      "path": "docs/legal/gap-instruments/walkthroughs/source/aru_acquisition_opening_trial_balance.csv",
+      "sha256": "e25d4bed19903bf131e51e751ad36d1a30e2ab0fd959aa988e3b9bbd5d65377d",
+      "bytes": 3064
+    },
+    {
+      "path": "docs/legal/gap-instruments/walkthroughs/source/checks.csv",
+      "sha256": "729013dfa1bd0eb758f2212d736e38e04a95857d8d47ad9ad69994536f297a9e",
+      "bytes": 85377
+    },
+    {
+      "path": "docs/legal/gap-instruments/walkthroughs/source/evidence_requests.csv",
+      "sha256": "649c0dce2e0de1b6f480c85e76d1bd7f4a364d426df3c47c6fb7871d860ec939",
+      "bytes": 1816
+    },
+    {
+      "path": "docs/legal/gap-instruments/walkthroughs/source/ff_contract_trace.csv",
+      "sha256": "140bde92704831fb6c93b81c92313c75e4e87803621297f842e4f1fa985ddd86",
+      "bytes": 24425
+    },
+    {
+      "path": "docs/legal/gap-instruments/walkthroughs/source/ff_invoice.csv",
+      "sha256": "6a80fce00e9c7452eaf101bc3e19dd333313ae3f7386000021acc4efbe60592c",
+      "bytes": 474
+    },
+    {
+      "path": "docs/legal/gap-instruments/walkthroughs/source/ff_journal.csv",
+      "sha256": "1639b20c6b79a68eb1795c89aeeb95d3cf113d330fce1e840b09c84dda5fc837",
+      "bytes": 832714
+    },
+    {
+      "path": "docs/legal/gap-instruments/walkthroughs/source/ff_packet_journal.csv",
+      "sha256": "18017a4b9e45b6a3e2cf6d39d0a1f17c9cb655ae950ec10d6f02e756712b9cea",
+      "bytes": 3937
+    },
+    {
+      "path": "docs/legal/gap-instruments/walkthroughs/source/ff_statements.csv",
+      "sha256": "6f901325cb57b9ae0de0c469de48ceb43a9fa964afb945660c378d69fcd60d12",
+      "bytes": 4373
+    },
+    {
+      "path": "docs/legal/gap-instruments/walkthroughs/source/financial_statements.csv",
+      "sha256": "a36edc96d16c524b0562f16bade49904c0b07fb202003e950966c868a52383ca",
+      "bytes": 21006
+    },
+    {
+      "path": "docs/legal/gap-instruments/walkthroughs/source/monthly_trace.csv",
+      "sha256": "f77cff3d675abbfb27cadf3524a3e5c9e38502eb6c9fb494ea2248dd119c7564",
+      "bytes": 989
+    },
+    {
+      "path": "docs/legal/gap-instruments/walkthroughs/source/red_wash_2026_journal.csv",
+      "sha256": "6179f47a43629831f318b5b9715da0215aa2df3d7a20ac3db23660101a77cd34",
+      "bytes": 155732
+    },
+    {
+      "path": "docs/legal/gap-instruments/walkthroughs/source/red_wash_2026_trial_balance.csv",
+      "sha256": "a9205d0cd5e7fc03552ffca8f8430730165b63ee5261f4676318d615caaa4d43",
+      "bytes": 3952
+    },
+    {
+      "path": "docs/legal/gap-instruments/walkthroughs/source/rw_aro_trace.csv",
+      "sha256": "4ace2ac36c140d14cb9bc5784fc1707b8c58f4845e7d7deb5e3345a5633b384c",
+      "bytes": 4177
+    },
+    {
+      "path": "docs/legal/gap-instruments/walkthroughs/source-register.json",
+      "sha256": "e5e53c4b6ce762fffa0b46eb3ea232de93c96ac90bf8f12114c9d20c3cd66651",
+      "bytes": 3549
+    },
+    {
+      "path": "docs/legal/gap-instruments/walkthroughs/walkthroughs.sqlite3",
+      "sha256": "a354d6a4e12b0dd88d76f4318890c0d9817297a73058e80aa08a6fe9a0f01f15",
+      "bytes": 1863680
+    },
+    {
+      "path": "docs/legal/gap-instruments/walkthroughs/walkthroughs.xlsx",
+      "sha256": "73fca36092d713e4170e5b38a3e226407fd95da23b328c05ad11bba86110c0f7",
+      "bytes": 20464
+    },
+    {
+      "path": "docs/reader/exercises/ACQUISITION.md",
+      "sha256": "dcaecdb7b9ee29ea717fbbe52bfbc23e26052741d70b375aeafd661d41b60a3d",
+      "bytes": 5313
+    },
+    {
+      "path": "docs/reader/exercises/CONTRACTS.md",
+      "sha256": "80faac20c9cb9161fd3e4074d2e8351b5626a6c04f9129696a872485bfa726a2",
+      "bytes": 4795
+    },
+    {
+      "path": "docs/reader/exercises/INVOICE.md",
+      "sha256": "96e7b7cea62e13016a08d96b7eccd85d39f141b0545ae14f3cd837c7de9f64e6",
+      "bytes": 4352
+    },
+    {
+      "path": "docs/structured/j2_leadership_2026-09-10.json",
+      "sha256": "c0efd4edf47ab7f5da4a0e3129cddc93af89035252b5a8ea16facd660b6cba54",
+      "bytes": 12589
+    },
+    {
+      "path": "enterprise/runtime/docs/CONTRACT_DOSSIER.md",
+      "sha256": "7cd01050b17f9451ff5bd341573289440c74fb190c01253bdc8197a6599d2ad1",
+      "bytes": 14550
+    },
+    {
+      "path": "enterprise/runtime/finance.py",
+      "sha256": "ff5ed41531037bf5dd146a36dfe93fbef53b98106468885d3ab870cd2c2e7aeb",
+      "bytes": 4240
+    },
+    {
+      "path": "enterprise/services/source/runtime_sites_2026-09-11.json",
+      "sha256": "fa216f629762503865fd9f1a3207e87691cd484cec9885bf25ce045b4525519c",
+      "bytes": 4170
+    },
+    {
+      "path": "geospatial/facilities/RESEARCH_CAMPUSES.md",
+      "sha256": "094ea7bb3bc9dd920f29dbe7ef0062880b399c46443cc5c32661589a8e51239a",
+      "bytes": 6162
+    },
+    {
+      "path": "geospatial/facilities/source/campus.json",
+      "sha256": "0efd4854069ff20acb4032e02b021afebcb955990f1d684b51428624e281d950",
+      "bytes": 335661
+    },
+    {
+      "path": "geospatial/facilities/source/research_campuses.json",
+      "sha256": "166cc2b4a5edeac3c47547fac3502bc08f99d2c25d0b5154315698ed66b03222",
+      "bytes": 51936
+    },
+    {
+      "path": "geospatial/registers/SITE_REGISTER.csv",
+      "sha256": "df07fc9b2225114deafbad5536c625982c73730ed486cbef15b5fd7a34a86fa8",
+      "bytes": 71752
+    },
+    {
+      "path": "industrial/corporate/LEADERSHIP_AND_AUTHORITY.md",
+      "sha256": "61a32c036e8cdb2fbf7ab0234d26a925ebd423b48869667724c5a254ca14fda1",
+      "bytes": 8751
+    },
+    {
+      "path": "industrial/corporate/LEGAL_STRUCTURE_AND_FORMATION.md",
+      "sha256": "5a10f112b015d5dfa7ca3b500108718015a41369182092cabc44dfb224119fbc",
+      "bytes": 6630
+    },
+    {
+      "path": "industrial/finance/ASSUMPTIONS_AND_TEMPORAL_CONTROLS.md",
+      "sha256": "933330f510acc9c05423f08f62d30c981dde8a26c2ae0325161f29d401ab43d8",
+      "bytes": 5928
+    },
+    {
+      "path": "industrial/finance/RED_WASH_AND_FUNDING.md",
+      "sha256": "5f54d6254e1d4e21ba37e2ed911fd8468d304e729f0272b4f45141b081a5fe94",
+      "bytes": 5996
+    },
+    {
+      "path": "industrial/finance/TRANSACTION_ACCOUNTING.md",
+      "sha256": "d13f142968958585cfc56a7b06d54b5e95bccef6d434d11bb6bba93933a0aa58",
+      "bytes": 12563
+    },
+    {
+      "path": "industrial/operations/OPERATING_AND_SERVICE_PLAN.md",
+      "sha256": "8f1f9db0ad7958f9f967ef77fae5bc01bdaee5a5822258f4a284a8f2c218175e",
+      "bytes": 8974
+    },
+    {
+      "path": "industrial/pale_sun/01_VILANDER_BIOGRAPHY.md",
+      "sha256": "8e4ceb274a64bd06d89ad0cc3586239c63e564040f2f07b72334c6165dbe2816",
+      "bytes": 5467
+    },
+    {
+      "path": "industrial/pale_sun/02_BTC_RECRUITMENT_AND_ASSESSMENT.md",
+      "sha256": "48ad0f9635508526d051356e2e29ec2d8781a499cba495210cdc38b6ccff55de",
+      "bytes": 4874
+    },
+    {
+      "path": "industrial/pale_sun/03_URANIUM_PROBLEM_BOOK.md",
+      "sha256": "4fafd76ac9a680f3c40ed8c5332eae4613678b923e8739dfbb5fb71a8749fd3b",
+      "bytes": 5109
+    },
+    {
+      "path": "industrial/pale_sun/04_ALEXANDRIA_AND_ESCALATION_RECORD.md",
+      "sha256": "f7e1d920f556e78058d3e1133e3be5df1bf2176e11bd90e05485ce0eff2a2b8e",
+      "bytes": 5943
+    },
+    {
+      "path": "industrial/pale_sun/05_FALSE_START_CEDAR_JUNCTION.md",
+      "sha256": "2f922e81b39b52b29a3bba4ec5d24489688715cee9ac38094901132bd0481fcc",
+      "bytes": 4768
+    },
+    {
+      "path": "industrial/pale_sun/06_FALSE_START_JUNIPER_MESA.md",
+      "sha256": "7391bd1f09afa3c6e1b54f5e18739271e77236cbd4e728fda59cbdff736bb0a9",
+      "bytes": 4503
+    },
+    {
+      "path": "industrial/pale_sun/07_FALSE_START_SALT_RIM.md",
+      "sha256": "2640adebc7826e638578611adfbd49a6f2d786b6af185ec051db2bfac6ba0f3e",
+      "bytes": 4685
+    },
+    {
+      "path": "industrial/pale_sun/08_FOUNDING_AND_APPOINTMENT.md",
+      "sha256": "a7b11742351fc8acc351343ed2440a9927ec9d9654ee92ba01710233856b0b4c",
+      "bytes": 4922
+    },
+    {
+      "path": "industrial/pale_sun/09_RED_WASH_JUDGMENT_AAR.md",
+      "sha256": "0755b620e7b9f6f808f55c5ffa7f01c9514d545821ca46794942cea3fc6eb057",
+      "bytes": 4416
+    },
+    {
+      "path": "industrial/pale_sun/10_FEDERAL_AND_DOWNSTREAM_BRIEF.md",
+      "sha256": "a2639d8f05ff4320e8b4d2d24aa59ff26969081dc23368a82e5bfb419770c239",
+      "bytes": 6283
+    },
+    {
+      "path": "industrial/publications/SH-IND-ARU-CLOSE-001_v1.0.0.pdf",
+      "sha256": "2db8049ce4ee571d4a681505321b73af49739adb2cbd86d1fae78e92082d7883",
+      "bytes": 55231
+    },
+    {
+      "path": "industrial/publications/SH-IND-IC-001_v1.0.0.pdf",
+      "sha256": "6edd5e8f041b09b9447f51dee8f0dcc1179b1a58083396230642e31f383134f1",
+      "bytes": 80660
+    },
+    {
+      "path": "industrial/source/chronology.json",
+      "sha256": "53fe564b06301176a3a8322aedb82fee5a61c82caeae3d333e0a2c520b3eedc5",
+      "bytes": 39840
+    },
+    {
+      "path": "industrial/source/entities.json",
+      "sha256": "799a24baf3240d50c5d6a80ac0f9ddb9d023b7a36de058ec12546aac60caee29",
+      "bytes": 9419
+    },
+    {
+      "path": "industrial/source/finance.json",
+      "sha256": "0d4461abfcdb138da36db503ff0cfea7c47ea7fd7109494126514225fd43e38c",
+      "bytes": 124427
+    },
+    {
+      "path": "industrial/source/operations.json",
+      "sha256": "e7488b55c1c963d102db66e7a7b6f1373a3d68a9f94b8f99b164092245713a3b",
+      "bytes": 217088
+    },
+    {
+      "path": "industrial/tools/build_financials.py",
+      "sha256": "4f879965a57598a5fd55f0b177d683aa9bcc8137e3b84e9b2b7c6a1343a9836c",
+      "bytes": 98169
+    },
+    {
+      "path": "industrial/transaction/01_RW_TRANSACTION_FILE.md",
+      "sha256": "902ff083d3857004b5c868b106fddc8e3600e59ad959201fb97c99d68dba298c",
+      "bytes": 4431
+    },
+    {
+      "path": "industrial/transaction/02_ARU_LOI_AND_SELLER_FILE.md",
+      "sha256": "e012644ca645384234ddf8f47e78d176b1cc11d4cef97449723f23f2803f5615",
+      "bytes": 3933
+    },
+    {
+      "path": "industrial/transaction/03_ARU_DILIGENCE_MEMORANDUM.md",
+      "sha256": "1591f3a761202385693de6b689377400a4905862910b0213acb326ace0bbc272",
+      "bytes": 5214
+    },
+    {
+      "path": "industrial/transaction/04_ARU_APPROVAL_AND_PURCHASE_AGREEMENT.md",
+      "sha256": "3b40effe8efb1d4a69216180d508dad90f7fc6a778679b39ee2ed5371d0de9eb",
+      "bytes": 5142
+    },
+    {
+      "path": "industrial/transaction/05_ARU_CLOSING_AND_TAX_DELIVERY.md",
+      "sha256": "a6dd448ed3a4a3ad6f0f3748e79dd918ea43c75685de762fe00843477a5d22c9",
+      "bytes": 4303
+    },
+    {
+      "path": "industrial/transaction/06_ARU_TRANSITION_AND_RETENTION.md",
+      "sha256": "3e3653f95a286d71aa513410603dd0c78684db0ad94e2460708c434a6fc4aec0",
+      "bytes": 4211
+    },
+    {
+      "path": "industrial/transaction/07_ARU_TAX_STRUCTURE_MEMORANDUM.md",
+      "sha256": "d42c4d67873e1b8e9b6488eac9a70a16643680718735ab0c3948327a37b16a44",
+      "bytes": 10248
+    },
+    {
+      "path": "industrial/transaction/08_INTERCOMPANY_LOGISTICS_AGREEMENT.md",
+      "sha256": "23153dc86a3e9ea9fd501bce6bdf3c8478dbdf3ab79fa5e8abc84ca8bbb771fc",
+      "bytes": 12019
+    },
+    {
+      "path": "industrial/transaction/09_SERVICE_PRICING_COMPARISON.md",
+      "sha256": "4f185dffc7906ecc6abda8420fc9d026d4fb5bc470d506eb99dbab968560b2c5",
+      "bytes": 5931
+    },
+    {
+      "path": "red_wash/agreements/TRANSACTION_AND_COMMERCIAL_INSTRUMENTS.md",
+      "sha256": "5ee3715b0b5b08ba2fd259504ff7455da005d3d2e3701668945aa1ca90477808",
+      "bytes": 10303
+    },
+    {
+      "path": "red_wash/source/core_operating_data.json",
+      "sha256": "eb5601f3a519ac175bef07744fa3c23939734f80b5774efeed4800aa73e8aa3f",
+      "bytes": 24832
+    },
+    {
+      "path": "tools/legal_gaps/build.py",
+      "sha256": "c97ed54d2616c6b461cf540394675c3c9de2f0a67cb3a8fcb704672bb250fa3b",
+      "bytes": 14390
+    },
+    {
+      "path": "tools/legal_gaps/formatting.py",
+      "sha256": "986bcbf050ba9a29c6095da593084fd66ab1551fa73c90494268878c87082d01",
+      "bytes": 514
+    },
+    {
+      "path": "tools/legal_gaps/requirements.txt",
+      "sha256": "f75fe300b81b2114c30b260121110d0516e3d89c50cf317aad9fe7d935af92b5",
+      "bytes": 102
+    },
+    {
+      "path": "tools/legal_gaps/style.css",
+      "sha256": "fb15462569f7503b59cba8dcd3015fbbc6a82cb64d5225b53b4b2b3498913d40",
+      "bytes": 4115
+    }
+  ],
+  "predecessor": "0.2.0-review.1; original release bytes retained"
+}

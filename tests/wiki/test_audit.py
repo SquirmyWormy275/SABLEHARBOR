@@ -2,7 +2,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from tools.wiki.audit import Page, audit
+from tools.wiki.audit import Page, audit, audit_export
 
 
 class AuditTests(unittest.TestCase):
@@ -35,3 +35,21 @@ class AuditTests(unittest.TestCase):
             result = audit(root)
             self.assertEqual(result["errors"], [])
             self.assertEqual(result["reachable_pages"], 2)
+
+
+class ExportAuditTests(unittest.TestCase):
+    def test_composed_records_anchors_and_reachability(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            (root / "Home.md").write_text(
+                "# Home\n\n[Record]"
+                "(https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Record#detail)\n"
+            )
+            (root / "Record.md").write_text("# Record\n\n## Detail\n")
+            self.assertEqual(audit_export(root)["errors"], [])
+            (root / "Record.md").write_text("# Record\n\n[Absent](Missing)\n")
+            (root / "Orphan.md").write_text("# Orphan\n")
+            errors = "\n".join(audit_export(root)["errors"])
+            self.assertIn("missing Wiki page", errors)
+            self.assertIn("missing Wiki anchor", errors)
+            self.assertIn("unreachable exported Wiki page", errors)

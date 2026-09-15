@@ -1,0 +1,864 @@
+{
+  "id": "SH-LEGAL-PRACTICE-DEBT",
+  "slug": "debt",
+  "title": "ARU debt reconciliation",
+  "classification": "PUBLIC_WORKED_EXAMPLE",
+  "design_status": "DRAFT_FOR_REVIEW",
+  "prepared": "2026-09-12",
+  "period": "January–December 2026 selected industrial debt model",
+  "scenario": null,
+  "source_revision": "8898d2d0310a60bdf0e4753036790c6eda1388cd",
+  "route": "docs/reader/exercises/ACQUISITION.md",
+  "evidence": [
+    {
+      "path": "industrial/source/finance.json",
+      "sha256": "0d4461abfcdb138da36db503ff0cfea7c47ea7fd7109494126514225fd43e38c"
+    },
+    {
+      "path": "industrial/finance/TRANSACTION_ACCOUNTING.md",
+      "sha256": "d13f142968958585cfc56a7b06d54b5e95bccef6d434d11bb6bba93933a0aa58"
+    },
+    {
+      "path": "industrial/transaction/05_ARU_CLOSING_AND_TAX_DELIVERY.md",
+      "sha256": "a6dd448ed3a4a3ad6f0f3748e79dd918ea43c75685de762fe00843477a5d22c9"
+    },
+    {
+      "path": "docs/finance/evidence/tax-transaction/aru_2026_debt.csv",
+      "sha256": "f4fe40dcd3672ed876be4b539428c92fbeb8ed441f7f4fd1f610529c4ebb2d53"
+    },
+    {
+      "path": "docs/finance/evidence/tax-transaction/CURRENT_SOURCE_BRIDGE.json",
+      "sha256": "4e4c35d03d5613e0ef037d7dd14d27c250fa547fc29d2f93ddd1a1b25274e17c"
+    }
+  ],
+  "task": [
+    "Reconcile the opening term advance to old debt payoff and upstream acquisition financing.",
+    "Reperform every monthly term principal rollforward and the full-year principal change.",
+    "Separate year-end funded principal from term carrying amount and from interest expense.",
+    "State which assertions require lender, payoff and lien-release evidence."
+  ],
+  "limits": [
+    "ACT/365 and the 6.75% rate are source model conventions, not a verified lender agreement.",
+    "The twelve monthly rows are conditional modeled schedules; no bank settlement is proved.",
+    "Do not add a revolver limit to drawn principal or expense debt issuance costs twice."
+  ],
+  "inputs": [
+    {
+      "id": "advance",
+      "label": "Acquisition term advance",
+      "amount_usd": 22500000.0,
+      "source_path": "industrial/source/finance.json",
+      "locator": "transaction funding bridge / advance"
+    },
+    {
+      "id": "payoff",
+      "label": "Old term/revolver refinance",
+      "amount_usd": 13500000.0,
+      "source_path": "industrial/source/finance.json",
+      "locator": "transaction funding bridge / payoff"
+    },
+    {
+      "id": "upstream",
+      "label": "Upstream acquisition financing",
+      "amount_usd": 9000000.0,
+      "source_path": "docs/finance/evidence/tax-transaction/CURRENT_SOURCE_BRIDGE.json",
+      "locator": "transaction funding bridge / upstream"
+    },
+    {
+      "id": "1_opening_term_usd",
+      "label": "Month 1: Opening term principal",
+      "amount_usd": 22500000.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_2026_debt.csv",
+      "locator": "month=1; opening_term_usd"
+    },
+    {
+      "id": "1_term_principal_usd",
+      "label": "Month 1: Term principal reduction",
+      "amount_usd": 0.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_2026_debt.csv",
+      "locator": "month=1; term_principal_usd"
+    },
+    {
+      "id": "1_closing_term_usd",
+      "label": "Month 1: Closing term principal",
+      "amount_usd": 22500000.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_2026_debt.csv",
+      "locator": "month=1; closing_term_usd"
+    },
+    {
+      "id": "2_opening_term_usd",
+      "label": "Month 2: Opening term principal",
+      "amount_usd": 22500000.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_2026_debt.csv",
+      "locator": "month=2; opening_term_usd"
+    },
+    {
+      "id": "2_term_principal_usd",
+      "label": "Month 2: Term principal reduction",
+      "amount_usd": 0.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_2026_debt.csv",
+      "locator": "month=2; term_principal_usd"
+    },
+    {
+      "id": "2_closing_term_usd",
+      "label": "Month 2: Closing term principal",
+      "amount_usd": 22500000.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_2026_debt.csv",
+      "locator": "month=2; closing_term_usd"
+    },
+    {
+      "id": "3_opening_term_usd",
+      "label": "Month 3: Opening term principal",
+      "amount_usd": 22500000.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_2026_debt.csv",
+      "locator": "month=3; opening_term_usd"
+    },
+    {
+      "id": "3_term_principal_usd",
+      "label": "Month 3: Term principal reduction",
+      "amount_usd": 0.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_2026_debt.csv",
+      "locator": "month=3; term_principal_usd"
+    },
+    {
+      "id": "3_closing_term_usd",
+      "label": "Month 3: Closing term principal",
+      "amount_usd": 22500000.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_2026_debt.csv",
+      "locator": "month=3; closing_term_usd"
+    },
+    {
+      "id": "4_opening_term_usd",
+      "label": "Month 4: Opening term principal",
+      "amount_usd": 22500000.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_2026_debt.csv",
+      "locator": "month=4; opening_term_usd"
+    },
+    {
+      "id": "4_term_principal_usd",
+      "label": "Month 4: Term principal reduction",
+      "amount_usd": 375000.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_2026_debt.csv",
+      "locator": "month=4; term_principal_usd"
+    },
+    {
+      "id": "4_closing_term_usd",
+      "label": "Month 4: Closing term principal",
+      "amount_usd": 22125000.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_2026_debt.csv",
+      "locator": "month=4; closing_term_usd"
+    },
+    {
+      "id": "5_opening_term_usd",
+      "label": "Month 5: Opening term principal",
+      "amount_usd": 22125000.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_2026_debt.csv",
+      "locator": "month=5; opening_term_usd"
+    },
+    {
+      "id": "5_term_principal_usd",
+      "label": "Month 5: Term principal reduction",
+      "amount_usd": 0.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_2026_debt.csv",
+      "locator": "month=5; term_principal_usd"
+    },
+    {
+      "id": "5_closing_term_usd",
+      "label": "Month 5: Closing term principal",
+      "amount_usd": 22125000.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_2026_debt.csv",
+      "locator": "month=5; closing_term_usd"
+    },
+    {
+      "id": "6_opening_term_usd",
+      "label": "Month 6: Opening term principal",
+      "amount_usd": 22125000.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_2026_debt.csv",
+      "locator": "month=6; opening_term_usd"
+    },
+    {
+      "id": "6_term_principal_usd",
+      "label": "Month 6: Term principal reduction",
+      "amount_usd": 0.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_2026_debt.csv",
+      "locator": "month=6; term_principal_usd"
+    },
+    {
+      "id": "6_closing_term_usd",
+      "label": "Month 6: Closing term principal",
+      "amount_usd": 22125000.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_2026_debt.csv",
+      "locator": "month=6; closing_term_usd"
+    },
+    {
+      "id": "7_opening_term_usd",
+      "label": "Month 7: Opening term principal",
+      "amount_usd": 22125000.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_2026_debt.csv",
+      "locator": "month=7; opening_term_usd"
+    },
+    {
+      "id": "7_term_principal_usd",
+      "label": "Month 7: Term principal reduction",
+      "amount_usd": 375000.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_2026_debt.csv",
+      "locator": "month=7; term_principal_usd"
+    },
+    {
+      "id": "7_closing_term_usd",
+      "label": "Month 7: Closing term principal",
+      "amount_usd": 21750000.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_2026_debt.csv",
+      "locator": "month=7; closing_term_usd"
+    },
+    {
+      "id": "8_opening_term_usd",
+      "label": "Month 8: Opening term principal",
+      "amount_usd": 21750000.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_2026_debt.csv",
+      "locator": "month=8; opening_term_usd"
+    },
+    {
+      "id": "8_term_principal_usd",
+      "label": "Month 8: Term principal reduction",
+      "amount_usd": 0.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_2026_debt.csv",
+      "locator": "month=8; term_principal_usd"
+    },
+    {
+      "id": "8_closing_term_usd",
+      "label": "Month 8: Closing term principal",
+      "amount_usd": 21750000.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_2026_debt.csv",
+      "locator": "month=8; closing_term_usd"
+    },
+    {
+      "id": "9_opening_term_usd",
+      "label": "Month 9: Opening term principal",
+      "amount_usd": 21750000.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_2026_debt.csv",
+      "locator": "month=9; opening_term_usd"
+    },
+    {
+      "id": "9_term_principal_usd",
+      "label": "Month 9: Term principal reduction",
+      "amount_usd": 0.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_2026_debt.csv",
+      "locator": "month=9; term_principal_usd"
+    },
+    {
+      "id": "9_closing_term_usd",
+      "label": "Month 9: Closing term principal",
+      "amount_usd": 21750000.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_2026_debt.csv",
+      "locator": "month=9; closing_term_usd"
+    },
+    {
+      "id": "10_opening_term_usd",
+      "label": "Month 10: Opening term principal",
+      "amount_usd": 21750000.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_2026_debt.csv",
+      "locator": "month=10; opening_term_usd"
+    },
+    {
+      "id": "10_term_principal_usd",
+      "label": "Month 10: Term principal reduction",
+      "amount_usd": 375000.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_2026_debt.csv",
+      "locator": "month=10; term_principal_usd"
+    },
+    {
+      "id": "10_closing_term_usd",
+      "label": "Month 10: Closing term principal",
+      "amount_usd": 21375000.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_2026_debt.csv",
+      "locator": "month=10; closing_term_usd"
+    },
+    {
+      "id": "11_opening_term_usd",
+      "label": "Month 11: Opening term principal",
+      "amount_usd": 21375000.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_2026_debt.csv",
+      "locator": "month=11; opening_term_usd"
+    },
+    {
+      "id": "11_term_principal_usd",
+      "label": "Month 11: Term principal reduction",
+      "amount_usd": 0.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_2026_debt.csv",
+      "locator": "month=11; term_principal_usd"
+    },
+    {
+      "id": "11_closing_term_usd",
+      "label": "Month 11: Closing term principal",
+      "amount_usd": 21375000.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_2026_debt.csv",
+      "locator": "month=11; closing_term_usd"
+    },
+    {
+      "id": "12_opening_term_usd",
+      "label": "Month 12: Opening term principal",
+      "amount_usd": 21375000.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_2026_debt.csv",
+      "locator": "month=12; opening_term_usd"
+    },
+    {
+      "id": "12_term_principal_usd",
+      "label": "Month 12: Term principal reduction",
+      "amount_usd": 0.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_2026_debt.csv",
+      "locator": "month=12; term_principal_usd"
+    },
+    {
+      "id": "12_closing_term_usd",
+      "label": "Month 12: Closing term principal",
+      "amount_usd": 21375000.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_2026_debt.csv",
+      "locator": "month=12; closing_term_usd"
+    },
+    {
+      "id": "closing_lease_usd",
+      "label": "December retained lease principal",
+      "amount_usd": 2008219.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_2026_debt.csv",
+      "locator": "month=12; closing_lease_usd"
+    },
+    {
+      "id": "deferred_debt_issue_cost_usd",
+      "label": "December unamortized issuance cost",
+      "amount_usd": 240968.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_2026_debt.csv",
+      "locator": "month=12; deferred_debt_issue_cost_usd"
+    },
+    {
+      "id": "revolver_draw_usd",
+      "label": "December revolver draw",
+      "amount_usd": 0.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_2026_debt.csv",
+      "locator": "month=12; revolver_draw_usd"
+    }
+  ],
+  "calculations": [
+    {
+      "id": "advance_use",
+      "label": "Advance allocation difference",
+      "terms": [
+        [
+          1,
+          "advance"
+        ],
+        [
+          -1,
+          "payoff"
+        ],
+        [
+          -1,
+          "upstream"
+        ]
+      ],
+      "expected_usd": 0.0,
+      "explanation": "New borrowing is used once; upstream funds are financing, not revenue."
+    },
+    {
+      "id": "monthly_1",
+      "label": "Month 1 principal difference",
+      "terms": [
+        [
+          1,
+          "1_opening_term_usd"
+        ],
+        [
+          -1,
+          "1_term_principal_usd"
+        ],
+        [
+          -1,
+          "1_closing_term_usd"
+        ]
+      ],
+      "expected_usd": 0.0,
+      "explanation": "Opening less principal reduction equals closing; interest is not principal."
+    },
+    {
+      "id": "monthly_2",
+      "label": "Month 2 principal difference",
+      "terms": [
+        [
+          1,
+          "2_opening_term_usd"
+        ],
+        [
+          -1,
+          "2_term_principal_usd"
+        ],
+        [
+          -1,
+          "2_closing_term_usd"
+        ]
+      ],
+      "expected_usd": 0.0,
+      "explanation": "Opening less principal reduction equals closing; interest is not principal."
+    },
+    {
+      "id": "monthly_3",
+      "label": "Month 3 principal difference",
+      "terms": [
+        [
+          1,
+          "3_opening_term_usd"
+        ],
+        [
+          -1,
+          "3_term_principal_usd"
+        ],
+        [
+          -1,
+          "3_closing_term_usd"
+        ]
+      ],
+      "expected_usd": 0.0,
+      "explanation": "Opening less principal reduction equals closing; interest is not principal."
+    },
+    {
+      "id": "monthly_4",
+      "label": "Month 4 principal difference",
+      "terms": [
+        [
+          1,
+          "4_opening_term_usd"
+        ],
+        [
+          -1,
+          "4_term_principal_usd"
+        ],
+        [
+          -1,
+          "4_closing_term_usd"
+        ]
+      ],
+      "expected_usd": 0.0,
+      "explanation": "Opening less principal reduction equals closing; interest is not principal."
+    },
+    {
+      "id": "monthly_5",
+      "label": "Month 5 principal difference",
+      "terms": [
+        [
+          1,
+          "5_opening_term_usd"
+        ],
+        [
+          -1,
+          "5_term_principal_usd"
+        ],
+        [
+          -1,
+          "5_closing_term_usd"
+        ]
+      ],
+      "expected_usd": 0.0,
+      "explanation": "Opening less principal reduction equals closing; interest is not principal."
+    },
+    {
+      "id": "monthly_6",
+      "label": "Month 6 principal difference",
+      "terms": [
+        [
+          1,
+          "6_opening_term_usd"
+        ],
+        [
+          -1,
+          "6_term_principal_usd"
+        ],
+        [
+          -1,
+          "6_closing_term_usd"
+        ]
+      ],
+      "expected_usd": 0.0,
+      "explanation": "Opening less principal reduction equals closing; interest is not principal."
+    },
+    {
+      "id": "monthly_7",
+      "label": "Month 7 principal difference",
+      "terms": [
+        [
+          1,
+          "7_opening_term_usd"
+        ],
+        [
+          -1,
+          "7_term_principal_usd"
+        ],
+        [
+          -1,
+          "7_closing_term_usd"
+        ]
+      ],
+      "expected_usd": 0.0,
+      "explanation": "Opening less principal reduction equals closing; interest is not principal."
+    },
+    {
+      "id": "monthly_8",
+      "label": "Month 8 principal difference",
+      "terms": [
+        [
+          1,
+          "8_opening_term_usd"
+        ],
+        [
+          -1,
+          "8_term_principal_usd"
+        ],
+        [
+          -1,
+          "8_closing_term_usd"
+        ]
+      ],
+      "expected_usd": 0.0,
+      "explanation": "Opening less principal reduction equals closing; interest is not principal."
+    },
+    {
+      "id": "monthly_9",
+      "label": "Month 9 principal difference",
+      "terms": [
+        [
+          1,
+          "9_opening_term_usd"
+        ],
+        [
+          -1,
+          "9_term_principal_usd"
+        ],
+        [
+          -1,
+          "9_closing_term_usd"
+        ]
+      ],
+      "expected_usd": 0.0,
+      "explanation": "Opening less principal reduction equals closing; interest is not principal."
+    },
+    {
+      "id": "monthly_10",
+      "label": "Month 10 principal difference",
+      "terms": [
+        [
+          1,
+          "10_opening_term_usd"
+        ],
+        [
+          -1,
+          "10_term_principal_usd"
+        ],
+        [
+          -1,
+          "10_closing_term_usd"
+        ]
+      ],
+      "expected_usd": 0.0,
+      "explanation": "Opening less principal reduction equals closing; interest is not principal."
+    },
+    {
+      "id": "monthly_11",
+      "label": "Month 11 principal difference",
+      "terms": [
+        [
+          1,
+          "11_opening_term_usd"
+        ],
+        [
+          -1,
+          "11_term_principal_usd"
+        ],
+        [
+          -1,
+          "11_closing_term_usd"
+        ]
+      ],
+      "expected_usd": 0.0,
+      "explanation": "Opening less principal reduction equals closing; interest is not principal."
+    },
+    {
+      "id": "monthly_12",
+      "label": "Month 12 principal difference",
+      "terms": [
+        [
+          1,
+          "12_opening_term_usd"
+        ],
+        [
+          -1,
+          "12_term_principal_usd"
+        ],
+        [
+          -1,
+          "12_closing_term_usd"
+        ]
+      ],
+      "expected_usd": 0.0,
+      "explanation": "Opening less principal reduction equals closing; interest is not principal."
+    },
+    {
+      "id": "annual_principal",
+      "label": "Full-year term principal reductions",
+      "terms": [
+        [
+          1,
+          "1_term_principal_usd"
+        ],
+        [
+          1,
+          "2_term_principal_usd"
+        ],
+        [
+          1,
+          "3_term_principal_usd"
+        ],
+        [
+          1,
+          "4_term_principal_usd"
+        ],
+        [
+          1,
+          "5_term_principal_usd"
+        ],
+        [
+          1,
+          "6_term_principal_usd"
+        ],
+        [
+          1,
+          "7_term_principal_usd"
+        ],
+        [
+          1,
+          "8_term_principal_usd"
+        ],
+        [
+          1,
+          "9_term_principal_usd"
+        ],
+        [
+          1,
+          "10_term_principal_usd"
+        ],
+        [
+          1,
+          "11_term_principal_usd"
+        ],
+        [
+          1,
+          "12_term_principal_usd"
+        ]
+      ],
+      "expected_usd": 1125000.0,
+      "explanation": "Three modeled quarterly reductions, not twelve installments."
+    },
+    {
+      "id": "closing_funded",
+      "label": "December funded principal including leases",
+      "terms": [
+        [
+          1,
+          "12_closing_term_usd"
+        ],
+        [
+          1,
+          "closing_lease_usd"
+        ],
+        [
+          1,
+          "revolver_draw_usd"
+        ]
+      ],
+      "expected_usd": 23383219.0,
+      "explanation": "Principal amount; do not net unamortized issuance costs here."
+    },
+    {
+      "id": "term_carrying",
+      "label": "December term debt carrying amount",
+      "terms": [
+        [
+          1,
+          "12_closing_term_usd"
+        ],
+        [
+          -1,
+          "deferred_debt_issue_cost_usd"
+        ]
+      ],
+      "expected_usd": 21134032.0,
+      "explanation": "Term principal less unamortized term-debt issuance cost; excludes leases."
+    }
+  ],
+  "findings": [
+    {
+      "id": "DEBT-F01",
+      "question": "Does a zero model payoff balance prove liens were released?",
+      "worked_finding": "No. The source records internal payoff instructions and modeled refinancing; it supplies no independent executed release.",
+      "evidence": "industrial/transaction/05_ARU_CLOSING_AND_TAX_DELIVERY.md#delivery-register",
+      "additional_evidence": "Lender payoff statement, verified settlement and item-specific release evidence."
+    }
+  ],
+  "selected_rows": {
+    "debt_schedule": [
+      {
+        "month": "1",
+        "opening_term_usd": "22500000",
+        "term_principal_usd": "0",
+        "term_interest_usd": "104024",
+        "closing_term_usd": "22500000",
+        "lease_principal_usd": "34246",
+        "lease_interest_usd": "8503",
+        "closing_lease_usd": "2465754",
+        "debt_issue_amortization_usd": "4032",
+        "deferred_debt_issue_cost_usd": "295968",
+        "revolver_draw_usd": "0"
+      },
+      {
+        "month": "2",
+        "opening_term_usd": "22500000",
+        "term_principal_usd": "0",
+        "term_interest_usd": "116507",
+        "closing_term_usd": "22500000",
+        "lease_principal_usd": "38356",
+        "lease_interest_usd": "9384",
+        "closing_lease_usd": "2427398",
+        "debt_issue_amortization_usd": "5000",
+        "deferred_debt_issue_cost_usd": "290968",
+        "revolver_draw_usd": "0"
+      },
+      {
+        "month": "3",
+        "opening_term_usd": "22500000",
+        "term_principal_usd": "0",
+        "term_interest_usd": "128990",
+        "closing_term_usd": "22500000",
+        "lease_principal_usd": "42466",
+        "lease_interest_usd": "10218",
+        "closing_lease_usd": "2384932",
+        "debt_issue_amortization_usd": "5000",
+        "deferred_debt_issue_cost_usd": "285968",
+        "revolver_draw_usd": "0"
+      },
+      {
+        "month": "4",
+        "opening_term_usd": "22500000",
+        "term_principal_usd": "375000",
+        "term_interest_usd": "123164",
+        "closing_term_usd": "22125000",
+        "lease_principal_usd": "41096",
+        "lease_interest_usd": "9717",
+        "closing_lease_usd": "2343836",
+        "debt_issue_amortization_usd": "5000",
+        "deferred_debt_issue_cost_usd": "280968",
+        "revolver_draw_usd": "0"
+      },
+      {
+        "month": "5",
+        "opening_term_usd": "22125000",
+        "term_principal_usd": "0",
+        "term_interest_usd": "126840",
+        "closing_term_usd": "22125000",
+        "lease_principal_usd": "42466",
+        "lease_interest_usd": "9863",
+        "closing_lease_usd": "2301370",
+        "debt_issue_amortization_usd": "5000",
+        "deferred_debt_issue_cost_usd": "275968",
+        "revolver_draw_usd": "0"
+      },
+      {
+        "month": "6",
+        "opening_term_usd": "22125000",
+        "term_principal_usd": "0",
+        "term_interest_usd": "122748",
+        "closing_term_usd": "22125000",
+        "lease_principal_usd": "41096",
+        "lease_interest_usd": "9373",
+        "closing_lease_usd": "2260274",
+        "debt_issue_amortization_usd": "5000",
+        "deferred_debt_issue_cost_usd": "270968",
+        "revolver_draw_usd": "0"
+      },
+      {
+        "month": "7",
+        "opening_term_usd": "22125000",
+        "term_principal_usd": "375000",
+        "term_interest_usd": "125106",
+        "closing_term_usd": "21750000",
+        "lease_principal_usd": "42466",
+        "lease_interest_usd": "9508",
+        "closing_lease_usd": "2217808",
+        "debt_issue_amortization_usd": "5000",
+        "deferred_debt_issue_cost_usd": "265968",
+        "revolver_draw_usd": "0"
+      },
+      {
+        "month": "8",
+        "opening_term_usd": "21750000",
+        "term_principal_usd": "0",
+        "term_interest_usd": "124690",
+        "closing_term_usd": "21750000",
+        "lease_principal_usd": "42466",
+        "lease_interest_usd": "9328",
+        "closing_lease_usd": "2175342",
+        "debt_issue_amortization_usd": "5000",
+        "deferred_debt_issue_cost_usd": "260968",
+        "revolver_draw_usd": "0"
+      },
+      {
+        "month": "9",
+        "opening_term_usd": "21750000",
+        "term_principal_usd": "0",
+        "term_interest_usd": "120668",
+        "closing_term_usd": "21750000",
+        "lease_principal_usd": "41096",
+        "lease_interest_usd": "8855",
+        "closing_lease_usd": "2134246",
+        "debt_issue_amortization_usd": "5000",
+        "deferred_debt_issue_cost_usd": "255968",
+        "revolver_draw_usd": "0"
+      },
+      {
+        "month": "10",
+        "opening_term_usd": "21750000",
+        "term_principal_usd": "375000",
+        "term_interest_usd": "122956",
+        "closing_term_usd": "21375000",
+        "lease_principal_usd": "42466",
+        "lease_interest_usd": "8973",
+        "closing_lease_usd": "2091780",
+        "debt_issue_amortization_usd": "5000",
+        "deferred_debt_issue_cost_usd": "250968",
+        "revolver_draw_usd": "0"
+      },
+      {
+        "month": "11",
+        "opening_term_usd": "21375000",
+        "term_principal_usd": "0",
+        "term_interest_usd": "118587",
+        "closing_term_usd": "21375000",
+        "lease_principal_usd": "41096",
+        "lease_interest_usd": "8512",
+        "closing_lease_usd": "2050684",
+        "debt_issue_amortization_usd": "5000",
+        "deferred_debt_issue_cost_usd": "245968",
+        "revolver_draw_usd": "0"
+      },
+      {
+        "month": "12",
+        "opening_term_usd": "21375000",
+        "term_principal_usd": "0",
+        "term_interest_usd": "122540",
+        "closing_term_usd": "21375000",
+        "lease_principal_usd": "42465",
+        "lease_interest_usd": "8618",
+        "closing_lease_usd": "2008219",
+        "debt_issue_amortization_usd": "5000",
+        "deferred_debt_issue_cost_usd": "240968",
+        "revolver_draw_usd": "0"
+      }
+    ]
+  }
+}

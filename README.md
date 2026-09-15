@@ -4,7 +4,7 @@
 
 Sable Harbor is a fictional company universe for exploring how businesses operate, keep accounts, make decisions, and produce evidence. Its archive includes company records, organization charts, contracts, financial models, operating records, controls, and facility plans. You can read the documents and workbooks without running code or using AI.
 
-**[Explore the company](docs/wiki/Home.md)** · **[Choose an exercise](docs/reader/USE_CASES.md)** · **[Find a document](docs/wiki/Library.md)** · **[Maps and buildings](geospatial/facilities/README.md)**
+**[Read the Wiki](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki)** · **[Start here](docs/wiki/Start-Here.md)** · **[Choose an exercise](docs/reader/exercises/README.md)** · **[Find a document](docs/wiki/Library.md)** · **[Contribute](CONTRIBUTING.md)**
 
 ## Choose what you want to do
 
@@ -31,8 +31,9 @@ The [full use-case guide](docs/reader/USE_CASES.md) gives reading routes, sugges
 - **Review financial results:** download the [operating review workbook](enterprise/operations/publications/operating-review-v1.0.0.xlsx). Start with **Results** or **Cash obligations**, then use the [exercise guide](docs/finance/READER_EXERCISES.md) to find the supporting transactions.
 - **Trace accounting support:** open the [five scoped evidence packages](docs/finance/evidence/coverage/README.md) for complete selected populations, reconciliation results and CSV/SQLite access. New PDF/workbook designs remain in review.
 - **Read legal records:** use the [instrument directory](docs/reader/transactions/README.md) for commercial terms, corporate approvals, acquisitions and host rights, with missing evidence identified.
-- **Understand a business:** open [Foundry Field](docs/wiki/businesses/Foundry-Field.md), [Advisory](docs/wiki/businesses/Advisory.md), or the [full directory](docs/wiki/Home.md#businesses). Each page links its records and organization charts.
+- **Understand a business:** open [Foundry Field](docs/wiki/businesses/Foundry-Field.md), [Advisory](docs/wiki/businesses/Advisory.md), or the [full directory](docs/wiki/Home.md#businesses). Each reading guide connects the business to its records, people and unresolved questions; the live Wiki includes full supporting text.
 - **Inspect a place:** use the [individual plan index](geospatial/maps/facilities/ARTIFACT_INDEX.md) in GitHub or download the [facility atlas PDF](geospatial/maps/SABLE_HARBOR_Facility_Atlas_v0.2.0.pdf). The selected Sacramento visitor map is available as [PNG](geospatial/facilities/visitor/v08/artifacts/visitor-map-v08.png) and [PDF](geospatial/facilities/visitor/v08/artifacts/visitor-map-v08.pdf).
+- **Inspect executable evidence:** download the [offline review edition](docs/releases/CLOSEOUT_EVIDENCE_RELEASES.md) to search runtime cases, verified source coverage, site records and remaining geographic evidence; retain your review notes without a server.
 - **Examine controls:** read the [three exercise procedures](enterprise/ccf/PROCEDURES.md). For assessment planning, open the separate [approved reference preparation](enterprise/ccf/assurance/README.md#approved-reference-assessment-preparation); its test plans are not executed assurance evidence.
 
 ## Start without installing anything
@@ -54,8 +55,24 @@ All company records and scenarios are synthetic. A balanced financial model does
 
 Use the [source and status guide](docs/reader/SOURCES_AND_FORMATS.md) when records disagree. Current records do not silently rewrite older released exercises. Some exercises support a complete bounded task; others deliberately or explicitly lack evidence for a broader conclusion.
 
+## Work with the repository
+
+The archive is organized around its sources and the exercises they support.
+
+| Area | Contents |
+|---|---|
+| [`docs/wiki/`](docs/wiki/README.md) | Curated company articles, reading guides and navigation. |
+| [`docs/`](docs/) | Institutional source records, governance, finance and controlled-document indexes. |
+| [`enterprise/`](enterprise/README.md) | Business models, operating evidence, runtime design and controls. |
+| [`industrial/`](industrial/README.md) | Industrial operating and investment cases. |
+| [`geospatial/`](geospatial/README.md) | Geographic evidence, facility plans and their precision limits. |
+| [`blackridge/`](blackridge/README.md) | The separate Blackridge case and its data population. |
+| [`tools/`](tools/) | Build, publication and review utilities. |
+
+The [contribution guide](CONTRIBUTING.md) covers setup, scope-appropriate checks and the source-to-publication workflow. The [open questions register](docs/wiki/Open-Questions.md) distinguishes remaining evidence needs from completed presentation work.
+
 ## Explore further
 
 [Business dossiers](docs/business-lines/README.md) · [Controlled documents](docs/CONTROLLED_DOCUMENT_INDEX.md) · [Brand assets](assets/brand/README.md) · [Wiki source and publication status](docs/wiki/README.md) · [Maintainer instructions](MAINTAINERS.md)
 
-The repository is the source of truth. The wiki lives in [versioned Markdown pages](docs/wiki/Home.md) here; a separate live GitHub Wiki is not required to read it. Interactive viewers open locally from a checkout or release package. No separate website or account is needed for the document routes. Public visibility does not grant an open-source license: all rights remain reserved unless a specific file states otherwise.
+The repository is the source of truth. The [live Wiki](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki) publishes the reading edition; its [versioned sources](docs/wiki/README.md) remain available here. Source links identify the published snapshot, and an automated freshness check detects changed reading inputs or independent Wiki edits. Interactive viewers open locally from a checkout or release package. No separate website or account is needed for the document routes. Public visibility does not grant an open-source license: all rights remain reserved unless a specific file states otherwise.

@@ -1,0 +1,85 @@
+[
+  {
+    "object_id": "SH-SITE-0001",
+    "name": "Sacramento headquarters",
+    "prefix": "sacramento",
+    "study": "SH-GEO-0001",
+    "epsg": 26910,
+    "size": [
+      256.032,
+      182.88
+    ],
+    "min_acres": 8,
+    "max_acres": 15,
+    "authority": "geospatial/sources/MASTER_EXECUTION_MANDATE.md",
+    "note": "Preserves the approved R01-derived 840 by 600 ft local campus envelope. This placement alternative does not rotate or redraw approved building references.",
+    "grid_centers_tested": 1850,
+    "reference_clear_candidates": 43,
+    "alternatives": 3,
+    "reference_sha256": {
+      "geospatial/reference/sacramento_connecting_roads.geojson": "05c2cc267e125bd36cb436a5f2a3fabf60d9fe6c3c445b21dbf3de0477d92e57",
+      "geospatial/reference/sacramento_highways.geojson": "746fad45f6aa54ac4b1afb15bcadd04268302a262957089b6428ef5da4327178",
+      "geospatial/reference/sacramento_hydro.geojson": "d11fb9f1c02956abcfc47d7d3180fdea93fa259b54c1d82d81d6535cb24c8708",
+      "geospatial/reference/sacramento_local_roads.geojson": "683c8c7d16e5e614621c7d2b554c67c58f893ed135bd5b2321ba4f2702424f5c",
+      "geospatial/reference/sacramento_rail.geojson": "3115b02fff101730d9c45e05e821f8611e304158b467d3ad19ca30339e4fc242",
+      "geospatial/reference/sacramento_secondary_roads.geojson": "6d6b80a88dc60e65991d34024fe7cf2eb86531ffba8b75efb697fe0a601f2799"
+    },
+    "authority_sha256": "d49a4f30625aae0220b6d252c9f75c4e746099273c5a2dee2800caf934a1f991",
+    "study_sha256": "d4e9ee96b33c5d6a3a40533893b7022eef05b9dac750382968359e783ffc3e84"
+  },
+  {
+    "object_id": "SH-SITE-0003",
+    "name": "The Fort / Willow",
+    "prefix": "hazelwood",
+    "study": "SH-GEO-0002",
+    "epsg": 26917,
+    "size": [
+      300,
+      220
+    ],
+    "min_acres": 10,
+    "max_acres": 20,
+    "authority": "docs/canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md",
+    "note": "Separate premises from the Klein shop. The Hazelwood study window supplies regional context only; this is not a reuse of the historical shop's property or a claim on Hazelwood Green tenants.",
+    "grid_centers_tested": 2944,
+    "reference_clear_candidates": 133,
+    "alternatives": 3,
+    "reference_sha256": {
+      "geospatial/reference/hazelwood_connecting_roads.geojson": "6dfe260261719f80ee587feb3ead8870ba334d36ba35317debac636a7187c8b3",
+      "geospatial/reference/hazelwood_highways.geojson": "96cea8a975c264fe3a69ab733a3ec86ab00804fbe7801933e6112814e9b464f4",
+      "geospatial/reference/hazelwood_hydro.geojson": "4feebf27c90c99bfbf1d7dc7861b226aa8a6a069ebf913627960022739c2c69e",
+      "geospatial/reference/hazelwood_local_roads.geojson": "7d961e9292f87ce71faf52a0f6b8d612233a30ca138c271938bb60de970f5b68",
+      "geospatial/reference/hazelwood_rail.geojson": "7d6118a459a800dcc475accc96b693f837b0aedfbef9493596a893a7f1eec010",
+      "geospatial/reference/hazelwood_secondary_roads.geojson": "6d6b80a88dc60e65991d34024fe7cf2eb86531ffba8b75efb697fe0a601f2799"
+    },
+    "authority_sha256": "3289ad8ce5d20d767b38f1ad3ed804feeb80300c59d7e96653bfe68f1eaa24b6",
+    "study_sha256": "62932f47fc591ab7e792dd0f6f3a9e3121d001c1b9b813e58437748951b44cf9"
+  },
+  {
+    "object_id": "SH-SITE-0005",
+    "name": "Bedford / Cradle",
+    "prefix": "fairmont",
+    "study": "SH-GEO-BEDFORD-001",
+    "epsg": 26917,
+    "size": [
+      330,
+      220
+    ],
+    "min_acres": 15,
+    "max_acres": 20,
+    "authority": "docs/canon/CRADLE_CLOSEOUT_2026-09-06.md",
+    "note": "Fairmont-area development/upgrading center, separate from Demotte. Brownfield condition is a fictional design requirement; no contamination clearance, river berth or rail connection is inferred.",
+    "grid_centers_tested": 9048,
+    "reference_clear_candidates": 1288,
+    "alternatives": 3,
+    "reference_sha256": {
+      "geospatial/reference/fairmont_connecting_roads.geojson": "889df27bde4c0c0fdf00f8d43940d4855ed8c2181bb2dbb701d8760292797381",
+      "geospatial/reference/fairmont_highways.geojson": "873806918e44cbefa812bd6ad32c55aca9aeb227e2df534927c71c14346c0474",
+      "geospatial/reference/fairmont_hydro.geojson": "4709eaa666d77462089a5f6159450f79c8640f0b89b8f2de9a756301ec65a4cf",
+      "geospatial/reference/fairmont_rail.geojson": "fff23cf8e9c2b671be4558d9541c1ab8c142670c3d5240f46fc459a2fec5fb09",
+      "geospatial/reference/fairmont_secondary_roads.geojson": "1599f0bfba21a4968e0c71ad55bbc633323e79cefd02aaec4033a505cfc32843"
+    },
+    "authority_sha256": "b49eaf96f1582f11886e9543b1543013f47acc99aa5533082d73717ab523e8aa",
+    "study_sha256": "31f0bd71f8c299b9e3385514b2dbd1ea070edf3b7c0217398254535af5f6ba3d"
+  }
+]

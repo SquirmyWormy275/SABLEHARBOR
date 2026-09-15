@@ -50,11 +50,15 @@ Generated file inventory. Includes current and historical records; open the sour
 ## `docs/reader/usability`
 
 - [Practical reading routes: verification record](../../reader/usability/README.md) — MD
+- [Reader task checks](../../reader/usability/REVIEW_2026-09-13.md) — MD
 
 ## `docs/wiki`
 
+- [Reading glossary](../Glossary.md) — MD
 - [Explore Sable Harbor](../Home.md) — MD
+- [Open questions](../Open-Questions.md) — MD
 - [Wiki reading layer](../README.md) — MD
+- [Start here](../Start-Here.md) — MD
 
 ## `docs/wiki/businesses`
 

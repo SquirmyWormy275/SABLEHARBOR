@@ -221,10 +221,12 @@ def validate(path=None, write=True):
         rail_engineering_status="NOT_EVALUATED_NO_CANON_NETWORK"
         if not network["rail_segments"]
         else "ACCEPTED_CASE_NETWORK_RECONCILED_ENGINEERING_LIMITS_RETAINED",
-        exact_site_selection_status="RED_WASH_LOCKED_TAYLOR_A_CASE_SITED_OTHER_PARCELS_UNFINISHED",
+        exact_site_selection_status="DELEGATED_DISPOSITIONS_RECORDED_THREE_SCREENED_FOOTPRINTS"
+        if any(r["decision_id"] == "GEO-COMPLETE-20260913" for r in cat["decisions"])
+        else "RED_WASH_LOCKED_TAYLOR_A_CASE_SITED_OTHER_PARCELS_UNFINISHED",
         qgis_status="NATIVE_QGIS_CHECK_RECORDED_SEPARATELY",
         program_complete=False,
-        scope_note="A passing framework build does not settle source conflicts, select exact sites, establish a railway, or complete the 49-section program.",
+        scope_note="Geometry checks verify governed inputs. Site and occupancy decisions follow controlling canon; survey, construction design, external execution and whole-program completion require their separate acceptance evidence.",
     )
     if write:
         (BASE / "reports/GEOMETRY_VALIDATION.json").write_text(json.dumps(result, indent=2) + "\n")

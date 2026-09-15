@@ -4,9 +4,17 @@
 
 **Reviewed:** September 12, 2026 · **Status:** repository reading layer; linked source records control.
 
-Sable Harbor develops industrial software, operates resource businesses, and provides professional services. This index connects the businesses and corporate functions to their people, records, finances and places. Start with a subject; each page points to the documents behind it.
+Sable Harbor develops industrial software, operates resource businesses, and provides professional services. This Wiki explains the businesses and corporate functions, their people, operating work, finances and places. Each business, department and history article includes in-depth source text. The reading rooms contain complete supporting records, with links between them inside the Wiki.
 
-[Choose an exercise](../reader/USE_CASES.md) · [Accounting practice](../finance/READER_EXERCISES.md) · [Complete document library](Library.md) · [Source and format guide](../reader/SOURCES_AND_FORMATS.md)
+[Start here](Start-Here.md) · [Practical exercises](../reader/exercises/README.md) · [Document library](Library.md) · [Reading glossary](Glossary.md) · [Open questions](Open-Questions.md)
+
+<a id="read-the-wiki"></a>
+
+## Start your reading
+
+Start with a business or department below. Use **In-depth reading** for the operating dossier, authority or history on that page, and **On this page** to jump through longer articles. The [full-text reading room](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Reading) collects 198 supporting records across the enterprise. Each edition links to its exact repository source. The [start guide](Start-Here.md) explains the reading routes, downloads and status language.
+
+For practical work, read the [acquisition exercise](../reader/exercises/ACQUISITION.md), [invoice exercise](../reader/exercises/INVOICE.md) or [contract review exercise](../reader/exercises/CONTRACTS.md) directly in the Wiki. Downloads such as Excel, PDF and SQLite remain linked to their original files or releases.
 
 ## Find records for a task
 

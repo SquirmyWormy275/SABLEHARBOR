@@ -2,7 +2,7 @@
 
 From a clean checkout, run `make bootstrap`, then `make ci`. Bootstrap uses the committed
 lockfile and includes the PDF and Markdown libraries imported by repository tests.
-It does not install browsers. The finance guide's database steps remain optional for
+The root pytest configuration adds the repository root to Python’s import path, so both `uv run pytest` (used by `make ci`) and `uv run python -m pytest` collect the tools-based tests correctly. It does not install browsers. The finance guide's database steps remain optional for
 SQLite tests; PostgreSQL integration tests require their documented test database.
 
 Finance CI runs the complete collected root test suite in three isolated checkouts.

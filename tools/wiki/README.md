@@ -48,6 +48,67 @@ are retired on the next sync; unrelated Wiki pages remain. Matching source page 
 (including the initial Home page) are replaced by the repository-controlled export.
 Wiki Git history is retained. Independent edits belong in the source PR workflow.
 
-As of September 12, 2026, the Wiki clone endpoint returns “Repository not found” and
-no Actions secrets are configured. This implementation alone does not claim live
-publication, credential provisioning or completion of #11.
+The Wiki is initialized and has been published using existing local Git authentication.
+`make wiki-publish` fetches accepted main, rejects a dirty or unaccepted checkout,
+publishes without force, and verifies every page in a fresh remote clone. Its receipt
+is written to `var/wiki-publication.json`. The optional Actions credential is separate;
+local publication does not require adding a personal token to repository secrets.
+
+## Complete reading edition
+
+`reading.json` explicitly inventories 198 accepted public Markdown sources and the
+source selections for all seven businesses, 23 departments/institutions/capabilities
+and nine historical or cross-cutting subjects. The exporter composes their substantive
+text at publication time; source documents are never edited or independently copied
+into another controlling archive. Section selections fail if a heading disappears.
+
+The export adds full reading editions, topic rooms, section navigation and source links.
+Links between inventoried records stay inside the Wiki. Original source wording, status,
+version and dates remain visible. Each record has an original-file SHA-256 in the
+publication manifest and a link pinned to the accepted source revision. The reading
+rooms include historical and conditional material: inclusion is not a new canon decision.
+
+This edition excludes the concurrently owned legal publications and private evidence.
+It does not close unresolved tax/legal execution, geographic or operational questions.
+Artwork is reused by URL, retaining its approved bytes. Financial packages remain
+release downloads rather than being converted into invented Markdown financial books.
+
+To extend coverage, update the explicit inventory and source selections, run the Wiki
+unit tests, export and audit the complete output, then inspect mobile and desktop
+rendering. Source content is compiled afresh at the accepted main revision on every
+publication. Do not edit the live Wiki independently.
+
+## Editorial presentation and historical addresses
+
+All 39 subject guides include a plain-language orientation, related reading and an
+explicit unknowns section. Start Here, the glossary and the open-questions register
+provide onboarding and a dated evidence boundary. Source text remains separately
+identified in the composed in-depth reading sections.
+
+`titles.json` assigns readable published titles without renaming repository sources.
+The export rewrites navigation and retains every prior address as a compatibility page,
+including its section anchors. These pages are recorded in the manifest's `aliases`;
+they are not counted as additional articles. The navigation audit checks each route,
+and the browser review checks the canonical reading edition.
+
+## Detect stale publication
+
+```bash
+make wiki-freshness
+```
+
+The checker clones the live Wiki read-only, verifies its managed page bytes and compares
+an export from the inspected checkout with the publication. It reuses the published
+revision in URLs so unrelated code commits do not cause false drift. Source, configuration,
+linked-file hashes and tracked directory trees identify changes that affect the reading
+edition. Run from refreshed main when assessing the accepted source.
+
+States are `current`, `stale`, `modified` (independent or missing remote pages),
+`unverifiable` (a legacy manifest lacks input hashes), or `unavailable` (inspection
+failed). Only `current` exits successfully by default. `--report-only` retains the report
+without failing; it does not turn an unknown result into a verified publication.
+
+The read-only workflow runs after main changes, daily and on manual dispatch. Its JSON
+artifact and run summary show the precise differences. It does not provision credentials,
+publish pages or change repository settings. After an accepted content change, publish
+with `make wiki-publish` and dispatch the freshness workflow to verify the updated state.
