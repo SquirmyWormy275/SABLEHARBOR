@@ -170,7 +170,7 @@
         "enterprise/closeout/source/receipt_markets.json",
         "enterprise/closeout/source/capital_register.json",
         "enterprise/closeout/capital_register.py",
-        "docs/finance/evidence/company-closeout/FOUNDER_ADMISSION_BASIS.md"
+        "docs/internal/company-closeout/FOUNDER_ADMISSION_BASIS.md"
       ],
       "affected_paths": [
         "docs/finance/evidence/company-closeout/ADOPTED_PARENT_TAX.md",
@@ -184,7 +184,7 @@
         "enterprise/closeout/source/receipt_markets.json",
         "enterprise/closeout/source/capital_register.json",
         "enterprise/closeout/capital_register.py",
-        "docs/finance/evidence/company-closeout/FOUNDER_ADMISSION_BASIS.md"
+        "docs/internal/company-closeout/FOUNDER_ADMISSION_BASIS.md"
       ],
       "commits_prs": [
         "https://github.com/SquirmyWormy275/SABLEHARBOR/pull/166"
@@ -201,7 +201,7 @@
         "enterprise/closeout/source/receipt_markets.json",
         "enterprise/closeout/source/capital_register.json",
         "enterprise/closeout/capital_register.py",
-        "docs/finance/evidence/company-closeout/FOUNDER_ADMISSION_BASIS.md"
+        "docs/internal/company-closeout/FOUNDER_ADMISSION_BASIS.md"
       ],
       "commands_results": [],
       "reconciliation_totals": {
