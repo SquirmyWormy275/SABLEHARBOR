@@ -431,3 +431,32 @@ covered by the 30% regular-salary burden. Salary wage-cap effects are distinct
 from gross bonus levies. Primary authority and the permitted separate 22%
 supplemental federal withholding method are recorded in
 `source/retention_payroll_2026.json`.
+
+### Current legal-field dispositions
+
+`advisory_execution.csv` supplies the four existing clients' expressly authored
+legal names, California organization jurisdiction, `.example` contract contacts,
+representatives and August 1 counterpart acknowledgments. Rowan Bell is the
+newly named existing `SH-EMP-ADVISORY-0001` occupant; the four existing internal
+authority records limit signature scope to the current $25,000 SOW apiece.
+Each record joins the August 28 delivery evidence and August 31 invoice/receipt,
+and supplies a bounded synthetic data schedule and matter description. No
+liability limit, venue choice or unsigned master-template clause is adopted.
+Thus Advisory U01's ordinary identity/notices/signatory fields and U02's current
+SOW/data/execution fields have current dispositions; a material liability limit
+remains unselected rather than inferred from the fee.
+
+`retention_execution.csv` joins all eight accepted closing retention instruments
+to current person/employer IDs, employee acknowledgments and Leah Denning's
+employer-record acknowledgment as the existing closing human-capital
+administrator. July gross/net/withholding references point to the separate
+retention workpaper; future January 2027 installments remain conditional.
+`consultancy_delivery.csv` supplies eight month-end knowledge-transfer
+submissions and Nora's acceptance tied to every January–August
+`TOLMAN-CONSULTING` source cash leg. Fred gains no employment or operating
+command; September/October work remains unasserted. Workforce U01 is therefore
+mapped to its actual retention/consultancy scope rather than incorrectly closed
+by the 702-person census alone. Employer bonus tax settlement follows finance's
+separate successor disposition. All acknowledgments are newly authored fictional
+records, not recovered real signatures or proof that unsigned template terms
+were adopted.

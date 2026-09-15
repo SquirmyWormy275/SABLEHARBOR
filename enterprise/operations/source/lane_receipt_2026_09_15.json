@@ -8,7 +8,7 @@
     "SH-C01": "Implemented declared employee, commercial/research, customer/supplier balance, legal-book allocation, inventory valuation and asset-source populations; specific population precision limitations retained below.",
     "SH-C03": "Implemented702employee roster,1404payments, exactwithholding/remittance, benefits/UI/RUIA, existingcost decomposition, HR/access eventstate; runtime access effectiveness remains integration-owned. July retention250k included in eight recipients AugustYTD;136regular/bonus taxevents. Grossbonusnet173951.75+employee withholding76048.25; employer24266.75 supplied tofinance separately.",
     "SH-C07": "Implemented ten selected August normal/exception chains; September selected200lb custody successor invokes sourcequalification numericchecks; rejected200lb preserved. No whole physical monthly dispatch simulator claimed.",
-    "SH-C04": "Implemented bounded18ARU debt settlements/principal bridge and four Cradle host events; exact material debt/security/host rights residuals preserved. Current92 invoice tax annotations consume controls source; finance owns postings."
+    "SH-C04": "Implemented bounded18ARU debt settlements/principal bridge and four Cradle host events; exact material debt/security/host rights residuals preserved. Current92 invoice tax annotations consume controls source; finance owns postings. Current AdvisoryU01 ordinaryparty/notices/signatory andU02SOW/data/execution completed; materialliabilitylimit notselected. WorkforceU01 mapped to8retention and8completedFredmonths, not censusalone."
   },
   "implementation_commits": [
     "71b81cee027562dd783a05ce4c4a654ba8b5b7b1",
@@ -24,7 +24,8 @@
     "enterprise/ccf/company_closeout/current_activity_successor.json",
     "enterprise/operations/source/debt_host_2026_08.json",
     "enterprise/ccf/company_closeout/industrial_transaction_tax.json",
-    "enterprise/operations/source/retention_payroll_2026.json"
+    "enterprise/operations/source/retention_payroll_2026.json",
+    "enterprise/operations/source/current_legal_completion_2026_08.json"
   ],
   "generator_paths": [
     "enterprise/operations/completed_period.py",
@@ -36,7 +37,8 @@
     "enterprise/operations/availability.py",
     "enterprise/operations/debt_host.py",
     "enterprise/operations/payroll_legal_bridge.py",
-    "enterprise/operations/retention_payroll.py"
+    "enterprise/operations/retention_payroll.py",
+    "enterprise/operations/current_legal_records.py"
   ],
   "reproduction_commands": [
     "python -m enterprise.operations.completed_period",
@@ -62,7 +64,8 @@
     "corporate": "SHIlegalbook paidcost11968000 decomposition ->ESS/IA/J2/corporate payroll/approvals ->tradeAR/AP/inventoryzero source bridge ->9000000gross assetcomponents/4285714.2861netafterbookDDA; financing/tax/treasury remain finance integration",
     "debt_and_hosts": "debt_host_records.json ->18source cash legs and term/lease rollforward ->4host interface/acceptance/settlement/exception events ->exact rights residuals; no lien discharge inferred",
     "current_transaction_tax": "92 current_invoices ->58Core scopedCA services +34industrial controls dispositions; threeRWHutility sellerborne tax180947.89 expense/payable, no customerprincipal/AR/cashdelta; certificates only forCradle refiner andSPOTtrader",
-    "retention": "retention_payroll_ytd ->eightacceptedretentionawards ->July250kexistinggrosscash/netpluswithholding ->August wagecaps/payroll ->finance employerbonuslevy disposition;Jan2027halfnotpaid"
+    "retention": "retention_payroll_ytd ->eightacceptedretentionawards ->July250kexistinggrosscash/netpluswithholding ->August wagecaps/payroll ->finance employerbonuslevy disposition;Jan2027halfnotpaid",
+    "current_legal_execution": "4Advisory execution records ->existing25kSOWs/authority/delivery/invoice;8retention acknowledgments ->136YTDworkpaper/Julygrossbatch;8Fred monthlydeliveries ->TOLMAN-CONSULTINGcash; no newliabilitylimit or futurepayment"
   },
   "residuals": [
     {

@@ -739,6 +739,10 @@ def validate(source, tables):
     from .current_balances import validate as validate_balances
 
     validate_balances(tables)
+    if "advisory_execution" in tables:
+        from .current_legal_records import validate as validate_legal
+
+        validate_legal(tables)
     if "retention_payroll_ytd" in tables:
         from .retention_payroll import validate as validate_retention
 
@@ -918,6 +922,9 @@ def build(source=None):
     from .current_balances import extend as extend_balances
 
     extend_balances(source, tables)
+    from .current_legal_records import extend as extend_legal
+
+    extend_legal(source, tables)
     from .debt_host import build as build_debt_host
 
     debt_host = build_debt_host()
@@ -941,6 +948,8 @@ def build(source=None):
         "enterprise/operations/completed_period.py",
         "enterprise/operations/availability.py",
         "enterprise/operations/retention_payroll.py",
+        "enterprise/operations/current_legal_records.py",
+        "enterprise/operations/source/current_legal_completion_2026_08.json",
         "enterprise/operations/source/retention_payroll_2026.json",
         "geospatial/facilities/population/REGISTER.json",
         CURRENT_SOURCE,
