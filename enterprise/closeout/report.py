@@ -45,4 +45,6 @@ def report(out):
     from enterprise.closeout.sovereignty import enrich
     result = enrich(out, result)
     write_csv(out/'sovereignty.csv', result)
+    from enterprise.closeout.workbook import build as workbook
+    workbook(out)
     return result
