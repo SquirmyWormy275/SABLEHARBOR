@@ -35,7 +35,7 @@ The actual isolated legacy PRIMARY_USD SHI population gives:
 | 2025 | $104,900,000 | $115,000,000 | $10,100,000 |
 
 The adapter independently selects those historical source entries and derives
-$27,200,000 supported corporate loss carryforward in this model. These legacy
+$27,200,000 book loss before the separately reconstructed tax depreciation below. These legacy
 entries identify production/service costs, not a separately capitalized foreign
 research pool. No extra 2022–2024 research asset is manufactured. Source cost
 classification is a synthetic accounting premise, not external verification
@@ -53,8 +53,8 @@ Additional historical federal/state tax, interest or penalties above this
 supported minimum are not certified absent. Supporting 2016–2022 returns/basis
 remain an explicit historical completeness residual, not silently forged returns.
 
-Opening gross modeled NOL DTA and equal valuation allowance are separately
-posted. They yield zero net deferred asset. Historical cash-tax expense is not
+Opening gross modeled NOL DTA, depreciable-asset DTL and valuation allowance are separately
+posted. Only same-jurisdiction DTL reversal supports partial NOL realization. Historical cash-tax expense is not
 converted into an unsupported additional loss carryforward. Individual member
 capital accounts and contributed property bases are never inferred from the
 $38.8M initialization equity or corrected $8.8M net initialization equity.
@@ -84,14 +84,26 @@ alternatives remain unposted comparisons based on the retained pre-tax input.
   and [2025 FTB research-credit instructions](https://www.ftb.ca.gov/forms/2025/2025-3523-instructions.html),
   accessed September 15, 2026; California does not adopt the federal 2022
   mandatory research amortization change described in those instructions.
-- **Depreciation:** book DDA is identified explicitly and added back while the
-  tax asset-basis/method schedule lacks substantiation. This is a conservative
-  unrecognized-deduction position, not a claim of zero tax basis or proof that
-  all book depreciation is permanently nondeductible. No speculative DTA on
-  the unknown basis is recorded. The omitted allowable-depreciation analysis
-  remains a quantified affected claim in each annual row, requiring asset-level
-  cost/vintage/class/election reconciliation before a complete filed-return
-  conclusion. Source assets and book useful lives are preserved.
+- **Depreciation:** `parent_tax_assets.csv` reconstructs existing owned-asset cost
+  and source purchase events. The $9M legacy equipment cost has newly authored
+  purchase December 31, 2022 and first service January 1, 2023; seven-year
+  equipment class and a straight-line election for the residual after 80%
+  bonus are expressly authored characterization. This yields $7,842,857.1429
+  pre-2026 federal deductions and $3,857,142.8571 California deductions. No
+  purchase price, new business acquisition or cash transaction is added.
+  Subsequent existing new-equipment purchases receive federal 100% bonus under
+  the post-January-19-2025 acquisition rule; source acquisition/service months
+  are retained. California corporations use straight-line estimated useful
+  lives: source asset life where available, 48 months runtime equipment,
+  60 months later legacy purchases and 84 months opening equipment. This is
+  California corporate straight-line, not federal MACRS. Land, construction in
+  progress and internal same-entity transfers receive no extra deduction.
+  [IRS Publication 946](https://www.irs.gov/publications/p946),
+  [2026 bonus depreciation guidance](https://www.irs.gov/irb/2026-06_IRB), and
+  [2025 California corporate Form 3885 instructions](https://www.ftb.ca.gov/forms/2025/2025-3885-instructions.html),
+  accessed September 15, 2026. Book DDA is added back and these separate tax
+  deductions are applied once. Closing book carrying amounts, original costs,
+  deductions and tax bases are exported by cohort and annual jurisdiction.
 - **Credit/inventory:** allowance movement is added back separately from modeled
   specific write-offs/recoveries; inventory impairment is added back pending
   supported tax disposition. Their temporary-difference exposures carry full
@@ -101,10 +113,14 @@ alternatives remain unposted comparisons based on the retained pre-tax input.
   eliminations do not establish a tax group. Other supported parent operating
   income/costs are included in its own federal workpaper. ARU's $14.7625M book/
   $13M tax goodwill and its independent tax model remain untouched.
-- **Valuation allowance:** gross loss, interest and supported allowance/impairment
-  deferred balances have a 100% offsetting allowance. Conditional forecasts do
-  not alone support recognition of future benefits. Gross deferred expense and
-  allowance expense offset explicitly; no automatic goodwill DTA arises.
+- **Valuation allowance:** gross loss, interest and allowance/impairment
+  deferred balances are reserved except NOL realization supported by the same
+  jurisdiction's asset DTL reversal. Federal support is capped at 80% of that
+  DTL because of the NOL limitation; California support is capped at the full
+  corresponding DTL. This does not rely on conditional forecast profitability.
+  DTA, DTL and valuation allowance changes reconcile through separate journals;
+  no automatic goodwill DTA arises. The California balances remain within the
+  expressly provisional parent state perimeter described below.
 
 ## California combined-report and geographic conclusion
 
@@ -162,5 +178,5 @@ acknowledgement evidence remains separate from cash plan entries.
 
 The adopted corporate history is implemented; a complete federal tax-basis and
 multi-jurisdiction filing/provision conclusion remains bounded by the identified
-asset/history/state population residuals. These are accurately disclosed limits,
+historical/state population residuals. These are accurately disclosed limits,
 not an unchanged “C-corporation undecided” status.

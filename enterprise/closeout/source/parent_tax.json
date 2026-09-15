@@ -27,13 +27,13 @@
   "historical_minimum_period": "2017-2025; $800/year floor, first qualification year 2016 excluded",
   "historical_payment_state": "Authored synthetic settlement before 2026; correct successor opening cash and accumulated deficit, not frozen source bytes",
   "research": "Represented parent research is conducted in US locations; no foreign performance in this edition. Current domestic costs expensed under 174A. Historical 2023-2025 source expenses are production costs; no unsupported separate research amortization asset manufactured.",
-  "depreciation": "Add back book depreciation pending tax asset-basis substantiation; no tax depreciation benefit or zero tax basis inferred. Report unrecognized deduction exposure separately.",
+  "depreciation": "Existing $9M owned-equipment opening cost: newly authored purchase 2022-12-31, service 2023-01-01, seven-year life, 80% federal bonus plus elected seven-year straight-line half-year residual. Existing later owned-equipment purchases qualify for post-January-19-2025 100% bonus under expressly authored new/unrelated-party/business-use characterization. California corporate straight-line uses source useful lives with service-month convention, no bonus/MACRS. Land, CIP and internal transfers excluded. See parent_tax_assets.csv.",
   "interest": "Apply federal 163(j) 30% ATI with post-2024 DDA addback; no small-business exception or unsupported inherited interest carryforward. California does not conform to federal 163(j) limitation in this model.",
   "bad_debts": "Specific modeled write-offs/recoveries remain expense; book allowance movement added back, with separately reserved deferred tax asset",
   "inventory": "Book inventory impairment added back pending supported tax disposition; separately reserved temporary-difference exposure",
   "shared_services": "Remove book-only allocation fees from taxable income until characterized; reciprocal tax filing obligations not inferred from financial elimination",
   "ff003": "Expense is seller-borne business tax in synthetic accrual provision; customer principal unchanged and no remittance modeled",
-  "valuation_allowance": "100% against modeled loss/interest/allowance/impairment DTA; no net deferred tax benefit from conditional forecast profitability",
+  "valuation_allowance": "Full allowance except loss-DTA realization supported by same-jurisdiction depreciable-asset DTL reversal: federal limited to 80% of that DTL, California to 100%. No forecast-profit or goodwill-based realization support.",
   "cash_plan": "California minimum 30/40/0/30 payments April/June/September/December; no cash disposition of unallocated state reserve. Federal equal modeled installments April/June/September/December. Modeled 15th-day planning, not actual safe-harbor/timely-filing certification; no automatic refund.",
   "future_law": "2027-2031 holds reviewed law constant as scenario assumption; no unpublished future filing instructions asserted"
 }

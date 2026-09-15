@@ -6,7 +6,7 @@ from industrial.planning.enterprise import Books
 
 
 def tax():
-    result={'monthly_rows':[], 'journal_rows':[]}
+    result={'monthly_rows':[], 'journal_rows':[], 'legal_trial_balance_rows':[]}
     for case in ['base','downside','expansion']:
         for year in range(2026,2032):
             for month in range(1,13):
@@ -24,7 +24,7 @@ def test_adopted_history_and_full_allowance_no_goodwill_tax():
         assert D(row['federal_current_usd'])==0 and D(row['california_current_usd'])==800
         assert row['gross_dta_usd']==row['valuation_allowance_usd']
         assert D(row['net_deferred_expense_usd'])==0
-        assert D(row['book_depreciation_unrecognized_deduction_usd'])==0
+        assert D(row['book_depreciation_usd'])==0
 
 
 def test_provision_payment_and_deferred_legs_balance():

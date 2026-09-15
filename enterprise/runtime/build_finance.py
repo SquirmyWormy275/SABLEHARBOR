@@ -155,7 +155,7 @@ def build(allow_working_tree=False, *, company_closeout=False):
     )
     if company_closeout:
         from enterprise.closeout.parent_tax import ParentTax
-        tax = ParentTax(successor, legacy)
+        tax = ParentTax(successor, legacy, operating)
         enterprise.write_csv(output / "before_parent_tax_statements.csv", successor["annual_rows"])
         enterprise.write_csv(output / "before_parent_tax_monthly.csv", successor["monthly_rows"])
         adjustment.parent_tax = tax
@@ -163,6 +163,7 @@ def build(allow_working_tree=False, *, company_closeout=False):
         successor = enterprise.build(output / "enterprise", forecast_result=fin,
             legacy_result=legacy, source=policy, core_provider=operating, adjustment_provider=adjustment)
         enterprise.write_csv(output / "parent_tax_provision.csv", tax.rows)
+        enterprise.write_csv(output / "parent_tax_assets.csv", tax.asset_rows)
         (output / "parent_tax_history.json").write_text(json.dumps({"source": tax.source,
             "supported_historical_income": tax.historical_income,
             "supported_opening_nol_usd": str(tax.opening_nol)}, indent=2) + "\n")
