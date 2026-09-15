@@ -14,7 +14,9 @@ from enterprise.closeout.state_apportionment import (
 
 
 def test_prescribed_transport_conversion_uses_subgroup_denominator():
-    result = il_transport_conversion({"ARU": 300, "BST": 700}, {"ARU": 5, "BST": 8}, {"ARU": 25, "BST": 175})
+    result = il_transport_conversion(
+        {"ARU": 300, "BST": 700}, {"ARU": 5, "BST": 8}, {"ARU": 25, "BST": 175}
+    )
     assert result == {"ARU": D(25), "BST": D(40)}
     with pytest.raises(ValueError):
         il_transport_conversion({"ARU": 300}, {"ARU": 0}, {"ARU": 0})
@@ -42,15 +44,36 @@ def fixture():
             for month in range(1, 13):
                 for entity, amount in [("SHI", 1000), ("RWH", 100), ("ARU", 100), ("BST", 100)]:
                     jid = f"{entity}-{year}-{month}"
-                    row = dict(scenario=scenario, entity=entity, year=year, month=month,
-                               journal_id=jid, line_no="1", account="4000", account_type="revenue",
-                               signed_usd=str(-amount), source_id=jid)
+                    row = dict(
+                        scenario=scenario,
+                        entity=entity,
+                        year=year,
+                        month=month,
+                        journal_id=jid,
+                        line_no="1",
+                        account="4000",
+                        account_type="revenue",
+                        signed_usd=str(-amount),
+                        source_id=jid,
+                    )
                     legal.append(row)
                     if entity == "SHI":
-                        markets.append(dict(row, population="EXTERNAL_CUSTOMER", market_state="CA", receipts_usd=str(amount)))
+                        markets.append(
+                            dict(
+                                row,
+                                population="EXTERNAL_CUSTOMER",
+                                market_state="CA",
+                                receipts_usd=str(amount),
+                            )
+                        )
                     else:
-                        n = dict(row, entity="RWH_PS" if entity == "RWH" else "ARU_GROUP",
-                                 segment="RWH" if entity == "RWH" else ("TRUCKING" if entity == "ARU" else "BST"))
+                        n = dict(
+                            row,
+                            entity="RWH_PS" if entity == "RWH" else "ARU_GROUP",
+                            segment="RWH"
+                            if entity == "RWH"
+                            else ("TRUCKING" if entity == "ARU" else "BST"),
+                        )
                         if year == 2026:
                             if scenario == "base":
                                 n.pop("scenario")
@@ -64,13 +87,28 @@ def test_full_population_and_old_target_day_are_preserved():
     source, result, native, anchor, markets = fixture()
     rows = build(result, native, anchor, market_rows=markets, source=source)
     assert len(rows) == 288
-    row = next(r for r in rows if (r["scenario"], r["year"], r["jurisdiction"], r["member"]) == ("base", 2026, "IL", "ARU"))
+    row = next(
+        r
+        for r in rows
+        if (r["scenario"], r["year"], r["jurisdiction"], r["member"]) == ("base", 2026, "IL", "ARU")
+    )
     assert D(row["oldtarget_january7_receipts_excluded_usd"]) == 4
     assert D(row["external_receipts_usd"]) == 1196
     assert all(r["monetary_journals_posted"] == 0 for r in rows)
 
 
-@pytest.mark.parametrize("mutation", ["duplicate", "omission", "wrong_entity", "wrong_year", "native_duplicate", "market_duplicate", "market_omission"])
+@pytest.mark.parametrize(
+    "mutation",
+    [
+        "duplicate",
+        "omission",
+        "wrong_entity",
+        "wrong_year",
+        "native_duplicate",
+        "market_duplicate",
+        "market_omission",
+    ],
+)
 def test_adversarial_population_mutations(mutation):
     source, result, native, anchor, markets = copy.deepcopy(fixture())
     if mutation == "duplicate":
