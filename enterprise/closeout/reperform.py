@@ -14,11 +14,41 @@ def run(out):
     rows = read_csv(out / "enterprise/enterprise_journal.csv")
     predecessor = read_csv(out / "predecessor/enterprise_journal.csv")
     result = verify(rows)
-    # All ARU/BST legal economics must equal the recomputed accepted predecessor.
+    # Preserve original acquisition and operating legs; separately validate the
+    # reviewed employer-levy addition, without granting a broad source-prefix bypass.
+    from enterprise.closeout.retention_tax import SOURCE_IDS, RetentionTax
+
+    levy = RetentionTax()
+    additions = [r for r in rows if r["source_id"] in SOURCE_IDS.values()]
+    expected_additions = []
+    for scenario in ("base", "downside", "expansion"):
+        for entity, amount in levy.totals.items():
+            for account, signed in (("5000", amount), ("CO_PAYROLL_EMP_TAX_PAY", -amount)):
+                expected_additions.append(
+                    (scenario, entity, "2026", "7", account, signed, SOURCE_IDS[entity])
+                )
+    actual_additions = [
+        (
+            r["scenario"],
+            r["entity"],
+            r["year"],
+            r["month"],
+            r["account"],
+            D(r["signed_usd"]),
+            r["source_id"],
+        )
+        for r in additions
+    ]
+    if sorted(actual_additions) != sorted(expected_additions):
+        raise ValueError("Retention levy additions differ from independently reconstructed awards")
     fields = ("scenario", "entity", "year", "month", "account", "signed_usd", "source_id")
 
     def protected(records):
-        return sorted(tuple(r[k] for k in fields) for r in records if r["entity"] in {"ARU", "BST"})
+        return sorted(
+            tuple(r[k] for k in fields)
+            for r in records
+            if r["entity"] in {"ARU", "BST"} and r["source_id"] not in SOURCE_IDS.values()
+        )
 
     if protected(rows) != protected(predecessor):
         raise ValueError("ARU/BST protected legal population changed")

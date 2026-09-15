@@ -49,6 +49,7 @@ class CloseoutAdjustment(RuntimeAdjustment):
     account_types = (
         RuntimeAdjustment.account_types
         | {
+            "CO_PAYROLL_EMP_TAX_PAY": "liability",
             "CO_STATE_MIN_EXP": "expense",
             "CO_STATE_MIN_PAY": "liability",
             "CO_RWH_ROT_EXP": "expense",
@@ -63,6 +64,7 @@ class CloseoutAdjustment(RuntimeAdjustment):
 
     def __init__(self, data=None):
         super().__init__(data)
+        self.retention_tax = None
         self.rwh_book = None
         self.parent_tax = None
         self.industrial_tax = None
@@ -161,6 +163,8 @@ class CloseoutAdjustment(RuntimeAdjustment):
             )
         if self.software_tax is not None:
             self.software_tax.post_month(books, year, month)
+        if self.retention_tax is not None:
+            self.retention_tax.post_month(books, year, month)
         if self.rwh_book is not None:
             self.rwh_book.post_month(books, year, month)
         if self.industrial_tax is not None:
