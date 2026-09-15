@@ -36,6 +36,8 @@ Full root `python -m pytest -q` passed (three environment-dependent skips). All 
 checks in `PR145_VALIDATION.json` passed, including full-text browser validation, exact
 QA bindings, adversarial publication tests, source/publication guards, governance,
 catalog, organization, hygiene and finance validation. Publication and catalog builders
-completed successfully. `git diff --check` passed. These checks apply to the integrated
+completed successfully. The first merge-index whitespace check included inherited main history; the PR delta
+check found four Markdown hard-break spaces in SOURCE_AUDIT.md. Those source-only
+spaces were removed; the final `git diff --check origin/main HEAD` passes. These checks apply to the integrated
 source tree prepared here; accepted merge SHA and hosted checks remain separately
 recorded on PR #145. No company-wide completion or after-tax release is claimed.

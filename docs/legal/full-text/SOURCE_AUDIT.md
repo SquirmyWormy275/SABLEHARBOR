@@ -1,9 +1,9 @@
 # Full-length legal source audit
 
-**Review date:** September 12, 2026  
-**Status:** Source-content audit complete; generated editions require separate visual and completeness validation.  
-**Original inventory base:** `8898d2d0310a60bdf0e4753036790c6eda1388cd`  
-**Full-edition pinned revision:** `79437a778d4a4d5097a3cdaa36d7d8ab13217536`  
+**Review date:** September 12, 2026
+**Status:** Source-content audit complete; generated editions require separate visual and completeness validation.
+**Original inventory base:** `8898d2d0310a60bdf0e4753036790c6eda1388cd`
+**Full-edition pinned revision:** `79437a778d4a4d5097a3cdaa36d7d8ab13217536`
 **Scope authority:** [Selected legal source scope](../../reader/transactions/source_scope.json) and [hashed evidence register](../../reader/transactions/evidence-register.json).
 
 All 56 selected Markdown sources were read in full. All 56 current source hashes match the existing evidence register. The source population contains 49,846 whitespace-delimited words; this is a source-text size measure, not a legal clause or transaction count. Publication should preserve the complete selected source, even when that source is itself a summary, policy, index, proposal or reconstructed instrument.
