@@ -14,7 +14,7 @@ The local exercise defines one nonpersonal application dataset, daily checkpoint
 
 Both branches retain identical inventory, schedule and two independently recorded source dataset snapshots. The second snapshot changes one object setting and adds another object. A local credential event differs: the second branch's write lease expires before the second job. The job derives its result from that credential state; it cannot create a backup object when writing is unavailable. The failure ledger, ticket and catalogue retain the resulting missing checkpoint.
 
-Both restores apply the same rule: select the latest successfully catalogued checkpoint available at restore start. Actual retained dataset bytes are copied into backup-object versions and then separate restored-dataset versions. The reconciliation parses those bytes and computes missing, unexpected and changed IDs, row counts and copy hashes. It records measured exercise times separately from management review.
+Both restores apply the same rule: select the latest successfully catalogued checkpoint available at restore start. Actual retained dataset bytes are copied into backup-object versions and then separate restored-dataset versions. The reconciliation parses those bytes and computes missing, unexpected and changed IDs, row counts and copy hashes. Its event intervals are authored simulated timestamps, not measured production recovery duration; management review remains separately qualified.
 
 The first clean restore has a 40-minute checkpoint age and matches the current source. The first messy restore has a 1,480-minute checkpoint age, lacks `OBJ-03`, and has the older `OBJ-02` setting. These are technical differences, not automatic audit findings. A subsequent grant-confirmation, new checkpoint and isolated retest recover the latest source bytes in both branches. Original jobs, failed checkpoint and first-restore results remain retained.
 
@@ -38,3 +38,28 @@ Each uses explicit operator grants, `company.activate`, kickoff, ordinary PBC cr
 Collection creates no prepared world, model call, procedure-test status change or automatic audit conclusion. All temporary grants were revoked. The original source version/hash membership remains unchanged; grant and access journal changes are intentional, so the post-collection SQLite file as a whole does not equal the earlier pre-collection file hash. Earlier source validation and newer collection receipts remain separately retained.
 
 Eight focused source/collection tests pass in the new `collection-v1/TESTS.xml`; these remain distinct from root's earlier checkpoint suite.
+
+
+## Persistent scheduled-operation successor
+
+The separate [backup runtime](../../../../enterprise/audit_suite/BACKUP_RUNTIME.md)
+now executes actual filesystem copies against persistent native datasets and an
+exact independent operating-period declaration. The private local run is
+`company-backup-runtime-2026-09-14/run-v1/`, produced at implementation commit
+`ad6ad4ab`. Its seven explicitly declared occurrences span two invented local
+datasets; these do not establish corporate backup cadence or production inventory.
+
+The run retains 21 native versions across eight source systems at command
+revision13. Six declared copy/restore occurrences completed, one remains missing
+after its due date, and a failed attempt remains in history after a corrected
+retry. The exact older copy restores successfully while content reconciliation
+still exposes differences from the selected current dataset. This runtime
+measures actual local copy elapsed time separately from authored business time.
+Its initial seven-missing report and later reconciliation remain separate,
+hash-verified artifacts; the source declaration database remained unchanged.
+
+Thirty focused implementation, operator and independent review tests passed.
+The private run's VERIFICATION.json and MANIFEST.json retain exact native pins,
+command receipts and checks. Initial execution created no audit, grants or model
+calls. Later collection, if performed, has its own receipt and does not establish
+control effectiveness, accepted recovery objectives or a coherent operating year.

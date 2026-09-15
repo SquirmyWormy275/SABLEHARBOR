@@ -1,0 +1,53 @@
+.bound-key {
+  min-width: 0;
+}
+.bound-key-index ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 0.5rem;
+}
+.bound-key-index button {
+  width: 100%;
+  text-align: left;
+  display: grid;
+  gap: 0.3rem;
+  white-space: normal;
+}
+.bound-key button[aria-pressed="true"] {
+  outline: 2px solid currentColor;
+  outline-offset: 1px;
+}
+.bound-key-workspace {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 1.25rem;
+  align-items: start;
+}
+.bound-key-workspace > section {
+  min-width: 0;
+}
+.bound-key :is(code, button, summary, p, li) {
+  overflow-wrap: anywhere;
+}
+.bound-source-list {
+  padding-left: 1.25rem;
+}
+.bound-source-list li {
+  margin-bottom: 0.4rem;
+}
+.bound-key nav[aria-label="Bound source pages"] {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  align-items: center;
+}
+.bound-key details {
+  margin-block: 0.6rem;
+}
+@media (max-width: 900px) {
+  .bound-key-workspace {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

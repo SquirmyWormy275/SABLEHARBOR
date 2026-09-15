@@ -58,7 +58,12 @@ COLLECTIONS = (
     "surveys",
     "events",
 )
-CAPABILITIES = {"custom_authoring": False, "experimental_review": False, "voice": False}
+CAPABILITIES = {
+    "custom_authoring": False,
+    "experimental_review": False,
+    "review_feedback": True,
+    "voice": False,
+}
 REVIEW_COMMANDS = {"review.comment", "review.resolve"}
 
 

@@ -1,3 +1,10 @@
+import "./boundKeyNavigation.css";
+import {
+  boundSourcePage,
+  issueControlLabel,
+  selectedIssueExpectations,
+  scopedTimelineSources,
+} from "./boundKeyNavigation";
 import { boundRetainedArtifacts } from "./boundRetainedSources";
 import { InstructorComparison } from "./InstructorComparison";
 import { useEffect, useState } from "react";
@@ -36,7 +43,10 @@ function BoundExplorer({
   const [response, setResponse] = useState<BoundResponse | null>(null),
     [error, setError] = useState(""),
     [selected, setSelected] = useState(""),
-    [query, setQuery] = useState("");
+    [query, setQuery] = useState(""),
+    [issueId, setIssueId] = useState(""),
+    [scopeToIssue, setScopeToIssue] = useState(false),
+    [page, setPage] = useState(0);
   const allowed = e.permissions?.includes("instruct");
   useEffect(() => {
     let cancelled = false;
@@ -62,7 +72,7 @@ function BoundExplorer({
   if (!allowed) return <p>Instructor access is required.</p>;
   if (error)
     return (
-      <section aria-label="Bound instructor explanation">
+      <section className="bound-key" aria-label="Bound instructor explanation">
         <h2>Engagement-bound explanation</h2>
         <p role="alert">{error}</p>
       </section>
@@ -72,25 +82,22 @@ function BoundExplorer({
   const s = response.snapshot,
     b = response.binding,
     source = s.sources.find((row) => row.id === selected),
-    q = query.trim().toLowerCase();
-  const filtered = s.sources.filter((row) =>
-    [
-      row.id,
-      row.company,
-      row.branch,
-      row.system,
-      row.record,
-      row.source_store_id,
-      row.source_system_alias,
-      row.registry_sha256,
-      row.actor_visibility_at_binding,
-    ]
-      .join(" ")
-      .toLowerCase()
-      .includes(q),
-  );
+    issue = s.authored.issues.find((row) => row.id === issueId),
+    expectations = selectedIssueExpectations(s, issueId),
+    sources = boundSourcePage(s, {
+      issueId: scopeToIssue ? issueId : "",
+      query,
+      page,
+    });
+  function chooseIssue(id: string) {
+    setIssueId(id);
+    setScopeToIssue(true);
+    setQuery("");
+    setPage(0);
+    setSelected("");
+  }
   return (
-    <section aria-label="Bound instructor explanation">
+    <section className="bound-key" aria-label="Bound instructor explanation">
       <h2>Engagement-bound explanation</h2>
       <p>
         <strong>
@@ -143,143 +150,253 @@ function BoundExplorer({
         </ul>
       </details>
       <InstructorComparison engagement={e} bound={response} />
-      <label>
-        Find bound source
-        <input
-          type="search"
-          value={query}
-          onChange={(event) => setQuery(event.target.value)}
-        />
-      </label>
-      <p>
-        {filtered.length} of {s.sources.length} bound sources match.
-        Availability is captured at binding, not a current access promise.
-      </p>
-      <ul>
-        {filtered.map((row) => (
-          <li key={row.id}>
-            <button
-              type="button"
-              aria-pressed={selected === row.id}
-              onClick={() => setSelected(row.id)}
-            >
-              {row.id} · {row.record} · v{row.version}
-            </button>{" "}
-            · {row.actor_visibility_at_binding}
-          </li>
-        ))}
-      </ul>
-      {source && (
-        <article aria-label="Selected bound source">
-          <h3>
-            {source.id} · {source.record}
-          </h3>
-          <p>
-            {source.company} / {source.branch} / {source.system} · version{" "}
-            {source.version}
-          </p>
-          <p>
-            Exact SHA256: <code>{source.sha256}</code>
-          </p>
-          {source.source_store_id && (
+      <section aria-label="Authored issue index" className="bound-key-index">
+        <h3>Authored issues</h3>
+        <p>
+          {s.authored.issues.length} issues · {s.authored.expectations.length}{" "}
+          expectations · {s.sources.length} unique bound originals. Select an
+          issue to read its interpretation and linked expectations.
+        </p>
+        <ul>
+          {s.authored.issues.map((row) => (
+            <li key={row.id}>
+              <button
+                type="button"
+                aria-pressed={issueId === row.id}
+                onClick={() => chooseIssue(row.id)}
+              >
+                <strong>{issueControlLabel(row, e.controls)}</strong>
+                <span>{row.id}</span>
+                <small>
+                  {row.source_ids.length} linked originals ·{" "}
+                  {selectedIssueExpectations(s, row.id).length} expectations
+                </small>
+              </button>
+            </li>
+          ))}
+        </ul>
+        {!s.authored.issues.length && (
+          <p>No authored issues are bound. Sources remain available below.</p>
+        )}
+      </section>
+      <div className="bound-key-workspace">
+        <section aria-label="Selected authored issue">
+          {issue ? (
+            <>
+              <h3>{issue.id}</h3>
+              <p>{issueControlLabel(issue, e.controls)}</p>
+              <p>{issue.claim}</p>
+              <p>Uncertainty: {issue.uncertainty}</p>
+              <h4>
+                Linked expectations ({expectations.length} of{" "}
+                {s.authored.expectations.length})
+              </h4>
+              <p>
+                Other expectations remain under their linked issues in the
+                index. These authored links do not establish completed testing.
+              </p>
+              {expectations.map((row) => (
+                <details key={row.id}>
+                  <summary>{row.id}</summary>
+                  <p>{row.procedure}</p>
+                  <p>
+                    Explicit authored procedure IDs:{" "}
+                    {row.task_ids?.join(", ") || "Unmapped"}.
+                  </p>
+                  <p>Referenced issues: {row.issue_ids.join(", ")}</p>
+                  <ul>
+                    {row.acceptable_alternatives.map((text, i) => (
+                      <li key={i}>{text}</li>
+                    ))}
+                  </ul>
+                </details>
+              ))}
+              {!expectations.length && (
+                <p>No expectation is explicitly linked to this issue.</p>
+              )}
+            </>
+          ) : (
             <p>
-              Physical source store: <code>{source.source_store_id}</code> ·
-              alias <code>{source.source_system_alias}</code>. Registry SHA256:{" "}
-              <code>{source.registry_sha256}</code>. Capture is per component;
-              there is no shared transaction across the portfolio.
+              Select an authored issue above. Sources can also be inspected
+              independently; no issue is selected automatically.
             </p>
           )}
+        </section>
+        <section aria-label="Bound source browser">
+          <h3>Bound originals</h3>
+          <label>
+            Source scope
+            <select
+              value={scopeToIssue && issue ? "issue" : "all"}
+              onChange={(event) => {
+                setScopeToIssue(event.target.value === "issue");
+                setPage(0);
+              }}
+            >
+              <option value="all">All bound originals</option>
+              {issue && (
+                <option value="issue">
+                  Originals linked to selected issue
+                </option>
+              )}
+            </select>
+          </label>
+          <label>
+            Find bound source
+            <input
+              type="search"
+              value={query}
+              onChange={(event) => {
+                setQuery(event.target.value);
+                setPage(0);
+              }}
+            />
+          </label>
           <p>
-            Actor grant at binding:{" "}
-            {source.actor_granted_at_binding ? "Granted" : "Not granted"}.
-            Captured visibility: {source.actor_visibility_at_binding}.
+            {sources.filtered.length} of {sources.scopeCount} originals match
+            this scope and search ({sources.total} total bound originals).
+            Availability is captured at binding, not a current access promise.
           </p>
-          <p>
-            Retained audit copies:{" "}
-            {source.retained_audit_artifact_ids.join(", ") || "None recorded"}.
-            A retained copy does not imply current source-system access.
-          </p>
-          {onPreview && (
-            <div aria-label="Retained bound originals">
-              {boundRetainedArtifacts(e, source).map((artifact) => (
+          <ul
+            className="bound-source-list"
+            aria-label="Matching bound originals"
+          >
+            {sources.rows.map((row) => (
+              <li key={row.id}>
                 <button
-                  key={artifact.id}
                   type="button"
-                  onClick={() => {
-                    const exact = boundRetainedArtifacts(e, source).find(
-                      (row) => row.id === artifact.id,
-                    );
-                    if (exact) onPreview(exact);
-                  }}
+                  aria-pressed={selected === row.id}
+                  onClick={() => setSelected(row.id)}
                 >
-                  Inspect retained original {artifact.id}
-                </button>
-              ))}
-              {boundRetainedArtifacts(e, source).length === 0 && (
+                  {row.id} · {row.record} · v{row.version}
+                </button>{" "}
+                · {row.actor_visibility_at_binding}
+              </li>
+            ))}
+          </ul>
+          {!sources.filtered.length && (
+            <p role="status">
+              No bound originals match. Clear the search or choose all bound
+              originals.
+            </p>
+          )}
+          <nav aria-label="Bound source pages">
+            <button
+              type="button"
+              disabled={sources.page === 0}
+              onClick={() => setPage(sources.page - 1)}
+            >
+              Previous sources
+            </button>
+            <span role="status">
+              Page {sources.page + 1} of {sources.pages}
+            </span>
+            <button
+              type="button"
+              disabled={sources.page + 1 === sources.pages}
+              onClick={() => setPage(sources.page + 1)}
+            >
+              Next sources
+            </button>
+          </nav>
+          {source && !sources.filtered.some((row) => row.id === source.id) && (
+            <p>
+              The selected original is outside the current filter. Its exact
+              pinned details remain below.
+            </p>
+          )}
+          {source && (
+            <article aria-label="Selected bound source">
+              <h3>
+                {source.id} · {source.record}
+              </h3>
+              <p>
+                {source.company} / {source.branch} / {source.system} · version{" "}
+                {source.version}
+              </p>
+              <p>
+                Exact SHA256: <code>{source.sha256}</code>
+              </p>
+              {source.source_store_id && (
                 <p>
-                  No exact retained original is currently available for
-                  inspection. No newer source version is substituted.
+                  Physical source store: <code>{source.source_store_id}</code> ·
+                  alias <code>{source.source_system_alias}</code>. Registry
+                  SHA256: <code>{source.registry_sha256}</code>. Capture is per
+                  component; there is no shared transaction across the
+                  portfolio.
                 </p>
               )}
               <p>
-                These links open current authorized audit copies. Captured
-                source-system access does not grant access now.
+                Actor grant at binding:{" "}
+                {source.actor_granted_at_binding ? "Granted" : "Not granted"}.
+                Captured visibility: {source.actor_visibility_at_binding}.
               </p>
-            </div>
+              <p>
+                Retained audit copies:{" "}
+                {source.retained_audit_artifact_ids.join(", ") ||
+                  "None recorded"}
+                . A retained copy does not imply current source-system access.
+              </p>
+              {onPreview && (
+                <div aria-label="Retained bound originals">
+                  {boundRetainedArtifacts(e, source).map((artifact) => (
+                    <button
+                      key={artifact.id}
+                      type="button"
+                      onClick={() => {
+                        const exact = boundRetainedArtifacts(e, source).find(
+                          (row) => row.id === artifact.id,
+                        );
+                        if (exact) onPreview(exact);
+                      }}
+                    >
+                      Inspect retained original {artifact.id}
+                    </button>
+                  ))}
+                  {boundRetainedArtifacts(e, source).length === 0 && (
+                    <p>
+                      No exact retained original is currently available for
+                      inspection. No newer source version is substituted.
+                    </p>
+                  )}
+                  <p>
+                    These links open current authorized audit copies. Captured
+                    source-system access does not grant access now.
+                  </p>
+                </div>
+              )}
+              <p>{source.fact_verification}</p>
+            </article>
           )}
-          <p>{source.fact_verification}</p>
-        </article>
-      )}
-      <details>
-        <summary>
-          Source timeline: event, availability and import are distinct
-        </summary>
-        <ol>
-          {sourceTimeline(s.sources).map((row, i) => (
-            <li key={`${row.sourceId}-${row.field}-${i}`}>
-              <time>{row.at}</time> · {row.field.replaceAll("_", " ")} ·{" "}
-              <button type="button" onClick={() => setSelected(row.sourceId)}>
-                {row.sourceId}
-              </button>{" "}
-              · {row.record}
-            </li>
-          ))}
-        </ol>
-      </details>
-      <h3>Authored issues and linked sources</h3>
-      {s.authored.issues.map((issue) => (
-        <article key={issue.id}>
-          <h4>{issue.id}</h4>
-          <p>{issue.claim}</p>
-          <p>Uncertainty: {issue.uncertainty}</p>
-          <p>Referenced controls: {issue.control_ids.join(", ")}</p>
-          <div>
-            {issue.source_ids.map((id) => (
-              <button key={id} type="button" onClick={() => setSelected(id)}>
-                Inspect {id}
-              </button>
-            ))}
-          </div>
-        </article>
-      ))}
-      <h3>Authored expectations and acceptable alternatives</h3>
-      {s.authored.expectations.map((row) => (
-        <article key={row.id}>
-          <h4>{row.id}</h4>
-          <p>Referenced issues: {row.issue_ids.join(", ")}</p>
-          <p>{row.procedure}</p>
-          <p>
-            Explicit authored procedure IDs:{" "}
-            {row.task_ids?.join(", ") || "Unmapped"}. These are authored links,
-            not evidence of completed testing.
-          </p>
-          <ul>
-            {row.acceptable_alternatives.map((text, i) => (
-              <li key={i}>{text}</li>
-            ))}
-          </ul>
-        </article>
-      ))}
+          <details>
+            <summary>
+              Source timeline: event, availability and import are distinct
+            </summary>
+            <p>
+              {source
+                ? "Selected original only."
+                : "Originals on this page only."}{" "}
+              Other originals remain available through the source pages.
+            </p>
+            <ol>
+              {sourceTimeline(scopedTimelineSources(source, sources.rows)).map(
+                (row, i) => (
+                  <li key={`${row.sourceId}-${row.field}-${i}`}>
+                    <time>{row.at}</time> · {row.field.replaceAll("_", " ")} ·{" "}
+                    <button
+                      type="button"
+                      onClick={() => setSelected(row.sourceId)}
+                    >
+                      {row.sourceId}
+                    </button>{" "}
+                    · {row.record}
+                  </li>
+                ),
+              )}
+            </ol>
+          </details>
+        </section>
+      </div>
       <details>
         <summary>Explicit authored relationships (not causal proof)</summary>
         <ul>
@@ -290,12 +407,14 @@ function BoundExplorer({
           ))}
         </ul>
       </details>
-      <h3>Unresolved interpretation limits</h3>
-      <ul>
-        {s.authored.uncertainty.map((text, i) => (
-          <li key={i}>{text}</li>
-        ))}
-      </ul>
+      <details>
+        <summary>Unresolved interpretation limits</summary>
+        <ul>
+          {s.authored.uncertainty.map((text, i) => (
+            <li key={i}>{text}</li>
+          ))}
+        </ul>
+      </details>
     </section>
   );
 }

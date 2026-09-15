@@ -520,3 +520,19 @@ The current combined continuation/operator/ledger check passed 63 tests after
 strict native-type corrections (`period-continuation-integrated.xml`). This
 includes the actual operator → sealed capsule → fresh runtime route, V2/V3
 selection/capture and independent source-chain and ledger cases.
+
+
+Actual native review continuation subsequently ran at `a07294a7`: three originals
+were generated from sixteen exact upstream records, activated into a fresh
+company runtime and collected into a separate technical engagement. Its temporary
+grants were revoked. One source-backed assertion was then recorded against the
+independent two-occurrence period ledger; the other due occurrence remains
+missing. Earlier source originals, declaration and initial report remain retained.
+The private generation, collection and ledger verification receipts are indexed
+in the overnight checkpoint. This is a selected-subject continuation, not a
+whole-quarter review acceptance.
+
+The [persistent backup operator](../../../../enterprise/audit_suite/BACKUP_RUNTIME.md)
+adds actual scheduled filesystem copies, expiring local leases, explicit retries
+and restore comparisons. Its local run and limits are recorded in the
+[backup implementation note](AQ04_BACKUP_RESTORE_SLICE_2026-09-14.md).
