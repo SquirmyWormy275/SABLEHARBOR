@@ -66,7 +66,8 @@ commitment or independent payment evidence is inferred from these model records.
 Let **O** be reported operating cash flow, **S** sustaining cash investment,
 **F** paid debt principal and other financing payments, and **ΔR** the change in
 recorded unpaid due requirements, unresolved land settlement and separately
-booked current tax payables. `sovereignty_tax_requirements.csv` retains each legal
+booked current tax payables, including unpaid employer payroll levies.
+`sovereignty_tax_requirements.csv` retains each legal
 entity/account balance; `booked_current_tax_payables_usd` does not assert all those
 balances are already past due. `outstanding_booked_cash_requirements_usd` is the
 combined population. Deferred tax is excluded; a refund position in one entity

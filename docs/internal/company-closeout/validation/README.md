@@ -19,3 +19,24 @@ Recheck command (13 tests passed):
 ```
 
 The separately recorded final receipt must identify the accepted revision, clean generation, all required checks and final import/restore evidence. Do not cite this historical run as that receipt.
+
+## Company reconciliation and adversarial review
+
+A clean, unmodified working revision `a445ae28` passed all 440 tests selected by:
+
+```sh
+.venv/bin/python -m pytest tests/closeout tests/company_closeout enterprise/operations/tests enterprise/ccf/company_closeout enterprise/runtime/tests/test_security.py -q
+```
+
+This selection covers the new company providers, population chains, source packaging,
+obligations and reference authorization. It is an intermediate integration result;
+later statutory provision changes require their own tests and final generation.
+
+Independent packaging review subsequently reproduced six failing adverse cases:
+four accepted-workforce provenance cases and two renamed SQLite-column cases. The
+correction rejects dirty-preview flags, missing flags and divergent record revisions,
+and compares database column identities to the export schema as well as values.
+Nineteen packaging/import tests passed after correction (`a978edb4`). No source-lock
+or accepted-build condition was relaxed. Company reconciliation now has a dedicated
+workflow, `.github/workflows/company-closeout.yml`, including all three native builds,
+independent import, cross-functional reperformance and isolated reference restore.
