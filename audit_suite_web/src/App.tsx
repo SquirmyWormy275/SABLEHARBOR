@@ -1,3 +1,8 @@
+import { SampleExecutions } from "./SampleExecutions";
+import {
+  WorkpaperReviewAction,
+  ReviewPassageAnchor,
+} from "./WorkpaperPassageAnchor";
 import { ReviewFeedback } from "./ReviewFeedback";
 import OriginalComparison from "./OriginalComparison";
 import { FEEDBACK_DISPOSITIONS } from "./reviewFeedback";
@@ -2024,6 +2029,15 @@ export default function App() {
                       busy={busy}
                       onCommand={run}
                     />
+                    <SampleExecutions
+                      key={bootstrap.viewer.id}
+                      engagement={e}
+                      supported={
+                        bootstrap.capabilities.sample_executions === true
+                      }
+                      busy={busy}
+                      onCommand={act}
+                    />
                     <h2>Selection history</h2>
                     <Table
                       memoryKey="selections"
@@ -2929,9 +2943,21 @@ export default function App() {
                             e.permissions,
                             version,
                           ) ? (
-                            <button
+                            <WorkpaperReviewAction
+                              key={JSON.stringify([
+                                bootstrap.viewer.id,
+                                e.id,
+                                e.revision,
+                                e.permissions,
+                                version,
+                              ])}
+                              version={version}
+                              supported={
+                                bootstrap?.capabilities
+                                  ?.review_passage_anchors === true
+                              }
                               disabled={busy}
-                              onClick={() => {
+                              onReview={(anchor) => {
                                 const paper = detail.row;
                                 setDetail(null);
                                 edit(
@@ -2947,13 +2973,12 @@ export default function App() {
                                   {
                                     workpaper_id: paper.id,
                                     workpaper_version: version.version,
+                                    ...(anchor ? { anchor } : {}),
                                   },
                                   "Your comment is pinned to this exact retained version. It does not replace the preparer's conclusion.",
                                 );
                               }}
-                            >
-                              Review version {str(version.version)}
-                            </button>
+                            />
                           ) : (
                             "Independent reviewer required"
                           ),
@@ -3226,55 +3251,58 @@ export default function App() {
                   </section>
                 )}
               {detail.kind === "review" && (
-                <ReviewFeedback
-                  engagement={e}
-                  review={detail.row}
-                  supported={supports(
-                    bootstrap.capabilities,
-                    "review_feedback",
-                  )}
-                  busy={busy}
-                  viewerId={bootstrap.viewer.id}
-                  resolutionSupported={supports(
-                    bootstrap.capabilities,
-                    "review_independent_resolution",
-                  )}
-                  onResolveHuman={(payload) => {
-                    setDetail(null);
-                    edit(
-                      "Resolve human review",
-                      "review.resolve",
-                      [
-                        f(
-                          "response",
-                          "Resolution rationale and evidence checked",
-                          "textarea",
-                        ),
-                      ],
-                      payload,
-                      "This separate reviewer action resolves the human comment against the current retained workpaper version. It preserves earlier comments and responses; it does not accept any AI suggestion.",
-                    );
-                  }}
-                  onRespond={(payload) => {
-                    setDetail(null);
-                    edit(
-                      "Record review feedback",
-                      "review.resolve",
-                      [
-                        select("disposition", "Your response", [
-                          ...FEEDBACK_DISPOSITIONS,
-                        ]),
-                        f(
-                          "response",
-                          "Response and supporting evidence",
-                          "textarea",
-                        ),
-                      ],
-                      payload,
-                      "This records your response against the current review and workpaper pins. It does not close the review or change the original suggestion.",
-                    );
-                  }}
-                />
+                <>
+                  <ReviewPassageAnchor review={detail.row} />
+                  <ReviewFeedback
+                    engagement={e}
+                    review={detail.row}
+                    supported={supports(
+                      bootstrap.capabilities,
+                      "review_feedback",
+                    )}
+                    busy={busy}
+                    viewerId={bootstrap.viewer.id}
+                    resolutionSupported={supports(
+                      bootstrap.capabilities,
+                      "review_independent_resolution",
+                    )}
+                    onResolveHuman={(payload) => {
+                      setDetail(null);
+                      edit(
+                        "Resolve human review",
+                        "review.resolve",
+                        [
+                          f(
+                            "response",
+                            "Resolution rationale and evidence checked",
+                            "textarea",
+                          ),
+                        ],
+                        payload,
+                        "This separate reviewer action resolves the human comment against the current retained workpaper version. It preserves earlier comments and responses; it does not accept any AI suggestion.",
+                      );
+                    }}
+                    onRespond={(payload) => {
+                      setDetail(null);
+                      edit(
+                        "Record review feedback",
+                        "review.resolve",
+                        [
+                          select("disposition", "Your response", [
+                            ...FEEDBACK_DISPOSITIONS,
+                          ]),
+                          f(
+                            "response",
+                            "Response and supporting evidence",
+                            "textarea",
+                          ),
+                        ],
+                        payload,
+                        "This records your response against the current review and workpaper pins. It does not close the review or change the original suggestion.",
+                      );
+                    }}
+                  />
+                </>
               )}
               {detail.kind === "artifact" && (
                 <>
