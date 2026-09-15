@@ -6,7 +6,7 @@ Generated reconciliation queue, not an assertion that every unpaired record lack
 
 | State | Records |
 |---|---:|
-| COUNTERPART_REVIEW_REQUIRED | 126 |
+| COUNTERPART_REVIEW_REQUIRED | 127 |
 | HISTORICAL_COUNTERPART_UNRESOLVED | 57 |
 | NAVIGATION_ALIAS_NO_PUBLICATION | 3 |
 | READER_MAINTENANCE_NO_LETTERHEAD | 107 |
@@ -125,6 +125,7 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Facility atlas controlled releases](../../releases/FACILITY_ATLAS_RELEASES.md) — Corporate document-format reconciliation
 - [Geographic evidence releases](../../releases/GEOGRAPHIC_EVIDENCE_RELEASES.md) — Corporate document-format reconciliation
 - [Current C05/C06 evidence and residual receipt](../../../enterprise/ccf/company_closeout/CURRENT_RESIDUALS.md) — Corporate document-format reconciliation
+- [FRA event-day authority closeout](../../../enterprise/ccf/company_closeout/FRA_EVENT_DAY_AUTHORITY.md) — Corporate document-format reconciliation
 - [Independent review: initial Red Wash historical tax source](../../../enterprise/ccf/company_closeout/RWH_HISTORY_INDEPENDENT_REVIEW.md) — Corporate document-format reconciliation
 - [State-tax computational handoff](../../../enterprise/ccf/company_closeout/STATE_TAX_IMPLEMENTATION_ADDENDUM.md) — Corporate document-format reconciliation
 - [State unitary operating-group determination](../../../enterprise/ccf/company_closeout/STATE_UNITARY_ANALYSIS.md) — Corporate document-format reconciliation

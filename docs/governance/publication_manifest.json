@@ -1037,8 +1037,8 @@
     {
       "source": "docs/finance/evidence/company-closeout/SOVEREIGNTY_METHOD.md",
       "publication": "docs/finance/publications/SH-COMPANY-SOVEREIGNTY-20260915_v1.0.0.pdf",
-      "sha256": "6bb3296fc1e9d4107580d866d73a0bfb8f8f11bfbbc8f46646c5539ce33cb397",
-      "source_sha256": "21f9356eb8aeb00ffbe1fae0cd3f307fc7bbc70248fc82de13e4b0bc035d8ad7",
+      "sha256": "ac9887209bca40196bca885c602e3efd537db504db9b52a1770548381c5a6b11",
+      "source_sha256": "0989e11455965413e6a1e37fc75804254c5996d5d095c4bf2f640ff17ec75b5f",
       "brand": "corporate",
       "normalizer": "qpdf"
     },
