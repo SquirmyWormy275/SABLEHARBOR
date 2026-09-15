@@ -970,6 +970,8 @@ def build(source=None):
         "enterprise/operations/production_support.py",
         "enterprise/operations/source/production_support_2026_08.json",
         "enterprise/closeout/rwh_book.py",
+        "enterprise/closeout/support_inventory.py",
+        "enterprise/closeout/source/mine_support_allocation.json",
         "enterprise/closeout/rwh_history.py",
         "enterprise/closeout/source/rwh_tax_history.json",
         "enterprise/operations/invoice_settlement.py",

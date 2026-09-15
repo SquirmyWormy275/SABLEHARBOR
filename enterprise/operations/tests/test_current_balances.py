@@ -27,7 +27,7 @@ def test_complete_declared_balance_populations(tables):
         ("ARU", "1100"): D("3830400"),
         ("BST", "1100"): D("2249600"),
         ("RWH", "1100"): D("4366668"),
-        ("RWH", "1200"): D("8385238.1530"),
+        ("RWH", "1200"): D("8693912.5497"),
         ("RWH", "1210"): D("867149.3725"),
     }
     for row in tables["current_legal_balance_bridges"]:
@@ -111,7 +111,7 @@ def test_core_asset_net_bridge_and_old_uncorrected_finance_rejected(tables):
 def test_mine_cost_layers_are_one_stock_and_both_required(tables):
     layers = tables["current_mine_inventory_cost_layers"]
     assert len(layers) == 2
-    assert sum(D(r["closing_signed_usd"]) for r in layers) == D("9252387.5255")
+    assert sum(D(r["closing_signed_usd"]) for r in layers) == D("9561061.9222")
     for mutation in ("omit", "balanced_wrong"):
         broken = copy.deepcopy(tables)
         if mutation == "omit":
@@ -122,3 +122,41 @@ def test_mine_cost_layers_are_one_stock_and_both_required(tables):
             r["closing_signed_usd"] = str(D(r["closing_signed_usd"]) + 1)
         with pytest.raises(ValueError, match="Mine"):
             validate(broken)
+
+
+def test_support_layer_reperformed_from_monthly_cost_and_unit_population(tables):
+    from enterprise.closeout.rwh_book import current_inventory_bridge
+    from industrial.planning.enterprise import load_anchor
+
+    anchor = load_anchor()
+    units, support, elimination = D(125000), D(0), D(0)
+    for month in range(1, 9):
+        native = [r for r in anchor if r["entity"] == "RWH_PS" and int(r["month"]) == month]
+        ga = sum(
+            D(r["signed_usd"])
+            for r in native
+            if r["account"] == "5100" and r["description"] == "pale sun site g and a usd"
+        )
+        provider_cost = D(203125) if month == 8 else D(125000)
+        site_cost = ga - provider_cost
+        site_production = D(10000) + (site_cost - D(10000)) / 2
+        # Fee and underlying cost stay separate; no duplicated intercompany fee.
+        legal_production = D(125000) * D(".408") + site_production
+        difference = (provider_cost - D(125000)) * D(".408")
+        available = units + D(547400) / 12
+        sold = D(500000) / 12
+        support = (support + legal_production) * (1 - sold / available)
+        elimination = (elimination + difference) * (1 - sold / available)
+        units = available - sold
+    row = current_inventory_bridge(anchor)[7]
+    assert support.quantize(D(".0001")) == D(row["support_inventory_usd"])
+    assert elimination.quantize(D(".0001")) == D(row["consolidated_service_cost_inventory_usd"])
+    assert elimination.quantize(D(".0001")) == D("25176.3198")
+    legal = next(
+        r
+        for r in tables["current_legal_balance_bridges"]
+        if r["legal_entity"] == "RWH" and r["account"] == "1200"
+    )
+    # The legal population excludes the distinct consolidated provider-cost adjustment.
+    assert D(legal["closing_signed_usd"]) == D(row["corrected_cash_inventory_usd"])
+    assert D(legal["closing_signed_usd"]) != D(row["corrected_cash_inventory_usd"]) + elimination
