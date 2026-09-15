@@ -270,3 +270,31 @@ The integrated V3/capture/V2/resolver/V1 checks passed 87 tests with no
 failures, errors or skips (`producer-plan-integrated-2026-09-14.xml`). Independent
 review separately passed 29 current V3/capture cases and Ruff. All prior run and
 validation receipts remain preserved.
+
+[Company runtime initialization](../../../../tools/audit_suite/COMPANY_RUNTIME_ACTIVATION.md)
+now preserves sealed activity capsules while providing writable company sources for
+audit access. It verifies each exact capsule, reads native rows through a bounded
+read-only snapshot and copies only original systems/versions into a fresh
+application-owned schema. Original event/availability/import timestamps, provenance,
+content and command digests remain exact. No source schema, triggers, grants,
+collections, access history or audit state are copied. Initialization has its own
+receipt and runtime identity, separate from the historical source fields.
+
+The actual CLI batch initialized eleven private company stores from the aligned
+V3 run: all 381 native versions and 174 paired systems matched every source field.
+All runtime grants, collections and access journals were empty at initialization;
+all sealed capsule members remained unchanged. The private receipt is
+`company-runtimes-2026-09-14/reference-b-v1/BATCH_RECEIPT.json`. Its seed database
+hashes are point-in-time observations; authorized runtime journals subsequently
+change those writable databases. They do not invalidate the original capsule
+manifests. Existing company connectors and owner-scoped collection use the runtime
+paths, with no prepared audit world or model invocation.
+
+The integrated initialization/collection/source-resolver/capture checks passed
+44 tests without failures, errors or skips
+(`runtime-activation-integrated-2026-09-14.xml`). Independent review separately
+passed all 17 initialization/collection cases, including real Engine/federation
+collection, future/revoked access denial, exact record preservation and unchanged
+capsules after runtime journals changed. Source descriptor closure, unmanifested
+SQLite sidecars and fresh-schema boundaries are verified. The source/runtime
+separation creates no operating, employment, deployment or assurance conclusion.

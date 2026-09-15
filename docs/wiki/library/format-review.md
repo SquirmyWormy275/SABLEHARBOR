@@ -6,7 +6,7 @@ Generated reconciliation queue, not an assertion that every unpaired record lack
 
 | State | Records |
 |---|---:|
-| COUNTERPART_REVIEW_REQUIRED | 125 |
+| COUNTERPART_REVIEW_REQUIRED | 127 |
 | HISTORICAL_COUNTERPART_UNRESOLVED | 57 |
 | NAVIGATION_ALIAS_NO_PUBLICATION | 3 |
 | READER_MAINTENANCE_NO_LETTERHEAD | 106 |
@@ -119,6 +119,7 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Geographic evidence releases](../../releases/GEOGRAPHIC_EVIDENCE_RELEASES.md) — Corporate document-format reconciliation
 - [Local configuration change and release source pair](../../../enterprise/audit_suite/CHANGE_ACTIVITY.md) — Corporate document-format reconciliation
 - [Private companion recovery](../../../enterprise/audit_suite/COMPANION_RECOVERY.md) — Corporate document-format reconciliation
+- [Company runtime activation contract](../../../enterprise/audit_suite/COMPANY_RUNTIME_ACTIVATION.md) — Corporate document-format reconciliation
 - [Configuration inventory and drift from original release records](../../../enterprise/audit_suite/CONFIGURATION_ACTIVITY.md) — Corporate document-format reconciliation
 - [Per-control legacy documentary custody](../../../enterprise/audit_suite/DOCUMENTARY_CUSTODY.md) — Corporate document-format reconciliation
 - [Local worker lifecycle sources](../../../enterprise/audit_suite/LIFECYCLE_ACTIVITY.md) — Corporate document-format reconciliation
@@ -139,6 +140,7 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Private ordered company activity plans](../../../tools/audit_suite/COMPANY_ACTIVITY_PLAN_RUNNER.md) — Corporate document-format reconciliation
 - [Selected producer routing V3](../../../tools/audit_suite/COMPANY_ACTIVITY_PRODUCER_PLAN.md) — Corporate document-format reconciliation
 - [Independent company activity runner](../../../tools/audit_suite/COMPANY_ACTIVITY_RUNNER.md) — Corporate document-format reconciliation
+- [Initialize company source runtimes](../../../tools/audit_suite/COMPANY_RUNTIME_ACTIVATION.md) — Corporate document-format reconciliation
 - [Company source inventory](../../../tools/audit_suite/COMPANY_SOURCE_INVENTORY.md) — Corporate document-format reconciliation
 - [Configuration source extension](../../../tools/audit_suite/CONFIGURATION_SOURCE_SLICE.md) — Corporate document-format reconciliation
 - [Control-source readiness implementation gaps](../../../tools/audit_suite/CONTROL_SOURCE_READINESS.md) — Corporate document-format reconciliation

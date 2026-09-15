@@ -47,3 +47,9 @@ After every job, all completed producer outputs and every earlier consumer's fro
 The retained run manifest pins exact plan bytes, resolved recipes, event receipts and job manifests. Source verification is per source and transaction; there is no cross-store atomicity, automatic company authority, complete operating year, audit sufficiency or professional validation claim.
 
 Tests in `tests/audit_suite/test_company_activity_producer_plan.py` execute actual producer/consumer workflows, existing strict input routing, once-only capture, exact-reference failures, later source mutation, and a real change/configuration/logging/risk chain. They also reject malformed whole-change modes before output. The separate capture/resolver tests verify bounded native reads and source integrity.
+
+To make the generated records available for ordinary company access and audit
+collection, [initialize separate company runtimes](COMPANY_RUNTIME_ACTIVATION.md).
+Their access journals can change while the original producer capsules stay sealed.
+Do not point audit grants at a capsule and then claim its original database hash
+still verifies.

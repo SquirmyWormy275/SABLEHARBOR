@@ -429,7 +429,7 @@
       "gate": "existing_authority",
       "execution_policy": "READY requires completed dependencies. Shared schemas, dependencies and catalog changes belong to the integrator. Keep populated sources, migration manifests and audit records in excluded private storage. No remote publication or deployment under this addition.",
       "execution_authorized": true,
-      "evidence": "Immutable company stores, grants, recovery and read-through source portfolios implemented. New independent change records and configuration checks consume pinned upstream originals. Broader company-system coverage remains in progress."
+      "evidence": "Immutable company stores, grants, recovery and read-through source portfolios implemented. New independent change records and configuration checks consume pinned upstream originals. Broader company-system coverage remains in progress. Eleven freshcompany runtimes nowretain all381 nativeversions fromsealedproducer capsules with originalfields intact and initiallyempty authority/journals. Runtimecollection canchangejournals withoutinvalidatingsealedcapsules; ordinaryEngine/federation integration verified."
     },
     {
       "id": "AQ-03",

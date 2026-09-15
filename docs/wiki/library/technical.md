@@ -169,6 +169,7 @@ Generated file inventory. Includes current and historical records; open the sour
 
 - [Local configuration change and release source pair](../../../enterprise/audit_suite/CHANGE_ACTIVITY.md) — MD
 - [Private companion recovery](../../../enterprise/audit_suite/COMPANION_RECOVERY.md) — MD
+- [Company runtime activation contract](../../../enterprise/audit_suite/COMPANY_RUNTIME_ACTIVATION.md) — MD
 - [Configuration inventory and drift from original release records](../../../enterprise/audit_suite/CONFIGURATION_ACTIVITY.md) — MD
 - [Per-control legacy documentary custody](../../../enterprise/audit_suite/DOCUMENTARY_CUSTODY.md) — MD
 - [Local worker lifecycle sources](../../../enterprise/audit_suite/LIFECYCLE_ACTIVITY.md) — MD
@@ -189,6 +190,7 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Private ordered company activity plans](../../../tools/audit_suite/COMPANY_ACTIVITY_PLAN_RUNNER.md) — MD
 - [Selected producer routing V3](../../../tools/audit_suite/COMPANY_ACTIVITY_PRODUCER_PLAN.md) — MD
 - [Independent company activity runner](../../../tools/audit_suite/COMPANY_ACTIVITY_RUNNER.md) — MD
+- [Initialize company source runtimes](../../../tools/audit_suite/COMPANY_RUNTIME_ACTIVATION.md) — MD
 - [Company source inventory](../../../tools/audit_suite/COMPANY_SOURCE_INVENTORY.md) — MD
 - [Configuration source extension](../../../tools/audit_suite/CONFIGURATION_SOURCE_SLICE.md) — MD
 - [Control-source readiness implementation gaps](../../../tools/audit_suite/CONTROL_SOURCE_READINESS.md) — MD
