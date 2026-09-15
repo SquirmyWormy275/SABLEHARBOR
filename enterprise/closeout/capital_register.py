@@ -14,8 +14,65 @@ ROOT = Path(__file__).resolve().parents[2]
 SOURCE = Path(__file__).with_name("source") / "capital_register.json"
 
 
+def validate_formation(source):
+    formation = source["founder_formation"]
+    tax = json.loads((SOURCE.parent / "parent_tax.json").read_text())
+    if (
+        formation["effective_date"] != tax["formation_date"]
+        or formation["tax_analysis"]["corporate_effective_date"] != tax["corporate_effective_date"]
+    ):
+        raise ValueError("Founder admission differs from corporate formation history")
+    if (
+        set(formation["member_consents"]) != {"SH-HOLDER-DM", "SH-HOLDER-PR", "SH-HOLDER-JB"}
+        or len(formation["member_consents"]) != 3
+    ):
+        raise ValueError("Founder consent population differs")
+    for key in (
+        "cash_contributed_usd",
+        "property_contributed_usd",
+        "services_contribution_usd",
+        "enforceable_contribution_promise_usd",
+        "company_assets_at_admission_usd",
+        "company_liabilities_at_admission_usd",
+    ):
+        if D(formation[key]) != 0:
+            raise ValueError("Changed formation facts require value/basis reconstruction")
+    for key in (
+        "company_owned_preexisting_ip",
+        "assigned_preformation_contracts",
+        "binding_customer_commitments",
+        "binding_financing_commitments",
+        "assembled_workforce",
+        "transferred_personal_goodwill",
+    ):
+        if formation[key] is not False:
+            raise ValueError("Positive formation rights require valuation review")
+    if formation["unvested_units"] != 0:
+        raise ValueError("Changed vesting requires section83 analysis")
+    valuation = formation["valuation"]
+    analysis = formation["tax_analysis"]
+    if D(valuation["unit_fair_value_usd"]) != 0 or D(valuation["aggregate_fair_value_usd"]) != 0:
+        raise ValueError("Nonzero fair value requires compensation and basis successor")
+    for key in (
+        "amount_paid_usd",
+        "section83_income_usd",
+        "initial_interest_basis_usd",
+        "company_compensation_expense_usd",
+        "additional_current_or_deferred_tax_usd",
+    ):
+        if D(analysis[key]) != 0:
+            raise ValueError("Founder tax/expense amount differs from tested zero facts")
+    boundary = source["founder_basis_boundary"]
+    if any(
+        D(boundary[k]) != 0
+        for k in ("consideration_usd", "tax_basis_usd", "monetary_capital_opening_usd")
+    ):
+        raise ValueError("Founder monetary opening differs from formation evidence")
+
+
 def build_register():
     source = json.loads(SOURCE.read_text())
+    validate_formation(source)
     expected = {
         "SH-HOLDER-DM": 33250000,
         "SH-HOLDER-PR": 19950000,
@@ -77,8 +134,10 @@ def build_register():
         unit_history.append(
             dict(
                 holder_id=row["holder_id"],
-                effective_date=subscription["effective_date"] if investor else "2016",
-                date_precision="DAY" if investor else "YEAR",
+                effective_date=subscription["effective_date"]
+                if investor
+                else source["founder_formation"]["effective_date"],
+                date_precision="DAY_NEWLY_AUTHORED_SOURCE_PRECISION",
                 opening_units=0,
                 issued_units=row["units"],
                 closing_units=row["units"],
@@ -87,10 +146,10 @@ def build_register():
                 else source["authority_source"],
                 recorded_subscription_cash_usd=subscription["consideration_usd"]
                 if investor
-                else None,
+                else "0.00",
                 founder_consideration_state="NOT_APPLICABLE"
                 if investor
-                else "SOURCE_RECONSTRUCTION_REQUIRED",
+                else "COMPLETED_ZERO_CONTRIBUTION_AND_INITIAL_BASIS",
                 fact_state="NEWLY_AUTHORED_SYNTHETIC_HISTORY",
             )
         )
@@ -100,7 +159,7 @@ def build_register():
         holders=holders,
         verified_subscription_receipts_usd="183000000.00",
         total_units=100000000,
-        founder_monetary_basis_complete=False,
+        founder_monetary_basis_complete=True,
     )
 
 
@@ -176,6 +235,9 @@ def build(journal_rows):
                 row
             )
     events = []
+    historical_opening = {
+        r["holder_id"]: D(r["recorded_subscription_cash_usd"]) for r in register["unit_history"]
+    }
     cumulative = defaultdict(D)
     rollforward = []
     for (scenario, year, month, source_id), legs in sorted(grouped.items()):
@@ -224,16 +286,21 @@ def build(journal_rows):
                     closing_scenario_contributions_usd=str(cumulative[key]),
                     units_before=row["units"],
                     units_after=row["units"],
-                    historical_monetary_opening_usd=None,
-                    basis="Cumulative scenario additions; "
-                    "not complete historical monetary capital account",
+                    historical_monetary_opening_usd=str(historical_opening[row["holder_id"]]),
+                    closing_paid_in_capital_usd=str(
+                        historical_opening[row["holder_id"]] + cumulative[key]
+                    ),
+                    basis="Historical paid-in contribution plus scenario additions; "
+                    "excludes retained earnings and does not assert current fair value",
                 )
             )
     source_paths = [
         SOURCE,
+        SOURCE.parent / "parent_tax.json",
         Path(__file__),
         Path(__file__).with_name("capital.py"),
         ROOT / "docs/canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md",
+        ROOT / "docs/internal/company-closeout/FOUNDER_ADMISSION_BASIS.md",
     ]
     return dict(
         register=register,
@@ -244,8 +311,8 @@ def build(journal_rows):
             for p in source_paths
         },
         limitations=[
-            "Historical founder consideration/tax basis remains a separate source reconstruction; "
-            "no invented monetary opening.",
+            "Founder zero contribution/basis is a newly authored formation reconstruction, "
+            "not an independent appraisal or a conclusion about later interest value.",
             "Monthly conditional modeled receipts do not establish legal commitment, actual calls "
             "or day-level cash sufficiency.",
         ],

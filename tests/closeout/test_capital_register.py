@@ -88,3 +88,43 @@ def test_wrong_scope_and_invalid_amount_rejected(field, value):
     e[field] = value
     with pytest.raises(ValueError):
         allocate_event(e)
+
+
+def test_founder_opening_zero_requires_complete_formation_facts():
+    from enterprise.closeout.capital_register import validate_formation
+
+    register = build_register()
+    assert register["founder_monetary_basis_complete"]
+    founders = [
+        r
+        for r in register["unit_history"]
+        if r["holder_id"] in {"SH-HOLDER-DM", "SH-HOLDER-PR", "SH-HOLDER-JB"}
+    ]
+    assert len(founders) == 3
+    assert all(
+        r["effective_date"] == "2016-04-12" and r["recorded_subscription_cash_usd"] == "0.00"
+        for r in founders
+    )
+    for field, value in (
+        ("company_owned_preexisting_ip", True),
+        ("binding_customer_commitments", True),
+        ("cash_contributed_usd", "1"),
+        ("unvested_units", 1),
+        ("effective_date", "2016-01-01"),
+    ):
+        source = deepcopy(register["source"])
+        source["founder_formation"][field] = value
+        with pytest.raises(ValueError):
+            validate_formation(source)
+    source = deepcopy(register["source"])
+    source["founder_formation"]["valuation"]["aggregate_fair_value_usd"] = "1000"
+    with pytest.raises(ValueError, match="fair value"):
+        validate_formation(source)
+    result = build(journal())
+    assert (
+        sum(D(r["historical_monetary_opening_usd"]) for r in result["holder_rollforward"])
+        == 183000000
+    )
+    assert sum(D(r["closing_paid_in_capital_usd"]) for r in result["holder_rollforward"]) == D(
+        "183000123.46"
+    )
