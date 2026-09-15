@@ -63,6 +63,7 @@ class CloseoutAdjustment(RuntimeAdjustment):
 
     def __init__(self, data=None):
         super().__init__(data)
+        self.rwh_book = None
         self.parent_tax = None
         self.industrial_tax = None
         self.state_minimum = None
@@ -109,6 +110,8 @@ class CloseoutAdjustment(RuntimeAdjustment):
                 "Authored 2023 placed-in-service equipment: omitted 36 months book depreciation; noncash opening correction",
                 kind="COMPANY_ASSET_CORRECTION",
             )
+        if self.rwh_book is not None:
+            self.rwh_book.post_opening(books)
         if self.state_minimum is not None:
             self.state_minimum.post_opening(books)
         if self.parent_tax is not None:
@@ -158,6 +161,8 @@ class CloseoutAdjustment(RuntimeAdjustment):
             )
         if self.software_tax is not None:
             self.software_tax.post_month(books, year, month)
+        if self.rwh_book is not None:
+            self.rwh_book.post_month(books, year, month)
         if self.industrial_tax is not None:
             self.industrial_tax.post_month(books, year, month)
         if self.state_minimum is not None:

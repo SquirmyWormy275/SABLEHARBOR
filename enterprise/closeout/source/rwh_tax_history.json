@@ -36,7 +36,7 @@
   "closing_trade_payables_usd": "3000000",
   "book_method": "USGAAP-oriented accrual inventorypolicy: retainedcomposite units-of-production for productiveestate, excludingland; normalproductionoverhead allocatedthroughweighted-average inventory. The controlling3mrepair/stabilization expense remains H2periodP&L, newlyspecified abnormalpostcloseshakedown/idlefacilityrepaircost;687500abnormalmobilizationalsoexpense. Onlynormal1.942m siteadmin/propertytax/plantinsurance entersbookinventory. Tax263Aallocationis separate anddoesnotdeterminebookcost.",
   "tax_allocation": "Cost28m plus fixed assumed otherliabilities2.5m less acquiredcurrentassets4.5m gives26m initial operating taxcost. All three non-goodwill operating asset classes are ClassV; allocate26m in proportion to the separately authored42m fair-value class population. AssumedARO16m excluded until economicperformance; no replacement goodwill.",
-  "federal_plant_method": "ClassVplant22m separates18meligiblemining/millingequipment (unrelatedpurchase,no priorbuyeruse,no carryoverbasis,not structuralproperty,<=20yrrecovery) and4mnonresidentialbuilding. Equipment receives100%bonus; building39yrstraightline/midmonthJuly convention. Bothproductiondepreciation components capitalize under263A and releasethroughweighted-average inventory.",
+  "federal_plant_method": "ClassVplant22m separates18meligiblemining/millingequipment (unrelatedpurchase,no priorbuyeruse,no carryoverbasis,not structuralproperty,<=20yrrecovery) and4mnonresidentialbuilding. Equipment receives100%bonus; building39yrstraightline/midmonthJuly convention. Allocate both allowances between the defined idle window and active production under idle_allowance_method; only active production allowances enter inventory.",
   "california_plant_method": "No federalbonus. Equipmentsection167straightline tenyearusefullife/ACT365firstperiod; productionbuilding39yearstraightline withsameJuly-midmonth convention. Separately authored life/componentfacts are not a recoveredcostsegregationreport.",
   "depletion_method": "Costdepletion on units sold from ownproduction; compare22%of mininggrossincome with50%propertyincome ceiling. H2propertyincome beforedepletion is negative, so percentageamountzero and costdepletion governs. No purchasedfinishedinventory sold in this authored opening population.",
   "history_constraint": "Grosssales and detailed costevents are newly authored, not recovered. Existing contributedcash44.3125m,28mpurchase,8mrehabilitation,3mrepairs, endingcash2m,AR4m,prepaid0.5m,tradeAP3m,otherliability2.5m andfinishedinventory125klb constrain the cash/quantity bridge. The687500mobilizationcost is explicit authored precision resolving the earlier openinginventory cash-versus-DD&A calibration; it is not hidden as a taxloss or a new fundingreceipt.",
@@ -46,11 +46,12 @@
     "https://www.irs.gov/pub/irs-pdf/p5653.pdf",
     "https://www.irs.gov/irb/2014-22_IRB",
     "https://uscode.house.gov/view.xhtml?req=(title:26%20section:613%20edition:prelim)",
-    "https://www.irs.gov/irb/2018-22_IRB"
+    "https://www.irs.gov/irb/2018-22_IRB",
+    "https://www.govinfo.gov/content/pkg/CFR-2025-title26-vol4/xml/CFR-2025-title26-vol4-sec1-263A-1.xml"
   ],
   "authority_accessed_on": "2026-09-15",
   "limitations": "Full mineral property grossincome/transport adjustments and subsequentyear asset,inventory,ARO anddeferredtax realization are separately required. This source does not submit a return, claim an IRS acknowledgement or establish a taxsharing agreement. Nonproductioncost population is expressly fictional; accepted 2025 external-carrier boundaries remain unchanged.",
-  "capacity_test": "At the retained0.17%grade/92%recovery and2000lb/shortton,300000lb requires95907.93shorttons over167days=574.30tpd,below600tpdnameplate. This is an authored finite H2population, not a claimed engineering study or recovered throughput log.",
+  "capacity_test": "300000 pounds over 160 active days requires approximately 599.42 short tons per active day at retained grade/recovery, below 600 nameplate. This demanding near-capacity reconstruction is explicit, not an independent engineering validation.",
   "repair_scope": "The3m repairs/stabilization are abnormalpost-close shakedown andidlefacilitycosts maintainingalreadyoperatingequipment, notbetterment/adaptation/restorationofanentireunitofproperty. TheirbookH2expense classification isretained; separate8mrehabilitation capitalized. Taxproduction-benefitallocationis evaluatedseparately. Newlyauthored seven-day maintenanceoutage fits300kproductionbelow600tpdnameplate over167days.",
   "production_indirect_allocations": {
     "routine_repairs": "3000000",
@@ -69,5 +70,8 @@
     "repair_and_shakedown": "3000000",
     "abnormal_mobilization_and_security": "687500"
   },
-  "book_authority": "FASB Statement151 https://storage.fasb.org/fas151.pdf supplies primaryhistoricalnormal-capacity/abnormalcost principle; supersededbyCodification, notrepresented ascurrentoperativeASCtext. This is anexplicitmodelaccountingpolicy, nota verifiedfullUSGAAPopinion. Bookclassificationof3mperiodexpense preservescontrollingR2canon; normalindirectallocationupdatesderivedopeningcalibration only."
+  "book_authority": "FASB Statement151 https://storage.fasb.org/fas151.pdf supplies primaryhistoricalnormal-capacity/abnormalcost principle; supersededbyCodification, notrepresented ascurrentoperativeASCtext. This is anexplicitmodelaccountingpolicy, nota verifiedfullUSGAAPopinion. Bookclassificationof3mperiodexpense preservescontrollingR2canon; normalindirectallocationupdatesderivedopeningcalibration only.",
+  "owned_days": 167,
+  "whole_pool_idle_days": 7,
+  "idle_allowance_method": "Newly authored whole equipment/building pool shutdown for seven of 167 owned days, excluding ordinary interruptions. Select reasonable equipment-days allocation under 26 CFR 1.263A-1(f): seven/167 of total first-year cost-recovery allowance, including bonus, is idle current expense under (e)(3)(iii)(E); active allowance enters production inventory. This is a selected allocation method, not a statutory seven-day formula. Full asset basis reduction is unchanged."
 }

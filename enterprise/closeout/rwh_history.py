@@ -52,7 +52,11 @@ def build():
     )
     if closing_cash != D("2000000") or cash_inventory != D("5625000"):
         raise ValueError("Authored H2cash/cost events do not reach source cash/inventory")
-    implied_tpd = produced / (D(2000) * D(".0017") * D(".92")) / D(167)
+    owned_days = D(s["owned_days"])
+    idle_days = D(s["whole_pool_idle_days"])
+    if not 0 <= idle_days < owned_days:
+        raise ValueError("Idle window must be within the owned operating period")
+    implied_tpd = produced / (D(2000) * D(".0017") * D(".92")) / (owned_days - idle_days)
     if implied_tpd > D(native["mine_2026"]["nameplate_tpd"]):
         raise ValueError("Authored H2 production exceeds retained plant nameplate")
     reserve = D(native["resource_basis"]["recoverable_lb"]) + produced
@@ -86,9 +90,11 @@ def build():
     results = []
     cash_profit = D(s["sales_usd"]) - cash_cogs - other - repair + indirect_inventory
     for jurisdiction, plant_dda in [("US", plant_federal), ("CA", plant_ca)]:
-        dda_inventory = plant_dda * ending / produced
-        deducted_dda = plant_dda - dda_inventory
-        predepletion = cash_profit - deducted_dda
+        idle_dda = plant_dda * idle_days / owned_days
+        active_dda = plant_dda - idle_dda
+        dda_inventory = active_dda * ending / produced
+        deducted_dda = active_dda - dda_inventory
+        predepletion = cash_profit - deducted_dda - idle_dda
         percentage = min(D(s["sales_usd"]) * D(".22"), max(predepletion, D(0)) * D(".5"))
         depletion = max(cost_depletion, percentage)
         income = predepletion - depletion
@@ -105,6 +111,7 @@ def build():
                 initial_plant_basis_usd=str(plant_cost.quantize(Q)),
                 production_indirect_costs_capitalized_usd=str(indirect_inventory.quantize(Q)),
                 production_depreciation_usd=str(plant_dda.quantize(Q)),
+                idle_depreciation_current_expense_usd=str(idle_dda.quantize(Q)),
                 depreciation_in_closing_inventory_usd=str(dda_inventory.quantize(Q)),
                 depreciation_released_to_cogs_usd=str(deducted_dda.quantize(Q)),
                 cost_depletion_usd=str(cost_depletion.quantize(Q)),

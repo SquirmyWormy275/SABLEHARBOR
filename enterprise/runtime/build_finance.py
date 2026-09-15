@@ -166,6 +166,8 @@ def build(allow_working_tree=False, *, company_closeout=False):
     if company_closeout:
         from enterprise.closeout.industrial_tax import IndustrialTax
         adjustment.industrial_tax = IndustrialTax(successor)
+        from enterprise.closeout.rwh_book import RwhBook
+        adjustment.rwh_book = RwhBook(successor, fin, enterprise.load_anchor())
         successor = enterprise.build(output / "enterprise", forecast_result=fin, legacy_result=legacy,
             source=policy, core_provider=operating, adjustment_provider=adjustment)
         from enterprise.closeout.parent_tax import ParentTax
@@ -176,6 +178,8 @@ def build(allow_working_tree=False, *, company_closeout=False):
         adjustment.input_hash = hashlib.sha256((adjustment.input_hash + tax.input_hash).encode()).hexdigest()
         successor = enterprise.build(output / "enterprise", forecast_result=fin,
             legacy_result=legacy, source=policy, core_provider=operating, adjustment_provider=adjustment)
+        enterprise.write_csv(output / "rwh_book_carrying.csv", adjustment.rwh_book.rows)
+        enterprise.write_csv(output / "rwh_historical_tax.csv", adjustment.rwh_book.history["rows"])
         enterprise.write_csv(output / "state_minimum_tax.csv", adjustment.state_minimum.rows)
         enterprise.write_csv(output / "industrial_sales_tax.csv", adjustment.industrial_tax.rows)
         enterprise.write_csv(output / "parent_tax_provision.csv", tax.rows)
@@ -252,7 +256,7 @@ def build(allow_working_tree=False, *, company_closeout=False):
             if int(r["year"]) == 2026 and not r["source_id"].startswith("RT-")
             and r["source_id"] != "SH-VOICE-GW-01"
             and not (company_closeout and r["entity"] == "ELIM" and int(r["year"]) == 2026 and int(r["month"]) == 8 and r["source_id"] == "1150" and r["source_type"] == "BALANCE_ELIMINATION" and r["account"] in {"1150", "2150"})
-            and not (company_closeout and (r["source_id"].startswith(("CO-TAX-", "CO-ASSET-", "CO-PAYROLL-", "SH-RWH-IL-ROT-", "CO-STATE-")) or r["source_type"] == "MEMBER_EQUITY"))
+            and not (company_closeout and (r["source_id"].startswith(("CO-TAX-", "CO-ASSET-", "CO-PAYROLL-", "SH-RWH-IL-ROT-", "CO-STATE-", "CO-RWH-BOOK-")) or r["source_type"] == "MEMBER_EQUITY"))
         )
 
     if history(before) != history(rows):
