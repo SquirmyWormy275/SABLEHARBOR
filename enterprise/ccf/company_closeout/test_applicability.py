@@ -1,6 +1,7 @@
 import copy
 import json
 import unittest
+
 from .applicability import SOURCE, validate
 
 

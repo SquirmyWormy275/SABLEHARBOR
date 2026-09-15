@@ -3,7 +3,7 @@
 Document ID: SH-C05-C06-RESIDUAL-20260915; version 1.0.0.
 Prepared September 15, 2026 UTC; PENDING_REPOSITORY_ACCEPTANCE.
 Status snapshot reads integration commit `39aa95c1` and controls commit `2e68b57f`.
-This is the current navigation successor to the README's historical residual table;
+The later administrative successor below updates R03/R04/R07. This is the current navigation successor to the README's historical residual table;
 it does not delete earlier gap findings or change their event-time truth.
 
 ## Delivered scope
@@ -73,3 +73,22 @@ receipts are `docs/internal/company-closeout/REFERENCE_RESTORE_RECEIPT.json` and
 and `portal_rehearsal.py`. Read receipt scope, source commit and counts before citing
 PASS. Required acceptance/head checks and final regeneration remain integration
 owner work; this status note does not substitute historical tests for current ones.
+
+## Administrative completion update
+
+`august_admin_completion.json` and `benefit_admin_completion.json`, validated by
+`admin_completion.py`, supersede the missing ordinary detail in R03/R04/R07:
+existing bond identity/face/continuation and measurement bridge are supplied;
+Cell1 phase/area/design compatibility and31 daily work-practice records are supplied;
+702 benefit elections and1,404 selected administrative-notice deliveries are
+supplied. These are newly authored retrospective synthetic records.
+
+R03 now retains only prospective changed-condition/agency-specific adequacy review;
+no new surety obligation, parent guarantee or cash collateral was introduced.
+R04 retains MW17 ongoing liner/pathway investigation, not missing category facts.
+R07's selected administration evidence is complete; insurer clinical performance
+and full annual plan publication/filing assurance are outside that selected claim.
+The covered September leaver's election notice is future-due September22. The
+missing badge result and MW17 future response remain open. The original204-row
+review retains historical states, joined to these dated successors rather than
+rewritten as if the detail had been recovered before its authorship.

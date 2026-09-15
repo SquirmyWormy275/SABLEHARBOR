@@ -1,8 +1,8 @@
 """Validate declared synthetic performance without asserting external compliance."""
 
+import json
 from datetime import datetime
 from decimal import Decimal
-import json
 from pathlib import Path
 
 from .environmental_review import review

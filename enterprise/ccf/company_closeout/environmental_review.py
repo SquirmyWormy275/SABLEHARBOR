@@ -1,9 +1,9 @@
 """Reperform a bounded environmental review from the existing Red Wash generator."""
 
 import csv
-from decimal import Decimal
 import hashlib
 import json
+from decimal import Decimal
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]

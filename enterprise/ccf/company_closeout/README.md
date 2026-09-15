@@ -482,3 +482,58 @@ method-change notice. No notice is asserted. Book tax accrual, tax attributable 
 collected/uncollected principal, return amount and actual payment must remain separate.
 The finance handoff requires the underlying sale-date rate on later collections and
 a cents-to-whole-dollar ST1 bridge, plus review of accelerated payment requirements.
+
+## Completed August administrative successor
+
+[august_admin_completion.json](august_admin_completion.json) supplies the missing
+Cell1 classification/area and existing bond instrument detail without editing the
+204-row historical review. Cell1 is newly authored as a 2011, 32-acre conventional
+phased impoundment, with one operating cell, no standby second cell, no separate
+liquid impoundment and no heap pile in this selected configuration. Thirty-one
+August work-practice records and a synthetic liner compatibility test support the
+classification and design review. A post-1989 cell is not automatically subject to
+the older existing-impoundment annual20pCi emissions test; no Method115 result is
+fabricated. The 2017 final rule and current61.251/.252/.255 provisions support the
+screen. The original Cell1/MW17 ongoing-performance concern remains open.
+
+The existing `BOND-RW-2026` now has an expressly fictional surety identity, RWH
+principal, State of Wyoming obligee, $25M face, 2026 continuation and unreleased
+state. This records existing instrument precision, not a new financing commitment,
+parent guarantee or cash collateral. Face less current closure cost is zero; face
+less opening ARO is $9M; cash available from surety is zero. The annual review must
+still evaluate changed conditions and agency-specific scope. No inference that a
+missing underlying indemnity agreement contains no indemnity is permitted. A
+regulatory sufficiency or all-agency financial-assurance opinion is not claimed.
+
+[benefit_admin_completion.json](benefit_admin_completion.json) supplies 702
+employee election records: 612 covered, 90 waived, zero enrolled dependents in the
+newly authored August census. Eligibility, coverage and employees remain distinct.
+The two selected paper administrative notices have actual source text and702
+synthetic delivery receipts (1,404 notice deliveries), with independent preparation
+and review. They cover enrollment corrections, privacy/data routing, nonretaliation
+and continuation administration. They are not mislabeled full SPD/SBC publications
+or evidence of insurer clinical-control effectiveness, and create no new benefit
+formula, deduction or cash. The covered September leaver is notified to the
+administrator September8; the election notice is dueSeptember22 and remains
+future-due at cutoff. No continuation election or payment is invented.
+
+```sh
+python -m enterprise.ccf.company_closeout.admin_completion --repository /path/to/integrated-checkout
+python -m unittest enterprise.ccf.company_closeout.test_admin_completion -v
+```
+
+The CLI independently joins the integrated HR generator's stable ID/legal-employer
+population. Tests reject missing/duplicate populations, changed eligibility totals,
+invalid radon category/area, failed liner data, a new parent guarantee, treating
+surety as cash, late notice and fabricated future election. Initial lint failures
+from compact authoring were corrected by formatting; the final targeted lint and
+three tests pass. Missing badge RW0140 and MW17 adverse evidence remain unchanged.
+
+Validation receipt for this successor: the exact CCF workflow lint command
+`ruff check --config 'include=["*.py"]' --select E4,E7,E9,F,I enterprise/ccf`
+passes after seven existing import-order corrections. `python -m pytest -q
+enterprise/ccf/company_closeout` passes all23 tests. An attempted bare unittest
+file-directory discovery failed because it omitted package context for relative
+imports; the supported pytest package run then passed. The integrated current
+population join was reperformed after the operations tax/debt-host changes and
+still yields92/88/104/5/702/1404. No source populations changed for formatting.

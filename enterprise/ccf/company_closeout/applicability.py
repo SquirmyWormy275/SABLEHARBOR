@@ -1,8 +1,8 @@
 """Verify source-backed activity boundaries independently of rendering."""
 
-from collections import Counter
 import hashlib
 import json
+from collections import Counter
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]

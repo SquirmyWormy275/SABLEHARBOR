@@ -3,10 +3,10 @@
 import copy
 import hashlib
 import json
-from pathlib import Path
 import tempfile
+from pathlib import Path
 
-from enterprise.runtime.security import authorize, revoke_graph, restore
+from enterprise.runtime.security import authorize, restore, revoke_graph
 
 
 def encoded(value):

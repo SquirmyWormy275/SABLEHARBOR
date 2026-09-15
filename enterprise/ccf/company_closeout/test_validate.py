@@ -1,6 +1,7 @@
 import copy
 import json
 import unittest
+
 from .validate import SOURCE, validate
 
 

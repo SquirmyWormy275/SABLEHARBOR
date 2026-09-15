@@ -1,6 +1,7 @@
 import copy
 import json
 import unittest
+
 from .performance import DIRECTORY, available_records, validate_workplace
 from .restore_rehearsal import run
 
