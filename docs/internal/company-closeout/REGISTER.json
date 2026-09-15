@@ -194,8 +194,8 @@
       "reconciliation_totals": {},
       "limitations": [
         "Integration acceptance, final composed-revision validation and indexed Release packaging remain pending.",
-        "Exact holder interests and material rights proposal awaits owner disposition; no acceptance inferred.",
-        "Full legal-entity/state income-tax and current RWH transaction-tax integration remains in progress; prior generated totals are not final."
+        "Full legal-entity/state income-tax and current RWH transaction-tax integration remains in progress; prior generated totals are not final.",
+        "Owner approved the exact fictional five-holder register; subscription, capital-account and voluntary funding integration and repository acceptance remain pending."
       ],
       "next_owner": "finance lane"
     },
@@ -464,5 +464,6 @@
     "publication_pr": 145,
     "protection_pr": 165
   },
-  "evidence_boundary": "Working integration inventory through403fa17c; PR166 remains draft. Full preserved operating build854a4aad passed47060events/98tables. Statutory subsidiary/state tax composition, clean company regeneration and acceptance remain pending."
+  "evidence_boundary": "Working integration inventory through403fa17c; PR166 remains draft. Full preserved operating build854a4aad passed47060events/98tables. Statutory subsidiary/state tax composition, clean company regeneration and acceptance remain pending.",
+  "capital_register_direction": "OWNER_APPROVED_PROPOSED_FICTIONAL_FIVE_HOLDER_REGISTER_AND_VOLUNTARY_CONTRIBUTIONS"
 }

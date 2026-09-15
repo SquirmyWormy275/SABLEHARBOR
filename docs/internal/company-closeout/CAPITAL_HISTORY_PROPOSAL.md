@@ -1,7 +1,11 @@
 # Exact historical capitalization — reviewable authoring proposal
 
 Document ID SH-CAP-HISTORY-PROPOSAL-2026-09-15. Prepared September 15, 2026 UTC.
-**State: OPEN proposal; not adopted, not posted, not an executed agreement.**
+**Current owner disposition: approved for fictional implementation; repository
+acceptance and posting remain pending.** The owner subsequently said “Adopt the
+proposed fictional register.” The dated [direction record](../../canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md)
+controls the exact scope. The original proposal below is retained as the reviewed
+alternative; its requests for a future owner choice are superseded by that return.
 
 The current board doctrine, founding history, finance fundamentals, financing minutes
 and subscription drafts establish Daniel Mercer, Priya Raman and Jon Bell as founders,

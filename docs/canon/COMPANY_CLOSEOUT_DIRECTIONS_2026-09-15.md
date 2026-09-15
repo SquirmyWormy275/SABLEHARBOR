@@ -1,7 +1,7 @@
 # Company closeout owner directions
 
 **Document ID:** SH-CODEX-COMPANY-DIRECTIONS-2026-09-15
-**Version:** 1.1.0
+**Version:** 1.2.0
 **Record date:** September 15, 2026 UTC
 **Voice record date:** September 14, 2026 America/Los_Angeles; exact utterance times unavailable
 **Acceptance:** Pending repository integration; conversation-authorized implementation
@@ -104,6 +104,51 @@ remains scoped model policy. No attainment year, guaranteed or monotonic trend i
 **Supersession:** replaces the open capital preference with this continuing objective.
 Existing investor rights, accepted financing history, supported debt and governance survive.
 No invented precise holder rights or compulsory funding can fill a material source gap.
+
+## SH-VOICE-CAP-01 implementation return — exact fictional holder register
+
+On September 14, 2026 America/Los_Angeles (September 15 UTC), the owner answered
+“Adopt the proposed fictional register” while quoting the prepared five-holder
+proposal and its explicit sole-registered-subscriber assumption. Exact utterance
+time was not supplied. This is approval to author the following precise fictional
+history, not evidence recovered from rounded financing descriptions:
+
+| Registered holder | Equal participating units | Economic/ordinary unit-vote share |
+|---|---:|---:|
+| Daniel Mercer | 33,250,000 | 33.25% |
+| Priya Raman | 19,950,000 | 19.95% |
+| Jon Bell | 13,300,000 | 13.30% |
+| Harrison Vale Partners | 18,500,000 | 18.50% |
+| Wolf Ridge Holdings | 15,000,000 | 15.00% |
+| Total | 100,000,000 | 100.00% |
+
+The accepted implementation choice makes Harrison Vale the sole registered
+subscriber to the authored $48,000,000 June 18, 2021 round and Wolf Ridge the sole
+registered subscriber to the authored $135,000,000 October 28, 2022 round. It does
+not claim that “led” established sole subscription. The 2021 consideration is the
+exact $96/37 per unit; the 2022 consideration is $9 per unit. No founder secondary,
+new preference, conversion, anti-dilution right or option pool is created. The
+nine-member unitary board, CEO/Chair separation and accepted investor/independent
+roles remain intact. Substantive designation thresholds are not supplied by this
+approval. Founder consideration and monetary capital accounts require separate
+source-backed reconstruction; units are not an accounting plug for goodwill.
+
+Voluntary proportional paid-in contributions may increase monetary capital
+accounts without issuing new units, after the ordinary governing-record
+reconciliation. Requests use the established equal-unit participation shares;
+round down initial amounts to cents, then assign remaining cents by largest
+fractional remainder, with stable holder-ID tie breaking. No request is a binding
+commitment or compulsory call. Preserve approval, capacity, due date, receipt and
+settlement separately; nonparticipation creates a shortfall without automatic
+dilution, forfeiture or reassignment of another holder's cash.
+
+**Supersession:** resolves the exact register and voluntary contribution mechanism
+in [the prepared proposal](../internal/company-closeout/CAPITAL_HISTORY_PROPOSAL.md).
+Its OPEN owner-choice label no longer controls this scope. This return does not
+adopt unlisted side letters, hidden beneficial owners, new control rights or actual
+execution. Financial reconciliation, repository acceptance and delivery remain
+separate. The continuing sovereignty objective and adverse-case guardrails above
+remain required in future revisions.
 
 ## Delivery boundary
 
