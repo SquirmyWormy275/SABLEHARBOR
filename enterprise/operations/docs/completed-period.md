@@ -136,10 +136,9 @@ four Advisory customers. Along with one Cradle materials project, August SHI
 principal revenue totals $11,075,500, independently matching retained book revenue.
 Twenty-nine ARU/BST contracts preserve accepted customer identities and match
 source journal external invoice amounts. Four mine contracts preserve their
-accepted structure and monthly financial allocations. Mine/industrial customer
-cash stays explicitly unallocated where source collection detail does not support
-invoice-level assignment; monthly financial allocation does not establish
-uranium shipment authority or converter acceptance.
+accepted structure and monthly financial allocations. Mine/industrial cash receives the dated synthetic invoice allocation below;
+monthly financial allocation does not establish uranium shipment authority or
+converter acceptance.
 
 Willow has three completed bench experiments with costs and failed/passed bench
 outcomes, zero sales and no inferred field approval. Cradle's selected physical
@@ -233,7 +232,7 @@ implementation; this successor corrects them and retains regression cases.
 
 The declared employee/payroll and material commercial/project populations are
 implemented. Full company acceptance remains integration-owned. Material residuals
-are invoice-specific industrial cash allocation, unresolved current sales-tax
+are unresolved current sales-tax
 applicability, full physical transaction-month attribution for selected operating
 chains, whole-population uranium custody beyond the selected September successor, and exercised
 runtime access/restore behavior. Asset/facility inventories and corporate treasury
@@ -294,3 +293,23 @@ August legal balance rows were independently rechecked against the finance
 successor's legal trial balance. ARU consumable quantities retain their explicit
 equivalent-unit valuation basis; they must not be relabeled physical stock counts.
 The selected RWH custody lots remain a bounded subset of the full inventory value.
+
+## Dated industrial invoice and remittance successor
+
+The final allocation replaces the earlier newly authored equal-customer pool with
+weights from actual August invoice billings. `invoice_settlement.py` supplies 113
+industrial customer invoice records, 113 dated aging rows and 29 August 28 source
+cash allocations. The 33 current ARU/BST/RWH invoices keep their exact existing
+IDs, issuers and principals. Historical opening invoices receive expressly new
+fictional issue/due dates, including the $80,000 fully reserved legacy dispute.
+Their opening plus billed minus collected equals closing gross; subtracting the
+unchanged allowance gives the original net customer and legal-book totals.
+
+Aging is explicitly **days past due**, not days since issue. The ARU source's
+$700,000 and $300,000 older balances and $80,000 disputed balance remain in the
+31–60, 61–90 and over-90 bands. The current/0–30 band includes not-due balances.
+Overdue collectible balances carry September 20 follow-up dates; none is silently
+written off or treated as cash. August source collections remain $3,829,683 ARU
+group and $2,993,750 RWH. Weighted amounts round HALF_UP to cents, with the final
+sorted customer receiving the residual. The authored dates and clearing references
+complete the fiction and are not independent bank confirmation. No new GL is posted.

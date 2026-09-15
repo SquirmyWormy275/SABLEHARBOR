@@ -2,6 +2,7 @@
 
 import json
 from collections import defaultdict
+from decimal import ROUND_HALF_UP
 from decimal import Decimal as D
 
 
@@ -53,10 +54,35 @@ def extend(source, tables):
                 )
                 if not candidates:
                     raise ValueError("Receivable customer population missing")
-                values = [allocate(v, len(candidates)) for v in (opening, debit, credit, closing)]
+                billings = {
+                    c: sum(
+                        D(r["principal_usd"])
+                        for r in tables["current_invoices"]
+                        if r["customer_id"] == c
+                    )
+                    for c in candidates
+                }
+                if sum(billings.values()) != debit:
+                    raise ValueError("Actual invoice customer billings differ from source AR")
+
+                def weighted(total, candidates=candidates, billings=billings, debit=debit):
+                    result = []
+                    used = D(0)
+                    for index, customer in enumerate(candidates):
+                        value = (
+                            (total * billings[customer] / debit).quantize(
+                                D(".01"), rounding=ROUND_HALF_UP
+                            )
+                            if index < len(candidates) - 1
+                            else total - used
+                        )
+                        result.append(value)
+                        used += value
+                    return result
+
+                openings, closings = weighted(opening), weighted(closing)
                 for i, customer in enumerate(candidates):
-                    # Collections bridge opening, billed and closing amounts.
-                    op, bill, close = values[0][i], values[1][i], values[3][i]
+                    op, bill, close = openings[i], billings[customer], closings[i]
                     collection = op + bill - close
                     allowance = D("80000") if customer == "ARU-C-025" else D(0)
                     customers.append(
@@ -75,8 +101,10 @@ def extend(source, tables):
                             closing_gross_usd=money(close + allowance),
                             allowance_provision_usd="0.00",
                             allowance_writeoff_usd="0.00",
-                            allocation_basis="New synthetic equal customer allocation; "
-                            "not a change to contract issuer or an asserted invoice aging file",
+                            allocation_basis=(
+                                "New balances weighted by actual August invoices; "
+                                "dated invoice/remittance rows reconcile without new GL"
+                            ),
                         )
                     )
             elif account == "2000":
@@ -206,10 +234,16 @@ def extend(source, tables):
         current_legal_balance_bridges=legal,
         current_asset_source_population=assets,
     )
+    from .invoice_settlement import extend as extend_invoices
+
+    extend_invoices(source, tables)
     validate(tables)
 
 
 def validate(tables):
+    from .invoice_settlement import validate as validate_invoices
+
+    validate_invoices(tables)
     from .completed_period import read
 
     controls = {r["control_id"]: r for r in tables["current_balance_controls"]}

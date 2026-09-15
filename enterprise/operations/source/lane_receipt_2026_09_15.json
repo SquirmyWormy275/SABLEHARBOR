@@ -26,14 +26,15 @@
     "enterprise/operations/current_records.py",
     "enterprise/operations/current_balances.py",
     "enterprise/operations/september_custody.py",
-    "enterprise/ccf/company_closeout/shipment.py"
+    "enterprise/ccf/company_closeout/shipment.py",
+    "enterprise/operations/invoice_settlement.py"
   ],
   "reproduction_commands": [
     "python -m enterprise.operations.completed_period",
     "python -m enterprise.operations.completed_period --check",
     "python -m enterprise.operations.september_custody",
     "python -m enterprise.operations.september_custody --check",
-    "python -m pytest enterprise/operations/tests/test_completed_period.py enterprise/operations/tests/test_current_records.py enterprise/operations/tests/test_current_balances.py enterprise/operations/tests/test_september_custody.py -q"
+    "python -m pytest enterprise/operations/tests/test_completed_period.py enterprise/operations/tests/test_current_records.py enterprise/operations/tests/test_current_balances.py enterprise/operations/tests/test_september_custody.py enterprise/operations/tests/test_invoice_settlement.py -q"
   ],
   "independent_reperformance": [
     "current_records.verify_current_finance(edition, legacy_snapshot, anchor_rows): original independent legacy and industrial journal source comparison; zero additional journal",
@@ -51,14 +52,6 @@
     "corporate": "SHIlegalbook paidcost11968000 decomposition ->ESS/IA/J2/corporate payroll/approvals ->tradeAR/AP/inventoryzero source bridge ->9000000carrying assetcomponents; financing/tax/treasury remain finance integration"
   },
   "residuals": [
-    {
-      "id": "B-RES-01",
-      "affected_claim": "Invoice-specific industrial cash receipt/aging",
-      "missing": "New customer-level collections are allocated centralized-source pool records; they are not a recovered exact invoice-remittance allocation or independent bank confirmation.",
-      "source": "industrial/source/finance.json working_capital_support/legal_book_policy",
-      "next_owner": "integration/finance",
-      "unaffected": "Completecustomerpool, net/gross/allowance andlegal booktotals reconcile."
-    },
     {
       "id": "B-RES-02",
       "affected_claim": "Whole physical August inventory/dispatch population",
@@ -98,8 +91,8 @@
   "validation_receipt": {
     "recorded_at": "2026-09-15",
     "dependency_environment": "SABLEHARBOR-company-closeout/.venv Python with repository locked dependencies",
-    "focused_cases": 62,
-    "focused_result": "PASS; completed_period21 + current_records20 + current_balances11 + september_custody10",
+    "focused_cases": 72,
+    "focused_result": "PASS; completed_period21 + current_records20 + current_balances11 + september_custody10 + invoice_settlement10",
     "ruff": "PASS on all changed generators and tests",
     "august_and_september_regeneration_checks": "PASS; rerun for final integration source_commit",
     "diff_check": "PASS",
@@ -107,5 +100,14 @@
     "independent_review": "Controls lane reproduced original chronologic, tax-component, IA approval and effective-state defects; corrected21+20 suites independently passed. Final balance and custody source integration requires composite review.",
     "historical_broad_operations_suite": "224casesPASS before later bounded additions; final composed-head broadchecks remain integration-owned",
     "limitations": "These are implementation and synthetic source checks, not audit opinion, independent bank confirmation or deployment evidence."
-  }
+  },
+  "completed_resolutions": [
+    {
+      "id": "B-RES-01",
+      "status": "IMPLEMENTED_PENDING_INTEGRATION_ACCEPTANCE",
+      "result": "113datedindustrialcustomerinvoices,113agingrows,29receipts; actualAugustinvoiceIDs/issuers/principals bind33currentindustrialinvoices. Historicinvoice dates and receiptallocation newlyauthored; customerpools nowweighted byactualbillings, not prior equalallocation. $80kfullyreserveddisputeand700k/300kolderDPDbuckets retained. No independentbankconfirmationclaimed.",
+      "source": "enterprise/operations/invoice_settlement.py"
+    }
+  ],
+  "invoice_rounding": "ROUND_HALF_UPtocents for weightedallocations; last sortedcustomer receivescentresidual. Aging isdayspastdue, currentincludesnotdueand0-30DPD."
 }

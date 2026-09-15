@@ -890,6 +890,7 @@ def build(source=None):
         CURRENT_SOURCE,
         "enterprise/operations/current_records.py",
         "enterprise/operations/current_balances.py",
+        "enterprise/operations/invoice_settlement.py",
         "enterprise/operations/source/lane_receipt_2026_09_15.json",
     ]
     hashes = {p: hashlib.sha256((ROOT / p).read_bytes()).hexdigest() for p in sorted(set(inputs))}
