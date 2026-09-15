@@ -131,3 +131,9 @@ changes made while it ran, as intended; a final clean-source build is required
 for its package identity. The independent reperformance compares 9,778 ARU/BST
 legal legs unchanged and reproduces the seven-source $13,325,751.3907 predecessor
 funding population. Five additional proportional-request tests pass.
+
+[Treasury, debt/security and investor reading route](TREASURY_AND_INVESTOR_ROUTE.md)
+adds the bounded September–November 13-week view, exact monthly bridges, native
+cash-leg population and unavailable-member-cash sensitivity. It distinguishes
+known source payment dates from uniform within-month allocation and keeps
+security/holder-rights evidence gaps separate from arithmetic completeness.

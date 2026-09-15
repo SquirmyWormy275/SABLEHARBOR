@@ -225,6 +225,8 @@ def build(allow_working_tree=False, *, company_closeout=False):
         report(output)
         from enterprise.closeout.tax_sensitivity import run as tax_sensitivity
         tax_sensitivity(output)
+        from enterprise.closeout.treasury import build as treasury
+        treasury(output)
     inventory = {
         str(p.relative_to(output)): hashlib.sha256(p.read_bytes()).hexdigest()
         for p in sorted(output.rglob("*"))
