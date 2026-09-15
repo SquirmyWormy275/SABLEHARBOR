@@ -72,7 +72,7 @@ class ParentTax:
                 ca=D(800)
                 state_reserve=ca_exposure-ca
                 # ATI adds back interest; DDA already removed in this reserved deduction calculation.
-                ati=max(federal_common-ca+interest+asset['federal_depreciation'],D(0));limit=ati*D('.30')
+                ati=max(federal_common-ca+interest+asset['federal_depreciation']+research_amort,D(0));limit=ati*D('.30')
                 interest_used=min(interest+interest_cf,limit)
                 interest_cf+=interest-interest_used
                 fed_before=federal_common-ca+interest-interest_used

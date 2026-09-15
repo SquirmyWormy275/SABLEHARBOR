@@ -95,3 +95,24 @@ Reproduce with the company finance builder. `historical_tax_events.csv` and
 closing cash, financing and tax calculation. These files are not independent
 external confirmations. Tests reject broken cash continuity, extra financing,
 wrong pre/post-2018 rates and conflation of book loss with federal NOL.
+
+## Book depreciation correction required by the authored vintage
+
+The original calibration contained the $9M equipment without accumulated book
+ depreciation. The authored January 2023 service date therefore also requires
+book depreciation; it cannot support a tax-only deduction with perpetual book
+carrying value. The successor debits opening accumulated deficit and credits
+LEG_1590 accumulated depreciation **$3,857,142.8571** for 36/84 months. It posts
+LEG_6300/LEG_1590 monthly **$107,142.8571** through December 2029, with documented
+December rounding residuals retiring the original $9M exactly. This is a separate
+noncash equipment correction, not part of the $30M goodwill correction. Original
+source production cash costs contain no DDA, so payroll/cash costs are not charged
+again. August 2026 gross cost remains $9M, accumulated depreciation is
+$4,714,285.7139 and net carrying amount $4,285,714.2861.
+
+Both build passes apply that source correction once before tax-asset measurement.
+Historical NOL uses original cash-cost losses plus actual tax depreciation; it
+does not deduct the new book correction again. Federal opening NOL also includes
+the separately paid 2023–2025 California minima ($2,400). For 2026 onward section
+163(j) ATI adds back the remaining section 174 amortization as well as tax asset
+depreciation, consistent with the post-2024 allowable-amortization rule.
