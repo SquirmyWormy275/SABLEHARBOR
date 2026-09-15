@@ -49,6 +49,34 @@ def verify_identity(completed_manifest, completed, finance_identity, september, 
         raise ValueError("Wrong completed-period edition")
 
 
+def verify_csv_tables(completed_dir, tables):
+    """Compare nested JSON by typed content and scalar CSV fields exactly."""
+    for name, expected in tables.items():
+        with (completed_dir / (name + ".csv")).open(newline="") as stream:
+            reader = csv.DictReader(stream)
+            rows = list(reader)
+            fields = reader.fieldnames or []
+        keys = {key for row in expected for key in row}
+        if len(fields) != len(set(fields)) or set(fields) != keys or len(rows) != len(expected):
+            raise ValueError(f"CSV/JSON population mismatch: {name}")
+        for actual, source in zip(rows, expected, strict=True):
+            for key in keys:
+                value = source.get(key)
+                cell = actual[key]
+                if isinstance(value, (dict, list)):
+                    try:
+                        # Canonical JSON preserves number/bool type distinction too.
+                        match = json.dumps(json.loads(cell), sort_keys=True) == json.dumps(
+                            value, sort_keys=True
+                        )
+                    except (ValueError, TypeError):
+                        match = False
+                else:
+                    match = cell == ("" if value is None else str(value))
+                if not match:
+                    raise ValueError(f"CSV/JSON population mismatch: {name}/{key}")
+
+
 def reperform(completed_dir, finance_dir, september_dir, revision):
     paths = [
         completed_dir / "manifest.json",
@@ -68,22 +96,7 @@ def reperform(completed_dir, finance_dir, september_dir, revision):
     verify_hashes(ROOT, identity["source_files"])
     verify_hashes(ROOT, september["source_hashes"])
     tables = edition["tables"]
-    # CSV populations must remain the exact materialization of the JSON records.
-    for name, expected in tables.items():
-        path = completed_dir / (name + ".csv")
-        with path.open(newline="") as stream:
-            rows = list(csv.DictReader(stream))
-        normalized = [
-            {
-                k: json.dumps(v) if isinstance(v, (dict, list)) else "" if v is None else str(v)
-                for k, v in row.items()
-            }
-            for row in expected
-        ]
-        keys = {key for row in normalized for key in row}
-        normalized = [{key: row.get(key, "") for key in keys} for row in normalized]
-        if rows != normalized:
-            raise ValueError(f"CSV/JSON population mismatch: {name}")
+    verify_csv_tables(completed_dir, tables)
     journal_path = finance_dir / "enterprise/enterprise_journal.csv"
     tb_path = finance_dir / "enterprise/legal_monthly_trial_balances.csv"
     journal = list(csv.DictReader(journal_path.open()))
