@@ -110,3 +110,24 @@ Tax effective history, provision, state apportionment, historical holder bases,
 exact participation rights, independent settlement and 13-week cash timing are
 not supplied by this partial build. See [tax history workpaper](TAX_HISTORY.md).
 No issue closure or completed SH-C04 claim follows from this record.
+
+### Proportional request implementation
+
+`enterprise/closeout/capital.py` implements total × established participation
+share with largest-remainder cents and stable holder-ID tie breaking. It rejects
+missing/duplicate holders, shares not totaling one, mixed sources and a rounded
+or unestablished basis. It retains supplied economic/voting rights unchanged;
+request, commitment, receipt and issuance are distinct. Its synthetic test
+holders are computational fixtures, not Sable Harbor subscribers. It deliberately
+cannot turn the approximate 66.5/33.5 groups into a cap table or receipts.
+
+### Retained correction/retest history
+
+An intermediate change renamed the runtime land bridge action and failed one
+existing regression. The implementation restored `ADD_RUNTIME_LAND_OVERLAY`
+and introduced `ADD_GOODWILL_OPENING_CORRECTION` only for the new correction;
+all 24 finance/tax/runtime tests then passed. A development build rejected source
+changes made while it ran, as intended; a final clean-source build is required
+for its package identity. The independent reperformance compares 9,778 ARU/BST
+legal legs unchanged and reproduces the seven-source $13,325,751.3907 predecessor
+funding population. Five additional proportional-request tests pass.
