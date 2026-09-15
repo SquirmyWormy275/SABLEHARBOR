@@ -7,6 +7,7 @@ A model cannot acquire authority by emitting a role, citation or instruction.
 from __future__ import annotations
 
 import json
+import math
 import os
 import stat
 import urllib.error
@@ -45,7 +46,15 @@ def _json(text: str | bytes):
     def nonfinite(value):
         raise ValueError("Non-finite JSON number")
 
-    return json.loads(text, object_pairs_hook=pairs, parse_constant=nonfinite)
+    def finite_float(value):
+        number = float(value)
+        if not math.isfinite(number):
+            raise ValueError("Non-finite JSON number")
+        return number
+
+    return json.loads(
+        text, object_pairs_hook=pairs, parse_constant=nonfinite, parse_float=finite_float
+    )
 
 
 def _private_json(path: Path) -> dict:

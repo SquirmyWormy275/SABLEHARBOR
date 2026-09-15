@@ -88,7 +88,14 @@ def test_authoring_requires_typed_draft():
 def test_duplicate_and_nonfinite_json_rejected():
     from enterprise.audit_suite.inference import _json
 
-    for value in ['{"text":"first","text":"second"}', '{"x":NaN}']:
+    for value in [
+        '{"text":"first","text":"second"}',
+        '{"x":NaN}',
+        '{"x":Infinity}',
+        '{"x":-Infinity}',
+        '{"nested":[1e999]}',
+        '{"nested":{"x":-1e999}}',
+    ]:
         with pytest.raises(ValueError):
             _json(value)
 

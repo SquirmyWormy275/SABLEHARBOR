@@ -30,7 +30,9 @@ Configuration and plan files must be private regular JSON, at most 512 KiB each;
 duplicate keys, non-finite values, aliases and changing input files are rejected.
 The report supports at most 64 selected sources, with per-component snapshots and
 final authority, registry, revision and scope checks. No arbitrary queries, directory
-discovery, automatic retries or overwrites are provided.
+discovery, automatic retries or overwrites are provided. Native JSON bodies also
+reject duplicate keys at any depth and non-finite numbers before analysis; a
+matching raw-byte hash does not resolve ambiguous semantic fields.
 
 The output retains `REPORT.json`, `PLAN.json` and a hash manifest. It distinguishes
 exact dependency matches, missing selected targets, temporal conflicts, role support,
@@ -44,7 +46,23 @@ An optional `iam_review_contracts` array checks exact quarterly membership hashe
 decision-to-member references, selected application rights and listed HR originals.
 All supporting references share the existing 64-source budget; omitted support is
 reported without searching for substitutes. Recorded removal decisions remain
-separate from execution, which this report does not verify. See the
+separate from execution, which that contract does not verify. See the
 [native review contract](../../docs/internal/development/audit-suite/AQ_IAM_NATIVE_REVIEW_RECONCILIATION_2026-09-14.md)
 for fields, cutoff semantics and validation evidence. Omitting this optional array
 preserves the previous report shape.
+
+The optional `access_remediation_contracts` array adds observations about selected
+local removal requests, execution attempts, permission state and operating probes.
+It accepts at most four contracts within the same 64-source budget and requires
+SH-IAM-007 in the assigned control scope. Results appear in
+`access_remediation_reconciliation`; the native parent review and unresolved
+population limitations remain separate. Both optional contract arrays may coexist.
+See the [local removal observation contract](../../docs/internal/development/audit-suite/AQ_ACCESS_REMEDIATION_RECONCILIATION_2026-09-14.md).
+
+The manifest retains the original `module_sha256` string and adds
+`analysis_modules_sha256` for the active analysis modules, including transitive
+IAM checks used by removal observations and the maintained strict JSON parser. Their source-file hashes are captured
+before analysis and rechecked immediately before publication. These are maintained
+source-file observations, not loaded-binary attestation or a complete Python
+dependency inventory. A change during analysis prevents publication. Earlier
+reports retain their original manifest shape and bytes.

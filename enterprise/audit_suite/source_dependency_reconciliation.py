@@ -8,6 +8,7 @@ from pathlib import Path
 from .company_collection import binding
 from .company_source_census import instant
 from .explanation_binding import _private, _write
+from .inference import _json
 from .operating_source_bridge import encoded, sha
 from .portfolio_explanation import capture, validate_capture_authority
 from .private_publication import publish
@@ -345,20 +346,10 @@ def _check_current(engine, actor, eid, original, report):
 
 
 def reconcile(engine, actor_id, engagement_id, plan):
+    required = {"registry_sha256", "scope_sha256", "source_refs", "adapters", "period_contracts"}
+    optional = {"iam_review_contracts", "access_remediation_contracts"}
     require(
-        isinstance(plan, dict)
-        and set(plan)
-        in (
-            {"registry_sha256", "scope_sha256", "source_refs", "adapters", "period_contracts"},
-            {
-                "registry_sha256",
-                "scope_sha256",
-                "source_refs",
-                "adapters",
-                "period_contracts",
-                "iam_review_contracts",
-            },
-        ),
+        isinstance(plan, dict) and required <= set(plan) <= required | optional,
         "Exact reconciliation plan required",
     )
     require(getattr(engine.company_store, "is_federated", False), "Explicit portfolio required")
@@ -423,9 +414,9 @@ def reconcile(engine, actor_id, engagement_id, plan):
     bodies = {}
     for source in sources:
         try:
-            body = json.loads(files[source["path"]])
-        except (ValueError, UnicodeError) as error:
-            raise DomainError("Selected adapter input must be native JSON") from error
+            body = _json(files[source["path"]])
+        except (ValueError, UnicodeError, RecursionError) as error:
+            raise DomainError("Selected adapter input must be strict finite native JSON") from error
         require(isinstance(body, dict), "Selected native JSON object required")
         bodies[source["id"]] = body
     result = analyze(plan, sources, bodies, state["scope"])
@@ -435,6 +426,13 @@ def reconcile(engine, actor_id, engagement_id, plan):
         require("SH-IAM-007" in controls, "IAM review contracts outside assigned controls")
         result["iam_review_reconciliation"] = checks(
             plan["iam_review_contracts"], sources, bodies, state["scope"]
+        )
+    if "access_remediation_contracts" in plan:
+        from .access_remediation_reconciliation import analyze as analyze_remediation
+
+        require("SH-IAM-007" in controls, "Access remediation contracts outside assigned controls")
+        result["access_remediation_reconciliation"] = analyze_remediation(
+            plan["access_remediation_contracts"], sources, bodies, state["scope"]
         )
     result.update(
         schema="SOURCE_DEPENDENCY_PERIOD_REPORT_V1",
@@ -470,6 +468,16 @@ def reconcile(engine, actor_id, engagement_id, plan):
     return result
 
 
+def _analysis_source_pins(plan):
+    """Maintained analysis source files, not loaded-binary or full dependency attestation."""
+    names = ["source_dependency_reconciliation.py", "inference.py"]
+    if "iam_review_contracts" in plan or "access_remediation_contracts" in plan:
+        names.append("iam_review_reconciliation.py")
+    if "access_remediation_contracts" in plan:
+        names.append("access_remediation_reconciliation.py")
+    return {name: sha((Path(__file__).parent / name).read_bytes()) for name in names}
+
+
 def write_report(engine, actor_id, engagement_id, plan, *, output):
     plan = json.loads(encoded(plan))
     output = Path(output).absolute()
@@ -483,6 +491,7 @@ def write_report(engine, actor_id, engagement_id, plan, *, output):
         not any(output.resolve().is_relative_to(p.resolve()) for p in inputs),
         "Output must be outside original audit/source stores",
     )
+    analysis_pins = _analysis_source_pins(plan)
     report = reconcile(engine, actor_id, engagement_id, plan)
     with tempfile.TemporaryDirectory(
         prefix=".source-reconciliation-", dir=output.parent
@@ -493,10 +502,15 @@ def write_report(engine, actor_id, engagement_id, plan, *, output):
             _write(stage / name, raw)
         manifest = {
             "files": {name: sha(raw) for name, raw in values.items()},
-            "module_sha256": sha(Path(__file__).read_bytes()),
+            "module_sha256": analysis_pins["source_dependency_reconciliation.py"],
+            "analysis_modules_sha256": analysis_pins,
+            "analysis_pin_scope": "MAINTAINED_SOURCE_FILES_NOT_LOADED_BINARY_ATTESTATION",
             "plan_sha256": digest(plan),
         }
         _write(stage / "MANIFEST.json", encoded(manifest))
         _check_current(engine, actor_id, engagement_id, report["engagement"], report)
+        require(
+            _analysis_source_pins(plan) == analysis_pins, "Analysis source changed during report"
+        )
         publish(stage, output)
     return {"path": str(output), "manifest_sha256": sha(encoded(manifest))}

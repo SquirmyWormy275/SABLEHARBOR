@@ -200,6 +200,13 @@ def create_app(
         company_profile=company_profile,
         **({"repository": repository} if repository else {}),
     )
+    # Cookies are scoped by host/path, not port. Separate local workrooms must
+    # not overwrite each other's browser sessions. This is a stable namespace,
+    # not a secret or an authorization decision; Store still validates tokens.
+    session_cookie_name = (
+        "sh_audit_session_"
+        + hashlib.sha256(str(engine.store.root.resolve()).encode("utf-8")).hexdigest()[:32]
+    )
     app = FastAPI(
         title="Sable Harbor audit training", docs_url=None, redoc_url=None, openapi_url=None
     )
@@ -263,7 +270,7 @@ def create_app(
                 raise DomainError("Bearer credential required", status=401)
             return engine.store.authenticate(bearer[7:])
         return engine.store.session(
-            request.cookies.get("sh_audit_session", ""),
+            request.cookies.get(session_cookie_name, ""),
             csrf=request.headers.get("x-csrf-token"),
             mutation=mutation,
         )
@@ -293,7 +300,7 @@ def create_app(
         session = await asyncio.to_thread(engine.store.login, credential)
         response = JSONResponse({"viewer": session["viewer"], "csrf_token": session["csrf"]})
         response.set_cookie(
-            "sh_audit_session",
+            session_cookie_name,
             session["token"],
             httponly=True,
             secure=secure_cookie,
@@ -306,9 +313,9 @@ def create_app(
     @app.post("/api/logout")
     async def logout(request: Request):
         actor(request, mutation=True)
-        engine.store.logout(request.cookies.get("sh_audit_session", ""))
+        engine.store.logout(request.cookies.get(session_cookie_name, ""))
         response = JSONResponse({"logged_out": True})
-        response.delete_cookie("sh_audit_session", path="/")
+        response.delete_cookie(session_cookie_name, path="/")
         return response
 
     @app.get("/api/bootstrap")

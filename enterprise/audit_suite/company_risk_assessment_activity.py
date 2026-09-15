@@ -54,6 +54,7 @@ class RiskAssessmentRecipe:
     closeout_at: str
     period_end_exclusive: str
     local_method_basis: str
+    change_observation: str = "OVERRIDE_THEN_ALLOWED"
 
 
 def score(scenario):
@@ -116,6 +117,12 @@ def _reference(link, row, fields=FIELDS):
 
 
 def _sources(source_roots, recipe, at):
+    if recipe.change_observation not in ("OVERRIDE_THEN_ALLOWED", "BLOCKED_THEN_ALLOWED"):
+        raise CompanyStoreError("Explicit supported change observation required")
+    prevented = recipe.change_observation == "BLOCKED_THEN_ALLOWED"
+    expected_decision = "BLOCKED" if prevented else "OVERRIDE_USED"
+    expected_rule = "LOCAL-AUTHORIZATION-BLOCKED" if prevented else "LOCAL-AUTHORIZATION-OVERRIDE"
+
     if (
         not isinstance(recipe.source_groups, tuple)
         or len(recipe.source_groups) != 4
@@ -178,7 +185,9 @@ def _sources(source_roots, recipe, at):
     alert_row, alert = select("log", "detection_alerts")
     gate_row, gate = select("change", "release_gate", "GATE-PROPOSED")
     corrected_row, corrected = select("change", "release_gate", "GATE-CORRECTED")
-    release_row, release = select("change", "local_releases", "RELEASE-PROPOSED")
+    release_row, release = select(
+        "change", "local_releases", "RELEASE-CORRECTED" if prevented else "RELEASE-PROPOSED"
+    )
     if (
         incident.get("outage_cause") != "NOT_ESTABLISHED_FROM_PROBE_RECORDS"
         or incident.get("incident_id") != monitor.get("incident_id")
@@ -211,22 +220,23 @@ def _sources(source_roots, recipe, at):
         or event.get("event_sha256")
         != sha(encoded({k: v for k, v in event.items() if k != "event_sha256"}))
         or alert.get("source_event_sha256") != event.get("event_sha256")
-        or alert.get("rule_id") != "LOCAL-AUTHORIZATION-OVERRIDE"
-        or gate.get("decision") != "OVERRIDE_USED"
-        or gate.get("peer_review") is not None
+        or alert.get("rule_id") != expected_rule
+        or gate.get("decision") != expected_decision
+        or (not prevented and gate.get("peer_review") is not None)
+        or (prevented and not isinstance(gate.get("peer_review"), dict))
         or corrected.get("decision") != "ALLOWED"
         or datetime.fromisoformat(_time(corrected_row["event_at"]))
         <= datetime.fromisoformat(_time(gate_row["event_at"]))
     ):
         raise CompanyStoreError(
-            "Correlated historical override, alert and later allowed gate required"
+            "Correlated explicit gate observation and later allowed gate required"
         )
     for earlier, later in (
         (monitoring_row, review_row),
         (inventory_row, provider_row),
         (gate_row, event_row),
         (event_row, alert_row),
-        (gate_row, release_row),
+        (corrected_row if prevented else gate_row, release_row),
     ):
         if datetime.fromisoformat(_time(earlier["event_at"])) > datetime.fromisoformat(
             _time(later["event_at"])
@@ -240,9 +250,20 @@ def _sources(source_roots, recipe, at):
             "version": renamed.get("version"),
             "sha256": renamed.get("sha256"),
         },
-        gate_row,
+        corrected_row if prevented else gate_row,
         ("system", "record", "version", "sha256"),
     )
+
+    if prevented and (
+        _time(corrected_row["available_at"]) > _time(release_row["event_at"])
+        or _time(renamed.get("available_at")) != _time(corrected_row["available_at"])
+    ):
+        raise CompanyStoreError("Corrected authorization must be available before release")
+    if prevented and (
+        release.get("artifact") != corrected.get("artifact")
+        or alert.get("severity") != "LOCAL_EXERCISE_INFORMATIONAL"
+    ):
+        raise CompanyStoreError("Prevented observation and exact corrected release required")
 
     def refs(group):
         return [
@@ -275,6 +296,11 @@ def _sources(source_roots, recipe, at):
         "INTERNAL_CHANGE": {
             "observations": {
                 "historical_gate_decision": gate["decision"],
+                **(
+                    {"observed_bypass": False, "observation_kind": "PREVENTED_LOCAL_ATTEMPT"}
+                    if prevented
+                    else {}
+                ),
                 "historical_gate_at": gate_row["event_at"],
                 "later_gate_decision": corrected["decision"],
                 "later_gate_at": corrected_row["event_at"],
@@ -285,7 +311,11 @@ def _sources(source_roots, recipe, at):
                 "A future unauthorized change could bypass exact-artifact review "
                 "and harm service reliability"
             ),
-            "scenario_status": "HYPOTHETICAL_RECURRENCE_NOT_CURRENT_UNREMEDIATED_EVENT",
+            "scenario_status": (
+                "HYPOTHETICAL_FUTURE_PREVENTION_FAILURE_NOT_OBSERVED_BYPASS"
+                if prevented
+                else "HYPOTHETICAL_RECURRENCE_NOT_CURRENT_UNREMEDIATED_EVENT"
+            ),
             "source_records": refs("log") + refs("change"),
             "native_site_qualifiers": gate["site_references_only"],
             "risk_family": "SH-RISK-TECH-002",

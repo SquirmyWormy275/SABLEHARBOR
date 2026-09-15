@@ -370,3 +370,74 @@ collection. Independent reopening verified every retained original hash and all
 sealed capsule members. `collection-v1/RECEIPT.json` and
 `collection-v1/POSTRUN_VERIFICATION.json` retain the checks. The existing
 reference-v5 audit and its 559-original inventory were not changed by this run.
+
+The optional [local removal reconciliation](AQ_ACCESS_REMEDIATION_RECONCILIATION_2026-09-14.md)
+connects exact selected parent-review originals to request, resolver, execution,
+state and operating-probe versions. Observations distinguish consistency,
+missing selected support and unsupported metadata verification; they do not
+close the parent review or accept its population. The actual trusted CLI report
+under `company-access-remediation-2026-09-14/reconciliation-v1/report/` read
+16 native versions without changing audit work. Independent SQL verification
+compared all 86 parent/remediation runtime versions with sealed originals and
+confirmed the remaining-access and corrected-state observations. Temporary
+report-context grants were revoked.
+
+The production report was published successfully. Its historical private wrapper
+then used `MANIFEST.members` instead of the report's `MANIFEST.files`; that
+post-publication error and original output remain preserved.
+`POSTRUN_VERIFICATION.json` independently checks retained hashes and source facts,
+with the initial audit-database comparison explicitly limited to the assertions
+reached before that wrapper error. No separately retained initial digest is
+invented. Later reports add active analysis/parser source-file pins and reject
+changes before publication; historical reports keep their original manifests.
+
+Native JSON parsing now rejects duplicate fields at every depth, non-finite
+numeric constants and exponent overflow before analysis. Matching raw-byte hashes
+do not resolve conflicting semantic fields. The shared strict parser preserves
+ordinary finite JSON numbers; these are parsing checks, not model or grading calls.
+
+The A reference path now has explicit blocked-attempt logging and risk support.
+Logging consumes the blocked and later allowed gate, retains the exact corrected
+release, and records an informational blocked observation only after actual
+ingestion. Risk retains the prevented-attempt observation separately from an
+authored hypothetical future failure. The override path remains supported; no
+blocked attempt is relabeled as an observed bypass.
+
+The new private `linked-activity-workflow-2026-09-14/reference-a-v1/run/` completed
+eleven V3 jobs with 381 paired versions and eight verified dependency edges. Its
+explicit A selection contains 189 versions, with clean-selected identity and
+backup inputs and A-derived change/log/risk references. Genuine preparation
+capsules and expected native hashes are retained; selected metadata is captured
+once and then frozen. All 115 retained B predecessor files remained unchanged.
+The receipts record base revision `9901aef` plus then-uncommitted logging/risk
+extensions and exact source-file hashes, rather than claiming the extensions
+were included in that earlier commit.
+
+Eleven separate A company runtimes preserve all 381 native versions. The fresh
+`company-portfolio-2026-09-14/reference-a-v1/` audit collected 556 exact originals
+across 13 components and 165 systems: 367 documentary and 189 selected activity
+versions. All 890 history events, future-access denial and exact command replays
+verified. The inventory has explicit activity references for 26 of 70 controls
+and zero unmapped or unmatched selected originals. Its receipts preserve source
+capsules and prior context; the B audit remains separate. This establishes
+selected dependency alignment, not coherent whole-year operations, full scoped
+population coverage, professional assurance or owner acceptance.
+
+The combined paired-source/remediation integration passed 192 tests before the
+subsequent strict-parser followup. The isolated full repository run at `9901aef`
+passed 1,197 tests with three skips and no failures or errors; that earlier
+checkpoint excludes these later logging/risk/report changes. Receipts are
+`paired-profile-remediation-integrated.xml` and
+`repository-9901aef-isolated-2026-09-14.xml`.
+
+The strict-parser/source-pin followup passed 34 integration tests; independent
+review separately passed 59 current reconciliation/parser cases. These include
+ordinary finite JSON, duplicate fields, non-finite constants and exponent
+overflow. The final receipt is `strict-native-json-final-integration.xml`.
+
+[Runtime session isolation](SERVICE_SESSION_ISOLATION_2026-09-14.md) gives each
+private audit runtime a stable opaque cookie name, so local reference viewers
+on different ports can remain signed in within one browser. Login/logout APIs,
+HttpOnly/SameSite/secure settings, bearer access and CSRF checks remain in force.
+Twelve focused service tests passed. Existing services were not implicitly
+restarted; upgraded runtimes require sign-in with the existing credentials.

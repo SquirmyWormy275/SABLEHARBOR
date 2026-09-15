@@ -29,6 +29,7 @@ class LoggingRecipe:
     omission_branch: str
     local_source_id: str
     local_max_ingestion_lag_seconds: int = 120
+    source_scenario: str = "OVERRIDE_THEN_ALLOWED"
 
 
 def event_chain(inputs):
@@ -85,7 +86,7 @@ def reconcile(publisher_events, received):
 def ingest(events, *, excluded_decisions, received_at=None):
     """Actually apply the declared local collector filter to existing publisher events."""
     if not isinstance(excluded_decisions, list) or any(
-        x not in {"OVERRIDE_USED"} for x in excluded_decisions
+        x not in {"OVERRIDE_USED", "BLOCKED"} for x in excluded_decisions
     ):
         raise CompanyStoreError("Explicit bounded collector filter required")
     result = []
@@ -138,6 +139,25 @@ def generate_pair(destination, *, repository, source_root, recipe: LoggingRecipe
         raise CompanyStoreError(
             "Distinct branches and explicit bounded local lag threshold required"
         )
+    scenarios = {
+        "OVERRIDE_THEN_ALLOWED": (
+            "OVERRIDE_USED",
+            "LOCAL-AUTHORIZATION-OVERRIDE",
+            "LOCAL_EXERCISE_HIGH",
+            "AUTH-ALERT",
+        ),
+        "BLOCKED_THEN_ALLOWED": (
+            "BLOCKED",
+            "LOCAL-AUTHORIZATION-BLOCKED",
+            "LOCAL_EXERCISE_INFORMATIONAL",
+            "BLOCKED-OBS",
+        ),
+    }
+    if not isinstance(recipe.source_scenario, str) or recipe.source_scenario not in scenarios:
+        raise CompanyStoreError("Explicit supported native authorization scenario required")
+    first_decision, detection_rule, detection_severity, detection_prefix = scenarios[
+        recipe.source_scenario
+    ]
     originals, source_pin = read_originals(source_root)
     if source_pin != recipe.source_versions_sha256:
         raise CompanyStoreError("Pinned input source versions changed")
@@ -203,10 +223,40 @@ def generate_pair(destination, *, repository, source_root, recipe: LoggingRecipe
                 "source_support": {k: native.get(k) for k in ("artifact", "tests", "peer_review")},
             }
         )
-    if [x["authorization_decision"] for x in inputs] != ["OVERRIDE_USED", "ALLOWED"]:
+    if [x["authorization_decision"] for x in inputs] != [first_decision, "ALLOWED"]:
         raise CompanyStoreError(
-            "Selected originals do not support the explicit override-omission exercise"
+            "Selected originals do not support the explicit authorization scenario"
         )
+    if first_decision == "BLOCKED":
+        releases = [r for r in selected if r["system"] == "local_releases"]
+        if len(releases) != 1:
+            raise CompanyStoreError("Blocked scenario requires only its later allowed release")
+        release = json.loads(releases[0]["content"])
+        allowed = gates[1]
+        expected_gate = {
+            "system_id": allowed["system"],
+            "record_id": allowed["record"],
+            "version": allowed["version"],
+            "sha256": allowed["sha256"],
+            "available_at": _time(allowed["available_at"]),
+        }
+        if (
+            releases[0]["origin"] != "AUTHORED_TRAINING_SOURCE"
+            or release.get("classification") != CHANGE_QUALIFICATION
+            or release.get("artifact") != json.loads(allowed["content"]).get("artifact")
+            or _time(releases[0]["available_at"]) < _time(releases[0]["event_at"])
+        ):
+            raise CompanyStoreError("Qualified release must use exact authorized native artifact")
+        release_gate = release.get("gate")
+        if not isinstance(release_gate, dict) or set(release_gate) != set(expected_gate):
+            raise CompanyStoreError("Exact native release gate reference required")
+        normalized_gate = {**release_gate, "available_at": _time(release_gate["available_at"])}
+        if normalized_gate != expected_gate or _time(releases[0]["event_at"]) < _time(
+            allowed["available_at"]
+        ):
+            raise CompanyStoreError(
+                "Blocked gate cannot release; exact available allowed gate required"
+            )
     events = event_chain(inputs)
     first = datetime.fromisoformat(events[0]["source_event_at"])
     last = datetime.fromisoformat(events[-1]["source_event_at"])
@@ -328,7 +378,7 @@ def generate_pair(destination, *, repository, source_root, recipe: LoggingRecipe
                             "event_type": "release_authorization_decision",
                         }
                     ],
-                    "required_detections": ["LOCAL-AUTHORIZATION-OVERRIDE", "LOCAL-COLLECTION-GAP"],
+                    "required_detections": [detection_rule, "LOCAL-COLLECTION-GAP"],
                     "owner_id": owner,
                     "local_max_ingestion_lag_seconds": recipe.local_max_ingestion_lag_seconds,
                     "inventory_basis": "EXPLICIT_LOCAL_EXERCISE_INVENTORY_NOT_ENTERPRISE_CENSUS",
@@ -358,7 +408,7 @@ def generate_pair(destination, *, repository, source_root, recipe: LoggingRecipe
                     "head_sha256": events[-1]["event_sha256"],
                 },
             )
-            exclusions = ["OVERRIDE_USED"] if branch == recipe.omission_branch else []
+            exclusions = [first_decision] if branch == recipe.omission_branch else []
             config = emit(
                 "collector_configuration",
                 "COLLECTOR-CONFIG",
@@ -377,15 +427,15 @@ def generate_pair(destination, *, repository, source_root, recipe: LoggingRecipe
                         item["received_at"],
                         {**item, "collector_configuration": config_ref},
                     )
-                    if event["authorization_decision"] == "OVERRIDE_USED":
+                    if event["authorization_decision"] == first_decision:
                         alerts.append(
                             emit(
                                 "detection_alerts",
-                                f"AUTH-ALERT-{event['sequence']}",
+                                f"{detection_prefix}-{event['sequence']}",
                                 item["received_at"],
                                 {
-                                    "rule_id": "LOCAL-AUTHORIZATION-OVERRIDE",
-                                    "severity": "LOCAL_EXERCISE_HIGH",
+                                    "rule_id": detection_rule,
+                                    "severity": detection_severity,
                                     "owner_id": owner,
                                     "ingestion": receipt,
                                     "source_event_sha256": event["event_sha256"],
@@ -535,6 +585,8 @@ def generate_pair(destination, *, repository, source_root, recipe: LoggingRecipe
                     "source_original_hashes": [r["sha256"] for r in gates],
                 }
             )
+        if read_originals(source_root)[1] != source_pin:
+            raise CompanyStoreError("Original change source changed during logging generation")
         result = {
             "schema": "LOCAL_SECURITY_LOGGING_PAIR_V1",
             "recipe": asdict(recipe),

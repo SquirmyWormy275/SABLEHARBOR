@@ -106,6 +106,7 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Identity period slice and remaining coverage](../../internal/development/audit-suite/AQ04_IDENTITY_PERIOD_SLICE_2026-09-14.md) — MD
 - [Incident and continuity activity slice](../../internal/development/audit-suite/AQ04_INCIDENT_CONTINUITY_SLICE_2026-09-14.md) — MD
 - [Bounded mover source collection](../../internal/development/audit-suite/AQ04_MOVER_SOURCE_COLLECTION_2026-09-14.md) — MD
+- [Selected local access-remediation observations](../../internal/development/audit-suite/AQ_ACCESS_REMEDIATION_RECONCILIATION_2026-09-14.md) — MD
 - [Explicit producer metadata capture](../../internal/development/audit-suite/AQ_EXPLICIT_PRODUCER_METADATA_CAPTURE_2026-09-14.md) — MD
 - [Optional IAM007 native review reconciliation](../../internal/development/audit-suite/AQ_IAM_NATIVE_REVIEW_RECONCILIATION_2026-09-14.md) — MD
 - [Exact selected-source prerequisite for linked activity plans](../../internal/development/audit-suite/AQ_LINKED_ACTIVITY_SOURCE_RESOLVER_2026-09-14.md) — MD
@@ -127,6 +128,7 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Local audit-training delivery](../../internal/development/audit-suite/LOCAL_DELIVERY.md) — MD
 - [Navigation continuity foundation](../../internal/development/audit-suite/NAVIGATION_FOUNDATION_IMPLEMENTATION.md) — MD
 - [Audit-suite organization bridge and reconciliation proposal](../../internal/development/audit-suite/ORGANIZATION_RECONCILIATION_2026-09-13.md) — MD
+- [Private-runtime browser sessions](../../internal/development/audit-suite/SERVICE_SESSION_ISOLATION_2026-09-14.md) — MD
 - [Audit workspace UX professionalization](../../internal/development/audit-suite/UX_PROFESSIONALIZATION_WORKFLOW.md) — MD
 
 ## `docs/internal/validation`
@@ -167,6 +169,7 @@ Generated file inventory. Includes current and historical records; open the sour
 
 ## `enterprise/audit_suite`
 
+- [Local access-remediation continuation](../../../enterprise/audit_suite/ACCESS_REMEDIATION_ACTIVITY.md) — MD
 - [Local configuration change and release source pair](../../../enterprise/audit_suite/CHANGE_ACTIVITY.md) — MD
 - [Private companion recovery](../../../enterprise/audit_suite/COMPANION_RECOVERY.md) — MD
 - [Company runtime activation contract](../../../enterprise/audit_suite/COMPANY_RUNTIME_ACTIVATION.md) — MD

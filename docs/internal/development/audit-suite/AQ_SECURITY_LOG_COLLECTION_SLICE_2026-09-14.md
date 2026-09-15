@@ -19,3 +19,30 @@ The actual private run lives under ignored `enterprise/generated/audit-suite/com
 `collection-v1` contains two new isolated SH-SEC-002 audits with identical dates, scope and audit mode. Standard activation, kickoff, issued PBC, discovery and collection commands consume the preexisting originals. All 32 originals are checked against exact source hashes; original configuration version 1 remains alongside version 2. Future-source and revoked-access attempts fail, ordinary retries do not duplicate audit mutations, and temporary native grants are revoked after collection. The two collected histories preserve the initial sequence gap and subsequent backfill difference despite sharing the same audit mode. No prepared world, population, workpaper, finding or test-completion credit is generated.
 
 The technical test/collection receipts are not an independent professional rubric review or an assertion of operational effectiveness. They establish only the documented local source mechanics, immutable original retrieval and bounded command behavior.
+
+## Explicit blocked-attempt source support
+
+`LoggingRecipe.source_scenario` now defaults to `OVERRIDE_THEN_ALLOWED`, retaining
+existing override-source behavior. `BLOCKED_THEN_ALLOWED` selects the actual
+blocked gate followed by the allowed corrected gate from the same qualified
+change source. It requires exactly the later allowed native release, with an
+exact gate reference and valid availability chronology. A blocked gate cannot
+be relabeled as an override or as a completed proposed release.
+
+Both collector branches still consume the same two publisher originals and
+hash chain. The omission filter excludes the actual `BLOCKED` decision in this
+scenario. A received blocked event produces `BLOCKED-OBS-1`, rule
+`LOCAL-AUTHORIZATION-BLOCKED`, with `LOCAL_EXERCISE_INFORMATIONAL` severity.
+This is an observation of the exercised preventive gate, not an override,
+high-privilege incident or professional control conclusion. The same publisher
+reconciliation detects the missing event; correction/backfill produces the
+observation later while retaining the original collection gap and timing.
+There are 32 versions across 20 systems, matching the existing bounded depth.
+Collection-loss severity remains the explicit local collection rule.
+
+Source membership is checked again after generation before publication. New
+scenario tests exercise actual blocked-source ingestion, delayed observation,
+invalid scenario/branch rejection and a changed-source publication failure.
+Existing override tests continue to exercise the default. Previous actual v1
+receipts remain historical; this extension alone creates no new source run,
+company runtime or audit.

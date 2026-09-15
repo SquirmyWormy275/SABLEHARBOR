@@ -16,3 +16,29 @@ Management assignments are explicit local bindings to the scoped technology/chan
 Validation: `tests/audit_suite/test_company_risk_assessment_activity.py` exercises actual upstream generators, factor/domain rejection, native-link contradictions, source preservation and causal backfill. `test_company_risk_assessment_collection.py` activates fresh isolated engagements, issues owner-routed requests, denies future records, collects all initial and later exact versions, verifies replay, revokes temporary grants, and grants no procedure/testing credit.
 
 The private September 14 run retains initial mixed-branch `v1` as historical. `aligned-v2/company` uses the existing incident-messy/provider-omission/logging-omission/change-release-b sources with input availability April 6; the assessment period remains April 1–June 30. These aligned component choices do not establish one coherent operating year. Its isolated collection receipt is `aligned-v2/collection-v1/RECEIPT.json`. Original inputs and previous audits are unchanged. Reproduction requires authorized local source roots and exact pins from its private RECIPE/SOURCE_ROOTS records; no private source content is included in this documentation.
+
+## Prevented-attempt observation input
+
+`RiskAssessmentRecipe.change_observation` defaults to `OVERRIDE_THEN_ALLOWED`.
+The additive `BLOCKED_THEN_ALLOWED` option consumes the same nine-reference,
+four-store contract with these changed native roles: the logging source supplies
+`publisher_events/EVENT-1` and `detection_alerts/BLOCKED-OBS-1`; the change source
+supplies `release_gate/GATE-PROPOSED`, `release_gate/GATE-CORRECTED`, and
+`local_releases/RELEASE-CORRECTED`. All versions and native hashes remain explicit.
+The logging producer must itself have consumed the same blocked gate, including
+its exact producer label, native identity, content hash and publisher event hash.
+
+This path requires a BLOCKED gate, later ALLOWED gate, informational blocked
+observation and corrected release referencing the exact allowed artifact/gate.
+The allowed authorization must be available before release; its embedded
+availability reference must match the native instant. It does not substitute a
+proposed release or invent an override alert. The ledger records a prevented
+local attempt and no observed bypass. Future prevention failure remains an
+explicit hypothetical scenario; likelihood/impact and projected treatment
+scores remain local assumptions, not measured probabilities or acceptance.
+
+Incident cause remains unknown and separate from planned, nonoperating provider
+references. Both downstream assessment branches still receive the same input
+ledger: the actual importer omission and later reconciliation/backfill supply
+their difference. This extension does not generate actual sources by itself or
+establish a coherent company year, employment, deployment or assurance.
