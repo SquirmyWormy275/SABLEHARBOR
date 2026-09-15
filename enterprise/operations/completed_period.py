@@ -259,7 +259,7 @@ def make_roster(source):
                 unit,
                 "CA" if entity == "PS" else "WY",
                 salary,
-                f"{unit} position {n + 1}",
+                f"{unit} position {_n + 1}",
                 "PS_RWH_SELECTED",
                 "NEWLY_AUTHORED_ROLE_BAND",
             )
@@ -739,6 +739,10 @@ def validate(source, tables):
     from .current_balances import validate as validate_balances
 
     validate_balances(tables)
+    if "production_support_work" in tables:
+        from .production_support import validate as validate_production_support
+
+        validate_production_support(tables)
     if "advisory_execution" in tables:
         from .current_legal_records import validate as validate_legal
 
@@ -925,6 +929,9 @@ def build(source=None):
     from .current_legal_records import extend as extend_legal
 
     extend_legal(source, tables)
+    from .production_support import extend as extend_production_support
+
+    extend_production_support(source, tables)
     from .debt_host import build as build_debt_host
 
     debt_host = build_debt_host()
@@ -960,6 +967,8 @@ def build(source=None):
         "enterprise/operations/source/debt_host_2026_08.json",
         "enterprise/operations/current_records.py",
         "enterprise/operations/current_balances.py",
+        "enterprise/operations/production_support.py",
+        "enterprise/operations/source/production_support_2026_08.json",
         "enterprise/closeout/rwh_book.py",
         "enterprise/closeout/rwh_history.py",
         "enterprise/closeout/source/rwh_tax_history.json",
