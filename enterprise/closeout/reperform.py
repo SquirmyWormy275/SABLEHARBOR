@@ -2,12 +2,38 @@
 
 import argparse
 import json
-from collections import defaultdict
+from collections import Counter, defaultdict
 from decimal import Decimal as D
 from pathlib import Path
 
 from enterprise.closeout.finance import verify
 from industrial.planning.enterprise import read_csv
+
+
+def compare_protected(rows, predecessor, reviewed_source_ids=()):
+    """Exact semantic native-leg comparison, including acquisition and carryforwards."""
+
+    def population(records):
+        return Counter(
+            (
+                r["scenario"],
+                r["entity"],
+                int(r["year"]),
+                int(r["month"]),
+                r["account"],
+                D(r["signed_usd"]),
+                r["source_id"],
+            )
+            for r in records
+            if r["entity"] in {"ARU", "BST"} and r["source_id"] not in reviewed_source_ids
+        )
+
+    actual, expected = population(rows), population(predecessor)
+    if actual != expected:
+        raise ValueError(
+            f"ARU/BST protected legal population changed; added={list((actual - expected).items())[:4]}; removed={list((expected - actual).items())[:4]}"
+        )
+    return sum(actual.values())
 
 
 def run(out):
@@ -41,18 +67,9 @@ def run(out):
     ]
     if sorted(actual_additions) != sorted(expected_additions):
         raise ValueError("Retention levy additions differ from independently reconstructed awards")
-    fields = ("scenario", "entity", "year", "month", "account", "signed_usd", "source_id")
-
-    def protected(records):
-        return sorted(
-            tuple(r[k] for k in fields)
-            for r in records
-            if r["entity"] in {"ARU", "BST"} and r["source_id"] not in SOURCE_IDS.values()
-        )
-
-    if protected(rows) != protected(predecessor):
-        raise ValueError("ARU/BST protected legal population changed")
-    result["protected_aru_bst_legal_legs"] = len(protected(rows))
+    result["protected_aru_bst_legal_legs"] = compare_protected(
+        rows, predecessor, SOURCE_IDS.values()
+    )
     funding = defaultdict(D)
     for row in predecessor:
         if (row["scenario"], row["entity"], row["year"], row["account"], row["source_type"]) == (
