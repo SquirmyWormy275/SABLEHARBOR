@@ -22,6 +22,17 @@ A deterministic document ID derives from the path; native IDs inside payloads re
 unchanged. A document version is not a person, transaction or control occurrence.
 No arbitrary wrapper is presented as a native activity producer capsule.
 
+The pinned store accepts 1 byte through 25 MiB per record. The dated adapter
+`tools/company_closeout/transport.py` therefore keeps ordinary originals intact,
+splits larger originals into ordered exact byte parts, and supplies an explicit
+transport manifest for multipart or empty originals. The manifest retains whole
+source path/hash/length and ordered part IDs/hashes/lengths. Empty source files
+have zero parts; no fabricated byte is added to the original. Transport metadata
+and parts are not additional business events, people or company documents.
+Readback independently reconstructs and hashes every original. Native business IDs
+inside the reconstructed CSV/SQLite/JSON remain unchanged. This is a transport
+adapter, not native activity ingestion or a new portal database schema.
+
 Component ID supplies system ID; the explicit edition ID supplies branch identity.
 Company ID is SH; legal entity, unit, scenario and time units remain in the declared
 component and original records. Source custodian is SH-COMPANY-RECORDS-CUSTODIAN, a
@@ -43,6 +54,13 @@ All six exact originals read successfully after scoped grants and their availabi
 time; all six ungranted, future and revoked reads failed. Actual SQLite backup into
 a new private directory preserved systems, versions, grants and access history.
 All six restored revoked reads remained denied. No live source was touched.
+
+`PORTAL_TRANSPORT_REHEARSAL.json` adds an actual eight-original rehearsal: six
+current public source documents, an explicitly empty fixture, and a 25 MiB plus
+one byte fixture. Ten bounded store records reconstruct all eight originals;
+ten future, ungranted, revoked and restored-revoked reads each fail. Actual SQLite
+backup preserves history/content. This validates the adapter boundary, not the
+pending final full-edition import, HTTP download behavior or native file browsing.
 
 ```sh
 python -m tools.company_closeout.edition --contract CONTRACT.json --output /new/edition
