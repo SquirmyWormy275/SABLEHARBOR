@@ -1,6 +1,6 @@
 {
   "document_id": "SH-CODEX-COMPANY-CLOSEOUT-2026-09-15",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "status": "IMPLEMENTATION_IN_PROGRESS_NOT_ACCEPTED",
   "recorded_on": "2026-09-15",
   "record_timezone": "UTC",
@@ -55,7 +55,10 @@
         "customers": 88,
         "service_environments": 104,
         "research_projects": 5,
-        "industrial_assets": 149
+        "industrial_assets": 149,
+        "current_working_capital_controls": 7,
+        "legal_balance_bridges": 16,
+        "rwh_inventory_carrying_usd": "9252387.5255"
       },
       "limitations": [
         "Integration acceptance, final composed-revision validation and indexed Release packaging remain pending."
@@ -135,11 +138,12 @@
         "net_pay_usd": "4554707.11",
         "employer_cost_usd": "8137074.52",
         "august_ps_legal_reclassification_usd": "78125.00",
-        "reclassification_group_cash_and_expense_delta_usd": "0.00"
+        "reclassification_group_cash_and_expense_delta_usd": "0.00",
+        "july_retention_employer_levy_expense_payable_usd": "24266.75"
       },
       "limitations": [
         "Integration acceptance, final composed-revision validation and indexed Release packaging remain pending.",
-        "July retention compensation is now included in YTD wage bases; incremental employer levy24266.75 awaits finance provider integration."
+        "July employer levy is separately accrued and unremitted; no duplicate original bonus expense or cash is posted. Final legal provision and deposit treatment remain finance integration work."
       ],
       "next_owner": "people and operations lane"
     },
@@ -227,7 +231,9 @@
         "enterprise/ccf/company_closeout/industrial_transaction_tax.json",
         "enterprise/ccf/company_closeout/CURRENT_RESIDUALS.md",
         "enterprise/ccf/company_closeout/august_admin_completion.json",
-        "enterprise/ccf/company_closeout/benefit_admin_completion.json"
+        "enterprise/ccf/company_closeout/benefit_admin_completion.json",
+        "enterprise/ccf/company_closeout/FRA_EVENT_DAY_AUTHORITY.md",
+        "enterprise/ccf/company_closeout/rail_authority_review.json"
       ],
       "commands_results": [],
       "reconciliation_totals": {
@@ -266,13 +272,14 @@
       "evidence": [
         "docs/internal/company-closeout/PORTAL_CONTRACT.md",
         "docs/internal/company-closeout/PORTAL_REHEARSAL.json",
-        "docs/internal/company-closeout/REFERENCE_RESTORE_RECEIPT.json"
+        "docs/internal/company-closeout/REFERENCE_RESTORE_RECEIPT.json",
+        "docs/internal/company-closeout/PORTAL_TRANSPORT_REHEARSAL.json"
       ],
       "commands_results": [],
       "reconciliation_totals": {},
       "limitations": [
         "Integration acceptance, final composed-revision validation and indexed Release packaging remain pending.",
-        "Pinned CompanyStore exercise covers six public documents only; full-edition integration pending. Reference restore and portal restore have distinct scopes. Existing thirteen external readiness gates are not cleared."
+        "Original pinned CompanyStore exercise covers six public documents; a separate eight-original transport exercise covers empty and oversized files through ten store records. Full-edition integration remains pending. Reference restore and portal restore have distinct scopes. Existing thirteen external readiness gates are not cleared."
       ],
       "next_owner": "obligations and controls lane"
     },
@@ -457,5 +464,5 @@
     "publication_pr": 145,
     "protection_pr": 165
   },
-  "evidence_boundary": "Working integration inventory through f2717a73; PR166 remains draft. Source population totals are not final accepted edition results. Tax subsidiary/state reconciliation and final clean regeneration continue."
+  "evidence_boundary": "Working integration inventory through403fa17c; PR166 remains draft. Full preserved operating build854a4aad passed47060events/98tables. Statutory subsidiary/state tax composition, clean company regeneration and acceptance remain pending."
 }

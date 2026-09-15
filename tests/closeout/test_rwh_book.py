@@ -11,7 +11,7 @@ def test_current_inventory_opening_activity_closing_and_scope():
     assert len(rows) == 12
     assert D(rows[7]["corrected_cash_inventory_usd"]) == D("8385238.1530")
     assert D(rows[7]["corrected_dda_inventory_usd"]) == D("867149.3725")
-    for previous, current in zip(rows, rows[1:]):
+    for previous, current in zip(rows[:-1], rows[1:], strict=True):
         assert previous["corrected_cash_inventory_usd"] == current["opening_cash_inventory_usd"]
         assert previous["corrected_dda_inventory_usd"] == current["opening_dda_inventory_usd"]
     # Omission of a month is a population error, not a zero-cost month.

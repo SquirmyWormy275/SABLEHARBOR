@@ -52,3 +52,10 @@ source changes still alter identity; current-company source hashes remain captur
 by their native generators and the full operations source inventory. The approved
 workbook and review-manifest bytes are preserved; no comparison was disabled or
 rebaselined to suppress the failure.
+
+Full correction retest at clean `854a4aad`:
+`.venv/bin/python -m enterprise.operations.build --skip-package` passed with
+47,060 events and 98 tables, including approved-workbook verification and the
+final artifact safety scan. This validates the preserved operating forecast
+package; the separately changing company financial successor still requires its
+own final build and acceptance.
