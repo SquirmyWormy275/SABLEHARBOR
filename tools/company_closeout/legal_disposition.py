@@ -141,7 +141,9 @@ def build(root=ROOT):
         "source_sha256": sha(source.read_bytes()),
         "population_count": len(rows),
         "package_count": len({r["package"] for r in rows}),
-        "scope": "Complete existing review-item population; not certification of every legal instrument",
+        "scope": (
+            "Complete existing review-item population; not certification of every legal instrument"
+        ),
         "items": rows,
     }
 
